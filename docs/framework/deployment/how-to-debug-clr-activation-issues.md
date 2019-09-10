@@ -1,71 +1,71 @@
 ---
-title: CLR etkinleştirme sorunlarında hata ayıklama
+title: CLR etkinleştirme sorunlarını ayıklama
 ms.date: 03/30/2017
 helpviewer_keywords:
 - CLR activation, debugging issues
 ms.assetid: 4fe17546-d56e-4344-a930-6d8e4a545914
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e38e3e2b0f28b7f1eb36dd3c5b2888712b1c807c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7ab80cfbd0ae2130f465216ca77812bda0002c24
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61875321"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854010"
 ---
-# <a name="how-to-debug-clr-activation-issues"></a>CLR etkinleştirme sorunlarında hata ayıklama
+# <a name="how-to-debug-clr-activation-issues"></a>CLR etkinleştirme sorunlarını ayıklama
 
-Uygulamanızın doğru sürümü ortak dil çalışma zamanı (CLR) ile çalışmaya başlama sorunlarla karşılaşırsanız, görüntüleyebilir ve hata ayıklama CLR etkinleştirme günlüklerini. Bu günlükler bir etkinleştirme sorunun kök nedenini belirlerken uygulamanızın beklenenden farklı bir CLR sürümü yükler veya CLR hiç yüklenmiyor çok kullanışlı olabilir. [.NET Framework başlatma hataları: Kullanıcı deneyimini yönetme](../../../docs/framework/deployment/initialization-errors-managing-the-user-experience.md) bir uygulama için hiçbir CLR bulunduğunda deneyimi açıklanır.
+Uygulamanızı ortak dil çalışma zamanının (CLR) doğru sürümü ile çalışacak şekilde almaya yönelik sorunlarla karşılaşırsanız, CLR etkinleştirme günlüklerini görüntüleyebilir ve hata ayıklaması yapabilirsiniz. Bu Günlükler, uygulamanız beklenenden farklı bir CLR sürümü yüklediğinde veya CLR 'yi hiç yüklemediğinde, bir etkinleştirme sorununun kök nedenini belirlemede çok yararlı olabilir. [.NET Framework başlatma hataları: Kullanıcı deneyimini](../../../docs/framework/deployment/initialization-errors-managing-the-user-experience.md) yönetmek, bir uygulama için clr bulunamadığı zaman deneyimi ele alır.
 
-CLR etkinleştirme günlük bir HKEY_LOCAL_MACHINE kayıt defteri anahtarı veya bir sistem ortam değişkeni kullanarak etkin sistem genelinde olabilir. Kayıt defteri girişini kadar günlük oluşturulur veya ortam değişkenini kaldırılır. Alternatif olarak, farklı kapsam ve süresi ile günlüğe kaydetmeyi etkinleştirmek için bir kullanıcı veya işlem yerel ortam değişkenini kullanabilirsiniz.
+CLR etkinleştirme günlüğü, bir HKEY_LOCAL_MACHINE kayıt defteri anahtarı veya bir sistem ortam değişkeni kullanılarak sistem genelinde etkinleştirilebilir. Günlük kaydı, kayıt defteri girişi veya ortam değişkeni kaldırılana kadar oluşturulur. Alternatif olarak, farklı bir kapsam ve süre ile günlüğe kaydetmeyi etkinleştirmek için bir kullanıcı veya işlem yerel ortam değişkeni kullanabilirsiniz.
 
-CLR etkinleştirme günlükleri olmamalıdır yanıltıcı ile [derleme bağlama günlüklerini](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md), tamamen farklı olan.
+CLR etkinleştirme günlükleri, tamamen farklı olan [bütünleştirilmiş kod bağlama günlükleriyle](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md)karıştırılmamalıdır.
 
-## <a name="to-enable-clr-activation-logging"></a>CLR etkinleştirme günlüğe kaydetmeyi etkinleştirmek için
+## <a name="to-enable-clr-activation-logging"></a>CLR etkinleştirme günlük kaydını etkinleştirmek için
 
 ### <a name="using-the-registry"></a>Kayıt defterini kullanma
 
-1. Kayıt Defteri Düzenleyicisi'nde HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft için gidin\\. NETFramework (32 bit bilgisayarda) veya HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\\. NETFramework klasörü (64 bit bilgisayarda).
+1. Kayıt Defteri Düzenleyicisi 'nde HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\adresine gidin. NETFramework (32 bitlik bir bilgisayarda) veya HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\\. NETFramework klasörü (64 bitlik bir bilgisayarda).
 
-2. Adlı bir dize değeri ekleyin `CLRLoadLogDir`, CLR etkinleştirme günlüklerini depolamak istediğiniz varolan bir dizinin tam yolunu ayarlayın.
+2. Adlı `CLRLoadLogDir`bir dize değeri ekleyin ve CLR etkinleştirme günlüklerini depolamak istediğiniz mevcut bir dizinin tam yolu olarak ayarlayın.
 
-Dize değeri kaldırana kadar etkinleştirme günlük kaydı etkin olarak kalır.
+Etkinleştirme günlüğü, dize değerini kaldırana kadar etkin kalır.
 
-### <a name="using-an-environment-variable"></a>Bir ortam değişkeni kullanarak
+### <a name="using-an-environment-variable"></a>Ortam değişkeni kullanma
 
-- Ayarlama `COMPLUS_CLRLoadLogDir` ortam değişkenine istediğiniz CLR etkinleştirme günlüklerini depolamak için mevcut bir dizinin tam yolu temsil eden bir dize.
+- `COMPLUS_CLRLoadLogDir` Ortam değişkenini, CLR etkinleştirme günlüklerini depolamak istediğiniz mevcut bir dizinin tam yolunu temsil eden bir dizeye ayarlayın.
 
-    Ortam değişkenini nasıl kapsamı belirler:
+    Ortam değişkenini nasıl ayarlarsanız kapsamını belirler:
 
-  - Sistem düzeyinde ayarlarsanız, ortam değişkenini kaldırılana kadar etkinleştirme günlük kaydı o bilgisayardaki tüm .NET Framework uygulamaları için etkindir.
+  - Bunu sistem düzeyinde ayarlarsanız, ortam değişkeni kaldırılana kadar, bu bilgisayardaki tüm .NET Framework uygulamaları için etkinleştirme günlüğü etkinleştirilir.
 
-  - Kullanıcı düzeyinde ayarlarsanız, etkinleştirme günlüğü yalnızca geçerli kullanıcı hesabı için etkinleştirilir. Ortam değişkenini kaldırılana kadar günlüğe kaydetmeye devam eder.
+  - Bunu Kullanıcı düzeyinde ayarlarsanız, etkinleştirme günlüğü yalnızca geçerli kullanıcı hesabı için etkinleştirilir. Ortam değişkeni kaldırılana kadar günlüğe kaydetme devam eder.
 
-  - Gelen işlem dahilinde CLR yüklemeden önce ayarlarsanız, işlem sonlanana kadar etkinleştirme günlük kaydı etkindir.
+  - CLR yüklemeden önce işlemin içinden ayarlarsanız, işlem sonlanana kadar etkinleştirme günlüğü etkinleştirilir.
 
-  - Bir uygulamayı çalıştırmadan önce bir komut isteminde ayarlarsanız, bu komut istemi'nden çalıştırmak herhangi bir uygulama için etkinleştirme günlük kaydı etkindir.
+  - Uygulamayı çalıştırmadan önce bir komut isteminde ayarlarsanız, bu komut isteminden çalıştırılan herhangi bir uygulama için etkinleştirme günlüğü etkinleştirilir.
 
-    Örneğin, işlem düzeyinde kapsamlı c:\clrloadlogs dizinde etkinleştirme günlüklerini depolamak için bir komut istemi penceresi açın ve uygulamayı çalıştırmadan önce aşağıdaki komutu yazın:
+    Örneğin, etkinleştirme günlüklerini işlem düzeyi kapsama sahip c:\clrloadlogs dizininde depolamak için, uygulamayı çalıştırmadan önce bir komut Istemi penceresi açın ve aşağıdakini yazın:
 
-    ```
+    ```console
     set COMPLUS_CLRLoadLogDir=c:\clrloadlogs
     ```
 
 ## <a name="example"></a>Örnek
 
-CLR etkinleştirme günlükleri, barındırma API'leri, çok miktarda CLR etkinleştirme hakkında daha fazla veri ve CLR kullanımını sağlar. Bu verilerin çoğu Microsoft tarafından dahili olarak kullanılır, ancak bazı veri da bu makalede anlatıldığı gibi geliştiriciler için yararlı olabilir.
+CLR etkinleştirme günlükleri CLR etkinleştirme ve CLR barındırma API 'lerinin kullanımı hakkında büyük miktarda veri sağlar. Bu verilerin çoğu Microsoft tarafından dahili olarak kullanılır, ancak bazı veriler bu makalede açıklandığı gibi geliştiriciler için de yararlı olabilir.
 
-Günlük barındırma API'leri CLR sırayı yansıtır adı veriliyordu. Ayrıca, bu bilgisayarda algılanan çalışma zamanı kümesini hakkında yararlı bilgiler içerir. CLR etkinleştirme günlük biçimi, kendisini belgelenen değildir, ancak CLR etkinleştirme sorunlarında çözmek için gereken geliştiriciler yardımcı olmak için kullanılabilir.
-
-> [!NOTE]
-> CLR kullandığı işlemi sona erdi kadar etkinleştirme oturum açılamıyor.
+Günlük, CLR barındırma API 'Lerinin çağrıldığı sırayı yansıtır. Ayrıca, bilgisayarda algılanan yüklü çalışma zamanları kümesiyle ilgili yararlı verileri de içerir. CLR etkinleştirme günlük biçimi kendisini belgelenmemiş, ancak CLR etkinleştirme sorunlarını çözmesi gereken geliştiricilere yardımcı olmak için kullanılabilir.
 
 > [!NOTE]
-> CLR etkinleştirme günlükleri yerelleştirilmedi; Bunlar, her zaman İngilizce olarak oluşturulur.
+> CLR kullanan işlem sonlandırılana kadar bir etkinleştirme günlüğü açamazsınız.
 
-Etkinleştirme günlüğünün aşağıdaki örnekte, en yararlı bilgiler vurgulanır ve sonra günlük açıklanmaktadır.
+> [!NOTE]
+> CLR etkinleştirme günlükleri yerelleştirilmemiş; Bunlar her zaman Ingilizce dilinde oluşturulur.
 
-```
+Aşağıdaki bir etkinleştirme günlüğü örneğinde, en yararlı bilgiler vurgulanır ve günlüğün ardından açıklanır.
+
+```output
 532,205950.367,CLR Loading log for C:\Tests\myapp.exe
 532,205950.367,Log started at 4:26:12 PM on 10/6/2011
 532,205950.367,-----------------------------------
@@ -94,31 +94,31 @@ Etkinleştirme günlüğünün aşağıdaki örnekte, en yararlı bilgiler vurgu
 532,205950.398,FunctionCall: OnShimDllMainCalled. Reason: 0
 ```
 
-- **CLR yükleme günlüğü** yönetilen kod yüklenen işlemi başlatıldı yürütülebilir dosyanın yolunu sağlar. Bu yerel bir konak olabilir unutmayın.
+- **Clr yükleme günlüğü** , yönetilen kodu yükleyen işlemi başlatan yürütülebilir dosyanın yolunu sağlar. Bunun yerel bir konak olabileceğini unutmayın.
 
-    ```
+    ```output
     532,205950.367,CLR Loading log for C:\Tests\myapp.exe
     ```
 
-- **Çalışma zamanı yüklü** etkinleştirme isteği için aday niteliği taşıyan CLR sürümleri bilgisayarda yüklü kümesidir.
+- **Yüklü çalışma zamanı** , etkinleştirme isteği için aday olan bilgisayarda yüklü olan CLR sürümleri kümesidir.
 
-    ```
+    ```output
     532,205950.382,Installed Runtime: v4.0.30319. VERSION_ARCHITECTURE: 0
     ```
 
-- **sürümü ile oluşturulmuş** gibi bir yöntem için sağlanan ikili oluşturmak için kullanılan CLR sürümüdür [Iclrmetahostpolicy::getrequestedruntime](../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md).
+- **sürümü ile birlikte inşa** edilen, [ICLRMetaHostPolicy:: GetRequestedRuntime](../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md)gibi bir yönteme sağlanmış ikiliyi oluşturmak için kullanılan CLR 'nin sürümüdür.
 
-    ```
+    ```output
     532,205950.382,C:\Tests\myapp.exe was built with version: v2.0.50727
     ```
 
-- **İsteğe bağlı özellik Kurulum** Windows 8'de .NET Framework 3.5 etkinleştirme için ifade eder. Bkz: [.NET Framework başlatma hataları: Kullanıcı deneyimini yönetme](../../../docs/framework/deployment/initialization-errors-managing-the-user-experience.md) bu senaryo hakkında daha fazla bilgi için.
+- **isteğe bağlı özellik yüklemesi** , Windows 8 ' de .NET Framework 3,5 ' i etkinleştirmeyi belirtir. Bkz [. .NET Framework başlatma hataları: Bu senaryo hakkında daha](../../../docs/framework/deployment/initialization-errors-managing-the-user-experience.md) fazla bilgi için Kullanıcı deneyimini yönetme.
 
-    ```
+    ```output
     532,205950.398,Launching feature-on-demand installation. CmdLine: C:\Windows\system32\fondue.exe /enable-feature:NetFx3
     ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Dağıtım](../../../docs/framework/deployment/index.md)
-- [Nasıl yapılır: Bir uygulamayı .NET Framework 4 veya sonraki sürümler destekleyecek şekilde yapılandırma](../../../docs/framework/migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)
+- [Nasıl yapılır: .NET Framework 4 veya sonraki sürümleri desteklemek için bir uygulama yapılandırma](../../../docs/framework/migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)

@@ -1,30 +1,30 @@
 ---
-title: Infer.NET ve olasılığa dayalı programlama ile bir oyun eşleme listesi uygulaması oluşturma
-description: Olasılığa dayalı programlama ile Infer.NET TrueSkill basitleştirilmiş bir sürümünü temel alan bir oyun matchup listesi uygulaması oluşturmak için nasıl kullanılacağını keşfedin.
+title: Infer.NET ve dayalı programlamasında bir oyun eşleştirme listesi uygulaması oluşturma
+description: Basitleştirilmiş bir Trueskıll sürümüne göre bir oyun eşleme listesi uygulaması oluşturmak için dayalı Programming with Infer.NET ile nasıl kullanacağınızı öğrenin.
 ms.date: 05/06/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: 85cb3753ae19e7ca64002eb7c26b44b6f7d41e4f
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: aa3ad9528238e4f5a5eb187af71f2d2da1ea9cba
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211429"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855791"
 ---
-# <a name="create-a-game-match-up-list-app-with-infernet-and-probabilistic-programming"></a>Infer.NET ve olasılığa dayalı programlama ile bir oyun eşleme listesi uygulaması oluşturma
+# <a name="create-a-game-match-up-list-app-with-infernet-and-probabilistic-programming"></a>Infer.NET ve dayalı programlamasında bir oyun eşleştirme listesi uygulaması oluşturma
 
-Bu nasıl yapılır kılavuzunda Infer.NET kullanarak olasılığa dayalı programlama hakkında size öğretir. Olasılığa dayalı programlama bir machine learning burada özel modelleri bilgisayar programları olarak ifade edilir yaklaşımdır. Bu etki alanı bilgisini modellerindeki birleştirmek için izin verir ve makine öğrenimi sistemi daha yorumlanabilirinde yapar. Ayrıca, çevrimiçi çıkarımı – yeni veriler ulaştıkça öğrenme işlemi destekler. Microsoft Azure, Xbox ve Bing çeşitli ürünlerin Infer.NET kullanılır.
+Bu nasıl yapılır Kılavuzu, Infer.NET kullanarak dayalı programlama hakkında sizi öğretir. Dayalı programlama, özel modellerin bilgisayar programları olarak ifade edildiği bir makine öğrenimi yaklaşımıdır. Modellerdeki etki alanı bilgilerini ekleme ve makine öğrenimi sisteminin daha yoruma tablosu olmasını sağlar. Ayrıca çevrimiçi çıkarımı destekler: yeni veri geldiğinde öğrenme işlemi. Infer.NET, Azure, Xbox ve Bing 'de Microsoft 'taki çeşitli ürünlerde kullanılır.
 
-## <a name="what-is-probabilistic-programming"></a>Olasılığa dayalı programlama nedir?
+## <a name="what-is-probabilistic-programming"></a>Dayalı programlama nedir?
 
-Olasılığa dayalı programlama gerçek işlemlerin istatistiksel modelleri oluşturmanıza olanak sağlar.
+Dayalı programlama, gerçek dünyada işlemlerin istatistiksel modellerini oluşturmanızı sağlar.
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-- Yerel geliştirme ortamı Kurulumu
+- Yerel geliştirme ortamı kurulumu
 
-  Bu nasıl yapılır kılavuzunda geliştirme için kullanabileceğiniz bir makine olmasını bekliyor. .NET [10 dakika içinde kullanmaya başla](https://www.microsoft.com/net/core) öğretici Mac, PC ve Linux üzerinde yerel geliştirme ortamınızı ayarlama yönergeleri sahiptir.
+  Bu nasıl yapılır Kılavuzu, geliştirme için kullanabileceğiniz bir makineniz olmasını bekler. [10 dakika içinde Merhaba Dünya](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) .NET öğreticisi, MacOS, Windows veya Linux 'ta yerel geliştirme ortamınızı ayarlamaya yönelik yönergeler içerir.
 
-## <a name="create-your-app"></a>Uygulamanızı oluşturma
+## <a name="create-your-app"></a>Uygulamanızı oluşturun
 
 1. Yeni bir komut istemi açın ve aşağıdaki komutları çalıştırın:
 
@@ -33,38 +33,38 @@ dotnet new console -o myApp
 cd myApp
 ```
 
-`dotnet` Komut oluşturur bir `new` uygulama türünün `console`. `-o` Parametresi adlı bir dizin oluşturur `myApp` dosyaları uygulamanızı nerede depolanır ve gerekli ile doldurur. `cd myApp` Komutu, yeni oluşturulan uygulama dizine koyar.
+`dotnet` Komut `new` türünde bir`console`uygulama oluşturur. Parametresi `-o` , uygulamanızın depolandığı yerde adlı `myApp` bir dizin oluşturur ve gerekli dosyalarla doldurur. `cd myApp` Komut sizi yeni oluşturulan uygulama dizinine koyar.
 
-## <a name="install-infernet-package"></a>Infer.NET paketini yükle
+## <a name="install-infernet-package"></a>Infer.NET paketi 'ni yükler
 
-Yüklemeniz gerekiyor Infer.NET kullanılacak `Microsoft.ML.Probabilistic.Compiler` paket. Komut isteminde aşağıdaki komutu çalıştırın:
+Infer.NET kullanmak için `Microsoft.ML.Probabilistic.Compiler` paketini yüklemeniz gerekir. Komut isteminde aşağıdaki komutu çalıştırın:
 
 ```console
 dotnet add package Microsoft.ML.Probabilistic.Compiler
 ```
 
-## <a name="design-your-model"></a>Model tasarlama
+## <a name="design-your-model"></a>Modelinizi tasarlama
 
-Foosball eşleşen office içinde yürütülen ya da örnek örnek tablo tenis kullanır. Katılımcılar ve her bir eşleştirmeyi sonucu var.  Bu verilerden oyuncunun becerileri Infer istiyorsunuz. Normal olarak dağıtılmış bir görünmeyen becerisi her oyuncusu içeriyor ve belirli eşleşme performanslarını bu beceri gürültülü sürümüdür varsayılır. Veri ödül performans kaybeden'ın performansı daha büyük olacak şekilde kısıtlar. Basitleştirilmiş bir sürümünü popüler budur [TrueSkill](https://www.microsoft.com/en-us/research/project/trueskill-ranking-system/) model, hangi takımları çizer ve diğer uzantılar da destekler. Bir [Gelişmiş sürüm](https://www.microsoft.com/en-us/research/publication/trueskill-2-improved-bayesian-skill-rating-system/) bu modeli, en çok satan oyun başlıklarında Halo ve Gears, War matchmaking için kullanılır.
+Örnek örnek, ofiste oynatılan tablo tenis veya ipsbol eşleşmelerini kullanır. Her eşleşmenin katılımcıları ve sonuçları vardır.  Player 'ın yeteneklerini bu verilerden çıkarsmak istiyorsunuz. Her oyuncunun normal olarak dağıtılmış bir beceri yeteneklerine sahip olduğunu ve verilen eşleşme performansının bu yeteneğin gürültülü bir sürümüdür olduğunu varsayalım. Veriler, kazananın performansından daha büyük olacak şekilde kazanan performansı kısıtlar. Bu, popüler [Trueskıll](https://www.microsoft.com/en-us/research/project/trueskill-ranking-system/) modelinin, takımları, çizmeler ve diğer uzantıları da destekleyen basitleştirilmiş bir sürümüdür. Bu modelin [Gelişmiş bir sürümü](https://www.microsoft.com/en-us/research/publication/trueskill-2-improved-bayesian-skill-rating-system/) , war 'ın en iyi satan oyun başlıklarında bir eşleme yapmak için kullanılır.
 
-Çıkarsanan player becerileri yanı sıra kendi fark – becerileri belirsizliğin ölçü liste gerekir.
+Çıkarılan oynatıcı yeteneklerini, varyanslarıyla birlikte listeleyerek yetenekler etrafında belirsizlik ölçüsünün ölçülebilinecek şekilde listeetmeniz gerekir.
 
-*Oyun sonucu örnek veriler*
+*Oyun sonucu örnek verileri*
 
-Oyun |Kazanan | Kaybeden
+Oyun |Masının | Loser dili
 ---------|----------|---------
- 1. | Oynatıcı 0 | Oynatıcı 1
- 2 | Oynatıcı 0 | Player 3
- 3 | Oynatıcı 0 | Player 4
- 4 | Oynatıcı 1 | Oynatıcı 2
- 5 | Player 3 | Oynatıcı 1
- 6 | Player 4 | Oynatıcı 2
+ 1\. | Oyuncu 0 | Oyuncu 1
+ 2 | Oyuncu 0 | Oyuncu 3
+ 3 | Oyuncu 0 | Oyuncu 4
+ 4 | Oyuncu 1 | 2\. oyuncu
+ 5 | Oyuncu 3 | Oyuncu 1
+ 6 | Oyuncu 4 | 2\. oyuncu
 
-Yakından ile örnek veriler, 3 ve 4 oyuncu bir win ve bir kaybı olduğunu fark edeceksiniz. Olasılığa dayalı programlama kullanma gibi hangi sıralamasına Ara görelim. Ayrıca bir oynatıcı sıfır bile office eşleşme liste sıfır bize geliştiriciler tabanlı olduğundan dikkat edin.
+Örnek verilere daha yakından baktığımızda, oyuncuların 3 ve 4 ' te bir kazanç ve bir kayıp olduğunu fark edeceksiniz. Ayrıca, dayalı programlamanın nasıl göründüğünü görelim. Ayrıca, Office ile eşleşen listeleri ABD geliştiricilerine göre sıfır olduğundan, bir oyuncu sıfır olduğunu fark edebilirsiniz.
 
-## <a name="write-some-code"></a>Bazı kodlar yazma
+## <a name="write-some-code"></a>Kod yazın
 
-Model tasarlanan bu API modelleme Infer.NET kullanarak olasılığa dayanan bir program olarak express zamanı geldi. Açık `Program.cs` sık kullandığınız metin düzenleyicinizde ve tüm içeriğini aşağıdaki kodla değiştirin:
+Modeli tasarladıktan sonra, Infer.NET modelleme API 'sini kullanarak bunu bir dayalı programı olarak ifade etmek zaman alabilir. En `Program.cs` sevdiğiniz metin düzenleyicisinde açın ve tüm içeriğini aşağıdaki kodla değiştirin:
 
 ```csharp
 namespace myApp
@@ -136,7 +136,7 @@ dotnet run
 
 ## <a name="results"></a>Sonuçlar
 
-Sonuçlar aşağıdakine benzer olmalıdır:
+Sonuçlarınız aşağıdakine benzer olmalıdır:
 
 ```
 Compiling model...done.
@@ -149,14 +149,14 @@ Player 1 skill: Gaussian(4.955, 3.503)
 Player 2 skill: Gaussian(2.639, 4.288)
 ```
 
-Sonuçlarda oyuncu 3 4 oyuncu modelimizi göre biraz daha sıralayan dikkat edin. Oynatıcı 3 player 1 üzerinde tek tek oynatıcı 4 oyuncu 2 – üzerinden daha önemli çünkü 1 oyuncu vuruş player 2 unutmayın. Oynatıcı 0 Genel uzmanının sunuluyor
+Sonuçlarda, Player 3 ' ün modelimize göre Player 4 ' ten biraz daha yüksek bir şekilde derecelendirdiğine dikkat edin. Bunun nedeni, Player 3 ' ün üzerindeki oyuncu 1 ' in oyuncu 2 ' den Player 4 ' ten büyük bir oyuncu 2 ' den daha önemli olduğundan, oyuncu 1 ' in oyuncu 2 ' ye göz önünde Oyuncu 0, genel temp 'dir!
 
-## <a name="keep-learning"></a>Öğrenme tutun
+## <a name="keep-learning"></a>Öğrenimi tut
 
-İstatistiksel modelleri tasarlama, kendi kendine bir yetenektir. Microsoft Research Cambridge takım yazılmış bir [ücretsiz çevrimiçi kitap](http://mbmlbook.com/), makalede size bir giriş sağlar. Bölüm 3 kitabın TrueSkill modeli daha ayrıntılı bir şekilde anlatılmaktadır. Göz önünde bir modeli oluşturduktan sonra bu kodu kullanarak dönüştürebilirsiniz [dokümantasyonuna](https://dotnet.github.io/infer/) Infer.NET Web sitesinde.
+İstatistiksel modellerin tasarlanmasıyla ilgili bir beceri vardır. Microsoft Research Cambridge ekibi, makaleye bir giriş sunan [ücretsiz bir çevrimiçi kitap](http://mbmlbook.com/)yazdı. Bu kitabın Bölüm 3 ' te Trueskıll modeli daha ayrıntılı bir şekilde ele alınmaktadır. Bir model aklınızda olduktan sonra, Infer.NET Web sitesindeki [kapsamlı belgeleri](https://dotnet.github.io/infer/) kullanarak kodu koda dönüştürebilirsiniz.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Almaya devam etmek ve diğer örnekleri bulmak için Infer.NET GitHub havuzuna göz atın.
+Öğrenmeye devam etmek ve daha fazla örnek bulmak için Infer.NET GitHub deposuna göz atın.
 > [!div class="nextstepaction"]
-> [DotNet/Infer GitHub deposu](https://github.com/dotnet/infer)
+> [DotNet/çıkarım GitHub deposu](https://github.com/dotnet/infer)

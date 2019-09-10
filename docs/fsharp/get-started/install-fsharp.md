@@ -2,12 +2,12 @@
 title: F# yükleme
 description: Ortamınıza göre yüklemeyi F# öğrenin.
 ms.date: 09/05/2019
-ms.openlocfilehash: 18b660ff640904119d63f57405752a14f7673e0c
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: dffa30eac0bdb59c85a66dca6cafd62b25daa572
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70400727"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855797"
 ---
 # <a name="install-f"></a>F 'yi yükler\#
 
@@ -39,7 +39,7 @@ Proje şablonlarını kullanabilmeniz için, git ' in sizin YOLUNUZDA [yüklü](
 brew install mono
 ```
 
-[.NET Core SDK](https://www.microsoft.com/net/download)de yükler.
+[.NET Core SDK](https://dotnet.microsoft.com/download)de yükler.
 
 ### <a name="linuxtablinux"></a>[Linux](#tab/linux)
 
@@ -50,13 +50,13 @@ sudo apt-get update
 sudo apt-get install mono-complete fsharp
 ```
 
-[.NET Core SDK](https://www.microsoft.com/net/download)de yükler.
+[.NET Core SDK](https://dotnet.microsoft.com/download)de yükler.
 
 ### <a name="windowstabwindows"></a>[Windows](#tab/windows)
 
 [Visual Studio 'yu desteğiyle F# birlikte](#install-f-with-visual-studio)yüklersiniz. Bu, kod yazmak, derlemek ve yürütmek F# için gerekli tüm bileşenleri yüklüyor.
 
-[.NET Core SDK](https://www.microsoft.com/net/download/)de yükler.
+[.NET Core SDK](https://dotnet.microsoft.com/download)de yükler.
 
 ---
 

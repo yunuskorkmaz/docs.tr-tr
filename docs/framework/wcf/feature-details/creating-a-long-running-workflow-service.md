@@ -2,12 +2,12 @@
 title: Uzun Süre Çalışan Bir İş Akışı Hizmeti Oluşturma
 ms.date: 03/30/2017
 ms.assetid: 4c39bd04-5b8a-4562-a343-2c63c2821345
-ms.openlocfilehash: e6206babdb728b6ce38c94441f775e1fdffe7d79
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: ceda43cc41ceb3381b4700d6ea8b1871e368dccc
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70040410"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70856198"
 ---
 # <a name="creating-a-long-running-workflow-service"></a>Uzun Süre Çalışan Bir İş Akışı Hizmeti Oluşturma
 
@@ -124,11 +124,11 @@ Bu yönergeyi kullanabilmeniz için aşağıdaki yazılımların yüklü olması
 
         1. **Koşul** özelliğini olarak ayarlayın`itemId=="Zune HD" (itemId="Zune HD" for Visual Basic)`
 
-        2. ' A bir **atama** etkinliğini sürükleyip **daha sonra** , aşağıdaki çizimde gösterildiği gibi, başka bir şekilde **atama** etkinliklerinin özelliklerini ayarla bölümüne bırakın.
+        2. ' A bir **atama** etkinliğini sürükleyip **daha sonra** , aşağıdaki çizimde gösterildiği gibi, başka bir şekilde **atama** etkinliklerinin özelliklerini **Ayarla bölümüne bırakın** .
 
             ![Hizmet çağrısının sonucunu atama](./media/creating-a-long-running-workflow-service/assign-result-of-service-call.png "Hizmet çağrısının sonucunu atayın.")
 
-            Koşul ise `true` , Bölüm yürütülür . Koşul `false` **Else** bölümü yürütülür.
+            Koşul `true` **ise, Bölüm yürütülür** . Koşul `false` **Else** bölümü yürütülür.
 
         3. **SendReplyToReceive** etkinliğini seçin ve aşağıdaki çizimde gösterilen **DisplayName** özelliğini ayarlayın.
 
@@ -191,7 +191,7 @@ Bu yönergeyi kullanabilmeniz için aşağıdaki yazılımların yüklü olması
 
 5. Çözümü derleyin ve `OrderClient` uygulamayı çalıştırın. İstemci aşağıdaki metni görüntüler:
 
-    ```Output
+    ```output
     Sending start messageWorkflow service is idle...Press [ENTER] to send an add item message to reactivate the workflow service...
     ```
 
@@ -201,7 +201,7 @@ Bu yönergeyi kullanabilmeniz için aşağıdaki yazılımların yüklü olması
 
 7. Öğe Ekle iletisini iş akışı hizmetine göndermek için ENTER tuşuna basın. İstemci aşağıdaki metni görüntüler:
 
-    ```Output
+    ```output
     Sending add item messageService returned: Item added to orderPress any key to continue . . .
     ```
 

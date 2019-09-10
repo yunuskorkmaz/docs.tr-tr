@@ -1,5 +1,5 @@
 ---
-title: -platform (C# Derleyici Seçenekleri)
+title: -Platform (C# derleyici seçenekleri)
 ms.date: 07/20/2015
 f1_keywords:
 - /platform
@@ -8,75 +8,79 @@ helpviewer_keywords:
 - -platform compiler option [C#]
 - /platform compiler option [C#]
 ms.assetid: c290ff5e-47f4-4a85-9bb3-9c2525b0be04
-ms.openlocfilehash: 5a00820b01ee0ac78715efa0140e2a5aef28bef8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5150e871d75c3c34dab10f10cdac3d8322d7a834
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592794"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849872"
 ---
-# <a name="-platform-c-compiler-options"></a>-platform (C# Derleyici Seçenekleri)
-Hangi sürümü ortak dil çalışma zamanı (CLR), derleme çalıştırılıp belirtir.  
-  
-## <a name="syntax"></a>Sözdizimi  
-  
-```console  
--platform:string  
-```  
-  
-## <a name="parameters"></a>Parametreler  
- `string`  
- (varsayılan) anycpu, anycpu32bitpreferred, ARM, x 64, x86 ya da Itanium.  
-  
-## <a name="remarks"></a>Açıklamalar  
-  
-- **anycpu** (varsayılan), derlemenizi herhangi bir platform üzerinde çalıştırmasını derler. Uygulamanız bir 64 bit işlem olarak mümkün olduğunda çalışır ve bu mod yalnızca 32-bit zaman geri döner.  
-  
-- **anycpu32bitpreferred** derlemenizi herhangi bir platformda çalıştırmak için. Uygulamanızı hem 64-bit ve 32-bit uygulamaları destekleyen sistemlerde 32-bit modunda çalıştırır. .NET Framework 4.5 hedefleyen projeler için yalnızca bu seçeneği belirtebilirsiniz.  
-  
-- **ARM** derlemenizi Gelişmiş RISC makinesi (ARM) işlemciye sahip bir bilgisayar üzerinde çalıştırılacak.  
-  
-- **ARM64** derlemenizi 64 bit CLR tarafından A64 yönerge kümesini destekleyen bir Gelişmiş RISC makinesi (ARM) işlemciye sahip bir bilgisayar üzerinde çalıştırılacak.  
+# <a name="-platform-c-compiler-options"></a>-Platform (C# derleyici seçenekleri)
 
-- **x64** derlemenizi AMD64 veya EM64T yönerge kümesini destekleyen bir bilgisayara 64 bit CLR tarafından çalıştırılacak.  
-  
-- **x86** derlemenizi 32-bit, x86 ile uyumlu bir CLR tarafından çalıştırılacak.  
-  
-- **Itanium** derlemenizi 64 bit CLR tarafından bir Itanium işlemci bir bilgisayarda çalıştırılması.  
-  
- Bir 64 bit Windows işletim sisteminde:  
-  
-- Derlenmiş derlemelerde **-platform: x 86** WOW64 altında çalışan 32 bitlik CLR üzerinde yürütün.  
-  
-- Bir DLL ile derlenmiş **-platform: anycpu** içine yüklendiği işlem olarak aynı CLR üzerinde çalıştırır.  
-  
-- İle derlenen yürütülebilir dosyaları **-platform: anycpu** 64 bitlik CLR yürütün.  
-  
-- Yürütülebilir dosyalar ile derlenmiş olan **-platform: anycpu32bitpreferred** 32 bitlik CLR yürütün.  
-  
- **Anycpu32bitpreferred** ayarı yalnızca yürütülebilir dosya için geçerlidir (. EXE) dosyaları ve .NET Framework 4.5 gerektirir.  
-  
- Bir Windows 64-bit işletim sisteminde çalıştırılacak bir uygulama geliştirme hakkında daha fazla bilgi için bkz. [64-bit uygulamalar](../../../framework/64-bit-apps.md).  
-  
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Bu derleyici seçeneğini Visual Studio geliştirme ortamında ayarlamak için  
-  
-1. Açık **özellikleri** proje sayfası.  
-  
-2. Tıklayın **derleme** özellik sayfası.  
-  
-3. Değiştirme **Platform hedefi** özelliği ve .NET Framework 4.5 hedefleyen projeler için seçin veya temizleyin **32 bit tercih et** onay kutusu.  
-  
- **Not - platform** Visual C# Express geliştirme ortamında kullanılamaz.  
-  
- Bu derleyici seçeneğini program üzerinden ayarlamak konusunda daha fazla bilgi için bkz: <xref:VSLangProj80.CSharpProjectConfigurationProperties3.PlatformTarget%2A>.  
-  
-## <a name="example"></a>Örnek  
- Aşağıdaki örnek nasıl kullanılacağını gösterir **-platform** uygulama 64 bitlik CLR tarafından bir 64 bit Windows işletim sisteminde çalıştırılması gerektiğini belirtmek için seçeneği.  
-  
-```console  
-csc -platform:anycpu filename.cs  
-```  
-  
+Ortak dil çalışma zamanının (CLR) hangi sürümünün derlemeyi çalıştırabileceği belirtir.
+
+## <a name="syntax"></a>Sözdizimi
+
+```console
+-platform:string
+```
+
+## <a name="parameters"></a>Parametreler
+
+`string` \
+anycpu (varsayılan), anycpu32bitpreferred, ARM, x64, x86 veya Itanium.
+
+## <a name="remarks"></a>Açıklamalar
+
+- **anycpu** (varsayılan), derlemenizi herhangi bir platformda çalışacak şekilde derler. Uygulamanız mümkün olduğunda 64 bitlik bir işlem olarak çalışır ve yalnızca bu mod kullanılabilir olduğunda 32 bit 'e geri döner.
+
+- **anycpu32bitpreferred** , derlemenizi herhangi bir platformda çalışacak şekilde derler. Uygulamanız, hem 64 bit hem de 32 bit uygulamaları destekleyen sistemlerde 32 bitlik modda çalışır. Bu seçeneği yalnızca .NET Framework 4,5 ' i hedefleyen projeler için belirtebilirsiniz.
+
+- **ARM** , derlemenizi GELIŞMIŞ bir RISC MAKINESI (ARM) işlemcisi olan bir bilgisayarda çalışacak şekilde derler.
+
+- **ARM64** , derlemenizi, A64 yönerge kümesini destekleyen GELIŞMIŞ bir RISC MAKINESI (ARM) işlemcisi olan bir bilgisayarda 64 bitlik CLR tarafından çalışacak şekilde derler.
+
+- **x64** , derlemenizi AMD64 veya EM64T yönerge kümesini destekleyen bir bilgisayarda 64 bitlik CLR tarafından çalıştırılacak şekilde derler.
+
+- **x86** , derlemenizi 32 bit, x86 uyumlu CLR tarafından çalıştırılacak şekilde derler.
+
+- **Itanium** , derlemenizi Itanium işlemcisi olan bir bilgisayarda 64 bitlik CLR tarafından çalıştırılacak şekilde derler.
+
+64 bitlik bir Windows işletim sisteminde:
+
+- İle derlenen derlemeler **-Platform: x86** , WOW64 altında çalışan 32 bitlik clr üzerinde yürütülür.
+
+- **-Platform: anycpu** ile derlenen bir dll, yüklendiği IŞLEMLE aynı CLR üzerinde yürütülür.
+
+- **-Platform: anycpu** ile derlenen yürütülebilir dosyalar 64 bitlik clr üzerinde yürütülür.
+
+- **-Platform: anycpu32bitpreferred** ile derlenen yürütülebilir dosyalar 32 bit clr üzerinde yürütülür.
+
+**Anycpu32bitpreferred** ayarı yalnızca yürütülebilir dosya için geçerlidir (. EXE) dosyalarını ve .NET Framework 4,5 gerektirir.
+
+Windows 64 bit işletim sisteminde çalışacak bir uygulama geliştirme hakkında daha fazla bilgi için bkz. [64-bit uygulamalar](../../../framework/64-bit-apps.md).
+
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Bu derleyici seçeneğini Visual Studio geliştirme ortamında ayarlamak için
+
+1. Projenin **Özellikler** sayfasını açın.
+
+2. **Yapı** özelliği sayfasına tıklayın.
+
+3. **Platform hedefi** özelliğini değiştirin ve .NET Framework 4,5 ' i hedefleyen projeler için **32 bit tercih** et onay kutusunu seçin veya temizleyin.
+
+> [!NOTE]
+> `-platform`Visual C# Express 'teki geliştirme ortamında kullanılamaz.
+
+Bu derleyici seçeneğini program aracılığıyla ayarlama hakkında daha fazla bilgi için bkz <xref:VSLangProj80.CSharpProjectConfigurationProperties3.PlatformTarget%2A>.
+
+## <a name="example"></a>Örnek
+
+Aşağıdaki örnek, uygulamanın 64 bitlik bir Windows işletim sisteminde 64 bitlik CLR tarafından çalıştırılması gerektiğini belirtmek için **-Platform** seçeneğinin nasıl kullanılacağını gösterir.
+
+```console
+csc -platform:anycpu filename.cs
+```
+
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [C# Derleyici Seçenekleri](index.md)

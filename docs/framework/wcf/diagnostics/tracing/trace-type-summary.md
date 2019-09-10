@@ -2,57 +2,53 @@
 title: İzleme Türü Özeti
 ms.date: 03/30/2017
 ms.assetid: e639410b-d1d1-479c-b78e-a4701d4e4085
-ms.openlocfilehash: 44446b58510e58758934a5eb964efc8643854879
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8f54f71ef63338708a29fac5557c7c7e8f257f58
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647183"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70856004"
 ---
 # <a name="trace-type-summary"></a>İzleme Türü Özeti
-[Kaynak düzeylerini](https://go.microsoft.com/fwlink/?LinkID=94943) çeşitli izleme düzeylerini tanımlar: Kritik, hata, uyarı, bilgi ve ayrıntı, sağlar açıklamasını `ActivityTracing` çıktısını değiştirir bayrak sınır ve etkinlik aktarım olayları izleme.  
+[Kaynak düzeyleri](https://go.microsoft.com/fwlink/?LinkID=94943) çeşitli izleme düzeylerini tanımlar: Kritik, hata, uyarı, bilgi ve ayrıntılı bilgilerin yanı sıra, izleme sınırının ve etkinlik aktarım `ActivityTracing` olaylarının çıktısına geçiş yapmak için bayrağın açıklaması sağlanır.  
   
- Ayrıca inceleyebilirsiniz [TraceEventType](https://go.microsoft.com/fwlink/?LinkId=95169) , gelen yayılan izlemeleri türde <xref:System.Diagnostics>.  
+ Ayrıca, ' den <xref:System.Diagnostics>yayılan Izleme türleri için [TraceEventType](https://go.microsoft.com/fwlink/?LinkId=95169) ' i gözden geçirebilirsiniz.  
   
- Aşağıdaki tabloda, en önemli olanları listeler.  
+ Aşağıdaki tabloda en önemli olanlar listelenmektedir.  
   
 |İzleme türü|Açıklama|  
 |----------------|-----------------|  
-|Kritik|Önemli hata veya uygulama kilitlenme.|  
-|Hata|Kurtarılabilir bir hata oluştu.|  
+|Kritik|Önemli hata veya uygulama kilitlenmesi.|  
+|Hata|Kurtarılabilir hata.|  
 |Uyarı|Bilgi iletisi.|  
-|Bilgiler|Kritik olmayan sorun oluştu.|  
-|Ayrıntılı|İzleme hata ayıklama.|  
-|Başlat|Mantıksal birimi işleme başlatılıyor.|  
-|Askıya alma|İşleme bir mantıksal birimin askıya alma.|  
-|Devam etme|İşleme bir mantıksal birim sürdürme.|  
-|Durdur|İşleme bir mantıksal birim durduruluyor.|  
-|Aktarma|Bağıntı kimliği değiştiriliyor.|  
+|Bilgiler|Kritik olmayan sorun.|  
+|Ayrıntılı|Hata ayıklama izleme.|  
+|Başlat|Mantıksal bir işlem birimi başlatılıyor.|  
+|Askıya alma|Mantıksal bir işlem birimini askıya alma.|  
+|Devam etme|Sürdürme mantıksal bir işlem birimi.|  
+|Durdur|Mantıksal bir işleme birimi durduruluyor.|  
+|Aktarma|Bağıntı kimliğini değiştirme.|  
   
- Bir etkinlik, yukarıdaki izleme türleri bir birleşimi olarak tanımlanır.  
+ Etkinlik, yukarıdaki izleme türlerinin birleşimi olarak tanımlanır.  
   
- Bir yerel (izleme kaynak) kapsamındaki ideal aktiviteye tanımlayan bir normal ifade verilmiştir,  
+ Aşağıda, yerel (izleme kaynağı) kapsamında ideal bir etkinliği tanımlayan bir normal ifade verilmiştir,  
   
  `R = Start (Critical | Error | Warning | Information | Verbose | Transfer | (Transfer Suspend Transfer Resume) )* Stop`  
   
- Başka bir deyişle, etkinlik aşağıdaki koşulları karşılaması gerekir.  
+ Bu, bir etkinliğin aşağıdaki koşulları karşılaması gerektiği anlamına gelir.  
   
-- Başlamalı ve bir başlatma ve durdurma izlemeleri tarafından durdurur  
+- Başlatma ve durdurma izlemelerinin sırasıyla başlaması ve durdurulması gerekir  
   
-- Hemen bir askıya alma veya sürdürme izleme önceki bir aktarım izleme olmalıdır  
+- Bir askıya alma veya yeniden başlatma izlemesinin hemen öncesinde bir aktarım izlemesi olmalıdır  
   
-- Bu tür izleme varsa askıya alma ve sürdürme izlemeler arasında tüm izlemeleri olmamalıdır  
+- Bu tür izlemeler varsa askıya al ve Duraklat izlemeleri arasında izleme içermemelidir  
   
-- Önceki koşullar gözlemlenen sürece her ve Kritik/hata/uyarı/bilgi/Verbose/aktarım izleme sayıda olabilir  
+- Önceki koşullar gözlemlendiği sürece bir veya daha fazla kritik/hata/uyarı/bilgi/ayrıntılı/aktarım izlerinden oluşabilir  
   
- Aşağıdaki genel kapsamda ideal aktiviteye tanımlayan bir düzenli ifadedir,  
+ Aşağıda genel kapsamda ideal bir etkinliği tanımlayan bir normal ifade verilmiştir,  
   
-```  
-R+   
-```  
+`R+`  
   
- R ile yerel kapsama bir etkinlik için normal ifade edilen. Bu şekilde dönüşür,  
+ yerel kapsamdaki bir etkinliğin normal ifadesi olan R. Bu,  
   
-```  
-[R+ = Start ( Critical | Error | Warning | Information | Verbose | Transfer | (Transfer Suspend Transfer Resume) )* Stop]+  
-```
+`[R+ = Start ( Critical | Error | Warning | Information | Verbose | Transfer | (Transfer Suspend Transfer Resume) )* Stop]+`

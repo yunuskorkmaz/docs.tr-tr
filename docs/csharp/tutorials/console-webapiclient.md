@@ -1,57 +1,57 @@
 ---
-title: .NET Core kullanarak bir REST istemcisi oluşturma
-description: Bu öğretici, .NET Core ve C# dili özellikleri sayısı öğretir.
+title: .NET Core kullanarak REST istemcisi oluşturma
+description: Bu öğretici, .NET Core ve bu C# dilin çeşitli özelliklerini öğretir.
 ms.date: 03/06/2017
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
-ms.openlocfilehash: f6e3371a72810b30f804169be4025360aa10c477
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 001a9cbaae1cdb57b6451bc42ce326864f8dcf7b
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063878"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70850981"
 ---
 # <a name="rest-client"></a>REST istemcisi
 
 ## <a name="introduction"></a>Giriş
 
-Bu öğretici, .NET Core ve C# dili özellikleri sayısı öğretir. Şunları öğreneceksiniz:
+Bu öğretici, .NET Core ve bu C# dilin çeşitli özelliklerini öğretir. Şunları öğreneceksiniz:
 
-* Temel .NET Core komut satırı arabirimi (CLI).
-* C# dili özellikleri genel bakış.
-* NuGet ile bağımlılık Yönetimi
-* HTTP iletişimleri
+* .NET Core komut satırı arabirimi (CLı) temelleri.
+* C# Dil özelliklerine genel bakış.
+* NuGet ile bağımlılıkları yönetme
+* HTTP Iletişimleri
 * JSON bilgilerini işleme
-* Öznitelikleri yapılandırmasıyla yönetme.
+* Yapılandırmayı özniteliklerle yönetme.
 
-GitHub üzerinde bir REST hizmeti için HTTP isteklerini veren bir uygulama oluşturacaksınız. JSON biçiminde bilgileri okuyun ve C# nesneler bu JSON paket dönüştürme. Son olarak, C# nesneleriyle çalışma konusunda görürsünüz.
+GitHub 'da REST hizmetine HTTP Istekleri veren bir uygulama oluşturacaksınız. JSON biçiminde bilgileri okuyacaksınız ve bu JSON paketini C# nesnelerine dönüştürürsünüz. Son olarak, C# nesneleriyle nasıl çalışacaksınız görürsünüz.
 
-Bu öğreticide birçok özellik vardır. Bunları tek tek oluşturalım.
+Bu öğreticide birçok özellik vardır. Bunları birer birer oluşturalım.
 
-İle birlikte izlemek isterseniz [son örnek](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-webapiclient) yönelik bu konuda, indirebilirsiniz. Yükleme yönergeleri için bkz: [örnekler ve öğreticiler](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+Bu konuyla ilgili [son örnekle](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-webapiclient) birlikte izlemeyi tercih ediyorsanız, indirebilirsiniz. İndirme yönergeleri için bkz. [örnekler ve öğreticiler](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-.NET core çalıştırmak için makinenizi ayarlamanız gerekir. Yükleme yönergelerini bulabilirsiniz [.NET Core](https://www.microsoft.com/net/core) sayfası. Bu uygulama, Windows, Linux, macOS veya Docker kapsayıcısı çalıştırabilirsiniz.
-Sık kullandığınız Kod Düzenleyicisi'ni yüklemeniz gerekir. Aşağıdaki tanımlamalar [Visual Studio Code](https://code.visualstudio.com/), açık kaynaklı, çapraz platform Düzenleyicisi olduğu. Ancak, rahat sevdiğiniz araçları kullanabilirsiniz.
+Makinenizi .NET Core çalıştıracak şekilde ayarlamanız gerekir. Yükleme yönergelerini [.NET Core İndirmeleri](https://dotnet.microsoft.com/download) sayfasında bulabilirsiniz. Bu uygulamayı Windows, Linux, macOS veya bir Docker kapsayıcısında çalıştırabilirsiniz.
+En sevdiğiniz kod düzenleyicinizi yüklemeniz gerekir. Aşağıdaki açıklamalar açık kaynaklı, platformlar arası bir düzenleyici olan [Visual Studio Code](https://code.visualstudio.com/)kullanır. Bununla birlikte, rahat olan her türlü aracı kullanabilirsiniz.
 
-## <a name="create-the-application"></a>Uygulama oluşturma
+## <a name="create-the-application"></a>Uygulamayı oluşturma
 
-İlk adım, yeni bir uygulama oluşturmaktır. Bir komut istemi açın ve uygulamanız için yeni bir dizin oluşturun. Bu, geçerli bir dizin oluşturun. Komut türü `dotnet new console` komut isteminde. Bu, temel bir "Hello World" uygulaması için başlangıç dosyaları oluşturur. Bu yeni bir proje olduğundan, ilk çalıştırma .NET Core Framework'ün indirin, geliştirme sertifikası yüklenir ve eksik bağımlılıklar geri yüklemek için NuGet paket yöneticisini çalıştırın böylece bağımlılıkları hiçbiri yerde değil.
+İlk adım yeni bir uygulama oluşturmaktır. Bir komut istemi açın ve uygulamanız için yeni bir dizin oluşturun. Geçerli dizini oluşturun. `dotnet new console` Komutu komut istemine yazın. Bu, temel bir "Merhaba Dünya" uygulaması için başlangıç dosyalarını oluşturur. Bu yeni bir proje olduğundan, bağımlılıklardan hiçbiri yerinde değildir, bu nedenle ilk çalıştırma .NET Core Framework 'ü indirir, bir geliştirme sertifikası yükler ve eksik bağımlılıkları geri yüklemek için NuGet Paket Yöneticisi 'ni çalıştırır.
 
-Bir değişiklik yapmadan başlamadan önce yazın `dotnet run` ([bkz. Not](#dotnet-restore-note)) uygulamanızı çalıştırmak için komut isteminde. `dotnet run` otomatik olarak gerçekleştirir `dotnet restore` ortamınızı bağımlılıkları eksikse. Ayrıca gerçekleştirir `dotnet build` uygulamanız yeniden oluşturulması gerekiyorsa.
-İlk Kurulumdan sonra yalnızca çalıştırmanız gerekir `dotnet restore` veya `dotnet build` projeniz için anlamlı olduğunda kolaylaştırır.
+Değişiklik yapmaya başlamadan önce, uygulamanızı çalıştırmak `dotnet run` için komut isteminde ([bkz. Note](#dotnet-restore-note)) yazın. `dotnet run`ortamınızda bağımlılıklar `dotnet restore` eksik olursa otomatik olarak gerçekleştirilir. Uygulamanızın yeniden oluşturulması `dotnet build` gerekiyorsa de çalışır.
+İlk kurulumdan sonra, yalnızca projeniz için anlamlı olduğunda veya `dotnet restore` `dotnet build` çalıştırmanız gerekir.
 
-## <a name="adding-new-dependencies"></a>Yeni bağımlılıkları ekleme
+## <a name="adding-new-dependencies"></a>Yeni bağımlılıklar ekleniyor
 
-.NET Core için önemli tasarım amaçlarından .NET yükleme boyutu en aza indirmektir. Bir uygulamanın bazı özelliklerin ek kitaplıklar gerekiyorsa bu bağımlılıkların C# projenize ekleyin (\*.csproj) dosyası. Bizim örneğimizde, eklemeniz gerekecektir `System.Runtime.Serialization.Json` uygulamanızın JSON yanıtları işleyebilmek için paket.
+.NET Core için önemli tasarım amaçlarından biri, .NET yüklemesinin boyutunu en aza indirmektir. Bir uygulamanın bazı özellikleri için ek kitaplıklar gerekiyorsa, bu bağımlılıkları C# proje (\*. csproj) dosyanıza eklersiniz. Örneğimiz için, uygulamanızın JSON yanıtlarını işleyebilmesi için `System.Runtime.Serialization.Json` paketini eklemeniz gerekir.
 
-Açık, `csproj` proje dosyası. Dosyanın ilk satırı olarak görünmesi gerekir:
+`csproj` Proje dosyanızı açın. Dosyanın ilk satırı şöyle görünmelidir:
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
 ```
 
-Bu satırın hemen sonra aşağıdakileri ekleyin:
+Bu satırdan hemen sonra aşağıdakini ekleyin:
 
 ```xml
    <ItemGroup>
@@ -59,17 +59,17 @@ Bu satırın hemen sonra aşağıdakileri ekleyin:
    </ItemGroup>
 ```
 
-Çoğu kod düzenleyicilerinden, bu kitaplıkların farklı sürümleri için tamamlama sağlayacaktır. Genellikle, eklediğiniz herhangi bir paket en son sürümünü kullanmak isteyeceksiniz. Ancak, tüm paketlerin sürümlerinin eşleştiğinden ve .NET Core uygulaması framework sürümü de eşleştiğinden emin olmak önemlidir.
+Çoğu kod Düzenleyicisi, bu kitaplıkların farklı sürümleri için tamamlama sağlar. Genellikle eklediğiniz herhangi bir paketin en son sürümünü kullanmak isteyeceksiniz. Ancak, tüm paketlerin sürümlerinin eşleştiğinden ve ayrıca .NET Core uygulama çerçevesinin sürümüyle eşleştiğinden emin olmak önemlidir.
 
-Bu değişiklikleri yaptıktan sonra yürütme `dotnet restore` ([bkz. Not](#dotnet-restore-note)) paketi sisteminizde yüklü olduğunu.
+Bu değişiklikleri yaptıktan sonra, paketin sisteminizde yüklü `dotnet restore` olması için yürütün ([bkz. Note](#dotnet-restore-note)).
 
-## <a name="making-web-requests"></a>Web istekleri yapma
+## <a name="making-web-requests"></a>Web Istekleri yapma
 
-Artık Web'den veri almaya başlamak hazırsınız. Bilgileri okuyun bu uygulamada [GitHub API](https://developer.github.com/v3/). Projeleri hakkında bilgi okuyalım [.NET Foundation](https://www.dotnetfoundation.org/) terimdir. Projeler hakkında bilgi almak için GitHub API isteği yapan başlayacağız. Kullandığınız hesap uç noktadır: <https://api.github.com/orgs/dotnet/repos>. Bir HTTP GET isteği kullanacaksınız böylece bu projeleri hakkındaki tüm bilgileri almak istediğiniz.
-Tarayıcınız, ayrıca hangi bilgileri görmek için URL'yi tarayıcınıza aldığınız, yapıştırabilirsiniz HTTP GET istekleri ve işleme kullanır.
+Artık Web 'den veri almaya başlamaya hazırsınız. Bu uygulamada, [GITHUB API](https://developer.github.com/v3/)'sindeki bilgileri okuyacaksınız. [.Net Foundation](https://www.dotnetfoundation.org/) şemsiye kapsamındaki projelerle ilgili bilgileri okuyalim. Projeler hakkındaki bilgileri almak için GitHub API 'sine istek yaparak başlayacaksınız. Kullanacağınız uç nokta: <https://api.github.com/orgs/dotnet/repos>. Bu projelerle ilgili tüm bilgileri almak istiyorsunuz, bu nedenle bir HTTP GET isteği kullanacaksınız.
+Tarayıcınız ayrıca HTTP GET isteklerini kullanır; bu nedenle, hangi bilgileri almak ve işlemek istediğinizi görmek için bu URL 'YI tarayıcınıza yapıştırabilirsiniz.
 
-Kullandığınız <xref:System.Net.Http.HttpClient> web isteklerinde bulunmak için sınıf. İster modern tüm .NET API'lerini <xref:System.Net.Http.HttpClient> yalnızca zaman uyumsuz yöntemler için uzun süre çalışan API'ler destekler.
-Zaman uyumsuz bir yöntem sağlayarak başlatın. Uygulamanın işlevselliğini oluşturdukça uygulamasında doldururlar. Başlangıç açarak `program.cs` dosya proje dizininde ve aşağıdaki yöntemi ekleyerek `Program` sınıfı:
+Web istekleri yapmak <xref:System.Net.Http.HttpClient> için sınıfını kullanırsınız. Tüm modern .NET API 'lerinde olduğu <xref:System.Net.Http.HttpClient> gibi, uzun süre çalışan API 'ler için yalnızca zaman uyumsuz yöntemleri destekler.
+Zaman uyumsuz bir yöntem yaparak başlayın. Uygulamanın işlevlerini oluştururken uygulamayı doldurursunuz. `program.cs` Dosyayı proje dizininizde açıp `Program` sınıfına aşağıdaki yöntemi ekleyerek başlayın:
 
 ```csharp
 private static async Task ProcessRepositories()
@@ -77,17 +77,17 @@ private static async Task ProcessRepositories()
 }
 ```
 
-Eklemeniz gerekecektir bir `using` en üstündeki deyimi, `Main` yöntemi C# derleyicisi tanımasını <xref:System.Threading.Tasks.Task> türü:
+Derleyicinin türü tanıması `using` `Main` için yönteminizin en üstüne bir ifade eklemeniz gerekir: <xref:System.Threading.Tasks.Task> C#
 
 ```csharp
 using System.Threading.Tasks;
 ```
 
-Bu noktada, projenizi derleme yaparsanız herhangi içermez çünkü bu yöntem için oluşturulan bir uyarı alırsınız `await` işleçler ve zaman uyumlu olarak çalışır. Şimdilik yoksayın; ekleyeceğiniz `await` yazarken işleçleri yöntemi doldurun.
+Bu noktada projenizi oluşturursanız, herhangi `await` bir işleç içermediğinden ve zaman uyumlu olarak çalışacağı için bu yöntem için bir uyarı alırsınız. Şimdilik bunu yoksayın; yöntemi doldurduktan sonra `await` işleçleri ekleyeceksiniz.
 
-Ardından, içinde tanımlanan ad alanı yeniden adlandırma `namespace` varsayılan deyimden `ConsoleApp` için `WebAPIClient`. Daha sonra tanımlarız bir `repo` bu ad alanındaki sınıfı.
+Sonra, `namespace` bildiriminde tanımlanan ad alanını öğesinin varsayılan değerini `ConsoleApp` olarak `WebAPIClient`yeniden adlandırın. Daha sonra bu ad alanında `repo` bir sınıf tanımlayacağız.
 
-Ardından, güncelleştirme `Main` bu yöntemi çağırmak için yöntem. `ProcessRepositories` Yöntemi bir görev döndürür ve bu görev tamamlanmadan önce programdan çıkmak olmamalıdır. Bu nedenle, kullanmalısınız `Wait` engelleyin ve görevin tamamlanmasını bekle yöntemi:
+Sonra, `Main` yöntemi bu yöntemi çağırmak için güncelleştirin. `ProcessRepositories` Yöntemi bir görevi döndürür ve bu görev tamamlanmadan önce programdan çıkmamanız gerekir. Bu nedenle, görevi engellemek ve `Wait` görevin bitmesini beklemek için yöntemini kullanmanız gerekir:
 
 ```csharp
 static void Main(string[] args)
@@ -96,9 +96,9 @@ static void Main(string[] args)
 }
 ```
 
-Artık, hiçbir şey yapılmaz, ancak zaman uyumsuz olarak mevcut bir program var. Şimdi geliştirebilir.
+Artık hiçbir şey yapmaz ancak zaman uyumsuz olarak bunu yapar. Bunu geliştirelim.
 
-İlk veri Web'den yeteneğine sahip bir nesne gerekir; kullanabileceğiniz bir <xref:System.Net.Http.HttpClient> Bunu yapmak için. Bu nesne, istek ve yanıtları işler. Bu türde tek bir örneğini `Program` sınıf Program.cs dosyasının içinde.
+Önce, Web 'den veri alan bir nesne gerekir; Bunu yapmak <xref:System.Net.Http.HttpClient> için kullanabilirsiniz. Bu nesne, isteği ve yanıtları işler. Program.cs dosyasının içindeki `Program` sınıfta bu türün tek bir örneğini oluşturun.
 
 ```csharp
 namespace WebAPIClient
@@ -115,7 +115,7 @@ namespace WebAPIClient
 }
 ```
 
-Geri dönelim `ProcessRepositories` yöntemi ve ilk sürümü doldurun:
+`ProcessRepositories` Yönteme dönüp ilk bir sürümünü dolduralım:
 
 ```csharp
 private static async Task ProcessRepositories()
@@ -132,26 +132,26 @@ private static async Task ProcessRepositories()
 }
 ```
 
-Ayrıca iki eklemeniz gerekecektir yeni deyimleri için bu dosyanın üst derlemeye kullanarak:
+Bunun derlenmesi için dosyanın en üstüne iki yeni using deyimi de eklemeniz gerekir:
 
 ```csharp
 using System.Net.Http;
 using System.Net.Http.Headers;
 ```
 
-Bu ilk sürümü dotnet foundation kuruluş altındaki tüm depo listesi okumak için bir web isteği yapar. (GitHub .NET Foundation 'dotnet' kimliğidir). İlk birkaç satırı ayarlanan <xref:System.Net.Http.HttpClient> bu istek için. İlk olarak, bunu GitHub JSON yanıtları kabul edecek şekilde yapılandırılır.
-Yalnızca JSON biçimidir. Sonraki satır, bu nesneden tüm istekler için bir kullanıcı aracısı üstbilgisi ekler. Bu iki üstbilgi GitHub sunucu kodu tarafından denetlenir ve Github'dan bilgileri almak gereklidir.
+Bu ilk sürüm, DotNet Foundation kuruluşundaki tüm depoların listesini okumak için bir Web isteği oluşturur. (.NET Foundation için gitHub KIMLIĞI ' DotNet '). İlk birkaç satır bu istek <xref:System.Net.Http.HttpClient> için ayarlayın. İlk olarak, GitHub JSON yanıtlarını kabul edecek şekilde yapılandırılmıştır.
+Bu biçim yalnızca JSON 'dir. Sonraki satır, bu nesneden gelen tüm isteklere bir Kullanıcı Aracısı üst bilgisi ekler. Bu iki üst bilgi GitHub sunucusu kodu tarafından denetlenir ve GitHub 'dan bilgi almak için gereklidir.
 
-Yapılandırmayı tamamladığınızda <xref:System.Net.Http.HttpClient>, bir web isteği ve yanıtı almak olun. Bu ilk sürümde kullandığınız <xref:System.Net.Http.HttpClient.GetStringAsync(System.String)?displayProperty=nameWithType> kolaylık yöntemi. Bu kolaylık yöntemi web isteği yapan bir görev başlatır ve ardından istek geri döndüğünde, yanıt akışına okur ve içeriği akıştan ayıklar. Yanıt gövdesi olarak döndürülen bir <xref:System.String>. Görev tamamlandığında kullanılabilir bir dizedir.
+Yapılandırmasını <xref:System.Net.Http.HttpClient>yaptıktan sonra bir Web isteği yapar ve yanıtı alırsınız. Bu ilk sürümde, <xref:System.Net.Http.HttpClient.GetStringAsync(System.String)?displayProperty=nameWithType> kolaylık yöntemini kullanırsınız. Bu kolaylık yöntemi, web isteğini yapan bir görevi başlatır ve ardından istek döndürüldüğünde yanıt akışını okur ve içeriği akıştan ayıklar. Yanıtın gövdesi bir <xref:System.String>olarak döndürülür. Dize, görev tamamlandığında kullanılabilir.
 
-Bu yöntem son iki satırı, o görev await ve konsola yanıt yazdırın.
-Uygulamayı oluşturun ve çalıştırın. Derleme uyarısı artık, çünkü kalktığını `ProcessRepositories` artık içeren bir `await` işleci. Biçimlendirilmiş metin JSON uzun bir görünümünü görürsünüz.
+Bu yöntemin son iki satırı bu görevi bekler ve ardından yanıtı konsola yazdırır.
+Uygulamayı derleyin ve çalıştırın. `ProcessRepositories` Şimdi bir`await` işleç içerdiğinden, derleme uyarısı şimdi çıktı. JSON biçimli metnin uzun bir görüntüsünü görürsünüz.
 
-## <a name="processing-the-json-result"></a>JSON sonuç işleme
+## <a name="processing-the-json-result"></a>JSON sonucunu işleme
 
-Bu noktada, bir web sunucusundan bir yanıt almak ve bu yanıt olarak yer alan metni görüntülemek için kod yazdığınız. Ardından, bu JSON yanıtı C# nesnelerini şimdi Dönüştür.
+Bu noktada, bir Web sunucusundan yanıt almak için kodu yazmış ve bu yanıtta bulunan metni görüntüdiniz. Sonra, bu JSON yanıtını C# nesnelere dönüştürelim.
 
-JSON serileştirici JSON verilerini C# nesnelerine dönüştürür. İlk göreviniz bu yanıttan kullandığınız bilgilerini içeren bir C# sınıf türü tanımlamaktır. Bu hiçbiriyse bunu başlangıç depo adını içeren bir basit C# türü ile oluşturalım:
+JSON seri hale getirici JSON verilerini C# nesnelerine dönüştürür. İlk göreviniz, bu yanıttan kullandığınız bilgileri C# içeren bir sınıf türü tanımlamaktır. Bunu yavaş oluşturalım, bu nedenle deponun adını içeren basit C# bir türle başlayın:
 
 ```csharp
 using System;
@@ -165,77 +165,77 @@ namespace WebAPIClient
 }
 ```
 
-Yukarıdaki kod, 'repo.cs' adlı yeni bir dosya içinde yerleştirin. Bu sürüm sınıfının, JSON verilerini işlemek için en basit yolu temsil eder. Sınıf adı ve üye adı yerine aşağıdaki C# kuralları JSON Pakette kullanılan adları aynı. Bazı configuration öznitelikleri daha sonra sağlayarak çözeceksiniz. Bu sınıf, JSON seri hale getirme ve seri durumundan çıkarma başka bir önemli özelliği gösterilmektedir: JSON paketteki tüm alanlar, bu sınıfın bir parçasıdır.
-JSON serileştirici kullanılan sınıf türü içinde yer almayan bilgi yoksayar.
-Bu özellik, yalnızca bir alt kümesi ile JSON paket alanlarda çalışan türleri oluşturmak kolaylaştırır.
+Yukarıdaki kodu ' repo. cs ' adlı yeni bir dosyaya yerleştirin. Sınıfının bu sürümü JSON verilerini işlemek için en basit yolu temsil eder. Sınıf adı ve üye adı, aşağıdaki C# kurallar yerine JSON paketinde kullanılan adlarla eşleşir. Daha sonra bazı yapılandırma öznitelikleri sağlayarak bunu düzeltireceksiniz. Bu sınıf, JSON serileştirme ve seri durumundan çıkarma için başka bir önemli özelliği gösterir: JSON paketindeki tüm alanlar bu sınıfın bir parçası değil.
+JSON seri hale getiricisi, kullanılmakta olan sınıf türünde bulunmayan bilgileri yoksayacaktır.
+Bu özellik, JSON paketindeki alanların yalnızca bir alt kümesiyle çalışan türler oluşturmayı kolaylaştırır.
 
-Türü oluşturduğunuza göre şimdi bu seri durumdan. Oluşturmak ihtiyacınız olacak bir <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> nesne. Bu nesne, CLR türü beklenen JSON paket için bunu bilmeniz gerekir alır. Github depoları, bir dizi şekilde pakette bir `List<repo>` doğru türde. Aşağıdaki satırı ekleyin, `ProcessRepositories` yöntemi:
+Türü oluşturduğunuza göre, artık bunu serisini çıkaralım. Bir <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> nesnesi oluşturmanız gerekir. Bu nesne, aldığı JSON paketi için beklenen CLR türünü bilmelidir. GitHub ' dan paket, bir `List<repo>` dizi depo içerir, bu nedenle, doğru türdür. Aşağıdaki satırı `ProcessRepositories` yöntemine ekleyin:
 
 ```csharp
 var serializer = new DataContractJsonSerializer(typeof(List<repo>));
 ```
 
-Bu da eklemeniz gerekir, böylece iki yeni ad alanları, kullanmakta olduğunuz:
+İki yeni ad alanı kullanıyorsunuz, bu nedenle bunları da eklemeniz gerekir:
 
 ```csharp
 using System.Collections.Generic;
 using System.Runtime.Serialization.Json;
 ```
 
-Ardından, JSON C# nesnelerine dönüştürmek için seri hale getirici kullanacaksınız. Çağrısını <xref:System.Net.Http.HttpClient.GetStringAsync(System.String)> içinde `ProcessRepositories` aşağıdaki iki satır ile yöntemi:
+Ardından, JSON 'ı C# nesnelere dönüştürmek için seri hale getirici 'yi kullanacaksınız. Yöntemdeki`ProcessRepositories` çağrısını <xref:System.Net.Http.HttpClient.GetStringAsync(System.String)> aşağıdaki iki satır ile değiştirin:
 
 ```csharp
 var streamTask = client.GetStreamAsync("https://api.github.com/orgs/dotnet/repos");
 var repositories = serializer.ReadObject(await streamTask) as List<repo>;
 ```
 
-Kullanmakta olduğunuz bildirimi <xref:System.Net.Http.HttpClient.GetStreamAsync(System.String)> yerine <xref:System.Net.Http.HttpClient.GetStringAsync(System.String)>. Seri hale getirici bir akış, bir dize yerine, kaynağı olarak kullanır. Şimdi ikinci satırında yukarıdaki kullanılan birkaç C# dili özellikleri açıklanmaktadır. Bağımsız değişkeni <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.ReadObject(System.IO.Stream)> olduğu bir `await` ifade. Await ifadeleri neredeyse herhangi bir yerinde görünebilir kodunuzda şimdiye kadar yalnızca bunları Atama ifadesinin bir parçası olarak gördüğünüz olsa bile.
+<xref:System.Net.Http.HttpClient.GetStreamAsync(System.String)> Artık<xref:System.Net.Http.HttpClient.GetStringAsync(System.String)>yerine kullandığınızdan emin olun. Serileştirici, kaynağı olarak bir dize yerine bir akış kullanır. Yukarıdaki ikinci satırda kullanılmakta olan C# dilin birkaç özelliğini açıklayalim. Bağımsız değişkeni <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.ReadObject(System.IO.Stream)> bir `await` ifadedir. Await ifadeleri kodunuzda neredeyse her yerde görünebilir, ancak şu anda yalnızca bir atama bildiriminin parçası olarak gördünüz.
 
-İkincisi, `as` işleci dönüştürür derleme zamanı türünden `object` için `List<repo>`.
-Bildirimi <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.ReadObject(System.IO.Stream)> türünde bir nesne döndürür bildirir <xref:System.Object?displayProperty=nameWithType>. <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.ReadObject(System.IO.Stream)> oluşturduğu zaman belirttiğiniz türü döndürür (`List<repo>` bu öğreticideki). Dönüştürme başarısız olursa `as` işleci değerlendirilen `null`, bir özel durum oluşturmaktansa.
+İkinci olarak, `as` işleç derleme zaman `object` türünden öğesine `List<repo>`dönüştürür.
+Bildirimi <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.ReadObject(System.IO.Stream)> , türünde <xref:System.Object?displayProperty=nameWithType>bir nesne döndüren bildirir. <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.ReadObject(System.IO.Stream)>, oluşturduğunuzda belirttiğiniz türü döndürür (`List<repo>` Bu öğreticide). Dönüştürme başarılı olmazsa, `as` bir özel durum oluşturmak yerine işleci olarak `null`değerlendirilir.
 
-Bu bölümde ile neredeyse hazırsınız. C# nesnelerini JSON dönüştürdükten sonra şimdi her depo adını görüntüler. Okuma satırları değiştirin:
+Bu bölümde neredeyse işiniz bitti. JSON 'ı C# nesnelere dönüştürdüğüne göre, her deponun adını görüntülim. Okunan satırları değiştirin:
 
 ```csharp
 var msg = await stringTask;   //**Deleted this
 Console.Write(msg);
 ```
 
-şunlarla birlikte:
+aşağıdakiler ile:
 
 ```csharp
 foreach (var repo in repositories)
     Console.WriteLine(repo.name);
 ```
 
-Derleme ve uygulamayı çalıştırın. .NET Foundation'ın yer depolar adlarını yazdırılacağı.
+Uygulamayı derleyin ve çalıştırın. .NET Foundation 'ın parçası olan Depoların adlarını yazdıracaktır.
 
-## <a name="controlling-serialization"></a>Serileştirme denetleme
+## <a name="controlling-serialization"></a>Serileştirme denetleniyor
 
-Daha fazla özellik eklemeden önce şimdi adres `repo` yazın ve daha fazla standart C# kurallarına uygun hale getirebilirsiniz. Bu açıklama ekleyerek yaparsınız `repo` tür *öznitelikleri* JSON serileştirici nasıl çalıştığını denetleyen. Sizin durumunuzda, bu öznitelikler JSON anahtar adlarını ve C# sınıf ve üye adları arasında bir eşleme tanımlamak için kullanırsınız. Kullanılan iki öznitelikleri <xref:System.Runtime.Serialization.DataContractAttribute> ve <xref:System.Runtime.Serialization.DataMemberAttribute> öznitelikleri. Kural gereği, tüm öznitelik sınıfları soneki bitiş `Attribute`. Ancak, bir öznitelik uygulamak soneki kullanın gerekmez.
+Daha fazla özellik eklemeden önce, `repo` türü ele alalım ve daha standart C# Kurallara uyalım. Bunu, JSON seri hale getiricinin `repo` nasıl çalıştığını denetleyen *özniteliklerle* türe açıklama ekleyerek yapabilirsiniz. Bu durumda, JSON anahtar adları ve C# sınıf ile üye adları arasında bir eşleme tanımlamak için bu öznitelikleri kullanacaksınız. Kullanılan iki öznitelik <xref:System.Runtime.Serialization.DataContractAttribute> ve <xref:System.Runtime.Serialization.DataMemberAttribute> öznitelikleridir. Kurala göre, tüm öznitelik sınıfları sonta `Attribute`sona erdir. Ancak, bir özniteliği uyguladığınızda o soneki kullanmanız gerekmez.
 
-<xref:System.Runtime.Serialization.DataContractAttribute> Ve <xref:System.Runtime.Serialization.DataMemberAttribute> öznitelikleri olan farklı bir kitaplıkta, bu nedenle bu kitaplığı, bağımlılık olarak C# proje dosyası eklemek gerekir. Aşağıdaki satırı ekleyin `<ItemGroup>` proje dosyanızın bölümü:
+Ve öznitelikleri farklı bir kitaplıkta olduğundan, bu kitaplığı C# proje dosyanıza bağımlılık olarak eklemeniz gerekir. <xref:System.Runtime.Serialization.DataMemberAttribute> <xref:System.Runtime.Serialization.DataContractAttribute> Aşağıdaki satırı `<ItemGroup>` proje dosyanızın bölümüne ekleyin:
 
 ```xml
 <PackageReference Include="System.Runtime.Serialization.Primitives" Version="4.3.0" />
 ```
 
-Dosyayı kaydettikten sonra çalıştırın `dotnet restore` ([bkz. Not](#dotnet-restore-note)) bu paketi alınamadı.
+Dosyayı kaydettikten sonra, bu paketi almak `dotnet restore` için ([bkz. Note](#dotnet-restore-note)) öğesini çalıştırın.
 
-Ardından, açık `repo.cs` dosya. Baş harfleri büyük kullanmanız ve tam adı yazım adı değiştirelim `Repository`. Biz yine de eklemeniz gerekecektir. Bu nedenle bu tür için JSON 'repo' düğümleri eşlemek istediğiniz <xref:System.Runtime.Serialization.DataContractAttribute> sınıf bildirimine özniteliği. Siz ayarlarsınız `Name` bu türüyle JSON düğüm adı özniteliğinin özelliği:
+Sonra `repo.cs` dosyayı açın. Bu adı, Pascal durumunu kullanacak şekilde değiştirelim ve adı `Repository`tamamen heceleyin. Hala bu tür JSON ' repo ' düğümlerini eşlemek istiyoruz, bu nedenle <xref:System.Runtime.Serialization.DataContractAttribute> özniteliği sınıf bildirimine eklemeniz gerekir. Özniteliğin `Name` özelliğini, bu türle eşlenen json düğümlerinin adına ayarlayacaksınız:
 
 ```csharp
 [DataContract(Name="repo")]
 public class Repository
 ```
 
-<xref:System.Runtime.Serialization.DataContractAttribute> Üyesi <xref:System.Runtime.Serialization> ad alanı, bu nedenle uygun eklemeniz gerekir `using` deyimini dosyanın üst:
+, Ad alanının bir üyesidir `using` , bu yüzden dosyanın en üstüne uygun ifadeyi eklemeniz gerekir: <xref:System.Runtime.Serialization> <xref:System.Runtime.Serialization.DataContractAttribute>
 
 ```csharp
 using System.Runtime.Serialization;
 ```
 
-Adını değiştirdiğinizi `repo` sınıfının `Repository`, bu nedenle aynı ad Program.cs içinde değişikliğini yapmanız gerekir (bazı düzenleyiciler otomatik olarak bu değişikliği yapmadan bir yeniden adlandırma düzenlemesi destekleyebilir:)
+`repo` Sınıfının adını olarak `Repository`değiştirdiniz. bu nedenle, program.cs içinde aynı ad değişikliğini yapmanız gerekir (bazı düzenleyiciler, bu değişikliği otomatik olarak yapan bir yeniden adlandırma yeniden düzenlemesi destekleyebilir:)
 
 ```csharp
 var serializer = new DataContractJsonSerializer(typeof(List<Repository>));
@@ -245,28 +245,28 @@ var serializer = new DataContractJsonSerializer(typeof(List<Repository>));
 var repositories = serializer.ReadObject(await streamTask) as List<Repository>;
 ```
 
-Ardından, aynı değişikliği olalım `name` kullanarak alan <xref:System.Runtime.Serialization.DataMemberAttribute> sınıfı. Bildirimi için aşağıdaki değişiklikleri yapın `name` repo.cs alanındaki:
+Daha sonra, `name` <xref:System.Runtime.Serialization.DataMemberAttribute> sınıfını kullanarak aynı değişikliği alanla yapalim. Repo.cs içindeki `name` alanın bildiriminde aşağıdaki değişiklikleri yapın:
 
 ```csharp
 [DataMember(Name="name")]
 public string Name;
 ```
 
-Bu değişiklik, program.cs içinde her deponun adını yazar kodu değiştirmek ihtiyacınız olduğu anlamına gelir:
+Bu değişiklik, program.cs içindeki her deponun adını yazan kodu değiştirmeniz gereken anlamına gelir:
 
 ```csharp
 Console.WriteLine(repo.Name);
 ```
 
-Yapmak bir `dotnet build` arkasından bir `dotnet run` gördüğümüz eşlemeleri doğru emin olmak için. Önce aynı çıktıyı görmeniz gerekir. Daha fazla değişiklik için size daha fazla özellik web sunucusundan işlemeden önce olalım `Repository` sınıfı. `Name` Üye ortak olarak erişilebilen bir alandır. Nesne yönelimli iyi değil, şimdi bunu bir özelliğini değiştirebilirsiniz. Amaçlarımız doğrultusunda alma veya özellik ayarlama, çalıştırmak için özel kod gerekmez, ancak bir özelliğe değiştirme kolaylaştırır kullanan herhangi bir kod bozup olmadan bu değişiklikleri daha sonra eklenecek `Repository` sınıfı.
+Eşlemelerinizin doğru olduğundan emin `dotnet run` olmak için bir takipedin.`dotnet build` Önceki ile aynı çıktıyı görmeniz gerekir. Web sunucusundan daha fazla özellik işleyebilmemiz için `Repository` , sınıfa daha fazla değişiklik yapalım. `Name` Üye, herkese açık bir alandır. Bu iyi bir nesne odaklı uygulama değildir, bu nedenle bunu bir özellik olarak değiştirelim. Özelliği alırken veya ayarlarken çalıştırmak için belirli bir kod gerekmez, ancak bir özelliği değiştirmek, bu değişiklikleri `Repository` sınıfını kullanan kodları bozmadan daha sonra eklemeyi kolaylaştırır.
 
-Alan tanımını kaldırın ve değiştirin bir [otomatik uygulanan özellik](../programming-guide/classes-and-structs/auto-implemented-properties.md):
+Alan tanımını kaldırın ve [Otomatik uygulanan bir özellik](../programming-guide/classes-and-structs/auto-implemented-properties.md)ile değiştirin:
 
 ```csharp
 public string Name { get; set; }
 ```
 
-Derleyici gövdesinin oluşturur `get` ve `set` erişimcileri, aynı zamanda özel bir alan adı depolamak için. El ile yazabilirsiniz aşağıdaki koda benzer olacaktır:
+Derleyici, `get` ve erişimcilerinin gövdesini ve `set` adı depolamak için özel bir alanı üretir. Bu, el ile yazabileceğiniz aşağıdaki koda benzer olacaktır:
 
 ```csharp
 public string Name
@@ -277,23 +277,23 @@ public string Name
 private string _name;
 ```
 
-Şimdi yeni özellikler eklemeden önce bir daha fazla değişiklik yapın. `ProcessRepositories` Yöntemi zaman uyumsuz çalışma yapmak ve depoları koleksiyonunu döndürür. Şimdi iade `List<Repository>` o yöntemi ve taşıma bilgilerini yazar kodu `Main` yöntemi.
+Yeni özellikler eklemeden önce bir değişiklik yapalim. `ProcessRepositories` Yöntemi zaman uyumsuz çalışmayı yapabilir ve depoların bir koleksiyonunu döndürebilir. Bu yöntemden ' ı `List<Repository>` dönelim ve bilgileri `Main` yöntemine yazan kodu taşıyalim.
 
-İmzasını Değiştir `ProcessRepositories` bir görevin sonucu bir listedir döndürmek için `Repository` nesneler:
+Sonucunu bir `Repository` nesne listesi `ProcessRepositories` olan bir görevi döndürmek için imzasını değiştirin:
 
 ```csharp
 private static async Task<List<Repository>> ProcessRepositories()
 ```
 
-Ardından, yalnızca depolar JSON yanıtı işledikten sonra dönüş:
+Ardından, JSON yanıtını işledikten sonra depoları geri döndürün:
 
 ```csharp
 var repositories = serializer.ReadObject(await streamTask) as List<Repository>;
 return repositories;
 ```
 
-Derleyicinin oluşturduğu `Task<T>` çünkü bu yöntem olarak işaretlediğiniz için döndürülecek nesne `async`.
-Ardından, değişiklik bakalım `Main` BT'nin bunlar yakalar, böylece yöntemi sonuçlarını ve her bir depo adı konsola yazar. `Main` Metodu artık şuna benzer:
+Bu yöntemi olarak `async`işaretlediğiniz `Task<T>` için derleyici, döndürme için nesnesi oluşturur.
+Ardından, `Main` yöntemi bu sonuçları yakalayıp, her depo adını konsola yazar şekilde değiştirelim. `Main` Yönteminiz şu şekilde görünür:
 
 ```csharp
 public static void Main(string[] args)
@@ -305,13 +305,13 @@ public static void Main(string[] args)
 }
 ```
 
-Erişim `Result` bir görevin özelliği, görev tamamlanıncaya kadar engeller. Normalde, tercih `await` görüldüğü görevi tamamlanırken `ProcessRepositories` yöntemi ancak içinde kullanılamaz `Main` yöntemi.
+Görev tamamlanana kadar görev bloklarının özelliğineerişme.`Result` Normalde, `ProcessRepositories` yönteminde olduğu gibi, `await` ancak `Main` yönteminde izin verilmeyen görevi tamamlamayı tercih edersiniz.
 
-## <a name="reading-more-information"></a>Daha fazla bilgi okuma
+## <a name="reading-more-information"></a>Daha fazla bilgi okunuyor
 
-Şimdi bu GitHub API'den gidiyor JSON paket özelliklerinde, birkaç daha işleyerek tamamlayın. Her şeyi edinin istemezsiniz, ancak bazı özellikler ekleme, C# dilinin birkaç daha fazla özellik gösterilecektir.
+Bu işlemi, GitHub API 'sinden gönderilen JSON paketindeki özelliklerden daha fazlasını işleyerek tamamlayalim. Her şeyi almak istemezsiniz, ancak birkaç özelliği eklemek C# dilin birkaç özelliğini gösterir.
 
-Daha fazla birkaç basit türler için ekleyerek başlayalım `Repository` sınıf tanımını. Bu özellikler, o sınıfa ekleyin:
+Daha fazla basit türü `Repository` sınıf tanımına ekleyerek başlayalım. Bu özellikleri bu sınıfa ekleyin:
 
 ```csharp
 [DataMember(Name="description")]
@@ -327,9 +327,9 @@ public Uri Homepage { get; set; }
 public int Watchers { get; set; }
 ```
 
-Bu özellikler hedef türe (olan JSON paketlerinin ne içermesi) dize türünden yerleşik dönüştürmeleri vardır. <xref:System.Uri> Türü için yeni olabilir. Bir URI'yı temsil veya bu durumda, bir URL. Durumunda, `Uri` ve `int` türleri, JSON paket hedef türe dönüştürülmeyecekse veri içeriyorsa, serileştirme eylemi bir özel durum oluşturur.
+Bu özellikler dize türünden (JSON paketlerinin içerdiği), hedef türüne yerleşik Dönüştürmelere sahiptir. <xref:System.Uri> Tür sizin için yeni olabilir. Bir URI 'yi veya bu durumda bir URL 'yi temsil eder. `Uri` Ve`int` türleri söz konusu olduğunda, JSON paketi hedef türüne Dönüştürülmeyen veriler içeriyorsa, serileştirme eylemi bir özel durum oluşturur.
 
-Bunlar ekledikten sonra güncelleştirme `Main` yöntemi bu öğeleri görüntülemek için:
+Bunları ekledikten sonra, bu öğeleri göstermek için `Main` yöntemini güncelleştirin:
 
 ```csharp
 foreach (var repo in repositories)
@@ -343,20 +343,20 @@ foreach (var repo in repositories)
 }
 ```
 
-Son adım olarak, son zorlama işlemi için bilgi ekleyelim. Bu bilgiler, JSON yanıtındaki bu şekilde biçimlendirilir:
+Son bir adım olarak, son gönderme işlemi için bilgileri ekleyelim. Bu bilgiler, JSON yanıtında bu biçimde biçimlendirilir:
 
 ```json
 2016-02-08T21:27:00Z
 ```
 
-Bu biçim standart .NET hiçbirini izlemez <xref:System.DateTime> biçimleri. Bu nedenle özel dönüştürme yöntemi yazma gerekecektir. Ayrıca bunu büyük olasılıkla kullanıcıları için kullanıma sunulan ham dize istemediğiniz `Repository` sınıfı. Öznitelikleri de bu denetim yardımcı olabilir. İlk olarak tanımlayan bir `private` tarih saat dize gösterimini tutacak özelliği, `Repository` sınıfı:
+Bu biçim standart .net <xref:System.DateTime> biçimlerinden hiçbirini izlemez. Bu nedenle, özel bir dönüştürme yöntemi yazmanız gerekir. Ham dizenin, `Repository` sınıfın kullanıcılarına gösterilmesini de istemezsiniz. Öznitelikleri, bu da denetim sağlanmasına yardımcı olabilir. İlk olarak, sınıfınıza `private` `Repository` ait tarih saatinin dize gösterimini tutacak bir özellik tanımlayın:
 
 ```csharp
 [DataMember(Name="pushed_at")]
 private string JsonDate { get; set; }
 ```
 
-<xref:System.Runtime.Serialization.DataMemberAttribute> Öznitelik bildirir seri hale getirici bu işlenmesi gerektiğini, bir ortak üye olmasa bile. Ardından, geçerli bir dize dönüştürür genel bir salt okunur özelliği yazmanız gereken <xref:System.DateTime> nesne ve döndüren <xref:System.DateTime>:
+<xref:System.Runtime.Serialization.DataMemberAttribute> Özniteliği, seri hale getiricinin, ortak üye olmasa bile bu işleme yönelik olduğunu bildirir. Sonra, dizeyi geçerli <xref:System.DateTime> bir nesneye dönüştüren ortak bir salt okunurdur ve bu <xref:System.DateTime>özelliği yazmanız gerekir:
 
 ```csharp
 [IgnoreDataMember]
@@ -369,25 +369,25 @@ public DateTime LastPush
 }
 ```
 
-Şimdi yeni yapıları üzerinden geçelim. `IgnoreDataMember` Özniteliği, bu tür okuma veya herhangi bir JSON nesnesinden yazılmış, seri hale getirici bildirir. Bu özellik yalnızca içeren bir `get` erişimcisi. Var olan hiçbir `set` erişimcisi. Nasıl tanımladığınızı olan bir *salt okunur* C# özelliği. (Evet, oluşturabileceğiniz *salt yazılır* C# ancak değerlerine özellikleri sınırlıdır.) <xref:System.DateTime.ParseExact(System.String,System.String,System.IFormatProvider)> Yöntemi bir dizeyi ayrıştırır ve oluşturan bir <xref:System.DateTime> sağlanan tarih biçimini kullanarak nesne ve ek meta veri için ekler `DateTime` kullanarak bir `CultureInfo` nesne. Ayrıştırma işlemi başarısız olursa, özellik erişimcisi özel durum oluşturur.
+Yukarıdaki yeni yapıları inceleyelim. `IgnoreDataMember` Özniteliği, seri hale getirici bu türün herhangi bir JSON nesnesine okunmamalıdır veya yazılamaz olması gerektiğini söyler. Bu özellik yalnızca bir `get` erişimci içerir. `set` Erişimci yok. İçinde C# *salt okunurdur* bir özelliği nasıl tanımlayacaksınız. (Evet, öğesinde C# *salt yazılır* özellikler oluşturabilirsiniz, ancak değerleri sınırlıdır.) Yöntemi bir dizeyi ayrıştırır ve bir <xref:System.DateTime> nesne `DateTime` kullanarak `CultureInfo` bir nesne oluşturur. <xref:System.DateTime.ParseExact(System.String,System.String,System.IFormatProvider)> Ayrıştırma işlemi başarısız olursa, özellik erişimcisi bir özel durum oluşturur.
 
-Kullanılacak <xref:System.Globalization.CultureInfo.InvariantCulture>, eklemeniz gerekecektir <xref:System.Globalization> ad alanına `using` deyimlerinde `repo.cs`:
+Kullanmak <xref:System.Globalization.CultureInfo.InvariantCulture>için, <xref:System.Globalization> ad alanını `using` içindeki `repo.cs`deyimlere eklemeniz gerekir:
 
 ```csharp
 using System.Globalization;
 ```
 
-Son olarak, bir deyim konsolunda daha çıkış ve oluşturup bu uygulamayı yeniden çalıştırmak hazır ekleyin:
+Son olarak, konsolda bir çıkış bildirisi daha ekleyin ve bu uygulamayı yeniden oluşturup çalıştırmak için hazırsınız:
 
 ```csharp
 Console.WriteLine(repo.LastPush);
 ```
 
-Sürümünüz artık eşleşmelidir [tamamlanan örnek](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-webapiclient).
+Sürümünüz artık [tamamlanmış örnekle](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-webapiclient)eşleşmelidir.
 
 ## <a name="conclusion"></a>Sonuç
 
-Bu öğreticide, web isteklerinde bulunmak, istemcinin sonucu ayrıştırması ve sonuçları özelliklerini görüntülemek nasıl gösterilmiştir. Projenizde bağımlılıklar olarak yeni paketler de ekledik. C# dilinin nesne yönelimli teknikleri destekleyen özelliklerden bazıları gördünüz.
+Bu öğretici, Web istekleri oluşturma, sonucu ayrıştırma ve bu sonuçların özelliklerini görüntüleme konusunda sizi gösterdi. Ayrıca, yeni paketleri projenize bağımlılıklar olarak eklediniz. Nesne odaklı teknikleri destekleyen C# dilin bazı özelliklerini gördünüz.
 
 <a name="dotnet-restore-note"></a>
 

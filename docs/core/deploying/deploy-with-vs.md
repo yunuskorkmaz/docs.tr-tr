@@ -1,5 +1,5 @@
 ---
-title: Dağıtma .NET Core uygulamaları Visual Studio ile
+title: Visual Studio ile .NET Core uygulamaları dağıtma
 description: Visual Studio ile .NET Core uygulaması dağıtmayı öğrenin.
 author: rpetrusha
 ms.author: ronpet
@@ -8,121 +8,121 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: fd12d2d8c210bb85e3f45b8c8246a3d19f1a7095
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9379f02c29f11606d0ef34323b16c1531927b0c8
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61613559"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849075"
 ---
-# <a name="deploy-net-core-apps-with-visual-studio"></a>Dağıtma .NET Core uygulamaları Visual Studio ile
+# <a name="deploy-net-core-apps-with-visual-studio"></a>Visual Studio ile .NET Core uygulamaları dağıtma
 
-Dağıtabileceğiniz bir .NET Core uygulaması ya da farklı bir *framework bağımlı dağıtım*, uygulama ikili dosyalarını içerir, ancak hedef sistem üzerinde veya olarak .NET Core varlığını bağımlı bir *müstakil Dağıtım*, hem uygulama hem de .NET Core ikili dosyalarını içerir. .NET Core uygulama dağıtımı genel bakış için bkz. [.NET Core uygulaması dağıtımını](index.md).
+Bir .NET Core uygulamasını, uygulama ikililerini *içeren, ancak*hedef sistemde .NET Core varlığına veya her ikisini de içeren bir *bağımsız dağıtım*olarak bir .NET Core uygulaması dağıtabilirsiniz. uygulamanız ve .NET Core ikilileri. .NET Core uygulama dağıtımına genel bir bakış için bkz. [.NET Core uygulama dağıtımı](index.md).
 
-Aşağıdaki bölümlerde, aşağıdaki türde dağıtımları oluşturmak için Microsoft Visual Studio kullanmayı göstermektedir:
+Aşağıdaki bölümlerde, aşağıdaki dağıtım türlerini oluşturmak için Microsoft Visual Studio nasıl kullanılacağı gösterilmektedir:
 
 - Framework bağımlı dağıtım
-- Framework bağımlı dağıtım üçüncü taraf bağımlılıkları
+- Üçüncü taraf bağımlılıklarla çerçeveye bağımlı dağıtım
 - Kendi içinde dağıtım
-- Üçüncü taraf bağımlılıkları kendi içinde dağıtım
+- Üçüncü taraf bağımlılıklarla kendi kendine kapsanan dağıtım
 
-.NET Core uygulamaları geliştirmek için Visual Studio'yu kullanma hakkında daha fazla bilgi için bkz: [Windows üzerinde .NET Core önkoşulları](../windows-prerequisites.md#prerequisites-with-visual-studio-2017).
+.NET Core uygulamaları geliştirmek için Visual Studio 'Yu kullanma hakkında bilgi için bkz. [Windows üzerinde .NET Core önkoşulları](../windows-prerequisites.md#prerequisites-with-visual-studio-2017).
 
 ## <a name="framework-dependent-deployment"></a>Framework bağımlı dağıtım
 
-Herhangi bir üçüncü taraf bağımlılıkları olan bir framework bağımlı dağıtımının oluşturmaya, sınamaya ve uygulama yayımlama yalnızca içerir. C# dilinde yazılmış basit bir örnek işlemini gösterir.  
+Bir üçüncü taraf bağımlılığı olmadan çerçeveye bağlı bir dağıtımı dağıtmak, uygulamayı oluşturma, test etme ve yayımlamayı içerir. İçinde C# yazılmış basit bir örnek işlemi gösterir.  
 
 1. Projeyi oluşturun.
 
-   **Dosya** > **Yeni** > **Proje**’yi seçin. İçinde **yeni proje** iletişim kutusunda, dilinizin (C# veya Visual Basic) proje kategorilerde genişletin **yüklü** öğesini Proje Türleri bölmesinde **.NET Core**ve ardından seçin **Konsol uygulaması (.NET Core)** Orta bölmedeki şablonu. "FDD" gibi bir proje adı girin **adı** metin kutusu. **Tamam** düğmesini seçin.
+   **Dosya** > **Yeni** > **Proje**’yi seçin. **Yeni proje** C# iletişim kutusunda, dil (veya Visual Basic) Proje kategorilerini **yüklü** proje türleri bölmesinde genişletin, **.NET Core**' u seçin ve ardından orta bölmedeki **konsol uygulaması (.NET Core)** şablonunu seçin. **Ad** metin kutusuna "fdd" gibi bir proje adı girin. **Tamam** düğmesini seçin.
 
 1. Uygulamanın kaynak kodunu ekleyin.
 
-   Açık *Program.cs* veya *Program.vb* Düzenleyicisi'nde dosya ve otomatik olarak oluşturulan kodu aşağıdaki kodla değiştirin. Kullanıcının metin girmesini ister ve kullanıcı tarafından girilen kelimeler görüntüler. Normal ifade kullanan `\w+` giriş metnindeki sözcükleri ayırmak için.
+   Düzenleyicide *program.cs* veya *program. vb* dosyasını açın ve otomatik oluşturulan kodu aşağıdaki kodla değiştirin. Kullanıcıdan metin girmesini ve Kullanıcı tarafından girilen tek tek kelimeleri görüntülediğini ister. Giriş metnindeki sözcükleri ayırmak için `\w+` normal ifadeyi kullanır.
 
    [!code-csharp[deployment#1](~/samples/snippets/core/deploying/cs/deployment-example.cs)]
    [!code-vb[deployment#1](~/samples/snippets/core/deploying/vb/deployment-example.vb)]
 
-1. Uygulamanızı hata ayıklama yapısını oluşturun.
+1. Uygulamanızın hata ayıklama derlemesini oluşturun.
 
-   Seçin **derleme** > **yapı çözümü**. Ayrıca derlemek ve seçerek uygulamanızı hata ayıklama yapısını çalıştırmak **hata ayıklama** > **hata ayıklamayı Başlat**.
+   Yapı**Yapı çözümünü** **seçin.**  >  Ayrıca, **hata** > ayıklama**başlatma hata ayıklamayı**seçerek uygulamanızın hata ayıklama derlemesini derleyip çalıştırabilirsiniz.
 
 1. Uygulamanızı dağıtın.
 
-   Hata ayıklama ve test programı sonra uygulamanızla birlikte dağıtılacak dosyalar oluşturun. Visual Studio'dan yayımlamak için aşağıdakileri yapın:
+   Programı hata ayıkladıktan ve test ettikten sonra, uygulamanızla birlikte dağıtılacak dosyaları oluşturun. Visual Studio 'dan yayımlamak için şunları yapın:
 
-      1. Çözüm yapılandırmasını değiştirme **hata ayıklama** için **yayın** uygulamanızın derleme bir sürüm (yerine bir hata ayıklama) sürümü için araç çubuğundaki.
+      1. Uygulamanızın bir sürümünü (hata ayıklama yerine) oluşturmak için, araç çubuğundaki çözüm yapılandırmasını **Hata Ayıkla** 'dan **Release** olarak değiştirin.
 
-      1. Projede (çözümü değil) sağ tıklatın **Çözüm Gezgini** seçip **Yayımla**.
+      1. **Çözüm Gezgini** ' de projeye (çözüme değil) sağ tıklayın ve **Yayımla**' yı seçin.
 
-      1. İçinde **Yayımla** sekmesinde **Yayımla**. Visual Studio, uygulamanızın yerel dosya sistemine oluşturan dosyaların yazar.
+      1. **Yayımla** sekmesinde **Yayımla**' yı seçin. Visual Studio, uygulamanızı oluşturan dosyaları yerel dosya sistemine yazar.
 
-      1. **Yayımla** sekmesi, artık tek bir profil gösterir **FolderProfile**. Profilin yapılandırma ayarları gösterilir **özeti** sekmesinin bölümünde.
+      1. **Yayımla** sekmesinde artık tek bir profil, **folderprofile**gösterilmektedir. Profilin yapılandırma ayarları, sekmesinin **Özet** bölümünde gösterilir.
 
-   Ortaya çıkan dosyalar adlı bir dizinde yerleştirilir `Publish` Windows üzerinde ve `publish` bir proje alt dizinindeki UNIX sistemlerde *.\bin\release\netcoreapp2.1* alt.
+   Elde edilen dosyalar, Windows 'da ve `Publish` `publish` projenizin *.\bin\release\netcoreapp2.1* alt dizininin bir alt dizininde bulunan UNIX sistemlerinde adlı bir dizine yerleştirilir.
 
-Uygulamanızın dosyaları ile birlikte uygulamanızı hata ayıklama bilgilerini içeren bir program veritabanı (.pdb) dosyası yayımlama işlemi yayar. Dosya, öncelikle bir özel durum hata ayıklama için kullanışlıdır. Bu paket, uygulamanızın dosyaları ile değil seçebilirsiniz. Uygulamanızı yayın derlemesinin hatalarını ayıklamak istediğiniz olay, ancak kaydetmeniz gerekir.
+Yayımlama işlemi, uygulamanızın dosyalarıyla birlikte, uygulamanız hakkındaki hata ayıklama bilgilerini içeren bir program veritabanı (. pdb) dosyası yayar. Dosya öncelikle hata ayıklama özel durumları için yararlıdır. Bunu uygulamanızın dosyalarıyla paketlemeyi seçemezsiniz. Ancak, uygulamanızın yayın derlemesinde hata ayıklamak istediğiniz olaya kaydetmelisiniz.
 
-İstediğiniz gibi uygulama dosyalarını tam kümesini dağıtın. Örneğin, bunları bir Zip dosyasına paketleyin, basit bir kullanın `copy` komutunu ya da bunları seçtiğiniz herhangi bir yükleme paketi ile birlikte dağıtabilirsiniz. Yüklendikten sonra kullanıcılar daha sonra uygulamanızı kullanarak yürütebilirsiniz `dotnet` komut ve uygulama dosya adı gibi sağlama `dotnet fdd.dll`.
+Tüm uygulama dosyalarını dilediğiniz şekilde dağıtın. Örneğin, bunları bir ZIP dosyasında paketleyebilir, basit `copy` bir komut kullanabilir veya istediğiniz herhangi bir yükleme paketiyle dağıtabilirsiniz. Kullanıcılar yüklendikten sonra, `dotnet` komutunu kullanarak ve gibi uygulama dosya adını `dotnet fdd.dll`sağlayarak uygulamanızı yürütebilir.
 
-Uygulama ikili dosyalarını ek olarak, yükleyicinizi de paylaşılan framework yükleyici paket veya uygulama yüklemesinin bir parçası olarak bir önkoşul olarak için kontrol edin.  Makine genelinde olduğundan paylaşılan framework'ün yüklemesini yönetici/kök erişim gerektirir.
+Uygulama ikililerinin yanı sıra, yükleyicinizin de paylaşılan çerçeve yükleyicisini paketi veya uygulama yüklemesinin bir parçası olarak bir önkoşul olarak denetlemesi gerekir.  Paylaşılan Framework 'ün yüklenmesi, makine genelinde olduğundan yönetici/kök erişimi gerektirir.
 
-## <a name="framework-dependent-deployment-with-third-party-dependencies"></a>Framework bağımlı dağıtım üçüncü taraf bağımlılıkları
+## <a name="framework-dependent-deployment-with-third-party-dependencies"></a>Üçüncü taraf bağımlılıklarla çerçeveye bağımlı dağıtım
 
-Bir veya daha fazla üçüncü taraf bağımlılıkları olan bir framework bağımlı dağıtımının bağımlılıkları projenize kullanılabilir olmasını gerektirir. Uygulamanızı oluşturmadan önce aşağıdaki ek adımlar gereklidir:
+Bir veya daha fazla üçüncü taraf bağımlılığı olan çerçeveye bağlı bir dağıtımı dağıtmak, tüm bağımlılıkların projeniz için kullanılabilir olmasını gerektirir. Uygulamanızı derlemek için aşağıdaki ek adımlar gereklidir:
 
-1. Kullanım **NuGet Paket Yöneticisi** projenize; NuGet paketine başvuru eklemek ve paket zaten sisteminizde kullanılabilir değilse, yükleyin. Paket Yöneticisi'ni açmak için seçmeniz **Araçları** > **NuGet Paket Yöneticisi** > **çözüm için NuGet paketlerini Yönet**.
+1. Projenize bir NuGet paketine başvuru eklemek için **NuGet paket yöneticisini** kullanın; paket sisteminizde zaten yoksa, uygulamayı da yükleyemezsiniz. Paket Yöneticisi 'ni açmak için **Araçlar** > **NuGet Paket Yöneticisi** > **çözüm için NuGet Paketlerini Yönet**' i seçin.
 
-1. Onaylayın `Newtonsoft.Json` sisteminizde yüklü olduğundan ve yüklü değilse, yükleyin. **Yüklü** sekmesi, sisteminizde yüklü olan NuGet paketlerini listeler. Varsa `Newtonsoft.Json` listelenmiyorsa, seçin **Gözat** sekmesinde ve arama kutusuna "Newtonsoft.Json". Seçin `Newtonsoft.Json` seçip, sağ bölmede, projenizi seçmeden önce **yükleme**.
+1. Sisteminizde yüklü `Newtonsoft.Json` olduğunu doğrulayın ve yoksa yükleme yapın. **Yüklü** sekme, sisteminizde yüklü olan NuGet paketlerini listeler. Orada listelenmemişse **, araştırma sekmesini seçin** ve arama kutusuna "Newtonsoft. JSON" yazın. `Newtonsoft.Json` Sağ bölmedeki ve ' yi seçerek, yüklemeyi seçmeden önce projenizi seçin. `Newtonsoft.Json`
 
-1. Varsa `Newtonsoft.Json` olduğundan, sisteminizde yüklü, projenize sağ bölmede, proje seçerek eklemek **çözüm için paketlerini Yönet** sekmesi.
+1. Zaten sisteminizde yüklüyse, **çözüm için paketleri Yönet** sekmesinin sağ bölmesinde projenizi seçerek projenize ekleyin. `Newtonsoft.Json`
 
-Üçüncü taraf bağımlılıkları olan bir framework bağımlı dağıtım yalnızca üçüncü taraf bağımlılıklarını olarak taşınabilir olduğunu unutmayın. Örneğin, bir üçüncü taraf kitaplığı yalnızca macOS destekliyorsa, uygulamayı Windows sistemleri için taşınabilir değildir. Bu, üçüncü taraf bağımlılığı yerel kodu bağımlı olması durumunda gerçekleşir. Bunun iyi bir örnektir [Kestrel sunucu](https://docs.microsoft.com/aspnet/core/fundamentals/servers/kestrel), üzerinde yerel bir bağımlılık gerektiren [libuv](https://github.com/libuv/libuv). Bu tür bir üçüncü taraf bağımlılığı bir uygulama için bir FDD oluşturulduğunda, yayımlanan çıktısını bir klasöre her biri için içeren [çalışma zamanı tanımlayıcı (RID)](../rid-catalog.md) yerel bağımlılık destekleyen (ve kendi NuGet paketini var).
+Üçüncü taraf bağımlılıkları olan çerçeveye bağlı bir dağıtımın yalnızca üçüncü taraf bağımlılıkları olarak taşındığına göz önünde kalabileceğinizi unutmayın. Örneğin, bir üçüncü taraf kitaplığı yalnızca macOS destekliyorsa, uygulama Windows sistemlerine taşınabilir değildir. Bu durum, üçüncü taraf bağımlılığının yerel koda bağlı olması durumunda meydana gelir. Bunun iyi bir örneği, [libuv](https://github.com/libuv/libuv)üzerinde yerel bir bağımlılık gerektiren [Kestrel sunucusudur](https://docs.microsoft.com/aspnet/core/fundamentals/servers/kestrel). Bu tür üçüncü taraf bağımlılığı olan bir uygulama için FDD oluşturulduğunda, yayımlanan çıktı, yerel bağımlılığın desteklediği (ve NuGet paketinde bulunan) her [çalışma zamanı tanımlayıcısı (RID)](../rid-catalog.md) için bir klasör içerir.
 
-## <a name="simpleSelf"></a> Üçüncü taraf bağımlılıkları olmadan kendi içinde dağıtım
+## <a name="simpleSelf"></a>Üçüncü taraf bağımlılıkları olmayan kendi kendine kapsanan dağıtım
 
-Üçüncü taraf bağımlılıkları kendi içinde bir dağıtımla dağıtma içerir proje oluşturma değiştirme *csproj* oluşturmaya, sınamaya ve uygulama yayımlama dosyası. C# dilinde yazılmış basit bir örnek işlemini gösterir. Oluşturma, kodlama ve framework bağımlı dağıtım yaptığınız gibi projenizi sınamayı başlamadan:
+Bir üçüncü taraf bağımlılığı olmadan kendi içinde bir dağıtımı dağıtmak, projeyi oluşturma, *csproj* dosyasını değiştirme, uygulama oluşturma, test etme ve uygulamayı yayımlamayı kapsar. İçinde C# yazılmış basit bir örnek işlemi gösterir. Yalnızca çerçeveye bağımlı bir dağıtımda olduğu gibi projenizi oluşturarak, kodlayarak ve test etmeye başlayabilirsiniz:
 
 1. Projeyi oluşturun.
 
-   **Dosya** > **Yeni** > **Proje**’yi seçin. İçinde **yeni proje** iletişim kutusunda, dilinizin (C# veya Visual Basic) proje kategorilerde genişletin **yüklü** öğesini Proje Türleri bölmesinde **.NET Core**ve ardından seçin **Konsol uygulaması (.NET Core)** Orta bölmedeki şablonu. "SCD" gibi bir proje adı girin **adı** metin kutusu ve select **Tamam** düğmesi.
+   **Dosya** > **Yeni** > **Proje**’yi seçin. **Yeni proje** C# iletişim kutusunda, dil (veya Visual Basic) Proje kategorilerini **yüklü** proje türleri bölmesinde genişletin, **.NET Core**' u seçin ve ardından orta bölmedeki **konsol uygulaması (.NET Core)** şablonunu seçin. **Ad** metin kutusuna "SCD" gibi bir proje adı girin ve **Tamam** düğmesini seçin.
 
 1. Uygulamanın kaynak kodunu ekleyin.
 
-   Açık *Program.cs* veya dosya Düzenleyicisi'nde ve otomatik olarak oluşturulan kodu aşağıdaki kodla değiştirin. Kullanıcının metin girmesini ister ve kullanıcı tarafından girilen kelimeler görüntüler. Normal ifade kullanan `\w+` giriş metnindeki sözcükleri ayırmak için.
+   Düzenleyicinizde *program.cs* veya *program. vb* dosyasını açın ve otomatik oluşturulan kodu aşağıdaki kodla değiştirin. Kullanıcıdan metin girmesini ve Kullanıcı tarafından girilen tek tek kelimeleri görüntülediğini ister. Giriş metnindeki sözcükleri ayırmak için `\w+` normal ifadeyi kullanır.
 
    [!code-csharp[deployment#1](~/samples/snippets/core/deploying/cs/deployment-example.cs)]
    [!code-vb[deployment#1](~/samples/snippets/core/deploying/vb/deployment-example.vb)]
 
-1. Genelleştirme sabit modu kullanmak isteyip istemediğinizi belirleyin.
+1. Genelleştirme sabit modunu kullanmak isteyip istemediğinizi belirleme.
 
-   Uygulamanızı Linux hedefliyorsa, özellikle, avantajlarından yararlanarak dağıtımınızın toplam boyutunu azaltabilirsiniz [Genelleştirme sabit modu](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md). Genelleştirme sabit modu, genel olarak duyarlı değildir ve biçimlendirme kuralları, büyük/küçük harf kuralları ve dize karşılaştırma ve sıralama düzenini kullanabilen uygulamalar için kullanışlıdır [sabit kültür](xref:System.Globalization.CultureInfo.InvariantCulture).
+   Özellikle uygulamanız Linux hedefliyorsa, [Genelleştirme sabit modundan](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md)yararlanarak dağıtımınızın toplam boyutunu azaltabilirsiniz. Genelleştirme sabit modu, genel olarak uyumlu olmayan ve [sabit kültürün](xref:System.Globalization.CultureInfo.InvariantCulture)biçimlendirme kurallarını, büyük/küçük harf kurallarını ve dize karşılaştırmayı ve sıralama düzenini kullanabilen uygulamalar için yararlıdır.
 
-   Sabit modunu etkinleştirmek için projenize (çözümü değil) sağ **Çözüm Gezgini**seçip **Düzenle SCD.csproj** veya **Düzenle SCD.vbproj**. Ardından aşağıdaki vurgulanan satırları dosyaya ekleyin:
+   Sabit modu etkinleştirmek için, **Çözüm Gezgini**' de projenize (çözüm değil) sağ tıklayın ve **scd. csproj Düzenle** ' yi seçin veya **scd. vbproj**' i düzenleyin. Ardından, aşağıdaki vurgulanmış satırları dosyaya ekleyin:
 
  [!code-xml[globalization-invariant-mode](~/samples/snippets/core/deploying/xml/invariant.csproj)]
 
-1. Uygulamanızı hata ayıklama yapısını oluşturun.
+1. Uygulamanızın hata ayıklama derlemesini oluşturun.
 
-   Seçin **derleme** > **yapı çözümü**. Ayrıca derlemek ve seçerek uygulamanızı hata ayıklama yapısını çalıştırmak **hata ayıklama** > **hata ayıklamayı Başlat**. Hata ayıklama Bu adım, ana bilgisayar platformu üzerinde çalışırken, uygulamanızdaki sorunları tanımlamanıza olanak sağlar. Her hedef platformlar üzerinde test gerekecektir.
+   Yapı**Yapı çözümünü** **seçin.**  >  Ayrıca, **hata** > ayıklama**başlatma hata ayıklamayı**seçerek uygulamanızın hata ayıklama derlemesini derleyip çalıştırabilirsiniz. Bu hata ayıklama adımı, ana bilgisayar platformunda çalışırken uygulamanızdaki sorunları belirlemenize olanak sağlar. Yine de hedef Platformlarınızın her birinde test etmeniz gerekir.
 
-   Genelleştirme sabit modu etkinleştirdiyseniz, kültüre duyarlı veri olmaması, uygulamanız için uygun olup olmadığını sınamak özellikle emin olun.
+   Genelleştirme sabit modunu etkinleştirdiyseniz, özellikle kültüre duyarlı verilerin yokluğunun uygulamanız için uygun olup olmadığını test ettiğinizden emin olun.
 
-Hata ayıklama bitirdiğinizde, kendi içindeki dağıtımınızı yayımlayabilirsiniz:
+Hata ayıklamayı tamamladıktan sonra, kendi içindeki dağıtımınızı yayımlayabilirsiniz:
 
-# <a name="visual-studio-156-and-earliertabvs156"></a>[Visual Studio 15.6 ve önceki sürümleri](#tab/vs156)
+# <a name="visual-studio-156-and-earliertabvs156"></a>[Visual Studio 15,6 ve öncesi](#tab/vs156)
 
-Hata ayıklama ve test programı sonra her platform için uygulamanızdan bu hedefler dağıtılacak dosyaların oluşturun.
+Programı hata ayıkladıktan ve test ettikten sonra, hedeflediği her platform için uygulamanıza dağıtılacak dosyaları oluşturun.
 
-Uygulamanızı Visual Studio'dan yayımlamak için aşağıdakileri yapın:
+Uygulamanızı Visual Studio 'dan yayımlamak için şunları yapın:
 
-1. Uygulamanızı hedefleyen platformlar tanımlayın.
+1. Uygulamanızın hedeflenecek platformları tanımlayın.
 
-   1. Projenizde (çözümü değil) sağ tıklatın **Çözüm Gezgini** seçip **Düzenle SCD.csproj**.
+   1. **Çözüm Gezgini** ' de projenize (çözüm değil) sağ tıklayın ve **scd. csproj öğesini Düzenle**' yi seçin.
 
-   1. Oluşturma bir `<RuntimeIdentifiers>` içindeki `<PropertyGroup>` bölümünü, *csproj* platformları kullanarak uygulamanızın hedeflediği tanımlayan dosyası ve hedeflediğiniz her platform için çalışma zamanı tanımlayıcı (RID) belirtin. Aynı zamanda RID ayırmak için noktalı virgül eklemeniz gerektiğini unutmayın. Bkz: [çalışma zamanı tanımlayıcı Kataloğu](../rid-catalog.md) çalışma zamanı tanımlayıcılarının listesi.
+   1. Csproj dosyanızın `<RuntimeIdentifiers>` `<PropertyGroup>` bölümünde uygulamanızın hedeflediği platformları tanımlayan bir etiket oluşturun ve hedeflediğiniz her platformun çalışma zamanı tanımlayıcısını (RID) belirtin. Ayrıca, RIDs 'yi ayırmak için noktalı virgül eklemeniz gerektiğini unutmayın. Çalışma zamanı tanımlayıcılarının listesi için bkz. [Runtime Identifier Catalog](../rid-catalog.md) .
 
-   Örneğin, aşağıdaki örnekte uygulama 64-bit Windows 10 işletim sistemleri ve OS X sürüm 10.11 64-bit işletim sistemi üzerinde çalıştırıldığını gösterir.
+   Örneğin, aşağıdaki örnek, uygulamanın 64 bitlik Windows 10 işletim sistemleri ve 64 bit işletim sistemi X sürümü 10,11 işletim sisteminde çalıştığını gösterir.
 
    ```xml
    <PropertyGroup>
@@ -130,41 +130,41 @@ Uygulamanızı Visual Studio'dan yayımlamak için aşağıdakileri yapın:
    </PropertyGroup>
    ```
 
-   Unutmayın `<RuntimeIdentifiers>` öğesi hiçbir gidebilir `<PropertyGroup>` sahip olduğunuz, *csproj* dosya. Eksiksiz bir örnek *csproj* dosyası bu bölümde daha sonra görünür.
+   Öğesinin csproj dosyanızda sahip olduğunuz herhangi birine `<PropertyGroup>` gidebileceğini unutmayın. `<RuntimeIdentifiers>` Bu bölümde daha sonra bir örnek *csproj* dosyası belirir.
 
 1. Uygulamanızı yayımlayın.
 
-   Hata ayıklama ve test programı sonra her platform için uygulamanızdan bu hedefler dağıtılacak dosyaların oluşturun.
+   Programı hata ayıkladıktan ve test ettikten sonra, hedeflediği her platform için uygulamanıza dağıtılacak dosyaları oluşturun.
 
-   Uygulamanızı Visual Studio'dan yayımlamak için aşağıdakileri yapın:
+   Uygulamanızı Visual Studio 'dan yayımlamak için şunları yapın:
 
-      1. Çözüm yapılandırmasını değiştirme **hata ayıklama** için **yayın** uygulamanızın derleme bir sürüm (yerine bir hata ayıklama) sürümü için araç çubuğundaki.
+      1. Uygulamanızın bir sürümünü (hata ayıklama yerine) oluşturmak için, araç çubuğundaki çözüm yapılandırmasını **Hata Ayıkla** 'dan **Release** olarak değiştirin.
 
-      1. Projede (çözümü değil) sağ tıklatın **Çözüm Gezgini** seçip **Yayımla**.
+      1. **Çözüm Gezgini** ' de projeye (çözüme değil) sağ tıklayın ve **Yayımla**' yı seçin.
 
-      1. İçinde **Yayımla** sekmesinde **Yayımla**. Visual Studio, uygulamanızın yerel dosya sistemine oluşturan dosyaların yazar.
+      1. **Yayımla** sekmesinde **Yayımla**' yı seçin. Visual Studio, uygulamanızı oluşturan dosyaları yerel dosya sistemine yazar.
 
-      1. **Yayımla** sekmesi, artık tek bir profil gösterir **FolderProfile**. Profilin yapılandırma ayarları gösterilir **özeti** sekmesinin bölümünde. **Hedef çalışma zamanı** hangi çalışma zamanı yayımlanan tanımlar ve **hedef konum** müstakil dağıtımı için dosyaların nerede yazılmış tanımlar.
+      1. **Yayımla** sekmesinde artık tek bir profil, **folderprofile**gösterilmektedir. Profilin yapılandırma ayarları, sekmesinin **Özet** bölümünde gösterilir. **Hedef çalışma zamanı** hangi çalışma zamanının yayımlandığını tanımlar ve **hedef konum** , kendinden bağımsız dağıtım dosyalarının yazıldığı yeri belirler.
 
-      1. Visual Studio varsayılan olarak, tüm dosyaları için tek bir dizin yayımlanan yazar. Kolaylık olması için her bir hedef çalışma zamanı için ayrı profiller oluşturun ve yayımlanan dosyaları bir platforma özgü dizinde yerleştirmek için en iyisidir. Bu, her hedef platformu için ayrı bir yayımlama profili oluşturmayı içerir. Aşağıdakileri yaparak her platform için uygulama şimdi yeniden oluşturun:
+      1. Visual Studio varsayılan olarak tüm yayımlanan dosyaları tek bir dizine yazar. Kolaylık olması için, her bir hedef çalışma zamanı için ayrı profiller oluşturmak ve yayımlanan dosyaları platforma özgü bir dizine yerleştirmek en iyisidir. Bu, her hedef platform için ayrı bir yayımlama profili oluşturmayı içerir. Bu nedenle, şimdi aşağıdakileri yaparak her platform için uygulamayı yeniden oluşturun:
 
-         1. Seçin **yeni profil oluşturma** içinde **Yayımla** iletişim.
+         1. **Yayımla** iletişim kutusunda **Yeni Profil oluştur** ' u seçin.
 
-         1. İçinde **yayımlama hedefi seçin** iletişim kutusunda değişiklik **bir klasör seçin** konumuna *bin\Release\PublishOutput\win10 x64*. **Tamam**’ı seçin.
+         1. **Bir yayımlama hedefi seç** iletişim kutusunda, **klasör seçin** konumunu *Bin\release\publishoutput\win10-x64*olarak değiştirin. **Tamam**’ı seçin.
 
-         1. Yeni profili seçin (**FolderProfile1**) profilleri listesinde olduğundan emin olun **hedef çalışma zamanı** olduğu `win10-x64`. Aksi takdirde seçin **ayarları**. İçinde **profil ayarları** iletişim kutusunda değişiklik **hedef çalışma zamanı** için `win10-x64` seçip **Kaydet**. Aksi takdirde seçin **iptal**.
+         1. Profiller listesinden yeni profili (**FolderProfile1**) seçin ve `win10-x64` **hedef çalışma zamanının** olduğundan emin olun. Değilse, **Ayarlar**' ı seçin. **Profil ayarları** iletişim kutusunda **hedef çalışma zamanını** olarak `win10-x64` değiştirip **Kaydet**' i seçin. Aksi takdirde **iptal**' i seçin.
 
-         1. Seçin **yayımlama** için 64 bit Windows 10 platformlarını kullanarak uygulamanızı yayımlama.
+         1. Uygulamanızı 64 bitlik Windows 10 platformları için yayımlamak üzere **Yayımla** ' yı seçin.
 
-         1. Bir profili yeniden oluşturmak için önceki adımları `osx.10.11-x64` platform. **Hedef konum** olduğu *bin\Release\PublishOutput\osx.10.11-x64*ve **hedef çalışma zamanı** olduğu `osx.10.11-x64`. Visual Studio bu profile atar adı **FolderProfile2**.
+         1. `osx.10.11-x64` Platform için bir profil oluşturmak üzere önceki adımları tekrar izleyin. **Hedef konum** *Bin\Release\PublishOutput\osx.10.11-x64*ve **hedef çalışma zamanı** `osx.10.11-x64`. Visual Studio 'Nun bu profile atadığı ad **FolderProfile2**' dir.
 
-      Her bir hedef konum uygulamanızı başlatmak için gerekli dosyaları (uygulama dosyalarınızı ve tüm .NET Core dosyaları) tam kümesini içerdiğine dikkat edin.
+      Her hedef konumun, uygulamanızı başlatmak için gereken tüm dosya (hem uygulama dosyalarınız hem de tüm .NET Core dosyaları) kümesini içerdiğini unutmayın.
 
-Uygulamanızın dosyaları ile birlikte uygulamanızı hata ayıklama bilgilerini içeren bir program veritabanı (.pdb) dosyası yayımlama işlemi yayar. Dosya, öncelikle bir özel durum hata ayıklama için kullanışlıdır. Bu paket, uygulamanızın dosyaları ile değil seçebilirsiniz. Uygulamanızı yayın derlemesinin hatalarını ayıklamak istediğiniz olay, ancak kaydetmeniz gerekir.
+Yayımlama işlemi, uygulamanızın dosyalarıyla birlikte, uygulamanız hakkındaki hata ayıklama bilgilerini içeren bir program veritabanı (. pdb) dosyası yayar. Dosya öncelikle hata ayıklama özel durumları için yararlıdır. Bunu uygulamanızın dosyalarıyla paketlemeyi seçemezsiniz. Ancak, uygulamanızın yayın derlemesinde hata ayıklamak istediğiniz olaya kaydetmelisiniz.
 
-Yayımlanan dosyaları istediğiniz herhangi bir şekilde dağıtın. Örneğin, bunları bir Zip dosyasına paketleyin, basit bir kullanın `copy` komutunu ya da bunları seçtiğiniz herhangi bir yükleme paketi ile birlikte dağıtabilirsiniz.
+Yayınlanan dosyaları dilediğiniz gibi dağıtın. Örneğin, bunları bir ZIP dosyasında paketleyebilir, basit `copy` bir komut kullanabilir veya istediğiniz herhangi bir yükleme paketiyle dağıtabilirsiniz.
 
-Aşağıdaki tamamlandıktan *csproj* bu proje için dosya.
+Bu proje için tüm *csproj* dosyası aşağıda verilmiştir.
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -176,59 +176,59 @@ Aşağıdaki tamamlandıktan *csproj* bu proje için dosya.
 </Project>
 ```
 
-# <a name="visual-studio-157-and-latertabvs157"></a>[Visual Studio 15.7 ve üzeri](#tab/vs157)
+# <a name="visual-studio-157-and-latertabvs157"></a>[Visual Studio 15,7 ve üzeri](#tab/vs157)
 
-Hata ayıklama ve test programı sonra her platform için uygulamanızdan bu hedefler dağıtılacak dosyaların oluşturun. Bu, her hedef platformu için ayrı bir profil oluşturmayı içerir.
+Programı hata ayıkladıktan ve test ettikten sonra, hedeflediği her platform için uygulamanıza dağıtılacak dosyaları oluşturun. Bu, her hedef platform için ayrı bir profil oluşturmayı içerir.
 
-Her platform uygulama hedeflerinizi aşağıdakileri yapın:
+Uygulamanızın hedeflediği her platform için aşağıdakileri yapın:
 
-1. Hedef platform için bir profil oluşturun.
+1. Hedef platformunuz için bir profil oluşturun.
 
-   Bu oluşturduğunuz ilk profil ise, projede (çözümü değil) sağ tıklatın **Çözüm Gezgini** seçip **Yayımla**.
+   Oluşturduğunuz ilk profildir, **Çözüm Gezgini** ' de projeye (çözüme değil) sağ tıklayın ve **Yayımla**' yı seçin.
 
-   Bir profil zaten oluşturduysanız, açmak için projeye sağ tıklayın **Yayımla** zaten açık değilse iletişim. Ardından **yeni profili**.
+   Zaten bir profil oluşturduysanız, zaten açık değilse **Yayımla** iletişim kutusunu açmak için projeye sağ tıklayın. Ardından **Yeni profil**' i seçin.
 
-   **Bir yayımlama hedefi seçin** iletişim kutusu açılır.
+   **Bir Yayımla hedefi seç** iletişim kutusu açılır.
   
-1. Visual Studio, uygulamanızın yayımladığı konumu seçin.
+1. Visual Studio 'Nun uygulamanızı yayımlayıp konumunu seçin.
 
-   Yalnızca tek bir platformda yayınlıyorsanız, varsayılan değeri kabul edebilir **bir klasör seçin** metin kutusu; bunun için uygulamanızın framework bağımlı dağıtım yayımlar *\<proje dizini > \ bin\Release\netcoreapp2.1\publish\* dizin.
+   Yalnızca tek bir platforma yayımlıyorsanız, **klasör seçin** metin kutusunda varsayılan değeri kabul edebilirsiniz; Bu, uygulamanızın çerçeveye bağımlı dağıtımını *\<Project-Directory > \bin\release\netcoreapp2,\publish\* dizinine yayınlar.
 
-   Birden fazla platforma yayınlıyorsanız, hedef platform tanımlayan bir dize ekler. Örneğin, "linux" dize dosya yolu ekleme, Visual Studio için uygulamanızın framework bağımlı dağıtım yayımlar  *\<proje dizini > \bin\Release\netcoreapp2.1\publish\linux*dizin.
+   Birden fazla platforma yayımlıyorsanız, hedef platformu tanımlayan bir dize ekleyin. Örneğin, "Linux" dizesini dosya yoluna eklerseniz, Visual Studio uygulamanızın  *\<çerçeveye bağımlı dağıtımını, App-Directory > \bin\release\netcoreapp2,\publish\linux* dizinine yayımlar.
 
-1. Yanındaki aşağı açılan liste simgesini seçerek profili oluşturmak **Yayımla** düğmesine tıklayıp **profili oluştur**. Ardından **profili oluştur** profili oluşturma düğmesi.
+1. **Yayımla** düğmesinin yanındaki açılan liste simgesini seçerek profili oluşturun ve **Profil oluştur**' a seçin. Sonra profili oluşturmak için **Profil oluştur** düğmesini seçin.
 
-1. Kendi içinde bir dağıtım yayımladığınız belirtmek ve uygulamanızı hedefleyen bir platform tanımlayın.
+1. Kendinden bağımsız bir dağıtım yayımladığını ve uygulamanızın hedeflenecek bir platform tanımlacağınızı belirtin.
 
-   1. İçinde **Yayımla** iletişim kutusunda **yapılandırma** açmak için bağlantıyı **profil ayarları** iletişim.
+   1. **Yayımla** Iletişim kutusunda **profil ayarları** Iletişim kutusunu açmak için **Yapılandır** bağlantısını seçin.
 
-   1. Seçin **müstakil** içinde **dağıtım modu** liste kutusu.
+   1. **Dağıtım modu** liste kutusunda **kendine ait** ' ı seçin.
 
-   1. İçinde **hedef çalışma zamanı** liste kutusunda, bir platform seçin, uygulama hedeflerinizi.
+   1. **Hedef çalışma zamanı** liste kutusunda, uygulamanızın hedeflediği platformlardan birini seçin.
 
-   1. Seçin **Kaydet** yaptığınız değişiklikleri kabul etmek ve iletişim kutusunu kapatın.
+   1. Değişikliklerinizi kabul etmek ve iletişim kutusunu kapatmak için **Kaydet** ' i seçin.
 
 1. Profilinizi adlandırın.
 
-   1. Seçin **eylemleri** > **profili Yeniden Adlandır** profilinizi adlandırmak için.
+   1. Profilinizi adlandırmak için **Eylemler** > **Yeniden Adlandır** ' ı seçin.
 
-   2. Profilinizi hedef platform tanımlayan bir ad atayın ve ardından **Kaydet*.
+   2. Profilinize hedef platformu tanımlayan bir ad atayın ve ardından **Kaydet*' i seçin.
 
-Herhangi bir ek Hedef platformlar tanımlamak için bu adımları yineleyin, uygulama hedeflerinizi.
+Uygulamanızın hedeflediği ek hedef platformları tanımlamak için bu adımları tekrarlayın.
 
-Profillerinizi yapılandırdıktan ve uygulamanızı yayımlamak hazırsınız. Bunu yapmak için:
+Profillerinizi yapılandırdınız ve şimdi uygulamanızı yayımlamaya hazırsınız. Bunu yapmak için:
 
-   1. Varsa **Yayımla** penceresi açık değilse, proje üzerinde (çözümü değil) sağ tıklatın **Çözüm Gezgini** seçip **Yayımla**.
+   1. **Yayımla** penceresi açık değilse, **Çözüm Gezgini** ' de projeye (çözüm değil) sağ tıklayın ve **Yayımla**' yı seçin.
 
-   2. Yayımlama ve ardından istediğiniz profili seçin **Yayımla**. Yayımlanacak her bir profil için bunu yapın.
+   2. Yayınlamak istediğiniz profili seçin ve ardından **Yayımla**' yı seçin. Bu, yayımlanacak her profil için bunu yapın.
 
-   Unutmayın her bir hedef konum (Bizim örneğimizde, söz konusu olduğunda bin\release\netcoreapp2.1\publish\\*profil adı* uygulamanızı başlatmak için gereken dosyaları (uygulama dosyalarınızı ve tüm .NET Core dosyaları) kümesinin tamamını içerir.
+   Her hedef konumun (örneğimizde, bin\release\netcoreapp2,\publish\\*profile-Name* ' in, uygulamanızı başlatmak için gereken tam dosya kümesini (hem uygulama dosyalarınız hem de tüm .NET Core dosyaları) içerdiğini unutmayın.
 
-Uygulamanızın dosyaları ile birlikte uygulamanızı hata ayıklama bilgilerini içeren bir program veritabanı (.pdb) dosyası yayımlama işlemi yayar. Dosya, öncelikle bir özel durum hata ayıklama için kullanışlıdır. Bu paket, uygulamanızın dosyaları ile değil seçebilirsiniz. Uygulamanızı yayın derlemesinin hatalarını ayıklamak istediğiniz olay, ancak kaydetmeniz gerekir.
+Yayımlama işlemi, uygulamanızın dosyalarıyla birlikte, uygulamanız hakkındaki hata ayıklama bilgilerini içeren bir program veritabanı (. pdb) dosyası yayar. Dosya öncelikle hata ayıklama özel durumları için yararlıdır. Bunu uygulamanızın dosyalarıyla paketlemeyi seçemezsiniz. Ancak, uygulamanızın yayın derlemesinde hata ayıklamak istediğiniz olaya kaydetmelisiniz.
 
-Yayımlanan dosyaları istediğiniz herhangi bir şekilde dağıtın. Örneğin, bunları bir Zip dosyasına paketleyin, basit bir kullanın `copy` komutunu ya da bunları seçtiğiniz herhangi bir yükleme paketi ile birlikte dağıtabilirsiniz.
+Yayınlanan dosyaları dilediğiniz gibi dağıtın. Örneğin, bunları bir ZIP dosyasında paketleyebilir, basit `copy` bir komut kullanabilir veya istediğiniz herhangi bir yükleme paketiyle dağıtabilirsiniz.
 
-Aşağıdaki tamamlandıktan *csproj* bu proje için dosya.
+Bu proje için tüm *csproj* dosyası aşağıda verilmiştir.
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -239,7 +239,7 @@ Aşağıdaki tamamlandıktan *csproj* bu proje için dosya.
 </Project>
 ```
 
-Ayrıca, Visual Studio ayrı bir yayımlama profili oluşturur (\*.pubxml) hedeflediğiniz her platform için. Örneğin, bizim linux profili (linux.pubxml) için dosya şu şekilde görünür:
+Ayrıca, Visual Studio, hedeflediğiniz her platform için ayrı bir\*yayımlama profili (. pubxml) oluşturur. Örneğin, Linux profilimiz için dosya (Linux. pubxml) aşağıdaki gibi görünür:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -262,19 +262,19 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 
 ---
 
-## <a name="self-contained-deployment-with-third-party-dependencies"></a>Üçüncü taraf bağımlılıkları kendi içinde dağıtım
+## <a name="self-contained-deployment-with-third-party-dependencies"></a>Üçüncü taraf bağımlılıklarla kendi kendine kapsanan dağıtım
 
-Bir veya daha fazla üçüncü taraf bağımlılıkları kendi içinde bir dağıtımının bağımlılıkları ekleme içerir. Uygulamanızı oluşturmadan önce aşağıdaki ek adımlar gereklidir:
+Bir veya daha fazla üçüncü taraf bağımlılığı ile kendi içindeki bir dağıtımı dağıtmak, bağımlılıkların eklenmesini içerir. Uygulamanızı derlemek için aşağıdaki ek adımlar gereklidir:
 
-1. Kullanım **NuGet Paket Yöneticisi** projenize; NuGet paketine başvuru eklemek ve paket zaten sisteminizde kullanılabilir değilse, yükleyin. Paket Yöneticisi'ni açmak için seçmeniz **Araçları** > **NuGet Paket Yöneticisi** > **çözüm için NuGet paketlerini Yönet**.
+1. Projenize bir NuGet paketine başvuru eklemek için **NuGet paket yöneticisini** kullanın; paket sisteminizde zaten yoksa, uygulamayı da yükleyemezsiniz. Paket Yöneticisi 'ni açmak için **Araçlar** > **NuGet Paket Yöneticisi** > **çözüm için NuGet Paketlerini Yönet**' i seçin.
 
-1. Onaylayın `Newtonsoft.Json` sisteminizde yüklü olduğundan ve yüklü değilse, yükleyin. **Yüklü** sekmesi, sisteminizde yüklü olan NuGet paketlerini listeler. Varsa `Newtonsoft.Json` listelenmiyorsa, seçin **Gözat** sekmesinde ve arama kutusuna "Newtonsoft.Json". Seçin `Newtonsoft.Json` seçip, sağ bölmede, projenizi seçmeden önce **yükleme**.
+1. Sisteminizde yüklü `Newtonsoft.Json` olduğunu doğrulayın ve yoksa yükleme yapın. **Yüklü** sekme, sisteminizde yüklü olan NuGet paketlerini listeler. Orada listelenmemişse **, araştırma sekmesini seçin** ve arama kutusuna "Newtonsoft. JSON" yazın. `Newtonsoft.Json` Sağ bölmedeki ve ' yi seçerek, yüklemeyi seçmeden önce projenizi seçin. `Newtonsoft.Json`
 
-1. Varsa `Newtonsoft.Json` olduğundan, sisteminizde yüklü, projenize sağ bölmede, proje seçerek eklemek **çözüm için paketlerini Yönet** sekmesi.
+1. Zaten sisteminizde yüklüyse, **çözüm için paketleri Yönet** sekmesinin sağ bölmesinde projenizi seçerek projenize ekleyin. `Newtonsoft.Json`
 
-Aşağıdaki tamamlandıktan *csproj* bu proje için dosya:
+Bu proje için tüm *csproj* dosyası aşağıda verilmiştir:
 
-# <a name="visual-studio-156-and-earliertabvs156"></a>[Visual Studio 15.6 ve önceki sürümleri](#tab/vs156)
+# <a name="visual-studio-156-and-earliertabvs156"></a>[Visual Studio 15,6 ve öncesi](#tab/vs156)
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -289,7 +289,7 @@ Aşağıdaki tamamlandıktan *csproj* bu proje için dosya:
 </Project>
 ```
 
-# <a name="visual-studio-157-and-latertabvs157"></a>[Visual Studio 15.7 ve üzeri](#tab/vs157)
+# <a name="visual-studio-157-and-latertabvs157"></a>[Visual Studio 15,7 ve üzeri](#tab/vs157)
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -305,11 +305,11 @@ Aşağıdaki tamamlandıktan *csproj* bu proje için dosya:
 
 ---
 
-Uygulamanızı dağıttığınızda, uygulamanızda kullanılan herhangi bir üçüncü taraf bağımlılıkları ile uygulama dosyalarınızı de yer alır. Üçüncü taraf kitaplıklar, uygulama üzerinde çalıştığı sistemde gerekmez.
+Uygulamanızı dağıttığınızda, uygulamanızda kullanılan tüm üçüncü taraf bağımlılıkları da uygulama dosyalarınıza dahil edilir. Uygulamanın üzerinde çalıştığı sistemde üçüncü taraf kitaplıkları gerekli değildir.
 
-Yalnızca bir üçüncü taraf kitaplığı ile kendi içinde bir dağıtım için bu kitaplığı tarafından desteklenen platformlar dağıtabileceğinizi unutmayın. Bu, daha önce yüklü sürece yerel bağımlılıkları hedef platformda nerede var olmaz yerel bağımlılıkları olan üçüncü taraf bağımlılıklarının framework bağımlı dağıtımınızda olması için benzer.
+Yalnızca bir üçüncü taraf kitaplığıyla bu kitaplık tarafından desteklenen platformlar için bir bağımsız dağıtım dağıtabileceğinizi unutmayın. Bu, daha önce yüklenmedikleri müddetçe, yerel bağımlılıkların hedef platformda mevcut olmaması durumunda, çerçeveye bağımlı dağıtımda yerel bağımlılıklarla üçüncü taraf bağımlılıklara sahip olmaya benzer.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [.NET core uygulama dağıtımı](index.md)
-- [.NET core çalışma zamanı tanımlayıcı (RID) Kataloğu](../rid-catalog.md)
+- [.NET Core uygulama dağıtımı](index.md)
+- [.NET Core çalışma zamanı tanımlayıcısı (RID) kataloğu](../rid-catalog.md)

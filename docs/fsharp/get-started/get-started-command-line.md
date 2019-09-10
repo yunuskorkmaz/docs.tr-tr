@@ -1,50 +1,50 @@
 ---
-title: Kullanmaya başlama F# komut satırı araçları ile
-description: Basit bir çoklu proje çözümü oluşturmayı öğrenin F# .NET Core CLI kullanarak tüm işletim sistemlerinde (Windows, macOs veya Linux).
+title: Komut satırı araçlarıyla F# çalışmaya başlama
+description: Herhangi bir işletim sisteminde (Windows, macOs veya Linux F# ) .NET Core CLI kullanarak basit bir çoklu proje çözümü oluşturmayı öğrenin.
 ms.date: 03/26/2018
-ms.openlocfilehash: bc9b223fcf133ffe8b19d5284dcbd3c14a426235
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1376b6b5384f380c06a96cdc568ad108de8a6e5f
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61938703"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855830"
 ---
-# <a name="get-started-with-f-with-the-net-core-cli"></a>Kullanmaya başlama F# .NET Core CLI ile
+# <a name="get-started-with-f-with-the-net-core-cli"></a>.NET Core CLI ile çalışmaya F# başlama
 
-Bu makalede ele alınmaktadır nasıl ile başlayabilirsiniz F# .NET Core CLI ile tüm işletim sistemlerinde (Windows, macOS veya Linux). Bu, bir konsol uygulaması tarafından çağrılan bir sınıf kitaplığı ile bir çoklu proje çözümü oluşturma sürecinde gider.
+Bu makalede, .NET Core CLI ile herhangi bir işletim sisteminde F# (Windows, MacOS veya Linux) kullanmaya nasıl başlacağınız açıklanmaktadır. Konsol uygulaması tarafından çağrılan bir sınıf kitaplığıyla birden çok projeli bir çözüm oluşturma işlemi ilerler.
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-Başlamak için en son yükleme [.NET Core SDK'sı](https://www.microsoft.com/net/download/).
+Başlamak için en son [.NET Core SDK](https://dotnet.microsoft.com/download)yüklemelisiniz.
 
-Bu makalede, komut satırını kullanın ve tercih edilen bir metin düzenleyicisi bildiğiniz varsayılır. Bu, zaten kullanmıyorsanız, [Visual Studio Code](get-started-vscode.md) için bir metin düzenleyicisi olarak mükemmel bir seçenektir F#.
+Bu makalede, bir komut satırı kullanmayı ve tercih edilen bir metin düzenleyicisine nasıl sahip olduğunuzu bildiğiniz varsayılır. Henüz kullanmıyorsanız, [Visual Studio Code](get-started-vscode.md) için F#metin düzenleyicisi olarak harika bir seçenektir.
 
 ## <a name="build-a-simple-multi-project-solution"></a>Basit bir çoklu proje çözümü oluşturma
 
-Bir komut istemi/terminal açın ve kullanmak [yeni dotnet](../../core/tools/dotnet-new.md) adlı yeni bir çözüm dosyası oluşturmak için komut `FSNetCore`:
+Bir komut istemi/terminali açın ve yeni çözüm dosyası `FSNetCore`oluşturmak için [DotNet New](../../core/tools/dotnet-new.md) komutunu kullanın:
 
 ```console
 dotnet new sln -o FSNetCore
 ```
 
-Önceki komutu çalıştırdıktan sonra aşağıdaki dizin yapısını üretilir:
+Önceki komut çalıştırıldıktan sonra aşağıdaki dizin yapısı üretilir:
 
 ```console
 FSNetCore
     ├── FSNetCore.sln
 ```
 
-### <a name="write-a-class-library"></a>Bir sınıf kitaplığı yazma
+### <a name="write-a-class-library"></a>Sınıf kitaplığı yazma
 
-Dizinleri *FSNetCore*.
+Dizinleri *Fsnetcore*olarak değiştirin.
 
-Kullanım `dotnet new` komutu, bir sınıf kitaplığı projesi oluşturma **src** kitaplığı adlı bir klasör.
+Kitaplık adlı **src** klasöründe bir sınıf kitaplığı projesi oluşturun komutunukullanın.`dotnet new`
 
 ```console
 dotnet new classlib -lang F# -o src/Library
 ```
 
-Önceki komutu çalıştırdıktan sonra aşağıdaki dizin yapısını üretilir:
+Önceki komut çalıştırıldıktan sonra aşağıdaki dizin yapısı üretilir:
 
 ```console
 └── FSNetCore
@@ -55,7 +55,7 @@ dotnet new classlib -lang F# -o src/Library
             └── Library.fsproj
 ```
 
-Öğesinin içeriğini değiştirin `Library.fs` aşağıdaki kod ile:
+İçeriğini `Library.fs` aşağıdaki kodla değiştirin:
 
 ```fsharp
 module Library
@@ -66,29 +66,29 @@ let getJsonNetJson value =
     sprintf "I used to be %s but now I'm %s thanks to JSON.NET!" value (JsonConvert.SerializeObject(value))
 ```
 
-Newtonsoft.Json NuGet paketini kitaplığı projeye ekleyin.
+Newtonsoft. JSON NuGet paketini kitaplık projesine ekleyin.
 
 ```console
 dotnet add src/Library/Library.fsproj package Newtonsoft.Json
 ```
 
-Ekleme `Library` için proje `FSNetCore` çözümünü kullanarak [dotnet sln ekleme](../../core/tools/dotnet-sln.md) komutu:
+[DotNet sln Add](../../core/tools/dotnet-sln.md) komutunu kullanarak `FSNetCore` projeyiçözümeekleyin:`Library`
 
 ```console
 dotnet sln add src/Library/Library.fsproj
 ```
 
-Çalıştırma `dotnet build` Projeyi derlemek için. Çözümlenmemiş bağımlılıklar oluşturma sırasında geri yüklenir.
+Projeyi `dotnet build` derlemek için ' i çalıştırın. Çözümlenmemiş bağımlılıklar derleme sırasında geri yüklenecek.
 
-### <a name="write-a-console-application-that-consumes-the-class-library"></a>Sınıf kitaplığı kullanan bir konsol uygulaması yazma
+### <a name="write-a-console-application-that-consumes-the-class-library"></a>Sınıf kitaplığını tüketen bir konsol uygulaması yazma
 
-Kullanım `dotnet new` komutu, bir konsol uygulamasında oluşturma **src** uygulama adlı bir klasör.
+Komutunu kullanın, uygulama adlı src klasöründe bir konsol uygulaması oluşturun. `dotnet new`
 
 ```console
 dotnet new console -lang F# -o src/App
 ```
 
-Önceki komutu çalıştırdıktan sonra aşağıdaki dizin yapısını üretilir:
+Önceki komut çalıştırıldıktan sonra aşağıdaki dizin yapısı üretilir:
 
 ```console
 └── FSNetCore
@@ -102,7 +102,7 @@ dotnet new console -lang F# -o src/App
             └── Library.fsproj
 ```
 
-Öğesinin içeriğini değiştirin `Program.fs` dosyasındaki kodu aşağıdaki kodla:
+`Program.fs` Dosyanın içeriğini aşağıdaki kodla değiştirin:
 
 ```fsharp
 open System
@@ -119,21 +119,21 @@ let main argv =
     0 // return an integer exit code
 ```
 
-Bir başvuru ekleyin `Library` kullanarak proje [dotnet Başvuru Ekle](../../core/tools/dotnet-add-reference.md).
+`Library` [DotNet Add Reference](../../core/tools/dotnet-add-reference.md)kullanarak projeye bir başvuru ekleyin.
 
 ```console
 dotnet add src/App/App.fsproj reference src/Library/Library.fsproj
 ```
 
-Ekleme `App` için proje `FSNetCore` çözümünü kullanarak `dotnet sln add` komutu:
+Şu komutu kullanarak `FSNetCore` `App` projeyi`dotnet sln add` çözüme ekleyin:
 
 ```console
 dotnet sln add src/App/App.fsproj
 ```
 
-NuGet bağımlılıklarını geri `dotnet restore` çalıştırıp `dotnet build` Projeyi derlemek için.
+NuGet bağımlılıklarını `dotnet restore` geri yükleyin ve projeyi derlemek `dotnet build` için çalıştırın.
 
-Dizini `src/App` geçirme projeyi çalıştırın ve konsol projesi `Hello World` bağımsız değişkenler olarak:
+Dizini `src/App` konsol projesi olarak değiştirin ve bağımsız değişken olarak geçirilen `Hello World` projeyi çalıştırın:
 
 ```console
 cd src/App
@@ -151,4 +151,4 @@ I used to be World but now I'm ""World"" thanks to JSON.NET!
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Ardından, kullanıma [Turu F# ](../tour.md) farklı hakkında daha fazla bilgi edinmek için F# özellikleri.
+Daha sonra, farklı F# özellikler hakkında daha fazla bilgi edinmek için [turuna F# ](../tour.md) göz atın.

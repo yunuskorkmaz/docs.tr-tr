@@ -6,39 +6,42 @@ helpviewer_keywords:
 - event triggers [WPF], controlling Storyboards
 - Storyboards [WPF], controlling after start
 ms.assetid: 3b115594-6a93-4972-b24d-61aa16f1c15f
-ms.openlocfilehash: e0bc019ee361cba6a28ac573da3d2ee09e2168ed
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 32591edd065a8122b84ff14102f672ccf6001d67
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64663293"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855853"
 ---
 # <a name="how-to-use-event-triggers-to-control-a-storyboard-after-it-starts"></a>Nasıl yapılır: Görsel Taslağı Başladıktan Sonra Denetlemek için Olay Tetikleyicilerini Kullanma
-Bu örnek nasıl denetleneceğini gösterir bir <xref:System.Windows.Media.Animation.Storyboard> başladıktan sonra. Başlamak için bir <xref:System.Windows.Media.Animation.Storyboard> kullanarak [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], kullanın <xref:System.Windows.Media.Animation.BeginStoryboard>, nesneleri ve özellikleri animasyon ve görsel Taslak'ı başlatır animasyonları dağıtır. Size, <xref:System.Windows.Media.Animation.BeginStoryboard> bir ad belirterek, <xref:System.Windows.Media.Animation.BeginStoryboard.Name%2A> özelliği yaptığınız, denetlenebilir bir film şeridi. Başladıktan sonra görsel taslak ardından etkileşimli olarak denetleyebilirsiniz.  
-  
- Aşağıdaki görsel taslak eylemleri ile birlikte kullanmak <xref:System.Windows.EventTrigger> bir film şeridini denetlemek için nesneleri.  
-  
-- <xref:System.Windows.Media.Animation.PauseStoryboard>: Film duraklatılır.  
-  
-- <xref:System.Windows.Media.Animation.ResumeStoryboard>: Duraklatılmış bir film şeridini sürdürür.  
-  
-- <xref:System.Windows.Media.Animation.SetStoryboardSpeedRatio>: Görsel taslak hızını değiştirir.  
-  
-- <xref:System.Windows.Media.Animation.SkipStoryboardToFill>: Varsa, bir görsel taslak dolgu süresinin sonuna ilerler.  
-  
-- <xref:System.Windows.Media.Animation.StopStoryboard>: Görsel taslak durdurur.  
-  
-- <xref:System.Windows.Media.Animation.RemoveStoryboard>: Kaynakları boşaltma, film şeridi kaldırır.  
-  
-## <a name="example"></a>Örnek  
- Aşağıdaki örnek, etkileşimli bir film şeridini denetlemek için denetlenebilir film şeridi eylemleri kullanır.  
-  
- **Not:** Kod kullanarak bir film şeridini denetlemek için bir örnek görmek için bkz: [bir görsel taslak sonra onu başlatır kullanarak kendi etkileşimli yöntemlerini denetlemesine](how-to-control-a-storyboard-after-it-starts.md).  
-  
- [!code-xaml[timingbehaviors_snip#ControlStoryboardExampleUsingWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/ControlStoryboardExample.xaml#controlstoryboardexampleusingwholepage)]  
-  
- Diğer örnekler için [animasyon örnek Galerisi](https://go.microsoft.com/fwlink/?LinkID=159969).  
-  
+
+Bu örnek, başladıktan <xref:System.Windows.Media.Animation.Storyboard> sonra nasıl kontrol yapılacağını gösterir. <xref:System.Windows.Media.Animation.BeginStoryboard>Kullanarak <xref:System.Windows.Media.Animation.Storyboard> başlatmakiçin,animasyonlarınıcanlandırdıklarınesnelereveözellikleredağıtanvesonrafilmşeridiniBaşlatanöğesinikullanın.[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Özelliğini belirterek bir <xref:System.Windows.Media.Animation.BeginStoryboard> ad verirseniz, denetlenebilir bir <xref:System.Windows.Media.Animation.BeginStoryboard.Name%2A> görsel taslak yaparsınız. Sonra film şeridini başladıktan sonra etkileşimli bir şekilde denetleyebilirsiniz.
+
+Film şeridini denetlemek için aşağıdaki film şeridi <xref:System.Windows.EventTrigger> eylemlerini nesneleriyle birlikte kullanın.
+
+- <xref:System.Windows.Media.Animation.PauseStoryboard>: Film şeridini duraklatır.
+
+- <xref:System.Windows.Media.Animation.ResumeStoryboard>: Duraklatılmış bir film şeridini sürdürür.
+
+- <xref:System.Windows.Media.Animation.SetStoryboardSpeedRatio>: Görsel taslak hızını değiştirir.
+
+- <xref:System.Windows.Media.Animation.SkipStoryboardToFill>: Bir film şeridini, varsa, kendi Fill döneminin sonuna ilerletir.
+
+- <xref:System.Windows.Media.Animation.StopStoryboard>: Film şeridini sonlandırır.
+
+- <xref:System.Windows.Media.Animation.RemoveStoryboard>: Kaynak şeridi kaldırır ve kaynakları serbest bırakır.
+
+## <a name="example"></a>Örnek
+
+Aşağıdaki örnek, bir görsel taslağı etkileşimli olarak denetlemek için denetlenebilir görsel taslak eylemlerini kullanır.
+
+> [!NOTE]
+> Kodu kullanarak bir film şeridini denetlemeye ilişkin bir örnek görmek için bkz. [etkileşimli yöntemlerini kullanarak başladıktan sonra bir görsel taslağı denetleme](how-to-control-a-storyboard-after-it-starts.md).
+
+[!code-xaml[timingbehaviors_snip#ControlStoryboardExampleUsingWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/ControlStoryboardExample.xaml#controlstoryboardexampleusingwholepage)]
+
+Daha fazla örnek için [animasyon örnek galerisine](https://go.microsoft.com/fwlink/?LinkID=159969)bakın.
+
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Windows.Media.Animation.ResumeStoryboard>

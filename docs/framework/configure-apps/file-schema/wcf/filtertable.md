@@ -2,27 +2,28 @@
 title: <filterTable>
 ms.date: 03/30/2017
 ms.assetid: e9f05441-3ad1-49b9-a267-71724aa094b4
-ms.openlocfilehash: f9e64e667befb70d617574b2a03c3e6bebb2a143
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 918a365004efea82f4ef4c8868f6821d4bb6da18
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69925599"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855185"
 ---
 # <a name="filtertable"></a>\<Filtretablo >
 Filtrenin, filtre true olarak değerlendirilirse, iletileri yönlendirmek için bir filtre listesi ve istemci uç noktası içeren bir yönlendirme tablosunu temsil eder.  
   
- \<system.serviceModel>  
-\<Yönlendirme >  
-\<routingTables >  
-\<Tablo >  
+[ **\<Yapılandırma >** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System. serviceModel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Yönlendirme >** ](routing.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<filterTables >** ](filtertables.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Filtretablo >**  
   
 ## <a name="syntax"></a>Sözdizimi  
   
 ```xml  
 <routing>
   <filterTables>
-    <filterTable name="String">
+     name="String">
       <entries>
         <add backupList="String"
              endpointName="String"

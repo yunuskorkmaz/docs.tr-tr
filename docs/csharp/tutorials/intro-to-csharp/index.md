@@ -3,12 +3,12 @@ title: C# Etkileşimli öğreticilere giriş
 description: Tarayıcınızda C# öğrenin ve kendi geliştirme ortamınızı kullanmaya başlayın
 ms.date: 08/22/2019
 ms.custom: mvc
-ms.openlocfilehash: 65526dcf04525f3f2afb358a5b6289ff8bba7de8
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.openlocfilehash: 1712e32175a95373ca85464bbdebed9ef99fb375
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70015015"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70850773"
 ---
 # <a name="introduction-to-c"></a>C 'ye giriş\#
 
@@ -45,4 +45,4 @@ Bu öğreticide, yukarıda listelenen dersleri tamamladığınız varsayılmakta
 Bu son öğretici yalnızca kendi yerel geliştirme ortamınız ve .NET Core kullanılarak makinenizde çalıştırılabilir.
 Bir konsol uygulaması oluşturup C# dilin parçası olan temel nesne yönelimli özellikleri görürsünüz.
 
-Bu öğreticide, çevrimiçi giriş öğreticilerini tamamladığınız ve [.NET Core SDK](https://www.microsoft.com/net/download) ve [Visual Studio Code](https://code.visualstudio.com/)yüklediğiniz varsayılmaktadır.
+Bu öğreticide, çevrimiçi giriş öğreticilerini tamamladığınız ve [.NET Core SDK](https://dotnet.microsoft.com/download) ve [Visual Studio Code](https://code.visualstudio.com/)yüklediğiniz varsayılmaktadır.

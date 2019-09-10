@@ -17,122 +17,129 @@ helpviewer_keywords:
 ms.assetid: 5cdc9396-a64b-4615-a1cd-b605db4c5983
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ae1e5c89676eaebfed5bbcae76048c7c48db5a18
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 222376e220bf74274082dfc6b76dc861d4f8ddc5
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779938"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855977"
 ---
 # <a name="performing-culture-insensitive-string-operations-in-collections"></a>Koleksiyonlarda Kültüre Duyarsız Dize İşlemlerini Gerçekleştirme
-Sınıfları ve üyeleri <xref:System.Collections> varsayılan olarak kültüre duyarlı davranış sağlayan ad alanı. İçin parametresiz oluşturucular <xref:System.Collections.CaseInsensitiveComparer> ve <xref:System.Collections.CaseInsensitiveHashCodeProvider> sınıfları başlatma kullanarak yeni bir örneğini <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> özelliği. Tüm aşırı yüklemeler, <xref:System.Collections.Specialized.CollectionsUtil.CreateCaseInsensitiveHashtable%2A?displayProperty=nameWithType> yöntemi yeni bir örneğini oluşturma <xref:System.Collections.Hashtable> kullanarak `Thread.CurrentCulture` özelliği varsayılan olarak. Overloads biri <xref:System.Collections.ArrayList.Sort%2A?displayProperty=nameWithType> yöntemi gerçekleştirmek varsayılan kullanarak kültüre duyarlı sıralamaları `Thread.CurrentCulture`. Sıralama ve arama bir <xref:System.Collections.SortedList> etkilenebilir `Thread.CurrentCulture` dizeleri anahtar olarak kullanılan zaman. Bu sınıfları ve yöntemleri kültüre duyarlı olmayan sonuçlar elde etmek için bu bölümde sağlanan kullanım önerilere uyun `Collections` ad alanı.  
-  
- **Not** geçirme <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> karşılaştırma yöntemi kültüre duyarsız bir karşılaştırma gerçekleştirir. Ancak, bir dilsel karşılaştırma örneğin dosya yolları, kayıt defteri anahtarları ve ortam değişkenleri için neden olmaz. Karşılaştırma sonucuna dayalı güvenlik kararları diğerinden destekler. Uygulama, bir dilsel karşılaştırma veya sonuç dayalı güvenlik kararları desteği için kabul eden bir karşılaştırma yöntemi kullanmalıdır bir <xref:System.StringComparison> değeri. Uygulama ardından geçmelidir <xref:System.StringComparison>.  
-  
-## <a name="using-the-caseinsensitivecomparer-and-caseinsensitivehashcodeprovider-classes"></a>Caseınsensitivecomparer ve Caseınsensitivehashcodeprovider sınıfları kullanma  
- İçin parametresiz oluşturucular `CaseInsensitiveHashCodeProvider` ve `CaseInsensitiveComparer` sınıfı kullanarak yeni bir örneği başlatmak `Thread.CurrentCulture`, sonuçta elde edilen kültüre duyarlı davranış. Aşağıdaki kod örneği için oluşturucu gösteren bir `Hashtable` , kültüre duyarlı için parametresiz oluşturucular kullandığından `CaseInsensitiveHashCodeProvider` ve `CaseInsensitiveComparer`.  
-  
-```vb  
-internalHashtable = New Hashtable(CaseInsensitiveHashCodeProvider.Default, CaseInsensitiveComparer.Default)  
-```  
-  
-```csharp  
-internalHashtable = new Hashtable(CaseInsensitiveHashCodeProvider.Default, CaseInsensitiveComparer.Default);  
-```  
-  
- Bir kültüre duyarsız oluşturmak istiyorsanız `Hashtable` kullanarak `CaseInsensitiveComparer` ve `CaseInsensitiveHashCodeProvider` sınıfları başlatma kabul oluşturucular kullanarak bu sınıfların yeni örnekleri bir `culture` parametresi. İçin `culture` parametresi belirtin <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>. Aşağıdaki kod örneği bir kültüre duyarsız Oluşturucusu gösterir `Hashtable`.  
-  
-```vb  
-internalHashtable = New Hashtable(New  
-    CaseInsensitiveHashCodeProvider(CultureInfo.InvariantCulture),  
-    New CaseInsensitiveComparer(CultureInfo.InvariantCulture))  
-```  
-  
-```csharp  
-internalHashtable = new Hashtable(new CaseInsensitiveHashCodeProvider  
-    (CultureInfo.InvariantCulture),   
-    new CaseInsensitiveComparer(CultureInfo.InvariantCulture));  
-```  
-  
-## <a name="using-the-collectionsutilcreatecaseinsensitivehashtable-method"></a>Collectionsutil.createcaseınsensitivehashtable metodu kullanma  
- `CollectionsUtil.CreateCaseInsensitiveHashTable` Yöntemidir, yeni bir örneğini oluşturmak için yararlı bir kısayol `Hashtable` dizelerinin büyük/küçük harfleri sınıfı. Ancak, tüm aşırı yüklemeler `CollectionsUtil.CreateCaseInsensitiveHashTable` yöntemi kültüre duyarlı kullandıkları için `Thread.CurrentCulture` özelliği. Bir kültüre duyarsız oluşturulamıyor `Hashtable` bu yöntemi kullanarak. Bir kültüre duyarsız oluşturmak için `Hashtable`, kullanın `Hashtable` kabul eden Oluşturucu bir `culture` parametresi. İçin `culture` parametresi belirtin `CultureInfo.InvariantCulture`. Aşağıdaki kod örneği bir kültüre duyarsız Oluşturucusu gösterir `Hashtable`.  
-  
-```vb  
-internalHashtable = New Hashtable(New  
-    CaseInsensitiveHashCodeProvider(CultureInfo.InvariantCulture),  
-    New CaseInsensitiveComparer(CultureInfo.InvariantCulture))  
-```  
-  
-```csharp  
-internalHashtable = new Hashtable(new CaseInsensitiveHashCodeProvider  
-    (CultureInfo.InvariantCulture),   
-    new CaseInsensitiveComparer(CultureInfo.InvariantCulture));  
-```  
-  
-<a name="cpconperformingculture-insensitivestringoperationsincollectionsanchor1"></a>   
-## <a name="using-the-sortedlist-class"></a>SortedList sınıfı kullanma  
- A `SortedList` anahtarlara göre sıralanır ve anahtar ve dizin tarafından erişilebilir olan anahtar-değer çifti koleksiyonunu temsil eder. Kullandığınızda, bir `SortedList` dizeleri anahtarların bulunduğu, sıralama ve arama etkilenebilir `Thread.CurrentCulture` özelliği. Kültüre duyarsız davranış elde etmek için bir `SortedList`, oluşturun bir `SortedList` kabul oluşturucular birini kullanarak bir `comparer` parametresi. `comparer` Parametresinin belirttiği <xref:System.Collections.IComparer> anahtarları karşılaştırırken kullanılacak uygulama. Parametresi, kullanan özel bir karşılaştırıcı sınıf belirtin `CultureInfo.InvariantCulture` anahtarları karşılaştırmak için. Aşağıdaki örnek olarak belirleyebileceğiniz bir özel bir karşılaştırıcı kültüre duyarsız sınıfı göstermektedir `comparer` parametresine bir `SortedList` Oluşturucusu.  
-  
-```vb  
-Imports System  
-Imports System.Collections  
-Imports System.Globalization  
-  
-Friend Class InvariantComparer  
-    Implements IComparer   
-    Private m_compareInfo As CompareInfo  
-    Friend Shared [Default] As New InvariantComparer()  
-  
-    Friend Sub New()  
-        m_compareInfo = CultureInfo.InvariantCulture.CompareInfo  
-    End Sub     
-  
-    Public Function Compare(a As Object, b As Object) As Integer _  
-            Implements IComparer.Compare  
-        Dim sa As String = CType(a, String)  
-        Dim sb As String = CType(b, String)  
-        If Not (sa Is Nothing) And Not (sb Is Nothing) Then  
-            Return m_compareInfo.Compare(sa, sb)  
-        Else  
-            Return Comparer.Default.Compare(a, b)  
-        End If  
-    End Function  
-End Class  
-```  
-  
-```csharp  
-using System;  
-using System.Collections;  
-using System.Globalization;  
-  
-internal class InvariantComparer : IComparer   
-{  
-    private CompareInfo m_compareInfo;  
-    internal static readonly InvariantComparer Default = new  
-        InvariantComparer();  
-  
-    internal InvariantComparer()   
-    {  
-        m_compareInfo = CultureInfo.InvariantCulture.CompareInfo;  
-    }  
-  
-    public int Compare(Object a, Object b)  
-    {  
-        String sa = a as String;  
-        String sb = b as String;  
-        if (sa != null && sb != null)  
-            return m_compareInfo.Compare(sa, sb);  
-        else  
-            return Comparer.Default.Compare(a,b);  
-    }  
-}  
-```  
-  
- Genel olarak kullanırsanız, bir `SortedList` özel sabit bir karşılaştırıcı olan bir değişiklik belirtmeden dizelerde `Thread.CurrentCulture` listesi doldurulur sonra listenin geçersiz kılabilir.  
-  
-## <a name="using-the-arraylistsort-method"></a>ArrayList.Sort yöntemi kullanarak  
- Overloads biri `ArrayList.Sort` yöntemi gerçekleştirmek varsayılan kullanarak kültüre duyarlı sıralamaları `Thread.CurrentCulture` özelliği. Sonuçları nedeniyle farklı sıralamalar kültüre göre değişebilir. Kültüre duyarlı davranışı ortadan kaldırmak için kabul eden aşırı yüklemeleri bu yöntemi kullanın. bir `IComparer` uygulaması. İçin `comparer` parametresini kullanan bir özel sabit karşılaştırıcısı sınıfı belirtin `CultureInfo.InvariantCulture`. Sabit özel bir karşılaştırıcı sınıfı örneği sağlanan [SortedList sınıfı kullanarak](#cpconperformingculture-insensitivestringoperationsincollectionsanchor1) konu.  
-  
+
+Ad alanı içinde, <xref:System.Collections> varsayılan olarak kültüre duyarlı davranış sağlayan sınıflar ve Üyeler vardır. <xref:System.Collections.CaseInsensitiveComparer> <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> Ve sınıflarınınparametresizoluşturucuları,özelliğinikullanarakyenibirörneğibaşlatır.<xref:System.Collections.CaseInsensitiveHashCodeProvider> <xref:System.Collections.Specialized.CollectionsUtil.CreateCaseInsensitiveHashtable%2A?displayProperty=nameWithType> Yönteminin tüm aşırı yüklemeleri, `Thread.CurrentCulture` varsayılan olarak özelliğini kullanarak <xref:System.Collections.Hashtable> sınıfının yeni bir örneğini oluşturur. Metodun aşırı yüklemeleri <xref:System.Collections.ArrayList.Sort%2A?displayProperty=nameWithType> , kullanarak `Thread.CurrentCulture`varsayılan olarak kültüre duyarlı sıralar gerçekleştirir. Bir <xref:System.Collections.SortedList> içinde sıralama ve arama, dizeler anahtar olarak `Thread.CurrentCulture` kullanıldığında etkilenebilir. Bu sınıftan ve `Collections` ad alanındaki metotlardan kültürden duyarlı sonuçlar almak için bu bölümde belirtilen kullanım önerilerini izleyin.
+
+> [!NOTE]
+> Bir <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> karşılaştırma yöntemine geçirilmesi, kültüre duyarsız bir karşılaştırma gerçekleştirir. Ancak, dosya yolları, kayıt defteri anahtarları ve ortam değişkenleri gibi dil olmayan bir karşılaştırmaya neden olmaz. , Karşılaştırma sonucuna göre güvenlik kararlarını desteklemez. Dil olmayan bir karşılaştırma veya sonuç tabanlı güvenlik kararları için destek için, uygulamanın bir <xref:System.StringComparison> değeri kabul eden bir karşılaştırma yöntemi kullanması gerekir. Uygulama daha sonra geçmelidir <xref:System.StringComparison>.
+
+## <a name="using-the-caseinsensitivecomparer-and-caseinsensitivehashcodeprovider-classes"></a>CaseInsensitiveComparer ve CaseInsensitiveHashCodeProvider sınıflarını kullanma
+
+Parametresiz oluşturucular `CaseInsensitiveHashCodeProvider` , ve `CaseInsensitiveComparer` kullanarak `Thread.CurrentCulture`sınıfının yeni bir örneğini başlatır. Bu, kültüre duyarlı davranışa neden olur. Aşağıdaki kod örneği, ve `Hashtable` `CaseInsensitiveComparer`için `CaseInsensitiveHashCodeProvider` parametresiz oluşturucular kullandığından kültüre duyarlı olan öğesine ilişkin oluşturucuyu gösterir.
+
+```vb
+internalHashtable = New Hashtable(CaseInsensitiveHashCodeProvider.Default, CaseInsensitiveComparer.Default)
+```
+
+```csharp
+internalHashtable = new Hashtable(CaseInsensitiveHashCodeProvider.Default, CaseInsensitiveComparer.Default);
+```
+
+`Hashtable` `culture` Ve sınıflarını`CaseInsensitiveHashCodeProvider` kullanarak kültüre duyarsız bir kültür oluşturmak istiyorsanız, bir parametreyi kabul eden oluşturucuları kullanarak bu sınıfların yeni örneklerini başlatın. `CaseInsensitiveComparer` Parametresi için, belirtin <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>. `culture` Aşağıdaki kod örneği, bir kültür duyarlığını `Hashtable`için oluşturucuyu gösterir.
+
+```vb
+internalHashtable = New Hashtable(New
+    CaseInsensitiveHashCodeProvider(CultureInfo.InvariantCulture),
+    New CaseInsensitiveComparer(CultureInfo.InvariantCulture))
+```
+
+```csharp
+internalHashtable = new Hashtable(new CaseInsensitiveHashCodeProvider
+    (CultureInfo.InvariantCulture),
+    new CaseInsensitiveComparer(CultureInfo.InvariantCulture));
+```
+
+## <a name="using-the-collectionsutilcreatecaseinsensitivehashtable-method"></a>CollectionsUtil. CreateCaseInsensitiveHashTable yöntemini kullanma
+
+Yöntemi, `Hashtable` sınıfının dize durumunu yok sayan yeni bir örneğini oluşturmaya yönelik yararlı bir kısayoldur. `CollectionsUtil.CreateCaseInsensitiveHashTable` Ancak, `CollectionsUtil.CreateCaseInsensitiveHashTable` `Thread.CurrentCulture` özelliği kullandığından, yöntemin tüm aşırı yüklemeleri kültüre duyarlıdır. Bu yöntemi kullanarak kültüre duyarlı `Hashtable` olmayan bir şekilde oluşturamazsınız. Kültüre duyarsız `Hashtable`olması için bir `culture` parametreyi kabul eden `Hashtable` oluşturucuyu kullanın. Parametresi için, belirtin `CultureInfo.InvariantCulture`. `culture` Aşağıdaki kod örneği, bir kültür duyarlığını `Hashtable`için oluşturucuyu gösterir.
+
+```vb
+internalHashtable = New Hashtable(New
+    CaseInsensitiveHashCodeProvider(CultureInfo.InvariantCulture),
+    New CaseInsensitiveComparer(CultureInfo.InvariantCulture))
+```
+
+```csharp
+internalHashtable = new Hashtable(new CaseInsensitiveHashCodeProvider
+    (CultureInfo.InvariantCulture),
+    new CaseInsensitiveComparer(CultureInfo.InvariantCulture));
+```
+
+<a name="cpconperformingculture-insensitivestringoperationsincollectionsanchor1"></a>
+
+## <a name="using-the-sortedlist-class"></a>SortedList sınıfını kullanma
+
+, Anahtarlar tarafından sıralanan ve anahtar ve dizine göre erişilebilen anahtar ve değer çiftleri koleksiyonunu temsileder.`SortedList` Anahtarlar olduğu yerde dizeler kullandığınızda sıralama ve arama `Thread.CurrentCulture` özelliğinden etkilenebilir. `SortedList` Kültüre duyarsız bir davranış elde etmek için bir `SortedList` `comparer` parametre kabul eden `SortedList` oluşturuculardan birini kullanarak oluşturun. Parametresi `comparer` , anahtarları karşılaştırırken <xref:System.Collections.IComparer> kullanılacak uygulamayı belirtir. Parametresi için, anahtarları karşılaştırmak için kullanan `CultureInfo.InvariantCulture` özel bir karşılaştırıcı sınıfı belirtin. Aşağıdaki örnek, bir `comparer` `SortedList` oluşturucuya parametre olarak belirtebileceğiniz özel bir kültür duyarsız karşılaştırıcı sınıfını göstermektedir.
+
+```vb
+Imports System
+Imports System.Collections
+Imports System.Globalization
+
+Friend Class InvariantComparer
+    Implements IComparer
+    Private m_compareInfo As CompareInfo
+    Friend Shared [Default] As New InvariantComparer()
+
+    Friend Sub New()
+        m_compareInfo = CultureInfo.InvariantCulture.CompareInfo
+    End Sub
+
+    Public Function Compare(a As Object, b As Object) As Integer _
+            Implements IComparer.Compare
+        Dim sa As String = CType(a, String)
+        Dim sb As String = CType(b, String)
+        If Not (sa Is Nothing) And Not (sb Is Nothing) Then
+            Return m_compareInfo.Compare(sa, sb)
+        Else
+            Return Comparer.Default.Compare(a, b)
+        End If
+    End Function
+End Class
+```
+
+```csharp
+using System;
+using System.Collections;
+using System.Globalization;
+
+internal class InvariantComparer : IComparer
+{
+    private CompareInfo m_compareInfo;
+    internal static readonly InvariantComparer Default = new
+        InvariantComparer();
+
+    internal InvariantComparer()
+    {
+        m_compareInfo = CultureInfo.InvariantCulture.CompareInfo;
+    }
+
+    public int Compare(Object a, Object b)
+    {
+        String sa = a as String;
+        String sb = b as String;
+        if (sa != null && sb != null)
+            return m_compareInfo.Compare(sa, sb);
+        else
+            return Comparer.Default.Compare(a,b);
+    }
+}
+```
+
+Genel olarak, özel bir sabit karşılaştırıcı `SortedList` belirtmeden dize üzerinde kullanırsanız, liste doldurulduktan sonra yapılan `Thread.CurrentCulture` bir değişiklik listeyi geçersiz kılabilir.
+
+## <a name="using-the-arraylistsort-method"></a>ArrayList. Sort metodunu kullanma
+
+Metodun aşırı yüklemeleri, `Thread.CurrentCulture` özelliği kullanılarak varsayılan olarak kültüre duyarlı sıralar gerçekleştirir. `ArrayList.Sort` Sonuçlar farklı sıralama düzenleri nedeniyle kültüre göre farklılık gösterebilir. Kültüre duyarlı davranışı ortadan kaldırmak için, bu yöntemin bir `IComparer` uygulamayı kabul eden aşırı yüklerini kullanın. Parametresi için, tarafından kullanılan `CultureInfo.InvariantCulture`özel bir sabit karşılaştırıcı sınıfı belirtin. `comparer` Özel bir sabit karşılaştırıcı sınıfına bir örnek, [SortedList sınıfını kullanma](#cpconperformingculture-insensitivestringoperationsincollectionsanchor1) konusunun içinde verilmiştir.
+
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Collections.CaseInsensitiveComparer>

@@ -2,34 +2,34 @@
 title: ASP.NET Web Hizmetlerini Geliştirmeye Göre WCF ile Karşılaştırma
 ms.date: 03/30/2017
 ms.assetid: f362d00e-ce82-484f-9d4f-27e579d5c320
-ms.openlocfilehash: 8b0e26f0b76ee56d06c426cd3c11b169a74b1896
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 607d0eaabde4e00c1a00b995356bb6d4e1a39234
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663363"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855764"
 ---
 # <a name="comparing-aspnet-web-services-to-wcf-based-on-development"></a>ASP.NET Web Hizmetlerini Geliştirmeye Göre WCF ile Karşılaştırma
 
-Windows Communication Foundation (WCF) WCF programlanmış ve ASP.NET Web Hizmetleri gibi yapılandırılmış uygulamaların sağlar ve davranışlarını taklit etmek için ASP.NET uyumluluk modu seçeneği vardır. Aşağıdaki bölümlerde ASP.NET Web hizmetlerini karşılaştırın ve WCF ne hem teknolojiler kullanarak uygulama geliştirmek için gerekli olduğuna bağlı olarak.
+Windows Communication Foundation (WCF), WCF uygulamalarının ASP.NET Web Hizmetleri gibi programlanmış ve yapılandırılmış olmasını sağlamak ve davranışlarını taklit etmek için bir ASP.NET uyumluluk modu seçeneği vardır. Aşağıdaki bölümlerde, her iki teknolojiyi de kullanarak uygulama geliştirmek için gereklere bağlı olarak ASP.NET Web Hizmetleri ve WCF karşılaştırılmaktadır.
 
 ## <a name="data-representation"></a>Veri gösterimi
 
-Bir Web hizmeti ASP.NET ile geliştirme genellikle hizmet kullanmaktır herhangi bir karmaşık veri türlerini tanımlama ile başlar. ASP.NET dayanır <xref:System.Xml.Serialization.XmlSerializer> iletilmesi için veya bir hizmet için XML .NET Framework türleri tarafından temsil edilen veri Çevir ve .NET Framework nesnelerini XML olarak alınan veriler çevir. ASP.NET hizmeti kullanmaktır karmaşık veri türlerini tanımlanmasını gerektirir tanımını .NET Framework sınıfları <xref:System.Xml.Serialization.XmlSerializer> XML gelen ve giden serileştirebiliyorsa. Bu tür sınıflar el ile yazılmış veya komut satırı XML şemaları/veri türleri desteği yardımcı programı kullanarak XML şema türlerinin tanımlarını üretilen XSD.exe'nin.
+Bir Web hizmetinin ASP.NET ile geliştirilmesi genellikle hizmetin kullanacağı karmaşık veri türlerini tanımlamaya başlar. ASP.net, <xref:System.Xml.Serialization.XmlSerializer> bir hizmete veya bir hizmete iletim için .NET Framework türleri tarafından temsil edilen verileri XML 'e çevirmek ve XML olarak alınan verileri .NET Framework nesnelerine dönüştürmek için kullanır. Bir ASP.net hizmetinin kullanacağı karmaşık veri türlerini tanımlama, XML 'den ve öğesinden seri hale <xref:System.Xml.Serialization.XmlSerializer> getirebilen .NET Framework sınıflarının tanımını gerektirir. Bu tür sınıflar el ile yazılabilir veya komut satırı XML şemaları/veri türleri destek yardımcı programı olan xsd. exe kullanılarak XML şemasında türlerin tanımlarından oluşturulabilir.
 
-Ne zaman .NET Framework tanımlayan sınıflar bilmeniz gereken temel sorunların bir listesini verilmiştir <xref:System.Xml.Serialization.XmlSerializer> XML gelen ve giden serileştirebiliyorsa:
+Aşağıda, XML 'den ve öğesinden seri hale <xref:System.Xml.Serialization.XmlSerializer> getirebilen .NET Framework sınıfları tanımlarken bildiğiniz önemli sorunların bir listesi verilmiştir:
 
-- Yalnızca ortak alanları ve .NET Framework nesnelerin özelliklerini, XML'e çevrilir.
+- Yalnızca .NET Framework nesnelerinin ortak alanları ve özellikleri XML olarak çevrilir.
 
-- Koleksiyon sınıfları seri hale getirilemiyor XML'e sınıflar ya da uygularsanız <xref:System.Collections.IEnumerable> veya <xref:System.Collections.ICollection> arabirimi.
+- Koleksiyon sınıflarının örnekleri yalnızca, <xref:System.Collections.IEnumerable> sınıflar veya <xref:System.Collections.ICollection> arabirimini uygularsa XML olarak seri hale getirilebilir.
 
-- Uygulayan sınıflar <xref:System.Collections.IDictionary> gibi arabirim <xref:System.Collections.Hashtable>, XML'e seri hale getirilemiyor.
+- <xref:System.Collections.IDictionary> Arabirimini<xref:System.Collections.Hashtable>uygulayan sınıflar, gibi, XML içine serileştirilemiyor.
 
-- Çoğu öznitelik türlerini harika <xref:System.Xml.Serialization> ad alanı, bir .NET Framework sınıf ve üyelerine sınıfının örneklerini XML içinde nasıl gösterileceğini denetlemek için eklenebilir.
+- <xref:System.Xml.Serialization> Ad alanındaki harika birçok öznitelik türü, sınıf örneklerinin XML 'de nasıl temsil edileceğini denetlemek için bir .NET Framework sınıfına ve üyelerine eklenebilir.
 
-WCF uygulaması geliştirme de genellikle karmaşık tür tanımı ile başlar. WCF aynı .NET Framework türleri ASP.NET Web hizmetlerini kullanmak için yapılabilir.
+WCF uygulama geliştirme genellikle karmaşık türlerin tanımıyla de başlar. WCF, ASP.NET Web Hizmetleri ile aynı .NET Framework türlerini kullanacak şekilde yapılabilir.
 
-WCF<xref:System.Runtime.Serialization.DataContractAttribute> ve <xref:System.Runtime.Serialization.DataMemberAttribute> türün örneklerinin içine XML ve hangi belirli alanlar veya tür özelliklerini seri hale getirilmesi için aşağıdaki örnek kodda gösterildiği gibi seri hale olduğunu belirtmek için .NET Framework türleri eklenebilir.
+WCF<xref:System.Runtime.Serialization.DataContractAttribute> ve<xref:System.Runtime.Serialization.DataMemberAttribute> , türün örneklerinin XML 'e serileştirilmekte olduğunu ve aşağıdaki örnek kodda gösterildiği gibi türün hangi belirli alan veya özelliklerinin serileştirildiğine işaret etmek için .NET Framework türlerine eklenebilir.
 
 ```csharp
 //Example One:
@@ -145,11 +145,11 @@ public class LineItem
 }
 ```
 
-<xref:System.Runtime.Serialization.DataContractAttribute> Sıfır veya daha fazla türün alanlarına veya özelliklerine olması anlamına gelir serileştirildiği while <xref:System.Runtime.Serialization.DataMemberAttribute> belirli bir alan veya özellik serileştirilecek olduğunu gösterir. <xref:System.Runtime.Serialization.DataContractAttribute> Bir sınıf veya yapı için uygulanabilir. <xref:System.Runtime.Serialization.DataMemberAttribute> Bir alan veya özellik için uygulanabilir ve alanlar ve Özellikler öznitelik uygulandığı genel veya özel olabilir. Sahip türleri örneklerini <xref:System.Runtime.Serialization.DataContractAttribute> uygulanan WCF'de veri sözleşmeleri olarak bunları için başvurulur. XML olarak serileştirilme şeklini kullanarak <xref:System.Runtime.Serialization.DataContractSerializer>.
+Bir türün alan veya özelliklerinin sıfır veya daha fazla seri hale getirildiğini, <xref:System.Runtime.Serialization.DataMemberAttribute> ancak belirli bir alanın veya özelliğin serileştirilme olduğunu gösterir. <xref:System.Runtime.Serialization.DataContractAttribute> <xref:System.Runtime.Serialization.DataContractAttribute> Bir sınıfa veya yapıya uygulanabilir. , <xref:System.Runtime.Serialization.DataMemberAttribute> Bir alana veya özelliğe uygulanabilir ve özniteliğin uygulandığı alanlar ve Özellikler herkese açık veya özel olabilir. Bunlara <xref:System.Runtime.Serialization.DataContractAttribute> uygulanmış olan türlerin örnekleri, WCF 'de veri sözleşmeleri olarak adlandırılır. Kullanılarak <xref:System.Runtime.Serialization.DataContractSerializer>XML olarak serileştirilir.
 
-Aşağıdakileri kullanarak arasındaki önemli farklar listesidir <xref:System.Runtime.Serialization.DataContractSerializer> ve kullanarak <xref:System.Xml.Serialization.XmlSerializer> ve çeşitli özniteliklerini <xref:System.Xml.Serialization> ad alanı.
+Aşağıda, kullanarak <xref:System.Runtime.Serialization.DataContractSerializer> ve <xref:System.Xml.Serialization.XmlSerializer> diğer <xref:System.Xml.Serialization> ad alanının çeşitli özniteliklerinin kullanılmasıyla arasındaki önemli farklılıkların bir listesi verilmiştir.
 
-- <xref:System.Xml.Serialization.XmlSerializer> Ve özniteliklerini <xref:System.Xml.Serialization> ad alanı, XML Şeması'nda tanımlanan herhangi bir geçerli türü .NET Framework türleriyle eşlemek olanak sağlamak için tasarlanmıştır ve bu nedenle sağlamaları için bir tür XML'de nasıl temsil edildiğini üzerinde kesin denetim. <xref:System.Runtime.Serialization.DataContractSerializer>, <xref:System.Runtime.Serialization.DataContractAttribute> Ve <xref:System.Runtime.Serialization.DataMemberAttribute> türü XML'de nasıl temsil edildiğini üzerinde çok az bir denetim sağlar. Yalnızca ad alanları ve tür ve alanlarını veya XML ve alanlar ve Özellikler XML dosyasında göründükleri sıra özelliklerinde temsil etmek için kullanılan adları belirtebilirsiniz:
+- <xref:System.Xml.Serialization.XmlSerializer> Ve <xref:System.Xml.Serialization> ad alanının öznitelikleri, .NET Framework türlerini XML şemasında tanımlanmış herhangi bir geçerli türle eşlemenizi sağlamak üzere tasarlanmıştır ve bu nedenle bir türün XML 'de nasıl temsil edildiği konusunda çok kesin bir denetim sağlar. <xref:System.Runtime.Serialization.DataContractSerializer> VebirtürünXML'denasıltemsiledildiğikonusunda<xref:System.Runtime.Serialization.DataMemberAttribute> çok az denetim sağlar. <xref:System.Runtime.Serialization.DataContractAttribute> Yalnızca türü ve içindeki alanları ya da özellikleri temsil etmek için kullanılan ad alanlarını ve adları, XML 'de alan ve özelliklerin bulunduğu diziyi belirtebilirsiniz:
 
   ```csharp
   [DataContract(
@@ -166,25 +166,25 @@ Aşağıdakileri kullanarak arasındaki önemli farklar listesidir <xref:System.
   }
   ```
 
-  .NET türü temsil etmek için kullanılan XML yapısı hakkında diğer her şey belirlenir <xref:System.Runtime.Serialization.DataContractSerializer>.
+  .NET türünü temsil etmek için kullanılan XML yapısına ilişkin diğer her şey, <xref:System.Runtime.Serialization.DataContractSerializer>tarafından belirlenir.
 
-- Nasıl bir XML içinde temsil edilmesini türüdür kadar denetim vermeyerek seri hale getirme işlemi için son derece tahmin edilebilir hale <xref:System.Runtime.Serialization.DataContractSerializer>ve böylece iyileştirmek daha kolay. Tasarımını pratik bir yararı <xref:System.Runtime.Serialization.DataContractSerializer> daha iyi performans, yaklaşık olarak yüzde 10 oranında daha iyi performans.
+- Bir türün XML 'de nasıl temsil edildiği konusunda çok fazla denetime izin verilmez, serileştirme işlemi için <xref:System.Runtime.Serialization.DataContractSerializer>yüksek düzeyde öngörülebilir hale gelir ve bu nedenle iyileştirilmesi kolaylaşır. Tasarımının <xref:System.Runtime.Serialization.DataContractSerializer> pratik bir avantajı daha iyi performans, yaklaşık yüzde on daha iyi performans.
 
-- İle kullanmak için öznitelikler <xref:System.Xml.Serialization.XmlSerializer> hangi alanların veya özelliklerin türü XML serileştirilme şeklini ise göstermez <xref:System.Runtime.Serialization.DataMemberAttribute> ile kullanılmak üzere <xref:System.Runtime.Serialization.DataContractSerializer> hangi alanların veya özelliklerin serileştirilmiş açıkça gösterir. Dolayısıyla, veri sözleşmeleri, göndermek ve almak için bir uygulama olan verilerin yapısı hakkında açık anlaşmaları altındadır.
+- İle birlikte <xref:System.Xml.Serialization.XmlSerializer> kullanılacak öznitelikleri, türünün hangi alanların veya özelliklerin XML olarak serileştirildiği göstermez, için için <xref:System.Runtime.Serialization.DataContractSerializer> öğesinin, <xref:System.Runtime.Serialization.DataMemberAttribute> açıkça hangi alanların veya özelliklerin serileştirildiği gösterilir. Bu nedenle, veri sözleşmeleri, bir uygulamanın gönderileceği ve alınacağı verilerin yapısı hakkında açık sözleşmelerdir.
 
-- <xref:System.Xml.Serialization.XmlSerializer> Yalnızca genel üyeleri bir .NET nesnesini XML'e, çevirebilir <xref:System.Runtime.Serialization.DataContractSerializer> nesnelerin üyelerini XML'e erişim değiştiricileri bu üyelerin bağımsız olarak çevirebilir.
+- Yalnızca bir .NET nesnesinin ortak üyelerini XML 'e çevirebilir <xref:System.Runtime.Serialization.DataContractSerializer> , bu üyelerin erişim değiştiricilerinden bağımsız olarak nesne üyelerini XML 'e çevirebilir. <xref:System.Xml.Serialization.XmlSerializer>
 
-- Türleri ortak olmayan üyeleri, XML'e seri hale getirmek için söz konusu kümelerdeki <xref:System.Runtime.Serialization.DataContractSerializer> daha az XML'e serileştirebiliyorsa .NET türleri çeşitli kısıtlamalar vardır. Özellikle, XML türlerini gibi çevirebilir <xref:System.Collections.Hashtable> uygulayan <xref:System.Collections.IDictionary> arabirimi. <xref:System.Runtime.Serialization.DataContractSerializer> Türünün tanımını değiştirin veya bunun için bir sarmalayıcı geliştirme gerek kalmadan tüm önceden mevcut olan .NET türüne XML örneklerini serileştirmek çok daha yüksektir.
+- Türlerin genel olmayan üyelerini XML olarak seri hale getirebilmek sonucunda, <xref:System.Runtime.Serialization.DataContractSerializer> XML 'de seri hale geyebilen çeşitli .net türlerinde daha az kısıtlama içerir. Özellikle, <xref:System.Collections.Hashtable> <xref:System.Collections.IDictionary> arabirimini uygulayan gibi XML türlerine çeviri yapabilir. , <xref:System.Runtime.Serialization.DataContractSerializer> Türün tanımını değiştirmek veya bir sarmalayıcı geliştirmek zorunda kalmadan, önceden var olan herhangi bir .NET türünün örneklerini XML olarak seri hale getirmek çok daha olasıdır.
 
-- Başka bir sonucu <xref:System.Runtime.Serialization.DataContractSerializer> bir türün genel olmayan üyeleri erişebildiklerinden olan tam güven gerektirir ancak <xref:System.Xml.Serialization.XmlSerializer> desteklemez. Tam güven kodu erişim izni altında kodu yürüten kimlik bilgileri kullanılarak erişilebilecek bir makinedeki tüm kaynakların tam erişim sağlar. Tam olarak güvenilen kod makinenizde tüm kaynaklara erişir gibi bu seçeneği dikkatli kullanılmalıdır.
+- Bir türün genel olmayan <xref:System.Runtime.Serialization.DataContractSerializer> üyelerine erişebilmekte olan başka bir sonuç ise tam güven gerektirmesidir, <xref:System.Xml.Serialization.XmlSerializer> ancak bunu yapmaz. Tam güven kodu erişim izni, kodun yürütüldüğü kimlik bilgileri kullanılarak erişilebilen bir makinedeki tüm kaynaklara tam erişim sağlar. Tam güvenilir kod, makinenizde bulunan tüm kaynaklara eriştiği için bu seçenek dikkatli kullanılmalıdır.
 
-- <xref:System.Runtime.Serialization.DataContractSerializer> Bazı sürüm oluşturma desteği içerir:
+- , <xref:System.Runtime.Serialization.DataContractSerializer> Sürüm oluşturma için bazı destek içerir:
 
-  - <xref:System.Runtime.Serialization.DataMemberAttribute> Sahip bir <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> böylece uygulamaların olmasını sözleşmenin daha yeni sürümü izin verecek şekilde önceki sürümlerde, mevcut olmayan bir veri anlaşması yeni sürümlerine eklenen üyeler için false değeri atanabilir özelliği önceki sürümlerde işlemek kullanabilirsiniz.
+  - , <xref:System.Runtime.Serialization.DataMemberAttribute> Önceki sürümlerde <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> mevcut olmayan bir veri sözleşmesinin yeni sürümlerine eklenen üyeler için yanlış değeri atanabilen bir özelliğe sahiptir, böylece sözleşmenin daha yeni bir sürümüne sahip olan uygulamalara izin verilir. önceki sürümleri işleyebiliyor.
 
-  - Uygulama bir veri anlaşması sahip <xref:System.Runtime.Serialization.IExtensibleDataObject> arabirimi, bir izin verebilir <xref:System.Runtime.Serialization.DataContractSerializer> uygulamalar üzerinden bir veri anlaşması daha yeni sürümlerinde sözleşme önceki sürümleriyle tanımlanan üyeler geçirilecek.
+  - Bir veri sözleşmesinin <xref:System.Runtime.Serialization.IExtensibleDataObject> arabirimini uygulaması sayesinde, bir veri sözleşmesinin daha yeni sürümlerinde <xref:System.Runtime.Serialization.DataContractSerializer> tanımlanan üyelerin, sözleşmenin önceki sürümleriyle uygulamalar aracılığıyla geçişine izin verebilir.
 
-Tüm farklılıklar da XML'e rağmen <xref:System.Xml.Serialization.XmlSerializer> serileştiren bir türü varsayılan olarak anlamı da XML'e aynıdır <xref:System.Runtime.Serialization.DataContractSerializer> ad alanı XML açıkça tanımlanmış için sağlanan bir türü seri hale getirir. Anlamsal olarak aynı XML tarafından öznitelikleri hem seri hale getiricileri genişletme ile kullanmak için aşağıdaki sınıf çevrilir <xref:System.Xml.Serialization.XmlSerializer> ve <xref:System.Runtime.Serialization.DataContractAttribute>:
+Tüm farklılıklara rağmen, <xref:System.Xml.Serialization.XmlSerializer> varsayılan olarak bir türü seri hale getirilen XML, bir türü <xref:System.Runtime.Serialization.DataContractSerializer> seri hale getirilen XML ile aynıdır, ancak XML için ad alanı açıkça tanımlanmıştır. Her iki serileştiriciyle birlikte kullanılmak üzere öznitelikleri olan aşağıdaki sınıf, ile <xref:System.Xml.Serialization.XmlSerializer> ve <xref:System.Runtime.Serialization.DataContractAttribute>arasında anlamsal özdeş XML 'e çevrilir:
 
 ```csharp
 [Serializable]
@@ -201,14 +201,14 @@ public class LineItem
 }
 ```
 
-Windows Yazılım Geliştirme Seti (SDK) adlı bir komut satırı aracı içerir [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). ASP.NET Web Hizmetleri ile kullanılan XSD.exe'nin aracını gibi Svcutil.exe XML şema .NET veri türlerinin tanımlarını oluşturabilir. Veri sözleşmeleri, türleridir <xref:System.Runtime.Serialization.DataContractSerializer> XML XML şeması tarafından tanımlanan biçimde gönderebilir; Aksi takdirde, bunlar serileştirme kullanmak için tasarlanmıştır <xref:System.Xml.Serialization.XmlSerializer>. Svcutil.exe ayrıca oluşturabileceği bir XML Şeması veri sözleşmelerden kullanarak kendi `dataContractOnly` geçin.
+Windows yazılım geliştirme seti (SDK), [ServiceModel meta veri yardımcı programı Aracı (Svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)adlı bir komut satırı aracı içerir. ASP.NET Web hizmetleriyle kullanılan xsd. exe aracı gibi, Svcutil. exe, XML şemasından .NET veri türlerinin tanımlarını oluşturabilir. Türler, XML şeması tarafından tanımlanan biçimde <xref:System.Runtime.Serialization.DataContractSerializer> XML yayıyorsa, veri sözleşmelerdir; Aksi takdirde, <xref:System.Xml.Serialization.XmlSerializer>kullanılarak serileştirme amaçlıdır. Svcutil. exe, kendi `dataContractOnly` anahtarını kullanarak veri sözleşmelerinden bir XML şeması da oluşturabilir.
 
 > [!NOTE]
-> ASP.NET Web hizmetlerini kullanın ancak <xref:System.Xml.Serialization.XmlSerializer>ve WCF ASP.NET uyumluluk modunun ASP.NET Web hizmetlerini davranışını taklit eden WCF hizmetleri sağlar, ASP.NET uyumluluk seçeneğini kullanarak bir kısıtlamaz <xref:System.Xml.Serialization.XmlSerializer>. Bir kullanmaya devam edebilirsiniz <xref:System.Runtime.Serialization.DataContractSerializer> ASP.NET uyumluluk modunda çalışan hizmetleri ile.
+> ASP.NET Web Hizmetleri <xref:System.Xml.Serialization.XmlSerializer>tarafından kullanılsa da WCF ASP.NET uyumluluk modu, WCF Hizmetleri ASP.NET Web hizmetlerinin davranışını taklit etse de ASP.NET uyumluluk seçeneği, bir <xref:System.Xml.Serialization.XmlSerializer>ile kullanımını kısıtlamaz. Bunlardan biri, <xref:System.Runtime.Serialization.DataContractSerializer> ASP.NET uyumluluk modunda çalışan hizmetlerini kullanmaya devam edebilir.
 
 ## <a name="service-development"></a>Hizmet geliştirme
 
-ASP.NET kullanarak bir hizmeti geliştirmek için eklemek için her zamanki geçtiğine <xref:System.Web.Services.WebService> öznitelik bir sınıfa ve <xref:System.Web.Services.WebMethodAttribute> herhangi bir hizmet işlemlerini olacak bu sınıfı yöntemleri:
+ASP.NET kullanarak bir hizmet geliştirmek için, <xref:System.Web.Services.WebService> özniteliği bir sınıfa eklemek <xref:System.Web.Services.WebMethodAttribute> ve hizmetin işlemleri olması gereken sınıf ' metotlarından birine eklemektir:
 
 ```csharp
 [WebService]
@@ -222,7 +222,7 @@ public class Service : T:System.Web.Services.WebService
 }
 ```
 
-ASP.NET 2.0 kullanılmaya öznitelik ekleme seçeneğiniz <xref:System.Web.Services.WebService> ve <xref:System.Web.Services.WebMethodAttribute> bir arabirim yerine bir sınıf ve arabirim uygulamak için bir sınıf yazma:
+ASP.NET 2,0, bir sınıfı yerine özniteliği <xref:System.Web.Services.WebService> ve <xref:System.Web.Services.WebMethodAttribute> bir arabirime ekleme ve arabirimi uygulamak için bir sınıf yazma seçeneğini sunmuştur:
 
 ```csharp
 [WebService]
@@ -242,11 +242,11 @@ public class Service : IEcho
 }
 ```
 
-Bu seçeneği kullanarak, tercih edilen, olmasını çünkü arabirimiyle <xref:System.Web.Services.WebService> özniteliği aynı sözleşme farklı şekillerde uygulayabilir, çeşitli sınıflarla yeniden kullanılabilir bir hizmet tarafından gerçekleştirilen işlemleri için bir sözleşmeyi oluşturur.
+Bu seçeneğin kullanılması tercih edilmelidir çünkü <xref:System.Web.Services.WebService> özniteliğe sahip arabirim, hizmet tarafından gerçekleştirilen işlemler için, aynı sözleşmeyi farklı yollarla uygulayabilecek çeşitli sınıflarla yeniden kullanılabilen işlemler için bir sözleşme oluşturur.
 
-Bir WCF hizmeti bir veya daha fazla WCF bitiş noktalarını tanımlayarak sağlanır. Bir uç nokta bir adresi, bağlama ve hizmet sözleşmesi tarafından tanımlanır. Hizmet bulunduğu adresin tanımlar. Bağlama hizmeti ile iletişim kurma belirtir. Hizmet sözleşmesi, hizmet gerçekleştirebileceği işlemleri tanımlar.
+Bir veya daha fazla WCF uç noktası tanımlayarak bir WCF hizmeti sağlanır. Bir uç nokta, bir adres, bağlama ve hizmet sözleşmesi tarafından tanımlanır. Adres, hizmetin nerede olduğunu tanımlar. Bağlama, hizmetle nasıl iletişim kuracağını belirtir. Hizmet sözleşmesi, hizmetin gerçekleştirebileceği işlemleri tanımlar.
 
-Hizmet sözleşmesi genellikle ilk olarak ekleyerek tanımlanan <xref:System.ServiceModel.ServiceContractAttribute> ve <xref:System.ServiceModel.OperationContractAttribute> bir arabirim için:
+Hizmet sözleşmesi genellikle, bir arabirim eklenerek <xref:System.ServiceModel.ServiceContractAttribute> ve <xref:System.ServiceModel.OperationContractAttribute> ' den önce tanımlanmıştır:
 
 ```csharp
 [ServiceContract]
@@ -257,9 +257,9 @@ public interface IEcho
 }
 ```
 
-<xref:System.ServiceModel.ServiceContractAttribute> Arabirimi bir WCF hizmet sözleşmesini tanımlayan belirtir ve <xref:System.ServiceModel.OperationContractAttribute> , varsa, arabirimin yöntemlerini hizmet sözleşmesi işlemlerini tanımlayan gösterir.
+Arabirimin bir WCF hizmeti sözleşmesi tanımladığını <xref:System.ServiceModel.OperationContractAttribute> ve arabirimin yöntemlerinin, varsa hizmet sözleşmesinin işlemlerini tanımladığını belirtir.<xref:System.ServiceModel.ServiceContractAttribute>
 
-Bir hizmet sözleşmesini tanımlandıktan sonra hizmet sözleşmesi tanımlandığı arabirimini uygulayan sınıf sağlayarak bir sınıfta uygulanır:
+Bir hizmet sözleşmesi tanımlandıktan sonra, sınıfı hizmet sözleşmesinin tanımlandığı arabirimi uygulayarak bir sınıfta uygulanır:
 
 ```csharp
 public class Service : IEcho
@@ -271,9 +271,9 @@ public class Service : IEcho
 }
 ```
 
-Bir hizmet sözleşmesini uygulayan bir sınıf, bir hizmet olarak WCF'de türüne adlandırılır.
+Bir hizmet sözleşmesini uygulayan bir sınıf, WCF 'de hizmet türü olarak adlandırılır.
 
-Sonraki adım, bir adresi ve bir bağlama bir hizmet türü ile ilişkilendirin sağlamaktır. Bu, genellikle bir yapılandırma dosyasında, dosyanın doğrudan düzenleyerek veya WCF ile sağlanan bir yapılandırma Düzenleyicisi'ni kullanarak gerçekleştirilir. Bir yapılandırma dosyası örneği aşağıdadır.
+Bir sonraki adım, bir adresi ve bağlamayı bir hizmet türüyle ilişkilendirmekte. Bu, genellikle dosyayı doğrudan düzenleyerek veya WCF ile birlikte sunulan bir yapılandırma Düzenleyicisi kullanılarak bir yapılandırma dosyasında yapılır. Yapılandırma dosyasına bir örnek aşağıda verilmiştir.
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -291,64 +291,60 @@ Sonraki adım, bir adresi ve bir bağlama bir hizmet türü ile ilişkilendirin 
 </configuration>
 ```
 
-Bağlama uygulamayla iletişim protokolleri belirtir. Aşağıdaki tabloda, sık kullanılan seçenekleri temsil eden sistem tarafından sağlanan bağlamalar listeler.
+Bağlama, uygulamayla iletişim kurmak için protokoller kümesini belirtir. Aşağıdaki tabloda, genel seçenekleri temsil eden sistem tarafından sunulan bağlamalar listelenmektedir.
 
 |Ad|Amaç|
 |----------|-------------|
-|BasicHttpBinding|Web Hizmetleri ve temel güvenlik profili 1.0 ve 1.1 WS-BasicProfile destekleyen istemciler ile birlikte çalışabilirlik.|
-|WSHttpBinding|Web Hizmetleri ve desteği WS - istemcileri ile birlikte çalışabilirlik * protokolleri HTTP üzerinden.|
-|WSDualHttpBinding|Çift yönlü HTTP iletişimi, bir ilk ileti alıcısı doğrudan ilk göndereni yanıtlamak değil, ancak yanıt herhangi bir sayıda in conformity with WS - HTTP kullanarak bir süre iletebilen * protokoller.|
-|WSFederationBinding|Bir hizmeti kaynaklarına erişimi denetlenebilir, HTTP iletişimi bir açıkça tanımlanmış kimlik bilgisi sağlayıcısı tarafından verilen kimlik bilgilerini temel.|
-|NetTcpBinding|Bir ağ üzerinden WCF yazılım varlıklar arasında güvenli, güvenilir ve yüksek performanslı iletişim.|
-|NetNamedPipeBinding|WCF yazılım varlıkları aynı makinede arasındaki iletişimi güvenli, güvenilir ve yüksek performans.|
-|NetMsmqBinding|MSMQ kullanarak WCF yazılım varlıklar arasındaki iletişim.|
-|MsmqIntegrationBinding|Bir WCF yazılım varlık ve MSMQ kullanarak başka bir yazılım varlığı arasındaki iletişim.|
-|NetPeerTcpBinding|Windows Eşler arası ağ iletişimi kullanarak WCF yazılım varlıklar arasındaki iletişim.|
+|Kullanmayı|WS-BasicProfile 1,1 ve temel güvenlik profili 1,0 ' i destekleyen Web Hizmetleri ve istemcilerle birlikte çalışabilirlik.|
+|WSHttpBinding|HTTP üzerinden WS-* protokollerini destekleyen Web Hizmetleri ve istemcilerle birlikte çalışabilirlik.|
+|WSDualHttpBinding|Bir ilk ileti alıcısının doğrudan ilk gönderene yanıt içermediği, ancak bir süre içinde, WS-* protokolleriyle birlikte HTTP kullanarak istediğiniz sayıda yanıtı aktarabileceği çift yönlü HTTP iletişimi.|
+|WSFederationBinding|Bir hizmetin kaynaklarına erişimin, açıkça tanımlanmış bir kimlik bilgisi sağlayıcısı tarafından verilen kimlik bilgilerine göre denetlenebileceği HTTP iletişimi.|
+|NetTcpBinding|Ağ genelindeki WCF yazılım varlıkları arasında güvenli, güvenilir, yüksek performanslı iletişim.|
+|NetNamedPipeBinding|Aynı makinede WCF yazılım varlıkları arasında güvenli, güvenilir, yüksek performanslı iletişim.|
+|NetMsmqBinding|MSMQ kullanarak WCF yazılım varlıkları arasındaki iletişim.|
+|MsmqIntegrationBinding|Bir WCF yazılım varlığı ile başka bir yazılım varlığı arasında MSMQ kullanarak iletişim.|
+|NetPeerTcpBinding|Windows Eşler arası ağ kullanarak WCF yazılım varlıkları arasında iletişim.|
 
-Sistem tarafından sağlanan bağlama <xref:System.ServiceModel.BasicHttpBinding>, ASP.NET Web Hizmetleri tarafından desteklenen protokolleri kümesi içerir.
+Sistem tarafından sunulan bağlama <xref:System.ServiceModel.BasicHttpBinding>, ASP.NET Web Hizmetleri tarafından desteklenen protokol kümesini içerir.
 
-Özel bağlamalar WCF uygulamaları için kolayca bağlama öğesi sınıflarının tekil protokollerin uygulamak için WCF kullanan bir koleksiyon olarak tanımlanır. Ek protokollerin temsil etmek için yeni bağlama öğeleri yazılabilir.
+WCF uygulamaları için özel bağlamalar, WCF 'nin tek tek protokolleri uygulamak için kullandığı bağlama öğesi sınıflarının koleksiyonları olarak kolayca tanımlanır. Yeni bağlama öğeleri, ek protokolleri temsil etmek için yazılabilir.
 
-Hizmet türlerini iç davranışını davranışları adlı sınıflar ailesini özelliklerini kullanarak ayarlanabilir. Burada, <xref:System.ServiceModel.ServiceBehaviorAttribute> sınıfı hizmet türü birden çok iş parçacıklı değer olduğunu belirtmek için kullanılır.
+Hizmet türlerinin iç davranışı, davranışlar adlı bir sınıf ailesinin özellikleri kullanılarak ayarlanabilir. Burada, <xref:System.ServiceModel.ServiceBehaviorAttribute> sınıf, hizmet türünün çok iş parçacıklı olduğunu belirtmek için kullanılır.
 
 ```csharp
 [ServiceBehavior(ConcurrencyMode=ConcurrencyMode.Multiple]
 public class DerivativesCalculatorServiceType: IDerivativesCalculator
 ```
 
-Bazı davranışları ister <xref:System.ServiceModel.ServiceBehaviorAttribute>, öznitelikler. Diğer yöneticiler ayarlamak için isteyeceği özelliklere sahip olanları uygulama yapılandırmasında değiştirilebilir.
+Gibi bazı davranışlar <xref:System.ServiceModel.ServiceBehaviorAttribute>öznitelikleri vardır. Kullanıcılar, yöneticilerin ayarlamak istedikleri özelliklere sahip olanlar, bir uygulamanın yapılandırmasında değiştirilebilir.
 
-Hizmet türlerini programlamada, sık kullanılan oluşuyor <xref:System.ServiceModel.OperationContext> sınıfı. Kendi statik <xref:System.ServiceModel.OperationContext.Current%2A> özelliği işleminin çalıştığı bağlamı bilgilerine erişim sağlar. <xref:System.ServiceModel.OperationContext> her ikisi için de benzer <xref:System.Web.HttpContext> ve <xref:System.EnterpriseServices.ContextUtil> sınıfları.
+Programlama hizmeti türlerinde, <xref:System.ServiceModel.OperationContext> sınıfının sık kullanılan kullanımı yapılır. Statik <xref:System.ServiceModel.OperationContext.Current%2A> özelliği, bir işlemin çalıştığı bağlam hakkındaki bilgilere erişim sağlar. <xref:System.ServiceModel.OperationContext>, <xref:System.Web.HttpContext> ve<xref:System.EnterpriseServices.ContextUtil> sınıflarına benzerdir.
 
 ## <a name="hosting"></a>Barındırma
 
-ASP.NET Web Hizmetleri, bir sınıf kitaplık derlemesine derlenir. Hizmet dosyası adlı bir dosya uzantısı .asmx sahip ve içeren koşuluyla olan bir `@ WebService` hizmet ve onu bulunduğu bütünleştirilmiş kod için kod içeren sınıf tanımlayan yönergesi.
+ASP.NET Web Hizmetleri bir sınıf kitaplığı derlemesine derlenir. Service File adlı bir dosya,. asmx uzantısına sahiptir ve hizmet için kodu ve bulunduğu derlemeyi `@ WebService` içeren sınıfı tanımlayan bir yönerge içerir.
 
-```
-<%@ WebService Language="C#" Class="Service,ServiceAssembly" %>
-```
+`<%@ WebService Language="C#" Class="Service,ServiceAssembly" %>`
 
-Internet Information Services (IIS) ASP.NET uygulama kökü hizmet dosyası kopyalanır ve derleme, uygulama kök \bin alt kopyalanır. Uygulama ardından Tekdüzen Kaynak Konum Belirleyicisi (URL) ' hizmet dosyasının uygulama kökü kullanılarak erişilebilir.
+Hizmet dosyası Internet Information Services (IIS) içinde bir ASP.NET uygulama köküne kopyalanır ve derleme bu uygulama kökünün \bin alt dizinine kopyalanır. Daha sonra uygulama, uygulama kökündeki hizmet dosyasının Tekdüzen Kaynak Konum Belirleyicisi (URL) kullanılarak erişilebilir.
 
-WCF hizmetlerinde IIS 5.1 veya 6.0, Windows İşlem Etkinleştirme Hizmeti (IIS 7. 0'da, bir parçası olarak sağlanan WAS) ve herhangi bir .NET uygulama içinde kolayca barındırılabilir. IIS 5.1 veya 6.0 hizmet barındırmak için hizmet iletişimleri Aktarım Protokolü olarak HTTP kullanmanız gerekir.
+WCF Hizmetleri IIS 5,1 veya 6,0 ' de, IIS 7,0 'nin bir parçası olarak sunulan Windows Işlem etkinleştirme hizmeti (WAS) ve herhangi bir .NET uygulaması içinde kolayca barındırılabilir. IIS 5,1 veya 6,0 ' de bir hizmeti barındırmak için hizmetin iletişim aktarım protokolü olarak HTTP kullanması gerekir.
 
-IIS 5.1, 6.0 veya WAS içinde bir hizmet ana bilgisayar için aşağıdaki adımları kullanın:
+IIS 5,1, 6,0 veya içinde bir hizmet barındırmak için aşağıdaki adımları kullanın:
 
-1. Hizmet türü bir sınıf kitaplık derlemesine içine derleyin.
+1. Hizmet türünü bir sınıf kitaplığı derlemesinde derleyin.
 
-2. .Svc uzantısına sahip bir hizmet dosyası oluşturma bir `@ ServiceHost` yönergesi hizmet türünü tanımlamak için:
+2. Hizmet türünü tanımlamak için bir `@ ServiceHost` yönergesi ile. svc uzantılı bir hizmet dosyası oluşturun:
 
-    ```
-    <%@ServiceHost language="c#" Service="MyService" %>
-    ```
+    `<%@ServiceHost language="c#" Service="MyService" %>`
 
-3. Bir sanal dizin ve bu sanal dizine \bin alt derlemeye hizmet dosyasını kopyalayın.
+3. Hizmet dosyasını bir sanal dizine ve derlemeye bu sanal dizinin \bin alt dizinine kopyalayın.
 
-4. Yapılandırma dosyasını sanal dizine kopyalayın ve bunu Web.config olarak adlandırın.
+4. Yapılandırma dosyasını sanal dizine kopyalayın ve Web. config olarak adlandırın.
 
-Uygulama daha sonra uygulama kökü hizmet dosyasında URL'si kullanılarak erişilebilir.
+Uygulamaya daha sonra uygulama kökündeki hizmet dosyasının URL 'SI kullanılarak erişilebilir.
 
-Bir .NET uygulamasından bir WCF Hizmeti barındırma için hizmet türü uygulama tarafından başvurulan bir sınıf kitaplık derlemesine derlemek ve konak hizmetini kullanarak uygulamayı programlama <xref:System.ServiceModel.ServiceHost> sınıfı. Gerekli temel programlama örneği verilmiştir:
+Bir .NET uygulamasında bir WCF hizmetini barındırmak için, hizmet türünü uygulama tarafından başvurulan bir sınıf kitaplığı derlemesinde derleyin ve uygulamayı, <xref:System.ServiceModel.ServiceHost> sınıfı kullanarak hizmeti barındıracak şekilde programlayabilirsiniz. Aşağıdakiler, gerekli temel programlama örneğidir:
 
 ```csharp
 string httpBaseAddress = "http://www.contoso.com:8000/";
@@ -371,13 +367,13 @@ typeof(Service), //"Service" is the name of the service type baseAddresses))
 }
 ```
 
-Bu örnek, bir veya daha fazla aktarım protokolleri için adresleri oluşumunu nasıl belirtilen gösterir. bir <xref:System.ServiceModel.ServiceHost>. Bu adresler taban adresi adlandırılır.
+Bu örnek, bir veya daha fazla Aktarım Protokolü adresinin bir <xref:System.ServiceModel.ServiceHost>oluşturma sırasında nasıl belirtildiği gösterilmektedir. Bu adreslere taban adresler denir.
 
-Herhangi bir WCF Hizmeti uç noktası için sağlanan adresi, temel bir uç noktanın ana bilgisayar adresini göre adresidir. Konak her iletişim Aktarım Protokolü için bir temel adresine sahip olabilir. Önceki yapılandırma dosyasında örnek yapılandırmasında <xref:System.ServiceModel.BasicHttpBinding> HTTP uç noktası kullanımıyla ilgili Aktarım Protokolü bu nedenle, uç nokta adresini seçili `EchoService`, ana bilgisayarın HTTP temel adresi göre. Önceki örnekte konağın söz konusu olduğunda, HTTP temel adresi olduğundan `http://www.contoso.com:8000/`. IIS veya WAS içinde barındırılan bir hizmet için taban adresi hizmetin hizmet dosyası URL'sidir.
+WCF hizmetinin herhangi bir uç noktası için belirtilen adres, uç noktanın ana adresinin temel adresiyle ilişkili bir adrestir. Ana bilgisayar her iletişim Aktarım Protokolü için bir temel adrese sahip olabilir. Önceki yapılandırma dosyasındaki örnek yapılandırmada, uç nokta için seçilen, <xref:System.ServiceModel.BasicHttpBinding> aktarım protokolü olarak http 'yi kullanır, bu nedenle `EchoService`uç noktanın adresi ana bilgisayarın http taban adresine görelidir. Yukarıdaki örnekteki ana bilgisayar söz konusu olduğunda, HTTP temel adresi olur `http://www.contoso.com:8000/`. IIS veya WAS içinde barındırılan bir hizmet için temel adres, hizmetin hizmet dosyasının URL 'sidir.
 
-Yalnızca hizmetler IIS veya WAS ve hangi HTTP ile Aktarım Protokolü yalnızca, yapılandırılmış barındırılan WCF ASP.NET uyumluluk modu seçeneğini kullanmak için yapılabilir. Bu seçeneği etkinleştirmek için aşağıdaki adımları gerektirir.
+Yalnızca IIS veya WAS 'da barındırılan ve yalnızca Aktarım Protokolü olarak HTTP ile yapılandırılmış olan hizmetler, WCF ASP.NET uyumluluk modu seçeneğini kullanacak şekilde yapılabilir. Bu seçeneği açık olarak açmak aşağıdaki adımları gerektirir.
 
-1. Programcı eklemelisiniz <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> özniteliği için hizmet türü ve ASP.NET uyumluluk modunun izin verilen veya gerekli belirtin.
+1. Programcının <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> özniteliği hizmet türüne eklemesi ve ASP.NET uyumluluk modunun izin verileceğini veya gerekli olduğunu belirtmesi gerekir.
 
     ```csharp
     [System.ServiceModel.Activation.AspNetCompatibilityRequirements(
@@ -385,7 +381,7 @@ Yalnızca hizmetler IIS veya WAS ve hangi HTTP ile Aktarım Protokolü yalnızca
     public class DerivativesCalculatorServiceType: IDerivativesCalculator
     ```
 
-2. Yönetici, ASP.NET uyumluluk modunun kullanmak için uygulamayı yapılandırmanız gerekir.
+2. Yöneticinin uygulamayı ASP.NET uyumluluk modunu kullanacak şekilde yapılandırması gerekir.
 
     ```xml
     <configuration>
@@ -398,7 +394,7 @@ Yalnızca hizmetler IIS veya WAS ve hangi HTTP ile Aktarım Protokolü yalnızca
     </configuration>
     ```
 
-    WCF uygulamaları, kendi hizmet dosyalarda .svc yerine .asmx bir uzantısı olarak kullanmak için de yapılandırılabilir.
+    WCF uygulamaları,. svc yerine hizmet dosyaları için uzantısı olarak. asmx kullanacak şekilde de yapılandırılabilir.
 
     ```xml
     <system.web>
@@ -418,19 +414,19 @@ Yalnızca hizmetler IIS veya WAS ve hangi HTTP ile Aktarım Protokolü yalnızca
     </system.web>
     ```
 
-    Bu seçenek, WCF kullanmak için hizmet değiştirilirken .asmx hizmeti dosyaları URL'lerini kullanmak üzere yapılandırılmış istemciler değiştirmek zorunda kalmaktan kaydedebilirsiniz.
+    Bu seçenek, WCF 'yi kullanmak üzere bir hizmeti değiştirirken. asmx hizmet dosyalarının URL 'Lerini kullanmak üzere yapılandırılmış istemcileri değiştirmenize gerek kalmadan sizi kaydedebilir.
 
 ## <a name="client-development"></a>İstemci Geliştirme
 
-ASP.NET Web Hizmetleri için istemcileri, giriş olarak .asmx dosyasının URL'sini sağlayan WSDL.exe komut satırı aracını kullanarak oluşturulur. WCF tarafından sağlanan karşılık gelen aracı [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Bu, bir kod modülü ile hizmet sözleşmesi tanımını ve bir WCF istemcisi sınıfının tanımını oluşturur. Ayrıca, hizmetin bağlamasını ve adresini içeren bir yapılandırma dosyası oluşturur.
+ASP.NET Web Hizmetleri için istemciler,. asmx dosyasının URL 'sini girdi olarak sağlayan WSDL. exe komut satırı aracı kullanılarak oluşturulur. WCF tarafından sunulan ilgili araç [ServiceModel meta veri yardımcı programı aracıdır (Svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Hizmet sözleşmesinin tanımına ve bir WCF istemci sınıfının tanımına sahip bir kod modülü oluşturur. Ayrıca, hizmetin adresi ve bağlamasını içeren bir yapılandırma dosyası da oluşturur.
 
-Uzak bir hizmete istemcisini programlamada zaman uyumsuz bir modele göre program genellikle tavsiye edilir. Her zaman WSDL.exe araç tarafından oluşturulan kodu, bir zaman uyumlu hem de zaman uyumsuz bir desenin için varsayılan olarak sağlar. Tarafından oluşturulan kodu [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) için ya da bir desen girebilirsiniz. Bu, varsayılan olarak zaman uyumlu desenini sağlar. Aracı ile yürütülürse `/async` geçiş için zaman uyumsuz desen oluşturulan kodu sağlar.
+Uzak bir hizmetin istemcisinin programlama aşamasında, genellikle zaman uyumsuz bir modele göre programlanması önerilir. WSDL. exe aracı tarafından oluşturulan kod her zaman hem zaman uyumlu hem de zaman uyumsuz bir model için varsayılan olarak sağlar. [ServiceModel meta veri yardımcı programı (Svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) tarafından oluşturulan kod, her iki model için de sağlayabilir. Varsayılan olarak zaman uyumlu model sağlar. Araç, `/async` anahtarla yürütülürse, oluşturulan kod zaman uyumsuz model için sağlar.
 
-ASP tarafından oluşturulan WCF istemci sınıfları adları bir garanti yoktur. Varsayılan olarak, NET WSDL.exe aracı Svcutil.exe araç tarafından oluşturulan WCF istemci sınıfları adlarında eşleştirin. Özellikle, özelliklerin sınıflarının adları olan kullanarak serileştirilecek <xref:System.Xml.Serialization.XmlSerializer> WSDL.exe aracı ile çalışması değil Svcutil.exe aracı tarafından oluşturulan kodu soneki özelliği varsayılan olarak, verilen olan.
+ASP tarafından oluşturulan WCF istemci sınıflarında adların garantisi yoktur. NET ' in WSDL. exe aracı, varsayılan olarak, Svcutil. exe aracı tarafından oluşturulan WCF istemci sınıflarında adları eşleştirin. Özellikle, kullanılarak <xref:System.Xml.Serialization.XmlSerializer> serileştirilmesi gereken sınıfların özelliklerinin adları, varsayılan olarak, WSDL. exe aracında bir durum olmayan Svcutil. exe aracı tarafından oluşturulan koddaki sonek özelliği verilirler.
 
-## <a name="message-representation"></a>İleti gösterimi
+## <a name="message-representation"></a>İleti temsili
 
-ASP.NET Web Hizmetleri tarafından alınan SOAP iletilerinin üstbilgisi özelleştirilebilir. Öğesinden türetilen bir sınıf <xref:System.Web.Services.Protocols.SoapHeader> başlık yapısını tanımlamak için ve ardından <xref:System.Web.Services.Protocols.SoapHeaderAttribute> üst bilgisi varlığını göstermek için kullanılır.
+ASP.NET Web Hizmetleri tarafından gönderilen ve alınan SOAP iletilerinin üstbilgileri özelleştirilebilir. Bir sınıf, üstbilginin yapısını <xref:System.Web.Services.Protocols.SoapHeader> tanımlamak için öğesinden türetilir ve <xref:System.Web.Services.Protocols.SoapHeaderAttribute> sonra üstbilginin varlığını göstermek için kullanılır.
 
 ```csharp
 public class SomeProtocol : SoapHeader
@@ -477,7 +473,7 @@ public class Service: WebService, IEcho
 }
 ```
 
-WCF öznitelikleri sağlar <xref:System.ServiceModel.MessageContractAttribute>, <xref:System.ServiceModel.MessageHeaderAttribute>, ve <xref:System.ServiceModel.MessageBodyMemberAttribute> SOAP iletilerini bir hizmeti tarafından gönderilen ve alınan yapısını tanımlamak için.
+WCF, bir hizmet tarafından gönderilen <xref:System.ServiceModel.MessageContractAttribute>ve <xref:System.ServiceModel.MessageHeaderAttribute>alınan SOAP <xref:System.ServiceModel.MessageBodyMemberAttribute> iletilerinin yapısını betimleyen,, ve özniteliklerini sağlar.
 
 ```csharp
 [DataContract]
@@ -517,7 +513,7 @@ public interface IItemService
 }
 ```
 
-İletileri yapısı, bir ASP.NET Web hizmeti kodunu tarafından kapsanan ise bu söz dizimi yapısı iletileri, açık bir temsilini verir. Ayrıca, ASP.NET sözdiziminde, ileti üstbilgileri hizmet özellikleri olarak gibi gösterilir `ProtocolHeader` önceki örnekte, özellik daha doğru bir şekilde iletileri özellikleri olarak gösterilen WCF sözdiziminde ise. Ayrıca, WCF uç noktaları yapılandırmanız için eklenecek ileti üstbilgileri sağlar.
+Bu sözdizimi, iletilerin yapısının açık bir gösterimini verir, ancak iletilerin yapısı bir ASP.NET Web hizmeti kodu tarafından kapsanır. Ayrıca, ASP.net sözdiziminde, ileti üstbilgileri hizmetin `ProtocolHeader` özellikleri olarak temsil edilir (örneğin, önceki örnekteki özelliği), WCF sözdiziminde, iletilerin özellikleri olarak daha doğru şekilde temsil edilir. Ayrıca, WCF, ileti üstbilgilerinin uç noktaların yapılandırmasına eklenmesine izin verir.
 
 ```xml
 <service name="Service ">
@@ -535,13 +531,13 @@ public interface IItemService
 </service>
 ```
 
-Seçenek, herhangi bir istemci veya hizmet için kodunda altyapısal protokol üstbilgileri başvuru kaçınmak olanak tanır: uç nokta nasıl yapılandırıldığını nedeniyle ileti üstbilgileri eklenir.
+Bu seçenek, bir istemci veya hizmet için koddaki altyapısal protokol üst bilgilerine yönelik herhangi bir başvuruyu önlemenize olanak sağlar: uç noktanın nasıl yapılandırıldığına ilişkin olarak üstbilgiler iletilere eklenir.
 
 ## <a name="service-description"></a>Hizmet Açıklaması
 
-WSDL sorgu ile bir ASP.NET Web hizmetinin .asmx dosyası için bir HTTP GET isteği verme, WSDL hizmet oluşturmak ASP.NET neden olur. Bunu döndüren WSDL isteğe yanıt olarak.
+ASP.NET bir Web hizmetinin. asmx dosyası için bir HTTP GET isteği verme, WSDL sorgusu, ASP.NET 'nin hizmeti betimleyen WSDL oluşturmasına neden olur. İsteğin yanıtı olarak WSDL döndürür.
 
-ASP.NET 2.0 yapılan bu hizmet Web Hizmetleri birlikte çalışabilirlik kuruluşun Basic Profile 1.1 ile uyumlu olduğunu doğrulamak olası (WS-ı) ve hizmet içinde WSDL uyumlu bir talep eklemek için. Diğer bir deyişle bitti kullanarak `ConformsTo` ve `EmitConformanceClaims` parametrelerinin <xref:System.Web.Services.WebServiceBindingAttribute> özniteliği.
+ASP.NET 2,0, bir hizmetin Web Hizmetleri ile birlikte çalışabilirlik kuruluşunun (WS-ı) 1,1 temel profiliyle uyumlu olduğunu doğrulamak ve hizmetin WSDL 'ye uyumlu olduğunu bir talep eklemek mümkün hale gelir. Bu, `ConformsTo` <xref:System.Web.Services.WebServiceBindingAttribute> özniteliğinin ve `EmitConformanceClaims` parametreleri kullanılarak yapılır.
 
 ```csharp
 [WebService(Namespace = "http://tempuri.org/")]
@@ -551,13 +547,13 @@ ASP.NET 2.0 yapılan bu hizmet Web Hizmetleri birlikte çalışabilirlik kurulu�
 public interface IEcho
 ```
 
-ASP.NET, bir hizmet için üretir. WSDL özelleştirilebilir. Özelleştirmeleri, türetilmiş sınıf oluşturarak yapılır <xref:System.Web.Services.Description.ServiceDescriptionFormatExtension> için WSDL öğeleri eklemek için.
+Bir hizmet için ASP.NET üreten WSDL özelleştirilebilir. Özelleştirmeler, WSDL 'ye öğe eklemek <xref:System.Web.Services.Description.ServiceDescriptionFormatExtension> için türetilmiş bir sınıfı oluşturularak yapılır.
 
-IIS 51 içinde barındırılan bir HTTP uç noktası ile ' % s'sorgu WSDL .svc dosyasının bir WCF Hizmeti ile bir HTTP GET isteği verme, 6.0 veya WAS'ta WCF hizmet WSDL ile yanıt neden olur. Bir .NET uygulamasında barındırılan bir hizmete HTTP temel adresine WSDL sorgu ile bir HTTP GET isteği veren aynı etkiye sahiptir de ayarlanmışsa true.
+IIS 51, 6,0 veya üzerinde barındırılan bir HTTP uç noktası ile bir WCF hizmetinin. svc dosyası için WSDL sorgu WSDL ile HTTP GET isteği verme, WCF 'nin hizmeti tanımlamasını sağlamak üzere WSDL ile yanıt vermesini sağlar. HttpGetEnabled, true olarak ayarlandıysa, bir .NET uygulaması içinde barındırılan bir hizmetin HTTP taban adresine WSDL ile bir HTTP GET isteği verilmesi aynı etkiye sahiptir.
 
-Ancak, WCF Ayrıca, bir hizmet oluşturduğu WSDL WS-MetadataExchange isteklerine yanıt verir. ASP.NET Web hizmetlerini WS-MetadataExchange istekleri için yerleşik destek yok.
+Bununla birlikte, WCF Ayrıca bir hizmeti tanımlamaya yönelik oluşturduğu WSDL ile WS-MetadataExchange isteklerini de yanıtlar. ASP.NET Web Hizmetleri, WS-MetadataExchange istekleri için yerleşik desteğe sahip değildir.
 
-WCF oluşturur WSDL kapsamlı olarak özelleştirilebilir. <xref:System.ServiceModel.Description.ServiceMetadataBehavior> Sınıfı WSDL özelleştirmeye yönelik bazı özellikleri sağlar. WCF WSDL oluşturulmayacağını, ancak bunun yerine belirtilen URL'de statik bir WSDL dosyasını kullanmak için de yapılandırılabilir.
+WCF tarafından oluşturulacak WSDL, kapsamlı bir şekilde özelleştirilebilir. <xref:System.ServiceModel.Description.ServiceMetadataBehavior> Sınıfı, WSDL 'yi özelleştirmek için bazı tesisler sağlar. WCF Ayrıca, WSDL oluşturmak için yapılandırılabilir, ancak belirli bir URL 'de statik bir WSDL dosyası kullanmak yerine kullanılabilir.
 
 ```xml
 <behaviors>
@@ -574,11 +570,11 @@ WCF oluşturur WSDL kapsamlı olarak özelleştirilebilir. <xref:System.ServiceM
 
 ## <a name="exception-handling"></a>Özel Durum İşleme
 
-ASP.NET Web Hizmetleri, işlenmemiş özel durumlar, SOAP hataları istemcilere döndürülür. Örneklerini de açıkça oluşturabilecek <xref:System.Web.Services.Protocols.SoapException> sınıfı ve istemciye gönderilen bir SOAP hatası içeriği hakkında daha fazla denetime sahip.
+ASP.NET Web hizmetlerinde, işlenmemiş özel durumlar istemcilere SOAP hatası olarak döndürülür. Ayrıca, <xref:System.Web.Services.Protocols.SoapException> sınıfının örneklerini açıkça oluşturabilir ve istemciye iletilen SOAP hatasının içeriği üzerinde daha fazla denetime sahip olabilirsiniz.
 
-WCF hizmetleri, işlenmemiş özel durumlar istemcilere hassas bilgiler özel durumların yanlışlıkla yararlanılmasını önlemek için SOAP hataları olarak döndürülmez. Bir yapılandırma ayarı, hata ayıklama amacıyla, istemcilere döndürülen özel durum işlenmemiş için sağlanmıştır.
+WCF hizmetlerinde, önemli bilgilerin yanlışlıkla özel durumlar üzerinden gösterilmesini engellemek için işlenmemiş özel durumlar istemcilere SOAP hatası olarak döndürülmez. Bir yapılandırma ayarı, istemcilere hata ayıklama amacıyla geri döndürülen işlenmemiş özel durumları sağlamak için sağlanır.
 
-SOAP hataları istemcilere dönmek için genel türün örneklerini oluşturabilecek <xref:System.ServiceModel.FaultException%601>kullanarak veri anlaşması türü olarak genel tür. Ayrıca ekleyebilirsiniz <xref:System.ServiceModel.FaultContractAttribute> öznitelikleri, işlemleri bir işlem yield hataları belirlemek için.
+İstemcilere SOAP hataları döndürmek için, genel tür olarak veri sözleşmesi türünü kullanarak genel türün <xref:System.ServiceModel.FaultException%601>örneklerini silebilirsiniz. Ayrıca, bir işlemin <xref:System.ServiceModel.FaultContractAttribute> sağlayabileceği hataları belirtmek için işlemlere öznitelikler ekleyebilirsiniz.
 
 ```csharp
 [DataContract]
@@ -599,7 +595,7 @@ public interface ICalculator
 }
 ```
 
-Olası hataları sonuçlarında hizmeti için WSDL içinde tanıtılan şekilde yaptığını, hangi hataların öngörmek programcılar rotasyonunun bir işlemden neden ve uygun catch deyimleri yazma.
+Bunun yapılması, hizmet için WSDL 'de tanıtılmakta olan hataların, istemci programcılarının hangi hataların bir işlemden neden olduğunu tahmin etmesinin yanı sıra uygun catch deyimlerini yazabileceğini tahmin etmenize neden olur.
 
 ```csharp
 try
@@ -615,9 +611,9 @@ catch (FaultException<MathFault> e)
 }
 ```
 
-## <a name="state-management"></a>Durum Yönetimi
+## <a name="state-management"></a>Durum yönetimi
 
-Bir ASP.NET Web hizmeti uygulamak için kullanılan sınıfı türetilen <xref:System.Web.Services.WebService>.
+Bir ASP.NET Web hizmetini uygulamak için kullanılan sınıf öğesinden <xref:System.Web.Services.WebService>türetilebilir.
 
 ```csharp
 public class Service : WebService, IEcho
@@ -630,20 +626,20 @@ public class Service : WebService, IEcho
 }
 ```
 
-Bu durumda, sınıf kullanılacak programlanabilir <xref:System.Web.Services.WebService> erişmek için sınıfın bağlam özelliğini temel bir <xref:System.Web.HttpContext> nesne. <xref:System.Web.HttpContext> Nesnesi olabilir güncelleştirme ve kendi uygulama özelliğini kullanarak uygulama durum bilgilerini almak için kullanılan ve güncelleştirme ve kendi oturumu özelliğini kullanarak oturum durumu bilgilerini almak için kullanılabilir.
+Bu durumda, sınıfı bir <xref:System.Web.Services.WebService> <xref:System.Web.HttpContext> nesneye erişmek için temel sınıfın ' Context özelliğini kullanmak üzere programlanabilir. <xref:System.Web.HttpContext> Nesnesi, uygulama özelliği kullanılarak uygulama durumu bilgilerini güncelleştirmek ve almak için kullanılabilir ve oturum özelliğini kullanarak oturum durumu bilgilerini güncelleştirmek ve almak için kullanılabilir.
 
-ASP.NET, burada oturum durum bilgileri oturumu özelliği kullanılarak önemli ölçüde denetim sağlar <xref:System.Web.HttpContext> gerçekten depolanır. Tanımlama bilgileri, bir veritabanı, geçerli sunucu belleği veya atanmış bir sunucu belleği depolanabilir. Seçim hizmet yapılandırma dosyasında yapılır.
+ASP.net, uygulamasının oturum durumu bilgilerinin, <xref:System.Web.HttpContext> aslında ' ın Session özelliği kullanılarak eriştiği konuma göre önemli bir denetim sağlar. Tanımlama bilgilerinde, bir veritabanında, geçerli sunucu belleğinde veya belirlenen bir sunucunun belleğinde depolanabilir. Bu seçenek, hizmetin yapılandırma dosyasında yapılır.
 
-WCF genişletilebilen nesneler için durum yönetimi sağlar. Genişletilebilen nesneler olan uygulayan nesneler <xref:System.ServiceModel.IExtensibleObject%601>. En önemli Genişletilebilir nesneler <xref:System.ServiceModel.ServiceHostBase> ve <xref:System.ServiceModel.InstanceContext>. `ServiceHostBase` tüm hizmet örneklerinin türleri, aynı ana bilgisayarda durumu erişebilir, tutmanıza olanak sağlayan while `InstanceContext` içinde bir hizmet türünün aynı örneğini çalıştıran herhangi bir kod tarafından erişilebilir durumda tutmanıza olanak sağlar.
+WCF, durum yönetimi için Genişletilebilir nesneler sağlar. Genişletilebilir nesneler, uygulayan <xref:System.ServiceModel.IExtensibleObject%601>nesnelerdir. En önemli Genişletilebilir nesneler ve ' <xref:System.ServiceModel.ServiceHostBase> <xref:System.ServiceModel.InstanceContext>dir. `ServiceHostBase`aynı ana bilgisayardaki tüm hizmet türlerinin tümünün erişebileceği durumu korumanıza olanak sağlar, ancak `InstanceContext` aynı hizmet türü örneğinde çalışan herhangi bir kod tarafından erişilebilen durumu korumanıza olanak sağlar.
 
-Burada, hizmet türü `TradingSystem`, sahip bir <xref:System.ServiceModel.ServiceBehaviorAttribute> belirten tüm çağrıların aynı WCF istemci örneğinin aynı hizmet türü örneğine yönlendirilir.
+Burada, hizmet türü `TradingSystem`, aynı WCF istemci örneğindeki tüm çağrıların hizmet türünün aynı örneğine yönlendirildiğini belirten bir <xref:System.ServiceModel.ServiceBehaviorAttribute> içerir.
 
 ```csharp
 [ServiceBehavior(InstanceContextMode = InstanceContextMode.PerSession)]
 public class TradingSystem: ITradingService
 ```
 
-Sınıf `DealData`, bir hizmet türünün aynı örneğinde çalışan herhangi bir kod tarafından erişilebilecek bir durum tanımlar.
+Sınıfı `DealData`, bir hizmet türünün aynı örneğinde çalışan herhangi bir kod tarafından erişilebilen durumu tanımlar.
 
 ```csharp
 internal class DealData: IExtension<InstanceContext>
@@ -653,7 +649,7 @@ internal class DealData: IExtension<InstanceContext>
 }
 ```
 
-Hizmet türünün hizmet sözleşmesinin işlemlerden uygulayan kod bir `DealData` durum nesnesi, geçerli hizmet türü örneği durumuna eklenir.
+Hizmet sözleşmesinin işlemlerinden birini uygulayan hizmet türünün kodunda, hizmet türünün geçerli örneğinin durumuna bir `DealData` durum nesnesi eklenir.
 
 ```csharp
 string ITradingService.BeginDeal()
@@ -665,7 +661,7 @@ string ITradingService.BeginDeal()
 }
 ```
 
-Bu durum nesnesi alınır ve başka bir hizmet sözleşme işlemleri uygulayan kodu tarafından değiştirildi.
+Bu durum nesnesi daha sonra hizmet sözleşmesinin işlemlerini uygulayan kod tarafından alınabilir ve değiştirilebilir.
 
 ```csharp
 void ITradingService.AddTrade(Trade trade)
@@ -675,21 +671,21 @@ void ITradingService.AddTrade(Trade trade)
 }
 ```
 
-ASP.NET üzerinde denetim sağlar. burada bilgileri durum <xref:System.Web.HttpContext> sınıfı gerçekten depolanan, WCF, en az ilk sürümde genişletilebilen nesneler depolandığı üzerinde hiçbir denetim sağlar. Bir WCF hizmeti için ASP.NET uyumluluk modunun seçmeye yönelik en iyi nedeni oluşturur. Yapılandırılabilir durum yönetimi, kesinlik temelli sonra için ASP.NET uyumluluk modunun edilmesiyle akreditasyonlu kullanmanıza olanak verir <xref:System.Web.HttpContext> sınıf tam olarak, ASP.NET ve yapılandırmak için kullanılabilir olduğu durum kullanılarakyönetilenbilgileri<xref:System.Web.HttpContext> sınıfı depolanır.
+ASP.net, <xref:System.Web.HttpContext> sınıftaki durum bilgilerinin gerçekten depolandığı, WCF 'nin en azından ilk sürümünde, Genişletilebilir nesnelerin depolandığı yerde denetim sunmayacak şekilde denetim sağlar. Bu, bir WCF hizmeti için ASP.NET uyumluluk modunu seçmenin en iyi nedenini oluşturur. Yapılandırılabilir durum yönetimi gerekliyse, ASP.NET uyumluluk modu için kullanılması, <xref:System.Web.HttpContext> sınıfın tesislerini ASP.net ' de kullanıldıkları şekilde kullanmanıza ve ayrıca, ' yi kullanarak yönetilen durum bilgilerini yapılandırmanıza olanak tanır. <xref:System.Web.HttpContext> sınıf depolandı.
 
 ## <a name="security"></a>Güvenlik
 
-ASP.NET Web hizmetlerinin güvenliğini sağlamak için seçenekleri herhangi bir IIS uygulama güvenliğini sağlamak için olanlardır. WCF uygulamaları barındırılabilir, yalnızca IIS içinde aynı zamanda herhangi bir .NET yürütülebilir dosya içinde olduğundan, WCF uygulamalarının güvenliğini sağlama seçenekleri IIS akreditasyonlu bağımsız olarak yapılmalıdır. Ancak, ASP.NET Web Hizmetleri için sağlanan özellikleri de ASP.NET uyumluluk modunda çalışan WCF hizmetleri için kullanılabilir.
+ASP.NET Web hizmetlerini güvenli hale getirmek için seçenekler, herhangi bir IIS uygulamasının güvenliğini sağlamaya yönelik olanlardır. WCF uygulamaları yalnızca IIS içinde değil, ancak herhangi bir .NET yürütülebilir dosyası içinde barındırılabilecek olduğundan, WCF uygulamalarının güvenliğini sağlamaya yönelik seçenekler IIS 'nin tesislerden bağımsız yapılmalıdır. Ancak, ASP.NET Web Hizmetleri için sağlanan tesisler ASP.NET uyumluluk modunda çalışan WCF Hizmetleri için de kullanılabilir.
 
-### <a name="security-authentication"></a>Güvenlik: Kimlik doğrulaması
+### <a name="security-authentication"></a>Güven Kimlik doğrulaması
 
-IIS tarafından anonim erişim veya kimlik doğrulama modları çeşitli seçebilirsiniz uygulamalara erişimi denetlemek için olanakları sağlar: Windows kimlik doğrulamasını, Özet kimlik doğrulaması, temel kimlik doğrulaması ve .NET Passport kimlik doğrulaması. ASP.NET Web hizmetlerini erişimi denetlemek için Windows kimlik doğrulaması seçeneği kullanılabilir. Ancak, WCF uygulamaları IIS içinde barındırıldığında, söz konusu kimlik doğrulamasını çeşitli seçenekler arasında Windows kimlik doğrulamasını destekleyen WCF kendisi tarafından yönetilebilmesi için uygulama anonim erişime izin vermek için IIS yapılandırılmalıdır. Kullanıcı adı belirteçleri, X.509 sertifikaları, SAML belirteçlerini ve CardSpace kart yerleşik diğer seçenekleri içerir, ancak özel kimlik doğrulama mekanizmaları da tanımlanabilir.
+IIS, anonim erişimi veya çeşitli kimlik doğrulama modlarını seçebileceğiniz uygulamalara erişimi denetlemeye yönelik tesisler sağlar: Windows kimlik doğrulaması, Özet kimlik doğrulaması, temel kimlik doğrulaması ve .NET Passport kimlik doğrulaması. Windows kimlik doğrulama seçeneği, ASP.NET Web hizmetlerine erişimi denetlemek için kullanılabilir. Ancak, WCF uygulamaları IIS içinde barındırılıyorsa, IIS 'nin uygulamaya anonim erişime izin verecek şekilde yapılandırılması gerekir, böylece kimlik doğrulaması, diğer çeşitli seçenekler arasında Windows kimlik doğrulamasını destekler. Yerleşik diğer seçenekler Kullanıcı adı belirteçleri, X. 509.440 sertifikaları, SAML belirteçleri ve CardSpace kartını içerir, ancak özel kimlik doğrulama mekanizmaları de tanımlanabilir.
 
-### <a name="security-impersonation"></a>Güvenlik: Kimliğe bürünme
+### <a name="security-impersonation"></a>Güven Kimliğe bürünme
 
-ASP.NET, ASP.NET Web hizmeti, belirli bir kullanıcının kimliğine bürünmesine yapılabilir veya hangi kullanıcının kimlik bilgilerinin geçerli istekle birlikte sağlanan bir kimlik öğesi sağlar. Bu öğe, kimliğe bürünme ASP.NET uyumluluk modunda çalışan WCF uygulamaları yapılandırmak için kullanılabilir.
+ASP.NET, belirli bir kullanıcının kimliğine bürünmek için bir ASP.NET Web hizmeti 'nin veya geçerli istekle ilgili kimlik bilgilerinin sağlandığı bir kimlik öğesi sağlar. Bu öğe, ASP.NET uyumluluk modunda çalışan WCF uygulamalarında kimliğe bürünme yapılandırmak için kullanılabilir.
 
-WCF yapılandırma sistemi, belirli bir kullanıcının kimliğine bürünmek üzere atamak için kendi kimlik öğesi sağlar. Ayrıca, WCF istemciler ve hizmetler bağımsız olarak kimliğe bürünme için yapılandırılabilir. İstemci isteklerini iletebileceği, geçerli kullanıcının kimliğine bürünmek için yapılandırılabilir.
+WCF yapılandırma sistemi, belirli bir kullanıcıyı kimliğe bürünmek üzere atamak için kendi kimlik öğesi sağlar. Ayrıca, WCF istemcileri ve Hizmetleri, kimliğe bürünme için bağımsız olarak yapılandırılabilir. İstemciler istekleri aktarırken geçerli kullanıcının kimliğine bürünmek üzere yapılandırılabilir.
 
 ```xml
 <behaviors>
@@ -701,24 +697,24 @@ WCF yapılandırma sistemi, belirli bir kullanıcının kimliğine bürünmek ü
 </behaviors>
 ```
 
-Hizmet işlemleri, hangi kullanıcının kimlik bilgilerinin geçerli istekle birlikte sağlanan kimliğine bürünmek için yapılandırılabilir.
+Hizmet işlemleri, geçerli istek ile hangi kullanıcının kimlik bilgilerinin sağlandığını taklit etmek üzere yapılandırılabilir.
 
 ```csharp
 [OperationBehavior(Impersonation = ImpersonationOption.Required)]
 public void Receive(Message input)
 ```
 
-### <a name="security-authorization-using-access-control-lists"></a>Güvenlik: Yetkilendirme, erişim denetim listeleri kullanma
+### <a name="security-authorization-using-access-control-lists"></a>Güven Access Control listelerini kullanarak yetkilendirme
 
-Erişim denetim listeleri (ACL'ler) .asmx dosyalara erişimi kısıtlamak için kullanılabilir. Ancak, WCF .svc dosyalarını ACL'lerin dışında ASP.NET uyumluluk modunda yoksayılır.
+Access Control listeleri (ACL 'Ler),. asmx dosyalarına erişimi kısıtlamak için kullanılabilir. Bununla birlikte, WCF. svc dosyalarındaki ACL 'Ler ASP.NET uyumluluk modu dışında yok sayılır.
 
-### <a name="security-role-based-authorization"></a>Güvenlik: Rol tabanlı yetkilendirme
+### <a name="security-role-based-authorization"></a>Güven Rol tabanlı yetkilendirme
 
-IIS Windows kimlik doğrulaması seçeneği birlikte ASP.NET yapılandırma dil tarafından sağlanan yetkilendirme öğesi ile kullanıcılara atanmış olan Windows gruplarını temel alan bir ASP.NET Web Hizmetleri için rol tabanlı yetkilendirme kolaylaştırmak için kullanılabilir . ASP.NET 2.0 kullanılmaya daha genel bir rol tabanlı yetkilendirme mekanizması: rol sağlayıcıları.
+IIS Windows kimlik doğrulaması seçeneği, kullanıcıların atandığı Windows gruplarını temel alan ASP.NET Web Hizmetleri için rol tabanlı yetkilendirmeyi kolaylaştırmak üzere ASP.NET yapılandırma dili tarafından sunulan yetkilendirme öğesiyle birlikte kullanılabilir . ASP.NET 2,0, daha genel rol tabanlı bir yetkilendirme mekanizması sunmuştur: rol sağlayıcıları.
 
-Rol sağlayıcıları tamamı enquiring kendisine atanmış bir kullanıcı rolleri hakkında temel bir arabirim uygular, ancak her rol sağlayıcısını farklı bir kaynaktan bu bilgileri almak nasıl bilir sınıflardır. ASP.NET 2.0, rol atamaları, Windows Server 2003 Yetkilendirme Yöneticisi'nden alabileceğiniz bir Microsoft SQL Server veritabanı ve başka bir rol atamaları alabileceğiniz bir rol sağlayıcısı sağlar.
+Rol sağlayıcıları, bir kullanıcının atandığı roller hakkında temel bir arabirim uygulayan sınıflardır, ancak her bir rol sağlayıcısı bu bilgilerin farklı bir kaynaktan nasıl alınacağını bilir. ASP.NET 2,0, Microsoft SQL Server veritabanından rol atamalarını alan ve Windows Server 2003 Yetkilendirme Yöneticisi 'nden rol atamalarını alan bir rol sağlayıcısı sağlar.
 
-Rol sağlayıcı mekanizması gerçekten WCF uygulaması da dahil olmak üzere bir .NET uygulamasında ASP.NET bağımsız olarak kullanılabilir. WCF uygulaması için aşağıdaki örnek yapılandırma nasıl bir ASP.NET rol sağlayıcıyı kullanımı yoluyla bir seçeneğe gösterilir <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>.
+Rol sağlayıcı mekanizması, WCF uygulaması da dahil olmak üzere herhangi bir .NET uygulamasında ASP.NET bağımsız olarak bağımsız olarak kullanılabilir. Bir WCF uygulaması için aşağıdaki örnek yapılandırma, bir ASP.NET rol sağlayıcısının kullanımını, <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>' nin tarafından seçilen bir seçenek olduğunu gösterir.
 
 ```xml
 <system.serviceModel>
@@ -739,11 +735,11 @@ Rol sağlayıcı mekanizması gerçekten WCF uygulaması da dahil olmak üzere b
 </system.serviceModel>
 ```
 
-### <a name="security-claims-based-authorization"></a>Güvenlik: Beyana Dayalı Yetkilendirme
+### <a name="security-claims-based-authorization"></a>Güven Beyana Dayalı Yetkilendirme
 
-WCF en önemli yeniliklerden taleplere göre korumalı kaynaklara erişimi yetkilendirmek için kapsamlı desteklemesidir. Talep türü, bir hak ve bir değer, bir sürücü lisans, örneğin oluşur. Doğum tarihi taşıyıcı'nın biri olan taşıyıcı hakkında talepler kümesi kolaylaştırır. Talep değeri sürücünün doğum tarihi olsa da bu talebi doğum tarihi, türüdür. Bir talep üzerinde taşıyıcı confers sağ taşıyıcı talebin değer ile neler yapabileceğinizi belirtir. Doğum tarihi sürücünün talep söz konusu olduğunda, sağ mülkü olduğundan: sürücü doğum tarihi ancak, örneğin yükleyemediği sahip, üzerinde değişiklik. Beyana dayalı yetkilendirme, rol talep türü olduğundan rol tabanlı yetkilendirme barındırır.
+WCF 'nin en önemli yeniliklerinden biri, talebe göre korumalı kaynaklara erişimi yetkilendirmek için tam destek sağlar. Talepler, örneğin, bir türü, bir sağ ve bir değer, bir sürücü lisansı olan bir tür içerir. Taşıyıcı hakkında bir talepler kümesi oluşturur ve bunlardan biri, taşıyıcının Doğum tarihidir. Bu talebin türü Doğum tarihidir, talebin değeri ise sürücünün Doğum tarihidir. Bir talebin, taşıyıcının bu sırada ne yapabileceğini belirtir. Sürücünün Doğum tarihi talebi söz konusu olduğunda, doğru sahip olur: sürücü söz konusu Doğum tarihine sahiptir ancak örneğin, bunu değiştirebilir. Roller bir talep türü olduğundan, talep tabanlı yetkilendirme rol tabanlı yetkilendirmeyi barındırır.
 
-Taleplere göre yetkilendirme Karşılaştırma işleminin ve bu karşılaştırma sonucunu bağlı olarak erişim gereksinimlerini için talepler kümesi vererek ya da işlemi erişimi reddetmeden gerçekleştirilir. WCF'de, beyana dayalı yetkilendirme, bir değere atayarak yeniden çalıştırmak için kullanılacak bir sınıf belirtebilirsiniz `ServiceAuthorizationManager` özelliği <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>.
+Talepler temelinde yetkilendirme, bir talep kümesi, işlemin erişim gereksinimleriyle karşılaştırılarak ve bu karşılaştırmanın sonucuna bağlı olarak, işleme erişim izni verirken veya reddettikten sonra yapılır. WCF 'de, `ServiceAuthorizationManager` <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>özelliğine bir değer atayarak, talep tabanlı yetkilendirmeyi çalıştırmak için kullanılacak bir sınıf belirtebilirsiniz.
 
 ```xml
 <behaviors>
@@ -755,17 +751,17 @@ Taleplere göre yetkilendirme Karşılaştırma işleminin ve bu karşılaştır
 </behaviors>
 ```
 
-Beyana dayalı yetkilendirme çalıştırmak için kullanılan sınıfların türetilmesi gereken <xref:System.ServiceModel.ServiceAuthorizationManager>, geçersiz kılmak için yalnızca bir yöntem olan `AccessCheck()`. WCF hizmeti bir işlem çağrılır ve sağlar, yöntemini çağırır bir <xref:System.ServiceModel.OperationContext> kullanıcı için talepleri olan bir nesne içinde kendi `ServiceSecurityContext.AuthorizationContext` özelliği. WCF çalışır, hangi güvenlik belirteci kullanıcı hakkında talepleri derleyerek bırakan kimlik doğrulaması için belirtilen kullanıcı bu talepleri söz konusu işlem için yeterli olup olmadığını değerlendirmek, görev.
+Talep tabanlı yetkilendirmeyi çalıştırmak için kullanılan sınıflar, <xref:System.ServiceModel.ServiceAuthorizationManager> `AccessCheck()`geçersiz kılmak için yalnızca bir yöntemi olan öğesinden türetilmelidir. WCF, her bir hizmet işlemi çağrıldığında bu yöntemi çağırır ve, <xref:System.ServiceModel.OperationContext> `ServiceSecurityContext.AuthorizationContext` özelliği içinde Kullanıcı için talepler içeren bir nesne sağlar. WCF, kullanıcı hakkındaki talepleri, kullanıcının kimlik doğrulaması için verdiği herhangi bir güvenlik belirteciyle, bu taleplerin söz konusu işlem için yeterli olup olmadığını değerlendirme görevini atan bir kullanıcı hakkında bilgi veren çalışmalardır.
 
-Kimlik doğrulama mekanizması tamamen bağımsız taleplere göre yetkilendirme kodunu kolaylaştırır WCF güvenlik herhangi bir türden otomatik olarak talep çeviren son derece önemli bir yenilik belirteci olmasıdır. Aksine, ASP.NET'te ACL'leri ya da rolleri kullanarak yetkilendirme için Windows kimlik doğrulaması yakından bağlanır.
+Bu WCF, her türlü güvenlik belirtecinin taleplerini otomatik olarak ayrıştırır. Bu, talebe dayalı olarak kimlik doğrulama mekanizmasından bağımsız olarak yetkilendirme kodu oluşturduğundan yüksek ölçüde önemli bir yeniliği oluşturur. Bunun aksine, ASP.NET içindeki ACL 'Leri veya rolleri kullanarak yetkilendirme, Windows kimlik doğrulamasına yakından bağlıdır.
 
-### <a name="security-confidentiality"></a>Güvenlik: Gizliliği
+### <a name="security-confidentiality"></a>Güven Gizlilik
 
-ASP.NET Web Hizmetleri ile değiştirilen iletilerin gizliliğini taşıma düzeyinde IIS içinde uygulamayı Güvenli Köprü Metni Aktarım Protokolü (HTTPS) kullanacak şekilde yapılandırarak güvence altına alınabilir. Aynı içinde IIS barındırılan WCF uygulamaları için yapılabilir. Ancak, dışında IIS barındırılan WCF uygulamaları güvenli aktarım protokolünü kullanmak için de yapılandırılabilir. Daha da önemlisi, WCF uygulamaları, bunlar, WS-güvenlik protokolü kullanarak taşınacağını önce iletileri güvenli hale getirmek için de yapılandırılabilir. WS-güvenlik kullanarak ileti gövdesi güvenli hale getirme aracılar son hedefine ulaşmadan önce ilkemiz aktarılan izin verir.
+ASP.NET Web hizmetleriyle değiştirilen iletilerin gizliliği, IIS içindeki uygulamayı Güvenli Köprü Metni Aktarım Protokolü (HTTPS) kullanacak şekilde yapılandırarak Aktarım düzeyinde olabilir. IIS içinde barındırılan WCF uygulamaları için de aynı işlem yapılabilir. Ancak, IIS dışında barındırılan WCF uygulamaları da güvenli bir aktarım protokolü kullanacak şekilde yapılandırılabilir. Daha önemli olan WCF uygulamaları, WS-Security protokolü kullanılarak, gönderilmeden önce iletilerin güvenliğini sağlamak için de yapılandırılabilir. WS-Security kullanarak yalnızca bir iletinin gövdesini güvenli hale getirmek, BT 'nin son hedefine ulaşmadan önce aracıların genelinde confidentially aktarılmasını sağlar.
 
 ## <a name="globalization"></a>Genelleştirme
 
-ASP.NET yapılandırma dil, tek tek Hizmetleri için kullanılacak kültürü belirtmenize olanak sağlar. WCF ASP.NET uyumluluk modunda, yapılandırma ayarı dışında desteklemez. ASP.NET uyumluluk modunun kullanılmaması bir WCF Hizmeti yerelleştirmek için hizmet türü kültüre özgü derlemeler içine derleyin ve her bir kültüre özgü derleme için ayrı kültüre özgü uç sahip.
+ASP.NET yapılandırma dili, tek tek hizmetler için kültürü belirtmenize olanak tanır. WCF, ASP.NET uyumluluk modu dışında bu yapılandırma ayarını desteklemez. ASP.NET uyumluluk modunu kullanmayan bir WCF hizmetini yerelleştirmek için, hizmet türünü kültüre özgü Derlemelerle derleyin ve kültüre özgü her derleme için kültüre özgü ayrı uç noktalara sahip yapın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

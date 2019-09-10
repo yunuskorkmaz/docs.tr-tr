@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data types [Visual Basic], ranges
 - operators [Visual Basic], result data types
 ms.assetid: 9d524533-e1a1-4aa8-b1b8-622068173d06
-ms.openlocfilehash: b0ebdb723df6bdb4f74e1558537c307ddb917f64
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: bc7f29ae0e29a4c2fbfdf2e40d2226e174a06d3a
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2019
-ms.locfileid: "69923270"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70856053"
 ---
 # <a name="data-types-of-operator-results-visual-basic"></a>İşleç Sonuçlarının Veri Türleri (Visual Basic)
 Visual Basic, işlenen veri türlerine göre bir işlemin sonuç veri türünü belirler. Bazı durumlarda bu, iki işlenenden daha büyük bir aralığa sahip bir veri türü olabilir.  
@@ -85,8 +85,8 @@ Visual Basic, işlenen veri türlerine göre bir işlemin sonuç veri türünü 
 |||||||||||  
 |---|---|---|---|---|---|---|---|---|---|  
 ||`Boolean`|`SByte`|`Byte`|`Short`|`UShort`|`Integer`|`UInteger`|`Long`|`ULong`|  
-|Li`+`|Kısa|SByte|Bayt|Kısa|UShort|Tamsayı|UInteger|Uzun|'Tur|  
-|Li`–`|Kısa|SByte|Kısa|Kısa|Tamsayı|Tamsayı|Uzun|Uzun|Ondalık|  
+|Li`+`|Kısa|SByte|Bayt|Kısa|UShort|Integer|UInteger|Uzun|'Tur|  
+|Li`–`|Kısa|SByte|Kısa|Kısa|Integer|Integer|Uzun|Uzun|Ondalık|  
   
 ### <a name="-and--operators"></a><\<ve > > Işleçleri  
  Aşağıdaki tabloda, `<<` iki bit kaydırma işleci ve `>>`için sonuç veri türleri gösterilmektedir. Visual Basic her bir bit kaydırma işlecini sol işleneninde birli işleç olarak değerlendirir (kaydırılan bit kalıbı).  
@@ -94,38 +94,38 @@ Visual Basic, işlenen veri türlerine göre bir işlemin sonuç veri türünü 
 |||||||||||  
 |---|---|---|---|---|---|---|---|---|---|  
 ||`Boolean`|`SByte`|`Byte`|`Short`|`UShort`|`Integer`|`UInteger`|`Long`|`ULong`|  
-|`<<`, `>>`|Kısa|SByte|Bayt|Kısa|UShort|Tamsayı|UInteger|Uzun|'Tur|  
+|`<<`, `>>`|Kısa|SByte|Bayt|Kısa|UShort|Integer|UInteger|Uzun|'Tur|  
   
  Sol `Decimal`işlenen `Single` `Long`,,, veya`String`VisualBasic, işlemi işlemden öncedönüştürmeyeçalışırvesonuçveritürüolur.`Long` `Double` Sağ işlenen (kaydırma yapılacak bit konumlarının sayısı) `Integer` veya `Integer`widens bir tür olmalıdır.  
   
-### <a name="binary----and-mod-operators"></a>İkili +, –, * ve mod Işleçleri  
+### <a name="binary----and-mod-operators"></a>İkili +, –, \*, ve mod işleçleri  
  Aşağıdaki tabloda, `+` ikili ve `–` işleçler `*` ve ve `Mod` işleçleri için sonuç veri türleri gösterilmektedir. Bu tablonun simetrik olduğunu unutmayın; belirli bir işlenen veri türleri birleşimi için, sonuç veri türü işlenen sıralarından bağımsız olarak aynıdır.  
   
 |||||||||||  
 |---|---|---|---|---|---|---|---|---|---|  
 ||`Boolean`|`SByte`|`Byte`|`Short`|`UShort`|`Integer`|`UInteger`|`Long`|`ULong`|  
-|`Boolean`|Kısa|SByte|Kısa|Kısa|Tamsayı|Tamsayı|Uzun|Uzun|Ondalık|  
-|`SByte`|SByte|SByte|Kısa|Kısa|Tamsayı|Tamsayı|Uzun|Uzun|Ondalık|  
-|`Byte`|Kısa|Kısa|Bayt|Kısa|UShort|Tamsayı|UInteger|Uzun|'Tur|  
-|`Short`|Kısa|Kısa|Kısa|Kısa|Tamsayı|Tamsayı|Uzun|Uzun|Ondalık|  
-|`UShort`|Tamsayı|Tamsayı|UShort|Tamsayı|UShort|Tamsayı|UInteger|Uzun|'Tur|  
-|`Integer`|Tamsayı|Tamsayı|Tamsayı|Tamsayı|Tamsayı|Tamsayı|Uzun|Uzun|Ondalık|  
+|`Boolean`|Kısa|SByte|Kısa|Kısa|Integer|Integer|Uzun|Uzun|Ondalık|  
+|`SByte`|SByte|SByte|Kısa|Kısa|Integer|Integer|Uzun|Uzun|Ondalık|  
+|`Byte`|Kısa|Kısa|Bayt|Kısa|UShort|Integer|UInteger|Uzun|'Tur|  
+|`Short`|Kısa|Kısa|Kısa|Kısa|Integer|Integer|Uzun|Uzun|Ondalık|  
+|`UShort`|Integer|Integer|UShort|Integer|UShort|Integer|UInteger|Uzun|'Tur|  
+|`Integer`|Integer|Integer|Integer|Integer|Integer|Integer|Uzun|Uzun|Ondalık|  
 |`UInteger`|Uzun|Uzun|UInteger|Uzun|UInteger|Uzun|UInteger|Uzun|'Tur|  
 |`Long`|Uzun|Uzun|Uzun|Uzun|Uzun|Uzun|Uzun|Uzun|Ondalık|  
 |`ULong`|Ondalık|Ondalık|'Tur|Ondalık|'Tur|Ondalık|'Tur|Ondalık|'Tur|  
   
-### <a name="-operator"></a>\ İşleci  
+### <a name="-operator"></a>\\ İşleci  
  Aşağıdaki tabloda `\` operatör için sonuç veri türleri gösterilmektedir. Bu tablonun simetrik olduğunu unutmayın; belirli bir işlenen veri türleri birleşimi için, sonuç veri türü işlenen sıralarından bağımsız olarak aynıdır.  
   
 |||||||||||  
 |---|---|---|---|---|---|---|---|---|---|  
 ||`Boolean`|`SByte`|`Byte`|`Short`|`UShort`|`Integer`|`UInteger`|`Long`|`ULong`|  
-|`Boolean`|Kısa|SByte|Kısa|Kısa|Tamsayı|Tamsayı|Uzun|Uzun|Uzun|  
-|`SByte`|SByte|SByte|Kısa|Kısa|Tamsayı|Tamsayı|Uzun|Uzun|Uzun|  
-|`Byte`|Kısa|Kısa|Bayt|Kısa|UShort|Tamsayı|UInteger|Uzun|'Tur|  
-|`Short`|Kısa|Kısa|Kısa|Kısa|Tamsayı|Tamsayı|Uzun|Uzun|Uzun|  
-|`UShort`|Tamsayı|Tamsayı|UShort|Tamsayı|UShort|Tamsayı|UInteger|Uzun|'Tur|  
-|`Integer`|Tamsayı|Tamsayı|Tamsayı|Tamsayı|Tamsayı|Tamsayı|Uzun|Uzun|Uzun|  
+|`Boolean`|Kısa|SByte|Kısa|Kısa|Integer|Integer|Uzun|Uzun|Uzun|  
+|`SByte`|SByte|SByte|Kısa|Kısa|Integer|Integer|Uzun|Uzun|Uzun|  
+|`Byte`|Kısa|Kısa|Bayt|Kısa|UShort|Integer|UInteger|Uzun|'Tur|  
+|`Short`|Kısa|Kısa|Kısa|Kısa|Integer|Integer|Uzun|Uzun|Uzun|  
+|`UShort`|Integer|Integer|UShort|Integer|UShort|Integer|UInteger|Uzun|'Tur|  
+|`Integer`|Integer|Integer|Integer|Integer|Integer|Integer|Uzun|Uzun|Uzun|  
 |`UInteger`|Uzun|Uzun|UInteger|Uzun|UInteger|Uzun|UInteger|Uzun|'Tur|  
 |`Long`|Uzun|Uzun|Uzun|Uzun|Uzun|Uzun|Uzun|Uzun|Uzun|  
 |`ULong`|Uzun|Uzun|'Tur|Uzun|'Tur|Uzun|'Tur|Uzun|'Tur|  
@@ -146,7 +146,7 @@ Visual Basic, işlenen veri türlerine göre bir işlemin sonuç veri türünü 
 |||||||||||  
 |---|---|---|---|---|---|---|---|---|---|  
 ||`Boolean`|`SByte`|`Byte`|`Short`|`UShort`|`Integer`|`UInteger`|`Long`|`ULong`|  
-|`Not`|Boole değeri|SByte|Bayt|Kısa|UShort|Tamsayı|UInteger|Uzun|'Tur|  
+|`Not`|Boole değeri|SByte|Bayt|Kısa|UShort|Integer|UInteger|Uzun|'Tur|  
   
  `Decimal`İşleneni `Single` ,,`Long`veya Visual Basic, işlemi işlemden önce`Long` dönüştürmeye çalışır ve sonuç veri türü olur. `String` `Double`  
   
@@ -156,12 +156,12 @@ Visual Basic, işlenen veri türlerine göre bir işlemin sonuç veri türünü 
 |||||||||||  
 |---|---|---|---|---|---|---|---|---|---|  
 ||`Boolean`|`SByte`|`Byte`|`Short`|`UShort`|`Integer`|`UInteger`|`Long`|`ULong`|  
-|`Boolean`|Boole değeri|SByte|Kısa|Kısa|Tamsayı|Tamsayı|Uzun|Uzun|Uzun|  
-|`SByte`|SByte|SByte|Kısa|Kısa|Tamsayı|Tamsayı|Uzun|Uzun|Uzun|  
-|`Byte`|Kısa|Kısa|Bayt|Kısa|UShort|Tamsayı|UInteger|Uzun|'Tur|  
-|`Short`|Kısa|Kısa|Kısa|Kısa|Tamsayı|Tamsayı|Uzun|Uzun|Uzun|  
-|`UShort`|Tamsayı|Tamsayı|UShort|Tamsayı|UShort|Tamsayı|UInteger|Uzun|'Tur|  
-|`Integer`|Tamsayı|Tamsayı|Tamsayı|Tamsayı|Tamsayı|Tamsayı|Uzun|Uzun|Uzun|  
+|`Boolean`|Boole değeri|SByte|Kısa|Kısa|Integer|Integer|Uzun|Uzun|Uzun|  
+|`SByte`|SByte|SByte|Kısa|Kısa|Integer|Integer|Uzun|Uzun|Uzun|  
+|`Byte`|Kısa|Kısa|Bayt|Kısa|UShort|Integer|UInteger|Uzun|'Tur|  
+|`Short`|Kısa|Kısa|Kısa|Kısa|Integer|Integer|Uzun|Uzun|Uzun|  
+|`UShort`|Integer|Integer|UShort|Integer|UShort|Integer|UInteger|Uzun|'Tur|  
+|`Integer`|Integer|Integer|Integer|Integer|Integer|Integer|Uzun|Uzun|Uzun|  
 |`UInteger`|Uzun|Uzun|UInteger|Uzun|UInteger|Uzun|UInteger|Uzun|'Tur|  
 |`Long`|Uzun|Uzun|Uzun|Uzun|Uzun|Uzun|Uzun|Uzun|Uzun|  
 |`ULong`|Uzun|Uzun|'Tur|Uzun|'Tur|Uzun|'Tur|Uzun|'Tur|  

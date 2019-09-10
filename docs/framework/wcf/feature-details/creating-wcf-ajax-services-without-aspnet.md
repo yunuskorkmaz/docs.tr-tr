@@ -2,30 +2,30 @@
 title: ASP.NET Olmadan WCF AJAX Hizmetleri Oluşturma
 ms.date: 03/30/2017
 ms.assetid: ba4a7d1b-e277-4978-9f62-37684e6dc934
-ms.openlocfilehash: de7e5dc075a821518928514be532ea1940c1ff17
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f850d8649f1d67fe916542bfb025afb7cb3f852b
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64627126"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70856140"
 ---
 # <a name="creating-wcf-ajax-services-without-aspnet"></a>ASP.NET Olmadan WCF AJAX Hizmetleri Oluşturma
-Windows Communication Foundation (WCF) AJAX Hizmetleri, ASP.NET AJAX gerek kalmadan, tüm JavaScript etkin Web sayfasından erişilebilir. Bu konuda bu tür bir WCF hizmeti oluşturma işlemini açıklar.  
+Windows Communication Foundation (WCF) AJAX hizmetlerine, ASP.NET AJAX gerekmeden JavaScript etkin herhangi bir Web sayfasından erişilebilir. Bu konuda, böyle bir WCF hizmetinin nasıl oluşturulacağı açıklanmaktadır.  
   
- ASP.NET AJAX ile WCF kullanma ile ilgili yönergeler için bkz: [ASP.NET AJAX için WCF hizmetleri oluşturma](../../../../docs/framework/wcf/feature-details/creating-wcf-services-for-aspnet-ajax.md).  
+ WCF 'yi ASP.NET AJAX ile kullanmayla ilgili yönergeler için bkz. [ASP.NET AJAX IçIN WCF Hizmetleri oluşturma](../../../../docs/framework/wcf/feature-details/creating-wcf-services-for-aspnet-ajax.md).  
   
- Bir WCF AJAX hizmeti oluşturmanın üç bölümü vardır:  
+ WCF AJAX Hizmeti oluşturmanın üç bölümü vardır:  
   
-- Bir AJAX uç noktası oluşturma bir tarayıcıdan erişilebilir.  
+- Tarayıcıdan erişilebilen bir AJAX uç noktası oluşturma.  
   
-- Bir AJAX uyumlu hizmet anlaşması oluşturuluyor.  
+- AJAX uyumlu hizmet sözleşmesi oluşturma.  
   
-- AJAX WCF hizmetlerine erişme.  
+- WCF AJAX hizmetlerine erişme.  
   
-## <a name="creating-an-ajax-endpoint"></a>Bir AJAX uç noktası oluşturuluyor  
- Bir WCF hizmetinde AJAX desteğini etkinleştirmek için en temel yolu <xref:System.ServiceModel.Activation.WebServiceHostFactory> .svc dosyasında aşağıdaki örnekteki gibi bir hizmet ile ilişkilendirilmiş.  
+## <a name="creating-an-ajax-endpoint"></a>AJAX uç noktası oluşturma  
+ Bir WCF hizmetinde Ajax desteğini etkinleştirmenin en temel yolu, aşağıdaki örnekte olduğu gibi hizmeti ile <xref:System.ServiceModel.Activation.WebServiceHostFactory> ilişkili. svc dosyasında kullanmaktır.  
   
-```  
+```svc
 <%ServiceHost   
     language=c#  
     Debug="true"  
@@ -34,7 +34,7 @@ Windows Communication Foundation (WCF) AJAX Hizmetleri, ASP.NET AJAX gerek kalma
 %>  
 ```  
   
- Alternatif olarak, bir AJAX uç noktası eklemek için yapılandırmayı kullanabilirsiniz. Kullanım <xref:System.ServiceModel.WebHttpBinding> hizmet uç noktasında ve uç noktasına yapılandırma <xref:System.ServiceModel.Description.WebHttpBehavior> aşağıdaki kod parçacığında gösterildiği gibi.  
+ Alternatif olarak, bir AJAX uç noktası eklemek için yapılandırma da kullanabilirsiniz. Hizmet uç noktasında öğesini kullanın ve bu uç noktayı aşağıdaki kod parçacığında <xref:System.ServiceModel.Description.WebHttpBehavior> gösterildiği gibi ile yapılandırın. <xref:System.ServiceModel.WebHttpBinding>  
   
 ```xml  
 <configuration>  
@@ -59,53 +59,53 @@ Windows Communication Foundation (WCF) AJAX Hizmetleri, ASP.NET AJAX gerek kalma
 </configuration>  
 ```  
   
- Çalışan bir örnek için bkz. [JSON ve XML ile AJAX hizmeti](../../../../docs/framework/wcf/samples/ajax-service-with-json-and-xml-sample.md).  
+ Çalışan bir örnek için bkz. [JSON ve XML Ile AJAX Hizmeti](../../../../docs/framework/wcf/samples/ajax-service-with-json-and-xml-sample.md).  
   
-## <a name="creating-an-ajax-compatible-service-contract"></a>Bir AJAX uyumlu hizmet sözleşmesi oluşturma  
- Varsayılan olarak, hizmet sözleşmelerini AJAX bir uç nokta dönüş verileri XML biçiminde üzerinden kullanıma. Ayrıca, hizmet işlemleri varsayılan olarak aşağıdaki örnekte gösterildiği gibi işlem adından önce gelen uç nokta adresini içeren URL'leri için HTTP POST istekleri aracılığıyla erişilebilir.  
+## <a name="creating-an-ajax-compatible-service-contract"></a>AJAX uyumlu hizmet sözleşmesi oluşturma  
+ Varsayılan olarak, bir AJAX uç noktası üzerinden kullanıma sunulan hizmet sözleşmeleri XML biçimindeki verileri döndürür. Ayrıca, varsayılan olarak hizmet işlemlerine, aşağıdaki örnekte gösterildiği gibi, uç nokta adresini ve ardından işlem adını içeren URL 'lere HTTP POST istekleri aracılığıyla erişilebilir.  
   
-```  
+```csharp
 [OperationContract]  
 string[] GetCities(string firstLetters);  
 ```  
   
- Bu işlem, bir HTTP POST kullanılarak erişilebilir `http://serviceaddress/endpointaddress/GetCities` ve bir XML iletisi döndürür.  
+ Bu işleme bir http post `http://serviceaddress/endpointaddress/GetCities` ile erişilebilir ve bir XML iletisi döndürülür.  
   
- Tam Web programlama modeli temel özellikleri özelleştirmek için kullanabilirsiniz. Örneğin, kullanabilirsiniz <xref:System.ServiceModel.Web.WebGetAttribute> veya <xref:System.ServiceModel.Web.WebInvokeAttribute> işlemi yanıt vereceği HTTP fiili denetlemek veya öznitelikleri `UriTemplate` özelliği özel bir URI'leri belirtmek için bu ilgili özniteliklerin. Daha fazla bilgi için [WCF Web HTTP programlama modeli](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md) konu.  
+ Bu temel yönleri özelleştirmek için tam Web programlama modelini kullanabilirsiniz. Örneğin, <xref:System.ServiceModel.Web.WebGetAttribute> veya <xref:System.ServiceModel.Web.WebInvokeAttribute> özniteliklerini kullanarak `UriTemplate` işlemin yanıt verdiği http fiilini denetleyebilir veya özel URI 'leri belirtmek için bu ilgili özniteliklerin özelliğini kullanabilirsiniz. Daha fazla bilgi için bkz. [WCF Web http programlama modeli](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md) konusu.  
   
- JSON veri biçimi genellikle AJAX hizmetlerinde kullanılır. XML yerine JSON döndüren bir işlem oluşturmak için <xref:System.ServiceModel.Web.WebGetAttribute.ResponseFormat%2A> (veya <xref:System.ServiceModel.Web.WebInvokeAttribute.ResponseFormat%2A>) özelliğini <xref:System.ServiceModel.Web.WebMessageFormat.Json>. [Tek başına JSON serileştirme](../../../../docs/framework/wcf/feature-details/stand-alone-json-serialization.md) konu, JSON için nasıl yerleşik .NET türleri ve veri anlaşması türleri Haritası gösterir.  
+ JSON veri biçimi genellikle AJAX hizmetlerinde kullanılır. XML yerine JSON döndüren bir işlem oluşturmak için <xref:System.ServiceModel.Web.WebGetAttribute.ResponseFormat%2A> ( <xref:System.ServiceModel.Web.WebInvokeAttribute.ResponseFormat%2A>veya) özelliğini olarak <xref:System.ServiceModel.Web.WebMessageFormat.Json>ayarlayın. [Tek BAŞıNA JSON serileştirme](../../../../docs/framework/wcf/feature-details/stand-alone-json-serialization.md) konusu, yerleşik .net türlerinin ve veri SÖZLEŞMESI türlerinin JSON ile nasıl eşlendiğini gösterir.  
   
- Normalde, yalnızca bir öğesi olan JSON isteklerini ve yanıtlarını oluşur. Önceki `GetCities` işlemi, istek aşağıdaki deyimi benzer.  
+ Normal olarak, JSON istekleri ve yanıtları yalnızca bir öğeden oluşur. Önceki `GetCities` işlem için, istek aşağıdaki ifadeye benzer.  
   
-```  
+```json
 "na"  
 ```  
   
- Bu isteğin yanıtını aşağıdaki deyimi benzer.  
+ Bu isteğin yanıtı aşağıdaki ifadeye benzer.  
   
-```  
+```json
 ["Nairobi", "Naples", "Nashville"]  
 ```  
   
- İşlem ek bir parametre alırsa, tek bir JSON nesnesinde hem parametreler sarmalamak için istek stili alınmalıdır. Aşağıdaki örnekte bu stil JSON iletisi örneğidir.  
+ İşlem ek bir parametre alırsa, her iki parametreyi de tek bir JSON nesnesinde sarmalamak için istek stili sarmalanmış olmalıdır. Bu stil JSON iletisine bir örnek aşağıdaki örnekte verilmiştir.  
   
 ```json  
 {"firstLetters": "na", "maxNumber": 2}  
 ```  
   
- Şu sözleşme bu iletiyi kabul eder.  
+ Aşağıdaki sözleşme bu iletiyi kabul eder.  
   
-```  
+```csharp
 [WebInvoke(BodyStyle=WebMessageBodyStyle.WrappedRequest, ResponseFormat=WebMessageFormat.Json)]  
 [OperationContract]  
 string[] GetCities(string firstLetters, int maxNumber);  
 ```  
   
 ## <a name="accessing-ajax-services"></a>AJAX hizmetlerine erişme  
- WCF AJAX uç noktaları her zaman hem JSON hem de XML isteklerini kabul etmek.  
+ WCF AJAX uç noktaları her zaman hem JSON hem de XML isteklerini kabul eder.  
   
- HTTP POST istekleri bir content-type "application/json" JSON olarak kabul edilir ve bu XML (örneğin, "metin/xml") gösteren içerik türü ile XML olarak kabul edilir.  
+ İçerik türü "Application/JSON" olan HTTP POST istekleri JSON olarak değerlendirilir ve XML 'yi (örneğin, "text/xml") gösteren içerik türü olanlar XML olarak değerlendirilir.  
   
- HTTP GET istekleri URL içinde tüm istek parametrelerini içerir.  
+ HTTP GET istekleri, URL 'deki tüm istek parametrelerini içerir.  
   
- Bu uç nokta için HTTP isteği oluşturmak nasıl karar vermek için kullanıcı en fazla olur. Ayrıca, kullanıcının istek gövdesini form JSON oluşturmak üzerinde tam denetime sahiptir. JavaScript'ten bir isteği oluşturma örneği için bkz: [JSON ve XML ile AJAX hizmeti](../../../../docs/framework/wcf/samples/ajax-service-with-json-and-xml-sample.md).
+ Bu, uç noktaya HTTP isteğinin nasıl oluşturulacağını belirlemek için kullanıcıya kadar yapılır. Ayrıca, kullanıcının isteğin gövdesini oluşturan JSON 'u oluşturmak için tam denetimi vardır. JavaScript 'ten bir istek oluşturma örneği için bkz. [JSON ve XML Ile AJAX Hizmeti](../../../../docs/framework/wcf/samples/ajax-service-with-json-and-xml-sample.md).

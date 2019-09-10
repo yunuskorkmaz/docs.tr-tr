@@ -9,18 +9,20 @@ helpviewer_keywords:
 ms.assetid: f12922e1-6234-4165-8896-63f0653ab478
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ba02333aaafbadc85e4d3c547659f4ce4d2740c2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b52ff8d72132c1076dfdece5e1ce47bbece37b81
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61683014"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855999"
 ---
 # <a name="performing-culture-insensitive-string-operations-in-arrays"></a>Dizilerde Kültüre Duyarsız Dize İşlemlerini Gerçekleştirme
-Overloads biri <xref:System.Array.Sort%2A?displayProperty=nameWithType> ve <xref:System.Array.BinarySearch%2A?displayProperty=nameWithType> yöntemleri gerçekleştirmek varsayılan kullanarak kültüre duyarlı sıralamaları <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> özelliği. Bu yöntem tarafından döndürülen kültüre duyarlı sonuçlar sıralamalar farklılıkları nedeniyle kültüre göre değişebilir. Kültüre duyarlı davranışı ortadan kaldırmak için bu yöntemin kabul eden aşırı yüklemeler birini kullanın: bir `comparer` parametresi. `comparer` Parametresinin belirttiği <xref:System.Collections.IComparer> dizideki öğeleri karşılaştırırken kullanılacak uygulama. Parametresi, kullanan bir özel sabit karşılaştırıcısı sınıfı belirtin <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>. Sabit özel bir karşılaştırıcı sınıf örneği "SortedList sınıfı kullanarak" alt konu sağlanan [koleksiyonlarda kültüre duyarsız dize işlemlerini gerçekleştirme](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations-in-collections.md) konu.  
-  
- **Not** geçirme **CultureInfo.InvariantCulture** karşılaştırma yöntemi kültüre duyarsız bir karşılaştırma gerçekleştirir. Ancak, bir dilsel karşılaştırma örneğin dosya yolları, kayıt defteri anahtarları ve ortam değişkenleri için neden olmaz. Karşılaştırma sonucuna dayalı güvenlik kararları diğerinden destekler. Uygulama, bir dilsel karşılaştırma veya sonuç dayalı güvenlik kararları desteği için kabul eden bir karşılaştırma yöntemi kullanmalıdır bir <xref:System.StringComparison> değeri. Uygulama ardından geçmelidir <xref:System.StringComparison.Ordinal>.  
-  
+
+Ve <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> <xref:System.Array.Sort%2A?displayProperty=nameWithType> yöntemlerininaşırıyüklemeleri,özelliğinikullanarakvarsayılanolarakkültüreduyarlısıralargerçekleştirir.<xref:System.Array.BinarySearch%2A?displayProperty=nameWithType> Bu yöntemler tarafından döndürülen kültüre duyarlı sonuçlar, sıralama emirlerindeki farklılıklar nedeniyle kültüre göre farklılık gösterebilir. Kültüre duyarlı davranışı ortadan kaldırmak için, bu yöntemin bir `comparer` parametreyi kabul eden aşırı yüklemelerinin birini kullanın. Parametresi dizideki öğeleri karşılaştırırken <xref:System.Collections.IComparer> kullanılacak uygulamayı belirtir. `comparer` Parametresi için, tarafından kullanılan <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>özel bir sabit karşılaştırıcı sınıfı belirtin. [Koleksiyonlarda kültüre duyarsız dize Işlemlerini gerçekleştirme](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations-in-collections.md) konusundaki "SortedList sınıfı kullanma" alt konusunun özel bir sabit karşılaştırıcı sınıfına bir örnek verilmiştir.
+
+> [!NOTE]
+> Bir karşılaştırma yöntemine **CultureInfo. InvariantCulture** geçirilmesi, kültüre duyarsız bir karşılaştırma gerçekleştirir. Ancak, dosya yolları, kayıt defteri anahtarları ve ortam değişkenleri gibi dil olmayan bir karşılaştırmaya neden olmaz. , Karşılaştırma sonucuna göre güvenlik kararlarını desteklemez. Dil olmayan bir karşılaştırma veya sonuç tabanlı güvenlik kararları için destek için, uygulamanın bir <xref:System.StringComparison> değeri kabul eden bir karşılaştırma yöntemi kullanması gerekir. Uygulama daha sonra geçmelidir <xref:System.StringComparison.Ordinal>.
+
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Array.Sort%2A?displayProperty=nameWithType>

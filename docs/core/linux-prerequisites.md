@@ -1,165 +1,165 @@
 ---
 title: Linux üzerinde .NET Core önkoşulları
-description: Desteklenen Linux sürümleri ve .NET Core bağımlılıklarının geliştirmek, dağıtmak ve .NET Core uygulamaları Linux makinelerinde çalışır.
+description: Linux makinelerde .NET Core uygulamaları geliştirmek, dağıtmak ve çalıştırmak için desteklenen Linux sürümleri ve .NET Core bağımlılıkları.
 author: thraka
 ms.author: adegeo
 ms.date: 12/14/2018
-ms.openlocfilehash: 0bd3287535ba2c398f6577890d1d39f42a806364
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ad1ab42bcf66e32a45351ae2b6156251c9d0dc1f
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61614511"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849064"
 ---
 # <a name="prerequisites-for-net-core-on-linux"></a>Linux üzerinde .NET Core önkoşulları
 
-Bu makalede, Linux üzerinde .NET Core uygulamaları geliştirmek için ihtiyaç duyulan bağımlılıkları gösterir. Desteklenen Linux dağıtımları/sürümleri ve bağımlılıklarını izleyen iki yolu Linux üzerinde .NET Core uygulamaları geliştirmek için geçerlidir:
+Bu makalede, Linux üzerinde .NET Core uygulamaları geliştirmek için gereken bağımlılıklar gösterilmektedir. Desteklenen Linux dağıtımları/sürümleri ve aşağıdaki bağımlılıklar, Linux üzerinde .NET Core uygulamaları geliştirmenin iki yolu için geçerlidir:
 
-* [Sık kullandığınız düzenleyicinizi ile komut satırı](tutorials/using-with-xplat-cli.md)
+* [En sevdiğiniz düzenleyicinizle komut satırı](tutorials/using-with-xplat-cli.md)
 * [Visual Studio Code](https://code.visualstudio.com/)
 
 > [!NOTE]
-> .NET Core SDK paketini üretim sunucuları/ortamları için gerekli değildir. Yalnızca .NET Core çalışma zamanı paketi üretim ortamlarına dağıtılan uygulamalar için gereklidir. .NET Core çalışma zamanı ile uygulamaları kendi içinde bir dağıtımının parçası olarak dağıtılan, Framework bağımlı uygulamaları ayrı ayrı dağıtılsa için ancak, dağıtılması gerekir. Framework bağımlı ve kendi başına dağıtım türleri hakkında daha fazla bilgi için bkz. [.NET Core uygulama dağıtımı](./deploying/index.md). Ayrıca bkz: [Self-contained Linux uygulamaları](https://github.com/dotnet/core/blob/master/Documentation/self-contained-linux-apps.md) belirli yönergeler için.
+> .NET Core SDK paketi üretim sunucuları/ortamları için gerekli değildir. Üretim ortamlarına dağıtılan uygulamalar için yalnızca .NET Core çalışma zamanı paketi gereklidir. .NET Core çalışma zamanı, uygulamalar ile birlikte bulunan bir dağıtımın parçası olarak dağıtılır, ancak çerçeveye bağımlı dağıtılan uygulamalar için ayrı olarak dağıtılmalıdır. Çerçeveye bağımlı ve kendi kendine içerilen dağıtım türleri hakkında daha fazla bilgi için bkz. [.NET Core uygulama dağıtımı](./deploying/index.md). Ayrıca, belirli yönergeler için [kendi Içindeki Linux uygulamalarına](https://github.com/dotnet/core/blob/master/Documentation/self-contained-linux-apps.md) bakın.
 
 ## <a name="supported-linux-versions"></a>Desteklenen Linux sürümleri
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2. x](#tab/netcore2x)
 
-.NET core 2.x tek bir işletim sistemi olarak Linux değerlendirir. Tek bir Linux yapı (yonga Mimarisi) başına desteklenen Linux dağıtımları için yoktur. 
+.NET Core 2. x, Linux 'u tek bir işletim sistemi olarak değerlendirir. Desteklenen Linux dağıtımları için tek bir Linux derlemesi (yonga mimarisi başına) vardır. 
 
-Daha fazla bilgi ve indirme bağlantıları [.NET Core 2.2 indirir](https://www.microsoft.com/net/download/dotnet-core/2.2) veya [.NET Core 2.1 yükler](https://www.microsoft.com/net/download/dotnet-core/2.1).
+İndirme bağlantıları ve daha fazla bilgi için bkz. [.net core 2,2 İndirmeleri](https://dotnet.microsoft.com/download/dotnet-core/2.2) veya [.NET Core 2,1 İndirmeleri](https://dotnet.microsoft.com/download/dotnet-core/2.1).
 
-.NET core 2.x, aşağıdaki Linux dağıtımları/sürümleri desteklenir:
+.NET Core 2. x, aşağıdaki Linux dağıtımları/sürümlerinde desteklenir:
 
-* Red Hat Enterprise Linux 7, 6 - 64-bit (`x86_64` veya `amd64`)
-* CentOS 7 - 64-bit (`x86_64` veya `amd64`) 
-* Oracle Linux 7 - 64-bit (`x86_64` veya `amd64`) 
-* Fedora 28, 27 - 64-bit (`x86_64` veya `amd64`) 
-* Debian 9 (64 bit `arm32`), 8,7 veya sonraki sürümler - 64-bit (`x86_64` veya `amd64`)
-* Ubuntu 18.04 (64 bit `arm32`), 16.04, 14.04 - 64-bit (`x86_64` veya `amd64`)
-* Linux Naneli 18, 17 - 64-bit (`x86_64` veya `amd64`)
-* openSUSE 42.3 veya sonraki sürümler - 64-bit (`x86_64` veya `amd64`)
-* SUSE Enterprise Linux (SLES) 12 Service Pack 2 veya üzeri - 64-bit (`x86_64` veya `amd64`)
-* Alpine Linux 3.7 veya sonraki sürümler - 64-bit (`x86_64` veya `amd64`)
+* Red Hat Enterprise Linux 7, 6-64-bit (`x86_64` veya `amd64`)
+* CentOS 7-64-bit (`x86_64` veya `amd64`) 
+* Oracle Linux 7-64 bit (`x86_64` veya) `amd64` 
+* Fedora 28, 27-64-bit (`x86_64` veya `amd64`) 
+* 9 (64-bit, `arm32`), 8,7 veya sonraki sürümler-64-bit (`x86_64` veya `amd64`)
+* Ubuntu 18,04 (64-bit, `arm32`), 16,04, 14,04-64-bit (`x86_64` veya `amd64`)
+* Linux Mint 18, 17-64-bit (`x86_64` veya `amd64`)
+* openSUSE 42,3 veya sonraki sürümleri-64-bit (`x86_64` veya `amd64`)
+* Suse Enterprise Linux (SLES) 12 Service Pack 2 veya üzeri-64-bit (`x86_64` veya `amd64`)
+* Alp Linux 3,7 veya sonraki sürümleri-64-bit (`x86_64` veya `amd64`)
 
-Bkz: [.NET Core 2.1 desteklenen işletim sistemi sürümleri](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md) ve [.NET Core 2.2 desteklenen işletim sistemi sürümleri](https://github.com/dotnet/core/blob/master/release-notes/2.2/2.2-supported-os.md) tam listesi, .NET Core 2.1 ve .NET Core 2.2 dışı işletim sistemleri, dağıtımlar ve sürümleri, desteklenen işletim sistemi sürümleri ve yaşam döngüsü İlkesi bağlantılarını destekler.
+.NET Core 2,1 ve .NET Core 2,2 tarafından desteklenen işletim sistemlerinin, dağıtımların ve sürümlerin tamamı, destek SISTEMI sürümleri ve yaşam döngüsü ilkesi için [.net core 2,1 desteklenen](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md) işletim sistemi sürümleri ve [.NET Core 2,2 desteklenen işletim sistemi sürümleri](https://github.com/dotnet/core/blob/master/release-notes/2.2/2.2-supported-os.md) ' ne bakın Köprü.
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET core 1.x](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1. x](#tab/netcore1x)
 
-Daha fazla bilgi ve indirme bağlantıları [.NET Core 1.1 indirir](https://www.microsoft.com/net/download/dotnet-core/1.1) veya [.NET Core 1.0 indirir](https://www.microsoft.com/net/download/dotnet-core/1.0).
+İndirme bağlantıları ve daha fazla bilgi için bkz. [.net core 1,1 İndirmeleri](https://dotnet.microsoft.com/download/dotnet-core/1.1) veya [.NET Core 1,0 İndirmeleri](https://dotnet.microsoft.com/download/dotnet-core/1.0).
 
-.NET core 1.x aşağıdaki Linux 64-bit üzerinde desteklenir (`x86_64` veya `amd64`) dağıtımları/sürümleri:
+.NET Core 1. x, aşağıdaki Linux 64-bit (`x86_64` veya `amd64`) dağıtımları/sürümlerinde desteklenir:
 
 * Red Hat Enterprise Linux 7
 * CentOS 7
 * Oracle Linux 7
-* 27 fedora 28 (.NET Core 1.1)
-* Debian 8.2 veya sonraki sürümler
-* Ubuntu 18.04 (.NET Core 1.1), 16.04, 14.04
+* Fedora 28 (.NET Core 1,1), 27
+* 8,2 veya sonraki sürümlerini kaldırma
+* Ubuntu 18,04 (.NET Core 1,1), 16,04, 14,04
 * Linux Mint 17
-* openSUSE 42.3 veya sonraki sürümleri (.NET Core 1.1)
+* openSUSE 42,3 veya sonraki sürümleri (.NET Core 1,1)
 
-Bkz: [.NET Core 1.x desteklenen işletim sistemi sürümleri](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0-supported-os.md) .NET Core tam listesi için 1.x desteklenen işletim sistemleri, destek işletim sistemi sürümleri ve yaşam döngüsü ilkesi bağlantılar dışında.
+.NET Core 1. x desteklenen işletim sistemlerinin tüm listesi için bkz. .NET Core [1.](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0-supported-os.md) x tarafından desteklenen işletim sistemleri, destek sistemi sürümlerinin dışında ve yaşam döngüsü ilkesi bağlantıları.
 
-# <a name="net-core-30-preview-1tabnetcore30"></a>[.NET core 3.0 Önizleme 1](#tab/netcore30)
+# <a name="net-core-30-preview-1tabnetcore30"></a>[.NET Core 3,0 Preview 1](#tab/netcore30)
 
-.NET core 3.0 Önizleme 1, tek bir işletim sistemi Linux değerlendirir. Tek bir Linux yapı (yonga Mimarisi) başına desteklenen Linux dağıtımları için yoktur. 
+.NET Core 3,0 Preview 1, Linux 'u tek bir işletim sistemi olarak değerlendirir. Desteklenen Linux dağıtımları için tek bir Linux derlemesi (yonga mimarisi başına) vardır. 
 
-Daha fazla bilgi ve indirme bağlantıları [.NET Core 3.0 indirir](https://dotnet.microsoft.com/download/dotnet-core/3.0).
+İndirme bağlantıları ve daha fazla bilgi için bkz. [.NET Core 3,0 İndirmeleri](https://dotnet.microsoft.com/download/dotnet-core/3.0).
 
-.NET core 3.0 Önizleme 1, aşağıdaki Linux dağıtımları/sürümleri desteklenir. 
+.NET Core 3,0 Preview 1, aşağıdaki Linux dağıtımları/sürümlerinde desteklenir. 
 
-İşletim Sistemi                            | Sürüm               | Mimarileri  
+OS                            | Sürüm               | Mimarileri  
 ------------------------------|-----------------------|----------------
 Red Hat Enterprise Linux      | 6                     | X64
 Red Hat Enterprise Linux<br>CentOS<br>Oracle Linux  | 7                     | X64
 Fedora                        | 28                    | X64
 Debian                        | 9                     | x64, ARM32\*, ARM64\*
-Ubuntu                        | 16.04+, 18.04+        | x64, ARM32\*, ARM64\*
-Linux Naneli                    | 18                    | X64
-openSUSE                      | 42.3+                 | X64
-SUSE Enterprise Linux (SLES)  | 12 SP2+               | X64
-Alpine Linux                  | 3.8+                  | x64, ARM64
+Ubuntu                        | 16.04 +, 18.04 +        | x64, ARM32\*, ARM64\*
+Linux Mint                    | 18                    | X64
+openSUSE                      | 42.3 +                 | X64
+SUSE Enterprise Linux (SLES)  | 12 SP2 +               | X64
+Alp Linux                  | 3.8 +                  | x64, ARM64
 
-\* ARM32 ve ARM64 desteği 9 Debian ve Ubuntu 16.04 başlatır. Bu dağıtım paketlerini önceki sürümlerinde, ARM yongalarında desteklenmez.
+\*ARM32 ve ARM64 desteği, de, 9 ve Ubuntu 16,04 ile başlar. Bu detrolar 'ın önceki sürümleri ARM yongalarında desteklenmez.
 
-Bkz: [.NET Core 3.0 desteklenen işletim sistemi sürümleri](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md) tam listesi .NET Core 3.0, desteklenen işletim sistemleri, dağıtımlar ve sürümler, destek işletim sistemi sürümleri ve yaşam döngüsü ilkesi bağlantılar dışında.
+.NET Core 3,0 desteklenen işletim sistemlerinin, dağıtımların ve sürümlerin, destek SISTEMI sürümlerinden ve yaşam döngüsü ilke bağlantılarının tüm listesi için bkz. [.net core 3,0 desteklenen IŞLETIM sistemi sürümleri](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md) .
 
-ARM64'te .NET Core 3.0 yükleme hakkında daha fazla bilgi için bkz. [Linux ARM64 üzerinde .NET Core 3.0 yükleme](https://gist.github.com/richlander/467813274cea8abc624553ee72b28213).
+ARM64 üzerinde .NET Core 3,0 yükleme hakkında daha fazla bilgi için bkz. [LINUX ARM64 üzerinde .net core 3,0 yükleme](https://gist.github.com/richlander/467813274cea8abc624553ee72b28213).
 
 ---
 
 ## <a name="linux-distribution-dependencies"></a>Linux dağıtım bağımlılıkları
 
-Aşağıdaki örnekler olacak şekilde tasarlanmıştır. Adları ve tam sürümünü, tercih ettiğiniz Linux dağıtımı biraz değişebilir.
+Aşağıdakiler örnek olarak verilmiştir. Tam sürümler ve adlar, tercih ettiğiniz Linux dağıtımında biraz farklılık gösterebilir.
 
 ### <a name="ubuntu"></a>Ubuntu
 
-Ubuntu dağıtımları, aşağıdaki kitaplıkların yüklü gerektirir:
+Ubuntu dağıtımları aşağıdaki kitaplıkların yüklü olmasını gerektirir:
 
-* liblttng ust0
-* libcurl3 (için 14.x ve 16.x)
-* libcurl4 (için 18.x)
-* libssl1.0.0
+* liblttng-ust0
+* libcurl3 (14. x ve 16. x için)
+* libcurl4 (18. x için)
+* libssl 1.0.0
 * libkrb5-3
 * zlib1g
-* libicu52 (için 14.x)
-* libicu55 (için 16.x)
-* libicu57 (için 17.x)
-* libicu60 (için 18.x)
+* libicu52 (14. x için)
+* libicu55 (16. x için)
+* libicu57 (17. x için)
+* libicu60 (18. x için)
 
-Sürümleri için .NET Core 2.1, daha önce aşağıdaki bağımlılıkları de gereklidir:
+.NET Core 2,1 öncesi sürümler için aşağıdaki bağımlılıklar da gereklidir:
 
 * libunwind8
 * libuuid1
 
 ### <a name="centos-and-fedora"></a>CentOS ve Fedora
 
-CentOS dağıtımları, aşağıdaki kitaplıkların yüklü gerektirir:
+CentOS dağıtımları için aşağıdaki kitaplıkların yüklü olması gerekir:
 
-* ust lttng
-* libcurl
-* openssl-libs
-* krb5 kitaplıklar
-* libicu
+* lttng-ust
+* libkıvrık
+* OpenSSL-libs
+* krb5-libs
+* libıu
 * zlib
 
-Fedora kullanıcılar: Varsa, openssl'ın sürümü > = 1.1 compat openssl10'ı yüklemeniz gerekir.
+Fedora kullanıcıları: OpenSSL sürümünüz > = 1,1 ise, COMPAT-openssl10 ' ı yüklemeniz gerekir.
 
-Sürümleri için .NET Core 2.1, daha önce aşağıdaki bağımlılıkları de gereklidir:
+.NET Core 2,1 öncesi sürümler için aşağıdaki bağımlılıklar da gereklidir:
 
-* libunwind
+* librüzgar
 * libuuid
 
-Bağımlılıklar hakkında daha fazla bilgi için bkz. [Self-contained Linux uygulamalarını](https://github.com/dotnet/core/blob/master/Documentation/self-contained-linux-apps.md).
+Bağımlılıklar hakkında daha fazla bilgi için bkz. [kendi Içindeki Linux uygulamaları](https://github.com/dotnet/core/blob/master/Documentation/self-contained-linux-apps.md).
 
-## <a name="installing-net-core-dependencies-with-the-native-installers"></a>Yerel yükleyicilerden ile .NET Core Bağımlılıkların yüklenmesi
+## <a name="installing-net-core-dependencies-with-the-native-installers"></a>Yerel yükleyicilerle .NET Core bağımlılıklarını yükleme
 
-Desteklenen Linux dağıtımları/sürümleri .NET core için yerel yükleyicilerden kullanılabilir. Yerel yükleyicilerden sunucusuna (sudo) yönetici erişimi gerektirir. Yerel bir yükleyici kullanmanın avantajı tüm .NET Core yerel bağımlılıkları yüklenmesidir. Yerel yükleyiciler, .NET Core SDK'sı sistem genelinde da yükleyin.
+.NET Core yerel yükleyicileri desteklenen Linux dağıtımları/sürümleri için kullanılabilir. Yerel yükleyiciler sunucuya yönetici (sudo) erişimi gerektirir. Yerel bir yükleyiciyi kullanmanın avantajı, tüm .NET Core yerel bağımlılıklarının yüklü olması. Yerel yükleyiciler Ayrıca sistem genelinde .NET Core SDK de yükler.
 
-Linux üzerinde iki yükleyici paketi seçeneğiniz vardır:
+Linux 'ta iki yükleyici paketi seçeneği vardır:
 
-* CentOS/RHEL Ubuntu için apt-get veya yum gibi bir akış tabanlı Paket Yöneticisi'ni kullanarak.
-* Paketleri kendileri DEB veya RPM kullanma.
+* Bir akış tabanlı Paket Yöneticisi, Ubuntu için apt-get veya CentOS/RHEL için de rivı kullanma.
+* Paketlerin kendisini, DEB veya RPM 'yi kullanma.
 
-### <a name="scripting-installs-with-the-net-core-installer-script"></a>.NET Core Yükleyici komut dosyasını yükler betik oluşturma
+### <a name="scripting-installs-with-the-net-core-installer-script"></a>.NET Core yükleyici betiği ile betik yüklemeleri
 
-[Dotnet yükleme betikleri](./tools/dotnet-install-script.md) CLI araç zinciri ve paylaşılan çalışma zamanı'nın bir yönetici olmayan yüklemesini gerçekleştirmek için kullanılır. Betikten indirebileceğiniz <https://dot.net/v1/dotnet-install.sh>.
+[DotNet-install betikleri](./tools/dotnet-install-script.md) , CLI araç zinciri ve paylaşılan çalışma zamanının yönetici olmayan bir yüklemesini gerçekleştirmek için kullanılır. Betiği konumundan <https://dot.net/v1/dotnet-install.sh>indirebilirsiniz.
 
-Şu anda .NET Core 1.1 olan en son "LTS" sürümünü yüklemek için betik Varsayılanları. .NET Core 2.1 yüklemek için aşağıdaki geçiş betiği çalıştırın:
+Komut dosyası, şu anda .NET Core 1,1 olan en son "LTS" sürümünü yüklemek için varsayılan değerdir. .NET Core 2,1 yüklemek için betiği aşağıdaki anahtarla çalıştırın:
 
 ```console
 ./dotnet-install.sh -c Current
 ```
 
-Yükleyici bash betiğini Otomasyon senaryoları ve yönetici olmayan yüklemeleri kullanılır. Linux/OS X sistemleri komut ile kullanılabilmesi için bu betiği ayrıca PowerShell anahtarları okur.
+Yükleyici Bash betiği, Otomasyon senaryolarında ve yönetici olmayan yüklemelerde kullanılır. Bu betik Ayrıca PowerShell anahtarlarını okur, bu nedenle Linux/OS X sistemlerinde komut dosyasıyla kullanılabilirler.
 
 ## <a name="troubleshoot"></a>Sorun giderme
 
-Desteklenen bir Linux dağıtımı/sürümünde .NET Core yüklemesi ile ilgili sorunlar varsa, yüklü, dağıtımları/sürümleri için aşağıdaki konulara bakın:
+Desteklenen bir Linux dağıtımında/sürümünde .NET Core yüklemesiyle ilgili sorunlar yaşıyorsanız, yüklü dağıtımlarınız/sürümleriniz için aşağıdaki konulara bakın:
 
-* [.NET core bilinen sorunları 3.0](https://github.com/dotnet/core/tree/master/release-notes/3.0)
-* [.NET core bilinen sorunları 2.2](https://github.com/dotnet/core/tree/master/release-notes/2.2)
-* [.NET core 2.1 bilinen sorunlar](https://github.com/dotnet/core/tree/master/release-notes/2.1)
-* [.NET core 1.1 bilinen sorunlar](https://github.com/dotnet/core/blob/master/release-notes/1.1)
-* [.NET core 1.0, bilinen sorunlar](https://github.com/dotnet/core/blob/master/release-notes/1.0)
+* [.NET Core 3,0 bilinen sorunlar](https://github.com/dotnet/core/tree/master/release-notes/3.0)
+* [.NET Core 2,2 bilinen sorunlar](https://github.com/dotnet/core/tree/master/release-notes/2.2)
+* [.NET Core 2,1 bilinen sorunlar](https://github.com/dotnet/core/tree/master/release-notes/2.1)
+* [.NET Core 1,1 bilinen sorunlar](https://github.com/dotnet/core/blob/master/release-notes/1.1)
+* [.NET Core 1,0 bilinen sorunlar](https://github.com/dotnet/core/blob/master/release-notes/1.0)

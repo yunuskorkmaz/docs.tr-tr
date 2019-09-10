@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: bcd7b699-4e50-4523-8c33-2f54a103d94e
-ms.openlocfilehash: d43ec0cdf5b5bb03854dffc7132dddb4c9ae76fd
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 3ac80cfe06f8531dcd2343f676a6f78f8eb0e8f6
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70249262"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854309"
 ---
 # <a name="query-results"></a>Sorgu Sonuçları
 Bir LINQ to Entities sorgusu komut ağaçlarına dönüştürüldükten ve yürütüldükten sonra sorgu sonuçları genellikle aşağıdakilerden biri olarak döndürülür:  
@@ -23,9 +23,9 @@ Bir LINQ to Entities sorgusu komut ağaçlarına dönüştürüldükten ve yür�
   
 - Anonim türler.  
   
- Sorgu veri kaynağına karşı yürütüldüğünde, sonuçlar CLR türlerine getirilir ve istemciye döndürülür. Tüm nesne gerçekleştirmesi, [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]tarafından gerçekleştirilir. İle clr arasında eşleme yapılmamasına neden olan herhangi bir hata [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] , nesne materialization sırasında özel durumların oluşturulmasına neden olur.  
+ Sorgu veri kaynağına karşı yürütüldüğünde, sonuçlar CLR türlerine getirilir ve istemciye döndürülür. Tüm nesne gerçekleştirmesi Entity Framework tarafından gerçekleştirilir. Entity Framework ile CLR arasında eşleme yapılmamasına neden olan hatalar, nesne materialization sırasında özel durumların oluşturulmasına neden olur.
   
- Sorgu yürütmesi basit kavramsal model türleri döndürürse, sonuçlar tek başına olan ve bağlantısı kesilen [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]CLR türlerinden oluşur. Ancak sorgu, türü ile <xref:System.Data.Objects.ObjectQuery%601>temsil edilen bir tür varlık nesneleri koleksiyonu döndürürse, bu türler nesne bağlamı tarafından izlenir. Tüm nesne davranışları (alt/üst koleksiyonlar, değişiklik izleme, çok biçimlilik vb [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)].) içinde tanımlanmıştır. Bu işlev, [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]içinde tanımlandığı şekilde kapasitesinde kullanılabilir. Daha fazla bilgi için bkz. [nesneleriyle çalışma](../working-with-objects.md).  
+ Sorgu yürütmesi basit kavramsal model türleri döndürürse, sonuçlar tek başına olan ve Entity Framework bağlantısı kesilen CLR türlerinden oluşur. Ancak sorgu, türü ile <xref:System.Data.Objects.ObjectQuery%601>temsil edilen bir tür varlık nesneleri koleksiyonu döndürürse, bu türler nesne bağlamı tarafından izlenir. Tüm nesne davranışları (alt/üst koleksiyonlar, değişiklik izleme, çok biçimlilik vb.) Entity Framework tanımlanmıştır. Bu işlev, Entity Framework tanımlandığı şekilde kapasitesinde kullanılabilir. Daha fazla bilgi için bkz. [nesneleriyle çalışma](../working-with-objects.md).
   
  Sorgulardan döndürülen yapı türleri (anonim türler ve null yapılabilir karmaşık türler gibi) `null` değer olabilir. Döndürülen <xref:System.Data.Objects.DataClasses.EntityCollection%601> bir varlığın özelliği de bir `null` değer olabilir. Bu, herhangi bir öğeye sahip olmayan bir `null` <xref:System.Data.Objects.ObjectQuery%601> ' ın çağrılması <xref:System.Linq.Queryable.FirstOrDefault%2A> gibi, değer olan bir varlığın koleksiyon özelliğinin yansıtıyapılmasının oluşmasına neden olabilir.  
   

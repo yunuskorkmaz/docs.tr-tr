@@ -2,12 +2,12 @@
 title: Değişiklik SQL Oluşturma
 ms.date: 03/30/2017
 ms.assetid: 2188a39d-46ed-4a8b-906a-c9f15e6fefd1
-ms.openlocfilehash: ab0c18473e73b2d6fe9eb45c43e9b47947a55d99
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 94b6c3c97e8255db2dc4d72bae6c6c12905d9710
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70248569"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854297"
 ---
 # <a name="modification-sql-generation"></a>Değişiklik SQL Oluşturma
 
@@ -27,7 +27,7 @@ DbModificationCommandTree bir değiştirme DML işleminin (bir INSERT, Update ve
 
 - DbDeleteCommandTree
 
-DbModificationCommandTree ve tarafından [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] üretilen uygulamaları her zaman tek bir satır işlemini temsil eder. Bu bölümde, .NET Framework sürüm 3,5 ' de kısıtlamaları olan bu türler açıklanmaktadır.
+DbModificationCommandTree ve Entity Framework tarafından üretilen uygulamaları her zaman tek bir satır işlemini temsil eder. Bu bölümde, .NET Framework sürüm 3,5 ' de kısıtlamaları olan bu türler açıklanmaktadır.
 
 ![Diyagram](./media/558ba7b3-dd19-48d0-b91e-30a76415bf5f.gif "558ba7b3-dd19-48d0-b91e-30a76415bf5f")
 
@@ -90,7 +90,7 @@ Koşul, hedef koleksiyonun hangi üyelerinin güncelleştirileceğini veya silin
 
 ## <a name="modification-sql-generation-in-the-sample-provider"></a>Örnek sağlayıcıda değişiklik SQL üretimi
 
-[Entity Framework örnek sağlayıcı](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0) , [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]tarafından desteklenen ADO.NET veri sağlayıcılarının bileşenlerini gösterir. SQL Server 2005 veritabanını hedefler ve System. Data. SqlClient ADO.NET 2,0 Veri Sağlayıcısı üzerine bir sarmalayıcı olarak uygulanır.
+[Entity Framework örnek sağlayıcı](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0) , Entity Framework destekleyen ADO.NET veri sağlayıcılarının bileşenlerini gösterir. SQL Server 2005 veritabanını hedefler ve System. Data. SqlClient ADO.NET 2,0 Veri Sağlayıcısı üzerine bir sarmalayıcı olarak uygulanır.
 
 Örnek sağlayıcının (SQL Generation\DmlSqlGenerator.cs dosyasında bulunur) değişiklik SQL oluşturma modülü, bir giriş DbModificationCommandTree alır ve tek bir değişiklik SQL deyiminden sonra bir SELECT deyiminden sonra gelen bir DbModificationCommandTree tarafından belirtilmişse okuyucu. Oluşturulan komutların şeklinin hedef SQL Server veritabanından etkileneceğini unutmayın.
 

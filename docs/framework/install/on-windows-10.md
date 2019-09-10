@@ -5,12 +5,12 @@ author: rlander
 ms.author: mairaw
 ms.date: 04/18/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: 33805230e0aa6c75443773d60e73f9463ee1fde5
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 0de48e14f11d3763ee239b28b40bdb809dbeb433
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70106550"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70853946"
 ---
 # <a name="install-the-net-framework-on-windows-10-and-windows-server-2016-and-later"></a>Windows 10 ve Windows Server 2016 ve sonraki sürümlere .NET Framework yüklemesini
 
@@ -72,7 +72,7 @@ Windows 10 1507 veya 1511 kullanıyorsanız ve .NET Framework 4,8 ' i yüklemek 
 
 - .NET Framework 4. x sürümleri, bu sürümde .NET Framework 4,0 için oluşturulan uygulamaları çalıştırmak için kullanılabilir. Örneğin, .NET Framework 4,7 4,7 ile .NET Framework 4,0 için oluşturulan uygulamaları çalıştırmak için kullanılabilir. En son sürüm (.NET Framework 4,8), 4,0 ' den başlayarak .NET Framework tüm sürümleriyle oluşturulmuş uygulamaları çalıştırmak için kullanılabilir.
 
-İndirileceği .NET Framework tüm sürümlerinin bir listesi için bkz. [.net İndirmeleri](https://www.microsoft.com/net/download?utm_source=ms-docs&utm_medium=referral) sayfası.
+İndirileceği .NET Framework tüm sürümlerinin bir listesi için bkz. [.net İndirmeleri](https://dotnet.microsoft.com/download) sayfası.
 
 ## <a name="help"></a>Help
 
@@ -80,6 +80,6 @@ Windows 10 1507 veya 1511 kullanıyorsanız ve .NET Framework 4,8 ' i yüklemek 
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [.NET Indirmeleri](https://www.microsoft.com/net/download?utm_source=ms-docs&utm_medium=referral)
+- [.NET Indirmeleri](https://dotnet.microsoft.com/download)
 - [Engellenen .NET Framework yükleme ve kaldırma sorunlarını giderme](troubleshoot-blocked-installations-and-uninstallations.md)
 - [Geliştiriciler için .NET Framework yüklemesi](guide-for-developers.md)

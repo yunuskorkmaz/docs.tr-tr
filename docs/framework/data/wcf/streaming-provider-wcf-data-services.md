@@ -10,12 +10,12 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-ms.openlocfilehash: 3660194a93a0528c4e5b466fb63801a8b1e12d2f
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 4d51011fddb856cf1ebd00943e9b79776d9181d0
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70779786"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854116"
 ---
 # <a name="streaming-provider-wcf-data-services"></a>Akış sağlayıcısı (WCF Veri Hizmetleri)
 
@@ -53,7 +53,7 @@ Bir varlığın medya bağlantı girişi olduğunu belirtmek için, aşağıdaki
 
 Ayrıca, ad alanını `xmlns:m=http://schemas.microsoft.com/ado/2007/08/dataservices/metadata` varlığa ya da veri modelini tanımlayan. edmx veya. csdl dosyasının köküne eklemeniz gerekir.
 
-[!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] Sağlayıcıyı kullanan ve bir medya kaynağı sunan bir veri hizmetine örnek olarak bkz. Post [Data Services akış sağlayıcısı serisi: Akış sağlayıcısı uygulama (1. bölüm)](https://go.microsoft.com/fwlink/?LinkID=198989).
+Entity Framework sağlayıcıyı kullanan ve bir medya kaynağı sunan bir veri hizmeti örneği için bkz. Post [Data Services akış sağlayıcısı serisi: Akış sağlayıcısı uygulama (1. bölüm)](https://go.microsoft.com/fwlink/?LinkID=198989).
 
 **Yansıma Sağlayıcısı**
 

@@ -4,49 +4,49 @@ ms.date: 03/30/2017
 ms.assetid: e6bd4655-ce37-4003-8462-468a6fe2c40f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2c2eecdee3448b59422a8c6c73fc85745b41c52b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2ad74a70fff9916dc66bb4d2eacbdaf40cb241c3
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626103"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70853955"
 ---
 # <a name="net-core-and-open-source"></a>.NET Core ve Açık Kaynak
-Bu konu nedir .NET Core ve daha fazla bilgi nasıl bulabileceğinizi gösterilmektedir, kısa bir genel bakış sağlar. .NET Core için konular tam listesi için bkz [.NET Core Kılavuzu](../../core/index.md).
+Bu konuda .NET Core 'un ne olduğuna ilişkin kısa bir genel bakış sağlanır ve nasıl daha fazla bilgi bulabileceğiniz gösterilmektedir. .NET Core için konuların tüm listesini bulmak için [.NET Core Kılavuzu](../../core/index.md)' nu ziyaret edin.
   
 <a name="BKMK_WhatisNETCore"></a>   
 ## <a name="what-is-net-core"></a>.NET Core nedir?  
- .NET core olan bir genel amaçlı, .NET Standard modüler, platformlar arası ve açık kaynak uygulamasıdır. .NET Framework ile aynı API'ler birçoğunu içerir (ancak .NET Core, daha küçük bir kümesi) ve çeşitli işletim sistemlerini destekleyen ve yonga hedef çalışma zamanı, framework, derleyici ve araçları bileşenleri içerir. .NET Core uygulaması, öncelikli olarak ASP.NET Core iş yükleri aynı zamanda gerektiğinden temelli ve daha modern bir uygulama istediğiniz. Cihaz, Bulut ve katıştırılmış IOT senaryoları kullanılabilir.  
+ .NET Core, .NET Standard genel amaçlı, modüler, platformlar arası ve açık kaynaklı bir uygulamadır. .NET Framework ile aynı API 'lerin birçoğunu içerir (ancak .NET Core daha küçük bir küme) ve çeşitli işletim sistemlerini ve yonga hedeflerini destekleyen çalışma zamanı, çerçeve, derleyici ve araç bileşenlerini içerir. .NET Core uygulamasının öncelikli olarak ASP.NET Core iş yükleri tarafından ve ayrıca ihtiyacın yanı sıra daha modern bir uygulamaya sahip olması gerekir. Cihaz, bulut ve katıştırılmış/IoT senaryolarında kullanılabilir.  
   
- .NET Core ile çalışmaya başlamak için lütfen [.NET Core giriş sayfası](https://www.microsoft.com/net/core).  
+ .NET Core 'u kullanmaya başlamak için [10 dakikalık](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro).net öğreticisini ziyaret edin Merhaba dünya.  
   
- .NET Core temel özellikleri şunlardır:  
+ .NET Core 'un ana özellikleri şunlardır:  
   
-- **Platformlar arası:** .NET Core gerekir ve bu kod, platform hedefi bağımsız olarak yeniden uygulama özellikleri uygulamak için temel işlevleri sağlar. Şu anda üç ana işletim sistemlerini (OS) da destekler: Windows, Linux ve Macos'ta. Uygulamalar ve desteklenen işletim sistemleri arasında değiştirilmeden çalıştırılmasını kitaplıklar yazabilirsiniz. Desteklenen işletim sistemlerinin listesini görmek için ziyaret [.NET Core yol haritası](https://github.com/dotnet/core/blob/master/roadmap.md).
+- **Platformlar arası:** .NET Core, ihtiyacınız olan uygulama özelliklerini uygulamak ve platform hedefinizden bağımsız olarak bu kodu yeniden kullanmak için temel işlevsellik sağlar. Şu anda üç ana işletim sistemini (OS) desteklemektedir: Windows, Linux ve macOS. Desteklenen işletim sistemleri arasında değiştirilmemiş olarak çalışan uygulamalar ve kitaplıklar yazabilirsiniz. Desteklenen işletim sistemlerinin listesini görmek için [.NET Core yol haritası](https://github.com/dotnet/core/blob/master/roadmap.md)' nı ziyaret edin.
   
-- **Açık kaynak:** .NET Core Hizmetleri altında çok sayıda proje biridir [.NET Foundation](https://www.dotnetfoundation.org/) ve kullanılabilir [GitHub](https://github.com/).  .NET Core açık kaynaklı proje olarak sahip daha saydam bir geliştirme süreci yükseltir ve etkin ve bağlı bir topluluk yükseltir.  
+- **Açık Kaynak:** .NET Core, [.net Foundation](https://www.dotnetfoundation.org/) 'ın Stewardship altındaki birçok projeden biridir ve [GitHub](https://github.com/)' da kullanılabilir.  Açık kaynaklı bir proje olarak .NET Core 'un olması, daha saydam bir geliştirme sürecini yükseltir ve etkin ve bağlı bir topluluk yükseltir.  
   
-- **Esnek dağıtım:** uygulamanızı dağıtmak için iki ana yolu vardır: framework bağımlı dağıtım veya kendi içinde dağıtım. Framework bağımlı dağıtım, yalnızca, uygulama ve üçüncü taraf bağımlılıklarının yüklendiğinden ve uygulamanızı bir bulunması için .NET Core sistem genelinde sürümüne bağlıdır.  Kendi içinde dağıtım, uygulamanızı oluşturmak için kullanılan .NET Core sürümünün Ayrıca uygulama ve üçüncü taraf bağımlılıkları birlikte dağıtılır ve yan yana çalıştırabilirsiniz diğer sürümleriyle birlikte.    Daha fazla bilgi için [.NET Core uygulaması dağıtımını](../../core/deploying/index.md).
+- **Esnek dağıtım:** uygulamanızı dağıtmanın iki ana yolu vardır: çerçeveye bağımlı dağıtım veya kendi kendine kapsanan dağıtım. Çerçeveye bağımlı dağıtım ile, yalnızca uygulamanız ve üçüncü taraf bağımlılıkları yüklenir ve uygulamanız, .NET Core 'un sistem genelindeki bir sürümüne bağlıdır.  Kendi kendine içerilen dağıtım ile uygulamanızı oluşturmak için kullanılan .NET Core sürümü, uygulamanız ve üçüncü taraf bağımlılıklarınızla birlikte da dağıtılır ve diğer sürümlerle yan yana çalıştırılabilir.    Daha fazla bilgi için bkz. [.NET Core uygulama dağıtımı](../../core/deploying/index.md).
 
-- **Modüler:** .NET Core olduğundan modüler küçük derleme paketlerinde NuGet yayımlanır. Temel işlevlerini çoğunu içeren bir büyük derleme yerine, .NET Core daha küçük bir özellik merkezli paketleri olarak kullanılabilir hale getirilir. Bu bizim için daha Çevik bir geliştirme modeli sağlar ve, uygulamanızı yalnızca gereksinim duyduğunuz NuGet paketlerini içerecek şekilde iyileştirmenize imkan sağlar. Hizmet, Gelişmiş performans ve ödeme what-,-Öde modelinde maliyetleri azaltan azaltılmış daha sıkı güvenlik, daha küçük bir uygulama yüzey alanını avantajları şunlardır.  
+- **Modüler:** .NET Core, daha küçük derleme paketlerinde NuGet aracılığıyla yayınlandığı için modüler hale gelir. Çekirdek işlevlerin çoğunu içeren bir büyük derleme yerine, .NET Core daha küçük Özellik merkezli paketler olarak sunulmaktadır. Bu, bizim için daha çevik bir geliştirme modeli sağlar ve uygulamanızı yalnızca ihtiyacınız olan NuGet paketlerini içerecek şekilde iyileştirmenize olanak tanır. Daha küçük bir uygulama yüzeyi alanının avantajları, daha sıkı güvenlik, azaltılmış bakım, iyileştirilmiş performans ve bir Kullandıkça öde modelinde daha düşük maliyetlere sahiptir.  
   
 ## <a name="the-net-core-platform"></a>.NET Core platformu  
- .NET Core platformu yönetilen derleyiciler, çalışma zamanı, taban sınıfı kitaplıkları ve ASP.NET Core gibi çok sayıda uygulama modelleri içeren çeşitli bileşenlerinin yapılır. Farklı bileşenleri hakkında daha fazla bilgi ve, aşağıdaki ziyaret ederek bağlı [GitHub](https://github.com/) depolar:  
+ .NET Core platformu, yönetilen derleyiciler, çalışma zamanı, temel sınıf kitaplıkları ve ASP.NET Core gibi çok sayıda uygulama modeli içeren birkaç bileşenden oluşur. Aşağıdaki [GitHub](https://github.com/) depolarını ziyaret ederek, farklı bileşenler hakkında daha fazla bilgi alabilir ve bağlı olabilirsiniz:  
   
 - [.NET Core](https://github.com/dotnet/core)  
   
-- [Corefx'te - .NET Core temel kitaplıkları](https://github.com/dotnet/corefx)  
+- [CoreFX-.NET Core temel kitaplıkları](https://github.com/dotnet/corefx)  
   
-- [CoreCLR - .NET Core çalışma zamanı](https://github.com/dotnet/coreclr)  
+- [CoreCLR-.NET Core çalışma zamanı](https://github.com/dotnet/coreclr)  
   
-- [CLI - .NET Core komut satırı araçları](https://github.com/dotnet/cli)  
+- [CLı-.NET Core komut satırı araçları](https://github.com/dotnet/cli)  
   
-- [Roslyn - .NET derleyici platformu](https://github.com/dotnet/roslyn)  
+- [Roslyn-.NET Compiler Platform](https://github.com/dotnet/roslyn)  
   
 - [ASP.NET Core](https://github.com/aspnet/home)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [.NET core giriş sayfası](https://www.microsoft.com/net/core)
+- [.NET öğreticisi-10 dakika içinde Merhaba Dünya](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)
 - [.NET Core Kılavuzu](../../core/index.md)
 - [ASP.NET Core belgeleri](/aspnet/core/)

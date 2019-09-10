@@ -2,32 +2,32 @@
 title: Sağlayıcı Bildirimi Belirtimi
 ms.date: 03/30/2017
 ms.assetid: bb450b47-8951-4f99-9350-26f05a4d4e46
-ms.openlocfilehash: 6b924f484e6635760d08d0eba9fb9436bdd8bc88
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: cc58bbc82f3930f087b5da0c64afb4f9f03e905b
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70248584"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854495"
 ---
 # <a name="provider-manifest-specification"></a>Sağlayıcı Bildirimi Belirtimi
 Bu bölümde, bir veri deposu sağlayıcısının veri deposundaki türleri ve işlevleri nasıl destekleyebileceği açıklanmaktadır.  
   
  Varlık hizmetleri belirli bir veri deposu sağlayıcısından bağımsız olarak çalışır, ancak bir veri sağlayıcısının model, eşlemeler ve sorguların temel alınan bir veri deposuyla nasıl etkileşim kuracağını açıkça tanımlamasına olanak tanır. Bir soyutlama katmanı olmadan, varlık Hizmetleri yalnızca belirli bir veri deposuna veya veri sağlayıcısına hedeflenebilir.  
   
- Sağlayıcının desteklediği türler, temel alınan veritabanı tarafından doğrudan veya dolaylı olarak desteklenir. Bu türlerin tam depo türleri olması gerekmez, ancak sağlayıcının öğesini desteklemek [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]için kullandığı türler. Sağlayıcı/depolama türleri Varlık Veri Modeli (EDM) koşullarında açıklanmıştır.  
+ Sağlayıcının desteklediği türler, temel alınan veritabanı tarafından doğrudan veya dolaylı olarak desteklenir. Bu türlerin tam depo türleri olması gerekmez, ancak sağlayıcının Entity Framework desteklemek için kullandığı türler. Sağlayıcı/depolama türleri Varlık Veri Modeli (EDM) koşullarında açıklanmıştır.  
   
  Veri deposunun desteklediği işlevlerin parametresi ve dönüş türleri EDM koşullarında belirtilmiştir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Ve veri deposunun veri kaybı veya kesilmeksizin bilinen türlerde verileri geri ve ileri geçirebilmeleri gerekir.  
+ Entity Framework ve veri deposunun verileri, herhangi bir veri kaybı veya kesilme olmadan bilinen türlerde geri ve ileri geçirebilmesi gerekir.  
   
  Sağlayıcı bildirimi, veri deposuna bir bağlantı açmak zorunda kalmadan tasarım zamanında araçlar tarafından yüklenebilir olmalıdır.  
   
- [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Büyük/küçük harfe duyarlıdır, ancak temel alınan veri deposu olmayabilir. EDM yapıtlar (örneğin, tanımlayıcılar ve tür adları) tanımlı ve bildirimde kullanıldığında, [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] büyük/küçük harf duyarlılığı kullanmalıdır. Büyük/küçük harfe duyarlı olabilecek veri deposu öğeleri sağlayıcı bildiriminde görünürse, bu büyük/küçük harf sağlayıcısı bildiriminde saklanması gerekir.  
+ Entity Framework büyük/küçük harfe duyarlıdır, ancak temel alınan veri deposu olmayabilir. EDM yapıtlar (örneğin, tanımlayıcılar ve tür adları) tanımlandıklarında ve bildiriminde kullanıldığında, Entity Framework büyük/küçük harf duyarlılığı kullanmalıdır. Büyük/küçük harfe duyarlı olabilecek veri deposu öğeleri sağlayıcı bildiriminde görünürse, bu büyük/küçük harf sağlayıcısı bildiriminde saklanması gerekir.  
   
- , [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Tüm veri sağlayıcıları için bir sağlayıcı bildirimi gerektirir. İle sağlayıcı bildirimi olmayan bir sağlayıcı kullanmayı denerseniz [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], bir hata alırsınız.  
+ Entity Framework tüm veri sağlayıcıları için bir sağlayıcı bildirimi gerektirir. Entity Framework bir sağlayıcı bildirimine sahip olmayan bir sağlayıcıyı kullanmayı denerseniz, bir hata alırsınız.  
   
- Aşağıdaki tabloda, [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] sağlayıcı etkileşimi aracılığıyla özel durumlar ortaya çıktığında oluşturacak özel durumların türleri açıklanmaktadır:  
+ Aşağıdaki tabloda, sağlayıcı etkileşimi üzerinden özel durumlar ortaya çıktığında Entity Framework özel durumların türleri açıklanmaktadır:  
   
 |Sorun|Özel Durum|  
 |-----------|---------------|  
@@ -39,7 +39,7 @@ Bu bölümde, bir veri deposu sağlayıcısının veri deposundaki türleri ve i
  Sağlayıcı aşağıdaki senaryoları desteklemelidir:  
   
 ### <a name="writing-a-provider-with-symmetric-type-mapping"></a>Simetrik tür eşleme ile sağlayıcı yazma  
- Eşleme yönüne bakılmaksızın her bir mağaza türünün [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] tek bir EDM türüne eşlendiği bir sağlayıcı yazabilirsiniz. Bir EDM türüne karşılık gelen çok basit eşlemeye sahip bir sağlayıcı türü için, tür sistemi basit veya EDM türleriyle eşleştiğinden, simetrik bir çözüm kullanabilirsiniz.  
+ Eşleme yönüne bakılmaksızın her bir mağaza türünün tek bir EDM türüne eşlendiği Entity Framework için bir sağlayıcı yazabilirsiniz. Bir EDM türüne karşılık gelen çok basit eşlemeye sahip bir sağlayıcı türü için, tür sistemi basit veya EDM türleriyle eşleştiğinden, simetrik bir çözüm kullanabilirsiniz.  
   
  Etki alanını basitlik olarak kullanabilir ve statik bir bildirime dayalı sağlayıcı bildirimi oluşturabilirsiniz.  
   
@@ -50,7 +50,7 @@ Bu bölümde, bir veri deposu sağlayıcısının veri deposundaki türleri ve i
 - Sağlayıcı tarafından desteklenen ve parametre ve dönüş türlerinin EDM koşullarında ifade edildiği işlevlerin listesi.  
   
 ### <a name="writing-a-provider-with-asymmetric-type-mapping"></a>Asimetrik tür eşleme ile sağlayıcı yazma  
- İçin bir veri deposu sağlayıcısı yazarken [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], bazı türler için EDM-sağlayıcıya tür eşlemesi, sağlayıcıdan EDM tür eşleştirmesinden farklı olabilir. Örneğin, sınırlandırılmamış EDM PrimitiveTypeKind. String, sağlayıcıdaki nvarchar (4000) ile eşleşirken, nvarchar (4000), EDM PrimitiveTypeKind. String (MaxLength = 4000) ile eşlenir.  
+ Entity Framework için bir veri deposu sağlayıcısı yazarken, bazı türler için EDM-sağlayıcıya tür eşlemesi sağlayıcıdan EDM tür eşleştirmesinden farklı olabilir. Örneğin, sınırlandırılmamış EDM PrimitiveTypeKind. String, sağlayıcıdaki nvarchar (4000) ile eşleşirken, nvarchar (4000), EDM PrimitiveTypeKind. String (MaxLength = 4000) ile eşlenir.  
   
  İki bölümden oluşan bir XML dosyası yazarsınız:  
   

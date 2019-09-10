@@ -2,18 +2,20 @@
 title: <comContract>
 ms.date: 03/30/2017
 ms.assetid: 3f8e1c0c-cfdf-4c79-ac65-c64e9323a51c
-ms.openlocfilehash: ef980c86efad4fda86cf62148e50688fd22afe49
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b499294af71ba230dcf985d4af1d013b1ca260cf
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69926100"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70850032"
 ---
 # <a name="comcontract"></a>\<comContract >
 Bir COM+ tümleştirme hizmeti sözleşmesini belirtir.  
   
- \<system.ServiceModel>  
-\<comContracts >  
+[ **\<Yapılandırma >** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System. serviceModel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<comContracts >** ](comcontracts.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<comContract >**  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -49,7 +51,7 @@ Bir COM+ tümleştirme hizmeti sözleşmesini belirtir.
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|Sözleşmesi|Sözleşme türünü içeren bir dize.|  
+|contract|Sözleşme türünü içeren bir dize.|  
 |name|Sözleşme adını içeren bir dize.|  
 |ad alanı|Sözleşme ad alanını içeren bir dize.|  
 |requiresSession|Sözleşmenin yalnızca oturumsuz bağlamalarda kullanılıp kullanılamayacağını belirten bir Boole değeri. Hizmet başlatıldığında, tümleştirme çalışma zamanı bu ayarın kullanılacak bağlama türüyle tutarlı olmasını sağlar. Sözleşme için bir veya daha fazla bağlama çakışırsa bir özel durum oluşturulur. Bu özellik ise `false`ve tek yönlü bir kanal kullanımda ise ve herhangi bir [out] parametresi varsa, bir özel durum da oluşturulur.|  

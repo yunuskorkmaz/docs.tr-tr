@@ -2,12 +2,12 @@
 title: Komut Ağaçlarından SQL Oluşturma - En İyi Yöntemler
 ms.date: 03/30/2017
 ms.assetid: 71ef6a24-4c4f-4254-af3a-ffc0d855b0a8
-ms.openlocfilehash: 366e27f8c8a04c5d2507ab37459ad6d5abc255ae
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 9859c7df941ae6681c991001e0d1e5a50c7ffc60
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251570"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855009"
 ---
 # <a name="generating-sql-from-command-trees---best-practices"></a>Komut Ağaçlarından SQL Oluşturma - En İyi Yöntemler
 
@@ -137,11 +137,11 @@ Ayrıca, birleştirmeleri düzleştirme sırasında, katılım tabloları (veya 
 
 ## <a name="avoid-select-"></a>SELECT * kullanmaktan kaçının
 
-Temel tablolardan seçim `SELECT *` yapmak için kullanmayın. Bir [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] uygulamadaki depolama modeli yalnızca veritabanı tablosundaki sütunların bir alt kümesini içerebilir. Bu durumda, `SELECT *` yanlış sonuç verebilir. Bunun yerine, katılan ifadelerin sonuç türünden sütun adlarını kullanarak tüm katılan sütunları belirtmeniz gerekir.
+Temel tablolardan seçim `SELECT *` yapmak için kullanmayın. Bir Entity Framework uygulamasındaki depolama modeli yalnızca veritabanı tablosundaki sütunların bir alt kümesini içerebilir. Bu durumda, `SELECT *` yanlış sonuç verebilir. Bunun yerine, katılan ifadelerin sonuç türünden sütun adlarını kullanarak tüm katılan sütunları belirtmeniz gerekir.
 
 ## <a name="reuse-of-expressions"></a>Ifadelerin yeniden kullanılması
 
-İfadeler tarafından [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]geçirilen sorgu komut ağacında yeniden kullanılabilir. Sorgu komut ağacında her bir ifadenin yalnızca bir kez göründüğünü varsaymayın.
+İfadeler, Entity Framework geçirilen sorgu komut ağacında yeniden kullanılabilir. Sorgu komut ağacında her bir ifadenin yalnızca bir kez göründüğünü varsaymayın.
 
 ## <a name="mapping-primitive-types"></a>Temel türleri eşleme
 

@@ -2,12 +2,12 @@
 title: Kurallı İşlevler
 ms.date: 03/30/2017
 ms.assetid: bbcc9928-36ea-4dff-9e31-96549ffed958
-ms.openlocfilehash: 8949735ba4712b721460335b4579f0a268c91aea
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: f8ca9e2027e82db89e91287fda02d2014d53f325
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251269"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854519"
 ---
 # <a name="canonical-functions"></a>Kurallı İşlevler
 Bu bölümde tüm veri sağlayıcıları tarafından desteklenen ve tüm sorgulama teknolojileri tarafından kullanılabilen kurallı işlevler ele alınmaktadır. Kurallı işlevler bir sağlayıcı tarafından genişletilemez.  
@@ -18,9 +18,9 @@ Bu bölümde tüm veri sağlayıcıları tarafından desteklenen ve tüm sorgula
   
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Sorguda kurallı işlevler kullanıldığında, uygun işlev veri kaynağında çağrılır.  
   
- Tüm kurallı işlevlerde hem null girişi davranışı hem de hata koşulları açıkça belirtilmiştir. Mağaza sağlayıcılarının bu davranışla uyumlu olması gerekir, ancak [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] bu davranışı zorlamaz.  
+ Tüm kurallı işlevlerde hem null girişi davranışı hem de hata koşulları açıkça belirtilmiştir. Mağaza sağlayıcılarının bu davranışla uyumlu olması gerekir, ancak Entity Framework bu davranışı zorlamaz.  
   
- LINQ senaryolarında, clr yöntemlerini temel alınan [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] veri kaynağındaki yöntemlere eşleme ile ilgili sorgular. CLR yöntemleri kurallı işlevlere eşlenir, böylece veri kaynağından bağımsız olarak belirli bir yöntem kümesinin doğru şekilde eşlenmesi sağlanır.  
+ LINQ senaryolarında Entity Framework karşı sorgular, CLR yöntemlerini temel alınan veri kaynağındaki yöntemlere eşlemeyi içerir. CLR yöntemleri kurallı işlevlere eşlenir, böylece veri kaynağından bağımsız olarak belirli bir yöntem kümesinin doğru şekilde eşlenmesi sağlanır.  
   
 ## <a name="canonical-functions-namespace"></a>Kurallı Işlevler ad alanı  
  Kurallı işlev <xref:System.Data.Metadata.Edm>için ad alanı. <xref:System.Data.Metadata.Edm> Ad alanı tüm sorgulara otomatik olarak eklenir. Ancak, kurallı bir işlevle aynı ada sahip bir işlev içeren başka bir ad alanı içeri aktarılmışsa ( <xref:System.Data.Metadata.Edm> ad alanında), ad alanını belirtmeniz gerekir.  

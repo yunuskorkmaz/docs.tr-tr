@@ -2,20 +2,20 @@
 title: İmzalanmış ve/veya şifrelenmiş özel bir başlık oluşturma
 ms.date: 03/30/2017
 ms.assetid: e8668b37-c79f-4714-9de5-afcb88b9ff02
-ms.openlocfilehash: 76bfb6040f6b78765ed42ce7fbf86cdbd62c1e48
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d737647f8c0442a3d6fa0d077a1ffe2c251ea043
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61857382"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70856180"
 ---
 # <a name="creating-a-custom-header-that-is-signed-and-or-encrypted"></a>İmzalanmış ve/veya şifrelenmiş özel bir başlık oluşturma
-Bir WCF istemcisi kullanarak olmayan WCF Hizmeti çağrılırken bazen özel SOAP üstbilgileri kullanmak gereklidir. Wcf'de imzalanacak ve şifrelenecek özel üst bilgileri olmayan bir WCF Hizmeti ile çalışmasını engelleyen Standartlaştırma hata yoktur. Sorun, varsayılan XML ad alanları yanlış Standartlaştırma tarafından neden olur. Yalnızca imzalı ve/veya şifrelenmiş özel üst bilgileri olmayan WCF hizmetlerinde çağrılırken sorunlu budur.  Hizmet imzalanmış ve/veya şifrelenmiş özel üst bilgi içeren ileti aldığında imzası doğrulanamıyor. Bu geçici çözüm Standartlaştırma hatayı önler, olmayan WCF hizmetleri ile birlikte çalışabilirlik sağlar, ancak WCF hizmetleri ile birlikte çalışabilirlik engellemez.  
+WCF istemcisi kullanarak WCF olmayan bir hizmet çağrılırken, bazı durumlarda özel SOAP üstbilgileri kullanılması gerekir. WCF 'de imzalanmış ve şifrelenmiş özel üst bilgilerin WCF olmayan bir hizmetle çalışmasını önleyen bir kurallı kurallı hata vardır. Sorun, varsayılan XML ad alanlarının yanlış kurallı kullanım nedeniyle oluşur. Bu yalnızca, imzalanmış ve/veya şifrelenmiş özel üstbilgileriyle WCF olmayan hizmetler çağrılırken sorunlu olur.  Hizmet, imzalanmış ve/veya şifrelenmiş özel üstbilgiyi içeren iletiyi aldığında imzayı doğrulayamamıştır. Bu geçici çözüm, kurallı olmayan hizmetlerle birlikte çalışabilirliği sağlar, ancak WCF hizmetleriyle birlikte çalışabilirliği engellemez.  
   
-## <a name="defining-the-custom-header"></a>Özel üst bilgi tanımlama  
- Özel üst bilgiler tanımlanmış bir ileti sözleşmesi tanımlayarak ve üyelerini işaretleme sahip üst bilgi olarak gönderilmesini istediğiniz bir <xref:System.ServiceModel.MessageHeaderAttribute> özniteliği. Standartlaştırma hataya çalışmak üzere XML serileştiriciyi özel üst bilgi ile bir varsayılan ad alanı bildirimi yerine bir önek için ad alanı bildirir emin olmanız gerekir. Aşağıdaki kod, doğru ad alanı bildirimi sahip bir ileti üst bilgisi olarak kullanılacak veri türü tanımlamak gösterilmektedir.  
+## <a name="defining-the-custom-header"></a>Özel üstbilgiyi tanımlama  
+ Özel üstbilgiler bir ileti sözleşmesi tanımlayarak ve bir öznitelik olarak göndermek istediğiniz Üyeler bir <xref:System.ServiceModel.MessageHeaderAttribute> özniteliğiyle işaretlenerek tanımlanır. Kurallı hata gidermek için, XML seri hale getiricinin varsayılan ad alanı bildirimi yerine ön ek içeren özel üstbilgi için ad alanını bildirdiğinden emin olmanız gerekir. Aşağıdaki kod, doğru ad alanı bildirimiyle bir ileti üst bilgisi olarak kullanılacak veri türünün nasıl tanımlanacağını gösterir.  
   
-```  
+```csharp
 [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "3.0.4506.648")]  
 [System.SerializableAttribute()]  
 [System.Diagnostics.DebuggerStepThroughAttribute()]  
@@ -43,9 +43,9 @@ public partial class msgHeaderElement
 }  
 ```  
   
- Bu kod olarak adlandırılan yeni bir tür bildirir `msgHeaderElement` , seri hale getirilemiyor ile XML serileştirici. Bu türün bir örneğini serileştirilmiş olduğunda, bu nedenle Standartlaştırma hataya çalışma 'h' ön eki, bir ad alanı tanımlar.  İleti anlaşması örneği tanımlarsınız `msgHeaderElement` ve kendisiyle işaretlemek <xref:System.ServiceModel.MessageHeaderAttribute> özniteliği aşağıdaki örnekte gösterildiği gibi.  
+ Bu kod, XML serileştiriciyle `msgHeaderElement` seri hale getirilecek adlı yeni bir tür bildirir. Bu türden bir örnek serileştirildiğinde, ' h ' ön ekine sahip bir ad alanı tanımlar ve bu sayede kurallı hata etrafında çalışır.  İleti sözleşmesi daha sonra bir örneği `msgHeaderElement` tanımlar ve aşağıdaki örnekte gösterildiği gibi <xref:System.ServiceModel.MessageHeaderAttribute> özniteliği ile işaretler.  
   
-```  
+```csharp
 [MessageContract]  
 public  class MyMessageContract  
 {  

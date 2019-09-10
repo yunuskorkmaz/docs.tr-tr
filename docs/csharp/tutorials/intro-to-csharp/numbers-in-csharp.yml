@@ -1,30 +1,30 @@
 ### YamlMime:Tutorial
-title: İntegral ve kayan nokta numaraları ile düzenlemeC#
+title: İçindeki integral ve kayan noktalı sayıları işlemeC#
 metadata:
-  title: İçindeki numaralandırır C# -giriş C# etkileşimli öğretici
-  description: Bu öğreticide sayısal türleri hakkında bilgi edinmek için tarayıcınızı kullanacaksınız C# etkileşimli olarak. C# kodu yazacak ve kodunuzu doğrudan tarayıcınızda çalıştırma ve derleme sonuçlarını görmek için dağıtacağız.
+  title: C# C#
+  description: Sayısal türlerle ilgili bu öğreticide, etkileşimli olarak öğrenmek C# için tarayıcınızı kullanacaksınız. Kod yazacak C# ve kodunuzu doğrudan tarayıcıda derleyip çalıştırmanın sonuçlarını görecekeceğiz.
   audience: Developer
   ms.custom: mvc
   ms.date: 08/24/2018
   level: Beginner
   nextTutorialHref: branches-and-loops.yml
-  nextTutorialTitle: C# dilinde dallar ve döngüler
+  nextTutorialTitle: İçindeki dallar ve döngülerC#
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: 7122bda62465482340ebdd2b1dc37577de9a0e69
-  ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+  ms.openlocfilehash: af06d938f86841620784909b16e72d000452fc2a
+  ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 07/09/2019
-  ms.locfileid: "67661012"
+  ms.lasthandoff: 09/10/2019
+  ms.locfileid: "70850680"
 items:
 - durationInMinutes: 1
   content: >
-    Bu öğretici sayısal türlerle ilgili öğretir C# etkileşimli olarak yazmak için tarayıcınızı kullanarak C# ve derleyerek ve çalıştırarak kodunuzun sonuçlarını göreceksiniz. Bu, bir dizi ve C# matematik işlemlerini inceleyen ders içerir. Bu dersler size C# dilinin temellerini öğretin.
-- title: Tamsayı matematiğini İnceleme
+    Bu öğreticide, kodunuzu derleyip çalıştırmanın sonuçlarını yazmak C# C# ve görüntülemek için tarayıcınızı kullanarak etkileşimli olarak sayısal türleri öğretir. İçindeki C#sayıları ve matematik işlemlerini keşfetmenizi sağlayan bir dizi ders içerir. Bu dersler, C# dilin temellerini öğretir.
+- title: Tamsayı matematiğini keşfet
   durationInMinutes: 4
   content: >
-    Etkileşimli pencerede aşağıdaki kodu çalıştırın. Bunu yapmak için aşağıdaki kod bloğunu etkileşimli pencereye yazın ve **çalıştırma** düğmesi:
+    Etkileşimli pencerede aşağıdaki kodu çalıştırın. Bunu yapmak için, etkileşimli pencereye aşağıdaki kod bloğunu yazın ve **Çalıştır** düğmesine tıklayın:
 
 
     ```csharp
@@ -40,25 +40,25 @@ items:
     ```
 
 
-    Az önce tamsayılarla gerçekleştirilen temel matematik işlemlerinden birini gördünüz. `int` Türü temsil eder bir **tamsayı**, bir pozitif veya negatif tamsayı. Kullandığınız `+` sembol ekleme. Tamsayılar için kullanılan diğer matematiksel işlemler şunlardır:
+    Yalnızca tamsayılarla temel matematik işlemlerinden birini gördünüz. Tür bir tamsayıyı, pozitif veya negatif bir tam sayıyı temsil eder. **** `int` Eklemek için `+` simgesini kullanın. Tamsayılar için diğer yaygın matematik işlemleri şunlardır:
 
 
-    - `-` çıkarma için
+    - `-`çıkarma için
 
-    - `*` çarpma için
+    - `*`Çarpma için
 
-    - `/` bölme için
+    - `/`Bölüm için
 
 
     > [!TIP]
 
-    > Bu etkileşimli öğretici boyunca kendi etkileşimli pencerede yazdığınız kodu değiştirerek keşfedebilirsiniz. Bu öğretici, her adımda deneyebileceğiniz örnekler sunar.
+    > Bu etkileşimli öğreticide, etkileşimli pencerede yazdığınız kodu değiştirerek kendi kendinize araştırma yapabilirsiniz. Bu öğreticide, her adımda deneyebileceğiniz örnekler sağlanmaktadır.
 
 
-    Bu farklı işlemleri keşfederek başlayın. Bu işlemlerden her biriyle denemek için üçüncü satırı değiştirin. Her düzenlemeden sonra tıklayın **çalıştırma** düğmesi.
+    Bu farklı işlemleri inceleyerek başlayın. Bu işlemlerin her birini denemek için üçüncü satırı değiştirin. Her Düzenlemeden sonra **Çalıştır** düğmesine tıklayın.
 
 
-    Çıkarma:
+    StrA
 
 
     ```csharp
@@ -68,7 +68,7 @@ items:
     ```
 
 
-    Çarpma:
+    Anda
 
 
     ```csharp
@@ -78,7 +78,7 @@ items:
     ```
 
 
-    Bölme:
+    Bölmenin
 
 
     ```csharp
@@ -88,27 +88,27 @@ items:
     ```
 
 
-    Dilerseniz aynı satırda birden çok matematik işlemi gerçekleştirerek de deneyebilirsiniz.
+    İsterseniz aynı satırda birden çok matematik işlemi gerçekleştirerek da deneyebilirsiniz.
 
 
     > [!TIP]
 
-    > C# (veya herhangi bir programlama dilini) keşfederken, kod yazdığınızda hatalar yapacaksınız. **Derleyici** bu hataları bulup size bildirir. Çıktı, hata iletileri içerdiğinde, örnek kod ve neyin düzeltilmesi gerektiğini görmek için etkileşimli pencerede kodu yakından bakın.
+    > Keşfederken C# (veya herhangi bir programlama dilini), kod yazarken hata oluşturursunuz. **Derleyici** bu hataları bulacak ve size rapor eder. Çıktı hata iletileri içerdiğinde, nelerin düzeltileceğini görmek için örnek koda ve etkileşimli penceredeki koda yakından bakın.
 
-    > Bu alıştırma, C# kodunun yapısını öğrenmenize yardımcı olur.
+    > Bu alıştırma, C# kod yapısını öğrenmenize yardımcı olur.
 
 
     > [!NOTE]
 
-    > Bu çevrimiçi kodlama deneyimi Önizleme modundadır. Sorunlarla karşılaşırsanız, Lütfen bunları rapor [dotnet/try deposunda](https://github.com/dotnet/try/issues).
-- title: İşlem sırasını İnceleme
+    > Bu çevrimiçi kodlama deneyimi önizleme modundadır. Sorunlarla karşılaşırsanız, lütfen [DotNet/depoyu dene](https://github.com/dotnet/try/issues)' ye bildirin.
+- title: İşlem sırasını keşfet
   durationInMinutes: 7
   content: >
-    C# dil kuralları Matematikte öğrendiğiniz kurallarla tutarlı farklı matematik işlemlerinin önceliğini tanımlar.
+    C# Dil, matematiksel olarak öğrendiğiniz kurallarla tutarlı kurallara sahip farklı matematik işlemlerinin önceliğini tanımlar.
 
-    Çarpma ve bölme, toplama ve çıkarma öncelik kazanır.
+    Çarpma ve bölme, toplama ve çıkarma konusunda önceliklidir.
 
-    Bu, etkileşimli pencerede aşağıdaki kodu çalıştırarak keşfedin:
+    Etkileşimli pencerede aşağıdaki kodu çalıştırarak bunu keşfedebilirsiniz:
 
 
     ```csharp
@@ -126,10 +126,10 @@ items:
     ```
 
 
-    Çıkış, çarpma işleminin toplama işleminden önce gerçekleştiğini gösterir.
+    Çıktı, çarpma 'nın ekleme işleminden önce gerçekleştirildiğini gösterir.
 
 
-    İşlemi parantez içine ekleyerek farklı bir işlem sırasını zorlayabilir veya önce gerçekleştirilen işlemler, istediğiniz:
+    Önce gerçekleştirilmesini istediğiniz işlemin veya işlemlerin çevresine parantez ekleyerek farklı bir işlem sırası zorlayabilirsiniz:
 
 
     ```csharp
@@ -147,7 +147,7 @@ items:
     ```
 
 
-    Birçok farklı işlemi birleştirerek daha fazlasını keşfedin. Yukarıdaki dördüncü satırı şunun gibi değiştirin:
+    Birçok farklı işlemi birleştirerek daha fazlasını keşfedebilirsiniz. Yukarıdaki dördüncü satırı şunun gibi bir şekilde değiştirin:
 
 
     ```csharp
@@ -157,10 +157,10 @@ items:
     ```
 
 
-    Tamsayılar için ilgi çekici bir davranışı fark etmiş olabilirsiniz. Sonucun ondalık veya kesir bölümü içermesini bile beklediğiniz, Tamsayı bölme her zaman tamsayı sonucu üretir.
+    Tamsayılar için ilginç bir davranış fark etmiş olabilirsiniz. Sonucun ondalık veya kesir kısmını içermesini bekleseniz bile, tam sayı bölümü her zaman bir tamsayı sonucu üretir.
 
 
-    Bu davranışı görmediyseniz şunları deneyin:
+    Bu davranışı görmediyseniz, aşağıdakileri deneyin:
 
 
     ```csharp
@@ -178,18 +178,18 @@ items:
     ```
 
 
-    Tıklayın **çalıştırma** yeniden sonuçları görmek için.
+    Sonuçları görmek için yeniden **Çalıştır** ' a tıklayın.
 
 
     > [!NOTE]
 
-    > Bu çevrimiçi kodlama deneyimi Önizleme modundadır. Sorunlarla karşılaşırsanız, Lütfen bunları rapor [dotnet/try deposunda](https://github.com/dotnet/try/issues).
-- title: Tamsayı duyarlığını ve sınırlarını İnceleme
+    > Bu çevrimiçi kodlama deneyimi önizleme modundadır. Sorunlarla karşılaşırsanız, lütfen [DotNet/depoyu dene](https://github.com/dotnet/try/issues)' ye bildirin.
+- title: Tamsayı hassasiyetini ve limitleri keşfet
   durationInMinutes: 5
   content: >
-    Son örnek, Tamsayı bölme sonucu kestiğini size göstermiştir.
+    Bu son örnek, bu tamsayı bölümünün sonucu ne olduğunu gösterdi.
 
-    Alabileceğiniz **kalan** kullanarak **modül** işleci `%` karakter:
+    **Geri kalanı** , **mod** `%` işleci, şu karakter ile alabilirsiniz:
 
 
     ```csharp
@@ -211,7 +211,7 @@ items:
     ```
 
 
-    C# tamsayı türü diğer bir özelliğiyle matematiksel tamsayılardan farklıdır: `int` türünün alt ve üst sınırları vardır. Bu sınırları görmek için etkileşimli pencerede şu kodu çalıştırın:
+    C# Tamsayı türü matematik tamlarından farklı bir şekilde farklılık gösterir: `int` türün en az ve en fazla sınırı vardır. Bu sınırları görmek için bu kodu etkileşimli pencerede çalıştırın:
 
 
     ```csharp
@@ -225,7 +225,7 @@ items:
     ```
 
 
-    Bir hesaplama, bu sınırları aşan bir değer veriyorsa, sahip olduğunuz bir **underflow** veya **taşma** koşul. Yanıtın bir sınırdan diğerine kaydığı görünür. Şu iki satırı bir örnek görmek için etkileşimli pencereye ekleyin:
+    Hesaplama bu sınırları aşan bir değer üretirse, bir **yetersiz** yer veya **taşma** koşulunuz vardır. Yanıt bir sınırdan diğerine kaydırılır. Bir örnek görmek için bu iki satırı etkileşimli pencereye ekleyin:
 
 
     ```csharp
@@ -237,25 +237,25 @@ items:
     ```
 
 
-    Yanıt çok az (negatif) tamsayı yakın olduğuna dikkat edin. Aynı olan `min + 2`.
+    Yanıtın en düşük (negatif) tamsayıya çok yakın olduğuna dikkat edin. Bu, ile `min + 2`aynıdır.
 
-    Toplama işlemi **taştı** tamsayılar için izin verilen değerler.
+    Toplama işlemi, tamsayılar için izin verilen değerleri **taşırdı** .
 
-    Taşma "etrafında en büyük olası tamsayı değerinden en küçük kaydırıldığı" yanıt oldukça büyük negatif bir sayı olmasıdır.
+    Bir taşma, olası en büyük tamsayı değerinden en küçüğe "kaydırdığı için, yanıt çok büyük negatif bir sayıdır.
 
 
-    Farklı sınırlar ve ne zaman kullanacağınız duyarlık içeren başka sayısal türler vardır `int` türü, gereksinimlerinizi karşılamadığında. Bir sonraki adımda bunları inceleyelim.
+    `int` Türü gereksinimlerinizi karşılamıyorsa, farklı sınırlara ve duyarlığa sahip başka sayısal türler vardır. Bundan sonra bu ileri keşfedelim.
 
 
     > [!NOTE]
 
-    > Bu çevrimiçi kodlama deneyimi Önizleme modundadır. Sorunlarla karşılaşırsanız, Lütfen bunları rapor [dotnet/try deposunda](https://github.com/dotnet/try/issues).
-- title: Çift tür ile çalışma
+    > Bu çevrimiçi kodlama deneyimi önizleme modundadır. Sorunlarla karşılaşırsanız, lütfen [DotNet/depoyu dene](https://github.com/dotnet/try/issues)' ye bildirin.
+- title: Double türüyle çalışma
   durationInMinutes: 5
   content: >
-    `double` Sayısal türü temsil eder, çift duyarlıklı kayan nokta sayısı. Bu terimler sizin için yeni olabilir. A **kayan nokta** numarası, çok büyük ya da büyüklük açısından küçük olabilen, tamsayı olmayan değerleri temsil etmek kullanışlıdır. **Çift duyarlıklı** bu numaraları daha fazla duyarlık kullanılarak depolandığı anlamına gelir **tek duyarlıklı**. Modern bilgisayarlarda çift duyarlıklı tek duyarlıklı sayılara kullanmak daha yaygındır.
+    `double` Sayısal tür bir çift duyarlıklı kayan noktalı sayıyı temsil eder. Bu terimler sizin için yeni olabilir. **Kayan noktalı** sayı, çok büyük veya küçük olabilecek tamsayı olmayan sayıları temsil etmek için kullanışlıdır. **Çift duyarlıklı** , bu sayıların **tek duyarlığa**göre daha fazla duyarlık kullanılarak depolandığı anlamına gelir. Modern bilgisayarlarda, tek duyarlık sayılarıyla çift duyarlık kullanmak daha yaygındır.
 
-    Haydi keşfedelim. Etkileşimli pencerede aşağıdaki kodu deneyin ve sonuca bakın:
+    Keşfedelim. Etkileşimli pencerede aşağıdaki kodu deneyin ve sonucu görün:
 
 
     ```csharp
@@ -273,7 +273,7 @@ items:
     ```
 
 
-    Yanıt sayının ondalık kısmını içerdiğine dikkat edin. Çift değerlerle biraz daha karmaşık bir ifadeyi deneyin:
+    Yanıtın, bölümün ondalık kısmını içerdiğine dikkat edin. Double değerleri ile biraz daha karmaşık bir ifade deneyin:
 
 
     ```csharp
@@ -291,7 +291,7 @@ items:
     ```
 
 
-    Çift değerin aralığı, tamsayı değerlerinden çok büyük. Etkileşimli pencerede aşağıdaki kodu deneyin:
+    Double değerinin aralığı tamsayı değerlerinden çok daha büyüktür. Etkileşimli pencerede aşağıdaki kodu deneyin:
 
 
     ```csharp
@@ -305,10 +305,10 @@ items:
     ```
 
 
-    Bu değerler bilimsel gösterimde yazdırılır. Sol tarafındaki sayı `E` katsayıdır. Sağ taraftaki sayı, 10 'un bir kuvveti üstür.
+    Bu değerler bilimsel gösterimde yazdırılır. Öğesinin solundaki sayı mantisinin ' `E` dir. Sağdaki sayı, 10 ' un üssü olarak üs değeri olan sayıdır.
 
 
-    Yalnızca ondalık sayılar gibi C# double yuvarlama hataları olabilir. Bu kodu deneyin:
+    Matematiği gibi ondalık sayılar gibi, içindeki Double C# değerleri de yuvarlama hataları içerebilir. Şu kodu deneyin:
 
 
     ```csharp
@@ -320,22 +320,22 @@ items:
     ```
 
 
-    Bildiğiniz `0.3` yinelenen tam olarak aynı olup `1/3`.
+    `0.3` Tekrarda tam olarak `1/3`aynı olmadığını bilirsiniz.
 
 
-    ***Sınama***
+    ***Sına***
 
 
-    Büyük sayılar, küçük sayılar, çarpma ve bölme kullanarak ile diğer hesaplamaları deneyin `double` türü.  Daha karmaşık hesaplamalar deneyin.
+    `double` Türü kullanarak büyük sayılar, küçük sayılar, çarpma ve bölme ile diğer hesaplamaları deneyin.  Daha karmaşık hesaplamalar deneyin.
 
 
     > [!NOTE]
 
-    > Bu çevrimiçi kodlama deneyimi Önizleme modundadır. Sorunlarla karşılaşırsanız, Lütfen bunları rapor [dotnet/try deposunda](https://github.com/dotnet/try/issues).
+    > Bu çevrimiçi kodlama deneyimi önizleme modundadır. Sorunlarla karşılaşırsanız, lütfen [DotNet/depoyu dene](https://github.com/dotnet/try/issues)' ye bildirin.
 - title: Sabit nokta türleriyle çalışma
   durationInMinutes: 8
   content: >
-    C# dilinde temel sayısal türleri gördünüz: tamsayılar ve çiftler.  Bilgi edinmek için bir türü vardır: `decimal` türü. `decimal` Türünde daha küçük bir aralığa ancak daha fazla duyarlığa `double`. Terim **sabit nokta** Ondalık ayırıcının (veya ikili noktasının) hareket etmediği anlamına gelir. Bir göz atalım:
+    Temel sayısal türleri C#: tamsayılar ve Double değerleri ile gördünüz.  Öğreneceğinizi bir başka tür vardır: `decimal` türü. Türün daha küçük bir aralığı, ancak daha fazla `double`duyarlık vardır. `decimal` **Sabit nokta** terimi, ondalık noktanın (veya ikili noktanın) taşınmayacağı anlamına gelir. Bir göz atalım:
 
 
     ```csharp
@@ -349,7 +349,7 @@ items:
     ```
 
 
-    Aralık değerinden küçük olduğunu fark `double` türü. Aşağıdaki kodu deneyerek ondalık türünde daha fazla duyarlık görebilirsiniz:
+    Aralığın `double` türden küçük olduğuna dikkat edin. Aşağıdaki kodu deneyerek ondalık türüyle daha büyük duyarlık görebilirsiniz:
 
 
     ```csharp
@@ -370,28 +370,28 @@ items:
     ```
 
 
-    `M` Numaralarda sonekidir nasıl bir sabit kullanması gerektiğini belirten `decimal` türü.
+    Sayıların son eki, bir sabitin `decimal` türü kullanması gerektiğini gösterir. `M`
 
 
-    Ondalık türünün kullanıldığı Matematikte, ondalık noktanın sağındaki daha fazla rakam olduğuna dikkat edin.
+    Ondalık türü kullanan matematik, ondalık noktanın sağında daha fazla basamağa sahip olduğuna dikkat edin.
 
 
-    ***Sınama***
+    ***Sına***
 
 
-    Farklı sayısal türleri gördüğünüze göre çapı 2,50 santimetre olan bir dairenin alanını hesaplayan kodu yazın. Unutmayın PI sayısı ile çarpılan bir dairenin alanının kare RADIUS olduğunu. İpucu: .NET, PI sayısı için bir sabit içeriyor <xref:System.Math.PI?displayProperty=nameWithType> , bu değer için kullanabilirsiniz.
+    Farklı sayısal türleri gördüğünüze göre, yarıçapı 2,50 santimetre olan bir dairenin alanını hesaplayan bir kod yazın. Bir daire alanının, Radius ile çarpıldığı bir daire olduğunu unutmayın. Bir ipucu: .net, <xref:System.Math.PI?displayProperty=nameWithType> bu değer için kullanabileceğiniz PI için bir sabit içerir.
 
 
     > [!NOTE]
 
-    > Bu çevrimiçi kodlama deneyimi Önizleme modundadır. Sorunlarla karşılaşırsanız, Lütfen bunları rapor [dotnet/try deposunda](https://github.com/dotnet/try/issues).
+    > Bu çevrimiçi kodlama deneyimi önizleme modundadır. Sorunlarla karşılaşırsanız, lütfen [DotNet/depoyu dene](https://github.com/dotnet/try/issues)' ye bildirin.
 
 
-    19 ile 20 arasında bir yanıt almanız gerekir.
-- title: Görevi tamamlama
+    19 ila 20 arasında bir yanıt almanız gerekir.
+- title: Sınama Tamam
   durationInMinutes: 1
   content: >
-    Bu gibi bir şeyle gündeme mı?
+    Bunun gibi bir konuyla karşılaştınız mı?
 
 
     ```csharp
@@ -405,25 +405,10 @@ items:
     ```
 
 
-    Dilerseniz diğer formüllerden deneyin.
+    İsterseniz başka formüller de deneyin.
 
 
     > [!NOTE]
 
-    > Bu çevrimiçi kodlama deneyimi Önizleme modundadır. Sorunlarla karşılaşırsanız, Lütfen bunları rapor [dotnet/try deposunda](https://github.com/dotnet/try/issues).
-- content: >-
-    Tamamladınız "içindeki numaralandırır C#" etkileşimli bir öğretici. Tıklayabilirsiniz **dallar ve döngüler** etkileşimli bir sonraki öğreticiye başlatmak için aşağıdaki bağlantı ya da ziyaret edebilirsiniz [.NET site](https://www.microsoft.com/net/learn/dotnet/hello-world-tutorial) .NET Core SDK'sını indirmek için makinenizde bir proje oluşturun ve kodlama tutun. "Öğrenme tut" adımı bu öğreticilere geri getirir.
-
-
-    Aşağıdaki konularda C# dilinde sayılar hakkında daha fazla bilgi edinebilirsiniz:
-
-
-    - [Tam sayı türleri](../../language-reference/builtin-types/integral-numeric-types.md)
-
-    - [Kayan Nokta Türleri Tablosu](../../language-reference/builtin-types/floating-point-numeric-types.md)
-
-    - [Yerleşik Türler Tablosu](../../language-reference/keywords/built-in-types-table.md)
-
-    - [Örtük Sayısal Dönüştürmeler Tablosu](../../language-reference/keywords/implicit-numeric-conversions-table.md)
-
-    - [Açık Sayısal Dönüştürmeler Tablosu](../../language-reference/keywords/explicit-numeric-conversions-table.md)
+    > Bu çevrimiçi kodlama deneyimi önizleme modundadır. Sorunlarla karşılaşırsanız, lütfen [DotNet/depoyu dene](https://github.com/dotnet/try/issues)' ye bildirin.
+- content: "\"Numaraları C#\" Etkileşimli öğreticiden tamamladınız. Sonraki etkileşimli öğreticiye başlamak için aşağıdaki **dallar ve döngüler** bağlantısına tıklayabilir veya [.net sitesini](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) ziyaret ederek .NET Core SDK indirebilir, makinenizde bir proje oluşturabilir ve kodlamaya devam edebilirsiniz. \"Sonraki adımlar\" bölümü, sizi bu öğreticilere geri getirir.\n\nAşağıdaki konularda, içindeki C# numaralar hakkında daha fazla bilgi edinebilirsiniz:\n\n- [Integral türleri](../../language-reference/builtin-types/integral-numeric-types.md)\n- [Kayan Nokta Türleri Tablosu](../../language-reference/builtin-types/floating-point-numeric-types.md)\n- [Yerleşik Türler Tablosu](../../language-reference/keywords/built-in-types-table.md)\n- [Örtük Sayısal Dönüştürmeler Tablosu](../../language-reference/keywords/implicit-numeric-conversions-table.md)\n- [Açık Sayısal Dönüştürmeler Tablosu](../../language-reference/keywords/explicit-numeric-conversions-table.md)"

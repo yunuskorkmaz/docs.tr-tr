@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e41df91ceb9e4b776c2aa1ce864b7e09ec485fd5
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 65eee2e834251817b461f1cd1debf212696d5a5f
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67661948"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855698"
 ---
 # <a name="icorprofilerinfosetilinstrumentedcodemap-method"></a>ICorProfilerInfo::SetILInstrumentedCodeMap Yöntemi
 
-Belirtilen Microsoft Ara dil (MSIL) map girişleri kullanarak belirtilen işlev için kod Haritası ayarlar.
+Belirtilen Microsoft ara dili (MSIL) eşleme girdilerini kullanarak belirtilen işlev için bir kod Haritası ayarlar.
 
 > [!NOTE]
-> Çağırma .NET Framework sürüm 2.0 `SetILInstrumentedCodeMap` üzerinde bir `FunctionID` genel işlev belirli uygulama etki alanında temsil eder, bu işlevin uygulama etki alanındaki tüm örnekleri etkiler.
+> .NET Framework sürüm 2,0 ' de, belirli `SetILInstrumentedCodeMap` bir uygulama `FunctionID` etki alanında genel bir işlevi temsil eden bir üzerinde çağırmak, uygulama etki alanındaki bu işlevin tüm örneklerini etkiler.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -44,28 +44,28 @@ HRESULT SetILInstrumentedCodeMap(
 ## <a name="parameters"></a>Parametreler
 
 `functionId`\
-[in] Kod Haritası ayarlanacağı işlevi kimliği.
+'ndaki Kod eşlemesi ayarlanacak işlevin KIMLIĞI.
 
 `fStartJit`\
-[in] Belirten Boolean bir değer olup olmadığını çağrısı `SetILInstrumentedCodeMap` yöntemidir, belirli bir ilk `FunctionID`. Ayarlama `fStartJit` için `true` yapılan ilk çağrıda `SetILInstrumentedCodeMap` için bir verilen `FunctionID`ve `false` tutarında ücret alınır.
+'ndaki `SetILInstrumentedCodeMap` Yöntemine yapılan çağrının, belirli `FunctionID`bir için ilk değeri olup olmadığını belirten bir Boolean değer. Verileniçinilk`fStartJit` çağrıda`SetILInstrumentedCodeMap` ve`false` daha sonra öğesine ayarlanır. `FunctionID` `true`
 
 `cILMapEntries`\
-[in] İçindeki öğelerin sayısını `cILMapEntries` dizisi.
+'ndaki `cILMapEntries` Dizideki öğelerin sayısı.
 
 `rgILMapEntries`\
-[in] Bir dizi cor_ıl_map yapılarının her biri bir MSIL uzaklığını belirtir.
+'ndaki Her biri bir MSIL sapmasını belirten COR_IL_MAP yapılarından oluşan bir dizi.
 
 ## <a name="remarks"></a>Açıklamalar
 
-Bir profil oluşturucu, kaynak kodundaki deyimleri bir yöntemin genellikle bu yöntem (örneğin, belirtilen kaynak satırı ulaşıldığında bildirmek için) izleme için ekler. `SetILInstrumentedCodeMap` özgün MSIL yönergeleri yeni konumlarına eşlemek bir profil oluşturucunun sağlar. Bir profil oluşturucu kullanabilirsiniz [Icorprofilerınfo::getıltonativemapping](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getiltonativemapping-method.md) özgün MSIL uzaklığı için belirli bir yerel uzaklık almak için yöntemi.
+Profil Oluşturucu genellikle bu yöntemi işaretlemek için (örneğin, belirli bir kaynak satırına ulaşıldığında bildirmek üzere) bir yöntemin kaynak koduna deyimler ekler. `SetILInstrumentedCodeMap`profil oluşturucunun özgün MSIL talimatlarını yeni konumlarına eşlemesine olanak sağlar. Bir profil oluşturucu, belirli bir yerel kenar için özgün MSIL sapmasını almak üzere [ICorProfilerInfo:: GetILToNativeMapping](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getiltonativemapping-method.md) metodunu kullanabilir.
 
-Hata ayıklayıcı, her eski uzaklığı bir MSIL içindeki özgün, değiştirilmemiş MSIL kod uzaklığı için ifade eder ve her yeni uzaklık yeni, izleme eklenmiş kod içinde MSIL uzaklığı başvurduğu varsayar. Harita, artan düzende sıralanmalıdır. Düzgün çalışması için atlamak için aşağıdaki yönergeleri izleyin:
+Hata ayıklayıcı, her bir eski kaydırın orijinal, değiştirilmemiş MSIL kodu içindeki bir MSIL denkleşeceğini ve her yeni kaydırın yeni, belgelenmiş koddaki MSIL denkleşeceğini varsayacaktır. Haritanın artan sırada sıralanması gerekir. Adımlamayı düzgün şekilde çalışmak için aşağıdaki yönergeleri izleyin:
 
-- İzleme eklenmiş MSIL kodu yeniden değil.
+- Belgelenmiş MSIL kodunu yeniden düzenleme.
 
 - Özgün MSIL kodunu kaldırmayın.
 
-- Program veritabanı (PDB) dosyasındaki dizi noktalarını girişlerinde haritada içerir. Harita eksik girdiler enterpolasyon değil. Bu nedenle, aşağıdaki harita verilen:
+- Haritadaki program veritabanı (PDB) dosyasındaki tüm sıra noktalarına ait girişleri dahil edin. Eşleme, eksik girişleri enterpolamıyor. Bu nedenle, aşağıdaki haritada verilmiştir:
 
   (0 eski, 0 yeni)
 
@@ -73,27 +73,29 @@ Hata ayıklayıcı, her eski uzaklığı bir MSIL içindeki özgün, değiştiri
 
   (9 eski, 20 yeni)
 
-  - Yeni Uzaklık 0, 0, 1, 2, 3 veya 4 eski bir uzaklık eşleştirilir.
+  - 0, 1, 2, 3 veya 4 ' ün eski bir kayması, 0 ' dan yeni bir uzaklığa eşlenecek.
 
-  - Eski bir uzaklık 5, 6, 7 veya 8, 10 yeni uzaklık eşleştirilir.
+  - 5, 6, 7 veya 8 ' in eski bir kayması, yeni% 10 ' a eşlenir.
 
-  - 9 veya daha eski bir uzaklık yeni uzaklık 20 eşleştirilir.
+  - Daha eski bir 9 veya üzeri fark, 20. yeni uzaklığa eşlenir.
 
-  - Yeni bir uzaklığı 0, 1, 2, 3, 4, 5, 6, 7, 8 veya 9 eski uzaklığı 0 eşleştirilir.
+  - 0, 1, 2, 3, 4, 5, 6, 7, 8 ya da 9 ' un yeni bir kayması, 0 ' dan eski uzaklığa eşlenir.
 
-  - Yeni bir uzaklık 10, 11, 12, 13, 14, 15, 16, 17, 18 veya 19 eski uzaklığı 5 eşleştirilir.
+  - 10, 11, 12, 13, 14, 15, 16, 17, 18 veya 19 ' un yeni bir kayması, 5 eski uzaklığa eşlenir.
 
-  - 20 veya üzeri bir yeni uzaklığı eski uzaklığı 9 eşleştirilir.
+  - 20 veya üzeri yeni bir konum, eski konum 9 ' A eşlenir.
+
+.NET Framework 3,5 ve önceki sürümlerde, [CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc) yöntemini `rgILMapEntries` çağırarak diziyi ayırabilirsiniz. Çalışma zamanı bu belleğin sahipliğini aldığı için profil oluşturucu onu serbest bırakmayı denememelidir.
 
 ## <a name="requirements"></a>Gereksinimler
 
-**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).
+**Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).
 
-**Üst bilgi:** CorProf.idl, CorProf.h
+**Üst bilgi** CorProf. IDL, CorProf. h
 
-**Kitaplığı:** CorGuids.lib
+**Kitaplığı** Corguid. lib
 
-**.NET framework sürümleri:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]
+**.NET Framework sürümleri:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

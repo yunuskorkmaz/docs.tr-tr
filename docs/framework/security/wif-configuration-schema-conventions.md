@@ -3,48 +3,46 @@ title: WIF Yapılandırma Şeması Kuralları
 ms.date: 03/30/2017
 ms.assetid: f7864356-f72f-4cae-995c-18e0431f8a58
 author: BrucePerlerMS
-ms.openlocfilehash: 39ed32bb7e926f275e996b09e746c879c6d3fe9e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6e13915121884ecb4a0e54344e02d29650f54c6f
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61909330"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851485"
 ---
 # <a name="wif-configuration-schema-conventions"></a>WIF Yapılandırma Şeması Kuralları
-Bu konu, Windows Identity Foundation (WIF) yapılandırma konuları kullanılan kuralları açıklar ve bazı ortak özelliklerini açıklar ve kullanılan öznitelikler [ \<system.identityModel >](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md) ve [ \<System.IdentityModel.Services >](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md) bölümler.  
+Bu konuda, Windows Identity Foundation (WIF) yapılandırma konularında kullanılan kurallar ele alınmaktadır ve [ \<System. IdentityModel](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md) [ \< > ve ' de kullanılan bazı ortak özellikler ve öznitelikler açıklanmaktadır. System. IdentityModel. Services >](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md) bölümler.  
   
 <a name="BKMK_Modes"></a>   
-## <a name="modes"></a>Modları  
- WIF yapılandırma öğelerinin çoğu bir `mode` özniteliği. Bu öznitelik genellikle hangi sınıfın belirli bir işleme parçası yapmak için kullanılır ve hangi yapılandırma öğelerinin geçerli öğenin alt öğeleri izin verilir denetimleri. Bir yapılandırma hatası nedeniyle modu ayarları yapılandırma dosyasında bulunan öğeleri göz ardı edilir gerçekleştirilecektir.  
+## <a name="modes"></a>Mod  
+ WIF yapılandırma öğelerinin birçoğu bir `mode` özniteliğe sahiptir. Bu öznitelik, genellikle işlemenin belirli bir parçasını yapmak için kullanılan sınıfı ve geçerli öğenin alt öğeleri olarak hangi yapılandırma öğelerine izin verileceğini denetler. Yapılandırma dosyasına dahil edilen öğeler mod ayarları nedeniyle yoksayılırsa, bir yapılandırma hatası oluşur.  
   
 <a name="BKMK_TimespanValues"></a>   
 ## <a name="timespan-values"></a>TimeSpan değerleri  
- Burada <xref:System.TimeSpan> olan bir öznitelik türü kullanıldığında, bkz: <xref:System.TimeSpan.Parse%28System.String%29> izin verilen biçim görmek için yöntemi. Bu biçim için şu belirtime uygun.  
+ Bir <xref:System.TimeSpan> özniteliğin türü olarak kullanıldığı yer, izin verilen biçimi görmek için <xref:System.TimeSpan.Parse%28System.String%29> yöntemine bakın. Bu biçim aşağıdaki belirtime uyar.  
   
-```  
-[ws][-]{ d | [d.]hh:mm[:ss[.ff]] }[ws]  
-```  
+`[ws][-]{ d | [d.]hh:mm[:ss[.ff]] }[ws]`  
   
- Örneğin, "30", "30.00:00", "30.00:00:00" tüm 30 gün anlamına gelmektedir. ve "00:05", "00: 05:00", "0.00:05:00.00" tüm 5 dakika anlamına gelir.  
+ Örneğin, "30", "30.00:00", "30.00:00:00" tümü 30 gün; ve "00:05", "00:05:00", "0.00:05:00.00" tümü 5 dakikada bir gelir.  
   
 <a name="BKMK_CertificateReferences"></a>   
 ## <a name="certificate-references"></a>Sertifika başvuruları  
- Sertifikaları kullanarak başvurular çeşitli öğeler ele `<certificateReference>` öğesi. Bir sertifika başvururken aşağıdaki öznitelikleri kullanılabilir.  
+ Birkaç öğe, `<certificateReference>` öğesini kullanarak sertifikalara başvurular alır. Bir sertifikaya başvurulduğunda, aşağıdaki öznitelikler kullanılabilir.  
   
 |||  
 |-|-|  
-|`storeLocation`|Değerini <xref:System.Security.Cryptography.X509Certificates.StoreLocation> numaralandırma: `CurrentUser` veya `CurrentMachine`.|  
-|`storeName`|Değerini <xref:System.Security.Cryptography.X509Certificates.StoreName> numaralandırma; en yararlı olan bu bağlam için `My` ve `TrustedPeople`.|  
-|`x509FindType`|Değerini <xref:System.Security.Cryptography.X509Certificates.X509FindType> numaralandırma; en yararlı olan bu bağlam için `FindBySubjectName` ve `FindByThumbprint`. Hata olasılığını ortadan kaldırmak için önerilir `FindByThumbprint` türü, üretim ortamlarında kullanılabilir.|  
-|`findValue`|Sertifika bulmak için kullanılan değerini temel alarak `x509FindType` özniteliği. Hata olasılığını ortadan kaldırmak için önerilir `FindByThumbprint` türü, üretim ortamlarında kullanılabilir. Zaman `FindByThumbPrint` belirtilirse, bu öznitelik sertifika onaltılık dize biçiminde bir değer alır parmak izi; Örneğin, "97249e1a5fa6bee5e515b82111ef524a4c91583f".|  
+|`storeLocation`|<xref:System.Security.Cryptography.X509Certificates.StoreLocation> Sabit listesinin bir değeri: `CurrentUser` veya `CurrentMachine`.|  
+|`storeName`|<xref:System.Security.Cryptography.X509Certificates.StoreName> Sabit listesinin bir değeri; bu bağlam için en yararlı değer ve ' `My` `TrustedPeople`dir.|  
+|`x509FindType`|<xref:System.Security.Cryptography.X509Certificates.X509FindType> Sabit listesinin bir değeri; bu bağlam için en yararlı değer ve ' `FindBySubjectName` `FindByThumbprint`dir. Hata olasılığını ortadan kaldırmak için, `FindByThumbprint` türün üretim ortamlarında kullanılması önerilir.|  
+|`findValue`|`x509FindType` Özniteliği temel alarak sertifikayı bulmak için kullanılan değer. Hata olasılığını ortadan kaldırmak için, `FindByThumbprint` türün üretim ortamlarında kullanılması önerilir. `FindByThumbPrint` Belirtildiğinde, bu öznitelik, sertifika parmak izinin onaltılı dize biçimi olan bir değer alır; örneğin, "97249e1a5fa6bee5e515b82111ef524a4c91583f".|  
   
 <a name="BKMK_CustomTypeReferences"></a>   
 ## <a name="custom-type-references"></a>Özel tür başvuruları  
- Çeşitli öğeleri kullanarak özel türler başvurusu `type` özniteliği. Bu öznitelik, özel bir tür adını belirtmeniz gerekir. Genel Derleme Önbelleği (GAC) gelen bir tür başvuru için bir tanımlayıcı ad kullanılmalıdır. Depo bir derlemeden bir tür başvurmak için / dizin, bir basit başvuru bütünleştirilmiş kodla nitelenen kullanılabilir. App_Code içinde tanımlı türleri / dizin ile uygun bir derleme yok basit tür adı belirterek de başvurulabilir.  
+ Birçok öğe özel türlere `type` özniteliği kullanarak başvurur. Bu öznitelik, özel türün adını belirtmelidir. Genel derleme önbelleğinden (GAC) bir türe başvurmak için, tanımlayıcı bir ad kullanılmalıdır. Bin/dizindeki bir derlemeden bir türe başvurmak için, basit bir derleme nitelikli başvuru kullanılabilir. App_Code/Directory içinde tanımlı türlere, yalnızca uygun derleme olmadan tür adı belirtilerek de başvurulabilir.  
   
- Özel türler belirtilen türden türetilmiş ve sağlamaları gerekir bir `public` varsayılan (0 bağımsız değişkeni) Oluşturucu.  
+ Özel türler belirtilen türden türetilmelidir ve `public` varsayılan (0 bağımsız değişken) Oluşturucusu sağlamalıdır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [\<System.IdentityModel >](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md)
-- [\<System.IdentityModel.Services >](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md)
+- [\<System. IdentityModel >](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md)
+- [\<System. IdentityModel. Services >](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md)

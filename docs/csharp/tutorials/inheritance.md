@@ -1,67 +1,67 @@
 ---
-title: C# içinde devralma
-description: C# kitaplıkları ve uygulamaları içinde devralma kullanmayı öğrenin.
+title: DevralınanlarC#
+description: C# Kitaplıklarda ve uygulamalarda devralma kullanmayı öğrenin.
 author: rpetrusha
 ms.author: ronpet
 ms.date: 07/05/2018
 ms.assetid: aeb68c74-0ea0-406f-9fbe-2ce02d47ef31
-ms.openlocfilehash: 644e0bb281525fad12e263b31263bb9caba149f0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 41377cb47836624160a5b402e0a85270b68eba4f
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61676059"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70850993"
 ---
 # <a name="inheritance-in-c-and-net"></a>C# ve .NET içinde devralma
 
-Bu öğretici, C# içinde devralma tanıtır. Devralma (verilerini ve davranışlarını) belirli işlevleri sağlayan bir temel sınıf tanımlamak için ve devralınan veya bu işlevi geçersiz kılma türetilmiş sınıflar tanımlamanızı sağlayan bir nesne yönelimli programlama dillerinin özelliğidir.
+Bu öğretici, ' de C#devralma işlemini tanıtır. Devralma, belirli işlevleri (veri ve davranış) sağlayan bir temel sınıf tanımlamanızı ve bu işlevi devralıp geçersiz kılan türetilmiş sınıfları tanımlamanızı sağlayan nesne odaklı programlama dillerinin bir özelliğidir.
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-Bu öğretici, .NET Core yüklediğinizi varsayar. Yükleme yönergeleri için bkz. [.NET Core Yükleme Kılavuzu](https://www.microsoft.com/net/core). Bir kod düzenleyicisi de gerekecektir. Bu öğreticide [Visual Studio Code](https://code.visualstudio.com), tercih ettiğiniz herhangi bir kod düzenleyicisi kullanabilirsiniz, ancak.
+Bu öğreticide .NET Core SDK yüklediğinizi varsayılmaktadır. [.NET Core İndirmeleri](https://dotnet.microsoft.com/download) sayfasını ziyaret ederek indirin. Ayrıca bir kod düzenleyicisine ihtiyacınız vardır. Bu öğretici [Visual Studio Code](https://code.visualstudio.com)kullanır, ancak istediğiniz herhangi bir kod düzenleyicisini kullanabilirsiniz.
 
 ## <a name="running-the-examples"></a>Örnekleri çalıştırma
 
-Oluşturmak ve Bu öğreticide örnekleri çalıştırmak için kullandığınız [dotnet](../../core/tools/dotnet.md) komut satırı yardımcı programı. Her örnek için aşağıdaki adımları izleyin:
+Bu öğreticide örnekleri oluşturmak ve çalıştırmak için, komut satırından [DotNet](../../core/tools/dotnet.md) yardımcı programını kullanın. Her örnek için aşağıdaki adımları izleyin:
 
-1. Örnek depolamak için bir dizin oluşturun.
-1. Girin [dotnet yeni konsol](../../core/tools/dotnet-new.md) yeni bir .NET Core projesi oluşturmak için bir komut isteminde komutu.
-1. Kopyalamak ve örnek kod, kod düzenleyicisine yapıştırın.
-1. Girin [dotnet restore](../../core/tools/dotnet-restore.md) yükleyin veya proje bağımlılıklarınızı geri yüklemek için komut satırından komutu.
+1. Örneği depolamak için bir dizin oluşturun.
+1. Yeni bir .NET Core projesi oluşturmak için bir komut isteminde [DotNet yeni konsol](../../core/tools/dotnet-new.md) komutunu girin.
+1. Kod düzenleyicinize örnekteki kodu kopyalayın ve yapıştırın.
+1. Projenin bağımlılıklarını yüklemek veya geri yüklemek için komut satırından [DotNet restore](../../core/tools/dotnet-restore.md) komutunu girin.
 
   [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
-1. Girin [çalıştırma dotnet](../../core/tools/dotnet-run.md) derlemek ve örnek çalıştırmak için komutu.
+1. Örneği derlemek ve yürütmek için [DotNet Run](../../core/tools/dotnet-run.md) komutunu girin.
 
-## <a name="background-what-is-inheritance"></a>Arka planı: Devralma nedir?
+## <a name="background-what-is-inheritance"></a>Arka plan Devralma nedir?
 
-*Devralma* temel nesne yönelimli programlama özniteliklerini biridir. Yeniden kullanan bir alt sınıfını tanımlamak olanak tanır (devralınan) genişletir ya da bir üst sınıf davranışını değiştirir. Üyeleri devralınan sınıf *temel sınıfı*. Taban sınıfı üyeleri devralan sınıf *türetilmiş sınıf*.
+*Devralma* , nesne odaklı programlamanın temel özniteliklerinden biridir. Bir üst sınıfın davranışını yeniden kullanan (devralan), genişleten veya değiştiren bir alt sınıf tanımlamanızı sağlar. Üyelerine devralınan sınıfa *temel sınıf*denir. Taban sınıfının üyelerini devralan sınıf *türetilmiş sınıf*olarak adlandırılır.
 
-C# ve .NET desteği *tek devralma* yalnızca. Diğer bir deyişle, bir sınıfın yalnızca tek bir sınıftan devralınabilir. Ancak, devralma, bir dizi türleri için devralma hiyerarşisi tanımlamanızı sağlayan geçişli değildir. Diğer bir deyişle, yazın `D` türden devralabilir `C`, türünden devralan `B`, taban sınıf türünden devralan `A`. Devralma geçişli olduğundan türün üyeleri `A` yazmak kullanılabilen `D`.
+C#ve .NET yalnızca *tek devralma* desteği. Diğer bir deyişle, bir sınıf yalnızca tek bir sınıftan devralınabilir. Ancak, devralma geçişlidir ve bu, bir tür kümesi için devralma hiyerarşisi tanımlamanızı sağlar. Diğer `D` bir deyişle, türü, temel sınıf türünden `C` `A`devralan türünden devralan türünden devralabilir `B`. Devralma geçişli olduğundan, türü `A` üyeleri türü `D`için kullanılabilir.
 
-Bir taban sınıfın tüm üyeleri, türetilmiş sınıflar tarafından devralınır. Aşağıdaki üyeleri devralınmaz:
+Bir taban sınıfın tüm üyeleri türetilmiş sınıflar tarafından devralınmaz. Aşağıdaki Üyeler devralınmaz:
 
-- [Statik oluşturucular](../programming-guide/classes-and-structs/static-constructors.md), bir sınıfın statik verileri başlatılamıyor.
+- Statik [oluşturucular](../programming-guide/classes-and-structs/static-constructors.md), bir sınıfın statik verilerini başlatır.
 
-- [Örnek oluşturucuları](../programming-guide/classes-and-structs/constructors.md), hangi sınıfının yeni bir örneğini oluşturmak için çağırın. Her sınıf kendi oluşturucular tanımlamanız gerekir.
+- Sınıfının yeni bir örneğini oluşturmak için çağırdığınız [örnek oluşturucular](../programming-guide/classes-and-structs/constructors.md). Her sınıfın kendi oluşturucuları tanımlanmalıdır.
 
-- [Sonlandırıcılar](../programming-guide/classes-and-structs/destructors.md), bir sınıfın örneklerini yok etmek için çalışma zamanının atık toplayıcısı tarafından denir.
+- Çalışma zamanının atık toplayıcısı tarafından bir sınıfın örneklerini yok etmek için çağrılan [sonlandırıcılar](../programming-guide/classes-and-structs/destructors.md).
 
-Tüm temel sınıf üyelerinin türetilmiş sınıflar tarafından devralınır ancak veya görünür olup olmadıklarından kendi erişilebilirliği bağlıdır. Bir üyenin erişilebilirlik görünürlüğü türetilmiş sınıflar için şu şekilde etkiler:
+Bir temel sınıfın diğer tüm üyeleri türetilmiş sınıflar tarafından devralınırken, görünür olup olmadığı ve erişilebilirliğine bağlı olup olmadığı. Üyenin erişilebilirliği, türetilmiş sınıfların görünürlüğünü aşağıdaki gibi etkiler:
 
-- [Özel](../language-reference/keywords/private.md) üyeleri yalnızca kendi taban sınıf içinde iç içe geçmiş türetilmiş sınıflarda görünür. Aksi takdirde, bunlar türetilmiş sınıflarda görünür değildir. Aşağıdaki örnekte, `A.B` türetildiği bir iç içe yerleştirilmiş sınıf `A`, ve `C` türetildiği `A`. Özel `A.value` alandır A.B. içinde görünür Ancak, açıklamalardan kaldırırsanız `C.GetValue` yöntemi ve örnek derleme girişimi derleyici hatası CS0122 üretir: "'A.value' koruma düzeyi nedeniyle erişilemez."
+- [Özel](../language-reference/keywords/private.md) Üyeler yalnızca kendi temel sınıfında iç içe yerleştirilmiş türetilmiş sınıflarda görünür. Aksi takdirde, bunlar türetilmiş sınıflarda görünür değildir. Aşağıdaki örnekte, `A.B` öğesinden `A`türetilen ve `C` türeten `A`türetilmiş bir iç içe sınıftır. Özel `A.value` alan A.B. içinde görünür Ancak, `C.GetValue` yöntemden açıklamaları kaldırır ve örneği derlemeye çalışırsanız, CS0122 derleyici hatası üretir: "' A. Value ', koruma düzeyi nedeniyle erişilemez."
 
   [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/private.cs#1)]
 
-- [Korumalı](../language-reference/keywords/protected.md) üyeler türetilmiş sınıflarda da görünür.
+- [Korunan](../language-reference/keywords/protected.md) Üyeler yalnızca türetilmiş sınıflarda görülebilir.
 
-- [İç](../language-reference/keywords/internal.md) üyeleridir temel sınıf olarak aynı derlemede bulunan türetilmiş sınıflarda görünür. Bunlar, türetilmiş sınıflarda temel sınıfından farklı bir derlemede bulunan görünür değildir.
+- [İç](../language-reference/keywords/internal.md) Üyeler yalnızca temel sınıfla aynı derlemede bulunan türetilmiş sınıflarda görülebilir. Bunlar, temel sınıftan farklı bir derlemede bulunan türetilmiş sınıflarda görünür değildir.
 
-- [Genel](../language-reference/keywords/public.md) üyeler türetilmiş sınıflarda görünür olduğundan ve türetilen sınıfın ortak arabiriminin bir parçasıdır. Genel devralınan üyeler türetilen sınıfta yalnızca tanımlandıkları alacağı çağrılabilir. Aşağıdaki örnekte, sınıf `A` adlı bir yöntem tanımlar `Method1`ve sınıfı `B` sınıfından devralan `A`. Örnek daha sonra çağırır `Method1` hakkında bir örnek yöntemi gibi `B`.
+- [Ortak](../language-reference/keywords/public.md) Üyeler türetilmiş sınıflarda görünür ve türetilmiş sınıf ' genel arabiriminin bir parçasıdır. Ortak devralınmış Üyeler, türetilmiş sınıfta tanımlandıklarında olduğu gibi çağrılabilir. Aşağıdaki örnekte, `A` sınıfı adlı `Method1`bir yöntemi tanımlar `A`ve `B` sınıf sınıfından devralır. Örnek daha sonra ' `Method1` `B`de bir örnek yöntemi gibi çağırır.
 
 [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/basics.cs#1)]
 
-Türetilen sınıfların aynı zamanda *geçersiz kılma* alternatif bir uygulama sağlayarak devralınan üyeleri. Üyesi geçersiz kılmak aktarabilmek için temel sınıf üye ile işaretlenmelidir [sanal](../language-reference/keywords/virtual.md) anahtar sözcüğü. Varsayılan olarak, temel sınıf üyeleri olarak işaretlenmemiş `virtual` ve geçersiz kılınamaz. Aşağıdaki örnekte olduğu gibi sanal olmayan bir üye geçersiz kılma girişiminde CS0506 derleyici hatası oluşturur: "\<üye > devralınmış üyesi geçersiz kılınamaz \<üye > sanal işaretlenmemiş çünkü, Özet veya geçersiz.
+Türetilmiş sınıflar, alternatif bir uygulama sağlayarak devralınan üyeleri de *geçersiz kılabilir* . Bir üyeyi geçersiz kılabilmek için, temel sınıftaki üyenin [sanal](../language-reference/keywords/virtual.md) anahtar sözcüğüyle işaretlenmesi gerekir. Varsayılan olarak, temel sınıf üyeleri olarak `virtual` işaretlenir ve geçersiz kılınamaz. Aşağıdaki örnek yaptığı için sanal olmayan bir üyeyi geçersiz kılma girişimi, CS0506: "\<üye > devralınan üye \<> üyesini geçersiz kılamaz; çünkü sanal, Özet veya geçersiz kılma olarak işaretlenmemiş.
 
 ```csharp
 public class A
@@ -81,7 +81,7 @@ public class B : A
 }
 ```
 
-Bazı durumlarda, türetilmiş bir sınıf *gerekir* taban sınıf uygulamasını geçersiz kılın. Temel sınıf üyeleri ile işaretlenen [soyut](../language-reference/keywords/abstract.md) anahtar sözcüğü türetilmiş sınıfların bunları geçersiz kılma gerektirir. Derleyici Hatası CS0534, aşağıdaki örnek derleme çalışırken oluşturur "&lt;sınıfı&gt; devralınan soyut üyesini uygulamıyor &lt;üye&gt;", çünkü sınıfı `B` Hayır sağlar uygulama için `A.Method1`.
+Bazı durumlarda, türetilmiş bir sınıf temel sınıf uygulamasını geçersiz *kılmalıdır* . [Soyut](../language-reference/keywords/abstract.md) anahtar sözcükle işaretlenmiş temel sınıf üyeleri, türetilmiş sınıfların bunları geçersiz kılmasını gerektirir. Aşağıdaki örnek&lt;derlenmeye çalışıldığında derleyici hatası CS0534, "sınıf&gt; devralınmış soyut üye &lt;üyesini&gt;uygulamıyor", çünkü sınıf `B` şunu sağlamıyor için `A.Method1`uygulama.
 
 ```csharp
 public abstract class A
@@ -98,7 +98,7 @@ public class B : A // Generates CS0534.
 }
 ```
 
-Devralma, yalnızca sınıflar ve arabirimler için geçerlidir. Diğer tür kategorileri (yapılar, temsilciler ve numaralandırmaları) devralımı desteklemez. Aşağıdaki örnek, derleyici hatası CS0527 üretir gibi Kodu derlemek bu kural nedeniyle çalışılıyor: "Arabirim listesindeki 'ValueType' türü bir arabirim değil." Bir yapının uyguladığı arabirimlerin tanımlayabilirsiniz, devralma desteklenmiyor, hata iletisi gösterir.
+Devralma yalnızca sınıflar ve arabirimler için geçerlidir. Diğer tür kategorileri (yapılar, temsilciler ve numaralandırmalar) devralmayı desteklemez. Bu kurallar nedeniyle, aşağıdaki örnekte olduğu gibi kodu derlemeye çalışmak derleyici hatası CS0527 üretir: Arabirim listesindeki "tür ' ValueType ' bir arabirim değil." Hata iletisi, bir yapının uyguladığı arabirimleri tanımlayabilseniz de devralmanın desteklenmediğini belirtir.
 
 ```csharp
 using System;
@@ -110,193 +110,193 @@ public struct ValueStructure : ValueType // Generates CS0527.
 
 ## <a name="implicit-inheritance"></a>Örtük devralma
 
-Tek devralma yoluyla devralındığı herhangi bir türü yanı sıra, devralınacak örtük olarak .NET tür sistemi tüm türlerin <xref:System.Object> veya ondan türetilmiş bir tür. Ortak işlevselliğini <xref:System.Object> herhangi bir türü için kullanılabilir.
+Tek devralmayla devraldıkları türlerin yanı sıra, .net tür sistemi 'ndeki tüm türler örtülü olarak devralınır <xref:System.Object> veya ondan türetilmiş bir tür. Ortak işlevselliği <xref:System.Object> her türlü tür için kullanılabilir.
 
-Yeni bir sınıf tanımlayalım hangi örtük devralma anlamına görmek için `SimpleClass`, yalnızca boş sınıf tanımı olan:
+Örtük devralmanın ne anlama geldiğini görmek için, yalnızca boş bir sınıf tanımı `SimpleClass`olan yeni bir sınıf tanımlayalim:
 
 [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/simpleclass.cs#1)]
 
-(Bu, bu tür hakkında bilgi almak için bir türün meta verileri incelemenize olanak tanır) yansıma sonra kullanabileceğiniz ait üyelerinin bir listesini almak için `SimpleClass` türü. Tüm üyeleri tanımladıysanız olsa da, `SimpleClass` sınıfı örnekten çıkış, bu gerçekte dokuz üyeleri bulunduğunu belirtir. Bu üyeleri biri için otomatik olarak sağlanan parametresiz (veya varsayılan) bir oluşturucu `SimpleClass` C# derleyicisi tarafından türü. Sekiz kalan üyeleri <xref:System.Object>, kendisinden tüm sınıfları ve arabirimleri .NET içinde tür sistemi sonuçta örtük tür devralır.
+Daha sonra, `SimpleClass` türe ait üyelerin bir listesini almak için yansıma (Bu tür hakkında bilgi almak üzere bir türün meta verilerini incelemenizi sağlar) kullanabilirsiniz. Sınıfınızda `SimpleClass` herhangi bir üye tanımlamadıysanız, örnekteki çıkış gerçekten dokuz üyeye sahip olduğunu gösterir. Bu üyelerden biri, `SimpleClass` C# derleyici tarafından tür için otomatik olarak sağlanan parametresiz (veya varsayılan) bir oluşturucudur. Kalan sekiz, .net tür sistemindeki <xref:System.Object>tüm sınıfların ve arabirimlerin sonunda dolaylı olarak devraldığı tür üyesidir.
 
 [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/simpleclass.cs#2)]
 
-Örtük devralmadan <xref:System.Object> sınıfı kullanılabilir hale getirir bu yöntemler için `SimpleClass` sınıfı:
+<xref:System.Object> Sınıfından örtük devralma, bu yöntemleri `SimpleClass` sınıfı için kullanılabilir hale getirir:
 
-- Genel `ToString` dönüştüren yöntemi bir `SimpleClass` nesneyi dize gösterimine tam olarak nitelenmiş tür adını döndürür. Bu durumda, `ToString` yöntemi "SimpleClass" dize döndürür.
+- `ToString` Bir`SimpleClass` nesneyi dize gösterimine dönüştüren public yöntemi, tam nitelikli tür adını döndürür. Bu durumda, `ToString` yöntemi "simpleclass" dizesini döndürür.
 
-- İki nesne eşitliği test üç yöntem: ortak örnek `Equals(Object)` yöntemi, bir genel statik `Equals(Object, Object)` yöntemi ve bir genel statik `ReferenceEquals(Object, Object)` yöntemi. Varsayılan olarak, bu yöntemler için başvuru eşitliği testi; diğer bir deyişle, eşit olacak şekilde iki nesne değişkenini aynı nesneye başvurması gerekir.
+- İki nesnenin eşitlik için test eden üç yöntem: ortak örnek `Equals(Object)` yöntemi, ortak statik `Equals(Object, Object)` Yöntem ve genel statik `ReferenceEquals(Object, Object)` yöntem. Varsayılan olarak, bu yöntemler başvuru eşitliği için test; diğer bir deyişle, eşit olması için iki nesne değişkeninin aynı nesneye başvurması gerekir.
 
-- Genel `GetHashCode` karma koleksiyonları'nda kullanılmak üzere türün bir örneğini izin veren bir değeri hesaplar yöntemi.
+- Karma koleksiyonlarda kullanılacak tür örneğine izin veren bir değeri hesaplayan ortak `GetHashCode` yöntemi.
 
-- Genel `GetType` döndüren yöntemi bir <xref:System.Type> temsil eden nesne `SimpleClass` türü.
+- Türü temsil <xref:System.Type> `GetType` edenbirnesnedöndürenpublicyöntemi`SimpleClass` .
 
-- Korumalı <xref:System.Object.Finalize%2A> yöntemi nesnenin bellek çöp toplayıcısı tarafından alınmadan önce yönetilmeyen kaynakları serbest bırakmak için tasarlanmıştır.
+- Bir nesnenin <xref:System.Object.Finalize%2A> belleğinden önce yönetilmeyen kaynakları serbest bırakmak için tasarlanan Protected yöntemi çöp toplayıcı tarafından geri kazanılır.
 
-- Korumalı <xref:System.Object.MemberwiseClone%2A> yöntemi geçerli nesne basit bir kopyasını oluşturur.
+- Geçerli nesnesinin <xref:System.Object.MemberwiseClone%2A> basit bir kopyasını oluşturan Protected yöntemi.
 
-Örtük devralma nedeniyle tüm devralınan üye çağırabilirsiniz bir `SimpleClass` nesne aslında bir üyesi ise gibi yalnızca tanımlanmış `SimpleClass` sınıfı. Örneğin, aşağıdaki örnekte çağırır `SimpleClass.ToString` yöntemi, hangi `SimpleClass` devraldığı <xref:System.Object>.
+Örtük devralma nedeniyle, bir `SimpleClass` nesneden devralınan herhangi bir üyeyi, aslında yalnızca `SimpleClass` sınıfında tanımlanmış bir üye gibi çağırabilirsiniz. Örneğin, aşağıdaki örnek öğesinden `SimpleClass.ToString` `SimpleClass` <xref:System.Object>devralan yöntemini çağırır.
 
 [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/simpleclass2.cs#1)]
 
-Aşağıdaki tablo, C# ' de oluşturabileceğiniz türleri ve bunların örtük olarak devraldığı türleri kategorilerini listeler. Her bir temel tür üyelerinin farklı bir dizi örtük olarak türetilmiş türlere de devralma kullanılabilir hale getirir.
+Aşağıdaki tabloda, içinde C# oluşturabileceğiniz türlerin kategorileri ve örtülü olarak devraldığı türler listelenmektedir. Her temel tür, devralma yoluyla örtülü olarak türetilmiş türlere farklı bir üye kümesi sağlar.
 
-| Türü kategorisi | Örtük olarak devraldığı                                                      |
+| Tür kategorisi | Örtülü olarak devralır                                                      |
 | ------------- | ----------------------------------------------------------------------------- |
 | sınıf         | <xref:System.Object>                                                          |
-| struct         | <xref:System.ValueType>, <xref:System.Object>                                 |
+| struct        | <xref:System.ValueType>, <xref:System.Object>                                 |
 | enum          | <xref:System.Enum>, <xref:System.ValueType>, <xref:System.Object>             |
 | temsilci      | <xref:System.MulticastDelegate>, <xref:System.Delegate>, <xref:System.Object> |
 
-## <a name="inheritance-and-an-is-a-relationship"></a>Devralma ve bir "olan bir" ilişkisi
+## <a name="inheritance-and-an-is-a-relationship"></a>Devralma ve "bir" ilişkidir
 
-Normalde, devralma ifade etmek için kullanılan bir "olan bir" türetilmiş sınıflar temel sınıf; özelleşmiş sürümleri olduğu bir veya daha fazla türetilmiş sınıflar temel sınıf arasındaki ilişki türetilen sınıfın temel sınıf türüdür. Örneğin, `Publication` sınıfı temsil eder, herhangi bir türdeki bir yayın ve `Book` ve `Magazine` sınıfları temsil eden belirli tür yayınlar.
+Genellikle devralma, bir temel sınıf ve bir veya daha fazla türetilmiş sınıf arasındaki "bir", türetilmiş sınıfların temel sınıfın özelleşmiş sürümü olduğu bir veya daha fazla türetilmiş sınıf arasındaki ilişkiyi ifade etmek için kullanılır; türetilmiş sınıf, temel sınıfın bir türüdür. Örneğin, `Publication` sınıf herhangi bir türdeki yayını temsil eder `Book` ve ve `Magazine` sınıfları belirli yayın türlerini temsil eder.
 
 > [!NOTE]
-> Bir sınıfın veya yapının bir veya daha fazla arabirim uygulayabilir. Arabirim uygulaması genellikle geçici bir çözüm tek devralma için veya yapılar ile devralma kullanmanın bir yolu olarak sunulur, ancak express arasında bir arabirim ve uygulama türünden farklı bir ilişki ("yapılabilir" ilişkisi) için tasarlanmıştır Devralma. Arabirim uygulama türlerinden arabirimi kullanıma sunduğu (örneğin, karşılaştırma ya da sıralama nesnelere, eşitlik için sınama veya kültüre duyarlı ayrıştırma ve biçimlendirme desteği özelliği) işlevlerinin bir alt kümesini tanımlar.
+> Bir sınıf veya yapı, bir veya daha fazla arabirim uygulayabilir. Arabirim uygulaması genellikle tek devralma için geçici bir çözüm olarak veya yapılar ile devralma kullanmanın bir yolu olarak sunulurken, farklı bir ilişki ("bir" ilişki yapabilir) bir arabirim ile uygulama türü devralmayı. Bir arabirim, bir işlev alt kümesini tanımlar (örneğin, eşitlik için test etme, nesneleri karşılaştırma veya sıralama veya kültüre duyarlı ayrıştırma ve biçimlendirmeyi destekleme), arabirimin uygulama türleri için kullanılabilir hale getiren özellik.
 
-Dikkat "olan bir" da bir tür ve belirli bir örneğini türü arasındaki ilişkiyi ifade eder. Aşağıdaki örnekte, `Automobile` üç benzersiz salt okunur özelliklere sahip bir sınıfı: `Make`, otomobil; üreticisi `Model`, otomobil; türünü ve `Year`, üretim, yıl. `Automobile` Sınıfı ayrıca bir oluşturucu bağımsız değişkenleri için özellik değerlerini atanan sahiptir ve onu geçersiz kılar <xref:System.Object.ToString%2A?displayProperty=nameWithType> benzersiz olarak tanımlayan bir dize oluşturmak için yöntemi `Automobile` örneği yerine `Automobile` sınıfı.
+"Bunun bir" olduğuna ve bu türün belirli bir örneğini oluşturma arasındaki ilişkiyi ifade eder. Aşağıdaki örnekte, `Automobile` üç benzersiz salt okuma özelliği olan bir sınıftır: `Make`, otomobil üreticisi , otomobil türü ve `Year`üretim yılı. `Model` Sınıfınız Ayrıca, bağımsız değişkenleri özellik değerlerine atanan bir oluşturucuya sahiptir ve `Automobile` sınıfı yerine `Automobile` örneği benzersiz bir şekilde tanımlayan <xref:System.Object.ToString%2A?displayProperty=nameWithType> bir dize oluşturmak için yöntemini geçersiz kılar. `Automobile`
 
 [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/is-a.cs#1)]
 
-Bu durumda, belirli bir otomobil marka ve model temsil etmek için devralma güvenmemelisiniz. Örneğin, tanımlamanız gerekmez bir `Packard` Packard Motor Çinli araç şirketi tarafından üretilen otomobiller temsil eden tür. Bunun yerine, bunları oluşturarak temsil edebilen bir `Automobile` uygun değerlerle aşağıdaki örnekte olduğu gibi sınıf oluşturucusuna geçirilen nesne.
+Bu durumda, belirli otomobil yaptığı ve modellerinin temsil edilebilmesi için devralmadan güvenmemelisiniz. Örneğin, Packard motor otomobil şirketi tarafından üretilen otomobil `Packard` 'leri temsil eden bir tür tanımlamanız gerekmez. Bunun yerine, aşağıdaki örnekte olduğu gibi, sınıf `Automobile` oluşturucusuna geçirilmiş uygun değerlerle bir nesne oluşturarak bunları temsil edebilirsiniz.
 
 [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/is-a.cs#2)]
 
-Devralma tabanlı bir olduğu bir ilişki en iyi bir temel sınıf ve türetilmiş sınıflar temel sınıf için ek üyeler eklemek veya ek işlevsellik mevcut değil temel sınıfta gerektiren uygulanır.
+Bir iş-devralma temelli bir ilişki taban sınıfına ve temel sınıfa ek Üyeler ekleyen ya da temel sınıfta ek işlevsellik gerektiren türetilmiş sınıflara en iyi şekilde uygulanır.
 
-## <a name="designing-the-base-class-and-derived-classes"></a>Temel sınıf tasarlama ve türetilmiş sınıfları
+## <a name="designing-the-base-class-and-derived-classes"></a>Temel sınıf ve türetilmiş sınıfları tasarlama
 
-Bir temel sınıf ve türetilmiş sınıflarının tasarlama işlemi göz atalım. Bu bölümde, bir temel sınıf tanımlarsınız `Publication`, bir kitap, vb. bir magazine, bir gazete, günlük, bir makalenin herhangi bir türde bir yayın temsil eder. Ayrıca tanımlarsınız bir `Book` türetilen sınıf `Publication`. Örnek, türetilen diğer sınıflar gibi tanımlamak için kolayca genişletebilirsiniz `Magazine`, `Journal`, `Newspaper`, ve `Article`.
+Bir temel sınıf ve türetilmiş sınıfları tasarlama sürecine bakalım. Bu bölümde, bir kitap, dergi, gazete, bir `Publication`günlük, makale vb. gibi her türlü yayını temsil eden bir temel sınıf tanımlayacaksınız. Ayrıca, öğesinden `Publication`türetilen bir `Book` sınıf tanımlayacaksınız. Örneğin, `Magazine`, ve `Newspaper` `Journal` gibi`Article`diğer türetilmiş sınıfları tanımlamak için örneği kolayca genişletebilirsiniz.
 
-### <a name="the-base-publication-class"></a>Temel yayım sınıfı
+### <a name="the-base-publication-class"></a>Temel yayın sınıfı
 
-İçinde tasarlama, `Publication` sınıfı, gereken birkaç tasarım kararlarını alın:
+`Publication` Sınıfınızı tasarlarken birkaç tasarım kararı vermeniz gerekir:
 
-- Hangi üyelerin tabanınızı içerecek şekilde `Publication` sınıfı ve `Publication` üyeler yöntem uygulamaları sağlamak veya `Publication` türetilmiş sınıfları için şablon görevi gören soyut bir temel sınıf.
+- Temel `Publication` sınıfınıza hangi Üyeler dahil edileceğini ve `Publication` üyelerin Yöntem uygulamaları sağlayıp sağlamadığını ya da türetilmiş sınıfları `Publication` için şablon görevi gören bir soyut temel sınıf olup olmadığını belirtir.
 
-  Bu durumda, `Publication` sınıf, yöntem uygulamaları sağlayacaktır. [Soyut temel sınıflar ve kendi türetilmiş sınıfları tasarlama](#abstract) bölümü içeren bir Özet kullanan bir örnek türetilmiş sınıfların yöntemleri tanımlamak için temel sınıf geçersiz kılması gerekir. Türetilen sınıflar türetilen tür için uygun olan herhangi bir uygulama sağlamak ücretsizdir.
+  Bu durumda, `Publication` sınıfı Yöntem uygulamaları sağlar. [Soyut temel sınıfları ve bunların türetilmiş sınıflarını tasarlama](#abstract) bölümü, türetilen sınıfların geçersiz kılınması gereken yöntemleri tanımlamak için soyut bir temel sınıf kullanan bir örnek içerir. Türetilmiş sınıflar, türetilmiş tür için uygun olan herhangi bir uygulamayı sağlamak için ücretsizdir.
 
-  Kod (bildirimini ve uygulamasını tabanın sınıfı yöntemleri ve bunları geçersiz kılmak ihtiyaç duymayan diğer bir deyişle, birden çok türetilmiş sınıflar paylaşım) yeniden kullanabilme soyut olmayan temel sınıfların avantajlıdır. Bu nedenle, üye eklemek `Publication` kodlarını bazı tarafından paylaşılan veya özelleştirilmiş en olasılığı varsa `Publication` türleri. Temel sınıf uygulamalarını verimli bir şekilde sağlamak başarısız olursa, büyük ölçüde aynı üye uygulamalarının türetilmiş sınıflarda temel sınıf yerine tek bir uygulama sağlamak zorunda elde edersiniz. Birden fazla konumda yinelenen kod ortadan, hataların olası bir kaynaktır.
+  Kodu yeniden kullanma özelliği (yani, birden çok türetilmiş sınıflar temel sınıf yöntemlerinin bildirimini ve uygulamasını paylaşır ve bunları geçersiz kılmaları gerekmez) soyut olmayan taban sınıfların avantajlarından yararlanır. Bu nedenle, kendi kodunun bazı veya `Publication` en özel `Publication` türler tarafından paylaşılması olasılıklı Üyeler eklemeniz gerekir. Temel sınıf uygulamalarını verimli bir şekilde sağlayamadıysanız, temel sınıfta tek bir uygulama yerine türetilmiş sınıflarda büyük ölçüde özdeş üye uygulamaları sağlamak zorunda olacaksınız. Yinelenen kodu birden çok konumda sürdürme gereksinimi, olası hataların kaynağıdır.
 
-  En üst düzeye çıkarmak için hem de yeniden kod ve mantıksal ve sezgisel devralma hiyerarşisi oluşturmak için de eklediğinizden emin olmasını istediğiniz `Publication` sınıf yalnızca veri ve tüm veya çoğu yayınlar için ortak işlevselliği. Türetilen sınıflar, ardından belirli türlerini temsil ettikleri yayın için benzersiz olan üyeleri uygulayın.
+  Her ikisi de kod yeniden kullanımını en üst düzeye çıkarmak ve mantıksal ve sezgisel bir devralma hiyerarşisi oluşturmak için, yalnızca tüm veya en çok `Publication` yayımlarda ortak olan verileri ve işlevleri sınıfa dahil ettiğinizden emin olmak istersiniz. Türetilmiş sınıflar daha sonra temsil ettikleri belirli yayın türlerine özgü olan üyeleri uygular.
 
-- Şu ana kadar sınıf hiyerarşisi genişletmek nasıl. Üç veya daha fazla sınıf yerine yalnızca bir temel sınıf ve bir veya daha fazla türetilmiş sınıflar hiyerarşisi geliştirmek istiyor musunuz? Örneğin, `Publication` temel bir sınıfı olabilir `Periodical`, sırayla olduğu temel bir sınıfı `Magazine`, `Journal` ve `Newspaper`.
+- Sınıf hiyerarşinizin ne kadar uzaleceği. Yalnızca bir temel sınıf ve bir ya da daha fazla türetilmiş sınıf yerine üç veya daha fazla sınıf hiyerarşisi geliştirmek istiyor musunuz? Örneğin `Publication` , bir taban `Magazine` `Periodical`sınıfı olabilir, bu, ' ın temel sınıfı ve `Newspaper`' `Journal` dir.
 
-  Küçük hiyerarşisini kullanın, örneğin, bir `Publication` sınıf ve tek bir türetilen sınıf `Book`. Bir dizi öğesinden türetilen ek sınıfları oluşturmak için örnek kolayca genişletebilirsiniz `Publication`, gibi `Magazine` ve `Article`.
+  Örneğinizde, bir `Publication` sınıfın küçük hiyerarşisini ve tek bir türetilmiş sınıf olan ' i `Book`kullanacaksınız. Bu örneği, `Publication` `Magazine` ve `Article`gibi öğesinden türeten bir dizi ek sınıf oluşturmak için kolayca genişletebilirsiniz.
 
-- Olup temel sınıfı örneğini oluşturmak için mantıklıdır. Kullanmıyorsa, uygulamalıdır [soyut](../language-reference/keywords/abstract.md) sınıfı anahtar sözcüğü. Aksi takdirde, `Publication` sınıf, sınıf oluşturucusu çağrılarak oluşturulabilir. Denemesi ile işaretlenmiş bir sınıf örneği oluşturmak için yapılması durumunda `abstract` anahtar sözcüğü C# derleyicisi kendi sınıf oluşturucusunda doğrudan çağrı tarafından hata CS0144, "soyut sınıfı veya arabiriminin örneği oluşturulamıyor." oluşturur Yansıma, yansıma yöntemi oluşturur kullanarak sınıf örneği denemesi yapılırsa bir <xref:System.MemberAccessException>.
+- Temel sınıfın örneğini oluşturma konusunda anlamlı olup olmadığı. Değilse, sınıfa [soyut](../language-reference/keywords/abstract.md) anahtar sözcüğünü uygulamanız gerekir. Aksi halde, `Publication` sınıfınızın sınıf oluşturucusu çağırarak örneklenebilir. Sınıf oluşturucusuna doğrudan çağrı tarafından `abstract` anahtar sözcükle işaretlenmiş bir sınıf örneği oluşturmak için bir girişimde bulunuldu, C# derleyici hata CS0144 oluşturuyor, "soyut sınıfın veya arabirimin bir örneği oluşturulamaz." Yansıma kullanarak sınıfın örneğini oluşturmaya yönelik bir girişim yapılırsa, yansıma yöntemi bir <xref:System.MemberAccessException>oluşturur.
 
-  Varsayılan olarak, kendi sınıf oluşturucusunu çağırarak bir temel sınıf oluşturulabilir. Bir sınıf oluşturucu açıkça tanımlamak zorunda değildir. Bir temel sınıf kaynak kodunda mevcut değilse, C# derleyici varsayılan (parametresiz) Oluşturucu otomatik olarak sağlar.
+  Varsayılan olarak, bir temel sınıf, sınıf oluşturucusu çağırarak örneklenebilir. Açıkça bir sınıf oluşturucusu tanımlamanız gerekmez. Temel sınıfın kaynak kodunda bir tane yoksa, C# derleyici otomatik olarak varsayılan (parametresiz) bir oluşturucu sağlar.
 
-  İşaretleme, örneğin `Publication` olarak sınıf [soyut](../language-reference/keywords/abstract.md) böylece örneği oluşturulamıyor.  Bir `abstract` sınıf olmayan `abstract` metodu bu sınıfın birkaç somut sınıflar arasında paylaşılan bir soyut kavramını temsil ettiğini belirtir (gibi bir `Book`, `Journal`).
+  Örneğinizdeki `Publication` sınıfı, örneklenemez hale gelecek şekilde bir [Özet](../language-reference/keywords/abstract.md) olarak işaretlersiniz.  Herhangi `abstract` `Book` `Journal`bir yöntemi olmayan bir sınıf, bu sınıfın birkaç somut sınıf (örneğin,) arasında paylaşılan bir soyut kavramı temsil ettiğini belirtir. `abstract`
 
-- Türetilmiş sınıflar temel sınıf uygulamasına belirli üyeleri olup devralmalıdır, temel sınıf uygulamasına geçersiz kılma seçeneği olup olmamasına veya bunlar uygulaması sağlamanız gerekir. Kullandığınız [soyut](../language-reference/keywords/abstract.md) türetilen sınıflar, bir uygulama sunmak amacıyla zorlamak için anahtar sözcüğü. Kullandığınız [sanal](../language-reference/keywords/virtual.md) anahtar sözcüğü türetilmiş sınıflar temel sınıf yöntemini geçersiz kılmak izin vermek için. Varsayılan olarak, temel sınıfta tanımlanan yöntemlerdir *değil* geçersiz kılınabilir.
+- Türetilmiş sınıfların belirli üyelerin temel sınıf uygulamasını devralması gerekip gerekmediğini, temel sınıf uygulamasını geçersiz kılma seçeneğine sahip olup olmadığı veya bir uygulama sağlayıp sağlamamaları gerekir. Türetilmiş sınıfların bir uygulama sağlamasına zorlamak için [soyut](../language-reference/keywords/abstract.md) anahtar sözcüğünü kullanırsınız. Türetilmiş sınıfların bir temel sınıf yöntemini geçersiz kılmasına izin vermek için [sanal](../language-reference/keywords/virtual.md) anahtar sözcüğünü kullanırsınız. Varsayılan olarak, temel sınıfta tanımlanan Yöntemler geçersiz kılınabilir *değildir* .
 
- `Publication` Sınıfı herhangi yok `abstract` yöntemleri ama sınıfın kendisi `abstract`.
+ Sınıfın herhangi bir `abstract` yöntemi yoktur, ancak sınıfın kendisi olur `abstract`. `Publication`
 
-- Bir türetilmiş sınıf devralma hiyerarşisinde son sınıfı temsil eder ve kendisi için ek türetilmiş sınıflar temel sınıf olarak kullanılamaz. Varsayılan olarak, herhangi bir sınıfın temel sınıf olarak hizmet verebilir. Uygulayabileceğiniz [korumalı](../language-reference/keywords/sealed.md) anahtar sözcüğü bir sınıf ek sınıfları için temel sınıf olarak hizmet veremez belirtmek için. Bir korumalı sınıf oluşturulan derleyici hatası CS0509, türetilen çalışılırken "sealed türünden türetilemez \<typeName >".
+- Türetilmiş bir sınıfın devralma hiyerarşisinde son sınıfı temsil edip etmediği ve kendisi ek türetilmiş sınıflar için temel sınıf olarak kullanılamaz. Varsayılan olarak, herhangi bir sınıf temel sınıf olarak görev yapabilir. Bir sınıfın herhangi bir ek sınıf için temel sınıf olarak işlev veremeyeceğini belirtmek için [Sealed](../language-reference/keywords/sealed.md) anahtar sözcüğünü uygulayabilirsiniz. "Sealed Type \<TypeName öğesinden türetilemez >", "korumalı bir sınıftan türetmeye çalışılıyor.
 
-  Türetilmiş sınıfınızın olarak işaretlemek, örneğin `sealed`.
+  Örneğinizdeki türetilmiş sınıfınızı olarak `sealed`işaretlersiniz.
 
-Aşağıdaki örnek, kaynak kodunu gösterir `Publication` sınıfı, hem de bir `PublicationType` tarafından döndürülen sabit listesi `Publication.PublicationType` özelliği. Öğesinden devralınan üyeleri yanı sıra <xref:System.Object>, `Publication` sınıfı aşağıdaki benzersiz üyeleri tanımlar ve üyeyi geçersiz kılar:
+Aşağıdaki örnek, `Publication` sınıfının kaynak kodunu ve `Publication.PublicationType` özelliği tarafından döndürülen bir `PublicationType` numaralandırmayı gösterir. Öğesinden <xref:System.Object>devraldığı üyelere ek olarak `Publication` , sınıfı aşağıdaki benzersiz üyeleri ve üye geçersiz kılmalarını tanımlar:
 
 [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/base-and-derived.cs#1)]
 
 - Bir Oluşturucu
 
-  Çünkü `Publication` sınıfı `abstract`, aşağıdaki örnekte olduğu gibi doğrudan koddan başlatılamaz:
+  `Publication` Sınıfıolduğundan,doğrudanaşağıdaki`abstract`örnek gibi koddan başlatılamaz:
 
   ```csharp
   var publication = new Publication("Tiddlywinks for Experts", "Fun and Games",
                                     PublicationType.Book);
   ```
 
-  Ancak, kendi örnek oluşturucusu doğrudan türetilmiş sınıf Oluşturucular, için kaynak kodu olarak çağrılabilir `Book` sınıfı gösterir.
+  Ancak, `Book` sınıfının kaynak kodu gösterdiği gibi, örnek Oluşturucusu doğrudan türetilmiş sınıf oluşturucularından çağrılabilir.
 
-- İki yayın ilgili Özellikler
+- İki yayınla ilgili özellikler
 
-  `Title` salt okunur <xref:System.String> özellik değeri, çağırarak sağlanmaktadır `Publication` Oluşturucusu.
+  `Title`, <xref:System.String> oluşturucuyu`Publication` çağırarak değeri sağlanan salt okunurdur.
 
-  `Pages` bir okuma-yazma <xref:System.Int32> yayının kaç toplam sayfa gösteren bir özelliğe sahiptir. Değer adlı özel bir alanda depolandığını `totalPages`. Pozitif bir sayı olmalıdır veya bir <xref:System.ArgumentOutOfRangeException> oluşturulur.
+  `Pages`, yayının kaç tane sayfa <xref:System.Int32> olduğunu gösteren bir okuma-yazma özelliğidir. Değer adlı `totalPages`bir özel alanda depolanır. Pozitif bir sayı olmalı veya bir <xref:System.ArgumentOutOfRangeException> değer oluşturulmalıdır.
 
-- Yayımcı ilgili üyeleri
+- Yayımcının ilgili üyeleri
 
-  İki salt okunur özellikler `Publisher` ve `Type`. Değerlerin ilk çağrı tarafından sağlanan `Publication` sınıf oluşturucusu.
+  İki salt okuma özelliği `Publisher` ve. `Type` Değerler, başlangıçta `Publication` sınıf oluşturucusuna yapılan çağrı tarafından sağlanır.
 
-- Yayımlama ile ilgili üyeleri
+- Yayınlamayla ilgili Üyeler
 
-  İki yöntem `Publish` ve `GetPublicationDate`ayarlayabilir ve yayın tarihi döndürür. `Publish` Yöntemi bir özel ayarlar `published` bayrak `true` ne zaman çağrılır ve tarih atar geçirilen kendisine özel bir bağımsız değişken olarak `datePublished` alan. `GetPublicationDate` Yöntemi döndürür "NYP" dizesi, `published` bayrağı `false`, değeri `datePublished` ise alan `true`.
+  İki yöntem `Publish` ve `GetPublicationDate`, yayınlama tarihini ayarlayın ve döndürür. Yöntemi, çağrıldığında `datePublished` için `true` bir `published` özel bayrak ayarlar ve kendisine geçirilen tarihi özel alana bağımsız değişken olarak atar. `Publish` `published` `datePublished` Yöntemi, `true`bayrak ise"NYP"dizesinivevarsaalanındeğerinidöndürür.`false` `GetPublicationDate`
 
-- Telif Hakkı ilgili üyeleri
+- Telif hakkı ile ilgili Üyeler
 
-  `Copyright` Yöntemi telif hakkı sahibinin adını ve telif hakkı yılın bağımsız değişkenleri olarak alır ve bunlara atar `CopyrightName` ve `CopyrightDate` özellikleri.
+  Yöntemi, telif hakkı sahibinin adını ve telif hakkı yılını bağımsız değişken olarak alır ve bunları `CopyrightName` ve `CopyrightDate` özelliklerine atar. `Copyright`
 
-- Geçersiz kılma `ToString` yöntemi
+- `ToString` Yöntemi geçersiz kılma
 
-  Bir tür değil kılarsanız <xref:System.Object.ToString%2A?displayProperty=nameWithType> yöntemi, başka bir örneği farklılaştırılması az kullanımda olan türü, tam olarak nitelenmiş adını döndürür. `Publication` Sınıf geçersiz kılmalarını <xref:System.Object.ToString%2A?displayProperty=nameWithType> değerini döndürmek için `Title` özelliği.
+  Bir tür <xref:System.Object.ToString%2A?displayProperty=nameWithType> yöntemi geçersiz kılmadığından, bir örneği diğerinden Farklılaştırmada çok az kullanılan, türün tam nitelikli adını döndürür. Sınıfı, özelliğinin`Title` değerini döndürecek şekilde geçersiz kılar <xref:System.Object.ToString%2A?displayProperty=nameWithType>. `Publication`
 
-Aşağıdaki şekilde tabanınızı arasındaki ilişki gösterilmektedir `Publication` sınıf ve onun örtük olarak devralınan <xref:System.Object> sınıfı.
+Aşağıdaki şekilde, taban `Publication` sınıfınız ve örtülü olarak devralınan <xref:System.Object> sınıfı arasındaki ilişki gösterilmektedir.
 
 ![Nesne ve yayın sınıfları](media/publication-class.jpg)
 
 ### <a name="the-book-class"></a>`Book` Sınıfı
 
-`Book` Sınıfı bir kitap Yayını uzmanlaşmış bir türü temsil eder. Aşağıdaki örnek, kaynak kodunu gösterir `Book` sınıfı.
+Sınıfı `Book` , bir kitabı özelleşmiş bir yayın türü olarak temsil eder. Aşağıdaki örnek, `Book` sınıfının kaynak kodunu gösterir.
 
 [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/base-and-derived.cs#2)]
 
-Öğesinden devralınan üyeleri yanı sıra `Publication`, `Book` sınıfı aşağıdaki benzersiz üyeleri tanımlar ve üyeyi geçersiz kılar:
+Öğesinden `Publication`devraldığı üyelere ek olarak `Book` , sınıfı aşağıdaki benzersiz üyeleri ve üye geçersiz kılmalarını tanımlar:
 
 - İki Oluşturucu
 
-  İki `Book` oluşturucular üç ortak parametreleri paylaşın. İki *başlık* ve *yayımcı*, parametreleri için karşılık gelen `Publication` Oluşturucusu. Üçüncü olan *Yazar*, değişmez bir genel depolanan `Author` özelliği. Bir oluşturucu içeren bir *ISBN* depolanan parametre `ISBN` otomatik-özellik.
+  İki `Book` Oluşturucu üç ortak parametreyi paylaşır. İki, *başlık* ve *Yayımcı*, `Publication` oluşturucunun parametrelerine karşılık gelir. Üçüncü, genelbir sabit `Author` özelliğe depolanan yazar. Bir Oluşturucu, `ISBN` Auto-Property içinde depolanan bir *ISBN* parametresi içerir.
 
-  İlk Oluşturucu kullanan [bu](../language-reference/keywords/this.md) diğer oluşturucuyu çağırmak için anahtar sözcüğü. Oluşturucu zincirleme oluşturucuları tanımlama ortak bir desendir. En fazla sayıda parametre ile Oluşturucusu çağrılırken, daha az parametre oluşturucularla varsayılan değerleri sağlar.
+  İlk Oluşturucu, diğer oluşturucuyu çağırmak için [this](../language-reference/keywords/this.md) anahtar sözcüğünü kullanır. Oluşturucu zincirleme, Oluşturucu tanımlamalarında ortak bir modeldir. Daha az parametreye sahip oluşturucular, oluşturucuyu en fazla parametre sayısıyla çağırırken varsayılan değerleri sağlar.
 
-  İkinci oluşturucu kullanan [temel](../language-reference/keywords/base.md) başlık ve yayımcı adı temel sınıf oluşturucusuna geçirilecek anahtar sözcüğü. Kaynak kodunuzda bir temel sınıf oluşturucusu için açık çağrı yapmazsanız, C# Derleyici taban sınıf varsayılan veya parametresiz oluşturucu çağrısı otomatik olarak sağlar.
+  İkinci Oluşturucu, başlığı ve yayımcı adını temel sınıf oluşturucusuna geçirmek için [temel](../language-reference/keywords/base.md) anahtar sözcüğünü kullanır. Kaynak kodunuzda bir taban sınıf oluşturucusuna açık bir çağrı yapmazsanız, C# derleyici otomatik olarak taban sınıfının varsayılan veya parametresiz oluşturucusuna bir çağrı sağlar.
 
-- Salt okunur `ISBN` döndüren özellik `Book` nesnenin uluslararası standart kitap numarası, benzersiz 10 veya 13 basamaklı bir sayı. ISBN birine bağımsız değişken olarak sağlanan `Book` oluşturucular. Derleyici tarafından otomatik olarak oluşturulan bir özel yedekleme alanını ISBN depolanır.
+- Nesnenin uluslararası standart defter `ISBN` numarasını, 10 veya 13 basamaklı bir sayıyı döndüren salt okunurdur bir özellik. `Book` ISBN `Book` oluşturuculardan birine bir bağımsız değişken olarak sağlanır. ISBN, derleyici tarafından otomatik olarak oluşturulan özel bir yedekleme alanında depolanır.
 
-- Salt okunur `Author` özelliği. Yazar adı her iki bağımsız değişken olarak sağlanan `Book` oluşturucular ve özelliğinde depolanır.
+- Salt okunurdur `Author` özelliği. Yazar adı her iki `Book` Oluşturucu için bir bağımsız değişken olarak sağlanır ve özellikte depolanır.
 
-- İki salt okunur fiyat güvenlikle ilgili Özellikler `Price` ve `Currency`. Değerleri, bağımsız değişken olarak sağlanan bir `SetPrice` yöntem çağrısı. `Currency` Üç basamaklı ISO para birimi simgesi (örneğin, try ABD Doları) bir özelliktir. ISO para birimi simgeleri alınabileceği <xref:System.Globalization.RegionInfo.ISOCurrencySymbol%2A> özelliği. Bu özelliklerin her ikisi de dışarıdan salt okunurdur, ancak her ikisi de, kod tarafından ayarlanabilir `Book` sınıfı.
+- İki salt okuma fiyatına ilişkin özellikler `Price` ve. `Currency` Değerleri bir `SetPrice` Yöntem çağrısında bağımsız değişken olarak sağlanır. `Currency` Özelliği üç basamaklı ISO para birimi simgedir (örneğin, ABD Doları için USD). ISO para birimi sembolleri <xref:System.Globalization.RegionInfo.ISOCurrencySymbol%2A> özelliğinden alınabilir. Bu özelliklerin her ikisi de dışarıdan salt okunurdur, ancak her ikisi de `Book` sınıftaki kodla ayarlanabilir.
 
-- A `SetPrice` değerlerini ayarlar yönteminin `Price` ve `Currency` özellikleri. Bu değerler aynı özelliklere göre döndürülür.
+- `Price` `SetPrice` Ve`Currency` özelliklerinin değerlerini ayarlayan bir yöntemi. Bu değerler, aynı özelliklerle döndürülür.
 
-- Geçersiz kılmaları `ToString` yöntemi (devralınan `Publication`) ve <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> ve <xref:System.Object.GetHashCode%2A> yöntemleri (devralınan <xref:System.Object>).
+- <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> <xref:System.Object.GetHashCode%2A> <xref:System.Object>Yöntemi (Devralındığı yer `Publication`) ve ve yöntemlerini (öğesinden devralınan) geçersiz kılar. `ToString`
 
-  Geçersiz kılınmadığı sürece <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> yöntemi başvuru eşitliği sınar. Diğer bir deyişle, iki nesne değişkenleri, aynı nesneye başvuruyorsa eşit olarak değerlendirilir. İçinde `Book` sınıfının, diğer taraftan, iki `Book` nesneleri aynı ISBN oluşturulduysa eşit olmalıdır.
+  Geçersiz kılınmadıkça, <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> yöntemi başvuru eşitliği için test eder. Diğer bir deyişle, aynı nesneye başvurduklarında iki nesne değişkeninin eşit olduğu kabul edilir. Sınıfında, diğer yandan, aynı ISBN 'e sahip olmaları `Book` durumunda iki nesne eşit olmalıdır. `Book`
 
-  Ne zaman geçersiz kılmanız <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> yöntemi de kılmanız gerekir <xref:System.Object.GetHashCode%2A> yöntemi, çalışma öğeleri verimli alma için karma koleksiyonları depolamak için kullandığı bir değer döndürür. Karma kod eşitliği testi ile tutarlı olan bir değer döndürmesi gerekir. Geçersiz olduğundan <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> döndürülecek `true` varsa iki ISBN özelliklerini `Book` nesneler, çağırarak hesaplanan karma kodu döndürmesi <xref:System.String.GetHashCode%2A> yöntemi tarafından döndürülen dizenin `ISBN` özelliği.
+  <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> Yöntemi geçersiz kıldığınızda, verimli alma için, çalışma zamanının <xref:System.Object.GetHashCode%2A> öğeleri karma koleksiyonlara depolamak üzere kullandığı bir değer döndüren yöntemini de geçersiz kılmanız gerekir. Karma kodu, eşitlik için testle tutarlı bir değer döndürmelidir. İki <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> `ISBN` <xref:System.String.GetHashCode%2A> nesnenin ISBN özellikleri eşitse döndürülecek `true` şekilde geçersiz kılındığından, özelliği tarafından döndürülen dize yöntemini çağırarak hesaplanan karma kodu döndürün. `Book`
 
-Aşağıdaki şekilde arasındaki ilişki gösterilmektedir `Book` sınıfı ve `Publication`, kendi temel sınıfı.
+Aşağıdaki şekilde, `Book` sınıfı ve `Publication`temel sınıfı arasındaki ilişki gösterilmektedir.
 
 ![Yayın ve kitap sınıfları](media/book-class.jpg)
 
-Artık oluşturabileceğiniz bir `Book` nesnesi, her iki benzersiz ve devralınan üyeleri çağırmak ve türünde bir parametre bekliyor. bir yönteme bağımsız değişken olarak geçirmek `Publication` veya türü `Book`aşağıdaki örnekte gösterildiği gibi.
+Artık bir `Book` nesnesi örneği oluşturabilir, hem benzersiz hem de devralınan üyelerini çağırabilir ve aşağıdaki örnekte gösterildiği gibi, türü `Publication` veya türü `Book`bir parametreyi bekleyen bir yönteme bağımsız değişken olarak geçirebilirsiniz.
 
 [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/use-publication.cs#1)]
 
-## <a name="designing-abstract-base-classes-and-their-derived-classes"></a>Soyut temel sınıflar ve kendi türetilmiş sınıfları tasarlama
+## <a name="designing-abstract-base-classes-and-their-derived-classes"></a>Soyut temel sınıfları ve bunların türetilmiş sınıflarını tasarlama
 <a name="abstract"></a>
 
-Önceki örnekte, bir uygulama bir dizi kodu paylaşmak türetilmiş sınıfları izin vermek için yöntem için sağlanan bir temel sınıf tanımlı. Çoğu durumda, ancak temel sınıfta bir uygulama sunmak amacıyla beklenmiyor. Bunun yerine, temel sınıfı olan bir *soyut sınıf* bildiren *soyut yöntemler*; her türetilmiş sınıf üyeleri tanımlayan bir şablon uygulamalıdır olarak görev yapar. Genellikle bir soyut temel sınıf, türetilen her tür bu türe benzersiz uygulamasıdır. Bu örneği oluşturmak için hiçbir mantıklı bir seçimdi çünkü sınıfı soyut anahtar sözcüğü ile işaretlenmiş bir `Publication` sınıfı yayınlar için ortak işlevselliği uygulamaları sağlamadı olsa da, nesne.
+Önceki örnekte, türetilmiş sınıfların kod paylaşmasına izin veren bir dizi yöntem için uygulama sağlayan bir temel sınıf tanımladınız. Ancak çoğu durumda, temel sınıfın bir uygulama sağlaması beklenmez. Bunun yerine, temel sınıf *soyut yöntemleri*bildiren *soyut bir sınıftır* ; Her türetilmiş sınıfın uygulaması gereken üyeleri tanımlayan bir şablon görevi görür. Genellikle soyut bir temel sınıfta, her türetilmiş türün uygulanması o tür için benzersizdir. Sınıf, yayınlar için ortak işlevsellik uygulamaları sağlasa da, bir `Publication` nesnenin örneğini oluşturma konusunda hiçbir fikir olmadığından, bu sınıfı soyut anahtar sözcükle işaretlenir.
 
-Örneğin, kapatılan her iki boyutlu geometrik şekil iki özellik içerir: alan, Şekil; iç kapsamı ve çevre veya şekil kenarlarında uzaklık. Şekilde, bu özellikleri hesaplanır, ancak tamamen belirli şekline bağlıdır. Örneğin, bir daire çevre (veya çevresini) hesaplama formülü bu üçgen farklılık gösterir. `Shape` Sınıfı bir `abstract` sınıfıyla `abstract` yöntemleri. Türetilen sınıfların aynı işlevselliği paylaşır, ancak bu türetilen sınıfların bu işlevselliği desteklememesinden gösterir.
+Örneğin, her kapatılan iki boyutlu geometrik şekil iki özellik içerir: alan, şeklin iç kapsamı; ve çevre ya da şeklin kenarları arasındaki uzaklık. Ancak, bu özelliklerin hesaplanma şekli, ancak tamamen belirli bir şekle bağlıdır. Örneğin, bir dairenin çevre (veya çevresi) hesaplama formülü, bir üçgenden farklıdır. Sınıfı yöntemler `abstract` içeren`abstract`birsınıftır. `Shape` Bu, türetilmiş sınıfların aynı işlevselliği paylaştığından, ancak bu türetilmiş sınıfların bu işlevselliği farklı şekilde uyguladığını gösterir.
 
-Aşağıdaki örnek adlı bir soyut temel sınıf tanımlar `Shape` iki özellikleri tanımlayan: `Area` ve `Perimeter`. Sınıf ile işaretlemeyi yanı sıra [soyut](../language-reference/keywords/abstract.md) anahtar sözcüğü, her örnek üyesi de ile işaretlenmiş [soyut](../language-reference/keywords/abstract.md) anahtar sözcüğü. Bu durumda, `Shape` de geçersiz kılmalar <xref:System.Object.ToString%2A?displayProperty=nameWithType> türünün adı yerine tam olarak nitelenmiş adını döndürmek için yöntemi. İki statik üyeleri tanımlar `GetArea` ve `GetPerimeter`, alan ve türetilmiş bir sınıf örneği çevre kolayca almak çağıranlar izin. Çalışma zamanı, bu yöntemlerden birini türetilmiş bir sınıf örneğini geçirdiğinizde, türetilmiş sınıf yöntemini geçersiz kılma çağırır.
+Aşağıdaki örnek, adlı `Shape` bir soyut temel sınıfı tanımlar ve iki özelliği tanımlar: `Area` ve. `Perimeter` Sınıfı [soyut](../language-reference/keywords/abstract.md) anahtar sözcükle işaretlemeye ek olarak, her örnek üyesi de [soyut](../language-reference/keywords/abstract.md) anahtar sözcüğüyle işaretlenir. Bu durumda, `Shape` tam adı yerine türün <xref:System.Object.ToString%2A?displayProperty=nameWithType> adını döndürmek için yöntemini de geçersiz kılar. Ve bu, iki statik üye `GetArea` tanımlar ve `GetPerimeter`bu, çağıranların, türetilmiş bir sınıfın bir örneğinin alanını ve çevresini kolayca almasına imkan tanır. Türetilmiş bir sınıfın bir örneğini bu yöntemlerin herhangi birine geçirdiğinizde, çalışma zamanı türetilmiş sınıfın yöntem geçersiz kılmasını çağırır.
 
 [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/shape.cs#1)]
 
-Bazı sınıflardan sonra türetebilirsiniz `Shape` belirli şekiller temsil eder. Aşağıdaki örnek, üç sınıfları tanımlar `Triangle`, `Rectangle`, ve `Circle`. Her alan ve çevre hesaplamak için belirli bir şekil için benzersiz bir formül kullanır. Türetilen sınıfların bazıları da özellikleri gibi tanımlamanız `Rectangle.Diagonal` ve `Circle.Diameter`, bunlar temsil eden şekle benzersiz olan.
+Daha sonra belirli şekilleri temsil `Shape` eden bazı sınıfları türetebilirsiniz. Aşağıdaki örnek üç sınıfı `Triangle` `Rectangle`tanımlar,, ve `Circle`. Her biri, alanı ve çevresi hesaplamak için bu belirli bir şekil için benzersiz bir formül kullanır. Türetilmiş sınıflardan bazıları Ayrıca, `Rectangle.Diagonal` ve gibi özellikleri tanımlar ve `Circle.Diameter`temsil ettikleri şekle özeldir.
 
 [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/shape.cs#2)]
 
-Aşağıdaki örnek, türetilen nesneler kullanır `Shape`. Bir dizi öğesinden türetilen nesnelerin örneğini oluşturduğunda `Shape` ve statik yöntemlerini çağırır `Shape` dönüş sarmalar sınıfı `Shape` özellik değerleri. Çalışma zamanı, türetilen türlerin geçersiz kılınan özelliklerinden değerlerini alır. Örnekte ayrıca her bıraktığı `Shape` kendi türetilmiş bir tür için bir dizi nesnesinde ve atama işlemi başarılı olursa, o belirli öğesinin özelliklerini alır `Shape`. 
+Aşağıdaki örnek, öğesinden `Shape`türetilmiş nesneleri kullanır. Sınıfından türetilmiş `Shape` bir nesne dizisi oluşturur ve döndürülen `Shape` özellik değerlerini sarmalayan `Shape` sınıfın statik yöntemlerini çağırır. Çalışma zamanı türetilmiş türlerin geçersiz kılınan özelliklerinden değerleri alır. Örnek ayrıca dizideki her `Shape` bir nesneyi türetilmiş türüne yayınlar ve atama başarılı olursa, belirli bir `Shape`alt sınıfının özelliklerini alır. 
 
 [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/shape.cs#3)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Sınıflar ve nesneler](../tour-of-csharp/classes-and-objects.md)
-- [Devralma (C# programlama Kılavuzu)](../programming-guide/classes-and-structs/inheritance.md)
+- [Devralma (C# Programlama Kılavuzu)](../programming-guide/classes-and-structs/inheritance.md)

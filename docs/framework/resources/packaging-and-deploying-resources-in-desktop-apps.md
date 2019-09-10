@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: b224d7c0-35f8-4e82-a705-dd76795e8d16
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4092d8694bdb896db1332bd73afae3f62bba36cf
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 808f0f8ac6caf15be0bf1ba8735521871c9b94d7
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105908"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851604"
 ---
 # <a name="packaging-and-deploying-resources-in-net-apps"></a>.NET uygulamalarında kaynakları paketleme ve dağıtma
 
@@ -176,13 +176,13 @@ Uydu derlemeleri için iyileştirilmiş araştırma bir katılım özelliğidir.
 
 Aşağıdaki .NET Framework örnek, bir uygulamanın <xref:System.Resources.NeutralResourcesLanguageAttribute> geri dönüş kaynaklarını Fransızca (`fr`) dili için bir uydu derlemesinde depolamak üzere özniteliğini kullanır. Örnek, adlı `Greeting`tek bir dize kaynağını tanımlayan iki metin tabanlı kaynak dosyasına sahiptir. Birincisi, Resources. fr. txt, bir Fransızca dil kaynağı içerir.
 
-```
+```text
 Greeting=Bon jour!
 ```
 
 İkinci, kaynak, ru. txt, bir Rusça dil kaynağı içerir.
 
-```
+```text
 Greeting=Добрый день
 ```
 
@@ -223,7 +223,7 @@ Ana derlemede ekli kaynak olmadığından, `/resource` anahtarını kullanarak d
 
 Dilini Rusça dışında bir şey olan bir sistemden çalıştırdığınızda, aşağıdaki çıktıyı görüntüler:
 
-```
+```output
 Bon jour!
 ```
 

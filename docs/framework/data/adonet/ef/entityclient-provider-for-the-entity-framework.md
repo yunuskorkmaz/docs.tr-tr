@@ -2,25 +2,25 @@
 title: Entity Framework için EntityClient Sağlayıcısı
 ms.date: 03/30/2017
 ms.assetid: 8c5db787-78e6-4a34-8dc1-188bca0aca5e
-ms.openlocfilehash: 70cc5a9aaa22cc563c910f9d250ad4565e34a135
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: e3a87d4a936e5bdf633e1f997f66dd98add2a9cb
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251596"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854704"
 ---
 # <a name="entityclient-provider-for-the-entity-framework"></a>Entity Framework için EntityClient Sağlayıcısı
 EntityClient sağlayıcısı, kavramsal modelde açıklanan verilere erişmek için Entity Framework uygulamalar tarafından kullanılan bir veri sağlayıcısıdır. Kavramsal modeller hakkında daha fazla bilgi için bkz. [modelleme ve eşleme](modeling-and-mapping.md). EntityClient, veri kaynağına erişmek için diğer .NET Framework veri sağlayıcılarını kullanır. Örneğin, EntityClient SQL Server veritabanına erişirken SQL Server (SqlClient) için .NET Framework Veri Sağlayıcısı kullanır. SqlClient sağlayıcısı hakkında daha fazla bilgi için bkz. [sqlclient Entity Framework](sqlclient-for-the-entity-framework.md). EntityClient sağlayıcı <xref:System.Data.EntityClient> ad alanında uygulanır.  
   
 ## <a name="managing-connections"></a>Bağlantıları Yönetme  
- , [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Temel alınan bir veri sağlayıcısına ve ilişkisel veritabanına bir <xref:System.Data.EntityClient.EntityConnection> sağlar. Bir <xref:System.Data.EntityClient.EntityConnection> nesne oluşturmak için, gerekli modelleri ve eşlemeyi içeren bir meta veri kümesine başvurmanıza ve ayrıca depolama 'ya özgü veri sağlayıcısı adını ve bağlantı dizesini de yazmanız gerekir. <xref:System.Data.EntityClient.EntityConnection> Oluşturulduktan sonra, varlıklara kavramsal modelden oluşturulan sınıflar aracılığıyla erişilebilir.  
+ Entity Framework, temel alınan bir veri sağlayıcısına ve ilişkisel veritabanına bir <xref:System.Data.EntityClient.EntityConnection> sağlayan, depolama 'ya özgü ADO.NET veri sağlayıcılarının üzerine oluşturulur. Bir <xref:System.Data.EntityClient.EntityConnection> nesne oluşturmak için, gerekli modelleri ve eşlemeyi içeren bir meta veri kümesine başvurmanıza ve ayrıca depolama 'ya özgü veri sağlayıcısı adını ve bağlantı dizesini de yazmanız gerekir. <xref:System.Data.EntityClient.EntityConnection> Oluşturulduktan sonra, varlıklara kavramsal modelden oluşturulan sınıflar aracılığıyla erişilebilir.  
   
  App. config dosyasında bir bağlantı dizesi belirtebilirsiniz.  
   
  , <xref:System.Data.EntityClient> <xref:System.Data.EntityClient.EntityConnectionStringBuilder> Sınıfını da içerir. Bu sınıf, geliştiricilerin programsal olarak doğru bağlantı dizelerini oluşturmasını ve sınıfın özelliklerini ve yöntemlerini kullanarak var olan bağlantı dizelerini ayrıştırmasını ve yeniden oluşturmasını sağlar. Daha fazla bilgi için [nasıl yapılır: Bir EntityConnection bağlantı dizesi](how-to-build-an-entityconnection-connection-string.md)oluşturun.  
   
 ## <a name="creating-queries"></a>Sorgu oluşturma  
- Dil [!INCLUDE[esql](../../../../../includes/esql-md.md)] , kavramsal varlık şemalarıyla doğrudan çalıştırılan ve devralma ve ilişkiler gibi varlık veri modeli kavramları destekleyen, depolama bağımsız bir SQL diyalekti. Sınıfı bir varlık modeline karşı bir [!INCLUDE[esql](../../../../../includes/esql-md.md)] komut yürütmek için kullanılır. <xref:System.Data.EntityClient.EntityCommand> <xref:System.Data.EntityClient.EntityCommand> Nesneleri oluştururken, bir saklı yordam adı veya bir sorgu metni belirtebilirsiniz. , [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Genel[!INCLUDE[esql](../../../../../includes/esql-md.md)] olarak depolamaya özgü sorgulara çevirmek için depolamaya özgü veri sağlayıcılarıyla birlikte çalışarak. Sorgu yazma [!INCLUDE[esql](../../../../../includes/esql-md.md)] hakkında daha fazla bilgi için bkz. [Entity SQL Language](./language-reference/entity-sql-language.md).  
+ Dil [!INCLUDE[esql](../../../../../includes/esql-md.md)] , kavramsal varlık şemalarıyla doğrudan çalıştırılan ve devralma ve ilişkiler gibi varlık veri modeli kavramları destekleyen, depolama bağımsız bir SQL diyalekti. Sınıfı bir varlık modeline karşı bir [!INCLUDE[esql](../../../../../includes/esql-md.md)] komut yürütmek için kullanılır. <xref:System.Data.EntityClient.EntityCommand> <xref:System.Data.EntityClient.EntityCommand> Nesneleri oluştururken, bir saklı yordam adı veya bir sorgu metni belirtebilirsiniz. Entity Framework, genel [!INCLUDE[esql](../../../../../includes/esql-md.md)] olarak depolamaya özgü sorgulara çevirmek için depolama 'ya özgü veri sağlayıcılarıyla birlikte kullanılabilir. Sorgu yazma [!INCLUDE[esql](../../../../../includes/esql-md.md)] hakkında daha fazla bilgi için bkz. [Entity SQL Language](./language-reference/entity-sql-language.md).  
   
  Aşağıdaki örnek bir <xref:System.Data.EntityClient.EntityCommand> nesnesi oluşturur ve bu nesnenin <xref:System.Data.EntityClient.EntityCommand.CommandText%2A?displayProperty=nameWithType> özelliğine [!INCLUDE[esql](../../../../../includes/esql-md.md)] bir sorgu metni atar. Bu [!INCLUDE[esql](../../../../../includes/esql-md.md)] sorgu, kavramsal modelden liste fiyatına göre sıralanan ürünleri ister. Aşağıdaki kod, depolama modeli için hiçbir bilgiye sahip değildir.  
   

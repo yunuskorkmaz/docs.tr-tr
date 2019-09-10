@@ -3,12 +3,12 @@ title: 'Nasıl yapılır: WIF Kullanarak Talep Kullanan ASP.NET Web Forms Uygula
 ms.date: 03/30/2017
 ms.assetid: efb264dd-f47b-49a9-85ee-9f45d4425765
 author: BrucePerlerMS
-ms.openlocfilehash: 82b0649a7324987581cc3c97570a0fc42ffdf6d6
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 45ad084013cbcafdf0d7c4ac3e0fd952305232c4
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69941291"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851552"
 ---
 # <a name="how-to-build-claims-aware-aspnet-web-forms-application-using-wif"></a>Nasıl yapılır: WIF Kullanarak Talep Kullanan ASP.NET Web Forms Uygulaması Derleme
 ## <a name="applies-to"></a>Uygulanan Öğe  
@@ -103,7 +103,7 @@ ms.locfileid: "69941291"
     </system.webServer>  
     ```  
   
-5. Aşağıdaki Windows Identity Foundation ile ilgili yapılandırma girdilerini ekleyin ve ASP.net uygulamanızın URL 'si ile bağlantı noktası  **\<>** numarasının,  **\<** WSFederation > öğesi ve  **\<WSFederation >** öğesinin **Reply** özniteliği. Ayrıca, **verenin** değerinin güvenlik belirteci HIZMETI (STS) URL 'nize uygun olduğundan emin olun.  
+5. Aşağıdaki Windows Identity Foundation ile ilgili yapılandırma girdilerini ekleyin ve ASP.net uygulamanızın URL 'si ile bağlantı noktası  **\<>** **numarasının,**  **\<** WSFederation > öğesi ve  **\<WSFederation >** öğesinin **Reply** özniteliği. Ayrıca, **verenin** değerinin güvenlik belirteci HIZMETI (STS) URL 'nize uygun olduğundan emin olun.  
   
     ```xml  
     <system.identityModel>  
@@ -138,8 +138,8 @@ ms.locfileid: "69941291"
   
 1. **TestApp** projesi altındaki **default. aspx** dosyasını açın ve var olan işaretlemesini aşağıdaki biçimlendirme ile değiştirin:  
   
-    ```  
-    %@ Page Language="C#" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>  
+    ```aspx-csharp
+    <%@ Page Language="C#" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>  
   
     <!DOCTYPE html>  
   

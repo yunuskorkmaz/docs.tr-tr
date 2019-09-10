@@ -4,12 +4,12 @@ description: Bu belge, Visual Studio Code kullanarak bir .NET Core çözümü ol
 author: bleroy
 ms.date: 03/23/2017
 ms.custom: seodec18
-ms.openlocfilehash: f1cb9b45c0ed1b4315361846fc065209088b57f8
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: 572174cb09dbde03095fa9444989356038bab9b7
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373783"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849351"
 ---
 # <a name="get-started-with-net-core-on-macos"></a>MacOS üzerinde .NET Core kullanmaya başlama
 
@@ -20,7 +20,7 @@ Bu belge, macOS için .NET Core çözümü oluşturmaya yönelik adımları ve i
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-[.NET Core SDK](https://www.microsoft.com/net/core)'i yükler. .NET Core SDK .NET Core Framework ve çalışma zamanının en son sürümünü içerir.
+[.NET Core SDK](https://dotnet.microsoft.com/download)'i yükler. .NET Core SDK .NET Core Framework ve çalışma zamanının en son sürümünü içerir.
 
 [Visual Studio Code](https://code.visualstudio.com)'i yükler. Bu makalenin kursu sırasında, .NET Core geliştirme deneyimini geliştiren Visual Studio Code uzantıları da yüklersiniz.
 

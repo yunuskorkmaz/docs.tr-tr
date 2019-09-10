@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7e953b43-1374-4bbc-814f-53ca1b6b52bb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7ad7ce5dd3739b1edcf8a8a03a2f57376ceba138
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: d13c2d2cc391e61c8ed764c26e5e5b5e7ea2a3bb
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69948579"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851378"
 ---
 # <a name="certmgrexe-certificate-manager-tool"></a>Certmgr.exe (Sertifika Yönetim Aracı)
 Sertifika Yöneticisi aracı (Certmgr.exe) sertifikaları, sertifika güven listelerini (CTL) ve sertifika iptal listelerini (CRL) yönetir.  
@@ -38,7 +38,7 @@ Sertifika Yöneticisi aracı (Certmgr.exe) sertifikaları, sertifika güven list
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```console  
       certmgr [/add | /del | /put] [options]  
 [/s[/r registryLocation]] [sourceStorename]  
 [/s[/r registryLocation]] [destinationStorename]  
@@ -97,43 +97,43 @@ Sertifika Yöneticisi aracı (Certmgr.exe) sertifikaları, sertifika güven list
 ## <a name="examples"></a>Örnekler  
  Aşağıdaki komut, ayrıntılı çıktıyla çağrılan `my` bir varsayılan sistem deposunu görüntüler.  
   
-```  
+```console  
 certmgr /v /s my  
 ```  
   
  Aşağıdaki komut adlı bir dosyadaki `myFile.ext` tüm sertifikaları adlı `newFile.ext`yeni bir dosyaya ekler.  
   
-```  
+```console  
 certmgr /add /all /c myFile.ext newFile.ext  
 ```  
   
  Aşağıdaki komut, sertifikayı `testcert.cer` `my` sistem deposuna adlı bir dosyaya ekler.  
   
-```  
+```console  
 certmgr /add /c testcert.cer /s my  
 ```  
   
  Aşağıdaki komut, sertifikayı Kök sertifika deposuna adlı `TrustedCert.cer` bir dosyaya ekler.  
   
-```  
+```console  
 certmgr /c /add TrustedCert.cer /s root  
 ```  
   
  Aşağıdaki komut, `myCert` `my` sistem deposunda ortak ada sahip bir sertifikayı adlı `newCert.cer`bir dosyaya kaydeder.  
   
-```  
+```console  
 certmgr /add /c /n myCert /s my newCert.cer  
 ```  
   
  Aşağıdaki komut, `my` sistem deposundaki tüm CTL 'leri siler ve elde edilen depoyu adlı `newStore.str`bir dosyaya kaydeder.  
   
-```  
+```console  
 certmgr /del /all /ctl /s my newStore.str  
 ```  
   
  Aşağıdaki komut, bir sertifikayı `my` dosyadaki `newFile`sistem deposuna kaydeder. `my` İçine`newFile`koymak için sertifika numarasını girmeniz istenir.  
   
-```  
+```console  
 certmgr /put /c /s my newFile  
 ```  
   

@@ -1,8 +1,8 @@
 ### YamlMime:Tutorial
-title: Dal ve döngü deyimleriyle koşullu mantık öğrenin
+title: Dal ve döngü deyimleri ile koşullu mantık öğrenin
 metadata:
-  title: Dallar ve döngüler - Giriş C# etkileşimli öğretici
-  description: Bu öğreticide dallar ve döngüler hakkında bilgi edinmek için tarayıcınızı kullanacaksınız C# etkileşimli olarak. C# kodu yazacak ve kodunuzu doğrudan tarayıcınızda çalıştırma ve derleme sonuçları görmek.
+  title: Dallar ve döngüler- C# etkileşimli öğreticiye giriş
+  description: Dallar ve döngüler hakkında bu öğreticide, etkileşimli olarak öğrenmek C# için tarayıcınızı kullanacaksınız. Kod yazacak C# ve kodunuzu doğrudan tarayıcıda derleyip çalıştırmanın sonuçlarını görürsünüz.
   audience: Developer
   level: Beginner
   ms.custom: mvc
@@ -11,20 +11,20 @@ metadata:
   interactive: csharp
   nextTutorialHref: list-collection.yml
   nextTutorialTitle: Liste koleksiyonu
-  ms.openlocfilehash: aa6e91af175d1d3a3dcad7086c3a8205d45f438a
-  ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+  ms.openlocfilehash: 0456582fb0aefa9e144b71517b9d8ed619929805
+  ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 05/06/2019
-  ms.locfileid: "65063854"
+  ms.lasthandoff: 09/10/2019
+  ms.locfileid: "70850786"
 items:
 - durationInMinutes: 1
   content: >
-    Bu öğretici size değişkenleri araştıran ve yürütme yolunu Bu değişkenlere göre değiştiren bir kodun nasıl yazılacağını öğretir. Etkileşimli olarak C# yazmak ve kodunuzu derlerken ve sonuçları görmek için tarayıcınızı kullanacaksınız. Bu öğreticide, bir dizi, dallanma ve döngü yapıları içindeki keşfedin Ders içeren C#. Bu dersler size C# dilinin temellerini öğretin.
-- title: IF deneyimini kullanarak karar deyimi
+    Bu öğretici, değişkenleri inceleyen ve bu değişkenlere göre yürütme yolunu değiştiren bir kod yazmayı öğretir. Etkileşimli olarak yazmak C# ve kodunuzu derleyip çalıştırmanın sonuçlarını görmek için tarayıcınızı kullanacaksınız. Bu öğreticide, ' de C#dallanma ve döngü yapılarını keşfeden oluşan bir dizi ders bulunur. Bu dersler, C# dilin temellerini öğretir.
+- title: If ifadesini kullanarak kararlar alın
   durationInMinutes: 4
   content: >
-    Etkileşimli pencerede aşağıdaki kodu çalıştırın. Bunu yapmak için aşağıdaki kod bloğunu etkileşimli pencereye yazın ve **çalıştırma** düğmesi:
+    Etkileşimli pencerede aşağıdaki kodu çalıştırın. Bunu yapmak için, etkileşimli pencereye aşağıdaki kod bloğunu yazın ve **Çalıştır** düğmesine tıklayın:
 
 
     ```csharp
@@ -38,7 +38,7 @@ items:
     ```
 
 
-    Değiştirin `b` böylece toplam 10'dan küçük:
+    Bildirimi, toplamın 10 `b` ' dan küçük olacak şekilde değiştirin:
 
 
     ```csharp
@@ -48,32 +48,32 @@ items:
     ```
 
 
-    Tıklayın **çalıştırma** düğmesini tekrar. Yanıt 10'dan küçük olduğundan herhangi bir şey yazdırılmaz. **Koşul** olduğunuz test değer false. İçin olası dallardan birine yalnızca yazdığınız yürütülecek herhangi bir kodu olmayan bir `if` deyimi: true dalı.
+    **Çalıştır** düğmesine tekrar tıklayın. Yanıt 10 ' dan az olduğu için hiçbir şey yazdırılmaz. Test ettiğiniz **koşul** false 'tur. Yalnızca bir `if` deyimin olası dallarından birini yazdığınız için yürütülecek bir kodunuz yok: doğru dal.
 
 
     > [!TIP]
 
-    > C# (veya herhangi bir programlama dilini) keşfederken, kod yazdığınızda hatalar yapacaksınız. **Derleyici** bu hataları bulup size bildirir. Çıktı, hata iletileri içerdiğinde, örnek kod ve neyin düzeltilmesi gerektiğini görmek için etkileşimli pencerede kodu yakından bakın.
+    > Keşfederken C# (veya herhangi bir programlama dilini), kod yazarken hata oluşturursunuz. **Derleyici** bu hataları bulacak ve size rapor eder. Çıktı hata iletileri içerdiğinde, nelerin düzeltileceğini görmek için örnek koda ve etkileşimli penceredeki koda yakından bakın.
 
-    > Bu alıştırma, C# kodunun yapısını öğrenmenize yardımcı olur.
-
-
-    İlk örnek gücünü gösterir `if` ve Boole türlerini. A *Boole* iki değerden birine sahip olabilen bir değişkendir: `true` veya `false`. C# özel bir tür tanımlar `bool` Boole değişkenleri için. `if` Deyimi değerini denetler bir `bool`. Değer olduğunda `true`, sonrasındaki deyime `if` yürütür. Aksi halde atlanır.
+    > Bu alıştırma, C# kod yapısını öğrenmenize yardımcı olur.
 
 
-    Koşulları kontrol etmek ve bu koşullara göre deyimleri yürütmek için gerçekleştirilen bu işlem son derece etkilidir. Şimdi daha fazlasını keşfedelim.
+    Bu ilk örnek, `if` ve Boolean türlerin gücünü gösterir. *Boolean* , iki değerden birine sahip olabilir bir değişkendir: `true` veya. `false` C#Boole değişkenleri `bool` için özel bir tür tanımlar. `if` İfade a`bool`değerini denetler. Değer `true`olduğunda, `if` yürütülür ' i izleyen ifade. Aksi takdirde, atlanır.
+
+
+    Bu koşullara göre koşulları denetleme ve deyimleri yürütme işlemi çok güçlüdür. Daha fazlasını inceleyelim.
 
 
     > [!NOTE]
 
-    > Bu çevrimiçi kodlama deneyimi Önizleme modundadır. Sorunlarla karşılaşırsanız, Lütfen bunları rapor [dotnet/try deposunda](https://github.com/dotnet/try/issues).
-- title: İf ve else koşullarını birlikte
+    > Bu çevrimiçi kodlama deneyimi önizleme modundadır. Sorunlarla karşılaşırsanız, lütfen [DotNet/depoyu dene](https://github.com/dotnet/try/issues)' ye bildirin.
+- title: Eğer ve başka bir birlikte çalışır yap
   durationInMinutes: 10
-  content: "\nHem true hem de false dallarında farklı kod yürütmek için oluşturduğunuz bir `else` dalı, koşul false olduğunda yürütür. Şunu deneyin:\n\n```csharp\nint a = 5;\nint b = 3;\nif (a + b > 10)\n    Console.WriteLine(\"The answer is greater than 10\");\nelse\n    Console.WriteLine(\"The answer is not greater than 10\");\n```\n\nDeyim `else` anahtar sözcüğü, yalnızca test edilen koşul olduğunda yürütür `false`. Birleştirme `if` ve `else` Boole koşullarıyla koşullar gereksinim duyduğunuz tüm güç sağlar.\n\n> [!IMPORTANT]\n> Altındaki girinti `if` ve `else` deyimleri, İnsan okuyuculara yöneliktir.\n> C# dili girintileri veya boşlukları olarak önemli kabul etmez.\n> Deyim `if` veya `else` anahtar sözcüğü, bir koşula göre yürütülecek. Bu öğreticideki tüm örnekler üzerinde deyimlerin denetim akışına bağlı olarak satır girintilemenin sık kullanılan bir yöntemini uygulayın.\n\nGirinti önemli olmadığı için kullanmanız gerekir `{` ve `}` koşullu olarak yürütülen bloğun parçası olarak birden fazla deyim istediğinizde belirtmek için. C# programcıları genellikle kullanır Bu ayraçları tüm `if` ve `else` yan tümceleri. Aşağıdaki örnek biraz önce oluşturduğunuz aynıdır. Deneyin.\n\n```csharp\nint a = 5;\nint b = 3;\nif (a + b > 10)\n{\n    Console.WriteLine(\"The answer is greater than 10\");\n}\nelse\n{\n    Console.WriteLine(\"The answer is not greater than 10\");\n}\n```\n\n> [!TIP]\n> Bu öğreticinin geri kalanını, sonraki küme ayraçlarını, tüm kod örnekleri dahil kabul edilen yöntemleri.\n\nDaha karmaşık koşulları test edebilirsiniz:\n\n```csharp\nint a = 5;\nint b = 3;\nint c = 4;\nif ((a + b + c > 10) && (a == b))\n{\n    Console.WriteLine(\"The answer is greater than 10\");\n    Console.WriteLine(\"And the first number is equal to the second\");\n}\nelse\n{\n    Console.WriteLine(\"The answer is not greater than 10\");\n    Console.WriteLine(\"Or the first number is not equal to the second\");\n}\n```\n\n`==` İçin testler sembolü *eşitlik*. Kullanarak `==` eşitliği testi gördüğünüz atamanın'öğesinden ayırır `a = 5`.\n\n`&&` Temsil eder \"ve\". Bu koşulların her ikisi de deyimi true dalında yürütmek için true anlamına gelir.  İçine alınmaları koşuluyla her koşullu dalda birden çok deyime sahip bu örnek ayrıca Göster `{` ve `}`.\n\nAyrıca `||` temsil etmek için \"veya\":\n\n```csharp\nint a = 5;\nint b = 3;\nint c = 4;\nif ((a + b + c > 10) || (a == b))\n{\n    Console.WriteLine(\"The answer is greater than 10\");\n    Console.WriteLine(\"Or the first number is equal to the second\");\n}\nelse\n{\n    Console.WriteLine(\"The answer is not greater than 10\");\n    Console.WriteLine(\"And the first number is not equal to the second\");\n}\n```\n\nDeğerleri Değiştir `a`, `b`, ve `c` arasında geçiş `&&` ve `||` keşfetmek için. Daha fazla bilgiye nasıl elde etmenizi sağlayacak `&&` ve `||` işleçleri çalışır.\n\n> [!NOTE]\n> Bu çevrimiçi kodlama deneyimi Önizleme modundadır. Sorunlarla karşılaşırsanız, Lütfen bunları rapor [dotnet/try deposunda](https://github.com/dotnet/try/issues).\n"
+  content: "\nDoğru ve yanlış dallarda farklı kodu yürütmek için, koşul yanlış olduğunda yürütülen bir `else` dal oluşturursunuz. Şunu deneyin:\n\n```csharp\nint a = 5;\nint b = 3;\nif (a + b > 10)\n    Console.WriteLine(\"The answer is greater than 10\");\nelse\n    Console.WriteLine(\"The answer is not greater than 10\");\n```\n\n`else` Anahtar sözcüğünü izleyen ifade yalnızca `false`test edilen koşul olduğunda yürütülür. `if` Ve`else` Boole koşulları ile birleştirme, ihtiyacınız olan tüm gücü sağlar.\n\n> [!IMPORTANT]\n> `if` Ve`else` deyimlerinin altındaki girintileme insan okuyucular içindir.\n> Dil C# , girintileme veya boşluk olarak kabul etmez.\n> `if` Or`else` anahtar sözcüğünü izleyen ifade, koşula göre yürütülür. Bu öğreticideki tüm örnekler, ifadelerin denetim akışına göre satırları girintilemek için ortak bir uygulama izler.\n\nGirintileme önemli olmadığından, birden fazla deyimin koşullu olarak yürütülen `{` bloğun `}` bir parçası olmasını istediğiniz zaman göstermek için ve kullanmanız gerekir. C#programcılar genellikle bu ayraçları tüm `if` ve `else` yan tümcelerde kullanır. Aşağıdaki örnek, yeni oluşturduğunuz şeydir. Deneyin.\n\n```csharp\nint a = 5;\nint b = 3;\nif (a + b > 10)\n{\n    Console.WriteLine(\"The answer is greater than 10\");\n}\nelse\n{\n    Console.WriteLine(\"The answer is not greater than 10\");\n}\n```\n\n> [!TIP]\n> Bu öğreticinin geri kalanında, kod örnekleri, kabul edilen uygulamaları takip eden ayraçları içerir.\n\nDaha karmaşık koşulları test edebilirsiniz:\n\n```csharp\nint a = 5;\nint b = 3;\nint c = 4;\nif ((a + b + c > 10) && (a == b))\n{\n    Console.WriteLine(\"The answer is greater than 10\");\n    Console.WriteLine(\"And the first number is equal to the second\");\n}\nelse\n{\n    Console.WriteLine(\"The answer is not greater than 10\");\n    Console.WriteLine(\"Or the first number is not equal to the second\");\n}\n```\n\n`==` *Eşitlik*için simge testi. ' `==` Yi kullanarak, ' de gördüğünüz şekilde `a = 5`testi, atamanın eşitliğine ayırır.\n\n\"Ve\" temsil eder. `&&` Doğru dalda deyimin yürütülmesi için her iki koşulun de true olması gerektiği anlamına gelir.  Bu örnekler Ayrıca, ve `{` `}`içinde yer alan her bir koşullu dalda birden çok deyim olduğunu gösterir.\n\n\"Veya\" öğesini `||` göstermek için de kullanabilirsiniz:\n\n```csharp\nint a = 5;\nint b = 3;\nint c = 4;\nif ((a + b + c > 10) || (a == b))\n{\n    Console.WriteLine(\"The answer is greater than 10\");\n    Console.WriteLine(\"Or the first number is equal to the second\");\n}\nelse\n{\n    Console.WriteLine(\"The answer is not greater than 10\");\n    Console.WriteLine(\"And the first number is not equal to the second\");\n}\n```\n\n`a`, Ve`b`değerlerini değiştirin ve arasında`&&` geçiş yapın.`||` `c` `&&` Ve`||` işleçlerinin nasıl çalıştığını daha fazla anlayacaksınız.\n\n> [!NOTE]\n> Bu çevrimiçi kodlama deneyimi önizleme modundadır. Sorunlarla karşılaşırsanız, lütfen [DotNet/depoyu dene](https://github.com/dotnet/try/issues)' ye bildirin.\n"
 - title: İşlemleri yinelemek için döngüleri kullanma
   durationInMinutes: 6
   content: >
-    Daha büyük programlar oluşturmanın diğer bir önemli kavramı **döngüler**. Birçok kez yürütülmesini istediğiniz deyimleri yinelemek için döngüleri kullanacaksınız. Bu kodu etkileşimli pencerede deneyin:
+    Daha büyük programlar oluşturmak için başka bir önemli kavram **döngülere**sahiptir. Birden çok kez yürütülmesini istediğiniz deyimleri yinelemek için döngüleri kullanacaksınız. Etkileşimli pencerede şu kodu deneyin:
 
 
     ```csharp
@@ -90,18 +90,18 @@ items:
     ```
 
 
-    `while` Deyimi bir koşulu denetler ve aşağıdaki deyimi yürütür `while`. Koşulu kontrol etmeyi ve koşul false olana kadar bu deyimleri yürütmeyi yineler.
+    İfade bir koşulu denetler ve ' den `while`sonraki ifadeyi yürütür. `while` Koşul false olana kadar koşulu denetlemeyi ve bu deyimleri yürütmeyi tekrarlayacak.
 
 
-    Bu örnekte diğer bir yeni işleç yoktur. `++` Sonra `counter` değişkendir **artışı** işleci. Sayacın değerine 1 ekler ve bu değeri sayaç değişkeninde depolar.
+    Bu örnekte başka bir yeni işleç vardır. Değişken, **artırma** işlecinden `++`sonra. `counter` Sayaç değerine 1 ekler ve bu değeri sayaç değişkeninde depolar.
 
 
     > [!IMPORTANT]
 
-    > Emin olun `while` döngüsü koşulunun false olarak siz kodu yürütürken gibi. Aksi halde, oluşturduğunuz bir **sonsuz döngü** programınızı hiçbir zaman sona ereceği. Kodunuzu çalıştıran altyapı çünkü zaman aşımı ve hiçbir çıktı programınızı görmeyeceğinizden bunu, gösterelim değil.
+    > Kodu yürüttığınızdan `while` döngü koşulunun false olarak geçdiğinizden emin olun. Aksi takdirde, programınızın hiç bitmediğini **sonsuz bir döngü** oluşturursunuz. Kodunuzu çalıştıran altyapının zaman aşımına uğradığından ve programınızda hiçbir çıkış göreceğinden, bunu gösterelim.
 
 
-    `while` Döngü, sonraki kodu yürütmeden önce koşulu test eder `while`. `do` ... `while` döngüsü önce kodu yürütür ve sonra koşulu kontrol eder. Şöyle görünür:
+    `while` Döngü ,`while`sonrasında kodu yürütmeden önce koşulu sınar. `do` ... `while` döngü önce kodu yürütür ve sonra koşulu denetler. Şöyle görünür:
 
 
     ```csharp
@@ -118,19 +118,19 @@ items:
     ```
 
 
-    Bu `do` döngüsü ve önceki `while` döngüsü aynı şekilde çalışır.
+    Bu `do` döngü ve önceki `while` döngü aynı şekilde çalışır.
 
 
-    Bir son döngü deyimine geçelim.
+    Bir son döngü ifadesine geçelim.
 
 
     > [!NOTE]
 
-    > Bu çevrimiçi kodlama deneyimi Önizleme modundadır. Sorunlarla karşılaşırsanız, Lütfen bunları rapor [dotnet/try deposunda](https://github.com/dotnet/try/issues).
-- title: Çalışmak for döngüsü
+    > Bu çevrimiçi kodlama deneyimi önizleme modundadır. Sorunlarla karşılaşırsanız, lütfen [DotNet/depoyu dene](https://github.com/dotnet/try/issues)' ye bildirin.
+- title: For döngüsü ile çalışma
   durationInMinutes: 5
   content: >
-    C# kodunda göreceğiniz başka bir ortak döngü deyimi `for` döngü. Bu kodu etkileşimli pencerede deneyin:
+    C# Kodda göreceğiniz diğer bir yaygın döngü açıklaması `for` döngüdür. Etkileşimli pencerede şu kodu deneyin:
 
 
     ```csharp
@@ -144,55 +144,55 @@ items:
     ```
 
 
-    Bu aynı işlevi görür `while` döngü ve `do` zaten kullandığınız döngü. `for` Deyimi nasıl çalıştığını denetleyen üç bölümü vardır.
+    Bu, `while` döngüyle aynı çalışmayı `do` ve zaten kullandığınız döngüyü yapar. `for` İfadesinin nasıl çalıştığını denetleyen üç bölümü vardır.
 
 
-    İlk bölüm **for başlatıcısıdır**: `int counter = 0;` bildiren `counter` Döngü değişkeninin ve bunun başlangıçtaki değerini ayarlar `0`.
+    İlk bölüm **for başlatıcıdır**: `int counter = 0;` Loop değişkeni olduğunu bildirir `counter` ve başlangıç değerini olarak `0`ayarlar.
 
 
-    Ortadaki bölüm **koşulu**: `counter < 10` bildirir bu `for` döngü sayacının değerini 10'dan az olduğu sürece yürütülmeye devam eder.
+    Orta kısım **for koşuludur**: `counter < 10` sayacın değeri 10 ' dan `for` az olduğu sürece bu döngünün yürütülmeye devam ettiğini bildirir.
 
 
-    Son bölüm ise **yineleyici için**: `counter++` nasıl blok yürütüldükten sonra Döngü değişkeninin değiştirileceğini belirtir `for` deyimi. Burada, belirtir `counter` bloğun her zaman 1 tarafından arttırılarak.
+    Son bölüm, **Yineleyici için**: `counter++` `for` deyimden sonra blok yürütüldükten sonra döngü değişkeninin nasıl değiştirileceğini belirtir. Burada, blok her yürütüldüğünde `counter` 1 ' in artırılabilmelidir.
 
 
-    Bunları kendiniz deneyin. Her birini deneyin:
+    Bunlarla deneyin. Aşağıdakilerin her birini deneyin:
 
 
-    - Farklı bir değerde başlamak için başlatıcıyı değiştirin.
+    - Başlatıcıyı farklı bir değerle başlayacak şekilde değiştirin.
 
-    - Farklı bir değerde durmak için koşulu değiştirin.
+    - Koşulu, farklı bir değerde durdurulacak şekilde değiştirin.
 
 
-    İşiniz bittiğinde yazma adımına geçelim bazı öğrendikleriniz kullanılacak kodunu kendiniz.
+    İşiniz bittiğinde, öğrendiklerinizi kullanmak için kendinize bir kod yazmak üzere ilerlim.
 
 
     > [!NOTE]
 
-    > Bu çevrimiçi kodlama deneyimi Önizleme modundadır. Sorunlarla karşılaşırsanız, Lütfen bunları rapor [dotnet/try deposunda](https://github.com/dotnet/try/issues).
+    > Bu çevrimiçi kodlama deneyimi önizleme modundadır. Sorunlarla karşılaşırsanız, lütfen [DotNet/depoyu dene](https://github.com/dotnet/try/issues)' ye bildirin.
 - title: Dalları ve döngüleri birleştirme
   durationInMinutes: 12
   content: >
-    Gördüğünüze göre `if` deyimini ve döngü yapılarını C# dil bkz 1 ile 3 ile bölünebilen 20 tüm tamsayıların toplamını bulmak için C# kodu yazacak.  Bazı ipuçları şunlardır:
+    Artık, ve içindeki `if` C# döngü yapılarını gördüğünüze göre, 3 ' e bölünebilen 1 ile 20 arasındaki C# tüm tamsayıların toplamını bulmak için kod yazıp yazbileceğinizi görün.  İşte birkaç ipucu:
 
 
-    - `%` İşleci size bölme işlemindeki kalanı verir.
+    - `%` İşleci, bir bölme işleminin kalanını verir.
 
-    - `if` Deyimi bir sayı toplamı parçası olup olmayacağını görmek için koşul sağlar.
+    - `if` İfade, bir sayının toplamın bir parçası olup olmadığını görmek için koşul sağlar.
 
-    - `for` Yinelemenize yardımcı olur, 20'den sayılar 1 için bir dizi adımı yineleyin.
+    - `for` Döngü, 1 ile 20 arasındaki tüm sayılar için bir dizi adımı yinelemenize yardımcı olabilir.
 
 
-    Kendiniz deneyin. Ardından olup olmadığınıza bakın. İpucu olarak, 63 için bir yanıt almanız gerekir.
+    Kendiniz deneyin. Sonra nasıl yapıldığını kontrol edin. İpucu olarak bir yanıt için 63 almalısınız.
 
 
     > [!NOTE]
 
-    > Bu çevrimiçi kodlama deneyimi Önizleme modundadır. Sorunlarla karşılaşırsanız, Lütfen bunları rapor [dotnet/try deposunda](https://github.com/dotnet/try/issues).
-- title: Görevi tamamlama
+    > Bu çevrimiçi kodlama deneyimi önizleme modundadır. Sorunlarla karşılaşırsanız, lütfen [DotNet/depoyu dene](https://github.com/dotnet/try/issues)' ye bildirin.
+- title: Sınama Tamam
   durationInMinutes: 1
   content: >
-    Bu gibi bir şeyle gündeme mı?
+    Bunun gibi bir konuyla karşılaştınız mı?
 
 
     ```csharp
@@ -215,6 +215,6 @@ items:
 
     > [!NOTE]
 
-    > Bu çevrimiçi kodlama deneyimi Önizleme modundadır. Sorunlarla karşılaşırsanız, Lütfen bunları rapor [dotnet/try deposunda](https://github.com/dotnet/try/issues).
+    > Bu çevrimiçi kodlama deneyimi önizleme modundadır. Sorunlarla karşılaşırsanız, lütfen [DotNet/depoyu dene](https://github.com/dotnet/try/issues)' ye bildirin.
 - title: Tebrikler!
-  content: "\"Dallar ve döngüler\" Etkileşimli öğreticisini tamamladınız. Tıklayabilirsiniz **liste koleksiyon** etkileşimli bir sonraki öğreticiye başlatmak için aşağıdaki bağlantı ya da ziyaret edebilirsiniz [.NET site](https://www.microsoft.com/net/learn/dotnet/hello-world-tutorial) .NET Core SDK'sını indirmek için makinenizde bir proje oluşturun ve kodlama tutun. \"Öğrenme tut\" adımı bu öğreticilere geri getirir.\n\nAşağıdaki konulardan Bu kavramlar hakkında daha fazla bilgi edinebilirsiniz:\n\n- [Varsa ve else deyimi](../../language-reference/keywords/if-else.md)\n- [while deyimi](../../language-reference/keywords/while.md)\n- [do deyimi](../../language-reference/keywords/do.md)\n- [For deyimi](../../language-reference/keywords/for.md)"
+  content: "\"Dallar ve döngüler\" Etkileşimli öğreticisini tamamladınız. Sonraki etkileşimli öğreticiye başlamak için aşağıdaki **liste koleksiyonu** bağlantısına tıklayabilir veya [.net sitesini](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) ziyaret ederek .NET Core SDK indirebilir, makinenizde bir proje oluşturabilir ve kodlamadan haberdar olabilirsiniz. \"Sonraki adımlar\" bölümü, sizi bu öğreticilere geri getirir.\n\nBu kavramlar hakkında daha fazla bilgi için aşağıdaki konulara bakın:\n\n- [If ve Else deyimleri](../../language-reference/keywords/if-else.md)\n- [While ekstresi](../../language-reference/keywords/while.md)\n- [Do ekstresi](../../language-reference/keywords/do.md)\n- [For deyimleri](../../language-reference/keywords/for.md)"

@@ -3,12 +3,12 @@ title: WIF ve Web Grupları
 ms.date: 03/30/2017
 ms.assetid: fc3cd7fa-2b45-4614-a44f-8fa9b9d15284
 author: BrucePerlerMS
-ms.openlocfilehash: e6806971bd2260785d66bfdb54a3e2938043c746
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 09d5f3f745f170439a7fbf160b78439c103623b9
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69967182"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851529"
 ---
 # <a name="wif-and-web-farms"></a>WIF ve Web Grupları
 Bir Web grubunda dağıtılan bir bağlı olan taraf (RP) uygulamasının kaynaklarını güvenli hale getirmek için Windows Identity Foundation (WıF) kullandığınızda, WıF 'nin farklı bir şekilde çalışan RP uygulamasının örneklerinden belirteçleri işleyebilmesinin için özel adımlar uygulamanız gerekir gruptaki bilgisayarlar. Bu işleme, oturum belirteci imzalarını doğrulamak, oturum belirteçlerini şifrelemek ve şifrelerini çözmek, oturum belirteçlerini önbelleğe almak ve yeniden yürütülmüş güvenlik belirteçlerini algılamak içerir.  
@@ -64,7 +64,7 @@ Bir Web grubunda dağıtılan bir bağlı olan taraf (RP) uygulamasının kaynak
 ## <a name="the-wcf-caching-service"></a>WCF önbelleğe alma hizmeti  
  Aşağıdaki arabirim, WCF önbelleği hizmeti ile iletişim kurmak için bağlı olan taraf uygulaması tarafından kullanılan WCF istemcisi arasındaki sözleşmeyi tanımlar. Temel olarak <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache> sınıfın yöntemlerini hizmet işlemleri olarak kullanıma sunar.  
   
-```  
+```csharp
 [ServiceContract()]  
 public interface ISessionSecurityTokenCacheService  
 {  
@@ -90,7 +90,7 @@ public interface ISessionSecurityTokenCacheService
   
  Aşağıdaki kod, WCF önbellek hizmetinin uygulamasını gösterir. Bu örnekte, WıF tarafından uygulanan varsayılan, bellek içi oturum belirteci önbelleği kullanılır. Alternatif olarak, bir veritabanı tarafından desteklenen dayanıklı bir önbellek uygulayabilirsiniz. `ISessionSecurityTokenCacheService`Yukarıda gösterilen arabirimi tanımlar. Bu örnekte, arayüzü uygulamak için gereken yöntemlerin hepsi, kısaltma için gösterilmemiştir.  
   
-```  
+```csharp
 using System;  
 using System.Collections.Generic;  
 using System.IdentityModel.Configuration;  
@@ -150,7 +150,7 @@ namespace WcfSessionSecurityTokenCacheService
   
  Sınıfı, `<sessionSecurityTokenCache>` öğesinin özel <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache.LoadCustomConfiguration%2A> `<cacheServiceAddress>` alt öğesinden hizmet uç noktasını almak için yöntemini geçersiz kılar. Bu uç noktayı, hizmet ile iletişim `ISessionSecurityTokenCacheService` kurabileceği bir kanalı başlatmak için kullanır.  Bu örnekte, <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache> sınıfının uygulanması için gerekli yöntemlerin hepsi, kısaltma için gösterilmemiştir.  
   
-```  
+```csharp
 using System;  
 using System.Configuration;  
 using System.IdentityModel.Configuration;  

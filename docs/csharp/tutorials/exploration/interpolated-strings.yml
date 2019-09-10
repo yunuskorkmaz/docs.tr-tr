@@ -1,28 +1,28 @@
 ### YamlMime:Tutorial
-title: Dize ilişkilendirme, biçimlendirilmiş dizeler oluşturmak için kullanın
+title: Biçimlendirilen dizeler oluşturmak için dize ilişkilendirmeyi kullanın
 metadata:
-  title: Dize ilişkilendirme - C# etkileşimli öğretici
-  description: Bu öğreticide, C# dize ilişkilendirme özelliğinden etkileşimli olarak keşfetmek için tarayıcınızı kullanın. C# kodu yazacak ve derleme ve kodunuzu doğrudan tarayıcınızda çalıştırmaya sonuçlarını göreceksiniz.
+  title: Dize ilişkilendirme- C# Etkileşimli öğretici
+  description: Bu öğreticide, C# dize ilişkilendirme özelliğini etkileşimli olarak araştırmak için tarayıcınızı kullanacaksınız. Kod yazar C# ve kodunuzu doğrudan tarayıcıda derleyip çalıştırmanın sonuçlarını görürsünüz.
   audience: Developer
   ms.custom: mvc
   ms.date: 08/24/2018
   level: Beginner
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: 70d63f460ad2e67fe60cd8d5130e8ff22889d8be
-  ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
+  ms.openlocfilehash: eb4b1571b4d00d90034148f7b595f4499859ce4b
+  ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 05/24/2019
-  ms.locfileid: "66195945"
+  ms.lasthandoff: 09/10/2019
+  ms.locfileid: "70850951"
 items:
 - durationInMinutes: 2
   content: >
-    Bu öğreticide nasıl kullanacağınızı öğretir [dize ilişkilendirme](../../language-reference/tokens/interpolated.md) değerleri tek bir dize olarak eklenecek. Ayrıca metin Sonuç dizesini formatlamayı kontrol öğrenin. Yazmak ve çalıştırmak için tarayıcınızı kullanırsınız C# kod ve sonuçları hemen görebilirsiniz.
-- title: İlişkilendirilmiş dize oluşturma
+    Bu öğretici, tek bir dizeye değerler eklemek için [dize ilişkilendirmeyi](../../language-reference/tokens/interpolated.md) nasıl kullanacağınızı öğretir. Sonuç dizesinin metin biçimlendirmesini nasıl denetleyeceğinizi de öğreneceksiniz. Kodu yazmak ve çalıştırmak C# için tarayıcınızı kullanırsınız ve sonuçları hemen görebilirsiniz.
+- title: Enterpolasyonlu dize oluşturma
   durationInMinutes: 2
   content: >
-    Etkileşimli pencerede aşağıdaki kodu çalıştırın. Bunu yapmak için kod etkileşimli pencereye yazın (Değiştir `<name>` adınızla) seçip **çalıştırmak**:
+    Etkileşimli pencerede aşağıdaki kodu çalıştırın. Bunu yapmak için, kodu etkileşimli pencereye yazın (adınızla değiştirin `<name>` ) ve **Çalıştır**' ı seçin:
 
 
     ```csharp
@@ -34,31 +34,31 @@ items:
     ```
 
 
-    Kod çalıştırdığınızda **çıkış** karşılamada adınızı içeren bir dize görüntüler. Dize bağımsız değişkeni <xref:System.Console.WriteLine%2A> yöntem çağrısında bir *ilişkilendirilmiş dize ifadesi*. Tek bir dize olanak sağlayan bir şablon türüdür (adlı *sonuç dizesi*), gömülü kod içeren bir dizeden. İlişkilendirilmiş dize ifadeleri bir dizeye değer eklerken veya birkaç dizeleri birleştirme (bir araya getirme) için özellikle yararlıdır.
+    Kodu çalıştırdığınızda, **Çıkış** , selamdaki adınızı içeren bir dize görüntüler. <xref:System.Console.WriteLine%2A> Yöntem çağrısının dize bağımsız değişkeni, bir *enterpolasyonlu dize ifadesidir*. Katıştırılmış kodu içeren bir dizeden tek bir dize ( *sonuç dizesi*olarak adlandırılır) oluşturmanıza imkan tanıyan bir şablon türüdür. Enterpolasyonlu dize ifadeleri, bir dizeye değer eklemek veya birkaç dizeyi birleştirmek (birlikte birleştirmek) için özellikle faydalıdır.
 
 
-    Yukarıdaki örnek her ilişkilendirilmiş dize ifadesi olmalıdır iki öğeleri içerir:
+    Yukarıdaki örnek, her bir enterpolasyonlu dize ifadesinin sahip olması gereken iki öğeyi içerir:
 
 
-    - İle başlayan bir dize sabit değeri `$` açma tırnak işareti karakterinden önce karakter karakter. Arasında boşluk olamaz `$` sembol ve tırnak işareti karakteri. (Görmek istiyorsanız, ne olacağını yaptığınızda, sonra boşluk Ekle `$` karakter etkileşimli pencerede ve güncelleştirilmiş kod çalıştırın. C# derleyicisi şeklinde hata verir "Beklenmeyen karakter '$'".)
+    - Açılış tırnak işareti karakterinden önce `$` karakteriyle başlayan bir dize sabit değeri. `$` Sembol ve tırnak işareti karakteri arasında boşluk olamaz. (Bir tane eklerseniz ne olacağını görmek isterseniz, etkileşimli penceredeki `$` karakterden sonra bir boşluk ekleyin ve güncelleştirilmiş kodu çalıştırın. C# Derleyici şikayetleri, "beklenmeyen karakter ' $ '".)
 
 
-    - Bir veya daha fazla *ilişkilendirme ifadeleri*. Bir ilişkilendirme ifade bir açma ve kapatma ayracı gösterilir (`{` ve `}`). Bir değer döndüren bir C# ifadesini ekleyebilirsiniz (dahil olmak üzere `null`) küme ayraçları içinde.
+    - Bir veya daha fazla *ilişkilendirme ifadesi*. Enterpolasyon ifadesi bir açma ve kapatma ayracı (`{` ve `}`) ile belirtilir. Küme ayraçları içinde ( C# dahil `null`) bir değer döndüren herhangi bir ifadeyi yerleştirebilirsiniz.
 
 
-    Diğer veri türlerinden bazılarıyla birkaç daha fazla dize ilişkilendirme örneği deneyelim.
+    Biraz daha farklı veri türleriyle daha fazla dize ilişkilendirme örneği deneyelim.
 
 
     > [!NOTE]
 
-    > Bu çevrimiçi kodlama deneyimi Önizleme modundadır. Sorunlarla karşılaşırsanız, Lütfen bunları rapor [dotnet/try deposunda](https://github.com/dotnet/try/issues).
-- title: Farklı veri türleri ekleme
+    > Bu çevrimiçi kodlama deneyimi önizleme modundadır. Sorunlarla karşılaşırsanız, lütfen [DotNet/depoyu dene](https://github.com/dotnet/try/issues)' ye bildirin.
+- title: Farklı veri türleri dahil et
   durationInMinutes: 5
-  content: "Önceki adımda, bir dizenin içine eklemek için dize ilişkilendirme kullanılır. İlişkilendirilmiş dize ifadesi bir parçası olan her bir ilişkilendirme ifade herhangi bir veri türünde ancak olabilir. Şimdi bir aradeğerlendirme dizesinde çeşitli veri türü ifadeleri değerlerini içerir.\n\nAşağıdaki örnekte, ilk tanımlarız bir [demet](../../tuples.md) olan `Name`, `Price`, ve `perPackage` üyeleri. Etkileşimli pencerede aşağıdaki kodu çalıştırın:\n\n```csharp\nvar item = (Name: \"eggplant\", Price: 1.99m, perPackage: 3);\nvar date = DateTime.Now;\nConsole.WriteLine($\"On {date}, the price of {item.Name} was {item.Price:C2} per {item.perPackage} items.\");\n```\n\nUnutmayın ilişkilendirme ifade `item.Price` aradeğerlendirme dizesinde çözümleniyor sonuç dizesindeki \"1.99\" metni. Deyim sonucu türü dize olmadığı durumlarda, sonuç şu şekilde bir dizeye çözümlenir çünkü:\n\n- İlişkilendirme ifade değerlendirilirse `null`, boş bir dize (\"\", veya <xref:System.String.Empty?displayProperty=nameWithType>) kullanılır.\n\n- İlişkilendirme ifade değerlendirme değil, `null`, genellikle `ToString` sonuç ifadesi yöntemi çağrılır. \n\nBu örnek çıktıda, (eggplant fiyatı, her saniye değişmez) kesin tarih ve Fiyat değerini para birimi göstermez. Sonraki adımda, ifade sonuçları dize temsillerini biçimini denetleyerek bu sorunları gidermek nasıl öğreneceksiniz.\n\n> [!NOTE]\n> Bu çevrimiçi kodlama deneyimi Önizleme modundadır. Sorunlarla karşılaşırsanız, Lütfen bunları rapor [dotnet/try deposunda](https://github.com/dotnet/try/issues).\n"
-- title: İlişkilendirme ifadelerin biçimlendirmesini denetleme
+  content: "Önceki adımda, bir dizeyi diğerinin içine eklemek için dize ilişkilendirmeyi kullandınız. Bir enterpolasyonlu dize ifadesinin parçası olan her ilişkilendirme ifadesi herhangi bir veri türünde olabilir, ancak. Enterpolasyonlu bir dizedeki çeşitli veri türü ifadelerinin değerlerini ekleyelim.\n\nAşağıdaki örnekte, ilk `Name`olarak, `Price`, ve `perPackage` üyeleri olan bir [tanımlama grubu](../../tuples.md) tanımladık. Etkileşimli pencerede aşağıdaki kodu çalıştırın:\n\n```csharp\nvar item = (Name: \"eggplant\", Price: 1.99m, perPackage: 3);\nvar date = DateTime.Now;\nConsole.WriteLine($\"On {date}, the price of {item.Name} was {item.Price:C2} per {item.perPackage} items.\");\n```\n\nEnterpolasyonlu dizedeki `item.Price` enterpolasyon ifadesinin sonuç dizesinde \"1,99\" metnine çözümlendiğine unutmayın. Yani, ifade sonucunun türü bir dize olmadığında, sonuç aşağıdaki şekilde bir dizeye çözülür:\n\n- Enterpolasyon ifadesi olarak `null`değerlendirilirse, boş bir dize (\"\" veya <xref:System.String.Empty?displayProperty=nameWithType>) kullanılır.\n\n- İlişkilendirme ifadesi olarak `null`değerlendirilmiyorsa, `ToString` genellikle sonuç ifadesinin yöntemi çağırılır. \n\nBu örnekteki çıktıda, tarih çok kesin (eggbitki fiyatı her saniye değişmez) ve fiyat değeri bir para birimi göstermez. Sonraki adımda, ifade sonuçlarının dize gösterimlerini denetleyerek bu sorunları nasıl giderebileceğinizi öğreneceksiniz.\n\n> [!NOTE]\n> Bu çevrimiçi kodlama deneyimi önizleme modundadır. Sorunlarla karşılaşırsanız, lütfen [DotNet/depoyu dene](https://github.com/dotnet/try/issues)' ye bildirin.\n"
+- title: Enterpolasyon ifadelerinin biçimlendirmesini denetleme
   durationInMinutes: 5
   content: >
-    Önceki adımda, sonuç dizesine yetersiz şekilde biçimlendirilmiş iki dize eklenmişti. Bir tarih yalnızca uygun bir tarih ve saat değeri oluştu. İkinci para biriminin göstermek istemediğiniz bir fiyattı. Her iki sorun da kolayca giderilebilir. Dize ilişkilendirme belirtmenize olanak tanır *biçim dizeleri* belirli türlerin biçimlendirmesini denetleyen. Çağrısını değiştirin `Console.WriteLine` aşağıdaki satırda gösterildiği gibi tarih ve fiyat ifadeler için biçim dizeleri dahil etmek için önceki örnekte:
+    Önceki adımda, sonuç dizesine hatalı biçimli iki dize eklenmiştir. Bunlardan biri, yalnızca tarihin uygun olduğu tarih ve saat değeridir. İkincisi, para birimi birimini göstermediğiniz bir fiyattır. Her iki sorunun de kolay bir şekilde ele alınır. Dize ilişkilendirme, belirli türlerin biçimlendirilmesini denetleyen *Biçim dizelerini* belirtmenize olanak tanır. Aşağıdaki satırda gösterildiği gibi `Console.WriteLine` , tarih ve fiyat ifadelerine yönelik biçim dizelerini dahil etmek için önceki örnekteki çağrısını değiştirin:
 
 
     ```csharp
@@ -68,25 +68,25 @@ items:
     ```
 
 
-    İki nokta ile ilişkilendirme ifade izleyerek bir biçim dizesi belirtin (":") ve biçim dizesi. "d" bir [standart tarih ve saat biçim dizesi](../../../standard/base-types/standard-date-and-time-format-strings.md#the-short-date-d-format-specifier) temsil eden kısa tarih biçimi. "C2" olan bir [standart sayısal biçim dizesi](../../../standard/base-types/standard-numeric-format-strings.md#the-currency-c-format-specifier) , bir sayı olarak iki basamakla para birimi değeri ondalık ayırıcıdan sonra temsil eder.
+    Bir biçim dizesini, iki nokta üst üste (":") ve biçim dizesiyle birlikte enterpolasyon ifadesini izleyerek belirtirsiniz. "d", kısa tarih biçimini temsil eden [Standart bir tarih ve saat biçim dizesidir](../../../standard/base-types/standard-date-and-time-format-strings.md#the-short-date-d-format-specifier) . "C2", ondalık ayırıcıdan sonraki iki basamakla para birimi değeri olarak bir sayıyı temsil eden [Standart bir sayısal biçim dizesidir](../../../standard/base-types/standard-numeric-format-strings.md#the-currency-c-format-specifier) .
 
 
-    .NET kitaplıklarına türlerinde bir dizi önceden tanımlanmış bir dizi biçim dizesini destekler. Bunlar, tüm sayısal türlerin ve tarih ve saat türleri içerir. Biçim dizelerini destekleyen türler tam bir listesi için bkz. [biçim dizeleri ve .NET sınıfı kitaplık türleri](../../../standard/base-types/formatting-types.md#stringRef) içinde [NET'teki biçimlendirme türleri](../../../standard/base-types/formatting-types.md) makalesi.
+    .NET kitaplıklarında bulunan birçok tür, önceden tanımlanmış bir biçim dizeleri kümesini destekler. Bunlar, tüm sayısal türleri ve Tarih ve saat türlerini içerir. Biçim dizelerini destekleyen türlerin tüm listesi için bkz. [.net makalesindeki biçimlendirme türleri](../../../standard/base-types/formatting-types.md) ' nde [Biçim dizeleri ve .NET sınıf kitaplığı türleri](../../../standard/base-types/formatting-types.md#stringRef) .
 
 
-    Bunlar tarih ve saat ile sayısal biçimlendirme nasıl etkilediğini görmek için örnek'daki biçim dizelerini değiştirmeyi deneyin. "D" değiştirmek `{date:d}` "(kısa saat biçimini görüntülemek için) t", "(yıl ve ay görüntülemek için) y" ve "yyyy" (yılı dört basamaklı bir sayı görüntülemek için). "C2" değiştirmek `{price:C2}` (üstel gösterim için için) "e" ve "F3" (için ondalık ayırıcıdan sonra üç basamak içeren sayısal bir değer).
+    Tarih ve saat ve sayısal değer biçimlendirmesini nasıl etkilediğini görmek için örnekteki biçim dizelerini değiştirmeyi deneyin. İçindeki `{date:d}` "d" öğesini "t" olarak değiştirin (kısa saat biçimini göstermek için), "y" (yılı ve ayı göstermek için) ve "yyyy" (yılı dört basamaklı bir sayı olarak göstermek için). İçindeki `{price:C2}` "C2" öğesini "e" (üstel gösterim için) ve "F3" (ondalık ayırıcıdan sonra üç basamaklı bir sayısal değer için) olarak değiştirin.
 
 
-    Biçimlendirmenin yanı sıra alan genişliğini ve sonuç dizesine eklenir biçimlendirilmiş dizeler hizalamasını da denetleyebilirsiniz. Sonraki adımda, bunun nasıl yapılacağını öğreneceksiniz.
+    Biçimlendirmeyi denetlemenin yanı sıra, sonuç dizesinde bulunan biçimlendirilmiş dizelerin alan genişliğini ve hizalamasını da denetleyebilirsiniz. Sonraki adımda bunu nasıl yapacağınızı öğreneceksiniz.
 
 
     > [!NOTE]
 
-    > Bu çevrimiçi kodlama deneyimi Önizleme modundadır. Sorunlarla karşılaşırsanız, Lütfen bunları rapor [dotnet/try deposunda](https://github.com/dotnet/try/issues).
-- title: Alan genişliğini ve hizalamasını ilişkilendirme ifadeleri denetleme
+    > Bu çevrimiçi kodlama deneyimi önizleme modundadır. Sorunlarla karşılaşırsanız, lütfen [DotNet/depoyu dene](https://github.com/dotnet/try/issues)' ye bildirin.
+- title: Enterpolasyon ifadelerinin alan genişliğini ve hizalamasını denetleme
   durationInMinutes: 6
   content: >
-    İlişkilendirilmiş dize ifadesi sonucu dize olarak biçimlendirildiğinde normalde, bu dize bir sonuç dizesinde baştaki veya sondaki boşluk olmadan dahil edilir. Özellikle bir veri kümesiyle bir alan genişliğini denetleyebilir çalışırken ve metin hizalamasını daha okunabilir bir çıktı oluşturmak için yardımcı olur. Bunu görmek için aşağıdaki kodu çalıştırın:
+    Normalde, bir enterpolasyonlu dize ifadesinin sonucu dize olarak biçimlendirildiğinde, bu dize öndeki veya sondaki boşluklar olmadan bir sonuç dizesine dahil edilir. Özellikle bir veri kümesiyle çalışırken, alan genişliğini denetleyebilmekte ve metin hizalaması daha okunabilir bir çıktı oluşturulmasına yardımcı olur. Bunu görmek için aşağıdaki kodu çalıştırın:
 
 
     ```csharp
@@ -105,13 +105,13 @@ items:
     ```
 
 
-    Öğe adları sola hizalanmış ve bunların miktarları ise sağa hizalanmıştır. Virgül ekleyerek hizalamayı belirtin (",") sonra bir ilişkilendirme ifade ve belirleme *minimum* alan genişliği. Belirtilen değer pozitif bir sayıysa alan sağa hizalanır. Negatif bir sayı ise, alan sola hizalanır.
+    Öğe adları sola hizalanır ve miktarları sağa hizalanır. Bir ilişkilendirme ifadesinden sonra bir virgül (",") ekleyerek ve *en az* alan genişliğini belirterek hizalamayı belirlersiniz. Belirtilen değer pozitif bir sayıysa, alan sağa hizalanır. Negatif bir sayı ise, alan sola hizalanır.
 
 
-    Negatif işaretlerini kaldırmayı deneyip `{"Item",-25}` ve `{item.Key,-25}` kod ve örneği tekrar çalıştırın. Bu kez öğe adları sağa hizalanır.
+    `{"Item",-25}` Ve`{item.Key,-25}` kodundan negatif işaretleri kaldırmayı deneyin ve örneği yeniden çalıştırın. Bu kez, öğe adları sağa hizalanır.
 
 
-    Hizalama tanımlayıcısı ve bir biçim dizesi tek ilişkilendirme ifadesi için birleştirebilirsiniz. Bunu yapmak için ardından iki nokta işareti ve biçim dizesi hizalama ilk olarak belirtin. Alan genişlikleri tanımlı olan biçimlendirilmiş üç dizeyi görüntüleyen aşağıdaki kodu deneyin:
+    Tek bir ilişkilendirme ifadesi için bir hizalama belirleyicisi ve biçim dizesi birleştirebilirsiniz. Bunu yapmak için önce hizalamayı, ardından iki nokta üst üste ve biçim dizesini belirtin. Tanımlı alan genişlikleri olan üç biçimli dizeyi görüntüleyen aşağıdaki kodu deneyin:
 
 
     ```csharp
@@ -123,9 +123,9 @@ items:
 
     > [!NOTE]
 
-    > Bu çevrimiçi kodlama deneyimi Önizleme modundadır. Sorunlarla karşılaşırsanız, Lütfen bunları rapor [dotnet/try deposunda](https://github.com/dotnet/try/issues).
+    > Bu çevrimiçi kodlama deneyimi önizleme modundadır. Sorunlarla karşılaşırsanız, lütfen [DotNet/depoyu dene](https://github.com/dotnet/try/issues)' ye bildirin.
 - content: >-
-    Dize ilişkilendirme etkileşimli öğreticisini tamamladınız. Tıklayabilirsiniz **koleksiyonlarında C# ** etkileşimli bir sonraki öğreticiye başlatmak için aşağıdaki bağlantı ya da ziyaret edebilirsiniz [.NET site](https://www.microsoft.com/net/learn/dotnet/hello-world-tutorial) .NET Core SDK'sını indirmek için makinenizde bir proje oluşturun ve kodlama tutun . "Öğrenme tut" adımı bu öğreticilere geri getirir.
+    Dize ilişkilendirme etkileşimli öğreticisini tamamladınız. Sonraki etkileşimli öğreticiye başlamak için aşağıdaki LINK **içindeki C# koleksiyonlara** tıklayabilirsiniz veya .NET Core SDK indirmek, makinenizde bir proje oluşturmak ve kodlamaya devam etmek için [.net sitesini](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) ziyaret edebilirsiniz. "Sonraki adımlar" bölümü, sizi bu öğreticilere geri getirir.
 
 
-    Daha fazla bilgi için [dize ilişkilendirme](../../language-reference/tokens/interpolated.md).
+    Daha fazla bilgi için bkz. [dize ilişkilendirme](../../language-reference/tokens/interpolated.md).

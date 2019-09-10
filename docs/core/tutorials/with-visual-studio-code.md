@@ -4,12 +4,12 @@ description: Visual Studio Code C# kullanarak Ilk .NET Core uygulamanızı nası
 author: kendrahavens
 ms.date: 12/05/2018
 ms.custom: seodec18
-ms.openlocfilehash: 910545a99f9d014ae572fbe95c93cdb44a69db99
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 03a2edcbb3414cfd63006603424a3ca1eade528f
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105100"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849458"
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>C# ve Visual Studio Code kullanmaya başlama
 
@@ -18,7 +18,7 @@ ms.locfileid: "70105100"
 ## <a name="prerequisites"></a>Önkoşullar
 
 1. [Visual Studio Code](https://code.visualstudio.com/)'i yükler.
-2. [.NET Core SDK](https://www.microsoft.com/net/download/core)'i yükler.
+2. [.NET Core SDK](https://dotnet.microsoft.com/download)'i yükler.
 3. Visual Studio Code [ C# uzantısını](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp) yükler. Visual Studio Code uzantıları nasıl yükleyeceğiniz hakkında daha fazla bilgi için bkz. [vs Code uzantısı marketi](https://code.visualstudio.com/docs/editor/extension-gallery).
 
 ## <a name="hello-world"></a>Merhaba Dünya

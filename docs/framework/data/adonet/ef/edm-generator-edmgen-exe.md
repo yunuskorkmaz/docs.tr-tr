@@ -2,18 +2,18 @@
 title: EDM Oluşturucu (EdmGen.exe)
 ms.date: 03/30/2017
 ms.assetid: fe8297a1-1fc3-48ce-8eeb-f70f63f857aa
-ms.openlocfilehash: 688989fea6037cc989267e14b103210c2a995afa
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 82166782e25cb7a7ea23fe7faf7a30cb0e68d631
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251624"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854724"
 ---
 # <a name="edm-generator-edmgenexe"></a>EDM Oluşturucu (EdmGen.exe)
 
-EdmGen. exe, [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] model ve eşleme dosyalarıyla çalışmak için kullanılan bir komut satırı aracıdır. EdmGen. exe aracını kullanarak şunları gerçekleştirebilirsiniz:
+EdmGen. exe, Entity Framework modeli ve eşleme dosyalarıyla çalışmak için kullanılan bir komut satırı aracıdır. EdmGen. exe aracını kullanarak şunları gerçekleştirebilirsiniz:
 
-- Veri kaynağına özgü .NET Framework veri sağlayıcısı kullanarak bir veri kaynağına bağlanın ve tarafından [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]kullanılan kavramsal model (. csdl), depolama modeli (. ssdl) ve eşleme (. MSL) dosyalarını oluşturun. Daha fazla bilgi için [nasıl yapılır: Modeli ve eşleme dosyalarını](how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)oluşturmak Için EdmGen. exe ' yi kullanın.
+- Veri kaynağına özgü .NET Framework veri sağlayıcısı kullanarak bir veri kaynağına bağlanın ve Entity Framework tarafından kullanılan kavramsal model (. csdl), depolama modeli (. ssdl) ve eşleme (. MSL) dosyalarını oluşturun. Daha fazla bilgi için [nasıl yapılır: Modeli ve eşleme dosyalarını](how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)oluşturmak Için EdmGen. exe ' yi kullanın.
 
 - Mevcut bir modeli doğrulayın. Daha fazla bilgi için [nasıl yapılır: Modeli ve eşleme dosyalarını](how-to-use-edmgen-exe-to-validate-model-and-mapping-files.md)doğrulamak Için EdmGen. exe ' yi kullanın.
 

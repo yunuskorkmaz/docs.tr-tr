@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Atom Publishing Protocol [WCF Data Services]
 - WCF Data Services, customizing feeds
 ms.assetid: 0d1a39bc-6462-4683-bd7d-e74e0fd28a85
-ms.openlocfilehash: b4ea05b0112af4c1dcb6308a08ab3b31c586fbe8
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 17d54210d7abc16fe91fa94f39a8f85eac866088
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70790853"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854189"
 ---
 # <a name="feed-customization-wcf-data-services"></a>Akış özelleştirmesi (WCF Veri Hizmetleri)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]verileri bir akış olarak göstermek içinöğesinikullanır.[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]veri akışları için hem atom hem de JavaScript Nesne Gösterimi (JSON) biçimlerini destekler. Atom akışı kullandığınızda, [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] varlıklar ve ilişkiler gibi verileri, HTTP iletisinin gövdesine eklenebilecek bir XML biçiminde seri hale getirmek için standart bir yöntem sağlar. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]varlıklarda ve Atom öğelerinde bulunan veriler arasında varsayılan bir varlık özelliği eşlemesini tanımlar. Daha fazla bilgi için bkz [. OData: Atom biçimi](https://go.microsoft.com/fwlink/?LinkID=185794).  
@@ -31,7 +31,7 @@ ms.locfileid: "70790853"
 > Özel akışlar tanımladığınızda, tanımlanmış özel eşlemeleri olan tüm varlık özelliklerinin projeksiyonda dahil edildiğini garanti etmeniz gerekir. Eşlenen bir varlık özelliği projeksiyonde yer olmadığında veri kaybı oluşabilir. Daha fazla bilgi için bkz. [sorgu tahminleri](query-projections-wcf-data-services.md).  
   
 ## <a name="customizing-feeds-with-the-entity-framework-provider"></a>Entity Framework sağlayıcı ile akışları özelleştirme  
- [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] Sağlayıcıyla kullanılan veri modeli. edmx dosyasında XML olarak temsil edilir. Bu durumda, özel akışları tanımlayan öznitelikler ve `EntityType` `Property` , veri modelindeki varlık türlerini ve özelliklerini temsil eden öğelerine eklenir. Bu akış özelleştirme öznitelikleri mc-csdl [\]içinde \[tanımlı değil: Sağlayıcının veri modelini tanımlamak için](https://go.microsoft.com/fwlink/?LinkId=159072)kullandığı biçim olan kavramsal şema tanım dosyası biçimi. [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] Bu nedenle, akış özelleştirme özniteliklerini, olarak `m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"`tanımlanan belirli bir şema ad alanında bildirmeniz gerekir. Aşağıdaki `Property` XML parçası `ProductName`, `Products` ,ve`UnitsInStock` özelliklerini tanımlayan varlık türünün öğelerine uygulanan akış özelleştirme özniteliklerini gösterir. `ReorderLevel`  
+ Entity Framework sağlayıcısıyla kullanılan veri modeli. edmx dosyasında XML olarak temsil edilir. Bu durumda, özel akışları tanımlayan öznitelikler ve `EntityType` `Property` , veri modelindeki varlık türlerini ve özelliklerini temsil eden öğelerine eklenir. Bu akış özelleştirme öznitelikleri mc-csdl [\]içinde \[tanımlı değil: Entity Framework sağlayıcının veri modelini tanımlamak](https://go.microsoft.com/fwlink/?LinkId=159072)için kullandığı biçim olan kavramsal şema tanım dosyası biçimi. Bu nedenle, akış özelleştirme özniteliklerini, olarak `m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"`tanımlanan belirli bir şema ad alanında bildirmeniz gerekir. Aşağıdaki `Property` XML parçası `ProductName`, `Products` ,ve`UnitsInStock` özelliklerini tanımlayan varlık türünün öğelerine uygulanan akış özelleştirme özniteliklerini gösterir. `ReorderLevel`  
   
  [!code-xml[Astoria Custom Feeds#EdmFeedAttributes](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria_custom_feeds/xml/northwind.csdl#edmfeedattributes)]  
   

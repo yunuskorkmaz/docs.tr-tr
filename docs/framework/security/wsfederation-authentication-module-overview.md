@@ -3,12 +3,12 @@ title: WSFederation Kimlik Doğrulaması Modülüne Genel Bakış
 ms.date: 03/30/2017
 ms.assetid: 02c4d5e8-f0a7-49ee-9cf5-3647578510ad
 author: BrucePerlerMS
-ms.openlocfilehash: 9ade6b0d9e4aadb353ca148f868d548fbaacfbc3
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: eaf53a352238161ccec1b481649074d322954905
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69987705"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851509"
 ---
 # <a name="wsfederation-authentication-module-overview"></a>WSFederation Kimlik Doğrulaması Modülüne Genel Bakış
 Windows Identity Foundation (WıF), WS-Federasyon kimlik doğrulama modülü (WS-FAD) aracılığıyla ASP.NET uygulamalarında federal kimlik doğrulaması desteği içerir. Bu konu, federal kimlik doğrulamanın nasıl çalıştığını ve nasıl kullanılacağını anlamanıza yardımcı olur.  
@@ -67,7 +67,7 @@ Windows Identity Foundation (WıF), WS-Federasyon kimlik doğrulama modülü (WS
   
 - Olay, ASP.NET altyapısı, uygulamanın sınıfından türetilen <xref:System.IdentityModel.Services.HttpModuleBase>modüllerden <xref:System.IdentityModel.Services.HttpModuleBase.Init%2A> birinin ilk kez çağırışında tetiklenir. <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfigurationCreated?displayProperty=nameWithType> Bu yöntem, yapılandırmanın Web <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=nameWithType> . config dosyasından yüklenmesine neden olan static özelliğine erişir. Bu olay yalnızca bu özelliğe ilk kez erişildiğinde oluşturulur. Yapılandırmadan başlatılan <xref:System.IdentityModel.Services.Configuration.FederationConfigurationCreatedEventArgs.FederationConfiguration%2A?displayProperty=nameWithType> nesneye bir olay işleyicisindeki özelliği aracılığıyla erişilebilir. <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> Bu olayı, herhangi bir modüle uygulanmadan önce yapılandırmayı değiştirmek için kullanabilirsiniz. Application_Start yönteminde bu olay için bir işleyici ekleyebilirsiniz:  
   
-    ```  
+    ```csharp
     void Application_Start(object sender, EventArgs e)  
     {  
         FederatedAuthentication.FederationConfigurationCreated += new EventHandler<FederationConfigurationCreatedEventArgs>(FederatedAuthentication_FederationConfigurationCreated);  

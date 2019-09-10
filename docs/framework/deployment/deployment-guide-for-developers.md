@@ -1,5 +1,5 @@
 ---
-title: Geliştiriciler için .NET framework Dağıtım Kılavuzu
+title: Geliştiriciler için .NET Framework dağıtım kılavuzu
 ms.custom: updateeachrelease
 ms.date: 04/18/2019
 helpviewer_keywords:
@@ -8,340 +8,330 @@ helpviewer_keywords:
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 179170c0cafc67027012d2306281eb2cd1d967a4
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
+ms.openlocfilehash: 8dd7bac8c0cb14421016efad60a7ec0d672e5622
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67170655"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854016"
 ---
-# <a name="net-framework-deployment-guide-for-developers"></a>Geliştiriciler için .NET framework Dağıtım Kılavuzu
-Bu konu için .NET Framework 4.5 .NET Framework'ün herhangi bir sürümünü yüklemek için isteyen geliştiriciler için bilgi sağlamaktadır [!INCLUDE[net_current](../../../includes/net-current-version.md)] uygulamalarıyla birlikte.
+# <a name="net-framework-deployment-guide-for-developers"></a>Geliştiriciler için .NET Framework dağıtım kılavuzu
+Bu konu, .NET Framework .NET Framework 4,5 [!INCLUDE[net_current](../../../includes/net-current-version.md)] ' den uygulamalarına herhangi bir sürümünü yüklemek isteyen geliştiriciler için bilgi sağlamaktadır.
 
-İndirme bağlantıları için konudaki [yeniden dağıtılabilir paketleri](#redistributable-packages). Yeniden dağıtılabilir paketleri ve dil paketlerini bu Microsoft Download Center sayfalarından yükleyebilirsiniz:
+İndirme bağlantıları için [yeniden dağıtılabilir paketler](#redistributable-packages)bölümüne bakın. Yeniden dağıtılabilir paketleri ve dil paketlerini bu Microsoft Indirme merkezi sayfalarından de indirebilirsiniz:
 
-- Tüm işletim sistemleri için .NET framework 4.8 ([web yükleyicisi](http://go.microsoft.com/fwlink/?LinkId=2085155) veya [çevrimdışı yükleyici](https://go.microsoft.com/fwlink/?linkid=2088631))
+- Tüm işletim sistemleri için .NET Framework 4,8 ([Web Yükleyicisi](http://go.microsoft.com/fwlink/?LinkId=2085155) veya [çevrimdışı yükleyici](https://go.microsoft.com/fwlink/?linkid=2088631))
 
-- Tüm işletim sistemleri için .NET framework 4.7.2 ([web yükleyicisi](https://go.microsoft.com/fwlink/?LinkId=863262) veya [çevrimdışı yükleyici](https://go.microsoft.com/fwlink/p/?LinkId=863265))
+- Tüm işletim sistemleri için .NET Framework 4.7.2 ([Web Yükleyicisi](https://go.microsoft.com/fwlink/?LinkId=863262) veya [çevrimdışı yükleyici](https://go.microsoft.com/fwlink/p/?LinkId=863265))
 
-- Tüm işletim sistemleri için .NET framework 4.7.1 ([web yükleyicisi](https://go.microsoft.com/fwlink/?LinkId=852095) veya [çevrimdışı yükleyici](https://go.microsoft.com/fwlink/p/?LinkId=852107))
+- Tüm işletim sistemleri için .NET Framework 4.7.1 ([Web Yükleyicisi](https://go.microsoft.com/fwlink/?LinkId=852095) veya [çevrimdışı yükleyici](https://go.microsoft.com/fwlink/p/?LinkId=852107))
 
-- Tüm işletim sistemleri için .NET framework 4.7 ([web yükleyicisi](https://go.microsoft.com/fwlink/?LinkId=825299) veya [çevrimdışı yükleyici](https://go.microsoft.com/fwlink/p/?LinkId=825303))
+- Tüm işletim sistemleri için .NET Framework 4,7 ([Web Yükleyicisi](https://go.microsoft.com/fwlink/?LinkId=825299) veya [çevrimdışı yükleyici](https://go.microsoft.com/fwlink/p/?LinkId=825303))
 
-- Tüm işletim sistemleri için .NET framework 4.6.2 ([web yükleyicisi](https://go.microsoft.com/fwlink/?LinkId=780597) veya [çevrimdışı yükleyici](https://go.microsoft.com/fwlink/p/?LinkId=780601))
+- Tüm işletim sistemleri için .NET Framework 4.6.2 ([Web Yükleyicisi](https://go.microsoft.com/fwlink/?LinkId=780597) veya [çevrimdışı yükleyici](https://go.microsoft.com/fwlink/p/?LinkId=780601))
 
-- Tüm işletim sistemleri için .NET framework 4.6.1 ([web yükleyicisi](https://go.microsoft.com/fwlink/?LinkId=671729) veya [çevrimdışı yükleyici](https://go.microsoft.com/fwlink/p/?LinkId=671744))
+- Tüm işletim sistemleri için .NET Framework 4.6.1 ([Web Yükleyicisi](https://go.microsoft.com/fwlink/?LinkId=671729) veya [çevrimdışı yükleyici](https://go.microsoft.com/fwlink/p/?LinkId=671744))
 
-- Tüm işletim sistemleri için .NET framework 4.6 ([web yükleyicisi](https://go.microsoft.com/fwlink/?LinkId=528222) veya [çevrimdışı yükleyici](https://go.microsoft.com/fwlink/p/?LinkId=528232))
+- Tüm işletim sistemleri için .NET Framework 4,6 ([Web Yükleyicisi](https://go.microsoft.com/fwlink/?LinkId=528222) veya [çevrimdışı yükleyici](https://go.microsoft.com/fwlink/p/?LinkId=528232))
 
-- Tüm işletim sistemleri için .NET framework 4.5.2 ([web yükleyicisi](https://go.microsoft.com/fwlink/p/?LinkId=397703) veya [çevrimdışı yükleyici](https://go.microsoft.com/fwlink/p/?LinkId=397706))
+- Tüm işletim sistemleri için .NET Framework 4.5.2 ([Web Yükleyicisi](https://go.microsoft.com/fwlink/p/?LinkId=397703) veya [çevrimdışı yükleyici](https://go.microsoft.com/fwlink/p/?LinkId=397706))
 
-- Tüm işletim sistemleri için .NET framework 4.5.1 ([web yükleyicisi](https://go.microsoft.com/fwlink/p/?LinkId=310158) veya [çevrimdışı yükleyici](https://go.microsoft.com/fwlink/p/?LinkId=310159))
+- Tüm işletim sistemleri için .NET Framework 4.5.1 ([Web Yükleyicisi](https://go.microsoft.com/fwlink/p/?LinkId=310158) veya [çevrimdışı yükleyici](https://go.microsoft.com/fwlink/p/?LinkId=310159))
 
 - [.NET Framework 4.5](https://go.microsoft.com/fwlink/p/?LinkId=245484)
 
- Önemli Notlar:
+ Önemli notlar:
 
 > [!NOTE]
-> .NET Framework 4.5 ve sonraki tüm sürümler için ".NET Framework 4.5 ve nokta sürümleri" ifadesini gösterir.
+> ".NET Framework 4,5 ve nokta sürümleri" ifadesi, .NET Framework 4,5 ve sonraki tüm sürümleri anlamına gelir.
 
-- Sürümleri .NET Framework 4.5.1 .NET Framework'ten [!INCLUDE[net_current](../../../includes/net-current-version.md)] aynı çalışma zamanı sürümü kullandıkları anlamına gelir, .NET Framework 4.5 için yerinde güncelleştirmelerinin ancak derleme sürümlerini güncelleştirilir ve yeni türleri ve üyeleri içerir.
+- .NET Framework 4.5.1 aracılığıyla [!INCLUDE[net_current](../../../includes/net-current-version.md)] .NET Framework sürümleri, aynı çalışma zamanı sürümünü kullandıkları, ancak derleme sürümlerinin güncelleştirildiği ancak yeni türler ve üyelerin dahil olduğu anlamına gelen .NET Framework 4,5 ' e yönelik yerinde güncelleştirmelerdir.
 
-- .NET framework 4.5 ve nokta sürümleri, .NET Framework 4'te artımlı olarak oluşturulur. .NET Framework 4.5 yüklemek ya da .NET Framework 4'ün yüklü olduğu bir sistemde nokta sürümlerini sürüm 4 derlemeleri yeni sürümleriyle değiştirilir.
+- .NET Framework 4,5 ve noktası sürümleri artımlı olarak .NET Framework 4 ' te oluşturulmuştur. .NET Framework 4 ' ün yüklü olduğu bir sisteme .NET Framework 4,5 veya Point sürümlerini yüklediğinizde, sürüm 4 derlemeleri daha yeni sürümlerle değiştirilmiştir.
 
-- Bir Microsoft başvurduğunuz, [bant dışı paket](../get-started/the-net-framework-and-out-of-band-releases.md) uygulamanızda derleme uygulama paketinde dahil edilir.
+- Uygulamanızda Microsoft ['un bant dışı bir paketine](../get-started/the-net-framework-and-out-of-band-releases.md) başvuruyorsam, derleme uygulama paketine dahil edilir.
 
-- .NET Framework 4.5 yüklemek için yönetici ayrıcalıklarına sahip olmalıdır ve nokta sürümlerini.
+- .NET Framework 4,5 ve noktası sürümlerini yüklemek için yönetici ayrıcalıklarına sahip olmanız gerekir.
 
-- .NET framework 4.5 dahil [!INCLUDE[win8](../../../includes/win8-md.md)] ve [!INCLUDE[winserver8](../../../includes/winserver8-md.md)], bu işletim sistemlerinde uygulama ile dağıtmak gerekmez. Benzer şekilde, .NET Framework 4.5.1 dahil [!INCLUDE[win81](../../../includes/win81-md.md)] ve Windows Server 2012 R2. .NET framework 4.5.2 tüm işletim sistemlerinde yer almıyor. Windows 10'a dahil .NET framework 4.6, .NET Framework 4.6.1, Windows 10 Kasım güncelleştirmesi eklenmiştir ve .NET Framework 4.6.2, Windows 10 Yıldönümü Güncelleştirmesi'nde bulunur.  .NET framework 4.7 Windows 10 Creators Update içinde bulunan, .NET Framework 4.7.1 dahil Windows 10 Fall Creators Update ve .NET Framework 4.7.2 dahil Windows 10 Ekim 2018 güncelleştirmesi ve Windows 10 Nisan 2018 güncelleştirmesi. .NET framework 4.8 dahil Windows 10 Mayıs 2019 güncelleştirin. Donanım ve yazılım gereksinimlerinin tam listesi için bkz: [sistem gereksinimleri](../../../docs/framework/get-started/system-requirements.md).
+- .NET Framework 4,5, ve [!INCLUDE[win8](../../../includes/win8-md.md)] [!INCLUDE[winserver8](../../../includes/winserver8-md.md)]' de bulunur, bu nedenle uygulamayı bu işletim sistemlerine dağıtmanız gerekmez. Benzer şekilde, .NET Framework 4.5.1, [!INCLUDE[win81](../../../includes/win81-md.md)] ve Windows Server 2012 R2 'ye dahil edilmiştir. .NET Framework 4.5.2 hiçbir işletim sistemine dahil değildir. .NET Framework 4,6, Windows 10 ' a dahil edilmiştir, .NET Framework 4.6.1 Windows 10 Kasım güncelleştirmesine dahildir ve .NET Framework 4.6.2 Windows 10 yıldönümü güncelleştirmesine dahildir.  .NET Framework 4,7, Windows 10 Creators Update 'e dahildir, .NET Framework 4.7.1 Windows 10 Fall Creators Update 'e dahildir ve .NET Framework 4.7.2 Windows 10 Ekim 2018 güncelleştirmesi ve Windows 10 Nisan 2018 güncelleştirmesine dahildir. .NET Framework 4,8, Windows 10 Mayıs 2019 güncelleştirme ' ye eklenmiştir. Donanım ve yazılım gereksinimlerinin tam listesi için bkz. [sistem gereksinimleri](../../../docs/framework/get-started/system-requirements.md).
 
-- .NET Framework 4.5 ile başlayarak, kullanıcılarınızın Kurulum sırasında çalışan .NET Framework uygulamalar listesini görüntüleyebilir ve kolayca kapatabilir. Bu, .NET Framework kurulumlarının neden olduğu sistem yeniden başlatmalarını önlemenize yardımcı olabilir. Bkz: [sistem yeniden başlatmalarını azaltma](../../../docs/framework/deployment/reducing-system-restarts.md).
+- Kullanıcılarınız .NET Framework 4,5 ' den başlayarak, kurulum sırasında çalışan .NET Framework uygulamalarının bir listesini görüntüleyebilir ve kolayca kapatabilir. Bu, .NET Framework yüklemelerinin neden olduğu sistem yeniden başlatmalarının önlenmesine yardımcı olabilir. Bkz. [sistem yeniden başlatmaları azaltma](../../../docs/framework/deployment/reducing-system-restarts.md).
 
-- .NET Framework 4.5 veya onun nokta sürümleri birini kaldırmayı, önceden mevcut olan .NET Framework 4 dosyaları kaldırır. .NET Framework 4'e geri dönmek istiyorsanız, bunu ve tüm güncellemelerini yeniden yüklemeniz gerekir. (Bkz [.NET Framework 4'ü yükleme](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5a4x27ek(v=vs.100)).)
+- .NET Framework 4,5 ' nin kaldırılması veya noktası sürümlerinden biri, önceden var olan .NET Framework 4 dosyalarını da kaldırır. .NET Framework 4 ' e geri dönmek istiyorsanız, bu dosyayı ve tüm güncelleştirmeleri yeniden yüklemeniz gerekir. (Bkz. [.NET Framework 4](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5a4x27ek(v=vs.100)).)
 
-- .NET Framework 4.5 yeniden dağıtılabilir 2012'de 9 Ekim, dijital imzanın süresinin zamanından önce dolmasına Microsoft tarafından imzalanmış ve üretilen dosyaları neden bir dijital sertifika üzerinde hatalı zaman damgasıyla ilgili sorunu gidermek için güncelleştirildi. Daha önce yeniden dağıtılabilir paket 16 Ağustos 2012 tarihli .NET Framework 4.5 yüklü değilse kopyanızı ile en son yeniden dağıtılabilir Paketle güncelleştirmenizi öneririz [Microsoft Download Center](https://go.microsoft.com/fwlink/p/?LinkId=245484). Bu sorun hakkında daha fazla bilgi için bkz. [Microsoft Security Advisory 2749655](https://docs.microsoft.com/security-updates/SecurityAdvisories/2012/2749655).
+- .NET Framework 4,5 yeniden dağıtılabilir, dijital bir sertifikada yanlış bir zaman damgasıyla ilgili bir sorunu düzeltmek için 9 Ekim 2012 tarihinde güncelleştirildi. Bu, Microsoft tarafından oluşturulan ve imzalanan dosyalardaki dijital imzanın erken süre sonu dolmasına neden olur. Daha önce 16 Ağustos 2012 tarihli .NET Framework 4,5 yeniden dağıtılabilir paketini yüklediyseniz, [Microsoft Indirme merkezi](https://go.microsoft.com/fwlink/p/?LinkId=245484)'ndeki kopyanızı en son yeniden dağıtılabilir ile güncelleştirmenizi öneririz. Bu sorun hakkında daha fazla bilgi için bkz. [Microsoft Güvenlik Danışmanlığı 2749655](https://docs.microsoft.com/security-updates/SecurityAdvisories/2012/2749655).
 
-Nasıl bir Sistem Yöneticisi .NET Framework ve sistem bağımlılıklarını bir ağ üzerinden dağıtabilirsiniz hakkında daha fazla bilgi için bkz: [Yöneticiler için Dağıtım Kılavuzu](../../../docs/framework/deployment/guide-for-administrators.md).
+Bir sistem yöneticisinin .NET Framework ve sistem bağımlılıklarını bir ağ üzerinden nasıl dağıtabilirim hakkında bilgi için bkz. [Yöneticiler Için dağıtım kılavuzu](../../../docs/framework/deployment/guide-for-administrators.md).
 
 ## <a name="deployment-options-for-your-app"></a>Uygulamanız için dağıtım seçenekleri
 
-Böylece kullanıcılar yükleyebilir, uygulamanızı bir web sunucusu veya başka bir merkezi konumda yayımlamaya hazır olduğunuzda birçok dağıtım yöntemini seçebilirsiniz. Bunlardan bazıları Visual Studio ile sağlanır. Aşağıdaki tabloda, uygulamanız için dağıtım seçeneklerini listeler ve her seçeneği destekleyen .NET Framework dağıtılabilir paketini belirtir. Bunlara ek olarak, uygulamanız için özel kurulum programı yazabilirsiniz; Daha fazla bilgi için konudaki [.NET Framework yüklemesinin uygulamanızın kurulumuna zincirleme](#chaining).
+Uygulamanızı bir Web sunucusuna veya başka bir merkezi konuma yayımlamaya, böylece kullanıcıların yükleyebilmeleri için hazırsanız, çeşitli dağıtım yöntemlerinden birini seçebilirsiniz. Bunlardan bazıları Visual Studio ile sunulmaktadır. Aşağıdaki tabloda, uygulamanız için dağıtım seçenekleri listelenmekte ve her bir seçeneği destekleyen .NET Framework yeniden dağıtılabilir paketi belirtilir. Bunlara ek olarak, uygulamanız için özel bir kurulum programı yazabilirsiniz; daha fazla bilgi için [.NET Framework yüklemesini uygulamanızın kurulumuna zincirme](#chaining)bölümüne bakın.
 
-|Uygulamanız için Dağıtım stratejisi|Kullanılabilir dağıtım yöntemleri|Kullanılacak .NET framework yeniden dağıtılabilir|
+|Uygulamanız için dağıtım stratejisi|Dağıtım yöntemleri kullanılabilir|Kullanmak için yeniden dağıtılabilir .NET Framework|
 |--------------------------------------|----------------------------------|-------------------------------------------|
-|Web'den yükleme|- [Installaware](#installaware-deployment)<br />- [InstallShield](#installshield-deployment)<br />- [WiX araç takımı](#wix)<br />- [El ile yükleme](#installing_manually)|[Web yükleyicisi](#redistributable-packages)|
-|Diskten yükleme|- [Installaware](#installaware-deployment)<br />- [InstallShield](#installshield-deployment)<br />- [WiX araç takımı](#wix)<br />- [El ile yükleme](#installing_manually)|[Çevrimdışı yükleyici](#redistributable-packages)|
-|Yerel alan ağı (Kurumsal uygulamaları için) yükleyin|- [ClickOnce](#clickonce-deployment)|Her iki [web yükleyicisi](#redistributable-packages) (bkz [ClickOnce](#clickonce-deployment) kısıtlamaları için) veya [çevrimdışı yükleyici](#redistributable-packages)|
+|Web 'den yüklemesi|- [InstallAware](#installaware-deployment)<br />- [Programının](#installshield-deployment)<br />- [WiX araç takımı](#wix)<br />- [El ile yükleme](#installing_manually)|[Web Yükleyicisi](#redistributable-packages)|
+|Diskten yüklensin|- [InstallAware](#installaware-deployment)<br />- [Programının](#installshield-deployment)<br />- [WiX araç takımı](#wix)<br />- [El ile yükleme](#installing_manually)|[Çevrimdışı yükleyici](#redistributable-packages)|
+|Yerel bir ağdan (kurumsal uygulamalar için) yükler|- ['](#clickonce-deployment)|[Web Yükleyicisi](#redistributable-packages) (kısıtlamalar için bkz. [ClickOnce](#clickonce-deployment) ) veya [çevrimdışı yükleyici](#redistributable-packages)|
 
-## <a name="redistributable-packages"></a>Yeniden dağıtılabilir paketleri
+## <a name="redistributable-packages"></a>Yeniden dağıtılabilir paketler
 
-.NET Framework iki yeniden dağıtılabilir pakette kullanılabilir: web yükleyicisini (Önyükleyici) ve çevrimdışı Yükleyici (tek başına yeniden dağıtılabilir). Aşağıdaki tablo iki paketi karşılaştırır.
+.NET Framework iki yeniden dağıtılabilir paket (önyükleyici) ve çevrimdışı yükleyici (tek başına yeniden dağıtılabilir) ile kullanılabilir. Aşağıdaki tabloda iki paket karşılaştırılmaktadır.
 
-||Web yükleyicisi|Çevrimdışı yükleyici|
+||Web Yükleyicisi|Çevrimdışı yükleyici|
 |-|-------------------|-----------------------|
-|Dosya yükleme|.NET framework 4.8: <br/>[ndp48-web.exe](https://go.microsoft.com/fwlink/?LinkId=2085155)<br/><br/>.NET framework 4.7.2: <br/>[NDP472-KB4054531-Web.exe](https://go.microsoft.com/fwlink/?LinkId=863262)<br/><br/>.NET framework 4.7.1: <br/>[NDP471-KB4033344-Web.exe](https://go.microsoft.com/fwlink/?LinkId=852092)<br/><br/>.NET framework 4.7: <br />[NDP47-KB3186500-Web.exe](https://go.microsoft.com/fwlink/?LinkId=825298) <br /><br />.NET framework 4.6.2: <br />[NDP462-KB3151802-Web.exe](https://go.microsoft.com/fwlink/?LinkId=780596)<br /><br /> .NET framework 4.6.1:<br />[NDP461-KB3102438-Web.exe](https://go.microsoft.com/fwlink/?LinkId=671728)<br /><br /> .NET framework 4.6:<br />[NDP46-KB3045560-Web.exe](https://go.microsoft.com/fwlink/?LinkId=528222)<br /><br /> .NET framework 4.5.2: <br />[NDP452-KB2901954-Web.exe](https://go.microsoft.com/fwlink/?LinkId=397707)<br /><br /> .NET framework 4.5.1: <br />[NDP451-KB2859818-Web.exe](https://go.microsoft.com/fwlink/?LinkId=322115)<br /><br /> .NET framework 4.5: <br />[dotNetFx45_Full_setup.exe](https://go.microsoft.com/fwlink/?LinkId=225704)|.NET framework 4.8: <br/>[NDP48-x86-x64-AllOS-ENU.exe](https://go.microsoft.com/fwlink/?linkid=2088631)<br/><br/>.NET framework 4.7.2: <br/>[NDP472-KB4054530-x86-x64-AllOS-ENU.exe](https://go.microsoft.com/fwlink/?LinkId=863265)<br/><br/>.NET framework 4.7.1: <br />[NDP471-KB4033342-x86-x64-AllOS-ENU.exe](https://go.microsoft.com/fwlink/?LinkId=852104) <br /><br />.NET framework 4.7: <br />[NDP47-KB3186497-x86-x64-AllOS-ENU.exe](https://go.microsoft.com/fwlink/?LinkId=825302) <br /><br />.NET framework 4.6.2: <br />[NDP462-KB3151800-x86-x64-AllOS-ENU.exe](https://go.microsoft.com/fwlink/?LinkId=780600)<br /><br /> .NET framework 4.6.1: <br />[NDP461-KB3102436-x86-x64-AllOS-ENU.exe](https://go.microsoft.com/fwlink/?LinkId=671743)<br /><br /> .NET framework 4.6: <br />[NDP46-KB3045557-x86-x64-AllOS-ENU.exe](https://go.microsoft.com/fwlink/?LinkId=528232)<br /><br /> .NET framework 4.5.2: <br />[NDP452-KB2901907-x86-x64-AllOS-ENU.exe](https://go.microsoft.com/fwlink/?LinkId=397708)<br /><br /> .NET framework 4.5.1: <br />[NDP451-KB2858728-x86-x64-AllOS-ENU.exe](https://go.microsoft.com/fwlink/?LinkId=322116)<br /><br /> .NET framework 4.5: <br />[dotNetFx45_Full_x86_x64.exe](https://go.microsoft.com/fwlink/?LinkId=225702)|
-|Internet bağlantısı gerekiyor?|Evet|Hayır|
-|İndirme boyutu|Küçük (yalnızca hedef Platform içerir) *|Daha büyük *|
-|Dil paketleri|Dahil edilen **|Olmalıdır [ayrı olarak yüklenmiş](#chain_langpack), tüm işletim sistemlerini hedef alan paketi kullanmıyorsanız|
-|Dağıtım yöntemi|Tüm yöntemleri destekler:<br /><br />- [ClickOnce](#clickonce-deployment)<br />- [Installaware](#installaware-deployment)<br />- [InstallShield](#installshield-deployment)<br />- [Windows Installer XML (WiX)](#wix)<br />- [El ile yükleme](#installing_manually)<br />- [Özel Kurulum (bağlama)](#chaining)|Tüm yöntemleri destekler:<br /><br /> - [ClickOnce](#clickonce-deployment)<br />- [Installaware](#installaware-deployment)<br />- [InstallShield](#installshield-deployment)<br />- [Windows Installer XML (WiX)](#wix)<br />- [El ile yükleme](#installing_manually)<br />- [Özel Kurulum (bağlama)](#chaining)|
-|ClickOnce dağıtımı için indirme konumu|Microsoft İndirme Merkezi:<br /><br /> - [.NET framework 4.8](https://go.microsoft.com/fwlink/?LinkId=2085155) <br/> - [.NET framework 4.7.2](https://go.microsoft.com/fwlink/?LinkId=863262) <br/> - [.NET framework 4.7.1](https://go.microsoft.com/fwlink/?LinkId=852092) <br/> - [.NET framework 4.7](https://go.microsoft.com/fwlink/?LinkId=825298) <br/> - [.NET framework 4.6.2](https://go.microsoft.com/fwlink/?LinkId=780596)<br />- [.NET framework 4.6.1](https://go.microsoft.com/fwlink/?LinkId=671728)<br />- [.NET framework 4.6](https://go.microsoft.com/fwlink/?LinkId=528222)<br />- [.NET framework 4.5.2](https://go.microsoft.com/fwlink/?LinkId=397703)<br />- [.NET framework 4.5.1](https://go.microsoft.com/fwlink/p/?LinkId=310158)<br />- [.NET framework 4.5](https://go.microsoft.com/fwlink/p/?LinkId=245484)|Kendi sunucunuz veya Microsoft Download Center:<br /><br /> - [.NET framework 4.8](https://go.microsoft.com/fwlink/?linkid=2088631)<br /> - [.NET framework 4.7.2](https://go.microsoft.com/fwlink/?LinkId=863265)<br /> - [.NET framework 4.7.1](https://go.microsoft.com/fwlink/?LinkId=852104)<br /> - [.NET framework 4.7](https://go.microsoft.com/fwlink/?LinkId=825302)<br /> - [.NET framework 4.6.2](https://go.microsoft.com/fwlink/?LinkId=780600)<br />- [.NET framework 4.6.1](https://go.microsoft.com/fwlink/?LinkId=671743)<br />- [.NET framework 4.6](https://go.microsoft.com/fwlink/?LinkId=528232)<br />- [.NET framework 4.5.2](https://go.microsoft.com/fwlink/p/?LinkId=397706)<br />- [.NET framework 4.5.1](https://go.microsoft.com/fwlink/p/?LinkId=310159)<br />- [.NET framework 4.5](https://go.microsoft.com/fwlink/p/?LinkId=245484)|
+|Dosyayı indir|.NET Framework 4,8: <br/>[ndp48-Web. exe](https://go.microsoft.com/fwlink/?LinkId=2085155)<br/><br/>.NET Framework 4.7.2: <br/>[NDP472-KB4054531-Web. exe](https://go.microsoft.com/fwlink/?LinkId=863262)<br/><br/>.NET Framework 4.7.1: <br/>[NDP471-KB4033344-Web.exe](https://go.microsoft.com/fwlink/?LinkId=852092)<br/><br/>.NET Framework 4,7: <br />[NDP47-KB3186500-Web.exe](https://go.microsoft.com/fwlink/?LinkId=825298) <br /><br />.NET Framework 4.6.2: <br />[NDP462-KB3151802-Web.exe](https://go.microsoft.com/fwlink/?LinkId=780596)<br /><br /> .NET Framework 4.6.1:<br />[NDP461-KB3102438-Web.exe](https://go.microsoft.com/fwlink/?LinkId=671728)<br /><br /> .NET Framework 4,6:<br />[NDP46-KB3045560-Web.exe](https://go.microsoft.com/fwlink/?LinkId=528222)<br /><br /> .NET Framework 4.5.2: <br />[NDP452-KB2901954-Web.exe](https://go.microsoft.com/fwlink/?LinkId=397707)<br /><br /> .NET Framework 4.5.1: <br />[NDP451-KB2859818-Web.exe](https://go.microsoft.com/fwlink/?LinkId=322115)<br /><br /> .NET Framework 4,5: <br />[dotNetFx45_Full_setup.exe](https://go.microsoft.com/fwlink/?LinkId=225704)|.NET Framework 4,8: <br/>[NDP48-x86-x64-AllOS-ENU. exe](https://go.microsoft.com/fwlink/?linkid=2088631)<br/><br/>.NET Framework 4.7.2: <br/>[NDP472-KB4054530-x86-x64-AllOS-ENU. exe](https://go.microsoft.com/fwlink/?LinkId=863265)<br/><br/>.NET Framework 4.7.1: <br />[NDP471-KB4033342-x86-x64-AllOS-ENU.exe](https://go.microsoft.com/fwlink/?LinkId=852104) <br /><br />.NET Framework 4,7: <br />[NDP47-KB3186497-x86-x64-AllOS-ENU.exe](https://go.microsoft.com/fwlink/?LinkId=825302) <br /><br />.NET Framework 4.6.2: <br />[NDP462-KB3151800-x86-x64-AllOS-ENU. exe](https://go.microsoft.com/fwlink/?LinkId=780600)<br /><br /> .NET Framework 4.6.1: <br />[NDP461-KB3102436-x86-x64-AllOS-ENU. exe](https://go.microsoft.com/fwlink/?LinkId=671743)<br /><br /> .NET Framework 4,6: <br />[NDP46-KB3045557-x86-x64-AllOS-ENU.exe](https://go.microsoft.com/fwlink/?LinkId=528232)<br /><br /> .NET Framework 4.5.2: <br />[NDP452-KB2901907-x86-x64-AllOS-ENU.exe](https://go.microsoft.com/fwlink/?LinkId=397708)<br /><br /> .NET Framework 4.5.1: <br />[NDP451-KB2858728-x86-x64-AllOS-ENU.exe](https://go.microsoft.com/fwlink/?LinkId=322116)<br /><br /> .NET Framework 4,5: <br />[dotNetFx45_Full_x86_x64.exe](https://go.microsoft.com/fwlink/?LinkId=225702)|
+|Internet bağlantısı gerekiyor mu?|Evet|Hayır|
+|İndirme boyutu|Daha küçük (yalnızca hedef platform için yükleyiciyi içerir) *|Boyutta|
+|Dil paketleri|Dahil * *|Tüm işletim sistemlerini hedefleyen paketi kullanmadığınız takdirde [ayrı olarak yüklenmelidir](#chain_langpack)|
+|Dağıtım yöntemi|Tüm yöntemleri destekler:<br /><br />- ['](#clickonce-deployment)<br />- [InstallAware](#installaware-deployment)<br />- [Programının](#installshield-deployment)<br />- [Windows Installer XML (WiX)](#wix)<br />- [El ile yükleme](#installing_manually)<br />- [Özel Kurulum (zincirleme)](#chaining)|Tüm yöntemleri destekler:<br /><br /> - ['](#clickonce-deployment)<br />- [InstallAware](#installaware-deployment)<br />- [Programının](#installshield-deployment)<br />- [Windows Installer XML (WiX)](#wix)<br />- [El ile yükleme](#installing_manually)<br />- [Özel Kurulum (zincirleme)](#chaining)|
+|ClickOnce dağıtımı için indirme konumu|Microsoft Indirme Merkezi:<br /><br /> - [.NET Framework 4,8](https://go.microsoft.com/fwlink/?LinkId=2085155) <br/> - [.NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkId=863262) <br/> - [.NET Framework 4.7.1](https://go.microsoft.com/fwlink/?LinkId=852092) <br/> - [.NET Framework 4,7](https://go.microsoft.com/fwlink/?LinkId=825298) <br/> - [.NET Framework 4.6.2](https://go.microsoft.com/fwlink/?LinkId=780596)<br />- [.NET Framework 4.6.1](https://go.microsoft.com/fwlink/?LinkId=671728)<br />- [.NET Framework 4,6](https://go.microsoft.com/fwlink/?LinkId=528222)<br />- [.NET Framework 4.5.2](https://go.microsoft.com/fwlink/?LinkId=397703)<br />- [.NET Framework 4.5.1](https://go.microsoft.com/fwlink/p/?LinkId=310158)<br />- [.NET Framework 4,5](https://go.microsoft.com/fwlink/p/?LinkId=245484)|Kendi sunucunuz veya Microsoft Indirme Merkezi:<br /><br /> - [.NET Framework 4,8](https://go.microsoft.com/fwlink/?linkid=2088631)<br /> - [.NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkId=863265)<br /> - [.NET Framework 4.7.1](https://go.microsoft.com/fwlink/?LinkId=852104)<br /> - [.NET Framework 4,7](https://go.microsoft.com/fwlink/?LinkId=825302)<br /> - [.NET Framework 4.6.2](https://go.microsoft.com/fwlink/?LinkId=780600)<br />- [.NET Framework 4.6.1](https://go.microsoft.com/fwlink/?LinkId=671743)<br />- [.NET Framework 4,6](https://go.microsoft.com/fwlink/?LinkId=528232)<br />- [.NET Framework 4.5.2](https://go.microsoft.com/fwlink/p/?LinkId=397706)<br />- [.NET Framework 4.5.1](https://go.microsoft.com/fwlink/p/?LinkId=310159)<br />- [.NET Framework 4,5](https://go.microsoft.com/fwlink/p/?LinkId=245484)|
 
-\* Çevrimdışı yükleyici, tüm hedef platformlar için bileşenleri içerdiğinden daha büyük. Kurulumun çalışması tamamlandığında Windows işletim sistemi yalnızca kullanılan yükleyici önbelleğe alır. Çevrimdışı Yükleyici yükleme işleminden sonra silinirse, kullanılan disk alanı web yükleyicisi tarafından kullanılan aynıdır. Aracı'nı kullanıyorsanız (örneğin, [Installaware](#installaware-deployment) veya [InstallShield](#installshield-deployment)) kurulumundan sonra silinen bir kurulum dosyası klasörü sağlar, uygulamanızın Kurulum programı oluşturun, çevrimdışı yükleyiciyi olabilir Kurulum klasörüne koyarak otomatik olarak silinir.
+\*Çevrimdışı yükleyici, tüm hedef platformlar için bileşenleri içerdiğinden daha büyük. Kurulumu çalıştırmayı tamamladığınızda, Windows işletim sistemi yalnızca kullanılan yükleyiciyi önbelleğe alır. Yükleme sonrasında çevrimdışı yükleyici silinirse kullanılan disk alanı, web yükleyicisinin kullandığı ile aynıdır. Uygulamanızın kurulum programını oluşturmak için kullandığınız araç (örneğin, [InstallAware](#installaware-deployment) veya [InstallShield](#installshield-deployment)), yüklemeden sonra kaldırılan bir kurulum dosyası klasörü sağlıyorsa, çevrimdışı yükleyici, kuruluma yerleştirilerek otomatik olarak silinebilir klasörde.
 
-\*\* Web yükleyicisini özel kurulum ile kullanıyorsanız, kullanıcının çok dilli kullanıcı arabirimi (MUI) ayarları esas alarak varsayılan dil ayarlarını kullanabilirsiniz, veya başka bir dil paketi kullanarak belirtin `/LCID` komut satırı seçeneği. Bölümüne bakın [.NET Framework varsayılan UI kullanarak zincirleme](#chaining_default) örnekler.
+\*\*Web yükleyicisini özel kurulumla kullanıyorsanız, kullanıcının çok dilli kullanıcı arabirimi (MUI) ayarını temel alan varsayılan dil ayarlarını kullanabilir veya komut satırındaki `/LCID` seçeneğini kullanarak başka bir dil paketi belirtebilirsiniz. Örnekler için [varsayılan .NET Framework Kullanıcı arabirimini kullanarak zincirleme](#chaining_default) bölümüne bakın.
 
 ## <a name="deployment-methods"></a>Dağıtım yöntemleri
 
- Dört dağıtım yöntemleri kullanılabilir:
+ Dört dağıtım yöntemi mevcuttur:
 
-- .NET Framework üzerinde bağımlılık ayarlayabilirsiniz. .NET Framework, aşağıdaki yöntemlerden birini kullanarak uygulamalarınızın yüklemesinde bir önkoşul olarak belirtebilirsiniz:
+- .NET Framework bir bağımlılık ayarlayabilirsiniz. Aşağıdaki yöntemlerden birini kullanarak .NET Framework uygulamanızın yüklemesinde bir önkoşul olarak belirtebilirsiniz:
 
-  - Kullanım [ClickOnce dağıtımı](#clickonce-deployment) (Visual Studio ile kullanılabilir)
+  - [ClickOnce dağıtımını](#clickonce-deployment) kullanma (Visual Studio ile kullanılabilir)
 
-  - Oluşturma bir [Installaware proje](#installaware-deployment) (ücretsiz sürüm kullanıcıları için Visual Studio)
+  - [InstallAware projesi](#installaware-deployment) oluşturma (Visual Studio kullanıcıları için ücretsiz sürüm)
 
-  - Oluşturma bir [InstallShield projesi](#installshield-deployment) (Visual Studio ile kullanılabilir)
+  - [InstallShield projesi](#installshield-deployment) oluşturma (Visual Studio ile kullanılabilir)
 
-  - Kullanım [Windows Installer XML (WiX) araç takımı](#wix)
+  - [WINDOWS Installer XML (WiX) araç takımını](#wix) kullanın
 
-- Kullanıcılarınıza sorabilir [.NET Framework el ile yükleme](#installing_manually).
+- Kullanıcılarınızın [.NET Framework el ile yüklemesini](#installing_manually)isteyebilirsiniz.
 
-- Kurulumuna bağlayabilirsiniz (dahil) .NET Framework Kurulum sürecini uygulamanızın kurulumuna ve nasıl .NET Framework Kurulum deneyiminin işlemek istediğinize karar verin:
+- .NET Framework kurulum işlemini uygulamanızın kurulumuna zincirleyebilir ve .NET Framework yükleme deneyimini nasıl işlemek istediğinize karar verebilirsiniz:
 
-  - [Varsayılan kullanıcı arabirimini kullanın](#chaining_default). .NET Framework yükleyicisi yükleme deneyimi sağlamasına olanak tanır.
+  - [Varsayılan Kullanıcı arabirimini kullanın](#chaining_default). .NET Framework yükleyicinin yükleme deneyimini sağlamasına izin verin.
 
-  - [Kullanıcı arabirimini özelleştirme](#chaining_custom) birleştirilmiş yükleme deneyimi sunmak ve .NET Framework Kurulum sürecini izlemek için.
+  - [Kullanıcı arabirimini](#chaining_custom) Birleşik bir yükleme deneyimi sunmak ve .NET Framework yükleme ilerlemesini Izlemek için özelleştirin.
 
 Bu dağıtım yöntemleri aşağıdaki bölümlerde ayrıntılı olarak ele alınmıştır.
 
-## <a name="setting-a-dependency-on-the-net-framework"></a>.NET Framework üzerinde bağımlılık ayarlama
+## <a name="setting-a-dependency-on-the-net-framework"></a>.NET Framework bağımlılığı ayarlama
 
-Uygulamanızı dağıtmak için ClickOnce, Installaware, InstallShield veya WiX kullanırsanız, uygulamanızın bir parçası olarak yüklenebilmesi için .NET Framework üzerinde bağımlılık ekleyebilirsiniz.
+Uygulamanızı dağıtmak için ClickOnce, InstallAware, InstallShield veya WiX kullanıyorsanız, .NET Framework bir bağımlılık ekleyerek uygulamanızın bir parçası olarak yüklenebilmesini sağlayabilirsiniz.
 
 ### <a name="clickonce-deployment"></a>ClickOnce dağıtımı
 
-ClickOnce dağıtımı, Visual Basic ve Visual C# ile oluşturulan projeleri için kullanılabilir ancak Visual C++ için kullanılamaz.
+ClickOnce dağıtımı, Visual Basic ve görsele C#oluşturulmuş projeler için kullanılabilir, ancak görsel C++için kullanılamaz.
 
-Görsel ClickOnce dağıtımını seçmek ve .NET Framework üzerine bağımlılık eklemek için Studio'yu içinde:
+Visual Studio 'da ClickOnce dağıtımını seçmek ve .NET Framework bir bağımlılık eklemek için:
 
 1. Yayımlamak istediğiniz uygulama projesini açın.
 
-2. Çözüm Gezgini'nde projenizin kısayol menüsünü açın ve ardından **özellikleri**.
+2. Çözüm Gezgini ' de, projeniz için kısayol menüsünü açın ve ardından **Özellikler**' i seçin.
 
-3. Seçin **Yayımla** bölmesi.
+3. **Yayımla** bölmesini seçin.
 
-4. Seçin **önkoşulları** düğmesi.
+4. **Önkoşullar** düğmesini seçin.
 
-5. İçinde **önkoşulları** iletişim kutusunda, emin olun **Önkoşul bileşenlerini yüklemek için Kurulum programını Oluştur** onay kutusu seçilidir.
+5. **Önkoşullar** iletişim kutusunda, **Önkoşul bileşenlerini yüklemek Için Kurulum programı oluştur** onay kutusunun işaretli olduğundan emin olun.
 
-6. Önkoşullar listesinde bulun ve projenizi yapılandırmak için kullandığınız .NET Framework sürümünü seçin.
+6. Önkoşullar listesinde, projenizi oluşturmak için kullandığınız .NET Framework sürümünü bulun ve seçin.
 
-7. Önkoşullar için kaynak konumunu belirtin ve ardından bir seçenek belirleyin **Tamam**.
+7. Önkoşulların kaynak konumunu belirtmek için bir seçenek belirleyin ve ardından **Tamam**' ı seçin.
 
-     .NET Framework indirme konumu için bir URL sağlarsanız, Microsoft Download Center sitesi veya kendinize ait bir site belirtebilirsiniz. Kendi sunucunuza yeniden dağıtılabilir paketi yerleştiriyorsanız, çevrimdışı yükleyici olmalı ve web yükleyicisi olmalıdır. Yalnızca Microsoft Download Center web yükleyicisini bağlayabilirsiniz. URL, kendi uygulamanızı dağıtılmakta bir disk olarak da belirtebilirsiniz.
+     .NET Framework indirme konumu için bir URL sağlarsanız, Microsoft Download Center sitesini veya kendi sitenizin birini belirtebilirsiniz. Yeniden dağıtılabilir paketi kendi sunucunuza yerleştiriyorsanız, web yükleyicisinin değil, çevrimdışı yükleyici olmalıdır. Web yükleyicisine yalnızca Microsoft Indirme Merkezi ' nde bağlanabilirsiniz. URL aynı zamanda kendi uygulamanızın dağıtıldığı bir disk da belirtebilir.
 
-8. İçinde **özellik sayfaları** iletişim kutusunda **Tamam**.
+8. **Özellik sayfaları** Iletişim kutusunda **Tamam**' ı seçin.
 
 <a name="installaware"></a>
 
-### <a name="installaware-deployment"></a>Installaware dağıtım
+### <a name="installaware-deployment"></a>InstallAware dağıtımı
 
-Installaware Windows uygulaması (APPX), Windows Installer (MSI), yerel kod (EXE) ve tek bir kaynaktan App-V (Application Virtualization) paketleri oluşturur. Kolayca [dahil herhangi bir .NET Framework sürümünü](https://www.installaware.com/one-click-pre-requisite-installer.htm) , Kurulum, yükleme sırasında isteğe bağlı olarak özelleştirme [varsayılan komut dosyalarını düzenleme](https://www.installaware.com/msicode.htm). Örneğin, Windows 7, .NET Framework 4.7 kurulum başarısız olduğu sertifikaları Installaware önceden yükler. Installaware hakkında daha fazla bilgi için bkz. [Installaware için Windows Installer](https://www.installaware.com/) Web sitesi.
+InstallAware, tek bir kaynaktan Windows uygulaması (APPX), Windows Installer (MSI), yerel kod (EXE) ve App-V (uygulama sanallaştırma) paketleri oluşturur. .NET Framework, isteğe bağlı olarak, [varsayılan betikleri düzenleyerek](https://www.installaware.com/msicode.htm)yüklemeyi özelleştirerek, kuruluminizdeki [tüm sürümlerini kolayca ekleyin](https://www.installaware.com/one-click-pre-requisite-installer.htm) . Örneğin, InstallAware Windows 7 ' de sertifikaları önceden yüklerken .NET Framework 4,7 kurulumu başarısız olur. InstallAware hakkında daha fazla bilgi için bkz. [InstallAware for Windows Installer](https://www.installaware.com/) Web sitesi.
 
 ### <a name="installshield-deployment"></a>InstallShield dağıtımı
 
-Görsel InstallShield dağıtımı seçmek ve .NET Framework üzerine bağımlılık eklemek için Studio'yu içinde:
+Visual Studio 'da InstallShield dağıtımını seçmek ve .NET Framework bir bağımlılık eklemek için:
 
-1. Visual Studio menü çubuğunda **dosya**, **yeni**, **proje**.
+1. Visual Studio menü çubuğunda **Dosya**, **Yeni**, **Proje**' yi seçin.
 
-2. Sol bölmesinde **yeni proje** iletişim kutusunda **diğer proje türleri**, **Kurulum ve dağıtım**, **InstallShield LE**.
+2. **Yeni proje** iletişim kutusunun sol bölmesinde **diğer proje türleri**, **Kurulum ve dağıtım**, **InstallShield Le**' yi seçin.
 
-3. İçinde **adı** kutusuna projeniz için bir ad yazın ve ardından **Tamam**.
+3. **Ad** kutusuna projeniz için bir ad yazın ve ardından **Tamam**' ı seçin.
 
-4. İlk kez kurulum ve dağıtım proje oluşturuyorsanız, seçin **Installshield'e Git** veya **InstallShield Limited Edition'ı Etkinleştir** sürümünüz için InstallShield Limited Edition'ı indirmek için Microsoft Visual Studio. Visual Studio'yu yeniden başlatın.
+4. İlk kez bir kurulum ve dağıtım projesi oluşturuyorsanız, **InstallShield 'A git** ' i veya Microsoft Visual Studio sürümünüze ait InstallShield Limited Edition 'ı Indirmek Için **InstallShield Limited Edition 'ı etkinleştirin** . Visual Studio'yu yeniden başlatın.
 
-5. Git **proje Yardımcısı** Sihirbazı'nı seçip **uygulama dosyaları** proje çıktısı eklemek için. Bu sihirbazı kullanarak diğer proje öznitelikleri yapılandırabilirsiniz.
+5. Proje çıktısını eklemek için **Proje Yardımcısı** sihirbazına gidin ve **uygulama dosyalarını** seçin. Bu Sihirbazı kullanarak diğer proje özniteliklerini yapılandırabilirsiniz.
 
-6. Git **yükleme gereksinimlerini** ve işletim sistemleri ve yüklemek istediğiniz .NET Framework sürümünü seçin.
+6. **Yükleme gereksinimleri** ' ne gidin ve işletim sistemlerini ve yüklemek istediğiniz .NET Framework sürümünü seçin.
 
-7. Kurulum projeniz için kısayol menüsünü açın ve seçin **yapı**.
+7. Kurulum projeniz için kısayol menüsünü açın ve **Oluştur**' a tıklayın.
 
 <a name="wix"></a>
 
 ### <a name="windows-installer-xml-wix-deployment"></a>Windows Installer XML (WiX) dağıtımı
 
-Windows Installer XML (WiX) araç takımı XML kaynak kodundan Windows yükleme paketleri oluşturur. WiX, MSI ve MSM kurulum paketleri oluşturmak için derleme sürecinize entegre bir komut satırı ortamını destekler. Wix'i kullanarak şunları yapabilirsiniz [bir önkoşul olarak .NET Framework belirtin](http://wixtoolset.org/documentation/manual/v3/howtos/redistributables_and_install_checks/install_dotnet.html), veya [bir bağlayıcı oluşturmak](http://wixtoolset.org/documentation/manual/v3/xsd/wix/exepackage.html) .NET Framework dağıtım deneyimini tam olarak denetlemek için. WiX hakkında daha fazla bilgi için bkz: [Windows Installer XML (WiX) araç takımı](http://wixtoolset.org/) Web sitesi.
+Windows Installer XML (WiX) araç takımı, XML kaynak kodundan Windows yükleme paketleri oluşturur. WiX, MSI ve MSM kurulum paketleri oluşturmak için yapı süreçlerinizle tümleştirilebilen bir komut satırı ortamını destekler. WiX kullanarak, [.NET Framework bir önkoşul olarak belirtebilir](http://wixtoolset.org/documentation/manual/v3/howtos/redistributables_and_install_checks/install_dotnet.html)veya .NET Framework dağıtım deneyimini tam olarak denetlemek için [bir bağlayıcı oluşturabilirsiniz](http://wixtoolset.org/documentation/manual/v3/xsd/wix/exepackage.html) . WiX hakkında daha fazla bilgi için [WINDOWS Installer XML (WiX) araç takımı](http://wixtoolset.org/) Web sitesine bakın.
 
 <a name="installing_manually"></a>
 
-## <a name="installing-the-net-framework-manually"></a>.NET Framework'ü el ile yükleme
+## <a name="installing-the-net-framework-manually"></a>.NET Framework el ile yükleme
 
-Bazı durumlarda, .NET Framework ile uygulamanızı otomatik olarak yüklemek pratik olmayabilir. Bu durumda, kullanıcılar kendi .NET Framework yüklemeleri olabilir. Yeniden dağıtılabilir paketi kullanılabilir [iki paket](#redistributable-packages). Kurulum sürecinizde kullanıcıların bulun ve bunları nasıl .NET Framework'ü yüklemek için yönergeler sağlar.
+Bazı durumlarda .NET Framework uygulamanıza otomatik olarak yüklemek pratik olabilir. Bu durumda, kullanıcıların .NET Framework kendilerini yüklemesini sağlayabilirsiniz. Yeniden dağıtılabilir paket [iki](#redistributable-packages)pakette kullanılabilir. Kurulum sürecinizdeki kullanıcıların .NET Framework bulması ve yüklemesi için yönergeler sağlayın.
 
 <a name="chaining"></a>
 
-## <a name="chaining-the-net-framework-installation-to-your-apps-setup"></a>.NET Framework yüklemesinin uygulamanızın kurulumuna zincirleme
+## <a name="chaining-the-net-framework-installation-to-your-apps-setup"></a>.NET Framework yüklemesini uygulamanızın kurulumuna zincirme
 
-Uygulamanız için özel kurulum programı oluşturuyorsanız, kurulumuna bağlayabilirsiniz (dahil) .NET Framework Kurulum sürecini uygulamanızın Kurulum işlemi. Zincirleme .NET Framework yüklemesi için iki kullanıcı Arabirimi seçeneği sağlar:
+Uygulamanız için özel bir kurulum programı oluşturuyorsanız, uygulamanızın Kurulum sürecinde .NET Framework kurulum işlemini zincirleyebilirsiniz (dahil). Zincirleme .NET Framework yüklemesi için iki UI seçeneği sağlar:
 
-- Varsayılan .NET Framework yükleyicisi tarafından sağlanan kullanıcı arabirimini kullanın.
+- .NET Framework yükleyicisi tarafından belirtilen varsayılan kullanıcı arabirimini kullanın.
 
-- Uygulamanızın Kurulum programıyla birlikte .NET Framework yükleme tutarlılık için özel kullanıcı Arabirimi oluşturun.
+- Uygulamanızın kurulum programıyla tutarlı olması için .NET Framework yüklemesi için özel bir kullanıcı arabirimi oluşturun.
 
-Her iki yöntem de web yükleyicisini veya çevrimdışı yükleyiciyi kullanmanıza olanak sağlar. Her paketin kendine göre avantajları vardır:
+Her iki yöntem de web yükleyicisini veya çevrimdışı yükleyiciyi kullanmanıza izin verir. Her paketin avantajları vardır:
 
-- Web yükleyicisi kullanıyorsanız, .NET Framework Kurulum işlemi hangi yükleme paketinin gerekli olduğuna karar indirin ve Web'den o paketi yükleyin.
+- Web yükleyicisini kullanıyorsanız, .NET Framework kurulum işlemi hangi yükleme paketinin gerekli olduğuna karar verir ve yalnızca bu paketi Web 'den indirir ve yükler.
 
-- Çevrimdışı yükleyiciyi kullanabilir, böylece kullanıcılarınız ek dosyaları Web'den Kurulum sırasında indirmeniz gerekmez .NET Framework yükleme paketler kümesinin tamamını yeniden dağıtımı medyanızı içerebilir.
+- Çevrimdışı yükleyiciyi kullanıyorsanız, kullanıcılarınızın kurulum sırasında Web 'den başka dosya indirmesini sağlamak için yeniden dağıtım medyanıza sahip .NET Framework yükleme paketlerinin tamamını dahil edebilirsiniz.
 
 <a name="chaining_default"></a>
 
-### <a name="chaining-by-using-the-default-net-framework-ui"></a>Varsayılan .NET Framework UI kullanarak zincirleme
+### <a name="chaining-by-using-the-default-net-framework-ui"></a>Varsayılan .NET Framework Kullanıcı arabirimini kullanarak zincirleme
 
-Sessizce .NET Framwork yükleme işlemini zincir ve .NET Framework kurucusunun kullanıcı arabirimini sağlaması için Kurulum programına aşağıdaki komutu ekleyin:
+.NET Framework yükleme işlemini sessizce zincirlemek ve .NET Framework yükleyicinin Kullanıcı arabirimini sağlamasına izin vermek için, kurulum programınıza aşağıdaki komutu ekleyin:
 
-```
-<.NET Framework redistributable> /q /norestart /ChainingPackage <PackageName>
-```
+`<.NET Framework redistributable> /q /norestart /ChainingPackage <PackageName>`
 
-Örneğin, çalıştırılabilir program Contoso.exe ise ve .NET Framework 4.5 çevrimdışı yeniden dağıtılabilir paketini sessizce yüklemek istiyorsanız komutu kullanın:
+Örneğin, yürütülebilir programınız contoso. exe ise ve .NET Framework 4,5 çevrimdışı yeniden dağıtılabilir paketini sessizce yüklemek istiyorsanız şu komutu kullanın:
 
-```
-dotNetFx45_Full_x86_x64.exe /q /norestart /ChainingPackage Contoso
-```
+`dotNetFx45_Full_x86_x64.exe /q /norestart /ChainingPackage Contoso`
 
 Yüklemeyi özelleştirmek için ek komut satırı seçeneklerini kullanabilirsiniz. Örneğin:
 
-- Sistem yeniden başlatmalarını azaltmak için çalışan .NET Framework uygulamaları kapatmak için kullanıcıları bir yol sağlamak için Pasif modu ayarlamak ve `/showrmui` seçeneğini etkinleştirmelidir:
+- Kullanıcıların, sistem yeniden başlatmaları en aza indirmek için .NET Framework uygulamaları kapatmalarının bir yolunu sağlamak için Pasif modu ayarlayın ve `/showrmui` seçeneği aşağıdaki gibi kullanın:
 
-    ```
-    dotNetFx45_Full_x86_x64.exe /norestart /passive /showrmui /ChainingPackage Contoso
-    ```
+    `dotNetFx45_Full_x86_x64.exe /norestart /passive /showrmui /ChainingPackage Contoso`
 
-     Bu komut, yeniden başlatma Yöneticisi kullanıcılara .NET Framework'ü yüklemeden önce .NET Framework uygulamaları kapatmak için Fırsat veren ileti kutusunu göstermesini sağlar.
+     Bu komut, kullanıcıların .NET Framework yüklemeden önce .NET Framework uygulamaları kapatma fırsatı veren bir ileti kutusu görüntülemesini sağlar.
 
-- Web yükleyicisi kullanıyorsanız, kullanabileceğiniz `/LCID` dil paketi belirtmek için seçeneği. Örneğin, Contoso Kurulum programınıza için .NET Framework 4.5 web yükleyicisi zincir ve Japonca dil paketini yüklemek için aşağıdaki komutu uygulamanızın Kurulum işlemine ekleyin:
+- Web yükleyicisini kullanıyorsanız, bir dil paketi belirtmek için `/LCID` seçeneğini kullanabilirsiniz. Örneğin, .NET Framework 4,5 web yükleyicisini contoso kurulum programınıza zincirlemek ve Japonca dil paketini yüklemek için uygulamanızın Kurulum işlemine aşağıdaki komutu ekleyin:
 
-    ```
-    dotNetFx45_Full_setup.exe /q /norestart /ChainingPackage Contoso /LCID 1041
-    ```
+    `dotNetFx45_Full_setup.exe /q /norestart /ChainingPackage Contoso /LCID 1041`
 
-     Atlarsanız `/LCID` seçeneği, Kurulum kullanıcının MUI ayarlarıyla eşleşen dil paketini yükler.
+     `/LCID` Seçeneğini atlarsanız, Kurulum kullanıcının MUI ayarıyla eşleşen dil paketini yükler.
 
     > [!NOTE]
-    > Farklı dil paketlerinin farklı yayın tarihleri olabilir. Belirttiğiniz dil paketi indirme merkezinde kullanılabilir durumda değilse, Kur, .NET Framework dil paketi olmadan yükleyecektir. .NET Framework kullanıcının bilgisayarında önceden yüklüyse Kurulum sadece dil paketini yükler.
+    > Farklı dil paketlerinde farklı sürüm tarihleri olabilir. Belirttiğiniz dil paketi indirme merkezinde yoksa, kurulum .NET Framework dil paketi olmadan yükler. .NET Framework kullanıcının bilgisayarında zaten yüklüyse, kurulum yalnızca dil paketini yükler.
 
-Seçeneklerinin tam listesi için bkz: [komut satırı seçenekleri](#command-line-options) bölümü.
+Seçeneklerin tam listesi için [komut satırı seçenekleri](#command-line-options) bölümüne bakın.
 
-Ortak dönüş kodları için bkz. [dönüş kodları](#return-codes) bölümü.
+Ortak dönüş kodları için [dönüş kodları](#return-codes) bölümüne bakın.
 
 <a name="chaining_custom"></a>
 
-### <a name="chaining-by-using-a-custom-ui"></a>Özel bir kullanıcı Arabirimi kullanılarak zincirleme
+### <a name="chaining-by-using-a-custom-ui"></a>Özel bir kullanıcı arabirimi kullanarak zincirleme
 
-Özel Kurulum paketiniz varsa, sessizce başlatmak ve kendi görünüm Kurulum sürecinizin gösterirken .NET Framework kurulumunu izlemek isteyebilirsiniz. Bu durumda, kodunuzun aşağıdakini kapsadığından emin olun:
+Özel bir kurulum paketiniz varsa, kurulum ilerleme durumunun kendi görünümünü gösterirken .NET Framework kurulumunu sessizce başlatmak ve izlemek isteyebilirsiniz. Bu durumda, kodunuzun aşağıdakileri kapsadığından emin olun:
 
-- Denetle [.NET Framework donanım ve yazılım gereksinimleri](../../../docs/framework/get-started/system-requirements.md).
+- [.NET Framework donanım ve yazılım gereksinimlerini](../../../docs/framework/get-started/system-requirements.md)denetleyin.
 
-- [Algılama](#detect_net) olup kullanıcının bilgisayarında yüklü .NET Framework'ün doğru sürümü.
+- .NET Framework doğru sürümünün kullanıcının bilgisayarında zaten yüklü olup olmadığını [algılar](#detect_net) .
 
     > [!IMPORTANT]
-    > .NET Framework'ün doğru sürümü zaten yüklü olup olmadığını belirlerken, denetlemeniz gereken olup olmadığını hedef sürümünüz *veya* değil, hedef sürümü yüklü olup olmadığını sonraki bir sürümü yüklü. Büyüktür veya eşittir, hedef sürümü, sürüm anahtarı kayıt defterinden almak yayın anahtar olup olmadığını başka bir deyişle, değerlendirmelidir *değil* hedef sürümünüz sürüm anahtarı eşit olup olmadığı.
+    > .NET Framework 'nin doğru sürümünün zaten yüklü olup olmadığını belirlemek için, hedef sürümünüzün yüklenip yüklenmediğini değil, hedef sürümünüzün *veya* sonraki bir sürümünün yüklü olup olmadığını denetlemeniz gerekir. Diğer bir deyişle, kayıt defterinden aldığınız yayın anahtarının hedef sürümünüzün yayın anahtarına eşit olup olmadığını *değil* , hedef sürümünüzün yayın anahtarından büyük veya ona eşit olup olmadığını değerlendirmelisiniz.
 
-- [Algılama](#detecting-the-language-packs) olup dil paketlerinin kullanıcının bilgisayarında zaten yüklenir.
+- Dil paketlerinin kullanıcının bilgisayarında zaten yüklü olup olmadığını [algılar](#detecting-the-language-packs) .
 
-- Dağıtımı denetlemek istiyorsanız, sessizce başlatmak ve .NET Framework Kurulum sürecini izleyin (bkz [nasıl yapılır: .NET Framework 4.5 yükleyicisinden ilerleme durumunu elde](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)).
+- Dağıtımı denetlemek isterseniz, .NET Framework kurulum işlemini sessizce başlatın ve izleyin (bkz [. nasıl yapılır: .NET Framework 4,5 Yükleyicisinden](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)ilerleme durumunu alın.
 
-- Çevrimdışı yükleyici dağıtıyorsanız [dil paketlerini ayrı olarak zincir](#chain_langpack).
+- Çevrimdışı yükleyiciyi dağıtıyorsanız, [dil paketlerini ayrı olarak zincirleyebilirsiniz](#chain_langpack).
 
-- Kullanarak dağıtımı özelleştirin [komut satırı seçenekleri](#command-line-options). Örneğin, .NET Framework web yükleyicisini bağlıyorsanız, ancak varsayılan dil paketini geçersiz kılmak için kullanmak istediğiniz `/LCID` seçeneği, önceki bölümde açıklandığı gibi.
+- [Komut satırı seçeneklerini](#command-line-options)kullanarak dağıtımı özelleştirin. Örneğin, .NET Framework web yükleyicisini zincirliyoruz, ancak varsayılan dil paketini geçersiz kılmak istiyorsanız, önceki bölümde açıklandığı gibi `/LCID` seçeneğini kullanın.
 
-- [Sorun giderme](#troubleshooting).
+- [Sorun giderin](#troubleshooting).
 
 <a name="detect_net"></a>
 
-### <a name="detecting-the-net-framework"></a>.NET Framework'ü algılama
+### <a name="detecting-the-net-framework"></a>.NET Framework algılanıyor
 
-.NET Framework yükleyicisi, başarılı olduğunda kurucusu Kayıt anahtarlarını yazar. Denetleyerek .NET Framework 4.5 veya üzeri yüklü olup olmadığını test edebilirsiniz `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full` klasörü için kayıt defterinde bir `DWORD` değeri `Release`. ("NET Framework Kurulum" nokta ile başlamayacağına dikkat edin.) Bu anahtarın varlığı, .NET Framework 4.5 veya sonraki bir sürümünü bu bilgisayara yüklendiğini belirtir. Değerini `Release` .NET Framework'ün hangi sürümünün yüklü olduğunu gösterir.
+Yükleme başarılı olduğunda .NET Framework yükleyicisi kayıt defteri anahtarlarını yazar. Adlı `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full` `DWORD` bir değeriçinkayıtdefterindekiklasörüdenetleyerek.NETFramework4,5veyasonrakibirsürümününyüklenipyüklenmediğinitestedebilirsiniz.`Release` ("NET Framework Setup" bir noktayla başlamayacağını unutmayın.) Bu anahtarın varlığı, bu bilgisayarda .NET Framework 4,5 veya sonraki bir sürümün yüklü olduğunu gösterir. Değeri .NET Framework hangi `Release` sürümünün yüklü olduğunu gösterir.
 
 > [!IMPORTANT]
-> İçin bir değer denetlemelisiniz **büyüktür veya eşittir** belirli bir sürümü mevcut olup olmadığını algılamak çalışırken sürüm anahtar değeri.
+> Belirli bir sürümün mevcut olup olmadığını algılamaya çalışırken Release anahtar sözcüğünün değerinden **büyük veya ona eşit** bir değer olup olmadığını denetlemeniz gerekir.
 
 [!INCLUDE[Release key values note](~/includes/version-keys-note.md)]
 
 |Sürüm|Yayın DWORD değeri|
 |-------------|--------------------------------|
-|Windows 10'da yüklü .NET framework 4.8 2019 güncelleştirebilir.|528040|
-|Windows 10 dışında tüm işletim sistemi sürümleri yüklü .NET framework 4.8 2019 güncelleştirebilir.|528049|
-|.NET framework Windows yüklü 4.7.2 10 Nisan 2018 güncelleştirmesi ve Windows Server'da 1803 sürümü|461808|
-|.NET framework 4.7.2 Windows dışındaki tüm işletim sistemi sürümleri yüklü 10 Nisan 2018 güncelleştirmesi ve Windows Server sürümü 1803. Bu içeren Windows 10 Ekim 2018 güncelleştirmesi. |461814|
-|.NET framework 4.7.1 Windows 10 Fall Creators Update ve Windows Server 1709 sürümü yüklü|461308|
-|.NET framework 4.7.1 Windows 10 Fall Creators Update ve Windows Server 1709 sürümü dışındaki tüm işletim sistemi sürümleri yüklü|461310|
-|Windows 10 Creators Update üzerinde yüklü olan .NET framework 4.7|460798|
-|Windows 10 Creators Update dışındaki tüm işletim sistemi sürümleri yüklü .NET framework 4.7|460805|
-|.NET framework 4.6.2, Windows 10 Anniversary Edition ve Windows Server 2016 yüklü|394802|
-|.NET framework 4.6.2, Windows 10 Anniversary Edition ve Windows Server 2016 dışındaki tüm işletim sistemi sürümleri yüklü|394806|
-|.NET framework 4.6.1 yüklü üzerinde Windows 10 Kasım güncelleştirmesi|394254|
-|.NET framework 4.6.1 yüklü Windows 10 Kasım güncelleştirmesi dışındaki tüm işletim sistemi sürümleri|394271|
-|Windows 10'da yüklü .NET framework 4.6|393295|
-|Windows 10 dışında tüm işletim sistemi sürümleri yüklü .NET framework 4.6|393297|
+|.NET Framework 4,8, Windows 10 2019 Mayıs ' de yüklüdür|528040|
+|Windows 10 Mayıs 2019 ' den farklı tüm işletim sistemi sürümlerine .NET Framework 4,8 yüklendi güncelleştirme|528049|
+|Windows 10 Nisan 2018 güncelleştirmesi ve Windows Server, sürüm 1803 ' de yüklü .NET Framework 4.7.2|461808|
+|Windows 10 Nisan 2018 güncelleştirmesi ve Windows Server, sürüm 1803 dışındaki tüm işletim sistemi sürümlerinde yüklü olan 4.7.2 .NET Framework. Buna Windows 10 Ekim 2018 güncelleştirmesi dahildir. |461814|
+|Windows 10 Fall Creators Update ve Windows Server, sürüm 1709 ' de yüklü .NET Framework 4.7.1|461308|
+|Windows 10 Fall Creators Update ve Windows Server, sürüm 1709 dışındaki tüm işletim sistemi sürümlerinde yüklü olan .NET Framework 4.7.1|461310|
+|.NET Framework 4,7 Windows 10 Creators Update 'e yüklendi|460798|
+|Windows 10 Creators Update dışındaki tüm işletim sistemi sürümlerinde 4,7 .NET Framework yüklendi|460805|
+|Windows 10 yıldönümü Edition 'da ve Windows Server 2016 ' de yüklü .NET Framework 4.6.2|394802|
+|Windows 10 yıldönümü sürümü ve Windows Server 2016 dışındaki tüm işletim sistemi sürümlerinde yüklü olan .NET Framework 4.6.2|394806|
+|.NET Framework 4.6.1 Windows 10 Kasım güncelleştirmesine yüklendi|394254|
+|Windows 10 Kasım güncelleştirmesi dışındaki tüm işletim sistemi sürümlerinde yüklü olan .NET Framework 4.6.1|394271|
+|.NET Framework 4,6 Windows 10 ' da yüklü|393295|
+|Windows 10 dışındaki tüm işletim sistemi sürümlerinde 4,6 .NET Framework yüklendi|393297|
 |.NET Framework 4.5.2|379893|
-|.NET framework 4.5.1 ile yüklü [!INCLUDE[win81](../../../includes/win81-md.md)] veya Windows Server 2012 R2|378675|
-|.NET framework 4.5.1 yüklü [!INCLUDE[win8](../../../includes/win8-md.md)], Windows 7|378758|
+|Veya Windows Server 2012 [!INCLUDE[win81](../../../includes/win81-md.md)] R2 ile yüklenen .NET Framework 4.5.1|378675|
+|.NET Framework 4.5.1 yüklendi [!INCLUDE[win8](../../../includes/win8-md.md)], Windows 7|378758|
 |.NET Framework 4.5|378389|
 
-### <a name="detecting-the-language-packs"></a>Dil paketlerini algılama
+### <a name="detecting-the-language-packs"></a>Dil paketleri algılanıyor
 
-Hkey_local_machıne\software\microsoft\net Framework Setup\NDP\v4\Full kontrol ederek belirli bir dil paketinin yüklü olup olmadığını test edebilirsiniz\\*LCID* klasör adında bir DWORD değeri içinkayıtdefterinde`Release`. ("NET Framework Kurulum" nokta ile başlamayacağına dikkat edin.) *LCID* bir yerel tanıtıcı belirtir; bkz [desteklenen diller](#supported-languages) bunların bir listesi için.
+Adlı\\ bir`Release`DWORD değeri için kayıt defterindeki HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full*LCID* klasörünü denetleyerek belirli bir dil paketinin yüklenip yüklenmediğini test edebilirsiniz. ("NET Framework Setup" bir noktayla başlamayacağını unutmayın.) *LCID* bir yerel ayar tanımlayıcıyı belirtir; Bunların listesi için [desteklenen diller](#supported-languages) bölümüne bakın.
 
-Örneğin, algılamak için mi tam dil paketinin (LCID = 1041) yüklü, aşağıdaki kayıt defteri değerlerini denetle:
+Örneğin, tam Japonca dil paketinin (LCıD = 1041) yüklü olup olmadığını algılamak için, kayıt defterinden aşağıdaki adlandırılmış değeri alın:
 
-```
-Key: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full\1041
-Name: Release
-Type: DWORD
-```
+| | |
+|-|-|
+| Anahtar | HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full\1041 |
+| Ad | Sürüm |
+| Tür | DWORD |
 
-.NET Framework 4.5 4.7.2 üzerinden gelen belirli bir sürümü için bir dil paketinin son sürümü yüklü olup olmadığını belirlemek için önceki bölümde anlatılan RELEASE anahtarı DWORD değerini değerini kontrol edin [.NET algılama Framework](#detect_net).
+4,5 ile 4.7.2 arasında .NET Framework belirli bir sürümü için bir dil paketinin son sürümünün yüklenip yüklenmediğini saptamak için, önceki bölümde açıklanan yayın anahtarı DWORD değerinin değerini denetleyin, [.NET Framework ](#detect_net).
 
 <a name="chain_langpack"></a>
 
-### <a name="chaining-the-language-packs-to-your-app-setup"></a>Uygulama kurulumunuzu zincirleme dil paketleri
+### <a name="chaining-the-language-packs-to-your-app-setup"></a>Dil paketlerini uygulama kuruluma zincirleme
 
-.NET Framework özel kültürler için yerelleştirilmiş kaynakları içeren bir paketi yürütülebilir dosyalar tek başına dil kümesini sağlar. Dil paketlerini Microsoft Download Center'dan gelen mevcuttur:
+.NET Framework belirli kültürler için yerelleştirilmiş kaynakları içeren tek başına dil paketi yürütülebilir dosyaları kümesi sağlar. Dil paketleri Microsoft Indirme Merkezi ' nden edinilebilir:
 
-- [.NET framework 4.8 dil paketleri](https://go.microsoft.com/fwlink/p/?LinkId=2086170)
+- [.NET Framework 4,8 dil paketleri](https://go.microsoft.com/fwlink/p/?LinkId=2086170)
 
-- [.NET framework 4.7.2 dil paketleri](https://go.microsoft.com/fwlink/?LinkId=863275)
+- [.NET Framework 4.7.2 dil paketleri](https://go.microsoft.com/fwlink/?LinkId=863275)
 
-- [.NET framework 4.7.1 dil paketleri](https://go.microsoft.com/fwlink/p/?LinkId=852090)
+- [.NET Framework 4.7.1 dil paketleri](https://go.microsoft.com/fwlink/p/?LinkId=852090)
 
-- [.NET framework 4.7 Dil paketleri](https://go.microsoft.com/fwlink/p/?LinkId=825306)
+- [.NET Framework 4,7 dil paketleri](https://go.microsoft.com/fwlink/p/?LinkId=825306)
 
-- [.NET framework 4.6.2 dil paketleri](https://go.microsoft.com/fwlink/p/?LinkId=780604)
+- [.NET Framework 4.6.2 dil paketleri](https://go.microsoft.com/fwlink/p/?LinkId=780604)
 
-- [.NET framework 4.6.1 dil paketi](https://go.microsoft.com/fwlink/p/?LinkId=671747)
+- [.NET Framework 4.6.1 dil paketleri](https://go.microsoft.com/fwlink/p/?LinkId=671747)
 
-- [.NET framework 4.6 dil paketi](https://go.microsoft.com/fwlink/p/?LinkId=528314)
+- [.NET Framework 4,6 dil paketleri](https://go.microsoft.com/fwlink/p/?LinkId=528314)
 
-- [.NET framework 4.5.2 dil paketleri](https://go.microsoft.com/fwlink/p/?LinkId=397701)
+- [.NET Framework 4.5.2 dil paketleri](https://go.microsoft.com/fwlink/p/?LinkId=397701)
 
-- [.NET framework 4.5.1 dil paketleri](https://go.microsoft.com/fwlink/p/?LinkId=322101)
+- [.NET Framework 4.5.1 dil paketleri](https://go.microsoft.com/fwlink/p/?LinkId=322101)
 
-- [.NET framework 4.5 dil paketleri](https://go.microsoft.com/fwlink/p/?LinkId=245451)
+- [.NET Framework 4,5 dil paketleri](https://go.microsoft.com/fwlink/p/?LinkId=245451)
 
 > [!IMPORTANT]
-> Dil paketleri, bir uygulamayı çalıştırmak için gereken .NET Framework bileşenlerini içermezler; dil paketini yüklemeden önce web veya çevrimdışı yükleyiciyi kullanarak .NET Framework'ü yüklemeniz gerekir.
+> Dil paketleri, bir uygulamayı çalıştırmak için gereken .NET Framework bileşenleri içermez; bir dil paketi yüklemeden önce Web veya çevrimdışı yükleyiciyi kullanarak .NET Framework yüklemelisiniz.
 
-.NET Framework 4.5.1 ile başlayarak, paket adları NDP biçiminde <`version`>-KB <`number`>-x86-x64 - AllOS - <`culture`> .exe, burada `version` .NET Framework'ün sürüm numarasıdır `number` olduğu bir Microsoft Bilgi Bankası makale numarası ve `culture` belirtir bir [ülke/bölge](#supported-languages). Bu paketlerin bir örneğini `NDP452-KB2901907-x86-x64-AllOS-JPN.exe`. Paket adları listelenir [yeniden dağıtılabilir paketleri](#redistributable-packages) bu makalenin önceki kısımlarında bölümü.
+.NET Framework 4.5.1 ' den itibaren`version`, paket adları NDP < >-KB <`number`>-x86-x64-AllOS-<`culture`>. exe biçimini alır, burada `version` .NET Framework `number` sürüm numarasıdır. Microsoft Bilgi Bankası Makale numarası ve `culture` bir [ülke/bölge](#supported-languages)belirtir. Bu paketlerden `NDP452-KB2901907-x86-x64-AllOS-JPN.exe`birine bir örnek. Paket adları, bu makalenin önceki bölümlerinde [yeniden dağıtılabilir paketler](#redistributable-packages) bölümünde listelenmiştir.
 
-Dil paketini .NET Framework çevrimdışı Yükleyici ile yüklemek için uygulamanızın kurulumuna zincirine bağlı olmalıdır. Örneğin, .NET Framework 4.5.1 çevrimdışı yükleyiciyi Japonca dil paketiyle dağıtmak için aşağıdaki komutu kullanın:
+.NET Framework çevrimdışı yükleyicisiyle bir dil paketi yüklemek için, uygulamayı uygulamanızın kurulumuna zincirmalısınız. Örneğin, 4.5.1 .NET Framework çevrimdışı yükleyiciyi Japonca dil paketiyle dağıtmak için aşağıdaki komutu kullanın:
 
-```
-NDP451-KB2858728-x86-x64-AllOS-JPN.exe /q /norestart /ChainingPackage <ProductName>
-```
+`NDP451-KB2858728-x86-x64-AllOS-JPN.exe /q /norestart /ChainingPackage <ProductName>`
 
-Web yükleyicisini kullanmak istiyorsanız dil paketlerini bağlamanıza gerek yoktur; Kurulum kullanıcının MUI ayarlarıyla eşleşen dil paketini yükleyecektir. Farklı bir dil yüklemek isterseniz, kullanabileceğiniz `/LCID` dil paketi belirtmek için seçeneği.
+Web yükleyicisini kullanıyorsanız, dil paketlerini zincirlemek zorunda değilsiniz; Kurulum, kullanıcının MUI ayarıyla eşleşen dil paketini yükleyecek. Farklı bir dil yüklemek isterseniz, bir dil paketi belirtmek için `/LCID` seçeneğini kullanabilirsiniz.
 
 Komut satırı seçeneklerinin tam listesi için bkz. [komut satırı seçenekleri](#command-line-options) bölümü.
 
@@ -349,7 +339,7 @@ Komut satırı seçeneklerinin tam listesi için bkz. [komut satırı seçenekle
 
 #### <a name="return-codes"></a>Dönüş kodları
 
-Aşağıdaki tablo, .NET Framework yeniden dağıtılabilir yükleyici için en sık karşılaşılan döndürülen kodları listeler. Dönüş kodları yükleyicinin tüm sürümleri için aynıdır. Ayrıntılı bilgi için bağlantılar için sonraki bölüme bakın.
+Aşağıdaki tabloda .NET Framework yeniden dağıtılabilir yükleyici için en yaygın dönüş kodları listelenmektedir. Dönüş kodları yükleyicinin tüm sürümleri için aynıdır. Ayrıntılı bilgilerin bağlantıları için sonraki bölüme bakın.
 
 |Dönüş kodu|Açıklama|
 |-----------------|-----------------|
@@ -366,7 +356,7 @@ Aşağıdaki içeriğe bakın:
 
 - [Arka Plan Akıllı Aktarım Hizmeti (BITS) hata kodları](https://go.microsoft.com/fwlink/?LinkId=180946)
 
-- [URL adı hata kodları](https://go.microsoft.com/fwlink/?LinkId=180947)
+- [URL bilinen adı hata kodları](https://go.microsoft.com/fwlink/?LinkId=180947)
 
 - [WinHttp hata kodları](https://go.microsoft.com/fwlink/?LinkId=180948)
 
@@ -378,72 +368,72 @@ Aşağıdaki içeriğe bakın:
 
 - [Windows Update Aracısı sonuç kodları](https://go.microsoft.com/fwlink/?LinkId=180951)
 
-## <a name="uninstalling-the-net-framework"></a>.NET Framework'ün kaldırılması
+## <a name="uninstalling-the-net-framework"></a>.NET Framework kaldırılıyor
 
-İle başlayarak [!INCLUDE[win8](../../../includes/win8-md.md)], .NET Framework 4.5 kaldırabilirsiniz veya kendi noktasını birini sürümleri kullanılarak **kapatma Windows özelliklerini açma ve kapatma** Denetim Masası'nda. Eski Windows sürümlerinde, .NET Framework 4.5 kaldırabilirsiniz veya kendi noktasını birini sürümleri kullanılarak **Program Ekle veya Kaldır** Denetim Masası'nda.
+' Den [!INCLUDE[win8](../../../includes/win8-md.md)]itibaren, Denetim Masası 'nda **Windows özelliklerini aç ve Kapat** ' ı kullanarak .NET Framework 4,5 veya kendi nokta sürümlerinden birini kaldırabilirsiniz. Windows 'un eski sürümlerinde, Denetim Masası 'ndaki **Program Ekle veya Kaldır** ' ı kullanarak .NET Framework 4,5 ' i veya nokta sürümlerinden birini kaldırabilirsiniz.
 
 > [!IMPORTANT]
-> Windows 7 ve önceki işletim sistemlerinde, .NET Framework 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7, 4.7.1, 4.7.2 veya 4.8 kaldırma, .NET Framework 4.5 dosyaları geri yüklemiyor ve kaldırmadan .NET Framework 4.5, .NET Framework 4 dosyaları geri yüklemiyor. Eski sürüme dönmek istiyorsanız onu ve güncellemelerini yeniden yüklemeniz gerekir.
+> Windows 7 ve önceki işletim sistemlerinde, .NET Framework 4.5.1, 4.5.2, 4,6, 4.6.1, 4.6.2, 4,7, 4.7.1, 4.7.2 veya 4,8 ' ı kaldırmak .NET Framework 4,5 dosyalarını geri almaz ve .NET Framework 4,5 kaldırıldığında .NET Framework 4 dosyası geri almaz. Eski sürüme geri dönmek istiyorsanız, bu dosyayı ve tüm güncelleştirmeleri yeniden yüklemeniz gerekir.
 
 ## <a name="appendix"></a>Ek
 
 ### <a name="command-line-options"></a>Komut satırı seçenekleri
 
-Aşağıdaki tablo, .NET Framework 4.5 redistributable uygulamanızın kurulumuna bağladığınızda ekleyebileceğiniz seçenekleri listeler.
+Aşağıdaki tabloda, .NET Framework 4,5 yeniden dağıtılabilir öğesini uygulamanızın kurulumuna zincirlerken dahil edilecek seçenekler listelenmektedir.
 
 |Seçenek|Açıklama|
 |------------|-----------------|
-|**/ CEIPConsent**|Varsayılan davranışını tekrardan yazar ve gelecekteki dağıtım deneyimleri geliştirmek üzere Microsoft'a anonim geri bildirim gönderir. Bu seçenek, yalnızca Kurulum programın rıza istemesine sebep olursa ve kullanıcı anonim görüşlerinizi Microsoft'a göndermek için izin verirse kullanılabilir.|
-|**/chainingpackage** `packageName`|Zincirlemeyi yapan yürütülebilir dosya adını belirtir. Gelecekteki dağıtım geliştirmeye yardımcı olmak için anonim görüş deneyimleri olarak bu bilgileri Microsoft'a gönderilmez.<br /><br /> Paket adı boşluk içeriyorsa, sınırlayıcı olarak çift tırnak işareti kullanın. Örneğin: **/chainingpackage "Lucerne Publishing"** . Zincirleme paketi örneği için bkz: [yükleme paketinden ilerleme bilgisi alma](https://go.microsoft.com/fwlink/?LinkId=181926) MSDN Kitaplığı'nda.|
-|**/LCID**  `LCID`<br /><br /> Burada `LCID` bir yerel ayar tanımlayıcısını belirtir (bkz [desteklenen diller](#supported-languages))|Tarafından belirtilen dil paketini yükler `LCID` ve sessiz mod ayarlanmadığı sürece görüntülenen kullanıcı Arabirimi o dilde gösterilmesini zorlar.<br /><br /> Web Yükleyicisi için bu seçeneği zinciri-web dil paketini yükler. **Not:**  Bu seçeneği yalnızca web Yükleyicisi ile kullanın.|
-|**/log** `file` &#124; `folder`|Günlük dosyasının konumunu belirtir. Varsayılan işlem için geçici bir klasördür ve varsayılan dosya adı pakete dayalıdır. Dosya uzantısı .txt ise, bir metin günlüğü oluşturulur. Başka bir uzantı belirtirseniz veya bir uzantı belirtirseniz, bir HTML günlüğü oluşturulur.|
-|**/msioptions**|.Msi ve .msp öğeleri için geçirilecek seçeneklerini belirtir. Örneğin: `/msioptions "PROPERTY1='Value'"`.|
-|**/ norestart**|Kurulum programının otomatik olarak yeniden başlatılmasını önler. Bu seçeneği kullanırsanız, zincirleme uygulama döndürülen kodu yakalamak ve yeniden başlatmayı işlemek vardır (bkz [yükleme paketinden ilerleme bilgisi alma](https://go.microsoft.com/fwlink/?LinkId=179606) MSDN Kitaplığı'nda).|
-|**/ passive**|Pasif modu ayarlar. Yükleme devam ediyor, ancak hiçbir hızlı cevap yada hata iletilerini kullanıcıya göstermez belirtmek için ilerleme çubuğu görüntüler. Zincirleme paketi bu modda, Kurulum programı tarafından bağlanırsa işlemesi [dönüş kodları](#return-codes).|
-|**/pipe**|İlerleme durumunu elde etmek zincirleme bir paket için bir iletişim kanalı oluşturur.|
-|**promptrestart**|Sadece pasif modda, Kurulum programı bir yeniden başlatma gerekirse kullanıcıya sorar. Bir yeniden başlatma gerekirse bu seçenek kullanıcı etkileşimini gerektirir.|
+|**/Ceiponayı**|Varsayılan davranışın üzerine yazar ve gelecekteki dağıtım deneyimlerini geliştirmek üzere Microsoft 'a anonim geri bildirim gönderir. Bu seçenek, yalnızca kurulum programı onay isterse ve Kullanıcı Microsoft 'a anonim geri bildirim gönderme izni veriyorsa kullanılabilir.|
+|**/ChainingPackage**`packageName`|Zincirlemeyi yapan yürütülebilir dosyanın adını belirtir. Bu bilgiler, gelecekteki dağıtım deneyimlerini iyileştirmenize yardımcı olmak için anonim geri bildirim olarak Microsoft 'a gönderilir.<br /><br /> Paket adı boşluk içeriyorsa, çift tırnak işaretlerini sınırlayıcılar olarak kullanın; Örneğin: **/chainingpackage "Lucerne Publishing"** . Bir zincir paketi örneği için bkz. MSDN kitaplığındaki [bir yükleme paketinden Ilerleme bilgisi alma](https://go.microsoft.com/fwlink/?LinkId=181926) .|
+|**/LCID**  `LCID`<br /><br /> Burada `LCID` bir yerel ayar tanımlayıcı (bkz. [desteklenen diller](#supported-languages))|Tarafından `LCID` belirtilen dil paketini yüklenir ve sessiz mod ayarlanmadığı takdirde görüntülenen kullanıcı arabirimini o dilde gösterilecek şekilde zorlar.<br /><br /> Web Yükleyicisi için bu seçenek zinciri, dil paketini Web 'den kurar. **Not:**  Bu seçeneği yalnızca Web yükleyicisiyle kullanın.|
+|**/log** `file` &#124;`folder`|Günlük dosyasının konumunu belirtir. Varsayılan, işlemin geçici klasörüdür ve varsayılan dosya adı pakete dayalıdır. Dosya uzantısı. txt ise, bir metin günlüğü üretilir. Başka bir uzantıyı veya uzantıyı belirtirseniz, bir HTML günlüğü oluşturulur.|
+|**/msioptions**|. Msi ve. msp öğeleri için geçirilecek seçenekleri belirtir; Örneğin: `/msioptions "PROPERTY1='Value'"`.|
+|**/ norestart**|Kurulum programının otomatik olarak yeniden başlatılmasını önler. Bu seçeneği kullanırsanız, zincirleme uygulamanın dönüş kodunu yakalaması ve yeniden başlatma işlemini işlemesi gerekir (bkz. MSDN kitaplığındaki [bir yükleme paketinden Ilerleme bilgilerini alma](https://go.microsoft.com/fwlink/?LinkId=179606) ).|
+|**/ passive**|Pasif modu ayarlar. Yüklemenin devam ettiğini belirten, ancak kullanıcıya hiçbir istem veya hata iletisi görüntülemediğini belirten ilerleme çubuğunu görüntüler. Bu modda, bir kurulum programı tarafından zincirleme yaparken, zincirleme paketi [dönüş kodlarını](#return-codes)işlemelidir.|
+|**/Pipe**|Bir zincir oluşturma paketinin ilerlemesini sağlamak için bir iletişim kanalı oluşturur.|
+|**/promptrestart**|Yalnızca Pasif mod, Kurulum programı yeniden başlatma gerektiriyorsa, kullanıcıya sorar. Yeniden başlatma gerekirse bu seçenek kullanıcı etkileşimini gerektirir.|
 |**/q**|Sessiz modu ayarlar.|
 |**/ Repair**|Onarma işlevini tetikler.|
-|**/serialdownload**|Yüklemeyi yalnızca paket İndirildikten sonra yapılmaya zorlar.|
-|**/showfinalerror**|Pasif modu ayarlar. Yalnızca yükleme başarılı değilse hataları görüntüler. Yükleme başarılı değilse, bu seçenek kullanıcı etkileşimini gerektirir.|
-|**/showrmui**|Yalnızca kullanılan **/passive** seçeneği. Çalışmakta olan .NET Framework uygulamaları kapatmak için kullanıcıları uyaran bir ileti kutusu görüntüler. Bu ileti kutusu pasif ve pasif olmayan modda aynı şekilde davranır.|
-|**/uninstall**|.NET Framework yeniden dağıtılabilirini kaldırır.|
+|**/serialdownload**|Yüklemeyi yalnızca paket indirildikten sonra gerçekleşecek şekilde zorlar.|
+|**/showfinalhatası**|Pasif modu ayarlar. Yalnızca yükleme başarılı olmazsa hataları görüntüler. Yükleme başarılı olmazsa bu seçenek kullanıcı etkileşimini gerektirir.|
+|**/showrmuı**|Yalnızca **/passive** seçeneğiyle kullanılır. Kullanıcıların şu anda çalışmakta olan uygulamaları .NET Framework kapatmasını isteyen bir ileti kutusu görüntüler. Bu ileti kutusu pasif ve pasif olmayan modda aynı şekilde davranır.|
+|**/uninstall**|Yeniden dağıtılabilir .NET Framework kaldırır.|
 
 ### <a name="supported-languages"></a>Desteklenen diller
 
-Aşağıdaki tablo .NET Framework 4.5 için kullanılabilir olan .NET Framework dil paketlerini listeler ve nokta sürümlerini.
+Aşağıdaki tabloda, .NET Framework 4,5 ve nokta sürümleri için kullanılabilen dil paketleri listelenmektedir .NET Framework.
 
-|LCID|Dil-Ülke/bölge|Kültür|
+|LCID|Dil – ülke/bölge|Kültür|
 |----------|--------------------------------|-------------|
-|1025|Arapça - Suudi Arabistan|ar|
-|1028|Çince-Geleneksel|zh-Hant|
-|1029|Çekçe|cs|
+|1025|Arapça-Suudi Arabistan|Ar|
+|1028|Çince – Geleneksel|zh-Hant|
+|1029|Çekçe|'ye|
 |1030|Danca|da|
 |1031|Almanca – Almanya|de|
-|1032|Yunanca|el|
+|1032|Yunanca|seri|
 |1035|Fince|Fi|
-|1036|Fransızca – Fransa|FR|
-|1037|İbranice|He|
-|1038|Macarca|hu|
-|1040|İtalyanca – İtalya|Bunu|
-|1041|Japonca|ja|
-|1042|Korece|Ko|
+|1036|Fransızca – Fransa|kesir|
+|1037|İbranice|LIP|
+|1038|Macarca|Hu|
+|1040|İtalyanca – Italya|içerdiği|
+|1041|Japonca|Sofya|
+|1042|Korece|dili|
 |1043|Felemenkçe – Hollanda|nl|
-|1044|Norveççe (Bokmål)|Yok|
-|1045|Lehçe|PL|
+|1044|Norveççe (Bokmål)|Eşleşen|
+|1045|Lehçe|pl|
 |1046|Portekizce – Brezilya|pt-BR|
-|1049|Rusça|RU|
+|1049|Rusça|ru|
 |1053|İsveççe|sv|
 |1055|Türkçe|tr|
-|2052|Çince-Basitleştirilmiş|zh-Hans|
+|2052|Çince – Basitleştirilmiş|zh-Hans|
 |2070|Portekizce – Portekiz|pt-PT|
-|3082|İspanyolca - İspanya (Modern sıralama)|ES|
+|3082|İspanyolca-Ispanya (modern sıralama)|es|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Yöneticiler için Dağıtım Kılavuzu](../../../docs/framework/deployment/guide-for-administrators.md)
 - [Sistem Gereksinimleri](../../../docs/framework/get-started/system-requirements.md)
-- [Geliştiriciler için .NET Framework'ü yükleme](../../../docs/framework/install/guide-for-developers.md)
+- [Geliştiriciler için .NET Framework yüklemesi](../../../docs/framework/install/guide-for-developers.md)
 - [Engellenen .NET Framework yükleme ve kaldırma sorunlarını giderme](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)
 - [.NET Framework 4.5 Yüklemeleri Sırasında Sistem Yeniden Başlatmalarını Azaltma](../../../docs/framework/deployment/reducing-system-restarts.md)
-- [Nasıl yapılır: .NET Framework 4.5 yükleyicisinden ilerleme durumunu Al](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)
+- [Nasıl yapılır: .NET Framework 4,5 Yükleyicisinden Ilerleme durumunu alın](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)

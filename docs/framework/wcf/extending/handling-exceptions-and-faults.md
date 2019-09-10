@@ -2,12 +2,12 @@
 title: Özel Durum ve Hataları İşleme
 ms.date: 03/30/2017
 ms.assetid: a64d01c6-f221-4f58-93e5-da4e87a5682e
-ms.openlocfilehash: 676ebe999c72ed678b7432ec154b1ec104b4d6cd
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 4f95907d4f88315f2815b84e2ceb4e069783438d
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795689"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851271"
 ---
 # <a name="handling-exceptions-and-faults"></a>Özel Durum ve Hataları İşleme
 Özel durumlar, hizmette veya istemci uygulamasında yerel olarak hatalara iletişim kurmak için kullanılır. Diğer yandan hatalar, sunucudan istemciye gibi veya tam tersi gibi hizmet sınırları genelinde hataları iletmek için kullanılır. Hatalara ek olarak, aktarım kanalları genellikle aktarım düzeyi hataları iletmek için aktarıma özgü mekanizmalar kullanır. Örneğin, HTTP taşıması mevcut olmayan bir uç nokta URL 'SI ile iletişim kurmak için 404 gibi durum kodlarını kullanır (bir hata geri gönderilmesi için uç nokta yoktur). Bu belge, özel kanal yazarlarına rehberlik sağlayan üç bölümden oluşur. İlk bölüm, özel durumların ne zaman ve nasıl tanımlanacağını ve throw hakkında rehberlik sağlar. İkinci bölüm, hataları oluşturma ve kullanma konusunda rehberlik sağlar. Üçüncü bölümde, çalışan uygulamalarda sorun gidermek için özel kanalınızın kullanıcısına yardımcı olmak üzere izleme bilgilerinin nasıl sağlanacağını açıklanmaktadır.  
@@ -48,7 +48,7 @@ SOAP 1,2 hatası (sol) ve SOAP 1,1 hatası (sağ). SOAP 1,1 ' de yalnızca hata 
   
  SOAP bir hata iletisini yalnızca bir hata öğesi (adı `<env:Fault>`olan bir öğe) `<env:Body>`alt öğesi olan bir ileti olarak tanımlar. Hata öğesinin içeriği, Şekil 1 ' de gösterildiği gibi SOAP 1,1 ve SOAP 1,2 arasında biraz farklılık gösterir. Ancak, <xref:System.ServiceModel.Channels.MessageFault?displayProperty=nameWithType> sınıfı bu farklılıkları bir nesne modeliyle normalleştirir:  
   
-```  
+```csharp
 public abstract class MessageFault  
 {  
     protected MessageFault();  
@@ -74,7 +74,7 @@ public abstract class MessageFault
   
  Bir hatayı programlama yoluyla ayırt etmek için ilginç olması halinde yeni hata alt kodları (veya SOAP 1,1 kullanıyorsanız yeni hata kodları) oluşturmanız gerekir. Bu, yeni bir özel durum türü oluşturulmasına benzer. SOAP 1,1 hata kodlarıyla nokta gösterimini kullanmaktan kaçının. ( [WS-ı temel profili](https://go.microsoft.com/fwlink/?LinkId=95177) Ayrıca hata kodu nokta gösteriminin kullanımını etkilenmeden.)  
   
-```  
+```csharp  
 public class FaultCode  
 {  
     public FaultCode(string name);  
@@ -96,7 +96,7 @@ public class FaultCode
   
  Özelliği, `env:Reason` bir özel durumun iletisine benzer `faultString` şekilde hata koşulunun okunabilir bir açıklamasını (veya soap 1,1 ' de) karşılık gelir. `Reason` Sınıfında `FaultReason` (ve SOAP `env:Reason/faultString`), Genelleştirme açısından birden çok çevirisi olması için yerleşik destek vardır.  
   
-```  
+```csharp  
 public class FaultReason  
 {  
     public FaultReason(FaultReasonText translation);  
@@ -118,7 +118,7 @@ public class FaultReason
   
  Bir hata oluştururken, özel kanal hatayı doğrudan göndermemelidir, bunun yerine bir özel durum oluşturması ve katmanın bu özel durumu bir hataya dönüştürüp dönüştürmeyeceğine karar vermesini ve bunun nasıl gönderileceğini belirtmenizi sağlar. Bu dönüştürmeye yardımcı olması için kanal, özel kanal tarafından oluşturulan `FaultConverter` özel durumu uygun hataya dönüştürebileceğiniz bir uygulama sağlamalıdır. `FaultConverter`şöyle tanımlanır:  
   
-```  
+```csharp  
 public class FaultConverter  
 {  
     public static FaultConverter GetDefaultFaultConverter(  
@@ -134,7 +134,7 @@ public class FaultConverter
   
  Özel hatalar üreten her kanal, öğesini uygulamalıdır `FaultConverter` ve bir `GetProperty<FaultConverter>`çağrısından döndürmelidir. Özel `OnTryCreateFaultMessage` uygulama, özel durumu iç `FaultConverter`kanalın bir hata ya da temsilcisine dönüştürmelidir. Kanal bir aktarımalıyorsa, özel durumu veya temsilciyi WCF 'de belirtilen varsayılan `FaultConverter` `FaultConverter` ya da bir şekilde dönüştürmelidir. Varsayılan değer `FaultConverter` , ws-Addressing ve SOAP tarafından belirtilen hata iletilerine karşılık gelen hataları dönüştürür. Örnek `OnTryCreateFaultMessage` bir uygulama aşağıda verilmiştir.  
   
-```  
+```csharp  
 public override bool OnTryCreateFaultMessage(Exception exception,   
                                              out Message message)  
 {  
@@ -204,7 +204,7 @@ public override bool OnTryCreateFaultMessage(Exception exception,
   
  Aşağıdaki nesne modeli, iletilerin özel durumlara dönüştürülmesini destekler:  
   
-```  
+```csharp  
 public class FaultConverter  
 {  
     public static FaultConverter GetDefaultFaultConverter(  
@@ -224,7 +224,7 @@ public class FaultConverter
   
  Tipik bir uygulama şöyle görünür:  
   
-```  
+```csharp  
 public override bool OnTryCreateException(  
                             Message message,   
                             MessageFault fault,   
@@ -290,7 +290,7 @@ public override bool OnTryCreateException(
   
  Protokol kanallarınız MustUnderstand = true ile özel bir üst bilgi gönderirse ve bir `mustUnderstand` hata alırsa, bu hatanın gönderdiği üst bilgi olup olmadığını anlamak gerekir. `MessageFault` Sınıfta bu için yararlı olan iki üye vardır:  
   
-```  
+```csharp  
 public class MessageFault  
 {  
     ...  
@@ -322,7 +322,7 @@ public class MessageFault
   
  Bir izleme kaynağına sahip olduktan sonra, izleme girdilerini izleme <xref:System.Diagnostics.TraceSource.TraceData%2A>dinleyicilerine yazmak <xref:System.Diagnostics.TraceSource.TraceInformation%2A> için, <xref:System.Diagnostics.TraceSource.TraceEvent%2A>veya yöntemlerini çağırın. Yazdığınız her izleme girişi için, olay türünü içinde <xref:System.Diagnostics.TraceEventType>tanımlanan olay türlerinden biri olarak sınıflandırmanız gerekir. Yapılandırma içindeki bu sınıflandırma ve izleme düzeyi ayarı, izleme girişinin dinleyiciye çıkış olup olmadığını belirtir. Örneğin, `Warning` yapılandırmada izleme düzeyini izin `Warning`verecek şekilde ayarlama ve `Critical` girdileri izlemek `Error` , ancak bilgileri ve ayrıntılı girdileri engeller. Aşağıda, bir izleme kaynağı örneğini oluşturma ve bilgi düzeyinde bir girişi yazma örneği verilmiştir:  
   
-```  
+```csharp
 using System.Diagnostics;  
 //...  
 TraceSource udpSource=new TraceSource("Microsoft.Samples.Udp");  

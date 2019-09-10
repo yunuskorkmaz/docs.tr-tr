@@ -4,12 +4,12 @@ description: .NET Core, Windows, Linux ve Mac uygulamaları oluşturmaya yöneli
 author: richlander
 ms.date: 08/01/2018
 ms.custom: updateeachrelease
-ms.openlocfilehash: db4daa8c78a181f0599c4c75ccd31f46ee278e63
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 0007c1c6a9939c46f123535f9053ac1d4ced7266
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202832"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70848937"
 ---
 # <a name="net-core-guide"></a>.NET Core Kılavuzu
 
@@ -21,9 +21,9 @@ ms.locfileid: "70202832"
 
 ## <a name="download-net-core-22"></a>.NET Core 2,2 'yi indirin
 
-Windows, macOS veya Linux makinenizde .NET Core 'u denemek için [.net core 2,2 SDK 'sını](https://www.microsoft.com/net/download) indirin. Docker Kapsayıcıları kullanmayı tercih ediyorsanız [DotNet/Core](https://hub.docker.com/_/microsoft-dotnet-core/) adresini ziyaret edin.
+Windows, macOS veya Linux makinenizde .NET Core 'u denemek için [.net core 2,2 SDK 'sını](https://dotnet.microsoft.com/download) indirin. Docker Kapsayıcıları kullanmayı tercih ediyorsanız [DotNet/Core](https://hub.docker.com/_/microsoft-dotnet-core/) adresini ziyaret edin.
 
-Başka bir .NET Core sürümü arıyorsanız, tüm .NET Core sürümleri [.NET Core İndirmeleri](https://www.microsoft.com/net/download/archives) ile kullanılabilir.
+Başka bir .NET Core sürümü arıyorsanız, tüm .NET Core sürümleri [.NET Core İndirmeleri](https://dotnet.microsoft.com/download/dotnet-core) ile kullanılabilir.
 
 ## <a name="net-core-22"></a>.NET Core 2,2
 
@@ -46,7 +46,7 @@ Hello World!
 
 ## <a name="support"></a>Destek
 
-.NET Core, Windows, macOS ve Linux 'ta [Microsoft tarafından desteklenir](https://www.microsoft.com/net/support/policy). Genellikle ayda bir yılda birkaç kez güvenlik ve kalite için güncelleştirilir.
+.NET Core, Windows, macOS ve Linux 'ta [Microsoft tarafından desteklenir](https://dotnet.microsoft.com/platform/support/policy). Genellikle ayda bir yılda birkaç kez güvenlik ve kalite için güncelleştirilir.
 
 .NET Core ikili dağıtımları, Azure 'da Microsoft tarafından korunan sunucularda oluşturulup test edilir ve tıpkı tüm Microsoft ürünleri gibi desteklenir.
 

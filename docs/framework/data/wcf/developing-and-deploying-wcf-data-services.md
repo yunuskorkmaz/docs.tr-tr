@@ -7,12 +7,12 @@ helpviewer_keywords:
 - deploying [WCF Data Services
 - developing applications [WCF Data Services]
 ms.assetid: 6557c0e3-5aea-4f6e-bc14-77ad317a168b
-ms.openlocfilehash: 578c480940d70fa84edf18d572992e755c8efed5
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: d7ddae58874c69468eb6ff1762db9083897b1acd
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70780322"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854074"
 ---
 # <a name="develop-and-deploy-wcf-data-services"></a>Geliştirme ve dağıtma WCF Veri Hizmetleri
 
@@ -121,7 +121,7 @@ WCF Veri Hizmeti, veri hizmetini barındıran işlemi seçmede esneklik sağlar.
 
 Bir veri hizmetini dağıtırken, aşağıdakileri dikkate almanız gerekir:
 
-- Bir SQL Server veritabanına erişmek için [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] sağlayıcıyı kullanan bir veri hizmeti dağıttığınızda veri yapılarını, verileri veya her ikisini de veri hizmeti dağıtımınızla yayabilirsiniz. Visual Studio, bunu hedef veritabanında yapmak için otomatik olarak komut dosyaları (. SQL dosyaları) oluşturabilir ve bu betikler bir ASP.NET uygulamasının Web dağıtım paketine dahil edilebilir. Daha fazla bilgi için [nasıl yapılır: Web uygulaması projesiyle](https://docs.microsoft.com/previous-versions/dd465343(v=vs.100))bir veritabanı dağıtın. Bir ASP.NET Web sitesi için, Visual Studio 'da **veritabanı Yayımlama Sihirbazı** 'nı kullanarak bunu yapabilirsiniz. Daha fazla bilgi için bkz. [SQL veritabanı yayımlama](https://docs.microsoft.com/previous-versions/aspnet/bb907585(v=vs.100)).
+- Bir SQL Server veritabanına erişmek için Entity Framework sağlayıcıyı kullanan bir veri hizmetini dağıttığınızda veri yapıları, verileri veya her ikisini de veri hizmeti dağıtımınızla yayabilirsiniz. Visual Studio, bunu hedef veritabanında yapmak için otomatik olarak komut dosyaları (. SQL dosyaları) oluşturabilir ve bu betikler bir ASP.NET uygulamasının Web dağıtım paketine dahil edilebilir. Daha fazla bilgi için [nasıl yapılır: Web uygulaması projesiyle](https://docs.microsoft.com/previous-versions/dd465343(v=vs.100))bir veritabanı dağıtın. Bir ASP.NET Web sitesi için, Visual Studio 'da **veritabanı Yayımlama Sihirbazı** 'nı kullanarak bunu yapabilirsiniz. Daha fazla bilgi için bkz. [SQL veritabanı yayımlama](https://docs.microsoft.com/previous-versions/aspnet/bb907585(v=vs.100)).
 
 - WCF Veri Hizmetleri temel bir WCF uygulamasını içerdiğinden, Windows Server 'da çalışan IIS 'e dağıtılan bir veri hizmetini izlemek için Windows Server AppFabric 'i kullanabilirsiniz. Veri hizmetini izlemek üzere Windows Server AppFabric kullanma hakkında daha fazla bilgi için bkz. [Windows Server AppFabric ile post Tracking WCF veri Hizmetleri](https://go.microsoft.com/fwlink/?LinkID=202005).
 

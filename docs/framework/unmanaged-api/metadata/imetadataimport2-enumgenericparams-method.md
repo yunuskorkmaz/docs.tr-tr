@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7edd2eeafcce6a22c3256d0684a9c4f961b34002
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 39e3e71185051435afcf03d51ec62742c080b02a
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62049901"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855706"
 ---
 # <a name="imetadataimport2enumgenericparams-method"></a>IMetaDataImport2::EnumGenericParams Yöntemi
-Bir numaralandırıcı genel parametre belirteçleri belirtilen TypeDef veya MethodDef ilişkili bir dizisi için belirteç alır.  
+Belirtilen TypeDef veya MethodDef belirteciyle ilişkili bir genel parametre belirteçleri dizisi için bir Numaralandırıcı alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```cpp
 HRESULT EnumGenericParams (  
    [in, out] HCORENUM     *phEnum,   
    [in]  mdToken          tk,  
@@ -41,35 +41,35 @@ HRESULT EnumGenericParams (
   
 ## <a name="parameters"></a>Parametreler  
  `phEnum`  
- [out içinde] Numaralandırıcı bir işaretçi.  
+ [in, out] Numaralandırıcı için bir işaretçi.  
   
  `tk`  
- [in] Numaralandırılacak genel parametreleri olan TypeDef veya MethodDef belirteç.  
+ 'ndaki Genel parametreleri numaralandırılmış olan TypeDef veya MethodDef belirteci.  
   
  `rGenericParams`  
- [out] Numaralandırılacak genel parametreler dizisi.  
+ dışı Numaralandırılacak genel parametrelerin dizisi.  
   
  `cMax`  
- [in] İstenen sayısı yerleştirmek için belirteçleri `rGenericParams`.  
+ 'ndaki İstenen en fazla belirteç sayısı, içine `rGenericParams`yerleştirilecek.  
   
  `pcGenericParams`  
- [out] Döndürülen belirteç sayısı yerleştirilen `rGenericParams`.  
+ dışı Döndürülen belirteç `rGenericParams`sayısı döndürüldü.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|`S_OK`|`EnumGenericParams` başarıyla döndürüldü.|  
-|`S_FALSE`|`phEnum` üye öğe yok. Bu durumda, `pcGenericParams` 0 (sıfır) olarak ayarlayın.|  
+|`S_OK`|`EnumGenericParams`başarıyla döndürüldü.|  
+|`S_FALSE`|`phEnum`Üye öğesi yok. Bu durumda, `pcGenericParams` 0 (sıfır) olarak ayarlanır.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** COR.h  
+ **Üst bilgi** Cor. h  
   
- **Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan  
+ **Kitaplığı** MsCorEE. dll içinde kaynak olarak kullanılır  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

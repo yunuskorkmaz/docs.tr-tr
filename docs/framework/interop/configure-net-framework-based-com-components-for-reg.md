@@ -10,36 +10,36 @@ helpviewer_keywords:
 ms.assetid: 32f8b7c6-3f73-455d-8e13-9846895bd43b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c8f78e926835e86fdc20da5e4e1bc66c4b6ab1a2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: baabff187fb8a22aea37c4fb4c1dc11a680d3bb8
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625448"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70853844"
 ---
 # <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a>Nasıl yapılır: Kayıtsız Etkinleştirme için .NET Framework Tabanlı COM Bileşenlerini Yapılandırma
-Kayıtsız etkinleştirme için .NET Framework tabanlı bileşenler, yalnızca COM bileşenleri için olandan biraz daha karmaşık. Kurulum, iki bildirimleri gerektirir:  
+.NET Framework tabanlı bileşenlere yönelik kayıt için ücretsiz etkinleştirme, COM bileşenleri için olduğundan biraz daha karmaşıktır. Kurulum için iki bildirim gerekir:  
   
-- COM uygulamaları yönetilen bileşen tanımlamak için bir Win32 stili bildiriminin olması gerekir.  
+- COM uygulamalarının, yönetilen bileşeni tanımlamak için bir Win32 stili uygulama bildirimi olması gerekir.  
   
-- .NET framework tabanlı bileşenler, bileşen bildirimini etkinleştirme bilgi çalışma zamanında gereken olması gerekir.  
+- .NET Framework tabanlı bileşenlerin, çalışma zamanında gerekli etkinleştirme bilgileri için bir bileşen bildirimine sahip olması gerekir.  
   
- Bu konu, bir uygulama bildirimi uygulamayla ilişkilendirilecek açıklar; Bileşen bildirimi, bir bileşeniyle ilişkilendirme; ' i tıklatın ve bileşeni bildirimini derlemede katıştırmak.  
+ Bu konu, uygulama bildiriminin bir uygulamayla nasıl ilişkilendirileceğini açıklar; bileşen bildirimini bir bileşeniyle ilişkilendirin; ve bir derlemeye bileşen bildirimi ekleyin.  
   
-### <a name="to-create-an-application-manifest"></a>Bir uygulama bildirimi oluşturmak için  
+### <a name="to-create-an-application-manifest"></a>Uygulama bildirimi oluşturmak için  
   
-1. Bir XML Düzenleyicisi'ni kullanarak oluşturun (veya değiştirme) bir veya daha fazla yönetilen bileşenleri ile birlikte COM uygulama sahibi uygulama bildirimi.  
+1. Bir XML Düzenleyicisi kullanarak, bir veya daha fazla yönetilen bileşenle birlikte bulunan COM uygulamasına ait uygulama bildirimini oluşturun (veya değiştirin).  
   
-2. Aşağıdaki standart üstbilgi dosyasının başına ekleyin:  
+2. Aşağıdaki standart üstbilgiyi dosyanın başına ekleyin:  
   
     ```xml  
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>  
     <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">  
     ```  
   
-     Liste öğelerini ve onların öznitelikleri hakkında daha fazla bilgi için bkz. [uygulama bildirimleri](/windows/desktop/SbsCs/application-manifests).  
+     Bildirim öğeleri ve öznitelikleri hakkında daha fazla bilgi için bkz. [uygulama bildirimleri](/windows/desktop/SbsCs/application-manifests).  
   
-3. Bildirimin sahibi olacak kişileri tanımlayın. Aşağıdaki örnekte, `myComApp` sürüm 1 sahip bildirim dosyası.  
+3. Bildirimin sahibini belirler. Aşağıdaki örnekte, `myComApp` sürüm 1 bildirim dosyasının sahibidir.  
   
     ```xml  
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>  
@@ -51,7 +51,7 @@ Kayıtsız etkinleştirme için .NET Framework tabanlı bileşenler, yalnızca C
       />  
     ```  
   
-4. Bağımlı derlemelerin belirleyin. Aşağıdaki örnekte, `myComApp` bağlıdır `myManagedComp`.  
+4. Bağımlı derlemeleri belirler. Aşağıdaki örnekte, `myComApp` `myManagedComp`öğesine bağımlıdır.  
   
     ```xml  
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>  
@@ -75,22 +75,22 @@ Kayıtsız etkinleştirme için .NET Framework tabanlı bileşenler, yalnızca C
     </assembly>  
     ```  
   
-5. Kaydet ve bildirim dosyasının adı. Bir uygulama bildirimi yürütülebilir derlemenin adını .manifest uzantısı tarafından izlenen adıdır. Örneğin, uygulama bildirim dosyası myComApp.exe myComApp.exe.manifest adıdır.  
+5. Bildirim dosyasını kaydedin ve adlandırın. Uygulama bildiriminin adı, derleme yürütülebilir dosyasının ve ardından. manifest uzantısının adıdır. Örneğin, myComApp. exe için uygulama bildirimi dosya adı myComApp. exe. manifest ' dir.  
   
- Bir uygulama bildirimi, COM uygulama ile aynı dizinde yükleyebilirsiniz. Alternatif olarak, bunu bir kaynak olarak uygulamanın .exe dosyasına ekleyebilirsiniz. Daha fazla bilgi için ek bilgi için bkz. [yan yana derlemeler hakkında](/windows/desktop/SbsCs/about-side-by-side-assemblies-).  
+ Uygulama bildirimini COM uygulamasıyla aynı dizine yükleyebilirsiniz. Alternatif olarak, uygulamayı uygulamanın. exe dosyasına bir kaynak olarak ekleyebilirsiniz. Daha fazla bilgi için bkz. [yan yana derlemeler hakkında](/windows/desktop/SbsCs/about-side-by-side-assemblies-).  
   
 #### <a name="to-create-a-component-manifest"></a>Bileşen bildirimi oluşturmak için  
   
-1. Bir XML Düzenleyicisi'ni kullanarak yönetilen derlemeyi tanımlamak için bir bileşen bildirimi oluşturun.  
+1. XML Düzenleyicisi kullanarak, yönetilen derlemeyi betimleyen bir bileşen bildirimi oluşturun.  
   
-2. Aşağıdaki standart üstbilgi dosyasının başına ekleyin:  
+2. Aşağıdaki standart üstbilgiyi dosyanın başına ekleyin:  
   
     ```xml  
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>  
     <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">  
     ```  
   
-3. Dosyanın sahibi olacak kişileri tanımlayın. `<assemblyIdentity>` Öğesinin `<dependentAssembly>` bileşen bildirimini bir uygulama bildirimi dosyasındaki öğesi eşleşmesi gerekir. Aşağıdaki örnekte, `myManagedComp` sürüm 1.2.3.4 sahip bildirim dosyası.  
+3. Dosyanın sahibini belirler. Uygulama bildirimi dosyasındaki `<dependentAssembly>` öğenin öğesi,bileşenbildirimindebulunanileaynıolmalıdır.`<assemblyIdentity>` Aşağıdaki örnekte, belirtilen sürüm `myManagedComp` , bildirim dosyasının sahibidir.  
   
     ```xml  
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>  
@@ -103,21 +103,21 @@ Kayıtsız etkinleştirme için .NET Framework tabanlı bileşenler, yalnızca C
            />  
     ```  
   
-4. Derlemedeki her bir sınıf tanımlar. Kullanım `<clrClass>` her derlemede sınıfı, yönetilen benzersiz olarak tanımlanabilmesi için öğesi. Bir alt öğesi olan öğe, `<assembly>` öğesi, aşağıdaki tabloda açıklanan öznitelikleri.  
+4. Derlemedeki her bir sınıfı belirler. Yönetilen derlemedeki her bir sınıfı benzersiz şekilde tanımlamak için öğesinikullanın.`<clrClass>` `<assembly>` Öğesinin bir alt öğesi olan öğesi, aşağıdaki tabloda açıklanan özniteliklere sahiptir.  
   
     |Öznitelik|Açıklama|Gerekli|  
     |---------------|-----------------|--------------|  
-    |`clsid`|Belirten etkinleştirilmesi için sınıf tanımlayıcısı.|Evet|  
-    |`description`|Kullanıcı bileşeni hakkında bilgilendiren bir dize. Boş bir dize varsayılandır.|Hayır|  
-    |`name`|Yönetilen sınıf temsil eden bir dize.|Evet|  
-    |`progid`|Geç bağlama etkinleştirmesi için kullanılan tanımlayıcı.|Hayır|  
-    |`threadingModel`|COM iş parçacığı modeli. "Both" varsayılan değerdir.|Hayır|  
-    |`runtimeVersion`|Kullanılacak ortak dil çalışma zamanı (CLR) sürümünü belirtir. Bu özniteliği belirtmezseniz ve CLR zaten yüklü değilse, bileşen CLR sürüm 4 önce en son yüklenen CLR ile yüklenir. V1.0.3705, v1.1.4322 veya v2.0.50727 belirtirseniz, sürüm otomatik olarak ilet için en son yüklenen CLR sürümü CLR sürüm 4 (genellikle v2.0.50727) önce yapar. Başka bir CLR sürümü zaten yüklü olan ve belirtilen sürümü işlemdeki yan yana yüklenebilir, belirtilen sürümü yüklenir; Aksi takdirde, yüklü CLR kullanılır. Bu yük başarısız olmasına neden.|Hayır|  
-    |`tlbid`|Sınıf türü bilgilerini içeren tür kitaplığının tanımlayıcı.|Hayır|  
+    |`clsid`|Etkinleştirilecek sınıfı belirten tanımlayıcı.|Evet|  
+    |`description`|Kullanıcıya bileşen hakkında bilgilendiren bir dize. Boş bir dize varsayılandır.|Hayır|  
+    |`name`|Yönetilen sınıfı temsil eden bir dize.|Evet|  
+    |`progid`|Geç bağlantılı etkinleştirme için kullanılacak tanımlayıcı.|Hayır|  
+    |`threadingModel`|COM iş parçacığı modeli. "Her ikisi de varsayılan değerdir.|Hayır|  
+    |`runtimeVersion`|Kullanılacak ortak dil çalışma zamanı (CLR) sürümünü belirtir. Bu özniteliği belirtmezseniz ve CLR zaten yüklü değilse, bileşen CLR sürüm 4 ' ten önceki en son yüklenen CLR ile yüklenir. V 1.0.3705, v 1.1.4322 veya v 2.0.50727 belirtirseniz, sürüm CLR sürüm 4 ' ten (genellikle v 2.0.50727) önce yüklenen en son CLR sürümüne otomatik olarak kaydolur. CLR 'nin başka bir sürümü zaten yüklüyse ve belirtilen sürüm, işlem içi yan yana yüklenebiliyorsanız, belirtilen sürüm yüklenir; Aksi takdirde, yüklenen CLR kullanılır. Bu bir yükleme hatasına neden olabilir.|Hayır|  
+    |`tlbid`|Sınıf hakkında tür bilgilerini içeren tür kitaplığının tanımlayıcısı.|Hayır|  
   
-     Tüm öznitelik etiketler büyük/küçük harfe duyarlıdır. CLSID, ProgIDs, modelleri ve çalışma zamanı sürümü, dışarı aktarılan tür kitaplığını derleme OLE/COM ObjectViewer (Oleview.exe) ile görüntüleyerek iş parçacığı elde edebilirsiniz.  
+     Tüm öznitelik etiketleri büyük/küçük harfe duyarlıdır. OLE/COM ObjectViewer (Oleview. exe) ile derleme için aktarılmış tür kitaplığını görüntüleyerek CLSID, ProgID 'ler, iş parçacığı modelleri ve çalışma zamanı sürümünü edinebilirsiniz.  
   
-     İki sınıf aşağıdaki bileşen bildirimini tanımlar `testClass1` ve `testClass2`.  
+     Aşağıdaki bileşen bildirimi, ve `testClass1` `testClass2`olmak üzere iki sınıfı tanımlar.  
   
     ```xml  
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>  
@@ -146,35 +146,33 @@ Kayıtsız etkinleştirme için .NET Framework tabanlı bileşenler, yalnızca C
     </assembly>  
     ```  
   
-5. Kaydet ve bildirim dosyasının adı. Bir bileşen bildirimini .manifest uzantısı tarafından izlenen derleme kitaplığının adı adıdır. Örneğin, myManagedComp.dll myManagedComp.manifest olur.  
+5. Bildirim dosyasını kaydedin ve adlandırın. Bir bileşen bildiriminin adı, derleme kitaplığının adı ve ardından. manifest uzantısını izler. Örneğin, myManagedComp. dll myManagedComp. manifest ' dir.  
   
- Bir kaynak olarak bileşen bildirimini derlemesinde katıştırmanız gerekir.  
+ Bileşen bildirimini derlemede bir kaynak olarak katıştırmanız gerekir.  
   
-#### <a name="to-embed-a-component-manifest-in-a-managed-assembly"></a>Yönetilen derlemede bir bileşen bildirimi eklemek için  
+#### <a name="to-embed-a-component-manifest-in-a-managed-assembly"></a>Yönetilen bir derlemede bir bileşen bildirimi eklemek için  
   
-1. Aşağıdaki deyim içeren bir kaynak betiği oluşturun:  
+1. Aşağıdaki ifadeyi içeren bir kaynak betiği oluşturun:  
   
      `RT_MANIFEST 1 myManagedComp.manifest`  
   
-     Bu bildirimde `myManagedComp.manifest` katıştırılmış bileşen bildirimini adıdır. Bu örnekte, betik dosyası adı `myresource.rc`.  
+     Bu bildirimde, `myManagedComp.manifest` eklenen bileşen bildiriminin adıdır. Bu örnek için, betik dosyası adı `myresource.rc`.  
   
-2. Microsoft Windows Kaynak derleyicisi (Rc.exe) kullanarak betiği derleyin. Komut satırında, aşağıdaki komutu yazın:  
+2. Microsoft Windows Kaynak derleyicisi (RC. exe) kullanarak betiği derleyin. Komut satırında, aşağıdaki komutu yazın:  
   
      `rc myresource.rc`  
   
-     RC.exe üretir `myresource.res` kaynak dosyası.  
+     RC. exe `myresource.res` kaynak dosyası üretir.  
   
-3. Derlemenin kaynak dosyasını yeniden derleyin ve kullanarak kaynak dosyayı belirtin **/win32res** seçeneği:  
+3. Derlemenin kaynak dosyasını yeniden derleyin ve **/win32res** seçeneğini kullanarak kaynak dosyasını belirtin:  
   
-    ```  
-    /win32res:myresource.res  
-    ```  
+    `/win32res:myresource.res`  
   
-     Yeniden `myresource.res` gömülü kaynak içeren kaynak dosyasının adıdır.  
+     Yine, `myresource.res` gömülü kaynakları içeren kaynak dosyasının adıdır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Kayıtsız COM Birlikte Çalışma](registration-free-com-interop.md)
-- [Kayıtsız COM birlikte çalışma için gereksinimler](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/f8h7012w(v=vs.100))
-- [Kayıtsız etkinleştirme için COM bileşenlerini yapılandırma](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/x65a421a(v=vs.100))
-- [Kayıtsız etkinleştirme. AĞ tabanlı bileşenler: İzlenecek yollar](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973915(v=msdn.10))
+- [Kayıtsız COM birlikte çalışma gereksinimleri](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/f8h7012w(v=vs.100))
+- [Kayıt-ücretsiz etkinleştirme için COM bileşenlerini yapılandırma](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/x65a421a(v=vs.100))
+- [Kayıt-ücretsiz etkinleştirmesi. NET tabanlı bileşenler: Bir Izlenecek yol](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973915(v=msdn.10))

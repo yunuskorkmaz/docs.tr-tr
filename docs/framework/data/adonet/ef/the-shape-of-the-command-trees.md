@@ -2,12 +2,12 @@
 title: Komut Ağaçlarının Şekli
 ms.date: 03/30/2017
 ms.assetid: 2215585e-ca47-45f8-98d4-8cb982f8c1d3
-ms.openlocfilehash: a3568f3deeaeeb31b69b41ac7c767001b792a8eb
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 8368354049a77a56a5aa54ab500619576f41b0dc
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70248218"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854270"
 ---
 # <a name="the-shape-of-the-command-trees"></a>Komut Ağaçlarının Şekli
 
@@ -17,7 +17,7 @@ SQL oluşturma modülü, belirli bir giriş sorgusu komut ağacı ifadesine gör
 
 Sorgu komut ağacı bir sorgunun nesne modeli gösterimidir. Sorgu komut ağaçları iki amaca hizmet eder:
 
-- Öğesine göre [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]belirtilen bir giriş sorgusunu ifade etmek için.
+- Entity Framework göre belirtilen bir giriş sorgusunu ifade etmek için.
 
 - Bir sağlayıcıya verilen bir çıkış sorgusunu ifade etmek ve arka uca yönelik bir sorgu tanımlar.
 
@@ -25,7 +25,7 @@ Sorgu komut ağaçları, iç içe geçmiş Koleksiyonlar ve tür işlemleriyle �
 
 DBQueryCommandTree. Query özelliği, sorgu mantığını tanımlayan ifade ağacının köküdür. DBQueryCommandTree. Parameters özelliği, sorguda kullanılan parametrelerin bir listesini içerir. İfade ağacı DbExpression nesnelerinden oluşur.
 
-DbExpression nesnesi bazı hesaplamayı temsil eder. Birçok ifade türü, sabitleri, değişkenleri, [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] işlevleri, oluşturucuları ve Filter ve JOIN gibi standart İlişkisel işleçleri içeren sorgu ifadeleri oluşturmak için tarafından sağlanır. Her DbExpression nesnesinin, bu ifade tarafından üretilen sonucun türünü temsil eden bir ResultType özelliği vardır. Bu tür bir TypeUsage olarak ifade edilir.
+DbExpression nesnesi bazı hesaplamayı temsil eder. Birkaç tür ifade, sabitler, değişkenler, işlevler, oluşturucular ve Filter ve JOIN gibi standart ilişkisel işleçler dahil olmak üzere sorgu ifadeleri oluşturmak için Entity Framework tarafından sağlanır. Her DbExpression nesnesinin, bu ifade tarafından üretilen sonucun türünü temsil eden bir ResultType özelliği vardır. Bu tür bir TypeUsage olarak ifade edilir.
 
 ## <a name="shapes-of-the-output-query-command-tree"></a>Çıkış sorgusu komut ağacının şekilleri
 
@@ -75,7 +75,7 @@ Aşağıdaki işlev türleri geçirilebilir:
 
 - Kullanıcı tanımlı işlevler.
 
-Kurallı işlevler (daha fazla bilgi için [kurallı işlevlere](./language-reference/canonical-functions.md) bakın), [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]öğesinin bir parçası olarak belirtilir ve sağlayıcılar bu belirtimlere göre kurallı işlevlere yönelik uygulamalar sağlamalıdır. Mağaza işlevleri, karşılık gelen sağlayıcı bildiriminde yer alan belirtimlere göre yapılır. Kullanıcı tanımlı işlevler SSDL içindeki belirtimlere dayanır.
+Kurallı işlevler (daha fazla bilgi için [kurallı işlevlere](./language-reference/canonical-functions.md) bakın) Entity Framework bir parçası olarak belirtilmiştir ve sağlayıcılar bu belirtimlere göre kurallı işlevlere yönelik uygulamalar sağlamalıdır. Mağaza işlevleri, karşılık gelen sağlayıcı bildiriminde yer alan belirtimlere göre yapılır. Kullanıcı tanımlı işlevler SSDL içindeki belirtimlere dayanır.
 
 Ayrıca, NiladicFunction özniteliğine sahip işlevlerin bağımsız değişkeni yoktur ve sonda parantez olmadan çevrilmelidir.  Diğer bir deyişle,  *\<* fonksiyonadı  *\<> ()* yerine fonksiyonadı >.
 

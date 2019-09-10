@@ -2,20 +2,21 @@
 title: <serviceActivations>
 ms.date: 03/30/2017
 ms.assetid: 97e665b6-1c51-410b-928a-9bb42c954ddb
-ms.openlocfilehash: fb7c699612ef12aae39aaeadaf170d0e8f2553cd
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 64ae0bfd90ae941fc78515c7936c998201c87485
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69936442"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855139"
 ---
 # <a name="serviceactivations"></a>\<Serviceetkinleştirmeleri >
 
 Windows Communication Foundation (WCF) hizmet türlerine eşlenen sanal hizmet etkinleştirme ayarlarını tanımlayan ayarları eklemenize olanak tanıyan bir yapılandırma öğesi. Bu,. svc dosyası olmadan WAS/IIS ' de barındırılan hizmetlerin etkinleştirilmesi mümkün olur.
 
-\<sistemin. ServiceModel > \
-\<serviceHostingEnvironment > \
-\<Serviceetkinleştirmeleri >
+[ **\<Yapılandırma >** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System. serviceModel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<serviceHostingEnvironment >** ](servicehostingenvironment.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Serviceetkinleştirmeleri >**  
 
 ## <a name="syntax"></a>Sözdizimi
 

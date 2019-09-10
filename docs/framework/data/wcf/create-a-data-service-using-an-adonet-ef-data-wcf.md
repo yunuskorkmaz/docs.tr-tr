@@ -5,18 +5,18 @@ helpviewer_keywords:
 - WCF Data Services, providers
 - WCF Data Services, Entity Framework
 ms.assetid: 6d11fec8-0108-42f5-8719-2a7866d04428
-ms.openlocfilehash: ae4176fd986f870523e44a11eee48850e2dddd7c
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 1d3c3628a32439d4847505e234b12b084b47ba3d
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70791081"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854128"
 ---
 # <a name="how-to-create-a-data-service-using-an-adonet-entity-framework-data-source-wcf-data-services"></a>Nasıl yapılır: Bir ADO.NET Entity Framework veri kaynağı kullanarak veri hizmeti oluşturma (WCF Veri Hizmetleri)
 
-WCF Veri Hizmetleri, veri hizmeti olarak varlık verilerini gösterir. Bu varlık verileri, veri kaynağı ilişkisel bir[!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] veritabanı olduğunda, ADO.NET tarafından sağlanır. Bu konu başlığı altında, var olan bir [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]veritabanını temel alan bir Visual Studio Web uygulamasında temel bir veri modeli oluşturma ve bu veri modelini kullanarak yeni bir veri hizmeti oluşturma işlemi gösterilmektedir.
+WCF Veri Hizmetleri, veri hizmeti olarak varlık verilerini gösterir. Veri kaynağı ilişkisel bir veritabanı olduğunda, bu varlık verileri ADO. NETEntity Framework tarafından sağlanır. Bu konu başlığı altında, var olan bir veritabanını temel alan Visual Studio Web uygulamasında Entity Framework tabanlı bir veri modeli oluşturma ve bu veri modelini kullanarak yeni bir veri hizmeti oluşturma işlemi gösterilmektedir.
 
-Ayrıca [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] , Visual Studio projesi dışında bir [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] model oluşturabilen bir komut satırı aracı da sağlar. Daha fazla bilgi için [nasıl yapılır: Modeli ve eşleme dosyalarını](../adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)oluşturmak Için EdmGen. exe ' yi kullanın.
+Entity Framework Ayrıca, Visual Studio projesi dışında bir Entity Framework modeli oluşturabilen bir komut satırı aracı sağlar. Daha fazla bilgi için [nasıl yapılır: Modeli ve eşleme dosyalarını](../adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)oluşturmak Için EdmGen. exe ' yi kullanın.
 
 ## <a name="to-add-an-entity-framework-model-that-is-based-on-an-existing-database-to-an-existing-web-application"></a>Var olan bir veritabanını varolan bir Web uygulamasına dayalı bir Entity Framework modeli eklemek için
 
@@ -45,7 +45,7 @@ Ayrıca [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] , Visual Stu
 
 9. Sihirbazı tamamladığınızda **son** ' a tıklayın.
 
-     Bu, belirli bir veritabanını temel alan varsayılan bir veri modeli oluşturur. , [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] Veri modelini özelleştirmesini sağlar. Daha fazla bilgi için bkz. [varlık veri modeli araçları görevleri](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738480(v=vs.100)).
+     Bu, belirli bir veritabanını temel alan varsayılan bir veri modeli oluşturur. Entity Framework veri modelini özelleştirmesini sağlar. Daha fazla bilgi için bkz. [varlık veri modeli araçları görevleri](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738480(v=vs.100)).
 
 ## <a name="to-create-the-data-service-by-using-the-new-data-model"></a>Yeni veri modelini kullanarak veri hizmetini oluşturmak için
 

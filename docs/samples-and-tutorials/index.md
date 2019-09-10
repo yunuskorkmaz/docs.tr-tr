@@ -1,41 +1,41 @@
 ---
-title: .NET örnekler ve öğreticiler
-description: .NET Core, ASP.NET Core için örnekler ve öğreticiler hakkında bilgi ve C# yardımcı dil .NET hakkında bilgi edinin.
+title: .NET örnekleri ve öğreticiler
+description: .NET Core, ASP.NET Core ve .NET hakkında bilgi edinmenize yardımcı olacak C# dil örnekleri ve öğreticiler hakkında bilgi.
 author: BillWagner
 ms.author: wiwagn
 ms.date: 04/11/2017
-ms.openlocfilehash: ea5bedc9bd58ca0661524d7edf999e21037e0063
-ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
+ms.openlocfilehash: e4906feb7cda026848c990c7dd6f1dc8146dc7aa
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65960304"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855777"
 ---
-# <a name="net-samples-and-tutorials"></a>.NET örnekler ve öğreticiler
+# <a name="net-samples-and-tutorials"></a>.NET örnekleri ve öğreticiler
 
-.NET belgeleri hakkında daha fazla .NET öğretmek öğreticileri ve örnekleri içerir. Bu konu, bulma, görüntüleme ve .NET Core, ASP.NET Core, indirme açıklar ve C# örnekler ve öğreticiler. Bilgi edinmek için kaynakları bulmak F# üzerinde programlama dilini [ F# Foundation'ın site](https://fsharp.org/learn.html). Keşfetmeye içinde ilgileniyorsanız C# başlayın bir çevrimiçi Kod Düzenleyicisi'ni kullanarak [bu etkileşimli öğreticisini](https://www.microsoft.com/net/learn/in-browser-tutorial/1) ve devam et [ C# etkileşimli öğreticisini](../csharp/tutorials/intro-to-csharp/index.md). Görüntüleme ve örnek kodu indirdikten hakkında yönergeler için bkz: [görüntüleme ve örneklerini indirerek](#viewing-and-downloading-samples) bölümü.
+.NET belgeleri size .NET hakkında bilgi veren bir örnek ve öğretici kümesi içerir. Bu konuda .NET Core, ASP.NET Core ve C# örnekleri ile öğreticilerin nasıl bulunacağı, görüntüleneceği ve indirileceği açıklanmaktadır. F# [ F# Kuruluşun sitesinde](https://fsharp.org/learn.html)programlama dilini öğrenmek için kaynakları bulun. Çevrimiçi bir kod Düzenleyicisi kullanarak araştırma C# yapmak istiyorsanız [Bu etkileşimli öğreticiyle](https://dotnet.microsoft.com/learn/dotnet/in-browser-tutorial/1) başlayın ve [ C# etkileşimli öğreticiye](../csharp/tutorials/intro-to-csharp/index.md)devam edin. Örnek kodun nasıl görüntüleneceği ve indirileceği hakkında yönergeler için, [örnekleri görüntüleme ve indirme](#viewing-and-downloading-samples) bölümüne bakın.
 
 ## <a name="net-core"></a>.NET Core
 
 ### <a name="samples"></a>Örnekler
 
-**[Dotnet testi kullanarak .NET core'da birim testi](../core/testing/unit-testing-with-dotnet-test.md)**
+**[DotNet testini kullanarak .NET Core 'da birim testi](../core/testing/unit-testing-with-dotnet-test.md)**
 
-Bu kılavuz, bir ASP.NET Core web uygulaması ve ilişkili birim testleri oluşturma işlemini göstermektedir. Bu basit bir web hizmeti uygulama oluşturarak başlar ve ardından testleri ekler. Yeni özelliklerini Uygulama Kılavuzu için daha fazla test oluşturmaya devam eder. [Tamamlanan örnek](https://github.com/dotnet/samples/tree/master/core/getting-started/unit-testing-using-dotnet-test) dotnet/samples deposuna github'da mevcuttur.
+Bu kılavuzda, bir ASP.NET Core Web uygulaması ve ilişkili birim testlerini nasıl oluşturacağınız gösterilmektedir. Basit bir Web hizmeti uygulaması oluşturarak başlar ve ardından testler ekler. Yeni özellikleri uygulamaya yönelik daha fazla test oluşturmaya devam eder. [Tamamlanmış örnek](https://github.com/dotnet/samples/tree/master/core/getting-started/unit-testing-using-dotnet-test) , GitHub 'daki DotNet/Samples deposunda bulunur.
 
 ### <a name="tutorials"></a>Öğreticiler
 
-**[CLI araçları ile .NET Core konsol uygulamaları yazma: Adım Adım Kılavuzu](../core/tutorials/using-with-xplat-cli.md)**
+**[CLı araçlarını kullanarak .NET Core konsol uygulamaları yazma: Adım adım kılavuz](../core/tutorials/using-with-xplat-cli.md)**
 
-Bu kılavuz, platformlar arası konsol uygulamaları oluşturmak için .NET Core CLI kullanmayı göstermektedir. Bir temel bir konsol uygulaması başladığında ve sonunda testi dahil olmak üzere birden çok proje yayılır. Özellikleri adım adım, kullandıkça bilginizi oluşturmak ekleyin. [Tamamlanan örnek](https://github.com/dotnet/samples/tree/master/core/console-apps) dotnet/samples deposuna github'da mevcuttur.
+Bu kılavuzda, platformlar arası konsol uygulamaları oluşturmak için .NET Core CLI araçları 'nın nasıl kullanılacağı gösterilmektedir. Temel konsol uygulamasıyla başlar ve sonuçta test dahil birden çok projeye yayılır. Adım adım özellikleri, siz gittiğiniz bilgilerinizi ekleyerek öğreneceksiniz. [Tamamlanmış örnek](https://github.com/dotnet/samples/tree/master/core/console-apps) , GitHub 'daki DotNet/Samples deposunda bulunur.
 
-**[Platformlar arası araçlarla kitaplıkları ile yazma](../core/tutorials/libraries.md)**
+**[Platformlar arası araçlarla kitaplıklar yazma](../core/tutorials/libraries.md)**
 
-Bu örnek için platformlar arası CLI araçları ile .NET kitaplıkları yazma nasıl etkinleştireceğinizi de açıklar. Bu araçlar, tüm desteklenen işletim sistemi üzerinde çalışan bir verimli ve alt düzey deneyimi sağlar. [Tamamlanan örnek](https://github.com/dotnet/samples/tree/master/framework/libraries/frameworks-library) dotnet/samples deposuna github'da mevcuttur.
+Bu örnek, platformlar arası CLı araçları kullanılarak .NET için kitaplıkların nasıl yazılacağını ele alır. Bu araçlar, desteklenen herhangi bir işletim sisteminde çalışan etkili ve düşük düzeyli bir deneyim sağlar. [Tamamlanmış örnek](https://github.com/dotnet/samples/tree/master/framework/libraries/frameworks-library) , GitHub 'daki DotNet/Samples deposunda bulunur.
 
 ## <a name="aspnet-core"></a>ASP.NET Core
 
-Bkz: [ASP.NET Core öğreticilerini](/aspnet/core/tutorials/). ASP.NET Core belgelerindeki birçok makale kendileri için örneklere bağlantılar vardır.
+[ASP.NET Core öğreticilerine](/aspnet/core/tutorials/)bakın. ASP.NET Core belgelerindeki birçok makale, bunlar için yazılan örneklere bağlantılar sağlar.
 
 ## <a name="c-language"></a>C# dili
 
@@ -43,79 +43,79 @@ Bkz: [ASP.NET Core öğreticilerini](/aspnet/core/tutorials/). ASP.NET Core belg
 
 **[Yineleyiciler](../csharp/iterators.md)**
 
-Bu örnek sözdizimi ve oluşturma ve kullanma özelliklerini gösterir C# yineleyiciler. [Tamamlanan örnek](https://github.com/dotnet/samples/tree/master/csharp/iterators) dotnet/samples deposuna github'da mevcuttur.
+Bu örnek, C# yineleyiciler oluşturma ve kullanma ile ilgili sözdizimi ve özellikleri gösterir. [Tamamlanmış örnek](https://github.com/dotnet/samples/tree/master/csharp/iterators) , GitHub 'daki DotNet/Samples deposunda bulunur.
 
-**[Dizin oluşturucular](../csharp/indexers.md)**
+**[Dizinleyiciler](../csharp/indexers.md)**
 
-Bu örneği için özellikleri ve söz dizimini gösterir C# dizin oluşturucular. [Tamamlanan örnek](https://github.com/dotnet/samples/tree/master/csharp/indexers) dotnet/samples deposuna github'da mevcuttur.
+Bu örnek, C# dizin oluşturucularının sözdizimi ve özelliklerini gösterir. [Tamamlanmış örnek](https://github.com/dotnet/samples/tree/master/csharp/indexers) , GitHub 'daki DotNet/Samples deposunda bulunur.
 
 **[Temsilciler ve olaylar](../csharp/delegates-events.md)**
 
-Bu örneği için özellikleri ve söz dizimini gösterir C# Temsilciler ve olaylar. [Tamamlanan örnek](https://github.com/dotnet/samples/tree/master/csharp/delegates-and-events) dotnet/samples deposuna github'da mevcuttur. A [ikinci örnek](https://github.com/dotnet/samples/tree/master/csharp/events) olaylarına odaklanmış da aynı depoda olan.
+Bu örnek, temsilciler ve olaylar için C# sözdizimi ve özellikleri gösterir. [Tamamlanmış örnek](https://github.com/dotnet/samples/tree/master/csharp/delegates-and-events) , GitHub 'daki DotNet/Samples deposunda bulunur. Olaylara odaklanan [ikinci bir örnek](https://github.com/dotnet/samples/tree/master/csharp/events) aynı havuzda de bulunur.
 
 **[İfade ağaçları](../csharp/expression-trees.md)**
 
-Bu örnek ifade ağaçları kullanma tarafından çözülen sorunlar çoğunu gösterir. [Tamamlanan örnek](https://github.com/dotnet/samples/tree/master/csharp/expression-trees) dotnet/samples deposuna github'da mevcuttur.
+Bu örnek, Ifade ağaçları kullanılarak çözülebileceği birçok sorunu gösterir. [Tamamlanmış örnek](https://github.com/dotnet/samples/tree/master/csharp/expression-trees) , GitHub 'daki DotNet/Samples deposunda bulunur.
 
 **LINQ örnekleri**
 
-Bu bir dizi örnek, dil tümleşik sorgu (LINQ) özelliklerin çoğunu gösterir. [Tamamlanan örnek](https://github.com/dotnet/samples/tree/master/core/linq/csharp) dotnet/samples deposuna github'da mevcuttur.
+Bu örnek serisi, dil ile tümleşik sorgu (LINQ) özelliklerinin çoğunu gösterir. [Tamamlanmış örnek](https://github.com/dotnet/samples/tree/master/core/linq/csharp) , GitHub 'daki DotNet/Samples deposunda bulunur.
 
-**Yönetilen örnek COM sunucusu**
+**Yönetilen COM sunucusu örneği**
 
-[COM sunucusu](https://github.com/dotnet/samples/tree/master/core/extensions/COMServerDemo) örnek, yönetilen bir COM sunucusu ve nasıl bunu genel olarak kayıtlı veya RegFree com aracılığıyla kullanılan oluşturulmasını gösterir
+[Com Server](https://github.com/dotnet/samples/tree/master/core/extensions/COMServerDemo) örneği, YÖNETILEN bir com sunucusunun oluşturulmasını ve nasıl genel olarak kayıt yapılacağını ve RegFree com aracılığıyla nasıl kullanılabileceğini gösterir.
 
 **Microsoft Office PIA örneği**
 
-[ExcelDemo](https://github.com/dotnet/samples/tree/master/core/extensions/ExcelDemo) örnek kullanımını gösterir [Microsoft Office PIA'ların](/visualstudio/vsto/office-primary-interop-assemblies) .NET core'da.
+[Exceldemo](https://github.com/dotnet/samples/tree/master/core/extensions/ExcelDemo) örneği, .NET Core 'Da [Microsoft Office PIA](/visualstudio/vsto/office-primary-interop-assemblies) 'ların tüketimini gösterir.
 
 ### <a name="tutorials"></a>Öğreticiler
 
 **[Konsol uygulaması](../csharp/tutorials/console-teleprompter.md)**
 
-Bu öğreticide, konsol g/ç, bir konsol uygulaması yapısını ve görev tabanlı zaman uyumsuz programlama modeli ile ilgili temel bilgileri gösterilmektedir. [Tamamlanan örnek](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-teleprompter) dotnet/samples deposuna github'da mevcuttur.
+Bu öğreticide konsol g/ç, konsol uygulamasının yapısı ve görev tabanlı zaman uyumsuz programlama modelinin temelleri gösterilmektedir. [Tamamlanmış örnek](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-teleprompter) , GitHub 'daki DotNet/Samples deposunda bulunur.
 
-**[REST istemcisi](../csharp/tutorials/console-webapiclient.md)**
+**[REST Istemcisi](../csharp/tutorials/console-webapiclient.md)**
 
-Bu eğitimde web iletişimi, JSON seri hale getirme ve nesne yönelimli özelliklerinin C# dili. [Tamamlanan örnek](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-webapiclient) dotnet/samples deposuna github'da mevcuttur.
+Bu öğreticide, C# dilin Web ILETIŞIMLERI, JSON serileştirmesi ve nesne yönelimli özellikleri gösterilmektedir. [Tamamlanmış örnek](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-webapiclient) , GitHub 'daki DotNet/Samples deposunda bulunur.
 
 **[LINQ ile çalışma](../csharp/tutorials/working-with-linq.md)**
 
-Bu öğretici, LINQ ve Dil öğelerini destekleyen özelliklerin çoğunu gösterir. [Tamamlanan örnek](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-linq) dotnet/samples deposuna github'da mevcuttur.
+Bu öğreticide, LINQ özelliklerinin birçoğu ve onu destekleyen dil öğeleri gösterilmektedir. [Tamamlanmış örnek](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-linq) , GitHub 'daki DotNet/Samples deposunda bulunur.
 
-**[Mac için Visual Studio kullanarak macos'ta .NET Core ile çalışmaya başlama](../core/tutorials/using-on-mac-vs.md)**
+**[Mac için Visual Studio kullanarak macOS 'ta .NET Core ile çalışmaya başlama](../core/tutorials/using-on-mac-vs.md)**
 
-Bu öğretici, Mac için Visual Studio kullanarak basit bir .NET Core konsol uygulaması oluşturmak nasıl gösterir
+Bu öğreticide, Mac için Visual Studio kullanarak basit bir .NET Core konsol uygulamasının nasıl oluşturulacağı gösterilmektedir.
 
-**[Mac için Visual Studio kullanarak macos'ta eksiksiz bir .NET Core çözümü derleme](../core/tutorials/using-on-mac-vs-full-solution.md)**
+**[Mac için Visual Studio kullanarak macOS 'ta kapsamlı bir .NET Core çözümü oluşturma](../core/tutorials/using-on-mac-vs-full-solution.md)**
 
-Bu öğreticide, bir yeniden kullanılabilir bir kitaplık ve birim testi içeren eksiksiz bir .NET Core çözümü derleme işlemini göstermektedir.
+Bu öğreticide, yeniden kullanılabilir bir kitaplık ve birim testi içeren bir .NET Core çözümü oluşturma işleminin nasıl yapılacağı gösterilmektedir.
 
 **[Eklentileri destekleyen bir .NET Core uygulaması oluşturma](../core/tutorials/creating-app-with-plugin-support.md)**
 
-Bu öğreticide, .NET core'da eklentisi mimarisi destekleyen basit bir uygulamanın nasıl oluşturulacağını gösterir. [Tamamlanan örnek](https://github.com/dotnet/samples/tree/master/core/extensions/AppWithPlugin) dotnet/samples deposuna github'da mevcuttur.
+Bu öğreticide, .NET Core 'da eklenti mimarisini destekleyen basit bir uygulama oluşturma gösterilmektedir. [Tamamlanmış örnek](https://github.com/dotnet/samples/tree/master/core/extensions/AppWithPlugin) , GitHub 'daki DotNet/Samples deposunda bulunur.
 
 ## <a name="deploying-to-containers"></a>Kapsayıcılara dağıtma
 
-**[ASP.NET MVC uygulamalarını Windows Docker kapsayıcılarında çalıştırmak](../framework/docker/aspnetmvc.md)**
+**[Windows Docker kapsayıcılarında ASP.NET MVC uygulamalarını çalıştırma](../framework/docker/aspnetmvc.md)**
 
-Bu öğreticide, Windows Docker kapsayıcısında mevcut bir ASP.NET MVC uygulamasının nasıl dağıtılacağı gösterilmektedir. [Tamamlanan örnek](https://github.com/dotnet/samples/tree/master/framework/docker/MVCRandomAnswerGenerator) dotnet/samples deposuna github'da mevcuttur.
+Bu öğreticide, mevcut bir ASP.NET MVC uygulamasının bir Windows Docker kapsayıcısında nasıl dağıtılacağı gösterilmektedir. [Tamamlanmış örnek](https://github.com/dotnet/samples/tree/master/framework/docker/MVCRandomAnswerGenerator) , GitHub 'daki DotNet/Samples deposunda bulunur.
 
-**[Windows kapsayıcıları içinde çalışan .NET Framework konsol uygulamaları](../framework/docker/console.md)**
+**[Windows kapsayıcılarında .NET Framework Konsol uygulamalarını çalıştırma](../framework/docker/console.md)**
 
-Bu öğreticide, bir Windows kapsayıcısında mevcut bir konsol uygulamasının nasıl dağıtılacağı gösterilmektedir. [Tamamlanan örnek](https://github.com/dotnet/samples/tree/master/framework/docker/ConsoleRandomAnswerGenerator) dotnet/samples deposuna github'da mevcuttur.
+Bu öğreticide, bir Windows kapsayıcısında mevcut bir konsol uygulamasının nasıl dağıtılacağı gösterilmektedir. [Tamamlanmış örnek](https://github.com/dotnet/samples/tree/master/framework/docker/ConsoleRandomAnswerGenerator) , GitHub 'daki DotNet/Samples deposunda bulunur.
 
-## <a name="viewing-and-downloading-samples"></a>Örnekleri indirme ve görüntüleme
+## <a name="viewing-and-downloading-samples"></a>Örnekleri görüntüleme ve indirme
 
-Birçok konular, kaynak kodu ve görüntüleme veya indirme github'dan kullanılabilir örnekleri gösterir. Bir örnek için örnek bağlantı izlemeniz yeterlidir. Kodu indirmek için bu yönergeleri izleyin:
+Birçok konuda, GitHub 'dan görüntülenmek veya indirmek için kullanılabilen kaynak kodu ve örnekler gösterilmektedir. Bir örneği görüntülemek için örnek bağlantıyı izlemeniz yeterlidir. Kodu indirmek için aşağıdaki yönergeleri izleyin:
 
 1. Aşağıdaki yordamlardan birini gerçekleştirerek örnek kodu içeren depoyu indirin:
-   * Deponun bir ZIP yerel sisteminize indirin. Geri Al-ZIP sıkıştırılmış bir arşiv.
-   * [Çatal](https://help.github.com/articles/fork-a-repo/) depo ve [kopya](https://help.github.com/articles/cloning-a-repository/) çatalı yerel sisteminize. Çatal ve kopyalama değişiklikleri çatalınıza yürüten ve ardından, resmi belge deposu için çekme isteği oluşturma belgelerine katkı yapmasına izin verir. Daha fazla bilgi için [.NET belgelerine katkıda bulunan Kılavuzu](https://github.com/dotnet/docs/blob/master/CONTRIBUTING.md) ve [ASP.NET Docs katkıda bulunan Kılavuzu](https://github.com/aspnet/Docs/blob/master/CONTRIBUTING.md).
-   * Depoyu yerel olarak kopyalayın. Belgeleri deposundan, yerel sisteme doğrudan kopyalarsanız, daha sonra belgeleri katkılar yapmanız mümkün olmayacaktır resmi depo karşı doğrudan işlemeler olmak mümkün olmayacaktır. Çatal kullanın ve daha sonra belgelerine katkıda bulunun fırsatı korumak istiyorsanız, daha önce açıklanan yordamı kopyalayın.
-1. Deponun klasörlerdeki örnek'ın konumuna gidin. Örnek kullanıcının konumuna göreli yol tarayıcınızın adres çubuğuna görüntülendiğinde örneği için bağlantıyı izleyin.
-1. Bir örnek çalıştırmak için birkaç seçeneğiniz vardır:
-   * Kullanım [dotnet CLI Araçları](../core/tools/index.md): Bir konsol penceresinde, örnek kullanıcının klasörüne gidin ve dotnet CLI komutları kullanın.
-   * Kullanım [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) veya [Mac için Visual Studio](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link): Örnek seçerek açın **Dosya > Aç > Proje/çözüm** menü çubuğundan örnek proje klasörüne gidin ve proje dosyası seçin (*.csproj* veya *.fsproj*).
-   * Kullanım [Visual Studio Code'u](https://code.visualstudio.com/): Örnek seçerek açın **Dosya > Klasör Aç** menü çubuğu ve örnek'ın Proje klasörüne seçme.
-   * .NET Core projeleri destekleyen farklı bir IDE kullanın.
+   * Deponun bir ZIP kopyasını yerel sisteminize indirin. Sıkıştırılmış Arşivi ZIP olarak kaldırın.
+   * Depoyu [çatalla](https://help.github.com/articles/fork-a-repo/) ve çatalınızı yerel sisteminize [klonlayın](https://help.github.com/articles/cloning-a-repository/) . Dallama ve kopyalama, Çatalınıza değişiklikler gerçekleştirerek ve sonra resmi docs deposu için bir çekme isteği oluşturarak belgelere katkı sağlar. Daha fazla bilgi için bkz. [.net belgeleri katkıda bulunan Kılavuzu](https://github.com/dotnet/docs/blob/master/CONTRIBUTING.md) ve [ASP.net docs katkıda bulunan Kılavuzu](https://github.com/aspnet/Docs/blob/master/CONTRIBUTING.md).
+   * Depoyu yerel olarak kopyalayın. Bir docs deposunu doğrudan yerel sisteminize klonladığınızda, işleme doğrudan resmi depoya karşı, belge katkılarını daha sonra yapamayabilmeniz mümkün olmayacaktır. Daha sonra belgelere katkıda bulunmak için fırsatı korumak istiyorsanız, daha önce açıklanan çatal ve kopyalama yordamını kullanın.
+1. Deponun klasörlerinde örnek konumuna gidin. Örnek konumunun göreli yolu, örneğin bağlantısını izlediğinizde tarayıcınızın adres çubuğunda görüntülenir.
+1. Örnek çalıştırmak için birkaç seçeneğiniz vardır:
+   * [DotNet CLI araçlarını](../core/tools/index.md)kullanın: Bir konsol penceresinde, örnek klasörüne gidin ve DotNet CLı komutlarını kullanın.
+   * [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) veya [Mac için Visual Studio](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link)kullanın: Dosya ' yı seçerek örneği açın > Menü çubuğundan **> proje/çözüm aç** ' a tıklayın, örnek proje klasörüne gidin ve proje dosyasını ( *. csproj* veya *. fsproj*) seçin.
+   * [Visual Studio Code](https://code.visualstudio.com/)kullanın: Menü çubuğundan **dosya > klasörü aç** ' a tıklayarak ve örneğin proje klasörünü seçerek örneği açın.
+   * .NET Core projelerini destekleyen farklı bir IDE kullanın.

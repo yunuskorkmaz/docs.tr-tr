@@ -7,60 +7,62 @@ helpviewer_keywords:
 - graphics [WPF], composite shapes
 - fill [WPF], controlling
 ms.assetid: c1c94575-9eca-48a5-a49a-2ec65259f229
-ms.openlocfilehash: 0ba07d8979a2910ce4ec775493e38c714240f642
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 89f69d392e8838af99538c759a2f06453e1bcd60
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61997166"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855903"
 ---
 # <a name="how-to-control-the-fill-of-a-composite-shape"></a>Nasıl yapılır: Bileşik Şeklin Dolgusunu Denetleme
-<xref:System.Windows.Media.GeometryGroup.FillRule%2A> Özelliği bir <xref:System.Windows.Media.GeometryGroup> veya <xref:System.Windows.Media.PathGeometry>, "bileşik şeklin belirli bir noktaya parçası olup olmadığını belirlemek için kullandığı bir kuralı" belirtir. Olası iki değeri vardır <xref:System.Windows.Media.FillRule>: <xref:System.Windows.Media.FillRule.EvenOdd> ve <xref:System.Windows.Media.FillRule.Nonzero>. Aşağıdaki bölümlerde, bu iki kuralın kullanmayı anlatmaktadır.  
-  
- **EvenOdd:** Bu kural, bir nokta ışın bu noktadan herhangi bir yönde sonsuza çizerek ve kestiği belirli bir şeklin içindeki yol bölümlerinin sayısını sayma dolgu bölgesi içinde olup olmadığını belirler. Bu sayı tek ise, noktanın içindedir; çift ise noktası dışında.  
-  
- Örneğin, aşağıdaki XAML ile Eşmerkezli halkalarının (hedef) bir dizi oluşan bileşik şekil oluşturur bir <xref:System.Windows.Media.GeometryGroup.FillRule%2A> kümesine <xref:System.Windows.Media.FillRule.EvenOdd>.  
-  
- [!code-xaml[GeometriesMiscSnippets_snip#FillRuleEvenOddValue](~/samples/snippets/xaml/VS_Snippets_Wpf/GeometriesMiscSnippets_snip/XAML/FillRuleExample.xaml#fillruleevenoddvalue)]  
-  
- Önceki örnekte oluşturulan şekli aşağıda gösterilmiştir.  
-  
- ![Renkleri değiştirme ile serisi Eşmerkezli halkaları oluşan bir daire.](./media/how-to-control-the-fill-of-a-composite-shape/fillrule-evenodd-property.png)  
-  
- Önceki çizimde, center ve üçüncü ring değil doldurulur dikkat edin. Parçaların bir çift sayı ya da bu iki halkalarının içinde herhangi bir noktasından çizilmiş bir ray geçirir olmasıdır. Aşağıdaki resme bakın:  
-  
- ![Daire çizilmiş EvenOdd ışınlarındaki gösteren diyagram.](./media/how-to-control-the-fill-of-a-composite-shape/fillrule-evenodd-rays.png)  
-  
- **Sıfır dışında:** Bu kural, bir nokta ışın bu noktadan herhangi bir yönde sonsuza çizerek ve ardından nerede çizip şeklin kestiği yerleri inceleyerek yolun dolgu bölgesinde olup olmadığını belirler. Sıfır sayısı ile başlayarak, ekleme her biri bir Segment aştığında ray soldan sağa ve her biri çıkarmak için zaman zaman bir yol kesimi sağdan sola ray aştığında. Sonuç sıfırsa kesişimlerin sayım sonra ardından yolu dışına noktasıdır. Aksi takdirde, içindedir.  
-  
- [!code-xaml[GeometriesMiscSnippets_snip#FillRuleNonZeroValueEllipseGeometry](~/samples/snippets/xaml/VS_Snippets_Wpf/GeometriesMiscSnippets_snip/XAML/FillRuleExample.xaml#fillrulenonzerovalueellipsegeometry)]  
-  
- Önceki örnekte, değerini kullanarak <xref:System.Windows.Media.FillRule.Nonzero> için <xref:System.Windows.Media.GeometryGroup.FillRule%2A> sonuç olarak, aşağıdaki çizimde sağlar:  
-  
- ![Aynı renkle doldurulmuş bir serisi Eşmerkezli halkaları tüm oluşan bir daire.](./media/how-to-control-the-fill-of-a-composite-shape/fillrule-value-nonzero.png)  
-  
- Gördüğünüz gibi tüm halkaları doldurulur. Tüm parçaları aynı yönde çalıştığından ve herhangi bir noktasından çizilen bir ray bir çapraz ya da daha fazla kesim ve kesişmeleri toplamı sıfırdan eşit değildir budur. Örneğin, aşağıdaki çizimde, kırmızı ok çizilen kesimlerin yönünü temsil eder ve bir noktasından en içteki halka rasgele bir ışını beyaz ok temsil eder. Segment soldan sağa kestiği çünkü kestiği, her bir kesim için sıfır değeri ile başlayarak, bir değeri, eklenir.  
-  
- ![FillRule özellik değeri için Nonzero eşit gösteren diyagram.](./media/how-to-control-the-fill-of-a-composite-shape/fillrule-value-equal-nonzero.png)  
-  
- Daha iyi davranışını göstermek için <xref:System.Windows.Media.FillRule.Nonzero> farklı yönlerde parçalarla daha karmaşık bir şekil kuralı gereklidir. İle oluşturulan hariç, aşağıdaki XAML kodu benzer bir şekil önceki örnek olarak oluşturur. bir <xref:System.Windows.Media.PathGeometry> yerine sonra bir <xref:System.Windows.Media.EllipseGeometry> oluşturan dört Eşmerkezli yaylar yerine tamamen eşmerkezli daireler kapalı.  
-  
- [!code-xaml[GeometriesMiscSnippets_snip#FillRuleNonZeroValuePathGeometry](~/samples/snippets/xaml/VS_Snippets_Wpf/GeometriesMiscSnippets_snip/XAML/FillRuleExample.xaml#fillrulenonzerovaluepathgeometry)]  
-  
- Önceki örnekte oluşturulan şekli aşağıda gösterilmiştir.  
-  
- ![Üçüncü yay doldurulmadı rengini değiştirme ile serisi Eşmerkezli halkaları oluşan bir daire.](./media/how-to-control-the-fill-of-a-composite-shape/pathgeometry-concentric-arcs.png)  
-  
- Üçüncü yay Merkezi'nden doldurulmadı dikkat edin. Neden bu, aşağıdaki şekilde gösterilmiştir. Çizimde, kırmızı ok çizilen kesimlerin yönünü temsil eder. İki beyaz okları dışarı Taşı "dolu olmayan" bölgesinde bir noktasından iki rastgele ışınlarındaki temsil eder. Gösterimden görülebileceği gibi yolu, segmentleri geçmeden belirli bir ray değerleri sıfır toplamıdır. Yukarıda tanımlanan sıfır toplamı noktası geometri (dolgu parçası olmayan) bir parçası olan bir toplama sırasında olmadığı anlamına gelir *değil* sıfır negatif bir değer de dahil olmak üzere, geometri bir parçasıdır.  
-  
- ![Rastgele ışınlarındaki kesen segmentleri gösteren diyagram.](./media/how-to-control-the-fill-of-a-composite-shape/arbitrary-ray-cross-segment.png)  
-  
- **Not:** Amacıyla <xref:System.Windows.Media.FillRule>, tüm şekiller kapalı olarak kabul edilir. Bir segmenti boşluk varsa, kapatmak için hayali bir çizgi çizin. Yukarıdaki örnekte, küçük boşlukları halkaları vardır. Bunu göz önünde bulundurulduğunda, bir farklı bir sonuç sağlamak için boşluk üzerinden çalışan bir ray sonra başka bir yönde bir ray bekleyebilirsiniz. Bu boşlukları ve "sanal segment" biri genişletilmiş bir gösterimi aşağıda verilmiştir (uygulamak amacıyla çizilmiş segment <xref:System.Windows.Media.FillRule>), kapatır.  
-  
- ![Her zaman kapalıdır FillRule segmentleri gösteren diyagram.](./media/how-to-control-the-fill-of-a-composite-shape/fillrule-closed-segments.png)  
-  
-## <a name="example"></a>Örnek  
-  
+
+Bir <xref:System.Windows.Media.GeometryGroup.FillRule%2A> veya'<xref:System.Windows.Media.PathGeometry>nin özelliği, bileşik şeklin, belirli bir noktanın geometrinin parçası olup olmadığını belirlemekte kullanacağı bir "kural" belirtir. <xref:System.Windows.Media.GeometryGroup> İçin <xref:System.Windows.Media.FillRule>iki olası değer vardır: <xref:System.Windows.Media.FillRule.EvenOdd> ve <xref:System.Windows.Media.FillRule.Nonzero>. Aşağıdaki bölümlerde bu iki kuralın nasıl kullanılacağı açıklanır.
+
+**EvenOdd** Bu kural, bir noktanın, bu noktadan herhangi bir yönde sonsuza kadar bir ışın çizerek ve belirtilen şeklin içindeki yol segmentlerinin sayısını, ışın kesiştiği şekilde sayarak, bir noktanın Fill bölgesinde olup olmadığını belirler. Bu sayı tek ise, nokta içindedir; bile, nokta dışarıda olur.
+
+Örneğin, aşağıdaki xaml, olarak <xref:System.Windows.Media.GeometryGroup.FillRule%2A> <xref:System.Windows.Media.FillRule.EvenOdd>ayarlanmış bir dizi eşmerkezli halkadan (hedef) oluşan bileşik bir şekil oluşturur.
+
+[!code-xaml[GeometriesMiscSnippets_snip#FillRuleEvenOddValue](~/samples/snippets/xaml/VS_Snippets_Wpf/GeometriesMiscSnippets_snip/XAML/FillRuleExample.xaml#fillruleevenoddvalue)]
+
+Aşağıdaki çizimde, önceki örnekte oluşturulan Şekil gösterilmektedir.
+
+![Değişen renklerle, bir dizi eşmerkezli halkalardan oluşan bir daire.](./media/how-to-control-the-fill-of-a-composite-shape/fillrule-evenodd-property.png)
+
+Önceki çizimde, Merkez ve üçüncü halkanın doldurulduğuna dikkat edin. Bunun nedeni, bu iki halkadan herhangi birinin içindeki herhangi bir noktadan çizilen bir ışın, hatta çok sayıda kesimden geçer. Aşağıdaki çizime bakın:
+
+![Daire içinde çizilen EvenOdd ışınları gösteren diyagram.](./media/how-to-control-the-fill-of-a-composite-shape/fillrule-evenodd-rays.png)
+
+**Sıfır olmayan** Bu kural, bu noktadan herhangi bir yönde sonsuza kadar bir ışın çizerek ve sonra şeklin bir segmentinin ışını kesen yerleri inceleyerek yolun Fill bölgesinde olup olmadığını belirler. Sıfır sayımla başlayarak, bir kesim her bir ışın bir ışını soldan sağa kesiştiği her seferinde bir kez ekleyin ve bir yol segmenti, bir yol segmentini sağdan sola kesişterek bir kez çıkarın. Çapraz çizgiler saydıktan sonra, sonuç sıfır ise, nokta yolun dışındadır. Aksi halde, içindedir.
+
+[!code-xaml[GeometriesMiscSnippets_snip#FillRuleNonZeroValueEllipseGeometry](~/samples/snippets/xaml/VS_Snippets_Wpf/GeometriesMiscSnippets_snip/XAML/FillRuleExample.xaml#fillrulenonzerovalueellipsegeometry)]
+
+Önceki örneği kullanarak, <xref:System.Windows.Media.FillRule.Nonzero> için <xref:System.Windows.Media.GeometryGroup.FillRule%2A> değeri aşağıdaki çizimi sonuç olarak verir:
+
+![Bir seri eş merkezli halkalardan oluşan bir daire, hepsi aynı renkle doldurulmuştur.](./media/how-to-control-the-fill-of-a-composite-shape/fillrule-value-nonzero.png)
+
+Gördüğünüz gibi, tüm halkalar doldurulur. Bunun nedeni, tüm segmentlerin aynı yönde çalıştığı ve bu nedenle herhangi bir noktadan çizilen bir ışın bir veya daha fazla segment ve çapraz yönlerin toplamı sıfıra eşit olmayacaktır. Örneğin, aşağıdaki çizimde, kırmızı oklar parçaların çizildiği yönü temsil eder ve beyaz ok, en içteki halkadaki bir noktadan çalışan rastgele bir ışını temsil eder. Bir değeri sıfır ile başlayarak, bir ışın, bir değeri bir değer ile soldan sağa kesiştiğinden, bir değeri eklenir.
+
+![FillRule Özellik değerini sıfırdan büyük değere eşit gösteren diyagram.](./media/how-to-control-the-fill-of-a-composite-shape/fillrule-value-equal-nonzero.png)
+
+<xref:System.Windows.Media.FillRule.Nonzero> Kural davranışlarını daha iyi göstermek için farklı yönlerde çalışan kesimlerle daha karmaşık bir şekil gereklidir. Aşağıdaki XAML kodu, bir <xref:System.Windows.Media.PathGeometry> <xref:System.Windows.Media.EllipseGeometry> önceki örnek olarak benzer bir şekil oluşturur; Bu, daha sonra tam olarak kapalı eşmerkezli daireler oluşturan dört adet eşmerkezli yay oluşturur.
+
+[!code-xaml[GeometriesMiscSnippets_snip#FillRuleNonZeroValuePathGeometry](~/samples/snippets/xaml/VS_Snippets_Wpf/GeometriesMiscSnippets_snip/XAML/FillRuleExample.xaml#fillrulenonzerovaluepathgeometry)]
+
+Aşağıdaki çizimde, önceki örnekte oluşturulan Şekil gösterilmektedir.
+
+![Üçüncü yaya doldurulmamış renklerle, bir serinin eşmerkezli halkalardan oluşan bir daire.](./media/how-to-control-the-fill-of-a-composite-shape/pathgeometry-concentric-arcs.png)
+
+Merkezden üçüncü yay doldurulduğuna dikkat edin. Aşağıdaki çizimde bunun neden olduğu gösterilmektedir. Çizimde, kırmızı oklar segmentlerin çizildiği yönü temsil eder. İki beyaz ok, "doldurulmamış" bölgedeki bir noktadan aşağı açılan iki rastgele ışını temsil eder. Çizimden görünebilirler, ancak yolundaki kesimleri geçen belirli bir ışın değerlerinin toplamı sıfırdır. Yukarıda tanımlandığı gibi, sıfır toplamı, bir negatif değer de dahil olmak üzere sıfır *olmayan* bir toplam değer geometrisinin bir parçası olsa da noktanın geometrinin (dolgunun parçası değil) bir parçası olmadığı anlamına gelir.
+
+![Kesimleri kesişen rastgele ışınları gösteren diyagram.](./media/how-to-control-the-fill-of-a-composite-shape/arbitrary-ray-cross-segment.png)
+
+> [!NOTE]
+> Amaçları doğrultusunda <xref:System.Windows.Media.FillRule>tüm şekiller kapalı olarak kabul edilir. Kesimde bir boşluk varsa kapatmak için bir sanal çizgi çizin. Yukarıdaki örnekte halkalar üzerinde küçük boşluklar vardır. Bu, bir, başka bir yönde çalışan bir ışın daha sonra farklı bir sonuç vermek için boşluk boyunca çalışan bir ışın bekleyebilir. Aşağıda, bu boşluklardan birinin büyütülmüş bir gösterimi ve "sanal kesim" (uygulamanın uygulanması <xref:System.Windows.Media.FillRule>amacıyla çizilen segmenti).
+
+![Her zaman kapatılan FillRule segmentlerini gösteren diyagram.](./media/how-to-control-the-fill-of-a-composite-shape/fillrule-closed-segments.png)
+
+## <a name="example"></a>Örnek
+
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Bileşik Şekil Oluşturma](how-to-create-a-composite-shape.md)

@@ -2,12 +2,12 @@
 title: Entity SQL ile Transact-SQL Arasındaki Farklar
 ms.date: 03/30/2017
 ms.assetid: 9c9ee36d-f294-4c8b-a196-f0114c94f559
-ms.openlocfilehash: 1a4bf8267ee5f036effc5f7bc91c28d1485b7612
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: e809cea2f853eed51d28e55f81a411f7af2e5a33
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70250857"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854478"
 ---
 # <a name="how-entity-sql-differs-from-transact-sql"></a>Entity SQL ile Transact-SQL Arasındaki Farklar
 Bu konu, ve Transact- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] SQL arasındaki farkları açıklamaktadır.  
@@ -189,7 +189,7 @@ SELECT C2.FirstName, C2.LastName
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)](henüz) analitik işlevler için destek sağlamaz.  
   
  Yerleşik Işlevler, Işleçler  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)]Transact-SQL ' in yerleşik işlevlerinin ve işleçlerinin bir alt kümesini destekler. Bu işleçler ve işlevler büyük olasılıkla ana mağaza sağlayıcıları tarafından desteklenmektedir. [!INCLUDE[esql](../../../../../../includes/esql-md.md)]bir sağlayıcı bildiriminde belirtilen mağazaya özgü işlevleri kullanır. Ayrıca, kullanımı için [!INCLUDE[esql](../../../../../../includes/esql-md.md)] yerleşik ve Kullanıcı tanımlı var olan depolama işlevlerini bildirmenize olanaktanır.[!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)]Transact-SQL ' in yerleşik işlevlerinin ve işleçlerinin bir alt kümesini destekler. Bu işleçler ve işlevler büyük olasılıkla ana mağaza sağlayıcıları tarafından desteklenmektedir. [!INCLUDE[esql](../../../../../../includes/esql-md.md)]bir sağlayıcı bildiriminde belirtilen mağazaya özgü işlevleri kullanır. Ayrıca, Entity Framework, yerleşik ve Kullanıcı tanımlı mevcut depolama işlevlerini [!INCLUDE[esql](../../../../../../includes/esql-md.md)] kullanmak üzere bildirmenize olanak tanır.  
   
  Yapılandıracak  
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)]sorgu ipuçları için mekanizmalar sağlamaz.  

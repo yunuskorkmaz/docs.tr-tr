@@ -4,12 +4,12 @@ description: Bu konuda, yeniden kullanılabilir bir kitaplık ve birim testi iç
 author: mairaw
 ms.date: 06/12/2017
 ms.custom: seodec18
-ms.openlocfilehash: 6a3f6c82a92042eeca1cb79f4634277d6870ebaf
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: a2459bfdc50e64b1d6710853b556c1bf226f07e7
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105248"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849562"
 ---
 # <a name="building-a-complete-net-core-solution-on-macos-using-visual-studio-for-mac"></a>Mac için Visual Studio kullanarak macOS’ta eksiksiz bir .NET Core çözümü derleme
 
@@ -19,13 +19,13 @@ Bu öğreticide, bir arama sözcüğünü ve kullanıcıdan bir metin dizesini k
 
 > [!NOTE]
 > Geri bildiriminiz çok değerli. Mac için Visual Studio üzerinde geliştirme ekibine geri bildirimde bulunmak için kullanabileceğiniz iki yol vardır:
-> - Mac için Visual Studio > , menüden**sorun bildir** veya hoş geldiniz ekranından **sorun** bildir ' i seçerek bir hata raporu dosyalamayı sağlayan bir pencere açar. Geri bildiriminizi [Geliştirici Topluluğu](https://developercommunity.visualstudio.com/spaces/41/index.html) portalında izleyebilirsiniz.
-> - Öneride bulunmak için, menüden**öneriler sağlama** veya hoş geldiniz ekranından [Mac için Visual Studio Geliştirici topluluğu Web sayfasına](https://developercommunity.visualstudio.com/content/idea/post.html?space=41)götüren **bir öneri** sağlama ' yı seçin. > 
+> - Mac için Visual Studio, menüden**sorun bildir** veya hoş geldiniz ekranından **sorun** **bildir ' i seçerek** > bir hata raporu dosyalamayı sağlayan bir pencere açar. Geri bildiriminizi [Geliştirici Topluluğu](https://developercommunity.visualstudio.com/spaces/41/index.html) portalında izleyebilirsiniz.
+> - Öneride bulunmak için, menüden**öneriler sağlama** veya hoş geldiniz ekranından [Mac için Visual Studio Geliştirici topluluğu Web sayfasına](https://developercommunity.visualstudio.com/content/idea/post.html?space=41)götüren **bir öneri** **sağlama ' yı seçin.**  > 
 
 ## <a name="prerequisites"></a>Önkoşullar
 
 - OpenSSL (.NET Core 1,1 çalıştırıyorsanız): [Mac üzerinde .NET Core Için önkoşulları](../macos-prerequisites.md) konusuna bakın.
-- [.NET Core SDK 1,1 veya üzeri](https://www.microsoft.com/net/core#macos)
+- [.NET Core SDK 1,1 veya üzeri](https://dotnet.microsoft.com/download)
 - [Mac için Visual Studio 2017](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link)
 
 Önkoşullar hakkında daha fazla bilgi için bkz. [Mac üzerinde .NET Core önkoşulları](../macos-prerequisites.md). Mac için Visual Studio 2017 ' nin tüm sistem gereksinimleri için bkz. [Mac Için Visual studio 2017 ürün ailesi sistem gereksinimleri](/visualstudio/productinfo/vs2017-system-requirements-mac).
@@ -52,7 +52,7 @@ Bu öğreticide, bir arama sözcüğünü ve kullanıcıdan bir metin dizesini k
 
    ![Visual Studio Mac IDE 'nin hatalar düğmesini gösteren alt kenar boşluğu](./media/using-on-mac-vs-full-solution/visual-studio-mac-error-button.png)
 
-1. Menüden Build**Build All** öğesini seçin. > 
+1. Menüden Build**Build All** **öğesini seçin.**  > 
 
    Çözüm oluşturulur. Yapı çıktı paneli, yapılandırmanın başarılı olduğunu gösterir.
 
@@ -122,7 +122,7 @@ Birim testleri geliştirme ve yayımlama sırasında otomatik yazılım testi sa
 
    ![Test hatası görüntüleme Mac için Visual Studio](./media/using-on-mac-vs-full-solution/visual-studio-for-mac-unit-test-failure.png)
 
-1. `Assert.NotEqual` Öğesini olarak `IgnoreCasing` değiştirerek`Assert.Equal`test yöntemini değiştirin. Klavye <kbd>&#8984;</kbd> +kısayolunu kullanarak dosyayı kaydedin, menüden **Dosya** > **Kaydet** ' i veya dosyanın sekmesine sağ tıklayıp bağlam menüsünden **Kaydet** ' i seçin. <kbd></kbd>
+1. `Assert.NotEqual` Öğesini olarak `IgnoreCasing` değiştirerek`Assert.Equal`test yöntemini değiştirin. Klavye kısayolunu <kbd>&#8984;</kbd> +kullanarak dosyayı kaydedin, menüden **Dosya** > **Kaydet** <kbd>' i</kbd>veya dosyanın sekmesine sağ tıklayıp bağlam menüsünden **Kaydet** ' i seçin.
 
    `searchWord` "Jak" ın " `GetWordCount`jak jakı" ile birlikte `inputString` iki örnek döndürdüğünü düşünüyorsunuz. Ekranın alt kısmındaki **test sonuçları** panelinde, **birim testleri** panelinde **Testleri Çalıştır** düğmesine veya **Testleri** yeniden çalıştır düğmesine tıklayarak testi yeniden çalıştırın. Test başarılı olur. "Jak jakı" dizesinde iki "jak" örneği bulunur (büyük `true`/küçük harf yok sayılıyor) ve test onayı.
 

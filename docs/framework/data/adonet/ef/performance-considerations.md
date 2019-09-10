@@ -2,12 +2,12 @@
 title: Performans konuları (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 61913f3b-4f42-4d9b-810f-2a13c2388a4a
-ms.openlocfilehash: 99969d7991f613bd8049aac81669583372e0f2c6
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: eb46b183ec1e930dfe5c4a1eea237024033c357d
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70248525"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854606"
 ---
 # <a name="performance-considerations-entity-framework"></a>Performans konuları (Entity Framework)
 Bu konu, ADO.NET Entity Framework performans özelliklerini açıklar ve Entity Framework uygulamaların performansını artırmaya yardımcı olmak için bazı hususlar sağlar.  
@@ -18,7 +18,7 @@ Bu konu, ADO.NET Entity Framework performans özelliklerini açıklar ve Entity 
 |Çalışma|Göreli maliyet|Sıklık|Açıklamalar|  
 |---------------|-------------------|---------------|--------------|  
 |Meta veriler yükleniyor|Düzey|Her uygulama etki alanında bir kez.|Entity Framework tarafından kullanılan model ve eşleme meta verileri bir ' a <xref:System.Data.Metadata.Edm.MetadataWorkspace>yüklenir. Bu meta veriler genel olarak önbelleğe alınır ve aynı uygulama etki alanındaki <xref:System.Data.Objects.ObjectContext> diğer örnekleri için kullanılabilir.|  
-|Veritabanı bağlantısı açılıyor|Orta<sup>1</sup>|Gerektiğinde.|Veritabanına açık bir bağlantı değerli bir kaynak [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] kullandığından, veritabanı bağlantısını yalnızca gerektiğinde açar ve kapatır. Ayrıca bağlantıyı açık bir şekilde açabilirsiniz. Daha fazla bilgi için bkz. [bağlantıları ve Işlemleri yönetme](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100)).|  
+|Veritabanı bağlantısı açılıyor|Orta<sup>1</sup>|Gerektiğinde.|Veritabanına açık bir bağlantı değerli bir kaynak kullandığından, Entity Framework açılır ve veritabanı bağlantısını yalnızca gerektiğinde kapatır. Ayrıca bağlantıyı açık bir şekilde açabilirsiniz. Daha fazla bilgi için bkz. [bağlantıları ve Işlemleri yönetme](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100)).|  
 |Görünümler üretiliyor|Yüksek|Her uygulama etki alanında bir kez. (Önceden oluşturulmuş olabilir.)|Entity Framework, kavramsal bir modelde sorgu yürütebilmesi veya veri kaynağına değişiklikleri kaydedebilmek için, veritabanına erişmek üzere bir yerel sorgu görünümleri kümesi oluşturması gerekir. Bu görünümlerin oluşturulması için yüksek maliyetli olduğundan, görünümleri önceden oluşturabilir ve tasarım zamanında projeye ekleyebilirsiniz. Daha fazla bilgi için [nasıl yapılır: Sorgu performansını](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896240(v=vs.100))artırmak Için görünümleri önceden oluşturun.|  
 |Sorgu hazırlanıyor|Orta<sup>2</sup>|Her benzersiz sorgu için bir kez.|Sorgu komutunu oluşturma, model ve eşleme meta verilerini temel alan bir komut ağacı oluşturma ve döndürülen verilerin şeklini tanımlama maliyetlerini içerir. Artık hem Entity SQL sorgu komutları hem de LINQ sorguları önbelleğe alındığından, aynı sorgunun sonraki yürütmeleri daha az zaman alır. Daha sonraki yürütmeler ve derlenmiş sorgularda bu maliyeti azaltmak için derlenen LINQ sorgularını kullanmaya devam edebilirsiniz ve derlenen sorgular otomatik olarak önbelleğe alınan LINQ sorgularından daha verimli olabilir. Daha fazla bilgi için bkz. [derlenmiş sorgular (LINQ to Entities)](./language-reference/compiled-queries-linq-to-entities.md). LINQ sorgu yürütmesi hakkında genel bilgi için bkz. [LINQ to Entities](./language-reference/linq-to-entities.md). **Not:**  Bu işleci, `Enumerable.Contains` bellek içi koleksiyonlara uygulayan LINQ to Entities sorguları otomatik olarak önbelleğe alınmaz. Ayrıca, derlenen LINQ sorgularında bellek içi koleksiyonlara parametreleştirmeye izin verilmez.|  
 |Sorgu Yürütülüyor|Düşük<sup>2</sup>|Her sorgu için bir kez.|ADO.NET veri sağlayıcısı kullanılarak, komutu veri kaynağında yürütme maliyeti. Çoğu veri kaynağı sorgu planlarını aştığından, aynı sorgunun daha sonraki yürütmeleri daha da az zaman alabilir.|  
@@ -116,7 +116,7 @@ Bu konu, ADO.NET Entity Framework performans özelliklerini açıklar ve Entity 
   
 - SQL Server 2000 veritabanına veya açık işlemleri her zaman DTC 'ye yükseltebileceğiniz diğer veri kaynaklarına karşı bir işlem içeren açık bir işlem.  
   
-- Bağlantı tarafından [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]yönetilene SQL Server 2005 ' a karşı bir işlem içeren açık bir işlem. Bu durum SQL Server 2005, bir bağlantı her kapatıldığında ve tek bir işlem içinde yeniden açıldığı zaman bir DTC 'ye ( [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]varsayılan davranış olan) karşı, bu oluşur. SQL Server 2008 kullanılırken bu DTC yükseltmesi gerçekleşmez. SQL Server 2005 kullanırken bu yükseltmeyi önlemek için, işlem içindeki bağlantıyı açıkça açıp kapatmanız gerekir. Daha fazla bilgi için bkz. [bağlantıları ve Işlemleri yönetme](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100)).  
+- Bağlantı Entity Framework tarafından yönetildiğinde 2005 SQL Server karşı bir işlem içeren açık bir işlem. Bu durum SQL Server 2005 bir bağlantı her kapatıldığında bir DTC 'ye ve Entity Framework varsayılan davranış olan tek bir işlem içinde yeniden açıldığı zaman oluşur. SQL Server 2008 kullanılırken bu DTC yükseltmesi gerçekleşmez. SQL Server 2005 kullanırken bu yükseltmeyi önlemek için, işlem içindeki bağlantıyı açıkça açıp kapatmanız gerekir. Daha fazla bilgi için bkz. [bağlantıları ve Işlemleri yönetme](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100)).  
   
  Bir <xref:System.Transactions> işlem içinde bir veya daha fazla işlem yürütüldüğünde açık bir işlem kullanılır. Daha fazla bilgi için bkz. [bağlantıları ve Işlemleri yönetme](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100)).  
   
@@ -142,7 +142,7 @@ Bu konu, ADO.NET Entity Framework performans özelliklerini açıklar ve Entity 
  Çoğu durumda, bir <xref:System.Data.Objects.ObjectContext> `using` deyimin içinde bir örnek oluşturmanız gerekir (`Using…End Using` Visual Basic). Bu, kod deyimin bloğundan çıkıldığında nesne bağlamıyla ilişkili kaynakların otomatik olarak atılmasını sağlayarak performansı artırabilir. Ancak, denetimler nesne bağlamı tarafından yönetilen nesnelere bağlandığında, <xref:System.Data.Objects.ObjectContext> bağlamanın gerekli olduğu ve el ile bırakıldığı sürece örnek korunur. Daha fazla bilgi için bkz. [bağlantıları ve Işlemleri yönetme](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100)).  
   
 #### <a name="consider-opening-the-database-connection-manually"></a>Veritabanı bağlantısını el ile açmayı düşünün  
- Uygulamanız, veri kaynağında <xref:System.Data.Objects.ObjectContext.SaveChanges%2A> [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] oluşturma, güncelleştirme ve silme işlemlerini kalıcı hale getirmek için bir dizi nesne sorgusu veya sık yapılan çağrılar yürüttüğünde, her zaman veri kaynağı bağlantısını açıp kapatmalıdır. Bu durumlarda, bu işlemlerin başlangıcında bağlantıyı el ile açmayı ve işlemler tamamlandığında bağlantıyı kapatmayı ya da elden kaldırmayı düşünün. Daha fazla bilgi için bkz. [bağlantıları ve Işlemleri yönetme](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100)).  
+ Uygulamanız, veri kaynağında oluşturma, güncelleştirme ve silme işlemlerini kalıcı hale <xref:System.Data.Objects.ObjectContext.SaveChanges%2A> getirmek için bir dizi nesne sorgusu veya sık yapılan çağrılar yürüttüğünde, Entity Framework sürekli olarak açılması ve veri kaynağına bağlantıyı kapatması gerekir. Bu durumlarda, bu işlemlerin başlangıcında bağlantıyı el ile açmayı ve işlemler tamamlandığında bağlantıyı kapatmayı ya da elden kaldırmayı düşünün. Daha fazla bilgi için bkz. [bağlantıları ve Işlemleri yönetme](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100)).  
   
 ## <a name="performance-data"></a>Performans Verileri  
  Entity Framework ilişkin bazı performans verileri [ADO.NET ekip blogundan](https://go.microsoft.com/fwlink/?LinkId=91905)aşağıdaki gönderilerde yayımlanır:  

@@ -2,19 +2,19 @@
 title: ServiceHostFactory Kullanarak Barındırmayı Genişletme
 ms.date: 03/30/2017
 ms.assetid: bcc5ae1b-21ce-4e0e-a184-17fad74a441e
-ms.openlocfilehash: e553fe161ffc5b50850d916cf1cef6b38dd5c1a9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: de6a590b94285872dd77006eda7f86d5d629be9d
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61991321"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849907"
 ---
 # <a name="extending-hosting-using-servicehostfactory"></a>ServiceHostFactory Kullanarak Barındırmayı Genişletme
-Standart <xref:System.ServiceModel.ServiceHost> Windows Communication Foundation (WCF) hizmetlerini barındırma API'si, WCF mimarisinin bir genişletilebilirlik noktası. Kullanıcılar, kendi ana bilgisayar sınıflarından türetilebilir <xref:System.ServiceModel.ServiceHost>, genellikle geçersiz kılmak için <xref:System.ServiceModel.Channels.CommunicationObject.OnOpening> kullanılacak <xref:System.ServiceModel.Description.ServiceDescription> kesin varsayılan uç noktalarını eklemek veya hizmet açmadan önce davranışları değiştirmek için.  
+Windows Communication Foundation ( <xref:System.ServiceModel.ServiceHost> WCF) içindeki barındırma hizmetleri için Standart API, WCF mimarisinde bir genişletilebilirlik noktasıdır. Kullanıcılar, hizmeti açmadan önce varsayılan uç noktaları <xref:System.ServiceModel.ServiceHost>imperatively veya değiştirme davranışlarına <xref:System.ServiceModel.Channels.CommunicationObject.OnOpening> eklemek için <xref:System.ServiceModel.Description.ServiceDescription> kullanmak üzere geçersiz kılmak üzere ' dan kendi ana bilgisayar sınıflarını türetilebilir.  
   
- Barındırma ortamında bir özel Oluştur gerekmez <xref:System.ServiceModel.ServiceHost> konak başlatan kodu yazın ve ardından çağırmak için <xref:System.ServiceModel.ICommunicationObject.Open> sonra bu örneği üzerinde. Bu iki adımı arasında istediğiniz yapabilirsiniz. Örneğin, yeni bir ekleme olabilir <xref:System.ServiceModel.Description.IServiceBehavior>:  
+ Self-Host ortamında, Konağı örnekleyen kodu yazdığınız ve sonra onu başlattıktan sonra <xref:System.ServiceModel.ServiceHost> bu kodu çağıran <xref:System.ServiceModel.ICommunicationObject.Open> için özel bir oluşturmanız gerekmez. Bu iki adım arasında istediğiniz her şeyi yapabilirsiniz. Örneğin, yeni <xref:System.ServiceModel.Description.IServiceBehavior>bir ekleyebilirsiniz:  
   
-```  
+```csharp
 public static void Main()  
 {  
    ServiceHost host = new ServiceHost( typeof( MyService ) );  
@@ -25,11 +25,11 @@ public static void Main()
 }  
 ```  
   
- Bu yaklaşım, yeniden kullanılabilir değil. Açıklama işleyen kod, ana bilgisayar kodlanmış program (Bu durumda, Main() işlevi), diğer bağlamlarda bu mantığı yeniden zor olur. Eklemenin başka yolları da vardır bir <xref:System.ServiceModel.Description.IServiceBehavior> kesinlik temelli kod gerektirmez. Bir öznitelik alma türetebilirsiniz <xref:System.ServiceModel.ServiceBehaviorAttribute> ve hizmet uygulamanızı türü veya özel bir davranış yapılandırılabilir hale getirebilir ve onu yapılandırma kullanılarak dinamik olarak oluşturmak, yerleştirin.  
+ Bu yaklaşım yeniden kullanılabilir değil. Açıklamayı işleyen kod ana bilgisayar programına (Bu durumda Main () işlevi) kodlanır, bu nedenle bu mantığı diğer bağlamlarda yeniden kullanmak zordur. Ayrıca, gerekli kodu gerektirmeyen başka bir <xref:System.ServiceModel.Description.IServiceBehavior> ekleme yöntemi de vardır. İçinden <xref:System.ServiceModel.ServiceBehaviorAttribute> bir özniteliği türetebilir ve hizmet uygulama türüne koyabilirsiniz veya özel bir davranışı yapılandırılabilir hale getirebilirsiniz ve yapılandırma kullanarak dinamik olarak oluşturabilirsiniz.  
   
- Bununla birlikte, küçük bir değişim Örneğin bu sorunu çözmek için de kullanılabilir. Bir yaklaşım ise tanesi ServiceBehavior ekler kodu taşımak için `Main()` ve <xref:System.ServiceModel.Channels.CommunicationObject.OnOpening%2A> yöntemi bir özel türevi <xref:System.ServiceModel.ServiceHost>:  
+ Ancak, bu sorunu çözmek için örneğin küçük bir çeşitlemesi de kullanılabilir. Tek bir yaklaşım, ' ın `Main()` ve ' <xref:System.ServiceModel.Channels.CommunicationObject.OnOpening%2A> nin özel bir türevi <xref:System.ServiceModel.ServiceHost>olan yöntemine ekleyen kodu taşımadır:  
   
-```  
+```csharp
 public class DerivedHost : ServiceHost  
 {  
    public DerivedHost( Type t, params Uri baseAddresses ) :  
@@ -42,9 +42,9 @@ public class DerivedHost : ServiceHost
 }  
 ```  
   
- Ardından, içinde `Main()` kullanabilirsiniz:  
+ Ardından, içinde `Main()` şunları kullanabilirsiniz:  
   
-```  
+```csharp
 public static void Main()  
 {  
    ServiceHost host = new DerivedHost( typeof( MyService ) );  
@@ -54,15 +54,15 @@ public static void Main()
 }  
 ```  
   
- Artık birçok farklı bir konak yürütülebilir dosyalar arasında kolayca yeniden kullanılabilir bir temiz soyutlama uygulamasına özel mantığı kapsüllenmiş.  
+ Artık özel mantığı birçok farklı konak yürütülebilir dosyalarında kolayca yeniden kullanılabilecek temiz bir soyutlamakta kapsülledik.  
   
- Bu özel kullanmaya nasıl hemen açık değilse <xref:System.ServiceModel.ServiceHost> gelen Internet Information Services (IIS) veya Windows İşlem Etkinleştirme Hizmeti (WAS) içinde. Barındırma ortamı bir örnekleme olduğundan bu ortamlarda barındırma ortamı farklı <xref:System.ServiceModel.ServiceHost> uygulama adına. IIS ve WAS'ta barındırma altyapısını kendi özel hakkında hiçbir şey bilmez <xref:System.ServiceModel.ServiceHost> Türev.  
+ Bu özel, Internet Information Services (IIS) veya Windows işlem <xref:System.ServiceModel.ServiceHost> etkinleştirme hizmeti 'nin (was) içinden bu özel kullanım için hemen açık değildir. Barındırma ortamı, uygulamanın adına bir örneklenme <xref:System.ServiceModel.ServiceHost> yaptığından, bu ortamlar Self-Host ortamından farklıdır. IIS ve barındırma altyapısı, özel <xref:System.ServiceModel.ServiceHost> türev ile ilgili herhangi bir şeyi bilmez.  
   
- <xref:System.ServiceModel.Activation.ServiceHostFactory> Özel erişim bu sorunu çözmek için tasarlanmış <xref:System.ServiceModel.ServiceHost> dan IIS ya da WAS içinde. Özel bir konak olmadığından türetilir <xref:System.ServiceModel.ServiceHost> dinamik olarak yapılandırılır ve potansiyel olarak çeşitli türleri, barındırma ortamı hiçbir zaman doğrudan örneğini oluşturduğunda. Bunun yerine, WCF, barındırma ortamı ve hizmetin somut türü arasında bir yöneltme katman sağlamak için bir Fabrika deseni kullanır. Aksi takdirde söyleyin sürece, varsayılan bir uygulama kullanır. <xref:System.ServiceModel.Activation.ServiceHostFactory> örneğini döndüren <xref:System.ServiceModel.ServiceHost>. Ancak türetilmiş ana bilgisayar üreteci uygulamanızda CLR tür adını belirterek döndüren kendi Fabrika de sağlayabilirsiniz @ServiceHost yönergesi.  
+ , <xref:System.ServiceModel.Activation.ServiceHostFactory> IIS veya was içinden özel <xref:System.ServiceModel.ServiceHost> erişim sorununu çözmek için tasarlandı. Öğesinden <xref:System.ServiceModel.ServiceHost> türetilen özel bir ana bilgisayar dinamik olarak yapılandırıldığı ve potansiyel olarak çeşitli türlerde olduğu için, barındırma ortamı hiçbir şekilde doğrudan bir örneği oluşturur. Bunun yerine, WCF, barındırma ortamı ve hizmetin somut türü arasında bir yöneltme katmanı sağlamak için bir fabrika kalıbı kullanır. Aksi belirtilmedikçe, bir <xref:System.ServiceModel.Activation.ServiceHostFactory> <xref:System.ServiceModel.ServiceHost>örneği döndüren varsayılan bir uygulamasını kullanır. Ancak, @ServiceHost yönergede fabrika uygulamanızın clr türü adını belirterek türetilmiş ana bilgisayarınızı döndüren kendi fabrikanızı da sağlayabilirsiniz.  
   
- Amaç temel durumlarda, uygulama kendi Fabrika anlaşılır alıştırma olması gerekliliğidir. Örneğin, özel bir işte <xref:System.ServiceModel.Activation.ServiceHostFactory> türetilmiş döndüren <xref:System.ServiceModel.ServiceHost>:  
+ Amaç, temel durumlarda kendi fabrikanızın uygulanması, sorunsuz bir alıştırma olmalıdır. Örneğin, bir türeme <xref:System.ServiceModel.Activation.ServiceHostFactory> <xref:System.ServiceModel.ServiceHost>döndüren özel bir özel:  
   
-```  
+```csharp
 public class DerivedFactory : ServiceHostFactory  
 {  
    public override ServiceHost CreateServiceHost( Type t, Uri[] baseAddresses )  
@@ -72,12 +72,10 @@ public class DerivedFactory : ServiceHostFactory
 }  
 ```  
   
- Bu fabrika varsayılan fabrika yerine kullanmak için tür adı sağlayın. @ServiceHost yönergesi aşağıdaki gibi:  
+ Varsayılan fabrika yerine bu fabrikası kullanmak için, @ServiceHost yönergede tür adını aşağıdaki gibi sağlayın:  
   
-```  
-<% @ServiceHost Factory="DerivedFactory" Service="MyService" %>  
-```  
+`<% @ServiceHost Factory="DerivedFactory" Service="MyService" %>`  
   
- Varken teknik sınır yapmak istediğinizi <xref:System.ServiceModel.ServiceHost> gelen dönüş <xref:System.ServiceModel.Activation.ServiceHostFactory.CreateServiceHost%2A>, Fabrika uygulamaları olabildiğince basit olarak tutmanızı öneririz. Özel mantığı çok sayıda varsa, yeniden kullanılabilir olması için bu mantığı, konak yerine içinde Fabrika içinde koymak daha iyidir.  
+ ' Den <xref:System.ServiceModel.ServiceHost> <xref:System.ServiceModel.Activation.ServiceHostFactory.CreateServiceHost%2A>geri dönmenizi istediğiniz teknik sınır olmasa da, fabrika uygulamalarınızı mümkün olduğunca basit tutmanız önerilir. Çok sayıda özel mantığınızın olması durumunda, yeniden kullanılabilir olması için bu mantığı fabrika yerine konağın içine koymak daha iyidir.  
   
- Burada bahsedilen barındırma API'si bir daha fazla katmana yoktur. WCF de sahip <xref:System.ServiceModel.ServiceHostBase> ve <xref:System.ServiceModel.Activation.ServiceHostFactoryBase>, içinden <xref:System.ServiceModel.ServiceHost> ve <xref:System.ServiceModel.Activation.ServiceHostFactory> sırasıyla türetilir. Burada, meta veri sistemini büyük bölümlerini kendi özelleştirilmiş oluşturma ile takas gerekir daha Gelişmiş senaryolar için bu mevcut.
+ Barındırma API 'sinde burada bahsedilen bir katman daha vardır. WCF Ayrıca <xref:System.ServiceModel.ServiceHostBase> , ve <xref:System.ServiceModel.Activation.ServiceHostFactoryBase> <xref:System.ServiceModel.Activation.ServiceHostFactory> sırasıyla türeten <xref:System.ServiceModel.ServiceHost> ve. Bunlar, meta veri sisteminin büyük kısımlarını kendi özelleştirilmiş oluşturma işlemleri ile takas etmeniz gereken daha gelişmiş senaryolar için mevcuttur.

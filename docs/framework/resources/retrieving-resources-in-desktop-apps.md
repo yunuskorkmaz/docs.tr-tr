@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: eca16922-1c46-4f68-aefe-e7a12283641f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 33bc0ecb4b7d20f0df96486c046e06fc4cf0e7ed
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f2bfb1078478aea5dffab66ba5f8c7d553262968
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69941465"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851593"
 ---
 # <a name="retrieving-resources-in-desktop-apps"></a>Masaüstü Uygulamalarında Kaynakları Alma
 .NET Framework masaüstü uygulamalarında yerelleştirilmiş kaynaklarla çalışırken, ana bütünleştirilmiş kod ile varsayılan veya nötr kültür için kaynakları en iyi şekilde paketleyip uygulamanızın desteklediği her dil ya da kültür için ayrı bir uydu derlemesi oluşturmanız gerekir. Daha sonra, <xref:System.Resources.ResourceManager> adlandırılmış kaynaklara erişmek için sonraki bölümde açıklandığı gibi sınıfını kullanabilirsiniz. Kaynaklarınızı ana derleme ve uydu Derlemeleriyle katıştırmamayı seçerseniz, bu makalenin ilerleyen kısımlarında [kaynakları. resources dosyalarından alma](#from_file) bölümünde açıklandığı gibi doğrudan ikili. resources dosyalarına da erişebilirsiniz.  [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] Uygulamalardaki kaynakları almak için, bkz. Windows Geliştirme Merkezi 'nde [Windows Mağazası uygulamalarında kaynakları oluşturma ve alma](https://go.microsoft.com/fwlink/p/?LinkID=241674) .  
@@ -43,19 +43,19 @@ ms.locfileid: "69941465"
 ### <a name="retrieving-string-data-an-example"></a>Dize verileri alınıyor: Bir Örnek  
  Aşağıdaki örnek, geçerli UI <xref:System.Resources.ResourceManager.GetString%28System.String%29> kültürünün dize kaynaklarını almak için yöntemini çağırır. Bu, Fransızca (Fransa) ve Rusça (Rusya) kültürleri için Ingilizce (Birleşik Devletler) kültürün ve yerelleştirilmiş kaynakların bağımsız bir dize kaynağını içerir. Aşağıdaki Ingilizce (Birleşik Devletler) kaynağı dizeler. txt adlı bir dosyadır:  
   
-```  
+```text
 TimeHeader=The current time is  
 ```  
   
  Fransızca (Fransa) kaynağı Strings.fr-FR. txt adlı bir dosyadır:  
   
-```  
+```text
 TimeHeader=L'heure actuelle est  
 ```  
   
  Rusça (Rusya) kaynağı Strings.ru-RU-txt adlı bir dosyadır:  
   
-```  
+```text
 TimeHeader=Текущее время —  
 ```  
   
@@ -66,7 +66,7 @@ TimeHeader=Текущее время —
   
  Aşağıdaki Batch (. bat) dosyası örneği derler ve uygun dizinlerde uydu derlemeleri oluşturur. Komutları C# dil ve derleyici için verilmiştir. Visual Basic için, olarak `csc` değiştirin `vbc`ve öğesini olarak `GetString.cs` `GetString.vb`değiştirin.  
   
-```  
+```console
 resgen strings.txt  
 csc GetString.cs -resource:strings.resources  
   
@@ -96,7 +96,7 @@ al -embed:strings.ru-RU.resources -culture:ru-RU -out:ru-RU\GetString.resources.
   
  C# Örneği oluşturmak için aşağıdaki toplu iş dosyasını kullanabilirsiniz. Visual Basic için, olarak `csc` `vbc`değiştirin ve kaynak kod dosyasının `.cs` uzantısını olarak `.vb`değiştirin.  
   
-```  
+```console
 csc CreateResources.cs  
 CreateResources  
   
@@ -122,7 +122,7 @@ csc GetStream.cs -resource:AppResources.resources
   
  Aşağıdaki toplu iş dosyasını yürüterek gerekli kaynak dosya ve derlemeleri oluşturabilir ve uygulamayı çalıştırabilirsiniz. Bir UIElements. `/r` dll başvurusu ile Resgen. exe ' yi, `PersonTable` yapıyla ilgili bilgilere erişebilecek şekilde sağlamak için bu seçeneği kullanmanız gerekir. C#Kullanıyorsanız, `vbc` derleyici adını ile `csc`değiştirin ve `.vb` uzantısını ile `.cs`değiştirin.  
   
-```  
+```console
 vbc -t:library UIElements.vb  
 vbc CreateResources.vb -r:UIElements.dll  
 CreateResources  
@@ -166,21 +166,21 @@ GetObject.exe
 ### <a name="an-example"></a>Bir Örnek  
  Aşağıdaki örnek, Resource Manager 'ın kaynakları doğrudan. resources dosyalarından nasıl alacağını gösterir. Örnek, Ingilizce (Birleşik Devletler), Fransızca (Fransa) ve Rusça (Rusya) kültürleri için üç metin tabanlı kaynak dosyasından oluşur. İngilizce (Birleşik Devletler), örneğin varsayılan kültürdür. Kaynakları, dizeler. txt adlı aşağıdaki dosyada depolanır:  
   
-```  
+```text
 Greeting=Hello  
 Prompt=What is your name?  
 ```  
   
  Fransızca (Fransa) kültürünün kaynakları, Strings.fr-FR. txt adlı aşağıdaki dosyada depolanır:  
   
-```  
+```text 
 Greeting=Bon jour  
 Prompt=Comment vous appelez-vous?  
 ```  
   
  Rusça (Rusya) kültürü için kaynaklar, Strings.ru-RU. txt adlı aşağıdaki dosyada depolanır:  
   
-```  
+```text
 Greeting=Здравствуйте  
 Prompt=Как вас зовут?  
 ```  
@@ -192,7 +192,7 @@ Prompt=Как вас зовут?
   
  Aşağıdaki toplu iş dosyasını C# çalıştırarak örnek sürümünü derleyebilirsiniz. `csc` Visual Basic kullanıyorsanız, ile `vbc`değiştirin ve `.cs` uzantısını ile `.vb`değiştirin.  
   
-```  
+```console
 Md Resources  
 Resgen Strings.txt Resources\Strings.resources  
 Resgen Strings.fr-FR.txt Resources\Strings.fr-FR.resources  

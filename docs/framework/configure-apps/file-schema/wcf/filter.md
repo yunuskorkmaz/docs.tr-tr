@@ -2,18 +2,21 @@
 title: <filter>
 ms.date: 03/30/2017
 ms.assetid: 3266700b-904b-44e4-93a7-e06a1a445100
-ms.openlocfilehash: 68de255b9f11dc4377159d1cc3efa575633db316
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 6e78275aaeb202405e327302455d56fa431d7f27
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69918891"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855248"
 ---
 # <a name="filter"></a>\<Filtre >
 
 Gelen iletileri değerlendirirken kullanılacak Windows Communication Foundation (WCF)<xref:System.ServiceModel.Dispatcher.MessageFilter> türünü, ayrıca filtrenin gerektirdiği destekleyici verileri veya parametreleri belirleyen bir yönlendirme filtresi tanımlar.
 
-\<System. ServiceModel > \<yönlendirme > \<filtreleri > \<filtresi >
+[ **\<System. serviceModel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;[ **\<Yönlendirme >** ](routing.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Filtreler >** ](filters-of-routing.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Filtre >**  
   
 ## <a name="syntax"></a>Sözdizimi  
   

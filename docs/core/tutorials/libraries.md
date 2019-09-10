@@ -4,12 +4,12 @@ description: .NET Core CLI araçlarını kullanarak .NET Core kitaplıkları olu
 author: cartermp
 ms.date: 05/01/2017
 ms.custom: seodec18
-ms.openlocfilehash: d22f73b33c36357b7f8018d1620b240e18d91676
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 90d960c996acd5a34ffb2215344e123dabad1014
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202667"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849486"
 ---
 # <a name="developing-libraries-with-cross-platform-tools"></a>Platformlar Arası Araçlarla Kitaplık Geliştirme
 
@@ -17,7 +17,7 @@ Bu makalede, platformlar arası CLı araçları kullanılarak .NET için kitapl�
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-Makinenizde yüklü [.NET Core SDK ve CLI](https://www.microsoft.com/net/core) olması gerekir.
+Makinenizde yüklü [.NET Core SDK ve CLI](https://dotnet.microsoft.com/download) olması gerekir.
 
 Bu belgenin .NET Framework sürümleriyle ilgili bölümlerinde, bir Windows makinesine [.NET Framework](https://dotnet.microsoft.com) yüklenmesi gerekir.
 

@@ -4,12 +4,12 @@ description: .NET Core 'da AssemblyLoadContext 'in amacını ve davranışını 
 ms.date: 08/09/2019
 author: sdmaclea
 ms.author: stmaclea
-ms.openlocfilehash: 293c586163921f9226916b177b3a29cc99c3e695
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.openlocfilehash: 61ad19a281d829814de8321913af7dabfc916f6d
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70017343"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849226"
 ---
 # <a name="understanding-systemruntimeloaderassemblyloadcontext"></a>System. Runtime. Loader. AssemblyLoadContext 'i anlama
 
@@ -99,7 +99,7 @@ Eşleşmeyen türlerin çifti verildiğinde şunları da bilmelidir:
 
 İki nesne `a` verildiğinde ve `b`hata ayıklayıcıda aşağıdakilerin değerlendirmesi yararlı olacaktır:
 
-```C#
+```csharp
 // In debugger look at each assembly's instance, Location, and FullName
 a.GetType().Assembly
 b.GetType().Assembly

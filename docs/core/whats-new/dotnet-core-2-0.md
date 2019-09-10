@@ -4,12 +4,12 @@ description: .NET Core 'da bulunan yeni özellikler hakkında bilgi edinin.
 author: rpetrusha
 ms.author: ronpet
 ms.date: 08/13/2017
-ms.openlocfilehash: f48b8e88a716df0f07a5626bdc8f66000cfaeed8
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: c208f565bebedc06e244de1f6554129f21c77b8c
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68626366"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849939"
 ---
 # <a name="whats-new-in-net-core-20"></a>​.NET Core 2.0’deki yenilikler
 
@@ -22,7 +22,7 @@ ms.locfileid: "68626366"
 - [Visual Studio tümleştirmesi](#visual-studio-integration)
 - [Belge geliştirmeleri](#documentation-improvements)
 
-## <a name="tooling"></a>Araçları
+## <a name="tooling"></a>Araçlar
 
 ### <a name="dotnet-restore-runs-implicitly"></a>dotnet restore örtük olarak çalıştırılır
 
@@ -154,7 +154,7 @@ Artık .NET Core SDK Visual Studio 'dan bağımsız olarak yükleyebilirsiniz. B
 
 ### <a name="net-application-architecture"></a>.NET uygulama mimarisi
 
-[.NET uygulama mimarisi](https://www.microsoft.com/net/learn/architecture) , oluşturmak için .net kullanırken rehberlik, en iyi uygulamalar ve örnek uygulamalar sağlayan bir dizi e-kitap için erişmenizi sağlar:
+[.NET uygulama mimarisi](https://dotnet.microsoft.com/learn/dotnet/architecture-guides) , oluşturmak için .net kullanırken rehberlik, en iyi uygulamalar ve örnek uygulamalar sağlayan bir dizi e-kitap için erişmenizi sağlar:
 
 - [Mikro hizmetler ve Docker Kapsayıcıları](../../architecture/microservices/index.md)
 - [ASP.NET ile Web uygulamaları](../../architecture/modern-web-apps-azure/index.md)
