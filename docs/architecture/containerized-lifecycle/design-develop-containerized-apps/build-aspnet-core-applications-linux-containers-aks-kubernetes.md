@@ -2,12 +2,12 @@
 title: AKS/Kubernetes kümelerine Linux kapsayıcıları olarak dağıtılan derleme ASP.NET Core 2,2 uygulamaları
 description: Microsoft Platformu ve Araçları ile Kapsayıcı Docker Uygulaması Yaşam Döngüsü
 ms.date: 02/25/2019
-ms.openlocfilehash: 89843e0041c12f001f974360da2e5903499155d1
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: ab64a0423ceceb8285c159af276d6d97e12379d8
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70295355"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70848747"
 ---
 # <a name="build-aspnet-core-22-applications-deployed-as-linux-containers-into-an-akskubernetes-orchestrator"></a>AKS/Kubernetes Orchestrator 'a Linux kapsayıcıları olarak dağıtılan derleme ASP.NET Core 2,2 uygulamaları
 
@@ -43,7 +43,7 @@ Framework olarak ASP.NET Core 2,2 ' i seçtiğinizi doğrulayın. .NET Core 2,2,
 
 **Şekil 4-37**. ASP.NET CORE 2,2 ve Web API proje türünü seçme
 
-.NET Core 'un önceki bir sürümüne sahipseniz, 2,2 sürümünü <https://www.microsoft.com/net/download/core#/sdk>indirip yükleyebilirsiniz.
+.NET Core 'un önceki bir sürümüne sahipseniz, 2,2 sürümünü <https://dotnet.microsoft.com/download>indirip yükleyebilirsiniz.
 
 Projeyi oluştururken Docker desteği ekleyebilirsiniz, böylece projenizi istediğiniz zaman "Dockerize" edebilirsiniz. Proje oluşturulduktan sonra Docker desteği eklemek için, Çözüm Gezgini içindeki proje düğümüne sağ tıklayın ve bağlam menüsünde**Docker desteği** **Ekle** > ' yi seçin.
 

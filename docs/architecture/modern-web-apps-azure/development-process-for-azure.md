@@ -4,12 +4,12 @@ description: ASP.NET Core ve Azure ile modern web uygulamalarını mimarın Azur
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: dcd2616cd5638aa712c11e370d35111b248e88ec
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: 830271d76e5a87ed782d81fa9491328c580f0f87
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70374045"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849581"
 ---
 # <a name="development-process-for-azure"></a>Azure için geliştirme işlemi
 
@@ -36,7 +36,7 @@ Tam ve güçlü bir IDE ya da hafif ve çevik bir düzenleyici tercih etmeksizin
 
 **Visual Studio Code ve DotNet CLI** (Mac için platformlar arası araçlar, Linux ve Windows). Herhangi bir geliştirme dilini destekleyen hafif ve platformlar arası bir düzenleyiciyi tercih ediyorsanız, Microsoft Visual Studio kodu ve DotNet CLı kullanabilirsiniz. Bu ürünler, geliştirici iş akışını kolaylaştıran basit ancak sağlam bir deneyim sağlar. Ayrıca, Visual Studio Code C\# ve Web geliştirme için uzantıları destekler, bu da düzenleyici içinde IntelliSense ve kısayol görevleri sağlar.
 
-[.NET Core SDK indirin](https://www.microsoft.com/net/download/core)
+[.NET Core SDK indirin](https://dotnet.microsoft.com/download)
 
 [Visual Studio Code indir](https://code.visualstudio.com/download)
 

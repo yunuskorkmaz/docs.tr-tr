@@ -2,12 +2,12 @@
 title: .NET mikro hizmetleri. Kapsayıcılı .NET Uygulamaları Mimarisi
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | Mikro hizmetler modüler ve bağımsız olarak dağıtılabilir hizmetlerdir. Docker Kapsayıcıları (Linux ve Windows için), bir hizmet ve bağımlılıklarını tek bir birim halinde paketleyerek dağıtım ve test etmeyi basitleştirir. Bu, daha sonra yalıtılmış bir ortamda çalıştırılır.
 ms.date: 01/07/2019
-ms.openlocfilehash: 55520153e0b926a97d0384f0b50b4c929f452f19
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: dcfff8b06dc77b47e6586ea82c82acc30a5cf3df
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70296843"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70848869"
 ---
 # <a name="net-microservices-architecture-for-containerized-net-applications"></a>.NET Mikro Hizmetleri: Kapsayıcılı .NET Uygulamaları Mimarisi
 
@@ -21,7 +21,7 @@ Daha kolay çalışmaya başlamak için kılavuz, keşfedebileceğiniz bir başv
 
 ## <a name="action-links"></a>Eylem bağlantıları
 
-- Bu e-tap 'ı tercih ettiğiniz biçimde indirin: | [PDF](https://aka.ms/microservicesebook) mobi[EPUB](https://www.microsoft.com/net/download/thank-you/microservices-architecture-ebook-epub) [](https://www.microsoft.com/net/download/thank-you/microservices-architecture-ebook-mobi)  |  |  |
+- Bu e-tap 'ı tercih ettiğiniz biçimde indirin: | [PDF](https://aka.ms/microservicesebook) mobi[EPUB](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook-epub) [](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook-mobi)  |  |  |
 
 - [GitHub 'daki başvuru uygulaması Eshoponcontainers 'ı](https://github.com/dotnet-architecture/eShopOnContainers) kopyalama/çatal
  
