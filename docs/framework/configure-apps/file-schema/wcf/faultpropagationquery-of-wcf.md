@@ -2,28 +2,29 @@
 title: <faultPropagationQuery>WCF
 ms.date: 03/30/2017
 ms.assetid: fabafbc8-3e45-4feb-8321-0725e9f4079c
-ms.openlocfilehash: 6ba6478ca500c0a8ef150966a97898f8743ffdf8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a6ef4e198caec4a1f21cedf2ff46d390aeaa2d3b
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69925627"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855337"
 ---
-# <a name="faultpropagationquery-of-wcf"></a><span data-ttu-id="80103-102">\<WCF > faultPropagationQuery</span><span class="sxs-lookup"><span data-stu-id="80103-102">\<faultPropagationQuery> of WCF</span></span>
+# <a name="faultpropagationquery-of-wcf"></a><span data-ttu-id="68e58-102">\<WCF > faultPropagationQuery</span><span class="sxs-lookup"><span data-stu-id="68e58-102">\<faultPropagationQuery> of WCF</span></span>
 
-<span data-ttu-id="80103-103">Bir etkinlik içinde oluşan hataların işlenmesini izlemek için kullanılan bir sorguyu temsil eder.</span><span class="sxs-lookup"><span data-stu-id="80103-103">Represents a query that is used to track the handling of faults that occur within an activity.</span></span>  <span data-ttu-id="80103-104">Bu olay, bir FaultHandler hata her işlediğinde oluşur.</span><span class="sxs-lookup"><span data-stu-id="80103-104">This event occurs each time a FaultHandler processes a fault.</span></span> <span data-ttu-id="80103-105">Bir etkinlik içinde oluşan hataların işlenmesini izlemek için böyle bir sorgu kullanmanız gerekir.</span><span class="sxs-lookup"><span data-stu-id="80103-105">You should use such query to track the handling of faults that occur within an activity.</span></span> <span data-ttu-id="80103-106">Sorgu, hata yayma kayıtlarına abone olmak için izleme katılımcısı için gereklidir.</span><span class="sxs-lookup"><span data-stu-id="80103-106">The query is necessary for a  tracking participant to subscribe to fault propagation records.</span></span>
+<span data-ttu-id="68e58-103">Bir etkinlik içinde oluşan hataların işlenmesini izlemek için kullanılan bir sorguyu temsil eder.</span><span class="sxs-lookup"><span data-stu-id="68e58-103">Represents a query that is used to track the handling of faults that occur within an activity.</span></span>  <span data-ttu-id="68e58-104">Bu olay, bir FaultHandler hata her işlediğinde oluşur.</span><span class="sxs-lookup"><span data-stu-id="68e58-104">This event occurs each time a FaultHandler processes a fault.</span></span> <span data-ttu-id="68e58-105">Bir etkinlik içinde oluşan hataların işlenmesini izlemek için böyle bir sorgu kullanmanız gerekir.</span><span class="sxs-lookup"><span data-stu-id="68e58-105">You should use such query to track the handling of faults that occur within an activity.</span></span> <span data-ttu-id="68e58-106">Sorgu, hata yayma kayıtlarına abone olmak için izleme katılımcısı için gereklidir.</span><span class="sxs-lookup"><span data-stu-id="68e58-106">The query is necessary for a  tracking participant to subscribe to fault propagation records.</span></span>
 
-<span data-ttu-id="80103-107">Profil sorgularını izleme hakkında daha fazla bilgi için bkz. [Izleme profilleri](../../../windows-workflow-foundation/tracking-profiles.md).</span><span class="sxs-lookup"><span data-stu-id="80103-107">For more information on tracking profile queries, see [Tracking Profiles](../../../windows-workflow-foundation/tracking-profiles.md).</span></span>
+<span data-ttu-id="68e58-107">Profil sorgularını izleme hakkında daha fazla bilgi için bkz. [Izleme profilleri](../../../windows-workflow-foundation/tracking-profiles.md).</span><span class="sxs-lookup"><span data-stu-id="68e58-107">For more information on tracking profile queries, see [Tracking Profiles](../../../windows-workflow-foundation/tracking-profiles.md).</span></span>
 
-<span data-ttu-id="80103-108">\<System. serviceModel > </span><span class="sxs-lookup"><span data-stu-id="80103-108">\<system.serviceModel></span></span>\
-<span data-ttu-id="80103-109">\<İzleme > </span><span class="sxs-lookup"><span data-stu-id="80103-109">\<tracking></span></span>\
-<span data-ttu-id="80103-110">\<Profiller > </span><span class="sxs-lookup"><span data-stu-id="80103-110">\<profiles></span></span>\
-<span data-ttu-id="80103-111">\<trackingProfile > </span><span class="sxs-lookup"><span data-stu-id="80103-111">\<trackingProfile></span></span>\
-<span data-ttu-id="80103-112">\<iş akışı > </span><span class="sxs-lookup"><span data-stu-id="80103-112">\<workflow></span></span>\
-<span data-ttu-id="80103-113">\<faultPropagationQueries > </span><span class="sxs-lookup"><span data-stu-id="80103-113">\<faultPropagationQueries></span></span>\
-<span data-ttu-id="80103-114">\<faultPropagationQuery ></span><span class="sxs-lookup"><span data-stu-id="80103-114">\<faultPropagationQuery></span></span>
+<span data-ttu-id="68e58-108">[ **\<Yapılandırma >** ](../configuration-element.md)</span><span class="sxs-lookup"><span data-stu-id="68e58-108">[**\<configuration>**](../configuration-element.md)</span></span>\
+<span data-ttu-id="68e58-109">&nbsp;&nbsp;[ **\<System. serviceModel >** ](system-servicemodel.md)</span><span class="sxs-lookup"><span data-stu-id="68e58-109">&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)</span></span>\
+<span data-ttu-id="68e58-110">&nbsp;&nbsp;&nbsp;&nbsp;[ **\<İzleme >** ](tracking-of-wcf.md)</span><span class="sxs-lookup"><span data-stu-id="68e58-110">&nbsp;&nbsp;&nbsp;&nbsp;[**\<tracking>**](tracking-of-wcf.md)</span></span>\
+<span data-ttu-id="68e58-111">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Profiller >** </span><span class="sxs-lookup"><span data-stu-id="68e58-111">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<profiles>**</span></span>\
+<span data-ttu-id="68e58-112">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<trackingProfile >** ](trackingprofile-of-wcf.md)</span><span class="sxs-lookup"><span data-stu-id="68e58-112">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<trackingProfile>**](trackingprofile-of-wcf.md)</span></span>\
+<span data-ttu-id="68e58-113">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<iş akışı >** ](workflow-of-wcf.md)</span><span class="sxs-lookup"><span data-stu-id="68e58-113">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<workflow>**](workflow-of-wcf.md)</span></span>\
+<span data-ttu-id="68e58-114">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<faultPropagationQueries >** ](faultpropagationqueries-of-wcf.md)</span><span class="sxs-lookup"><span data-stu-id="68e58-114">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<faultPropagationQueries>**](faultpropagationqueries-of-wcf.md)</span></span>\
+<span data-ttu-id="68e58-115">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<faultPropagationQuery >**</span><span class="sxs-lookup"><span data-stu-id="68e58-115">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<faultPropagationQuery>**</span></span>  
 
-## <a name="syntax"></a><span data-ttu-id="80103-115">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="80103-115">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="68e58-116">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="68e58-116">Syntax</span></span>
 
 ```xml
 <tracking>
@@ -40,30 +41,30 @@ ms.locfileid: "69925627"
 </tracking>
 ```
 
-## <a name="attributes-and-elements"></a><span data-ttu-id="80103-116">Öznitelikler ve öğeler</span><span class="sxs-lookup"><span data-stu-id="80103-116">Attributes and elements</span></span>
+## <a name="attributes-and-elements"></a><span data-ttu-id="68e58-117">Öznitelikler ve öğeler</span><span class="sxs-lookup"><span data-stu-id="68e58-117">Attributes and elements</span></span>
 
-<span data-ttu-id="80103-117">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="80103-117">The following sections describe attributes, child elements, and parent elements.</span></span>
+<span data-ttu-id="68e58-118">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="68e58-118">The following sections describe attributes, child elements, and parent elements.</span></span>
 
-### <a name="attributes"></a><span data-ttu-id="80103-118">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="80103-118">Attributes</span></span>
+### <a name="attributes"></a><span data-ttu-id="68e58-119">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="68e58-119">Attributes</span></span>
 
-|<span data-ttu-id="80103-119">Öznitelik</span><span class="sxs-lookup"><span data-stu-id="80103-119">Attribute</span></span>|<span data-ttu-id="80103-120">Açıklama</span><span class="sxs-lookup"><span data-stu-id="80103-120">Description</span></span>|
+|<span data-ttu-id="68e58-120">Öznitelik</span><span class="sxs-lookup"><span data-stu-id="68e58-120">Attribute</span></span>|<span data-ttu-id="68e58-121">Açıklama</span><span class="sxs-lookup"><span data-stu-id="68e58-121">Description</span></span>|
 |---------------|-----------------|
-|`faultSourceActivityName`|<span data-ttu-id="80103-121">Hatayı yaydığı hata işleyicisi etkinliğinin adını belirten bir dize.</span><span class="sxs-lookup"><span data-stu-id="80103-121">A string that specifies the name of the fault handler activity that propagated the fault.</span></span> <span data-ttu-id="80103-122">Varsayılan değer \*, tüm etkinlikler için hata yayma kayıtlarının döndürüldüğünü gösterir.</span><span class="sxs-lookup"><span data-stu-id="80103-122">The default is \*, which indicates that fault propagation records are returned for all activities.</span></span>|
-|`faultHandlerActivityName`|<span data-ttu-id="80103-123">Hatanın kaynağı olan etkinliğin adını belirten bir dize.</span><span class="sxs-lookup"><span data-stu-id="80103-123">A string that specifies the name of the activity that was the source of the fault.</span></span>|
+|`faultSourceActivityName`|<span data-ttu-id="68e58-122">Hatayı yaydığı hata işleyicisi etkinliğinin adını belirten bir dize.</span><span class="sxs-lookup"><span data-stu-id="68e58-122">A string that specifies the name of the fault handler activity that propagated the fault.</span></span> <span data-ttu-id="68e58-123">Varsayılan değer \*, tüm etkinlikler için hata yayma kayıtlarının döndürüldüğünü gösterir.</span><span class="sxs-lookup"><span data-stu-id="68e58-123">The default is \*, which indicates that fault propagation records are returned for all activities.</span></span>|
+|`faultHandlerActivityName`|<span data-ttu-id="68e58-124">Hatanın kaynağı olan etkinliğin adını belirten bir dize.</span><span class="sxs-lookup"><span data-stu-id="68e58-124">A string that specifies the name of the activity that was the source of the fault.</span></span>|
 
-### <a name="child-elements"></a><span data-ttu-id="80103-124">Alt öğeleri</span><span class="sxs-lookup"><span data-stu-id="80103-124">Child elements</span></span>
+### <a name="child-elements"></a><span data-ttu-id="68e58-125">Alt öğeleri</span><span class="sxs-lookup"><span data-stu-id="68e58-125">Child elements</span></span>
 
-<span data-ttu-id="80103-125">Yok.</span><span class="sxs-lookup"><span data-stu-id="80103-125">None.</span></span>
+<span data-ttu-id="68e58-126">Yok.</span><span class="sxs-lookup"><span data-stu-id="68e58-126">None.</span></span>
 
-### <a name="parent-elements"></a><span data-ttu-id="80103-126">Üst öğeler</span><span class="sxs-lookup"><span data-stu-id="80103-126">Parent elements</span></span>
+### <a name="parent-elements"></a><span data-ttu-id="68e58-127">Üst öğeler</span><span class="sxs-lookup"><span data-stu-id="68e58-127">Parent elements</span></span>
 
-|<span data-ttu-id="80103-127">Öğe</span><span class="sxs-lookup"><span data-stu-id="80103-127">Element</span></span>|<span data-ttu-id="80103-128">Açıklama</span><span class="sxs-lookup"><span data-stu-id="80103-128">Description</span></span>|
+|<span data-ttu-id="68e58-128">Öğe</span><span class="sxs-lookup"><span data-stu-id="68e58-128">Element</span></span>|<span data-ttu-id="68e58-129">Açıklama</span><span class="sxs-lookup"><span data-stu-id="68e58-129">Description</span></span>|
 |-------------|-----------------|
-|[<span data-ttu-id="80103-129">\<faultPropagationQueries ></span><span class="sxs-lookup"><span data-stu-id="80103-129">\<faultPropagationQueries></span></span>](faultpropagationqueries-of-wcf.md)|<span data-ttu-id="80103-130">Bir etkinlik içinde oluşan hataların işlenmesini izlemek için kullanılan yapılandırma öğelerinin listesini temsil eder.</span><span class="sxs-lookup"><span data-stu-id="80103-130">Represents a list of configuration elements that are used to track the handling of faults that occur within an activity.</span></span>  <span data-ttu-id="80103-131">Bu olay, bir FaultHandler hata her işlediğinde oluşur.</span><span class="sxs-lookup"><span data-stu-id="80103-131">This event occurs each time a FaultHandler processes a fault.</span></span>|
+|[<span data-ttu-id="68e58-130">\<faultPropagationQueries ></span><span class="sxs-lookup"><span data-stu-id="68e58-130">\<faultPropagationQueries></span></span>](faultpropagationqueries-of-wcf.md)|<span data-ttu-id="68e58-131">Bir etkinlik içinde oluşan hataların işlenmesini izlemek için kullanılan yapılandırma öğelerinin listesini temsil eder.</span><span class="sxs-lookup"><span data-stu-id="68e58-131">Represents a list of configuration elements that are used to track the handling of faults that occur within an activity.</span></span>  <span data-ttu-id="68e58-132">Bu olay, bir FaultHandler hata her işlediğinde oluşur.</span><span class="sxs-lookup"><span data-stu-id="68e58-132">This event occurs each time a FaultHandler processes a fault.</span></span>|
 
-## <a name="see-also"></a><span data-ttu-id="80103-132">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="80103-132">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="68e58-133">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="68e58-133">See also</span></span>
 
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.FaultPropagationQueryElement?displayProperty=nameWithType>
 - <xref:System.Activities.Tracking.FaultPropagationQuery?displayProperty=nameWithType>
-- [<span data-ttu-id="80103-133">İş Akışı Takip ve İzleme</span><span class="sxs-lookup"><span data-stu-id="80103-133">Workflow Tracking and Tracing</span></span>](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)
-- [<span data-ttu-id="80103-134">İzleme Profilleri</span><span class="sxs-lookup"><span data-stu-id="80103-134">Tracking Profiles</span></span>](../../../windows-workflow-foundation/tracking-profiles.md)
+- [<span data-ttu-id="68e58-134">İş Akışı Takip ve İzleme</span><span class="sxs-lookup"><span data-stu-id="68e58-134">Workflow Tracking and Tracing</span></span>](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [<span data-ttu-id="68e58-135">İzleme Profilleri</span><span class="sxs-lookup"><span data-stu-id="68e58-135">Tracking Profiles</span></span>](../../../windows-workflow-foundation/tracking-profiles.md)

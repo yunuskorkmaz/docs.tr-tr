@@ -2,20 +2,22 @@
 title: <comContract>
 ms.date: 03/30/2017
 ms.assetid: 3f8e1c0c-cfdf-4c79-ac65-c64e9323a51c
-ms.openlocfilehash: ef980c86efad4fda86cf62148e50688fd22afe49
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b499294af71ba230dcf985d4af1d013b1ca260cf
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69926100"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70850032"
 ---
-# <a name="comcontract"></a><span data-ttu-id="ec22a-101">\<comContract ></span><span class="sxs-lookup"><span data-stu-id="ec22a-101">\<comContract></span></span>
-<span data-ttu-id="ec22a-102">Bir COM+ tümleştirme hizmeti sözleşmesini belirtir.</span><span class="sxs-lookup"><span data-stu-id="ec22a-102">Specifies a COM+ integration service contract.</span></span>  
+# <a name="comcontract"></a><span data-ttu-id="24cee-101">\<comContract ></span><span class="sxs-lookup"><span data-stu-id="24cee-101">\<comContract></span></span>
+<span data-ttu-id="24cee-102">Bir COM+ tümleştirme hizmeti sözleşmesini belirtir.</span><span class="sxs-lookup"><span data-stu-id="24cee-102">Specifies a COM+ integration service contract.</span></span>  
   
- <span data-ttu-id="ec22a-103">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="ec22a-103">\<system.ServiceModel></span></span>  
-<span data-ttu-id="ec22a-104">\<comContracts ></span><span class="sxs-lookup"><span data-stu-id="ec22a-104">\<comContracts></span></span>  
+<span data-ttu-id="24cee-103">[ **\<Yapılandırma >** ](../configuration-element.md)</span><span class="sxs-lookup"><span data-stu-id="24cee-103">[**\<configuration>**](../configuration-element.md)</span></span>\
+<span data-ttu-id="24cee-104">&nbsp;&nbsp;[ **\<System. serviceModel >** ](system-servicemodel.md)</span><span class="sxs-lookup"><span data-stu-id="24cee-104">&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)</span></span>\
+<span data-ttu-id="24cee-105">&nbsp;&nbsp;&nbsp;&nbsp;[ **\<comContracts >** ](comcontracts.md)</span><span class="sxs-lookup"><span data-stu-id="24cee-105">&nbsp;&nbsp;&nbsp;&nbsp;[**\<comContracts>**](comcontracts.md)</span></span>\
+<span data-ttu-id="24cee-106">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<comContract >**</span><span class="sxs-lookup"><span data-stu-id="24cee-106">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<comContract>**</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ec22a-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="ec22a-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="24cee-107">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="24cee-107">Syntax</span></span>  
   
 ```xml  
 <comContracts>
@@ -42,34 +44,34 @@ ms.locfileid: "69926100"
 </comContracts>
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="ec22a-106">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="ec22a-106">Attributes and Elements</span></span>  
- <span data-ttu-id="ec22a-107">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="ec22a-107">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="24cee-108">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="24cee-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="24cee-109">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="24cee-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="ec22a-108">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="ec22a-108">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="24cee-110">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="24cee-110">Attributes</span></span>  
   
-|<span data-ttu-id="ec22a-109">Öznitelik</span><span class="sxs-lookup"><span data-stu-id="ec22a-109">Attribute</span></span>|<span data-ttu-id="ec22a-110">Açıklama</span><span class="sxs-lookup"><span data-stu-id="ec22a-110">Description</span></span>|  
+|<span data-ttu-id="24cee-111">Öznitelik</span><span class="sxs-lookup"><span data-stu-id="24cee-111">Attribute</span></span>|<span data-ttu-id="24cee-112">Açıklama</span><span class="sxs-lookup"><span data-stu-id="24cee-112">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="ec22a-111">Sözleşmesi</span><span class="sxs-lookup"><span data-stu-id="ec22a-111">contract</span></span>|<span data-ttu-id="ec22a-112">Sözleşme türünü içeren bir dize.</span><span class="sxs-lookup"><span data-stu-id="ec22a-112">A string that contains the contract type.</span></span>|  
-|<span data-ttu-id="ec22a-113">name</span><span class="sxs-lookup"><span data-stu-id="ec22a-113">name</span></span>|<span data-ttu-id="ec22a-114">Sözleşme adını içeren bir dize.</span><span class="sxs-lookup"><span data-stu-id="ec22a-114">A string that contains the contract name.</span></span>|  
-|<span data-ttu-id="ec22a-115">ad alanı</span><span class="sxs-lookup"><span data-stu-id="ec22a-115">namespace</span></span>|<span data-ttu-id="ec22a-116">Sözleşme ad alanını içeren bir dize.</span><span class="sxs-lookup"><span data-stu-id="ec22a-116">A string that contains the contract namespace.</span></span>|  
-|<span data-ttu-id="ec22a-117">requiresSession</span><span class="sxs-lookup"><span data-stu-id="ec22a-117">requiresSession</span></span>|<span data-ttu-id="ec22a-118">Sözleşmenin yalnızca oturumsuz bağlamalarda kullanılıp kullanılamayacağını belirten bir Boole değeri.</span><span class="sxs-lookup"><span data-stu-id="ec22a-118">A Boolean value that specifies whether the contract can only be used on sessionful bindings.</span></span> <span data-ttu-id="ec22a-119">Hizmet başlatıldığında, tümleştirme çalışma zamanı bu ayarın kullanılacak bağlama türüyle tutarlı olmasını sağlar.</span><span class="sxs-lookup"><span data-stu-id="ec22a-119">When the service is initialized, the integration runtime ensures that this setting is consistent with the type of binding to be used.</span></span> <span data-ttu-id="ec22a-120">Sözleşme için bir veya daha fazla bağlama çakışırsa bir özel durum oluşturulur.</span><span class="sxs-lookup"><span data-stu-id="ec22a-120">An exception is generated if one or more of the bindings for the contract are in conflict.</span></span> <span data-ttu-id="ec22a-121">Bu özellik ise `false`ve tek yönlü bir kanal kullanımda ise ve herhangi bir [out] parametresi varsa, bir özel durum da oluşturulur.</span><span class="sxs-lookup"><span data-stu-id="ec22a-121">If this property is `false`, and a one-way channel is in use and there are any [out] parameters, an exception is also generated.</span></span>|  
+|<span data-ttu-id="24cee-113">contract</span><span class="sxs-lookup"><span data-stu-id="24cee-113">contract</span></span>|<span data-ttu-id="24cee-114">Sözleşme türünü içeren bir dize.</span><span class="sxs-lookup"><span data-stu-id="24cee-114">A string that contains the contract type.</span></span>|  
+|<span data-ttu-id="24cee-115">name</span><span class="sxs-lookup"><span data-stu-id="24cee-115">name</span></span>|<span data-ttu-id="24cee-116">Sözleşme adını içeren bir dize.</span><span class="sxs-lookup"><span data-stu-id="24cee-116">A string that contains the contract name.</span></span>|  
+|<span data-ttu-id="24cee-117">ad alanı</span><span class="sxs-lookup"><span data-stu-id="24cee-117">namespace</span></span>|<span data-ttu-id="24cee-118">Sözleşme ad alanını içeren bir dize.</span><span class="sxs-lookup"><span data-stu-id="24cee-118">A string that contains the contract namespace.</span></span>|  
+|<span data-ttu-id="24cee-119">requiresSession</span><span class="sxs-lookup"><span data-stu-id="24cee-119">requiresSession</span></span>|<span data-ttu-id="24cee-120">Sözleşmenin yalnızca oturumsuz bağlamalarda kullanılıp kullanılamayacağını belirten bir Boole değeri.</span><span class="sxs-lookup"><span data-stu-id="24cee-120">A Boolean value that specifies whether the contract can only be used on sessionful bindings.</span></span> <span data-ttu-id="24cee-121">Hizmet başlatıldığında, tümleştirme çalışma zamanı bu ayarın kullanılacak bağlama türüyle tutarlı olmasını sağlar.</span><span class="sxs-lookup"><span data-stu-id="24cee-121">When the service is initialized, the integration runtime ensures that this setting is consistent with the type of binding to be used.</span></span> <span data-ttu-id="24cee-122">Sözleşme için bir veya daha fazla bağlama çakışırsa bir özel durum oluşturulur.</span><span class="sxs-lookup"><span data-stu-id="24cee-122">An exception is generated if one or more of the bindings for the contract are in conflict.</span></span> <span data-ttu-id="24cee-123">Bu özellik ise `false`ve tek yönlü bir kanal kullanımda ise ve herhangi bir [out] parametresi varsa, bir özel durum da oluşturulur.</span><span class="sxs-lookup"><span data-stu-id="24cee-123">If this property is `false`, and a one-way channel is in use and there are any [out] parameters, an exception is also generated.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="ec22a-122">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="ec22a-122">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="24cee-124">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="24cee-124">Child Elements</span></span>  
   
-|<span data-ttu-id="ec22a-123">Öğe</span><span class="sxs-lookup"><span data-stu-id="ec22a-123">Element</span></span>|<span data-ttu-id="ec22a-124">Açıklama</span><span class="sxs-lookup"><span data-stu-id="ec22a-124">Description</span></span>|  
+|<span data-ttu-id="24cee-125">Öğe</span><span class="sxs-lookup"><span data-stu-id="24cee-125">Element</span></span>|<span data-ttu-id="24cee-126">Açıklama</span><span class="sxs-lookup"><span data-stu-id="24cee-126">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="ec22a-125">persistableTypes</span><span class="sxs-lookup"><span data-stu-id="ec22a-125">persistableTypes</span></span>|<span data-ttu-id="ec22a-126">Tüm kalıcı türleri.</span><span class="sxs-lookup"><span data-stu-id="ec22a-126">All the persistable types.</span></span>|  
-|<span data-ttu-id="ec22a-127">userDefinedTypes</span><span class="sxs-lookup"><span data-stu-id="ec22a-127">userDefinedTypes</span></span>|<span data-ttu-id="ec22a-128">Hizmet sözleşmesine dahil edilecek Kullanıcı tanımlı türler (UDT) koleksiyonu.</span><span class="sxs-lookup"><span data-stu-id="ec22a-128">A collection of User Defined Types (UDT) that is to be included in the service contract.</span></span>|  
-|<span data-ttu-id="ec22a-129">exposedMethods</span><span class="sxs-lookup"><span data-stu-id="ec22a-129">exposedMethods</span></span>|<span data-ttu-id="ec22a-130">Bir COM+ bileşenindeki arabirim bir Web hizmeti olarak sunulduğunda ortaya çıkarılan COM+ yöntemlerinin bir koleksiyonu.</span><span class="sxs-lookup"><span data-stu-id="ec22a-130">A collection of COM+ methods that are exposed when the interface on a COM+ component is exposed as a Web service.</span></span>|  
+|<span data-ttu-id="24cee-127">persistableTypes</span><span class="sxs-lookup"><span data-stu-id="24cee-127">persistableTypes</span></span>|<span data-ttu-id="24cee-128">Tüm kalıcı türleri.</span><span class="sxs-lookup"><span data-stu-id="24cee-128">All the persistable types.</span></span>|  
+|<span data-ttu-id="24cee-129">userDefinedTypes</span><span class="sxs-lookup"><span data-stu-id="24cee-129">userDefinedTypes</span></span>|<span data-ttu-id="24cee-130">Hizmet sözleşmesine dahil edilecek Kullanıcı tanımlı türler (UDT) koleksiyonu.</span><span class="sxs-lookup"><span data-stu-id="24cee-130">A collection of User Defined Types (UDT) that is to be included in the service contract.</span></span>|  
+|<span data-ttu-id="24cee-131">exposedMethods</span><span class="sxs-lookup"><span data-stu-id="24cee-131">exposedMethods</span></span>|<span data-ttu-id="24cee-132">Bir COM+ bileşenindeki arabirim bir Web hizmeti olarak sunulduğunda ortaya çıkarılan COM+ yöntemlerinin bir koleksiyonu.</span><span class="sxs-lookup"><span data-stu-id="24cee-132">A collection of COM+ methods that are exposed when the interface on a COM+ component is exposed as a Web service.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="ec22a-131">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="ec22a-131">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="24cee-133">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="24cee-133">Parent Elements</span></span>  
   
-|<span data-ttu-id="ec22a-132">Öğe</span><span class="sxs-lookup"><span data-stu-id="ec22a-132">Element</span></span>|<span data-ttu-id="ec22a-133">Açıklama</span><span class="sxs-lookup"><span data-stu-id="ec22a-133">Description</span></span>|  
+|<span data-ttu-id="24cee-134">Öğe</span><span class="sxs-lookup"><span data-stu-id="24cee-134">Element</span></span>|<span data-ttu-id="24cee-135">Açıklama</span><span class="sxs-lookup"><span data-stu-id="24cee-135">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="ec22a-134">comContracts</span><span class="sxs-lookup"><span data-stu-id="ec22a-134">comContracts</span></span>|<span data-ttu-id="ec22a-135">`comContract` Öğe koleksiyonunu içerir.</span><span class="sxs-lookup"><span data-stu-id="ec22a-135">Contains a collection of `comContract` elements.</span></span>|  
+|<span data-ttu-id="24cee-136">comContracts</span><span class="sxs-lookup"><span data-stu-id="24cee-136">comContracts</span></span>|<span data-ttu-id="24cee-137">`comContract` Öğe koleksiyonunu içerir.</span><span class="sxs-lookup"><span data-stu-id="24cee-137">Contains a collection of `comContract` elements.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="ec22a-136">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="ec22a-136">Remarks</span></span>  
- <span data-ttu-id="ec22a-137">COM+ tümleştirme hizmeti sözleşmeleri Şu anda `http://tempuri.org` ad alanıyla kısıtlıdır ve anlaşma adı destekleyici com arabiriminden türetilir.</span><span class="sxs-lookup"><span data-stu-id="ec22a-137">COM+ integration service contracts are currently restricted to the `http://tempuri.org` namespace, and contract name is derived from the supporting COM interface.</span></span> <span data-ttu-id="ec22a-138">Ancak, öğesini ve yapılandırma dosyasındaki `comContracts` `comContract` öğesini kullanarak alternatifleri belirtebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="ec22a-138">You can, however, specify alternatives by using the `comContracts` section, as well as the `comContract` element in the configuration file.</span></span> <span data-ttu-id="ec22a-139">Örneğin, eklenecek ad alanı, sözleşme adı ve Kullanıcı tanımlı türleri, ayrıca bir hizmet sözleşmesinin diğer ayarlarını belirtmek için aşağıdaki yapılandırmayı kullanabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="ec22a-139">For example, you can use the following configuration to specify the namespace, contract name, and user defined types to be included, as well as other settings for a service contract.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="24cee-138">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="24cee-138">Remarks</span></span>  
+ <span data-ttu-id="24cee-139">COM+ tümleştirme hizmeti sözleşmeleri Şu anda `http://tempuri.org` ad alanıyla kısıtlıdır ve anlaşma adı destekleyici com arabiriminden türetilir.</span><span class="sxs-lookup"><span data-stu-id="24cee-139">COM+ integration service contracts are currently restricted to the `http://tempuri.org` namespace, and contract name is derived from the supporting COM interface.</span></span> <span data-ttu-id="24cee-140">Ancak, öğesini ve yapılandırma dosyasındaki `comContracts` `comContract` öğesini kullanarak alternatifleri belirtebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="24cee-140">You can, however, specify alternatives by using the `comContracts` section, as well as the `comContract` element in the configuration file.</span></span> <span data-ttu-id="24cee-141">Örneğin, eklenecek ad alanı, sözleşme adı ve Kullanıcı tanımlı türleri, ayrıca bir hizmet sözleşmesinin diğer ayarlarını belirtmek için aşağıdaki yapılandırmayı kullanabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="24cee-141">For example, you can use the following configuration to specify the namespace, contract name, and user defined types to be included, as well as other settings for a service contract.</span></span>  
   
 ```xml  
 <comContracts>
@@ -86,12 +88,12 @@ ms.locfileid: "69926100"
 </comContracts>
 ```  
   
- <span data-ttu-id="ec22a-140">Hizmet başlatıldığında, belirtilen ad alanları ve sözleşme adları oluşturulan hizmet açıklamalarına uygulanır.</span><span class="sxs-lookup"><span data-stu-id="ec22a-140">When the service is initialized, the specified namespaces and contract names are applied to the generated service descriptions.</span></span>  
+ <span data-ttu-id="24cee-142">Hizmet başlatıldığında, belirtilen ad alanları ve sözleşme adları oluşturulan hizmet açıklamalarına uygulanır.</span><span class="sxs-lookup"><span data-stu-id="24cee-142">When the service is initialized, the specified namespaces and contract names are applied to the generated service descriptions.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ec22a-141">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="ec22a-141">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="24cee-143">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="24cee-143">See also</span></span>
 
 - <xref:System.ServiceModel.Configuration.ComContractElementCollection>
 - <xref:System.ServiceModel.Configuration.ComContractElement>
-- [<span data-ttu-id="ec22a-142">\<comContracts></span><span class="sxs-lookup"><span data-stu-id="ec22a-142">\<comContracts></span></span>](comcontracts.md)
-- [<span data-ttu-id="ec22a-143">COM+ Uygulamaları ile Tümleştirme</span><span class="sxs-lookup"><span data-stu-id="ec22a-143">Integrating with COM+ Applications</span></span>](../../../wcf/feature-details/integrating-with-com-plus-applications.md)
-- [<span data-ttu-id="ec22a-144">Nasıl yapılır: COM+ hizmet ayarlarını yapılandırma</span><span class="sxs-lookup"><span data-stu-id="ec22a-144">How to: Configure COM+ Service Settings</span></span>](../../../wcf/feature-details/how-to-configure-com-service-settings.md)
+- [<span data-ttu-id="24cee-144">\<comContracts></span><span class="sxs-lookup"><span data-stu-id="24cee-144">\<comContracts></span></span>](comcontracts.md)
+- [<span data-ttu-id="24cee-145">COM+ Uygulamaları ile Tümleştirme</span><span class="sxs-lookup"><span data-stu-id="24cee-145">Integrating with COM+ Applications</span></span>](../../../wcf/feature-details/integrating-with-com-plus-applications.md)
+- [<span data-ttu-id="24cee-146">Nasıl yapılır: COM+ hizmet ayarlarını yapılandırma</span><span class="sxs-lookup"><span data-stu-id="24cee-146">How to: Configure COM+ Service Settings</span></span>](../../../wcf/feature-details/how-to-configure-com-service-settings.md)

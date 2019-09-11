@@ -17,52 +17,52 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e0f6ae812b64080a2c4d236a2be02ad81c4a11b6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c8b4d4c7edec47ab4acaae2a5cd93ad474612063
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61993024"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855545"
 ---
-# <a name="ihostsecuritycontextcapture-method"></a><span data-ttu-id="e3695-102">IHostSecurityContext::Capture Yöntemi</span><span class="sxs-lookup"><span data-stu-id="e3695-102">IHostSecurityContext::Capture Method</span></span>
-<span data-ttu-id="e3695-103">Bir kopyasını alır [Ihostsecuritycontext](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritycontext-interface.md) örnek geri çağrısından [Ihostsecuritymanager::getsecuritycontext](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-getsecuritycontext-method.md).</span><span class="sxs-lookup"><span data-stu-id="e3695-103">Gets a clone of the [IHostSecurityContext](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritycontext-interface.md) instance returned from a call to [IHostSecurityManager::GetSecurityContext](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-getsecuritycontext-method.md).</span></span>  
+# <a name="ihostsecuritycontextcapture-method"></a><span data-ttu-id="009a1-102">IHostSecurityContext::Capture Yöntemi</span><span class="sxs-lookup"><span data-stu-id="009a1-102">IHostSecurityContext::Capture Method</span></span>
+<span data-ttu-id="009a1-103">[IHostSecurityManager:: GetSecurityContext](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-getsecuritycontext-method.md)çağrısından döndürülen [IHostSecurityContext](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritycontext-interface.md) örneğinin bir kopyasını alır.</span><span class="sxs-lookup"><span data-stu-id="009a1-103">Gets a clone of the [IHostSecurityContext](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritycontext-interface.md) instance returned from a call to [IHostSecurityManager::GetSecurityContext](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-getsecuritycontext-method.md).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e3695-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="e3695-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="009a1-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="009a1-104">Syntax</span></span>  
   
-```  
+```cpp
 HRESULT Capture (  
     [out] IHostSecurityContext** ppClonedContext  
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="e3695-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="e3695-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="009a1-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="009a1-105">Parameters</span></span>  
  `ppClonedContext`  
- <span data-ttu-id="e3695-106">[out] Bir kopyasını adresini bir işaretçiye `IHostSecurityContext` Yakalanacak nesne.</span><span class="sxs-lookup"><span data-stu-id="e3695-106">[out] A pointer to the address of a clone of the `IHostSecurityContext` object to be captured.</span></span>  
+ <span data-ttu-id="009a1-106">dışı Yakalanacak `IHostSecurityContext` nesnenin bir kopyasının adresine yönelik bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="009a1-106">[out] A pointer to the address of a clone of the `IHostSecurityContext` object to be captured.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="e3695-107">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="e3695-107">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="009a1-107">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="009a1-107">Return Value</span></span>  
   
-|<span data-ttu-id="e3695-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="e3695-108">HRESULT</span></span>|<span data-ttu-id="e3695-109">Açıklama</span><span class="sxs-lookup"><span data-stu-id="e3695-109">Description</span></span>|  
+|<span data-ttu-id="009a1-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="009a1-108">HRESULT</span></span>|<span data-ttu-id="009a1-109">Açıklama</span><span class="sxs-lookup"><span data-stu-id="009a1-109">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="e3695-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="e3695-110">S_OK</span></span>|<span data-ttu-id="e3695-111">`Capture` başarıyla döndürüldü.</span><span class="sxs-lookup"><span data-stu-id="e3695-111">`Capture` returned successfully.</span></span>|  
-|<span data-ttu-id="e3695-112">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="e3695-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="e3695-113">Ortak dil çalışma zamanı (CLR) işlem içine yüklenmemiş olan veya CLR içinde yönetilen kod çalıştıramaz veya çağrı başarılı şekilde işleme bir durumda değil.</span><span class="sxs-lookup"><span data-stu-id="e3695-113">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="e3695-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="e3695-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="e3695-115">Arama zaman aşımına uğradı.</span><span class="sxs-lookup"><span data-stu-id="e3695-115">The call timed out.</span></span>|  
-|<span data-ttu-id="e3695-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="e3695-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="e3695-117">Arayan bir kilide sahip değil.</span><span class="sxs-lookup"><span data-stu-id="e3695-117">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="e3695-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="e3695-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="e3695-119">Bir olay engellenen bir iş parçacığı iptal edildi veya fiber üzerinde bekleme süresi.</span><span class="sxs-lookup"><span data-stu-id="e3695-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="e3695-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="e3695-120">E_FAIL</span></span>|<span data-ttu-id="e3695-121">Bilinmeyen geri dönülemez bir hata oluştu.</span><span class="sxs-lookup"><span data-stu-id="e3695-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="e3695-122">Bir yöntem E_FAIL döndüğünde, CLR artık işlem içinde kullanılamaz.</span><span class="sxs-lookup"><span data-stu-id="e3695-122">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="e3695-123">Yöntemleri barındırma yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.</span><span class="sxs-lookup"><span data-stu-id="e3695-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="009a1-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="009a1-110">S_OK</span></span>|<span data-ttu-id="009a1-111">`Capture`başarıyla döndürüldü.</span><span class="sxs-lookup"><span data-stu-id="009a1-111">`Capture` returned successfully.</span></span>|  
+|<span data-ttu-id="009a1-112">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="009a1-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="009a1-113">Ortak dil çalışma zamanı (CLR) bir işleme yüklenmemiş veya CLR yönetilen kodu çalıştıramayacağı veya çağrıyı başarıyla işleyemediği bir durumda.</span><span class="sxs-lookup"><span data-stu-id="009a1-113">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="009a1-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="009a1-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="009a1-115">Çağrı zaman aşımına uğradı.</span><span class="sxs-lookup"><span data-stu-id="009a1-115">The call timed out.</span></span>|  
+|<span data-ttu-id="009a1-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="009a1-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="009a1-117">Çağıranın kilidi yoktur.</span><span class="sxs-lookup"><span data-stu-id="009a1-117">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="009a1-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="009a1-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="009a1-119">Engellenen bir iş parçacığı veya fiber üzerinde beklerken bir olay iptal edildi.</span><span class="sxs-lookup"><span data-stu-id="009a1-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="009a1-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="009a1-120">E_FAIL</span></span>|<span data-ttu-id="009a1-121">Bilinmeyen bir çok zararlı hata oluştu.</span><span class="sxs-lookup"><span data-stu-id="009a1-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="009a1-122">Bir yöntem E_FAıL döndürdüğünde, CLR artık işlem içinde kullanılamaz.</span><span class="sxs-lookup"><span data-stu-id="009a1-122">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="009a1-123">Barındırma yöntemlerine yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.</span><span class="sxs-lookup"><span data-stu-id="009a1-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="e3695-124">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="e3695-124">Remarks</span></span>  
- <span data-ttu-id="e3695-125">Döndürülen arabirim işaretçisi `Capture` yakalanan içeriğinin bir kopya olması.</span><span class="sxs-lookup"><span data-stu-id="e3695-125">The interface pointer returned from `Capture` is a clone of the captured context.</span></span> <span data-ttu-id="e3695-126">Bu bilgiler arasında bir zaman uyumsuz kod noktası taşındığında, yaşam süresi, işaretçiyi karşı çağrısının yapıldığı ayrılır.</span><span class="sxs-lookup"><span data-stu-id="e3695-126">When this information is moved across an asynchronous code point, its lifetime is separated from that of the pointer against which the call was made.</span></span> <span data-ttu-id="e3695-127">Bu nedenle orijinal işaretçiyle serbest bırakılabilir.</span><span class="sxs-lookup"><span data-stu-id="e3695-127">The original pointer can therefore be released.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="009a1-124">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="009a1-124">Remarks</span></span>  
+ <span data-ttu-id="009a1-125">Öğesinden `Capture` döndürülen arabirim işaretçisi, yakalanan bağlamın bir kopyası.</span><span class="sxs-lookup"><span data-stu-id="009a1-125">The interface pointer returned from `Capture` is a clone of the captured context.</span></span> <span data-ttu-id="009a1-126">Bu bilgiler zaman uyumsuz bir kod noktasına taşındığında, yaşam süresi Çağrının yapıldığı işaretçiden bu yana karşılık gelir.</span><span class="sxs-lookup"><span data-stu-id="009a1-126">When this information is moved across an asynchronous code point, its lifetime is separated from that of the pointer against which the call was made.</span></span> <span data-ttu-id="009a1-127">Bu nedenle özgün işaretçi serbest bırakılır.</span><span class="sxs-lookup"><span data-stu-id="009a1-127">The original pointer can therefore be released.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e3695-128">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="e3695-128">Requirements</span></span>  
- <span data-ttu-id="e3695-129">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e3695-129">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="009a1-128">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="009a1-128">Requirements</span></span>  
+ <span data-ttu-id="009a1-129">**Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="009a1-129">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e3695-130">**Üst bilgi:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="e3695-130">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="009a1-130">**Üst bilgi** MSCorEE. h</span><span class="sxs-lookup"><span data-stu-id="009a1-130">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="e3695-131">**Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="e3695-131">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="009a1-131">**Kitaplığı** MSCorEE. dll dosyasına bir kaynak olarak dahildir</span><span class="sxs-lookup"><span data-stu-id="009a1-131">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="e3695-132">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e3695-132">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="009a1-132">**.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="009a1-132">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e3695-133">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="e3695-133">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="009a1-133">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="009a1-133">See also</span></span>
 
-- [<span data-ttu-id="e3695-134">IHostSecurityContext Arabirimi</span><span class="sxs-lookup"><span data-stu-id="e3695-134">IHostSecurityContext Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritycontext-interface.md)
-- [<span data-ttu-id="e3695-135">IHostSecurityManager Arabirimi</span><span class="sxs-lookup"><span data-stu-id="e3695-135">IHostSecurityManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-interface.md)
+- [<span data-ttu-id="009a1-134">IHostSecurityContext Arabirimi</span><span class="sxs-lookup"><span data-stu-id="009a1-134">IHostSecurityContext Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritycontext-interface.md)
+- [<span data-ttu-id="009a1-135">IHostSecurityManager Arabirimi</span><span class="sxs-lookup"><span data-stu-id="009a1-135">IHostSecurityManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-interface.md)
