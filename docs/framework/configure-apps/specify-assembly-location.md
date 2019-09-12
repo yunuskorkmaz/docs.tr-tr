@@ -43,8 +43,7 @@ Bir derlemenin konumunu belirtmek için iki yol vardır:
 </configuration>  
 ```  
   
- **Sürüm** özniteliği, tanımlayıcı adlı tüm derlemeler için gereklidir, ancak tanımlayıcı olarak adlandırılmış olmayan derlemeler için atlanmalıdır. **
-          \<CodeBase>** öğesi gerektiriyor **href** özniteliği. Kod temeli > öğesinde sürüm aralıkları  **\<** belirtemezsiniz.  
+ **Sürüm** özniteliği, tanımlayıcı adlı tüm derlemeler için gereklidir, ancak tanımlayıcı olarak adlandırılmış olmayan derlemeler için atlanmalıdır. **\<CodeBase>** öğesi gerektiriyor **href** özniteliği. Kod temeli > öğesinde sürüm aralıkları  **\<** belirtemezsiniz.  
   
 > [!NOTE]
 > Güçlü adlandırılmış olmayan bir derleme için bir kod temel ipucu belirtirseniz, ipucu uygulama tabanına veya uygulama temel dizininin bir alt dizinine işaret etmelidir.  
