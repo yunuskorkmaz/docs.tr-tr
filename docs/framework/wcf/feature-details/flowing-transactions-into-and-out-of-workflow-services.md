@@ -2,12 +2,12 @@
 title: İş Akışı Hizmetlerine İşlemlerin Giriş ve Çıkış Akışını Gerçekleştirme
 ms.date: 03/30/2017
 ms.assetid: 03ced70e-b540-4dd9-86c8-87f7bd61f609
-ms.openlocfilehash: ae99c53bbb859f3ade075d4d60ad2ae7e5e7272b
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: db1a1ef6bcf3f048584b39450c90fac3ff35646b
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988811"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70893376"
 ---
 # <a name="flowing-transactions-into-and-out-of-workflow-services"></a>İş Akışı Hizmetlerine İşlemlerin Giriş ve Çıkış Akışını Gerçekleştirme
 İş akışı hizmetleri ve istemcileri işlemlere katılabilir.  Bir hizmet işleminin bir çevresel işlemin bir parçası haline gelmesi için etkinlik <xref:System.ServiceModel.Activities.Receive> <xref:System.ServiceModel.Activities.TransactedReceiveScope> içine bir etkinlik koyun. Bir <xref:System.ServiceModel.Activities.Send> veyaiçindeki<xref:System.ServiceModel.Activities.TransactedReceiveScope> bir etkinlik tarafından yapılan tüm çağrılar çevresel işlem içinde de yapılır. <xref:System.ServiceModel.Activities.SendReply> Bir iş akışı istemci uygulaması, <xref:System.Activities.Statements.TransactionScope> etkinlikleri kullanarak ve ortam işlemini kullanarak hizmet işlemlerini çağıran bir ortam işlemi oluşturabilir. Bu konu, işlemlere katılan bir iş akışı hizmeti ve iş akışı istemcisi oluşturma konusunda size yol gösterir.  
@@ -37,7 +37,7 @@ ms.locfileid: "69988811"
   
 3. Projeye`Common` adlı `PrintTransactionInfo` yeni bir sınıf ekleyin. Bu sınıf, <xref:System.Activities.NativeActivity> <xref:System.Activities.NativeActivity.Execute%2A> öğesinden türetilir ve yöntemini aşırı yükler.  
   
-    ```  
+    ```csharp
     using System;  
     using System;  
     using System.Activities;  
@@ -86,7 +86,7 @@ ms.locfileid: "69988811"
   
      ! [Sıralı hizmet etkinliğine bir WriteLine etkinliği ekleme (./Media/flowing-Transactions-into-and-out-of-Workflow-Services/Add-WriteLine-Sequential-Service.jpg)  
   
-4. <xref:System.Activities.Statements.WriteLine> Etkinlikten <xref:System.ServiceModel.Activities.TransactedReceiveScope> sonra sürükleyip bırakın. Etkinlik, **araç kutusunun**Mesajlaşma bölümünde bulunabilir. <xref:System.ServiceModel.Activities.TransactedReceiveScope> Etkinlik, iki bölümden oluşan **istek** ve gövdeden oluşur. <xref:System.ServiceModel.Activities.TransactedReceiveScope> **İstek** bölümü <xref:System.ServiceModel.Activities.Receive> etkinliği içerir. **Gövde** bölümü bir ileti alındıktan sonra bir işlem içinde yürütülecek etkinlikleri içerir.  
+4. <xref:System.Activities.Statements.WriteLine> Etkinlikten <xref:System.ServiceModel.Activities.TransactedReceiveScope> sonra sürükleyip bırakın. Etkinlik, **araç kutusunun**Mesajlaşma bölümünde bulunabilir. <xref:System.ServiceModel.Activities.TransactedReceiveScope> Etkinlik, iki bölümden oluşan istek ve **gövdeden**oluşur. <xref:System.ServiceModel.Activities.TransactedReceiveScope> **İstek** bölümü <xref:System.ServiceModel.Activities.Receive> etkinliği içerir. **Gövde** bölümü bir ileti alındıktan sonra bir işlem içinde yürütülecek etkinlikleri içerir.  
   
      ![TransactedReceiveScope etkinliği ekleme](./media/flowing-transactions-into-and-out-of-workflow-services/transactedreceivescope-activity.jpg)  
   
@@ -223,8 +223,8 @@ ms.locfileid: "69988811"
   
 2. Oluşturulan Program.cs dosyasını ve aşağıdaki kodu açın:  
   
-    ```  
-    static void Main()  
+    ```csharp
+          static void Main()  
           {  
               Console.WriteLine("Building the server.");  
               using (WorkflowServiceHost host = new WorkflowServiceHost(new DeclarativeServiceWorkflow(), new Uri("net.tcp://localhost:8000/TransactedReceiveService/Declarative")))  
@@ -263,8 +263,8 @@ ms.locfileid: "69988811"
   
 2. Program.cs dosyasını açın ve aşağıdaki kodu ekleyin.  
   
-    ```  
-    class Program  
+    ```csharp
+        class Program  
         {  
   
             private static AutoResetEvent syncEvent = new AutoResetEvent(false);  

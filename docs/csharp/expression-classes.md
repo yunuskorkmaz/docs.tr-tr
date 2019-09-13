@@ -1,33 +1,33 @@
 ---
-title: İfade ağaçlarını destekleyen çerçeve türleri
-description: İfade ağaçlarını destekleyen çerçeve türleri ifade ağaçları ve ifade ağacı API'leri ile çalışmaya yönelik teknikleri oluşturma hakkında bilgi edinin.
+title: İfade Ağaçlarını Destekleyen Çerçeve Türleri
+description: İfade ağaçlarını destekleyen çerçeve türleri, ifade ağaçları oluşturma ve ifade ağacı API 'Leri ile çalışmaya yönelik teknikler hakkında bilgi edinin.
 ms.date: 06/20/2016
 ms.assetid: e9c85021-0d36-48af-91b7-aaaa66f22654
-ms.openlocfilehash: c18bbfb1273156a4b070d1f195d9e823256fde9d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d11a13000019faf2ab5c35d41d48fa199e901d1c
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61646585"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70925965"
 ---
-# <a name="framework-types-supporting-expression-trees"></a>İfade ağaçlarını destekleyen çerçeve türleri
+# <a name="framework-types-supporting-expression-trees"></a>İfade Ağaçlarını Destekleyen Çerçeve Türleri
 
-[Önceki--İfade ağaçları açıklaması](expression-trees-explained.md)
+[Önceki--Ifade ağaçları açıklanıyor](expression-trees-explained.md)
 
-İfade ağaçları ile çalışan .NET Core framework sınıfları büyük bir listesi bulunur.
-Tam listesini görebilirsiniz <xref:System.Linq.Expressions>.
-Tam bir listesi çalıştırmak yerine framework sınıfları nasıl tasarladık bakalım.
+.NET Core Framework 'te Ifade ağaçları ile çalışan sınıfların büyük bir listesi vardır.
+Listenin tam listesini <xref:System.Linq.Expressions>görebilirsiniz.
+Tam liste üzerinden çalıştırmak yerine, Framework sınıflarının nasıl tasarlandığını anlayalim.
 
-Dil tasarımında, bir ifade değerlendirir ve bir değer döndüren kod gövdesidir. İfadeleri çok basit: sabit ifade `1` sabit 1 değerini döndürür. Bunlar, daha karmaşık olabilir: İfade `(-B + Math.Sqrt(B*B - 4 * A * C)) / (2 * A)` bir dereceden eşitlik (Denklemin bir çözümü sahip olduğu durumda) için bir kök dizinini döndürür.  
+Dil tasarımında, bir ifade bir değeri değerlendiren ve döndüren bir kod gövdesidir. İfadeler çok basit olabilir: sabit ifade `1` , 1 sabit değerini döndürür. Daha karmaşık olabilir: İfade `(-B + Math.Sqrt(B*B - 4 * A * C)) / (2 * A)` , ikinci dereceden bir denklem (denklemin bir çözüme sahip olduğu durumda) için bir kök döndürür.  
 
-## <a name="it-all-starts-with-systemlinqexpression"></a>Tüm System.Linq.Expression ile başlar
+## <a name="it-all-starts-with-systemlinqexpression"></a>Hepsi System. LINQ. Expression ile başlar
 
-İfade ağaçları ile çalışmanın karmaşıklıkları birçok farklı türde ifadeler programlar pek çok yerde geçerli olduğunu biridir. Atama ifadesi göz önünde bulundurun. Sağ taraftaki atama, sabit bir değer, bir değişken, bir yöntem çağrısı ifadesi veya başkalarının olabilir. Bu dil esneklik, bir ifade ağacı gezme olduğunda, bir ağaç düğümleri herhangi bir yerindeki birçok farklı ifade türü karşılaşabileceğiniz anlamına gelir. Temel ifade türü ile çalışabilir, bu nedenle, iş yapmanın en kolay yolu olmasıdır. Ancak, bazen daha fazla bilgi edinmek gerekir.
-Temel ifade sınıfı içeren bir `NodeType` bu amaç için özellik.
-Döndürür bir `ExpressionType` olası ifade türleri numaralandırması olduğu.
-Düğüm türü öğrendikten sonra bu türe dönüştürme ve ifadesi düğüm türü bilerek belirli eylemleri gerçekleştirme. Belirli düğüm türleri arayın ve ardından, bu tür bir ifade belirli özelliklerle çalışma.
+İfade ağaçları ile çalışmanın karmaşıklıklarından biri, programlarda birçok yerde birçok farklı türde ifade geçerli olur. Atama ifadesi düşünün. Atamanın sağ tarafı sabit bir değer, bir değişken, bir yöntem çağrısı ifadesi veya başka bir değer olabilir. Bu dil esnekliği, bir ifade ağacında çapraz geçiş yaparken bir ağacın düğümleri içinde herhangi bir yerde birçok farklı ifade türüyle karşılaşacağınız anlamına gelir. Bu nedenle, temel ifade türüyle çalışabilmeniz için en kolay yöntem vardır. Ancak bazen daha fazla bilmeniz gerekir.
+Taban ifade sınıfı bu amaç için `NodeType` bir özellik içeriyor.
+Olası ifade türlerinin `ExpressionType` bir numaralandırması olan bir döndürür.
+Düğümün türünü öğrendikten sonra, bu türe çevirebilirsiniz ve ifade düğümünün türünü bilmenin belirli eylemlerini gerçekleştirebilirsiniz. Belirli düğüm türlerini arayabilir ve ardından bu tür bir ifadenin belirli özellikleriyle çalışabilirsiniz.
 
-Örneğin, bu kod, bir değişken erişim ifadesi için bir değişken adı yazdırır. Düğüm türü denetimi sonra bir değişken erişim ifadesi atama ve ardından belirli ifade türünün özelliklerini denetleme uygulaması ve ardından:
+Örneğin, bu kod bir değişken erişim ifadesi için bir değişkenin adını yazdırır. Düğüm türünü denetleme, sonra bir değişken erişim ifadesine atama ve ardından belirli bir ifade türünün özelliklerini denetleme alıştırması yaşıyorum:
 
 ```csharp
 Expression<Func<int, int>> addFive = (num) => num + 5;
@@ -43,9 +43,9 @@ if (addFive.NodeType == ExpressionType.Lambda)
 }
 ```
 
-## <a name="creating-expression-trees"></a>İfade ağaçları oluşturma
+## <a name="creating-expression-trees"></a>Ifade ağaçları oluşturma
 
-`System.Linq.Expression` Sınıfı da ifadeleri oluşturmak için çok sayıda statik yöntemler içerir. Bu yöntemleri kullanarak alt öğeleri için sağlanan bağımsız değişkenler bir ifade düğüm oluşturun. Bu şekilde, bir ifade yaprak düğümlerini oluşturmak. Örneğin, bu kod bir Ekle ifade oluşturur:
+`System.Linq.Expression` Sınıfı ayrıca ifadeler oluşturmak için birçok statik yöntem içerir. Bu yöntemler, alt öğeleri için sağlanan bağımsız değişkenleri kullanarak bir ifade düğümü oluşturur. Bu şekilde, yaprak düğümlerinden bir ifade oluşturursunuz. Örneğin, bu kod bir ekleme ifadesi oluşturur:
 
 ```csharp
 // Addition is an add expression for "1 + 2"
@@ -54,14 +54,15 @@ var two = Expression.Constant(2, typeof(int));
 var addition = Expression.Add(one, two);
 ```
 
-Bu basit örnekte oluşturmak ve ifade ağaçları ile çalışan birçok türü katılan görebilirsiniz. Bu karmaşıklığı, C# dil tarafından sağlanan zengin sözlük yeteneklerini sağlamak gereklidir.
+Bu basit örnekte, ifade ağaçları oluşturmak ve bunlarla çalışmak için birçok tür bulunduğunu görebilirsiniz. Bu karmaşıklık, C# dilin sağladığı zengin sözlük yeteneklerini sağlamak için gereklidir.
 
-## <a name="navigating-the-apis"></a>API'leri gezinme
-Neredeyse tüm C# dilinin söz dizimi öğeleri için eşleme ifadesi düğüm türü vardır. Her tür dil öğesi türü için belirli yöntemlerine sahiptir. Bu, tek seferde birikimine tutmak için çok fazla olur. Her şeyi ezberlemeniz deneyin yerine ifade ağaçları ile çalışmak için istediğim teknikler şunlardır:
-1. Konum üyelerinin `ExpressionType` incelemekte olası düğümleri sabit listesi. Bu gerçekten geçiş yapmak ve bir ifade ağacı anlamak istediğinizde yardımcı olur.
-2. Konum statik üyeleri `Expression` bir ifade oluşturmak için sınıf. Bu yöntemlerin herhangi bir ifade türü bir dizi alt düğümleri oluşturabilirsiniz.
-3. Bakmak `ExpressionVisitor` değiştirilmiş ifade ağacı oluşturmak için sınıfı.
+## <a name="navigating-the-apis"></a>API 'Lerde gezinme
+C# Dilin sözdizimi öğelerinin neredeyse tamamına eşlenen ifade düğüm türleri vardır. Her türün bu tür dil öğesi için özel yöntemleri vardır. Tek seferde baş bir süre içinde tutulması çok önemlidir. Her şeyi yeniden denemeye çalışmak yerine, Ifade ağaçları ile çalışmak için kullandığım teknikler şunlardır:
 
-Üç bu alanların her şekilde daha fazla ara bulabilirsiniz. Neredeyse şaşmaz biçimde, bu üç adımı biriyle başlattığınızda gerekenler bulabilirsiniz.
+1. Gözden geçirmeniz gereken olası düğümleri öğrenmek `ExpressionType` için numaralandırmanın üyelerine bakın. Bu aslında bir ifade ağacını geçmek ve anlamak istediğinizde yardımcı olur.
+2. Bir ifade oluşturmak için `Expression` sınıfın statik üyelerine bakın. Bu yöntemler bir alt düğümleri kümesinden herhangi bir ifade türü oluşturabilir.
+3. Değiştirilen bir ifade ağacı oluşturmak için sınıfınabakın.`ExpressionVisitor`
+
+Bu üç alanın her birine baktığımızda daha fazla bilgi bulabilirsiniz. Bağımsız olarak, bu üç adımdan biriyle başladığınızda ne yapmanız gerektiğini öğreneceksiniz.
  
- [Sonraki--İfade ağaçlarını yürütme](expression-trees-execution.md)
+ [Sonraki--Ifade ağaçları yürütülüyor](expression-trees-execution.md)

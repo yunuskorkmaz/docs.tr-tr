@@ -4,12 +4,12 @@ description: ASP.NET Core ve Azure ile modern web uygulamalarını mimarın Orta
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: e257410c51d70af31b565d99a8d28ef82ce681d7
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: a521be147c462146775caa81b6a31fb37b4103af
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373806"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926675"
 ---
 # <a name="common-web-application-architectures"></a>Ortak web uygulaması mimarileri
 
@@ -292,16 +292,17 @@ Docker Kapsayıcıları çalıştırmanın, daha önce geliştirme ortamınızda
 Visual Studio kullanarak uygulamanıza Docker desteği eklemek istiyorsanız, bunu yaptığınızda Docker Desktop 'ın çalıştığından emin olun. Sihirbazı başlattığınızda Docker Desktop çalışmıyorsa sihirbaz düzgün çalışmaz. Ayrıca, sihirbaz geçerli kapsayıcı seçiminizi inceleyerek doğru Docker desteğini de ekler. Windows kapsayıcıları için destek eklemek istiyorsanız, Windows kapsayıcılarıyla çalışan Docker Desktop 'ı kullanırken Sihirbazı çalıştırmanız gerekir. Linux kapsayıcıları için destek eklemek istiyorsanız, Linux kapsayıcılarıyla çalışırken Docker çalışırken Sihirbazı çalıştırın.
 
 ### <a name="references--common-web-architectures"></a>Başvurular – ortak Web mimarileri
-> - **Temizleme mimarisi**  
->   <https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html>
-> - **Soğan mimarisi**  
->   <https://jeffreypalermo.com/blog/the-onion-architecture-part-1/>
-> - **Depo deseninin**  
->   <https://deviq.com/repository-pattern/>
-> - **Temizleme mimarisi çözüm örneği**  
->   <https://github.com/ardalis/cleanarchitecture>
-> - **Mikro hizmetler e-kitabı mimarisi**  
->   <https://aka.ms/MicroservicesEbook>
+
+- **Temizleme mimarisi**  
+  <https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html>
+- **Soğan mimarisi**  
+  <https://jeffreypalermo.com/blog/the-onion-architecture-part-1/>
+- **Depo deseninin**  
+  <https://deviq.com/repository-pattern/>
+- **Temizleme mimarisi çözüm örneği**  
+  <https://github.com/ardalis/cleanarchitecture>
+- **Mikro hizmetler e-kitabı mimarisi**  
+  <https://aka.ms/MicroservicesEbook>
 
 >[!div class="step-by-step"]
 >[Önceki](architectural-principles.md)İleri

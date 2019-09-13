@@ -4,12 +4,12 @@ description: Bu öğreticide, Web sitesi açıklamalarından yaklaşımı sını
 ms.date: 05/13/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 4daa7734f12c57a177fab3c62fdd96bda22838af
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: f89174204c13b907db5a41ed374e1a31c61dcf11
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70107173"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929022"
 ---
 # <a name="tutorial-analyze-sentiment-of-website-comments-with-binary-classification-in-mlnet"></a>Öğretici: ML.NET içinde ikili sınıflandırmayla Web sitesi açıklamalarının yaklaşımını çözümleyin
 
@@ -17,6 +17,7 @@ Bu öğreticide, Web sitesi açıklamalarından yaklaşımı sınıflandırın b
 
 Bu öğreticide şunların nasıl yapıladığını öğreneceksiniz:
 > [!div class="checklist"]
+>
 > - Konsol uygulaması oluşturma
 > - Verileri hazırlama
 > - Verileri yükleme
@@ -383,6 +384,7 @@ Bu öğreticinin kaynak kodunu [DotNet/Samples](https://github.com/dotnet/sample
 
 Bu öğreticide, şunların nasıl yapıldığını öğrendiniz:
 > [!div class="checklist"]
+>
 > - Konsol uygulaması oluşturma
 > - Verileri hazırlama
 > - Verileri yükleme

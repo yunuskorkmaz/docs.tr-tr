@@ -8,12 +8,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: 7a7ab9e8f148eaab8250a7cb10c7d38d2f70e4cd
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: ff60bb5de403970f432e938cba81ca4e99476e8a
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69660574"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70925981"
 ---
 # <a name="consume-a-net-standard-library-in-visual-studio-2017"></a>Visual Studio 2017’de bir .NET Standard kitaplığı kullanma
 
@@ -28,13 +28,14 @@ ms.locfileid: "69660574"
 Birim testlerini, sınıf kitaplısınız ile aynı çözümde bulundurmadığınız gibi, uygulamanızı bu çözümün bir parçası olarak dahil edebilirsiniz. Örneğin, sınıf kitaplığınızı, kullanıcıdan ilk karakterinin büyük harf olup olmadığını belirten bir dize ve rapor girmesini isteyen bir konsol uygulamasında kullanabilirsiniz:
 
 # <a name="ctabcsharp"></a>[C#](#tab/csharp)
+
 1. [Visual Studio 'da .NET Core ile bir C# sınıf kitaplığı oluşturma 2017](./library-with-visual-studio.md) konusunun oluşturduğunuz çözümüaçın.`ClassLibraryProjects` **Çözüm Gezgini**, **classlibraryprojects** çözümüne sağ tıklayın ve bağlam menüsünden**Yeni proje** **Ekle** > ' yi seçin.
 
 1. **Yeni Proje Ekle** iletişim kutusunda, **görsel C#**  düğümünü genişletin ve ardından **konsol uygulaması (.NET Core)** proje şablonu tarafından izlenen **.NET Core** düğümünü seçin. **Ad** metin kutusuna "gösterimi" yazın ve **Tamam** düğmesini seçin.
 
    ![Visual Studio yeni proje Ekle iletişim kutusu-C#](./media/consuming-library-with-visual-studio/add-new-project-dialog.png)
 
-1. **Çözüm Gezgini**, Gösterim projesine sağ tıklayın ve bağlam menüsünde **Başlangıç projesi olarak ayarla** ' yı seçin.
+1. **Çözüm Gezgini** **, Gösterim projesine sağ** tıklayın ve bağlam menüsünde **Başlangıç projesi olarak ayarla** ' yı seçin.
 
    ![Başlangıç projesini ayarlamaya yönelik Visual Studio proje bağlam menüsü-C#](./media/consuming-library-with-visual-studio/set-startup-project-context-menu.png)
 
@@ -57,14 +58,16 @@ Birim testlerini, sınıf kitaplısınız ile aynı çözümde bulundurmadığı
 1. Gerekirse, `ShowCase` projenin **hata ayıklama** sürümünü derlemek için araç çubuğunu değiştirin. **Gösterimi** düğmesindeki yeşil oku seçerek programı derleyin ve çalıştırın.
 
    ![Hata ayıklama düğmesini gösteren Visual Studio proje araç çubuğu-C#](./media/consuming-library-with-visual-studio/visual-studio-project-toolbar.png)
+
 # <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
+
 1. [Visual Studio 'da Visual Basic ve .NET Core ile bir sınıf kitaplığı oluşturma 2017](vb-library-with-visual-studio.md) konusunun oluşturduğunuz çözümüaçın.`ClassLibraryProjects` **Çözüm Gezgini**, **classlibraryprojects** çözümüne sağ tıklayın ve bağlam menüsünden**Yeni proje** **Ekle** > ' yi seçin.
 
 1. **Yeni Proje Ekle** iletişim kutusunda **Visual Basic** düğümünü genişletin ve ardından **konsol uygulaması (.NET Core)** proje şablonu tarafından izlenen **.NET Core** düğümünü seçin. **Ad** metin kutusuna "gösterimi" yazın ve **Tamam** düğmesini seçin.
 
    ![Visual Studio yeni proje Ekle iletişim kutusu-Visual Basic](./media/consuming-library-with-visual-studio/add-new-vb-project-dialog.png)
 
-1. **Çözüm Gezgini**, Gösterim projesine sağ tıklayın ve bağlam menüsünde **Başlangıç projesi olarak ayarla** ' yı seçin. 
+1. **Çözüm Gezgini** **, Gösterim projesine sağ** tıklayın ve bağlam menüsünde **Başlangıç projesi olarak ayarla** ' yı seçin. 
 
    ![Başlangıç projesini ayarlamaya yönelik Visual Studio proje bağlam menüsü-Visual Basic](./media/consuming-library-with-visual-studio/set-startup-project-context-menu.png)
 
@@ -87,6 +90,7 @@ Birim testlerini, sınıf kitaplısınız ile aynı çözümde bulundurmadığı
 1. Gerekirse, `ShowCase` projenin **hata ayıklama** sürümünü derlemek için araç çubuğunu değiştirin. **Gösterimi** düğmesindeki yeşil oku seçerek programı derleyin ve çalıştırın.
 
    ![Araç çubuğunda Hata Ayıkla-Visual Basic](./media/consuming-library-with-visual-studio/visual-studio-project-toolbar.png)
+
 ---
 
 [Visual studio 2017 ile Merhaba Dünya uygulamanızda hata ayıklama](debugging-with-visual-studio.md) ve [Merhaba Dünya uygulamanızı Visual Studio 2017 ile yayımlama](publishing-with-visual-studio.md)bölümündeki adımları izleyerek, bu kitaplığı kullanan uygulamayı ayıklayabilir ve yayımlayabilirsiniz.

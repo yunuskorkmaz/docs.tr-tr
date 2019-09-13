@@ -8,12 +8,12 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-ms.openlocfilehash: 20d403e4a6410257068cc3414fcb8dc1e45709e9
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 3638deeafc052a2da3b438de2c504a9955a15ad3
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666872"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70895263"
 ---
 # <a name="whats-new-for-visual-basic"></a>Visual Basic yenilikler
 
@@ -21,9 +21,12 @@ Bu konu, dilin en son sürümlerindeki yeni ve geliştirilmiş özelliklerin ayr
 
 ## <a name="current-version"></a>Güncel sürüm
 
-Visual Basic 15,8/Visual Studio 2017 sürüm 15,8 yeni özellikler Için bkz. [Visual Basic 15,8](#visual-basic-158)
+Visual Basic 16,0/Visual Studio 2019 sürüm 16,0  
+Yeni özellikler için bkz. [Visual Basic 16,0](#visual-basic-160)
 
 ## <a name="previous-versions"></a>Önceki sürümler
+
+Visual Basic 15,8/Visual Studio 2017 sürüm 15,8 yeni özellikler Için bkz. [Visual Basic 15,8](#visual-basic-158)
 
 Visual Basic 15,5/Visual Studio 2017 sürüm 15,5 yeni özellikler Için bkz. [Visual Basic 15,5](#visual-basic-155)
 
@@ -46,6 +49,21 @@ Visual Basic/Visual Studio 2005 `My` tür ve yardımcı türleri (uygulama, bilg
 Visual Basic/Visual Studio .NET 2003 bit kaydırma işleçleri, döngü değişkeni bildirimi
 
 Visual Basic/Visual Studio .NET 2002 Visual Basic .NET ilk sürümü
+
+## <a name="visual-basic-160"></a>Visual Basic 16,0
+Visual Basic 16,0, .NET Core 'a Visual Basic çalışma zamanının (Microsoft. VisualBasic. dll) özelliklerinin daha fazlasını sağlamaya odaklanır ve Visual Basic .NET Core 'a odaklanmış ilk sürümüdür. Visual Basic çalışma zamanının pek çok bölümü WinForms bağımlıdır ve bu, Visual Basic daha sonraki bir sürümüne eklenecektir. 
+
+**Deyimler içinde daha fazla yerde izin verilen açıklamalar** Visual Basic 15,8 ve önceki sürümlerde, açıklamalara yalnızca boş satırlarda, bir deyimin sonunda veya örtük bir satır devamlılığı bulunan bir bildirimde belirli yerlerde izin verilir. Visual Basic 16,0 ' den başlayarak, açık satır devamlılıkları ve bir alt çizgi ile başlayan bir satırdaki bir deyimin içinde açıklamalara de izin verilir.
+
+```vb
+Public Sub Main()
+    cmd.CommandText = ' Comment is allowed here without _
+        "SELECT * FROM Titles JOIN Publishers " _ ' This is a comment
+        & "ON Publishers.PubId = Titles.PubID " _
+ _ ' This is a comment on a line without code
+        & "WHERE Publishers.State = 'CA'"
+End Sub
+```
 
 ## <a name="visual-basic-158"></a>Visual Basic 15,8
 

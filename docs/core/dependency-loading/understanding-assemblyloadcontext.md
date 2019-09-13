@@ -4,12 +4,12 @@ description: .NET Core 'da AssemblyLoadContext 'in amacını ve davranışını 
 ms.date: 08/09/2019
 author: sdmaclea
 ms.author: stmaclea
-ms.openlocfilehash: 61ad19a281d829814de8321913af7dabfc916f6d
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 429f8145e4462cfa93bf286fd35b39f58f9afa64
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70849226"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926377"
 ---
 # <a name="understanding-systemruntimeloaderassemblyloadcontext"></a>System. Runtime. Loader. AssemblyLoadContext 'i anlama
 
@@ -94,6 +94,7 @@ Object of type 'IsolatedType' cannot be converted to type 'IsolatedType'.
 ### <a name="debugging-type-conversion-issues"></a>Tür dönüştürme sorunlarını ayıklama
 
 Eşleşmeyen türlerin çifti verildiğinde şunları da bilmelidir:
+
 - Her tür<xref:System.Type.Assembly?displayProperty=nameWithType>
 - Her tür <xref:System.Runtime.Loader.AssemblyLoadContext>, <xref:System.Runtime.Loader.AssemblyLoadContext.GetLoadContext(System.Reflection.Assembly)?displayProperty=nameWithType> işlev aracılığıyla elde edilebilir.
 

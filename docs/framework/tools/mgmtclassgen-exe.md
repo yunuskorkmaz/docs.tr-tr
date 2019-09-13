@@ -13,19 +13,19 @@ helpviewer_keywords:
 ms.assetid: 02ce6699-49b5-4a0b-b0d5-1003c491232e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 60f48422d23fc5db743eeb05e3eddeb732bff102
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: ce281398fe7ea3a280355a7b79cc7144aba256be
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364025"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894653"
 ---
 # <a name="mgmtclassgenexe-management-strongly-typed-class-generator"></a>Mgmtclassgen.exe (Yönetim Türü Kesin Belirlenmiş Sınıf Oluşturucu)
 Yönetim Kesin Belirlenmiş Sınıf Üreticisi aracı, belirtilen bir Windows Yönetim Araçları (WMI) sınıfı için erken bağlı yönetilen bir sınıfı hızlı bir şekilde üretmenize olanak tanır. Oluşturulan sınıf, WMI sınıfının bir örneğine erişmek için yazmanız gereken kodu basitleştirir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```console  
 mgmtclassgen   
 WMIClass [options]   
 ```  
@@ -36,7 +36,7 @@ WMIClass [options]
   
 |Seçenek|Açıklama|  
 |------------|-----------------|  
-|**/l** *dil*|Erken bağlı yönetilen sınıfın oluşturulacağı dili belirtir. Dil bağımsız değişkeni  olarak csC#(; default), **vb** (Visual Basic), **mc** (C++) veya **js** (JScript) belirtebilirsiniz.|  
+|**/l** *dil*|Erken bağlı yönetilen sınıfın oluşturulacağı dili belirtir. Dil bağımsız değişkeni olarak csC#(; default), **vb** (Visual Basic), **mc** (C++) veya **js** (JScript) belirtebilirsiniz.|  
 |**/m** *makine*|WMI sınıfının bulunduğu, bağlanılacak bilgisayarı belirtir. Varsayılan, yerel bilgisayardır.|  
 |**/n** *yolu*|WMI sınıfını içeren WMI ad alanına giden yolu belirtir. Bu seçeneği belirtmezseniz, araç varsayılan **root\cimv2** ad alanında *WMIClass* için kod üretir.|  
 |**/o** *classnamespace*|Yönetilen kod sınıfının içinde üretileceği .NET ad alanını belirtir. Bu seçeneği belirtmezseniz, araç ad alanını WMI ad alanını ve şema önekini kullanarak üretir. Şema öneki, sınıf adının alt çizgi karakterinden önce gelen parçasıdır. Örneğin, **root\cimv2** ad alanındaki **Win32_OperatingSystem** sınıfı Için, araç sınıfı kök içinde oluşturur **. CIMV2. Win32**.|  
@@ -96,7 +96,7 @@ WMIClass [options]
 ## <a name="examples"></a>Örnekler  
  Aşağıdaki komut, **root\cimv2** ad alanındaki **Win32_LogicalDisk** WMI C# sınıfına yönelik kodda yönetilen bir sınıf oluşturur. Araç, yönetilen sınıfı kök içindeki c:\Disk.cs konumundaki kaynak dosyasına yazar **. CIMV2. Win32** ad alanı.  
   
-```  
+```console  
 mgmtclassgen Win32_LogicalDisk /n root\cimv2 /l CS /p c:\disk.cs  
 ```  
   

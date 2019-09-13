@@ -1,45 +1,46 @@
 ---
-title: ML API ML.NET kullanmayı otomatik
-description: ML API ML.NET otomatik oluşturma işlemi model otomatikleştirir ve dağıtım için hazır bir model oluşturur. Otomatik makine öğrenimi görevlerini yapılandırmak için kullanabileceğiniz seçenekleri öğrenin.
+title: ML.NET otomatik ML API 'sini kullanma
+description: ML.NET otomatikleştirilen ML API 'SI, model oluşturma işlemini otomatikleştirir ve dağıtım için hazırlamış bir model oluşturur. Otomatik makine öğrenimi görevlerini yapılandırmak için kullanabileceğiniz seçenekleri öğrenin.
 ms.date: 04/24/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: d624b999384dd92d41033e385d01fe556e10a065
-ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
+ms.openlocfilehash: 02e4203b0d9f388c7bd7133f3cd4e97cc60cff14
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65960418"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929377"
 ---
-# <a name="how-to-use-the-mlnet-automated-machine-learning-api"></a>Machine learning API ML.NET kullanmayı otomatik
+# <a name="how-to-use-the-mlnet-automated-machine-learning-api"></a>ML.NET otomatik makine öğrenimi API 'sini kullanma
 
-Otomatik machine learning (AutoML), machine learning için verileri uygulamaya işlemini otomatikleştirir. Bir veri kümesi göz önünde bulundurulduğunda, bir AutoML çalıştırabilirsiniz **deneme** farklı veri featurizations yinelemek için makine öğrenimi algoritmaları ve en iyi modeli seçmek için hiperparametreleri.
+Otomatik makine öğrenimi (Otomatikml), verileri makineye öğrenmeyi uygulama işlemini otomatikleştirir. Bir veri kümesi verildiğinde, en iyi modeli seçmek için farklı veri özelliklerini, makine öğrenimi algoritmalarını ve hiper parametreleri yinelemek üzere bir **oto ml denemesi** çalıştırabilirsiniz.
 
 > [!NOTE]
-> Bu konu, otomatik makine şu anda Önizleme aşamasında olan ML.NET için API öğrenimi ifade eder. Malzeme değişiklik gösterebilir.
+> Bu konu, şu anda önizleme aşamasında olan ML.NET için otomatik makine öğrenimi API 'sine başvurur. Malzemeler değişebilir.
 
 ## <a name="load-data"></a>Veri yükleme
 
-Bir veri kümesine veri yüklemeyi destekliyor otomatik makine bir [IDataView](xref:Microsoft.ML.IDataView). Veriler, virgülle ayrılmış değer (TSV) dosyaları ve virgülle ayrılmış değer (CSV) dosya biçiminde olabilir.
+Otomatik makine öğrenimi, bir veri kümesinin bir [ıdataview](xref:Microsoft.ML.IDataView)içine yüklenmesini destekler. Veriler sekmeyle ayrılmış değer (TSV) dosyaları ve virgülle ayrılmış değer (CSV) dosyaları biçiminde olabilir.
 
 Örnek:
 
 ```csharp
 using Microsoft.ML;
 using Microsoft.ML.AutoML;
-    ...
+    // ...
     MLContext mlContext = new MLContext();
     IDataView trainDataView = mlContext.Data.LoadFromTextFile<SentimentIssue>("my-data-file.csv", hasHeader: true);
 ```
 
-## <a name="select-the-machine-learning-task-type"></a>Makine öğrenimi görev türü seçin
-Bir deney oluşturmadan önce makine öğrenme problemi çözmek istediğiniz türünü belirler. Otomatik machine learning aşağıdaki ML görevleri destekler:
+## <a name="select-the-machine-learning-task-type"></a>Machine Learning görev türünü seçin
+Bir deneme oluşturmadan önce, çözmek istediğiniz makine öğrenimi sorunu türünü saptayın. Otomatik makine öğrenimi aşağıdaki ML görevlerini destekler:
+
 * İkili sınıflandırma
-* Sınıflı sınıflandırma
+* Birden çok Lass sınıflandırması
 * Regresyon
 
 ## <a name="create-experiment-settings"></a>Deneme ayarları oluşturma
 
-Deneme ayarları için belirlenen ML görev türü oluşturun:
+Belirlenen ML görev türü için deneme ayarları oluşturun:
 
 * İkili sınıflandırma
 
@@ -47,7 +48,7 @@ Deneme ayarları için belirlenen ML görev türü oluşturun:
   var experimentSettings = new BinaryExperimentSettings();
   ```
 
-* Sınıflı sınıflandırma
+* Birden çok Lass sınıflandırması
 
   ```csharp
   var experimentSettings = new MulticlassExperimentSettings();
@@ -61,17 +62,17 @@ Deneme ayarları için belirlenen ML görev türü oluşturun:
 
 ## <a name="configure-experiment-settings"></a>Deneme ayarlarını yapılandırma
 
-Denemeleri, yüksek oranda yapılandırılabilir özelliktedir. Bkz: [AutoML API belgeleri](https://docs.microsoft.com/dotnet/api/?view=automl-dotnet) yapılandırma ayarlarının tam listesi için.
+Denemeleri, yüksek oranda yapılandırılabilir. Yapılandırma ayarlarının tam listesi için bkz. [oto ml API belgeleri](https://docs.microsoft.com/dotnet/api/?view=automl-dotnet) .
 
 Bazı örnekler:
 
-1. Denemeyi çalıştırmak için izin verilen en uzun süreyi belirtin.
+1. Denemenin çalışmasına izin verilen en uzun süreyi belirtin.
 
     ```csharp
     experimentSettings.MaxExperimentTimeInSeconds = 3600;
     ```
 
-1. Tamamlanmak üzere zamanlanan önce denemeyi iptal etmek için bir iptal belirteci kullanın.
+1. Tamamlanmak üzere zamanlanmadan önce denemeyi iptal etmek için bir iptal belirteci kullanın.
 
     ```csharp
     experimentSettings.CancellationToken = cts.Token;
@@ -80,22 +81,22 @@ Bazı örnekler:
     CancelExperimentAfterAnyKeyPress(cts);
     ```
 
-1. Farklı bir en iyi duruma getirme ölçüm belirtin.
+1. Farklı bir iyileştirmeli ölçüm belirtin.
 
     ```csharp
     var experimentSettings = new RegressionExperimentSettings();
     experimentSettings.OptimizingMetric = RegressionMetric.MeanSquaredError;
     ```
 
-1. `CacheDirectory` AutoML görev sırasında geliştirilen tüm modellerinin nereye kaydedileceği bir dizin için bir işaretçi bir ayardır. Varsa `CacheDirectory` ayarlamak null modelleri yerine bellektir tutulacak diske.
+1. Bu `CacheDirectory` ayar, otomatik ml görevi sırasında eğitilen tüm modellerin kaydedileceği dizine yönelik bir işaretçidir. `CacheDirectory` Null olarak ayarlanırsa, modeller diske yazılmak yerine bellekte tutulur.
  
     ```csharp
     experimentSettings.CacheDirectory = null;
     ```
 
-1. Belirli Eğitmenler kullanmayı otomatik ML isteyin.
+1. Otomatikleştirilmiş ML 'nin belirli eğitimleri kullanmamasını söyleyin.
 
-    Varsayılan listesini Eğitmenler en iyi duruma getirme görev incelediniz. Bu liste her deneme için değiştirilebilir. Örneğin, veri kümenize yavaş çalışmasına Eğitmenler listeden kaldırılabilir. Belirli bir eğitmen çağrıda en iyi duruma getirme `experimentSettings.Trainers.Clear()`, ardından kullanmak istediğiniz Eğitmeni ekleyin.
+    En iyileştirmek için, görev başına araştırılan varsayılan bir liste. Bu liste, her deneme için değiştirilebilir. Örneğin, veri kümeniz üzerinde yavaş çalışan traıners listeden kaldırılabilir. Tek bir belirli bir seyahat çağrısını `experimentSettings.Trainers.Clear()`iyileştirmek için, kullanmak istediğiniz eğitmen 'ı ekleyin.
 
     ```csharp
     var experimentSettings = new RegressionExperimentSettings();
@@ -103,55 +104,56 @@ Bazı örnekler:
     experimentSettings.Trainers.Remove(RegressionTrainer.OnlineGradientDescent);
     ```
 
-ML görev başına desteklenen Eğitmenler listesini aşağıdaki karşılık gelen bağlantıda bulunabilir:
-* [İkili sınıflandırma algoritmaları desteklenir.](xref:Microsoft.ML.AutoML.BinaryClassificationTrainer)
-* [Sınıflı sınıflandırma algoritmaları desteklenir.](xref:Microsoft.ML.AutoML.MulticlassClassificationTrainer)
-* [Desteklenen regresyon algoritmaları](xref:Microsoft.ML.AutoML.RegressionTrainer)
+ML başına desteklenen aers görevleri listesi aşağıdaki ilgili bağlantıda bulunabilir:
 
-## <a name="optimizing-metric"></a>Ölçüm en iyi duruma getirme
+* [Desteklenen Ikili sınıflandırma algoritmaları](xref:Microsoft.ML.AutoML.BinaryClassificationTrainer)
+* [Desteklenen birden çok Lass sınıflandırma algoritması](xref:Microsoft.ML.AutoML.MulticlassClassificationTrainer)
+* [Desteklenen Regresyon algoritmaları](xref:Microsoft.ML.AutoML.RegressionTrainer)
 
-Yukarıdaki örnekte gösterildiği gibi en iyi duruma getirme ölçüm modeli eğitimi sırasında en iyi duruma getirilmesi ölçüm belirler. Seçebileceğiniz en iyi duruma getirme ölçüm seçtiğiniz görev türüne göre belirlenir. Ölçümlerin bir listesi aşağıda verilmiştir.
+## <a name="optimizing-metric"></a>Ölçümü iyileştirme
 
-|[İkili sınıflandırma](xref:Microsoft.ML.AutoML.BinaryClassificationMetric) | [Sınıflı sınıflandırma](xref:Microsoft.ML.AutoML.MulticlassClassificationMetric) |[Regresyon](xref:Microsoft.ML.AutoML.RegressionMetric)
+Yukarıdaki örnekte gösterildiği gibi en iyileştirme ölçümü, model eğitimi sırasında en iyi duruma getirilecek ölçümü belirler. Seçebileceğiniz ölçüm en iyi duruma getirme, seçtiğiniz görev türüne göre belirlenir. Kullanılabilir ölçümlerin listesi aşağıda verilmiştir.
+
+|[İkili sınıflandırma](xref:Microsoft.ML.AutoML.BinaryClassificationMetric) | [Birden çok Lass sınıflandırması](xref:Microsoft.ML.AutoML.MulticlassClassificationMetric) |[Regresyon](xref:Microsoft.ML.AutoML.RegressionMetric)
 |-- |-- |--
-|Doğruluğu| LogLoss | RSquared
-|AreaUnderPrecisionRecallCurve | LogLossReduction | MeanAbsoluteError
-|AreaUnderRocCurve | MacroAccuracy | MeanSquaredError
-|F1Score | MicroAccuracy | RootMeanSquaredError
-|NegativePrecision | TopKAccuracy
-|NegativeRecall |
+|veritabanınızın| Logkaybetme | RKARE
+|Areaunderperrecallcurve | LogLossReduction | MeanAbsoluteError
+|AreaUnderRocCurve | Makro doğruluğu | Ortalamasquare
+|F1Score | Mikro doğruluk | Rootortalamasquarebir
+|NegativePrecision | Topkdoğruluk
+|Negatiftiverecall |
 |PositivePrecision
 |PositiveRecall
 
 ## <a name="data-pre-processing-and-featurization"></a>Veri ön işleme ve özellik kazandırma sayesinde
 
-Varsayılan olarak veri ön işleme olur ve aşağıdaki adımları sizin için otomatik olarak gerçekleştirilir:
+Verilerin ön işlemesi varsayılan olarak gerçekleşir ve aşağıdaki adımlar sizin için otomatik olarak gerçekleştirilir:
 
-1. Hiçbir yararlı bilgiler özelliklerle bırak
+1. Yararlı bilgiler olmadan bırakma özellikleri
 
     Hiçbir yararlı bilgiler özellikleriyle, eğitim ve doğrulama kümesinden bırakın. Bu, eksik, tüm değerlerin tüm satırlar boyunca veya son derece yüksek kardinalite (örneğin, karmaları kimlikleri veya GUID'leri) ile aynı değere sahip özellikler içerir.
 
-1. İmputation ve eksik değer göstergesi
+1. Eksik değer gösterimi ve imputation
 
-    Veri türü için varsayılan değer ile eksik değer hücrelere doldurun. Göstergesi özelliklerle aynı yuva sayısı giriş sütun olarak ekleyin. Eklenen gösterge özellikleri değer `1` giriş sütunundaki değeri eksik olup olmadığını ve `0` Aksi takdirde.
+    Eksik değer hücrelerini, veri türü için varsayılan değerle doldur. Giriş sütunuyla aynı sayıda yuva içeren gösterge özellikleri ekleyin. Eklenen gösterge özelliklerinin `1` değeri, giriş sütunundaki değerin eksik olması ve `0` Aksi durumda.
 
 1. Ek özellikler oluşturma
     
-    Metin özellikleri: Unigrams ve üç karakter gram kullanarak word paketi özellik.
+    Metin özellikleri için: Unigram ve üçlü karakter-gram kullanan sözcük paketi özellikleri.
     
-    Kategorik özellikleri: Bir sık erişimli düşük önem düzeyi özellikleri için kodlama ve bir-sık erişimli-hash kodlama için yüksek kardinalite kategorik özellikleri.
+    Kategorik özellikler için: Düşük kardinalite özellikleri için tek yönlü kodlama ve yüksek kardinalite kategorik özellikleri için bir adet etkin karma kodlama.
 
 1. Dönüşümler ve kodlamaları
 
-    Metin özellikleri kategorik özelliklerini dönüştürülmüş çok az benzersiz değerlere sahip. Bağlı olarak kardinalite kategorik özelliklerinin kodlama bir seyrek veya sık erişimli bir karma kodlama gerçekleştirin.
+    Kategorik özelliklere dönüştürülen çok az benzersiz değerler içeren metin özellikleri. Kategorik özelliklerin kardinalitesine bağlı olarak, tek başına kodlama veya tek yönlü karma kodlama gerçekleştirin.
 
-## <a name="exit-criteria"></a>Sonlandırma kriteri
+## <a name="exit-criteria"></a>Çıkış kriterleri
 
-Görevinizi tamamlamak için ölçütleri tanımlayın:
+Görevinizi tamamlamaya yönelik ölçütleri tanımlayın:
 
-1. Bir süre boyunca - sonra çıkış kullanarak `MaxExperimentTimeInSeconds` deneme ayarlarınızda ne kadar süreyle bir görevi çalıştırmaya devam etmeli saniyeler içinde tanımlayabilirsiniz.
+1. Deneme ayarlarınızda bir süre `MaxExperimentTimeInSeconds` geçtikten sonra çık bir görevin çalışmaya devam etmesi için saniye cinsinden süreyi tanımlayabilirsiniz.
 
-1. Çıkış bir iptal belirteci - tamamlanmak üzere zamanlanan önce görevi iptal olanak sağlayan bir iptal belirteci kullanabilirsiniz.
+1. İptal belirtecinden çıkma-işlemi tamamlamak için zamanlanmadan önce, görevi iptal etmenizi sağlayan bir iptal belirteci kullanabilirsiniz.
 
     ```csharp
     var cts = new CancellationTokenSource();
@@ -160,30 +162,30 @@ Görevinizi tamamlamak için ölçütleri tanımlayın:
     experimentSettings.CancellationToken = cts.Token;
     ```
 
-## <a name="create-an-experiment"></a>Bir deneme oluşturma
+## <a name="create-an-experiment"></a>Deneme oluşturma
 
-Deneme ayarlarını yapılandırdıktan sonra bir deneme oluşturmak hazır olursunuz.
+Deneme ayarlarını yapılandırdıktan sonra, denemeyi oluşturmaya hazırlanın.
 
 ```csharp
 RegressionExperiment experiment = mlContext.Auto().CreateRegressionExperiment(experimentSettings);
 ```
 
-## <a name="run-the-experiment"></a>Denemeyi çalıştırma
+## <a name="run-the-experiment"></a>Denemeyi çalıştırın
 
-Ön işleme, öğrenme algoritması seçme ve hiper parametre ayarı deneme Tetikleyicileri veri çalışıyor. Özellik kazandırma sayesinde, öğrenme algoritmaları ve kadar hiperparametreleri bileşimi oluşturmak AutoML devam `MaxExperimentTimeInSeconds` ulaşıldığında veya denemeyi sonlandırılır.
+Denemeyi çalıştırmak, verileri önceden işleme, öğrenme algoritması seçimi ve hiper parametre ayarlamayı tetikler. Oto, ulaşılıncaya veya deneme sonlandırılana kadar `MaxExperimentTimeInSeconds` doğru şekilde, öğrenme algoritmalarının ve hiper parametrelerin birleşimlerini oluşturmaya devam edecektir.
 
 ```csharp
 ExperimentResult<RegressionMetrics> experimentResult = experiment
     .Execute(trainingDataView, LabelColumnName, progressHandler: progressHandler);
 ```
 
-Diğer aşırı yüklemeler için keşfetmek `Execute()` doğrulama verileri, sütun amaçlı ya da prefeaturizers gösteren sütun bilgileri geçirmek istiyorsanız.
+Doğrulama verilerini, sütun `Execute()` amacını veya ön ek türleyicileri belirten sütun bilgilerini geçirmek istiyorsanız için diğer aşırı yüklemeleri keşfet.
 
 ## <a name="training-modes"></a>Eğitim modları
 
 ### <a name="training-dataset"></a>Eğitim veri kümesi
 
-AutoML sağlar, aşırı yüklenmiş bir deneme yürütme yöntemi, eğitim verilerini sağlamanıza olanak verir. Dahili olarak, otomatik ML veri train-validate bölmelerini böler.
+Oto ml, eğitim verileri sağlamanıza olanak tanıyan aşırı yüklenmiş bir deneme yürütme yöntemi sağlar. Dahili olarak, otomatik ML verileri eğitme-doğrulama bölmelere ayırır.
 
 ```csharp
 experiment.Execute(trainDataView);   
@@ -191,7 +193,7 @@ experiment.Execute(trainDataView);
 
 ### <a name="custom-validation-dataset"></a>Özel doğrulama veri kümesi
 
-Genellikle zaman serisi verileri ile olduğu gibi rastgele bölünmüş kabul edilebilir değilse, özel doğrulama veri kümesi kullanın. Kendi doğrulama veri kümesi belirtebilirsiniz. Model doğrulama veri kümesi bir veya daha fazla rastgele veri kümeleri yerine belirtilen karşı değerlendirilir.
+Genellikle zaman serisi verilerinde olduğu gibi rastgele bölme kabul edilebilir değilse, özel doğrulama veri kümesini kullanın. Kendi doğrulama veri kümesi belirtebilirsiniz. Model, bir veya daha fazla rastgele veri kümesi yerine belirtilen doğrulama veri kümesine göre değerlendirilir.
 
 ```csharp
 experiment.Execute(trainDataView, validationDataView);   
@@ -199,9 +201,9 @@ experiment.Execute(trainDataView, validationDataView);
 
 ## <a name="explore-model-metrics"></a>Model ölçümleri keşfedin
 
-ML denemesi her yinelemeden sonra bu görevle ilgili ölçümleri depolanır.
+Her bir ML denemesinin yinelemesinden sonra, bu görevle ilgili ölçümler depolanır.
 
-Örneğin, size en iyi çalıştırmadan doğrulama ölçümleri erişebilirsiniz:
+Örneğin, en iyi çalıştırmasından doğrulama ölçümlerine erişebiliriz:
 
 ```csharp
 RegressionMetrics metrics = experimentResult.BestRun.ValidationMetrics;
@@ -209,11 +211,12 @@ Console.WriteLine($"R-Squared: {metrics.RSquared:0.##}");
 Console.WriteLine($"Root Mean Squared Error: {metrics.RootMeanSquaredError:0.##}");
 ```
 
-ML görev başına kullanılabilen tüm ölçümler şunlardır:
+Her ML görevi için kullanılabilir ölçümler şunlardır:
+
 * [İkili sınıflandırma ölçümleri](xref:Microsoft.ML.AutoML.BinaryClassificationMetric)
-* [Sınıflı sınıflandırma ölçümleri](xref:Microsoft.ML.AutoML.MulticlassClassificationMetric)
-* [Regresyon ölçümleri](xref:Microsoft.ML.AutoML.RegressionMetric)
+* [Birden çok Lass sınıflandırma ölçümleri](xref:Microsoft.ML.AutoML.MulticlassClassificationMetric)
+* [Gerileme ölçümleri](xref:Microsoft.ML.AutoML.RegressionMetric)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-Tam kod örnekleri ve daha fazla bilgi için ziyaret [machinelearning/dotnet-samples](https://github.com/dotnet/machinelearning-samples/tree/master#automate-mlnet-models-generation-preview-state) GitHub deposu.
+Tam kod örnekleri için [DotNet/machinöğrenim-Samples](https://github.com/dotnet/machinelearning-samples/tree/master#automate-mlnet-models-generation-preview-state) GitHub deposunu ziyaret edin.

@@ -1,32 +1,32 @@
 ---
-title: Tür sıralama - .NET
-description: .NET yerel gösterimine türlerinizi nasıl sürekliliğe devreder öğrenin.
+title: Tür sıralama-.NET
+description: .NET 'in türlerinizi yerel bir gösterimde nasıl sıraladığında öğrenin.
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: 2cb8898b52b4b4afba1184a886e16c9f7f68f03a
-ms.sourcegitcommit: c4dfe37032c64a1fba2cc3d5947550d79f95e3b5
+ms.openlocfilehash: bc44a2c63dfa3fde3e3c4197e5d1fe79857ea717
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67041789"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929065"
 ---
 # <a name="type-marshaling"></a>Tür hazırlama
 
-**Hazırlama** yönetilen ve yerel kod arasında çapraz ihtiyaç duyduğunda, tür dönüştürme işlemidir.
+**Sıralama** , yönetilen ve yerel kod arasında çapraz geçiş olmaları gerektiğinde türleri dönüştürme işlemidir.
 
-Yönetilen ve yönetilmeyen kod türleri farklı olduğundan, hazırlama gereklidir. Yönetilen kodda, örneğin, elinizde bir `String`, dizeleri Unicode ("geniş"), Unicode olmayan, null ile sonlandırılmış, ASCII, yönetilmeyen dünyada olabileceği vs. Varsayılan olarak, P/Invoke alt sistemi, bu makalede açıklanan varsayılan davranışa göre doğru şeyleri yapacakları dener. Ancak, bu durumlar için ek denetlemeniz dağıtabileceklerinizle [MarshalAs](xref:System.Runtime.InteropServices.MarshalAsAttribute) yönetilmeyen tarafında beklenen tür belirtmek için özniteliği. Dizeyi ANSI null ile sonlandırılmış dize olarak gönderilmesini istiyorsanız, örneğin, şöyle bunu:
+Yönetilen ve yönetilmeyen koddaki türler farklı olduğundan sıralama gereklidir. Yönetilen kodda, örneğin, `String`yönetilmeyen Uluslararası dizeler Unicode ("geniş"), Unicode olmayan, null ile sonlandırılmış, ASCII vb. olabilir. Varsayılan olarak, P/Invoke alt sistemi, bu makalede açıklanan varsayılan davranışa göre doğru şeyi gerçekleştirmeye çalışır. Ancak, ek denetime ihtiyacınız olan bu durumlar için, yönetilmeyen tarafta beklenen türü ne olduğunu belirtmek üzere [MarshalAs](xref:System.Runtime.InteropServices.MarshalAsAttribute) özniteliğini kullanabilirsiniz. Örneğin, dizenin null ile sonlandırılmış bir ANSI dizesi olarak gönderilmesini istiyorsanız bunu şöyle yapabilirsiniz:
 
 ```csharp
 [DllImport("somenativelibrary.dll")]
 static extern int MethodA([MarshalAs(UnmanagedType.LPStr)] string parameter);
 ```
 
-## <a name="default-rules-for-marshaling-common-types"></a>Varsayılan kuralları ortak türlerini hazırlama
+## <a name="default-rules-for-marshaling-common-types"></a>Ortak türleri hazırlama için varsayılan kurallar
 
-Çalışma zamanı genellikle "doğru şeyi" yaptığınızda dener iş sizden az miktarda gerektirecek şekilde hazırlama. Aşağıdaki tablolar, bir parametre veya alanında kullanıldığında varsayılan olarak her tür nasıl sıralanmış açıklamaktadır. C99 / C ++ 11 sabit genişlik tamsayı ve karakter türleri aşağıdaki tabloda tüm platformlar için doğru olduğundan emin olmak için kullanılır. Aynı hizalama ve bu türü olarak boyut gereksinimlerine sahip herhangi bir yerel tür kullanabilirsiniz.
+Genellikle, çalışma zamanı, sizin için en az iş miktarını gerektirecek şekilde sıralama yaparken "doğru şeyi" gerçekleştirmeye çalışır. Aşağıdaki tablolarda, her türün bir parametre veya alanda kullanıldığında varsayılan olarak nasıl sıralandığına ilişkin bir açıklama verilmiştir. Aşağıdaki tablonun tüm platformlar için doğru olduğundan emin olmak için C99/C++ 11 sabit genişlikli tamsayı ve karakter türleri kullanılır. Aynı hizalama ve Boyut gereksinimlerine sahip herhangi bir yerel türü bu türlerle kullanabilirsiniz.
 
-Birinci tablo eşlemelerini kendisi için hazırlama P/Invoke ve hazırlama alanı için aynı çeşitli türleri açıklanmaktadır.
+Bu ilk tabloda, hem P/Invoke hem de alan sıralaması için, sıralama için aynı olan çeşitli türler için eşlemeler açıklanmaktadır.
 
 | .NET türü | Yerel tür  |
 |-----------|-------------------------|
@@ -38,65 +38,65 @@ Birinci tablo eşlemelerini kendisi için hazırlama P/Invoke ve hazırlama alan
 | `uint`    | `uint32_t`              |
 | `long`    | `int64_t`               |
 | `ulong`   | `uint64_t`              |
-| `char`    | Ya da `char` veya `char16_t` bağlı olarak `CharSet` P/Invoke veya yapının. Bkz: [charset belgeleri](charset.md). |
-| `string`  | Ya da `char*` veya `char16_t*` bağlı olarak `CharSet` P/Invoke veya yapının. Bkz: [charset belgeleri](charset.md). |
+| `char`    | Ya da `char` P/Invoke `CharSet` ya da yapısına bağlıolarak.`char16_t` [Karakter kümesi belgelerine](charset.md)bakın. |
+| `string`  | Ya da `char*` P/Invoke `CharSet` ya da yapısına bağlıolarak.`char16_t*` [Karakter kümesi belgelerine](charset.md)bakın. |
 | `System.IntPtr` | `intptr_t`        |
 | `System.UIntPtr` | `uintptr_t`      |
-| .NET işaretçi türleri (ör. `void*`)  | `void*` |
-| Türetilmiş türü `System.Runtime.InteropServices.SafeHandle` | `void*` |
-| Türetilmiş türü `System.Runtime.InteropServices.CriticalHandle` | `void*`          |
+| .NET Işaretçi türleri (örn. `void*`)  | `void*` |
+| Türetilmiş tür`System.Runtime.InteropServices.SafeHandle` | `void*` |
+| Türetilmiş tür`System.Runtime.InteropServices.CriticalHandle` | `void*`          |
 | `bool`    | Win32 `BOOL` türü       |
 | `decimal` | COM `DECIMAL` yapısı |
-| .NET temsilci | Yerel işlev işaretçisi |
+| .NET temsilcisi | Yerel işlev işaretçisi |
 | `System.DateTime` | Win32 `DATE` türü |
 | `System.Guid` | Win32 `GUID` türü |
 
-Hazırlama, birkaç kategoriden varsayılan değerleri farklı varsa bir parametre veya yapısı hazırlama.
+Bir parametre veya yapı olarak sıralama yapıyorsanız, birkaç sıralama kategorisi farklı değerlere sahiptir.
 
-| .NET türü | Yerel türü (parametre) | Yerel bir tür (alan) |
+| .NET türü | Yerel tür (parametre) | Yerel tür (alan) |
 |-----------|-------------------------|---------------------|
-| .NET dizisi | Dizi öğeleri yerel temsillerini bir dizi başlangıcı için bir işaretçi. | Olmadan izin verilmiyor bir `[MarshalAs]` özniteliği|
-| Bir sınıf ile bir `LayoutKind` , `Sequential` veya `Explicit` | Yerel gösterimine sınıfının işaretçisi | Yerel gösterimi sınıfı |
+| .NET dizisi | Dizi öğelerinin yerel gösterimlerine ait bir dizi başlangıcına yönelik bir işaretçi. | `[MarshalAs]` Özniteliği olmadan izin verilmiyor|
+| Veya`Sequential` içeren `LayoutKind` bir sınıf`Explicit` | Sınıfın yerel gösterimine yönelik bir işaretçi | Sınıfın yerel temsili |
 
-Aşağıdaki tablo, varsayılan sıralama kuralları içerir. yalnızca Windows. Windows dışı platformlarda, bu tür sıralanamıyor.
+Aşağıdaki tablo, yalnızca Windows 'un varsayılan sıralama kurallarını içerir. Windows dışı platformlarda bu türleri sıralayamaz.
 
-| .NET türü | Yerel türü (parametre) | Yerel bir tür (alan) |
+| .NET türü | Yerel tür (parametre) | Yerel tür (alan) |
 |-----------|-------------------------|---------------------|
 | `object`  | `VARIANT`               | `IUnknown*`         |
-| `System.Array` | COM arabirimi | Olmadan izin verilmiyor bir `[MarshalAs]` özniteliği |
+| `System.Array` | COM arabirimi | `[MarshalAs]` Özniteliği olmadan izin verilmiyor |
 | `System.ArgIterator` | `va_list` | İzin verilmiyor |
 | `System.Collections.IEnumerator` | `IEnumVARIANT*` | İzin verilmiyor |
 | `System.Collections.IEnumerable` | `IDispatch*` | İzin verilmiyor |
-| `System.DateTimeOffset` | `int64_t` 1 Ocak 1601 gece yarısından tıklarının sayısını temsil eden || `int64_t` 1 Ocak 1601 gece yarısından tıklarının sayısını temsil eden |
+| `System.DateTimeOffset` | `int64_t`1 Ocak 1601 ' de gece yarısından beri geçen onay işareti sayısını temsil etme || `int64_t`1 Ocak 1601 ' de gece yarısından beri geçen onay işareti sayısını temsil etme |
 
-Bazı türleri parametre olarak ve alanlar olarak değil yalnızca sıralanabilir. Bu tür aşağıdaki tabloda listelenmiştir:
+Bazı türler, alan olarak değil yalnızca parametre olarak sıralanabilir. Bu türler aşağıdaki tabloda listelenmiştir:
 
-| .NET türü | Yerel bir tür (yalnızca parametresi) |
+| .NET türü | Yerel tür (yalnızca parametre) |
 |-----------|------------------------------|
-| `System.Text.StringBuilder` | Ya da `char*` veya `char16_t*` bağlı olarak `CharSet` P/Invoke.  Bkz: [charset belgeleri](charset.md). |
-| `System.ArgIterator` | `va_list` (Windows x86/x64/arm64'te yalnızca) |
+| `System.Text.StringBuilder` | Ya da `char*` P/Invoke `CharSet` öğesine bağlıolarak.`char16_t*`  [Karakter kümesi belgelerine](charset.md)bakın. |
+| `System.ArgIterator` | `va_list`(yalnızca Windows x86/x64/arm64 üzerinde) |
 | `System.Runtime.InteropServices.ArrayWithOffset` | `void*` |
 | `System.Runtime.InteropServices.HandleRef` | `void*` |
 
-Bu varsayılanlar, tam olarak aradığınız şeyi yapmazsanız, parametreleri nasıl sıralanmış özelleştirebilirsiniz. [Parametreyi](customize-parameter-marshaling.md) makalesi Yürüyüşü nasıl farklı parametre türlerinin nasıl özelleştirildiği size hazırlanır.
+Bu varsayılanlar tam olarak istediğiniz şekilde yapamazsa, parametrelerin nasıl sıralanmasını özelleştirebilirsiniz. [Parametre sıralama](customize-parameter-marshaling.md) makalesi, farklı parametre türlerinin nasıl sıralanmasını nasıl özelleştireceğinizi açıklar.
 
-## <a name="default-marshaling-in-com-scenarios"></a>Varsayılan COM senaryolarda hazırlama
+## <a name="default-marshaling-in-com-scenarios"></a>COM senaryolarında varsayılan sıralama
 
-. NET'te COM nesnelerinde yöntemleri çağırarak, .NET çalışma zamanı ortak COM semantiği eşleştirilecek kuralları hazırlama varsayılan değiştirir. Aşağıdaki tablo, .NET çalışma zamanları COM senaryolarda kullandığı kurallarını listeler:
+.NET ' te COM nesnelerine Yöntemler çağırırken .NET çalışma zamanı, varsayılan sıralama kurallarını ortak COM semantiklerine uyacak şekilde değiştirir. Aşağıdaki tabloda, .NET çalışma zamanlarının COM senaryolarında kullandığı kurallar listelenmektedir:
 
-| .NET türü | Yerel bir tür (COM yöntem çağrıları) |
+| .NET türü | Yerel tür (COM Yöntem çağrıları) |
 |-----------|--------------------------------|
 | `bool`    | `VARIANT_BOOL`                 |
 | `StringBuilder` | `LPWSTR`                 |
 | `string`  | `BSTR`                         |
-| Temsilci türleri | `_Delegate*` .NET Framework'teki. ' De .NET Core izin verilmiyor. |
+| Temsilci türleri | `_Delegate*`.NET Framework. .NET Core 'da izin verilmiyor. |
 | `System.Drawing.Color` | `OLECOLOR`        |
 | .NET dizisi | `SAFEARRAY`                   |
-| `string[]` | `SAFEARRAY` ' ın `BSTR`s        |
+| `string[]` | `SAFEARRAY`/ `BSTR`s        |
 
-## <a name="marshaling-classes-and-structs"></a>Sınıfları ve yapıları sıralama
+## <a name="marshaling-classes-and-structs"></a>Sınıfları ve yapıları hazırlama
 
-Sıralama türü başka bir yapıda, yönetilmeyen bir yönteme geçirmek nasıl yönüdür. Örneğin, bazı yönetilmeyen yöntemler yapı parametre olarak gerektirir. Bu gibi durumlarda, yönetilen bölümünde bir parametresi olarak kullanılabilmesi için dünyanın karşılık gelen bir yapı ya da bir sınıf oluşturmanız gerekir. Ancak, yalnızca bir sınıf tanımlama yeterli değildir, ayrıca Sıralayıcı, yönetilmeyen yapı için sınıf alanları eşlemeyle ilgili bilgi istemek gerekir. Burada `StructLayout` özniteliği yararlı olur.
+Bir yapının tür sıralaması, yönetilmeyen bir yönteme nasıl geçmektir. Örneğin, yönetilmeyen yöntemlerin bazıları parametre olarak bir yapı gerektirir. Bu durumlarda, bir parametre olarak kullanmak için, dünyanın yönetilen bölümünde karşılık gelen bir yapı veya bir sınıf oluşturmanız gerekir. Ancak, sınıfı tanımlamak yeterli değildir, Ayrıca, sınıf içindeki alanların yönetilmeyen yapıya nasıl eşlenmediğini de belirlemeniz gerekir. `StructLayout` Burada öznitelik faydalı olur.
 
 ```csharp
 [DllImport("kernel32.dll")]
@@ -121,7 +121,7 @@ public static void Main(string[] args) {
 }
 ```
 
-Önceki kod çağırma basit bir örneğini gösterir `GetSystemTime()` işlevi. 4\. satırda ilginç bitidir. Öznitelik sınıfı alanlarını (yönetilmeyen) diğer tarafında struct sırayla eşlenmelidir belirtir. Bu adlandırma alanlarını'aşağıdaki örnekte gösterilen yönetilmeyen yapının karşılık gerektiğinde yalnızca bunların sırası önemlidir, önemli olmadığı anlamına gelir:
+Önceki kod, `GetSystemTime()` işlevine çağırmanın basit bir örneğini gösterir. İlginç bit 4. satırda. Özniteliği, sınıfın alanlarının diğer (yönetilmeyen) taraftaki yapıya sırayla eşlenmesi gerektiğini belirtir. Bu, alanların adlandırılmasının önemli olmadığı, yönetilmeyen yapısına karşılık gelmesi gerektiğinden, aşağıdaki örnekte gösterildiği gibi, yalnızca kendi sırası önemli değildir.
 
 ```c
 typedef struct _SYSTEMTIME {
@@ -133,7 +133,7 @@ typedef struct _SYSTEMTIME {
   WORD wMinute;
   WORD wSecond;
   WORD wMilliseconds;
-} SYSTEMTIME, *PSYSTEMTIME*;
+} SYSTEMTIME, *PSYSTEMTIME;
 ```
 
-Bazen, yapı için hazırlama varsayılan gerekenler yapmaz. [Yapısı hazırlama özelleştirme](./customize-struct-marshaling.md) makale yapınızı nasıl sıralanır özelleştirme öğretir.
+Bazen yapınızın varsayılan sıralaması, ihtiyacınız olan şeyi yapmaz. [Yapı sıralamasını özelleştirme](./customize-struct-marshaling.md) makalesi, yapınızın nasıl sıralanmasını nasıl özelleştireceğinizi öğretir.

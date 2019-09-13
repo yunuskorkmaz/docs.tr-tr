@@ -1,113 +1,114 @@
 ---
-title: Yerel birlikte çalışabilirliği en iyi uygulamalar - .NET
-description: . NET'te yerel bileşenleriyle arabirim için en iyi uygulamaları öğrenin.
+title: Yerel birlikte çalışabilirlik en iyi uygulamaları-.NET
+description: .NET 'teki yerel bileşenlerle arabirimlendirme için en iyi uygulamaları öğrenin.
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: 09b25ed10958142f8eead6761f18bccbe2645448
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 0405fd5aef9d89fc1f47123ed358e6358656d95b
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063088"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70923764"
 ---
-# <a name="native-interoperability-best-practices"></a>Yerel birlikte çalışabilirliği en iyi uygulamalar
+# <a name="native-interoperability-best-practices"></a>Yerel birlikte çalışabilirlik en iyi uygulamaları
 
-.NET yerel birlikte çalışabilirliği kodunuzu özelleştirmek için yol çeşitli sağlar. Bu makalede, Microsoft'un .NET ekipleri için yerel birlikte çalışabilirliği izleyin kılavuz içerir.
+.NET, yerel birlikte çalışabilirlik kodunuzu özelleştirmek için kullanabileceğiniz çeşitli yollar sunar. Bu makale, Microsoft 'un .NET ekiplerinin yerel birlikte çalışabilirlik için izlediği yönergeleri içerir.
 
 ## <a name="general-guidance"></a>Genel rehber
 
-Birlikte çalışma tüm senaryolarda bu bölümdeki yönergeler geçerlidir.
+Bu bölümdeki kılavuz tüm birlikte çalışma senaryoları için geçerlidir.
 
-- **✔️ YAPMAK** yöntem ve parametreler için çağırmak istediğiniz yerel yöntemi olarak aynı adlandırma ve büyük/küçük harf kullanın.
-- **✔️ DÜŞÜNÜN** aynı adlandırma ve büyük/küçük harf sabit değerleri için kullanma.
-- **✔️ YAPMAK** yakın eşleme için yerel türü .NET türlerini kullanın. Örneğin, C#, kullanın `uint` yerel bir tür olduğunda `unsigned int`.
-- **✔️ YAPMAK** yalnızca `[In]` ve `[Out]` istediğiniz davranışı varsayılan davranışı farklılık gösterdiğinde öznitelikleri.
-- **✔️ DÜŞÜNÜN** kullanarak <xref:System.Buffers.ArrayPool%601?displayProperty=nameWithType> , yerel bir dizi arabellek havuzu için.
-- **✔️ DÜŞÜNÜN** , P/Invoke bildirimleri ile aynı ada ve büyük/küçük harf, yerel kitaplık olarak sınıfında kaydırma.
-  - Böylece, `[DllImport]` öznitelikler C# `nameof` yerel kitaplık adını geçirin ve yerel kitaplık adını yazsanız yaramadı emin olmak için dil özelliğidir.
+- **✔️** , yöntemlerinizi ve parametreleriniz için, çağırmak istediğiniz yerel yöntem olarak aynı adlandırma ve büyük harfleri kullanır.
+- **✔️** sabit değerler için aynı adlandırma ve büyük harfleri kullanmayı düşünün.
+- **✔️** , yerel türe en yakın eşleme olan .NET türlerini kullanır. Örneğin, ' de C#, yerel `uint` tür `unsigned int`olduğunda kullanın.
+- **✔️** yalnızca, istediğiniz `[In]` davranış `[Out]` varsayılan davranıştan farklı olduğunda ve özniteliklerini kullanır.
+- **✔️** , yerel <xref:System.Buffers.ArrayPool%601?displayProperty=nameWithType> dizi arabelleklerinizi havuza almak için kullanmayı düşünün.
+- **✔️** , P/Invoke bildirimlerinizi yerel kitaplığınız ile aynı ada ve büyük harfe sahip bir sınıfta Sarmalamanızı düşünün.
+  - Bu, `[DllImport]` özniteliklerin yerel kitaplığın adını geçirmek C# `nameof` için dil özelliğini kullanmasını sağlar ve yerel kitaplığın adını yanlış yazmadığınızdan emin olun.
 
-## <a name="dllimport-attribute-settings"></a>DllImport özniteliği ayarları
+## <a name="dllimport-attribute-settings"></a>DllImport öznitelik ayarları
 
 | Ayar | Varsayılan | Öneri | Ayrıntılar |
 |---------|---------|----------------|---------|
-| <xref:System.Runtime.InteropServices.DllImportAttribute.PreserveSig>   | `true` |  Varsayılan koruyun  | Bu açıkça false, başarısız HRESULT dönüş değerine ayarlandığında, özel durumları kapatılacak (ve sonuç olarak tanımındaki dönüş değeri null olur).|
-| <xref:System.Runtime.InteropServices.DllImportAttribute.SetLastError> | `false`  | API'ye bağlıdır  | Bunu Marshal.GetLastWin32Error değerini almak için kullanın ve API GetLastError kullanıyorsa true olarak ayarlayın. API hata var olmadığını belirten bir koşul ayarlar, yanlışlıkla üzerine zorunda kalmamak için diğer aramaları yapmadan önce hata alırsınız.|
-| <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet> | `CharSet.None`, hangi gördükleri `CharSet.Ansi` davranışı  | Açıkça kullanın `CharSet.Unicode` veya `CharSet.Ansi` dize ve karakter olduğunda tanımında mevcut | Bu dizeler ve hangi sıralama davranışını belirtir `ExactSpelling` ne zaman mu `false`. Unutmayın `CharSet.Ansi` gerçekten UNIX üzerinde UTF8'dir. _Çoğu_ UNIX UTF8 kullanırken saati Unicode Windows kullanır. Daha fazla bilgi görmek [charsets belgelerine](./charset.md). |
-| <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling> | `false` | `true`             | Doğru ve çalışma zamanı değerine bağlı olarak bir "A" veya "W" soneki ile alternatif işlev adlarını aramaz gibi küçük bir performans kazancı elde etmek için bunu ayarlayın `CharSet` ayarı ("A" `CharSet.Ansi` ve "W" `CharSet.Unicode`). |
+| <xref:System.Runtime.InteropServices.DllImportAttribute.PreserveSig>   | `true` |  Varsayılanı tut  | Bu açık olarak yanlış olarak ayarlandığında, başarısız HRESULT dönüş değerleri özel durumlara açılır (ve tanımdaki dönüş değeri sonuç olarak null olur).|
+| <xref:System.Runtime.InteropServices.DllImportAttribute.SetLastError> | `false`  | API 'ye bağlıdır  | API GetLastError kullanıyorsa bunu true olarak ayarlayın ve değeri almak için Marshal. GetLastWin32Error kullanın. API bir hata olduğunu bildiren bir koşul ayarlarsa, yanlışlıkla üzerine yazılmasını önlemek için başka çağrılar yapmadan önce hatayı alın.|
+| <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet> | `CharSet.None`, `CharSet.Ansi` davranışa geri döner  | Tanımda `CharSet.Unicode` dizeler `CharSet.Ansi` veya karakterler varsa, açıkça kullanın | Bu, dizelerin sıralama davranışını ve ne zaman `ExactSpelling` `false`yapılacağını belirtir. `CharSet.Ansi` Bunun aslında UNIX üzerinde UTF8 olduğunu unutmayın. _Çoğu_ zaman Windows Unicode kullanır, ancak UNIX UTF8 kullanır. [Değiştirmeye belgeleri](./charset.md)hakkında daha fazla bilgi için bkz. |
+| <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling> | `false` | `true`             | Bunu true olarak ayarlayın ve çalışma zamanı, `CharSet` ayarın değerine bağlı olarak bir "a" veya "w" sonekiyle (için `CharSet.Unicode`"a `CharSet.Ansi` " ve "w") farklı işlev adlarını araymaz. |
 
-## <a name="string-parameters"></a>Dizesi parametreleri
+## <a name="string-parameters"></a>Dize parametreleri
 
-Ne zaman karakter Unicode veya bağımsız değişken olarak açıkça işaretlenmiş `[MarshalAs(UnmanagedType.LPWSTR)]` _ve_ dizeyi değere göre geçirilir (değil `ref` veya `out`), dize sabitlenebilir ve doğrudan yerel kod tarafından kullanılan (yerine kopyalandı).
+Karakter kümesi Unicode olduğunda veya bağımsız değişken açıkça `[MarshalAs(UnmanagedType.LPWSTR)]` olarak işaretlenmişse _ve_ dize `ref` `out`değer ile geçirildiğinde (değil), dize sabitlenir ve doğrudan yerel kod tarafından kullanılır (kopyalanmaktansa).
 
-İşaretlenecek unutmayın `[DllImport]` olarak `Charset.Unicode` , dizeleri ANSI işleme açıkça istemediğiniz sürece.
+Dizelerinizin ANSI düzeltmesini `[DllImport]` açıkça `Charset.Unicode` istemediğiniz sürece, işaretini işaretlemeyi unutmayın.
 
-**❌ SAĞLAMADIĞI** kullanın `[Out] string` parametreleri. Dize değeri ile tarafından geçirilen parametreler `[Out]` dize interned bir dize ise, öznitelik çalışma zamanı kararlılığını. Belgelerindeki dize kopyası kullanımı hakkında daha fazla bilgi <xref:System.String.Intern%2A?displayProperty=nameWithType>.
+**❌** Parametreleri kullanmayın `[Out] string` . Değer tarafından `[Out]` özniteliği ile geçirilen dize parametreleri, dize bir dizilmiş dize ise çalışma zamanının kararlılığını bozabilir. İçin <xref:System.String.Intern%2A?displayProperty=nameWithType>belgelerde dize oluşturma hakkında daha fazla bilgi görüntüleyin.
 
-**❌ KAÇININ** `StringBuilder` parametreleri. `StringBuilder` hazırlama *her zaman* yerel arabellek kopyasını oluşturur. Bu nedenle, son derece verimsiz olabilir. Bir dize alır bir Windows API'si çağırma tipik bir senaryo uygulayın:
+**❌ Önlemek** `StringBuilder` parametreleri. `StringBuilder`hazırlama *her zaman* yerel bir arabellek kopyası oluşturur. Bu nedenle, son derece verimsiz olabilir. Bir dize alan bir Windows API 'SI çağırmanın tipik senaryosunu gerçekleştirin:
 
-1. Bir SB (yönetilen kapasite ayırır) istenen kapasite oluşturma **{1}**
+1. İstenen kapasiteyi (yönetilen kapasiteyi ayırır) bir SB oluşturun **{1}**
 2. Çağır
-   1. Yerel bir arabelleği ayırır **{2}**  
-   2. İçeriği kopyalar `[In]` _(için varsayılan bir `StringBuilder` parametresi)_  
-   3. Yerel arabellek yönetilen yeni ayrılan bir diziye kopyalar `[Out]` **{3}** _(aynı zamanda varsayılan `StringBuilder`)_  
-3. `ToString()` henüz başka yönetilen diziye ayırır **{4}**
+   1. Yerel bir arabellek ayırır **{2}**  
+   2. `[In]` _( Bir`StringBuilder` parametre için varsayılan)_ içeriğini kopyalar  
+   3. Yerel arabelleği yeni ayrılmış bir yönetilen diziye `[Out]` **{3}** _(Ayrıca için `StringBuilder`varsayılan)_ kopyalar  
+3. `ToString()`henüz başka bir yönetilen diziyi ayırır **{4}**
 
-Diğer bir deyişle *{4}* yerel kodunun dışında bir dizesini almak için ayırma. Yeniden kullanmak için bunu sınırlandırmak için yapabileceğiniz en iyi olduğu `StringBuilder` başka bir çağrı ancak yine de yalnızca kazandırır *1* ayırma. Karakter arabellek önbellek ve kullanmak çok daha iyi `ArrayPool`-ardından ayırma için ulaşmak için `ToString()` arka arkaya çağrı.
+Bu, *{4}* yerel koddan bir dizeyi almak için ayırmaların bir dizesidir. Bunu sınırlamak için en iyi yöntem, `StringBuilder` başka bir çağrıda öğesini yeniden kullanmak olacaktır ancak yalnızca *1* ayırmayı kaydeder. ' Den `ArrayPool`bir karakter arabelleğini kullanmak ve önbelleğe almak çok daha iyidir. daha sonra, `ToString()` sonraki çağrılar için yalnızca ayırmaya erişebilirsiniz.
 
-Diğer sorun `StringBuilder` olduğundan, her zaman ilk null kadar geri dönüş arabelleğine kopyalar. Geçirilen geri dizeyi sonlandırılmış değil veya çift null ile sonlandırılmış bir dize ise, P/Invoke en iyi şekilde doğru değil.
+İle ilgili `StringBuilder` diğer sorun, geri dönüş arabelleğini her zaman ilk null değere kopyasın. Geçilen geri dize sonlandırılmazsa veya çift null ile sonlandırılmış bir dize ise, P/Invoke uygulamanız en iyi şekilde yanlış olur.
 
-Varsa, *yapmak* kullanın `StringBuilder`, bir son sorunu olan kapasite uğramadığını **değil** her zaman için birlikte çalışabilirlik alındığından bir gizli null içerir. Arabellek boyutu çoğu API'ler istediğiniz gibi yanlış bu kişiler için ortak olan *dahil olmak üzere* null. Bu boşa/gereksiz ayırmaları sonuçlanabilir. Ayrıca, bu sorunu en iyi duruma getirmesini çalışma zamanı engeller `StringBuilder` kopyaları en aza indirmek için hazırlama.
+Kullanıyorsanız`StringBuilder`, bir adet son Gotcha, kapasitenin birlikte çalışma içinde her zaman hesaba katılmış bir gizli null değer **içermemelidir** . Çoğu API 'nin, null değeri *de dahil olmak üzere* arabellek boyutunu istediği için bu, insanların bu yanlış alması yaygındır. Bu, harcanan/gereksiz ayırmalara neden olabilir. Ayrıca, bu Gotcha, çalışma zamanının kopyaları en `StringBuilder` aza indirmek için sıralama iyileştirmesine engel olur.
 
-**✔️ DÜŞÜNÜN** kullanarak `char[]`s bir `ArrayPool`.
+**✔️** `char[]` içinden`ArrayPool`' i kullanmayı düşünün.
 
-Dize sıralama ile ilgili daha fazla bilgi için bkz: [dizeler için varsayılan hazırlama](../../framework/interop/default-marshaling-for-strings.md) ve [dize sıralama özelleştirme](customize-parameter-marshaling.md#customizing-string-parameters).
+Dize sıralaması hakkında daha fazla bilgi için bkz. [dizeler Için varsayılan sıralama](../../framework/interop/default-marshaling-for-strings.md) ve [dize sıralamasını özelleştirme](customize-parameter-marshaling.md#customizing-string-parameters).
 
-> __Windows özel__  
-> İçin `[Out]` CLR dizeleri kullanacağı `CoTaskMemFree` boş dizeler için varsayılan veya `SysStringFree` olarak işaretlenmiş dizeler `UnmanagedType.BSTR`.  
-**Bir çıkış dizesi arabelleği ile çoğu API'ler için:**  
-> Geçirilen null karakter sayısı içermesi gerekir. Döndürülen değer geçirilen küçükse karakter sayısına çağrısı başarılı oldu ve karakter sayısını değerdir *olmadan* sondaki null. Aksi takdirde sayısı gerekli arabellek boyutu: *dahil olmak üzere* null karakteri.  
-> - 5'te geçmek için 4 alın: 4 dizedir ile uzun sondaki null karakter.
-> - 5'te geçmek için 6 alın: Bir dizedir 5 karakter uzunluğunda olmalı, boş tutmak için 6 karakter arabelleği gerekir.  
-> [Windows veri türleri için dizeleri](/windows/desktop/Intl/windows-data-types-for-strings)
+> __Windows 'a özgü__  
+> CLR 'nin varsayılan olarak boş dizeler `CoTaskMemFree` veya `SysStringFree` olarak `UnmanagedType.BSTR`işaretlenen dizeler için kullanacağı dizeler.`[Out]`  
+**Çıkış dizesi arabelleğine sahip çoğu API için:**  
+> Geçirilen karakter sayısı null içermelidir. Döndürülen değer geçilen karakter sayısından küçükse, çağrı başarılı olur ve değer sondaki null *olmayan* karakter sayısıdır. Aksi takdirde, sayı null karakter *dahil olmak üzere* arabelleğin gerekli boyutudur.  
+>
+> - 5 ' te geçiş yapın, 4 alın: Dize, sonunda null olan 4 karakter uzunluğundadır.
+> - 5 ' te geçiş yapın, 6 alın: Dize 5 karakter uzunluğundadır, null tutacak bir 6 karakter arabelleğinin olması gerekir.  
+> [Dizeler için Windows veri türleri](/windows/desktop/Intl/windows-data-types-for-strings)
 
-## <a name="boolean-parameters-and-fields"></a>Boole parametreler ve alanlar
+## <a name="boolean-parameters-and-fields"></a>Boole parametreleri ve alanları
 
-Boole değerlerini uğraşmanız kolaydır. Varsayılan olarak, bir .NET `bool` için bir Windows sıralanmış `BOOL`, bir 4 baytlık değer olduğu. Ancak, `_Bool`, ve `bool` türleri C ve C++'ta bir *tek* bayt. Bu sabit yarı dönüş değeri, hangi yalnızca atılacak olarak hataları izlemek için açabilir *potansiyel olarak* sonucu değiştirin. .NET hazırlama hakkında bilgi için daha fazla bilgi için `bool` C değerleri veya C++ `bool` türleri, şirket belgelerine bakın [Boole alanı hazırlama özelleştirme](customize-struct-marshaling.md#customizing-boolean-field-marshaling).
+Boole değerleri daha kolay. Varsayılan olarak, .net `bool` , 4 baytlık bir değer olan bir Windows `BOOL`için sıralanır. Ancak, ve C C++ içindeki ve türleritekbirbayttır.`bool` `_Bool` Bu, dönüş değerinin atıldığı ve yalnızca *büyük olasılıkla* sonucu değiştirecek olan hataları takip etmek zor olabilir. .Net `bool` değerlerini C veya C++ `bool` türlerine hazırlama hakkında daha fazla bilgi için, [Boole alanı sıralamasını özelleştirme](customize-struct-marshaling.md#customizing-boolean-field-marshaling)hakkındaki belgelere bakın.
 
-## <a name="guids"></a>GUID'ler
+## <a name="guids"></a>Yapılamıyor
 
-GUID'ler, dosyalardaki imzaları doğrudan kullanılabilir. Birçok Windows apı'lerinizle `GUID&` tür diğer adları gibi `REFIID`. Başvuru tarafından geçirilen, bunlar ya da geçirilebilir `ref` veya `[MarshalAs(UnmanagedType.LPStruct)]` özniteliği.
+GUID 'Ler doğrudan imzalarda kullanılabilir. Birçok Windows API 'si `GUID&` , gibi `REFIID`tür diğer adlarını alır. Ref tarafından geçirildiğinde, `ref` ya `[MarshalAs(UnmanagedType.LPStruct)]` da özniteliğiyle geçirilebilir.
 
-| GUID | Başvuru tarafından GUID |
+| GUID | -Başvuru GUID 'SI |
 |------|-------------|
 | `KNOWNFOLDERID` | `REFKNOWNFOLDERID` |
 
-**❌ SAĞLAMADIĞI** kullanım `[MarshalAs(UnmanagedType.LPStruct)]` dışındaki her şey için `ref` GUID parametreleri.
+**❌** GUID`ref` parametrelerinden başka bir şey için kullanın `[MarshalAs(UnmanagedType.LPStruct)]` .
 
-## <a name="blittable-types"></a>Blok halinde kopyalanabilir türler
+## <a name="blittable-types"></a>Blittable türleri
 
-Blittable türleri aynı bit düzeyinde gösterimine sahip yönetilen ve yerel kodda türleridir. Bu nedenle bunlar için ve yerel koddan sıralanması başka bir biçime dönüştürülüp gerekmez ve bu performansı artırmak amacıyla, tercih edilen olmalıdır.
+Blittable türleri, yönetilen ve yerel kodda aynı bit düzeyi gösterimine sahip olan türlerdir. Bu şekilde, yerel koda ve yerel koddan sıralanmaları için başka bir biçime dönüştürülmesi gerekmez ve bu da performansı artırdığı için tercih edilmelidir.
 
 **Blittable türleri:**
 
 - `byte`, `sbyte`, `short`, `ushort`, `int`, `uint`, `long`, `ulong`, `single`, `double`
-- iç içe olmayan tek boyutlu diziler blittable türleri (örneğin, `int[]`)
-- yapıları ve sınıfları sabit düzen ile yalnızca blittable değere sahip türleri örneği için alanları
-  - Sabit Düzen gerektirir `[StructLayout(LayoutKind.Sequential)]` veya `[StructLayout(LayoutKind.Explicit)]`
-  - Yapı birimleridir `LayoutKind.Sequential` varsayılan olarak, sınıflardır. `LayoutKind.Auto`
+- blittable türlerin iç içe olmayan tek boyutlu dizileri (örneğin, `int[]`)
+- örnek alanlar için yalnızca blittable değer türlerine sahip sabit düzenine sahip yapılar ve sınıflar
+  - Sabit düzen için `[StructLayout(LayoutKind.Sequential)]` veya`[StructLayout(LayoutKind.Explicit)]`
+  - yapılar varsayılan `LayoutKind.Sequential` olarak, sınıflardır`LayoutKind.Auto`
 
-**Blittable değil:**
+**Blittable DEĞIL:**
 
 - `bool`
 
-**BAZEN blittable:**
+**Bazen blittable:**
 
 - `char`, `string`
 
-Blittable türleri başvuruya göre geçirildiğinde, bunlar yalnızca bir ara arabelleğe kopyalanan yerine marshaller tarafından sabitlenmiş. (Sınıflar kendiliğinden başvuruya göre geçirilen, yapılar ile kullanıldığında başvuruyla geçirilir `ref` veya `out`.)
+Blittable türleri başvuru ile geçirildiğinde, bir ara belleğe kopyalamak yerine yalnızca hazırlayıcısı tarafından sabitlenmiştir. (Sınıflar kendiliğinden başvuruya göre geçirilir, yapılar veya `ref` `out`ile kullanıldığında başvuruya göre geçirilir.)
 
-`char` Blittable bir tek boyutlu dizisi olan **veya** parçası ise onu içeren bir türe açıkça ile işaretlenmiş `[StructLayout]` ile `CharSet = CharSet.Unicode`.
+`char`tek boyutlu bir dizide **veya** ile birlikte `[StructLayout]` `CharSet = CharSet.Unicode`açık olarak işaretlenen bir türün parçasıysa blittable.
 
 ```csharp
 [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Unicode)]
@@ -117,24 +118,24 @@ public struct UnicodeCharStruct
 }
 ```
 
-`string` Blittable başka bir tür içinde yer alan değildir ve bu ile işaretlenmiş bir bağımsız değişken olarak Geçirilmekte olan `[MarshalAs(UnmanagedType.LPWStr)]` veya `[DllImport]` sahip `CharSet = CharSet.Unicode` ayarlayın.
+`string`blittable, başka bir türde yoksa ve ile `[MarshalAs(UnmanagedType.LPWStr)]` `[DllImport]` `CharSet = CharSet.Unicode` işaretlenmiş bir bağımsız değişken olarak geçirilir.
 
-Sabitlenmiş oluşturulmaya çalışılırken tarafından bir türü blok halinde kopyalanabilir olup olmadığını görebilirsiniz `GCHandle`. Türü bir dize değilse veya kabul blittable, `GCHandle.Alloc` oluşturmaz bir `ArgumentException`.
+Bir türün blittable olup olmadığını, sabitlenmiş `GCHandle`bir oluşturma girişiminde görebilirsiniz. Tür bir dize değilse veya blittable `GCHandle.Alloc` `ArgumentException`olarak kabul edilir.
 
-**✔️ YAPMAK** mümkün olduğunda, yapıları blittable olun.
+**✔️** yapılarınızı mümkün olduğunca blittable yapın.
 
 Daha fazla bilgi için bkz.:
 
 - [Blok Halinde Kopyalanabilir ve Kopyalanamaz Türler](../../framework/interop/blittable-and-non-blittable-types.md)  
-- [Sıralama türü](type-marshaling.md)
+- [Tür sıralaması](type-marshaling.md)
 
-## <a name="keeping-managed-objects-alive"></a>Canlı tutma yönetilen nesneler
+## <a name="keeping-managed-objects-alive"></a>Yönetilen nesneleri canlı tutma
 
-`GC.KeepAlive()` KeepAlive yöntemi isabet kadar nesne kapsam içinde kalır sağlayacaktır.
+`GC.KeepAlive()`bir nesnenin, KeepAlive yöntemi vurana kadar kapsamda kalmasını güvence altına alınır.
 
-[`HandleRef`](xref:System.Runtime.InteropServices.HandleRef) bir nesne bir P/Invoke süresi boyunca Canlı tutmak marshaller sağlar. Yerine kullanılabilir `IntPtr` yöntem imzaları içinde. `SafeHandle` etkili bir şekilde bu sınıfı değiştirir ve bunun yerine kullanılmalıdır.
+[`HandleRef`](xref:System.Runtime.InteropServices.HandleRef)hazırlayıcısı 'in bir P/Invoke süresince bir nesneyi canlı tutmaya izin verir. Yöntemi, yöntem imzaları yerine `IntPtr` kullanılabilir. `SafeHandle`Bu sınıfın yerini etkin bir şekilde değiştirir ve bunun yerine kullanılmalıdır.
 
-[`GCHandle`](xref:System.Runtime.InteropServices.GCHandle) yönetilen bir nesnenin sabitleme ve yerel işaretçi kendisine alma sağlar. Temel modelidir:  
+[`GCHandle`](xref:System.Runtime.InteropServices.GCHandle)yönetilen bir nesnenin sabitlenmesini ve yerel işaretçisine alınmasını sağlar. Temel model:  
 
 ```csharp
 GCHandle handle = GCHandle.Alloc(obj, GCHandleType.Pinned);
@@ -142,7 +143,7 @@ IntPtr ptr = handle.AddrOfPinnedObject();
 handle.Free();
 ```
 
-İçin varsayılan olmayan sabitleme `GCHandle`. Diğer önemli bir başvuru yerel kod aracılığıyla yönetilen bir nesne ve genellikle bir geri çağırma ile yönetilen kod için geri geçirmek için modelidir. Bu düzen aşağıdaki gibidir:
+Sabitleme için `GCHandle`varsayılan değer değildir. Diğer büyük model, yerel kod aracılığıyla yönetilen bir nesneye başvuru geçirmek ve genellikle bir geri çağırma ile yönetilen koda geri dönmek içindir. Bu, şu şekildedir:
 
 ```csharp
 GCHandle handle = GCHandle.Alloc(obj);
@@ -156,15 +157,15 @@ object managedObject = handle.Target;
 handle.Free();
 ```
 
-Gerektiğini unutmayın `GCHandle` bellek sızıntılarını önlemek için açıkça boşaltılması gerekiyor.
+Bellek sızıntılarını `GCHandle` önlemek için açıkça serbest bırakılmış olması gerektiğini unutmayın.
 
 ## <a name="common-windows-data-types"></a>Ortak Windows veri türleri
 
-İşte sık kullanılan Windows API'leri ve hangi veri türlerinin bir listesi C# Windows koda çağrılırken kullanılacak türleri.
+Windows API 'Lerinde yaygın olarak kullanılan ve Windows koduna çağrı yaparken kullanılacak türleri içeren C# bir veri türleri listesi aşağıda verilmiştir.
 
-Aynı boyutta adlarını rağmen 32-bit ve 64-bit Windows üzerinde türleridir.
+Aşağıdaki türler, adlarına rağmen 32-bit ve 64-bit Windows üzerinde aynı boyutlardır.
 
-| Genişlik | Windows          | C (Windows)          | C#       | Alternatif                          |
+| Genişlik | Windows          | C (Windows)          | C#       | Yapıyı                          |
 |:------|:-----------------|:---------------------|:---------|:-------------------------------------|
 | 32    | `BOOL`           | `int`                | `int`    | `bool`                               |
 | 8     | `BOOLEAN`        | `unsigned char`      | `byte`   | `[MarshalAs(UnmanagedType.U1)] bool` |
@@ -188,9 +189,9 @@ Aynı boyutta adlarını rağmen 32-bit ve 64-bit Windows üzerinde türleridir.
 | 32    | `HRESULT`        | `long`               | `int`    |                                      |
 | 32    | `NTSTATUS`       | `long`               | `int`    |                                      |
 
-İşaretçisi olan aşağıdaki türleri, platform genişliğini izleyin. Kullanım `IntPtr` / `UIntPtr` bu.
+Aşağıdaki türler, işaretçiler olması, platformun genişliğini izler. Bunlar `IntPtr` için kullanın. / `UIntPtr`
 
-| İşaretçi türleri imzalı (kullanın `IntPtr`) | İşaretsiz işaretçi türleri (kullanın `UIntPtr`) |
+| İmzalı Işaretçi türleri (kullanım `IntPtr`) | İşaretsiz Işaretçi türleri (kullanım `UIntPtr`) |
 |:------------------------------------|:---------------------------------------|
 | `HANDLE`                            | `WPARAM`                               |
 | `HWND`                              | `UINT_PTR`                             |
@@ -200,7 +201,7 @@ Aynı boyutta adlarını rağmen 32-bit ve 64-bit Windows üzerinde türleridir.
 | `LONG_PTR`                          |                                        |
 | `INT_PTR`                           |                                        |
 
-Bir Windows `PVOID` C olduğu `void*` olarak sıralanabilir `IntPtr` veya `UIntPtr`, ancak tercih `void*` mümkün olduğunda.
+C `PVOID` olan`void*` bir Windows ya `IntPtr` `void*` da olarak sıralanabilir, ancak mümkün olduğunda tercih edilebilir. `UIntPtr`
 
 [Windows veri türleri](/windows/desktop/WinProg/windows-data-types)
 
@@ -208,19 +209,19 @@ Bir Windows `PVOID` C olduğu `void*` olarak sıralanabilir `IntPtr` veya `UIntP
 
 ## <a name="structs"></a>Yapılar
 
-Yönetilen yapıları yığında oluşturulur ve yöntem dönene kadar kaldırılmaz. Ardından tanımı gereği, bunlar "Sabitlenen" (atık toplama tarafından taşınması gerekmez). Yerel kod geçerli yönteminin sonuna işaretçiyi kullanmaz, blok içinde güvenli olmayan kod adresi kısaca alabilir.
+Yönetilen yapılar yığında oluşturulur ve Yöntem dönene kadar kaldırılmaz. Daha sonra, tanım olarak "sabitlenmiş" olur (GC tarafından taşınmaz). Ayrıca, yerel kod geçerli yöntemin sonundan sonra işaretçiyi kullanmayacaksa, güvenli olmayan kod bloklarıyla adresi de alabilirsiniz.
 
-Blok halinde kopyalanabilir, yalnızca doğrudan hazırlama katmanı tarafından kullanılabilmesi için çok daha yüksek performanslı birimleridir. Yapılar blittable yapmayı denerseniz (örneğin, kaçının `bool`). Daha fazla bilgi için [türlerse](#blittable-types) bölümü.
+Blittable yapılar, doğrudan hazırlama katmanı tarafından yalnızca kullanılabilecek şekilde daha fazla performanızdır. Yapıları blittable yapmayı deneyin (örneğin, kullanmaktan kaçının `bool`). Daha fazla bilgi için [blittable Types](#blittable-types) bölümüne bakın.
 
-*Varsa* blittable struct, kullanın `sizeof()` yerine `Marshal.SizeOf<MyStruct>()` daha iyi performans için. Yukarıda belirtildiği gibi bir sabitlenmiş oluşturulmaya çalışılırken tarafından türü blittable olduğunu doğrulayabilirsiniz `GCHandle`. Türü bir dize değilse veya kabul blittable, `GCHandle.Alloc` oluşturmaz bir `ArgumentException`.
+Yapı *blittable ise,* daha iyi performans `sizeof()` `Marshal.SizeOf<MyStruct>()` için yerine kullanın. Yukarıda da belirtildiği gibi, sabitlenmiş bir sabitlenmiş `GCHandle`oluşturma girişiminde, türün blittable olduğunu doğrulayabilirsiniz. Tür bir dize değilse veya blittable olarak kabul edilir, `GCHandle.Alloc` bir `ArgumentException`oluşturur.
 
-Yapılar tanımlarında işaretçileri ya da geçirilmelidir `ref` veya `unsafe` ve `*`.
+Tanımlarda yapıların işaretçilerine ya da `ref` `unsafe` ile `*`geçirilmesi gerekir.
 
-**✔️ YAPMAK** yönetilen yapı şekil ve resmi platformu belgeleri veya üstbilgi kullanılan adları için mümkün olduğunca aynı.
+**✔️** , resmi platform belgelerinde veya üstbilgisinde kullanılan şekle ve adlara göre, yönetilen yapı ile mümkün olduğunca yakından eşleşir.
 
-**✔️ YAPMAK** kullanın C# `sizeof()` yerine `Marshal.SizeOf<MyStruct>()` performansını artırmak blittable yapıları için.
+**✔️** C# ,`sizeof()` performansı artırmak için blittable `Marshal.SizeOf<MyStruct>()` yapılarını yerine kullanın.
 
-Bir dizi ister `INT_PTR Reserved1[2]` iki olarak sıralanması gereken `IntPtr` alanları `Reserved1a` ve `Reserved1b`. Yerel bir dizi temel bir tür olduğunda, kullanabiliriz `fixed` biraz daha temiz bir şekilde yazmak için anahtar sözcüğü. Örneğin, `SYSTEM_PROCESS_INFORMATION` şöyle görünür yerel başlığı:
+Benzer `INT_PTR Reserved1[2]` bir dizi iki `IntPtr` alan `Reserved1a` için sıralanmalıdır ve `Reserved1b`. Yerel dizi basit bir tür olduğunda, `fixed` anahtar sözcüğünü kullanarak biraz daha düzgün bir şekilde yazabilirsiniz. Örneğin, `SYSTEM_PROCESS_INFORMATION` yerel üst bilgisinde şöyle görünür:
 
 ```c
 typedef struct _SYSTEM_PROCESS_INFORMATION {
@@ -232,7 +233,7 @@ typedef struct _SYSTEM_PROCESS_INFORMATION {
 } SYSTEM_PROCESS_INFORMATION
 ```
 
-İçinde C#, şöyle yazabiliriz:
+' C#De, bunu şöyle yazalım:
 
 ```csharp
 internal unsafe struct SYSTEM_PROCESS_INFORMATION
@@ -245,4 +246,4 @@ internal unsafe struct SYSTEM_PROCESS_INFORMATION
 }
 ```
 
-Ancak, bazı tuzakları sabit arabellekler ile vardır. Yerinde dizi kullanıma birden çok ayrı ayrı alanlara genişletilmesi gerekir kopyalanamaz türler, sabit arabellekleri doğru sıralanması olmaz. Bir sabit arabellek alanı içeren bir yapı kopyalanamaz yapı birimi içinde iç içe ek olarak, .NET Framework ve .NET Core 3.0 önce sabit arabellek alanı doğru yerel kod olarak sıralanması olmaz.
+Ancak, sabit arabelleklerle bazı tuzakları vardır. Blittable olmayan türlerin sabit arabellekleri doğru sıralanmayacak, bu nedenle yerinde dizinin birden çok ayrı alana genişletilmesi gerekir. Ayrıca, .NET Framework ve .NET Core 'da 3,0 öncesinde, sabit bir arabellek alanı içeren bir struct, blittable olmayan bir yapı içinde iç içe geçmişse, sabit arabellek alanı yerel koda doğru şekilde sıralanmayacaktır.

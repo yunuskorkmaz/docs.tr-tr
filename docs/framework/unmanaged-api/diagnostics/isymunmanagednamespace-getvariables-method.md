@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c5b65cdeb36b8abf17c74d41a7fc7dfb34fa5731
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 813f57377c1885b09190ada3c73f4391a3f2d931
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61939496"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70895054"
 ---
 # <a name="isymunmanagednamespacegetvariables-method"></a>ISymUnmanagedNamespace::GetVariables Metodu
-Bu ad alanı içinde genel kapsamda tanımlanan tüm değişkenler döndürür.  
+Bu ad alanı içinde genel kapsamda tanımlanan tüm değişkenleri döndürür.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```cpp
 HRESULT GetVariables(  
     [in]  ULONG32  cVars,  
     [out] ULONG32  *pcVars,  
@@ -39,19 +39,19 @@ HRESULT GetVariables(
   
 ## <a name="parameters"></a>Parametreler  
  `cVars`  
- [in] A `ULONG32` boyutunu gösteren `pVars` dizisi.  
+ 'ndaki Dizi`pVars` boyutunu belirten bir `ULONG32` .  
   
  `pcVars`  
- [out] Bir işaretçi bir `ULONG32` ad alanlarını içerecek şekilde gerekli arabellek boyutunu alır.  
+ dışı Ad alanlarını içermesi için `ULONG32` gereken arabellek boyutunu alan bir işaretçisi.  
   
  `pVars`  
- [out] Ad alanlarını içeren arabellek için işaretçi.  
+ dışı Ad alanlarını içeren bir arabelleğin işaretçisi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
+ Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAıL veya diğer bir hata kodu.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Üst bilgi:** CorSym.idl, CorSym.h  
+ **Üst bilgi** CorSym. IDL, CorSym. h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

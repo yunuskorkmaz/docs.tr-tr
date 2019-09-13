@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8aca5f00-d80e-4320-81b3-016d0466f7ee
-ms.openlocfilehash: 34f0a61329667a42aa42693e93169a5b6fb0aa5e
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 0f029c81dd6ba5cd5202e6e59f33edd7cf8c0b90
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70792046"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894447"
 ---
 # <a name="modifying-large-value-max-data-in-adonet"></a>ADO.NET İçinde Büyük Değerli (Maks) Verileri Değiştirme
 Büyük nesne (LOB) veri türleri, 8 kilobayt (KB) olan en büyük satır boyutunu aşacak olanlardır. SQL Server,, `max` ve `nvarchar` `varchar` veri`varbinary` türleri için, 2 ^ 32 bayt kadar büyük değerler depolamaya izin vermek için bir tanımlayıcı sağlar. Tablo sütunları ve Transact-SQL değişkenleri, `varchar(max)` `nvarchar(max)`veya `varbinary(max)` veri türlerini belirtebilir. ADO.net `max` ' de, veri türleri bir tarafından getirilebilir ve özel `DataReader`bir işleme olmadan hem giriş hem de çıkış parametre değerleri olarak belirtilebilir. Büyük `varchar` veri türleri için veriler artımlı olarak alınabilir ve güncelleştirilir.  
@@ -41,7 +41,7 @@ Büyük nesne (LOB) veri türleri, 8 kilobayt (KB) olan en büyük satır boyutu
   
  Aşağıdaki örnek, AdventureWorks örnek veritabanındaki ProductPhoto tablosuna bir fotoğraf ekler. `BULK OPENROWSET` Sağlayıcıyı kullanırken, her sütuna değer yerleştirmeseniz bile adlandırılmış sütun listesini sağlamanız gerekir. Bu örnekte birincil anahtar bir kimlik sütunu olarak tanımlanır ve sütun listesinden atlanabilir. Ayrıca, bu örnekte thumbnailPhoto olan `OPENROWSET` deyimin sonunda bir bağıntı adı belirtmeniz gerektiğini unutmayın. Bu, dosyanın yüklendiği `ProductPhoto` tablodaki sütunuyla ilişkili olur.  
   
-```  
+```sql  
 INSERT Production.ProductPhoto (  
     ThumbnailPhoto,   
     ThumbnailPhotoFilePath,   
@@ -78,7 +78,7 @@ FROM OPENROWSET
 ## <a name="example"></a>Örnek  
  Bu Transact-SQL örneği, AdventureWorks veritabanındaki belge tablosundaki bir `nvarchar(max)` sütun olan DocumentSummary içindeki kısmi bir değeri günceller. "Bileşenler" sözcüğünün yerini, var olan verilerde değiştirilecek sözcüğün başlangıç konumunu (kaydır) ve değiştirilecek karakter sayısını (uzunluk) belirterek ' Özellikler ' sözcüğü ile değiştirilmiştir. Örnek, sonuçları karşılaştırmak için UPDATE deyiminden önce ve sonra SELECT deyimlerini içerir.  
   
-```  
+```sql
 USE AdventureWorks;  
 GO  
 --View the existing value.  
@@ -230,7 +230,7 @@ while (reader.Read())
 ## <a name="using-large-value-type-parameters"></a>Büyük değer türü parametrelerini kullanma  
  Büyük değer türleri nesnelerde, <xref:System.Data.SqlClient.SqlParameter> <xref:System.Data.SqlClient.SqlParameter> nesnelerde daha küçük değer türlerini kullandığınız şekilde de kullanılabilir. Aşağıdaki örnekte gösterildiği gibi büyük değer türlerini <xref:System.Data.SqlClient.SqlParameter> değer olarak alabilirsiniz. Kod, AdventureWorks örnek veritabanında aşağıdaki GetDocumentSummary saklı yordamının bulunduğunu varsayar. Saklı yordam adlı @DocumentID bir giriş parametresi alır ve @DocumentSummary çıkış parametresindeki DocumentSummary sütununun içeriğini döndürür.  
   
-```  
+```sql
 CREATE PROCEDURE GetDocumentSummary   
 (  
     @DocumentID int,  

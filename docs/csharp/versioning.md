@@ -1,68 +1,68 @@
 ---
-title: C# sürüm oluşturma - C# Kılavuzu
-description: Sürüm oluşturma, C# ve .NET dillerinde nasıl çalıştığını anlamak
+title: C#Sürüm oluşturma C# -kılavuz
+description: Sürüm oluşturma 'nın ve .NET C# 'te nasıl çalıştığını anlama
 ms.date: 01/08/2017
 ms.assetid: aa8732d7-5cd0-46e1-994a-78017f20d861
-ms.openlocfilehash: 9ba18f82ad83749d5333628bf4431a0282b0964f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bfad7abe6b2b5c6a19324656963a79212a317110
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61706162"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926588"
 ---
-# <a name="versioning-in-c"></a>C sürüm oluşturma\#
+# <a name="versioning-in-c"></a>C 'de sürüm oluşturma\#
 
-Bu öğreticide, hangi sürüm anlamına gelir. NET'te öğreneceksiniz. Ayrıca dikkat edilecek Etkenler öğreneceksiniz sürüm kitaplığınızı yanı sıra bir Kitaplığı'nın yeni bir sürüme yükseltme.
+Bu öğreticide .NET 'teki sürüm oluşturmanın ne anlama geldiğini öğreneceksiniz. Ayrıca, kitaplığınızın sürümü oluşturulurken göz önünde bulundurmanız gereken faktörleri ve yeni bir kitaplık sürümüne yükseltmeyi öğreneceksiniz.
 
-## <a name="authoring-libraries"></a>Geliştirme kitaplıkları
+## <a name="authoring-libraries"></a>Yazma kitaplıkları
 
-Genel kullanım için .NET kitaplıklarını oluşturan bir geliştirici olarak, seçtiğiniz en yeni güncelleştirmeleri almak için sahip olduğu durumlarda büyük olasılıkla bırakıldı. Sorunsuz geçiş kitaplığınızın yeni sürümü için mevcut kod olduğundan emin olmak gereken bu işlem hakkında nasıl gittiğiniz çok önemli. Yeni bir yayın oluştururken dikkate alınması gereken birkaç nokta şunlardır:
+Genel kullanım için .NET kitaplıkları oluşturmuş olan bir geliştirici olarak, büyük olasılıkla yeni güncelleştirmeleri almanız gereken durumlarda olabilirsiniz. Bu süreç hakkında daha fazla bilgi için, var olan kodun kitaplığınızın yeni sürümüne sorunsuz bir şekilde geçişini sağlamak için ihtiyacınız olduğu için çok önemlidir. Yeni bir sürüm oluştururken göz önünde bulundurmanız gereken birkaç nokta vardır:
 
-### <a name="semantic-versioning"></a>Semantic Versioning
+### <a name="semantic-versioning"></a>Anlamsal sürüm oluşturma
 
-[Semantic versioning](https://semver.org/) olduğu belirli aşama olayları belirtmek için kitaplık sürümleri için uygulanan bir adlandırma kuralı (kısaca SemVer).
-Kitaplığınızı size sürüm bilgilerini geliştiriciler bu eski sürümleri aynı kullanan projelerini uyumluluğunu belirlemek ideal olarak, yardımcı kitaplık.
+[Anlamsal sürüm oluşturma](https://semver.org/) (Short için SemVer), belirli kilometre taşı olaylarını belirtmek için kitaplığınızın sürümlerine uygulanan bir adlandırma kuralıdır.
+İdeal olarak, kitaplığınıza verdiğiniz sürüm bilgileri, geliştiricilerin, aynı kitaplığın eski sürümlerini kullanan projelerle uyumluluğunu belirlemesine yardımcı olmalıdır.
 
-En temel SemVer 3 bileşeni biçimi yaklaşımdır `MAJOR.MINOR.PATCH`burada:
+Semver 'e en temel yaklaşım, burada 3 bileşen biçimidir `MAJOR.MINOR.PATCH`:
 
-* `MAJOR` uyumsuz API değişiklik yaptığınızda artırılır
-* `MINOR` Geriye dönük uyumlu bir biçimde işlevselliği eklediğinizde artırılır
-* `PATCH` Geriye dönük uyumlu hata düzeltmeleri yaptığınızda artırılır
+* `MAJOR`uyumsuz API değişiklikleri yaptığınızda artırılır
+* `MINOR`işlevselliği geriye dönük olarak uyumlu bir şekilde eklediğinizde artırılır
+* `PATCH`, geriye dönük olarak uyumlu hata düzeltmeleri yaptığınızda artırılır
 
-Sürüm bilgileri .NET Kitaplığı'na uygularken yayın öncesi sürümleri vb. gibi diğer senaryoları belirtmek için yol vardır.
+Sürüm bilgilerini .NET kitaplığınıza uygularken yayın öncesi sürümler gibi başka senaryolar da belirtmek için de çeşitli yollar vardır.
 
 ### <a name="backwards-compatibility"></a>Geriye dönük uyumluluk
 
-Kitaplığınızın yeni sürümlerini yayınlama, geriye doğru önceki sürümlerle uyumluluk büyük olasılıkla önemli kaygılarınızdan olacaktır.
-Yeni bir sürüm kitaplığınızın yeni sürümle yeniden derlenen, önceki sürümünde bağlı olan kod işe önceki bir sürümü ile uyumlu kaynağıdır. Kitaplığınızı yeni bir sürümü eski bir sürümüne bağımlı olan bir uygulama yeniden derleme, yeni sürümle birlikte çalışabilir ikili uyumlu ise.
+Kitaplığınızın yeni sürümlerini serbest bırakmakta önceki sürümlerle geriye dönük uyumluluk, büyük ihtimalle önemli kaygılardan biri olacaktır.
+Önceki sürüme bağımlı olan kodun yeniden derlenmesi sırasında, yeni sürümle birlikte çalışarak kitaplığınızın yeni bir sürümü önceki bir sürümle kaynak uyumludur. Eski sürüme bağımlı bir uygulama, yeniden derleme olmadan yeni sürümle birlikte çalışarak kitaplığınızın yeni bir sürümü ikili uyumludur.
 
-Geriye dönük kitaplığınızın önceki sürümlerle uyumluluk sağlamak çalışırken dikkat etmeniz gerekenler şunlardır:
+Kitaplığınızın eski sürümleriyle geriye dönük uyumluluğu sürdürmeye çalışırken göz önünde bulundurmanız gereken bazı noktalar şunlardır:
 
-* Sanal yöntemler: Sanal bir yöntem, yeni sürümde sanal olmayan yaptığınızda bu yöntemi yok sayın projeleri güncelleştirilmesi gerektiği anlamına gelir. Bu büyük bir değişiklik olup kesinlikle önerilmez.
-* Yöntem imzaları: Yöntemi davranışı güncelleştirme imzası de değiştirmenizi gerektirir, böylece bu yönteme çağırma kod çalışmaya devam eder, bunun yerine bir aşırı oluşturmanız gerekir.
-Her zaman uygulama tutarlı kalması yeni yöntem imzasının çağırmak için eski yöntem imzası clı'yle de işleyebilirsiniz.
-* [Geçersiz öznitelik](programming-guide/concepts/attributes/common-attributes.md#Obsolete): Kodunuzda bu öznitelik, sınıfları veya kullanım dışı ve büyük olasılıkla olmasını sınıf üyeleri gelecek sürümleri kaldırıldı belirtmek için kullanabilirsiniz.
-Bu, kitaplığı kullanan geliştiriciler önemli değişiklikler için daha iyi hazırlıklı olmalarını sağlar.
-* İsteğe bağlı yöntem bağımsız değişkenleri: Ne zaman daha önce isteğe bağlı bir yöntem bağımsız değişkenleri zorunlu yapmak veya bu bağımsız değişken sağlamıyor tüm kod güncelleştirilmesi gereken sonra varsayılan değeri değiştirin.
+* Sanal Yöntemler: Yeni sürümünüzde sanal olmayan bir sanal yöntem yaptığınızda, bu yöntemi geçersiz kılan projelerin güncelleştirilmesini sağlamak anlamına gelir. Bu çok büyük bir değişiklik ve kesinlikle önerilmez.
+* Yöntem imzaları: Bir yöntem davranışını güncelleştirirken, onun imzasını da değiştirmeniz gerekir, bunun yerine bu yönteme çağrı yapan kodun çalışmaya devam etmesi için bir aşırı yükleme oluşturmanız gerekir.
+Uygulamanın tutarlı kalması için yeni yöntem imzasını çağırmak üzere, eski yöntem imzasını her zaman değiştirebilirsiniz.
+* [Eski öznitelik](programming-guide/concepts/attributes/common-attributes.md#Obsolete): Bu özniteliği kodunuzda bu özniteliği kullanarak kullanım dışı olan sınıfları veya sınıf üyelerini, gelecekteki sürümlerde de kaldırılmasını belirtebilirsiniz. Bu, kitaplığınızı kullanan geliştiricilerin, son değişiklikler için daha iyi hazırlanmasını sağlar.
+* İsteğe bağlı yöntem bağımsız değişkenleri: Daha önce isteğe bağlı yöntem bağımsız değişkenlerini zorunlu yaptığınızda veya varsayılan değerlerini değiştirirseniz, bu bağımsız değişkenleri sağlamadan tüm kodun güncellenmesi gerekecektir.
+
 > [!NOTE]
-> Özellikle yöntemin davranışı değişmez gerekiyorsa zorunlu bağımsız değişkenler isteğe bağlı yapmak çok az etkisi olması gerekir.
+> Zorunlu bağımsız değişkenleri isteğe bağlı hale getirmek, özellikle yöntemin davranışını değiştirmiyorsa çok az etkiye sahip olmalıdır.
 
-Kolay bir şekilde, kullanıcılarınızın erken yükseltecek yeni sürüme kitaplığınızın, daha büyük olasılıkla yükseltme yapmanız gerekir.
+Kullanıcılarınızın kitaplığınızın yeni sürümüne yükseltme yapmasını kolaylaştırır, daha önce yükseltebilecekleri büyük olasılıkla daha kolay olur.
 
 ### <a name="application-configuration-file"></a>Uygulama yapılandırma dosyası
 
-Çok yüksek kaybedilebilir önce karşılaştığınız bir .NET geliştiricisi olarak [ `app.config` dosya](../framework/configure-apps/file-schema/index.md) çoğu proje türlerinde mevcut.
-Bu basit bir yapılandırma dosyası, yeni güncelleştirme dağıtımı geliştirme içine uzun yol gidebilirsiniz. Genellikle Kitaplıklarınızı düzenli olarak değiştirmek büyük olasılıkla bilgiler depolanır şekilde tasarlamanız gerekir, `app.config` , böylece tür bilgileri güncelleştirilirken dosya eski sürümlerinin yapılandırma dosyası yalnızca yeni bir tane ile değiştirilmesi gerekiyor Kitaplığı yeniden derleniyor gerek olmadan.
+Bir .net geliştiricisi olarak çoğu proje türünde mevcut olan [ `app.config` dosyayla](../framework/configure-apps/file-schema/index.md) karşılaşmanız çok yüksek bir şansınız vardır.
+Bu basit yapılandırma dosyası, yeni güncelleştirmelerin dağıtımını iyileştirmek için uzun bir yönteme gidebilirler. Genellikle kitaplıklarınızı düzenli olarak değişen bilgiler `app.config` dosyada depolandığından, bu şekilde, bu bilgilerin daha eski sürümlerin yapılandırma dosyası güncelleştiriliyorsa yalnızca yeni bir sürüm ile değiştirilmeleri gerekir. Kitaplığı yeniden derlemek zorunda kalmadan.
 
 ## <a name="consuming-libraries"></a>Kitaplıkları kullanma
 
-Diğer geliştiriciler tarafından oluşturulan .NET kitaplıklarını tüketen bir geliştirici olarak büyük olasılıkla farkında kitaplığa yeni bir sürümü projenizle tam olarak uyumlu olmayabilir ve çoğunlukla kendinizi bu değişikliklerle çalışması için kodunuzu güncelleştirin gerek kalmadan bulabilirsiniz.
+Diğer geliştiriciler tarafından oluşturulan .NET kitaplıklarını tüketen bir geliştirici olarak, bir kitaplığın yeni bir sürümünün projenizle tamamen uyumlu olabileceğini ve genellikle kendi kodunuzu bu değişikliklerle çalışacak şekilde güncelleştirmek zorunda olduğunu fark edersiniz.
 
-Şans sizin için C# ve .NET ekosisteminin gelir özellikleri ve uygulamamızı bozucu değişiklik yapabilecek kitaplıklarının yeni sürümleri ile çalışmak için kolayca güncelleştirmek bize izin teknikleri.
+Sizin C# için Lucky ve .net ekosistemi, uygulamamızı, son değişiklikleri ortaya çıkaracak yeni kitaplıkların sürümleriyle çalışacak şekilde kolayca güncelleştirmenize imkan tanıyan özellikler ve teknikler sunar.
 
 ### <a name="assembly-binding-redirection"></a>Derleme bağlama yeniden yönlendirmesi
 
-Kullanabileceğiniz `app.config` dosya bir kitaplığı sürümünü güncelleştirmek için uygulama kullanır. Ne çağrılır ekleyerek bir [ *bağlama yeniden yönlendirmesi* ](../framework/configure-apps/redirect-assembly-versions.md) uygulamanızı yeniden derlemenize gerek kalmadan yeni kitaplığı sürümünü kullanabilirsiniz. Aşağıdaki örnek, uygulamanızın nasıl güncelleştiririz gösterir `app.config` kullanılacak dosyasını `1.0.1` düzeltme eki sürümü `ReferencedLibrary` yerine `1.0.0` , başlangıçta derlendiği sürümü.
+Uygulamanızın kullandığı bir kitaplığın `app.config` sürümünü güncelleştirmek için dosyasını kullanabilirsiniz. [*Bağlama yeniden yönlendirme*](../framework/configure-apps/redirect-assembly-versions.md) olarak adlandırılan öğesine ekleyerek, uygulamanızı yeniden derlemek zorunda kalmadan yeni kitaplık sürümünü kullanabilirsiniz. Aşağıdaki örnek, uygulamasının ilk `app.config` olarak derlenmiş `1.0.0` sürümü `ReferencedLibrary` yerine `1.0.1` düzeltme eki sürümünü kullanmak için uygulamanızın dosyasını nasıl güncelleşbileceğinizi gösterir.
 
 ```xml
 <dependentAssembly>
@@ -72,14 +72,14 @@ Kullanabileceğiniz `app.config` dosya bir kitaplığı sürümünü güncelleş
 ```
 
 > [!NOTE]
-> Bu yaklaşım, yalnızca iş yeni sürümünü `ReferencedLibrary` uygulamanız ile ikili uyumlu değildir.
-> Bkz: [geriye dönük uyumluluk](#backwards-compatibility) değişikliklerin için uyumluluk belirlerken dikkat için bölüm yukarıda.
+> Bu yaklaşım, yalnızca yeni sürümü `ReferencedLibrary` uygulamanız ile uyumluysa çalışır.
+> Uyumluluk belirlenirken yapılan değişiklikler için yukarıdaki [geriye dönük uyumluluk](#backwards-compatibility) bölümüne bakın.
 
 ### <a name="new"></a>new
 
-Kullandığınız `new` değiştiricisi devralınan bir temel sınıf üyelerinin gizlemek için. Bu şekilde türetilmiş sınıflar temel sınıflar güncelleştirmeleri yanıt verebilir biridir.
+Bir temel sınıfın `new` devralınan üyelerini gizlemek için değiştiricisini kullanın. Bu, türetilmiş sınıfların temel sınıflarda güncelleştirmelere yanıt verebildiği bir yoldur.
 
-Aşağıdaki örnek uygulayın:
+Aşağıdaki örneği uygulayın:
 
 [!code-csharp[Sample usage of the 'new' modifier](../../samples/csharp/versioning/new/Program.cs#sample)]
 
@@ -90,14 +90,14 @@ A base method
 A derived method
 ```
 
-Yukarıdaki örnekte gördüğünüz nasıl `DerivedClass` gizler `MyMethod` yöntemi mevcut `BaseClass`.
-Bu bir temel sınıf kitaplığı'nın yeni sürümünde, türetilen bir sınıfta zaten bir üye eklediğinde, yalnızca kullanabileceğiniz anlamına gelir `new` temel sınıf üyeyi gizlemek için türetilmiş sınıf üye değiştiricisi.
+Yukarıdaki örnekte, ' de `DerivedClass` `BaseClass`bulunan `MyMethod` yöntemin nasıl gizlediğini görebilirsiniz.
+Bu, bir kitaplığın yeni sürümündeki bir temel sınıf, türetilmiş sınıfınıza zaten mevcut olan bir üyeyi eklediğinde, taban sınıf üyesini gizlemek için yalnızca türetilmiş sınıf üyeinizdeki `new` değiştiriciyi kullanmanız gerektiğini gösterir.
 
-Hiçbir `new` değiştiricisi belirtilirse, türetilmiş bir sınıf taban sınıfında çakışan üyeleri varsayılan olarak gizler, bir derleyici uyarısı oluşturulur ancak yine de kod derlenir. Bu yalnızca yeni üyeler için varolan bir sınıf eklemek bu yeni sürüme kitaplığınızın aklınızdan anlamına gelir. hem kaynak hem de bağımlı kod ile uyumlu ikili.
+`new` Değiştirici belirtilmediğinde, türetilmiş bir sınıf varsayılan olarak bir temel sınıfta çakışan üyeleri gizleyecek, ancak derleyici uyarısı üretilse de kod derlenmeye devam eder. Bu, yalnızca varolan bir sınıfa yeni üye eklemek, kitaplığınızın bu yeni sürümünün hem kaynak hem de ikilinin buna bağlı kodla uyumlu olmasını sağlar.
 
 ### <a name="override"></a>override
 
-`override` Değiştiricisi türetilen uygulamaya bir temel sınıf üyesinin uygulamayı yaygınlaştırır yerine onu gizliyor anlamına gelir. Temel sınıf üyesi olması gerekiyorsa `virtual` uygulanmış değiştiricisi.
+`override` Değiştirici türetilmiş bir uygulamanın, bir temel sınıf üyesinin uygulamasını gizliyor yerine genişlettiği anlamına gelir. Temel sınıf üyesine `virtual` değiştiriciye uygulanmış olması gerekir.
 
 [!code-csharp[Sample usage of the 'override' modifier](../../samples/csharp/versioning/override/Program.cs#sample)]
 
@@ -108,6 +108,7 @@ Base Method One: Method One
 Derived Method One: Derived Method One
 ```
 
-`override` Değiştiricisi, derleme zamanında değerlendirilir ve geçersiz kılmak için bir sanal üye bulamazsa, derleyici bir hata atar.
+`override` Değiştirici derleme zamanında değerlendirilir ve geçersiz kılmak için bir sanal üye bulamazsa derleyici bir hata oluşturur.
 
-Bir kitaplık sürümleri arasında geçişin bir kolayca artırma konusunda uzun bir yol ele alındığı teknik bilginizi yanı sıra bunları kullanmak için hangi durumlarda Anlayışınızı geçer.
+Ele alınan tekniklerin ve bunların hangi durumlardan hangilerinin kullanılacağını kavramanız, bir kitaplığın sürümleri arasında geçiş kolaylığı hızını artırmak için uzun bir yönteme gidecektir.
+ 

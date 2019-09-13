@@ -1,65 +1,97 @@
 ---
-title: ?? operator - C# başvurusu
+title: ?? ve?? = işleçler- C# başvuru
 ms.custom: seodec18
-ms.date: 06/07/2019
+ms.date: 09/10/2019
 f1_keywords:
 - ??_CSharpKeyword
+- ??=_CSharpKeyword
 helpviewer_keywords:
 - null-coalescing operator [C#]
 - ?? operator [C#]
+- null-coalescing assignment [C#]
+- ??= operator [C#]
 ms.assetid: 088b1f0d-c1af-4fe1-b4b8-196fd5ea9132
-ms.openlocfilehash: a19b5558da36ffb11dabd1b9bec419a3623a0f17
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 1e94038a41a6a6cc19be6c67bff2891397793fb3
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67024996"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70924689"
 ---
-# <a name="-operator-c-reference"></a>?? işleç (C# Başvurusu)
+# <a name="-and--operators-c-reference"></a>?? ve?? = işleçleri (C# başvuru)
 
-Null birleşim işleci `??` değilse sol işlenenin değerini döndürür `null`; Aksi takdirde, sağ işlenen değerlendirilir ve sonucu döndürür. `??` İşleci sol işlenen null olmayan olarak değerlendirilirse, sağ işleneni değerlendirmek değil.
+Null birleşim işleci `??` , yoksa sol taraftaki işlenenin `null`değerini döndürür; Aksi takdirde, sağ işleneni değerlendirir ve sonucunu döndürür. Sol işlenen, null olmayan olarak değerlendirilirse işleçsağişleneninideğerlendirmez.`??`
 
-Null birleşim işleci sağla ilişkilendirilebilir, diğer bir deyişle, bir ifade formu
+C# 8,0 ve sonraki sürümlerde kullanılabilir, null birleşim atama işleci `??=` , sağ işleneninin değerini yalnızca sol işlenen olarak `null`değerlendirilirse, sol taraftaki işlenene atar. Sol işlenen, null olmayan olarak değerlendirilirse işleçsağişleneninideğerlendirmez.`??=`
+
+[!code-csharp[null-coalescing assignment](~/samples/csharp/language-reference/operators/NullCoalescingOperator.cs#Assignment)]
+
+`??=` İşlecin sol işleneni bir değişken, [özellik](../../programming-guide/classes-and-structs/properties.md)veya [Dizin Oluşturucu](../../programming-guide/indexers/index.md) öğesi olmalıdır. Null birleşim atama hakkında daha fazla bilgi için bkz. [özellik teklifi Not](~/_csharplang/proposals/csharp-8.0/null-coalescing-assignment.md).
+
+C# 7,3 ve önceki sürümlerde, `??` işlecin sol işlenenin türü bir başvuru türü ya da [null yapılabilir bir değer türü](../../programming-guide/nullable-types/index.md)olmalıdır. 8,0 ile C# başlayarak, bu gereksinim şu değerle değiştirilmiştir: `??` ve `??=` işleçlerinin sol tarafı işleneni, null olamayan bir değer türü olamaz. Özellikle, C# 8,0 ve üzeri sürümlerde kısıtlanmış tür parametreleriyle null birleşim işleçlerini kullanabilirsiniz:
+
+[!code-csharp[unconstrained type parameter](~/samples/csharp/language-reference/operators/NullCoalescingOperator.cs#UnconstrainedType)]
+
+Null birleştirme işleçleri doğru ilişkilendirilebilir. Diğer bir deyişle, formun ifadeleri
 
 ```csharp
 a ?? b ?? c
+d ??= e ??= f
 ```
 
-olarak değerlendirilir
+şöyle değerlendirilir
 
 ```csharp
 a ?? (b ?? c)
+d ??= (e ??= f)
 ```
 
-`??` İşleci aşağıdaki senaryolarda yararlı olabilir:
+## <a name="examples"></a>Örnekler
+
+`??` Ve`??=` işleçleri aşağıdaki senaryolarda yararlı olabilir:
 
 - İle ifadeler de [null koşullu işleçleri?. ve ?[]](member-access-operators.md#null-conditional-operators--and-), null birleşim işleci ile null koşullu işlemler ifadenin sonucu olması durumunda değerlendirmek için alternatif bir ifade sağlamak için kullanabileceğiniz `null`:
 
   [!code-csharp-interactive[with null-conditional](~/samples/csharp/language-reference/operators/NullCoalescingOperator.cs#WithNullConditional)]
 
-- İle çalıştığınızda [boş değer atanabilen değer türleri](../../programming-guide/nullable-types/index.md) ve temel alınan bir değer türünün bir değer belirtmeniz gerekiyorsa null birleşim işleci bir boş değer atanabilir bir tür değeri olması durumunda sağlamak için değeri belirtmek için kullanın `null`:
+- Null [yapılabilir değer türleriyle](../../programming-guide/nullable-types/index.md) çalışırken ve temel alınan değer türünde bir değer sağlamanız gerekiyorsa, null olabilen bir tür değeri `null`olması durumunda sağlanacak değeri belirtmek için null birleşim işlecini kullanın:
 
   [!code-csharp-interactive[with nullable types](~/samples/csharp/language-reference/operators/NullCoalescingOperator.cs#WithNullableTypes)]
 
-  Kullanım <xref:System.Nullable%601.GetValueOrDefault?displayProperty=nameWithType> yöntemi, bir boş değer atanabilir tür değeri olduğunda kullanılacak değer `null` temel değer türünün varsayılan değeri olmalıdır.
+  Null yapılabilir bir tür değeri, `null` temel alınan değer türünün varsayılan değeri olması gerektiğinde yöntemikullanın.<xref:System.Nullable%601.GetValueOrDefault?displayProperty=nameWithType>
 
-- İle başlayarak C# kullanabileceğiniz 7.0 bir [ `throw` ifade](../keywords/throw.md#the-throw-expression) sağ işleneni, bağımsız değişken denetimi kod daha kısa yapmak için null birleşim işleci olarak:
+- 7,0 ile C# başlayarak, bağımsız değişken denetim kodunu daha kısa hale getirmek için null birleşim işlecinin sağ işleneni olarak bir [ `throw` ifade](../keywords/throw.md#the-throw-expression) kullanabilirsiniz:
 
   [!code-csharp[with throw expression](~/samples/csharp/language-reference/operators/NullCoalescingOperator.cs#WithThrowExpression)]
 
-  Yukarıdaki örnekte ayrıca nasıl kullanılacağını gösterir [ifade gövdeli üyeler](../../programming-guide/statements-expressions-operators/expression-bodied-members.md) bir özelliği tanımlamak için.
+  Yukarıdaki örnek ayrıca bir özelliği tanımlamak için [Expression-Bodied üyelerini](../../programming-guide/statements-expressions-operators/expression-bodied-members.md) nasıl kullanacağınızı gösterir.
 
-## <a name="operator-overloadability"></a>İşleç overloadability
+- 8,0 ile C# başlayarak, form kodunu değiştirmek için `??=` işlecini kullanabilirsiniz
 
-Null birleşim işleci aşırı yüklenemez.
+  ```csharp
+  if (variable is null)
+  {
+      variable = expression;
+  }
+  ```
+
+  aşağıdaki kodla:
+
+  ```csharp
+  variable ??= expression;
+  ```
+
+## <a name="operator-overloadability"></a>Operatör overloadability
+
+İşleçler `??` ve`??=` aşırı yüklenemez.
 
 ## <a name="c-language-specification"></a>C# dili belirtimi
 
-Daha fazla bilgi için [null birleşim işleci](~/_csharplang/spec/expressions.md#the-null-coalescing-operator) bölümünü [ C# dil belirtimi](~/_csharplang/spec/introduction.md).
+`??` İşleci hakkında daha fazla bilgi için, [ C# dil belirtiminin](~/_csharplang/spec/introduction.md) [null birleşim işleci](~/_csharplang/spec/expressions.md#the-null-coalescing-operator) bölümüne bakın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C#başvuru](../index.md)
+- [C#başvurunun](../index.md)
 - [C# işleçleri](index.md)
 - [?. ve ?[] işleçleri](member-access-operators.md#null-conditional-operators--and-)
 - [?: işleci](conditional-operator.md)

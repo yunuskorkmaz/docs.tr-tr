@@ -4,12 +4,12 @@ description: Bu öğreticide, özellikle New York City taksi Fares fiyatlarını
 ms.date: 05/09/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18, title-hack-0516
-ms.openlocfilehash: fe3afab4cbd3f77ed4498cc5081180910d7d0b9e
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: c9bf91ce5188a512524337f981366040ec09f6f6
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666620"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929442"
 ---
 # <a name="tutorial-predict-prices-using-regression-with-mlnet"></a>Öğretici: ML.NET ile gerileme kullanarak fiyatları tahmin etme
 
@@ -17,6 +17,7 @@ Bu öğreticide, özellikle New York City taksi Fares fiyatlarını tahmin etmek
 
 Bu öğreticide şunların nasıl yapıladığını öğreneceksiniz:
 > [!div class="checklist"]
+>
 > * Verileri hazırlama ve anlama
 > * Verileri yükleme ve dönüştürme
 > * Bir öğrenme algoritması seçin
@@ -269,6 +270,7 @@ Tebrikler! Artık TAXI seyahat Fares 'yi tahmin etmek için bir makine öğrenim
 Bu öğreticide, şunların nasıl yapıldığını öğrendiniz:
 
 > [!div class="checklist"]
+>
 > * Verileri hazırlama ve anlama
 > * Öğrenme işlem hattı oluşturma
 > * Verileri yükleme ve dönüştürme

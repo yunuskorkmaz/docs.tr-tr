@@ -1,5 +1,5 @@
 ---
-title: 'Öğretici: Bir Windows Communication Foundation Hizmet sözleşmesini tanımlama'
+title: 'Öğretici: Windows Communication Foundation hizmet sözleşmesi tanımlama'
 ms.date: 03/19/2019
 helpviewer_keywords:
 - service contracts [WCF], defining
@@ -7,54 +7,55 @@ dev_langs:
 - CSharp
 - VB
 ms.assetid: 67bf05b7-1d08-4911-83b7-a45d0b036fc3
-ms.openlocfilehash: a1908339460191fcb81d03d45c56dd57b2cf4c4e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ba88fc6ba4cba8d46ed1b43080d471b1b7c4bd75
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61929356"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928881"
 ---
-# <a name="tutorial-define-a-windows-communication-foundation-service-contract"></a>Öğretici: Bir Windows Communication Foundation Hizmet sözleşmesini tanımlama
+# <a name="tutorial-define-a-windows-communication-foundation-service-contract"></a>Öğretici: Windows Communication Foundation hizmet sözleşmesi tanımlama
 
-Bu öğretici, ilk beş görev temel Windows Communication Foundation (WCF) uygulaması oluşturmak için gereken açıklar. Öğreticiler genel bakış için bkz. [Öğreticisi: Windows Communication Foundation uygulamalarla çalışmaya başlama](getting-started-tutorial.md).
+Bu öğreticide, temel Windows Communication Foundation (WCF) uygulaması oluşturmak için gereken beş görevden ilki açıklanmaktadır. Öğreticilere genel bakış için bkz [. Öğretici: Windows Communication Foundation uygulamaları](getting-started-tutorial.md)ile çalışmaya başlayın.
 
-Bir WCF Hizmeti oluşturduğunuzda, ilk göreviniz bir hizmet sözleşmesini tanımlamaktır. Hizmet sözleşmesi hangi işlemleri belirtir destekler. Bir işlem, bir Web hizmeti yöntemi düşünülebilir. Hizmet sözleşmeleri görsel tanımlayarak oluşturduğunuz C# veya Visual Basic (VB) arabirim. Bir arabirim, aşağıdaki özelliklere sahiptir:
+Bir WCF hizmeti oluşturduğunuzda, ilk göreviniz bir hizmet sözleşmesini tanımlamaktır. Hizmet sözleşmesi, hizmetin desteklediği işlemleri belirtir. Bir işlem, bir Web hizmeti yöntemi olarak düşünülebilir. Bir görsel C# veya VISUAL BASIC (vb) arabirimi tanımlayarak hizmet sözleşmeleri oluşturursunuz. Bir arabirim aşağıdaki özelliklere sahiptir:
 
-- Arabirimdeki her yöntem için bir hizmet işlemiyle karşılık gelir. 
-- Her arabirim için uygulamanız gerekir <xref:System.ServiceModel.ServiceContractAttribute> özniteliği.
-- Her işlem/yöntem için uygulamalısınız <xref:System.ServiceModel.OperationContractAttribute> özniteliği. 
+- Arabirimdeki her yöntem belirli bir hizmet işlemine karşılık gelir. 
+- Her arabirim için <xref:System.ServiceModel.ServiceContractAttribute> özniteliği uygulamanız gerekir.
+- Her işlem/yöntem için <xref:System.ServiceModel.OperationContractAttribute> özniteliği uygulamanız gerekir. 
 
 Bu öğreticide şunların nasıl yapıladığını öğreneceksiniz:
 > [!div class="checklist"]
-> - Oluşturma bir **WCF hizmet Kitaplığı** proje.
-> - Bir hizmet sözleşme arabirimi tanımlayın.
+>
+> - Bir **WCF hizmet kitaplığı** projesi oluşturun.
+> - Bir hizmet sözleşmesi arabirimi tanımlayın.
 
-## <a name="create-a-wcf-service-library-project-and-define-a-service-contract-interface"></a>Bir WCF hizmet kitaplığı projesi oluşturun ve hizmet sözleşme arabirimi tanımlayın
+## <a name="create-a-wcf-service-library-project-and-define-a-service-contract-interface"></a>Bir WCF hizmet kitaplığı projesi oluşturma ve bir hizmet sözleşmesi arabirimi tanımlama
 
-1. Visual Studio'yu yönetici olarak açın. Bunu yapmak için Visual Studio programda seçin **Başlat** menüsüne ve ardından **daha fazla** > **yönetici olarak çalıştır** kısayol menüsünden.
+1. Visual Studio 'Yu yönetici olarak açın. Bunu yapmak için **Başlat** menüsünde Visual Studio programını seçin ve ardından kısayol menüsünde**yönetici olarak çalıştır** ' **ı seçin.**  > 
 
-2. Oluşturma bir **WCF hizmet Kitaplığı** proje.
+2. Bir **WCF hizmet kitaplığı** projesi oluşturun.
 
    1. Gelen **dosya** menüsünde **yeni** > **proje**.
 
-   2. İçinde **yeni proje** iletişim kutusunda sol taraftaki genişletin **Visual C#** veya **Visual Basic**ve ardından **WCF** kategorisi. Visual Studio Proje şablonları listesi penceresinin Merkezi bölümünde görüntüler. Seçin **WCF hizmet Kitaplığı**.
+   2. **Yeni proje** iletişim kutusunda, sol tarafta,  **C# Visual** veya **Visual Basic**' i genişletin ve ardından **WCF** kategorisini seçin. Visual Studio, pencerenin orta bölümündeki proje şablonlarının bir listesini görüntüler. **WCF hizmet kitaplığı**' nı seçin.
 
       > [!NOTE]
-      > Görmüyorsanız **WCF** proje şablonu kategorisi yüklemeniz gerekebilir **Windows Communication Foundation** Visual Studio bileşen. İçinde **yeni proje** iletişim kutusunda **açık Visual Studio yükleyicisi** sol tarafındaki bağlantıyı. Seçin **tek tek bileşenler** sekmesine ve ardından bulmak ve seçmek **Windows Communication Foundation** altında **geliştirme etkinliklerini** kategorisi. Seçin **Değiştir** bileşeni yüklemeyi başlatmak için.
+      > **WCF** proje şablonu kategorisini görmüyorsanız, Visual Studio 'nun **Windows Communication Foundation** bileşenini yüklemeniz gerekebilir. **Yeni proje** iletişim kutusunda, sol taraftaki **Visual Studio yükleyicisi aç** bağlantısını seçin. **Ayrı bileşenler** sekmesini seçin ve ardından **geliştirme etkinlikleri** kategorisinin **Windows Communication Foundation** bulun ve seçin. Bileşeni yüklemeye başlamak için **Değiştir** ' i seçin.
 
-   3. Pencerenin alt kısmında girin *GettingStartedLib* için **adı** ve *GettingStarted* için **çözüm adı**. 
+   3. Pencerenin alt bölümünde, **ad** Için *GettingStartedLib* ve **çözüm adı**olarak *gettingstarted* girin. 
 
    4. **Tamam**’ı seçin.
 
-      Visual Studio üç dosyayı içeren projenin oluşturur: *Iservice1.cs* (veya *Iservice1.vb* Visual Basic projesi için), *Service1.cs* (veya *Service1.vb* Visual Basic projesi için), ve  *App.config*. Visual Studio, bu dosyalar gibi tanımlar: 
-      - *Iservice1* dosyası varsayılan hizmet sözleşmesi tanımını içerir. 
-      - *Service1* varsayılan uygulama hizmet sözleşmesinin dosyası içerir. 
-      - *App.config* dosyası Visual Studio WCF hizmet konağı aracıyla varsayılan hizmetini yüklemek için gereken yapılandırma bilgilerini içerir. WCF hizmet konağı aracı hakkında daha fazla bilgi için bkz. [WCF hizmet Konağı (WcfSvcHost.exe)](wcf-service-host-wcfsvchost-exe.md).
+      Visual Studio, üç dosya içeren projeyi oluşturur: Bir Visual Basic projesi için *IService1.cs* (veya *IService1. vb* ), *Service1.cs* (veya *Service1. Visual Basic vb* ) ve *app. config*. Visual Studio bu dosyaları aşağıdaki gibi tanımlar: 
+      - *IService1* dosyası, hizmet sözleşmesinin varsayılan tanımını içerir. 
+      - *Service1* dosyası, hizmet sözleşmesinin varsayılan uygulamasını içerir. 
+      - *App. config* dosyası, VISUAL Studio WCF hizmeti ana bilgisayar aracı ile varsayılan hizmeti yüklemek için gereken yapılandırma bilgilerini içerir. WCF hizmeti ana bilgisayar aracı hakkında daha fazla bilgi için bkz. [WCF hizmet Konağı (WcfSvcHost. exe)](wcf-service-host-wcfsvchost-exe.md).
 
       > [!NOTE]
-      > Visual Basic Geliştirici ortam ayarları ile Visual Studio yüklü değilse, çözüm gizlenmiş olabilir. Bu durumda, seçin **seçenekleri** gelen **Araçları** menüsü, ardından **projeler ve çözümler** > **genel** içinde **seçenekleri** penceresi. Seçin **çözümü her zaman göster**. Ayrıca, doğrulayın **oluşturulduğunda yeni projeleri Kaydet** seçilir.
+      > Visual Studio 'Yu Visual Basic Geliştirici ortamı ayarları ile yüklediyseniz, çözüm gizlenmiş olabilir. Bu durumda, **Araçlar** menüsünden **Seçenekler** ' i seçin ve ardından **Seçenekler** penceresinde **Projeler ve çözümler** > **genel** ' i seçin. **Çözümü her zaman göster**' i seçin. Ayrıca, **oluşturulduğunda yeni projeleri kaydet** ' in seçili olduğunu doğrulayın.
 
-3. Gelen **Çözüm Gezgini**açın **Iservice1.cs** veya **Iservice1.vb** dosya ve kendi kodu aşağıdaki kodla değiştirin:
+3. **Çözüm Gezgini**, **IService1.cs** veya **IService1. vb** dosyasını açın ve kodunu aşağıdaki kodla değiştirin:
 
     ```csharp
     using System;
@@ -97,16 +98,17 @@ Bu öğreticide şunların nasıl yapıladığını öğreneceksiniz:
     End Namespace
     ```
 
-     Bu sözleşme, çevrimiçi bir hesap makinesi tanımlar. Bildirim `ICalculator` arabirimi ile işaretlenmiş <xref:System.ServiceModel.ServiceContractAttribute> özniteliği (olarak Basitleştirilmiş `ServiceContract`). Bu öznitelik sözleşme adı ayırt etmek için bir ad alanı tanımlar. Her hesap makinesi işlemle kodu işaretler <xref:System.ServiceModel.OperationContractAttribute> özniteliği (olarak Basitleştirilmiş `OperationContract`).
+     Bu sözleşme, çevrimiçi bir Hesaplayıcı tanımlar. Arabirimin özniteliğiyle (Basitleştirilmiş olarak `ServiceContract`) işaretlendiğini görürsünüz. <xref:System.ServiceModel.ServiceContractAttribute> `ICalculator` Bu öznitelik, anlaşma adının belirsizliğini ortadan kaldırmak için bir ad alanını tanımlar. Kod, her Hesaplayıcı işlemini <xref:System.ServiceModel.OperationContractAttribute> özniteliğiyle (Basitleştirilmiş olarak `OperationContract`) işaretler.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
 Bu öğreticide, şunların nasıl yapıldığını öğrendiniz:
 > [!div class="checklist"]
+>
 > - Bir WCF hizmet kitaplığı projesi oluşturun.
-> - Bir hizmet sözleşme arabirimi tanımlayın.
+> - Bir hizmet sözleşmesi arabirimi tanımlayın.
 
-WCF hizmet sözleşmesini uygulama konusunda bilgi almak için sonraki öğreticiye ilerleyin.
+WCF hizmeti sözleşmesinin nasıl uygulanacağını öğrenmek için bir sonraki öğreticiye ilerleyin.
 
 > [!div class="nextstepaction"]
-> [Öğretici: Bir WCF Hizmeti sözleşmesi uygulama](how-to-implement-a-wcf-contract.md)
+> [Öğretici: WCF hizmet sözleşmesi uygulama](how-to-implement-a-wcf-contract.md)

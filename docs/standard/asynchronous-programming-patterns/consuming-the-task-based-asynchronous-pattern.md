@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 033cf871-ae24-433d-8939-7a3793e547bf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 08b5dee94a9a23fdd1c9e635aa2ef848f59e86cf
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: e89545b5fa29f6e5bf99bb9b85322d7ee14422a4
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70169142"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929017"
 ---
 # <a name="consuming-the-task-based-asynchronous-pattern"></a>Görev Tabanlı Zaman Uyumsuz Desen Kullanma
 
@@ -727,7 +727,7 @@ public class AsyncCache<TKey, TValue>
 }
 ```
 
- [AsyncCache\<TKey, TValue >](https://blogs.msdn.microsoft.com/pfxteam/2010/04/23/parallelextensionsextras-tour-12-asynccache/) sınıfı, oluşturucusu `TKey` için bir temsilci olarak kabul eder ve döndürür <xref:System.Threading.Tasks.Task%601>.  Ön belleğe daha önce erişilen tüm değerler iç sözlükte depolanır ve önbelleğe eşzamanlı olarak erişilse `AsyncCache` bile, her anahtar için yalnızca bir görevin oluşturulmasını sağlar.
+ [AsyncCache\<TKey, TValue >](https://devblogs.microsoft.com/pfxteam/parallelextensionsextras-tour-12-asynccache/) sınıfı, oluşturucusu `TKey` için bir temsilci olarak kabul eder ve döndürür <xref:System.Threading.Tasks.Task%601>.  Ön belleğe daha önce erişilen tüm değerler iç sözlükte depolanır ve önbelleğe eşzamanlı olarak erişilse `AsyncCache` bile, her anahtar için yalnızca bir görevin oluşturulmasını sağlar.
 
  Örneğin, indirilen Web sayfaları için bir önbellek oluşturabilirsiniz:
 

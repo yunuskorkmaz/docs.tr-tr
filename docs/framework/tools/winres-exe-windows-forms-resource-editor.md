@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: cb8bc835-9221-4888-af53-1a4f5fad6c48
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 775a8b63a0ba7cd021c9e5072ef98c20f6ab2e81
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0683499241f594b8b37b7dd69b91ed5929670024
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69937928"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894578"
 ---
 # <a name="winresexe-windows-resource-localization-editor"></a>Winres. exe (Windows kaynak yerelleştirme Düzenleyicisi)
 
@@ -28,7 +28,7 @@ Winres. exe, Visual Studio ile birlikte yüklenir. Aracı çalıştırmak için,
 
 ## <a name="syntax"></a>Sözdizimi
 
-```
+```console
 winres resourceFile
 winres /?
 ```
@@ -116,13 +116,13 @@ Kullandığınız .NET Framework ile yayınlanan Winres. exe sürümünü kullan
 
      Aşağıdaki komut Winres. exe ' yi başlatır ve form tasarımcısında ile `TestApp.resx` ilişkili formu yükler.
 
-    ```
+    ```console
     winres TestApp.resx
     ```
 
      Aşağıdaki komut Winres. exe ' yi başlatır ve form tasarımcısında ile `TestApp.resources` ilişkili formu yükler.
 
-    ```
+    ```console
     winres TestApp.resources
     ```
 

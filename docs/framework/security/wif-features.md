@@ -3,14 +3,15 @@ title: WIF Özellikleri
 ms.date: 03/30/2017
 ms.assetid: 7e13cae9-7cd1-491f-aa75-0735320a7be6
 author: BrucePerlerMS
-ms.openlocfilehash: faccf8a9705355943a74daa975fc0d88a420a1f7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d86ac2c48b58a58a9002db3755b001d1689a46f6
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592231"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927009"
 ---
 # <a name="wif-features"></a>WIF Özellikleri
+
 - [Visual Studio 2012 için Kimlik ve Erişim Aracı](../../../docs/framework/security/identity-and-access-tool-for-vs.md)  
   
 - [WIF Oturum Yönetimi](../../../docs/framework/security/wif-session-management.md)  

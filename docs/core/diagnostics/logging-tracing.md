@@ -4,12 +4,12 @@ description: .NET Core günlüğe kaydetme ve izlemeye giriş.
 author: sdmaclea
 ms.author: stmaclea
 ms.date: 08/05/2019
-ms.openlocfilehash: 06781c6a5c1d771b1fa772539705cd1e2b3ad2d4
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 46e64a7f60b88c26ceef9ac817be885bfa180c8e
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68974131"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926358"
 ---
 # <a name="net-core-logging-and-tracing"></a>.NET Core günlüğe kaydetme ve izleme
 
@@ -32,6 +32,7 @@ Bu basit teknik, her ne kadar güçlü bir işlemdir. Bir hata ayıklayıcının
 <xref:System.Console?displayProperty=nameWithType>, Ve <xref:System.Diagnostics.Trace?displayProperty=nameWithType> sınıflarınınherbiri,günlüğekaydetmeiçinuygun<xref:System.Diagnostics.Debug?displayProperty=nameWithType> olan benzer yazdırma stili API 'leri sağlar.
 
 Hangi yazdırma stili API 'sinin kullanılması tercih edilir. Temel farklılıklar şunlardır:
+
 - <xref:System.Console?displayProperty=nameWithType>
   - Her zaman etkin ve her zaman konsola yazar.
   - Müşterinizin yayında görmeniz gerekebilecek bilgiler için faydalıdır.
@@ -80,6 +81,7 @@ Düşük düzey API 'Ler, günlük gereksinimleriniz için doğru seçim olmayab
 <xref:Microsoft.Extensions.Logging.ILogger> Arabirim, günlükçülerin bağımlılık ekleme yoluyla eklenebileceği ortak bir günlüğe kaydetme arabirimi oluşturmak için kullanılır.
 
 Örneğin, uygulamanız `ASP.NET` için en iyi seçimi yapmanıza olanak tanımak için yerleşik ve üçüncü taraf çerçeveler için destek sunar:
+
 - [ASP.NET yerleşik günlük sağlayıcıları](/aspnet/core/fundamentals/logging/#built-in-logging-providers)
 - [ASP.NET üçüncü taraf günlüğü sağlayıcıları](/aspnet/core/fundamentals/logging/#third-party-logging-providers)
 
@@ -102,6 +104,7 @@ Düşük düzey API 'Ler, günlük gereksinimleriniz için doğru seçim olmayab
 Dize biçimlendirmesi, fark edilebilir CPU işlem süresini alabilir.
 
 Performans açısından kritik uygulamalarda şunları yapmanız önerilir:
+
 - Hiç kimse dinlemediğinde çok fazla günlük tutulmasını önleyin. Önce günlük kaydının etkin olup olmadığını denetleyerek maliyetli günlük mesajları oluşturmaktan kaçının.
 - Yalnızca yararlı olanları günlüğe kaydedin.
 - Süslü biçimlendirmeyi analiz aşamasına erteleyin.

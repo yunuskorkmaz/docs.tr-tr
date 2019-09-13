@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: c4d25b24-9c1a-4b3e-9705-97ba0d6c0289
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9546ddd12decb7457f4ff890658e2725a8b9dabe
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 74011a4c70cc8f7da3973698a43b1e97cffb9f9b
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69941748"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927077"
 ---
 # <a name="measuring-startup-improvement-with-net-native"></a>.NET Yerel ile Başlangıç İyileştirmesini Hesaplama
 .NET Native uygulamaların başlatma süresini önemli ölçüde geliştirir. Bu geliştirme, özellikle taşınabilir, düşük güç destekli cihazlarda ve karmaşık uygulamalarla görülür. Bu konu, bu başlangıç geliştirmesini ölçmek için gereken temel araçları kullanmaya başlamanıza yardımcı olur.  
@@ -57,11 +57,11 @@ ms.locfileid: "69941748"
  PerfView, uygulamanızdaki tüm performans araştırmaları türlerini yapmanıza yardımcı olması için ETW olaylarını kullanır. Ayrıca, farklı olay türleri için günlüğe kaydetmeyi açmanıza veya kapatmaya olanak sağlayan bir yapılandırma GUI 'si de içerir. PerfView ücretsiz bir araçtır ve [Microsoft Indirme merkezi](https://www.microsoft.com/download/details.aspx?id=28567)' nden indirilebilir. Daha fazla bilgi için [PerfView öğretici videolarını](https://channel9.msdn.com/Series/PerfView-Tutorial)izleyin.  
   
 > [!NOTE]
-> , ARM sistemlerinde olayları toplamak için PerfView kullanılamaz. ARM sistemlerinde olayları toplamak için Windows performans Kaydedicisi 'Ni (WPR) kullanın. Daha fazla bilgi için bkz. [Vance Morrison 'un blog gönderisi](https://blogs.msdn.com/b/vancem/archive/2012/12/19/collecting-etw-perfview-data-on-an-windows-rt-winrt-arm-surface-device.aspx).  
+> , ARM sistemlerinde olayları toplamak için PerfView kullanılamaz. ARM sistemlerinde olayları toplamak için Windows performans Kaydedicisi 'Ni (WPR) kullanın. Daha fazla bilgi için bkz. [Vance Morrison 'un blog gönderisi](https://blogs.msdn.microsoft.com/vancem/2012/12/19/collecting-etwperfview-data-on-an-windows-rt-winrt-arm-surface-device/).  
   
  Ayrıca, komut satırından PerfView öğesini çağırabilirsiniz. Yalnızca sağlayıcınızdaki olayları günlüğe kaydetmek için komut Istemi penceresini açın ve şu komutu girin:  
   
-```  
+```console
 perfview -KernelEvents:Process -OnlyProviders:*MyCompany-MyApp collect outputFile   
 ```  
   
@@ -95,7 +95,7 @@ perfview -KernelEvents:Process -OnlyProviders:*MyCompany-MyApp collect outputFil
   
  Sol bölmede listelenen tüm olayları seçin (CTRL-A) ve **ENTER** tuşunu seçin. Şimdi, her bir olaydan gelen zaman damgalarını görebilmeniz gerekir. Bu zaman damgaları izlemenin başlangıcına göre yapılır, bu nedenle başlangıçtan itibaren geçen süreyi belirlemek için her bir olayın süresini işlemin başlangıç zamanından çıkarabilirsiniz. İki zaman damgasını seçmek için CTRL + tıklama kullanırsanız, sayfanın altındaki durum çubuğunda görüntülenmeleri arasındaki farkı görürsünüz. Bu, ekranda iki olay arasında geçen süreyi görmeyi kolaylaştırır (işlem başlangıcı dahil). Görünümün kısayol menüsünü açabilir ve verileri kaydetmek veya işlemek üzere CSV dosyalarına dışarı aktarma veya Microsoft Excel 'i açma gibi faydalı seçeneklerden seçim yapabilirsiniz.  
   
- Hem özgün uygulamanız hem de .NET Native araç zinciri kullanarak oluşturduğunuz sürüm için yordamı tekrarlayarak, performans farkını karşılaştırabilirsiniz.   .NET Native uygulamalar genellikle non-.NET Native uygulamalardan daha hızlı başlar. Daha ayrıntılı bir şekilde ilgileniyorsanız, PerfView kodunuzun en çok geçen kısmını da tanımlayabilir. Daha fazla bilgi için [PerfView öğreticileri](https://channel9.msdn.com/Series/PerfView-Tutorial) Izleyin veya [Vance Morrison 'un blog girişini](https://blogs.msdn.com/b/vancem/archive/2011/12/28/publication-of-the-perfview-performance-analysis-tool.aspx)okuyun.  
+ Hem özgün uygulamanız hem de .NET Native araç zinciri kullanarak oluşturduğunuz sürüm için yordamı tekrarlayarak, performans farkını karşılaştırabilirsiniz.   .NET Native uygulamalar genellikle non-.NET Native uygulamalardan daha hızlı başlar. Daha ayrıntılı bir şekilde ilgileniyorsanız, PerfView kodunuzun en çok geçen kısmını da tanımlayabilir. Daha fazla bilgi için [PerfView öğreticileri](https://channel9.msdn.com/Series/PerfView-Tutorial) Izleyin veya [Vance Morrison 'un blog girişini](https://blogs.msdn.microsoft.com/vancem/2011/12/28/publication-of-the-perfview-performance-analysis-tool/)okuyun.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

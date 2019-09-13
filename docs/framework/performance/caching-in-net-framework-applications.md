@@ -6,12 +6,12 @@ helpviewer_keywords:
 - caching [.NET Framework]
 - caching [ASP.NET]
 ms.assetid: c4b47ee0-4b82-4124-9bce-818088385e34
-ms.openlocfilehash: 779785e9793939cf121fedf99b23a07288173637
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b1d9b12a46d674bf591457cdc90c66fc16818734
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69967599"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927041"
 ---
 # <a name="caching-in-net-framework-applications"></a>.NET Framework Uygulamalarında Önbelleğe Alma
 Önbelleğe alma, verileri hızlı erişim için bellekte depolamanıza olanak sağlar. Verilere yeniden erişildiğinde, uygulamalar verileri özgün kaynaktan almak yerine önbellekten alabilir. Bu, performansı ve ölçeklenebilirliği iyileştirebilir. Ayrıca, veri kaynağı geçici olarak kullanılamadığında önbelleğe alma verilerin kullanılabilir olmasını sağlar.  
@@ -69,7 +69,7 @@ ms.locfileid: "69967599"
   
 - <xref:System.Runtime.Caching.ObjectCache> Sınıfından türeten özel bir sınıf oluşturun ve ardından türetilmiş sınıfta özel bir önbellek uygulamasını sağlayın.  
   
-- <xref:System.Runtime.Caching.MemoryCache> Sınıfından türeten bir sınıf oluşturun ve türetilmiş sınıfı özelleştirin veya genişletin. Bunun nasıl yapılacağı hakkında bir örnek için bkz. [bir ASP.NET uygulamasında birden çok Cache nesnesi kullanarak uygulama verilerini önbelleğe alma](https://blogs.msdn.com/aspnetue/archive/2010/03/22/caching-application-data-by-using-multiple-cache-objects-in-an-asp-net-application.aspx).  
+- <xref:System.Runtime.Caching.MemoryCache> Sınıfından türeten bir sınıf oluşturun ve türetilmiş sınıfı özelleştirin veya genişletin. Bunun nasıl yapılacağı hakkında bir örnek için bkz. [bir ASP.NET uygulamasında birden çok Cache nesnesi kullanarak uygulama verilerini önbelleğe alma](https://blogs.msdn.microsoft.com/aspnetue/2010/03/22/caching-application-data-by-using-multiple-cache-objects-in-an-asp-net-application/).  
   
 - <xref:System.Web.Caching.OutputCacheProvider> Sınıfından türeten bir sınıf oluşturun ve uygulamayı özel çıkış önbelleği sağlayıcısını kullanacak şekilde yapılandırın.  
   

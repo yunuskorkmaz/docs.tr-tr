@@ -2,12 +2,12 @@
 title: IIS ve WAS'ta Yapılandırma Temelli Etkinleştirme
 ms.date: 03/30/2017
 ms.assetid: 6a927e1f-b905-4ee5-ad0f-78265da38238
-ms.openlocfilehash: f4de4aff2fbe6b8e82dc3d6523f492d06494c79e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 5b06f474d26b80f955b1508f01da83448a8708a3
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69909777"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928777"
 ---
 # <a name="configuration-based-activation-in-iis-and-was"></a>IIS ve WAS'ta Yapılandırma Temelli Etkinleştirme
 
@@ -31,6 +31,7 @@ Yapılandırma tabanlı etkinleştirme,. svc dosyasına yerleştirilmesi için k
  Web. config dosyasında bu, hizmet kaynak kodunu uygulamanın App_Code dizinine ya da uygulamanın bin dizinine bir karmaşıklu derlemeyi yerleştirebilirsiniz.
 
 > [!NOTE]
+>
 > - Yapılandırma tabanlı etkinleştirme kullanılırken,. svc dosyalarında satır içi kod desteklenmez.
 > - Öznitelik `relativeAddress` , "\<alt dizin >/Service.exe" veya "~/\<Sub-Directory/Service. svc" gibi göreli bir adrese ayarlanmalıdır.
 > - WCF ile ilişkili bilinen bir uzantısı olmayan göreli bir adresi kaydettiğinizde bir yapılandırma özel durumu oluşturulur.

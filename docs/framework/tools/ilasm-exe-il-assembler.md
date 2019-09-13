@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4ca3a4f0-4400-47ce-8936-8e219961c76f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 13b0ab04eba75a322d584bcc20cc6e90a54fb6fc
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: fcc9ba5e379897247f50175603b1002d5688d215
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69933659"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894692"
 ---
 # <a name="ilasmexe-il-assembler"></a>Ilasm.exe (IL Derleyici)
 
@@ -79,7 +79,7 @@ ilasm [options] filename [[options]filename...]
 |**/?**|Araç için komut sözdizimini ve seçenekleri görüntüler.|
 
 > [!NOTE]
-> *Ilasm. exe* ' nin tüm seçenekleri büyük/küçük harfe duyarlıdır ve ilk üç harf tarafından tanınır. Örneğin, **/Lis** ,/listeleme ve **/res**: myresfile. res ile eşdeğerdir. res, **/Resource**: myresfile. res ile eşdeğerdir. Bağımsız değişkenler belirten seçenekler, seçenek ve bağımsız değişken arasında ayıraç olarak ya iki nokta üst üste (:) ya da eşittir işaretini (=) kabul eder. Örneğin, **/output**:*File. ext* , **/output**=*File. ext*ile eşdeğerdir.
+> *Ilasm. exe* ' nin tüm seçenekleri büyük/küçük harfe duyarlıdır ve ilk üç harf tarafından tanınır. Örneğin, **/Lis** , **/Listeleme** ve **/res**: myresfile. res ile eşdeğerdir. res, **/Resource**: myresfile. res ile eşdeğerdir. Bağımsız değişkenler belirten seçenekler, seçenek ve bağımsız değişken arasında ayıraç olarak ya iki nokta üst üste (:) ya da eşittir işaretini (=) kabul eder. Örneğin, **/output**:*File. ext* , **/output**=*File. ext*ile eşdeğerdir.
 
 ## <a name="remarks"></a>Açıklamalar
 
@@ -110,7 +110,7 @@ Il 'nin dilbilgisini hakkında daha fazla bilgi için, Windows SDK The asmpari. 
 
 4,5 .NET Framework başlayarak, aşağıdakine benzer bir kod kullanarak bir arabirim uygulamasına özel bir öznitelik ekleyebilirsiniz:
 
-```
+```il
 .class interface public abstract auto ansi IMyInterface
 {
   .method public hidebysig newslot abstract virtual
@@ -130,7 +130,7 @@ Il 'nin dilbilgisini hakkında daha fazla bilgi için, Windows SDK The asmpari. 
 
 4,5 .NET Framework başlayarak, aşağıdaki kodda gösterildiği gibi, ham ikili gösterimini kullanarak rastgele bir sıralama Blobu (ikili büyük nesne) belirtebilirsiniz:
 
-```
+```il
 .method public hidebysig abstract virtual
         instance void
         marshal({ 38 01 02 FF })
@@ -175,7 +175,7 @@ public class Hello
 
 Aşağıdaki IL kod örneği önceki C# kod örneğine karşılık gelir. Bu kodu Il assembler aracını kullanarak bir derlemede derleyebilirsiniz. Hem Il hem C# de kod örnekleri "Merhaba Dünya!" görüntüler konsoluna gidin.
 
-```
+```il
 // Metadata version: v2.0.50215
 .assembly extern mscorlib
 {

@@ -3,12 +3,12 @@ title: İfade Yorumlama
 description: Bir ifade ağacının yapısını incelemek için kod yazmayı öğrenin.
 ms.date: 06/20/2016
 ms.assetid: adf73dde-1e52-4df3-9929-2e0670e28e16
-ms.openlocfilehash: fcc16e7a0cef7b3ac24d99ccbddd93bed100a5bb
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: c9d80ca234e298df2f2e7ce48fbf92cb817fc8a7
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202976"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70925681"
 ---
 # <a name="interpreting-expressions"></a>İfade Yorumlama
 
@@ -357,6 +357,7 @@ Bu kod matematik *çarpınımı* işlevi için olası bir uygulamayı temsil ede
 Ben zaten bir temsilciyiysem, ancak ifade ağaç biçiminde çağıramıyorum. [İfade ağaçları oluşturma](expression-trees-building.md) bölümünde bu sınırlamaları aşmaya yönelik teknikler öğreneceksiniz.
 
 Bu ifadede, tüm bu türlerin düğümleri ile karşılaşırsınız:
+
 1. Eşittir (ikili ifade)
 2. Çarp (ikili ifade)
 3. Koşullu (? ifadesini

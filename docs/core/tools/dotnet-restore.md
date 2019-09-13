@@ -2,12 +2,12 @@
 title: dotnet restore komutu
 description: Dotnet restore komutuyla bağımlılıkları ve projeye özel araçları nasıl geri yükleyeceğinizi öğrenin.
 ms.date: 05/29/2018
-ms.openlocfilehash: c510aec8411fb0650b8caa4c3926181aa8071a66
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 567316e98e161a7645db6bf55a03c3c006999fa9
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70849615"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70893290"
 ---
 # <a name="dotnet-restore"></a>dotnet restore
 
@@ -177,7 +177,7 @@ Paket geri yüklemesi için bir çalışma zamanı belirtir. Bu, `<RuntimeIdenti
 
 `-s|--source <SOURCE>`
 
-Geri yükleme işlemi sırasında kullanılacak bir NuGet paket kaynağını belirtir. Bu *, NuGet.* config dosyasında belirtilen tüm kaynakları geçersiz kılar. Bu, *NuGet. config* dosyasını <packageSource> öğe olmadığı gibi etkin şekilde okur. Bu seçenek birden çok kez belirtilerek birden çok kaynak sağlanarak sağlayabilirsiniz.
+Geri yükleme işlemi sırasında kullanılacak bir NuGet paket kaynağını belirtir. Bu *, NuGet.* config dosyasında belirtilen tüm kaynakları geçersiz kılar. Bu, *NuGet. config* dosyasını `<packageSource>` öğe olmadığı gibi etkin şekilde okur. Bu seçenek birden çok kez belirtilerek birden çok kaynak sağlanarak sağlayabilirsiniz.
 
 `--verbosity <LEVEL>`
 

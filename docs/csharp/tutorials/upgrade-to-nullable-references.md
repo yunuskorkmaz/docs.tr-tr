@@ -3,12 +3,12 @@ title: Null yapılabilir başvuru türleriyle tasarım
 description: Bu gelişmiş öğretici, null yapılabilir başvuru türlerine giriş sağlar. Başvuru değerleri null olduğunda ve derleyicinin null olmadıklarında zorunlu olmadığı durumlarda tasarım amacınızı ifade etmek için bilgi edineceksiniz.
 ms.date: 02/19/2019
 ms.custom: mvc
-ms.openlocfilehash: 357ebd13ca4c610f1c65009621ee628a90c70b15
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 0c95065e6c380fab6ba33432a32b3297e78027a3
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105768"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926622"
 ---
 # <a name="tutorial-migrate-existing-code-with-nullable-reference-types"></a>Öğretici: Mevcut kodu Nullable başvuru türleriyle geçirin
 
@@ -17,6 +17,7 @@ C#8, null olabilen değer türleri için aynı şekilde, başvuru türlerini tam
 Bu öğreticide, aşağıdakileri nasıl yapacağınızı öğreneceksiniz:
 
 > [!div class="checklist"]
+>
 > - Kodla çalışırken null başvuru denetimlerini etkinleştirin.
 > - Null değerlerle ilgili farklı uyarıları tanılayın ve düzeltin.
 > - Null yapılabilir etkin ve null yapılabilir devre dışı bağlamların arabirimini yönetin.
@@ -84,7 +85,7 @@ Bu iki özellik neden `CS8618`"Nullable özelliği başlatılmamış" olur. Bu y
 
 [!code-csharp[StarterCreateNewsItem](~/samples/csharp/tutorials/nullable-reference-migration/start/SimpleFeedReader/Services/NewsService.cs#CreateNewsItem)]
 
-Yukarıdaki kod bloğunda oldukça bir bit vardır. Bu uygulama, öğesinden `ISyndicationItem`bir haber öğesi oluşturmak için [automaber](https://automapper.org/) NuGet paketini kullanır. Haber hikayesi öğelerinin oluşturulduğunu ve özellikler söz konusu bir bildirimde ayarlandığını keşfettiniz. Bu, `NewsStoryViewModel` için tasarımının hiçbir `null` şekilde bu özelliklerin değer vermediğini gösterdiği anlamına gelir. Bu özellikler **null atanamaz başvuru türleri**olmalıdır. Bu, özgün tasarım amacını en iyi ifade eder. Aslında, hiçbiri `NewsStoryViewModel` null olmayan değerler ile doğru şekilde oluşturulur. Bu, aşağıdaki başlatma kodunu geçerli bir çözüm haline getirir:
+Yukarıdaki kod bloğunda oldukça bir bit vardır. Bu uygulama, öğesinden `ISyndicationItem`bir haber öğesi oluşturmak için [automaber](https://automapper.org/) NuGet paketini kullanır. Haber hikayesi öğelerinin oluşturulduğunu ve özellikler söz konusu bir bildirimde ayarlandığını keşfettiniz. Bu, `NewsStoryViewModel` için tasarımının hiçbir `null` şekilde bu özelliklerin değer vermediğini gösterdiği anlamına gelir. Bu özellikler **null atanamaz başvuru türleri**olmalıdır. Bu, özgün tasarım amacını en iyi ifade eder. Aslında, hiçbiri `NewsStoryViewModel` null olmayan değerler ile doğru *şekilde oluşturulur.* Bu, aşağıdaki başlatma kodunu geçerli bir çözüm haline getirir:
 
 ```csharp
 public class NewsStoryViewModel

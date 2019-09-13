@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4c7be9c8-72ae-481f-a01c-1a4716806e99
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 31f9d045b4d784357896a628135d68365cc29937
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 99ffbccca8cd8a719e5571638308e28d494d687a
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70851233"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926870"
 ---
 # <a name="gacutilexe-global-assembly-cache-tool"></a>Gacutil.exe (Genel Derleme Önbelleği Aracı)
 
@@ -103,6 +103,7 @@ myAssembly3,Version=1.1.0.0,Culture=en,PublicKeyToken=874e23ab874e23ab
 > ```
 >
 > Bunun nedeni, dahili bir Gacutil. exe ' nin aşağıdaki öğelerden oluşan en fazla MAX_PATH karakterden oluşan bir yol oluşturur:
+>
 > - GAC root-34 karakterleri (IE. `C:\Windows\Microsoft.NET\assembly\`)
 > - Mimari-7 veya 9 karakter (IE. `GAC_32\`, `GAC_64\`, `GAC_MSIL`)
 > - Diğer öğelerin boyutuna bağlı olarak, en fazla 91 karakter olan AssemblyName (örn. `System.Xml.Linq\`)

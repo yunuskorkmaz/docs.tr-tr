@@ -1,31 +1,33 @@
 ---
-title: Otomatik makine öğrenimi ile ML.NET
-description: Otomatik model seçimi ve eğitim genel bakış
+title: ML.NET ile otomatik makine öğrenimi
+description: Otomatik model seçimine ve eğitimlere genel bakış
 author: natke
 ms.date: 05/01/2019
 ms.topic: overview
 ms.custom: mvc
 ms.author: nakersha
-ms.openlocfilehash: e34694eedd06c0a3e3558c9137c6add9a7f802e4
-ms.sourcegitcommit: 52e588dc2ee74d484cd07ac60076be25cbf777ab
+ms.openlocfilehash: da2d764e678debc78a25faeb8e48facb44fc4021
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67410514"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929417"
 ---
-# <a name="automated-machine-learning-with-mlnet"></a>Otomatik makine öğrenimi ile ML.NET
+# <a name="automated-machine-learning-with-mlnet"></a>ML.NET ile otomatik makine öğrenimi
 
-Otomatik machine learning otomatik model seçimi ve eğitim gerçekleştiren ML.NET özelliğidir. Machine learning görev belirtin ve bir veri kümesi sağlayın ve otomatik ML model en iyi ölçümlerle seçer. Bunu verir:
-- Tahmin uygulamanıza yüklenebilen bir model dosyası
-- tahminlerde bulunmak üzere uygulama kodu
-- Özellik Seçimi ve model (model anlamak) eğitimi için kullanılan kaynak kodu
+Otomatik makine öğrenimi, otomatik model seçme ve eğitim gerçekleştiren bir ML.NET özelliğidir. Machine Learning görevini belirtirsiniz ve bir veri kümesi sağlarsınız ve otomatik ML modeli en iyi ölçülerle seçer. It çıkışları:
+
+- tahmin uygulamanıza yüklenebilen bir model dosyası
+- tahminleri yapmak için uygulama kodu
+- Özellik seçimi ve model eğitimi için kullanılan kaynak kodu (modeli anlamak için)
 
 > [!NOTE]
-> Bu özellik şu anda Önizleme aşamasındadır ve malzeme değişiklik gösterebilir. 
+> Bu özellik şu anda önizleme aşamasındadır ve malzemeler değişebilir. 
 
-Otomatik ML için machine learning şu anda sınırlı [görevleri](resources/tasks.md) ikili Sınıflandırma, çok sınıflı sınıflandırma ve regresyon. Görevlerin diğer makine öğrenimi, gelecek sürümlerde desteklenmeyecektir.
+Otomatik ML Şu anda ikili sınıflandırmanın makine öğrenimi [görevleriyle](resources/tasks.md) , birden çok Lass sınıflandırmasıyla ve gerileme ile sınırlıdır. Diğer makine öğrenimi görevleri sonraki sürümlerde desteklenecektir.
 
-Otomatik ML kullanmanın üç yolu vardır:
-1. Bir grafik kullanıcı arabirimi ile [ML.NET Model Oluşturucu](automate-training-with-model-builder.md)
-1. Komut satırında ile [ML.NET CLI](automate-training-with-cli.md)
-1. Bir uygulama yoluyla ile [ML API otomatik](how-to-guides/how-to-use-the-automl-api.md)
+Otomatikleştirilmiş ML kullanmanın üç yolu vardır:
+
+1. Grafik Kullanıcı arabirimiyle, [ml.net model Oluşturucu](automate-training-with-model-builder.md) ile
+1. Komut satırında, [ml.net CLI](automate-training-with-cli.md) ile
+1. [OTOMATIKLEŞTIRILMIŞ ml API 'si](how-to-guides/how-to-use-the-automl-api.md) ile bir uygulama aracılığıyla

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0face17f-43ca-417b-9b33-737c0fc360df
-ms.openlocfilehash: 2d075bfebf7b5cbd2b2ce031a1c3855a925405a2
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2c0a6f1477ceec5471c22fa3e46d85f5856b298e
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964027"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70895070"
 ---
 # <a name="how-to-call-wcf-service-operations-asynchronously"></a>Nasıl yapılır: WCF hizmeti Işlemlerini zaman uyumsuz olarak çağır
 Bu konu, bir istemcinin bir hizmet işlemine zaman uyumsuz olarak nasıl erişebildiğini anlatmaktadır. Bu konudaki hizmet, `ICalculator` arabirimini uygular. İstemci, olay odaklı zaman uyumsuz çağrı modelini kullanarak bu arabirimdeki işlemleri zaman uyumsuz olarak çağırabilir. (Olay tabanlı zaman uyumsuz çağrı modeli hakkında daha fazla bilgi için bkz. çok [Iş parçacıklı programlama, olay tabanlı zaman uyumsuz model ile](https://go.microsoft.com/fwlink/?LinkId=248184)). Bir hizmette zaman uyumsuz bir işlemin nasıl uygulanacağını gösteren bir örnek için bkz [. nasıl yapılır: Zaman uyumsuz bir hizmet Işlemi](../../../../docs/framework/wcf/how-to-implement-an-asynchronous-service-operation.md)uygulayın. Zaman uyumlu ve zaman uyumsuz işlemler hakkında daha fazla bilgi için bkz. [eşzamanlı ve zaman uyumsuz işlemler](../../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md).  
@@ -24,7 +24,7 @@ Bu konu, bir istemcinin bir hizmet işlemine zaman uyumsuz olarak nasıl erişeb
   
 1. Aşağıdaki komutta gösterildiği gibi, `/async` `/tcv:Version35` hem hem de komut seçenekleriyle birlikte [ServiceModel meta veri yardımcı programı Aracı (Svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) aracını çalıştırın.  
   
-    ```  
+    ```console
     svcutil /n:http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples http://localhost:8000/servicemodelsamples/service/mex /a /tcv:Version35  
     ```  
   

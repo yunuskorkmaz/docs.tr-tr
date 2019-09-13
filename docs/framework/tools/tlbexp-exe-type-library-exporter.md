@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: a487d61b-d166-467b-a7ca-d8b52fbff42d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 23bb88127875e0e608c8e8de54ba669f84aa1da5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f990c5194c2e5dc1422aab96c7608c019ae9855b
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69937994"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894757"
 ---
 # <a name="tlbexpexe-type-library-exporter"></a>Tlbexp.exe (Tür Kitaplığı Dışarı Aktarıcı)
 Tür Kitaplığı Verme Programı, bir ortak dil çalışma zamanı derlemesinde tanımlanan türleri açıklayan bir tür kitaplığı üretir.  
@@ -26,7 +26,7 @@ Tür Kitaplığı Verme Programı, bir ortak dil çalışma zamanı derlemesinde
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```console  
 tlbexp assemblyName [options]  
 ```  
   
@@ -74,14 +74,14 @@ tlbexp assemblyName [options]
   
  <xref:System.Runtime.InteropServices.MarshalAsAttribute> Veya değerini<xref:System.Runtime.InteropServices.MarshalAsAttribute.SafeArraySubType>belirtmek için özniteliğini kullanırsanız ,<xref:System.Runtime.InteropServices.MarshalAsAttribute.SafeArrayUserDefinedSubType> Tlbexp. exe alanın sonraki kullanımını yoksayar. `VT_DISPATCH` `VT_UNKOWN` Örneğin, aşağıdaki imzalar verildiğinde:  
   
-```  
+```csharp
 [return:MarshalAs(UnmanagedType.SafeArray, SafeArraySubType=VarEnum.VT_UNKNOWN, SafeArrayUserDefinedSubType=typeof(ConsoleKeyInfo))] public Array StructUnkSafe(){return null;}  
 [return:MarshalAs(UnmanagedType.SafeArray, SafeArraySubType=VarEnum.VT_DISPATCH, SafeArrayUserDefinedSubType=typeof(ConsoleKeyInfo))] public Array StructDispSafe(){return null;}  
 ```  
   
  aşağıdaki tür kitaplığı oluşturulur:  
   
-```  
+```cpp 
 [id(0x60020004)]  
 HRESULT StructUnkSafe([out, retval] SAFEARRAY(IUnknown*)* pRetVal);  
 [id(0x60020005)]  
@@ -99,13 +99,13 @@ HRESULT StructDispSafe([out, retval] SAFEARRAY(IDispatch*)* pRetVal);
 ## <a name="examples"></a>Örnekler  
  Aşağıdaki komut, içinde `myTest.dll`bulunan derlemeyle aynı ada sahip bir tür kitaplığı oluşturur.  
   
-```  
+```console  
 tlbexp myTest.dll  
 ```  
   
  Aşağıdaki komut, adında `clipper.tlb`bir tür kitaplığı oluşturur.  
   
-```  
+```console  
 tlbexp myTest.dll /out:clipper.tlb  
 ```  
   
@@ -113,19 +113,19 @@ tlbexp myTest.dll /out:clipper.tlb
   
  Öncelikle tür kitaplığını `myLib.tlb` içeri aktarmak ve olarak `myLib.dll`kaydetmek için Tlbimp. exe ' yi kullanın.  
   
-```  
+```console  
 tlbimp myLib.tlb /out:myLib.dll  
 ```  
   
  Aşağıdaki komut, önceki örnekte C# oluşturulan başvuruları `Sample.dll,` `myLib.dll` derlemek için derleyicisini kullanır.  
   
-```  
+```console  
 CSC Sample.cs /reference:myLib.dll /out:Sample.dll  
 ```  
   
  Aşağıdaki komut, bu başvurular `Sample.dll` `myLib.dll`için bir tür kitaplığı oluşturur.  
   
-```  
+```console  
 tlbexp Sample.dll  
 ```  
   

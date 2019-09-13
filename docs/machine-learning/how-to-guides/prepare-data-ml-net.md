@@ -1,28 +1,28 @@
 ---
-title: Bir model oluşturmak için verileri hazırlama
-description: Dönüşümler ML.NET yönetmek ve ek işlem için verileri hazırlama veya yapı modeli için kullanmayı öğrenin.
+title: Model oluşturmaya yönelik verileri hazırlama
+description: Ek işleme veya model oluşturmaya yönelik verileri işlemek ve hazırlamak için ML.NET içindeki dönüştürmeleri nasıl kullanacağınızı öğrenin.
 author: luisquintanilla
 ms.author: luquinta
-ms.date: 06/25/2019
+ms.date: 09/11/2019
 ms.custom: mvc, how-to, title-hack-0625
-ms.openlocfilehash: 4b7d5a09044e49f1b57b8276b893e0fc962a3be2
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 4452aef351f33df532f3c673307dedbbf71631b8
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67397713"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929365"
 ---
-# <a name="prepare-data-for-building-a-model"></a>Bir model oluşturmak için verileri hazırlama
+# <a name="prepare-data-for-building-a-model"></a>Model oluşturmaya yönelik verileri hazırlama
 
-ML.NET ek işleme veya bir model oluşturmak için veri hazırlamak için kullanmayı öğrenin.
+ML.NET kullanarak ek işleme veya bir model oluşturmaya yönelik verileri hazırlama hakkında bilgi edinin.
 
-Genellikle şekilde çoğaltamaması ve aralıklı verilerdir. Ayrıca, giriş veya tek bir sayısal vektörü olarak özellikleri ML.NET makine öğrenimi algoritmaları bekliyoruz. Bu nedenle veri hazırlama hedeflerinden ML.NET algoritmalarda beklenen biçime verilerinin elde edilmesidir. 
+Veriler genellikle temiz ve seyrek yapılır. ML.NET Machine Learning algoritmaları, giriş veya özelliklerin tek bir sayısal vektörde olmasını bekler. Benzer şekilde, tahmin edilecek değer (etiket), özellikle de kategorik veriler, kodlanmalıdır. Bu nedenle, veri hazırlama amaçlarından biri, verileri ML.NET algoritmaları tarafından beklenen biçimde almak. 
 
-## <a name="filter-data"></a>Verileri filtreleme
+## <a name="filter-data"></a>Verileri Filtrele
 
-Bazı durumlarda, veri kümesindeki tüm verileri analiz için ilgili. İlgisiz verilerin kaldırmak için bir yaklaşım filtreleme. [ `DataOperationsCatalog` ](xref:Microsoft.ML.DataOperationsCatalog) Olur filtresi işlemlerini kümesini içeren bir [ `IDataView` ](xref:Microsoft.ML.IDataView) tüm dönüş ve veri içeren bir [IDataView](xref:Microsoft.ML.IDataView) yalnızca içeren ilgi çekici veri noktaları. Filtre işlemler atomik değildir çünkü dikkat etmeniz önemlidir bir [ `IEstimator` ](xref:Microsoft.ML.IEstimator%601) veya [ `ITransformer` ](xref:Microsoft.ML.ITransformer) ister de [ `TransformsCatalog` ](xref:Microsoft.ML.TransformsCatalog), bunlar olamaz parçası olarak dahil edilen bir [ `EstimatorChain` ](xref:Microsoft.ML.Data.EstimatorChain%601) veya [ `TransformerChain` ](xref:Microsoft.ML.Data.TransformerChain%601) veri hazırlama işlem hattı. 
+Bazen, bir veri kümesindeki tüm veriler Analize uygun değildir. İlgisiz verileri kaldırma yaklaşımı filtreleniyor. , [`DataOperationsCatalog`](xref:Microsoft.ML.DataOperationsCatalog) Tüm verileri [`IDataView`](xref:Microsoft.ML.IDataView) içeren ve yalnızca ilgilendiğiniz veri noktalarını içeren bir [ıdataview](xref:Microsoft.ML.IDataView) döndüren bir filtre işlemleri kümesi içerir. Filtre [`IEstimator`](xref:Microsoft.ML.IEstimator%601) işlemleri bir [`TransformerChain`](xref:Microsoft.ML.Data.TransformerChain%601) veya [`ITransformer`](xref:Microsoft.ML.ITransformer) gibi [`TransformsCatalog`](xref:Microsoft.ML.TransformsCatalog)olmadığından, bir [`EstimatorChain`](xref:Microsoft.ML.Data.EstimatorChain%601) veya veri hazırlama işlem hattının parçası olarak eklenemediğinden emin olmak önemlidir. 
 
-Yüklenen aşağıdaki giriş verileri kullanarak bir [ `IDataView` ](xref:Microsoft.ML.IDataView):
+' A [`IDataView`](xref:Microsoft.ML.IDataView)yüklenen aşağıdaki giriş verilerini kullanma:
 
 ```csharp
 HomeData[] homeDataList = new HomeData[]
@@ -45,20 +45,20 @@ HomeData[] homeDataList = new HomeData[]
 };
 ```
 
-Verilere bir sütun değerine göre filtre uygulamak için kullanma [ `FilterRowsByColumn` ](xref:Microsoft.ML.DataOperationsCatalog.FilterRowsByColumn*) yöntemi.
+Bir sütunun değerine göre verileri filtrelemek için [`FilterRowsByColumn`](xref:Microsoft.ML.DataOperationsCatalog.FilterRowsByColumn*) yöntemini kullanın.
 
 ```csharp
 // Apply filter
 IDataView filteredData = mlContext.Data.FilterRowsByColumn(data, "Price", lowerBound: 200000, upperBound: 1000000);
 ```
 
-Yukarıdaki örnek veri kümesiyle birlikte bir fiyat 200000 ile 1000000 arasında satırları alır. Bu filtre sonucu verileri yalnızca son iki satırını döndürür ve ancak ilk satırın tutma olduğundan bunun ücreti 100000 ve belirtilen aralık arasında değil.
+Yukarıdaki örnek, 200000 ile 1000000 arasında bir fiyata sahip veri kümesindeki satırları alır. Bu filtreyi uygulamanın sonucu yalnızca verilerdeki son iki satırı döndürür ve fiyatı 100000 olduğundan ve belirtilen Aralık arasında olmadığından ilk satırı dışlayacak.
 
 ## <a name="replace-missing-values"></a>Eksik değerleri Değiştir
 
-Veri kümelerinde sık karşılaştıkları eksik değerler. Eksik değerleri ilgilenmek için bir yaklaşım ise bunları verilen tür için varsayılan değer ya da başka bir değiştirmek için ortalama değer gibi anlamlı bir değer. 
+Eksik değerler veri kümelerinde yaygın bir oluşumlardır. Eksik değerlerle ilgilenmeye yönelik bir yaklaşım, veri içindeki ortalama değer gibi herhangi bir veya başka bir anlamlı değer varsa, bunları verilen türün varsayılan değeriyle değiştirecektir. 
 
-Yüklenen aşağıdaki giriş verileri kullanarak bir [ `IDataView` ](xref:Microsoft.ML.IDataView):
+' A [`IDataView`](xref:Microsoft.ML.IDataView)yüklenen aşağıdaki giriş verilerini kullanma:
 
 ```csharp
 HomeData[] homeDataList = new HomeData[]
@@ -81,10 +81,10 @@ HomeData[] homeDataList = new HomeData[]
 };
 ```
 
-Listemize içerisindeki son öğe için eksik değer olduğunu fark `Price`. Eksik değerleri değiştirmek için `Price` sütun kullanımı [ `ReplaceMissingValues` ](xref:Microsoft.ML.ExtensionsCatalog.ReplaceMissingValues*) eksik değeri doldurmak için yöntemi.
+Listemizdeki son öğenin için `Price`değeri eksik olduğuna dikkat edin. `Price` Sütundaki eksik değerleri değiştirmek için, bu eksik değeri dolduracak [`ReplaceMissingValues`](xref:Microsoft.ML.ExtensionsCatalog.ReplaceMissingValues*) yöntemi kullanın.
 
 > [!IMPORTANT]
-> [`ReplaceMissingValue`](xref:Microsoft.ML.ExtensionsCatalog.ReplaceMissingValues*) yalnızca sayısal verilerle çalışır.
+> [`ReplaceMissingValue`](xref:Microsoft.ML.ExtensionsCatalog.ReplaceMissingValues*)yalnızca sayısal verilerle birlikte kullanılabilir.
 
 ```csharp
 // Define replacement estimator
@@ -98,15 +98,15 @@ ITransformer replacementTransformer = replacementEstimator.Fit(data);
 IDataView transformedData = replacementTransformer.Transform(data);
 ```
 
-ML.NET destekleyen çeşitli [değiştirme modları](xref:Microsoft.ML.Transforms.MissingValueReplacingEstimator.ReplacementMode). Örnek kullanımlar yukarıda `Mean` değiştirme modu, bir eksik değeri söz konusu sütunun ortalama değer ile doldurur. Değiştirme'nin sonucu doldurur `Price` verilerimizi 100.000 ve 300000 ortalamasını olduğundan 200.000 ile içerisindeki son öğe özelliği. 
+ML.NET çeşitli [değiştirme modlarını](xref:Microsoft.ML.Transforms.MissingValueReplacingEstimator.ReplacementMode)destekler. Yukarıdaki örnek, bu sütunun `Mean` ortalama değerine sahip eksik değeri dolduracak değiştirme modunu kullanır. Değiştirme işleminin sonucu, 100.000 ve 300.000 `Price` ortalaması olduğundan, 200.000 ile verilerimizin son öğesi için özelliği doldurur. 
 
-## <a name="use-normalizers"></a>Normalizers kullanın
+## <a name="use-normalizers"></a>Normalleyiciler kullanma
 
-[Normalleştirme](https://en.wikipedia.org/wiki/Feature_scaling) aynı ölçekte daha hızlı yakınsama algoritmaları yardımcı olan özellikleri standart hale getirmek için kullanılan bir teknik ön işleme bir veri. Örneğin, yaş ve gelir gibi değerler için aralıklar, genellikle genellikle sıfır binlerce aralığında olan gelir ve 0-100 aralığında olması geçerlilik süresi ile önemli ölçüde farklılık. Ziyaret [dönüşümler sayfa](../resources/transforms.md) daha ayrıntılı bir listesi ve normalleştirme dönüşümler açıklaması. 
+[Normalleştirme](https://en.wikipedia.org/wiki/Feature_scaling) , algoritmaların daha hızlı yakınsamasını sağlayan, aynı ölçekte olmayan özellikleri standartlaştırmak için kullanılan bir veri ön işleme tekniğidir. Örneğin, yaş ve gelir gibi değerlerin aralıkları genellikle, 0-100 ve gelirin genellikle sıfır-binlerce aralığında olması bakımından yaş açısından önemli ölçüde farklılık gösterir. Daha ayrıntılı bir liste ve normalleştirme dönüştürmelerini açıklaması için [dönüşümler sayfasını](../resources/transforms.md) ziyaret edin. 
 
-### <a name="min-max-normalization"></a>Min-Maks normalleştirme
+### <a name="min-max-normalization"></a>Minimum-en fazla normalleştirme
 
-Yüklenen aşağıdaki giriş verileri kullanarak bir [ `IDataView` ](xref:Microsoft.ML.IDataView):
+' A [`IDataView`](xref:Microsoft.ML.IDataView)yüklenen aşağıdaki giriş verilerini kullanma:
 
 ```csharp
 HomeData[] homeDataList = new HomeData[]
@@ -124,7 +124,7 @@ HomeData[] homeDataList = new HomeData[]
 };
 ```
 
-Normalleştirme vektörleri yanı sıra tek sayısal değerleri içeren sütunlar için uygulanabilir. Verileri Normalleştir `Price` min-maks normalleştirme ile kullanarak sütun [ `NormalizeMinMax` ](xref:Microsoft.ML.NormalizationCatalog.NormalizeMinMax*) yöntemi.
+Normalleştirme, tek bir sayısal değere ve vektörlerine sahip sütunlara uygulanabilir. Yöntemi ile Min-Max `Price` normalleştirmesini kullanarak sütundaki verileri normalleştirin. [`NormalizeMinMax`](xref:Microsoft.ML.NormalizationCatalog.NormalizeMinMax*)
 
 ```csharp
 // Define min-max estimator
@@ -138,13 +138,13 @@ ITransformer minMaxTransformer = minMaxEstimator.Fit(data);
 IDataView transformedData = minMaxTransformer.Transform(data);
 ```
 
-Özgün fiyat değerlerini `[200000,100000]` dönüştürülür `[ 1, 0.5 ]` kullanarak `MinMax` normalleştirme formül, bir çıkış değerleri 0-1 aralığında oluşturur.
+Özgün fiyat değerleri `[200000,100000]` , 0-1 aralığında çıkış `[ 1, 0.5 ]` değerleri üreten `MinMax` normalleştirme formülü kullanılarak öğesine dönüştürülür.
 
 ### <a name="binning"></a>Gruplama
 
-[Gruplama](https://en.wikipedia.org/wiki/Data_binning) sürekli değerleri ayrık bir giriş gösterimine dönüştürür. Örneğin, yaş, özelliklerden biri olduğunu varsayın. Gruplama gerçek yaş değeri kullanmak yerine, bu değer aralıkları oluşturur. 0-18 bir depo olabilir, başka bir 19-35 vb. olabilir. 
+[Binme](https://en.wikipedia.org/wiki/Data_binning) , sürekli değerleri girişin ayrı bir gösterimine dönüştürür. Örneğin, özelliklerden birinin yaş olduğunu varsayalım. Bini gerçek yaş değerini kullanmak yerine, bu değer için aralıklar oluşturur. 0-18 bir bin olabilir, diğeri 19-35 olabilir ve bu şekilde devam eder. 
 
-Yüklenen aşağıdaki giriş verileri kullanarak bir [ `IDataView` ](xref:Microsoft.ML.IDataView):
+' A [`IDataView`](xref:Microsoft.ML.IDataView)yüklenen aşağıdaki giriş verilerini kullanma:
 
 ```csharp
 HomeData[] homeDataList = new HomeData[]
@@ -167,7 +167,7 @@ HomeData[] homeDataList = new HomeData[]
 };
 ```
 
-Verileri kullanarak bölmeler Normalleştir [ `NormalizeBinning` ](xref:Microsoft.ML.NormalizationCatalog.NormalizeBinning*) yöntemi. `maximumBinCount` Parametresi verilerinizi sınıflandırmak için gereken depo sayısını belirtmenizi sağlar. Bu örnekte, verileri iki depo yerleştirilir.  
+[`NormalizeBinning`](xref:Microsoft.ML.NormalizationCatalog.NormalizeBinning*) Yöntemini kullanarak verileri depo gözlerine normalleştirin. `maximumBinCount` Parametresi, verilerinizi sınıflandırmak için gereken bölme sayısını belirtmenize olanak sağlar. Bu örnekte, veriler iki bölme içine alınacaktır.  
 
 ```csharp
 // Define binning estimator
@@ -181,13 +181,13 @@ var binningTransformer = binningEstimator.Fit(data);
 IDataView transformedData = binningTransformer.Transform(data);
 ```
 
-Depo sınırları gruplama sonucunu oluşturur `[0,200000,Infinity]`. Bu nedenle sonuç depo olan `[0,1,1]` ilk gözlem 0 200000 ve diğerleri arasında olduğundan 200000 büyüktür, ancak sonsuza küçüktür.
+Binüş 'in sonucu, öğesinin `[0,200000,Infinity]`bölme sınırlarını oluşturur. Bu nedenle, ilk gözlemin 0-200000 arasında ve diğerleri 200000 ' den daha büyük ancak sonsuz ' dan az olduğu için ortaya çıkan depo gözleri vardır `[0,1,1]` .
 
-## <a name="work-with-categorical-data"></a>Kategorik verileri ile çalışma
+## <a name="work-with-categorical-data"></a>Kategorik verilerle çalışma
 
-Bir machine learning modeli oluşturmak için kullanılmadan önce bir sayıya dönüştürülecek sayısal olmayan sütunları ise kategorik veriler gerekir. 
+Sayısal olmayan kategorik verilerin bir makine öğrenimi modeli oluşturmak için kullanılmadan önce bir sayıya dönüştürülmesi gerekir. 
 
-Yüklenen aşağıdaki giriş verileri kullanarak bir [ `IDataView` ](xref:Microsoft.ML.IDataView):
+' A [`IDataView`](xref:Microsoft.ML.IDataView)yüklenen aşağıdaki giriş verilerini kullanma:
 
 ```csharp
 CarData[] cars = new CarData[] 
@@ -210,7 +210,7 @@ CarData[] cars = new CarData[]
 };
 ```
 
-Kategorik `VehicleType` özelliği, bir sayı kullanarak dönüştürülebilir [ `OneHotEncoding` ](xref:Microsoft.ML.CategoricalCatalog.OneHotEncoding*) yöntemi. 
+Kategorik `VehicleType` özelliği [`OneHotEncoding`](xref:Microsoft.ML.CategoricalCatalog.OneHotEncoding*) yöntemi kullanılarak bir sayıya dönüştürülebilir. 
 
 ```csharp
 // Define categorical transform estimator
@@ -224,7 +224,7 @@ ITransformer categoricalTransformer = categoricalEstimator.Fit(data);
 IDataView transformedData = categoricalTransformer.Transform(data);
 ```
 
-Metin değerini elde edilen dönüştürme dönüştürür `VehicleType` bir sayı. Girdileri `VehicleType` sütun dönüştürme uygulandığında şu olur: 
+Elde edilen dönüşüm metin değerini `VehicleType` bir sayıya dönüştürür. Dönüştürme uygulandığında `VehicleType` sütunundaki girişler aşağıdaki gibi olur: 
 
 ```text
 [
@@ -234,11 +234,11 @@ Metin değerini elde edilen dönüştürme dönüştürür `VehicleType` bir say
 ]
 ```
 
-## <a name="work-with-text-data"></a>Metin verileri ile çalışma
+## <a name="work-with-text-data"></a>Metin verileriyle çalışma
 
-Bir machine learning modeli oluşturmak üzere kullanmadan önce sayıya Dönüştürülecek metin verileri gerekir. Ziyaret [dönüşümler sayfa](../resources/transforms.md) daha ayrıntılı bir listesi ve metin dönüştürmeleri açıklaması.
+Bir makine öğrenimi modeli oluşturmak için, metin verilerinin kullanılmadan önce sayılara dönüştürülmesi gerekir. Daha ayrıntılı bir liste ve metin dönüştürmelerini açıklaması için [dönüşümler sayfasını](../resources/transforms.md) ziyaret edin.
 
-Aşağıdaki verileri içine yüklenmiş gibi verileri kullanarak bir [ `IDataView` ](xref:Microsoft.ML.IDataView):
+Aşağıdaki verilere yüklenmiş [`IDataView`](xref:Microsoft.ML.IDataView)veriler gibi verileri kullanarak:
 
 ```csharp
 ReviewData[] reviews = new ReviewData[]
@@ -256,7 +256,7 @@ ReviewData[] reviews = new ReviewData[]
 };
 ```
 
-Metni bir sayısal vektör gösterimine dönüştürmek için en az bir adımda [ `FeaturizeText` ](xref:Microsoft.ML.TextCatalog.FeaturizeText*) yöntemi. Kullanarak [ `FeaturizeText` ](xref:Microsoft.ML.TextCatalog.FeaturizeText*) dönüştürme, bir dizi dönüşümleri lp normalleştirilmiş word ve karakter ngrams temsil eden sayısal bir vektör içinde elde edilen giriş metin sütununu uygulanır. 
+Metni sayısal bir vektör gösterimine dönüştürmek için gereken en düşük adım [`FeaturizeText`](xref:Microsoft.ML.TextCatalog.FeaturizeText*) yöntemi kullanmaktır. [`FeaturizeText`](xref:Microsoft.ML.TextCatalog.FeaturizeText*) Dönüşümü kullanarak, giriş metin sütununa bir dizi dönüştürme uygulanır ve bu, LP normalleştirilmiş sözcük ve karakter Ngram sayısını temsil eden sayısal bir Vector öğesine neden olur. 
 
 ```csharp
 // Define text transform estimator
@@ -270,13 +270,13 @@ ITransformer textTransformer = textEstimator.Fit(data);
 IDataView transformedData = textTransformer.Transform(data);
 ```
 
-Sonuçta elde edilen dönüştürme metin değerleri dönüştürecektir `Description` aşağıdaki çıktıya benzer bir sayısal vektör sütunu:
+Elde edilen dönüşüm, `Description` sütundaki metin değerlerini aşağıdaki çıkışa benzer bir sayısal vector öğesine dönüştürür:
 
 ```text
 [ 0.2041241, 0.2041241, 0.2041241, 0.4082483, 0.2041241, 0.2041241, 0.2041241, 0.2041241, 0.2041241, 0.2041241, 0.2041241, 0.2041241, 0.2041241, 0.2041241, 0.2041241, 0.2041241, 0.2041241, 0.2041241, 0.2041241, 0.2041241, 0.2041241, 0, 0, 0, 0, 0.4472136, 0.4472136, 0.4472136, 0.4472136, 0.4472136, 0 ]
 ```
 
-Birleştirme karmaşık metin işleme adımları içine bir [ `EstimatorChain` ](xref:Microsoft.ML.Data.EstimatorChain%601) gürültü kaldırın ve potansiyel olarak gerektiğinde, gerekli işlem kaynaklarının miktarını azaltmak için.
+Paraziti kaldırmak için karmaşık metin işleme adımlarını [`EstimatorChain`](xref:Microsoft.ML.Data.EstimatorChain%601) bir ile birleştirin ve gereken işlem kaynakları miktarını gerektiği gibi azaltabilirsiniz.
 
 ```csharp
 // Define text transform estimator
@@ -288,17 +288,17 @@ var textEstimator = mlContext.Transforms.Text.NormalizeText("Description")
     .Append(mlContext.Transforms.NormalizeLpNorm("Description"));
 ```
 
-`textEstimator` bir alt kümesini tarafından gerçekleştirilen işlemleri içeren [ `FeaturizeText` ](xref:Microsoft.ML.TextCatalog.FeaturizeText*) yöntemi. Daha karmaşık bir işlem hattının avantajı denetim ve görünürlüğü verilere uygulanan dönüştürmeler biter. 
+`textEstimator`[`FeaturizeText`](xref:Microsoft.ML.TextCatalog.FeaturizeText*) yöntemi tarafından gerçekleştirilen işlemlerin bir alt kümesini içerir. Daha karmaşık bir işlem hattının avantajı, verilere uygulanan dönüşümlere göre denetim ve görünürlük sağlar. 
 
-Örnek kullanıldığında ilk giriş tarafından tanımlanan dönüştürme adımı tarafından üretilen sonuçlar ayrıntılı bir açıklaması verilmiştir `textEstimator`:
+Örnek olarak ilk girdiyi kullanarak aşağıda, tarafından `textEstimator`tanımlanan dönüştürme adımları tarafından oluşturulan sonuçların ayrıntılı bir açıklaması verilmiştir:
 
-**Orijinal metni: Bu iyi bir üründür**
+**Özgün metin: Bu iyi bir üründür**
 
 |Dönüştürme | Açıklama | Sonuç
 |--|--|--|
-|1. NormalizeText | Tüm harfleri küçük harfe varsayılan olarak dönüştürür | Bu iyi bir üründür
-|2. TokenizeWords | Bölmelerini kelimeler dizeye | ["Bu", "is", "bir","iyi","product"]
-|3. RemoveDefaultStopWords | Durdurma sözcükleri gibi kaldırır *olduğu* ve *bir*. | ["good", "product"]
-|4. MapValueToKey | Anahtarları (Kategoriler) giriş verileri temel alan değerleri eşleyen |  [1,2]
-|5. ProduceNGrams | Metin ardışık sözcükleri dizisine dönüştürür. | [1,1,1,0,0]
-|6. NormalizeLpNorm | Kendi lp norm tarafından ölçek girişleri | [ 0.577350529, 0.577350529, 0.577350529, 0, 0 ]
+|1. NormalizeText | Varsayılan olarak tüm harfleri küçük harfe dönüştürür | Bu iyi bir üründür
+|2. TokenizeWords | Dizeyi tek tek sözcüklere böler | ["This", "dir", "a", "iyidir", "Product"]
+|3. Removedefaultstopkelimeleri | *Ve gibi* stopsözcüklerini *kaldırır.* | ["iyi", "ürün"]
+|4. MapValueToKey | Değerleri, giriş verilerine göre anahtarlar (kategoriler) ile eşler |  [1,2]
+|5. ProduceNGrams | Metni birbirini izleyen sözcüklerin sıralamasına dönüştürür | [1, 1, 1, 0, 0]
+|6. NormalizeLpNorm | Girdileri LP-norm olarak ölçeklendirin | [0,577350529, 0,577350529, 0,577350529, 0, 0]

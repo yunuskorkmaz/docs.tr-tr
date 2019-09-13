@@ -6,12 +6,12 @@ ms.author: cesardl
 ms.date: 04/24/2019
 ms.custom: mvc
 ms.topic: tutorial
-ms.openlocfilehash: 6dbd69c8424227f85d8bf3cdcaf6cf9dbf7e1f4c
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: f3688b4492d3eb629f86a9d463b9127429260033
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70856024"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929117"
 ---
 # <a name="analyze-sentiment-using-the-mlnet-cli"></a>ML.NET CLI kullanarak yaklaşımı çözümleme
 
@@ -19,6 +19,7 @@ ML.NET CLı kullanarak bir ML.NET modeli ve temel alınan C# kodu otomatik olara
 
 Bu öğreticide, aşağıdaki adımları kullanacaksınız:
 > [!div class="checklist"]
+>
 > - Verilerinizi seçili makine öğrenimi görevi için hazırlayın
 > - CLı 'dan ' mlnet Auto-eğitme ' komutunu çalıştırın
 > - Kalite ölçümü sonuçlarını gözden geçirme
@@ -259,6 +260,7 @@ Daha önemlisi, bu senaryo (Yaklaşım Analizi modeli) için de, aşağıdaki ö
 
 Bu öğreticide, şunların nasıl yapıldığını öğrendiniz:
 > [!div class="checklist"]
+>
 > - Verilerinizi seçilen ML görevi için hazırlayın (çözülme sorunu)
 > - CLı aracında ' mlnet Auto-eğitme ' komutunu çalıştırın
 > - Kalite ölçümü sonuçlarını gözden geçirme

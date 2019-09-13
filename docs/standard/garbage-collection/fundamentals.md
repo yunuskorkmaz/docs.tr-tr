@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 64ffd57d8c0bce1d9f409adebd169b4fd3e17e06
-ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
+ms.openlocfilehash: 9ba6c46116d809e2881eee37b080e1952e2eb6a0
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68796851"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70895275"
 ---
 # <a name="fundamentals-of-garbage-collection"></a>Çöp toplamanın temelleri
 
@@ -270,7 +270,7 @@ Aşağıdaki çizimde ayrı bir adanmış iş parçacığında gerçekleştirile
 
 ## <a name="background-workstation-garbage-collection"></a>Arka plan iş istasyonu çöp toplama
 
-Arka plan atık toplamada, 2. nesil toplama işlemi devam ederken, kısa ömürlü nesiller (0 ve 1) gerektiği şekilde toplanır. Arka plan atık toplama için bir ayar yoktur; eşzamanlı atık toplama ile otomatik olarak etkinleştirilir. Arka plan atık toplama, eşzamanlı atık toplama için bir değiştirme. Eşzamanlı atık toplama ile olduğu gibi, arka plan çöp toplama işlemi adanmış bir iş parçacığında gerçekleştirilir ve yalnızca 2. nesil koleksiyonlar için geçerlidir.
+Arka plan atık toplama, .NET Framework 4 ile başlayarak eşzamanlı iş istasyonu çöp toplama yerini alır ve .NET Framework 4,5 ile başlayan eşzamanlı sunucu çöp toplama yerini alır.  Arka plan atık toplamada, 2. nesil toplama işlemi devam ederken, kısa ömürlü nesiller (0 ve 1) gerektiği şekilde toplanır. Özel bir iş parçacığında gerçekleştirilir ve yalnızca 2. nesil koleksiyonlar için geçerlidir. Arka plan atık toplama otomatik olarak varsayılan olarak etkindir ve .NET Framework uygulamalarında [ \<gcConcurrent >](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) yapılandırma ayarıyla etkinleştirilebilir veya devre dışı bırakılabilir. 
 
 > [!NOTE]
 > Arka plan atık toplama yalnızca .NET Framework 4 ve üzeri sürümlerde kullanılabilir. .NET Framework 4 ' te yalnızca iş istasyonu çöp toplama için desteklenir. .NET Framework 4,5 ' den başlayarak, arka plan atık toplama hem iş istasyonu hem de sunucu çöp toplama için kullanılabilir.

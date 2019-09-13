@@ -2,41 +2,41 @@
 title: CustomChannelsTester
 ms.date: 03/30/2017
 ms.assetid: ee1fa307-98b1-4647-8860-2e9217ba6082
-ms.openlocfilehash: 1517a2eb73da778c9b84ff857f4b8ad2b4334498
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 0d77af319e18868ce7d600269cd9afaa0c4ce2c6
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67425000"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928639"
 ---
 # <a name="customchannelstester"></a>CustomChannelsTester
-`CustomChannelsTester` Bir dizi önceden tanımlanmış hizmet sözleşmeleri, özel kanal uygulamaları test etmek için kullanabileceğiniz bir araçtır. Hizmet sözleşmeleri kümesini seçin ve bir XML dosyası kullanarak aracı geçirin. Araç ardından, özel kanal uygulamaları ileti değişimi sırasında sınayan istemci ve hizmet oluşturur.  
+, `CustomChannelsTester` Özel kanal uygulamalarınızı önceden tanımlanmış bir hizmet sözleşmeleri kümesine karşı test etmek için kullanabileceğiniz bir araçtır. Hizmet sözleşmeleri kümesini seçebilir ve bir XML dosyası kullanarak araca geçirebilirsiniz. Araç daha sonra ileti değişimi sırasında özel kanal uygulamalarınızı uygulayan hizmeti ve istemciyi oluşturur.  
   
-### <a name="to-build-the-tool"></a>Aracı yapılandırmak için  
+### <a name="to-build-the-tool"></a>Aracı oluşturmak için  
   
-1. Çözümü derlemek için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+1. Çözümü derlemek için [Windows Communication Foundation örnekleri oluşturma](../../../../docs/framework/wcf/samples/building-the-samples.md)bölümündeki yönergeleri izleyin.  
   
-2. Çözümü üç dosya oluşturur: CustomChannelsTester.exe TestSpec.xml ve SampleRun.cmd. ' % S'dosyası SampleRun.cmd test etmek için bu aracı kullanmayı gösteren bir örnek komut satırı sahip [taşıma: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) örnek.  
+2. Çözümün oluşturulması üç dosya üretir: CustomChannelsTester. exe, TestSpec. xml ve SampleRun. cmd. SampleRun. cmd dosyası, bu aracın [taşımayı test etmek için nasıl kullanılacağını gösteren örnek bir komut satırına sahiptir: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) örneği.  
   
 ### <a name="to-run-the-tool"></a>Aracı çalıştırmak için  
   
 - Komut isteminde aşağıdaki komutu yazın:  
   
-    ```  
+    ```console  
     CustomChannelsTester.exe /binding:YourCustomBindngName /dll:TheAssemblyWhereThisTypeisDefined /testspec:XmlFileNameWhichContainsTestOptions  
     ```  
   
-     Kullanarak `/binding` seçeneği gereklidir.  
+     `/binding` Seçeneğinin kullanılması gerekir.  
   
-     `/dll` "bağlama" Windows Communication Foundation (WCF) tarafından sağlanan sistem tarafından sağlanan bir bağlamayı değilse gereklidir.  
+     `/dll`"Binding", Windows Communication Foundation (WCF) tarafından belirtilen sistem tarafından sağlanmış bir bağlama değilse gereklidir.  
   
-     `/testspec` isteğe bağlıdır.  
+     `/testspec`isteğe bağlıdır.  
   
-     Bu, sunucu ve istemcileri test belirtimleri ve bağlama dayalı oluşturur.  
+     Bu, test belirtimlerine ve bağlamaya göre sunucu ve istemci oluşturur.  
   
-     İstemci ve sunucu çalıştırır ve sonuçları döndürür.  
+     İstemcisini ve sunucuyu yürütür ve sonuçları döndürür.  
   
-     Örnek XML açıklaması için test belirtimleri (testspec.xml) aşağıdadır:  
+     Aşağıda, test belirtimleri (TestSpec. xml) açıklaması için örnek XML verilmiştir:  
   
     ```xml  
     <TestSpec xmlns="http://WCF/TestSpec" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"   

@@ -2,12 +2,12 @@
 title: SQL Server'da Sahiplik ve Kullanıcı Şeması Ayrımı
 ms.date: 03/30/2017
 ms.assetid: 242830c1-31b5-4427-828c-cc22ff339f30
-ms.openlocfilehash: f0aa0a67bfbc64124fe2510915d0945341aeb49e
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 5ad3d927bcf3534e134db2c98b79842b0e6148f3
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70791939"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894428"
 ---
 # <a name="ownership-and-user-schema-separation-in-sql-server"></a>SQL Server'da Sahiplik ve Kullanıcı Şeması Ayrımı
 SQL Server güvenliği temel bir kavramı, nesne sahiplerinin bunları yönetmek için geri alınamaz izinlere sahip olmalarından oluşur. Bir nesne sahibinden ayrıcalıkları kaldıramazsınız ve içindeki nesneler varsa kullanıcıları bir veritabanından bırakamazsınız.  
@@ -17,7 +17,7 @@ SQL Server güvenliği temel bir kavramı, nesne sahiplerinin bunları yönetmek
   
  Nesnelere başvurmak için dört bölümden oluşan adlandırma sözdizimi, şema adını belirtir.  
   
-```  
+```text
 Server.Database.DatabaseSchema.DatabaseObject  
 ```  
   

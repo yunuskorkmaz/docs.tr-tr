@@ -1,16 +1,16 @@
 ---
-title: ICorProfilerInfo9 arabirimi
+title: ICorProfilerInfo9 Arabirimi
 ms.date: 08/06/2019
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 0ba4f2b4a515143d50bc812f04ea75d821b69471
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: af6bd02c6d4e88c72dca20d2520d1ecc8cf1c421
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68973689"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928779"
 ---
-# <a name="icorprofilerinfo9-interface"></a>ICorProfilerInfo9 arabirimi
+# <a name="icorprofilerinfo9-interface"></a>ICorProfilerInfo9 Arabirimi
 
 Birden çok yerel kod sürümüne sahip işlevlerle ilgili bilgileri sorgulamak için yöntemler sağlayan bir [ICorProfilerInfo8](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo8-interface.md) alt sınıfı.  
 
@@ -26,5 +26,7 @@ Birden çok yerel kod sürümüne sahip işlevlerle ilgili bilgileri sorgulamak 
 **Platform** Bkz. [.NET Core desteklenen işletim sistemleri](../../../core/windows-prerequisites.md#net-core-supported-operating-systems).  
 **Üst bilgi** CorProf. IDL, CorProf. h  
 **.NET sürümleri:** [!INCLUDE[net_core](../../../../includes/net-core-22-md.md)]  
+
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Profil Oluşturma Arabirimleri](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)

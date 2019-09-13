@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 00c12376-cb26-4317-86ad-e6e9c089be57
-ms.openlocfilehash: 7cd02a0a315ffdb155af09ac4e4fabbea1724a4d
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: fabd9b94b8c0a3f0e0db220e84d6c2eca3537c50
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70780840"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894412"
 ---
 # <a name="sql-server-express-user-instances"></a>SQL Server Express Kullanıcı Örnekleri
 Microsoft SQL Server Express Edition (SQL Server Express), yalnızca SQL Server (`SqlClient`) için .NET Framework veri sağlayıcısı kullanılırken kullanılabilen Kullanıcı örneği özelliğini destekler. Bir kullanıcı örneği, bir üst örnek tarafından oluşturulan SQL Server Express veritabanı altyapısının ayrı bir örneğidir. Kullanıcı örnekleri, yerel bilgisayarlarında yönetici olmayan kullanıcıların SQL Server Express veritabanlarına ekler ve bunlara bağlanmasına izin verir. Her örnek, bireysel kullanıcının güvenlik bağlamı altında, tek örnekli Kullanıcı bazında çalışır.  
@@ -26,9 +26,9 @@ Microsoft SQL Server Express Edition (SQL Server Express), yalnızca SQL Server 
 ## <a name="enabling-user-instances"></a>Kullanıcı örneklerini etkinleştirme  
  Kullanıcı örnekleri oluşturmak için bir SQL Server Express üst örneğinin çalışıyor olması gerekir. SQL Server Express yüklendiğinde Kullanıcı örnekleri varsayılan olarak etkindir ve üst örnekte **sp_configure** sistem saklı yordamını yürüten bir sistem yöneticisi tarafından açıkça etkinleştirilebilir veya devre dışı bırakılabilir.  
   
-```  
+```sql  
 -- Enable user instances.  
-sp_configure 'user instances enabled','1'   
+sp_configure 'user instances enabled','1'
   
 -- Disable user instances.  
 sp_configure 'user instances enabled','0'  
@@ -51,7 +51,7 @@ sp_configure 'user instances enabled','0'
   
 - `|DataDirectory|` Kanal simgelerine eklenen dize, bağlantıyı açan uygulamanın veri dizinine başvurur ve. mdf ve. ldf veritabanının ve günlük dosyalarının konumunu gösteren göreli bir yol sağlar. Bu dosyaları başka bir yerde bulmak istiyorsanız dosyaların tam yolunu sağlamanız gerekir.  
   
-```  
+```text
 Data Source=.\\SQLExpress;Integrated Security=true;  
 User Instance=true;AttachDBFilename=|DataDirectory|\InstanceDB.mdf;  
 Initial Catalog=InstanceDB;  
@@ -65,7 +65,7 @@ Initial Catalog=InstanceDB;
   
  Öğesinin `DataDirectory` işaret ettiği fiziksel konum, uygulamanın türüne bağlıdır. Bu örnekte, eklenecek Northwind. mdf dosyası uygulamanın \app_data klasöründe bulunur.  
   
-```  
+```text
 Data Source=.\\SQLExpress;Integrated Security=true;  
 User Instance=true;  
 AttachDBFilename=|DataDirectory|\app_data\Northwind.mdf;  

@@ -2,12 +2,12 @@
 title: ASP.NET Olmadan WCF AJAX Hizmetleri Oluşturma
 ms.date: 03/30/2017
 ms.assetid: ba4a7d1b-e277-4978-9f62-37684e6dc934
-ms.openlocfilehash: f850d8649f1d67fe916542bfb025afb7cb3f852b
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 04d2831407f4aa32c72aabbbff0e6fdde769bd23
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70856140"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70895096"
 ---
 # <a name="creating-wcf-ajax-services-without-aspnet"></a>ASP.NET Olmadan WCF AJAX Hizmetleri Oluşturma
 Windows Communication Foundation (WCF) AJAX hizmetlerine, ASP.NET AJAX gerekmeden JavaScript etkin herhangi bir Web sayfasından erişilebilir. Bu konuda, böyle bir WCF hizmetinin nasıl oluşturulacağı açıklanmaktadır.  
@@ -25,7 +25,7 @@ Windows Communication Foundation (WCF) AJAX hizmetlerine, ASP.NET AJAX gerekmede
 ## <a name="creating-an-ajax-endpoint"></a>AJAX uç noktası oluşturma  
  Bir WCF hizmetinde Ajax desteğini etkinleştirmenin en temel yolu, aşağıdaki örnekte olduğu gibi hizmeti ile <xref:System.ServiceModel.Activation.WebServiceHostFactory> ilişkili. svc dosyasında kullanmaktır.  
   
-```svc
+```text
 <%ServiceHost   
     language=c#  
     Debug="true"  

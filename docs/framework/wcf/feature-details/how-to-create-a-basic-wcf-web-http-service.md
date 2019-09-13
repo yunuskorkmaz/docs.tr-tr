@@ -5,69 +5,69 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 877662d3-d372-4e08-b417-51f66a0095cd
-ms.openlocfilehash: d2d05e0c3bb24c44bf78dc41074b8759270cf49b
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: e9646235f9423f2a4df9cfe09a5e83a91dcdcace
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636520"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70895184"
 ---
 # <a name="how-to-create-a-basic-wcf-web-http-service"></a>Nasıl yapılır: Temel Bir WCF Web HTTP Hizmeti Oluşturma
 
-Windows Communication Foundation (WCF), bir Web uç noktası hizmetidir oluşturmanıza olanak sağlar. Hiç SOAP Zarfı olduğunda, XML veya JSON veri Web uç gönderin. Bu konuda, bu tür bir uç noktanın kullanıma gösterilmiştir.
+Windows Communication Foundation (WCF), bir Web uç noktası sunan bir hizmet oluşturmanıza olanak sağlar. Web uç noktaları, verileri XML veya JSON ile gönderir, hiç SOAP Zarfı yoktur. Bu konuda, bu tür bir uç noktanın nasıl kullanılacağı gösterilmektedir.
 
 > [!NOTE]
-> Yalnızca bir Web uç noktası güvenli şekilde bunu aktarım güvenliği kullanarak HTTPS kullanıma sağlamaktır. İleti tabanlı güvenlik kullanırken, güvenlik bilgileri genellikle SOAP üst bilgilerinde yerleştirilir ve gönderilen iletiler için hiç SOAP Zarfı olmayan SOAP uç noktaları içeren saklanıyorsa güvenlik bilgilerini yerleştirmek için yoktur ve aktarım güvenliği kullanmanız gerekir.
+> Web uç noktasını güvenli hale getirmenin tek yolu, aktarım güvenliği kullanılarak HTTPS üzerinden kullanıma sunulmasıdır. İleti tabanlı güvenlik kullanırken, güvenlik bilgileri genellikle SOAP üst bilgilerine yerleştirilir ve SOAP olmayan uç noktalara gönderilen iletiler SOAP Zarfı içermediği için, güvenlik bilgilerinin yerleştirilmesi ve aktarım güvenliğine güvenmesi gerekir.
 
-## <a name="to-create-a-web-endpoint"></a>Bir Web uç noktası oluşturma
+## <a name="to-create-a-web-endpoint"></a>Web uç noktası oluşturmak için
 
-1. İle işaretlenmiş bir arabirim kullanarak bir hizmet sözleşmesini tanımlama <xref:System.ServiceModel.ServiceContractAttribute>, <xref:System.ServiceModel.Web.WebInvokeAttribute> ve <xref:System.ServiceModel.Web.WebGetAttribute> öznitelikleri.
+1. <xref:System.ServiceModel.Web.WebInvokeAttribute> <xref:System.ServiceModel.ServiceContractAttribute> Ve<xref:System.ServiceModel.Web.WebGetAttribute> öznitelikleri ile işaretlenmiş bir arabirim kullanarak bir hizmet sözleşmesi tanımlayın.
 
      [!code-csharp[htBasicService#0](~/samples/snippets/csharp/VS_Snippets_CFX/htbasicservice/cs/service.cs#0)]
      [!code-vb[htBasicService#0](~/samples/snippets/visualbasic/VS_Snippets_CFX/htbasicservice/vb/service.vb#0)]
 
     > [!NOTE]
-    > Varsayılan olarak, <xref:System.ServiceModel.Web.WebInvokeAttribute> işlemi POST çağrısına eşler. Ancak, işlemi belirterek eşleştirmek için HTTP yöntemini (örneğin, HEAD, PUT veya Sil) belirtebilirsiniz bir "yöntemi =" parametresi. <xref:System.ServiceModel.Web.WebGetAttribute> olmayan bir "yöntemi =" parametresi ve yalnızca eşlemeler GET hizmet işlemine çağırır.
+    > Varsayılan olarak, <xref:System.ServiceModel.Web.WebInvokeAttribute> eşleme çağrıları işleme gönderisini. Ancak, bir "method =" parametresi belirterek, işleme eşlenecek HTTP yöntemini (örneğin, HEAD, PUT veya DELETE) belirtebilirsiniz. <xref:System.ServiceModel.Web.WebGetAttribute>"method =" parametresine sahip değildir ve yalnızca hizmet işlemine yapılan çağrıları eşler.
 
-2. Hizmet sözleşmesini uygulama.
+2. Hizmet sözleşmesini uygulayın.
 
      [!code-csharp[htBasicService#1](~/samples/snippets/csharp/VS_Snippets_CFX/htbasicservice/cs/service.cs#1)]
      [!code-vb[htBasicService#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/htbasicservice/vb/service.vb#1)]
 
-## <a name="to-host-the-service"></a>Ana bilgisayar hizmeti
+## <a name="to-host-the-service"></a>Hizmeti barındırmak için
 
-1. Oluşturma bir <xref:System.ServiceModel.Web.WebServiceHost> nesne.
+1. Bir <xref:System.ServiceModel.Web.WebServiceHost> nesne oluşturun.
 
      [!code-csharp[htBasicService#2](~/samples/snippets/csharp/VS_Snippets_CFX/htbasicservice/cs/service.cs#2)]
      [!code-vb[htBasicService#2](~/samples/snippets/visualbasic/VS_Snippets_CFX/htbasicservice/vb/service.vb#2)]
 
-2. Ekleme bir <xref:System.ServiceModel.Description.ServiceEndpoint> ile <xref:System.ServiceModel.Description.WebHttpBehavior>.
+2. İle bir <xref:System.ServiceModel.Description.ServiceEndpoint>ekleyin. <xref:System.ServiceModel.Description.WebHttpBehavior>
 
      [!code-csharp[htBasicService#3](~/samples/snippets/csharp/VS_Snippets_CFX/htbasicservice/cs/service.cs#3)]
      [!code-vb[htBasicService#3](~/samples/snippets/visualbasic/VS_Snippets_CFX/htbasicservice/vb/service.vb#3)]
 
     > [!NOTE]
-    > Bir uç nokta eklemezseniz <xref:System.ServiceModel.Web.WebServiceHost> otomatik olarak bir varsayılan uç noktası oluşturur. <xref:System.ServiceModel.Web.WebServiceHost> Ayrıca ekler <xref:System.ServiceModel.Description.WebHttpBehavior> ve meta veri uç noktasının varsayılan HTTP uç noktası ile aksatmaz için HTTP yardım sayfasına ve Web Hizmetleri Açıklama Dili (WSDL) alma işlevselliğini devre dışı bırakır.
+    > Uç nokta eklemedıysanız, <xref:System.ServiceModel.Web.WebServiceHost> otomatik olarak varsayılan bir uç nokta oluşturur. <xref:System.ServiceModel.Web.WebServiceHost>Ayrıca, <xref:System.ServiceModel.Description.WebHttpBehavior> http yardım sayfasını ve Web Hizmetleri Açıklama Dili (wsdl) Al işlevini ekler ve devre dışı bırakır, böylece meta veri uç noktası varsayılan HTTP uç noktasına müdahale etmez.
     >
-    >  Bir URL ile bir olmayan SOAP uç noktası ekleme "" uç noktasında bir işlemi çağırma girişimi yapıldığında beklenmeyen davranışlara neden olur. Bunun nedeni, uç nokta URI'si (temel bir WCF Hizmeti adresine göz atarken görüntülenen sayfa) yardım sayfasına URI'sini aynıdır dinleme ' dir.
+    >  "" URL 'SI ile SOAP olmayan bir uç nokta eklemek, uç noktada bir işlemi çağırmak için bir girişim yapıldığında beklenmeyen davranışlara neden olur. Bunun nedeni, uç noktanın dinleme URI 'si, yardım sayfasının URI 'siyle aynıdır (bir WCF hizmetinin temel adresine gözattığınızda görüntülenen sayfa).
 
-     Bunun gerçekleşmesini önlemek için aşağıdaki işlemlerden birini yapabilirsiniz:
+     Bunun oluşmasını engellemek için aşağıdaki eylemlerden birini yapabilirsiniz:
 
-    - Her zaman bir olmayan SOAP uç noktası için boş olmayan URI belirtin.
+    - SOAP olmayan bir uç nokta için her zaman boş olmayan bir URI belirtin.
 
-    - Yardım sayfasını kapat. Bu, aşağıdaki kod ile yapılabilir:
+    - Yardım sayfasını kapatın. Bu, aşağıdaki kodla yapılabilir:
 
      [!code-csharp[htBasicService#4](~/samples/snippets/csharp/VS_Snippets_CFX/htbasicservice/cs/snippets.cs#4)]
      [!code-vb[htBasicService#4](~/samples/snippets/visualbasic/VS_Snippets_CFX/htbasicservice/vb/snippets.vb#4)]
 
-3. Hizmet ana bilgisayarı'nı açın ve kullanıcı ENTER tuşuna bastığında kadar bekleyin.
+3. Hizmet konağını açın ve Kullanıcı ENTER tuşuna basana kadar bekleyin.
 
      [!code-csharp[htBasicService#5](~/samples/snippets/csharp/VS_Snippets_CFX/htbasicservice/cs/snippets.cs#5)]
      [!code-vb[htBasicService#5](~/samples/snippets/visualbasic/VS_Snippets_CFX/htbasicservice/vb/snippets.vb#5)]
 
-     Bu örnek bir konsol uygulaması ile Web stili hizmet barındırmak nasıl gösterir. Ayrıca, böyle bir hizmet IIS içinde barındırabilirsiniz. Bunu yapmak için belirtin <xref:System.ServiceModel.Activation.WebServiceHostFactory> .svc dosyasında aşağıdaki kodun gösterdiği gibi sınıf.
+     Bu örnek, bir konsol uygulamasıyla bir Web stili hizmetin nasıl barındırılacağını gösterir. Bu hizmeti IIS içinde de barındırabilirsiniz. Bunu yapmak için, aşağıdaki kodda <xref:System.ServiceModel.Activation.WebServiceHostFactory> gösterildiği gibi bir. svc dosyasında sınıfını belirtin.
 
-    ```
+    ```text
     <%ServiceHost
         language=c#
         Debug="true"
@@ -75,42 +75,42 @@ Windows Communication Foundation (WCF), bir Web uç noktası hizmetidir oluştur
         Factory=System.ServiceModel.Activation.WebServiceHostFactory%>
     ```
 
-## <a name="to-call-service-operations-mapped-to-get-in-internet-explorer"></a>Internet Explorer'da GET eşlenen hizmet işlemlerini aramak üzere
+## <a name="to-call-service-operations-mapped-to-get-in-internet-explorer"></a>Internet Explorer 'da almak üzere eşlenmiş hizmet işlemlerini çağırmak için
 
-1. Internet Explorer ve tür açın "`http://localhost:8000/EchoWithGet?s=Hello, world!`" ve ENTER tuşuna basın. Hizmetin taban adresi URL içerir (`http://localhost:8000/`), ilgili uç nokta adresi (""), hizmet işlemine çağrı ("EchoWithGet") yanı sıra, bir soru işareti ve işareti tarafından ayrılmış, adlandırılan parametrelerin bir listesi ve ardından (&).
+1. Internet Explorer 'ı açın ve "`http://localhost:8000/EchoWithGet?s=Hello, world!`" yazın ve ENTER tuşuna basın. URL, hizmetin temel adresini (`http://localhost:8000/`), uç noktanın göreli adresini (""), çağrı yapılacak hizmet işlemini ("yankı \ al") ve ardından bir ve işareti (&) ile ayrılmış adlandırılmış parametrelerin bir listesini içerir.
 
-## <a name="to-call-service-operations-in-code"></a>Kod içinde hizmet işlemlerini aramak üzere
+## <a name="to-call-service-operations-in-code"></a>Koddaki hizmet işlemlerini çağırmak için
 
-1. Bir örneğini oluşturmak <xref:System.ServiceModel.ChannelFactory%601> içinde bir `using` blok.
+1. <xref:System.ServiceModel.ChannelFactory%601> Bir`using` blok içinde bir örnek oluşturun.
 
      [!code-csharp[htBasicService#6](~/samples/snippets/csharp/VS_Snippets_CFX/htbasicservice/cs/service.cs#6)]
      [!code-vb[htBasicService#6](~/samples/snippets/visualbasic/VS_Snippets_CFX/htbasicservice/vb/service.vb#6)]
 
-2. Ekleme <xref:System.ServiceModel.Description.WebHttpBehavior> uç noktasına <xref:System.ServiceModel.ChannelFactory%601> çağırır.
+2. Çağrıları uç noktaya ekleyin <xref:System.ServiceModel.Description.WebHttpBehavior>. <xref:System.ServiceModel.ChannelFactory%601>
 
      [!code-csharp[htBasicService#7](~/samples/snippets/csharp/VS_Snippets_CFX/htbasicservice/cs/service.cs#7)]
      [!code-vb[htBasicService#7](~/samples/snippets/visualbasic/VS_Snippets_CFX/htbasicservice/vb/service.vb#7)]
 
-3. Bir kanal oluşturmak ve hizmet çağırın.
+3. Kanalı oluşturun ve hizmeti çağırın.
 
      [!code-csharp[htBasicService#8](~/samples/snippets/csharp/VS_Snippets_CFX/htbasicservice/cs/service.cs#8)]
      [!code-vb[htBasicService#8](~/samples/snippets/visualbasic/VS_Snippets_CFX/htbasicservice/vb/service.vb#8)]
 
-4. Kapat <xref:System.ServiceModel.Web.WebServiceHost>.
+4. Öğesini kapatın <xref:System.ServiceModel.Web.WebServiceHost>.
 
      [!code-csharp[htBasicService#9](~/samples/snippets/csharp/VS_Snippets_CFX/htbasicservice/cs/service.cs#9)]
      [!code-vb[htBasicService#9](~/samples/snippets/visualbasic/VS_Snippets_CFX/htbasicservice/vb/service.vb#9)]
 
 ## <a name="example"></a>Örnek
 
-Bu örnek için listeleme tam kod aşağıda verilmiştir.
+Bu örnek için tam kod listesi aşağıda verilmiştir.
 
 [!code-csharp[htBasicService#10](~/samples/snippets/csharp/VS_Snippets_CFX/htbasicservice/cs/service.cs#10)]
 [!code-vb[htBasicService#10](~/samples/snippets/visualbasic/VS_Snippets_CFX/htbasicservice/vb/service.vb#10)]
 
-## <a name="compiling-the-code"></a>Kod derleme
+## <a name="compiling-the-code"></a>Kodu derleme
 
-Adını da başvuru System.ServiceModel.dll ve System.ServiceModel.Web.dll derlenirken.
+System. ServiceModel. dll ve System. ServiceModel. Web. dll Service.cs başvurusunu derlerken.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

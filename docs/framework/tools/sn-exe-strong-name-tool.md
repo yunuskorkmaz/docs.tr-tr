@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: c1d2b532-1b8e-4c7a-8ac5-53b801135ec6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 35e89584f3916d748809960d33a31eb4e8fb9c6a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 643f0644bdeb2d3bdf6a08b482d0494affd92209
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69938012"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894633"
 ---
 # <a name="snexe-strong-name-tool"></a>Sn.exe (Tanımlayıcı Ad Aracı)
 Tanımlayıcı ad Aracı (sn. exe), derlemelerin [güçlü adlarla](../../../docs/framework/app-domains/strong-named-assemblies.md)imzalanmanıza yardımcı olur. Sn.exe; temel yönetim, imza oluşturma ve imza doğrulaması için seçenekler sağlar.  
@@ -36,7 +36,7 @@ Tanımlayıcı ad Aracı (sn. exe), derlemelerin [güçlü adlarla](../../../doc
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```console  
 sn [-quiet][option [parameter(s)]]  
 ```  
   
@@ -66,7 +66,7 @@ sn [-quiet][option [parameter(s)]]
 |**-T** [**p**] *derlemesi*|Derleme için ortak anahtar belirtecini görüntüler *.* *Derleme* , derleme bildirimi içeren bir dosyanın adı olmalıdır.<br /><br /> Sn.exe, ortak anahtardan bir karma işlevini kullanarak belirteci hesaplar. Alandan kazanmak için, çalışma zamanı, tanımlayıcı bir ada sahip derlemeye bağımlılık kaydederken ortak anahtar belirteçlerini başka bir derlemenin başvurusunun parçası olarak bildirimde depolar. **-TP** seçeneği, belirtece ek olarak ortak anahtarı görüntüler. <xref:System.Reflection.AssemblySignatureKeyAttribute> Özniteliği derlemeye uygulanmışsa, belirteç kimlik anahtarına, karma algoritmanın adına ve kimlik anahtarına göre gösterilir.<br /><br /> Bu seçeneğin derleme imzasını doğrulamadığını ve güven kararları vermek için kullanılmaması gerektiğini unutmayın.  Bu seçenek yalnızca ham ortak anahtar belirteci verilerini görüntüler.|  
 |`-TS` `assembly` `infile`|' Deki `assembly` `infile`anahtar çiftiyle imzalanmış veya kısmen imzalanmış işaretlerini test edin.|  
 |-`TSc``assembly``container`|Anahtar kapsayıcısında `assembly` `container`anahtar çiftiyle imzalanmış veya kısmen imzalanmış işaretlerini test edin.|  
-|**-v** *derleme*|Derlemede tanımlayıcı adı doğrular;burada *derleme* , derleme bildirimi içeren bir dosyanın adıdır.|  
+|**-v** *derleme*|*Derlemede tanımlayıcı adı doğrular; burada* *derleme* , derleme bildirimi içeren bir dosyanın adıdır.|  
 |**-vf**  *derleme*|Derlemede tanımlayıcı adı doğrular *.* \- **V** seçeneğinin aksine- **VF** , **-VR** seçeneği kullanılarak devre dışı bırakılmış olsa bile doğrulamayı zorlar.|  
 |**-Vk**  *regfile.reg* *derleme* [*userlist*] [*infile*]|Doğrulamayı atlama için belirtilen derlemeyi kaydetmek üzere kullanabileceğiniz bir kayıt girdileri (.reg) dosyası oluşturur. **-VR** seçeneğine uygulanan derleme adlandırmayla ilgili kurallar, **– VK** için de geçerlidir. *UserList* ve *InFile* seçenekleri hakkında daha fazla bilgi için **– VR** seçeneğine bakın.|  
 |**-VL**|Bu bilgisayardaki tanımlayıcı ad doğrulamasının geçerli ayarlarını listeler.|  
@@ -90,37 +90,37 @@ Tanımlayıcı ad Aracı, ortak/özel anahtar çiftlerinin `AT_SIGNATURE` algori
 ## <a name="examples"></a>Örnekler  
  Aşağıdaki komut yeni, rastgele bir anahtar çifti oluşturur ve içinde `keyPair.snk`depolar.  
   
-```  
+```console  
 sn -k keyPair.snk  
 ```  
   
  Aşağıdaki komut, içindeki `keyPair.snk` anahtarını tanımlayıcı ad CSP içindeki kapsayıcıda `MyContainer` depolar.  
   
-```  
+```console  
 sn -i keyPair.snk MyContainer  
 ```  
   
  Aşağıdaki komut, öğesinden `keyPair.snk` ortak anahtarı ayıklar ve içinde `publicKey.snk`depolar.  
   
-```  
+```console  
 sn -p keyPair.snk publicKey.snk  
 ```  
   
  Aşağıdaki komut, içinde `publicKey.snk`bulunan ortak anahtar için ortak anahtarı ve belirteci görüntüler.  
   
-```  
+```console  
 sn -tp publicKey.snk  
 ```  
   
  Aşağıdaki komut derlemeyi `MyAsm.dll`doğrular.  
   
-```  
+```console  
 sn -v MyAsm.dll  
 ```  
   
  Aşağıdaki komut Varsayılan CSP `MyContainer` 'den silinir.  
   
-```  
+```console  
 sn -d MyContainer  
 ```  
   

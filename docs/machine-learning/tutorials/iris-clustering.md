@@ -5,12 +5,12 @@ author: pkulikov
 ms.date: 05/16/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18, title-hack-0516
-ms.openlocfilehash: 772558be14d207475d20083f5a6b729f03766471
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: e2aaeb8abc6981b420329f194aa7b82c90cae00a
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666641"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929108"
 ---
 # <a name="tutorial-categorize-iris-flowers-using-k-means-clustering-with-mlnet"></a>Öğretici: Iris çiçekler ile k-ML.NET Kümelemesi kullanarak kategorilere ayır
 
@@ -18,6 +18,7 @@ Bu öğreticide, [Iris çiçek veri kümesi](https://en.wikipedia.org/wiki/Iris_
 
 Bu öğreticide şunların nasıl yapıladığını öğreneceksiniz:
 > [!div class="checklist"]
+>
 > - Sorunu anlama
 > - Uygun makine öğrenimi görevini seçin
 > - Verileri hazırlama
@@ -185,6 +186,7 @@ Tebrikler! Iris Kümelemesi için bir makine öğrenimi modeli başarıyla oluş
 
 Bu öğreticide, şunların nasıl yapıldığını öğrendiniz:
 > [!div class="checklist"]
+>
 > - Sorunu anlama
 > - Uygun makine öğrenimi görevini seçin
 > - Verileri hazırlama

@@ -3,12 +3,12 @@ title: .NET Sözlüğü
 description: .NET belgelerinde kullanılan seçili koşulların anlamını öğrenin.
 ms.date: 01/22/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: caff1ee4c8e3ad133016b774fdb235bd1ef59637
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: e1894d57a613531fecba6786529a735431d01423
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70106919"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929074"
 ---
 # <a name="net-glossary"></a>.NET Sözlüğü
 
@@ -72,7 +72,7 @@ CLR/CoreCLR 'nin aksine CoreRT bir sanal makine değildir, bu da bir [JIT](#jit)
 
 Her biri için özel olarak yeniden yazmak zorunda kalmadan, Linux, Windows ve iOS gibi birden çok farklı işletim sisteminde kullanılabilen bir uygulamayı geliştirebilir ve yürütebilme özelliği. Bu, kod yeniden kullanımını ve farklı platformlardaki uygulamalar arasında tutarlılığı mümkün bir şekilde sunar.
 
-## <a name="ecosystem"></a>ekosistemi
+## <a name="ecosystem"></a>Ekosistemi
 
 Belirli bir teknoloji için uygulama derlemek ve çalıştırmak için kullanılan tüm çalışma zamanı yazılımları, geliştirme araçları ve topluluk kaynakları.
 
@@ -85,6 +85,7 @@ Belirli bir teknoloji için uygulama derlemek ve çalıştırmak için kullanıl
 Genel olarak, belirli bir teknolojiyi temel alan uygulamaların geliştirilmesini ve dağıtılmasını kolaylaştıran kapsamlı bir API koleksiyonudur. Bu genel anlamda, ASP.NET Core ve Windows Forms uygulama çerçevelerinin örnekleridir. Ayrıca bkz. [kitaplık](#library).
 
 "Framework" sözcüğünün aşağıdaki koşullarda daha belirli bir teknik anlamı vardır:
+
 - [.NET Framework](#net-framework)
 - [hedef çerçeve](#target-framework)
 - [TFD (hedef çerçeve bilinen adı)](#tfm)
@@ -128,7 +129,7 @@ Just-In-Time derleyicisi.
 
 ## <a name="library"></a>kitaplık
 
-Uygulamalar veya diğer kitaplıklar tarafından çağrılabilen API 'lerin bir koleksiyonu. Bir .NET kitaplığı, bir veya daha fazla derlemeden [](#assembly)oluşur.
+Uygulamalar veya diğer kitaplıklar tarafından çağrılabilen API 'lerin bir koleksiyonu. Bir .NET kitaplığı, bir [veya daha fazla](#assembly)derlemeden oluşur.
 
 Sözcükler kitaplığı ve [Framework](#framework) genellikle terimler kullanılır.
 
@@ -204,7 +205,7 @@ Yerel (görüntü) oluşturma.
 
 Bu teknolojiyi kalıcı bir JıT derleyicisi olarak düşünebilirsiniz. Genellikle kodun yürütüldüğü makinede kodu derler, ancak derleme genellikle yüklemesi sırasında gerçekleşir.
 
-## <a name="package"></a>leyebilir
+## <a name="package"></a>Leyebilir
 
 Bir NuGet paketi &mdash; veya yalnızca bir paket &mdash; , aynı ada sahip bir veya daha fazla bütünleştirilmiş kod içeren bir *. zip* dosyasıdır ve yazar adı gibi ek meta verilerle birlikte.
 

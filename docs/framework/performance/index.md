@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: c1676cca-3f1a-41ec-b469-9029566074fc
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ce16365f8aa9975a6ccb26415a6d091f65e1eef2
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ea61b3abf920a5261933f56c71011b50bcd52bb2
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69943850"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927092"
 ---
 # <a name="net-framework-performance"></a>.NET Framework Performansı
 Harika performansa sahip uygulamalar oluşturmak istiyorsanız, uygulamanızın başka bir özelliğini tasarladığınızda olduğu gibi, performansı tasarlamalısınız ve planlamanız gerekir. Uygulamanızın performansını ölçmek için Microsoft tarafından sunulan araçları kullanabilir ve gerekirse, bellek kullanımı, kod işleme ve yanıt verme için geliştirmeler yapabilirsiniz. Bu konu, Microsoft 'un sağladığı performans analizi araçlarını listeler ve uygulama geliştirmenin belirli alanlarının performansını kapsayan diğer konulara bağlantılar sağlar.  
@@ -34,7 +34,7 @@ Harika performansa sahip uygulamalar oluşturmak istiyorsanız, uygulamanızın 
 |----------|-----------------|  
 |Visual Studio performans analizi|Windows işletim sistemi çalıştıran bilgisayarlara dağıtılacak .NET Framework uygulamalarınızın CPU kullanımını çözümlemek için kullanın.<br /><br /> Bu araç, bir projeyi açtıktan sonra Visual Studio 'daki **hata ayıklama** menüsünden kullanılabilir. Daha fazla bilgi için bkz. [Performans Gezgini](/visualstudio/profiling/performance-explorer). **Not:**  Windows Phone hedeflerken uygulama analizini Windows Phone (sonraki satıra bakın) kullanın.|  
 |Uygulama analizini Windows Phone|Windows Phone uygulamalarınızda CPU ve bellek, ağ veri aktarım hızı, uygulama yanıt hızı ve pil tüketimini çözümlemek için kullanın.<br /><br /> Bu araç, [Windows Phone SDK 'sını](https://go.microsoft.com/fwlink/?LinkId=265773)yükledikten sonra Visual Studio 'da bir Windows Phone projesi Için **hata ayıklama** menüsünden kullanılabilir. Daha fazla bilgi için bkz. [Windows Phone 8 Için uygulama profili oluşturma](https://docs.microsoft.com/previous-versions/windows/apps/jj215908(v=vs.105)).|  
-|[PerfView](https://www.microsoft.com/download/details.aspx?id=28567)|CPU ve bellekle ilgili performans sorunlarını belirlemek için kullanın. Bu araç, gelişmiş bellek ve CPU araştırmaları ve çöp toplama ve JıT derleme hakkında bilgi sağlamak için Windows için olay izleme (ETW) ve CLR profil oluşturma API 'Lerini kullanır. PerfView kullanma hakkında daha fazla bilgi için, uygulamanın, [Channel 9 video öğreticilerinin](https://channel9.msdn.com/Series/PerfView-Tutorial)ve [Blog gönderilerinin](https://blogs.msdn.com/b/vancem/archive/tags/perfview/)içerdiği öğretici ve yardım dosyalarına bakın.<br /><br /> Belleğe özgü sorunlar için bkz. [bellek araştırmaları Için PerfView kullanma](https://channel9.msdn.com/Series/PerfView-Tutorial/PerfView-Tutorial-9-NET-Memory-Investigation-Basics-of-GC-Heap-Snapshots).|  
+|[PerfView](https://www.microsoft.com/download/details.aspx?id=28567)|CPU ve bellekle ilgili performans sorunlarını belirlemek için kullanın. Bu araç, gelişmiş bellek ve CPU araştırmaları ve çöp toplama ve JıT derleme hakkında bilgi sağlamak için Windows için olay izleme (ETW) ve CLR profil oluşturma API 'Lerini kullanır. PerfView kullanma hakkında daha fazla bilgi için, uygulamanın, [Channel 9 video öğreticilerinin](https://channel9.msdn.com/Series/PerfView-Tutorial)ve [Blog gönderilerinin](https://blogs.msdn.microsoft.com/vancem/tag/perfview/)içerdiği öğretici ve yardım dosyalarına bakın.<br /><br /> Belleğe özgü sorunlar için bkz. [bellek araştırmaları Için PerfView kullanma](https://channel9.msdn.com/Series/PerfView-Tutorial/PerfView-Tutorial-9-NET-Memory-Investigation-Basics-of-GC-Heap-Snapshots).|  
 |[Windows Performans Çözümleyicisi](https://www.microsoft.com/download/details.aspx?id=30652)|Aynı bilgisayarda birden çok uygulama çalışırken uygulamanızın belleği ve depolama alanı kullanımı gibi genel sistem performansının belirlenmesi için kullanın. Bu araç, için [!INCLUDE[win8](../../../includes/win8-md.md)]Windows değerlendirme ve dağıtım SETI 'nin (ADK) bir parçası olarak indirme merkezinden edinilebilir. Daha fazla bilgi için bkz. [Windows Performans Çözümleyici](/windows-hardware/test/wpt/windows-performance-analyzer).|  
   
 ### <a name="event-tracing-for-windows-etw"></a>Windows için olay izleme (ETW)  

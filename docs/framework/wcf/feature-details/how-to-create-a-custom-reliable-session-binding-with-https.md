@@ -2,72 +2,70 @@
 title: 'Nasıl yapılır: HTTPS ile Özel Bir Güvenilir Oturum Bağlama Oluşturma'
 ms.date: 03/30/2017
 ms.assetid: fa772232-da1f-4c66-8c94-e36c0584b549
-ms.openlocfilehash: f39325829cf4b548482a6a570a5aa1fd65e61a1d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7f22eeaae39b4d9a83c77c7f3e9db1d7d3f04e8e
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62039539"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70895193"
 ---
 # <a name="how-to-create-a-custom-reliable-session-binding-with-https"></a>Nasıl yapılır: HTTPS ile Özel Bir Güvenilir Oturum Bağlama Oluşturma
 
-Bu konu, Güvenli Yuva Katmanı (SSL) aktarım güvenliği ile güvenilir oturumlar kullanımını gösterir. Güvenilir oturum HTTPS üzerinden kullanmak için özel bağlama güvenilir oturum ve HTTPS aktarımı kullanan oluşturmanız gerekir. Güvenilir oturum kesin kod kullanarak veya bildirimli olarak yapılandırma dosyasında etkinleştirin. Güvenilir oturum etkinleştirmek için bu yordam istemci ve hizmet yapılandırma dosyalarını kullanır ve [  **\<httpsTransport >** ](../../../../docs/framework/configure-apps/file-schema/wcf/httpstransport.md) öğesi.
+Bu konu, güvenilir oturumlarla Güvenli Yuva Katmanı (SSL) aktarım güvenliği kullanımını gösterir. HTTPS üzerinden güvenilir bir oturum kullanmak için güvenilir bir oturum ve HTTPS taşıması kullanan özel bir bağlama oluşturmanız gerekir. Yapılandırma dosyasında kod kullanarak veya bildirimli olarak güvenilir oturumu imperatively etkinleştirirsiniz. Bu yordam, güvenilir oturumu ve [ **\<httpsTransport >** ](../../../../docs/framework/configure-apps/file-schema/wcf/httpstransport.md) öğesini etkinleştirmek için istemci ve hizmet yapılandırma dosyalarını kullanır.
 
-Bu yordam önemli bir parçası olan  **\<uç noktası >** yapılandırma öğesi içeren bir `bindingConfiguration` adlı bir özel bağlama yapılandırma başvuran öznitelik `reliableSessionOverHttps`. [  **\<Bağlama >** ](../../../../docs/framework/misc/binding.md) yapılandırma öğesi ekleyerek bir güvenilir oturum ve HTTPS aktarımı kullanılan belirtmek için bu ada başvuran  **\< reliableSession >** ve  **\<httpsTransport >** öğeleri.
+Bu yordamın `bindingConfiguration` `reliableSessionOverHttps`  **\<anahtar bölümü, uç nokta >** yapılandırma öğesinin adlı bir özel bağlama yapılandırmasına başvuran bir özniteliği içerecekse. [ **\<Bağlama >** ](../../../../docs/framework/misc/binding.md) yapılandırma öğesi,  **\<reliableoturum >** ve **\<httpsTransport dahil, güvenilir bir oturumun ve https taşımanın kullanıldığını belirtmek için bu ada başvurur >** öğeleri.
 
-Bu örnekte kaynak kopyası için bkz: [özel bağlama güvenilir oturum HTTPS üzerinden](../../../../docs/framework/wcf/samples/custom-binding-reliable-session-over-https.md).
+Bu örneğin kaynak kopyası için bkz. [https üzerinden özel bağlama güvenilir oturumu](../../../../docs/framework/wcf/samples/custom-binding-reliable-session-over-https.md).
 
-### <a name="configure-the-service-with-a-custombinding-to-use-a-reliable-session-with-https"></a>Güvenilir oturum ile HTTPS kullanmak için bir CustomBinding ile hizmetini yapılandırma
+### <a name="configure-the-service-with-a-custombinding-to-use-a-reliable-session-with-https"></a>HTTPS ile güvenilir bir oturum kullanmak için hizmeti bir CustomBinding ile yapılandırma
 
-1. Hizmet türü için bir hizmet anlaşmasını tanımlar.
+1. Hizmet türü için bir hizmet sözleşmesi tanımlayın.
 
    [!code-csharp[c_HowTo_CreateReliableSessionHTTPS#1121](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_createreliablesessionhttps/cs/service.cs#1121)]
 
-1. Hizmet sözleşmesi bir hizmet sınıfında uygulayın. Adres veya bağlama bilgileri hizmeti uygulaması içinde belirtilmemiş unutmayın. Yapılandırma dosyasından adresi veya bağlama bilgileri almak üzere kod yazmak için gerekli değildir.
+1. Hizmet sözleşmesini bir hizmet sınıfına uygulayın. Adresin veya bağlama bilgilerinin hizmet uygulamasının içinde belirtilmediğini unutmayın. Yapılandırma dosyasından adresi veya bağlama bilgilerini almak için kod yazmanız gerekmez.
 
    [!code-csharp[c_HowTo_CreateReliableSessionHTTPS#1122](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_createreliablesessionhttps/cs/service.cs#1122)]
 
-1. Oluşturma bir *Web.config* yapılandırmak için bir uç nokta için bir dosya `CalculatorService` adlı özel bir bağlama ile `reliableSessionOverHttps` güvenilir bir oturum ve HTTPS aktarımı kullanır.
+1. Güvenli bir oturum ve HTTPS taşıması kullanan adlı `reliableSessionOverHttps` özel bir bağlama `CalculatorService` ile için bir uç nokta yapılandırmak üzere bir *Web. config* dosyası oluşturun.
 
    [!code-xml[c_HowTo_CreateReliableSessionHTTPS#2111](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_createreliablesessionhttps/common/web.config#2111)]
 
-1. Oluşturma bir *Service.svc* satırını içeren dosya:
+1. Satırı içeren bir *Service. svc* dosyası oluşturun:
 
-   ```
-   <%@ServiceHost language=c# Service="CalculatorService" %>
-   ```
+   `<%@ServiceHost language=c# Service="CalculatorService" %>`
 
-1. Bir yerde *Service.svc* Internet Information Services (IIS) sanal dizininizin dosyasında.
+1. *Service. svc* dosyasını Internet INFORMATION SERVICES (IIS) sanal dizinine yerleştirin.
 
-### <a name="configure-the-client-with-a-custombinding-to-use-a-reliable-session-with-https"></a>Güvenilir oturum ile HTTPS kullanmak için bir CustomBinding ile istemciyi Yapılandırma
+### <a name="configure-the-client-with-a-custombinding-to-use-a-reliable-session-with-https"></a>HTTPS ile güvenilir bir oturum kullanmak için istemciyi bir CustomBinding ile yapılandırma
 
-1. Kullanım [ServiceModel meta veri yardımcı Programracı (*Svcutil.exe*)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) hizmet meta verilerinden kodu oluşturmak için komut satırından.
+1. Hizmet meta verilerinden kod oluşturmak için, komut satırından [ServiceModel meta veri yardımcı programı aracını (*Svcutil. exe*)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) kullanın.
 
    ```console
    Svcutil.exe <Metadata Exchange (MEX) address or HTTP GET address>
    ```
 
-1. Oluşturulan istemci içeren `ICalculator` istemci uygulaması karşılaması gereken hizmet sözleşmesini tanımlayan arabirimi.
+1. Oluşturulan istemci, istemci uygulamasının karşılaması gereken `ICalculator` hizmet sözleşmesini tanımlayan arabirimi içerir.
 
    [!code-csharp[C_HowTo_CreateReliableSessionHTTPS#1221](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_createreliablesessionhttps/cs/client.cs#1221)]
 
-1. Oluşturulan istemci uygulaması da uygulamasını içerir `ClientCalculator`. Adres ve bağlama bilgileri hizmeti uygulaması içinde belirtilmemiş unutmayın. Yapılandırma dosyasından adres ve bağlama bilgilerini almak üzere kod yazmak için gerekli değildir.
+1. Oluşturulan istemci uygulaması, `ClientCalculator`uygulamasının uygulamasını da içerir. Adres ve bağlama bilgilerinin hizmet uygulamasının içinde belirtilmediğini unutmayın. Yapılandırma dosyasından adres ve bağlama bilgilerini almak için kod yazmanız gerekmez.
 
    [!code-csharp[C_HowTo_CreateReliableSessionHTTPS#1222](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_createreliablesessionhttps/cs/client.cs#1222)]
 
-1. Adlı özel bir bağlama yapılandırmak `reliableSessionOverHttps` HTTPS aktarımı ve güvenilir oturumlar kullanılacak.
+1. HTTPS aktarımını ve güvenilir oturumları `reliableSessionOverHttps` kullanmak için adlı özel bir bağlama yapılandırın.
 
    [!code-xml[C_HowTo_CreateReliableSessionHTTPS#2211](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_createreliablesessionhttps/common/app.config#2211)]
 
-1. Bir örneğini oluşturmak `ClientCalculator` uygulamada ve hizmet işlemleri çağırma.
+1. Uygulamasının bir örneğini `ClientCalculator` oluşturun ve ardından hizmet işlemlerini çağırın.
 
    [!code-csharp[C_HowTo_CreateReliableSessionHTTPS#1223](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_createreliablesessionhttps/cs/client.cs#1223)]
 
-1. Derleyin ve istemci çalıştırın.  
+1. İstemcisini derleyin ve çalıştırın.  
 
 ## <a name="net-framework-security"></a>.NET Framework güvenliği
 
-Bu örnekte kullanılan sertifika ile oluşturulan bir test sertifikası olduğundan *Makecert.exe*, bir HTTPS adresi gibi erişmeye çalıştığınızda bir güvenlik uyarısı görünür `https://localhost/servicemodelsamples/service.svc`, tarayıcınız üzerinden.
+Bu örnekte kullanılan sertifika, *MakeCert. exe*ile oluşturulmuş bir test sertifikasıdır çünkü, tarayıcınızla, gibi bir https adresine `https://localhost/servicemodelsamples/service.svc`erişmeye çalıştığınızda bir güvenlik uyarısı görüntülenir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

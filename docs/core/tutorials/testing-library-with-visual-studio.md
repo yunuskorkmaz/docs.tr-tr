@@ -1,6 +1,6 @@
 ---
-title: Visual Studio 2017'de .NET Core ile bir .NET standart sınıf kitaplığını test etme
-description: .NET Core sınıf kitaplığı için birim testi projesi oluşturun. .NET Core sınıf kitaplığı ile birim testleri doğru şekilde çalıştığını doğrulayın.
+title: Visual Studio 2017 ' de .NET Core ile .NET Standard sınıf kitaplığı test etme
+description: .NET Core sınıf kitaplığınız için bir birim testi projesi oluşturun. .NET Core sınıf kitaplığınızın birim testlerle düzgün çalıştığını doğrulayın.
 author: BillWagner
 ms.author: wiwagn
 ms.date: 08/07/2017
@@ -8,143 +8,151 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet, seodoc18
-ms.openlocfilehash: 32593465c1a161aa1293b7b233539fa930c7e1d8
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: e8a0d28919d4d26e69fb5a5f926b0e96270a2407
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67402202"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70925886"
 ---
 # <a name="test-a-net-standard-library-with-net-core-in-visual-studio-2017"></a>Visual Studio 2017’de NET Core ile bir .NET Standard kitaplığını test etme
 
-İçinde [bir .NET Standard kitaplığı ile derleme C# ve Visual Studio 2017'de .NET Core](library-with-visual-studio.md) veya [Visual Basic ve Visual Studio 2017'de .NET Core ile bir .NET Standard kitaplığı derleme](vb-library-with-visual-studio.md), basit bir sınıf oluşturuldu bir genişletme yöntemi için ekler Kitaplığı <xref:System.String> sınıfı. Şimdi beklendiği gibi çalıştığından emin olmak için birim testi oluşturmayı öğreneceksiniz. Önceki makalede oluşturduğunuz çözüm, birim testi projesi ekleyeceksiniz.
+[Visual studio 2017 ' de ve C# .net Core Ile .NET Standard kitaplığı oluşturun](library-with-visual-studio.md) veya [visual Studio 2017 ' de Visual Basic ve .NET Core ile bir .NET Standard kitaplığı oluşturun](vb-library-with-visual-studio.md), <xref:System.String> sınıf. Şimdi, beklendiği gibi çalıştığından emin olmak için bir birim testi oluşturacaksınız. Birim testi projenizi önceki makalede oluşturduğunuz çözüme ekleyeceksiniz.
 
 ## <a name="creating-a-unit-test-project"></a>Birim testi projesi oluşturma
 
-Birim test projesi oluşturmak için aşağıdakileri yapın:
+Birim testi projesi oluşturmak için aşağıdakileri yapın:
 
 # <a name="ctabcsharp"></a>[C#](#tab/csharp)
-1. İçinde **Çözüm Gezgini**, bağlam menüsünü **ClassLibraryProjects** çözüm düğümüne ve select **Ekle** > **YeniProje**.
 
-1. İçinde **Yeni Proje Ekle** iletişim kutusunda **Visual C#** düğümü. Ardından **.NET Core** düğümünü ve ardından **MSTest Test projesi (.NET Core)** proje şablonu. İçinde **adı** metin kutusunda, projenin adı "StringLibraryTest" girin. Seçin **Tamam** birim test projesi oluşturmak için.
+1. **Çözüm Gezgini**, **classlibraryprojects** çözüm düğümünün bağlam menüsünü açın ve**Yeni proje** **Ekle** > ' yi seçin.
 
-   ![Yeni Proje iletişim kutusunda görüntülenen birim testi projesi ekleyin-C#](./media/testing-library-with-visual-studio/create-new-test-project.png)
+1. **Yeni Proje Ekle** iletişim kutusunda  **C# görsel** düğümünü seçin. Ardından, **.NET Core** düğümünü ve ardından **MSTest test projesi (.NET Core)** proje şablonunu seçin. **Ad** metin kutusuna projenin adı olarak "StringLibraryTest" yazın. Birim testi projesini oluşturmak için **Tamam ' ı** seçin.
 
-   > [!NOTE]  
-   > MSTest Test projesinde ek olarak, .NET Core için bir xUnit test projesi oluşturmak için Visual Studio kullanabilirsiniz.
-
-1. Visual Studio projesi oluşturur ve açar *UnitTest1.cs* kod penceresinde dosya.
-
-   ![Visual Studio kod penceresi biriminin proje sınıf ve metod test-C#](./media/testing-library-with-visual-studio/unit-test-editor-window.png)
-
-   Birim test şablon tarafından oluşturulan kaynak kodu şunları yapar:
-
-   * Bunu aktarır <xref:Microsoft.VisualStudio.TestTools.UnitTesting?displayProperty=nameWithType> ad alanı birim testi için kullanılan türler içerir.
-
-   * Geçerli <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute> özniteliğini `UnitTest1` sınıfı. Her bir test sınıfındaki test yönteminin etiketlenir \[TestMethod\] özniteliği birim testi çalıştırdığınızda otomatik olarak yürütülür.
-
-   * Geçerli <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute> tanımlamak için öznitelik `TestMethod1` birim testi çalıştırdığınızda otomatik yürütme için bir test yöntemi olarak.
-
-1. İçinde **Çözüm Gezgini**, sağ **bağımlılıkları** düğümünün **StringLibraryTest** seçin ve proje **Başvuru Ekle** gelen bağlam menüsü.
-
-   ![Bağlam menüsü StringLibraryTest bağımlılıklarının-C#](./media/testing-library-with-visual-studio/add-reference-context-menu.png)
-
-1. İçinde **başvuru Yöneticisi** iletişim kutusunda Genişlet **projeleri** düğüm ve yanındaki kutuyu işaretleyin **StringLibrary**. Bir başvuru eklemeyi `StringLibrary` derleme sağlayan bulmak derleyicinin **StringLibrary** yöntemleri. **Tamam** düğmesini seçin. Bu, sınıf kitaplığı projesine bir başvuru ekler `StringLibrary`.
-
-   ![Visual Studio eklenti proje başvuru iletişim kutusu](./media/testing-library-with-visual-studio/project-reference-manager.png)
-# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb) 
-1. İçinde **Çözüm Gezgini**, bağlam menüsünü **ClassLibraryProjects** çözüm düğümüne ve select **Ekle** > **YeniProje**.
-
-1. İçinde **Yeni Proje Ekle** iletişim kutusunda **Visual Basic** düğümü. Ardından **.NET Core** düğümünü ve ardından **MSTest Test projesi (.NET Core)** proje şablonu. İçinde **adı** metin kutusunda, projenin adı "StringLibraryTest" girin. Seçin **Tamam** birim test projesi oluşturmak için.
-
-   ![Yeni Proje iletişim kutusunda görüntülenen - birim testi projesi ile Visual Basic Ekle](./media/testing-library-with-visual-studio/vb-create-new-test-project.png)
+   ![Birim testi projesi görüntülenirken yeni proje iletişim kutusu Ekle-C#](./media/testing-library-with-visual-studio/create-new-test-project.png)
 
    > [!NOTE]  
-   > MSTest Test projesinde ek olarak, .NET Core için bir xUnit test projesi oluşturmak için Visual Studio kullanabilirsiniz.
+   > Bir MSTest test projesine ek olarak, .NET Core için bir xUnit test projesi oluşturmak üzere Visual Studio 'Yu da kullanabilirsiniz.
 
-1. Visual Studio projesi oluşturur ve açar *UnitTest1.vb* kod penceresinde dosya.
+1. Visual Studio projeyi oluşturur ve kod penceresinde *UnitTest1.cs* dosyasını açar.
 
-   ![Visual Studio kod penceresi için birim test proje sınıfı ve yöntemi - Visual Basic](./media/testing-library-with-visual-studio/vb-unit-test-editor-window.png)
+   ![Birim testi proje sınıfı ve yöntemi için Visual Studio Code penceresi-C#](./media/testing-library-with-visual-studio/unit-test-editor-window.png)
 
-   Birim test şablon tarafından oluşturulan kaynak kodu şunları yapar:
+   Birim testi şablonu tarafından oluşturulan kaynak kodu aşağıdakileri yapar:
 
-   * Bunu aktarır <xref:Microsoft.VisualStudio.TestTools.UnitTesting?displayProperty=nameWithType> ad alanı birim testi için kullanılan türler içerir.
+   * Birim testi için <xref:Microsoft.VisualStudio.TestTools.UnitTesting?displayProperty=nameWithType> kullanılan türleri içeren ad alanını içeri aktarır.
 
-   * Geçerli <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute>) özniteliğini `UnitTest1` sınıfı. Her bir test sınıfındaki test yönteminin etiketlenir <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute> özniteliği birim testi çalıştırdığınızda otomatik olarak yürütülür.
+   * <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute> Özniteliği`UnitTest1` sınıfına uygular. \[TestMethod\] özniteliğiyle etiketlenmiş bir test sınıfındaki her test yöntemi, birim testi çalıştırıldığında otomatik olarak yürütülür.
 
-   * Geçerli <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute> tanımlamak için öznitelik `TestMethod1` birim testi çalıştırdığınızda otomatik yürütme için bir test yöntemi olarak.
+   * Birim testi çalıştırıldığında <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute> otomatik yürütmeye yönelik `TestMethod1` bir test yöntemi olarak tanımlamak için özniteliğini uygular.
 
-1. İçinde **Çözüm Gezgini**, sağ **bağımlılıkları** düğümünün **StringLibraryTest** seçin ve proje **Başvuru Ekle** gelen bağlam menüsü.
+1. **Çözüm Gezgini**, **stringlibrarytest** projesinin **Bağımlılıklar** düğümüne sağ tıklayın ve bağlam menüsünden **Başvuru Ekle** ' yi seçin.
 
-   ![StringLibraryTest bağımlılıkları bağlam menüsü](./media/testing-library-with-visual-studio/add-reference-context-menu.png)
+   ![StringLibraryTest bağımlılıklarının bağlam menüsü-C#](./media/testing-library-with-visual-studio/add-reference-context-menu.png)
 
-1. İçinde **başvuru Yöneticisi** iletişim kutusunda Genişlet **projeleri** düğüm ve yanındaki kutuyu işaretleyin **StringLibrary**. Bir başvuru eklemeyi `StringLibrary` derleme sağlayan bulmak derleyicinin **StringLibrary** yöntemleri. **Tamam** düğmesini seçin. Bu, sınıf kitaplığı projesine bir başvuru ekler `StringLibrary`.
+1. **Başvuru Yöneticisi** iletişim kutusunda, **Projeler** düğümünü genişletin ve **StringLibrary**' ın yanındaki kutuyu işaretleyin. `StringLibrary` Derlemeye başvuru eklemek derleyicinin **StringLibrary** yöntemlerini bulmasını sağlar. **Tamam** düğmesini seçin. Bu, `StringLibrary`sınıf kitaplığı projenize bir başvuru ekler.
 
-   ![Visual Studio eklenti proje başvuru iletişim kutusu - Visual Basic](./media/testing-library-with-visual-studio/project-reference-manager.png)
+   ![Visual Studio proje başvurusu ekleme iletişim kutusu](./media/testing-library-with-visual-studio/project-reference-manager.png)
+
+# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
+
+1. **Çözüm Gezgini**, **classlibraryprojects** çözüm düğümünün bağlam menüsünü açın ve**Yeni proje** **Ekle** > ' yi seçin.
+
+1. **Yeni Proje Ekle** iletişim kutusunda **Visual Basic** düğümünü seçin. Ardından, **.NET Core** düğümünü ve ardından **MSTest test projesi (.NET Core)** proje şablonunu seçin. **Ad** metin kutusuna projenin adı olarak "StringLibraryTest" yazın. Birim testi projesini oluşturmak için **Tamam ' ı** seçin.
+
+   ![Birim testi projesi görüntülenirken yeni proje iletişim kutusu Ekle-Visual Basic](./media/testing-library-with-visual-studio/vb-create-new-test-project.png)
+
+   > [!NOTE]  
+   > Bir MSTest test projesine ek olarak, .NET Core için bir xUnit test projesi oluşturmak üzere Visual Studio 'Yu da kullanabilirsiniz.
+
+1. Visual Studio projeyi oluşturur ve kod penceresinde *UnitTest1. vb* dosyasını açar.
+
+   ![Birim testi proje sınıfı ve yöntemi için Visual Studio Code penceresi-Visual Basic](./media/testing-library-with-visual-studio/vb-unit-test-editor-window.png)
+
+   Birim testi şablonu tarafından oluşturulan kaynak kodu aşağıdakileri yapar:
+
+   * Birim testi için <xref:Microsoft.VisualStudio.TestTools.UnitTesting?displayProperty=nameWithType> kullanılan türleri içeren ad alanını içeri aktarır.
+
+   * `UnitTest1` Sınıfına, <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute>) özniteliğini uygular. <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute> Özniteliği ile etiketlenmiş bir test sınıfındaki her test yöntemi, birim testi çalıştırıldığında otomatik olarak yürütülür.
+
+   * Birim testi çalıştırıldığında <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute> otomatik yürütmeye yönelik `TestMethod1` bir test yöntemi olarak tanımlamak için özniteliğini uygular.
+
+1. **Çözüm Gezgini**, **stringlibrarytest** projesinin **Bağımlılıklar** düğümüne sağ tıklayın ve bağlam menüsünden **Başvuru Ekle** ' yi seçin.
+
+   ![StringLibraryTest bağımlılıklarının bağlam menüsü](./media/testing-library-with-visual-studio/add-reference-context-menu.png)
+
+1. **Başvuru Yöneticisi** iletişim kutusunda, **Projeler** düğümünü genişletin ve **StringLibrary**' ın yanındaki kutuyu işaretleyin. `StringLibrary` Derlemeye başvuru eklemek derleyicinin **StringLibrary** yöntemlerini bulmasını sağlar. **Tamam** düğmesini seçin. Bu, `StringLibrary`sınıf kitaplığı projenize bir başvuru ekler.
+
+   ![Visual Studio proje başvurusu ekleme iletişim kutusu-Visual Basic](./media/testing-library-with-visual-studio/project-reference-manager.png)
+
 ---
 
-## <a name="adding-and-running-unit-test-methods"></a>Ekleme ve birim test yöntemleri
+## <a name="adding-and-running-unit-test-methods"></a>Birim testi yöntemleri ekleme ve çalıştırma
 
-Visual Studio birim testi çalıştırıldığında her yöntem ile işaretlenmiş yürütülmeden <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute> bir birim test sınıfı özniteliği, sınıfa <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute> özniteliği uygulanır. Bir test yöntemi, ilk hata ile karşılaşıldığında veya yöntemin içinde yer alan tüm testler başarılı olduğunda sona erer.
+Visual Studio bir birim testi çalıştırdığında, bir birim testi sınıfında özniteliğiyle işaretlenmiş <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute> her bir yöntemi, <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute> özniteliğin uygulandığı sınıfı yürütür. Bir test yöntemi, ilk hata ile karşılaşıldığında veya yöntemde bulunan tüm testler başarılı olduğunda sona erer.
 
-En yaygın arama üyelerinin testleri <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert> sınıfı. Çoğu assert, biri beklenen test sonucu olan ve gerçek test sonucu, diğeri ise en az iki parametre yöntemleri içerir. Aşağıdaki tabloda, en sık aranan yöntemlerden bazıları gösterilmektedir.
+En yaygın testler, <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert> sınıfının üyelerini çağırır. Birçok onaylama yöntemi, biri beklenen test sonucu ve diğeri de gerçek test sonucu olan en az iki parametre içerir. En sık çağrılan yöntemlerin bazıları aşağıdaki tabloda gösterilmiştir.
 
-Assert yöntemi | İşlev
+Onaylama yöntemleri | İşlev
 --- | ---
-`Assert.AreEqual` | İki değerler veya nesneler eşit olduğunu doğrular. Assert, değerler veya nesneler eşit değilse başarısız olur.
-`Assert.AreSame` | İki nesne değişkenini aynı nesneye başvurması doğrular. Değişkenleri farklı nesnelere başvuru assert başarısız olur.
-`Assert.IsFalse` | Bir koşul olduğunu doğrular `false`. Assert başarısız koşul ise `true`.
-`Assert.IsNotNull` | Bir nesne olmadığını doğrular `null`. Assert başarısız nesne ise `null`.
+`Assert.AreEqual` | İki değerin veya nesnenin eşit olduğunu doğrular. Değerler veya nesneler eşit değilse onaylama başarısız olur.
+`Assert.AreSame` | İki nesne değişkeninin aynı nesneye başvurmasını doğrular. Değişkenler farklı nesnelere başvuru yaptığında onaylama başarısız olur.
+`Assert.IsFalse` | Bir koşulun `false`olduğunu doğrular. Koşul ise `true`onaylama başarısız olur.
+`Assert.IsNotNull` | Bir nesnenin `null`olmadığını doğrular. Nesne ise `null`onaylama başarısız olur.
 
-Ayrıca uygulayabilirsiniz <xref:Microsoft.VisualStudio.TestTools.UnitTesting.ExpectedExceptionAttribute> bir test metodu özniteliği. Bu, bir test yöntemi throw beklenen özel durumun türünü gösterir. Belirtilen özel durum değil, test başarısız olur.
+<xref:Microsoft.VisualStudio.TestTools.UnitTesting.ExpectedExceptionAttribute> Özniteliği bir test yöntemine de uygulayabilirsiniz. Bir test yönteminin oluşturması beklenen özel durum türünü gösterir. Belirtilen özel durum atılmazsa, test başarısız olur.
 
-Test `StringLibrary.StartsWithUpper` yöntemi, istediğiniz bir büyük harf karakteri ile başlayan dizeleri sayısını sağlar. Döndürmek için yöntemin beklediğiniz `true` bu gibi durumlarda, bu nedenle çağırabilirsiniz <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.IsTrue%2A> yöntemi. Benzer şekilde, bir büyük harf karakteri dışında bir öğe ile başlayan dizeleri sayısı sunmak istiyorsunuz. Döndürmek için yöntemin beklediğiniz `false` bu gibi durumlarda, bu nedenle çağırabilirsiniz <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.IsFalse%2A> yöntemi.
+`StringLibrary.StartsWithUpper` Yöntemi test ederken, büyük harf karakteriyle başlayan bir dizi dize sağlamak istersiniz. Yöntemi bu durumlarda Return `true` olarak beklediğinizi ve <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.IsTrue%2A> yöntemi çağırabilirsiniz. Benzer şekilde, büyük harfli bir karakter ile başlayan bir dizi dize sağlamak istersiniz. Yöntemi bu durumlarda Return `false` olarak beklediğinizi ve <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.IsFalse%2A> yöntemi çağırabilirsiniz.
 
-Kitaplık yönteminizi dizeleri işleme olduğundan, ayrıca başarıyla işlediğini emin olmak istediğiniz bir [boş dize (`String.Empty`)](xref:System.String.Empty), herhangi bir karakter ve ayarlanmış olan geçerli bir dize <xref:System.String.Length> 0 ' dır ve `null` dize başlatılmadı. Varsa `StartsWithUpper` üzerinde bir genişletme yöntemi adlandırılır bir <xref:System.String> örneği, bu geçirilemez bir `null` dize. Ancak, bir statik yöntem doğrudan çağrı da tek bir geçirmek <xref:System.String> bağımsız değişken.
+Kitaplık yönteminiz dizeleri işleyeceğinden, ayrıca [boş bir dizeyi ()`String.Empty`](xref:System.String.Empty)başarılı bir şekilde (), karakteri <xref:System.String.Length> olmayan ve 0 `null` olan ve başlatıldığını. Bir örnek üzerinde uzantı yöntemi olarak çağrılırsa, bir `null` dize geçirilemez. <xref:System.String> `StartsWithUpper` Ancak, bunu doğrudan statik bir yöntem olarak çağırabilir ve tek <xref:System.String> bir bağımsız değişken geçirebilirsiniz.
 
-Üç yöntem tanımlarsınız her çağırır, <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert> sürekli bir dize dizideki her öğe için yöntemi. İlk başarısızlık bulduğu hemen sonra test yöntemi başarısız olduğundan, yöntem çağrısında kullanılan dize değerini gösteren bir dize geçmesine izin veren bir yöntem aşırı yüklemesini ararız.
+Her biri, <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert> yöntemini bir dize dizisindeki her öğe için tekrar tekrar çağıran üç yöntem tanımlayacaksınız. İlk başarısızlığından sonra test yöntemi başarısız olduğundan, yöntem çağrısında kullanılan dize değerini gösteren bir dize geçirmenize izin veren bir yöntem aşırı yüklemesi çağıracaksınız.
 
-Test yöntemlerini oluşturmak için:
+Test yöntemleri oluşturmak için:
 
-# <a name="ctabcsharp"></a>[C#](#tab/csharp) 
-1. İçinde *UnitTest1.cs* kod penceresi, kodu aşağıdaki kodla değiştirin:
+# <a name="ctabcsharp"></a>[C#](#tab/csharp)
+
+1. *UnitTest1.cs* Code penceresinde, kodu şu kodla değiştirin:
 
    [!CODE-csharp[Test#1](../../../samples/snippets/csharp/getting_started/with_visual_studio_2017/testlib1.cs)]
 
-   Test büyük Not karakter olarak `TestStartsWithUpper` Yunanca Büyük Harf alfa includes yöntemi (U + 0391) ve Kiril EM (U + 041 C) büyük harf ve küçük harflerle test `TestDoesNotStartWithUpper` yöntemi Yunanca Küçük Harf içerir Alfa (U + 03B1) ve Kiril Küçük Harf Ghe (U + 0433).
+   `TestStartsWithUpper` Yöntemdeki büyük harfli karakter testinizin Yunanca Büyük Harf Alpha (u + 0391) ve Kiril Büyük harf em (u + 041c) ve `TestDoesNotStartWithUpper` yöntemdeki küçük harfli karakterlerin testi Yunan küçük harfini içerir Alfa (U + 03B1) ve Kiril Küçük harf GHE (U + 0433).
 
-1. Menü çubuğunda, seçin **dosya** > **UnitTest1.cs Kaydet**. İçinde **dosyayı farklı Kaydet** iletişim kutusunda, yanındaki oku seçerek **Kaydet** düğmesini ve **kodlama ile Kaydet**.
+1. Menü çubuğunda **Dosya** > **Kaydet UnitTest1.cs as**öğesini seçin. **Dosyayı farklı kaydet** Iletişim kutusunda **Kaydet** düğmesinin yanındaki oku seçin ve **kodlamayla kaydet**' i seçin.
 
    ![Visual Studio dosyayı farklı Kaydet iletişim kutusu-C#](./media/testing-library-with-visual-studio/save-file-as-dialog.png)
-# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb) 
-1. İçinde *UnitTest1.vb* kod penceresi, kodu aşağıdaki kodla değiştirin:
+
+# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
+
+1. *UnitTest1. vb* Code penceresinde, kodu aşağıdaki kodla değiştirin:
 
     [!CODE-vb[Test#1](../../../samples/snippets/core/tutorials/vb-library-with-visual-studio/testlib.vb)]
 
-   Test büyük Not karakter olarak `TestStartsWithUpper` Yunanca Büyük Harf alfa includes yöntemi (U + 0391) ve Kiril EM (U + 041 C) büyük harf ve küçük harflerle test `TestDoesNotStartWithUpper` yöntemi Yunanca Küçük Harf içerir Alfa (U + 03B1) ve Kiril Küçük Harf Ghe (U + 0433).
+   `TestStartsWithUpper` Yöntemdeki büyük harfli karakter testinizin Yunanca Büyük Harf Alpha (u + 0391) ve Kiril Büyük harf em (u + 041c) ve `TestDoesNotStartWithUpper` yöntemdeki küçük harfli karakterlerin testi Yunan küçük harfini içerir Alfa (U + 03B1) ve Kiril Küçük harf GHE (U + 0433).
 
-1. Menü çubuğunda, seçin **dosya** > **UnitTest1.vb Kaydet**. İçinde **dosyayı farklı Kaydet** iletişim kutusunda, yanındaki oku seçerek **Kaydet** düğmesini ve **kodlama ile Kaydet**.
+1. Menü çubuğunda **Dosya** > **Kaydet UnitTest1. vb**öğesini seçin. **Dosyayı farklı kaydet** Iletişim kutusunda **Kaydet** düğmesinin yanındaki oku seçin ve **kodlamayla kaydet**' i seçin.
 
-   ![Visual Studio dosyayı farklı Kaydet iletişim kutusu - Visual Basic](./media/testing-library-with-visual-studio/save-file-as-dialog.png)
+   ![Visual Studio dosyayı farklı Kaydet iletişim kutusu Visual Basic](./media/testing-library-with-visual-studio/save-file-as-dialog.png)
+
 ---
 
-1. İçinde **Kaydet onaylayın** iletişim kutusunda **Evet** düğmesini kullanarak dosyayı kaydedin.
+1. **Farklı kaydet** iletişim kutusunda, dosyayı kaydetmek için **Evet** düğmesini seçin.
 
-1. İçinde **Gelişmiş kaydetme seçenekleri** iletişim kutusunda **Unicode (UTF-8 imzayla) - kod sayfası 65001** gelen **kodlama** aşağı açılan listesinden **Tamam** .
+1. **Gelişmiş kaydetme seçenekleri** iletişim kutusunda, **kodlama** açılan LISTESINDEN **Unicode (imzayla UTF-8)-kod sayfası 65001** ' i seçin ve **Tamam**' ı seçin.
 
-   ![Visual Studio Gelişmiş Kaydetme Seçenekleri iletişim kutusu](./media/testing-library-with-visual-studio/advanced-save-options.png)
+   ![Visual Studio Gelişmiş kaydetme seçenekleri iletişim kutusu](./media/testing-library-with-visual-studio/advanced-save-options.png)
 
-   Kaynak kodunuzu UTF8 ile kodlanan dosya olarak kaydetmek başarısız olursa, Visual Studio, bir ASCII dosyası olarak kaydedebilirsiniz. Bu durum oluştuğunda, çalışma zamanı ASCII aralığı dışındaki UTF8 karakterleri doğru bir şekilde kod çözme değil ve test sonuçlarını doğru olmaz.
+   Kaynak kodunuzu UTF8 kodlu bir dosya olarak kaydedemeyebilirsiniz, Visual Studio bunu bir ASCII dosyası olarak kaydedebilir. Söz konusu olduğunda, çalışma zamanı, ASCII aralığının dışında UTF8 karakterlerinin kodunu doğru şekilde çözmez ve test sonuçları doğru olmayacaktır.
 
-1. Menü çubuğunda, seçin **Test** > **çalıştırma** > **tüm testleri**. **Test Gezgini** penceresi açılır ve testlerin başarıyla çalıştığını gösterir. Üç testi de listelenen **başarılı testler** bölümünde ve **özeti** bölüm test çalışması sonucu bildirir.
+1. Menü çubuğunda, **Test** > **Çalıştır** > **Tüm testler**' i seçin. **Test Gezgini** penceresi açılır ve testlerin başarıyla çalıştığını gösterir. **Geçen testler** bölümünde üç test listelenir ve **Özet** bölümü Test çalıştırmasının sonucunu raporlar.
 
-   ![Test Gezgini penceresi ile testleri geçirme](./media/testing-library-with-visual-studio/test-explorer-window.png)
+   ![Testleri geçirerek test Gezgini penceresi](./media/testing-library-with-visual-studio/test-explorer-window.png)
 
-## <a name="handling-test-failures"></a>Test hatalarını işleme
+## <a name="handling-test-failures"></a>Test başarısızlıklarını işleme
 
-Test çalıştırmanızın herhangi bir hata vardı, ancak test yöntemi başarısız biraz değiştirmek:
+Test çalıştırmasında hata yoktu, ancak test yöntemlerinden birinin başarısız olması için biraz değiştirin:
 
-1. Değiştirme `words` içindeki dizi `TestDoesNotStartWithUpper` "Error" dizesi eklemek için yöntemi. Testleri çalıştırmak için bir çözüm derlenirken açık dosyalar Visual Studio otomatik olarak kaydeder. çünkü dosyayı kaydetmek gerek yoktur.
+1. `TestDoesNotStartWithUpper` Yöntemdeki diziyi, "Error" dizesini içerecek şekilde değiştirin. `words` Testleri çalıştırmak için bir çözüm oluşturulduğunda Visual Studio açık dosyaları otomatik olarak kaydettiği için dosyayı kaydetmeniz gerekmez.
 
    ```csharp
    string[] words = { "alphabet", "Error", "zebra", "abc", "αυτοκινητοβιομηχανία", "государство",
@@ -157,30 +165,30 @@ Test çalıştırmanızın herhangi bir hata vardı, ancak test yöntemi başar�
 
    ```
 
-1. Seçerek test çalıştırması **Test** > **çalıştırma** > **tüm testleri** menü çubuğundan. **Test Gezgini** iki testleri başarılı ve başarısız bir pencerede gösterilir.
+1. **Test Çalıştır** > **tüm testleri** menü **çubuğundan Çalıştır öğesini seçerek** > testi çalıştırın. **Test Gezgini** penceresi, iki testin başarılı olduğunu ve bir başarısız olduğunu gösterir.
 
-   ![Başarısız testleri içeren test Gezgini penceresi](./media/testing-library-with-visual-studio/failed-test-window.png)
+   ![Başarısız testlerle test Gezgini penceresi](./media/testing-library-with-visual-studio/failed-test-window.png)
 
-1. İçinde **başarısız testler** bölümünde, başarısız bir test seçin `TestDoesNotStartWith`. **Test Gezgini** penceresi assert tarafından üretilen iletisini görüntüler: "Assert.IsFalse başarısız oldu. 'Hata' için bekleniyor: false; Gerçek: True". Hatasından sonra "Error" dizisindeki tüm dizeleri sınanmamıştır.
+1. **Başarısız testler** bölümünde başarısız test ' i `TestDoesNotStartWith`seçin. **Test Gezgini** penceresinde, onay tarafından oluşturulan ileti görüntülenir: "Onaylama. IsFalse başarısız oldu. ' Error ' bekleniyor: false; Varolan True ". Hata nedeniyle "hata" sonunda dizideki tüm dizeler sınanmadı.
 
-   ![Test Gezgini penceresi olan False onaylama işlemi hatası gösteriliyor](./media/testing-library-with-visual-studio/failed-test-detail.png)
+   ![False onaylama hatası olduğunu gösteren test Gezgini penceresi](./media/testing-library-with-visual-studio/failed-test-detail.png)
 
-1. 1\. adımda yaptığınız değişikliği geri almak ve "Error" dizesini kaldırın. Testi yeniden çalıştırın ve testlerin başarılı.
+1. Adım 1 ' de yaptığınız değişikliği geri alın ve "hata" dizesini kaldırın. Testi yeniden çalıştırın ve testler geçer.
 
-## <a name="testing-the-release-version-of-the-library"></a>Kitaplık sürümünü test etme
+## <a name="testing-the-release-version-of-the-library"></a>Kitaplığın yayın sürümünü test etme
 
-Siz testlerinizi karşı kitaplığı hata ayıklama sürümünü çalıştırıyorsunuz. Tüm testler geçer ve kitaplığınızı yeterince test ettikten sonra kitaplığın sürüm oluşturma ek bir zaman testleri çalıştırmanız gerekir. Derleyici iyileştirmeleri dahil olmak üzere bir dizi etkene, bazen hata ayıklama ve yayın Yapılar arasındaki farklı bir davranış oluşturabilir.
+Testlerinizi kitaplığın hata ayıklama sürümüne karşı çalıştırıyorsunuz. Artık testleriniz başarılı olduğuna ve kitaplığınızı yeterince test edinceye kadar, bu testleri kitaplığın yayın derlemesi için ek bir zaman çalıştırmalısınız. Derleyici iyileştirmeleri dahil olmak üzere bir dizi etken bazen hata ayıklama ve yayın yapıları arasında farklı davranışlar üretebilir.
 
-Yayın derlemesi test etmek için:
+Yayın derlemesini test etmek için:
 
-1. Visual Studio araç çubuğunda, değiştirmek derleme yapılandırmasından **hata ayıklama** için **yayın**.
+1. Visual Studio araç çubuğunda, derleme yapılandırmasını **Debug** iken **Release**olarak değiştirin.
 
-   ![Visual Studio araç ile vurgulanmış yayın derlemesi](./media/testing-library-with-visual-studio/visual-studio-toolbar-release.png)
+   ![Yayın derlemesi vurgulanmış Visual Studio araç çubuğu](./media/testing-library-with-visual-studio/visual-studio-toolbar-release.png)
 
-1. İçinde **Çözüm Gezgini**, sağ tıklayın **StringLibrary** seçin ve proje **derleme** bağlam menüsünden kitaplığı yeniden derleyin.
+1. **Çözüm Gezgini**, **StringLibrary** projesine sağ tıklayın ve kitaplığı yeniden derlemek için bağlam menüsünden **Oluştur** ' u seçin.
 
-   ![Derleme komutuyla StringLibrary bağlam menüsü](./media/testing-library-with-visual-studio/build-library-context-menu.png)
+   ![Build komutuyla StringLibrary bağlam menüsü](./media/testing-library-with-visual-studio/build-library-context-menu.png)
 
-1. Kullanarak birim testlerini çalıştırmak **Test** > **çalıştırma** > **tüm testleri** menü çubuğundan. Testler başarılı.
+1. Menü çubuğundan**tüm testleri** **Çalıştır** >  **Test** > ' i seçerek birim testlerini çalıştırın. Testler geçer.
 
-Kitaplığınızı test işlemini bitirdikten sonra sonraki adıma arayanlar için kullanılabilir olmasını sağlamaktır. Uygulamaları bir veya daha fazla paket veya bir NuGet paketi olarak dağıtabilirsiniz. Daha fazla bilgi için [.NET standart sınıf kitaplığı kullanma](./consuming-library-with-visual-studio.md).
+Artık kitaplığınızı test etmeyi tamamladığınıza göre, bir sonraki adım çağıranlar tarafından kullanılabilir hale gelir. Bunu bir veya daha fazla uygulamayla paketleyebilir veya bir NuGet paketi olarak dağıtabilirsiniz. Daha fazla bilgi için bkz. [.NET Standard sınıf kitaplığı](./consuming-library-with-visual-studio.md)kullanma.

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b39467c067e50f2d553b35a41b0f783e0fc82156
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a7f62385031967c164915fd31735a6d962f557fa
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61988038"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894993"
 ---
 # <a name="icordebugmodulegetname-method"></a>ICorDebugModule::GetName Metodu
-Modül dosya adını alır.  
+Modülün dosya adını alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```cpp
 HRESULT GetName(  
     [in] ULONG32 cchName,  
     [out] ULONG32 *pcchName,  
@@ -39,24 +39,24 @@ HRESULT GetName(
   
 ## <a name="parameters"></a>Parametreler  
  `cchname`  
- [in] Boyutu `szName` dizisi.  
+ 'ndaki `szName` Dizinin boyutu.  
   
  `pcchName`  
- [in] Döndürülen adının uzunluğu bir işaretçi.  
+ 'ndaki Döndürülen adın uzunluğuna yönelik bir işaretçi.  
   
  `szName`  
- [out] Döndürülen adını depolar dizisi.  
+ dışı Döndürülen adı depolayan bir dizi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `GetName` Yöntemi modülün dosya adı disk adına eşleşmesi durumunda bir S_OK HRESULT döndürür. `GetName` adı üretilmiş, dinamik ya da belleğe modülü gibi ise S_FALSE HRESULT döndürür.  
+ Modülün dosya adı diskteki adıyla eşleşiyorsa, yöntemibirS_OKHRESULTdöndürür.`GetName` `GetName`ad, dinamik veya bellek içi bir modül gibi olursa, bir S_FALSE HRESULT döndürür.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplığı** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.

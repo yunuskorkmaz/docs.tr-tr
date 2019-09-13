@@ -4,12 +4,12 @@ description: Bu öğreticide, Docker ile bir .NET Core uygulamasını kapsayıya
 ms.date: 06/26/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: ec1c6eb5c1a78a631b8205da5d082e44884cde7a
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: f0e0fad9bde4c35fb5c5b0b505b9fa8441e432ba
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253958"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926313"
 ---
 # <a name="tutorial-containerize-a-net-core-app"></a>Öğretici: .NET Core uygulamasını kapsayıcılı hale getirme
 
@@ -18,6 +18,7 @@ Bu öğretici, .NET Core uygulamanızı içeren bir Docker görüntüsü oluştu
 Şunları öğreneceksiniz:
 
 > [!div class="checklist"]
+>
 > * Basit bir .NET Core uygulaması oluşturma ve yayımlama
 > * .NET Core için Dockerfile oluşturma ve yapılandırma
 > * Docker görüntüsü oluşturma

@@ -3,12 +3,12 @@ title: Zaman uyumsuz akışlar oluşturma ve kullanma
 description: Bu gelişmiş öğreticide, zaman uyumsuz akışlarının oluşturulması ve kullanılması, zaman uyumsuz olarak oluşturulabilecek veri dizileri ile çalışmak için daha doğal bir yol sağlar.
 ms.date: 02/10/2019
 ms.custom: mvc
-ms.openlocfilehash: cd1159c139f2c885eacf55b8577bea9e79bf0d7a
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 3fdf5299deca365c62a00a8320ea335e96d9078c
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105860"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926699"
 ---
 # <a name="tutorial-generate-and-consume-async-streams-using-c-80-and-net-core-30"></a>Öğretici: 8,0 ve .NET Core 3,0 kullanarak C# zaman uyumsuz akışlar oluşturun ve kullanın
 
@@ -17,6 +17,7 @@ C#8,0, veri akışındaki öğeler alınabilir veya zaman uyumsuz olarak oluştu
 Bu öğreticide, aşağıdakileri nasıl yapacağınızı öğreneceksiniz:
 
 > [!div class="checklist"]
+>
 > - Zaman uyumsuz bir veri öğeleri dizisi üreten bir veri kaynağı oluşturun.
 > - Bu veri kaynağını zaman uyumsuz olarak tükettin.
 > - Yeni arabirim ve veri kaynağı daha önceki zaman uyumlu veri dizileri için tercih edildiği zaman tanıyın.

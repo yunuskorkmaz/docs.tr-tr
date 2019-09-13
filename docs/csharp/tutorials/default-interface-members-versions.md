@@ -3,12 +3,12 @@ title: İçindeki varsayılan arabirim üyelerini kullanarak arabirimleri güven
 description: Bu gelişmiş öğreticide, var olan arabirim tanımlarına, bu arabirimi uygulayan tüm sınıfları ve yapıları bozmadan nasıl güvenli bir şekilde yeni yetenekler ekleyebileceğiniz açıklanır.
 ms.date: 05/06/2019
 ms.custom: mvc
-ms.openlocfilehash: 9e0e4324b2474292064a760db9727d7dec6561d4
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 6a723a116d420dd43d2adeef98b824445dd4f0d7
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252911"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926711"
 ---
 # <a name="tutorial-update-interfaces-with-default-interface-members-in-c-80"></a>Öğretici: 8,0 'de C# varsayılan arabirim üyeleriyle arabirimleri güncelleştirme
 
@@ -17,6 +17,7 @@ ms.locfileid: "70252911"
 Bu öğreticide, aşağıdakileri nasıl yapacağınızı öğreneceksiniz:
 
 > [!div class="checklist"]
+>
 > * Uygulamalarla yöntemler ekleyerek arabirimleri güvenli bir şekilde genişletin.
 > * Daha fazla esneklik sağlamak için parametreli uygulamalar oluşturun.
 > * Bir geçersiz kılma biçiminde daha belirli bir uygulama sağlamak için uygulayıcıları etkinleştirin.

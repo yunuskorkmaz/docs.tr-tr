@@ -4,12 +4,12 @@ description: Görüntü işlemeden mobil arka uçlarına ve ETL işlem hattına 
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: adc4e1f3249cd72c423430ad4cb5dbb8eea8baf9
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: cb761524976125c816aae925f0c369eb8c76e7de
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68676702"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926479"
 ---
 # <a name="serverless-business-scenarios-and-use-cases"></a>Sunucusuz iş senaryoları ve kullanım örnekleri
 
@@ -77,7 +77,7 @@ Daha sonra, toplanan veriler hakkında Öngörüler toplamak için bir Power BI 
 
 ![Power BI örneği](./media/power-bi-example.png)
 
-Yönergelerin bulunduğu tam bağlantı kısa bir deposu şurada bulunabilir: [Sunucusuz URL kısaltalayıcı](https://github.com/jeremylikness/serverless-url-shortener). Basitleştirilmiş bir sürüm hakkında buradan bilgi edinebilirsiniz: [Dakikalar içinde sunucusuz .NET uygulamaları Için Azure depolama](https://blogs.msdn.microsoft.com/webdev/2018/01/25/azure-storage-for-serverless-net-apps-in-minutes/).
+Yönergelerin bulunduğu tam bağlantı kısa bir deposu şurada bulunabilir: [Sunucusuz URL kısaltalayıcı](https://github.com/jeremylikness/serverless-url-shortener). Basitleştirilmiş bir sürüm hakkında buradan bilgi edinebilirsiniz: [Dakikalar içinde sunucusuz .NET uygulamaları Için Azure depolama](https://devblogs.microsoft.com/aspnet/azure-storage-for-serverless-net-apps-in-minutes/).
 
 ## <a name="verify-device-connectivity-using-a-ping"></a>Ping kullanarak cihaz bağlantısını doğrulama
 
@@ -89,7 +89,7 @@ Daha fazla bilgi için bkz. [Azure IoT Hub ping](https://azure.microsoft.com/res
 
 * [Azure Işlevleri fotoğraf mozaik Oluşturucu](https://azure.microsoft.com/resources/samples/functions-dotnet-photo-mosaic/)
 * [Azure IoT Hub ping](https://azure.microsoft.com/resources/samples/iot-hub-node-ping/)
-* [Dakikalar içinde sunucusuz .NET uygulamaları için Azure depolama](https://blogs.msdn.microsoft.com/webdev/2018/01/25/azure-storage-for-serverless-net-apps-in-minutes/)
+* [Dakikalar içinde sunucusuz .NET uygulamaları için Azure depolama](https://devblogs.microsoft.com/aspnet/azure-storage-for-serverless-net-apps-in-minutes/)
 * [Kendi uygulamanızı getir](https://github.com/JeremyLikness/bring-own-app-connect-17)
 * [CSV içeri aktarma Laboratuvarı](https://github.com/JeremyLikness/azure-fn-file-process-hol)
 * [Olay Kılavuzu tutkalla](https://github.com/JeremyLikness/Event-Grid-Glue)

@@ -4,12 +4,12 @@ description: Makine öğrenimi modelini otomatik olarak eğiteiçin ML.NET model
 author: natke
 ms.date: 08/07/2019
 ms.custom: overview
-ms.openlocfilehash: 715c9f5854d9691fd9fc2cd771d38456405836ec
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 77b5e75fede1a4aa93eadcf7e21591d82f565cab
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70104810"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929475"
 ---
 # <a name="what-is-model-builder-and-how-does-it-work"></a>Model Oluşturucu nedir ve nasıl çalışır?
 
@@ -29,6 +29,7 @@ Model Oluşturucuyu kullanmak için Machine Learning uzmanlığına ihtiyacını
 Uygulamanız için bir makine öğrenimi modeli oluşturmak için model Oluşturucu 'ya birçok farklı senaryo getirebilirsiniz.
 
 Senaryo, verilerinizi kullanarak yapmak istediğiniz tahmin türünün bir açıklamasıdır. Örneğin:
+
 - geçmiş satış verilerine göre gelecek ürün satış hacmini tahmin edin
 - müşterilerin gözden geçirmeleri temelinde olumlu veya olumsuz şekilde sınıflandırın
 - Bankacılık işleminin sahte olup olmadığını Algıla
@@ -41,6 +42,7 @@ Model Oluşturucu 'da, bir makine öğrenimi model türü seçmeniz gerekir. Mod
 Bir sayıyı tahmin eden senaryolar için makine öğrenimi model türü çağırılır `regression`.
 
 Bir kategoriyi tahmin eden senaryolar için model türü olur `classification`. İki tür sınıflandırma vardır:
+
 - yalnızca 2 kategorinin bulunduğu yer: `binary classification`.
 - üç veya daha fazla kategorinin bulunduğu yer: `multiclass classification`.
 
@@ -89,10 +91,12 @@ Model türünü seçtikten sonra model Oluşturucu sizden bir veri kümesi sağl
 ### <a name="choose-the-output-to-predict-label"></a>Tahmin edilecek çıktıyı seçin (etiket)
 
 Veri kümesi, eğitim örneklerinden ve özniteliklerin sütunlarından oluşan bir tablodur. Her satır şunları içerir:
+
 - bir **etiket** (tahmin etmek istediğiniz öznitelik)
 - **Özellikler** (etiketi tahmin etmek için giriş olarak kullanılan öznitelikler).
 
 Ev fiyat tahmini senaryosu için özellikler şu şekilde olabilir:
+
 - Evin kare çekimi
 - yatak odaları ve külikler sayısı
 - posta kodu
@@ -107,11 +111,11 @@ Henüz kendi verileriniz yoksa, bu veri kümelerinden birini deneyin:
 
 |Senaryo|Model türü|Veri|Etiketle|Özellikler|
 |-|-|-|-|-|
-|Fiyat tahmini|regresyon|[taxı tarifeli havayolu verileri](https://github.com/dotnet/machinelearning-samples/blob/master/datasets/taxi-fare-train.csv)|Tarifeli havayolu|Seyahat süresi, uzaklık|
-|Anomali algılama|ikili sınıflandırma|[ürün satış verileri](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/getting-started/AnomalyDetection_Sales/SpikeDetection/Data/product-sales.csv)|Ürün satışları|Başından|
-|Yaklaşım analizi|ikili sınıflandırma|[Web sitesi açıklama verileri](https://raw.githubusercontent.com/dotnet/machinelearning/master/test/data/wikipedia-detox-250-line-data.tsv)|Etiket (negatif yaklaşım olduğunda 0, pozitif olduğunda 1)|Açıklama, yıl|
-|Sahtekarlık algılama|ikili sınıflandırma|[kredi kartı verileri](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/getting-started/BinaryClassification_CreditCardFraudDetection/CreditCardFraudDetection.Trainer/assets/input/creditcardfraud-dataset.zip)|Sınıf (sahte olduğunda 1, aksi durumda 0)|Miktar, v1-V28 (anonimleştirilmiş Özellikler)|
-|Metin sınıflandırması|birden çok Lass sınıflandırması|[GitHub sorun verileri](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/end-to-end-apps/MulticlassClassification-GitHubLabeler/GitHubLabeler/Data/corefx-issues-train.tsv)|Alan|Başlık, açıklama|
+|Fiyat tahmini|Regresyon|[taxı tarifeli havayolu verileri](https://github.com/dotnet/machinelearning-samples/blob/master/datasets/taxi-fare-train.csv)|Tarifeli havayolu|Seyahat süresi, uzaklık|
+|Anomali algılama|İkili sınıflandırma|[ürün satış verileri](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/getting-started/AnomalyDetection_Sales/SpikeDetection/Data/product-sales.csv)|Ürün satışları|Başından|
+|Yaklaşım analizi|İkili sınıflandırma|[Web sitesi açıklama verileri](https://raw.githubusercontent.com/dotnet/machinelearning/master/test/data/wikipedia-detox-250-line-data.tsv)|Etiket (negatif yaklaşım olduğunda 0, pozitif olduğunda 1)|Açıklama, yıl|
+|Sahtekarlık algılama|İkili sınıflandırma|[kredi kartı verileri](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/getting-started/BinaryClassification_CreditCardFraudDetection/CreditCardFraudDetection.Trainer/assets/input/creditcardfraud-dataset.zip)|Sınıf (sahte olduğunda 1, aksi durumda 0)|Miktar, v1-V28 (anonimleştirilmiş Özellikler)|
+|Metin sınıflandırması|Birden çok Lass sınıflandırması|[GitHub sorun verileri](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/end-to-end-apps/MulticlassClassification-GitHubLabeler/GitHubLabeler/Data/corefx-issues-train.tsv)|Alan|Başlık, açıklama|
 
 ## <a name="train"></a>Eğitim
 
@@ -123,7 +127,7 @@ Eğitim, model Oluşturucu 'nun, senaryonuza yönelik soruların nasıl yanıtla
 
 Model Oluşturucu otomatik makine öğrenimi (Otomatikml) kullandığından, eğitim sırasında sizin için herhangi bir giriş veya ayarlama gerekmez.
 
-## <a name="evaluate"></a>Değerlendirmesini
+## <a name="evaluate"></a>değerlendirmesini
 
 Değerlendirme, eğitilen modeli kullanarak yeni test verileriyle tahminleri yapabilir ve daha sonra tahmine göre ne kadar iyi olduğunu ölçmeye yönelik bir işlemdir.
 

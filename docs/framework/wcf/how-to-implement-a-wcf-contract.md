@@ -1,5 +1,5 @@
 ---
-title: 'Öğretici: Bir Windows Communication Foundation Hizmet sözleşmesini uygulama'
+title: 'Öğretici: Windows Communication Foundation hizmet sözleşmesi uygulama'
 ms.date: 03/19/2019
 dev_langs:
 - csharp
@@ -7,27 +7,28 @@ dev_langs:
 helpviewer_keywords:
 - service contracts [WCF], implementing
 ms.assetid: d5ab51ba-61ae-403e-b3c8-e2669e326806
-ms.openlocfilehash: fa8c5457c636d7f37215f0d4b4fdbb1c96c9481e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 05923dc0a2223da5e5fcda483abc1ee1dd2d643f
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61929059"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928706"
 ---
-# <a name="tutorial-implement-a-windows-communication-foundation-service-contract"></a>Öğretici: Bir Windows Communication Foundation Hizmet sözleşmesini uygulama
+# <a name="tutorial-implement-a-windows-communication-foundation-service-contract"></a>Öğretici: Windows Communication Foundation hizmet sözleşmesi uygulama
 
-Bu öğreticide, temel Windows Communication Foundation (WCF) uygulaması oluşturmak için gereken beş görev ikinci açıklanmaktadır. Öğreticiler genel bakış için bkz. [Öğreticisi: Windows Communication Foundation uygulamalarla çalışmaya başlama](getting-started-tutorial.md).
+Bu öğreticide, temel bir Windows Communication Foundation (WCF) uygulaması oluşturmak için gereken beş görevin ikinci açıklaması açıklanmaktadır. Öğreticilere genel bakış için bkz [. Öğretici: Windows Communication Foundation uygulamaları](getting-started-tutorial.md)ile çalışmaya başlayın.
 
-WCF uygulaması oluşturmak için sonraki adım, önceki adımda oluşturduğunuz WCF Hizmeti arabirim uygulamak için kod eklemektir. Bu adımda, adlı bir sınıf oluşturun `CalculatorService` uygulayan kullanıcı tanımlı `ICalculator` arabirimi. Aşağıdaki kod her bir yöntemin hesaplayıcı işlemi çağırır ve metin test etmek için konsola yazar. 
+Bir WCF uygulaması oluşturmaya yönelik sonraki adım, önceki adımda oluşturduğunuz WCF hizmeti arabirimini uygulamak için kod eklemektir. Bu adımda, Kullanıcı tanımlı `CalculatorService` `ICalculator` arabirimi uygulayan adlı bir sınıf oluşturursunuz. Aşağıdaki koddaki her bir yöntem bir Hesaplayıcı işlemini çağırır ve test etmek üzere konsola metin yazar. 
 
 Bu öğreticide şunların nasıl yapıladığını öğreneceksiniz:
 > [!div class="checklist"]
-> - WCF hizmet sözleşmesini uygulama için kod ekleyin.
+>
+> - WCF hizmet sözleşmesini uygulamak için kod ekleyin.
 > - Çözümü oluşturun.
 
-## <a name="add-code-to-implement-the-wcf-service-contract"></a>WCF hizmet sözleşmesini uygulama için kod ekleyin
+## <a name="add-code-to-implement-the-wcf-service-contract"></a>WCF hizmet sözleşmesini uygulamak için kod ekleme
 
-İçinde **GettingStartedLib**açın **Service1.cs** veya **Service1.vb** dosya ve kendi kodu aşağıdaki kodla değiştirin:
+**GettingStartedLib**içinde **Service1.cs** veya **Service1. vb** dosyasını açın ve kodunu aşağıdaki kodla değiştirin:
 
 ```csharp
 using System;
@@ -116,31 +117,33 @@ Namespace GettingStartedLib
 End Namespace
 ```
 
-## <a name="edit-appconfig"></a>App.config Düzenle
+## <a name="edit-appconfig"></a>App. config dosyasını Düzenle
 
-Düzen **App.config** içinde **GettingStartedLib** koda yapılan değişiklikleri yansıtacak şekilde.
-- Görsel için C# projeleri:
-  - 14. satır için değiştirin `<service name="GettingStartedLib.CalculatorService">`
-  - 17 satırına değiştirme `<add baseAddress = "http://localhost:8000/GettingStarted/CalculatorService" />`
-  - Satır 22 için değiştirin `<endpoint address="" binding="wsHttpBinding" contract="GettingStartedLib.ICalculator">`
+Kodda yaptığınız değişiklikleri yansıtmak için **GettingStartedLib** içinde **app. config dosyasını** düzenleyin.
+
+- Görsel C# projeler için:
+  - 14 satırı olarak değiştir`<service name="GettingStartedLib.CalculatorService">`
+  - 17. satırı olarak değiştir`<add baseAddress = "http://localhost:8000/GettingStarted/CalculatorService" />`
+  - Satır 22 ' i Değiştir`<endpoint address="" binding="wsHttpBinding" contract="GettingStartedLib.ICalculator">`
 
 - Visual Basic projeleri için:
-  - 14. satır için değiştirin `<service name="GettingStartedLib.GettingStartedLib.CalculatorService">`
-  - 17 satırına değiştirme `<add baseAddress = "http://localhost:8000/GettingStarted/CalculatorService" />`
-  - Satır 22 için değiştirin `<endpoint address="" binding="wsHttpBinding" contract="GettingStartedLib.GettingStartedLib.ICalculator">`
+  - 14 satırı olarak değiştir`<service name="GettingStartedLib.GettingStartedLib.CalculatorService">`
+  - 17. satırı olarak değiştir`<add baseAddress = "http://localhost:8000/GettingStarted/CalculatorService" />`
+  - Satır 22 ' i Değiştir`<endpoint address="" binding="wsHttpBinding" contract="GettingStartedLib.GettingStartedLib.ICalculator">`
 
 ## <a name="compile-the-code"></a>Kod derleme
 
-Derleme hataları doğrulamak için çözümü oluşturun. Visual Studio kullanıyorsanız **derleme** menüsünü seçin **Çözümü Derle** (veya basın **Ctrl**+**Shift** + **B**).
+Herhangi bir derleme hatası olmadığını doğrulamak için çözümü oluşturun. Visual Studio kullanıyorsanız, **Yapı** menüsünde **Build Solution** (veya **CTRL**+**SHIFT**+**B**tuşlarına basın) öğesini seçin.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
 Bu öğreticide, şunların nasıl yapıldığını öğrendiniz:
 > [!div class="checklist"]
-> - WCF hizmet sözleşmesini uygulama için kod ekleyin.
+>
+> - WCF hizmet sözleşmesini uygulamak için kod ekleyin.
 > - Çözümü oluşturun.
 
-WCF hizmeti çalıştırmaya hakkında bilgi edinmek için sonraki öğreticiye ilerleyin.
+WCF hizmetini çalıştırmayı öğrenmek için bir sonraki öğreticiye ilerleyin.
 
 > [!div class="nextstepaction"]
-> [Öğretici: Temel bir WCF Hizmeti barındırma ve çalıştırma](how-to-host-and-run-a-basic-wcf-service.md)
+> [Öğretici: Temel bir WCF hizmetini barındırma ve çalıştırma](how-to-host-and-run-a-basic-wcf-service.md)

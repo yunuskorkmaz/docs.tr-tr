@@ -2,12 +2,12 @@
 title: Oracle için .NET Framework Veri Sağlayıcısı sistem gereksinimleri
 ms.date: 03/30/2017
 ms.assetid: 054f76b9-1737-43f0-8160-84a00a387217
-ms.openlocfilehash: 330bad6f58b1ba6b0d2fdb2baa86a04374946e80
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: b64a84b8d8246bae9028a6ca710f0a62cc85bf79
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70780582"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894371"
 ---
 # <a name="system-requirements-for-the-net-framework-data-provider-for-oracle"></a>Oracle için .NET Framework Veri Sağlayıcısı sistem gereksinimleri
 Oracle için .NET Framework Veri Sağlayıcısı, Microsoft Data Access Components (MDAC) sürüm 2,6 veya üstünü gerektirir. MDAC 2,8 SP1 önerilir.  
@@ -22,9 +22,7 @@ Oracle için .NET Framework Veri Sağlayıcısı, Microsoft Data Access Componen
 ### <a name="setting-the-unicode-value-in-a-connection-string-attribute"></a>Bir bağlantı dizesi özniteliğinde Unicode değeri ayarlama  
  Oracle ile çalışırken, bağlantı dizesi özniteliğini kullanabilirsiniz  
   
-```  
-Unicode=True   
-```  
+`Unicode=True`
   
  Oracle istemci kitaplıklarını UTF-16 modunda başlatmak için. Bu, Oracle istemci kitaplıklarının çok baytlık dizeler yerine UTF-16 (UCS-2 ' ye çok benzer) kabul etmesine neden olur. Bu, Oracle 'ın Veri Sağlayıcısı ek çeviri olmadan her zaman herhangi bir Oracle kod sayfasıyla çalışmasını sağlar. Bu yapılandırma yalnızca, AL16UTF16 alternatif karakter kümesiyle bir Oracle 9i veritabanı ile iletişim kurmak için Oracle 9i istemcileri kullanıyorsanız geçerlidir. Bir Oracle 9i istemcisi bir Oracle 9i sunucusuyla iletişim kurduğunda, Unicode **CommandText** değerlerini Oracle9i sunucusunun kullandığı uygun çok baytlı karakter kümesine dönüştürmek için ek kaynaklar gerekir. Bağlantı dizenizi ekleyerek `Unicode=True` güvenli yapılandırmaya sahip olduğunuzu bildiğiniz durumlarda bu kaçınılabilir.  
   

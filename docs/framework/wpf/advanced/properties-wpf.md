@@ -9,17 +9,18 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], properties
 - properties [WPF]
 ms.assetid: d6e0197f-f2c4-48ed-b45b-b9cdb64aab1c
-ms.openlocfilehash: c685a5227f4339a094ae74af4e1314d4c47f7585
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: d3d11950f919c13590a0212b8d03d394d59d3550
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400872"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928430"
 ---
 # <a name="properties-wpf"></a>Özellikler (WPF)
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]ortak dil çalışma zamanı (CLR) özelliğinin işlevlerini genişletmek için kullanılabilen bir hizmet kümesi sağlar. Toplu olarak, bu hizmetler genellikle WPF özellik sistemi olarak adlandırılır. [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] Özellik sistemi tarafından desteklenen bir özellik, bağımlılık özelliği olarak bilinir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
+
 - [Bağımlılık Özelliklerine Genel Bakış](dependency-properties-overview.md)
 - [Ekli Özelliklere Genel Bakış](attached-properties-overview.md)
 - [Özel Bağımlılık Özellikleri](custom-dependency-properties.md)

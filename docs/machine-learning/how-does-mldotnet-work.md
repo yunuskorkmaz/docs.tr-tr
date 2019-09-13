@@ -6,12 +6,12 @@ ms.topic: overview
 ms.custom: mvc
 ms.author: nakersha
 author: natke
-ms.openlocfilehash: af91819c66a2376f446d0f18537d2f6e718b446e
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: d49a4bdfec133fe805bc9d534e04edf2f9ca5726
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70104890"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929408"
 ---
 # <a name="what-is-mlnet-and-how-does-it-work"></a>ML.NET nedir ve nasıl çalışır?
 
@@ -82,6 +82,7 @@ Aşağıdaki kod parçacığındaki kod, en basit ML.NET uygulamasını gösteri
 ## <a name="code-workflow"></a>Kod iş akışı
 
 Aşağıdaki diyagram, uygulama kodu yapısını, ayrıca model geliştirmenin yinelemeli işlemini temsil eder:
+
 - Bir **ıdataview** nesnesinde eğitim verileri toplama ve yükleme
 - Özellikleri ayıklamak ve makine öğrenimi algoritmasını uygulamak için bir işlem hattı belirtin
 - İşlem hattına **sığdırma ()** yöntemini çağırarak bir modeli eğitme

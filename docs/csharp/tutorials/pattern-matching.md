@@ -3,12 +3,12 @@ title: Veri türlerini genişletmek için model eşleştirme özelliklerini kull
 description: Bu gelişmiş öğreticide, ayrı olarak oluşturulan verileri ve algoritmaları kullanarak işlevsellik oluşturmak için model eşleştirme tekniklerini nasıl kullanabileceğiniz gösterilmektedir.
 ms.date: 03/13/2019
 ms.custom: mvc
-ms.openlocfilehash: b142bad9a4058a884d9e511424bc50856152b67e
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 366791b113d3b1f9ccef303553a3656f7e803a32
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105563"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926650"
 ---
 # <a name="tutorial-using-pattern-matching-features-to-extend-data-types"></a>Öğretici: Veri türlerini genişletmek için model eşleştirme özelliklerini kullanma
 
@@ -17,6 +17,7 @@ C#7 temel desenler eşleşen özellikler sunmuştur. Bu özellikler yeni ifadele
 Bu öğreticide, aşağıdakileri nasıl yapacağınızı öğreneceksiniz:
 
 > [!div class="checklist"]
+>
 > - Model eşleştirmesinin kullanılması gereken durumları tanıyın.
 > - Türleri ve özellik değerlerini temel alan davranışı uygulamak için kalıp eşleştirme ifadelerini kullanın.
 > - Tüm algoritmalar oluşturmak için model eşleştirmeyi diğer tekniklerle birleştirin.
@@ -295,22 +296,22 @@ Aşağıdaki tabloda, giriş değerleri ve en yüksek fiyatlandırma çarpanı b
 
 | Gün        | Zaman         | Yön | Premium |
 | ---------- | ------------ | --------- |--------:|
-| HAFTANINGÜNÜ    | sabah aceleniz | gelen   | x 2,00  |
-| HAFTANINGÜNÜ    | sabah aceleniz | giden  | x 1,00  |
-| HAFTANINGÜNÜ    | saati      | gelen   | x 1,50  |
-| HAFTANINGÜNÜ    | saati      | giden  | x 1,50  |
-| HAFTANINGÜNÜ    | akşam aceleniz | gelen   | x 1,00  |
-| HAFTANINGÜNÜ    | akşam aceleniz | giden  | x 2,00  |
-| HAFTANINGÜNÜ    | gece    | gelen   | x 0,75  |
-| HAFTANINGÜNÜ    | gece    | giden  | x 0,75  |
-| Hafta    | sabah aceleniz | gelen   | x 1,00  |
-| Hafta    | sabah aceleniz | giden  | x 1,00  |
-| Hafta    | saati      | gelen   | x 1,00  |
-| Hafta    | saati      | giden  | x 1,00  |
-| Hafta    | akşam aceleniz | gelen   | x 1,00  |
-| Hafta    | akşam aceleniz | giden  | x 1,00  |
-| Hafta    | gece    | gelen   | x 1,00  |
-| Hafta    | gece    | giden  | x 1,00  |
+| HAFTANINGÜNÜ    | sabah aceleniz | Gelen   | x 2,00  |
+| HAFTANINGÜNÜ    | sabah aceleniz | Giden  | x 1,00  |
+| HAFTANINGÜNÜ    | saati      | Gelen   | x 1,50  |
+| HAFTANINGÜNÜ    | saati      | Giden  | x 1,50  |
+| HAFTANINGÜNÜ    | akşam aceleniz | Gelen   | x 1,00  |
+| HAFTANINGÜNÜ    | akşam aceleniz | Giden  | x 2,00  |
+| HAFTANINGÜNÜ    | gece    | Gelen   | x 0,75  |
+| HAFTANINGÜNÜ    | gece    | Giden  | x 0,75  |
+| Hafta    | sabah aceleniz | Gelen   | x 1,00  |
+| Hafta    | sabah aceleniz | Giden  | x 1,00  |
+| Hafta    | saati      | Gelen   | x 1,00  |
+| Hafta    | saati      | Giden  | x 1,00  |
+| Hafta    | akşam aceleniz | Gelen   | x 1,00  |
+| Hafta    | akşam aceleniz | Giden  | x 1,00  |
+| Hafta    | gece    | Gelen   | x 1,00  |
+| Hafta    | gece    | Giden  | x 1,00  |
 
 Üç değişkenin 16 farklı birleşimi vardır. Bazı koşulları birleştirerek son anahtar ifadesini basitleştirirsiniz.
 

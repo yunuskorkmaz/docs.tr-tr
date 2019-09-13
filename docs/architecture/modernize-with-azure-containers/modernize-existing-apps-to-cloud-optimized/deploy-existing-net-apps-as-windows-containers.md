@@ -2,12 +2,12 @@
 title: Varolan .NET uygulamalarını Windows kapsayıcıları olarak dağıtma
 description: Azure bulut ve Windows kapsayıcıları ile mevcut .NET uygulamalarını modernleştirin | Mevcut .NET uygulamalarını Windows kapsayıcıları olarak dağıtma
 ms.date: 04/29/2018
-ms.openlocfilehash: 4d58be828418abe4964e26a983f194fd5d30b93d
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: d48acbb2e1c4858bf3146318f70dd7b8a7b62918
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70374017"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926482"
 ---
 # <a name="deploy-existing-net-apps-as-windows-containers"></a>Varolan .NET uygulamalarını Windows kapsayıcıları olarak dağıtma
 
@@ -143,6 +143,7 @@ Bununla birlikte, üretim dağıtım ortamı veya soru-cevap geliştirme/test Mi
 **Şekil 4-7,5.** Azure 'da kapsayıcı ekosistemi
 
 Azure 'da kapsayıcı ekosisteminden, altyapı olarak kabul edilen kapsayıcıları destekleyen aşağıdaki ürünler:
+
 - **Azure Container Instances (ACI)**
 - **Azure sanal makineleri** (Kapsayıcının desteğiyle)
 - **Azure sanal makine ölçek kümeleri** (Kapsayıcının desteğiyle)

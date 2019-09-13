@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF Data Services, getting started
 - WCF Data Services, accessing data
 ms.assetid: 9665ff5b-3e3a-495d-bf83-d531d5d060ed
-ms.openlocfilehash: eff8d682004bf437a9b5470a4eb91c9bd52bfad5
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 048cbb8708aa705fe6b03491ddfa9c107a21cda1
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70791327"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894352"
 ---
 # <a name="accessing-data-service-resources-wcf-data-services"></a>Veri hizmeti kaynaklarına erişme (WCF Veri Hizmetleri)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] verilerinizi URI 'ler tarafından adreslenebilir kaynaklarla bir akış olarak ortaya çıkarmak için ' i destekler. Bu kaynaklar [varlık veri modeli](../adonet/entity-data-model.md)varlık ilişkisi kurallarına göre temsil edilir. Bu modelde, varlıklar, bir uygulama etki alanında bulunan, müşteriler, siparişler, öğeler ve ürünler gibi veri türleri olan işletimsel birimleri temsil eder. Varlık verilerine, temsili durum aktarımı (REST) semantiği kullanılarak erişilir ve değiştirilir, özellikle Al, koy, POST ve DELETE için standart HTTP fiilleri.  
@@ -21,44 +21,44 @@ ms.locfileid: "70791327"
 ## <a name="addressing-resources"></a>Kaynakları adresleme  
  ' [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]De, veri modeli tarafından sunulan tüm verileri bir URI kullanarak adresleyebilirsiniz. Örneğin, aşağıdaki URI, müşteri varlık türünün tüm örneklerinin girişlerini içeren Customers varlık kümesi olan bir akış döndürür:  
   
-```  
-http://services.odata.org/Northwind/Northwind.svc/Customers  
+```http
+https://services.odata.org/Northwind/Northwind.svc/Customers  
 ```  
   
  Varlıklarda varlık anahtarları adlı özel özellikler vardır. Varlık anahtarı, bir varlık kümesindeki tek bir varlığı benzersiz bir şekilde tanımlamak için kullanılır. Bu, varlık kümesindeki bir varlık türünün belirli bir örneğini ele almanıza olanak sağlar. Örneğin, aşağıdaki URI, anahtar değeri `ALFKI`olan bir müşteri varlık türünün belirli bir örneği için bir giriş döndürür:  
   
-```  
-http://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')  
+```http  
+https://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')  
 ```  
   
  Bir varlık örneğinin ilkel ve karmaşık özellikleri de tek tek adreslenebilir. Örneğin, aşağıdaki URI belirli bir müşterinin `ContactName` özellik değerini içeren bir XML öğesi döndürür:  
   
-```  
-http://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/ContactName  
+```http  
+https://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/ContactName  
 ```  
   
  `$value` Uç noktasını önceki URI 'ye dahil ettiğinizde, yanıt iletisinde yalnızca ilkel özelliğin değeri döndürülür. Aşağıdaki örnek, XML öğesi olmadan yalnızca "Maria Anders" dizesini döndürür:  
   
-```  
-http://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/ContactName/$value  
+```http  
+https://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/ContactName/$value  
 ```  
   
  Varlıklar arasındaki ilişkiler veri modelinde ilişkilendirmelere göre tanımlanır. Bu ilişkilendirmeler bir varlık örneğinin gezinti özelliklerini kullanarak ilgili varlıkları adreslemeye olanak tanır. Bir gezinti özelliği, çoktan çoğa bir ilişki olması durumunda tek bir ilgili varlık ya da bire çok ilişki söz konusu olduğunda bir dizi ilgili varlık döndürebilir. Örneğin, aşağıdaki URI belirli bir müşteriyle ilgili tüm siparişlerin kümesi olan bir akış döndürür:  
   
-```  
-http://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/Orders  
+```http  
+https://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/Orders  
 ```  
   
  Genellikle çift yönlü olan ilişkiler, bir dizi gezinti özelliği tarafından temsil edilir. Önceki örnekte gösterilen ilişkinin tersi olarak aşağıdaki URI, belirli bir sipariş varlığının ait olduğu müşteri varlığına yönelik bir başvuru döndürür:  
   
-```  
-http://services.odata.org/Northwind/Northwind.svc/Orders(10643)/Customer  
+```http  
+https://services.odata.org/Northwind/Northwind.svc/Orders(10643)/Customer  
 ```  
   
  [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]Ayrıca, sorgu ifadelerinin sonuçlarına göre kaynakları adreslemenize de olanak sağlar. Bu, değerlendirilen bir ifadeye göre kaynak kümelerinin filtrelemesine olanak tanır. Örneğin, aşağıdaki URI kaynakları yalnızca, 22 Eylül 1997 tarihinden itibaren sevk edilen belirtilen müşteri için siparişleri döndürecek şekilde filtreliyor:  
   
-```  
-http://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/Orders?$filter=ShippedDate gt datetime'1997-09-22T00:00:00'  
+```http  
+https://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/Orders?$filter=ShippedDate gt datetime'1997-09-22T00:00:00'  
 ```  
   
  Daha fazla bilgi için bkz [. OData: URI kuralları](https://go.microsoft.com/fwlink/?LinkId=185564).  
@@ -66,8 +66,8 @@ http://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/Orders?$fil
 ## <a name="system-query-options"></a>Sistem sorgu seçenekleri  
  [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]filtreleme, sıralama ve sayfalama gibi kaynaklarda geleneksel sorgu işlemleri gerçekleştirmek için kullanabileceğiniz bir sistem sorgu seçenekleri kümesi tanımlar. Örneğin, aşağıdaki URI, tüm `Order` varlıkların kümesini, ilgili `Order_Detail` varlıkların yanı bir şekilde `100`sona ermez posta kodlarını döndürür:  
   
-```  
-http://services.odata.org/Northwind/Northwind.svc/Orders?$filter=not endswith(ShipPostalCode,'100')&$expand=Order_Details&$orderby=ShipCity  
+```http  
+https://services.odata.org/Northwind/Northwind.svc/Orders?$filter=not endswith(ShipPostalCode,'100')&$expand=Order_Details&$orderby=ShipCity  
 ```  
   
  Döndürülen akıştaki girişler, siparişlerin ShipCity özelliğinin değeri ile de sıralanır.  
@@ -87,8 +87,8 @@ http://services.odata.org/Northwind/Northwind.svc/Orders?$filter=not endswith(Sh
 ## <a name="addressing-relationships"></a>Adresleme Ilişkileri  
  Varlık kümelerinin ve varlık örneklerinin ele eklenmesine ek olarak, [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] varlıklar arasındaki ilişkileri temsil eden ilişkilendirmeleri ele almanıza de olanak sağlar. Bu işlevsellik, Northwind örnek veritabanındaki belirli bir siparişle ilişkili olan nakliyecinin gibi iki varlık örneği arasında bir ilişki oluşturabilmesinin veya değiştirebilmesi için gereklidir. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]varlıklar arasındaki `$link` ilişkilendirmeleri özel olarak ele almak için bir işleci destekler. Örneğin, aşağıdaki URI, belirtilen sipariş için nakliyeci yeni bir nakliyeci değiştirmek üzere bir HTTP PUT isteği iletisinde belirtilmiştir.  
   
-```  
-http://services.odata.org/Northwind/Northwind.svc/Orders(10643)/$links/Shipper  
+```http 
+https://services.odata.org/Northwind/Northwind.svc/Orders(10643)/$links/Shipper  
 ```  
   
  Daha fazla bilgi için bkz [. OData: Girdiler](https://go.microsoft.com/fwlink/?LinkId=187351)arasındaki bağlantıları adresleme.  

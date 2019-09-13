@@ -5,12 +5,12 @@ ms.date: 08/29/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to, title-hack-0625
-ms.openlocfilehash: 3fb586b218f1769949efc362cacc3957623dd43b
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: fc735f28bad91b9714d7e6bf2a9c7c620acacc4d
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70169042"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929341"
 ---
 # <a name="train-and-evaluate-a-model"></a>Modeli eğitme ve değerlendirme
 
@@ -175,6 +175,7 @@ double rSquared = trainedModelMetrics.RSquared;
 ```
 
 Önceki kod örneğinde:  
+
 1. Test veri kümesi önceden tanımlanmış veri hazırlama dönüştürmeleri kullanılarak önceden işlenir. 
 2. Eğitilen makine öğrenimi modeli, test verilerinde tahminleri yapmak için kullanılır.
 3. Yönteminde, test veri `CurrentPrice` `Score` kümesi sütunundaki değerler, regresyon modeli için ölçümleri hesaplamak üzere yeni çıkış tahminlerinin sütunuyla karşılaştırılır, bunlardan biri R-kare `Evaluate` `rSquared` değişken.

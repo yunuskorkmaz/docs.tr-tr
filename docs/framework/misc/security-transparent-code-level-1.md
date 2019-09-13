@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5fd8f46d-3961-46a7-84af-2eb1f48e75cf
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d1c108e75c0e2da3d513669f5b8b02bada43b983
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: efd3954b63a6683e04bd9143ca3523cdbace506d
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70206083"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894531"
 ---
 # <a name="security-transparent-code-level-1"></a>Güvenliği saydam kod, düzey 1
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -84,27 +84,27 @@ ms.locfileid: "70206083"
 ## <a name="security-transparency-examples"></a>Güvenlik saydamlığı örnekleri  
  .NET Framework 2,0 saydamlık kurallarını (düzey 1 saydamlık) kullanmak için aşağıdaki derleme ek açıklamasını kullanın:  
   
-```  
+```csharp
 [assembly: SecurityRules(SecurityRuleSet.Level1)]  
 ```  
   
  Derlemenin herhangi bir kritik kod içermediğini ve ayrıcalıkları herhangi bir şekilde yükselmediğini belirtmek için bir derlemenin tamamını saydam hale getirmek isterseniz, aşağıdaki öznitelik ile derlemeye açıkça saydamlık ekleyebilirsiniz:  
   
-```  
+```csharp  
 [assembly: SecurityTransparent]  
 ```  
   
  Aynı derlemede kritik ve saydam kodu karıştırmak istiyorsanız, derlemenin kritik kod içerebileceğini belirtmek için derlemeyi <xref:System.Security.SecurityCriticalAttribute> özniteliğiyle işaretleyerek başlayın:  
   
-```  
+```csharp  
 [assembly: SecurityCritical]  
 ```  
   
  Güvenlik açısından kritik eylemler gerçekleştirmek istiyorsanız, aşağıdaki kod örneğinde gösterildiği gibi, kritik eylemi gerçekleştirecek kodu, başka bir <xref:System.Security.SecurityCriticalAttribute> öznitelikle gerçekleştirilecek şekilde açıkça işaretlemeniz gerekir:  
   
-```  
+```csharp  
 [assembly: SecurityCritical]  
-Public class A  
+public class A  
 {  
     [SecurityCritical]  
     private void Critical()  
@@ -119,7 +119,7 @@ Public class A
     }  
 }  
 public class B  
-{      
+{
     internal string SomeOtherProperty  
     {  
         get { /* transparent */ }  

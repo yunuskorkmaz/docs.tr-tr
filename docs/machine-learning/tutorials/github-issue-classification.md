@@ -4,12 +4,12 @@ description: Birden çok Lass sınıflandırma senaryosunda ML.NET kullanarak bu
 ms.date: 07/31/2019
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0516
-ms.openlocfilehash: 3bb556cc591ee35fc14c548e7f53bad58a786e99
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 1eb56465bb56906df25c3a094126f2496bef684e
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710300"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929231"
 ---
 # <a name="tutorial-categorize-support-issues-using-multiclass-classification-with-ml-net"></a>Öğretici: ML .NET ile birden çok Lass sınıflandırması kullanarak destek sorunlarını kategorilere ayırma
 
@@ -17,6 +17,7 @@ Bu örnek öğreticide, Visual Studio 'da kullanılan C# bir .NET Core konsol uy
 
 Bu öğreticide şunların nasıl yapıladığını öğreneceksiniz:
 > [!div class="checklist"]
+>
 > * Verilerinizi hazırlayın
 > * Verileri dönüştürme
 > * Modeli eğitme
@@ -372,6 +373,7 @@ Tebrikler! Artık bir GitHub sorunu için bir alan etiketini sınıflandırmak v
 
 Bu öğreticide, şunların nasıl yapıldığını öğrendiniz:
 > [!div class="checklist"]
+>
 > * Verilerinizi hazırlayın
 > * Verileri dönüştürme
 > * Modeli eğitme

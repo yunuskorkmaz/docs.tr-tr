@@ -2,12 +2,12 @@
 title: MSMQ Etkinleştirme
 ms.date: 03/30/2017
 ms.assetid: e3834149-7b8c-4a54-806b-b4296720f31d
-ms.openlocfilehash: 169881cdc0736fcc94818f6281c35b4e54e06dfe
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 038f4d7e3d713cfe4134ea98f7858ef71f29bab4
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70039293"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70895244"
 ---
 # <a name="msmq-activation"></a>MSMQ Etkinleştirme
 
@@ -92,15 +92,11 @@ WAS ' de hizmet kodunu barındırmak için sınıf adına sahip bir. svc dosyas�
 
 Service. svc dosyasının kendisi oluşturmak `OrderProcessorService`için bir yönerge içerir.
 
-```svc
-<%@ServiceHost language="c#" Debug="true" Service="Microsoft.ServiceModel.Samples.OrderProcessorService"%>
-```
+`<%@ServiceHost language="c#" Debug="true" Service="Microsoft.ServiceModel.Samples.OrderProcessorService"%>`
 
 Service. svc dosyası, System. Transactions. dll ' nin yüklü olduğundan emin olmak için bir derleme yönergesi de içerir.
 
-```svc
-<%@Assembly name="System.Transactions, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"%>
-```
+`<%@Assembly name="System.Transactions, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"%>`
 
 İstemci bir işlem kapsamı oluşturur. Hizmet ile iletişim, işlemin kapsamı içinde gerçekleşirken, tüm iletilerin başarılı veya başarısız olduğu atomik bir birim olarak işlenmesine neden olur. İşlem, işlem kapsamında çağırarak `Complete` yürütülür.
 

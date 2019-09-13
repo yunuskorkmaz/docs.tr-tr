@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0c1534e5-979b-4c8a-a588-1c24301aefb3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e92d5564308d31609b9fb024f3d3368a19b76b1d
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: dafa7cdaa38180e458a34fd34316f134aa443040
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70106707"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929127"
 ---
 # <a name="working-with-calendars"></a>Takvimlerle çalışma
 
@@ -139,6 +139,7 @@ Takvimler genellikle tarihleri dönemlere ayırır. Ancak, <xref:System.Globaliz
 
 > [!IMPORTANT]
 > <xref:System.Globalization.JapaneseCalendar> Ve<xref:System.Globalization.JapaneseLunisolarCalendar>' de yeni bir dönem olan reiwa dönemi, 1 Mayıs 2019 ' de başlar. Bu değişiklik, bu takvimleri kullanan tüm uygulamaları etkiler. Daha fazla bilgi için aşağıdaki makalelere bakın:
+>
 > - .Net [' te Japonca takvimdeki yeni bir dönemi işleme](https://devblogs.microsoft.com/dotnet/handling-a-new-era-in-the-japanese-calendar-in-net/), .net ' e eklenen ve çoklu dönem takvimlerini işlerken en iyi yöntemleri açıklayan özellikleri anlatmaktadır.
 > - Uygulamanızı Windows üzerinde test etme hakkında bilgi sağlayan [Japonca dönem değişikliği için uygulamayı hazırlayın](/windows/uwp/design/globalizing/japanese-era-change)ve bu sayede, dönem değişikliğine yönelik hazırlık olanağı sağlanır.
 > - Yeni Japonca Microsoft Takvim dönemi ile ilgili olan bireysel Windows sürümleri için .NET Framework güncelleştirmelerini listeleyen [.NET Framework için yeni Japonca dönem güncelleştirmelerinin Özeti](https://support.microsoft.com/help/4477957/new-japanese-era-updates-for-net-framework), çok satırlı destek için yeni .NET Framework özellikleri Not alır ve şunları içerir uygulamalarınızı test etmek için bölümüne bakın.

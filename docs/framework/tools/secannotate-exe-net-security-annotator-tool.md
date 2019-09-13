@@ -7,25 +7,25 @@ helpviewer_keywords:
 ms.assetid: 8104d208-7813-4a1d-8a75-58f9a7bcb8c9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: caedc586a9d33ecbdc4a8c7202abcfdaafabd98c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 07ac564b5a2b227a62b7073bb837ab8bd1f434fb
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61919652"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894762"
 ---
 # <a name="secannotateexe-net-security-annotator-tool"></a>SecAnnotate.exe (.NET Güvenlik Not Ekleyici Aracı)
-.NET güvenlik Not ekleyici Aracı (SecAnnotate.exe) tanımlayan bir komut satırı uygulamasıdır `SecurityCritical` ve `SecuritySafeCritical` bir veya daha fazla bölümleri.  
+.Net Security açıklaması Ekleyici Tool (SecAnnotate. exe), bir veya daha fazla derlemenin `SecurityCritical` `SecuritySafeCritical` bölümlerini tanımlayan bir komut satırı uygulamasıdır.  
   
- Bir Visual Studio Uzantısı [güvenlik açıklaması ekleyici](https://go.microsoft.com/fwlink/?LinkId=198007), Secannotate.exe'ye bir grafik kullanıcı arabirimi sağlar ve aracı Visual Studio'dan çalıştırmanıza olanak sağlar.  
+ Bir Visual Studio uzantısı olan [Security açıklaması Ekleyici](https://go.microsoft.com/fwlink/?LinkId=198007), SecAnnotate. exe için grafiksel bir kullanıcı arabirimi sağlar ve aracı Visual Studio 'dan çalıştırmanızı sağlar.  
   
- Bu araç, Visual Studio ile birlikte otomatik olarak yüklenir. Aracı çalıştırmak için Visual Studio (veya Windows 7'de Visual Studio komut istemi) için geliştirici Komut İstemi'ni kullanın. Daha fazla bilgi için [komut istemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+ Bu araç, Visual Studio ile birlikte otomatik olarak yüklenir. Aracı çalıştırmak için, Visual Studio için Geliştirici Komut İstemi (veya Windows 7 ' de Visual Studio komut Istemi) kullanın. Daha fazla bilgi için bkz. [komut istemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
   
- Komut isteminde aşağıdaki komutu yazın. burada *parametreleri* aşağıdaki bölümde açıklanan ve *derlemeleri* boşlukla ayrılmış bir veya daha fazla derleme adları oluşur:  
+ Komut isteminde, aşağıdaki bölümde açıklanan *parametreleri* ve *derlemeler* boşluklarla ayrılmış bir veya daha fazla derleme adından oluşur:  
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```console  
 SecAnnotate.exe [parameters] [assemblies]  
 ```  
   
@@ -34,24 +34,24 @@ SecAnnotate.exe [parameters] [assemblies]
 |Seçenek|Açıklama|  
 |------------|-----------------|  
 |`/a`<br /><br /> veya<br /><br /> `/showstatistics`|Analiz edilmekte olan derlemelerde saydamlık kullanımıyla ilgili istatistikleri gösterir.|  
-|`/d:` *Dizin*<br /><br /> veya<br /><br /> `/referencedir:` *Dizin*|Ek açıklama sırasında bağımlı derlemelerin aranacağı bir dizin belirtir.|  
+|`/d:`*Dizin*<br /><br /> veya<br /><br /> `/referencedir:`*Dizin*|Ek açıklama sırasında bağımlı derlemelerin aranacağı bir dizin belirtir.|  
 |`/i`<br /><br /> veya<br /><br /> `/includesignatures`|Ek açıklama raporu dosyasına genişletilmiş imza bilgileri ekler.|  
 |`/n`<br /><br /> veya<br /><br /> `/nogac`|Genel derleme belleğinde başvurulan derlemelerin aranmasını bastırır.|  
-|`/o:` *output.xml*<br /><br /> veya<br /><br /> `/out:` *output.xml*|Çıktı ek açıklama dosyasını belirtir.|  
-|`/p:` *maxpasses*<br /><br /> veya<br /><br /> `/maximumpasses:` *maxpasses*|Yeni ek açıklamaların üretilmesini durdurmadan önce derlemelere yapılacak en fazla ek açıklama sayısını belirtir.|  
+|`/o:`*output. xml*<br /><br /> veya<br /><br /> `/out:`*output. xml*|Çıktı ek açıklama dosyasını belirtir.|  
+|`/p:`*maxpass*<br /><br /> veya<br /><br /> `/maximumpasses:`*maxpass*|Yeni ek açıklamaların üretilmesini durdurmadan önce derlemelere yapılacak en fazla ek açıklama sayısını belirtir.|  
 |`/q`<br /><br /> veya<br /><br /> `/quiet`|Açıklama ekleyicinin durum iletileri vermediği sessiz modu belirtir; yalnızca hata bilgilerini verir.|  
-|`/r:` *Derleme*<br /><br /> veya<br /><br /> `/referenceassembly:` *Derleme*|Açıklama ekleme sırasında bağımlı derlemeleri çözerken, belirtilen derlemeyi ekler. Başvuru derlemelerine, başvuru yolunda bulunan derlemelere göre öncelik verilir.|  
-|`/s:` *RuleName*<br /><br /> veya<br /><br /> `/suppressrule:` *RuleName*|Belirtilen saydamlık kuralını giriş derlemeleri üzerinde çalıştırmayı bastırır.|  
+|`/r:`*derleme*<br /><br /> veya<br /><br /> `/referenceassembly:`*derleme*|Açıklama ekleme sırasında bağımlı derlemeleri çözerken, belirtilen derlemeyi ekler. Başvuru derlemelerine, başvuru yolunda bulunan derlemelere göre öncelik verilir.|  
+|`/s:`*RuleName*<br /><br /> veya<br /><br /> `/suppressrule:`*RuleName*|Belirtilen saydamlık kuralını giriş derlemeleri üzerinde çalıştırmayı bastırır.|  
 |`/t`<br /><br /> veya<br /><br /> `/forcetransparent`|Açıklama Ekleyici aracını, herhangi bir saydamlık ek açıklaması olmayan tüm derlemelere tümüyle saydamlarmış gibi davranmaya zorlar.|  
 |`/t`:*derleme*<br /><br /> veya<br /><br /> `/forcetransparent`:*derleme*|Derleme düzeyindeki geçerli ek açıklamalarına bakılmaksızın, verilen derlemeyi saydam olmaya zorlar.|  
 |||  
 |`/v`<br /><br /> veya<br /><br /> `/verify`|Yalnızca bir derlemenin ek açıklamalarının doğru olduğunu doğrular; derleme doğrulamazsa, gerekli tüm ek açıklamaları bulmak için birden çok geçiş yapmayı denemez.|  
 |`/x`<br /><br /> veya<br /><br /> `/verbose`|Ek açıklama eklerken ayrıntılı çıktı belirtir.|  
-|`/y:` *Dizin*<br /><br /> veya<br /><br /> `/symbolpath:` *Dizin*|Açıklama ekleme sırasında simge dosyalarını ararken, belirtilen dizini ekler.|  
+|`/y:`*Dizin*<br /><br /> veya<br /><br /> `/symbolpath:`*Dizin*|Açıklama ekleme sırasında simge dosyalarını ararken, belirtilen dizini ekler.|  
   
 ## <a name="remarks"></a>Açıklamalar  
  Komut satırında belirtilen ve önüne bir at işareti (@) eklenen bir yanıt dosyasında parametreler ve derlemeler de sağlanabilir. Yanıt dosyasındaki her bir satır tek bir parametre veya derleme adı içermelidir.  
   
- .NET güvenlik açıklaması ekleyici hakkında daha fazla bilgi için bkz: Giriş [derlemelerinizi saydamlık ihlalleri için analiz etmede Secannotate'i kullanma](https://go.microsoft.com/fwlink/?LinkId=187648) .NET güvenliği blogundaki.  
+ .NET Security açıklaması Ekleyici hakkında daha fazla bilgi için bkz. [SecAnnotate kullanarak, derlemelerinizi .NET güvenlik blogundan saydamlık ihlalleri Için analiz etme](https://go.microsoft.com/fwlink/?LinkId=187648) .  
   
 ## <a name="examples"></a>Örnekler

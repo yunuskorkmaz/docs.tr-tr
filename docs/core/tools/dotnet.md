@@ -2,12 +2,12 @@
 title: DotNet komutu
 description: DotNet komutu (.NET Core CLI araçları için genel sürücü) ve kullanımı hakkında bilgi edinin.
 ms.date: 06/04/2018
-ms.openlocfilehash: 328fd24cd72110bd235c177398f6f147fbb9d144
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: 8de6a6f7e584dc472dc23d60f113b03610abb3ef
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373746"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926233"
 ---
 # <a name="dotnet-command"></a>DotNet komutu
 
@@ -94,6 +94,7 @@ Yüklü .NET Core SDK 'larını görüntüler.
 `--roll-forward-on-no-candidate-fx <N>`
 
 Gerekli paylaşılan çerçeve kullanılabilir olmadığında davranışını tanımlar. `N` aşağıdakilerden biri olabilir:
+
 - `0`-Hatta ikincil sürüm iletmeyi devre dışı bırakın.
 - `1`-Önemli sürümde değil, küçük sürümde ilet. Bu varsayılan davranıştır.
 - `2`-Küçük ve büyük sürümlerde ilet.

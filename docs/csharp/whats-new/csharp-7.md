@@ -3,16 +3,17 @@ title: C# 7,0 C# kılavuzundaki yenilikler
 description: C# Dilin sürüm 7,0 ' deki yeni özelliklere genel bakış alın.
 ms.date: 02/20/2019
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: 148ecdf7a3a99ac73132593272ecff3a5bb4195e
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 0f26a9647503ebb667d961fefaa05a25a71ec6f5
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105722"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926569"
 ---
 # <a name="whats-new-in-c-70"></a>C# 7,0 sürümündeki yenilikler
 
 C#7,0, C# dile bir dizi yeni özellik ekler:
+
 - [`out`değişkenlerinin](#out-variables)
   - Değerleri, kullanıldığı `out` yönteme bağımsız değişken olarak satır içi olarak bildirebilirsiniz.
 - [Demetler](#tuples)
@@ -58,7 +59,7 @@ Yukarıda gösterildiği gibi, açıklık için `out` değişkenin türünü bel
 
 ## <a name="tuples"></a>Demetler
 
-C#, tasarım amacını açıklamak için kullanılan sınıflar ve yapılar için zengin bir sözdizimi sağlar. Ancak bazen zengin söz dizimi çok az avantajlı ek iş gerektirir. Genellikle birden fazla veri öğesi içeren basit bir yapıya ihtiyacı olan Yöntemler yazabilirsiniz. Bu senaryoları desteklemek için , ' ye C#eklenmiştir. Tanımlama grupları, veri üyelerini temsil etmek için birden çok alan içeren hafif veri yapılarıdır.
+C#, tasarım amacını açıklamak için kullanılan sınıflar ve yapılar için zengin bir sözdizimi sağlar. Ancak bazen zengin söz dizimi çok az avantajlı ek iş gerektirir. Genellikle birden fazla veri öğesi içeren basit bir yapıya ihtiyacı olan Yöntemler yazabilirsiniz. Bu *senaryoları desteklemek* için, ' ye C#eklenmiştir. Tanımlama grupları, veri üyelerini temsil etmek için birden çok alan içeren hafif veri yapılarıdır.
 Alanlar doğrulanmaz ve kendi yöntemlerinizi tanımlayamazsınız
 
 > [!NOTE]
@@ -193,7 +194,7 @@ C# Dil, `ref` yerelleri yanlış kullanmanızı ve şunu döndürdüğünü koru
 
 Ref Yereller ve ref işlevinin eklenmesi, değerleri kopyalamayı önleyerek veya birden çok kez başvuru işlemleri gerçekleştirerek daha etkili olan algoritmaların kullanılmasına izin verir.
 
-Dönüş `ref` değerine ekleme, [kaynak ile uyumlu](version-update-considerations.md#source-compatible-changes)bir değişikdir. Varolan kod derlenir, ancak ref dönüş değeri atandığında kopyalanır. Çağıranlar, döndürmeyi bir başvuru olarak depolamak için dönüş değeri `ref` için depolamayı yerel bir değişkene güncelleştirmelidir.
+Dönüş `ref` değerine ekleme, [kaynak ile uyumlu bir değişikdir](version-update-considerations.md#source-compatible-changes). Varolan kod derlenir, ancak ref dönüş değeri atandığında kopyalanır. Çağıranlar, döndürmeyi bir başvuru olarak depolamak için dönüş değeri `ref` için depolamayı yerel bir değişkene güncelleştirmelidir.
 
 Daha fazla bilgi için bkz. [ref anahtar sözcüğü](../language-reference/keywords/ref.md) makalesi.
 

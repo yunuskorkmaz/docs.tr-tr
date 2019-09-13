@@ -3,12 +3,12 @@ title: LINQ ile Çalışma
 description: Bu öğreticide LINQ, LINQ sorgularında kullanılmak üzere yazma yöntemleriyle diziler oluşturma ve Eager ile yavaş değerlendirme arasında ayrım yapma öğretilir.
 ms.date: 10/29/2018
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: f80567510509ba0c7f205ccbd5e587f9ad31f531
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 72bb7475fc6b18650e0870bf99c4b8ddbac3ec9f
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70785871"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926614"
 ---
 # <a name="working-with-linq"></a>LINQ ile Çalışma
 
@@ -339,6 +339,7 @@ Uygulamada, bazı algoritmalar Eager değerlendirmesi kullanılarak iyi çalış
 ## <a name="conclusion"></a>Sonuç
 
 Bu projede şunları kapsamış olursunuz:
+
 - verileri anlamlı bir sırayla toplamak için LINQ sorguları kullanma
 - LINQ Sorgularına kendi özel işlevselümüzü eklemek için uzantı yöntemleri yazma
 - LINQ sorgularımızın, düşürülmüş hız gibi performans sorunları üzerinde çalıştığı, kodumuza ait yerleri bulma
@@ -347,6 +348,7 @@ Bu projede şunları kapsamış olursunuz:
 LINQ 'ten itibaren, kart püf noktaları için bir teknik Magicians kullanımı hakkında biraz bilgi edindiniz. Magicians, her kartın destede nereye taşındığını denetleyebildiğinden Faro karıştırmasını kullanın. Artık bilineceğimize göre, diğer herkese açık yapmayın!
 
 LINQ hakkında daha fazla bilgi için bkz.
+
 - [Dil ile Tümleşik Sorgu (LINQ)](../programming-guide/concepts/linq/index.md)
   - [LINQ'e Giriş](../programming-guide/concepts/linq/index.md)
   - [Temel LINQ sorgu Işlemleri (C#)](../programming-guide/concepts/linq/basic-linq-query-operations.md)

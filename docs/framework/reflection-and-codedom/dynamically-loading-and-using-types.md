@@ -14,20 +14,19 @@ helpviewer_keywords:
 ms.assetid: db985bec-5942-40ec-b13a-771ae98623dc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0246f429b396a2606bbb827b7ae2a9034af00f11
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 5dbbf0f71eaefd0ef7fc7f2b5e69e47ce7b8db26
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69915471"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894885"
 ---
 # <a name="dynamically-loading-and-using-types"></a>Dinamik Olarak Yükleme ve Türleri Kullanma
 Yansıma, örtülü geç bağlamayı uygulamak için dil derleyicileri tarafından kullanılan altyapıyı sağlar. Bağlama, benzersiz olarak belirtilen bir türe karşılık gelen bildirimi (yani, uygulama) bulma işlemidir. Bu işlem, derleme süresi yerine çalışma zamanında gerçekleştiğinde, geç bağlama olarak adlandırılır. Visual Basic kodunuzda örtük geç bağlamayı kullanmanıza izin verir; Visual Basic derleyici, nesne türünü almak için yansıma kullanan bir yardımcı yöntemi çağırır. Yardımcı yöntemine geçirilen bağımsız değişkenler, uygun yöntemin çalışma zamanında çağrılmasına neden olur. Bu bağımsız değişkenler, yöntemi çağırmak için gereken örnek (bir nesne), çağrılan metodun adı (bir dize) ve çağrılan yönteme geçirilen bağımsız değişkenler (bir nesne dizisi).  
   
  Aşağıdaki örnekte Visual Basic Derleyicisi, türü derleme sırasında bilinmeyen bir nesne üzerinde bir yöntemi çağırmak için yansımayı örtük olarak kullanır. **HelloWorld** sınıfının, **PrintHello** yöntemine geçirilen bazı metinler ile birleştirilmiş "Merhaba Dünya" yazdıran bir **PrintHello** yöntemi vardır. Bu örnekte çağrılan **PrintHello** yöntemi aslında bir <xref:System.Type.InvokeMember%2A?displayProperty=nameWithType>örnektir; Visual Basic kodu, nesne türü (HelloObj), çalışma zamanı yerine derleme zamanı (erken bağlama) olarak bilinmiş gibi, **PrintHello** yönteminin çağrılmasını sağlar ( geç bağlama).  
   
-```  
-Imports System  
+```vb
 Module Hello  
     Sub Main()  
         ' Sets up the variable.  
@@ -69,7 +68,7 @@ End Module
   
  ByRef bağımsız değişkenleri mevcut olduğunda, çağıran bunları geri almak isteyebilir. Bu nedenle, **bağlayıcı** , **BindToMethod** bağımsız değişken dizisini işlese, bir istemcinin bağımsız değişken dizisini özgün biçimine geri eşlemesini sağlar. Bunu yapmak için, çağıran bağımsız değişkenlerin sırasının değiştirilmemiş olması garanti etmelidir. Bağımsız değişkenler ad ile geçirildiğinde, **Ciltçi** bağımsız değişken dizisini yeniden sıralar ve çağıranın gördüğü şeydir. Daha fazla bilgi için bkz. <xref:System.Reflection.Binder.ReorderArgumentArray%2A?displayProperty=nameWithType>.  
   
- Kullanılabilir Üyeler kümesi, tür veya herhangi bir temel tür içinde tanımlanan üyeleridir. <xref:System.Reflection.BindingFlags> Belirtilmişse, herhangi bir erişilebilirliğin üyeleri bu küme içinde döndürülür. **BindingFlags. ortak** belirtilmemişse, bağlayıcı erişilebilirlik kurallarını zorlayamalıdır. **Genel veya ortak** bağlama bayrağını belirtirken, **örneği** veya **statik** bağlama bayrağını da belirtmeniz veya hiçbir üyenin döndürülmeyeceğini belirtmeniz gerekir.  
+ Kullanılabilir Üyeler kümesi, tür veya herhangi bir temel tür içinde tanımlanan üyeleridir. <xref:System.Reflection.BindingFlags> Belirtilmişse, herhangi bir erişilebilirliğin üyeleri bu küme içinde döndürülür. **BindingFlags. ortak** belirtilmemişse, bağlayıcı erişilebilirlik kurallarını zorlayamalıdır. **Genel veya ortak** bağlama bayrağını belirtirken, **örneği** veya **statik** **bağlama bayrağını** da belirtmeniz veya hiçbir üyenin döndürülmeyeceğini belirtmeniz gerekir.  
   
  Verilen adın yalnızca bir üyesi varsa, hiçbir geri çağrı gerekmez ve bağlama Bu yöntemde yapılır. Kod örneğinin 1. durumu bu noktayı gösterir: Yalnızca bir **PrintBob** yöntemi kullanılabilir ve bu nedenle hiçbir geri arama gerekmez.  
   

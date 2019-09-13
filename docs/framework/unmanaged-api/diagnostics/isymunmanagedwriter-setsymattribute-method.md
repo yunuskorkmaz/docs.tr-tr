@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8ffcc3a079e7e9a9d69622dc6666bb0e7641d4e3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4450c262b75a73114cb7de7de98567f053bbf564
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61650784"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894471"
 ---
 # <a name="isymunmanagedwritersetsymattribute-method"></a>ISymUnmanagedWriter::SetSymAttribute Yöntemi
-Adını alan özel bir öznitelik tanımlar. Bu öznitelikler, sembol deposundaki özel meta veri öznitelikleri aksine tutulur.  
+Özel bir özniteliği adına göre tanımlar. Bu öznitelikler, meta veri özel özniteliklerinin aksine sembol deposunda tutulur.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```cpp  
 HRESULT SetSymAttribute(  
     [in] mdToken parent,  
     [in] const WCHAR *name,  
@@ -39,22 +39,22 @@ HRESULT SetSymAttribute(
   
 ## <a name="parameters"></a>Parametreler  
  `parent`  
- [in] Öznitelik tanımlanmakta olan meta veri belirteci.  
+ 'ndaki Özniteliğin tanımlandığı meta veri belirteci.  
   
  `name`  
- [in] Bir işaretçi bir `WCHAR` , öznitelik adı içerir.  
+ 'ndaki Özniteliği adını içeren bir `WCHAR` işaretçisi.  
   
  `cData`  
- [in] A `ULONG32` boyutunu gösteren `data` dizisi.  
+ 'ndaki Dizi`data` boyutunu belirten bir `ULONG32` .  
   
  `data`  
- [in] Öznitelik değeri.  
+ 'ndaki Öznitelik değeri.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
+ Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAıL veya diğer bir hata kodu.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Üst bilgi:** CorSym.idl, CorSym.h  
+ **Üst bilgi** CorSym. IDL, CorSym. h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

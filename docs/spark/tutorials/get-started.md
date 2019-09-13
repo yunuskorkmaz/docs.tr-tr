@@ -4,12 +4,12 @@ description: Windows 'da .NET Core kullanarak Apache Spark uygulaması için .NE
 ms.date: 06/27/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 7ce7d7aec6c15385d3d797d5a548519eea33b764
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 004256a2fe369b026b15151dfc72ae379da0be8e
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "69577073"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928481"
 ---
 # <a name="tutorial-get-started-with-net-for-apache-spark"></a>Öğretici: Apache Spark için .NET ile çalışmaya başlama
 
@@ -18,6 +18,7 @@ Bu öğreticide, Windows 'da .NET Core kullanarak Apache Spark bir uygulama içi
 Bu öğreticide şunların nasıl yapıladığını öğreneceksiniz:
 
 > [!div class="checklist"]
+>
 > * .NET için Windows ortamınızı Apache Spark için hazırlayın
 > * **Microsoft. spark. Worker** 'ı indirin
 > * Apache Spark uygulama için basit bir .NET oluşturun ve çalıştırın
@@ -124,6 +125,7 @@ Tebrikler! Apache Spark uygulaması için bir .NET başarıyla yazıldı ve çal
 
 Bu öğreticide, şunların nasıl yapıldığını öğrendiniz:
 > [!div class="checklist"]
+>
 > * .NET için Windows ortamınızı Apache Spark için hazırlayın
 > * **Microsoft. spark. Worker** 'ı indirin
 > * Apache Spark uygulama için basit bir .NET oluşturun ve çalıştırın

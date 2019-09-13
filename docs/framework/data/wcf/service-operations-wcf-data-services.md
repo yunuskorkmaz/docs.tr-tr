@@ -8,18 +8,18 @@ helpviewer_keywords:
 - service operations [WCF Data Services]
 - WCF Data Services, service operations
 ms.assetid: 583a690a-e60f-4990-8991-d6efce069d76
-ms.openlocfilehash: f905eb90b47cb5ab20fd912b1cbcc62947361992
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 4f36081ef1a3eec84f3cc2ced3c629109acd6a38
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70779764"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894275"
 ---
 # <a name="service-operations-wcf-data-services"></a>Hizmet Işlemleri (WCF Veri Hizmetleri)
 
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], sunucuda Yöntemler sergilemek için bir veri hizmeti üzerinde hizmet işlemleri tanımlamanıza olanak sağlar. Diğer veri hizmeti kaynakları gibi hizmet işlemleri de URI 'Ler tarafından karşılanır. Hizmet işlemleri, doğrulama mantığını uygulamak, rol tabanlı güvenlik uygulamak veya özelleştirilmiş sorgulama yeteneklerini göstermek gibi bir veri hizmetinde iş mantığını kullanıma sunmasını sağlar. Hizmet işlemleri, ' den <xref:System.Data.Services.DataService%601>türetilen veri hizmeti sınıfına eklenen yöntemlerdir. Diğer tüm veri hizmeti kaynakları gibi, hizmet işlemi metoduna parametreler sağlayabilirsiniz. Örneğin, aşağıdaki hizmet işlemi URI 'si ( [hızlı başlangıç](quickstart-wcf-data-services.md) veri hizmetine göre) değeri `London` `city` parametreye geçirir:
 
-```
+```http
 http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'
 ```
 
@@ -70,7 +70,7 @@ Veri hizmetindeki hizmet işlemlerini tanımlarken aşağıdaki gereksinimler ge
 
 Bir URI 'nin ilk yol segmentine yöntemin adını yerleştirerek hizmet işlemlerine adres ekleyebilirsiniz. Örnek olarak, aşağıdaki URI bir `GetOrdersByState` `Orders` nesne <xref:System.Linq.IQueryable%601> koleksiyonu döndüren bir işleme erişir.
 
-```
+```http
 http://localhost:12345/Northwind.svc/GetOrdersByState?state='CA'&includeItems=true
 ```
 
@@ -86,7 +86,7 @@ Aşağıda, bir hizmet işlemi için geçerli dönüş türleri verilmiştir:
 
 Ek yol kesimleri veya sorgu seçenekleri, hizmet işleminin dönüş türüne bağlı olarak URI 'ye eklenebilir. Örneğin, aşağıdaki URI, ilişkili `GetOrdersByCity` `Orders` `RequiredDate` <xref:System.Linq.IQueryable%601> nesnelerle`Order_Details` birlikte azalan düzende sıralanmış bir nesne koleksiyonu döndüren bir işleme erişir:
 
-```
+```http
 http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'&$expand=Order_Details&$orderby=RequiredDate desc
 ```
 

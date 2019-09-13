@@ -4,12 +4,12 @@ description: Analiz için kullanım bilgilerini toplayan, hangi verilerin toplan
 ms.topic: conceptual
 ms.date: 09/03/2019
 ms.custom: ''
-ms.openlocfilehash: e7b3b3d7789f2368ebc4448e73add817986a5906
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 77a24416a8008d36006c293cb174b5a8c2f516b7
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70254004"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929275"
 ---
 # <a name="telemetry-collection-by-the-mlnet-cli"></a>ML.NET CLı tarafından telemetri toplama
 
@@ -58,6 +58,7 @@ Veriler, [azure Application Insights](https://azure.microsoft.com/services/appli
 
 ### <a name="data-points-not-collected"></a>Veri noktaları toplanmadı
 Telemetri *özelliği toplanmaz* :
+
 - Kullanıcı adları gibi kişisel veriler
 - veri kümesi dosya adları
 - veri kümesi dosyalarından veriler
@@ -73,6 +74,7 @@ ML.net CLI 'nin Microsoft dağıtımı, [Microsoft yazılımı lisans koşullar�
 Gibi bir [ml.net CLI komutunu](../reference/ml-net-cli-reference.md) `mlnet auto-train`ilk kez çalıştırdığınızda, ml.net CLI aracı Telemetriyi nasıl kabul eteceklerini belirten açıklama metnini görüntüler. Metin, çalıştırdığınız CLı sürümüne bağlı olarak biraz farklılık gösterebilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [ML.NET CLı başvurusu](../reference/ml-net-cli-reference.md)
 - [Microsoft yazılımı lisans koşulları: Microsoft .NET kitaplığı](https://aka.ms/dotnet-core-eula)
 - [Microsoft 'ta Gizlilik](https://www.microsoft.com/trustcenter/privacy/)

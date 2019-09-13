@@ -3,12 +3,12 @@ title: Dizinler ve aralıklar kullanarak veri aralıklarını keşfet
 description: Bu gelişmiş öğreticide, sıralı bir veri kümesinin dilimlerini incelemek üzere dizinler ve aralıklar kullanarak verileri araştırmanızı öğretilir.
 ms.date: 04/19/2019
 ms.custom: mvc
-ms.openlocfilehash: d53f32bcb310d4859cea67a742ac0e2c4be5d942
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 27f4b90f130345dd10517a5de78c759066afdf07
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105781"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926645"
 ---
 # <a name="indices-and-ranges"></a>Dizinler ve aralıklar
 
@@ -17,6 +17,7 @@ Aralıklar ve dizinler <xref:System.Array>, bir, <xref:System.Span%601>veya <xre
 Bu öğreticide, aşağıdakileri nasıl yapacağınızı öğreneceksiniz:
 
 > [!div class="checklist"]
+>
 > - Bir dizideki aralıklar için söz dizimini kullanın.
 > - Her bir sıranın başlangıcı ve bitişi için tasarım kararlarını anlayın.
 > - <xref:System.Index> Ve<xref:System.Range> türleri için senaryolar öğrenin.
@@ -24,6 +25,7 @@ Bu öğreticide, aşağıdakileri nasıl yapacağınızı öğreneceksiniz:
 ## <a name="language-support-for-indices-and-ranges"></a>Dizinler ve aralıklar için dil desteği
 
 Bu dil desteği iki yeni türe ve iki yeni işleçlere dayanır.
+
 - <xref:System.Index?displayProperty=nameWithType>bir dizinin dizisini temsil eder.
 - Bir dizinin bir sıranın sonuna göreli olduğunu belirten işleç.`^`
 - <xref:System.Range?displayProperty=nameWithType>bir dizinin alt aralığını temsil eder.

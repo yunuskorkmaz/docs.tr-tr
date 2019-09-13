@@ -2,72 +2,72 @@
 title: Hizmet Meta Verilerinden WCF İstemcisi Oluşturma
 ms.date: 03/30/2017
 ms.assetid: 27f8f545-cc44-412a-b104-617e0781b803
-ms.openlocfilehash: c9a72228ddb32786f39585083d62e1f3f028763c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 938b1363be3b168fce74d80b47c9ae463d018669
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64613376"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70892752"
 ---
 # <a name="generating-a-wcf-client-from-service-metadata"></a>Hizmet Meta Verilerinden WCF İstemcisi Oluşturma
-Bu konuda, meta veri belgelerinden istemci üretmek için Svcutil.exe içinde çeşitli anahtarları kullanmayı açıklar.  
+Bu konu başlığı altında, meta veri belgelerinden istemciler oluşturmak için Svcutil. exe ' de çeşitli anahtarların nasıl kullanılacağı açıklanmaktadır.  
   
- Meta veri belgelerini dayanıklı bir depolama alanında olabilir veya çevrimiçi olarak alınabilir. Çevrimiçi alma WS-MetadataExchange veya Microsoft bulma (ma) protokolü ya da izler. Aynı anda meta verilerini almak için aşağıdaki meta veri isteği svcutil.exe verir:  
+ Meta veri belgeleri, dayanıklı bir depolama üzerinde veya çevrimiçi olarak alınabilir. Çevrimiçi alma, WS-MetadataExchange protokolünü veya Microsoft Discovery (DISCO) protokolünü izler. Svcutil. exe meta verileri almak için eşzamanlı olarak aşağıdaki meta veri isteklerini yayınlar:  
   
-- Sağlanan adresi isteğine WS-MetadataExchange (MEX).  
+- Belirtilen adrese WS-MetadataExchange (MEX) isteği.  
   
-- İle sağlanan adresine MEX isteği `/mex` eklenir.  
+- Sağlanan adrese `/mex` eklenen MEX isteği eklendi.  
   
-- DISCO isteği (kullanarak [DiscoveryClientProtocol](https://go.microsoft.com/fwlink/?LinkId=94777) ASP.NET Web hizmetlerinden) için sağlanan adresi.  
+- DISCO isteği (ASP.NET Web hizmetlerinden [DiscoveryClientProtocol](https://go.microsoft.com/fwlink/?LinkId=94777) kullanarak) sağlanan adrese.  
   
- Hizmetten alınan Web Hizmetleri Açıklama Dili (WSDL) veya ilke dosyasını bağlı olarak istemciye svcutil.exe oluşturur. Kullanıcı asıl adı (UPN) kullanıcı adı ile birleştirerek oluşturulur "\@" ve sonra bir tam etki alanı adı (FQDN) ekleme. Ancak, Active Directory'de kayıtlı kullanıcılar için bu biçimi geçerli değil ve aracının oluşturduğu UPN Kerberos kimlik doğrulaması şu hata iletisi ile neden olan hata: **Oturum açma girişimi başarısız oldu.** Bu sorunu çözmek için el ile aracı oluşturulan istemci dosyasını düzeltin.  
+ Svcutil. exe, hizmetten alınan Web Hizmetleri Açıklama Dili (WSDL) veya ilke dosyasını temel alarak istemciyi oluşturur. Kullanıcı asıl adı (UPN), Kullanıcı adının "\@" ile bitiştirerek ve tam nitelikli etki alanı adı (FQDN) eklenerek oluşturulur. Ancak, Active Directory kayıtlı kullanıcılar için bu biçim geçerli değildir ve aracın ürettiği UPN, Kerberos kimlik doğrulamasında şu hata iletisiyle bir hataya neden olur: **Oturum açma girişimi başarısız oldu.** Bu sorunu çözmek için, aracın ürettiği istemci dosyasını el ile onarın.  
   
-```  
+```console
 svcutil.exe [/t:code]  <metadataDocumentPath>* | <url>* | <epr>  
 ```  
   
-## <a name="referencing-and-sharing-types"></a>Başvuru ve tür paylaşımı  
+## <a name="referencing-and-sharing-types"></a>Başvuru ve paylaşım türleri  
   
 |Seçenek|Açıklama|  
 |------------|-----------------|  
-|**/ reference:\<dosya yolu >**|Belirtilen bütünleştirilmiş kod başvuruları türleri. Oluşturma istemciler kullandığınızda bu seçeneği alınan meta verileri temsil eden türleri içerebilecek bütünleştirilmiş kodlar belirtmek için.<br /><br /> Kısa biçim: `/r`|  
-|**/excludeType:\<türü >**|Başvurulan anlaşma türlerinin dışlanacak tam veya bütünleştirilmiş kodla nitelenen tür adı belirtir.<br /><br /> Kısa biçim: `/et`|  
+|**/Reference:\<dosya yolu >**|Belirtilen derlemedeki türlere başvurur. İstemcileri oluştururken, içeri aktarılmakta olan meta verileri temsil eden türleri içerebilen derlemeleri belirtmek için bu seçeneği kullanın.<br /><br /> Kısa biçim:`/r`|  
+|**/excludetype:\<tür >**|Başvurulan anlaşma türlerinden hariç tutulacak tam veya bütünleştirilmiş kod nitelikli bir tür adı belirtir.<br /><br /> Kısa biçim:`/et`|  
   
-## <a name="choosing-a-serializer"></a>Seri hale getirici seçme  
-  
-|Seçenek|Açıklama|  
-|------------|-----------------|  
-|**/serializer:Auto**|Serileştiriciyi otomatik olarak seçer. Bu kullanır `DataContract` serileştirici. Bu başarısız olursa, `XmlSerializer` kullanılır.<br /><br /> Kısa biçim: `/ser:Auto`|  
-|**/serializer:DataContractSerializer**|Kullanan türleri oluşturur `DataContract` serileştirme ve seri durumundan çıkarma için seri hale getirici.<br /><br /> Kısa biçim: `/ser:DataContractSerializer`|  
-|**/serializer:XmlSerializer**|Kullanan türleri oluşturur `XmlSerializer` serileştirme ve seri durumundan çıkarma için.<br /><br /> Kısa biçim: `/ser:XmlSerializer`|  
-|**/importXmlTypes**|Yapılandırır `DataContract` olmayan içeri aktarmak için seri hale getirici`DataContract` olarak türleri `IXmlSerializable` türleri.<br /><br /> Kısa biçim: `/ixt`|  
-|**/dataContractOnly**|İçin kod oluşturur `DataContract` yalnızca türleri. `ServiceContract` türler üretilir.<br /><br /> Yalnızca yerel meta veri dosyaları için bu seçeneği belirtmeniz gerekir.<br /><br /> Kısa biçim: `/dconly`|  
-  
-## <a name="choosing-a-language-for-the-client"></a>İstemci için dil seçme  
+## <a name="choosing-a-serializer"></a>Serileştirici seçme  
   
 |Seçenek|Açıklama|  
 |------------|-----------------|  
-|**/Language:\<dil >**|Kod oluşturma için kullanılacak programlama dilini belirtir. Öğesinden devralınan bir sınıf tam adı veya Machine.config dosyasında kayıtlı ya da bir dil adı sağlayın <xref:System.CodeDom.Compiler.CodeDomProvider>.<br /><br /> Değerler: c#, cs, csharp, vb, vbs, visualbasic, vbscript, javascript, c ++, mc, cpp<br /><br /> Varsayılan: csharp<br /><br /> Kısa biçim: `/l`<br /><br /> Daha fazla bilgi için [CodeDomProvider sınıfı](https://go.microsoft.com/fwlink/?LinkId=94778).|  
+|**/serileştirici: otomatik**|Seri hale getirici 'yi otomatik olarak seçer. Bu, `DataContract` serileştirici kullanır. Bu başarısız olursa `XmlSerializer` , kullanılır.<br /><br /> Kısa biçim:`/ser:Auto`|  
+|**/serializer:DataContractSerializer**|Serileştirme ve seri durumdan çıkarma için `DataContract` seri hale getirici kullanan veri türleri oluşturur.<br /><br /> Kısa biçim:`/ser:DataContractSerializer`|  
+|**/serializer:XmlSerializer**|Serileştirme ve seri durumdan çıkarma `XmlSerializer` için kullanan veri türleri oluşturur.<br /><br /> Kısa biçim:`/ser:XmlSerializer`|  
+|**/ImportXmlTypes**|Seri hale getirici türlerini tür olarak `IXmlSerializable` içeri`DataContract` aktarmak için yapılandırır. `DataContract`<br /><br /> Kısa biçim:`/ixt`|  
+|**/dataContractOnly**|Yalnızca türler için `DataContract` kod üretir. `ServiceContract`türler oluşturulur.<br /><br /> Bu seçenek için yalnızca yerel meta veri dosyalarını belirtmeniz gerekir.<br /><br /> Kısa biçim:`/dconly`|  
   
-## <a name="choosing-a-namespace-for-the-client"></a>İstemci için bir Namespace seçme  
-  
-|Seçenek|Açıklama|  
-|------------|-----------------|  
-|**/ Namespace:\<string, string >**|Bir WSDL veya XML şema eşlemeyi belirtir `targetNamespace` için ortak dil çalışma zamanı (CLR) ad alanı. Joker karakter (*) kullanarak `targetNamespace` tüm eşler `targetNamespaces` söz konusu CLR ad alanına açık bir eşleme olmaksızın.<br /><br /> İleti sözleşmesi adı işlem adına sahip birbiriyle çakışır değil emin emin olmak için tür referansı çift iki nokta üst üste ile ya da uygun (`::`) veya adlarının benzersiz olduğundan emin olun.<br /><br /> Varsayılan: İçin şema belgesinin hedef ad alanından türetilir `DataContracts`. Varsayılan ad alanı diğer oluşturulan tüm türleri için kullanılır.<br /><br /> Kısa biçim: `/n`|  
-  
-## <a name="choosing-a-data-binding"></a>Veri bağlama seçme  
+## <a name="choosing-a-language-for-the-client"></a>Istemci için dil seçme  
   
 |Seçenek|Açıklama|  
 |------------|-----------------|  
-|**/enableDataBinding**|Implements <xref:System.ComponentModel.INotifyPropertyChanged> tüm arabirimi `DataContract` türleri veri bağlamasını etkinleştirmek için.<br /><br /> Kısa biçim: `/edb`|  
+|**/Language:\<dil >**|Kod üretimi için kullanılacak programlama dilini belirtir. Machine. config dosyasında kayıtlı bir dil adı ya da öğesinden <xref:System.CodeDom.Compiler.CodeDomProvider>devralan bir sınıfın tam adı sağlayın.<br /><br /> Değerler: c#, CS, CSharp, vb, vbs, VisualBasic, VBScript, JavaScript, c++, MC, cpp<br /><br /> Varsayılan: CSharp<br /><br /> Kısa biçim:`/l`<br /><br /> Daha fazla bilgi için bkz. [CodeDomProvider sınıfı](https://go.microsoft.com/fwlink/?LinkId=94778).|  
   
-## <a name="generating-configuration"></a>Yapılandırma oluşturma  
+## <a name="choosing-a-namespace-for-the-client"></a>Istemci için ad alanı seçme  
   
 |Seçenek|Açıklama|  
 |------------|-----------------|  
-|**/ config:\<configFile >**|Oluşturulan yapılandırma dosyası için dosya adını belirtir.<br /><br /> Varsayılan: output.config|  
-|**/mergeConfig**|Varolan dosyanın üzerine yazmak yerine var olan bir dosya, oluşturulan yapılandırma birleştirir.|  
-|**/ noconfig**|Yapılandırma dosyaları oluşturmaz.|  
+|**/Namespace:\<String, String >**|Bir wsdl veya xml şemasından `targetNamespace` ortak dil çalışma zamanı (CLR) ad alanına bir eşleme belirtir. Bu clr ad alanına açık eşleme `targetNamespace` `targetNamespaces` olmadan, haritalar için bir joker karakter (*) kullanın.<br /><br /> İleti sözleşmesi adının işlem adıyla çakışmadığından emin olmak için tür başvurusunu çift iki nokta (`::`) ile niteleyin ya da adların benzersiz olduğundan emin olun.<br /><br /> Varsayılanını İçin `DataContracts`şema belgesinin hedef ad alanından türetilir. Varsayılan ad alanı, diğer tüm oluşturulan türler için kullanılır.<br /><br /> Kısa biçim:`/n`|  
+  
+## <a name="choosing-a-data-binding"></a>Veri bağlamayı seçme  
+  
+|Seçenek|Açıklama|  
+|------------|-----------------|  
+|**/enableDataBinding**|Veri bağlamayı etkinleştirmek için tüm `DataContract` türlerde arabiriminiuygular.<xref:System.ComponentModel.INotifyPropertyChanged><br /><br /> Kısa biçim:`/edb`|  
+  
+## <a name="generating-configuration"></a>Yapılandırma üretiliyor  
+  
+|Seçenek|Açıklama|  
+|------------|-----------------|  
+|**/config:\<ConfigFile >**|Oluşturulan yapılandırma dosyası için dosya adını belirtir.<br /><br /> Varsayılan: output. config|  
+|**/mergeConfig**|Oluşturulan yapılandırmayı varolan dosyanın üzerine yazmak yerine var olan bir dosyada birleştirir.|  
+|**/noConfig**|Yapılandırma dosyaları oluşturmamayın.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

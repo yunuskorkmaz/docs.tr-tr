@@ -1,40 +1,41 @@
 ---
-title: Yeni dotnet için proje şablonu oluşturma
-description: Dotnet yeni bir komut için bir proje şablonu oluşturmayı öğrenin.
+title: DotNet New için bir proje şablonu oluşturun
+description: DotNet New komutu için bir proje şablonu oluşturmayı öğrenin.
 author: thraka
 ms.date: 06/25/2019
 ms.topic: tutorial
 ms.author: adegeo
-ms.openlocfilehash: 31a6189c0126d6dff000bb84978c1527dbe4e2ae
-ms.sourcegitcommit: 6472349821dbe202d01182bc2cfe9d7176eaaa6c
+ms.openlocfilehash: 3455720d729f813d9b6f32e433adffa4dc40dce4
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67877182"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926143"
 ---
-# <a name="tutorial-create-a-project-template"></a>Öğretici: Bir proje şablonu oluşturma
+# <a name="tutorial-create-a-project-template"></a>Öğretici: Proje şablonu oluşturma
 
-.NET Core ile oluşturabilir ve projeleri, dosyaları, kaynaklar oluşturmak şablonlar dağıtın. Bu öğreticide iki oluşturmak, yüklemek ve kaldırmak, şablonları ile kullanılmak öğretir serinin bir parçasıdır `dotnet new` komutu.
+.NET Core ile projeler, dosyalar, hatta kaynaklar üreten şablonlar oluşturabilir ve dağıtabilirsiniz. Bu öğretici, `dotnet new` komutuyla kullanılmak üzere şablonlar oluşturmayı, yüklemeyi ve kaldırmayı öğretir.
 
-Serisinin bu bölümünde şunları öğrenirsiniz nasıl yapılır:
+Serinin bu bölümünde şunları nasıl yapacağınızı öğreneceksiniz:
 
 > [!div class="checklist"]
-> * Kaynak bir proje şablonu oluşturma
-> * Şablon yapılandırma klasör ve dosya oluşturma
-> * Bir şablon bir dosya yolundan yükle
-> * Öğe şablonu test
-> * Öğe şablonu Kaldır
+>
+> * Proje şablonunun kaynaklarını oluşturma
+> * Şablon yapılandırma klasörünü ve dosyasını oluşturma
+> * Dosya yolundan şablon yükler
+> * Bir öğe şablonunu test etme
+> * Öğe şablonunu kaldırma
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-* Tam [bölüm 1](cli-templates-create-item-template.md) Bu öğretici serisinin.
-* Bir terminal açın ve gidin _working\templates\\_  klasör.
+* Bu öğretici serisinin [1. bölümünü](cli-templates-create-item-template.md) doldurun.
+* Bir Terminal açın ve _working\templates\\_  klasörüne gidin.
 
-## <a name="create-a-project-template"></a>Bir proje şablonu oluşturma
+## <a name="create-a-project-template"></a>Proje şablonu oluşturma
 
-Kullanıcılar için başlamak kolaylaştırır proje şablonları üretim çalıştırılmaya hazır projeleri çalışan kodu ayarlayın. .NET core konsol uygulaması veya bir sınıf kitaplığı gibi birkaç proje şablonlarını içerir. Bu örnekte, sağlayan yeni bir konsol projesi oluşturacaksınız C# 8.0 ve oluşturan bir `async main` giriş noktası.
+Proje şablonları, kullanıcıların çalışan bir kod kümesiyle başlamasını kolaylaştıran, çalıştırmaya yönelik olarak çalışan projeler oluşturur. .NET Core, konsol uygulaması veya sınıf kitaplığı gibi bazı proje şablonları içerir. Bu örnekte, 8,0 sağlayan C# ve bir `async main` giriş noktası üreten yeni bir konsol projesi oluşturacaksınız.
 
-Terminalinizde gidin _working\templates\\_  klasör adında yeni bir alt klasör oluşturup _consoleasync_. Alt klasörü girin ve çalıştırma `dotnet new console` standart konsol uygulaması oluşturmak için. Yeni bir şablon oluşturmak için bu şablonu tarafından üretilen dosyaları düzenleme.
+Terminalinizde, _working\templates\\_  klasörüne gidin ve _consoleasync_adlı yeni bir alt klasör oluşturun. Standart konsol uygulamasını oluşturmak için `dotnet new console` alt klasörü girin ve çalıştırın. Bu şablon tarafından oluşturulan dosyaları düzenleyerek yeni bir şablon oluşturabilirsiniz.
 
 ```console
 working
@@ -44,9 +45,9 @@ working
             Program.cs
 ```
 
-## <a name="modify-programcs"></a>Program.cs değiştirme
+## <a name="modify-programcs"></a>Program.cs Değiştir
 
-Açık yukarı _program.cs_ dosya. Konsol projesi değil, bir zaman uyumsuz bir giriş noktası kullanın, bu nedenle şimdi ekleyin. Kodunuz şu şekilde değiştirin ve dosyayı kaydedin:
+_Program.cs_ dosyasını açın. Konsol projesi zaman uyumsuz bir giriş noktası kullanmaz, bu nedenle bunu ekleyelim. Kodunuzu aşağıdaki şekilde değiştirin ve dosyayı kaydedin:
 
 ```csharp
 using System;
@@ -64,9 +65,9 @@ namespace consoleasync
 }
 ```
 
-## <a name="modify-consoleasynccsproj"></a>Consoleasync.csproj değiştirme
+## <a name="modify-consoleasynccsproj"></a>Consoleasync. csproj öğesini Değiştir
 
-Güncelleştirelim C# projenin kullandığı sürüm 8.0 Dil sürümü. Düzen _consoleasync.csproj_ dosya ve ekleme `<LangVersion>` ayarını bir `<PropertyGroup>` düğümü.
+Projenin 8,0 sürümünü kullandığı C# dil sürümünü güncelleştirelim. _Consoleasync. csproj_ dosyasını düzenleyin ve `<LangVersion>` ayarı bir `<PropertyGroup>` düğüme ekleyin.
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -84,24 +85,24 @@ Güncelleştirelim C# projenin kullandığı sürüm 8.0 Dil sürümü. Düzen _
 
 ## <a name="build-the-project"></a>Proje derleme
 
-Bir proje şablonu tamamlamadan önce bu şekilde sıkışmalı ve emin olmak için sınamalısınız. Terminalinizde çalıştırma `dotnet run` komutunu aşağıdaki çıktıyı görmelisiniz:
+Bir proje şablonunu tamamlamadan önce, derlendiğinden ve düzgün çalıştığından emin olmak için test etmeniz gerekir. Terminalinizde `dotnet run` komutunu çalıştırın ve aşağıdaki çıktıyı görmeniz gerekir:
 
 ```console
 C:\working\templates\consoleasync> dotnet run
 Hello World with C# 8.0!
 ```
 
-Silebilirsiniz _obj_ ve _bin_ kullanılarak oluşturulan klasörleri `dotnet run`. Bu dosyaların silinmesi, şablonunuzu şablonunuza ilgili dosyaları ve hiçbir dosyaları yalnızca içeren bir derleme eylemi sonucunda ortaya çıkan sağlar.
+Kullanılarak oluşturulanobjvebinklasörlerini`dotnet run`silebilirsiniz. Bu dosyaların silinmesi, şablonunuzun yalnızca şablonlarınız ile ilgili dosyaları ve bir yapı eylemi sonucu olan dosyaları içerip içermemesini sağlar.
 
-Oluşturduğunuz şablonu içeriğini olduğuna göre şablon yapılandırması şablonunun Kök klasörde oluşturmanız gerekir.
+Artık oluşturulan şablonun içeriğine sahip olduğunuza göre, şablonun kök klasöründe şablon yapılandırmasını oluşturmanız gerekir.
 
 ## <a name="create-the-template-config"></a>Şablon yapılandırması oluşturma
 
-Şablonlar, .NET core'da şablonunuzun kök dizininde mevcut özel bir klasör ve yapılandırma dosyasında tarafından tanınır. Bu öğreticide, şu şablonu klasörünüze konumdadır _working\templates\consoleasync\\_ .
+Şablonlar, .NET Core 'da şablonunuzun kökünde bulunan özel bir klasör ve yapılandırma dosyası tarafından tanınır. Bu öğreticide, şablon klasörünüz _working\templates\consoleasync\\_ adresinde bulunur.
 
-Bir şablonu oluşturduğunuzda, tüm dosya ve klasörlerin şablon klasöründe özel yapılandırma klasörü dışında şablonun parçası olarak dahil edilir. Bu yapılandırma klasörü adlı _. template.config_.
+Bir şablon oluşturduğunuzda, şablon klasöründeki tüm dosyalar ve klasörler, özel yapılandırma klasörü hariç, şablonun bir parçası olarak dahil edilir. Bu yapılandırma klasörü _. Template. config_olarak adlandırılır.
 
-İlk olarak, adlı yeni bir alt klasör oluşturun _. template.config_, girin. Adlı yeni bir dosya oluşturup _template.json_. Klasör yapınız gibi görünmelidir:
+İlk olarak, _. Template. config_adlı yeni bir alt klasör oluşturun, bunu girin. Ardından, _Template. JSON_adlı yeni bir dosya oluşturun. Klasör yapınız şöyle görünmelidir:
 
 ```console
 working
@@ -111,7 +112,7 @@ working
                 template.json
 ```
 
-Açık _template.json_ , sık kullandığınız metin düzenleyicisi ve Yapıştır aşağıdaki JSON kod ve kaydedin:
+En sevdiğiniz metin düzenleyicinizle _Template. JSON_ ' i açın ve aşağıdaki JSON kodunu yapıştırın ve kaydedin:
 
 ```json
 {
@@ -128,13 +129,13 @@ Açık _template.json_ , sık kullandığınız metin düzenleyicisi ve Yapışt
 }
 ```
 
-Bu yapılandırma dosyası, tüm ayarlarını şablonunuz için içerir. Gördüğünüz gibi temel ayarlar `name` ve `shortName` ayrıca yoktur ancak bir `tags/type` ayarlanan değer `project`. Bu şablon proje şablonu olarak belirler. Oluşturduğunuz şablonun türüyle ilgili bir kısıtlama yoktur. `item` Ve `project` değerler için yaygın olarak kullanılan adları .NET Core önerir ve böylece kullanıcılar bunlar aramakta olduğunuz şablon türü kolayca filtre uygulayabilirsiniz.
+Bu yapılandırma dosyası şablonunuz için tüm ayarları içerir. Ve `name` `tags/type` `project`gibi temel ayarları görebilir, ancak olarak ayarlanmış bir değer de vardır. `shortName` Bu, şablonunuzu bir proje şablonu olarak belirler. Oluşturduğunuz şablon türü üzerinde hiçbir kısıtlama yoktur. `item` Ve`project` değerleri, .NET Core 'un arama yapmakta olduğu şablon türünü kolayca filtreleyebilmesi için .NET Core 'un önerdiği yaygın adlardır.
 
-`classifications` Öğesini temsil eder **etiketleri** gördüğünüz çalıştırdığınızda sütun `dotnet new` ve şablon listesini alın. Kullanıcılar ayrıca arayabilirler tabanlı sınıflandırma etiketleri. Karıştırmayın `tags` özelliği ile json dosyasındaki `classifications` Etiketler listesi. Ne yazık ki benzer şekilde adlı iki terimin farklı anlamlara oldukları. İçin tam şema *template.json* dosya konumunda bulundu [JSON şema Store](http://json.schemastore.org/template). Hakkında daha fazla bilgi için *template.json* bkz [dotnet şablon wiki](https://github.com/dotnet/templating/wiki).
+Öğe, çalıştırdığınız`dotnet new` ve bir şablon listesi alırken gördüğünüz Etiketler sütununu temsil eder. `classifications` Kullanıcılar ayrıca sınıflandırma etiketlerine göre arama yapabilir. JSON dosyasındaki `tags` `classifications` özelliği Etiketler listesiyle karıştırmayın. Benzer şekilde adlandırılan iki farklı şey vardır. *Template. JSON* dosyasının tam şeması [JSON Şema deposunda](http://json.schemastore.org/template)bulunur. *Template. JSON* dosyası hakkında daha fazla bilgi için bkz. [DotNet şablon oluşturma wiki](https://github.com/dotnet/templating/wiki).
 
-Geçerli bir sahip olduğunuza göre _.template.config/template.json_ dosya, şablonunuzu yüklenmeye hazır. Şablon yüklemeden önce herhangi bir ek dosya, klasör ve istemediğiniz dosyaları gibi şablonunuzda dahil sildiğinizden emin olun _bin_ veya _obj_ klasörleri. Terminalinizde gidin _consoleasync_ klasör ve çalışma `dotnet new -i .\` geçerli klasöründe şablonunu yüklemek için. Bir Linux veya Mac OS x işletim sistemi kullanıyorsanız, eğik çizgi kullanın: `dotnet new -i ./`.
+Artık geçerli bir _. Template. config/Template. JSON_ dosyanız olduğuna göre, şablonunuz yüklenmeye hazırdır. Şablonu yüklemeden önce, _küme_ veya _obj_ klasörleri gibi şablonunuzda yer almasını istemediğiniz ek dosya klasörlerini ve dosyalarını sildiğinizden emin olun. Terminalinizde _consoleasync_ klasörüne gidin ve geçerli klasörde bulunan şablonu yüklemek `dotnet new -i .\` için öğesini çalıştırın. Linux veya MacOS işletim sistemi kullanıyorsanız, eğik çizgi kullanın: `dotnet new -i ./`.
 
-Bu komut sizin kapsamalıdır yüklü şablonlar listesinden çıkarır.
+Bu komut, yüklenmiş şablonların listesini verir ve bunları içermelidir.
 
 ```console
 C:\working\templates\consoleasync> dotnet new -i .\
@@ -156,9 +157,9 @@ Windows Forms (WinForms) Application              winforms              [C#], VB
 Worker Service                                    worker                [C#]              Common/Worker/Web
 ```
 
-### <a name="test-the-project-template"></a>Test projesi şablonu
+### <a name="test-the-project-template"></a>Proje şablonunu test etme
 
-Yüklü bir öğe şablonunu olduğuna göre test edin. Gidin _test_ klasörü ile yeni bir konsol uygulaması oluşturup `dotnet new console`. Bu, kolayca test ile bir çalışma projenin oluşturduğu `dotnet run` komutu.
+Artık bir öğe şablonu yükleolduğunuza göre, test edin. _Test_ klasörüne gidin ve ile `dotnet new console`yeni bir konsol uygulaması oluşturun. Bu, `dotnet run` komutla kolayca test edebileceğiniz bir çalışan proje oluşturur.
 
 ```console
 C:\test> dotnet new consoleasync
@@ -170,11 +171,11 @@ C:\test> dotnet run
 Hello World with C# 8.0!
 ```
 
-Tebrikler! Oluşturduğunuz ve .NET Core proje şablonu dağıtılır. Bu öğretici serisinin bir sonraki bölümü için hazırlanırken oluşturduğunuz şablonu kaldırmanız gerekir. Tüm dosyaları silmek istediğinizden emin olun _test_ klasörü çok. Bununla geri temiz bir duruma hazır için bu öğreticinin sonraki ana bölüme sahip olursunuz.
+Tebrikler! .NET Core ile bir proje şablonu oluşturdunuz ve dağıttıysanız. Bu öğretici serisinin bir sonraki kısmına hazırlanın, oluşturduğunuz şablonu kaldırmanız gerekir. Tüm dosyaları da _Test_ klasöründen sildiğinizden emin olun. Bu, Bu öğreticinin bir sonraki ana kısmına yönelik temiz bir duruma geri dönebilirsiniz.
 
-### <a name="uninstall-the-template"></a>Şablonu Kaldır
+### <a name="uninstall-the-template"></a>Şablonu kaldırma
 
-Bir dosya yolu kullanarak şablon yüklü olduğundan, birlikte kaldırmalısınız **mutlak** dosya yolu. Çalıştırarak yüklü şablonlar listesi gördüğünüz `dotnet new -u` komutu. Şablonunuzu son listelenmelidir. Yolun listelenen şablonunuzla birlikte kaldırmak için kullanımı `dotnet new -u <ABSOLUTE PATH TO TEMPLATE DIRECTORY>` komutu.
+Şablonu bir dosya yolu kullanarak yükletiğinden, **mutlak** dosya yoluyla kaldırmanız gerekir. `dotnet new -u` Komutunu çalıştırarak, yüklenmiş şablonların bir listesini görebilirsiniz. Şablonunuzun son listelenmesi gerekir. `dotnet new -u <ABSOLUTE PATH TO TEMPLATE DIRECTORY>` Komut ile şablonunuzu kaldırmak için listelenen yolu kullanın.
 
 ```console
 C:\working> dotnet new -u
@@ -211,7 +212,7 @@ C:\working> dotnet new -u C:\working\templates\consoleasync
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Bu öğreticide, bir proje şablonu oluşturuldu. Öğe ve proje şablonlarının bir kolayca kullanıma dosyasına paketini öğrenmek için Bu öğretici serisine devam edin.
+Bu öğreticide bir proje şablonu oluşturdunuz. Hem öğe hem de proje şablonlarının kullanımı kolay bir dosyaya nasıl paketleyeceğinizi öğrenmek için, bu öğretici serisine devam edin.
 
 > [!div class="nextstepaction"]
-> [Bir şablon paketi oluşturma](cli-templates-create-template-pack.md)
+> [Şablon paketi oluşturma](cli-templates-create-template-pack.md)

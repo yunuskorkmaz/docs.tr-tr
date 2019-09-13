@@ -4,12 +4,12 @@ description: Visual Studio 'ya genel bakış ve yönetilen hata ayıklayıcılar
 author: sdmaclea
 ms.author: stmaclea
 ms.date: 08/05/2019
-ms.openlocfilehash: 8110ecb10ad2e6213e15df8848abab73d07d89b2
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 3741011d22ab6c4240b7f88a9ab790ea61ecd0d2
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68974134"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926436"
 ---
 # <a name="net-core-managed-debuggers"></a>.NET Core yönetilen hata ayıklayıcıları
 
@@ -20,9 +20,11 @@ Microsoft, **Visual Studio** ve **Visual Studio Code**yönetilen kod için hata 
 ## <a name="visual-studio-managed-debugger"></a>Visual Studio yönetilen hata ayıklayıcı
 
 **Visual Studio** , en kapsamlı hata ayıklayıcı bulunan tümleşik bir geliştirme ortamıdır. Visual Studio, Windows üzerinde çalışan geliştiriciler için harika bir seçimdir.
+
 - [Öğretici-Visual Studio ile Windows 'da .NET Core uygulamasında hata ayıklama](../tutorials/debugging-with-visual-studio.md)
 
 Visual Studio bir Windows uygulaması olduğu sürece, Linux ve macOS uygulamalarında uzaktan hata ayıklamak için yine de kullanılabilir.
+
 - [Visual Studio ile Linux/OSX üzerinde .NET Core uygulamasında hata ayıklama](https://github.com/Microsoft/MIEngine/wiki/Offroad-Debugging-of-.NET-Core-on-Linux---OSX-from-Visual-Studio)
 
  ASP.NET Core uygulamalarda hata ayıklama biraz farklı yönergeler gerektirir.

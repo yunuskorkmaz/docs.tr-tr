@@ -5,18 +5,19 @@ author: mlacouture
 ms.date: 01/19/2017
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 252d5f6655336669ba516393e17eb3d070611ea6
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: e10f09d3f7146817770e74aa173f742322aafafc
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70849242"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926607"
 ---
 # <a name="using-microsoft-xml-serializer-generator-on-net-core"></a>.NET Core 'da Microsoft XML serileştirici üreticisini kullanma
 
 Bu öğreticide, bir C# .NET Core UYGULAMASıNDA Microsoft XML serileştirici oluşturucunun nasıl kullanılacağı öğretilir. Bu öğreticinin kursu boyunca şunları öğrenirsiniz:
 
 > [!div class="checklist"]
+>
 > * .NET Core uygulaması oluşturma
 > * Microsoft. XmlSerializer. Generator paketine başvuru ekleme
 > * Bağımlılıklar eklemek için MyApp. csproj dosyanızı düzenleme
@@ -120,6 +121,7 @@ Her şey başarılı olursa, çıkış klasöründe *MyApp. Xmlserileştiriciler
 
 Tebrikler! Yalnızca şunları yapın:
 > [!div class="checklist"]
+>
 > * .NET Core uygulaması oluşturuldu.
 > * Microsoft. XmlSerializer. Generator paketine bir başvuru eklendi.
 > * Bağımlılıklar eklemek için MyApp. csproj dosyanızı düzenlendi.

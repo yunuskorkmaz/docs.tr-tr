@@ -5,12 +5,12 @@ author: oliag
 ms.author: mairaw
 ms.date: 04/26/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: 2d97921a3e98d85ac1e58c7686eadef3e979211f
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 584f9f952148ebf72c5d5aaed64a2a078be00ce5
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70107381"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929362"
 ---
 # <a name="net-api-analyzer"></a>.NET API Çözümleyicisi
 
@@ -30,6 +30,7 @@ API Çözümleyicisi, [Microsoft. DotNet. çözümleyiciler. Compatibility](http
 ### <a name="what-are-deprecated-apis"></a>Kullanımdan kaldırılan API 'Ler nelerdir?
 
 .NET ailesi, müşteri ihtiyaçlarını daha iyi karşılamak üzere sürekli olarak yükseltilen büyük ürünlerden oluşan bir kümesidir. Bazı API 'Leri kullanımdan kaldırma ve yenilerini yenisiyle değiştirme doğal bir şekilde yapılır. Daha iyi bir alternatif olduğunda bir API kullanım dışı olarak kabul edilir. Bir API 'nin kullanım dışı olduğunu ve kullanılması gerekmemesi gerektiğini bildirmek için bir yol, <xref:System.ObsoleteAttribute> özniteliği ile işaretmektir. Bu yaklaşımın dezavantajı, artık kullanılmayan tüm API 'ler için yalnızca bir tanılama kimliği (for C#, [CS0612](../../csharp/misc/cs0612.md)) olacaktır. Bunun anlamı:
+
 - Her durum için adanmış belgeler olması olanaksızdır.
 - Belirli uyarı kategorisini bastırmak imkansız olabilir. Bunlardan hiçbirini veya hiçbirini gizleyebilirsiniz.
 - Kullanıcıları yeni bir kullanımdan kaldırma hakkında bilgilendirmek için, başvurulan bir derleme veya hedefleme paketi güncelleştirilmeleri gerekir.
@@ -107,7 +108,7 @@ Tüm bu Tanılamalar yalnızca IDE 'de değil, aynı zamanda, CI sunucusunu içe
 
 ## <a name="configuration"></a>Yapılandırma
 
-Kullanıcı, tanılama nasıl ele alınacağına karar verir: uyarılar, hatalar, öneriler veya kapatılacak. Örneğin, bir mimari olarak uyumluluk sorunlarının hata olarak değerlendirilip bazı kullanım dışı API 'lere yapılan çağrılar uyarı üretirken, diğerleri yalnızca öneriler üretmeye karar verebilirsiniz. Bunu, tanılama KIMLIĞI ve proje tarafından ayrı ayrı yapılandırabilirsiniz. **Çözüm Gezgini**için, projenizin altındaki **Bağımlılıklar** düğümüne gidin. **Microsoft. DotNet. çözümleyiciler. uyumluluğu**çözümleyicilerinin > düğümleri **bağımlılıklarını** > genişletin. Tanılama KIMLIĞI ' ne sağ tıklayın, **kural kümesi önem derecesini ayarla** ' yı seçin ve istediğiniz seçeneği belirleyin.
+Kullanıcı, tanılama nasıl ele alınacağına karar verir: uyarılar, hatalar, öneriler veya kapatılacak. Örneğin, bir mimari olarak uyumluluk sorunlarının hata olarak değerlendirilip bazı kullanım dışı API 'lere yapılan çağrılar uyarı üretirken, diğerleri yalnızca öneriler üretmeye karar verebilirsiniz. Bunu, tanılama KIMLIĞI ve proje tarafından ayrı ayrı yapılandırabilirsiniz. **Çözüm Gezgini**için, projenizin altındaki **Bağımlılıklar** düğümüne gidin. **Microsoft. DotNet. çözümleyiciler. uyumluluğu** **çözümleyicilerinin** > düğümleri **bağımlılıklarını** > genişletin. Tanılama KIMLIĞI ' ne sağ tıklayın, **kural kümesi önem derecesini ayarla** ' yı seçin ve istediğiniz seçeneği belirleyin.
 
 !["Kural kümesi önem derecesine sahip tanılama ve açılır iletişim iletişimini gösteren Çözüm Gezgini ekran görüntüsü"](media/api-analyzer/disable-notifications.jpg)
 

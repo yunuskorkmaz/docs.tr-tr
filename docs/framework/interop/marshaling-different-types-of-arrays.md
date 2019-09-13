@@ -10,85 +10,85 @@ helpviewer_keywords:
 ms.assetid: c5ac9920-5b6e-4dc9-bf2d-1f6f8ad3b0bf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fadccdf35429babce6e101d336c9ea1de150b276
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 358c7f1a339fd473271574a4e97e201f5c15f871
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648603"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894173"
 ---
 # <a name="marshaling-different-types-of-arrays"></a>Farklı Dizi Türlerini Hazırlama
-Bir dizi aynı türden bir veya daha fazla öğe içeriyor, yönetilen kodda bir başvuru türüdür. Diziler başvuru türleri olsa da, olduğu gibi parametreleri yönetilmeyen bir işleve geçirilir. Bu davranış, In/Out parametreleri olan yönetilen nesnelere, yönetilen diziler geçirilen yolu ile tutarsız. Ek ayrıntılar için bkz. [kopyalama ve sabitleme](copying-and-pinning.md).  
+Dizi, aynı türde bir veya daha fazla öğe içeren Yönetilen koddaki bir başvuru türüdür. Diziler başvuru türleri olsa da, yönetilmeyen işlevlere parametre olarak geçirilir. Bu davranış, yönetilen dizilerin ın/out parametreleri gibi yönetilen nesnelere geçirilme yöntemi ile tutarlı değildir. Daha fazla bilgi için bkz. [kopyalama ve sabitleme](copying-and-pinning.md).  
   
- Aşağıdaki tabloda, dizileri sıralama seçeneklerini listeler ve bunların kullanımını açıklar.  
+ Aşağıdaki tabloda diziler için sıralama seçenekleri listelenmekte ve kullanımları açıklanmaktadır.  
   
-|Dizi|Açıklama|  
+|Array|Açıklama|  
 |-----------|-----------------|  
-|Değere göre tamsayılar.|Tamsayı dizisi, bir giriş parametresi olarak geçirir.|  
-|Başvuruya göre tamsayılar.|Tamsayı dizisi bir ın/Out parametresi olarak geçirir.|  
-|Tamsayılar değeriyle (iki boyutlu).|Matris tamsayı bir giriş parametresi olarak geçirir.|  
-|Değere göre dizeleri.|Dizelerden oluşan bir dizi bir giriş parametresi olarak geçirir.|  
-|Yapıları ile tamsayı.|Bir dizi bir giriş parametresi olarak tamsayılar içeren yapılarını geçirir.|  
-|Yapıları dizeler.|Yalnızca dizelere bir ın/Out parametresi olarak içeren yapılarını dizisi geçirir. Dizi üyelerinin değiştirilebilir.|  
+|Değere göre tamsayılar.|Bir tamsayılar dizisini ın parametresi olarak geçirir.|  
+|Başvuruya göre tamsayılar.|Bir tamsayı dizisini bir ın/out parametresi olarak geçirir.|  
+|Değere göre tamsayılar (iki boyutlu).|Bir tamsayı matrisini bir ın parametresi olarak geçirir.|  
+|Değere göre dizeler.|Bir dize dizisini ın parametresi olarak geçirir.|  
+|, Tamsayılar içeren yapılar.|As parametresi olarak tamsayılar içeren bir yapı dizisini geçirir.|  
+|Dizeleri olan yapılar.|Yalnızca dizeleri içeren bir yapı dizisini bir ın/out parametresi olarak geçirir. Dizi üyeleri değiştirilebilir.|  
   
 ## <a name="example"></a>Örnek  
- Bu örnek, dizileri aşağıdaki türleri nasıl gösterir:  
+ Bu örnek, aşağıdaki dizi türlerin nasıl geçirileceğini gösterir:  
   
-- Değer tamsayı dizisi.  
+- Değere göre tamsayılar dizisi.  
   
-- Yeniden boyutlandırılabilir başvuruya göre tamsayı dizisi.  
+- Başvuruya göre tamsayılar dizisi, yeniden boyutlandırılabilir.  
   
-- Tamsayı değerine göre çok boyutlu dizisi (matrix).  
+- Değere göre tamsayılar için çok boyutlu dizi (matris).  
   
-- Değer bir dize dizisi.  
+- Değere göre dizeler dizisi.  
   
-- Yapıları ile tamsayı dizisi.  
+- Tamsayılarla yapıların dizisi.  
   
-- Yapıları dizeler dizisi.  
+- Dizeler içeren yapıların dizisi.  
   
- Bir dizi başvuruya göre açıkça sıralanır sürece, varsayılan davranışı dizi bir giriş parametresi olarak sürekliliğe devreder. Uygulayarak bu davranışı değiştirebilirsiniz <xref:System.Runtime.InteropServices.InAttribute> ve <xref:System.Runtime.InteropServices.OutAttribute> açıkça öznitelikleri.  
+ Bir dizi başvuruya göre açıkça sıralanmamışsa, varsayılan davranış diziyi bir ın parametresi olarak sıraladığında. <xref:System.Runtime.InteropServices.InAttribute> Ve<xref:System.Runtime.InteropServices.OutAttribute> özniteliklerini açıkça uygulayarak bu davranışı değiştirebilirsiniz.  
   
- Diziler örneği, orijinal işlev bildirimleriyle gösterilen aşağıdaki yönetilmeyen işlevleri kullanır:  
+ Diziler örneği, özgün işlev bildirimiyle gösterilen aşağıdaki yönetilmeyen işlevleri kullanır:  
   
-- **TestArrayOfInts** Pinvokelib.DLL'den dışarı.  
+- PInvokeLib. dll ' den alınan **Tebaşlangıçraylar** .  
   
-    ```  
+    ```cpp
     int TestArrayOfInts(int* pArray, int pSize);  
     ```  
   
-- **TestRefArrayOfInts** Pinvokelib.DLL'den dışarı.  
+- PInvokeLib. dll dosyasından **test edilmiş Testrefarray.**  
   
-    ```  
+    ```cpp
     int TestRefArrayOfInts(int** ppArray, int* pSize);  
     ```  
   
-- **TestMatrixOfInts** Pinvokelib.DLL'den dışarı.  
+- PInvokeLib. dll dosyasından alınan **Testmatrixoflitre** .  
   
-    ```  
+    ```cpp
     int TestMatrixOfInts(int pMatrix[][COL_DIM], int row);  
     ```  
   
-- **TestArrayOfStrings** Pinvokelib.DLL'den dışarı.  
+- **TestArrayOfStrings** , PInvokeLib. dll dosyasından verildi.  
   
-    ```  
+    ```cpp
     int TestArrayOfStrings(char** ppStrArray, int size);  
     ```  
   
-- **TestArrayOfStructs** Pinvokelib.DLL'den dışarı.  
+- PInvokeLib. dll dosyasından aktarılmış **Testarrayofyapılar** .  
   
-    ```  
+    ```cpp
     int TestArrayOfStructs(MYPOINT* pPointArray, int size);  
     ```  
   
-- **TestArrayOfStructs2** Pinvokelib.DLL'den dışarı.  
+- **TestArrayOfStructs2** , PInvokeLib. dll dosyasından verildi.  
   
-    ```  
+    ```cpp
     int TestArrayOfStructs2 (MYPERSON* pPersonArray, int size);  
     ```  
   
- [PinvokeLib.dll](marshaling-data-with-platform-invoke.md#pinvokelibdll) daha önce listelenen işlevlerin ve iki yapı değişkenleri için uygulamaları içeren özel bir yönetilmeyen kitaplıktır **MYPOINT** ve **MYPERSON**. Yapılar aşağıdaki öğeleri içerir:  
+ [PInvokeLib. dll](marshaling-data-with-platform-invoke.md#pinvokelibdll) , önceden listelenen işlevler ve iki yapı değişkeni, **myPoint** ve **MyPerson**için uygulamalar içeren özel bir yönetilmeyen kitaplıktır. Yapılar aşağıdaki öğeleri içerir:  
   
-```  
+```cpp
 typedef struct _MYPOINT  
 {  
    int x;   
@@ -102,9 +102,9 @@ typedef struct _MYPERSON
 } MYPERSON;  
 ```  
   
- Bu örnekte `MyPoint` ve `MyPerson` yapıları katıştırılmış türleri içerir. <xref:System.Runtime.InteropServices.StructLayoutAttribute> Özniteliği, üyelerin bellekte sıralı olarak, göründükleri sırayla gözüktükleri ayarlanır.  
+ Bu örnekte, `MyPoint` ve `MyPerson` yapıları gömülü türler içerir. <xref:System.Runtime.InteropServices.StructLayoutAttribute> Özniteliği, üyelerin bellekte sırayla, göründükleri sırada düzenlendiğinden emin olmak üzere ayarlanır.  
   
- `LibWrap` Sınıfı içeren bir dizi çağıran yöntem `App` sınıfı. Dizileri geçirme hakkında belirli bilgiler için aşağıdaki örnekte yer alan yorumlara bakın. Bir başvuru türü bir dizi varsayılan olarak bir giriş parametresi olarak geçirilir. Sonuçları almak çağırıcı için **InAttribute** ve **OutAttribute** diziyi içeren bir bağımsız değişken için açıkça uygulanmalıdır.  
+ Sınıfı, `App` sınıfı tarafından çağrılan bir yöntemler kümesi içerir. `LibWrap` Dizileri geçirme hakkında ayrıntılı bilgi için aşağıdaki örnekteki açıklamalara bakın. Başvuru türü olan bir dizi, varsayılan olarak bir ın parametresi olarak geçirilir. Çağıranın sonuçları alması için, **InAttribute** ve **OutAttribute** 'un, diziyi içeren bağımsız değişkene açıkça uygulanması gerekir.  
   
 ### <a name="declaring-prototypes"></a>Prototipleri Bildirme  
  [!code-csharp[Conceptual.Interop.Marshaling#31](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.interop.marshaling/cs/arrays.cs#31)]

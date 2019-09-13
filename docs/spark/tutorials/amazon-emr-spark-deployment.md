@@ -4,12 +4,12 @@ description: Apache Spark uygulamasının bir .NET uygulamasını Amazon EMR Spa
 ms.date: 05/17/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: bf52a53e8f282f55a0071deb266dabb798fa3348
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 8cde4f173fb1de5ebf271f4f080d21d587d3229e
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70254058"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928532"
 ---
 # <a name="deploy-a-net-for-apache-spark-application-to-amazon-emr-spark"></a>Amazon EMR Spark için bir .NET Apache Spark uygulaması dağıtma
 
@@ -18,6 +18,7 @@ Bu öğreticide, Amazon EMR Spark 'a Apache Spark uygulamasına yönelik bir .NE
 Bu öğreticide şunların nasıl yapıladığını öğreneceksiniz:
 
 > [!div class="checklist"]
+>
 > * Microsoft. spark. Worker 'ı hazırla
 > * Spark .NET uygulamanızı yayımlama
 > * Uygulamanızı Amazon EMR Spark 'a dağıtın

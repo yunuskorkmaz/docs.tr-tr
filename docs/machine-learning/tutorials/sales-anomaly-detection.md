@@ -4,12 +4,12 @@ description: Ürün satış verileri için anomali algılama uygulaması oluştu
 ms.date: 07/17/2019
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0612
-ms.openlocfilehash: 4228a68ad43416c6e32684441593d92dfdbfd808
-ms.sourcegitcommit: 8c6426a3d2adff5fbcbe1fed0f28eda718c15351
+ms.openlocfilehash: ed75f1ba0b102ba73eb5671667b5731519c12eb0
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68733290"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929051"
 ---
 # <a name="tutorial-detect-anomalies-in-product-sales-with-mlnet"></a>Öğretici: ML.NET ile ürün satışlardaki anormallikleri Algıla
 
@@ -17,6 +17,7 @@ ms.locfileid: "68733290"
 
 Bu öğreticide şunların nasıl yapıladığını öğreneceksiniz:
 > [!div class="checklist"]
+>
 > * Verileri yükleme
 > * Ani anomali algılama için bir dönüşüm oluşturun
 > * Dönüşümle birlikte ani bozukluklar Algıla
@@ -372,6 +373,7 @@ Bu öğreticinin kaynak kodunu [DotNet/Samples](https://github.com/dotnet/sample
 
 Bu öğreticide, şunların nasıl yapıldığını öğrendiniz:
 > [!div class="checklist"]
+>
 > * Verileri yükleme
 > * Modeli, ani anomali algılama için eğitme
 > * Eğitilen modeliyle ani bozukluklar algılama

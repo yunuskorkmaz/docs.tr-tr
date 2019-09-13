@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 123457ac-4223-4273-bb58-3bc0e4957e9d
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 234c8a1f57af4030186afd48f727621713531b17
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 916523acf1d270830a2cb1fb5ae50e26d055404c
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69915534"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927024"
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>Büyük, Yanıt Veren .NET Framework Uygulamaları Yazma
 Bu makalede, büyük .NET Framework uygulamalarının veya dosyalar ya da veritabanları gibi büyük miktarda veriyi işleyen uygulamaların performansını iyileştirmeye yönelik ipuçları sunulmaktadır. Bu ipuçları, Yönetilen koddaki C# ve Visual Basic derleyicilerinin yeniden yazma işleminden gelir ve bu makalede C# derleyicinin çeşitli gerçek örnekleri yer almaktadır. 
@@ -280,7 +280,7 @@ Lambda ifadeleriyle birlikte, dil ile tümleşik sorgu (LINQ), üretkenlik özel
   
  **Örnek 5: Lambdalar,\<liste T > ve IEnumerable\<T >**  
   
- Bu örnek, bir ad dizesi verildiğinde derleyicinin modelinde bir sembol bulmak için [LINQ ve işlevsel stil kodu](https://blogs.msdn.com/b/charlie/archive/2007/01/26/anders-hejlsberg-on-linq-and-functional-programming.aspx) kullanır:  
+ Bu örnek, bir ad dizesi verildiğinde derleyicinin modelinde bir sembol bulmak için [LINQ ve işlevsel stil kodu](https://blogs.msdn.microsoft.com/charlie/2007/01/27/anders-hejlsberg-on-linq-and-functional-programming/) kullanır:  
   
 ```csharp  
 class Symbol {  
@@ -304,7 +304,7 @@ Func<Symbol, bool> predicate = s => s.Name == name;
      return symbols.FirstOrDefault(predicate);  
 ```  
   
- İlk satırda, [lambda ifadesi](../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md) `s => s.Name == name` yerel değişken `name` [üzerinde kapanır](https://blogs.msdn.com/b/ericlippert/archive/2003/09/17/53028.aspx) . Diğer bir deyişle, `predicate` tutan [temsilci](../../csharp/language-reference/keywords/delegate.md) için bir nesne ayırmanın yanı sıra, kod, değerini `name`yakalayan ortamı tutmak için bir statik sınıf ayırır. Derleyici, aşağıdaki gibi bir kod üretir:  
+ İlk satırda, [lambda ifadesi](../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md) `s => s.Name == name` yerel değişken `name` [üzerinde kapanır](https://blogs.msdn.microsoft.com/ericlippert/2003/09/17/what-are-closures/) . Diğer bir deyişle, `predicate` tutan [temsilci](../../csharp/language-reference/keywords/delegate.md) için bir nesne ayırmanın yanı sıra, kod, değerini `name`yakalayan ortamı tutmak için bir statik sınıf ayırır. Derleyici, aşağıdaki gibi bir kod üretir:  
   
 ```csharp  
 // Compiler-generated class to hold environment state for lambda  

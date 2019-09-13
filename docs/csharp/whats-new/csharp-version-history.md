@@ -3,12 +3,12 @@ title: C# Kılavuz geçmişi C#
 description: Dil en eski sürümlerinde ne şekilde görünür ve bu tarihten sonra nasıl gelişmiştir?
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: 9962dcb0192fb27ff21b24e985a6a897703720c7
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 304c433e7f15301b77e8b2440e27795dcdea345c
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105677"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70893169"
 ---
 # <a name="the-history-of-c"></a>C geçmişi\#
 
@@ -28,7 +28,7 @@ C# Yapı araçları, varsayılan dil sürümü olan en son ana dil sürümünü 
 
 ## <a name="c-version-10"></a>C#sürüm 1,0
 
-Geri dönüp, sürüm 1,0, C# Java gibi birçok şey arar. [ECMA için belirtilen tasarım hedeflerinin bir parçası](https://feeldotneteasy.blogspot.com/2011/01/c-design-goals.html)olarak, "basit, modern, genel amaçlı nesne yönelimli bir dil" olarak arar.  Bu sırada, Java gibi, bu erken tasarım hedefleri elde ettiği anlamına gelir.
+Geri dönerek Visual Studio.net 2002 ile yayınlanan C# sürüm 1,0, Java gibi çok sayıda görünür. [ECMA için belirtilen tasarım hedeflerinin bir parçası](https://feeldotneteasy.blogspot.com/2011/01/c-design-goals.html)olarak, "basit, modern, genel amaçlı nesne yönelimli bir dil" olarak arar.  Bu sırada, Java gibi, bu erken tasarım hedefleri elde ettiği anlamına gelir.
 
 Ancak şimdi C# 1,0 ' ye geri bakarsanız, kendinizi biraz daha bulabilirsiniz. Yerleşik zaman uyumsuz özellikleri ve izin verilen genel türler etrafında bulunan bazı nesnelerin bazı nesnelerin bazı özelliklerini ele alır. Aslında, genel türleri tamamen ele edindi.  Ve [LINQ](../linq/index.md)? Henüz kullanılamıyor. Bu eklemelerin gelmesi birkaç yıl sürer.
 
@@ -100,7 +100,7 @@ Daha fazla kızılmış bir görünüm, LINQ 'ın oluşturulduğu temel olarak i
 
 ## <a name="c-version-40"></a>C#sürüm 4,0
 
-C#sürüm 4,0, sürüm 3,0 ' nin çığır durumuna kadar zor bir zamana sahip olabilir. Sürüm 3,0 ile, C# dili Java 'nın gölgimiyle ve belirgin bir şekilde daha sıkıca taşımıştı. Dil hızlı bir şekilde şık hale geliyor.
+C#Visual Studio 2010 ile yayınlanan sürüm 4,0, sürüm 3,0 çığır durumuna kadar zor bir zamana sahip olurdu. Sürüm 3,0 ile, C# dili Java 'nın gölgimiyle ve belirgin bir şekilde daha sıkıca taşımıştı. Dil hızlı bir şekilde şık hale geliyor.
 
 Sonraki sürümde bazı ilginç yeni özellikler tanıtıldı:
 
@@ -117,7 +117,7 @@ Dinamik bağlama, hataları olası ve ayrıca dil dahilinde harika bir güç sa�
 
 ## <a name="c-version-50"></a>C#sürüm 5,0
 
-C#sürüm 5,0, dilin odaklanmış bir sürümüdür. Bu sürüm için neredeyse tüm çaba başka bir çığır dil kavramıyla karşılaştık: `async` zaman uyumsuz programlama için ve `await` modeli.  Ana özellikler listesi aşağıda verilmiştir:
+C#Visual Studio 2012 ile yayınlanan sürüm 5,0, dilin odaklanmış bir sürümüdür. Bu sürüm için neredeyse tüm çaba başka bir çığır dil kavramıyla karşılaştık: `async` zaman uyumsuz programlama için ve `await` modeli.  Ana özellikler listesi aşağıda verilmiştir:
 
 - [Zaman uyumsuz Üyeler](../async.md)
 - [Arayan bilgileri öznitelikleri](../programming-guide/concepts/caller-information.md)
@@ -132,7 +132,7 @@ Ancak `async`, bu sürümün gerçek yıldızları da vardır.`await` Bu özelli
 
 ## <a name="c-version-60"></a>C#sürüm 6,0
 
-3,0 ve 5,0 sürümleriyle, C# nesne yönelimli bir dile önemli yeni özellikler ekledik. Sürüm 6,0 ile, baskın bir Killer özelliği yapmaktan sonra, daha üretken bir şekilde programlama yapan C# birçok küçük özelliği serbest bırakacağız. Bunlardan bazıları şunlardır:
+3,0 ve 5,0 sürümleriyle, C# nesne yönelimli bir dile önemli yeni özellikler ekledik. Visual Studio 2013 ile yayınlanan sürüm 6,0 ile, baskın bir çıkarıcı Özellik yapmaktan sonra daha üretken bir şekilde programlama yapan C# daha küçük birçok özellik yayımlayacaktır. Bunlardan bazıları şunlardır:
 
 - [Statik içeri aktarmalar](./csharp-6.md#using-static)
 - [Özel durum filtreleri](./csharp-6.md#exception-filters)
@@ -154,7 +154,7 @@ Bunlar, kendi kendine geleneksel bir dil özelliği olmasa da, bu sürümle birl
 
 ## <a name="c-version-70"></a>C#sürüm 7,0
 
-En son ana sürüm 7,0 C# sürümüdür. Bu sürümde, 6,0 ' de, ancak hizmet olarak derleyici olmayan bir dizi C# ve seyrek şey vardır. Yeni özelliklerden bazıları şunlardır:
+En son ana sürüm, Visual C# Studio 2017 ile yayınlanan sürüm 7,0 ' dir. Bu sürümde, 6,0 ' de, ancak hizmet olarak derleyici olmayan bir dizi C# ve seyrek şey vardır. Yeni özelliklerden bazıları şunlardır:
 
 - [Out değişkenleri](./csharp-7.md#out-variables)
 - [Tanımlama grupları ve ayrıştırma](./csharp-7.md#tuples)

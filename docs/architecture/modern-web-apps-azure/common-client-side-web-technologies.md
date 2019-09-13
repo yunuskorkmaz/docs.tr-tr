@@ -4,12 +4,12 @@ description: ASP.NET Core ve Azure ile modern web uygulamalarını mimarın Orta
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 3a44b017c6160639ed1be7374b893e103ee5f5d8
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: 4dd747293fba4c18c2d10738d36f4d98cfd3f5b9
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373900"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926495"
 ---
 # <a name="common-client-side-web-technologies"></a>Ortak istemci tarafı web teknolojileri
 
@@ -141,6 +141,7 @@ Hangi JavaScript çerçevesinin, SPA 'nizi destekleyecek en iyi şekilde çalı�
 JavaScript çerçeveleri Breakneck hızında gelişmeye devam eder. Daha sonra bağımlı olmaya başlayacaksınız bir çerçeve seçme riskini azaltmaya yardımcı olması için yukarıda listelenen konuları kullanın. Özellikle risk-karşıtı, ticari destek sunan ve/veya büyük bir kuruluş tarafından geliştirilen bir çerçeveyi düşünün.
 
 > ### <a name="references--client-web-technologies"></a>Başvurular – Istemci Web teknolojileri
+>
 > - **HTML ve CSS**  
 > <https://www.w3.org/standards/webdesign/htmlcss>
 > - **Sass ile karşılaştırması BÜYÜKTÜR**  

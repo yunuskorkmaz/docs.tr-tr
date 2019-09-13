@@ -4,18 +4,18 @@ description: ML.NET ' de özel modellerinizi oluştururken yararlı olan önemli
 ms.custom: seodec18
 ms.topic: reference
 ms.date: 07/31/2019
-ms.openlocfilehash: 1c979d2c4567285146ab87f359116efb506815a1
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 4d4bb80c6582facbcb11664309fde230bcfa4e7b
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710537"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929260"
 ---
 # <a name="machine-learning-glossary-of-important-terms"></a>Önemli terimlerin makine öğrenimi sözlüğü
 
 Aşağıdaki liste, ML.NET ' de özel modellerinizi oluştururken yararlı olan önemli makine öğrenimi koşullarının bir derlenmesi.
 
-## <a name="accuracy"></a>Veritabanınızın
+## <a name="accuracy"></a>veritabanınızın
 
 [Sınıflandırmada](#classification)doğruluk, doğru sınıflandırılan öğelerin, test kümesindeki toplam öğe sayısına bölünmesiyle elde edilen sayıdır. 0 (en az doğru) ile 1 (en doğru) arasında değişir. Doğruluk, model performansının değerlendirme ölçümlerinden biridir. [Duyarlık](#precision), [geri çekme](#recall)ve [F puanı](#f-score)ile birlikte göz önünde bulundurun.
 
@@ -48,6 +48,7 @@ Veriler bir kategoriyi tahmin etmek için kullanıldığında, [denetimli makine
 ## <a name="data"></a>Veri
 
 Veriler, tüm makine öğrenimi uygulamaları için tasarlanmıştır. ML.net verilerinde nesneler tarafından <xref:Microsoft.ML.IDataView> temsil edilir. Veri görünümü nesneleri:
+
 - sütun ve satırlardan oluşur
 - geç değerlendirilir, bu, yalnızca bir işlem tarafından çağrı yapıldığında veri yükler
 - her sütunun türünü, biçimini ve uzunluğunu tanımlayan bir şema içerir
@@ -70,7 +71,7 @@ Genişletme yöntemleri, [Tahmini](#estimator)örnekleri oluşturmak için ml.NE
 
 ## <a name="feature-engineering"></a>Özellik mühendisliği
 
-Özellik Mühendisliği, kullanılabilir olgudur verilerinden, yani Özellik ayıklamadan Özellik vektörleri üreten bir özellik kümesi [tanımlamayı ve yazılım](#feature) geliştirmeyi içerir. Daha fazla bilgi için Vikipde bulunan [özellik Mühendisliği](https://en.wikipedia.org/wiki/Feature_engineering) makalesine bakın.
+Özellik Mühendisliği, kullanılabilir olgudur verilerinden, yani Özellik ayıklamadan Özellik vektörleri üreten [bir özellik kümesi tanımlamayı ve yazılım](#feature) geliştirmeyi içerir. Daha fazla bilgi için Vikipde bulunan [özellik Mühendisliği](https://en.wikipedia.org/wiki/Feature_engineering) makalesine bakın.
 
 ## <a name="f-score"></a>F puanı
 

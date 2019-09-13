@@ -3,12 +3,12 @@ title: Windows üzerinde .NET Core önkoşulları
 description: .NET Core uygulamaları geliştirmek ve çalıştırmak için Windows makinenizde hangi bağımlılıklara ihtiyacınız olduğunu öğrenin.
 ms.custom: updateeachvsrelease
 ms.date: 04/08/2019
-ms.openlocfilehash: 1921ef565c2d04624009f7684e439ddba1cdf57e
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: 82d336bc4efb34d336d5078952683c1673c3fa8a
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331067"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926047"
 ---
 # <a name="prerequisites-for-net-core-on-windows"></a>Windows üzerinde .NET Core önkoşulları
 
@@ -97,8 +97,9 @@ Visual Studio 'da .NET Core 1. x uygulamaları geliştirmek için, [Visual studi
 
 > [!IMPORTANT]
 > .NET Core 1. x geliştirme için Visual Studio 2015 kullanmak mümkündür, ancak aşağıdaki nedenlerden dolayı önerilmez:
-  > * .NET Core araçları, desteklenmeyen bir önizleme sürümüdür.
-  > * Projeler, kullanım dışı olan Project. JSON tabanlıdır.
+>
+> * .NET Core araçları, desteklenmeyen bir önizleme sürümüdür.
+> * Projeler, kullanım dışı olan Project. JSON tabanlıdır.
 >
 > Proje biçimi değişiklikleri hakkında daha fazla bilgi için bkz. [değişikliklere Ilişkin üst düzey genel bakış](./tools/cli-msbuild-architecture.md).
 

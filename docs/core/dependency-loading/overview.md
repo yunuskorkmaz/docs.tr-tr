@@ -5,12 +5,12 @@ ms.date: 08/09/2019
 author: sdmaclea
 ms.author: stmaclea
 ms.topic: overview
-ms.openlocfilehash: 69cca28606c64479d500e731ba95fe404bea38df
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.openlocfilehash: 0388bd1fa29ce1caad93c917503dac9eed8974e1
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70017334"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926393"
 ---
 # <a name="dependency-loading-in-net-core"></a>.NET Core 'da bağımlılık yükleme
 
@@ -20,13 +20,14 @@ Her .NET Core uygulamasının bağımlılıkları vardır. Basit `hello world` u
 
 Bazı uygulamalarda bağımlılıklar, çalışma zamanında dinamik olarak belirlenir. Bu durumlarda, yönetilen derlemelerin ve yönetilmeyen bağımlılıkların nasıl yüklendiğini anlamak önemlidir.
 
-## <a name="understanding-assemblyloadcontext"></a>AssemblyLoadContext 'i anlama
+## <a name="understanding-assemblyloadcontext"></a>AssemblyLoadContext’i anlama
 
 <xref:System.Runtime.Loader.AssemblyLoadContext> API, .NET Core yükleme tasarımına yönelik olarak tasarlanmıştır. [AssemblyLoadContext 'ı anlama](understanding-assemblyloadcontext.md) makalesi, tasarıma kavramsal bir genel bakış sağlar.
 
-## <a name="loading-details"></a>Ayrıntılar yükleniyor
+## <a name="loading-details"></a>Yükleme ayrıntıları
 
 Yükleme algoritması ayrıntıları birkaç makalede kısaca ele alınmıştır:
+
 - [Yönetilen derleme yükleme algoritması](loading-managed.md)
 - [Uydu derleme yükleme algoritması](loading-resources.md)
 - [Yönetilmeyen (yerel) kitaplık yükleme algoritması](loading-unmanaged.md)
