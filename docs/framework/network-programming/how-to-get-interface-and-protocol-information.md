@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Network
 ms.assetid: fd88d26c-4063-495e-a253-736ac3e6b23f
-ms.openlocfilehash: e70afa6b3633a5868491e421c7e8e44bf9f3e895
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 231d658cf13d27936b7b362ef8b4ccad78614b73
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624574"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894715"
 ---
-# <a name="how-to-get-interface-and-protocol-information"></a><span data-ttu-id="9588a-102">Nasıl yapılır: Arabirim ve Protokol Bilgilerini Alma</span><span class="sxs-lookup"><span data-stu-id="9588a-102">How to: Get Interface and Protocol Information</span></span>
-<span data-ttu-id="9588a-103">Bu örnek, bir ağ arabiriminin TCP istatistikleri okumak gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="9588a-103">This sample shows how to read the TCP statistics of a network interface.</span></span>  
+# <a name="how-to-get-interface-and-protocol-information"></a><span data-ttu-id="963bc-102">Nasıl yapılır: Arabirim ve Protokol Bilgilerini Alma</span><span class="sxs-lookup"><span data-stu-id="963bc-102">How to: Get Interface and Protocol Information</span></span>
+<span data-ttu-id="963bc-103">Bu örnek, bir ağ arabiriminin TCP istatistiklerinin nasıl okunacağını gösterir.</span><span class="sxs-lookup"><span data-stu-id="963bc-103">This sample shows how to read the TCP statistics of a network interface.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="9588a-104">Örnek</span><span class="sxs-lookup"><span data-stu-id="9588a-104">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="963bc-104">Örnek</span><span class="sxs-lookup"><span data-stu-id="963bc-104">Example</span></span>  
   
-```  
+```csharp
 public static void ShowTcpStatistics(NetworkInterfaceComponent version)  
 {  
     IPGlobalProperties properties =  
@@ -69,7 +69,7 @@ public static void ShowTcpStatistics(NetworkInterfaceComponent version)
 }  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="9588a-105">Kod Derleniyor</span><span class="sxs-lookup"><span data-stu-id="9588a-105">Compiling the Code</span></span>  
- <span data-ttu-id="9588a-106">Bu örnek gerektirir:</span><span class="sxs-lookup"><span data-stu-id="9588a-106">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="963bc-105">Kod Derleniyor</span><span class="sxs-lookup"><span data-stu-id="963bc-105">Compiling the Code</span></span>  
+ <span data-ttu-id="963bc-106">Bu örnek şunları gerektirir:</span><span class="sxs-lookup"><span data-stu-id="963bc-106">This example requires:</span></span>  
   
-- <span data-ttu-id="9588a-107">Başvurular **System.Net** ad alanı.</span><span class="sxs-lookup"><span data-stu-id="9588a-107">References to the **System.Net** namespace.</span></span>
+- <span data-ttu-id="963bc-107">**System.net** ad alanına başvurular.</span><span class="sxs-lookup"><span data-stu-id="963bc-107">References to the **System.Net** namespace.</span></span>

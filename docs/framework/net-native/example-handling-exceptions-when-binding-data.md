@@ -4,27 +4,27 @@ ms.date: 03/30/2017
 ms.assetid: bd63ed96-9853-46dc-ade5-7bd1b0f39110
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a5be728cbeb0c3378bb35765787b299167069f57
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0a54945ece2cbb06df5f778aba242f05d9b80373
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910618"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894508"
 ---
-# <a name="example-handling-exceptions-when-binding-data"></a><span data-ttu-id="2ae66-102">Örnek: Veri Bağlama Sırasında Özel Durum İşleme</span><span class="sxs-lookup"><span data-stu-id="2ae66-102">Example: Handling Exceptions When Binding Data</span></span>
+# <a name="example-handling-exceptions-when-binding-data"></a><span data-ttu-id="cc188-102">Örnek: Veri Bağlama Sırasında Özel Durum İşleme</span><span class="sxs-lookup"><span data-stu-id="cc188-102">Example: Handling Exceptions When Binding Data</span></span>
 > [!NOTE]
-> <span data-ttu-id="2ae66-103">Bu konu, yayın öncesi yazılım olan .NET Native geliştirici önizlemesine başvurur.</span><span class="sxs-lookup"><span data-stu-id="2ae66-103">This topic refers to the .NET Native Developer Preview, which is pre-release software.</span></span> <span data-ttu-id="2ae66-104">Önizlemeyi [Microsoft Connect Web sitesinden](https://go.microsoft.com/fwlink/?LinkId=394611) indirebilirsiniz (kayıt gerekir).</span><span class="sxs-lookup"><span data-stu-id="2ae66-104">You can download the preview from the [Microsoft Connect website](https://go.microsoft.com/fwlink/?LinkId=394611) (requires registration).</span></span>  
+> <span data-ttu-id="cc188-103">Bu konu, yayın öncesi yazılım olan .NET Native geliştirici önizlemesine başvurur.</span><span class="sxs-lookup"><span data-stu-id="cc188-103">This topic refers to the .NET Native Developer Preview, which is pre-release software.</span></span> <span data-ttu-id="cc188-104">Önizlemeyi [Microsoft Connect Web sitesinden](https://go.microsoft.com/fwlink/?LinkId=394611) indirebilirsiniz (kayıt gerekir).</span><span class="sxs-lookup"><span data-stu-id="cc188-104">You can download the preview from the [Microsoft Connect website](https://go.microsoft.com/fwlink/?LinkId=394611) (requires registration).</span></span>  
   
- <span data-ttu-id="2ae66-105">Aşağıdaki örnek, .NET Native araç zinciri ile derlenen bir uygulama verileri bağlamayı denediğinde oluşan bir [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) özel durumunun nasıl çözümlendiğini gösterir.</span><span class="sxs-lookup"><span data-stu-id="2ae66-105">The following example shows how to resolve a [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) exception that is thrown when an app compiled with the .NET Native tool chain tries to bind data.</span></span> <span data-ttu-id="2ae66-106">Özel durum bilgileri aşağıda verilmiştir:</span><span class="sxs-lookup"><span data-stu-id="2ae66-106">Here’s the exception information:</span></span>  
+ <span data-ttu-id="cc188-105">Aşağıdaki örnek, .NET Native araç zinciri ile derlenen bir uygulama verileri bağlamayı denediğinde oluşan bir [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) özel durumunun nasıl çözümlendiğini gösterir.</span><span class="sxs-lookup"><span data-stu-id="cc188-105">The following example shows how to resolve a [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) exception that is thrown when an app compiled with the .NET Native tool chain tries to bind data.</span></span> <span data-ttu-id="cc188-106">Özel durum bilgileri aşağıda verilmiştir:</span><span class="sxs-lookup"><span data-stu-id="cc188-106">Here’s the exception information:</span></span>  
   
-```  
+```output
 This operation cannot be carried out as metadata for the following type was removed for performance reasons:   
 App.ViewModels.MainPageVM  
 ```  
   
- <span data-ttu-id="2ae66-107">İlişkili çağrı yığını aşağıda verilmiştir:</span><span class="sxs-lookup"><span data-stu-id="2ae66-107">Here's the associated call stack:</span></span>  
+ <span data-ttu-id="cc188-107">İlişkili çağrı yığını aşağıda verilmiştir:</span><span class="sxs-lookup"><span data-stu-id="cc188-107">Here's the associated call stack:</span></span>  
   
-```  
+```output
 Reflection::Execution::ReflectionDomainSetupImplementation.CreateNonInvokabilityException+0x238  
 Reflection::Core::ReflectionDomain.CreateNonInvokabilityException+0x2e  
 Reflection::Core::Execution::ExecutionEnvironment.+0x316  
@@ -38,28 +38,28 @@ Windows_UI_Xaml!DirectUI::PropertyAccessPathStep::GetValue+0x31
 Windows_UI_Xaml!DirectUI::PropertyPathListener::ConnectPathStep+0x113  
 ```  
   
-## <a name="what-was-the-app-doing"></a><span data-ttu-id="2ae66-108">Uygulama ne yapıyor?</span><span class="sxs-lookup"><span data-stu-id="2ae66-108">What was the app doing?</span></span>  
- <span data-ttu-id="2ae66-109">Yığının tabanında, <xref:Windows.UI.Xaml?displayProperty=nameWithType> ad alanındaki Çerçeveler XAML işleme altyapısının çalıştığını gösterir.</span><span class="sxs-lookup"><span data-stu-id="2ae66-109">At the base of the stack, frames from the <xref:Windows.UI.Xaml?displayProperty=nameWithType> namespace indicate that the XAML rendering engine was running.</span></span>   <span data-ttu-id="2ae66-110"><xref:System.Reflection.PropertyInfo.GetValue%2A?displayProperty=nameWithType> Yönteminin kullanımı, meta verileri kaldırılmış olan türdeki bir özelliğin değerinin yansıma tabanlı bir aramasını gösterir.</span><span class="sxs-lookup"><span data-stu-id="2ae66-110">The use of the <xref:System.Reflection.PropertyInfo.GetValue%2A?displayProperty=nameWithType> method indicates a reflection-based lookup of a property’s value on the type whose metadata was removed.</span></span>  
+## <a name="what-was-the-app-doing"></a><span data-ttu-id="cc188-108">Uygulama ne yapıyor?</span><span class="sxs-lookup"><span data-stu-id="cc188-108">What was the app doing?</span></span>  
+ <span data-ttu-id="cc188-109">Yığının tabanında, <xref:Windows.UI.Xaml?displayProperty=nameWithType> ad alanındaki Çerçeveler XAML işleme altyapısının çalıştığını gösterir.</span><span class="sxs-lookup"><span data-stu-id="cc188-109">At the base of the stack, frames from the <xref:Windows.UI.Xaml?displayProperty=nameWithType> namespace indicate that the XAML rendering engine was running.</span></span>   <span data-ttu-id="cc188-110"><xref:System.Reflection.PropertyInfo.GetValue%2A?displayProperty=nameWithType> Yönteminin kullanımı, meta verileri kaldırılmış olan türdeki bir özelliğin değerinin yansıma tabanlı bir aramasını gösterir.</span><span class="sxs-lookup"><span data-stu-id="cc188-110">The use of the <xref:System.Reflection.PropertyInfo.GetValue%2A?displayProperty=nameWithType> method indicates a reflection-based lookup of a property’s value on the type whose metadata was removed.</span></span>  
   
- <span data-ttu-id="2ae66-111">Meta veri yönergesini sağlamanın ilk adımı, özelliklerinin tümünün erişilebilir olması için `serialize` türün meta verilerini eklemektir:</span><span class="sxs-lookup"><span data-stu-id="2ae66-111">The first step in providing a metadata directive would be to add `serialize` metadata for the type so that its properties are all accessible:</span></span>  
+ <span data-ttu-id="cc188-111">Meta veri yönergesini sağlamanın ilk adımı, özelliklerinin tümünün erişilebilir olması için `serialize` türün meta verilerini eklemektir:</span><span class="sxs-lookup"><span data-stu-id="cc188-111">The first step in providing a metadata directive would be to add `serialize` metadata for the type so that its properties are all accessible:</span></span>  
   
 ```xml  
 <Type Name="App.ViewModels.MainPageVM" Serialize="Required Public" />  
 ```  
   
-## <a name="is-this-an-isolated-case"></a><span data-ttu-id="2ae66-112">Bu yalıtılmış bir durumdur mi?</span><span class="sxs-lookup"><span data-stu-id="2ae66-112">Is this an isolated case?</span></span>  
- <span data-ttu-id="2ae66-113">Bu senaryoda, veri bağlamasında bir tane `ViewModel`için eksik meta veriler varsa, diğerleri de olabilir.</span><span class="sxs-lookup"><span data-stu-id="2ae66-113">In this scenario, if data binding has incomplete metadata for one `ViewModel`, it may for others, too.</span></span>  <span data-ttu-id="2ae66-114">Kod, uygulamanın görünüm modellerinin `App.ViewModels` ad alanında yer aldığı bir şekilde yapılandırılmış ise, daha genel bir çalışma zamanı yönergesi kullanabilirsiniz:</span><span class="sxs-lookup"><span data-stu-id="2ae66-114">If the code is structured in a way that the app’s view models are all in the `App.ViewModels` namespace, you could use a more general runtime directive:</span></span>  
+## <a name="is-this-an-isolated-case"></a><span data-ttu-id="cc188-112">Bu yalıtılmış bir durumdur mi?</span><span class="sxs-lookup"><span data-stu-id="cc188-112">Is this an isolated case?</span></span>  
+ <span data-ttu-id="cc188-113">Bu senaryoda, veri bağlamasında bir tane `ViewModel`için eksik meta veriler varsa, diğerleri de olabilir.</span><span class="sxs-lookup"><span data-stu-id="cc188-113">In this scenario, if data binding has incomplete metadata for one `ViewModel`, it may for others, too.</span></span>  <span data-ttu-id="cc188-114">Kod, uygulamanın görünüm modellerinin `App.ViewModels` ad alanında yer aldığı bir şekilde yapılandırılmış ise, daha genel bir çalışma zamanı yönergesi kullanabilirsiniz:</span><span class="sxs-lookup"><span data-stu-id="cc188-114">If the code is structured in a way that the app’s view models are all in the `App.ViewModels` namespace, you could use a more general runtime directive:</span></span>  
   
 ```xml  
 <Namespace Name="App.ViewModels " Serialize="Required Public" />  
 ```  
   
-## <a name="could-the-code-be-rewritten-to-not-use-reflection"></a><span data-ttu-id="2ae66-115">Kod, yansıma kullanmadan yeniden yazılabilir mi?</span><span class="sxs-lookup"><span data-stu-id="2ae66-115">Could the code be rewritten to not use reflection?</span></span>  
- <span data-ttu-id="2ae66-116">Veri bağlama yansıma yoğun olduğundan, yansımayı önlemek için kodun değiştirilmesi uygun değildir.</span><span class="sxs-lookup"><span data-stu-id="2ae66-116">Because data binding is reflection-intensive, changing the code to avoid reflection isn’t feasible.</span></span>  
+## <a name="could-the-code-be-rewritten-to-not-use-reflection"></a><span data-ttu-id="cc188-115">Kod, yansıma kullanmadan yeniden yazılabilir mi?</span><span class="sxs-lookup"><span data-stu-id="cc188-115">Could the code be rewritten to not use reflection?</span></span>  
+ <span data-ttu-id="cc188-116">Veri bağlama yansıma yoğun olduğundan, yansımayı önlemek için kodun değiştirilmesi uygun değildir.</span><span class="sxs-lookup"><span data-stu-id="cc188-116">Because data binding is reflection-intensive, changing the code to avoid reflection isn’t feasible.</span></span>  
   
- <span data-ttu-id="2ae66-117">Ancak, araç zincirinin derleme zamanında doğru türle `ViewModel` Özellik bağlamalarını ilişkilendirebilmesi ve bir çalışma zamanı yönergesi kullanmadan meta verileri tutması için XAML sayfasına belirtmek için bazı yollar vardır.</span><span class="sxs-lookup"><span data-stu-id="2ae66-117">However, there are ways to specify the `ViewModel` to the XAML page so that the tool chain can associate property bindings with the correct type at compile time and keep the metadata without using a runtime directive.</span></span>  <span data-ttu-id="2ae66-118">Örneğin, özelliğini özelliklerine uygulayabilirsiniz <xref:Windows.UI.Xaml.Data.BindableAttribute?displayProperty=nameWithType> .</span><span class="sxs-lookup"><span data-stu-id="2ae66-118">For example, you could apply the <xref:Windows.UI.Xaml.Data.BindableAttribute?displayProperty=nameWithType> attribute on properties.</span></span> <span data-ttu-id="2ae66-119">Bu, XAML derleyicisinin gerekli arama bilgilerini oluşturmasına ve default. RD. xml dosyasında bir çalışma zamanı yönergesi gerektirmesine neden olur.</span><span class="sxs-lookup"><span data-stu-id="2ae66-119">This causes the XAML compiler to generate the required lookup information and avoids requiring a runtime directive in the Default.rd.xml file.</span></span>  
+ <span data-ttu-id="cc188-117">Ancak, araç zincirinin derleme zamanında doğru türle `ViewModel` Özellik bağlamalarını ilişkilendirebilmesi ve bir çalışma zamanı yönergesi kullanmadan meta verileri tutması için XAML sayfasına belirtmek için bazı yollar vardır.</span><span class="sxs-lookup"><span data-stu-id="cc188-117">However, there are ways to specify the `ViewModel` to the XAML page so that the tool chain can associate property bindings with the correct type at compile time and keep the metadata without using a runtime directive.</span></span>  <span data-ttu-id="cc188-118">Örneğin, özelliğini özelliklerine uygulayabilirsiniz <xref:Windows.UI.Xaml.Data.BindableAttribute?displayProperty=nameWithType> .</span><span class="sxs-lookup"><span data-stu-id="cc188-118">For example, you could apply the <xref:Windows.UI.Xaml.Data.BindableAttribute?displayProperty=nameWithType> attribute on properties.</span></span> <span data-ttu-id="cc188-119">Bu, XAML derleyicisinin gerekli arama bilgilerini oluşturmasına ve default. RD. xml dosyasında bir çalışma zamanı yönergesi gerektirmesine neden olur.</span><span class="sxs-lookup"><span data-stu-id="cc188-119">This causes the XAML compiler to generate the required lookup information and avoids requiring a runtime directive in the Default.rd.xml file.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2ae66-120">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="2ae66-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="cc188-120">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="cc188-120">See also</span></span>
 
-- [<span data-ttu-id="2ae66-121">Başlarken</span><span class="sxs-lookup"><span data-stu-id="2ae66-121">Getting Started</span></span>](../../../docs/framework/net-native/getting-started-with-net-native.md)
-- [<span data-ttu-id="2ae66-122">Örnek: Dinamik programlama sorunlarını giderme</span><span class="sxs-lookup"><span data-stu-id="2ae66-122">Example: Troubleshooting Dynamic Programming</span></span>](../../../docs/framework/net-native/example-troubleshooting-dynamic-programming.md)
+- [<span data-ttu-id="cc188-121">Başlarken</span><span class="sxs-lookup"><span data-stu-id="cc188-121">Getting Started</span></span>](../../../docs/framework/net-native/getting-started-with-net-native.md)
+- [<span data-ttu-id="cc188-122">Örnek: Dinamik programlama sorunlarını giderme</span><span class="sxs-lookup"><span data-stu-id="cc188-122">Example: Troubleshooting Dynamic Programming</span></span>](../../../docs/framework/net-native/example-troubleshooting-dynamic-programming.md)

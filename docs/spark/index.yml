@@ -1,33 +1,56 @@
-### YamlMime:YamlDocument
-documentType: LandingData
+### YamlMime:Landing
 title: Apache Spark belgeleri için .NET
+summary: .NET kodu yazdığınız her yerde Apache Spark veri, gerçek zamanlı akış, makine öğrenimi ve geçici sorgular işlemek için Apache Spark .NET kullanmayı öğrenin.
 metadata:
-  document_id: na
-  title: 'Apache Spark belgeleri için .NET-öğreticiler, API başvurusu'
-  meta.description: 'Learn how to use .NET for Apache Spark, the .NET bindings for Spark written on the Spark interop layer. You can process batches of data, real-time streams, machine learning, and ad-hoc query with Apache Spark anywhere you write .NET code.'
-  ms.prod: dotnet-spark
+  title: Apache Spark belgeleri için .NET
+  description: .NET kodu yazdığınız her yerde Apache Spark veri, gerçek zamanlı akış, makine öğrenimi ve geçici sorgular işlemek için Apache Spark .NET kullanmayı öğrenin.
+  services: service
+  ms.service: dotnet-spark
   ms.topic: landing-page
-  ms.date: 05/17/2019
-  ms.author: mamccrea
+  ms.collection: collection
   author: mamccrea
-abstract:
-  description: 'Spark birlikte çalışma katmanında yazılan Spark için .NET bağlamalarını Apache Spark için .NET kullanmayı öğrenin. .NET kodu yazdığınız her yerde Apache Spark veri, gerçek zamanlı akış, makine öğrenimi ve geçici sorgu toplu işlem işlemleri yapabilirsiniz. Öğreticiler, kod örnekleri, API başvurusu ve diğer belgeler size nasıl yapılacağını göstermektedir.'
-sections:
-  - title: Adım adım öğreticiler
-    items:
-      - type: paragraph
-        text: 'Apache Spark gücünü .NET uygulamalarınıza taşıyın:'
-      - type: list
-        style: unordered
-        items:
-          - html: <a href="/dotnet/spark/tutorials/get-started">Apache Spark için .NET ile çalışmaya başlama</a>
-          - html: <a href="/dotnet/spark/tutorials/hdinsight-deployment">Azure HDInsight 'a bir .NET Apache Spark uygulaması dağıtma</a>
-          - html: <a href="/dotnet/spark/tutorials/amazon-emr-spark-deployment">Amazon EMR Spark için bir .NET Apache Spark uygulaması dağıtma</a>
-          - html: <a href="/dotnet/spark/tutorials/databricks-deployment">Databricks 'e Apache Spark uygulamasına yönelik bir .NET dağıtımı</a>
-  - title: Başvuru ve kaynaklar
-    items:
-      - type: list
-        style: unordered
-        items:
-          - html: <a href="/dotnet/api/?view=spark-dotnet">Apache Spark API 'SI için .NET</a>
-          - html: '<a href="https://github.com/dotnet/spark">Git hub ''da Apache Spark için .NET</a>'
+  ms.author: mamccrea
+  ms.date: 09/11/2019
+  ms.openlocfilehash: 9836e97aa2a958792fe95c8a1241d284ef860c45
+  ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+  ms.translationtype: MT
+  ms.contentlocale: tr-TR
+  ms.lasthandoff: 09/12/2019
+  ms.locfileid: "70928510"
+landingContent:
+- title: Apache Spark için .NET hakkında
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Apache Spark için .NET nedir?
+      url: what-is-apache-spark-dotnet.md
+  - linkListType: reference
+    links:
+    - text: API Başvurusu
+      url: /dotnet/api/?view=spark-dotnet
+    - text: GitHub
+      url: https://github.com/dotnet/spark
+- title: Kullanmaya başlayın
+  linkLists:
+  - linkListType: tutorial
+    links:
+    - text: Apache Spark için .NET ile çalışmaya başlama
+      url: tutorials/get-started.md
+  - linkListType: learn
+    links:
+    - text: Windows veya Linux 'ta 10 dakika içinde çalışmaya başlama
+      url: https://dotnet.microsoft.com/learn/data/spark-tutorial/intro
+- title: .NET Apache Spark uygulamanızı dağıtma
+  linkLists:
+  - linkListType: deploy
+    links:
+    - text: Azure HDInsight’a dağıtma
+      url: tutorials/hdinsight-deployment.md
+    - text: AWS EMR Spark’a dağıtma
+      url: tutorials/amazon-emr-spark-deployment.md
+    - text: Databricks’e dağıtma
+      url: tutorials/databricks-deployment.md
+  - linkListType: how-to-guide
+    links:
+    - text: Uygulamanızda hata ayıklama
+      url: how-to-guides/debug.md

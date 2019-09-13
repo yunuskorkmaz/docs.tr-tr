@@ -1,5 +1,5 @@
 ---
-title: 'Öğretici: Bir Windows Communication Foundation istemcisi kullanma'
+title: 'Öğretici: Windows Communication Foundation istemcisi kullanma'
 ms.date: 03/19/2019
 helpviewer_keywords:
 - WCF clients [WCF], using
@@ -7,32 +7,34 @@ dev_langs:
 - CSharp
 - VB
 ms.assetid: 190349fc-0573-49c7-bb85-8e316df7f31f
-ms.openlocfilehash: fa9aa3612a8dc72623fc4ea4b1ea337ac773fa26
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5c280933c81ef54ba58181e3005e30775b9b8e42
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61928849"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928895"
 ---
-# <a name="tutorial-use-a-windows-communication-foundation-client"></a><span data-ttu-id="edd52-102">Öğretici: Bir Windows Communication Foundation istemcisi kullanma</span><span class="sxs-lookup"><span data-stu-id="edd52-102">Tutorial: Use a Windows Communication Foundation client</span></span>
+# <a name="tutorial-use-a-windows-communication-foundation-client"></a><span data-ttu-id="3fcf3-102">Öğretici: Windows Communication Foundation istemcisi kullanma</span><span class="sxs-lookup"><span data-stu-id="3fcf3-102">Tutorial: Use a Windows Communication Foundation client</span></span>
 
-<span data-ttu-id="edd52-103">Bu öğreticide, temel Windows Communication Foundation (WCF) uygulaması oluşturmak için gereken beş görev son açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="edd52-103">This tutorial describes the last of five tasks required to create a basic Windows Communication Foundation (WCF) application.</span></span> <span data-ttu-id="edd52-104">Öğreticiler genel bakış için bkz. [Öğreticisi: Windows Communication Foundation uygulamalarla çalışmaya başlama](getting-started-tutorial.md).</span><span class="sxs-lookup"><span data-stu-id="edd52-104">For an overview of the tutorials, see [Tutorial: Get started with Windows Communication Foundation applications](getting-started-tutorial.md).</span></span>
+<span data-ttu-id="3fcf3-103">Bu öğreticide, temel Windows Communication Foundation (WCF) uygulaması oluşturmak için gereken beş görevin son açıklaması açıklanır.</span><span class="sxs-lookup"><span data-stu-id="3fcf3-103">This tutorial describes the last of five tasks required to create a basic Windows Communication Foundation (WCF) application.</span></span> <span data-ttu-id="3fcf3-104">Öğreticilere genel bakış için bkz [. Öğretici: Windows Communication Foundation uygulamaları](getting-started-tutorial.md)ile çalışmaya başlayın.</span><span class="sxs-lookup"><span data-stu-id="3fcf3-104">For an overview of the tutorials, see [Tutorial: Get started with Windows Communication Foundation applications](getting-started-tutorial.md).</span></span>
 
-<span data-ttu-id="edd52-105">Oluşturduğunuz ve Windows Communication Foundation (WCF) proxy yapılandırılan sonra bir istemci örneği oluşturun ve istemci uygulamayı derleyin.</span><span class="sxs-lookup"><span data-stu-id="edd52-105">After you've created and configured a Windows Communication Foundation (WCF) proxy, you create a client instance and compile the client application.</span></span> <span data-ttu-id="edd52-106">Ardından, WCF Hizmeti ile iletişim kurmak için kullanabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="edd52-106">You then use it to communicate with the WCF service.</span></span> 
+<span data-ttu-id="3fcf3-105">Bir Windows Communication Foundation (WCF) proxy oluşturup yapılandırdıktan sonra, bir istemci örneği oluşturup istemci uygulamasını derleyebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="3fcf3-105">After you've created and configured a Windows Communication Foundation (WCF) proxy, you create a client instance and compile the client application.</span></span> <span data-ttu-id="3fcf3-106">Daha sonra WCF hizmeti ile iletişim kurmak için kullanabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="3fcf3-106">You then use it to communicate with the WCF service.</span></span> 
 
-<span data-ttu-id="edd52-107">Bu öğreticide şunların nasıl yapıladığını öğreneceksiniz:</span><span class="sxs-lookup"><span data-stu-id="edd52-107">In this tutorial, you learn how to:</span></span>
+<span data-ttu-id="3fcf3-107">Bu öğreticide şunların nasıl yapıladığını öğreneceksiniz:</span><span class="sxs-lookup"><span data-stu-id="3fcf3-107">In this tutorial, you learn how to:</span></span>
 > [!div class="checklist"]
-> - <span data-ttu-id="edd52-108">WCF istemcisini kullanmak için kodu ekleyin.</span><span class="sxs-lookup"><span data-stu-id="edd52-108">Add code to use the WCF client.</span></span>
-> - <span data-ttu-id="edd52-109">WCF istemcisini test edin.</span><span class="sxs-lookup"><span data-stu-id="edd52-109">Test the WCF client.</span></span>
+>
+> - <span data-ttu-id="3fcf3-108">WCF istemcisini kullanmak için kod ekleyin.</span><span class="sxs-lookup"><span data-stu-id="3fcf3-108">Add code to use the WCF client.</span></span>
+> - <span data-ttu-id="3fcf3-109">WCF istemcisini test edin.</span><span class="sxs-lookup"><span data-stu-id="3fcf3-109">Test the WCF client.</span></span>
 
-## <a name="add-code-to-use-the-wcf-client"></a><span data-ttu-id="edd52-110">WCF istemcisini kullanmak için kodu ekleyin</span><span class="sxs-lookup"><span data-stu-id="edd52-110">Add code to use the WCF client</span></span>
+## <a name="add-code-to-use-the-wcf-client"></a><span data-ttu-id="3fcf3-110">WCF istemcisini kullanmak için kod ekleme</span><span class="sxs-lookup"><span data-stu-id="3fcf3-110">Add code to use the WCF client</span></span>
 
-<span data-ttu-id="edd52-111">İstemci kodu, aşağıdaki adımları gerçekleştirir:</span><span class="sxs-lookup"><span data-stu-id="edd52-111">The client code does the following steps:</span></span>
-- <span data-ttu-id="edd52-112">WCF istemcisi örneği oluşturur.</span><span class="sxs-lookup"><span data-stu-id="edd52-112">Instantiates the WCF client.</span></span>
-- <span data-ttu-id="edd52-113">Hizmet işlemleri üretilen Ara sunucuya çağırır.</span><span class="sxs-lookup"><span data-stu-id="edd52-113">Calls the service operations from the generated proxy.</span></span>
-- <span data-ttu-id="edd52-114">İşlem çağrısı tamamlandıktan sonra istemci kapatır.</span><span class="sxs-lookup"><span data-stu-id="edd52-114">Closes the client after the operation call is completed.</span></span>
+<span data-ttu-id="3fcf3-111">İstemci kodu aşağıdaki adımları yapar:</span><span class="sxs-lookup"><span data-stu-id="3fcf3-111">The client code does the following steps:</span></span>
 
-<span data-ttu-id="edd52-115">Açık **Program.cs** veya **Module1.vb** dosya **GettingStartedClient** proje ve onun kodu aşağıdaki kodla değiştirin:</span><span class="sxs-lookup"><span data-stu-id="edd52-115">Open the **Program.cs** or **Module1.vb** file from the **GettingStartedClient** project and replace its code with the following code:</span></span>
+- <span data-ttu-id="3fcf3-112">WCF istemcisini başlatır.</span><span class="sxs-lookup"><span data-stu-id="3fcf3-112">Instantiates the WCF client.</span></span>
+- <span data-ttu-id="3fcf3-113">Oluşturulan proxy 'den hizmet işlemlerini çağırır.</span><span class="sxs-lookup"><span data-stu-id="3fcf3-113">Calls the service operations from the generated proxy.</span></span>
+- <span data-ttu-id="3fcf3-114">İşlem çağrısı tamamlandıktan sonra istemciyi kapatır.</span><span class="sxs-lookup"><span data-stu-id="3fcf3-114">Closes the client after the operation call is completed.</span></span>
+
+<span data-ttu-id="3fcf3-115">**GettingStartedClient** projesinden **program.cs** veya **Module1. vb** dosyasını açın ve kodunu aşağıdaki kodla değiştirin:</span><span class="sxs-lookup"><span data-stu-id="3fcf3-115">Open the **Program.cs** or **Module1.vb** file from the **GettingStartedClient** project and replace its code with the following code:</span></span>
 
 ```csharp
 using System;
@@ -133,27 +135,27 @@ Module Module1
 End Module
 ```
 
-<span data-ttu-id="edd52-116">Bildirim `using` (görsel için C#) veya `Imports` (Visual Basic için) Imports deyimi `GettingStartedClient.ServiceReference1`.</span><span class="sxs-lookup"><span data-stu-id="edd52-116">Notice the `using` (for Visual C#) or `Imports` (for Visual Basic) statement that imports `GettingStartedClient.ServiceReference1`.</span></span> <span data-ttu-id="edd52-117">Visual Studio ile oluşturulan kodu bu açıklamayı **hizmet Başvurusu Ekle** işlevi.</span><span class="sxs-lookup"><span data-stu-id="edd52-117">This statement imports the code that Visual Studio generated with the **Add Service Reference** function.</span></span> <span data-ttu-id="edd52-118">Kod, WCF proxy başlatır ve hesaplayıcı hizmetini gösteren service işlemlerden her biriyle çağırır.</span><span class="sxs-lookup"><span data-stu-id="edd52-118">The code instantiates the WCF proxy and calls each of the service operations that the calculator service exposes.</span></span> <span data-ttu-id="edd52-119">Ardından, proxy kapatır ve program sona erer.</span><span class="sxs-lookup"><span data-stu-id="edd52-119">It then closes the proxy and ends the program.</span></span>
+<span data-ttu-id="3fcf3-116">İçeri aktaran `using` C# (görsel`Imports` için) veya (for Visual Basic) bildirimine dikkat edin. `GettingStartedClient.ServiceReference1`</span><span class="sxs-lookup"><span data-stu-id="3fcf3-116">Notice the `using` (for Visual C#) or `Imports` (for Visual Basic) statement that imports `GettingStartedClient.ServiceReference1`.</span></span> <span data-ttu-id="3fcf3-117">Bu ifade, Visual Studio 'Nun **hizmet başvurusu Ekle** işleviyle oluşturduğu kodu içeri aktarır.</span><span class="sxs-lookup"><span data-stu-id="3fcf3-117">This statement imports the code that Visual Studio generated with the **Add Service Reference** function.</span></span> <span data-ttu-id="3fcf3-118">Kod, WCF ara sunucusunu başlatır ve hesap makinesi hizmetinin sunduğu hizmet işlemlerinin her birini çağırır.</span><span class="sxs-lookup"><span data-stu-id="3fcf3-118">The code instantiates the WCF proxy and calls each of the service operations that the calculator service exposes.</span></span> <span data-ttu-id="3fcf3-119">Ardından, proxy 'yi kapatır ve programı sonlandırır.</span><span class="sxs-lookup"><span data-stu-id="3fcf3-119">It then closes the proxy and ends the program.</span></span>
 
-## <a name="test-the-wcf-client"></a><span data-ttu-id="edd52-120">WCF istemcisini test etme</span><span class="sxs-lookup"><span data-stu-id="edd52-120">Test the WCF client</span></span>
+## <a name="test-the-wcf-client"></a><span data-ttu-id="3fcf3-120">WCF istemcisini test etme</span><span class="sxs-lookup"><span data-stu-id="3fcf3-120">Test the WCF client</span></span>
 
-### <a name="test-the-application-from-visual-studio"></a><span data-ttu-id="edd52-121">Uygulamayı Visual Studio'dan Test etme</span><span class="sxs-lookup"><span data-stu-id="edd52-121">Test the application from Visual Studio</span></span>
+### <a name="test-the-application-from-visual-studio"></a><span data-ttu-id="3fcf3-121">Uygulamayı Visual Studio 'dan test etme</span><span class="sxs-lookup"><span data-stu-id="3fcf3-121">Test the application from Visual Studio</span></span>
 
-1. <span data-ttu-id="edd52-122">Kaydet ve Çözümü derleyin.</span><span class="sxs-lookup"><span data-stu-id="edd52-122">Save and build the solution.</span></span>
+1. <span data-ttu-id="3fcf3-122">Çözümü kaydedin ve oluşturun.</span><span class="sxs-lookup"><span data-stu-id="3fcf3-122">Save and build the solution.</span></span>
 
-2. <span data-ttu-id="edd52-123">Seçin **GettingStartedLib** klasöre tıklayın ve ardından **başlangıç projesi olarak ayarla** kısayol menüsünden.</span><span class="sxs-lookup"><span data-stu-id="edd52-123">Select the **GettingStartedLib** folder, and then select **Set as Startup Project** from the shortcut menu.</span></span>
+2. <span data-ttu-id="3fcf3-123">**GettingStartedLib** klasörünü seçin ve ardından kısayol menüsünde **Başlangıç projesi olarak ayarla** ' yı seçin.</span><span class="sxs-lookup"><span data-stu-id="3fcf3-123">Select the **GettingStartedLib** folder, and then select **Set as Startup Project** from the shortcut menu.</span></span>
 
-3. <span data-ttu-id="edd52-124">Gelen **başlangıç projelerini**seçin **GettingStartedLib** aşağı açılan listeden seçip **çalıştırma** veya basın **F5**.</span><span class="sxs-lookup"><span data-stu-id="edd52-124">From **Startup Projects**, select **GettingStartedLib** from the drop-down list, then select **Run** or press **F5**.</span></span>
+3. <span data-ttu-id="3fcf3-124">**Başlangıç projeleri**' nden, açılan listeden **GettingStartedLib** ' i seçin, sonra **Çalıştır** ' ı seçin veya **F5**tuşuna basın.</span><span class="sxs-lookup"><span data-stu-id="3fcf3-124">From **Startup Projects**, select **GettingStartedLib** from the drop-down list, then select **Run** or press **F5**.</span></span>
 
-### <a name="test-the-application-from-a-command-prompt"></a><span data-ttu-id="edd52-125">Bir komut isteminden uygulamayı test etme</span><span class="sxs-lookup"><span data-stu-id="edd52-125">Test the application from a command prompt</span></span>
+### <a name="test-the-application-from-a-command-prompt"></a><span data-ttu-id="3fcf3-125">Uygulamayı bir komut isteminden test etme</span><span class="sxs-lookup"><span data-stu-id="3fcf3-125">Test the application from a command prompt</span></span>
 
-1. <span data-ttu-id="edd52-126">Bir yönetici olarak bir komut istemi açın ve ardından, Visual Studio çözüm dizinine gidin.</span><span class="sxs-lookup"><span data-stu-id="edd52-126">Open a command prompt as an administrator, and then navigate to your Visual Studio solution directory.</span></span> 
+1. <span data-ttu-id="3fcf3-126">Yönetici olarak bir komut istemi açın ve ardından Visual Studio çözüm dizininize gidin.</span><span class="sxs-lookup"><span data-stu-id="3fcf3-126">Open a command prompt as an administrator, and then navigate to your Visual Studio solution directory.</span></span> 
 
-2. <span data-ttu-id="edd52-127">Hizmeti başlatmak için: Girin *GettingStartedHost\bin\Debug\GettingStartedHost.exe*.</span><span class="sxs-lookup"><span data-stu-id="edd52-127">To start the service: Enter *GettingStartedHost\bin\Debug\GettingStartedHost.exe*.</span></span>
+2. <span data-ttu-id="3fcf3-127">Hizmeti başlatmak için: *Gettingstartedhost\bin\debug\gettingstartedhost.exe*girin.</span><span class="sxs-lookup"><span data-stu-id="3fcf3-127">To start the service: Enter *GettingStartedHost\bin\Debug\GettingStartedHost.exe*.</span></span>
 
-3. <span data-ttu-id="edd52-128">İstemcisini başlatmak için: Başka bir komut istemi açın, Visual Studio çözüm dizinine gidin ve ardından girin *GettingStartedClient\bin\Debug\GettingStartedClient.exe*.</span><span class="sxs-lookup"><span data-stu-id="edd52-128">To start the client: Open another command prompt, navigate to your Visual Studio solution directory, then enter *GettingStartedClient\bin\Debug\GettingStartedClient.exe*.</span></span>
+3. <span data-ttu-id="3fcf3-128">İstemcisini başlatmak için: Başka bir komut istemi açın, Visual Studio çözüm dizininize gidin ve *Gettingstartedclient\bin\debug\gettingstartedclient.exe*yazın.</span><span class="sxs-lookup"><span data-stu-id="3fcf3-128">To start the client: Open another command prompt, navigate to your Visual Studio solution directory, then enter *GettingStartedClient\bin\Debug\GettingStartedClient.exe*.</span></span>
 
-   <span data-ttu-id="edd52-129">*GettingStartedHost.exe* aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="edd52-129">*GettingStartedHost.exe* produces the following output:</span></span>
+   <span data-ttu-id="3fcf3-129">*GettingStartedHost. exe* aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="3fcf3-129">*GettingStartedHost.exe* produces the following output:</span></span>
 
    ```text
    The service is ready.
@@ -169,7 +171,7 @@ End Module
    Return: 3.14285714285714
    ```
 
-   <span data-ttu-id="edd52-130">*GettingStartedClient.exe* aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="edd52-130">*GettingStartedClient.exe* produces the following output:</span></span>
+   <span data-ttu-id="3fcf3-130">*GettingStartedClient. exe* aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="3fcf3-130">*GettingStartedClient.exe* produces the following output:</span></span>
 
    ```text
    Add(100,15.99) = 115.99
@@ -180,16 +182,17 @@ End Module
    Press <Enter> to terminate the client.
    ```
 
-## <a name="next-steps"></a><span data-ttu-id="edd52-131">Sonraki adımlar</span><span class="sxs-lookup"><span data-stu-id="edd52-131">Next steps</span></span>
+## <a name="next-steps"></a><span data-ttu-id="3fcf3-131">Sonraki adımlar</span><span class="sxs-lookup"><span data-stu-id="3fcf3-131">Next steps</span></span>
 
-<span data-ttu-id="edd52-132">WCF başlangıç Öğreticisi artık tüm görevleri tamamladınız.</span><span class="sxs-lookup"><span data-stu-id="edd52-132">You've now completed all the tasks in the WCF get started tutorial.</span></span> <span data-ttu-id="edd52-133">Bu öğreticide, şunların nasıl yapıldığını öğrendiniz:</span><span class="sxs-lookup"><span data-stu-id="edd52-133">In this tutorial, you learned how to:</span></span>
+<span data-ttu-id="3fcf3-132">Artık WCF başlangıç öğreticisindeki tüm görevleri tamamladınız.</span><span class="sxs-lookup"><span data-stu-id="3fcf3-132">You've now completed all the tasks in the WCF get started tutorial.</span></span> <span data-ttu-id="3fcf3-133">Bu öğreticide, şunların nasıl yapıldığını öğrendiniz:</span><span class="sxs-lookup"><span data-stu-id="3fcf3-133">In this tutorial, you learned how to:</span></span>
 
-<span data-ttu-id="edd52-134">Bu öğreticide şunların nasıl yapıladığını öğreneceksiniz:</span><span class="sxs-lookup"><span data-stu-id="edd52-134">In this tutorial, you learn how to:</span></span>
+<span data-ttu-id="3fcf3-134">Bu öğreticide şunların nasıl yapıladığını öğreneceksiniz:</span><span class="sxs-lookup"><span data-stu-id="3fcf3-134">In this tutorial, you learn how to:</span></span>
 > [!div class="checklist"]
-> - <span data-ttu-id="edd52-135">WCF istemcisini kullanmak için kodu ekleyin.</span><span class="sxs-lookup"><span data-stu-id="edd52-135">Add code to use the WCF client.</span></span>
-> - <span data-ttu-id="edd52-136">WCF istemcisini test edin.</span><span class="sxs-lookup"><span data-stu-id="edd52-136">Test the WCF client.</span></span>
+>
+> - <span data-ttu-id="3fcf3-135">WCF istemcisini kullanmak için kod ekleyin.</span><span class="sxs-lookup"><span data-stu-id="3fcf3-135">Add code to use the WCF client.</span></span>
+> - <span data-ttu-id="3fcf3-136">WCF istemcisini test edin.</span><span class="sxs-lookup"><span data-stu-id="3fcf3-136">Test the WCF client.</span></span>
 
-<span data-ttu-id="edd52-137">Sorunlar veya hatalar adımların hiçbirini varsa, bunları gidermek için sorun giderme makalesindeki adımları izleyin.</span><span class="sxs-lookup"><span data-stu-id="edd52-137">If you have problems or errors in any of the steps, follow the steps in the troubleshooting article to fix them.</span></span>
+<span data-ttu-id="3fcf3-137">Adımlardan birinde sorun veya hatalar varsa, bunları gidermek için sorun giderme makalesindeki adımları izleyin.</span><span class="sxs-lookup"><span data-stu-id="3fcf3-137">If you have problems or errors in any of the steps, follow the steps in the troubleshooting article to fix them.</span></span>
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="edd52-138">Sorun giderme Get ile WCF Eğitmenleri</span><span class="sxs-lookup"><span data-stu-id="edd52-138">Troubleshoot the Get started with WCF tutorials</span></span>](troubleshooting-the-getting-started-tutorial.md)
+> [<span data-ttu-id="3fcf3-138">WCF öğreticileri ile çalışmaya başlama hakkında sorun giderme</span><span class="sxs-lookup"><span data-stu-id="3fcf3-138">Troubleshoot the Get started with WCF tutorials</span></span>](troubleshooting-the-getting-started-tutorial.md)
