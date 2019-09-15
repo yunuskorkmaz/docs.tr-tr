@@ -2,12 +2,12 @@
 title: dotnet restore komutu
 description: Dotnet restore komutuyla bağımlılıkları ve projeye özel araçları nasıl geri yükleyeceğinizi öğrenin.
 ms.date: 05/29/2018
-ms.openlocfilehash: 567316e98e161a7645db6bf55a03c3c006999fa9
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 1e0e1fbf6ab5f595773a072242440e30865fed16
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70893290"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969765"
 ---
 # <a name="dotnet-restore"></a>dotnet restore
 
@@ -18,6 +18,8 @@ ms.locfileid: "70893290"
 `dotnet restore`-Bir projenin bağımlılıklarını ve araçlarını geri yükler.
 
 ## <a name="synopsis"></a>Özeti
+
+<!-- markdownlint-disable MD025 -->
 
 # <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2. x](#tab/netcore2x)
 

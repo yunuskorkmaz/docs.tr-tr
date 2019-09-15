@@ -9,12 +9,12 @@ helpviewer_keywords:
 - container tags, <codeBase> element
 - codeBase element
 ms.assetid: d48a3983-2297-43ff-a14d-1f29d3995822
-ms.openlocfilehash: bd170b817c5ccc337711f8f79968653c29f3eda4
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 475b7df55ed509157c1da0aeb8f979de238c72b5
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252740"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971885"
 ---
 # <a name="codebase-element"></a>\<codeBase > öğesi
 
@@ -94,7 +94,7 @@ Aşağıdaki örnek, çalışma zamanının bir derlemeyi bulabileceği yeri nas
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Çalışma Zamanı Ayarları Şeması](index.md)
-- [Yapılandırma Dosyası Şeması](../index.md)
-- [Bütünleştirilmiş Kodun Konumunu Belirtme](../../specify-assembly-location.md)
-- [Çalışma Zamanının Bütünleştirilmiş Kodların Konumunu Bulması](../../../deployment/how-the-runtime-locates-assemblies.md)
+- [Çalışma zamanı ayarları şeması](index.md)
+- [Yapılandırma dosyası şeması](../index.md)
+- [Bir derlemenin konumunu belirtin](../../../../standard/assembly/location.md)
+- [Çalışma zamanının derlemeleri nasıl konumlandırır](../../../deployment/how-the-runtime-locates-assemblies.md)

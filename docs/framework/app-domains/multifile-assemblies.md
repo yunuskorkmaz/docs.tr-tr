@@ -1,6 +1,6 @@
 ---
-title: Birden Çok Dosya Derlemeleri
-ms.date: 03/30/2017
+title: Çoklu dosya derlemeleri
+ms.date: 08/20/2019
 helpviewer_keywords:
 - assemblies [.NET Framework], multifile
 - entry point for assembly
@@ -12,36 +12,36 @@ helpviewer_keywords:
 ms.assetid: 13509e73-db77-4645-8165-aad8dfaedff6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 862fc7012c2c5c84a163d6716dfeb4b97f00cbcd
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: b4c288a54194e89eb90b6ac512cf45184376e952
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634172"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971872"
 ---
-# <a name="multifile-assemblies"></a>Birden Çok Dosya Derlemeleri
+# <a name="multifile-assemblies"></a>Çoklu dosya derlemeleri
 
-Visual C++ ile komut satırı derleyicilerini veya Visual Studio kullanan çok dosyalı derlemeleri oluşturabilirsiniz. Derlemedeki bir dosya, derleme bildirimi içermelidir. Bir uygulamayı başlatan bir derleme ana veya WinMain yöntemi gibi bir giriş noktası da içermelidir.
+Komut satırı derleyicileri veya Visual C++Studio 'yu kullanarak .NET Framework hedefleyen çok dosyalı derlemeler oluşturabilirsiniz. Derlemedeki bir dosyanın derleme bildirimini içermesi gerekir. Bir uygulamayı başlatan bir derleme, `Main` ya `WinMain` da yöntemi gibi bir giriş noktası içermelidir.
 
-Örneğin, iki kod modülleri, Client.cs ve Stringer.cs içeren bir uygulama olduğunu varsayalım. Stringer.cs oluşturur `myStringer` Client.cs kod tarafından başvurulan ad alanı. Client.cs içeren `Main` uygulamanın giriş noktası olan yöntem. Bu örnekte, iki kod modülleri derleyin ve ardından uygulamayı başlatan derleme bildirimini içeren üçüncü bir dosya oluşturun. Derleme bildirimi hem de başvuruda `Client` ve `Stringer` modüller.
+Örneğin, *Client.cs* ve *Stringer.cs*olmak üzere iki kod modülü içeren bir uygulamanız olduğunu varsayalım. *Stringer.cs* , `myStringer` *Client.cs*içindeki kod tarafından başvurulan ad alanını oluşturur. *Client.cs* , uygulamanın `Main` giriş noktası olan yöntemini içerir. Bu örnekte, iki kod modülünü derler ve ardından uygulamayı başlatan derleme bildirimini içeren üçüncü bir dosya oluşturursunuz. Derleme bildirimi hem *istemci* hem de *stru* modüllerine başvurur.
 
 > [!NOTE]
-> Derlemenin birden çok kod modülleri olsa bile, birden çok dosya derlemeleri yalnızca bir giriş noktası olabilir.
+> Çok dosyalı derlemeler, derleme birden fazla kod modüllerine sahip olsa bile yalnızca bir giriş noktasına sahip olabilir.
 
-Bir çoklu dosya derlemesi oluşturmak isteyebileceğiniz birkaç neden vardır:
+Çok dosyalı bir derleme oluşturmak isteyebileceğiniz birkaç neden vardır:
 
-- Farklı dillerde yazılan modülleri birleştirmek için. Bir çoklu dosya derlemesi oluşturmak için en yaygın nedeni budur.
+- Farklı dillerde yazılmış modülleri birleştirmek için. Bu, çok dosyalı bir derleme oluşturmanın en yaygın nedenidir.
 
-- Nadiren kullanılan türleri yalnızca gerektiğinde indirilen bir modülün yerleştirerek bir uygulamanın indirilmesini optimize için.
+- Nadiren kullanılan türleri yalnızca gerektiğinde indirilen bir modüle yerleştirerek, bir uygulamayı indirmeyi iyileştirmek için.
 
     > [!NOTE]
-    > Kullanılarak indirilen uygulamalar oluşturuyorsanız `<object>` etiketi Microsoft Internet Explorer kullanarak, çok dosyalı derlemeler oluşturmak önemlidir. Bu senaryoda, bir dosya yalnızca derleme bildirimi içeren kod modüllerinizi ayrı da oluşturun. Internet Explorer, derleme bildirimi ilk indirir ve ardından herhangi bir ek modüller veya gerekli derlemeleri yüklemek için çalışan iş parçacığı oluşturur. Internet Explorer, derleme bildirimini içeren dosya karşıdan yüklenirken kullanıcı girişine yanıt vermeyen olacaktır. Daha küçük derleme bildirimini içeren dosyayı, daha az zaman Internet Explorer yanıt vermeyen olacaktır.
+    > Microsoft Internet Explorer ile `<object>` etiketi kullanılarak indirilecek uygulamalar oluşturuyorsanız, çok dosyalı derlemeler oluşturmanız önemlidir. Bu senaryoda, yalnızca derleme bildirimini içeren kod modüllerinizden ayrı bir dosya oluşturursunuz. Internet Explorer önce derleme bildirimini indirir ve ardından gereken ek modülleri veya derlemeleri indirmek için çalışan iş parçacıkları oluşturur. Derleme bildirimini içeren dosya indirilirken, Internet Explorer kullanıcı girişine yanıt vermez. Derleme bildirimini içeren dosya ne kadar küçükse Internet Explorer yanıt vermemeye karşı daha az zaman olur.
 
-- Birden fazla geliştirici tarafından yazılan modülleri birleştirmek için. Her geliştirici her kod modülü bir derlemenin içine derleyebilirsiniz olsa da, bu tüm modüller, bir çoklu dosya derlemesi koyarsanız gösterilmez genel olarak açığa için bazı türleri zorlayabilirsiniz.
+- Çeşitli geliştiriciler tarafından yazılan kod modüllerini birleştirmek için. Her geliştirici her kod modülünü bir derlemede derleyebilse de, bu, tüm modüller çok dosyalı bir derlemeye yerleştirilse, bazı türlerin herkese açık bir şekilde gösterilmesini zorlayabilir.
 
-Derleme oluşturduktan sonra derleme bildirimini içeren dosyayı imzalayabilirsiniz (ve bu nedenle derleme), dosya (ve derleme) güçlü bir ad verin ve genel derleme önbelleğinde yerleştirin.
+Derlemeyi oluşturduktan sonra, derleme bildirimini içeren dosyayı imzalayabilir ve bu nedenle derleme yapabilir ya da dosyaya ve derlemeye tanımlayıcı bir ad verebilir ve bunu genel derleme önbelleğine yerleştirebilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapılır: Bir çoklu dosya derlemesi oluşturun](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)
-- [Bütünleştirilmiş Kodlarla Programlama](../../../docs/framework/app-domains/programming-with-assemblies.md)
+- [Nasıl yapılır: Çoklu dosya derlemesi oluşturma](build-multifile-assembly.md)
+- [Bütünleştirilmiş kod içeren program](../../standard/assembly/program.md)

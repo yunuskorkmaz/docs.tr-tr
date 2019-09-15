@@ -7,75 +7,75 @@ helpviewer_keywords:
 - Visual Basic code, walkthroughs
 - walkthroughs [Visual Basic]
 ms.assetid: e4e1f849-e1ce-4cf7-8483-d9b4c4887a8e
-ms.openlocfilehash: 47c79b8d716be6c247be3ec66c9ef00fbc021973
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 939439014e8f43d01e6b15c835c920496af448b8
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586276"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70970767"
 ---
 # <a name="visual-basic-language-walkthroughs"></a>Visual Basic Dili İzlenecek Yolu
-İzlenecek yollar, bunları ürün veya belirli bir özellik alanı hakkında öğrenmeye başlayın için iyi bir yer sağlar ortak senaryolar için adım adım yönergeler sağlar.  
+İzlenecek yollar, yaygın senaryolar için adım adım yönergeler sunarak ürün veya belirli bir özellik alanı hakkında öğrenmeye başlamak için iyi bir yer sunar.  
   
- [Zaman uyumsuz programı yazma](./programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
- Zaman uyumsuz bir çözüm kullanarak oluşturma işlemi gösterilmektedir [zaman uyumsuz](../visual-basic/language-reference/modifiers/async.md) ve [Await](../visual-basic/language-reference/operators/await-operator.md).  
+ [Zaman uyumsuz program yazma](./programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
+ [Async](language-reference/modifiers/async.md) ve [await](language-reference/operators/await-operator.md)kullanarak zaman uyumsuz bir çözümün nasıl oluşturulacağını gösterir.  
   
- [Olay bildirme ve oluşturma](../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md)  
- Olayları nasıl bildirilen ve Visual Basic'te yükseltilmiş göstermektedir.  
+ [Olayları bildirme ve oluşturma](programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md)  
+ Visual Basic ' de olayların nasıl bildirilip yapıldığını gösterir.  
   
- [Olayları işleme](../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md)  
- Standart kullanarak olayların nasıl işleneceğini gösterir `WithEvents` anahtar sözcüğü veya yeni `AddHandler` / `RemoveHandler` anahtar sözcükleri.  
+ [Olayları işleme](programming-guide/language-features/events/walkthrough-handling-events.md)  
+ Standart `WithEvents` anahtar sözcüğü ya da yeni `AddHandler` / `RemoveHandler` anahtar sözcükleri kullanarak olayların nasıl işleneceğini gösterir.  
   
- [Oluşturma ve arabirimleri uygulama](../visual-basic/programming-guide/language-features/interfaces/walkthrough-creating-and-implementing-interfaces.md)  
- Arabirimleri bildirilen ve Visual Basic'te uygulanan nasıl gösterir.  
+ [Arabirimleri oluşturma ve uygulama](programming-guide/language-features/interfaces/walkthrough-creating-and-implementing-interfaces.md)  
+ Arabirimlerin Visual Basic nasıl bildirildiği ve uygulandığını gösterir.  
   
- [Sınıfları tanımlama](../visual-basic/programming-guide/language-features/objects-and-classes/walkthrough-defining-classes.md)  
- Bir sınıf ve onun alanları, özellikleri, yöntemleri ve olayları bildirmek açıklar.  
+ [Sınıfları tanımlama](programming-guide/language-features/objects-and-classes/walkthrough-defining-classes.md)  
+ Bir sınıfın ve alanlarını, özelliklerini, yöntemlerini ve olaylarını nasıl tanımlayabileceğinizi açıklar.  
   
- [Visual Basic'de sorgu yazma](../visual-basic/programming-guide/concepts/linq/walkthrough-writing-queries.md)  
- Yazmak için Visual Basic dil özellikleri nasıl kullanabileceğinizi gösteren [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] sorgu ifadelerinde.  
+ [Visual Basic sorguları yazma](programming-guide/concepts/linq/walkthrough-writing-queries.md)  
+ Sorgu ifadeleri yazmak [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] için Visual Basic dil özelliklerini nasıl kullanabileceğinizi gösterir.  
   
- [Visual Basic'te IEnumerable(Of T) uygulama](../visual-basic/programming-guide/language-features/control-flow/walkthrough-implementing-ienumerable-of-t.md)  
- Uygulayan bir sınıf oluşturma işlemini gösterir `IEnumerable(Of String)` arabirimi ve uygulayan bir sınıf `IEnumerator(Of String)` bir metin dosyası bir satırı okumak için arabirim.  
+ [Visual Basic 'te IEnumerable (Of T) uygulama](programming-guide/language-features/control-flow/walkthrough-implementing-ienumerable-of-t.md)  
+ `IEnumerable(Of String)` Arabirimi uygulayan bir sınıfın ve tek seferde bir metin dosyasını okumak için `IEnumerator(Of String)` arabirimi uygulayan bir sınıf oluşturmayı gösterir.  
   
- [Windows API'larını çağırma](../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)  
- Nasıl kullanılacağını açıklar `Declare` deyimleri ve Windows API çağrısı. API çağrısı ve nasıl bir API çağrısı bir sınıfın bir yöntem kullanıma sunmak için sıralama denetlemek için öznitelikleri kullanma hakkında bilgi içerir.  
+ [Windows API 'Lerini çağırma](programming-guide/com-interop/walkthrough-calling-windows-apis.md)  
+ Deyimlerinin nasıl kullanılacağını `Declare` ve Windows API 'lerinin nasıl çağrılacağını açıklar. API çağrısı için sıralama denetlemek ve bir API çağrısını bir sınıfın yöntemi olarak göstermek için özniteliklerini kullanma hakkında bilgiler içerir.  
   
- [Visual Basic ile COM nesneleri oluşturma](../visual-basic/programming-guide/com-interop/walkthrough-creating-com-objects.md)  
- Hem ile hem de COM sınıf şablonu olmadan Visual Basic'te, COM nesneleri oluşturma işlemini gösterir.  
+ [Visual Basic ile COM nesneleri oluşturma](programming-guide/com-interop/walkthrough-creating-com-objects.md)  
+ Hem hem de COM sınıfı şablonu olmadan Visual Basic COM nesnelerinin nasıl oluşturulacağını gösterir.  
   
- [COM nesnelerinde kalıtım uygulama](../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)  
- Visual Basic 6.0 bir sınıf içeren bir COM nesnesi oluşturun ve Visual Basic'te bir temel sınıf olarak kullanmak nasıl gösterir.  
+ [COM nesneleriyle devralma uygulama](programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)  
+ Sınıf içeren bir COM nesnesi oluşturmak için Visual Basic 6,0 ' nin nasıl kullanılacağını gösterir ve ardından bunu Visual Basic temel sınıf olarak kullanır.  
   
- [My.Application.log günlüğünün bilgileri nereye yazdığını belirleme](../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)  
- Varsayılan açıklar `My.Application.Log` ayarları ve uygulama ayarlarını belirleme.  
+ [My. Application. log bilgisinin nereden yazabileceğini belirleme](developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)  
+ Varsayılan `My.Application.Log` ayarları ve uygulamanızın ayarlarının nasıl belirleneceğini açıklar.  
   
- [My.Application.Log günlüğünün bilgileri yazdığı yeri değiştirme](../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)  
- Varsayılan geçersiz kılmak gösterilir `My.Application.Log` ve `My.Log` olay bilgilerini ve neden günlüğü ayarları `Log` diğer günlük dinleyicileri için yazılacak nesne.  
+ [My. Application. log dosyası yazma bilgilerini değiştirme](developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)  
+ Olay bilgilerini günlüğe kaydetmeye yönelik varsayılan `My.Application.Log` ve `My.Log` ayarların nasıl geçersiz kılınacağını ve nesnenindiğergünlükdinleyicilerineyazmasınanedenolduğunugösterir.`Log`  
   
- [My.Application.Log çıktısını filtreleme](../visual-basic/developing-apps/programming/log-info/walkthrough-filtering-my-application-log-output.md)  
- Değişiklik için filtreleme varsayılan günlüğü gösterilmektedir `My.Application.Log` nesne.  
+ [My. Application. log çıktımı filtreleniyor](developing-apps/programming/log-info/walkthrough-filtering-my-application-log-output.md)  
+ `My.Application.Log` Nesnesi için varsayılan günlük filtrelemesinin nasıl değiştirileceğini gösterir.  
   
- [Özel günlük dinleyicileri oluşturma](../visual-basic/developing-apps/programming/log-info/walkthrough-creating-custom-log-listeners.md)  
- Özel günlük dinleyiciyi oluşturun ve çıkışına dinleyecek şekilde yapılandırma gösterilmiştir `My.Application.Log` nesne.  
+ [Özel günlük dinleyicileri oluşturma](developing-apps/programming/log-info/walkthrough-creating-custom-log-listeners.md)  
+ Özel bir günlük dinleyicisinin nasıl oluşturulacağını ve `My.Application.Log` nesnenin çıkışını dinlemek için nasıl yapılandırılacağını gösterir.  
   
- [Yönetilen derlemelerden türler katıştırma](../visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-vs.md)  
- Bir derlemeyi ve bu türlerden katıştıran bir istemci programını nasıl oluşturulacağını açıklar.  
+ [Yönetilen derlemelerden tür ekleme](../standard/assembly/embed-types-visual-studio.md)  
+ Bir derlemenin ve bu türden türleri katıştıran bir istemci programının nasıl oluşturulduğunu açıklar.  
   
- [Parolaların karmaşık olduğunu doğrulama (Visual Basic)](../visual-basic/programming-guide/language-features/strings/walkthrough-validating-that-passwords-are-complex.md)  
- Güçlü parola özelliklerini kontrol edin ve bir dize parametresi başarısız olduğu hakkında bir parola denetimlerini bilgilerle güncelleştirme işleminin nasıl gösterir.  
+ [Parolaların karmaşık olduğunu doğrulama (Visual Basic)](programming-guide/language-features/strings/walkthrough-validating-that-passwords-are-complex.md)  
+ Güçlü parola özelliklerinin nasıl denetlenmesi gerektiğini ve bir dize parametresini, bir parolanın başarısız olup olmadığını kontrol eden bilgilerle güncelleştirmeyi gösterir.  
   
- [Şifreleme ve şifresini çözme Visual Basic'de dizeleri](../visual-basic/programming-guide/language-features/strings/walkthrough-encrypting-and-decrypting-strings.md)  
- Nasıl kullanılacağını gösterir <xref:System.Security.Cryptography.DESCryptoServiceProvider> şifreleme ve şifre çözme dizeleri için sınıf.  
+ [Visual Basic dizeleri şifreleme ve şifresini çözme](programming-guide/language-features/strings/walkthrough-encrypting-and-decrypting-strings.md)  
+ Dizeleri şifrelemek ve şifrelerini çözmek <xref:System.Security.Cryptography.DESCryptoServiceProvider> için sınıfını nasıl kullanacağınızı gösterir.  
   
- [Dosyaları ve klasörleri Visual Basic'te düzenleme](../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-and-directories.md)  
- Dosya, bir dosya içinde bir dize için arama hakkında bilgi belirlemek ve bir dosyaya yazmak için Visual Basic işlevleri nasıl yapılacağı açıklanır.  
+ [Visual Basic dosya ve klasörleri düzenleme](developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-and-directories.md)  
+ Bir dosya hakkındaki bilgileri öğrenmek, bir dosyada dize aramak ve dosyaya yazmak için Visual Basic işlevlerinin nasıl kullanılacağını gösterir.  
   
- [.NET Framework yöntemlerini kullanarak dosyaları düzenleme](../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)  
- Dosya, bir dosya içinde bir dize için arama hakkında bilgi belirlemek ve bir dosyaya yazmak için .NET Framework yöntemlerini nasıl yapılacağı açıklanır.  
+ [.NET Framework yöntemlerini kullanarak dosyaları düzenleme](developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)  
+ Bir dosya hakkındaki bilgileri belirlemede, dosyada dize aramak ve dosyaya yazmak için .NET Framework yöntemlerinin nasıl kullanılacağını gösterir.  
   
- [Visual Basic'te bir nesneyi kalıcı kılma](../visual-basic/programming-guide/concepts/serialization/walkthrough-persisting-an-object-in-visual-studio.md)  
- Basit bir nesne oluşturmak ve verileri bir dosyaya kalıcı hale getirmek nasıl gösterir.  
+ [Visual Basic bir nesneyi kalıcı hale getirme](programming-guide/concepts/serialization/walkthrough-persisting-an-object-in-visual-studio.md)  
+ Basit bir nesne oluşturmayı ve verilerini bir dosyaya nasıl kalıcı hale getirebileceğinizi gösterir.  
   
  [İzlenecek yol: Kullanımdan Üret Özelliği ile Önce Test Desteği](/visualstudio/ide/walkthrough-test-first-support-with-the-generate-from-usage-feature)  
- Önce test geliştirme, burada ilk birim testleri yazma ve ardından başarılı testler yapmak için kaynak kodunu yazma işlemi gösterilmektedir.
+ Öncelikle birim testlerini yazacağınız ve sonra testlerin başarılı olması için kaynak kodu yazdığınız test ilk geliştirmenin nasıl yapılacağını gösterir.

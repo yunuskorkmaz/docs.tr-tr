@@ -9,69 +9,69 @@ helpviewer_keywords:
 - certificates [WCF], making X.509 certificates accessible to WCF
 - X.509 certificates [WCF], making accessible to WCF
 ms.assetid: a54e407c-c2b5-4319-a648-60e43413664b
-ms.openlocfilehash: 3972b1c68fa4012de01d4b675523814911f6bae8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 401371bf01a62a20f2834cb76df19d9ddaacf83d
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64635009"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70972350"
 ---
 # <a name="how-to-make-x509-certificates-accessible-to-wcf"></a>Nasıl yapılır: X.509 Sertifikalarını WCF için Erişilebilir Hale Getirme
-X.509 sertifikası Windows Communication Foundation (WCF) için erişilebilir hale getirmek için uygulama kodu, sertifika deposu adını ve konumunu belirtmelisiniz. Bazı durumlarda, işlem kimliği X.509 sertifikası ile ilişkili özel anahtarı içeren dosyayı erişimi olmalıdır. Bir sertifika deposunda X.509 sertifikası ile ilişkili özel anahtarı almak için WCF, bunu yapmak için izni olmalıdır. Varsayılan olarak, bir sertifikanın özel anahtarı yalnızca sahibi ve System hesabıyla erişebilirsiniz.  
+X. 509.440 sertifikasını Windows Communication Foundation (WCF) erişilebilir hale getirmek için, uygulama kodunun sertifika depolama adını ve konumunu belirtmesi gerekir. Bazı durumlarda, işlem kimliğinin X. 509.952 sertifikasıyla ilişkili özel anahtarı içeren dosyaya erişimi olmalıdır. Bir sertifika deposundaki bir X. 509.440 sertifikasıyla ilişkili özel anahtarı almak için, WCF 'nin bunu yapması için izni olmalıdır. Varsayılan olarak, yalnızca sahip ve sistem hesabı bir sertifikanın özel anahtarına erişebilir.  
   
-### <a name="to-make-x509-certificates-accessible-to-wcf"></a>X.509 sertifikalarını WCF için erişilebilir hale getirmek için  
+### <a name="to-make-x509-certificates-accessible-to-wcf"></a>X. 509.440 sertifikalarını WCF 'ye erişilebilir hale getirmek için  
   
-1. X.509 sertifikasıyla ilişkili özel anahtarı içeren dosyayı için okuma erişimi hangi WCF altında çalıştığı hesabın verin.  
+1. WCF 'nin, X. 509.952 sertifikasıyla ilişkili özel anahtarı içeren dosyaya okuma erişiminin çalıştığı hesaba izin verin.  
   
-    1. WCF için X.509 sertifikası özel anahtarı için okuma erişimi gerekli olup olmadığını belirler.  
+    1. WCF 'nin X. 509.952 sertifikası için özel anahtara okuma erişimi gerektirip gerektirmediğini belirleme.  
   
-         Aşağıdaki tabloda, özel anahtarı kullanarak bir X.509 sertifikası olduğunda kullanılabilir olmalıdır yoksa ayrıntıları.  
+         Aşağıdaki tabloda, bir X. 509.440 sertifikası kullanılırken özel bir anahtarın kullanılabilir olup olmadığı ayrıntılı olarak verilmiştir.  
   
-        |X.509 sertifika kullan|özel anahtar|  
+        |X. 509.440 sertifika kullanımı|Özel anahtar|  
         |---------------------------|-----------------|  
-        |Giden SOAP ileti imzalamak.|Evet|  
-        |Gelen bir SOAP ileti imzası doğrulama.|Hayır|  
-        |Giden SOAP ileti şifreleme.|Hayır|  
-        |Gelen bir SOAP iletisi şifre çözme.|Evet|  
+        |Giden bir SOAP iletisini dijital olarak imzalama.|Evet|  
+        |Gelen SOAP iletisinin imzası doğrulanıyor.|Hayır|  
+        |Giden bir SOAP iletisi şifreleniyor.|Hayır|  
+        |Gelen SOAP iletisinin şifresini çözme.|Evet|  
   
-    2. Sertifikanın depolandığı adı ve sertifika depo konumunu belirleyin.  
+    2. Sertifika depolama konumunu ve sertifikanın depolandığı adı saptayın.  
   
-         Sertifika deposuna sertifikanın depolandığı, uygulama kodu veya yapılandırmada belirtilir. Örneğin, aşağıdaki örnekte sertifika bulunan belirtir `CurrentUser` adlı sertifika deposuna `My`.  
+         Sertifikanın depolandığı sertifika depolama alanı, uygulama kodunda ya da yapılandırmada belirtilir. Örneğin, aşağıdaki örnek, sertifikanın adlı `CurrentUser` `My`sertifika deposunda bulunduğunu belirtir.  
   
          [!code-csharp[x509Accessible#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/x509accessible/cs/source.cs#1)]
          [!code-vb[x509Accessible#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/x509accessible/vb/source.vb#1)]  
   
-    3. Kullanarak, sertifika özel anahtarını bilgisayarda nerede belirlemek [FindPrivateKey](../../../../docs/framework/wcf/samples/findprivatekey.md) aracı.  
+    3. Sertifika için özel anahtarın, [FindPrivateKey](../../../../docs/framework/wcf/samples/findprivatekey.md) aracını kullanarak bilgisayarda bulunduğunu belirleme.  
   
-         [FindPrivateKey](../../../../docs/framework/wcf/samples/findprivatekey.md) aracı, sertifika deposunun adını, sertifika depo konumunu ve sertifika benzersiz olarak tanımlayan bir şey gerektirir. Aracı sertifikanın konu adı veya parmak izi benzersiz bir tanımlayıcı olarak kabul eder. Bir sertifika parmak izini belirleme hakkında daha fazla bilgi için bkz. [nasıl yapılır: Bir sertifikanın parmak izini alma](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md).  
+         [FindPrivateKey](../../../../docs/framework/wcf/samples/findprivatekey.md) aracı sertifika depolama adı, sertifika depolama konumu ve sertifikayı benzersiz olarak tanımlayan bir şeyi gerektirir. Araç, sertifikanın konu adını ya da parmak izini benzersiz bir tanımlayıcı olarak kabul eder. Bir sertifikanın parmak izini belirleme hakkında daha fazla bilgi için bkz [. nasıl yapılır: Bir sertifikanın](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)parmak izini alın.  
   
-         Aşağıdaki kod örneğinde [FindPrivateKey](../../../../docs/framework/wcf/samples/findprivatekey.md) için sertifikada özel anahtar konumunu belirlemek için aracı `My` depolar `CurrentUser` parmak izi ile `46 dd 0e 7a ed 0b 7a 31 9b 02 a3 a0 43 7a d8 3f 60 40 92 9d`.  
+         Aşağıdaki kod örneği, bir parmak izine `46 dd 0e 7a ed 0b 7a 31 9b 02 a3 a0 43 7a d8 3f 60 40 92 9d`sahip içindeki `My` `CurrentUser` depodaki bir sertifika için özel anahtar konumunu tespit etmek üzere [FindPrivateKey](../../../../docs/framework/wcf/samples/findprivatekey.md) aracını kullanır.  
   
-        ```  
+        ```console
         findprivatekey.exe My CurrentUser -t "46 dd 0e 7a ed 0b 7a 31 9b 02 a3 a0 43 7a d8 3f 60 40 92 9d" -a  
         ```  
   
-    4. WCF altında çalıştığı hesabı belirleyin.  
+    4. WCF 'nin altında çalıştığı hesabı belirleme.  
   
-         Aşağıdaki tabloda, WCF, belirli bir senaryo için çalıştığı hesabı ayrıntıları.  
+         Aşağıdaki tabloda, belirli bir senaryo için WCF 'nin çalıştığı hesabın ayrıntıları verilmiştir.  
   
         |Senaryo|İşlem kimliği|  
         |--------------|----------------------|  
-        |İstemci (konsol veya aplikace WinForms).|Şu anda oturum açmış kullanıcı.|  
-        |Şirket içinde barındırılan hizmeti.|Şu anda oturum açmış kullanıcı.|  
-        |IIS 6. 0'barındırılan hizmeti ([!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]) veya IIS 7.0 ([!INCLUDE[wv](../../../../includes/wv-md.md)]).|AĞ HİZMETİ|  
-        |Hizmet barındırılan IIS 5.X ([!INCLUDE[wxp](../../../../includes/wxp-md.md)]).|Denetlenen `<processModel>` Machine.config dosyasında öğe. ASP.NET varsayılan hesaptır.|  
+        |İstemci (konsol veya WinForms uygulaması).|Şu anda oturum açmış olan kullanıcı.|  
+        |Kendi kendine barındırılan hizmet.|Şu anda oturum açmış olan kullanıcı.|  
+        |IIS 6,0 ([!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]) veya IIS 7,0 ([!INCLUDE[wv](../../../../includes/wv-md.md)]) içinde barındırılan hizmet.|AĞ HIZMETI|  
+        |IIS 5. X ([!INCLUDE[wxp](../../../../includes/wxp-md.md)]) içinde barındırılan hizmet.|Machine. config `<processModel>` dosyasındaki öğesi tarafından denetlenir. Varsayılan hesap ASPNET ' dir.|  
   
-    5. WCF altında icacls.exe gibi bir araç kullanarak çalıştıran hesaba özel anahtarı içeren dosyayı okuma erişimi verin.  
+    5. Icacls. exe gibi bir araç kullanarak WCF 'nin altında çalıştığı hesaba özel anahtarı içeren dosyaya okuma erişimi verin.  
   
-         Aşağıdaki kod örneği, ağ hizmeti hesabı okuma izni belirtilen dosya için isteğe bağlı erişim denetimi listesini (DACL) düzenler (: R) dosyasına erişim.  
+         Aşağıdaki kod örneği, ağ HIZMETI hesabına dosyaya okuma (: R) erişimi vermek için belirtilen dosya için isteğe bağlı erişim denetimi listesini (DACL) düzenler.  
   
-        ```  
+        ```console 
         icacls.exe "C:\Documents and Settings\All Users\Application Data\Microsoft\Crypto\RSA\MachineKeys\8aeda5eb81555f14f8f9960745b5a40d_38f7de48-5ee9-452d-8a5a-92789d7110b1" /grant "NETWORK SERVICE":R  
         ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [FindPrivateKey](../../../../docs/framework/wcf/samples/findprivatekey.md)
-- [Nasıl yapılır: Bir sertifikanın parmak izini alma](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)
+- [Nasıl yapılır: Bir sertifikanın parmak Izini alma](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)
 - [Sertifikalarla Çalışma](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)

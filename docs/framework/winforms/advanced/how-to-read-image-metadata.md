@@ -8,43 +8,43 @@ helpviewer_keywords:
 - metadata [Windows Forms], property item
 - metadata [Windows Forms], reading image
 ms.assetid: 72ec0b31-0be7-444a-9575-1dbcb864e0be
-ms.openlocfilehash: 6c02f7e5744828fd8eddc88be8d7da28f3bc2a2a
-ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
+ms.openlocfilehash: 8294bc6596c408160a50d9d7d5e6154f66025c73
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67505780"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70988566"
 ---
 # <a name="how-to-read-image-metadata"></a>Nasıl yapılır: Görüntü Meta Verilerini Okuma
-Bazı görüntü dosyaları, görüntü özelliklerini belirlemek için okuyabilecekleri meta veriler içerir. Örneğin, dijital hello'nun marka ve model görüntü yakalamak için kullanılan kameranın belirlemek için okuyabilecekleri bir meta veri içerebilir. GDI + ile var olan meta verileri okuyabilir ve görüntü dosyaları ayrıca yeni meta veriler yazabilirsiniz.  
+Bazı görüntü dosyaları, görüntünün özelliklerini belirleyebilmek için okuyabilmeniz gereken meta veriler içerir. Örneğin, dijital bir fotoğrafta görüntüyü yakalamak için kullanılan kameranın marka ve modelini öğrenmek için okuyabilmeniz gereken meta veriler bulunabilir. GDI+ ile, mevcut meta verileri okuyabilir ve resim dosyalarına yeni meta veriler yazabilirsiniz.  
   
- GDI +'da meta verilerde tek bir parçasını depolayan bir <xref:System.Drawing.Imaging.PropertyItem> nesne. Okuyabilirsiniz <xref:System.Drawing.Image.PropertyItems%2A> özelliği bir <xref:System.Drawing.Image> bir dosyanın tüm meta verileri alınacak nesne. <xref:System.Drawing.Image.PropertyItems%2A> Özelliği, bir dizi döndürür <xref:System.Drawing.Imaging.PropertyItem> nesneleri.  
+ GDI+ bir <xref:System.Drawing.Imaging.PropertyItem> nesne içinde tek bir meta veri parçası depolar. Bir dosyanın tüm meta <xref:System.Drawing.Image.PropertyItems%2A> verilerini almak için <xref:System.Drawing.Image> bir nesnenin özelliğini okuyabilirsiniz. Özelliği bir <xref:System.Drawing.Imaging.PropertyItem> nesne dizisi döndürür. <xref:System.Drawing.Image.PropertyItems%2A>  
   
- A <xref:System.Drawing.Imaging.PropertyItem> nesne aşağıdaki dört özelliklere sahiptir: `Id`, `Value`, `Len`, ve `Type`.  
+ Bir <xref:System.Drawing.Imaging.PropertyItem> nesne aşağıdaki dört özelliğe sahiptir: `Id`, `Value`, `Len`, ve `Type`.  
   
 ## <a name="id"></a>Id  
- Meta veri öğesini tanımlayan etiket. Atanabilir bazı değerler <xref:System.Drawing.Imaging.PropertyItem.Id%2A> aşağıdaki tabloda gösterilmiştir.  
+ Meta veri öğesini tanımlayan bir etiket. İçin <xref:System.Drawing.Imaging.PropertyItem.Id%2A> atanabilecek bazı değerler aşağıdaki tabloda gösterilmiştir.  
   
 |Onaltılık değer|Açıklama|  
 |-----------------------|-----------------|  
-|0x0320<br /><br /> 0x010F<br /><br /> 0x0110<br /><br /> 0x9003<br /><br /> 0x829A<br /><br /> 0x5090<br /><br /> 0x5091|Resmin başlığı<br /><br /> Donanım üreticisi<br /><br /> Donanım modeli<br /><br /> ExifDTOriginal<br /><br /> EXIF tehditlere maruz kalabileceği süreyi<br /><br /> Aydınlatma tablo<br /><br /> Chrominance tablo|  
+|0x0320<br /><br /> 0x010F<br /><br /> 0x0110<br /><br /> 0x9003<br /><br /> 0x829A<br /><br /> 0x5090<br /><br /> 0x5091|Görüntü başlığı<br /><br /> Ekipman üreticisi<br /><br /> Ekipman modeli<br /><br /> ExifDTOriginal<br /><br /> Exif etkilenme süresi<br /><br /> Işıklılık tablosu<br /><br /> Kınance tablosu|  
   
 ## <a name="value"></a>Değer  
- Değerleri dizisi. Değerlerin biçimini tarafından belirlenen <xref:System.Drawing.Imaging.PropertyItem.Type%2A> özelliği.  
+ Bir değerler dizisi. Değerlerin biçimi, <xref:System.Drawing.Imaging.PropertyItem.Type%2A> özelliği tarafından belirlenir.  
   
-## <a name="len"></a>Len  
- Değerler dizisi uzunluğu (bayt cinsinden) tarafından işaret edilen <xref:System.Drawing.Imaging.PropertyItem.Value%2A> özelliği.  
+## <a name="len"></a>Tepe  
+ <xref:System.Drawing.Imaging.PropertyItem.Value%2A> Özelliği tarafından işaret edilen değerlerin dizisinin uzunluğu (bayt cinsinden).  
   
 ## <a name="type"></a>Tür  
- Dizideki değerleri veri türü tarafından işaret edilen `Value` özelliği. Tarafından belirtilen biçimleri `Type` özellik değerleri aşağıdaki tabloda gösterilen  
+ Dizide, `Value` özelliği tarafından işaret edilen değerlerin veri türü. `Type` Özellik değerleri tarafından belirtilen biçimler aşağıdaki tabloda gösterilmiştir  
   
 |Sayısal değer|Açıklama|  
 |-------------------|-----------------|  
-|1\.|A `Byte`|  
-|2|Bir dizi `Byte` ASCII kodlamalı nesneler|  
-|3|Bir 16 bit tam sayı|  
-|4|Bir 32 bit tamsayı|  
-|5|İki `Byte` rasyonel sayı temsil eden nesneleri|  
+|1\.|A`Byte`|  
+|2|ASCII olarak kodlanmış `Byte` bir nesne dizisi|  
+|3|16 bit tam sayı|  
+|4|32 bitlik bir tamsayı|  
+|5|Bir Rational Number öğesini `Byte` temsil eden iki nesne dizisi|  
 |6|Kullanılan değil|  
 |7|Tanımlanmadı|  
 |8|Kullanılan değil|  
@@ -54,11 +54,11 @@ Bazı görüntü dosyaları, görüntü özelliklerini belirlemek için okuyabil
 ## <a name="example"></a>Örnek  
   
 ### <a name="description"></a>Açıklama  
- Aşağıdaki kod örneği okur ve dosyadaki meta verileri yedi parçalarını görüntüler `FakePhoto.jpg`. Listedeki ikinci (dizin 1) özelliği öğeye sahip <xref:System.Drawing.Imaging.PropertyItem.Id%2A> 0x010F (ekipman üreticisi) ve <xref:System.Drawing.Imaging.PropertyItem.Type%2A> 2 (ASCII kodlamalı bayt dizisi). Kod örneği, bu özellik öğesinin değeri görüntüler.  
+ Aşağıdaki kod örneği, dosyadaki `FakePhoto.jpg`yedi meta veri parçasını okur ve görüntüler. Listedeki <xref:System.Drawing.Imaging.PropertyItem.Id%2A> ikinci (Dizin 1) özellik öğesi 0x010F (ekipman üreticisi) ve <xref:System.Drawing.Imaging.PropertyItem.Type%2A> 2 (ASCII kodlamalı bayt dizisi). Kod örneği, bu özellik öğesinin değerini görüntüler.  
   
- Kodu aşağıdakine benzer bir çıktı üretir:  
+ Kod aşağıdakine benzer bir çıktı üretir:  
  
-```
+```output
  Property Item 0
   
  id: 0x320
@@ -123,7 +123,7 @@ Bazı görüntü dosyaları, görüntü özelliklerini belirlemek için okuyabil
  [!code-vb[System.Drawing.WorkingWithImages#51](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#51)]  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
- Yukarıdaki örnekte, Windows Forms ile kullanılmak üzere tasarlanmıştır ve gerektirir <xref:System.Windows.Forms.PaintEventArgs> `e`, parametre olduğu <xref:System.Windows.Forms.Control.Paint> olay işleyicisi. Formun işlemek <xref:System.Windows.Forms.Control.Paint> olay ve bu kodu Boya olay işleyicisine yapıştırın. Değiştirmeniz gereken `FakePhoto.jpg` bir görüntü adı ve yolu içeri aktarma ve sistem geçerli `System.Drawing.Imaging` ad alanı.  
+ Yukarıdaki örnek, Windows Forms kullanımı için tasarlanmıştır ve <xref:System.Windows.Forms.PaintEventArgs> <xref:System.Windows.Forms.Control.Paint> olay işleyicisinin bir parametresi olan gerektirir `e`. Formun <xref:System.Windows.Forms.Control.Paint> olayını işleyin ve bu kodu Paint olay işleyicisine yapıştırın. ' İ sisteminizde `FakePhoto.jpg` geçerli bir görüntü adı ve yolu ile değiştirmeniz ve `System.Drawing.Imaging` ad alanını içeri aktarmanız gerekir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

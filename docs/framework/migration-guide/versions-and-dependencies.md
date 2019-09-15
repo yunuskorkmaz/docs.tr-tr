@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: f75a72de-e2f2-4a7a-9574-3f278684ea90
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2e4e3b1768086a1c57979a4c74643036294299a3
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: c9f7a0bc3a7a41a77db3c90c2f88fb5ddfd7bfa0
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70787756"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971085"
 ---
 # <a name="net-framework-versions-and-dependencies"></a>.NET Framework sürümleri ve bağımlılıklar
 Her bir .NET Framework sürümü ortak dil çalışma zamanını (CLR), temel sınıf kitaplıklarını ve diğer yönetilen kitaplıkları içerir. Bu konu, sürüme göre .NET Framework'ün temel özellikleri açıklar, temel CLR sürümleri ve ilişkili geliştirme ortamları hakkında bilgi sağlar ve Windows işletim sistemi tarafından yüklenen sürümleri tanımlar.  
@@ -68,7 +68,7 @@ Her bir .NET Framework sürümü ortak dil çalışma zamanını (CLR), temel s�
   
 ## <a name="targeting-and-running-apps-for-older-versions"></a>Daha eski sürümler için uygulamalar hedefleme ve çalıştırma  
 
-2,0, 3,0 ve 3,5 .NET Framework sürümleri CLR 'nin aynı sürümüyle (CLR 2,0) oluşturulmuştur. Bu sürümler, tek bir kurulumun ardışık katmanlarını temsil eder. Her sürüm kademeli olarak önceki sürümlerin üzerine yerleştirilir. 2\.0, 3.0 ve 3.5 sürümlerini bir bilgisayar üzerinde yan yana çalıştırmak mümkün değildir. Sürüm 3.5'i yüklediğinizde, 2.0 ve 3.0 katmanlarını otomatik olarak alırsınız ve 2.0, 3.0 ve 3.5 sürümleri için oluşturulmuş olan uygulamaların tümü 3.5 sürümü üzerinde çalıştırılabilir. Ancak, .NET Framework 4 Bu katmanlama yaklaşımını sonlandırır ve bu ve sonraki sürümleri (.NET Framework 4,5, 4.5.1, 4.5.2, 4,6, 4.6.1, 4.6.2, 4,7, 4.7.1, 4.7.2 ve 4,8), tek bir yüklemenin birbirini izleyen katmanlarını da temsil eder.  .NET Framework 4 ' te başlayarak, tek bir işlemde CLR 'nin birden çok sürümünü çalıştırmak için işlem içi yan yana barındırma kullanabilirsiniz. Daha fazla bilgi için bkz. [derlemeler ve yan yana yürütme](../app-domains/assemblies-and-side-by-side-execution.md).  
+2,0, 3,0 ve 3,5 .NET Framework sürümleri CLR 'nin aynı sürümüyle (CLR 2,0) oluşturulmuştur. Bu sürümler, tek bir kurulumun ardışık katmanlarını temsil eder. Her sürüm kademeli olarak önceki sürümlerin üzerine yerleştirilir. 2\.0, 3.0 ve 3.5 sürümlerini bir bilgisayar üzerinde yan yana çalıştırmak mümkün değildir. Sürüm 3.5'i yüklediğinizde, 2.0 ve 3.0 katmanlarını otomatik olarak alırsınız ve 2.0, 3.0 ve 3.5 sürümleri için oluşturulmuş olan uygulamaların tümü 3.5 sürümü üzerinde çalıştırılabilir. Ancak, .NET Framework 4 Bu katmanlama yaklaşımını sonlandırır ve bu ve sonraki sürümleri (.NET Framework 4,5, 4.5.1, 4.5.2, 4,6, 4.6.1, 4.6.2, 4,7, 4.7.1, 4.7.2 ve 4,8), tek bir yüklemenin birbirini izleyen katmanlarını da temsil eder.  .NET Framework 4 ' te başlayarak, tek bir işlemde CLR 'nin birden çok sürümünü çalıştırmak için işlem içi yan yana barındırma kullanabilirsiniz. Daha fazla bilgi için bkz. [derlemeler ve yan yana yürütme](../../standard/assembly/side-by-side-execution.md).  
   
  Ayrıca, uygulamanız 2,0, 3,0 veya 3,5 sürümünü hedefliyorsa, kullanıcılarınız uygulamanızı çalıştırmadan önce Windows 8, Windows 8.1 veya Windows 10 bilgisayarında .NET Framework 3,5 ' i etkinleştirmek zorunda kalabilir. Daha fazla bilgi için bkz. [Windows 10, Windows 8.1 ve Windows 8 ' de .NET Framework 3,5](../install/dotnet-35-windows-10.md)'yi.  
   

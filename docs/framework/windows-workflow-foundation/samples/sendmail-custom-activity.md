@@ -2,12 +2,12 @@
 title: SendMail Özel Etkinliği
 ms.date: 03/30/2017
 ms.assetid: 947a9ae6-379c-43a3-9cd5-87f573a5739f
-ms.openlocfilehash: 9325817a24fee3ba04c2c305ebfdfbc6ff6da1bd
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 5797620c4938d7dcffb1f506b682141336b21eab
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70038108"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70988990"
 ---
 # <a name="sendmail-custom-activity"></a>SendMail Özel Etkinliği
 Bu örnek, bir iş akışı uygulaması içinde kullanılmak üzere SMTP kullanarak <xref:System.Activities.AsyncCodeActivity> posta göndermek için öğesinden türetilen özel bir etkinliğin nasıl oluşturulacağını gösterir. Özel etkinlik, e-postayı zaman <xref:System.Net.Mail.SmtpClient> uyumsuz olarak göndermek ve kimlik doğrulamasıyla posta göndermek için yeteneklerini kullanır. Ayrıca, test modu, belirteç değiştirme, dosya şablonları ve test bırakma yolu gibi bazı son kullanıcı özellikleri de sağlar.  
@@ -18,7 +18,7 @@ Bu örnek, bir iş akışı uygulaması içinde kullanılmak üzere SMTP kullana
 |-|-|-|  
 |Ana bilgisayar|Dize|SMTP sunucusu konağının adresi.|  
 |Bağlantı Noktası|Dize|Konaktaki SMTP hizmetinin bağlantı noktası.|  
-|EnableSsl|bool|Bağlantının, <xref:System.Net.Mail.SmtpClient> bağlantıyı şifrelemek için Güvenli Yuva Katmanı (SSL) kullanıp kullanmadığını belirtir.|  
+|enableSsl|bool|Bağlantının, <xref:System.Net.Mail.SmtpClient> bağlantıyı şifrelemek için Güvenli Yuva Katmanı (SSL) kullanıp kullanmadığını belirtir.|  
 |UserName|Dize|Gönderen <xref:System.Net.Mail.SmtpClient.Credentials%2A> özelliğinin kimlik doğrulaması için kimlik bilgilerini ayarlamak üzere Kullanıcı adı.|  
 |Parola|Dize|Gönderen <xref:System.Net.Mail.SmtpClient.Credentials%2A> özelliğinin kimlik doğrulaması için kimlik bilgilerini ayarlamak için parola.|  
 |Subject|<xref:System.Activities.InArgument%601>\<dize >|İletinin konusu.|  
@@ -47,7 +47,7 @@ Bu örnek, bir iş akışı uygulaması içinde kullanılmak üzere SMTP kullana
 ### <a name="sending-an-email-using-tokens-specified-in-the-body"></a>Gövdede belirtilen belirteçleri kullanarak e-posta gönderme  
  Bu kod parçacığı, gövdedeki belirteçlerle nasıl e-posta gönderebileceğinizi gösterir. Gövde özelliğinde belirteçlerin nasıl sağlandığını fark edin. Bu belirteçlerin değerleri belirteçler özelliğine sağlanır.  
   
-```html  
+```csharp  
 IDictionary<string, string> tokens = new Dictionary<string, string>();  
 tokens.Add("@name", "John Doe");  
 tokens.Add("@date", DateTime.Now.ToString());  
@@ -69,7 +69,7 @@ new SendMail
 ### <a name="sending-an-email-using-a-template"></a>Şablon kullanarak e-posta gönderme  
  Bu kod parçacığında, gövdedeki bir şablon belirteçlerini kullanarak e-posta gönderme gösterilmektedir. Gövde özelliği için değer sağlamak `BodyTemplateFilePath` zorunda olduğumuz özelliği ayarlarken (şablon dosyasının içeriği gövdeye kopyalanacaktır) dikkat edin.  
   
-```  
+```csharp  
 new SendMail  
 {    
     From = new LambdaValue<MailAddress>(ctx => new MailAddress("john.doe@contoso.com")),  
@@ -86,7 +86,7 @@ new SendMail
 ### <a name="sending-mails-in-testing-mode"></a>Sınama modunda postaları gönderme  
  Bu kod parçacığı, iki test özelliklerinin nasıl ayarlanacağını gösterir: ayarına `TestMailTo` göre, tüm iletiler için `john.doe@contoso.con` gönderilir (Kime, CC, gizli değerleri olmadan). TestDropPath ' i ayarlayarak tüm giden e-postalar da, belirtilen yola kaydedilir. Bu özellikler bağımsız olarak ayarlanabilir (ilişkili değildir).  
   
-```  
+```csharp  
 new SendMail  
 {    
    From = new LambdaValue<MailAddress>(ctx => new MailAddress("john.doe@contoso.com")),  

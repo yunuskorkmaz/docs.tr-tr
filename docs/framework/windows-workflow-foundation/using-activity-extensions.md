@@ -2,29 +2,29 @@
 title: Etkinlik Uzantıları Kullanma
 ms.date: 03/30/2017
 ms.assetid: 500eb96a-c009-4247-b6b5-b36faffdf715
-ms.openlocfilehash: e524f7e7127eb215be85b0c317474eee70830c2b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 551ce24db8c0adc8225ac94a1d05f998a26873a9
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61669517"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70988628"
 ---
 # <a name="using-activity-extensions"></a>Etkinlik Uzantıları Kullanma
-Etkinlikler, ana iş akışında açıkça modellenmiş değil ek işlevler sağlamasına olanak tanıyan bir iş akışı uygulama uzantıları ile etkileşim kurabilir.  Bu konu, bir etkinliği yürütür sayısını saymak için bir uzantı oluşturup kullanacağınızı açıklar.
+Etkinlikler, konağın iş akışında açıkça Modellenmemiş ek işlevler sağlamasına izin veren iş akışı uygulama uzantılarıyla etkileşime geçebilir.  Bu konu başlığı altında, etkinliğin kaç kez yürütüleneceğini saymak için bir uzantının nasıl oluşturulduğu ve kullanılacağı açıklanmaktadır.
 
-### <a name="to-use-an-activity-extension-to-count-executions"></a>Yürütme sayısı için bir etkinlik uzantısını kullanma
+### <a name="to-use-an-activity-extension-to-count-executions"></a>Yürütmeleri saymak için bir etkinlik uzantısı kullanmak için
 
-1. Visual Studio 2010'u açın. Seçin **yeni**, **proje**. Altında **Visual C#** düğümünü **iş akışı**.  Seçin **iş akışı konsol uygulaması** şablonları listesinden. Projeyi adlandırın `Extensions`. Tıklayın **Tamam** projeyi oluşturmak için.
+1. Visual Studio 2010 ' i açın. **Yeni**, **Proje**' yi seçin. **C# Görsel** düğüm altında **iş akışı**' nı seçin.  Şablonlar listesinden **Iş akışı konsol uygulaması** ' nı seçin. Projeyi `Extensions`adlandırın. Projeyi oluşturmak için **Tamam** ' ı tıklatın.
 
-2. Ekleme bir `using` deyimi Program.cs dosyasındaki **System.Collections.Generic** ad alanı.
+2. `using` **System. Collections. Generic** ad alanı için program.cs dosyasına bir ifade ekleyin.
 
-    ```
+    ```csharp
     using System.Collections.Generic;
     ```
 
-3. Program.cs dosyasında adlı yeni bir sınıf oluşturun **ExecutionCountExtension**. Aşağıdaki kod örnek kimlikleri izleyen bir iş akışı uzantısı oluşturur, kendi **kaydetme** yöntemi çağrılır.
+3. Program.cs dosyasında, **Executioncountextension**adlı yeni bir sınıf oluşturun. Aşağıdaki kod, **yazmaç** yöntemi çağrıldığında örnek kimliklerini izleyen bir iş akışı uzantısı oluşturur.
 
-    ```
+    ```csharp
     // This extension collects a list of workflow Ids
     public class ExecutionCountExtension
     {
@@ -56,9 +56,9 @@ Etkinlikler, ana iş akışında açıkça modellenmiş değil ek işlevler sağ
     }
     ```
 
-4. Kullanan bir etkinlik oluşturursunuz **ExecutionCountExtension**. Aşağıdaki kod alır bir etkinlik tanımlar **ExecutionCountExtension** çağrıları ve çalışma zamanı nesneden kendi **kaydetme** etkinlik yürütüldüğünde yöntemi.
+4. **Executioncountextension**öğesini tüketen bir etkinlik oluşturun. Aşağıdaki kod, çalışma zamanından **Executioncountextension** nesnesini alan ve etkinlik yürütüldüğünde **register** metodunu çağıran bir etkinliği tanımlar.
 
-    ```
+    ```csharp
     // Activity that consumes an extension provided by the host. If the extension is available
     // in the context, it will invoke (in this case, registers the Id of the executing workflow)
     public class MyActivity: CodeActivity
@@ -75,9 +75,9 @@ Etkinlikler, ana iş akışında açıkça modellenmiş değil ek işlevler sağ
     }
     ```
 
-5. Etkinlik uygulayan **ana** program.cs dosyasının yöntemi. Aşağıdaki kod, iki farklı iş akışları oluşturmak, her bir iş akışı birkaç kez yürütün ve uzantısı'nda bulunan sonuç verileri görüntülemek için yöntemler içerir.
+5. Etkinliği program.cs dosyasının **Main** yönteminde uygulayın. Aşağıdaki kod, iki farklı iş akışı oluşturmak, her bir iş akışını birkaç kez yürütmek ve uzantısında yer alan elde edilen verileri göstermek için yöntemler içerir.
 
-    ```
+    ```csharp
     class Program
     {
         // Creates a workflow that uses the activity that consumes the extension

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -addmodule compiler option [C#]
 - addmodule compiler option [C#]
 ms.assetid: ed604546-0dc2-4bd4-9a3e-610a8d973e58
-ms.openlocfilehash: f2fae0be3ba958dc9776ed253c178933e4f76024
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 148a63c37cfbc4c60448adccde10947e91e22bb9
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69607039"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70970182"
 ---
 # <a name="-addmodule-c-compiler-options"></a>-addmodule (C# derleyici seçenekleri)
 Bu seçenek, target: Module anahtarı geçerli derlemeye ile oluşturulmuş bir modül ekler.  
@@ -49,4 +49,4 @@ csc -addmodule:metad1.netmodule;metad2.netmodule -out:out.exe input.cs
 - [C# Derleyici Seçenekleri](./index.md)
 - [Proje ve Çözüm Özelliklerini Yönetme](/visualstudio/ide/managing-project-and-solution-properties)
 - [Çok Dosyalı Bütünleştirilmiş Kodlar](../../../framework/app-domains/multifile-assemblies.md)
-- [Nasıl yapılır: Çoklu dosya derlemesi oluşturma](../../../framework/app-domains/how-to-build-a-multifile-assembly.md)
+- [Nasıl yapılır: Çoklu dosya derlemesi oluşturma](../../../framework/app-domains/build-multifile-assembly.md)

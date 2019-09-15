@@ -4,12 +4,12 @@ description: Linux makinelerde .NET Core uygulamaları geliştirmek, dağıtmak 
 author: thraka
 ms.author: adegeo
 ms.date: 12/14/2018
-ms.openlocfilehash: ad1ab42bcf66e32a45351ae2b6156251c9d0dc1f
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 5fcf931572f3c7e9b9857d2e91e9d620c7aad0bd
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70849064"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969876"
 ---
 # <a name="prerequisites-for-net-core-on-linux"></a>Linux üzerinde .NET Core önkoşulları
 
@@ -22,6 +22,8 @@ Bu makalede, Linux üzerinde .NET Core uygulamaları geliştirmek için gereken 
 > .NET Core SDK paketi üretim sunucuları/ortamları için gerekli değildir. Üretim ortamlarına dağıtılan uygulamalar için yalnızca .NET Core çalışma zamanı paketi gereklidir. .NET Core çalışma zamanı, uygulamalar ile birlikte bulunan bir dağıtımın parçası olarak dağıtılır, ancak çerçeveye bağımlı dağıtılan uygulamalar için ayrı olarak dağıtılmalıdır. Çerçeveye bağımlı ve kendi kendine içerilen dağıtım türleri hakkında daha fazla bilgi için bkz. [.NET Core uygulama dağıtımı](./deploying/index.md). Ayrıca, belirli yönergeler için [kendi Içindeki Linux uygulamalarına](https://github.com/dotnet/core/blob/master/Documentation/self-contained-linux-apps.md) bakın.
 
 ## <a name="supported-linux-versions"></a>Desteklenen Linux sürümleri
+
+<!-- markdownlint-disable MD025 -->
 
 # <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2. x](#tab/netcore2x)
 

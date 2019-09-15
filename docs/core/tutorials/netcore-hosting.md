@@ -4,12 +4,12 @@ description: .NET Core çalışma zamanının nasıl çalıştığını denetlem
 author: mjrousos
 ms.date: 12/21/2018
 ms.custom: seodec18
-ms.openlocfilehash: 528d46f64c424dd0f58e57891c605ac5ab474240
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: ec63e1b87c4161dcd0dd3ab37aadbef53d4b3219
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70925930"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70970853"
 ---
 # <a name="write-a-custom-net-core-host-to-control-the-net-runtime-from-your-native-code"></a>.NET çalışma zamanını yerel kodunuzda denetlemek için özel bir .NET Core ana bilgisayarı yazma
 
@@ -135,7 +135,7 @@ Mscoree. h barındırma API 'sinden (aşağıda açıklanmıştır) farklı olar
 
 ### <a name="step-5---run-managed-code"></a>5\. adım-yönetilen kodu çalıştırın!
 
-Çalışma zamanı başlatıldıktan sonra, konak yönetilen kodu çağırabilir. Bu, birkaç farklı yolla yapılabilir. Bu öğreticiye bağlı örnek kod, statik bir `coreclr_create_delegate` yönetilen metoda bir temsilci oluşturmak için işlevini kullanır. Bu API, [derleme adı](../../framework/app-domains/assembly-names.md), ad alanı nitelenmiş tür adı ve yöntem adını girdi olarak alır ve yöntemi çağırmak için kullanılabilecek bir temsilci döndürür.
+Çalışma zamanı başlatıldıktan sonra, konak yönetilen kodu çağırabilir. Bu, birkaç farklı yolla yapılabilir. Bu öğreticiye bağlı örnek kod, statik bir `coreclr_create_delegate` yönetilen metoda bir temsilci oluşturmak için işlevini kullanır. Bu API, [derleme adı](../../standard/assembly/names.md), ad alanı nitelenmiş tür adı ve yöntem adını girdi olarak alır ve yöntemi çağırmak için kullanılabilecek bir temsilci döndürür.
 
 [!code-cpp[CoreClrHost#5](~/samples/core/hosting/HostWithCoreClrHost/src/SampleHost.cpp#5)]
 
@@ -231,7 +231,7 @@ AppDomain çalışıyor ve çalışır durumda olduğunda, ana bilgisayar artık
 
 [!code-cpp[NetCoreHost#8](~/samples/core/hosting/HostWithMscoree/host.cpp#8)]
 
-Diğer bir seçenek, `ExecuteAssembly` ana bilgisayarınızın ihtiyaçlarını karşılamıyorsa, statik yönetilen bir yönteme bir `CreateDelegate` işlev işaretçisi oluşturmak için kullanılır. Bu, konağın çağrı yaptığı yöntemin imzasını bilmesini gerektirir (işlev işaretçisi türünü oluşturmak için), ancak bir derlemenin giriş noktası dışında kodu çağırma esnekliğine izin verir. İkinci parametrede belirtilen derleme adı, yüklenecek kitaplığın [tam yönetilen derleme adıdır](../../framework/app-domains/assembly-names.md) .
+Diğer bir seçenek, `ExecuteAssembly` ana bilgisayarınızın ihtiyaçlarını karşılamıyorsa, statik yönetilen bir yönteme bir `CreateDelegate` işlev işaretçisi oluşturmak için kullanılır. Bu, konağın çağrı yaptığı yöntemin imzasını bilmesini gerektirir (işlev işaretçisi türünü oluşturmak için), ancak bir derlemenin giriş noktası dışında kodu çağırma esnekliğine izin verir. İkinci parametrede belirtilen derleme adı, yüklenecek kitaplığın [tam yönetilen derleme adıdır](../../standard/assembly/names.md) .
 
 ```C++
 void *pfnDelegate = NULL;

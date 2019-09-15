@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 238d8284-6042-4a38-a7f6-1ee8efd719da
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e7da023c5ab9247cde0ccd1126d4d639c6f355e7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8d9448edab101ef11447b54e12c53abcb578646a
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910966"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971599"
 ---
 # <a name="deploying-the-net-framework-and-applications"></a>.NET Framework ve Uygulamaları Dağıtma
 
@@ -118,7 +118,7 @@ Bu makale, .NET Framework uygulamanıza dağıtmaya başlamanıza yardımcı olu
 
 ## <a name="packaging-and-distributing-net-framework-applications"></a>.NET Framework uygulamalarını paketleme ve dağıtma
 
-.NET Framework yönelik paketleme ve dağıtım bilgilerinin bazıları, belgelerinin diğer bölümlerinde açıklanmıştır. Bu bölümler, hiçbir kayıt defteri girişi gerektirmeyen [derleme](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)adlı, [tanımlayıcı adlı derlemelerin](../../../docs/framework/app-domains/strong-named-assemblies.md)yanı sıra ad yanıltmayı ve [derleme sürümü oluşturmayı](../../../docs/framework/app-domains/assembly-versioning.md) önleyen, kendi kendini açıklayan birimler hakkında bilgi sağlar , DLL çakışmaları ile ilişkili birçok sorunu ele alınmaktadır. Aşağıdaki bölümlerde .NET Framework uygulamalarını paketleme ve dağıtma hakkında bilgi sağlanmaktadır.
+.NET Framework yönelik paketleme ve dağıtım bilgilerinin bazıları, belgelerinin diğer bölümlerinde açıklanmıştır. Bu bölümler, hiçbir kayıt defteri girişi gerektirmeyen [derleme](../../standard/assembly/index.md)adlı, [tanımlayıcı adlı derlemelerin](../../standard/assembly/strong-named.md)yanı sıra ad yanıltmayı ve [derleme sürümü oluşturmayı](../../standard/assembly/versioning.md) önleyen, kendi kendini açıklayan birimler hakkında bilgi sağlar , DLL çakışmaları ile ilişkili birçok sorunu ele alınmaktadır. Aşağıdaki bölümlerde .NET Framework uygulamalarını paketleme ve dağıtma hakkında bilgi sağlanmaktadır.
 
 ### <a name="packaging"></a>Paketleme
 

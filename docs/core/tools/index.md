@@ -3,12 +3,12 @@ title: .NET Core komut satırı arabirimi (CLı) araçları
 description: .NET Core komut satırı arabirimi (CLı) araçları ve özelliklerine genel bakış.
 ms.date: 08/14/2017
 ms.custom: seodec18
-ms.openlocfilehash: 20a083f3e7496521243bebd6585a48c8a562c548
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 50d1bbdd87ecd275b97603a1b47c6f13f879365a
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105039"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969886"
 ---
 # <a name="net-core-command-line-interface-cli-tools"></a>.NET Core komut satırı arabirimi (CLı) araçları
 
@@ -26,6 +26,8 @@ Varsayılan olarak, CLı yan yana (SxS) bir şekilde yüklenir. bu nedenle, CLı
 ## <a name="cli-commands"></a>CLı komutları
 
 Aşağıdaki komutlar varsayılan olarak yüklenir:
+
+<!-- markdownlint-disable MD025 -->
 
 # <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2. x](#tab/netcore2x)
 
@@ -148,7 +150,7 @@ Komut satırında geçirdiğiniz seçenekler çağrılan komuta yönelik seçene
 
 ## <a name="migration-from-projectjson"></a>Project. JSON 'dan geçiş
 
-*Project. JSON*tabanlı projeler oluşturmak için Preview 2 araçları 'nı kullandıysanız, sürüm araçları ile kullanmak üzere projenizi MSBuild/ *. csproj* 'a geçirme hakkında bilgi edinmek için [DotNet geçiş](dotnet-migrate.md) konusuna başvurun. Preview 2 araçları 'nın yayınlanmasından önce oluşturulan .NET Core projeleri için, [DNX 'ten .NET Core CLI (Project. JSON) ' den geçiş](../migration/from-dnx.md) yapma bölümündeki kılavuzdan sonra projeyi el ile güncelleştirin ve ardından projelerinizi kullanın `dotnet migrate` veya doğrudan yükseltin.
+*Project. JSON*tabanlı projeler oluşturmak için Preview 2 araçları 'nı kullandıysanız, sürüm araçları ile kullanmak üzere projenizi MSBuild/ *. csproj* 'a geçirme hakkında bilgi edinmek için [DotNet geçiş](dotnet-migrate.md) konusuna başvurun. Preview 2 araçları 'nın yayınlanmasından önce oluşturulan .NET Core projeleri için, [DNX 'ten .NET Core CLI (Project. JSON) ' den geçiş yapma bölümündeki kılavuzdan](../migration/from-dnx.md) sonra projeyi el ile güncelleştirin ve ardından projelerinizi kullanın `dotnet migrate` veya doğrudan yükseltin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -6,12 +6,12 @@ ms.author: cesardl
 ms.date: 04/24/2019
 ms.custom: mvc
 ms.topic: tutorial
-ms.openlocfilehash: f3688b4492d3eb629f86a9d463b9127429260033
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 592f9dc599a22427a2a79047cd9e96f36d2ae429
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929117"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70972004"
 ---
 # <a name="analyze-sentiment-using-the-mlnet-cli"></a>ML.NET CLI kullanarak yaklaşımı çözümleme
 
@@ -95,7 +95,8 @@ Oluşturulan C# kod projelerini Visual Studio 'dan veya (.NET Core CLI) ile `dot
 
     CLı 'dan aşağıdakine benzer bir çıktı görürsünüz:
 
-    <!-- markdownlint-disable MD023 -->
+    <!-- markdownlint-disable MD023 MD025 -->
+
     # <a name="windowstabwindows"></a>[Windows](#tab/windows)
 
     ![PowerShell 'de ML.NET CLı otomatik eğitimi](./media/mlnet-cli/mlnet-auto-train-binary-classification-powershell.gif)

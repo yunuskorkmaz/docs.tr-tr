@@ -7,25 +7,25 @@ f1_keywords:
 helpviewer_keywords:
 - BC31535
 ms.assetid: 6540c1d0-bb19-4051-a579-2e4f9094585e
-ms.openlocfilehash: 0c1526e32ddc64cb4124c6f8205d58deef911dd6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6eb46c6479adc69eaf65b34c69aa69977b4d62ef
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61802486"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70972388"
 ---
-# <a name="friend-assembly-reference-reference-is-invalid"></a>Friend derlemesi başvurusu \<başvuru > geçersiz
-Friend derlemesi başvurusu \<başvuru > geçersiz. Kesin ad imzalı derlemelerin kendi InternalsVisibleTo bildirmelerinde bir ortak anahtar belirtmeniz gerekir.  
+# <a name="friend-assembly-reference-reference-is-invalid"></a>Friend bütünleştirilmiş kod \<başvurusu başvuru > geçersiz
+Friend bütünleştirilmiş kod \<başvurusu başvuru > geçersiz. Tanımlayıcı adı imzalı derlemelerin InternalsVisibleTo bildirimlerinde bir ortak anahtar belirtmesi gerekir.  
   
- Derleme adı geçirilen <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> öznitelik oluşturucusunda bir katı adlı derlemeyi tanımlar, ancak bunu içermemesi bir `PublicKey` özniteliği.  
+ <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> Öznitelik oluşturucusuna geçirilen derleme adı, tanımlayıcı adlı bir derlemeyi tanımlar, ancak bir `PublicKey` özniteliği içermez.  
   
- **Hata Kimliği:** BC31535  
+ **Hata KIMLIĞI:** BC31535  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-1. Ortak anahtar tanımlayıcı adlı arkadaş derleme için belirleyin. Geçirilen derleme adının bir parçası olarak ortak anahtarı içeren <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> öznitelik Oluşturucusu kullanarak `PublicKey` özniteliği.  
+1. Tanımlayıcı adlı Friend derlemesi için ortak anahtarı belirleme. <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> Özniteliği`PublicKey` kullanılarak öznitelik oluşturucusuna geçirilen derleme adının bir parçası olarak ortak anahtarı ekleyin.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Reflection.AssemblyName>
-- [Arkadaş Bütünleştirilmiş Kodları](../../../standard/assembly/friend-assemblies.md)
+- [Arkadaş Bütünleştirilmiş Kodları](../../../standard/assembly/friend.md)

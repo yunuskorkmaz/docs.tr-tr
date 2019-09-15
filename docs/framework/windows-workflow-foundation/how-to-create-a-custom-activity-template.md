@@ -2,50 +2,50 @@
 title: 'Nasıl yapılır: Özel Etkinlik Şablonu Oluşturma'
 ms.date: 03/30/2017
 ms.assetid: 6760a5cc-6eb8-465f-b4fa-f89b39539429
-ms.openlocfilehash: f54a625fbe5497406645ea29f824d361c0392eb3
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 4ec84658dbe3039a4d7d714f8da183e6a5eb6ca4
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65637720"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989707"
 ---
 # <a name="how-to-create-a-custom-activity-template"></a>Nasıl yapılır: Özel Etkinlik Şablonu Oluşturma
 
-Etkinlikler, böylece kullanıcılar her etkinliği ayrı ayrı oluşturun ve bunların özelliklerini ve diğer ayarları yapılandırmak zorunda değilsiniz özel bileşik etkinlikler dahil olmak üzere yapılandırılmasını özelleştirmek için kullanılan özel etkinlik şablonları el ile. Bu özel şablonları kullanılabilir hale getirilebilir **araç kutusu** üzerinde [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] veya içinden kullanıcılar sürükleyerek bunları önceden yapılandırılmış bir tasarım yüzeyine sürükleyin, yeniden barındırılan bir tasarımcı. [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] Böyle şablon iyi örneklerini ile birlikte gelir: [SendAndReceiveReply Şablon tasarımcısı](/visualstudio/workflow-designer/sendandreceivereply-template-designer) ve [ReceiveAndSendReply Şablon tasarımcısı](/visualstudio/workflow-designer/receiveandsendreply-template-designer) içinde [Mesajlaşmaetkinliktasarımcıları](/visualstudio/workflow-designer/messaging-activity-designers) kategorisi.
+Özel Birleşik etkinlikler dahil olmak üzere etkinliklerin yapılandırmalarını özelleştirmek için özel etkinlik şablonları kullanılır. böylece, kullanıcılar her bir etkinliği ayrı ayrı oluşturmak ve özelliklerini ve diğer ayarlarını el ile yapılandırmak zorunda kalmayacak. Bu özel şablonlar, [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] veya yeniden barındırılan bir tasarımcıda bulunan **araç kutusunda** ya da kullanıcıların bunları önceden yapılandırılmış tasarım yüzeyine sürükleyebileceği şekilde kullanılabilir hale getirilebilir. [!INCLUDE[wfd2](../../../includes/wfd2-md.md)]Bu tür şablonların iyi örnekleri ile birlikte gelir: [Ileti etkinliği tasarımcıları](/visualstudio/workflow-designer/messaging-activity-designers) kategorisindeki [SendAndReceiveReply şablon Tasarımcısı](/visualstudio/workflow-designer/sendandreceivereply-template-designer) ve [ReceiveAndSendReply şablon Tasarımcısı](/visualstudio/workflow-designer/receiveandsendreply-template-designer) .
 
- Bu konudaki ilk yordamı için bir özel etkinlik şablonu oluşturmayı açıklar bir **gecikme** etkinliği ve ikinci yordam açıklayan kısa bir süre içinde kullanılabilir hale getirmek bir [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] özel şablonu çalıştığını doğrulayın.
+ Bu konudaki ilk yordam, bir **gecikme** etkinliği için özel etkinlik şablonu oluşturmayı açıklar ve ikinci yordam, özel şablonun çalıştığını doğrulamak için bir [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] ' de nasıl kullanılabilir hale getirmek istediğinizi açıklar.
 
- Özel Etkinlik şablonları uygulanmalı <xref:System.Activities.Presentation.IActivityTemplateFactory>. Tek bir arabirime sahip <xref:System.Activities.Presentation.IActivityTemplateFactory.Create%2A> yöntemi ile oluşturabilir ve şablonda kullanılan etkinlik örnekleri yapılandırabilirsiniz.
+ Özel etkinlik şablonlarının uygulaması <xref:System.Activities.Presentation.IActivityTemplateFactory>gerekir. Arabirimin, şablonda kullanılan etkinlik <xref:System.Activities.Presentation.IActivityTemplateFactory.Create%2A> örneklerini oluşturabileceğiniz ve yapılandırabileceği tek bir yöntemi vardır.
 
-## <a name="to-create-a-template-for-the-delay-activity"></a>Delay etkinlik için bir şablon oluşturmak için
+## <a name="to-create-a-template-for-the-delay-activity"></a>Gecikme etkinliğine yönelik bir şablon oluşturmak için
 
-1. Visual Studio 2010'u başlatın.
+1. Visual Studio 2010 ' i başlatın.
 
-2. Üzerinde **dosya** menüsünde **yeni**ve ardından **proje**.
+2. **Dosya** menüsünde, **Yeni**' nin üzerine gelin ve ardından **Proje**' yi seçin.
 
      **Yeni proje** iletişim kutusu açılır.
 
-3. İçinde **proje türleri** bölmesinde **iş akışı** da **Visual C#** projeleri veya **Visual Basic** gruplandırmaları bağlı olarak, dil tercihi.
+3. **Proje türleri** bölmesinde, dil tercihlerinize göre **görsel C#**  projelerden veya **Visual Basic** gruplarından **iş akışı** ' nı seçin.
 
-4. İçinde **şablonları** bölmesinde **etkinlik Kitaplığı**.
+4. **Şablonlar** bölmesinde **etkinlik kitaplığı**' nı seçin.
 
-5. İçinde **adı** kutusuna `DelayActivityTemplate`.
+5. **Ad** kutusuna girin `DelayActivityTemplate`.
 
-6. Varsayılan değerleri kabul **konumu** ve **çözüm adı** metin kutuları ve ardından **Tamam**.
+6. **Konum** ve **çözüm adı** metin kutularındaki varsayılan değerleri kabul edin ve ardından **Tamam**' a tıklayın.
 
-7. DelayActivityTemplate projenin başvurular dizini sağ **Çözüm Gezgini** ve **Başvuru Ekle** açmak için **Başvuru Ekle** iletişim kutusu.
+7. **Çözüm Gezgini** ' de DelayActivityTemplate projesinin başvurular dizinine sağ tıklayın **ve başvuru Ekle iletişim kutusunu** açmak için **Başvuru Ekle** ' yi seçin.
 
-8. Git **.NET** sekmenize **PresentationFramework** gelen **bileşen adı** tıklayın ve sol sütunu **Tamam** başvuru eklemek için PresentationFramework.dll dosyasına.
+8. **.Net** sekmesine gidin ve soldaki **bileşen adı** sütunundan **PresentationFramework** ' ü seçin ve PresentationFramework. dll dosyasına bir başvuru eklemek için **Tamam** ' ı tıklatın.
 
-9. Başvurular System.Activities.Presentation.dll ve WindowsBase.dll dosyaları eklemek için bu yordamı yineleyin.
+9. System. Activities. Presentation. dll ve WindowsBase. dll dosyalarına başvurular eklemek için bu yordamı tekrarlayın.
 
-10. DelayActivityTemplate projeye sağ **Çözüm Gezgini** ve **Ekle** ardından **yeni öğe** açmak için **Add New Item**iletişim kutusu.
+10. **Çözüm Gezgini** ' de DelayActivityTemplate projesine sağ tıklayın ve **Ekle** ' yi ve **Yeni öğe** ' yi seçerek **Yeni öğe Ekle** iletişim kutusunu açın.
 
-11. Seçin **sınıfı** şablon MyDelayTemplate adlandırın ve ardından **Tamam**.
+11. **Sınıf** şablonunu seçin, MyDelayTemplate olarak adlandırın ve ardından **Tamam**' a tıklayın.
 
-12. MyDelayTemplate.cs dosyasını açın ve aşağıdaki deyimleri ekleyin.
+12. MyDelayTemplate.cs dosyasını açın ve aşağıdaki deyimlerini ekleyin.
 
-    ```
+    ```csharp
     //Namespaces added
     using System.Activities;
     using System.Activities.Statements;
@@ -53,9 +53,9 @@ Etkinlikler, böylece kullanıcılar her etkinliği ayrı ayrı oluşturun ve bu
     using System.Windows;
     ```
 
-13. Uygulama <xref:System.Activities.Presentation.IActivityTemplateFactory> ile `MyDelayActivity` aşağıdaki kodla sınıfı. Bu, gecikme süresi 10 saniye için yapılandırır.
+13. Aşağıdaki kod ile `MyDelayActivity` sınıfını ileuygulayın.<xref:System.Activities.Presentation.IActivityTemplateFactory> Bu, gecikme süresini 10 saniyeye sahip olacak şekilde yapılandırır.
 
-    ```
+    ```csharp
     public sealed class MyDelayActivity : IActivityTemplateFactory
     {
         public Activity Create(System.Windows.DependencyObject target)
@@ -70,32 +70,32 @@ Etkinlikler, böylece kullanıcılar her etkinliği ayrı ayrı oluşturun ve bu
     }
     ```
 
-14. Seçin **Çözümü Derle** gelen **derleme** DelayActivityTemplate.dll dosyası oluşturmak için menü.
+14. DelayActivityTemplate. dll dosyasını oluşturmak için **derleme** menüsünden **çözüm oluştur** ' u seçin.
 
-### <a name="to-make-the-template-available-in-a-workflow-designer"></a>Şablonu bir iş akışı Tasarımcısı'nda kullanılabilir yapmak için
+### <a name="to-make-the-template-available-in-a-workflow-designer"></a>Şablonu bir İş Akışı Tasarımcısı kullanılabilir hale getirmek için
 
-1. DelayActivityTemplate çözüme sağ **Çözüm Gezgini** ve **Ekle** ardından **yeni proje** açmak için **Yeni Proje Ekle** iletişim kutusu.
+1. **Çözüm Gezgini** ' de DelayActivityTemplate çözümüne sağ tıklayın ve **Ekle** ' yi ve ardından **Yeni proje** ' yi seçerek **Yeni Proje Ekle** iletişim kutusunu açın.
 
-2. Seçin **iş akışı konsol uygulaması** şablon adlandırın `CustomActivityTemplateApp`ve ardından **Tamam**.
+2. **İş akışı konsol uygulaması** şablonunu seçin, adlandırın `CustomActivityTemplateApp`ve ardından **Tamam**' a tıklayın.
 
-3. CustomActivityTemplateApp projenin başvurular dizini sağ **Çözüm Gezgini** ve **Başvuru Ekle** açmak için **Başvuru Ekle** iletişim bir kutu.
+3. **Çözüm Gezgini** ' de CustomActivityTemplateApp projesinin başvurular dizinine sağ tıklayın **ve başvuru Ekle iletişim kutusunu** açmak için **Başvuru Ekle** ' yi seçin.
 
-4. Git **projeleri** sekmenize **DelayActivityTemplate** gelen **proje adı** tıklayın ve sol sütunu **Tamam** eklemek için bir ilk yordamda oluşturduğunuz DelayActivityTemplate.dll dosyasına başvurun.
+4. **Projeler** sekmesine gidin ve soldaki **Proje adı** sütunundan **DelayActivityTemplate** öğesini seçin ve ilk yordamda oluşturduğunuz DelayActivityTemplate. dll dosyasına bir başvuru eklemek için **Tamam** ' a tıklayın.
 
-5. CustomActivityTemplateApp projeye sağ **Çözüm Gezgini** ve **derleme** uygulama derlemek için.
+5. **Çözüm Gezgini** ' de CustomActivityTemplateApp projesine sağ tıklayın ve uygulamayı derlemek için **Oluştur** ' u seçin.
 
-6. CustomActivityTemplateApp projeye sağ **Çözüm Gezgini** ve **başlangıç projesi olarak ayarla**.
+6. **Çözüm Gezgini** ' de CustomActivityTemplateApp projesine sağ tıklayın ve **Başlangıç projesi olarak ayarla**' yı seçin.
 
-7. Seçin **hata ayıklama olmadan Başlat** gelen **hata ayıklama** herhangi anahtar istendiğinde cmd.exe penceresinden devam etmek için menü ve tuşuna basın.
+7. **Hata ayıklama** menüsünde **hata ayıklama olmadan Başlat** ' ı seçin ve cmd. exe penceresinden sorulduğunda devam etmek için herhangi bir tuşa basın.
 
-8. Workflow1.xaml dosyasını açın ve açık **araç kutusu**.
+8. Workflow1. xaml dosyasını açın ve **araç kutusunu**açın.
 
-9. Bulun **MyDelayActivity** şablonunda **DelayActivityTemplate** kategorisi. Tasarım yüzeyine sürükleyin. Doğrulayın **özellikleri** penceresi, `Duration` özelliği 10 saniye olarak ayarlandı.
+9. **DelayActivityTemplate** kategorisinde **MyDelayActivity** şablonunu bulun. Tasarım yüzeyine sürükleyin. **Özellikler** penceresinde, `Duration` özelliğin 10 saniyeye ayarlandığını onaylayın.
 
 ## <a name="example"></a>Örnek
- Aşağıdaki kod MyDelayActivity.cs dosya içermelidir.
+ MyDelayActivity.cs dosyası aşağıdaki kodu içermelidir.
 
-```
+```csharp
 using System;
 using System.Collections.Generic;
 using System.Linq;

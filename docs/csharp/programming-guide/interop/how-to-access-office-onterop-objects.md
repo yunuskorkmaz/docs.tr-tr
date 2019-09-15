@@ -10,12 +10,12 @@ helpviewer_keywords:
 - named arguments [C#], Office programming
 - Office programming [C#]
 ms.assetid: 041b25c2-3512-4e0f-a4ea-ceb2999e4d5e
-ms.openlocfilehash: 19fff39969933baa2510458400cabf9646e0c48d
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 8e99402752b3fafb486735d56d66737f03ceec30
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69589130"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70972097"
 ---
 # <a name="how-to-access-office-interop-objects-by-using-visual-c-features-c-programming-guide"></a>Nasıl yapılır: Visual C# özelliklerini kullanarak Office birlikte çalışma nesnelerine erişin (C# Programlama Kılavuzu)
 
@@ -137,7 +137,7 @@ Bu yönergeyi tamamlamak için, bilgisayarınızda yüklü Microsoft Office Exce
 
 ## <a name="to-set-the-embed-interop-types-property"></a>Birlikte çalışma türlerini katıştır özelliğini ayarlamak için
 
-1. Çalışma zamanında birincil birlikte çalışma derlemesi (PIA) gerektirmeyen bir COM türünü çağırdığınızda ek geliştirmeler yapılabilir. PIA 'ların bağımlılığını kaldırmak sürüm bağımsızlık ve daha kolay dağıtıma neden olur. PIA olmadan programlamanın avantajları hakkında daha fazla bilgi için bkz [. İzlenecek yol: Yönetilen derlemelerden](../concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)türler ekleme.
+1. Çalışma zamanında birincil birlikte çalışma derlemesi (PIA) gerektirmeyen bir COM türünü çağırdığınızda ek geliştirmeler yapılabilir. PIA 'ların bağımlılığını kaldırmak sürüm bağımsızlık ve daha kolay dağıtıma neden olur. PIA olmadan programlamanın avantajları hakkında daha fazla bilgi için bkz [. İzlenecek yol: Yönetilen derlemelerden](../../../standard/assembly/embed-types-visual-studio.md)türler ekleme.
 
      Ayrıca, gerekli ve com yöntemleri tarafından döndürülen türler `dynamic` `Object`yerine türü kullanılarak gösterilebildiğinden programlama daha kolay olur. Türü `dynamic` olan değişkenler çalışma zamanına kadar değerlendirilmez ve bu da açık atama gereksinimini ortadan kaldırır. Daha fazla bilgi için bkz. [dinamik tür kullanımı](../types/using-type-dynamic.md).
 

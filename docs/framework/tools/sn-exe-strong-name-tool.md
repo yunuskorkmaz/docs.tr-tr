@@ -12,20 +12,20 @@ helpviewer_keywords:
 ms.assetid: c1d2b532-1b8e-4c7a-8ac5-53b801135ec6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 643f0644bdeb2d3bdf6a08b482d0494affd92209
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: ef977206bf0d5b818cfd9779f063fbc2bd50632e
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894633"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971840"
 ---
 # <a name="snexe-strong-name-tool"></a>Sn.exe (Tanımlayıcı Ad Aracı)
-Tanımlayıcı ad Aracı (sn. exe), derlemelerin [güçlü adlarla](../../../docs/framework/app-domains/strong-named-assemblies.md)imzalanmanıza yardımcı olur. Sn.exe; temel yönetim, imza oluşturma ve imza doğrulaması için seçenekler sağlar.  
+Tanımlayıcı ad Aracı (sn. exe), derlemelerin [güçlü adlarla](../../standard/assembly/strong-named.md)imzalanmanıza yardımcı olur. Sn.exe; temel yönetim, imza oluşturma ve imza doğrulaması için seçenekler sağlar.  
   
 > [!WARNING]
 > Güvenlik için tanımlayıcı adlara güvenmeyin. Yalnızca benzersiz bir kimlik sağlarlar.
 
- Tanımlayıcı adlandırma ve tanımlayıcı adlı derlemeler hakkında daha fazla bilgi için bkz. [Strong-adlandırılmış derlemeler](../../../docs/framework/app-domains/strong-named-assemblies.md) ve [nasıl yapılır: Bir derlemeyi güçlü bir adla](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)imzalayın.  
+ Tanımlayıcı adlandırma ve tanımlayıcı adlı derlemeler hakkında daha fazla bilgi için bkz. [Strong-adlandırılmış derlemeler](../../standard/assembly/strong-named.md) ve [nasıl yapılır: Bir derlemeyi güçlü bir adla](../../standard/assembly/sign-strong-name.md)imzalayın.  
   
  Tanımlayıcı Ad aracı Visual Studio ile birlikte otomatik olarak yüklenir. Aracı başlatmak için Geliştirici Komut İstemi (veya Windows 7 ' de Visual Studio komut Istemi) kullanın. Daha fazla bilgi için bkz. [komut istemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
 
@@ -128,5 +128,5 @@ sn -d MyContainer
 
 - [Araçlar](../../../docs/framework/tools/index.md)
 - [Al.exe (Bütünleştirilmiş Kod Bağlayıcı)](../../../docs/framework/tools/al-exe-assembly-linker.md)
-- [Kesin Adlandırılmış Bütünleştirilmiş Kodlar](../../../docs/framework/app-domains/strong-named-assemblies.md)
+- [Kesin Adlandırılmış Bütünleştirilmiş Kodlar](../../standard/assembly/strong-named.md)
 - [Komut İstemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

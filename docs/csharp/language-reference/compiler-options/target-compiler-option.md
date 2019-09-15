@@ -9,12 +9,12 @@ helpviewer_keywords:
 - assemblies [C#], compiling
 - -target compiler options [C#]
 ms.assetid: a18bbd8e-bbf7-49e7-992c-717d0eb1f76f
-ms.openlocfilehash: 0630639433aed4c8dfddbf0144e9802ed3f4ee73
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 073660fa732c04cdc987af5617b894a277ebcc0f
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69606442"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70970123"
 ---
 # <a name="-target-c-compiler-options"></a>-target (C# derleyici seçenekleri)
 **-Target** derleyici seçeneği dört formdan birinde belirtilebilir:  
@@ -37,7 +37,7 @@ ms.locfileid: "69606442"
  [-target:winmdobj](./target-winmdobj-compiler-option.md)  
  Ara. winmdobj dosyası oluşturmak için.  
   
- **-Target: Module**belirtmediğiniz takdirde **-target** bir .NET Framework derleme bildiriminin bir çıkış dosyasına yerleştirilmesine neden olur. Daha fazla bilgi için bkz. [ortak dil çalışma zamanı](../../../framework/app-domains/assemblies-in-the-common-language-runtime.md) ve [ortak özniteliklerdeki](../../programming-guide/concepts/attributes/common-attributes.md)derlemeler.  
+ **-Target: Module**belirtmediğiniz takdirde **-target** bir .NET Framework derleme bildiriminin bir çıkış dosyasına yerleştirilmesine neden olur. Daha fazla bilgi için bkz. .NET ve [ortak özniteliklerde](../../programming-guide/concepts/attributes/common-attributes.md) [derlemeler](../../../standard/assembly/index.md) .  
   
  Derleme bildirimi, derleme içindeki ilk. exe çıkış dosyasına veya. exe çıkış dosyası yoksa ilk DLL 'de yerleştirilir. Örneğin, aşağıdaki komut satırında bildirim yerleştirilecek `1.exe`:  
   
