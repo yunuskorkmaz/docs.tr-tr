@@ -6,12 +6,12 @@ helpviewer_keywords:
 - application configuration [.NET Framework]
 - assemblies [.NET Framework], specifying location
 ms.assetid: 1cb92bd7-6bab-44cf-8fd3-36303ce84fea
-ms.openlocfilehash: 43cd1d0edbb607f69f27661aae3372e93564b3b7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f13b19dcd0aceac969d9639e6230ad33c6cd8d84
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69932330"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971544"
 ---
 # <a name="specifying-an-assemblys-location"></a>Derlemenin Konumunu Belirtme
 Bir derlemenin konumunu belirtmek için iki yol vardır:  
@@ -67,7 +67,7 @@ Bir derlemenin konumunu belirtmek için iki yol vardır:
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Ortak Dil Çalışma Zamanı Modülündeki Bütünleştirilmiş Kodlar](../app-domains/assemblies-in-the-common-language-runtime.md)
-- [Bütünleştirilmiş Kodlarla Programlama](../app-domains/programming-with-assemblies.md)
+- [.NET’te bütünleştirilmiş kodlar](../../standard/assembly/index.md)
+- [Bütünleştirilmiş Kodlarla Programlama](../../standard/assembly/program.md)
 - [Çalışma Zamanının Bütünleştirilmiş Kodların Konumunu Bulması](../deployment/how-the-runtime-locates-assemblies.md)
 - [Yapılandırma dosyalarını kullanarak uygulamaları yapılandırma](index.md)

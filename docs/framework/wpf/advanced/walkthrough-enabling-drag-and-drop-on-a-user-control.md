@@ -8,12 +8,12 @@ helpviewer_keywords:
 - walkthrough [WPF], drag-and-drop
 - drag-and-drop [WPF], walkthrough
 ms.assetid: cc844419-1a77-4906-95d9-060d79107fc7
-ms.openlocfilehash: 80fd55be9230729cb8336be91c1d8fb4f7f3f080
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 172e49c2c255db4d24d2180f919b1305326b5e82
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364256"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991805"
 ---
 # <a name="walkthrough-enabling-drag-and-drop-on-a-user-control"></a>İzlenecek yol: Kullanıcı Denetiminde Sürükleme ve Bırakmayı Etkinleştirme
 
@@ -80,7 +80,7 @@ Bu yönergeyi tamamlamak için Visual Studio gerekir.
 
 2. Geçerli uygulamaya bir XML ad alanı başvurusu <xref:System.Windows.Window> oluşturmak için aşağıdaki xaml 'yi açılış etiketine ekleyin.
 
-    ```
+    ```xaml
     xmlns:local="clr-namespace:DragDropExample"
     ```
 
@@ -311,7 +311,7 @@ Bu bölümde, daire kullanıcı denetimlerini barındıran bölmeleri, sürükle
 
     - <xref:System.Windows.UIElement.Drop> Etkinliğin zaten işlenmiş olup olmadığını denetler. Örneğin, bir daire <xref:System.Windows.UIElement.Drop> olayı işleyen başka bir daire üzerinde bırakıldığında, daireyi içeren panelin da işlenmesi için bu işleci istemezsiniz.
 
-    - Olay işlenmezse, CTRL tuşuna basıldığını denetler.  <xref:System.Windows.UIElement.Drop>
+    - Olay işlenmezse, CTRL tuşuna basıldığını denetler. <xref:System.Windows.UIElement.Drop>
 
     - <xref:System.Windows.UIElement.Drop> Oluştuğunda **CTRL** tuşuna basıldığında, daire denetiminin bir kopyasını oluşturur ve <xref:System.Windows.Controls.Panel.Children%2A> koleksiyonuna <xref:System.Windows.Controls.StackPanel>ekler.
 

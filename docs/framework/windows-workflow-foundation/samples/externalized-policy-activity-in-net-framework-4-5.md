@@ -2,30 +2,30 @@
 title: .NET Framework 4.5’te Dış İlke Etkinliği
 ms.date: 03/30/2017
 ms.assetid: 92fd6f92-23a1-4adf-b96a-2754ea93ad3e
-ms.openlocfilehash: 622b0f14281d5b068700d9e4fe03485aa1a60fcb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7d3c9b2bd9da7e3793479c002094504a4a556aa0
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62005036"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989564"
 ---
 # <a name="externalized-policy-activity-in-net-framework-45"></a>.NET Framework 4.5’te Dış İlke Etkinliği
 
-Bu örnek, varolan yürütme ExternalizedPolicy4 etkinlik nasıl imkan gösterir [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] Windows Workflow Foundation (WF 3.5) <xref:System.Workflow.Activities.Rules.RuleSet> nesneler [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] Windows Workflow kurallar altyapısı kullanarak doğrudan Foundation (WF 4.5) WF 3. 5 ', birlikte gönderilir. Bu etkinlik kullanarak açın ve tüm mevcut WF 3.5 yürütme <xref:System.Workflow.Activities.Rules.RuleSet>. WF 3.5 kural Windows Workflow Foundation bir parçası olarak dahil edilen altyapısı hakkında daha fazla bilgi için lütfen okuyun [Windows Workflow Foundation kurallar altyapısı giriş](https://go.microsoft.com/fwlink/?LinkId=166079). Geçiş hakkında daha fazla bilgi için kurallar [!INCLUDE[wf1](../../../../includes/wf1-md.md)] içinde [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)], adresindeki geçiş rehberini okuyun [geçiş kılavuzuna](../migration-guidance.md).
+Bu örnek, ExternalizedPolicy4 etkinliğinin kural altyapısını kullanarak doğrudan Windows Workflow Foundation [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] (WF 4,5) içindeki <xref:System.Workflow.Activities.Rules.RuleSet> [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] mevcut Windows Workflow Foundation (WF 3,5) nesnelerinin nasıl yürütülmeye izin verdiğini gösterir Bu, WF 3,5 ' de gönderilir. Bu etkinliği kullanarak var olan WF 3,5 <xref:System.Workflow.Activities.Rules.RuleSet>'yi açabilir ve çalıştırabilirsiniz. Windows Workflow Foundation kapsamında yer alan WF 3,5 kural altyapısı hakkında daha fazla bilgi için lütfen [Windows Workflow Foundation kuralları altyapısına giriş](https://go.microsoft.com/fwlink/?LinkId=166079)makalesini okuyun. [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ' De[!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)]kuralları geçirme hakkında daha fazla bilgi için lütfen [geçiş](../migration-guidance.md)kılavuzundaki geçiş kılavuzunu okuyun.
 
-## <a name="projects-in-this-sample"></a>Bu örnekte projeleri
+## <a name="projects-in-this-sample"></a>Bu örnekteki projeler
 
-|Proje adı|Açıklama|Ana dosyaları|
+|Proje adı|Açıklama|Ana dosyalar|
 |-|-|-|
-|ExternalizedPolicy4|ExternalizedPolicy4 etkinlik ve iş WF 4.5 Tasarımcısı içerir.|**ExternalizedPolicy4.cs**: etkinlik tanımı.<br /><br /> **ExternalizedPolicy4Designer.xaml**: Özel Tasarımcısı ExternalizedPolicy4 etkinliği. Kuralları Düzenleyicisi'ni kullanır (<xref:System.Workflow.Activities.Rules.Design.RuleSetDialog>) WF 3.5 kural altyapısından.|
-|ImperativeCodeClientSample|Yapılandırır ve kesin C# kod (tasarımcı kullanılan) kullanarak ExternalizedPolicy4 uygulama kullanarak iş akışını çalıştıran örnek istemci uygulaması.|**ApplyDiscount.rules**: İle dosya [!INCLUDE[wf1](../../../../includes/wf1-md.md)] kural tanımlar.<br /><br /> **Order.cs**: Bir müşteri sipariş temsil eden tür. Bu tür nesneler için kuralları uygulanır.<br /><br /> **Program.cs**: Yapılandırır ve bir Policy4 etkinliğinde ApplyDiscount.rules sırada nesnelerin örneklerini için tanımlanan kuralları uygulamak için bir iş akışı çalıştırır.<br /><br /> App.config: Yapılandırma dosyası ile kuralları dosyasının yolu.|
-|DesignerClientSample|Örnek yapılandırır ve ExternalPolicy4 uygulamayı kullanarak iş akışını çalıştıran istemci uygulama [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Tasarımcısı.|**Sequence1.XAML**: Kuralı değerlendirme gerçekleştirmek için bir Policy4 etkinliğini kullanan sıralı iş akışı.<br /><br /> **Program.cs**: Sequence1.xaml içinde tanımlanan iş akışı örneğini çalıştırır.|
+|ExternalizedPolicy4|ExternalizedPolicy4 etkinliğini ve onun WF 4,5 tasarımcısını içerir.|**ExternalizedPolicy4.cs**: etkinlik tanımı.<br /><br /> **ExternalizedPolicy4Designer. xaml**: ExternalizedPolicy4 etkinliği için özel tasarımcı. WF 3,5 kural altyapısından Rules<xref:System.Workflow.Activities.Rules.Design.RuleSetDialog>düzenleyicisini () kullanır.|
+|ImperativeCodeClientSample|Bir ExternalizedPolicy4 uygulamasını kullanarak bir iş akışını yapılandıran ve bu uygulama çalıştıran örnek istemci uygulaması C# , zorunlu kod (tasarımcı olmadan) kullanır.|**ApplyDiscount. Rules**: Kural tanımlarına [!INCLUDE[wf1](../../../../includes/wf1-md.md)] sahip dosya.<br /><br /> **Order.cs**: Bir müşteri siparişini temsil eden tür. Kurallar bu türden nesnelere uygulanır.<br /><br /> **Program.cs**: ApplyDiscount içinde tanımlanan kuralları uygulamak için Policy4 etkinliği olan bir iş akışını yapılandırır ve çalıştırır. sıralama nesnelerinin örneklerine yönelik kurallar.<br /><br /> App. config: Kural dosyasının yolunu içeren yapılandırma dosyası.|
+|DesignerClientSample|[!INCLUDE[wf1](../../../../includes/wf1-md.md)] Tasarımcıda bir ExternalPolicy4 uygulaması kullanarak bir iş akışını yapılandıran ve çalıştıran örnek istemci uygulaması.|**Sequence1. xaml**: Kural değerlendirmesi gerçekleştirmek için Policy4 etkinliğini kullanan sıralı iş akışı.<br /><br /> **Program.cs**: Sequence1. xaml içinde tanımlanan iş akışı örneğini çalıştırır.|
 
 ## <a name="the-externalizedpolicy4-activity"></a>ExternalizedPolicy4 etkinliği
 
-ExternalizedPolicy4 etkinliği bir <xref:System.Activities.NativeActivity> sağlayan WF 3.5 yürütme <xref:System.Workflow.Activities.Rules.RuleSet> 4.5 WF iş akışlarını içindeki nesneleri. Aşağıdaki örnek, etkinlik ortak nesne modelini basitleştirilmiş bir tanımıdır.
+ExternalizedPolicy4 etkinliği, WF 4,5 <xref:System.Activities.NativeActivity> iş akışlarının içinde WF 3,5 <xref:System.Workflow.Activities.Rules.RuleSet> nesnelerinin yürütülmesini sağlayan bir ' dir. Aşağıdaki örnek, etkinliğin ortak nesne modelinin basitleştirilmiş bir tanımıdır.
 
-```
+```csharp
 public class ExternalizedPolicy4Activity<TResult>: CodeActivity
 {
     public string RulesFilePath
@@ -44,51 +44,51 @@ public class ExternalizedPolicy4Activity<TResult>: CodeActivity
 
 |Özellik|Açıklama|
 |-|-|
-|RuleSetFilePath|.NET Framework 3.5 yoluna <xref:System.Workflow.Activities.Rules.RuleSet> dosya Etkinliği yürütüldüğünde değerlendirilecek.|
-|RuleSetName|Adını <xref:System.Workflow.Activities.Rules.RuleSet> .rules dosya içinde kullanılacak.|
-|TargetObject|Nesne <xref:System.Workflow.Activities.Rules.Rule> nesneler <xref:System.Workflow.Activities.Rules.RuleSet> karşı değerlendirilir.|
-|ResultObject|Kural uygulandıktan sonra elde edilen nesnenin (örneğin, kuralları, giriş bağımsız değişkeni karşı uygulanır ve sonuç sonuç değişkeninde depolanır.|
-|ValidationError|Doğrulama sırasında WF 3.5 kural altyapısı tarafından döndürülen doğrulama hatalarının listesini <xref:System.Workflow.Activities.Rules.RuleSet> karşı yürütmeden önce hedef nesne.|
+|RuleSetFilePath|Etkinlik yürütüldüğünde değerlendirilecek .NET Framework 3,5 <xref:System.Workflow.Activities.Rules.RuleSet> dosyasının yolu.|
+|RuleSetName|<xref:System.Workflow.Activities.Rules.RuleSet> . Rules dosyası içinde kullanılacak adı.|
+|TargetObject|<xref:System.Workflow.Activities.Rules.Rule> İçindeki nesnelerin üzerinde değerlendirildiği nesne. <xref:System.Workflow.Activities.Rules.RuleSet>|
+|ResultObject|Kurallar uygulandıktan sonra elde edilen nesne (örneğin, kurallar giriş bağımsız değişkenine göre uygulanır ve sonuç sonuç bağımsız değişkeninde saklanır.)|
+|ValidationError|Yürütmeden önce hedef nesneye <xref:System.Workflow.Activities.Rules.RuleSet> karşı doğrulanırken WF 3,5 kural altyapısının döndürdüğü doğrulama hatalarının listesi.|
 
-## <a name="externalizedpolicy4-activity-designer"></a>ExternalizedPolicy4 etkinlik Tasarımcısı
+## <a name="externalizedpolicy4-activity-designer"></a>ExternalizedPolicy4 Etkinlik Tasarımcısı
 
-ExternalizedPolicy4 Tasarımcı, kod yazmaya gerek kalmadan var olan bir kural kümesi kullanmak için bir etkinlik yapılandırmanıza olanak sağlar. Yalnızca .rules dosyasının bulunduğu yolu ayarlayın ve belirtin <xref:System.Workflow.Activities.Rules.RuleSet> kullanmak istediğiniz adı. Ayrıca değiştirmenizi sağlar <xref:System.Workflow.Activities.Rules.RuleSet>. Çözümü derledikten sonra bunu araç kutusundan Microsoft.Samples.Activities.Rules bölümünde bulunabilir. Tasarımcı .rules dosya seçmenizi sağlar ve bir <xref:System.Workflow.Activities.Rules.RuleSet>. Zaman **Düzenle RuleSet** düğmesine tıklandığında, WF 3.5 <xref:System.Workflow.Activities.Rules.Design.RuleSetDialog> görüntülenir. Bu iletişim kutusunu yeniden barındırılan WF 3.5 kural Düzenleyicisi olan ve görüntüleyip ExternalizedPolicy4 etkinliği yürütür kuralları düzenlemek için kullanılır.
+ExternalizedPolicy4 Tasarımcısı, bir etkinliği kod yazmadan mevcut bir RuleSet 'i kullanacak şekilde yapılandırmanıza olanak tanır. Yalnızca. Rules dosyasının bulunduğu yolu ayarlamanız ve kullanmak istediğiniz <xref:System.Workflow.Activities.Rules.RuleSet> adı belirtmeniz yeterlidir. Ayrıca, <xref:System.Workflow.Activities.Rules.RuleSet>değiştirmenizi sağlar. Çözüm oluşturulduktan sonra, Microsoft. Samples. Activities. Rules bölümündeki araç kutusunda bulunabilir. Tasarımcı bir. Rules dosyası ve bir <xref:System.Workflow.Activities.Rules.RuleSet>seçmenizi sağlar. **RuleSet 'i Düzenle** düğmesine tıklandığında WF 3,5 <xref:System.Workflow.Activities.Rules.Design.RuleSetDialog> görüntülenir. Bu iletişim kutusu, yeniden barındırılan WF 3,5 kurallar düzenleyicidir ve ExternalizedPolicy4 etkinliğinin yürütüldüğü kuralları görüntülemek ve düzenlemek için kullanılır.
 
 ## <a name="policy4-and-externalpolicy4"></a>Policy4 ve ExternalPolicy4
 
-İlke etkinlik oluşturma ve bir .NET Framework 3.5 kural kümesi WF 4.5 iş akışında yürütme sağlar. <xref:System.Workflow.Activities.Rules.RuleSet> Policy4 etkinliğinde XAML tanımı seri hale getirilmiş satır içidir. Mevcut bir kullanmayı ExternalizedPolicy4 örnek dış gösterir <xref:System.Workflow.Activities.Rules.RuleSet> (bir .rules dosyasında yer alan).
+Ilke etkinliği, bir WF 4,5 iş akışında .NET Framework 3,5 RuleSet oluşturmanıza ve çalıştırmanıza olanak tanır. , <xref:System.Workflow.Activities.Rules.RuleSet> Policy4 Activity XAML tanımında satır içi olarak serileştirilir. ExternalizedPolicy4 örneği, var olan bir dış <xref:System.Workflow.Activities.Rules.RuleSet> öğenin (. Rules dosyasında bulunur) nasıl kullanılacağını gösterir.
 
 ## <a name="use-this-sample"></a>Bu örneği kullanın
 
-Hiçbir özel kurulum, bu örneği çalıştırmak için gereklidir. Visual Studio içinde çözümü açın ve sonra basın **F5** uygulamayı çalıştırın.
+Bu örneği çalıştırmak için özel bir kurulum gerekmez. Visual Studio 'da çözümü açın ve **F5** tuşuna basarak uygulamayı çalıştırın.
 
-Bu örnek, iki istemci uygulamalarını içerir: ImperativeCodeClientSample ve DesignerClientSample. ImperativeCodeClientSample istemci, yapılandırma ve C# kesin kod kullanarak ExternalizedPolicy4 etkinlik çalıştırma işlemi gösterilmektedir. DesignerClientSample, yapılandırma ve tasarımcı kullanarak ExternalizedPolicy4 etkinlik çalıştırma işlemi gösterilmektedir.
+Bu örnek iki istemci uygulaması içerir: ImperativeCodeClientSample ve DesignerClientSample. ImperativeCodeClientSample istemcisi, ExternalizedPolicy4 etkinliğinin kesinlik kodu kullanılarak C# nasıl yapılandırılacağını ve çalıştırılacağını gösterir. DesignerClientSample, Tasarımcıyı kullanarak ExternalizedPolicy4 etkinliğinin nasıl yapılandırılacağını ve çalıştırılacağını gösterir.
 
-### <a name="run-the-imperativecodeclientsample-application"></a>ImperativeCodeClientSample uygulamayı çalıştırın
+### <a name="run-the-imperativecodeclientsample-application"></a>ImperativeCodeClientSample uygulamasını çalıştırma
 
-1. Visual Studio kullanarak açma *Policy4sample.sln* çözüm dosyası.
+1. Visual Studio 'yu kullanarak *Policy4Sample. sln* çözüm dosyasını açın.
 
-2. İçinde **Çözüm Gezgini**, sağ **ImperativeCodeClientSample** proje ve ardından **başlangıç projesi olarak ayarla**.
+2. **Çözüm Gezgini**' de, **ImperativeCodeClientSample** projesine sağ tıklayın ve ardından **Başlangıç projesi olarak ayarla**' yı seçin.
 
-3. Projeyi çalıştırmak için basın **Ctrl**+**F5**.
+3. Projeyi çalıştırmak için **CTRL**+**F5**tuşuna basın.
 
-### <a name="run-the-designerclientsample-application"></a>DesignerClientSample uygulamayı çalıştırın
+### <a name="run-the-designerclientsample-application"></a>DesignerClientSample uygulamasını çalıştırma
 
-1. Visual Studio kullanarak açma *Policy4sample.sln* çözüm dosyası.
+1. Visual Studio 'yu kullanarak *Policy4Sample. sln* çözüm dosyasını açın.
 
-2. İçinde **Çözüm Gezgini**, sağ **DesignerClientSample** proje ve ardından **başlangıç projesi olarak ayarla**.
+2. **Çözüm Gezgini**, **DesignerClientSample** projesine sağ tıklayın ve ardından **Başlangıç projesi olarak ayarla**' yı seçin.
 
-3. Tuşuna **Ctrl**+**Shift**+**B** Projeyi derlemek için.
+3. Projeyi derlemek için **CTRL**+**SHIFT**+**B** tuşlarına basın.
 
-4. Tuşuna **Ctrl**+**F5** projeyi çalıştırın.
+4. Projeyi çalıştırmak için **CTRL**+**F5** tuşuna basın.
 
 > [!IMPORTANT]
-> Örnekler, makinenizde zaten yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.
+> Örnekler makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri.
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) ' e gidin.
 >
-> Bu örnek, şu dizinde bulunur:
+> Bu örnek aşağıdaki dizinde bulunur:
 >
 > `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\Rules-ExternalizedPolicy4`

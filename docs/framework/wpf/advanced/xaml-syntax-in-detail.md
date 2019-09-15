@@ -29,12 +29,12 @@ helpviewer_keywords:
 - attribute syntax [XAML]
 - XAML [WPF], property element syntax
 ms.assetid: 67cce290-ca26-4c41-a797-b68aabc45479
-ms.openlocfilehash: 09f0a1b34e88be995fb9a386161a930457e4bb56
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: d48398f31c1452821292a6feb2867dbd2971e739
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70168998"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991409"
 ---
 # <a name="xaml-syntax-in-detail"></a>Ayrıntılı XAML Sözdizimi
 Bu konuda, XAML söz dizimi öğelerini tanımlamakta kullanılan terimler tanımlanmaktadır. Bu terimler, hem WPF belgeleri için hem de XAML kullanan diğer çerçeveler veya System. xaml düzeyinde XAML dil desteği tarafından etkinleştirilen temel XAML kavramlarını için bu belgenin geri kalanında sık kullanılır. Bu konu, [xaml genel bakış (WPF)](xaml-overview-wpf.md)konu başlığında sunulan temel terminoloji üzerinde genişletilir.  
@@ -112,7 +112,7 @@ Bu konuda, XAML söz dizimi öğelerini tanımlamakta kullanılan terimler tanı
   
  Flagwise Numaralandırmalar için davranış <xref:System.Enum.Parse%2A?displayProperty=nameWithType> yöntemi temel alır. Her değeri virgülle ayırarak, bir flagwise numaralandırması için birden fazla değer belirtebilirsiniz. Ancak, flagwise olmayan numaralandırma değerlerini birleştiremezsiniz. Örneğin, bayrak olmayan bir numaralandırmanın birden çok koşulu üzerinde davranan bir <xref:System.Windows.Trigger> oluşturmak için virgül sözdizimini kullanamazsınız:  
   
-```  
+```xaml  
 <!--This will not compile, because Visibility is not a flagwise enumeration.-->  
 ...  
 <Trigger Property="Visibility" Value="Collapsed,Hidden">  
@@ -197,7 +197,7 @@ Bu konuda, XAML söz dizimi öğelerini tanımlamakta kullanılan terimler tanı
 ### <a name="xaml-content-property-values-must-be-contiguous"></a>XAML Içerik özelliği değerleri bitişik olmalıdır  
  XAML içerik özelliğinin değeri, nesne öğesindeki diğer herhangi bir özellik öğesinden tamamen önce veya tamamen bir değere verilmelidir. Bu, XAML içerik özelliği değerinin bir dize olarak mı yoksa bir veya daha fazla nesne olarak mı belirtilmeliyse geçerlidir. Örneğin, aşağıdaki biçimlendirme ayrıştırılmadı:  
   
-```  
+```xaml  
 <Button>I am a   
   <Button.Background>Blue</Button.Background>  
   blue button</Button>  
@@ -205,7 +205,7 @@ Bu konuda, XAML söz dizimi öğelerini tanımlamakta kullanılan terimler tanı
   
  Bu geçersizdir çünkü bu sözdizimi, içerik özelliği için özellik öğesi söz dizimi kullanılarak açık hale getirilmiş olduğundan, içerik özelliği iki kez ayarlanabilir:  
   
-```xml  
+```xaml  
 <Button>  
   <Button.Content>I am a </Button.Content>  
   <Button.Background>Blue</Button.Background>  
@@ -215,7 +215,7 @@ Bu konuda, XAML söz dizimi öğelerini tanımlamakta kullanılan terimler tanı
   
  Benzer şekilde geçersiz bir örnek, içerik özelliğinin bir koleksiyon olması ve alt öğelerin özellik öğeleriyle birlikte nasıl karışılyadır.  
   
-```xml  
+```xaml  
 <StackPanel>  
   <Button>This example</Button>  
   <StackPanel.Resources>  
@@ -270,7 +270,7 @@ Bu konuda, XAML söz dizimi öğelerini tanımlamakta kullanılan terimler tanı
   
 <a name="attached_events"></a>   
 ## <a name="attached-events"></a>Ekli Olaylar  
- Ekli olaylar XAML 'de sunulan ve olayların belirli bir tür tarafından tanımlanbildiği, ancak işleyicilerin herhangi bir nesne öğesine eklenmiş olabileceği başka bir programlama kavramıdır. WOF uygulamasında, genellikle ekli olayı tanımlayan tür bir hizmeti tanımlayan statik bir türdür ve bazen bu ekli olaylar, hizmeti kullanıma sunan türlerde bir yönlendirilmiş olay diğer adı tarafından gösterilir. Ekli olaylara yönelik işleyiciler öznitelik sözdizimi aracılığıyla belirtilir. Ekli olaylarda olduğu gibi, öznitelik sözdizimi bir *TypeName*'e izin vermek için eklenmiş olaylar için genişletilir. *EventName* kullanımı, *TypeName* , eklenen olay altyapısı için ve `Add` `Remove` olay işleyicisi erişimcileri sağlayan sınıftır ve bu da olay adıdır.  
+ Ekli olaylar XAML 'de sunulan ve olayların belirli bir tür tarafından tanımlanbildiği, ancak işleyicilerin herhangi bir nesne öğesine eklenmiş olabileceği başka bir programlama kavramıdır. WOF uygulamasında, genellikle ekli olayı tanımlayan tür bir hizmeti tanımlayan statik bir türdür ve bazen bu ekli olaylar, hizmeti kullanıma sunan türlerde bir yönlendirilmiş olay diğer adı tarafından gösterilir. Ekli olaylara yönelik işleyiciler öznitelik sözdizimi aracılığıyla belirtilir. Ekli olaylarda olduğu gibi, öznitelik sözdizimi bir *TypeName*'e izin vermek için eklenmiş olaylar için genişletilir. *EventName* kullanımı, *TypeName* , eklenen olay altyapısı için ve `Add` `Remove` olay işleyicisi erişimcileri sağlayan *sınıftır ve bu* da olay adıdır.  
   
 <a name="anatomy_of_a_xaml_page_root_element"></a>   
 ## <a name="anatomy-of-a-xaml-root-element"></a>XAML kök öğesinin anatomumu  

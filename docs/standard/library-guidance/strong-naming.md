@@ -1,21 +1,21 @@
 ---
-title: Tanımlayıcı ad oluşturma ve .NET kitaplıkları
-description: Tanımlayıcı adlandırma .NET kitaplıkları için en iyi yöntem önerileri.
+title: Güçlü adlandırma ve .NET kitaplıkları
+description: Güçlü adlandırma .NET kitaplıkları için en iyi yöntem önerileri.
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/16/2018
-ms.openlocfilehash: 79e44e89a94c1948ff29b9a8161f852c3a7c8cbb
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 3a623f65d95d776e45af245a1fe241cc5ee25b93
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65640788"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70968977"
 ---
 # <a name="strong-naming"></a>Kesin adlandırma
 
-Tanımlayıcı adlandırma başvuruyor üreten bir anahtarla bir derlemeyi imzalamak için bir [tanımlayıcı adlı derleme](../../framework/app-domains/strong-named-assemblies.md). Kesin adlandırılmış bir derlemedir, adı ve derleme sürüm numarasına göre benzersiz bir kimliği oluşturur ve derleme çakışmalarının önlenmesine yardımcı olabilir.
+Tanımlayıcı adlandırma, [tanımlayıcı adlı bir derleme](../assembly/strong-named.md)üreten bir derlemeyi anahtarla imzalamayı ifade eder. Bir derleme tanımlayıcı olarak adlandırılmışsa, ad ve derleme sürüm numarasına göre benzersiz bir kimlik oluşturur ve derleme çakışmalarını önlemeye yardımcı olabilir.
 
-Tanımlayıcı adlandırma için dezavantajı, bir derleme tanımlayıcı ada sonra Windows üzerinde .NET Framework derlemeleri katı yüklenmesini sağlayan ' dir. Bir tanımlayıcı adlı bütünleştirilmiş kod başvurusu geliştiricilerine zorlama, bir derleme tarafından başvurulan sürümü tam olarak eşleşmelidir [bağlama yeniden yönlendirmeleri yapılandırma](../../framework/configure-apps/redirect-assembly-versions.md) derleme kullanırken:
+Güçlü adlandırma için downsıde, derleme tanımlayıcı olarak adlandırılmış olduktan sonra Windows 'daki .NET Framework derlemelerin sıkı şekilde yüklenmesini sağlar. Tanımlayıcı adlı bütünleştirilmiş kod başvurusu, derleme tarafından başvurulan sürümle tam olarak eşleşmelidir ve bu derleme, derlemeyi kullanırken geliştiricilerin [bağlama yeniden yönlendirmelerini yapılandırmasına](../../framework/configure-apps/redirect-assembly-versions.md) zorlanır:
 
 ```xml
 <configuration>
@@ -30,46 +30,46 @@ Tanımlayıcı adlandırma için dezavantajı, bir derleme tanımlayıcı ada so
 </configuration>
 ```
 
-.NET geliştiricileri, güçlü adlandırma hakkında şikayet ne bunlar genellikle hakkında şikayetçi katı derleme yükleme olur. Neyse ki, bu sorun, .NET Framework yalıtılır. .NET core, Xamarin, UWP ve diğer .NET uygulamalarının çoğu katı derleme yükleme yoktur ve tanımlayıcı adlandırmanın temel dezavantajı kaldırır.
+.NET geliştiricileri tanımlayıcı adlandırmayla ilgili olarak şikayet edildiğinde, bu durum genellikle ne kadar şikayetçi, katı derleme yüklemesi. Neyse ki, bu sorun .NET Framework yalıtılmıştır. .NET Core, Xamarin, UWP ve diğer birçok .NET uygulaması katı bütünleştirilmiş kod yükleme içermez ve tanımlayıcı adlandırmanın ana alttarafını kaldırır.
 
-Tanımlayıcı adlandırma önemli yönlerinden biri olan viral: güçlü derleme can yalnızca başvuru diğer güçlü adlı derlemeler adlı. Kitaplığınızı adlı sağlam değilse bir uygulama ya da tanımlayıcı adlandırma kullanmasını gerektiren bir kitaplık oluşturuyorsanız geliştiriciler dışarıda.
+Güçlü adlandırmanın önemli bir yönü, bunun viral olması olabilir: tanımlayıcı bir adlandırılmış derleme yalnızca diğer tanımlayıcı adlandırılmış derlemelere başvurabilir. Kitaplığınız tanımlayıcı olarak adlandırılmazsa, bir uygulama veya kitaplığı oluşturan geliştiricilerin onu kullanarak tanımlayıcı adlandırma yapması gerekir.
 
-Tanımlayıcı adlandırma avantajları şunlardır:
+Tanımlayıcı adlandırmanın avantajları şunlardır:
 
-1. Derleme, başvurulan ve diğer tanımlayıcı adlı derlemeler tarafından kullanılır.
-2. Derleme Genel Derleme Önbelleği'ne (GAC) depolanabilir.
-3. Derleme, derlemenin diğer sürümlerle yan yana yüklü olabilir. Yan yana derleme yükleme, eklenti mimariler ile uygulamalar tarafından yaygın olarak gereklidir.
+1. Derlemeye, tanımlayıcı adlı diğer derlemeler tarafından başvurulabilir ve kullanılabilir.
+2. Derleme, genel derleme önbelleğinde (GAC) depolanabilir.
+3. Derleme diğer derleme sürümleriyle yan yana yüklenebilir. Yan yana derleme yüklemesi, eklenti mimarilerine sahip uygulamalar için yaygın olarak gereklidir.
 
-## <a name="create-strong-named-net-libraries"></a>.NET kitaplıkları adlı güçlü oluşturma
+## <a name="create-strong-named-net-libraries"></a>Tanımlayıcı adlandırılmış .NET kitaplıkları oluşturma
 
-Ayrıca, açık kaynak .NET kitaplıkları strong adlandırmalısınız. Tanımlayıcı ad derleme oluşturma, çoğu kişi kullanın ve .NET Framework katı derleme yalnızca yükleme etkiler sağlar.
+Açık kaynaklı .NET kitaplıklarınızı tanımlayıcı olarak adlandırın. Derlemeyi tanımlayıcı olarak adlandırma, çoğu kişinin bunu kullanmasını sağlar ve katı derleme yükleme yalnızca .NET Framework etkiler.
 
 > [!NOTE]
-> Nuget.org adresinden .NET kitaplıkları yayımlanan gibi bu genel olarak dağıtılmış .NET kitaplıkları için belirli bir kılavuzdur. Tanımlayıcı adlandırma çoğu .NET uygulamaları tarafından gerekli değildir ve varsayılan olarak gerçekleştirilmemelidir.
+> Bu kılavuz, NuGet.org üzerinde yayımlanan .NET kitaplıkları gibi genel olarak dağıtılmış .NET kitaplıklarına özgüdür. Güçlü adlandırma .NET uygulamaları için gerekli değildir ve varsayılan olarak yapılmamalıdır.
 
-**✔️ DÜŞÜNÜN** güçlü kitaplığınızın derlemelerini adlandırma.
+**✔️** kitaplığınızın derlemelerinizi tanımlayıcı olarak adlandırmayı düşünün.
 
-**✔️ DÜŞÜNÜN** kaynak denetim sisteminize güçlü adlandırma anahtar ekleme.
+**✔️** , güçlü adlandırma anahtarını kaynak denetim sisteminize eklemeyi düşünün.
 
-> Genel kullanıma açık bir anahtar geliştiricilerin değiştirmek ve aynı anahtara sahip kitaplık kaynak kodunuzu yeniden derleyin sağlar.
+> Genel kullanıma açık bir anahtar, geliştiricilerin kitaplık kaynak kodunuzu aynı anahtarla değiştirmesine ve yeniden derlemenize olanak tanır.
 > 
-> Güçlü adlandırma anahtar geçmişte, özel izinleri verme kullanıldıysa, genel yap olmamalıdır [kısmi güven senaryoları](/dotnet/framework/misc/using-libraries-from-partially-trusted-code). Aksi takdirde, mevcut ortamlar tehlikeye atabilir.
+> Geçmişte, [kısmi güven senaryolarında](/dotnet/framework/misc/using-libraries-from-partially-trusted-code)özel izinler vermek için geçmişte kullanılırsa, tanımlayıcı adlandırma anahtarını genel hale kullanmamanız gerekir. Aksi takdirde, mevcut ortamların güvenliğini tehlikeye atabilir.
 
 > [!IMPORTANT]
-> Kod bir yayımcının kimliğini istendiğinde [Authenticode](/windows-hardware/drivers/install/authenticode) ve [NuGet paket imzalama](/nuget/create-packages/sign-a-package) önerilir. Kod erişim güvenliği (CAS) bir güvenlik riskini azaltma kullanılmamalıdır.
+> Kod yayımcısının kimliği isteniyorsa, [Authenticode](/windows-hardware/drivers/install/authenticode) ve [NuGet paket imzalama](/nuget/create-packages/sign-a-package) önerilir. Kod erişim güvenliği (CAS) güvenlik azaltma olarak kullanılmamalıdır.
 
-**✔️ DÜŞÜNÜN** derleme sürümü yalnızca ana sürüm değişikliklerini bağlama yeniden yönlendirmeleri ve ne sıklıkta güncelleştirilmiş kullanıcılara yardımcı olmak için artırma.
+✔️, kullanıcıların bağlama yeniden yönlendirmelerini azaltmaları ve güncelleştirilme sıklığı hakkında yardım almak için derleme sürümünü yalnızca önemli sürüm değişikliklerinde **artırmayı düşünün** .
 
-> Daha fazla bilgi edinin [sürüm oluşturma ve derleme sürümüne](./versioning.md#assembly-version).
+> [Sürüm oluşturma ve derleme sürümü](./versioning.md#assembly-version)hakkında daha fazla bilgi edinin.
 
-**❌ SAĞLAMADIĞI** eklemek, kaldırmak veya tanımlayıcı adlandırma anahtarını değiştirin.
+**❌** Tanımlayıcı adlandırma anahtarını ekleme, kaldırma veya değiştirme.
 
-> Bir derlemenin tanımlayıcı adlandırma anahtarını değiştirerek, derlemenin kimliğini değiştirir ve kullandığı derlenmiş kodları keser. Daha fazla bilgi için [ikili bozucu değişiklikler](./breaking-changes.md#binary-breaking-change).
+> Bir derlemenin tanımlayıcı adlandırma anahtarını değiştirmek derlemenin kimliğini değiştirir ve onu kullanan derlenmiş kodu keser. Daha fazla bilgi için bkz. [ikili son değişiklikler](./breaking-changes.md#binary-breaking-change).
 
-**❌ SAĞLAMADIĞI** kitaplığınızın tanımlayıcı adlı ve olmayan-tanımlayıcı adlı sürümler yayımlayabilir. Örneğin, `Contoso.Api` ve `Contoso.Api.StrongNamed`.
+❌, Kitaplığınızın güçlü adlandırılmış ve tanımlayıcı olmayan sürümlerini **yayımlamaz** . Örneğin, `Contoso.Api` ve `Contoso.Api.StrongNamed`.
 
-> İki paketleri çatalları Geliştirici ekonomik sistem yayımlanıyor. Ayrıca, uygulamaya bağlı olarak iki paketi de sona erecek, geliştirici türü adı çakışmaları olarak sınırlamasıyla. .NET ilgili olduğu kadar farklı derlemelerde farklı türlerini değildirler.
+> İki paket yayımlandığında geliştirici ekonomik sisteminize çatalın. Ayrıca, her iki pakete bağlı olarak bir uygulama sonlanıyorsa, geliştirici tür adı çakışmaları ile karşılaşabilir. .NET, farklı derlemelerdeki farklı türlerdir.
 
 >[!div class="step-by-step"]
->[Önceki](cross-platform-targeting.md)
->[İleri](nuget.md)
+>[Önceki](cross-platform-targeting.md)İleri
+>[](nuget.md)

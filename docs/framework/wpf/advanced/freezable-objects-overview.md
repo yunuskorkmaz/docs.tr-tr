@@ -9,12 +9,12 @@ helpviewer_keywords:
 - unfreezing Freezable objects [WPF]
 - classes [WPF], Freezable
 ms.assetid: 89c71692-4f43-4057-b611-67c6a8a863a2
-ms.openlocfilehash: 854565e28e646ef57658e2bfdb7326d8453448d2
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 05cd3c27430146f575c23011f53995aa07aaf99e
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70856077"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991489"
 ---
 # <a name="freezable-objects-overview"></a>Freezable Nesnelerine Genel Bakış
 
@@ -100,13 +100,13 @@ Biçimlendirme içinde belirtilen <xref:System.Windows.Freezable> bir nesneyi do
 
 `Freeze` Özniteliğini kullanmak için, sunu seçenekleri ad alanına eşlemeniz gerekir: `http://schemas.microsoft.com/winfx/2006/xaml/presentation/options`. `PresentationOptions`Bu ad alanını eşlemek için önerilen önek:
 
-```
+```xaml
 xmlns:PresentationOptions="http://schemas.microsoft.com/winfx/2006/xaml/presentation/options"
 ```
 
 Tüm xaml okuyucuları bu özniteliği tanımadığından, `Presentation:Freeze` özniteliği yoksayılabilir olarak işaretlemek için [mc: Ignorable özniteliğini](mc-ignorable-attribute.md) kullanmanız önerilir:
 
-```
+```xaml
 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
 mc:Ignorable="PresentationOptions"
 ```

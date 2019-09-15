@@ -2,12 +2,12 @@
 title: İleti Düzeyi Programlama ile JSON Seri Hale Getirme
 ms.date: 03/30/2017
 ms.assetid: 5f940ba2-57ee-4c49-a779-957c5e7e71fa
-ms.openlocfilehash: f50f6a699dff54e3d0950f5ce0e1049217b9dc45
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 7576594f8fa694ce2d34cf38c88d2e28a00f5295
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928738"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991124"
 ---
 # <a name="serializing-in-json-with-message-level-programming"></a>İleti Düzeyi Programlama ile JSON Seri Hale Getirme
 WCF, JSON biçimindeki verilerin serileştirilmesinin kullanılmasını destekler. Bu konuda, <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>WCF 'yi kullanarak türlerinizi serileştirmek için nasıl söyleyeceğinizi açıklanmaktadır.  
@@ -21,7 +21,7 @@ WCF, JSON biçimindeki verilerin serileştirilmesinin kullanılmasını destekle
 ## <a name="untyped-message-programming"></a>Türsüz Ileti programlama  
  Türsüz Ileti nesneleriyle doğrudan çalışırken, türsüz iletideki özellikleri JSON olarak seri hale getirmek için açıkça ayarlamanız gerekir. Aşağıdaki kod parçacığında bunun nasıl yapılacağı gösterilmektedir.  
   
-```  
+```csharp
  Message response = Message.CreateMessage(  
                   MessageVersion.None,    // No SOAP message version  
                              "*",                     // SOAP action, ignored since this is JSON  

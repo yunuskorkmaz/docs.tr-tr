@@ -2,12 +2,12 @@
 title: Genel Olmayan ForEach
 ms.date: 03/30/2017
 ms.assetid: 576cd07a-d58d-4536-b514-77bad60bff38
-ms.openlocfilehash: e467534ba2b233f1f3c279e89badf12846c6b7f7
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: cb040d8bd5fbb34cc00b246f2e51789866fd8e78
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70038071"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989033"
 ---
 # <a name="non-generic-foreach"></a>Genel Olmayan ForEach
 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)], kendi araç kutusunda, <xref:System.Activities.Statements.ForEach%601>koleksiyonlar arasında <xref:System.Collections.Generic.IEnumerable%601> yineleme sağlayan denetim akışı etkinlikleri kümesi olarak gelir.  
@@ -24,7 +24,7 @@ ms.locfileid: "70038071"
 ## <a name="class-definition"></a>Sınıf tanımı  
  Aşağıdaki kod örneği genel `ForEach` olmayan bir etkinliğin tanımını gösterir.  
   
-```  
+```csharp  
 [ContentProperty("Body")]  
 public class ForEach : NativeActivity  
 {  
@@ -47,7 +47,7 @@ public class ForEach : NativeActivity
 ## <a name="example-of-using-foreach"></a>ForEach kullanma örneği  
  Aşağıdaki kod, bir uygulamada ForEach etkinliğinin nasıl kullanılacağını göstermektedir.  
   
-```  
+```csharp  
 string[] names = { "bill", "steve", "ray" };  
   
 DelegateInArgument<object> iterationVariable = new DelegateInArgument<object>() { Name = "iterationVariable" };  
@@ -74,7 +74,7 @@ Activity sampleUsage =
 ## <a name="foreach-designer"></a>ForEach Tasarımcısı  
  Örnek için etkinlik Tasarımcısı, yerleşik <xref:System.Activities.Statements.ForEach%601> etkinlik için sunulan tasarımcı görünümünde benzerdir. Tasarımcı, **örnekler**, **genel olmayan etkinlikler** kategorisindeki araç kutusunda görünür. Tasarımcı araç kutusunda **ForEachWithBodyFactory** olarak adlandırılır çünkü etkinlik <xref:System.Activities.Presentation.IActivityTemplateFactory> , düzgün bir şekilde yapılandırılmış <xref:System.Activities.ActivityAction>olan etkinliği oluşturur.  
   
-```  
+```csharp  
 public sealed class ForEachWithBodyFactory : IActivityTemplateFactory  
 {  
     public Activity Create(DependencyObject target)  

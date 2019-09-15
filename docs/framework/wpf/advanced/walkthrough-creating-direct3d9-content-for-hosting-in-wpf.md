@@ -7,23 +7,23 @@ helpviewer_keywords:
 - WPF [WPF], creating Direct3D9 content
 - Direct3D9 [WPF interoperability], creating Direct3D9 content
 ms.assetid: 286e98bc-1eaa-4b5e-923d-3490a9cca5fc
-ms.openlocfilehash: e1cb5832ec6e383d1ee183b6bc9a86745ecc207c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 462220b526db90d3acfa90a28f9bfd56dbe813e2
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64605850"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991406"
 ---
 # <a name="walkthrough-creating-direct3d9-content-for-hosting-in-wpf"></a>İzlenecek yol: WPF'de Barındırmak için Direct3D9 İçeriği Oluşturma
-Bu izlenecek yol, uygun bir Windows Presentation Foundation (WPF) uygulamasında barındırmak için Direct3D9 içeriği oluşturma işlemi gösterilmektedir. WPF uygulamalarında Direct3D9 içeriği barındırma ile ilgili daha fazla bilgi için bkz: [WPF ve Direct3D9 birlikte çalışması](wpf-and-direct3d9-interoperation.md).
+Bu izlenecek yol, bir Windows Presentation Foundation (WPF) uygulamasında barındırmak için uygun olan Direct3D9 içeriğinin nasıl oluşturulacağını gösterir. WPF uygulamalarında Direct3D9 içeriğini barındırma hakkında daha fazla bilgi için bkz. [WPF ve Direct3D9 birlikte](wpf-and-direct3d9-interoperation.md)çalışma.
 
- Bu kılavuzda, aşağıdaki görevleri gerçekleştirin:
+ Bu kılavuzda, aşağıdaki görevleri gerçekleştirirsiniz:
 
 - Direct3D9 projesi oluşturun.
 
-- Bir WPF uygulamasında barındırmak için Direct3D9 projeyi yapılandırın.
+- WPF uygulamasında barındırmak üzere Direct3D9 Projesini yapılandırın.
 
- İşlemi tamamladığınızda, bir WPF uygulamasını kullanmak için Direct3D9 içeriği içeren bir DLL gerekir.
+ İşiniz bittiğinde, WPF uygulamasında kullanmak üzere Direct3D9 içeriğini içeren bir DLL 'ye sahip olursunuz.
 
 ## <a name="prerequisites"></a>Önkoşullar
  Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vardır:
@@ -33,92 +33,92 @@ Bu izlenecek yol, uygun bir Windows Presentation Foundation (WPF) uygulamasında
 - DirectX SDK 9 veya üzeri.
 
 ## <a name="creating-the-direct3d9-project"></a>Direct3D9 projesi oluşturma
- İlk adım, oluşturma ve Direct3D9 proje yapılandırma sağlamaktır.
+ İlk adım, Direct3D9 projesini oluşturmak ve yapılandırmak için kullanılır.
 
-#### <a name="to-create-the-direct3d9-project"></a>Direct3D9 projeyi oluşturmak için
+#### <a name="to-create-the-direct3d9-project"></a>Direct3D9 projesi oluşturmak için
 
-1. C++'ta adlı yeni bir Win32 projesi oluşturma `D3DContent`.
+1. C++ Adında`D3DContent`yeni bir Win32 projesi oluşturun.
 
-     Win32 Uygulama Sihirbazı açılır ve karşılama ekranı görüntülenir.
+     Win32 uygulama Sihirbazı açılır ve hoş geldiniz ekranını görüntüler.
 
 2. **İleri**'ye tıklayın.
 
-     Uygulama ayarları ekranı görünür.
+     Uygulama ayarları ekranı görüntülenir.
 
-3. İçinde **uygulama türü:** bölümünden **DLL** seçeneği.
+3. **Uygulama türü:** bölümünde, **DLL** seçeneğini belirleyin.
 
 4. **Son**'a tıklayın.
 
-     D3DContent Proje oluşturulur.
+     D3DContent projesi oluşturulur.
 
-5. Çözüm Gezgini'nde D3DContent projesine sağ tıklayıp **özellikleri**.
+5. Çözüm Gezgini, D3DContent projesine sağ tıklayın ve **Özellikler**' i seçin.
 
-     **D3DContent özellik sayfaları** iletişim kutusu açılır.
+     **D3DContent Özellik sayfaları** iletişim kutusu açılır.
 
-6. Seçin **C/C++** düğümü.
+6. **C/C++**  düğümünü seçin.
 
-7. İçinde **ek içerik dizinleri** alanında, DirectX konumunu içeren klasörü belirtin. Bu klasör varsayılan konumu %ProgramFiles%\Microsoft DirectX SDK ise (*sürüm*) \Include.
+7. **Ek ekleme dizinleri** alanında DirectX içerme klasörünün konumunu belirtin. Bu klasör için varsayılan konum%ProgramFiles%\Microsoft DirectX SDK (*Sürüm*) \ıncludeşeklindedir.
 
-8. Çift **bağlayıcı** düğümünü genişletin.
+8. Genişletmek için **bağlayıcı** düğümüne çift tıklayın.
 
-9. İçinde **ek kitaplık dizinleri** alanında, DirectX kitaplıkları klasörünün konumunu belirtin. Bu klasör varsayılan konumu %ProgramFiles%\Microsoft DirectX SDK ise (*sürüm*) \Lib\x86'dır.
+9. **Ek kitaplık dizinleri** alanında, DirectX kitaplıkları klasörünün konumunu belirtin. Bu klasör için varsayılan konum%ProgramFiles%\Microsoft DirectX SDK (*Sürüm*) \Lib\x86şeklindedir.
 
-10. Seçin **giriş** düğümü.
+10. **Giriş** düğümünü seçin.
 
-11. İçinde **ek bağımlılıklar** Ekle, alan `d3d9.lib` ve `d3dx9.lib` dosyaları.
+11. **Ek bağımlılıklar** alanına `d3d9.lib` ve `d3dx9.lib` dosyalarını ekleyin.
 
-12. Çözüm Gezgini'nde, adlı yeni modül tanım dosyası (.def) ekleme `D3DContent.def` projeye.
+12. Çözüm Gezgini, projeye adlı `D3DContent.def` yeni bir modül tanımı dosyası (. def) ekleyin.
 
-## <a name="creating-the-direct3d9-content"></a>Direct3D9 içeriği oluşturma
- En iyi performansı elde etmek, Direct3D9 içeriği belirli ayarlarını kullanmanız gerekir. Aşağıdaki kod, en iyi performans özellikleri olan bir Direct3D9 yüzeyinin nasıl oluşturulacağını gösterir. Daha fazla bilgi için [Direct3D9 ve WPF birlikte çalışabilirlik için başarım düşünceleri](performance-considerations-for-direct3d9-and-wpf-interoperability.md).
+## <a name="creating-the-direct3d9-content"></a>Direct3D9 Içeriği oluşturma
+ En iyi performansı elde etmek için, Direct3D9 içeriğinizin belirli ayarları kullanması gerekir. Aşağıdaki kod, en iyi performans özelliklerine sahip bir Direct3D9 yüzeyi oluşturmayı gösterir. Daha fazla bilgi için bkz. [Direct3D9 ve WPF birlikte çalışabilirliği Için performans konuları](performance-considerations-for-direct3d9-and-wpf-interoperability.md).
 
-#### <a name="to-create-the-direct3d9-content"></a>Direct3D9 içeriği oluşturma
+#### <a name="to-create-the-direct3d9-content"></a>Direct3D9 içeriğini oluşturmak için
 
-1. Çözüm Gezgini'nde, üç C++ sınıfları aşağıdaki adlı projeye ekleyin.
+1. Çözüm Gezgini kullanarak, aşağıdaki adlı C++ projeye üç sınıf ekleyin.
 
-     `CRenderer` (sanal yıkıcı ile)
+     `CRenderer`(Sanal yıkıcı ile)
 
      `CRendererManager`
 
      `CTriangleRenderer`
 
-2. Renderer.h'ı Kod Düzenleyicisi'nde açın ve otomatik olarak oluşturulan kodu aşağıdaki kodla değiştirin.
+2. Kod düzenleyicisinde Renderer. h ' i açın ve otomatik olarak oluşturulan kodu aşağıdaki kodla değiştirin.
 
      [!code-cpp[System.Windows.Interop.D3DImage#RendererH](~/samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/renderer.h#rendererh)]
 
-3. Renderer.cpp'yi Kod Düzenleyicisi'nde açın ve otomatik olarak oluşturulan kodu aşağıdaki kodla değiştirin.
+3. Kod düzenleyicisinde Renderer. cpp ' i açın ve otomatik olarak oluşturulan kodu aşağıdaki kodla değiştirin.
 
      [!code-cpp[System.Windows.Interop.D3DImage#RendererCPP](~/samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/renderer.cpp#renderercpp)]
 
-4. RendererManager.h'ı Kod Düzenleyicisi'nde açın ve otomatik olarak oluşturulan kodu aşağıdaki kodla değiştirin.
+4. Kod düzenleyicisinde RendererManager. h ' i açın ve otomatik olarak oluşturulan kodu aşağıdaki kodla değiştirin.
 
      [!code-cpp[System.Windows.Interop.D3DImage#RendererManagerH](~/samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/renderermanager.h#renderermanagerh)]
 
-5. RendererManager.cpp'yi Kod Düzenleyicisi'nde açın ve otomatik olarak oluşturulan kodu aşağıdaki kodla değiştirin.
+5. Kod düzenleyicisinde RendererManager. cpp ' i açın ve otomatik olarak oluşturulan kodu aşağıdaki kodla değiştirin.
 
      [!code-cpp[System.Windows.Interop.D3DImage#RendererManagerCPP](~/samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/renderermanager.cpp#renderermanagercpp)]
 
-6. TriangleRenderer.h'ı Kod Düzenleyicisi'nde açın ve otomatik olarak oluşturulan kodu aşağıdaki kodla değiştirin.
+6. Kod düzenleyicisinde üzerinde Epglerenderer. h ' i açın ve otomatik olarak oluşturulan kodu aşağıdaki kodla değiştirin.
 
      [!code-cpp[System.Windows.Interop.D3DImage#TriangleRendererH](~/samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/trianglerenderer.h#trianglerendererh)]
 
-7. TriangleRenderer.cpp'yi Kod Düzenleyicisi'nde açın ve otomatik olarak oluşturulan kodu aşağıdaki kodla değiştirin.
+7. Kod düzenleyicisinde üzerinde Epglerenderer. cpp ' i açın ve otomatik olarak oluşturulan kodu aşağıdaki kodla değiştirin.
 
      [!code-cpp[System.Windows.Interop.D3DImage#TriangleRendererCPP](~/samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/trianglerenderer.cpp#trianglerenderercpp)]
 
-8. Stdafx.h Kod Düzenleyicisi'nde açın ve otomatik olarak oluşturulan kodu aşağıdaki kodla değiştirin.
+8. Kod düzenleyicisinde stdadfx. h ' i açın ve otomatik olarak oluşturulan kodu aşağıdaki kodla değiştirin.
 
      [!code-cpp[System.Windows.Interop.D3DImage#StdafxH](~/samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/stdafx.h#stdafxh)]
 
-9. DllMain.cpp Kod Düzenleyicisi'nde açın ve otomatik olarak oluşturulan kodu aşağıdaki kodla değiştirin.
+9. Kod düzenleyicisinde DllMain. cpp ' i açın ve otomatik olarak oluşturulan kodu aşağıdaki kodla değiştirin.
 
      [!code-cpp[System.Windows.Interop.D3DImage#DllMain](~/samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/dllmain.cpp#dllmain)]
 
-10. D3DContent.def'i Kod Düzenleyicisi'nde açın.
+10. Kod Düzenleyicisi 'nde D3DContent. def ' i açın.
 
 11. Otomatik olarak oluşturulan kodu aşağıdaki kodla değiştirin.
 
-    ```
+    ```cpp
     LIBRARY "D3DContent"
 
     EXPORTS
@@ -137,10 +137,10 @@ Bu izlenecek yol, uygun bir Windows Presentation Foundation (WPF) uygulamasında
 
 ## <a name="next-steps"></a>Sonraki Adımlar
 
-- Direct3D9 içeriği WPF uygulamasında barındırır. Daha fazla bilgi için [izlenecek yol: WPF'de Direct3D9 içeriği barındırma](walkthrough-hosting-direct3d9-content-in-wpf.md).
+- Direct3D9 içeriğini bir WPF uygulamasında barındırın. Daha fazla bilgi için bkz [. İzlenecek yol: WPF](walkthrough-hosting-direct3d9-content-in-wpf.md)'de Direct3D9 İçeriği barındırma.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Windows.Interop.D3DImage>
 - [Direct3D9 ve WPF Birlikte Çalışabilirliği için Performans ile İlgili Önemli Noktalar](performance-considerations-for-direct3d9-and-wpf-interoperability.md)
-- [İzlenecek yol: WPF'de Direct3D9 içeriği barındırma](walkthrough-hosting-direct3d9-content-in-wpf.md)
+- [İzlenecek yol: WPF 'de Direct3D9 Içeriği barındırma](walkthrough-hosting-direct3d9-content-in-wpf.md)

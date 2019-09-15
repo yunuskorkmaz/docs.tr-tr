@@ -9,67 +9,67 @@ helpviewer_keywords:
 - assemblies [.NET Framework], emitting dynamic assemblies
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 559d6962873540836a49da04bc271857edfa1157
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 767382f27a96e8aacce4cc625de610949b3f02a3
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64663481"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971035"
 ---
 # <a name="emitting-dynamic-methods-and-assemblies"></a>Dinamik Yöntemleri ve Derlemeleri Yayma
-Bu bölümde bir yönetilen türleri açıklar <xref:System.Reflection.Emit> izin derleyici veya aracının meta verileri ve Microsoft Ara dilini (MSIL) çalışma zamanında ve isteğe bağlı olarak göstermek için bir ad alanı diskte taşınabilir yürütülebilir (PE) dosya oluşturur. Komut dosyası motorları ve derleyiciler bu ad alanının birincil kullanıcıları olan. Bu bölümde, işlevi tarafından sağlanan <xref:System.Reflection.Emit> ad alanı yansıma yayma adlandırılır.  
+Bu bölümde, bir derleyicinin veya aracın, <xref:System.Reflection.Emit> çalışma zamanında meta verileri ve Microsoft ara dili 'ni (MSIL) yayabilmesini ve isteğe bağlı olarak diskte taşınabilir bir çalıştırılabilir (PE) dosyası oluşturmasını sağlayan ad alanındaki yönetilen türler açıklanmıştır. Komut dosyası motorları ve derleyiciler, bu ad alanının birincil kullanıcılardır. Bu bölümde, <xref:System.Reflection.Emit> ad alanı tarafından sunulan işlevselliğe yansıma yayma denir.  
   
  Yansıma yayma aşağıdaki özellikleri sağlar:  
   
-- Basit genel definovat çalıştırmada kullandığınızdan <xref:System.Reflection.Emit.DynamicMethod> sınıfı ve bunları yürütmek temsilcileri kullanma.  
+- Çalışma zamanında, <xref:System.Reflection.Emit.DynamicMethod> sınıfını kullanarak hafif Global Yöntemler tanımlayın ve temsilcileri kullanarak yürütün.  
   
-- Çalışma zamanında derlemeleri tanımlayın ve ardından bunları çalıştırmak ve/veya diske kaydedin.  
+- Çalışma zamanında derlemeleri tanımlayın ve ardından bunları çalıştırın ve/veya diske kaydedin.  
   
-- Çalışma zamanında derlemeleri tanımlamak, bunları, bunları kaldırma ve kendi kaynaklarınızı geri kazanmanız çöp toplamaya olanak tanımak.  
+- Çalışma zamanında derlemeleri tanımlayın, çalıştırın ve ardından bunları kaldırın ve çöp toplamanın kaynaklarını geri kazanmak için izin verin.  
   
-- Modüller yeni derlemelerde çalışma zamanında tanımlayın ve ardından çalıştırın ve/veya diske kaydedin.  
+- Çalışma zamanında yeni derlemelerde modüller tanımlayın ve ardından bunları diske kaydedip/veya diske kaydedin.  
   
-- Çalışma zamanında modüllerde türlerini tanımlayın, bu türlerin örneklerini oluşturmak ve kendi yöntemlerini çağırmak.  
+- Çalışma zamanında modüllerde türler tanımlayın, bu türlerin örneklerini oluşturun ve yöntemlerini çağırın.  
   
-- Hata ayıklayıcıları ve kod profil oluşturucuları gibi araçlar tarafından kullanılan tanımlanmış modüller için simgesel bilgiler tanımlayın.  
+- Hata ayıklayıcıları ve kod profil oluşturucular gibi araçlar tarafından kullanılabilen tanımlı modüller için sembolik bilgiler tanımlayın.  
   
- Yönetilen türleri yanı sıra <xref:System.Reflection.Emit> ad alanı, açıklanan yönetilmeyen meta veri arabirimleri vardır [meta veri arabirimleri](../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md) başvuru belgeleri. Yönetilen yansıma yayma daha güçlü anlamsal hata denetimi ve daha yüksek düzeyde soyutlama meta verilerin daha yönetilmeyen meta veri arabirimleri sağlar.  
+ <xref:System.Reflection.Emit> Ad alanındaki yönetilen türlerin yanı sıra, [meta veri arabirimleri](../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md) başvuru belgelerinde açıklanan yönetilmeyen meta veri arabirimleri vardır. Yönetilen yansıma yayma, daha güçlü anlamsal hata denetimi ve meta verilerin yönetilmeyen bir soyutlama düzeyini yönetilmeyen meta veri arabirimlerine göre sağlar.  
   
- Ortak dil altyapısı (CLI) belgeleri, özellikle MSIL ve meta verileri ile çalışmak için başka bir yararlı kaynak, "Bölüm II: Meta veri tanımı ve anlamı"ve" Bölüm III: CIL'i yönerge kümesi". Belgeler hakkında çevrimiçi kullanılabilir [MSDN](https://go.microsoft.com/fwlink/?LinkID=65555) ve [Ecma Web sitesi](https://go.microsoft.com/fwlink/?LinkId=116487).  
+ Meta veriler ve MSIL ile çalışmaya yönelik başka bir faydalı kaynak, yaygın olarak kullanılan dil altyapısı (CLı) belgelerinin, özellikle de "Bölüm II: Meta veri tanımı ve semantiği "ve" Bölüm III: CıL yönerge kümesi ". Belgeler, [MSDN](https://go.microsoft.com/fwlink/?LinkID=65555) ve [ecma Web sitesinde](https://go.microsoft.com/fwlink/?LinkId=116487)çevrimiçi olarak sunulmaktadır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde
   
-[Yaymadaki güvenlik sorunları yansıma](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)  
-Güvenlik yaymadaki yansıma kullanarak dinamik derlemeler oluşturma işlemiyle ilgili sorunları açıklar.  
+[Yansıma Yaymadaki güvenlik sorunları](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)  
+Yansıma yayma kullanarak dinamik derlemeler oluşturmayla ilgili güvenlik konularını açıklar.  
 
 [Nasıl yapılır: Dinamik yöntemleri tanımlama ve yürütme](how-to-define-and-execute-dynamic-methods.md)   
-Basit bir dinamik yöntem ve bir sınıfın bir örneğine bağlı olarak dinamik bir yöntem yürütme işlemi gösterilmektedir.
+Basit bir dinamik yöntemin ve bir sınıfın örneğine bağlantılı dinamik yöntemin nasıl yürütüleceğini gösterir.
 
-[Nasıl yapılır: Yansıma ile genel tür tanımlama yayma](how-to-define-a-generic-type-with-reflection-emit.md)   
-İki tür parametreleri ile basit bir genel tür oluşturma için tür parametreleri, sınıf, arabirim ve özel kısıtlamalar uygulamak nasıl ve sınıf türü parametreler parametre türleri olarak kullanın ve dönüş türleri üye oluşturma işlemini gösterir.
+[Nasıl yapılır: Yansıma Yayma ile genel bir tür tanımlama](how-to-define-a-generic-type-with-reflection-emit.md)   
+İki tür parametresiyle basit bir genel türün nasıl oluşturulduğunu, tür parametrelerine sınıf, arabirim ve özel kısıtlamaları uygulamayı ve sınıfın tür parametrelerini parametre türleri ve dönüş türleri olarak kullanan üyelerin nasıl oluşturulacağını gösterir.
 
-[Nasıl yapılır: Yansıma ile genel yöntem tanımlama yayma](how-to-define-a-generic-method-with-reflection-emit.md)   
-Basit bir genel yöntem çağırma oluşturun ve yayma işlemi gösterilmektedir.
+[Nasıl yapılır: Yansıma Yayma ile genel bir yöntem tanımlama](how-to-define-a-generic-method-with-reflection-emit.md)   
+Basit bir genel yöntemin nasıl oluşturulacağını, yayalınacağını ve çağıralınacağını gösterir.
 
 [Dinamik tür oluşturma için toplanabilir derlemeler](collectible-assemblies.md)   
-Oluşturulmuş olan uygulama etki alanını kaldırmadan kaldırılabilip kaldırılamayacağını dinamik derlemeler toplanabilir derlemeler tanıtır.
+, Oluşturuldukları uygulama etki alanını kaldırmadan kaldırılabilen dinamik derlemeler olan toplanabilir derlemeleri tanıtır.
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Reflection.Emit.OpCodes>  
- Metot gövdeleri oluşturmak için kullanabileceğiniz MSIL yönergesi kodları kataloglar.  
+ Yöntem gövdeleri oluşturmak için kullanabileceğiniz MSIL Yönerge kodlarını kataloglandırır.  
   
  <xref:System.Reflection.Emit>  
- Türleri dinamik yöntemleri ve derlemeleri Yayma almak için kullanılan yönetilen sınıflar içerir.  
+ Dinamik yöntemleri, derlemeleri ve türleri yayma için kullanılan yönetilen sınıfları içerir.  
   
  <xref:System.Type>  
- Açıklar <xref:System.Type> türleri temsil eden sınıf yönetilen yansıma ve yansıma yayma ve bu teknolojilerin kullanımını anahtarına olduğu.  
+ Yönetilen yansıma ve yansıma yayma türlerini temsil eden ve bu teknolojilerin kullanımına yönelik anahtar olan sınıfınıaçıklar.<xref:System.Type>  
   
  <xref:System.Reflection>  
- Meta veriler ve yönetilen kod keşfetmek için kullanılan yönetilen sınıflar içerir.  
+ Meta verileri ve yönetilen kodu araştırmak için kullanılan yönetilen sınıfları içerir.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [Yansıma](../../../docs/framework/reflection-and-codedom/reflection.md)  
- Meta veriler ve yönetilen kod keşfedin açıklanmaktadır.  
+ Meta verilerin ve yönetilen kodun nasıl araştırılacağını açıklar.  
   
- [Ortak Dil Çalışma Zamanı Modülündeki Bütünleştirilmiş Kodlar](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
- Derlemeler .NET uygulamalarında genel bir bakış sağlar.
+ [.NET’te bütünleştirilmiş kodlar](../../standard/assembly/index.md)  
+ .NET uygulamalarında derlemelere genel bakış sağlar.

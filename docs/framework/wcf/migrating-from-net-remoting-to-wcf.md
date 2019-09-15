@@ -2,12 +2,12 @@
 title: .NET Uzaktan İletişimden WCF'ye Taşınma
 ms.date: 03/30/2017
 ms.assetid: 16902a42-ef80-40e9-8c4c-90e61ddfdfe5
-ms.openlocfilehash: c42255a14a23cb50f3fe8be434efab4af7361daa
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 926ccee49c7a445c724cecd72015ec5a5307cf58
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045864"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70990175"
 ---
 # <a name="migrating-from-net-remoting-to-wcf"></a>.NET Uzaktan İletişimden WCF'ye Taşınma
 Bu makalede, .NET Remoting kullanan bir uygulamanın Windows Communication Foundation (WCF) kullanmak üzere nasıl geçirileceği açıklanır. Bu ürünler arasındaki benzer kavramları karşılaştırır ve daha sonra WCF 'de birkaç genel uzaktan Iletişim senaryosu gerçekleştirmeyi açıklar.  
@@ -25,7 +25,7 @@ Bu makalede, .NET Remoting kullanan bir uygulamanın Windows Communication Found
 |Geçirilen nesneler|Değere göre veya başvuruya göre|Yalnızca değere göre|  
 |Hatalar/özel durumlar|Herhangi bir serileştirilebilir özel durum|FaultContract\<TDetail >|  
 |İstemci proxy nesneleri|Kesin olarak yazılan saydam proxy 'ler bulunan MarshalByRefObjects adresinden otomatik olarak oluşturulur|Türü kesin belirlenmiş proxy 'ler, ChannelFactory\<ile isteğe bağlı olarak oluşturulur >|  
-|Platform gerekli|Hem istemci hem de sunucu Microsoft OS ve .NET kullanmalıdır|Platformlar arası|  
+|Platform gerekli|Hem istemci hem de sunucu Microsoft OS ve .NET kullanmalıdır|platformlar arası|  
 |İleti biçimi|Özel|Sektör standartları (SOAP, WS-*, vb.)|  
   
 ### <a name="server-implementation-comparison"></a>Sunucu uygulama karşılaştırması  
@@ -656,7 +656,7 @@ public class RemotingServer : MarshalByRefObject
     > [!NOTE]
     > Bu kod ayrıca, türetilmiş bir tür göndermeyi de gösterir (PremiumCustomer). Hizmet arabirimi bir müşteri nesnesi bekliyor, ancak Customer sınıfında [KnownType] özniteliğine de PremiumCustomer de izin verildi. WCF, bu hizmet arabirimi aracılığıyla başka herhangi bir türü serileştirme veya serisini kaldırma girişiminde bulunamaz.  
   
- Normal WCF verileri alışverişi değere göre yapılır. Bu, bu veri nesnelerinden birindeki yöntemlerin çağrılması için yalnızca yerel olarak yürütülür; diğer katmanda kod çağırmaz. Sunucudan döndürülen başvuru nesneleri gibi bir şeye ulaşmak mümkün olsa da, bir istemcinin sunucuya başvuruya göre bir nesne geçirmesi mümkün değildir. Bir çift yönlü hizmet kullanılarak, istemci ve sunucu arasında geri ve ileri bir konuşma gerektiren bir senaryo WCF 'de elde edilebilir. Daha fazla bilgi için bkz. [çift yönlü hizmetler](./feature-details/duplex-services.md).  
+ Normal WCF verileri alışverişi değere göre yapılır. Bu, bu veri nesnelerinden birindeki yöntemlerin çağrılması için yalnızca yerel olarak yürütülür; diğer katmanda kod çağırmaz. *Sunucudan döndürülen başvuru* nesneleri gibi bir şeye ulaşmak mümkün olsa da, bir istemcinin sunucuya başvuruya göre *bir nesne geçirmesi* mümkün değildir. Bir çift yönlü hizmet kullanılarak, istemci ve sunucu arasında geri ve ileri bir konuşma gerektiren bir senaryo WCF 'de elde edilebilir. Daha fazla bilgi için bkz. [çift yönlü hizmetler](./feature-details/duplex-services.md).  
   
 ## <a name="summary"></a>Özet  
  .NET Remoting, yalnızca tam olarak güvenilen ortamlarda kullanılması amaçlanan bir iletişim çerçevesidir. Eski bir üründür ve yalnızca geriye dönük uyumluluk için desteklenir. Yeni uygulamalar oluşturmak için kullanılmamalıdır. Buna karşılık, WCF güvenlik göz önünde bulundurularak tasarlanmıştır ve yeni ve mevcut uygulamalar için önerilir. Microsoft, mevcut uzaktan Iletişim uygulamalarının WCF veya ASP.NET Web API 'SI kullanacak şekilde geçirilmesini önerir.

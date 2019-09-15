@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 82017569128937d344838df850445cf55aa9ea4c
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 2a0ebcf61fd96df6d2235962c1f1e9cac3fb22e6
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70930035"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70988517"
 ---
 ### <a name="microsoftvisualbasicconstantsvbnewline-is-obsolete"></a>Microsoft. VisualBasic. sabitleri. Vbyeni satır artık kullanılmıyor
 
@@ -27,9 +27,11 @@ Sabit .NET Framework kullanılmıyor olarak işaretlenmiş, ancak .NET Core 3,0 
 > Satır başı ve satır besleme için [vbCrLf](xref:Microsoft.VisualBasic.Constants.vbCrLf)kullanın. Geçerli platformun yeni satır için kullanın <xref:System.Environment.NewLine?displayProperty=nameWithType>.
 
 #### <a name="category"></a>Kategori
+
 Visual Basic
 
 #### <a name="affected-apis"></a>Etkilenen API’ler
+
 - <xref:Microsoft.VisualBasic.Constants.vbNewLine?displayProperty=fullName>
 
 <!--

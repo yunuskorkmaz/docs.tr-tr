@@ -7,12 +7,12 @@ helpviewer_keywords:
 - extension methods [C#]
 - methods [C#], extension
 ms.assetid: 175ce3ff-9bbf-4e64-8421-faeb81a0bb51
-ms.openlocfilehash: 2b5bacfc453f16f9c484eebfddf92c6464f8cb78
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: e37fc792f79044345d52b2bc463813c0bde22f5b
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69597082"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70970914"
 ---
 # <a name="extension-methods-c-programming-guide"></a>Uzantı Metotları (C# Programlama Kılavuzu)
 Uzantı yöntemleri, yeni türetilmiş bir tür oluşturmadan, yeniden derlemeden ya da özgün türü değiştirmeden yöntemler "eklemenizi" sağlar. Uzantı yöntemleri özel bir statik yöntem türüdür, ancak bunlar genişletilmiş türdeki örnek yöntemler ise çağrılır. F# Ve Visual Basic yazılmış C#istemci kodu için, bir uzantı yöntemi çağırma ile gerçekte bir tür içinde tanımlanan Yöntemler arasında görünür bir fark yoktur.  
@@ -77,7 +77,7 @@ using System.Linq;
   
 - Uzantı yöntemleri ad alanı seviyesinde kapsama alınır. Örneğin, adlı `Extensions`tek bir ad alanında uzantı yöntemlerini içeren birden fazla statik sınıfınız varsa, bunların hepsi `using Extensions;` yönergeyle kapsam haline getirilir.  
   
- Uygulanan bir sınıf kitaplığı için derleme sürüm numarasının artıyor olmasını önlemek için uzantı yöntemleri kullanmamanız gerekir. Kaynak koduna sahip olduğunuz kitaplığa önemli işlevsellik eklemek isterseniz, derleme sürüm oluşturma için standart .NET Framework yönergelerini izlemeniz gerekir. Daha fazla bilgi için bkz. [derleme sürümü oluşturma](../../../framework/app-domains/assembly-versioning.md).
+ Uygulanan bir sınıf kitaplığı için derleme sürüm numarasının artıyor olmasını önlemek için uzantı yöntemleri kullanmamanız gerekir. Kaynak koduna sahip olduğunuz kitaplığa önemli işlevsellik eklemek isterseniz, derleme sürüm oluşturma için standart .NET Framework yönergelerini izlemeniz gerekir. Daha fazla bilgi için bkz. [derleme sürümü oluşturma](../../../standard/assembly/versioning.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

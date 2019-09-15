@@ -3,15 +3,15 @@ title: Model Oluşturucu ile gerileme kullanarak fiyatları tahmin etme
 description: Bu öğreticide, özellikle New York City taksi Fares fiyatlarını tahmin etmek için ml.net model Oluşturucu kullanarak bir gerileme modeli oluşturma gösterilmektedir.
 author: luisquintanilla
 ms.author: luquinta
-ms.date: 07/15/2019
+ms.date: 09/12/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: bc1dacdad436cc5384bca4bbce224acc18d69201
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 675ca58ab071293fe5c04b1b85337fb1e48dfbea
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929438"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991345"
 ---
 # <a name="predict-prices-using-regression-with-model-builder"></a>Model Oluşturucu ile gerileme kullanarak fiyatları tahmin etme
 
@@ -89,17 +89,9 @@ Model Oluşturucu, bir SQL Server veritabanı veya CSV ya da TSV biçimindeki ye
 
 Bu öğreticide fiyat tahmin modelini eğitmek için kullanılan makine öğrenimi görevi gerileme. Model oluşturma işlemi sırasında model Oluşturucu, veri kümeniz için en iyi işlem modelini bulmak üzere farklı gerileme algoritmaları ve ayarları kullanarak modelleri ayrı ayrı işler.
 
-Modelin eğitilmesi için gereken süre, veri miktarına müşterinizin istekleriyle orantılı. `Time to train (seconds)` Alan için uygun bir değer seçmek üzere bu grafiği kılavuz olarak kullanın:
+Modelin eğitilmesi için gereken süre, veri miktarına müşterinizin istekleriyle orantılı. Model Oluşturucu, veri kaynağınızın boyutuna bağlı olarak, **tren süresi (saniye)** için varsayılan bir değer seçer.
 
-\* Veri kümesi boyutu  | Veri kümesi türü       | Ort. Tren süresi *
-------------- | ------------------ | --------------
-0-10 MB     | Sayısal ve metin   | 10 sn
-10-100 MB   | Sayısal ve metin   | 10 dakika
-100-500 MB  | Sayısal ve metin   | 30 dakika
-500-1 GB    | Sayısal ve metin   | 60 dk
-1 GB +         | Sayısal ve metin   | 3 saat +
-
-1. Eğitim veri dosyası 10 MB 'tan fazla olduğundan, *tren süresi (saniye)* değeri olarak 600 saniye (10 dakika) kullanın.
+1. Daha uzun bir süre eğmemeyi tercih etmediğiniz sürece varsayılan değeri *eğitme süresi (saniye)* olarak bırakın.
 2. *Eğitimi Başlat*' ı seçin.
 
 Eğitim süreci boyunca, ilerleme verileri eğitme adımının `Progress` bölümünde görüntülenir.

@@ -8,55 +8,55 @@ helpviewer_keywords:
 - hosting Windows Forms control in WPF [WPF]
 - composite controls [WPF], hosting in WPF
 ms.assetid: 96fcd78d-1c77-4206-8928-3a0579476ef4
-ms.openlocfilehash: aa971f194b29096245ea8fe94ba96cc5e0cd763b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e4c1de17b131ee68c6e6fce0035b703eb5b489a0
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64605490"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991880"
 ---
 # <a name="walkthrough-hosting-a-windows-forms-composite-control-in-wpf"></a>İzlenecek yol: WPF'de Windows Forms Bileşik Denetimini Barındırma
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] uygulamaları oluşturmak için zengin bir ortam sağlar. Önemli ölçüde yatırımınız varsa [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] kodu olabilir en az yeniden daha etkili kodda bazıları, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulama yerine baştan yeniden. Mevcut Windows Forms denetimleri olduğunda en yaygın senaryodur. Bazı durumlarda, bile bu denetimleri için kaynak koduna erişim olmayabilir. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] gibi denetimleri barındırma için basit bir yordam sağlar bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulama. Örneğin, kullanabileceğiniz [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] çoğu barındırırken, programlama için <xref:System.Windows.Forms.DataGridView> kontrol eder.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]uygulamalar oluşturmak için zengin bir ortam sağlar. Ancak, kod içinde [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] önemli bir yatırımınız olduğunda, sıfırdan yazmak yerine [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamanızda bu kodun en az bir kısmını yeniden kullanmak daha etkili olabilir. En yaygın senaryo, Windows Forms denetimlerinizi var. Bazı durumlarda, bu denetimlerin kaynak koduna bile erişiminiz olmayabilir. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamada bu denetimleri barındırmak için kolay bir yordam sağlar. Örneğin, özelleştirilmiş <xref:System.Windows.Forms.DataGridView> denetimlerinizi barındırırken [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] birçok programlama için kullanabilirsiniz.  
   
- Bu izlenecek yolda veri girişi gerçekleştirmek için bir Windows Forms bileşik denetimini barındıran bir uygulama aracılığıyla adımları bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulama. Bileşik Denetim DLL içinde paketlenmiştir. Bu genel yordam, daha karmaşık uygulamalar ve denetimler için genişletilebilir. Bu izlenecek yol Görünüm ve işlevselliği için neredeyse aynı olacak şekilde tasarlanan [izlenecek yol: WPF bileşik denetimini Windows Forms içinde barındırma](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md). Barındırma senaryo tersine, birincil farktır.  
+ Bu izlenecek yol, bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamada veri girişi gerçekleştirmek üzere Windows Forms Bileşik denetim barındıran bir uygulamada size kılavuzluk ediyor. Bileşik denetim bir DLL içinde paketlenmiştir. Bu genel yordam, daha karmaşık uygulamalar ve denetimler için genişletilebilir. Bu izlenecek yol, görünümü ve işlevselliği [gözden geçirmede neredeyse özdeş olacak şekilde tasarlanmıştır: Windows Forms](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)Içinde WPF bileşik denetimi barındırma. Birincil fark, barındırma senaryosunun tersine çevrilme olur.  
   
- İzlenecek yol, iki bölüme ayrılmıştır. İlk bölüm, Windows Forms bileşik denetimini uygulamasını kısaca açıklanmaktadır. İkinci bölüm içinde bileşik denetimini barındırmak nasıl ayrıntılı olarak ele alınmaktadır bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulama denetim olaylarını almak ve denetim özelliklerini bazılarına erişmek.  
+ İzlenecek yol iki bölüme ayrılmıştır. İlk bölüm Windows Forms Bileşik denetimin uygulamasını kısaca açıklar. İkinci bölümde, bileşik denetimin bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamada nasıl barındırılabileceği, denetimden olayların nasıl alınacağı ve denetimin özelliklerinden bazılarına erişme hakkında ayrıntılı bilgi yer almaktadır.  
   
- Bu kılavuzda gösterilen görevler aşağıdakileri içerir:  
+ Bu izlenecek yolda gösterilen görevler şunlardır:  
   
-- Windows Forms bileşik denetimini uygulama.  
+- Windows Forms Bileşik denetimi uygulama.  
   
-- WPF ana bilgisayar uygulaması oluşturma.  
+- WPF konak uygulamasını uygulama.  
   
- Bu izlenecek yolda gösterilen görevler tam kod listesi için bkz. [bir WPF Örneği'nde Windows Forms bileşik denetimini barındırma](https://go.microsoft.com/fwlink/?LinkID=159999).  
+ Bu kılavuzda gösterilen görevlerin tüm kod listesi için bkz. [WPF örneğinde Windows Forms Bileşik denetimi barındırma](https://go.microsoft.com/fwlink/?LinkID=159999).  
   
 ## <a name="prerequisites"></a>Önkoşullar  
 
-Bu izlenecek yolu tamamlamak için Visual Studio ihtiyacınız vardır.
+Bu yönergeyi tamamlamak için Visual Studio gerekir.
   
-## <a name="implementing-the-windows-forms-composite-control"></a>Windows Forms bileşik denetimini uygulama  
- Bu örnekte kullanılan Windows Forms bileşik denetimini basit veri girişi biçimidir. Bu form kullanıcının adı ve adresi alır ve ana bilgisayar için bu bilgileri döndürmek için bir özel olay kullanır. İşlenen denetimi aşağıda gösterilmektedir.  
+## <a name="implementing-the-windows-forms-composite-control"></a>Windows Forms Bileşik denetimi uygulama  
+ Bu örnekte kullanılan Windows Forms Bileşik denetim basit bir veri girişi biçimidir. Bu form kullanıcının adını ve adresini alır ve bu bilgileri konağa döndürmek için özel bir olay kullanır. Aşağıdaki çizimde işlenmiş denetim gösterilmektedir.  
 
- Aşağıdaki resimde, bir Windows Forms bileşik denetimini gösterir:  
+ Aşağıdaki görüntüde Windows Forms Bileşik bir denetim gösterilmektedir:  
 
  ![Basit bir Windows Forms denetimi gösteren ekran görüntüsü.](./media/walkthrough-hosting-a-windows-forms-composite-control-in-wpf/windows-forms-control.gif)  
   
 ### <a name="creating-the-project"></a>Projeyi Oluşturma  
- Proje başlatmak için:  
+ Projeyi başlatmak için:  
   
-1. Başlatma [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]açın **yeni proje** iletişim kutusu.  
+1. Başlatın [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]ve **Yeni proje** iletişim kutusunu açın.  
   
-2. Pencere kategorisinde seçin **Windows Forms Denetim Kitaplığı** şablonu.  
+2. Pencere kategorisinde **Windows Forms denetim kitaplığı** şablonunu seçin.  
   
-3. Yeni proje adını `MyControls`.  
+3. Yeni projeyi `MyControls`adlandırın.  
   
-4. Konum için bir kolayca adlandırılmış üst düzey klasör gibi belirtin `WpfHostingWindowsFormsControl`. Daha sonra ana bilgisayar uygulaması bu klasöre koyacaktır.  
+4. Konum için, gibi kolay adlandırılmış bir üst düzey klasör `WpfHostingWindowsFormsControl`belirtin. Daha sonra, ana bilgisayar uygulamasını bu klasöre yerleştirebilirsiniz.  
   
-5. Tıklayın **Tamam** projeyi oluşturmak için. Varsayılan proje adlı tek bir denetim içeren `UserControl1`.  
+5. Projeyi oluşturmak için **Tamam** ' ı tıklatın. Varsayılan proje adlı `UserControl1`tek bir denetim içerir.  
   
-6. Çözüm Gezgini'nde, yeniden adlandırma `UserControl1` için `MyControl1`.  
+6. Çözüm Gezgini ' de, `UserControl1` olarak `MyControl1`yeniden adlandırın.  
   
- Projenize aşağıdaki sistem DLL'lerini başvuruları olması gerekir. Bu DLL'leri birini varsayılan olarak dahil edilmez, bunları projeye ekleyin.  
+ Projenizin aşağıdaki sistem dll 'Lerine başvuruları olmalıdır. Bu dll 'Lerden herhangi biri varsayılan olarak dahil edilmez, bunları projeye ekleyin.  
   
 - Sistem  
   
@@ -68,12 +68,12 @@ Bu izlenecek yolu tamamlamak için Visual Studio ihtiyacınız vardır.
   
 - System.Xml  
   
-### <a name="adding-controls-to-the-form"></a>Formu için denetimler ekleme  
- Formu için denetimler eklemek için:  
+### <a name="adding-controls-to-the-form"></a>Forma denetim ekleme  
+ Forma denetim eklemek için:  
   
-- Açık `MyControl1` Tasarımcısı'nda.  
+- Tasarımcıda `MyControl1` açın.  
   
- Beş ekleme <xref:System.Windows.Forms.Label> denetimleri ve bunlara karşılık gelen <xref:System.Windows.Forms.TextBox> denetimleri, boyutu ve formdaki yukarıdaki çizimin olduğu gibi düzenlenir. Örnekte, <xref:System.Windows.Forms.TextBox> denetimleri adlandırılır:  
+ Formda, <xref:System.Windows.Forms.Label> önceki çizimde oldukları gibi <xref:System.Windows.Forms.TextBox> boyutlandırılmış ve düzenlenmiş beş denetim ve bunlara karşılık gelen denetimleri ekleyin. Örnekte, <xref:System.Windows.Forms.TextBox> denetimler şu şekilde adlandırılır:  
   
 - `txtName`  
   
@@ -85,130 +85,130 @@ Bu izlenecek yolu tamamlamak için Visual Studio ihtiyacınız vardır.
   
 - `txtZip`  
   
- İki ekleme <xref:System.Windows.Forms.Button> etiketli denetimler **Tamam** ve **iptal**. Bu örnekte düğme adlarıdır `btnOK` ve `btnCancel`sırasıyla.  
+ Tamam ve <xref:System.Windows.Forms.Button> **iptal**etiketli iki denetim ekleyin. Örnekte, düğme adları sırasıyla ve `btnOK` `btnCancel`' dir.  
   
-### <a name="implementing-the-supporting-code"></a>Destek kodu uygulama  
- Formun kod Görünümü'nde açın. Ana bilgisayar için toplanan verileri özel yükselterek denetimini döndürür `OnButtonClick` olay. Verileri olay bağımsız değişkeni nesnesinde yer alır. Aşağıdaki kod, olay ve temsilci bildirimini gösterir.  
+### <a name="implementing-the-supporting-code"></a>Destekleyici kodu uygulama  
+ Formu kod görünümünde açın. Denetim, toplanan verileri özel `OnButtonClick` olayı yükselterek ana bilgisayarına döndürür. Veriler, olay bağımsız değişkeni nesnesinde yer alır. Aşağıdaki kod, olay ve temsilci bildirimini gösterir.  
   
- Aşağıdaki kodu ekleyin `MyControl1` sınıfı.  
+ `MyControl1` Sınıfına aşağıdaki kodu ekleyin.  
   
  [!code-csharp[WpfHostingWindowsFormsControl#2](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfHostingWindowsFormsControl/CSharp/MyControls/MyControl1.cs#2)]
  [!code-vb[WpfHostingWindowsFormsControl#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WpfHostingWindowsFormsControl/VisualBasic/MyControls/MyControl1.vb#2)]
 
- `MyControlEventArgs` Sınıfı konağa döndürülmesi gereken bilgileri içerir.
+ `MyControlEventArgs` Sınıfı, konağa döndürülecek bilgileri içerir.
 
- Aşağıdaki sınıf formuna ekleyin.
+ Aşağıdaki sınıfı forma ekleyin.
 
  [!code-csharp[WpfHostingWindowsFormsControl#3](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfHostingWindowsFormsControl/CSharp/MyControls/MyControl1.cs#3)]
  [!code-vb[WpfHostingWindowsFormsControl#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WpfHostingWindowsFormsControl/VisualBasic/MyControls/MyControl1.vb#3)]
 
- Kullanıcı tıkladığında **Tamam** veya **iptal** düğmesi <xref:System.Windows.Forms.Control.Click> olay işleyicileri oluşturma bir `MyControlEventArgs` veri içeren nesne ve başlatır `OnButtonClick` olay. Olay bağımsız değişkenin iki işleyiciler arasındaki tek fark, `IsOK` özelliği. Bu özellik ana bilgisayarın hangi düğmesine tıklandığını belirleme sağlar. Ayarlanmış `true` için **Tamam** düğmesi ve `false` için **iptal** düğmesi. Aşağıdaki kod, iki düğmesi işleyicileri gösterir.
+ Kullanıcı **Tamam** veya **iptal** <xref:System.Windows.Forms.Control.Click> düğmesine tıkladığında, olay işleyicileri verileri içeren bir `MyControlEventArgs` nesne oluşturur ve `OnButtonClick` olayı başlatır. İki işleyici arasındaki tek fark, olay bağımsız değişkeninin `IsOK` özelliğidir. Bu özellik, ana bilgisayarın hangi düğmeye tıklandığını belirlemesine olanak sağlar. `true` **Tamam** düğmesi ve`false` **iptal** düğmesi için olarak ayarlanır. Aşağıdaki kod iki düğme işleyicisini gösterir.
 
- Aşağıdaki kodu ekleyin `MyControl1` sınıfı.
+ `MyControl1` Sınıfına aşağıdaki kodu ekleyin.
 
  [!code-csharp[WpfHostingWindowsFormsControl#4](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfHostingWindowsFormsControl/CSharp/MyControls/MyControl1.cs#4)]
  [!code-vb[WpfHostingWindowsFormsControl#4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WpfHostingWindowsFormsControl/VisualBasic/MyControls/MyControl1.vb#4)]
 
-### <a name="giving-the-assembly-a-strong-name-and-building-the-assembly"></a>Derlemeyi güçlü bir isim verilmesi ve bütünleştirilmiş kod oluşturma
- Tarafından başvurulabilmesi derlemenin bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulama, sağlam bir adı olmalıdır. Güçlü bir ad oluşturmak için bir anahtar dosyası ile Sn.exe oluşturun ve projenize ekleyin.
+### <a name="giving-the-assembly-a-strong-name-and-building-the-assembly"></a>Derlemeye tanımlayıcı bir ad verme ve derlemeyi oluşturma
+ Bu derlemeye bir uygulama tarafından başvurulması için [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bir tanımlayıcı adı olması gerekir. Güçlü bir ad oluşturmak için sn. exe ile bir anahtar dosyası oluşturun ve bunu projenize ekleyin.
 
-1. Açık bir [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] komut istemi. Bunu yapmak için tıklatın **Başlat** menüsüne ve ardından **tüm programlar/Microsoft Visual Studio 2010/Visual Studio Araçları/Visual Studio komut istemi**. Bu, özel ortam değişkenleriyle bir konsol penceresi açılır.
+1. Bir [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] komut istemi açın. Bunu yapmak için **Başlat** menüsüne tıklayın ve ardından **tüm programlar/Microsoft Visual Studio 2010/Visual Studio Araçları/Visual Studio komut istemi**' ni seçin. Bu, özelleştirilmiş ortam değişkenleriyle bir konsol penceresi başlatır.
 
-2. Komut isteminde kullanmak `cd` proje klasörünüzün Git komutu.
+2. Komut isteminde, proje klasörünüze gitmek için `cd` komutunu kullanın.
 
-3. Aşağıdaki komutu çalıştırarak MyControls.snk adlı bir anahtar dosyası oluşturur.
+3. Aşağıdaki komutu çalıştırarak MyControls. snk adlı bir anahtar dosya oluşturun.
 
-    ```
+    ```console
     Sn.exe -k MyControls.snk
     ```
 
-4. Anahtar dosyası projenize eklemek için Çözüm Gezgini'nde proje adına sağ tıklayın ve ardından **özellikleri**. Proje Tasarımcısı'nda tıklatın **imzalama** sekmesinde **derlemeyi imzalamayı** onay kutusunu işaretleyin ve ardından, anahtar dosyasına gidin.
+4. Projenize anahtar dosyasını dahil etmek için Çözüm Gezgini ' de proje adına sağ tıklayın ve ardından **Özellikler**' e tıklayın. Proje tasarımcısında **imzalama** sekmesine tıklayın, **derlemeyi imzala** onay kutusunu seçin ve ardından anahtar dosyanıza göz atın.
 
-5. Çözümü oluşturun. Derleme MyControls.dll adlı bir DLL oluşturur.
+5. Çözümü oluşturun. Derleme MyControls. dll adlı bir DLL üretecektir.
 
-## <a name="implementing-the-wpf-host-application"></a>WPF ana bilgisayar uygulaması uygulama
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Uygulamanız tarafından kullanılan ana <xref:System.Windows.Forms.Integration.WindowsFormsHost> barındırmak için `MyControl1`. Uygulama işleyen `OnButtonClick` denetimden verileri almak için olay. Ayrıca denetimin özelliklerinden bazıları değiştirebilmek için seçenek düğmeleri koleksiyonu vardır [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulama. Aşağıdaki resimde tamamlanmış uygulama gösterilir.
+## <a name="implementing-the-wpf-host-application"></a>WPF ana bilgisayar uygulamasını uygulama
+ Konak uygulama, barındırmak <xref:System.Windows.Forms.Integration.WindowsFormsHost> `MyControl1`için denetimi kullanır. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Uygulama, denetimden verileri `OnButtonClick` almak için olayı işler. Ayrıca, bazı denetim özelliklerini [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamadan değiştirmenize olanak sağlayan bir seçenek düğmeleri koleksiyonuna sahiptir. Aşağıdaki çizimde tamamlanmış uygulama gösterilmektedir.
 
-Aşağıdaki görüntüde, WPF uygulamasında katıştırılmış denetime dahil olmak üzere tüm uygulamanın gösterilmektedir:
+Aşağıdaki görüntüde WPF uygulamasına katıştırılmış denetim dahil olmak üzere tüm uygulama gösterilmektedir:
 
- ![Bir denetimi gösteren ekran görüntüsü, bir WPF sayfasındaki katıştırılmış.](./media/walkthrough-hosting-a-windows-forms-composite-control-in-wpf/windows-presentation-foundation-page-control.gif)
+ ![WPF sayfasında gömülü bir denetimi gösteren ekran görüntüsü.](./media/walkthrough-hosting-a-windows-forms-composite-control-in-wpf/windows-presentation-foundation-page-control.gif)
 
 ### <a name="creating-the-project"></a>Projeyi Oluşturma
- Proje başlatmak için:
+ Projeyi başlatmak için:
 
-1. Açık [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)]seçip **yeni proje**.
+1. Açın [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)]ve **Yeni proje**' yi seçin.
 
-2. Pencere kategorisinde seçin **WPF uygulaması** şablonu.
+2. Pencere kategorisinde, **WPF uygulama** şablonunu seçin.
 
-3. Yeni proje adını `WpfHost`.
+3. Yeni projeyi `WpfHost`adlandırın.
 
-4. Konum için MyControls projesini içeren aynı üst düzey klasörü belirtin.
+4. Konum için, MyControls projesini içeren en üst düzey klasörü belirtin.
 
-5. Tıklayın **Tamam** projeyi oluşturmak için.
+5. Projeyi oluşturmak için **Tamam** ' ı tıklatın.
 
- Ayrıca içeren DLL başvuruları eklemek gereken `MyControl1` ve diğer derlemeler.
+ Ayrıca, ve diğer derlemeler içeren `MyControl1` dll 'ye başvurular eklemeniz gerekir.
 
-1. Çözüm Gezgini'nde proje adına sağ tıklayıp **Başvuru Ekle**.
+1. Çözüm Gezgini ' de proje adına sağ tıklayın ve **Başvuru Ekle**' yi seçin.
 
-2. Tıklayın **Gözat** sekmesini tıklatıp MyControls.dll içeren klasöre göz atın. Bu kılavuz için bu klasör MyControls\bin\Debug'dır.
+2. **Araştır** sekmesine tıklayın ve MyControls. dll dosyasını içeren klasöre gidin. Bu izlenecek yol için, bu klasör Mycontrols\bin\debugklasörüdür.
 
-3. MyControls.dll seçin ve ardından **Tamam**.
+3. MyControls. dll ' yi seçin ve ardından **Tamam**' a tıklayın.
 
-4. WindowsFormsIntegration.dll adlı WindowsFormsIntegration derlemesine bir başvuru ekleyin.
+4. WindowsFormsIntegration. dll adlı WindowsFormsIntegration derlemesine bir başvuru ekleyin.
 
 ### <a name="implementing-the-basic-layout"></a>Temel düzeni uygulama
- [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] Ana bilgisayarının içinde MainWindow.xaml uygulama uygulanır. Bu dosyayı içeren [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] düzenini tanımlar ve Windows Forms denetimi barındıran biçimlendirmesi. Uygulamanın üç bölgelere ayrılmıştır:
+ Konak [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] uygulamanın, MainWindow. xaml ' de uygulanması. Bu dosya, [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] düzeni tanımlayan biçimlendirmeyi içerir ve Windows Forms denetimi barındırır. Uygulama üç bölgeye ayrılmıştır:
 
-- **Denetim özelliklerini** paneli denetimden çeşitli özelliklerini değiştirmek için kullanabileceğiniz bir seçenek düğmeleri koleksiyonunu içerir.
+- Barındırılan denetimin çeşitli özelliklerini değiştirmek için kullanabileceğiniz seçenek düğmelerinin koleksiyonunu içeren **denetim özellikleri** paneli.
 
-- **Denetiminden veri** paneli birkaç içerir <xref:System.Windows.Controls.TextBlock> verileri görüntüleyen öğeleri barındırılan denetiminden döndürdü.
+- Barındırılan denetimden döndürülen verileri görüntüleyen çeşitli <xref:System.Windows.Controls.TextBlock> öğeleri içeren denetim masası 'ndaki veriler.
 
-- Barındırılan denetim.
+- Barındırılan denetimin kendisi.
 
- Aşağıdaki XAML içinde temel düzen gösterilmektedir. Gerekli biçimlendirme konağa `MyControl1` Bu örnekte atlanmıştır, ancak daha sonra açıklanacaktır.
+ Temel düzen aşağıdaki XAML 'de gösterilmiştir. Barındırmak `MyControl1` için gereken biçimlendirme bu örnekte atlanır, ancak daha sonra ele alınacaktır.
 
- XAML içinde MainWindow.xaml aşağıdakiyle değiştirin. Visual Basic kullanıyorsanız, sınıfa değiştirme `x:Class="MainWindow"`.
+ MainWindow. xaml içindeki XAML 'yi aşağıdakiler ile değiştirin. Visual Basic kullanıyorsanız, sınıfını olarak `x:Class="MainWindow"`değiştirin.
 
  [!code-xaml[WpfHostingWindowsFormsControl#100](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfHostingWindowsFormsControl/CSharp/WpfHost/Page1.xaml#100)]
 
- İlk <xref:System.Windows.Controls.StackPanel> öğeyi içeren birkaç kümesi <xref:System.Windows.Controls.RadioButton> denetimden çeşitli varsayılan özelliklerini değiştirmenize olanak sağlayan denetimler. Tarafından izlenen bir <xref:System.Windows.Forms.Integration.WindowsFormsHost> öğesi, hangi konakların `MyControl1`. En son <xref:System.Windows.Controls.StackPanel> öğeyi içeren birkaç <xref:System.Windows.Controls.TextBlock> barındırılan denetim tarafından döndürülen verileri görüntüleyen öğeleri. Öğeleri sıralama ve <xref:System.Windows.Controls.DockPanel.Dock%2A> ve <xref:System.Windows.FrameworkElement.Height%2A> öznitelik ayarlarını boşluklar veya bozulma ile bu denetimden penceresine ekleme.
+ İlk <xref:System.Windows.Controls.StackPanel> öğe, barındırılan denetimin çeşitli varsayılan <xref:System.Windows.Controls.RadioButton> özelliklerini değiştirmenize olanak tanıyan birkaç denetim kümesini içerir. Bu, ardından barındıran <xref:System.Windows.Forms.Integration.WindowsFormsHost> `MyControl1`bir öğesi. Son <xref:System.Windows.Controls.StackPanel> öğesi, barındırılan denetim <xref:System.Windows.Controls.TextBlock> tarafından döndürülen verileri görüntüleyen çeşitli öğeler içerir. Öğelerin ve <xref:System.Windows.Controls.DockPanel.Dock%2A> ve <xref:System.Windows.FrameworkElement.Height%2A> öznitelik ayarlarının sıralaması barındırılan denetimi, boşluk veya deformasyon olmadan pencereye katıştırır.
 
 #### <a name="hosting-the-control"></a>Denetimi barındırma
- Önceki XAML aşağıdaki düzenlenmiş sürümü gereken öğeleri üzerinde odaklanır konağa `MyControl1`.
+ Önceki XAML 'nin aşağıdaki düzenlenmiş sürümü barındırmak `MyControl1`için gereken öğelere odaklanır.
 
  [!code-xaml[WpfHostingWindowsFormsControl#101](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfHostingWindowsFormsControl/CSharp/WpfHost/Page1.xaml#101)]
 [!code-xaml[WpfHostingWindowsFormsControl#102](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfHostingWindowsFormsControl/CSharp/WpfHost/Page1.xaml#102)]
 
- `xmlns` Ad alanı eşleme özniteliği için bir başvuru oluşturur `MyControls` barındırılan denetimi içeren ad alanı. Bu eşlemeyi temsil sağlar `MyControl1` içinde [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] olarak `<mcl:MyControl1>`.
+ Ad alanı eşleme özniteliği barındırılan denetimi içeren `MyControls` ad alanına bir başvuru oluşturur. `xmlns` Bu eşleme, içinde `MyControl1` [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] olarak `<mcl:MyControl1>`temsil etmenizi sağlar.
 
- XAML içinde iki öğe barındırma işler:
+ XAML 'deki iki öğe barındırmayı işleme:
 
-- `WindowsFormsHost` temsil eden <xref:System.Windows.Forms.Integration.WindowsFormsHost> bir Windows Forms denetiminde barındırmanıza olanak sağlayan öğe bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulama.
+- `WindowsFormsHost`<xref:System.Windows.Forms.Integration.WindowsFormsHost> bir[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamada Windows Forms denetimini barındırmanızı sağlayan öğeyi temsil eder.
 
-- `mcl:MyControl1`, temsil eden `MyControl1`, eklenen <xref:System.Windows.Forms.Integration.WindowsFormsHost> öğenin alt koleksiyonu. Sonuç olarak, bu Windows Forms denetimini bir parçası olarak işlenen [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] pencere ve uygulama denetimi ile kurabilir.
+- `mcl:MyControl1`öğesini temsil `MyControl1`eden <xref:System.Windows.Forms.Integration.WindowsFormsHost> öğesi öğenin alt koleksiyonuna eklenir. Sonuç olarak, bu Windows Forms denetimi [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] pencerenin bir parçası olarak işlenir ve uygulamadan denetimle iletişim kurabilirsiniz.
 
-### <a name="implementing-the-code-behind-file"></a>Arka plan kod dosyası uygulama
- İşlevselliğini uygular yordam kodu MainWindow.xaml.vb veya MainWindow.xaml.cs, arka plan kod dosyasını içeren [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] önceki bölümde açıklanan. Birincil görevler şunlardır:
+### <a name="implementing-the-code-behind-file"></a>Arka plan kod dosyasını uygulama
+ MainWindow. xaml. vb veya MainWindow.xaml.cs arka plan kod dosyası, önceki bölümde [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] açıklanan işlevleri uygulayan yordamsal kodu içerir. Birincil görevler şunlardır:
 
-- Bir olay işleyici ekleme `MyControl1`'s `OnButtonClick` olay.
+- Olayına bir olay işleyicisi `MyControl1` `OnButtonClick` iliştirme.
 
-- Çeşitli özelliklerini değiştirerek `MyControl1`seçeneği düğmelerinin koleksiyonunu nasıl ayarlanacağını göre.
+- Seçenek düğmelerinin toplanması temelinde `MyControl1`' nin çeşitli özelliklerini değiştirme.
 
-- Verileri görüntüleme denetim tarafından toplanır.
+- Denetim tarafından toplanan verileri görüntüleme.
 
 #### <a name="initializing-the-application"></a>Uygulamayı başlatma
- Başlatma kodu pencere için bir olay işleyicisi içindeki <xref:System.Windows.FrameworkElement.Loaded> olay ve denetim için bir olay işleyicisi ekler `OnButtonClick` olay.
+ Başlatma kodu, pencerenin <xref:System.Windows.FrameworkElement.Loaded> olayı için bir olay işleyicisinde bulunur ve `OnButtonClick` denetimin olayına bir olay işleyicisi ekler.
 
- MainWindow.xaml.vb veya MainWindow.xaml.cs seçeneğinde, aşağıdaki kodu ekleyin `MainWindow` sınıfı.
+ MainWindow. xaml. vb veya MainWindow.xaml.cs içinde, `MainWindow` sınıfına aşağıdaki kodu ekleyin.
 
  [!code-csharp[WpfHostingWindowsFormsControl#11](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfHostingWindowsFormsControl/CSharp/WpfHost/Page1.xaml.cs#11)]
  [!code-vb[WpfHostingWindowsFormsControl#11](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WpfHostingWindowsFormsControl/VisualBasic/WpfHost/Page1.xaml.vb#11)]
 
- Çünkü [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] önceden eklenen ele alınan `MyControl1` için <xref:System.Windows.Forms.Integration.WindowsFormsHost> öğenin alt öğe koleksiyonuna çevirebilirsiniz <xref:System.Windows.Forms.Integration.WindowsFormsHost> öğenin <xref:System.Windows.Forms.Integration.WindowsFormsHost.Child%2A> başvuru almak için `MyControl1`. Bir olay işleyicisi eklemek için bu başvuru sonra kullanabileceğiniz `OnButtonClick`.
+ <xref:System.Windows.Forms.Integration.WindowsFormsHost> `MyControl1` Dahaönce<xref:System.Windows.Forms.Integration.WindowsFormsHost.Child%2A> , `MyControl1` öğenin<xref:System.Windows.Forms.Integration.WindowsFormsHost> alt öğe koleksiyonuna eklenmiş olduğundan, başvurusunu almak için öğesini çevirebilirsiniz. [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Daha sonra bu başvuruyu, ' a bir olay işleyicisi `OnButtonClick`iliştirmek için kullanabilirsiniz.
 
- Denetim kendisine bir başvuru sağlamanın yanı sıra <xref:System.Windows.Forms.Integration.WindowsFormsHost> uygulamadan değiştirebileceğiniz denetimin özelliklerini sayısını kullanıma sunar. Başlatma kodunu uygulama daha sonra kullanmak için özel genel değişkenler bu değerleri atar.
+ Denetimin kendine başvuru sağlamaya ek olarak, <xref:System.Windows.Forms.Integration.WindowsFormsHost> uygulamanın içinden işleyebileceğiniz bir dizi denetimin özelliklerini gösterir. Başlatma kodu, bu değerleri uygulamada daha sonra kullanılmak üzere özel genel değişkenlere atar.
 
- Türlerini kolayca erişebilmeleri `MyControls` DLL, aşağıdaki `Imports` veya `using` deyimini dosyanın en üstüne.
+ `MyControls` Dll 'deki türlere kolayca erişebilmeniz için, dosyanın en üstüne aşağıdaki `Imports` veya `using` ifadesini ekleyin.
 
 ```vb
 Imports MyControls
@@ -219,29 +219,29 @@ using MyControls;
 ```
 
 #### <a name="handling-the-onbuttonclick-event"></a>OnButtonClick olayını işleme
- `MyControl1` başlatır `OnButtonClick` kullanıcı herhangi bir denetimin düğmesini tıkladığında bir olay.
+ `MyControl1`Kullanıcı, denetim düğmelerinden birini tıkladığında olayıbaşlatır.`OnButtonClick`
 
- Aşağıdaki kodu ekleyin `MainWindow` sınıfı.
+ `MainWindow` Sınıfına aşağıdaki kodu ekleyin.
 
  [!code-csharp[WpfHostingWindowsFormsControl#12](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfHostingWindowsFormsControl/CSharp/WpfHost/Page1.xaml.cs#12)]
  [!code-vb[WpfHostingWindowsFormsControl#12](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WpfHostingWindowsFormsControl/VisualBasic/WpfHost/Page1.xaml.vb#12)]
 
- Metin kutularına veri paketlenmiştir `MyControlEventArgs` nesne. Kullanıcı tıklarsa **Tamam** düğmesi olay işleyicisi, verileri ayıklayan ve panelinde görüntüler `MyControl1`.
+ Metin kutularındaki veriler `MyControlEventArgs` nesnesine paketlenmiştir. Kullanıcı **Tamam** düğmesine tıkladığında, olay işleyicisi verileri ayıklar ve aşağıdaki `MyControl1`panelde görüntüler.
 
 #### <a name="modifying-the-controls-properties"></a>Denetimin özelliklerini değiştirme
- <xref:System.Windows.Forms.Integration.WindowsFormsHost> Öğesi birkaç barındırılan denetimin varsayılan özelliklerini gösterir. Sonuç olarak, uygulamanızı daha yakından ayarlamalar denetiminin görünümünü değiştirebilirsiniz. Seçenek düğmeleri sol bölmede kümesi birkaç rengini ve yazı tipi özelliklerini değiştirmek kullanıcının etkinleştirir. Her bir düğmeler kümesi için bir işleyici sahip <xref:System.Windows.Controls.Primitives.ButtonBase.Click> kullanıcının seçenek düğmesi seçimlerini algılar ve karşılık gelen özelliği denetimde değiştiren olay.
+ <xref:System.Windows.Forms.Integration.WindowsFormsHost> Öğesi, barındırılan denetimin varsayılan özelliklerinden birkaçını gösterir. Sonuç olarak, denetimin görünümünü uygulamanızın stiliyle daha yakından eşleşecek şekilde değiştirebilirsiniz. Sol paneldeki seçenek düğmelerinin kümeleri, kullanıcının çeşitli renk ve yazı tipi özelliklerini değiştirmesini sağlar. Her düğme kümesi, <xref:System.Windows.Controls.Primitives.ButtonBase.Click> olay için kullanıcının seçenek düğmesi seçimlerini algılayan ve denetimdeki ilgili özelliği değiştiren bir işleyicisine sahiptir.
 
- Aşağıdaki kodu ekleyin `MainWindow` sınıfı.
+ `MainWindow` Sınıfına aşağıdaki kodu ekleyin.
 
  [!code-csharp[WpfHostingWindowsFormsControl#13](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfHostingWindowsFormsControl/CSharp/WpfHost/Page1.xaml.cs#13)]
  [!code-vb[WpfHostingWindowsFormsControl#13](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WpfHostingWindowsFormsControl/VisualBasic/WpfHost/Page1.xaml.vb#13)]  
   
- Derleme ve uygulamayı çalıştırın. Windows Forms bileşik denetimini içinde metin ekleyin ve ardından **Tamam**. Metin etiketler görünür. Farklı radyo düğmeleri, denetimin üzerindeki etkisini görmek için tıklayın.  
+ Uygulamayı derleyin ve çalıştırın. Windows Forms Bileşik denetimine bir metin ekleyin ve ardından **Tamam**' a tıklayın. Metin, etiketlerde görüntülenir. Denetimdeki etkiyi görmek için farklı radyo düğmelerine tıklayın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Visual Studio’da XAML tasarlama](/visualstudio/designers/designing-xaml-in-visual-studio)
-- [İzlenecek yol: WPF'de Windows Forms denetimini barındırma](walkthrough-hosting-a-windows-forms-control-in-wpf.md)
-- [İzlenecek yol: WPF bileşik denetimini Windows Forms içinde barındırma](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
+- [İzlenecek yol: WPF 'de Windows Forms denetimini barındırma](walkthrough-hosting-a-windows-forms-control-in-wpf.md)
+- [İzlenecek yol: Windows Forms WPF bileşik denetimini barındırma](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)

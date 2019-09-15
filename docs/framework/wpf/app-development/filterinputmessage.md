@@ -5,42 +5,42 @@ helpviewer_keywords:
 - raw input [WPF]
 - FilterInputMessage method [WPF]
 ms.assetid: 4d74c6cf-7d1d-49ff-96c1-231340ce54f5
-ms.openlocfilehash: bd696752a287a78533d55c0fd3ad9986a32bd180
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1453946766e33843ae9e56f7a7f4dbf1678b81b5
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62052215"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991394"
 ---
 # <a name="filterinputmessage"></a>FilterInputMessage
-E_NOTIMPL sürece bir ileti alındığında PresentationHost.exe tarafından çağrılır.  
+E_NOTIMPL döndürülmediği müddetçe PresentationHost. exe tarafından çağırılır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```cpp  
 HRESULT FilterInputMessage( [in] MSG* pMsg ) ;  
 ```  
   
 ## <a name="parameters"></a>Parametreler  
  `pMsg`  
   
- [in] WM_INPUT iletisi, işlenmemiş giriş alma pencereye Gönder.  
+ 'ndaki Ham giriş alan pencereye gönderilen WM_INPUT iletisi.  
   
 ## <a name="property-valuereturn-value"></a>Özellik Değeri/Dönüş Değeri  
- HRESULT:  
+ HRESULT  
   
- S_OK - İleti Filtresi işlemedi ve daha fazla işleme ortaya çıkabilir.  
+ S_OK-filtre iletiyi işlemedi ve başka işlemler meydana gelebilir.  
   
- Bu ileti filtresi S_FALSE - işleme ve başka işlem gerçekleşmelidir.  
+ S_FALSE-filtre bu iletiyi işledi ve başka bir işleme gerçekleşmemelidir.  
   
- Bu değer döndürmüyorsa E_NOTIMPL – [FilterInputMessage](filterinputmessage.md) yeniden çağrılmaz. Bu yalnızca özel ilerleme sağlanmasıyla ilgilenen bir ana bilgisayar uygulaması öğesinden döndürülen ve PresentationHost.exe hata kullanıcı arabirimleri İlgilenmiyor ham giriş iletileri PresentationHost.exe iletilen.  
+ E_NOTIMPL – Bu değer döndürülürse [FilterInputMessage](filterinputmessage.md) yeniden çağrılmaz. Bu, yalnızca özel ilerleme sağlamak isteyen bir konak uygulamasından döndürülebilir ve PresentationHost. exe ' ye yönelik kullanıcı arabirimleri, PresentationHost. exe ' den ham giriş iletileri iletilmek üzere değildir.  
   
 ## <a name="remarks"></a>Açıklamalar  
- PresentationHost.exe klavye, fare ve uzak denetimler gibi çeşitli ham giriş cihazlar hedefidir. Bazı durumlarda, ana uygulama davranışını PresentationHost.exe tarafından tüketilen giriş bağlıdır. Örneğin, bir ana bilgisayar uygulaması belirli kullanıcı arabirimi öğeleri görüntülemek gerekip gerekmediğini belirlemek için belirli giriş iletileri almaya üzerinde bağlı olabilir.  
+ PresentationHost. exe, klavye, fare ve uzak denetimler de dahil olmak üzere çeşitli ham giriş cihazlarının hedefidir. Bazen, ana bilgisayar uygulamasındaki davranış, aksi durumda PresentationHost. exe tarafından tüketilen girişe bağımlıdır. Örneğin, bir konak uygulama belirli kullanıcı arabirimi öğelerinin görüntülenip görüntülenmeyeceğini anlamak için belirli giriş iletilerinin alınmasına bağlı olabilir.  
   
- Bu davranışların sağlamak için gerekli giriş iletileri almak ana bilgisayar uygulaması izin vermek için PresentationHost.exe barındırılan uygulama için uygun ham giriş iletileri çağırarak iletir [FilterInputMessage](filterinputmessage.md).  
+ Konak uygulamasının bu davranışları sağlamak üzere gerekli giriş iletilerini almasına izin vermek için, PresentationHost. exe, [FilterInputMessage](filterinputmessage.md)' ı çağırarak, barındırılan uygulamaya uygun ham giriş iletilerini iletir.  
   
- Grup tarafından döndürülen ham giriş cihazı (İnsan Arabirimi cihazları) ile kaydederek barındırılan uygulama ham giriş iletileri alan [GetRawInputDevices](getrawinputdevices.md).  
+ Barındırılan uygulama, [Getpwınputdevices](getrawinputdevices.md)tarafından döndürülen ham giriş aygıtları (Insan arabirim aygıtları) kümesiyle kaydederek ham giriş iletilerini alır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

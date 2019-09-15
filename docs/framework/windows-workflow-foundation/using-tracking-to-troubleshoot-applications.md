@@ -2,18 +2,18 @@
 title: Uygulamalarda Sorun Giderme için İzleme Kullanma
 ms.date: 03/30/2017
 ms.assetid: 8851adde-c3c2-4391-9523-d8eb831490af
-ms.openlocfilehash: 62c46ca36c89c023bfc775eb76ba454c9a4162c0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b64b92de9cb36807a2bf1eb7ff57f9f6e1a07156
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62004594"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70988927"
 ---
 # <a name="using-tracking-to-troubleshoot-applications"></a>Uygulamalarda Sorun Giderme için İzleme Kullanma
-Windows Workflow Foundation (WF), Windows Workflow Foundation uygulama veya hizmet yürütülmesini ayrıntı vermek için iş akışı ile ilgili bilgileri izlemenize olanak sağlar. Bir iş akışı örneği yürütülürken iş akışı olaylarını yakalamak Windows Workflow Foundation konakları gösterebilmektedir. İş akışınızı hataları veya özel durum oluşturursa, Windows Workflow Foundation ayrıntıları işlemesi sorun giderme için izleme kullanabilirsiniz.  
+Windows Workflow Foundation (WF), bir Windows Workflow Foundation uygulamasının veya hizmetin yürütülmesine ilişkin ayrıntılar vermek için iş akışı ile ilgili bilgileri izlemenize olanak sağlar. Windows Workflow Foundation Konakları, bir iş akışı örneğinin yürütülmesi sırasında iş akışı olaylarını yakalayabilir. İş akışınız hata veya özel durumlar oluşturursa, işleme sorunlarını gidermek için Windows Workflow Foundation izleme ayrıntılarını kullanabilirsiniz.  
   
-## <a name="troubleshooting-a-wf-using-wf-tracking"></a>İzleme WF kullanarak bir WF sorunlarını giderme  
- İçinde Windows Workflow Foundation'da etkinlik işlenmesini hataları algılamak için izleme için sorgular bir izleme profili ile etkinleştirebilirsiniz. bir <xref:System.Activities.Tracking.ActivityStateRecord> Faulted durumunda. Karşılık gelen sorgu, aşağıdaki kodda belirtilir.  
+## <a name="troubleshooting-a-wf-using-wf-tracking"></a>WF Izlemeyi kullanarak WF sorunlarını giderme  
+ Windows Workflow Foundation etkinliğinin işlenmesi içindeki hataları algılamak için, hata durumunu hatalı bir <xref:System.Activities.Tracking.ActivityStateRecord> şekilde sorgulayan bir izleme profiliyle izlemeyi etkinleştirebilirsiniz. Karşılık gelen sorgu aşağıdaki kodda belirtilir.  
   
 ```xml  
 <activityStateQueries>  
@@ -25,7 +25,7 @@ Windows Workflow Foundation (WF), Windows Workflow Foundation uygulama veya hizm
  </activityStateQueries>  
 ```  
   
- Bir hata yayılır ve içinde bir hata işleyicisi işlenen varsa (gibi bir <xref:System.Activities.Statements.TryCatch> etkinliği) bu kullanılarak algılanabilir bir <xref:System.Activities.Tracking.FaultPropagationRecord>. <xref:System.Activities.Tracking.FaultPropagationRecord> Kaynak etkinliği hata ve hata işleyicisi adını belirtir. <xref:System.Activities.Tracking.FaultPropagationRecord> Özel yığının hata formunda hata ayrıntılarını içerir. Sorgu için abone olmak için bir <xref:System.Activities.Tracking.FaultPropagationRecord> aşağıdaki örnekte gösterilmiştir.  
+ Hata işleyicide bir hata yayılmışsa ve işlenirse (örneğin <xref:System.Activities.Statements.TryCatch> , bir etkinlik) Bu, <xref:System.Activities.Tracking.FaultPropagationRecord>kullanılarak algılanabilir. , <xref:System.Activities.Tracking.FaultPropagationRecord> Hatanın kaynak etkinliğini ve hata işleyicisinin adını gösterir. Hatanın özel durum yığını formundaki hata ayrıntılarını içerir.<xref:System.Activities.Tracking.FaultPropagationRecord> Bir <xref:System.Activities.Tracking.FaultPropagationRecord> için abone olunacak sorgu aşağıdaki örnekte gösterilmiştir.  
   
 ```xml  
 <faultPropagationQueries>  
@@ -33,7 +33,7 @@ Windows Workflow Foundation (WF), Windows Workflow Foundation uygulama veya hizm
  </faultPropagationQueries>  
 ```  
   
- İş akışı iş akışı örneği ve iş akışı örneği işlenmeyen bir özel durum ile sonuçlanır, içinde bir hata işlenmiyorsa iptal edildi. İşlenmeyen özel durumun ayrıntılarını anlamak için izleme profili ile iş akışı örneği kaydının sorgu `state name="UnhandledException"` aşağıdaki örnekte belirtildiği gibi.  
+ Bir hata iş akışı içinde işlenmezse, iş akışı örneğinde işlenmemiş bir özel duruma neden olur ve iş akışı örneği iptal edilir. İşlenmeyen özel durumun ayrıntılarını anlamak için, izleme profilinin aşağıdaki örnekte belirtilen `state name="UnhandledException"` şekilde iş akışı örneği kaydını sorgulaması gerekir.  
   
 ```xml  
 <workflowInstanceQueries>  
@@ -45,13 +45,13 @@ Windows Workflow Foundation (WF), Windows Workflow Foundation uygulama veya hizm
 </workflowInstanceQueries>  
 ```  
   
- Bir iş akışı örneği işlenmeyen bir özel durum karşılaştığında bir <xref:System.Activities.Tracking.WorkflowInstanceUnhandledExceptionRecord> nesne Windows Workflow Foundation izleme etkinleştirilirse yayılır.  
+ Bir iş akışı örneği işlenmeyen bir özel durumla karşılaştığında, <xref:System.Activities.Tracking.WorkflowInstanceUnhandledExceptionRecord> Windows Workflow Foundation izleme etkinleştirildiyse bir nesne yayınlanır.  
   
- Bu izleme kayıt formunda özel yığının hata ayrıntılarını içerir. Hata kaynağı olan hatalı ve içinde işlenmeyen bir özel yol (örneğin, etkinliği) ayrıntılarını var. Windows Workflow Foundation hata olaylarına abone olmak için izleme katılımcı ekleyerek izlemeyi etkinleştirin. Sorgular bir izleme profili ile bu katılımcı yapılandırın `ActivityStateQuery (state="Faulted")`, <xref:System.Activities.Tracking.FaultPropagationRecord>, ve `WorkflowInstanceQuery (state="UnhandledException")`.  
+ Bu izleme kaydı, özel durum yığını formundaki hata ayrıntılarını içerir. Hatanın kaynağının ayrıntılarını (örneğin, etkinlik) hata verdi ve işlenmemiş özel durumla sonuçlandı. Bir Windows Workflow Foundation hata olaylarına abone olmak için izleme katılımcısı ekleyerek izlemeyi etkinleştirin. Bu katılımcıyı, `ActivityStateQuery (state="Faulted")` <xref:System.Activities.Tracking.FaultPropagationRecord>, ve `WorkflowInstanceQuery (state="UnhandledException")`için sorgulayan bir izleme profiliyle yapılandırın.  
   
- ETW İzleme katılımcı kullanarak izleme etkinse bir ETW oturumu hata olaylar gönderilir. Olaylar, Olay Görüntüleyicisi'ni Olay Görüntüleyicisi'ni kullanarak görüntülenebilir. Bu düğümü altında bulunabilir **Olay Görüntüleyicisi -> uygulamalar ve hizmet günlükleri -> Microsoft -> Windows -> Uygulama uygulamalarının** analitik kanal.  
+ İzleme, ETW izleme katılımcısı kullanılarak etkinleştirilmişse, hata olayları bir ETW oturumuna dağıtılır. Olaylar Olay Görüntüleyicisi Olay Görüntüleyicisi kullanılarak görüntülenebilir. Bu, düğüm **Olay Görüntüleyicisi-> uygulamalar ve hizmetler günlükleri-> Microsoft-> Windows-> uygulama sunucusu-** çözümleme kanalında uygulamalar altında bulunabilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Windows Server App Fabric izleme](https://go.microsoft.com/fwlink/?LinkId=201273)
+- [Windows Server App Fabric Izleme](https://go.microsoft.com/fwlink/?LinkId=201273)
 - [App Fabric ile uygulamaları izleme](https://go.microsoft.com/fwlink/?LinkId=201275)

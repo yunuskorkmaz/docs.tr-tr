@@ -2,60 +2,60 @@
 title: NativeActivity Temel Sınıfı
 ms.date: 03/30/2017
 ms.assetid: 254a4c50-425b-426d-a32f-0f7234925bac
-ms.openlocfilehash: d746bb92dab79e7e68075ad003c420e7e37ed683
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 604535e39937a75c6d268cf1abbc90dbcd506a16
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65637509"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989559"
 ---
 # <a name="nativeactivity-base-class"></a>NativeActivity Temel Sınıfı
 
-<xref:System.Activities.NativeActivity> korumalı Oluşturucu ile soyut bir sınıftır. Gibi <xref:System.Activities.CodeActivity>, <xref:System.Activities.NativeActivity> uygulayarak kesinlik temelli davranışı yazmak için kullanılan bir <xref:System.Activities.NativeActivity.Execute%2A> yöntemi. Farklı <xref:System.Activities.CodeActivity>, <xref:System.Activities.NativeActivity> iş akışı çalışma zamanı kullanıma sunulan tüm özelliklere erişebilir <xref:System.Activities.NativeActivityContext> geçirilen nesne <xref:System.Activities.NativeActivity.Execute%2A> yöntemi.
+<xref:System.Activities.NativeActivity>, korumalı Oluşturucusu olan soyut bir sınıftır. Benzer <xref:System.Activities.CodeActivity>şekilde <xref:System.Activities.NativeActivity> , bir<xref:System.Activities.NativeActivity.Execute%2A> yöntemi uygulayarak kesinlik davranışı yazmak için kullanılır. Aksine <xref:System.Activities.CodeActivity>, <xref:System.Activities.NativeActivity> yöntemine geçirilen <xref:System.Activities.NativeActivityContext> nesne aracılığıyla iş akışı çalışma zamanının tüm sunulan özelliklerine erişimi vardır. <xref:System.Activities.NativeActivity.Execute%2A>
 
 ## <a name="using-nativeactivitycontext"></a>NativeActivityContext kullanma
- İş akışı çalışma zamanı özellikleri içinden erişilebilir <xref:System.Activities.NativeActivity.Execute%2A> üyeleri kullanarak yöntemi `context` türünde parametre <xref:System.Activities.NativeActivityContext>. Aracılığıyla kullanılabilen özellikleri <xref:System.Activities.NativeActivityContext> şunları içerir:
+ İş akışı çalışma zamanının özelliklerine, türünün <xref:System.Activities.NativeActivity.Execute%2A> <xref:System.Activities.NativeActivityContext>' nin üyelerini `context` kullanarak yönteminin içinden erişilebilir. Aracılığıyla <xref:System.Activities.NativeActivityContext> kullanılabilen özellikler şunları içerir:
 
-- Alma ve bağımsız değişkenler ve değişkenleri ayarlama.
+- Bağımsız değişkenlerin ve değişkenlerin alınması ve ayarlanması.
 
-- Bağımlı etkinliklerle zamanlama <xref:System.Activities.NativeActivityContext.ScheduleActivity%2A>
+- İle alt etkinlikleri zamanlama<xref:System.Activities.NativeActivityContext.ScheduleActivity%2A>
 
-- Etkinlik yürütme durduruluyor kullanarak <xref:System.Activities.NativeActivityContext.Abort%2A>.
+- Kullanılarak <xref:System.Activities.NativeActivityContext.Abort%2A>Etkinlik yürütme durduruluyor.
 
-- Yürütme kullanarak alt iptal etme <xref:System.Activities.NativeActivityContext.CancelChild%2A> ve <xref:System.Activities.NativeActivityContext.CancelChildren%2A>.
+- <xref:System.Activities.NativeActivityContext.CancelChild%2A> Ve<xref:System.Activities.NativeActivityContext.CancelChildren%2A>kullanarak alt yürütme iptal ediliyor.
 
-- Bu tür yöntemler olarak kullanarak etkinlik yer işaretleri erişim <xref:System.Activities.NativeActivityContext.CreateBookmark%2A>, <xref:System.Activities.NativeActivityContext.RemoveBookmark%2A>, ve <xref:System.Activities.NativeActivityContext.ResumeBookmark%2A>.
+- <xref:System.Activities.NativeActivityContext.CreateBookmark%2A> ,<xref:System.Activities.NativeActivityContext.RemoveBookmark%2A>Ve gibi<xref:System.Activities.NativeActivityContext.ResumeBookmark%2A>yöntemler kullanılarak etkinlik yer işaretlerine erişin.
 
-- Özel İzleme özelliklerini kullanarak <xref:System.Activities.CodeActivityContext.Track%2A>.
+- Kullanarak <xref:System.Activities.CodeActivityContext.Track%2A>özel izleme özellikleri.
 
-- Etkinlik yürütme özellikleri ve değer özellikleri kullanarak erişim <xref:System.Activities.CodeActivityContext.GetProperty%2A> ve <xref:System.Activities.NativeActivityContext.GetValue%2A>.
+- <xref:System.Activities.CodeActivityContext.GetProperty%2A> Ve<xref:System.Activities.NativeActivityContext.GetValue%2A>kullanarak etkinliğin yürütme özelliklerine ve değer özelliklerine erişin.
 
-- Etkinlik eylemleri ve işlevleri kullanarak zamanlama <xref:System.Activities.NativeActivityContext.ScheduleAction%2A> ve <xref:System.Activities.NativeActivityContext.ScheduleFunc%2A>.
+- <xref:System.Activities.NativeActivityContext.ScheduleAction%2A> Ve<xref:System.Activities.NativeActivityContext.ScheduleFunc%2A>kullanarak etkinlik eylemlerini ve işlevleri zamanlama.
 
-### <a name="to-create-a-custom-activity-that-inherits-from-nativeactivity"></a>NativeActivity devralan bir özel etkinlik oluşturmak için
+### <a name="to-create-a-custom-activity-that-inherits-from-nativeactivity"></a>NativeActivity 'den devralan özel etkinlik oluşturmak için
 
 1. OpenVisual Studio 2010.
 
-2. Seçin **dosya**, **yeni**, ardından **proje**. Seçin **Workflow 4.0** altında **Visual C#** içinde **proje türleri** penceresi ve select **v2010** düğümü. Seçin **etkinlik Kitaplığı** içinde **şablonları** penceresi. Yeni Proje HelloActivity adı.
+2. **Dosya**, **Yeni**ve ardından **Proje**' yi seçin. **Proje türleri** penceresinde **Visual C#**  altında **iş akışı 4,0** ' i seçin ve **v2010** düğümünü seçin. **Şablonlar** penceresinde **etkinlik kitaplığı** ' nı seçin. Yeni proje Merhaba etkinliğini adlandırın.
 
-3. Gt;activity1.XAML HelloActivity projeye sağ tıklayıp **Sil**.
+3. Merhaba etkinlik projesinde Activity1. xaml öğesine sağ tıklayın ve **Sil**' i seçin.
 
-4. HelloActivity projeye sağ tıklayıp **Ekle**, ardından **sınıfı**. Yeni bir sınıf HelloActivity.cs adı.
+4. Merhaba etkinlik projesine sağ tıklayın ve **Ekle**' yi ve ardından **sınıf**' ı seçin. Yeni sınıfı HelloActivity.cs olarak adlandırın.
 
-5. HelloActivity.cs dosyasına aşağıdakileri ekleyin `using` yönergeleri.
+5. HelloActivity.cs dosyasında aşağıdaki `using` yönergeleri ekleyin.
 
     ```csharp
     using System.Activities;
     using System.Activities.Statements;
     ```
 
-6. Devralınan yeni bir sınıf olun <xref:System.Activities.NativeActivity> için sınıf bildiriminin bir temel sınıf ekleyerek.
+6. Sınıf bildirimine bir temel sınıf ekleyerek <xref:System.Activities.NativeActivity> yeni sınıfın öğesinden devralmasını sağlayın.
 
     ```csharp
     class HelloActivity : NativeActivity
     ```
 
-7. Ekleyerek sınıfına işlevsellik ekleme bir <xref:System.Activities.NativeActivity.Execute%2A> yöntemi.
+7. Bir <xref:System.Activities.NativeActivity.Execute%2A> Yöntem ekleyerek sınıfa işlevsellik ekleyin.
 
     ```csharp
     protected override void Execute(NativeActivityContext context)
@@ -64,11 +64,11 @@ ms.locfileid: "65637509"
     }
     ```
 
-8. Geçersiz kılma <xref:System.Activities.NativeActivity.CacheMetadata%2A> yöntemi ve özel etkinliğin değişkenleri, bağımsız değişkenler, alt ve temsilciler hakkında bilmeniz iş akışı çalışma zamanı izin vermek için uygun Ekle yöntemi çağrısı. Daha fazla bilgi için <xref:System.Activities.NativeActivityMetadata> sınıfı.
+8. <xref:System.Activities.NativeActivity.CacheMetadata%2A> Yöntemi geçersiz kılın ve iş akışı çalışma zamanının özel etkinliğin değişkenleri, bağımsız değişkenleri, alt öğeleri ve Temsilciler hakkında bilgi almasına izin vermek için uygun ekleme yöntemini çağırın. Daha fazla bilgi için <xref:System.Activities.NativeActivityMetadata> sınıfına bakın.
 
-9. Kullanım <xref:System.Activities.NativeActivityContext> bir yer işareti zamanlamak için nesne. Bkz: <xref:System.Activities.WorkflowApplicationIdleEventArgs.Bookmarks%2A> oluşturma hakkında ayrıntılar için zamanlamak ve bir yer işareti devam edin.
+9. Bir yer işareti zamanlamak için nesnesinikullanın.<xref:System.Activities.NativeActivityContext> Bir <xref:System.Activities.WorkflowApplicationIdleEventArgs.Bookmarks%2A> yer işaretinin oluşturulması, zamanlanzamanlaması ve sürdürülmesine ilişkin ayrıntılar için bkz.
 
-    ```
+    ```csharp
     protected override void Execute(NativeActivityContext context)
         {
             // Create a Bookmark and wait for it to be resumed.

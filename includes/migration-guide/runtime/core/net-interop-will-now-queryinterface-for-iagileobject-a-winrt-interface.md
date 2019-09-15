@@ -1,18 +1,17 @@
 ---
-ms.openlocfilehash: 5b3f9bcb56d3e34568afd8b97fb9ebe09a677f4c
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: 0036fc2b03dde64d24d883e55b9f00c931f0c218
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67802610"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70997735"
 ---
-### <a name="net-interop-will-now-queryinterface-for-iagileobject-a-winrt-interface"></a>.NET birlikte çalışabilirliği IAgileObject (WinRT arabirimi) için artık QueryInterface olur
+### <a name="net-interop-will-now-queryinterface-for-iagileobject-a-winrt-interface"></a>.NET Interop artık IAgileObject için QueryInterface (bir WinRT arabirimi)
 
 |   |   |
 |---|---|
-|Ayrıntılar|Bir WinRT olay bir .NET temsilci ile kullanırken, Windows ile .NET Framework 4.8 başlangıç IAgileObject için QI olur.  .NET Framework'ün önceki sürümlerinde, çalışma zamanı bu QI başarısız olur ve olaya abone.<ul><li>[x] quirked</li></ul>|
-|Öneri|IAgileObject sonları yürütme için QI etkinleştirme, bu kod şu yapılandırma ayarı devre dışı bırakabilirsiniz. <h4>1\. yöntem: Ortam değişkeni</h4> Aşağıdaki ortam değişkeni: COMPLUS_DisableCCWSupportIAgileObject ayarlamak bu ortam değişkeni devralan herhangi bir ortam 1 yöntemi etkiler =. Bu yalnızca bir tek bir konsol oturumu olabilir veya ortam değişkeni genel olarak ayarlarsanız, bu makinenin tamamını etkileyebilir. Ortam değişkeni adı büyük küçük harfe duyarlı değil. <h4>2\. yöntem: Kayıt defteri</h4> Kayıt Defteri Düzenleyicisi'ni (regedit.exe) kullanarak, aşağıdaki: değer adını ekleyin ya da aşağıdaki subkeys:HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft.NETFramework HKEY_CURRENT_USER\SOFTWARE\Microsoft.NETFrameworkThen bulun: DisableCCWSupportIAgileObject türü: DWORD (32-bit) değeri (REG_WORD olarak da bilinir) değeri: Windows kayıt 1yeni kullanabilirsiniz Bu değer, bir komut satırı veya komut dosyası ortamından eklemek için EXE Aracı'nı tıklatın. Örneğin:<pre><code class="lang-console">reg add HKLM\SOFTWARE\Microsoft\.NETFramework /v DisableCCWSupportIAgileObject /t REG_DWORD /d 1&#13;&#10;</code></pre>Bu durumda, <code>HKLM</code> yerine kullanılan <code>HKEY_LOCAL_MACHINE</code>. Kullanım <code>reg add /?</code> görmek için bu sözdizimi hakkında Yardım. Kayıt defteri değeri adı büyük küçük harfe duyarlı değil.|
+|Ayrıntılar|.NET temsilcisiyle bir WinRT olayı kullanırken, Windows, .NET Framework 4,8 ' den başlayarak IAgileObject için QI olur.  .NET Framework önceki sürümlerinde, çalışma zamanı bu QI başarısız olur ve olay abone olunamaz.<ul><li>[x] süslenmiş</li></ul>|
+|Öneri|IAgileObject sonlarının yürütülmesi için QI etkinleştirmek için aşağıdaki yapılandırmayı ayarlayarak bu kodu devre dışı bırakabilirsiniz. <h4>Yöntem 1: Ortam değişkeni</h4> Şu ortam değişkenini ayarlayın: COMPLUS_DisableCCWSupportIAgileObject = 1Bu Yöntem, bu ortam değişkenini devralan ortamları etkiler. Bu yalnızca tek bir konsol oturumu olabilir veya ortam değişkenini küresel olarak ayarlarsanız makinenin tamamını etkileyebilir. Ortam değişkeni adı büyük/küçük harfe duyarlı değildir. <h4>Yöntem 2: Kayıt defteri</h4> Kayıt Defteri Düzenleyicisi 'Ni (Regedit. exe) kullanarak, şu alt anahtarlardan birini bulun: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft.NETFramework HKEY_CURRENT_USER\SOFTWARE\Microsoft.NETFrameworkThen şunları ekleyin: değer adı: Disableccwsupportıagileobject türü: DWORD (32-bit) değeri (REG_WORD olarak da bilinir) değeri: 1Windows REG 'i kullanabilirsiniz. Bu değeri bir komut satırından veya betik ortamından eklemek için EXE aracı. Örneğin:<pre><code class="lang-console">reg add HKLM\SOFTWARE\Microsoft\.NETFramework /v DisableCCWSupportIAgileObject /t REG_DWORD /d 1&#13;&#10;</code></pre>Bu durumda, <code>HKLM</code> <code>HKEY_LOCAL_MACHINE</code>yerine kullanılır. Bu <code>reg add /?</code> söz dizimi hakkındaki Yardımı görmek için kullanın. Kayıt defteri değer adı büyük/küçük harfe duyarlı değildir.|
 |Kapsam|Kenar|
 |Sürüm|4.8|
 |Tür|Çalışma zamanı|
-

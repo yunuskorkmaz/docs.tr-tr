@@ -1,18 +1,17 @@
 ---
-ms.openlocfilehash: dd4e387f798b3f93f3eabccb5357399fbe5a4fc1
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: da79a19b3276f6fd2d679eb98406dd85e2a19948
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67804460"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70997741"
 ---
-### <a name="apps-published-with-clickonce-that-use-a-sha-256-code-signing-certificate-may-fail-on-windows-2003"></a>Windows 2003'te SHA-256 kod imzalama sertifikası kullanan ClickOnce ile yayımlanan uygulamalar başarısız olabilir
+### <a name="apps-published-with-clickonce-that-use-a-sha-256-code-signing-certificate-may-fail-on-windows-2003"></a>SHA-256 kod imzalama sertifikası kullanan ClickOnce ile yayımlanan uygulamalar Windows 2003 ' de başarısız olabilir
 
 |   |   |
 |---|---|
-|Ayrıntılar|Yürütülebilir dosya ile SHA256 imzalanır. Daha önce kod imzalama sertifikası SHA-1 veya SHA-256'yı olup olmadığından bağımsız olarak SHA1 ile imzalandığından. Bu geçerlidir:<ul><li>Visual Studio 2012 veya daha sonra oluşturulan tüm uygulamalar.</li><li>Visual Studio 2010 veya önceki üzerinde sistemleri ile mevcut .NET Framework 4.5 ile oluşturulmuş uygulamalar.</li></ul>.NET Framework 4.5 veya sonraki bir sürümü varsa, ek olarak, ClickOnce bildirimi ayrıca SHA-256'yı SHA-256'yı sertifikalara karşı derlenen .NET Framework sürümünden bağımsız olarak imzalanır.|
-|Öneri|ClickOnce yürütülebilir imzalama değişikliği yalnızca Windows Server 2003 sistemlerinde etkiler; Bunlar, KB 938397 yüklü olmasını gerektirir. Değişiklik bildirimine SHA-256'yı imzalama uygulama .NET Framework 4.0 veya daha önceki sürümlerini hedeflemiş olsa bile, .NET Framework 4.5 veya sonraki bir sürümü çalışma zamanı bağımlılık tanıtır.|
+|Ayrıntılar|Yürütülebilir dosya SHA256 ile imzalanır. Daha önce, kod imzalama sertifikasının SHA-1 veya SHA-256 olmasına bakılmaksızın SHA1 ile imzalanmıştı. Bu için geçerlidir:<ul><li>Visual Studio 2012 veya üzeri ile oluşturulan tüm uygulamalar.</li><li>.NET Framework 4,5 olan sistemlerde Visual Studio 2010 veya daha önceki bir sürümü ile oluşturulan uygulamalar.</li></ul>Ayrıca, .NET Framework 4,5 veya üzeri bir sürüm varsa, derlenen .NET Framework sürümden bağımsız olarak SHA-256 sertifikaları için de ClickOnce bildirimi de 256 imzalanır.|
+|Öneri|ClickOnce yürütülebiliri imzalanırken değişiklik yalnızca Windows Server 2003 sistemlerini etkiler; Bu, KB 938397 ' nin yüklü olmasını gerektirir. Bir uygulama .NET Framework 4,0 veya önceki sürümleri hedefliyorsa, .NET Framework 4,5 veya sonraki bir sürümde bir çalışma zamanı bağımlılığı sunarak, bildirimi SHA-256 ile imzalamada değişiklik.|
 |Kapsam|Kenar|
 |Sürüm|4,5|
 |Tür|Yeniden Hedefleme|
-

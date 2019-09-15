@@ -2,12 +2,12 @@
 title: OperationContext Erişimi
 ms.date: 03/30/2017
 ms.assetid: 4e92efe8-7e79-41f3-b50e-bdc38b9f41f8
-ms.openlocfilehash: 8d1c8543180a282a1b196393e5823dc3686aa16e
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: dea990e275125dc1cd2255b88e506d363c3ac78e
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70038415"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989385"
 ---
 # <a name="accessing-operationcontext"></a>OperationContext Erişimi
 Bu örnek, ileti etkinliklerinin (<xref:System.ServiceModel.Activities.Receive> ve <xref:System.ServiceModel.Activities.Send>) giden veya gelen bir ileti içinde özel bir ileti başlığına erişmek <xref:System.ServiceModel.OperationContext.Current%2A> ve bunları eklemek veya almak için özel bir kapsam etkinliğiyle nasıl kullanılabileceğini gösterir.  
@@ -22,7 +22,7 @@ Bu örnek, ileti etkinliklerinin (<xref:System.ServiceModel.Activities.Receive> 
   
 1. Bu örnek, HTTP uç noktaları kullanarak bir iş akışı hizmeti sunar. Bu örneği çalıştırmak için, doğru URL ACL 'Leri eklenmelidir (Ayrıntılar için bkz. [http ve https 'Yi yapılandırmak](https://go.microsoft.com/fwlink/?LinkId=70353) için), Visual Studio 'yu yönetici olarak çalıştırarak veya uygun ACL 'leri eklemek için yükseltilmiş bir komut isteminde aşağıdaki komutu yürüterek. Etki alanı ve Kullanıcı adınızın yerini aldığından emin olun.  
   
-    ```  
+    ```console  
     netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%  
     ```  
   

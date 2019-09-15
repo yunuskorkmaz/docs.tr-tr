@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services
 - WCF Data Services, about
 ms.assetid: 7924cf94-c9a6-4015-afc9-f5d22b1743bb
-ms.openlocfilehash: 66dd61210e36210f5444eb05355612eeb75c155a
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: bca07bf776f20443c4ccd2af69fc8c0b4eec5a88
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70790230"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991098"
 ---
 # <a name="wcf-data-services-overview"></a>WCF Veri Hizmetleri genel bakış
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]kullanarak Web veya intranet için veri hizmetlerinin oluşturulmasını ve kullanımını mümkün bir şekilde sunar [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)], verilerinizi URI 'Ler tarafından adreslenebilir kaynaklar olarak kullanıma sunmanızı sağlar. Bu, özellikle Al, koy, POST ve DELETE için standart HTTP fiilleri olan temsili durum aktarımı (REST) semantiğini kullanarak verilere erişmenizi ve bunları değiştirmenize olanak sağlar. Bu konu, tarafından [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] tanımlanan desenler ve uygulamalar ve ayrıca, tarafından sağlanan .NET Framework tabanlı uygulamalardan yararlanmak [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] için tarafından [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] sağlanan tesislerin genel bir görünümünü sağlar.  
@@ -18,9 +18,9 @@ ms.locfileid: "70790230"
 ## <a name="address-data-as-resources"></a>Verileri kaynak olarak adres olarak  
  [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]verileri URI 'Ler tarafından adreslenebilir kaynaklar olarak gösterir. Kaynak yolları Varlık Veri Modeli varlık ilişkisi kurallarına göre oluşturulur. Bu modelde, varlıklar, bir uygulama etki alanındaki müşteri, sipariş, öğe ve ürün gibi işletimsel veri birimlerini temsil eder. Daha fazla bilgi için bkz. [varlık veri modeli](../adonet/entity-data-model.md).  
   
- ' [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]De, varlık kaynaklarını varlık türlerinin örneklerini içeren bir varlık kümesi olarak adreslerinolursunuz. Örneğin, URI `http://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/Orders` , şu `CustomerID` değere sahip müşteriyle ilgili `Northwind` veri hizmetindeki tüm siparişleri döndürür`ALFKI.`  
+ ' [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]De, varlık kaynaklarını varlık türlerinin örneklerini içeren bir varlık kümesi olarak adreslerinolursunuz. Örneğin, URI <https://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/Orders> , şu `CustomerID` değere sahip müşteriyle ilgili `Northwind` veri hizmetindeki tüm siparişleri döndürür`ALFKI.`  
   
- Sorgu ifadeleri, filtreleme, sıralama ve sayfalama gibi kaynaklara karşı geleneksel sorgu işlemleri gerçekleştirmenize olanak tanır. Örneğin URI `http://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/Orders?$filter=Freight gt 50` , kaynakları yalnızca $50 ' den fazla nakliye maliyeti olan siparişleri döndürecek şekilde filtreler. Daha fazla bilgi için bkz. [veri hizmeti kaynaklarına erişme](accessing-data-service-resources-wcf-data-services.md).  
+ Sorgu ifadeleri, filtreleme, sıralama ve sayfalama gibi kaynaklara karşı geleneksel sorgu işlemleri gerçekleştirmenize olanak tanır. Örneğin, URI <https://services.odata.org/Northwind/Northwind.svc/Customers( ' alfki ')/Orders? $Filter = Nakliye gt 50 >, kaynakları yalnızca $50 ' den fazla nakliye maliyeti olan siparişleri döndürecek şekilde filtreler. Daha fazla bilgi için bkz. [veri hizmeti kaynaklarına erişme](accessing-data-service-resources-wcf-data-services.md).  
   
 ## <a name="interoperable-data-access"></a>Birlikte çalışabilen veri erişimi  
  [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]Standart Internet protokollerinde, veri hizmetlerini .NET Framework kullanmayan uygulamalarla birlikte çalışabilir hale getirmek için oluşturulur. Verileri adresleyerek standart URI 'Leri kullanabilmeniz için, uygulamanız temsili durum aktarımı (REST) semantiğini kullanarak verilere erişebilir ve değiştirebilir, özellikle Al, koy, POST ve DELETE için standart HTTP fiilleri. Bu, standart HTTP protokolleri üzerinden aktarılan verileri ayrıştırabilen ve bunlara erişebilen herhangi bir istemciden bu hizmetlere erişmenizi sağlar.  

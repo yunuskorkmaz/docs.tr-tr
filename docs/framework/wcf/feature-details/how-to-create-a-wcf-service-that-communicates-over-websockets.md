@@ -2,19 +2,19 @@
 title: 'Nasıl yapılır: WebSockets Üzerinden İletişim Kuran Bir WCF Hizmeti Oluşturma'
 ms.date: 03/30/2017
 ms.assetid: bafbbd89-eab8-4e9a-b4c3-b7b0178e12d8
-ms.openlocfilehash: 5190cdad08087b73eb247dfc236ae7b6f470af69
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 706c2886bda9497835d98eeeb594e68c2191d8d8
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626916"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969997"
 ---
 # <a name="how-to-create-a-wcf-service-that-communicates-over-websockets"></a>Nasıl yapılır: WebSockets Üzerinden İletişim Kuran Bir WCF Hizmeti Oluşturma
-WCF hizmetleri ve istemcilerin <xref:System.ServiceModel.NetHttpBinding> WebSockets üzerinden iletişim kurmak için bağlama.  WebSockets olacaktır kullanılabilir <xref:System.ServiceModel.NetHttpBinding> hizmet sözleşmesini tanımlayan bir geri çağırma anlaşması belirler. Bu konu açıklar nasıl uygulanacağı bir WCF hizmeti ve kullanan istemci <xref:System.ServiceModel.NetHttpBinding> WebSockets üzerinden iletişim kurmak için.  
+WCF Hizmetleri ve istemcileri, <xref:System.ServiceModel.NetHttpBinding> WebSockets üzerinden iletişim kurmak için bağlamayı kullanabilir.  WebSockets, <xref:System.ServiceModel.NetHttpBinding> hizmet sözleşmesinin bir geri çağırma anlaşması tanımladığını belirlediğinde kullanılır. Bu konuda, <xref:System.ServiceModel.NetHttpBinding> WebSockets üzerinden iletişim kurmak için kullanan bir WCF hizmeti ve istemcisinin nasıl uygulanacağı açıklanmaktadır.  
   
-### <a name="define-the-service"></a>Hizmet tanımlama  
+### <a name="define-the-service"></a>Hizmeti tanımlama  
   
-1. Bir geri çağırma anlaşması tanımlama  
+1. Bir geri çağırma sözleşmesi tanımlama  
   
     ```csharp  
     [ServiceContract]  
@@ -25,9 +25,9 @@ WCF hizmetleri ve istemcilerin <xref:System.ServiceModel.NetHttpBinding> WebSock
         }  
     ```  
   
-     Bu sözleşme istemciye geri göndermek izin verecek şekilde istemci uygulaması tarafından uygulanacaktır.  
+     Bu sözleşme, hizmetin istemciye geri ileti göndermesini sağlamak için istemci uygulaması tarafından uygulanır.  
   
-2. Hizmet sözleşmesini tanımlama ve belirtme `IStockQuoteCallback` arabirimi olarak geri çağırma anlaşması.  
+2. Hizmet sözleşmesini tanımlayın ve `IStockQuoteCallback` arabirimi geri çağırma sözleşmesi olarak belirtin.  
   
     ```csharp  
     [ServiceContract(CallbackContract = typeof(IStockQuoteCallback))]  
@@ -38,9 +38,9 @@ WCF hizmetleri ve istemcilerin <xref:System.ServiceModel.NetHttpBinding> WebSock
         }  
     ```  
   
-3. Hizmet sözleşmesini uygulama.  
+3. Hizmet sözleşmesini uygulayın.  
   
-    ```  
+    ```csharp
     public class StockQuoteService : IStockQuoteService  
         {  
             public async Task StartSendingQuotes()  
@@ -59,9 +59,9 @@ WCF hizmetleri ve istemcilerin <xref:System.ServiceModel.NetHttpBinding> WebSock
         }  
     ```  
   
-     Hizmet işlemi `StartSendingQuotes` zaman uyumsuz bir çağrı uygulanır. Geri çağırma kanal kullanılarak alıyoruz `OperationContext` ve kanal açıksa, bir zaman uyumsuz geri çağırma kanalda çağrı vermiyoruz.  
+     Hizmet işlemi `StartSendingQuotes` zaman uyumsuz bir çağrı olarak uygulanır. Kullanarak geri çağırma kanalını alıyoruz `OperationContext` ve kanal açıksa geri çağırma kanalında zaman uyumsuz bir çağrı yaptık.  
   
-4. Hizmet yapılandırma  
+4. Hizmeti yapılandırma  
   
     ```xml  
     <configuration>  
@@ -90,11 +90,11 @@ WCF hizmetleri ve istemcilerin <xref:System.ServiceModel.NetHttpBinding> WebSock
     </configuration>  
     ```  
   
-     Hizmetin yapılandırma dosyası WCF'ın varsayılan bitiş noktası kullanır. `<protocolMapping>` Belirtmek için kullanılan bölüm `NetHttpBinding` oluşturulan varsayılan uç noktalar için kullanılmalıdır.  
+     Hizmetin yapılandırma dosyası WCF 'nin varsayılan uç noktalarını kullanır. `<protocolMapping>` Bölümü ,`NetHttpBinding` oluşturulan varsayılan uç noktalar için kullanılması gerektiğini belirtmek için kullanılır.  
   
-### <a name="define-the-client"></a>İstemci tanımlayın  
+### <a name="define-the-client"></a>Istemciyi tanımlama  
   
-1. Geri çağırma anlaşması uygulayın.  
+1. Geri çağırma sözleşmesini uygulayın.  
   
     ```csharp  
     private class CallbackHandler : StockQuoteServiceReference.IStockQuoteServiceCallback  
@@ -106,9 +106,9 @@ WCF hizmetleri ve istemcilerin <xref:System.ServiceModel.NetHttpBinding> WebSock
             }  
     ```  
   
-     Geri çağırma anlaşması işlemi zaman uyumsuz bir yöntem uygulanır.  
+     Geri arama sözleşmesi işlemi, zaman uyumsuz bir yöntem olarak uygulanır.  
   
-    1. İstemci kodu uygulayın.  
+    1. İstemci kodunu uygulayın.  
   
         ```csharp  
         class Program  
@@ -131,7 +131,7 @@ WCF hizmetleri ve istemcilerin <xref:System.ServiceModel.NetHttpBinding> WebSock
         }  
         ```  
   
-         CallbackHandler açıklık için buraya yinelenir. İstemci uygulaması, yeni bir InstanceContext oluşturur ve uygulamasını geri çağırma arabirimi belirtir. Ardından yeni oluşturulan InstanceContext başvuru gönderme proxy sınıfının bir örneğini oluşturur. İstemci hizmeti çağırıp, belirtilen geri çağırma anlaşması kullanarak istemci hizmeti çağırır.  
+         CallbackHandler, açıklık açısından tekrarlanıyor. İstemci uygulaması yeni bir InstanceContext oluşturur ve geri çağırma arabiriminin uygulamasını belirtir. Ardından, yeni oluşturulan InstanceContext öğesine bir başvuru gönderen proxy sınıfının bir örneğini oluşturur. İstemci hizmeti çağırdığında hizmet, belirtilen geri çağırma sözleşmesini kullanarak istemciyi çağırır.  
   
     2. İstemciyi yapılandırma  
   
@@ -158,10 +158,10 @@ WCF hizmetleri ve istemcilerin <xref:System.ServiceModel.NetHttpBinding> WebSock
         </configuration>  
         ```  
   
-         Özel istemci yapılandırmasında yapmak için yalnızca istemci tarafında kullanan uç noktasını belirtin. gereken şey `NetHttpBinding`.  
+         İstemci yapılandırmasında yapmanız gereken özel bir şey yoktur, kullanarak `NetHttpBinding`istemci tarafı uç noktasını belirtmeniz yeterlidir.  
   
 ## <a name="example"></a>Örnek  
- Bu konuda kullanılan tüm kod verilmiştir.  
+ Bu konuda kullanılan kodun tamamı aşağıda verilmiştir.  
   
 ```csharp  
 // IStockQuoteService.cs  
@@ -191,7 +191,7 @@ namespace Server
 }  
 ```  
   
-```  
+```csharp
 // StockQuoteService.svc.cs  
 using System;  
 using System.Collections.Generic;  
@@ -257,7 +257,7 @@ namespace Server
 </configuration>  
 ```  
   
-```  
+```
 <!-- StockQuoteService.svc -->  
 <%@ ServiceHost Language="C#" Debug="true" Service="Server.StockQuoteService" CodeBehind="StockQuoteService.svc.cs" %>  
 ```  

@@ -2,12 +2,12 @@
 title: Yüksek ölçeklenebilirlik ve kullanılabilirlik için mikro hizmetleri ve çok kapsayıcılı uygulamaları yönetme
 description: Gerçek üretim uygulamalarının, tüm kapsayıcıların sistem durumunu, iş yükünü ve yaşam döngülerini ele alan düzenleyiciler ile dağıtılması ve yönetilmesi gerekir.
 ms.date: 02/15/2019
-ms.openlocfilehash: 8c1161127eb6b239384444c369de7f11abd3d424
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: 8f2cef774acde47e9a1bb4680342b5e2c66ac154
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373701"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70990491"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>Yüksek ölçeklenebilirlik ve kullanılabilirlik için mikro hizmetleri ve çok kapsayıcılı uygulamaları yönetme
 
@@ -15,7 +15,7 @@ Uygulamanızın mikro hizmetlere dayalı olması veya birden çok kapsayıcıya 
 
 Şekil 4-6, birden fazla mikro hizmetten (kapsayıcılardan) oluşan bir uygulama kümesine dağıtımı gösterir.
 
-![Bir kümede oluşturulan Docker uygulamaları: Her hizmet örneği için bir kapsayıcı kullanırsınız. Docker Kapsayıcıları "dağıtım birimleri" ve bir kapsayıcı bir Docker örneğidir. bir konak birçok kapsayıcıyı işler](./media/image6.png)
+![Bir kümede oluşturulan Docker uygulamaları: Her hizmet örneği için bir kapsayıcı kullanırsınız. Docker Kapsayıcıları "dağıtım birimleri" ve bir kapsayıcı bir Docker örneğidir. Bir konak birçok kapsayıcıyı işler](./media/image6.png)
 
 **Şekil 4-6**. Kapsayıcılar kümesi
 

@@ -15,12 +15,12 @@ helpviewer_keywords:
 - characters [WPF], curly brace
 - DynamicResource markup extensions [WPF]
 ms.assetid: 618dc745-8b14-4886-833f-486d2254bb78
-ms.openlocfilehash: f0eb4a90b09f49ced45fa8453356e1d6fb3b4af1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 562eea34af44a8fb24199e81477a4cb2ddb1046c
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965273"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991828"
 ---
 # <a name="markup-extensions-and-wpf-xaml"></a>Biçimlendirme Uzantıları ve WPF XAML
 Bu konuda, XAML için biçimlendirme uzantıları kavramı, sözdizimi kuralları, amacı ve bunları kapsayan sınıf nesne modeli dahil olmak üzere anlatılmıştır. Biçimlendirme uzantıları XAML dilinin genel bir özelliğidir ve XAML Hizmetleri .NET uygulamasıdır. Bu konu, WPF XAML 'de kullanılmak üzere biçimlendirme uzantılarını özellikle ayrıntılarıyla ayrıntılardır.  
@@ -104,7 +104,7 @@ Bu konuda, XAML için biçimlendirme uzantıları kavramı, sözdizimi kurallar�
 ## <a name="nesting-markup-extensions-in-xaml-usage"></a>XAML kullanımında biçimlendirme uzantılarını iç içe geçirme  
  Birden çok biçimlendirme uzantısının iç içe geçirilmesi desteklenir ve her biçimlendirme uzantısı önce ayrıntılı olarak değerlendirilir. Örneğin, aşağıdaki kullanımı göz önünde bulundurun:  
   
-```  
+```xaml  
 <Setter Property="Background"  
   Value="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" />  
 ```  
@@ -114,7 +114,7 @@ Bu konuda, XAML için biçimlendirme uzantıları kavramı, sözdizimi kurallar�
 ## <a name="markup-extensions-and-property-element-syntax"></a>Biçimlendirme uzantıları ve özellik öğesi sözdizimi  
  Bir özellik öğesi değerini dolduran bir nesne öğesi olarak kullanıldığında, biçimlendirme uzantısı sınıfı XAML 'de kullanılabilen tipik bir tür ile desteklenen nesne öğesinden görsel açıdan ayırt edilebilir. Tipik bir nesne öğesi ve bir biçimlendirme uzantısı arasındaki pratik fark, biçimlendirme uzantısının tür belirlenmiş bir değer olarak değerlendirilme veya bir ifade olarak ertelenmesi olabilir. Bu nedenle, biçimlendirme uzantısının özellik değerlerinin olası tür hatalarının mekanizmaları, geç bağlantılı bir özelliğin diğer programlama modellerinde nasıl ele alındığına benzer şekilde farklı olacaktır. Normal nesne öğesi, XAML ayrıştırıldığında ayar yaptığı hedef özelliğe karşı tür eşleşmesi için değerlendirilir.  
   
- Bir özellik öğesini dolduracak nesne öğesi sözdiziminde kullanıldığında birçok biçimlendirme uzantısı, içinde içerik veya başka bir özellik öğesi söz dizimi içermez. Bu nedenle, nesne öğesi etiketini kapatıp hiçbir alt öğe sağlamacaksınız. XAML işlemcisi tarafından herhangi bir nesne öğesiyle karşılaşıldığında, bu sınıf için Oluşturucu çağırılır ve ayrıştırılmış öğeden oluşturulan nesneyi başlatır. Biçimlendirme Uzantısı sınıfı farklı değil: biçimlendirme uzantınızın nesne öğesi söz diziminde kullanılabilir olmasını istiyorsanız parametresiz bir Oluşturucu sağlamanız gerekir. Bazı mevcut biçimlendirme uzantılarında, etkin başlatma için belirtilmesi gereken en az bir gerekli özellik değeri var. Öyleyse, bu özellik değeri genellikle nesne öğesinde bir özellik özniteliği olarak verilir. [Xaml ad alanında (x:) Dil özellikleri](../../xaml-services/xaml-namespace-x-language-features.md) ve [WPF XAML uzantıları](wpf-xaml-extensions.md) başvuru sayfaları, gerekli özellikleri olan biçimlendirme uzantıları (ve gerekli özelliklerin adları) not edilir. Başvuru sayfaları, belirli biçimlendirme uzantıları için nesne öğesi söz dizimi veya öznitelik söz dizimine izin verilmediğini de göz önünde bulunur. Bir önemli Case, [](../../xaml-services/x-array-markup-extension.md)öznitelik sözdizimini destekleyemediği, bu dizinin içeriği etiketleme içinde içerik olarak belirtilmelidir. Dizi içerikleri genel nesneler olarak işlenir, bu nedenle öznitelik için varsayılan tür dönüştürücüsü uygulanabilir değildir. Ayrıca, [x:Array Biçimlendirme Uzantısı](../../xaml-services/x-array-markup-extension.md) bir `type` parametre gerektirir.  
+ Bir özellik öğesini dolduracak nesne öğesi sözdiziminde kullanıldığında birçok biçimlendirme uzantısı, içinde içerik veya başka bir özellik öğesi söz dizimi içermez. Bu nedenle, nesne öğesi etiketini kapatıp hiçbir alt öğe sağlamacaksınız. XAML işlemcisi tarafından herhangi bir nesne öğesiyle karşılaşıldığında, bu sınıf için Oluşturucu çağırılır ve ayrıştırılmış öğeden oluşturulan nesneyi başlatır. Biçimlendirme Uzantısı sınıfı farklı değil: biçimlendirme uzantınızın nesne öğesi söz diziminde kullanılabilir olmasını istiyorsanız parametresiz bir Oluşturucu sağlamanız gerekir. Bazı mevcut biçimlendirme uzantılarında, etkin başlatma için belirtilmesi gereken en az bir gerekli özellik değeri var. Öyleyse, bu özellik değeri genellikle nesne öğesinde bir özellik özniteliği olarak verilir. [Xaml ad alanında (x:) Dil özellikleri](../../xaml-services/xaml-namespace-x-language-features.md) ve [WPF XAML uzantıları](wpf-xaml-extensions.md) başvuru sayfaları, gerekli özellikleri olan biçimlendirme uzantıları (ve gerekli özelliklerin adları) not edilir. Başvuru sayfaları, belirli biçimlendirme uzantıları için nesne öğesi söz dizimi veya öznitelik söz dizimine izin verilmediğini de göz önünde bulunur. Bir önemli Case, öznitelik sözdizimini destekleyemediği [, bu](../../xaml-services/x-array-markup-extension.md)dizinin içeriği etiketleme içinde içerik olarak belirtilmelidir. Dizi içerikleri genel nesneler olarak işlenir, bu nedenle öznitelik için varsayılan tür dönüştürücüsü uygulanabilir değildir. Ayrıca, [x:Array Biçimlendirme Uzantısı](../../xaml-services/x-array-markup-extension.md) bir `type` parametre gerektirir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

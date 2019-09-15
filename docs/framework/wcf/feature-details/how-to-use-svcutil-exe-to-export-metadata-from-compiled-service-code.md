@@ -2,12 +2,12 @@
 title: 'Nasıl yapılır: Meta Verileri Derlenmiş Hizmet Kodundan Dışarı Aktarmak için Svcutil.exe Kullanma'
 ms.date: 03/30/2017
 ms.assetid: 95d0aed3-16a2-4398-89bb-39418eeb7355
-ms.openlocfilehash: b8ddbaf896ee4c6ea8b6f8e8ce7d0ecef28140ea
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2d1b70931fe70dfd605e182d4b23a151bc8130a3
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69932568"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991177"
 ---
 # <a name="how-to-use-svcutilexe-to-export-metadata-from-compiled-service-code"></a>Nasıl yapılır: Meta Verileri Derlenmiş Hizmet Kodundan Dışarı Aktarmak için Svcutil.exe Kullanma
 Svcutil. exe, derlenmiş derlemelerde hizmetler, sözleşmeler ve veri türleri için meta verileri aşağıdaki gibi dışarı aktarabilir:  
@@ -30,7 +30,7 @@ Svcutil. exe, derlenmiş derlemelerde hizmetler, sözleşmeler ve veri türleri 
     > [!NOTE]
     > Herhangi bir bağımlı derlemeye dosya yolunu `/reference` belirtmek için anahtarını kullanmanız gerekebilir.  
   
-    ```  
+    ```console
     svcutil.exe Contracts.dll  
     ```  
   
@@ -58,7 +58,7 @@ Svcutil. exe, derlenmiş derlemelerde hizmetler, sözleşmeler ve veri türleri 
     > [!NOTE]
     > Herhangi bir bağımlı derlemeye dosya yolunu `/reference` belirtmek için anahtarını kullanmanız gerekebilir.  
   
-    ```  
+    ```console  
     svcutil.exe /serviceName:MyService Service.exe /reference:path/Contracts.dll  
     ```  
   
@@ -71,7 +71,7 @@ Svcutil. exe, derlenmiş derlemelerde hizmetler, sözleşmeler ve veri türleri 
     > [!NOTE]
     > Herhangi bir bağımlı derlemeye dosya yolunu `/reference` belirtmek için anahtarını kullanmanız gerekebilir.  
   
-    ```  
+    ```console  
     svcutil.exe /dataContractOnly Contracts.dll  
     ```  
   
@@ -80,26 +80,26 @@ Svcutil. exe, derlenmiş derlemelerde hizmetler, sözleşmeler ve veri türleri 
   
  Hizmet sözleşmesinin meta verilerini dışarı aktarmak için.  
   
-```  
+```console  
 svcutil.exe Contracts.dll  
 ```  
   
  Veri sözleşmelerinin meta verilerini dışarı aktarmak için.  
   
-```  
+```console  
 svcutil.exe /dataContractOnly Contracts.dll  
 ```  
   
  Hizmet uygulamasının meta verilerini dışarı aktarmak için.  
   
-```  
+```console  
 svcutil.exe /serviceName:MyService Service.exe /reference:<path>/Contracts.dll  
 ```  
   
  , `<path>` Sözleşmelerin. dll yoludur.  
   
-```  
-// The following service contract and data contracts are compiled into   
+```csharp
+// The following service contract and data contracts are compiled into
 // Contracts.dll.  
 [ServiceContract(ConfigurationName="IPeopleFinder")]  
 public interface IPersonFinder  
@@ -133,8 +133,10 @@ public class Address
     [DataMember]  
     public Person person;  
 }  
-  
-// The following service implementation is compiled into Service.exe.     
+```
+
+```csharp
+// The following service implementation is compiled into Service.exe.
 // This service uses the contracts specified in Contracts.dll.  
 [ServiceBehavior(ConfigurationName = "MyService")]  
 public class MyService : IPersonFinder  
@@ -146,7 +148,9 @@ public class MyService : IPersonFinder
         return address;  
     }  
 }  
-  
+```
+
+```xml  
 <!-- The following is the configuration file for Service.exe. -->  
 <?xml version="1.0" encoding="utf-8" ?>  
 <configuration>  

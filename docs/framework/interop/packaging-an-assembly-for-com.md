@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 39dc55aa-f2a1-4093-87bb-f1c0edb6e761
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: df8f82605118f1af0f085aef6e76c1e4bedb2904
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 09c54e58ef25afa28d2681719284c358d90bddc2
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69988156"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969070"
 ---
 # <a name="packaging-a-net-framework-assembly-for-com"></a>COM için bir .NET Framework derlemesi paketleme
 
@@ -45,7 +45,7 @@ COM geliştiricileri, uygulamasında dahil etmek üzere plantıkları yönetilen
 
   Yayımcı tarafından imzalanan tanımlayıcı adlandırılmış derlemeler, genel derleme önbelleğine yüklenebilir. İmzasız derlemelerin Kullanıcı makinesine özel derlemeler olarak yüklenmesi gerekir.
 
-  Daha fazla bilgi için bkz. [bütünleştirilmiş kod güvenliği konuları](../app-domains/assembly-security-considerations.md).
+  Daha fazla bilgi için bkz. [bütünleştirilmiş kod güvenliği konuları](../../standard/assembly/security-considerations.md).
 
 - Tür kitaplığı ekleme
 
@@ -96,7 +96,7 @@ Yönergeler için bkz [. nasıl yapılır: Tür kitaplıklarını ' de Win32 kay
 - [.NET Framework Bileşenlerini COM'da Gösterme](exposing-dotnet-components-to-com.md)
 - [Birlikte Çalışma için .NET Türlerini Niteleme](../../standard/native-interop/qualify-net-types-for-interoperation.md)
 - [Sınıf arabirimine giriş](../../standard/native-interop/com-callable-wrapper.md#introducing-the-class-interface)
-- [Bütünleştirilmiş Kod Güvenliği Konuları](../app-domains/assembly-security-considerations.md)
+- [Bütünleştirilmiş Kod Güvenliği Konuları](../../standard/assembly/security-considerations.md)
 - [Tlbexp.exe (Tür Kitaplığı Dışarı Aktarıcı)](../tools/tlbexp-exe-type-library-exporter.md)
 - [Bütünleştirilmiş Kodları COM ile Kaydetme](registering-assemblies-with-com.md)
 - [Nasıl yapılır: Tür kitaplıklarını uygulamalarda Win32 kaynakları olarak ekleme](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ww9a897z(v=vs.100))

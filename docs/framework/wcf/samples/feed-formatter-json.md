@@ -2,12 +2,12 @@
 title: Akış Biçimlendirici (JSON)
 ms.date: 03/30/2017
 ms.assetid: f9c0b295-55e7-48ea-b308-ba51c7d31143
-ms.openlocfilehash: 028d2f9abd7e23f18eb90e5ecae8c57da3a871d1
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 516a114ee577597611c14ce10ad838d85d6a0fb1
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70039650"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989899"
 ---
 # <a name="feed-formatter-json"></a>Akış Biçimlendirici (JSON)
 Bu örnek, <xref:System.ServiceModel.Syndication.SyndicationFeed> <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> JavaScriptnesnegösterimi(JSON)biçimindebirsınıfınörneğiniözelveilekullanarak<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>serileştirmek gösterilmektedir.  
@@ -18,7 +18,7 @@ Bu örnek, <xref:System.ServiceModel.Syndication.SyndicationFeed> <xref:System.S
 ## <a name="writing-json-feeds"></a>JSON akışlarını yazma  
  JSON akışı yazmak, `JsonFeedFormatter` <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> aşağıdaki örnek kodda gösterildiği gibi ile (Bu örnekte uygulanan) kullanılarak gerçekleştirilebilir.  
   
-```  
+```csharp  
 //Basic feed with sample data  
 SyndicationFeed feed = new SyndicationFeed("Custom JSON feed", "A Syndication extensibility sample", null);  
 feed.LastUpdatedTime = DateTime.Now;  

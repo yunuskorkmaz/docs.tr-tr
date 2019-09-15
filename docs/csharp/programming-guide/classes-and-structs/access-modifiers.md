@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# Language, access modifiers
 - access modifiers [C#], about
 ms.assetid: 6e81ee82-224f-4a12-9baf-a0dca2656c5b
-ms.openlocfilehash: 266ece1e63bf6d32bf59406dbc72a9e6bd92eb45
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b415bf143e7da46b3ecd2c0828a3f8151878435a
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69924548"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971673"
 ---
 # <a name="access-modifiers-c-programming-guide"></a>Erişim Değiştiricileri (C# Programlama Kılavuzu)
 Tüm türler ve tür üyeleri, derlemenizin veya diğer derlemelerinizdeki diğer koddan kullanılıp kullanılamayacağını denetleyen bir erişilebilirlik düzeyine sahiptir. Aşağıdaki erişim değiştiricilerini, bir tür veya üyenin bildirimini yaparken belirtmek için kullanabilirsiniz:  
@@ -44,7 +44,7 @@ Tüm türler ve tür üyeleri, derlemenizin veya diğer derlemelerinizdeki diğe
   
  Türetilmiş sınıfların temel türlerinden daha fazla erişilebilirliği olamaz. Diğer bir deyişle, bir iç sınıftan `B` `A`türeyen ortak bir sınıfa sahip olabilirsiniz. Buna izin verildiyse, tüm korumalı veya iç `A` `A` üyelerine türetilmiş sınıftan erişilebileceğinden, bu, ortak hale getirme etkisine sahip olur.  
   
- InternalsVisibleToAttribute kullanarak, özel diğer derlemelerin iç türlerinizi erişmesini sağlayabilirsiniz. Daha fazla bilgi için bkz. [arkadaş derlemeler](../../../standard/assembly/friend-assemblies.md).  
+ InternalsVisibleToAttribute kullanarak, özel diğer derlemelerin iç türlerinizi erişmesini sağlayabilirsiniz. Daha fazla bilgi için bkz. [arkadaş derlemeler](../../../standard/assembly/friend.md).  
   
 ## <a name="class-and-struct-member-accessibility"></a>Sınıf ve yapı üye erişilebilirliği  
  Sınıf üyeleri (iç içe geçmiş sınıflar ve yapılar dahil) altı erişim türlerinden herhangi biriyle bildirilebilecek. Yapılar devralmayı desteklemediğinden, yapı üyeleri korumalı olarak bildirilemez.  

@@ -2,12 +2,12 @@
 title: DotNet Run komutu
 description: DotNet Run komutu, uygulamanızı kaynak koddan çalıştırmak için uygun bir seçenek sağlar.
 ms.date: 05/29/2018
-ms.openlocfilehash: 0a6c1303bc12c256dd0a8923f9468620835ddabc
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: b21987ef9ee4dd7d8fdb93d0853b7faa93001688
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202801"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969757"
 ---
 # <a name="dotnet-run"></a>dotnet run
 
@@ -18,6 +18,8 @@ ms.locfileid: "70202801"
 `dotnet run`-Açık derleme veya başlatma komutları olmadan kaynak kodu çalıştırır.
 
 ## <a name="synopsis"></a>Özeti
+
+<!-- markdownlint-disable MD025 -->
 
 # <a name="net-core-21tabnetcore21"></a>[.NET Core 2,1](#tab/netcore21)
 

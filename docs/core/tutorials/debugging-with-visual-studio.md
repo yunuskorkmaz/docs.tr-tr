@@ -3,12 +3,12 @@ title: Visual Studio 2017 ile Merhaba Dünya .NET Core uygulamanızda hata ayık
 description: Visual Studio 2017 ile C# veya Visual Basic yazılmış Merhaba Dünya bir uygulamada hata ayıklamayı öğrenin.
 ms.date: 12/15/2017
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: f318c163db6cfdd6de5aa99edebfeeb4bb470a02
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 7239ca52c0b90c4cfacd68581f569b9ac7d70eae
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926161"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969387"
 ---
 # <a name="debug-your-c-or-visual-basic-net-core-hello-world-application-using-visual-studio-2017"></a>Visual Studio 2017’yi kullanarak C# veya Visual Basic .NET Core Merhaba Dünya uygulamanızda hata ayıklama
 
@@ -25,6 +25,8 @@ Programınızı hata ayıklama modunda test ederek her zaman başlamanız gereki
 ## <a name="setting-a-breakpoint"></a>Bir kesme noktası ayarlama
 
 Programınızı hata ayıklama modunda çalıştırın ve birkaç hata ayıklama özelliğini deneyin:
+
+<!-- markdownlint-disable MD025 -->
 
 # <a name="ctabcsharp"></a>[C#](#tab/csharp)
 

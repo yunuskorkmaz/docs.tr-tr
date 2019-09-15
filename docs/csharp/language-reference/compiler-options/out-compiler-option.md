@@ -8,12 +8,12 @@ helpviewer_keywords:
 - out compiler option [C#]
 - -out compiler option [C#]
 ms.assetid: 70d91d01-7bd2-4aea-ba8b-4e9807e9caa5
-ms.openlocfilehash: 51c66d6bc2064d8051415de2ac083da478355a99
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 6c8408c0c613e361dae0c1db19f854e9421ca467
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69602600"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70970373"
 ---
 # <a name="-out-c-compiler-options"></a>-Out (C# derleyici seçenekleri)
 **-Out** seçeneği, çıktı dosyasının adını belirtir.  
@@ -29,7 +29,7 @@ ms.locfileid: "69602600"
  Derleyici tarafından oluşturulan çıkış dosyasının adı.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Komut satırında, derlemeniz için birden çok çıkış dosyası belirtmek mümkündür. Derleyici, **-Out** seçeneğinden sonra bir veya daha fazla kaynak kodu dosyası bulmayı bekler. Ardından, tüm kaynak kodu dosyaları, bu seçenek tarafından belirtilen çıkış dosyasına derlenir.  
+ Komut satırında, derlemeniz için birden çok çıkış dosyası belirtmek mümkündür. Derleyici, **-Out** seçeneğinden sonra bir veya daha fazla kaynak kodu dosyası bulmayı bekler. Ardından, tüm kaynak kodu dosyaları **, bu seçenek** tarafından belirtilen çıkış dosyasına derlenir.  
   
  Oluşturmak istediğiniz dosyanın tam adını ve uzantısını belirtin.  
   
@@ -41,11 +41,11 @@ ms.locfileid: "69602600"
   
  Bir çıkış dosyası derlemek için kullanılan bir kaynak kodu dosyası, başka bir çıkış dosyasının derlenmesi için aynı derlemede kullanılamaz.  
   
- Bir komut satırı derlemesinde birden çok çıkış dosyası üretilirken, yalnızca bir tane çıkış dosyası derleme olabileceğini ve yalnızca ilk çıkış dosyasının (örtük veya açık olarak ile) derleme olabileceğini aklınızda bulundurun.  
+ Bir komut satırı derlemesinde birden çok çıkış dosyası üretilirken, yalnızca bir tane çıkış dosyası derleme olabileceğini ve yalnızca ilk çıkış dosyasının (örtük veya açık **olarak ile)** derleme olabileceğini aklınızda bulundurun.  
   
  Bir derlemenin parçası olarak üretilen tüm modüller, derlemede oluşturulan herhangi bir derlemeyle ilişkili dosyalar olur. İlişkili dosyaları görmek üzere derleme bildirimini görüntülemek için [ıldadsm. exe](../../../framework/tools/ildasm-exe-il-disassembler.md) ' yi kullanın.  
   
- Bir exe 'nin bir arkadaş derlemenin hedefi olması için-out derleyici seçeneği gereklidir. Daha fazla bilgi için bkz. [Friend derlemeleri](../../../standard/assembly/friend-assemblies.md).  
+ Bir exe 'nin bir arkadaş derlemenin hedefi olması için-out derleyici seçeneği gereklidir. Daha fazla bilgi için bkz. [Friend derlemeleri](../../../standard/assembly/friend.md).  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Bu derleyici seçeneğini Visual Studio geliştirme ortamında ayarlamak için  
   
@@ -67,5 +67,5 @@ csc t.cs -out:mymodule.netmodule -target:module t2.cs
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [C# Derleyici Seçenekleri](./index.md)
-- [Arkadaş Bütünleştirilmiş Kodları](../../../standard/assembly/friend-assemblies.md)
+- [Arkadaş Bütünleştirilmiş Kodları](../../../standard/assembly/friend.md)
 - [Proje ve Çözüm Özelliklerini Yönetme](/visualstudio/ide/managing-project-and-solution-properties)

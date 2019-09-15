@@ -1,17 +1,21 @@
 ---
 title: DotNet paketi komutu
 description: DotNet Pack komutu, .NET Core projeniz için NuGet paketleri oluşturur.
-ms.date: 12/04/2018
-ms.openlocfilehash: c5c00f3bb06e5bc5579c0d3d6bdd39fbdf3db656
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.date: 08/08/2019
+ms.openlocfilehash: ba5a438d58963222c3fa55d2c585ef503dcd49db
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202848"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70990418"
 ---
 # <a name="dotnet-pack"></a>dotnet pack
 
+**Bu konu şu şekilde geçerlidir: ✓** .NET Core 1. x SDK ve sonraki sürümleri
+
+<!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
+-->
 
 ## <a name="name"></a>Ad
 
@@ -19,27 +23,21 @@ ms.locfileid: "70202848"
 
 ## <a name="synopsis"></a>Özeti
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2. x](#tab/netcore2x)
-
 ```console
-dotnet pack [<PROJECT>] [-c|--configuration] [--force] [--include-source] [--include-symbols] [--no-build] [--no-dependencies]
-    [--no-restore] [-o|--output] [--runtime] [-s|--serviceable] [-v|--verbosity] [--version-suffix]
+dotnet pack [<PROJECT>|<SOLUTION>] [-c|--configuration] [--force] [--include-source] [--include-symbols] [--interactive] 
+    [--no-build] [--no-dependencies] [--no-restore] [--nologo] [-o|--output] [--runtime] [-s|--serviceable] 
+    [-v|--verbosity] [--version-suffix]
 dotnet pack [-h|--help]
 ```
-
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1. x](#tab/netcore1x)
-
-```console
-dotnet pack [<PROJECT>] [-c|--configuration] [--include-source] [--include-symbols] [--no-build] [-o|--output]
-    [-s|--serviceable] [-v|--verbosity] [--version-suffix]
-dotnet pack [-h|--help]
-```
-
----
 
 ## <a name="description"></a>Açıklama
 
-`dotnet pack` Komut projeyi oluşturur ve NuGet paketleri oluşturur. Bu komutun sonucu bir NuGet paketidir. `--include-symbols` Seçenek varsa, hata ayıklama sembollerini içeren başka bir paket oluşturulur.
+`dotnet pack` Komut projeyi oluşturur ve NuGet paketleri oluşturur. Bu komutun sonucu bir NuGet paketidir (yani, bir *. nupkg* dosyası). 
+
+Hata ayıklama sembollerini içeren bir paket oluşturmak istiyorsanız iki seçeneğiniz vardır:
+
+- `--include-symbols`-Bu, semboller paketini oluşturur.
+- `--include-source`-Bu, kaynak dosyaları içeren içindeki bir `src` klasörü içeren semboller paketini oluşturur.
 
 Paketlenmiş projenin NuGet bağımlılıkları *. nuspec* dosyasına eklenir, bu nedenle paket yüklenirken düzgün şekilde çözülür. Projeden projeye başvurular proje içinde paketlenmemiş. Şu anda, projeden projeye bağımlılıklar varsa proje başına bir pakete sahip olmanız gerekir.
 
@@ -59,13 +57,11 @@ Web projeleri varsayılan olarak packable değildir. Varsayılan davranışı ge
 
 ## <a name="arguments"></a>Arguments
 
-* **`PROJECT`**
+`PROJECT | SOLUTION`
 
-  Paketedilecek proje. Bu, [csproj dosyasının](csproj.md) veya bir dizinin yoludur. Belirtilmezse, varsayılan olarak geçerli dizini alır.
+  Paket için proje veya çözüm. Bu, bir [csproj dosyası](csproj.md), çözüm dosyası veya bir dizin yoludur. Belirtilmemişse, komut geçerli dizinde bir proje veya çözüm dosyası arar.
 
 ## <a name="options"></a>Seçenekler
-
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2. x](#tab/netcore2x)
 
 * **`-c|--configuration {Debug|Release}`**
 
@@ -73,7 +69,7 @@ Web projeleri varsayılan olarak packable değildir. Varsayılan davranışı ge
 
 * **`--force`**
 
-  Son geri yükleme başarılı olsa bile tüm bağımlılıkların çözülmesini zorlar. Bu bayrağın belirtilmesi, *Project. varlıklar. JSON* dosyasını silme ile aynıdır.
+  Son geri yükleme başarılı olsa bile tüm bağımlılıkların çözülmesini zorlar. Bu bayrağın belirtilmesi, *Project. varlıklar. JSON* dosyasını silme ile aynıdır. .NET Core 2,0 SDK 'dan beri kullanılabilir seçeneği.
 
 * **`-h|--help`**
 
@@ -81,11 +77,15 @@ Web projeleri varsayılan olarak packable değildir. Varsayılan davranışı ge
 
 * **`--include-source`**
 
-  NuGet paketindeki kaynak dosyalarını içerir. Kaynak dosyaları `src` `nupkg`içindeki klasörüne dahil edilmiştir.
+  Çıkış dizinindeki normal NuGet paketlerine ek olarak hata ayıklama sembolleri NuGet paketlerini içerir. Kaynak dosyaları, semboller paketinin içindeki `src` klasörüne dahil edilmiştir.
 
 * **`--include-symbols`**
 
-  Sembolleri `nupkg`oluşturur.
+  Çıkış dizinindeki normal NuGet paketlerine ek olarak hata ayıklama sembolleri NuGet paketlerini içerir.
+
+* **`--interactive`**
+
+  Komutun, Kullanıcı girişini veya eylemini durdurmasına ve beklemesine izin verir (örneğin, kimlik doğrulamasını tamamlamaya yönelik). .NET Core 3,0 SDK 'dan beri kullanılabilir.
 
 * **`--no-build`**
 
@@ -93,11 +93,15 @@ Web projeleri varsayılan olarak packable değildir. Varsayılan davranışı ge
 
 * **`--no-dependencies`**
 
-  Projeden projeye başvuruları yoksayar ve yalnızca kök projeyi geri yükler.
+  Projeden projeye başvuruları yoksayar ve yalnızca kök projeyi geri yükler. .NET Core 2,0 SDK 'dan beri kullanılabilir seçeneği.
 
 * **`--no-restore`**
 
-  Komutu çalıştırılırken örtük geri yükleme yürütülmez.
+  Komutu çalıştırılırken örtük geri yükleme yürütülmez. .NET Core 2,0 SDK 'dan beri kullanılabilir seçeneği.
+
+* **`--nologo`**
+
+  Başlangıç başlığını veya telif hakkı iletisini görüntülemez. .NET Core 3,0 SDK 'dan beri kullanılabilir.
 
 * **`-o|--output <OUTPUT_DIRECTORY>`**
 
@@ -105,7 +109,7 @@ Web projeleri varsayılan olarak packable değildir. Varsayılan davranışı ge
 
 * **`--runtime <RUNTIME_IDENTIFIER>`**
 
-  Paketlerinin geri yükleneceği hedef çalışma zamanını belirtir. Çalışma zamanı tanımlayıcıları (RID 'Ler) listesi için bkz. [RID kataloğu](../rid-catalog.md).
+  Paketlerinin geri yükleneceği hedef çalışma zamanını belirtir. Çalışma zamanı tanımlayıcıları (RID 'Ler) listesi için bkz. [RID kataloğu](../rid-catalog.md). .NET Core 2,0 SDK 'dan beri kullanılabilir seçeneği.
 
 * **`-s|--serviceable`**
 
@@ -118,46 +122,6 @@ Web projeleri varsayılan olarak packable değildir. Varsayılan davranışı ge
 * **`-v|--verbosity <LEVEL>`**
 
   Komutun ayrıntı düzeyini ayarlar. İzin verilen değerler `q[uiet]` `m[inimal]` ,`n[ormal]`,, ve .`diag[nostic]` `d[etailed]`
-
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1. x](#tab/netcore1x)
-
-* **`-c|--configuration {Debug|Release}`**
-
-  Yapı yapılandırmasını tanımlar. Varsayılan değer `Debug` şeklindedir.
-
-* **`-h|--help`**
-
-  Komut için kısa bir yardım yazdırır.
-
-* **`--include-source`**
-
-  NuGet paketindeki kaynak dosyalarını içerir. Kaynak dosyaları `src` `nupkg`içindeki klasörüne dahil edilmiştir.
-
-* **`--include-symbols`**
-
-  Sembolleri `nupkg`oluşturur.
-
-* **`--no-build`**
-
-  Paketleme öncesinde projeyi oluşturmaz.
-
-* **`-o|--output <OUTPUT_DIRECTORY>`**
-
-  Oluşturulan paketleri belirtilen dizine koyar.
-
-* **`-s|--serviceable`**
-
-  Paketteki hizmet verebilir bayrağını ayarlar. Daha fazla bilgi için bkz. [.net blogu: .NET 4.5.1, .net NuGet kitaplıkları Için Microsoft güvenlik güncelleştirmelerini destekler](https://aka.ms/nupkgservicing).
-
-* **`--version-suffix <VERSION_SUFFIX>`**
-
-  Projedeki `$(VersionSuffix)` MSBuild özelliğinin değerini tanımlar.
-
-* **`-v|--verbosity <LEVEL>`**
-
-  Komutun ayrıntı düzeyini ayarlar. İzin verilen değerler `q[uiet]` `m[inimal]` ,`n[ormal]`,, ve .`diag[nostic]` `d[etailed]`
-
----
 
 ## <a name="examples"></a>Örnekler
 
@@ -212,5 +176,5 @@ Web projeleri varsayılan olarak packable değildir. Varsayılan davranışı ge
 * Bir [. nuspec dosyası](https://docs.microsoft.com/nuget/reference/msbuild-targets#packing-using-a-nuspec)kullanarak projeyi paketleme:
 
   ```console
-  dotnet pack ~/projects/app1/project.csproj /p:NuspecFile=~/projects/app1/project.nuspec /p:NuspecBasePath=~/projects/app1/nuget
+  dotnet pack ~/projects/app1/project.csproj -p:NuspecFile=~/projects/app1/project.nuspec -p:NuspecBasePath=~/projects/app1/nuget
   ```

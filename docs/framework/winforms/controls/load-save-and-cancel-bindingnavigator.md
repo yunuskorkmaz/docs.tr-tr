@@ -8,56 +8,56 @@ helpviewer_keywords:
 - controls [Windows Forms], manipulating
 - BindingNavigator control [Windows Forms], adding buttons
 ms.assetid: faa33042-186e-4bb2-8798-17ceb987ec62
-ms.openlocfilehash: f190bfa29af480fa104f30b21b1af517c413b838
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: 2d4867c0bc4feb7b43e15614fc56a3c709cef9e7
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211572"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991733"
 ---
 # <a name="how-to-add-load-save-and-cancel-buttons-to-the-windows-forms-bindingnavigator-control"></a>Nasıl yapılır: Windows Forms BindingNavigator Denetimine Yükleme, Kaydetme ve İptal Düğmeleri Ekleme
 
-<xref:System.Windows.Forms.BindingNavigator> Denetimidir özel amaçlı <xref:System.Windows.Forms.ToolStrip> denetimi gezinme ve verilere bağlı denetimler formunuzdaki işlemek için tasarlanmıştır.
+Denetim, formunuzda verilere bağlı olan denetimleri <xref:System.Windows.Forms.ToolStrip> gezme ve düzenleme için tasarlanan özel amaçlı bir denetimdir. <xref:System.Windows.Forms.BindingNavigator>
 
-Çünkü bu bir <xref:System.Windows.Forms.ToolStrip> denetimi <xref:System.Windows.Forms.BindingNavigator> bileşen kolayca değiştirilebilir ek veya alternatif komut kullanıcı için eklenecek.
+Bir <xref:System.Windows.Forms.ToolStrip> denetim olduğundan <xref:System.Windows.Forms.BindingNavigator> , bileşen Kullanıcı için ek veya alternatif komutlar içerecek şekilde kolayca değiştirilebilir.
 
-Aşağıdaki yordamda bir <xref:System.Windows.Forms.TextBox> denetimin verilere bağlı ve <xref:System.Windows.Forms.ToolStrip> kaydetme, yükleme, içerir ve İptal düğmeleri değiştirilmişse forma eklenen denetimi.
+Aşağıdaki yordamda, bir <xref:System.Windows.Forms.TextBox> denetim verilere bağlanır <xref:System.Windows.Forms.ToolStrip> ve forma eklenen denetim, yükleme, kaydetme ve İptal düğmelerini içerecek şekilde değiştirilir.
 
-## <a name="add-load-save-and-cancel-buttons-to-the-bindingnavigator-component"></a>Yükleme, kaydetme ve ekleme İptal düğmeleri BindingNavigator bileşenine
+## <a name="add-load-save-and-cancel-buttons-to-the-bindingnavigator-component"></a>BindingNavigator bileşenine yükleme, kaydetme ve iptal düğmeleri ekleme
 
-1. Visual Studio'da ekleme bir <xref:System.Windows.Forms.TextBox> form denetimi.
+1. Visual Studio 'da formunuza bir <xref:System.Windows.Forms.TextBox> denetim ekleyin.
 
-2. Öğeyi bir <xref:System.Windows.Forms.BindingSource>, bir veri kaynağına bağlı. Bu örnekte, <xref:System.Windows.Forms.BindingSource> veritabanına bağlanır.
+2. Bir <xref:System.Windows.Forms.BindingSource>veri kaynağına bağlı olan öğesine bağlayın. Bu örnekte <xref:System.Windows.Forms.BindingSource> , bir veritabanına bağlanır.
 
-3. Veri kümesi ve tablo bağdaştırıcısı oluşturulur, sonra sürükleyin bir <xref:System.Windows.Forms.BindingNavigator> forma.
+3. Veri kümesi ve tablo bağdaştırıcısı oluşturulduktan sonra forma bir <xref:System.Windows.Forms.BindingNavigator> denetim sürükleyin.
 
-4. Ayarlama <xref:System.Windows.Forms.BindingNavigator> denetimin <xref:System.Windows.Forms.BindingNavigator.BindingSource%2A> özelliğini <xref:System.Windows.Forms.BindingSource> denetimlere bağlı form üzerindeki.
+4. Denetimin özelliğini ,<xref:System.Windows.Forms.BindingSource> denetimlere bağlı olan form üzerinde olarak ayarlayın. <xref:System.Windows.Forms.BindingNavigator.BindingSource%2A> <xref:System.Windows.Forms.BindingNavigator>
 
-5. Seçin <xref:System.Windows.Forms.BindingNavigator> denetimi.
+5. <xref:System.Windows.Forms.BindingNavigator> Denetimi seçin.
 
-6. Akıllı etiket karakterini tıklayın (![akıllı etiket karakterini](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) böylece **BindingNavigator görevleri** iletişim kutusu açılır ve seçin **öğedüzenleme**.
+6. **BindingNavigator görevleri** iletişim kutusu görünür ve **öğeleri Düzenle**' yi seçerek akıllı etiket glifi ' ne (![akıllı etiket karakteri](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) tıklayın.
 
-     **Öğeler Koleksiyonu Düzenleyicisi** görünür.
+     **Öğeler koleksiyonu Düzenleyicisi** görünür.
 
-7. İçinde **öğeler Koleksiyonu Düzenleyicisi**, aşağıdaki adımları tamamlayın:
+7. **Öğe koleksiyonu düzenleyicisinde**, aşağıdakileri doldurun:
 
-    1. Ekle bir <xref:System.Windows.Forms.ToolStripSeparator> ve üç <xref:System.Windows.Forms.ToolStripButton> uygun türünü seçerek öğeleri <xref:System.Windows.Forms.ToolStripItem> tıklayıp **Ekle** düğmesi.
+    1. <xref:System.Windows.Forms.ToolStripButton> <xref:System.Windows.Forms.ToolStripSeparator> Uygun türü<xref:System.Windows.Forms.ToolStripItem> seçerek ve Ekle düğmesine tıklayarak, ve üç öğesi ekleyin.
 
-    2. Ayarlama <xref:System.Windows.Forms.ToolStripItem.Name%2A> düğmelere özelliği **LoadButton**, **saveButton yapın**, ve **CancelButton**sırasıyla.
+    2. Düğmelerin özelliğini sırasıyla **loadButton**, **saveButton**ve **CancelButton**olarak ayarlayın. <xref:System.Windows.Forms.ToolStripItem.Name%2A>
 
-    3. Ayarlama <xref:System.Windows.Forms.ToolStripItem.Text%2A> düğmelere özelliği **yük**, **Kaydet**, ve **iptal**.
+    3. Yüklenecek, **kaydedilecek**ve **iptal**edilecek düğmelerin özelliğiniayarlayın.<xref:System.Windows.Forms.ToolStripItem.Text%2A>
 
-    4. Ayarlama <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> her düğme için özellik **metin**. Alternatif olarak, bu özelliği ayarlayın **görüntü** veya **ImageAndText**ve görüntülenen resmi ayarlama <xref:System.Windows.Forms.ToolStripItem.Image%2A> özelliği.
+    4. Düğmelerin her bir özelliğinimetinolarak<xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> ayarlayın. Alternatif olarak, bu özelliği **Image** veya **ImageAndText**olarak ayarlayabilir ve görüntüde <xref:System.Windows.Forms.ToolStripItem.Image%2A> görüntülenecek şekilde ayarlayabilirsiniz.
 
-    5. Tıklayın **Tamam** iletişim kutusunu kapatın. Düğmeleri eklenen <xref:System.Windows.Forms.ToolStrip>.
+    5. İletişim kutusunu kapatmak için **Tamam** 'ı tıklatın. Düğmeleri öğesine <xref:System.Windows.Forms.ToolStrip>eklenir.
 
-8. Formun sağ tıklatın ve seçin **kodu görüntüle**.
+8. Forma sağ tıklayın ve **kodu görüntüle**' yi seçin.
 
-9. Kod Düzenleyicisi'nde tablo bağdaştırıcısı veri yükleyen kod satırını bulun. Veri bağlama 2. adımda ayarladığınızda bu kod üretildi. Kodu aşağıdakine benzer olmalıdır: `TableAdapterName.Fill(DataSetName.TableName)`. Çoğu olacak büyük olasılıkla formun olması <xref:System.Windows.Forms.Form.Load> olay.
+9. Kod Düzenleyicisi 'nde, tablo bağdaştırıcısına veri yükleyen kod satırını bulun. Bu kod, adım 2 ' de veri bağlamayı ayarlarken oluşturulmuştur. Kod aşağıdakine benzer olmalıdır: `TableAdapterName.Fill(DataSetName.TableName)`. Büyük olasılıkla formun <xref:System.Windows.Forms.Form.Load> olayında olacaktır.
 
-10. İçin bir olay işleyicisi oluşturun <xref:System.Windows.Forms.ToolStripItem.Click> olayı **yük** <xref:System.Windows.Forms.ToolStripButton> daha önce oluşturduğunuz ve bu veri yükleme kod içine taşıyın.
+10. Daha önce oluşturduğunuz <xref:System.Windows.Forms.ToolStripItem.Click> **yükün** <xref:System.Windows.Forms.ToolStripButton> olayı için bir olay işleyicisi oluşturun ve bu veri yükleme kodunu buna taşıyın.
 
-     Kodunuzun aşağıdakine benzer görünmelidir:
+     Kodunuz artık aşağıdakine benzer şekilde görünmelidir:
 
     ```vb
     Private Sub LoadButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles LoadButton.Click
@@ -73,7 +73,7 @@ Aşağıdaki yordamda bir <xref:System.Windows.Forms.TextBox> denetimin verilere
     }
     ```
 
-11. İçin bir olay işleyicisi oluşturun <xref:System.Windows.Forms.ToolStripItem.Click> olayı **Kaydet** <xref:System.Windows.Forms.ToolStripButton> daha önce oluşturduğunuz ve tablo denetimi içindeki verileri güncelleştirmek için kod yazma bağlanır.
+11. Daha önce oluşturduğunuz <xref:System.Windows.Forms.ToolStripItem.Click> **kaydetme** <xref:System.Windows.Forms.ToolStripButton> olayı için bir olay işleyicisi oluşturun ve denetimin bağlandığı tablodaki verileri güncelleştirmek için kod yazın.
 
     ```vb
     Private Sub SaveButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SaveButton.Click
@@ -90,9 +90,9 @@ Aşağıdaki yordamda bir <xref:System.Windows.Forms.TextBox> denetimin verilere
     ```
 
     > [!NOTE]
-    > Bazı durumlarda, <xref:System.Windows.Forms.BindingNavigator> bileşeni zaten bir **Kaydet** düğmesi, ancak hiçbir kod oluşturulan Windows Forms Tasarımcısı tarafından. Bu durumda, önceki kodu koyabilirsiniz <xref:System.Windows.Forms.ToolStripItem.Click> üzerinde tamamen yeni bir düğme oluşturmak yerine bu düğme için olay işleyicisi <xref:System.Windows.Forms.ToolStrip>. Ayarlamanız gerekir ancak düğmenin varsayılan olarak devre dışıdır <xref:System.Windows.Forms.ToolBarButton.Enabled%2A> düğmenin özelliği `true` düğme işlevi doğru olması.
+    > Bazı durumlarda, <xref:System.Windows.Forms.BindingNavigator> bileşen zaten bir **Kaydet** düğmesine sahiptir, ancak Windows Form Tasarımcısı hiçbir kod üretilmez. Bu durumda, <xref:System.Windows.Forms.ToolStrip>üzerinde tamamen yeni bir düğme oluşturmak yerine, önceki <xref:System.Windows.Forms.ToolStripItem.Click> kodu bu düğmeye ait olay işleyicisine yerleştirebilirsiniz. Ancak düğme varsayılan olarak devre dışıdır, bu nedenle düğmenin <xref:System.Windows.Forms.ToolBarButton.Enabled%2A> özelliğini `true` düğme işlevine doğru olacak şekilde ayarlamanız gerekir.
 
-12. İçin bir olay işleyicisi oluşturun <xref:System.Windows.Forms.ToolStripItem.Click> olayı **iptal** <xref:System.Windows.Forms.ToolStripButton> daha önce oluşturduğunuz ve görüntülenen veri kaydına değişiklikleri iptal etmek için kod yazın.
+12. Daha önce oluşturduğunuz <xref:System.Windows.Forms.ToolStripItem.Click> **iptal etme** <xref:System.Windows.Forms.ToolStripButton> olayı için bir olay işleyicisi oluşturun ve görüntülenen veri kaydındaki tüm değişiklikleri iptal etmek için kod yazın.
 
     ```vb
     Private Sub CancelButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CancelButton.Click
@@ -108,7 +108,7 @@ Aşağıdaki yordamda bir <xref:System.Windows.Forms.TextBox> denetimin verilere
     ```
 
     > [!NOTE]
-    > <xref:System.Windows.Forms.BindingSource.CancelEdit%2A> Yöntemi veri satırı için kapsamlı. Sonraki kayda gitmeden önce tek bir kayıt görüntülerken yaptığınız tüm değişiklikleri kaydedin.
+    > <xref:System.Windows.Forms.BindingSource.CancelEdit%2A> Yöntemi, veri satırının kapsamına alınır. Bir sonraki kayda gitmeden önce bu tek kaydı görüntülerken yaptığınız değişiklikleri kaydedin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

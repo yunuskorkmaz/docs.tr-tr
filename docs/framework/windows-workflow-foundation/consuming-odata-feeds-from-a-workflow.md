@@ -1,53 +1,53 @@
 ---
-title: Bir iş akışından - WF akışlarını OData kullanma
+title: İş akışından OData akışlarını kullanma-WF
 ms.date: 03/30/2017
 ms.assetid: 1b26617c-53e9-476a-81af-675c36d95919
-ms.openlocfilehash: e7d5230bb15474d63b2381d3906e07e48ac0134d
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: e7cfa138a01719988586f9dce0a9009bea643076
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592987"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989765"
 ---
-# <a name="consuming-odata-feeds-from-a-workflow"></a>Bir iş akışından OData tüketen akışları
+# <a name="consuming-odata-feeds-from-a-workflow"></a>Bir iş akışından OData akışlarını kullanma
 
-WCF Veri Hizmetleri, temsili durum aktarımı (REST) semantiği kullanarak Web veya intranet üzerinden verileri kullanır ve açık veri Protokolü (OData) kullanan hizmetler oluşturmanıza olanak sağlayan .NET Framework'ün bir bileşenidir. OData veri tarafından bir URI'leri adreslenebilir kaynakları olarak kullanıma sunar. HTTP isteği göndermesini ve OData akışına işlem herhangi bir uygulama bir veri hizmeti döndürdüğünü bir OData tabanlı bir veri hizmeti ile etkileşim kurabilir. Ayrıca, WCF Veri Hizmetleri OData akışları .NET Framework uygulamalarından tükettiğinizde daha zengin bir programlama deneyimi sağlayan istemci kütüphaneleri içerir. Bu konu, bir iş akışında istemci kitaplıkları kullanarak olmadan ve genel bakış kullanan bir OData akışı sağlar.
+WCF Veri Hizmetleri, temsili durum aktarımı (REST) semantiğini kullanarak Web veya intranet üzerinden veri sunmak ve kullanmak için açık veri Protokolü 'Nü (OData) kullanan hizmetler oluşturmanızı sağlayan bir .NET Framework bileşenidir. OData, verileri URI 'Ler tarafından adreslenebilir kaynaklar olarak kullanıma sunar. Bir HTTP isteği gönderebileceği ve bir veri hizmetinin döndürdüğü OData akışını işlebiliyorsanız, herhangi bir uygulama OData tabanlı bir veri hizmetiyle etkileşim kurabilir. Ayrıca WCF Veri Hizmetleri, .NET Framework uygulamalardan OData akışlarını kullanırken daha zengin bir programlama deneyimi sağlayan istemci kitaplıklarını içerir. Bu konu, istemci kitaplıklarını kullanmadan ve ile bir iş akışında OData akışını kullanmaya genel bir bakış sağlar.
 
 ## <a name="using-the-sample-northwind-odata-service"></a>Örnek Northwind OData hizmetini kullanma
 
-Veri hizmeti bulunan Northwind örnek bu konudaki örneklerde [ http://services.odata.org/Northwind/Northwind.svc/ ](https://go.microsoft.com/fwlink/?LinkID=187426). Bu hizmetin bir parçası olarak sağlanan [OData SDK](https://go.microsoft.com/fwlink/?LinkID=185248) ve örnek Northwind veritabanı salt okunur erişim sağlar. Yazma erişimi istenen ya da yerel bir WCF veri hizmeti isteniyorsa adımlarını izleyebilirsiniz [WCF Veri Hizmetleri Hızlı Başlangıç](https://go.microsoft.com/fwlink/?LinkID=131076) Northwind veritabanına erişim sağlayan yerel bir OData hizmeti oluşturmak için. Hızlı başlangıcı takip ediyorsa, bu konudaki örnek kodda sağlanan yerel URI'sini değiştirin.
+Bu konudaki örneklerde konumunda <https://services.odata.org/Northwind/Northwind.svc/>bulunan örnek Northwind veri hizmeti kullanılmaktadır. Bu hizmet [OData SDK 'sının](https://go.microsoft.com/fwlink/?LinkID=185248) bir parçası olarak sağlanır ve örnek Northwind veritabanına salt okuma erişimi sağlar. Yazma erişimi isteniyorsa veya yerel bir WCF veri hizmeti isteniyorsa, Northwind veritabanına erişim sağlayan yerel bir OData hizmeti oluşturmak için [WCF veri hizmetleri hızlı başlangıç](https://go.microsoft.com/fwlink/?LinkID=131076) adımlarını izleyebilirsiniz. Hızlı başlangıcı izlerseniz, bu konudaki örnek kodda belirtilen bir yerel URI 'yi yerine koyun.
 
-## <a name="consuming-an-odata-feed-using-the-client-libraries"></a>İstemci kitaplıkları kullanarak kullanan bir OData akışı
+## <a name="consuming-an-odata-feed-using-the-client-libraries"></a>İstemci kitaplıklarını kullanarak OData akışını kullanma
 
-WCF Veri Hizmetleri, daha kolay bir OData akışına .NET Framework ve istemci uygulamalardan kullanmasına olanak sağlayan istemci kütüphaneleri içerir. Bu kitaplıklar, HTTP iletileri gönderip basitleştirir. Bunlar ayrıca varlık verilerini temsil eden CLR nesneleri iletisi yüküne çevir. İstemci kitaplıkları iki çekirdek sınıfı özelliği <xref:System.Data.Services.Client.DataServiceContext> ve <xref:System.Data.Services.Client.DataServiceQuery%601>. Bu sınıflar, bir veri hizmetini sorgulama ve CLR nesne olarak döndürülen varlığı verilerle çalışmak etkinleştirin. Bu bölüm, istemci kitaplıkları kullanan bir etkinlik oluşturma için iki yaklaşım kapsar.
+WCF Veri Hizmetleri, .NET Framework ve istemci uygulamalarından bir OData akışını daha kolay bir şekilde kullanmanıza olanak tanıyan istemci kitaplıklarını içerir. Bu kitaplıklar HTTP iletileri göndermeyi ve almayı basitleştirir. Ayrıca, ileti yükünü varlık verilerini temsil eden CLR nesnelerine çevirirler. İstemci kitaplıkları iki çekirdek sınıfı <xref:System.Data.Services.Client.DataServiceContext> ve. <xref:System.Data.Services.Client.DataServiceQuery%601> Bu sınıflar bir veri hizmetini sorgulamanızı ve ardından döndürülen varlık verileriyle CLR nesneleri olarak çalışmanızı sağlar. Bu bölümde, istemci kitaplıklarını kullanan etkinlikleri oluşturmaya yönelik iki yaklaşım ele alınmaktadır.
 
 ### <a name="adding-a-service-reference-to-the-wcf-data-service"></a>WCF veri hizmetine hizmet başvurusu ekleme
 
-Northwind istemci kitaplıkları oluşturmak için kullanabileceğiniz **hizmet Başvurusu Ekle** iletişim kutusunda, Northwind OData hizmetine başvuru eklemek için Visual Studio 2012.
+Northwind istemci kitaplıklarını oluşturmak için, Northwind OData hizmetine bir başvuru eklemek üzere Visual Studio 2012 ' deki **hizmet başvurusu Ekle** iletişim kutusunu kullanabilirsiniz.
 
 ![Hizmet Başvurusu Ekle iletişim kutusunu gösteren ekran görüntüsü.](./media/consuming-odata-feeds-from-a-workflow/add-service-reference-dialog.gif)
 
-Hizmet tarafından hem de hiçbir hizmet işlemleri olduğunu unutmayın **Hizmetleri** vardır liste öğelerini temsil eden Northwind verileri hizmeti tarafından kullanıma sunulan varlık. Hizmet başvurusunu eklediğinizde sınıfları bu varlıkları için oluşturulur ve istemci kodu kullanılabilir. Bu konudaki örnekleri bu sınıfları kullanın ve `NorthwindEntities` sorguları gerçekleştirmek için sınıf.
+Hizmet tarafından sunulan hizmet işlemleri olmadığını ve **Hizmetler** listesinde, Northwind Data Service tarafından sunulan varlıkları temsil eden öğeler olduğunu unutmayın. Hizmet başvurusu eklendiğinde, bu varlıklar için sınıflar oluşturulacaktır ve istemci kodunda kullanılabilirler. Bu konudaki örnekler, sorguları gerçekleştirmek için bu sınıfları ve `NorthwindEntities` sınıfı kullanır.
 
 > [!NOTE]
-> Daha fazla bilgi için [veri hizmeti istemci Kitaplığı'nı (WCF Data Services) oluşturma](../data/wcf/generating-the-data-service-client-library-wcf-data-services.md).
+> Daha fazla bilgi için bkz. [veri hizmeti Istemci kitaplığı oluşturma (WCF veri Hizmetleri)](../data/wcf/generating-the-data-service-client-library-wcf-data-services.md).
 
-### <a name="using-asynchronous-methods"></a>Zaman uyumsuz metotlar kullanma
+### <a name="using-asynchronous-methods"></a>Zaman uyumsuz yöntemler kullanma
 
-WCF Veri Hizmetleri zaman uyumsuz olarak erişen öneririz Web üzerinden kaynaklara erişirken oluşabilecek olası gecikme sorunlarını gidermek için. Zaman uyumsuz yöntemleri çağırma sorgular için WCF Veri Hizmetleri istemci kitaplıkları içerir ve Windows Workflow Foundation (WF) sağlayan <xref:System.Activities.AsyncCodeActivity> sınıfı zaman uyumsuz etkinlikler yazma için. <xref:System.Activities.AsyncCodeActivity> zaman uyumsuz yöntemler olan .NET Framework sınıfları yararlanmak için türetilmiş etkinlikleri yazılabilir veya zaman uyumsuz olarak yürütülecek kodu bir yönteme yerleştirin ve temsilci kullanılarak çağrılır. Bu bölümde, iki örnek bir <xref:System.Activities.AsyncCodeActivity> türetilmiş etkinlik; bir WCF Veri Hizmetleri istemci kitaplıkları, zaman uyumsuz yöntemleri kullanır ve bir temsilci kullanan bir.
+Web üzerinden kaynaklara erişirken oluşabilecek olası gecikme sorunlarını gidermek için WCF Veri Hizmetleri zaman uyumsuz olarak erişmenizi öneririz. WCF veri Hizmetleri istemci kitaplıkları sorguları çağırmak için zaman uyumsuz yöntemler içerir ve Windows Workflow Foundation (WF) zaman uyumsuz etkinlikleri <xref:System.Activities.AsyncCodeActivity> yazmak için sınıfını sağlar. <xref:System.Activities.AsyncCodeActivity>türetilmiş etkinlikler, zaman uyumsuz yöntemlere sahip .NET Framework sınıflarından yararlanmak için yazılabilir veya zaman uyumsuz olarak yürütülecek kod bir yönteme yerleştirilebilir ve bir temsilci kullanılarak çağrılabilir. Bu bölümde, bir <xref:System.Activities.AsyncCodeActivity> türetilmiş etkinliğin, WCF veri Hizmetleri istemci kitaplıklarının zaman uyumsuz yöntemlerini ve bir temsilciyi kullanan bir dizi yöntemi kullanan iki örneği verilmiştir.
 
 > [!NOTE]
-> Daha fazla bilgi için [zaman uyumsuz işlemler (WCF Data Services)](../data/wcf/asynchronous-operations-wcf-data-services.md) ve [zaman uyumsuz etkinlikler oluşturma](creating-asynchronous-activities-in-wf.md).
+> Daha fazla bilgi için bkz. [zaman uyumsuz işlemler (WCF veri Hizmetleri)](../data/wcf/asynchronous-operations-wcf-data-services.md) ve [zaman uyumsuz etkinlikler oluşturma](creating-asynchronous-activities-in-wf.md).
 
-### <a name="using-client-library-asynchronous-methods"></a>İstemci Kitaplığı zaman uyumsuz metotlar kullanma
+### <a name="using-client-library-asynchronous-methods"></a>İstemci kitaplığı zaman uyumsuz yöntemlerini kullanma
 
-<xref:System.Data.Services.Client.DataServiceQuery%601> Sağlar sınıfını <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> ve <xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A> zaman uyumsuz olarak bir OData hizmeti sorgulamak için yöntemleri. Bu yöntemler, gelen çağrılabilir <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> ve <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> , geçersiz kılan bir <xref:System.Activities.AsyncCodeActivity> türetilmiş sınıf. Zaman <xref:System.Activities.AsyncCodeActivity> <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> geçersiz kılma döndürür, iş akışı boş Git (ancak kalıcı) ve ne zaman zaman uyumsuz işi tamamlandığında, <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> çalışma zamanı tarafından çağrılır.
+Sınıfı <xref:System.Data.Services.Client.DataServiceQuery%601> , ve <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> birODatahizmetinizamanuyumsuzolaraksorgulamak<xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A> için yöntemler sağlar. Bu yöntemler, <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> türetilmiş bir <xref:System.Activities.AsyncCodeActivity> sınıfın ve <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> geçersiz kılmalardan çağrılabilir. Geçersiz kılma döndüğünde, iş akışı boşta geçebilir (ancak devam etmez) ve <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> zaman uyumsuz iş tamamlandığında, çalışma zamanı tarafından çağrılır. <xref:System.Activities.AsyncCodeActivity> <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A>
 
-Aşağıdaki örnekte, bir `OrdersByCustomer` etkinlik, iki bağımsız değişkenler girişi sahip tanımlanır. `CustomerId` Bağımsız değişkeni hangi siparişleri döndürmek için tanımlayan bir müşteri temsil eder ve `ServiceUri` bağımsız değişken Sorgulanacak OData hizmeti URI'sini temsil eder. Etkinlik öğesinden türetildiği için `AsyncCodeActivity<IEnumerable<Order>>` ayrıca bir <xref:System.Activities.Activity%601.Result%2A> çıkış sorgu sonuçlarını döndürmek için kullanılan bağımsız değişken. <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> Geçersiz kılma tüm siparişleri belirtilen müşterinin seçtiği bir LINQ sorgu oluşturur. Bu sorgu olarak belirtilen <xref:System.Activities.AsyncCodeActivityContext.UserState%2A> geçirilen <xref:System.Activities.AsyncCodeActivityContext>ve ardından sorgu <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> yöntemi çağrılır. Unutmayın geri çağırma ve sorgunun geçirilen durumu <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> etkinliğin geçirilir olanlardır <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> yöntemi. Sorgu bittiğinde Etkinlik yürütme <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> yöntemi çağrılır. Sorgu alınır <xref:System.Activities.AsyncCodeActivityContext.UserState%2A>ve ardından sorgu <xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A> yöntemi çağrılır. Bu yöntem döndürür bir <xref:System.Collections.Generic.IEnumerable%601> belirtilen varlık türü; bu durumda `Order`. Bu yana `IEnumerable<Order>` genel türü <xref:System.Activities.AsyncCodeActivity%601>bu <xref:System.Collections.IEnumerable> olarak ayarlandığından <xref:System.Activities.Activity%601.Result%2A> <xref:System.Activities.OutArgument%601> etkinlik.
+Aşağıdaki örnekte, iki giriş bağımsız `OrdersByCustomer` değişkeni olan bir etkinlik tanımlanmıştır. Bağımsız değişkeni, hangi siparişlerin dönebileceğini tanımlayan müşteriyi temsil eder `ServiceUri` ve bağımsız değişken Sorgulanacak OData hizmetinin URI 'sini temsil eder. `CustomerId` Etkinlik bundan türediğinden `AsyncCodeActivity<IEnumerable<Order>>` , sorgunun sonuçlarını döndürmek için <xref:System.Activities.Activity%601.Result%2A> kullanılan bir çıkış bağımsız değişkeni de vardır. <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> Geçersiz kılma belirtilen müşterinin tüm emirlerini seçen bir LINQ sorgusu oluşturur. Bu sorgu, geçti <xref:System.Activities.AsyncCodeActivityContext.UserState%2A> <xref:System.Activities.AsyncCodeActivityContext>, <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> ve ardından sorgunun yöntemi çağrılır olarak belirtilir. Sorgunun <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> öğesine geçirildiği geri çağırma ve durumun, <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> etkinliğin yöntemine geçirilmiş olduğunu unutmayın. Sorgunun yürütülmesi bittiğinde etkinliğin <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> yöntemi çağrılır. Sorgu öğesinden <xref:System.Activities.AsyncCodeActivityContext.UserState%2A>alınır ve ardından <xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A> sorgunun yöntemi çağırılır. Bu yöntem, belirtilen <xref:System.Collections.Generic.IEnumerable%601> varlık türünden bir döndürür; bu durumda. `Order` <xref:System.Collections.IEnumerable> Öğesiningenel<xref:System.Activities.Activity%601.Result%2A> türü olduğundan,<xref:System.Activities.OutArgument%601> bu, etkinliğin olarak ayarlanır. `IEnumerable<Order>` <xref:System.Activities.AsyncCodeActivity%601>
 
 [!code-csharp[CFX_WCFDataServicesActivityExample#100](~/samples/snippets/csharp/VS_Snippets_CFX/CFX_WCFDataServicesActivityExample/cs/Program.cs#100)]
 
-Aşağıdaki örnekte, `OrdersByCustomer` etkinlik belirtilen müşteri siparişlerinin listesi alır ve ardından bir <xref:System.Activities.Statements.ForEach%601> etkinlik döndürülen siparişleri numaralandırır ve her sipariş tarihi konsola yazar.
+Aşağıdaki örnekte, `OrdersByCustomer` etkinlik belirtilen müşteri için siparişlerin bir listesini alır ve ardından bir etkinlik döndürülen siparişleri numaralandırır ve her <xref:System.Activities.Statements.ForEach%601> bir siparişin tarihini konsola yazar.
 
 [!code-csharp[CFX_WCFDataServicesActivityExample#10](~/samples/snippets/csharp/VS_Snippets_CFX/CFX_WCFDataServicesActivityExample/cs/Program.cs#10)]
 
@@ -64,35 +64,35 @@ Calling WCF Data Service...
 ```
 
 > [!NOTE]
-> OData sunucusuna bağlantı kurulamıyorsa, şu özel durum için benzer bir özel durum alırsınız:
+> OData sunucusuyla bağlantı kurulamazsa, aşağıdaki özel duruma benzer bir özel durum alırsınız:
 >
-> İşlenmeyen özel durum: System.InvalidOperationException: Bu istek işlenirken bir hata oluştu. ---> System.Net.WebException: Uzak sunucuya bağlanılamıyor System.Net.Sockets.SocketException--->: Bağlı olan taraf doğru zaman ya da kurulan bağlantı bağlı konak yanıt başarısız olduğundan başarısız oldu. bir süre sonra yanıt vermediğinden bağlantı denemesi başarısız oldu.
+> İşlenmeyen özel durum: System. InvalidOperationException: Bu istek işlenirken bir hata oluştu. ---> System .net. WebException: > System .net. Sockets. SocketException---uzak sunucusuna bağlanılamıyor: Bağlı olan taraf bir süre sonra düzgün bir şekilde yanıt vermediği veya bağlı konak yanıt vermediği için bağlantı başarısız olduğu için bağlantı girişimi başarısız oldu.
 
-Sorgu tarafından döndürülen verilerin herhangi bir ek işlem gerekiyorsa, bu etkinliğin içinde yapılabilir <xref:System.Activities.AsyncCodeActivity%601.EndExecute%2A> geçersiz kılar. Her ikisi de <xref:System.Activities.AsyncCodeActivity%601.BeginExecute%2A> ve <xref:System.Activities.AsyncCodeActivity%601.EndExecute%2A> iş akışı iş parçacığı kullanılarak çağrılır ve bu geçersiz kılmaları herhangi bir kod zaman uyumsuz olarak çalışmaz. Kapsamlı veya uzun ömürlü ek işleme veya sorgu sonuçları disk belleğine alınan sorgu yürütmek ve gerçekleştirmek için bir temsilci kullanan sonraki bölümde tartışılacağı yaklaşım ek zaman uyumsuz olarak işleme düşünmelisiniz.
+Sorgu tarafından döndürülen verilerin herhangi bir ek işlemesi gerekliyse, etkinliğin <xref:System.Activities.AsyncCodeActivity%601.EndExecute%2A> geçersiz kılması üzerinde gerçekleştirilebilir. Her ikisi de <xref:System.Activities.AsyncCodeActivity%601.BeginExecute%2A> iş akışı iş parçacığı kullanılarak çağrılır ve bu geçersiz Kılmalarda bulunan tüm kodlar zaman uyumsuz olarak çalışmaz. <xref:System.Activities.AsyncCodeActivity%601.EndExecute%2A> Ek işlem kapsamlı veya uzun süre çalışıyorsa veya sorgu sonuçları disk belleğine alınerirse, sorguyu yürütmek ve zaman uyumsuz olarak ek işlem gerçekleştirmek için bir temsilci kullanan sonraki bölümde ele alınan yaklaşımı göz önünde bulundurmanız gerekir.
 
-### <a name="using-a-delegate"></a>Bir temsilcisi kullanma
+### <a name="using-a-delegate"></a>Temsilci kullanma
 
-Ek olarak, bir .NET Framework sınıfı zaman uyumsuz yöntemini çağıran bir <xref:System.Activities.AsyncCodeActivity>-tabanlı etkinliği de tanımlayabilirsiniz zaman uyumsuz mantık yöntemlerinden biri. Bu yöntem etkinlik içinde bir temsilci kullanarak belirtilen <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> geçersiz kılar. Yöntem döndürüldüğünde etkinliğin çalışma zamanı çağırır <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> geçersiz kılar. OData hizmetine bir iş akışından çağrılırken, bu yöntem hizmetini sorgulama ve herhangi bir ek işleme sağlamak için kullanılabilir.
+Bir .NET Framework sınıfın zaman uyumsuz yöntemini çağırmaya ek olarak, tabanlı bir <xref:System.Activities.AsyncCodeActivity>etkinlik, metotlarından birinde zaman uyumsuz mantığı da tanımlayabilir. Bu yöntem, etkinliğin <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> geçersiz kılması içinde bir temsilci kullanılarak belirtilir. Yöntem döndüğünde, çalışma zamanı etkinliğin <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> geçersiz kılmayı çağırır. Bir iş akışından OData hizmeti çağrılırken, bu yöntem hizmeti sorgulamak ve ek işleme sağlamak için kullanılabilir.
 
-Aşağıdaki örnekte, bir `ListCustomers` etkinlik tanımlanır. Bu etkinlik örnek Northwind verileri hizmeti sorgular ve döndüren bir `List<Customer>` Northwind veritabanındaki müşteriler içerir. Zaman uyumsuz işler tarafından gerçekleştirilen `GetCustomers` yöntemi. Bu yöntem, tüm müşteriler için hizmetini sorgular ve içine kopyalar bir `List<Customer>`. Ardından sonuçları disk belleği, görmek için denetler. Bu nedenle, bu hizmet için sonraki sonuç sayfasını sorgular, bunları listeye ekler ve tüm müşteri verileri alınamadı kadar devam eder.
-
-> [!NOTE]
-> Disk belleği WCF veri hizmetleri hakkında daha fazla bilgi için bkz: [nasıl yapılır: Sayfalanmış sonuçları (WCF Veri Hizmetleri) yükleme](../data/wcf/how-to-load-paged-results-wcf-data-services.md).
-
-Tüm müşterileri eklendikten sonra liste döndürülür. `GetCustomers` Yöntemi etkinliğin içinde belirtilen <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> geçersiz kılar. Yöntemin bir dönüş değeri olduğundan bir `Func<string, List<Customer>>` yöntemi belirtmek için oluşturulur.
+Aşağıdaki örnekte bir `ListCustomers` etkinlik tanımlanmıştır. Bu etkinlik, örnek Northwind veri hizmeti 'ni sorgular ve Northwind `List<Customer>` veritabanındaki tüm müşterileri içeren bir döndürür. Zaman uyumsuz iş `GetCustomers` yöntemi tarafından gerçekleştirilir. Bu yöntem, tüm müşteriler için hizmeti sorgular ve ardından bir ' a `List<Customer>`kopyalar. Sonra sonuçların disk belleğine alınmış olup olmadığını denetler. Bu durumda, bir sonraki sonuç sayfasında hizmeti sorgular, bunları listeye ekler ve tüm müşteri verileri alınana kadar devam eder.
 
 > [!NOTE]
-> Zaman uyumsuz işi gerçekleştiren yöntemin dönüş değeri, yoksa bir <xref:System.Action> yerine kullanılan bir <xref:System.Func%601>. Her iki yaklaşım kullanarak zaman uyumsuz örneği oluşturmayı örnekler için bkz. [zaman uyumsuz etkinlikler oluşturma](creating-asynchronous-activities-in-wf.md).
+> WCF veri Hizmetleri 'de sayfalama hakkında daha fazla bilgi için bkz [. nasıl yapılır: Disk belleğine alınmış sonuçları yükle (](../data/wcf/how-to-load-paged-results-wcf-data-services.md)WCF veri Hizmetleri).
 
-Bu <xref:System.Func%601> atandığı <xref:System.Activities.AsyncCodeActivityContext.UserState%2A>, ardından `BeginInvoke` çağrılır. Çağrılacak yöntemin bağımsız değişken değerini etkinliğin ortama erişimi olmadığından `ServiceUri` geri çağırma ve yöntemlere geçirilen durumu ile birlikte birinci parametre olarak geçirilen bağımsız değişken <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A>. Zaman `GetCustomers` döndürür, çalışma zamanı çağırır <xref:System.Activities.AsyncCodeActivity.EndExecute%2A>. Kodda <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> temsilciyi alır <xref:System.Activities.AsyncCodeActivityContext.UserState%2A>, çağrıları `EndInvoke`, müşterilerin listesidir sonuç döndürülmez döndürür `GetCustomers` yöntemi.
+Tüm müşteriler eklendikten sonra liste döndürülür. `GetCustomers` Yöntemi<xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> etkinliğin geçersiz kılmada belirtilir. Yöntemin bir dönüş değeri olduğundan, yöntemi belirtmek için `Func<string, List<Customer>>` bir oluşturulur.
+
+> [!NOTE]
+> Zaman uyumsuz çalışmayı gerçekleştiren yöntemin dönüş değeri yoksa, <xref:System.Action> yerine <xref:System.Func%601>bir kullanılır. Her iki yaklaşımı kullanarak zaman uyumsuz bir örnek oluşturma örnekleri için bkz. [zaman uyumsuz etkinlikler oluşturma](creating-asynchronous-activities-in-wf.md).
+
+Bu <xref:System.Func%601> `BeginInvoke` öğesine atanırveardındançağırılır.<xref:System.Activities.AsyncCodeActivityContext.UserState%2A> Çağrılacak yöntemin etkinliğin bağımsız değişken ortamına erişimi olmadığından, `ServiceUri` bağımsız değişkenin değeri ilk parametre olarak geçirilir ve geri çağırma ve durumuyla <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A>birlikte gönderilir. Döndüğünde, çalışma zamanı çağırır <xref:System.Activities.AsyncCodeActivity.EndExecute%2A>. `GetCustomers` İçindeki <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> kod, <xref:System.Activities.AsyncCodeActivityContext.UserState%2A>' dan temsilciyi alır, çağırır `EndInvoke`ve sonucu döndürür. Bu, `GetCustomers` yönteminden döndürülen müşterilerin listesidir.
 
 [!code-csharp[CFX_WCFDataServicesActivityExample#200](~/samples/snippets/csharp/VS_Snippets_CFX/CFX_WCFDataServicesActivityExample/cs/Program.cs#200)]
 
-Aşağıdaki örnekte, `ListCustomers` etkinlik, müşterilerin listesini alır ve ardından bir <xref:System.Activities.Statements.ForEach%601> etkinlik bunları numaralandırır ve her müşteri kişi adını ve şirket adı, konsola yazar.
+Aşağıdaki örnekte, `ListCustomers` etkinlik müşterilerin bir listesini alır ve bir <xref:System.Activities.Statements.ForEach%601> etkinlik bunları numaralandırır ve her müşterinin şirket adını ve ilgili kişi adını konsola yazar.
 
 [!code-csharp[CFX_WCFDataServicesActivityExample#20](~/samples/snippets/csharp/VS_Snippets_CFX/CFX_WCFDataServicesActivityExample/cs/Program.cs#20)]
 
-Bu iş akışı çağrıldığında, aşağıdaki veriler konsoluna yazılır. Bu sorgu, birçok müşteri döndürdüğünden, çıkış yalnızca bir kısmı burada görüntülenir.
+Bu iş akışı çağrıldığında, konsola aşağıdaki veriler yazılır. Bu sorgu birçok müşteri döndürdüğünden, burada çıktının yalnızca bir kısmı görüntülenir.
 
 ```console
 Calling WCF Data Service...
@@ -104,13 +104,13 @@ Berglunds snabbköp, Contact: Christina Berglund
 ...
 ```
 
-## <a name="consuming-an-odata-feed-without-using-the-client-libraries"></a>İstemci kitaplıkları kullanmadan kullanan bir OData akışı
+## <a name="consuming-an-odata-feed-without-using-the-client-libraries"></a>İstemci kitaplıklarını kullanmadan bir OData akışını kullanma
 
-OData veri tarafından bir URI'leri adreslenebilir kaynakları olarak kullanıma sunar. Kullandığınızda bu bir URI'leri sizin için oluşturulur istemci kitaplıkları, ancak istemci kitaplıklarını kullanmanız gerekmez. İsterseniz, OData hizmetlerini istemci kitaplıkları kullanmadan doğrudan erişilebilir. İstemci kitaplıkları kullanılmadığında hizmeti ve istenen veri konumunu belirtilen URI tarafından ve sonuçları HTTP isteğine yanıt olarak döndürülür. Bu ham verilerin işlenmesi veya istenen şekilde yönetilebilir. Bir OData sorgusu sonuçlarını almak için bir yol olan kullanarak <xref:System.Net.WebClient> sınıfı. Bu örnekte, ilgili kişi adı ALFKI anahtar tarafından temsil edilen müşteri için alınır.
+OData, verileri URI 'Ler tarafından adreslenebilir kaynaklar olarak kullanıma sunar. İstemci kitaplıklarını kullandığınızda bu URI 'Ler sizin için oluşturulur, ancak istemci kitaplıklarını kullanmak zorunda değilsiniz. İsterseniz, OData hizmetlerine istemci kitaplıkları kullanılmadan doğrudan erişilebilir. İstemci kitaplıklarını kullanmadığınız durumlarda hizmetin konumu ve istenen veriler URI tarafından belirtilir ve sonuçlar HTTP isteğine yanıt olarak döndürülür. Bu ham veriler daha sonra, istenen şekilde işlenebilir veya yönetilebilir. Bir OData sorgusunun sonuçlarını almanın bir yolu <xref:System.Net.WebClient> sınıfını kullanmaktır. Bu örnekte, anahtar ALFKI tarafından temsil edilen müşterinin iletişim adı alınır.
 
 [!code-csharp[CFX_WCFDataServicesActivityExample#2](~/samples/snippets/csharp/VS_Snippets_CFX/CFX_WCFDataServicesActivityExample/cs/Program.cs#2)]
 
-Bu kodu çalıştırdığınızda, aşağıdaki çıktıyı konsola görüntülenir:
+Bu kod çalıştırıldığında, konsola aşağıdaki çıktı görüntülenir:
 
 ```console
 Raw data returned:
@@ -118,15 +118,15 @@ Raw data returned:
 <ContactName xmlns="http://schemas.microsoft.com/ado/2007/08/dataservices">Maria Anders</ContactName>
 ```
 
-Bir iş akışında, bu örnekteki kod birleştirilir <xref:System.Activities.CodeActivity.Execute%2A> , geçersiz bir <xref:System.Activities.CodeActivity>-özel etkinlik tabanlı, ancak aynı işlevleri kullanılarak da gerçekleştirilebilir <xref:System.Activities.Expressions.InvokeMethod%601> etkinlik. <xref:System.Activities.Expressions.InvokeMethod%601> Etkinlik iş akışı yazarları statik çağırır ve yöntem bir sınıfın örneği sağlar ve ayrıca zaman uyumsuz olarak belirtilen yöntem çağırmak için bir seçenek vardır. Aşağıdaki örnekte, bir <xref:System.Activities.Expressions.InvokeMethod%601> etkinlik çağırmak için yapılandırılmış <xref:System.Net.WebClient.DownloadString%2A> yöntemi <xref:System.Net.WebClient> sınıfı ve müşterilerin listesini döndürür.
+Bir iş akışında, bu örnekteki kod, bir <xref:System.Activities.CodeActivity.Execute%2A> <xref:System.Activities.CodeActivity>tabanlı özel etkinliğin geçersiz kılması içine eklenebilir, ancak aynı işlevsellik <xref:System.Activities.Expressions.InvokeMethod%601> etkinlik kullanılarak da gerçekleştirilebilir. Etkinlik <xref:System.Activities.Expressions.InvokeMethod%601> , iş akışı yazarlarının bir sınıfın statik ve örnek yöntemlerini çağırmasına ve ayrıca belirtilen yöntemi zaman uyumsuz olarak çağırma seçeneğine sahiptir. Aşağıdaki örnekte, bir <xref:System.Activities.Expressions.InvokeMethod%601> etkinlik, <xref:System.Net.WebClient> sınıfının <xref:System.Net.WebClient.DownloadString%2A> yöntemini çağırmak ve müşterilerin bir listesini döndürmek için yapılandırılmıştır.
 
 [!code-csharp[CFX_WCFDataServicesActivityExample#3](~/samples/snippets/csharp/VS_Snippets_CFX/CFX_WCFDataServicesActivityExample/cs/Program.cs#3)]
 
-<xref:System.Activities.Expressions.InvokeMethod%601> statik çağırın ve yöntemleri bir sınıfın örneğini kullanabilirsiniz. Bu yana <xref:System.Net.WebClient.DownloadString%2A> bir örnek yöntemi <xref:System.Net.WebClient> sınıfının yeni bir örneğini <xref:System.Net.WebClient> sınıfı için belirtilen <xref:System.Activities.Expressions.InvokeMethod%601.TargetObject%2A>. `DownloadString` olarak belirtilirse <xref:System.Activities.Expressions.InvokeMethod%601.MethodName%2A>, sorgu içerir URI'yi belirtilen <xref:System.Activities.Expressions.InvokeMethod%601.Parameters%2A> koleksiyonu ve dönüş değeri atanır <xref:System.Activities.Activity%601.Result%2A> değeri. <xref:System.Activities.Expressions.InvokeMethod%601.RunAsynchronously%2A> Değeri ayarı `true`, yöntem çağırma iş akışı ile ilgili zaman uyumsuz olarak çalıştırılacak anlamına gelir. Aşağıdaki örnekte, bir iş akışı kullanan oluşturulur <xref:System.Activities.Expressions.InvokeMethod%601> örnek Northwind verileri sorgulamak için etkinlik hizmet belirli bir müşterinin siparişlerinin listesi için ve ardından döndürülen verileri konsoluna yazılır.
+<xref:System.Activities.Expressions.InvokeMethod%601>, bir sınıfın hem statik hem de örnek yöntemlerini çağırabilir. , Sınıfının bir örnek <xref:System.Net.WebClient> yöntemi <xref:System.Net.WebClient.DownloadString%2A> <xref:System.Net.WebClient> olduğundan, için <xref:System.Activities.Expressions.InvokeMethod%601.TargetObject%2A>sınıfının yeni bir örneği belirtilir. `DownloadString`olarak <xref:System.Activities.Expressions.InvokeMethod%601.MethodName%2A>belirtilirse, sorguyu içeren URI <xref:System.Activities.Expressions.InvokeMethod%601.Parameters%2A> koleksiyonda belirtilir ve dönüş <xref:System.Activities.Activity%601.Result%2A> değeri değere atanır. <xref:System.Activities.Expressions.InvokeMethod%601.RunAsynchronously%2A> Değer olarak`true`ayarlanır, bu da yöntem çağrısının iş akışıyla ilgili olarak zaman uyumsuz olarak çalışacağı anlamına gelir. Aşağıdaki örnekte, belirli bir müşterinin siparişlerinin listesi için örnek Northwind Data <xref:System.Activities.Expressions.InvokeMethod%601> Service 'i sorgulamak üzere etkinliğini kullanan bir iş akışı oluşturulur ve ardından döndürülen veriler konsola yazılır.
 
 [!code-csharp[CFX_WCFDataServicesActivityExample#1](~/samples/snippets/csharp/VS_Snippets_CFX/CFX_WCFDataServicesActivityExample/cs/Program.cs#1)]
 
-Bu iş akışı çağrıldığında, aşağıdaki çıktıyı konsola görüntülenir. Bu sorgu çalışanlarına döndürdüğünden, çıkış yalnızca bir kısmı burada görüntülenir.
+Bu iş akışı çağrıldığında, konsola aşağıdaki çıktı görüntülenir. Bu sorgu birkaç sipariş döndürdüğünden, burada çıktının yalnızca bir kısmı görüntülenir.
 
 ```console
 Calling WCF Data Service...
@@ -154,4 +154,4 @@ xmlns="http://www.w3.org/2005/Atom">
 ...
 ```
 
-Bu örnek, iş akışı uygulama yazarları bir OData hizmetten döndürülen ham veri tüketmek için kullanabileceğiniz bir yöntem sağlar. WCF veri URI'ler kullanarak hizmetlere erişme hakkında daha fazla bilgi için bkz. [veri hizmeti kaynaklarına erişme (WCF Data Services)](../data/wcf/accessing-data-service-resources-wcf-data-services.md) ve [OData: URI kurallarına](https://go.microsoft.com/fwlink/?LinkId=185564).
+Bu örnek, iş akışı uygulama yazarlarının bir OData hizmetinden döndürülen ham verileri tüketmek için kullanabileceği bir yöntem sağlar. URI 'ler kullanarak WCF veri Hizmetleri erişme hakkında daha fazla bilgi için bkz. [veri hizmeti kaynaklarına erişme (WCF veri Hizmetleri)](../data/wcf/accessing-data-service-resources-wcf-data-services.md) ve [OData: URI kuralları](https://go.microsoft.com/fwlink/?LinkId=185564).

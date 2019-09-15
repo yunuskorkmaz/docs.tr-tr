@@ -9,37 +9,37 @@ helpviewer_keywords:
 ms.assetid: 96d3b8e3-bef8-4da0-9a81-9841e23a94e9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7124b6b234601e3afc27109ac318f47e3fe40c35
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b4f0c2ad1290a7f9cf8d0c43c504a3e0a9628b86
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61675357"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971920"
 ---
 # <a name="programming-with-application-domains-and-assemblies"></a>Uygulama Etki Alanları ve Derlemelerle Programlama
-Microsoft Internet Explorer, ASP.NET ve Windows Kabuğu yük işleme, ortak dil çalışma zamanı gibi ana bilgisayarları oluşturma bir [uygulama etki alanı](../../../docs/framework/app-domains/application-domains.md) uygulamasındaki işlemek ve ardından yükleme ve bu uygulama etki alanında kullanıcı kodu yürütme bir .NET Framework uygulama çalışırken. Çoğu durumda, uygulama etki alanları oluşturma ve bunları çalışma zamanı ana bilgisayarı, bu görevleri gerçekleştirdiğinden derlemeleri yükleme hakkında endişelenmeniz gerekmez.  
+Microsoft Internet Explorer, ASP.NET ve Windows kabuğu gibi konaklar, ortak dil çalışma zamanını bir işleme yükler, bu işlemde bir [uygulama etki alanı](../../../docs/framework/app-domains/application-domains.md) oluşturur ve ardından bir .net çalıştırırken bu uygulama etki alanında Kullanıcı kodunu yükler ve yürütür Framework uygulaması. Çoğu durumda, çalışma zamanı ana bilgisayarı bu görevleri gerçekleştirdiğinden, uygulama etki alanları oluşturma ve bunlara derleme yükleme konusunda endişelenmeniz gerekmez.  
   
- Araçlar veya programlama yoluyla kaldırmak istediğiniz kod oluşturma veya kaldırılmış ve yeniden takılabilir bileşenleri hızla oluşturma, ortak dil çalışma zamanı barındıracak bir uygulama oluşturuyorsanız, ancak kendi oluşturacağınız uygulama etki alanları. Bir çalışma zamanı ana bilgisayarı oluşturmadığınızı olsa bile, bu bölümde uygulama etki alanları ve bu uygulama etki alanlarında yüklenen derlemeler ile nasıl çalışılacağı hakkında önemli bilgileri sağlar.  
+ Bununla birlikte, ortak dil çalışma zamanını barındıracak bir uygulama oluşturuyorsanız, programlı olarak kaldırmak istediğiniz araçları veya kodu oluşturun ya da bir yandan kaldırılabildiği ve yeniden yüklenebilir olan eklenebilir bileşenler oluşturun uygulama etki alanları. Çalışma zamanı ana bilgisayarı oluşturmasanız bile, bu bölümde bu uygulama etki alanlarında yüklü uygulama etki alanları ve Derlemeleriyle çalışma hakkında önemli bilgiler verilmektedir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Uygulama Etki Alanları ve Bütünleştirilmiş Kodlar için Nasıl Yapılır Konuları](../../../docs/framework/app-domains/application-domains-and-assemblies-how-to-topics.md)  
- Programlama uygulama etki alanları ve derlemeler için kavramsal belgelerde bulunan tüm nasıl yapılır konulara bağlantılar sağlar.  
+ Uygulama etki alanları ve Derlemeleriyle programlama için kavramsal belgelerde bulunan tüm nasıl yapılır konularına bağlantılar sağlar.  
   
  [Uygulama Etki Alanlarını Kullanma](../../../docs/framework/app-domains/use.md)  
- Oluşturma, yapılandırma ve uygulama etki alanları kullanılarak örnekler sağlar.  
+ Uygulama etki alanları oluşturma, yapılandırma ve kullanma örnekleri sunar.  
   
- [Bütünleştirilmiş Kodlarla Programlama](../../../docs/framework/app-domains/programming-with-assemblies.md)  
+ [Bütünleştirilmiş Kodlarla Programlama](../../standard/assembly/program.md)  
  Derlemelerde nasıl öznitelik oluşturacağınızı, işaretleyeceğinizi ve ayarlayacağınızı açıklar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [Dinamik Yöntemleri ve Derlemeleri Yayma](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)  
  Dinamik derlemelerin nasıl oluşturulduğunu açıklar.  
   
- [Ortak Dil Çalışma Zamanı Modülündeki Bütünleştirilmiş Kodlar](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
+ [.NET’te bütünleştirilmiş kodlar](../../standard/assembly/index.md)  
  Derlemeler üzerine kavramsal bir genel bakış sağlar.  
   
  [Uygulama Etki Alanları](../../../docs/framework/app-domains/application-domains.md)  
  Uygulama etki alanları üzerine kavramsal bir genel bakış sağlar.  
   
- [Yansıma genel bakış](../../../docs/framework/reflection-and-codedom/reflection.md)  
- Nasıl kullanılacağını açıklar **yansıma** derleme hakkında bilgi edinmek için sınıf.
+ [Yansımaya genel bakış](../../../docs/framework/reflection-and-codedom/reflection.md)  
+ Bir derleme hakkında bilgi almak için **yansıma** sınıfının nasıl kullanılacağını açıklar.

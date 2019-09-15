@@ -2,75 +2,75 @@
 title: "Nasıl yapılır: AJAX Etkinleştirilmiş ASP.NET Web Hizmetlerini WCF'ye Taşıma"
 ms.date: 03/30/2017
 ms.assetid: 1428df4d-b18f-4e6d-bd4d-79ab3dd5147c
-ms.openlocfilehash: 1650ba6a12a9e81ff398e66a96ee2c70592f2428
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f492efe9e364195dce6b73a14e9ca5fa34a6df25
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64643684"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70972298"
 ---
 # <a name="how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf"></a>Nasıl yapılır: AJAX Etkinleştirilmiş ASP.NET Web Hizmetlerini WCF'ye Taşıma
-Bu konu, temel bir ASP.NET AJAX hizmeti eşdeğer bir AJAX etkinleştirilmiş Windows Communication Foundation (WCF) hizmetine geçirme yordamları özetler. Bu, bir ASP.NET AJAX Hizmeti işlevsel olarak eşdeğer bir WCF sürümü oluşturma işlemini gösterir. İki hizmeti daha sonra bir yan yana kullanılabilir veya WCF hizmetini ASP.NET AJAX hizmeti değiştirmek için kullanılabilir.
+Bu konuda, temel bir ASP.NET AJAX hizmetini eşdeğer bir AJAX özellikli Windows Communication Foundation (WCF) hizmetine geçirme yordamları özetlenmektedir. Bir ASP.NET AJAX hizmetinin işlevsel WCF sürümünün nasıl oluşturulacağını gösterir. İki hizmet daha sonra yan yana kullanılabilir veya WCF hizmeti ASP.NET AJAX hizmetini değiştirmek için kullanılabilir.
 
- Mevcut bir ASP.NET AJAX geçiş hizmetine bir WCF AJAX hizmeti aşağıdaki faydaları sağlar:
+ Mevcut bir ASP.NET AJAX hizmetini bir WCF AJAX hizmetine geçirmek aşağıdaki avantajları sağlar:
 
-- AJAX hizmetinizi en az bir ek yapılandırma ile bir SOAP hizmet olarak kullanıma sunabilirsiniz.
+- AJAX hizmetinizi, en az ek yapılandırmaya sahip bir SOAP hizmeti olarak kullanıma sunabilirsiniz.
 
-- WCF izleme gibi özelliklerinden yararlanmak ve benzeri.
+- İzleme gibi WCF özelliklerinden faydalanabilirsiniz.
 
- Aşağıdaki yordamlar, Visual Studio 2012 kullandığınızı varsayar.
+ Aşağıdaki yordamlarda, Visual Studio 2012 kullandığınızı varsayalım.
 
- Bu konu başlığında açıklanan yordamları oluşur kodu prosedürleri izliyorsanız örnekte sağlanır.
+ Bu konuda özetlenen yordamlardan kaynaklanan kod, yordamları izleyen örnekte verilmiştir.
 
- WCF hizmet AJAX etkinleştirilmiş bir uç nokta aracılığıyla kullanıma sunma hakkında daha fazla bilgi için bkz. [nasıl yapılır: ASP.NET AJAX uç noktası eklemek için yapılandırma kullanma](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md) konu.
+ Bir WCF hizmetini Ajax özellikli bir uç nokta aracılığıyla gösterme hakkında daha fazla bilgi için bkz [. nasıl yapılır: ASP.NET AJAX uç noktası](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md) konu başlığı eklemek için yapılandırma kullanın.
 
-### <a name="to-create-and-test-the-aspnet-web-service-application"></a>Oluşturma ve ASP.NET Web hizmeti uygulamasını test etmek için
+### <a name="to-create-and-test-the-aspnet-web-service-application"></a>ASP.NET Web hizmeti uygulamasını oluşturmak ve test etmek için
 
-1. Visual Studio 2012'yi açın.
+1. Visual Studio 2012 ' i açın.
 
-2. Gelen **dosya** menüsünde **yeni**, ardından **proje**, ardından **Web**ve ardından **ASP.NET Web hizmeti uygulaması** .
+2. **Dosya** menüsünde **Yeni**' yi ve ardından **Proje**' yi seçin ve ardından **ASP.NET Web hizmeti uygulaması** **' nı seçin**.
 
-3. Projeyi adlandırın `ASPHello` tıklatıp **Tamam**.
+3. Projeyi `ASPHello` adlandırın ve **Tamam**' a tıklayın.
 
-4. Service1.asmx.cs dosyasındaki içeren satırı açıklamadan çıkarın `System.Web.Script.Services.ScriptService]` bu hizmet için AJAX etkinleştirmek için.
+4. Bu hizmet için AJAX 'ı etkinleştirmek üzere içeren `System.Web.Script.Services.ScriptService]` Service1.asmx.cs dosyasındaki satırın açıklamasını kaldırın.
 
-5. Gelen **derleme** menüsünde **Çözümü Derle**.
+5. **Build** menüsünde **Build Solution**' ı seçin.
 
-6. Gelen **hata ayıklama** menüsünde **hata ayıklama olmadan Başlat**.
+6. **Hata Ayıkla** menüsünden **hata ayıklama olmadan Başlat**' ı seçin.
 
-7. Oluşturulan Web sayfası üzerinde seçmek `HelloWorld` işlemi.
+7. Oluşturulan Web sayfasında `HelloWorld` işlemi seçin.
 
-8. Tıklayın **Invoke** düğmesini `HelloWorld` test sayfası. Aşağıdaki XML yanıtı almanız gerekir.
+8. `HelloWorld` Test sayfasındaki **çağır** düğmesine tıklayın. Aşağıdaki XML yanıtını almalısınız.
 
     ```xml
     <?xml version="1.0" encoding="utf-8" ?>
     <string xmlns="http://tempuri.org/">Hello World</string>
     ```
 
-9. Bu yanıt artık çalışan bir ASP.NET AJAX hizmeti olan ve özellikle hizmet, bir uç noktada yanıt için HTTP POST Service1.asmx/HelloWorld artık kullanıma ve istekleri XML döndürür, onaylar.
+9. Bu yanıt artık çalışan bir ASP.NET AJAX hizmetine sahip olduğunuza ve özellikle de hizmetin, HTTP POST isteklerine yanıt veren ve XML döndüren Service1. asmx/HelloWorld yolunda bir uç nokta açığa çıkardığına onaylar.
 
-     Bir WCF AJAX hizmeti kullanmak için bu hizmetin dönüştürmek hazırsınız.
+     Artık bu hizmeti bir WCF AJAX hizmeti kullanmak üzere dönüştürmeye hazırsınız.
 
-### <a name="to-create-an-equivalent-wcf-ajax-service-application"></a>Eşdeğer bir AJAX WCF hizmet uygulaması oluşturmak için
+### <a name="to-create-an-equivalent-wcf-ajax-service-application"></a>Eşdeğer bir WCF AJAX hizmet uygulaması oluşturmak için
 
-1. Sağ **ASPHello** seçin ve proje **Ekle**, ardından **yeni öğe**, ardından **AJAX özellikli bir WCF Hizmeti**.
+1. **ASPHello** projesine sağ tıklayın ve **Ekle**, **Yeni öğe**ve ardından **AJAX etkin WCF hizmeti**' ni seçin.
 
-2. Hizmet adı `WCFHello` tıklatıp **Ekle**.
+2. Hizmeti `WCFHello` adlandırın ve **Ekle**' ye tıklayın.
 
 3. WCFHello.svc.cs dosyasını açın.
 
-4. Aşağıdaki uygulamasını service1.asmx.cs kopyalayın `HelloWorld` işlemi.
+4. Service1.asmx.cs 'den, `HelloWorld` işlemin aşağıdaki uygulamasını kopyalayın.
 
-    ```
+    ```csharp
     public string HelloWorld()
     {
          return "Hello World";
     }
     ```
 
-5. Kopyalanan uygulaması Yapıştır `HelloWorld` WCFHello.svc.cs dosyasına aşağıdaki kodu yerine işlemi.
+5. `HelloWorld` İşlemin kopyalanmış uygulamasına aşağıdaki kodun yerine WCFHello.svc.cs dosyasına yapıştırın.
 
-    ```
+    ```csharp
     public void DoWork()
     {
           // Add your operation implementation here
@@ -78,18 +78,18 @@ Bu konu, temel bir ASP.NET AJAX hizmeti eşdeğer bir AJAX etkinleştirilmiş Wi
     }
     ```
 
-6. Belirtin `Namespace` özniteliğini <xref:System.ServiceModel.ServiceContractAttribute> olarak `WCFHello`.
+6. `Namespace` İçin<xref:System.ServiceModel.ServiceContractAttribute>özniteliğini belirtin .`WCFHello`
 
-    ```
+    ```csharp
     [ServiceContract(Namespace="WCFHello")]
     [AspNetCompatibilityRequirements(RequirementsMode=AspNetCompatibilityRequirementsMode.Required)]
     public class WCFHello
     { … }
     ```
 
-7. Ekleme <xref:System.ServiceModel.Web.WebInvokeAttribute> için `HelloWorld` işlemi ve kümesi <xref:System.ServiceModel.Web.WebInvokeAttribute.ResponseFormat%2A> dönmesini <xref:System.ServiceModel.Web.WebMessageFormat.Xml>. Ayarlanırsa, dönüş türü varsayılan değilse unutmayın <xref:System.ServiceModel.Web.WebMessageFormat.Json>.
+7. Öğesini işleme ekleyin <xref:System.ServiceModel.Web.WebInvokeAttribute.ResponseFormat%2A> ve özelliği döndürecek<xref:System.ServiceModel.Web.WebMessageFormat.Xml>şekildeayarlayın. <xref:System.ServiceModel.Web.WebInvokeAttribute> `HelloWorld` Ayarlanmamışsa, varsayılan dönüş türünün olduğunu <xref:System.ServiceModel.Web.WebMessageFormat.Json>unutmayın.
 
-    ```
+    ```csharp
     [OperationContract]
     [WebInvoke(ResponseFormat=WebMessageFormat.Xml)]
     public string HelloWorld()
@@ -98,20 +98,20 @@ Bu konu, temel bir ASP.NET AJAX hizmeti eşdeğer bir AJAX etkinleştirilmiş Wi
     }
     ```
 
-8. Gelen **derleme** menüsünde **Çözümü Derle**.
+8. **Build** menüsünde **Build Solution**' ı seçin.
 
-9. WCFHello.svc dosyasını açın ve **hata ayıklama** menüsünde **hata ayıklama olmadan Başlat**.
+9. WCFHello. svc dosyasını açın ve **Hata Ayıkla** menüsünden **hata ayıklama olmadan Başlat**' ı seçin.
 
-10. Hizmet artık bir uç noktada kullanıma sunan `WCFHello.svc/HelloWorld`, HTTP POST istekleri için yanıt verir. Tarayıcısından HTTP POST istekleri sınanamıyor ancak uç noktası aşağıdaki XML XML döndürür.
+10. Hizmet artık http post isteklerine yanıt veren `WCFHello.svc/HelloWorld`' de bir uç nokta kullanıma sunuyor. HTTP POST istekleri tarayıcıdan test edilemez, ancak uç nokta XML 'den sonraki XML 'yi döndürüyor.
 
     ```xml
     <string xmlns="http://schemas.microsoft.com/2003/10/Serialization/">Hello World</string>
     ```
 
-11. `WCFHello.svc/HelloWorld` Ve `Service1.aspx/HelloWorld` noktalarıdır artık eşdeğer işleve sahiptir.
+11. `WCFHello.svc/HelloWorld` Veuçnoktalar`Service1.aspx/HelloWorld` artık işlevsel olarak eşdeğerdir.
 
 ## <a name="example"></a>Örnek
- Bu konu başlığında açıklanan yordamları oluşur kodu, aşağıdaki örnekte sağlanır.
+ Bu konuda özetlenen yordamlardan kaynaklanan kod aşağıdaki örnekte verilmiştir.
 
 ```csharp
 //This is the ASP.NET code in the Service1.asmx.cs file.
@@ -175,42 +175,42 @@ namespace ASPHello
 }
 ```
 
- <xref:System.Xml.XmlDocument> Türü tarafından desteklenmiyor <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> tarafından seri hale getirilebilir olmadığından <xref:System.Xml.Serialization.XmlSerializer>. Kullanabilirsiniz bir <xref:System.Xml.Linq.XDocument> yazın veya serileştirmek <xref:System.Xml.XmlDocument.DocumentElement%2A> yerine.
+ <xref:System.Xml.XmlDocument> Türü <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> , tarafından<xref:System.Xml.Serialization.XmlSerializer>seri hale getirilmediğinden tarafından desteklenmez. Bir <xref:System.Xml.Linq.XDocument> tür kullanabilir veya <xref:System.Xml.XmlDocument.DocumentElement%2A> bunun yerine seri hale getirebilirsiniz.
 
- ASMX Web Hizmetleri yükseltilmekte olan ve WCF hizmetleri için yan yana geçişi, iki tür istemci üzerinde aynı ad eşleme kaçının. Aynı tür kullanılırsa bu bir özel durum seri hale getiricileri genişletme içinde neden bir <xref:System.Web.Services.WebMethodAttribute> ve <xref:System.ServiceModel.ServiceContractAttribute>:
+ ASMX Web Hizmetleri yükseltilmekte ve yan yana WCF hizmetlerine geçiriliyorsa, iki türü istemcide aynı ada eşlemektan kaçının. Bu, bir <xref:System.Web.Services.WebMethodAttribute> <xref:System.ServiceModel.ServiceContractAttribute>ve ' de aynı tür kullanılıyorsa serileştiricde bir özel duruma neden olur:
 
-- WCF Hizmeti önce eklediyseniz, özel durum ASMX Web hizmeti yönteminin çağrılması neden <xref:System.Web.UI.ObjectConverter.ConvertValue%28System.Object%2CSystem.Type%2CSystem.String%29> proxy sırayla WCF stil tanımını öncelikli olduğundan.
+- İlk olarak WCF hizmeti eklenirse, Web hizmetindeki sıranın WCF stil tanımı öncelikli <xref:System.Web.UI.ObjectConverter.ConvertValue%28System.Object%2CSystem.Type%2CSystem.String%29> olduğundan asmx Web hizmeti üzerindeki yöntemi çağırmak özel duruma neden olur.
 
-- ASMX Web hizmeti önce eklediyseniz, WCF Hizmeti metodu çağrılırken özel durum neden <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> proxy sırayla Web hizmeti stil tanımını öncelikli olduğundan.
+- Önce asmx Web hizmeti eklenirse, WCF hizmetinde çağırma yöntemi ' de <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> özel durum oluşmasına neden olur çünkü proxy 'deki sıranın Web hizmeti stil tanımı öncelik kazanır.
 
- Davranış önemli farklılıkları vardır <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> ve ASP.NET AJAX <xref:System.Web.Script.Serialization.JavaScriptSerializer>. Örneğin, <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> bir sözlük ise anahtar/değer çiftleri dizisi olarak temsil eden ASP.NET AJAX <xref:System.Web.Script.Serialization.JavaScriptSerializer> bir sözlük gerçek bir JSON nesnesi temsil eder. ASP.NET AJAX içinde gösterilen sözlüğe aşağıdaki nedenle.
+ <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> Ve ASP.NET AJAX <xref:System.Web.Script.Serialization.JavaScriptSerializer>arasındaki davranışta önemli farklılıklar vardır. Örneğin <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> , bir sözlüğü anahtar/değer çiftleri dizisi olarak temsil ederken, ASP.NET AJAX <xref:System.Web.Script.Serialization.JavaScriptSerializer> bir sözlüğü gerçek JSON nesneleri olarak temsil eder. Bu nedenle, ASP.NET AJAX içinde temsil edilen sözlük aşağıda verilmiştir.
 
-```
+```csharp
 Dictionary<string, int> d = new Dictionary<string, int>();
 d.Add("one", 1);
 d.Add("two", 2);
 ```
 
- Bu sözlük, aşağıdaki listede gösterildiği gibi JSON nesnesi temsil edilir:
+ Bu sözlük, aşağıdaki listede gösterildiği gibi JSON nesnelerinde temsil edilir:
 
-- [{"Key": "Bir", "Value": 1}, {"Key": "İki", "Value": 2}] olarak <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>
+- [{"Key": "One", "Value": 1}, {"Key": "iki", "Value": 2}],<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>
 
-- {"bir": 1 "iki": 2} ASP.NET AJAX ile <xref:System.Web.Script.Serialization.JavaScriptSerializer>
+- {"One": 1, "iki": 2} ASP.NET AJAX tarafından<xref:System.Web.Script.Serialization.JavaScriptSerializer>
 
- <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> , Anahtar türü dizesi olduğu sözlükleri işleyebilir anlamda daha güçlüdür ancak <xref:System.Web.Script.Serialization.JavaScriptSerializer> olamaz. Ancak, daha kolay JSON ikincisidir.
+ , <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> Anahtar türünün dize olmadığı, <xref:System.Web.Script.Serialization.JavaScriptSerializer> ancak işleyememesi durumunda sözlüklerin işleyebileceği anlamda daha güçlüdür. Ancak ikincisi JSON kullanımı daha fazla.
 
- Bu seri hale getiricileri genişletme arasında önemli farklılıklar aşağıdaki tabloda özetlenmiştir.
+ Bu serileştiriciler arasındaki önemli farklılıklar aşağıdaki tabloda özetlenmiştir.
 
 |Farklar kategorisi|DataContractJsonSerializer|ASP.NET AJAX JavaScriptSerializer|
 |-----------------------------|--------------------------------|---------------------------------------|
-|Boş arabellek seri durumdan çıkarılırken (içine yeni byte[0]) <xref:System.Object> (veya <xref:System.Uri>, ya da diğer bazı sınıflar).|SerializationException|null|
-|Serileştirme <xref:System.DBNull.Value>|{} (veya {"__type": "#System"})|Null|
-|Özel üyelerin [Serializable] türlerin seri hale getirme.|seri hale getirilmiş|Serileştirilmiş değil|
-|Genel özellikleri serileştirmek <xref:System.Runtime.Serialization.ISerializable> türleri.|Serileştirilmiş değil|seri hale getirilmiş|
-|JSON "uzantıları"|Üye adlarının nesne tekliflerinde gerektirir JSON belirtimi için uyar ({"a": "hello"}).|Nesne üyeleri ({y: "hello"}) tırnak işaretleri olmadan adlarını destekler.|
-|<xref:System.DateTime> Eşgüdümlü Evrensel Saat (UTC)|Biçimini desteklemiyor "\\/Date(123456789U)\\/" veya "\\/tarih\\(\d+ (U&#124;(\\+\\-[\d{4}]))?\\) \\\\/)".|Destekler biçim "\\/Date(123456789U)\\/" ve "\\/tarih\\(\d+ (U&#124;(\\+\\-[\d{4}]))?\\) \\ \\/) "olarak DateTime değerleri.|
-|Sözlükler temsili|Bir dizi KeyValuePair\<K, V >, dize olmayan anahtar türünü işler.|Gerçek JSON nesneleri - ancak dizelerdir yalnızca tanıtıcıları anahtar türleri.|
-|Kaçan karakter|Her zaman bir kaçış ile eğik çizgi (/); ilet hiçbir zaman "\n" gibi kaçılmamış geçersiz JSON karaktere izin verilir.|Eğik çizgi (/) DateTime değerleri için bir kaçış ile iletin.|
+|Boş arabellek (yeni bayt [0]) içinde <xref:System.Object> (veya <xref:System.Uri>başka bir sınıfa) seri durumdan çıkarılamadı.|SerializationException|null|
+|Serileştirme<xref:System.DBNull.Value>|{}(veya {"__type": "#System"})|Null|
+|[Serializable] türlerinin özel üyelerinin serileştirilmesi.|metodu|serileştirilmedi|
+|<xref:System.Runtime.Serialization.ISerializable> Türlerin ortak özelliklerinin serileştirilmesi.|serileştirilmedi|metodu|
+|JSON "Extensions"|Nesne üye adlarında tırnak işareti gerektiren JSON belirtimine uyar ({"a": "Hello"}).|Tırnak işaretleri olmadan nesne üyelerinin adlarını destekler ({a: "Hello"}).|
+|<xref:System.DateTime>Eşgüdümlü Evrensel Saat (UTC)|\\"\\/Date (123456789U)&#124;\\\\\\/" veya "\\/Date (\d + (U (+\\-[\d{4}])) biçimini desteklemez mi?) \\\\/)".|\\"\\/Date (123456789U)&#124;\\\\\\/" ve "\\/Date (\d + (U (+\\-[\d{4}])) biçimini destekler mi?) \\ /)"\\değerini DateTime değerleri olarak.|
+|Sözlüklerin temsili|Bir KeyValuePair\<K, V > dizisi, dizeler olmayan anahtar türlerini işler.|Gerçek JSON nesneleri olarak-ancak yalnızca dizeler olan anahtar türlerini işler.|
+|Kaçan karakterler|Her zaman kaçış eğik çizgiyle (/); "\n" gibi, kaçırılmamış geçersiz JSON karakterlerinin hiçbir şekilde yapılmasına izin vermez.|Tarih/saat değerleri için çıkış ileri eğik çizgi (/) ile.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - dependency objects [WPF], constructor patterns
 - FXCop tool [WPF]
 ms.assetid: f704b81c-449a-47a4-ace1-9332e3cc6d60
-ms.openlocfilehash: 9dffe06d340c7256ba8af687e30d90d51746ebe1
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: fce17979fbd43df0496f972cac525fd79dcbfe32
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364239"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991816"
 ---
 # <a name="safe-constructor-patterns-for-dependencyobjects"></a>DependencyObjects için Güvenli Oluşturucu Desenleri
 Genellikle, sınıf oluşturucular, türetilmiş bir sınıf için oluşturucuların temel başlatması olarak çağrılabilmesi için sanal yöntemler veya temsilciler gibi geri çağırmaları çağırmamalıdır. Sanal alanının girilmesi, belirli bir nesnenin tamamlanmamış bir başlatma durumunda yapılabilir. Ancak, özellik sistemi, bağımlılık özellik sisteminin bir parçası olarak, geri çağırmaları dahili olarak çağırır ve kullanıma sunar. Tek bir işlem, çağrı ile <xref:System.Windows.DependencyObject.SetValue%2A> bağımlılık özelliği değerini ayarlamaya yönelik bir işlemin büyük olasılıkla, belirlemenin bir yerinde geri çağırma içermesi. Bu nedenle, türü temel sınıf olarak kullanılıyorsa sorunlu olabilecek bir oluşturucunun gövdesinde bağımlılık özelliği değerlerini ayarlarken dikkatli olmanız gerekir. Bağımlılık özelliği durumlarıyla ilgili belirli sorunları ve <xref:System.Windows.DependencyObject> burada belgelenen devralınan geri çağırmaları engelleyen oluşturucular uygulamak için belirli bir model vardır.  
@@ -35,7 +35,7 @@ Genellikle, sınıf oluşturucular, türetilmiş bir sınıf için oluşturucula
   
  Aşağıdaki örnek kod (ve sonraki örnekler), bu kuralı ihlal edenC# ve sorunu açıklayan bir sözde örnektir:  
   
-```  
+```csharp  
 public class MyClass : DependencyObject  
 {  
     public MyClass() {}  
@@ -71,7 +71,7 @@ public class MyClass : DependencyObject
 #### <a name="parameterless-constructors-calling-base-initialization"></a>Temel başlatmayı çağıran parametresiz oluşturucular  
  Temel varsayılanı çağıran bu oluşturucuları Uygula:  
   
-```  
+```csharp  
 public MyClass : SomeBaseClass {  
     public MyClass() : base() {  
         // ALL class initialization, including initial defaults for   
@@ -83,7 +83,7 @@ public MyClass : SomeBaseClass {
 #### <a name="non-default-convenience-constructors-not-matching-any-base-signatures"></a>Hiçbir temel imzayı eşleştirmeyen varsayılan olmayan (kolay) oluşturucular  
  Bu oluşturucular başlatma içindeki bağımlılık özelliklerini ayarlamak için parametreleri kullanıyorsa, önce başlatma için kendi sınıf parametresiz oluşturucuyu çağırın ve ardından bağımlılık özelliklerini ayarlamak için parametreleri kullanın. Bunlar, sınıfınız tarafından tanımlanan bağımlılık özellikleri ya da temel sınıflardan devralınan bağımlılık özellikleridir, ancak her iki durumda da aşağıdaki kalıbı kullanır:  
   
-```  
+```csharp  
 public MyClass : SomeBaseClass {  
     public MyClass(object toSetProperty1) : this() {  
         // Class initialization NOT done by default.  

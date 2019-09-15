@@ -2,50 +2,50 @@
 title: ConfigurationCodeGenerator
 ms.date: 03/30/2017
 ms.assetid: 3913aae8-165f-4014-9262-7fe426f90cb2
-ms.openlocfilehash: a01300024f89a0a189045d80622121f7db739a39
-ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.openlocfilehash: f12fae48f1cee198aac22e6f09e616b407b4e9b5
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64912404"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70990059"
 ---
 # <a name="configurationcodegenerator"></a>ConfigurationCodeGenerator
-ConfigurationCodeGenerator yapılandırma sistemi için özel kanal uygulamaları göstermek için kullanabileceğiniz bir araçtır. Bu, kanalınızı yalnızca bunlar sistem tarafından sağlanan gibi bağlama yapılandırırsınız .config dosyasını kullanarak yapılandırmak, kullanıcıların, özel bir kanal sağlar `NetTcpBinding` veya özel bir bağlama kullanarak `TcpTransportBindingElement`.  
+ConfigurationCodeGenerator, özel kanal uygulamalarınızı yapılandırma sistemine sunmak için kullanabileceğiniz bir araçtır. Bu, özel kanalınızın kullanıcılarının, `NetTcpBinding` `TcpTransportBindingElement`veya kullanarak özel bir bağlama gibi sistem tarafından sağlanmış bir bağlamayı yapılandırdıkları gibi bir. config dosyası kullanarak kanalınızı yapılandırmasına olanak sağlar.  
   
- Ne zaman özel bir kanalda yazma ve bunu yeni bir kullanarak programlama modeli için kullanıma `BindingElement` veya `Binding`, yapmak için sınıf kümesi oluşturmalısınız `BindingElement` veya `Binding` .config dosyası kullanılarak yapılandırılabilir. Bu sınıfları oluşturmak ve müşteri deneyimini geliştirmek için ConfigurationCodeGenerator Aracı'nı kullanabilirsiniz.  
+ Bir özel kanal yazdığınızda `BindingElement` ve bunu yeni bir veya `Binding`kullanarak programlama modelinde kullanıma sundığınızda, bir. config dosyası kullanarak `BindingElement` veya `Binding` yapılandırılabilir hale getirmek için bir sınıf kümesi oluşturmanız gerekir. Bu sınıfları oluşturmak ve müşterinizin deneyimini geliştirmek için ConfigurationCodeGenerator aracını kullanabilirsiniz.  
   
-### <a name="to-build-the-tool"></a>Aracı yapılandırmak için  
+### <a name="to-build-the-tool"></a>Aracı oluşturmak için  
   
-1. Çözümü derlemek için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+1. Çözümü derlemek için [Windows Communication Foundation örnekleri oluşturma](../../../../docs/framework/wcf/samples/building-the-samples.md)bölümündeki yönergeleri izleyin.  
   
-2. Çözümü derledikten bir dosya oluşturur: ConfigurationCodeGenerator.exe. ' % S'dosyası SampleRun.cmd sınıfları oluşturmak için bu aracı kullanmayı gösteren bir örnek komut satırı sahip [taşıma: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) örnek.  
+2. Çözümün oluşturulması bir dosya oluşturur: ConfigurationCodeGenerator. exe. SampleRun. cmd dosyası, bu aracın [taşıma için sınıfları oluşturmak üzere nasıl kullanılacağını gösteren örnek bir komut satırına sahiptir: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) örneği.  
   
 ### <a name="to-run-the-tool"></a>Aracı çalıştırmak için  
   
-1. Komut isteminde aşağıdaki komutu yazın, bu iki özel varsa `BindingElement` türünü ve özel bir `Binding` türü:  
+1. Komut isteminde, hem özel `BindingElement` bir tür hem de özel `Binding` bir tür varsa aşağıdakini yazın:  
   
-    ```  
+    ```console  
     ConfigurationCodeGenerator.exe /be:YourCustomBindingElementTypeName /sb:YourCustomStdBindingTypeName /dll:TheAssemblyWhereTheseTypesAreDefined  
     ```  
   
-     Veya yalnızca özel varsa aşağıdaki komutu yazın `BindingElement` türü:  
+     Ya da yalnızca özel `BindingElement` bir tür varsa şunları yazın:  
   
-    ```  
+    ```console  
     ConfigurationCodeGenerator.exe /be:YourCustomBindingElementTypeName /dll: TheAssemblyWhereThisTypeIsDefined  
     ```  
   
-     Veya yalnızca özel varsa aşağıdaki komutu yazın `Binding` türü:  
+     Ya da yalnızca özel `Binding` bir tür varsa şunları yazın:  
   
-    ```  
+    ```console  
     ConfigurationCodeGenerator.exe /sb:YourCustomStdBindingTypeName /dll:TheAssemblyWhereThisTypeIsDefined  
     ```  
   
-     Komut için üç .cs dosyası üretir `BindingElement` (belirttiyseniz / olması: seçeneği), standart için beş .cs dosya `Binding` (/sb belirtilmişse: seçeneği) ve bir .xml dosyası.  
+     Komut için `BindingElement` üç. cs dosyası (/be: Option belirttiyseniz), standart `Binding` için beş. cs dosyası (/SB: Option belirttiyseniz) ve bir. xml dosyası oluşturur.  
   
-    1. .cs birini uygular, /be seçeneğini kullandıysanız, dosyaları `BindingElementExtensionSection` , bağlama öğesi için. Bu kod kullanıma sunar, `BindingElement` yapılandırma sistemi için özel diğer bağlamalar, bağlama öğesi kullanabilirsiniz. Diğer dosyalar Varsayılanları ve sabitleri temsil eden sınıfları içerir. Dosyalarınız `//TODO` , varsayılan değerleri güncelleştirmek için hatırlatmak için açıklama.  
+    1. /İn seçeneğini kullandıysanız,. cs dosyalarından biri bağlama öğesi `BindingElementExtensionSection` için öğesini uygular. Bu kod, diğer `BindingElement` özel Bağlamalarınızın bağlama öğesini kullanabilmesi için yapılandırma sistemine bunu gösterir. Diğer dosyalarda varsayılanlar ve sabitleri temsil eden sınıflar vardır. Dosyalar, varsayılan `//TODO` değerleri güncelleştirmenizi hatırlatmak için yorumlardır.  
   
-    2. /Sb seçeneğini belirttiyseniz, iki .cs dosyaların uygulayan bir `StandardBindingElement` ve `StandardBindingCollectionElement` sırasıyla, yapılandırma sistemi, standart bağlamayı gösterir. Diğer dosyalar Varsayılanları ve sabitleri temsil eden sınıfları içerir. Dosyalarınız `//TODO` , varsayılan değerleri güncelleştirmek için hatırlatmak için açıklama.  
+    2. /SB seçeneğini belirlediyseniz,. cs dosyalarından ikisi `StandardBindingElement` `StandardBindingCollectionElement` sırasıyla bir ve, yapılandırma sistemine standart bağlamayı sunan bir ve uygular. Diğer dosyalarda varsayılanlar ve sabitleri temsil eden sınıflar vardır. Dosyalar, varsayılan `//TODO` değerleri güncelleştirmenizi hatırlatmak için yorumlardır.  
   
-         /Sb belirtilmişse: CodeToAddTo seçeneği\<*YourStdBinding*> .cs standart bağlamanız uygulayan bir sınıf içinde el ile eklemelisiniz koduna sahip.  
+         /SB: seçeneğini belirlediyseniz, CodeToAddTo\<. >. cs, standart bağlamayı uygulayan sınıfa el ile eklemeniz gereken bir kod içerir.  
   
-     SampleConfig.xml dosya önceki adımda 1 veya 2 tanımlı işleyicileri kaydeden yapılandırma dosyasına eklemeniz gereken yapılandırma kodunu içerir.  
+     SampleConfig. xml dosyası, önceki 1 veya 2. adımda tanımlanan işleyicileri kaydeden yapılandırma dosyasına eklemeniz gereken yapılandırma kodunu içerir.  

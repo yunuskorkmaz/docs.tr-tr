@@ -2,12 +2,12 @@
 title: 'Nasıl yapılır: Dinamik Güncelleştirme'
 ms.date: 03/30/2017
 ms.assetid: 9b8f6e0d-edab-4a7e-86e3-8c66bebc64bb
-ms.openlocfilehash: 3c651bc4ff23b2534e81f190fc8b63771c7587d6
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0a103e980d0d1be08f3ae6850c6af64405582c7b
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69911151"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70972084"
 ---
 # <a name="how-to-dynamic-update"></a>Nasıl yapılır: Dinamik Güncelleştirme
 Bu konuda, yönlendirme yapılandırmasını oluşturmak ve dinamik olarak güncelleştirmek için gereken temel adımlar özetlenmektedir. Bu örnekte, ilk yönlendirme yapılandırması yapılandırma dosyasından alınır ve tüm iletileri regularCalc Hesaplayıcı hizmetine yönlendirir; Ancak, bu daha sonra kaynak uç noktasını roundingCalc hizmeti değiştirmek için programlı olarak güncelleştirilir.  
@@ -165,7 +165,7 @@ Bu konuda, yönlendirme yapılandırmasını oluşturmak ve dinamik olarak günc
 ## <a name="example"></a>Örnek  
  Aşağıda, bu örnekte kullanılan konsol uygulamasının tamamen bir listesi verilmiştir.  
   
-```  
+```csharp
 //-----------------------------------------------------------------  
 //  Copyright (c) Microsoft Corporation.  All Rights Reserved.  
 //-----------------------------------------------------------------  

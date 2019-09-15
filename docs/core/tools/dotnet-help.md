@@ -1,45 +1,49 @@
 ---
-title: DotNet Yardım komutu
-description: Belirtilen komut için çevrimiçi belgeleri ayrıntılı dotnet help komutunu gösterir.
-ms.date: 12/04/2018
-ms.openlocfilehash: 8694494720cdb9a540754fdf79eeb99d5dbe61ef
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+title: DotNet yardım komutu
+description: DotNet yardım komutu, belirtilen komut için çevrimiçi daha ayrıntılı belgeler gösterir.
+ms.date: 08/08/2019
+ms.openlocfilehash: e76f858f2529afc50646473f1aab9d52730cff16
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65631974"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70990468"
 ---
-# <a name="dotnet-help-reference"></a>DotNet Yardım başvurusu
+# <a name="dotnet-help-reference"></a>DotNet yardım başvurusu
 
+**Bu makale şu şekilde geçerlidir: ✓** .net Core 2,0 SDK ve sonraki sürümleri
+
+<!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-2plus.md)]
+-->
 
 ## <a name="name"></a>Ad
 
-`dotnet help` -Gösterir, belirtilen komut için çevrimiçi belgeleri daha ayrıntılı.
+`dotnet help`-Belirtilen komut için çevrimiçi daha ayrıntılı belgeler gösterir.
 
-## <a name="synopsis"></a>Synopsis
+## <a name="synopsis"></a>Özeti
 
 `dotnet help <COMMAND_NAME> [-h|--help]`
 
 ## <a name="description"></a>Açıklama
 
-`dotnet help` Docs.microsoft.com belirtilen komut hakkında daha ayrıntılı bilgi için komut başvuru page up açar.
+`dotnet help` Komut, docs.Microsoft.com adresinde belirtilen komutla ilgili daha ayrıntılı bilgi için başvuru sayfasını açar.
 
 ## <a name="arguments"></a>Arguments
 
 * **`COMMAND_NAME`**
 
-  .NET Core CLI komut adı. Geçerli CLI komutlarının bir listesi için bkz. [CLI komutları](index.md#cli-commands).
+  .NET Core CLI komutunun adı. Geçerli CLı komutlarının bir listesi için bkz. [CLI komutları](index.md#cli-commands).
 
 ## <a name="options"></a>Seçenekler
 
 * **`-h|--help`**
 
-  Komut için kısa bir Yardım yazdırır.
+  Komut için kısa bir yardım yazdırır.
 
 ## <a name="examples"></a>Örnekler
 
-* İçin belgeler sayfası açılır [yeni dotnet](dotnet-new.md) komutu:
+* [DotNet yeni](dotnet-new.md) komutunun belgeler sayfasını açar:
 
   ```console
   dotnet help new

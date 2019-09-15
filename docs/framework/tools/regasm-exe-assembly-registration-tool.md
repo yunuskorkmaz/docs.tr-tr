@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: e190e342-36ef-4651-a0b4-0e8c2c0281cb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 44ab00322419b99aeac51da0d836c60264da5194
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 5e80e044fe01172c587ef029186035a64cdf0b42
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894667"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971221"
 ---
 # <a name="regasmexe-assembly-registration-tool"></a>Regasm.exe (Derleme Kayıt Aracı)
 
@@ -38,7 +38,7 @@ regasm assemblyFile [options]
 
 |Seçenek|Açıklama|
 |------------|-----------------|
-|**/CodeBase**|Kayıt defterinde bir Kod Temeli girişi oluşturur. Kod Temeli girişi, genel derleme önbelleğinde yüklü olmayan bir derleme için dosya yolunu belirtir. Sonrasında genel derleme önbelleğine kaydettiriyor olduğunuz derlemeyi yükleyecekseniz bu seçeneği belirtmemelisiniz. **/CODEBASE** seçeneği Ile belirttiğiniz *assemblyFile* bağımsız değişkeni, [tanımlayıcı adlı bir derleme](../../../docs/framework/app-domains/strong-named-assemblies.md)olmalıdır.|
+|**/CodeBase**|Kayıt defterinde bir Kod Temeli girişi oluşturur. Kod Temeli girişi, genel derleme önbelleğinde yüklü olmayan bir derleme için dosya yolunu belirtir. Sonrasında genel derleme önbelleğine kaydettiriyor olduğunuz derlemeyi yükleyecekseniz bu seçeneği belirtmemelisiniz. **/CODEBASE** seçeneği Ile belirttiğiniz *assemblyFile* bağımsız değişkeni, [tanımlayıcı adlı bir derleme](../../standard/assembly/strong-named.md)olmalıdır.|
 |**/Registered**|Bu aracın yalnızca zaten kayıtlı durumdaki tür kitaplıklarına başvuracağını belirtir.|
 |**/asmpath: Dizin**|Derleme başvuruları içeren bir dizini belirtir. , **/Regfile** seçeneği ile birlikte kullanılmalıdır.|
 |**/nologo**|Microsoft başlangıç başlığı görüntüsünü bastırır.|

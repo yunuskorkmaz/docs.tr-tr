@@ -2,12 +2,12 @@
 title: DotNet yeni komut
 description: DotNet New komutu, belirtilen şablona göre yeni .NET Core projeleri oluşturur.
 ms.date: 05/06/2019
-ms.openlocfilehash: c9e960bab0e28e88b0cc8d431dad3b9f3f00c9c0
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 57b198d13984fb4585e1df6303afe481e7e0552d
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69660548"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969746"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -18,6 +18,8 @@ ms.locfileid: "69660548"
 `dotnet new`-Belirtilen şablonu temel alan yeni bir proje, yapılandırma dosyası veya çözüm oluşturur.
 
 ## <a name="synopsis"></a>Özeti
+
+<!-- markdownlint-disable MD025 -->
 
 # <a name="net-core-22tabnetcore22"></a>[.NET Core 2,2](#tab/netcore22)
 
@@ -759,7 +761,7 @@ MVC için kullanılabilen tüm şablonları listeleyin:
 
 `dotnet new we -l`
 
-Şablonla eşleşen şablonu çağırma girişimi. Tek bir eşleşme belirlenemiyorsa kısmi eşleşen şablonları listeleyin.
+Şablonla *eşleşen şablonu*çağırma girişimi. Tek bir eşleşme belirlenemiyorsa kısmi eşleşen şablonları listeleyin.
 
 `dotnet new ng`
 

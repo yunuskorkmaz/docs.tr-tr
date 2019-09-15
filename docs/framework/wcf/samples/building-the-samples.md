@@ -2,84 +2,84 @@
 title: Windows Communication Foundation Örnekleri Oluşturma
 ms.date: 03/30/2017
 ms.assetid: 2899e7a5-9cb2-4e8d-b8d2-f31391549198
-ms.openlocfilehash: b1f1005e32687d2683f757d847d9fa19e098f290
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 021f17778bc019828d00fbd8e93cbc319de3047a
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61944072"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70990149"
 ---
 # <a name="building-the-windows-communication-foundation-samples"></a>Windows Communication Foundation Örnekleri Oluşturma
 
-Windows Communication Foundation (WCF) örnekleri veya Visual Studio IDE kullanarak oluşturulabilir **msbuild** komut satırından komutu. Bu konudaki her iki yordam açıklanmaktadır.
+Windows Communication Foundation (WCF) örnekleri, Visual Studio IDE kullanılarak veya komut satırından **MSBuild** komutu kullanılarak oluşturulabilir. Her iki yordam de bu konuda açıklanmaktadır.
 
 > [!NOTE]
-> Oluşturma veya WCF örnekleri birini çalıştırmadan önce gerçekleştirilen olun [Windows Communication Foundation örnekleri için bir kerelik Kurulum yordamı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
+> WCF örneklerinden herhangi birini oluşturmadan veya çalıştırmadan önce, [Windows Communication Foundation Örnekleri Için tek seferlik Kurulum yordamını](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)gerçekleştirdiğinizden emin olun.
 
-## <a name="to-build-the-sample-using-a-command-prompt"></a>Bir komut istemi kullanarak örneği oluşturmak için
+## <a name="to-build-the-sample-using-a-command-prompt"></a>Komut istemi kullanarak örneği oluşturmak için
 
-1. Visual Studio için geliştirici komut istemi açın ve dile özgü alt dizinde örnek yüklediğiniz dizin konumuna gidin.
+1. Visual Studio için Geliştirici Komut İstemi açın ve örneği yüklediğiniz dizin konumunun altındaki dile özgü alt dizine gidin.
 
-2. Tür `msbuild` komut satırına. İstemci program dosyaları için oluşturulmuş *client\bin* ve hizmet program dosyaları için oluşturulmuş *service\bin*. Internet Information Services (IIS) tarafından barındırılan hizmet, hizmet program dosyaları da kopyalanır *servicemodelsamples* dizin ve kendi *\bin* alt.
+2. Komut `msbuild` satırına yazın. İstemci program dosyaları *client\bin* 'e kurulmuştur ve hizmet programı dosyaları *service\bin*'e yerleştirilmiştir. Hizmet Internet Information Services (IIS) tarafından barındırılıyorsa, hizmet programı dosyaları da *servicemodelsamples* dizinine ve *\Bin* alt dizinine kopyalanır.
 
 > [!NOTE]
-> ACL'ler ayarlamalısınız *%systemdrive%\inetpub\wwwroot* vermek için altında çalıştırdığınız hesabına izinleri değiştirin. Aksi halde bazı derleme olayları başarısız gönderin. Alternatif olarak, bunlar ve SDK komut istemini yönetici olarak çalıştır olarak ACL'leri bırakabilirsiniz.
+> Üzerinde çalışan hesap için değiştirme izinleri vermek üzere *%systemdrive%\ınetpub\wwwroot* üzerinde ACL 'ler ayarlamanız gerekir. Aksi takdirde, bazı derleme sonrası olaylar başarısız olur. Alternatif olarak, ACL 'Leri olduğu gibi bırakabilir ve yönetici olarak SDK komut istemi 'ni çalıştırabilirsiniz.
 
 ## <a name="to-build-the-sample-using-visual-studio"></a>Visual Studio kullanarak örneği oluşturmak için
 
-1. Gelen **dosya** Visual Studio'da seçim menüsünde **açık** > **proje/çözüm**. Örnek yüklendiği dizinin altında dile özgü alt dizinine gidin ve Visual Studio'da Çözüm açmak için bir .sln dosya simgesini çift tıklatın.
+1. Visual Studio 'daki **Dosya** menüsünde**Proje/çözüm** **Aç** > ' ı seçin. Örneği yüklediğiniz dizinin altındaki dile özgü alt dizine gidin ve Visual Studio 'da çözümü açmak için. sln dosya simgesine çift tıklayın.
 
-1. Gelen **derleme** menüsünde **çözümü yeniden derle**.
+1. **Derle** menüsünde **çözümü yeniden derle**' yi seçin.
 
-   İstemci program dosyaları için client\bin oluşturulur ve hizmet program dosyaları için service\bin oluşturulur. Hizmet IIS'de barındırılıyorsa, hizmet program dosyaları için de kopyalanır *servicemodelsamples* dizin ve kendi *\bin* alt.
+   İstemci program dosyaları, client\bin 'e kurulmuştur ve hizmet programı dosyaları service\bin. için oluşturulmuştur Hizmet IIS 'de barındırılıyorsa, hizmet programı dosyaları da *servicemodelsamples* dizinine ve *\Bin* alt dizinine kopyalanır.
 
 > [!NOTE]
-> Vermek %systemdrive%\inetpub\wwwroot ACL'leri ayarlamalısınız altında çalıştırdığınız hesabına izinleri değiştirin. Aksi halde bazı derleme olayları başarısız gönderin. Alternatif olarak, bunlar ve SDK komut istemi veya Visual Studio'yu yönetici olarak çalıştır olarak ACL'leri bırakabilirsiniz. Bazı Visual Studio Eylemler (örneğin, bir hata ayıklayıcı ASP.Net işçi işlemine iliştirme), ayrıca yönetim ayrıcalıkları gerektirir.
+> Üzerinde çalışan hesap için değiştirme izinleri vermek üzere%systemdrive%\ınetpub\wwwroot üzerinde ACL 'Ler ayarlamanız gerekir. Aksi takdirde, bazı derleme sonrası olaylar başarısız olur. Alternatif olarak, ACL 'Leri olduğu gibi bırakabilir ve SDK komut istemi 'ni veya Visual Studio 'Yu yönetici olarak çalıştırabilirsiniz. Bazı Visual Studio eylemleri (örneğin, ASP.Net Worker işlemine bir hata ayıklayıcı eklemek) ayrıca yönetim ayrıcalıkları gerektirir.
 
-## <a name="setup-batch-files-and-scripts"></a>Kurulum toplu iş dosyaları ve betikler
- Setup.exe ve Cleanup.exe toplu iş dosyaları ve betikler, Visual Studio için geliştirici komut isteminden çalıştırmanız gerekir. Birkaç kümesi ayarlama ve temizleme dosyaları yönetim ayrıcalıklarına sahip olmanız ve yönetici ayrıcalıklarına sahip başlatılması gereken görevleri gerçekleştirin.
+## <a name="setup-batch-files-and-scripts"></a>Toplu Iş dosyalarını ve betikleri ayarla
+ Setup. exe ve Cleanup. exe toplu iş dosyaları ve betikleri Visual Studio için Geliştirici Komut İstemi çalıştırılmalıdır. Çeşitli dosyaları ayarlama ve Temizleme, yönetici ayrıcalıkları gerektiren görevleri gerçekleştirir ve yönetici ayrıcalıklarıyla başlatılmalıdır.
 
-## <a name="important-security-information-about-metadata-endpoints"></a>Meta veri uç noktalarını hakkında önemli güvenlik bilgileri
- Olası hassas hizmet meta verilerinin yanlışlıkla açığa çıkmasını önlemek için Windows Communication Foundation (WCF) Hizmetleri için varsayılan yapılandırma meta veri yayımlamayı devre dışı bırakır. Bu varsayılan olarak güvenli, davranıştır ancak ayrıca Aracı (Svcutil.exe gibi) yapılandırmasında hizmetin meta veri yayımlama davranışı açıkça etkinleştirilmediği hizmeti çağırmak için gereken istemci kodu oluşturmak için içeri bir meta veri kullanamayacağı anlamına gelir. Daha kolay örnekleri ile denemeler yapmak için bir güvenli olmayan meta veri yayımlama uç nokta hemen hemen tüm örnekleri kullanıma sunar. Bu uç noktaları için anonim kimlik doğrulamasız tüketiciler potansiyel olarak kullanılabilir ve bu uç noktaları dağıtmadan önce herkese açık şekilde öğrendiği bir hizmet meta verileri uygun olmasına özen gerekir. Hizmet meta verileri yayımlama hakkında daha fazla bilgi için bkz: [meta veri yayımlama davranışı](../../../../docs/framework/wcf/samples/metadata-publishing-behavior.md) örnek. Bkz: [özel güvenli meta veri uç noktası](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md) örnek meta veri uç noktası güvenli hale getirme örneği.
+## <a name="important-security-information-about-metadata-endpoints"></a>Meta veri uç noktaları hakkında önemli güvenlik bilgileri
+ Potansiyel olarak duyarlı hizmet meta verilerinin istenmeden açıklanmasını engellemek için Windows Communication Foundation (WCF) Hizmetleri için varsayılan yapılandırma, meta veri yayımlamayı devre dışı bırakır. Bu davranış, varsayılan olarak güvenlidir, ancak hizmetin meta veri yayımlama davranışı yapılandırmada açıkça etkinleştirilmediği sürece hizmeti çağırmak için gereken istemci kodunu oluşturmak için bir meta veri alma aracı (Svcutil. exe gibi) kullanamazsınız. Örnekleri daha kolay hale getirmek için neredeyse tüm örnekler güvenli olmayan bir meta veri yayımlama uç noktasını kullanıma sunar. Bu uç noktalar, anonim olarak kimliği doğrulanmamış tüketiciler tarafından kullanılabilir ve bir hizmetin meta verilerinin genel olarak kapatılarak emin olmak için bu uç noktaların dağıtılmasından önce gerçekleştirilmelidir. Hizmet meta verilerini yayımlama hakkında daha fazla bilgi için bkz. [meta veri yayımlama davranışı](../../../../docs/framework/wcf/samples/metadata-publishing-behavior.md) örneği. Meta veri uç noktasının güvenliğini sağlamaya yönelik bir örnek için [özel güvenli meta veri uç noktası](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md) örneğine bakın.
 
 ## <a name="exception-handling"></a>Özel Durum İşleme
- Genel olarak bakıldığında bu örnekleri, örnek konu üzerinde odaklanmış kod saklamak için özel durum işleme içermez. Özel durum işleme hakkında daha fazla bilgi için bkz. [beklenen özel durumlar](../../../../docs/framework/wcf/samples/expected-exceptions.md) örnek.
+ Genellikle bu örneklere konuşarak, kodu örnek konusuna odaklanmış tutmak için özel durum işleme dahil değildir. Özel durum işleme hakkında daha fazla bilgi için [Beklenen özel durumlar](../../../../docs/framework/wcf/samples/expected-exceptions.md) örneğine bakın.
 
-## <a name="regenerating-clients-and-configuration-with-svcutil"></a>İstemcileri ve Svcutil yapılandırmayla yeniden oluşturuluyor
- Kullanabileceğiniz [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) istemci kodu ve örnekleri çoğu yapılandırması yeniden oluşturmak. Bazı örnekler el ile düzenlenmiş yapılandırma gerektirir. Örneğin, istemci sertifikası kimlik bilgilerini kullanan bir örnek için yapılandırmayı yeniden üretmek için Svcutil.exe kullanma, daha önce yapılandırılmış kimlik bilgilerini el ile belirtmeniz gerekir. Bazı örnekler, oluşturulan kod etkilemek için belirli Svcutil.exe seçenekleri kullanın, bu seçenekler belirli örnek konularındaki belirtilir.
+## <a name="regenerating-clients-and-configuration-with-svcutil"></a>Svcutil ile Istemcileri ve yapılandırmayı yeniden oluşturma
+ Çoğu örnek için istemci kodu ve yapılandırmasını yeniden oluşturmak üzere [ServiceModel meta veri yardımcı programı aracını (Svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) kullanabilirsiniz. Bazı örneklerin el ile düzenlenmiş yapılandırması gerekir. Örneğin, istemci sertifikası kimlik bilgilerini kullanan bir örnek için yapılandırmayı yeniden oluşturmak üzere Svcutil. exe ' yi kullanırsanız, önceden yapılandırılmış kimlik bilgilerini el ile belirtmeniz gerekir. Bazı örnekler, oluşturulan kodu etkilemek için belirli Svcutil. exe seçeneklerini kullanır, bu seçenekler belirli örnek konularda belirtilmiştir.
 
 ### <a name="to-regenerate-the-client-and-configuration-files"></a>İstemci ve yapılandırma dosyalarını yeniden oluşturmak için
 
-1. Bir SDK komut istemi açın ve dile özgü alt dizinde örnek yüklediğiniz dizin konumuna gidin.
+1. Bir SDK komut istemi açın ve örneği yüklediğiniz dizin konumunun altındaki dile özgü alt dizine gidin.
 
-2. Hizmetin Web barındırılan bir tür ise, aşağıdaki komutu kullanın.
+2. Hizmet Web 'de barındırılan bir tür ise aşağıdaki komutu kullanın.
 
-    ```
+    ```console
     svcutil.exe /n:"http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples" http://localhost/servicemodelsamples/service.svc/mex /out:generatedClient.cs
     ```
 
-     Hizmet, şirket içinde barındırılan aşağıdaki komutu yazın.
+     Hizmet şirket içinde barındırılan bir tür ise aşağıdaki komutu yazın.
 
-    ```
+    ```console
     svcutil.exe /n:"http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples" http://localhost:8000/servicemodelsamples/service.svc/mex /out:generatedClient.cs
     ```
 
-     Değiştirin `http://localhost:8000/ServiceModelSamples/service.svc/mex` şirket içinde barındırılan hizmetin mex uç nokta adresi.
+     Şirket `http://localhost:8000/ServiceModelSamples/service.svc/mex` içinde barındırılan Hizmetin MEX uç noktasının adresiyle değiştirin.
 
-     İstemci bir Visual Basic türü oluşturmak için aşağıdaki komutu kullanın.
+     İstemciyi Visual Basic bir türde oluşturmak için aşağıdaki komutu kullanın.
 
-    ```
+    ```console
     svcutil.exe /n:"http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples" http://localhost/servicemodelsamples/service.svc/mex /l:vb /out:generatedClient.vb
     ```
 
-     Hizmet, şirket içinde barındırılan bir tür ise, aşağıdaki komutu kullanın.
+     Hizmet kendi kendine barındırılan bir tür ise aşağıdaki komutu kullanın.
 
-    ```
+    ```console
     svcutil.exe /n:"http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples" http://localhost:8000/servicemodelsamples/service.svc/mex /l:vb /out:generatedClient.vb
     ```
 
     > [!NOTE]
-    > Atlamak için istemci yapılandırması nesil ekleme **/noconfig** seçeneği.
+    > İstemci yapılandırması oluşturulmasını atlamak için **/noconfig** seçeneğini ekleyin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

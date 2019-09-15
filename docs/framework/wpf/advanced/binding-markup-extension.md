@@ -7,19 +7,19 @@ helpviewer_keywords:
 - Binding markup extensions [WPF]
 - XAML [WPF], Binding markup extension
 ms.assetid: 83d6e2a4-1b0c-4fc8-bd96-b5e98800ab63
-ms.openlocfilehash: 616e405e191cb264a002e903bed60cf04559a675
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 6776c89db474668b3aed0e38a3e18359bf93399d
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964895"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991476"
 ---
 # <a name="binding-markup-extension"></a>Biçimlendirme Uzantısı Bağlama
 Bir özellik değerini veri bağlantılı değer olacak şekilde erteler, bir ara ifade nesnesi oluşturma ve çalışma zamanında öğe ve bağlama için geçerli olan veri bağlamını yorumlama.  
   
 ## <a name="binding-expression-usage"></a>Bağlama Ifadesi kullanımı  
   
-```  
+```xaml  
 <object property="{Binding}" .../>  
 -or-  
 <object property="{Binding  bindProp1=value1[, bindPropN=valueN]*}" ...  

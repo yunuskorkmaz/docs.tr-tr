@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 14812988-473f-44ae-b75f-fd5c2f21fb7b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8875ed10c4cb144995b602287f904d3c98dcdb39
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c6c5337fedd13cb18b8e5eeadec48a2e4695a543
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69948772"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969348"
 ---
 # <a name="types-of-isolation"></a>Yalıtım Türleri
 Yalıtılmış depolamaya erişim, her zaman onu oluşturan kullanıcıyla kısıtlanır. Bu tür yalıtımın uygulanması için ortak dil çalışma zamanı, işletim sisteminin tanıdığı aynı kullanıcı kimliği kavramını kullanır. Bu, mağaza açıldığında kodun çalıştırıldığı işlemle ilişkili kimliktir. Bu kimlik kimliği doğrulanmış bir kullanıcı kimliğidir, ancak kimliğe bürünme geçerli kullanıcının kimliğinin dinamik olarak değişmesine neden olabilir.  
@@ -34,7 +34,7 @@ Yalıtılmış depolamaya erişim, her zaman onu oluşturan kullanıcıyla kıs�
   
 - Etki alanı kimliği, uygulamanın kanıtını temsil eder. Bu, bir Web uygulaması durumunda tam URL olabilir. Kabukta barındırılan kod için etki alanı kimliği, uygulama dizini yolunu temel alabilir. Örneğin, yürütülebilir C:\Office\MyApp.exe yolundan çalışırsa, etki alanı kimliği C:\Office\MyApp.exeolur.  
   
-- Bütünleştirilmiş kod kimliği derleme kanıtdır. Bu, derlemenin [tanımlayıcı adı](../../../docs/framework/app-domains/strong-named-assemblies.md), derlemenin yazılım YAYıMCıSı veya URL kimliği olabilen bir şifrelenmiş dijital imzadan gelebilir. Bir derlemede hem tanımlayıcı adı hem de yazılım yayımcısı kimliği varsa, yazılım yayımcısı kimliği kullanılır. Derleme Internet 'ten geliyorsa ve imzasız ise, URL kimliği kullanılır. Derlemeler ve tanımlayıcı adlar hakkında daha fazla bilgi için bkz. [Derlemelerle programlama](../../../docs/framework/app-domains/programming-with-assemblies.md).  
+- Bütünleştirilmiş kod kimliği derleme kanıtdır. Bu, derlemenin [tanımlayıcı adı](../assembly/strong-named.md), derlemenin yazılım YAYıMCıSı veya URL kimliği olabilen bir şifrelenmiş dijital imzadan gelebilir. Bir derlemede hem tanımlayıcı adı hem de yazılım yayımcısı kimliği varsa, yazılım yayımcısı kimliği kullanılır. Derleme Internet 'ten geliyorsa ve imzasız ise, URL kimliği kullanılır. Derlemeler ve tanımlayıcı adlar hakkında daha fazla bilgi için bkz. [Derlemelerle programlama](../assembly/program.md).  
   
 - Dolaşım depoları, gezici kullanıcı profiline sahip bir kullanıcıyla birlikte taşınır. Dosyalar bir ağ dizinine yazılır ve kullanıcının oturum açtığı herhangi bir bilgisayara indirilir. Gezici Kullanıcı profilleri hakkında daha fazla bilgi için bkz <xref:System.IO.IsolatedStorage.IsolatedStorageScope.Roaming?displayProperty=nameWithType>.  
   

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting WPF content in Windows Forms [WPF]
 ms.assetid: 0ac41286-4c1b-4b17-9196-d985cb844ce1
-ms.openlocfilehash: bff89f1d81b16c8c66d73901ef951626f6d2cb9e
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: a062095885e6c1fc8816a78847968b1c250eabf8
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400627"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991452"
 ---
 # <a name="walkthrough-hosting-a-wpf-composite-control-in-windows-forms"></a>İzlenecek yol: WPF Bileşik Denetimini Windows Forms İçinde Barındırma
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]uygulamalar oluşturmak için zengin bir ortam sağlar. Ancak, kod içinde [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] önemli bir yatırımınız olduğunda, sıfırdan yazmak [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] yerine mevcut [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] uygulamanızı genişletmek daha etkili olabilir. Yaygın bir senaryo, Windows Forms uygulamanızda uygulanan [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bir veya daha fazla denetimi eklemek istediğinizde. WPF denetimlerini özelleştirme hakkında daha fazla bilgi için bkz. [Denetim özelleştirmesi](../controls/control-customization.md).  
@@ -116,7 +116,7 @@ Bu yönergeyi tamamlamak için Visual Studio gerekir.
 #### <a name="the-basic-structure-of-the-code-behind-file"></a>Arka plan kod dosyasının temel yapısı  
  Arka plan kod dosyası, iki `MyControls` `MyControl1` sınıf içeren tek bir ad alanından oluşur ve `MyControlEventArgs`.  
   
-```  
+```csharp  
 namespace MyControls  
 {  
   public partial class MyControl1 : Grid  
@@ -305,7 +305,7 @@ Aşağıdaki görüntüde, bir Windows Forms uygulamasında barındırılan bir 
 ### <a name="handling-onbuttonclick"></a>OnButtonClick işleme  
  Kullanıcı **Tamam** veya **iptal** düğmesine tıkladığında olayoluşur.`OnButtonClick`  
   
- Olay işleyicisi, hangi düğmenin tıklandığını belirleyen `IsOK` olay bağımsız değişkeninin alanını denetler. `lbl`  Veri<xref:System.Windows.Forms.Label> değişkenleri, daha önce ele alınan denetimlere karşılık gelir. Kullanıcı **Tamam** düğmesine tıkladığında, denetimin <xref:System.Windows.Controls.TextBox> denetimlerindeki veriler ilgili <xref:System.Windows.Forms.Label> denetime atanır. Kullanıcı **iptal**' i tıklarsa, <xref:System.Windows.Forms.Label.Text%2A> değerler varsayılan dizelere ayarlanır.  
+ Olay işleyicisi, hangi düğmenin tıklandığını belirleyen `IsOK` olay bağımsız değişkeninin alanını denetler. `lbl` Veri<xref:System.Windows.Forms.Label> değişkenleri, daha önce ele alınan denetimlere karşılık gelir. Kullanıcı **Tamam** düğmesine tıkladığında, denetimin <xref:System.Windows.Controls.TextBox> denetimlerindeki veriler ilgili <xref:System.Windows.Forms.Label> denetime atanır. Kullanıcı **iptal**' i tıklarsa, <xref:System.Windows.Forms.Label.Text%2A> değerler varsayılan dizelere ayarlanır.  
   
  Aşağıdaki düğmeye tıklayarak `Form1` sınıfına olay işleyicisi kodu ekleyin.  
   

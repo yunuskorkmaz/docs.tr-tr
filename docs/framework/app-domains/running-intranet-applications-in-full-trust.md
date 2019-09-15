@@ -8,32 +8,32 @@ helpviewer_keywords:
 ms.assetid: ee13c0a8-ab02-49f7-b8fb-9eab16c6c4f0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d7608ed964313774b806ba6f1bb4d8f0d322c361
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1996c8b317bbfed6362c759a257cafef8400e919
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592773"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971907"
 ---
 # <a name="running-intranet-applications-in-full-trust"></a>İntranet Uygulamalarını Tam Güvende Çalıştırma
-.NET Framework sürüm 3.5 ile başlayarak Service Pack 1 (SP1), uygulamaları ve bunların kitaplık derlemeleri tam güven derlemeleri bir ağ paylaşımından çalıştırılabilir. <xref:System.Security.SecurityZone.MyComputer> Bölge kanıt, intranet üzerindeki paylaşımdan yüklenen derlemeler için otomatik olarak eklenir. Bu bulgu aynı bilgisayarda bulunabilir bütünleştirilmiş (genellikle tam güven olduğu) kümesini vermek bu derlemeler sağlar. Bu işlev, ClickOnce uygulamaları veya bir konak üzerinde çalışmak üzere tasarlanmış uygulamalar için geçerli değildir.  
+.NET Framework sürüm 3,5 hizmet paketi 1 ' den (SP1) başlayarak, uygulamalar ve kitaplık derlemeleri bir ağ paylaşımından tam güvenli derlemeler olarak çalıştırılabilir. <xref:System.Security.SecurityZone.MyComputer>bölge kanıtı, intranetteki bir paylaşımdan yüklenen derlemelere otomatik olarak eklenir. Bu kanıt, bu derlemelere, bilgisayarda bulunan Derlemelerle aynı izin kümesini (genellikle tam güven) verir. Bu işlev ClickOnce uygulamaları veya bir konakta çalışmak üzere tasarlanan uygulamalar için geçerlidir.  
   
-## <a name="rules-for-library-assemblies"></a>Kitaplık derlemeleri için kuralları  
- Bir ağ paylaşımındaki bir yürütülebilir dosya tarafından yüklenen derlemeler için aşağıdaki kurallar geçerlidir:  
+## <a name="rules-for-library-assemblies"></a>Kitaplık derlemeleri için kurallar  
+ Bir ağ paylaşımında yürütülebilir dosya tarafından yüklenen derlemeler için aşağıdaki kurallar geçerlidir:  
   
-- Kitaplık derlemeleri çalıştırılabilir derlemesinin aynı klasörde bulunmalıdır. Bir alt klasöründe bulunan veya farklı bir yolda başvurulan derlemeleri tam güven izin kümesi sunulmaz.  
+- Kitaplık derlemeleri yürütülebilir derlemeyle aynı klasörde bulunmalıdır. Bir alt klasörde bulunan veya farklı bir yolda başvurulan derlemelere tam güven izin kümesi verilmez.  
   
-- Yürütülebilir dosyayı gecikme-bir derleme yükler, yürütülebilir dosyayı başlatmak için kullanılan yolu kullanmanız gerekir. Örneğin, varsa Paylaşım \\ \\ *ağ bilgisayar*\\*paylaşmak* bir sürücü harfine eşlenir ve yürütülebilir dosyayı yüklenen derlemeler bu yolundan çalıştırmak Ağ yolu kullanarak yürütülebilir olarak tam güven verilmez. Bir derlemede gecikme dışarıdan yüklemeyi <xref:System.Security.SecurityZone.MyComputer> bölgesi, yürütülebilir dosya, sürücü harfi yolu kullanmanız gerekir.  
+- Yürütülebilir dosya bir derlemeyi yüklerse, yürütülebilir dosyayı başlatmak için kullanılan yolun aynısını kullanması gerekir. Örneğin, \\ *ağ-bilgisayar*\\*paylaşımının* paylaşılması \\bir sürücü harfine eşlenmişse ve çalıştırılabilir dosya bu yoldan çalışıyorsa, yürütülebilir dosya tarafından ağ yolu kullanılarak yüklenen derlemeler bu şekilde olmayacaktır tam güven verilmelidir. <xref:System.Security.SecurityZone.MyComputer> Bölgedeki bir derlemeyi geciktirmek için yürütülebilir dosyanın sürücü harfi yolunu kullanması gerekir.  
   
-## <a name="restoring-the-former-intranet-policy"></a>Eski Intranet ilke geri yükleme  
- Önceki .NET Framework sürümlerinde, paylaşılan derlemeler verilmiş <xref:System.Security.SecurityZone.Intranet> bölge kanıt. Bir paylaşımı üzerindeki bir derlemeye tam güven kazandırmak için kod erişimi güvenlik ilkesi belirtin gerekiyordu.  
+## <a name="restoring-the-former-intranet-policy"></a>Eski Intranet Ilkesini geri yükleme  
+ .NET Framework önceki sürümlerinde, paylaşılan derlemelere bölge kanıtı verildi <xref:System.Security.SecurityZone.Intranet> . Bir paylaşımdaki derlemeye tam güven sağlamak için kod erişimi güvenlik ilkesi belirtmeniz gerekiyordu.  
   
- Bu yeni davranış intranet derlemeler için varsayılandır. Sağlama önceki davranışı geri dönebilirsiniz <xref:System.Security.SecurityZone.Intranet> bilgisayarda tüm uygulamalar için geçerli bir kayıt defteri anahtarını ayarlayarak kanıt. Bu işlem, 32-bit ve 64-bit bilgisayarlar için farklıdır:  
+ Bu yeni davranış, intranet derlemeleri için varsayılandır. Bilgisayardaki tüm uygulamalar için geçerli olan bir kayıt defteri <xref:System.Security.SecurityZone.Intranet> anahtarı ayarlayarak kanıt sağlamaya yönelik önceki davranışa dönebilirsiniz. Bu işlem 32-bit ve 64 bit bilgisayarlar için farklıdır:  
   
-- 32-bit bilgisayarlarda HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft altında bir alt anahtar oluşturma\\. Sistem kayıt defteri anahtarında NETFramework. Anahtar adı LegacyMyComputerZone DWORD değerini 1 ile kullanın.  
+- 32 bit bilgisayarlarda, HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\altında bir alt anahtar oluşturun. Sistem kayıt defterindeki NETFramework anahtarı. Bir DWORD değeri 1 olan LegacyMyComputerZone anahtar adını kullanın.  
   
-- 64-bit bilgisayarlarda HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft altında bir alt anahtar oluşturma\\. Sistem kayıt defteri anahtarında NETFramework. Anahtar adı LegacyMyComputerZone DWORD değerini 1 ile kullanın. Aynı alt anahtarı altında HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft oluşturun\\. NETFramework anahtarı.  
+- 64 bit bilgisayarlarda, HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\altında bir alt anahtar oluşturun. Sistem kayıt defterindeki NETFramework anahtarı. Bir DWORD değeri 1 olan LegacyMyComputerZone anahtar adını kullanın. HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\\altında aynı alt anahtarı oluşturun. NETFramework anahtarı.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Bütünleştirilmiş Kodlarla Programlama](../../../docs/framework/app-domains/programming-with-assemblies.md)
+- [Bütünleştirilmiş Kodlarla Programlama](../../standard/assembly/program.md)

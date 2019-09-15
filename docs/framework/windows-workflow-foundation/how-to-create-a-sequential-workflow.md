@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5280e816-ae17-48c4-8de0-a1e6895dd8f0
-ms.openlocfilehash: d94843e696848010791b1e22d06e4852d35bc68e
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 61e3f01b1259536ff15d71526e91aef42069722e
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044417"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989699"
 ---
 # <a name="how-to-create-a-sequential-workflow"></a>Nasıl yapılır: Akış Çizelgesi İş Akışı Oluşturma
 
@@ -44,7 +44,7 @@ ms.locfileid: "70044417"
 
 5. **Bağımsız değişken Oluştur**' a tıklayın.
 
-6. Yeni `Turns` eklenen bağımsız`MaxNumber` değişkenin altında bulunan ad kutusuna yazın, Yön açılan listesinden Seç ' i seçin, **bağımsız değişken türü** açılan listesinden Int32 ' i seçin ve ardından ENTER tuşuna basın.
+6. Yeni `Turns` eklenen bağımsız değişkenin altında bulunan ad kutusuna yazın, Yön açılan listesinden Seç ' i seçin, bağımsız değişken türü açılan listesinden Int32 ' i seçin ve ardından ENTER tuşuna basın. `MaxNumber`
 
 7. **Bağımsız değişkenler** bölmesini kapatmak için etkinlik tasarımcısının sol alt tarafındaki **bağımsız değişkenler** ' e tıklayın.
 
@@ -128,9 +128,9 @@ ms.locfileid: "70044417"
 
 10. **Araç kutusunun** **Denetim akışı** bölümünden başka bir etkinlik **varsa** , **sonra** da ilk **IF** etkinliğinin bölümüne sürükleyin.
 
-11. Yeni eklenen etkinliğin **koşul** özelliği değeri kutusuna aşağıdaki ifadeyi yazın.
+11. Yeni **eklenen etkinliğin** **koşul** özelliği değeri kutusuna aşağıdaki ifadeyi yazın.
 
-    ```
+    ```text
     Guess < Target
     ```
 
@@ -156,7 +156,7 @@ ms.locfileid: "70044417"
 
 1. Çözümü derlemek için CTRL + SHIFT + B tuşlarına basın.
 
-     İş akışının nasıl çalıştırılacağı hakkında yönergeler için lütfen sonraki konuya [bakın: Bir Iş akışı](how-to-run-a-workflow.md)çalıştırın. ' Nin [nasıl yapılacağını zaten tamamladıysanız: Farklı bir iş](how-to-run-a-workflow.md) akışı stili ile bir iş akışı adımı çalıştırın ve bu adımda [](how-to-run-a-workflow.md#BKMK_ToRunTheApplication) [sıralı iş akışını kullanarak çalıştırmak istiyorsanız, nasıl yapılır: Bir Iş akışı](how-to-run-a-workflow.md)çalıştırın.
+     İş akışının nasıl çalıştırılacağı hakkında yönergeler için lütfen sonraki konuya [bakın: Bir Iş akışı](how-to-run-a-workflow.md)çalıştırın. ' Nin [nasıl yapılacağını zaten tamamladıysanız: Farklı bir iş](how-to-run-a-workflow.md) akışı stili ile bir iş akışı adımı çalıştırın ve bu adımda [sıralı iş akışını kullanarak çalıştırmak [istiyorsanız, nasıl](how-to-run-a-workflow.md#BKMK_ToRunTheApplication) yapılır: Bir Iş akışı](how-to-run-a-workflow.md)çalıştırın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

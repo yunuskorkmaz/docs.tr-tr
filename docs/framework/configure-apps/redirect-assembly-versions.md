@@ -8,12 +8,12 @@ helpviewer_keywords:
 - application configuration [.NET Framework]
 - assemblies [.NET Framework], binding redirection
 ms.assetid: 88fb1a17-6ac9-4b57-8028-193aec1f727c
-ms.openlocfilehash: c9670b00ea4a6b552469b7f33e924b8ab128d9d0
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c43ba119b92d4dc1a50b03d6359555ad25f37d08
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69948021"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971555"
 ---
 # <a name="redirecting-assembly-versions"></a>Derleme Sürümlerini Yönlendirme
 
@@ -157,8 +157,8 @@ Uygulamanız .NET Framework eski sürümlerini hedefliyorsa otomatik bağlama ye
 - [Nasıl yapılır: Otomatik bağlama yeniden yönlendirmeyi etkinleştirme ve devre dışı bırakma](how-to-enable-and-disable-automatic-binding-redirection.md)
 - [\<bindingRedirect > öğesi](./file-schema/runtime/bindingredirect-element.md)
 - [Bütünleştirilmiş Kod Bağlama Yönlendirmesi Güvenlik İzni](assembly-binding-redirection-security-permission.md)
-- [Ortak Dil Çalışma Zamanı Modülündeki Bütünleştirilmiş Kodlar](../app-domains/assemblies-in-the-common-language-runtime.md)
-- [Bütünleştirilmiş Kodlarla Programlama](../app-domains/programming-with-assemblies.md)
+- [.NET’te bütünleştirilmiş kodlar](../../standard/assembly/index.md)
+- [Bütünleştirilmiş Kodlarla Programlama](../../standard/assembly/program.md)
 - [Çalışma Zamanının Bütünleştirilmiş Kodların Konumunu Bulması](../deployment/how-the-runtime-locates-assemblies.md)
 - [Uygulamaları Yapılandırma](index.md)
 - [Çalışma Zamanı Ayarları Şeması](./file-schema/runtime/index.md)

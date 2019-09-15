@@ -2,12 +2,12 @@
 title: Özel İzleme
 ms.date: 03/30/2017
 ms.assetid: 2d191c9f-62f4-4c63-92dd-cda917fcf254
-ms.openlocfilehash: b53b22b485a7ac340821073d2f2914b13a7b7011
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 32abf1dc4c9607b4a86f836fa2c759af1dbf1b69
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044297"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989406"
 ---
 # <a name="custom-tracking"></a>Özel İzleme
 Bu örnek, bir özel izleme katılımcısının nasıl oluşturulacağını ve izleme verilerinin içeriğini konsola nasıl yazılacağını gösterir. Buna ek olarak, örnek, Kullanıcı tanımlı verilerle <xref:System.Activities.Tracking.CustomTrackingRecord> doldurulmuş nesneleri nasıl yayılacağını gösterir. Konsol tabanlı izleme katılımcısı, kod içinde oluşturulan <xref:System.Activities.Tracking.TrackingRecord> bir izleme profili nesnesi kullanılarak iş akışı tarafından yayılan nesneleri filtreler.

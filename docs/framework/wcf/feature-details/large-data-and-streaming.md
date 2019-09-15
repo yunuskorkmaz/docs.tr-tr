@@ -2,12 +2,12 @@
 title: Büyük Veriler ve Akış Yapma
 ms.date: 03/30/2017
 ms.assetid: ab2851f5-966b-4549-80ab-c94c5c0502d2
-ms.openlocfilehash: b35fa4a6ca694fc9611869c7fcb03debf911542d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 70e43eaf4dc77e07af8ec65faf9cf0fa9a7a0fe4
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69911861"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991512"
 ---
 # <a name="large-data-and-streaming"></a>Büyük Veriler ve Akış Yapma
 Windows Communication Foundation (WCF), XML tabanlı bir iletişim altyapısıdır. XML verileri yaygın olarak [xml 1,0 belirtiminde](https://go.microsoft.com/fwlink/?LinkId=94838)tanımlanan standart metin biçiminde kodlandığı için, bağlı sistemler geliştiricileri ve mimarları, genellikle ağ üzerinden gönderilen iletilerin Tel kaplama (veya boyutu) ile ilgilidir ve XML 'nin metin tabanlı kodlaması, ikili verilerin etkili bir şekilde aktarılması için özel zorluk doğurur.  
@@ -99,7 +99,7 @@ Windows Communication Foundation (WCF), XML tabanlı bir iletişim altyapısıd�
 ### <a name="programming-model"></a>Programlama Modeli  
  Uygulamanızda kullandığınız üç yerleşik kodlayıcıdan hangisi olursa olsun, programlama deneyimi ikili verileri aktarmaya benzer şekilde aynıdır. Fark, WCF 'nin verileri veri türlerine göre işleme biçimi.  
   
-```  
+```csharp
 [DataContract]  
 class MyData  
 {  
@@ -190,7 +190,7 @@ class MyData
 ### <a name="programming-model-for-streamed-transfers"></a>Akışlı aktarımlar için programlama modeli  
  Akışa yönelik programlama modeli basittir. Akış verileri almak için, tek <xref:System.IO.Stream> bir türü belirtilmiş giriş parametresine sahip olan bir işlem sözleşmesi belirtin. Akan verileri döndürmek için bir <xref:System.IO.Stream> başvuru döndürün.  
   
-```  
+```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public interface IStreamedService  
 {  
@@ -209,7 +209,7 @@ public interface IStreamedService
   
  Benzer şekilde, bu kural ileti sözleşmeleri için geçerlidir. Aşağıdaki ileti sözleşmesinde gösterildiği gibi, ileti sözleşmeniz için akış olan tek bir gövde üyesine sahip olabilirsiniz. Akışa ek bilgi iletmek istiyorsanız, bu bilgilerin bir taşınan ileti üstbilgileri olması gerekir. İleti gövdesi, akış içeriği için özel olarak ayrılmıştır.  
   
-```  
+```csharp
 [MessageContract]  
 public class UploadStreamMessage  
 {  
