@@ -2,33 +2,33 @@
 title: 'Nasıl yapılır: Örnek Veri Özelliklerini Seri Durumdan Çıkarma'
 ms.date: 03/30/2017
 ms.assetid: b13a3508-1b97-4359-b336-03d85fa23bc4
-ms.openlocfilehash: a53c8ceea2a2bf9840b92dc7119e681902da893e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e037d5f8d0b221aa0eb8fdc6eceabf6efb2dc387
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64619688"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989631"
 ---
-# <a name="how-to-deserialize-instance-data-properties"></a><span data-ttu-id="894ba-102">Nasıl yapılır: Örnek Veri Özelliklerini Seri Durumdan Çıkarma</span><span class="sxs-lookup"><span data-stu-id="894ba-102">How to: Deserialize Instance Data Properties</span></span>
-<span data-ttu-id="894ba-103">Bir kullanıcı veya yönetici iş akışı kalıcı iş akışı örneği durumu el ile İnceleme isteyebileceğiniz durumlar olabilir.</span><span class="sxs-lookup"><span data-stu-id="894ba-103">There may be situations when a user or workflow administrator may want to manually inspect the state of a persisted workflow instance.</span></span> <span data-ttu-id="894ba-104"><xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> Aşağıdaki dört sütun gösteren örnekleri tablodaki bir görünüm sağlar:</span><span class="sxs-lookup"><span data-stu-id="894ba-104"><xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> provides a view on the Instances table that exposes the following four columns:</span></span>  
+# <a name="how-to-deserialize-instance-data-properties"></a><span data-ttu-id="09ba3-102">Nasıl yapılır: Örnek Veri Özelliklerini Seri Durumdan Çıkarma</span><span class="sxs-lookup"><span data-stu-id="09ba3-102">How to: Deserialize Instance Data Properties</span></span>
+<span data-ttu-id="09ba3-103">Bir kullanıcı veya iş akışı yöneticisinin kalıcı bir iş akışı örneğinin durumunu el ile incelemesi isteyebileceğiniz durumlar olabilir.</span><span class="sxs-lookup"><span data-stu-id="09ba3-103">There may be situations when a user or workflow administrator may want to manually inspect the state of a persisted workflow instance.</span></span> <span data-ttu-id="09ba3-104"><xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>Örnekler tablosunda aşağıdaki dört sütunu kullanıma sunan bir görünüm sağlar:</span><span class="sxs-lookup"><span data-stu-id="09ba3-104"><xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> provides a view on the Instances table that exposes the following four columns:</span></span>  
   
-- <span data-ttu-id="894ba-105">ReadWritePrimitiveDataProperties</span><span class="sxs-lookup"><span data-stu-id="894ba-105">ReadWritePrimitiveDataProperties</span></span>  
+- <span data-ttu-id="09ba3-105">ReadWritePrimitiveDataProperties</span><span class="sxs-lookup"><span data-stu-id="09ba3-105">ReadWritePrimitiveDataProperties</span></span>  
   
-- <span data-ttu-id="894ba-106">WriteOnlyPrimitiveDataProperties</span><span class="sxs-lookup"><span data-stu-id="894ba-106">WriteOnlyPrimitiveDataProperties</span></span>  
+- <span data-ttu-id="09ba3-106">WriteOnlyPrimitiveDataProperties</span><span class="sxs-lookup"><span data-stu-id="09ba3-106">WriteOnlyPrimitiveDataProperties</span></span>  
   
-- <span data-ttu-id="894ba-107">ReadWriteComplexDataProperties</span><span class="sxs-lookup"><span data-stu-id="894ba-107">ReadWriteComplexDataProperties</span></span>  
+- <span data-ttu-id="09ba3-107">ReadWriteComplexDataProperties</span><span class="sxs-lookup"><span data-stu-id="09ba3-107">ReadWriteComplexDataProperties</span></span>  
   
-- <span data-ttu-id="894ba-108">WriteOnlyComplexDataProperties</span><span class="sxs-lookup"><span data-stu-id="894ba-108">WriteOnlyComplexDataProperties</span></span>  
+- <span data-ttu-id="09ba3-108">WriteOnlyComplexDataProperties</span><span class="sxs-lookup"><span data-stu-id="09ba3-108">WriteOnlyComplexDataProperties</span></span>  
   
- <span data-ttu-id="894ba-109">İlkel veri özellikleri, .NET Framework türleri karmaşık veri özellikleri diğer tüm türlere başvurur ancak "(örneğin, Int32 ve dizesi), ortak" olarak değerlendirilir özellikleri bakın.</span><span class="sxs-lookup"><span data-stu-id="894ba-109">Primitive data properties refer to properties whose .NET Framework types are considered to be "common" (for example, Int32 and String), while complex data properties refer to all other types.</span></span> <span data-ttu-id="894ba-110">Temel türlerin tam listesini daha sonra bu kod örneğinde bulunamadı.</span><span class="sxs-lookup"><span data-stu-id="894ba-110">An exact enumeration of primitive types is found later in this code example.</span></span>  
+ <span data-ttu-id="09ba3-109">İlkel veri özellikleri, .NET Framework türleri "ortak" (örneğin, Int32 ve dize) olarak kabul edilen özelliklere başvurur, ancak karmaşık veri özellikleri diğer tüm türlere başvurur.</span><span class="sxs-lookup"><span data-stu-id="09ba3-109">Primitive data properties refer to properties whose .NET Framework types are considered to be "common" (for example, Int32 and String), while complex data properties refer to all other types.</span></span> <span data-ttu-id="09ba3-110">Temel türlerin tam numaralandırması, bu kod örneğinde daha sonra bulunur.</span><span class="sxs-lookup"><span data-stu-id="09ba3-110">An exact enumeration of primitive types is found later in this code example.</span></span>  
   
- <span data-ttu-id="894ba-111">Okuma/yazma özellikleri örneği yüklendiğinde, geri iş akışı çalışma zamanı tarafından döndürülen özelliklerine bakın.</span><span class="sxs-lookup"><span data-stu-id="894ba-111">Read/write properties refer to properties that are returned back to the Workflow Runtime when an instance is loaded.</span></span> <span data-ttu-id="894ba-112">WriteOnly özellikleri veritabanına yazılır ve sonra hiçbir zaman yeniden okuyun.</span><span class="sxs-lookup"><span data-stu-id="894ba-112">WriteOnly properties are written to the database and then never read again.</span></span>  
+ <span data-ttu-id="09ba3-111">Okuma/yazma özellikleri, bir örnek yüklendiğinde Iş akışı çalışma zamanına geri döndürülen özelliklere başvurur.</span><span class="sxs-lookup"><span data-stu-id="09ba3-111">Read/write properties refer to properties that are returned back to the Workflow Runtime when an instance is loaded.</span></span> <span data-ttu-id="09ba3-112">WriteOnly özellikleri veritabanına yazılır ve sonra hiçbir şekilde yeniden okunamaz.</span><span class="sxs-lookup"><span data-stu-id="09ba3-112">WriteOnly properties are written to the database and then never read again.</span></span>  
   
- <span data-ttu-id="894ba-113">Bu örnek, temel veri özelliklerini seri durumdan çıkarma sağlar kodu sağlar.</span><span class="sxs-lookup"><span data-stu-id="894ba-113">This example provides code that enables a user to deserialize primitive data properties.</span></span> <span data-ttu-id="894ba-114">Bir bayt dizisi ReadWritePrimitiveDataProperties veya WriteOnlyPrimitiveDataProperties sütundan okuma verildiğinde, bu kod ikili büyük nesne (BLOB) dönüştürür bir <xref:System.Collections.Generic.Dictionary%602> türü \<XName, Nesne > Burada her anahtar değeri çift özellik adı ve karşılık gelen değeri temsil eder.</span><span class="sxs-lookup"><span data-stu-id="894ba-114">Given a byte array read from either the ReadWritePrimitiveDataProperties or WriteOnlyPrimitiveDataProperties column, this code will convert the binary large object (BLOB) into a <xref:System.Collections.Generic.Dictionary%602> of type \<XName, object> where each key value pair represents a property name and its corresponding value.</span></span>  
+ <span data-ttu-id="09ba3-113">Bu örnek, bir kullanıcının temel veri özelliklerinin serisini kaldırma olanağı sağlayan kodu sağlar.</span><span class="sxs-lookup"><span data-stu-id="09ba3-113">This example provides code that enables a user to deserialize primitive data properties.</span></span> <span data-ttu-id="09ba3-114">Readwriteprimitivedataproperties veya WriteOnlyPrimitiveDataProperties sütunundan okunan bir bayt dizisi verildiğinde, bu kod ikili büyük nesne (blob) <xref:System.Collections.Generic.Dictionary%602> ' ı her anahtar değerinin bulunduğu XName, Object > türüne \<dönüştürür. Çift, bir özellik adını ve buna karşılık gelen değeri temsil eder.</span><span class="sxs-lookup"><span data-stu-id="09ba3-114">Given a byte array read from either the ReadWritePrimitiveDataProperties or WriteOnlyPrimitiveDataProperties column, this code will convert the binary large object (BLOB) into a <xref:System.Collections.Generic.Dictionary%602> of type \<XName, object> where each key value pair represents a property name and its corresponding value.</span></span>  
   
- <span data-ttu-id="894ba-115">Bu örnekte, bu şu anda desteklenmeyen bir işlem olmadığı için karmaşık veri özelliklerini seri durumdan çıkarılacak nasıl göstermemiz gerekmez.</span><span class="sxs-lookup"><span data-stu-id="894ba-115">This example does not demonstrate how to deserialize complex data properties because this is currently not a supported operation.</span></span>  
+ <span data-ttu-id="09ba3-115">Bu örnek, şu anda desteklenen bir işlem olmadığından, karmaşık veri özelliklerinin serisini kaldırma işlemini göstermez.</span><span class="sxs-lookup"><span data-stu-id="09ba3-115">This example does not demonstrate how to deserialize complex data properties because this is currently not a supported operation.</span></span>  
   
-```  
+```csharp  
 using System;  
 using System.Collections.Generic;  
 using System.Linq;  

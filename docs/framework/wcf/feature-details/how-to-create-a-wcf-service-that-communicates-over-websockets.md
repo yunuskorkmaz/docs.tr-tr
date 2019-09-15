@@ -2,19 +2,19 @@
 title: 'Nasıl yapılır: WebSockets Üzerinden İletişim Kuran Bir WCF Hizmeti Oluşturma'
 ms.date: 03/30/2017
 ms.assetid: bafbbd89-eab8-4e9a-b4c3-b7b0178e12d8
-ms.openlocfilehash: 5190cdad08087b73eb247dfc236ae7b6f470af69
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 706c2886bda9497835d98eeeb594e68c2191d8d8
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626916"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969997"
 ---
-# <a name="how-to-create-a-wcf-service-that-communicates-over-websockets"></a><span data-ttu-id="1126b-102">Nasıl yapılır: WebSockets Üzerinden İletişim Kuran Bir WCF Hizmeti Oluşturma</span><span class="sxs-lookup"><span data-stu-id="1126b-102">How to: Create a WCF Service that Communicates over WebSockets</span></span>
-<span data-ttu-id="1126b-103">WCF hizmetleri ve istemcilerin <xref:System.ServiceModel.NetHttpBinding> WebSockets üzerinden iletişim kurmak için bağlama.</span><span class="sxs-lookup"><span data-stu-id="1126b-103">WCF services and clients can use the <xref:System.ServiceModel.NetHttpBinding> binding to communicate over WebSockets.</span></span>  <span data-ttu-id="1126b-104">WebSockets olacaktır kullanılabilir <xref:System.ServiceModel.NetHttpBinding> hizmet sözleşmesini tanımlayan bir geri çağırma anlaşması belirler.</span><span class="sxs-lookup"><span data-stu-id="1126b-104">WebSockets will be used when the <xref:System.ServiceModel.NetHttpBinding> determines the service contract defines a callback contract.</span></span> <span data-ttu-id="1126b-105">Bu konu açıklar nasıl uygulanacağı bir WCF hizmeti ve kullanan istemci <xref:System.ServiceModel.NetHttpBinding> WebSockets üzerinden iletişim kurmak için.</span><span class="sxs-lookup"><span data-stu-id="1126b-105">This topic describes how to implement a WCF service and client that uses the <xref:System.ServiceModel.NetHttpBinding> to communicate over WebSockets.</span></span>  
+# <a name="how-to-create-a-wcf-service-that-communicates-over-websockets"></a><span data-ttu-id="8a135-102">Nasıl yapılır: WebSockets Üzerinden İletişim Kuran Bir WCF Hizmeti Oluşturma</span><span class="sxs-lookup"><span data-stu-id="8a135-102">How to: Create a WCF Service that Communicates over WebSockets</span></span>
+<span data-ttu-id="8a135-103">WCF Hizmetleri ve istemcileri, <xref:System.ServiceModel.NetHttpBinding> WebSockets üzerinden iletişim kurmak için bağlamayı kullanabilir.</span><span class="sxs-lookup"><span data-stu-id="8a135-103">WCF services and clients can use the <xref:System.ServiceModel.NetHttpBinding> binding to communicate over WebSockets.</span></span>  <span data-ttu-id="8a135-104">WebSockets, <xref:System.ServiceModel.NetHttpBinding> hizmet sözleşmesinin bir geri çağırma anlaşması tanımladığını belirlediğinde kullanılır.</span><span class="sxs-lookup"><span data-stu-id="8a135-104">WebSockets will be used when the <xref:System.ServiceModel.NetHttpBinding> determines the service contract defines a callback contract.</span></span> <span data-ttu-id="8a135-105">Bu konuda, <xref:System.ServiceModel.NetHttpBinding> WebSockets üzerinden iletişim kurmak için kullanan bir WCF hizmeti ve istemcisinin nasıl uygulanacağı açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="8a135-105">This topic describes how to implement a WCF service and client that uses the <xref:System.ServiceModel.NetHttpBinding> to communicate over WebSockets.</span></span>  
   
-### <a name="define-the-service"></a><span data-ttu-id="1126b-106">Hizmet tanımlama</span><span class="sxs-lookup"><span data-stu-id="1126b-106">Define the Service</span></span>  
+### <a name="define-the-service"></a><span data-ttu-id="8a135-106">Hizmeti tanımlama</span><span class="sxs-lookup"><span data-stu-id="8a135-106">Define the Service</span></span>  
   
-1. <span data-ttu-id="1126b-107">Bir geri çağırma anlaşması tanımlama</span><span class="sxs-lookup"><span data-stu-id="1126b-107">Define a callback contract</span></span>  
+1. <span data-ttu-id="8a135-107">Bir geri çağırma sözleşmesi tanımlama</span><span class="sxs-lookup"><span data-stu-id="8a135-107">Define a callback contract</span></span>  
   
     ```csharp  
     [ServiceContract]  
@@ -25,9 +25,9 @@ ms.locfileid: "64626916"
         }  
     ```  
   
-     <span data-ttu-id="1126b-108">Bu sözleşme istemciye geri göndermek izin verecek şekilde istemci uygulaması tarafından uygulanacaktır.</span><span class="sxs-lookup"><span data-stu-id="1126b-108">This contract will be implemented by the client application to allow the service to send messages back to the client.</span></span>  
+     <span data-ttu-id="8a135-108">Bu sözleşme, hizmetin istemciye geri ileti göndermesini sağlamak için istemci uygulaması tarafından uygulanır.</span><span class="sxs-lookup"><span data-stu-id="8a135-108">This contract will be implemented by the client application to allow the service to send messages back to the client.</span></span>  
   
-2. <span data-ttu-id="1126b-109">Hizmet sözleşmesini tanımlama ve belirtme `IStockQuoteCallback` arabirimi olarak geri çağırma anlaşması.</span><span class="sxs-lookup"><span data-stu-id="1126b-109">Define the service contract and specify the `IStockQuoteCallback` interface as the callback contract.</span></span>  
+2. <span data-ttu-id="8a135-109">Hizmet sözleşmesini tanımlayın ve `IStockQuoteCallback` arabirimi geri çağırma sözleşmesi olarak belirtin.</span><span class="sxs-lookup"><span data-stu-id="8a135-109">Define the service contract and specify the `IStockQuoteCallback` interface as the callback contract.</span></span>  
   
     ```csharp  
     [ServiceContract(CallbackContract = typeof(IStockQuoteCallback))]  
@@ -38,9 +38,9 @@ ms.locfileid: "64626916"
         }  
     ```  
   
-3. <span data-ttu-id="1126b-110">Hizmet sözleşmesini uygulama.</span><span class="sxs-lookup"><span data-stu-id="1126b-110">Implement the service contract.</span></span>  
+3. <span data-ttu-id="8a135-110">Hizmet sözleşmesini uygulayın.</span><span class="sxs-lookup"><span data-stu-id="8a135-110">Implement the service contract.</span></span>  
   
-    ```  
+    ```csharp
     public class StockQuoteService : IStockQuoteService  
         {  
             public async Task StartSendingQuotes()  
@@ -59,9 +59,9 @@ ms.locfileid: "64626916"
         }  
     ```  
   
-     <span data-ttu-id="1126b-111">Hizmet işlemi `StartSendingQuotes` zaman uyumsuz bir çağrı uygulanır.</span><span class="sxs-lookup"><span data-stu-id="1126b-111">The service operation `StartSendingQuotes` is implemented as an asynchronous call.</span></span> <span data-ttu-id="1126b-112">Geri çağırma kanal kullanılarak alıyoruz `OperationContext` ve kanal açıksa, bir zaman uyumsuz geri çağırma kanalda çağrı vermiyoruz.</span><span class="sxs-lookup"><span data-stu-id="1126b-112">We retrieve the callback channel using the `OperationContext` and if the channel is open, we make an async call on the callback channel.</span></span>  
+     <span data-ttu-id="8a135-111">Hizmet işlemi `StartSendingQuotes` zaman uyumsuz bir çağrı olarak uygulanır.</span><span class="sxs-lookup"><span data-stu-id="8a135-111">The service operation `StartSendingQuotes` is implemented as an asynchronous call.</span></span> <span data-ttu-id="8a135-112">Kullanarak geri çağırma kanalını alıyoruz `OperationContext` ve kanal açıksa geri çağırma kanalında zaman uyumsuz bir çağrı yaptık.</span><span class="sxs-lookup"><span data-stu-id="8a135-112">We retrieve the callback channel using the `OperationContext` and if the channel is open, we make an async call on the callback channel.</span></span>  
   
-4. <span data-ttu-id="1126b-113">Hizmet yapılandırma</span><span class="sxs-lookup"><span data-stu-id="1126b-113">Configure the service</span></span>  
+4. <span data-ttu-id="8a135-113">Hizmeti yapılandırma</span><span class="sxs-lookup"><span data-stu-id="8a135-113">Configure the service</span></span>  
   
     ```xml  
     <configuration>  
@@ -90,11 +90,11 @@ ms.locfileid: "64626916"
     </configuration>  
     ```  
   
-     <span data-ttu-id="1126b-114">Hizmetin yapılandırma dosyası WCF'ın varsayılan bitiş noktası kullanır.</span><span class="sxs-lookup"><span data-stu-id="1126b-114">The service’s configuration file relies on WCF’s default endpoints.</span></span> <span data-ttu-id="1126b-115">`<protocolMapping>` Belirtmek için kullanılan bölüm `NetHttpBinding` oluşturulan varsayılan uç noktalar için kullanılmalıdır.</span><span class="sxs-lookup"><span data-stu-id="1126b-115">The `<protocolMapping>` section is used to specify that the `NetHttpBinding` should be used for the default endpoints created.</span></span>  
+     <span data-ttu-id="8a135-114">Hizmetin yapılandırma dosyası WCF 'nin varsayılan uç noktalarını kullanır.</span><span class="sxs-lookup"><span data-stu-id="8a135-114">The service’s configuration file relies on WCF’s default endpoints.</span></span> <span data-ttu-id="8a135-115">`<protocolMapping>` Bölümü ,`NetHttpBinding` oluşturulan varsayılan uç noktalar için kullanılması gerektiğini belirtmek için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="8a135-115">The `<protocolMapping>` section is used to specify that the `NetHttpBinding` should be used for the default endpoints created.</span></span>  
   
-### <a name="define-the-client"></a><span data-ttu-id="1126b-116">İstemci tanımlayın</span><span class="sxs-lookup"><span data-stu-id="1126b-116">Define the Client</span></span>  
+### <a name="define-the-client"></a><span data-ttu-id="8a135-116">Istemciyi tanımlama</span><span class="sxs-lookup"><span data-stu-id="8a135-116">Define the Client</span></span>  
   
-1. <span data-ttu-id="1126b-117">Geri çağırma anlaşması uygulayın.</span><span class="sxs-lookup"><span data-stu-id="1126b-117">Implement the callback contract.</span></span>  
+1. <span data-ttu-id="8a135-117">Geri çağırma sözleşmesini uygulayın.</span><span class="sxs-lookup"><span data-stu-id="8a135-117">Implement the callback contract.</span></span>  
   
     ```csharp  
     private class CallbackHandler : StockQuoteServiceReference.IStockQuoteServiceCallback  
@@ -106,9 +106,9 @@ ms.locfileid: "64626916"
             }  
     ```  
   
-     <span data-ttu-id="1126b-118">Geri çağırma anlaşması işlemi zaman uyumsuz bir yöntem uygulanır.</span><span class="sxs-lookup"><span data-stu-id="1126b-118">The callback contract operation is implemented as an asynchronous method.</span></span>  
+     <span data-ttu-id="8a135-118">Geri arama sözleşmesi işlemi, zaman uyumsuz bir yöntem olarak uygulanır.</span><span class="sxs-lookup"><span data-stu-id="8a135-118">The callback contract operation is implemented as an asynchronous method.</span></span>  
   
-    1. <span data-ttu-id="1126b-119">İstemci kodu uygulayın.</span><span class="sxs-lookup"><span data-stu-id="1126b-119">Implement the client code.</span></span>  
+    1. <span data-ttu-id="8a135-119">İstemci kodunu uygulayın.</span><span class="sxs-lookup"><span data-stu-id="8a135-119">Implement the client code.</span></span>  
   
         ```csharp  
         class Program  
@@ -131,9 +131,9 @@ ms.locfileid: "64626916"
         }  
         ```  
   
-         <span data-ttu-id="1126b-120">CallbackHandler açıklık için buraya yinelenir.</span><span class="sxs-lookup"><span data-stu-id="1126b-120">The CallbackHandler is repeated here for clarity.</span></span> <span data-ttu-id="1126b-121">İstemci uygulaması, yeni bir InstanceContext oluşturur ve uygulamasını geri çağırma arabirimi belirtir.</span><span class="sxs-lookup"><span data-stu-id="1126b-121">The client application creates a new InstanceContext and specifies the implementation of the callback interface.</span></span> <span data-ttu-id="1126b-122">Ardından yeni oluşturulan InstanceContext başvuru gönderme proxy sınıfının bir örneğini oluşturur.</span><span class="sxs-lookup"><span data-stu-id="1126b-122">Next it creates an instance of the proxy class sending a reference to the newly created InstanceContext.</span></span> <span data-ttu-id="1126b-123">İstemci hizmeti çağırıp, belirtilen geri çağırma anlaşması kullanarak istemci hizmeti çağırır.</span><span class="sxs-lookup"><span data-stu-id="1126b-123">When the client calls the service, the service will call the client using the callback contract specified.</span></span>  
+         <span data-ttu-id="8a135-120">CallbackHandler, açıklık açısından tekrarlanıyor.</span><span class="sxs-lookup"><span data-stu-id="8a135-120">The CallbackHandler is repeated here for clarity.</span></span> <span data-ttu-id="8a135-121">İstemci uygulaması yeni bir InstanceContext oluşturur ve geri çağırma arabiriminin uygulamasını belirtir.</span><span class="sxs-lookup"><span data-stu-id="8a135-121">The client application creates a new InstanceContext and specifies the implementation of the callback interface.</span></span> <span data-ttu-id="8a135-122">Ardından, yeni oluşturulan InstanceContext öğesine bir başvuru gönderen proxy sınıfının bir örneğini oluşturur.</span><span class="sxs-lookup"><span data-stu-id="8a135-122">Next it creates an instance of the proxy class sending a reference to the newly created InstanceContext.</span></span> <span data-ttu-id="8a135-123">İstemci hizmeti çağırdığında hizmet, belirtilen geri çağırma sözleşmesini kullanarak istemciyi çağırır.</span><span class="sxs-lookup"><span data-stu-id="8a135-123">When the client calls the service, the service will call the client using the callback contract specified.</span></span>  
   
-    2. <span data-ttu-id="1126b-124">İstemciyi yapılandırma</span><span class="sxs-lookup"><span data-stu-id="1126b-124">Configure the client</span></span>  
+    2. <span data-ttu-id="8a135-124">İstemciyi yapılandırma</span><span class="sxs-lookup"><span data-stu-id="8a135-124">Configure the client</span></span>  
   
         ```xml  
         <?xml version="1.0" encoding="utf-8" ?>  
@@ -158,10 +158,10 @@ ms.locfileid: "64626916"
         </configuration>  
         ```  
   
-         <span data-ttu-id="1126b-125">Özel istemci yapılandırmasında yapmak için yalnızca istemci tarafında kullanan uç noktasını belirtin. gereken şey `NetHttpBinding`.</span><span class="sxs-lookup"><span data-stu-id="1126b-125">There is nothing special you need to do in the client configuration, just specify the client side endpoint using the `NetHttpBinding`.</span></span>  
+         <span data-ttu-id="8a135-125">İstemci yapılandırmasında yapmanız gereken özel bir şey yoktur, kullanarak `NetHttpBinding`istemci tarafı uç noktasını belirtmeniz yeterlidir.</span><span class="sxs-lookup"><span data-stu-id="8a135-125">There is nothing special you need to do in the client configuration, just specify the client side endpoint using the `NetHttpBinding`.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="1126b-126">Örnek</span><span class="sxs-lookup"><span data-stu-id="1126b-126">Example</span></span>  
- <span data-ttu-id="1126b-127">Bu konuda kullanılan tüm kod verilmiştir.</span><span class="sxs-lookup"><span data-stu-id="1126b-127">The following is the complete code used in this topic.</span></span>  
+## <a name="example"></a><span data-ttu-id="8a135-126">Örnek</span><span class="sxs-lookup"><span data-stu-id="8a135-126">Example</span></span>  
+ <span data-ttu-id="8a135-127">Bu konuda kullanılan kodun tamamı aşağıda verilmiştir.</span><span class="sxs-lookup"><span data-stu-id="8a135-127">The following is the complete code used in this topic.</span></span>  
   
 ```csharp  
 // IStockQuoteService.cs  
@@ -191,7 +191,7 @@ namespace Server
 }  
 ```  
   
-```  
+```csharp
 // StockQuoteService.svc.cs  
 using System;  
 using System.Collections.Generic;  
@@ -257,7 +257,7 @@ namespace Server
 </configuration>  
 ```  
   
-```  
+```
 <!-- StockQuoteService.svc -->  
 <%@ ServiceHost Language="C#" Debug="true" Service="Server.StockQuoteService" CodeBehind="StockQuoteService.svc.cs" %>  
 ```  
@@ -318,7 +318,7 @@ namespace Client
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="1126b-128">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="1126b-128">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8a135-128">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="8a135-128">See also</span></span>
 
-- [<span data-ttu-id="1126b-129">Zaman Uyumlu ve Zaman Uyumsuz İşlemler</span><span class="sxs-lookup"><span data-stu-id="1126b-129">Synchronous and Asynchronous Operations</span></span>](../../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md)
-- [<span data-ttu-id="1126b-130">NetHttpBinding Kullanma</span><span class="sxs-lookup"><span data-stu-id="1126b-130">Using the NetHttpBinding</span></span>](../../../../docs/framework/wcf/feature-details/using-the-nethttpbinding.md)
+- [<span data-ttu-id="8a135-129">Zaman Uyumlu ve Zaman Uyumsuz İşlemler</span><span class="sxs-lookup"><span data-stu-id="8a135-129">Synchronous and Asynchronous Operations</span></span>](../../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md)
+- [<span data-ttu-id="8a135-130">NetHttpBinding Kullanma</span><span class="sxs-lookup"><span data-stu-id="8a135-130">Using the NetHttpBinding</span></span>](../../../../docs/framework/wcf/feature-details/using-the-nethttpbinding.md)

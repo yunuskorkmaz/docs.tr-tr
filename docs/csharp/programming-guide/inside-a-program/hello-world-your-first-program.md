@@ -1,7 +1,7 @@
 ---
-title: Merhaba Dünya--ilk program C# programlama kılavuzunuz
+title: Merhaba Dünya--Windows veya Mac 'te Visual Studio 'Yu kullanan ilk programınız- C# Programlama Kılavuzu
 ms.custom: seodec18
-ms.date: 07/20/2015
+ms.date: 09/12/2019
 f1_keywords:
 - cs.program
 - vs.csharp.startpage.firstapplication
@@ -9,135 +9,123 @@ helpviewer_keywords:
 - examples [C#], Hello World
 - Hello World example [C#]
 ms.assetid: 6493182a-b0b6-4539-a719-518a168cb730
-ms.openlocfilehash: 9a50de0bb583a1dfccfa609be1cca732868505ba
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 0807e46d36a4cf031bc44ae0dc4efab79dd51d03
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69589380"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991337"
 ---
-# <a name="hello-world----your-first-program-c-programming-guide"></a><span data-ttu-id="9f314-102">Merhaba Dünya--ilk programınız (C# Programlama Kılavuzu)</span><span class="sxs-lookup"><span data-stu-id="9f314-102">Hello World -- Your first program (C# Programming Guide)</span></span>
+# <a name="hello-world----your-first-program"></a><span data-ttu-id="22334-102">Merhaba Dünya--ilk programınız</span><span class="sxs-lookup"><span data-stu-id="22334-102">Hello World -- Your first program</span></span>
 
-<span data-ttu-id="9f314-103">Aşağıdaki yordam geleneksel bir C# "Merhaba Dünya!" sürümü oluşturuyor</span><span class="sxs-lookup"><span data-stu-id="9f314-103">The following procedure creates a C# version of the traditional "Hello World!"</span></span> <span data-ttu-id="9f314-104">programda.</span><span class="sxs-lookup"><span data-stu-id="9f314-104">program.</span></span> <span data-ttu-id="9f314-105">Program dizeyi görüntüler`Hello World!`</span><span class="sxs-lookup"><span data-stu-id="9f314-105">The program displays the string `Hello World!`</span></span>
-
-<span data-ttu-id="9f314-106">Tanıtım kavramlarıyla ilgili daha fazla örnek için bkz. [Visual C# ve Visual Basic kullanmaya](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)başlama.</span><span class="sxs-lookup"><span data-stu-id="9f314-106">For more examples of introductory concepts, see [Getting Started with Visual C# and Visual Basic](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic).</span></span>
+<span data-ttu-id="22334-103">Bu makalede, geleneksel "Merhaba Dünya!" öğesini oluşturmak için Visual Studio 'Yu kullanacaksınız</span><span class="sxs-lookup"><span data-stu-id="22334-103">In this article, you'll use Visual Studio to create the traditional "Hello World!"</span></span> <span data-ttu-id="22334-104">programda.</span><span class="sxs-lookup"><span data-stu-id="22334-104">program.</span></span> <span data-ttu-id="22334-105">Visual Studio, .NET geliştirmesi için tasarlanan çok sayıda özelliği olan profesyonel tümleşik bir geliştirme ortamıdır (IDE).</span><span class="sxs-lookup"><span data-stu-id="22334-105">Visual Studio is a professional Integrated Development Environment (IDE) with many features designed for .NET development.</span></span> <span data-ttu-id="22334-106">Bu programı oluşturmak için Visual Studio 'daki özelliklerden yalnızca birkaçını kullanacaksınız.</span><span class="sxs-lookup"><span data-stu-id="22334-106">You'll use only a few of the features in Visual Studio to create this program.</span></span> <span data-ttu-id="22334-107">Visual Studio hakkında daha fazla bilgi edinmek için bkz. [Visual C# ve Visual Basic kullanmaya](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)başlama.</span><span class="sxs-lookup"><span data-stu-id="22334-107">To learn more about Visual Studio, see [Getting Started with Visual C# and Visual Basic](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic).</span></span>
 
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]
 
-## <a name="to-create-and-run-a-console-application"></a><span data-ttu-id="9f314-107">Bir konsol uygulaması oluşturmak ve çalıştırmak için</span><span class="sxs-lookup"><span data-stu-id="9f314-107">To create and run a console application</span></span>
+## <a name="create-a-new-application"></a><span data-ttu-id="22334-108">Yeni bir uygulama oluşturun</span><span class="sxs-lookup"><span data-stu-id="22334-108">Create a new application</span></span>
 
-1. <span data-ttu-id="9f314-108">Visual Studio’yu çalıştırın.</span><span class="sxs-lookup"><span data-stu-id="9f314-108">Start Visual Studio.</span></span>
+<!-- markdownlint-disable MD025 -->
 
-2. <span data-ttu-id="9f314-109">Menü çubuğunda, **dosya**, **yeni**, **proje**.</span><span class="sxs-lookup"><span data-stu-id="9f314-109">On the menu bar, choose **File**, **New**, **Project**.</span></span>
+# <a name="windowstabwindows"></a>[<span data-ttu-id="22334-109">Windows</span><span class="sxs-lookup"><span data-stu-id="22334-109">Windows</span></span>](#tab/windows)
 
-     <span data-ttu-id="9f314-110">**Yeni proje** iletişim kutusu açılır.</span><span class="sxs-lookup"><span data-stu-id="9f314-110">The **New Project** dialog box opens.</span></span>
+<span data-ttu-id="22334-110">Visual Studio’yu çalıştırın.</span><span class="sxs-lookup"><span data-stu-id="22334-110">Start Visual Studio.</span></span> <span data-ttu-id="22334-111">Windows 'da aşağıdaki görüntüyü görürsünüz:</span><span class="sxs-lookup"><span data-stu-id="22334-111">You'll see the following image on Windows:</span></span>
 
-3. <span data-ttu-id="9f314-111">**Yüklü**' i genişletin, **Şablonlar**' ı genişletin, **C#görsel**' i genişletin ve **konsol uygulaması**' nı</span><span class="sxs-lookup"><span data-stu-id="9f314-111">Expand **Installed**, expand **Templates**, expand **Visual C#**, and then choose **Console Application**.</span></span>
+![Windows 'da Visual Studio hoş geldiniz ekranı](./media/hello-world-your-first-program/visual-studio-windows-start-screen.png)
 
-4. <span data-ttu-id="9f314-112">**Ad** kutusunda, projeniz için bir ad belirtin ve sonra **Tamam** düğmesini seçin.</span><span class="sxs-lookup"><span data-stu-id="9f314-112">In the **Name** box, specify a name for your project, and then choose the **OK** button.</span></span>
+<span data-ttu-id="22334-113">Görüntünün sağ alt köşesinde **Yeni proje oluştur** ' u seçin.</span><span class="sxs-lookup"><span data-stu-id="22334-113">Select **Create a new project** in the lower right corner of the image.</span></span> <span data-ttu-id="22334-114">Visual Studio **Yeni proje** iletişim kutusunu görüntüler:</span><span class="sxs-lookup"><span data-stu-id="22334-114">Visual Studio displays the **New Project** dialog:</span></span>
 
-     <span data-ttu-id="9f314-113">Yeni proje **Çözüm Gezgini**görüntülenir.</span><span class="sxs-lookup"><span data-stu-id="9f314-113">The new project appears in **Solution Explorer**.</span></span>
+![Windows 'da Visual Studio yeni proje ekranı](./media/hello-world-your-first-program/visual-studio-windows-new-project.png)
 
-5. <span data-ttu-id="9f314-114">**Kod Düzenleyicisi**'nde program.cs açık değilse, **Çözüm Gezgini**için kısayol menüsünü açın ve sonra **kodu görüntüle**' yi seçin.</span><span class="sxs-lookup"><span data-stu-id="9f314-114">If Program.cs isn't open in the **Code Editor**, open the shortcut menu for **Program.cs** in **Solution Explorer**, and then choose **View Code**.</span></span>
+> [!NOTE]
+> <span data-ttu-id="22334-116">Visual Studio 'Yu ilk kez başlattıysanız, **son kullanılan proje şablonları** listesi boştur.</span><span class="sxs-lookup"><span data-stu-id="22334-116">If this is the first time you've started Visual Studio, the **Recent project templates** list is empty.</span></span>
 
-6. <span data-ttu-id="9f314-115">Program.cs içeriğini aşağıdaki kodla değiştirin.</span><span class="sxs-lookup"><span data-stu-id="9f314-115">Replace the contents of Program.cs with the following code.</span></span>
+<span data-ttu-id="22334-117">Yeni proje iletişim kutusunda, "konsol uygulaması (.NET Core)" öğesini seçin ve ardından **İleri**' ye basın.</span><span class="sxs-lookup"><span data-stu-id="22334-117">On the new project dialog, choose "Console App (.NET Core)" and then press **Next**.</span></span> <span data-ttu-id="22334-118">Projenize "HelloWorld" gibi bir ad verin ve ardından **Oluştur**' a basın.</span><span class="sxs-lookup"><span data-stu-id="22334-118">Give your project a name, such as "HelloWorld", then press **Create**.</span></span>
 
-     [!code-csharp[csProgGuide#21](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/progGuide.cs#21)]
+<span data-ttu-id="22334-119">Visual Studio, projenizi açar.</span><span class="sxs-lookup"><span data-stu-id="22334-119">Visual Studio opens your project.</span></span> <span data-ttu-id="22334-120">Zaten temel bir "Merhaba Dünya!"</span><span class="sxs-lookup"><span data-stu-id="22334-120">It's already a basic "Hello World!"</span></span> <span data-ttu-id="22334-121">örneğinde.</span><span class="sxs-lookup"><span data-stu-id="22334-121">example.</span></span> <span data-ttu-id="22334-122">Projenizi `Ctrl` çalıştırmak için tuşuna basın  +  `F5` .</span><span class="sxs-lookup"><span data-stu-id="22334-122">Press `Ctrl` + `F5` to run your project.</span></span> <span data-ttu-id="22334-123">Visual Studio, projenizi oluşturup kaynak kodu yürütülebilir dosyaya dönüştürür.</span><span class="sxs-lookup"><span data-stu-id="22334-123">Visual Studio builds your project, converting the source code into an executable.</span></span> <span data-ttu-id="22334-124">Ardından, yeni uygulamanızı çalıştıran bir komut penceresi başlatır.</span><span class="sxs-lookup"><span data-stu-id="22334-124">Then, it launches a command window that runs your new application.</span></span> <span data-ttu-id="22334-125">Pencerede aşağıdaki metni görmeniz gerekir:</span><span class="sxs-lookup"><span data-stu-id="22334-125">You should see the following text in the window:</span></span>
 
-7. <span data-ttu-id="9f314-116">Projeyi çalıştırmak için F5 tuşunu seçin.</span><span class="sxs-lookup"><span data-stu-id="9f314-116">Choose the F5 key to run the project.</span></span> <span data-ttu-id="9f314-117">Satırı içeren bir komut Istemi penceresi görünür`Hello World!`</span><span class="sxs-lookup"><span data-stu-id="9f314-117">A Command Prompt window appears that contains the line `Hello World!`</span></span>
+```console
+Hello World!
 
-<span data-ttu-id="9f314-118">Daha sonra, bu programın önemli bölümleri incelenir.</span><span class="sxs-lookup"><span data-stu-id="9f314-118">Next, the important parts of this program are examined.</span></span>
+C:\Program Files\dotnet\dotnet.exe (process 11964) exited with code 0.
+Press any key to close this window . . .
+```
 
-## <a name="comments"></a><span data-ttu-id="9f314-119">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="9f314-119">Comments</span></span>
+<span data-ttu-id="22334-126">Pencereyi kapatmak için bir tuşa basın.</span><span class="sxs-lookup"><span data-stu-id="22334-126">Press a key to close the window.</span></span>
 
-<span data-ttu-id="9f314-120">İlk satır bir açıklama içerir.</span><span class="sxs-lookup"><span data-stu-id="9f314-120">The first line contains a comment.</span></span> <span data-ttu-id="9f314-121">Karakterler `//` satırın geri kalanını açıklamaya dönüştürür.</span><span class="sxs-lookup"><span data-stu-id="9f314-121">The characters `//` convert the rest of the line to a comment.</span></span>
+# <a name="macostabmacos"></a>[<span data-ttu-id="22334-127">macOS</span><span class="sxs-lookup"><span data-stu-id="22334-127">macOS</span></span>](#tab/macos)
 
- [!code-csharp[csProgGuide#32](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/progGuide.cs#32)]
+<span data-ttu-id="22334-128">Mac için Visual Studio başlatın.</span><span class="sxs-lookup"><span data-stu-id="22334-128">Start Visual Studio for Mac.</span></span> <span data-ttu-id="22334-129">Mac üzerinde aşağıdaki görüntüyü görürsünüz:</span><span class="sxs-lookup"><span data-stu-id="22334-129">You'll see the following image on Mac:</span></span>
 
-<span data-ttu-id="9f314-122">Ayrıca, bir metin bloğunu, `/*` ve `*/` karakterleri arasına ekleyerek açıklama ekleyebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="9f314-122">You can also comment out a block of text by enclosing it between the `/*` and `*/` characters.</span></span> <span data-ttu-id="9f314-123">Bu, aşağıdaki örnekte gösterilir.</span><span class="sxs-lookup"><span data-stu-id="9f314-123">This is shown in the following example.</span></span>
+![Mac üzerinde Visual Studio hoş geldiniz ekranı](./media/hello-world-your-first-program/visual-studio-mac-start-screen.png)
 
- [!code-csharp[csProgGuide#33](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/progGuide.cs#33)]
+> [!NOTE]
+> <span data-ttu-id="22334-131">Mac için Visual Studio ilk kez başladıysanız, **son projeler** listesi boştur.</span><span class="sxs-lookup"><span data-stu-id="22334-131">If this is the first time you've started Visual Studio for Mac, the **Recent projects** list is empty.</span></span>
 
-## <a name="main-method"></a><span data-ttu-id="9f314-124">Main yöntemi</span><span class="sxs-lookup"><span data-stu-id="9f314-124">Main method</span></span>
+<span data-ttu-id="22334-132">Görüntünün sağ üst köşesindeki **Yeni** ' yi seçin.</span><span class="sxs-lookup"><span data-stu-id="22334-132">Select **New** in the upper right corner of the image.</span></span> <span data-ttu-id="22334-133">**Yeni proje** iletişim kutusunu Mac için Visual Studio görüntüler:</span><span class="sxs-lookup"><span data-stu-id="22334-133">Visual Studio for Mac displays the **New Project** dialog:</span></span>
 
-<span data-ttu-id="9f314-125">C# Konsol uygulaması, denetimin başladığı ve `Main` bittiği bir yöntemi içermelidir.</span><span class="sxs-lookup"><span data-stu-id="9f314-125">A C# console application must contain a `Main` method, in which control starts and ends.</span></span> <span data-ttu-id="9f314-126">`Main` Yöntemi nesne oluşturduğunuz ve diğer yöntemleri yürütebileceğiniz yerdir.</span><span class="sxs-lookup"><span data-stu-id="9f314-126">The `Main` method is where you create objects and execute other methods.</span></span>
+![Mac 'te Visual Studio yeni proje ekranı](./media/hello-world-your-first-program/visual-studio-mac-new-project.png)
 
-<span data-ttu-id="9f314-127">Yöntemi, bir sınıf veya yapı içinde bulunan statik bir yöntemdir. [](../../language-reference/keywords/static.md) `Main`</span><span class="sxs-lookup"><span data-stu-id="9f314-127">The `Main` method is a [static](../../language-reference/keywords/static.md) method that resides inside a class or a struct.</span></span> <span data-ttu-id="9f314-128">Önceki "Merhaba Dünya!"</span><span class="sxs-lookup"><span data-stu-id="9f314-128">In the previous "Hello World!"</span></span> <span data-ttu-id="9f314-129">örnek, adlı `Hello`bir sınıfta bulunur.</span><span class="sxs-lookup"><span data-stu-id="9f314-129">example, it resides in a class named `Hello`.</span></span> <span data-ttu-id="9f314-130">`Main` Yöntemi aşağıdaki yöntemlerden biriyle bildirebilirsiniz:</span><span class="sxs-lookup"><span data-stu-id="9f314-130">You can declare the `Main` method in one of the following ways:</span></span>
+<span data-ttu-id="22334-135">Yeni proje iletişim kutusunda ".NET Core" ve "konsol uygulaması" ' nı seçin ve ardından **İleri**' ye basın.</span><span class="sxs-lookup"><span data-stu-id="22334-135">On the new project dialog, choose ".NET Core", and "Console App" and then press **Next**.</span></span> <span data-ttu-id="22334-136">Hedef Framework 'ü seçmeniz gerekir.</span><span class="sxs-lookup"><span data-stu-id="22334-136">You'll need to select the target framework.</span></span> <span data-ttu-id="22334-137">Varsayılan değer iyidir, bu nedenle ileri ' ye basın.</span><span class="sxs-lookup"><span data-stu-id="22334-137">The default is fine, so press next.</span></span> <span data-ttu-id="22334-138">Projenize "HelloWorld" gibi bir ad verin ve ardından **Oluştur**' a basın.</span><span class="sxs-lookup"><span data-stu-id="22334-138">Give your project a name, such as "HelloWorld", then press **Create**.</span></span> <span data-ttu-id="22334-139">Varsayılan proje konumunu kullanabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="22334-139">You can use the default project location.</span></span> <span data-ttu-id="22334-140">Bu projeyi kaynak denetimine eklemeyin.</span><span class="sxs-lookup"><span data-stu-id="22334-140">Don't add this project to source control.</span></span>
 
-- <span data-ttu-id="9f314-131">Bu, döndürebilir `void`.</span><span class="sxs-lookup"><span data-stu-id="9f314-131">It can return `void`.</span></span>
+<span data-ttu-id="22334-141">Mac için Visual Studio projenizi açar.</span><span class="sxs-lookup"><span data-stu-id="22334-141">Visual Studio for Mac opens your project.</span></span> <span data-ttu-id="22334-142">Zaten temel bir "Merhaba Dünya!"</span><span class="sxs-lookup"><span data-stu-id="22334-142">It's already a basic "Hello World!"</span></span> <span data-ttu-id="22334-143">örneğinde.</span><span class="sxs-lookup"><span data-stu-id="22334-143">example.</span></span> <span data-ttu-id="22334-144">Projenizi `Ctrl` çalıştırmak için tuşuna basın.  +  `Fn`  +  `F5`</span><span class="sxs-lookup"><span data-stu-id="22334-144">Press `Ctrl` + `Fn` + `F5` to run your project.</span></span> <span data-ttu-id="22334-145">Mac için Visual Studio, projenizi derleme ve kaynak kodu çalıştırılabilir dosyaya dönüştürme.</span><span class="sxs-lookup"><span data-stu-id="22334-145">Visual Studio for Mac builds your project, converting the source code into an executable.</span></span> <span data-ttu-id="22334-146">Ardından, yeni uygulamanızı çalıştıran bir komut penceresi başlatır.</span><span class="sxs-lookup"><span data-stu-id="22334-146">Then, it launches a command window that runs your new application.</span></span> <span data-ttu-id="22334-147">Pencerede aşağıdaki metni görmeniz gerekir:</span><span class="sxs-lookup"><span data-stu-id="22334-147">You should see the following text in the window:</span></span>
 
-     [!code-csharp[csProgGuideMain#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#12)]
+```console
+Hello World!
 
-- <span data-ttu-id="9f314-132">Ayrıca, bir tamsayı döndürebilir.</span><span class="sxs-lookup"><span data-stu-id="9f314-132">It can also return an integer.</span></span>
+Press any key to close this window . . .
+```
 
-     [!code-csharp[csProgGuideMain#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#13)]
+<span data-ttu-id="22334-148">Oturumu sonlandırmak için bir tuşa basın.</span><span class="sxs-lookup"><span data-stu-id="22334-148">Press a key to end the session.</span></span>
 
-- <span data-ttu-id="9f314-133">Dönüş türlerinden biri ile bağımsız değişken alabilir.</span><span class="sxs-lookup"><span data-stu-id="9f314-133">With either of the return types, it can take arguments.</span></span>
+---
 
-     [!code-csharp[csProgGuideMain#19](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#19)]
+## <a name="elements-of-a-c-program"></a><span data-ttu-id="22334-149">Bir C# programın öğeleri</span><span class="sxs-lookup"><span data-stu-id="22334-149">Elements of a C# program</span></span>
 
-     <span data-ttu-id="9f314-134">-veya-</span><span class="sxs-lookup"><span data-stu-id="9f314-134">-or-</span></span>
+<span data-ttu-id="22334-150">Bu programın önemli kısımlarını inceleyelim.</span><span class="sxs-lookup"><span data-stu-id="22334-150">Let's examine the important parts of this program.</span></span> <span data-ttu-id="22334-151">İlk satır bir açıklama içerir.</span><span class="sxs-lookup"><span data-stu-id="22334-151">The first line contains a comment.</span></span> <span data-ttu-id="22334-152">Karakterler `//` satırın geri kalanını açıklamaya dönüştürür.</span><span class="sxs-lookup"><span data-stu-id="22334-152">The characters `//` convert the rest of the line to a comment.</span></span>
 
-     [!code-csharp[csProgGuideMain#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#18)]
+[!code-csharp[csProgGuide#32](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/progGuide.cs#32)]
 
-<span data-ttu-id="9f314-135">Yönteminin parametresi, programı çağırmak için kullanılan komut satırı `string` bağımsız değişkenlerini içeren bir dizidir. `args` `Main`</span><span class="sxs-lookup"><span data-stu-id="9f314-135">The parameter of the `Main` method, `args`, is a `string` array that contains the command-line arguments used to invoke the program.</span></span> <span data-ttu-id="9f314-136">Öğesinden farklı C++olarak, dizi yürütülebilir (exe) dosyanın adını içermez.</span><span class="sxs-lookup"><span data-stu-id="9f314-136">Unlike in C++, the array does not include the name of the executable (exe) file.</span></span>
+<span data-ttu-id="22334-153">Ayrıca, bir metin bloğunu, `/*` ve `*/` karakterleri arasına ekleyerek açıklama ekleyebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="22334-153">You can also comment out a block of text by enclosing it between the `/*` and `*/` characters.</span></span> <span data-ttu-id="22334-154">Bu, aşağıdaki örnekte gösterilir.</span><span class="sxs-lookup"><span data-stu-id="22334-154">This is shown in the following example.</span></span>
 
-<span data-ttu-id="9f314-137">Komut satırı bağımsız değişkenlerinin nasıl kullanılacağı hakkında daha fazla bilgi için, [ana () ve komut satırı bağımsız değişkenlerinde](../main-and-command-args/index.md) örneklere ve [nasıl yapılacağını görün: Komut satırını](../concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md)kullanarak derlemeleri oluşturun ve kullanın.</span><span class="sxs-lookup"><span data-stu-id="9f314-137">For more information about how to use command-line arguments, see the examples in [Main() and Command-Line Arguments](../main-and-command-args/index.md) and [How to: Create and Use Assemblies Using the Command Line](../concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md).</span></span>
+[!code-csharp[csProgGuide#33](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/progGuide.cs#33)]
 
-<span data-ttu-id="9f314-138">`Main` Yönteminin sonunda öğesine yapılan <xref:System.Console.ReadKey%2A> çağrı, F5 tuşuna basarak, programınızı hata ayıklama modunda çalıştırdığınızda çıktıyı okuma şansınız olmadan önce konsol penceresinin bitmesini önler.</span><span class="sxs-lookup"><span data-stu-id="9f314-138">The call to <xref:System.Console.ReadKey%2A> at the end of the `Main` method prevents the console window from closing before you have a chance to read the output when you run your program in debug mode, by pressing F5.</span></span>
+<span data-ttu-id="22334-155">C# Konsol uygulaması, denetimin başladığı ve `Main` bittiği bir yöntemi içermelidir.</span><span class="sxs-lookup"><span data-stu-id="22334-155">A C# console application must contain a `Main` method, in which control starts and ends.</span></span> <span data-ttu-id="22334-156">`Main` Yöntemi nesne oluşturduğunuz ve diğer yöntemleri yürütebileceğiniz yerdir.</span><span class="sxs-lookup"><span data-stu-id="22334-156">The `Main` method is where you create objects and execute other methods.</span></span>
 
-## <a name="input-and-output"></a><span data-ttu-id="9f314-139">Girdi ve çıktı</span><span class="sxs-lookup"><span data-stu-id="9f314-139">Input and output</span></span>
+<span data-ttu-id="22334-157">Yöntemi, bir sınıf veya yapı içinde bulunan statik bir yöntemdir. [](../../language-reference/keywords/static.md) `Main`</span><span class="sxs-lookup"><span data-stu-id="22334-157">The `Main` method is a [static](../../language-reference/keywords/static.md) method that resides inside a class or a struct.</span></span> <span data-ttu-id="22334-158">Önceki "Merhaba Dünya!"</span><span class="sxs-lookup"><span data-stu-id="22334-158">In the previous "Hello World!"</span></span> <span data-ttu-id="22334-159">örnek, adlı `Hello`bir sınıfta bulunur.</span><span class="sxs-lookup"><span data-stu-id="22334-159">example, it resides in a class named `Hello`.</span></span> <span data-ttu-id="22334-160">`Main` Yöntemi aşağıdaki yöntemlerden biriyle bildirebilirsiniz:</span><span class="sxs-lookup"><span data-stu-id="22334-160">You can declare the `Main` method in one of the following ways:</span></span>
 
-<span data-ttu-id="9f314-140">C#programlar genellikle .NET Framework çalışma zamanı kitaplığı tarafından sunulan giriş/çıkış hizmetlerini kullanır.</span><span class="sxs-lookup"><span data-stu-id="9f314-140">C# programs generally use the input/output services provided by the run-time library of the .NET Framework.</span></span> <span data-ttu-id="9f314-141">İfade `System.Console.WriteLine("Hello World!");` yöntemini<xref:System.Console.WriteLine%2A> kullanır.</span><span class="sxs-lookup"><span data-stu-id="9f314-141">The statement `System.Console.WriteLine("Hello World!");` uses the <xref:System.Console.WriteLine%2A> method.</span></span> <span data-ttu-id="9f314-142">Bu, çalışma zamanı kitaplığındaki <xref:System.Console> sınıfının çıkış yöntemlerinden biridir.</span><span class="sxs-lookup"><span data-stu-id="9f314-142">This is one of the output methods of the <xref:System.Console> class in the run-time library.</span></span> <span data-ttu-id="9f314-143">Dize parametresini standart çıkış akışında ve ardından yeni bir satırla görüntüler.</span><span class="sxs-lookup"><span data-stu-id="9f314-143">It displays its string parameter on the standard output stream followed by a new line.</span></span> <span data-ttu-id="9f314-144">Farklı <xref:System.Console> giriş ve çıkış işlemleri için diğer yöntemler kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="9f314-144">Other <xref:System.Console> methods are available for different input and output operations.</span></span> <span data-ttu-id="9f314-145">Programın başına `using System;` yönergesini eklerseniz, <xref:System> sınıfları ve yöntemleri tamamen nitelemeden doğrudan kullanabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="9f314-145">If you include the `using System;` directive at the beginning of the program, you can directly use the <xref:System> classes and methods without fully qualifying them.</span></span> <span data-ttu-id="9f314-146">Örneğin, `Console.WriteLine` `System.Console.WriteLine`yerine şunu çağırabilirsiniz:</span><span class="sxs-lookup"><span data-stu-id="9f314-146">For example, you can call `Console.WriteLine` instead of `System.Console.WriteLine`:</span></span>
+- <span data-ttu-id="22334-161">Bu, döndürebilir `void`.</span><span class="sxs-lookup"><span data-stu-id="22334-161">It can return `void`.</span></span> <span data-ttu-id="22334-162">Bu, programınızın bir değer döndürmeyeceği anlamına gelir.</span><span class="sxs-lookup"><span data-stu-id="22334-162">That means your program doesn't return a value.</span></span>
 
- [!code-csharp[csProgGuide#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/using.cs#1)]
+[!code-csharp[csProgGuideMain#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#12)]
 
- [!code-csharp[csProgGuide#23](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/progGuide.cs#23)]
+- <span data-ttu-id="22334-163">Ayrıca, bir tamsayı döndürebilir.</span><span class="sxs-lookup"><span data-stu-id="22334-163">It can also return an integer.</span></span> <span data-ttu-id="22334-164">Tamsayı, uygulamanız için **Çıkış kodudur** .</span><span class="sxs-lookup"><span data-stu-id="22334-164">The integer is the **exit code** for your application.</span></span>
 
-<span data-ttu-id="9f314-147">Giriş/çıkış yöntemleri hakkında daha fazla bilgi için bkz <xref:System.IO>.</span><span class="sxs-lookup"><span data-stu-id="9f314-147">For more information about input/output methods, see <xref:System.IO>.</span></span>
+[!code-csharp[csProgGuideMain#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#13)]
 
-## <a name="command-line-compilation-and-execution"></a><span data-ttu-id="9f314-148">Komut satırı derleme ve yürütme</span><span class="sxs-lookup"><span data-stu-id="9f314-148">Command-line compilation and execution</span></span>
+- <span data-ttu-id="22334-165">Dönüş türlerinden biri ile bağımsız değişken alabilir.</span><span class="sxs-lookup"><span data-stu-id="22334-165">With either of the return types, it can take arguments.</span></span>
 
-<span data-ttu-id="9f314-149">"Merhaba Dünya!" öğesini derleyebilirsiniz</span><span class="sxs-lookup"><span data-stu-id="9f314-149">You can compile the "Hello World!"</span></span> <span data-ttu-id="9f314-150">Visual Studio tümleşik geliştirme ortamı (IDE) yerine komut satırını kullanarak program.</span><span class="sxs-lookup"><span data-stu-id="9f314-150">program by using the command line instead of the Visual Studio Integrated Development Environment (IDE).</span></span>
+[!code-csharp[csProgGuideMain#19](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#19)]
 
-### <a name="to-compile-and-run-from-a-command-prompt"></a><span data-ttu-id="9f314-151">Derlemek ve bir komut satırından çalıştırmak için</span><span class="sxs-lookup"><span data-stu-id="9f314-151">To compile and run from a command prompt</span></span>
+<span data-ttu-id="22334-166">-veya-</span><span class="sxs-lookup"><span data-stu-id="22334-166">-or-</span></span>
 
-1. <span data-ttu-id="9f314-152">Önceki yordamdan kodu herhangi bir metin düzenleyicisine yapıştırın ve sonra dosyayı bir metin dosyası olarak kaydedin.</span><span class="sxs-lookup"><span data-stu-id="9f314-152">Paste the code from the preceding procedure into any text editor, and then save the file as a text file.</span></span> <span data-ttu-id="9f314-153">Dosyayı `Hello.cs` olarak adlandırın.</span><span class="sxs-lookup"><span data-stu-id="9f314-153">Name the file `Hello.cs`.</span></span> <span data-ttu-id="9f314-154">C#kaynak kodu dosyaları uzantısını `.cs`kullanır.</span><span class="sxs-lookup"><span data-stu-id="9f314-154">C# source code files use the extension `.cs`.</span></span>
+[!code-csharp[csProgGuideMain#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#18)]
 
-2. <span data-ttu-id="9f314-155">Bir komut istemi penceresi açmak için aşağıdaki adımlardan birini gerçekleştirin:</span><span class="sxs-lookup"><span data-stu-id="9f314-155">Perform one of the following steps to open a command-prompt window:</span></span>
+<span data-ttu-id="22334-167">Yönteminin parametresi, programı çağırmak için kullanılan komut satırı `string` bağımsız değişkenlerini içeren bir dizidir. `args` `Main`</span><span class="sxs-lookup"><span data-stu-id="22334-167">The parameter of the `Main` method, `args`, is a `string` array that contains the command-line arguments used to invoke the program.</span></span>
 
-    - <span data-ttu-id="9f314-156">Windows 10 ' da, **Başlat** menüsünde, için `Developer Command Prompt`arama yapın ve sonra **vs 2017 için geliştirici komut istemi**' yi seçin.</span><span class="sxs-lookup"><span data-stu-id="9f314-156">In Windows 10, on the **Start** menu, search for `Developer Command Prompt`, and then tap or choose **Developer Command Prompt for VS 2017**.</span></span>
+<span data-ttu-id="22334-168">Komut satırı bağımsız değişkenlerinin nasıl kullanılacağı hakkında daha fazla bilgi için, [ana () ve komut satırı bağımsız değişkenlerinde](../main-and-command-args/index.md)örneklere bakın.</span><span class="sxs-lookup"><span data-stu-id="22334-168">For more information about how to use command-line arguments, see the examples in [Main() and Command-Line Arguments](../main-and-command-args/index.md).</span></span>
 
-         <span data-ttu-id="9f314-157">Geliştirici Komut İstemi bir pencere görüntülenir.</span><span class="sxs-lookup"><span data-stu-id="9f314-157">A Developer Command Prompt window appears.</span></span>
+## <a name="input-and-output"></a><span data-ttu-id="22334-169">Girdi ve çıktı</span><span class="sxs-lookup"><span data-stu-id="22334-169">Input and output</span></span>
 
-    - <span data-ttu-id="9f314-158">Windows 7 ' de, **Başlat** menüsünü açın, Visual Studio 'nun geçerli sürümüne ait klasörü genişletin, **Visual Studio Araçları**için KıSAYOL menüsünü açın ve **vs 2017 için geliştirici komut istemi**öğesini seçin.</span><span class="sxs-lookup"><span data-stu-id="9f314-158">In Windows 7, open the **Start** menu, expand the folder for the current version of Visual Studio, open the shortcut menu for **Visual Studio Tools**, and then choose **Developer Command Prompt for VS 2017**.</span></span>
+<span data-ttu-id="22334-170">C#programlar genellikle .NET Framework çalışma zamanı kitaplığı tarafından sunulan giriş/çıkış hizmetlerini kullanır.</span><span class="sxs-lookup"><span data-stu-id="22334-170">C# programs generally use the input/output services provided by the run-time library of the .NET Framework.</span></span> <span data-ttu-id="22334-171">İfade `System.Console.WriteLine("Hello World!");` yöntemini<xref:System.Console.WriteLine%2A> kullanır.</span><span class="sxs-lookup"><span data-stu-id="22334-171">The statement `System.Console.WriteLine("Hello World!");` uses the <xref:System.Console.WriteLine%2A> method.</span></span> <span data-ttu-id="22334-172">Bu, çalışma zamanı kitaplığındaki <xref:System.Console> sınıfının çıkış yöntemlerinden biridir.</span><span class="sxs-lookup"><span data-stu-id="22334-172">This is one of the output methods of the <xref:System.Console> class in the run-time library.</span></span> <span data-ttu-id="22334-173">Dize parametresini standart çıkış akışında ve ardından yeni bir satırla görüntüler.</span><span class="sxs-lookup"><span data-stu-id="22334-173">It displays its string parameter on the standard output stream followed by a new line.</span></span> <span data-ttu-id="22334-174">Farklı <xref:System.Console> giriş ve çıkış işlemleri için diğer yöntemler kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="22334-174">Other <xref:System.Console> methods are available for different input and output operations.</span></span> <span data-ttu-id="22334-175">Programın başına `using System;` yönergesini eklerseniz, <xref:System> sınıfları ve yöntemleri tamamen nitelemeden doğrudan kullanabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="22334-175">If you include the `using System;` directive at the beginning of the program, you can directly use the <xref:System> classes and methods without fully qualifying them.</span></span> <span data-ttu-id="22334-176">Örneğin, `Console.WriteLine` `System.Console.WriteLine`yerine şunu çağırabilirsiniz:</span><span class="sxs-lookup"><span data-stu-id="22334-176">For example, you can call `Console.WriteLine` instead of `System.Console.WriteLine`:</span></span>
 
-         <span data-ttu-id="9f314-159">Geliştirici Komut İstemi bir pencere görüntülenir.</span><span class="sxs-lookup"><span data-stu-id="9f314-159">A Developer Command Prompt window appears.</span></span>
+[!code-csharp[csProgGuide#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/using.cs#1)]
 
-    - <span data-ttu-id="9f314-160">Komut satırı derlemelerini standart bir komut Istemi penceresinden etkinleştirin.</span><span class="sxs-lookup"><span data-stu-id="9f314-160">Enable command-line builds from a standard Command Prompt window.</span></span>
+[!code-csharp[csProgGuide#23](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/progGuide.cs#23)]
 
-         <span data-ttu-id="9f314-161">Bkz [. nasıl yapılır: Visual Studio komut satırı](../../language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)için ortam değişkenlerini ayarlayın.</span><span class="sxs-lookup"><span data-stu-id="9f314-161">See [How to: Set Environment Variables for the Visual Studio Command Line](../../language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md).</span></span>
+<span data-ttu-id="22334-177">Giriş/çıkış yöntemleri hakkında daha fazla bilgi için bkz <xref:System.IO>.</span><span class="sxs-lookup"><span data-stu-id="22334-177">For more information about input/output methods, see <xref:System.IO>.</span></span>
 
-3. <span data-ttu-id="9f314-162">Komut istemi penceresinde, `Hello.cs` dosyanızı içeren klasöre gidin.</span><span class="sxs-lookup"><span data-stu-id="9f314-162">In the command-prompt window, navigate to the folder that contains your `Hello.cs` file.</span></span>
+## <a name="see-also"></a><span data-ttu-id="22334-178">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="22334-178">See also</span></span>
 
-4. <span data-ttu-id="9f314-163">Derlemek `Hello.cs`için aşağıdaki komutu girin.</span><span class="sxs-lookup"><span data-stu-id="9f314-163">Enter the following command to compile `Hello.cs`.</span></span>
-
-     `csc Hello.cs`
-
-     <span data-ttu-id="9f314-164">Programınızın derleme hatası yoksa, adında `Hello.exe` bir yürütülebilir dosya oluşturulur.</span><span class="sxs-lookup"><span data-stu-id="9f314-164">If your program has no compilation errors, an executable file that is named `Hello.exe` is created.</span></span>
-
-5. <span data-ttu-id="9f314-165">Komut istemi penceresinde, programı çalıştırmak için aşağıdaki komutu girin:</span><span class="sxs-lookup"><span data-stu-id="9f314-165">In the command-prompt window, enter the following command to run the program:</span></span>
-
-     `Hello`
-
- <span data-ttu-id="9f314-166">C# Derleyici ve seçenekleri hakkında daha fazla bilgi için bkz [ C# . derleyici seçenekleri](../../language-reference/compiler-options/index.md).</span><span class="sxs-lookup"><span data-stu-id="9f314-166">For more information about the C# compiler and its options, see [C# Compiler Options](../../language-reference/compiler-options/index.md).</span></span>
-
-## <a name="see-also"></a><span data-ttu-id="9f314-167">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="9f314-167">See also</span></span>
-
-- [<span data-ttu-id="9f314-168">C# Programlama Kılavuzu</span><span class="sxs-lookup"><span data-stu-id="9f314-168">C# Programming Guide</span></span>](../index.md)
-- [<span data-ttu-id="9f314-169">C# Programı İçinde</span><span class="sxs-lookup"><span data-stu-id="9f314-169">Inside a C# Program</span></span>](./index.md)
-- [<span data-ttu-id="9f314-170">Dizeler</span><span class="sxs-lookup"><span data-stu-id="9f314-170">Strings</span></span>](../strings/index.md)
-- [<span data-ttu-id="9f314-171">Örnekler ve öğreticiler</span><span class="sxs-lookup"><span data-stu-id="9f314-171">Samples and tutorials</span></span>](../../../samples-and-tutorials/index.md)
-- [<span data-ttu-id="9f314-172">C#Başvurunun</span><span class="sxs-lookup"><span data-stu-id="9f314-172">C# Reference</span></span>](../../language-reference/index.md)
-- [<span data-ttu-id="9f314-173">Ana() ve Komut Satırı Bağımsız Değişkenleri</span><span class="sxs-lookup"><span data-stu-id="9f314-173">Main() and Command-Line Arguments</span></span>](../main-and-command-args/index.md)
-- [<span data-ttu-id="9f314-174">Visual C# ve Visual Basic'e Başlarken</span><span class="sxs-lookup"><span data-stu-id="9f314-174">Getting Started with Visual C# and Visual Basic</span></span>](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)
+- [<span data-ttu-id="22334-179">C# Programlama Kılavuzu</span><span class="sxs-lookup"><span data-stu-id="22334-179">C# Programming Guide</span></span>](../index.md)
+- [<span data-ttu-id="22334-180">Örnekler ve öğreticiler</span><span class="sxs-lookup"><span data-stu-id="22334-180">Samples and tutorials</span></span>](../../../samples-and-tutorials/index.md)
+- [<span data-ttu-id="22334-181">Ana() ve Komut Satırı Bağımsız Değişkenleri</span><span class="sxs-lookup"><span data-stu-id="22334-181">Main() and Command-Line Arguments</span></span>](../main-and-command-args/index.md)
+- [<span data-ttu-id="22334-182">Visual C# ve Visual Basic'e Başlarken</span><span class="sxs-lookup"><span data-stu-id="22334-182">Getting Started with Visual C# and Visual Basic</span></span>](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)

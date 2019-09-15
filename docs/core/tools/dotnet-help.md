@@ -1,45 +1,49 @@
 ---
-title: DotNet Yardım komutu
-description: Belirtilen komut için çevrimiçi belgeleri ayrıntılı dotnet help komutunu gösterir.
-ms.date: 12/04/2018
-ms.openlocfilehash: 8694494720cdb9a540754fdf79eeb99d5dbe61ef
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+title: DotNet yardım komutu
+description: DotNet yardım komutu, belirtilen komut için çevrimiçi daha ayrıntılı belgeler gösterir.
+ms.date: 08/08/2019
+ms.openlocfilehash: e76f858f2529afc50646473f1aab9d52730cff16
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65631974"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70990468"
 ---
-# <a name="dotnet-help-reference"></a><span data-ttu-id="309d5-103">DotNet Yardım başvurusu</span><span class="sxs-lookup"><span data-stu-id="309d5-103">dotnet help reference</span></span>
+# <a name="dotnet-help-reference"></a><span data-ttu-id="ef57e-103">DotNet yardım başvurusu</span><span class="sxs-lookup"><span data-stu-id="ef57e-103">dotnet help reference</span></span>
 
+<span data-ttu-id="ef57e-104">**Bu makale şu şekilde geçerlidir: ✓** .net Core 2,0 SDK ve sonraki sürümleri</span><span class="sxs-lookup"><span data-stu-id="ef57e-104">**This article applies to: ✓** .NET Core 2.0 SDK and later versions</span></span>
+
+<!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-2plus.md)]
+-->
 
-## <a name="name"></a><span data-ttu-id="309d5-104">Ad</span><span class="sxs-lookup"><span data-stu-id="309d5-104">Name</span></span>
+## <a name="name"></a><span data-ttu-id="ef57e-105">Ad</span><span class="sxs-lookup"><span data-stu-id="ef57e-105">Name</span></span>
 
-<span data-ttu-id="309d5-105">`dotnet help` -Gösterir, belirtilen komut için çevrimiçi belgeleri daha ayrıntılı.</span><span class="sxs-lookup"><span data-stu-id="309d5-105">`dotnet help` - Shows more detailed documentation online for the specified command.</span></span>
+<span data-ttu-id="ef57e-106">`dotnet help`-Belirtilen komut için çevrimiçi daha ayrıntılı belgeler gösterir.</span><span class="sxs-lookup"><span data-stu-id="ef57e-106">`dotnet help` - Shows more detailed documentation online for the specified command.</span></span>
 
-## <a name="synopsis"></a><span data-ttu-id="309d5-106">Synopsis</span><span class="sxs-lookup"><span data-stu-id="309d5-106">Synopsis</span></span>
+## <a name="synopsis"></a><span data-ttu-id="ef57e-107">Özeti</span><span class="sxs-lookup"><span data-stu-id="ef57e-107">Synopsis</span></span>
 
 `dotnet help <COMMAND_NAME> [-h|--help]`
 
-## <a name="description"></a><span data-ttu-id="309d5-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="309d5-107">Description</span></span>
+## <a name="description"></a><span data-ttu-id="ef57e-108">Açıklama</span><span class="sxs-lookup"><span data-stu-id="ef57e-108">Description</span></span>
 
-<span data-ttu-id="309d5-108">`dotnet help` Docs.microsoft.com belirtilen komut hakkında daha ayrıntılı bilgi için komut başvuru page up açar.</span><span class="sxs-lookup"><span data-stu-id="309d5-108">The `dotnet help` command opens up the reference page for more detailed information about the specified command at docs.microsoft.com.</span></span>
+<span data-ttu-id="ef57e-109">`dotnet help` Komut, docs.Microsoft.com adresinde belirtilen komutla ilgili daha ayrıntılı bilgi için başvuru sayfasını açar.</span><span class="sxs-lookup"><span data-stu-id="ef57e-109">The `dotnet help` command opens up the reference page for more detailed information about the specified command at docs.microsoft.com.</span></span>
 
-## <a name="arguments"></a><span data-ttu-id="309d5-109">Arguments</span><span class="sxs-lookup"><span data-stu-id="309d5-109">Arguments</span></span>
+## <a name="arguments"></a><span data-ttu-id="ef57e-110">Arguments</span><span class="sxs-lookup"><span data-stu-id="ef57e-110">Arguments</span></span>
 
 * **`COMMAND_NAME`**
 
-  <span data-ttu-id="309d5-110">.NET Core CLI komut adı.</span><span class="sxs-lookup"><span data-stu-id="309d5-110">Name of the .NET Core CLI command.</span></span> <span data-ttu-id="309d5-111">Geçerli CLI komutlarının bir listesi için bkz. [CLI komutları](index.md#cli-commands).</span><span class="sxs-lookup"><span data-stu-id="309d5-111">For a list of the valid CLI commands, see [CLI commands](index.md#cli-commands).</span></span>
+  <span data-ttu-id="ef57e-111">.NET Core CLI komutunun adı.</span><span class="sxs-lookup"><span data-stu-id="ef57e-111">Name of the .NET Core CLI command.</span></span> <span data-ttu-id="ef57e-112">Geçerli CLı komutlarının bir listesi için bkz. [CLI komutları](index.md#cli-commands).</span><span class="sxs-lookup"><span data-stu-id="ef57e-112">For a list of the valid CLI commands, see [CLI commands](index.md#cli-commands).</span></span>
 
-## <a name="options"></a><span data-ttu-id="309d5-112">Seçenekler</span><span class="sxs-lookup"><span data-stu-id="309d5-112">Options</span></span>
+## <a name="options"></a><span data-ttu-id="ef57e-113">Seçenekler</span><span class="sxs-lookup"><span data-stu-id="ef57e-113">Options</span></span>
 
 * **`-h|--help`**
 
-  <span data-ttu-id="309d5-113">Komut için kısa bir Yardım yazdırır.</span><span class="sxs-lookup"><span data-stu-id="309d5-113">Prints out a short help for the command.</span></span>
+  <span data-ttu-id="ef57e-114">Komut için kısa bir yardım yazdırır.</span><span class="sxs-lookup"><span data-stu-id="ef57e-114">Prints out a short help for the command.</span></span>
 
-## <a name="examples"></a><span data-ttu-id="309d5-114">Örnekler</span><span class="sxs-lookup"><span data-stu-id="309d5-114">Examples</span></span>
+## <a name="examples"></a><span data-ttu-id="ef57e-115">Örnekler</span><span class="sxs-lookup"><span data-stu-id="ef57e-115">Examples</span></span>
 
-* <span data-ttu-id="309d5-115">İçin belgeler sayfası açılır [yeni dotnet](dotnet-new.md) komutu:</span><span class="sxs-lookup"><span data-stu-id="309d5-115">Opens the documentation page for the [dotnet new](dotnet-new.md) command:</span></span>
+* <span data-ttu-id="ef57e-116">[DotNet yeni](dotnet-new.md) komutunun belgeler sayfasını açar:</span><span class="sxs-lookup"><span data-stu-id="ef57e-116">Opens the documentation page for the [dotnet new](dotnet-new.md) command:</span></span>
 
   ```console
   dotnet help new
