@@ -2,12 +2,12 @@
 title: Gerekli Bağımsız Değişkenler ve Aşırı Yüklenmiş Gruplar
 ms.date: 03/30/2017
 ms.assetid: 4ca3ed06-b9af-4b85-8b70-88c2186aefa3
-ms.openlocfilehash: 5249cbb127064ffa5023074481a47decad279128
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 84384e90be0036036477d9b4249832f544e17d08
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964912"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989303"
 ---
 # <a name="required-arguments-and-overload-groups"></a>Gerekli Bağımsız Değişkenler ve Aşırı Yüklenmiş Gruplar
 Etkinlikler, etkinliğin yürütmeye geçerli olması için belirli bağımsız değişkenlerin bağlanması gerektiği için yapılandırılabilir. Özniteliği, bir etkinliğin belirli bağımsız değişkenlerinin gerekli olduğunu `OverloadGroup` ve öznitelik gereken bağımsız değişkenlerin kategorilerini gruplamak için kullanıldığını belirtmek için kullanılır. `RequiredArgument` Etkinlik yazarları, özniteliklerini kullanarak basit veya karmaşık etkinlik doğrulama yapılandırması sağlayabilir.  
@@ -108,8 +108,8 @@ class CreateLocation: Activity
   
  Aşağıdaki örnekte, [veritabanı erişim etkinlikleri](./samples/database-access-activities.md) örneğinden alınan iki aşırı yükleme grubu vardır: `ConnectionString` ve. `ConfigFileSectionName` Bu etkinliğin geçerli `ProviderName` olması için, ve `ConnectionString` bağımsız değişkenlerin bir veya `ConfigName` bağımsız değişken olması gerekir, ancak her ikisine birden değil.  
   
-```  
-Public class DbUpdate: AsyncCodeActivity  
+```csharp  
+public class DbUpdate: AsyncCodeActivity  
 {  
     [RequiredArgument]  
     [OverloadGroup("ConnectionString")]  

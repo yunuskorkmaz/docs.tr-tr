@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 0ee1a6b8-caac-41d2-917f-d35570021b10
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7ceee0c228000982be83c79fed2f7af43712b3ae
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f4d7cbd00dbf94900185643490b952ced7887965
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963389"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70895228"
 ---
 # <a name="details-of-regular-expression-behavior"></a>Normal İfade Davranışının Ayrıntıları
 .NET Framework normal ifade altyapısı, Perl, Python, Emacs ve Tcl tarafından kullanılan gibi geleneksel bir belirleyici olmayan sonlu bir Automaton (NFA) altyapısını içeren bir geri izleme normal ifade eşleştirici. Bu, onu daha hızlı bir şekilde ayırır, ancak awk, egrep veya Lex içinde bulunanlar gibi daha sınırlı, saf normal ifade belirleyici bir otomasyon (DFA) altyapılarından ayırt edilmesini sağlar. Bu Ayrıca, bunu standartlaştırılmış, ancak daha yavaş, POSIX NFAs olarak da ayırır. Aşağıdaki bölümde, normal ifade altyapısının üç türü açıklanmakta ve .NET Framework normal ifadelerin geleneksel bir NFA altyapısı kullanılarak nasıl uygulandığı açıklanmaktadır.  
@@ -86,7 +86,7 @@ ms.locfileid: "69963389"
   
      Olumsuz ileri onaylar hakkında daha fazla bilgi için bkz. [gruplandırma yapıları](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
   
-- Koşullu değerlendirme: `(?(` *ifade*`)`*Evet*Hayır ve ad Evet Hayır`|``)` `(?(``)` `|``)`burada *ifade* eşleşmek üzere bir alt ifade, *ad* bir yakalama grubunun adıdır,, *ifade* eşleşirse veya *ad* geçerli, boş bir yakalanamayan grup ise, eşleşen dize ve *Hayır* *ifadesi* eşleşmezse veya *ad* geçerli, boş olmayan bir yakalanan grup değilse, eşleştirilecek alt ifade yoktur. Bu özellik, bir önceki alt ifadenin veya sıfır genişlikli bir onaylama sonucuna bağlı olarak, altyapının birden fazla alternatif model kullanarak arama yapmasına olanak sağlar. Bu, örneğin, önceki alt ifadenin eşleştirildiği bir alt ifadeyi eşleştirmesine izin veren daha güçlü bir geri başvuru biçimi sağlar. Aşağıdaki örnekteki normal ifade, hem genel hem de iç kullanım için tasarlanan paragraflarla eşleşir. Yalnızca iç kullanım için tasarlanan paragraflar bir `<PRIVATE>` etiketle başlar. Normal ifade deseninin `^(?<Pvt>\<PRIVATE\>\s)?(?(Pvt)((\w+\p{P}?\s)+)|((\w+\p{P}?\s)+))\r?$` , yakalama gruplarını ayırmak için genel ve iç kullanım için tasarlanan paragrafların içeriğini atamak üzere koşullu değerlendirme kullanılır. Bu paragraflar daha sonra farklı işlenebilirler.  
+- Koşullu değerlendirme: `(?(` *ifade*`)`*Evet*Hayır ve ad Evet Hayır`|``)` `(?(``)` `|``)`burada *ifade* eşleşmek üzere bir alt ifade, *ad* bir yakalama grubunun adıdır,, *ifade* eşleşirse veya *ad* geçerli, boş bir yakalanamayan grup *ise, eşleşen* dize ve *Hayır* *ifadesi* eşleşmezse veya *ad* geçerli, boş olmayan bir yakalanan grup değilse, eşleştirilecek alt ifade yoktur. Bu özellik, bir önceki alt ifadenin veya sıfır genişlikli bir onaylama sonucuna bağlı olarak, altyapının birden fazla alternatif model kullanarak arama yapmasına olanak sağlar. Bu, örneğin, önceki alt ifadenin eşleştirildiği bir alt ifadeyi eşleştirmesine izin veren daha güçlü bir geri başvuru biçimi sağlar. Aşağıdaki örnekteki normal ifade, hem genel hem de iç kullanım için tasarlanan paragraflarla eşleşir. Yalnızca iç kullanım için tasarlanan paragraflar bir `<PRIVATE>` etiketle başlar. Normal ifade deseninin `^(?<Pvt>\<PRIVATE\>\s)?(?(Pvt)((\w+\p{P}?\s)+)|((\w+\p{P}?\s)+))\r?$` , yakalama gruplarını ayırmak için genel ve iç kullanım için tasarlanan paragrafların içeriğini atamak üzere koşullu değerlendirme kullanılır. Bu paragraflar daha sonra farklı işlenebilirler.  
   
      [!code-csharp[Conceptual.RegularExpressions.Design#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.design/cs/conditional1.cs#4)]
      [!code-vb[Conceptual.RegularExpressions.Design#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.design/vb/conditional1.vb#4)]  
@@ -98,7 +98,7 @@ ms.locfileid: "69963389"
     |`^`|Bir satırın başlangıcında eşleşmeyi başlatın.|  
     |`(?<Pvt>\<PRIVATE\>\s)?`|Dizenin `<PRIVATE>` sıfır veya bir oluşumunu, ardından bir boşluk karakteri ile eşleştirin. Eşleşmeyi adlı `Pvt`bir yakalama grubuyla atayın.|  
     |`(?(Pvt)((\w+\p{P}?\s)+)`|`Pvt` Yakalama grubu varsa, bir veya daha fazla sözcük karakterinin ardından sıfır veya bir noktalama ayırıcısından sonra bir boşluk karakteri gelen bir veya daha fazla tekrarı eşleştirin. Alt dizeyi ilk yakalama grubuna atayın.|  
-    |<code>&#124;((\w+\p{P}?\s)+))<code>|`Pvt` Yakalama grubu yoksa, bir veya daha fazla sözcük karakterinin ardından sıfır veya bir noktalama işareti ve ardından bir boşluk karakteri gelen bir veya daha fazla tekrarı eşleştirin. Alt dizeyi üçüncü yakalama grubuna atayın.|  
+    |<code>&#124;((\w+\p{P}?\s)+))</code>|`Pvt` Yakalama grubu yoksa, bir veya daha fazla sözcük karakterinin ardından sıfır veya bir noktalama işareti ve ardından bir boşluk karakteri gelen bir veya daha fazla tekrarı eşleştirin. Alt dizeyi üçüncü yakalama grubuna atayın.|  
     |`\r?$`|Satırın sonunu veya dizenin sonunu eşleştirin.|  
   
      Koşullu değerlendirme hakkında daha fazla bilgi için bkz. [değişim yapıları](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md).  
