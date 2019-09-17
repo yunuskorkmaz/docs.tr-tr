@@ -35,12 +35,16 @@
           href: tutorials/sales-anomaly-detection.md
         - name: Görüntülerdeki nesneleri algılama (nesne algılama)
           href: tutorials/object-detection-onnx.md
+        - name: TensorFlow kullanarak yaklaşımı sınıflandırma (metin sınıflandırması)
+          href: tutorials/text-classification-tf.md
     - name: Araçlar
       items:
         - name: Model Oluşturucu ile fiyatları tahmin etme
           href: tutorials/predict-prices-with-model-builder.md
         - name: ML.NET CLI kullanarak yaklaşımı çözümleme
           href: tutorials/mlnet-cli.md
+        - name: Model Oluşturucu ve Razor Pages kullanarak yaklaşımı analiz etme
+          href: tutorials/sentiment-analysis-model-builder.md
 - name: Kavramlar
   items:
     - name: ML.NET görevleri (model türleri)

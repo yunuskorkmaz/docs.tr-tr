@@ -1,8 +1,12 @@
 - name: Serileştirme
   href: index.md
   items:
-    - name: Serileştirme ile İlgili Nasıl Yapılır Konuları
-      href: serialization-how-to-topics.md
+    - name: JSON seri hale getirme
+      items:
+        - name: Genel Bakış
+          href: system-text-json-overview.md
+        - name: JSON’u seri hale getirme ve seri halden çıkarma
+          href: system-text-json-how-to.md
     - name: İkili Serileştirme
       href: binary-serialization.md
       items:
@@ -27,6 +31,8 @@
     - name: XML ve SOAP Serileştirme
       href: xml-and-soap-serialization.md
       items:
+        - name: Serileştirme ile İlgili Nasıl Yapılır Konuları
+          href: serialization-how-to-topics.md
         - name: 'Nasıl yapılır: Türetilen Sınıfların Serileştirmesini Denetleme'
           href: how-to-control-serialization-of-derived-classes.md
         - name: XML Serileştirmeye Giriş
@@ -67,23 +73,23 @@
           href: add-element-for-schemaimporterextensions.md
         - name: <xmlSerializer> Öğesi
           href: xmlserializer-element.md
-    - name: Serileştirme Araçları
-      href: serialization-tools.md
-      items:
-        - name: XML Serileştiricisi Oluşturma Aracı (Sgen.exe)
-          href: xml-serializer-generator-tool-sgen-exe.md
-        - name: XML şema tanımı Aracı (XSD.exe'nin)
-          href: xml-schema-definition-tool-xsd-exe.md
-    - name: Serileştirme Örnekleri
-      href: serialization-samples.md
-      items:
-        - name: Temel Serileştirme Teknolojisi Örneği
-          href: basic-serialization-technology-sample.md
-        - name: XmlSerializer ile Özel Serileştirme Düzeni
-          href: custom-serialization-order-with-xmlserializer.md
-        - name: SchemaImporterExtension Teknoloji Örneği
-          href: schemaimporterextension-technology-sample.md
-        - name: Sürüme Dayanıklı Serileştirme Teknolojisi Örneği
-          href: version-tolerant-serialization-technology-sample.md
-        - name: Web Hizmetleri Genel Serileştirme Teknolojisi Örneği
-          href: web-services-generics-serialization-technology-sample.md
+        - name: Serileştirme Araçları
+          href: serialization-tools.md
+          items:
+            - name: XML Serileştiricisi Oluşturma Aracı (Sgen.exe)
+              href: xml-serializer-generator-tool-sgen-exe.md
+            - name: XML şema tanımı Aracı (XSD.exe'nin)
+              href: xml-schema-definition-tool-xsd-exe.md
+        - name: Serileştirme Örnekleri
+          href: serialization-samples.md
+          items:
+            - name: Temel Serileştirme Teknolojisi Örneği
+              href: basic-serialization-technology-sample.md
+            - name: XmlSerializer ile Özel Serileştirme Düzeni
+              href: custom-serialization-order-with-xmlserializer.md
+            - name: SchemaImporterExtension Teknoloji Örneği
+              href: schemaimporterextension-technology-sample.md
+            - name: Sürüme Dayanıklı Serileştirme Teknolojisi Örneği
+              href: version-tolerant-serialization-technology-sample.md
+            - name: Web Hizmetleri Genel Serileştirme Teknolojisi Örneği
+              href: web-services-generics-serialization-technology-sample.md
