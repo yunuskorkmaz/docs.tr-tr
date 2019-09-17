@@ -16,6 +16,8 @@
           href: dynamically-loading-and-using-types.md
         - name: 'Nasıl yapılır: Salt Yansıma Bağlamına Derlemeleri Yükleme'
           href: how-to-load-assemblies-into-the-reflection-only-context.md
+        - name: 'Nasıl yapılır: Yansıma kullanarak tür ve üye bilgilerini alma'
+          href: get-type-member-information.md
         - name: Özel Özniteliklere Erişim
           href: accessing-custom-attributes.md
         - name: Tam Olarak Nitelenmiş Tür Adlarını Belirtme

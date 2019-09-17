@@ -1,11 +1,66 @@
 - name: .NET’te bütünleştirilmiş kodlar
   href: index.md
   items:
-    - name: Arkadaş derlemeleri
-      items:
-        - name: Genel Bakış
-          href: friend-assemblies.md
-    - name: .NET derlemesi dosya biçimi
+    - name: Derleme içerikleri
+      href: contents.md
+    - name: Derleme bildirimi
+      href: manifest.md
+    - name: Tanımlayıcı adlandırılmış derlemeler
+      href: strong-named.md
+    - name: Derleme güvenliği hakkında dikkate alınması gerekenler
+      href: security-considerations.md
+    - name: Derleme sürümü oluşturma
+      href: versioning.md
+    - name: Derlemeler ve yan yana yürütme
+      href: side-by-side-execution.md
+    - name: Derleme dosya biçimi
       href: file-format.md
-    - name: .NET Core’da kaldırabilme özelliğini kullanma ve hatalarını ayıklama
-      href: unloadability-howto.md
+    - name: 'Nasıl yapılır: .NET Core’da bütünleştirilmiş kodu kaldırabilme özelliğini kullanma ve hatalarını ayıklama'
+      href: unloadability.md
+    - name: Derleme yüklerini çözme
+      href: resolve-loads.md
+    - name: Derlemeler ile programlama
+      href: program.md
+      items:
+        - name: Derleme oluşturma
+          href: create.md
+        - name: Derleme adları
+          href: names.md
+        - name: 'Nasıl yapılır: Derlemenin tam adını bulma'
+          href: find-fully-qualified-name.md
+        - name: Derleme konumu
+          href: location.md
+        - name: Derleme özniteliklerini ayarlama
+          href: set-attributes.md
+        - name: Tanımlayıcı adlı derlemeler oluşturma ve kullanma
+          href: create-use-strong-named.md
+          items:
+            - name: 'Nasıl yapılır: Genel-özel anahtar çifti oluşturma'
+              href: create-public-private-key-pair.md
+            - name: 'Nasıl yapılır: Derlemeyi tanımlayıcı adla imzalama'
+              href: sign-strong-name.md
+            - name: Tanımlayıcı adlandırmayı iyileştirme
+              href: enhanced-strong-naming.md
+            - name: 'Nasıl yapılır: Tanımlayıcı adlı bir derlemeye başvurma'
+              href: reference-strong-named.md
+            - name: 'Nasıl yapılır: Tanımlayıcı adlı atlama özelliğini devre dışı bırakma'
+              href: disable-strong-name-bypass-feature.md
+        - name: Derlemeyi gecikmeli imzalama
+          href: delay-sign.md
+        - name: 'Nasıl yapılır: Derleme içeriklerini görüntüleme'
+          href: view-contents.md
+        - name: Ortak dil çalışma zamanında tür iletme
+          href: type-forwarding.md
+        - name: Arkadaş derlemeleri
+          href: friend.md
+          items:
+            - name: 'Nasıl yapılır: İmzasız arkadaş bütünleştirilmiş kodları oluşturma'
+              href: create-unsigned-friend.md
+            - name: 'Nasıl yapılır: İmzalı arkadaş bütünleştirilmiş kodları oluşturma'
+              href: create-signed-friend.md
+        - name: 'Nasıl yapılır: Bir dosyanın bütünleştirilmiş kod olup olmadığını belirleme'
+          href: identify.md
+        - name: 'Nasıl yapılır: Bütünleştirilmiş kod yükleme ve yüklemelerini kaldırma'
+          href: load-unload.md
+        - name: 'İzlenecek yol: Visual Studio’da yönetilen bütünleştirilmiş kodlardan türleri ekleme'
+          href: embed-types-visual-studio.md
