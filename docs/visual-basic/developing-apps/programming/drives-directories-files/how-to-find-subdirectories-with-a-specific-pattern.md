@@ -1,50 +1,52 @@
 ---
-title: "Nasıl yapılır: Visual Basic'te belirli bir desendeki alt dizinleri bulma"
+title: 'Nasıl yapılır: Visual Basic belirli bir düzene sahip alt dizinleri bul'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - pattern matching
 - folders, finding
 ms.assetid: c9265fd1-7483-4150-8b7f-ff642caa939d
-ms.openlocfilehash: fcb02fa26a3177b6f25f04174563b25cddb0ac44
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 96ae5c5c44263a47343058012d8b8aa064d9cd92
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64629112"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71039435"
 ---
-# <a name="how-to-find-subdirectories-with-a-specific-pattern-in-visual-basic"></a><span data-ttu-id="f154c-102">Nasıl yapılır: Visual Basic'te belirli bir desendeki alt dizinleri bulma</span><span class="sxs-lookup"><span data-stu-id="f154c-102">How to: Find Subdirectories with a Specific Pattern in Visual Basic</span></span>
-<span data-ttu-id="f154c-103"><xref:Microsoft.VisualBasic.FileIO.FileSystem.GetDirectories%2A> Yöntemi bir dizinde bir alt dizinler için yol adlarını temsil eden dizeleri salt okunur bir koleksiyonunu döndürür.</span><span class="sxs-lookup"><span data-stu-id="f154c-103">The <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetDirectories%2A> method returns a read-only collection of strings representing the path names for the subdirectories in a directory.</span></span> <span data-ttu-id="f154c-104">Kullanabileceğiniz `wildCards` parametresini kullanarak belirli bir desen belirtin.</span><span class="sxs-lookup"><span data-stu-id="f154c-104">You can use the `wildCards` parameter to specify a specific pattern.</span></span> <span data-ttu-id="f154c-105">Alt dizinlerinin içeriğini aramaya dahil etmek istediğiniz verilirse `searchType` parametresi `SearchOption.SearchAllSubDirectories`.</span><span class="sxs-lookup"><span data-stu-id="f154c-105">If you would like to include the contents of subdirectories in the search, set the `searchType` parameter to `SearchOption.SearchAllSubDirectories`.</span></span>  
-  
- <span data-ttu-id="f154c-106">Belirtilen desenle eşleşen bir dizin yok bulunamazsa boş bir koleksiyon döndürülür.</span><span class="sxs-lookup"><span data-stu-id="f154c-106">An empty collection is returned if no directories matching the specified pattern are found.</span></span>  
-  
-### <a name="to-find-subdirectories-with-a-specific-pattern"></a><span data-ttu-id="f154c-107">Belirli bir desendeki alt dizinleri bulmak için</span><span class="sxs-lookup"><span data-stu-id="f154c-107">To find subdirectories with a specific pattern</span></span>  
-  
-- <span data-ttu-id="f154c-108">Kullanım `GetDirectories` yöntemi, aramak istediğiniz dizinin yolunu ve adını belirtin.</span><span class="sxs-lookup"><span data-stu-id="f154c-108">Use the `GetDirectories` method, supplying the name and path of the directory you want to search.</span></span> <span data-ttu-id="f154c-109">Aşağıdaki örnek, dizin yapısına sözcüğünü içeren tüm dizinler "Logs" adında döndürür ve eklenmeye `ListBox1`.</span><span class="sxs-lookup"><span data-stu-id="f154c-109">The following example returns all the directories in the directory structure that contain the word "Logs" in their name, and adds them to `ListBox1`.</span></span>  
-  
-     [!code-vb[VbVbcnFileAccess#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnFileAccess/VB/Class1.vb#1)]  
-  
-## <a name="robust-programming"></a><span data-ttu-id="f154c-110">Güçlü Programlama</span><span class="sxs-lookup"><span data-stu-id="f154c-110">Robust Programming</span></span>  
- <span data-ttu-id="f154c-111">Aşağıdaki koşullar özel bir duruma neden olabilir:</span><span class="sxs-lookup"><span data-stu-id="f154c-111">The following conditions may cause an exception:</span></span>  
-  
-- <span data-ttu-id="f154c-112">Yol aşağıdaki nedenlerden biri için geçerli değildir: sıfır uzunluklu bir dize olan, yalnızca boşluk içeriyor, geçersiz karakterler içeriyor veya cihaz yoludur (ile başlayan \\ \\.\\) (<xref:System.ArgumentException>).</span><span class="sxs-lookup"><span data-stu-id="f154c-112">The path is not valid for one of the following reasons: it is a zero-length string, it contains only white space, it contains invalid characters, or it is a device path (starts with \\\\.\\) (<xref:System.ArgumentException>).</span></span>  
-  
-- <span data-ttu-id="f154c-113">Çünkü bu yolu geçerli değil `Nothing` (<xref:System.ArgumentNullException>).</span><span class="sxs-lookup"><span data-stu-id="f154c-113">The path is not valid because it is `Nothing` (<xref:System.ArgumentNullException>).</span></span>  
-  
-- <span data-ttu-id="f154c-114">Bir veya daha fazla belirtilen joker karakter `Nothing`, boş bir dize veya yalnızca boşluk içeriyor (<xref:System.ArgumentNullException>).</span><span class="sxs-lookup"><span data-stu-id="f154c-114">One or more of the specified wildcard characters is `Nothing`, an empty string, or contains only spaces (<xref:System.ArgumentNullException>).</span></span>  
-  
-- <span data-ttu-id="f154c-115">`directory` yok (<xref:System.IO.DirectoryNotFoundException>).</span><span class="sxs-lookup"><span data-stu-id="f154c-115">`directory` does not exist (<xref:System.IO.DirectoryNotFoundException>).</span></span>  
-  
-- <span data-ttu-id="f154c-116">`directory` Varolan bir dosyaya işaret (<xref:System.IO.IOException>).</span><span class="sxs-lookup"><span data-stu-id="f154c-116">`directory` points to an existing file (<xref:System.IO.IOException>).</span></span>  
-  
-- <span data-ttu-id="f154c-117">Yolun sistem tarafından tanımlanan uzunluk üst sınırını aşıyor (<xref:System.IO.PathTooLongException>).</span><span class="sxs-lookup"><span data-stu-id="f154c-117">The path exceeds the system-defined maximum length (<xref:System.IO.PathTooLongException>).</span></span>  
-  
-- <span data-ttu-id="f154c-118">Yolda bir dosya veya klasör adı iki nokta üst üste (:) içeriyor veya biçimi geçersiz (<xref:System.NotSupportedException>).</span><span class="sxs-lookup"><span data-stu-id="f154c-118">A file or folder name in the path contains a colon (:) or is in an invalid format (<xref:System.NotSupportedException>).</span></span>  
-  
-- <span data-ttu-id="f154c-119">Kullanıcı yolu görüntülemek için gerekli izinlere sahip değil (<xref:System.Security.SecurityException>).</span><span class="sxs-lookup"><span data-stu-id="f154c-119">The user lacks necessary permissions to view the path (<xref:System.Security.SecurityException>).</span></span>  
-  
-- <span data-ttu-id="f154c-120">Kullanıcı gerekli izinlere sahip değil (<xref:System.UnauthorizedAccessException>).</span><span class="sxs-lookup"><span data-stu-id="f154c-120">The user lacks necessary permissions (<xref:System.UnauthorizedAccessException>).</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="f154c-121">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="f154c-121">See also</span></span>
+# <a name="how-to-find-subdirectories-with-a-specific-pattern-in-visual-basic"></a><span data-ttu-id="5a5c9-102">Nasıl yapılır: Visual Basic belirli bir düzene sahip alt dizinleri bul</span><span class="sxs-lookup"><span data-stu-id="5a5c9-102">How to: Find Subdirectories with a Specific Pattern in Visual Basic</span></span>
+
+<span data-ttu-id="5a5c9-103">Yöntemi <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetDirectories%2A> , bir dizindeki alt dizinlerin yol adlarını temsil eden salt okunurdur bir dize koleksiyonu döndürür.</span><span class="sxs-lookup"><span data-stu-id="5a5c9-103">The <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetDirectories%2A> method returns a read-only collection of strings representing the path names for the subdirectories in a directory.</span></span> <span data-ttu-id="5a5c9-104">Belirli bir kalıbı belirtmek `wildCards` için parametresini kullanabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="5a5c9-104">You can use the `wildCards` parameter to specify a specific pattern.</span></span> <span data-ttu-id="5a5c9-105">Aramada alt dizinlerin içeriğini eklemek istiyorsanız, `searchType` parametresini olarak `SearchOption.SearchAllSubDirectories`ayarlayın.</span><span class="sxs-lookup"><span data-stu-id="5a5c9-105">If you would like to include the contents of subdirectories in the search, set the `searchType` parameter to `SearchOption.SearchAllSubDirectories`.</span></span>
+
+<span data-ttu-id="5a5c9-106">Belirtilen Düzenle eşleşen hiçbir dizin bulunamazsa boş bir koleksiyon döndürülür.</span><span class="sxs-lookup"><span data-stu-id="5a5c9-106">An empty collection is returned if no directories matching the specified pattern are found.</span></span>
+
+## <a name="to-find-subdirectories-with-a-specific-pattern"></a><span data-ttu-id="5a5c9-107">Belirli bir düzene sahip alt dizinleri bulmak için</span><span class="sxs-lookup"><span data-stu-id="5a5c9-107">To find subdirectories with a specific pattern</span></span>
+
+<span data-ttu-id="5a5c9-108">Arama yapmak istediğiniz dizinin adını ve yolunu sağlayarak yönteminikullanın.`GetDirectories`</span><span class="sxs-lookup"><span data-stu-id="5a5c9-108">Use the `GetDirectories` method, supplying the name and path of the directory you want to search.</span></span> <span data-ttu-id="5a5c9-109">Aşağıdaki örnek, dizin yapısındaki, adında "Logs" sözcüğünü içeren tüm dizinleri döndürür ve içine ekler `ListBox1`.</span><span class="sxs-lookup"><span data-stu-id="5a5c9-109">The following example returns all the directories in the directory structure that contain the word "Logs" in their name, and adds them to `ListBox1`.</span></span>
+
+[!code-vb[VbVbcnFileAccess#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnFileAccess/VB/Class1.vb#1)]
+
+## <a name="robust-programming"></a><span data-ttu-id="5a5c9-110">Güçlü Programlama</span><span class="sxs-lookup"><span data-stu-id="5a5c9-110">Robust Programming</span></span>
+
+<span data-ttu-id="5a5c9-111">Aşağıdaki koşullar özel bir duruma neden olabilir:</span><span class="sxs-lookup"><span data-stu-id="5a5c9-111">The following conditions may cause an exception:</span></span>
+
+- <span data-ttu-id="5a5c9-112">Yol, aşağıdaki nedenlerden biri için geçerli değil: sıfır uzunluklu bir dizedir, yalnızca boşluk içeriyor, geçersiz karakterler içeriyor veya bir cihaz yolu (ile \\ \\başlar.\\) (<xref:System.ArgumentException>).</span><span class="sxs-lookup"><span data-stu-id="5a5c9-112">The path is not valid for one of the following reasons: it is a zero-length string, it contains only white space, it contains invalid characters, or it is a device path (starts with \\\\.\\) (<xref:System.ArgumentException>).</span></span>
+
+- <span data-ttu-id="5a5c9-113">Yol `Nothing` (<xref:System.ArgumentNullException>) olduğu için geçerli değil.</span><span class="sxs-lookup"><span data-stu-id="5a5c9-113">The path is not valid because it is `Nothing` (<xref:System.ArgumentNullException>).</span></span>
+
+- <span data-ttu-id="5a5c9-114">Belirtilen Joker karakterlerden `Nothing`biri veya birkaçı, boş bir dize veya yalnızca boşluk (<xref:System.ArgumentNullException>) içeriyor.</span><span class="sxs-lookup"><span data-stu-id="5a5c9-114">One or more of the specified wildcard characters is `Nothing`, an empty string, or contains only spaces (<xref:System.ArgumentNullException>).</span></span>
+
+- <span data-ttu-id="5a5c9-115">`directory`yok (<xref:System.IO.DirectoryNotFoundException>).</span><span class="sxs-lookup"><span data-stu-id="5a5c9-115">`directory` does not exist (<xref:System.IO.DirectoryNotFoundException>).</span></span>
+
+- <span data-ttu-id="5a5c9-116">`directory`var olan bir dosyaya (<xref:System.IO.IOException>) işaret eder.</span><span class="sxs-lookup"><span data-stu-id="5a5c9-116">`directory` points to an existing file (<xref:System.IO.IOException>).</span></span>
+
+- <span data-ttu-id="5a5c9-117">Yol, sistem tarafından tanımlanan uzunluk üst sınırını (<xref:System.IO.PathTooLongException>) aşıyor.</span><span class="sxs-lookup"><span data-stu-id="5a5c9-117">The path exceeds the system-defined maximum length (<xref:System.IO.PathTooLongException>).</span></span>
+
+- <span data-ttu-id="5a5c9-118">Yoldaki bir dosya veya klasör adı iki nokta içerir (:) ya da geçersiz bir biçimde (<xref:System.NotSupportedException>).</span><span class="sxs-lookup"><span data-stu-id="5a5c9-118">A file or folder name in the path contains a colon (:) or is in an invalid format (<xref:System.NotSupportedException>).</span></span>
+
+- <span data-ttu-id="5a5c9-119">Kullanıcı, (<xref:System.Security.SecurityException>) yolunu görüntülemek için gerekli izinlere sahip değil.</span><span class="sxs-lookup"><span data-stu-id="5a5c9-119">The user lacks necessary permissions to view the path (<xref:System.Security.SecurityException>).</span></span>
+
+- <span data-ttu-id="5a5c9-120">Kullanıcının gerekli izinleri (<xref:System.UnauthorizedAccessException>) yok.</span><span class="sxs-lookup"><span data-stu-id="5a5c9-120">The user lacks necessary permissions (<xref:System.UnauthorizedAccessException>).</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="5a5c9-121">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="5a5c9-121">See also</span></span>
 
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetDirectories%2A>
-- [<span data-ttu-id="f154c-122">Nasıl yapılır: Belirli bir düzendeki dosyaları bulma</span><span class="sxs-lookup"><span data-stu-id="f154c-122">How to: Find Files with a Specific Pattern</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-files-with-a-specific-pattern.md)
+- [<span data-ttu-id="5a5c9-122">Nasıl yapılır: Belirli bir düzene sahip dosyaları bulma</span><span class="sxs-lookup"><span data-stu-id="5a5c9-122">How to: Find Files with a Specific Pattern</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-files-with-a-specific-pattern.md)
