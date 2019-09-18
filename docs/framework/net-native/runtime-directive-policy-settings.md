@@ -4,21 +4,21 @@ ms.date: 03/30/2017
 ms.assetid: cb52b1ef-47fd-4609-b69d-0586c818ac9e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fe78e2bd9c31bfb122e90b97977117adfc0235d5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 33253c249842824a529f4e8b24d4ca4228733041
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69967883"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049211"
 ---
 # <a name="runtime-directive-policy-settings"></a>Çalışma Zamanı Yönerge İlkesi Ayarları
 
 > [!NOTE]
 > Bu konu, yayın öncesi yazılım olan .NET Native geliştirici önizlemesine başvurur. Önizlemeyi [Microsoft Connect Web sitesinden](https://go.microsoft.com/fwlink/?LinkId=394611) indirebilirsiniz (kayıt gerekir).
 
-.NET Native çalışma zamanı yönerge ilkesi ayarları, çalışma zamanında türler ve tür üyeleri için meta verilerin kullanılabilirliğini belirlemektir. Gerekli meta veriler olmadan, yansıma, serileştirme ve serisini kullanan işlemler veya .NET Framework türlerinin COM veya Windows Çalışma Zamanı sıralaması başarısız olabilir ve bir özel durum oluşturabilir. En yaygın özel durumlar [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) ve (birlikte çalışabilirlik durumunda) [MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md).
+.NET Native çalışma zamanı yönerge ilkesi ayarları, çalışma zamanında türler ve tür üyeleri için meta verilerin kullanılabilirliğini belirlemektir. Gerekli meta veriler olmadan, yansıma, serileştirme ve serisini kullanan işlemler veya .NET Framework türlerinin COM veya Windows Çalışma Zamanı sıralaması başarısız olabilir ve bir özel durum oluşturabilir. En yaygın özel durumlar [MissingMetadataException](missingmetadataexception-class-net-native.md) ve (birlikte çalışabilirlik durumunda) [MissingInteropDataException](missinginteropdataexception-class-net-native.md).
 
-Çalışma zamanı ilke ayarları, bir çalışma zamanı yönergeleri (. RD. xml) dosyası tarafından denetlenir. Her çalışma zamanı yönergesi derleme ( [ \<derleme >](../../../docs/framework/net-native/assembly-element-net-native.md) öğesi), [ \<](../../../docs/framework/net-native/type-element-net-native.md) bir tür (tür > öğesi) veya bir Yöntem ( [ \<Yöntem >](../../../docs/framework/net-native/method-element-net-native.md) gibi belirli bir program öğesi için ilkeyi tanımlar. öğesi). Yönergesi, yansıma ilkesi türlerini, serileştirme ilke türlerini ve sonraki bölümde ele alınan birlikte çalışma ilkesi türlerini tanımlayan bir veya daha fazla öznitelik içerir. Özniteliğin değeri, ilke ayarını tanımlar.
+Çalışma zamanı ilke ayarları, bir çalışma zamanı yönergeleri (. RD. xml) dosyası tarafından denetlenir. Her çalışma zamanı yönergesi derleme ( [ \<derleme >](assembly-element-net-native.md) öğesi), [ \<](type-element-net-native.md) bir tür (tür > öğesi) veya bir Yöntem ( [ \<Yöntem >](method-element-net-native.md) gibi belirli bir program öğesi için ilkeyi tanımlar. öğesi). Yönergesi, yansıma ilkesi türlerini, serileştirme ilke türlerini ve sonraki bölümde ele alınan birlikte çalışma ilkesi türlerini tanımlayan bir veya daha fazla öznitelik içerir. Özniteliğin değeri, ilke ayarını tanımlar.
 
 ## <a name="policy-types"></a>İlke türleri
 
@@ -34,24 +34,24 @@ ms.locfileid: "69967883"
 
   Aşağıdaki tabloda, yansıma ilkesi türleri ve bunların kullanılabileceği program öğeleri listelenmektedir.
 
-  |Öğe|Etkinleştir|Ata|Dinamik|
+  |Öğe|etkinleştir|Ata|Dinamik|
   |-------------|--------------|------------|-------------|
-  |[\<Uygulama >](../../../docs/framework/net-native/application-element-net-native.md)|✓|✓|✓|
-  |[\<Bütünleştirilmiş kod >](../../../docs/framework/net-native/assembly-element-net-native.md)|✓|✓|✓|
-  |[\<Attribute>](../../../docs/framework/net-native/attributeimplies-element-net-native.md)|✓|✓|✓|
-  |[\<Olay >](../../../docs/framework/net-native/event-element-net-native.md)||✓|✓|
-  |[\<Alan >](../../../docs/framework/net-native/field-element-net-native.md)||✓|✓|
-  |[\<GenericParameter >](../../../docs/framework/net-native/genericparameter-element-net-native.md)|✓|✓|✓|
-  |[\<Impliestype >](../../../docs/framework/net-native/impliestype-element-net-native.md)|✓|✓|✓|
-  |[\<Yöntem >](../../../docs/framework/net-native/method-element-net-native.md)||✓|✓|
-  |[\<Methodörneklemesi >](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)||✓|✓|
-  |[\<Ad alanı >](../../../docs/framework/net-native/namespace-element-net-native.md)|✓|✓|✓|
-  |[\<Parametre >](../../../docs/framework/net-native/parameter-element-net-native.md)|✓|✓|✓|
-  |[\<Özellik >](../../../docs/framework/net-native/property-element-net-native.md)||✓|✓|
-  |[\<Alt türler >](../../../docs/framework/net-native/subtypes-element-net-native.md)|✓|✓|✓|
-  |[\<Tür >](../../../docs/framework/net-native/type-element-net-native.md)|✓|✓|✓|
-  |[\<Typeörneklemesi >](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|✓|✓|✓|
-  |[\<TypeParameter >](../../../docs/framework/net-native/typeparameter-element-net-native.md)|✓|✓|✓|
+  |[\<Uygulama >](application-element-net-native.md)|✓|✓|✓|
+  |[\<Bütünleştirilmiş kod >](assembly-element-net-native.md)|✓|✓|✓|
+  |[\<Attribute>](attributeimplies-element-net-native.md)|✓|✓|✓|
+  |[\<Olay >](event-element-net-native.md)||✓|✓|
+  |[\<Alan >](field-element-net-native.md)||✓|✓|
+  |[\<GenericParameter >](genericparameter-element-net-native.md)|✓|✓|✓|
+  |[\<Impliestype >](impliestype-element-net-native.md)|✓|✓|✓|
+  |[\<Yöntem >](method-element-net-native.md)||✓|✓|
+  |[\<Methodörneklemesi >](methodinstantiation-element-net-native.md)||✓|✓|
+  |[\<Ad alanı >](namespace-element-net-native.md)|✓|✓|✓|
+  |[\<Parametre >](parameter-element-net-native.md)|✓|✓|✓|
+  |[\<Özellik >](property-element-net-native.md)||✓|✓|
+  |[\<Alt türler >](subtypes-element-net-native.md)|✓|✓|✓|
+  |[\<Tür >](type-element-net-native.md)|✓|✓|✓|
+  |[\<Typeörneklemesi >](typeinstantiation-element-net-native.md)|✓|✓|✓|
+  |[\<TypeParameter >](typeparameter-element-net-native.md)|✓|✓|✓|
 
 - Serileştirme ilke türleri serileştirme ve seri durumundan çıkarma için çalışma zamanında kullanılabilir hale getirilen meta verileri belirleme:
 
@@ -67,22 +67,22 @@ ms.locfileid: "69967883"
 
   |Öğe|Serialize|DataContractSerializer|DataContractJsonSerializer|Çağrılamıyor|
   |-------------|---------------|----------------------------|--------------------------------|-------------------|
-  |[\<Uygulama >](../../../docs/framework/net-native/application-element-net-native.md)|✓|✓|✓|✓|
-  |[\<Bütünleştirilmiş kod >](../../../docs/framework/net-native/assembly-element-net-native.md)|✓|✓|✓|✓|
-  |[\<Attribute>](../../../docs/framework/net-native/attributeimplies-element-net-native.md)|✓|✓|✓|✓|
-  |[\<Olay >](../../../docs/framework/net-native/event-element-net-native.md)|||||
-  |[\<Alan >](../../../docs/framework/net-native/field-element-net-native.md)|✓||||
-  |[\<GenericParameter >](../../../docs/framework/net-native/genericparameter-element-net-native.md)|✓|✓|✓|✓|
-  |[\<Impliestype >](../../../docs/framework/net-native/impliestype-element-net-native.md)|✓|✓|✓|✓|
-  |[\<Yöntem >](../../../docs/framework/net-native/method-element-net-native.md)|||||
-  |[\<Methodörneklemesi >](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)|||||
-  |[\<Ad alanı >](../../../docs/framework/net-native/namespace-element-net-native.md)|✓|✓|✓|✓|
-  |[\<Parametre >](../../../docs/framework/net-native/parameter-element-net-native.md)|✓|✓|✓|✓|
-  |[\<Özellik >](../../../docs/framework/net-native/property-element-net-native.md)|✓||||
-  |[\<Alt türler >](../../../docs/framework/net-native/subtypes-element-net-native.md)|✓|✓|✓|✓|
-  |[\<Tür >](../../../docs/framework/net-native/type-element-net-native.md)|✓|✓|✓|✓|
-  |[\<Typeörneklemesi >](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|✓|✓|✓|✓|
-  |[\<TypeParameter >](../../../docs/framework/net-native/typeparameter-element-net-native.md)|✓|✓|✓|✓|
+  |[\<Uygulama >](application-element-net-native.md)|✓|✓|✓|✓|
+  |[\<Bütünleştirilmiş kod >](assembly-element-net-native.md)|✓|✓|✓|✓|
+  |[\<Attribute>](attributeimplies-element-net-native.md)|✓|✓|✓|✓|
+  |[\<Olay >](event-element-net-native.md)|||||
+  |[\<Alan >](field-element-net-native.md)|✓||||
+  |[\<GenericParameter >](genericparameter-element-net-native.md)|✓|✓|✓|✓|
+  |[\<Impliestype >](impliestype-element-net-native.md)|✓|✓|✓|✓|
+  |[\<Yöntem >](method-element-net-native.md)|||||
+  |[\<Methodörneklemesi >](methodinstantiation-element-net-native.md)|||||
+  |[\<Ad alanı >](namespace-element-net-native.md)|✓|✓|✓|✓|
+  |[\<Parametre >](parameter-element-net-native.md)|✓|✓|✓|✓|
+  |[\<Özellik >](property-element-net-native.md)|✓||||
+  |[\<Alt türler >](subtypes-element-net-native.md)|✓|✓|✓|✓|
+  |[\<Tür >](type-element-net-native.md)|✓|✓|✓|✓|
+  |[\<Typeörneklemesi >](typeinstantiation-element-net-native.md)|✓|✓|✓|✓|
+  |[\<TypeParameter >](typeparameter-element-net-native.md)|✓|✓|✓|✓|
 
 - Birlikte çalışma ilkesi türleri, başvuru türlerini, değer türlerini ve işlev işaretçilerini COM 'a ve Windows Çalışma Zamanı geçirmek için çalışma zamanında hangi meta verilerin kullanılabilir hale getirilceğini belirlenir:
 
@@ -96,22 +96,22 @@ ms.locfileid: "69967883"
 
   |Öğe|MarshalObject|MarshalDelegate|MarshalStructure|
   |-------------|-------------------|---------------------|----------------------|
-  |[\<Uygulama >](../../../docs/framework/net-native/application-element-net-native.md)|✓|✓|✓|
-  |[\<Bütünleştirilmiş kod >](../../../docs/framework/net-native/assembly-element-net-native.md)|✓|✓|✓|
-  |[\<Attribute>](../../../docs/framework/net-native/attributeimplies-element-net-native.md)|✓|✓|✓|
-  |[\<Olay >](../../../docs/framework/net-native/event-element-net-native.md)||||
-  |[\<Alan >](../../../docs/framework/net-native/field-element-net-native.md)||||
-  |[\<GenericParameter >](../../../docs/framework/net-native/genericparameter-element-net-native.md)|✓|✓|✓|
-  |[\<Impliestype >](../../../docs/framework/net-native/impliestype-element-net-native.md)|✓|✓|✓|
-  |[\<Yöntem >](../../../docs/framework/net-native/method-element-net-native.md)||||
-  |[\<Methodörneklemesi >](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)||||
-  |[\<Ad alanı >](../../../docs/framework/net-native/namespace-element-net-native.md)|✓|✓|✓|
-  |[\<Parametre >](../../../docs/framework/net-native/parameter-element-net-native.md)|✓|✓|✓|
-  |[\<Özellik >](../../../docs/framework/net-native/property-element-net-native.md)||||
-  |[\<Alt türler >](../../../docs/framework/net-native/subtypes-element-net-native.md)|✓|✓|✓|
-  |[\<Tür >](../../../docs/framework/net-native/type-element-net-native.md)|✓|✓|✓|
-  |[\<Typeörneklemesi >](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|✓|✓|✓|
-  |[\<TypeParameter >](../../../docs/framework/net-native/typeparameter-element-net-native.md)|✓|✓|✓|
+  |[\<Uygulama >](application-element-net-native.md)|✓|✓|✓|
+  |[\<Bütünleştirilmiş kod >](assembly-element-net-native.md)|✓|✓|✓|
+  |[\<Attribute>](attributeimplies-element-net-native.md)|✓|✓|✓|
+  |[\<Olay >](event-element-net-native.md)||||
+  |[\<Alan >](field-element-net-native.md)||||
+  |[\<GenericParameter >](genericparameter-element-net-native.md)|✓|✓|✓|
+  |[\<Impliestype >](impliestype-element-net-native.md)|✓|✓|✓|
+  |[\<Yöntem >](method-element-net-native.md)||||
+  |[\<Methodörneklemesi >](methodinstantiation-element-net-native.md)||||
+  |[\<Ad alanı >](namespace-element-net-native.md)|✓|✓|✓|
+  |[\<Parametre >](parameter-element-net-native.md)|✓|✓|✓|
+  |[\<Özellik >](property-element-net-native.md)||||
+  |[\<Alt türler >](subtypes-element-net-native.md)|✓|✓|✓|
+  |[\<Tür >](type-element-net-native.md)|✓|✓|✓|
+  |[\<Typeörneklemesi >](typeinstantiation-element-net-native.md)|✓|✓|✓|
+  |[\<TypeParameter >](typeparameter-element-net-native.md)|✓|✓|✓|
 
 ## <a name="policy-settings"></a>İlke ayarları
 
@@ -132,5 +132,5 @@ Her ilke türü, aşağıdaki tabloda listelenen değerlerden birine ayarlanabil
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Çalışma Zamanı Yönergeleri (rd.xml) Yapılandırma Dosyası Başvurusu](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
-- [Çalışma Zamanı Yönerge Öğeleri](../../../docs/framework/net-native/runtime-directive-elements.md)
+- [Çalışma Zamanı Yönergeleri (rd.xml) Yapılandırma Dosyası Başvurusu](runtime-directives-rd-xml-configuration-file-reference.md)
+- [Çalışma Zamanı Yönerge Öğeleri](runtime-directive-elements.md)

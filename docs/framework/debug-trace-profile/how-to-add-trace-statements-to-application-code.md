@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: f3a93fa7-1717-467d-aaff-393e5c9828b4
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 626e9823bbf7d379a21ae353a9189485259f3c42
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4517da87603dcdd398d536cd9bf9e441430be375
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69948017"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052733"
 ---
 # <a name="how-to-add-trace-statements-to-application-code"></a>Nasıl yapılır: Uygulama Koduna İzleme Deyimleri Ekleme
-İzleme için en sık kullanılan yöntemler, dinleyicilerine çıkış yazma yöntemleridir: **Write**, **WriteIf**, **WriteLine**, **WriteLineIf**, **onaylama**ve **başarısız**. Bu yöntemler iki kategoriye ayrılabilir: **Write**, **WriteLine**ve **Fail** for All,, **WriteIf**, **WriteLineIf**ve **onaylama** test bir Boolean koşulunu ve onay testi, koşulun değerine göre yazma veya yazma. Koşul ise `false` `true`, WriteIf ve **WriteLineIf** bir çıkış yayıyorsa, Eğer koşul ise çıkış yayar.  
+İzleme için en sık kullanılan yöntemler, dinleyicilerine çıkış yazma yöntemleridir: **Write**, **WriteIf**, **WriteLine**, **WriteLineIf**, **onaylama**ve **başarısız**. Bu yöntemler iki kategoriye ayrılabilir: **Write**, **WriteLine**ve **Fail** for All,, **WriteIf**, **WriteLineIf**ve **onaylama** test bir Boolean koşulunu ve onay testi, koşulun değerine göre yazma veya yazma. Koşul ise `false` `true`, WriteIf ve **WriteLineIf** bir çıkış yayıyorsa, Eğer koşul ise **Çıkış yayar.**  
   
  İzleme ve hata ayıklama stratejinizi tasarlarken çıktının nasıl görünmesini istediğinizi düşünmeniz gerekir. İlişkisiz bilgilerle doldurulmuş birden fazla **yazma** deyimi, okunması zor olan bir günlük oluşturur. Diğer taraftan, ilişkili deyimleri ayrı satırlara koymak için **WriteLine** kullanmak, hangi bilgilerin birlikte olduğunu ayırt etmenizi zorlaştırır. Genel olarak, tek bir bilgilendirici ileti oluşturmak için birden fazla kaynaktaki bilgileri birleştirmek istediğinizde birden çok **yazma** ifadesi kullanın ve tek bir ileti oluşturmak istediğinizde **WriteLine** deyimini kullanın.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "69948017"
     ```  
   
     > [!NOTE]
-    > Hem izleme hem de hata ayıklama ile **onaylama** kullanabilirsiniz. Bu örnek, çağrı yığınını dinleyici koleksiyonundaki herhangi bir dinleyiciye verir. Daha fazla bilgi için bkz. [Yönetilen koddaki](/visualstudio/debugger/assertions-in-managed-code) Onaylamalar <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>ve.  
+    > Hem izleme hem de hata ayıklama ile **onaylama** kullanabilirsiniz. Bu **örnek, çağrı yığınını dinleyici koleksiyonundaki herhangi** bir dinleyiciye verir. Daha fazla bilgi için bkz. [Yönetilen koddaki Onaylamalar](/visualstudio/debugger/assertions-in-managed-code) ve <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -90,7 +90,7 @@ ms.locfileid: "69948017"
 - <xref:System.Diagnostics.Debug.WriteLineIf%2A?displayProperty=nameWithType>
 - <xref:System.Diagnostics.Trace.WriteIf%2A?displayProperty=nameWithType>
 - <xref:System.Diagnostics.Trace.WriteLineIf%2A?displayProperty=nameWithType>
-- [İzleme ve İşaretleme Uygulamaları](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
-- [Nasıl yapılır: Izleme anahtarları oluşturma, başlatma ve yapılandırma](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)
-- [İzleme Anahtarları](../../../docs/framework/debug-trace-profile/trace-switches.md)
-- [İzleme Dinleyicileri](../../../docs/framework/debug-trace-profile/trace-listeners.md)
+- [İzleme ve İşaretleme Uygulamaları](tracing-and-instrumenting-applications.md)
+- [Nasıl yapılır: Izleme anahtarları oluşturma, başlatma ve yapılandırma](how-to-create-initialize-and-configure-trace-switches.md)
+- [İzleme Anahtarları](trace-switches.md)
+- [İzleme Dinleyicileri](trace-listeners.md)

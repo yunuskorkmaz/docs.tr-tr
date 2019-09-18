@@ -2,12 +2,12 @@
 title: Docker uygulamalarında durum ve veriler
 description: Docker uygulamalarında durum ve veri yönetimi. Mikro hizmet örnekleri anlaşılabilir, ancak VERILER, mikro hizmetler ile nasıl işlenir.
 ms.date: 09/20/2018
-ms.openlocfilehash: 9d7b0ff0e73267c6b80be2f1c956c3b4eae140e2
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: bd0ac007479dcd51f2c639881273b81d1fd8b6d7
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70295523"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71039587"
 ---
 # <a name="state-and-data-in-docker-applications"></a>Docker uygulamalarında durum ve veriler
 
@@ -47,7 +47,7 @@ Birimler adlandırılmış veya anonim olabilir (varsayılan). Adlandırılmış
 
 Şekil 4-5 ' de gösterildiği gibi, normal Docker birimleri kapsayıcı dışında, ancak konak sunucusunun veya VM 'nin fiziksel sınırları içinde depolanabilir. Ancak, Docker Kapsayıcıları bir konak sunucusundan veya VM 'den diğerine bir birime erişemez. Diğer bir deyişle, bu birimlerle, farklı Docker konaklarında çalışan kapsayıcılar arasında paylaşılan verileri yönetmek mümkün değildir, ancak uzak konakları destekleyen bir birim sürücüsüyle elde edilebilir.
 
-![Birimler, uzak konakları destekleyen uzak bir sürücü kullanmadığınız müddetçe, kapsayıcılar arasında yalnızca aynı konakta paylaşılabilir. ](./media/image5.png)
+![Birimler, uzak konakları destekleyen uzak bir sürücü kullanmadığınız müddetçe, kapsayıcılar arasında yalnızca aynı konakta paylaşılabilir.](./media/image5.png)
 
 **Şekil 4-5**. Kapsayıcı tabanlı uygulamalar için birimler ve dış veri kaynakları
 

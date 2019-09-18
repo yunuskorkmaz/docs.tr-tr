@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 298275e2-da1d-4618-9f74-6a3567832350
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bed0084fd576ba9b9f9eeb51e9e2466938e43490
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 6f867b53f168a394515a1b1eaa6575a72dfb8d91
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70106503"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052005"
 ---
 # <a name="net-framework-system-requirements"></a>.NET Framework sistem gereksinimleri
 
@@ -34,7 +34,7 @@ Bu konudaki tablolar, aşağıdaki .NET Framework sürümleri için donanım, i�
 
 [!INCLUDE[net-framework-4-versions](../../../includes/net-framework-4x-versions.md)]
 
-İndirme bilgileri ve bağlantıları için bkz. [geliştiriciler için .NET Framework yükleme](../../../docs/framework/install/guide-for-developers.md).
+İndirme bilgileri ve bağlantıları için bkz. [geliştiriciler için .NET Framework yükleme](../install/guide-for-developers.md).
 
 .NET Framework sürümlerinin destek yaşam döngüsü hakkında daha fazla bilgi için bkz. [Microsoft desteği yaşam döngüsü](https://support.microsoft.com/lifecycle/search?sort=PN&alpha=Microsoft%20.NET%20Framework&Filter=FilterNO).
 
@@ -112,6 +112,6 @@ Bu konudaki tablolar, aşağıdaki .NET Framework sürümleri için donanım, i�
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Yükleme Kılavuzu](../../../docs/framework/install/index.md)
-- [Başlarken](../../../docs/framework/get-started/index.md)
-- [Engellenen .NET Framework yükleme ve kaldırma sorunlarını giderme](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)
+- [Yükleme Kılavuzu](../install/index.md)
+- [Başlarken](index.md)
+- [Engellenen .NET Framework yükleme ve kaldırma sorunlarını giderme](../install/troubleshoot-blocked-installations-and-uninstallations.md)

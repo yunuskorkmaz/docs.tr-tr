@@ -17,30 +17,30 @@ helpviewer_keywords:
 - receiving data, about receiving data
 - Internet, requesting data
 ms.assetid: df6f1e1d-6f2a-45dd-8141-4a85c3dafe1d
-ms.openlocfilehash: 4e93b9395e92ff4c1c153f53e0f40ff18c12416a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1f367caf7656a83597b6262a5746686df15d33b4
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61641950"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047322"
 ---
 # <a name="requesting-data"></a>Veri İsteme
-Günümüzün Internet dağıtılmış işletim ortamında çalışan uygulamalar geliştirme, her türden kaynaklardan veri almak için verimli, kullanımı kolay bir yöntem gerektirir. Takılabilir protokoller birden çok Internet protokollerinden veri almak için tek bir arabirim kullanan uygulamalar geliştirmenize olanak tanır.  
+Günümüzde Internet 'in dağıtılmış işletim ortamında çalışan uygulamaların geliştirilmesi, her türden kaynaktan veri almak için verimli ve kullanımı kolay bir yöntem gerektirir. Takılabilir protokoller, birden çok Internet protokolünden veri almak için tek bir arabirim kullanan uygulamalar geliştirmenize olanak sağlar.  
   
-## <a name="uploading-and-downloading-data-from-an-internet-server"></a>Karşıya yükleme ve bir Internet sunucusundan veri indirme  
- Basit isteği ve yanıt işlemleri <xref:System.Net.WebClient> sınıf verileri karşıya yükleme veya bir Internet sunucusundan verileri indirmek için kolay bir yöntem sağlar. **WebClient** dosyaları karşıya yükleme ve indirme, gönderme ve alma akışları ve bir veri arabelleği sunucuya göndermek ve bir yanıt almak için yöntemler sağlar. **WebClient** kullanan <xref:System.Net.WebRequest> ve <xref:System.Net.WebResponse> sınıfları, takılabilir Protokolü herhangi kayıtlı Internet kaynağına gerçek bağlantı olmak için kullanılabilir.  
+## <a name="uploading-and-downloading-data-from-an-internet-server"></a>Internet sunucusundan verileri karşıya yükleme ve Indirme  
+ Basit istek ve yanıt işlemleri için, <xref:System.Net.WebClient> sınıfı Internet sunucusuna veri yüklemek veya verileri indirmek için en kolay yöntemi sağlar. **WebClient** , dosyaları karşıya yükleme ve indirme, akışları gönderme ve alma, bir veri arabelleğini sunucuya gönderme ve yanıt alma için yöntemler sağlar. **WebClient** , <xref:System.Net.WebRequest> Internet kaynağına <xref:System.Net.WebResponse> yapılan gerçek bağlantıları oluşturmak için ve sınıflarını kullanır, bu nedenle tüm kayıtlı takılabilir protokolleri kullanılabilir.  
   
- Daha karmaşık işlem istek verileri kullanarak sunuculardan yapmanız istemci uygulamaları **WebRequest** sınıfı ve alt öğeleri. **WebRequest** sunucuya bağlanırken, isteği gönderme ve yanıt alma ayrıntıları. **WebRequest** özellikleri ve takılabilir protokoller kullanan tüm uygulamalar için kullanılabilen yöntemleri kümesini tanımlayan bir soyut sınıftır. Alt öğeleri **WebRequest**, gibi <xref:System.Net.HttpWebRequest>, özellikleri ve yöntemleri tarafından tanımlanan uygulamak **WebRequest** temel alınan protokolü ile tutarlı bir şekilde.  
+ **WebRequest** sınıfını ve alt öğelerini kullanarak sunuculardan daha karmaşık işlemler yapması gereken istemci uygulamalar. **WebRequest** , sunucuya bağlanma, isteği gönderme ve yanıtı alma ayrıntılarını kapsüller. **WebRequest** , takılabilir protokoller kullanan tüm uygulamalar için kullanılabilir olan özellikler ve yöntemler kümesini tanımlayan soyut bir sınıftır. **WebRequest** <xref:System.Net.HttpWebRequest>'in (gibi) alt öğeleri, **WebRequest** tarafından tanımlanan özellikleri ve yöntemleri temel protokolle tutarlı bir şekilde uygular.  
   
- **WebRequest** sınıfı protokole özgü örneklerini oluşturur **WebRequest** URI değerini kullanarak alt öğeleri, geçirilen kendi <xref:System.Net.WebRequest.Create%2A> belirli türetilmiş sınıf belirlemek için yöntemi oluşturmak için örneği. Uygulamaları belirtin, **WebRequest** alt öğesi alt öğesi'nın oluşturucuyla kaydederek bir isteği işlemek için kullanılması gerekir <xref:System.Net.WebRequest.RegisterPrefix%2A?displayProperty=nameWithType> yöntemi.  
+ **WebRequest** sınıfı, oluşturulacak özel türetilmiş sınıf örneğini tespit etmek üzere yöntemine geçirilen URI değerini kullanarak **WebRequest** alt <xref:System.Net.WebRequest.Create%2A> öğelerinin protokolüne özgü örneklerini oluşturur. Uygulamalar, alt öğe oluşturucusunu <xref:System.Net.WebRequest.RegisterPrefix%2A?displayProperty=nameWithType> yöntemiyle kaydederek bir isteği işlemek için hangi **WebRequest** alt öğesinin kullanılacağını belirtir.  
   
- İstek çağırarak Internet kaynağına yapılan <xref:System.Net.WebRequest.GetResponse%2A> metodunda **WebRequest**. **GetResponse yanıtına** yöntemi oluşturur özelliklerini protokole özgü istekten **WebRequest**sunucusuna TCP veya UDP Yuva bağlantısı kurar ve isteği gönderir. HTTP gibi sunucusuna veri gönderme istekleri **Post** veya FTP **Put** istekleri <xref:System.Net.WebRequest.GetRequestStream%2A?displayProperty=nameWithType> yöntemi, veri göndermek bir ağ akışı sağlar.  
+ <xref:System.Net.WebRequest.GetResponse%2A> **Web isteğindeki**yöntemi çağırarak Internet kaynağına bir istek yapılır. **GetResponse** yöntemi **WebRequest**özelliklerinden protokolüne özgü isteği oluşturur, TCP veya UDP soket bağlantısını sunucuya yapar ve isteği gönderir. HTTP **Post** veya FTP **PUT** <xref:System.Net.WebRequest.GetRequestStream%2A?displayProperty=nameWithType> istekleri gibi sunucuya veri gönderen isteklerde, yöntemi verilerin gönderileceği bir ağ akışı sağlar.  
   
- **GetResponse yanıtına** yöntemi döndürür protokole özgü **WebResponse** eşleşen **WebRequest.**  
+ **GetResponse** yöntemi **WebRequest** ile eşleşen protokole özgü bir **WebResponse** döndürür.  
   
- **WebResponse** sınıfı, ayrıca bir soyut sınıf özellikleri ve takılabilir protokoller kullanan tüm uygulamalar için kullanılabilen yöntemleri tanımlar. **Webresponse'tan** alt öğeleri, bu özellikleri ve yöntemleri için temel alınan protokoldeki uygulayın. <xref:System.Net.HttpWebResponse> Gibi uygulayan sınıf **WebResponse** HTTP için sınıf.  
+ **WebResponse** sınıfı ayrıca takılabilir protokolleri kullanan tüm uygulamalar için kullanılabilen özellikleri ve yöntemleri tanımlayan bir soyut sınıftır. **WebResponse** alt öğeleri, temel alınan protokol için bu özellikleri ve yöntemleri uygular. Sınıfı, örneğin, http için WebResponse sınıfını uygular. <xref:System.Net.HttpWebResponse>  
   
- Sunucu tarafından döndürülen verilerin uygulama tarafından döndürülen akış içinde sunulan <xref:System.Net.WebResponse.GetResponseStream%2A?displayProperty=nameWithType> yöntemi. Aşağıdaki örnekte gösterildiği gibi diğer, bu akış kullanabilirsiniz.  
+ Sunucu tarafından döndürülen veriler, <xref:System.Net.WebResponse.GetResponseStream%2A?displayProperty=nameWithType> yöntemi tarafından döndürülen akıştaki uygulamaya sunulur. Bu akışı, aşağıdaki örnekte gösterildiği gibi herhangi bir gibi kullanabilirsiniz.  
   
 ```csharp  
 StreamReader sr =  
@@ -54,6 +54,6 @@ sr = New StreamReader(resp.GetResponseStream(), Encoding.ASCII)
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [.NET Framework'te Ağ Programlaması](../../../docs/framework/network-programming/index.md)
-- [Nasıl yapılır: Web sayfası isteme ve sonuçları bir Stream alma](../../../docs/framework/network-programming/how-to-request-a-web-page-and-retrieve-the-results-as-a-stream.md)
-- [Nasıl yapılır: WebRequest ile eşleşen protokole özgü WebResponse alma](../../../docs/framework/network-programming/how-to-retrieve-a-protocol-specific-webresponse-that-matches-a-webrequest.md)
+- [.NET Framework'te Ağ Programlaması](index.md)
+- [Nasıl yapılır: Web sayfası isteme ve sonuçları akış olarak alma](how-to-request-a-web-page-and-retrieve-the-results-as-a-stream.md)
+- [Nasıl yapılır: WebRequest Ile eşleşen protokole özgü bir WebResponse alma](how-to-retrieve-a-protocol-specific-webresponse-that-matches-a-webrequest.md)

@@ -5,33 +5,33 @@ helpviewer_keywords:
 - certificates [WCF], creating temporary certificates
 - temporary certificates [WCF]
 ms.assetid: bc5f6637-5513-4d27-99bb-51aad7741e4a
-ms.openlocfilehash: 4223ee8c8790ad4d0ae2275b347c4f974eeb4158
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: e2df35959f9821c65d694079aefa0ae6ba01897f
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877970"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053304"
 ---
 # <a name="how-to-create-temporary-certificates-for-use-during-development"></a>Nasıl yapılır: Geliştirme Sırasında Kullanmak için Geçici Sertifikalar Oluşturma
 
-Güvenli hizmet veya Windows Communication Foundation (WCF) kullanan istemci geliştirirken, genellikle bir kimlik bilgisi olarak kullanılacak bir X.509 sertifikası sağlamak gereklidir. Sertifika bilgisayar güvenilen kök sertifika yetkilileri deposunda bulunan kök yetkilisi sertifikalarıyla oluşan bir zincir, genellikle parçasıdır. Bir sertifika zinciri olan sertifika genellikle kök yetkilisi kuruluşunuz veya iş birimi olduğu kümesi kapsam olanak tanır. Bu geliştirme zamanında benzetmek için güvenlik gereksinimlerini karşılamak için iki sertifika oluşturabilirsiniz. İlk otomatik olarak imzalanan bir sertifika olduğundan güvenilen kök sertifika yetkilileri deposunda yerleştirilir ve ikinci sertifikayı ilk konumdan oluşturulur ve yerel makine konumun Kişisel depolama alanı kişisel mağazasında şirket içinde veya yerleştirilir. Geçerli kullanıcı konumu. Bu konuda, Powershell kullanarak bu iki sertifikaları oluşturma adımlarında size kılavuzluk eder [New-SelfSignedCertificate)](/powershell/module/pkiclient/new-selfsignedcertificate) cmdlet'i.
+Windows Communication Foundation (WCF) kullanarak güvenli bir hizmet veya istemci geliştirirken, genellikle kimlik bilgisi olarak kullanılacak bir X. 509.440 sertifikası sağlamak gereklidir. Sertifika genellikle bilgisayarın güvenilen kök sertifika yetkilileri deposunda bulunan bir kök yetkiliyle bir Sertifika zincirinin parçasıdır. Bir sertifika zinciri olması, genellikle kök yetkilisinin kuruluşunuzun veya iş biriminden olduğu bir sertifika kümesini kapsamlamanıza olanak sağlar. Geliştirme zamanında buna öykünmek için, güvenlik gereksinimlerini karşılamak üzere iki sertifika oluşturabilirsiniz. İlki, güvenilen kök sertifika yetkilileri deposuna yerleştirilmiş otomatik olarak imzalanan bir sertifikadır ve ikinci sertifika birinciden oluşturulur ve yerel makine konumunun kişisel deposuna ya da Geçerli Kullanıcı konumu. Bu konu, PowerShell [New-SelfSignedCertificate)](/powershell/module/pkiclient/new-selfsignedcertificate) cmdlet 'ini kullanarak bu iki sertifikayı oluşturma adımlarında size kılavuzluk eder.
 
 > [!IMPORTANT]
-> New-SelfSignedCertificate cmdlet oluşturur sertifikalar yalnızca sınama amacıyla sağlanır. Bir hizmet veya istemci dağıtımı sırasında bir sertifika yetkilisi tarafından sağlanan uygun bir sertifikayı kullanmak emin olun. Bu, kuruluşunuzdaki Windows Server sertifika sunucusu arasında ya da üçüncü bir tarafa.
+> New-SelfSignedCertificate cmdlet 'inin oluşturduğu sertifikalar yalnızca sınama amacıyla sağlanır. Bir hizmet veya istemci dağıtıldığında, bir sertifika yetkilisi tarafından sunulan uygun bir sertifikayı kullandığınızdan emin olun. Bu, kuruluşunuzdaki bir Windows Server sertifika sunucusundan veya üçüncü bir tarafa ait olabilir.
 >
-> Varsayılan olarak, [New-SelfSignedCertificate](/powershell/module/pkiclient/new-selfsignedcertificate) cmdlet'i otomatik olarak imzalanan sertifikalar oluşturur ve bu sertifikaları güvenli değil. Otomatik olarak imzalanan sertifikaları Güvenilen kök sertifika yetkilileri yerleştirme store dağıtım ortamınızı daha yakından taklit eden bir geliştirme ortamı olarak oluşturmanıza olanak sağlar.
+> Varsayılan olarak, [New-SelfSignedCertificate](/powershell/module/pkiclient/new-selfsignedcertificate) cmdlet 'i, kendinden imzalı sertifikalar oluşturur ve bu sertifikalar güvenli değildir. Otomatik olarak imzalanan sertifikaların güvenilen kök sertifika yetkilileri deposuna yerleştirilmesi, dağıtım ortamınızı daha yakından taklit eden bir geliştirme ortamı oluşturmanızı sağlar.
 
- Oluşturma ve sertifikaları kullanma hakkında daha fazla bilgi için bkz. [Working with Certificates](working-with-certificates.md). Bir kimlik bilgisi olarak bir sertifika kullanma hakkında daha fazla bilgi için bkz. [Hizmetleri güvenli hale getirme ve istemciler](securing-services-and-clients.md). Microsoft Authenticode teknolojisi kullanılarak hakkında bir öğretici için bkz [Authenticode genel bakış ve öğreticiler](https://go.microsoft.com/fwlink/?LinkId=88919).
+ Sertifika oluşturma ve kullanma hakkında daha fazla bilgi için bkz. [sertifikalarla çalışma](working-with-certificates.md). Kimlik bilgisi olarak sertifika kullanma hakkında daha fazla bilgi için bkz. [Hizmetleri ve Istemcileri güvenli hale getirme](securing-services-and-clients.md). Microsoft Authenticode teknolojisini kullanma hakkında bir öğretici için bkz. [Authenticode genel bakış ve öğreticiler](https://go.microsoft.com/fwlink/?LinkId=88919).
 
-## <a name="to-create-a-self-signed-root-authority-certificate-and-export-the-private-key"></a>Otomatik olarak imzalanan kök yetkilisi sertifikası oluşturma ve özel anahtarı dışarı aktar
+## <a name="to-create-a-self-signed-root-authority-certificate-and-export-the-private-key"></a>Otomatik olarak imzalanan bir kök yetkili sertifikası oluşturmak ve özel anahtarı dışarı aktarmak için
 
-Aşağıdaki komut, "RootCA" geçerli kullanıcının kişisel depoda bir konu adıyla otomatik olarak imzalanan bir sertifika oluşturur.
+Aşağıdaki komut, geçerli kullanıcı Kişisel deposunda "RootCA" konu adına sahip kendinden imzalı bir sertifika oluşturur.
 
 ```powershell
-$rootCert = New-SelfSignedCertificate -CertStoreLocation cert:\CurrentUser\My -DnsName "RootCA" -TextExtension @("2.5.29.37={text}1.3.6.1.5.5.7.3.1,1.3.6.1.5.5.7.3.2") -KeyUsage CertSign,DigitalSignature
+$rootcert = New-SelfSignedCertificate -CertStoreLocation Cert:\CurrentUser\My -DnsName "RootCA" -TextExtension @("2.5.29.19={text}CA=true") -KeyUsage CertSign,CrlSign,DigitalSignature
 ```
 
-Böylece daha sonraki bir adımda gerekli yerlerde için aktarılabilen sertifikayı bir PFX dosyasına aktarmak ihtiyacımız var. Özel anahtara sahip bir sertifika verilirken korunması için bir parola gereklidir. Biz Parolayı Kaydet bir `SecureString` ve [dışarı aktarma-PfxCertificate](/powershell/module/pkiclient/export-pfxcertificate) sertifikayı bir PFX dosyasına ilişkili özel anahtarla dışarı aktarmak için cmdlet'ini. Biz CRT kullanarak dosyanın içine de yalnızca ortak sertifikayı kaydetmek [sertifika verme](/powershell/module/pkiclient/export-certificate) cmdlet'i.
+Sertifikayı bir PFX dosyasına aktardığımızda, daha sonraki bir adımda gereken yere aktarılabilmesi gerekir. Özel anahtarla bir sertifika dışarı aktarılırken, bunu korumak için bir parola gerekir. Parolayı bir `SecureString` öğesine kaydeder ve sertifikayı ilişkili özel anahtarla bir PFX dosyasına aktarmak için [Export-pfxcertificate](/powershell/module/pkiclient/export-pfxcertificate) cmdlet 'ini kullanın. Ayrıca, [Export-Certificate](/powershell/module/pkiclient/export-certificate) cmdlet 'ini kullanarak yalnızca genel sertifikayı CRT dosyasına kaydettik.
 
 ```powershell
 [System.Security.SecureString]$rootcertPassword = ConvertTo-SecureString -String "password" -Force -AsPlainText
@@ -42,13 +42,13 @@ Export-Certificate -Cert $rootCertPath -FilePath 'RootCA.crt'
 
 ## <a name="to-create-a-new-certificate-signed-by-a-root-authority-certificate"></a>Kök yetkilisi sertifikası tarafından imzalanmış yeni bir sertifika oluşturmak için
 
-Aşağıdaki komut tarafından imzalanmış bir sertifika oluşturur `RootCA` "SignedByRootCA verenin özel anahtarı kullanarak", bir konu adına sahip.
+Aşağıdaki komut, `RootCA` veren 'in özel anahtarını kullanarak "signedbyrootca" konu adı ile imzalanmış bir sertifika oluşturur.
 
 ```powershell
 $testCert = New-SelfSignedCertificate -CertStoreLocation Cert:\LocalMachine\My -DnsName "SignedByRootCA" -KeyExportPolicy Exportable -KeyLength 2048 -KeyUsage DigitalSignature,KeyEncipherment -Signer $rootCert
 ```
 
-Benzer şekilde, biz imzalı sertifikanın özel anahtara sahip bir PFX dosyası ve ortak anahtarı yalnızca bir CRT dosyasına kaydedin.
+Benzer şekilde, imzalı sertifikayı özel anahtarla bir PFX dosyasına ve yalnızca ortak anahtara bir CRT dosyasına kaydedebiliyoruz.
 
 ```powershell
 [String]$testCertPath = Join-Path -Path 'cert:\LocalMachine\My\' -ChildPath "$($testCert.Thumbprint)"
@@ -56,29 +56,29 @@ Export-PfxCertificate -Cert $testCertPath -FilePath testcert.pfx -Password $root
 Export-Certificate -Cert $testCertPath -FilePath testcert.crt
 ```
 
-## <a name="installing-a-certificate-in-the-trusted-root-certification-authorities-store"></a>Güvenilen kök sertifika yetkilileri Store sertifika yükleme
+## <a name="installing-a-certificate-in-the-trusted-root-certification-authorities-store"></a>Güvenilen kök sertifika yetkilileri deposuna sertifika yükleme
 
-Kendinden imzalı bir sertifika oluşturulduktan sonra güvenilen kök sertifika yetkilileri deposunda yükleyebilirsiniz. İmzalanmış herhangi bir sertifika ile bu noktada sertifika, bilgisayar tarafından güvenilmiyor. Artık ihtiyacınız hemen sonra bu nedenle, sertifika deposundan silin. İle imzalanmış tüm sertifikaları bu kök yetkilisi sertifikası sildiğinizde, yetkisiz haline gelir. Kök yetkilisi sertifikaları yapabildiği sertifikaların bir grup gerektiğinde kapsamlandırılabilir olarak yalnızca bir mekanizması mevcuttur. Örneğin, eşler arası uygulamalar, genellikle gerek yoktur kök yetkilisi için yalnızca bir bireyin kimliği tarafından sağlanan, sertifika güven için.
+Otomatik olarak imzalanan bir sertifika oluşturulduktan sonra, güvenilen kök sertifika yetkilileri deposuna yükleyebilirsiniz. Bu noktada sertifikayla imzalanan tüm sertifikalara bilgisayar tarafından güvenililir. Bu nedenle, sertifikayı artık ihtiyaç duyulmaz depolamadan silin. Bu kök yetkili sertifikasını sildiğinizde, onunla imzalanan tüm diğer sertifikalar yetkilendirilmemiş hale gelir. Kök yetkili sertifikaları, bir sertifika grubunun gerekli olarak kapsam oluşturabildiği bir mekanizmadır. Örneğin, eşler arası uygulamalarda, genellikle bir kök yetkili gereksinimi yoktur, çünkü yalnızca bir bireyin kimliğini sağlanan sertifikayla güvende olursunuz.
 
-### <a name="to-install-a-self-signed-certificate-in-the-trusted-root-certification-authorities"></a>Güvenilen kök sertifika yetkilileri otomatik olarak imzalanan bir sertifika yüklemek için
+### <a name="to-install-a-self-signed-certificate-in-the-trusted-root-certification-authorities"></a>Güvenilen kök sertifika yetkililerine otomatik olarak imzalanan sertifika yüklemek için
 
-1. Sertifika ek bileşenini açın. Daha fazla bilgi için [nasıl yapılır: MMC ek bileşeni ile sertifikaları görüntüleme](how-to-view-certificates-with-the-mmc-snap-in.md).
+1. Sertifika ek bileşenini açın. Daha fazla bilgi için [nasıl yapılır: MMC ek bileşeni](how-to-view-certificates-with-the-mmc-snap-in.md)ile sertifikaları görüntüleyin.
 
-2. Sertifika ya da depolamak için klasörü açın **yerel bilgisayar** veya **geçerli kullanıcının**.
+2. Sertifikayı **Yerel bilgisayar** veya **Geçerli Kullanıcı**olarak depolamak için klasörü açın.
 
-3. Açık **güvenilen kök sertifika yetkilileri** klasör.
+3. **Güvenilen kök sertifika yetkilileri** klasörünü açın.
 
-4. Sağ tıklayın **sertifikaları** klasörü ve tıklatın **tüm görevler**, ardından **alma**.
+4. **Sertifikalar** klasörüne sağ tıklayın ve **Tüm görevler**' e ve ardından **içeri aktar**' a tıklayın.
 
-5. Ekrandaki Sihirbazı izleyin RootCA.pfx depoya içeri aktarma yönergeleri.
+5. RootCA. pfx 'i depoya aktarmak için ekrandaki sihirbaz yönergelerini izleyin.
 
-## <a name="using-certificates-with-wcf"></a>WCF ile sertifika kullanma
+## <a name="using-certificates-with-wcf"></a>WCF Ile sertifika kullanma
 
-Geçici sertifikalar ayarladıktan sonra sertifikaları bir istemci kimlik bilgisi türü belirtin WCF çözümleri geliştirmek için kullanabilirsiniz. Örneğin, aşağıdaki XML yapılandırması ileti güvenliği ve bir sertifika istemci kimlik bilgileri türünü belirtir.
+Geçici sertifikaları ayarladıktan sonra, sertifikaları istemci kimlik bilgisi türü olarak belirten WCF çözümleri geliştirmek için kullanabilirsiniz. Örneğin, aşağıdaki XML yapılandırması ileti güvenliğini ve istemci kimlik bilgisi türü olarak bir sertifikayı belirtir.
 
-### <a name="to-specify-a-certificate-as-the-client-credential-type"></a>Sertifika istemci kimlik bilgisi türü belirtmek için
+### <a name="to-specify-a-certificate-as-the-client-credential-type"></a>İstemci kimlik bilgisi türü olarak bir sertifika belirtmek için
 
-1. Hizmet yapılandırma dosyasında aşağıdaki XML iletisi ve sertifika için istemci kimlik bilgisi türü güvenlik modu ayarlamak için kullanın.
+1. Bir hizmetin yapılandırma dosyasında, güvenlik modunu ileti olarak ve istemci kimlik bilgisi türünü sertifikaya ayarlamak için aşağıdaki XML 'i kullanın.
 
     ```xml
     <bindings>
@@ -92,7 +92,7 @@ Geçici sertifikalar ayarladıktan sonra sertifikaları bir istemci kimlik bilgi
     </bindings>
     ```
 
-2. Bir istemci için yapılandırma dosyasında, sertifikası olan bir kullanıcının deposunda bulunamadı ve SubjectName alanın değeri "CohoWinery." için arama yaparak bulunabilir belirtmek için aşağıdaki XML kullanın.
+2. Bir istemcinin yapılandırma dosyasında, sertifikanın kullanıcının deposunda bulunduğunu belirtmek için aşağıdaki XML 'i kullanın ve "Cohowınaraı" değeri için SubjectName alanında arama yaparak bulunabilir.
 
     ```xml
     <behaviors>
@@ -106,11 +106,11 @@ Geçici sertifikalar ayarladıktan sonra sertifikaları bir istemci kimlik bilgi
     </behaviors>
     ```
 
-WCF'de sertifikaları kullanma hakkında daha fazla bilgi için bkz. [Working with Certificates](working-with-certificates.md).
+WCF 'de sertifika kullanma hakkında daha fazla bilgi için bkz. [sertifikalarla çalışma](working-with-certificates.md).
 
 ## <a name="net-framework-security"></a>.NET Framework güvenliği
 
-Geçici kök yetkilisi sertifikalarını sildiğinizden emin olun **güvenilen kök sertifika yetkilileri** ve **kişisel** sertifikayı sağ tıklatıp sonra tıklatarak klasörleri  **Silme**.
+Sertifikaya sağ tıklayıp **Sil**' e tıklayarak, **Güvenilen kök sertifika yetkililerinden** ve **Kişisel** klasörlerden herhangi bir geçici kök yetkilisi sertifikasını sildiğinizden emin olun.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

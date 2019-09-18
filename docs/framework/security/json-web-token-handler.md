@@ -2,28 +2,28 @@
 title: JSON Web Belirteci İşleyicisi
 ms.date: 03/30/2017
 ms.assetid: 9968f12e-e05d-4e6a-9b65-6896c0e31ab1
-ms.openlocfilehash: 5ffaaaebd87c63b784a749f8998d43d14fe768e1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3dc76f3de714fd91d397cc240d02a1a8605fe18b
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64641119"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045327"
 ---
 # <a name="json-web-token-handler"></a>JSON Web Belirteci İşleyicisi
 Windows Identity Foundation için JSON Web Belirteci İşleyicisi uzantısı, uygulamalarınızda JSON Web Belirteçleri (JWT) oluşturmanıza ve doğrulamanıza olanak verir. JWT Belirteci İşleyicisi, diğer yerleşik güvenlik belirteci işleyicileri gibi WIF ardışık düzeninde çalışacak şekilde yapılandırılabilir, ancak basit uygulamalarda belirteç doğrulamasını gerçekleştirmek için bağımsız olarak da kullanılabilir. JWT Belirteci İşleyicisi, Microsoft Azure Active Directory kimlik doğrulaması gibi bir OAuth 2.0 taşıyıcı belirteci düzenini kullanırken özellikle yararlıdır.  
   
- JWT Belirteci İşleyicisi bir NuGet paketi olarak kullanılabilir. Bkz: [JSON Web belirteci işleyicisi paketini indirme](../../../docs/framework/security/downloading-the-json-web-token-handler-package.md) daha fazla bilgi için.  
+ JWT Belirteci İşleyicisi bir NuGet paketi olarak kullanılabilir. Daha fazla bilgi için bkz. [JSON Web Token Işleyicisi paketini indirme](downloading-the-json-web-token-handler-package.md) .  
   
 ## <a name="scenarios"></a>Senaryolar  
  JWT Belirteci İşleyicisi aşağıdaki temel senaryolara olanak tanır:  
   
-- **Bir sunucu uygulamasında JWT belirtecini doğrulama**: Bu senaryoda, Litware adlı bir şirketin WIF oturum açma web isteklerini işlemek için kullandığı bir sunucu uygulaması vardır. Litware, uygulamasının kimlik doğrulama için JWT belirteçleri kullanmasını sağlamak istemektedir. Uygulama, JWT Belirteci İşleyicisi ile güncelleştirilir ve ardından uygulama yapılandırması, WIF ardışık düzeni içine JWT belirteci işleyicisi eklenecek şekilde güncelleştirilir. Güncelleştirmeler yapıldıktan ve yeni istek WIF ardışık düzenine girdikten sonra, JWT belirteci yeni işleyiciyi kullanılarak doğrulanır ve kimlik doğrulama başarıyla gerçekleşmiş olur.  
+- **Sunucu UYGULAMASıNDA JWT belirtecini doğrulama**: Bu senaryoda, Litwlar adlı bir şirketin, Web oturum açma isteklerini işlemek için WıF kullanan bir sunucu uygulaması vardır. Litware, uygulamasının kimlik doğrulama için JWT belirteçleri kullanmasını sağlamak istemektedir. Uygulama, JWT Belirteci İşleyicisi ile güncelleştirilir ve ardından uygulama yapılandırması, WIF ardışık düzeni içine JWT belirteci işleyicisi eklenecek şekilde güncelleştirilir. Güncelleştirmeler yapıldıktan ve yeni istek WIF ardışık düzenine girdikten sonra, JWT belirteci yeni işleyiciyi kullanılarak doğrulanır ve kimlik doğrulama başarıyla gerçekleşmiş olur.  
   
-- **JWT belirtecini REST Web hizmetinde doğrulama**: Bu senaryoda, Litware adlı bir şirketin Windows Azure Active Directory tarafından güvenli hale getirilmiş bir REST web hizmeti vardır. Web hizmetine yapılan isteklerin kimliği, başarılı bir kimlik doğrulamasında sonra JWT belirtecini veren Microsoft Azure AD tarafından doğrulanmalıdır. Litware, web hizmetine erişmesi gereken bir istemci uygulamasına sahiptir. İstemci web hizmetine bir istekte bulunur ve Microsoft Azure AD'den aldığı JWT belirtecini sunar. Bu belirteç daha sonra JWT Belirteci İşleyicisi kullanılarak web hizmeti tarafından doğrulanır. JWT Belirteci İşleyicisi belirteci doğruladıktan sonra, istenen kaynak web hizmeti tarafından istemciye döndürülür.  
+- **Rest Web HIZMETINDE JWT belirtecini doğrulama**: Bu senaryoda, Litwlar adlı bir şirketin, Windows Azure Active Directory tarafından güvenliği sağlanmış bir REST Web hizmeti vardır. Web hizmetine yapılan isteklerin kimliği, başarılı bir kimlik doğrulamasında sonra JWT belirtecini veren Microsoft Azure AD tarafından doğrulanmalıdır. Litware, web hizmetine erişmesi gereken bir istemci uygulamasına sahiptir. İstemci web hizmetine bir istekte bulunur ve Microsoft Azure AD'den aldığı JWT belirtecini sunar. Bu belirteç daha sonra JWT Belirteci İşleyicisi kullanılarak web hizmeti tarafından doğrulanır. JWT Belirteci İşleyicisi belirteci doğruladıktan sonra, istenen kaynak web hizmeti tarafından istemciye döndürülür.  
   
 ## <a name="features"></a>Özellikler  
  JWT Belirteci İşleyicisi aşağıdaki özellikleri sunar:  
   
-- **JWT belirteci doğrulama**: JWT belirteçlerinin kolayca belirteç işleyicisinin Doğrulama mantığı, bir uygulamanın WIF ardışık düzeninin parçası olarak ya da doğrulayan veya wıf'den bağımsız  
+- **JWT belirtecini doğrulama**: JWT belirteçleri, uygulamanın WıF ardışık düzeninin bir parçası olarak veya WıF 'den bağımsız olarak çağrıldığında, belirteç işleyicisinin doğrulama mantığı tarafından kolayca doğrulanabilir  
   
-- **Oluşturma bir JWT belirteci**: JWT belirteci işleyicisi, aşağı akış hizmetlerinde yetkilendirme için JWT belirteçleri oluşturmak için kullanılabilir
+- **JWT belirteci oluştur**: JWT belirteci Işleyicisi, aşağı akış hizmetlerinde yetkilendirme için JWT belirteçleri oluşturmak üzere kullanılabilir

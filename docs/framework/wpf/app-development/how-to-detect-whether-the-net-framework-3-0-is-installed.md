@@ -1,19 +1,19 @@
 ---
-title: "Nasıl yapılır: .NET Framework 3.0'in Yüklü Olup Olmadığını Algılama"
+title: "Nasıl yapılır: .NET Framework 3.0'ın Yüklü Olup Olmadığını Algılama"
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WinFX Runtime user-agent string
 - presence of WPT [WPF], detecting
 - detecting WPF presence [WPF]
 ms.assetid: 7f71d652-1749-4379-945a-aa2e3994cb43
-ms.openlocfilehash: e307125a2a8de3edc4df2fc1022c6e3de1904879
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c68daf2cb5687497e66ad3022ce42352a17ae0f7
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69960251"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053447"
 ---
-# <a name="how-to-detect-whether-the-net-framework-30-is-installed"></a>Nasıl yapılır: .NET Framework 3.0'in Yüklü Olup Olmadığını Algılama
+# <a name="how-to-detect-whether-the-net-framework-30-is-installed"></a>Nasıl yapılır: .NET Framework 3.0'ın Yüklü Olup Olmadığını Algılama
 Yöneticiler bir sistemde Microsoft .NET Framework uygulamaları dağıtabilmek için önce .NET Framework çalışma zamanının mevcut olduğunu doğrulamamalıdır. Bu konuda, yöneticilerin bir sistemde .NET Framework olup olmadığını belirlemede kullanabilecekleri HTML/JavaScript 'te yazılmış bir komut dosyası sağlanmaktadır.  
   
 > [!NOTE]
@@ -23,7 +23,7 @@ Yöneticiler bir sistemde Microsoft .NET Framework uygulamaları dağıtabilmek 
 ## <a name="detect-the-net-clr-user-agent-string"></a>".NET CLR" Kullanıcı aracısı dizesini Algıla  
  .NET Framework yüklendiğinde, MSI ".NET CLR" ve sürüm numarasını UserAgent dizesine ekler. Aşağıdaki örnek, basit bir HTML sayfasına eklenmiş bir betiği gösterir. Betik, .NET Framework yüklenip yüklenmediğini ve aramanın sonuçlarında bir durum iletisi görüntüleyip oluşturulmayacağını anlamak için UserAgent dizesini arar.  
   
-```  
+```html  
 <HTML>  
   <HEAD>  
     <TITLE>Test for the .NET Framework 3.0</TITLE>  

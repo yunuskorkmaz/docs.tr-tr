@@ -14,32 +14,32 @@ helpviewer_keywords:
 - Internet, sockets
 - client sockets
 ms.assetid: f3fc7533-6956-42c6-bbc3-73e5a221027d
-ms.openlocfilehash: f709c2e0780b89e072c43e9acaf722e6851d4cbe
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cbb77907c018b9b8f56895adf21f1f353ab71f88
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61641898"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047292"
 ---
 # <a name="socket-code-examples"></a>Yuva Kod Örnekleri
-Aşağıdaki kod örneğinde nasıl kullanılacağını gösteren <xref:System.Net.Sockets.Socket> uzak ağ hizmetlerine bağlanmak için bir istemci ve uzak istemci bağlantılarını dinlemek için bir sunucu olarak sınıf.  
+Aşağıdaki kod örnekleri, uzak istemcilerden gelen bağlantıları dinlemek <xref:System.Net.Sockets.Socket> üzere bir istemci olarak sınıfının bir istemci olarak nasıl kullanılacağını göstermektedir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Zaman Uyumlu İstemci Yuvası Örneği](../../../docs/framework/network-programming/synchronous-client-socket-example.md)  
- Zaman uyumlu bir uygulama gösterilmektedir <xref:System.Net.Sockets.Socket> sunucudan sunucuya bağlanır ve verileri görüntüleyen istemci döndürdü.  
+ [Zaman Uyumlu İstemci Yuvası Örneği](synchronous-client-socket-example.md)  
+ Bir sunucuya bağlanan ve sunucudan döndürülen <xref:System.Net.Sockets.Socket> verileri görüntüleyen zaman uyumlu bir istemcinin nasıl uygulanacağını gösterir.  
   
- [Zaman Uyumlu Sunucu Yuvası Örneği](../../../docs/framework/network-programming/synchronous-server-socket-example.md)  
- Zaman uyumlu bir uygulama gösterilmektedir <xref:System.Net.Sockets.Socket> istemci bağlantılarını kabul eder ve istemciden alınan veriler geri Yankı sunucu.  
+ [Zaman Uyumlu Sunucu Yuvası Örneği](synchronous-server-socket-example.md)  
+ İstemciden bağlantıları kabul eden ve istemciden <xref:System.Net.Sockets.Socket> alınan verileri yankılayan zaman uyumlu bir sunucunun nasıl uygulanacağını gösterir.  
   
- [Zaman Uyumsuz İstemci Yuvası Örneği](../../../docs/framework/network-programming/asynchronous-client-socket-example.md)  
- Zaman uyumsuz bir uygulama gösterilmektedir <xref:System.Net.Sockets.Socket> sunucudan sunucuya bağlanır ve verileri görüntüleyen istemci döndürdü.  
+ [Zaman Uyumsuz İstemci Yuvası Örneği](asynchronous-client-socket-example.md)  
+ Bir sunucuya bağlanan ve sunucudan döndürülen <xref:System.Net.Sockets.Socket> verileri görüntüleyen zaman uyumsuz bir istemcinin nasıl uygulanacağını gösterir.  
   
- [Zaman Uyumsuz Sunucu Yuvası Örneği](../../../docs/framework/network-programming/asynchronous-server-socket-example.md)  
- Zaman uyumsuz bir uygulama gösterilmektedir <xref:System.Net.Sockets.Socket> istemci bağlantılarını kabul eder ve istemciden alınan veriler geri Yankı sunucu.  
+ [Zaman Uyumsuz Sunucu Yuvası Örneği](asynchronous-server-socket-example.md)  
+ İstemciden bağlantıları kabul eden ve istemciden <xref:System.Net.Sockets.Socket> alınan verileri yankılayan zaman uyumsuz bir sunucunun nasıl uygulanacağını gösterir.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Yuvalar](../../../docs/framework/network-programming/sockets.md)  
- Hakkında temel bilgiler sağlanmaktadır <xref:System.Net.Sockets> ad alanı ve <xref:System.Net.Sockets.Socket> sınıfı.  
+ [Yuvalar](sockets.md)  
+ <xref:System.Net.Sockets> Ad alanı<xref:System.Net.Sockets.Socket> ve sınıf hakkında temel bilgileri sağlar.  
   
- [Ağ Programlama Güvenliği](../../../docs/framework/network-programming/security-in-network-programming.md)  
+ [Ağ Programlama Güvenliği](security-in-network-programming.md)  
  Standart Internet güvenliği ve kimlik doğrulama tekniklerinin nasıl kullanılacağını açıklar.

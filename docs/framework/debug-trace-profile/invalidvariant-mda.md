@@ -10,30 +10,30 @@ helpviewer_keywords:
 ms.assetid: d273e070-d1b1-4a53-a9c7-7af837b04a3d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 64f5a4425d70974bae8c4f7bec28041e687fe95f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c34f160b643a0431168097d3832357b4ac6e4557
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61754329"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052568"
 ---
 # <a name="invalidvariant-mda"></a>invalidVariant MDA
-`invalidVariant` Yönetilen hata ayıklama Yardımcısı (MDA) geçersiz olduğunda etkinleştirilir `VARIANT` yapısı, yerel veya yönetilmeyen koddan yönetilen koda çağrı sırasında karşılaşıldığında.  
+Yönetilen `invalidVariant` hata ayıklama Yardımcısı (MDA), yerel veya yönetilmeyen koddan `VARIANT` yönetilen koda yapılan bir çağrı sırasında geçersiz bir yapıyla karşılaşıldığında etkinleştirilir.  
   
 ## <a name="symptoms"></a>Belirtiler  
- Beklenmeyen davranışı, hazırlama içeren yerel ve yönetilen kod arasında geçiş sırasında bir `VARIANT` bir nesne.  
+ Bir nesnenin bir `VARIANT` nesneye sıralamasını içeren yerel ve yönetilen kod arasındaki geçiş sırasında beklenmeyen davranış.  
   
 ## <a name="cause"></a>Sebep  
- Yerel kod geçirme hatalı biçimlendirilmiş `VARIANT` yönetilen koda yapısı.  Çalışma zamanı bu sıralama dener `VARIANT` nesneye ve varsa MDA etkinleştirir `VARIANT` geçerli değil. Geçersiz örnekleri `VARIANT`S dahil bir `VARIANT` ile `VARTYPE` VT_EMPTY &#124; VT_BYREF veya `VARIANT` ile `VARTYPE` vt_varıant bekleniyordu.  
+ Yerel kod, yönetilen koda hatalı `VARIANT` biçimlendirilmiş bir yapı geçirmektedir.  Çalışma zamanı bunu `VARIANT` bir nesne için sıralama girişiminde bulunur ve geçerli değilse MDA `VARIANT` öğesini etkinleştirir. `VARIANT`Geçersiz S örnekleri, `VARIANT` `VARTYPE` VT_EMPTY &#124; VT_BYREF veya`VARIANT` withVT_VARIANT`VARTYPE` içeren bir içerir.  
   
 ## <a name="resolution"></a>Çözüm  
- Yerel veya yönetilmeyen koda geçirme `VARIANT` emin olmanız gerekir `VARIANT` doğru biçimlendirilmiş ve başlatılır.  
+ ' İ geçirerek `VARIANT` yerel veya yönetilmeyen kod, `VARIANT` doğru şekilde oluşturulmuş ve başlatılmış olduğundan emin olmalıdır.  
   
-## <a name="effect-on-the-runtime"></a>Çalışma zamanı üzerindeki etkisi  
- MDA çalışma zamanı davranışı üzerinde etkisi yoktur.  
+## <a name="effect-on-the-runtime"></a>Çalışma zamanında etki  
+ MDA çalışma zamanının davranışı üzerinde hiçbir etkisi yoktur.  
   
 ## <a name="output"></a>Çıkış  
- Çalışma zamanı geçersiz algılandığını belirten bir MDA ileti `VARIANT` yönetilen kodu için yönetilmeyen bir modül tarafından geçirilen.  
+ Çalışma zamanının yönetilmeyen bir modül tarafından yönetilen koda geçersiz `VARIANT` şekilde geçtiğini belirten bir MDA iletisi.  
   
 ## <a name="configuration"></a>Yapılandırma  
   
@@ -48,5 +48,5 @@ ms.locfileid: "61754329"
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [Yönetilen Hata Ayıklama Yardımcıları ile Hataları Tanılama](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [Birlikte Çalışma için Hazırlama](../../../docs/framework/interop/interop-marshaling.md)
+- [Yönetilen Hata Ayıklama Yardımcıları ile Hataları Tanılama](diagnosing-errors-with-managed-debugging-assistants.md)
+- [Birlikte Çalışma için Hazırlama](../interop/interop-marshaling.md)

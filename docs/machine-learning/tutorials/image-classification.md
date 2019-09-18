@@ -4,12 +4,12 @@ description: Transfer Learning ve ML.NET ile görüntü sınıflandırması Tens
 ms.date: 07/09/2019
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0612
-ms.openlocfilehash: eb6e3d3f3a33aa7360802ce1bc6c16532539c828
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: e069abe44b77b1dc31b78ecec1971ccc73f2e012
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929234"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71054074"
 ---
 # <a name="tutorial-retrain-a-tensorflow-image-classifier-with-transfer-learning-and-mlnet"></a>Öğretici: Transfer Learning ve ML.NET ile bir TensorFlow görüntü sınıflandırıcısını yeniden eğitme
 
@@ -355,7 +355,7 @@ Daha kolay görüntülenmesi için görüntü verilerinizi `DataViews` ve tahmin
 
 [!code-csharp[EnumerateDataViews](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#EnumerateDataViews)]
 
-Veri ve tahmine dayalı olarak yöntemi bir sonraki satır `ReuseAndTuneInceptionModel()` olarak göstermek için yönteminiçağırın:`DisplayResults()`
+Aşağıdaki kodu, bir sonraki satırlarda `ReuseAndTuneInceptionModel()` verilerinizi ve öngörülerinizi göstermek için ekleyin:
 
 [!code-csharp[CallDisplayResults1](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#CallDisplayResults1)]
 

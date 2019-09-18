@@ -2,12 +2,12 @@
 title: .NET kapsayıcıları ile hangi işletim sistemi hedeflenmelidir?
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | .NET kapsayıcıları ile hedef işletim sistemi
 ms.date: 01/07/2019
-ms.openlocfilehash: 6f160aeba5257722490788271e6f89359342cc0d
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 7380889374e69ca4d3c981a401af703c19263de5
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70296511"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71039684"
 ---
 # <a name="what-os-to-target-with-net-containers"></a>.NET kapsayıcıları ile hangi işletim sistemi hedeflenmelidir?
 
@@ -27,33 +27,12 @@ Ayrıca, farklı bir Linux veya Microsoft tarafından sağlanmayan sürümlere s
 
 Resim adını Dockerfile dosyanıza eklediğinizde, aşağıdaki örneklerde olduğu gibi, kullandığınız etikete bağlı olarak işletim sistemini ve sürümü seçebilirsiniz:
 
-<table>
-<thead>
-<tr class="header">
-<th>Görüntü</th>
-<th>Açıklamalar</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>mcr.microsoft.com/dotnet/core/runtime:2.2</td>
-<td>.NET Core 2,2 Multi-Architecture: Docker konağına bağlı olarak Linux ve Windows nano Server 'ı destekler.</td>
-</tr>
-<tr class="odd">
-<td>mcr.microsoft.com/dotnet/core/aspnet:2.2</td>
-<td><p>ASP.NET Core 2,2 çoklu mimari: Docker konağına bağlı olarak Linux ve Windows nano Server 'ı destekler.</p>
-<p>Aspnetcore görüntüsünün ASP.NET Core için birkaç iyileştirmesi vardır.</p></td>
-</tr>
-<tr class="even">
-<td>mcr.microsoft.com/dotnet/core/aspnet:2.2-alpine</td>
-<td>.NET Core 2,2 çalışma zamanı-yalnızca Linux alp Deon</td>
-</tr>
-<tr class="odd">
-<td>mcr.microsoft.com/dotnet/core/aspnet:2.2-nanoserver-1803</td>
-<td>.NET Core 2,2 çalışma zamanı-yalnızca Windows nano Server 'da (Windows Server sürüm 1803)</td>
-</tr>
-</tbody>
-</table>
+| Görüntü | Açıklamalar |
+|-------|----------|
+| mcr.microsoft.com/dotnet/core/runtime:2.2 | .NET Core 2,2 Multi-Architecture: Docker konağına bağlı olarak Linux ve Windows nano Server 'ı destekler. |
+| mcr.microsoft.com/dotnet/core/aspnet:2.2 | ASP.NET Core 2,2 çoklu mimari: Docker konağına bağlı olarak Linux ve Windows nano Server 'ı destekler. <br/> Aspnetcore görüntüsünün ASP.NET Core için birkaç iyileştirmesi vardır. |
+| mcr.microsoft.com/dotnet/core/aspnet:2.2-alpine | .NET Core 2,2 çalışma zamanı-yalnızca Linux alp Deon |
+| mcr.microsoft.com/dotnet/core/aspnet:2.2-nanoserver-1803 | .NET Core 2,2 çalışma zamanı-yalnızca Windows nano Server 'da (Windows Server sürüm 1803) |
 
 > [!div class="step-by-step"]
 > [Önceki](container-framework-choice-factors.md)İleri

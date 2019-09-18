@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: e42a65f7-1e61-411f-b09a-aca1bbce24c6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 981f5f23bf2aafc41426c858e150ec3664a494f9
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: db4380e97cf4d556248f42981b350160710f1dd8
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70205809"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051813"
 ---
 # <a name="exposing-net-components-to-com"></a>.NET bileşenlerini COM 'a gösterme
 
@@ -27,7 +27,7 @@ ms.locfileid: "70205809"
 
      Yönetilen kod içindeki özel öznitelikler bir bileşenin birlikte çalışabilirliğini artırabilir.
 
-- [Com için bir derleme paketleniyor](../../../docs/framework/interop/packaging-an-assembly-for-com.md).
+- [Com için bir derleme paketleniyor](packaging-an-assembly-for-com.md).
 
      COM geliştiricileri, derlemelerinizi başvurma ve dağıtma konusunda yer alan adımları özetlemenizi gerektirebilir.
 
@@ -35,11 +35,11 @@ ms.locfileid: "70205809"
 
 ## <a name="to-consume-a-managed-type-from-com"></a>COM 'dan yönetilen bir tür kullanmak için
 
-1. [DERLEMELERI com Ile kaydedin](../../../docs/framework/interop/registering-assemblies-with-com.md).
+1. [DERLEMELERI com Ile kaydedin](registering-assemblies-with-com.md).
 
      Bir derlemedeki türlerin (ve tür kitaplıklarının) tasarım zamanında kayıtlı olması gerekir. Bir yükleyici derlemeyi KAYDETMEZSE, COM geliştiricilerine Regasm. exe kullanmayı söyleyin.
 
-2. [Com 'dan .net türlerine başvurun](../../../docs/framework/interop/how-to-reference-net-types-from-com.md).
+2. [Com 'dan .net türlerine başvurun](how-to-reference-net-types-from-com.md).
 
      COM geliştiricileri, günümüzde kullandıkları aynı araçları ve teknikleri kullanarak bir derlemedeki türlere başvurabilir.
 
@@ -53,5 +53,5 @@ ms.locfileid: "70205809"
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Yönetilmeyen Kod ile Birlikte Çalışma](../../../docs/framework/interop/index.md)
-- [COM birlikte çalışma örneği: COM Istemcisi ve .NET sunucusu](../../../docs/framework/interop/com-interop-sample-com-client-and-net-server.md)
+- [Yönetilmeyen Kod ile Birlikte Çalışma](index.md)
+- [COM birlikte çalışma örneği: COM Istemcisi ve .NET sunucusu](com-interop-sample-com-client-and-net-server.md)

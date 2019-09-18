@@ -7,214 +7,214 @@ helpviewer_keywords:
 ms.assetid: f2a21e3a-3b6c-4433-97f3-47ff16855ecc
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 50ecb2aad84bd5b6c32f655b1dbbd34cf03a5b29
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9a96fd4c45113afd2ab918b714bd6e12a429917c
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624290"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046181"
 ---
 # <a name="thread-pool-etw-events"></a>İş Parçacığı Havuzu ETW Olayları
-<a name="top"></a> Bu olaylar, çalışan ve g/ç iş parçacıkları hakkında bilgi toplayın.  
+<a name="top"></a>Bu olaylar, çalışan ve g/ç iş parçacıkları hakkında bilgi toplar.  
   
- İş parçacığı havuzu olayları iki tür vardır:  
+ İki iş parçacığı havuzu olayları grubu vardır:  
   
-- [Çalışan iş parçacığı havuzu olayları](#worker), uygulama iş parçacığı havuzu ve iş yüklerini etkisini eşzamanlılık denetimi kullanımı hakkında bilgi sağlar.  
+- Bir uygulamanın iş parçacığı havuzunu nasıl kullandığı hakkında bilgi sağlayan [çalışan iş parçacığı havuzu olayları](#worker)ve eşzamanlılık denetimindeki iş yüklerinin etkisi.  
   
-- [G/ç iş parçacığı havuzu olayları](#io), oluşturulan, kullanımdan, g/ç iş parçacıkları hakkında bilgi sağlayan unretired veya iş parçacığı havuzundaki sonlandırıldı.  
+- İş parçacığı havuzunda oluşturulan, kullanımdan kaldırılan, kullanımdan kaldırılan veya sonlandırılan g/ç iş parçacıkları hakkında bilgi sağlayan [g/ç iş parçacığı havuzu olayları](#io).  
   
 <a name="worker"></a>   
-## <a name="worker-thread-pool-events"></a>Çalışan iş parçacığı havuzu olayları  
- Bu olaylar, çalışma zamanının çalışan iş parçacığı havuzuna ilgilidir ve iş parçacığı olayları için bildirimleri (örneğin bir iş parçacığı oluşturulduğunda veya durduruldu) sağlayın. Çalışan iş parçacığı havuzu, burada iş parçacığı sayısı hesaplanır eşzamanlılık denetimi, ölçülen aktarım hızına göre uyarlanabilir bir algoritma kullanır. Çalışan iş parçacığı havuzu olayları, uygulama iş parçacığı havuzu ve bazı iş yüklerinin eşzamanlılık denetimi olabilecek etkisi nasıl kullandığını anlamak için kullanılabilir.  
+## <a name="worker-thread-pool-events"></a>Çalışan Iş parçacığı havuzu olayları  
+ Bu olaylar çalışma zamanının çalışan iş parçacığı havuzuyla ilgilidir ve iş parçacığı olayları için bildirim sağlar (örneğin, bir iş parçacığı oluşturulduğunda veya durdurulduğunda). Çalışan iş parçacığı havuzu, iş parçacığı sayısının ölçülen verimlilik temelinde hesaplandığı eşzamanlılık denetimi için uyarlamalı bir algoritma kullanır. Çalışan iş parçacığı havuzu olayları, bir uygulamanın iş parçacığı havuzunu nasıl kullandığını ve bazı iş yüklerinin eşzamanlılık denetimine sahip olabileceğini anlamak için kullanılabilir.  
   
-### <a name="threadpoolworkerthreadstart-and-threadpoolworkerthreadstop"></a>ThreadPoolWorkerThreadStart ve ThreadPoolWorkerThreadStop  
- Aşağıdaki tabloda, bu olaylar için düzeyi ve anahtar sözcüğü gösterir. (Daha fazla bilgi için [CLR ETW anahtar sözcükleri ve Düzeyler](../../../docs/framework/performance/clr-etw-keywords-and-levels.md).)  
+### <a name="threadpoolworkerthreadstart-and-threadpoolworkerthreadstop"></a>ThreadPoolWorkerThreadStart ve Threadpoolworkerthreadthreadstop  
+ Aşağıdaki tabloda bu olayların anahtar sözcüğü ve düzeyi gösterilmektedir. (Daha fazla bilgi için bkz. [CLR ETW anahtar sözcükleri ve düzeyleri](clr-etw-keywords-and-levels.md).)  
   
-|Olayı için anahtar sözcüğü|Düzey|  
+|Olayı yükseltmek için anahtar sözcük|Düzey|  
 |-----------------------------------|-----------|  
-|`ThreadingKeyword` (0x10000)|Bilgilendirici (4)|  
+|`ThreadingKeyword`(0x10000)|Bilgilendirici (4)|  
   
- Aşağıdaki tabloda, olay bilgileri gösterilmektedir.  
+ Aşağıdaki tabloda olay bilgileri gösterilmektedir.  
   
-|Olay|Olay Kimliği|Ne zaman gerçekleşti|  
+|Olay|Olay Kimliği|Ne zaman oluşturulur|  
 |-|-|-|  
-|`ThreadPoolWorkerThreadStart`|50|İş parçacığı oluşturulur.|  
-|`ThreadPoolWorkerThreadStop`|51|İş parçacığı durduruldu.|  
-|`ThreadPoolWorkerThreadRetirementStart`|52|İş parçacığı devre dışı bırakır.|  
-|`ThreadPoolWorkerThreadRetirementStop`|53|Devre dışı bırakılan iş parçacığı yeniden etkin hale gelir.|  
+|`ThreadPoolWorkerThreadStart`|50|Bir çalışan iş parçacığı oluşturulur.|  
+|`ThreadPoolWorkerThreadStop`|51|Çalışan iş parçacığı durduruldu.|  
+|`ThreadPoolWorkerThreadRetirementStart`|52|Bir çalışan iş parçacığı yeniden oluşturma.|  
+|`ThreadPoolWorkerThreadRetirementStop`|53|Kullanımdan kaldırılan bir çalışan iş parçacığı yeniden etkin hale gelir.|  
   
- Aşağıdaki tabloda, olay verilerini gösterir.  
+ Aşağıdaki tabloda olay verileri gösterilmektedir.  
   
 |Alan adı|Veri türü|Açıklama|  
 |----------------|---------------|-----------------|  
-|ActiveWorkerThreadCount|Kazanma: UInt32|İş zaten işleyebildiğini olanlar dahil olmak üzere iş, yürütmek için çalışan iş parçacığı sayısı.|  
-|RetiredWorkerThreadCount|Kazanma: UInt32|İşleri işlemek kullanılabilir değildir, ancak daha fazla iş parçacığı daha sonra gerekli durumunda, yedekte tutulmakta çalışan iş parçacığı sayısı.|  
-|ClrInstanceID|Win:UInt16|CLR veya CoreCLR örneği için benzersiz kimlik.|  
+|ActiveWorkerThreadCount|Win: UInt32|İşleri işlemek için kullanılabilen çalışan iş parçacığı sayısı, zaten işleme işleri de dahil olmak üzere.|  
+|RetiredWorkerThreadCount|Win: UInt32|Çalışmayı işlemek için kullanılamayan, ancak daha sonra ayrılan iş parçacığı sayısı daha sonra daha fazla iş parçacığı olması gerekir.|  
+|ClrInstanceID|Win: UInt16|CLR veya CoreCLR örneği için benzersiz KIMLIK.|  
   
-### <a name="threadpoolworkerthreadadjustment"></a>ThreadPoolWorkerThreadAdjustment  
- Bu iş parçacığı havuzu olayları anlama ve iş parçacığı ekleme (eşzamanlılık denetimi) algoritması davranışını hata ayıklama için bilgileri sağlayın. Bilgiler, çalışan iş parçacığı havuzu tarafından dahili olarak kullanılır.  
+### <a name="threadpoolworkerthreadadjustment"></a>Threadpoolworkerthreadadde ayarlama  
+ Bu iş parçacığı havuzu olayları, iş parçacığı ekleme (eşzamanlılık denetimi) algoritmasının davranışını anlama ve hata ayıklama bilgilerini sağlar. Bilgiler, çalışan iş parçacığı havuzu tarafından dahili olarak kullanılır.  
   
-#### <a name="threadpoolworkerthreadadjustmentsample"></a>ThreadPoolWorkerThreadAdjustmentSample  
- Aşağıdaki tabloda, düzeyi ve anahtar sözcüğü gösterir.  
+#### <a name="threadpoolworkerthreadadjustmentsample"></a>Threadpoolworkerthreadadadatmentsample  
+ Aşağıdaki tabloda anahtar sözcüğü ve düzeyi gösterilmektedir.  
   
-|Olayı için anahtar sözcüğü|Düzey|  
+|Olayı yükseltmek için anahtar sözcük|Düzey|  
 |-----------------------------------|-----------|  
-|`ThreadingKeyword` (0x10000)|Bilgilendirici (4)|  
+|`ThreadingKeyword`(0x10000)|Bilgilendirici (4)|  
   
- Aşağıdaki tabloda, olay bilgileri gösterilmektedir.  
+ Aşağıdaki tabloda olay bilgileri gösterilmektedir.  
   
 |Olay|Olay Kimliği|Açıklama|  
 |-----------|--------------|-----------------|  
-|`ThreadPoolWorkerThreadAdjustmentSample`|54|Bir örnek olarak bilgi toplamayı gösterir; diğer bir deyişle, bir ölçüm belirli bir eşzamanlılık ile üretilen iş düzeyi, anında süre.|  
+|`ThreadPoolWorkerThreadAdjustmentSample`|54|Bir örnek için bilgi toplamayı ifade eder; diğer bir deyişle, belirli bir eşzamanlılık düzeyi olan aktarım hızı, zaman içinde bir ölçümdür.|  
   
- Aşağıdaki tabloda, olay verilerini gösterir.  
+ Aşağıdaki tabloda olay verileri gösterilmektedir.  
   
 |Alan adı|Veri türü|Açıklama|  
 |----------------|---------------|-----------------|  
-|Aktarım hızı|Kazanma: Double|Birim başına tamamlamaları zaman sayısı.|  
-|ClrInstanceID|Win:UInt16|CLR veya CoreCLR örneği için benzersiz kimlik.|  
+|Aktarım hızı|Win: Double|Zaman birimi başına tamamlama sayısı.|  
+|ClrInstanceID|Win: UInt16|CLR veya CoreCLR örneği için benzersiz KIMLIK.|  
   
-#### <a name="threadpoolworkerthreadadjustmentadjustment"></a>ThreadPoolWorkerThreadAdjustmentAdjustment  
- Aşağıdaki tabloda, düzeyi ve anahtar sözcüğü gösterir.  
+#### <a name="threadpoolworkerthreadadjustmentadjustment"></a>Threadpoolworkerthreadadyatmentadde  
+ Aşağıdaki tabloda anahtar sözcüğü ve düzeyi gösterilmektedir.  
   
-|Olayı için anahtar sözcüğü|Düzey|  
+|Olayı yükseltmek için anahtar sözcük|Düzey|  
 |-----------------------------------|-----------|  
-|`ThreadingKeyword` (0x10000)|Bilgilendirici (4)|  
+|`ThreadingKeyword`(0x10000)|Bilgilendirici (4)|  
   
- Aşağıdaki tabloda, olay bilgileri gösterilmektedir.  
+ Aşağıdaki tabloda olay bilgileri gösterilmektedir.  
   
 |Olay|Olay Kimliği|Açıklama|  
 |-----------|--------------|-----------------|  
-|`ThreadPoolWorkerThreadAdjustmentAdjustment`|55|İş parçacığı ekleme (hill tırmanma) algoritması eşzamanlılık düzeyi değişikliği yerinde olduğunu belirlediğinde denetiminde bir değişikliği kaydeder.|  
+|`ThreadPoolWorkerThreadAdjustmentAdjustment`|55|İş parçacığı ekleme (Hill-climbing) algoritması eşzamanlılık düzeyindeki bir değişikliğin yerinde olduğunu belirlediğinde denetimdeki bir değişikliği kaydeder.|  
   
- Aşağıdaki tabloda, olay verilerini gösterir.  
+ Aşağıdaki tabloda olay verileri gösterilmektedir.  
   
 |Alan adı|Veri türü|Açıklama|  
 |----------------|---------------|-----------------|  
-|AverageThroughput|Kazanma: Double|Ortalama aktarım hızı ölçümlerin bir örnek.|  
-|NewWorkerThreadCount|Kazanma: UInt32|Yeni etkin bir çalışan iş parçacığı sayısı.|  
-|Neden|Kazanma: UInt32|Nedeni ayarlama.<br /><br /> 0x00 - Isınma.<br /><br /> 0x01 - başlatılıyor.<br /><br /> 0x02 - rastgele taşıma.<br /><br /> 0x03 - dağcılık taşıma.<br /><br /> 0x04 - noktasını değiştirin.<br /><br /> 0x05 - sabitleniyor.<br /><br /> 0x06 - starvation'i tıklatın.<br /><br /> iş parçacığı 0x07 - zaman aşımına uğradı.|  
-|ClrInstanceID|Win:UInt16|CLR veya CoreCLR örneği için benzersiz kimlik.|  
+|Averageüretilen Iş|Win: Double|Ölçüm örneğinin ortalama performansı.|  
+|NewWorkerThreadCount|Win: UInt32|Yeni etkin çalışan iş parçacığı sayısı.|  
+|Neden|Win: UInt32|Ayarlamanın nedeni.<br /><br /> 0x00-Warmup.<br /><br /> 0x01 başlatılıyor.<br /><br /> 0x02-rastgele taşı.<br /><br /> 0x03-taşıma hareketi.<br /><br /> 0x04-nokta değiştirme.<br /><br /> 0x05-sabitleniyor.<br /><br /> 0x06-başlangıça.<br /><br /> 0x07-Iş parçacığı zaman aşımına uğradı.|  
+|ClrInstanceID|Win: UInt16|CLR veya CoreCLR örneği için benzersiz KIMLIK.|  
   
-#### <a name="threadpoolworkerthreadadjustmentstats"></a>ThreadPoolWorkerThreadAdjustmentStats  
- Aşağıdaki tabloda, düzeyi ve anahtar sözcüğü gösterir.  
+#### <a name="threadpoolworkerthreadadjustmentstats"></a>Threadpoolworkerthreadadadatmentstats  
+ Aşağıdaki tabloda anahtar sözcüğü ve düzeyi gösterilmektedir.  
   
-|Olayı için anahtar sözcüğü|Düzey|  
+|Olayı yükseltmek için anahtar sözcük|Düzey|  
 |-----------------------------------|-----------|  
-|`ThreadingKeyword` (0x10000)|Bilgilendirici (4)|  
+|`ThreadingKeyword`(0x10000)|Bilgilendirici (4)|  
   
- Aşağıdaki tabloda, olay bilgileri gösterilmektedir.  
+ Aşağıdaki tabloda olay bilgileri gösterilmektedir.  
   
 |Olay|Olay Kimliği|Açıklama|  
 |-----------|--------------|-----------------|  
-|`ThreadPoolWorkerThreadAdjustmentStats`|56|İş parçacığı havuzunda verileri toplar.|  
+|`ThreadPoolWorkerThreadAdjustmentStats`|56|İş parçacığı havuzundaki verileri toplar.|  
   
- Aşağıdaki tabloda, olay verilerini gösterir.  
+ Aşağıdaki tabloda olay verileri gösterilmektedir.  
   
 |Alan adı|Veri türü|Açıklama|  
 |----------------|---------------|-----------------|  
-|Süresi|Kazanma: Double|Bu sırada Bu istatistikler toplanan saniye cinsinden süre miktarı.|  
-|Aktarım hızı|Kazanma: Double|Bu aralık sırasında saniyede tamamlamaları ortalama sayısı.|  
-|ThreadWave|Kazanma: Double|İç kullanım için ayrılmıştır.|  
-|ThroughputWave|Kazanma: Double|İç kullanım için ayrılmıştır.|  
-|ThroughputErrorEstimate|Kazanma: Double|İç kullanım için ayrılmıştır.|  
-|AverageThroughputErrorEstimate|Kazanma: Double|İç kullanım için ayrılmıştır.|  
-|ThroughputRatio|Kazanma: Double|Bu zaman aralığında etkin bir çalışan iş parçacığı sayısı farklılığı kaynaklanan aktarım hızı göreli geliştirme.|  
-|Güven|Kazanma: Double|Geçerlilik ThroughputRatio alan ölçüsü.|  
-|NewcontrolSetting|Kazanma: Double|Etkin iş parçacığı sayısı gelecekteki çeşitleri için temel olarak hizmet verecek etkin bir çalışan iş parçacığı sayısı.|  
-|NewThreadWaveMagnitude|Win:UInt16|Etkin iş parçacığı sayısı gelecekteki farklılığı büyüklüğünü.|  
-|ClrInstanceID|Win:UInt16|CLR veya CoreCLR örneği için benzersiz kimlik.|  
+|Duration|Win: Double|Bu istatistiklerin toplandığı sürenin saniye cinsinden miktarı.|  
+|Aktarım hızı|Win: Double|Bu Aralık sırasında saniye başına ortalama tamamlama sayısı.|  
+|ThreadWave|Win: Double|Dahili kullanım için ayrılmıştır.|  
+|ThroughputWave|Win: Double|Dahili kullanım için ayrılmıştır.|  
+|ThroughputErrorEstimate|Win: Double|Dahili kullanım için ayrılmıştır.|  
+|AverageThroughputErrorEstimate|Win: Double|Dahili kullanım için ayrılmıştır.|  
+|ThroughputRatio|Win: Double|Bu zaman aralığı boyunca etkin çalışan iş parçacığı sayısında değişimler nedeniyle üretilen iş akışındaki göreli geliştirme.|  
+|Confidence|Win: Double|ThroughputRatio alanının geçerlilik süresinin ölçüsü.|  
+|NewcontrolSetting|Win: Double|Etkin iş parçacığı sayısında gelecekteki Çeşitlemeler için temel olarak görev yapacak etkin çalışan iş parçacıklarının sayısı.|  
+|Newthreadwavebüyüklük|Win: UInt16|Etkin iş parçacığı sayısı ' nda gelecekteki varyasyonların büyüklüğü.|  
+|ClrInstanceID|Win: UInt16|CLR veya CoreCLR örneği için benzersiz KIMLIK.|  
   
  [Başa dön](#top)  
   
 <a name="io"></a>   
-## <a name="io-thread-events"></a>G/ç iş parçacığı olayları  
- Bu iş parçacığı havuzu olayları zaman uyumsuz g/ç iş parçacığı havuzunda (tamamlama bağlantı noktaları), iş parçacıkları için oluşur.  
+## <a name="io-thread-events"></a>G/ç Iş parçacığı olayları  
+ Bu iş parçacığı havuzu olayları, zaman uyumsuz olan g/ç iş parçacığı havuzundaki (tamamlanma bağlantı noktaları) iş parçacıkları için oluşur.  
   
-### <a name="iothreadcreatev1"></a>IOThreadCreate_V1  
- Aşağıdaki tabloda, düzeyi ve anahtar sözcüğü gösterir.  
+### <a name="iothreadcreate_v1"></a>IOThreadCreate_V1  
+ Aşağıdaki tabloda anahtar sözcüğü ve düzeyi gösterilmektedir.  
   
-|Olayı için anahtar sözcüğü|Düzey|  
+|Olayı yükseltmek için anahtar sözcük|Düzey|  
 |-----------------------------------|-----------|  
-|`ThreadingKeyword` (0x10000)|Bilgilendirici (4)|  
+|`ThreadingKeyword`(0x10000)|Bilgilendirici (4)|  
   
- Aşağıdaki tabloda, olay bilgileri gösterilmektedir.  
+ Aşağıdaki tabloda olay bilgileri gösterilmektedir.  
   
-|Olay|Olay Kimliği|Ne zaman gerçekleşti|  
+|Olay|Olay Kimliği|Ne zaman oluşturulur|  
 |-|-|-|  
-|`IOThreadCreate_V1`|44|Bir g/ç iş parçacığının iş parçacığı havuzunda oluşturulur.|  
+|`IOThreadCreate_V1`|44|İş parçacığı havuzunda bir g/ç iş parçacığı oluşturulur.|  
   
- Aşağıdaki tabloda, olay verilerini gösterir.  
+ Aşağıdaki tabloda olay verileri gösterilmektedir.  
   
 |Alan adı|Veri türü|Açıklama|  
 |----------------|---------------|-----------------|  
-|Count|Kazanma: UInt64|Yeni oluşturulan iş parçacığı gibi g/ç iş parçacığı sayısı.|  
-|NumRetired|Kazanma: UInt64|Devre dışı bırakılan çalışan iş parçacığı sayısı.|  
-|ClrInstanceID|Win:UInt16|CLR veya CoreCLR örneği için benzersiz kimlik.|  
+|Count|Win: UInt64|Yeni oluşturulan iş parçacığı dahil olmak üzere g/ç iş parçacıklarının sayısı.|  
+|Numemekli|Win: UInt64|Kullanımdan kaldırılan çalışan iş parçacıklarının sayısı.|  
+|ClrInstanceID|Win: UInt16|CLR veya CoreCLR örneği için benzersiz KIMLIK.|  
   
-### <a name="iothreadretirev1"></a>IOThreadRetire_V1  
- Aşağıdaki tabloda, düzeyi ve anahtar sözcüğü gösterir.  
+### <a name="iothreadretire_v1"></a>IOThreadRetire_V1  
+ Aşağıdaki tabloda anahtar sözcüğü ve düzeyi gösterilmektedir.  
   
-|Olayı için anahtar sözcüğü|Düzey|  
+|Olayı yükseltmek için anahtar sözcük|Düzey|  
 |-----------------------------------|-----------|  
-|`ThreadingKeyword` (0x10000)|Bilgilendirici (4)|  
+|`ThreadingKeyword`(0x10000)|Bilgilendirici (4)|  
   
- Aşağıdaki tabloda, olay bilgileri gösterilmektedir.  
+ Aşağıdaki tabloda olay bilgileri gösterilmektedir.  
   
-|Olay|Olay Kimliği|Ne zaman gerçekleşti|  
+|Olay|Olay Kimliği|Ne zaman oluşturulur|  
 |-----------|--------------|-----------------|  
-|`IOThreadRetire_V1`|46|Bir g/ç iş parçacığı emeklilik aday haline gelir.|  
+|`IOThreadRetire_V1`|46|Bir g/ç iş parçacığı bir kullanımdan kaldırma adayı haline gelir.|  
   
- Aşağıdaki tabloda, olay verilerini gösterir.  
+ Aşağıdaki tabloda olay verileri gösterilmektedir.  
   
 |Alan adı|Veri türü|Açıklama|  
 |----------------|---------------|-----------------|  
-|Count|Kazanma: UInt64|Kalan iş parçacığı havuzunda g/ç iş parçacığı sayısı.|  
-|NumRetired|Kazanma: UInt64|Devre dışı bırakılan g/ç iş parçacığı sayısı.|  
-|ClrInstanceID|Win:UInt16|CLR veya CoreCLR örneği için benzersiz kimlik.|  
+|Count|Win: UInt64|İş parçacığı havuzunda kalan g/ç iş parçacığı sayısı.|  
+|Numemekli|Win: UInt64|Kullanımdan kaldırılan g/ç iş parçacığı sayısı.|  
+|ClrInstanceID|Win: UInt16|CLR veya CoreCLR örneği için benzersiz KIMLIK.|  
   
-### <a name="iothreadunretirev1"></a>IOThreadUnretire_V1  
- Aşağıdaki tabloda, düzeyi ve anahtar sözcüğü gösterir.  
+### <a name="iothreadunretire_v1"></a>IOThreadUnretire_V1  
+ Aşağıdaki tabloda anahtar sözcüğü ve düzeyi gösterilmektedir.  
   
-|Olayı için anahtar sözcüğü|Düzey|  
+|Olayı yükseltmek için anahtar sözcük|Düzey|  
 |-----------------------------------|-----------|  
-|`ThreadingKeyword` (0x10000)|Bilgilendirici (4)|  
+|`ThreadingKeyword`(0x10000)|Bilgilendirici (4)|  
   
- Aşağıdaki tabloda, olay bilgileri gösterilmektedir.  
+ Aşağıdaki tabloda olay bilgileri gösterilmektedir.  
   
-|Olay|Olay Kimliği|Ne zaman gerçekleşti|  
+|Olay|Olay Kimliği|Ne zaman oluşturulur|  
 |-----------|--------------|-----------------|  
-|`IOThreadUnretire_V1`|47|Bir g/ç iş parçacığı unretired emeklilik aday iş parçacığı olduktan sonra bir bekleme dönemi içinde ulaşan g/ç nedeniyle.|  
+|`IOThreadUnretire_V1`|47|Bir g/ç iş parçacığı, iş parçacığı bir kullanımdan kaldırma adayı olduktan sonra bekleme süresi içinde ulaşan g/ç nedeniyle kullanımdan kaldırıldı.|  
   
- Aşağıdaki tabloda, olay verilerini gösterir.  
+ Aşağıdaki tabloda olay verileri gösterilmektedir.  
   
 |Alan adı|Veri türü|Açıklama|  
 |----------------|---------------|-----------------|  
-|Count|Kazanma: UInt64|Bu da dahil olmak üzere iş parçacığı havuzundaki g/ç iş parçacığı sayısı.|  
-|NumRetired|Kazanma: UInt64|Devre dışı bırakılan g/ç iş parçacığı sayısı.|  
-|ClrInstanceID|Win:UInt16|CLR veya CoreCLR örneği için benzersiz kimlik.|  
+|Count|Win: UInt64|Bu dahil iş parçacığı havuzundaki g/ç iş parçacıklarının sayısı.|  
+|Numemekli|Win: UInt64|Kullanımdan kaldırılan g/ç iş parçacığı sayısı.|  
+|ClrInstanceID|Win: UInt16|CLR veya CoreCLR örneği için benzersiz KIMLIK.|  
   
-### <a name="iothreadterminate"></a>IOThreadTerminate  
- Aşağıdaki tabloda, düzeyi ve anahtar sözcüğü gösterir.  
+### <a name="iothreadterminate"></a>Iothreadterminate  
+ Aşağıdaki tabloda anahtar sözcüğü ve düzeyi gösterilmektedir.  
   
-|Olayı için anahtar sözcüğü|Düzey|  
+|Olayı yükseltmek için anahtar sözcük|Düzey|  
 |-----------------------------------|-----------|  
-|`ThreadingKeyword` (0x10000)|Bilgilendirici (4)|  
+|`ThreadingKeyword`(0x10000)|Bilgilendirici (4)|  
   
- Aşağıdaki tabloda, olay bilgileri gösterilmektedir.  
+ Aşağıdaki tabloda olay bilgileri gösterilmektedir.  
   
-|Olay|Olay Kimliği|Ne zaman gerçekleşti|  
+|Olay|Olay Kimliği|Ne zaman oluşturulur|  
 |-----------|--------------|-----------------|  
-|`IOThreadTerminate`|45|Bir g/ç iş parçacığının iş parçacığı havuzunda oluşturulur.|  
+|`IOThreadTerminate`|45|İş parçacığı havuzunda bir g/ç iş parçacığı oluşturulur.|  
   
- Aşağıdaki tabloda, olay verilerini gösterir.  
+ Aşağıdaki tabloda olay verileri gösterilmektedir.  
   
 |Alan adı|Veri türü|Açıklama|  
 |----------------|---------------|-----------------|  
-|Count|Kazanma: UInt64|Kalan iş parçacığı havuzunda g/ç iş parçacığı sayısı.|  
-|NumRetired|Kazanma: UInt64|Devre dışı bırakılan g/ç iş parçacığı sayısı.|  
-|ClrInstanceID|Win:UInt16|CLR veya CoreCLR örneği için benzersiz kimlik.|  
+|Count|Win: UInt64|İş parçacığı havuzunda kalan g/ç iş parçacığı sayısı.|  
+|Numemekli|Win: UInt64|Kullanımdan kaldırılan g/ç iş parçacığı sayısı.|  
+|ClrInstanceID|Win: UInt16|CLR veya CoreCLR örneği için benzersiz KIMLIK.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [CLR ETW Olayları](../../../docs/framework/performance/clr-etw-events.md)
+- [CLR ETW Olayları](clr-etw-events.md)

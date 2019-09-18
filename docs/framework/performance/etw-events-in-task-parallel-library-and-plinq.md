@@ -6,12 +6,12 @@ helpviewer_keywords:
 ms.assetid: 87a9cff5-d86f-4e44-a06e-d12764d0dce2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 85d554337d11c3f79d8f70048246e978e185645e
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: f1926d2699357163dbb8685b7ea875e369ca29b7
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894927"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046656"
 ---
 # <a name="etw-events-in-task-parallel-library-and-plinq"></a>Görev Paralel Kitaplığı ve PLINQ'da ETW Olayları
 
@@ -67,7 +67,7 @@ EVENT_DESCRIPTOR. Kimlik = 1
 |Originatingtaskıd|<xref:System.Int32?displayProperty=nameWithType>|Döngüyü başlatan görevin KIMLIĞI.|
 |Forkjoincontextıd|<xref:System.Int32?displayProperty=nameWithType>|Çatal/JOIN semantiğinin bulunduğu olaylar için iç içe ve çiftleri göstermek üzere kullanılan benzersiz bir tanımlayıcı.|
 |Totalyinelemelerde|<xref:System.Int64?displayProperty=nameWithType>|Toplam yineleme sayısı|
-|operationType|<xref:System.Int32?displayProperty=nameWithType>|Döngü türünü belirtir:<br /><br /> 1 = Paralellinvoke<br /><br /> 2 = ParallelFor<br /><br /> 3 = ParallelForEach|
+|OperationType|<xref:System.Int32?displayProperty=nameWithType>|Döngü türünü belirtir:<br /><br /> 1 = Paralellinvoke<br /><br /> 2 = ParallelFor<br /><br /> 3 = ParallelForEach|
 |ActionCount|<xref:System.Int32?displayProperty=nameWithType>|Paralel Invoke içinde yürütülecek eylemlerin sayısı.|
 
 ### <a name="parallel-invoke-end"></a>Paralel çağırma bitişi
@@ -116,6 +116,6 @@ EVENT_DESCRIPTOR. Kimlik = 1
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [.NET Framework'te ETW Olayları](../../../docs/framework/performance/etw-events.md)
+- [.NET Framework'te ETW Olayları](etw-events.md)
 - [Görev Paralel Kitaplığı (TPL)](../../standard/parallel-programming/task-parallel-library-tpl.md)
 - [Paralel LINQ (PLINQ)](../../standard/parallel-programming/parallel-linq-plinq.md)

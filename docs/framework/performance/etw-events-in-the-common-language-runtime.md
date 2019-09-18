@@ -8,33 +8,33 @@ helpviewer_keywords:
 ms.assetid: 5bb9b6a2-7b57-4aea-8809-32b28bc73e88
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 441cae712e7338b36e8983f41341b1721770a0bb
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 46ad58813da5b71b884ad55f796db3522b2f1920
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489706"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046619"
 ---
 # <a name="etw-events-in-the-common-language-runtime"></a>Ortak Dil Çalışma Zamanında ETW Olayları
-Ortak dil çalışma zamanı (CLR) yararlı olay izleme ile hata ayıklama ve profil oluşturma olayları, çok çeşitli Windows (ETW) tanılama bilgileri sağlar. CLR ETW olaylarını mevcut profil oluşturma ve hata ayıklama desteği ortak dil çalışma zamanı tarafından sağlanan genişletmek için Windows ETW izleme sistemi yararlanın.  
+Ortak dil çalışma zamanı (CLR), çok çeşitli hata ayıklama ve profil oluşturma olayları aracılığıyla Windows için yararlı olay izleme (ETW) tanılama bilgileri sağlar. CLR ETW olayları, ortak dil çalışma zamanı tarafından sunulan mevcut profil oluşturma ve hata ayıklama desteğini artırmak için Windows ETW izleme sisteminden yararlanır.  
   
- ETW hakkında daha fazla bilgi makalesinde kullanılabilir [artırmak hata ayıklama ve performans ayarlama ETW ile](https://go.microsoft.com/fwlink/?LinkID=161142) MSDN'de. Xperf hakkında bilgi girişi bulunabilir [Windows Performans Araç Seti - Xperf](https://go.microsoft.com/fwlink/?LinkID=161144) NTDebugging blogunda.  
+ ETW hakkında daha fazla bilgi için bkz. MSDN 'de [ETW Ile hata ayıklamayı ve performansı ayarlamayı geliştirme](https://go.microsoft.com/fwlink/?LinkID=161142) . XPerf hakkında daha fazla bilgi için, NTDebugging blogdaki [Windows performans araç seti-XPerf](https://go.microsoft.com/fwlink/?LinkID=161144) girdisinde bulabilirsiniz.  
   
- Olay konularda açıklandığı gibi tüm olayları için .NET Framework 4 veya üzeri gereklidir. Windows Vista işletim sistemi en düşük desteklenen istemci ve Windows Server 2008 minimum desteklenen sunucu.  
+ .NET Framework 4 veya üzeri, olay konularında açıklanan tüm olaylar için gereklidir. Windows Vista işletim sistemi desteklenen en düşük istemcdir ve Windows Server 2008 desteklenen en düşük sunucu.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [.NET Framework Günlük Kaydını Denetleme](../../../docs/framework/performance/controlling-logging.md)  
- Yakalama ve ETW olaylarını görüntülemek için komutları ve araçları açıklar.  
+ [.NET Framework Günlük Kaydını Denetleme](controlling-logging.md)  
+ ETW olaylarını yakalamaya ve görüntülemeye yönelik araçları ve komutları açıklar.  
   
- [CLR ETW Sağlayıcılar](../../../docs/framework/performance/clr-etw-providers.md)  
- Çalışma zamanı ve Özet sağlayıcılarını hakkında bilgiler ve nasıl bunları ETW veri toplama için kullanabileceğiniz sağlar.  
+ [CLR ETW Sağlayıcılar](clr-etw-providers.md)  
+ Çalışma zamanı ve Özet sağlayıcılar hakkında bilgi ve bunları ETW veri toplama için nasıl kullanabileceğinizi açıklar.  
   
- [CLR ETW Anahtar Sözcükleri ve Düzeyler](../../../docs/framework/performance/clr-etw-keywords-and-levels.md)  
- Olayları kategoriye göre filtrelemeyi sağlayan Özet sağlayıcılarını ve çalışma zamanı için anahtar sözcükleri açıklar.  
+ [CLR ETW Anahtar Sözcükleri ve Düzeyler](clr-etw-keywords-and-levels.md)  
+ Olayların kategoriye göre filtrelenmesini sağlayan çalışma zamanı ve Özet sağlayıcılarının anahtar sözcüklerini açıklar.  
   
- [CLR ETW Olayları](../../../docs/framework/performance/clr-etw-events.md)  
- CLR ETW hakkında ayrıntılı bilgi olayları, anahtar sözcükler, düzeyleri ve olay verilerini sağlar.  
+ [CLR ETW Olayları](clr-etw-events.md)  
+ CLR ETW olayları, anahtar kelimeleri, düzeyleri ve olay verileri hakkında ayrıntılı bilgi sağlar.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [.NET Framework'te ETW Olayları](../../../docs/framework/performance/etw-events.md)
+- [.NET Framework'te ETW Olayları](etw-events.md)

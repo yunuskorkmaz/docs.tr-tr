@@ -12,43 +12,43 @@ helpviewer_keywords:
 ms.assetid: 34ddc6bd-1675-4f35-86aa-de1645d5c631
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9ecdfd708217f260b0c02383159fab88948029c6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dc4a48c79fc39b12f8231bd913b4ca8970c0f46f
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61874217"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052361"
 ---
 # <a name="pinvokestackimbalance-mda"></a>PInvokeStackImbalance MDA
 
-`PInvokeStackImbalance` Yönetilen hata ayıklama Yardımcısı (MDA) etkin olduğu bir platform çağırma sonra çağrı Yığın derinliği belirtilen çağırma kuralı verilen beklenen Yığın derinliği, eşleşmiyor CLR algıladığında <xref:System.Runtime.InteropServices.DllImportAttribute> özniteliği ve Yönetilen imzayı parametrelerinde bildirimi.
+Yönetilen hata ayıklama Yardımcısı (MDA), clr çağırma çağrısından sonra yığın derinliğini algıladığında etkinleştirilir ve bu, <xref:System.Runtime.InteropServices.DllImportAttribute> özniteliğinde belirtilen çağırma kuralı ve `PInvokeStackImbalance` yönetilen İmzadaki parametrelerin bildirimi.
 
-`PInvokeStackImbalance` MDA yalnızca 32-bit x86 için uygulanan platformlar.
+`PInvokeStackImbalance` MDA yalnızca 32 bit x86 platformları için uygulanır.
 
 > [!NOTE]
-> `PInvokeStackImbalance` MDA, varsayılan olarak devre dışıdır. Visual Studio 2017'de `PInvokeStackImbalance` MDA görünür **yönetilen hata ayıklama Yardımcıları** listesinde **özel durum ayarları** iletişim kutusu (belirlediğinizde görüntülenen **hataayıklama**  >  **Windows** > **özel durum ayarları**). Ancak, seçerek veya temizleyerek **Break When Thrown** onay kutusunu etkinleştirmeyin veya MDA devre dışı bırak; yalnızca bir MDA etkinleştirildiğinde, Visual Studio bir özel durum oluşturur olup olmadığını denetler.
+> MDA `PInvokeStackImbalance` , varsayılan olarak devre dışıdır. Visual Studio 2017 ' de, `PInvokeStackImbalance` MDA, **özel durum ayarları** iletişim kutusundaki **yönetilen hata ayıklama yardımcıları** listesinde görüntülenir ( **hata ayıklama** > **pencerelerini**  >   **seçtiğinizde görüntülenir Özel durum ayarları**). Ancak, **oluşturulduğunda kesmeyi** seçme veya temizleme onay kutusu, MDA ' ı etkinleştirmez veya devre dışı bırakır. Bu yalnızca, MDA etkinleştirildiğinde Visual Studio 'Nun bir özel durum oluşturulup oluşturulmayacağını denetler.
 
 ## <a name="symptoms"></a>Belirtiler
 
-Bir uygulama, bir erişim ihlali veya çağrı yapma veya bir platform takip Bozulması çağırma bellek karşılaşır.
+Bir uygulama, bir platform çağırma çağrısını yaparken veya takip edildiğinde bir erişim ihlali veya bellek bozulması ile karşılaşır.
 
 ## <a name="cause"></a>Sebep
 
-Yönetilen imzayı platform çağırma çağrısı yönetilmeyen çağrılan yöntemin imzası eşleşmiyor olabilir.  Bu uyumsuzluk parametreleri doğru sayıda bildirmeyerek veya parametreler için uygun boyutta değil belirterek yönetilen imzayı neden olabilir.  Çağırma kuralı, büyük olasılıkla tarafından belirttiğinden MDA de etkinleştirebilirsiniz <xref:System.Runtime.InteropServices.DllImportAttribute> özniteliği, yönetilmeyen çağırma kuralı ile eşleşmiyor.
+Platform çağırma çağrısının yönetilen imzası, çağrılan metodun yönetilmeyen imzasıyla eşleşmeyebilir.  Bu uyuşmazlığın nedeni, yönetilen imzanın doğru parametre sayısını bildirmemesi veya parametreler için uygun boyutu belirtmemesidir.  Ayrıca, <xref:System.Runtime.InteropServices.DllImportAttribute> özniteliği tarafından belirtilen çağırma kuralı yönetilmeyen çağrı kuralıyla eşleşmediğinden, MDA da etkinleştirilebilir.
 
 ## <a name="resolution"></a>Çözüm
 
-Gözden geçirme yönetilen bir platform imzası ve imza ve yerel hedef çağırma kuralının eşleşen onaylamak için çağırma kuralı çağırır.  Çağırma kuralı hem yönetilen hem de yönetilmeyen yüzüne açıkça belirtmeyi deneyin. Ayrıca değil olarak olası olsa da, yönetilmeyen işlev başka bir nedenle, gibi yönetilmeyen derleyici bir hata için yığın dengesiz, mümkündür.
+Yönetilen platform çağırma imzasını ve çağırma kuralını inceleyerek yerel hedefin imza ve çağırma kuralına uyduğundan emin olun.  Hem yönetilen hem de yönetilmeyen tarafta çağırma kuralını açıkça belirtmeyi deneyin. Yönetilmeyen işlevin, yönetilmeyen derleyicide oluşan bir hata gibi başka bir nedenle yığına dengesiz olması mümkün olmasa da mümkündür.
 
-## <a name="effect-on-the-runtime"></a>Çalışma zamanı üzerindeki etkisi
+## <a name="effect-on-the-runtime"></a>Çalışma zamanında etki
 
-Zorlar, tüm platform CLR'de nonoptimized yoldan çağrıları çağırma.
+Tüm platform çağırma çağrılarını CLR 'de iyileştirilmemiş olmayan yolu alacak şekilde zorlar.
 
 ## <a name="output"></a>Çıkış
 
-Platformun adını MDA mesajıyla Çağırma yığını dengesizliği neden olan yöntem çağrısı. Bir örnek ileti platform çağırma yöntemi çağrısında `SampleMethod` olan:
+MDA iletisi, yığın dengesizlenmesi için yol açan platform çağırma yöntemi çağrısının adını verir. Bir platform çağırma çağrısında `SampleMethod` bir örnek ileti:
 
-**PInvoke 'SampleMethod' işlevine bir çağrı yığını dengesiz. Yönetilen PInvoke imza yönetilmeyen hedef imza eşleşmediği için büyük olasılıkla budur. Çağırma kuralı ve parametreleri PInvoke imza hedef yönetilmeyen imza eşleştiğinden emin olun.**
+**PInvoke işlevi ' SampleMethod ' çağrısı yığına dengesiz. Bu, yönetilen PInvoke imzasının yönetilmeyen hedef imzasıyla eşleşmemesi nedeniyle olasıdır. PInvoke imzasının çağırma kuralı ve parametrelerinin hedef yönetilmeyen imzayla eşleşip eşleştiğinden emin olun.**
 
 ## <a name="configuration"></a>Yapılandırma
 
@@ -63,5 +63,5 @@ Platformun adını MDA mesajıyla Çağırma yığını dengesizliği neden olan
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [Yönetilen Hata Ayıklama Yardımcıları ile Hataları Tanılama](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [Birlikte Çalışma için Hazırlama](../../../docs/framework/interop/interop-marshaling.md)
+- [Yönetilen Hata Ayıklama Yardımcıları ile Hataları Tanılama](diagnosing-errors-with-managed-debugging-assistants.md)
+- [Birlikte Çalışma için Hazırlama](../interop/interop-marshaling.md)

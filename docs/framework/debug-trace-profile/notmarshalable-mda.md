@@ -13,27 +13,27 @@ helpviewer_keywords:
 ms.assetid: 96e7b2c1-843f-4d64-b519-740c3a18b50a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 30db07ddf935b5ce13b1fe4212f7f6a40270ae93
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ddb6b0b5c2248d215245e0f881c8e7c91b13e480
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61753705"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052425"
 ---
 # <a name="notmarshalable-mda"></a>notMarshalable MDA
-`notMarshalable` Yönetilen hata ayıklama Yardımcısı (MDA), ortak dil çalışma zamanı (CLR) bir COM arabirimi işaretçisini geçerli kayıtlı proxy/saplama veya yanlış bir olmadan karşılaştığında etkinleştirilirse `IMarshal` arabirim çalışılırken uygulaması Arabirim bağlamlarında hazırlama.  
+Yönetilen hata ayıklama Yardımcısı (MDA), ortak dil çalışma zamanı (CLR) geçerli bir kayıtlı proxy/saplama veya hatalı `IMarshal` bir arabirim uygulama olmadan bir com arabirim işaretçisi ile karşılaştığında etkinleştirilir `notMarshalable` arabirim bağlamları arasında sıralama.  
   
 ## <a name="symptoms"></a>Belirtiler  
- Çağrıları değil sunulur veya çağrı yanlış bağlamda COM arabirim işaretçileri için oluşur.  
+ Çağrılara hizmet verilmez veya COM arabirim işaretçileri için yanlış bağlamda çağrılar oluşur.  
   
 ## <a name="cause"></a>Sebep  
- Hiçbir geçerli kayıtlı proxy/saplama veya yanlış bir `IMarshal` bağlamlarında arabirimi sıralamakta çalışırken.  
+ Geçerli kayıtlı ara sunucu/saplama yok ya da `IMarshal` arabirim bağlamlarda hazırlanmaya çalışılırken yanlış.  
   
 ## <a name="resolution"></a>Çözüm  
- Kayıtlı bir proxy saplama ve bu olduğundan emin olun `IMarshal` uygulama geçerlidir.  
+ Kayıtlı bir ara sunucu Saplamasının olduğundan ve `IMarshal` uygulamanın geçerli olduğundan emin olun.  
   
-## <a name="effect-on-the-runtime"></a>Çalışma zamanı üzerindeki etkisi  
- Bu mda'nın çalışma zamanı üzerinde etkisi yoktur.  
+## <a name="effect-on-the-runtime"></a>Çalışma zamanında etki  
+ Bu MDA çalışma zamanı üzerinde hiçbir etkisi yoktur.  
   
 ## <a name="output"></a>Çıkış  
  Sorunu açıklayan bir ileti.  
@@ -51,5 +51,5 @@ ms.locfileid: "61753705"
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [Yönetilen Hata Ayıklama Yardımcıları ile Hataları Tanılama](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [Birlikte Çalışma için Hazırlama](../../../docs/framework/interop/interop-marshaling.md)
+- [Yönetilen Hata Ayıklama Yardımcıları ile Hataları Tanılama](diagnosing-errors-with-managed-debugging-assistants.md)
+- [Birlikte Çalışma için Hazırlama](../interop/interop-marshaling.md)

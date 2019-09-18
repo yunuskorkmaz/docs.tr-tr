@@ -2,12 +2,12 @@
 title: NoSQL veritabanlarını bir kalıcılık altyapısı olarak kullanma
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | Genel olarak NoSql veritabanlarının kullanımını ve özellikle de Azure Cosmos DB, persistance uygulama seçeneği olarak anlayın.
 ms.date: 10/08/2018
-ms.openlocfilehash: 7a8573f8f668a5b75f50acde57a2f4c42ce4d189
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: d96d72fe675dfa830029e4311f2cf165a305c328
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70374033"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71039959"
 ---
 # <a name="use-nosql-databases-as-a-persistence-infrastructure"></a>Kalıcı altyapı olarak NoSQL veritabanlarını kullanma
 
@@ -280,7 +280,7 @@ services:
 
 ```
 
-`ConnectionString` Ortam değişkeni şu şekilde çözümlenir: Genel değişken `.env` dosyada Azure Cosmos DB bağlantı dizesiyle tanımlanmışsa, Bulutta Azure Cosmos db veritabanına erişmek için onu kullanır. `ESHOP_AZURE_COSMOSDB` Tanımlı değilse, mongodb://nosql.data değerini alır ve geliştirme MongoDB kapsayıcısını kullanır.
+`ConnectionString` Ortam değişkeni şu şekilde çözümlenir: Genel değişken `.env` dosyada Azure Cosmos DB bağlantı dizesiyle tanımlanmışsa, Bulutta Azure Cosmos db veritabanına erişmek için onu kullanır. `ESHOP_AZURE_COSMOSDB` Tanımlı değilse, `mongodb://nosql.data` değeri alır ve geliştirme MongoDB kapsayıcısını kullanacaktır.
 
 Aşağıdaki kod, eshoponcontainers içinde uygulandığı gibi Azure Cosmos DB bağlantı dizesi genel ortam değişkeniyle birlikte `.env` dosyayı gösterir:
 
@@ -324,7 +324,7 @@ services:
   <https://docs.microsoft.com/azure/cosmos-db/mongodb-introduction>
 
 - **Azure Cosmos DB: .NET ve Azure portal bir MongoDB API web uygulaması oluşturun**  \
-  [https://docs.microsoft.com/azure/cosmos-db/create-mongodb-dotnet](https://docs.microsoft.com/azure/cosmos-db/create-mongodb-dotnet )
+  <https://docs.microsoft.com/azure/cosmos-db/create-mongodb-dotnet>
 
 - **Yerel geliştirme ve test için Azure Cosmos DB öykünücüsü kullanma**  \
   <https://docs.microsoft.com/azure/cosmos-db/local-emulator>

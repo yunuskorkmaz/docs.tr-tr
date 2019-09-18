@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 44bf97aa-a9a4-4eba-9a0d-cfaa6fc53a66
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 20e5f166aad8bc2504ed27b93ec6730bcd26387d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 5079f0243faefaab6ada23cc98f5214a616c1d22
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69911594"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044373"
 ---
 # <a name="ngenexe-native-image-generator"></a>Ngen.exe (Yerel Görüntü Oluşturucu)
 
@@ -59,7 +59,7 @@ Ngen. exe ve yerel görüntü hizmetini kullanma hakkında daha fazla bilgi içi
 > [!NOTE]
 > .NET Framework 1,0 ve 1,1 sürümleri için Ngen. exe sözdizimi [Yerel Görüntü Oluşturucu (Ngen. exe) eski sözdiziminde](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms165073(v=vs.100))bulunabilir.
 
-Bu araç, Visual Studio ile birlikte otomatik olarak yüklenir. Aracı çalıştırmak için, Visual Studio için Geliştirici Komut İstemi (veya Windows 7 ' de Visual Studio komut Istemi) kullanın. Daha fazla bilgi için bkz. [komut istemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md).
+Bu araç, Visual Studio ile birlikte otomatik olarak yüklenir. Aracı çalıştırmak için, Visual Studio için Geliştirici Komut İstemi (veya Windows 7 ' de Visual Studio komut Istemi) kullanın. Daha fazla bilgi için bkz. [komut istemleri](developer-command-prompt-for-vs.md).
 
 Komut satırına şunu yazın:
 
@@ -392,7 +392,7 @@ Ngen.exe bir doğal görüntü oluşturduğu zaman bu bilgiyi kaydeder. Bir derl
 
      Önceden yetkilendirilmiş bir derlemenin izinlerini kısıtlamak için makina güvenlik politikasında değişiklik yapmak, o derleme için önceden derlenmiş olan doğal imajın geçersiz olmasına sebep olabilir
 
-     Ortak dil çalışma zamanının kod erişim güvenliğini nasıl yönettiği ve izinlerin nasıl kullanılacağı hakkında ayrıntılı bilgi için bkz. [kod erişim güvenliği](../../../docs/framework/misc/code-access-security.md).
+     Ortak dil çalışma zamanının kod erişim güvenliğini nasıl yönettiği ve izinlerin nasıl kullanılacağı hakkında ayrıntılı bilgi için bkz. [kod erişim güvenliği](../misc/code-access-security.md).
 
 <a name="Troubleshooting"></a>
 
@@ -404,13 +404,13 @@ Aşağıdaki sorun giderme konuları, hangi yerel görüntülerin kullanıldığ
 
 ### <a name="assembly-binding-log-viewer"></a>Derleme Bağlaması Günlük Görüntüleyici
 
-Yerel görüntülerin uygulamanız tarafından kullanıldığını onaylamak için, [Fuslogvw. exe (bütünleştirilmiş kod bağlama günlük Görüntüleyici)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md)kullanabilirsiniz. Bağlama günlüğü Görüntüleyicisi penceresindeki **günlük kategorileri** kutusunda **Yerel görüntüler** ' i seçin. Fuslogvw.exe bir doğal imajın neden reddedildiği hakkında bilgi sağlar.
+Yerel görüntülerin uygulamanız tarafından kullanıldığını onaylamak için, [Fuslogvw. exe (bütünleştirilmiş kod bağlama günlük Görüntüleyici)](fuslogvw-exe-assembly-binding-log-viewer.md)kullanabilirsiniz. Bağlama günlüğü Görüntüleyicisi penceresindeki **günlük kategorileri** kutusunda **Yerel görüntüler** ' i seçin. Fuslogvw.exe bir doğal imajın neden reddedildiği hakkında bilgi sağlar.
 
 <a name="MDA"></a>
 
 ### <a name="the-jitcompilationstart-managed-debugging-assistant"></a>Jıtcompilationstart yönetilen hata ayıklama Yardımcısı
 
-JıT derleyicisinin bir işlevi derlemeye ne zaman başlayacağını anlamak için, [Jıtcompilationstart](../../../docs/framework/debug-trace-profile/jitcompilationstart-mda.md) Managed hata ayıklama Yardımcısı 'Nı (MDA) kullanabilirsiniz.
+JıT derleyicisinin bir işlevi derlemeye ne zaman başlayacağını anlamak için, [Jıtcompilationstart](../debug-trace-profile/jitcompilationstart-mda.md) Managed hata ayıklama Yardımcısı 'Nı (MDA) kullanabilirsiniz.
 
 <a name="OptOut"></a>
 
@@ -562,7 +562,7 @@ Yerel görüntü hizmetiyle ilgili örnekler için bkz. [Native Image Service](#
 
 ## <a name="native-image-task"></a>Yerel Görüntü Görevi
 
-Yerel görüntü görevi, yerel görüntüler üreten ve tutan bir Windows görevidir. Yerel görüntü görevi, desteklenen senaryolar için otomatik olarak yerel görüntüler oluşturur ve geri kazanır. Ayrıca, yükleyicilerin [Ngen. exe (yerel görüntü Oluşturucu)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) kullanarak yerel görüntüleri ertelenmiş bir sürede oluşturmasını ve güncelleştirmesini de sağlar.
+Yerel görüntü görevi, yerel görüntüler üreten ve tutan bir Windows görevidir. Yerel görüntü görevi, desteklenen senaryolar için otomatik olarak yerel görüntüler oluşturur ve geri kazanır. Ayrıca, yükleyicilerin [Ngen. exe (yerel görüntü Oluşturucu)](ngen-exe-native-image-generator.md) kullanarak yerel görüntüleri ertelenmiş bir sürede oluşturmasını ve güncelleştirmesini de sağlar.
 
 Yerel görüntü görevi, her bir mimariyi hedefleyen uygulamalar için derlemeye izin vermek üzere bir bilgisayarda desteklenen her CPU mimarisi için bir kez kaydedilir:
 
@@ -639,7 +639,7 @@ Zaman uyumlu komutlar Ngen. exe tarafından yürütülür ve yerel görüntü hi
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Araçlar](../../../docs/framework/tools/index.md)
+- [Araçlar](index.md)
 - [Yönetilen Yürütme İşlemi](../../standard/managed-execution-process.md)
-- [Çalışma Zamanının Bütünleştirilmiş Kodların Konumunu Bulması](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
-- [Komut İstemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [Çalışma Zamanının Bütünleştirilmiş Kodların Konumunu Bulması](../deployment/how-the-runtime-locates-assemblies.md)
+- [Komut İstemleri](developer-command-prompt-for-vs.md)

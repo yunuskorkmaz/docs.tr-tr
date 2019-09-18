@@ -9,12 +9,12 @@ helpviewer_keywords:
 - providers, UI Automation
 - UI Automation, clients
 ms.assetid: 69eebd8b-39ed-40e7-93cc-4457c4caf746
-ms.openlocfilehash: 3f373c3947b45443ca4031ecdc3d5e40608ec84c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: d342e4382cfe227e477ab87c2ca428834010768e
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69911548"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042156"
 ---
 # <a name="ui-automation-events-overview"></a>UI Otomasyonu Olaylarına Genel Bakış
 > [!NOTE]
@@ -79,10 +79,10 @@ ms.locfileid: "69911548"
   
  Olayları <xref:System.Windows.Automation.AutomationEvent> tanımlamak için kullanılan nesneler, içindeki alanlar ve denetim <xref:System.Windows.Automation.DockPatternIdentifiers>deseninin tanımlayıcı sınıflarında <xref:System.Windows.Automation.AutomationElementIdentifiers> bulunan sağlayıcılar tarafından alınır. Eşdeğer alanlar, içindeki <xref:System.Windows.Automation.AutomationElement> alanlardan istemci uygulamalar tarafından ve gibi denetim deseninin <xref:System.Windows.Automation.DockPattern>elde edilir.  
   
- Olay tanımlayıcılarının listesi için bkz. [istemciler Için UI Otomasyon olayları](../../../docs/framework/ui-automation/ui-automation-events-for-clients.md).  
+ Olay tanımlayıcılarının listesi için bkz. [istemciler Için UI Otomasyon olayları](ui-automation-events-for-clients.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [İstemciler İçin UI Otomasyonu Olayları](../../../docs/framework/ui-automation/ui-automation-events-for-clients.md)
-- [Sunucu Tarafı UI Otomasyonu Sağlayıcısı Uygulama](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)
-- [UI Otomasyonu Olaylarına Abone Olma](../../../docs/framework/ui-automation/subscribe-to-ui-automation-events.md)
+- [İstemciler İçin UI Otomasyonu Olayları](ui-automation-events-for-clients.md)
+- [Sunucu Tarafı UI Otomasyonu Sağlayıcısı Uygulama](server-side-ui-automation-provider-implementation.md)
+- [UI Otomasyonu Olaylarına Abone Olma](subscribe-to-ui-automation-events.md)

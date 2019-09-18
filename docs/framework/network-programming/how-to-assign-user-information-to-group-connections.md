@@ -5,20 +5,20 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7ce550d6-8f7c-4ea7-add8-5bc27a7b51be
-ms.openlocfilehash: 2fa84052bcf9ca97b903111fc02e319b25deb384
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8e104de891d72e709ae20055737540516109da68
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61642717"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048420"
 ---
 # <a name="how-to-assign-user-information-to-group-connections"></a>Nasıl yapılır: Bağlantıları Gruplandırmak için Kullanıcı Bilgileri Atama
 
- Aşağıdaki örnek, uygulama değişkenleri ayarlayan varsayılarak grup bağlantıları için kullanıcı bilgilerini atamak gösterilmiştir *kullanıcıadı*, *SecurelyStoredPassword*, ve  *Etki alanı* kodun bu bölümünü çağrılmadan önce ve *kullanıcıadı* benzersizdir.  
+ Aşağıdaki örnek, bu kodun bu bölümü çağrılmadan önce uygulamanın *UserName*, *securelyStoredPassword*ve *Domain* değişkenlerini ayarladığını varsayarak ve *Kullanıcı adı* benzersizdir.  
   
-### <a name="to-assign-user-information-to-a-group-connection"></a>Bir grubu bağlantısı için kullanıcı bilgilerini atamak için  
+### <a name="to-assign-user-information-to-a-group-connection"></a>Kullanıcı bilgilerini bir grup bağlantısına atamak için  
   
-1. Bir bağlantı grup adı oluşturun.  
+1. Bir bağlantı grubu adı oluşturun.  
   
     ```csharp  
     SHA1Managed Sha1 = new SHA1Managed();  
@@ -32,7 +32,7 @@ ms.locfileid: "61642717"
     Dim secureGroupName As [String] = Encoding.Default.GetString(updHash)  
     ```  
   
-2. Belirli bir URL için bir istek oluşturun. Örneğin, aşağıdaki kod bir istek URL'sini oluşturur `http://www.contoso.com.`  
+2. Belirli bir URL için bir istek oluşturun. Örneğin, aşağıdaki kod URL için bir istek oluşturur`http://www.contoso.com.`  
   
     ```csharp  
     WebRequest myWebRequest=WebRequest.Create("http://www.contoso.com");  
@@ -42,7 +42,7 @@ ms.locfileid: "61642717"
     Dim myWebRequest As WebRequest = WebRequest.Create("http://www.contoso.com")  
     ```  
   
-3. Web isteği ve çağrısı için kimlik bilgileri ve bağlantı GroupName ayarlayın **GetResponse yanıtına** almak için bir **WebResponse** nesne.  
+3. Web isteği için kimlik bilgilerini ve bağlantı grubuadı ' nı ayarlayın ve bir **WebResponse** nesnesi almak Için **GetResponse** öğesini çağırın.  
   
     ```csharp  
     myWebRequest.Credentials = new NetworkCredential(UserName, SecurelyStoredPassword, Domain);   
@@ -58,7 +58,7 @@ ms.locfileid: "61642717"
     Dim myWebResponse As WebResponse = myWebRequest.GetResponse()  
     ```  
   
-4. Yanıt akışına WebRespose nesne kullandıktan sonra kapatın.  
+4. Webrespoz nesnesini kullandıktan sonra yanıt akışını kapatın.  
   
     ```csharp  
     MyWebResponse.Close();  
@@ -109,5 +109,5 @@ MyWebResponse.Close()
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Bağlantıları Yönetme](../../../docs/framework/network-programming/managing-connections.md)
-- [Bağlantı Gruplandırma](../../../docs/framework/network-programming/connection-grouping.md)
+- [Bağlantıları Yönetme](managing-connections.md)
+- [Bağlantı Gruplandırma](connection-grouping.md)

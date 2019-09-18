@@ -13,26 +13,26 @@ helpviewer_keywords:
 - HTTP, about HTTP
 - HttpWebRequest class, sending and receiving data
 ms.assetid: 985fe5d8-eb71-4024-b361-41fbdc1618d8
-ms.openlocfilehash: abbb02b7bd22c4b301c5565037f55aa1019fc3ce
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c8c799a50e5d63bbf411c338eb9e93f85a942bb0
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61642496"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048006"
 ---
 # <a name="http"></a>HTTP
-.NET Framework ile tüm Internet trafiği, çoğu yapar HTTP protokolü için kapsamlı destek sağlar. <xref:System.Net.HttpWebRequest> ve <xref:System.Net.HttpWebResponse> sınıfları. Bu sınıflar türetilen <xref:System.Net.WebRequest> ve <xref:System.Net.WebResponse>, varsayılan olarak döndürülen her statik yöntem <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> URI başlayan bir "http" veya "https" ile karşılaşır. Çoğu durumda **WebRequest** ve **WebResponse** sınıfları sağlar, tüm istek yapmak gerekli olduğu, ancak özellik olarak kullanıma HTTP'ye özgü özelliklere erişim gerekiyorsa, türü atayarak Bu sınıfa **HttpWebRequest** veya **HttpWebResponse**.  
+.NET Framework, <xref:System.Net.HttpWebRequest> ve <xref:System.Net.HttpWebResponse> sınıflarının yanı sıra tüm Internet trafiğinin çoğunu oluşturan http protokolü için kapsamlı destek sağlar. Ve <xref:System.Net.WebRequest> <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> ' den türetilen bu sınıflar, statik yöntem "http" veya "https" ile başlayan bir URI ile karşılaştığında varsayılan olarak döndürülür. <xref:System.Net.WebResponse> Çoğu durumda, **WebRequest** ve **WebResponse** sınıfları isteği yapmak için gereken tüm öğeleri sağlar, ancak özellikler olarak sunulan http 'ye özgü özelliklere erişmeniz gerekiyorsa, bu sınıfları **HttpWebRequest** 'e yazabilirsiniz veya **HttpWebResponse**.  
   
- **HttpWebRequest** ve **HttpWebResponse** standart bir HTTP istek ve yanıt hareket halinde kapsüller ve ortak HTTP üst bilgilerine erişim sağlar. Bu sınıfların ardışık düzen, veri gönderip öbekleri, kimlik doğrulaması, ön kimlik doğrulama, şifreleme, proxy desteği, sunucu sertifika doğrulaması ve bağlantı yönetimi dahil olmak üzere çoğu HTTP 1.1 özelliklerini de destekler. Özel üst bilgiler özellikleri aracılığıyla sağlanmayan üst bilgiler depolanır ve aracılığıyla erişilen **üstbilgileri** özelliği.  
+ **HttpWebRequest** ve **HttpWebResponse** standart bir http isteği-ve-yanıt işlemini kapsülle ve ortak http üst bilgilerine erişim sağlar. Bu sınıflar, ardışık düzen oluşturma, verileri parçalara gönderme ve alma, kimlik doğrulama, ön kimlik doğrulama, şifreleme, proxy desteği, sunucu sertifikası doğrulama ve bağlantı yönetimi dahil olmak üzere HTTP 1,1 özelliklerinin çoğunu da destekler. Özellikler aracılığıyla sağlanmayan özel üstbilgiler ve üstbilgiler içinde depolanabilir ve **üstbilgiler** özelliği aracılığıyla erişilebilir.  
   
- **HttpWebRequest** tarafından kullanılan varsayılan sınıf **WebRequest** ve bir URI geçirebilirsiniz önce kayıtlı olması gerekmez **WebRequest.Create** yöntemi.  
+ **HttpWebRequest** **WebRequest** tarafından kullanılan varsayılan sınıftır ve **WebRequest. Create** yöntemine bir URI geçirebilmeniz için önce kaydedilmesi gerekmez.  
   
- HTTP yeniden yönlendirmelerini otomatik olarak ayarlayarak izleyin, uygulamanızın yapabileceğiniz <xref:System.Net.HttpWebRequest.AllowAutoRedirect%2A> özelliğini **true** (varsayılan). Uygulama istekleri yönlendirir ve <xref:System.Net.HttpWebResponse.ResponseUri%2A> özelliği **HttpWebResponse** isteğine yanıt olarak verilen gerçek bir Web kaynağı içerir. Ayarlarsanız **AllowAutoRedirect** için **false**, uygulamanızı yeniden yönlendirmeleri işleyebilen HTTP protokolü hata olarak.  
+ <xref:System.Net.HttpWebRequest.AllowAutoRedirect%2A> Özelliği **true** (varsayılan) olarak ayarlayarak uygulamanızın http yeniden yönlendirmelerini otomatik olarak izlemesini sağlayabilirsiniz. Uygulama istekleri yeniden yönlendirecektir ve <xref:System.Net.HttpWebResponse.ResponseUri%2A> **HttpWebResponse** özelliği, isteğe yanıt veren gerçek Web kaynağını içerir. **Allowoto yeniden yönlendirme** 'yi **false**olarak ayarlarsanız uygulamanız http protokol hataları olarak yeniden yönlendirmeyi işleyebilmelidir.  
   
- Uygulamaları, yakalama tarafından HTTP protokolü hataları alan bir <xref:System.Net.WebException> ile <xref:System.Net.WebException.Status%2A> kümesine <xref:System.Net.WebExceptionStatus>. <xref:System.Net.WebException.Response%2A> Özelliği içeren **WebResponse** sunucu tarafından gönderilen ve karşılaşılan gerçek HTTP hata gösterir.  
+ Uygulamalar, <xref:System.Net.WebException> <xref:System.Net.WebException.Status%2A> kümesi ilebirilebirleştirerekhttpprotokolhatalarıalır.<xref:System.Net.WebExceptionStatus> Özelliği, sunucu tarafından gönderilen WebResponse 'u içerir ve karşılaşılan gerçek http hatası olduğunu gösterir. <xref:System.Net.WebException.Response%2A>  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Ara Sunucu Üzerinden İnternet Erişimi](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)
-- [Uygulama Protokolleri Kullanma](../../../docs/framework/network-programming/using-application-protocols.md)
-- [Nasıl yapılır: HTTP'ye özgü özelliklere erişim](../../../docs/framework/network-programming/how-to-access-http-specific-properties.md)
+- [Ara Sunucu Üzerinden İnternet Erişimi](accessing-the-internet-through-a-proxy.md)
+- [Uygulama Protokolleri Kullanma](using-application-protocols.md)
+- [Nasıl yapılır: HTTP 'e özgü özelliklere erişin](how-to-access-http-specific-properties.md)

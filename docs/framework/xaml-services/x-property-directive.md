@@ -2,22 +2,22 @@
 title: x:Property Yönergesi
 ms.date: 03/30/2017
 ms.assetid: 618555a8-c893-455c-810f-ac54cd24ef10
-ms.openlocfilehash: ab25381769e7001f7f48d73e717b5f495da90dfa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7624014e0cd9ddd47cc84ee9686a6f11c27d1843
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61796454"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053917"
 ---
 # <a name="xproperty-directive"></a>x:Property Yönergesi
-Biçimlendirme XAML özelliğinde bildirir.  
+İşaretlemede bir XAML özelliği bildirir.  
   
 ## <a name="xaml-object-element-usage"></a>XAML Nesne Öğesi Kullanımı  
   
-```  
+```xaml  
 <object x:Class="className">  
   <x:Members>  
-    <x:Property Name="propertyName" Type="propertyType/>  
+    <x:Property Name="propertyName" Type="propertyType"/>  
     additionalProperties  
   </x:Members>  
 </object>  
@@ -27,16 +27,16 @@ Biçimlendirme XAML özelliğinde bildirir.
   
 |||  
 |-|-|  
-|`className`|XAML üretim için yedekleme sınıf veya kısmi sınıf adıdır.|  
-|`propertyName`|Tanımlanan özellik üyesinin adı.|  
-|`propertyType`|Tür adı (veya çerçeveye özgü diğer dize biçiminde), bu özelliğin türünü belirtir.|  
+|`className`|XAML üretimi için yedekleme sınıfının veya kısmi sınıfın adı.|  
+|`propertyName`|Tanımlanan özelliğin üye adı.|  
+|`propertyType`|Bu özelliğin türünü belirten tür adı (veya diğer dize biçimi, çerçeveye özgü).|  
   
 ## <a name="remarks"></a>Açıklamalar  
- .NET Framework XAML hizmetlerinde uygulamasında. `x:Property` Yedekleme doğrudan bir türün yok, ancak tarafından desteklenen <xref:System.Windows.Markup.PropertyDefinition> sınıfı. XAML düğüm akış bir `x:Property` öğesi adlı bir üyesi olarak temsil edilir `Property`, XAML dili XAML ad uzayındaki. Üye `Property` biçimlendirme tarafından bildirilen gibi öznitelikleri tutun.  
+ .NET Framework XAML Hizmetleri uygulamasında,. `x:Property`doğrudan bir tür yedeklemesi yoktur, ancak <xref:System.Windows.Markup.PropertyDefinition> sınıfı tarafından desteklenir. Xaml düğüm akışında `x:Property` , bir öğesi xaml Language xaml ad alanından adlı `Property`bir üye olarak temsil edilir. Üyenin `Property` , biçimlendirme tarafından belirtilen öznitelikleri.  
   
- Anlamını `Name` ve `Type` .NET Framework XAML hizmetlerinde düzeyinde atanmaz. Daha sonra belirli çerçeveleri tarafından uygulanan kuralları altında yorumlanacağını dize değerleri olarak ilk XAML düğümü akışı depolanırlar. Anlamı bir XAML adı ve anlamı XAML türü hizalama veya yalnızca geçerli uygulama bağlı olarak bir yedekleme türü sistemde olabilir.  
+ Ve ' `Name` `Type` nin anlamı .NET Framework xaml Hizmetleri düzeyinde atanmaz. Bunlar, daha sonra belirli çerçeveler tarafından uygulanabilir kuralların altında yorumlanmak üzere, ilk XAML düğüm akışında dize değerleri olarak depolanır. Anlamı bir XAML adı ve XAML türü anlamını gösterebilir veya uygulamaya bağlı olarak yalnızca bir yedekleme türü sisteminde geçerli olabilir.  
   
- Pratik kullanımını desteklemek üzere `x:Members` üyeleri üye tanımları işaretlemede belirtmek için bir yol değiştirilebilir bir sınıf ile ilişkili olması gerekir. Hedeflenen modeli olan `x:Members` belirten bir tür üyesi olarak mevcut bir `x:Class`. Ancak, türleri ve üyeleri ilişkilendirme veya dinamik üye tanımları oluşturmayı mekanizması .NET Framework XAML hizmetlerinde düzeyinde desteklenmiyor. Bu, XAML üyesi tanımları desteği uygulama modellerini sahip tek çerçeveleri için bırakılır. Genellikle, isteğe bağlı olarak, XAML ve aşağıdakilerden birini işaretleme-derleme MSBUILD yapı eylemleri arka plan kod ile tümleştirin veya üretim saf gelen XAML derlemeleri, bu özelliği desteklemek için gereklidir.  
+ ' Nin pratik kullanımını, `x:Members` İşaretlemede üye tanımlarının belirtilmesi için bir yol olarak desteklemek amacıyla, üyelerin değiştirilebilen bir sınıfla ilişkilendirilmesi gerekir. Hedeflenen model `x:Members` , bir `x:Class`türü belirten bir üye olarak mevcuttur. Ancak, türleri ve üyeleri ilişkilendirme mekanizması veya dinamik üye tanımlarının üretilmesinin .NET Framework XAML Hizmetleri düzeyinde desteklenmez. Bu, XAML 'den üye tanımlarını destekleyen uygulama modelleri olan tek tek çerçeveler için bırakılır. Genellikle, XAML 'yi biçimlendirme-derleme ve bu özelliği desteklemeye yönelik saf from-XAML derlemeleri ile tümleştirme sağlayan MSBUILD derleme eylemleri.  
   
-## <a name="xproperty-for-windows-workflow-foundation"></a>x: Property Windows Workflow Foundation için  
- Windows Workflow Foundation için `x:Property` tamamen XAML veya XAML oluşan özel bir etkinlik üyelerini tanımlayan – dinamik üyeler bir etkinlik Tasarımcısı ile arka plan kod için tanımlanır. `x:Class` XAML üretim kök öğe üzerinde de belirtilmelidir. Bu, .NET Framework XAML hizmetlerinde düzeyinde bir gereksinim değildir, ancak XAML üretim özel etkinlikler ve Windows Workflow Foundation XAML genel destek MSBUILD yapı eylemleri tarafından yüklendiğinde bir gereksinim haline gelir. Windows Workflow Foundation kullanmayan saf XAML tür adı için hedeflenen değeri olarak `x:Property` `Type` özniteliği ve bunun yerine burada belgelenmemiş bir kuralı kullanır. Daha fazla bilgi için [DynamicActivity oluşturma](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd807392(v=vs.100)).
+## <a name="xproperty-for-windows-workflow-foundation"></a>Windows Workflow Foundation için x:Property  
+ Windows Workflow Foundation için, `x:Property` tamamen XAML 'de oluşturulan özel bir etkinliğin üyelerini ya da arka plan kod içeren bir etkinlik tasarımcısının xaml tanımlı dinamik üyelerini tanımlar. `x:Class`Ayrıca XAML üretiminin kök öğesinde de belirtilmelidir. Bu, .NET Framework XAML Hizmetleri düzeyinde bir gereklilik değildir, ancak XAML üretimi özel etkinlikleri destekleyen MSBUILD derleme eylemleri tarafından yüklendiğinde ve genel olarak XAML Windows Workflow Foundation bir gereksinim haline gelir. Windows Workflow Foundation, saf xaml tür adını `x:Property` `Type` özniteliği için amaçlanan değeri olarak kullanmaz ve bunun yerine burada belgelenmeyen bir kural kullanır. Daha fazla bilgi için bkz. [DynamicActivity oluşturma](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd807392(v=vs.100)).

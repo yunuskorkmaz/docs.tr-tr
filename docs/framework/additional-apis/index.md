@@ -10,56 +10,56 @@ ms.assetid: cf2d9006-b631-4e5d-81cd-20aab78c60f1
 author: mairaw
 ms.author: mairaw
 ms.topic: conceptual
-ms.openlocfilehash: a48a145cd337a18c4ce63b281e1c82032d0532e7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0aed6f32bbd3ffdc9446e9d17be2d90c62444ee1
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61675370"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053252"
 ---
 # <a name="additional-class-libraries-and-apis"></a>Ek sınıf kitaplıkları ve API'ler
 
-.NET Framework sürekli gelişmektedir. Platformlar arası geliştirmeyi geliştirmek ve erken yeni işlevleri tanıtmak için yeni özellikleri bant dışında (OOB) yayınlanır. Bu konuda size sağladığımız belgeleri için OOB projeleri listeler.  
+.NET Framework sürekli olarak gelişiyor. Platformlar arası geliştirmeyi artırmak ve yeni işlevselliği erken sunmak için yeni özellikler bant dışı (OOB) olarak serbest bırakılır. Bu konu, için belge sağlamamız gereken OOB projelerini listeler.  
   
-Ayrıca, bazı kitaplıklar belirli platformlara veya .NET Framework uygulamaları hedefler. Örneğin, <xref:System.Text.CodePagesEncodingProvider> sınıfı kod sayfası kodlamaları için UWP uygulamaları .NET Framework kullanılarak geliştirilmiş kullanıma sunar. Bu konuda, bu kitaplıkların da listelenir.  
+Ayrıca, bazı kitaplıklar belirli platformları veya .NET Framework uygulamalarını hedeflemelidir. Örneğin, <xref:System.Text.CodePagesEncodingProvider> sınıfı kod sayfası kodlamalarını .NET Framework kullanılarak geliştirilen UWP uygulamaları için kullanılabilir hale getirir. Bu konu başlığı altında da bu kitaplıklar listelenmektedir.  
   
 ## <a name="oob-projects"></a>OOB projeleri
   
 | Project | Açıklama |  
 | ------- | ----------- |  
-| <xref:System.Collections.Immutable> | İş parçacığı güvenli ve hiçbir zaman içeriklerini değiştirmek için kesin koleksiyonlar sağlar. |
-| <xref:System.Net.Http.WinHttpHandler> | Bir ileti işleyicisi sağlar <xref:System.Net.Http.HttpClient> Windows WinHTTP arabirimi esas alan. |
-| <xref:System.Numerics> | SIMD donanım tabanlı hızlandırma yararlanabilirsiniz vektör türleri içeren bir kitaplık sağlar.| 
-| <xref:System.Threading.Tasks.Dataflow> | TPL veri akışı kitaplığı, eşzamanlılık kullanan uygulamaların sağlamlığını artırmak için veri akışı bileşenleri sağlar. |  
+| <xref:System.Collections.Immutable> | , İş parçacığı açısından güvenli olan ve içeriklerinin hiçbir şekilde değişmeme garantisi sağlayan koleksiyonlar sağlar. |
+| <xref:System.Net.Http.WinHttpHandler> | Windows 'un WinHTTP arabirimine <xref:System.Net.Http.HttpClient> dayalı olarak bir ileti işleyicisi sağlar. |
+| <xref:System.Numerics> | SıMD donanım tabanlı hızlandırmasının avantajlarından yararlanan bir vektör türleri kitaplığı sağlar.| 
+| <xref:System.Threading.Tasks.Dataflow> | TPL veri akışı kitaplığı, eşzamanlılık özellikli uygulamaların sağlamlığını artırmaya yardımcı olmak için veri akışı bileşenleri sağlar. |  
 
 ## <a name="platform-specific-libraries"></a>Platforma özgü kitaplıklar
   
 | Project | Açıklama |  
 | ------- | ----------- |  
-| <xref:System.Text.CodePagesEncodingProvider> | Genişletir <xref:System.Text.EncodingProvider> kod sayfası kodlamaları hedefleyen Evrensel Windows platformu uygulamaları için kullanılabilir hale getirmek için sınıf. |  
+| <xref:System.Text.CodePagesEncodingProvider> | Kod sayfası kodlamalarını Evrensel Windows platformu hedefleyen uygulamalar için kullanılabilir hale getirmek için sınıfınıgenişletir.<xref:System.Text.EncodingProvider> |  
   
-## <a name="private-apis"></a>Özel API'ler  
+## <a name="private-apis"></a>Özel API 'Ler  
 
-Bu API, ürün altyapısını destekler ve amaçlayan/desteklenen doğrudan sizin kodunuzdan kullanılmak üzere değildir.  
+Bu API 'Ler ürün altyapısını destekler ve doğrudan kodunuzdan kullanılmak üzere tasarlanmamıştır/desteklenmez.  
   
 | API adı |
 | -------- |
-| [System.Net.Connection sınıfı](../../../docs/framework/additional-apis/connection.md) |
-| [System.Net.Connection.m\_WriteList alan](../../../docs/framework/additional-apis/m_writelist.md) |
-| [System.Net.ConnectionGroup Class](../../../docs/framework/additional-apis/connectiongroup.md) |
-| [System.Net.ConnectionGroup.m\_ConnectionList Field](../../../docs/framework/additional-apis/m_connectionlist.md) |
-| [System.Net.CoreResponseData Class](../../../docs/framework/additional-apis/coreresponsedata.md) |
-| [System.Net.CoreResponseData.m\_ResponseHeaders Field](../../../docs/framework/additional-apis/coreresponsedata_m_responseheaders.md) |
-| [System.Net.CoreResponseData.m\_StatusCode Field](../../../docs/framework/additional-apis/coreresponsedata_m_statuscode.md) |
-| [System.Net.HttpWebRequest. \_AutoRedirects alan](../../../docs/framework/additional-apis/_autoredirects.md) |
-| [System.Net.HttpWebRequest. \_CoreResponse alan](../../../docs/framework/additional-apis/httpwebrequest__coreresponse.md) |
-| [System.Net.HttpWebRequest. \_HttpResponse alan](../../../docs/framework/additional-apis/_httpresponse.md) |
-| [System.Net.ServicePoint.m\_ConnectionGroupList Field](../../../docs/framework/additional-apis/m_connectiongrouplist.md) |
-| [System.Net.ServicePointManager.s\_ServicePointTable Field](../../../docs/framework/additional-apis/s_servicepointtable.md) |
-| [System.Windows.Diagnostics.VisualDiagnostics.s\_isDebuggerCheckDisabledForTestPurposes alan](../../../docs/framework/additional-apis/s-isdebuggercheckdisabledfortestpurposes-field.md) |
-| [System.Windows.Forms.Design.DataMemberFieldEditor sınıfı](../../../docs/framework/additional-apis/datamemberfieldeditor-class.md) |
-| [System.Windows.Forms.Design.DataMemberListEditor sınıfı](../../../docs/framework/additional-apis/datamemberlisteditor-class.md) |
+| [System .net. Connection sınıfı](connection.md) |
+| [System .net. Connection. d\_writelist alanı](m_writelist.md) |
+| [System .net. ConnectionGroup sınıfı](connectiongroup.md) |
+| [System.Net.ConnectionGroup.m\_ConnectionList Field](m_connectionlist.md) |
+| [System .net. CoreResponseData sınıfı](coreresponsedata.md) |
+| [System .net. CoreResponseData. d\_ResponseHeaders alanı](coreresponsedata_m_responseheaders.md) |
+| [System .net. CoreResponseData.\_mstatuscode alanı](coreresponsedata_m_statuscode.md) |
+| [Sistem .net. HttpWebRequest. \_Oto yeniden yönlendirmeler alanı](_autoredirects.md) |
+| [Sistem .net. HttpWebRequest. \_CoreResponse alanı](httpwebrequest__coreresponse.md) |
+| [Sistem .net. HttpWebRequest. \_HttpResponse alanı](_httpresponse.md) |
+| [System.Net.ServicePoint.m\_ConnectionGroupList Field](m_connectiongrouplist.md) |
+| [System.Net.ServicePointManager.s\_ServicePointTable Field](s_servicepointtable.md) |
+| [System. Windows. Diagnostics. VisualDiagnostics. s\_ıdebuggercheckdisabledfortestamaçlar alanı](s-isdebuggercheckdisabledfortestpurposes-field.md) |
+| [System. Windows. Forms. Design. DataMemberFieldEditor sınıfı](datamemberfieldeditor-class.md) |
+| [System. Windows. Forms. Design. Datamemberlistedıtor sınıfı](datamemberlisteditor-class.md) |
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [.NET Framework ve Bant Dışı Yayınlar](../../../docs/framework/get-started/the-net-framework-and-out-of-band-releases.md)
+- [.NET Framework ve Bant Dışı Yayınlar](../get-started/the-net-framework-and-out-of-band-releases.md)

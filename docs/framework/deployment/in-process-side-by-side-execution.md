@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 18019342-a810-4986-8ec2-b933a17c2267
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5d9d77ef20090e007e22a0d2f90b29f32ff94b46
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2a33d3c4216ed8c5d79aef4017c6b9256fc1ad7c
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69911110"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052098"
 ---
 # <a name="in-process-side-by-side-execution"></a>Devam Eden Yan Yana Yürütme
 .NET Framework 4 ' te başlayarak, tek bir işlemde ortak dil çalışma zamanının (CLR) birden çok sürümünü çalıştırmak için işlem içi yan yana barındırma kullanabilirsiniz. Varsayılan olarak, yönetilen COM bileşenleri, işlem için yüklenen .NET Framework sürümden bağımsız olarak, ile derlendikleri .NET Framework sürümüyle çalışır.  
@@ -60,7 +60,7 @@ ms.locfileid: "69911110"
   
      .NET Framework yüklenen sürümler: .NET Framework önceki bir sürümü ve .NET Framework 4.  
   
-     Yapmanız gerekenler: Uygulama dizinindeki [uygulama yapılandırma dosyasında](../../../docs/framework/configure-apps/index.md) , [ \<](../../../docs/framework/configure-apps/file-schema/startup/startup-element.md) [ \<Başlangıç > öğesini ve supportedRuntime > öğesi](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) kümesini aşağıdaki şekilde kullanın:  
+     Yapmanız gerekenler: Uygulama dizinindeki [uygulama yapılandırma dosyasında](../configure-apps/index.md) , [ \<](../configure-apps/file-schema/startup/startup-element.md) [ \<Başlangıç > öğesini ve supportedRuntime > öğesi](../configure-apps/file-schema/startup/supportedruntime-element.md) kümesini aşağıdaki şekilde kullanın:  
   
     ```xml  
     <configuration>  
@@ -175,5 +175,5 @@ int _tmain(int argc, _TCHAR* argv[])
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [\<Başlangıç > öğesi](../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)
-- [\<supportedRuntime > öğesi](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)
+- [\<Başlangıç > öğesi](../configure-apps/file-schema/startup/startup-element.md)
+- [\<supportedRuntime > öğesi](../configure-apps/file-schema/startup/supportedruntime-element.md)

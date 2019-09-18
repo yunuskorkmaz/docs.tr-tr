@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 98ddbdb9-66b1-4080-92ad-51f5c447fcf8
-ms.openlocfilehash: 5c9a81fc61a2272056ba34fa387fdafee6203824
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 05b6f6c3f0f1fc1b36b60e8b0dae50de2826aba4
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61642561"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048258"
 ---
 # <a name="how-to-register-a-custom-protocol-using-webrequest"></a>Nasıl yapılır: WebRequest Kullanarak Özel Protokolü Kaydetme
-Bu örnekte, başka yerde tanımlanmış bir protokolü belirli sınıf kaydettirmek gösterilmektedir. Bu örnekte, `CustomWebRequestCreator` uygulayan kullanıcı uygulanan nesne **Oluştur** döndüren yöntem `CustomWebRequest` nesne. Örnek kodu, yazmış varsayar `CustomWebRequest` özel protokolü uygulayan kodu.  
+Bu örnek, başka bir yerde tanımlanan protokole özgü bir sınıfın nasıl kaydedileceği gösterilmektedir. Bu örnekte, `CustomWebRequestCreator` `CustomWebRequest` nesnesini döndüren **Create** yöntemini uygulayan kullanıcı tarafından uygulanan nesnedir. Kod örneği, özel protokolü uygulayan `CustomWebRequest` kodu yazdığınızı varsayar.  
   
 ## <a name="example"></a>Örnek  
   
@@ -28,10 +28,10 @@ Dim req As WebRequest = WebRequest.Create("custom://customHost.contoso.com/")
 ```  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
- Bu örnek gerektirir:  
+ Bu örnek şunları gerektirir:  
   
- Başvurular <xref:System.Net> ad alanı.  
+ <xref:System.Net> Ad alanına başvurular.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Takılabilir Protokoller Programlama](../../../docs/framework/network-programming/programming-pluggable-protocols.md)
+- [Takılabilir Protokoller Programlama](programming-pluggable-protocols.md)

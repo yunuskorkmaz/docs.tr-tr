@@ -40,12 +40,12 @@ helpviewer_keywords:
 ms.assetid: cf624c1f-c160-46a1-bb2b-213587688da7
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2e24cd05bb1c1ed9425c9be8bc02cb92dc488005
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c8c47091d943aa0d710cec1af83e039bca9ee2d2
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69935724"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046251"
 ---
 # <a name="reliability-best-practices"></a>Güvenilirlik En İyi Yöntemleri
 
@@ -91,7 +91,7 @@ Yalnızca bir işletim sistemi işleyicisini temizlemek için bir sonlandırıc�
 
 Bunun yerine bir değiştirme değildir. <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> <xref:System.Runtime.InteropServices.SafeHandle>  İşletim sistemi kaynaklarını açıkça atılırken hala olası kaynak çekişmesi ve performans avantajları vardır.  `finally` Kaynakları açıkça atma işleminin tamamlamada yürütülemeyebilir.
 
-<xref:System.Runtime.InteropServices.SafeHandle>, bir işletim sistemi tutamacı boşaltma <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> yordamını veya bir döngüde bir dizi tanıtıcıyı boşaltmayı sağlayan, tanıtıcıyı serbest bırakmak için çalışmayı gerçekleştiren kendi yönteminizi uygulamanıza olanak tanır.  CLR bu yöntemin çalıştırılmasını garanti eder.  Bu, tanıtıcının tüm koşullarda serbest bırakılacağını sağlamak için <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> uygulamanın yazarının sorumluluğundadır. Bunun yapılmaması, tanıtıcının sızmasına neden olur, bu da genellikle tanıtıcıyla ilişkili yerel kaynakların sızıntısını sağlar. Bu nedenle, <xref:System.Runtime.InteropServices.SafeHandle> türetilmiş sınıfların, <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> uygulamanın çağrı sırasında kullanılamayan kaynakların ayrılmasını gerektirmeyecek şekilde oluşturulması önemlidir. Kodunuzun, bu tür arızaları işleyebilmesi ve yerel tanıtıcıyı serbest bırakmak için sözleşmeyi <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> tamamlamasıdır. Hata ayıklama amacıyla, <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> kaynak serbest <xref:System.Boolean> bırakmaya engel olan çok zararlı bir hatayla `false` karşılaşıldığında, bir dönüş değeri vardır. Bunun yapılması, sorunu tanımlamaya yardımcı olması için, etkinleştirilirse [releaseHandleFailed](../../../docs/framework/debug-trace-profile/releasehandlefailed-mda.md) MDA öğesini etkinleştirir. Çalışma zamanını başka hiçbir şekilde etkilemez; <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> aynı kaynak için yeniden çağrılmayacak ve sonuç olarak tanıtıcı sızacaktır.
+<xref:System.Runtime.InteropServices.SafeHandle>, bir işletim sistemi tutamacı boşaltma <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> yordamını veya bir döngüde bir dizi tanıtıcıyı boşaltmayı sağlayan, tanıtıcıyı serbest bırakmak için çalışmayı gerçekleştiren kendi yönteminizi uygulamanıza olanak tanır.  CLR bu yöntemin çalıştırılmasını garanti eder.  Bu, tanıtıcının tüm koşullarda serbest bırakılacağını sağlamak için <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> uygulamanın yazarının sorumluluğundadır. Bunun yapılmaması, tanıtıcının sızmasına neden olur, bu da genellikle tanıtıcıyla ilişkili yerel kaynakların sızıntısını sağlar. Bu nedenle, <xref:System.Runtime.InteropServices.SafeHandle> türetilmiş sınıfların, <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> uygulamanın çağrı sırasında kullanılamayan kaynakların ayrılmasını gerektirmeyecek şekilde oluşturulması önemlidir. Kodunuzun, bu tür arızaları işleyebilmesi ve yerel tanıtıcıyı serbest bırakmak için sözleşmeyi <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> tamamlamasıdır. Hata ayıklama amacıyla, <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> kaynak serbest <xref:System.Boolean> bırakmaya engel olan çok zararlı bir hatayla `false` karşılaşıldığında, bir dönüş değeri vardır. Bunun yapılması, sorunu tanımlamaya yardımcı olması için, etkinleştirilirse [releaseHandleFailed](../debug-trace-profile/releasehandlefailed-mda.md) MDA öğesini etkinleştirir. Çalışma zamanını başka hiçbir şekilde etkilemez; <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> aynı kaynak için yeniden çağrılmayacak ve sonuç olarak tanıtıcı sızacaktır.
 
 <xref:System.Runtime.InteropServices.SafeHandle>belirli bağlamlarda uygun değildir.  Yöntem bir <xref:System.GC> Sonlandırıcı iş parçacığında çalıştırılabileceğinizden, belirli bir iş parçacığında serbest olması gereken tüm tutamaçlar bir <xref:System.Runtime.InteropServices.SafeHandle>içinde sarmalanmamalıdır. <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A>
 
@@ -265,7 +265,7 @@ Sonlandırıcılar, eşitleme sorunlarından muaf olmalıdır. Sonlandırıcıda
 
 ### <a name="avoid-unmanaged-memory-if-possible"></a>Mümkünse yönetilmeyen belleği önleyin
 
-Yönetilmeyen bellek, tıpkı bir işletim sistemi tutamacı gibi sızmış olabilir. Mümkünse, [stackalloc](../../csharp/language-reference/operators/stackalloc.md) veya bir Byte [] [](../../csharp/language-reference/keywords/fixed-statement.md) <xref:System.Runtime.InteropServices.GCHandle> kullanımı gibi sabitlenmiş bir yönetilen nesne kullanarak yığındaki belleği kullanmayı deneyin. <xref:System.GC> Sonuç olarak bunları temizler. Ancak, yönetilmeyen bellek ayırmanız gerekiyorsa, bellek ayırmayı kaydırmak için öğesinden <xref:System.Runtime.InteropServices.SafeHandle> türetilen bir sınıf kullanmayı düşünün.
+Yönetilmeyen bellek, tıpkı bir işletim sistemi tutamacı gibi sızmış olabilir. Mümkünse, [stackalloc](../../csharp/language-reference/operators/stackalloc.md) [veya bir](../../csharp/language-reference/keywords/fixed-statement.md) Byte [] <xref:System.Runtime.InteropServices.GCHandle> kullanımı gibi sabitlenmiş bir yönetilen nesne kullanarak yığındaki belleği kullanmayı deneyin. <xref:System.GC> Sonuç olarak bunları temizler. Ancak, yönetilmeyen bellek ayırmanız gerekiyorsa, bellek ayırmayı kaydırmak için öğesinden <xref:System.Runtime.InteropServices.SafeHandle> türetilen bir sınıf kullanmayı düşünün.
 
 Yeterli olmayan en az bir büyük harf <xref:System.Runtime.InteropServices.SafeHandle> olduğunu unutmayın.  Bellek ayıran veya boşaltan com Yöntem çağrıları için, bir dll 'nin bellek `CoTaskMemAlloc` ayırması ve bu belleğin ile `CoTaskMemFree`bir başka dll 'nin serbest olması yaygındır.  Bu <xref:System.Runtime.InteropServices.SafeHandle> yerlerde kullanılması, yönetilmeyen belleğin yaşam süresini, diğer dll 'nin belleğin yaşam süresini sağlamak yerine, <xref:System.Runtime.InteropServices.SafeHandle> bu süre boyunca kullanım ömrüne bağlamak için uygun olmayabilir.
 
@@ -316,4 +316,4 @@ Bunu yapmak, `try` tam zamanında derleyiciye bloğunu çalıştırmadan önce f
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Runtime.ConstrainedExecution>
-- [SQL Server Programlama ve Konak Koruması Öznitelikleri](../../../docs/framework/performance/sql-server-programming-and-host-protection-attributes.md)
+- [SQL Server Programlama ve Konak Koruması Öznitelikleri](sql-server-programming-and-host-protection-attributes.md)

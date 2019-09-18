@@ -15,12 +15,12 @@ helpviewer_keywords:
 - Windows Service applications, states
 ms.assetid: 83230026-d068-4174-97ff-e264c896eb2f
 author: ghogen
-ms.openlocfilehash: d5dc690cfe460be79251d60850319e5232379f3c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 1c197b487f1cb7596f507f663fe3f1fb83857cbd
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69935438"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053496"
 ---
 # <a name="service-application-programming-architecture"></a>Hizmet Uygulaması Programlama Mimarisi
 Windows hizmeti uygulamaları <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType> sınıfından devralan bir sınıfa dayalıdır. Bu sınıftan yöntemleri geçersiz kılar ve hizmetinizin nasıl davranacağını belirlemek için işlevleri tanımlayın.  
@@ -57,7 +57,7 @@ Windows hizmeti uygulamaları <xref:System.ServiceProcess.ServiceBase?displayPro
      [!code-vb[VbRadconService#6](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#6)]  
   
     > [!NOTE]
-    > Bu örneklerde, uygulamanızın içerdiği her bir <xref:System.ServiceProcess.ServiceBase>hizmetin eklenebileceği ve sonra tüm hizmetlerin birlikte çalıştırılabileceği bir dizi türü kullanılır. Ancak yalnızca tek bir hizmet oluşturuyorsanız, diziyi kullanmayın ve ' den <xref:System.ServiceProcess.ServiceBase> devralan yeni bir nesne bildirmeniz ve sonra çalıştırmanız yeterlidir. Bir örnek için bkz [. nasıl yapılır: Hizmetleri programlı olarak](../../../docs/framework/windows-services/how-to-write-services-programmatically.md)yazın.  
+    > Bu örneklerde, uygulamanızın içerdiği her bir <xref:System.ServiceProcess.ServiceBase>hizmetin eklenebileceği ve sonra tüm hizmetlerin birlikte çalıştırılabileceği bir dizi türü kullanılır. Ancak yalnızca tek bir hizmet oluşturuyorsanız, diziyi kullanmayın ve ' den <xref:System.ServiceProcess.ServiceBase> devralan yeni bir nesne bildirmeniz ve sonra çalıştırmanız yeterlidir. Bir örnek için bkz [. nasıl yapılır: Hizmetleri programlı olarak](how-to-write-services-programmatically.md)yazın.  
   
 - <xref:System.ServiceProcess.ServiceBase> Sınıftaki bir dizi özellik. Bunlar, hizmetinize hangi yöntemlerin çağrılabilecek olduğunu tespit edebilir. Örneğin, <xref:System.ServiceProcess.ServiceBase.CanStop%2A> özelliği olarak `true`ayarlandığında, <xref:System.ServiceProcess.ServiceBase.OnStop%2A> hizmetinizin yöntemi çağrılabilir. Özelliği olarak `true`ayarlandığında ,<xref:System.ServiceProcess.ServiceBase.OnPause%2A> ve<xref:System.ServiceProcess.ServiceBase.OnContinue%2A>yöntemleriçağrılabilir. <xref:System.ServiceProcess.ServiceBase.CanPauseAndContinue%2A> Bu özelliklerden `true`birini ' a ayarladığınızda, ilişkili yöntemler için işlemeyi geçersiz kılmanız ve tanımlamanız gerekir.  
   
@@ -68,5 +68,5 @@ Windows hizmeti uygulamaları <xref:System.ServiceProcess.ServiceBase?displayPro
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Windows Hizmeti Uygulamalarına Giriş](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
-- [Nasıl yapılır: Windows Hizmetleri oluşturma](../../../docs/framework/windows-services/how-to-create-windows-services.md)
+- [Windows Hizmeti Uygulamalarına Giriş](introduction-to-windows-service-applications.md)
+- [Nasıl yapılır: Windows Hizmetleri oluşturma](how-to-create-windows-services.md)

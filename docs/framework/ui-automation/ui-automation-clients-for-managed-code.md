@@ -7,12 +7,12 @@ helpviewer_keywords:
 - UI Automation, clients for managed code
 - managed code, UI Automation clients
 ms.assetid: e1ed1197-3e9e-4e78-8845-92e82787faed
-ms.openlocfilehash: b8df3d07a18efcfbb6c30b46668ab8fec8736af5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 578a6da0f1545012d5a77edc3db04d52f56180bc
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69953200"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042506"
 ---
 # <a name="ui-automation-clients-for-managed-code"></a>Yönetilen Kod İçin UI Otomasyon İstemcileri
 > [!NOTE]
@@ -21,16 +21,16 @@ ms.locfileid: "69953200"
  Bu bölümde, UI Otomasyon istemcileri geliştirmenize yardımcı olacak genel bakış ve nasıl yapılır konuları yer almaktadır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [UI Otomasyonu ve Ekran Ölçeklendirme](../../../docs/framework/ui-automation/ui-automation-and-screen-scaling.md)  
- [Standart Denetimler İçin UI Otomasyonu Desteği](../../../docs/framework/ui-automation/ui-automation-support-for-standard-controls.md)  
- [İstemciler İçin UI Otomasyonu Olayları](../../../docs/framework/ui-automation/ui-automation-events-for-clients.md)  
- [UI Otomasyonu İstemcilerinde Önbelleğe Alma](../../../docs/framework/ui-automation/caching-in-ui-automation-clients.md)  
- [İstemciler İçin UI Otomasyonu Özellikleri](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)  
- [UI Otomasyonu İstemcileri İçin Denetim Düzeni Eşlemesi](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md)  
- [İstemciler İçin UI Otomasyonu Denetim Düzenleri](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)  
- [UI Otomasyonu Öğelerini Alma](../../../docs/framework/ui-automation/obtaining-ui-automation-elements.md)  
- [UI Otomasyonu İş Parçacığı Oluşturma Sorunları](../../../docs/framework/ui-automation/ui-automation-threading-issues.md)  
- [Nasıl Yapılır Konuları](../../../docs/framework/ui-automation/ui-automation-clients-for-managed-code-how-to-topics.md)  
+ [UI Otomasyonu ve Ekran Ölçeklendirme](ui-automation-and-screen-scaling.md)  
+ [Standart Denetimler İçin UI Otomasyonu Desteği](ui-automation-support-for-standard-controls.md)  
+ [İstemciler İçin UI Otomasyonu Olayları](ui-automation-events-for-clients.md)  
+ [UI Otomasyonu İstemcilerinde Önbelleğe Alma](caching-in-ui-automation-clients.md)  
+ [İstemciler İçin UI Otomasyonu Özellikleri](ui-automation-properties-for-clients.md)  
+ [UI Otomasyonu İstemcileri İçin Denetim Düzeni Eşlemesi](control-pattern-mapping-for-ui-automation-clients.md)  
+ [İstemciler İçin UI Otomasyonu Denetim Düzenleri](ui-automation-control-patterns-for-clients.md)  
+ [UI Otomasyonu Öğelerini Alma](obtaining-ui-automation-elements.md)  
+ [UI Otomasyonu İş Parçacığı Oluşturma Sorunları](ui-automation-threading-issues.md)  
+ [Nasıl Yapılır Konuları](ui-automation-clients-for-managed-code-how-to-topics.md)  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Windows.Automation>

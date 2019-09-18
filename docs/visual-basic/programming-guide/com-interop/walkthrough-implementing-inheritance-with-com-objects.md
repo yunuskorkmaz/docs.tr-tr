@@ -7,12 +7,12 @@ helpviewer_keywords:
 - inheritance [Visual Basic], walkthroughs
 - derived classes [Visual Basic], COM reusability
 ms.assetid: f8e7263a-de13-48d1-b67c-ca1adf3544d9
-ms.openlocfilehash: f632df919417c04701727be3e99eb2bf3f6ff1f7
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 7cbf71d7a2bbd1e94864e785894fdea41d522486
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627042"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053342"
 ---
 # <a name="walkthrough-implementing-inheritance-with-com-objects-visual-basic"></a>İzlenecek yol: COM nesneleriyle devralma uygulama (Visual Basic)
 
@@ -22,13 +22,13 @@ Aşağıdaki yordamda, bir sınıfı içeren COM nesnesi oluşturmak için Visua
 
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]
 
-### <a name="to-build-the-com-object-that-is-used-in-this-walkthrough"></a>Bu kılavuzda kullanılan COM nesnesini oluşturmak için
+## <a name="to-build-the-com-object-that-is-used-in-this-walkthrough"></a>Bu kılavuzda kullanılan COM nesnesini oluşturmak için
 
 1. Visual Basic 6,0 ' de, yeni bir ActiveX DLL projesi açın. Adlı `Project1` bir proje oluşturulur. Adında `Class1`bir sınıfı vardır.
 
 2. **Proje Gezgini**'Nde, **Project1**öğesine sağ tıklayın ve ardından **Project1 özellikleri**' ne tıklayın. **Proje özellikleri** iletişim kutusu görüntülenir.
 
-3. Proje **özellikleri** iletişim kutusunun **genel** sekmesinde Proje **adı alanına yazarak** `ComObject1` proje adını değiştirin.
+3. Proje **özellikleri** iletişim kutusunun `ComObject1` **genel** **sekmesinde Proje adı alanına yazarak** proje adını değiştirin.
 
 4. **Proje Gezgini**'nde, öğesine sağ tıklayın `Class1`ve ardından **Özellikler**' e tıklayın. Sınıfının **Özellikler** penceresi görüntülenir.
 
@@ -76,7 +76,7 @@ Aşağıdaki yordamda, bir sınıfı içeren COM nesnesi oluşturmak için Visua
 
 Aşağıdaki yordamda, yönetilmeyen kod (COM nesnesi gibi) ve Visual Studio 'Nun kullandığı yönetilen kod arasında köprü görevi gören bir birlikte çalışma derlemesi oluşturacaksınız. Visual Basic tarafından oluşturulan birlikte çalışma derlemesi, *birlikte çalışma hazırlama*ve com nesnelerinden gelen ve bunlara geçiş yaparken değerleri eşdeğer veri türlerine döndürme gibi com nesneleriyle çalışma hakkında pek çok ayrıntıyı işler. Visual Basic uygulamasındaki başvuru, gerçek COM nesnesi değil birlikte çalışma derlemesine işaret eder.
 
-#### <a name="to-use-a-com-object-with-visual-basic-2005-and-later-versions"></a>Visual Basic 2005 ve sonraki sürümlerde bir COM nesnesi kullanmak için
+### <a name="to-use-a-com-object-with-visual-basic-2005-and-later-versions"></a>Visual Basic 2005 ve sonraki sürümlerde bir COM nesnesi kullanmak için
 
 1. Yeni bir Visual Basic Windows uygulaması projesi açın.
 
@@ -108,7 +108,7 @@ Aşağıdaki yordamda, yönetilmeyen kod (COM nesnesi gibi) ve Visual Studio 'Nu
 
 Yeni sınıf COM nesnesindeki temel sınıfın özelliklerini devralır, bir yöntemi aşırı yükler ve sınıfı genişletmek için yeni bir yöntem tanımlar.
 
-#### <a name="to-test-the-inherited-class"></a>Devralınan sınıfı test etmek için
+### <a name="to-test-the-inherited-class"></a>Devralınan sınıfı test etmek için
 
 1. Başlangıç formunuza bir düğme ekleyin ve sonra kodunu görüntülemek için çift tıklayın.
 

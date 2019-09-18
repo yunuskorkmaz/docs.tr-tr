@@ -12,19 +12,19 @@ helpviewer_keywords:
 ms.assetid: f356116d-e415-4f7c-a332-6e6a60227192
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f3011bd0327440cd04d5eccf5f88c036ddd76267
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f7419725f3822622a8e4210d4f3f5d8e9e59dbdd
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705590"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053126"
 ---
 # <a name="how-to-unload-an-application-domain"></a>Nasıl yapılır: Uygulama Etki Alanını Boşaltma
-Uygulama etki alanı kullanarak tamamladığınızda kullanarak kaldırma <xref:System.AppDomain.Unload%2A?displayProperty=nameWithType> yöntemi. **Kaldırma** yöntemi düzgün bir şekilde belirtilen uygulama etki alanı kapatır. Kaldırma işlemi sırasında hiçbir yeni iş parçacığı uygulama etki alanı erişebilir ve tüm uygulama etki alanına özgü veri yapıları serbest.  
+Bir uygulama etki alanını kullanmayı bitirdiğinizde <xref:System.AppDomain.Unload%2A?displayProperty=nameWithType> metodunu kullanarak kaldırın. **Unload** yöntemi, belirtilen uygulama etki alanını düzgün bir şekilde kapatır. Kaldırma işlemi sırasında, uygulama etki alanına hiçbir yeni iş parçacığı erişemez ve tüm uygulama etki alanına özgü veri yapıları serbest bırakılır.  
   
- Uygulama etki alanına yüklenen derlemelerin kaldırılır ve artık kullanılamaz. Uygulama etki alanındaki bir derleme etki alanından bağımsız ise, derleme için veri işlem kapatılana kadar bellekte kalır. Tüm işlemi kapatma dışındaki bir etki alanından bağımsız derleme kaldırmak için bir mekanizma yoktur. Burada, bir uygulama etki alanını boşaltma isteği çalışmıyor ve sonuçlanır durumlar vardır bir <xref:System.CannotUnloadAppDomainException>.  
+ Uygulama etki alanına yüklenen derlemeler kaldırılır ve artık kullanılamaz. Uygulama etki alanındaki bir derleme etki alanı Tarafsız ise, derleme verileri tüm işlem kapanana kadar bellekte kalır. İşlemin tamamını kapatmaktan başka bir etki alanı nötr derlemeyi kaldırma mekanizması yoktur. Bir uygulama etki alanını kaldırma isteğinin çalışmamasına ve bir <xref:System.CannotUnloadAppDomainException>ile sonuçlanmasına neden olan durumlar vardır.  
   
- Aşağıdaki örnekte adlı yeni bir uygulama etki alanı oluşturur `MyDomain`bazı bilgileri konsola yazdırır ve ardından uygulama etki alanını kaldırır. Kodu daha sonra konsola bellekten uygulama etki alanının kolay adını yazdırmak çalışır olduğunu unutmayın. Bu eylem, programın sonunda try/catch deyimleri tarafından işlenen özel durum oluşturur.  
+ Aşağıdaki örnek adlı `MyDomain`yeni bir uygulama etki alanı oluşturur, konsola bazı bilgileri yazdırır ve ardından uygulama etki alanını kaldırır. Kodu daha sonra, kaldırılan uygulama etki alanının kolay adını konsola yazdırmaya çalışır. Bu eylem, programın sonundaki try/catch deyimleri tarafından işlenen bir özel durum oluşturur.  
   
 ## <a name="example"></a>Örnek  
  [!code-cpp[System.AppDomain.Load#3](../../../samples/snippets/cpp/VS_Snippets_CLR_System/system.appdomain.load/cpp/source3.cpp#3)]
@@ -34,5 +34,5 @@ Uygulama etki alanı kullanarak tamamladığınızda kullanarak kaldırma <xref:
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Uygulama etki alanlarıyla programlama](application-domains.md#programming-with-application-domains)
-- [Nasıl yapılır: Bir uygulama etki alanı oluşturma](../../../docs/framework/app-domains/how-to-create-an-application-domain.md)
-- [Uygulama Etki Alanlarını Kullanma](../../../docs/framework/app-domains/use.md)
+- [Nasıl yapılır: Uygulama etki alanı oluşturma](how-to-create-an-application-domain.md)
+- [Uygulama Etki Alanlarını Kullanma](use.md)

@@ -21,21 +21,21 @@ helpviewer_keywords:
 - network resources, configuring Internet applications
 - Internet, default proxy
 ms.assetid: bb707c72-eed2-4a82-8800-c9e68df2fd4f
-ms.openlocfilehash: ddc4717c873e65311a8502e66f3edaf39dd89ff9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ee4dc87383153ae4e8df0a3bed7cce5220e65405
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61642808"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048625"
 ---
 # <a name="configuring-internet-applications"></a>İnternet Uygulamalarını Yapılandırma
-[ \<System.Net > öğesi (ağ ayarları)](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md) yapılandırma öğesi, uygulamalar için ağ yapılandırma bilgileri içerir. Kullanarak [ \<system.Net > öğesi (ağ ayarları)](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md) öğesini ayarlayın proxy sunucuları, bağlantı yönetimi parametrelerinin ve uygulamanıza özel kimlik doğrulama ve istek modülleri dahil.  
+[ \<Sistem .net > öğesi (ağ ayarları)](../configure-apps/file-schema/network/system-net-element-network-settings.md) yapılandırma öğesi, uygulamalar için ağ yapılandırma bilgilerini içerir. [Sistem .net > öğesi (ağ ayarları) öğesini kullanarak, proxy sunucuları ayarlayabilir, bağlantı yönetimi parametrelerini ayarlayabilir ve özel kimlik doğrulaması ve istek modüllerini uygulamanıza ekleyebilirsiniz. \<](../configure-apps/file-schema/network/system-net-element-network-settings.md)  
   
- [ \<DefaultProxy > öğesi (ağ ayarları)](../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md) öğesi tarafından döndürülen proxy sunucusu tanımlar `GlobalProxySelection` sınıfı. Tüm <xref:System.Net.HttpWebRequest> olmayan kendi <xref:System.Net.HttpWebRequest.Proxy%2A> özelliği belirli bir değere ayarlanmış varsayılan proxy kullanır. Proxy adresi ayarı yanı sıra proxy kullanmaz sunucu adresleri listesi oluşturabilirsiniz ve proxy yerel adresler için kullanılmamalıdır belirtebilirsiniz.  
+ DefaultProxy `GlobalProxySelection` [> öğesi (ağ ayarları) öğesi, sınıfı tarafından döndürülen proxy sunucusunu tanımlar. \<](../configure-apps/file-schema/network/defaultproxy-element-network-settings.md) <xref:System.Net.HttpWebRequest> Kendi<xref:System.Net.HttpWebRequest.Proxy%2A> özelliği belirli bir değere ayarlanmış olmayan her türlü, varsayılan proxy 'yi kullanır. Proxy adresini ayarlamaya ek olarak, proxy 'yi kullanmayacak sunucu adreslerinin bir listesini oluşturabilir ve proxy 'nin yerel adresler için kullanılması gerekmediğini belirtebilirsiniz.  
   
- Microsoft Internet Explorer ayarları, ikinci alma önceliğe sahip yapılandırma ayarlarıyla birleştirildiğini dikkat edin önemlidir.  
+ Microsoft Internet Explorer ayarlarının, son önceliğe sahip yapılandırma ayarları ile birleştirildiğine dikkat edin.  
   
- Aşağıdaki örnekte varsayılan proxy sunucusu adresi ayarlar `http://proxyserver`, proxy yerel adresler için kullanılmamalıdır ve contoso.com etki alanında bulunan sunucular için tüm istekleri proxy atlama belirtir.  
+ Aşağıdaki örnek, varsayılan proxy sunucu adresini olarak `http://proxyserver`ayarlar, proxy 'nin yerel adresler için kullanılmayacağını belirtir ve contoso.com etki alanında bulunan sunuculara yapılan tüm isteklerin proxy 'yi atmasını belirtir.  
   
 ```xml  
 <configuration>  
@@ -54,7 +54,7 @@ ms.locfileid: "61642808"
 </configuration>  
 ```  
   
- Kullanım [ \<connectionManagement > öğesi (ağ ayarları)](../../../docs/framework/configure-apps/file-schema/network/connectionmanagement-element-network-settings.md) belirli bir sunucuya veya diğer tüm sunucular için yapılan kalıcı bağlantı sayısını yapılandırmak için öğesi. Aşağıdaki örnek iki kalıcı sunucusu bağlantılarını kullanmak üzere uygulamayı yapılandırır `www.contoso.com`, sunucunun IP adresiyle 192.168.1.2 dört kalıcı bağlantılar ve diğer tüm sunucular için kalıcı bir bağlantı.  
+ Belirli bir sunucuya veya diğer tüm sunuculara yapılabilecek kalıcı bağlantıların sayısını yapılandırmak için [ connectionManagement>öğesi(ağayarları)öğesinikullanın.\<](../configure-apps/file-schema/network/connectionmanagement-element-network-settings.md) Aşağıdaki örnek, uygulamayı sunucusuna `www.contoso.com`iki kalıcı bağlantı, 192.168.1.2 IP adresi ile sunucuya dört kalıcı bağlantı ve diğer tüm sunuculara kalıcı bir bağlantı kullanacak şekilde yapılandırır.  
   
 ```xml  
 <configuration>  
@@ -68,9 +68,9 @@ ms.locfileid: "61642808"
 </configuration>  
 ```  
   
- Özel kimlik doğrulama modülleri ile yapılandırılmış [ \<authenticationModules > öğesi (ağ ayarları)](../../../docs/framework/configure-apps/file-schema/network/authenticationmodules-element-network-settings.md) öğesi. Özel kimlik doğrulama modülleri uygulanmalı <xref:System.Net.IAuthenticationModule> arabirimi.  
+ Özel kimlik doğrulama modülleri, [ \<authenticationModules > öğesi (ağ ayarları)](../configure-apps/file-schema/network/authenticationmodules-element-network-settings.md) öğesi ile yapılandırılır. Özel kimlik doğrulama modülleri <xref:System.Net.IAuthenticationModule> arabirimini gerçekleştirmelidir.  
   
- Aşağıdaki örnek bir özel kimlik doğrulama modülü yapılandırır.  
+ Aşağıdaki örnek bir özel kimlik doğrulama modülünü yapılandırır.  
   
 ```xml  
 <configuration>  
@@ -82,7 +82,7 @@ ms.locfileid: "61642808"
 </configuration>  
 ```  
   
- Kullanabileceğiniz [ \<webRequestModules > öğesi (ağ ayarları)](../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md) özel protokole özgü modüller, Internet kaynaklarını isteği bilgilerini kullanmak için uygulamanızı yapılandırma öğesi. Belirtilen modülleri uygulamalıdır <xref:System.Net.IWebRequestCreate> arabirimi. Yapılandırma dosyasında aşağıdaki örnekte olduğu gibi özel modül belirterek varsayılan HTTP, HTTPS ve dosya isteği modülleri geçersiz kılabilirsiniz.  
+ Uygulamanızı Internet kaynaklarından bilgi istemek için özel protokole özgü modüller kullanacak şekilde yapılandırmak için [ \<webRequestModules > öğesi (ağ ayarları)](../configure-apps/file-schema/network/webrequestmodules-element-network-settings.md) öğesini kullanabilirsiniz. Belirtilen modüller <xref:System.Net.IWebRequestCreate> arabirimini uygulamalıdır. Aşağıdaki örnekte olduğu gibi yapılandırma dosyasında özel modülünüzü belirterek varsayılan HTTP, HTTPS ve dosya isteği modüllerini geçersiz kılabilirsiniz.  
   
 ```xml  
 <configuration>  
@@ -99,6 +99,6 @@ ms.locfileid: "61642808"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [.NET Framework'te Ağ Programlaması](../../../docs/framework/network-programming/index.md)
-- [Ağ Ayarları Şeması](../../../docs/framework/configure-apps/file-schema/network/index.md)
-- [\<system.Net > öğesi (ağ ayarları)](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)
+- [.NET Framework'te Ağ Programlaması](index.md)
+- [Ağ Ayarları Şeması](../configure-apps/file-schema/network/index.md)
+- [\<System .net > öğesi (ağ ayarları)](../configure-apps/file-schema/network/system-net-element-network-settings.md)

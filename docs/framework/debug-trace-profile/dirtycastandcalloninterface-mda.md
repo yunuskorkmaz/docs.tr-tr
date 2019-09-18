@@ -12,32 +12,32 @@ helpviewer_keywords:
 ms.assetid: aa388ed3-7e3d-48ea-a0b5-c47ae19cec38
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5a28820479ca15ad72475ae9a7754bbbf99ce5c5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6ac43f6b92198fec03e722b6cf5e12b86df6f4b8
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61754719"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052872"
 ---
 # <a name="dirtycastandcalloninterface-mda"></a>dirtyCastAndCallOnInterface MDA
-`dirtyCastAndCallOnInterface` Yönetilen hata ayıklama Yardımcısı (MDA) bir erken bağlanan çağrı bir vtable aracılığıyla geç bağlama yalnızca işaretlenmiş bir sınıf arabirimi çalışırken etkinleştirilir.  
+Yönetilen `dirtyCastAndCallOnInterface` hata ayıklama Yardımcısı (MDA), bir vtable üzerinden erken bağlanan bir çağrı yalnızca geç bağlanan olarak işaretlenmiş bir sınıf arabiriminde denendiğinde etkinleştirilir.  
   
 ## <a name="symptoms"></a>Belirtiler  
- Bir uygulama bir erişim ihlali oluşturur ya da sahip bir erken bağlanan çağrı yoluyla COM CLR yerleştirirken beklenmeyen davranış.  
+ Bir uygulama bir erişim ihlali oluşturur veya COM ile CLR 'ye erken bağlantılı bir çağrı yerleştirirken beklenmedik davranışlara sahiptir.  
   
 ## <a name="cause"></a>Sebep  
- Kod bir erken bağlanan çağrı bir vtable geç bağlama yalnızca bir sınıf arabirimi üzerinden aracılığıyla çalışıyor. Geç yalnızca bağlama olarak arabirimler varsayılan sınıf tarafından tanımlanan unutmayın. Bunlar gibi geç bağlama ile tanımlanabilir <xref:System.Runtime.InteropServices.ClassInterfaceAttribute> özniteliğini bir <xref:System.Runtime.InteropServices.ClassInterfaceType.AutoDispatch> değeri (`[ClassInterface(ClassInterfaceType.AutoDispatch)]`).  
+ Kod, bir vtable aracılığıyla yalnızca geç bağlanan bir sınıf arabirimi aracılığıyla erken bağlanan bir çağrı deniyor. Varsayılan sınıf arabirimlerinin yalnızca geç bağlanmakta olduğunu unutmayın. Ayrıca, <xref:System.Runtime.InteropServices.ClassInterfaceAttribute> bir <xref:System.Runtime.InteropServices.ClassInterfaceType.AutoDispatch> değeri (`[ClassInterface(ClassInterfaceType.AutoDispatch)]`) olan özniteliğiyle geç bağlantılı olarak da tanımlanabilir.  
   
 ## <a name="resolution"></a>Çözüm  
- Önerilen çözüm, COM tarafından kullanılması için açık bir arabirim tanımlayın ve otomatik olarak oluşturulan sınıf arabirimi üzerinden yerine bu arabirimi aracılığıyla COM istemcileri çağrısı sahip olmaktır. Geç bağlama çağrısıyla COM çağrısından alternatif olarak, dönüştürülebilir `IDispatch`.  
+ Önerilen çözüm, COM tarafından kullanılmak üzere bir açık arabirim tanımlamaktır ve COM istemcilerinin, otomatik olarak oluşturulan sınıf arabirimi yerine bu arabirim aracılığıyla çağırmasını sağlar. Alternatif olarak, COM 'dan yapılan çağrı aracılığıyla `IDispatch`geç bağlı çağrıya dönüştürülebilir.  
   
- Son olarak, sınıf olarak tanımlamak olası <xref:System.Runtime.InteropServices.ClassInterfaceType.AutoDual> (`[ClassInterface(ClassInterfaceType.AutoDual)]`); COM'dan yerleştirilecek erken bağlama çağrıları izin verecek şekilde ancak kullanarak <xref:System.Runtime.InteropServices.ClassInterfaceType.AutoDual> açıklanan sürüm oluşturma sınırlamaları nedeniyle önerilmez <xref:System.Runtime.InteropServices.ClassInterfaceAttribute>.  
+ Son olarak, <xref:System.Runtime.InteropServices.ClassInterfaceType.AutoDual> (`[ClassInterface(ClassInterfaceType.AutoDual)]`) sınıfını, erken bağlantılı çağrıların com 'dan yerleştirilmesine izin verecek şekilde belirlemek mümkündür; ancak, içinde <xref:System.Runtime.InteropServices.ClassInterfaceAttribute>açıklanan sürüm oluşturma sınırlamaları <xref:System.Runtime.InteropServices.ClassInterfaceType.AutoDual> nedeniyle kullanılması önemle önerilmez.  
   
-## <a name="effect-on-the-runtime"></a>Çalışma zamanı üzerindeki etkisi  
- Bu mda'nın CLR üzerinde etkisi yoktur. Geç bağlama arabirimleri üzerinde erken bağlanan çağrılar hakkında veri yalnızca raporlar.  
+## <a name="effect-on-the-runtime"></a>Çalışma zamanında etki  
+ Bu MDA, CLR üzerinde hiçbir etkisi yoktur. Yalnızca, Gecikmeli bağlantılı arabirimlerde erken bağlantılı çağrılar hakkındaki verileri raporlar.  
   
 ## <a name="output"></a>Çıkış  
- Yöntem veya erken bağlanan erişilen alan adı adı.  
+ Erken bağlanılmakta olan alanın veya metodun adı.  
   
 ## <a name="configuration"></a>Yapılandırma  
   
@@ -52,4 +52,4 @@ ms.locfileid: "61754719"
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Runtime.InteropServices.ClassInterfaceAttribute>
-- [Yönetilen Hata Ayıklama Yardımcıları ile Hataları Tanılama](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [Yönetilen Hata Ayıklama Yardımcıları ile Hataları Tanılama](diagnosing-errors-with-managed-debugging-assistants.md)

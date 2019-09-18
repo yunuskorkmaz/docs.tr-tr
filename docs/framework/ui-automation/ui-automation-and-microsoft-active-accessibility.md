@@ -7,12 +7,12 @@ helpviewer_keywords:
 - UI Automation, Microsoft Active Accessibility
 - Active Accessibility, UI Automation compared to
 ms.assetid: 87bee662-0a3e-4232-a421-20e7a5968321
-ms.openlocfilehash: 8aadcc213e92fd53490f639f37dc8d8f62762c2c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 63b00f8eb35fa58ea0257d5e996fc2c51a248040
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946476"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042592"
 ---
 # <a name="ui-automation-and-microsoft-active-accessibility"></a>UI Otomasyonu ve Microsoft Active Accessibility
 > [!NOTE]
@@ -110,7 +110,7 @@ Etkin Erişilebilirlik <, çift arabirimler için destek içeren bileşen nesne 
 |ROLE_SYSTEM_OUTLINEITEM|Ağaç öğesi|  
 |ROLE_SYSTEM_WINDOW|Pencere|  
   
- Farklı denetim türleri hakkında daha fazla bilgi için bkz. [UI Automation Denetim türleri](../../../docs/framework/ui-automation/ui-automation-control-types.md).  
+ Farklı denetim türleri hakkında daha fazla bilgi için bkz. [UI Automation Denetim türleri](ui-automation-control-types.md).  
   
 <a name="States_and_Properties"></a>   
 ## <a name="states-and-properties"></a>Durumlar ve Özellikler  
@@ -176,7 +176,7 @@ Etkin Erişilebilirlik <, çift arabirimler için destek içeren bileşen nesne 
 |STATE_SYSTEM_HOTTRACKED|İçinde kullanılamaz[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|  
 |STATE_SYSTEM_PRESSED|İçinde kullanılamaz[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|  
   
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Özellik tanımlayıcılarının tüm listesi için bkz. [UI Otomasyon özelliklerine genel bakış](../../../docs/framework/ui-automation/ui-automation-properties-overview.md).  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Özellik tanımlayıcılarının tüm listesi için bkz. [UI Otomasyon özelliklerine genel bakış](ui-automation-properties-overview.md).  
   
 <a name="uiautomation_events_compare"></a>   
 ## <a name="events"></a>Olaylar  
@@ -251,4 +251,4 @@ Etkin Erişilebilirlik <, çift arabirimler için destek içeren bileşen nesne 
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [UI Otomasyonu Temelleri](../../../docs/framework/ui-automation/index.md)
+- [UI Otomasyonu Temelleri](index.md)

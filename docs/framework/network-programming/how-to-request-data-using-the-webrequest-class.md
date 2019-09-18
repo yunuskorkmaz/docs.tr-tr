@@ -11,12 +11,12 @@ helpviewer_keywords:
 - receiving data, using WebRequest class
 - Internet, requesting data
 ms.assetid: 368b8d0f-dc5e-4469-a8b8-b2adbf5dd800
-ms.openlocfilehash: eb38a95891afaf4cab98e43a250b67823fa5eb24
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: e670a2a503ce704eff847e9e0b3ee340ab52fe62
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70040880"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048160"
 ---
 # <a name="how-to-request-data-by-using-the-webrequest-class"></a>Nasıl yapılır: WebRequest sınıfını kullanarak veri isteme
 
@@ -27,11 +27,11 @@ Aşağıdaki yordam bir sunucudan bir Web sayfası veya dosya gibi bir kaynak is
 1. Bir kaynağın <xref:System.Net.WebRequest> URI 'siyle çağırarak <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> bir örnek oluşturun. Örneğin:
 
     ```csharp
-    WebRequest request = WebRequest.Create("http://www.contoso.com/default.html");
+    WebRequest request = WebRequest.Create("https://docs.microsoft.com");
     ```
 
     ```vb
-    Dim request as WebRequest = WebRequest.Create("http://www.contoso.com/default.html")
+    Dim request as WebRequest = WebRequest.Create("https://docs.microsoft.com")
     ```
 
     > [!NOTE]

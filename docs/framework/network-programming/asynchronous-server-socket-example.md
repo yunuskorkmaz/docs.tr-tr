@@ -9,15 +9,15 @@ helpviewer_keywords:
 - sockets, code examples
 - asynchronous server sockets
 ms.assetid: 13624cd3-f5c5-4950-8cda-31273b1fa6d1
-ms.openlocfilehash: f52dfce66b6d62a8eb7bf75b626feacfb9172c29
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 555b0661bf68a7461f87bf2895e47284a03c41a6
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61927536"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048952"
 ---
 # <a name="asynchronous-server-socket-example"></a>Zaman Uyumsuz Sunucu Yuvası Örneği
-Aşağıdaki örnek program istemcilerinden gelen bağlantı istekleri alan bir sunucu oluşturur. Bir istemci bağlantı beklerken sunucu uygulamasının yürütülmesini askıya için sunucu zaman uyumsuz bir yuvası ile oluşturulmuştur. Uygulama istemciden bir dize alır, dize konsolda görüntüler ve ardından istemcisine dize görüntülemektedir. İstemciden gelen dize, dize içermelidir "\<EOF >" iletisinin son sinyal.  
+Aşağıdaki örnek program istemcilerden gelen bağlantı isteklerini alan bir sunucu oluşturur. Sunucu zaman uyumsuz bir yuva ile oluşturulmuştur, bu nedenle sunucu uygulamasının yürütülmesi istemciden bir bağlantı beklerken askıya alınmaz. Uygulama istemciden bir dize alır, bu dizeyi konsolda görüntüler ve ardından dizeyi istemciye geri yankılar. İstemciden alınan dize, iletinin sonuna işaret etmek için "\<EOF >" dizesini içermelidir.  
   
 ```vb  
 Imports System  
@@ -291,6 +291,6 @@ public class AsynchronousSocketListener {
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Zaman Uyumsuz İstemci Yuvası Örneği](../../../docs/framework/network-programming/asynchronous-client-socket-example.md)
-- [Zaman Uyumsuz Sunucu Yuvası Kullanma](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)
-- [Yuva Kod Örnekleri](../../../docs/framework/network-programming/socket-code-examples.md)
+- [Zaman Uyumsuz İstemci Yuvası Örneği](asynchronous-client-socket-example.md)
+- [Zaman Uyumsuz Sunucu Yuvası Kullanma](using-an-asynchronous-server-socket.md)
+- [Yuva Kod Örnekleri](socket-code-examples.md)

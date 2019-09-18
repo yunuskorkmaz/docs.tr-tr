@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: de8b8759-fca7-4260-896b-5a4973157672
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 45e38f70ded85e8db36068c19fdd1708511817db
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: df1c86f2d75b0046af851585e943e13d668d8c55
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70040727"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053083"
 ---
 # <a name="shadow-copying-assemblies"></a>Gölge Kopyalama Derlemeleri
 
@@ -76,7 +76,7 @@ Gölge kopyalama kullanan bir uygulama etki alanı başladığında, uygulama di
 
 .NET Framework 4 ' ten itibaren, varsayılan başlangıç davranışı, uygulama dizinindeki her derlemenin dosya tarih ve saatini, gölge kopya dizinindeki kopyanın dosya tarihi ve saati ile doğrudan karşılaştırmaktır. Derleme güncellendiyse, .NET Framework önceki sürümlerinde olduğu gibi aynı yordam kullanılarak kopyalanır; Aksi takdirde, gölge kopya dizinindeki kopya yüklenir.
 
-Elde edilen performans iyileştirmesi, derlemelerin sık olarak değişmediğinden ve değişiklikler genellikle derlemelerin küçük bir alt kümesinde oluştuğu uygulamalar için en iyisidir. Bir uygulama içindeki derlemelerin büyük bir bölümü sıklıkla değiştiğinde yeni varsayılan davranış bir performans gerilemesine neden olabilir. Yapılandırma dosyasına [ \<shadowcopyverifybytimestamp > öğesini](../../../docs/framework/configure-apps/file-schema/runtime/shadowcopyverifybytimestamp-element.md) ekleyerek .NET Framework önceki sürümlerinin başlangıç davranışını geri yükleyebilirsiniz. `enabled="false"`
+Elde edilen performans iyileştirmesi, derlemelerin sık olarak değişmediğinden ve değişiklikler genellikle derlemelerin küçük bir alt kümesinde oluştuğu uygulamalar için en iyisidir. Bir uygulama içindeki derlemelerin büyük bir bölümü sıklıkla değiştiğinde yeni varsayılan davranış bir performans gerilemesine neden olabilir. Yapılandırma dosyasına [ \<shadowcopyverifybytimestamp > öğesini](../configure-apps/file-schema/runtime/shadowcopyverifybytimestamp-element.md) ekleyerek .NET Framework önceki sürümlerinin başlangıç davranışını geri yükleyebilirsiniz. `enabled="false"`
 
 <a name="ObsoleteMethods"></a>
 
@@ -90,4 +90,4 @@ Sınıfı, <xref:System.AppDomain.SetShadowCopyFiles%2A> ve gibi çeşitli yönt
 - <xref:System.AppDomainSetup.CachePath%2A?displayProperty=nameWithType>
 - <xref:System.AppDomainSetup.ApplicationName%2A?displayProperty=nameWithType>
 - <xref:System.AppDomainSetup.ShadowCopyDirectories%2A?displayProperty=nameWithType>
-- [\<shadowCopyVerifyByTimestamp > öğesi](../../../docs/framework/configure-apps/file-schema/runtime/shadowcopyverifybytimestamp-element.md)
+- [\<shadowCopyVerifyByTimestamp > öğesi](../configure-apps/file-schema/runtime/shadowcopyverifybytimestamp-element.md)

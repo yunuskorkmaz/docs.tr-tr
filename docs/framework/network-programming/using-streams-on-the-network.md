@@ -17,25 +17,25 @@ helpviewer_keywords:
 - Internet, streams
 - streams
 ms.assetid: 02b05fba-7235-45ce-94e5-060436ee0875
-ms.openlocfilehash: 9f7d6bfcaa0d1cc4eb6c83cb53120bec695fe85e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: aa3fc56dc461d4fe22e2ff391f3561d8834128d8
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64583470"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046872"
 ---
 # <a name="using-streams-on-the-network"></a>Ağda Akışları Kullanma
-Ağ kaynaklarını .NET Framework akışları olarak temsil edilir. .NET Framework akışları genel düşünerek, aşağıdaki özellikleri sunar:  
+Ağ kaynakları .NET Framework akışlar olarak temsil edilir. Akışları genel olarak düşünerek, .NET Framework aşağıdaki özellikleri sunar:  
   
-- Web veri göndermek ve almak için yaygın bir yolu. Hangi gerçek dosyasının içeriğini — HTML, XML veya başka bir şey — uygulamanızın kullanacağı <xref:System.IO.Stream.Write%2A?displayProperty=nameWithType> ve <xref:System.IO.Stream.Read%2A?displayProperty=nameWithType> veri göndermek ve almak için.  
+- Web verilerini göndermenin ve almanın yaygın bir yolu. Dosyanın gerçek içerikleri ne olursa olsun — HTML, XML veya başka bir şey — uygulamanız, veri göndermek ve <xref:System.IO.Stream.Write%2A?displayProperty=nameWithType> almak <xref:System.IO.Stream.Read%2A?displayProperty=nameWithType> için kullanır.  
   
-- Arasında .NET Framework akışları ile uyumluluk. Akışları bunları işlemesi için zengin bir altyapı olan .NET Framework boyunca kullanılır. XML verileri okuyan bir uygulama gibi değiştirebileceğiniz bir <xref:System.IO.FileStream> verileri okumak için bir <xref:System.Net.Sockets.NetworkStream> bunun yerine, akışı başlatmak yalnızca birkaç satır kod ile değiştirme. Arasındaki temel farklar **NetworkStream** sınıfı ve diğer akışlar olduğundan, **NetworkStream** aranabilir, değil <xref:System.Net.Sockets.NetworkStream.CanSeek%2A> özelliği her zaman döndürür **false**ve <xref:System.Net.Sockets.NetworkStream.Seek%2A> ve <xref:System.Net.Sockets.NetworkStream.Position%2A> yöntemleri throw bir <xref:System.NotSupportedException>.  
+- .NET Framework içindeki akışlarla uyumluluk. Akışlar, işlemek için zengin bir altyapıyı içeren .NET Framework boyunca kullanılır. Örneğin, yalnızca akışı başlatacak olan kodun yalnızca birkaç satırını değiştirerek, bir ' <xref:System.IO.FileStream> dan veri <xref:System.Net.Sockets.NetworkStream> okumak için bir uygulamayı bir ' dan okuyabilirsiniz. **NetworkStream** sınıfı ve diğer akışlar arasındaki önemli farklılıklar, **NetworkStream** 'in aranabilir olmadığı, <xref:System.Net.Sockets.NetworkStream.CanSeek%2A> <xref:System.Net.Sockets.NetworkStream.Seek%2A> özelliğin her zaman **false**döndüğü ve ve <xref:System.Net.Sockets.NetworkStream.Position%2A> yöntemlerinin bir <xref:System.NotSupportedException>.  
   
-- Verilerin işlenmesini ulaşır. Uygulamanızı bir bütün indirilmesi için veri kümesi beklenecek zorlamak yerine ağ ulaştıkça akışları verilere erişim sağlar.  
+- Verilerin ulaştığı gibi işlenmesi. Akışlar, uygulamanızın bir veri kümesinin tamamını indirilmesini beklemek yerine, ağ üzerinden gelen verilere erişim sağlar.  
   
- <xref:System.Net.Sockets> Ad alanı içeren bir **NetworkStream** uygulayan sınıf <xref:System.IO.Stream> ağ kaynakları ile kullanılmak üzere özel olarak sınıf. Sınıflar <xref:System.Net.Sockets> ad **NetworkStream** akışları temsil eden sınıf.  
+ Ad <xref:System.Net.Sockets> alanı, <xref:System.IO.Stream> sınıfı özel olarak ağ kaynaklarıyla kullanılmak üzere uygulayan bir **NetworkStream** sınıfı içerir. Ad alanındaki sınıflar, akışları temsil etmek için NetworkStream sınıfını kullanır. <xref:System.Net.Sockets>  
   
- Döndürülen akışa kullanarak ağa veri göndermek için arama <xref:System.Net.WebRequest.GetRequestStream%2A> üzerinde <xref:System.Net.WebRequest>. **WebRequest** sunucuya; istek üst bilgilerini gönderir, ardından çağırarak ağ kaynağına veri gönderebilir <xref:System.IO.Stream.BeginWrite%2A>, <xref:System.IO.Stream.EndWrite%2A>, veya <xref:System.IO.Stream.Write%2A> döndürülen akışa yöntemi. HTTP gibi bazı protokoller, verileri göndermeden önce protokole özgü özelliklerini ayarlamak gerektirebilir. Aşağıdaki kod örneği, veri göndermek için HTTP özel özelliklerin nasıl ayarlanacağını gösterir. Olduğunu varsayar değişkeni `sendData` gönderilecek verileri içeren değişken `sendLength` gönderilecek verileri baytlık sayısıdır.  
+ Döndürülen akışı kullanarak ağa veri göndermek için, <xref:System.Net.WebRequest.GetRequestStream%2A> <xref:System.Net.WebRequest>üzerinde öğesini çağırın. **WebRequest** , istek üst bilgilerini sunucuya gönderir; ardından <xref:System.IO.Stream.BeginWrite%2A>, döndürülen akışta, <xref:System.IO.Stream.EndWrite%2A>veya <xref:System.IO.Stream.Write%2A> yöntemini çağırarak ağ kaynağına veri gönderebilirsiniz. HTTP gibi bazı protokoller, verileri göndermeden önce protokole özgü özellikler ayarlamanız gerekebilir. Aşağıdaki kod örneğinde, veri göndermek için HTTP 'ye özgü özelliklerin nasıl ayarlanacağı gösterilmektedir. Değişkenin `sendData` gönderileceği verileri içerdiğini ve değişkenin `sendLength` gönderileceği verilerin bayt sayısını olduğunu varsayar.  
   
 ```csharp  
 HttpWebRequest request =   
@@ -68,19 +68,19 @@ Catch
 End Try  
 ```  
   
- Ağ üzerinden veri almak için çağrı <xref:System.Net.WebResponse.GetResponseStream%2A> üzerinde <xref:System.Net.WebResponse>. Çağırarak verileri ağ kaynak ardından okuyabilir <xref:System.IO.Stream.BeginRead%2A>, <xref:System.IO.Stream.EndRead%2A>, veya <xref:System.IO.Stream.Read%2A> döndürülen akışa yöntemi.  
+ Ağdan veri almak için ' i arayın <xref:System.Net.WebResponse.GetResponseStream%2A>. <xref:System.Net.WebResponse> Ardından <xref:System.IO.Stream.BeginRead%2A>, döndürülen akışta, <xref:System.IO.Stream.EndRead%2A>veya <xref:System.IO.Stream.Read%2A> yöntemini çağırarak ağ kaynağından verileri okuyabilirsiniz.  
   
- Ağ kaynaklarını akışlardan kullanırken aşağıdaki noktaları göz önünde bulundurun:  
+ Ağ kaynaklarından akışlar kullanırken, aşağıdaki noktaları göz önünde bulundurun:  
   
-- **CanSeek** özelliği her zaman döndürür **false** beri **NetworkStream** sınıfı, akışta konumu değiştirilemez. **Arama** ve **konumu** yöntemleri throw bir **NotSupportedException**.  
+- **NetworkStream** sınıfı akıştaki konumu Değiştirelemediğinden **CanSeek** özelliği her zaman **false** değerini döndürür. **Seek** ve **Position** yöntemleri **NotSupportedException**oluşturur.  
   
-- Kullanırken **WebRequest** ve **WebResponse**, akış çağrılarak oluşturulan örnekleri **GetResponseStream** salt okunurdur ve bunların akışını çağrılarakoluşturulanörnekleri **GetRequestStream** salt yazılır.  
+- **WebRequest** ve **WebResponse**kullandığınızda, **GetResponseStream** çağrılırken oluşturulan akış örnekleri salt okunurdur ve **GetRequestStream** çağrılırken oluşturulan akış örnekleri salt yazılır.  
   
-- Kullanım <xref:System.IO.StreamReader> kodlama daha kolay hale getirmek için sınıf. Aşağıdaki kod örneğinde bir **StreamReader** ASCII kodlamalı bir akıştan okumak için bir **WebResponse** (örneğin isteği oluşturma göstermez).  
+- Kodlamayı daha kolay hale getirmek için sınıfınıkullanın.<xref:System.IO.StreamReader> Aşağıdaki kod örneği bir **Web YANıTıNDAN** ASCII kodlamalı bir akış okumak Için bir **StreamReader** kullanır (örnek, istek oluşturmayı göstermez).  
   
-- Çağrı **GetResponse yanıtına** ağ kaynaklarını kullanılabilir durumda değilse, engelleyebilirsiniz. Zaman uyumsuz bir istekle kullanmayı düşünmeniz gerekir <xref:System.Net.WebRequest.BeginGetResponse%2A> ve <xref:System.Net.WebRequest.EndGetResponse%2A> yöntemleri.  
+- Ağ kaynaklarının kullanılabilir olup olmadığını **GetResponse** çağrısı engelleyebilir. <xref:System.Net.WebRequest.BeginGetResponse%2A> Ve<xref:System.Net.WebRequest.EndGetResponse%2A> yöntemleriyle zaman uyumsuz bir istek kullanmayı göz önünde bulundurmanız gerekir.  
   
-- Çağrı **GetRequestStream** sunucusuyla bağlantı oluşturulurken engelleyebilirsiniz. Sahip akış için bir zaman uyumsuz istek kullanmayı düşünmeniz gerekir <xref:System.Net.WebRequest.BeginGetRequestStream%2A> ve <xref:System.Net.WebRequest.EndGetRequestStream%2A> yöntemleri.  
+- Sunucu bağlantısı oluşturulurken **GetRequestStream** çağrısı engelleyebilirler. <xref:System.Net.WebRequest.BeginGetRequestStream%2A> Ve<xref:System.Net.WebRequest.EndGetRequestStream%2A> yöntemleriyle akış için zaman uyumsuz bir istek kullanmayı göz önünde bulundurmanız gerekir.  
   
 ```csharp  
 // Create a response object.  
@@ -104,5 +104,5 @@ sr.Close()
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapılır: WebRequest sınıfını kullanarak veri isteme](../../../docs/framework/network-programming/how-to-request-data-using-the-webrequest-class.md)
-- [Veri İsteme](../../../docs/framework/network-programming/requesting-data.md)
+- [Nasıl yapılır: WebRequest sınıfını kullanarak veri isteme](how-to-request-data-using-the-webrequest-class.md)
+- [Veri İsteme](requesting-data.md)

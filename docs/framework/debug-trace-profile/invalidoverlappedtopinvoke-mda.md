@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 28876047-58bd-4fed-9452-c7da346d67c0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d5709e4ef883ba2750f1efd0ae2e9a72f1cf43b0
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 7e9c7e1038591e5e8ea6f62b37ff4d02b2b6a9c5
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69967296"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052553"
 ---
 # <a name="invalidoverlappedtopinvoke-mda"></a>invalidOverlappedToPinvoke MDA
 `invalidOverlappedToPinvoke` Yönetilen hata ayıklama Yardımcısı (MDA), çöp toplama yığınında oluşturulmamış bir çakışan işaretçi belirli Win32 işlevlerine geçirildiğinde etkinleştirilir.  
@@ -36,12 +36,12 @@ ms.locfileid: "69967296"
 |------------|--------------|  
 |HTTPAPI. dll|`HttpReceiveHttpRequest`|  
 |IpHlpApi.dll|`NotifyAddrChange`|  
-|paketindeki|`ReadFile`|  
-|paketindeki|`ReadFileEx`|  
-|paketindeki|`WriteFile`|  
-|paketindeki|`WriteFileEx`|  
-|paketindeki|`ReadDirectoryChangesW`|  
-|paketindeki|`PostQueuedCompletionStatus`|  
+|Kernel32. dll|`ReadFile`|  
+|Kernel32. dll|`ReadFileEx`|  
+|Kernel32. dll|`WriteFile`|  
+|Kernel32. dll|`WriteFileEx`|  
+|Kernel32. dll|`ReadDirectoryChangesW`|  
+|Kernel32. dll|`PostQueuedCompletionStatus`|  
 |MSWSock. dll|`ConnectEx`|  
 |WS2_32.dll|`WSASend`|  
 |WS2_32.dll|`WSASendTo`|  
@@ -75,5 +75,5 @@ ms.locfileid: "69967296"
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [Yönetilen Hata Ayıklama Yardımcıları ile Hataları Tanılama](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [Birlikte Çalışma için Hazırlama](../../../docs/framework/interop/interop-marshaling.md)
+- [Yönetilen Hata Ayıklama Yardımcıları ile Hataları Tanılama](diagnosing-errors-with-managed-debugging-assistants.md)
+- [Birlikte Çalışma için Hazırlama](../interop/interop-marshaling.md)

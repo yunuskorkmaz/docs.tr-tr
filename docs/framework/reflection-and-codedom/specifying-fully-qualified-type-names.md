@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d90b1e39-9115-4f2a-81c0-05e7e74e5580
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dc8395492992c22da3c635f0de010516127f9be4
-ms.sourcegitcommit: 46c68557bf6395f0ab9915f7558f2faae0097695
+ms.openlocfilehash: 656b82daffc62824ed663ea7080bd6d20cd0dadc
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "61793009"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045824"
 ---
 # <a name="specifying-fully-qualified-type-names"></a>Tam nitelikli tür adlarını belirtme
 
@@ -149,7 +149,7 @@ Bir derleme adı belirtiminde gereken en düşük bilgiler, derlemenin metinsel 
 |**PublicKey**|Tam ortak anahtar|Onaltılık biçimdeki tam ortak anahtarın dize değeri. Özel bir derlemeyi açıkça belirtmek için bir null başvurusu (Visual Basic**hiçbir şey** ) belirtin.|
 |**PublicKeyToken**|Ortak anahtar belirteci (tam ortak anahtarın 8 baytlık karması)|Onaltılık biçimdeki ortak anahtar belirtecinin dize değeri. Özel bir derlemeyi açıkça belirtmek için bir null başvurusu (Visual Basic**hiçbir şey** ) belirtin.|
 |**Ayarı**|Derleme kültürü|RFC-1766 biçiminde derlemenin kültürü veya dilden bağımsız (uydu olmayan) derlemeler için "nötr".|
-|**Özel**|Özel ikili büyük nesne (BLOB). Bu, şu anda yalnızca [Yerel Görüntü Oluşturucu (NGen)](../../../docs/framework/tools/ngen-exe-native-image-generator.md)tarafından oluşturulan derlemelerde kullanılmaktadır.|Yerel Görüntü Oluşturucu aracı tarafından, yüklenen derlemenin yerel görüntü olduğunu ve bu nedenle yerel görüntü önbelleğine yükleneceğini bildiren derleme önbelleğine bildirmek için kullanılan özel dize. Ayrıca, Zap dizesi olarak da bilinir.|
+|**Özel**|Özel ikili büyük nesne (BLOB). Bu, şu anda yalnızca [Yerel Görüntü Oluşturucu (NGen)](../tools/ngen-exe-native-image-generator.md)tarafından oluşturulan derlemelerde kullanılmaktadır.|Yerel Görüntü Oluşturucu aracı tarafından, yüklenen derlemenin yerel görüntü olduğunu ve bu nedenle yerel görüntü önbelleğine yükleneceğini bildiren derleme önbelleğine bildirmek için kullanılan özel dize. Ayrıca, Zap dizesi olarak da bilinir.|
 
 Aşağıdaki örnek, varsayılan kültür ile basitçe adlandırılmış bir derleme için bir **AssemblyName** gösterir.
 
@@ -224,4 +224,4 @@ Bir çalışma zamanı noktasından, ancak çok boyutlu diziler `MyArray[] != My
 - <xref:System.Type.FullName%2A?displayProperty=nameWithType>
 - <xref:System.Type.GetType%2A?displayProperty=nameWithType>
 - <xref:System.Type.AssemblyQualifiedName%2A?displayProperty=nameWithType>
-- [Tür Bilgilerini Görüntüleme](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)
+- [Tür Bilgilerini Görüntüleme](viewing-type-information.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - elements, finding by property conditions
 - UI Automation, finding elements by property conditions
 ms.assetid: 3acaee5a-6ce8-4c3e-81c8-67e59eb74477
-ms.openlocfilehash: 24c236e3d577fd4c9844546b04eefeee9eaf1de8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 536a71532f02782f9e84bb2bd086af212a77c0da
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965151"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71043660"
 ---
 # <a name="find-a-ui-automation-element-based-on-a-property-condition"></a>Özellik Koşulunu Temel Alan UI Otomasyon Öğesi Bulma
 > [!NOTE]
@@ -33,5 +33,5 @@ ms.locfileid: "69965151"
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Invokemodel ve ExpandCollapsePattern menü öğesi örneği](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771636(v=vs.90))
-- [UI Otomasyonu Öğelerini Alma](../../../docs/framework/ui-automation/obtaining-ui-automation-elements.md)
-- [AutomationID Özelliğini Kullanma](../../../docs/framework/ui-automation/use-the-automationid-property.md)
+- [UI Otomasyonu Öğelerini Alma](obtaining-ui-automation-elements.md)
+- [AutomationID Özelliğini Kullanma](use-the-automationid-property.md)

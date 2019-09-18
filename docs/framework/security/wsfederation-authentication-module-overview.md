@@ -3,12 +3,12 @@ title: WSFederation Kimlik Doğrulaması Modülüne Genel Bakış
 ms.date: 03/30/2017
 ms.assetid: 02c4d5e8-f0a7-49ee-9cf5-3647578510ad
 author: BrucePerlerMS
-ms.openlocfilehash: eaf53a352238161ccec1b481649074d322954905
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 26cd022ded8dddcfcf695c89b3cf4b90d3ceb2ef
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70851509"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044944"
 ---
 # <a name="wsfederation-authentication-module-overview"></a>WSFederation Kimlik Doğrulaması Modülüne Genel Bakış
 Windows Identity Foundation (WıF), WS-Federasyon kimlik doğrulama modülü (WS-FAD) aracılığıyla ASP.NET uygulamalarında federal kimlik doğrulaması desteği içerir. Bu konu, federal kimlik doğrulamanın nasıl çalıştığını ve nasıl kullanılacağını anlamanıza yardımcı olur.  
@@ -35,7 +35,7 @@ Windows Identity Foundation (WıF), WS-Federasyon kimlik doğrulama modülü (WS
   
  WS-FAD 'yi, kimliği doğrulanmamış isteklerin yeniden yönlendirilmesi gereken STS 'yi belirtecek şekilde yapılandırırsınız. WıF, bir kullanıcının kimlik doğrulamasını iki şekilde yapmanızı sağlar:  
   
-1. Pasif yeniden yönlendirme: Kimliği doğrulanmamış bir Kullanıcı, korumalı bir kaynağa erişmeye çalıştığında ve yalnızca bir oturum açma sayfası gerekmeden bunları bir STS 'ye yönlendirmek istediğinizde, bu doğru yaklaşımdır. STS kullanıcının kimliğini doğrular ve bu kullanıcı için uygun talepleri içeren bir güvenlik belirteci yayınlar. Bu seçenek, HTTP modülleri ardışık düzeninde WS-Fae eklenmesini gerektirir. Visual Studio 2012 için kimlik ve erişim aracı 'nı kullanarak, uygulamanızın yapılandırma dosyasını WS-FAD kullanacak şekilde değiştirebilir ve bir STS ile federasyona bağlayabilirsiniz. Daha fazla bilgi için bkz. [Visual Studio Için kimlik ve erişim aracı 2012](../../../docs/framework/security/identity-and-access-tool-for-vs.md).  
+1. Pasif yeniden yönlendirme: Kimliği doğrulanmamış bir Kullanıcı, korumalı bir kaynağa erişmeye çalıştığında ve yalnızca bir oturum açma sayfası gerekmeden bunları bir STS 'ye yönlendirmek istediğinizde, bu doğru yaklaşımdır. STS kullanıcının kimliğini doğrular ve bu kullanıcı için uygun talepleri içeren bir güvenlik belirteci yayınlar. Bu seçenek, HTTP modülleri ardışık düzeninde WS-Fae eklenmesini gerektirir. Visual Studio 2012 için kimlik ve erişim aracı 'nı kullanarak, uygulamanızın yapılandırma dosyasını WS-FAD kullanacak şekilde değiştirebilir ve bir STS ile federasyona bağlayabilirsiniz. Daha fazla bilgi için bkz. [Visual Studio Için kimlik ve erişim aracı 2012](identity-and-access-tool-for-vs.md).  
   
 2. RP uygulamanızdaki bir oturum <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.SignIn%2A?displayProperty=nameWithType> açma sayfası için <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.RedirectToIdentityProvider%2A> arka plan kodundaki yöntemi veya yöntemi çağırabilirsiniz.  
   
@@ -54,11 +54,11 @@ Windows Identity Foundation (WıF), WS-Federasyon kimlik doğrulama modülü (WS
   
  Aşağıdaki diyagramda, Kullanıcı STS 'ye kimlik doğrulaması yapıldığında ne olacağı ve bunların güvenlik belirteçleri tarafından <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>işlendiği konusunda daha fazla ayrıntı gösterilmektedir:  
   
- ![Pasif yönlendirme ile belirteç Işleme zamanlaması](../../../docs/framework/security/media/signinusingpassiveredirect-tokenprocessing.gif "SignInUsingPassiveRedirect_TokenProcessing")  
+ ![Pasif yönlendirme ile belirteç Işleme zamanlaması](./media/signinusingpassiveredirect-tokenprocessing.gif "SignInUsingPassiveRedirect_TokenProcessing")  
   
  Aşağıdaki diyagramda, kullanıcının güvenlik belirteçleri tanımlama bilgilerine serileştirildiğinde ve tarafından yakalanarak <xref:System.IdentityModel.Services.SessionAuthenticationModule>ne olacağı hakkında daha fazla ayrıntı gösterilmektedir:  
   
- ![Denetimleri kullanarak oturum açma&#45;gösteren Sam zamanlama diyagramı](../../../docs/framework/security/media/signinusingconrols-sam.gif "SignInUsingConrols_SAM")  
+ ![Denetimleri kullanarak oturum açma&#45;gösteren Sam zamanlama diyagramı](./media/signinusingconrols-sam.gif "SignInUsingConrols_SAM")  
   
 ### <a name="events"></a>Olaylar  
  <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>, ve üst <xref:System.IdentityModel.Services.HttpModuleBase>sınıfları, bir http isteğinin işlenmesi için çeşitli aşamalarda olay yükseltir. <xref:System.IdentityModel.Services.SessionAuthenticationModule> Bu olayları `global.asax` ASP.net uygulamanızın dosyasında işleyebilirsiniz.  
@@ -94,7 +94,7 @@ Windows Identity Foundation (WıF), WS-Federasyon kimlik doğrulama modülü (WS
 > Veya <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType> <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> tarafından oluşturulanherhangibirolaysırasındaözelliğinikullanmamalısınız.<xref:System.IdentityModel.Services.SessionAuthenticationModule> Bunun nedeni <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType> , kimlik doğrulama işlemi sırasında olaylar oluşturulduğunda, kimlik doğrulama işleminden sonra ayarlanır.  
   
 ### <a name="configuration-of-federated-authentication"></a>Federal kimlik doğrulaması yapılandırması  
- WS-fak ve Sam, [ \<FederationConfiguration >](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md) öğesi aracılığıyla yapılandırılır. <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.Issuer%2A> <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.Realm%2A> [ Wsfeder>altöğesi,WS-FADözellikleriiçinvarsayılan\<](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/wsfederation.md) değerleri yapılandırır; Örneğin, özelliği ve özelliği. (Bu değerler, bazı WS-FAı olayları için işleyiciler sağlayarak istek başına temelinde değiştirilebilir; Örneğin, <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.RedirectingToIdentityProvider>.) Sam tarafından kullanılan tanımlama bilgisi işleyicisi, tanımlayan [ \<ıehandler >](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/cookiehandler.md) alt öğesi aracılığıyla yapılandırılır. WIF, bir <xref:System.IdentityModel.Services.ChunkedCookieHandler> sınıfta uygulanan, öbek boyutu [ \<parçalama >](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/chunkedcookiehandler.md) öğesi aracılığıyla ayarlanmış bir varsayılan tanımlama bilgisi işleyicisi sağlar. Öğesi, <xref:System.IdentityModel.Configuration.IdentityConfiguration>uygulamada kullanılan ve<xref:System.Security.Claims.ClaimsAuthorizationManager>gibidiğer WIF bileşenleri için yapılandırma sağlayan bir öğesine başvurur. <xref:System.Security.Claims.ClaimsAuthenticationManager> `<federationConfiguration>` `identityConfigurationName` Öğe özniteliğinde [ \<](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) adlandırılmış bir IdentityConfiguration > öğesi belirtilerek kimlik yapılandırmasına açıkça başvurulabilir. `<federationConfiguration>` Kimlik yapılandırmasına açıkça başvurulmuyorsa, varsayılan kimlik yapılandırması kullanılacaktır.  
+ WS-fak ve Sam, [ \<FederationConfiguration >](../configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md) öğesi aracılığıyla yapılandırılır. <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.Issuer%2A> <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.Realm%2A> [ Wsfeder>altöğesi,WS-FADözellikleriiçinvarsayılan\<](../configure-apps/file-schema/windows-identity-foundation/wsfederation.md) değerleri yapılandırır; Örneğin, özelliği ve özelliği. (Bu değerler, bazı WS-FAı olayları için işleyiciler sağlayarak istek başına temelinde değiştirilebilir; Örneğin, <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.RedirectingToIdentityProvider>.) Sam tarafından kullanılan tanımlama bilgisi işleyicisi, tanımlayan [ \<ıehandler >](../configure-apps/file-schema/windows-identity-foundation/cookiehandler.md) alt öğesi aracılığıyla yapılandırılır. WIF, bir <xref:System.IdentityModel.Services.ChunkedCookieHandler> sınıfta uygulanan, öbek boyutu [ \<parçalama >](../configure-apps/file-schema/windows-identity-foundation/chunkedcookiehandler.md) öğesi aracılığıyla ayarlanmış bir varsayılan tanımlama bilgisi işleyicisi sağlar. Öğesi, <xref:System.IdentityModel.Configuration.IdentityConfiguration>uygulamada kullanılan ve<xref:System.Security.Claims.ClaimsAuthorizationManager>gibidiğer WIF bileşenleri için yapılandırma sağlayan bir öğesine başvurur. <xref:System.Security.Claims.ClaimsAuthenticationManager> `<federationConfiguration>` `identityConfigurationName` Öğe özniteliğinde [ \<](../configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) adlandırılmış bir IdentityConfiguration > öğesi belirtilerek kimlik yapılandırmasına açıkça başvurulabilir. `<federationConfiguration>` Kimlik yapılandırmasına açıkça başvurulmuyorsa, varsayılan kimlik yapılandırması kullanılacaktır.  
   
  Aşağıdaki XML, bir ASP.NET bağlı olan taraf (RP) uygulamasının yapılandırmasını gösterir. <xref:System.IdentityModel.Configuration.SystemIdentityModelSection> Ve yapılandırma<xref:System.IdentityModel.Services.Configuration.SystemIdentityModelServicesSection>bölümleriöğesialtınaeklenir `<configSections>` . Sam ve WS-FAD, `<system.webServer>` `<modules>` öğesinin altındaki / http modüllerine eklenir. Son olarak, `<system.identityModel>` WIF bileşenleri `<identityConfiguration>` ve / `<system.identityModel.services>` öğelerialtındayapılandırılır`<federationConfiguration>` . / Bu yapılandırma, varsayılan tanımlama bilgisi işleyicisidir ve `<cookieHandler>` öğesinde belirtilen bir tanımlama bilgisi işleyici türü olmadığından, öbekli tanımlama bilgisi işleyicisini belirtir.  
   
@@ -143,4 +143,4 @@ Windows Identity Foundation (WıF), WS-Federasyon kimlik doğrulama modülü (WS
 
 - <xref:System.IdentityModel.Services.SessionAuthenticationModule>
 - <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>
-- [\<federationConfiguration >](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md)
+- [\<federationConfiguration >](../configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md)

@@ -10,22 +10,22 @@ helpviewer_keywords:
 ms.assetid: f6976502-a000-4fbe-aaf5-a7aab9ce4ec2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1aa3bbfafb760a3002a218ef52d87957af47c4de
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: e8c9093faa80249a2c5898c1f250e97208764be6
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894848"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044403"
 ---
 # <a name="mpgoexe-managed-profile-guided-optimization-tool"></a>Mpgo.exe (Yönetilen Profil Temelli İyileştirme Aracı)
 
-Yönetilen profil temelli Iyileştirme Aracı (Mpgo. exe), [Yerel Görüntü Oluşturucu (Ngen. exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md)tarafından oluşturulan yerel görüntü derlemelerini iyileştirmek için ortak Son Kullanıcı senaryolarını kullanan bir komut satırı aracıdır. Bu araç, profil verilerini oluşturan eğitim senaryolarını çalıştırmanızı sağlar. [Yerel Görüntü Oluşturucu (Ngen. exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) , oluşturulan yerel görüntü uygulama derlemelerini iyileştirmek için bu verileri kullanır. Eğitim senaryosu, uygulamanızın beklenen bir kullanımına ilişkin denemedir. Mpgo.exe, Visual Studio Ultimate 2012 ve sonraki sürümlerinde kullanılabilir. Visual Studio 2013 başlayarak, uygulamaları iyileştirmek [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] için Mpgo. exe ' yi de kullanabilirsiniz.  
+Yönetilen profil temelli Iyileştirme Aracı (Mpgo. exe), [Yerel Görüntü Oluşturucu (Ngen. exe)](ngen-exe-native-image-generator.md)tarafından oluşturulan yerel görüntü derlemelerini iyileştirmek için ortak Son Kullanıcı senaryolarını kullanan bir komut satırı aracıdır. Bu araç, profil verilerini oluşturan eğitim senaryolarını çalıştırmanızı sağlar. [Yerel Görüntü Oluşturucu (Ngen. exe)](ngen-exe-native-image-generator.md) , oluşturulan yerel görüntü uygulama derlemelerini iyileştirmek için bu verileri kullanır. Eğitim senaryosu, uygulamanızın beklenen bir kullanımına ilişkin denemedir. Mpgo.exe, Visual Studio Ultimate 2012 ve sonraki sürümlerinde kullanılabilir. Visual Studio 2013 başlayarak, uygulamaları iyileştirmek [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] için Mpgo. exe ' yi de kullanabilirsiniz.  
   
 Profil destekli en iyi duruma getirme süreci, eğitim senaryolarından veri toplayıp yerel görüntülerin düzenini en iyi duruma getirmek üzere onları kullanarak verimi, bellek kullanımını (çalışma kümesi boyutu) ve uygulama başlatma süresini iyileştirir.  
   
 Ara Dil (IL) derlemeleri için başlatma süresi ve çalışma kümesi boyutuyla ilgili performansı sorunlarıyla karşılaştığınızda, just-in-time (JIT) (tam zamanında) derleme maliyetlerini ortadan kaldırmak ve kod paylaşımını kolaylaştırmak için ilk Ngen.exe'yi kullanmanızı öneririz. Ek geliştirmeler gerekiyorsa, uygulamanızı daha ileri düzeyde iyi hale getirmek etmek için Mpgo.exe kullanabilirsiniz. Performans artışlarını değerlendirmek için temel olarak, en iyi duruma getirilmemiş yerel görüntü derlemelerindeki performans verilerini kullanabilirsiniz. Mpgo.exe kullanıldığında soğuk başlangıç sürelerinde kısalma ve çalışma kümesi boyutunda azalma görülebilir. Mpgo.exe, en iyi duruma getirilmiş yerel görüntü derlemeleri oluşturmak için Ngen.exe'yi kullanan IL derlemelerine bilgi ekler. Daha fazla bilgi için bkz. .NET blogda [Masaüstü uygulamalarınız Için başlatma performansını iyileştirme](https://go.microsoft.com/fwlink/p/?LinkId=248943) girişi.  
   
-Bu araç, Visual Studio ile birlikte otomatik olarak yüklenir. Aracı çalıştırmak için, yönetici kimlik bilgileriyle Visual Studio için Geliştirici Komut İstemi (veya Windows 7 ' de Visual Studio komut Istemi) kullanın ve komut istemine aşağıdakini yazın. Daha fazla bilgi için bkz. [komut istemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+Bu araç, Visual Studio ile birlikte otomatik olarak yüklenir. Aracı çalıştırmak için, yönetici kimlik bilgileriyle Visual Studio için Geliştirici Komut İstemi (veya Windows 7 ' de Visual Studio komut Istemi) kullanın ve komut istemine aşağıdakini yazın. Daha fazla bilgi için bkz. [komut istemleri](developer-command-prompt-for-vs.md).  
   
 Masaüstü uygulamaları için:  
   
@@ -128,7 +128,7 @@ mpgo.exe -import "C:\Optimized" -assemblylist "C:\MyApp\MyTax.dll" "C:\MyApp\MyT
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Ngen.exe (Yerel Görüntü Oluşturucu)](../../../docs/framework/tools/ngen-exe-native-image-generator.md)
-- [Komut İstemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [Ngen.exe (Yerel Görüntü Oluşturucu)](ngen-exe-native-image-generator.md)
+- [Komut İstemleri](developer-command-prompt-for-vs.md)
 - [Masaüstü uygulamalarınız için başlatma performansını artırma](https://go.microsoft.com/fwlink/p/?LinkId=248943)
 - [.NET 4,5 performans Iyileştirmelerine genel bakış](https://go.microsoft.com/fwlink/p/?LinkId=249131)

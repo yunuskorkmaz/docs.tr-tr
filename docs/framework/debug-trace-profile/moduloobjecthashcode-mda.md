@@ -12,45 +12,45 @@ helpviewer_keywords:
 ms.assetid: b45366ff-2a7a-4b8e-ab01-537b72e9de68
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9b1223839be3747b04810d6b5bd131733c41631f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1679e283a801044ad5a0baed89f17e6acc74259c
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614384"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052453"
 ---
 # <a name="moduloobjecthashcode-mda"></a>moduloObjectHashcode MDA
-`moduloObjectHashcode` Yönetilen hata ayıklama Yardımcısı (MDA) davranışını değiştirir <xref:System.Object> sınıf gerçekleştirmek için bir işlem tarafından döndürülen ilişkin karma kodu modül <xref:System.Object.GetHashCode%2A> yöntemi. Bu MDA için'varsayılan mod neden olan 1 ' dir <xref:System.Object.GetHashCode%2A> 0 tüm nesneleri için döndürülecek.  
+Yönetilen hata ayıklama Yardımcısı (MDA), <xref:System.Object> sınıfının davranışını, <xref:System.Object.GetHashCode%2A> yöntemi tarafından döndürülen karma kodda bir mod işlemi gerçekleştirmek için değiştirir. `moduloObjectHashcode` Bu mda için varsayılan mod 1 ' dir ve tüm nesneler <xref:System.Object.GetHashCode%2A> için 0 döndürmesine neden olur.  
   
 ## <a name="symptoms"></a>Belirtiler  
- Ortak dil çalışma zamanı (CLR) yeni bir sürüme taşıdıktan sonra bir program artık düzgün şekilde çalışır:  
+ Ortak dil çalışma zamanının (CLR) yeni bir sürümüne taşıdıktan sonra, bir program artık düzgün şekilde çalışmaz:  
   
-- Program, yanlış nesneden alınırken bir <xref:System.Collections.Hashtable>.  
+- Program, öğesinden yanlış bir <xref:System.Collections.Hashtable>nesne alıyor.  
   
-- Sabit listesinden alınmış sırasını bir <xref:System.Collections.Hashtable> programın sonu değişmedi.  
+- Bir <xref:System.Collections.Hashtable> öğesinden numaralandırmanın sırası, programı kesen bir değişikliğe sahiptir.  
   
-- Artık eşit olacak şekilde kullanılan iki nesne eşit değildir.  
+- Eşit olmak için kullanılan iki nesne artık eşit değildir.  
   
-- Eşit olmaması için kullanılan iki nesne eşit olur.  
+- Eşit olmaması için kullanılan iki nesne artık eşittir.  
   
 ## <a name="cause"></a>Sebep  
- Programınızı yanlış nesneden alma bir <xref:System.Collections.Hashtable> çünkü yürütmesinin <xref:System.Object.Equals%2A> anahtarını sınıfındaki yöntemi <xref:System.Collections.Hashtable> çağrı sonuçlarını karşılaştırarak nesnelerin eşitliği testleri <xref:System.Object.GetHashCode%2A> yöntemi . Karma kodları, kendi ilgili alanlarını farklı değerlere sahip olsa bile iki nesnenin aynı karma koda sahip olabileceği için nesne eşitliği test etmek için kullanılmamalıdır. Bu karma kod çakışmaları ender olsa, uygulamada oluşur. Bu sahip olduğu etkiyi bir <xref:System.Collections.Hashtable> arama, eşit olacak şekilde eşit olmayan iki anahtar görünür ve yanlış nesne öğesinden döndürülen <xref:System.Collections.Hashtable>. Performans nedenleriyle yürütmesinin <xref:System.Object.GetHashCode%2A> sonraki sürümlerinde bir sürümünde gerçekleşmeyebilir çakışmaları oluşabilir için çalışma zamanı sürümleri arasında geçiş. Bu mda'nın karma kodları birbiriyle çakışır olduğunda, kod hataları olup olmadığını test etmek etkinleştirin. Etkin olduğunda, bu mda'nın neden <xref:System.Object.GetHashCode%2A> 0, döndürülecek yöntemi çakışmadan tüm karma kodları kaynaklanan. Yalnızca etkin bu MDA, programınızın olmalıdır, programınızı daha yavaş çalıştırır etkinleştirmektir.  
+ <xref:System.Collections.Hashtable> Yöntemi, anahtarın içindeki <xref:System.Object.Equals%2A> yöntemi, çağrı sonuçlarını <xref:System.Object.GetHashCode%2A> yönteme göre karşılaştırarak, anahtar <xref:System.Collections.Hashtable> için sınıfındaki bir nesne için uygulama bir öğesinden yanlış nesneyi alıyor olabilir . Kendi alanları farklı değerlere sahip olsa bile iki nesne aynı karma koda sahip olabileceğinden, nesne eşitliğini test etmek için karma kodları kullanılmamalıdır. Bu karma kod çakışmaları, ancak uygulamada nadir olarak ortaya çıkar. Bunun bir <xref:System.Collections.Hashtable> aramada sahip olduğu efekt, eşit olmayan iki anahtarın eşit gibi görüneceği ve <xref:System.Collections.Hashtable>öğesinden yanlış nesne döndürüldüğü anlamına gelir. Performans nedenleriyle, ' nin <xref:System.Object.GetHashCode%2A> uygulanması çalışma zamanı sürümleri arasında değişebilir, bu nedenle, bir sürümde gerçekleşmeyecek olan çakışmalar sonraki sürümlerde meydana gelebilir. Bu MDA ' i etkinleştirerek, karma kodları çarpışdığınızda kodunuzun hatalara sahip olup olmadığını test edin. Etkinleştirildiğinde bu mda, <xref:System.Object.GetHashCode%2A> yöntemin 0 döndürmesini sağlar, sonuçta tüm karma kodlarının çakışmasına neden olur. Bu MDA ' i etkinleştiren tek efekt, programınızın daha yavaş çalışmasına neden olur.  
   
- Sabit listesinden alınmış sırasını bir <xref:System.Collections.Hashtable> bir çalışma zamanı sürümünden anahtar değişikliği için karma kodları hesaplamak için kullanılan algoritma için başka bir IF değişebilir. Programınız bir bağımlılık anahtarlar veya değerler dışında bir karma tablo numaralandırmasını bazında sürdü olup olmadığını test etmek için bu mda'nın etkinleştirebilirsiniz.  
+ Anahtar değişikliği için karma kodları hesaplamak <xref:System.Collections.Hashtable> üzere kullanılan algoritma bir çalışma zamanının bir sürümünden diğerine değişebilir. Programınızın bir karma tablonun anahtar veya değer listesi sırasına göre bağımlılığı yapıp gerçekleştirmediğini test etmek için bu MDA ' yi etkinleştirebilirsiniz.  
   
 ## <a name="resolution"></a>Çözüm  
- Nesne kimliği için bir alternatif olarak, hiçbir zaman karma kodları kullanın. Geçersiz kılmasını uygulamak <xref:System.Object.Equals%2A?displayProperty=nameWithType> karma kodları değil karşılaştırmak için yöntemi.  
+ Karma kodları, nesne kimliği için bir alternatif olarak hiçbir şekilde kullanmayın. Karma kodlarını karşılaştırmayan <xref:System.Object.Equals%2A?displayProperty=nameWithType> yöntemi geçersiz kılmayı uygulayın.  
   
- Anahtarlar veya değerler numaralandırmalar bazında bağımlılıkları karma tabloları oluşturmayın.  
+ Karma tablolardaki anahtarların veya değerlerin numaralandırmalar sırasıyla bağımlılıklar oluşturmayın.  
   
-## <a name="effect-on-the-runtime"></a>Çalışma zamanı üzerindeki etkisi  
- Bu MDA etkinleştirildiğinde uygulamaları daha yavaş çalışır. Bu MDA, yalnızca döndürülen ilişkin karma kodu alır ve bunun yerine bir modül tarafından bölündüğünde kalanı döndürür.  
+## <a name="effect-on-the-runtime"></a>Çalışma zamanında etki  
+ Bu MDA etkinleştirildiğinde uygulamalar daha yavaş çalışır. Bu MDA yalnızca döndürülen karma kodu alır ve bunun yerine, bir mod ile ayrıldığınızda kalanı döndürür.  
   
 ## <a name="output"></a>Çıkış  
- Bu MDA için'hiçbir çıktı yok.  
+ Bu MDA için çıkış yok.  
   
 ## <a name="configuration"></a>Yapılandırma  
- `modulus` İlişkin karma kod üzerinde kullanılan mod özniteliği belirtir. Varsayılan değer 1’dir.  
+ `modulus` Öznitelik, karma kodunda kullanılan mod 'u belirtir. Varsayılan değer 1’dir.  
   
 ```xml  
 <mdaConfig>  
@@ -64,4 +64,4 @@ ms.locfileid: "64614384"
 
 - <xref:System.Object.GetHashCode%2A?displayProperty=nameWithType>
 - <xref:System.Object.Equals%2A?displayProperty=nameWithType>
-- [Yönetilen Hata Ayıklama Yardımcıları ile Hataları Tanılama](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [Yönetilen Hata Ayıklama Yardımcıları ile Hataları Tanılama](diagnosing-errors-with-managed-debugging-assistants.md)

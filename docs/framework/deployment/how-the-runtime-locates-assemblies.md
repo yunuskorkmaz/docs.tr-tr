@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 772ac6f4-64d2-4cfb-92fd-58096dcd6c34
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7f8046852f847cd5493a2ed17b491a39e494ce2b
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 01cef9646ca9c4f49ab8376364648f66b9651e4a
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70969117"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052122"
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>Çalışma Zamanının Derlemelerin Konumunu Bulması
 
@@ -144,7 +144,9 @@ Güvenli mod tüm uygulama veya seçili derlemeler için ayarlanabilir. Diğer b
 Üçüncü olarak, çalışma zamanı makine yapılandırma dosyasını inceler. Machine. config adlı bu dosya, çalışma zamanının yüklendiği kök dizinin yapılandırma alt dizinindeki yerel bilgisayarda bulunur. Bu dosya, yöneticiler tarafından bu bilgisayarda yerel olan derleme bağlama kısıtlamalarını belirtmek için kullanılabilir. Makine yapılandırma dosyasındaki ayarlar diğer tüm yapılandırma ayarlarından önceliklidir; Ancak, bu, tüm yapılandırma ayarlarının bu dosyaya konulacağı anlamına gelmez. Yönetici ilke dosyası tarafından belirlenen sürüm son, geçersiz kılınamaz. Machine. config dosyasında belirtilen geçersiz kılmalar tüm uygulamaları etkiler. Yapılandırma dosyaları hakkında daha fazla bilgi için bkz. [yapılandırma dosyalarını kullanarak uygulamaları yapılandırma](../configure-apps/index.md).
 
 <a name="step2"></a> 
+
 ## <a name="step-2-checking-for-previously-referenced-assemblies"></a>2\. Adım: Önceden başvurulan derlemeler denetleniyor
+
 İstenen derleme önceki çağrılar için de istenirse, ortak dil çalışma zamanı zaten yüklü olan derlemeyi kullanır. Bu, bir uygulamayı oluşturan derlemeleri adlandırırken bu sonuçları içerebilir. Derlemeleri adlandırma hakkında daha fazla bilgi için bkz. [derleme adları](../../standard/assembly/names.md).
 
 Derleme için önceki bir istek başarısız olduysa, derleme için sonraki istekler derlemeyi yükleme girişiminde bulunmadan hemen başarısız oldu. .NET Framework sürüm 2,0 ' den başlayarak, derleme bağlama sorunları önbelleğe alınır ve önbelleğe alınan bilgiler derlemeyi yüklemeyi denemesinin denenip denenmeyeceğini tespit etmek için kullanılır.

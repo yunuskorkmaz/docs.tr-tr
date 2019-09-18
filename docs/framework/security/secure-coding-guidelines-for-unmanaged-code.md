@@ -9,17 +9,17 @@ helpviewer_keywords:
 ms.assetid: a8d15139-d368-4c9c-a747-ba757781117c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ec97861a9d748767199da3e1fb7f53361c3a48ee
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 867157b329218b79c8cc1255b2158bbe83666531
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966117"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045363"
 ---
 # <a name="secure-coding-guidelines-for-unmanaged-code"></a>Yönetilmeyen Kod İçin Güvenli Kodlama Yönergeleri
 Bazı kitaplık kodunun yönetilmeyen koda (örneğin, Win32 gibi yerel kod API 'Leri) çağırması gerekir. Bu, yönetilen kod için güvenlik çevresi dışında bir süre içinde olduğu için dikkat gerektiren nedenlerle gereklidir. Kodunuz güvenlik tarafsız ise, hem kodunuz hem de bunu çağıran tüm kodlar yönetilmeyen kod iznine sahip olmalıdır (<xref:System.Security.Permissions.SecurityPermission> belirtilen <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> bayrağıyla birlikte).  
   
- Ancak, çağıranın bu tür güçlü izinlere sahip olması genellikle mantıklı değildir. Bu gibi durumlarda, güvenilen kodunuz, [sarmalayıcı kodunu güvenli hale](../../../docs/framework/misc/securing-wrapper-code.md)getirmek için tanımlanan yönetilen sarmalayıcıya veya kitaplık koduna benzer şekilde, arasında hareket edebilir. Temel alınan yönetilmeyen kod işlevselliği tamamen güvende ise, doğrudan açığa çıkabilir; Aksi takdirde, önce uygun bir izin denetimi (istek) gereklidir.  
+ Ancak, çağıranın bu tür güçlü izinlere sahip olması genellikle mantıklı değildir. Bu gibi durumlarda, güvenilen kodunuz, [sarmalayıcı kodunu güvenli hale](../misc/securing-wrapper-code.md)getirmek için tanımlanan yönetilen sarmalayıcıya veya kitaplık koduna benzer şekilde, arasında hareket edebilir. Temel alınan yönetilmeyen kod işlevselliği tamamen güvende ise, doğrudan açığa çıkabilir; Aksi takdirde, önce uygun bir izin denetimi (istek) gereklidir.  
   
  Kodunuz yönetilmeyen koda çağırdığında ancak çağıranlarınızın yönetilmeyen koda erişim izni olmasını gerektirmek istiyorsanız, doğru onay yapmanız gerekir. Bir onaylama işlemi, kariyerinize yol gösterecek şekilde blok yapar. Bu işlemde bir güvenlik deliği oluşturmamaya dikkat etmeniz gerekir. Bu, genellikle çağıranlarınızın uygun bir iznini talep etmeniz ve yönetilmeyen kod kullanarak yalnızca bu iznin izin verdiği ve daha fazla izin verdiğini yapmanız gerektiği anlamına gelir. Bazı durumlarda (örneğin, bir gün saati), yönetilmeyen kod herhangi bir güvenlik denetimi olmadan çağıranlara doğrudan sunulabilir. Herhangi bir durumda, onay veren tüm kodlar güvenlik için sorumluluk almalıdır.  
   

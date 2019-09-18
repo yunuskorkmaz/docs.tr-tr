@@ -2,12 +2,12 @@
 title: Docker uygulamaları için geliştirme iş akışı
 description: Docker tabanlı uygulamalar geliştirmeye yönelik iş akışının ayrıntılarını anlayın. Adım adım ilerleyin ve Dockerfiles 'ı iyileştirmek ve Visual Studio 'Yu kullanırken kullanılabilecek Basitleştirilmiş iş akışıyla sona erdirmek için bazı ayrıntılara ulaşın.
 ms.date: 01/07/2019
-ms.openlocfilehash: 34d2a90cb5208736b1b414e25ac3e627929f45a0
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 36caff247d031b8808ab953ec884b7ce292858eb
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70296177"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71040298"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Docker uygulamaları için geliştirme iş akışı
 
@@ -204,28 +204,37 @@ Kısaca, çok aşamalı derlemeler, oluşturma işleminin farklı "aşamalarda" 
 
 Ayrıntılar, satır satır:
 
-<!-- markdownlint-disable MD029-->
-1. Yalnızca bir "küçük" çalışma zamanı temel görüntüsü ile bir aşama başlatın, başvuru için **temel** çağırın.
-2. Görüntüde **/App** dizini oluşturun.
-3. **80**numaralı bağlantı noktasını kullanıma sunun.
-<!-- skip -->
-5. Oluşturma/yayımlama için "büyük" görüntü ile yeni bir aşama başlatın, başvuru için **derlemeyi** çağırın.
-6. Görüntüde **/src** dizini oluşturun.
-7. 16. satıra kadar, paketleri daha sonra geri yükleyebilmeleri için başvurulan projeler **. csproj** dosyalarını kopyalayın.
-<!-- skip -->
-17. **Catalog. API** projesi ve başvurulan projeler için paketleri geri yükleyin.
-18. **Çözüm için tüm dizin ağacını** ( **. dockerıgnore** dosyasına dahil edilen dosyalar/dizinler hariç), görüntüdeki **/src** dizinine kopyalayın.
-19. Geçerli klasörü **Catalog. API** projesi olarak değiştirin.
-20. Görüntüde proje (ve diğer proje bağımlılıkları) ve **/App** dizinine çıktı oluşturun.
-<!-- skip -->
-22. Derlemeden devam eden yeni bir aşama başlatın, başvuru için **Yayınla** ' yı çağırın.
-23. Görüntüde proje (ve bağımlılıklar) ve çıkış **/uygulama** dizinini yayımlayın.
-<!-- skip -->
-25. **Temel** 'den devam eden yeni bir aşama başlatın ve **nihai** çağrı yapın
-26. Geçerli dizini **/App** olarak değiştir
-27. **/App** dizinini aşama **Yayımla** 'dan geçerli dizine Kopyala
-28. Kapsayıcı başlatıldığında çalıştırılacak komutu tanımlayın.
-<!-- markdownlint-enable MD029-->
+- **Satır #1:** Yalnızca bir "küçük" çalışma zamanı temel görüntüsü ile bir aşama başlatın, başvuru için **temel** çağırın.
+
+- **Satır #2:** Görüntüde **/App** dizinini oluşturun.
+
+- **Satır #3:** **80**numaralı bağlantı noktasını kullanıma sunun.
+
+- **Satır #5:** Oluşturma/yayımlama için "büyük" görüntüyle yeni bir aşama başlatın. Başvuru için **derlemeyi** çağırın.
+
+- **Satır #6:** Görüntüde **/src** dizini oluşturun.
+
+- **Satır #7:** 16. satıra kadar, paketleri daha sonra geri yükleyebilmeleri için başvurulan **. csproj** proje dosyalarını kopyalayın.
+
+- **Satır #17:** **Catalog. API** projesi ve başvurulan projeler için paketleri geri yükleyin.
+
+- **Satır #18:** **Çözüme yönelik tüm dizin ağacını** ( **. dockerıgnore** dosyasına dahil edilen dosyalar/dizinler hariç) görüntüdeki **/src** dizinine kopyalayın.
+
+- **Satır #19:** Geçerli klasörü **Catalog. API** projesi olarak değiştirin.
+
+- **Satır #20:** Projeyi (ve diğer proje bağımlılıklarını) ve görüntüdeki **/App** dizinine çıkışı oluşturun.
+
+- **Satır #22:** Derlemeden devam eden yeni bir aşama başlatın. Başvuru için **Yayımla** ' yı çağırın.
+
+- **Satır #23:** Projeyi (ve bağımlılıkları) ve çıktıyı görüntüdeki **/App** dizinine yayımlayın.
+
+- **Satır #25:** **Temel** 'den devam eden yeni bir aşama başlatın ve **nihai**çağrı yapın.
+
+- **Satır #26:** Geçerli dizini **/App**olarak değiştirin.
+
+- **Satır #27:** **/App** dizinini aşama **Yayımla** ' dan geçerli dizine kopyalayın.
+
+- **Satır #28:** Kapsayıcı başlatıldığında çalıştırılacak komutu tanımlayın.
 
 Şimdi, eShopOnContainers söz konusu olduğunda tüm işlem performansını geliştirmek için bazı iyileştirmeleri keşfedelim, Linux kapsayıcılarında eksiksiz çözümü oluşturmak için 22 dakika veya daha uzun bir süre anlamına gelir.
 
@@ -239,9 +248,9 @@ COPY . .
 
 Böylece, her hizmet için yalnızca aynı olacak, tüm çözümü kopyalayacak ve daha büyük bir katman oluşturacak ancak:
 
-1) Kopyalama işlemi yalnızca ilk kez yürütülür (bir dosya değiştirildiğinde ve yeniden oluşturulduğunda) ve diğer tüm hizmetler için önbelleği kullanacaksanız
+1. Kopyalama işlemi yalnızca ilk kez yürütülür (bir dosya değiştirildiğinde ve yeniden oluşturulduğunda) ve diğer tüm hizmetler için önbelleği kullanacaksanız
 
-2) Büyük görüntü bir ara aşamada gerçekleştiği için, son görüntü boyutunu etkilemez.
+2. Büyük görüntü bir ara aşamada gerçekleştiği için, son görüntü boyutunu etkilemez.
 
 Sonraki önemli iyileştirme, her eshoponcontainers hizmeti için de farklı olan 17. satırda yürütülen `restore` komutu içerir. Bu satırı yalnızca öğesine değiştirirseniz:
 

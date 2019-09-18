@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: c1676cca-3f1a-41ec-b469-9029566074fc
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ea61b3abf920a5261933f56c71011b50bcd52bb2
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: e58c7b3ce134139950de54d98b590ec2e6b0f3de
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70927092"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046451"
 ---
 # <a name="net-framework-performance"></a>.NET Framework Performansı
 Harika performansa sahip uygulamalar oluşturmak istiyorsanız, uygulamanızın başka bir özelliğini tasarladığınızda olduğu gibi, performansı tasarlamalısınız ve planlamanız gerekir. Uygulamanızın performansını ölçmek için Microsoft tarafından sunulan araçları kullanabilir ve gerekirse, bellek kullanımı, kod işleme ve yanıt verme için geliştirmeler yapabilirsiniz. Bu konu, Microsoft 'un sağladığı performans analizi araçlarını listeler ve uygulama geliştirmenin belirli alanlarının performansını kapsayan diğer konulara bağlantılar sağlar.  
@@ -38,14 +38,14 @@ Harika performansa sahip uygulamalar oluşturmak istiyorsanız, uygulamanızın 
 |[Windows Performans Çözümleyicisi](https://www.microsoft.com/download/details.aspx?id=30652)|Aynı bilgisayarda birden çok uygulama çalışırken uygulamanızın belleği ve depolama alanı kullanımı gibi genel sistem performansının belirlenmesi için kullanın. Bu araç, için [!INCLUDE[win8](../../../includes/win8-md.md)]Windows değerlendirme ve dağıtım SETI 'nin (ADK) bir parçası olarak indirme merkezinden edinilebilir. Daha fazla bilgi için bkz. [Windows Performans Çözümleyici](/windows-hardware/test/wpt/windows-performance-analyzer).|  
   
 ### <a name="event-tracing-for-windows-etw"></a>Windows için olay izleme (ETW)  
- ETW, çalışan kod hakkında tanılama bilgileri elde etmenizi sağlayan ve daha önce bahsedilen birçok performans aracı için gerekli olan bir tekniktir. ETW, belirli olaylar .NET Framework uygulamalar ve Windows tarafından başlatıldığında Günlükler oluşturur. ETW ile günlüğü dinamik olarak etkinleştirebilir ve devre dışı bırakabilir. böylece, uygulamanızı yeniden başlatmadan bir üretim ortamında ayrıntılı izleme yapabilirsiniz. .NET Framework ETW olayları için destek sağlar ve ETW, performans verileri oluşturmak için birçok profil oluşturma ve performans aracı tarafından kullanılır. Bu araçlar, ETW olaylarını etkinleştirir ve devre dışı bırakır. bu nedenle, bunlarla benzerlik yararlı olur. Uygulamanızın belirli bileşenleriyle ilgili performans bilgilerini toplamak için belirli ETW olayları kullanabilirsiniz. .NET Framework ETW desteği hakkında daha fazla bilgi için, [görev paralel kitaplığı ve PLıNQ 'Da](../../../docs/framework/performance/etw-events-in-task-parallel-library-and-plinq.md) [ortak dil çalışma zamanı](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md) ve ETW olayları ' nda ETW olayları ' na bakın.  
+ ETW, çalışan kod hakkında tanılama bilgileri elde etmenizi sağlayan ve daha önce bahsedilen birçok performans aracı için gerekli olan bir tekniktir. ETW, belirli olaylar .NET Framework uygulamalar ve Windows tarafından başlatıldığında Günlükler oluşturur. ETW ile günlüğü dinamik olarak etkinleştirebilir ve devre dışı bırakabilir. böylece, uygulamanızı yeniden başlatmadan bir üretim ortamında ayrıntılı izleme yapabilirsiniz. .NET Framework ETW olayları için destek sağlar ve ETW, performans verileri oluşturmak için birçok profil oluşturma ve performans aracı tarafından kullanılır. Bu araçlar, ETW olaylarını etkinleştirir ve devre dışı bırakır. bu nedenle, bunlarla benzerlik yararlı olur. Uygulamanızın belirli bileşenleriyle ilgili performans bilgilerini toplamak için belirli ETW olayları kullanabilirsiniz. .NET Framework ETW desteği hakkında daha fazla bilgi için, [görev paralel kitaplığı ve PLıNQ 'Da](etw-events-in-task-parallel-library-and-plinq.md) [ortak dil çalışma zamanı](etw-events-in-the-common-language-runtime.md) ve ETW olayları ' nda ETW olayları ' na bakın.  
   
 ## <a name="performance-by-app-type"></a>Uygulama türüne göre performans  
  .NET Framework uygulamasının her türü, performansı değerlendirmek için kendi en iyi uygulamalarına, noktalara ve araçlarına sahiptir. Aşağıdaki tablo, belirli .NET Framework uygulama türleri için performans konularına bağlantı sağlar.  
   
 |Uygulama türü|Bkz.|  
 |--------------|---------|  
-|Tüm platformlar için .NET Framework uygulamalar|[Atık Toplama ve Performans](../../standard/garbage-collection/performance.md)<br /><br /> [Performans İpuçları](../../../docs/framework/performance/performance-tips.md)|  
+|Tüm platformlar için .NET Framework uygulamalar|[Atık Toplama ve Performans](../../standard/garbage-collection/performance.md)<br /><br /> [Performans İpuçları](performance-tips.md)|  
 |[!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]C++, C#ve Visual Basic yazılan uygulamalar|[, C++ C#Ve Visual Basic kullanarak Windows Mağazası uygulamaları için en iyi performans uygulamaları](https://docs.microsoft.com/previous-versions/windows/apps/hh750313%28v=win.10%29)|  
 |Windows Presentation Foundation (WPF)|[WPF performans paketi](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa969767(v=vs.100))|  
 |ASP.NET|[ASP.NET performansına genel bakış](https://docs.microsoft.com/previous-versions/aspnet/cc668225(v=vs.100))|  
@@ -54,7 +54,7 @@ Harika performansa sahip uygulamalar oluşturmak istiyorsanız, uygulamanızın 
   
 |Başlık|Açıklama|  
 |-----------|-----------------|  
-|[.NET Framework Uygulamalarında Önbelleğe Alma](../../../docs/framework/performance/caching-in-net-framework-applications.md)|Uygulamanızdaki performansı artırmak için verileri önbelleğe alma tekniklerini açıklar.|  
-|[Geç Başlatma](../../../docs/framework/performance/lazy-initialization.md)|Özellikle uygulama başlangıcında, performansı artırmak için nesnelerin gerekli olduğu gibi nasıl başlatılacağını açıklar.|  
-|[Güvenilirlik](../../../docs/framework/performance/reliability.md)|Bir sunucu ortamında zaman uyumsuz özel durumların önlenmesi hakkında bilgi sağlar.|  
-|[Büyük, Yanıt Veren .NET Framework Uygulamaları Yazma](../../../docs/framework/performance/writing-large-responsive-apps.md)|Yönetilen koddaki C# ve Visual Basic derleyicilerini yeniden yazmadan toplanan performans ipuçları sağlar ve C# derleyicisinden birkaç gerçek örnek içerir.|
+|[.NET Framework Uygulamalarında Önbelleğe Alma](caching-in-net-framework-applications.md)|Uygulamanızdaki performansı artırmak için verileri önbelleğe alma tekniklerini açıklar.|  
+|[Geç Başlatma](lazy-initialization.md)|Özellikle uygulama başlangıcında, performansı artırmak için nesnelerin gerekli olduğu gibi nasıl başlatılacağını açıklar.|  
+|[Güvenilirlik](reliability.md)|Bir sunucu ortamında zaman uyumsuz özel durumların önlenmesi hakkında bilgi sağlar.|  
+|[Büyük, Yanıt Veren .NET Framework Uygulamaları Yazma](writing-large-responsive-apps.md)|Yönetilen koddaki C# ve Visual Basic derleyicilerini yeniden yazmadan toplanan performans ipuçları sağlar ve C# derleyicisinden birkaç gerçek örnek içerir.|

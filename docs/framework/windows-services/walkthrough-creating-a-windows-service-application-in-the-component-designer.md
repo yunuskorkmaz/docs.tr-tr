@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows service applications, creating
 ms.assetid: e24d8a3d-edc6-485c-b6e0-5672d91fb607
 author: ghogen
-ms.openlocfilehash: df2a99b6fe288cfa8b8a5d60bb127849323ed3a9
-ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
+ms.openlocfilehash: e5ff40d8413acf64e7a8a129a7b268f58780d591
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69545313"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053477"
 ---
 # <a name="tutorial-create-a-windows-service-app"></a>Öğretici: Windows hizmet uygulaması oluşturma
 
@@ -28,7 +28,7 @@ Başlamak için projeyi oluşturun ve hizmetin düzgün çalışması için gere
 
 2. ' A gidin ve **Windows hizmeti (.NET Framework)** proje şablonunu seçin. Bunu bulmak için, **yüklü** ve **Visual C#**  veya **Visual Basic**' i genişletin ve **Windows Masaüstü**' nü seçin. Ya da, sağ üst köşedeki arama kutusuna *Windows hizmeti* girip **ENTER**tuşuna basın.
 
-   ![Visual Studio 'da yeni proje iletişim kutusunda Windows hizmet şablonu](media/new-project-dialog.png)
+   ![Visual Studio 'da yeni proje iletişim kutusunda Windows hizmet şablonu](./media/new-project-dialog.png)
 
    > [!NOTE]
    > **Windows hizmet** şablonunu görmüyorsanız, **.net masaüstü geliştirme** iş yükünü yüklemeniz gerekebilir:
@@ -51,11 +51,11 @@ Hizmeti **Service1** iken **MyNewService**olarak yeniden adlandırın.
 
 2. Açılır pencerede **Evet**' i seçin.
 
-    ![Yeniden adlandırma istemi](media/windows-service-rename.png "Windows hizmeti yeniden adlandırma istemi")
+    ![Yeniden adlandırma istemi](./media/windows-service-rename.png "Windows hizmeti yeniden adlandırma istemi")
 
 3. **Tasarım** sekmesinde, kısayol menüsünden **Özellikler** ' i seçin. **Özellikler** penceresinde **ServiceName** değerini *MyNewService*olarak değiştirin.
 
-    ![Hizmet özellikleri](media/windows-service-properties.png "Windows hizmeti özellikleri")
+    ![Hizmet özellikleri](./media/windows-service-properties.png "Windows hizmeti özellikleri")
 
 4. **Dosya** menüsünden **Tümünü Kaydet** ' i seçin.
 
@@ -340,7 +340,7 @@ Bir Windows hizmetini çalıştırmadan önce, onu yüklemeniz gerekir, bunu hiz
 
      Bu metin, **Hizmetler** penceresinin **Açıklama** sütununda görüntülenir ve kullanıcıya hizmeti açıklar.
 
-    ![Hizmetler penceresinde hizmet açıklaması.](media/windows-service-description.png "Hizmet açıklaması")
+    ![Hizmetler penceresinde hizmet açıklaması.](./media/windows-service-description.png "Hizmet açıklaması")
 
 6. <xref:System.ServiceProcess.ServiceInstaller.DisplayName%2A> Özelliğe metin ekleyin. Örneğin, *MyNewService görünen adı*.
 
@@ -350,7 +350,7 @@ Bir Windows hizmetini çalıştırmadan önce, onu yüklemeniz gerekir, bunu hiz
 
 8. İşiniz bittiğinde, **Özellikler** penceresi aşağıdaki şekilde görünmelidir:
 
-     ![Windows hizmeti Için yükleyici özellikleri](media/windows-service-installer-properties.png "Windows hizmeti yükleyicisi özellikleri")
+     ![Windows hizmeti Için yükleyici özellikleri](./media/windows-service-installer-properties.png "Windows hizmeti yükleyicisi özellikleri")
 
 9. **ProjectInstaller**için **Tasarım** görünümünde, bir görsel C# proje Için **Serviceprocessınstaller1** veya Visual Basic projesi için **Serviceprocessınstaller1** ' i seçin, sonra kısayol menüsünden **Özellikler** ' i seçin. . Özelliğini, <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A> açılan listeden <xref:System.ServiceProcess.ServiceAccount.LocalSystem> olarak ayarlayın.
 
@@ -470,7 +470,7 @@ Her bir Windows hizmetinin, **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Servic
 
 Windows hizmetini oluşturduğunuza göre, artık yükleyebilirsiniz. Bir Windows hizmetini yüklemek için, yüklendiği bilgisayarda yönetici kimlik bilgilerine sahip olmanız gerekir.
 
-1. Yönetim kimlik bilgileriyle [Visual Studio için geliştirici komut istemi](https://docs.microsoft.com/dotnet/framework/tools/developer-command-prompt-for-vs) açın. Windows **Başlat** menüsünde, Visual Studio klasöründeki **vs 2017 için geliştirici komut istemi** ' yi seçin ve > ardından kısayol menüsünde**yönetici olarak çalıştır** ' ı seçin.
+1. Yönetim kimlik bilgileriyle [Visual Studio için geliştirici komut istemi](https://docs.microsoft.com/dotnet/framework/tools/developer-command-prompt-for-vs) açın. Windows **Başlat** menüsünde, Visual Studio klasöründeki **vs 2017 için geliştirici komut istemi** ' **yi seçin ve** > ardından kısayol menüsünde**yönetici olarak çalıştır** ' ı seçin.
 
 2. **Visual Studio için geliştirici komut istemi** penceresinde, projenizin çıkışını içeren klasöre gidin (varsayılan olarak, projenizin *\Bin\Debug* alt dizininde).
 
@@ -497,7 +497,7 @@ Daha fazla bilgi için [nasıl yapılır: Hizmetleri](how-to-install-and-uninsta
 
      Hizmetinizi, sizin için ayarladığınız görünen ada göre alfabetik olarak görüntülenen **Hizmetler**bölümünde görmeniz gerekir.
 
-     ![Hizmetler penceresinde MyNewService.](media/windowsservices-serviceswindow.PNG)
+     ![Hizmetler penceresinde MyNewService.](./media/windowsservices-serviceswindow.PNG)
 
 2. Hizmeti başlatmak için hizmetin kısayol menüsünden **Başlat** ' ı seçin.
 
@@ -516,7 +516,7 @@ Daha fazla bilgi için [nasıl yapılır: Hizmetleri](how-to-install-and-uninsta
 
 3. **MyNewLog** listesini bulun (veya komut satırı bağımsız değişkenleri ekleme yordamını Izlediyseniz **MyLogFile1** ) ve genişletin. Hizmetinizin gerçekleştirdiği iki eylem (başlatma ve durdurma) için girişleri görmeniz gerekir.
 
-     ![Olay günlüğü girişlerini görmek için Olay Görüntüleyicisi kullanın](media/windows-service-event-viewer.png)
+     ![Olay günlüğü girişlerini görmek için Olay Görüntüleyicisi kullanın](./media/windows-service-event-viewer.png)
 
 ## <a name="clean-up-resources"></a>Kaynakları temizleme
 

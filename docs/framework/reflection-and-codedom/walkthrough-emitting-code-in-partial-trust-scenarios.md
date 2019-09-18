@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c45be261-2a9d-4c4e-9bd6-27f0931b7d25
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1bf244271010a7eb47a6c7b283a84c405108d803
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 002434cf51b221a456c8752b5b1388912f875a28
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70041461"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045749"
 ---
 # <a name="walkthrough-emitting-code-in-partial-trust-scenarios"></a>İzlenecek yol: Kısmi Güven Senaryolarında Kod Yayma
 
@@ -35,13 +35,13 @@ Bu izlenecek yol aşağıdaki görevleri gösterir:
 - [Kısmen güvenilen kodu test etmek için basit bir korumalı alan ayarlama](#Setting_up).
 
   > [!IMPORTANT]
-  > Bu, kısmi güvende kodla denemeler yapmanın basit bir yoludur. Gerçekten güvenilmeyen konumlardan gelen kodu çalıştırmak için bkz [. nasıl yapılır: Bir korumalı alanda](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)kısmen güvenilen kodu çalıştırın.
+  > Bu, kısmi güvende kodla denemeler yapmanın basit bir yoludur. Gerçekten güvenilmeyen konumlardan gelen kodu çalıştırmak için bkz [. nasıl yapılır: Bir korumalı alanda](../misc/how-to-run-partially-trusted-code-in-a-sandbox.md)kısmen güvenilen kodu çalıştırın.
 
 - [Kısmen güvenilen uygulama etki alanlarında kod çalıştırma](#Running_code).
 
 - [Kısmi güvende kodu yaymak ve yürütmek için anonim olarak barındırılan dinamik yöntemler kullanma](#Using_methods).
 
-Kısmi güven senaryolarında kod yayma hakkında daha fazla bilgi için, bkz. [yansıma yayma Içindeki güvenlik sorunları](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md).
+Kısmi güven senaryolarında kod yayma hakkında daha fazla bilgi için, bkz. [yansıma yayma Içindeki güvenlik sorunları](security-issues-in-reflection-emit.md).
 
 Bu yordamlarda gösterilen kodun tüm listesi için bu izlenecek yolun sonundaki [örnek bölümüne](#Example) bakın.
 
@@ -71,7 +71,7 @@ Aşağıdaki yordam, yayımlanmış kodun yalnızca ortak türlerin ortak üyele
 2. Uygulama etki <xref:System.AppDomainSetup> alanını bir uygulama yolu ile başlatmak için bir nesne oluşturun.
 
     > [!IMPORTANT]
-    > Kolaylık olması için, bu kod örneği geçerli klasörü kullanır. Aslında Internet 'ten gelen kodu çalıştırmak için, güvenilir olmayan kod [için nasıl yapılır: Bir korumalı alanda](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)kısmen güvenilen kodu çalıştırın.
+    > Kolaylık olması için, bu kod örneği geçerli klasörü kullanır. Aslında Internet 'ten gelen kodu çalıştırmak için, güvenilir olmayan kod [için nasıl yapılır: Bir korumalı alanda](../misc/how-to-run-partially-trusted-code-in-a-sandbox.md)kısmen güvenilen kodu çalıştırın.
 
     [!code-csharp[HowToEmitCodeInPartialTrust#3](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#3)]
     [!code-vb[HowToEmitCodeInPartialTrust#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#3)]
@@ -225,5 +225,5 @@ Bu karşılaştırma <xref:System.Security.Permissions.ReflectionPermissionFlag.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Yansıma Yaymadaki Güvenlik Sorunları](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)
-- [Nasıl yapılır: Bir korumalı alanda kısmen güvenilen kod Çalıştır](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)
+- [Yansıma Yaymadaki Güvenlik Sorunları](security-issues-in-reflection-emit.md)
+- [Nasıl yapılır: Bir korumalı alanda kısmen güvenilen kod Çalıştır](../misc/how-to-run-partially-trusted-code-in-a-sandbox.md)

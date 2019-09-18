@@ -16,21 +16,21 @@ helpviewer_keywords:
 ms.assetid: 21dc2169-947d-453a-b0e2-3dac3ba0cc9f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6805385ec21deb8748354647ab0f09b3a51353fa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a1e214266b66f390fecffe802270a4181a6d7a7f
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61754420"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052693"
 ---
 # <a name="how-to-use-tracesource-and-filters-with-trace-listeners"></a>Nasıl yapılır: İz Dinleyicileri ile TraceSource ve Filtreler Kullanma
-.NET Framework 2.0 sürümünde yeni özelliklerden biri, Gelişmiş bir izleme sistemidir. Temel değiştirilmez: izleme iletileri rapor verilerini bir ilişkili çıkış Orta dinleyici için anahtarlar aracılığıyla gönderilir. Sürüm 2.0 için birincil bir fark var izlemeleri örneklerini başlatılabilir mı <xref:System.Diagnostics.TraceSource> sınıfı. <xref:System.Diagnostics.TraceSource> bir Gelişmiş izleme sistemi olarak çalışmaya yöneliktir ve eski yerine statik yöntemleri kullanılabilir <xref:System.Diagnostics.Trace> ve <xref:System.Diagnostics.Debug> izleme sınıfları. Tanıdık <xref:System.Diagnostics.Trace> ve <xref:System.Diagnostics.Debug> sınıfları yine de mevcut, ancak kullanmak için önerilen yöntemdir <xref:System.Diagnostics.TraceSource> izleme sınıfı.  
+.NET Framework sürüm 2,0 ' deki yeni özelliklerden biri, gelişmiş bir izleme sistemidir. Temel şirket içi değiştirilmez: izleme iletileri, verileri ilişkili bir çıkış ortamına rapor eden, dinleyicilerine anahtarlar aracılığıyla gönderilir. Sürüm 2,0 ' in birincil bir farkı, izlemelerin <xref:System.Diagnostics.TraceSource> sınıf örnekleri aracılığıyla başlatılabiliyordu. <xref:System.Diagnostics.TraceSource>, gelişmiş bir izleme sistemi olarak işlevine yöneliktir ve eski <xref:System.Diagnostics.Trace> ve <xref:System.Diagnostics.Debug> izleme sınıflarının statik yöntemlerinin yerine kullanılabilir. Tanıdık <xref:System.Diagnostics.Trace> <xref:System.Diagnostics.TraceSource> ve <xref:System.Diagnostics.Debug> sınıfları hala mevcuttur, ancak önerilen uygulama, izleme için sınıfını kullanmaktır.  
   
- Bu konuda kullanımını açıklayan bir <xref:System.Diagnostics.TraceSource> uygulama yapılandırma dosyası ile birlikte.  İzleme kullanarak önerilmez olsa da, mümkündür bir <xref:System.Diagnostics.TraceSource> kullanmadan bir yapılandırma dosyası. Bir yapılandırma dosyası olmadan izleme hakkında daha fazla bilgi için bkz: [nasıl yapılır: İzleme kaynakları oluşturma ve başlatma](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-sources.md).  
+ Bu konuda, bir uygulama yapılandırma dosyası <xref:System.Diagnostics.TraceSource> ile bağlanmış bir kullanımı açıklanmaktadır.  Bir yapılandırma dosyası <xref:System.Diagnostics.TraceSource> kullanılmadan ' ı kullanarak izlemek mümkün olmasa da, kullanılması önerilmez. Yapılandırma dosyası olmadan izleme hakkında bilgi için bkz [. nasıl yapılır: Izleme kaynaklarını](how-to-create-and-initialize-trace-sources.md)oluşturun ve başlatın.  
   
-### <a name="to-create-and-initialize-your-trace-source"></a>Oluşturup, iz kaynağını başlatmak için  
+### <a name="to-create-and-initialize-your-trace-source"></a>İzleme kaynağınızı oluşturmak ve başlatmak için  
   
-1. İzleme ile uygulamada ölçümlü izleme yapma ilk adımı, bir izleme kaynağı oluşturmaktır. Çeşitli bileşenleri ile büyük projelerinde, her bileşen için ayrı bir iz oluşturabilirsiniz. Önerilen uygulama izleme kaynağı adı için uygulama adı kullanmaktır. Bu farklı izlemeleri ayrı tutmak kolaylaştırır. Aşağıdaki kod yeni bir izleme kaynağı oluşturur (`mySource)` ve bir yöntemi çağıran (`Activity1`) bu olayları izler.  İzleme iletileri tarafından varsayılan İzleme dinleyicisi yazılır.  
+1. İzlemeyi kullanarak bir uygulamayı izlemenin ilk adımı, izleme kaynağı oluşturmaktır. Çeşitli bileşenlere sahip büyük projelerde her bir bileşen için ayrı bir izleme kaynağı oluşturabilirsiniz. Önerilen yöntem, izleme kaynağı adı için uygulama adını kullanmaktır. Bu, farklı izlemeleri ayrı tutmaya daha kolay hale getirir. Aşağıdaki kod yeni bir izleme kaynağı oluşturur (`mySource)` ve olayları izleyen bir yöntemi (`Activity1`) çağırır.  İzleme iletileri varsayılan izleme dinleyicisi tarafından yazılır.  
   
     ```csharp
     using System;  
@@ -60,9 +60,9 @@ ms.locfileid: "61754420"
     }  
     ```  
   
-### <a name="to-create-and-initialize-trace-listeners-and-filters"></a>Oluşturma ve izleme dinleyicilerine ve filtreleri Başlat  
+### <a name="to-create-and-initialize-trace-listeners-and-filters"></a>İzleme dinleyicileri ve filtreleri oluşturmak ve başlatmak için  
   
-1. İlk yordam kodunda programlı olarak herhangi bir izleme dinleyicilerine veya filtreleri tanımlamaz. İzleme iletileri için varsayılan İzleme dinleyicisi yazılmakta olan tek başına kod sonuçlanır. Belirli izleme dinleyicilerine ve bunların ilişkili filtrelerini yapılandırmak için uygulamanızın adına karşılık gelen yapılandırma dosyasını düzenleyin. Bu dosyada ekleyebilir veya bir dinleyiciyi kaldırmak, özellikleri ve filtresi için bir dinleyici ayarlayın veya dinleyicileri kaldırabilirsiniz. Aşağıdaki yapılandırma dosyası örneği nasıl bir konsol iz dinleyicisi ve bir metin yazıcı İzleme dinleyicisi önceki yordamda oluşturduğunuz izleme kaynağının başlatılacağını gösterir. İz dinleyicilerini yapılandırmaya ek olarak yapılandırma dosyasının her iki dinleyici için filtreler oluşturur ve iz kaynağı için bir kaynak anahtarı oluşturur. İki teknik İzleyici dinleyiciler eklemek için gösterilmektedir: dinleyiciyi doğrudan izleme kaynağına ekleme ve paylaşılan dinleyici koleksiyonuna bir dinleyici ve sonra bunu adıyla izleme kaynağına ekleme. İki dinleyici için belirlenen filtrelere farklı kaynak düzeyleri atanır. Bu, bazı iletilerin iki dinleyiciden yalnızca biri tarafından yazılmasıyla sonuçlanır.  
+1. İlk yordamdaki kod, izleme dinleyicilerini veya filtrelerini program aracılığıyla tanımlamaz. Kod, izleme iletilerinin yalnızca varsayılan izleme dinleyicisine yazılmasıyla sonuçlanır. Belirli izleme dinleyicilerini ve bunlarla ilişkili filtreleri yapılandırmak için uygulamanızın adına karşılık gelen yapılandırma dosyasını düzenleyin. Bu dosyada, bir dinleyici ekleyebilir veya kaldırabilir, bir dinleyici için özellikleri ve filtreyi ayarlayabilir ya da dinleyicileri kaldırabilirsiniz. Aşağıdaki yapılandırma dosyası örneği, bir konsol İzleme dinleyicisinin ve önceki yordamda oluşturulan izleme kaynağı için bir metin yazıcısı İzleme dinleyicisinin nasıl başlatılacağını göstermektedir. İzleme dinleyicilerini yapılandırmanın yanı sıra, yapılandırma dosyası her iki dinleyici için de filtreler oluşturur ve izleme kaynağı için bir kaynak anahtarı oluşturur. İzleme dinleyicileri eklemek için iki teknik gösterilmektedir: dinleyiciyi doğrudan izleme kaynağına ekleme ve paylaşılan dinleyici koleksiyonuna bir dinleyici ekleme ve ardından bunu bir ad ile izleme kaynağına ekleme. İki dinleyici için tanımlanan filtreler farklı kaynak düzeyleriyle başlatılır. Bu, bazı iletilerin yalnızca biri iki dinleyiciyle yazılmasıyla sonuçlanır.  
   
     ```xml  
     <configuration>  
@@ -97,9 +97,9 @@ ms.locfileid: "61754420"
     </configuration>  
     ```  
   
-### <a name="to-change-the-level-at-which-a-listener-writes-a-trace-message"></a>Başlangıçtan bir dinleyici izleme iletisi Yazar düzeyi değiştirme  
+### <a name="to-change-the-level-at-which-a-listener-writes-a-trace-message"></a>Bir dinleyicinin bir izleme iletisi yazdığı düzeyi değiştirmek için  
   
-1. Yapılandırma dosyası izleme kaynağının ayarlarını uygulama başlatılır anda başlatır. Bu ayarları değiştirmek için yapılandırma dosyasını değiştirin ve uygulamayı yeniden başlatın veya gerekir kullanarak uygulamayı programlama yoluyla Yenile <xref:System.Diagnostics.Trace.Refresh%2A?displayProperty=nameWithType> yöntemi. Uygulama, kullanıcı tarafından belirtilen herhangi bir ayarı geçersiz kılmak için yapılandırma dosyasının belirlediği özellikleri dinamik olarak değiştirebilirsiniz.  Örneğin, güvence altına almak kritik iletileri bir metin dosyası, geçerli yapılandırma ayarlarından bağımsız olarak her zaman gönderilen isteyebilirsiniz.  
+1. Yapılandırma dosyası, uygulamanın başlatıldığı sırada izleme kaynağı için ayarları başlatır. Bu ayarları değiştirmek için yapılandırma dosyasını değiştirmeniz ve uygulamayı yeniden başlatmanız ya da <xref:System.Diagnostics.Trace.Refresh%2A?displayProperty=nameWithType> yöntemi kullanarak uygulamayı programlı olarak yenilemeniz gerekir. Uygulama, Kullanıcı tarafından belirtilen ayarları geçersiz kılmak için yapılandırma dosyası tarafından ayarlanan özellikleri dinamik olarak değiştirebilir.  Örneğin, geçerli yapılandırma ayarlarından bağımsız olarak, kritik iletilerin her zaman bir metin dosyasına gönderilmesini güvence altına almak isteyebilirsiniz.  
   
     ```csharp
     using System;  
@@ -169,5 +169,5 @@ ms.locfileid: "61754420"
 - <xref:System.Diagnostics.TextWriterTraceListener>
 - <xref:System.Diagnostics.ConsoleTraceListener>
 - <xref:System.Diagnostics.EventTypeFilter>
-- [Nasıl yapılır: Oluşturma ve izleme kaynaklarını başlatma](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-sources.md)
-- [İzleme Dinleyicileri](../../../docs/framework/debug-trace-profile/trace-listeners.md)
+- [Nasıl yapılır: Izleme kaynakları oluşturma ve başlatma](how-to-create-and-initialize-trace-sources.md)
+- [İzleme Dinleyicileri](trace-listeners.md)

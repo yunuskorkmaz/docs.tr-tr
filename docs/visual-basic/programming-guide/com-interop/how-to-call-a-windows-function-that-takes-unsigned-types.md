@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: (Visual Basic) imzalanmamış türler isteyen bir Windows işlevi çağırma'
+title: 'Nasıl yapılır: Imzasız türleri alan bir Windows Işlevi çağırma (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Windows functions [Visual Basic], calling
@@ -14,28 +14,28 @@ helpviewer_keywords:
 - data types [Visual Basic], numeric
 - unsigned types [Visual Basic], using
 ms.assetid: c2c0e712-8dc2-43b9-b4c6-345fbb02e7ce
-ms.openlocfilehash: d1a679242f89c17e58a837ac2d356e1594972fb3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 97075fb6149ed8c0ce06318d0e5bb6f01b841f30
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62022369"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053325"
 ---
-# <a name="how-to-call-a-windows-function-that-takes-unsigned-types-visual-basic"></a>Nasıl yapılır: (Visual Basic) imzalanmamış türler isteyen bir Windows işlevi çağırma
+# <a name="how-to-call-a-windows-function-that-takes-unsigned-types-visual-basic"></a>Nasıl yapılır: Imzasız türleri alan bir Windows Işlevi çağırma (Visual Basic)
 
-Bir sınıf, modül veya işaretsiz tamsayı türlerinin üyelerini içeren yapı kullanıyorsa, Visual Basic ile bu üyeleri erişebilir.
+İşaretsiz tamsayı türleri üyelerine sahip bir sınıf, modül veya yapı kullanıyorsanız, bu üyelere Visual Basic erişebilirsiniz.
 
-### <a name="to-call-a-windows-function-that-takes-an-unsigned-type"></a>Bir işaretsiz türe almayan bir Windows işlevi çağırma
+## <a name="to-call-a-windows-function-that-takes-an-unsigned-type"></a>İşaretsiz bir tür alan bir Windows işlevini çağırmak için
 
-1. Kullanım bir [Declare Deyimi'nin](../../../visual-basic/language-reference/statements/declare-statement.md) hangi kitaplığı işlevi tutar, bu kitaplıkta adı nedir, kendi çağrı sırası nedir ve nasıl çağırırken dizeleri dönüştürmek Visual Basic söylemek için.
+1. İşlevin hangi kitaplıkta bulunduğunu, adının bu kitaplıkta ne olduğunu, ne zaman arama sırasının ne olduğunu ve çağrı sırasında dizelerin nasıl dönüştürüleceğini Visual Basic söylemek için bir [Declare bildirimi](../../../visual-basic/language-reference/statements/declare-statement.md) kullanın.
 
-2. İçinde `Declare` deyimi, kullanım `UInteger`, `ULong`, `UShort`, veya `Byte` uygun şekilde her bir parametreye bir işaretsiz türe sahip.
+2. `ULong` `UShort` İfadesinde,`UInteger`,, veya`Byte` imzasız bir tür ile her parametreye uygun şekilde kullanın. `Declare`
 
-3. Windows işlev adlarını ve değerlerini kullanır sabitlerin bulmak için arama için belgelerine bakın. Bunların çoğu WinUser.h dosyasında tanımlanır.
+3. Kullandığı sabitlerin adlarını ve değerlerini bulmak için, aradığınız Windows işlevinin belgelerini inceleyin. Bunlardan birçoğu WinUser. h dosyasında tanımlanmıştır.
 
-4. Kodunuzu gerekli sabitlerle bildirin. 32-bit işeritsiz değerler birçok Windows sabittir ve bunlar bildirmelidir `As UInteger`.
+4. Kodunuzda gerekli sabitleri bildirin. Birçok Windows sabiti 32 bitlik işaretsiz değerlerdir ve bunları `As UInteger`bildirmeniz gerekir.
 
-5. İşlevi, normal bir şekilde çağırın. Aşağıdaki örnek Windows işlevini çağırır `MessageBox`, işaretsiz tamsayı bağımsız değişken alır.
+5. İşlevi normal şekilde çağırın. Aşağıdaki örnek, işaretsiz bir tamsayı bağımsız `MessageBox`değişkeni alan Windows işlevini çağırır.
 
     ```vb
     Public Class windowsMessage
@@ -60,7 +60,7 @@ Bir sınıf, modül veya işaretsiz tamsayı türlerinin üyelerini içeren yap�
     End Class
     ```
 
-     İşlevi test edebilirsiniz `messageThroughWindows` aşağıdaki kod ile.
+     İşlevi `messageThroughWindows` aşağıdaki kodla test edebilirsiniz.
 
     ```vb
     Public Sub consumeWindowsMessage()
@@ -70,13 +70,13 @@ Bir sınıf, modül veya işaretsiz tamsayı türlerinin üyelerini içeren yap�
     ```
 
     > [!CAUTION]
-    > `UInteger`, `ULong`, `UShort`, Ve `SByte` veri türleri parçası [dil bağımsızlığı ve dilden bağımsız bileşenler](../../../standard/language-independence-and-language-independent-components.md) (CLS), CLS uyumlu kod bir bileşen kullanamıyor. Bu nedenle, bunları kullanır.
+    > `UInteger` ,`ULong`, Ve veri`SByte` türleri [Dil bağımsızlığı ve dilden bağımsız bileşenlerin](../../../standard/language-independence-and-language-independent-components.md) (CLS) bir parçası değildir, bu nedenle CLS uyumlu kod bunları kullanan bir bileşeni tüketemez. `UShort`
 
     > [!IMPORTANT]
-    > Windows uygulama programlama arabirimi gibi (API), yönetilmeyen kod çağırmak, olası güvenlik risklerini kodunuza kullanıma sunar.
+    > Windows uygulama programlama arabirimi (API) gibi yönetilmeyen koda çağrı yapmak, kodunuzu olası güvenlik risklerine sunar.
 
     > [!IMPORTANT]
-    > Windows API çağırmak, kısmi güven durumlarında yürütme şeklinizi etkileyebilecek olan yönetilmeyen kod iznini gerektirir. Daha fazla bilgi için <xref:System.Security.Permissions.SecurityPermission> ve [kod erişim izinleri](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/h846e9b3(v=vs.100)).
+    > Windows API 'sinin çağrılması, yönetilmeyen kod iznini gerektirir, bu da kısmi güven durumlarında yürütmesini etkileyebilir. Daha fazla bilgi için bkz <xref:System.Security.Permissions.SecurityPermission> . ve [kod erişim izinleri](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/h846e9b3(v=vs.100)).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

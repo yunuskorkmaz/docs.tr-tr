@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: db985bec-5942-40ec-b13a-771ae98623dc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5dbbf0f71eaefd0ef7fc7f2b5e69e47ce7b8db26
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 21d0425de072c91cf7111162e405f826e00e849d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894885"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046102"
 ---
 # <a name="dynamically-loading-and-using-types"></a>Dinamik Olarak Yükleme ve Türleri Kullanma
 Yansıma, örtülü geç bağlamayı uygulamak için dil derleyicileri tarafından kullanılan altyapıyı sağlar. Bağlama, benzersiz olarak belirtilen bir türe karşılık gelen bildirimi (yani, uygulama) bulma işlemidir. Bu işlem, derleme süresi yerine çalışma zamanında gerçekleştiğinde, geç bağlama olarak adlandırılır. Visual Basic kodunuzda örtük geç bağlamayı kullanmanıza izin verir; Visual Basic derleyici, nesne türünü almak için yansıma kullanan bir yardımcı yöntemi çağırır. Yardımcı yöntemine geçirilen bağımsız değişkenler, uygun yöntemin çalışma zamanında çağrılmasına neden olur. Bu bağımsız değişkenler, yöntemi çağırmak için gereken örnek (bir nesne), çağrılan metodun adı (bir dize) ve çağrılan yönteme geçirilen bağımsız değişkenler (bir nesne dizisi).  
@@ -102,5 +102,5 @@ End Module
 
 - <xref:System.Type.InvokeMember%2A?displayProperty=nameWithType>
 - <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>
-- [Tür Bilgilerini Görüntüleme](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)
+- [Tür Bilgilerini Görüntüleme](viewing-type-information.md)
 - [.NET Framework dönüştürme türü](../../standard/base-types/type-conversion.md)

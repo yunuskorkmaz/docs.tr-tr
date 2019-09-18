@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0f8bf8fa-b993-478f-87ab-1a1a7976d298
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f7b1f6798f1aaa778eaf95de996584848c672351
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f2bdaef52bbc4cac0abfcbf8724f3c5c602bc8f0
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69956679"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045795"
 ---
 # <a name="security-issues-in-reflection-emit"></a>Yansıma Yaymadaki Güvenlik Sorunları
 .NET Framework, her biri kendi güvenlik sorunlarıyla birlikte Microsoft ara dili 'ni (MSIL) yaymanın üç yolunu sunar:  
@@ -36,7 +36,7 @@ ms.locfileid: "69956679"
   
 <a name="Dynamic_Assemblies"></a>   
 ## <a name="dynamic-assemblies"></a>Dinamik derlemeler  
- Dinamik derlemeler, <xref:System.AppDomain.DefineDynamicAssembly%2A?displayProperty=nameWithType> yönteminin aşırı yüklemeleri kullanılarak oluşturulur. Bu yöntemin en fazla aşırı yüklemesi, makine genelinde güvenlik ilkesinin eliminasyon nedeniyle .NET Framework 4 ' te kullanım dışıdır. (Bkz. [güvenlik değişiklikleri](../../../docs/framework/security/security-changes.md).) Kalan aşırı yüklemeler, güven düzeyinden bağımsız olarak herhangi bir kod tarafından yürütülebilir. Bu aşırı yüklemeler iki gruba ayrılır: oluşturulduğu sırada dinamik derlemeye uygulanacak özniteliklerin bir listesini ve bunları belirtenler. Derleme için saydamlık modelini belirtmezseniz, <xref:System.Security.SecurityRulesAttribute> bu özniteliği oluşturduğunuzda uyguladığınızda, saydam model, yayma derlemesinden devralınır.  
+ Dinamik derlemeler, <xref:System.AppDomain.DefineDynamicAssembly%2A?displayProperty=nameWithType> yönteminin aşırı yüklemeleri kullanılarak oluşturulur. Bu yöntemin en fazla aşırı yüklemesi, makine genelinde güvenlik ilkesinin eliminasyon nedeniyle .NET Framework 4 ' te kullanım dışıdır. (Bkz. [güvenlik değişiklikleri](../security/security-changes.md).) Kalan aşırı yüklemeler, güven düzeyinden bağımsız olarak herhangi bir kod tarafından yürütülebilir. Bu aşırı yüklemeler iki gruba ayrılır: oluşturulduğu sırada dinamik derlemeye uygulanacak özniteliklerin bir listesini ve bunları belirtenler. Derleme için saydamlık modelini belirtmezseniz, <xref:System.Security.SecurityRulesAttribute> bu özniteliği oluşturduğunuzda uyguladığınızda, saydam model, yayma derlemesinden devralınır.  
   
 > [!NOTE]
 > Oluşturulduktan sonra dinamik derleme için uyguladığınız öznitelikler <xref:System.Reflection.Emit.AssemblyBuilder.SetCustomAttribute%2A> yöntemi kullanılarak, derleme diske kaydedilinceye ve yeniden belleğe yükleninceye kadar etkili olmaz.  
@@ -139,7 +139,7 @@ ms.locfileid: "69956679"
   
 <a name="Version_Information"></a>   
 ## <a name="version-information"></a>Sürüm Bilgileri  
- .NET Framework 4 ' te başlayarak, makine genelinde güvenlik ilkesi ortadan kalkar ve güvenlik saydamlığı varsayılan zorlama mekanizması haline gelir. Bkz. [güvenlik değişiklikleri](../../../docs/framework/security/security-changes.md).  
+ .NET Framework 4 ' te başlayarak, makine genelinde güvenlik ilkesi ortadan kalkar ve güvenlik saydamlığı varsayılan zorlama mekanizması haline gelir. Bkz. [güvenlik değişiklikleri](../security/security-changes.md).  
   
  .NET Framework 2,0 Service Pack 1 ' den başlayarak, <xref:System.Security.Permissions.ReflectionPermission> <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType> dinamik derlemeler ve dinamik yöntemler yayırken bayrağı artık gerekli değildir. Bu bayrak, .NET Framework önceki tüm sürümlerinde gereklidir.  
   
@@ -151,9 +151,9 @@ ms.locfileid: "69956679"
  Son olarak, .NET Framework 2,0 SP1 anonim olarak barındırılan yöntemler sunar.  
   
 ### <a name="obtaining-information-on-types-and-members"></a>Türler ve Üyeler hakkında bilgi edinme  
- .NET Framework 2,0 ' den başlayarak, özel türler ve Üyeler hakkında bilgi edinmek için izin gerekmez. Yansıma, dinamik yöntemleri yayma için gereken bilgileri almak için kullanılır. Örneğin, <xref:System.Reflection.MethodInfo> nesneler Yöntem çağrılarını yayma için kullanılır. .NET Framework önceki sürümleri <xref:System.Security.Permissions.ReflectionPermission> <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=nameWithType> bayrağıyla gerektirir. Daha fazla bilgi için bkz. [yansıma Için güvenlik konuları](../../../docs/framework/reflection-and-codedom/security-considerations-for-reflection.md).  
+ .NET Framework 2,0 ' den başlayarak, özel türler ve Üyeler hakkında bilgi edinmek için izin gerekmez. Yansıma, dinamik yöntemleri yayma için gereken bilgileri almak için kullanılır. Örneğin, <xref:System.Reflection.MethodInfo> nesneler Yöntem çağrılarını yayma için kullanılır. .NET Framework önceki sürümleri <xref:System.Security.Permissions.ReflectionPermission> <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=nameWithType> bayrağıyla gerektirir. Daha fazla bilgi için bkz. [yansıma Için güvenlik konuları](security-considerations-for-reflection.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Yansımayla İlgili Güvenlik Konuları](../../../docs/framework/reflection-and-codedom/security-considerations-for-reflection.md)
-- [Dinamik Yöntemleri ve Derlemeleri Yayma](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)
+- [Yansımayla İlgili Güvenlik Konuları](security-considerations-for-reflection.md)
+- [Dinamik Yöntemleri ve Derlemeleri Yayma](emitting-dynamic-methods-and-assemblies.md)

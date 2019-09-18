@@ -13,30 +13,30 @@ helpviewer_keywords:
 ms.assetid: a2b86b63-08b2-4943-b344-3c2cf46ccd31
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f0ecb05dba70dc9c8aba7f04928fd0ab49c900c8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0bea73a30cb103f0e72caf73a633229a0719dc6c
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61873957"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052322"
 ---
 # <a name="reportavoncomrelease-mda"></a>reportAvOnComRelease MDA
-`reportAvOnComRelease` Yönetilen hata ayıklama Yardımcısı (MDA) kullanıcı başvuru sayım hataları COM birlikte çalışma ve kullanarak gerçekleştirilirken nedeniyle özel durumlar oluşturulduğunda etkinleştirilir <xref:System.Runtime.InteropServices.Marshal.Release%2A> veya <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A> yöntemi ham COM çağrıları ile birlikte.  
+Yönetilen `reportAvOnComRelease` hata ayıklama Yardımcısı (MDA), com birlikte çalışma gerçekleştirirken ve ham com çağrılarıyla birleştirilmiş <xref:System.Runtime.InteropServices.Marshal.Release%2A> veya <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A> yöntemi kullanılarak kullanıcı başvurusu sayma hataları nedeniyle özel durumlar oluştuğunda etkinleştirilir.  
   
 ## <a name="symptoms"></a>Belirtiler  
- Erişim ihlalleri ve Bellek Bozulması.  
+ Erişim ihlalleri ve bellek bozulması.  
   
 ## <a name="cause"></a>Sebep  
- Bazen, kullanıcı başvuru sayım hataları COM birlikte çalışma ve kullanarak gerçekleştirilirken nedeniyle bir özel durum <xref:System.Runtime.InteropServices.Marshal.Release%2A> veya <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A> yöntemi ham COM çağrıları ile birlikte. Normalde, bunu bir erişim ihlali CLR'de neden olacağından bu özel durum atılır yükseltilebildiği. Bu yardımcı etkinleştirildiğinde, bu tür özel durumların algıladı ve yalnızca atılmadan yerine bildirdi.  
+ Bazen, com birlikte çalışma gerçekleştirirken ve ham com çağrılarıyla birleştirilmiş <xref:System.Runtime.InteropServices.Marshal.Release%2A> veya <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A> yöntemi kullanılarak Kullanıcı başvuruları saymasına neden olan bir özel durum oluşturulur. Normalde bu özel durum atılır çünkü bu durum, CLR 'de bir erişim ihlaline neden olur ve bunu aşağı doğru hale getiriyor. Bu yardımcı etkin olduğunda, bu tür özel durumlar algılanmak yerine tespit edilebilir ve bildirilebilir.  
   
 ## <a name="resolution"></a>Çözüm  
- Başvuru sayım kod ve hataları Ara hem de nesne başvuru sayım hataları için yerel istemcileri İnceleme inceleyin.  
+ Başvuru sayma kodunuzu inceleyin ve hata sayma hataları için nesnenizin yerel istemcilerini inceleyerek hata sayısını araştırın.  
   
-## <a name="effect-on-the-runtime"></a>Çalışma zamanı üzerindeki etkisi  
- İki modu kullanılabilir. Varsa `allowAv` özniteliği `true`, erişim ihlali atılıyor gelen çalışma zamanı Yardımcısı engeller. Varsa `allowAv` olduğu `false`, varsayılan değer olan, çalışma zamanı erişim ihlali atar, ancak bir özel durum ve atılan gerektiğini belirtmek için kullanıcıya bir uyarı iletisi bildirilir.  
+## <a name="effect-on-the-runtime"></a>Çalışma zamanında etki  
+ İki mod kullanılabilir. `allowAv` Özniteliği ise`true`, yardımcı çalışma zamanının erişim ihlaline engel olmasını önler. `allowAv` Varsayılanolanise,çalışmazamanıerişimihlaliniatar,ancakbirözeldurumunoluşturulduğunuveatıldığınıgöstermekiçinkullanıcıya`false`bir uyarı iletisi bildirilir.  
   
 ## <a name="output"></a>Çıkış  
- Mümkünse, COM arabirimi işaretçisini kişinin orijinal vtable çıkış içerir. Aksi halde bir bilgi iletisi görüntülenir.  
+ Mümkünse, çıkış COM arabirimi işaretçisinin orijinal vtable 'sini içerir. Aksi takdirde, bir bilgi iletisi görüntülenir.  
   
 ## <a name="configuration"></a>Yapılandırma  
   
@@ -51,5 +51,5 @@ ms.locfileid: "61873957"
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [Yönetilen Hata Ayıklama Yardımcıları ile Hataları Tanılama](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [Birlikte Çalışma için Hazırlama](../../../docs/framework/interop/interop-marshaling.md)
+- [Yönetilen Hata Ayıklama Yardımcıları ile Hataları Tanılama](diagnosing-errors-with-managed-debugging-assistants.md)
+- [Birlikte Çalışma için Hazırlama](../interop/interop-marshaling.md)

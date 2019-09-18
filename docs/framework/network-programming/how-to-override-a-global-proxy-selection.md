@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0da481a9-b414-4230-beb0-e3ceba882fe5
-ms.openlocfilehash: e5f4dc22ad75dc4d4f7dc30f44e6ae304403ef16
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 44845fb67aac4ff9ab9dda8cf4934153c8c4f23c
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69914525"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048267"
 ---
 # <a name="how-to-override-a-global-proxy-selection"></a>Nasıl yapılır: Genel Ara Sunucu Seçimini Geçersiz Kılma
 Bu örnek, genel proxy seçimini, `www.contoso.com` bağlantı noktası 80 ' de adlı `alternateproxy` bir ara sunucu ile geçersiz kılacak bir **Web isteği** gönderir.  
@@ -34,5 +34,5 @@ req.Proxy = New WebProxy("http://alternateproxy:80/")
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Uygulama Protokolleri Kullanma](../../../docs/framework/network-programming/using-application-protocols.md)
-- [Ara Sunucu Üzerinden İnternet Erişimi](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)
+- [Uygulama Protokolleri Kullanma](using-application-protocols.md)
+- [Ara Sunucu Üzerinden İnternet Erişimi](accessing-the-internet-through-a-proxy.md)

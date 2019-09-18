@@ -7,148 +7,148 @@ helpviewer_keywords:
 ms.assetid: 926adde2-c123-452e-bf4f-4b977bf06ffb
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 07d84506a7c07bde09b3b46ea608b1874842c3ac
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 145a53363c9d7aca622ee0b1ccb2700e5984397d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64616381"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046420"
 ---
 # <a name="jit-tracing-etw-events"></a>ETW Olaylarını JIT İzleme
-<a name="top"></a> Bu olaylar, başarı veya hata just-in-time (JIT) satır içi kullanım ve JIT kuyruk çağrıları ile ilgili bilgi toplayın.  
+<a name="top"></a>Bu olaylar, tam zamanında (JıT) giriş ve JıT kuyruğu çağrılarının başarısı veya başarısızlığı ile ilgili bilgiler toplar.  
   
- JIT izleme olayları aşağıdaki iki kategoriye oluşur:  
+ JıT izleme olayları aşağıdaki iki kategoriden oluşur:  
   
-- [JIT satır içi kullanım olayları](#jit_inlining_events)  
+- [JıT olayları](#jit_inlining_events)  
   
-- [JIT Tail çağrısı olayları](#jit_tail_call_events)  
+- [JıT kuyruğu çağrı olayları](#jit_tail_call_events)  
   
 <a name="jit_inlining_events"></a>   
-## <a name="jit-inlining-events"></a>JIT satır içi kullanım olayları  
+## <a name="jit-inlining-events"></a>JıT olayları  
   
-### <a name="methodjitinliningfailed-event"></a>MethodJitInliningFailed olay  
- Aşağıdaki tabloda, düzeyi ve anahtar sözcüğü gösterir. (Daha fazla bilgi için [CLR ETW anahtar sözcükleri ve Düzeyler](../../../docs/framework/performance/clr-etw-keywords-and-levels.md).)  
+### <a name="methodjitinliningfailed-event"></a>Methodjınliningfailed olayı  
+ Aşağıdaki tabloda anahtar sözcüğü ve düzeyi gösterilmektedir. (Daha fazla bilgi için bkz. [CLR ETW anahtar sözcükleri ve düzeyleri](clr-etw-keywords-and-levels.md).)  
   
-|Olayı için anahtar sözcüğü|Düzey|  
+|Olayı yükseltmek için anahtar sözcük|Düzey|  
 |-----------------------------------|-----------|  
-|`JITTracingKeyword` (0x10)|Ayrıntılı (5)|  
+|`JITTracingKeyword`0x10|Verbose (5)|  
   
- Aşağıdaki tabloda, olay bilgileri gösterilmektedir.  
+ Aşağıdaki tabloda olay bilgileri gösterilmektedir.  
   
-|Olay|Olay Kimliği|Ne zaman gerçekleşti|  
+|Olay|Olay Kimliği|Ne zaman oluşturulur|  
 |-----------|--------------|-----------------|  
-|`MethodJitInliningFailed`|186|Satır içi kullanım JIT başarısız oldu.|  
+|`MethodJitInliningFailed`|186|JıT girişi başarısız oldu.|  
   
- Aşağıdaki tabloda, olay verilerini gösterir.  
+ Aşağıdaki tabloda olay verileri gösterilmektedir.  
   
 |Alan adı|Veri türü|Açıklama|  
 |----------------|---------------|-----------------|  
-|MethodBeingCompiledNameSpace|Kazanma: UnicodeString|Namespace yönteminin derleniyor.|  
-|MethodBeingCompiledName|Kazanma: UnicodeString|Derleniyor yöntemin adı.|  
-|MethodBeingCompiledNameSignature|Kazanma: UnicodeString|Derleniyor metodu imzası.|  
-|InlinerNamespace|Kazanma: UnicodeString|Ad alanı JIT derleyicisi yönteminin kodunu oluşturmak çalışıyor.|  
-|InlinerName|Kazanma: UnicodeString|Derleyici kod üretmek için çalışıyor yöntemin adı. Bu aynı olmayabilir `MethodBeingCompiledName` derleyici, satır içi kod çalışılıyor, `MethodBeingCompiledName` çağrı oluşturmak yerine `InlinerName`.|  
-|InlinerNameSignature|Kazanma: UnicodeString|İnliner imzası.|  
-|InlineeNamespace|Kazanma: UnicodeString|Alınanın ad alanı.|  
-|InlineeName|Kazanma: UnicodeString|Derleyici, satır içi çalışıyor yöntemi (bir çağrı oluşturma değil).|  
-|InlineeNameSignature|Kazanma: UnicodeString|Alınanın imzası.|  
-|FailAlways|Kazanma: Boolean|JIT Derleyici, satır içi kullanım için bir ipucu alınanın için her zaman başarısız olur.|  
-|FailReason|Kazanma: UnicodeString|INLINE_NEVER anlamına gelir inlining'i olmuştu belirlenen inlining'i olacak hiçbir zaman başka bir nedenle; başarılı Aksi takdirde, serbest biçimli metin.|  
-|ClrInstanceID|Kazanma: UnicodeString|CLR veya CoreCLR örneği için benzersiz kimlik.|  
+|MethodBeingCompiledNameSpace|Win: UnicodeString|Derlenmekte olan metodun ad alanı.|  
+|MethodBeingCompiledName|Win: UnicodeString|Derlenmekte olan yöntemin adı.|  
+|MethodBeingCompiledNameSignature|Win: UnicodeString|Derlenmekte olan metodun imzası.|  
+|Inlinernamespace|Win: UnicodeString|JıT derleyicisinin için kod oluşturmaya çalıştığı yöntemin ad alanı.|  
+|InlinerName|Win: UnicodeString|Derleyicinin kod oluşturmaya çalışan yöntemin adı. Bu, derleyicinin ' a çağrı `MethodBeingCompiledName` `InlinerName`oluşturmak `MethodBeingCompiledName` yerine satır içi kod almaya çalıştığı ile aynı olmayabilir.|  
+|Inlinernamesignature|Win: UnicodeString|İnoluşturucu için imza.|  
+|Inlineenamespace|Win: UnicodeString|İnlinee ad alanı.|  
+|Inlineename|Win: UnicodeString|Derleyicinin satır içine almaya çalıştığı Yöntem (bir çağrı oluşturmaz).|  
+|Inlineenamesignature|Win: UnicodeString|Inlinee için imza.|  
+|Failalyollar|Win: Boolean|JıT derleyicisine yönelik bir ipucu, inlinee için her zaman başarısız olur.|  
+|FailReason|Win: UnicodeString|INLINE_NEVER, önceki bir ıntıl denemesinin başka bir nedenden dolayı hiçbir şekilde başarısız olacağını tespit eder; Aksi takdirde, serbest biçimli metin.|  
+|ClrInstanceID|Win: UnicodeString|CLR veya CoreCLR örneği için benzersiz KIMLIK.|  
   
-### <a name="methodjitinliningsucceeded-event"></a>MethodJitInliningSucceeded olay  
- Aşağıdaki tabloda, düzeyi ve anahtar sözcüğü gösterir.  
+### <a name="methodjitinliningsucceeded-event"></a>Methodjınliningsucceeded olayı  
+ Aşağıdaki tabloda anahtar sözcüğü ve düzeyi gösterilmektedir.  
   
-|Olayı için anahtar sözcüğü|Düzey|  
+|Olayı yükseltmek için anahtar sözcük|Düzey|  
 |-----------------------------------|-----------|  
-|`JITTracingKeyword` (0x10)|Ayrıntılı (5)|  
+|`JITTracingKeyword`0x10|Verbose (5)|  
   
- Aşağıdaki tabloda, olay bilgileri gösterilmektedir.  
+ Aşağıdaki tabloda olay bilgileri gösterilmektedir.  
   
-|Olay|Olay Kimliği|Ne zaman gerçekleşti|  
+|Olay|Olay Kimliği|Ne zaman oluşturulur|  
 |-----------|--------------|-----------------|  
-|`MethodJitInliningSucceeded`|185|Satır içi kullanım yöntem başarılı oldu.|  
+|`MethodJitInliningSucceeded`|185|Yöntem geçersiz oldu.|  
   
- Aşağıdaki tabloda, olay verilerini gösterir.  
+ Aşağıdaki tabloda olay verileri gösterilmektedir.  
   
 |Alan adı|Veri türü|Açıklama|  
 |----------------|---------------|-----------------|  
-|MethodBeingCompiledNameSpace|Kazanma: UnicodeString|Ad alanı derleniyor yöntemi.|  
-|MethodBeingCompiledName|Kazanma: UnicodeString|Derlenmiş olma yöntemi adı.|  
-|MethodBeingCompiledNameSignature|Kazanma: UnicodeString|Derleniyor metodu imzası.|  
-|InlinerNamespace|Kazanma: UnicodeString|Ad alanı JIT derleyicisi yönteminin kodunu oluşturmak çalışıyor.|  
-|InlinerName|Kazanma: UnicodeString|Derleyici kod üretmek için çalışıyor yöntemin adı. Bu aynı olmayabilir `MethodBeingCompiledName` derleyici, satır içi kod çalışılıyor, `MethodBeingCompiledName` çağrı oluşturmak yerine `InlinerName`.|  
-|InlinerNameSignature|Kazanma: UnicodeString|İnliner imzası.|  
-|InlineeNamespace|Kazanma: UnicodeString|Alınanın ad alanı.|  
-|InlineeName|Kazanma: UnicodeString|Derleyici, satır içi çalışıyor yöntemi (bir çağrı oluşturma değil).|  
-|InlineeNameSignature|Kazanma: UnicodeString|Alınanın imzası.|  
-|ClrInstanceID|Kazanma: UInt16|CLR veya CoreCLR örneği için benzersiz kimlik.|  
+|MethodBeingCompiledNameSpace|Win: UnicodeString|Derlenmekte olan metodun ad alanı.|  
+|MethodBeingCompiledName|Win: UnicodeString|Derlenen yöntemin adı.|  
+|MethodBeingCompiledNameSignature|Win: UnicodeString|Derlenmekte olan metodun imzası.|  
+|Inlinernamespace|Win: UnicodeString|JıT derleyicisinin için kod oluşturmaya çalışan yöntemin ad alanı.|  
+|InlinerName|Win: UnicodeString|Derleyicinin kod oluşturmaya çalışan yöntemin adı. Bu, derleyicinin ' a çağrı `MethodBeingCompiledName` `InlinerName`oluşturmak `MethodBeingCompiledName` yerine satır içi kod almaya çalıştığı ile aynı olmayabilir.|  
+|Inlinernamesignature|Win: UnicodeString|İnoluşturucu için imza.|  
+|Inlineenamespace|Win: UnicodeString|İnlinee ad alanı.|  
+|Inlineename|Win: UnicodeString|Derleyicinin satır içine almaya çalıştığı Yöntem (bir çağrı oluşturmaz).|  
+|Inlineenamesignature|Win: UnicodeString|Inlinee için imza.|  
+|ClrInstanceID|Win: UInt16|CLR veya CoreCLR örneği için benzersiz KIMLIK.|  
   
  [Başa dön](#top)  
   
 <a name="jit_tail_call_events"></a>   
-## <a name="jit-tail-call-events"></a>JIT Tail çağrısı olayları  
+## <a name="jit-tail-call-events"></a>JıT kuyruğu çağrı olayları  
   
-### <a name="methodjittailcallfailed-event"></a>MethodJITTailCallFailed olay  
- Aşağıdaki tabloda, düzeyi ve anahtar sözcüğü gösterir.  
+### <a name="methodjittailcallfailed-event"></a>Methodjbir Callcallfailed olayı  
+ Aşağıdaki tabloda anahtar sözcüğü ve düzeyi gösterilmektedir.  
   
-|Olayı için anahtar sözcüğü|Düzey|  
+|Olayı yükseltmek için anahtar sözcük|Düzey|  
 |-----------------------------------|-----------|  
-|`JITTracingKeyword` (0x10)|Ayrıntılı (5)|  
+|`JITTracingKeyword`0x10|Verbose (5)|  
   
- Aşağıdaki tabloda, olay bilgileri gösterilmektedir.  
+ Aşağıdaki tabloda olay bilgileri gösterilmektedir.  
   
-|Olay|Olay Kimliği|Ne zaman gerçekleşti|  
+|Olay|Olay Kimliği|Ne zaman oluşturulur|  
 |-----------|--------------|-----------------|  
 |`MethodJitTailCallFailed`|189|Yöntem tail çağrısı başarısız oldu.|  
   
- Aşağıdaki tabloda, olay verilerini gösterir.  
+ Aşağıdaki tabloda olay verileri gösterilmektedir.  
   
 |Alan adı|Veri türü|Açıklama|  
 |----------------|---------------|-----------------|  
-|MethodBeingCompiledNameSpace|Kazanma: UnicodeString|Namespace yönteminin derleniyor.|  
-|MethodBeingCompiledName|Kazanma: UnicodeString|Derleniyor yöntemin adı.|  
-|MethodBeingCompiledNameSignature|Kazanma: UnicodeString|Derleniyor metodu imzası.|  
-|CallerNamespace|Kazanma: UnicodeString|Ad alanı JIT derleyicisi yönteminin kodunu oluşturmak çalışıyor.|  
-|CallerName|Kazanma: UnicodeString|Derleyici kod üretmek için çalışıyor yöntemin adı.|  
-|CallerNameSignature|Kazanma: UnicodeString|Çağıranın imzası.|  
-|CalleeNamespace|Kazanma: UnicodeString|Çağrılan ad alanı.|  
-|CalleeName|Kazanma: UnicodeString|Yöntem derleyici arama kuyruk çalışıyor (bir çağrı oluşturma değil).|  
-|CalleeNameSignature|Kazanma: UnicodeString|Çağrılan imzası.|  
-|TailPrefix|Kazanma: Boolean|Kuyruk çağrısı için ön ek|  
-|FailReason|Kazanma: UnicodeString|Neden kuyruk çağrısı başarısız oldu.|  
-|ClrInstanceID|Kazanma: UInt16|CLR veya CoreCLR örneği için benzersiz kimlik.|  
+|MethodBeingCompiledNameSpace|Win: UnicodeString|Derlenmekte olan metodun ad alanı.|  
+|MethodBeingCompiledName|Win: UnicodeString|Derlenmekte olan yöntemin adı.|  
+|MethodBeingCompiledNameSignature|Win: UnicodeString|Derlenmekte olan metodun imzası.|  
+|CallerNamespace|Win: UnicodeString|JıT derleyicisinin için kod oluşturmaya çalışan yöntemin ad alanı.|  
+|CallerName|Win: UnicodeString|Derleyicinin kod oluşturmaya çalışan yöntemin adı.|  
+|CallerNameSignature|Win: UnicodeString|Çağıran için imza.|  
+|Caltaenamespace|Win: UnicodeString|Çağrılan ad alanı.|  
+|Caltaename|Win: UnicodeString|Derleyicinin çağrı kuyruğunu deneme yöntemi (bir çağrı oluşturmaz).|  
+|Caltaenamesignature|Win: UnicodeString|Aranan için imza.|  
+|Uyarprefıx|Win: Boolean|Kuyruk çağrısının öneki|  
+|FailReason|Win: UnicodeString|Kuyruk çağrısının başarısız olmasının nedeni.|  
+|ClrInstanceID|Win: UInt16|CLR veya CoreCLR örneği için benzersiz KIMLIK.|  
   
-### <a name="methodjittailcallsucceeded-event"></a>MethodJITTailCallSucceeded olay  
- Aşağıdaki tabloda, düzeyi ve anahtar sözcüğü gösterir.  
+### <a name="methodjittailcallsucceeded-event"></a>Methodj, Callsucceeded olayı  
+ Aşağıdaki tabloda anahtar sözcüğü ve düzeyi gösterilmektedir.  
   
-|Olayı için anahtar sözcüğü|Düzey|  
+|Olayı yükseltmek için anahtar sözcük|Düzey|  
 |-----------------------------------|-----------|  
-|`JITTracingKeyword` (0x10)|Ayrıntılı (5)|  
+|`JITTracingKeyword`0x10|Verbose (5)|  
   
- Aşağıdaki tabloda, olay bilgileri gösterilmektedir.  
+ Aşağıdaki tabloda olay bilgileri gösterilmektedir.  
   
-|Olay|Olay Kimliği|Ne zaman gerçekleşti|  
+|Olay|Olay Kimliği|Ne zaman oluşturulur|  
 |-----------|--------------|-----------------|  
-|`MethodJitTailCallSucceeded`|188|Metot tail çağrısı başarılı oldu.|  
+|`MethodJitTailCallSucceeded`|188|Yöntem tail çağrısı başarılı oldu.|  
   
- Aşağıdaki tabloda, olay verilerini gösterir.  
+ Aşağıdaki tabloda olay verileri gösterilmektedir.  
   
 |Alan adı|Veri türü|Açıklama|  
 |----------------|---------------|-----------------|  
-|MethodBeingCompiledNameSpace|Kazanma: UnicodeString|Namespace yönteminin derleniyor.|  
-|MethodBeingCompiledName|Kazanma: UnicodeString|Derleniyor yöntemin adı.|  
-|MethodBeingCompiledNameSignature|Kazanma: UnicodeString|Derleniyor metodu imzası.|  
-|CallerNamespace|Kazanma: UnicodeString|Ad alanı JIT derleyicisi yönteminin kodunu oluşturmak çalışıyor.|  
-|CallerName|Kazanma: UnicodeString|Derleyici kod üretmek için çalışıyor yöntemin adı.|  
-|CallerNameSignature|Kazanma: UnicodeString|Çağıranın imzası.|  
-|CalleeNamespace|Kazanma: UnicodeString|Çağrılan ad alanı.|  
-|CalleeName|Kazanma: UnicodeString|Yöntem derleyici arama kuyruk çalışıyor (bir çağrı oluşturma değil).|  
-|CalleeNameSignature|Kazanma: UnicodeString|Çağrılan imzası.|  
-|TailPrefix|Kazanma: Boolean|Tail çağrısı için önek.|  
-|TailCallType|Kazanma: UnicodeString|Kuyruk çağrısı türü.|  
-|ClrInstanceID|Kazanma: UInt16|CLR veya CoreCLR örneği için benzersiz kimlik.|  
+|MethodBeingCompiledNameSpace|Win: UnicodeString|Derlenmekte olan metodun ad alanı.|  
+|MethodBeingCompiledName|Win: UnicodeString|Derlenmekte olan yöntemin adı.|  
+|MethodBeingCompiledNameSignature|Win: UnicodeString|Derlenmekte olan metodun imzası.|  
+|CallerNamespace|Win: UnicodeString|JıT derleyicisinin için kod oluşturmaya çalışan yöntemin ad alanı.|  
+|CallerName|Win: UnicodeString|Derleyicinin kod oluşturmaya çalışan yöntemin adı.|  
+|CallerNameSignature|Win: UnicodeString|Çağıran için imza.|  
+|Caltaenamespace|Win: UnicodeString|Çağrılan ad alanı.|  
+|Caltaename|Win: UnicodeString|Derleyicinin çağrı kuyruğunu deneme yöntemi (bir çağrı oluşturmaz).|  
+|Caltaenamesignature|Win: UnicodeString|Aranan için imza.|  
+|Uyarprefıx|Win: Boolean|Kuyruk çağrısının öneki.|  
+|, Uyarcalltype|Win: UnicodeString|Kuyruk çağrısının türü.|  
+|ClrInstanceID|Win: UInt16|CLR veya CoreCLR örneği için benzersiz KIMLIK.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [CLR ETW Olayları](../../../docs/framework/performance/clr-etw-events.md)
+- [CLR ETW Olayları](clr-etw-events.md)

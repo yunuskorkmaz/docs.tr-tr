@@ -2,12 +2,12 @@
 title: 'Nasıl yapılır: IPv6 Desteğini Etkinleştirmek için Bilgisayar Yapılandırma Dosyasını Değiştirme'
 ms.date: 03/30/2017
 ms.assetid: 5611b677-b9cc-43b8-a434-60e18d89aada
-ms.openlocfilehash: af6eb8a334108c988967a555024b524e27d40f58
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 362e7af36d214df9f0454479e25a80af9d440b2b
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69959073"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048284"
 ---
 # <a name="how-to-modify-the-computer-configuration-file-to-enable-ipv6-support"></a>Nasıl yapılır: IPv6 Desteğini Etkinleştirmek için Bilgisayar Yapılandırma Dosyasını Değiştirme
 Aşağıdaki kod örneği, IPv6 desteğinin etkinleştirilmesi için *Machine. config*bilgisayar yapılandırma dosyasının nasıl değiştirileceğini gösterir. *Machine. config* dosyası, Windows 'un yüklendiği dizindeki *%windir%\Microsoft.NET\Framework* klasöründe depolanır. Bilgisayarda yüklü .NET Framework her sürümü için *%windir%\Microsoft.NET\Framework* altındaki klasörlerde ayrı bir *Machine. config* dosyası bulunur (örneğin, *C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\ Machine. config*).  
@@ -37,6 +37,6 @@ Aşağıdaki kod örneği, IPv6 desteğinin etkinleştirilmesi için *Machine. c
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [IPv6 Adresleme](../../../docs/framework/network-programming/ipv6-addressing.md)
-- [Ağ Ayarları Şeması](../../../docs/framework/configure-apps/file-schema/network/index.md)
-- [\<IPv6 > öğesi (ağ ayarları)](../../../docs/framework/configure-apps/file-schema/network/ipv6-element-network-settings.md)
+- [IPv6 Adresleme](ipv6-addressing.md)
+- [Ağ Ayarları Şeması](../configure-apps/file-schema/network/index.md)
+- [\<IPv6 > öğesi (ağ ayarları)](../configure-apps/file-schema/network/ipv6-element-network-settings.md)

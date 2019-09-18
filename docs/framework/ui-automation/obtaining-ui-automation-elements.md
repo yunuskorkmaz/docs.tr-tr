@@ -5,12 +5,12 @@ helpviewer_keywords:
 - UI Automation, obtaining elements
 - elements, UI Automation, obtaining
 ms.assetid: c2caaf45-e59c-42a1-bc9b-77a6de520171
-ms.openlocfilehash: 9adf8078f52653940fe9ba5caa4a256a08cc489c
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 46de1b5de8ef7585919d331e6bf4b1537739ae1d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044141"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042883"
 ---
 # <a name="obtaining-ui-automation-elements"></a>UI Otomasyon Öğelerini Alma
 > [!NOTE]
@@ -19,7 +19,7 @@ ms.locfileid: "70044141"
  Bu konu, öğeler için <xref:System.Windows.Automation.AutomationElement> [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] nesneleri almanın çeşitli yollarını açıklamaktadır.  
   
 > [!CAUTION]
-> İstemci uygulamanız kendi Kullanıcı arabirimindeki öğeleri bulmaya çalışıyorsa, tüm [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] çağrıları ayrı bir iş parçacığında yapmanız gerekir. Daha fazla bilgi için bkz. [UI Otomasyonu Iş parçacığı sorunları](../../../docs/framework/ui-automation/ui-automation-threading-issues.md).  
+> İstemci uygulamanız kendi Kullanıcı arabirimindeki öğeleri bulmaya çalışıyorsa, tüm [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] çağrıları ayrı bir iş parçacığında yapmanız gerekir. Daha fazla bilgi için bkz. [UI Otomasyonu Iş parçacığı sorunları](ui-automation-threading-issues.md).  
   
 <a name="The_Root_Element"></a>   
 ## <a name="root-element"></a>Kök öğe  
@@ -85,7 +85,7 @@ ms.locfileid: "70044141"
 ### <a name="from-an-event"></a>Bir olaydan  
  Uygulamanız bir [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] olay aldığında, olay işleyicinizde geçirilen kaynak nesne bir <xref:System.Windows.Automation.AutomationElement>olur. Örneğin, odak değiştirilen olaylara abone olduysa, içine geçirilen <xref:System.Windows.Automation.AutomationFocusChangedEventHandler> kaynak odağı alan öğedir.  
   
- Daha fazla bilgi için bkz. [UI Otomasyon olaylarına abone olma](../../../docs/framework/ui-automation/subscribe-to-ui-automation-events.md).  
+ Daha fazla bilgi için bkz. [UI Otomasyon olaylarına abone olma](subscribe-to-ui-automation-events.md).  
   
 ### <a name="from-a-point"></a>Bir noktadan  
  Ekran koordinatlarına sahipseniz (örneğin, bir imleç konumu), statik <xref:System.Windows.Automation.AutomationElement> <xref:System.Windows.Automation.AutomationElement.FromPoint%2A> yöntemini kullanarak bir alabilirsiniz.  
@@ -98,6 +98,6 @@ ms.locfileid: "70044141"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Özellik Koşulunu Temel Alan UI Otomasyonu Öğesi Bulma](../../../docs/framework/ui-automation/find-a-ui-automation-element-based-on-a-property-condition.md)
-- [TreeWalker ile UI Otomasyonu Öğeleri Arasında Gezinme](../../../docs/framework/ui-automation/navigate-among-ui-automation-elements-with-treewalker.md)
-- [UI Otomasyon Ağacına Genel Bakış](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
+- [Özellik Koşulunu Temel Alan UI Otomasyonu Öğesi Bulma](find-a-ui-automation-element-based-on-a-property-condition.md)
+- [TreeWalker ile UI Otomasyonu Öğeleri Arasında Gezinme](navigate-among-ui-automation-elements-with-treewalker.md)
+- [UI Otomasyon Ağacına Genel Bakış](ui-automation-tree-overview.md)

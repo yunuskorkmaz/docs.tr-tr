@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: e55b3712-b9ea-4453-bd9a-ad5cfa2f6bfa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 42daa241d0ebbfeb184b57e682fbb50bdaeead65
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 6eba8202f0284b7b1054585039f12da9364ca1e9
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894190"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051759"
 ---
 # <a name="how-to-implement-callback-functions"></a>Nasıl yapılır: Geri Çağırma İşlevlerini Uygulama
 Aşağıdaki yordam ve örnek, platform çağırma kullanılarak yönetilen bir uygulamanın, yerel bilgisayardaki her bir pencere için tanıtıcı değerini nasıl yazdırabileceğini göstermektedir. Özellikle, yordam ve örnek, pencere tanıtıcısının değerini yazdırmak için Windows listesini ve yönetilen bir geri çağırma işlevini (geri çağırma) adım adım almak için **EnumWindows** işlevini kullanır.  
@@ -38,7 +38,7 @@ Aşağıdaki yordam ve örnek, platform çağırma kullanılarak yönetilen bir 
   
 4. Çöp toplayıcısının, geri çağırma işlevi işini tamamlamadan önce temsilciyi geri içermediğinden emin olun. Bir temsilciyi parametre olarak geçirdiğinizde veya bir yapıda alan olarak bulunan bir temsilciyi geçirdiğinizde, çağrının süresi boyunca toplanmamış olarak kalır. Bu nedenle, aşağıdaki numaralandırma örneğinde olduğu gibi, geri çağırma işlevi, çağrı döndürülmeden önce çalışmasını tamamlar ve yönetilen çağıran tarafından başka bir eylem gerektirmez.  
   
-     Ancak, geri çağırma işlevi çağrı çağrıldıktan sonra çağrılırsa, geri çağırma işlevi bitene kadar, yönetilen çağıran, temsilcinin toplanmamış olarak kalmasını sağlamak için adımları almalıdır. Çöp toplamayı önlemek hakkında ayrıntılı bilgi için bkz. platform çağırma ile [birlikte çalışma hazırlama](../../../docs/framework/interop/interop-marshaling.md) .  
+     Ancak, geri çağırma işlevi çağrı çağrıldıktan sonra çağrılırsa, geri çağırma işlevi bitene kadar, yönetilen çağıran, temsilcinin toplanmamış olarak kalmasını sağlamak için adımları almalıdır. Çöp toplamayı önlemek hakkında ayrıntılı bilgi için bkz. platform çağırma ile [birlikte çalışma hazırlama](interop-marshaling.md) .  
   
 ## <a name="example"></a>Örnek  
   
@@ -131,5 +131,5 @@ int main()
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Geri Arama İşlevleri](../../../docs/framework/interop/callback-functions.md)
-- [DLL İşlevini Çağırma](../../../docs/framework/interop/calling-a-dll-function.md)
+- [Geri Arama İşlevleri](callback-functions.md)
+- [DLL İşlevini Çağırma](calling-a-dll-function.md)

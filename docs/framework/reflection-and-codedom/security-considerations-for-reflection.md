@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 42d9dc2a-8fcc-4ff3-b002-4ff260ef3dc5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 791c6c8b0396ec958ff0c8378038051b23d486d1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 852490c57a2954e9d56799ef8deebbef31d5f665
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69956705"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045882"
 ---
 # <a name="security-considerations-for-reflection"></a>Yansımayla İlgili Güvenlik Konuları
 
@@ -61,7 +61,7 @@ Bu kurallar, bir güvenlik açısından kritik üyeye doğrudan derlenen kodla e
 
 Komut satırından çalıştırılan uygulama kodu tam güvenle çalışır. Saydam olarak işaretlenmediği sürece, güvenlik açısından kritik üyelere erişmek için yansıma kullanabilir. Aynı kod kısmi güvenle (örneğin, bir korumalı uygulama etki alanında) çalıştırıldığında, derlemenin güven düzeyi, güvenlik açısından kritik koda erişip erişemeyeceğini belirler: Derlemenin tanımlayıcı bir adı varsa ve genel derleme önbelleğinde yüklüyse, bu güvenilir bir derlemedir ve güvenlik açısından kritik üyeleri çağırabilir. Güvenilmiyorsa, saydam olarak işaretlenmese bile saydam hale gelir ve güvenlik açısından kritik üyelere erişemez.
 
-.NET Framework 4 ' teki güvenlik modeli hakkında daha fazla bilgi için bkz. [güvenlik değişiklikleri](../../../docs/framework/security/security-changes.md).
+.NET Framework 4 ' teki güvenlik modeli hakkında daha fazla bilgi için bkz. [güvenlik değişiklikleri](../security/security-changes.md).
 
 ## <a name="reflection-and-transparency"></a>Yansıma ve saydamlık
 
@@ -117,9 +117,9 @@ Serileştirme için, <xref:System.Security.Permissions.SecurityPermission> <xref
 - <xref:System.Security.Permissions.ReflectionPermissionFlag>
 - <xref:System.Security.Permissions.ReflectionPermission>
 - <xref:System.Security.Permissions.SecurityPermission>
-- [Güvenlik Değişiklikleri](../../../docs/framework/security/security-changes.md)
-- [Kod erişim güvenliği](../../../docs/framework/misc/code-access-security.md)
-- [Yansıma Yaymadaki Güvenlik Sorunları](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)
-- [Tür Bilgilerini Görüntüleme](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)
+- [Güvenlik Değişiklikleri](../security/security-changes.md)
+- [Kod erişim güvenliği](../misc/code-access-security.md)
+- [Yansıma Yaymadaki Güvenlik Sorunları](security-issues-in-reflection-emit.md)
+- [Tür Bilgilerini Görüntüleme](viewing-type-information.md)
 - [Öznitelikleri Uygulama](../../standard/attributes/applying-attributes.md)
-- [Özel Özniteliklere Erişim](../../../docs/framework/reflection-and-codedom/accessing-custom-attributes.md)
+- [Özel Özniteliklere Erişim](accessing-custom-attributes.md)

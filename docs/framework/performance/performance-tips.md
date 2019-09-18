@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: ae275793-857d-4102-9095-b4c2a02d57f4
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 0c4177faca86fab9934f1cae57f02f8e42a2ae0e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 14ed06bbd09d7551707628060b460584816e4711
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69943373"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046290"
 ---
 # <a name="net-performance-tips"></a>.NET Performans İpuçları
-*Performans* terimi genellikle programın yürütme hızına başvurur. Kaynak kodunuzda belirli temel kuralları izleyerek, bazen yürütme hızını artırabilirsiniz. Bazı programlarda, kodu yakından incelemek ve profil oluşturucular kullanarak olabildiğince hızlı çalıştığından emin olmak önemlidir. Diğer programlarda, bu tür iyileştirme gerçekleştirmek zorunda değilsiniz çünkü kod yazıldığı kadar hızlı şekilde çalışıyor. Bu makalede, performansın önyüklenebileceği bazı yaygın bölgeler ve ek performans konularına yönelik bağlantılar yer almaktadır. Performansı planlama ve ölçme hakkında daha fazla bilgi için bkz. [performans](../../../docs/framework/performance/index.md)  
+*Performans* terimi genellikle programın yürütme hızına başvurur. Kaynak kodunuzda belirli temel kuralları izleyerek, bazen yürütme hızını artırabilirsiniz. Bazı programlarda, kodu yakından incelemek ve profil oluşturucular kullanarak olabildiğince hızlı çalıştığından emin olmak önemlidir. Diğer programlarda, bu tür iyileştirme gerçekleştirmek zorunda değilsiniz çünkü kod yazıldığı kadar hızlı şekilde çalışıyor. Bu makalede, performansın önyüklenebileceği bazı yaygın bölgeler ve ek performans konularına yönelik bağlantılar yer almaktadır. Performansı planlama ve ölçme hakkında daha fazla bilgi için bkz. [performans](index.md)  
   
 ## <a name="boxing-and-unboxing"></a>Kutulama ve Kutudan Çıkarma  
  Değer türlerinin, örneğin gibi <xref:System.Collections.ArrayList?displayProperty=nameWithType>genel olmayan koleksiyonlar sınıflarında çok sayıda kez paketlenmeleri gerektiği durumlarda kullanmaktan kaçınmak en iyisidir. Gibi genel Koleksiyonlar <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>kullanarak değer türlerinin kutulamaktan kaçınabilirsiniz. Kutulama ve kutudan çıkarma, hesaplama açısından pahalı işlemlerdir. Bir değer türü paketlenme olduğunda, tamamen yeni bir nesne oluşturulması gerekir. Bu, basit bir başvuru atamasından 20 kat daha uzun sürebilir. Kutudan çıkarma sırasında, atama işlemi atamanın dört katı zaman alabilir. Daha fazla bilgi için bkz. [kutulama ve kutudan](../../csharp/programming-guide/types/boxing-and-unboxing.md)çıkarma.  
@@ -44,6 +44,6 @@ ms.locfileid: "69943373"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Performans](../../../docs/framework/performance/index.md)
+- [Performans](index.md)
 - [Visual Basic programlama kılavuzu](../../visual-basic/programming-guide/index.md)
 - [C# Programlama Kılavuzu](../../csharp/programming-guide/index.md)

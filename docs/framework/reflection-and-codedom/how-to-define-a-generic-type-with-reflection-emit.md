@@ -12,18 +12,18 @@ helpviewer_keywords:
 ms.assetid: 07d5f01a-7b5b-40ea-9b15-f21561098fe4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 544d04236a8f1b824a15c6ee7912020346841076
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b9781e7ef8edde182a13779a01e042cb44c92881
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69912526"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045992"
 ---
 # <a name="how-to-define-a-generic-type-with-reflection-emit"></a>Nasıl yapılır: Yansıma Yayma ile Genel Tür Tanımlama
 Bu konu, iki tür parametresiyle basit genel bir tür oluşturmayı, sınıf kısıtlamalarını, arabirim kısıtlamalarını ve özel kısıtlamaları tür parametrelerine uygulamayı ve sınıfın tür parametrelerini parametre türleri olarak kullanan üyelerin nasıl oluşturulacağını gösterir ve dönüş türleri.  
   
 > [!IMPORTANT]
-> Yalnızca genel bir türe ait olduğundan ve bu türün tür parametrelerini kullandığından bir yöntem genel değildir. Bir yöntem, yalnızca kendi tür parametresi listesine sahipse geneldir. Bu örnekte olduğu gibi genel türlerde yöntemlerin çoğu genel değildir. Genel bir yöntemi yayma örneği için bkz [. nasıl yapılır: Yansıma yayma](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-method-with-reflection-emit.md)Ile genel bir yöntem tanımlayın.  
+> Yalnızca genel bir türe ait olduğundan ve bu türün tür parametrelerini kullandığından bir yöntem genel değildir. Bir yöntem, yalnızca kendi tür parametresi listesine sahipse geneldir. Bu örnekte olduğu gibi genel türlerde yöntemlerin çoğu genel değildir. Genel bir yöntemi yayma örneği için bkz [. nasıl yapılır: Yansıma yayma](how-to-define-a-generic-method-with-reflection-emit.md)Ile genel bir yöntem tanımlayın.  
   
 ### <a name="to-define-a-generic-type"></a>Genel bir tür tanımlamak için  
   
@@ -121,7 +121,7 @@ Bu konu, iki tür parametresiyle basit genel bir tür oluşturmayı, sınıf kı
   
  Program, bir genel tür hakkındaki bilgileri ve bir tür parametresindeki özel kısıtlamaları listeleyen bir yöntemi içerir. Bu yöntemler, tamamlanan `Sample` sınıfla ilgili bilgileri göstermek için kullanılır.  
   
- Program, tamamlanmış modülünü diske `GenericEmitExample1.dll`kaydeder, bu nedenle onu [ıldadsm. exe (IL Disassembler)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) ile açabilir ve `Sample` sınıfı için MSIL 'yi inceleyebilirsiniz.  
+ Program, tamamlanmış modülünü diske `GenericEmitExample1.dll`kaydeder, bu nedenle onu [ıldadsm. exe (IL Disassembler)](../tools/ildasm-exe-il-disassembler.md) ile açabilir ve `Sample` sınıfı için MSIL 'yi inceleyebilirsiniz.  
   
  [!code-cpp[EmitGenericType#1](../../../samples/snippets/cpp/VS_Snippets_CLR/EmitGenericType/CPP/source.cpp#1)]
  [!code-csharp[EmitGenericType#1](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#1)]

@@ -159,21 +159,21 @@ helpviewer_keywords:
 ms.assetid: 8271973c-deba-47a6-8e5e-04ce63f146ad
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6b9844505516550b9d817b52c72cea15a2468f7b
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: ad4ea3b2d5fb828c425f30e76244772f5ca9a11a
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025959"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71043981"
 ---
 # <a name="winmdexpexe-error-messages"></a>Winmdexp.exe Hata İletileri
-Yapı işleminin çağırdığı [Winmdexp.exe (Windows çalışma zamanı meta verileri dışarı aktarma aracı)](../../../docs/framework/tools/winmdexp-exe-windows-runtime-metadata-export-tool.md) kullandığınızda **Windows çalışma zamanı bileşeni** 2012'de Visual Studio içinde Winmdexp.exe hata iletileri görünecek şekilde şablonu **Hata listesi**. Winmdexp.exe çalışır ile derlenmiş bir modülde `/target:winmdobj` seçeneği. Giriş olarak derlenmiş bir modül gerektiğinden, derleme başarılı sürece, hata iletileri görünmez.  
+Derleme işlemi [WinMDExp. exe ' yi (Windows çalışma zamanı meta veri dışa aktarma aracı](winmdexp-exe-windows-runtime-metadata-export-tool.md) 2012 **Windows çalışma zamanı** ) çağırır. bu nedenle, WinMDExp. exe hata iletileri **hata listesi**görüntülenir. WinMDExp. exe, `/target:winmdobj` seçeneğiyle derlenen bir modül üzerinde çalışır. Giriş olarak derlenmiş bir modül gerektirdiğinden, derleme başarılı olmadığı sürece hata iletileri görünmez.  
   
- Hata iletileri, bunlar rapor hata koşullarını gidermek için gereken tüm bilgileri içerecek şekilde tasarlanmıştır. Ancak, bazı sorunlar iletisinde sığmayacak kadar çok daha fazla bilgi gerektirir. Ek bilgiler bulabilirsiniz [tanılama Windows çalışma zamanı bileşeni hata koşulları](https://go.microsoft.com/fwlink/p/?LinkId=251127) Windows geliştirme Merkezi'nde.  
+ Hata iletileri, raportıkları hata koşullarına yönelik olarak gereken tüm bilgileri içerecek şekilde tasarlanmıştır. Ancak, bazı sorunlar iletiye sığmayacak kadar daha fazla bilgi gerektirir. Windows Geliştirme Merkezi 'nde [Windows çalışma zamanı bileşeni hata koşullarını tanılamada](https://go.microsoft.com/fwlink/p/?LinkId=251127) ek bilgiler bulabilirsiniz.  
   
- Hata bu makalede ele alınmamıştır ve ileti sorunu gidermek için yeterli bilgi içermiyor düşünüyorsanız, lütfen bu makalede geri bildirim bağlantısını kullanın ve hata iletisini içerir. Bir hata, alternatif olarak, dosya [Microsoft Connect Web sitesi](https://go.microsoft.com/fwlink/p/?LinkId=251130). Ayrıca daha fazla bilgi için bakabilirsiniz [Microsoft Forums](https://go.microsoft.com/fwlink/p/?LinkId=251129).  
+ Sorununuz bu makalede ele alınmazsa ve iletinin sorunu gidermek için yeterli bilgi içermediğini düşünüyorsanız, lütfen bu makaledeki geri bildirim bağlantısını kullanın ve hata iletisini ekleyin. Alternatif olarak, [Microsoft Connect Web sitesinde](https://go.microsoft.com/fwlink/p/?LinkId=251130)bir hata da oluşturabilirsiniz. [Microsoft forumları](https://go.microsoft.com/fwlink/p/?LinkId=251129)hakkında daha fazla bilgi için de arama yapabilirsiniz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Winmdexp.exe (Windows Çalışma Zamanı Meta Veri Dışarı Aktarma Aracı)](../../../docs/framework/tools/winmdexp-exe-windows-runtime-metadata-export-tool.md)
-- [Windows çalışma zamanı bileşeni hata durumları tanılama](https://go.microsoft.com/fwlink/p/?LinkId=251127)
+- [Winmdexp.exe (Windows Çalışma Zamanı Meta Veri Dışarı Aktarma Aracı)](winmdexp-exe-windows-runtime-metadata-export-tool.md)
+- [Windows Çalışma Zamanı bileşeni hata koşullarını tanılama](https://go.microsoft.com/fwlink/p/?LinkId=251127)

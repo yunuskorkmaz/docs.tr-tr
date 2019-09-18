@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: cb8bc835-9221-4888-af53-1a4f5fad6c48
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0683499241f594b8b37b7dd69b91ed5929670024
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: df7ce0795daabdf34f46e20460bef23e7c486467
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894578"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71043899"
 ---
 # <a name="winresexe-windows-resource-localization-editor"></a>Winres. exe (Windows kaynak yerelleştirme Düzenleyicisi)
 
-Windows kaynak yerelleştirme Düzenleyicisi olan Winres. exe, yerelleştirme uzmanlarının formlar tarafından kullanılan Kullanıcı arabirimi (UI) kaynaklarını yerelWindows Forms leştirebilmenizi sağlayan bir görsel düzen aracıdır. Winres.exe için girdi olarak kullanılan .resx veya .resources dosyaları Microsoft Visual Studio gibi bir görsel tasarım ortamı kullanarak oluşturulabilir. .NET Framework uygulamalarında kaynakları dağıtma hakkında daha fazla bilgi için bkz. [Masaüstü uygulamalarındaki kaynaklar](../../../docs/framework/resources/index.md).
+Windows kaynak yerelleştirme Düzenleyicisi olan Winres. exe, yerelleştirme uzmanlarının formlar tarafından kullanılan Kullanıcı arabirimi (UI) kaynaklarını yerelWindows Forms leştirebilmenizi sağlayan bir görsel düzen aracıdır. Winres.exe için girdi olarak kullanılan .resx veya .resources dosyaları Microsoft Visual Studio gibi bir görsel tasarım ortamı kullanarak oluşturulabilir. .NET Framework uygulamalarında kaynakları dağıtma hakkında daha fazla bilgi için bkz. [Masaüstü uygulamalarındaki kaynaklar](../resources/index.md).
 
-Winres. exe, Visual Studio ile birlikte yüklenir. Aracı çalıştırmak için, Visual Studio için Geliştirici Komut İstemi kullanın. Daha fazla bilgi için bkz. [komut istemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md).
+Winres. exe, Visual Studio ile birlikte yüklenir. Aracı çalıştırmak için, Visual Studio için Geliştirici Komut İstemi kullanın. Daha fazla bilgi için bkz. [komut istemleri](developer-command-prompt-for-vs.md).
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -55,7 +55,7 @@ Bir Windows Forms projesindeki formda bulunan arabirim öğelerinin durumu genel
 
 Ayrıca, yerelleştirme için kaynakların [hiyerarşik organizasyonu](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/756hydy4(v=vs.110)) veya [Yerelleştirme Için hiyerarşik kaynak organizasyonu](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/756hydy4(v=vs.120))bölümüne bakın.
 
-Winres.exe, bir .resx dosyasını karşılık gelen .resources dosyasına dönüştüremez; bunun yerine Resgen.exe aracını kullanmalısınız. Resgen. exe hakkında daha fazla bilgi için bkz. [Resgen. exe (kaynak dosya Oluşturucu)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md).
+Winres.exe, bir .resx dosyasını karşılık gelen .resources dosyasına dönüştüremez; bunun yerine Resgen.exe aracını kullanmalısınız. Resgen. exe hakkında daha fazla bilgi için bkz. [Resgen. exe (kaynak dosya Oluşturucu)](resgen-exe-resource-file-generator.md).
 
 Winres.exe, kaynak koduna erişmeden bir Windows Forms formunun tasarım zamanı sürümünü yalnızca kaynak dosyasından yeniden oluşturan grafiksel bir uygulamadır. Winres. exe, Visual Studio 'nun **Windows Forms form tasarımcısını** ve **Özellikler** penceresini barındırır. Bu özellikler, Windows Forms formu içeren bir .resources veya .resx dosyasının görsel olarak düzenlenmesine olanak verir. Genellikle yerelleştiriciler denetim etiketlerini düzenlemek ve denetimlerin konumunu ve boyutunu hedef kültürün etiketlerine uyacak şekilde ayarlamak için Winres. exe ' yi kullanır.
 
@@ -76,7 +76,7 @@ Winres. exe kullanarak yerelleştirmek için, ilk olarak Visual Studio 'daki **W
 > [!NOTE]
 > Winres.exe varsayılan kaynak dosyayı düzenlemek için kullanılamaz. Winres.exe, değişen tüm özellikleri yerelleştirilmiş özellikler olarak yorumlar ve bunları hedef kültür kaynak dosyasına kaydeder.
 
-Kültür kaynak dosyalarının son sürümleri son olarak uygulamanın yerelleştirilmiş sürümlerini oluşturmak için kullanılabilir. Daha fazla bilgi için bkz. [Masaüstü uygulamalarındaki kaynaklar](../../../docs/framework/resources/index.md).
+Kültür kaynak dosyalarının son sürümleri son olarak uygulamanın yerelleştirilmiş sürümlerini oluşturmak için kullanılabilir. Daha fazla bilgi için bkz. [Masaüstü uygulamalarındaki kaynaklar](../resources/index.md).
 
 Winres. exe aşağıdaki özelliklere ve özelliklere sahiptir:
 
@@ -127,7 +127,7 @@ Kullandığınız .NET Framework ile yayınlanan Winres. exe sürümünü kullan
     ```
 
     > [!NOTE]
-    > Kaynaklarını düzenlediğiniz form devralınmış bir form ise, hem formun içindeki derleme hem de devralan (türetilmiş) formu içeren derleme Genel Derleme Önbelleği'ne (GAC) kaydettirilmeli veya WinRes.exe ile aynı dizinde bulunmalıdır. GAC 'ye .NET Framework bileşenleri yükleme hakkında daha fazla bilgi için bkz. [genel derleme önbelleği](../../../docs/framework/app-domains/gac.md).
+    > Kaynaklarını düzenlediğiniz form devralınmış bir form ise, hem formun içindeki derleme hem de devralan (türetilmiş) formu içeren derleme Genel Derleme Önbelleği'ne (GAC) kaydettirilmeli veya WinRes.exe ile aynı dizinde bulunmalıdır. GAC 'ye .NET Framework bileşenleri yükleme hakkında daha fazla bilgi için bkz. [genel derleme önbelleği](../app-domains/gac.md).
 
 3. Formdaki denetimleri seçin ve diğer özelliklerini yerelleştirilmiş kültürü <xref:System.Windows.Forms.Control.Text%2A> ve dilini yansıtacak şekilde değiştirin. Yerelleştirilmiş metnin sığmasını sağlayacak şekilde denetimleri gerektiği gibi taşıyın veya yeniden boyutlandırın.
 
@@ -135,7 +135,7 @@ Kullandığınız .NET Framework ile yayınlanan Winres. exe sürümünü kullan
 
 5. Uygun kültürü ve dosya modunu seçip **Tamam**' a tıklayın.
 
-   Araç dosyayı, çalışma zamanının yerelleştirilmiş kaynak dosyaları için beklediği adlandırma kuralını kullanarak kaydeder. Örneğin, Almanya 'da Almanca için `TestApp.resources` yerelleştirmeniz halinde, araç dosyayı olarak `TestApp.de-DE.resources`kaydeder. Almanya 'da Almanca `TestApp.resx` için yerelleştirmeniz durumunda, araç dosyayı olarak `TestApp.de-DE.resx`kaydeder. Kaynak adlandırma kuralları hakkında daha fazla bilgi için bkz. [kaynakları paketleme ve dağıtma](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md). Çalışma zamanı tarafından kullanılan önceden tanımlanmış kültür adlarının bir listesi için, <xref:System.Globalization.CultureInfo> sınıfına bakın.
+   Araç dosyayı, çalışma zamanının yerelleştirilmiş kaynak dosyaları için beklediği adlandırma kuralını kullanarak kaydeder. Örneğin, Almanya 'da Almanca için `TestApp.resources` yerelleştirmeniz halinde, araç dosyayı olarak `TestApp.de-DE.resources`kaydeder. Almanya 'da Almanca `TestApp.resx` için yerelleştirmeniz durumunda, araç dosyayı olarak `TestApp.de-DE.resx`kaydeder. Kaynak adlandırma kuralları hakkında daha fazla bilgi için bkz. [kaynakları paketleme ve dağıtma](../resources/packaging-and-deploying-resources-in-desktop-apps.md). Çalışma zamanı tarafından kullanılan önceden tanımlanmış kültür adlarının bir listesi için, <xref:System.Globalization.CultureInfo> sınıfına bakın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -144,6 +144,6 @@ Kullandığınız .NET Framework ile yayınlanan Winres. exe sürümünü kullan
 - <xref:System.Resources.ResourceManager>
 - <xref:System.Resources.ResourceReader>
 - <xref:System.Resources.ResourceWriter>
-- [Araçlar](../../../docs/framework/tools/index.md)
-- [Masaüstü Uygulamalarındaki Kaynaklar](../../../docs/framework/resources/index.md)
+- [Araçlar](index.md)
+- [Masaüstü Uygulamalarındaki Kaynaklar](../resources/index.md)
 - [Genelleştirme ve Yerelleştirme](../../standard/globalization-localization/index.md)

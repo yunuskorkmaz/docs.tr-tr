@@ -14,30 +14,30 @@ helpviewer_keywords:
 ms.assetid: 7417f837-805e-4fed-a430-ca919c8421dc
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7bb4779e300df71a5d075a322bcac8398ce42f34
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: afc0fd47e51723a7b3ba1b07dffc49260f88917d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61754446"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052779"
 ---
 # <a name="gcmanagedtounmanaged-mda"></a>gcManagedToUnmanaged MDA
-`gcManagedToUnmanaged` Yönetilen hata ayıklama Yardımcısı (MDA) yönetilmeyen kod için yönetilen bir iş parçacığı gelen geçiş her bir çöp toplamanın neden olur.  
+Yönetilen `gcManagedToUnmanaged` hata ayıklama Yardımcısı (MDA), bir iş parçacığı yönetilen 'ten yönetilmeyen koda geçiş yaptığında çöp toplamaya neden olur.  
   
 ## <a name="symptoms"></a>Belirtiler  
- Yönetilmeyen kullanıcı bileşeni COM tarafından sunulan bir yönetilen nesne kullanmaya çalışırken bir erişim ihlali oluşturur COM nesnesi yayımlanan görünüyor. Erişim ihlali belirleyici değildir.  
+ Yönetilmeyen bir Kullanıcı bileşeni, COM 'a sunulan bir yönetilen nesneyi kullanmaya çalışırken bir erişim ihlali oluşturur. COM nesnesi yayımlanmış gibi görünüyor. Erişim ihlali belirleyici olmayan bir değer.  
   
 ## <a name="cause"></a>Sebep  
- Yönetilmeyen bir bileşene başvuru yönetilen bir COM nesnesi düzgün sayımı değilse, çalışma zamanının yönetilen bir nesnenin yönetilmeyen bileşeni hala nesnesine bir başvuru tuttuğunda com'a toplamanız mümkündü. Çalışma zamanı çağrıları <xref:System.Runtime.InteropServices.Marshal.Release%2A> atık toplama sırasında kadar çöp toplama oluşmadan önce nesne kullanıcı bileşen kullanıyorsa, ardından bunu değil henüz toplanmış olabilir. Bu nondeterminism kaynağıdır.  
+ Yönetilmeyen bir bileşen, yönetilen bir COM nesnesini doğru bir şekilde saymadığı takdirde, yönetilmeyen bileşen nesneye bir başvuru tuttuğunda, çalışma zamanı COM 'a sunulan bir yönetilen nesne toplayabilir. Çöp koleksiyonları sırasında <xref:System.Runtime.InteropServices.Marshal.Release%2A> çalışma zamanı çağırır, bu nedenle Kullanıcı bileşeni atık toplama gerçekleşmeden önce nesneyi kullanıyorsa, henüz toplanmamıştır. Bu, belirleyici olmayan bir ISM kaynağıdır.  
   
 ## <a name="resolution"></a>Çözüm  
- Bu Yardımcısı'nı etkinleştirme, nesne koleksiyonu için uygun olduğunda arasındaki süreyi azaltır ve <xref:System.Runtime.InteropServices.Marshal.Release%2A> olarak adlandırılan, hangi yönetilmeyen bileşen önce toplanan nesneye erişme girişiminde aşağı izlemek için yardımcı olur.  
+ Bu yardımcıyı etkinleştirmek, nesnenin koleksiyon için uygun olduğu zaman arasındaki süreyi azaltır ve <xref:System.Runtime.InteropServices.Marshal.Release%2A> çağrılır, hangi yönetilmeyen bileşenin ilk olarak toplanan nesneye erişmeye çalıştığını izlemeye yardımcı olur.  
   
-## <a name="effect-on-the-runtime"></a>Çalışma zamanı üzerindeki etkisi  
- Bir iş parçacığı geçişler yönetilmeyen kod için yönetilen her bir çöp toplamanın neden olur.  
+## <a name="effect-on-the-runtime"></a>Çalışma zamanında etki  
+ Her iş parçacığı yönetilen 'ten yönetilmeyen koda geçiş yaptığında çöp toplamaya neden olur.  
   
 ## <a name="output"></a>Çıkış  
- Bu mda'nın herhangi bir çıktı üretmez.  
+ Bu MDA hiçbir çıkış üretmez.  
   
 ## <a name="configuration"></a>Yapılandırma  
   
@@ -52,6 +52,6 @@ ms.locfileid: "61754446"
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [Yönetilen Hata Ayıklama Yardımcıları ile Hataları Tanılama](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [Birlikte Çalışma için Hazırlama](../../../docs/framework/interop/interop-marshaling.md)
-- [gcUnmanagedToManaged](../../../docs/framework/debug-trace-profile/gcunmanagedtomanaged-mda.md)
+- [Yönetilen Hata Ayıklama Yardımcıları ile Hataları Tanılama](diagnosing-errors-with-managed-debugging-assistants.md)
+- [Birlikte Çalışma için Hazırlama](../interop/interop-marshaling.md)
+- [gcUnmanagedToManaged](gcunmanagedtomanaged-mda.md)

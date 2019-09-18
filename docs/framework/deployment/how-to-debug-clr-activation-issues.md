@@ -6,20 +6,20 @@ helpviewer_keywords:
 ms.assetid: 4fe17546-d56e-4344-a930-6d8e4a545914
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7ab80cfbd0ae2130f465216ca77812bda0002c24
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 2bed01a74c5b3338df958a3e178c06602bd69866
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70854010"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052110"
 ---
 # <a name="how-to-debug-clr-activation-issues"></a>CLR etkinleştirme sorunlarını ayıklama
 
-Uygulamanızı ortak dil çalışma zamanının (CLR) doğru sürümü ile çalışacak şekilde almaya yönelik sorunlarla karşılaşırsanız, CLR etkinleştirme günlüklerini görüntüleyebilir ve hata ayıklaması yapabilirsiniz. Bu Günlükler, uygulamanız beklenenden farklı bir CLR sürümü yüklediğinde veya CLR 'yi hiç yüklemediğinde, bir etkinleştirme sorununun kök nedenini belirlemede çok yararlı olabilir. [.NET Framework başlatma hataları: Kullanıcı deneyimini](../../../docs/framework/deployment/initialization-errors-managing-the-user-experience.md) yönetmek, bir uygulama için clr bulunamadığı zaman deneyimi ele alır.
+Uygulamanızı ortak dil çalışma zamanının (CLR) doğru sürümü ile çalışacak şekilde almaya yönelik sorunlarla karşılaşırsanız, CLR etkinleştirme günlüklerini görüntüleyebilir ve hata ayıklaması yapabilirsiniz. Bu Günlükler, uygulamanız beklenenden farklı bir CLR sürümü yüklediğinde veya CLR 'yi hiç yüklemediğinde, bir etkinleştirme sorununun kök nedenini belirlemede çok yararlı olabilir. [.NET Framework başlatma hataları: Kullanıcı deneyimini](initialization-errors-managing-the-user-experience.md) yönetmek, bir uygulama için clr bulunamadığı zaman deneyimi ele alır.
 
 CLR etkinleştirme günlüğü, bir HKEY_LOCAL_MACHINE kayıt defteri anahtarı veya bir sistem ortam değişkeni kullanılarak sistem genelinde etkinleştirilebilir. Günlük kaydı, kayıt defteri girişi veya ortam değişkeni kaldırılana kadar oluşturulur. Alternatif olarak, farklı bir kapsam ve süre ile günlüğe kaydetmeyi etkinleştirmek için bir kullanıcı veya işlem yerel ortam değişkeni kullanabilirsiniz.
 
-CLR etkinleştirme günlükleri, tamamen farklı olan [bütünleştirilmiş kod bağlama günlükleriyle](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md)karıştırılmamalıdır.
+CLR etkinleştirme günlükleri, tamamen farklı olan [bütünleştirilmiş kod bağlama günlükleriyle](../tools/fuslogvw-exe-assembly-binding-log-viewer.md)karıştırılmamalıdır.
 
 ## <a name="to-enable-clr-activation-logging"></a>CLR etkinleştirme günlük kaydını etkinleştirmek için
 
@@ -106,13 +106,13 @@ Aşağıdaki bir etkinleştirme günlüğü örneğinde, en yararlı bilgiler vu
     532,205950.382,Installed Runtime: v4.0.30319. VERSION_ARCHITECTURE: 0
     ```
 
-- **sürümü ile birlikte inşa** edilen, [ICLRMetaHostPolicy:: GetRequestedRuntime](../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md)gibi bir yönteme sağlanmış ikiliyi oluşturmak için kullanılan CLR 'nin sürümüdür.
+- **sürümü ile birlikte inşa** edilen, [ICLRMetaHostPolicy:: GetRequestedRuntime](../unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md)gibi bir yönteme sağlanmış ikiliyi oluşturmak için kullanılan CLR 'nin sürümüdür.
 
     ```output
     532,205950.382,C:\Tests\myapp.exe was built with version: v2.0.50727
     ```
 
-- **isteğe bağlı özellik yüklemesi** , Windows 8 ' de .NET Framework 3,5 ' i etkinleştirmeyi belirtir. Bkz [. .NET Framework başlatma hataları: Bu senaryo hakkında daha](../../../docs/framework/deployment/initialization-errors-managing-the-user-experience.md) fazla bilgi için Kullanıcı deneyimini yönetme.
+- **isteğe bağlı özellik yüklemesi** , Windows 8 ' de .NET Framework 3,5 ' i etkinleştirmeyi belirtir. Bkz [. .NET Framework başlatma hataları: Bu senaryo hakkında daha](initialization-errors-managing-the-user-experience.md) fazla bilgi için Kullanıcı deneyimini yönetme.
 
     ```output
     532,205950.398,Launching feature-on-demand installation. CmdLine: C:\Windows\system32\fondue.exe /enable-feature:NetFx3
@@ -120,5 +120,5 @@ Aşağıdaki bir etkinleştirme günlüğü örneğinde, en yararlı bilgiler vu
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Dağıtım](../../../docs/framework/deployment/index.md)
-- [Nasıl yapılır: .NET Framework 4 veya sonraki sürümleri desteklemek için bir uygulama yapılandırma](../../../docs/framework/migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)
+- [Dağıtım](index.md)
+- [Nasıl yapılır: .NET Framework 4 veya sonraki sürümleri desteklemek için bir uygulama yapılandırma](../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)

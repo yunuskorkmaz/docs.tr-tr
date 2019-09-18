@@ -12,44 +12,44 @@ helpviewer_keywords:
 ms.assetid: d077a3e8-bd81-4bdf-b6a3-323857ea30fb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8feb94f3d57c25d634bd51b8f41eca42d5e5757a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5fb95ab7ff4fcac7169238d90637d7b83078d6dd
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61793334"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046113"
 ---
 # <a name="dynamic-source-code-generation-and-compilation"></a>Dinamik Kaynak Kodu Oluşturma ve Derleme
-.NET Framework kod belge nesne geliştiricilerin kodunu temsil eden tek bir modelini temel alan kaynak kodu, çalışma zamanında birden fazla programlama dilinde oluşturmak için kaynak kodu yayma programlar sağlayan modeli (CodeDOM) adlı bir mekanizma içerir İşlenecek.  
+.NET Framework, kaynak kodu oluşturan program geliştiricilerinin, kodu temsil eden tek bir modele göre, çalışma zamanında birden çok programlama dilinde kaynak kodu oluşturmasını sağlayan Kod Belge Nesne Modeli (CodeDOM) adlı bir mekanizma içerir işlemek için.  
   
- Kaynak kodu temsil etmek için diğer bazı kaynak kodunun yapısını modeller CodeDOM grafiği bilinen bir veri yapısı oluşturmak için CodeDOM öğelerini bağlıdır.  
+ Kaynak kodunu temsil etmek için CodeDOM öğeleri birbirlerine bağlanır ve bu, bazı kaynak kodların yapısını modelleyen, CodeDOM grafiği olarak bilinen bir veri yapısı oluşturur.  
   
- `System.CodeDom` Ad alanı, kaynak kodu, belirli bir programlama dilini bağımsız mantıksal yapısını temsil edebilen türleri tanımlar. `System.CodeDom.Compiler` CodeDOM grafiklerinden kaynak kodu oluşturma ve derleme desteklenen dilde kaynak kodu yönetmek için ad alanını tanımlayan tür. Derleyici satıcılar veya geliştiricilerin desteklenen dil kümesini genişletebilirsiniz.  
+ Ad `System.CodeDom` alanı, belirli bir programlama dilinden bağımsız olarak kaynak kodun mantıksal yapısını temsil eden türleri tanımlar. Ad `System.CodeDom.Compiler` alanı, CodeDOM grafiklerinden kaynak kodu oluşturmak ve desteklenen dillerde kaynak kodu derlemesini yönetmek için türleri tanımlar. Derleyici satıcıları veya geliştiriciler desteklenen dillerin kümesini genişletebilir.  
   
- Birden çok dilde bir program modeli için veya belirsiz bir hedef dil için kaynak kodu oluşturmak bir program gerektiğinde dilden bağımsız kaynak kodu modelleme yararlı olabilir. Örneğin, dil desteğini CodeDOM varsa bazı tasarımcıları doğru programlama dilinde, kaynak kodunu üretmek için bir dil soyutlama arabirimi CodeDOM kullanın.  
+ Dilden bağımsız kaynak kodu modelleme, bir programın birden çok dilde veya belirsiz bir hedef dil için bir program modeli için kaynak kodu oluşturması gerektiğinde değerli olabilir. Örneğin, bazı tasarımcılar, kaynak kodu doğru programlama dilinde oluşturmak için CodeDOM 'yi bir dil soyutlama arabirimi olarak kullanır, bu dil için CodeDOM desteği kullanılabilir.  
   
- .NET Framework kod oluşturucuları ve için kod derleyicileri içerir <xref:Microsoft.CSharp.CSharpCodeProvider>, <xref:Microsoft.JScript.JScriptCodeProvider>, ve <xref:Microsoft.VisualBasic.VBCodeProvider>.  
+ .NET Framework,, ve <xref:Microsoft.CSharp.CSharpCodeProvider> <xref:Microsoft.JScript.JScriptCodeProvider> <xref:Microsoft.VisualBasic.VBCodeProvider>için kod oluşturucuları ve kod derleyicileri içerir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [CodeDOM'yi Kullanma](../../../docs/framework/reflection-and-codedom/using-the-codedom.md)  
- Yaygın kullanımları açıklar ve CodeDOM kullanarak bir Basit Nesne grafiği oluşturmayı göstermektedir.  
+ [CodeDOM'yi Kullanma](using-the-codedom.md)  
+ Ortak kullanımları açıklar ve CodeDOM kullanılarak basit nesne grafı oluşturmayı gösterir.  
   
- [Kaynak kodu üretme ve CodeDOM grafiğinden bir programı derleme](../../../docs/framework/reflection-and-codedom/generating-and-compiling-source-code-from-a-codedom-graph.md)  
- Kaynak kodu oluşturun ve oluşturulan kod içinde tanımlanan sınıflar kullanarak dış bir derleyici ile derleme açıklar `System.CodeDom.Compiler` ad alanı.  
+ [Kaynak kodu oluşturma ve bir CodeDOM grafiğinden program derleme](generating-and-compiling-source-code-from-a-codedom-graph.md)  
+ Kaynak kodu oluşturmayı ve `System.CodeDom.Compiler` ad alanında tanımlanan sınıfları kullanarak oluşturulan kodu bir dış derleyici ile derlemeyi açıklar.  
   
- [Nasıl yapılır: CodeDOM kullanarak XML belge dosyası oluşturma](../../../docs/framework/reflection-and-codedom/how-to-create-an-xml-documentation-file-using-codedom.md)  
- XML belgeleri açıklamaları olan kod oluşturma ve XML belgeleri çıktısı oluşturması oluşturulan kodu derlemek için CodeDOM kullanmayı açıklar.  
+ [Nasıl yapılır: CodeDOM kullanarak XML belge dosyası oluşturma](how-to-create-an-xml-documentation-file-using-codedom.md)  
+ XML belge açıklamalarıyla kod oluşturmak için CodeDOM kullanmayı ve XML belge çıkışını oluşturacak şekilde oluşturulan kodu derlemeyi açıklar.  
   
- [Nasıl yapılır: CodeDOM kullanarak sınıf oluşturma](../../../docs/framework/reflection-and-codedom/how-to-create-a-class-using-codedom.md)  
- CodeDOM alanlar, özellikler, bir yöntem, bir oluşturucu ve bir giriş noktası içeren bir sınıf oluşturmak için nasıl kullanılacağını açıklar.  
+ [Nasıl yapılır: CodeDOM kullanarak sınıf oluşturma](how-to-create-a-class-using-codedom.md)  
+ Alanları, özellikleri, bir yöntemi, oluşturucuyu ve bir giriş noktasını içeren bir sınıf oluşturmak için CodeDOM nasıl kullanacağınızı açıklar.  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.CodeDom>  
- Ortak dil çalışma zamanını hedefleyen programlama dillerinde kod öğelerini temsil eden öğelerini tanımlar.  
+ Ortak dil çalışma zamanını hedefleyen programlama dillerinde kod öğelerini temsil eden öğeleri tanımlar.  
   
  <xref:System.CodeDom.Compiler>  
- Arabirimleri oluşturma ve çalışma zamanında kod derlemek için tanımlar.  
+ Çalışma zamanında kod oluşturma ve derleme için arabirimler tanımlar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [CodeDOM hızlı başvuru](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/f1dfsbhc(v=vs.100))  
- Kaynak kod öğelerini temsil eden CodeDOM öğeleri bulmak, geliştiriciler için hızlı bir yol sağlar.
+ [CodeDOM hızlı başvurusu](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/f1dfsbhc(v=vs.100))  
+ Geliştiricilerin kaynak kodu öğelerini temsil eden CodeDOM öğelerini bulması için hızlı bir yol sağlar.

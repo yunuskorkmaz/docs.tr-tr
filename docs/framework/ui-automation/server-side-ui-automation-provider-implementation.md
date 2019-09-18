@@ -6,12 +6,12 @@ helpviewer_keywords:
 - UI Automation, server-side provider implementation
 - provider implementation, UI Automation
 ms.assetid: 6acc6d08-bd67-4e2e-915c-9c1d34eb86fe
-ms.openlocfilehash: 5fd17f9ca9d83ab3b226ce9fc0a4aebca4f9352a
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: eb7156e0e2794fb7cb18e7bfce0e8488d0b145c3
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044153"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042771"
 ---
 # <a name="server-side-ui-automation-provider-implementation"></a>Sunucu Tarafı UI Otomasyonu Sağlayıcıyı Uygulama
 
@@ -34,7 +34,7 @@ Sağlayıcılar, kısmi güven ortamında çalışabilmek için yazılmalıdır.
 
 ## <a name="provider-implementation-by-windows-presentation-foundation-elements"></a>Windows Presentation Foundation öğelerine göre sağlayıcı uygulama
 
-Bu konu hakkında daha fazla bilgi için lütfen [WPF özel denetiminin UI Otomasyonu](../../../docs/framework/wpf/controls/ui-automation-of-a-wpf-custom-control.md)' na bakın.
+Bu konu hakkında daha fazla bilgi için lütfen [WPF özel denetiminin UI Otomasyonu](../wpf/controls/ui-automation-of-a-wpf-custom-control.md)' na bakın.
 
 <a name="Provider_Implementation_by_non_WPF_Elements"></a>
 
@@ -121,7 +121,7 @@ HWND tabanlı denetim sağlayıcılarının genellikle aşağıdaki özellikleri
 >
 > <xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty> Genellikle ana bilgisayar sağlayıcısı tarafından sağlanır. Örneğin, bir özel denetim öğesinden <xref:System.Windows.Forms.Control>türetildiyse, ad denetimin `Text` özelliğinden türetilir.
 
-Örneğin, bkz. [BIR UI Otomasyon sağlayıcısından geri dönüş özellikleri](../../../docs/framework/ui-automation/return-properties-from-a-ui-automation-provider.md).
+Örneğin, bkz. [BIR UI Otomasyon sağlayıcısından geri dönüş özellikleri](return-properties-from-a-ui-automation-provider.md).
 
 <a name="Events_in_Non_WPF_Providers"></a>
 
@@ -191,9 +191,9 @@ Bunu gerçekleştirmek için, Rebar için parça kök sağlayıcısı bantları 
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [UI Otomasyonu Sağlayıcılara Genel Bakış](../../../docs/framework/ui-automation/ui-automation-providers-overview.md)
-- [Sunucu Tarafı UI Otomasyonu Sağlayıcıyı Gösterme](../../../docs/framework/ui-automation/expose-a-server-side-ui-automation-provider.md)
-- [UI Otomasyonu Sağlayıcı Dönüş Özellikleri](../../../docs/framework/ui-automation/return-properties-from-a-ui-automation-provider.md)
-- [UI Otomasyonu Sağlayıcıda Olay Tetikleme](../../../docs/framework/ui-automation/raise-events-from-a-ui-automation-provider.md)
-- [UI Otomasyonu Parça Sağlayıcıyıda Gezinmeyi Etkinleştirme](../../../docs/framework/ui-automation/enable-navigation-in-a-ui-automation-fragment-provider.md)
-- [UI Otomasyonu Sağlayıcıda Denetim Düzenleri Desteği](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)
+- [UI Otomasyonu Sağlayıcılara Genel Bakış](ui-automation-providers-overview.md)
+- [Sunucu Tarafı UI Otomasyonu Sağlayıcıyı Gösterme](expose-a-server-side-ui-automation-provider.md)
+- [UI Otomasyonu Sağlayıcı Dönüş Özellikleri](return-properties-from-a-ui-automation-provider.md)
+- [UI Otomasyonu Sağlayıcıda Olay Tetikleme](raise-events-from-a-ui-automation-provider.md)
+- [UI Otomasyonu Parça Sağlayıcıyıda Gezinmeyi Etkinleştirme](enable-navigation-in-a-ui-automation-fragment-provider.md)
+- [UI Otomasyonu Sağlayıcıda Denetim Düzenleri Desteği](support-control-patterns-in-a-ui-automation-provider.md)

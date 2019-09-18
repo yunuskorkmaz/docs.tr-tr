@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 56b4ae5c-4745-44ff-ad78-ffe4fcde6b9b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1c13445b8b7c72d1c66efe5a9db3aaa027001ecf
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 549030b7e5f7544f593e5aa481a6dc85d5a85329
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69943815"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046406"
 ---
 # <a name="lazy-initialization"></a>Yavaş Başlatma
 Bir nesnenin *geç başlatılması* , oluşturulması ilk kullanılana kadar ertelenmesi anlamına gelir. (Bu konu için, *yavaş başlatma* ve *yavaş örnekleme* terimleri eş anlamlı.) Yavaş başlatma öncelikle performansı artırmak, gereksiz hesaplama önlemek ve program belleği gereksinimlerini azaltmak için kullanılır. Bunlar en yaygın senaryolardır:  
@@ -62,7 +62,7 @@ Bir nesnenin *geç başlatılması* , oluşturulması ilk kullanılana kadar ert
  Varsayılan olarak, <xref:System.Lazy%601> nesneler iş parçacığı güvenlidir. Diğer bir deyişle, Oluşturucu iş parçacığı güvenliği türünü belirtmezse, <xref:System.Lazy%601> oluşturduğu nesneler iş parçacığı güvenlidir. Çok iş parçacıklı senaryolarda, iş parçacığı açısından güvenli <xref:System.Lazy%601.Value%2A> <xref:System.Lazy%601> bir nesnenin özelliğine erişmek için ilk iş parçacığı, tüm iş parçacıklarında sonraki tüm erişimler için onu başlatır ve tüm iş parçacıkları aynı verileri paylaşır. Bu nedenle, hangi iş parçacığının nesneyi başlattığında ve yarış durumlarının zararsız olması önemlidir.  
   
 > [!NOTE]
-> Özel durum önbelleğe alma özelliğini kullanarak bu tutarlılığı hata koşullarına genişletebilirsiniz. Daha fazla bilgi için, [yavaş nesnelerdeki özel durumlar](../../../docs/framework/performance/lazy-initialization.md#ExceptionsInLazyObjects)başlıklı sonraki bölüme bakın.  
+> Özel durum önbelleğe alma özelliğini kullanarak bu tutarlılığı hata koşullarına genişletebilirsiniz. Daha fazla bilgi için, [yavaş nesnelerdeki özel durumlar](lazy-initialization.md#ExceptionsInLazyObjects)başlıklı sonraki bölüme bakın.  
   
  Aşağıdaki örnek, aynı `Lazy<int>` Örneğin üç ayrı iş parçacığı için aynı değere sahip olduğunu gösterir.  
   
@@ -157,4 +157,4 @@ Bir nesnenin *geç başlatılması* , oluşturulması ilk kullanılana kadar ert
 - [Yönetilen İş Parçacığı Oluşturma Temelleri](../../standard/threading/managed-threading-basics.md)
 - [İş Parçacıkları ve İş Parçacığı Oluşturma](../../standard/threading/threads-and-threading.md)
 - [Görev Paralel Kitaplığı (TPL)](../../standard/parallel-programming/task-parallel-library-tpl.md)
-- [Nasıl yapılır: Nesnelerin yavaş başlatılmasını gerçekleştir](../../../docs/framework/performance/how-to-perform-lazy-initialization-of-objects.md)
+- [Nasıl yapılır: Nesnelerin yavaş başlatılmasını gerçekleştir](how-to-perform-lazy-initialization-of-objects.md)

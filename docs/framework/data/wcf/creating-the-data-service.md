@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 34d1d971-5e18-4c22-9bf6-d3612e27ea59
-ms.openlocfilehash: c3c80fb48635199f45acb1e72bf756bbc65d2e14
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 582f5f2d6d82613736ed795eebe5129284cdac6e
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70780416"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052989"
 ---
 # <a name="create-the-data-service"></a>Veri hizmetini oluşturma
 
@@ -68,7 +68,7 @@ Bu konu başlığında, Northwind örnek veritabanına dayalı bir [!INCLUDE[ssO
 
 2. **Yeni öğe Ekle** iletişim kutusunda, **Web** kategorisinden **WCF veri hizmeti** öğe şablonunu seçin.
 
-   ![Visual Studio 2015 ' de WCF veri hizmeti öğe şablonu](media/wcf-data-service-item-template.png)
+   ![Visual Studio 2015 ' de WCF veri hizmeti öğe şablonu](./media/wcf-data-service-item-template.png)
 
    > [!NOTE]
    > **WCF veri hizmeti** şablonu visual Studio 2015 'de kullanılabilir, ancak visual Studio 2017 ' de kullanılamaz.

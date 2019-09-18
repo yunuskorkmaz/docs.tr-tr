@@ -15,12 +15,12 @@ helpviewer_keywords:
 - security [.NET Framework], Internet
 - positions [.NET Framework], granting
 ms.assetid: d51ad8cb-03ae-4a51-bfcd-cfcf6b98afa9
-ms.openlocfilehash: fbb4e5d7171c50c06f55706df90240ffa205ee73
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: d1b993acbf20eac244e596075c3f826bba3211a1
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69967616"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046861"
 ---
 # <a name="web-and-socket-permissions"></a>Web ve Yuva İzinleri
 <xref:System.Net> Ad alanını kullanan uygulamalar için Internet güvenliği, <xref:System.Net.WebPermission> ve <xref:System.Net.SocketPermission> sınıfları tarafından sağlanır. **WebPermission** sınıfı bir URI 'den veri istemek veya bir URI 'yi Internet 'e sağlamak için bir uygulamanın hakkını denetler. **SocketPermission** sınıfı, bir uygulamanın, bir <xref:System.Net.Sockets.Socket> yerel bağlantı noktasındaki verileri kabul etmek veya başka bir adreste bir aktarım protokolü kullanarak uzak cihazlara iletişim kurmak için, ' ın ana bilgisayar, bağlantı noktası numarası ve aktarım protokolüne bağlı olarak kullanılması hakkını denetler yuvasının.  
@@ -36,4 +36,4 @@ ms.locfileid: "69967616"
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Güvenlik](../../standard/security/index.md)
-- [Ağ Programlama Güvenliği](../../../docs/framework/network-programming/security-in-network-programming.md)
+- [Ağ Programlama Güvenliği](security-in-network-programming.md)

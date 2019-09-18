@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: 4ca3a4f0-4400-47ce-8936-8e219961c76f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fcc9ba5e379897247f50175603b1002d5688d215
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: b8d1ad081c8d783cd18054078a6eeb82428faa4d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894692"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044630"
 ---
 # <a name="ilasmexe-il-assembler"></a>Ilasm.exe (IL Derleyici)
 
 IL Derleyicisi ara dil'den (IL) taşınabilir çalıştırılabilir bir (PE) dosya oluşturur. (Il hakkında daha fazla bilgi için bkz. [yönetilen yürütme işlemi](../../standard/managed-execution-process.md).) IL ve gereken meta veriyi içeren elde edilen çalıştırılabilir dosyayı çalıştırarak IL'in beklendiği gibi çalışıp çalışmadığını belirleyebilirsiniz.
 
-Bu araç, Visual Studio ile birlikte otomatik olarak yüklenir. Aracı çalıştırmak için, Visual Studio için Geliştirici Komut İstemi (veya Windows 7 ' de Visual Studio komut Istemi) kullanın. Daha fazla bilgi için bkz. [komut istemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md).
+Bu araç, Visual Studio ile birlikte otomatik olarak yüklenir. Aracı çalıştırmak için, Visual Studio için Geliştirici Komut İstemi (veya Windows 7 ' de Visual Studio komut Istemi) kullanın. Daha fazla bilgi için bkz. [komut istemleri](developer-command-prompt-for-vs.md).
 
 Komut satırına şunu yazın:
 
@@ -92,7 +92,7 @@ IL Derleyicisi, çalışma zamanını hedef alan programlama dillerinin tüm var
 > [!NOTE]
 > Eğer .il kaynak dosyasının son kod satırında bir boşluk veya satır sonu karakteri yoksa derleme başarısız olabilir.
 
-*Ilasm. exe* ' yi yardımcı aracı olan [*ıldadsm. exe*](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)ile birlikte kullanabilirsiniz. *Ildadsm. exe* IL kodu IÇEREN bir PE dosyası alır ve *Ilasm. exe*' ye giriş olarak uygun bir metin dosyası oluşturur. Bu örneğin, tüm çalışma zamanı meta veri özniteliklerini desteklemeyen bir programlama dilinde kod derlerken kullanışlıdır. Kodu derleyip ve çıkış *ıldadsm. exe*aracılığıyla çalıştırdıktan sonra, elde edilen Il metin dosyası, eksik öznitelikleri eklemek için el ile düzenlenebilir. Ardından, son yürütülebilir bir dosya oluşturmak için bu metin dosyasını *Ilasm. exe* aracılığıyla çalıştırabilirsiniz.
+*Ilasm. exe* ' yi yardımcı aracı olan [*ıldadsm. exe*](ildasm-exe-il-disassembler.md)ile birlikte kullanabilirsiniz. *Ildadsm. exe* IL kodu IÇEREN bir PE dosyası alır ve *Ilasm. exe*' ye giriş olarak uygun bir metin dosyası oluşturur. Bu örneğin, tüm çalışma zamanı meta veri özniteliklerini desteklemeyen bir programlama dilinde kod derlerken kullanışlıdır. Kodu derleyip ve çıkış *ıldadsm. exe*aracılığıyla çalıştırdıktan sonra, elde edilen Il metin dosyası, eksik öznitelikleri eklemek için el ile düzenlenebilir. Ardından, son yürütülebilir bir dosya oluşturmak için bu metin dosyasını *Ilasm. exe* aracılığıyla çalıştırabilirsiniz.
 
 Bu tekniği kullanarak ayrı derleyiciler tarafından üretilen çeşitli PE dosyalarından tek bir PE dosyası oluşturabilirsiniz.
 
@@ -159,7 +159,7 @@ Aşağıdaki komut, *MYTESTFILE.Il* Il dosyasını ayrıştırır ve *. dll* dos
 ilasm myTestFile /dll /output:myNewTestFile.dll
 ```
 
-Aşağıdaki kod örneğinde, "Merhaba Dünya!" görüntüleyen son derece basit bir uygulama gösterilmektedir konsoluna gidin. Bu kodu derleyebilir ve ardından [*ıldadsm. exe*](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) aracını kullanarak bir Il dosyası oluşturabilirsiniz.
+Aşağıdaki kod örneğinde, "Merhaba Dünya!" görüntüleyen son derece basit bir uygulama gösterilmektedir konsoluna gidin. Bu kodu derleyebilir ve ardından [*ıldadsm. exe*](ildasm-exe-il-disassembler.md) aracını kullanarak bir Il dosyası oluşturabilirsiniz.
 
 ```csharp
 using System;
@@ -229,7 +229,7 @@ Aşağıdaki IL kod örneği önceki C# kod örneğine karşılık gelir. Bu kod
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Araçlar](../../../docs/framework/tools/index.md)
-- [*Ildadsm. exe* (Il ayırıcı)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)
+- [Araçlar](index.md)
+- [*Ildadsm. exe* (Il ayırıcı)](ildasm-exe-il-disassembler.md)
 - [Yönetilen Yürütme İşlemi](../../standard/managed-execution-process.md)
-- [Komut İstemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [Komut İstemleri](developer-command-prompt-for-vs.md)

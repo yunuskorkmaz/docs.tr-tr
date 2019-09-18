@@ -2,36 +2,36 @@
 title: PNRP Bulutları
 ms.date: 03/30/2017
 ms.assetid: a82e2bf1-62ab-4c2d-83f3-3217a6aead2e
-ms.openlocfilehash: 6e7ec5d88e1053f33b86816fec739aae38cac18c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: dd27e61fe1f648dcaf4ee4dd5f5119d33913c63a
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623025"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047367"
 ---
 # <a name="pnrp-clouds"></a>PNRP Bulutları
-Bir PNRP "bulut" ağ üzerinden birbiriyle iletişim kurabilir düğümleri kümesini temsil eder. "Bulut" terimi, "eş kafes" ve "eşler arası grafik" ile eşanlamlıdır.  
+Bir PNRP "bulutu" ağ üzerinden birbirleriyle iletişim kurabilen bir düğüm kümesini temsil eder. "Cloud" terimi "eşdüzey ağ" ve "eşler arası Graf" ile eşanlamlıdır.  
   
- Düğümler arasında iletişim hiçbir zaman bir buluttan diğerine çıkarmanız gerekir. A <xref:System.Net.PeerToPeer.Cloud> örneği büyük küçük harfe duyarlıdır ve adıyla benzersiz şekilde tanımlanır. Tek bir eş veya düğüm birden fazla buluta bağlı olabilir.  
+ Düğümler arasındaki iletişimin asla bir buluttan diğerine çapraz olmaması gerekir. Örnek <xref:System.Net.PeerToPeer.Cloud> , büyük/küçük harfe duyarlı olan adıyla benzersiz bir şekilde tanımlanır. Tek bir eş veya düğüm birden fazla buluta bağlı olabilir.  
   
- Bulut ağ arabirimlerinde çok yakın bir şekilde bağlıdır.  Bir çok ana bilgisayarlı makinede farklı alt ağlara bağlı iki ağ kartı olan üç bulut döndürülür: her arabirim ve tek bir genel kapsam bulut başına bağlantı yerel adresi.  
+ Bulutlar ağ arabirimlerine çok yakın bir şekilde bağlanır.  Farklı alt ağlara bağlı iki ağ kartına sahip çoklu bilgisayarlı bir makinede, üç bulut döndürülür: Arabirim başına her bir bağlantı yerel adresi için bir tane ve tek bir genel kapsam bulutu.  
   
- "Bir kapsam bir gruplandırma birbirine bulamadı bilgisayarların olduğu üç bulut kapsamların" PNRP kullanır:  
+ PNRP, bir kapsamın birbirini bulabilen bilgisayarların gruplandırılması olduğu üç bulut "kapsamını" kullanır:  
   
-- Genel bulut, genel IPv6 adresi kapsamını ve genel adres karşılık gelen ve tüm IPv6 Internet üzerindeki tüm bilgisayarları gösterir. Yalnızca tek bir genel bulut yok.  
+- Genel bulut genel IPv6 adresi kapsamına ve genel adreslere karşılık gelir ve IPv6 Internet 'in tamamında tüm bilgisayarları temsil eder. Yalnızca tek bir genel bulut vardır.  
   
-- Bağlantı-yerel bulut bağlantı-yerel adresleri ve bağlantı-yerel IPv6 adresi kapsamını karşılık gelir. Genellikle yerel olarak bağlı alt ağ ile aynı belirli bir bağlantı, bağlantı-yerel bulut içindir. Birden çok bağlantı-yerel bulut olabilir.  
+- Bağlantı yerel bulutu bağlantı yerel IPv6 adresi kapsamına ve bağlantı yerel adreslerine karşılık gelir. Bağlantı yerel bulutu, genellikle yerel olarak bağlı alt ağla aynı olan belirli bir bağlantı içindir. Birden çok bağlantı yerel bulutu olabilir.  
   
- Siteye özel bulut, üçüncü bir bulut site IPv6 adresi kapsamını ve site-yerel adresleri karşılık gelir. Bu bulut, PNRP hala desteklenmektedir ancak kullanım dışıdır.  
+ Siteye özgü bulut olan üçüncü bulut, site IPv6 adresi kapsamına ve site yerel adreslerine karşılık gelir. Bu bulut kullanım dışı bırakılmıştır, ancak yine de PNRP ' de desteklenir.  
   
 ## <a name="clouds"></a>Bulutlar  
- PNRP Bulutları örnekleri tarafından temsil edilen <xref:System.Net.PeerToPeer.Cloud> sınıfı. Bulut grupları kullanılan bir eş numaralandırılabilir örnekleri tarafından temsil edilen <xref:System.Net.PeerToPeer.CloudCollection> sınıfı. Statik çağırarak geçerli eşler arası bilinen PNRP Bulutları koleksiyonlarının edinilebilir <xref:System.Net.PeerToPeer.Cloud.GetAvailableClouds%2A> yöntemi.  
+ PNRP bulutları, <xref:System.Net.PeerToPeer.Cloud> sınıfının örnekleriyle temsil edilir. Bir eşdüzey kullanılan bulut grupları, sıralanabilir <xref:System.Net.PeerToPeer.CloudCollection> sınıfın örnekleri tarafından temsil edilir. Geçerli eş tarafından bilinen PNRP bulutu koleksiyonları statik <xref:System.Net.PeerToPeer.Cloud.GetAvailableClouds%2A> yöntem çağırarak elde edilebilir.  
   
- Bağımsız Bulutlar 256 karakter Unicode dize olarak temsil edilen benzersiz adlara sahip. Bu adlar benzersiz bulut sınıfının örneklerini oluşturmak için yukarıda belirtilen kapsam ile birlikte kullanılır. Bu örnek serileştirilmiş ve için kalıcı kullanım reconstructed.  
+ Ayrı bulutlar, 256 karakter Unicode dizesi olarak temsil edilen benzersiz adlara sahiptir. Bu adlar, yukarıda bahsedilen kapsamla birlikte, bulut sınıfının benzersiz örneklerini oluşturmak için kullanılır. Bu örnekler kalıcı kullanım için seri hale getirilebilir ve yeniden oluşturulabilir.  
   
- Bir bulut örneği oluşturulduğunda veya elde sonra eş adları bilinen eş ağ oluşturmak için kaydedilebilir.  
+ Bir bulut örneği oluşturulduktan veya alındıktan sonra, bir bilinen eşdüzey ağ oluşturmak için eş adları onunla birlikte kaydedilebilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Net.PeerToPeer.Cloud>
-- [Eş Adı Çözümleme Protokolü](../../../docs/framework/network-programming/peer-name-resolution-protocol.md)
+- [Eş Adı Çözümleme Protokolü](peer-name-resolution-protocol.md)

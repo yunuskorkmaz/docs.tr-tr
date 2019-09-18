@@ -5,12 +5,12 @@ author: BillWagner
 ms.author: wiwagn
 ms.date: 09/13/2017
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: b85f878d8a391581fcc7419b3ca4d656eb5595af
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: b42a71993cb120c88b90e867b7af23873b99d280
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69660441"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71039590"
 ---
 # <a name="build-a-c-hello-world-application-with-the-net-core-sdk-in-visual-studio-2017"></a>Visual Studio C# 2017 ' de .NET Core SDK Merhaba Dünya uygulama oluşturma
 
@@ -18,7 +18,7 @@ Bu konuda, Visual Studio 2017 ' de kullanarak C# basit bir .NET Core konsol uygu
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-[Visual Studio 2017](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) ".NET Core platformlar arası geliştirme" iş yükü yüklendi. Uygulamanızı, .NET Core 1,1 veya .NET Core 2,0 ile geliştirebilirsiniz.
+[Visual Studio 2017](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) ".NET Core platformlar arası geliştirme" iş yükü yüklendi. Uygulamanızı .NET Core 2,1 veya sonraki sürümleriyle geliştirebilirsiniz.
 
 Daha fazla bilgi için bkz. [Windows üzerinde .NET Core önkoşulları](../windows-prerequisites.md) .
 
@@ -45,7 +45,7 @@ Basit bir "Merhaba Dünya" konsol uygulaması oluşturarak başlayın. Aşağıd
 
    Bu kod, kullanıcıdan herhangi bir tuşa basması ve bir tuşa basılana kadar programı duraklayacağını ister.
 
-1. Menü çubuğunda Build**Build Solution**öğesini > seçin. Bu, programınızı bir tam zamanında (JıT) derleyicisi tarafından ikili koda dönüştürülen bir ara dile (IL) derler.
+1. Menü çubuğunda Build**Build Solution**öğesini **seçin.**  >  Bu, programınızı bir tam zamanında (JıT) derleyicisi tarafından ikili koda dönüştürülen bir ara dile (IL) derler.
 
 1. Araç çubuğunda yeşil oklu **HelloWorld** düğmesini seçerek programı çalıştırın.
 
@@ -67,7 +67,7 @@ Uygulamanızı, adını ve Tarih ve saat ile birlikte göstermek için kullanıc
 
    Bu kod "adınız nedir?" görüntüler Konsol penceresinde ve ardından ENTER tuşuna basarak Kullanıcı bir dize girene kadar bekler. Bu dizeyi adlı `name`bir değişkende depolar. Ayrıca, geçerli yerel saati içeren <xref:System.DateTime.Now?displayProperty=nameWithType> özelliğinin değerini alır ve bunu adlı `date`bir değişkene atar. Son olarak, bu değerleri konsol penceresinde göstermek için bir [enterpolasyonlu dize](../../csharp/language-reference/tokens/interpolated.md) kullanır.
 
-1. Build**Build Solution**öğesini seçerek > programı derleyin.
+1. Build**Build Solution** **öğesini seçerek** > programı derleyin.
 
 1. Araç çubuğundan yeşil oku seçerek, F5 tuşuna basarak veya **hata** > ayıklama**başlatma hata ayıklamayı Başlat** menü öğesini seçerek programı Visual Studio 'daki hata ayıklama modunda çalıştırın. Bir ad girip ENTER tuşuna basarak istemi yanıtlayın.
 

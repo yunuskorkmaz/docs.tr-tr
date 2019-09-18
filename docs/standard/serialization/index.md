@@ -1,47 +1,40 @@
 ---
-title: .NET içinde serileştirme
-ms.date: 03/30/2017
+title: Serileştirme-.NET
+ms.date: 09/02/2019
 helpviewer_keywords:
+- JSON serialization
 - XML serialization, defined
 - binary serialization
 - serializing objects
 - serialization
 - objects, serializing
 ms.assetid: 4d1111c0-9447-4231-a997-96a2b74b3453
-ms.openlocfilehash: 1f90a128ef6b29acbd315beae7aaaf1d1b78a62b
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: e6db24326c79ab6509b253c45c27f87a2aacd73c
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65638857"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053354"
 ---
 # <a name="serialization-in-net"></a>.NET içinde serileştirme
-Serileştirme kalıcı veya taşınan bir forma bir nesne durumunu dönüştürme işlemidir. Serileştirme tamamlayıcı bir akış bir nesneye dönüştürür seri kaldırma ' dir. Birlikte, bu işlemleri kolayca depolanan ve aktarılan veriler izin vermiyor.  
-  
-İki serileştirme teknoloji .NET özellikleri:  
-  
-- Bir uygulamanın farklı çağrılarını arasında bir nesne durumunu korumak için kullanışlıdır türü uygunluk, ikili serileştirme korur. Örneğin, bir nesne panoya serileştirmek tarafından farklı uygulamalar arasında paylaşabilirsiniz. Bir nesneyi bir akışa, diske, bellek, ağ üzerinden seri hale getirmek ve VS. Uzaktan iletişim serileştirme "değeri tarafından" nesnelerini geçirmek için bir bilgisayar veya uygulama etki alanından diğerine kullanır.  
-  
-- XML serileştirme yalnızca ortak özellikler ve alanları serileştirir ve türü kalitesini korumak değil. Sağlayın ya da söz konusu verileri kullanan uygulamayı kısıtlamadan veri tüketmek istediğinizde bu kullanışlıdır. XML açık bir standart olduğu için veri Web'de paylaşma çekici bir seçimdir. SOAP benzer şekilde, çekici bir seçim kolaylaştıracak açık bir standart olan.  
-  
-## <a name="in-this-section"></a>Bu Bölümde  
-[Serileştirme ile İlgili Nasıl Yapılır Konuları](../../../docs/standard/serialization/serialization-how-to-topics.md)  
-Bu bölümde bulunan nasıl yapılır konulara bağlantılar listeler.
-  
-[İkili Serileştirme](../../../docs/standard/serialization/binary-serialization.md)  
-Ortak dil çalışma zamanı ile içerdiği ikili serileştirme mekanizması açıklanmaktadır.
 
-[XML ve SOAP Serileştirme](../../../docs/standard/serialization/xml-and-soap-serialization.md)  
-Ortak dil çalışma zamanı ile içerdiği XML ve SOAP serileştirme mekanizması açıklanmaktadır.
-
-[Serileştirme Araçları](../../../docs/standard/serialization/serialization-tools.md)  
-Bu araçlar serileştirme kod geliştirmelerine yardımcı olur.
-
-[Serileştirme Örnekleri](../../../docs/standard/serialization/serialization-samples.md)  
-Örnekler serileştirme yapmak nasıl gösterir.
+Serileştirme, bir nesnenin durumunu kalıcı veya taşınan bir biçime dönüştürme işlemidir. Serileştirme tamamlayıcısı, bir akışı nesnesine dönüştüren seri hale getirme ' dir. Birlikte, bu süreçler verilerin depolanmasını ve aktarılmasını sağlar.  
+  
+.NET özellikleri aşağıdaki serileştirme teknolojilerine sahiptir:  
+  
+- [İkili serileştirme](binary-serialization.md) , bir uygulamanın farklı etkinleştirmeleri arasında bir nesnenin durumunu korumak için yararlı olan tür aslına uygunluk düzeyini korur. Örneğin, bir nesne panoya serileştirmek tarafından farklı uygulamalar arasında paylaşabilirsiniz. Bir nesneyi bir akışa, diske, belleğe, ağ üzerinden, vb. olarak seri hale getirebilirsiniz. Uzaktan iletişim serileştirme "değeri tarafından" nesnelerini geçirmek için bir bilgisayar veya uygulama etki alanından diğerine kullanır.  
+  
+- [XML ve SOAP serileştirme](xml-and-soap-serialization.md) yalnızca ortak özellikleri ve alanları serileştirir ve tür aslına uygunluk koruması yapmaz. Bu, verileri kullanan uygulamayı kısıtlamadan verileri sağlamak veya kullanmak istediğinizde faydalıdır. XML açık bir standart olduğundan, verileri Web genelinde paylaşmak için çekici bir seçimdir. SOAP aynı şekilde bir açık standarttır ve bu da etkileyici bir seçenek sunar.  
+  
+- [JSON serileştirme](system-text-json-overview.md) yalnızca ortak özellikleri serileştirir ve tür uygunluğa sahip değildir. JSON, web genelinde veri paylaşımı için çekici bir seçim olan açık bir standarttır.
 
 ## <a name="reference"></a>Başvuru
-<xref:System.Runtime.Serialization> Seri hale getirme ve seri kaldırma nesneler için kullanılan sınıfları içerir.
+
+<xref:System.Runtime.Serialization>  
+Serileştirme ve seri kaldırma nesneler için kullanılan sınıfları içerir.
   
 <xref:System.Xml.Serialization>  
-XML biçimi belgeleri ya da akış nesneleri serileştirmek için kullanılan sınıfları içerir.
+Nesneleri XML biçimli belge veya akışlara seri hale getirmek için kullanılabilecek sınıfları içerir.
+
+<xref:System.Text.Json>  
+Nesneleri JSON biçimli belgeler veya akışlara seri hale getirmek için kullanılabilecek sınıfları içerir.

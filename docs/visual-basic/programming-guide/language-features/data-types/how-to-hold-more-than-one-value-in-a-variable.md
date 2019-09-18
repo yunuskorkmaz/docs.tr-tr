@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: (Visual Basic) değişkende birden fazla değer tutma'
+title: 'Nasıl yapılır: Değişkende birden çok değer tut (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - classes [Visual Basic], composite data types
@@ -11,36 +11,37 @@ helpviewer_keywords:
 - arrays [Visual Basic], compilation errors
 - types [Visual Basic], composite
 ms.assetid: 5fe0e558-aac2-4a40-b7f2-7cfea7336917
-ms.openlocfilehash: 2c3df9873d184ead2de3f82b89a081955ade93b3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8d07a34a98303f9d220dba0a3c955120b421340e
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64601129"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71054192"
 ---
-# <a name="how-to-hold-more-than-one-value-in-a-variable-visual-basic"></a>Nasıl yapılır: (Visual Basic) değişkende birden fazla değer tutma
-Olması bildirirseniz bir değişkeni birden fazla değer içeren bir *bileşik veri türü*.  
-  
- [Bileşik veri türleri](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md) yapıları, diziler ve sınıfları içerir. Bileşik veri türünde bir değişken başlangıç veri türleri ve diğer bileşik türler bir birleşimini içerebilir. Yapılar ve sınıflar, verilerin yanı sıra, kod barındırabilir.  
-  
-### <a name="to-hold-more-than-one-value-in-a-variable"></a>Bir değişkende birden fazla değerini tutmak için  
-  
-1. Bileşik veri türüne değişkeniniz için kullanmak istediğiniz belirleyin.  
-  
-2. Bileşik veri türü zaten tanımlı değilse, değişken kullanabilmesi tanımlayın.  
-  
-    - Bir yapı tanımla bir [Structure deyimi](../../../../visual-basic/language-reference/statements/structure-statement.md).  
-  
-    - Bir dizi tanımlamak bir [Dim deyimi](../../../../visual-basic/language-reference/statements/dim-statement.md).  
-  
-    - İle bir sınıf tanımlayan bir [Class deyimi](../../../../visual-basic/language-reference/statements/class-statement.md).  
-  
-3. İle bir değişken bildirmek bir `Dim` deyimi.  
-  
-4. Değişken adı ile bir `As` yan tümcesi.  
-  
-5. İzleyin `As` anahtar sözcüğü ile uygun bileşik veri türünün adı.  
-  
+# <a name="how-to-hold-more-than-one-value-in-a-variable-visual-basic"></a>Nasıl yapılır: Değişkende birden çok değer tut (Visual Basic)
+
+Bir değişken, *bileşik veri türünde*olduğunu bildirirseniz birden fazla değeri tutar.
+
+[Bileşik veri türleri](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md) yapılar, diziler ve sınıflar içerir. Bileşik veri türünün bir değişkeni, Öğesel veri türlerinin ve diğer bileşik türlerin bir birleşimini tutabilir. Yapılar ve sınıflar, kodu ve verileri içerebilir.
+
+## <a name="to-hold-more-than-one-value-in-a-variable"></a>Bir değişkende birden fazla değeri tutmak için
+
+1. Değişkeniniz için kullanmak istediğiniz bileşik veri türünü saptayın.
+
+2. Bileşik veri türü önceden tanımlanmamışsa, değişkeninizin onu kullanabilmesi için onu tanımlayın.
+
+    - [Structure ifadesiyle](../../../../visual-basic/language-reference/statements/structure-statement.md)bir yapı tanımlayın.
+
+    - [Dim ifadesiyle](../../../../visual-basic/language-reference/statements/dim-statement.md)bir dizi tanımlayın.
+
+    - [Sınıf ifadesiyle](../../../../visual-basic/language-reference/statements/class-statement.md)bir sınıf tanımlayın.
+
+3. Değişkeninizi bir `Dim` ifadesiyle bildirin.
+
+4. Bir `As` yan tümcesiyle değişken adını izleyin.
+
+5. Uygun bileşik veri türünün adı ile anahtarsözcüğünüizleyin.`As`
+
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Veri Türleri](../../../../visual-basic/language-reference/data-types/index.md)

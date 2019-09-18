@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ccd68284-f3a8-47b8-bc3f-92e5fe3a1640
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2486316cf582da09eaa8998d06efb8a4e4ea3a88
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 163022256dfbeb303a500d9c1d574054c5b550d7
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69967219"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052292"
 ---
 # <a name="runtime-profiling"></a>Çalışma Zamanı Profili Oluşturma
 Profil oluşturma, herhangi bir geliştirme veya dağıtım senaryosunda performans verileri toplama yöntemidir. Bu bölüm, uygulama performansı hakkında bilgi toplamak isteyen geliştiricilere ve sistem yöneticilerine yöneliktir.  
@@ -34,7 +34,7 @@ Profil oluşturma, herhangi bir geliştirme veya dağıtım senaryosunda perform
   
 3. Performans Izleyicisi araç çubuğunda, varsa **Ekle** simgesine (artı işareti) tıklayın. Mevcut değilse, izleyici penceresinde sağ tıklayın ve **Sayaç Ekle** seçeneğini belirleyin.  
   
-     Bu, **Sayaç Ekle** iletişim kutusunu açar. **Kullanılabilir sayaçlar** liste kutusu kullanılabilir performans nesnelerini görüntüler. Bellek yönetimi ( **.NET CLR belleği**), birlikte çalışabilirlik ( **.net clr birlikte çalışma**), özel durum Işleme ( **.net clr özel durumları**) gibi .NET Framework uygulamalar için önceden tanımlanmış birçok nesne vardır Çoklu iş parçacığı oluşturma ( **.NET CLR LocksAndThreads**). Her performans nesnesi, bazı ayrı performans sayaçlarını içerir. Performans Izleyicisinde bulunan performans sayaçlarının listesi için bkz. [performans sayaçları](../../../docs/framework/debug-trace-profile/performance-counters.md).  
+     Bu, **Sayaç Ekle** iletişim kutusunu açar. **Kullanılabilir sayaçlar** liste kutusu kullanılabilir performans nesnelerini görüntüler. Bellek yönetimi ( **.NET CLR belleği**), birlikte çalışabilirlik ( **.net clr birlikte çalışma**), özel durum Işleme ( **.net clr özel durumları**) gibi .NET Framework uygulamalar için önceden tanımlanmış birçok nesne vardır Çoklu iş parçacığı oluşturma ( **.NET CLR LocksAndThreads**). Her performans nesnesi, bazı ayrı performans sayaçlarını içerir. Performans Izleyicisinde bulunan performans sayaçlarının listesi için bkz. [performans sayaçları](performance-counters.md).  
   
 4. Desteklediği tek performans sayaçlarının listesini görüntülemek için bir performans nesnesi adının yanındaki onay kutusunu işaretleyin.  
   
@@ -46,15 +46,15 @@ Profil oluşturma, herhangi bir geliştirme veya dağıtım senaryosunda perform
   
      **Seçilen nesne örnekleri** liste kutusunda, uygulamanın performans sayacını izlemek için bir uygulama adına tıklayın.  
   
-     Çalışma zamanının birden çok sürümünü ayırt etmek veya aynı ada sahip birden çok uygulamayı kesinleştirmeniz için bir kayıt defteri anahtarını da değiştirmelisiniz. Daha fazla bilgi için bkz. [performans sayaçları ve Işlem Içi yan yana uygulamalar](../../../docs/framework/debug-trace-profile/performance-counters-and-in-process-side-by-side-applications.md).  
+     Çalışma zamanının birden çok sürümünü ayırt etmek veya aynı ada sahip birden çok uygulamayı kesinleştirmeniz için bir kayıt defteri anahtarını da değiştirmelisiniz. Daha fazla bilgi için bkz. [performans sayaçları ve Işlem Içi yan yana uygulamalar](performance-counters-and-in-process-side-by-side-applications.md).  
   
 > [!NOTE]
 > Performans konsolu çalışırken yeni performans sayaçları yüklendiğinde, yeni sayaçların görünür olması için Performans konsolunu durdurup yeniden başlatın.  
   
- Bir bölgede veya uzak paylaşımda bulunan bir derlemenin profilini oluşturmak istiyorsanız, uzak derlemenin performans sayaçlarını çalıştıran bilgisayarda tam güvene sahip olduğundan emin olun. Derlemenin yeterli güveni yoksa, performans sayaçları çalışmaz. Farklı bölgelere güven verme hakkında daha fazla bilgi için bkz. [Caspol. exe (kod erişimi güvenlik Ilkesi aracı)](../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md).  
+ Bir bölgede veya uzak paylaşımda bulunan bir derlemenin profilini oluşturmak istiyorsanız, uzak derlemenin performans sayaçlarını çalıştıran bilgisayarda tam güvene sahip olduğundan emin olun. Derlemenin yeterli güveni yoksa, performans sayaçları çalışmaz. Farklı bölgelere güven verme hakkında daha fazla bilgi için bkz. [Caspol. exe (kod erişimi güvenlik Ilkesi aracı)](../tools/caspol-exe-code-access-security-policy-tool.md).  
   
 > [!NOTE]
-> .NET Framework 4 ' ün yüklendiği sistemlerde, performans Izleyicisi .net **clr verileri** ve **.NET CLR ağı**gibi bazı kategorilerdeki performans sayaçlarındaki verileri .NET kullanılarak geliştirilmiş uygulamalar için görüntülemeyebilir Framework 1,1. Bu durumda, [ \<forcePerformanceCounterUniqueSharedMemoryReads >](../../../docs/framework/configure-apps/file-schema/runtime/forceperformancecounteruniquesharedmemoryreads-element.md) öğesini uygulamanın yapılandırma dosyasına ekleyerek performans izleyicisini bu verileri görüntüleyecek şekilde yapılandırabilirsiniz.  
+> .NET Framework 4 ' ün yüklendiği sistemlerde, performans Izleyicisi .net **clr verileri** ve **.NET CLR ağı**gibi bazı kategorilerdeki performans sayaçlarındaki verileri .NET kullanılarak geliştirilmiş uygulamalar için görüntülemeyebilir Framework 1,1. Bu durumda, [ \<forcePerformanceCounterUniqueSharedMemoryReads >](../configure-apps/file-schema/runtime/forceperformancecounteruniquesharedmemoryreads-element.md) öğesini uygulamanın yapılandırma dosyasına ekleyerek performans izleyicisini bu verileri görüntüleyecek şekilde yapılandırabilirsiniz.  
   
 ## <a name="reading-and-creating-performance-counters-programmatically"></a>Programlı olarak performans sayaçlarını okuma ve oluşturma  
  .NET Framework, Performans konsolunda bulunan performans bilgilerine programlı bir şekilde erişmek için kullanabileceğiniz sınıflar sağlar. Özel performans sayaçları oluşturmak için bu sınıfları da kullanabilirsiniz. Aşağıdaki tabloda .NET Framework belirtilen bazı performans izleme sınıfları açıklanmaktadır.  
@@ -68,4 +68,4 @@ Profil oluşturma, herhangi bir geliştirme veya dağıtım senaryosunda perform
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Performans Sayaçları](../../../docs/framework/debug-trace-profile/performance-counters.md)
+- [Performans Sayaçları](performance-counters.md)

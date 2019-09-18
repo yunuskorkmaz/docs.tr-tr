@@ -17,19 +17,19 @@ helpviewer_keywords:
 - sockets, synchronous server sockets
 - Internet, sockets
 ms.assetid: d1ce882e-653e-41f5-9289-844ec855b804
-ms.openlocfilehash: 43e1d54d4e74b49fdf1a8997d1cc89492c9412bb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cbc02c755ceefa8f31439f121a98978b82f33fa2
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61796937"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047029"
 ---
 # <a name="using-a-synchronous-server-socket"></a>Zaman Uyumlu Sunucu Yuvası Kullanma
-Yuva bağlantısı isteği alınana kadar zaman uyumlu sunucu yuva uygulamanın yürütülmesini askıya alın. Zaman uyumlu sunucu yuva ağ kullanımı yoğun uygulamalar, işlemi için uygun değildir, ancak Basit Ağ uygulamaları için uygun olabilir.  
+Zaman uyumlu sunucu yuvaları, yuvada bir bağlantı isteği alınana kadar uygulamanın yürütülmesini askıya alır. Zaman uyumlu sunucu yuvaları, ağ uygulamalarında yoğun olarak kullanılan uygulamalar için uygun değildir, ancak basit ağ uygulamaları için uygun olabilir.  
   
- Sonra bir <xref:System.Net.Sockets.Socket> kullanarak bir uç noktası dinleyecek şekilde ayarlanır <xref:System.Net.Sockets.Socket.Bind%2A> ve <xref:System.Net.Sockets.Socket.Listen%2A> yöntemleri, gelen bağlantı isteklerini kullanarak kabul etmeye hazır <xref:System.Net.Sockets.Socket.Accept%2A> yöntemi. Bir bağlantı isteği alınana kadar uygulamanın askıya olduğunda **kabul** yöntemi çağrılır.  
+ Bir uç <xref:System.Net.Sockets.Socket> noktayı <xref:System.Net.Sockets.Socket.Bind%2A> ve <xref:System.Net.Sockets.Socket.Listen%2A> yöntemlerini kullanarak bir uç noktada dinlemek üzere ayarlandıktan sonra, <xref:System.Net.Sockets.Socket.Accept%2A> yöntemi kullanılarak gelen bağlantı isteklerini kabul etmeye hazırlıdır. **Accept** yöntemi çağrıldığında bir bağlantı isteği alınana kadar uygulama askıya alınır.  
   
- Bir bağlantı isteği alındığında **kabul** yeni bir **yuva** bağlanan istemcinin ile ilişkili olan örneği. Aşağıdaki örnek istemciden gelen verileri okur, konsolda görüntüler ve istemcisine verileri görüntülemektedir. **Yuva** herhangi bir Mesajlaşma protokolü, bu nedenle belirtmiyor dize "\<EOF >" ileti verileri sonunu işaretler. Olduğunu varsayar bir **yuva** adlı `listener` başlatılır ve bir uç noktasına bağlı.  
+ Bir bağlantı isteği alındığında, **kabul et** , bağlanılan istemciyle ilişkili yeni bir **yuva** örneği döndürür. Aşağıdaki örnek, istemciden gelen verileri okur, konsolunda görüntüler ve verileri istemciye geri yankılar. **Yuva** herhangi bir ileti Protokolü belirtmez, bu nedenle "\<EOF >" dizesi ileti verilerinin sonunu işaretler. Adlandırılmış`listener` bir **yuvanın** başlatıldığını ve bir uç noktaya bağlandığını varsayar.  
   
 ```vb  
 Console.WriteLine("Waiting for a connection...")  
@@ -77,6 +77,6 @@ handler.Close();
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Zaman Uyumsuz Sunucu Yuvası Kullanma](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)
-- [Zaman Uyumlu Sunucu Yuvası Örneği](../../../docs/framework/network-programming/synchronous-server-socket-example.md)
-- [Yuvalarla Dinleme](../../../docs/framework/network-programming/listening-with-sockets.md)
+- [Zaman Uyumsuz Sunucu Yuvası Kullanma](using-an-asynchronous-server-socket.md)
+- [Zaman Uyumlu Sunucu Yuvası Örneği](synchronous-server-socket-example.md)
+- [Yuvalarla Dinleme](listening-with-sockets.md)

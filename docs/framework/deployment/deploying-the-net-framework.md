@@ -7,35 +7,35 @@ helpviewer_keywords:
 ms.assetid: 19df26c5-4008-461d-a7d7-18f4506312d2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 096c818c1103835110478953d0a0d9082b33569e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6906ccf5b639d6b90b921b5d471aa723aeb4da78
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61873723"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052163"
 ---
 # <a name="deploying-the-net-framework"></a>.NET Framework'ü dağıtma
-.NET Framework belgelerinin bu bölümü, kendi uygulamaları ile .NET Framework'ü yüklemek isteyen geliştiriciler ve bir ağ üzerinden .NET Framework'ü dağıtmak isteyen yöneticiler için bilgi sağlar. Ayrıca, etkinleştirme açıklanır ve dağıtım ve .NET Framework yüklemenizi ilerlemesini izleme ile ilgili sorun yeniden başlatın.  
+.NET Framework belgelerinin bu bölümü, .NET Framework uygulamalarına ve .NET Framework dağıtmak isteyen yöneticilere bir ağ üzerinden yüklemek isteyen geliştiriciler için bilgi sağlamaktadır. Ayrıca, dağıtım ile ilişkili etkinleştirme ve yeniden başlatma sorunlarını ve .NET Framework yüklemenizin ilerlemesini nasıl izleyeceğinizi açıklar.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Geliştiriciler için Dağıtım Kılavuzu](../../../docs/framework/deployment/deployment-guide-for-developers.md)  
- Geliştiriciler uygulamalarını ile kullanıcıların bilgisayarlarına .NET Framework nasıl yükleyebilirsiniz açıklar.  
+ [Geliştiriciler için Dağıtım Kılavuzu](deployment-guide-for-developers.md)  
+ Geliştiricilerin kullanıcıların bilgisayarlarına uygulamalarına .NET Framework nasıl yükleyebileceğini açıklar.  
   
- [Yöneticiler için Dağıtım Kılavuzu](../../../docs/framework/deployment/guide-for-administrators.md)  
- Nasıl bir Sistem Yöneticisi .NET Framework ve sistem bağımlılıklarını bir ağ üzerinden System Center Configuration Manager (SCCM) kullanarak dağıtılacağı açıklanmaktadır.  
+ [Yöneticiler için Dağıtım Kılavuzu](guide-for-administrators.md)  
+ Bir sistem yöneticisinin, System Center Configuration Manager (SCCM) kullanarak bir ağ üzerinde .NET Framework ve sistem bağımlılıklarını nasıl dağıtabilebileceğini açıklar.  
   
- [.NET Framework 4.5 Yüklemeleri Sırasında Sistem Yeniden Başlatmalarını Azaltma](../../../docs/framework/deployment/reducing-system-restarts.md)  
- Yeniden başlatma Yöneticisi önleyen mümkün olduğunda yeniden başlatır ve .NET Framework yükleme uygulamaları bu Avantajdan nasıl alabilir açıklanmaktadır.  
+ [.NET Framework 4.5 Yüklemeleri Sırasında Sistem Yeniden Başlatmalarını Azaltma](reducing-system-restarts.md)  
+ Mümkün olan her durumda yeniden başlatma Işlemini önleyen ve .NET Framework yükleyen uygulamaların nasıl yararlanacağı açıklanmaktadır.  
   
- [Nasıl yapılır: .NET Framework 4.5 yükleyicisinden ilerleme durumunu Al](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)  
- Sessizce başlatmak ve kendi görünüm Kurulum sürecinizin gösterirken .NET Framework Kurulum sürecini izlemek açıklar.  
+ [Nasıl yapılır: .NET Framework 4,5 Yükleyicisinden Ilerleme durumunu alın](how-to-get-progress-from-the-dotnet-installer.md)  
+ Kurulum ilerleme durumunun kendi görünümünü gösterirken .NET Framework kurulum işleminin sessizce nasıl başlatılmasını ve izleneceğini açıklar.  
   
- [.NET framework başlatma hataları: Kullanıcı deneyimini yönetme](../../../docs/framework/deployment/initialization-errors-managing-the-user-experience.md)  
- Bir .NET Framework uygulaması geçersiz veya kullanıcının bilgisayarında yüklü değil bir CLR sürümü gerektirdiğinde neler olacağını açıklayan bu hataları gidermek nasıl ve kullanıcıya görüntülenen hata iletisini kontrol etme.  
+ [.NET Framework başlatma hataları: Kullanıcı deneyimini yönetme](initialization-errors-managing-the-user-experience.md)  
+ .NET Framework bir uygulama, kullanıcının bilgisayarında geçersiz veya yüklü olmayan bir CLR sürümü gerektirdiğinde, bu hataların nasıl çözümleneceği ve kullanıcıya görüntülenen hata iletisinin nasıl denetleneceği hakkında ne olacağını açıklar.  
   
- [Nasıl yapılır: CLR etkinleştirme sorunlarında hata ayıklama](../../../docs/framework/deployment/how-to-debug-clr-activation-issues.md)  
- Görüntüleyebilir ve hata ayıklama CLR doğru sürümü ile çalışması için uygulamanızı alınırken karşılaşabileceğiniz sorunları gidermek için CLR etkinleştirme günlüklerini nasıl açıklar.  
+ [Nasıl yapılır: CLR etkinleştirme sorunlarını ayıklama](how-to-debug-clr-activation-issues.md)  
+ Uygulamanızı CLR 'nin doğru sürümüyle çalıştırmak için karşılaşabileceğiniz sorunları çözümlemek üzere CLR etkinleştirme günlüklerini nasıl görüntüleyip ayıklayabileceğinizi açıklar.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Geliştirme Kılavuzu](../../../docs/framework/development-guide.md)
+- [Geliştirme Kılavuzu](../development-guide.md)

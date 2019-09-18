@@ -6,12 +6,12 @@ helpviewer_keywords:
 - services, starting
 ms.assetid: 9ea77955-2d96-4c3d-913c-14db7604cdad
 author: ghogen
-ms.openlocfilehash: 5be803e2f4face60318a4c9ed12f1b58edaeace6
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 75fd3aba88bdffbe536ad5dab14996913d0a9d22
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044434"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053567"
 ---
 # <a name="how-to-start-services"></a>Nasıl yapılır: Hizmetleri Başlatma
 
@@ -28,7 +28,7 @@ Bir hizmetin el <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> ile m
 
 ### <a name="to-specify-how-a-service-should-start"></a>Bir hizmetin nasıl başlaması gerektiğini belirtmek için
 
-1. Hizmetinizi oluşturduktan sonra, için gerekli yükleyicileri ekleyin. Daha fazla bilgi için [nasıl yapılır: Hizmet uygulamanıza](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)yükleyicileri ekleyin.
+1. Hizmetinizi oluşturduktan sonra, için gerekli yükleyicileri ekleyin. Daha fazla bilgi için [nasıl yapılır: Hizmet uygulamanıza](how-to-add-installers-to-your-service-application.md)yükleyicileri ekleyin.
 
 2. Tasarımcıda çalıştığınız hizmetin hizmet yükleyicisine tıklayın.
 
@@ -59,7 +59,7 @@ Bir hizmetin el <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> ile m
 
 1. Aşağıdakilerden birini yaparak **Hizmetler denetim yöneticisini** açın:
 
-    - Windows XP ve 2000 Professional 'da, masaüstünde Bilgisayarım ' a sağ tıklayın ve ardından **Yönet**' e tıklayın. Görüntülenen iletişim kutusunda, **Hizmetler ve uygulamalar** düğümünü genişletin.
+    - Windows XP ve 2000 Professional 'da, **masaüstünde Bilgisayarım ' a sağ tıklayın ve** ardından **Yönet**' e tıklayın. Görüntülenen iletişim kutusunda, **Hizmetler ve uygulamalar** düğümünü genişletin.
 
       \- veya -
 
@@ -80,6 +80,6 @@ Bir hizmetin el <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> ile m
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Windows Hizmeti Uygulamalarına Giriş](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
-- [Nasıl yapılır: Windows Hizmetleri oluşturma](../../../docs/framework/windows-services/how-to-create-windows-services.md)
-- [Nasıl yapılır: Hizmet uygulamanıza yükleyiciler ekleme](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)
+- [Windows Hizmeti Uygulamalarına Giriş](introduction-to-windows-service-applications.md)
+- [Nasıl yapılır: Windows Hizmetleri oluşturma](how-to-create-windows-services.md)
+- [Nasıl yapılır: Hizmet uygulamanıza yükleyiciler ekleme](how-to-add-installers-to-your-service-application.md)

@@ -1,5 +1,5 @@
 ---
-title: Visual Studio için geliştirici komut istemi
+title: Visual Studio için Geliştirici Komut İstemi
 ms.date: 08/14/2018
 helpviewer_keywords:
 - command prompt, Windows SDK
@@ -12,85 +12,85 @@ helpviewer_keywords:
 ms.assetid: 94fcf524-9045-4993-bfb2-e2d8bad44219
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 79cfc607e20d921c7ae942cb9755eee4264336eb
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 59af252967a18eca858035fb0a3465d909734ddf
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877053"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044735"
 ---
-# <a name="developer-command-prompt-for-visual-studio"></a>Visual Studio için geliştirici komut istemi
+# <a name="developer-command-prompt-for-visual-studio"></a>Visual Studio için Geliştirici Komut İstemi
 
-Visual Studio için geliştirici komut istemi, .NET Framework araçlarını kolayca kullanmanıza olanak sağlar. Bu, belirli ortam değişkenlerini otomatik olarak ayarlayan bir komut istemi olur.
+Visual Studio için Geliştirici Komut İstemi, .NET Framework araçları daha kolay kullanmanıza olanak sağlar. Bu, belirli ortam değişkenlerini otomatik olarak ayarlayan bir komut istemi.
 
 > [!div class="button"]
-> [Visual Studio'yu indirin](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2019)
+> [Visual Studio 'Yu indirin](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2019)
 
-## <a name="search-for-the-command-prompt-on-your-machine"></a>Komut istemi makinenizde arayın
+## <a name="search-for-the-command-prompt-on-your-machine"></a>Makinenizde komut istemi araması yapın
 
-Visual Studio ve ek Sdk'lara yüklediğiniz sürümüne bağlı olarak birden çok komut istemi olabilir. Örneğin, Visual Studio'nun 64 bit sürümleri hem 32 bit hem de 64 bit komut istemleri sağlar. (Çoğu araç 32-bit ve 64-bit sürümleri aynıdır; ancak, birkaç araç 32-bit ve 64 bit ortamlara özel değişiklikler.) Aşağıdaki adımlar işe yaramazsa, deneyebileceğiniz [makinenizde dosyaları el ile konumlandırmak](#manually-locate-the-files-on-your-machine) veya [komut isteminden çalıştırın Visual Studio içinde](#run-the-command-prompt-from-inside-visual-studio).
+Visual Studio sürümüne ve yüklediğiniz ek SDK 'lara bağlı olarak birden çok komut istemi olabilir. Örneğin, Visual Studio'nun 64 bit sürümleri hem 32 bit hem de 64 bit komut istemleri sağlar. (Çoğu araç için 32-bit ve 64 bit sürümleri aynıdır; ancak, birkaç araç, 32-bit ve 64 bit ortamlara özgü değişiklikler yapar.) Aşağıdaki adımlar çalışmazsa, [makinenizde dosyaları el ile bulmayı](#manually-locate-the-files-on-your-machine) deneyebilir veya [komut satırını Visual Studio 'nun içinden çalıştırabilirsiniz](#run-the-command-prompt-from-inside-visual-studio).
 
-### <a name="in-windows-10"></a>Windows 10
+### <a name="in-windows-10"></a>Windows 10 ' da
 
-1. Görev çubuğundaki arama kutusuna gibi aracının adını yazarak Başlat `dev` veya `developer command prompt`. Bu, arama deseniyle eşleşen yüklü uygulamalar listesini getirir. Gibi farklı bir arama terimi girmek için farklı bir komut istemi arıyorsanız deneyin `prompt`.
+1. Görev çubuğundaki arama kutusuna, veya `dev` `developer command prompt`gibi aracın adını yazmaya başlayın. Bu, arama örüntüsiyle eşleşen yüklü uygulamaların bir listesini getirir. Farklı bir komut istemi arıyorsanız, gibi farklı bir arama terimi `prompt`girmeyi deneyin.
 
-2. Seçin **Visual Studio için geliştirici komut istemi** (veya kullanmak istediğiniz komut istemi).
+2. **Visual Studio için geliştirici komut istemi** (veya kullanmak istediğiniz komut istemi) seçin.
 
-### <a name="in-windows-81"></a>Windows 8.1 içinde
+### <a name="in-windows-81"></a>Windows 8.1
 
-1. Git **Başlat** ekranında Windows logosu tuşuna basarak ![klavyedeki Windows logo tuşu.](./media/developer-command-prompt-for-vs/windows-logo-key-graphic.png) Örneğin, bir klavyenizdeki.
+1. Klavyede Windows logosu tuşu ![Windows logosu tuşuna basarak Başlangıç ekranına gidin.](./media/developer-command-prompt-for-vs/windows-logo-key-graphic.png) Örneğin, klavyenizde.
 
-2. Üzerinde **Başlat** tuşuna basın, ekran **Ctrl**+**sekmesini** açmak için **uygulamaları** listelemek ve enter `V`. Bu, tüm yüklü Visual Studio Komut İstemi'ni içeren bir liste getirir.
+2. **Başlat** ekranında, **CTRL**+tuşuna basarak **uygulamalar** listesini açın ve ardından yazın `V`. Bu, tüm yüklü Visual Studio komut istemlerini içeren bir liste getirir.
 
-3. Seçin **Geliştirici komut istemi** (veya kullanmak istediğiniz komut istemi).
+3. **Geliştirici komut istemi** (veya kullanmak istediğiniz komut istemi) seçin.
 
-### <a name="in-windows-8"></a>Windows 8'de
+### <a name="in-windows-8"></a>Windows 8 ' de
 
-1. Git **Başlat** ekranında Windows logosu tuşuna basarak ![klavyedeki Windows logo tuşu.](./media/developer-command-prompt-for-vs/windows-logo-key-graphic.png) Örneğin, bir klavyenizdeki.
+1. Klavyede Windows logosu tuşu ![Windows logosu tuşuna basarak Başlangıç ekranına gidin.](./media/developer-command-prompt-for-vs/windows-logo-key-graphic.png) Örneğin, klavyenizde.
 
-2. Üzerinde **Başlat** ekranında, Windows logosu tuşuna ![klavyedeki Windows logo tuşu.](./media/developer-command-prompt-for-vs/windows-logo-key-graphic.png) `+ Z`.
+2. **Başlat** ekranında klavyede Windows logosu tuşu ![Windows logosu tuşuna basın.](./media/developer-command-prompt-for-vs/windows-logo-key-graphic.png) `+ Z`.
 
-3. Seçin **uygulamaları görüntüle** ekranın altındaki simgesini ve ardından girin `V`. Bu, tüm yüklü Visual Studio Komut İstemi'ni içeren bir liste getirir.
+3. Ekranın alt kısmındaki **Uygulamalar görünümü** simgesini seçin ve ardından girin `V`. Bu, tüm yüklü Visual Studio komut istemlerini içeren bir liste getirir.
 
-4. Seçin **Geliştirici komut istemi** (veya kullanmak istediğiniz komut istemi).
+4. **Geliştirici komut istemi** (veya kullanmak istediğiniz komut istemi) seçin.
 
-### <a name="in-windows-7"></a>Windows 7 '
+### <a name="in-windows-7"></a>Windows 7 ' de
 
-1. Seçin **Başlat**, genişletme **tüm programlar**ve ardından **Microsoft Visual Studio**.
+1. **Başlat**' ı seçin, **tüm programlar**' ı genişletin ve **Microsoft Visual Studio**' ı genişletin.
 
-2. Yüklemiş Visual Studio sürümüne bağlı olarak, seçin **Visual Studio Araçları**, **Visual Studio komut istemi**, veya kullanmak istediğiniz komut istemi.
+2. Yüklediğiniz Visual Studio sürümüne bağlı olarak **Visual Studio Araçları**, **Visual Studio komut istemi**veya kullanmak istediğiniz komut istemi ' ni seçin.
 
-Diğer SDK'lar gibi varsa [Windows 10 SDK'sı](https://developer.microsoft.com/windows/downloads/windows-10-sdk) veya [önceki sürümleri](https://developer.microsoft.com/windows/downloads/sdk-archive), ek komut istemleri için ARM, x 86 veya x64 mimariler görebilirsiniz. Hangi komut istemi sürümünü kullanmanız gerektiğini belirlemek için, tek tek araçlara ilişkin belgelere bakın.
+[Windows 10 SDK](https://developer.microsoft.com/windows/downloads/windows-10-sdk) veya [önceki sürümler](https://developer.microsoft.com/windows/downloads/sdk-archive)gibi başka SDK 'lar yüklüyse, ARM, x86 veya x64 mimarileri için ek komut istemleri görebilirsiniz. Hangi komut istemi sürümünü kullanmanız gerektiğini belirlemek için, tek tek araçlara ilişkin belgelere bakın.
 
 ## <a name="manually-locate-the-files-on-your-machine"></a>Makinenizde dosyaları el ile bulun
 
-Genellikle, yüklediğiniz komut istemlerine kısayolları yerleştirilir **Başlat menüsü** C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Visual Studio 2017\Visual Studio Araçları gibi Visual Studio için klasör. Ancak bazı nedenlerden dolayı için komut istemi arama beklenen sonuçları getirmek değil, kısayol makinenizde el ile bulmak deneyebilirsiniz. Komut istemi dosyasının adı için gibi aramayı deneyin *VsDevCmd.bat*, veya C:\Program Files (x86) \Microsoft Visual Studio\2017\Enterprise\Common7\Tools (yolu değişiklikleri Görselinizi göre gibi Araçlar klasörüne gidin Studio sürümü, sürümü ve yükleme konumu).
+Genellikle, yüklediğiniz komut istemlerinin kısayolları, C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Visual Studio 2017 \ Visual Studio Araçları gibi Visual Studio için **Başlat menüsü** klasörüne yerleştirilir. Ancak, bazı nedenlerle komut istemi araması beklenen sonuçları getirmiyorsa, bu kısayolu makinenizde el ile bulmayı deneyebilirsiniz. Örneğin, *Vsdevcmd. bat*gibi komut istemi dosyasının adını aramayı deneyin veya C:\Program Files (x86) \Microsoft Visual Studio\2017\Enterprise\Common7\Tools gibi Araçlar klasörüne gidin (Visual Studio sürümünüz sürümüne göre yol değişiklikleri) ve yükleme konumu).
 
-## <a name="run-the-command-prompt-from-inside-visual-studio"></a>Komut İstemi'nden çalıştırmak Visual Studio içinde
+## <a name="run-the-command-prompt-from-inside-visual-studio"></a>Komut istemi 'ni Visual Studio 'Nun içinden çalıştırma
 
-Daha kolay erişim için Visual Studio Geliştirici komut istemi veya herhangi başka bir komut istemi, ekleyebilirsiniz **Araçları** Visual Studio'daki menü. Aracı kullanabilmek için dış araçları listesine ekleyin. Adımlar aşağıdaki gibidir:
+Daha kolay erişim için Visual Studio Geliştirici Komut İstemi veya başka bir komut istemi, Visual Studio 'daki **Araçlar** menüsüne eklenebilir. Aracı kullanılabilir hale getirmek için dış araçlar listesine ekleyin. Adımlar aşağıdaki gibidir:
 
 1. Visual Studio'yu açın.
 
-2. Seçin **Araçları** menüsünü seçip **dış Araçları**.
+2. **Araçlar** menüsünü ve ardından **dış araçlar**' ı seçin.
 
-3. Üzerinde **dış Araçlar** iletişim kutusunda **Ekle** düğmesi. Yeni bir giriş belirir.
+3. **Dış araçlar** Iletişim kutusunda **Ekle** düğmesini seçin. Yeni bir giriş görüntülenir.
 
-4. Girin bir **başlık** gibi yeni menü öğesi için `Command Prompt`.
+4. Yeni menü öğesi için gibi `Command Prompt`bir başlık girin.
 
-5. İçinde **komut** alanında, istediğiniz gibi başlatmak için dosyayı belirtin `%comspec%` veya `C:\Windows\System32\cmd.exe`.
+5. **Komut** alanında, başlatmak `%comspec%` istediğiniz dosyayı (veya `C:\Windows\System32\cmd.exe`gibi) belirtin.
 
-6. İçinde **bağımsız değişkenleri** alanında, kullanmak istediğiniz gibi belirli komut istemini nerede bulacağını belirtin `/k "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\Tools\VsDevCmd.bat"` (Bu komut, Visual Studio 2017 Enterprise ile yüklü Geliştirici komut istemi başlatılır). Visual Studio sürümü, sürümü ve yükleme konumuna göre bu değeri değiştirin.
+6. **Bağımsız değişkenler** alanında, gibi kullanmak `/k "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\Tools\VsDevCmd.bat"` istediğiniz belirli komut isteminin nerede bulunacağını belirtin (Bu komut, Visual Studio 2017 Enterprise ile yüklenen Geliştirici komut istemi başlatır). Bu değeri, Visual Studio sürümünüz, sürümünüz ve yükleme konumunuza göre değiştirin.
 
-7. İçin bir değer seçin **başlangıç dizini** gibi alan **proje dizini**.
+7. **İlk dizin** alanı Için **proje dizini**gibi bir değer seçin.
 
 8. Seçin **Tamam** düğmesi.
 
-   Yeni menü öğesi eklendi ve Komut İstemi'nden erişebilir **Araçları** menüsü.
+   Yeni menü öğesi eklenir ve komut istemine **Araçlar** menüsünden erişebilirsiniz.
 
-   ![Visual Studio komut istemi menü öğesi](media/command-prompt-vs-menu.png)
+   ![Visual Studio 'da komut istemi menü öğesi](./media/command-prompt-vs-menu.png)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Araçlar](../../../docs/framework/tools/index.md)
+- [Araçlar](index.md)
 - [Dış Araçları Yönetme](/visualstudio/ide/managing-external-tools)

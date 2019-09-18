@@ -13,42 +13,42 @@ helpviewer_keywords:
 ms.assetid: 3e3f6780-6d90-4413-bad7-ba641220364d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c4c56712460d772426a2d8d6d328cba9bb03373d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: deae99f5bdc7c187997d4bad4957b2fcdccdc166
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648671"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051723"
 ---
 # <a name="identifying-functions-in-dlls"></a>DLL'lerde İşlevleri Tanımlama
-Bir DLL işlevini kimliğini aşağıdaki öğelerden oluşur:  
+DLL işlevinin kimliği aşağıdaki öğelerden oluşur:  
   
-- İşlev adı veya sıra  
+- İşlev adı veya sıra sayısı  
   
-- Uygulama bulunabilir DLL dosyasının adı  
+- Uygulamanın bulunduğu DLL dosyasının adı  
   
- Örneğin, belirten **MessageBox** User32.dll işlevinde işlevi tanımlar (**MessageBox**) ve konumu (User32.dll, User32 veya user32). Microsoft Windows uygulama programlama arabirimi (Windows API) karakterleri ve dizeleri işleyen her işlevin iki sürümü içermelidir: 1-bayt karakter ANSI sürümü ve 2-bayt karakter Unicode sürümü. Belirtilmediğinde, karakter kümesini temsil ettiği <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet> ANSI varsayılan alan. Bazı işlevler, ikiden fazla sürümleri olabilir.  
+ Örneğin, User32. dll ' de **MessageBox** işlevini belirtmek, Işlevi (**MessageBox**) ve konumunu (User32. dll, User32 veya User32) belirler. Microsoft Windows uygulama programlama arabirimi (Windows API), karakterleri ve dizeleri işleyen her bir işlevin iki sürümünü içerebilir: 1 baytlık karakter ANSI sürümü ve 2 baytlık karakter Unicode sürümü. Belirtilmediğinde, <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet> alan tarafından temsil edilen karakter kümesi varsayılan olarak ANSI olur. Bazı işlevlerin ikiden fazla sürümü olabilir.  
   
- **MessageBoxA** ANSI giriş noktası için **MessageBox** işlev; **MessageBoxW** Unicode sürümüdür. İşlev adları, user32.dll gibi belirli bir DLL için çeşitli komut satırı araçları'nı çalıştırarak listeleyebilirsiniz. Örneğin, kullanabileceğiniz `dumpbin /exports user32.dll` veya `link /dump /exports user32.dll` işlev adlarını elde edilir.  
+ **MessageBoxA** , **MESSAGEBOX** işlevi için ANSI giriş noktasıdır; **MessageBoxW** Unicode sürümüdür. Çeşitli komut satırı araçlarını çalıştırarak, User32. dll gibi belirli bir DLL için işlev adlarını listeleyebilirsiniz. Örneğin, işlev adlarını almak için `dumpbin /exports user32.dll` veya `link /dump /exports user32.dll` kullanabilirsiniz.  
   
- Yönetilmeyen bir işlev özgün DLL giriş noktası için yeni adı eşleme sürece kodunuzun içinde dilediğiniz şekilde yeniden adlandırabilirsiniz. Yönetilen kaynak kodunda bir yönetilmeyen DLL işlevi yeniden adlandırma ile ilgili yönergeler için bkz: [giriş noktası belirtme](../../../docs/framework/interop/specifying-an-entry-point.md).  
+ Yeni adı DLL 'deki özgün giriş noktasına eşledikten sonra, yönetilmeyen bir işlevi kodunuzda dilediğiniz şekilde yeniden adlandırabilirsiniz. Yönetilen kaynak kodunda yönetilmeyen DLL işlevini yeniden adlandırma yönergeleri için bkz. [giriş noktası belirtme](specifying-an-entry-point.md).  
   
- Platform çağırma etkinleştirir Windows API ve diğer DLL'leri çağırarak işletim sisteminin önemli bir bölümünü denetlemenizi işlevleri. Windows API yanı sıra diğer birçok API vardır ve platformu kullanılabilir DLL'ler çağırma.  
+ Platform çağırma, Windows API ve diğer dll 'Lerdeki işlevleri çağırarak işletim sisteminin önemli bir bölümünü denetlemenize olanak sağlar. Windows API 'sine ek olarak, platform Invoke aracılığıyla kullanabileceğiniz çok sayıda başka API ve DLL vardır.  
   
- Aşağıdaki tablo bazı yaygın olarak kullanılan dll dosyaları Windows API açıklar.  
+ Aşağıdaki tabloda, Windows API 'sinde yaygın olarak kullanılan birkaç dll açıklanmaktadır.  
   
-|DLL|İçeriği açıklaması|  
+|DLL|Içeriklerin açıklaması|  
 |---------|-----------------------------|  
-|GDI32.dll|Grafik cihaz arabirimi (GDI) işlevleri için çıktı çizme ve yazı tipi Yönetim için olanlar gibi cihaz.|  
-|Kernel32.dll|Bellek yönetimi ve kaynak işleme işlevleri alt düzey işletim sistemi.|  
-|User32.dll|İleti işleme, zamanlayıcıları, menüler ve iletişim için Windows Yönetim işlevleri.|  
+|GDI32. dll|Çizim ve yazı tipi yönetimi gibi cihaz çıktıları için Grafik Cihaz Arabirimi (GDI) işlevleri.|  
+|Kernel32. dll|Bellek yönetimi ve kaynak işleme için alt düzey işletim sistemi işlevleri.|  
+|User32. dll|İleti işleme, zamanlayıcılar, menüler ve iletişimler için Windows yönetim işlevleri.|  
   
- Windows API ile ilgili kapsamlı belgeler için bkz. Nasıl oluşturulacağını gösteren örnekler için. NET tabanlı bildirimler platformuyla kullanılacak çağırmak için bkz: [Platform Çağırma ile veri hazırlama](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md).  
+ Windows API 'SI ile ilgili tüm belgeler için bkz. Platform SDK 'Sı. Nasıl oluşturulacağını gösteren örnekler için. Platform çağırma ile kullanılacak NET tabanlı bildirimler, bkz. [Platform çağırma Ile verileri sıralama](marshaling-data-with-platform-invoke.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Yönetilmeyen DLL İşlevlerini Kullanma](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md)
-- [Giriş Noktası Belirtme](../../../docs/framework/interop/specifying-an-entry-point.md)
-- [DLL İşlevleri için bir Sınıf Oluşturma](../../../docs/framework/interop/creating-a-class-to-hold-dll-functions.md)
-- [Yönetilen Kodda Prototipler Oluşturma](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)
-- [DLL İşlevini Çağırma](../../../docs/framework/interop/calling-a-dll-function.md)
+- [Yönetilmeyen DLL İşlevlerini Kullanma](consuming-unmanaged-dll-functions.md)
+- [Giriş Noktası Belirtme](specifying-an-entry-point.md)
+- [DLL İşlevleri için bir Sınıf Oluşturma](creating-a-class-to-hold-dll-functions.md)
+- [Yönetilen Kodda Prototipler Oluşturma](creating-prototypes-in-managed-code.md)
+- [DLL İşlevini Çağırma](calling-a-dll-function.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 0a1a3ba3-7e46-4df2-afd3-f3a8237e1c4f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5c71816b1bd2e9c95e8c7efb44e3e689dce4ab93
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: bdd2832f112706cef6050774ce3f6db5a940424a
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70853965"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052095"
 ---
 # <a name="how-to-get-progress-from-the-net-framework-45-installer"></a>Nasıl yapılır: .NET Framework 4.5 Yükleyicisinden İlerleme Durumunu Alma
 
@@ -50,7 +50,7 @@ ms.locfileid: "70853965"
 
 ## <a name="chainer-sample"></a>Chainer örneği
 
-Chainer örneği sessizce başlatılır ve ilerleme durumunu gösterirken .NET Framework 4,5 kurulumunu izler. Bu örnek, .NET Framework 4 için sunulan Chainer örneğine benzer. Bununla birlikte, Ayrıca, .NET Framework 4 uygulamalarını kapatmak için ileti kutusunu işleyerek sistem yeniden başlatmalarının önlenmesine engel olabilir. Bu ileti kutusu hakkında daha fazla bilgi için bkz. [.NET Framework 4,5 yüklemeleri sırasında sistem yeniden başlatmaları azaltma](../../../docs/framework/deployment/reducing-system-restarts.md). Bu örneği .NET Framework 4 yükleyicisi ile birlikte kullanabilirsiniz; Bu senaryoda ileti yalnızca gönderilmez.
+Chainer örneği sessizce başlatılır ve ilerleme durumunu gösterirken .NET Framework 4,5 kurulumunu izler. Bu örnek, .NET Framework 4 için sunulan Chainer örneğine benzer. Bununla birlikte, Ayrıca, .NET Framework 4 uygulamalarını kapatmak için ileti kutusunu işleyerek sistem yeniden başlatmalarının önlenmesine engel olabilir. Bu ileti kutusu hakkında daha fazla bilgi için bkz. [.NET Framework 4,5 yüklemeleri sırasında sistem yeniden başlatmaları azaltma](reducing-system-restarts.md). Bu örneği .NET Framework 4 yükleyicisi ile birlikte kullanabilirsiniz; Bu senaryoda ileti yalnızca gönderilmez.
 
 > [!WARNING]
 > Örneği yönetici olarak çalıştırmanız gerekir.
@@ -311,5 +311,5 @@ Tipik bir sunucu, rastgele bir MIO dosya adı oluşturur, dosyayı oluşturur (�
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Geliştiriciler için Dağıtım Kılavuzu](../../../docs/framework/deployment/deployment-guide-for-developers.md)
-- [Dağıtım](../../../docs/framework/deployment/index.md)
+- [Geliştiriciler için Dağıtım Kılavuzu](deployment-guide-for-developers.md)
+- [Dağıtım](index.md)

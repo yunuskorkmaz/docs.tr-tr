@@ -1,19 +1,21 @@
 ---
 title: .NET taşınabilirlik Çözümleyicisi-.NET
 description: .Net taşınabilirlik Çözümleyicisi aracını kullanarak kodunuzun, .NET Core, .NET Standard, UWP ve Xamarin gibi çeşitli .NET uygulamaları arasında nasıl olduğunu değerlendirmek için nasıl kullanılacağı hakkında bilgi edinin.
-ms.date: 07/18/2019
+ms.date: 09/13/2019
 ms.technology: dotnet-standard
 ms.assetid: 0375250f-5704-4993-a6d5-e21c499cea1e
-ms.openlocfilehash: fdd2e9f288649b35b778b5da505408822e0ea8fe
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 246c1d25a99e61d7e2f69f1b65ae3534d22571ba
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70107510"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053995"
 ---
 # <a name="the-net-portability-analyzer"></a>.NET taşınabilirlik Çözümleyicisi
 
-Kitaplıklarınızın çok platformlu desteklemesini sağlamak istiyor musunuz? Uygulamanızı iOS, Android ve Mac için .NET Core, .NET Standard, UWP ve Xamarin dahil diğer .NET uygulamalarıyla ve profilleriyle uyumlu hale getirmek için ne kadar iş gerektiğini görmek ister misiniz? [.Net taşınabilirlik Çözümleyicisi](https://github.com/microsoft/dotnet-apiport) , derlemeleri çözümleyerek programınızın .NET uygulamalarında ne kadar esnek olduğunu gösteren ayrıntılı bir rapor sağlar. Taşınabilirlik Çözümleyicisi, proje başına derlemeyi çözümleyen ve bir [Apiport konsol uygulaması](https://aka.ms/apiportdownload)olarak belirtilen dosyalara veya dizine göre derlemeleri çözümleyen bir [Visual Studio uzantısı](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer)olarak sunulur.
+Kitaplıklarınızın çok platformlu desteklemesini sağlamak istiyor musunuz? .NET Framework uygulamanızın .NET Core üzerinde çalışmasını sağlamak için ne kadar iş gerektiğini görmek mi istiyorsunuz?  [.Net taşınabilirlik Çözümleyicisi](https://github.com/microsoft/dotnet-apiport) , uygulama veya kitaplıklarınızın, derlemeleri çözümleyerek belirtilen hedeflenen .net platformlarınızda taşınabilir olması için eksik .NET API 'lerinde ayrıntılı bir rapor sağlar. Taşınabilirlik Çözümleyicisi, proje başına derlemeyi çözümleyen ve bir [Apiport konsol uygulaması](https://aka.ms/apiportdownload)olarak belirtilen dosyalara veya dizine göre derlemeleri çözümleyen bir [Visual Studio uzantısı](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer)olarak sunulur.
+
+Projenizi, .NET Core gibi hedeflenen platformunuzu hedefleyecek şekilde dönüştürdükten sonra, platformilyn tabanlı [API Çözümleyicisi Aracı] kullanabilirsiniz ([https://docs.microsoft.com/en-us/dotnet/standard/analyzers/api-analyzer](api-analyzer.md) PlatformNotSupportedException 'yi oluşturan API 'leri ve diğer bazı uyumluluk sorunlarını belirlemek için).
 
 ## <a name="common-targets"></a>Ortak hedefler
 
@@ -58,7 +60,7 @@ Raporun taşınabilirlik Özeti bölümünde, çalıştırmada bulunan her derle
 
 ![Taşınabilirlik ayrıntıları](./media/portability-analyzer/portabilitydetails.png)
 
-Raporun Ayrıntılar bölümünde, hedef platformlardan birinde bulunmayan API 'Ler listelenir. 
+Raporun **Ayrıntılar** bölümünde, seçilen **hedeflenen platformların**hiçbirinde eksik olan API 'ler listelenir. 
 
 - Hedef türü: tür, hedef platformdan eksik API 'ye sahip 
 - Hedef üye: Yöntem bir hedef platformda yok 

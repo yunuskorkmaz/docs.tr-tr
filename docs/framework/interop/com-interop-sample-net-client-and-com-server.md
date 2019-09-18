@@ -11,20 +11,20 @@ helpviewer_keywords:
 ms.assetid: a3f752bb-8945-4e1b-8163-71def6e9f137
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ddbb7581ab254b428af621bc4412f60aa70bfb08
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3e4205c09d8f43a03b5c8b2e1be5029a543c158b
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61643458"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051860"
 ---
 # <a name="com-interop-sample-net-client-and-com-server"></a>COM Birlikte Çalışma Örneği: .NET İstemcisi ve COM Sunucusu
-Bu örnek gösterir nasıl bir [.NET istemci](#cpconcominteropsamplenetclientcomserveranchor1), erişim için oluşturulmuş bir [COM sunucusu](#cpconcominteropsamplenetclientcomserveranchor2), COM coclass'ı örneği oluşturur ve sınıf üyeleri ipotek hesaplamalar gerçekleştirmek için çağırır.  
+Bu örnek, bir [com sunucusuna](#cpconcominteropsamplenetclientcomserveranchor2)erişmek için oluşturulan bir [.net ISTEMCISININ](#cpconcominteropsamplenetclientcomserveranchor1), bir com coclass örneği oluşturduğunu ve ipotek hesaplamaları gerçekleştirmek için sınıf üyelerini çağırışını gösterir.  
   
- Bu örnekte, istemci oluşturur ve örneği çağrıları **kredi** coclass, dört bağımsız değişken (sıfıra eşit olan bu dört biri) geçirir örneği ve hesaplamalar görüntüler. Bu örnekteki kod parçalarını bu bölümü görüntülenir.  
+ Bu örnekte, istemci, **kredi** coclass 'ın bir örneğini oluşturur ve çağırır, örnek olarak dört bağımsız değişken geçirir (Bu dördü sıfıra eşit bir tane) ve hesaplamaları görüntüler. Bu örnekteki kod parçaları bu bölümün tamamında görüntülenir.  
   
 <a name="cpconcominteropsamplenetclientcomserveranchor1"></a>   
-## <a name="net-client"></a>.NET istemci  
+## <a name="net-client"></a>.NET Istemcisi  
   
 ```vb  
 Imports System  
@@ -301,4 +301,4 @@ static double Round(double value, short digits)
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [COM Bileşenlerini .NET Framework'te Gösterme](../../../docs/framework/interop/exposing-com-components.md)
+- [COM Bileşenlerini .NET Framework'te Gösterme](exposing-com-components.md)

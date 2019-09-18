@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - UI automation fundamentals
 ms.assetid: d270ab45-542b-45c0-a240-e80aa4a61b95
-ms.openlocfilehash: da333fcd5f76359400e44511820ad9aa34e83bd7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 371d52a09445f735efb41b02780c65579207724f
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69911482"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042121"
 ---
 # <a name="ui-automation-fundamentals"></a>UI Otomasyon Temelleri
 > [!NOTE]
@@ -20,14 +20,14 @@ ms.locfileid: "69911482"
  Bu bölüm, [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] API 'ye ilişkin üst düzey genel bakış içerir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [UI Otomasyonuna Genel Bakış](../../../docs/framework/ui-automation/ui-automation-overview.md)  
- [UI Otomasyonu ve Microsoft Active Accessibility](../../../docs/framework/ui-automation/ui-automation-and-microsoft-active-accessibility.md)  
- [UI Otomasyon Ağacına Genel Bakış](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)  
- [UI Otomasyonu Denetim Desenlerine Genel Bakış](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)  
- [UI Otomasyonu Özelliklerine Genel Bakış](../../../docs/framework/ui-automation/ui-automation-properties-overview.md)  
- [UI Otomasyonu Olaylarına Genel Bakış](../../../docs/framework/ui-automation/ui-automation-events-overview.md)  
- [UI Otomasyonu Güvenliğine Genel Bakış](../../../docs/framework/ui-automation/ui-automation-security-overview.md)  
- [Otomatik Test İçin UI Otomasyonunu Kullanma](../../../docs/framework/ui-automation/using-ui-automation-for-automated-testing.md)  
+ [UI Otomasyonuna Genel Bakış](ui-automation-overview.md)  
+ [UI Otomasyonu ve Microsoft Active Accessibility](ui-automation-and-microsoft-active-accessibility.md)  
+ [UI Otomasyon Ağacına Genel Bakış](ui-automation-tree-overview.md)  
+ [UI Otomasyonu Denetim Desenlerine Genel Bakış](ui-automation-control-patterns-overview.md)  
+ [UI Otomasyonu Özelliklerine Genel Bakış](ui-automation-properties-overview.md)  
+ [UI Otomasyonu Olaylarına Genel Bakış](ui-automation-events-overview.md)  
+ [UI Otomasyonu Güvenliğine Genel Bakış](ui-automation-security-overview.md)  
+ [Otomatik Test İçin UI Otomasyonunu Kullanma](using-ui-automation-for-automated-testing.md)  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Windows.Automation>  

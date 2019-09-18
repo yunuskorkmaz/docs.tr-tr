@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 29848c96-fc36-462d-8072-ba223a40b697
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 46dd9c0c1f9f5759bc9160aadeb0538b5403fb52
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c7a3548cb0d7e841f32824eda52565e64279536e
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69917967"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051998"
 ---
 # <a name="overview-of-the-net-framework"></a>.NET Framework'e Genel Bakış
 
@@ -33,7 +33,7 @@ ms.locfileid: "69917967"
 - .NET Framework temel alan kodun diğer kodla tümleştirilebildiğinden emin olmak için endüstri standartları üzerinde tüm iletişimi oluşturmak için.
 
 > [!NOTE]
-> Hem kullanıcılar hem de geliştiriciler için .NET Framework genel bir giriş için bkz. Başlarken [](../../../docs/framework/get-started/index.md).
+> Hem kullanıcılar hem de geliştiriciler için .NET Framework genel bir giriş için [bkz. Başlarken](index.md).
 
 .NET Framework, ortak dil çalışma zamanı (CLR) ve .NET Framework sınıf kitaplığından oluşur. Ortak dil çalışma zamanı .NET Framework temelidir. Çalışma zamanını, yürütme zamanında kodu yöneten bir aracı olarak düşünün; bellek yönetimi, iş parçacığı yönetimi ve uzaktan iletişim gibi Çekirdek Hizmetleri, ayrıca katı tür güvenliği ve güvenlik ve sağlamlık düzeyini destekleyen diğer kod doğruluğu biçimlerini de zorunlu olarak sağlar. Aslında kod yönetimi kavramı, çalışma zamanının temel bir ilkesidir. Çalışma zamanını hedefleyen kod, yönetilen kod olarak bilinir, ancak çalışma zamanını hedeflemeyen kod, yönetilmeyen kod olarak bilinir. Sınıf kitaplığı, geleneksel komut satırı veya grafik kullanıcı arabirimi (GUI) uygulamalarından, Web gibi ASP.NET tarafından sunulan en son yeniliklere dayalı olarak uygulamalara yönelik uygulamalar geliştirmek için kullandığınız, kapsamlı bir yeniden kullanılabilir türler koleksiyonudur. Forms ve XML Web Hizmetleri.
 
@@ -77,15 +77,15 @@ Nesne yönelimli bir sınıf kitaplığından bekleneceğiniz gibi .NET Framewor
 
 - Konsol uygulamaları. Bkz. [konsol uygulamaları oluşturma](../../standard/building-console-apps.md).
 
-- Windows GUI uygulamaları (Windows Forms). Bkz. [Windows Forms](../../../docs/framework/winforms/index.md).
+- Windows GUI uygulamaları (Windows Forms). Bkz. [Windows Forms](../winforms/index.md).
 
-- Windows Presentation Foundation (WPF) uygulamaları. Bkz. [Windows Presentation Foundation](../../../docs/framework/wpf/index.md).
+- Windows Presentation Foundation (WPF) uygulamaları. Bkz. [Windows Presentation Foundation](../wpf/index.md).
 
-- ASP.NET uygulamaları. Bkz. [ASP.net Ile web uygulamaları](../../../docs/framework/develop-web-apps-with-aspnet.md).
+- ASP.NET uygulamaları. Bkz. [ASP.net Ile web uygulamaları](../develop-web-apps-with-aspnet.md).
 
-- Windows hizmetleri. Bkz. [Windows hizmet uygulamalarına giriş](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md).
+- Windows hizmetleri. Bkz. [Windows hizmet uygulamalarına giriş](../windows-services/introduction-to-windows-service-applications.md).
 
-- Windows Communication Foundation (WCF) kullanan hizmet odaklı uygulamalar. [WCF Ile hizmet odaklı uygulamalara](../../../docs/framework/wcf/index.md)bakın.
+- Windows Communication Foundation (WCF) kullanan hizmet odaklı uygulamalar. [WCF Ile hizmet odaklı uygulamalara](../wcf/index.md)bakın.
 
 - Windows Workflow Foundation (WF) kullanan iş akışı etkin uygulamalar. Bkz. [Windows Workflow Foundation](../windows-workflow-foundation/index.md).
 
@@ -93,9 +93,9 @@ Windows Forms sınıfları, Windows GUI geliştirmeyi basitleştirecek olan kaps
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Sistem Gereksinimleri](../../../docs/framework/get-started/system-requirements.md)
-- [Yükleme kılavuzu](../../../docs/framework/install/index.md)
-- [Geliştirme Kılavuzu](../../../docs/framework/development-guide.md)
-- [Araçlar](../../../docs/framework/tools/index.md)
+- [Sistem Gereksinimleri](system-requirements.md)
+- [Yükleme kılavuzu](../install/index.md)
+- [Geliştirme Kılavuzu](../development-guide.md)
+- [Araçlar](../tools/index.md)
 - [.NET örnekleri ve öğreticiler](../../samples-and-tutorials/index.md)
 - [.NET Framework sınıf kitaplığı](https://go.microsoft.com/fwlink/?LinkID=227195)

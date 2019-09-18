@@ -16,19 +16,19 @@ helpviewer_keywords:
 - sockets, client sockets
 - client sockets
 ms.assetid: 81de9f59-8177-4d98-b25d-43fc32a98383
-ms.openlocfilehash: b99720b9653b8454419acd35085bfe9a7ac4b5af
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fe2ad55c3f60347369c0e92bc834d81d98f3870e
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61796792"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046952"
 ---
 # <a name="using-client-sockets"></a>İstemci Yuvaları Kullanma
-Bir konuşma aracılığıyla başlatabilmesi bir <xref:System.Net.Sockets.Socket>, uygulamanızı hem de uzak cihazı veri kanalı oluşturmanız gerekir. Diğer ağ adresi ailelerini ve protokolleri mevcut olmasına karşın, bu örnek bir uzak hizmete bir TCP/IP bağlantısı oluşturma işlemi gösterilmektedir.  
+Bir konuşmayı bir <xref:System.Net.Sockets.Socket>ile başlatmak için önce uygulamanız ile uzak cihaz arasında bir veri kanalı oluşturmanız gerekir. Diğer ağ adresi aileleri ve protokolleri var olsa da bu örnek, uzak bir hizmete TCP/IP bağlantısının nasıl oluşturulacağını gösterir.  
   
- TCP/IP'yi hizmet benzersiz olarak tanımlanabilmesi için bir ağ adresi ve bir hizmet bağlantı noktası numarası kullanır. Ağ adresi, ağdaki belirli bir aygıt tanımlar; bağlantı noktası numarası, hizmete bağlanmak için bu cihazda tanımlar. Ağ adresi ve hizmet bağlantı noktası birleşimi .NET Framework tarafından temsil edilen bir uç nokta adı verilen <xref:System.Net.EndPoint> sınıfı. Bir alt öğesi **uç nokta** için tanımlanan her desteklenen Adres ailesi; IP adresi ailesi için sınıf <xref:System.Net.IPEndPoint>.  
+ TCP/IP bir hizmeti benzersiz bir şekilde tanımlamak için bir ağ adresi ve bir hizmet bağlantı noktası numarası kullanır. Ağ adresi ağ üzerinde belirli bir cihazı tanımlar; bağlantı noktası numarası, bu cihazdaki Bağlanılacak belirli hizmeti tanımlar. Ağ adresi ve hizmet bağlantı noktası birleşimine, <xref:System.Net.EndPoint> sınıfı tarafından .NET Framework temsil edilen bir uç nokta denir. Her desteklenen adres ailesi için **uç nokta** alt öğesi tanımlanmıştır; IP adresi ailesi için sınıfı <xref:System.Net.IPEndPoint>.  
   
- <xref:System.Net.Dns> Sınıfı TCP/IP'yi Internet Hizmetleri kullanan uygulamalar için etki alanı adı hizmetleri sağlar. <xref:System.Net.Dns.Resolve%2A> Yöntemi (Örneğin 192.168.1.1) sayısal bir Internet adresi için bir kullanıcı dostu bir etki alanı adı (örneğin, "host.contoso.com") eşlemek için bir DNS sunucusunu sorgular. **Çözmek** döndürür bir <xref:System.Net.IPHostEntry> , adresleri ve istenen ad için diğer adlar listesini içerir. Çoğu durumda, döndürülen ilk adresi kullanabileceğinizi <xref:System.Net.IPHostEntry.AddressList%2A> dizisi. Aşağıdaki kod alır bir <xref:System.Net.IPAddress> sunucu host.contoso.com IP adresini içeren.  
+ Sınıfı <xref:System.Net.Dns> , TCP/IP Internet hizmetlerini kullanan uygulamalara etki alanı ad hizmetleri sağlar. Yöntemi <xref:System.Net.Dns.Resolve%2A> , bir DNS sunucusunu, Kullanıcı dostu bir etki alanı adını (örneğin, "Host.contoso.com") sayısal bir Internet adresine (192.168.1.1 gibi) eşlemek üzere sorgular. **Resolve** , istenen <xref:System.Net.IPHostEntry> ad için adreslerin ve diğer adların bir listesini içeren bir döndürür. Çoğu durumda, <xref:System.Net.IPHostEntry.AddressList%2A> dizide döndürülen ilk adresi kullanabilirsiniz. Aşağıdaki kod, sunucu Host.contoso.com <xref:System.Net.IPAddress> için IP adresini içeren bir IP adresi alır.  
   
 ```vb  
 Dim ipHostInfo As IPHostEntry = Dns.Resolve("host.contoso.com")  
@@ -40,7 +40,7 @@ IPHostEntry ipHostInfo = Dns.Resolve("host.contoso.com");
 IPAddress ipAddress = ipHostInfo.AddressList[0];  
 ```  
   
- Ortak Hizmetleri için bağlantı noktası numaralarını Internet Atanmış Numaralar Yetkilisi (IANA) tanımlar (daha fazla bilgi için [hizmet adını ve Aktarım Protokolü bağlantı noktası numarasını kayıt defteri](https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml)). Diğer hizmetler için 1024 65,535 aralığında bağlantı noktası numaralarını kayıtlı. Aşağıdaki kod host.contoso.com için IP adresi için bir bağlantı uzak uç noktası oluşturmak için bir bağlantı noktası numarası ile birleştirir.  
+ Internet atanmış numaralar yetkilisi (IANA) ortak hizmetler için bağlantı noktası numaralarını tanımlar (daha fazla bilgi için bkz. [hizmet adı ve Aktarım Protokolü bağlantı noktası numarası kayıt defteri](https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml)). Diğer hizmetler 1.024 ile 65.535 arasında kayıt bağlantı noktası numaraları içerebilir. Aşağıdaki kod, bir bağlantı için uzak uç nokta oluşturmak üzere host.contoso.com IP adresini bir bağlantı noktası numarasıyla birleştirir.  
   
 ```vb  
 Dim ipe As New IPEndPoint(ipAddress, 11000)  
@@ -50,7 +50,7 @@ Dim ipe As New IPEndPoint(ipAddress, 11000)
 IPEndPoint ipe = new IPEndPoint(ipAddress,11000);  
 ```  
   
- Uzak cihaz adresi belirleme ve bağlantısı için kullanmak üzere bir bağlantı noktası seçme sonra uzak cihazla bağlantı kurmak uygulama deneyebilirsiniz. Aşağıdaki örnekte mevcut bir **IPEndPoint** uzak bir aygıta bağlanmayı ve oluşturulan özel durumları yakalar.  
+ Uzak cihazın adresini belirledikten ve bağlantı için kullanılacak bir bağlantı noktası seçtikten sonra uygulama, uzak cihazla bağlantı kurmayı deneyebilir. Aşağıdaki örnek, uzak bir cihaza bağlanmak ve oluşturulan tüm özel durumları yakalayan mevcut bir **IPEndPoint** kullanır.  
   
 ```vb  
 Try  
@@ -79,7 +79,7 @@ try {
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Zaman Uyumlu İstemci Yuvası Kullanma](../../../docs/framework/network-programming/using-a-synchronous-client-socket.md)
-- [Zaman Uyumsuz İstemci Yuvası Kullanma](../../../docs/framework/network-programming/using-an-asynchronous-client-socket.md)
-- [Nasıl yapılır: Yuva oluşturun](../../../docs/framework/network-programming/how-to-create-a-socket.md)
-- [Yuvalar](../../../docs/framework/network-programming/sockets.md)
+- [Zaman Uyumlu İstemci Yuvası Kullanma](using-a-synchronous-client-socket.md)
+- [Zaman Uyumsuz İstemci Yuvası Kullanma](using-an-asynchronous-client-socket.md)
+- [Nasıl yapılır: Yuva oluşturma](how-to-create-a-socket.md)
+- [Yuvalar](sockets.md)

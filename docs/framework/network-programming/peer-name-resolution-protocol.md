@@ -2,53 +2,53 @@
 title: Eş Adı Çözümleme Protokolü
 ms.date: 03/30/2017
 ms.assetid: 11940511-c124-4d91-ae31-d4ed6e81ee58
-ms.openlocfilehash: 9e20e23cf467bc87fd9984bdbc15d07dfed06798
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5e301620008f1aaf64e1c1467d6db8bcdcb8f6be
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623012"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047513"
 ---
 # <a name="peer-name-resolution-protocol"></a>Eş Adı Çözümleme Protokolü
-Eşler arası ortamlarında eşleri belirli ad çözümleme sistemleri birbirlerinin ağ konumlarını (adresleri, protokoller ve bağlantı noktaları) çözümlemek için adları veya türlerini kullanın. Geçmişte, diğer etki alanı adı sistemi (DNS) içinde eksiklikleri yanı sıra, doğası gereği geçici bir bağlantı tarafından eş adı çözümleme karmaşık.  
+Eşler arası ortamlarda, eşler, her birinin ağ konumlarını (adresler, protokoller ve bağlantı noktaları) adlarla veya diğer tanımlayıcı türlerinden çözümlemek için belirli ad çözümleme sistemlerini kullanır. Geçmişte, eş adı çözümlemesi, etki alanı adı sistemi (DNS) içindeki diğer eksikler tarafından da doğal olarak geçici bağlantı tarafından karmaşıktır.  
   
- Microsoft® Windows® Eşler arası ağ platformu ile Eş Adı Çözümleme Protokolü (PNRP), güvenli, ölçeklenebilir ve dinamik ad kayıt ve Windows XP için ilk kez geliştirilen ve sonra yükseltme adı çözümleme protokolü bu sorunu çözer. Windows Vista™. PNRP uygulama geliştiricileri için heyecan verici yeni olasılıklara açma geleneksel ad çözümlemesi sistemlerden çok farklı şekilde çalışır.  
+ Microsoft® Windows® Eşler arası ağ platformu, ilk olarak Windows XP için geliştirilmiş ve ardından ' de yükseltilen eş adı çözümleme Protokolü (PNRP), güvenli, ölçeklenebilir ve dinamik bir ad kaydı ve ad çözümleme protokolü ile bu sorunu çözer. Windows Vista™. PNRP geleneksel ad çözümleme sistemlerinden çok farklı çalışır ve uygulama geliştiricileri için heyecan verici yeni olanaklar sunar.  
   
- PNRP ile eş adları, makine veya tek tek uygulamalar veya hizmetler makinede uygulanabilir. Eş adı çözümleme bir adresi, bağlantı noktası ve büyük olasılıkla bir genişletilmiş yükü içerir. Bu sistemin hata toleransı, hiçbir performans sorunlarını ve eski adreslerin hiçbir zaman döndüreceği ad çözünürlüğü avantajına sahip olur; Protokolü, mobil kullanıcıların bulmak için mükemmel bir çözüm yapılıyor.  
+ PNRP ile, eş adları makineye veya makinedeki ayrı uygulamalara veya hizmetlere uygulanabilir. Eş adı çözümlemesi bir adres, bağlantı noktası ve büyük olasılıkla genişletilmiş bir yük içerir. Bu sistemin avantajları arasında hata toleransı, performans sorunu olmaması ve hiçbir şekilde eski adresleri döndürmeyecek ad çözümlemeleri dahildir; Protokolü mobil kullanıcıları bulmaya yönelik harika bir çözüm haline getirme.  
   
- Güvenlik açısından, eş adları olabilir (korumalı) güvenli olarak yayımlanan veya güvenli olmayan (korumasız). PNRP güvenli eş adları yanıltmaya karşı korumak için ortak anahtar şifrelemesi kullanır; hem bilgisayarları hem de Hizmetleri ile PNRP adlandırılabilir.  
+ Güvenlik açısından, eş adları güvenli (korumalı) veya güvenli olmayan (korumasız) olarak yayımlanabilir. PNRP güvenli eş adlarını yanıltmaya karşı korumak için ortak anahtar şifrelemeyi kullanır; Her iki bilgisayar ve hizmet da PNRP ile adlandırılabilir.  
   
-Eş Adı Çözümleme Protokolü'nü aşağıdaki özellikleri göstermektedir:  
+Eş adı çözümleme protokolü aşağıdaki özellikleri gösterir:  
   
-- Dağıtılmış ve neredeyse tamamen sunucusuz. Sunucular, yalnızca önyükleme işlemi için gereklidir.  
+- Dağıtılmış ve neredeyse tamamen sunucusuz. Sunucular yalnızca önyükleme işlemi için gereklidir.  
   
-- Ada yayın olmadan üçüncü taraflara katılımı güvenli hale getirin. DNS adı yayını, anlık ve finansal maliyeti PNRP adı yayını.  
+- Üçüncü tarafların katılımı olmadan güvenli ad yayını. DNS ad yayınının aksine, PNRP ad yayını anında ve finans maliyeti olmadan olur.  
   
-- PNRP güncelleştirmeleri gerçek zamanlı olarak çözümleme eski adresi engeller.  
+- PNRP, eski adreslerin çözümlenmesini önleyen gerçek zamanlı olarak güncelleştirilir.  
   
-- PNRP aracılığıyla ad çözümlemesi, ad çözümleme hizmetleri için de izin vererek bilgisayarlar genişletir.  
+- PNRP aracılığıyla adların çözümlenmesi bilgisayarların ötesinde de hizmetler için ad çözümlemesine izin verir.  
   
-## <a name="the-systemnetpeertopeer-namespace"></a>System.Net.PeerToPeer ad alanı  
+## <a name="the-systemnetpeertopeer-namespace"></a>System .net. PeerToPeer ad alanı  
   
-- PNRP işlevleri tarafından tanımlanan <xref:System.Net.PeerToPeer> ad alanı içinde .NET Framework sürüm 3.5. Bu, kullanılabilir bir PNRP Service eş adları kaydetmek ve çözümlemek için kullanılan türleri kümesi sağlar.  
+- PNRP işlevselliği .NET Framework sürüm 3,5 içinde <xref:System.Net.PeerToPeer> ad alanı tarafından tanımlanır. Kullanılabilir bir PNRP hizmeti ile eş adlarını kaydetmek ve çözümlemek için kullanılabilecek bir tür kümesi sağlar.  
   
-- (PNRP ve özel eş çözücüler oluşturulabilir ve örneklenen türlerini kullanarak sağlanan içinde <xref:System.ServiceModel.PeerResolvers> ad.)  
+- (PNRP ve özel eşdüzey çözümleyiciler <xref:System.ServiceModel.PeerResolvers> ad alanında belirtilen türler kullanılarak oluşturulabilir ve oluşturulabilir.)  
   
-- Adları kullanılabilir bir PNRP hizmetiyle kaydetmek ve çözümlemek için kullanılan temel türleri aşağıdaki gibidir:  
+- Kullanılabilir bir PNRP hizmeti ile adları kaydettirmek ve çözümlemek için kullanılan temel türler aşağıdaki gibidir:  
   
-- <xref:System.Net.PeerToPeer.Cloud>: Kapsamı dahil olmak üzere bir kullanılabilir PNRP bulut açıklayan bilgileri tanımlar.  
+- <xref:System.Net.PeerToPeer.Cloud>: Kapsamı dahil olmak üzere kullanılabilir bir PNRP bulutunu tanımlayan bilgileri tanımlar.  
   
-- <xref:System.Net.PeerToPeer.PeerName>: Kaydolun ve sonradan Bulutu içinde bir eş çözümlemek için kullanılan bir eş adını tanımlar.  
+- <xref:System.Net.PeerToPeer.PeerName>: Bir bulut içindeki bir eşi kaydettirmek ve daha sonra çözümlemek için kullanılabilen bir eş adı tanımlar.  
   
-- <xref:System.Net.PeerToPeer.PeerNameRecord>: Eş kurulabileceğinden ağ uç noktaları içeren bir eş için kayıt bilgileri içeren PNRP bulutta kayıt tanımlar.  
+- <xref:System.Net.PeerToPeer.PeerNameRecord>: , Eşin iletişim kurulabileceği ağ uç noktalarını içeren bir eş için kayıt bilgilerini içeren, PNRP bulutu 'ndaki kaydı tanımlar.  
   
-- <xref:System.Net.PeerToPeer.PeerNameRegistration>: Kayıt işlemi için eş ad kaydı durdurmak ve başlatmak yöntemleri dahil olmak üzere bir eş adını tanımlar.  
+- <xref:System.Net.PeerToPeer.PeerNameRegistration>: Eş adı kaydını başlatma ve durdurma yöntemleri de dahil olmak üzere bir eş adı için kayıt işlemini tanımlar.  
   
-- <xref:System.Net.PeerToPeer.PeerNameResolver>: Çözüm için zaman uyumlu ve zaman uyumsuz yöntemleri dahil olmak üzere kendi ağ uç noktası için eş adı çözümleme sürecini tanımlar.  
+- <xref:System.Net.PeerToPeer.PeerNameResolver>: Çözüm için hem zaman uyumlu hem de zaman uyumsuz yöntemler de dahil olmak üzere bir eş adı ağ uç noktasına çözümleme işlemini tanımlar.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.ServiceModel.PeerResolvers>
 - <xref:System.Net.PeerToPeer>
-- [Ağ Programlama Örnekleri](../../../docs/framework/network-programming/network-programming-samples.md)
-- [PeerToPeer teknolojisi örneği](https://go.microsoft.com/fwlink/?LinkID=179571)
+- [Ağ Programlama Örnekleri](network-programming-samples.md)
+- [PeerToPeer Technology örneği](https://go.microsoft.com/fwlink/?LinkID=179571)

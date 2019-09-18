@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 619ecf1c-1ca5-4d66-8934-62fe7aad78c6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 937577f86ec854f5a458fe6067836a85a540695a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ec8180da9637ec2b2c4e1b432773b4f9f1ac908b
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69913796"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049181"
 ---
 # <a name="serialization-and-metadata"></a>Serileştirme ve Meta Veriler
 
@@ -22,7 +22,7 @@ Uygulamanız nesneleri serileştirir ve onları yeniden ayırır, gerekli meta v
 <a name="ThirdParty"></a>
 ## <a name="third-party-serializers"></a>Üçüncü taraf serileştiriciler
 
- Newtonsoft. JSON dahil olmak üzere üçüncü bölümden oluşan serileştiriciler, genellikle yansıma tabanlıdır. Seri hale getirilmiş verilerin ikili büyük nesne (BLOB) verildiğinde, verilerdeki alanlar, hedef türdeki alanlara ada göre bakılarak somut bir türe atanır. Bu kitaplıkların kullanılması en azından, bir `List<Type>` koleksiyonda serileştirmek veya seri durumdan çıkarmak <xref:System.Type> istediğiniz her nesne için [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) özel durumlarına neden olur.  
+ Newtonsoft. JSON dahil olmak üzere üçüncü bölümden oluşan serileştiriciler, genellikle yansıma tabanlıdır. Seri hale getirilmiş verilerin ikili büyük nesne (BLOB) verildiğinde, verilerdeki alanlar, hedef türdeki alanlara ada göre bakılarak somut bir türe atanır. Bu kitaplıkların kullanılması en azından, bir `List<Type>` koleksiyonda serileştirmek veya seri durumdan çıkarmak <xref:System.Type> istediğiniz her nesne için [MissingMetadataException](missingmetadataexception-class-net-native.md) özel durumlarına neden olur.  
   
  Bu serileştiriciler için eksik meta verilerin neden olduğu sorunları ele almanın en kolay yolu, tek bir ad alanı (gibi `App.Models`) altında serileştirme içinde kullanılacak türleri toplamaktır ve buna bir `Serialize` meta veri yönergesi uygular:  
   
@@ -30,7 +30,7 @@ Uygulamanız nesneleri serileştirir ve onları yeniden ayırır, gerekli meta v
 <Namespace Name="App.Models" Serialize="Required PublicAndInternal" />  
 ```  
   
- Örnekte kullanılan sözdizimi hakkında daha fazla bilgi için bkz [ \<. Namespace > element](../../../docs/framework/net-native/namespace-element-net-native.md).  
+ Örnekte kullanılan sözdizimi hakkında daha fazla bilgi için bkz [ \<. Namespace > element](namespace-element-net-native.md).  
   
 <a name="Microsoft"></a>
 ## <a name="microsoft-serializers"></a>Microsoft serileştiriciler
@@ -67,11 +67,11 @@ Uygulamanız nesneleri serileştirir ve onları yeniden ayırır, gerekli meta v
 <Type Name="t" Browse="Required Public" />  
 ```  
   
- Örnekte kullanılan sözdizimi hakkında daha fazla bilgi için bkz [ \<. Type > element](../../../docs/framework/net-native/type-element-net-native.md).  
+ Örnekte kullanılan sözdizimi hakkında daha fazla bilgi için bkz [ \<. Type > element](type-element-net-native.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Çalışma Zamanı Yönergeleri (rd.xml) Yapılandırma Dosyası Başvurusu](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
-- [Çalışma Zamanı Yönerge Öğeleri](../../../docs/framework/net-native/runtime-directive-elements.md)
-- [\<> Öğesi yazın](../../../docs/framework/net-native/type-element-net-native.md)
-- [\<Ad alanı > öğesi](../../../docs/framework/net-native/namespace-element-net-native.md)
+- [Çalışma Zamanı Yönergeleri (rd.xml) Yapılandırma Dosyası Başvurusu](runtime-directives-rd-xml-configuration-file-reference.md)
+- [Çalışma Zamanı Yönerge Öğeleri](runtime-directive-elements.md)
+- [\<> Öğesi yazın](type-element-net-native.md)
+- [\<Ad alanı > öğesi](namespace-element-net-native.md)

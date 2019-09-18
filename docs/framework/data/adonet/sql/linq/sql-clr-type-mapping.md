@@ -2,12 +2,12 @@
 title: SQL-CLR Tür Eşlemesi
 ms.date: 07/23/2018
 ms.assetid: 4ed76327-54a7-414b-82a9-7579bfcec04b
-ms.openlocfilehash: b209283f5d4e87d1faab06184bda3f79bf1adaed
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 6710c58a430c35dae41a1a381335019fd3e75192
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70792527"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053033"
 ---
 # <a name="sql-clr-type-mapping"></a>SQL-CLR Tür Eşlemesi
 LINQ to SQL, ilişkisel bir veritabanının veri modeli, tercih ettiğiniz programlama dilinde ifade edilen bir nesne modeliyle eşlenir. Uygulama çalıştığında, LINQ to SQL nesne modelindeki dil ile tümleşik sorguları SQL 'e çevirir ve yürütmek üzere veritabanına gönderir. Veritabanı sonuçları döndürdüğünde, LINQ to SQL sonuçları kendi programlama dilinizde birlikte çalışleyebileceğiniz nesnelere geri çevirir.  
@@ -44,7 +44,7 @@ LINQ to SQL, ilişkisel bir veritabanının veri modeli, tercih ettiğiniz progr
 ## <a name="type-mapping-run-time-behavior-matrix"></a>Tür eşleme çalışma zamanı davranış matrisi  
  Aşağıdaki diyagramda, veriler veritabanından alındığında veya veritabanına kaydedildiğinde belirli tür eşleştirmelerin beklenen çalışma zamanı davranışı gösterilmektedir. Serileştirme hariç LINQ to SQL, bu matriste belirtilmemiş herhangi bir CLR veya SQL Server veri türü arasındaki eşlemeyi desteklemez. Serileştirme desteği hakkında daha fazla bilgi için bkz. [Ikili serileştirme](#BinarySerialization).  
  
-![SQL CLR veri türüne SQL Server eşleme tablosu](media/sql-clr-type-mapping.png)
+![SQL CLR veri türüne SQL Server eşleme tablosu](./media/sql-clr-type-mapping.png)
 
 > [!NOTE]
 > Bazı tür eşlemelerde veya veritabanına çevrilirken taşma veya veri kaybı özel durumları oluşabilir.  

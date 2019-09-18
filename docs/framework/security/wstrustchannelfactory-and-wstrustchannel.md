@@ -3,72 +3,72 @@ title: WSTrustChannelFactory ve WSTrustChannel
 ms.date: 03/30/2017
 ms.assetid: 96cec467-e963-4132-b18b-7d0b3a2e979f
 author: BrucePerlerMS
-ms.openlocfilehash: d129775137759cf7f006ce6501279978f4ab2595
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: e00f3ae25a50c2fb3f34f4c04d02cde574b3da17
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633180"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044911"
 ---
 # <a name="wstrustchannelfactory-and-wstrustchannel"></a>WSTrustChannelFactory ve WSTrustChannel
-Windows Communication Foundation (WCF) bilginiz varsa, bir WCF istemcisi Federasyon uyumlu olduğunu bilirsiniz. Bir WCF istemcisi ile yapılandırarak bir <xref:System.ServiceModel.WSFederationHttpBinding> ya da benzer özel bağlama, bir hizmet için Federasyon kimlik doğrulamasını etkinleştirebilirsiniz.
+Zaten Windows Communication Foundation (WCF) hakkında bilginiz varsa, bir WCF istemcisinin zaten Federasyon duyarlı olduğunu bilirsiniz. <xref:System.ServiceModel.WSFederationHttpBinding> Veya benzer bir özel bağlamaya sahip bir WCF istemcisi yapılandırarak bir hizmette federal kimlik doğrulamasını etkinleştirebilirsiniz.
 
- WCF hizmetinde kimlik doğrulaması için bu belirteci kullanır ve arka planda güvenlik belirteci hizmeti (STS) tarafından verilen belirteci alır. Bu yaklaşımın sınırlaması hiçbir sunucu ile istemcinin iletişim görünürlük olmasıdır. WCF bağlama verilen belirteç parametrelere göre sts'ye isteği güvenlik belirteci (k) otomatik olarak oluşturur. Bu istemci olamaz lk parametreleri istek başına farklılık, istek güvenlik belirteci yanıt görünen talepler gibi daha fazla bilgi almak için (RSTR) incelemek veya gelecekte kullanım için belirteç önbelleğe anlamına gelir.
+ WCF, arka planda güvenlik belirteci hizmeti (STS) tarafından verilen belirteci alır ve bu belirteci hizmette kimlik doğrulamak için kullanır. Bu yaklaşımın ana sınırlaması, istemcinin sunucuyla olan iletişimleriyle ilgili bir görünürlük olmaması olabilir. WCF, bağlamada verilen belirteç parametrelerine göre istek güvenlik belirtecini (RST) STS 'ye otomatik olarak oluşturur. Bu, istemcinin istek başına RST parametrelerini değiştiremediği, görüntüleme talepleri gibi bilgileri almak için istek güvenlik belirteci yanıtını (RSTR) inceleyerek veya gelecekte kullanılmak üzere belirtecin önbelleğe alabileceği anlamına gelir.
 
- Şu anda, WCF istemcisini temel Federasyon senaryoları için uygundur. Ancak, Windows Identity Foundation (WIF) destekleyen bir ana senaryoları biri lk WCF kolayca izin vermeyen bir düzeyde denetime gerektirir. Bu nedenle, WIF STS ile iletişim hakkında daha fazla denetime size özellikler ekler.
+ Şu anda WCF istemcisi temel Federasyon senaryoları için uygundur. Ancak, Windows Identity Foundation 'ın (WıF) desteklediği önemli senaryolardan biri, WCF 'nin kolayca izin vermediği bir düzeyde RST üzerinde denetim gerektirir. Bu nedenle, WıF, STS ile iletişim üzerinde size daha fazla denetim sağlayan özellikler ekler.
 
- WIF, aşağıdaki Federasyon senaryolarını destekler:
+ WıF aşağıdaki Federasyon senaryolarını destekler:
 
-- WIF bağımlılıkları olmadan bir WCF istemcisi kullanarak bir Federasyon Hizmeti için kimlik doğrulaması
+- Federasyon hizmetinde kimlik doğrulaması yapmak için herhangi bir WıF bağımlılığı olmadan bir WCF istemcisi kullanma
 
-- Bir WCF istemcisi sts'ye lk ActAs veya OnBehalfOf bir öğe eklemek için WIF etkinleştirme
+- Bir WCF istemcisinde WıF 'yi, STS 'ye RST 'ye bir ActAs veya OnBehalfOf öğesi eklemek için etkinleştirme
 
-- WIF kullanarak tek başına STS'den bir belirteç almak ve daha sonra bu belirteci ile kimlik doğrulaması bir WCF istemcisi etkinleştirin. Daha fazla bilgi için [ClaimsAwareWebService](https://go.microsoft.com/fwlink/?LinkID=248406) örnek.
+- STS 'den bir belirteç elde etmek ve ardından bu belirteçle kimlik doğrulaması yapmak için bir WCF istemcisini etkinleştirmek üzere WıF 'yi tek başına kullanma. Daha fazla bilgi için bkz. [ClaimsAwareWebService](https://go.microsoft.com/fwlink/?LinkID=248406) örneği.
 
- İlk senaryoda açıklayıcıdır: Var olan WCF istemcileri, WIF bağlı olan taraflar ve Sts'ler çalışmaya devam eder. Bu konuda, kalan iki kullanıldığı senaryoları tartışır.
+ İlk senaryo kendi kendine açıklayıcıdır: Mevcut WCF istemcileri WıF bağlı tarafları ve STSs ile çalışmaya devam edecektir. Bu konuda, kalan iki senaryo ele alınmaktadır.
 
-## <a name="enhancing-an-existing-wcf-client-with-actas--onbehalfof"></a>Mevcut bir WCF istemcisi ActAs ile geliştirme / OnBehalfOf
-Tipik kimlik temsili senaryosu bir istemci sonra bir arka uç hizmetini çağıran bir orta katman hizmeti çağırır. Orta katman hizmet görür veya istemci adına, görevi görür.
+## <a name="enhancing-an-existing-wcf-client-with-actas--onbehalfof"></a>Mevcut bir WCF Istemcisini ActAs/OnBehalfOf ile geliştirme
+Tipik bir kimlik temsili senaryosunda istemci, bir arka uç hizmeti çağıran bir orta katman hizmeti çağırır. Orta katman hizmeti, istemcisini, veya adına göre davranır.
 
 > [!TIP]
-> ActAs OnBehalfOf arasındaki fark nedir?
+> ActAs ve OnBehalfOf arasındaki fark nedir?
 >
-> WS-Trust Protokolü açısından:
+> WS-Trust protokol açısından:
 >
-> 1. İstek sahibi içeren bir belirteç talep yaklaşık iki ayrı varlık istediğini ActAs lk öğeyi gösterir: İstek sahibi ve belirteci ActAs öğesi tarafından temsil edilen bir dış varlığı.
-> 2. İstek sahibinin talepleri yalnızca bir varlık içeren bir belirteç istediği OnBehalfOf lk öğeyi gösterir: OnBehalfOf öğesi belirteci tarafından temsil edilen dış varlık.
+> 1. ActAs RST öğesi, istek sahibinin iki farklı varlık hakkında talepler içeren bir belirteç istediğini belirtir: istek sahibi ve ActAs öğesinde belirteç tarafından temsil edilen bir dış varlık.
+> 2. OnBehalfOf RST öğesi, istek sahibinin yalnızca bir varlık hakkında talepler içeren bir belirteç istediğini belirtir: OnBehalfOf öğesinde belirteç tarafından temsil edilen dış varlık.
 >
-> ActAs özelliği, genellikle burada verilen belirtecin son alıcı tüm temsilci zinciri inceleyin ve yalnızca istemci, ancak tüm aracıların bkz bileşik temsilci gerektiren senaryolarda kullanılır. Denetim ve diğer tüm kimlik temsilcisi zincirine dayalı etkinlikler ilgili, bu erişim denetimi gerçekleştirmek sağlar. ActAs özelliği, çok katmanlı sistemlerinde kimlik doğrulaması ve kimlik bilgileri hakkındaki bu bilgileri uygulama/iş mantığı katmanında geçirmek zorunda kalmadan Katmanlar arasındaki geçirmek için yaygın olarak kullanılır.
+> ActAs özelliği genellikle, verilen belirtecin son alıcısının tüm atama zincirini inceleyebilir ve yalnızca istemciyi değil, ancak tüm aracılar ' ı görebildiği bileşik temsili gerektiren senaryolarda kullanılır. Bu, tüm kimlik temsili zinciri temelinde erişim denetimi, denetim ve diğer ilgili etkinlikleri gerçekleştirmesine olanak sağlar. ActAs özelliği, bu bilgileri uygulama/iş mantığı katmanında iletmek zorunda kalmadan, Katmanlar arasındaki kimlikler hakkında bilgi edinmek ve bu bilgileri iletmek için çok katmanlı sistemlerde yaygın olarak kullanılır.
 >
-> OnBehalfOf özelliği yalnızca orijinal istemci kimliğini önemli ve etkili bir şekilde kimlik kimliğe bürünme özelliği kullanılabilir Windows ile aynı olduğu yerde senaryolarda kullanılır. OnBehalfOf kullanıldığında, verilen belirtecin son alıcı yalnızca orijinal istemci talepleri görebilirsiniz ve aracılar ile ilgili bilgileri korunmaz. Bir ortak desendir OnBehalfOf özelliğin kullanıldığı yeri istemci STS, ancak bunun yerine doğrudan erişemez proxy deseni bir ara ağ geçidi üzerinden iletişim kurar. Proxy ağ geçidi arayan kimliğini doğrular ve ardından işleme için gerçek STS'ye gönderir k ileti OnBehalfOf öğesinin içine arayanı hakkında bilgi getirir. Elde edilen belirteç yalnızca istemci proxy verilen belirtecin alıcı için tamamen saydam hale proxy'sinin ilgili talepleri içerir. WIF desteklemediği Not \<: SecurityTokenReference > veya \<wsa:EndpointReferences > bir alt öğesi olarak \<wst:OnBehalfOf >. WS-Güven belirtimini özgün istek sahibine (kim adına proxy davranıyorsa) tanımlamak üç yol sağlar. Bunlar:
+> OnBehalfOf özelliği, yalnızca özgün istemcinin kimliğinin önemli olduğu ve Windows 'da bulunan kimlik kimliğe bürünme özelliği ile etkin şekilde olduğu senaryolarda kullanılır. OnBehalfOf kullanıldığında, verilen belirtecin son alıcısı yalnızca özgün istemciyle ilgili talepleri görebilir ve aracılar hakkındaki bilgiler korunmaz. OnBehalfOf özelliğinin kullanıldığı yaygın bir model, istemcinin doğrudan STS 'ye erişebildiği ancak proxy ağ geçidi üzerinden iletişim kuracağı proxy modelidir. Proxy ağ geçidi, arayanın kimliğini doğrular ve çağıran hakkındaki bilgileri, daha sonra işlenmek üzere gerçek STS 'ye gönderdiği RST iletisinin OnBehalfOf öğesine koyar. Elde edilen belirteç yalnızca Proxy istemcisiyle ilgili talepleri içerir ve proxy 'nin verilen belirtecin alıcısı için tamamen saydam hale getirir. WIF, bir \< \<wst: OnBehalfOf > alt öğesi olarak > WSO: SecurityTokenReference > veya \<wsa: EndPointReferences ' i desteklemediğini unutmayın. WS-Trust belirtimi, özgün istek sahibinin (proxy 'nin hareket eteceği adına) tanımlanması için üç yol sağlar. Bunlar:
 >
-> - Güvenlik belirteci başvurusu. Bir belirteç başvurusu, ileti veya büyük olasılıkla alınan / bant).
-> - Uç nokta başvurusu. Yeniden bant dışından verileri aramak için bir anahtar olarak kullanılır.
-> - Güvenlik belirteci. Özgün istek sahibine doğrudan tanımlar.
+> - Güvenlik belirteci başvurusu. Bir belirteç başvurusu, iletide, ya da bant dışında alınmış olabilir.
+> - Uç nokta başvurusu. Verileri aramak için bir anahtar olarak kullanılır ve bant dışı.
+> - Güvenlik belirteci. Özgün istek sahibine doğrudan tanıtır.
 >
-> WIF, şifrelenmiş veya, şifrelenmemiş bir doğrudan alt öğesi olarak yalnızca güvenlik belirteçleri destekleyen \<wst:OnBehalfOf >.
+> WIF, yalnızca bir wst: OnBehalfOf > doğrudan alt öğesi olarak şifrelenmiş veya şifrelenmemiş olan \<güvenlik belirteçlerini destekler.
 
- Bu bilgiler lk ActAs ve OnBehalfOf belirteci öğeleri kullanarak bir WS-Trust veren için aktarılır.
+ Bu bilgiler, RST 'deki ActAs ve OnBehalfOf belirteci öğelerini kullanarak WS-Trust veren 'e aktarılır.
 
- WCF için lk eklenecek rasgele XML öğeleri sağlayan bağlama üzerinde bir genişletilebilirlik noktası kullanıma sunar. Ancak, genişletilebilirlik noktası bağlama bağlı olmadığından, çağrı başına değişen lk içeriği gerektiren senaryolar performansınızın her çağrı için istemciyi yeniden oluşturmalısınız. WIF kullanan genişletme yöntemleri üzerinde `ChannelFactory` lk için bant dışı elde edilen herhangi bir belirteci eklemek geliştiricilerin izin veren sınıfı. Aşağıdaki kod örneği, istemci (örneğin, bir X.509, kullanıcı adı veya güvenlik onaylama işlemi biçimlendirme dili (SAML) belirteci) temsil eden bir belirteci alıp yayınlayanla gönderilen lk ekleme gösterilmektedir.
+ WCF, bağlamada rastgele XML öğelerinin eklenmesine izin veren bir genişletilebilirlik noktası sunar. Ancak, genişletilebilirlik noktası bağlamaya bağlı olduğundan, her çağrı için değişiklik yapmak üzere RST içeriklerinin gerekli olduğu senaryolar, performansı azaltan her çağrı için istemciyi yeniden oluşturmanız gerekir. WIF, geliştiricilerin bant dışı alınan `ChannelFactory` bir belirteci RST 'ye eklemesine izin vermek için sınıfında genişletme yöntemleri kullanır. Aşağıdaki kod örneği, istemciyi temsil eden bir belirteci (örneğin, bir X. 509.952, Kullanıcı adı veya Security Assertion Markup Language (SAML) belirteci) alma ve Sertifikayı verenden gönderilen RST 'ye iliştirme şeklini gösterir.
 
 ```csharp
 IHelloService serviceChannel = channelFactory.CreateChannelActingAs<IHelloService>(clientSamlToken);
 serviceChannel.Hello("Hi!");
 ```
 
- WIF aşağıdaki avantajları sağlar:
+ WıF aşağıdaki avantajları sağlar:
 
-- Kanal başına lk değiştirilebilir; Bu nedenle, orta katman Hizmetleri kanal fabrikası performansı geliştirir her istemci için yeniden oluşturmanız gerekmez.
+- RST, kanal başına değiştirilebilir; Bu nedenle, orta katmanlı hizmetlerin her istemci için kanal fabrikasını yeniden oluşturması gerekmez, bu da performansı geliştirir.
 
-- Bu, kolay bir yükseltme yolu Kimlik temsilcisi semantiği etkinleştirmek istediğiniz var olan orta katman için WCF hizmetleri mümkün kılar, var olan WCF istemcileri ile çalışır.
+- Bu, mevcut WCF istemcileriyle birlikte çalışarak, kimlik temsili semantiğini etkinleştirmek isteyen mevcut WCF orta katman hizmetleri için kolay bir yükseltme yolu sağlar.
 
- Ancak, var. yine de istemcinin iletişim STS ile hiçbir görünürlük Bu üçüncü senaryoda inceleyeceğiz.
+ Bununla birlikte, istemci STS ile iletişimin üzerinde hala hiçbir görünürlük yoktur. Bunu üçüncü senaryoda inceleyeceğiz.
 
-## <a name="communicating-directly-with-an-issuer-and-using-the-issued-token-to-authenticate"></a>Doğrudan bir verici ile iletişim kuran ve kimlik doğrulaması için verilen belirteç kullanma
-Bazı Gelişmiş senaryolar için bir WCF istemcisi geliştirme yeterli değildir. Yalnızca WCF genellikle kullanan geliştiriciler kullanım ileti / Out ileti sözleşmeleri ve istemci tarafı işleme veren yanıtı el ile ayrıştırma.
+## <a name="communicating-directly-with-an-issuer-and-using-the-issued-token-to-authenticate"></a>Doğrudan veren ile iletişim kurma ve kimlik doğrulaması için verilen belirteci kullanma
+Bazı Gelişmiş senaryolarda, bir WCF istemcisini geliştirmek yeterli değildir. Yalnızca WCF kullanan geliştiriciler tipik olarak Ileti Içinde Ileti kullanır/Iletiyordu ve sertifikayı verenin yanıtını el ile ayrıştırır.
 
-WIF tanıtır <xref:System.ServiceModel.Security.WSTrustChannelFactory> ve <xref:System.ServiceModel.Security.WSTrustChannel> istemci doğrudan bir WS-Güven verici ile iletişim kurmasına izin vermek için sınıflar. <xref:System.ServiceModel.Security.WSTrustChannelFactory> Ve <xref:System.ServiceModel.Security.WSTrustChannel> aşağıdaki kod örneğinde gösterildiği gibi veren ve istemci arasında akmasına izin türü kesin belirlenmiş lk ve RSTR nesne sınıflarını etkinleştir.
+WIF, <xref:System.ServiceModel.Security.WSTrustChannelFactory> istemcinin bir <xref:System.ServiceModel.Security.WSTrustChannel> WS-Trust verenle doğrudan iletişim kurmasına izin vermek için ve sınıflarını tanıtır. <xref:System.ServiceModel.Security.WSTrustChannelFactory> Ve<xref:System.ServiceModel.Security.WSTrustChannel> sınıfları, aşağıdaki kod örneğinde gösterildiği gibi, kesin olarak belirlenmiş RST ve rstr nesnelerini istemci ve veren arasında akışa almak üzere etkinleştirir.
 
 ```csharp
 WSTrustChannelFactory trustChannelFactory = new WSTrustChannelFactory(stsBinding, stsAddress);
@@ -79,27 +79,27 @@ RequestSecurityTokenResponse rstr = null;
 SecurityToken token = channel.Issue(rst, out rstr);
 ```
 
-Unutmayın `out` parametresi <xref:System.ServiceModel.Security.WSTrustChannel.Issue%2A> yöntemi, istemci tarafı İnceleme RSTR erişim sağlar.
+<xref:System.ServiceModel.Security.WSTrustChannel.Issue%2A> Yöntemdeki parametresinin, istemci tarafı incelemesi için rstr erişimine izin verdiğini unutmayın. `out`
 
-Şu ana kadar yalnızca bir belirtecin nasıl edinileceğini gördünüz. Öğesinden döndürülen belirteci <xref:System.ServiceModel.Security.WSTrustChannel> nesnesi bir `GenericXmlSecurityToken` tüm bağlı olan taraf için kimlik doğrulaması için gerekli olan bilgileri içeren. Aşağıdaki kod örneği, bu belirteç kullanma işlemini gösterir.
+Şimdiye kadar, yalnızca bir belirtecin nasıl alınacağını gördünüz. <xref:System.ServiceModel.Security.WSTrustChannel> Nesnesinden döndürülen belirteç, bağlı olan tarafa kimlik doğrulaması için `GenericXmlSecurityToken` gerekli tüm bilgileri içeren bir ' tır. Aşağıdaki kod örneği, bu belirtecin nasıl kullanılacağını göstermektedir.
 
 ```csharp
 IHelloService serviceChannel = channelFactory.CreateChannelWithIssuedToken<IHelloService>( token );
 serviceChannel.Hello("Hi!");
 ```
 
-<xref:System.ServiceModel.ChannelFactory%601.CreateChannelWithIssuedToken%2A> Genişletme yöntemini `ChannelFactory` nesnesini, bant dışı bir belirteç almış ve bu veren normal WCF çağrısı ve bunun yerine bağlı olan taraf için kimlik doğrulaması için elde edilen belirteç WIF gösterir. Bu, aşağıdaki faydaları vardır:
+Nesne üzerindeki genişletme yöntemi, bant dışı bir belirteç elde ediyorsanız ve veren için normal WCF çağrısını durdurup bunun yerine, bağlı olan tarafın kimliğini doğrulamak için edindiğiniz belirteci kullanması durumunda W'e gösterir. <xref:System.ServiceModel.ChannelFactory%601.CreateChannelWithIssuedToken%2A> `ChannelFactory` Bu, aşağıdaki avantajlara sahiptir:
 
-- Bu belirteç verme işlemi üzerinde tam denetim verir.
+- Belirteç verme işlemi üzerinde tamamen denetim elde etmenizi sağlar.
 
-- ActAs destekler / doğrudan üzerinde giden lk bu özellikleri ayarlayarak OnBehalfOf senaryoları.
+- Bu özellikleri giden RST üzerinde doğrudan ayarlayarak ActAs/OnBehalfOf senaryolarını destekler.
 
-- Bu, kararlarına RSTR içeriklerine dayanan dinamik istemci-tarafı güven sağlar.
+- RSTR içeriğine göre dinamik istemci tarafı güven kararlarının yapılmasını sağlar.
 
-- Önbelleğe alma ve öğesinden döndürülen belirteci yeniden sağlar <xref:System.ServiceModel.Security.WSTrustChannel.Issue%2A> yöntemi.
+- <xref:System.ServiceModel.Security.WSTrustChannel.Issue%2A> Yönteminden döndürülen belirteci önbelleğe almanızı ve yeniden kullanmanızı sağlar.
 
-- <xref:System.ServiceModel.Security.WSTrustChannelFactory> ve <xref:System.ServiceModel.Security.WSTrustChannel> kanalı önbelleğe alma, hata ve kurtarma semantiğine göre WCF en iyi denetimi için izin verin.
+- <xref:System.ServiceModel.Security.WSTrustChannelFactory>ve <xref:System.ServiceModel.Security.WSTrustChannel> WCF en iyi uygulamalarına göre kanal önbelleğe alma, hata ve kurtarma semantiğinin denetimine izin verin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [WIF Özellikleri](../../../docs/framework/security/wif-features.md)
+- [WIF Özellikleri](wif-features.md)

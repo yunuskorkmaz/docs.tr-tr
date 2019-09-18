@@ -7,27 +7,27 @@ helpviewer_keywords:
 ms.assetid: c0aa8533-3b3b-42e8-9f60-84919793098c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 65f5e11a8fb40527387c14cdd8dec7f0bfc5c697
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: eb30e7daed938b14bd0d936352c7455db6975e73
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61643702"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051903"
 ---
 # <a name="callback-functions"></a>Geri Çağırma İşlevleri
-Kod, bir görevi tamamlamak, yönetilmeyen bir DLL işlevini yardımcı olan yönetilen bir uygulama içinde bir geri çağırma işlevidir. Bir geri arama işlev çağrıları, dolaylı olarak bir DLL işlevini aracılığıyla yönetilen bir uygulama geçirmek ve yönetilen bir uygulamasını yedekleyin. Bazı platformuyla adlı birçok DLL işlevleri çağırma düzgün çalışması için yönetilen kodda bir geri çağırma işlevini gerektirir.  
+Bir geri çağırma işlevi, yönetilmeyen bir DLL işlevinin bir görevi tamammesine yardımcı olan bir yönetilen uygulama içindeki koddur. Bir geri çağırma işlevine yapılan çağrılar, yönetilen bir uygulamadan, bir DLL işlevi aracılığıyla ve yönetilen uygulamaya geri dönerek dolaylı olarak geçer. Platform çağırma ile çağrılan birçok DLL işlevinden bazıları, yönetilen kodda düzgün şekilde çalışması için bir geri çağırma işlevi gerektirir.  
   
- Yönetilen koddan çoğu DLL işlevleri çağırmak için yönetilen bir işlevin tanımı oluşturun ve ardından çağırın. İşlem oldukça basittir.  
+ Yönetilen koddan çoğu DLL işlevini çağırmak için, işlevin yönetilen bir tanımını oluşturun ve ardından bunu çağırın. İşlem basittir.  
   
- Bir geri çağırma işlevini gerektiren bir DLL işlevini kullanarak bazı ek adımlar vardır. İlk olarak, işlevine yönelik belgelere bakarak işlevi bir geri çağırma gerekip gerekmediğini belirlemeniz gerekir. Sonra geri çağırma işlevi, yönetilen bir uygulamada oluşturmanız gerekir. Son olarak, bir işaretçi geri çağırma işlevine bağımsız değişken olarak geçirerek DLL işlevini çağırın. 
+ Bir geri çağırma işlevi gerektiren DLL işlevinin kullanılması bazı ek adımlara sahiptir. Önce, işlevin belgelerine bakarak işlevin geri çağırma gerektirip gerektirmediğini belirlemelisiniz. Ardından, yönetilen uygulamanızda geri çağırma işlevini oluşturmanız gerekir. Son olarak, DLL işlevini çağırır ve geri çağırma işlevine bir işaretçiyi bir bağımsız değişken olarak geçirerek. 
  
- Aşağıdaki çizimde, geri arama işlevi ve uygulama adımlarını özetler:  
+ Aşağıdaki çizim, geri çağırma işlevini ve uygulama adımlarını özetler:  
   
- ![Diyagram gösteren platform çağırma geri çağırma işlemi.](./media/callback-functions/platform-invoke-callback-process.gif)  
+ ![Platform çağırma geri çağırma işlemini gösteren diyagram.](./media/callback-functions/platform-invoke-callback-process.gif)  
   
- Geri çağırma işlevleri, bir görev art arda gerçekleştirilen durumlarda kullanım için idealdir. Başka bir ortak kullanımı numaralandırma işlevleri ile olduğu gibi **EnumFontFamilies**, **EnumPrinters**, ve **EnumWindows** Windows API. **EnumWindows** aracılığıyla her penceresinde bir görevi gerçekleştirmek için geri çağrı işlevini çağırıp bilgisayarınızdaki tüm var olan windows işlev numaralandırır. Yönergeler ve örnek için bkz. [nasıl yapılır: Geri çağırma işlevlerini uygulama](../../../docs/framework/interop/how-to-implement-callback-functions.md).  
+ Geri çağırma işlevleri, bir görevin tekrar tekrar gerçekleştirildiği durumlarda kullanım için idealdir. Diğer bir yaygın kullanım, Windows API 'sindeki **Enumfontaileleri**, **EnumPrinters**ve **EnumWindows** gibi numaralandırma işlevleridir. **EnumWindows** işlevi, her pencerede bir görevi gerçekleştirmek için geri çağırma işlevini çağırarak bilgisayarınızdaki mevcut tüm pencereleri sıralar. Yönergeler ve bir örnek için bkz [. nasıl yapılır: Geri çağırma Işlevlerini](how-to-implement-callback-functions.md)uygulayın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapılır: Geri çağırma işlevlerini uygulama](../../../docs/framework/interop/how-to-implement-callback-functions.md)
-- [DLL İşlevini Çağırma](../../../docs/framework/interop/calling-a-dll-function.md)
+- [Nasıl yapılır: Geri çağırma Işlevlerini Uygula](how-to-implement-callback-functions.md)
+- [DLL İşlevini Çağırma](calling-a-dll-function.md)

@@ -11,30 +11,30 @@ helpviewer_keywords:
 ms.assetid: 55d6ab12-f251-4aab-aa64-aacbe9d9f974
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4f076cbc556c7d9feff8a226f050743cd7728622
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3a49bdce78c1445cd25de8755ded0f27a4902937
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61874451"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052811"
 ---
 # <a name="exceptionswallowedoncallfromcom-mda"></a>exceptionSwallowedOnCallFromCom MDA
-`exceptionSwallowedOnCallFromCOM` Yönetilen hata ayıklama Yardımcısı (MDA), bir özel durum COM'dan yönetilmeyen HRESULT dönüş türü olmayan bir yöntem adlı ortak dil çalışma zamanı (CLR) kodu oluşturulduğunda etkinleştirilir.  
+Yönetilen `exceptionSwallowedOnCallFromCOM` hata ayıklama Yardımcısı (MDA), yönetilmeyen bir HRESULT dönüş türüne sahip olmayan bir yöntem aracılığıyla com 'dan çağrılan ortak dil çalışma zamanı (CLR) kodundan bir özel durum oluştuğunda etkinleştirilir.  
   
 ## <a name="symptoms"></a>Belirtiler  
- Bir çağrıdan yönetilen bir bileşeni için COM ile FALSE veya 0 değerini döndürür. Alternatif olarak, yöntemin dönüş türü void varsa olabilir herhangi bir gösterge metodu yürütülürken bir özel durum oluştu. Bu durumda, özel durumu sessizce yakalanır ve yürütme COM çağırana döner.  
+ COM 'tan yönetilen bileşen çağrısı, FALSE veya 0 değeri ile döndürür. Alternatif olarak, yöntemin bir void dönüş türü varsa, yöntemin yürütülmesi sırasında bir özel durumun oluşturulduğunu belirten bir işaret olmayabilir. Bu durumda, özel durum sessizce yakalanacaktır ve yürütme COM çağıranına döndürülür.  
   
 ## <a name="cause"></a>Sebep  
- Bir özel durum oluştu, ancak bunu bildirmek için geçerli bir yolu yoktur.  
+ Bir özel durum oluşturuldu, ancak bunu raporlamak için geçerli bir yol yok.  
   
 ## <a name="resolution"></a>Çözüm  
- Bilgilendirici yalnızca, bir hatanın mutlaka gösterir.  
+ Yalnızca bilgilendirme, bir hatanın göstergesi olması gerekmez.  
   
-## <a name="effect-on-the-runtime"></a>Çalışma zamanı üzerindeki etkisi  
- Bu mda'nın CLR üzerinde etkisi yoktur. Yalnızca veri sessizce Yakalanan özel durumlar hakkında raporlar.  
+## <a name="effect-on-the-runtime"></a>Çalışma zamanında etki  
+ Bu MDA, CLR üzerinde hiçbir etkisi yoktur. Yalnızca sessizce yakalanan özel durumlarla ilgili verileri raporlar.  
   
 ## <a name="output"></a>Çıkış  
- Yöntem adı, tür adı ve özel durum iletisi içeren bilgilendirme iletisi.  
+ Yöntem adı, tür adı ve özel durum iletisi içeren bilgilendirici ileti.  
   
 ## <a name="configuration"></a>Yapılandırma  
   
@@ -49,5 +49,5 @@ ms.locfileid: "61874451"
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [Yönetilen Hata Ayıklama Yardımcıları ile Hataları Tanılama](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [Birlikte Çalışma için Hazırlama](../../../docs/framework/interop/interop-marshaling.md)
+- [Yönetilen Hata Ayıklama Yardımcıları ile Hataları Tanılama](diagnosing-errors-with-managed-debugging-assistants.md)
+- [Birlikte Çalışma için Hazırlama](../interop/interop-marshaling.md)

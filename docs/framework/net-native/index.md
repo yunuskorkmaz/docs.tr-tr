@@ -10,75 +10,75 @@ helpviewer_keywords:
 ms.assetid: 47cd5648-9469-4b1d-804c-43cc04384045
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0d295d0b35b4b93425c825f75857881a2e2ddc57
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 5993cfdb0f50d8e474a4f18280d181d9ec2fdfa4
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67660897"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049662"
 ---
 # <a name="compiling-apps-with-net-native"></a>.NET Yerel ile Uygulama Derleme
 
-.NET native, Visual Studio 2015 ve sonraki sürümlerine dahildir oluşturmak ve Windows uygulamalarını dağıtmak için bir ön derleme teknolojisidir. Yönetilen kodda yazılmış uygulamalar yayım sürümünü otomatik olarak derler (C# veya Visual Basic) ve hedef .NET Framework ve Windows 10 için yerel kod.
+.NET Native, Visual Studio 2015 ve sonraki sürümlerinde bulunan Windows uygulamaları oluşturmak ve dağıtmak için ön derleme teknolojisidir. Yönetilen kodda (C# veya Visual Basic) yazılmış olan ve .NET Framework ve Windows 10 ' un yerel koda hedef alan uygulamaların yayın sürümünü otomatik olarak derler.
 
-Genellikle, .NET Framework'ü hedefleyen uygulamaları Ara dil (IL) derlenir. Çalışma zamanında, just-ın-time (JIT) derleyici yerel kod için IL çevirir. Buna karşılık, .NET yerel Windows uygulamaları doğrudan yerel kod için derler. Geliştiriciler için bu anlamına gelir:
+Genellikle, .NET Framework hedefleyen uygulamalar ara dil (IL) ile derlenir. Çalışma zamanında, tam zamanında (JıT) derleyici, Il 'yi yerel koda dönüştürür. Buna karşılık, Windows uygulamalarını doğrudan yerel koda derler .NET Native. Geliştiriciler için şu anlama gelir:
 
-- Uygulamalarınızı yerel kod performansını özellik. Genellikle, performans için IL önce derlenmiş ve sonra JIT derleyicisi tarafından yerel kod olarak derlenen kod için üstün olacaktır.
+- Uygulamalarınızın yerel kodun performansı vardır. Genellikle, ilk olarak Il 'de derlenen ve sonra JıT derleyicisi tarafından yerel koda derlenen kodların üst işlemi olur.
 
-- İçinde program devam edebilirsiniz C# veya Visual Basic.
+- C# Veya Visual Basic programda çalışmaya devam edebilirsiniz.
 
-- Kendi sınıf kitaplığı, otomatik bellek yönetimi ve atık toplama ve özel durum işleme dahil olan .NET Framework tarafından sağlanan kaynaklar yararlanmak devam edebilirsiniz.
+- Sınıf kitaplığı, otomatik bellek yönetimi ve çöp toplama ve özel durum işleme dahil olmak üzere .NET Framework tarafından belirtilen kaynaklardan faydalanmaya devam edebilirsiniz.
 
-Uygulamalarınızın kullanıcılar için .NET Native aşağıdaki avantajları sunar:
+Uygulamalarınızın kullanıcıları için .NET Native şu avantajları sunar:
 
-- Çoğu uygulama ve senaryoları için daha hızlı yürütme süreleri.
+- Uygulama ve senaryoların çoğunluğu için daha hızlı yürütme süreleri.
 
-- Çoğu uygulama ve senaryoları için daha hızlı başlangıç süreleri.
+- Uygulama ve senaryoların çoğunluğu için daha hızlı başlangıç süreleri.
 
-- Dağıtım ve güncelleştirme maliyetleri düşük.
+- Düşük dağıtım ve güncelleştirme maliyetleri.
 
-- Uygulamanın bellek kullanımı İyileştirildi.
+- En iyileştirilmiş uygulama bellek kullanımı.
 
 > [!IMPORTANT]
-> Uygulamalar ve senaryoları büyük çoğunluğu için .NET Native önemli ölçüde daha hızlı başlangıç süreleri ve IL veya NGEN görüntü için derlenmiş uygulama karşılaştırıldığında daha üstün performans sunar. Ancak, sonuçlar farklılık gösterebilir. Uygulamanızı .NET Native'nın performans iyileştirmeleriyle benefited olmak için performansını, uygulamanızın .NET Native sürümü ile karşılaştırmanız gerekir. Daha fazla bilgi için [performans oturumuna genel bakış](https://docs.microsoft.com/visualstudio/profiling/performance-session-overview).
+> Uygulamalar ve senaryoların büyük çoğunluğu için .NET Native, Il 'ye veya NGEN görüntüsüne derlenen bir uygulamayla karşılaştırıldığında önemli ölçüde daha hızlı başlangıç süreleri ve üstün performans sunar. Ancak, sonuçlarınız farklılık gösterebilir. Uygulamanızın .NET Native performans geliştirmelerinden benefited sahip olduğundan emin olmak için, performansını uygulamanızın non-.NET Native sürümüyle karşılaştırmalısınız. Daha fazla bilgi için bkz. [performans oturumuna genel bakış](https://docs.microsoft.com/visualstudio/profiling/performance-session-overview).
 
-Ancak, .NET yerel derleme yerel kod için birden fazla içerir. Bu, .NET Framework uygulamaları yerleşik ve yürütülen şekilde dönüştürür. Özellikle:
+Ancak .NET Native yerel koda bir derlemeden daha fazlasını içerir. .NET Framework uygulamalarının oluşturulması ve yürütülmesi şeklini dönüştürür. Özellikle:
 
-- Esnasında, gerekli bölümleri .NET Framework'ün uygulamanıza statik olarak bağlanır. Bu uygulamanın .NET Framework ve derleyici genel analiz gerçekleştirmek için performans WINS sunmak için uygulama yerel kitaplıkları ile çalışmasını sağlar. Sonuç olarak, uygulamaları bile .NET Framework güncelleştirmeleri sonrasında tutarlı bir şekilde daha hızlı başlatma.
+- Ön derleme sırasında .NET Framework gerekli bölümleri uygulamanıza statik olarak bağlanır. Bu, uygulamanın .NET Framework uygulama yerel kitaplıklarıyla çalışmasına ve derleyicinin küresel bir şekilde performans sağlamak için genel analizler gerçekleştirmesini sağlar. Sonuç olarak, uygulamalar .NET Framework güncelleştirmelerden sonra bile sürekli olarak daha hızlı başlatılır.
 
-- .NET yerel çalışma zamanı statik ön derleme için en iyi duruma getirilmiş ve çalışmaları büyük çoğunluğu üstün performans sunar. Aynı anda geliştiricileri kadar üretken Bul temel yansıma özelliklerini korur.
+- .NET Native çalışma zamanı statik ön derleme için iyileştirilmiştir ve durumların büyük çoğunluğunda üstün performans sağlar. Aynı zamanda, geliştiricilerin daha üretken bulduğu temel yansıma özelliklerini korur.
 
-- .NET native kullandığı aynı arka uç olarak C++ statik ön derleme senaryolar için en iyi duruma getirilmiş derleyici.
+- .NET Native, C++ derleyici ile aynı arka ucu kullanarak statik ön derleme senaryolarında en iyi duruma getirilmiştir.
 
-.NET native performans avantajlarını ürünümüze C++ yönetilen kod geliştiricilerin olarak aynı veya benzer araçları kullandığından C++ bu tabloda gösterildiği gibi başlık altında.
+.NET Native, bu tabloda gösterildiği gibi, aynı veya C++ benzer araçları C++ kullandığından, yönetilen kod geliştiricilerine ait performans avantajlarını getirebiliyor.
 
 ||.NET Yerel|C++|
 |-|----------------------------------------------------------------|-----------|
-|Kitaplıklar|.NET Framework ve Windows çalışma zamanı|Win32 + Windows çalışma zamanı|
-|Derleyici|İyileştirici derleyiciyi UTC|İyileştirici derleyiciyi UTC|
-|dağıtılan|Çalıştırılmaya hazır ikili dosyaları|Çalıştırılmaya hazır ikili dosyaları (ASM)|
-|Çalışma zamanı|MRT.dll (Minimal CLR Runtime)|CRT.dll (C Runtime)|
+|Kitaplıklar|.NET Framework + Windows Çalışma Zamanı|Win32 + Windows Çalışma Zamanı|
+|Derleyici|UTC iyileştirmeli derleyici|UTC iyileştirmeli derleyici|
+|Dağıtılan|Çalıştırılmaya hazırlama ikilileri|Çalıştırılmaya hazırlama ikilileri (ASM)|
+|Çalışma zamanı|MRT. dll (minimum CLR Runtime)|CRT. dll (C çalışma zamanı)|
 
-Windows 10 için Windows uygulamaları için .NET yerel kodu derleme ikili dosyaları uygulama paketleri (.appx dosyaları) için Windows Store yükleyin.
+Windows 10 için Windows uygulamaları için, uygulama paketlerinde (. appx dosyaları) .NET Native kod derleme ikililerini Windows Mağazası 'na yüklersiniz.
 
 ## <a name="in-this-section"></a>Bu Bölümde
 
-.NET yerel kodu derleme ile uygulamaları geliştirme hakkında daha fazla bilgi için şu konulara bakın:
+.NET Native kod derlemesi ile uygulama geliştirme hakkında daha fazla bilgi için şu konulara bakın:
 
-- [.NET yerel kodu derlemesi ile çalışmaya başlama: Geliştirici deneyimi Kılavuzu](../../../docs/framework/net-native/getting-started-with-net-native.md)
+- [.NET Native kodu derleme ile çalışmaya başlama: Geliştirici deneyimi Kılavuzu](getting-started-with-net-native.md)
 
-- [.NET native ve derleme:](../../../docs/framework/net-native/net-native-and-compilation.md) Nasıl .NET Native yerel kod projenize derler.
+- [.NET Native ve derleme:](net-native-and-compilation.md) .NET Native projenizi yerel koda nasıl derler.
 
-- [Yansıma ve .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md)
+- [Yansıma ve .NET Native](reflection-and-net-native.md)
 
-  - [Yansıma Kullanan API'ler](../../../docs/framework/net-native/apis-that-rely-on-reflection.md)
+  - [Yansıma Kullanan API'ler](apis-that-rely-on-reflection.md)
 
-  - [Yansıma API'si Başvurusu](../../../docs/framework/net-native/net-native-reflection-api-reference.md)
+  - [Yansıma API'si Başvurusu](net-native-reflection-api-reference.md)
 
-  - [Çalışma Zamanı Yönergeleri (rd.xml) Yapılandırma Dosyası Başvurusu](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+  - [Çalışma Zamanı Yönergeleri (rd.xml) Yapılandırma Dosyası Başvurusu](runtime-directives-rd-xml-configuration-file-reference.md)
 
-- [Serileştirme ve Meta Veriler](../../../docs/framework/net-native/serialization-and-metadata.md)
+- [Serileştirme ve Meta Veriler](serialization-and-metadata.md)
 
-- [Windows Mağazası Uygulamanızı .NET Native'e Taşıma](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md)
+- [Windows Mağazası Uygulamanızı .NET Native'e Taşıma](migrating-your-windows-store-app-to-net-native.md)
 
-- [.NET Native Genel Sorun Giderme](../../../docs/framework/net-native/net-native-general-troubleshooting.md)
+- [.NET Native Genel Sorun Giderme](net-native-general-troubleshooting.md)

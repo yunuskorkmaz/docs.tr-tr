@@ -8,12 +8,12 @@ helpviewer_keywords:
 - TextPattern class
 - classes, TextPattern
 ms.assetid: b51206f2-1281-4ad0-9820-ea39d88ae577
-ms.openlocfilehash: 27d5bcee34bcbfa101f381a569428a64a45da0b7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b7985e6cf3eaa810a893b0b5183a1c141a041768
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69954102"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71040506"
 ---
 # <a name="ui-automation-text-pattern"></a>UI Otomasyon Metin Düzeni
 > [!NOTE]
@@ -22,14 +22,14 @@ ms.locfileid: "69954102"
  Bu konu başlığı altında [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]metin öğeleri için programlamaya başlamanıza yardımcı olacak genel bakış ve nasıl yapılır konuları yer almaktadır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [UI Otomasyonu TextPattern Öğesine Genel Bakış](../../../docs/framework/ui-automation/ui-automation-textpattern-overview.md)  
- [TextPattern ve Katıştırılmış Nesnelere Genel Bakış](../../../docs/framework/ui-automation/textpattern-and-embedded-objects-overview.md)  
- [Nasıl Yapılır Konuları](../../../docs/framework/ui-automation/ui-automation-text-pattern-how-to-topics.md)  
+ [UI Otomasyonu TextPattern Öğesine Genel Bakış](ui-automation-textpattern-overview.md)  
+ [TextPattern ve Katıştırılmış Nesnelere Genel Bakış](textpattern-and-embedded-objects-overview.md)  
+ [Nasıl Yapılır Konuları](ui-automation-text-pattern-how-to-topics.md)  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Windows.Automation.Text>  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [UI Otomasyonu Denetim Desenleri](../../../docs/framework/ui-automation/ui-automation-control-patterns.md)
-- [İstemciler İçin UI Otomasyonu Denetim Düzenleri](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
+- [UI Otomasyonu Denetim Desenleri](ui-automation-control-patterns.md)
+- [İstemciler İçin UI Otomasyonu Denetim Düzenleri](ui-automation-control-patterns-for-clients.md)

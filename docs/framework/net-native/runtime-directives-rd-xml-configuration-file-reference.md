@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 8241523f-d8e1-4fb6-bf6a-b29bfe07b38a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7545e1d7079664fd8706bdddac2ff3c8ebc27c7f
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: adfc0ae6d9bdae333daacee525c7775acd5a8029
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988287"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049134"
 ---
 # <a name="runtime-directives-rdxml-configuration-file-reference"></a>Çalışma Zamanı Yönergeleri (rd.xml) Yapılandırma Dosyası Başvurusu
 
@@ -37,35 +37,35 @@ ms.locfileid: "69988287"
 
 Çalışma zamanı yönergeleri dosyası `http://schemas.microsoft.com/netfx/2013/01/metadata` ad alanını kullanır.
 
-Kök öğesi, [yönergeleri](../../../docs/framework/net-native/directives-element-net-native.md) öğesidir. Aşağıdaki yapıda gösterildiği gibi sıfır veya daha fazla [kitaplık](../../../docs/framework/net-native/library-element-net-native.md) öğesi ve sıfır veya bir [uygulama](../../../docs/framework/net-native/application-element-net-native.md) öğesi içerebilir. [Uygulama](../../../docs/framework/net-native/application-element-net-native.md) öğesinin öznitelikleri, uygulama genelinde çalışma zamanı yansıma ilkesi tanımlayabilir veya alt öğeler için bir kapsayıcı olarak görev yapabilir. Öte yandan [kitaplık](../../../docs/framework/net-native/library-element-net-native.md) öğesi yalnızca bir kapsayıcıdır. [Uygulama](../../../docs/framework/net-native/application-element-net-native.md) ve [kitaplık](../../../docs/framework/net-native/library-element-net-native.md) öğelerinin alt öğeleri, yansıma için kullanılabilen türleri, yöntemleri, alanları, özellikleri ve olayları tanımlar.
+Kök öğesi, [yönergeleri](directives-element-net-native.md) öğesidir. Aşağıdaki yapıda gösterildiği gibi sıfır veya daha fazla [kitaplık](library-element-net-native.md) öğesi ve sıfır veya bir [uygulama](application-element-net-native.md) öğesi içerebilir. [Uygulama](application-element-net-native.md) öğesinin öznitelikleri, uygulama genelinde çalışma zamanı yansıma ilkesi tanımlayabilir veya alt öğeler için bir kapsayıcı olarak görev yapabilir. Öte yandan [kitaplık](library-element-net-native.md) öğesi yalnızca bir kapsayıcıdır. [Uygulama](application-element-net-native.md) ve [kitaplık](library-element-net-native.md) öğelerinin alt öğeleri, yansıma için kullanılabilen türleri, yöntemleri, alanları, özellikleri ve olayları tanımlar.
 
-Başvuru bilgileri için aşağıdaki yapıdaki öğeleri seçin veya [çalışma zamanı yönerge öğelerini](../../../docs/framework/net-native/runtime-directive-elements.md)görüntüleyin. Aşağıdaki hiyerarşide üç nokta özyinelemeli bir yapıyı işaret ediyor. Köşeli ayraçlar içindeki bilgiler, bu öğenin isteğe bağlı veya gerekli olduğunu ve kullanılıp kullanılmadığını, kaç örneğe (bir veya daha fazla) izin verildiğini gösterir.
+Başvuru bilgileri için aşağıdaki yapıdaki öğeleri seçin veya [çalışma zamanı yönerge öğelerini](runtime-directive-elements.md)görüntüleyin. Aşağıdaki hiyerarşide üç nokta özyinelemeli bir yapıyı işaret ediyor. Köşeli ayraçlar içindeki bilgiler, bu öğenin isteğe bağlı veya gerekli olduğunu ve kullanılıp kullanılmadığını, kaç örneğe (bir veya daha fazla) izin verildiğini gösterir.
 
-[Yönergeler](../../../docs/framework/net-native/directives-element-net-native.md) [1:1] [](../../../docs/framework/net-native/application-element-net-native.md) [] [0:1] [derlemesi](../../../docs/framework/net-native/assembly-element-net-native.md) [0: d] [ad alanı](../../../docs/framework/net-native/namespace-element-net-native.md) [0: a]. biçimindeki telefon numarasıdır. biçimindeki telefon numarasıdır.
-[Tür](../../../docs/framework/net-native/type-element-net-native.md) [0: a]. biçimindeki telefon numarasıdır. biçimindeki telefon numarasıdır.
-[Typeörneklemesi](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (oluşturulan genel tür) [0: a]. biçimindeki telefon numarasıdır. biçimindeki telefon numarasıdır.
-[Ad alanı](../../../docs/framework/net-native/namespace-element-net-native.md) [0: a] [Ad alanı](../../../docs/framework/net-native/namespace-element-net-native.md) [0: a]. biçimindeki telefon numarasıdır. biçimindeki telefon numarasıdır.
-[Tür](../../../docs/framework/net-native/type-element-net-native.md) [0: a]. biçimindeki telefon numarasıdır. biçimindeki telefon numarasıdır.
-[Typeörneklemesi](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (oluşturulan genel tür) [0: a]. biçimindeki telefon numarasıdır. biçimindeki telefon numarasıdır.
-[Tür](../../../docs/framework/net-native/type-element-net-native.md) [0: a] Alt [türler](../../../docs/framework/net-native/subtypes-element-net-native.md) (kapsayan türün alt sınıfları) [O:1] [Tür](../../../docs/framework/net-native/type-element-net-native.md) [0: a]. biçimindeki telefon numarasıdır. biçimindeki telefon numarasıdır.
-[Typeörneklemesi](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (oluşturulan genel tür) [0: a]. biçimindeki telefon numarasıdır. biçimindeki telefon numarasıdır.
-[Attributewith](../../../docs/framework/net-native/attributeimplies-element-net-native.md) (içeren tür bir öznitelik) [O:1] [Genericparameter](../../../docs/framework/net-native/genericparameter-element-net-native.md) [0: a] [Yöntemi](../../../docs/framework/net-native/method-element-net-native.md) [0: a] [Parametre](../../../docs/framework/net-native/parameter-element-net-native.md) [0: a] [Typeparameter](../../../docs/framework/net-native/typeparameter-element-net-native.md) [0: a] [Genericparameter](../../../docs/framework/net-native/genericparameter-element-net-native.md) [0: a] [Methodörneklemesi](../../../docs/framework/net-native/methodinstantiation-element-net-native.md) (oluşturulmuş genel yöntem) [0: a] [Özelliği](../../../docs/framework/net-native/property-element-net-native.md) [0: a] [Alan](../../../docs/framework/net-native/field-element-net-native.md) [0: a] [Olay](../../../docs/framework/net-native/event-element-net-native.md) [0: a] [Typeörneklemesi](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (oluşturulan genel tür) [0: a] [Tür](../../../docs/framework/net-native/type-element-net-native.md) [0: a]. biçimindeki telefon numarasıdır. biçimindeki telefon numarasıdır.
-[Typeörneklemesi](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (oluşturulan genel tür) [0: a]. biçimindeki telefon numarasıdır. biçimindeki telefon numarasıdır.
-[Yöntemi](../../../docs/framework/net-native/method-element-net-native.md) [0: a] [Parametre](../../../docs/framework/net-native/parameter-element-net-native.md) [0: a] [Typeparameter](../../../docs/framework/net-native/typeparameter-element-net-native.md) [0: a] [Genericparameter](../../../docs/framework/net-native/genericparameter-element-net-native.md) [0: a] [Methodörneklemesi](../../../docs/framework/net-native/methodinstantiation-element-net-native.md) (oluşturulmuş genel yöntem) [0: a] [Özelliği](../../../docs/framework/net-native/property-element-net-native.md) [0: a] [Alan](../../../docs/framework/net-native/field-element-net-native.md) [0: a] [Olay](../../../docs/framework/net-native/event-element-net-native.md) [0: a] [Kitaplığı](../../../docs/framework/net-native/library-element-net-native.md) [0: a] [Derleme](../../../docs/framework/net-native/assembly-element-net-native.md) [0: a] [Ad alanı](../../../docs/framework/net-native/namespace-element-net-native.md) [0: a]. biçimindeki telefon numarasıdır. biçimindeki telefon numarasıdır.
-[Tür](../../../docs/framework/net-native/type-element-net-native.md) [0: a]. biçimindeki telefon numarasıdır. biçimindeki telefon numarasıdır.
-[Typeörneklemesi](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (oluşturulan genel tür) [0: a]. biçimindeki telefon numarasıdır. biçimindeki telefon numarasıdır.
-[Ad alanı](../../../docs/framework/net-native/namespace-element-net-native.md) [0: a] [Ad alanı](../../../docs/framework/net-native/namespace-element-net-native.md) [0: a]. biçimindeki telefon numarasıdır. biçimindeki telefon numarasıdır.
-[Tür](../../../docs/framework/net-native/type-element-net-native.md) [0: a]. biçimindeki telefon numarasıdır. biçimindeki telefon numarasıdır.
-[Typeörneklemesi](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (oluşturulan genel tür) [0: a]. biçimindeki telefon numarasıdır. biçimindeki telefon numarasıdır.
-[Tür](../../../docs/framework/net-native/type-element-net-native.md) [0: a] Alt [türler](../../../docs/framework/net-native/subtypes-element-net-native.md) (kapsayan türün alt sınıfları) [O:1] [Tür](../../../docs/framework/net-native/type-element-net-native.md) [0: a]. biçimindeki telefon numarasıdır. biçimindeki telefon numarasıdır.
-[Typeörneklemesi](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (oluşturulan genel tür) [0: a]. biçimindeki telefon numarasıdır. biçimindeki telefon numarasıdır.
-[Attributewith](../../../docs/framework/net-native/attributeimplies-element-net-native.md) (içeren tür bir öznitelik) [O:1] [Genericparameter](../../../docs/framework/net-native/genericparameter-element-net-native.md) [0: a] [Yöntemi](../../../docs/framework/net-native/method-element-net-native.md) [0: a] [Methodörneklemesi](../../../docs/framework/net-native/methodinstantiation-element-net-native.md) (oluşturulmuş genel yöntem) [0: a] [Özelliği](../../../docs/framework/net-native/property-element-net-native.md) [0: a] [Alan](../../../docs/framework/net-native/field-element-net-native.md) [0: a] [Olay](../../../docs/framework/net-native/event-element-net-native.md) [0: a] [Typeörneklemesi](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (oluşturulan genel tür) [0: a] [Tür](../../../docs/framework/net-native/type-element-net-native.md) [0: a]. biçimindeki telefon numarasıdır. biçimindeki telefon numarasıdır.
-[Typeörneklemesi](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (oluşturulan genel tür) [0: a]. biçimindeki telefon numarasıdır. biçimindeki telefon numarasıdır.
-[Yöntemi](../../../docs/framework/net-native/method-element-net-native.md) [0: a] [Methodörneklemesi](../../../docs/framework/net-native/methodinstantiation-element-net-native.md) (oluşturulmuş genel yöntem) [0: a] [Özelliği](../../../docs/framework/net-native/property-element-net-native.md) [0: a] [Alan](../../../docs/framework/net-native/field-element-net-native.md) [0: a] [Olay](../../../docs/framework/net-native/event-element-net-native.md) [0: a]
+[Yönergeler](directives-element-net-native.md) [ [1:1] [] [](application-element-net-native.md) 0:1] [derlemesi](assembly-element-net-native.md) [0: d] [ad alanı](namespace-element-net-native.md) [0: a]. biçimindeki telefon numarasıdır. biçimindeki telefon numarasıdır.
+[Tür](type-element-net-native.md) [0: a]. biçimindeki telefon numarasıdır. biçimindeki telefon numarasıdır.
+[Typeörneklemesi](typeinstantiation-element-net-native.md) (oluşturulan genel tür) [0: a]. biçimindeki telefon numarasıdır. biçimindeki telefon numarasıdır.
+[Ad alanı](namespace-element-net-native.md) [0: a] [Ad alanı](namespace-element-net-native.md) [0: a]. biçimindeki telefon numarasıdır. biçimindeki telefon numarasıdır.
+[Tür](type-element-net-native.md) [0: a]. biçimindeki telefon numarasıdır. biçimindeki telefon numarasıdır.
+[Typeörneklemesi](typeinstantiation-element-net-native.md) (oluşturulan genel tür) [0: a]. biçimindeki telefon numarasıdır. biçimindeki telefon numarasıdır.
+[Tür](type-element-net-native.md) [0: a] Alt [türler](subtypes-element-net-native.md) (kapsayan türün alt sınıfları) [O:1] [Tür](type-element-net-native.md) [0: a]. biçimindeki telefon numarasıdır. biçimindeki telefon numarasıdır.
+[Typeörneklemesi](typeinstantiation-element-net-native.md) (oluşturulan genel tür) [0: a]. biçimindeki telefon numarasıdır. biçimindeki telefon numarasıdır.
+[Attributewith](attributeimplies-element-net-native.md) (içeren tür bir öznitelik) [O:1] [Genericparameter](genericparameter-element-net-native.md) [0: a] [Yöntemi](method-element-net-native.md) [0: a] [Parametre](parameter-element-net-native.md) [0: a] [Typeparameter](typeparameter-element-net-native.md) [0: a] [Genericparameter](genericparameter-element-net-native.md) [0: a] [Methodörneklemesi](methodinstantiation-element-net-native.md) (oluşturulmuş genel yöntem) [0: a] [Özelliği](property-element-net-native.md) [0: a] [Alan](field-element-net-native.md) [0: a] [Olay](event-element-net-native.md) [0: a] [Typeörneklemesi](typeinstantiation-element-net-native.md) (oluşturulan genel tür) [0: a] [Tür](type-element-net-native.md) [0: a]. biçimindeki telefon numarasıdır. biçimindeki telefon numarasıdır.
+[Typeörneklemesi](typeinstantiation-element-net-native.md) (oluşturulan genel tür) [0: a]. biçimindeki telefon numarasıdır. biçimindeki telefon numarasıdır.
+[Yöntemi](method-element-net-native.md) [0: a] [Parametre](parameter-element-net-native.md) [0: a] [Typeparameter](typeparameter-element-net-native.md) [0: a] [Genericparameter](genericparameter-element-net-native.md) [0: a] [Methodörneklemesi](methodinstantiation-element-net-native.md) (oluşturulmuş genel yöntem) [0: a] [Özelliği](property-element-net-native.md) [0: a] [Alan](field-element-net-native.md) [0: a] [Olay](event-element-net-native.md) [0: a] [Kitaplığı](library-element-net-native.md) [0: a] [Derleme](assembly-element-net-native.md) [0: a] [Ad alanı](namespace-element-net-native.md) [0: a]. biçimindeki telefon numarasıdır. biçimindeki telefon numarasıdır.
+[Tür](type-element-net-native.md) [0: a]. biçimindeki telefon numarasıdır. biçimindeki telefon numarasıdır.
+[Typeörneklemesi](typeinstantiation-element-net-native.md) (oluşturulan genel tür) [0: a]. biçimindeki telefon numarasıdır. biçimindeki telefon numarasıdır.
+[Ad alanı](namespace-element-net-native.md) [0: a] [Ad alanı](namespace-element-net-native.md) [0: a]. biçimindeki telefon numarasıdır. biçimindeki telefon numarasıdır.
+[Tür](type-element-net-native.md) [0: a]. biçimindeki telefon numarasıdır. biçimindeki telefon numarasıdır.
+[Typeörneklemesi](typeinstantiation-element-net-native.md) (oluşturulan genel tür) [0: a]. biçimindeki telefon numarasıdır. biçimindeki telefon numarasıdır.
+[Tür](type-element-net-native.md) [0: a] Alt [türler](subtypes-element-net-native.md) (kapsayan türün alt sınıfları) [O:1] [Tür](type-element-net-native.md) [0: a]. biçimindeki telefon numarasıdır. biçimindeki telefon numarasıdır.
+[Typeörneklemesi](typeinstantiation-element-net-native.md) (oluşturulan genel tür) [0: a]. biçimindeki telefon numarasıdır. biçimindeki telefon numarasıdır.
+[Attributewith](attributeimplies-element-net-native.md) (içeren tür bir öznitelik) [O:1] [Genericparameter](genericparameter-element-net-native.md) [0: a] [Yöntemi](method-element-net-native.md) [0: a] [Methodörneklemesi](methodinstantiation-element-net-native.md) (oluşturulmuş genel yöntem) [0: a] [Özelliği](property-element-net-native.md) [0: a] [Alan](field-element-net-native.md) [0: a] [Olay](event-element-net-native.md) [0: a] [Typeörneklemesi](typeinstantiation-element-net-native.md) (oluşturulan genel tür) [0: a] [Tür](type-element-net-native.md) [0: a]. biçimindeki telefon numarasıdır. biçimindeki telefon numarasıdır.
+[Typeörneklemesi](typeinstantiation-element-net-native.md) (oluşturulan genel tür) [0: a]. biçimindeki telefon numarasıdır. biçimindeki telefon numarasıdır.
+[Yöntemi](method-element-net-native.md) [0: a] [Methodörneklemesi](methodinstantiation-element-net-native.md) (oluşturulmuş genel yöntem) [0: a] [Özelliği](property-element-net-native.md) [0: a] [Alan](field-element-net-native.md) [0: a] [Olay](event-element-net-native.md) [0: a]
 
-[Uygulama](../../../docs/framework/net-native/application-element-net-native.md) öğesinin hiç özniteliği olamaz veya [çalışma zamanı yönergesinde ve ilke bölümünde](#Directives)ele alınan ilke özniteliklerine sahip olabilir.
+[Uygulama](application-element-net-native.md) öğesinin hiç özniteliği olamaz veya [çalışma zamanı yönergesinde ve ilke bölümünde](#Directives)ele alınan ilke özniteliklerine sahip olabilir.
 
-Bir [kitaplık](../../../docs/framework/net-native/library-element-net-native.md) öğesi, dosya uzantısı olmadan bir `Name`kitaplığın veya derlemenin adını belirten tek bir özniteliğe sahiptir. Örneğin, aşağıdaki [kitaplık](../../../docs/framework/net-native/library-element-net-native.md) öğesi Extensions. dll adlı bir derleme için geçerlidir.
+Bir [kitaplık](library-element-net-native.md) öğesi, dosya uzantısı olmadan bir `Name`kitaplığın veya derlemenin adını belirten tek bir özniteliğe sahiptir. Örneğin, aşağıdaki [kitaplık](library-element-net-native.md) öğesi Extensions. dll adlı bir derleme için geçerlidir.
 
 ```xml
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">
@@ -82,15 +82,15 @@ Bir [kitaplık](../../../docs/framework/net-native/library-element-net-native.md
 
 ## <a name="runtime-directives-and-policy"></a>Çalışma zamanı yönergeleri ve ilkesi
 
-[Uygulama](../../../docs/framework/net-native/application-element-net-native.md) öğesinin kendisi ve [kitaplık](../../../docs/framework/net-native/library-element-net-native.md) ve [uygulama](../../../docs/framework/net-native/application-element-net-native.md) öğeleri Express ilkesinin alt öğeleri; diğer bir deyişle, bir uygulamanın bir program öğesine yansıma uygulayabileceği şekilde tanımlar. İlke türü, öğesinin bir özniteliği tarafından tanımlanır (örneğin, `Serialize`). İlke değeri özniteliğin değeri (örneğin, `Serialize="Required"`) tarafından tanımlanır.
+[Uygulama](application-element-net-native.md) öğesinin kendisi ve [kitaplık](library-element-net-native.md) ve [uygulama](application-element-net-native.md) öğeleri Express ilkesinin alt öğeleri; diğer bir deyişle, bir uygulamanın bir program öğesine yansıma uygulayabileceği şekilde tanımlar. İlke türü, öğesinin bir özniteliği tarafından tanımlanır (örneğin, `Serialize`). İlke değeri özniteliğin değeri (örneğin, `Serialize="Required"`) tarafından tanımlanır.
 
-Bir öğenin özniteliği tarafından belirtilen herhangi bir ilke, bu ilke için bir değer belirtmeyen tüm alt öğeler için geçerlidir. Örneğin, bir ilke bir [tür](../../../docs/framework/net-native/type-element-net-native.md) öğesiyle belirtilmişse, bu ilke, bir ilkenin açıkça belirtilmediği tüm içerilen türler ve Üyeler için geçerlidir.
+Bir öğenin özniteliği tarafından belirtilen herhangi bir ilke, bu ilke için bir değer belirtmeyen tüm alt öğeler için geçerlidir. Örneğin, bir ilke bir [tür](type-element-net-native.md) öğesiyle belirtilmişse, bu ilke, bir ilkenin açıkça belirtilmediği tüm içerilen türler ve Üyeler için geçerlidir.
 
-[Uygulama](../../../docs/framework/net-native/application-element-net-native.md), [derleme](../../../docs/framework/net-native/assembly-element-net-native.md), attributeby, [Namespace](../../../docs/framework/net-native/namespace-element-net-native.md), alt [türler](../../../docs/framework/net-native/subtypes-element-net-native.md)ve [](../../../docs/framework/net-native/attributeimplies-element-net-native.md) [tür](../../../docs/framework/net-native/type-element-net-native.md) öğeleri tarafından ifade edilen ilke, ayrı Üyeler için ifade edilebilir ilkeden farklıdır ( [Yöntemi](../../../docs/framework/net-native/method-element-net-native.md), [özelliği](../../../docs/framework/net-native/property-element-net-native.md), [alanı](../../../docs/framework/net-native/field-element-net-native.md)ve [olay](../../../docs/framework/net-native/event-element-net-native.md) öğeleri).
+[Uygulama](application-element-net-native.md), [derleme](assembly-element-net-native.md), [attributeby](attributeimplies-element-net-native.md), [Namespace](namespace-element-net-native.md), alt [türler](subtypes-element-net-native.md)ve [tür](type-element-net-native.md) öğeleri tarafından ifade edilen ilke, ayrı Üyeler için ifade edilebilir ilkeden farklıdır ( [Yöntemi](method-element-net-native.md), [özelliği](property-element-net-native.md), [alanı](field-element-net-native.md)ve [olay](event-element-net-native.md) öğeleri).
 
 ### <a name="specifying-policy-for-assemblies-namespaces-and-types"></a>Derlemeler, ad alanları ve türler için ilke belirtme
 
-[Uygulama](../../../docs/framework/net-native/application-element-net-native.md), [derleme](../../../docs/framework/net-native/assembly-element-net-native.md), [attributeme](../../../docs/framework/net-native/attributeimplies-element-net-native.md), [Namespace](../../../docs/framework/net-native/namespace-element-net-native.md), alt [türleri](../../../docs/framework/net-native/subtypes-element-net-native.md)ve [tür](../../../docs/framework/net-native/type-element-net-native.md) öğeleri aşağıdaki ilke türlerini destekler:
+[Uygulama](application-element-net-native.md), [derleme](assembly-element-net-native.md), [attributeme](attributeimplies-element-net-native.md), [Namespace](namespace-element-net-native.md), alt [türleri](subtypes-element-net-native.md)ve [tür](type-element-net-native.md) öğeleri aşağıdaki ilke türlerini destekler:
 
 - `Activate`. Örneklerin etkinleştirilmesini sağlamak için oluşturuculara çalışma zamanı erişimini denetler.
 
@@ -147,7 +147,7 @@ Bu ilke türleriyle ilişkili ayarlar şunlardır:
 
 ### <a name="specifying-policy-for-members"></a>Üyeler için ilke belirtme
 
-[Özellik](../../../docs/framework/net-native/property-element-net-native.md) ve [alan](../../../docs/framework/net-native/field-element-net-native.md) öğeleri aşağıdaki ilke türlerini destekler:
+[Özellik](property-element-net-native.md) ve [alan](field-element-net-native.md) öğeleri aşağıdaki ilke türlerini destekler:
 
 - `Browse`-Bu üye hakkında bilgi sorgulamayı denetler, ancak hiçbir çalışma zamanı erişimini etkinleştirmez.
 
@@ -155,7 +155,7 @@ Bu ilke türleriyle ilişkili ayarlar şunlardır:
 
 - `Serialize`-Tür örneklerinin, Newtonsoft JSON serileştirici gibi kitaplıklar tarafından serileştirilmesi ve seri durumdan çıkarılmakta olması için üyeye çalışma zamanı erişimini denetler. Bu ilke oluşturucular, alanlar ve özelliklere uygulanabilir.
 
-[Yöntemi](../../../docs/framework/net-native/method-element-net-native.md) ve [olay](../../../docs/framework/net-native/event-element-net-native.md) öğeleri aşağıdaki ilke türlerini destekler:
+[Yöntemi](method-element-net-native.md) ve [olay](event-element-net-native.md) öğeleri aşağıdaki ilke türlerini destekler:
 
 - `Browse`-Bu üye hakkında bilgi sorgulamayı denetler, ancak hiçbir çalışma zamanı erişimini etkinleştirmez.
 
@@ -173,9 +173,9 @@ Bu ilke türleriyle ilişkili ayarlar şunlardır:
 
 ## <a name="runtime-directives-file-semantics"></a>Çalışma zamanı yönergeleri dosya semantiği
 
-İlke, hem daha yüksek hem de alt düzey öğeler için eşzamanlı olarak tanımlanabilir. Örneğin, ilke bir derleme için ve bu derlemede yer alan bazı türler için tanımlanabilir. Belirli bir alt düzey öğe gösterilmediğinden, üst öğesinin ilkesini devralır. Örneğin, bir `Assembly` öğe mevcutsa ancak `Type` öğeler yoksa, `Assembly` öğesinde belirtilen ilke derlemedeki her tür için geçerlidir. Aynı program öğesine aynı zamanda birden çok öğe ilke uygulayabilir. Örneğin, ayrı [derleme](../../../docs/framework/net-native/assembly-element-net-native.md) öğeleri aynı derleme için aynı ilke öğesini farklı şekilde tanımlayabilir. Aşağıdaki bölümlerde, belirli bir türün ilkesinin bu durumlarda nasıl çözümlendiğini açıklanmaktadır.
+İlke, hem daha yüksek hem de alt düzey öğeler için eşzamanlı olarak tanımlanabilir. Örneğin, ilke bir derleme için ve bu derlemede yer alan bazı türler için tanımlanabilir. Belirli bir alt düzey öğe gösterilmediğinden, üst öğesinin ilkesini devralır. Örneğin, bir `Assembly` öğe mevcutsa ancak `Type` öğeler yoksa, `Assembly` öğesinde belirtilen ilke derlemedeki her tür için geçerlidir. Aynı program öğesine aynı zamanda birden çok öğe ilke uygulayabilir. Örneğin, ayrı [derleme](assembly-element-net-native.md) öğeleri aynı derleme için aynı ilke öğesini farklı şekilde tanımlayabilir. Aşağıdaki bölümlerde, belirli bir türün ilkesinin bu durumlarda nasıl çözümlendiğini açıklanmaktadır.
 
-Genel bir türün veya yöntemin [tür](../../../docs/framework/net-native/type-element-net-native.md) veya [Yöntem](../../../docs/framework/net-native/method-element-net-native.md) öğesi, kendi ilkesi olmayan tüm örneklemelerde ilkesini uygular. Örneğin, `Type` `List<Int32>`ilkesini belirten bir öğe, belirli bir oluşturulan genel tür için geçersiz kılınmadığı sürece (örneğin, bir `TypeInstantiation` öğesi tarafından), bu genel türün tüm oluşturulan örneklerine uygulanır.<xref:System.Collections.Generic.List%601> Aksi takdirde, öğeleri adlı program öğesi için ilkeyi tanımlar.
+Genel bir türün veya yöntemin [tür](type-element-net-native.md) veya [Yöntem](method-element-net-native.md) öğesi, kendi ilkesi olmayan tüm örneklemelerde ilkesini uygular. Örneğin, `Type` `List<Int32>`ilkesini belirten bir öğe, belirli bir oluşturulan genel tür için geçersiz kılınmadığı sürece (örneğin, bir `TypeInstantiation` öğesi tarafından), bu genel türün tüm oluşturulan örneklerine uygulanır.<xref:System.Collections.Generic.List%601> Aksi takdirde, öğeleri adlı program öğesi için ilkeyi tanımlar.
 
 Bir öğe belirsiz olduğunda, motor eşleşme arar ve tam eşleşme bulursa onu kullanacaktır. Birden çok eşleşme bulunursa bir uyarı veya hata olur.
 
@@ -411,9 +411,9 @@ Bu ilkelerin bir türe uygulanması, türün eşleşen serileştirici ile serile
 
 Bu ilkelerin Yöntemler veya alanlar üzerinde hiçbir etkisi yoktur.
 
-Daha fazla bilgi için [Windows mağazası uygulamanızı .NET Native geçirme](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md)konusunun "Serileştiricilerle ilgili farklılıklar" bölümüne bakın.
+Daha fazla bilgi için [Windows mağazası uygulamanızı .NET Native geçirme](migrating-your-windows-store-app-to-net-native.md)konusunun "Serileştiricilerle ilgili farklılıklar" bölümüne bakın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Çalışma Zamanı Yönerge Öğeleri](../../../docs/framework/net-native/runtime-directive-elements.md)
-- [Yansıma ve .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md)
+- [Çalışma Zamanı Yönerge Öğeleri](runtime-directive-elements.md)
+- [Yansıma ve .NET Native](reflection-and-net-native.md)

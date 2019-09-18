@@ -1,18 +1,18 @@
 ---
-title: <Assembly> Öğesi (.NET yerel)
+title: <Assembly>Öğesi (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: cfe629eb-1106-4113-86e1-052f402d8d8b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c0788c05edace2142d348c679c73aa1b4404ce75
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1743264996680c6a0ce308619d7a5bafef5d07a5
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61868868"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049915"
 ---
-# <a name="assembly-element-net-native"></a>\<Derleme > öğesi (.NET yerel)
-Çalışma zamanı yansıma ilkesini belirtilen bir derlemedeki tüm türleri için geçerlidir.  
+# <a name="assembly-element-net-native"></a>\<Bütünleştirilmiş kod > öğesi (.NET Native)
+Belirtilen derlemedeki tüm türlere çalışma zamanı yansıma ilkesini uygular.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,48 +38,48 @@ ms.locfileid: "61868868"
 |Öznitelik|Öznitelik türü|Açıklama|  
 |---------------|--------------------|-----------------|  
 |`Name`|Genel|Gerekli öznitelik. Bir derlemenin basit adını belirtir.|  
-|`Activate`|Yansıma|İsteğe bağlı öznitelik. Oluşturucular örneklerinin etkinleştirmesi için çalışma zamanı erişimi denetler.|  
-|`Browse`|Yansıma|İsteğe bağlı öznitelik. Hakkında bilgi için sorgulama veya derlemedeki türleri numaralandırma kontrol eder, ancak çalışma zamanında herhangi bir dinamik erişim sağlamaz.|  
-|`Dynamic`|Yansıma|İsteğe bağlı öznitelik. Dinamik programlama etkinleştirmek için Oluşturucular, yöntemler, alanlar, özellikler ve olaylar, tüm tür üyelerini, çalışma zamanı erişimi denetler.|  
-|`Serialize`|Serileştirme|İsteğe bağlı öznitelik. Oluşturucular, alanları ve tür örnekleri sıralanabilir ve kitaplıkları gibi Newtonsoft JSON seri hale getirici tarafından serisi etkinleştirmek için özellikler, çalışma zamanı erişimi denetler.|  
-|`DataContractSerializer`|Serileştirme|İsteğe bağlı öznitelik. Denetimleri İlkesi kullanan Serileştirmenin <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> sınıfı.|  
-|`DataContractJsonSerializer`|Serileştirme|İsteğe bağlı öznitelik. İlke kullanan bir JSON serileştirme denetleyen <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer?displayProperty=nameWithType> sınıfı.|  
-|`XmlSerializer`|Serileştirme|İsteğe bağlı öznitelik. İlke kullanan bir XML serileştirme denetleyen <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType> sınıfı.|  
-|`MarshalObject`|Birlikte çalışma|İsteğe bağlı öznitelik. Windows çalışma zamanı ve COM başvuru türlerini hazırlama denetimleri İlkesi|  
-|`MarshalDelegate`|Birlikte çalışma|İsteğe bağlı öznitelik. Yerel kod için işlev işaretçileri olarak temsilci türleri hazırlama için ilke denetler.|  
-|`MarshalStructure`|Birlikte çalışma|İsteğe bağlı öznitelik. Yerel kod yapılarına hazırlama için ilke denetler.|  
+|`Activate`|Yansıma|İsteğe bağlı öznitelik. Örneklerin etkinleştirilmesini sağlamak için oluşturuculara çalışma zamanı erişimini denetler.|  
+|`Browse`|Yansıma|İsteğe bağlı öznitelik. Derlemedeki türler hakkında bilgi sorgulamayı veya numaralandırma denetimleri yapar, ancak çalışma zamanında hiçbir dinamik erişimi etkinleştirmez.|  
+|`Dynamic`|Yansıma|İsteğe bağlı öznitelik. Dinamik programlamayı etkinleştirmek için oluşturucular, Yöntemler, alanlar, Özellikler ve olaylar dahil olmak üzere tüm tür üyelerine çalışma zamanı erişimini denetler.|  
+|`Serialize`|Serileştirme|İsteğe bağlı öznitelik. Tür örneklerinin, Newtonsoft JSON serileştirici gibi kitaplıklar tarafından serileştirilmesi ve seri durumdan çıkarılmakta olması için oluşturuculara, alanlara ve özelliklere çalışma zamanı erişimini denetler.|  
+|`DataContractSerializer`|Serileştirme|İsteğe bağlı öznitelik. <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> Sınıfını kullanan serileştirme için ilkeyi denetler.|  
+|`DataContractJsonSerializer`|Serileştirme|İsteğe bağlı öznitelik. <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer?displayProperty=nameWithType> Sınıfını kullanan JSON serileştirme için ilkeyi denetler.|  
+|`XmlSerializer`|Serileştirme|İsteğe bağlı öznitelik. <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType> Sınıfını kullanan XML serileştirme ilkesini denetler.|  
+|`MarshalObject`|Interop|İsteğe bağlı öznitelik. Windows Çalışma Zamanı ve COM 'a başvuru türlerini hazırlama ilkesini denetler.|  
+|`MarshalDelegate`|Interop|İsteğe bağlı öznitelik. Temsilci türlerini yerel koda işlev işaretçileri olarak hazırlama ilkesini denetler.|  
+|`MarshalStructure`|Interop|İsteğe bağlı öznitelik. Yapıları yerel koda hazırlama ilkesini denetler.|  
   
 ## <a name="name-attribute"></a>Ad özniteliği  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|*assembly_name*|Dosya uzantısı olmadan derlemenin basit adını. Bu özniteliğe karşılık gelen <xref:System.Reflection.AssemblyName.Name%2A?displayProperty=nameWithType> özelliği. Örneğin, Extensions.dll adlı bir derleme adı "Uzantıları" dir.<br /><br /> Değişmez değer dize belirtebilirsiniz `*Application*` bu derlemeler yüklü olsun olmasın tüm derlemeleri uygulama paketinizle ilkesi uygulamak için. `*Application*` hiçbir zaman ilkesi .NET Framework derlemeleri için geçerlidir.|  
+|*assembly_name*|Derlemenin, dosya uzantısı olmadan basit adı. Bu öznitelik, <xref:System.Reflection.AssemblyName.Name%2A?displayProperty=nameWithType> özelliğine karşılık gelir. Örneğin, Extensions. dll adlı bir derlemenin adı "Uzantılar" dır.<br /><br /> Ayrıca, uygulama paketinizdeki tüm derlemelere `*Application*` ilke uygulamak için aynı dizeyi belirtebilir, bu derlemeler yüklenip yüklenmemelidir. `*Application*`ilke .NET Framework derlemelerine hiçbir şekilde uygulanmaz.|  
   
 ## <a name="all-other-attributes"></a>Diğer tüm öznitelikler  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|*policy_setting*|Bu ilke türü derleme içindeki tüm türler için geçerli ayar. Olası değerler `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal`, ve `Required All`. Daha fazla bilgi için [çalışma zamanı yönerge İlkesi ayarları](../../../docs/framework/net-native/runtime-directive-policy-settings.md).|  
+|*policy_setting*|Derlemedeki tüm türler için bu ilke türüne uygulanacak ayar. Olası değerler şunlardır `All` `Auto` ,,`Excluded`,,,, ve`Required All`. `Public` `PublicAndInternal` `Required Public` `Required PublicAndInternal` Daha fazla bilgi için bkz. [çalışma zamanı yönergesi Ilke ayarları](runtime-directive-policy-settings.md).|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<Namespace >](../../../docs/framework/net-native/namespace-element-net-native.md)|Alt ad alanında tüm türlerin yansıma ilkesini uygular.|  
-|[\<türü >](../../../docs/framework/net-native/type-element-net-native.md)|Yansıma ilkesini bir türü için geçerlidir.|  
-|[\<Typeınstantiation >](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|Yansıma İlkesi oluşturulmuş bir genel türü için geçerlidir.|  
+|[\<Ad alanı >](namespace-element-net-native.md)|Bir alt ad alanındaki tüm türlere yansıma ilkesi uygular.|  
+|[\<Tür >](type-element-net-native.md)|Yansıma ilkesini bir türe uygular.|  
+|[\<Typeörneklemesi >](typeinstantiation-element-net-native.md)|Yansıma ilkesini oluşturulmuş genel bir türe uygular.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<Uygulama >](../../../docs/framework/net-native/application-element-net-native.md)|Birçok farklı uygulama türleri ve tür üyeleri olan meta verilerini yansıma çalışma zamanında kullanılabilir için kapsayıcı görevi görür. [ \<Uygulama >](../../../docs/framework/net-native/application-element-net-native.md) öğesi sıfır, bir veya daha fazla olabilir `<Assembly>` öğeleri.|  
-|[\<Kitaplık >](../../../docs/framework/net-native/library-element-net-native.md)|Türler ve tür üyeleri olan meta verilerini yansıma çalışma zamanında kullanılabilir içeren derlemeyi tanımlar. [ \<Kitaplığı >](../../../docs/framework/net-native/library-element-net-native.md) öğesi sıfır veya bir olabilir `<Assembly>` öğesi.|  
+|[\<Uygulama >](application-element-net-native.md)|Uygulama genelinde türler için bir kapsayıcı görevi görür ve meta verileri çalışma zamanında yansıma için kullanılabilir olan üyeleri yazın. Uygulama > öğesinde sıfır, bir veya daha fazla `<Assembly>` öğe olabilir. [ \<](application-element-net-native.md)|  
+|[\<Kitaplık >](library-element-net-native.md)|Meta verileri çalışma zamanında yansıma için kullanılabilir olan türleri ve tür üyelerini içeren derlemeyi tanımlar. Kitaplık > öğesinde sıfır veya bir `<Assembly>` öğe olabilir. [ \<](library-element-net-native.md)|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `<Assembly>` Öğesi, bir derlemede tüm türler için çalışma zamanı ilkesini tanımlar. Bu farklıdır [ \<kitaplığı >](../../../docs/framework/net-native/library-element-net-native.md) kitaplık belirtiyor, ancak çalışma zamanı yansıma ilkesini tanımlamak için alt öğeleri üzerinde bağlıdır öğesi. `<Assembly>` Öğesi geçerli derlemedeki tüm türleri için bir alt öğesi tarafından geçersiz kılınmadığı sürece.  
+ `<Assembly>` Öğesi bir derlemedeki tüm türler için çalışma zamanı ilkesini tanımlar. Bu, bir kitaplığı belirten, ancak çalışma zamanı yansıtma ilkesini tanımlamak için alt öğelerine bağımlı olan [ \<kitaplık >](library-element-net-native.md) öğeden farklıdır. `<Assembly>` Öğesi bir alt öğe tarafından geçersiz kılınmadıkça derlemedeki tüm türlere uygulanır.  
   
- Aşağıdaki örnek nasıl çalışma zamanı İlkesi bütünleştirilmiş kodlar içindeki tüm türleri, uygulama paketi içinde atayarak uygulayabileceğiniz gösterir `Name` özniteliği değeri "* uygulama\*". `<Assembly>` Öğesi alt öğesi olmalıdır [ \<uygulama >](../../../docs/framework/net-native/application-element-net-native.md) öğesi.  
+ Aşağıdaki örnek, `Name` özniteliğini "* Application\*" değeri atayarak uygulama paketinizdeki derlemelerdeki tüm türlere çalışma zamanı ilkesini nasıl uygulayacağınızı gösterir. Öğe `<Assembly>` [, \<uygulama >](application-element-net-native.md) öğesinin bir alt öğesi olmalıdır.  
   
 ```xml  
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">   
@@ -89,10 +89,10 @@ ms.locfileid: "61868868"
 </Directives>  
 ```  
   
- `Activate`, `Browse`, `Dynamic`, Ve `Serialize` öznitelikleri tüm isteğe bağlı. Ancak, `<Assembly>` öğesi bu öznitelikler en az birini içermelidir.  
+ ,, Ve özniteliklerinin`Serialize` tümü isteğe bağlıdır. `Browse` `Activate` `Dynamic` Ancak, `<Assembly>` öğesi bu özniteliklerden en az birini içermelidir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Çalışma Zamanı Yönerge İlkesi Ayarları](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
-- [Çalışma Zamanı Yönergeleri (rd.xml) Yapılandırma Dosyası Başvurusu](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
-- [Çalışma Zamanı Yönerge Öğeleri](../../../docs/framework/net-native/runtime-directive-elements.md)
+- [Çalışma Zamanı Yönerge İlkesi Ayarları](runtime-directive-policy-settings.md)
+- [Çalışma Zamanı Yönergeleri (rd.xml) Yapılandırma Dosyası Başvurusu](runtime-directives-rd-xml-configuration-file-reference.md)
+- [Çalışma Zamanı Yönerge Öğeleri](runtime-directive-elements.md)

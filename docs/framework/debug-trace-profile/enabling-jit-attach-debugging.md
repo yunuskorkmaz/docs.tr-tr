@@ -7,35 +7,35 @@ helpviewer_keywords:
 ms.assetid: f91fc5f7-de5a-4f23-b6ac-f450e63c662e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 005395beabd956767b59e0cebd563fe883f6fe53
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: f4d4e2b3806d2c4d84b59e1cd44eb03ab7b278c9
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489793"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052833"
 ---
 # <a name="enabling-jit-attach-debugging"></a>JIT-Ekleme Hata Ayıklamayı Etkinleştirme
-JIT-ekleme hata ayıklamayı hatalarla ya da belirli yöntemler ve işlevlere tarafından tetiklenebilir bir hata ayıklayıcı bir işlemine iliştirme açıklamak için kullanılan ifade var.  
+JıT-Attach hata ayıklaması, hatalar ile ilgili bir hata ayıklayıcıyı bir işleme iliştirirken veya belirli yöntemler veya işlevler tarafından tetikleniyorsa kullanılan tümceciktir.  
   
- JIT-ekleme hata ayıklamayı aşağıdaki hata koşulları altında kullanılır:  
+ JıT-Attach hata ayıklaması aşağıdaki hata koşulları altında kullanılır:  
   
-- İşlenmeyen özel durumları (yerel ve yönetilen kod).  
+- İşlenmemiş özel durumlar (hem yerel hem de yönetilen kodda).  
   
-- <xref:System.Environment.FailFast%2A?displayProperty=nameWithType> yöntem veya [RaiseFailFastException](https://go.microsoft.com/fwlink/?LinkId=182107) işlevi (Windows 7 ailesi).  
+- <xref:System.Environment.FailFast%2A?displayProperty=nameWithType>Method veya [RaiseFailFastException](https://go.microsoft.com/fwlink/?LinkId=182107) Işlevi (Windows 7 ailesi).  
   
-- Önemli hatalarla çalışma zamanı.  
+- Çalışma zamanı önemli hataları.  
   
- JIT-ekleme hata ayıklamayı aşağıdaki yöntemleri ve işlevleri yapılan çağrılar tarafından ayrıca başlatılır:  
+ JıT-Attach hata ayıklaması, aşağıdaki yöntemler ve işlevlere yapılan çağrılar tarafından da tetiklenir:  
   
-- <xref:System.Diagnostics.Debugger.Launch%2A?displayProperty=nameWithType> yöntem.  
+- <xref:System.Diagnostics.Debugger.Launch%2A?displayProperty=nameWithType>yöntemidir.  
   
-- <xref:System.Diagnostics.Debugger.Break%2A?displayProperty=nameWithType> yöntem.  
+- <xref:System.Diagnostics.Debugger.Break%2A?displayProperty=nameWithType>yöntemidir.  
   
-- [DebugBreak](https://go.microsoft.com/fwlink/?LinkId=182106) işlevi (Win32).  
+- [DebugBreak](https://go.microsoft.com/fwlink/?LinkId=182106) Işlevi (Win32).  
   
- Önce .NET Framework 4 ve .NET Framework, yerel ve yönetilen hata ayıklayıcıları davranışını denetlemek için ayrı bir kayıt defteri anahtarları sağlanır. Denetim, .NET Framework 4 ile başlayarak, bir tek bir kayıt defteri anahtarı altında birleştirilir: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\Current Version\AeDebug. Bu anahtarı ayarlayabilirsiniz değerleri bir hata ayıklayıcı çağrılan, ve olup bu durumda, kullanıcı etkileşimi gerektiren bir iletişim kutusu çağrılır olup olmadığını belirler. Bu kayıt defteri anahtarı ayarlama hakkında daha fazla bilgi için bkz: [otomatik hata ayıklama yapılandırma](https://go.microsoft.com/fwlink/?LinkId=181767).  
+ .NET Framework 4 ' den önce, .NET Framework yerel ve yönetilen hata ayıklayıcıların davranışını denetlemek için ayrı kayıt defteri anahtarları sağladı. .NET Framework 4 ' te başlayarak, Denetim tek bir kayıt defteri anahtarı altında birleştirilir: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\Current Version\AeDebug. Bu anahtar için ayarlayabileceğiniz değerler, bir hata ayıklayıcının çağrılıp çağrılmadığını ve varsa Kullanıcı etkileşimi gerektiren bir iletişim kutusuyla çağrılması gerektiğini belirtir. Bu kayıt defteri anahtarını ayarlama hakkında daha fazla bilgi için bkz. [otomatik hata ayıklamayı yapılandırma](https://go.microsoft.com/fwlink/?LinkId=181767).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hata Ayıklama, İzleme ve Profil Oluşturma](../../../docs/framework/debug-trace-profile/index.md)
-- [Görüntüde Hata Ayıklamayı Kolaylaştırma](../../../docs/framework/debug-trace-profile/making-an-image-easier-to-debug.md)
+- [Hata Ayıklama, İzleme ve Profil Oluşturma](index.md)
+- [Görüntüde Hata Ayıklamayı Kolaylaştırma](making-an-image-easier-to-debug.md)

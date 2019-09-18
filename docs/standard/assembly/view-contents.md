@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Derleme içeriğini görüntüle'
+title: 'Nasıl yapılır: Derleme içeriklerini görüntüleme'
 ms.date: 08/20/2019
 helpviewer_keywords:
 - assembly manifest, viewing information
@@ -16,14 +16,15 @@ dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: 8f27afafde0b83dfe886d218f3148d8ff07b30cb
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 40ed31bb2231775bb2b6eb24586e07c8b07a85bb
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70973028"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053951"
 ---
-# <a name="how-to-view-assembly-contents"></a>Nasıl yapılır: Derleme içeriğini görüntüle
+# <a name="how-to-view-assembly-contents"></a>Nasıl yapılır: Derleme içeriklerini görüntüleme
+
 Bir dosyadaki Microsoft ara dili (MSIL) bilgilerini görüntülemek için [ıldadsm. exe (IL Disassembler)](../../framework/tools/ildasm-exe-il-disassembler.md) kullanabilirsiniz. İncelenen dosya bir derlemedir, bu bilgiler derlemenin özniteliklerinin yanı sıra diğer modüller ve derlemelere yönelik başvuruları içerebilir. Bu bilgiler, bir dosyanın derleme veya bir derlemenin parçası olup olmadığını ve dosyanın diğer modüllere veya derlemelere başvurular içerip içermediğini belirlemek için yararlı olabilir.  
   
 *Ildadsm. exe*' yi kullanarak bir derlemenin içeriğini göstermek için, komut istemine **ıldadsm** \< *derleme adı*> yazın. Örneğin, aşağıdaki komut *Hello. exe* derlemesini ayrıştırır.  
@@ -35,6 +36,7 @@ ildasm Hello.exe
 Derleme bildirimi bilgilerini görüntülemek için MSIL ayrıştırma penceresindeki **bildirim** simgesine çift tıklayın.  
   
 ## <a name="example"></a>Örnek  
+
 Aşağıdaki örnek, temel bir "Merhaba Dünya" programıyla başlar. Program derlendikten sonra, *Hello. exe* derlemesini ve derleme bildirimini görüntülemek Için *ıldadsm. exe* ' yi kullanın.  
 
 ```cpp

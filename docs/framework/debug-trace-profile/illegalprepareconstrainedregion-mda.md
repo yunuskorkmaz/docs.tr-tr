@@ -10,30 +10,30 @@ helpviewer_keywords:
 ms.assetid: 2f9b5031-f910-4e01-a196-f89eab313eaf
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 23a36d1709f03583ce39af0e7c80bb1ecd7cf809
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 623aff91eb801b4b32fc180bd97ed3822ad7f163
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61754394"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052671"
 ---
 # <a name="illegalprepareconstrainedregion-mda"></a>illegalPrepareConstrainedRegion MDA
-`illegalPrepareConstrainedRegion` Yönetilen hata ayıklama Yardımcısı (MDA) etkinleştirilmiş olduğunda bir <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A?displayProperty=nameWithType> yöntem çağrısı değil hemen önünde `try` özel durum işleyicisinin bildirimi. Çağrı arasında kaynak kodu oluşturma için izin verilen, bu nedenle bu kısıtlama MSIL düzeyini ve `try`, açıklamalar gibi.  
+Yönetilen hata ayıklama Yardımcısı (MDA), bir <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A?displayProperty=nameWithType> Yöntem çağrısı özel durum işleyicisinin `try` ifadesinden hemen önce gelmediğinde etkinleştirilir. `illegalPrepareConstrainedRegion` Bu kısıtlama MSIL düzeyindedir, bu nedenle çağrı ile `try`yorum gibi kod oluşturma olmayan kaynağa izin verilir.  
   
 ## <a name="symptoms"></a>Belirtiler  
- Bu nedenle, ancak basit bir özel durum işleme bloğu asla kabul kısıtlı yürütme bölge (CER) (`finally` veya `catch`). Sonuç olarak, bölge içinde bir bellek yetersiz koşulu veya bir iş parçacığı iptal olması durumunda çalıştırmaz.  
+ Bu, basit bir özel durum işleme bloğu (`finally` veya `catch`) olarak hiçbir şekilde kabul edilen kısıtlı bir yürütme bölgesi (cer). Sonuç olarak, bölge bellek dışı bir koşul veya bir iş parçacığı iptali durumunda çalışmaz.  
   
 ## <a name="cause"></a>Sebep  
- Bir CER hazırlık desenini doğru şekilde izlenmiyor.  Bir hata olayı budur. <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> Özel durum işleyicileri içinde bir CER giriş olarak işaretlemek için kullanılan yöntem çağrısı kendi `catch` / `finally` / `fault` / `filter` blokları, hemen önce kullanılmalıdır `try` deyimi.  
+ Bir CER için hazırlık deseninin doğru şekilde izlenmiyor.  Bu bir hata olayıdır. `catch` Özeldurum`finally` işleyicilerini / <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> blok`filter` içindeki birceriletanışınolarakişaretlemekiçinkullanılanyöntemçağrısı,/ `fault` / `try` bildirim.  
   
 ## <a name="resolution"></a>Çözüm  
- Çağrı emin <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> hemen önce gerçekleşir `try` deyimi.  
+ Çağrısının <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> ,`try` deyimden hemen önce yapıldığından emin olun.  
   
-## <a name="effect-on-the-runtime"></a>Çalışma zamanı üzerindeki etkisi  
- Bu mda'nın CLR üzerinde etkisi yoktur.  
+## <a name="effect-on-the-runtime"></a>Çalışma zamanında etki  
+ Bu MDA, CLR üzerinde hiçbir etkisi yoktur.  
   
 ## <a name="output"></a>Çıkış  
- MDA yöntem çağırma adını görüntüler <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> yöntemi, MSIL uzaklığı ve çağrı değil hemen önünde try bloğunun başlangıcı belirten bir ileti.  
+ MDA, <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> yöntemi çağıran yöntemin adını, MSIL farkını ve çağrının try bloğunun başlangıcından hemen önce gelmesini belirten bir iletiyi görüntüler.  
   
 ## <a name="configuration"></a>Yapılandırma  
   
@@ -46,7 +46,7 @@ ms.locfileid: "61754394"
 ```  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod örneği, bu mda'nın etkinleştirilmesi neden desenini gösterir.  
+ Aşağıdaki kod örneği, bu MDA 'ın etkinleştirilmesini sağlayan bir model gösterir.  
   
 ```csharp
 void MethodWithInvalidPCR()  
@@ -68,5 +68,5 @@ void MethodWithInvalidPCR()
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A>
-- [Yönetilen Hata Ayıklama Yardımcıları ile Hataları Tanılama](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [Birlikte Çalışma için Hazırlama](../../../docs/framework/interop/interop-marshaling.md)
+- [Yönetilen Hata Ayıklama Yardımcıları ile Hataları Tanılama](diagnosing-errors-with-managed-debugging-assistants.md)
+- [Birlikte Çalışma için Hazırlama](../interop/interop-marshaling.md)

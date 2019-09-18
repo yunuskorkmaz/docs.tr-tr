@@ -15,21 +15,21 @@ helpviewer_keywords:
 - receiving data, Secure Sockets Layer
 - Internet, Secure Sockets Layer
 ms.assetid: 6e4289e6-d1b7-4e82-ab0d-e83e3b6063ed
-ms.openlocfilehash: 9cfa8d6a71898a1d1ea91825ffc9a37f4654ebd5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ef2abc7574aea1b4f77ff93545ad84678c66ce48
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64583528"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046898"
 ---
 # <a name="using-secure-sockets-layer"></a>Güvenli Yuva Katmanı Kullanma
-<xref:System.Net> Sınıfları, çeşitli ağ protokolleri için bağlantıyı şifrelemek için Güvenli Yuva Katmanı (SSL) kullanın.  
+<xref:System.Net> Sınıflar, birkaç ağ protokolünün bağlantısını şifrelemek için Güvenli Yuva Katmanı (SSL) kullanır.  
   
- Http bağlantılarında <xref:System.Net.WebRequest> ve <xref:System.Net.WebResponse> sınıfları SSL destekleyen web konaklarla iletişim kurması için SSL kullanın. SSL karar tarafından yapılan <xref:System.Net.WebRequest> verilen URI üzerinde temel sınıf. URI ile başlıyorsa "https:", SSL kullanılır; URI ile başlıyorsa "http:", şifrelenmemiş bir bağlantı kullanılır.  
+ Http bağlantılarında <xref:System.Net.WebRequest> , ve <xref:System.Net.WebResponse> sınıfları SSL 'yi destekleyen Web Konakları ile iletişim kurmak için SSL kullanır. SSL kullanma kararı, verilen URI temel alınarak <xref:System.Net.WebRequest> sınıfı tarafından yapılır. URI "https:" ile başlıyorsa, SSL kullanılır; URI "http:" ile başlıyorsa, şifrelenmemiş bir bağlantı kullanılır.  
   
- Dosya Aktarım Protokolü (FTP) ile SSL kullanmak için ayarlanmış <xref:System.Net.FtpWebRequest.EnableSsl> özelliği true çağrılmadan önce <xref:System.Net.FtpWebRequest.GetResponse>. Benzer şekilde, Basit Posta Aktarım Protokolü (SMTP) ile SSL kullanmak için ayarlama <xref:System.Net.Mail.SmtpClient.EnableSsl> özelliğini e-postayı göndermeden önce true.  
+ SSL 'yi Dosya Aktarım Protokolü (FTP) ile birlikte kullanmak için, <xref:System.Net.FtpWebRequest.EnableSsl> çağrılmadan <xref:System.Net.FtpWebRequest.GetResponse>önce özelliği true olarak ayarlayın. Benzer şekilde, Basit Posta Aktarım Protokolü (SMTP) ile SSL kullanmak için, e <xref:System.Net.Mail.SmtpClient.EnableSsl> -postayı göndermeden önce özelliğini doğru olarak ayarlayın.  
   
- <xref:System.Net.Security.SslStream> Sınıfı için SSL akış tabanlı bir Özet sağlar ve SSL el sıkışması yapılandırmak için birçok yol sunar.  
+ <xref:System.Net.Security.SslStream> Sınıfı, SSL için akış tabanlı bir soyutlama sağlar ve SSL anlaşmasını yapılandırmak için birçok yol sunar.  
   
 ## <a name="example"></a>Örnek  
   
@@ -58,12 +58,12 @@ FtpWebResponse response = (FtpWebResponse)request.GetResponse();
 ```  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
- Bu örnek gerektirir:  
+ Bu örnek şunları gerektirir:  
   
-- Başvurular **System.Net** ad alanı.  
+- **System.net** ad alanına başvurular.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Ağ Programlama Güvenliği](../../../docs/framework/network-programming/security-in-network-programming.md)
-- [.NET Framework'te Ağ Programlaması](../../../docs/framework/network-programming/index.md)
-- [Sertifika Seçimi ve Doğrulama](../../../docs/framework/network-programming/certificate-selection-and-validation.md)
+- [Ağ Programlama Güvenliği](security-in-network-programming.md)
+- [.NET Framework'te Ağ Programlaması](index.md)
+- [Sertifika Seçimi ve Doğrulama](certificate-selection-and-validation.md)

@@ -4,26 +4,26 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Skip method [WPF]
 ms.assetid: c967b0f8-1c6a-459c-8c16-d4f08918ab65
-ms.openlocfilehash: f7d7df77c54d4551025aa5a344c96083c263f455
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a74f71345a22f6d766c2d5966ca5d2cb33ab756e
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61949766"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053370"
 ---
 # <a name="ienumrawinputdevicskip"></a>IEnumRAWINPUTDEVIC:Skip
-Sonraki Numaralandırıcıya bildirir `celt` listedeki öğeleri sonraki çağrı böylece [IEnumRAWINPUTDEVIC:Next](ienumrawinputdevic-next.md) bu öğeleri döndürmez.  
+Numaralandırıcının, bir sonraki `celt` [ıenumatwınputdevic:](ienumrawinputdevic-next.md) Next çağrısının bu öğeleri döndürmemesi için Numaralandırmadaki bir sonraki öğeleri atlamasını söyler.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```cpp  
 HRESULT Skip( [in] ULONG celt);  
 ```  
   
 ## <a name="parameters"></a>Parametreler  
  `celt`  
   
- [in] Atlanacak öğe sayısı.  
+ 'ndaki Atlanacak öğe sayısı.  
   
 ## <a name="property-valuereturn-value"></a>Özellik Değeri/Dönüş Değeri  
- HRESULT: Sağlanan öğe sayısını ise S_OK `celt`; S_FALSE Aksi takdirde.
+ HRESULT Sağlanan öğe sayısı ise `celt`S_OK; Aksi halde S_FALSE.

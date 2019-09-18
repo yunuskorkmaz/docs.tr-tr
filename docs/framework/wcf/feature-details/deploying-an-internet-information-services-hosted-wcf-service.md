@@ -2,12 +2,12 @@
 title: Internet Information Services Tarafından Barındırılan Bir WCF Hizmeti Dağıtma
 ms.date: 03/30/2017
 ms.assetid: 04ebd329-3fbd-44c3-b3ab-1de3517e27d7
-ms.openlocfilehash: 95c56f767bbe8dce44ea742de00c65c357bd1378
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: e46bcec846fcc8f9455c436bb551564e1cb5b5ea
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70895102"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053307"
 ---
 # <a name="deploying-an-internet-information-services-hosted-wcf-service"></a>Internet Information Services Tarafından Barındırılan Bir WCF Hizmeti Dağıtma
 
@@ -29,7 +29,7 @@ IIS tarafından barındırılan bir WCF hizmeti oluşturma hakkında ayrıntıl�
 
 IIS tarafından barındırılan WCF hizmetlerinin düzgün çalışması için WCF, IIS ve ASP.NET yüklü olmalıdır. WCF yükleme yordamları (.NET Framework bir parçası olarak), ASP.NET ve IIS işletim sisteminize bağlı olarak değişir. WCF ve .NET Framework yükleme hakkında daha fazla bilgi için bkz. [geliştiricilere yönelik .NET Framework yükleme](../../install/guide-for-developers.md). Windows 10 ' a IIS yüklemek için, **Denetim Masası** 'nda **Programlar ve Özellikler** ' i açın ve ardından **Windows özelliklerini aç veya kapat**' ı seçin. **Windows özellikleri**' nde **Internet Information Services** seçin ve ardından **Tamam**' ı seçin.
 
-![IIS ile vurgulanan Windows özellikleri](media/windows-features-iis.png)
+![IIS ile vurgulanan Windows özellikleri](./media/windows-features-iis.png)
 
 Diğer işletim sistemlerine IIS yükleme yönergeleri [Windows Vista ve Windows 7 ' de IIS yükleme](/iis/install/installing-iis-7/installing-iis-on-windows-vista-and-windows-7) ve [Windows Server 2012 R2 üzerinde IIS 8,5 yükleme](/iis/install/installing-iis-85/installing-iis-85-on-windows-server-2012-r2)' de bulunabilir.
 

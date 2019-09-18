@@ -7,25 +7,25 @@ helpviewer_keywords:
 ms.assetid: 2264054e-712e-47e4-8657-1aa1cfec3e3d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e8104d7cd6aa5a26fa69df7be838ea9b7cb2cc44
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: b5d7f97a4ec67e4932aaee922897a16362f6a78c
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70971766"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053234"
 ---
 # <a name="application-domains-and-assemblies-how-to-topics"></a>Uygulama Etki Alanları ve Derlemeler Nasıl Yapılır Konuları
 Aşağıdaki bölümler, uygulama etki alanları ve Derlemeleriyle programlama için kavramsal belgelerde bulunan tüm nasıl yapılır konularına bağlantılar içerir.  
   
  **Uygulama Etki Alanları**  
   
-- [Nasıl yapılır: Uygulama etki alanı oluşturma](../../../docs/framework/app-domains/how-to-create-an-application-domain.md)  
+- [Nasıl yapılır: Uygulama etki alanı oluşturma](how-to-create-an-application-domain.md)  
   
-- [Nasıl yapılır: Uygulama etki alanını kaldırma](../../../docs/framework/app-domains/how-to-unload-an-application-domain.md)  
+- [Nasıl yapılır: Uygulama etki alanını kaldırma](how-to-unload-an-application-domain.md)  
   
-- [Nasıl yapılır: Uygulama etki alanı yapılandırma](../../../docs/framework/app-domains/how-to-configure-an-application-domain.md)  
+- [Nasıl yapılır: Uygulama etki alanı yapılandırma](how-to-configure-an-application-domain.md)  
   
-- [Nasıl yapılır: Derlemeleri bir uygulama etki alanına yükleme](../../../docs/framework/app-domains/how-to-load-assemblies-into-an-application-domain.md)  
+- [Nasıl yapılır: Derlemeleri bir uygulama etki alanına yükleme](how-to-load-assemblies-into-an-application-domain.md)  
   
 - [Nasıl yapılır: Bir derlemeden tür ve üye bilgilerini alma](../reflection-and-codedom/get-type-member-information.md)  
   
@@ -47,12 +47,12 @@ Aşağıdaki bölümler, uygulama etki alanları ve Derlemeleriyle programlama i
   
 - [Nasıl yapılır: Bir derlemeyi genel bütünleştirilmiş kod önbelleğine yükler](install-assembly-into-gac.md)  
   
-- [Nasıl yapılır: Genel derleme önbelleğinin Içeriğini görüntüleme](../../../docs/framework/app-domains/how-to-view-the-contents-of-the-gac.md)  
+- [Nasıl yapılır: Genel derleme önbelleğinin Içeriğini görüntüleme](how-to-view-the-contents-of-the-gac.md)  
   
-- [Nasıl yapılır: Bir derlemeyi genel bütünleştirilmiş kod önbelleğinden kaldırma](../../../docs/framework/app-domains/how-to-remove-an-assembly-from-the-gac.md)  
+- [Nasıl yapılır: Bir derlemeyi genel bütünleştirilmiş kod önbelleğinden kaldırma](how-to-remove-an-assembly-from-the-gac.md)  
   
 - [Nasıl yapılır: Derleme Içeriğini görüntüle](../../standard/assembly/view-contents.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Uygulama Etki Alanları ve Derlemeler](../../../docs/framework/app-domains/index.md)
+- [Uygulama Etki Alanları ve Derlemeler](index.md)

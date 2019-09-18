@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: c1d2b532-1b8e-4c7a-8ac5-53b801135ec6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ef977206bf0d5b818cfd9779f063fbc2bd50632e
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 262ee168dabafcdc0b284f1ae5528843975a7e9d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70971840"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044158"
 ---
 # <a name="snexe-strong-name-tool"></a>Sn.exe (Tanımlayıcı Ad Aracı)
 Tanımlayıcı ad Aracı (sn. exe), derlemelerin [güçlü adlarla](../../standard/assembly/strong-named.md)imzalanmanıza yardımcı olur. Sn.exe; temel yönetim, imza oluşturma ve imza doğrulaması için seçenekler sağlar.  
@@ -27,7 +27,7 @@ Tanımlayıcı ad Aracı (sn. exe), derlemelerin [güçlü adlarla](../../standa
 
  Tanımlayıcı adlandırma ve tanımlayıcı adlı derlemeler hakkında daha fazla bilgi için bkz. [Strong-adlandırılmış derlemeler](../../standard/assembly/strong-named.md) ve [nasıl yapılır: Bir derlemeyi güçlü bir adla](../../standard/assembly/sign-strong-name.md)imzalayın.  
   
- Tanımlayıcı Ad aracı Visual Studio ile birlikte otomatik olarak yüklenir. Aracı başlatmak için Geliştirici Komut İstemi (veya Windows 7 ' de Visual Studio komut Istemi) kullanın. Daha fazla bilgi için bkz. [komut istemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+ Tanımlayıcı Ad aracı Visual Studio ile birlikte otomatik olarak yüklenir. Aracı başlatmak için Geliştirici Komut İstemi (veya Windows 7 ' de Visual Studio komut Istemi) kullanın. Daha fazla bilgi için bkz. [komut istemleri](developer-command-prompt-for-vs.md).  
 
 > [!NOTE]
 > 64 bit bilgisayarlarda, Visual Studio x64 Win64 komut Istemi kullanarak Visual Studio için Geliştirici Komut İstemi ve 64 bit sürümü kullanarak sn. exe ' nin 32 bit sürümünü çalıştırın. 
@@ -55,7 +55,7 @@ sn [-quiet][option [parameter(s)]]
 |**-k** [*KeySize*] *çıkışdosyası*|Belirtilen boyutta yeni <xref:System.Security.Cryptography.RSACryptoServiceProvider> bir anahtar oluşturur ve belirtilen dosyaya yazar.  Hem ortak hem de özel anahtar dosyaya yazılır.<br /><br /> Bir anahtar boyutu belirtmezseniz, makinenizde Microsoft gelişmiş şifreleme sağlayıcısı yüklü ise varsayılan olarak 1,024-bit bir anahtar oluşturulur, yüklü değilse 512-bit anahtar oluşturulur.<br /><br /> Microsoft Gelişmiş şifreleme sağlayıcısı yüklüyse, *KeySize* parametresi, 384 bitten 16.384 bite kadar, 8 bitten oluşan anahtar uzunluklarını destekler.  Makinenizde Microsoft temel şifreleme sağlayıcısı yüklüyse, 8 bitlik artışlarla 384 bit'ten 512 bit'e kadar olan anahtar uzunluklarını destekler.|  
 |**-m** [**y** *&#124;* **n**]|Anahtar kapsayıcılarının bilgisayara özgü mi yoksa kullanıcıya özgü mü olduğunu belirtir. *Y*belirtirseniz, anahtar kapsayıcıları bilgisayara özgüdür. *N*belirtirseniz, anahtar kapsayıcıları kullanıcıya özeldir.<br /><br /> y ne n öğelerinden hiçbirini belirtmezseniz, bu seçenek geçerli ayarı görüntüler.|  
 |**-o**  *infile* [*outfile*]|*Indosyadan* ortak anahtarı ayıklar ve bir. csv dosyasında depolar. Ortak anahtarın her baytı virgülle ayrılır. Bu biçim, kaynak kodunda başlatılmış diziler olarak anahtarlara ilişkin sabit kodlama başvuruları için yararlıdır. Bir *çıkışdosyası*belirtmezseniz, bu seçenek çıktıyı panoya yerleştirir. **Not:**  Bu seçenek girdinin yalnızca bir ortak anahtar olduğunu doğrulamaz. Özel anahtarı olan bir anahtar çifti içeriyorsa,özelanahtardeayıklanır.`infile`|  
-|**-p** *INFILE çıkışdosyası* [*HashAlg*]|Ortak anahtarı *InFile* içindeki anahtar çiftinden ayıklar ve isteğe bağlı olarak *HashAlg*tarafından belirtilen RSA algoritmasını kullanarak bu dosyayı *çıkışdosyası*içinde depolar. Bu ortak anahtar, derleme [Bağlayıcısı (al. exe)](../../../docs/framework/tools/al-exe-assembly-linker.md)için **/delaysign +** ve **/keyfile** seçeneklerini kullanarak bir derlemeyi gecikmeli imzalamak için kullanılabilir. Derleme gecikmeli imzalanmış olduğunda, yalnızca ortak anahtar derleme zamanında ayarlanır ve özel anahtarı bulunduğunda, daha sonra eklenecek bir imza için dosyada alan ayrılır.|  
+|**-p** *INFILE çıkışdosyası* [*HashAlg*]|Ortak anahtarı *InFile* içindeki anahtar çiftinden ayıklar ve isteğe bağlı olarak *HashAlg*tarafından belirtilen RSA algoritmasını kullanarak bu dosyayı *çıkışdosyası*içinde depolar. Bu ortak anahtar, derleme [Bağlayıcısı (al. exe)](al-exe-assembly-linker.md)için **/delaysign +** ve **/keyfile** seçeneklerini kullanarak bir derlemeyi gecikmeli imzalamak için kullanılabilir. Derleme gecikmeli imzalanmış olduğunda, yalnızca ortak anahtar derleme zamanında ayarlanır ve özel anahtarı bulunduğunda, daha sonra eklenecek bir imza için dosyada alan ayrılır.|  
 |**-pc**  *kapsayıcı* *outfile* [*hashalg*]|*Kapsayıcıda* anahtar çiftinden ortak anahtarı ayıklar ve *çıkışdosyası*içinde depolar. *HashAlg* seçeneğini KULLANıRSANıZ, RSA algoritması ortak anahtarı ayıklamak için kullanılır.|  
 |**-Pb** [**y** *&#124;* **n**]|Tanımlayıcı ad atlama ilkesinin uygulatılıp uygulatılmayacağı belirtir. *Y*belirtirseniz, tam güven derlemeleri için tanımlayıcı adlar tam güvene <xref:System.AppDomain>yüklendiğinde doğrulanmaz. *N*belirtirseniz, tanımlayıcı adlar doğruluk için onaylanır, ancak belirli bir tanımlayıcı ad için desteklenmez. Tam güvenle derlemeler üzerinde hiçbir etkiye sahipdeğildir.<xref:System.Security.Permissions.StrongNameIdentityPermission> Bir tanımlayıcı ad eşleştirmesi için kendi denetiminizi gerçekleştirmeniz gerekir.<br /><br /> `y` Ne de `n` belirtilmemişse, bu seçenek geçerli ayarı görüntüler. Varsayılan, `y` değeridir. **Not:**  64 bit bilgisayarlarda, bu parametreyi hem 32-bit hem de 64-bit Sn.exe örneklerinde ayarlamanız gerekir.|  
 |**-q** [**UIET**]|Sessiz mod kullanılacağını belirtir; başarı iletilerinin görüntülenmesini engeller.|  
@@ -126,7 +126,7 @@ sn -d MyContainer
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Araçlar](../../../docs/framework/tools/index.md)
-- [Al.exe (Bütünleştirilmiş Kod Bağlayıcı)](../../../docs/framework/tools/al-exe-assembly-linker.md)
+- [Araçlar](index.md)
+- [Al.exe (Bütünleştirilmiş Kod Bağlayıcı)](al-exe-assembly-linker.md)
 - [Kesin Adlandırılmış Bütünleştirilmiş Kodlar](../../standard/assembly/strong-named.md)
-- [Komut İstemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [Komut İstemleri](developer-command-prompt-for-vs.md)

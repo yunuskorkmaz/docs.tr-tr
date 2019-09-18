@@ -10,27 +10,27 @@ helpviewer_keywords:
 ms.assetid: c7924771-a16b-40fe-b337-ce51dcdf6a12
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 35560b966d5fba60ac35b2eb1e559e196fc868f5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ea7f48ab61c16cb0430717074f1b1feab4827763
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61754549"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052601"
 ---
 # <a name="invalidiunknown-mda"></a>invalidIUnknown MDA
-`invalidIUnknown` Yönetilen hata ayıklama Yardımcısı (MDA) geçersiz olduğunda etkinleştirilir `IUnknown` işaretçi yönetilen koda yerel koddan geçirilir. `IUnknown` İçin sorgulandığında başarı döndüremediğine `IUnknown` arabirimi.  
+Yerel koddan yönetilen koda geçersiz `IUnknown` bir işaretçi geçirildiğinde yönetilenhataayıklamaYardımcısı(MDA)etkinleştirilir.`invalidIUnknown` Arabirim için sorgulandığında başarı geri dönemezse.`IUnknown` `IUnknown`  
   
 ## <a name="symptoms"></a>Belirtiler  
- Bağımsız değişken sıralama sırasında bir COM arabirimi işaretçisini hazırlama beklenmeyen bir hata oluşur.  
+ Bağımsız değişken sıralaması sırasında COM arabirim işaretçisi sıralaması sırasında beklenmeyen bir hata oluştu.  
   
 ## <a name="cause"></a>Sebep  
- Yanlış bir `QueryInterface` COM arabirimi mantığınız CLR geçirildi.  
+ CLR 'ye `QueryInterface` geçirilen com arabiriminde yanlış bir uygulama.  
   
 ## <a name="resolution"></a>Çözüm  
- Düzeltme `QueryInterface` uygulaması.  
+ `QueryInterface` Uygulamayı düzeltin.  
   
-## <a name="effect-on-the-runtime"></a>Çalışma zamanı üzerindeki etkisi  
- Bu mda'nın CLR üzerinde etkisi yoktur.  
+## <a name="effect-on-the-runtime"></a>Çalışma zamanında etki  
+ Bu MDA, CLR üzerinde hiçbir etkisi yoktur.  
   
 ## <a name="output"></a>Çıkış  
  Hatanın açıklaması.  
@@ -48,5 +48,5 @@ ms.locfileid: "61754549"
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [Yönetilen Hata Ayıklama Yardımcıları ile Hataları Tanılama](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [Birlikte Çalışma için Hazırlama](../../../docs/framework/interop/interop-marshaling.md)
+- [Yönetilen Hata Ayıklama Yardımcıları ile Hataları Tanılama](diagnosing-errors-with-managed-debugging-assistants.md)
+- [Birlikte Çalışma için Hazırlama](../interop/interop-marshaling.md)

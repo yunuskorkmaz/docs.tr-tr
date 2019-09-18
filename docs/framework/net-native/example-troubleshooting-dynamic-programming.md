@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 42ed860a-a022-4682-8b7f-7c9870784671
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 85d64a5577acdaa15a40ae308eb728d75d6a4c69
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 866ec425fd66ee8b3b62263180ac7e6d776108f0
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894496"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049797"
 ---
 # <a name="example-troubleshooting-dynamic-programming"></a>Örnek: Dinamik Programlama Sorunlarını Giderme
 > [!NOTE]
@@ -33,7 +33,7 @@ App!$43_System::Threading::SendOrPostCallback.InvokeOpenStaticThunk
 [snip]  
 ```  
   
- [Kullanmaya](../../../docs/framework/net-native/getting-started-with-net-native.md)başlama konusunun "eksik meta verileri el ile çözümleme" bölümünde özetlenen üç adımlı yaklaşımı kullanarak bu özel durumu gidermeye deneyelim.  
+ [Kullanmaya](getting-started-with-net-native.md)başlama konusunun "eksik meta verileri el ile çözümleme" bölümünde özetlenen üç adımlı yaklaşımı kullanarak bu özel durumu gidermeye deneyelim.  
   
 ## <a name="what-was-the-app-doing"></a>Uygulama ne yapıyor?  
  İlk nottaki şey, yığının tabanında `async` anahtar sözcük makinelerdir.  Bir `async` yöntemde uygulamanın gerçekten ne yaptığını belirlemek soruna neden olabilir. yığın, kaynak çağrının bağlamını kaybettiğinden ve `async` kodu farklı bir iş parçacığında çalıştırmıştır. Bununla birlikte, uygulamanın ilk sayfasını yüklemeye çalıştığı anlaşıyoruz.  Uygulamasında `NavigationArgs.Setup`, aşağıdaki kod erişim ihlaline neden oldu:  
@@ -56,9 +56,9 @@ App!$43_System::Threading::SendOrPostCallback.InvokeOpenStaticThunk
  Kullanırken `App.Core.ViewModels`diğer sorunlar da oluşabilir.  Eksik bir meta veri özel durumunun belirlenmesi ve düzeltilmesi ya da zaman tasarrufu ve daha büyük bir tür sınıfı için yönergeler eklenmesi gerektiğine karar vermelisiniz.  Burada, çıkış `dynamic` ikilisinin `App.Core.ViewModels` elde edilen boyut artışı bir sorun değilse, için meta verileri eklemek en iyi yaklaşım olabilir.  
   
 ## <a name="could-the-code-be-rewritten"></a>Kod yeniden yazılabilir mi?  
- Uygulamanın `typeof(LayoutApplicationVM)` `browse` yerine kullanıldıysa, araç zinciri korunan meta verileri olabilir. `Type.GetType("LayoutApplicationVM")`  Ancak, tür örneği oluşturulurken `invoke` [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) özel durumuna yol gösteren meta verileri hala oluşturmazdı. Özel durumu engellemek için, ad alanı veya `dynamic` ilkeyi belirten tür için bir çalışma zamanı yönergesi eklemeniz gerekir. Çalışma zamanı yönergeleri hakkında daha fazla bilgi için bkz. [çalışma zamanı yönergeleri (RD. xml) yapılandırma dosyası başvurusu](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md).  
+ Uygulamanın `typeof(LayoutApplicationVM)` `browse` yerine kullanıldıysa, araç zinciri korunan meta verileri olabilir. `Type.GetType("LayoutApplicationVM")`  Ancak, tür örneği oluşturulurken `invoke` [MissingMetadataException](missingmetadataexception-class-net-native.md) özel durumuna yol gösteren meta verileri hala oluşturmazdı. Özel durumu engellemek için, ad alanı veya `dynamic` ilkeyi belirten tür için bir çalışma zamanı yönergesi eklemeniz gerekir. Çalışma zamanı yönergeleri hakkında daha fazla bilgi için bkz. [çalışma zamanı yönergeleri (RD. xml) yapılandırma dosyası başvurusu](runtime-directives-rd-xml-configuration-file-reference.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Başlarken](../../../docs/framework/net-native/getting-started-with-net-native.md)
-- [Örnek: Verileri bağlarken özel durumları işleme](../../../docs/framework/net-native/example-handling-exceptions-when-binding-data.md)
+- [Başlarken](getting-started-with-net-native.md)
+- [Örnek: Verileri bağlarken özel durumları işleme](example-handling-exceptions-when-binding-data.md)

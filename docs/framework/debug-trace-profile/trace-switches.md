@@ -14,24 +14,24 @@ helpviewer_keywords:
 ms.assetid: 8ab913aa-f400-4406-9436-f45bc6e54fbe
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 16ef27b7d1a36121976cbb026f81984a8b84d1fe
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b796d79fc6acf7d54aac7c69d376e587144d14d1
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614331"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052255"
 ---
 # <a name="trace-switches"></a>İzleme Anahtarları
-İzleme anahtarları etkinleştirmek, devre dışı bırakın ve İzleme çıkışı filtrelemek olanak sağlar. Bunlar, mevcut kodunuzu ve .config dosyası aracılığıyla harici olarak yapılandırılabilir nesnelerdir. .NET Framework içinde sağlanan izleme anahtarlarını üç tür vardır: <xref:System.Diagnostics.BooleanSwitch> sınıfı <xref:System.Diagnostics.TraceSwitch> sınıfı ve <xref:System.Diagnostics.SourceSwitch> sınıfı. <xref:System.Diagnostics.BooleanSwitch> Bir iki durumlu izleme deyimleri çeşitli devre dışı bırakma veya etkinleştirme anahtarı, sınıf görevi görür. <xref:System.Diagnostics.TraceSwitch> Ve <xref:System.Diagnostics.SourceSwitch> sınıfları belirli izleme düzeyi için bir izleme anahtarı etkinleştirmenize izin böylece <xref:System.Diagnostics.Trace> veya <xref:System.Diagnostics.TraceSource> düzeyi ve altındaki tüm düzeyleri için belirtilen iletileri görüntülenir. Geçiş devre dışı bırakırsanız, izleme iletileri görüntülenmez. Bu sınıflar türetilen Özet (**MustInherit**) sınıfı **anahtar**gibi bir kullanıcı tarafından geliştirilen anahtar gerekir.  
+İzleme anahtarları, izleme çıkışını etkinleştirmenizi, devre dışı bırakmanızı ve filtrelemenizi sağlar. Bunlar, kodunuzda var olan ve. config dosyası aracılığıyla dışarıdan yapılandırılabilecekleri nesnelerdir. .NET Framework üç tür izleme anahtarı vardır: <xref:System.Diagnostics.BooleanSwitch> sınıfı <xref:System.Diagnostics.TraceSwitch> , sınıfı ve <xref:System.Diagnostics.SourceSwitch> sınıfı. Sınıfı <xref:System.Diagnostics.BooleanSwitch> , çeşitli izleme deyimlerini etkinleştirmek veya devre dışı bırakmak için iki durumlu anahtar işlevi görür. Ve sınıfları belirli bir izleme düzeyi için bir izleme anahtarı etkinleştirmenizi sağlar, böylece <xref:System.Diagnostics.Trace> bu düzeyi ve altındaki tüm düzeyler için belirtilen iletiler görüntülenir. <xref:System.Diagnostics.TraceSource> <xref:System.Diagnostics.TraceSwitch> <xref:System.Diagnostics.SourceSwitch> Anahtarı devre dışı bırakırsanız izleme iletileri görünmez. Tüm bu sınıflar, Kullanıcı tarafından geliştirilen tüm anahtarlar gibi soyut (**MustInherit**) sınıf **anahtarından**türetilir.  
   
- İzleme anahtarları bilgi filtreleme için yararlı olabilir. Örneğin, bir veri erişim modülünden her izleme iletisi, ancak uygulamanın geri kalanında yalnızca hata iletileri görmek isteyebilirsiniz. Bu durumda, uygulama geri kalanı için bir izleme anahtarı için veri erişim modülünden ve bir anahtarı kullanırsınız. Anahtarlar için uygun ayarları yapılandırmak için .config dosyasını kullanarak, ne tür bir izleme iletisi aldığınız denetleyebilirsiniz. Daha fazla bilgi için [nasıl yapılır: Oluşturma, başlatma ve izleme anahtarları yapılandırma](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md).  
+ İzleme anahtarları, bilgileri filtrelemek için yararlı olabilir. Örneğin, bir veri erişim modülündeki her izleme iletisini görmek isteyebilirsiniz, ancak yalnızca uygulamanın geri kalanında hata iletileri görebilirsiniz. Bu durumda, veri erişim modülü için bir izleme anahtarı ve uygulamanın geri kalanı için bir anahtar kullanırsınız. Anahtarları uygun ayarlara göre yapılandırmak için. config dosyasını kullanarak hangi türde iz iletileri aldığınızı denetleyebilirsiniz. Daha fazla bilgi için [nasıl yapılır: Izleme anahtarları](how-to-create-initialize-and-configure-trace-switches.md)oluşturun, başlatın ve yapılandırın.  
   
- Genellikle, kullanıcıların ekranda görünmesini veya uygulama çalışırken bir günlük dosyasının doldurma ilgisiz izleme iletilerini birçok Gözlemleme böylece dağıtılan bir uygulama devre dışı, kendi anahtarlarıyla yürütülür. Uygulama yürütme sırasında bir sorun ortaya çıkarsa, uygulamayı durdurun, anahtarlar etkinleştirin ve uygulamayı yeniden başlatın. Ardından izleme iletileri görüntülenir.  
+ Genellikle dağıtılan bir uygulama, anahtarları devre dışı bırakılmış olarak yürütülür. böylece kullanıcılar ekranda görüntülenen çok sayıda ilgisiz izleme iletisini gözlemlemeye veya uygulama çalışırken bir günlük dosyasının doldurulmasına gerek kalmaz. Uygulama yürütme sırasında bir sorun oluşursa, uygulamayı durdurabilir, anahtarları etkinleştirebilir ve uygulamayı yeniden başlatabilirsiniz. İzleme iletileri görüntülenir.  
   
- Bir anahtar kullanmak için önce bir anahtar nesneden oluşturmanız gerekir bir **BooleanSwitch** sınıfı, bir **TraceSwitch** sınıfı ya da bir geliştirici tarafından tanımlanan anahtar sınıfı. Geliştirici tanımlı anahtarlar oluşturma hakkında daha fazla bilgi için bkz. <xref:System.Diagnostics.Switch> sınıfı .NET Framework başvurusu. Sonra kullanılacak anahtar nesnesi olduğunda belirten bir yapılandırma değeri ayarlayın. Ardından anahtar nesnesinin çeşitli test ayarı **izleme** (veya **hata ayıklama**) izleme yöntemleri.  
+ Bir anahtar kullanmak için önce bir **BooleanSwitch** sınıfından, **TraceSwitch** sınıfından veya bir geliştirici tanımlı anahtar sınıfından bir Switch nesnesi oluşturmanız gerekir. Geliştirici tanımlı anahtarlar oluşturma hakkında daha fazla bilgi için .NET Framework başvurusu içindeki <xref:System.Diagnostics.Switch> sınıfına bakın. Ardından, anahtar nesnesinin ne zaman kullanılacağını belirten bir yapılandırma değeri ayarlarsınız. Daha sonra, farklı **izleme** (veya **hata ayıklama**) izleme yöntemlerinde Switch nesnesinin ayarını test edersiniz.  
   
-## <a name="trace-levels"></a>İzleme düzeyi  
- Kullanırken **TraceSwitch**, ek hususlar vardır. A **TraceSwitch** döndüren dört özellikler nesnesinde **Boole** anahtar belirli en az bir düzeye ayarlanıp ayarlanmadığını belirten değerleri:  
+## <a name="trace-levels"></a>İzleme düzeyleri  
+ **TraceSwitch**kullandığınızda ek hususlar vardır. Bir **TraceSwitch** nesnesi, anahtarın en az belirli bir düzeye ayarlanmış olup olmadığını belirten **Boolean** değerler döndüren dört özelliğe sahiptir:  
   
 - <xref:System.Diagnostics.TraceSwitch.TraceError%2A?displayProperty=nameWithType>  
   
@@ -41,23 +41,23 @@ ms.locfileid: "64614331"
   
 - <xref:System.Diagnostics.TraceSwitch.TraceVerbose%2A?displayProperty=nameWithType>  
   
- Düzeyleri, bir sorunu çözmek için gereken bu bilgileri yalnızca aldığınız izleme bilgilerinin miktarını sınırlamak sağlar. Ayarlayarak ve uygun izleme düzeyi için izleme anahtarları yapılandırma, izleme çıktısı istediğiniz ayrıntı düzeyini belirtin. Hiç hata iletileri, uyarı iletilerini, bilgilendirme iletileri, ayrıntılı izleme iletileri veya ileti alabilir.  
+ Düzeyler, aldığınız izleme bilgilerini yalnızca bir sorunu çözmek için gereken bilgilere göre sınırlamanızı sağlar. İzleme anahtarlarını uygun izleme düzeyine ayarlayarak ve yapılandırarak, izleme çıktılarınızda istediğiniz ayrıntı düzeyini belirtirsiniz. Hata iletileri, uyarı iletileri, bilgilendirici iletiler, ayrıntılı izleme iletileri veya hiç ileti yok alabilirsiniz.  
   
- Bu, hangi tür iletilerin her düzeyi ile ilişkilendirilecek karar vermenize kadar tamamen olur. Genellikle, her düzeyi ile ilişkilendirmek izleme iletileri içeriğini bağlıdır, ancak düzeyleri arasındaki farklar belirleyin. Bir sorun 3 düzeyinde ayrıntılı açıklamaları sağlamak isteyebilirsiniz (**bilgisi**), örneğin, ancak yalnızca bir hata başvuru numarası 1 düzeyinde sağlar (**hata**). Bu, uygulamanızda hangi düzeni iyi karar vermenize kadar tamamen olur.  
+ Her bir düzeyle ne tür bir ileti ilişkilendirileceğini belirlemek tamamen sizin için önemlidir. Genellikle, izleme iletilerinin içeriği her bir düzeyle ilişkilendirdiklerinize bağlıdır, ancak Düzeyler arasındaki farkları belirlersiniz. Örneğin, düzey 3 ' te (**bilgi**) bir sorunun ayrıntılı açıklamalarını sağlamak isteyebilirsiniz, ancak düzey 1 ' de yalnızca bir hata başvuru numarası sağlayın (**hata**). Uygulamanızda en iyi şekilde hangi düzenin en iyi şekilde çalıştığını belirlemek tamamen sizin için önemlidir.  
   
- Bu özelliklerin değerleri 1 ile 4 karşılık gelen **TraceLevel** sabit listesi. Aşağıdaki tabloda düzeyleri **TraceLevel** sabit listesi ve bunların değerleri.  
+ Bu özellikler, **TraceLevel** numaralandırması için 1 ile 4 arasında bir değere karşılık gelir. Aşağıdaki tabloda, **TraceLevel** numaralandırması ve bunların değerleri listelenmiştir.  
   
-|Enum değeri|Tamsayı değeri|Görüntülenen ileti türü (veya belirtilen çıkış hedefine yazılmış)|  
+|Numaralandırılmış değer|Tamsayı değeri|Görüntülenecek ileti türü (veya belirtilen bir çıktı hedefine yazıldı)|  
 |----------------------|-------------------|---------------------------------------------------------------------------|  
 |Kapalı|0|Yok.|  
-|Hata|1.|Yalnızca hata iletileri|  
+|Hata|1\.|Yalnızca hata iletileri|  
 |Uyarı|2|Uyarı iletileri ve hata iletileri|  
-|Bilgi|3|Bilgilendirme iletileri, uyarı iletileri ve hata iletileri|  
-|Ayrıntılı|4|Ayrıntılı iletiler, bilgilendirme iletileri, uyarı iletileri ve hata iletileri|  
+|Bilgi|3|Bilgilendirici iletiler, uyarı iletileri ve hata iletileri|  
+|Ayrıntılı|4|Ayrıntılı iletiler, bilgilendirici iletiler, uyarı iletileri ve hata iletileri|  
   
- **TraceSwitch** özellikleri anahtar için en fazla izleme düzeyini belirtir. Diğer bir deyişle, izleme bilgileri de olduğu gibi tüm alt düzeyleri belirtilen düzeyi için yazılır. Örneğin, varsa **TraceInfo** olduğu **true**, ardından **TraceError** ve **Tacewarning** de **true** ancak **TraceVerbose** de ilginizi çekebilir **false**.  
+ **TraceSwitch** özellikleri, anahtar için en yüksek izleme düzeyini gösterir. Diğer bir deyişle, izleme bilgileri, belirtilen düzeyin yanı sıra tüm alt düzeyler için yazılır. Örneğin, **TraceInfo** **true**Ise **TraceError** ve **TraceWarning** da **true** , ancak **TraceVerbose** de **false**olabilir.  
   
- Bu özellikleri salt okunurdur. **TraceSwitch** nesne otomatik olarak ayarlar bunları zaman **TraceLevel** özelliği ayarlanmış. Örneğin:  
+ Bu özellikler salt okunurdur. **TraceSwitch** nesnesi, **TraceLevel** özelliği ayarlandığında onları otomatik olarak ayarlar. Örneğin:  
   
 ```vb  
 Dim myTraceSwitch As New TraceSwitch("SwitchOne", "The first switch")  
@@ -81,10 +81,10 @@ MessageBox.Show(myTraceSwitch.TraceVerbose.ToString());
 ```  
   
 ## <a name="developer-defined-switches"></a>Geliştirici tanımlı anahtarlar  
- Sağlamaya ek olarak **BooleanSwitch** ve **TraceSwitch**, kendi anahtarları devralarak tanımlayabileceğiniz **anahtar** sınıfı ve taban sınıf yöntemlerini geçersiz kılma özelleştirilmiş yöntemleri ile. Geliştirici tanımlı anahtarlar oluşturma hakkında daha fazla bilgi için bkz. <xref:System.Diagnostics.Switch> sınıfı .NET Framework başvurusu.  
+ **BooleanSwitch** ve **TraceSwitch**sağlamaya ek olarak, **anahtar** sınıfından devralarak ve temel sınıf yöntemlerini özelleştirilmiş yöntemlerle geçersiz kılarak kendi anahtarlarınızı tanımlayabilirsiniz. Geliştirici tanımlı anahtarlar oluşturma hakkında daha fazla bilgi için .NET Framework başvurusu içindeki <xref:System.Diagnostics.Switch> sınıfına bakın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [İzleme Dinleyicileri](../../../docs/framework/debug-trace-profile/trace-listeners.md)
-- [Nasıl yapılır: Uygulama koduna izleme deyimleri ekleme](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
-- [İzleme ve İşaretleme Uygulamaları](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
+- [İzleme Dinleyicileri](trace-listeners.md)
+- [Nasıl yapılır: Uygulama koduna Izleme deyimleri ekleme](how-to-add-trace-statements-to-application-code.md)
+- [İzleme ve İşaretleme Uygulamaları](tracing-and-instrumenting-applications.md)

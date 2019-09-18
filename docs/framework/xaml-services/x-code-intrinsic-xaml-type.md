@@ -10,43 +10,43 @@ helpviewer_keywords:
 - x:Code XAML directive element [XAML Services]
 - XAML [XAML Services], x:Code directive element
 ms.assetid: 87986b13-1a2e-4830-ae36-15f9dc5629e8
-ms.openlocfilehash: f6898008fa3e3e7e385a2bc77c5b2eac7eeda2ec
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2b7713548b6269f079ef32b5bf1fe4fa630edcc8
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64617151"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053788"
 ---
 # <a name="xcode-intrinsic-xaml-type"></a>x:Code İç XAML Türü
-Kod içinde bir XAML üretim yerleşimi sağlar. Bu tür kod ya da XAML veya bir çalışma zamanı tarafından yorumu gibi sonraki kullanımlar için XAML üretimde sol derleyen herhangi XAML işlemci uygulamasında tarafından derlenebilir.  
+Bir XAML üretimi içindeki kodun yerleştirilmesine izin verir. Bu kod, XAML 'yi derlenen herhangi bir XAML işlemci uygulamasıyla veya bir çalışma zamanı tarafından yorum gibi daha sonra kullanımlar için XAML üretimde solda derlenir.  
   
 ## <a name="xaml-object-element-usage"></a>XAML Nesne Öğesi Kullanımı  
   
-```  
+```xaml  
 <x:Code>  
    // code instructions, usually enclosed by CDATA...  
 </x:Code>  
 ```  
   
 ## <a name="remarks"></a>Açıklamalar  
- İçindeki kod `x:Code` XAML yönerge öğesi olduğundan hala genel XML ad alanı içinde yorumlanan ve sağlanan XAML ad alanları. Bu nedenle, genellikle için kullanılan kod içine alın gerekmez, `x:Code` içinde bir `CDATA` kesimi.  
+ `x:Code` Xaml yönergesi öğesi içindeki kod, hala genel XML ad alanı ve belirtilen xaml ad alanları içinde yorumlanıyor. Bu nedenle, genellikle bir `x:Code` `CDATA` segmentin içinde kullanılan kodu kapsamak gereklidir.  
   
- `x:Code` XAML üretim tüm olası dağıtım mekanizmaları için izin verilmez. Belirli çerçeveleri (örneğin, WPF) kod olarak derlenmelidir. Diğer çerçeveleri de `x:Code` kullanım genellikle izin verilmiyor.  
+ `x:Code`XAML üretiminin tüm olası dağıtım mekanizmaları için izin verilmez. Belirli çerçevelerde (örneğin, WPF) kodun derlenmesi gerekir. Diğer çerçevelerde, `x:Code` kullanım genellikle izin verilmiyor olabilir.  
   
- Yönetilen izin çerçeveler için `x:Code` içerik, kullanılacak doğru dil derleyicisi `x:Code` içeriği, ayarları ve uygulama derlemek için kullanılan içeren projenin hedefleri tarafından belirlenir.  
+ Yönetilen `x:Code` içeriğe izin veren çerçeveler için içerik için `x:Code` kullanılacak doğru dil derleyicisi, uygulamayı derlemek için kullanılan içerilen projenin ayarlarına ve hedeflerine göre belirlenir.  
   
 ## <a name="wpf-usage-notes"></a>WPF kullanım notları  
- Bildirilen kod içinde `x:Code` WPF birkaç önemli sınırlamaları vardır:  
+ WPF için içinde `x:Code` bildirildiği kodun çeşitli önemli sınırlamaları vardır:  
   
-- `x:Code` Yönerge öğesi, XAML üretim kök öğesinin ilk alt öğesi olmalıdır.  
+- `x:Code` Directive öğesi xaml üretiminin kök öğesinin hemen bir alt öğesi olmalıdır.  
   
-- [x: Class yönergesi](x-class-directive.md) üst kök öğe üzerinde sağlanmalıdır.  
+- [X:Class yönergesinin](x-class-directive.md) üst kök öğesinde sağlanması gerekir.  
   
-- Kod içinde yerleştirilen `x:Code` için bu XAML sayfası oluşturulmakta olan kısmi sınıf kapsamında olmasını derleme tarafından kabul edilir. Bu nedenle tanımladığınız tüm kodları üyeleri veya kısmi söz konusu sınıfın değişkenleri olmalıdır.  
+- İçine `x:Code` yerleştirilmiş kod, derleme tarafından, bu XAML sayfası için zaten oluşturulmakta olan kısmi sınıfın kapsamı dahilinde olacak şekilde değerlendirilir. Bu nedenle, tanımladığınız tüm kodlar üye veya bu kısmi sınıfın değişkenleri olmalıdır.  
   
-- ' Den başka bir sınıf kısmi sınıf içinde iç içe tarafından ek sınıfları tanımlanamaz (iç içe geçme izin verilir, ancak iç içe geçmiş sınıflar XAML içinde başvurulduğundan, tipik değildir). CLR ad var olan kısmi sınıf için kullanılan ad alanı dışında tanımlanan veya eklenmiştir.  
+- Kısmi sınıfın içindeki bir sınıfı iç içe geçirerek dışında ek sınıflar tanımlayamazsınız (iç içe geçme izin verilir, ancak iç içe geçmiş sınıflara XAML 'de başvurulduğundan, bu normal değildir). Mevcut kısmi sınıf için kullanılan ad alanı dışındaki CLR ad alanları tanımlanamıyor veya öğesine eklenemiyor.  
   
-- Kısmi sınıf CLR ad alanı dışında kod varlıklara başvurular tüm tam olarak nitelenmiş olmalıdır. Bildirilen üyeleri geçersiz kılmalar için geçersiz kılınabilir kısmi sınıf üyeleri, bu dile özgü geçersiz kılma anahtar sözcüğü ile belirtilmelidir. Üyeleri bildirilmişlerse `x:Code` kapsam çakışan XAML dışında oluşturulan bir kısmi sınıf üyelerine, şekilde derleyici çakışma raporları XAML dosyası derleme yüklemek veya.  
+- Kısmi sınıf CLR ad alanı dışındaki kod varlıklarına yapılan başvurular tamamen tam nitelenmiş olmalıdır. Bildirmekte olan Üyeler kısmi sınıf geçersiz kılınabilir Üyeler için geçersiz kılındığında, bu, dile özgü geçersiz kılma anahtar sözcüğü ile belirtilmelidir. `x:Code` Kapsamda belirtilen Üyeler xaml dışında oluşturulan kısmi sınıfın üyeleriyle çakışırsa, bu şekilde derleyicinin çakışmayı bildirdiği, xaml dosyası derlenemez veya yüklenemez.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

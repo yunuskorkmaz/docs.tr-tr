@@ -2,29 +2,29 @@
 title: IPv6 Otomatik Yapılandırma
 ms.date: 03/30/2017
 ms.assetid: 581c1d21-1013-43a3-bf3e-2d9ead62b79c
-ms.openlocfilehash: 2c7f77bbdebe093b5e3bc706653ed203082d9c3f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 95d9dce36c70b8f6c6b9f963c0842305a111d436
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647331"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047818"
 ---
 # <a name="ipv6-auto-configuration"></a>IPv6 Otomatik Yapılandırma
-IPv6 için önemli bir hedef düğüm Tak ve Kullan desteklemektir. Diğer bir deyişle, bir IPv6 ağa bir düğüm eklenir ve herhangi bir insan müdahalesi olmadan otomatik olarak yapılandırılmış olması mümkündür.  
+IPv6 için önemli bir amaç, düğüm Tak ve Kullan destekolmaktır. Diğer bir deyişle, bir IPv6 ağına bir düğüm bağlamak ve herhangi bir insan müdahalesi olmadan otomatik olarak yapılandırılmasını sağlamak mümkün olmalıdır.  
   
 ## <a name="type-of-auto-configuration"></a>Otomatik yapılandırma türü  
- IPv6 otomatik yapılandırma aşağıdaki türlerini destekler:  
+ IPv6, aşağıdaki otomatik yapılandırma türlerini destekler:  
   
-- **Durum bilgisi olan otomatik yapılandırma**. Bir Dinamik Ana Bilgisayar Yapılandırma Protokolü için IPv6 gerektiğinden bu tür bir yapılandırma, belirli bir düzeyde kullanıcı müdahalesi gerektirir. (DHCPv6) sunucusu yükleme ve yönetim düğümleri. DHCPv6 sunucusu için yapılandırma bilgileri sağlayan düğümlerin listesini tutar. Sunucu ne kadar her adresi kullanımda olduğu ve ne zaman, yeniden atama için kullanılabilir olduğunu bilmesi için ayrıca durum bilgisini tutar.  
+- **Durum bilgisi olan otomatik yapılandırma**. Bu tür bir yapılandırma, düğümlerin yüklenmesi ve yönetilmesi için bir IPv6 (DHCPv6) sunucusu için dinamik ana bilgisayar Yapılandırma Protokolü gerektirdiğinden belirli bir insan müdahalesi düzeyi gerektirir. DHCPv6 sunucusu, yapılandırma bilgilerini sağladığı düğümlerin bir listesini tutar. Ayrıca, sunucunun her bir adresin ne kadar süreyle kullanımda olduğunu ve yeniden atamaya uygun olabileceğini bilmesi için durum bilgilerini korur.  
   
-- **Durum bilgisiz otomatik yapılandırma**. Bu tür bir yapılandırma küçük kuruluşlar ve kişiler için uygundur. Bu durumda, her konağın, adresinden alınan yönlendirici reklam içeriğini belirler. Adresin ağ kimliği bölümünü tanımlamak için IEEE EUI-64 standart'ı kullanarak, ana bilgisayar adresi bağlantısına benzersizliğini varsaymak şüphelenilebilir.  
+- **Durum bilgisiz otomatik yapılandırma**. Bu tür bir yapılandırma, küçük kuruluşlar ve bireyler için uygundur. Bu durumda, her ana bilgisayar, alınan yönlendirici tanıtımlarının içeriğiyle ilgili adreslerini belirler. Adresin ağ KIMLIĞI bölümünü tanımlamak için IEEE EUı-64 standardını kullanarak, bağlantı üzerinde ana bilgisayar adresinin benzersizlik düzeyini varsaymak mantıklı değildir.  
   
- Adres nasıl belirlendiğinden bağımsız olarak düğüm olası adresini yerel bağlantısını benzersiz olduğunu doğrulamanız gerekir. Bu, bir komşu isteği göndererek yapılır olası adresine bir ileti. Düğüm herhangi bir yanıt alırsa, adresi zaten kullanımda olduğunu ve başka bir adres belirlemeniz gerekir bilir.  
+ Adresin nasıl belirlendiğine bakılmaksızın, düğüm potansiyel adresinin yerel bağlantı için benzersiz olduğunu doğrulamalıdır. Bu, olası adrese bir komşu isteği iletisi gönderilerek yapılır. Düğüm herhangi bir yanıt alırsa, adresin zaten kullanımda olduğunu ve başka bir adresi belirlemesi gerektiğini bilir.  
   
 ## <a name="ipv6-mobility"></a>IPv6 Mobility  
- Mobil cihazları çoğalan yeni gereksinimi kullanıma sundu: Bir cihazın rasgele IPv6 Internet üzerindeki konumlara değiştirin ve hala mevcut bağlantıları sağlamak mümkün olması gerekir. Bu işlevselliği sağlayacak şekilde, bir mobil düğüme, bu her zaman erişilebilir bir ev adresi atanır. Mobil düğüm evde olduğunda Giriş bağlantısını bağlanır ve başlangıç adresini kullanır. Mobil düğüm evde olduğunda, genellikle bir yönlendirici olan bir giriş aracı düğümleri ile kurduğu ve mobil düğüm arasında iletileri geçirir.  
+ Mobil cihazların kullanımı yeni bir gereksinim getirmiştir: Bir cihazın IPv6 Internet üzerindeki konumları rastgele değiştirmesi ve yine de mevcut bağlantıları sürdürbilmeleri gerekir. Bu işlevi sağlamak için bir mobil düğüme her zaman ulaşılabileceği bir giriş adresi atanır. Mobil düğüm evde olduğunda, giriş bağlantısına bağlanır ve ev adresini kullanır. Mobil düğüm evden uzakta olduğunda, genellikle yönlendirici olan bir ana aracı, iletişim kurduğu mobil düğüm ve düğümler arasında ileti geçirir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [İnternet Protokolü Sürüm 6](../../../docs/framework/network-programming/internet-protocol-version-6.md)
-- [Yuvalar](../../../docs/framework/network-programming/sockets.md)
+- [İnternet Protokolü Sürüm 6](internet-protocol-version-6.md)
+- [Yuvalar](sockets.md)

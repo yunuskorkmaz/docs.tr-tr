@@ -31,59 +31,59 @@ helpviewer_keywords:
 ms.assetid: 76994ee6-9fa9-4059-b813-26578d24427c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b745fa6a78ab2a7ab0b3a94c9921883d3c56c1b7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6cb2a240a2e7e82b7015eb7a6d99c2117fa63045
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61874633"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052894"
 ---
-# <a name="diagnose-errors-with-managed-debugging-assistants"></a>Yönetilen hata ayıklama Yardımcıları ile hataları tanılama
+# <a name="diagnose-errors-with-managed-debugging-assistants"></a>Yönetilen hata ayıklama yardımcıları ile hataları tanılama
 
 Yönetilen hata ayıklama yardımcıları (MDAs), çalışma zamanı durum bilgilerini sağlamak için ortak dil çalışma zamanı (CLR) ile birlikte çalışan yardımlarda hata ayıklar. Yardımcılar, aksi takdirde yakalayamayacağınız çalışma zamanı olayları hakkında bilgi iletileri oluşturur. Yönetilen ve yönetilmeyen kod arasında geçiş yaparken ortaya çıkan bulması zor uygulama hatalarını yalıtmak için MDA'leri kullanabilirsiniz.
 
-Yapabilecekleriniz [etkinleştirmek veya devre dışı](#enable-and-disable-mdas) tüm Mda'leri Windows kayıt defterine bir anahtar ekleyerek veya bir ortam değişkenini ayarlayarak. Uygulama yapılandırma ayarlarını kullanarak belirli MDA'leri etkinleştirebilirsiniz. Uygulamanın yapılandırma dosyasındaki bazı tek MDA'ler için ek yapılandırma ayarları ayarlayabilirsiniz. Çalışma zamanı yüklendiğinde bu yapılandırma dosyaları ayrıştırıldığı için yönetilen uygulama başlamadan önce MDA'i etkinleştirmeniz gerekir. Zaten başlatılmış uygulamalar için MDA'i etkinleştiremezsiniz.
+Windows kayıt defterine bir anahtar ekleyerek veya bir ortam değişkenini ayarlayarak tüm Mdaları [etkinleştirebilir veya devre dışı](#enable-and-disable-mdas) bırakabilirsiniz. Uygulama yapılandırma ayarlarını kullanarak belirli MDA'leri etkinleştirebilirsiniz. Uygulamanın yapılandırma dosyasındaki bazı tek MDA'ler için ek yapılandırma ayarları ayarlayabilirsiniz. Çalışma zamanı yüklendiğinde bu yapılandırma dosyaları ayrıştırıldığı için yönetilen uygulama başlamadan önce MDA'i etkinleştirmeniz gerekir. Zaten başlatılmış uygulamalar için MDA'i etkinleştiremezsiniz.
 
-Aşağıdaki tablo, .NET Framework ile birlikte gelen Mda'leri listeler:
+Aşağıdaki tabloda .NET Framework ile birlikte gelen Mdalar listelenmektedir:
 
 |||
 |-|-|
-|[asynchronousThreadAbort](../../../docs/framework/debug-trace-profile/asynchronousthreadabort-mda.md)|[bindingFailure](../../../docs/framework/debug-trace-profile/bindingfailure-mda.md)|
-|[callbackOnCollectedDelegate](../../../docs/framework/debug-trace-profile/callbackoncollecteddelegate-mda.md)|[contextSwitchDeadlock](../../../docs/framework/debug-trace-profile/contextswitchdeadlock-mda.md)|
-|[dangerousThreadingAPI](../../../docs/framework/debug-trace-profile/dangerousthreadingapi-mda.md)|[dateTimeInvalidLocalFormat](../../../docs/framework/debug-trace-profile/datetimeinvalidlocalformat-mda.md)|
-|[dirtyCastAndCallOnInterface](../../../docs/framework/debug-trace-profile/dirtycastandcalloninterface-mda.md)|[disconnectedContext](../../../docs/framework/debug-trace-profile/disconnectedcontext-mda.md)|
-|[dllMainReturnsFalse](../../../docs/framework/debug-trace-profile/dllmainreturnsfalse-mda.md)|[exceptionSwallowedOnCallFromCom](../../../docs/framework/debug-trace-profile/exceptionswallowedoncallfromcom-mda.md)|
-|[failedQI](../../../docs/framework/debug-trace-profile/failedqi-mda.md)|[fatalExecutionEngineError](../../../docs/framework/debug-trace-profile/fatalexecutionengineerror-mda.md)|
-|[gcManagedToUnmanaged](../../../docs/framework/debug-trace-profile/gcmanagedtounmanaged-mda.md)|[gcUnmanagedToManaged](../../../docs/framework/debug-trace-profile/gcunmanagedtomanaged-mda.md)|
-|[illegalPrepareConstrainedRegion](../../../docs/framework/debug-trace-profile/illegalprepareconstrainedregion-mda.md)|[invalidApartmentStateChange](../../../docs/framework/debug-trace-profile/invalidapartmentstatechange-mda.md)|
-|[invalidCERCall](../../../docs/framework/debug-trace-profile/invalidcercall-mda.md)|[invalidFunctionPointerInDelegate](../../../docs/framework/debug-trace-profile/invalidfunctionpointerindelegate-mda.md)|
-|[invalidGCHandleCookie](../../../docs/framework/debug-trace-profile/invalidgchandlecookie-mda.md)|[invalidIUnknown](../../../docs/framework/debug-trace-profile/invalidiunknown-mda.md)|
-|[invalidMemberDeclaration](../../../docs/framework/debug-trace-profile/invalidmemberdeclaration-mda.md)|[invalidOverlappedToPinvoke](../../../docs/framework/debug-trace-profile/invalidoverlappedtopinvoke-mda.md)|
-|[invalidVariant](../../../docs/framework/debug-trace-profile/invalidvariant-mda.md)|[jitCompilationStart](../../../docs/framework/debug-trace-profile/jitcompilationstart-mda.md)|
-|[loaderLock](../../../docs/framework/debug-trace-profile/loaderlock-mda.md)|[loadFromContext](../../../docs/framework/debug-trace-profile/loadfromcontext-mda.md)|
-|[marshalCleanupError](../../../docs/framework/debug-trace-profile/marshalcleanuperror-mda.md)|[marshaling](../../../docs/framework/debug-trace-profile/marshaling-mda.md)|
-|[memberInfoCacheCreation](../../../docs/framework/debug-trace-profile/memberinfocachecreation-mda.md)|[moduloObjectHashcode](../../../docs/framework/debug-trace-profile/moduloobjecthashcode-mda.md)|
-|[nonComVisibleBaseClass](../../../docs/framework/debug-trace-profile/noncomvisiblebaseclass-mda.md)|[notMarshalable](../../../docs/framework/debug-trace-profile/notmarshalable-mda.md)|
-|[openGenericCERCall](../../../docs/framework/debug-trace-profile/opengenericcercall-mda.md)|[overlappedFreeError](../../../docs/framework/debug-trace-profile/overlappedfreeerror-mda.md)|
-|[pInvokeLog](../../../docs/framework/debug-trace-profile/pinvokelog-mda.md)|[pInvokeStackImbalance](../../../docs/framework/debug-trace-profile/pinvokestackimbalance-mda.md)|
-|[raceOnRCWCleanup](../../../docs/framework/debug-trace-profile/raceonrcwcleanup-mda.md)|[reentrancy](../../../docs/framework/debug-trace-profile/reentrancy-mda.md)|
-|[releaseHandleFailed](../../../docs/framework/debug-trace-profile/releasehandlefailed-mda.md)|[reportAvOnComRelease](../../../docs/framework/debug-trace-profile/reportavoncomrelease-mda.md)|
-|[streamWriterBufferedDataLost](../../../docs/framework/debug-trace-profile/streamwriterbuffereddatalost-mda.md)|[virtualCERCall](../../../docs/framework/debug-trace-profile/virtualcercall-mda.md)|
+|[asynchronousThreadAbort](asynchronousthreadabort-mda.md)|[bindingFailure](bindingfailure-mda.md)|
+|[callbackOnCollectedDelegate](callbackoncollecteddelegate-mda.md)|[contextSwitchDeadlock](contextswitchdeadlock-mda.md)|
+|[dangerousThreadingAPI](dangerousthreadingapi-mda.md)|[dateTimeInvalidLocalFormat](datetimeinvalidlocalformat-mda.md)|
+|[dirtyCastAndCallOnInterface](dirtycastandcalloninterface-mda.md)|[disconnectedContext](disconnectedcontext-mda.md)|
+|[dllMainReturnsFalse](dllmainreturnsfalse-mda.md)|[exceptionSwallowedOnCallFromCom](exceptionswallowedoncallfromcom-mda.md)|
+|[failedQI](failedqi-mda.md)|[fatalExecutionEngineError](fatalexecutionengineerror-mda.md)|
+|[gcManagedToUnmanaged](gcmanagedtounmanaged-mda.md)|[gcUnmanagedToManaged](gcunmanagedtomanaged-mda.md)|
+|[illegalPrepareConstrainedRegion](illegalprepareconstrainedregion-mda.md)|[invalidApartmentStateChange](invalidapartmentstatechange-mda.md)|
+|[invalidCERCall](invalidcercall-mda.md)|[invalidFunctionPointerInDelegate](invalidfunctionpointerindelegate-mda.md)|
+|[invalidGCHandleCookie](invalidgchandlecookie-mda.md)|[invalidIUnknown](invalidiunknown-mda.md)|
+|[invalidMemberDeclaration](invalidmemberdeclaration-mda.md)|[invalidOverlappedToPinvoke](invalidoverlappedtopinvoke-mda.md)|
+|[invalidVariant](invalidvariant-mda.md)|[jitCompilationStart](jitcompilationstart-mda.md)|
+|[loaderLock](loaderlock-mda.md)|[loadFromContext](loadfromcontext-mda.md)|
+|[marshalCleanupError](marshalcleanuperror-mda.md)|[marshaling](marshaling-mda.md)|
+|[memberInfoCacheCreation](memberinfocachecreation-mda.md)|[moduloObjectHashcode](moduloobjecthashcode-mda.md)|
+|[nonComVisibleBaseClass](noncomvisiblebaseclass-mda.md)|[notMarshalable](notmarshalable-mda.md)|
+|[openGenericCERCall](opengenericcercall-mda.md)|[overlappedFreeError](overlappedfreeerror-mda.md)|
+|[pInvokeLog](pinvokelog-mda.md)|[pInvokeStackImbalance](pinvokestackimbalance-mda.md)|
+|[raceOnRCWCleanup](raceonrcwcleanup-mda.md)|[reentrancy](reentrancy-mda.md)|
+|[releaseHandleFailed](releasehandlefailed-mda.md)|[reportAvOnComRelease](reportavoncomrelease-mda.md)|
+|[streamWriterBufferedDataLost](streamwriterbuffereddatalost-mda.md)|[virtualCERCall](virtualcercall-mda.md)|
 
-Varsayılan olarak, .NET Framework yönetilen tüm hata ayıklayıcıları için bir MDA alt kümesini etkinleştirir. Visual Studio'da seçerek varsayılan görüntüleyebileceğiniz **Windows** > **özel durum ayarları** üzerinde **hata ayıklama** menüsüne ve ardından genişletme**Yönetilen hata ayıklama Yardımcıları** listesi.
+Varsayılan olarak, .NET Framework yönetilen tüm hata ayıklayıcıları için bir MDA alt kümesini etkinleştirir. Visual Studio 'da varsayılan kümeyi **Hata Ayıkla** menüsündeki **Windows** > **özel durum ayarları** ' nı seçerek ve ardından **yönetilen hata ayıklama yardımcıları** listesini genişleterek görüntüleyebilirsiniz.
 
-![Visual Studio'da özel durum Ayarları penceresi](media/diagnosing-errors-with-managed-debugging-assistants/exception-settings-mdas.png)
+![Visual Studio 'da özel durum ayarları penceresi](./media/diagnosing-errors-with-managed-debugging-assistants/exception-settings-mdas.png)
 
-## <a name="enable-and-disable-mdas"></a>Etkinleştirme ve Mda'leri devre dışı bırak
+## <a name="enable-and-disable-mdas"></a>Mdaları etkinleştirme ve devre dışı bırakma
 
 Bir kayıt defteri anahtarını, bir ortam değişkenini ve uygulama yapılandırma ayarlarını kullanarak MDA'leri etkinleştirebilir ve devre dışı bırakabilirsiniz. Uygulama yapılandırma ayarlarını kullanmak için kayıt defteri anahtarını veya ortam değişkenini etkinleştirmeniz gerekir.
 
 > [!TIP]
-> Mda'leri devre dışı bırakmak yerine Visual Studio bir MDA bildirimi alındığında MDA iletişim kutusunu görüntülemesini engelleyebilirsiniz. Bunu yapmak için seçin **Windows** > **özel durum ayarları** üzerinde **hata ayıklama** menüsünü genişletin **yönetilen hata ayıklama Yardımcıları**listesini ve ardından seçin veya temizleyin **Break When Thrown** tek mda'e onay kutusu.
+> MDAs 'yi devre dışı bırakmak yerine, bir MDA bildirimi alındığında Visual Studio 'Nun MDA iletişim kutusunu görüntülemesini engelleyebilirsiniz. Bunu yapmak için, **hata ayıklama** menüsünde **Windows** > **özel durum ayarları** ' nı seçin, **yönetilen hata ayıklama yardımcıları** listesini genişletin ve sonra tek bir mda için **oluşturulduğunda kes** onay kutusunu seçin veya temizleyin.
 
 ### <a name="registry-key"></a>Kayıt Defteri Anahtarı
 
-Mda'leri etkinleştirmek için eklemeniz **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\. NETFramework\MDA** Windows kayıt defteri alt anahtarında (tür REG_SZ, değer 1). Aşağıdaki örnekte adlı bir metin dosyasına kopyalama *MDAEnable.reg*. Windows Kayıt Defteri Düzenleyicisi'ni (RegEdit.exe) açın ve **dosya** menüsünde **alma**. Seçin *MDAEnable.reg* o bilgisayardaki Mda'leri etkinleştirmek için dosya. Alt dize değeri olarak ayarlama **1** (DWORD değerini değil **1**) MDA ayarlarının okunmasını etkinleştirir *ApplicationName.suffix*. mda.config dosyasından. Örneğin, Not Defteri ait MDA yapılandırma dosyası, notepad.exe.mda.config sayfadayken.
+MDAs 'yi etkinleştirmek için **HKEY_LOCAL_MACHINE\Software\Microsoft\\ekleyin. Windows kayıt defteri 'nde NETFramework\MDA** alt anahtarı (REG_SZ, değer 1 yazın). Aşağıdaki örneği *Mdadenable. reg*adlı bir metin dosyasına kopyalayın. Windows kayıt defteri Düzenleyicisi 'Ni (RegEdit. exe) açın ve **Dosya** menüsünden **içeri aktar**' ı seçin. Bu bilgisayarda MDAs 'yi etkinleştirmek için *MDAEnable. reg* dosyasını seçin. Alt anahtarı **1** ' in dize DEĞERINE (DWORD değeri **1**değil) ayarlamak, *ApplicationName. suffix*. mda. config dosyasından MDA ayarlarının okunmasına olanak sağlar. Örneğin, Notepad için MDA yapılandırma dosyası Notepad. exe. mda. config olarak adlandırılır.
 
 ```text
 Windows Registry Editor Version 5.00
@@ -92,7 +92,7 @@ Windows Registry Editor Version 5.00
 "MDA"="1"
 ```
 
-Ardından MDA anahtarı, bilgisayar, 64-bit işletim sisteminde 32 bit uygulama çalışıyorsa, aşağıdaki gibi ayarlanmalıdır:
+Bilgisayar 64 bit işletim sisteminde 32 bitlik bir uygulama çalıştırıyorsa, MDA anahtarı aşağıdaki gibi ayarlanmalıdır:
 
 ```text
 Windows Registry Editor Version 5.00
@@ -101,11 +101,11 @@ Windows Registry Editor Version 5.00
 "MDA"="1"
 ```
 
-Bkz: [uygulamaya özgü yapılandırma ayarlarını](#application-specific-configuration-settings) daha fazla bilgi için. Kayıt defteri ayarı, COMPLUS_MDA ortam değişkeni tarafından geçersiz kılınabilir. Bkz: [ortam değişkeni](#environment-variable) daha fazla bilgi için.
+Daha fazla bilgi için [uygulamaya özgü yapılandırma ayarlarına](#application-specific-configuration-settings) bakın. Kayıt defteri ayarı, COMPLUS_MDA ortam değişkeni tarafından geçersiz kılınabilir. Daha fazla bilgi için bkz. [ortam değişkeni](#environment-variable) .
 
-Mda'leri devre dışı bırakmak için MDA alt anahtarını ayarlamak **0** (Windows Kayıt Defteri Düzenleyicisi'ni kullanarak sıfır).
+MDAs 'yi devre dışı bırakmak için, Windows kayıt defteri düzenleyicisini kullanarak MDA alt anahtarını **0** (sıfır) olarak ayarlayın.
 
-Bir hata ayıklayıcıya bağlı bir uygulamayı çalıştırdığınızda kayıt defteri anahtarı bile eklemeden bazı MDA'ler varsayılan olarak etkinleştirilir. Çalıştırarak bu Yardımcıları devre dışı bırakabilirsiniz *MDADisable.reg* dosya bu bölümde daha önce açıklandığı gibi.
+Bir hata ayıklayıcıya bağlı bir uygulamayı çalıştırdığınızda kayıt defteri anahtarı bile eklemeden bazı MDA'ler varsayılan olarak etkinleştirilir. Bu bölümün önceki kısımlarında açıklandığı gibi *Mdaddisable. reg* dosyasını çalıştırarak bu yardımcıları devre dışı bırakabilirsiniz.
 
 ### <a name="environment-variable"></a>Ortam değişkeni
 
@@ -113,7 +113,7 @@ MDA etkinleştirmesi aynı zamanda, kayıt defteri anahtarını geçersiz kılan
 
 - `0` - Tüm MDA'leri devre dışı bırakır.
 
-- `1` -MDA ayarlarını okur *ApplicationName*. mda.config.
+- `1`- *ApplicationName*. mda. CONFIG dosyasından MDA ayarlarını okur.
 
 - `managedDebugger` - Yönetilen bir yürütülebilir dosya hata ayıklayıcı altında başlatıldığında dolaylı olarak etkinleştirilmiş tüm MDA'leri açıkça etkinleştirir.
 
@@ -129,9 +129,9 @@ MDA etkinleştirmesi aynı zamanda, kayıt defteri anahtarını geçersiz kılan
 
 ### <a name="application-specific-configuration-settings"></a>Uygulamaya özgü yapılandırma ayarları
 
-Uygulamaya ait MDA yapılandırma dosyası içinde bazı yardımcıları etkinleştirebilir, devre dışı bırakabilir ve ayrı ayrı yapılandırabilirsiniz. MDA'leri yapılandırmak üzere bir uygulama yapılandırma dosyasının kullanımını etkinleştirmek için MDA kayıt defteri anahtarının veya COMPLUS_MDA ortam değişkeni ayarlanması gerekir. Uygulama yapılandırma dosyası, genellikle uygulamanın yürütülebilir (.exe) dosyası ile aynı dizinde bulunur. Dosya adı biçimi alır *ApplicationName*. mda.config biçimini alır; Örneğin, notepad.exe.mda.config. Uygulama yapılandırma dosyasında etkinleştirilen yardımcılar, o yardımcının davranışını denetlemek için özel olarak tasarlanan özniteliklere veya öğelere sahip olabilir.
+Uygulamaya ait MDA yapılandırma dosyası içinde bazı yardımcıları etkinleştirebilir, devre dışı bırakabilir ve ayrı ayrı yapılandırabilirsiniz. MDA'leri yapılandırmak üzere bir uygulama yapılandırma dosyasının kullanımını etkinleştirmek için MDA kayıt defteri anahtarının veya COMPLUS_MDA ortam değişkeni ayarlanması gerekir. Uygulama yapılandırma dosyası, genellikle uygulamanın yürütülebilir (.exe) dosyası ile aynı dizinde bulunur. Dosya adı, *ApplicationName*. mda. config biçimini alır; Örneğin, Notepad. exe. mda. config. Uygulama yapılandırma dosyasında etkinleştirilen yardımcılar, o yardımcının davranışını denetlemek için özel olarak tasarlanan özniteliklere veya öğelere sahip olabilir.
 
-Aşağıdaki örnek, etkinleştirme ve yapılandırma gösterilmektedir [hazırlama](../../../docs/framework/debug-trace-profile/marshaling-mda.md):
+Aşağıdaki örnek, [hazırlamayı](marshaling-mda.md)nasıl etkinleştireceğinizi ve yapılandıracağınızı göstermektedir:
 
 ```xml
 <mdaConfig>
@@ -148,9 +148,9 @@ Aşağıdaki örnek, etkinleştirme ve yapılandırma gösterilmektedir [hazırl
 </mdaConfig>
 ```
 
-`Marshaling` MDA, uygulamadaki her yönetilenden yönetilmeyene geçiş için bir yönetilmeyen türe sıraya koyulan yönetilen tür hakkında bilgiler verir. `Marshaling` MDA aynı zamanda yöntem adlarını filtrelemek ve yapı alanlarının sağlanan **methodFilter** ve **alan filtresi** alt öğeleri, sırasıyla.
+`Marshaling` MDA, uygulamadaki her yönetilenden yönetilmeyene geçiş için bir yönetilmeyen türe sıraya koyulan yönetilen tür hakkında bilgiler verir. MDA, sırasıyla **methodFilter** ve **FieldFilter** alt öğelerinde sağlanan yöntem ve yapı alanlarının adlarını da filtreleyebilirler. `Marshaling`
 
-Aşağıdaki örnek, varsayılan ayarlarını kullanarak birden çok Mda'in etkinleştirmek gösterilmektedir:
+Aşağıdaki örnek, varsayılan ayarlarını kullanarak birden çok Mdayı nasıl etkinleştireceğinizi göstermektedir:
 
 ```xml
 <mdaConfig>
@@ -166,18 +166,18 @@ Aşağıdaki örnek, varsayılan ayarlarını kullanarak birden çok Mda'in etki
 > [!IMPORTANT]
 > Bir yapılandırma dosyasında birden fazla yardımcı belirttiğinizde, bunları alfabetik olarak listelemeniz gerekir. Örneğin, `virtualCERCall` ve `invalidCERCall` MDA'lerinin her ikisini de etkinleştirmek istiyorsanız `<invalidCERCall />` girdisinden önce `<virtualCERCall />` girdisini eklemeniz gerekir. Girdiler alfabetik sırada değilse, işlenmemiş bir geçersiz yapılandırma dosyası özel durum iletisi görüntülenir.
 
-## <a name="mda-exceptions"></a>MDA özel durumları
+## <a name="mda-exceptions"></a>MDA özel durumlar
 
-Bir MDA etkinleştirildiğinde, hatta zaman kodunuzu hata ayıklayıcı altında yürütülmüyor olduğunda etkin değil. Bir hata ayıklayıcı olmadığında bir MDA olayı oluşturulursa, işlenmemiş özel bir durum olmasa bile olay iletisi, işlenmemiş özel durum iletişim kutusunda sunulur. İletişim kutusunu önlemek için kodunuz hata ayıklama ortamında çalışmıyorken MDA etkinleştirme ayarlarını kaldırın.
+Bir MDA etkinleştirildiğinde, kodunuz bir hata ayıklayıcı altında yürütülmediğinde bile etkin olur. Bir hata ayıklayıcı olmadığında bir MDA olayı oluşturulursa, işlenmemiş özel bir durum olmasa bile olay iletisi, işlenmemiş özel durum iletişim kutusunda sunulur. İletişim kutusunu önlemek için kodunuz hata ayıklama ortamında çalışmıyorken MDA etkinleştirme ayarlarını kaldırın.
 
-Kodunuzu Visual Studio tümleşik geliştirme ortamında (IDE) yürütüldüğünde, belirli MDA olayları için görüntülenen özel durum iletişim kutusunu önleyebilirsiniz. Bunu yapmak için **hata ayıklama** menüsünde seçin **Windows** > **özel durum ayarları**. İçinde **özel durum ayarları** penceresini genişletin **yönetilen hata ayıklama Yardımcıları** listeleyin ve ardından temizleyin **Break When Thrown** tek mda'e onay kutusu. Bu iletişim kutusu için de kullanabilirsiniz *etkinleştirme* MDA özel iletişim kutularının görüntülenmesini.
+Kodunuz Visual Studio tümleşik geliştirme ortamında (IDE) yürütüldüğünde, belirli MDA olayları için görüntülenen özel durum iletişim kutusunu önleyebilirsiniz. Bunu yapmak için, **Hata Ayıkla** menüsünde **Windows** > **özel durum ayarları**' nı seçin. **Özel durum ayarları** penceresinde, **yönetilen hata ayıklama yardımcıları** listesini genişletin ve sonra tek bir mda için **oluşturulan** onay kutusunu temizleyin. Bu iletişim kutusunu, MDA özel durum iletişim kutularının görüntülenmesini *sağlamak* için de kullanabilirsiniz.
 
 ## <a name="mda-output"></a>MDA Çıktısı
 
-MDA çıktısı çıktısını gösteren aşağıdaki örneğe benzer `PInvokeStackImbalance` MDA:
+Mda çıktısı, `PInvokeStackImbalance` mda ' dan çıktıyı gösteren aşağıdaki örneğe benzer.
 
-**PInvoke işlevi çağrısı ' MDATest! MDATest.Program::StdCall' yığın dengesiz. Yönetilen PInvoke imza yönetilmeyen hedef imza eşleşmediği için büyük olasılıkla budur. Çağırma kuralı ve parametreleri PInvoke imza hedef yönetilmeyen imza eşleştiğinden emin olun.**
+**PInvoke işlevi ' Mdadtest! ' çağrısı Mdadtest. Program:: StdCall ', yığına dengesiz. Bu, yönetilen PInvoke imzasının yönetilmeyen hedef imzasıyla eşleşmemesi nedeniyle olasıdır. PInvoke imzasının çağırma kuralı ve parametrelerinin hedef yönetilmeyen imzayla eşleşip eşleştiğinden emin olun.**
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hata Ayıklama, İzleme ve Profil Oluşturma](../../../docs/framework/debug-trace-profile/index.md)
+- [Hata Ayıklama, İzleme ve Profil Oluşturma](index.md)

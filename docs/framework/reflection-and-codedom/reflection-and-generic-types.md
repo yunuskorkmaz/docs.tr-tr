@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: f7180fc5-dd41-42d4-8a8e-1b34288e06de
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eb16097ab5a452a554cc7dfe039db1858e46de00
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ce40a54e82e95f41247db525110c510e3d83031e
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69967199"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045924"
 ---
 # <a name="reflection-and-generic-types"></a>Yansıma ve Genel Türler
 <a name="top"></a>Yansıma görünüm noktasından, genel bir tür ve sıradan bir tür arasındaki fark, genel bir türün bir tür parametreleri kümesiyle (genel tür tanımı ise) veya tür bağımsız değişkenlerine (oluşturulmuş bir tür ise) ilişkilendirilme türüdür. Genel bir yöntem aynı şekilde sıradan bir yöntemden farklıdır.  
@@ -38,7 +38,7 @@ ms.locfileid: "69967199"
   
  Yansıma, ve türü <xref:System.Type> parametre <xref:System.Reflection.MethodInfo> dizisine erişmenize izin veren ve bir örneğinin bir tür parametresini mi yoksa gerçek bir türü mi <xref:System.Type> temsil ettiğini tespit eden ve ' nin yöntemlerini sağlar.  
   
- Örneğin, burada ele alınan yöntemleri gösteren kod için bkz [. nasıl yapılır: Yansıma](../../../docs/framework/reflection-and-codedom/how-to-examine-and-instantiate-generic-types-with-reflection.md)ile genel türleri Inceleyin ve örnek oluşturun.  
+ Örneğin, burada ele alınan yöntemleri gösteren kod için bkz [. nasıl yapılır: Yansıma](how-to-examine-and-instantiate-generic-types-with-reflection.md)ile genel türleri Inceleyin ve örnek oluşturun.  
   
  Aşağıdaki tartışmada, tür parametreleri ve bağımsız değişkenler ile açık veya kapalı oluşturulmuş türler arasındaki fark gibi genel türlerde terminoloji hakkında bilgi sahibi olduğu varsayılır. Daha fazla bilgi için bkz. [Genel türler](../../standard/generics/index.md).  
   
@@ -149,7 +149,7 @@ generic<typename V, typename W> ref class D : B<int, V> {};
   
 |Başlık|Açıklama|  
 |-----------|-----------------|  
-|[Nasıl yapılır: Yansıma ile genel türleri İnceleme ve örnek oluşturma](../../../docs/framework/reflection-and-codedom/how-to-examine-and-instantiate-generic-types-with-reflection.md)|Genel türleri incelemek için <xref:System.Type> ve <xref:System.Reflection.MethodInfo> özelliklerinin ve yöntemlerinin nasıl kullanılacağını gösterir.|  
+|[Nasıl yapılır: Yansıma ile genel türleri İnceleme ve örnek oluşturma](how-to-examine-and-instantiate-generic-types-with-reflection.md)|Genel türleri incelemek için <xref:System.Type> ve <xref:System.Reflection.MethodInfo> özelliklerinin ve yöntemlerinin nasıl kullanılacağını gösterir.|  
 |[Genel Türler](../../standard/generics/index.md)|Genel türler özelliğini ve .NET Framework nasıl desteklendiğini açıklar.|  
-|[Nasıl yapılır: Yansıma Yayma ile genel bir tür tanımlama](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)|Dinamik derlemelerde genel türler oluşturmak için yansıma yayma 'nın nasıl kullanılacağını gösterir.|  
-|[Tür Bilgilerini Görüntüleme](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)|Sınıfını açıklar ve oluşturucular, Yöntemler, alanlar, Özellikler ve olaylar <xref:System.Type> hakkında bilgi edinmek için çeşitli yansıma sınıflarıyla birlikte nasıl kullanılacağını gösteren kod örnekleri sağlar. <xref:System.Type>|
+|[Nasıl yapılır: Yansıma Yayma ile genel bir tür tanımlama](how-to-define-a-generic-type-with-reflection-emit.md)|Dinamik derlemelerde genel türler oluşturmak için yansıma yayma 'nın nasıl kullanılacağını gösterir.|  
+|[Tür Bilgilerini Görüntüleme](viewing-type-information.md)|Sınıfını açıklar ve oluşturucular, Yöntemler, alanlar, Özellikler ve olaylar <xref:System.Type> hakkında bilgi edinmek için çeşitli yansıma sınıflarıyla birlikte nasıl kullanılacağını gösteren kod örnekleri sağlar. <xref:System.Type>|

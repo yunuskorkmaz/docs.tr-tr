@@ -8,12 +8,12 @@ helpviewer_keywords:
 - client-side UI Automation provider, implementation within applications
 - UI Automation, implementing client-side provider within application
 ms.assetid: f325f0d8-1715-41ea-85ca-45b82ffea8bc
-ms.openlocfilehash: ef3d03bee412b97ed88ec76e81ad2fd19a9595eb
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a60253e62f814e9e3ea7ed4c5720e98e470d7f79
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968954"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71043600"
 ---
 # <a name="implement-ui-automation-providers-in-a-client-application"></a>UI Otomasyon Sağlayıcıları İstemci Programına Uygulama
 > [!NOTE]
@@ -31,7 +31,7 @@ ms.locfileid: "69968954"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [UI Otomasyonu Sağlayıcılara Genel Bakış](../../../docs/framework/ui-automation/ui-automation-providers-overview.md)
-- [İstemci Tarafı Sağlayıcı Bütünleştirilmiş Kodunu Kaydetme](../../../docs/framework/ui-automation/register-a-client-side-provider-assembly.md)
-- [İstemci Tarafı UI Otomasyonu Sağlayıcı Oluşturma](../../../docs/framework/ui-automation/create-a-client-side-ui-automation-provider.md)
-- [İstemci Tarafı UI Otomasyonu Sağlayıcıyı Uygulama](../../../docs/framework/ui-automation/client-side-ui-automation-provider-implementation.md)
+- [UI Otomasyonu Sağlayıcılara Genel Bakış](ui-automation-providers-overview.md)
+- [İstemci Tarafı Sağlayıcı Bütünleştirilmiş Kodunu Kaydetme](register-a-client-side-provider-assembly.md)
+- [İstemci Tarafı UI Otomasyonu Sağlayıcı Oluşturma](create-a-client-side-ui-automation-provider.md)
+- [İstemci Tarafı UI Otomasyonu Sağlayıcıyı Uygulama](client-side-ui-automation-provider-implementation.md)

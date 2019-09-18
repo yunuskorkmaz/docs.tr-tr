@@ -7,82 +7,82 @@ helpviewer_keywords:
 ms.assetid: eb6eac2e-45f4-4923-a32c-38f203da66df
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c52c9bf37e67e4d26867d2b3754945e86e2bf609
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 787c6221b651a53dbb932a5a9d0edea123e1d97d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67422420"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046429"
 ---
 # <a name="interop-etw-events"></a>Birlikte Çalışma ETW Olayları
-<a name="top"></a> Birlikte çalışma olayları, Microsoft Ara dili (MSIL) saplama oluşturma ve önbelleğe alma hakkında bilgi toplayın.  
+<a name="top"></a>Birlikte çalışma olayları, Microsoft ara dili (MSIL) saplama oluşturma ve önbelleğe alma hakkında bilgi yakalar.  
   
- Bu kategori aşağıdaki olaylar oluşur:  
+ Bu kategori aşağıdaki olaylardan oluşur:  
   
-- [ILStubGenerated olay](#ilstubgenerated_event)  
+- [ILStubGenerated olayı](#ilstubgenerated_event)  
   
-- [ILStubCacheHit olay](#ilstubcachehit_event)  
+- [ILStubCacheHit olayı](#ilstubcachehit_event)  
   
 <a name="ilstubgenerated_event"></a>   
-## <a name="ilstubgenerated-event"></a>ILStubGenerated olay  
- Aşağıdaki tabloda, düzeyi ve anahtar sözcüğü gösterir. (Daha fazla bilgi için [CLR ETW anahtar sözcükleri ve Düzeyler](../../../docs/framework/performance/clr-etw-keywords-and-levels.md).)  
+## <a name="ilstubgenerated-event"></a>ILStubGenerated olayı  
+ Aşağıdaki tabloda anahtar sözcüğü ve düzeyi gösterilmektedir. (Daha fazla bilgi için bkz. [CLR ETW anahtar sözcükleri ve düzeyleri](clr-etw-keywords-and-levels.md).)  
   
-|Olayı için anahtar sözcüğü|Düzey|  
+|Olayı yükseltmek için anahtar sözcük|Düzey|  
 |-----------------------------------|-----------|  
-|`InteropKeyword` (0x2000)|Informational(4)|  
+|`InteropKeyword`(0x2000)|Bilgilendirici (4)|  
   
- Aşağıdaki tabloda, olay bilgileri gösterilmektedir.  
+ Aşağıdaki tabloda olay bilgileri gösterilmektedir.  
   
-|Olay|Olay Kimliği|Ne zaman gerçekleşti|  
+|Olay|Olay Kimliği|Ne zaman oluşturulur|  
 |-----------|--------------|-----------------|  
-|`ILStubGenerated`|88|MSIL saplama oluşturuldu.|  
+|`ILStubGenerated`|88|MSIL saplaması oluşturulmuştur.|  
   
- Aşağıdaki tabloda, olay verilerini gösterir.  
+ Aşağıdaki tabloda olay verileri gösterilmektedir.  
   
 |Alan adı|Veri türü|Açıklama|  
 |----------------|---------------|-----------------|  
-|Modül kimliği|Kazanma: UInt16|Modül tanımlayıcısı.|  
-|StubMethodID|Kazanma: UInt64|Saplama yöntem tanımlayıcısı.|  
-|StubFlags|Kazanma: UInt64|Saptama için bayraklar:<br /><br /> 0x1 - ters birlikte çalışma.<br /><br /> 0x2 - COM birlikte çalışma.<br /><br /> 0x4 - NGen.exe ile oluşturulan saptama.<br /><br /> 0x8 - temsilci.<br /><br /> 0x10 - değişken bağımsız değişken.<br /><br /> 0x20 - yönetilmeyen çağrılan.|  
-|ManagedInteropMethodToken|Kazanma: UInt32|Yönetilen birlikte çalışma yöntemi için belirteci.|  
-|ManagedInteropMethodNameSpace|Kazanma: UnicodeString|Yönetilen birlikte çalışma yöntemi ad alanı.|  
-|ManagedInteropMethodName|Kazanma: UnicodeString|Yönetilen birlikte çalışma yöntemi adı.|  
-|ManagedInteropMethodSignature|Kazanma: UnicodeString|Yönetilen birlikte çalışabilirlik metodun imzası.|  
-|NativeMethodSignature|Kazanma: UnicodeString|Yerel yöntem imzası.|  
-|StubMethodSignature|Kazanma: UnicodeString|Saplama metodu imzası.|  
-|StubMethodILCode|Kazanma: UnicodeString|Saplama yöntemin MSIL kodu.|  
-|ClrInstanceID|Kazanma: UInt16|CLR veya CoreCLR örneği için benzersiz kimlik.|  
+|Modül kimliği|Win: UInt16|Modül tanımlayıcısı.|  
+|StubMethodID|Win: UInt64|Saplama yöntemi tanımlayıcısı.|  
+|StubFlags|Win: UInt64|Saplama bayrakları:<br /><br /> 0x1-ters çalışabilirliği.<br /><br /> 0x2-COM birlikte çalışma.<br /><br /> 0x4-NGen. exe tarafından oluşturulan saplama.<br /><br /> 0x8-temsilci.<br /><br /> 0x10-değişken bağımsız değişkeni.<br /><br /> 0x20-yönetilmeyen aranan.|  
+|ManagedInteropMethodToken|Win: UInt32|Managed Interop yöntemi için belirteç.|  
+|ManagedInteropMethodNameSpace|Win: UnicodeString|Managed Interop yönteminin ad alanı.|  
+|ManagedInteropMethodName|Win: UnicodeString|Yönetilen birlikte çalışma yönteminin adı.|  
+|ManagedInteropMethodSignature|Win: UnicodeString|Managed Interop yönteminin imzası.|  
+|NativeMethodSignature|Win: UnicodeString|Yerel Yöntem imzası.|  
+|StubMethodSignature|Win: UnicodeString|Saplama yöntemi imzası.|  
+|StubMethodILCode|Win: UnicodeString|Saplama yöntemi için MSIL kodu.|  
+|ClrInstanceID|Win: UInt16|CLR veya CoreCLR örneği için benzersiz KIMLIK.|  
   
  [Başa dön](#top)  
   
 <a name="ilstubcachehit_event"></a>   
-## <a name="ilstubcachehit-event"></a>ILStubCacheHit olay  
- Aşağıdaki tabloda, düzeyi ve anahtar sözcüğü gösterir.  
+## <a name="ilstubcachehit-event"></a>ILStubCacheHit olayı  
+ Aşağıdaki tabloda anahtar sözcüğü ve düzeyi gösterilmektedir.  
   
-|Olayı için anahtar sözcüğü|Düzey|  
+|Olayı yükseltmek için anahtar sözcük|Düzey|  
 |-----------------------------------|-----------|  
-|`InteropKeyword` (0x2000)|Informational(4)|  
+|`InteropKeyword`(0x2000)|Bilgilendirici (4)|  
   
- Aşağıdaki tabloda, olay bilgileri gösterilmektedir.  
+ Aşağıdaki tabloda olay bilgileri gösterilmektedir.  
   
-|Olay|Olay Kimliği|Ne zaman gerçekleşti|  
+|Olay|Olay Kimliği|Ne zaman oluşturulur|  
 |-----------|--------------|-----------------|  
-|`ILStubCacheHit`|89|MSIL önbellek ' erişilmedi.|  
+|`ILStubCacheHit`|89|MSIL önbelleğine erişildi.|  
   
- Aşağıdaki tabloda, olay verilerini gösterir.  
+ Aşağıdaki tabloda olay verileri gösterilmektedir.  
   
 |Alan adı|Veri türü|Açıklama|  
 |----------------|---------------|-----------------|  
-|Modül kimliği|Kazanma: UInt16|Modül tanımlayıcısı.|  
-|StubMethodID|Kazanma: UInt64|Saplama yöntem tanımlayıcısı.|  
-|ManagedInteropMethodToken|Kazanma: UInt32|Yönetilen birlikte çalışma yöntemi için belirteci.|  
-|ManagedInteropMethodNameSpace|Kazanma: UnicodeString|Yönetilen birlikte çalışma yöntemi ad alanı.|  
-|ManagedInteropMethodName|Kazanma: UnicodeString|Yönetilen birlikte çalışma yöntemi adı.|  
-|ManagedInteropMethodSignature|Kazanma: UnicodeString|Yönetilen birlikte çalışabilirlik metodun imzası.|  
-|ClrInstanceID|Kazanma: UInt16|CLR veya CoreCLR örneği için benzersiz kimlik.|  
+|Modül kimliği|Win: UInt16|Modül tanımlayıcısı.|  
+|StubMethodID|Win: UInt64|Saplama yöntemi tanımlayıcısı.|  
+|ManagedInteropMethodToken|Win: UInt32|Managed Interop yöntemi için belirteç.|  
+|ManagedInteropMethodNameSpace|Win: UnicodeString|Managed Interop yönteminin ad alanı.|  
+|ManagedInteropMethodName|Win: UnicodeString|Yönetilen birlikte çalışma yönteminin adı.|  
+|ManagedInteropMethodSignature|Win: UnicodeString|Managed Interop yönteminin imzası.|  
+|ClrInstanceID|Win: UInt16|CLR veya CoreCLR örneği için benzersiz KIMLIK.|  
   
  [Başa dön](#top)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [CLR ETW Olayları](../../../docs/framework/performance/clr-etw-events.md)
+- [CLR ETW Olayları](clr-etw-events.md)

@@ -12,33 +12,33 @@ helpviewer_keywords:
 ms.assetid: e08e4c34-0223-45f7-aa55-a3d8dd979b0f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6b204eacd43db2c562fbe6d519b5fa91df3466cc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 275aa5bb664e9f5a50f44a72f2506d7984234b31
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626408"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051835"
 ---
 # <a name="creating-a-class-to-hold-dll-functions"></a>DLL İşlevleri için bir Sınıf Oluşturma
-Sık kullanılan bir DLL işlevinin yönetilen sınıfta sarmalama platform işlevi kapsülleyen etkili bir yaklaşımdır. Her durumda bunu yapmak için zorunlu olmasa da, sınıf sarmalayıcı DLL işlevlerini tanımlama kullanışlı çünkü sağlamak hantal ve hataya eğilimli olabilir. Visual Basic'te programlama yapıyorsanız veya C#, DLL işlevleri bir sınıf veya Visual Basic module'u içinde bildirmeniz gerekir.  
+Yönetilen bir sınıfta sık kullanılan bir DLL işlevinin sarmalanması, platform işlevlerini kapsüllemek için etkili bir yaklaşımdır. Her durumda bunu yapmak zorunlu olmasa da, DLL işlevlerinin tanımlanması çok fazla ve hataya açık olabileceğinden sınıf sarmalayıcı sağlanması kullanışlıdır. Visual Basic veya C#' de programlıyorsanız, bir sınıf veya Visual Basic modülü içinde DLL işlevleri bildirmeniz gerekir.  
   
- Bir sınıf içinde aramak istediğiniz her DLL işlevi için statik bir yöntem tanımlayın. Tanımı karakter kümesi veya çağırma yöntemi bağımsız değişkenleri geçirme içinde kullanılan gibi ek bilgiler içerebilir. Bu bilgiler gt;(yok) varsayılan ayarları seçin. Bildirim seçenekleri ve varsayılan ayarlarının tam listesi için bkz: [yönetilen kodda prototipler oluşturma](../../../docs/framework/interop/creating-prototypes-in-managed-code.md).  
+ Bir sınıf içinde, çağırmak istediğiniz her DLL işlevi için bir statik yöntem tanımlarsınız. Tanım, yöntem bağımsız değişkenlerinde kullanılan karakter kümesi veya çağırma kuralı gibi ek bilgileri içerebilir; Bu bilgileri atlayarak varsayılan ayarları seçersiniz. Bildirim seçeneklerinin ve varsayılan ayarlarının tüm listesi için bkz. [yönetilen kodda prototipler oluşturma](creating-prototypes-in-managed-code.md).  
   
- Üzerinde başka bir sınıfın statik yöntemleri çağırmak olarak sarmalanmış sonra sınıf üzerinde yöntemleri çağırabilir. Platform çağırma tanıtıcıları işlevi otomatik olarak verilen temel.  
+ Sarmalanan bir kez, diğer herhangi bir sınıfta statik yöntemleri çağırmış olduğunuz sınıftaki yöntemleri çağırabilirsiniz. Platform çağırma, temel alınan içe aktarılmış işlevi otomatik olarak işler.  
   
- Platform için yönetilen sınıf tasarlama çağırdığınızda, sınıflar ve DLL işlevleri arasındaki ilişkileri göz önünde bulundurun. Örneğin, şunları yapabilirsiniz:  
+ Platform çağırma için yönetilen bir sınıf tasarlarken sınıflar ve DLL işlevleri arasındaki ilişkileri göz önünde bulundurun. Örneğin, şunları yapabilirsiniz:  
   
-- Varolan bir sınıf içinde DLL işlevleri bildirme.  
+- Varolan bir sınıf içinde DLL işlevleri bildirin.  
   
-- Yalıtılmış ve kolay bulmak işlevleri tutmak, her bir DLL işlevi için ayrı bir sınıf oluşturun.  
+- Her DLL işlevi için tek bir sınıf oluşturun ve işlevleri yalıtılmış ve kolay bir şekilde bulabilir.  
   
-- Bir dizi mantıksal gruplandırmaları form ve ek yükü azaltmak için ilgili DLL işlevleri için bir sınıf oluşturun.  
+- Mantıksal gruplandırmaları biçimlendirmek ve ek yükü azaltmak için bir dizi ilgili DLL işlevi için bir sınıf oluşturun.  
   
- Lütfen sınıfı ve metotlarını şekilde adlandırabilirsiniz. Nasıl oluşturulacağını gösteren örnekler için. NET tabanlı bildirimler platformuyla kullanılacak çağırmak için bkz: [Platform Çağırma ile veri hazırlama](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md).  
+ Sınıfı ve yöntemlerini sizin gibi adlandırın. Nasıl oluşturulacağını gösteren örnekler için. Platform çağırma ile kullanılacak NET tabanlı bildirimler, bkz. [Platform çağırma Ile verileri sıralama](marshaling-data-with-platform-invoke.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Yönetilmeyen DLL İşlevlerini Kullanma](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md)
-- [DLL'lerde İşlevleri Tanımlama](../../../docs/framework/interop/identifying-functions-in-dlls.md)
-- [Yönetilen Kodda Prototipler Oluşturma](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)
-- [DLL İşlevini Çağırma](../../../docs/framework/interop/calling-a-dll-function.md)
+- [Yönetilmeyen DLL İşlevlerini Kullanma](consuming-unmanaged-dll-functions.md)
+- [DLL'lerde İşlevleri Tanımlama](identifying-functions-in-dlls.md)
+- [Yönetilen Kodda Prototipler Oluşturma](creating-prototypes-in-managed-code.md)
+- [DLL İşlevini Çağırma](calling-a-dll-function.md)

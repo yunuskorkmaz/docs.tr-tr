@@ -2,12 +2,12 @@
 title: Ihostedservice ve BackgroundService sınıfıyla mikro hizmetlerde arka plan görevleri uygulama
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | Mikro hizmetler .NET Core 'da arka plan görevleri uygulamak için ıhostedservice ve BackgroundService kullanmak üzere yeni seçenekleri anlayın.
 ms.date: 01/07/2019
-ms.openlocfilehash: b3dca8db6568e6e8429645d6b433886d1d289b95
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: ff263212536233bef85e9517442b4d7ed9eff115
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "70296800"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71039881"
 ---
 # <a name="implement-background-tasks-in-microservices-with-ihostedservice-and-the-backgroundservice-class"></a>Ihostedservice ve BackgroundService sınıfıyla mikro hizmetlerde arka plan görevleri uygulama
 
@@ -236,16 +236,16 @@ Ancak, uygulama havuzuna `WebHost` dağıtılan bir uygulama için bile, uygulam
 
 Arabirim `IHostedService` , bir ASP.NET Core Web uygulamasında (.NET Core 2,0) veya herhangi bir işlem/konakta (.NET Core 2,1 ile `IHost`başlayarak) arka plan görevleri başlatmak için kullanışlı bir yol sağlar. Ana avantajı, ana bilgisayarın kendisi kapatılırken arka plan görevlerinizin kodunu temizlemek için sorunsuz iptalle elde ettiğiniz fırsatdır.
 
-#### <a name="additional-resources"></a>Ek kaynaklar
+## <a name="additional-resources"></a>Ek kaynaklar
 
-- **ASP.NET Core/Standart 2,0 ' de zamanlanmış bir görev oluşturma** <br/>
-    <https://blog.maartenballiauw.be/post/2017/08/01/building-a-scheduled-cache-updater-in-aspnet-core-2.html>
+- **ASP.NET Core/Standart 2,0 ' de zamanlanmış bir görev oluşturma**  
+  <https://blog.maartenballiauw.be/post/2017/08/01/building-a-scheduled-cache-updater-in-aspnet-core-2.html>
 
-- **ASP.NET Core 2,0 ' de ıhostedservice 'i uygulama** <br/>
-    <https://www.stevejgordon.co.uk/asp-net-core-2-ihostedservice>
+- **ASP.NET Core 2,0 ' de ıhostedservice 'i uygulama**  
+  <https://www.stevejgordon.co.uk/asp-net-core-2-ihostedservice>
 
-- **ASP.NET Core 2,1 kullanarak GenericHost örneği** <br/>
-    <https://github.com/aspnet/Hosting/tree/release/2.1/samples/GenericHostSample>
+- **ASP.NET Core 2,1 kullanarak GenericHost örneği**  
+  <https://github.com/aspnet/Hosting/tree/release/2.1/samples/GenericHostSample>
 
 >[!div class="step-by-step"]
 >[Önceki](test-aspnet-core-services-web-apps.md)İleri

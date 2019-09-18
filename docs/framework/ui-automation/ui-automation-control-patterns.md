@@ -7,12 +7,12 @@ helpviewer_keywords:
 - control patterns, UI Automation
 - UI Automation, control patterns
 ms.assetid: 1f8b5ab3-c193-4d0f-9e67-a0076225a1a5
-ms.openlocfilehash: d4b4817c9b5cd59486c0ce5288d7860933405664
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 75ce2d997efbc465c8a98bce1d42296b37f84f64
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69941277"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042326"
 ---
 # <a name="ui-automation-control-patterns"></a>UI Otomasyon Denetim Düzenleri
 > [!NOTE]
@@ -21,21 +21,21 @@ ms.locfileid: "69941277"
  Bu bölüm, denetim düzenlerini kullanma [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] hakkında ayrıntılı bilgi sağlar.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [UI Otomasyonu Dock Denetim Desenini Uygulama](../../../docs/framework/ui-automation/implementing-the-ui-automation-dock-control-pattern.md)  
- [UI Otomasyonu ExpandCollapse Denetim Desenini Uygulama](../../../docs/framework/ui-automation/implementing-the-ui-automation-expandcollapse-control-pattern.md)  
- [UI Otomasyonu Grid Denetim Desenini Uygulama](../../../docs/framework/ui-automation/implementing-the-ui-automation-grid-control-pattern.md)  
- [UI Otomasyonu GridItem Denetim Desenini Uygulama](../../../docs/framework/ui-automation/implementing-the-ui-automation-griditem-control-pattern.md)  
- [UI Otomasyonu Invoke Denetim Desenini Uygulama](../../../docs/framework/ui-automation/implementing-the-ui-automation-invoke-control-pattern.md)  
- [UI Otomasyonu MultipleView Denetim Desenini Uygulama](../../../docs/framework/ui-automation/implementing-the-ui-automation-multipleview-control-pattern.md)  
- [UI Otomasyonu RangeValue Denetim Desenini Uygulama](../../../docs/framework/ui-automation/implementing-the-ui-automation-rangevalue-control-pattern.md)  
- [UI Otomasyonu Scroll Denetim Desenini Uygulama](../../../docs/framework/ui-automation/implementing-the-ui-automation-scroll-control-pattern.md)  
- [UI Otomasyonu ScrollItem Denetim Desenini Uygulama](../../../docs/framework/ui-automation/implementing-the-ui-automation-scrollitem-control-pattern.md)  
- [UI Otomasyonu Selection Denetim Desenini Uygulama](../../../docs/framework/ui-automation/implementing-the-ui-automation-selection-control-pattern.md)  
- [UI Otomasyonu SelectionItem Denetim Desenini Uygulama](../../../docs/framework/ui-automation/implementing-the-ui-automation-selectionitem-control-pattern.md)  
- [UI Otomasyonu Table Denetim Desenini Uygulama](../../../docs/framework/ui-automation/implementing-the-ui-automation-table-control-pattern.md)  
- [UI Otomasyonu TableItem Denetim Desenini Uygulama](../../../docs/framework/ui-automation/implementing-the-ui-automation-tableitem-control-pattern.md)  
- [UI Otomasyonu Toggle Denetim Desenini Uygulama](../../../docs/framework/ui-automation/implementing-the-ui-automation-toggle-control-pattern.md)  
- [UI Otomasyonu Transform Denetim Desenini Uygulama](../../../docs/framework/ui-automation/implementing-the-ui-automation-transform-control-pattern.md)  
- [UI Otomasyonu Value Denetim Desenini Uygulama](../../../docs/framework/ui-automation/implementing-the-ui-automation-value-control-pattern.md)  
- [UI Otomasyonu Window Denetim Desenini Uygulama](../../../docs/framework/ui-automation/implementing-the-ui-automation-window-control-pattern.md)  
- [Nasıl Yapılır Konuları](../../../docs/framework/ui-automation/ui-automation-control-patterns-how-to-topics.md)
+ [UI Otomasyonu Dock Denetim Desenini Uygulama](implementing-the-ui-automation-dock-control-pattern.md)  
+ [UI Otomasyonu ExpandCollapse Denetim Desenini Uygulama](implementing-the-ui-automation-expandcollapse-control-pattern.md)  
+ [UI Otomasyonu Grid Denetim Desenini Uygulama](implementing-the-ui-automation-grid-control-pattern.md)  
+ [UI Otomasyonu GridItem Denetim Desenini Uygulama](implementing-the-ui-automation-griditem-control-pattern.md)  
+ [UI Otomasyonu Invoke Denetim Desenini Uygulama](implementing-the-ui-automation-invoke-control-pattern.md)  
+ [UI Otomasyonu MultipleView Denetim Desenini Uygulama](implementing-the-ui-automation-multipleview-control-pattern.md)  
+ [UI Otomasyonu RangeValue Denetim Desenini Uygulama](implementing-the-ui-automation-rangevalue-control-pattern.md)  
+ [UI Otomasyonu Scroll Denetim Desenini Uygulama](implementing-the-ui-automation-scroll-control-pattern.md)  
+ [UI Otomasyonu ScrollItem Denetim Desenini Uygulama](implementing-the-ui-automation-scrollitem-control-pattern.md)  
+ [UI Otomasyonu Selection Denetim Desenini Uygulama](implementing-the-ui-automation-selection-control-pattern.md)  
+ [UI Otomasyonu SelectionItem Denetim Desenini Uygulama](implementing-the-ui-automation-selectionitem-control-pattern.md)  
+ [UI Otomasyonu Table Denetim Desenini Uygulama](implementing-the-ui-automation-table-control-pattern.md)  
+ [UI Otomasyonu TableItem Denetim Desenini Uygulama](implementing-the-ui-automation-tableitem-control-pattern.md)  
+ [UI Otomasyonu Toggle Denetim Desenini Uygulama](implementing-the-ui-automation-toggle-control-pattern.md)  
+ [UI Otomasyonu Transform Denetim Desenini Uygulama](implementing-the-ui-automation-transform-control-pattern.md)  
+ [UI Otomasyonu Value Denetim Desenini Uygulama](implementing-the-ui-automation-value-control-pattern.md)  
+ [UI Otomasyonu Window Denetim Desenini Uygulama](implementing-the-ui-automation-window-control-pattern.md)  
+ [Nasıl Yapılır Konuları](ui-automation-control-patterns-how-to-topics.md)

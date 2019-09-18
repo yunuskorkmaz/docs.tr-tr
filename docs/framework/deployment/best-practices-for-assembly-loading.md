@@ -14,155 +14,155 @@ helpviewer_keywords:
 ms.assetid: 68d1c539-6a47-4614-ab59-4b071c9d4b4c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 53ad8f6187b4e9b1754094dae0ebfe6e05a1b78b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 727d1b4ecb17eafb448205aa0c7eea36c5545b98
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614137"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052215"
 ---
 # <a name="best-practices-for-assembly-loading"></a>Derleme Yükleme için En İyi Yöntemler
-Yol açabilir türü kimliği sorunları önlemek için bu makalede ele alınmaktadır <xref:System.InvalidCastException>, <xref:System.MissingMethodException>ve diğer hataları. Aşağıdaki öneriler anlatılmaktadır:  
+Bu makalede <xref:System.InvalidCastException>, <xref:System.MissingMethodException>, ve diğer hatalara yol açabilecek kimlik tür sorunlarından kaçınmanın yolları anlatılmaktadır. Makalede aşağıdaki öneriler ele alınmaktadır:  
   
-- [Avantajlar ve dezavantajlar yük bağlamları anlama](#load_contexts)  
+- [Yük bağlamlarının olumlu ve olumsuz yönlerini anlayın](#load_contexts)  
   
-- [Kısmi derleme adları bağlama kaçının](#avoid_partial_names)  
+- [Kısmi derleme adlarında bağlamayı önleyin](#avoid_partial_names)  
   
-- [Bir derlemeyi birden çok bağlamlarına yüklenmesini önlemek](#avoid_loading_into_multiple_contexts)  
+- [Bir derlemeyi birden çok bağlama yüklemeden kaçının](#avoid_loading_into_multiple_contexts)  
   
-- [Bir derlemenin birden çok sürümünü aynı bağlamına yüklenmesini önlemek](#avoid_loading_multiple_versions)  
+- [Bir derlemenin birden çok sürümünü aynı içeriğe yüklemeden kaçının](#avoid_loading_multiple_versions)  
   
-- [Varsayılan yükleme bağlamı için göz önünde bulundurun](#switch_to_default)  
+- [Varsayılan yükleme bağlamına geçmeyi düşünün](#switch_to_default)  
   
- İlk öneri [avantaj ve dezavantajlarını yük bağlamı anlamak](#load_contexts), tüm yükleme bağlamları hakkında bir bilgi bankasına bağlı olduğundan, arka plan bilgileri için diğer öneriler sağlar.  
+ İlk öneri, [Yük bağlamlarının olumlu ve olumsuz yönlerini anlamak](#load_contexts)için, bunların hepsi yük bağlamlarına bağlı olduğundan diğer önerilere yönelik arka plan bilgileri sağlar.  
   
 <a name="load_contexts"></a>   
-## <a name="understand-the-advantages-and-disadvantages-of-load-contexts"></a>Avantajlar ve Dezavantajlar yük bağlamları anlama  
- Bir uygulama etki alanı içinde derlemeler üç bağlamları birine yüklenebilir veya bunlar bağlamı olmadan yüklenebilir:  
+## <a name="understand-the-advantages-and-disadvantages-of-load-contexts"></a>Yük bağlamlarının olumlu ve olumsuz yönlerini anlayın  
+ Bir uygulama etki alanı içinde, derlemeler üç bağlamdan birine yüklenebilir ya da bağlam olmadan yüklenebilirler:  
   
-- Varsayılan yükleme bağlamı'nı içeren derlemeler genel derleme önbelleği, çalışma zamanı (örneğin, SQL Server), barındırılıyorsa ana bilgisayar bütünleştirilmiş kod deposu yoklama işlemi tarafından bulunan ve <xref:System.AppDomainSetup.ApplicationBase%2A> ve <xref:System.AppDomainSetup.PrivateBinPath%2A> uygulama etki alanının. Çoğu aşırı yüklemeleri <xref:System.Reflection.Assembly.Load%2A> yöntemi bu bağlamına derlemeleri.  
+- Varsayılan yükleme bağlamı, genel derleme önbelleğini yoklaerek bulunan derlemeleri, çalışma zamanının barındırıldığı ana bilgisayar derleme deposunu (örneğin, SQL Server) ve <xref:System.AppDomainSetup.ApplicationBase%2A> <xref:System.AppDomainSetup.PrivateBinPath%2A> uygulama etki alanını içerir. <xref:System.Reflection.Assembly.Load%2A> Metodun çoğu aşırı yüklemesi derlemeleri bu bağlamda yükler.  
   
-- Load-from bağlamı yükleyicisi tarafından aranmaz konumlardan yüklenen derlemeleri içerir. Örneğin, uygulama yolu altında olmayan bir dizin eklentileri yüklenebilir. <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>, <xref:System.AppDomain.CreateInstanceFrom%2A?displayProperty=nameWithType>, ve <xref:System.AppDomain.ExecuteAssembly%2A?displayProperty=nameWithType> yoluyla yükleme yöntemleri örnekleridir.  
+- Yük-from bağlamı, yükleyici tarafından aranmayan konumlardan yüklenen derlemeleri içerir. Örneğin, eklentiler uygulama yolunda olmayan bir dizine yüklenmiş olabilir. <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>, <xref:System.AppDomain.CreateInstanceFrom%2A?displayProperty=nameWithType> ve<xref:System.AppDomain.ExecuteAssembly%2A?displayProperty=nameWithType> , yolu tarafından yüklenen yöntemlerin örnekleridir.  
   
-- Yalnızca yansıma bağlamı ile yüklenen derlemeler içeren <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A> ve <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A> yöntemleri. Bunu burada ele alınmayan şekilde kodu bu bağlamda yürütülemez. Daha fazla bilgi için [nasıl yapılır: Salt yansıma bağlamına derlemeleri yükleme](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md).  
+- Yalnızca yansıma bağlamı <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A> ve <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A> yöntemleriyle yüklenen derlemeleri içerir. Bu bağlamdaki kod yürütülemiyor, bu nedenle burada açıklanmıyor. Daha fazla bilgi için [nasıl yapılır: Derlemeleri yalnızca yansıma bağlamına](../reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)yükleyin.  
   
-- Geçici dinamik derleme yansıma kullanarak oluşturulan yayma, derleme herhangi bir bağlam içinde değil. Ayrıca, çoğu kullanılarak yüklenen derlemeler <xref:System.Reflection.Assembly.LoadFile%2A> yöntemi bağlamı olmadan yüklenir ve kimliklerini (İlkesi uygulandıktan sonra), içinde bulundukları kurar sürece bayt dizileri ' yüklenen derlemeler bağlamı olmadan yüklendi Genel Derleme Önbelleği.  
+- Yansıma yayma kullanarak geçici bir dinamik derleme oluşturduysanız, derleme hiçbir bağlamda değildir. Ayrıca, <xref:System.Reflection.Assembly.LoadFile%2A> yöntemi kullanılarak yüklenen çoğu derleme bağlam olmadan yüklenir ve bayt dizileriyle yüklenen derlemeler kimlik (ilke uygulandıktan sonra) ' de olduğunu belirler. Genel derleme önbelleği.  
   
- Yürütme bağlamları aşağıdaki bölümlerde açıklandığı gibi avantajları ve sakıncaları vardır.  
+ Yürütme bağlamlarının, aşağıdaki bölümlerde ele alındığı gibi avantajları ve dezavantajları vardır.  
   
 ### <a name="default-load-context"></a>Varsayılan yükleme bağlamı  
- Varsayılan yükleme bağlamı yüklenen derlemeler, bunların bağımlılıklarını otomatik olarak yüklenir. Varsayılan yükleme bağlamı yüklenen bağımlılıkları, varsayılan yükleme bağlamı'nı veya load-from bağlamı içindeki derlemeler için otomatik olarak bulunur. Derleme kimliği tarafından yüklenirken bilinmeyen derlemelerin sürümleri kullanılmamasını sağlayarak uygulamaları kararlılığını artırır (bkz [önlemek bağlama kısmi derleme adları](#avoid_partial_names) bölümü).  
+ Derlemeler varsayılan yükleme bağlamına yüklendiğinde, bağımlılıkları otomatik olarak yüklenir. Varsayılan yükleme bağlamına yüklenen bağımlılıklar, varsayılan yükleme bağlamındaki derlemeler veya yük-from bağlamı için otomatik olarak bulunur. Derleme kimliğine göre yükleme, derlemelerin bilinmeyen sürümlerinin kullanılmadığından emin olarak uygulamaların kararlılığını artırır ( [kısmi derleme adlarında bağlamaktan kaçının](#avoid_partial_names) bölümünde).  
   
- Varsayılan yükleme bağlamı'nı kullanarak, aşağıdaki dezavantajları bulunur:  
+ Varsayılan yükleme bağlamının kullanılması aşağıdaki dezavantajlara sahiptir:  
   
-- Diğer bağlamı yüklenen bağımlılıklar kullanılamıyor.  
+- Diğer bağlamlara yüklenen bağımlılıklar kullanılamaz.  
   
-- Varsayılan yükleme bağlamı içine araştırma yolu dışındaki konumlardan derlemeler yüklenemiyor.  
+- Yoklama yolu dışındaki konumlardan derlemeleri varsayılan yükleme bağlamına yükleyemezsiniz.  
   
-### <a name="load-from-context"></a>Bağlamdan yükleme  
- Load-from bağlamı altında Uygulama yolu değil ve bu nedenle yoklama bulunmaz yoldan bütünleştirilmiş devredebilmenize olanak tanır. Yol bilgileri bağlam tarafından korunduğundan bu yolundan yüklendi ve yerleştirildi için bağımlılıkları sağlar. Ayrıca, bu bağlamda derlemeleri varsayılan yükleme bağlamı yüklenen bağımlılıkları kullanabilirsiniz.  
+### <a name="load-from-context"></a>Yük-bağlam  
+ Yük-from bağlamı, uygulama yolu altında olmayan bir yoldan bir derleme yüklemenize olanak sağlar ve bu nedenle, yoklama içine dahil değildir. Yol bilgileri bağlam tarafından korunduğundan, bağımlılıkların bu yoldan bulunmasını ve yüklenmesini sağlar. Ayrıca, bu bağlamdaki derlemeler varsayılan yükleme bağlamına yüklenen bağımlılıkları kullanabilir.  
   
- Kullanarak derlemeleri yükleme <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> yöntemi veya yolu tarafından yüklenen diğer yöntemlerden birini aşağıdaki dezavantajları vardır:  
+ <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> Metodu veya yol tarafından yüklenen diğer yöntemlerden birini kullanarak derlemeleri yüklemek aşağıdaki dezavantajlara sahiptir:  
   
-- Zaten aynı kimliğe sahip bir derleme yüklendiğinde, <xref:System.Reflection.Assembly.LoadFrom%2A> bile farklı bir yol belirtildi yüklü bütünleştirilmiş kodu döndürür.  
+- Aynı kimliğe sahip bir derleme zaten yüklüyse, <xref:System.Reflection.Assembly.LoadFrom%2A> farklı bir yol belirtilmiş olsa bile yüklenen derlemeyi döndürür.  
   
-- Bir derleme ile yüklü ise <xref:System.Reflection.Assembly.LoadFrom%2A>, daha sonra varsayılan yükleme bağlamı'nı bir derlemede, aynı derlemenin görünen ada göre yükleme girişiminde, yükleme denemesi başarısız olur. Bir derlemeyi seri durumda olduğunda bu durum oluşabilir.  
+- Bir derleme ile <xref:System.Reflection.Assembly.LoadFrom%2A>yüklenmişse ve daha sonra varsayılan yükleme bağlamındaki bir derleme, görünen ad ile aynı derlemeyi yüklemeye çalışırsa, yükleme girişimi başarısız olur. Bu, bir derlemenin serisi kaldırıldığında ortaya çıkar.  
   
-- Bir derleme ile yüklü ise <xref:System.Reflection.Assembly.LoadFrom%2A>, ve bir derleme, aynı kimliğe sahip ancak farklı bir konumda yoklama yolunu içeren bir <xref:System.InvalidCastException>, <xref:System.MissingMethodException>, ya da diğer beklenmeyen davranışlar ortaya çıkabilir.  
+- Bir bütünleştirilmiş kod ile <xref:System.Reflection.Assembly.LoadFrom%2A>yüklenmişse ve yoklama yolu aynı kimliğe sahip bir derleme içeriyorsa, ancak farklı bir konumda <xref:System.InvalidCastException> <xref:System.MissingMethodException>,,, veya diğer beklenmeyen davranışlar oluşabilir.  
   
-- <xref:System.Reflection.Assembly.LoadFrom%2A> talepleri <xref:System.Security.Permissions.FileIOPermissionAccess.Read?displayProperty=nameWithType> ve <xref:System.Security.Permissions.FileIOPermissionAccess.PathDiscovery?displayProperty=nameWithType>, veya <xref:System.Net.WebPermission>, belirtilen yolda.  
+- <xref:System.Reflection.Assembly.LoadFrom%2A>Belirtilen <xref:System.Security.Permissions.FileIOPermissionAccess.Read?displayProperty=nameWithType> yolda <xref:System.Security.Permissions.FileIOPermissionAccess.PathDiscovery?displayProperty=nameWithType>talepler ve <xref:System.Net.WebPermission>, veya.  
   
-- Derleme için bir yerel görüntü varsa kullanılmaz.  
+- Derleme için yerel bir görüntü varsa, bu kullanılmaz.  
   
-- Derleme etki alanından bağımsız yüklenemez.  
+- Derleme, etki alanı nötr olarak yüklenemez.  
   
-- .NET Framework sürüm 1.0 ve 1.1, ilke uygulanmaz.  
+- 1,0 ve 1,1 .NET Framework sürümlerinde, ilke uygulanmaz.  
   
-### <a name="no-context"></a>İçerik yok  
- Yansıma ile oluşturulan geçici derlemeler için tek seçenek yayma olan bağlamı olmadan yükleniyor. Yükleme bağlamı olmadan, bir uygulama etki alanına aynı kimliğe sahip birden çok derleme yüklemek için tek yoludur. Yoklama maliyeti önlenmiş olur.  
+### <a name="no-context"></a>Bağlam yok  
+ Bağlam olmadan yükleme, yansıma yayma ile oluşturulan geçici derlemeler için tek seçenektir. Bağlam olmadan yükleme, aynı kimliğe sahip birden fazla derlemeyi tek bir uygulama etki alanında yüklemenin tek yoludur. Yoklama maliyeti kaçınılıyor.  
   
- Genel derleme önbelleğindeki bir derleme kimliğini ilke uygulandığında kurulduğunda, derlemenin kimliğini eşleşen sürece bayt dizileri ' yüklenen derlemeler bağlamı olmadan yüklenir; Bu durumda, Genel Derleme Önbelleği'ndeki derleme yüklenir.  
+ Bayt dizilerinizden yüklenen derlemeler, ilke uygulandığında oluşturulan derleme kimliği, genel derleme önbelleğindeki bir derlemenin kimliğiyle eşleştiğinde bağlam olmadan yüklenir; Bu durumda, derleme genel derleme önbelleğinden yüklenir.  
   
- Bağlam olmayan derlemeler yüklenirken aşağıdaki dezavantajları bulunur:  
+ Derlemeleri bağlam olmadan yüklemek aşağıdaki dezavantajlara sahiptir:  
   
-- Ele sürece diğer derlemeler bağlamı olmadan yüklenen derlemeler bağlanılamıyor <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> olay.  
+- Diğer derlemeler, <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> olayı işlemediğiniz müddetçe bağlam olmadan yüklenen derlemelere bağlanamaz.  
   
-- Bağımlılıkları otomatik olarak yüklenmez. Bunları bağlamı olmadan dağıtılacak, bunları varsayılan yük bağlamına dağıtılacak veya bunları işleyerek yük <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> olay.  
+- Bağımlılıklar otomatik olarak yüklenmez. Bunları bağlam olmadan önyükleyebilir, varsayılan yükleme bağlamına önceden yükleyebilir veya <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> olayı işleyerek yükleyebilirsiniz.  
   
-- Bağlam olmadan aynı kimliğe sahip birden çok derleme yükleniyor derlemeleri aynı kimliğe sahip birden çok bağlamlarına yükleyerek neden benzer türü kimlik sorunlarına yol açabilir. Bkz: [birden çok bağlamlarına bir derlemeye yüklenmesini engellemek](#avoid_loading_into_multiple_contexts).  
+- Aynı kimliğe sahip birden fazla derlemeyi bağlama olmadan yüklemek, aynı kimliğe sahip derlemeleri birden çok bağlamla yüklerken oluşan tür kimlik sorunlarına neden olabilir. Bkz. [bir derlemeyi birden çok bağlama yüklemeden kaçının](#avoid_loading_into_multiple_contexts).  
   
-- Derleme için bir yerel görüntü varsa kullanılmaz.  
+- Derleme için yerel bir görüntü varsa, bu kullanılmaz.  
   
-- Derleme etki alanından bağımsız yüklenemez.  
+- Derleme, etki alanı nötr olarak yüklenemez.  
   
-- .NET Framework sürüm 1.0 ve 1.1, ilke uygulanmaz.  
+- 1,0 ve 1,1 .NET Framework sürümlerinde, ilke uygulanmaz.  
   
 <a name="avoid_partial_names"></a>   
-## <a name="avoid-binding-on-partial-assembly-names"></a>Kısmi derleme adları bağlama kaçının  
- Kısmi ad bağlaması, yalnızca derlemenin görünen ad parçası belirttiğiniz oluşur (<xref:System.Reflection.Assembly.FullName%2A>) bir bütünleştirilmiş kod yükleme. Örneğin, çağırabilirsiniz <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> yöntemi derlemenin sürüm, kültür ve ortak anahtar belirteci atlama yalnızca basit ada sahip. Veya çağırabilirsiniz <xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=nameWithType> hangi ilk çağrı, yöntem <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> yöntemi ve derlemeyi bulmak başarısız olursa, Genel Derleme Önbelleği arar ve derlemenin en son sürümünü yükler.  
+## <a name="avoid-binding-on-partial-assembly-names"></a>Kısmi derleme adlarında bağlamayı önleyin  
+ Bir derlemeyi yüklerken derleme görünen adının (<xref:System.Reflection.Assembly.FullName%2A>) yalnızca bir kısmını belirttiğinizde Kısmi ad bağlama gerçekleşir. Örneğin, <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> yöntemi yalnızca derlemenin basit adıyla, sürüm, kültür ve ortak anahtar belirtecini atlayarak çağırabilirsiniz. Ya da ilk olarak <xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=nameWithType> <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> yöntemini çağıran ve derlemeyi bulamazsa, genel derleme önbelleğinde arama yapan ve derlemenin en son kullanılabilir sürümünü yükleyen yöntemini çağırabilirsiniz.  
   
- Kısmi ad bağlaması, aşağıdakiler dahil olmak üzere birçok sorunlara neden olabilir:  
+ Kısmi ad bağlama, aşağıdakiler de dahil olmak üzere birçok soruna neden olabilir:  
   
-- <xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=nameWithType> Yöntemi basit aynı ada sahip başka bir derleme yüklemek. Örneğin, iki uygulama hem de basit adına sahip iki tamamen farklı derlemeler yükleyebilirsiniz `GraphicsLibrary` genel bütünleştirilmiş kod önbelleğine.  
+- <xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=nameWithType> Yöntemi, aynı basit ada sahip farklı bir derleme yükleyebilir. Örneğin, iki uygulama, genel derleme önbelleğinde basit ada `GraphicsLibrary` sahip iki tamamen farklı derleme kurabilir.  
   
-- Aslında yüklenen derleme geriye dönük olarak uyumlu olmayabilir. Örneğin, sürüm belirtmeden programınızı ilk olarak kullanmak üzere yazılmış daha sonraki bir sürümü sürümden yüklenmesini de neden olabilir. Sonraki sürümdeki değişiklikler, uygulamanızda hatalara neden olabilir.  
+- Gerçekten yüklenen derleme geriye dönük olarak uyumlu olmayabilir. Örneğin, sürümü belirtmediğinde programınızın ilk olarak kullanılmak üzere yazıldığı sürümden daha sonraki bir sürümün yüklenmesine yol açabilir. Sonraki sürümdeki değişiklikler uygulamanızda hatalara neden olabilir.  
   
-- Aslında yüklenen derleme ileriye dönük olarak uyumlu olmayabilir. Örneğin, oluşturulan ve uygulamanızı bir derlemenin en son sürümle test, ancak kısmi bağlama, uygulamanızın kullandığı özellikler eksik daha önceki bir sürümünü yükleyebilir.  
+- Gerçekten yüklenen derleme ileri uyumlu olmayabilir. Örneğin, uygulamanızı derlemenin en son sürümüyle oluşturup test edebilir, ancak kısmi bağlama uygulamanızın kullandığı özellikleri olmayan daha önceki bir sürümü yükleyebilir.  
   
-- Yeni uygulamaları yükleme, mevcut uygulamaları bozabilir. Kullanan bir uygulamayı <xref:System.Reflection.Assembly.LoadWithPartialName%2A> yöntemi bozulmuş paylaşılan bir derlemenin daha yeni ve uyumlu bir sürümünü yükleyerek.  
+- Yeni uygulamaların yüklenmesi, mevcut uygulamaları bozabilir. <xref:System.Reflection.Assembly.LoadWithPartialName%2A> Yöntemini kullanan bir uygulama, paylaşılan bir derlemenin daha yeni, uyumsuz bir sürümü yüklenerek bozulabilir.  
   
-- Beklenmeyen bağımlılık yükleniyor ortaya çıkabilir. Bu kısmi bağlamayla yüklemeden, bir bağımlılık başarısız bir bileşen kullanma, bir derlemede sonuçlanabilir paylaşan iki derlemeler yüklemek veya sınandığı.  
+- Beklenmeyen bağımlılık yüklemesi meydana gelebilir. Bir bağımlılığı paylaşan iki derleme yüklersiniz, bunları kısmi bağlama ile yüklemek, derlenmiş veya test edilmemiş bir bileşeni kullanarak bir derlemenin oluşmasına neden olabilir.  
   
- Bunu neden olabilir, sorunları nedeniyle <xref:System.Reflection.Assembly.LoadWithPartialName%2A> yöntemi olarak işaretlendi artık kullanılmıyor. Kullanmanızı öneririz <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> yöntemi bunun yerine, tam bütünleştirilmiş kod görünen adlarını belirtin. Bkz: [avantaj ve dezavantajlarını yük bağlamı anlamak](#load_contexts) ve [varsayılan yükleme bağlamı için göz önünde bulundurun](#switch_to_default).  
+ Neden olabileceği sorunlar nedeniyle, <xref:System.Reflection.Assembly.LoadWithPartialName%2A> yöntemi kullanılmıyor olarak işaretlendi. Bunun yerine <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> yöntemini kullanmanızı ve tam derleme görünen adlarını belirtmenizi öneririz. Bkz. [Yük bağlamlarının olumlu ve olumsuz yönlerini anlayın](#load_contexts) ve [varsayılan yükleme bağlamına geçmeyi düşünün](#switch_to_default).  
   
- Kullanmak istiyorsanız <xref:System.Reflection.Assembly.LoadWithPartialName%2A> yöntemi kolay, yüklenirken derleme yaptığından düşünün uygulamanızı eksik derleme tanımlayan bir hata iletisi ile başarısız olan'otomatik olarak kullanarak daha iyi bir kullanıcı deneyimi sağlamak büyük olasılıkla bir beklenmeyen davranışlar ve güvenlik açıkları neden olabilecek derleme sürümü bilinmiyor.  
+ Derlemeyi daha kolay hale getiren <xref:System.Reflection.Assembly.LoadWithPartialName%2A> yöntemi kullanmak istiyorsanız, uygulamanızın eksik derlemeyi tanımlayan bir hata iletisiyle başarısız olduğunu, otomatik olarak bir kullanıcı deneyimi sağlamak için bilinmeyen davranış ve güvenlik delikleri oluşturulmasına neden olabilecek derleme bilinmeyen sürümü.  
   
 <a name="avoid_loading_into_multiple_contexts"></a>   
-## <a name="avoid-loading-an-assembly-into-multiple-contexts"></a>Bir derlemeyi birden çok bağlamlarına yüklenmesini önlemek  
- Bir derlemeyi birden çok bağlamlarına yükleme türü kimlik sorunlara neden olabilir. Aynı türde iki farklı bağlamdan aynı derlemeye'ndan yüklenir, aynı ada sahip iki farklı tür yüklenmiş gibi olur. Bir <xref:System.InvalidCastException> diğer türü karmaşık bir iletiyle bir türe çalışırsanız durum `MyType` türüne yayınlanamıyor `MyType`.  
+## <a name="avoid-loading-an-assembly-into-multiple-contexts"></a>Bir derlemeyi birden çok bağlama yüklemeden kaçının  
+ Bir derlemeyi birden çok bağlama yüklemek tür kimlik sorunlarına neden olabilir. Aynı türden iki farklı bağlamda aynı tür yüklüyse, aynı ada sahip iki farklı tür yüklenmiş olur. Bir <xref:System.InvalidCastException> türü diğer bir türe dönüştürmeye çalışırsanız, bu tür `MyType` bir tür türüne yayınlanamaz `MyType`bir ileti ile oluşturulur.  
   
- Örneğin, varsayın `ICommunicate` arabirimi adlı bir derlemede bildirilmiş `Utility`, programınız ve ayrıca programınızı yükleyen diğer derlemeler tarafından başvurulan. Bu, diğer bütünleştirilmiş kodları, uygulayan türler bulunur. `ICommunicate` arabirimi, programınız onları kullanmak izin verme.  
+ Örneğin, `ICommunicate` arabirimin adlı `Utility`bir derlemede bildirildiği, bu da programınızın ve programınızın yüklediği diğer derlemelerin başvurduğu bir derlemede olduğunu varsayalım. Bu diğer derlemeler, bu `ICommunicate` arabirimi uygulayan ve programınızın bunları kullanmasına izin veren türler içerir.  
   
- Şimdi, program çalıştığında ne olacağını düşünün. Programınız tarafından başvurulan bir derleme, varsayılan yükleme bağlamı yüklenir. Hedef derleme kimliğini tarafından yüklerseniz, kullanarak <xref:System.Reflection.Assembly.Load%2A> yöntemi, varsayılan yükleme bağlamı içinde olacaktır ve bu bağımlılıkları içerecektir. Programınızı hem de hedef derleme aynı kullanacağı `Utility` derleme.  
+ Artık programınız çalıştırıldığında ne olacağını düşünün. Programınızın başvurduğu derlemeler varsayılan yükleme bağlamına yüklenir. <xref:System.Reflection.Assembly.Load%2A> Yöntemini kullanarak bir hedef derlemeyi kimliğine göre yüklerseniz, bu, varsayılan yükleme bağlamında olur ve bu nedenle bağımlılıklarını kullanacaktır. Hem programınızın hem de hedef derlemenin aynı `Utility` derlemeyi kullanması gerekir.  
   
- Ancak, dosya yoluna göre hedef bütünleştirilmiş kod yükleme varsayalım kullanarak <xref:System.Reflection.Assembly.LoadFile%2A> yöntemi. Derleme herhangi bir bağlam olmadan yüklü olduğundan bağımlılıklarını otomatik olarak yüklenmez. İçin bir işleyici olabilir <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> ve bağımlılık sağlamak için olay yük `Utility` kullanarak bir bağlam yok derlemeyle <xref:System.Reflection.Assembly.LoadFile%2A> yöntemi. Artık bir türün örneğini oluşturduğunuzda deneyin türündeki bir değişkene atayın ve hedef derleme içinde bulunan `ICommunicate`e <xref:System.InvalidCastException> çalışma zamanı varsaydığı durum `ICommunicate` iki kopyasını arabirimlerde `Utility` farklı türleri için derleme.  
+ Ancak, <xref:System.Reflection.Assembly.LoadFile%2A> yöntemini kullanarak hedef derlemeyi dosya yolu ile yüklediğinizi varsayalım. Derleme herhangi bir bağlam olmadan yüklenir, bu nedenle bağımlılıkları otomatik olarak yüklenmez. Bağımlılığı sağlamak için <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> olaya yönelik bir işleyiciniz olabilir ve <xref:System.Reflection.Assembly.LoadFile%2A> yöntemi kullanılarak bir bağlam olmadan `Utility` derlemeyi yükleyebilir. Artık hedef derlemede yer alan bir türün bir örneğini oluşturduğunuzda ve onu `ICommunicate`türünde bir değişkene atamayı denerseniz <xref:System.InvalidCastException> , çalışma zamanı `ICommunicate` , bu durum, `Utility` derlemenin farklı türlerde olması.  
   
- Bir derlemeyi birden fazla bağlamı yüklenen olabilir birçok senaryo vardır. Uygulama yolunuz hedef derlemesinde yeniden konumlandırma ve kullanarak çakışmaları önlemek için en iyi yaklaşımdır <xref:System.Reflection.Assembly.Load%2A> yöntemi tam görünen adı. Derleme, ardından varsayılan yükleme bağlamı yüklenir ve iki derleme kullandığınızdan `Utility` derleme.  
+ Bir derlemenin birden çok bağlamına yüklenebileceği birçok farklı senaryo vardır. En iyi yaklaşım, hedef derlemenin uygulama yolunuzda yerini alarak ve <xref:System.Reflection.Assembly.Load%2A> yöntemi tam ekran adıyla kullanarak çakışmaları önlemelidir. Derleme daha sonra varsayılan yükleme bağlamına yüklenir ve her iki derleme de aynı `Utility` derlemeyi kullanır.  
   
- Hedef derleme dışında Uygulama yolu kalmalıdır, kullanabileceğiniz <xref:System.Reflection.Assembly.LoadFrom%2A> load-from bağlamı yüklemek için yöntemi. Hedef derleme, uygulamanızın bir başvuru ile derlendi ise `Utility` derlemesi, kullanacağınız `Utility` uygulamanızın varsayılan yükleme bağlamı yüklenen derleme. Hedef derleme bir kopyası üzerinde bir bağımlılık varsa sorunlar oluşabilir Not `Utility` derleme dışında Uygulama yolu bulunur. Bu derleme, uygulama yükleri önce load-from bağlamı içine yüklenen ise `Utility` derleme, uygulamanızın yükleme başarısız olur.  
+ Hedef derlemenin uygulama yolunun dışında kalması gerekiyorsa, bunu yük-from bağlamına yüklemek için <xref:System.Reflection.Assembly.LoadFrom%2A> yöntemini kullanabilirsiniz. Hedef derleme, uygulamanızın `Utility` derlemesine bir başvuru ile derlenmişse, uygulamanızın varsayılan yükleme bağlamına yüklediği `Utility` derlemeyi kullanacaktır. Hedef derlemenin, uygulama yolunuz dışında bulunan `Utility` derlemenin bir kopyasına bağımlılığı varsa, sorunların gerçekleşebileceğini unutmayın. Uygulamanız `Utility` derlemeyi yüklemeden önce bu derleme yük devretme bağlamına yüklenirse, uygulamanızın yükü başarısız olur.  
   
- [Göz önünde bulundurun geçiş için varsayılan yükleme bağlamı](#switch_to_default) bölüm anlatır gibi dosya yolu yükleri kullanımına alternatifler <xref:System.Reflection.Assembly.LoadFile%2A> ve <xref:System.Reflection.Assembly.LoadFrom%2A>.  
+ [Varsayılan yükleme bağlamı bölümüne geçmeyi düşünün](#switch_to_default) , <xref:System.Reflection.Assembly.LoadFile%2A> ve <xref:System.Reflection.Assembly.LoadFrom%2A>gibi dosya yolu yüklemelerinin kullanımına ilişkin alternatifleri açıklar.  
   
 <a name="avoid_loading_multiple_versions"></a>   
-## <a name="avoid-loading-multiple-versions-of-an-assembly-into-the-same-context"></a>Bir derlemenin birden çok sürümünü aynı bağlamına yüklenmesini önlemek  
- Bir yük bağlamına birden çok derleme sürümünü yükleme türü kimlik sorunlara neden olabilir. Aynı türde, aynı derlemenin iki sürümlerinden yüklenir, aynı ada sahip iki farklı tür yüklenmiş gibi olur. Bir <xref:System.InvalidCastException> diğer türü karmaşık bir iletiyle bir türe çalışırsanız durum `MyType` türüne yayınlanamıyor `MyType`.  
+## <a name="avoid-loading-multiple-versions-of-an-assembly-into-the-same-context"></a>Bir derlemenin birden çok sürümünü aynı Içeriğe yüklemeden kaçının  
+ Bir derlemenin birden çok sürümünü tek bir yük bağlamına yüklemek tür kimlik sorunlarına neden olabilir. Aynı tür aynı derlemenin iki sürümünden yüklüyse, aynı ada sahip iki farklı tür yüklenmiş olur. Bir <xref:System.InvalidCastException> türü diğer bir türe dönüştürmeye çalışırsanız, bu tür `MyType` bir tür türüne yayınlanamaz `MyType`bir ileti ile oluşturulur.  
   
- Örneğin, programınız bir sürümünü yükleyebilir `Utility` derleme doğrudan ve daha sonra farklı bir sürümü yükleyen başka bir derleme yükleyebilir `Utility` derleme. Veya bir kodlama hatası iki farklı kod yolları bir derlemenin farklı sürümleri yüklemek için uygulamanızda neden olabilir.  
+ Örneğin, programınız `Utility` derlemenin bir sürümünü doğrudan yükleyebilir ve daha sonra `Utility` derlemenin farklı bir sürümünü yükleyen başka bir derlemeyi yükleyebilir. Ya da bir kodlama hatası, uygulamanızdaki iki farklı kod yolunun bir derlemenin farklı sürümlerini yüklemesine neden olabilir.  
   
- Varsayılan yük bağlamda kullanırken bu sorun oluşabilir <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> yöntemi ve farklı sürüm numaralarını dahil tam derleme görünen adlarını belirtin. Bağlamı olmadan yüklenen derlemeler için kullanarak sorunu kaynaklanabilir <xref:System.Reflection.Assembly.LoadFile%2A?displayProperty=nameWithType> aynı derlemenin farklı yoldan yüklemek için yöntemi. Çalışma zamanı kimlikleri aynı olsa bile farklı derlemeler olarak farklı yoldan yüklenmiş iki derlemeleri göz önünde bulundurur.  
+ Varsayılan yükleme bağlamında, <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> yöntemini kullandığınızda ve farklı sürüm numaraları içeren tüm derleme görünen adlarını belirttiğinizde bu sorun oluşabilir. Bağlamı olmadan yüklenen derlemeler için, bu soruna farklı yollardan aynı derlemeyi yüklemek için <xref:System.Reflection.Assembly.LoadFile%2A?displayProperty=nameWithType> yöntemi kullanılarak neden olabilir. Çalışma zamanı, kimlikleri aynı olsa bile farklı yollardan yüklenen iki derlemeyi farklı derlemeler olacak şekilde değerlendirir.  
   
- Türü kimlik sorunlara ek olarak, birden çok derleme sürümünü neden olabilir bir <xref:System.MissingMethodException> derlemenin bir sürümünden yüklenen bir tür o türünden farklı bir sürüm kod geçirilmiş. Örneğin, kod daha yeni sürümüne eklenmiş olan bir yöntem bekleyebilirsiniz.  
+ Tür kimlik sorunlarına ek olarak, bir derlemenin birden çok sürümü, bir derlemenin bir <xref:System.MissingMethodException> sürümünden yüklenen bir tür, bu türü farklı bir sürümden bekleyen koda geçirilmezse bir derlemeye neden olabilir. Örneğin, kod sonraki sürüme eklenmiş bir yöntemi bekleyebilir.  
   
- Sürümler arasında türü davranışını değiştirdiyseniz, daha ince hatalar oluşabilir. Örneğin, bir yöntem, beklenmeyen bir özel durum veya beklenmeyen bir değer döndürür.  
+ Sürümler arasında tür davranışı değiştiyse daha hafif hatalar meydana gelebilir. Örneğin, bir yöntem beklenmeyen bir özel durum oluşturabilir veya beklenmeyen bir değer döndürebilir.  
   
- Kodunuzun yalnızca bir emin olmak için dikkatle gözden geçirerek bir derlemenin sürümü yüklenir. Kullanabileceğiniz <xref:System.AppDomain.GetAssemblies%2A?displayProperty=nameWithType> herhangi bir zamanda hangi derlemelerin yüklü olduğundan belirlemek için yöntemi.  
+ Yalnızca bir derlemenin yalnızca bir sürümünün yüklendiğinden emin olmak için kodunuzu dikkatle gözden geçirin. Belirli bir zamanda hangi <xref:System.AppDomain.GetAssemblies%2A?displayProperty=nameWithType> derlemelerin yüklendiğini öğrenmek için yöntemini kullanabilirsiniz.  
   
 <a name="switch_to_default"></a>   
-## <a name="consider-switching-to-the-default-load-context"></a>Varsayılan yükleme bağlamı için göz önünde bulundurun  
- Uygulamanızın bütünleştirilmiş kod yükleme ve dağıtım desenleri inceleyin. Bayt dizileri yüklenen derlemeler ortadan kaldırabilir? Araştırma yolu derlemeleri taşıyabilir miyim? Derlemeleri genel derleme önbelleği veya uygulama etki alanında bulunuyorsa yolu yoklama (diğer bir deyişle, kendi <xref:System.AppDomainSetup.ApplicationBase%2A> ve <xref:System.AppDomainSetup.PrivateBinPath%2A>), derlemenin kimliğini tarafından yükleyebilirsiniz.  
+## <a name="consider-switching-to-the-default-load-context"></a>Varsayılan yükleme bağlamına geçmeyi düşünün  
+ Uygulamanızın derleme yükleme ve dağıtım düzenlerini inceleyin. Bayt dizilerden yüklenen derlemeleri ortadan kaldırabilir misiniz? Derlemeleri yoklama yoluna taşıyabilir miyim? Derlemeler genel derleme önbelleğinde veya uygulama etki alanının yoklama yolunda bulunuyorsa (yani, <xref:System.AppDomainSetup.ApplicationBase%2A> ve <xref:System.AppDomainSetup.PrivateBinPath%2A>), derlemeyi kimliğine göre yükleyebilirsiniz.  
   
- Yoklama yolu, tüm derlemelerin yerleştirileceği mümkün değilse, .NET Framework eklenti modeli kullanarak, derlemeleri genel bütünleştirilmiş kod önbelleğine yerleştirilmesi veya uygulama etki alanları oluşturma gibi alternatifleri düşünün.  
+ Tüm derlemelerinizi yoklama yoluna koymak mümkün değilse, .NET Framework eklenti modelini kullanma, derlemeleri genel derleme önbelleğine yerleştirme veya uygulama etki alanları oluşturma gibi alternatifleri göz önünde bulundurun.  
   
-### <a name="consider-using-the-net-framework-add-in-model"></a>.NET Framework eklenti modeli kullanmayı düşünün  
- Genellikle Uygulama tabanı yüklü değil, eklentiler uygulamak için load-from bağlamı kullanıyorsanız, .NET Framework eklenti modeli kullanın. Bu model, uygulama etki alanları kendiniz yönetmeye gerek kalmadan uygulama düzeyinde etki alanı ya da işlem yalıtım sağlar. Eklenti modeli hakkında daha fazla bilgi için bkz. [eklentiler ve genişletilebilirlik](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)).  
+### <a name="consider-using-the-net-framework-add-in-model"></a>.NET Framework eklentisi modelini kullanmayı düşünün  
+ Genellikle uygulama tabanında yüklenmeyen eklentileri uygulamak için Load-from bağlamını kullanıyorsanız, .NET Framework eklenti modelini kullanın. Bu model uygulama etki alanı veya işlem düzeyinde yalıtım sağlar, böylece uygulama etki alanlarını kendiniz yönetmenizi zorunlu değildir. Eklenti modeli hakkında daha fazla bilgi için bkz. eklentiler [ve genişletilebilirlik](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)).  
   
-### <a name="consider-using-the-global-assembly-cache"></a>Genel Derleme Önbelleği'ni kullanmayı düşünün  
- Paylaşılan derleme yolu eklentisinden yerde derlemeleri genel derleme önbelleğinde temel, uygulama dışında kaybetme varsayılan yükleme bağlamı avantajları veya dezavantajları diğer içerikler üzerinde alma olmadan olmasıdır.  
+### <a name="consider-using-the-global-assembly-cache"></a>Genel derleme önbelleğini kullanmayı düşünün  
+ Varsayılan Yük bağlamının avantajlarını kaybetmeden veya diğer bağlamların dezavantajlarını kaybetmeksizin, uygulama tabanının dışında paylaşılan bir derleme yolunun avantajlarından yararlanmak için bütünleştirilmiş kodları genel derleme önbelleğine yerleştirin.  
   
-### <a name="consider-using-application-domains"></a>Uygulama etki alanları kullanmayı düşünün  
- Bazı bütünleştirilmiş kodlarınızı uygulamanın yoklama yolu dağıtılamıyor karar verirseniz, bu derlemeler için yeni bir uygulama etki alanı oluşturmayı göz önünde bulundurun. Kullanan bir <xref:System.AppDomainSetup> yeni uygulama etki alanı oluşturmak ve <xref:System.AppDomainSetup.ApplicationBase%2A?displayProperty=nameWithType> özelliğini içeren derlemeler yüklemek istediğiniz yolu belirtin. Araştırma için birden fazla dizine sahipseniz, ayarlayabileceğiniz <xref:System.AppDomainSetup.ApplicationBase%2A> bir kök dizin ve <xref:System.AppDomainSetup.PrivateBinPath%2A?displayProperty=nameWithType> araştırma için alt dizinler tanımlamak için özellik. Alternatif olarak, birden çok uygulama etki alanları oluşturmak ve ayarlamak <xref:System.AppDomainSetup.ApplicationBase%2A> her uygulama etki alanı, derlemeler için uygun yolu.  
+### <a name="consider-using-application-domains"></a>Uygulama etki alanlarını kullanmayı düşünün  
+ Derlemelerin bazılarının uygulamanın yoklama yolunda dağıtılamadığını belirlerseniz, bu derlemeler için yeni bir uygulama etki alanı oluşturmayı düşünün. Yeni uygulama <xref:System.AppDomainSetup> etki alanını oluşturmak için bir kullanın ve yüklemek istediğiniz derlemeleri <xref:System.AppDomainSetup.ApplicationBase%2A?displayProperty=nameWithType> içeren yolu belirtmek için özelliğini kullanın. Araştırmanız için birden çok dizininiz varsa, <xref:System.AppDomainSetup.ApplicationBase%2A> öğesini bir kök dizine ayarlayabilir ve araştırmanın alt dizinlerini tanımlamak için <xref:System.AppDomainSetup.PrivateBinPath%2A?displayProperty=nameWithType> özelliğini kullanabilirsiniz. Alternatif olarak, birden çok uygulama etki alanı oluşturabilir ve her <xref:System.AppDomainSetup.ApplicationBase%2A> bir uygulama etki alanını derlemeleri için uygun yola ayarlayabilirsiniz.  
   
- Kullanabileceğiniz Not <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> bu derlemeleri yüklemek için yöntemi. Araştırma yolu artık oldukları için varsayılan yükleme bağlamı yerine load-from bağlamı içine yüklenen olacaktır. Ancak, için geçiş öneririz <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> yöntemi ve doğru sürümleri her zaman kullanılmasını sağlamak için derleme görünen adları tam sağlayın.  
+ Bu derlemeleri yüklemek için <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> yöntemini kullanabileceğinizi unutmayın. Bunlar artık yoklama yolunda olduklarından, yük-from bağlamı yerine varsayılan yükleme bağlamına yüklenecektir. Ancak, <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> yönteme geçiş yapmanızı ve doğru sürümlerin her zaman kullanıldığından emin olmak için tam derleme görünen adları vermenizi öneririz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -8,22 +8,22 @@ helpviewer_keywords:
 - names in XAML [XAML Services]
 - XamlName grammar [XAML Services]
 ms.assetid: 11e4cada-41d2-494d-9531-0d3df4dfcbe3
-ms.openlocfilehash: 642ca16142bdfe78a40ddf4e6a3a79ce6a8a4985
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 837a18ca18d0c634dfa5cc133aa013919cfb9d96
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61938755"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053893"
 ---
 # <a name="xamlname-grammar"></a>XamlName Dilbilgisi
-XamlName dilbilgisi kolaylık olması için burada tekrar üretilmektedir XAML dil belirtimi [MS-XAML], tanımlanan belirli bir dil bilgisi olur.  
+XamlName dilbilgisi, daha kolay bir şekilde yeniden oluşturulduğu XAML dil belirtimi [MS-XAML] içinde tanımlanan belirli bir dildilidir.  
   
 ## <a name="from-the-xaml-specification"></a>XAML belirtiminden  
- [MS-XAML] belirtimi türleri ve özellikler için kullanılan yasal sembolik tanımlayıcıları kümesini tanımlamak için XamlName dilbilgisi tanımlar.  
+ [MS-XAML] belirtimi, türler ve özellikler için kullanılan yasal sembolik tanımlayıcılar kümesini tanımlamak için XamlName adlı dilbilgisi tanımlar.  
   
- XamlName aşağıdaki dilbilgisi uymalıdır türü olan değerleri dize:  
+ XamlName türünde dize değerleri aşağıdaki dilbilgisinde uyumlu olmalıdır:  
   
-```  
+```xaml  
 XamlName ::= NameStartChar ( NameChar )*   
 NameStartChar ::= LetterCharacter | '_'   
 NameChar ::= NameStartChar | DecimalDigit | CombiningCharacter   
@@ -32,36 +32,27 @@ DecimalDigit ::= UnicodeNd
 CombiningCharacter ::= UnicodeMn | UnicodeMc  
 ```  
   
- Aşağıdaki genel kategori değerleri Unicode karakter veritabanında tanımlanan varsayılır  
+ Bu, Unicode karakter veritabanında tanımlanan aşağıdaki genel kategori değerlerini kabul eder  
+
+| Unicode kategorisi   | Açıklama                   |
+|--------------------|-------------------------------|
+| Lu                 | Harf, Büyük Harf             |
+| Ll                 | Harf, Küçük Harf             |
+| Lt                 | Harf, Başlık Düzeni             |
+| Lm                 | Harf, Değiştirici              |
+| Lo                 | Harf, Diğer                 |
+| Sütun                 | İşaret, Aralık dışı             |
+| Mc                 | İşaret, Boşluklu Birleşik       |
+| Nd                 | Sayı, ondalık               |
+| NL                 | Sayı, Harf                |
+ 
+ XAML, özellik ve olay nitelikli başvurular ve ayrıca ekli Üyeler için kullanılan ikinci bir dilbilgisini, DottedXamlName öğesini tanımlar. Daha fazla bilgi için bkz <xref:System.Windows.DependencyProperty> . ve [xaml 'ye Genel Bakış (WPF)](../wpf/advanced/xaml-overview-wpf.md).  
   
-```  
-Lu  
-Letter, Uppercase  
-Ll  
-Letter, Lowercase  
-Lt  
-Letter, Titlecase  
-Lm  
-Letter, Modifier  
-Lo  
-Letter, Other  
-Mn  
-Mark, Non-Spacing  
-Mc  
-Mark, Spacing Combining  
-Nd  
-Number, Decimal  
-Nl  
-Number, Letter  
-```  
+ DottedXamlName türünde dize değerleri aşağıdaki dilbilgisinde uyumlu olmalıdır:  
   
- İkinci özelliği için kullanılan DottedXamlName dilbilgisi, XAML tanımlar ve olay uygun başvuruları ve üyeleri için ve ayrıca bağlı. Daha fazla bilgi için <xref:System.Windows.DependencyProperty> ve [XAML genel bakış (WPF)](../wpf/advanced/xaml-overview-wpf.md).  
-  
- DottedXamlName aşağıdaki dilbilgisi uymalıdır türü olan değerleri dize:  
-  
-```  
+```xaml  
 DottedXamlName ::= XamlName '.' XamlName  
 ```  
   
 ## <a name="remarks"></a>Açıklamalar  
- Tam belirtimi için bkz: [ \[MS-XAML\]](https://go.microsoft.com/fwlink/?LinkId=114525).
+ Tam belirtim için bkz [ \[. ms-xaml\]](https://go.microsoft.com/fwlink/?LinkId=114525).

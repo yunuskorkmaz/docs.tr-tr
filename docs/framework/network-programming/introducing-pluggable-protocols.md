@@ -22,12 +22,12 @@ helpviewer_keywords:
 - server identifiers
 - scheme identifiers
 ms.assetid: 4b48e22d-e4e5-48f0-be80-d549bda97415
-ms.openlocfilehash: 41a55df53f8b0dfd4eefc9bc4ecf6b2eef122c8d
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: 72b47b8159f9f6f0dc3a19c5cbf94335507d9e7d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70394271"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047869"
 ---
 # <a name="introducing-pluggable-protocols"></a>Takılabilir Protokollere Giriş
 Microsoft .NET Framework, uygulamalarınıza hızlı ve kolay bir şekilde tümleştirilebilen Internet hizmetlerinin katmanlı, genişletilebilir ve yönetilen bir uygulamasını sağlar. <xref:System.Net> Ve<xref:System.Net.Sockets> ad alanlarındaki Internet erişim sınıfları hem Web tabanlı hem de internet tabanlı uygulamaları uygulamak için kullanılabilir.  
@@ -68,6 +68,6 @@ Microsoft .NET Framework, uygulamalarınıza hızlı ve kolay bir şekilde tüml
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Takılabilir Protokoller Programlama](../../../docs/framework/network-programming/programming-pluggable-protocols.md)
-- [.NET Framework'te Ağ Programlaması](../../../docs/framework/network-programming/index.md)
-- [Ağ Programlama Örnekleri](../../../docs/framework/network-programming/network-programming-samples.md)
+- [Takılabilir Protokoller Programlama](programming-pluggable-protocols.md)
+- [.NET Framework'te Ağ Programlaması](index.md)
+- [Ağ Programlama Örnekleri](network-programming-samples.md)

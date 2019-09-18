@@ -8,12 +8,12 @@ helpviewer_keywords:
 - properties, UI Automation clients
 - UI Automation, client properties
 ms.assetid: 255905af-0b17-485c-93d4-8a2db2a6524b
-ms.openlocfilehash: 6f02a4825206da0dd4949083cc54f555a8ae40b5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 9c92ea154a078ff5a059edd82f06b8f3d5bab239
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69914453"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042129"
 ---
 # <a name="ui-automation-properties-for-clients"></a>İstemciler İçin UI Otomasyon Özellikleri
 > [!NOTE]
@@ -27,7 +27,7 @@ ms.locfileid: "69914453"
   
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]Özellikler salt okunurdur. Bir denetimin özelliklerini ayarlamak için uygun denetim deseninin yöntemlerini kullanmanız gerekir. Örneğin, bir kayan <xref:System.Windows.Automation.ScrollPattern.Scroll%2A> pencerenin konum değerlerini değiştirmek için kullanın.  
   
- Performansı artırmak için, denetimler ve denetim desenlerinin özellik değerleri, <xref:System.Windows.Automation.AutomationElement> nesneler alındığında önbelleğe alınabilir. Daha fazla bilgi için bkz. [UI Otomasyonu Istemcilerinde önbelleğe alma](../../../docs/framework/ui-automation/caching-in-ui-automation-clients.md).  
+ Performansı artırmak için, denetimler ve denetim desenlerinin özellik değerleri, <xref:System.Windows.Automation.AutomationElement> nesneler alındığında önbelleğe alınabilir. Daha fazla bilgi için bkz. [UI Otomasyonu Istemcilerinde önbelleğe alma](caching-in-ui-automation-clients.md).  
   
 ## <a name="property-ids"></a>Özellik kimlikleri  
  Özellik tanımlayıcıları (kimlikler), <xref:System.Windows.Automation.AutomationProperty> nesnelerde kapsüllenmiş benzersiz, sabit değerlerdir. UI Otomasyonu istemci uygulamaları, <xref:System.Windows.Automation.AutomationElement> <xref:System.Windows.Automation.ScrollPattern>bu kimlikleri sınıfından veya gibi uygun denetim deseninin sınıfından alır. UI Otomasyon sağlayıcıları, <xref:System.Windows.Automation.AutomationElementIdentifiers> <xref:System.Windows.Automation.ScrollPatternIdentifiers>gibi denetim deseninin tanımlayıcı sınıflarından veya bunlardan birinden alırlar.  
@@ -99,6 +99,6 @@ ms.locfileid: "69914453"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [UI Otomasyonu İstemcilerinde Önbelleğe Alma](../../../docs/framework/ui-automation/caching-in-ui-automation-clients.md)
-- [Sunucu Tarafı UI Otomasyonu Sağlayıcısı Uygulama](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)
-- [UI Otomasyonu Olaylarına Abone Olma](../../../docs/framework/ui-automation/subscribe-to-ui-automation-events.md)
+- [UI Otomasyonu İstemcilerinde Önbelleğe Alma](caching-in-ui-automation-clients.md)
+- [Sunucu Tarafı UI Otomasyonu Sağlayıcısı Uygulama](server-side-ui-automation-provider-implementation.md)
+- [UI Otomasyonu Olaylarına Abone Olma](subscribe-to-ui-automation-events.md)

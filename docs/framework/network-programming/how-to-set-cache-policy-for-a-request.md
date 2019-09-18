@@ -7,18 +7,18 @@ dev_langs:
 helpviewer_keywords:
 - request cache policies
 ms.assetid: 39c15e40-586b-4ac9-9cce-146f74b7e545
-ms.openlocfilehash: 3da60366ec1a8e2e0242cf78e0418fe76e18da68
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7b28cf6e27fa6f5a5d255621d8e21e9a565ddbc4
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61642470"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048111"
 ---
 # <a name="how-to-set-cache-policy-for-a-request"></a>Nasıl yapılır: İstek için Önbellek İlkesi Ayarlama
-Aşağıdaki örnek, bir istek için bir önbellek İlkesi ayarlanarak gösterir. Örnek Giriş bir URI gibi `http://www.contoso.com/`.  
+Aşağıdaki örnek, bir istek için önbellek ilkesi ayarlamayı gösterir. Örnek giriş, gibi bir URI `http://www.contoso.com/`'dir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod örneği, bir günden daha uzun süre önbellekte olmadıysa önbellekten kullanılacak istenen kaynağa izin veren bir önbellek ilkesi oluşturur. Örnek kaynak önbellekten kullanılıp kullanılmadığını belirten bir ileti görüntüler — örneğin, `"The response was retrieved from the cache : False."`— ve ardından kaynağı görüntüler. Bir istek istemci ve sunucu arasındaki tüm önbelleği tarafından getirilmesi.  
+ Aşağıdaki kod örneği, bir günden daha uzun süredir önbellekte olmayan istenen kaynağın önbellekten kullanılmasına izin veren bir önbellek ilkesi oluşturur. Örnek, kaynağın önbellekten kullanılıp kullanılmadığını belirten bir ileti görüntüler — Örneğin, `"The response was retrieved from the cache : False."`— ve ardından kaynağı görüntüler. İstek, istemci ve sunucu arasındaki herhangi bir önbellekte yerine getirilir.  
   
 ```csharp  
 using System;  
@@ -107,8 +107,8 @@ End Namespace
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Ağ Uygulamaları için Önbellek Yönetimi](../../../docs/framework/network-programming/cache-management-for-network-applications.md)
-- [Önbellek İlkesi](../../../docs/framework/network-programming/cache-policy.md)
-- [Konum Temelli Önbellek İlkeleri](../../../docs/framework/network-programming/location-based-cache-policies.md)
-- [Saat Temelli Önbellek İlkeleri](../../../docs/framework/network-programming/time-based-cache-policies.md)
-- [\<requestCaching > öğesi (ağ ayarları)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)
+- [Ağ Uygulamaları için Önbellek Yönetimi](cache-management-for-network-applications.md)
+- [Önbellek İlkesi](cache-policy.md)
+- [Konum Temelli Önbellek İlkeleri](location-based-cache-policies.md)
+- [Saat Temelli Önbellek İlkeleri](time-based-cache-policies.md)
+- [\<requestCaching > öğesi (ağ ayarları)](../configure-apps/file-schema/network/requestcaching-element-network-settings.md)

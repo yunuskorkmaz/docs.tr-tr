@@ -7,72 +7,72 @@ helpviewer_keywords:
 ms.assetid: 0ed69f73-5c01-4514-bd63-979c6e38d41d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f2ea19c88ff8b854b09ed372b35bf8c45d994585
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8d09b5b76c39f33848d44beb43d9b09c5e6ed13b
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64583661"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046172"
 ---
 # <a name="security-etw-events"></a>Güvenlik ETW Olayları
-<a name="top"></a> Güvenlik olayları, tanımlayıcı ad doğrulama ve Authenticode doğrulama sırasında üretilir.  
+<a name="top"></a>Güvenlik olayları, tanımlayıcı ad doğrulama ve Authenticode doğrulaması sırasında oluşturulur.  
   
- Bu kategori aşağıdaki olaylar oluşur:  
+ Bu kategori aşağıdaki olaylardan oluşur:  
   
 - [StrongNameVerificationStart_V1 ve StrongNameVerificationStop_V1 olayları](#strongnameverificationstart_v1_and_strongnameverificationstop_v1_events)  
   
 - [AuthenticodeVerificationStart_V1 ve AuthenticodeVerificationStop_V1 olayları](#authenticodeverificationstart_v1_and_authenticodeverificationstop_v1_events)  
   
 <a name="strongnameverificationstart_v1_and_strongnameverificationstop_v1_events"></a>   
-## <a name="strongnameverificationstartv1-and-strongnameverificationstopv1-events"></a>StrongNameVerificationStart_V1 ve StrongNameVerificationStop_V1 olayları  
- Aşağıdaki tabloda, düzeyi ve anahtar sözcüğü gösterir. (Daha fazla bilgi için [CLR ETW anahtar sözcükleri ve Düzeyler](../../../docs/framework/performance/clr-etw-keywords-and-levels.md).)  
+## <a name="strongnameverificationstart_v1-and-strongnameverificationstop_v1-events"></a>StrongNameVerificationStart_V1 ve StrongNameVerificationStop_V1 olayları  
+ Aşağıdaki tabloda anahtar sözcüğü ve düzeyi gösterilmektedir. (Daha fazla bilgi için bkz. [CLR ETW anahtar sözcükleri ve düzeyleri](clr-etw-keywords-and-levels.md).)  
   
-|Olayı için anahtar sözcüğü|Düzey|  
+|Olayı yükseltmek için anahtar sözcük|Düzey|  
 |-----------------------------------|-----------|  
-|`SecurityKeyword` (0x400)|Informational(4)|  
+|`SecurityKeyword`(0x400)|Bilgilendirici (4)|  
   
- Aşağıdaki tabloda, olay bilgileri gösterilmektedir.  
+ Aşağıdaki tabloda olay bilgileri gösterilmektedir.  
   
-|Olay|Olay Kimliği|Ne zaman gerçekleşti|  
+|Olay|Olay Kimliği|Ne zaman oluşturulur|  
 |-----------|--------------|-----------------|  
-|`StrongNameVerificationStart_V1`|181|Tanımlayıcı ad doğrulamasının başlangıcı.|  
-|`StrongNameVerificationStop_V1`|182|Tanımlayıcı ad doğrulamasının sonu.|  
+|`StrongNameVerificationStart_V1`|181|Tanımlayıcı ad doğrulaması başlangıcı.|  
+|`StrongNameVerificationStop_V1`|182|Tanımlayıcı ad doğrulama sonu.|  
   
- Aşağıdaki tabloda, olay verilerini gösterir.  
+ Aşağıdaki tabloda olay verileri gösterilmektedir.  
   
 |Alan adı|Veri türü|Açıklama|  
 |----------------|---------------|-----------------|  
-|VerificationFlags|Kazanma: UInt32|Doğrulama bayraklar.|  
-|ErrorCode|Kazanma: UInt32|HResult hata kodu.|  
-|FullyQualifiedAssemblyName|Kazanma: UnicodeString|Tam derleme adı.|  
-|ClrInstanceID|Kazanma: UInt16|CLR veya CoreCLR örneği için benzersiz kimlik.|  
+|Doğrulamaları ıationflags|Win: UInt32|Doğrulama bayrakları.|  
+|ErrorCode|Win: UInt32|HResult hata kodu.|  
+|FullyQualifiedAssemblyName|Win: UnicodeString|Tam nitelikli derleme adı.|  
+|ClrInstanceID|Win: UInt16|CLR veya CoreCLR örneği için benzersiz KIMLIK.|  
   
  [Başa dön](#top)  
   
 <a name="authenticodeverificationstart_v1_and_authenticodeverificationstop_v1_events"></a>   
-## <a name="authenticodeverificationstartv1-and-authenticodeverificationstopv1-events"></a>AuthenticodeVerificationStart_V1 ve AuthenticodeVerificationStop_V1 olayları  
- Aşağıdaki tabloda, düzeyi ve anahtar sözcüğü gösterir.  
+## <a name="authenticodeverificationstart_v1-and-authenticodeverificationstop_v1-events"></a>AuthenticodeVerificationStart_V1 ve AuthenticodeVerificationStop_V1 olayları  
+ Aşağıdaki tabloda anahtar sözcüğü ve düzeyi gösterilmektedir.  
   
-|Olayı için anahtar sözcüğü|Düzey|  
+|Olayı yükseltmek için anahtar sözcük|Düzey|  
 |-----------------------------------|-----------|  
-|`SecurityKeyword` (0x400)|Informational(4)|  
+|`SecurityKeyword`(0x400)|Bilgilendirici (4)|  
   
- Aşağıdaki tabloda, olay bilgileri gösterilmektedir.  
+ Aşağıdaki tabloda olay bilgileri gösterilmektedir.  
   
-|Olay|Olay Kimliği|Ne zaman gerçekleşti|  
+|Olay|Olay Kimliği|Ne zaman oluşturulur|  
 |-----------|--------------|-----------------|  
-|`AuthenticodeVerificationStart_V1`|183|Authenticode doğrulama başlangıcı.|  
-|`AuthenticodeVerificationStop_V1`|184|Authenticode doğrulama sonu.|  
+|`AuthenticodeVerificationStart_V1`|183|Authenticode doğrulaması başlangıcı.|  
+|`AuthenticodeVerificationStop_V1`|184|Authenticode doğrulamasının sonu.|  
   
- Aşağıdaki tabloda, olay verilerini gösterir.  
+ Aşağıdaki tabloda olay verileri gösterilmektedir.  
   
 |Alan adı|Veri türü|Açıklama|  
 |----------------|---------------|-----------------|  
-|VerificationFlags|Kazanma: UInt32|Doğrulama bayraklar.|  
-|ErrorCode|Kazanma: UInt32|HResult hata kodu.|  
-|ModulePath|Kazanma: UnicodeString|Modül yolu.|  
-|ClrInstanceID|Kazanma: UInt16|CLR veya CoreCLR örneği için benzersiz kimlik.|  
+|Doğrulamaları ıationflags|Win: UInt32|Doğrulama bayrakları.|  
+|ErrorCode|Win: UInt32|HResult hata kodu.|  
+|ModulePath|Win: UnicodeString|Modül yolu.|  
+|ClrInstanceID|Win: UInt16|CLR veya CoreCLR örneği için benzersiz KIMLIK.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [CLR ETW Olayları](../../../docs/framework/performance/clr-etw-events.md)
+- [CLR ETW Olayları](clr-etw-events.md)

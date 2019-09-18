@@ -11,64 +11,64 @@ helpviewer_keywords:
 ms.assetid: 26ada5af-175c-4576-931a-9f07fa1723e9
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1e904d452b9f4a1b172d35984b752c0d97228338
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 93c426cce792c8f30a3551e2d4626736dd67278f
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61875088"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052952"
 ---
 # <a name="bindingfailure-mda"></a>bindingFailure MDA
 
-`bindingFailure` Yönetilen hata ayıklama Yardımcısı (MDA) yüklemek bir derleme başarısız olduğunda etkinleştirilir.
+Yönetilen `bindingFailure` hata ayıklama Yardımcısı (MDA), bir derleme yükleme başarısız olduğunda etkinleştirilir.
 
 ## <a name="symptoms"></a>Belirtiler
 
-Kod gibi statik başvuru veya yükleyici yöntemlerden birini kullanarak bir derlemeyi yüklemek denediğini <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> veya <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>. Derleme yüklü değil ve bir <xref:System.IO.FileNotFoundException> veya <xref:System.IO.FileLoadException> özel durumu oluşturulur.
+Kod, <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> statik başvuru veya ya <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>da gibi Loader yöntemlerinden birini kullanarak bir derlemeyi yüklemeyi denedi. Derleme yüklü değil ve bir <xref:System.IO.FileNotFoundException> veya <xref:System.IO.FileLoadException> özel durum oluşturuldu.
 
 ## <a name="cause"></a>Sebep
 
-Çalışma zamanının bir derlemeyi yükleyemedi bağlama hatası gerçekleşir. Bağlama hatası sonucu aşağıdaki durumlardan biri olabilir:
+Çalışma zamanı bir derlemeyi yükleyemediğinde bağlama hatası oluşur. Bir bağlama hatası, aşağıdaki durumlardan birinin sonucu olabilir:
 
-- Ortak dil çalışma zamanı (CLR), istenen derlemesi bulunamıyor. Bu, yüklü derleme veya derleme bulmak için düzgün yapılandırılmamış uygulama gibi oluşabilir birçok neden vardır.
+- Ortak dil çalışma zamanı (CLR) istenen derlemeyi bulamıyor. Bunun gerçekleşebileceği, derlemenin yüklü olmadığı veya uygulamanın derlemeyi bulmak için doğru şekilde yapılandırılmadığı birçok nedeni vardır.
 
-- Ortak bir sorunu senaryosu, diğer uygulama etki alanında bu türü içeren derlemenin yüklenecek CLR gerektiren başka bir uygulama etki alanına bir tür geçiyor. Bu, diğer uygulama etki alanı özgün uygulama etki alanından farklı şekilde yapılandırılmışsa, derlemeyi yüklemeye çalışma zamanı için mümkün olmayabilir. Örneğin, iki uygulama etki alanları farklı olabilir <xref:System.AppDomain.BaseDirectory%2A> özellik değerleri.
+- Yaygın bir sorun senaryosu başka bir uygulama etki alanına bir tür geçirilerek, CLR 'nin diğer uygulama etki alanında bu türü içeren derlemeyi yüklemesi gerekir. Diğer uygulama etki alanı orijinal uygulama etki alanından farklı yapılandırılmışsa, çalışma zamanının derlemeyi yüklemesi mümkün olmayabilir. Örneğin, iki uygulama etki alanı farklı <xref:System.AppDomain.BaseDirectory%2A> özellik değerlerine sahip olabilir.
 
 - İstenen derleme bozuk veya bir derleme değil.
 
-- Bütünleştirilmiş kod yüklemeye çalışan kod derlemeleri yüklemek için doğru kod erişimi güvenliği izinleri yok.
+- Derlemeyi yüklemeye çalışan kodun, derlemeleri yüklemek için doğru kod erişimi güvenlik izinleri yok.
 
-- Kullanıcı kimlik bilgileri, dosyayı okumak için gerekli izinlere sağlamaz.
+- Kullanıcı kimlik bilgileri, dosyayı okumak için gerekli izinleri sağlamıyor.
 
 ## <a name="resolution"></a>Çözüm
 
-İlk adım, neden CLR istenen derlemeye bağlanamadı belirlemektir. Neden çalışma zamanı bulunamadı veya olabilirsiniz senaryoları gibi istenen derleme nedeni bölümünde listelenen mümkün yük olan birçok neden vardır. Bağlama hatanın nedenini ortadan kaldırmak için aşağıdaki eylemleri önerilir:
+İlk adım, CLR 'nin istenen derlemeye neden bağlanmadığını belirlemektir. Çalışma zamanının istenen derlemeyi (nedeni bölümünde listelenen senaryolar gibi) bulmamasının pek çok nedeni olabilir. Bağlama hatasının nedenini ortadan kaldırmak için aşağıdaki eylemler önerilir:
 
-- Tarafından sağlanan verileri kullanarak nedenini `bindingFailure` MDA:
+- `bindingFailure` Mda tarafından belirtilen verileri kullanarak nedenini belirleme:
 
-  - Çalıştırma [Fuslogvw.exe (Derleme bağlaması Günlük Görüntüleyici)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md) derleme cildiyle üretilen hata günlüklerini okumak için.
+  - Derleme cildi tarafından üretilen hata günlüklerini okumak için [Fuslogvw. exe ' yi (derleme bağlama günlük Görüntüleyici)](../tools/fuslogvw-exe-assembly-binding-log-viewer.md) çalıştırın.
 
-  - Derleme için istenen konumu olup olmadığını belirler. Durumunda, <xref:System.Reflection.Assembly.LoadFrom%2A> ve <xref:System.Reflection.Assembly.LoadFile%2A> yöntemleri, istenen konumu kolayca belirlenebilir. Durumunda, <xref:System.Reflection.Assembly.Load%2A> derleme kimliği kullanarak bağlanan, yöntem, gerekir arayın uygulama etki alanının içinde bu kimlikle eşleşen derlemeleri <xref:System.AppDomain.BaseDirectory%2A> özellik araştırma yolu ve genel derleme önbelleği.
+  - Derlemenin istenen konumda olup olmadığını belirleme. <xref:System.Reflection.Assembly.LoadFrom%2A> Ve<xref:System.Reflection.Assembly.LoadFile%2A> yöntemleri söz konusu olduğunda, istenen konum kolayca belirlenebilir. Derleme kimliğini kullanarak bağlanan <xref:System.Reflection.Assembly.Load%2A> yöntemi söz konusu olduğunda, uygulama <xref:System.AppDomain.BaseDirectory%2A> etki alanının özellik araştırma yolu ve genel derleme önbelleğinde bu kimlikle eşleşen derlemeler için arama yapmanız gerekir.
 
-- Önceki belirlemeye dayalı nedenini çözümleyin. Olası çözüm seçenekleri şunlardır:
+- Önceki belirleme temelinde nedeni çözün. Olası çözüm seçenekleri şunlardır:
 
-  - İstenen derlemeyi genel bütünleştirilmiş kod önbelleğine ve çağrı yükleyin. <xref:System.Reflection.Assembly.Load%2A> derleme kimliği tarafından yükleme yöntemi.
+  - İstenen derlemeyi genel derleme önbelleğine yükleyip öğesini çağırın. <xref:System.Reflection.Assembly.Load%2A>derlemeyi kimliğe göre yükleme yöntemi.
 
-  - İstenen derleme arama ve uygulama dizini kopyalamak <xref:System.Reflection.Assembly.Load%2A> yöntemi tarafından kimlik derlemesi yüklenemiyor.
+  - İstenen derlemeyi uygulama dizinine kopyalayın ve derlemeyi kimliğe göre yüklemek için <xref:System.Reflection.Assembly.Load%2A> yöntemini çağırın.
 
-  - Uygulama etki bağlama hatası oluştuğu derleme yolu ya da değiştirerek içerecek şekilde yeniden <xref:System.AppDomain.BaseDirectory%2A> özelliği veya özel bir yoklama yolu ekleme.
+  - <xref:System.AppDomain.BaseDirectory%2A> Özelliği değiştirerek ya da özel yoklama yolları ekleyerek, derleme yolunu dahil etmek için bağlama hatasının oluştuğu uygulama etki alanını yeniden yapılandırın.
 
-  - Dosyayı okumak oturum açan kullanıcının izin vermek bir dosya için erişim denetim listesini değiştirin.
+  - Oturum açan kullanıcının dosyayı okumasına izin vermek için dosya için erişim denetim listesini değiştirin.
 
-## <a name="effect-on-the-runtime"></a>Çalışma zamanı üzerindeki etkisi
+## <a name="effect-on-the-runtime"></a>Çalışma zamanında etki
 
-Bu mda'nın CLR üzerinde etkisi yoktur. Yalnızca hataları bağlama hakkında veri bildirir.
+Bu MDA, CLR üzerinde hiçbir etkisi yoktur. Yalnızca bağlama hatalarıyla ilgili verileri raporlar.
 
 ## <a name="output"></a>Çıkış
 
-İstenen yol dahil olmak üzere, yük ve/veya görünen adı, bağlama bağlamı, yükü istenen uygulama etki alanı için başarısız olan derlemenin ve hatanın nedenini MDA bildirir.
+MDA, istenen yol ve/veya görünen ad, bağlama bağlamı, yükün istendiği uygulama etki alanı ve hatanın nedeni dahil olmak üzere, yükleme başarısız olan derlemeyi rapor ediyor.
 
-Görünen ad veya istenen yol verileri CLR için kullanılabilir değilse boş olabilir. Başarısız olan çağrı ise <xref:System.Reflection.Assembly.Load%2A> yöntemi, bu büyük olasılıkla çalışma zamanı derlemenin görünen adı belirleyemedi.
+Görünen ad veya istenen yol, verilerin CLR tarafından kullanılamadığı durumlarda boş olabilir. Başarısız olan çağrı <xref:System.Reflection.Assembly.Load%2A> yöntemi ise, çalışma zamanının derleme için görünen adı belirleyememe olasıdır.
 
 ## <a name="configuration"></a>Yapılandırma
 
@@ -82,7 +82,7 @@ Görünen ad veya istenen yol verileri CLR için kullanılabilir değilse boş o
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki kod örneği, bu mda'nın etkinleştirebilmek için bir durum gösterilmektedir:
+Aşağıdaki kod örneğinde, bu MDA ' i etkinleştirebilecek bir durum gösterilmektedir:
 
 ```csharp
 using System;
@@ -107,4 +107,4 @@ namespace ConsoleApplication1
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Yönetilen Hata Ayıklama Yardımcıları ile Hataları Tanılama](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [Yönetilen Hata Ayıklama Yardımcıları ile Hataları Tanılama](diagnosing-errors-with-managed-debugging-assistants.md)

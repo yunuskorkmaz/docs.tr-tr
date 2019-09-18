@@ -19,18 +19,18 @@ helpviewer_keywords:
 ms.assetid: 4c7be9c8-72ae-481f-a01c-1a4716806e99
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 99ffbccca8cd8a719e5571638308e28d494d687a
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 437d2d1bb026795dfa01a4c01ca12acf2b8f5792
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926870"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044663"
 ---
 # <a name="gacutilexe-global-assembly-cache-tool"></a>Gacutil.exe (Genel Derleme Önbelleği Aracı)
 
 Genel Bütünleştirilmiş Kod Önbelleği aracı genel bütünleştirilmiş kod önbelleğinin ve indirme önbelleğinin içeriğini görüntülemenize ve değiştirmenize olanak sağlar.
 
-Bu araç, Visual Studio ile birlikte otomatik olarak yüklenir. Aracı çalıştırmak için, Visual Studio için Geliştirici Komut İstemi (veya Windows 7 ' de Visual Studio komut Istemi) kullanın. Daha fazla bilgi için bkz. [komut istemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md).
+Bu araç, Visual Studio ile birlikte otomatik olarak yüklenir. Aracı çalıştırmak için, Visual Studio için Geliştirici Komut İstemi (veya Windows 7 ' de Visual Studio komut Istemi) kullanın. Daha fazla bilgi için bkz. [komut istemleri](developer-command-prompt-for-vs.md).
 
 Komut satırına şunu yazın:
 
@@ -66,7 +66,7 @@ gacutil [options] [assemblyName | assemblyPath | assemblyListFile]
 |**/u** *assemblyName*|Genel bütünleştirilmiş kod önbelleğinden bir derlemeyi kaldırır.|
 |**/UF** *assemblyName*|Belirtilen bir derlemenin tüm başvurularını kaldırarak derlemeyi kaldırmaya zorlar.<br /><br /> Bu seçeneği belirtmek, **/u** ve **/f** seçeneklerini birlikte belirtmeye eşdeğerdir. **Not:**  Bu seçeneği, Microsoft Windows Installer kullanarak yüklenen bir derlemeyi kaldırmak için kullanamazsınız. Eğer bu işlemi yapmayı denerseniz, araç bir hata iletisi görüntüler.|
 |**/ul** *AssemblyListFile*|*AssemblyListFile* içinde belirtilen bir veya daha fazla derlemeyi genel bütünleştirilmiş kod önbelleğinden kaldırır.|
-|**/u** [**Ngen**] *AssemblyName*|Belirtilen bir derlemeyi genel bütünleştirilmiş kod önbelleğinden kaldırır. Eğer belirtilen derlemenin varolan başvuru sayısı varsa, araç başvuru sayılarını görüntüler ve derlemeyi genel bütünleştirilmiş kod önbelleğinden kaldırmaz. **Not:**  .NET Framework sürüm 2,0 ' `/ungen` de desteklenmez. Bunun yerine, `uninstall` [Ngen. exe (yerel görüntü Oluşturucu)](../../../docs/framework/tools/ngen-exe-native-image-generator.md)komutunu kullanın. <br /><br /> 1,0 ve 1,1 .NET Framework sürümlerinde, **/ungen** belirtildiğinde, derlemeyi yerel görüntü önbelleğinden kaldırmak Için Gacutil. exe neden olur. Bu önbellek, [Ngen. exe (yerel görüntü Oluşturucu)](../../../docs/framework/tools/ngen-exe-native-image-generator.md)kullanılarak oluşturulmuş derlemelerin yerel görüntülerini depolar.|
+|**/u** [**Ngen**] *AssemblyName*|Belirtilen bir derlemeyi genel bütünleştirilmiş kod önbelleğinden kaldırır. Eğer belirtilen derlemenin varolan başvuru sayısı varsa, araç başvuru sayılarını görüntüler ve derlemeyi genel bütünleştirilmiş kod önbelleğinden kaldırmaz. **Not:**  .NET Framework sürüm 2,0 ' `/ungen` de desteklenmez. Bunun yerine, `uninstall` [Ngen. exe (yerel görüntü Oluşturucu)](ngen-exe-native-image-generator.md)komutunu kullanın. <br /><br /> 1,0 ve 1,1 .NET Framework sürümlerinde, **/ungen** belirtildiğinde, derlemeyi yerel görüntü önbelleğinden kaldırmak Için Gacutil. exe neden olur. Bu önbellek, [Ngen. exe (yerel görüntü Oluşturucu)](ngen-exe-native-image-generator.md)kullanılarak oluşturulmuş derlemelerin yerel görüntülerini depolar.|
 |**/ur** *assemblyName*<br /><br /> *Şemadaki*<br /><br /> *id*<br /><br /> *description*|Belirtilen bir derleme için genel bütünleştirilmiş kod önbelleğinden bir başvuru kaldırır. Bir derlemeye yönelik bir başvuruyu kaldırmak için, derleme yüklenirken **/i** ve **/r** (veya **/ir)** seçenekleriyle belirtilen aynı *Düzen*, *kimlik*ve *Açıklama* parametrelerini belirtmeniz gerekir. Bu parametreler için belirtebileceğiniz geçerli değerlerin bir açıklaması için **/r** seçeneğine bakın.<br /><br /> Bu seçeneği belirtmek, **/u** ve **/r** seçeneklerini birlikte belirtmeye eşdeğerdir.|
 |**/?**|Araç için komut sözdizimini ve seçenekleri görüntüler.|
 
@@ -180,7 +180,7 @@ gacutil /l
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Araçlar](../../../docs/framework/tools/index.md)
-- [Genel Derleme Önbelleği](../../../docs/framework/app-domains/gac.md)
-- [Regasm.exe (Derleme Kayıt Aracı)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md)
-- [Komut İstemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [Araçlar](index.md)
+- [Genel Derleme Önbelleği](../app-domains/gac.md)
+- [Regasm.exe (Derleme Kayıt Aracı)](regasm-exe-assembly-registration-tool.md)
+- [Komut İstemleri](developer-command-prompt-for-vs.md)

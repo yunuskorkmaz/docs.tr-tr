@@ -1,43 +1,43 @@
 ---
-title: Visual Studio'da AJAX etkin bir WCF hizmeti ve bir ASP.NET istemcisi oluşturma
+title: Visual Studio 'da AJAX etkin bir WCF hizmeti ve ASP.NET Istemcisi oluşturma
 ms.date: 08/17/2018
 ms.assetid: 95012df8-2a66-420d-944a-8afab261013e
-ms.openlocfilehash: 06fa3a9d0151f3b4b865c421f9960854ef471377
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1f5c9eb1750b0df28836f147d5b4be1b223bb52e
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64754612"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053689"
 ---
-# <a name="how-to-create-an-ajax-enabled-wcf-service-and-an-aspnet-client-that-accesses-the-service"></a>Nasıl yapılır: Hizmete erişen bir AJAX etkin WCF hizmeti ve bir ASP.NET istemcisi oluşturma
+# <a name="how-to-create-an-ajax-enabled-wcf-service-and-an-aspnet-client-that-accesses-the-service"></a>Nasıl yapılır: Hizmete erişen AJAX etkin bir WCF hizmeti ve ASP.NET Istemcisi oluşturma
 
-Bu konuda bir AJAX etkinleştirilmiş Windows Communication Foundation (WCF) hizmeti ve hizmete erişen bir ASP.NET istemcisi oluşturmak için Visual Studio kullanmayı gösterir.
+Bu konuda, Visual Studio kullanarak hizmete erişen bir AJAX özellikli Windows Communication Foundation (WCF) hizmeti ve bir ASP.NET istemcisi oluşturma konusu gösterilmektedir.
 
-## <a name="create-an-aspnet-web-app"></a>ASP.NET web uygulaması oluşturma
+## <a name="create-an-aspnet-web-app"></a>ASP.NET Web uygulaması oluşturma
 
 1. Visual Studio'yu açın.
 
-1. Gelen **dosya** menüsünde **yeni** > **proje**
+1. **Dosya** menüsünden **Yeni** > **Proje** ' yi seçin.
 
-1. İçinde **yeni proje** iletişim kutusunda Genişlet **yüklü** > **Visual C#** > **Web** kategorisi ve ardından seçin **ASP.NET Web uygulaması (.NET Framework)**.
+1. **Yeni proje** iletişim kutusunda, **yüklü** >   > **görsel C#**  **Web** kategorisini genişletin ve sonra **ASP.NET Web uygulaması (.NET Framework)** öğesini seçin.
 
-1. Projeyi adlandırın **SandwichServices** tıklatıp **Tamam**.
+1. Projeyi **SandwichServices** olarak adlandırın ve **Tamam**' a tıklayın.
 
-1. İçinde **yeni ASP.NET Web uygulaması** iletişim kutusunda **boş** seçip **Tamam**.
+1. **Yeni ASP.NET Web uygulaması** Iletişim kutusunda **boş** ' ı seçin ve ardından **Tamam**' ı seçin.
 
-   ![Visual Studio'da ASP.NET web uygulaması türü iletişim kutusu](media/create-an-ajax-wcf-asp-net-client/new-asp-net-web-app-type.png)
+   ![Visual Studio 'da ASP.NET Web uygulaması türü iletişim kutusu](./media/create-an-ajax-wcf-asp-net-client/new-asp-net-web-app-type.png)
 
-## <a name="add-a-web-form"></a>Bir web formu ekleyin
+## <a name="add-a-web-form"></a>Web formu ekleme
 
-1. SandwichServices projeye sağ **Çözüm Gezgini** seçip **Ekle** > **yeni öğe**.
+1. **Çözüm Gezgini** ' de SandwichServices projesine sağ tıklayın ve**Yeni öğe** **Ekle** > ' yi seçin.
 
-1. İçinde **Yeni Öğe Ekle** iletişim kutusunda Genişlet **yüklü** > **Visual C#** > **Web** kategorisi ve ardından seçin **Web formu** şablonu.
+1. **Yeni öğe Ekle** iletişim kutusunda,  >  **yüklü** > **görsel C#**  **Web** kategorisini genişletin ve ardından **Web formu** şablonunu seçin.
 
-1. Varsayılan adı kabul edin (**WebForm1**) ve ardından **Ekle**.
+1. Varsayılan adı (**WebForm1**) kabul edin ve **Ekle**' yi seçin.
 
-   *WebForm1.aspx* açılır **kaynak** görünümü.
+   **Kaynak** görünümünde *WebForm1. aspx* açılır.
 
-1. İçinde aşağıdaki işaretlemeyi ekleyin  **\<gövdesi >** etiketler:
+1. Aşağıdaki biçimlendirmeyi  **\<body >** etiketleri içine ekleyin:
 
    ```html
    <input type="button" value="Price of 3 sandwiches" onclick="Calculate()"/>
@@ -47,17 +47,17 @@ Bu konuda bir AJAX etkinleştirilmiş Windows Communication Foundation (WCF) hiz
 
 ## <a name="create-an-ajax-enabled-wcf-service"></a>AJAX etkin bir WCF hizmeti oluşturma
 
-1. SandwichServices projeye sağ **Çözüm Gezgini** seçip **Ekle** > **yeni öğe**.
+1. **Çözüm Gezgini** ' de SandwichServices projesine sağ tıklayın ve**Yeni öğe** **Ekle** > ' yi seçin.
 
-1. İçinde **Yeni Öğe Ekle** iletişim kutusunda Genişlet **yüklü** > **Visual C#** > **Web** kategorisi ve ardından seçin **WCF Hizmeti (AJAX etkin)** şablonu.
+1. **Yeni öğe Ekle** iletişim kutusunda,  >  **yüklü** > **görsel C#**  **Web** kategorisini genişletin ve ardından **WCF hizmeti (AJAX etkin)** şablonunu seçin.
 
-   ![Visual Studio'da WCF Hizmeti (AJAX etkin) öğe şablonu](media/create-an-ajax-wcf-asp-net-client/add-wcf-service.png)
+   ![Visual Studio 'da WCF hizmeti (AJAX etkin) öğe şablonu](./media/create-an-ajax-wcf-asp-net-client/add-wcf-service.png)
 
-1. Hizmet adı **CostService** seçip **Ekle**.
+1. Service **CostService hizmetini** adlandırın ve **Ekle**' yi seçin.
 
-   *CostService.svc.cs* düzenleyicisinde açılır.
+   *CostService.svc.cs* , düzenleyicide açılır.
 
-1. İşlem hizmette uygulayın. Sandwiches miktarı maliyetini hesaplamak için CostService sınıfına aşağıdaki yöntemi ekleyin:
+1. İşlemi hizmette uygulayın. Aşağıdaki yöntemi CostService sınıfına ekleyerek bir Sandwiches miktarının maliyetini hesaplayın:
 
     ```csharp
     [OperationContract]
@@ -67,15 +67,15 @@ Bu konuda bir AJAX etkinleştirilmiş Windows Communication Foundation (WCF) hiz
     }
     ```
 
-## <a name="configure-the-client-to-access-the-service"></a>Hizmete erişmek için istemciyi Yapılandırma
+## <a name="configure-the-client-to-access-the-service"></a>İstemciyi hizmete erişmek için yapılandırma
 
-1. Açık *WebForm1.aspx* seçin ve dosya **tasarım** görünümü.
+1. *WebForm1. aspx* dosyasını açın ve **Tasarım** görünümünü seçin.
 
-2. Gelen **görünümü** menüsünde **araç kutusu**.
+2. **Görünüm** menüsünden **araç kutusu**' nu seçin.
 
-3. Genişletin **AJAX uzantıları** düğüm ve sürükle ve bırak bir **ScriptManager** forma.
+3. **AJAX Uzantıları** düğümünü genişletin ve bir **ScriptManager** 'ı sürükleyip form üzerine bırakın.
 
-4. Geri **kaynak** görüntülemek için arasına aşağıdaki kodu ekleyin  **\<ScriptManager >** WCF Hizmeti yolunu belirtmek için etiketler:
+4. **Kaynak** görünümüne geri döndüğünüzde, WCF hizmeti yolunu belirtmek için  **\<ScriptManager >** etiketleri arasına aşağıdaki kodu ekleyin:
 
     ```xml
     <Services>
@@ -83,7 +83,7 @@ Bu konuda bir AJAX etkinleştirilmiş Windows Communication Foundation (WCF) hiz
     </Services>
     ```
 
-5. Javascript işlevi için kod ekleme `Calculate()`. Aşağıdaki kodda yerleştirin **baş** web formu bölümünü:
+5. JavaScript işlevi `Calculate()`için kodu ekleyin. Web formunun **baş** bölümüne aşağıdaki kodu yerleştirin:
 
     ```html
     <script type="text/javascript">
@@ -100,15 +100,15 @@ Bu konuda bir AJAX etkinleştirilmiş Windows Communication Foundation (WCF) hiz
     </script>
     ```
 
-   Bu kod üç sandwiches fiyatı hesaplamak için CostService yöntemini çağırır ve sonucu adı verilen yayılımda görüntüler **additionResult**.
+   Bu kod, üç Sandwiches için fiyat hesaplamak üzere CostService yöntemini çağırır ve sonra sonucu **Additionresult**adlı yayılma alanında görüntüler.
 
 ## <a name="run-the-program"></a>Programı çalıştırma
 
-Emin olun *WebForm1.aspx* odaklı ve tuşuna **Başlat** web istemcisi için düğme. Düğme yeşil üçgenle sahip ve aşağıdaki gibi diyor. **IIS Express (Microsoft Edge)**. Ya da basabilirsiniz **F5**. Tıklayın **3 sandwiches fiyatı** beklenen çıktıyı "3,75" oluşturmak için düğme.
+*WebForm1. aspx* ' in odağa sahip olduğundan emin olun ve sonra Web istemcisini başlatmak için **Başlat** düğmesine basın. Düğmenin yeşil bir üçgeni vardır ve **IIS Express (Microsoft Edge)** gibi bir şey diyor. İsterseniz **F5**'e de basabilirsiniz. Beklenen "3,75" çıktısını oluşturmak için **3 Sandwiches** düğmesine tıklayın.
 
 ## <a name="example-code"></a>Örnek kod
 
-Tam kod aşağıdadır *CostService.svc.cs* dosyası:
+*CostService.svc.cs* dosyasındaki tam kod aşağıda verilmiştir:
 
 ```csharp
 using System.ServiceModel;
@@ -129,7 +129,7 @@ namespace SandwichServices
 }
 ```
 
-Aşağıdadır tam içeriğini *WebForm1.aspx* sayfası:
+*WebForm1. aspx* sayfasının tüm içerikleri aşağıda verilmiştir:
 
 ```aspx-csharp
 <%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="SandwichServices.WebForm1" %>
