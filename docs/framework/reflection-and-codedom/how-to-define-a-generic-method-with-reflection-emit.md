@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 93892fa4-90b3-4ec4-b147-4bec9880de2b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1a224093b47241d951b463a7f3e0be389bba2806
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 857bad224d1a88c7011a42d0595b17b1810381aa
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70043735"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046057"
 ---
 # <a name="how-to-define-a-generic-method-with-reflection-emit"></a>Nasıl yapılır: Yansıma Yayma ile Genel Yöntem Tanımlama
 
@@ -27,7 +27,7 @@ ms.locfileid: "70043735"
 Üçüncü yordam genel yöntemin nasıl çağıralınacağını gösterir.
 
 > [!IMPORTANT]
-> Yalnızca genel bir türe ait olduğundan ve bu türün tür parametrelerini kullandığından bir yöntem genel değildir. Bir yöntem, yalnızca kendi tür parametresi listesine sahipse geneldir. Genel bir yöntem, bu örnekte olduğu gibi genel olmayan bir tür üzerinde bulunabilir. Genel türde genel olmayan bir metoda örnek için bkz [. nasıl yapılır: Yansıma yayma](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)Ile genel bir tür tanımlayın.
+> Yalnızca genel bir türe ait olduğundan ve bu türün tür parametrelerini kullandığından bir yöntem genel değildir. Bir yöntem, yalnızca kendi tür parametresi listesine sahipse geneldir. Genel bir yöntem, bu örnekte olduğu gibi genel olmayan bir tür üzerinde bulunabilir. Genel türde genel olmayan bir metoda örnek için bkz [. nasıl yapılır: Yansıma yayma](how-to-define-a-generic-type-with-reflection-emit.md)Ile genel bir tür tanımlayın.
 
 ### <a name="to-define-a-generic-method"></a>Genel bir yöntemi tanımlamak için
 
@@ -36,7 +36,7 @@ ms.locfileid: "70043735"
     [!code-csharp[GenericMethodHowTo#20](../../../samples/snippets/csharp/VS_Snippets_CLR/GenericMethodHowTo/CS/source.cs#20)]
     [!code-vb[GenericMethodHowTo#20](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodHowTo/VB/source.vb#20)]
 
-2. Genel yöntemin ait olduğu türü içeren bir dinamik derleme ve dinamik modül tanımlayın. Bu durumda, derleme yalnızca bir modüle `DemoMethodBuilder1`sahiptir ve modül adı derleme adının yanı sıra bir uzantıyla aynıdır. Bu örnekte, derleme diske kaydedilir ve de yürütülür, bu nedenle <xref:System.Reflection.Emit.AssemblyBuilderAccess.RunAndSave?displayProperty=nameWithType> belirtilir. DemoMethodBuilder1. dll ' yi incelemek ve adım 1 ' de gösterilen metodun Microsoft ara dili (MSIL) ile karşılaştırmak için [ıldadsm. exe ' yi (IL Disassembler)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) kullanabilirsiniz.
+2. Genel yöntemin ait olduğu türü içeren bir dinamik derleme ve dinamik modül tanımlayın. Bu durumda, derleme yalnızca bir modüle `DemoMethodBuilder1`sahiptir ve modül adı derleme adının yanı sıra bir uzantıyla aynıdır. Bu örnekte, derleme diske kaydedilir ve de yürütülür, bu nedenle <xref:System.Reflection.Emit.AssemblyBuilderAccess.RunAndSave?displayProperty=nameWithType> belirtilir. DemoMethodBuilder1. dll ' yi incelemek ve adım 1 ' de gösterilen metodun Microsoft ara dili (MSIL) ile karşılaştırmak için [ıldadsm. exe ' yi (IL Disassembler)](../tools/ildasm-exe-il-disassembler.md) kullanabilirsiniz.
 
     [!code-csharp[GenericMethodHowTo#2](../../../samples/snippets/csharp/VS_Snippets_CLR/GenericMethodHowTo/CS/source.cs#2)]
     [!code-vb[GenericMethodHowTo#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodHowTo/VB/source.vb#2)]
@@ -156,7 +156,7 @@ Aşağıdaki kod örneği, genel bir `DemoType` `Factory`yöntemi olan genel olm
 
 Yönteminde bir dizisi `TInput`olan bir biçimsel parametre vardır. Yöntemi, giriş dizisinin tüm öğelerini `TOutput` içeren bir örneğini döndürür. `TOutput`<xref:System.Collections.Generic.ICollection%601> genel arabirimi uygulayan herhangi bir genel koleksiyon türü olabilir.
 
-Kod yürütüldüğünde, dinamik derleme DemoGenericMethod1. dll olarak kaydedilir ve [ıldadsm. exe (IL Disassembler)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)kullanılarak incelenebilir.
+Kod yürütüldüğünde, dinamik derleme DemoGenericMethod1. dll olarak kaydedilir ve [ıldadsm. exe (IL Disassembler)](../tools/ildasm-exe-il-disassembler.md)kullanılarak incelenebilir.
 
 > [!NOTE]
 > Kodu nasıl yayılacağınızı öğrenmek, oluşturmaya çalıştığınız görevi gerçekleştiren Visual Basic, C#ya da görsel C++ programı yazmak ve derleyici tarafından üretilen MSIL 'yi incelemek için ayrıştırıcı 'yi kullanmak için iyi bir yoldur.
@@ -169,4 +169,4 @@ Kod örneği, yayılan yönteme denk gelen kaynak kodunu içerir. Yayınlanan Y�
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Reflection.Emit.MethodBuilder>
-- [Nasıl yapılır: Yansıma Yayma ile genel bir tür tanımlama](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)
+- [Nasıl yapılır: Yansıma Yayma ile genel bir tür tanımlama](how-to-define-a-generic-type-with-reflection-emit.md)

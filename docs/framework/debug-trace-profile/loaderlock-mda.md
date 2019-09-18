@@ -12,38 +12,38 @@ helpviewer_keywords:
 ms.assetid: 8c10fa02-1b9c-4be5-ab03-451d943ac1ee
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9a70b8c3509b785d70b041b449c759e7994e5984
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c3e8769ec972ec76d04d2f22368fdde99de9c6de
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61754238"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052541"
 ---
 # <a name="loaderlock-mda"></a>loaderLock MDA
-`loaderLock` Yönetilen hata ayıklama Yardımcısı (MDA) Microsoft Windows işletim sistemi yükleyici kilidi tutan bir iş parçacığında yönetilen kodu yürütmek için girişimleri algılar.  Böyle bir yürütme, Kilitlenmeler ve işletim sistemi yükleyicisi tarafından başlatılmış olması önce dll kullanmak için neden olabileceği için geçersizdir.  
+Yönetilen `loaderLock` hata ayıklama Yardımcısı (MDA), Microsoft Windows işletim sistemi yükleyicisi kilidini tutan bir iş parçacığında yönetilen kodu yürütme girişimlerini algılar.  Bu tür bir yürütme kilitlenmeyle sonuçlanabileceğinden ve DLL 'lerin işletim sistemi yükleyicisi tarafından başlatılmadan önce kullanabilmesi nedeniyle geçersizdir.  
   
 ## <a name="symptoms"></a>Belirtiler  
- İşletim sistemi yükleyici kilidi içinde kod yürütülürken en yaygın iş parçacıkları yükleyici kilidi gerektiren diğer Win32 işlevlerini çağırmaya çalışırken kilitlenme hatasıdır.  Bu tür işlevler örnekleri `LoadLibrary`, `GetProcAddress`, `FreeLibrary`, ve `GetModuleHandle`.  Uygulamayı doğrudan bu işlevler çağırmamanız; Ortak dil çalışma zamanı (CLR), bu işlevler gibi daha yüksek bir düzeyinde çağrının sonucu olarak çağırabilirsiniz <xref:System.Reflection.Assembly.Load%2A> veya ilk çağrıda bir platform çağırma yöntemi.  
+ İşletim sisteminin yükleyici kilidi içinde kod yürütürken en yaygın hata, aynı zamanda yükleyici kilidi gerektiren diğer Win32 işlevlerini çağırmaya çalışırken iş parçacıklarının kilitlenmeleridir.  `LoadLibrary`Bu işlevlere `GetProcAddress` örnekler,`GetModuleHandle`, ve. `FreeLibrary`  Uygulama bu işlevleri doğrudan çağırmayabilir; ortak dil çalışma zamanı (CLR), daha üst düzey bir çağrının <xref:System.Reflection.Assembly.Load%2A> veya platform çağırma yöntemine yapılan ilk çağrının sonucu olarak bu işlevleri çağırabilir.  
   
- Bir iş parçacığı başlangıç ve bitiş başka bir iş parçacığı için bekliyorsa kilitlenmeleri de oluşabilir.  Bir iş parçacığı başlatıldığında veya yürütme tamamlandıktan sonra işletim sistemi yükleyici kilidi etkilenen DLL'lerin olayları teslim etmeyi edinmeniz gerekir.  
+ Kilitlenmeler Ayrıca bir iş parçacığının başlamasını veya bitmesini bekliyorsa meydana gelebilir.  Bir iş parçacığı başladığında veya yürütmeyi bitirdiğinde, etkilenen dll 'lere olay göndermek için işletim sisteminin yükleyici kilidini almalıdır.  
   
- Son olarak, bu DLL'leri işletim sistemi yükleyicisi tarafından düzgün şekilde başlatıldığından önce DLL'leri çağırıyor burada oluşabilecek durumlar vardır.  Tüm iş parçacıkları kilitlenmeyle ilgili yığını inceleyerek koydu, kilitlenme hataların, bu mda'nın kullanmadan başlatılmamış DLL'lerin kullanımına tanılamak oldukça zor.  
+ Son olarak, dll 'lere yapılan çağrıların işletim sisteminin yükleyicisi tarafından düzgün bir şekilde başlatılmadan önce gerçekleşebileceği durumlar vardır.  Kilitlenmede yer alan tüm iş parçacıklarının yığınlarını inceleyerek tanılanabilir kilitlenme hatalarından farklı olarak, bu MDA ' ı kullanmadan başlatılmamış dll 'lerin kullanımını tanılamak çok zordur.  
   
 ## <a name="cause"></a>Sebep  
- Bağlama ile .NET Framework sürümleri 1.0 veya 1.1 genellikle önemi, örneğin, alınmış sürece, yönetilen kod yükleyici kilidi içinde çalıştırma denemesi için oluşturulan yönetilen veya yönetilmeyen C++ karışık derlemeler **/NOENTRY**.
+ 1,0 veya 1,1 sürümleri C++ .NET Framework için oluşturulan karma yönetilen/yönetilmeyen derlemeler genellikle özel bir bakım yapılmadığı takdirde (örneğin, **/NOENTRY**ile bağlantı kurarak), yükleyici kilidi içinde yönetilen kodu yürütmeye çalışır.
   
- .NET Framework 2.0 sürümünde oluşturulmuş karışık yönetilen veya yönetilmeyen C++ derlemeler işletim sisteminin kurallarını ihlal yönetilmeyen DLL'ler kullanan uygulamalar olarak aynı daha az risk altında olan bu sorunları için daha az açıktır.  Örneğin, yönetilmeyen DLL'ın `DllMain` giriş noktası çağrıları `CoCreateInstance` COM kullanıma sunulan bir yönetilen nesne almak için yönetilen kod yükleyici kilidi içinde yürütme girişimi sonucudur. .NET Framework sürüm 2.0 ve sonraki yükleyici kilidi sorunlar hakkında daha fazla bilgi için bkz. [karışık derlemeleri başlatma](/cpp/dotnet/initialization-of-mixed-assemblies).  
+ .NET Framework sürüm 2,0 için C++ derlenmiş, karışık yönetilen/yönetilmeyen derlemeler bu sorunlara açıktır ve bu sorunlar, işletim sisteminin kurallarını ihlal eden yönetilmeyen DLL 'leri kullanan uygulamalarla aynı risk azalmasına sahip olacak şekilde daha düşüktür.  Örneğin, yönetilmeyen bir dll 'nin `DllMain` giriş noktası com 'a sunulan yönetilen bir nesne almak için çağırırsa `CoCreateInstance` , bu, yükleyici kilidi içinde yönetilen kodu yürütmeye çalışır. .NET Framework sürüm 2,0 ve sonraki sürümlerde yükleyici kilit sorunları hakkında daha fazla bilgi için bkz. [karışık derlemeleri başlatma](/cpp/dotnet/initialization-of-mixed-assemblies).  
   
 ## <a name="resolution"></a>Çözüm  
- Visual C++ .NET 2002 ve Visual C++ .NET 2003'te, DLL'ler ile derlenmiş `/clr` derleyici seçeneği belirleyici olmayan şekilde kilitlenme yüklendiğinde; bu sorunu karışık DLL yükleme veya yükleyici kilidi sorunu çağrıldı. Visual C++ 2005 ve sonraki sürümlerinde, neredeyse tüm gerekircilik karışık DLL yükleme işlemi kaldırıldı. Ancak, birkaç vardır senaryoları için hangi yükleyici kilidi oluşabilir (belirleyici) kaldı. Nedenleri ve çözümlemeleri kalan yükleyici kilidi sorunlarında ayrıntılı hesabı için bkz: [karışık derlemeleri başlatma](/cpp/dotnet/initialization-of-mixed-assemblies). Bu konu, yükleyici kilidi sorununuzu tanımlamaz, yükleyici kilidi neden oluştuğunu ve sorunun nasıl giderileceği belirlemek için iş parçacığının yığınını incelemek sahip. Bu mda'nın etkinleştirilmiş iş parçacığı için yığın izlemesi bakın.  İş parçacığı, yasa dışı işletim sistemi yükleyici kilidi tutuluyken yönetilen koda çağrı yapmak çalışıyor.  Bir DLL'nin büyük olasılıkla görürsünüz `DllMain` veya eşdeğer girişi yığın üzerine gelin.  İşletim sisteminin yasal gelen içinde bu tür bir giriş noktası yapabilecekleriniz kuralları oldukça sınırlıdır.  Bu kurallar herhangi bir yönetilen yürütme kullanımını.  
+ Visual C++ .NET 2002 ve Visual C++ .NET 2003 ' de, `/clr` derleyici seçeneği ile derlenen dll 'ler yüklendiğinde belirleyici olmayan biçimde kilitlenmeye neden olabilir; bu sorun, karışık dll yükleme veya yükleyici kilit sorunu olarak adlandırılmıştı. Visual C++ 2005 ve üzeri sürümlerde, neredeyse tüm belirleyici olmayan ISM, karışık dll yükleme işleminden kaldırılmıştır. Ancak, yükleyici kilidinin (belirleyici) meydana olabileceği birkaç senaryo vardır. Kalan yükleyici kilidi sorunları için nedenler ve çözümlerin ayrıntılı bir hesabı için bkz. [karışık derlemeler başlatma](/cpp/dotnet/initialization-of-mixed-assemblies). Bu konu, yükleyici kilit sorununuzu tanımlamadığı takdirde, yükleyici kilidinin neden gerçekleştiğini ve sorunu nasıl düzelteceğini belirlemek için iş parçacığının yığınını incelemeniz gerekir. Bu MDA ' i etkinleştiren iş parçacığı için yığın izlemesine bakın.  İş parçacığı, işletim sisteminin yükleyici kilidini tutarken yönetilen koda geçersiz şekilde çağrı yapmaya çalışıyor.  Büyük olasılıkla yığında bir dll `DllMain` veya denk giriş noktası görürsünüz.  Bu tür bir giriş noktasının içinden yasal olarak yapabilecekleri, işletim sisteminin kuralları sınırlı değildir.  Bu kurallar, yönetilen yürütmeyi de halden daha fazla.  
   
-## <a name="effect-on-the-runtime"></a>Çalışma zamanı üzerindeki etkisi  
- Genellikle, işlem içinde birden çok iş parçacığı kilitlenme.  Bu iş parçacıkları birini bir iş parçacığı bu kilitlenme işlem üzerinde önemli bir etkiye sahip olabilir, böylece bir çöp toplama yapmaktan sorumlu olması olasıdır.  Ayrıca, yükleme ve kaldırma derlemeleri veya DLL'leri ve başlangıç veya iş parçacıklarını durdurma gibi işletim sistemi yükleyici kilidi gerektiren herhangi bir ek işlem engel olur.  
+## <a name="effect-on-the-runtime"></a>Çalışma zamanında etki  
+ Genellikle, işlem içindeki birkaç iş parçacığı kilitlenir.  Bu iş parçacıklarından biri, çöp toplama gerçekleştirmekten sorumlu bir iş parçacığı olabilir, bu nedenle bu kilitlenme işlemin tamamına büyük bir etkiye sahip olabilir.  Ayrıca, derleme ve DLL 'Leri yükleme ve kaldırma, iş parçacıklarını başlatma veya durdurma gibi işletim sisteminin yükleyici kilidi gerektiren ek işlemleri de engeller.  
   
- Olağan dışı bazı durumlarda da erişim ihlalleri veya başlatılmış olması önce çağrılan DLL'lerde tetiklenmesi için benzer sorunlar için mümkündür.  
+ Bazı Olağandışı durumlarda, erişim ihlalleri veya benzer sorunların, başlatılmadan önce çağrılan dll 'lerde tetiklenmesi de mümkündür.  
   
 ## <a name="output"></a>Çıkış  
- Bu MDA, geçersiz bir yönetilen yürütme yapılmaya çalışılan bildirir.  Yükleyici kilidi neden oluştuğunu ve sorunun nasıl giderileceği belirlemek için iş parçacığı yığınının incelemeniz gerekir.  
+ Bu MDA geçersiz bir yönetilen yürütmenin denenmekte olduğunu bildirir.  Yükleyici kilidinin neden gerçekleştiğini ve sorunu nasıl düzelteceğini öğrenmek için iş parçacığının yığınını incelemeniz gerekir.  
   
 ## <a name="configuration"></a>Yapılandırma  
   
@@ -57,4 +57,4 @@ ms.locfileid: "61754238"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Yönetilen Hata Ayıklama Yardımcıları ile Hataları Tanılama](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [Yönetilen Hata Ayıklama Yardımcıları ile Hataları Tanılama](diagnosing-errors-with-managed-debugging-assistants.md)

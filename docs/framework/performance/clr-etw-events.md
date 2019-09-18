@@ -8,64 +8,64 @@ helpviewer_keywords:
 ms.assetid: ef2b31c3-7426-43e7-9924-92339b96556d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a6b18f736743f1057641c20c7ef2bc544272f94f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6798a83973f94f07a2a215d5208aa55f0f9ae929
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64616660"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046741"
 ---
 # <a name="clr-etw-events"></a>CLR ETW Olayları
-Bu bölümdeki konularda, Windows (ETW) olayları için olay izleme açıklanmaktadır. İlişkili bir anahtar sözcüğü her olayda ve düzeyi, açıklanan olduğu [CLR ETW anahtar sözcükleri ve Düzeyler](../../../docs/framework/performance/clr-etw-keywords-and-levels.md) konu. CLR olayları için iki sağlayıcıları vardır:  
+Bu bölümdeki konular, Windows için olay izleme (ETW) olaylarını anlatmaktadır. Her olayın ilişkili bir anahtar sözcüğü ve düzeyi vardır ve bu, [CLR ETW anahtar sözcükleri ve düzeyleri](clr-etw-keywords-and-levels.md) konusunda açıklanmıştır. CLR, olaylar için iki sağlayıcıya sahiptir:  
   
-- Çalışma zamanı sağlayıcısı olayları etkin anahtar sözcüklere (olayların kategorilerini) bağlı olarak oluşturur. CLR çalışma zamanı sağlayıcısı GUID e13c0d23-ccbc-4e12-931b-d9cc2eee27e4 ' dir.  
+- Hangi anahtar kelimelerle (olay kategorileri) etkin olarak olay başlatan çalışma zamanı sağlayıcısı. CLR çalışma zamanı sağlayıcısı GUID 'SI e13c0d23-CCBC-4e12-931B-d9cc2eee27e4.  
   
-- Özel amaçlı olan Özet sağlayıcısı kullanır. CLR özeti sağlayıcısının GUID a669021c-c450-4609-a035-5af59af4df18.  
+- Özel amaçlı kullanımları olan özet sağlayıcısı. CLR özeti sağlayıcısı GUID 'SI A669021C-C450-4609-A035-5AF59AF4DF18.  
   
- Sağlayıcılar hakkında daha fazla bilgi için bkz. [CLR ETW sağlayıcılar](../../../docs/framework/performance/clr-etw-providers.md).  
+ Sağlayıcılar hakkında daha fazla bilgi için bkz. [CLR ETW sağlayıcıları](clr-etw-providers.md).  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Çalışma Zamanı Bilgileri Olayları](../../../docs/framework/performance/runtime-information-etw-events.md)  
- SKU, sürüm numarası, hangi çalışma zamanı etkinleştirildi, şekilde dahil olmak üzere çalışma zamanı, GUID, (varsa), ile başlatıldığından komut satırı parametreleri hakkında bilgi ve diğer ilgili bilgileri yakalar.  
+ [Çalışma Zamanı Bilgileri Olayları](runtime-information-etw-events.md)  
+ Çalışma zamanı hakkında SKU, sürüm numarası, çalışma zamanının etkinleştirildiği yol, ile başlatıldığı komut satırı parametreleri, GUID (varsa) ve diğer ilgili bilgiler dahil olmak üzere çalışma zamanı hakkındaki bilgileri yakalar.  
   
- [Özel Durum Thrown_V1 Olayı](../../../docs/framework/performance/exception-thrown-v1-etw-event.md)  
- Oluşturulan özel durumları hakkında bilgileri yakalar.  
+ [Özel Durum Thrown_V1 Olayı](exception-thrown-v1-etw-event.md)  
+ Oluşturulan özel durumlarla ilgili bilgileri yakalar.  
   
- [Çekişme Olayları](../../../docs/framework/performance/contention-etw-events.md)  
- Çalışma zamanı kullanan İzleyici kilitler veya yerel kilit çakışması bilgilerini yakalar.  
+ [Çekişme Olayları](contention-etw-events.md)  
+ İzleme kilitleri veya çalışma zamanının kullandığı yerel kilitler hakkında çekişme hakkında bilgi yakalar.  
   
- [İş Parçacığı Havuzu Olayları](../../../docs/framework/performance/thread-pool-etw-events.md)  
- Çalışan iş parçacığı havuzları ve g/ç iş parçacığı havuzları hakkındaki bilgileri yakalar.  
+ [İş Parçacığı Havuzu Olayları](thread-pool-etw-events.md)  
+ Çalışan iş parçacığı havuzları ve g/ç iş parçacığı havuzları hakkında bilgi yakalar.  
   
- [Yükleyici Olayları](../../../docs/framework/performance/loader-etw-events.md)  
- Modülleri yükleme ve kaldırma uygulama etki alanları ve derlemeler hakkındaki bilgileri yakalar.  
+ [Yükleyici Olayları](loader-etw-events.md)  
+ Uygulama etki alanlarını, derlemeleri ve modülleri yükleme ve kaldırma hakkında bilgi yakalar.  
   
- [Yöntem Olayları](../../../docs/framework/performance/method-etw-events.md)  
- Sembol çözümlemesi için CLR yöntemleri hakkında bilgi yakalar.  
+ [Yöntem Olayları](method-etw-events.md)  
+ Sembol çözümleme için CLR yöntemleriyle ilgili bilgileri yakalar.  
   
- [Atık Toplama Olayları](../../../docs/framework/performance/garbage-collection-etw-events.md)  
- Çöp toplama, tanılama ve hata ayıklama amacıyla ilgili bilgileri yakalar.  
+ [Atık Toplama Olayları](garbage-collection-etw-events.md)  
+ Tanılama ve hata ayıklama konusunda yardımcı olmak için çöp koleksiyonuyla ilgili bilgileri yakalar.  
   
- [Olayları Tam Zamanında İzleme](../../../docs/framework/performance/jit-tracing-etw-events.md)  
- Just-in-time (JIT) satır içi kullanım ve kuyruk çağrıları hakkındaki bilgileri yakalar.  
+ [Olayları Tam Zamanında İzleme](jit-tracing-etw-events.md)  
+ Tam zamanında (JıT) giriş ve kuyruk çağrıları hakkındaki bilgileri yakalar.  
   
- [Birlikte Çalışma Olayları](../../../docs/framework/performance/interop-etw-events.md)  
- Microsoft Ara dili (MSIL) saplama oluşturma ve önbelleğe alma hakkında bilgi yakalar.  
+ [Birlikte Çalışma Olayları](interop-etw-events.md)  
+ Microsoft ara dili (MSIL) saplama oluşturma ve önbelleğe alma hakkında bilgi yakalar.  
   
- [ARM Olayları](../../../docs/framework/performance/application-domain-resource-monitoring-arm-etw-events.md)  
- Uygulama etki alanı durumu hakkında ayrıntılı tanılama bilgileri çalışın.  
+ [ARM Olayları](application-domain-resource-monitoring-arm-etw-events.md)  
+ Bir uygulama etki alanının durumu hakkında ayrıntılı tanılama bilgilerini yakalar.  
   
- [Güvenlik Olayları](../../../docs/framework/performance/security-etw-events.md)  
- Tanımlayıcı ad hem de Authenticode doğrulama hakkındaki bilgileri yakalar.  
+ [Güvenlik Olayları](security-etw-events.md)  
+ Tanımlayıcı ad ve Authenticode doğrulama hakkındaki bilgileri yakalar.  
   
- [Yığın Olayı](../../../docs/framework/performance/stack-etw-event.md)  
- Bir olay tetiklenir sonra yığın izlemelerini oluşturmak için kullanılan diğer olaylarla bilgileri yakalar.  
+ [Yığın Olayı](stack-etw-event.md)  
+ Bir olay oluşturulduktan sonra yığın izlemeleri oluşturmak için diğer olaylarla birlikte kullanılan bilgileri yakalar.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hata ayıklama artırmak ve ETW ile performans ayarlama](https://go.microsoft.com/fwlink/?LinkId=179696)
-- [Windows Performans blogu](https://go.microsoft.com/fwlink/?LinkId=179509)
-- [.NET Framework Günlük Kaydını Denetleme](../../../docs/framework/performance/controlling-logging.md)
-- [CLR ETW Sağlayıcılar](../../../docs/framework/performance/clr-etw-providers.md)
-- [CLR ETW Anahtar Sözcükleri ve Düzeyler](../../../docs/framework/performance/clr-etw-keywords-and-levels.md)
-- [Ortak Dil Çalışma Zamanı Modülünde ETW Olayları](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md)
+- [ETW Ile hata ayıklama ve performans ayarlamayı geliştirme](https://go.microsoft.com/fwlink/?LinkId=179696)
+- [Windows performans blogu](https://go.microsoft.com/fwlink/?LinkId=179509)
+- [.NET Framework Günlük Kaydını Denetleme](controlling-logging.md)
+- [CLR ETW Sağlayıcılar](clr-etw-providers.md)
+- [CLR ETW Anahtar Sözcükleri ve Düzeyler](clr-etw-keywords-and-levels.md)
+- [Ortak Dil Çalışma Zamanı Modülünde ETW Olayları](etw-events-in-the-common-language-runtime.md)

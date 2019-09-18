@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: e38ae4f3-3e3d-42c3-a4b8-db1aa9d84f85
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ce93ea321c0441208e223efc22cf1f50e98b827c
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 1a15d30ea4d6e0f4456460248e96428419117d85
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044128"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049435"
 ---
 # <a name="net-native-and-compilation"></a>.NET Yerel ve Derleme
 
@@ -82,7 +82,7 @@ Bir uygulamayı Il 'den yerel koda dönüştürme sırasında .NET Native araç 
 
 - COM birlikte çalışma.
 
-Gerekli meta veriler veya uygulama kodu çalışma zamanında yoksa, .NET Native çalışma zamanı bir özel durum oluşturur. Bu özel durumları engelleyebilir ve .NET Native araç zincirinin, meta verileri veya uygulama olan program öğelerini atayan bir XML dosyası olan bir [çalışma zamanı yönergeleri dosyası](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)kullanarak gerekli meta verileri ve uygulama kodunu içerdiğinden emin olabilirsiniz. kod çalışma zamanında kullanılabilir olmalıdır ve bunlara bir çalışma zamanı İlkesi atar. Aşağıda, .NET Native araç zinciri tarafından derlenen bir Windows Mağazası projesine eklenen varsayılan çalışma zamanı yönergeleri dosyası verilmiştir:
+Gerekli meta veriler veya uygulama kodu çalışma zamanında yoksa, .NET Native çalışma zamanı bir özel durum oluşturur. Bu özel durumları engelleyebilir ve .NET Native araç zincirinin, meta verileri veya uygulama olan program öğelerini atayan bir XML dosyası olan bir [çalışma zamanı yönergeleri dosyası](runtime-directives-rd-xml-configuration-file-reference.md)kullanarak gerekli meta verileri ve uygulama kodunu içerdiğinden emin olabilirsiniz. kod çalışma zamanında kullanılabilir olmalıdır ve bunlara bir çalışma zamanı İlkesi atar. Aşağıda, .NET Native araç zinciri tarafından derlenen bir Windows Mağazası projesine eklenen varsayılan çalışma zamanı yönergeleri dosyası verilmiştir:
 
 ```xml
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">
@@ -96,7 +96,7 @@ Bu, tüm türlerinin ve tüm üyelerinin tüm üyelerini, yansıma ve dinamik ç
 
 ## <a name="net-native-and-ngen"></a>.NET Native ve NGEN
 
-[(Yerel görüntü Oluşturucu](../../../docs/framework/tools/ngen-exe-native-image-generator.md) (NGen) derlemeleri yerel koda derler ve yerel bilgisayardaki yerel görüntü önbelleğine yüklenir. Ancak, .NET Native gibi .NET Native yerel kod üretse de, bazı önemli yollarla farklıdır:
+[(Yerel görüntü Oluşturucu](../tools/ngen-exe-native-image-generator.md) (NGen) derlemeleri yerel koda derler ve yerel bilgisayardaki yerel görüntü önbelleğine yüklenir. Ancak, .NET Native gibi .NET Native yerel kod üretse de, bazı önemli yollarla farklıdır:
 
 - Belirli bir yöntem için kullanılabilir yerel görüntü yoksa, NGEN, Jtıve koda geri döner. Bu, yerel görüntülerin, NGEN 'in JıT derlemesine geri dönmesi gereken olayda meta verileri ve Il 'yi eklemeye devam etmesi gerektiği anlamına gelir. Buna karşılık .NET Native yalnızca yerel görüntüler üretir ve JıT derlemesine geri dönmemektedir. Sonuç olarak, yalnızca bazı yansıma, serileştirme ve birlikte çalışma senaryoları için gereken meta veriler korunmalıdır.
 
@@ -108,5 +108,5 @@ Bu, tüm türlerinin ve tüm üyelerinin tüm üyelerini, yansıma ve dinamik ç
 
 - [Meta Veriler ve Kendiliğinden Açıklayıcı Bileşenler](../../standard/metadata-and-self-describing-components.md)
 - [.NET Native içinde (Channel 9 Videosu)](https://channel9.msdn.com/Shows/Going+Deep/Inside-NET-Native)
-- [Yansıma ve .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md)
-- [.NET Native Genel Sorun Giderme](../../../docs/framework/net-native/net-native-general-troubleshooting.md)
+- [Yansıma ve .NET Native](reflection-and-net-native.md)
+- [.NET Native Genel Sorun Giderme](net-native-general-troubleshooting.md)

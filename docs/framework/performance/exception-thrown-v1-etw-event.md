@@ -7,39 +7,39 @@ helpviewer_keywords:
 ms.assetid: 0d3da389-6b7b-40f6-a877-fac546d6019c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: dd322d25d91bb277a4c817594c968c28a6d61d68
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 91abd9e6f31380b7e8cd3df1a14aa5c5722901ba
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61723023"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046512"
 ---
-# <a name="exception-thrownv1-etw-event"></a>Özel Durum Thrown_V1 ETW Olayı
-Bu olay attığı özel durumları hakkında bilgileri yakalar.  
+# <a name="exception-thrown_v1-etw-event"></a>Özel Durum Thrown_V1 ETW Olayı
+Bu olay, oluşturulan özel durumlarla ilgili bilgileri yakalar.  
   
- Aşağıdaki tabloda, anahtar sözcüğü altında olay tetiklenir ve olay düzeyini gösterir. (Daha fazla bilgi için [CLR ETW anahtar sözcükleri ve Düzeyler](../../../docs/framework/performance/clr-etw-keywords-and-levels.md).)  
+ Aşağıdaki tabloda, olayın oluşturulduğu anahtar sözcük ve olay düzeyi gösterilmektedir. (Daha fazla bilgi için bkz. [CLR ETW anahtar sözcükleri ve düzeyleri](clr-etw-keywords-and-levels.md).)  
   
-|Olayı için anahtar sözcüğü|Düzey|  
+|Olayı yükseltmek için anahtar sözcük|Düzey|  
 |-----------------------------------|-----------|  
-|`ExceptionKeyword` (0x8000)|Uyarı (2)|  
+|`ExceptionKeyword`0x8000|Uyarı (2)|  
   
- Aşağıdaki tablo, olay bilgilerini gösterir.  
+ Aşağıdaki tabloda olay bilgileri gösterilmektedir.  
   
-|Olay|Olay Kimliği|Ne zaman gerçekleşti|  
+|Olay|Olay Kimliği|Ne zaman oluşturulur|  
 |-----------|--------------|-----------------|  
 |`ExceptionThrown_V1`|80|Yönetilen bir özel durum oluşturulur.|  
   
- Aşağıdaki tabloda, olay verilerini gösterir.  
+ Aşağıdaki tabloda olay verileri gösterilmektedir.  
   
 |Alan adı|Veri türü|Açıklama|  
 |----------------|---------------|-----------------|  
-|Özel Durum Türü|Kazanma: UnicodeString|Özel durumun türünü; Örneğin, `System.NullReferenceException`.|  
-|Özel durum iletisi|Kazanma: UnicodeString|Gerçek özel durum iletisi.|  
-|EIPCodeThrow|Kazanma: işaretçi|Özel durum oluştuğu yönerge işaretçisi.|  
-|ExceptionHR|Kazanma: UInt32|Özel durum [HRESULT](https://go.microsoft.com/fwlink/?LinkId=179679).|  
-|ExceptionFlags|Kazanma: UInt16|0x01: HasInnerException (bkz [CLR ETW olaylarını](../../../docs/framework/performance/clr-etw-events.md) Visual Basic belgelerinde).<br /><br /> 0x02: IsNestedException.<br /><br /> 0x04: IsRethrownException.<br /><br /> 0x08: IsCorruptedStateException (işlem durumu bozuk olduğunu belirtir; bkz [işleme bozuk durum özel durumları](https://go.microsoft.com/fwlink/?LinkId=179681) MSDN'de).<br /><br /> 0x10: IsCLSCompliant (türeyen bir özel durum <xref:System.Exception> CLS uyumlu; Aksi takdirde, CLS uyumlu değil).|  
-|ClrInstanceID|Kazanma: UInt16|CLR veya CoreCLR örneği için benzersiz kimlik.|  
+|Özel Durum Türü|Win: UnicodeString|Özel durumun türü; Örneğin, `System.NullReferenceException`.|  
+|Özel durum Iletisi|Win: UnicodeString|Gerçek özel durum iletisi.|  
+|EIPCodeThrow|Win: Işaretçi|Özel durumun oluştuğu yönerge işaretçisi.|  
+|ExceptionHR|Win: UInt32|Özel durum [HRESULT](https://go.microsoft.com/fwlink/?LinkId=179679).|  
+|ExceptionFlags|Win: UInt16|0x01 HasInnerException (Visual Basic belgelerinde [CLR ETW olaylarını](clr-etw-events.md) görün).<br /><br /> 0x02 şeklindedir IsNestedException.<br /><br /> 0x04: IsRethrownException.<br /><br /> 0x08: Ibozulan Tedstateexception (işlem durumunun bozuk olduğunu, bkz. MSDN 'de [bozuk durum özel durumlarını işleme](https://go.microsoft.com/fwlink/?LinkId=179681) ).<br /><br /> 0x10 Iclscompliant (öğesinden <xref:System.Exception> türetilen özel durum CLS uyumludur; Aksi takdirde, CLS uyumlu değildir).|  
+|ClrInstanceID|Win: UInt16|CLR veya CoreCLR örneği için benzersiz KIMLIK.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [CLR ETW Olayları](../../../docs/framework/performance/clr-etw-events.md)
+- [CLR ETW Olayları](clr-etw-events.md)

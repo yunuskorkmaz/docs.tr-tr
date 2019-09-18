@@ -23,19 +23,20 @@ helpviewer_keywords:
 ms.assetid: d1a58e7f-fb39-4d50-bf84-e3b8f9bf9775
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 374a97eea7f6432833ebbcf40736ea6c7a6d4039
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 57f0a13a5e57898add667082d670de39431f940f
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70970945"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045874"
 ---
 # <a name="reflection-in-net"></a>.NET 'te yansıma
+
 <xref:System.Reflection> Ad <xref:System.Type?displayProperty=nameWithType>alanındaki sınıflar ile birlikte, yüklü [derlemeler](../../standard/assembly/index.md) ve bunlar içinde tanımlanan türler ( [sınıflar](../../standard/base-types/common-type-system.md#classes), [arabirimler](../../standard/base-types/common-type-system.md#interfaces)ve [değer türleri](../../csharp/language-reference/keywords/value-types.md)gibi) hakkında bilgi edinmenizi sağlar. Ayrıca, çalışma zamanında tür örnekleri oluşturmak ve bunları çağırmak ve bunlara erişmek için yansıma de kullanabilirsiniz. Yansımanın belirli yönleri hakkında konular için bu genel bakışı sonundaki [Ilgili konular](#related_topics) bölümüne bakın.
   
- [Ortak dil çalışma zamanı](../../standard/clr.md) yükleyicisi, aynı uygulama kapsamına sahip nesneler etrafında tanımlanmış sınırları oluşturan [uygulama etki alanlarını](../../../docs/framework/app-domains/application-domains.md)yönetir. Bu yönetim, her derlemenin uygun uygulama etki alanına yüklenmesini ve her derleme içindeki tür hiyerarşisinin bellek yerleşimini denetlemeyi içerir.  
+[Ortak dil çalışma zamanı](../../standard/clr.md) yükleyicisi, aynı uygulama kapsamına sahip nesneler etrafında tanımlanmış sınırları oluşturan [uygulama etki alanlarını](../app-domains/application-domains.md)yönetir. Bu yönetim, her derlemenin uygun uygulama etki alanına yüklenmesini ve her derleme içindeki tür hiyerarşisinin bellek yerleşimini denetlemeyi içerir.  
   
- [Derlemeler](../../../docs/framework/app-domains/index.md) modüller içerir, modüller türler içerir ve türler üye içerir. Yansıma derlemeleri, modülleri ve türleri kapsülleyen nesneler sağlar. Bir türün örneğini dinamik olarak oluşturmak, türü varolan bir nesneye bağlamak veya var olan bir nesneden türü almak için yansıma kullanabilirsiniz. Daha sonra türün yöntemlerini çağırabilir veya alan ve özelliklerine erişim sağlayabilirsiniz. Yansımanın tipik kullanımları şunları içerir:  
+[Derlemeler](../app-domains/index.md) modüller içerir, modüller türler içerir ve türler üye içerir. Yansıma derlemeleri, modülleri ve türleri kapsülleyen nesneler sağlar. Bir türün örneğini dinamik olarak oluşturmak, türü varolan bir nesneye bağlamak veya var olan bir nesneden türü almak için yansıma kullanabilirsiniz. Daha sonra türün yöntemlerini çağırabilir veya alan ve özelliklerine erişim sağlayabilirsiniz. Yansımanın tipik kullanımları şunları içerir:  
   
 - Derlemeleri <xref:System.Reflection.Assembly> tanımlamak ve yüklemek, derleme bildiriminde listelenen modülleri yüklemek ve bu derlemeden bir tür bulmak ve bir örneğini oluşturmak için kullanın.  
   
@@ -55,37 +56,39 @@ ms.locfileid: "70970945"
   
 - Bir <xref:System.Reflection.CustomAttributeData> uygulama etki alanının yalnızca yansıma bağlamında çalışırken özel öznitelikler hakkında bilgi edinmek için kullanın. <xref:System.Reflection.CustomAttributeData>öznitelikleri, örnekleri oluşturmadan incelemenizi sağlar.  
   
- <xref:System.Reflection.Emit> Ad alanının sınıfları, çalışma zamanında türleri oluşturmanıza olanak sağlayan özelleştirilmiş bir yansıma biçimi sağlar.  
+<xref:System.Reflection.Emit> Ad alanının sınıfları, çalışma zamanında türleri oluşturmanıza olanak sağlayan özelleştirilmiş bir yansıma biçimi sağlar.  
   
- Yansıma Ayrıca, kullanıcıların tür seçmesini ve ardından bu türlerle ilgili bilgileri görüntülemesini sağlayan tarayıcı türü olarak adlandırılan uygulamalar oluşturmak için de kullanılabilir.  
+Yansıma Ayrıca, kullanıcıların tür seçmesini ve ardından bu türlerle ilgili bilgileri görüntülemesini sağlayan tarayıcı türü olarak adlandırılan uygulamalar oluşturmak için de kullanılabilir.  
   
- Yansıma için başka kullanımlar vardır. JScript gibi dillere yönelik derleyiciler sembol tabloları oluşturmak için yansıma kullanır. <xref:System.Runtime.Serialization> Ad alanındaki sınıflar, verilere erişmek ve hangi alanların kalıcı olduğunu anlamak için yansıma kullanır. <xref:System.Runtime.Remoting> Ad alanındaki sınıflar, serileştirme aracılığıyla yansımayı dolaylı olarak kullanır.  
+Yansıma için başka kullanımlar vardır. JScript gibi dillere yönelik derleyiciler sembol tabloları oluşturmak için yansıma kullanır. <xref:System.Runtime.Serialization> Ad alanındaki sınıflar, verilere erişmek ve hangi alanların kalıcı olduğunu anlamak için yansıma kullanır. <xref:System.Runtime.Remoting> Ad alanındaki sınıflar, serileştirme aracılığıyla yansımayı dolaylı olarak kullanır.  
   
 ## <a name="runtime-types-in-reflection"></a>Yansımadaki Çalışma Zamanı Türleri  
- Yansıma, türleri, üyeleri, <xref:System.Type> parametreleri <xref:System.Reflection.MethodInfo>ve diğer kod varlıklarını göstermek için ve gibi sınıflar sağlar. Ancak, yansıma kullandığınızda, en fazla soyut olan (`MustInherit` Visual Basic) bu sınıflarla doğrudan çalışmanız gerekmez. Bunun yerine, ortak dil çalışma zamanı (CLR) tarafından sunulan türlerle çalışırsınız.  
+Yansıma, türleri, üyeleri, <xref:System.Type> parametreleri <xref:System.Reflection.MethodInfo>ve diğer kod varlıklarını göstermek için ve gibi sınıflar sağlar. Ancak, yansıma kullandığınızda, en fazla soyut olan (`MustInherit` Visual Basic) bu sınıflarla doğrudan çalışmanız gerekmez. Bunun yerine, ortak dil çalışma zamanı (CLR) tarafından sunulan türlerle çalışırsınız.  
   
- Örneğin C# `typeof` , bir`GetType` `RuntimeType`nesneyialmakiçin işlecini (Visual Basic) kullandığınızda, nesne gerçekten bir olur. <xref:System.Type> `RuntimeType`' dan <xref:System.Type> türetilir ve tüm soyut yöntemlerin uygulamalarını sağlar.  
+Örneğin C# `typeof` , bir`GetType` `RuntimeType`nesneyialmakiçin işlecini (Visual Basic) kullandığınızda, nesne gerçekten bir olur. <xref:System.Type> `RuntimeType`' dan <xref:System.Type> türetilir ve tüm soyut yöntemlerin uygulamalarını sağlar.  
   
- Bu çalışma zamanı sınıfları `internal` (`Friend` Visual Basic). Davranışları temel sınıf belgeleri tarafından açıklandığından, bunlar temel sınıflarından ayrı olarak açıklanmazlar.  
+Bu çalışma zamanı sınıfları `internal` (`Friend` Visual Basic). Davranışları temel sınıf belgeleri tarafından açıklandığından, bunlar temel sınıflarından ayrı olarak açıklanmazlar.  
   
 <a name="related_topics"></a>   
+
 ## <a name="related-topics"></a>İlgili Konular  
   
 |Başlık|Açıklama|  
 |-----------|-----------------|  
-|[Tür Bilgilerini Görüntüleme](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)|Sınıfını açıklar ve oluşturucular, Yöntemler, alanlar, Özellikler ve olaylar <xref:System.Type> hakkında bilgi edinmek için çeşitli yansıma sınıflarıyla birlikte nasıl kullanılacağını gösteren kod örnekleri sağlar. <xref:System.Type>|  
-|[Yansıma ve Genel Türler](../../../docs/framework/reflection-and-codedom/reflection-and-generic-types.md)|Yansımanın tür parametrelerini ve genel türlerin tür bağımsız değişkenlerini ve genel yöntemleri nasıl işlediğini açıklar.|  
-|[Yansımayla İlgili Güvenlik Konuları](../../../docs/framework/reflection-and-codedom/security-considerations-for-reflection.md)|Tür bilgilerini ve erişim türlerini saptamak için hangi derece yansıma 'nin kullanılabileceğini belirlemek için kuralları açıklar.|  
-|[Türleri Dinamik Olarak Yükleme ve Kullanma](../../../docs/framework/reflection-and-codedom/dynamically-loading-and-using-types.md)|Geç bağlamayı destekleyen yansıma özel bağlama arabirimini açıklar.|  
-|[Nasıl yapılır: Derlemeleri yalnızca yansıma Içeriğine yükle](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)|Yalnızca yansıma yük bağlamını açıklar. Bir derlemenin nasıl yükleneceğini, bağlamını nasıl test leneceğini ve yalnızca yansıma bağlamındaki bir derlemeye uygulanan özniteliklerin nasıl incelenuygulanacağını gösterir.|  
-|[Özel Özniteliklere Erişim](../../../docs/framework/reflection-and-codedom/accessing-custom-attributes.md)|Öznitelik varlığını ve değerlerini sorgulamak için yansıma kullanımını gösterir.|  
-|[Tam Olarak Nitelenmiş Tür Adlarını Belirtme](../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md)|Backus-Naur form (BNF) ve özel karakterler, derleme adları, işaretçiler, başvurular ve diziler için gereken söz dizimi açısından tam nitelikli tür adlarının biçimini açıklar.|  
-|[Nasıl yapılır: Yansıma kullanarak temsilci bağlama](../../../docs/framework/reflection-and-codedom/how-to-hook-up-a-delegate-using-reflection.md)|Bir yöntem için nasıl temsilci oluşturacağınızı ve temsilciyi bir olaya nasıl bağlanacağını açıklar. Kullanarak <xref:System.Reflection.Emit.DynamicMethod>çalışma zamanında bir olay işleme yönteminin nasıl oluşturulacağını açıklar.|  
-|[Dinamik Yöntemleri ve Derlemeleri Yayma](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)|Dinamik derlemeler ve dinamik yöntemler oluşturmayı açıklar.|  
+|[Tür Bilgilerini Görüntüleme](viewing-type-information.md)|Sınıfını açıklar ve oluşturucular, Yöntemler, alanlar, Özellikler ve olaylar <xref:System.Type> hakkında bilgi edinmek için çeşitli yansıma sınıflarıyla birlikte nasıl kullanılacağını gösteren kod örnekleri sağlar. <xref:System.Type>|  
+|[Yansıma ve Genel Türler](reflection-and-generic-types.md)|Yansımanın tür parametrelerini ve genel türlerin tür bağımsız değişkenlerini ve genel yöntemleri nasıl işlediğini açıklar.|  
+|[Yansımayla İlgili Güvenlik Konuları](security-considerations-for-reflection.md)|Tür bilgilerini ve erişim türlerini saptamak için hangi derece yansıma 'nin kullanılabileceğini belirlemek için kuralları açıklar.|  
+|[Türleri Dinamik Olarak Yükleme ve Kullanma](dynamically-loading-and-using-types.md)|Geç bağlamayı destekleyen yansıma özel bağlama arabirimini açıklar.|  
+|[Nasıl yapılır: Derlemeleri yalnızca yansıma Içeriğine yükle](how-to-load-assemblies-into-the-reflection-only-context.md)|Yalnızca yansıma yük bağlamını açıklar. Bir derlemenin nasıl yükleneceğini, bağlamını nasıl test leneceğini ve yalnızca yansıma bağlamındaki bir derlemeye uygulanan özniteliklerin nasıl incelenuygulanacağını gösterir.|  
+|[Özel Özniteliklere Erişim](accessing-custom-attributes.md)|Öznitelik varlığını ve değerlerini sorgulamak için yansıma kullanımını gösterir.|  
+|[Tam Olarak Nitelenmiş Tür Adlarını Belirtme](specifying-fully-qualified-type-names.md)|Backus-Naur form (BNF) ve özel karakterler, derleme adları, işaretçiler, başvurular ve diziler için gereken söz dizimi açısından tam nitelikli tür adlarının biçimini açıklar.|  
+|[Nasıl yapılır: Yansıma kullanarak temsilci bağlama](how-to-hook-up-a-delegate-using-reflection.md)|Bir yöntem için nasıl temsilci oluşturacağınızı ve temsilciyi bir olaya nasıl bağlanacağını açıklar. Kullanarak <xref:System.Reflection.Emit.DynamicMethod>çalışma zamanında bir olay işleme yönteminin nasıl oluşturulacağını açıklar.|  
+|[Dinamik Yöntemleri ve Derlemeleri Yayma](emitting-dynamic-methods-and-assemblies.md)|Dinamik derlemeler ve dinamik yöntemler oluşturmayı açıklar.|  
   
 ## <a name="reference"></a>Başvuru  
- <xref:System.Type?displayProperty=nameWithType>  
+
+<xref:System.Type?displayProperty=nameWithType>  
   
- <xref:System.Reflection>  
+<xref:System.Reflection>  
   
- <xref:System.Reflection.Emit>  
+<xref:System.Reflection.Emit>  

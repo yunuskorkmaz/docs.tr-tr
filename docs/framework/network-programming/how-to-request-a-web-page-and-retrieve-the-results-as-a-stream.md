@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d32b7f35-29d8-4fb7-ad71-d219edc5e359
-ms.openlocfilehash: 74cb739d381c0b1422d9277be8c3c338a46f8fba
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b3d24a958ec93084d03d2ad2e0eb6d9d2507e155
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647415"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048171"
 ---
 # <a name="how-to-request-a-web-page-and-retrieve-the-results-as-a-stream"></a>Nasıl yapılır: Web Sayfası İsteme ve Sonuçları Akış Olarak Alma
-Bu örnek, bir Web sayfası isteme ve sonuçları bir akış alma gösterilmektedir.  
+Bu örnek, bir Web sayfasının nasıl isteneceğini ve sonuçların bir akışta nasıl alınacağını gösterir.  
   
 ## <a name="example"></a>Örnek  
   
@@ -32,10 +32,10 @@ response.Close()
 ```  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
- Bu örnek gerektirir:  
+ Bu örnek şunları gerektirir:  
   
-- Başvurular <xref:System.IO> ve <xref:System.Net> ad alanları.  
+- <xref:System.IO> Ve<xref:System.Net> ad alanlarına başvurular.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Veri İsteme](../../../docs/framework/network-programming/requesting-data.md)
+- [Veri İsteme](requesting-data.md)

@@ -7,17 +7,17 @@ helpviewer_keywords:
 ms.assetid: 0c25ff6c-bff3-422e-b017-146a3ee86cb9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 46475cbc8517fc73d8b7fd868c7632e5c85a7726
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: f99b2fd4716b069d4ec7a21e369c5178990ce16d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894798"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044201"
 ---
 # <a name="signtoolexe-sign-tool"></a>SignTool.exe (İmza Aracı)
 İmza aracı, dosyaları dijital imzalayan, dosyalardaki imzaları doğrulayan ve dosyalara zaman damgası veren bir komut satırı aracıdır.  
   
- Bu araç, Visual Studio ile birlikte otomatik olarak yüklenir. Aracı çalıştırmak için, Visual Studio için Geliştirici Komut İstemi (veya Windows 7 ' de Visual Studio komut Istemi) kullanın. Daha fazla bilgi için bkz. [komut istemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+ Bu araç, Visual Studio ile birlikte otomatik olarak yüklenir. Aracı çalıştırmak için, Visual Studio için Geliştirici Komut İstemi (veya Windows 7 ' de Visual Studio komut Istemi) kullanın. Daha fazla bilgi için bkz. [komut istemleri](developer-command-prompt-for-vs.md).  
   
  Komut satırına şunu yazın:  
   
@@ -39,10 +39,10 @@ signtool [command] [options] [file_name | ...]
   
 |Komut|Açıklama|  
 |-------------|-----------------|  
-|`catdb`|Katalog veritabanına bir katalog dosyası ekler veya katalog veritabanından katalog dosyasını kaldırır. Katalog veritabanları, katalog dosyalarının otomatik araması için kullanılır ve GUID ile tanımlanır. `catdb` Komutu tarafından desteklenen seçeneklerin bir listesi için bkz. [CATDB komut seçenekleri](../../../docs/framework/tools/signtool-exe.md#catdb).|  
-|`sign`|Dosyaları dijital olarak imzalar. Dijital imzalar, dosyaları izinsiz kullanıma karşı korur ve kullanıcıların bir imza sertifikası temelinde imzalayanı doğrulamasına olanak sağlar. `sign` Komutu tarafından desteklenen seçeneklerin bir listesi için bkz. [imza komutu seçenekleri](../../../docs/framework/tools/signtool-exe.md#sign).|  
-|`Timestamp`|Zaman damgaları dosyaları. `TimeStamp` Komutu tarafından desteklenen seçeneklerin bir listesi için bkz. [timestamp komut Options](../../../docs/framework/tools/signtool-exe.md#TimeStamp).|  
-|`Verify`|İmzalama sertifikasının güvenilir bir yetkili tarafından verilmiş, imzalama sertifikasının iptal edilmiş ve isteğe bağlı olarak imzalama sertifikasının belirli bir ilke için geçerli olup olmadığını belirleyerek dosyaların dijital imzasını doğrular. `Verify` Komutu tarafından desteklenen seçeneklerin bir listesi için bkz. [komut seçeneklerini doğrulama](../../../docs/framework/tools/signtool-exe.md#Verify).|  
+|`catdb`|Katalog veritabanına bir katalog dosyası ekler veya katalog veritabanından katalog dosyasını kaldırır. Katalog veritabanları, katalog dosyalarının otomatik araması için kullanılır ve GUID ile tanımlanır. `catdb` Komutu tarafından desteklenen seçeneklerin bir listesi için bkz. [CATDB komut seçenekleri](signtool-exe.md#catdb).|  
+|`sign`|Dosyaları dijital olarak imzalar. Dijital imzalar, dosyaları izinsiz kullanıma karşı korur ve kullanıcıların bir imza sertifikası temelinde imzalayanı doğrulamasına olanak sağlar. `sign` Komutu tarafından desteklenen seçeneklerin bir listesi için bkz. [imza komutu seçenekleri](signtool-exe.md#sign).|  
+|`Timestamp`|Zaman damgaları dosyaları. `TimeStamp` Komutu tarafından desteklenen seçeneklerin bir listesi için bkz. [timestamp komut Options](signtool-exe.md#TimeStamp).|  
+|`Verify`|İmzalama sertifikasının güvenilir bir yetkili tarafından verilmiş, imzalama sertifikasının iptal edilmiş ve isteğe bağlı olarak imzalama sertifikasının belirli bir ilke için geçerli olup olmadığını belirleyerek dosyaların dijital imzasını doğrular. `Verify` Komutu tarafından desteklenen seçeneklerin bir listesi için bkz. [komut seçeneklerini doğrulama](signtool-exe.md#Verify).|  
   
  Aşağıdaki seçenekler bütün İmza Aracı komutlarına uygulanır.  
   
@@ -211,5 +211,5 @@ signtool verify /c MyCatalog.cat SystemFile.dll
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Araçlar](../../../docs/framework/tools/index.md)
-- [Komut İstemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [Araçlar](index.md)
+- [Komut İstemleri](developer-command-prompt-for-vs.md)

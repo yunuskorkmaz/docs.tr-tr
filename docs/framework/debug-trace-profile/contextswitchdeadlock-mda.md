@@ -14,53 +14,53 @@ helpviewer_keywords:
 ms.assetid: 26dfaa15-9ddb-4b0a-b6da-999bba664fa6
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c1a0e2a6c7851b261baa3e02f6431e7a4ff697e4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7bcdb235ff2a73514c5bb3ad7abc3f4c3fc8e441
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64660318"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052919"
 ---
 # <a name="contextswitchdeadlock-mda"></a>contextSwitchDeadlock MDA
 
-`contextSwitchDeadlock` Denenen bir COM içerik geçişi sırasında karşılıklı bir kilitlenme tespit edildiğinde yönetilen hata ayıklama Yardımcısı (MDA) etkinleştirilir.
+Yönetilen `contextSwitchDeadlock` hata ayıklama Yardımcısı (MDA), denenen bir com bağlam geçişi sırasında bir kilitlenme algılandığında etkinleştirilir.
 
 ## <a name="symptoms"></a>Belirtiler
 
-En yaygın yönetilen koddan yönetilmeyen COM bileşeni üzerinde bir çağrı döndürmez belirtisidir.  Zaman içinde artan bellek kullanımı başka bir belirtisidir.
+En yaygın belirti, yönetilmeyen bir COM bileşenindeki bir çağrının yönetilen koddan döndürülmeidir.  Başka bir belirti, zaman içinde artan bellek kullanımdır.
 
 ## <a name="cause"></a>Sebep
 
-En olası nedeni, bir tek iş parçacıklı grup (STA) iş parçacığı iletileri Pompalama değil ' dir. STA iş parçacığı Pompalama olmadan ya da bekleyen iletileri veya uzun işlemlerini gerçekleştirme ve ileti kuyruğuna pompa izin vermiyor ' dir.
+En olası neden, tek iş parçacıklı bir apartman (STA) iş parçacığının ileti pompalama. STA iş parçacığı, pompalama iletileri olmadan bekliyor ya da uzun işlemler gerçekleştiriyor ve ileti sırasının göndericmesine izin vermiyor.
 
-Zaman içinde artan bellek kullanımı arama girişimi Sonlandırıcı iş parçacığı tarafından neden `Release` bir yönetilmeyen COM bileşeni ve söz konusu bileşen döndürmez.  Bu, sonlandırıcının diğer nesnelerin tekrar kullanılabilir hale engeller.
+Zaman içinde artan bellek kullanımı, yönetilmeyen bir com bileşenini çağırmaya `Release` çalışan ve bu bileşen döndürülmeyen Sonlandırıcı iş parçacığı nedeniyle oluşur.  Bu, sonlandırıcının geri kazanma diğer nesnelerden yapılmasını önler.
 
-Varsayılan olarak, Visual Basic konsol uygulamaları ana iş parçacığı için iş parçacığı modeli STA. olur. Bir STA iş parçacığı COM birlikte çalışabilirlik doğrudan veya dolaylı olarak ortak dil çalışma zamanı veya bir üçüncü taraf denetimi kullanıyorsa, bu mda'nın etkin hale gelir.  Bir Visual Basic konsol uygulamasında bu MDA etkinleştirme önlemek için uygulama <xref:System.MTAThreadAttribute> özniteliğini main yöntemine veya iletileri göndermek için değiştirin.
+Varsayılan olarak, Visual Basic konsol uygulamalarının ana iş parçacığı için iş parçacığı modeli STA ' dır. Bir STA iş parçacığı ortak dil çalışma zamanı veya üçüncü taraf bir denetim aracılığıyla doğrudan veya dolaylı olarak COM birlikte çalışabilirliği kullanıyorsa, bu MDA etkinleştirilir.  Bu mda öğesini bir Visual Basic konsol uygulamasında etkinleştirmeyi önlemek için, <xref:System.MTAThreadAttribute> özniteliği Main yöntemine uygulayın veya uygulamayı pompa iletileri olarak değiştirin.
 
-Bu MDA aşağıdaki koşulların tümü karşılandığında, yanlışlıkla etkinleştirilecek mümkündür:
+Aşağıdaki koşulların tümü karşılandığında bu MDA 'ın daha seyrek etkinleştirilmesi mümkündür:
 
-- Bir uygulama STA iş parçacığı için COM bileşenlerini kitaplıkları doğrudan veya dolaylı olarak oluşturur.
+- Uygulama, doğrudan veya dolaylı olarak kitaplıklar aracılığıyla STA iş parçacıklarında COM bileşenleri oluşturur.
 
-- Uygulama hata ayıklayıcıda durduruldu ve kullanıcı uygulamanın devam veya adım işlemi gerçekleştirildi.
+- Uygulama hata ayıklayıcıda durduruldu ve Kullanıcı uygulamayı devam ettirdi ya da bir adım işlemi gerçekleştirdi.
 
-- Yönetilemeyen hata ayıklama etkin değil.
+- Yönetilmeyen hata ayıklama etkin değil.
 
-MDA yanlışlıkla etkinleştirilip etkinleştirilmediğini belirlemek için tüm kesme noktalarını devre dışı bırakmak, uygulamayı yeniden başlatın ve durmadan çalışmasına izin. MDA etkinleştirilmemesi halinde ilk etkinleştirme false olasıdır. Bu durumda, hata ayıklama oturumu ile önlemek için MDA devre dışı bırakın.
+MDA 'ın daha seyrek olarak etkinleştirildiğini anlamak için, tüm kesme noktalarını devre dışı bırakın, uygulamayı yeniden başlatın ve durmadan çalışmasına izin verin. MDA etkinleştirilmemişse, ilk etkinleştirmenin yanlış olması olasıdır. Bu durumda, hata ayıklama oturumunda parazit önlemek için MDA ' ı devre dışı bırakın.
 
 > [!NOTE]
-> Bu mda'nın varsayılan Visual Studio için kullanılıyor. Mda'leri devre dışı bırakma hakkında daha fazla bilgi için bkz: [yönetilen hata ayıklama Yardımcıları ile hataları tanılama](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md#enable-and-disable-mdas).
+> Bu MDA, Visual Studio için varsayılan kümesidir. MDAs 'yi devre dışı bırakma hakkında daha fazla bilgi için bkz. [yönetilen hata ayıklama yardımcıları Ile hataları tanılama](diagnosing-errors-with-managed-debugging-assistants.md#enable-and-disable-mdas).
 
 ## <a name="resolution"></a>Çözüm
 
-STA ileti Pompalama ilgili COM kuralları uygulayın.
+STA iletisi pompalama ile ilgili COM kurallarını izleyin.
 
-## <a name="effect-on-the-runtime"></a>Çalışma zamanı üzerindeki etkisi
+## <a name="effect-on-the-runtime"></a>Çalışma zamanında etki
 
-Bu mda'nın CLR üzerinde etkisi yoktur. Yalnızca veri COM bağlamları hakkında raporlar.
+Bu MDA, CLR üzerinde hiçbir etkisi yoktur. Yalnızca COM bağlamlarına ilişkin verileri raporlar.
 
 ## <a name="output"></a>Çıkış
 
-Geçerli bağlamı ve hedef bağlamı açıklayan bir ileti.
+Geçerli bağlamı ve hedef bağlamını açıklayan bir ileti.
 
 ## <a name="configuration"></a>Yapılandırma
 
@@ -75,5 +75,5 @@ Geçerli bağlamı ve hedef bağlamı açıklayan bir ileti.
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [Yönetilen Hata Ayıklama Yardımcıları ile Hataları Tanılama](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [Birlikte Çalışma için Hazırlama](../../../docs/framework/interop/interop-marshaling.md)
+- [Yönetilen Hata Ayıklama Yardımcıları ile Hataları Tanılama](diagnosing-errors-with-managed-debugging-assistants.md)
+- [Birlikte Çalışma için Hazırlama](../interop/interop-marshaling.md)

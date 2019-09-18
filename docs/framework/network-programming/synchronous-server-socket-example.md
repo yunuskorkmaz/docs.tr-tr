@@ -9,15 +9,15 @@ helpviewer_keywords:
 - sockets, code examples
 - sockets, synchronous server sockets
 ms.assetid: 5916c764-879f-4716-99fb-1d21c6237f1c
-ms.openlocfilehash: 637301385562247ef9c3dee4d01da319c0cd4d37
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: eee533e87c868fadc04e26b374b36a0256dcf38e
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61641872"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047135"
 ---
 # <a name="synchronous-server-socket-example"></a>Zaman Uyumlu Sunucu Yuvası Örneği
-Aşağıdaki örnek program istemcilerinden gelen bağlantı istekleri alan bir sunucu oluşturur. Sunucu, istemci bir bağlantı beklerken sunucu uygulamasının yürütülmesini askıya alınmış şekilde zaman uyumlu bir yuva ile oluşturulmuştur. Uygulama istemciden bir dize alır, dize konsolda görüntüler ve ardından istemcisine dize görüntülemektedir. İstemciden gelen dize, dize içermelidir "\<EOF >" iletisinin son sinyal.  
+Aşağıdaki örnek program istemcilerden gelen bağlantı isteklerini alan bir sunucu oluşturur. Sunucu, zaman uyumlu bir yuva ile oluşturulmuştur, bu nedenle sunucu uygulamasının yürütülmesi istemciden bir bağlantı beklerken askıya alınır. Uygulama istemciden bir dize alır, bu dizeyi konsolda görüntüler ve ardından dizeyi istemciye geri yankılar. İstemciden alınan dize, iletinin sonuna işaret etmek için "\<EOF >" dizesini içermelidir.  
   
 ```vb  
 Imports System  
@@ -157,6 +157,6 @@ public class SynchronousSocketListener {
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Zaman Uyumlu İstemci Yuvası Örneği](../../../docs/framework/network-programming/synchronous-client-socket-example.md)
-- [Zaman Uyumlu Sunucu Yuvası Kullanma](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)
-- [Yuva Kod Örnekleri](../../../docs/framework/network-programming/socket-code-examples.md)
+- [Zaman Uyumlu İstemci Yuvası Örneği](synchronous-client-socket-example.md)
+- [Zaman Uyumlu Sunucu Yuvası Kullanma](using-a-synchronous-server-socket.md)
+- [Yuva Kod Örnekleri](socket-code-examples.md)

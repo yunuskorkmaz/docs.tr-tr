@@ -19,12 +19,12 @@ helpviewer_keywords:
 - classes [.NET Framework], authentication
 - client authentication, NTLM
 ms.assetid: 9ef65560-f596-4469-bcce-f4d5407b55cd
-ms.openlocfilehash: b05cd88fcb492ab27e1d311045b72208167508f1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ca9e1b9bf6235fdaeea25b8975155af429848ae3
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963931"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047523"
 ---
 # <a name="ntlm-and-kerberos-authentication"></a>NTLM ve Kerberos Kimlik Doğrulaması
 Varsayılan NTLM kimlik doğrulaması ve Kerberos kimlik doğrulaması, sunucuyla kimlik doğrulamayı denemek için çağıran uygulamayla ilişkili Microsoft Windows NT Kullanıcı kimlik bilgilerini kullanır. Varsayılan olmayan NTLM kimlik doğrulaması kullanılırken, uygulama kimlik doğrulama türünü NTLM olarak ayarlar ve aşağıdaki örnekte gösterildiği gibi <xref:System.Net.NetworkCredential> Kullanıcı adını, parolayı ve etki alanını konağa geçirmek için bir nesne kullanır.  
@@ -64,5 +64,5 @@ WReq.Credentials = CredentialCache.DefaultCredentials;
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Temel ve Özet Kimlik Doğrulama](../../../docs/framework/network-programming/basic-and-digest-authentication.md)
-- [İnternet Kimlik Doğrulaması](../../../docs/framework/network-programming/internet-authentication.md)
+- [Temel ve Özet Kimlik Doğrulama](basic-and-digest-authentication.md)
+- [İnternet Kimlik Doğrulaması](internet-authentication.md)

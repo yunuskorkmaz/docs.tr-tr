@@ -6,75 +6,75 @@ helpviewer_keywords:
 - ExpandCollapse control pattern
 - control patterns, ExpandCollapse
 ms.assetid: 1dbabb8c-0d68-47c1-a35e-1c01cb01af26
-ms.openlocfilehash: 9477dfa4ab487d1d5d7aec0220f0655b742ec551
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 232bceba8286c2566a7df03b9001a5c43b348b20
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67660855"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71043454"
 ---
 # <a name="implementing-the-ui-automation-expandcollapse-control-pattern"></a>UI Otomasyon ExpandCollapse Denetim Düzeni Uygulama
 
 > [!NOTE]
-> Bu belge yönetilen kullanmak isteyen .NET Framework için tasarlanan [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tanımlanan sınıflar <xref:System.Windows.Automation> ad alanı. En son bilgileri [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], bkz: [Windows Automation API: UI Otomasyonu](https://go.microsoft.com/fwlink/?LinkID=156746).
+> Bu belge, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] <xref:System.Windows.Automation> ad alanında tanımlanan yönetilen sınıfları kullanmak isteyen .NET Framework geliştiricilere yöneliktir. Hakkında [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]en son bilgiler için bkz [. Windows Otomasyonu API 'si: UI Otomasyonu](https://go.microsoft.com/fwlink/?LinkID=156746).
 
-Bu konu, yönergeleri ve uygulama kuralları tanıtır <xref:System.Windows.Automation.Provider.IExpandCollapseProvider>, özellikler, yöntemler ve olaylar hakkında bilgiler dahil olmak üzere. Ek başvurular bağlantılar genel bakış sonunda listelenmiştir.
+Bu konuda özellikler, Yöntemler ve olaylar hakkında <xref:System.Windows.Automation.Provider.IExpandCollapseProvider>bilgiler de dahil olmak üzere uygulama yönergeleri ve kuralları tanıtılmaktadır. Ek başvuruların bağlantıları genel bakış sonunda listelenir.
 
-<xref:System.Windows.Automation.ExpandCollapsePattern> Denetim düzeni, görsel olarak daha fazla içeriği görüntülemek için genişletme ve içeriği gizlemek için daraltma denetimleri desteklemek için kullanılır. Bu denetim düzeni uygulama denetimleri örnekleri için bkz: [denetim düzeni eşlemesi için UI Otomasyonu istemcileri](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md).
+<xref:System.Windows.Automation.ExpandCollapsePattern> Denetim deseninin daha fazla içerik görüntülemesi için görsel genişlettikten ve içeriği gizlemek için daraltılacak denetimleri desteklemek için kullanılır. Bu denetim modelini uygulayan denetimlerin örnekleri için bkz. [UI Otomasyonu istemcileri Için denetim model eşlemesi](control-pattern-mapping-for-ui-automation-clients.md).
 
 <a name="Implementation_Guidelines_and_Conventions"></a>
 
-## <a name="implementation-guidelines-and-conventions"></a>Uygulama yönergeleri ve kuralları
+## <a name="implementation-guidelines-and-conventions"></a>Uygulama kılavuzları ve kuralları
 
-ExpandCollapse denetim düzeni uygularken aşağıdaki yönergeler ve kuralları dikkat edin:
+ExpandCollapse denetim modelini uygularken, aşağıdaki kılavuz ve kurallara göz önünde yer verilmiştir:
 
-- Denetimleri bir araya — Genişlet/Daralt işlevselliği ile kullanıcı arabirimini sağlayan alt nesneleri ile oluşturulmuş — desteklemelidir <xref:System.Windows.Automation.ExpandCollapsePattern> denetim düzeni bunların alt öğeleri almamasıdır. Örneğin, bir birleşik giriş kutusu denetimi birleşimi liste kutusu ve düğme düzenleme denetimleri ile derlendi ancak desteklemesi gereken üst birleşik giriş kutusu olan <xref:System.Windows.Automation.ExpandCollapsePattern>.
+- Genişletme/daraltma işleviyle Kullanıcı arabirimini sağlayan alt nesneler ile oluşturulan toplama denetimleri, <xref:System.Windows.Automation.ExpandCollapsePattern> alt öğeleri olmadığı halde denetim deseninin desteklenmesi gerekir. Örneğin, bir Birleşik giriş kutusu denetimi liste kutusu, düğme ve düzenleme denetimleri ile oluşturulmuştur, ancak yalnızca öğesini desteklemesi <xref:System.Windows.Automation.ExpandCollapsePattern>gereken üst Birleşik giriş kutusudur.
 
   > [!NOTE]
-  > Tek tek MenuItem nesnelerin bir toplama menü denetimi istisnadır. MenuItem nesnelerini destekleyebilir <xref:System.Windows.Automation.ExpandCollapsePattern> denetim düzeni, ancak üst menü denetleyemezsiniz. Benzer bir özel durum ağacı ve ağaç öğesi denetim için geçerlidir.
+  > Özel durum, tek tek MenuItem nesnelerinin toplamı olan menü denetimidir. MenuItem nesneleri <xref:System.Windows.Automation.ExpandCollapsePattern> denetim modelini destekleyebilir, ancak üst menü denetimi olamaz. Ağaç ve ağaç öğesi denetimleri için benzer bir özel durum geçerlidir.
 
-- Zaman <xref:System.Windows.Automation.ExpandCollapseState> denetimin kümesine <xref:System.Windows.Automation.ExpandCollapseState.LeafNode>, <xref:System.Windows.Automation.ExpandCollapsePattern> işlevselliği denetim için şu anda etkin değil ve bu denetim desenini kullanarak elde edilebilecek tek bilgi <xref:System.Windows.Automation.ExpandCollapseState>. Tüm alt nesneleri daha sonradan eklenen, <xref:System.Windows.Automation.ExpandCollapseState> değişiklikleri ve <xref:System.Windows.Automation.ExpandCollapsePattern> işlevselliği etkinleştirilir.
+- Bir denetimin ' e <xref:System.Windows.Automation.ExpandCollapseState.LeafNode>ayarlandığı zaman, herhangi <xref:System.Windows.Automation.ExpandCollapsePattern> bir işlev denetim için şu anda etkin değildir ve bu denetim düzeniyle <xref:System.Windows.Automation.ExpandCollapseState>elde edilebilir tek bilgiler. <xref:System.Windows.Automation.ExpandCollapseState> Herhangi bir alt nesne daha sonra eklenirse, <xref:System.Windows.Automation.ExpandCollapseState> değişiklikler ve <xref:System.Windows.Automation.ExpandCollapsePattern> işlevler etkinleştirilir.
 
-- <xref:System.Windows.Automation.ExpandCollapseState> yalnızca ilk alt nesneler görünürlüğünü gösterir. tüm alt nesneleri görünürlüğünü başvurmuyor.
+- <xref:System.Windows.Automation.ExpandCollapseState>yalnızca anlık alt nesnelerin görünürlüğünü ifade eder; tüm alt nesnelerin görünürlüğüne başvurmaz.
 
-- Genişlet ve Daralt işlevi denetimine özgü olur. Bu davranış örnekleri aşağıda verilmiştir.
+- Genişletme ve daraltma işlevselliği denetimine özgüdür. Aşağıda bu davranışın örnekleri verilmiştir.
 
-  - Office kişisel menü üç durum MenuItem olabilir (<xref:System.Windows.Automation.ExpandCollapseState.Expanded>, <xref:System.Windows.Automation.ExpandCollapseState.Collapsed> ve <xref:System.Windows.Automation.ExpandCollapseState.PartiallyExpanded>) burada denetimi belirtir benimsemek ne zaman durumuna bir <xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A> veya <xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A> çağrılır.
+  - Office kişisel menüsü, bir<xref:System.Windows.Automation.ExpandCollapseState.Expanded> <xref:System.Windows.Automation.ExpandCollapseState.PartiallyExpanded> veya<xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A> <xref:System.Windows.Automation.ExpandCollapseState.Collapsed> çağrıldığında<xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A> denetimin benimseme durumunu belirttiği bir üçlü durum MenuItem (ve) olabilir.
 
-  - Çağırma <xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A> üzerinde bir Treeıtem tüm alt öğeleri veya yalnızca yakınındaki alt öğeleri görüntülenebilir.
+  - Bir <xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A> ağaç öğesinde çağırmak, tüm alt öğeleri veya yalnızca anlık alt öğeleri görüntüleyebilir.
 
-  - Çağırma varsa <xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A> veya <xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A> denetimde alt öğelerini durumunu korur görünürlük değişiklik olayı gönderilmesi, durum değişiklik olayı üst denetim daraltılmış olduğunda alt öğelerini durumunu değilse, Denetim olabilir artık görünür değildir ve yok etme olayı tüm alt öğeleri yok; veya üzerinde değişiklik <xref:System.Windows.Automation.Provider.IExpandCollapseProvider.ExpandCollapseState%2A> her bir alt öğesi ve artırma için görünürlük değişiklik olayı.
+  - Bir denetimde <xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A> veya <xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A> bir denetim üzerinde çağrılması durumunda, alt öğelerinin durumu korunsa da, üst denetim daraltılmış durumdayken alt öğelerinin durumunu korumasa, bir görünürlük değişiklik olayı gönderilmesi gerekir, bu durum değişiklik olayı değil, denetim artık görünür olmayan tüm alt öğeleri yok edin ve yok edilmiş bir olayı yükseltin; ya da <xref:System.Windows.Automation.Provider.IExpandCollapseProvider.ExpandCollapseState%2A> her alt öğe için öğesini değiştirebilir ve görünürlük değişikliği olayı oluşturabilir.
 
-- Gezinti sağlamak için nesnenin olması tercih edilir [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ağacıyla (uygun görünürlük durumu) öğelerinden bakılmaksızın <xref:System.Windows.Automation.ExpandCollapseState>. İsteğe bağlı alt öğeleri oluşturduysanız, bunlar yalnızca görünebilir [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] görünür çalışırken sonra ilk zaman veya yalnızca için görüntülenen ağaç.
+- Gezinmeyi garantilemek için, üst öğelerinden [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] <xref:System.Windows.Automation.ExpandCollapseState>bağımsız olarak bir nesnenin ağaçta olması (uygun görünürlük durumuyla) istenir. İsteğe bağlı olarak alt öğeler oluşturulursa, yalnızca ilk kez veya görünür olmaları [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] durumunda yalnızca ağaçta görünebilirler.
 
 <a name="Required_Members_for_the_IValueProvider_Interface"></a>
 
-## <a name="required-members-for-iexpandcollapseprovider"></a>Gerekli üyeleri IExpandCollapseProvider için
+## <a name="required-members-for-iexpandcollapseprovider"></a>IExpandCollapseProvider için gerekli Üyeler
 
-Aşağıdaki özellikleri ve yöntemleri uygulamak için gerekli olan <xref:System.Windows.Automation.Provider.IExpandCollapseProvider>.
+Uygulamak <xref:System.Windows.Automation.Provider.IExpandCollapseProvider>için aşağıdaki özellikler ve Yöntemler gereklidir.
 
-|Gerekli üyeleri|Üye türü|Notlar|
+|Gerekli Üyeler|Üye türü|Notlar|
 |----------------------|-----------------|-----------|
-|<xref:System.Windows.Automation.Provider.IExpandCollapseProvider.ExpandCollapseState%2A>|Özellik|None|
+|<xref:System.Windows.Automation.Provider.IExpandCollapseProvider.ExpandCollapseState%2A>|Özellik|Yok.|
 |<xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A>|Yöntem|Yok.|
-|<xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A>|Yöntem|None|
-|<xref:System.Windows.Automation.AutomationPropertyChangedEventHandler>|Olay|Bu denetim, ilişkili olay vardır; Bu genel temsilcinin kullanın.|
+|<xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A>|Yöntem|Yok.|
+|<xref:System.Windows.Automation.AutomationPropertyChangedEventHandler>|Olay|Bu denetimde ilişkili olay yok; Bu genel temsilciyi kullanın.|
 
 <a name="Exceptions"></a>
 
 ## <a name="exceptions"></a>Özel Durumlar
 
-Sağlayıcıları, aşağıdaki özel durumlar gerekir.
+Sağlayıcılar aşağıdaki özel durumları oluşturması gerekir.
 
 |Özel durum türü|Koşul|
 |--------------------|---------------|
-|<xref:System.InvalidOperationException>|Ya da <xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A> veya <xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A> aldığında çağrılan <xref:System.Windows.Automation.ExpandCollapseState>  =  <xref:System.Windows.Automation.ExpandCollapseState.LeafNode>.|
+|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A> Ya daolarak = çağrılır. <xref:System.Windows.Automation.ExpandCollapseState> <xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A> <xref:System.Windows.Automation.ExpandCollapseState.LeafNode>|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [UI Otomasyonu Denetim Desenlerine Genel Bakış](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
-- [UI Otomasyonu Sağlayıcıda Denetim Düzenleri Desteği](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)
-- [İstemciler İçin UI Otomasyonu Denetim Düzenleri](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
-- [TreeWalker ile UI Otomasyonu Öğeleri Arasında Gezinme](../../../docs/framework/ui-automation/navigate-among-ui-automation-elements-with-treewalker.md)
-- [UI Otomasyon Ağacına Genel Bakış](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
-- [UI Otomasyonunda Önbelleğe Almayı Kullanma](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
+- [UI Otomasyonu Denetim Desenlerine Genel Bakış](ui-automation-control-patterns-overview.md)
+- [UI Otomasyonu Sağlayıcıda Denetim Düzenleri Desteği](support-control-patterns-in-a-ui-automation-provider.md)
+- [İstemciler İçin UI Otomasyonu Denetim Düzenleri](ui-automation-control-patterns-for-clients.md)
+- [TreeWalker ile UI Otomasyonu Öğeleri Arasında Gezinme](navigate-among-ui-automation-elements-with-treewalker.md)
+- [UI Otomasyon Ağacına Genel Bakış](ui-automation-tree-overview.md)
+- [UI Otomasyonunda Önbelleğe Almayı Kullanma](use-caching-in-ui-automation.md)
