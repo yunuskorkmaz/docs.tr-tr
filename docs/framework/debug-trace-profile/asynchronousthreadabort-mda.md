@@ -10,40 +10,40 @@ helpviewer_keywords:
 ms.assetid: 9ebe40b2-d703-421e-8660-984acc42bfe0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 08f67ad363d0bd3efcc7a1eeedd1f48d3bae9407
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9bde6f6e625476712c5af516491ab9dd29b7dea3
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61875712"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052955"
 ---
 # <a name="asynchronousthreadabort-mda"></a>asynchronousThreadAbort MDA
-`asynchronousThreadAbort` Yönetilen hata ayıklama Yardımcısı (MDA), başka bir diziye bir zaman uyumsuz iptal tanıtmak bir iş parçacığı girişiminde bulunduğunda etkinleştirilir. Zaman uyumlu iş parçacığı iptalleri değil etkinleştirme `asynchronousThreadAbort` MDA.
+Yönetilen `asynchronousThreadAbort` hata ayıklama Yardımcısı (MDA), bir iş parçacığı başka bir iş parçacığına zaman uyumsuz bir iptal uygulamayı denediğinde etkinleştirilir. Zaman uyumlu iş parçacığı durdurulduğunda `asynchronousThreadAbort` MDA 'ı etkinleştirmeyin.
 
 ## <a name="symptoms"></a>Belirtiler
- İşlenmemiş bir uygulama kilitlenmeleri <xref:System.Threading.ThreadAbortException> zaman ana uygulama iş parçacığı durduruldu. Yürütmeye devam etmek için uygulamayı olsaydı, sonuçları kilitlenen, büyük olasılıkla daha fazla veri bozulmasına neden olur uygulamadan daha kötü olabilir.
+ Ana uygulama iş parçacığı iptal edildiğinde <xref:System.Threading.ThreadAbortException> , bir uygulama işlenmemiş ile çöküyor. Uygulamanın yürütülmeye devam etmesi gerekiyorsa, sonuçlar uygulama kilitlenmesinin ardından büyük olasılıkla daha fazla veri bozulmasına neden olabilir.
 
- İşlemler atomik olacak şekilde tasarlanmış uygulama verileri öngörülemeyen durumda bırakarak kısmi tamamlandıktan sonra büyük olasılıkla kesilmiş. A <xref:System.Threading.ThreadAbortException> genellikle içinden bir özel durum beklenmiyor çıkabilecek yerlerde kod yürütülmesi görünüşte rastgele noktalarından oluşturulabilir. Kod, bozuk bir durumda kaynaklanan böyle bir özel durum işleme kapasitesine sahip olmayabilir.
+ Atomik olması amaçlanan işlemler kısmen tamamlandığında kesintiye uğratıldıktan sonra, uygulama verileri öngörülemeyen bir durumda bırakılır. Bir <xref:System.Threading.ThreadAbortException> özel durumun meydana gelmesi beklenmediği yerlerde, kod yürütmesindeki düzensiz rastgele noktalarda oluşturulabilir. Kod böyle bir özel durumu işleyemeyebilir, bu durum bozuk bir duruma neden olabilir.
 
- Belirtiler yaygın olarak sorun için devralınmış rastgeleliğinin nedeniyle değişebilir.
+ Belirtiler, soruna bağlı rasgelelik nedeniyle büyük ölçüde farklılık gösterebilir.
 
 ## <a name="cause"></a>Sebep
- Kod olarak adlandırılan bir iş parçacığındaki <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> yöntemi bir iş parçacığında zaman uyumsuz iş parçacığı iptal tanıtmak için hedef. Kod, çağrı yapar çünkü iş parçacığı iptal zaman uyumsuz <xref:System.Threading.Thread.Abort%2A> durdurma işleminin hedefi değerinden farklı bir iş parçacığı üzerinde çalışıyor. Zaman uyumlu iş parçacığı iptalleri neden bir sorun nedeniyle iş parçacığı gerçekleştirme <xref:System.Threading.Thread.Abort%2A> burada uygulama durumunu tutarlı olduğundan yalnızca bir güvenli denetim noktası yapmış olmanız.
+ Bir iş parçacığındaki kod, <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> zaman uyumsuz bir iş parçacığı iptali tanıtmak için bir hedef iş parçacığında yöntemi olarak adlandırılır. Çağrıyı <xref:System.Threading.Thread.Abort%2A> yapan kod, durdurma işleminin hedefinden farklı bir iş parçacığında çalıştığından, iş parçacığı iptali zaman uyumsuzdur. İşlemi gerçekleştiren iş parçacığının yalnızca uygulama durumunun tutarlı olduğu güvenli bir denetim noktasında <xref:System.Threading.Thread.Abort%2A> yapılması gerektiğinden, zaman uyumlu iş parçacığı iptal noktaları soruna neden olmamalıdır.
 
- Hedef iş parçacığının yürütme öngörülemeyen noktalarında işlendiğinden zaman uyumsuz iş parçacığı iptalleri bir sorun var. Bunu önlemek için bu şekilde iptal bir iş parçacığı üzerinde çalışacak şekilde yazılmış kod işlemeye gerekir bir <xref:System.Threading.ThreadAbortException> uygulama verilerinin tutarlı bir duruma geri put dikkat ederek kodun neredeyse her satırı. Bu sorunla aklınızda yazılacak veya tüm olası koşullar karşı koruyan kod yazmak için kod beklenir gerçekçi değildir.
+ Zaman uyumsuz thread, hedef iş parçacığının yürütmesindeki öngörülemeyen noktalarda işlendiği için bir sorun oluştu. Bu durumdan kaçınmak için, bu şekilde durdurulmuş olabilecek bir iş parçacığında çalışmak üzere yazılan kodun, neredeyse her bir <xref:System.Threading.ThreadAbortException> kod satırında işlenmesi ve uygulama verilerinin tutarlı bir duruma geri alınmasına dikkat etmeniz gerekir. Kodun bu sorun ile yazılması veya tüm olası koşullara karşı koruyan bir kod yazmak için gerçekçi değildir.
 
- Yönetilmeyen kodu çağırıyor ve `finally` blokları değil durdurulacak zaman uyumsuz olarak ancak hemen kategorilerine birinden Çıkışta.
+ Yönetilmeyen kod ve `finally` bloklara yapılan çağrılar zaman uyumsuz olarak iptal edilmez, ancak bu kategorilerden birinden çıkış yapıldığında hemen silinir.
 
- Nedeni sorunu devralınan rastgeleliğinin nedeniyle saptamak zor olabilir.
+ Sorunun, soruna bağlı rastgele bir durum nedeniyle belirlenmesi zor olabilir.
 
 ## <a name="resolution"></a>Çözüm
- Zaman uyumsuz iş parçacığı iptalleri kullanılmasını gerektiren tasarım kodu özen gösterin. Çeşitli yaklaşımlar daha uygun bir çağrı gerektirmeyen hedef iş parçacığı kesintinin <xref:System.Threading.Thread.Abort%2A>. Ortak bir özellik gibi bir mekanizma tanıtmak için en güvenli olanıdır, hedef iş parçacığının isteği bir kesme sinyalini verir. Hedef iş parçacığı güvenli belirli kontrol noktaları, sinyal denetler. Bir kesme istendi karşılaşırsa, düzgün bir şekilde kapanabilir.
+ Zaman uyumsuz iş parçacığı iptal durumu kullanımını gerektiren kod tasarımını önleyin. Çağrısı gerektirmeyen bir hedef iş parçacığının kesintiye uğraması için çok sayıda yaklaşım daha uygundur <xref:System.Threading.Thread.Abort%2A>. En güvenli, bir kesme istemek için hedef iş parçacığına işaret eden ortak bir özellik gibi bir mekanizma tanıtmaktır. Hedef iş parçacığı belirli güvenli denetim noktalarında sinyali denetler. Bir kesmenin istenmiş olduğunu fark ederseniz, düzgün bir şekilde kapatılabilir.
 
-## <a name="effect-on-the-runtime"></a>Çalışma zamanı üzerindeki etkisi
- Bu mda'nın CLR üzerinde etkisi yoktur. Yalnızca veri zaman uyumsuz iş parçacığı iptalleri hakkında raporlar.
+## <a name="effect-on-the-runtime"></a>Çalışma zamanında etki
+ Bu MDA, CLR üzerinde hiçbir etkisi yoktur. Yalnızca zaman uyumsuz iş parçacığı iptal eden verileri raporlar.
 
 ## <a name="output"></a>Çıkış
- MDA durdurma ve iptal işleminin hedefi olan iş parçacığının kimliği gerçekleştiren iş parçacığının kimliği bildirir. Bu zaman uyumsuz iptali için sınırlı olduğundan bunlar hiçbir zaman aynı olmaz.
+ MDA, Abort işlemini gerçekleştiren iş parçacığının KIMLIĞINI ve iptal 'in hedefi olan iş parçacığının KIMLIĞINI bildirir. Bu, zaman uyumsuz iptal ile sınırlandırdığı için hiçbir zaman aynı olmayacaktır.
 
 ## <a name="configuration"></a>Yapılandırma
 
@@ -56,7 +56,7 @@ ms.locfileid: "61875712"
 ```
 
 ## <a name="example"></a>Örnek
- Etkinleştirme `asynchronousThreadAbort` MDA, yalnızca bir çağrı gerektirir <xref:System.Threading.Thread.Abort%2A> ayrı bir çalışan iş parçacığı üzerinde. Rastgele herhangi bir noktada iptal tarafından yarıda kesilebilir daha karmaşık işlemleri bir dizi olan işlevi iş parçacığının içeriği başlatırsanız, sonuçları göz önünde bulundurun.
+ `asynchronousThreadAbort` MDA <xref:System.Threading.Thread.Abort%2A> ' ın etkinleştirilmesi ayrı çalışan bir iş parçacığında yalnızca bir çağrısı gerektirir. İş parçacığı başlatma işlevinin içerikleri, iptal tarafından herhangi bir rastgele noktada kesintiye uğramış olabilecek daha karmaşık işlemler kümesi olsaydı sonuçları göz önünde bulundurun.
 
 ```csharp
 using System.Threading;
@@ -73,4 +73,4 @@ void FireMda()
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Threading.Thread>
-- [Yönetilen Hata Ayıklama Yardımcıları ile Hataları Tanılama](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [Yönetilen Hata Ayıklama Yardımcıları ile Hataları Tanılama](diagnosing-errors-with-managed-debugging-assistants.md)

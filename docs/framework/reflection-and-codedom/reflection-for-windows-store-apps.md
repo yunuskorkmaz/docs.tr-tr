@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 0d07090c-9b47-4ecc-81d1-29d539603c9b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b5503d8a474d7f19348b9342bc02e216bd987223
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: c9edab859900bf2001956045a5285801bb61d310
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66378605"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045935"
 ---
 # <a name="reflection-in-the-net-framework-for-windows-store-apps"></a>Windows Mağazası Uygulamaları için .NET Framework'te Yansıma
-.NET Framework 4.5 ile başlayarak, .NET Framework yansıma türlerini ve üyelerini kullanılmak üzere bir dizi içerir [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulamalar. Bu türler ve üyeler de tam .NET Framework'te de mevcuttur [.NET için Windows Store apps](https://go.microsoft.com/fwlink/?LinkID=225700). Bu belge, bunlar ile .NET Framework 4 ve daha önceki sürümlerdeki karşılıkları arasındaki temel farkları açıklar.  
+.NET Framework 4,5 ' den başlayarak, .NET Framework [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulamalarda kullanılmak üzere bir yansıma türü ve üye kümesi içerir. Bu türler ve Üyeler, [Windows Mağazası uygulamaları için .net](https://go.microsoft.com/fwlink/?LinkID=225700)içindeki ve tam .NET Framework de mevcuttur. Bu belge, bunlar ile .NET Framework 4 ve daha önceki sürümlerdeki karşılıkları arasındaki temel farkları açıklar.  
   
  Bir [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulaması oluşturuyorsanız, [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]'de bulunan yansıma türlerini ve üyeleri kullanmanız gerekir. Bu türler ve üyeler, gerekli olmasa da aynı zamanda masaüstü uygulamalarında kullanılmak üzere mevcuttur, bu nedenle her iki uygulama türü için de aynı kodu kullanabilirsiniz.  
   
@@ -36,12 +36,12 @@ ms.locfileid: "66378605"
  Bir [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulamasında, bazı .NET Framework türlerine ve üyelerine erişim sınırlıdır. Örneğin, bir [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] nesnesini kullanarak, <xref:System.Reflection.MethodInfo>'a dahil edilmeyen .NET Framework yöntemlerini çağıramazsınız. Ayrıca, [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] ve <xref:System.Runtime.InteropServices.Marshal> üyeleri gibi, bir <xref:System.Runtime.InteropServices.WindowsRuntime.WindowsRuntimeMarshal> uygulamasının bağlamında güvenli olarak nitelendirilmeyen belirli tür ve üyeler engellenir. Bu kısıtlama yalnızca .NET Framework türlerini ve üyelerini etkiler; normalde yaptığınız gibi kodunuzu veya üçüncü taraf kodunu çağırabilirsiniz.  
   
 ## <a name="example"></a>Örnek  
- Bu örnek, devralınan yöntemler ve özellikler dahil olmak üzere [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] türünün yöntemlerini ve özelliklerini almak için <xref:System.Globalization.Calendar> öğesinde yansıma türlerini ve üyelerini kullanır. Bu kodu çalıştırmak için kod dosyası içine yapıştırın bir [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] içeren sayfa bir <xref:Windows.UI.Xaml.Controls.TextBlock?displayProperty=nameWithType> adlı Denetim `textblock1` yansıma adlı bir proje içinde. Bu kodu farklı bir ada sahip bir proje içine yapıştırırsanız, yalnızca ad alanı adı, projenizin eşleşecek şekilde değiştirin emin olun.  
+ Bu örnek, devralınan yöntemler ve özellikler dahil olmak üzere [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] türünün yöntemlerini ve özelliklerini almak için <xref:System.Globalization.Calendar> öğesinde yansıma türlerini ve üyelerini kullanır. Bu kodu çalıştırmak için, yansıma adlı bir projede adlı [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] `textblock1` bir <xref:Windows.UI.Xaml.Controls.TextBlock?displayProperty=nameWithType> denetim içeren bir sayfanın kod dosyasına yapıştırın. Bu kodu, farklı bir ada sahip bir proje içine yapıştırırsanız, yalnızca ad alanı adını projenizle eşleşecek şekilde değiştirdiğinizden emin olun.  
   
  [!code-csharp[System.ReflectionWinStoreApp#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.reflectionwinstoreapp/cs/mainpage.xaml.cs#1)]
  [!code-vb[System.ReflectionWinStoreApp#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.reflectionwinstoreapp/vb/mainpage.xaml.vb#1)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Yansıma](../../../docs/framework/reflection-and-codedom/reflection.md)
-- [.NET için Windows Store uygulamaları – desteklenen API'ler](https://go.microsoft.com/fwlink/?LinkID=225700)
+- [Yansıma](reflection.md)
+- [Windows Mağazası uygulamaları için .NET – desteklenen API 'Ler](https://go.microsoft.com/fwlink/?LinkID=225700)

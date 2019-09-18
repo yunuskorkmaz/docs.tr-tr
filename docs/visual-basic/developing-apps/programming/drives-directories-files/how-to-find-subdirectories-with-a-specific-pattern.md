@@ -1,50 +1,52 @@
 ---
-title: "Nasıl yapılır: Visual Basic'te belirli bir desendeki alt dizinleri bulma"
+title: 'Nasıl yapılır: Visual Basic belirli bir düzene sahip alt dizinleri bul'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - pattern matching
 - folders, finding
 ms.assetid: c9265fd1-7483-4150-8b7f-ff642caa939d
-ms.openlocfilehash: fcb02fa26a3177b6f25f04174563b25cddb0ac44
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 96ae5c5c44263a47343058012d8b8aa064d9cd92
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64629112"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71039435"
 ---
-# <a name="how-to-find-subdirectories-with-a-specific-pattern-in-visual-basic"></a>Nasıl yapılır: Visual Basic'te belirli bir desendeki alt dizinleri bulma
-<xref:Microsoft.VisualBasic.FileIO.FileSystem.GetDirectories%2A> Yöntemi bir dizinde bir alt dizinler için yol adlarını temsil eden dizeleri salt okunur bir koleksiyonunu döndürür. Kullanabileceğiniz `wildCards` parametresini kullanarak belirli bir desen belirtin. Alt dizinlerinin içeriğini aramaya dahil etmek istediğiniz verilirse `searchType` parametresi `SearchOption.SearchAllSubDirectories`.  
-  
- Belirtilen desenle eşleşen bir dizin yok bulunamazsa boş bir koleksiyon döndürülür.  
-  
-### <a name="to-find-subdirectories-with-a-specific-pattern"></a>Belirli bir desendeki alt dizinleri bulmak için  
-  
-- Kullanım `GetDirectories` yöntemi, aramak istediğiniz dizinin yolunu ve adını belirtin. Aşağıdaki örnek, dizin yapısına sözcüğünü içeren tüm dizinler "Logs" adında döndürür ve eklenmeye `ListBox1`.  
-  
-     [!code-vb[VbVbcnFileAccess#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnFileAccess/VB/Class1.vb#1)]  
-  
-## <a name="robust-programming"></a>Güçlü Programlama  
- Aşağıdaki koşullar özel bir duruma neden olabilir:  
-  
-- Yol aşağıdaki nedenlerden biri için geçerli değildir: sıfır uzunluklu bir dize olan, yalnızca boşluk içeriyor, geçersiz karakterler içeriyor veya cihaz yoludur (ile başlayan \\ \\.\\) (<xref:System.ArgumentException>).  
-  
-- Çünkü bu yolu geçerli değil `Nothing` (<xref:System.ArgumentNullException>).  
-  
-- Bir veya daha fazla belirtilen joker karakter `Nothing`, boş bir dize veya yalnızca boşluk içeriyor (<xref:System.ArgumentNullException>).  
-  
-- `directory` yok (<xref:System.IO.DirectoryNotFoundException>).  
-  
-- `directory` Varolan bir dosyaya işaret (<xref:System.IO.IOException>).  
-  
-- Yolun sistem tarafından tanımlanan uzunluk üst sınırını aşıyor (<xref:System.IO.PathTooLongException>).  
-  
-- Yolda bir dosya veya klasör adı iki nokta üst üste (:) içeriyor veya biçimi geçersiz (<xref:System.NotSupportedException>).  
-  
-- Kullanıcı yolu görüntülemek için gerekli izinlere sahip değil (<xref:System.Security.SecurityException>).  
-  
-- Kullanıcı gerekli izinlere sahip değil (<xref:System.UnauthorizedAccessException>).  
-  
+# <a name="how-to-find-subdirectories-with-a-specific-pattern-in-visual-basic"></a>Nasıl yapılır: Visual Basic belirli bir düzene sahip alt dizinleri bul
+
+Yöntemi <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetDirectories%2A> , bir dizindeki alt dizinlerin yol adlarını temsil eden salt okunurdur bir dize koleksiyonu döndürür. Belirli bir kalıbı belirtmek `wildCards` için parametresini kullanabilirsiniz. Aramada alt dizinlerin içeriğini eklemek istiyorsanız, `searchType` parametresini olarak `SearchOption.SearchAllSubDirectories`ayarlayın.
+
+Belirtilen Düzenle eşleşen hiçbir dizin bulunamazsa boş bir koleksiyon döndürülür.
+
+## <a name="to-find-subdirectories-with-a-specific-pattern"></a>Belirli bir düzene sahip alt dizinleri bulmak için
+
+Arama yapmak istediğiniz dizinin adını ve yolunu sağlayarak yönteminikullanın.`GetDirectories` Aşağıdaki örnek, dizin yapısındaki, adında "Logs" sözcüğünü içeren tüm dizinleri döndürür ve içine ekler `ListBox1`.
+
+[!code-vb[VbVbcnFileAccess#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnFileAccess/VB/Class1.vb#1)]
+
+## <a name="robust-programming"></a>Güçlü Programlama
+
+Aşağıdaki koşullar özel bir duruma neden olabilir:
+
+- Yol, aşağıdaki nedenlerden biri için geçerli değil: sıfır uzunluklu bir dizedir, yalnızca boşluk içeriyor, geçersiz karakterler içeriyor veya bir cihaz yolu (ile \\ \\başlar.\\) (<xref:System.ArgumentException>).
+
+- Yol `Nothing` (<xref:System.ArgumentNullException>) olduğu için geçerli değil.
+
+- Belirtilen Joker karakterlerden `Nothing`biri veya birkaçı, boş bir dize veya yalnızca boşluk (<xref:System.ArgumentNullException>) içeriyor.
+
+- `directory`yok (<xref:System.IO.DirectoryNotFoundException>).
+
+- `directory`var olan bir dosyaya (<xref:System.IO.IOException>) işaret eder.
+
+- Yol, sistem tarafından tanımlanan uzunluk üst sınırını (<xref:System.IO.PathTooLongException>) aşıyor.
+
+- Yoldaki bir dosya veya klasör adı iki nokta içerir (:) ya da geçersiz bir biçimde (<xref:System.NotSupportedException>).
+
+- Kullanıcı, (<xref:System.Security.SecurityException>) yolunu görüntülemek için gerekli izinlere sahip değil.
+
+- Kullanıcının gerekli izinleri (<xref:System.UnauthorizedAccessException>) yok.
+
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetDirectories%2A>
-- [Nasıl yapılır: Belirli bir düzendeki dosyaları bulma](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-files-with-a-specific-pattern.md)
+- [Nasıl yapılır: Belirli bir düzene sahip dosyaları bulma](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-files-with-a-specific-pattern.md)

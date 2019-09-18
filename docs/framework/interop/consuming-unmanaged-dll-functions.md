@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: eca7606e-ebfb-4f47-b8d9-289903fdc045
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9e9308d6bf0eefaa60af17a721cd1c26827469eb
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 9ef6a31ba9589ded9527d15e90724d0d04749579
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946841"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051839"
 ---
 # <a name="consuming-unmanaged-dll-functions"></a>Yönetilmeyen DLL İşlevlerini Kullanma
 Platform çağırma, yönetilen kodun, Windows API 'dakiler gibi dinamik bağlantı kitaplıkları (dll) içinde uygulanan yönetilmeyen işlevleri çağırmasına olanak sağlayan bir hizmettir. İçe aktarılmış bir işlevi bulur ve çağırır ve bağımsız değişkenlerini (tamsayılar, dizeler, diziler, yapılar vb.) gerektiğinde birlikte çalışma sınırında sıralar.  
@@ -29,15 +29,15 @@ Platform çağırma, yönetilen kodun, Windows API 'dakiler gibi dinamik bağlan
   
 #### <a name="to-consume-exported-dll-functions"></a>İçe aktarılmış DLL işlevlerini kullanmak için  
   
-1. [DLL 'lerdeki Işlevleri belirler](../../../docs/framework/interop/identifying-functions-in-dlls.md).  
+1. [DLL 'lerdeki Işlevleri belirler](identifying-functions-in-dlls.md).  
   
      En düşük düzeyde, işlevin adını ve onu içeren DLL adını belirtmeniz gerekir.  
   
-2. [DLL işlevlerini barındıracak bir sınıf oluşturun](../../../docs/framework/interop/creating-a-class-to-hold-dll-functions.md).  
+2. [DLL işlevlerini barındıracak bir sınıf oluşturun](creating-a-class-to-hold-dll-functions.md).  
   
      Mevcut bir sınıfı kullanabilir, her yönetilmeyen işlev için tek bir sınıf oluşturabilir veya ilgili yönetilmeyen işlevler kümesini içeren bir sınıf oluşturabilirsiniz.  
   
-3. [Yönetilen kodda prototipler oluşturun](../../../docs/framework/interop/creating-prototypes-in-managed-code.md).  
+3. [Yönetilen kodda prototipler oluşturun](creating-prototypes-in-managed-code.md).  
   
      [Visual Basic] **Declare** ifadesini **Function** ve **lib** anahtar sözcükleriyle kullanın. Nadir bazı durumlarda, **paylaşılan işlev** anahtar sözcükleriyle **DllImportAttribute** kullanabilirsiniz. Bu durumlar bu bölümde daha sonra açıklanmaktadır.  
   
@@ -45,11 +45,11 @@ Platform çağırma, yönetilen kodun, Windows API 'dakiler gibi dinamik bağlan
   
      [C++] Dll ve işlevi tanımlamak Için **DllImportAttribute** kullanın. Sarmalayıcı metodunu veya işlevi **extern "C"** ile işaretleyin.  
   
-4. [BIR DLL Işlevi çağırın](../../../docs/framework/interop/calling-a-dll-function.md).  
+4. [BIR DLL Işlevi çağırın](calling-a-dll-function.md).  
   
-     Yönetilen sınıfınıza, diğer yönetilen yöntemler gibi yöntemi çağırın. [Yapıları geçirme](../../../docs/framework/interop/passing-structures.md) ve [geri çağırma işlevlerini uygulama](../../../docs/framework/interop/callback-functions.md) özel durumlardır.  
+     Yönetilen sınıfınıza, diğer yönetilen yöntemler gibi yöntemi çağırın. [Yapıları geçirme](passing-structures.md) ve [geri çağırma işlevlerini uygulama](callback-functions.md) özel durumlardır.  
   
- Nasıl oluşturulacağını gösteren örnekler için. Platform çağırma ile kullanılacak NET tabanlı bildirimler, bkz. [Platform çağırma Ile verileri sıralama](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md).  
+ Nasıl oluşturulacağını gösteren örnekler için. Platform çağırma ile kullanılacak NET tabanlı bildirimler, bkz. [Platform çağırma Ile verileri sıralama](marshaling-data-with-platform-invoke.md).  
   
 ## <a name="a-closer-look-at-platform-invoke"></a>Platform çağırma ' ye daha yakından bakış  
  Platform çağırma, içe aktarılmış işlevleri bulmak ve çalışma zamanında bağımsız değişkenlerini sıralamak için meta verileri kullanır. Aşağıdaki çizim bu süreci göstermektedir.  
@@ -73,6 +73,6 @@ Platform çağırma, yönetilen kodun, Windows API 'dakiler gibi dinamik bağlan
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Yönetilmeyen Kod ile Birlikte Çalışma](../../../docs/framework/interop/index.md)
-- [Platform Çağırma Örnekleri](../../../docs/framework/interop/platform-invoke-examples.md)
-- [Birlikte Çalışma için Hazırlama](../../../docs/framework/interop/interop-marshaling.md)
+- [Yönetilmeyen Kod ile Birlikte Çalışma](index.md)
+- [Platform Çağırma Örnekleri](platform-invoke-examples.md)
+- [Birlikte Çalışma için Hazırlama](interop-marshaling.md)

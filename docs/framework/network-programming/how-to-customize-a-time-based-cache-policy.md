@@ -9,12 +9,12 @@ helpviewer_keywords:
 - customizing time-based cache policies
 - cache [.NET Framework], time-based policies
 ms.assetid: 8d84f936-2376-4356-9264-03162e0f9279
-ms.openlocfilehash: 5df070bb2cfef42d60247cad39f2a2f76963bae8
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: c28c6daf9b873a19291b1636112eae6546412be2
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894737"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048325"
 ---
 # <a name="how-to-customize-a-time-based-cache-policy"></a>Nasıl yapılır: Saat Temelli Önbellek İlkesini Özelleştirme
 Zaman tabanlı önbellek ilkesi oluştururken, en yüksek yaş, en düşük yenilik, en yüksek eskime veya önbellek eşitleme tarihi değerlerini belirterek önbelleğe alma davranışını özelleştirebilirsiniz. Nesnesi <xref:System.Net.Cache.HttpRequestCachePolicy> , bu değerlerin geçerli birleşimlerini belirtmenize izin veren çeşitli oluşturucular sağlar.  
@@ -120,8 +120,8 @@ Level:Default MaxAge:36000 MinFresh:18000
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Ağ Uygulamaları için Önbellek Yönetimi](../../../docs/framework/network-programming/cache-management-for-network-applications.md)
-- [Önbellek İlkesi](../../../docs/framework/network-programming/cache-policy.md)
-- [Konum Temelli Önbellek İlkeleri](../../../docs/framework/network-programming/location-based-cache-policies.md)
-- [Saat Temelli Önbellek İlkeleri](../../../docs/framework/network-programming/time-based-cache-policies.md)
-- [\<requestCaching > öğesi (ağ ayarları)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)
+- [Ağ Uygulamaları için Önbellek Yönetimi](cache-management-for-network-applications.md)
+- [Önbellek İlkesi](cache-policy.md)
+- [Konum Temelli Önbellek İlkeleri](location-based-cache-policies.md)
+- [Saat Temelli Önbellek İlkeleri](time-based-cache-policies.md)
+- [\<requestCaching > öğesi (ağ ayarları)](../configure-apps/file-schema/network/requestcaching-element-network-settings.md)

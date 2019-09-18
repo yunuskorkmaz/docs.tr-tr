@@ -10,15 +10,15 @@ helpviewer_keywords:
 - TypeArguments attribute in XAML [XAML Services]
 - XAML [XAML Services], x:TypeArguments attribute
 ms.assetid: 86561058-d393-4a44-b5c3-993a4513ea74
-ms.openlocfilehash: 41f29673622fa7918238dd014b97ee3cf0766257
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: a2a960870d368e57272b3368e69eb38ebbe2ba5d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66486211"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053712"
 ---
 # <a name="xtypearguments-directive"></a>x:TypeArguments Yönergesi
-Sınırlama geçişleri bir genel oluşturucuya genel tür bağımsız değişkenlerini yazın.  
+Bir genel öğesinin kısıtlayan tür bağımsız değişkenlerini genel türün oluşturucusuna geçirir.  
   
 ## <a name="xaml-attribute-usage"></a>XAML Öznitelik Kullanımı  
   
@@ -30,56 +30,56 @@ Sınırlama geçişleri bir genel oluşturucuya genel tür bağımsız değişke
   
 |||  
 |-|-|  
-|`object`|Bir CLR genel türü tarafından desteklenen bir XAML türündeki bir nesne öğe bildirimi. Varsa `object` varsayılan XAML ad alanından değil bir XAML türü başvurduğu `object` XAML ad alanı belirtmek için bir önek gerektirir burada `object` bulunmaktadır.|  
-|`typeString`|Bir veya daha fazla XAML bildiren bir dize tür adları dize olarak hangi CLR genel tür için tür bağımsız değişkenleri sağlar. Açıklamalar için ek söz dizimi notlarına bakın.|  
+|`object`|Bir CLR genel türü tarafından desteklenen bir XAML türünün nesne öğesi bildirimi. Varsayılan xaml ad alanından olmayan bir xaml türüne `object` `object`başvuruyorsa, varsa xaml ad alanını belirtmek için bir ön ek gerektirir. `object`|  
+|`typeString`|CLR genel türü için tür bağımsız değişkenlerini sağlayan dizeler olarak bir veya daha fazla XAML tür adı bildiren bir dize. Ek sözdizimi notları için bkz. açıklamalar.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Çoğu durumda, bir bilgi öğesi olarak kullanılan XAML türleri bir `typeString` dize ön eki bulunur. CLR genel kısıtlamalara tipik türleri (örneğin, <xref:System.Int32> ve <xref:System.String>) CLR temel sınıf kitaplıklarını gelir. Bu kitaplıklar eşlenmemiş tipik çerçeveye özgü varsayılan XAML ad alanları değildir ve bu nedenle, XAML kullanım için bir önek eşleştirme gerektiren.  
+ Çoğu durumda, bir `typeString` dizedeki bilgi öğesi olarak kullanılan xaml türlerinin ön eki alınır. Clr genel kısıtlamalarının tipik türleri (örneğin, <xref:System.Int32> ve <xref:System.String>) clr temel sınıf kitaplıklarından gelir. Bu kitaplıklar, çerçeveye özgü tipik varsayılan XAML ad alanları ile eşlenmedi ve bu nedenle XAML kullanımı için bir ön ek eşlemesi gerektirir.  
   
- Bir virgül olan sınırlayıcıyı kullanarak birden fazla XAML türü adını belirtebilirsiniz.  
+ Bir virgül sınırlayıcısı kullanarak birden çok XAML türü adı belirtebilirsiniz.  
   
- Genel sınırlamalar genel türleri kullanıyorsanız, iç içe geçmiş kısıtlaması tür bağımsız değişkenlerini bulunabilir parantezleri () tarafından.  
+ Genel kısıtlamalar genel türler kullanıyorsa, iç içe geçmiş kısıtlama türü bağımsız değişkenleri parantez () ile yer alabilir.  
   
- Unutmayın, bu tanımı `x:TypeArguments` için .NET Framework XAML hizmetlerinde özeldir ve CLR yedekleme kullanma. Dil düzeyi tanımı bulunabilir [ \[MS-XAML\] bölümü 5.3.11](https://go.microsoft.com/fwlink/?LinkId=114525).  
+ Bu tanımın `x:TypeArguments` .NET Framework xaml hizmetlerine özgü olduğunu ve clr yedeklemesini kullandığını unutmayın. Bir dil düzeyi tanımı, [ \[ms-xaml\] bölümünde 5.3.11](https://go.microsoft.com/fwlink/?LinkId=114525)bulunabilir.  
   
 ## <a name="usage-examples"></a>Kullanım örnekleri  
- Bu örnekler için aşağıdaki XAML ad alanı tanımları bildirilir varsayın:  
+ Bu örnekler için aşağıdaki XAML ad alanı tanımlarının bildirildiği varsayılır:  
   
-```  
+```xaml  
 xmlns:sys="clr-namespace:System;assembly=mscorlib"  
 xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"  
 ```  
   
 ### <a name="liststring"></a>Liste\<dizesi >  
- `<scg:List x:TypeArguments="sys:String" ...>` Yeni bir örneğini oluşturur <xref:System.Collections.Generic.List%601> ile bir <xref:System.String> tür bağımsız değişkeni.  
+ `<scg:List x:TypeArguments="sys:String" ...>`bir <xref:System.String> tür bağımsız <xref:System.Collections.Generic.List%601> değişkeniyle yeni bir oluşturur.  
   
-### <a name="dictionarystringstring"></a>Sözlük\<String, String >  
- `<scg:Dictionary x:TypeArguments="sys:String,sys:String" ...>` Yeni bir örneğini oluşturur <xref:System.Collections.Generic.Dictionary%602> iki <xref:System.String> tür bağımsız değişkenleri.  
+### <a name="dictionarystringstring"></a>Sözlük\<dizesi, dize >  
+ `<scg:Dictionary x:TypeArguments="sys:String,sys:String" ...>`<xref:System.Collections.Generic.Dictionary%602> iki<xref:System.String> tür bağımsız değişkeni ile yeni bir oluşturur.  
   
-### <a name="queuekeyvaluepairstringstring"></a>Kuyruk < KeyValuePair\<dize, dize >>  
- `<scg:Queue x:TypeArguments="scg:KeyValuePair(sys:String,sys:String)" ...>` Yeni bir örneğini oluşturur <xref:System.Collections.Generic.Queue%601> kısıtlaması, olan <xref:System.Collections.Generic.KeyValuePair%602> iç kısıtlaması tür bağımsız değişkenleri ile <xref:System.String> ve <xref:System.String>.  
+### <a name="queuekeyvaluepairstringstring"></a>Sıra < KeyValuePair\<dize, dize > >  
+ `<scg:Queue x:TypeArguments="scg:KeyValuePair(sys:String,sys:String)" ...>`iç kısıtlama türü <xref:System.Collections.Generic.Queue%601> bağımsız değişkenleri <xref:System.String> ve <xref:System.Collections.Generic.KeyValuePair%602> <xref:System.String>ile kısıtlaması olan yeni bir oluşturur.  
   
-## <a name="xaml-2006-and-wpf-generic-xaml-usages"></a>XAML 2006 ve WPF'de XAML genel kullanımları  
- XAML 2006 kullanım ve WPF uygulamaları için kullanılan XAML için aşağıdaki kısıtlamalar için mevcut `x:TypeArguments` ve genel XAML gelen genel tür kullanımları:  
+## <a name="xaml-2006-and-wpf-generic-xaml-usages"></a>XAML 2006 ve WPF Genel XAML kullanımları  
+ XAML 2006 kullanımı ve WPF uygulamaları için kullanılan XAML için aşağıdaki kısıtlamalar `x:TypeArguments` ve genel olarak xaml 'den genel tür kullanımları vardır:  
   
-- Yalnızca bir XAML dosyasının kök öğesini bir genel türe başvuran genel bir XAML kullanımını destekler.  
+- Yalnızca bir XAML dosyasının kök öğesi genel bir türe başvuran Genel XAML kullanımını destekleyebilir.  
   
-- Kök öğe en az bir tür bağımsız değişkeni ile genel tür eşlenmelidir. <xref:System.Windows.Navigation.PageFunction%601> bunun bir örneğidir. WPF XAML genel kullanım desteği için birincil senaryosu sayfasında işlevlerdir.  
+- Kök öğe, en az bir tür bağımsız değişkeni olan genel bir türe eşleşmelidir. <xref:System.Windows.Navigation.PageFunction%601> bunun bir örneğidir. Sayfa işlevleri, WPF 'de XAML genel kullanım desteğinin birincil senaryosudur.  
   
-- Genel için kök öğesi XAML nesne öğesi de kullanarak bir parçalı sınıf bildirmeniz gerekir `x:Class`. Bir WPF tanımlama derleme eylemi bile bu geçerlidir.  
+- Genel için kök öğe XAML nesne öğesi, kullanarak `x:Class`kısmi bir sınıf de bildirmelidir. Bu, WPF oluşturma eylemi tanımlansa bile geçerlidir.  
   
-- `x:TypeArguments` iç içe geçmiş genel kısıtlamalara başvuramaz.  
+- `x:TypeArguments`iç içe geçmiş genel kısıtlamalara başvuramaz.  
   
-## <a name="xaml-2009-or-xaml-2006-with-no-wpf-30-or-wpf-35-dependency"></a>XAML 2009 ya da WPF 3.0 veya 3.5 WPF XAML 2006 bağımlılık  
- .NET Framework XAML hizmetlerinde XAML 2006 ya da XAML 2009, WPF ile ilgili sınırlamalar genel XAML kullanım esnek. Yedekleme türü sistem ve nesne modelini desteklemek XAML biçimlendirmesi içinde herhangi bir konumda bir genel nesne öğesi örneği oluşturabilir.  
+## <a name="xaml-2009-or-xaml-2006-with-no-wpf-30-or-wpf-35-dependency"></a>WPF 3,0 veya WPF 3,5 bağımlılığı olmayan XAML 2009 veya XAML 2006  
+ XAML 2006 ya da xaml 2009 için .NET Framework XAML hizmetlerinde, genel XAML kullanımıyla ilgili WPF ile ilgili kısıtlamalar gevşek bir şekilde yapılır. XAML biçimlendirmesinde, yedekleme türü sisteminin ve nesne modelinin destekleyebileceği herhangi bir konumda genel nesne öğesi örneği oluşturabilirsiniz.  
   
- XAML 2009 kullanıyorsanız, CLR eşleme yerine temel türleri XAML dili ortak temelleri için elde etmek için türler, kullanabileceğiniz [XAML dili ortak temelleri için yerleşik türler](built-in-types-for-common-xaml-language-primitives.md) bilgi öğeleri olarak bir `typeString`. Örneğin, aşağıdaki bildirebilirsiniz (önek eşletirmeleri gösterilmez, ancak x olan XAML dil XAML ad alanı için XAML 2009):  
+ Ortak dil temel öğeleri için XAML türleri almak üzere CLR temel türlerini eşlemek yerine XAML 2009 kullanıyorsanız, [ortak xaml dil temelleri Için yerleşik türleri](built-in-types-for-common-xaml-language-primitives.md) bir `typeString`içinde bilgi öğeleri olarak kullanabilirsiniz. Örneğin, aşağıdaki bildirimi yapabilirsiniz (önek eşlemeleri gösterilmez, ancak x, XAML 2009 için XAML Language xaml ad alanıdır):  
   
 ```xaml  
 <my:BusinessObject x:TypeArguments="x:String,x:Int32"/>  
 ```  
   
- WPF ve .NET Framework 4 hedefleyen, XAML 2009 özelliklerini ile birlikte kullanabileceğiniz `x:TypeArguments` ancak yalnızca gevşek XAML (biçimlendirme yapılmayan XAML). WPF ve XAML, BAML formu için biçimlendirme derlenmiş XAML şu anda desteklemediğinden XAML 2009 anahtar sözcükleri ve özellikleri. XAML biçimlendirme için derlerseniz, "XAML 2006 ve WPF genel XAML kullanım" bölümünde belirtildiği kısıtlamaları'nın altında çalışması gerekir.  
+ WPF 'de ve .NET Framework 4 ' i hedeflerken, XAML 2009 özelliklerini yalnızca gevşek XAML `x:TypeArguments` (biçimlendirme derlenmiş olmayan XAML) ile birlikte kullanabilirsiniz. WPF için biçimlendirme derlenmiş XAML ve XAML 'nin BAML formu şu anda XAML 2009 anahtar sözcüklerini ve özelliklerini desteklememektedir. XAML 'yi derlemeyi işaretlemeyi gerekiyorsa, "XAML 2006 ve WPF Genel XAML kullanımları" bölümünde belirtilen kısıtlamalar altında işlem yapmanız gerekir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

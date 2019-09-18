@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 44cd98ba-95e5-40a1-874d-e8e163612c51
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f3ea64668272b6625a9e43c9610496a7e7392129
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 41f6b67ff63d096cc1fa2c599abb06c9c1129952
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70854037"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052304"
 ---
 # <a name="releasehandlefailed-mda"></a>releaseHandleFailed MDA
 <xref:System.Runtime.InteropServices.SafeHandle> <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> `false` <xref:System.Runtime.InteropServices.CriticalHandle> Yönetilen hata ayıklama Yardımcısı (MDA) etkinleştirilir, veya sınıfından türetilen bir sınıf yöntemi olduğunda geliştiricilere bildirimde bulunur. `releaseHandleFailed`  
@@ -93,5 +93,5 @@ bool ReleaseHandle()
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [Yönetilen Hata Ayıklama Yardımcıları ile Hataları Tanılama](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [Birlikte Çalışma için Hazırlama](../../../docs/framework/interop/interop-marshaling.md)
+- [Yönetilen Hata Ayıklama Yardımcıları ile Hataları Tanılama](diagnosing-errors-with-managed-debugging-assistants.md)
+- [Birlikte Çalışma için Hazırlama](../interop/interop-marshaling.md)

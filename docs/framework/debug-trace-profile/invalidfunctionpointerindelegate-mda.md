@@ -13,27 +13,27 @@ helpviewer_keywords:
 ms.assetid: 99ae44f1-783e-49a9-9009-24f54bbd0f09
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cbb33d2cddab22ad2072354ba543d2cd6a60a668
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6e3e64a720d12426fb066619b46c73402d1113e0
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61754576"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052621"
 ---
 # <a name="invalidfunctionpointerindelegate-mda"></a>invalidFunctionPointerInDelegate MDA
-`invalidFunctionPointerInDelegate` Yönetilen hata ayıklama Yardımcısı (MDA) bir yerel işlev işaretçisi bir temsilci oluşturmak için bir geçersiz işlev işaretçisi geçtikten sonra etkinleştirilir.  
+Yönetilen `invalidFunctionPointerInDelegate` hata ayıklama Yardımcısı (MDA), bir yerel işlev işaretçisi üzerinden temsilci oluşturmak için geçersiz bir işlev işaretçisi geçirildiğinde etkinleştirilir.  
   
 ## <a name="symptoms"></a>Belirtiler  
- Erişim ihlalleri veya bir temsilci bir işlev işaretçisi kullanılırken beklenmeyen Bellek Bozulması.  
+ Bir işlev işaretçisi üzerinde bir temsilci kullanılırken erişim ihlalleri veya beklenmedik bellek bozulması.  
   
 ## <a name="cause"></a>Sebep  
- Geçersiz işlev işaretçi belirtildi.  
+ Geçersiz bir işlev işaretçisi belirtildi.  
   
 ## <a name="resolution"></a>Çözüm  
- Geçerli işlev işaretçisi belirtin  
+ Geçerli bir işlev işaretçisi belirtin  
   
-## <a name="effect-on-the-runtime"></a>Çalışma zamanı üzerindeki etkisi  
- Bu mda'nın CLR üzerinde etkisi yoktur.  
+## <a name="effect-on-the-runtime"></a>Çalışma zamanında etki  
+ Bu MDA, CLR üzerinde hiçbir etkisi yoktur.  
   
 ## <a name="output"></a>Çıkış  
  Geçersiz işlev işaretçisi.  
@@ -51,5 +51,5 @@ ms.locfileid: "61754576"
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [Yönetilen Hata Ayıklama Yardımcıları ile Hataları Tanılama](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [Birlikte Çalışma için Hazırlama](../../../docs/framework/interop/interop-marshaling.md)
+- [Yönetilen Hata Ayıklama Yardımcıları ile Hataları Tanılama](diagnosing-errors-with-managed-debugging-assistants.md)
+- [Birlikte Çalışma için Hazırlama](../interop/interop-marshaling.md)

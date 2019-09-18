@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8dd7bac8c0cb14421016efad60a7ec0d672e5622
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 2229dca07a3a723babe5bf202ce5ddc0c77a7374
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70854016"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052197"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>Geliştiriciler için .NET Framework dağıtım kılavuzu
 Bu konu, .NET Framework .NET Framework 4,5 [!INCLUDE[net_current](../../../includes/net-current-version.md)] ' den uygulamalarına herhangi bir sürümünü yüklemek isteyen geliştiriciler için bilgi sağlamaktadır.
@@ -53,15 +53,15 @@ Bu konu, .NET Framework .NET Framework 4,5 [!INCLUDE[net_current](../../../inclu
 
 - .NET Framework 4,5 ve noktası sürümlerini yüklemek için yönetici ayrıcalıklarına sahip olmanız gerekir.
 
-- .NET Framework 4,5, ve [!INCLUDE[win8](../../../includes/win8-md.md)] [!INCLUDE[winserver8](../../../includes/winserver8-md.md)]' de bulunur, bu nedenle uygulamayı bu işletim sistemlerine dağıtmanız gerekmez. Benzer şekilde, .NET Framework 4.5.1, [!INCLUDE[win81](../../../includes/win81-md.md)] ve Windows Server 2012 R2 'ye dahil edilmiştir. .NET Framework 4.5.2 hiçbir işletim sistemine dahil değildir. .NET Framework 4,6, Windows 10 ' a dahil edilmiştir, .NET Framework 4.6.1 Windows 10 Kasım güncelleştirmesine dahildir ve .NET Framework 4.6.2 Windows 10 yıldönümü güncelleştirmesine dahildir.  .NET Framework 4,7, Windows 10 Creators Update 'e dahildir, .NET Framework 4.7.1 Windows 10 Fall Creators Update 'e dahildir ve .NET Framework 4.7.2 Windows 10 Ekim 2018 güncelleştirmesi ve Windows 10 Nisan 2018 güncelleştirmesine dahildir. .NET Framework 4,8, Windows 10 Mayıs 2019 güncelleştirme ' ye eklenmiştir. Donanım ve yazılım gereksinimlerinin tam listesi için bkz. [sistem gereksinimleri](../../../docs/framework/get-started/system-requirements.md).
+- .NET Framework 4,5, ve [!INCLUDE[win8](../../../includes/win8-md.md)] [!INCLUDE[winserver8](../../../includes/winserver8-md.md)]' de bulunur, bu nedenle uygulamayı bu işletim sistemlerine dağıtmanız gerekmez. Benzer şekilde, .NET Framework 4.5.1, [!INCLUDE[win81](../../../includes/win81-md.md)] ve Windows Server 2012 R2 'ye dahil edilmiştir. .NET Framework 4.5.2 hiçbir işletim sistemine dahil değildir. .NET Framework 4,6, Windows 10 ' a dahil edilmiştir, .NET Framework 4.6.1 Windows 10 Kasım güncelleştirmesine dahildir ve .NET Framework 4.6.2 Windows 10 yıldönümü güncelleştirmesine dahildir.  .NET Framework 4,7, Windows 10 Creators Update 'e dahildir, .NET Framework 4.7.1 Windows 10 Fall Creators Update 'e dahildir ve .NET Framework 4.7.2 Windows 10 Ekim 2018 güncelleştirmesi ve Windows 10 Nisan 2018 güncelleştirmesine dahildir. .NET Framework 4,8, Windows 10 Mayıs 2019 güncelleştirme ' ye eklenmiştir. Donanım ve yazılım gereksinimlerinin tam listesi için bkz. [sistem gereksinimleri](../get-started/system-requirements.md).
 
-- Kullanıcılarınız .NET Framework 4,5 ' den başlayarak, kurulum sırasında çalışan .NET Framework uygulamalarının bir listesini görüntüleyebilir ve kolayca kapatabilir. Bu, .NET Framework yüklemelerinin neden olduğu sistem yeniden başlatmalarının önlenmesine yardımcı olabilir. Bkz. [sistem yeniden başlatmaları azaltma](../../../docs/framework/deployment/reducing-system-restarts.md).
+- Kullanıcılarınız .NET Framework 4,5 ' den başlayarak, kurulum sırasında çalışan .NET Framework uygulamalarının bir listesini görüntüleyebilir ve kolayca kapatabilir. Bu, .NET Framework yüklemelerinin neden olduğu sistem yeniden başlatmalarının önlenmesine yardımcı olabilir. Bkz. [sistem yeniden başlatmaları azaltma](reducing-system-restarts.md).
 
 - .NET Framework 4,5 ' nin kaldırılması veya noktası sürümlerinden biri, önceden var olan .NET Framework 4 dosyalarını da kaldırır. .NET Framework 4 ' e geri dönmek istiyorsanız, bu dosyayı ve tüm güncelleştirmeleri yeniden yüklemeniz gerekir. (Bkz. [.NET Framework 4](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5a4x27ek(v=vs.100)).)
 
 - .NET Framework 4,5 yeniden dağıtılabilir, dijital bir sertifikada yanlış bir zaman damgasıyla ilgili bir sorunu düzeltmek için 9 Ekim 2012 tarihinde güncelleştirildi. Bu, Microsoft tarafından oluşturulan ve imzalanan dosyalardaki dijital imzanın erken süre sonu dolmasına neden olur. Daha önce 16 Ağustos 2012 tarihli .NET Framework 4,5 yeniden dağıtılabilir paketini yüklediyseniz, [Microsoft Indirme merkezi](https://go.microsoft.com/fwlink/p/?LinkId=245484)'ndeki kopyanızı en son yeniden dağıtılabilir ile güncelleştirmenizi öneririz. Bu sorun hakkında daha fazla bilgi için bkz. [Microsoft Güvenlik Danışmanlığı 2749655](https://docs.microsoft.com/security-updates/SecurityAdvisories/2012/2749655).
 
-Bir sistem yöneticisinin .NET Framework ve sistem bağımlılıklarını bir ağ üzerinden nasıl dağıtabilirim hakkında bilgi için bkz. [Yöneticiler Için dağıtım kılavuzu](../../../docs/framework/deployment/guide-for-administrators.md).
+Bir sistem yöneticisinin .NET Framework ve sistem bağımlılıklarını bir ağ üzerinden nasıl dağıtabilirim hakkında bilgi için bkz. [Yöneticiler Için dağıtım kılavuzu](guide-for-administrators.md).
 
 ## <a name="deployment-options-for-your-app"></a>Uygulamanız için dağıtım seçenekleri
 
@@ -233,7 +233,7 @@ Ortak dönüş kodları için [dönüş kodları](#return-codes) bölümüne bak
 
 Özel bir kurulum paketiniz varsa, kurulum ilerleme durumunun kendi görünümünü gösterirken .NET Framework kurulumunu sessizce başlatmak ve izlemek isteyebilirsiniz. Bu durumda, kodunuzun aşağıdakileri kapsadığından emin olun:
 
-- [.NET Framework donanım ve yazılım gereksinimlerini](../../../docs/framework/get-started/system-requirements.md)denetleyin.
+- [.NET Framework donanım ve yazılım gereksinimlerini](../get-started/system-requirements.md)denetleyin.
 
 - .NET Framework doğru sürümünün kullanıcının bilgisayarında zaten yüklü olup olmadığını [algılar](#detect_net) .
 
@@ -242,7 +242,7 @@ Ortak dönüş kodları için [dönüş kodları](#return-codes) bölümüne bak
 
 - Dil paketlerinin kullanıcının bilgisayarında zaten yüklü olup olmadığını [algılar](#detecting-the-language-packs) .
 
-- Dağıtımı denetlemek isterseniz, .NET Framework kurulum işlemini sessizce başlatın ve izleyin (bkz [. nasıl yapılır: .NET Framework 4,5 Yükleyicisinden](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)ilerleme durumunu alın.
+- Dağıtımı denetlemek isterseniz, .NET Framework kurulum işlemini sessizce başlatın ve izleyin (bkz [. nasıl yapılır: .NET Framework 4,5 Yükleyicisinden](how-to-get-progress-from-the-dotnet-installer.md)ilerleme durumunu alın.
 
 - Çevrimdışı yükleyiciyi dağıtıyorsanız, [dil paketlerini ayrı olarak zincirleyebilirsiniz](#chain_langpack).
 
@@ -431,9 +431,9 @@ Aşağıdaki tabloda, .NET Framework 4,5 ve nokta sürümleri için kullanılabi
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Yöneticiler için Dağıtım Kılavuzu](../../../docs/framework/deployment/guide-for-administrators.md)
-- [Sistem Gereksinimleri](../../../docs/framework/get-started/system-requirements.md)
-- [Geliştiriciler için .NET Framework yüklemesi](../../../docs/framework/install/guide-for-developers.md)
-- [Engellenen .NET Framework yükleme ve kaldırma sorunlarını giderme](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)
-- [.NET Framework 4.5 Yüklemeleri Sırasında Sistem Yeniden Başlatmalarını Azaltma](../../../docs/framework/deployment/reducing-system-restarts.md)
-- [Nasıl yapılır: .NET Framework 4,5 Yükleyicisinden Ilerleme durumunu alın](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)
+- [Yöneticiler için Dağıtım Kılavuzu](guide-for-administrators.md)
+- [Sistem Gereksinimleri](../get-started/system-requirements.md)
+- [Geliştiriciler için .NET Framework yüklemesi](../install/guide-for-developers.md)
+- [Engellenen .NET Framework yükleme ve kaldırma sorunlarını giderme](../install/troubleshoot-blocked-installations-and-uninstallations.md)
+- [.NET Framework 4.5 Yüklemeleri Sırasında Sistem Yeniden Başlatmalarını Azaltma](reducing-system-restarts.md)
+- [Nasıl yapılır: .NET Framework 4,5 Yükleyicisinden Ilerleme durumunu alın](how-to-get-progress-from-the-dotnet-installer.md)

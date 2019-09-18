@@ -7,78 +7,78 @@ helpviewer_keywords:
 - networking how-tos [.NET Framework]
 - network
 ms.assetid: 8fd6c675-9ea6-4fad-a412-e2c2c1f233d8
-ms.openlocfilehash: e4c786467a8fd30f64431001da6d239b654a47af
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5f8f1a3ca9aaf4bea56f342857d2df0bb18a9ba8
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647288"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047626"
 ---
 # <a name="network-programming-how-to-topics"></a>Görsel Katman Programlama ile İlgili Nasıl Yapılır Konuları
-Aşağıdaki liste, ağ programlama için kavramsal belgelerde bulunan nasıl yapılır konulara bağlantılar içerir.  
+Aşağıdaki liste, ağ programlama için kavramsal belgelerde bulunan nasıl yapılır konularına bağlantılar içerir.  
   
- **İstekte bulunan veriler:**  
+ **Veri isteniyor:**  
   
-- [Nasıl yapılır: Web sayfası isteme ve sonuçları bir Stream alma](../../../docs/framework/network-programming/how-to-request-a-web-page-and-retrieve-the-results-as-a-stream.md)  
+- [Nasıl yapılır: Web sayfası isteme ve sonuçları akış olarak alma](how-to-request-a-web-page-and-retrieve-the-results-as-a-stream.md)  
   
-- [Nasıl yapılır: WebRequest sınıfını kullanarak veri isteme](../../../docs/framework/network-programming/how-to-request-data-using-the-webrequest-class.md)  
+- [Nasıl yapılır: WebRequest sınıfını kullanarak veri isteme](how-to-request-data-using-the-webrequest-class.md)  
   
-- [Nasıl yapılır: WebRequest sınıfını kullanarak veri gönderme](../../../docs/framework/network-programming/how-to-send-data-using-the-webrequest-class.md)  
+- [Nasıl yapılır: WebRequest sınıfını kullanarak veri gönderme](how-to-send-data-using-the-webrequest-class.md)  
   
-- [Nasıl yapılır: WebRequest ile eşleşen protokole özgü WebResponse alma](../../../docs/framework/network-programming/how-to-retrieve-a-protocol-specific-webresponse-that-matches-a-webrequest.md)  
+- [Nasıl yapılır: WebRequest Ile eşleşen protokole özgü bir WebResponse alma](how-to-retrieve-a-protocol-specific-webresponse-that-matches-a-webrequest.md)  
   
  **Takılabilir ve uygulama protokolleri:**  
   
-- [Nasıl yapılır: WebRequest kullanarak özel Protokolü kaydetme](../../../docs/framework/network-programming/how-to-register-a-custom-protocol-using-webrequest.md)  
+- [Nasıl yapılır: WebRequest kullanarak özel protokol kaydetme](how-to-register-a-custom-protocol-using-webrequest.md)  
   
-- [Nasıl yapılır: Protokole özgü özelliklere erişim WebRequest türü atayarak](../../../docs/framework/network-programming/how-to-typecast-a-webrequest-to-access-protocol-specific-properties.md)  
+- [Nasıl yapılır: Web Isteği protokolüne özgü özelliklere erişim için tür dönüştürme](how-to-typecast-a-webrequest-to-access-protocol-specific-properties.md)  
   
-- [Nasıl yapılır: HTTP'ye özgü özelliklere erişim](../../../docs/framework/network-programming/how-to-access-http-specific-properties.md)  
+- [Nasıl yapılır: HTTP 'e özgü özelliklere erişin](how-to-access-http-specific-properties.md)  
   
-- [Nasıl yapılır: Bağlantıları gruplandırmak için kullanıcı bilgileri atama](../../../docs/framework/network-programming/how-to-assign-user-information-to-group-connections.md)  
+- [Nasıl yapılır: Grup bağlantılarına Kullanıcı bilgilerini atama](how-to-assign-user-information-to-group-connections.md)  
   
-- [Nasıl yapılır: Yuva oluşturun](../../../docs/framework/network-programming/how-to-create-a-socket.md)  
+- [Nasıl yapılır: Yuva oluşturma](how-to-create-a-socket.md)  
   
-- [Nasıl yapılır: FTP ile dosyaları indirme](../../../docs/framework/network-programming/how-to-download-files-with-ftp.md)  
+- [Nasıl yapılır: FTP ile dosya indirme](how-to-download-files-with-ftp.md)  
   
-- [Nasıl yapılır: FTP ile dosyaları karşıya yükleme](../../../docs/framework/network-programming/how-to-upload-files-with-ftp.md)  
+- [Nasıl yapılır: FTP ile dosya yükleme](how-to-upload-files-with-ftp.md)  
   
-- [Nasıl yapılır: FTP ile dizin içeriğini listeleme](../../../docs/framework/network-programming/how-to-list-directory-contents-with-ftp.md)  
+- [Nasıl yapılır: FTP ile dizin Içeriğini listeleme](how-to-list-directory-contents-with-ftp.md)  
   
  **Internet Protokolü sürüm 6:**  
   
-- [Nasıl yapılır: IPv6 desteğini etkinleştirmek için bilgisayar yapılandırma dosyasını değiştirme](../../../docs/framework/network-programming/how-to-modify-the-computer-configuration-file-to-enable-ipv6-support.md)  
+- [Nasıl yapılır: IPv6 desteğini etkinleştirmek için bilgisayar yapılandırma dosyasını değiştirme](how-to-modify-the-computer-configuration-file-to-enable-ipv6-support.md)  
   
- **Ağ izleme:**  
+ **Ağ Izleme:**  
   
-- [Nasıl yapılır: Ağ izlemeyi yapılandırma](../../../docs/framework/network-programming/how-to-configure-network-tracing.md)  
+- [Nasıl yapılır: Ağ Izlemeyi yapılandırma](how-to-configure-network-tracing.md)  
   
  **Önbelleğe almayı yapılandırma:**  
   
-- [Nasıl yapılır: Uygulama için bir konum temelli önbellek İlkesi ayarlama](../../../docs/framework/network-programming/how-to-set-a-location-based-cache-policy-for-an-application.md)  
+- [Nasıl yapılır: Uygulama için konum tabanlı önbellek Ilkesi ayarlama](how-to-set-a-location-based-cache-policy-for-an-application.md)  
   
-- [Nasıl yapılır: Uygulama için varsayılan saat temelli önbellek İlkesi ayarlama](../../../docs/framework/network-programming/how-to-set-the-default-time-based-cache-policy-for-an-application.md)  
+- [Nasıl yapılır: Bir uygulama için varsayılan zaman tabanlı önbellek Ilkesini ayarlama](how-to-set-the-default-time-based-cache-policy-for-an-application.md)  
   
-- [Nasıl yapılır: Bir saat temelli önbellek ilkesini özelleştirme](../../../docs/framework/network-programming/how-to-customize-a-time-based-cache-policy.md)  
+- [Nasıl yapılır: Zaman tabanlı önbellek Ilkesini özelleştirme](how-to-customize-a-time-based-cache-policy.md)  
   
-- [Nasıl yapılır: Bir istek için önbellek İlkesi ayarlama](../../../docs/framework/network-programming/how-to-set-cache-policy-for-a-request.md)  
+- [Nasıl yapılır: Istek için önbellek Ilkesi ayarlama](how-to-set-cache-policy-for-a-request.md)  
   
- **Proxy'leri kullanma:**  
+ **Proxy 'Leri kullanma:**  
   
-- [Nasıl yapılır: Internet ile iletişim kurmak için bir ara sunucu kullanan bir Webrequest'i etkinleştirme](../../../docs/framework/network-programming/how-to-enable-a-webrequest-to-use-a-proxy-to-communicate-with-the-internet.md)  
+- [Nasıl yapılır: Bir WebRequest 'i Internet Ile Iletişim kurmak için bir proxy kullanmak üzere etkinleştirme](how-to-enable-a-webrequest-to-use-a-proxy-to-communicate-with-the-internet.md)  
   
-- [Nasıl yapılır: Genel Ara sunucu seçimini geçersiz kılma](../../../docs/framework/network-programming/how-to-override-a-global-proxy-selection.md)  
+- [Nasıl yapılır: Genel ara sunucu seçimini geçersiz kılma](how-to-override-a-global-proxy-selection.md)  
   
  **Ağ bilgileri:**  
   
-- [Nasıl yapılır: Ağ kullanılabilirliğini algılama ve adres değişiklikleri](../../../docs/framework/network-programming/how-to-detect-network-availability-and-address-changes.md)  
+- [Nasıl yapılır: Ağ kullanılabilirliğini ve adres değişikliklerini Algıla](how-to-detect-network-availability-and-address-changes.md)  
   
-- [Nasıl yapılır: Arabirim ve protokol bilgilerini alma](../../../docs/framework/network-programming/how-to-get-interface-and-protocol-information.md)  
+- [Nasıl yapılır: Arabirim ve protokol bilgilerini al](how-to-get-interface-and-protocol-information.md)  
   
-- [Nasıl yapılır: Konağa ping yapma](../../../docs/framework/network-programming/how-to-ping-a-host.md)  
+- [Nasıl yapılır: Konağa ping gönder](how-to-ping-a-host.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [.NET Framework'te Ağ Programlaması](../../../docs/framework/network-programming/index.md)
-- [Ağ Programlama Örnekleri](../../../docs/framework/network-programming/network-programming-samples.md)
-- [MSDN Kod Galerisi'nde .NET için ağ örnekleri](https://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)
+- [.NET Framework'te Ağ Programlaması](index.md)
+- [Ağ Programlama Örnekleri](network-programming-samples.md)
+- [MSDN kod galerisinde .NET için ağ örnekleri](https://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)

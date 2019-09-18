@@ -4,70 +4,70 @@ ms.date: 03/30/2017
 ms.assetid: 3fe5848c-ecd7-4136-970b-8e48d250bde6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fb3ad0d39d47297b7d26a5c28cfbbc269ce99e44
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 062f13ad92f37bb7ae29ed34dcf88f99f98e7612
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66052407"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049267"
 ---
 # <a name="runtime-directive-elements"></a>Çalışma Zamanı Yönerge Öğeleri
-Çalışma zamanı yönergeleri (rd.xml) dosya biçimi aşağıdaki çalışma zamanı yönerge öğeleri destekler. Bkz: [çalışma zamanı yönergeleri (rd.xml) yapılandırma dosyası başvurusu](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md) hiyerarşik bir sunumunu için.  
+Çalışma zamanı yönergeleri (RD. xml) dosya biçimi aşağıdaki çalışma zamanı yönerge öğelerini destekler. Hiyerarşik bir gösterim için bkz. [çalışma zamanı yönergeleri (RD. xml) yapılandırma dosyası başvurusu](runtime-directives-rd-xml-configuration-file-reference.md) .  
   
- [\<Uygulama >](../../../docs/framework/net-native/application-element-net-native.md)  
- Uygulama tarafından kullanılan tüm türler için çalışma zamanı yansıma ilke uygulanır ve birçok farklı uygulama türleri ve tür üyeleri olan meta verilerini yansıma çalışma zamanında kullanılabilir için kapsayıcı görevi görür. Bu bir alt öğesidir [ \<yönergeleri >](../../../docs/framework/net-native/directives-element-net-native.md) öğesi.  
+ [\<Uygulama >](application-element-net-native.md)  
+ , Uygulama tarafından kullanılan tüm türlere çalışma zamanı yansıtma ilkesi uygular ve uygulama genelinde türler için bir kapsayıcı görevi görür ve meta verileri çalışma zamanında yansıma için kullanılabilir olan üyeleri yazın. Bu, [ \<yönergelerin >](directives-element-net-native.md) öğesinin bir alt öğesidir.  
   
- [\<Derleme >](../../../docs/framework/net-native/assembly-element-net-native.md)  
- Çalışma zamanı İlkesi derlemedeki tüm türleri için geçerlidir. Bu bir alt öğesidir [ \<uygulama >](../../../docs/framework/net-native/application-element-net-native.md) ve [ \<kitaplığı >](../../../docs/framework/net-native/library-element-net-native.md) öğeleri.  
+ [\<Bütünleştirilmiş kod >](assembly-element-net-native.md)  
+ Çalışma zamanı ilkesini derlemedeki tüm türlere uygular. Bu, [ \<uygulama >](application-element-net-native.md) ve [ \<kitaplık >](library-element-net-native.md) öğelerinin bir alt öğesidir.  
   
- [\<Attributeımplies >](../../../docs/framework/net-native/attributeimplies-element-net-native.md)  
- Kapsayıcı [ \<türü >](../../../docs/framework/net-native/type-element-net-native.md) yönergesi bir özniteliktir, çalışma zamanı İlkesi bu özniteliğin uygulandığı kod öğeleri için geçerlidir.  
+ [\<Attribute>](attributeimplies-element-net-native.md)  
+ Kapsayan tür > yönergesi bir öznitelik ise, bu özniteliğin uygulandığı kod öğelerine çalışma zamanı ilkesi uygular. [ \<](type-element-net-native.md)  
   
- [\<Yönergeleri >](../../../docs/framework/net-native/directives-element-net-native.md)  
- .NET Native her çalışma zamanı yönergeleri dosyasının kök öğesi. Alt öğeleri olan [ \<uygulama >](../../../docs/framework/net-native/application-element-net-native.md) ve [ \<kitaplığı >](../../../docs/framework/net-native/library-element-net-native.md).  
+ [\<Yönergeler >](directives-element-net-native.md)  
+ .NET Native için her çalışma zamanı yönergeleri dosyasında kök öğe. Alt öğeleri [ \<uygulama >](application-element-net-native.md) ve [ \<kitaplık >](library-element-net-native.md).  
   
- [\<Olay >](../../../docs/framework/net-native/event-element-net-native.md)  
- Çalışma zamanı İlkesi, bir olay için geçerlidir. Bu bir alt öğesidir [ \<türü >](../../../docs/framework/net-native/type-element-net-native.md) ve [ \<Typeınstantiation >](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) öğeleri.  
+ [\<Olay >](event-element-net-native.md)  
+ Bir olaya çalışma zamanı ilkesi uygular. Bu, [ \<türü >](type-element-net-native.md) ve [ \<typeörneklemesi >](typeinstantiation-element-net-native.md) öğeleri için bir alt öğesidir.  
   
- [\<alan >](../../../docs/framework/net-native/field-element-net-native.md)  
- Çalışma zamanı ilkesi için bir alan için geçerlidir. Bu bir alt öğesidir [ \<türü >](../../../docs/framework/net-native/type-element-net-native.md) ve [ \<Typeınstantiation >](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) öğeleri.  
+ [\<Alan >](field-element-net-native.md)  
+ Çalışma zamanı ilkesini bir alana uygular. Bu, [ \<türü >](type-element-net-native.md) ve [ \<typeörneklemesi >](typeinstantiation-element-net-native.md) öğeleri için bir alt öğesidir.  
   
- [\<GenericParameter >](../../../docs/framework/net-native/genericparameter-element-net-native.md)  
- Çalışma zamanı ilkesi için bir genel tür veya yöntemin parametre türü için geçerlidir.  
+ [\<GenericParameter >](genericparameter-element-net-native.md)  
+ Bir genel türün veya yöntemin parametre türüne çalışma zamanı ilkesi uygular.  
   
- [\<Impliestype >](../../../docs/framework/net-native/impliestype-element-net-native.md)  
- Bu ilkeyi kapsayan tür veya yöntem uygulanmışsa, çalışma zamanı İlkesi bir türü için geçerlidir.  
+ [\<Impliestype >](impliestype-element-net-native.md)  
+ Bu ilke kapsayan tür veya yönteme uygulanmışsa, bir türe çalışma zamanı ilkesi uygular.  
   
- [\<Kitaplık >](../../../docs/framework/net-native/library-element-net-native.md)  
- Çalışma zamanı İlkesi derlemedeki tüm türleri için geçerlidir. Bu bir alt öğesidir [ \<uygulama >](../../../docs/framework/net-native/application-element-net-native.md) ve [ \<kitaplığı >](../../../docs/framework/net-native/library-element-net-native.md) öğeleri.  
+ [\<Kitaplık >](library-element-net-native.md)  
+ Çalışma zamanı ilkesini derlemedeki tüm türlere uygular. Bu, [ \<uygulama >](application-element-net-native.md) ve [ \<kitaplık >](library-element-net-native.md) öğelerinin bir alt öğesidir.  
   
- [\<Yöntem >](../../../docs/framework/net-native/method-element-net-native.md)  
- Çalışma zamanı İlkesi, bir yönteme uygulanır. Bu bir alt öğesidir [ \<türü >](../../../docs/framework/net-native/type-element-net-native.md) ve [ \<Typeınstantiation >](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) öğeleri.  
+ [\<Yöntem >](method-element-net-native.md)  
+ Bir yönteme çalışma zamanı ilkesi uygular. Bu, [ \<türü >](type-element-net-native.md) ve [ \<typeörneklemesi >](typeinstantiation-element-net-native.md) öğeleri için bir alt öğesidir.  
   
- [\<Methodınstantiation >](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)  
- Çalışma zamanı İlkesi oluşturulmuş bir genel yöntem için geçerlidir. Bu bir alt öğesidir [ \<türü >](../../../docs/framework/net-native/type-element-net-native.md) ve [ \<Typeınstantiation >](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) öğeleri.  
+ [\<Methodörneklemesi >](methodinstantiation-element-net-native.md)  
+ Oluşturulan genel metoda çalışma zamanı ilkesi uygular. Bu, [ \<türü >](type-element-net-native.md) ve [ \<typeörneklemesi >](typeinstantiation-element-net-native.md) öğeleri için bir alt öğesidir.  
   
- [\<Namespace >](../../../docs/framework/net-native/namespace-element-net-native.md)  
- Çalışma zamanı ilkesi için bir ad alanındaki tüm türleri geçerlidir.  
+ [\<Ad alanı >](namespace-element-net-native.md)  
+ Çalışma alanı ilkesini bir ad alanındaki tüm türlere uygular.  
   
- [\<Parametresi >](../../../docs/framework/net-native/parameter-element-net-native.md)  
- Çalışma zamanı İlkesi bir yönteme geçirilen bağımsız değişken türü için geçerlidir.  
+ [\<Parametre >](parameter-element-net-native.md)  
+ Bir yönteme geçirilen bağımsız değişkenin türüne çalışma zamanı ilkesi uygular.  
   
- [\<Özellik >](../../../docs/framework/net-native/property-element-net-native.md)  
- Çalışma zamanı İlkesi, bir özellik için geçerlidir. Bu bir alt öğesidir [ \<türü >](../../../docs/framework/net-native/type-element-net-native.md) ve [ \<Typeınstantiation >](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) öğeleri.  
+ [\<Özellik >](property-element-net-native.md)  
+ Çalışma zamanı ilkesini bir özelliğe uygular. Bu, [ \<türü >](type-element-net-native.md) ve [ \<typeörneklemesi >](typeinstantiation-element-net-native.md) öğeleri için bir alt öğesidir.  
   
- [\<Subtypes >](../../../docs/framework/net-native/subtypes-element-net-native.md)  
- Çalışma zamanı İlkesi kapsayan türden devralınan tüm sınıflar için geçerlidir.  
+ [\<Alt türler >](subtypes-element-net-native.md)  
+ Çalışma zamanı ilkesini, kapsayan türden devralınan tüm sınıflara uygular.  
   
- [\<türü >](../../../docs/framework/net-native/type-element-net-native.md)  
- Çalışma zamanı İlkesi, bir türü için geçerlidir.  
+ [\<Tür >](type-element-net-native.md)  
+ Bir türe çalışma zamanı ilkesi uygular.  
   
- [\<Typeınstantiation >](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)  
- Çalışma zamanı İlkesi oluşturulmuş bir genel türü için geçerlidir.  
+ [\<Typeörneklemesi >](typeinstantiation-element-net-native.md)  
+ Oluşturulan genel bir türe çalışma zamanı ilkesi uygular.  
   
- [\<TypeParameter >](../../../docs/framework/net-native/typeparameter-element-net-native.md)  
- Tarafından temsil edilen bir türün çalışma zamanı ilkenin uygulanacağı bir <xref:System.Type> bir yönteme geçirilen bağımsız değişken.  
+ [\<TypeParameter >](typeparameter-element-net-native.md)  
+ Yönteme geçirilen bir <xref:System.Type> bağımsız değişkenle temsil edilen türe çalışma zamanı ilkesi uygular.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [RD.XML yapılandırma dosyası başvurusu](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [RD. xml yapılandırma dosyası başvurusu](runtime-directives-rd-xml-configuration-file-reference.md)

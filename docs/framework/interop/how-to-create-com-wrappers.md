@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: bdf89bea-1623-45ee-a57b-cf7c90395efa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e1c4423c20a9a485f3c40877ccd489c749dc0e2c
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 56a88a5719fc5630baf2f31ee62fd463980661c2
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70971831"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051801"
 ---
 # <a name="how-to-create-com-wrappers"></a>Nasıl yapılır: COM Sarmalayıcıları Oluşturma
 
@@ -45,7 +45,7 @@ Artık COM nesnesine erişmek için kod yazabilirsiniz. Nesnesini bildirerek, ö
   
 ### <a name="to-create-a-runtime-callable-wrapper-using-net-framework-tools"></a>.NET Framework araçlarını kullanarak bir çalışma zamanı çağrılabilir sarmalayıcı oluşturmak için  
   
-- [Tlbimp. exe (tür kitaplığı Içeri Aktarıcı)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md) aracını çalıştırın.  
+- [Tlbimp. exe (tür kitaplığı Içeri Aktarıcı)](../tools/tlbimp-exe-type-library-importer.md) aracını çalıştırın.  
   
  Bu araç, özgün tür kitaplığında tanımlanan türler için çalışma zamanı meta verilerini içeren bir derleme oluşturur.  
   
@@ -67,11 +67,11 @@ Artık COM nesnesine erişmek için kod yazabilirsiniz. Nesnesini bildirerek, ö
   
 ### <a name="to-create-a-com-callable-wrapper-using-net-framework-tools"></a>.NET Framework araçlarını kullanarak COM çağrılabilir bir sarmalayıcı oluşturmak için  
   
-[Regasm. exe (derleme kayıt aracı)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md) aracını çalıştırın.  
+[Regasm. exe (derleme kayıt aracı)](../tools/regasm-exe-assembly-registration-tool.md) aracını çalıştırın.  
   
 Bu araç derleme meta verilerini okur ve gerekli girdileri kayıt defterine ekler. Sonuç olarak, COM istemcileri .NET Framework sınıfları saydam şekilde oluşturabilir. Derlemeyi yerel bir COM sınıfı gibi kullanabilirsiniz.  
   
-Herhangi bir dizinde bulunan bir derlemede Regasm. exe ' yi çalıştırabilir ve ardından [Gacutil. exe ' yi (genel bütünleştirilmiş kod önbelleği aracı)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) çalıştırarak genel derleme önbelleğine taşıyabilirsiniz. Derlemenin taşınması konum kayıt defteri girdilerini geçersiz kılmaz, çünkü derleme başka bir yerde bulunmazsa genel derleme önbelleği her zaman incelenir.  
+Herhangi bir dizinde bulunan bir derlemede Regasm. exe ' yi çalıştırabilir ve ardından [Gacutil. exe ' yi (genel bütünleştirilmiş kod önbelleği aracı)](../tools/gacutil-exe-gac-tool.md) çalıştırarak genel derleme önbelleğine taşıyabilirsiniz. Derlemenin taşınması konum kayıt defteri girdilerini geçersiz kılmaz, çünkü derleme başka bir yerde bulunmazsa genel derleme önbelleği her zaman incelenir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: fd4026bc-2c3d-4b27-86dc-ec5e96018181
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4ff02c5856e4ee48c8e5cf375cc68d92c76737c7
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: d1d7e6e098b6ce497dfe74f0afe2322b33a787c6
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988391"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053263"
 ---
 # <a name="64-bit-applications"></a>64 bitlik Uygulamalar
 Bir uygulamayı derlediğinizde, 64 bitlik bir Windows işletim sisteminde yerel uygulama olarak ya da WOW64 (Windows 64-bit üzerinde Windows-32-bit) altında çalışmasını belirtebilirsiniz. WOW64, 32 bitlik bir uygulamanın 64 bitlik bir sistemde çalışmasını sağlayan bir uyumluluk ortamıdır. WOW64, Windows işletim sisteminin tüm 64 bitlik sürümlerinde bulunur.  
@@ -26,7 +26,7 @@ Bir uygulamayı derlediğinizde, 64 bitlik bir Windows işletim sisteminde yerel
 > [!NOTE]
 > Itanium işlemci ailesine ait x86 öykünmesinin ve WOW64 alt sisteminin tasarımı nedeniyle uygulamalar tek işlemcide yürütülmeye sınırlıdır. Bu etkenler, Itanium tabanlı sistemlerde çalışan 32 bitlik .NET Framework uygulamalarının performansını ve ölçeklenebilirliğini azaltır. Daha yüksek performans ve ölçeklenebilirlik için, Itanium tabanlı sistemler için yerel 64 bit desteği içeren .NET Framework 4 ' ü kullanmanızı öneririz.  
   
- Varsayılan olarak, 64 bitlik bir Windows işletim sisteminde 64 bitlik yönetilen bir uygulama çalıştırdığınızda, 2 gigabayttan (GB) daha büyük bir nesne oluşturamazsınız. Ancak .NET Framework 4,5 ' de bu sınırı artırabilirsiniz.  Daha fazla bilgi için bkz [ \<. gcAllowVeryLargeObjects > öğesi](../../docs/framework/configure-apps/file-schema/runtime/gcallowverylargeobjects-element.md).  
+ Varsayılan olarak, 64 bitlik bir Windows işletim sisteminde 64 bitlik yönetilen bir uygulama çalıştırdığınızda, 2 gigabayttan (GB) daha büyük bir nesne oluşturamazsınız. Ancak .NET Framework 4,5 ' de bu sınırı artırabilirsiniz.  Daha fazla bilgi için bkz [ \<. gcAllowVeryLargeObjects > öğesi](./configure-apps/file-schema/runtime/gcallowverylargeobjects-element.md).  
   
  Çoğu derleme, 32 bitlik CLR ve 64 bitlik CLR'de aynı şekilde çalışır. Ancak bazı programlar, eğer aşağıdakilerden bir veya daha fazlasını içeriyorlarsa CLR'ye bağlı olarak farklı şekilde davranabilir:  
   
@@ -61,6 +61,6 @@ Bir uygulamayı derlediğinizde, 64 bitlik bir Windows işletim sisteminde yerel
 |Visual C++|**/Clr: Safe**kullanarak platform belirsiz, Microsoft ara DILI (MSIL) uygulamaları oluşturabilirsiniz. Daha fazla bilgi için bkz. [/clr (ortak dil çalışma zamanı derlemesi)](/cpp/build/reference/clr-common-language-runtime-compilation).<br /><br /> Visual C++, 64 bitlik her bir işletim sistemi için ayrı bir derleyici içerir. 64 bitlik bir Windows işletim sisteminde çalışan yerel C++ uygulamalar oluşturmak Için görselin nasıl kullanılacağı hakkında daha fazla bilgi için bkz. [64 bit programlama](/cpp/build/configuring-programs-for-64-bit-visual-cpp).|  
   
 ## <a name="determining-the-status-of-an-exe-file-or-dll-file"></a>Bir .exe Dosyası veya .dll Dosyasının Durumunu Belirleme  
- Bir. exe dosyasının veya. dll dosyasının yalnızca belirli bir platformda mı yoksa WOW64 altında mi çalışacağını öğrenmek için, hiçbir seçenek olmadan [CorFlags. exe (CorFlags dönüştürme aracı)](../../docs/framework/tools/corflags-exe-corflags-conversion-tool.md) kullanın. Bir .exe dosyasının veya .dll dosyasının platform durumunu değiştirmek için aynı zamanda CorFlags.exe'yi de kullanabilirsiniz. Bir Visual Studio derlemesinin CLR başlığının ana çalışma zamanı sürümü numarası 2 olarak, alt çalışma zamanı sürümü numarası ise 5 olarak ayarlanır. Alt çalışma zamanı sürümü 0 olarak ayarlanan uygulamalar eski uygulamalar olarak işlenir ve her zaman WOW64 altında yürütülür.  
+ Bir. exe dosyasının veya. dll dosyasının yalnızca belirli bir platformda mı yoksa WOW64 altında mi çalışacağını öğrenmek için, hiçbir seçenek olmadan [CorFlags. exe (CorFlags dönüştürme aracı)](./tools/corflags-exe-corflags-conversion-tool.md) kullanın. Bir .exe dosyasının veya .dll dosyasının platform durumunu değiştirmek için aynı zamanda CorFlags.exe'yi de kullanabilirsiniz. Bir Visual Studio derlemesinin CLR başlığının ana çalışma zamanı sürümü numarası 2 olarak, alt çalışma zamanı sürümü numarası ise 5 olarak ayarlanır. Alt çalışma zamanı sürümü 0 olarak ayarlanan uygulamalar eski uygulamalar olarak işlenir ve her zaman WOW64 altında yürütülür.  
   
  Bir .exe veya .dll dosyasını, belirli bir platformda mı yoksa WOW4 altında mı çalışmak için tasarlandığını görmek üzere program aracılığıyla sorgulamak amacıyla <xref:System.Reflection.Module.GetPEKind%2A?displayProperty=nameWithType> yöntemini kullanın.

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - browser hosting support [WPF]
 - WPF browser hosting support APIs [WPF]
 ms.assetid: 82c133a8-d760-45fb-a2b9-3a997537f1d4
-ms.openlocfilehash: 8b52ec2b1701d03bbcc11048610034a849a315e7
-ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
+ms.openlocfilehash: 29ff388685c67d06d7c5866a46954d5ade72acb1
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68817938"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053360"
 ---
 # <a name="native-wpf-browser-hosting-support-apis"></a>Destek API'leri Barındıran Yerel WPF Tarayıcısı
 Web tarayıcılarındaki [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] uygulamaların barındırılması, WPF ana bilgisayarında kayıtlı etkin bir belge sunucusu (DocObject olarak da bilinir) tarafından kolaylaştırılırdı. Internet Explorer, etkin bir belgeyle doğrudan etkinleştirebilir ve tümleştirilebilir. Mozilla tarayıcılarında XBAP ve gevşek XAML belgelerinin barındırılması için, [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] Internet Explorer tarafından [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] etkin belge sunucusuna benzer bir barındırma ortamı sağlayan bir NPAPI eklentisi sağlar. Ancak, diğer tarayıcılarda ve tek başına uygulamalarda XBAP ve XAML belgelerini barındırmak için en kolay pratik yol Internet Explorer Web tarayıcısı denetimidir. Web tarayıcısı denetimi, karmaşık etkin belge sunucusu barındırma ortamını sağlar, ancak kendi ana bilgisayarının bu ortamı özelleştirmesini ve genişletmesine ve doğrudan geçerli etkin belge nesnesiyle iletişim kurmasına olanak tanır.  
@@ -22,7 +22,7 @@ Web tarayıcılarındaki [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/
 ## <a name="iolecommandtarget"></a>IOleCommandTarget  
  WPF etkin belge sunucusu 'nun [IOleCommandTarget](https://go.microsoft.com/fwlink/?LinkId=162047) uygulamasının uygulanması, standart OLE komut grubunun (null bir komut grubu GUID 'si ile) çok sayıda gezinmede ilgili ve tarayıcıya özgü komutları destekler. Ayrıca, CGID_PresentationHost adlı özel bir komut grubunu tanır. Şu anda bu grupta tanımlı yalnızca bir komut vardır.  
   
-```  
+```cpp  
 DEFINE_GUID(CGID_PresentationHost, 0xd0288c55, 0xd6, 0x4f5e, 0xa8, 0x51, 0x79, 0xde, 0xc5, 0x1b, 0x10, 0xec);  
 enum PresentationHostCommands {   
    PHCMDID_TABINTO = 1   

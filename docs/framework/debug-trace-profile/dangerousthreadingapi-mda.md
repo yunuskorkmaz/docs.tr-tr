@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3e5efbc5-92e4-4229-b31f-ce368a1adb96
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9d635100c4e8214a7a8659c2d3e4da61825cf243
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 860f524820e6b92e58f4a593e2ddf651a5e7094d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966300"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052904"
 ---
 # <a name="dangerousthreadingapi-mda"></a>dangerousThreadingAPI MDA
 Yönetilen hata ayıklama Yardımcısı (MDA), <xref:System.Threading.Thread.Suspend%2A?displayProperty=nameWithType> yöntem geçerli iş parçacığı dışında bir iş parçacığında çağrıldığında etkinleştirilir. `dangerousThreadingAPI`  
@@ -70,5 +70,5 @@ Thread t = new Thread(delegate() { Thread.Sleep(1000); });
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Threading.Thread>
-- [Yönetilen Hata Ayıklama Yardımcıları ile Hataları Tanılama](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [Yönetilen Hata Ayıklama Yardımcıları ile Hataları Tanılama](diagnosing-errors-with-managed-debugging-assistants.md)
 - [lock Deyimi](../../csharp/language-reference/keywords/lock-statement.md)
