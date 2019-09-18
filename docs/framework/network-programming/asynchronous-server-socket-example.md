@@ -9,15 +9,15 @@ helpviewer_keywords:
 - sockets, code examples
 - asynchronous server sockets
 ms.assetid: 13624cd3-f5c5-4950-8cda-31273b1fa6d1
-ms.openlocfilehash: f52dfce66b6d62a8eb7bf75b626feacfb9172c29
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 555b0661bf68a7461f87bf2895e47284a03c41a6
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61927536"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048952"
 ---
-# <a name="asynchronous-server-socket-example"></a><span data-ttu-id="4ed15-102">Zaman Uyumsuz Sunucu Yuvası Örneği</span><span class="sxs-lookup"><span data-stu-id="4ed15-102">Asynchronous Server Socket Example</span></span>
-<span data-ttu-id="4ed15-103">Aşağıdaki örnek program istemcilerinden gelen bağlantı istekleri alan bir sunucu oluşturur.</span><span class="sxs-lookup"><span data-stu-id="4ed15-103">The following example program creates a server that receives connection requests from clients.</span></span> <span data-ttu-id="4ed15-104">Bir istemci bağlantı beklerken sunucu uygulamasının yürütülmesini askıya için sunucu zaman uyumsuz bir yuvası ile oluşturulmuştur.</span><span class="sxs-lookup"><span data-stu-id="4ed15-104">The server is built with an asynchronous socket, so execution of the server application is not suspended while it waits for a connection from a client.</span></span> <span data-ttu-id="4ed15-105">Uygulama istemciden bir dize alır, dize konsolda görüntüler ve ardından istemcisine dize görüntülemektedir.</span><span class="sxs-lookup"><span data-stu-id="4ed15-105">The application receives a string from the client, displays the string on the console, and then echoes the string back to the client.</span></span> <span data-ttu-id="4ed15-106">İstemciden gelen dize, dize içermelidir "\<EOF >" iletisinin son sinyal.</span><span class="sxs-lookup"><span data-stu-id="4ed15-106">The string from the client must contain the string "\<EOF>" to signal the end of the message.</span></span>  
+# <a name="asynchronous-server-socket-example"></a><span data-ttu-id="2a14d-102">Zaman Uyumsuz Sunucu Yuvası Örneği</span><span class="sxs-lookup"><span data-stu-id="2a14d-102">Asynchronous Server Socket Example</span></span>
+<span data-ttu-id="2a14d-103">Aşağıdaki örnek program istemcilerden gelen bağlantı isteklerini alan bir sunucu oluşturur.</span><span class="sxs-lookup"><span data-stu-id="2a14d-103">The following example program creates a server that receives connection requests from clients.</span></span> <span data-ttu-id="2a14d-104">Sunucu zaman uyumsuz bir yuva ile oluşturulmuştur, bu nedenle sunucu uygulamasının yürütülmesi istemciden bir bağlantı beklerken askıya alınmaz.</span><span class="sxs-lookup"><span data-stu-id="2a14d-104">The server is built with an asynchronous socket, so execution of the server application is not suspended while it waits for a connection from a client.</span></span> <span data-ttu-id="2a14d-105">Uygulama istemciden bir dize alır, bu dizeyi konsolda görüntüler ve ardından dizeyi istemciye geri yankılar.</span><span class="sxs-lookup"><span data-stu-id="2a14d-105">The application receives a string from the client, displays the string on the console, and then echoes the string back to the client.</span></span> <span data-ttu-id="2a14d-106">İstemciden alınan dize, iletinin sonuna işaret etmek için "\<EOF >" dizesini içermelidir.</span><span class="sxs-lookup"><span data-stu-id="2a14d-106">The string from the client must contain the string "\<EOF>" to signal the end of the message.</span></span>  
   
 ```vb  
 Imports System  
@@ -289,8 +289,8 @@ public class AsynchronousSocketListener {
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="4ed15-107">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="4ed15-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2a14d-107">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="2a14d-107">See also</span></span>
 
-- [<span data-ttu-id="4ed15-108">Zaman Uyumsuz İstemci Yuvası Örneği</span><span class="sxs-lookup"><span data-stu-id="4ed15-108">Asynchronous Client Socket Example</span></span>](../../../docs/framework/network-programming/asynchronous-client-socket-example.md)
-- [<span data-ttu-id="4ed15-109">Zaman Uyumsuz Sunucu Yuvası Kullanma</span><span class="sxs-lookup"><span data-stu-id="4ed15-109">Using an Asynchronous Server Socket</span></span>](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)
-- [<span data-ttu-id="4ed15-110">Yuva Kod Örnekleri</span><span class="sxs-lookup"><span data-stu-id="4ed15-110">Socket Code Examples</span></span>](../../../docs/framework/network-programming/socket-code-examples.md)
+- [<span data-ttu-id="2a14d-108">Zaman Uyumsuz İstemci Yuvası Örneği</span><span class="sxs-lookup"><span data-stu-id="2a14d-108">Asynchronous Client Socket Example</span></span>](asynchronous-client-socket-example.md)
+- [<span data-ttu-id="2a14d-109">Zaman Uyumsuz Sunucu Yuvası Kullanma</span><span class="sxs-lookup"><span data-stu-id="2a14d-109">Using an Asynchronous Server Socket</span></span>](using-an-asynchronous-server-socket.md)
+- [<span data-ttu-id="2a14d-110">Yuva Kod Örnekleri</span><span class="sxs-lookup"><span data-stu-id="2a14d-110">Socket Code Examples</span></span>](socket-code-examples.md)

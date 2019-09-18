@@ -10,37 +10,37 @@ helpviewer_keywords:
 ms.assetid: 902dc863-34b3-477c-b433-b8a6bb6133c6
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7ca7d98dba7f66aee96d0f2059086c442df17f5b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: fec1bfb402f3b394ceb36590c3a880f82c5cb101
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64660453"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052790"
 ---
-# <a name="failedqi-mda"></a><span data-ttu-id="dee6d-102">failedQI MDA</span><span class="sxs-lookup"><span data-stu-id="dee6d-102">failedQI MDA</span></span>
-<span data-ttu-id="dee6d-103">`failedQI` Yönetilen hata ayıklama Yardımcısı (MDA), çalışma zamanı çağırdığında etkinleştirilirse `QueryInterface` üzerinde bir COM arabirimi işaretçisini bir çalışma zamanı çağrılabilir sarmalayıcı (RCW) adına ve `QueryInterface` çağrısı başarısız olur.</span><span class="sxs-lookup"><span data-stu-id="dee6d-103">The `failedQI` managed debugging assistant (MDA) is activated when the runtime calls `QueryInterface` on a COM interface pointer on behalf of a runtime callable wrapper (RCW), and the `QueryInterface` call fails.</span></span>  
+# <a name="failedqi-mda"></a><span data-ttu-id="c87ed-102">failedQI MDA</span><span class="sxs-lookup"><span data-stu-id="c87ed-102">failedQI MDA</span></span>
+<span data-ttu-id="c87ed-103">Yönetilen hata ayıklama Yardımcısı (MDA), çalışma zamanı çağrılabilir bir sarmalayıcı `QueryInterface` ( `QueryInterface` RCW) adına bir com arabirimi işaretçisine çağrı yaptığında etkinleştirilir ve çağrı başarısız olur. `failedQI`</span><span class="sxs-lookup"><span data-stu-id="c87ed-103">The `failedQI` managed debugging assistant (MDA) is activated when the runtime calls `QueryInterface` on a COM interface pointer on behalf of a runtime callable wrapper (RCW), and the `QueryInterface` call fails.</span></span>  
   
-## <a name="symptoms"></a><span data-ttu-id="dee6d-104">Belirtiler</span><span class="sxs-lookup"><span data-stu-id="dee6d-104">Symptoms</span></span>  
- <span data-ttu-id="dee6d-105">Bir yayın üzerinde bir RCW başarısız olursa veya COM çağrısı bir RCW gelen beklenmedik biçimde başarısız olur.</span><span class="sxs-lookup"><span data-stu-id="dee6d-105">A cast on an RCW fails, or a call to COM from an RCW fails unexpectedly.</span></span>  
+## <a name="symptoms"></a><span data-ttu-id="c87ed-104">Belirtiler</span><span class="sxs-lookup"><span data-stu-id="c87ed-104">Symptoms</span></span>  
+ <span data-ttu-id="c87ed-105">RCW üzerinde bir dönüştürme başarısız olur veya bir RCW 'dan COM çağrısı beklenmedik şekilde başarısız olur.</span><span class="sxs-lookup"><span data-stu-id="c87ed-105">A cast on an RCW fails, or a call to COM from an RCW fails unexpectedly.</span></span>  
   
-## <a name="cause"></a><span data-ttu-id="dee6d-106">Sebep</span><span class="sxs-lookup"><span data-stu-id="dee6d-106">Cause</span></span>  
+## <a name="cause"></a><span data-ttu-id="c87ed-106">Sebep</span><span class="sxs-lookup"><span data-stu-id="c87ed-106">Cause</span></span>  
   
-- <span data-ttu-id="dee6d-107">Çağrı yanlış bağlamında yapılır.</span><span class="sxs-lookup"><span data-stu-id="dee6d-107">The call is made from the wrong context.</span></span>  
+- <span data-ttu-id="c87ed-107">Çağrı yanlış bağlamdan yapılır.</span><span class="sxs-lookup"><span data-stu-id="c87ed-107">The call is made from the wrong context.</span></span>  
   
-- <span data-ttu-id="dee6d-108">Kayıtlı proxy başarısız `QueryInterface` çağrı yanlış bağlamda yapıldığı çağırın.</span><span class="sxs-lookup"><span data-stu-id="dee6d-108">The registered proxy is failing the `QueryInterface` call because the call was attempted in the wrong context.</span></span>  
+- <span data-ttu-id="c87ed-108">Çağrı yanlış bağlamda denendiği için `QueryInterface` , kayıtlı ara sunucu çağrıyı başarısız oluyor.</span><span class="sxs-lookup"><span data-stu-id="c87ed-108">The registered proxy is failing the `QueryInterface` call because the call was attempted in the wrong context.</span></span>  
   
-- <span data-ttu-id="dee6d-109">OLE ait bir ara sunucu bir hata HRESULT döndürdü.</span><span class="sxs-lookup"><span data-stu-id="dee6d-109">An OLE-owned proxy returned a failure HRESULT.</span></span>  
+- <span data-ttu-id="c87ed-109">OLE 'e ait bir ara sunucu HRESULT hatası döndürdü.</span><span class="sxs-lookup"><span data-stu-id="c87ed-109">An OLE-owned proxy returned a failure HRESULT.</span></span>  
   
-## <a name="resolution"></a><span data-ttu-id="dee6d-110">Çözüm</span><span class="sxs-lookup"><span data-stu-id="dee6d-110">Resolution</span></span>  
- <span data-ttu-id="dee6d-111">COM kuralları'nda MSDN belgelerine bakın.</span><span class="sxs-lookup"><span data-stu-id="dee6d-111">See the MSDN documentation on COM rules.</span></span>  
+## <a name="resolution"></a><span data-ttu-id="c87ed-110">Çözüm</span><span class="sxs-lookup"><span data-stu-id="c87ed-110">Resolution</span></span>  
+ <span data-ttu-id="c87ed-111">COM kuralları hakkında MSDN belgelerine bakın.</span><span class="sxs-lookup"><span data-stu-id="c87ed-111">See the MSDN documentation on COM rules.</span></span>  
   
-## <a name="effect-on-the-runtime"></a><span data-ttu-id="dee6d-112">Çalışma zamanı üzerindeki etkisi</span><span class="sxs-lookup"><span data-stu-id="dee6d-112">Effect on the Runtime</span></span>  
- <span data-ttu-id="dee6d-113">Varsa bir `QueryInterface` çağrısı başarısız oldu, bağlam geçti ve `QueryInterface` çağrı denenir yeniden hatalı bir bağlam hatalı olup olmadığını görmek için.</span><span class="sxs-lookup"><span data-stu-id="dee6d-113">If a `QueryInterface` call fails, the context is switched and the `QueryInterface` call is attempted again to see if an incorrect context was at fault.</span></span>  
+## <a name="effect-on-the-runtime"></a><span data-ttu-id="c87ed-112">Çalışma zamanında etki</span><span class="sxs-lookup"><span data-stu-id="c87ed-112">Effect on the Runtime</span></span>  
+ <span data-ttu-id="c87ed-113">Bir `QueryInterface` çağrı başarısız olursa bağlam çağrılır `QueryInterface` ve yanlış bir bağlamın hata olup olmadığını görmek için çağrı yeniden denenir.</span><span class="sxs-lookup"><span data-stu-id="c87ed-113">If a `QueryInterface` call fails, the context is switched and the `QueryInterface` call is attempted again to see if an incorrect context was at fault.</span></span>  
   
-## <a name="output"></a><span data-ttu-id="dee6d-114">Çıkış</span><span class="sxs-lookup"><span data-stu-id="dee6d-114">Output</span></span>  
- <span data-ttu-id="dee6d-115">Arabirim, arabirimin GUID ve hatanın HRESULT yönetilen adı.</span><span class="sxs-lookup"><span data-stu-id="dee6d-115">The managed name of the interface, the GUID of the interface, and the HRESULT of the failure.</span></span>  
+## <a name="output"></a><span data-ttu-id="c87ed-114">Çıkış</span><span class="sxs-lookup"><span data-stu-id="c87ed-114">Output</span></span>  
+ <span data-ttu-id="c87ed-115">Arabirimin yönetilen adı, arabirimin GUID 'si ve hatanın HRESULT değeri.</span><span class="sxs-lookup"><span data-stu-id="c87ed-115">The managed name of the interface, the GUID of the interface, and the HRESULT of the failure.</span></span>  
   
-## <a name="configuration"></a><span data-ttu-id="dee6d-116">Yapılandırma</span><span class="sxs-lookup"><span data-stu-id="dee6d-116">Configuration</span></span>  
+## <a name="configuration"></a><span data-ttu-id="c87ed-116">Yapılandırma</span><span class="sxs-lookup"><span data-stu-id="c87ed-116">Configuration</span></span>  
   
 ```xml  
 <mdaConfig>  
@@ -50,8 +50,8 @@ ms.locfileid: "64660453"
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="dee6d-117">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="dee6d-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c87ed-117">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="c87ed-117">See also</span></span>
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [<span data-ttu-id="dee6d-118">Yönetilen Hata Ayıklama Yardımcıları ile Hataları Tanılama</span><span class="sxs-lookup"><span data-stu-id="dee6d-118">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [<span data-ttu-id="dee6d-119">Birlikte Çalışma için Hazırlama</span><span class="sxs-lookup"><span data-stu-id="dee6d-119">Interop Marshaling</span></span>](../../../docs/framework/interop/interop-marshaling.md)
+- [<span data-ttu-id="c87ed-118">Yönetilen Hata Ayıklama Yardımcıları ile Hataları Tanılama</span><span class="sxs-lookup"><span data-stu-id="c87ed-118">Diagnosing Errors with Managed Debugging Assistants</span></span>](diagnosing-errors-with-managed-debugging-assistants.md)
+- [<span data-ttu-id="c87ed-119">Birlikte Çalışma için Hazırlama</span><span class="sxs-lookup"><span data-stu-id="c87ed-119">Interop Marshaling</span></span>](../interop/interop-marshaling.md)
