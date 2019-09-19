@@ -4,12 +4,12 @@ description: ASP.NET Core ve Azure ile modern web uygulamalarını mimarın ASP.
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 3b251003a2da998936a11acff3cc2975c4b78838
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: 9d9e75767f5ed5010f618d5dbe1e58fe79454597
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373990"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117294"
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>ASP.NET Core uygulamalarında verilerle çalışma
 
@@ -25,13 +25,13 @@ Veri erişimi, neredeyse tüm yazılım uygulamalarının önemli bir parçasıd
 
 Bir SQL Server veritabanıyla EF Core kullanmak için aşağıdaki DotNet CLı komutunu çalıştırın:
 
-```console
+```dotnetcli
 dotnet add package Microsoft.EntityFrameworkCore.SqlServer
 ```
 
 Test için bir InMemory veri kaynağına yönelik destek eklemek için:
 
-```console
+```dotnetcli
 dotnet add package Microsoft.EntityFrameworkCore.InMemory
 ```
 
