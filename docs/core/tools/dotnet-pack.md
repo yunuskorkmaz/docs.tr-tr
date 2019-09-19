@@ -2,12 +2,12 @@
 title: DotNet paketi komutu
 description: DotNet Pack komutu, .NET Core projeniz için NuGet paketleri oluşturur.
 ms.date: 08/08/2019
-ms.openlocfilehash: c230fa201fce02ab537afc4e14468788d32b8c8a
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 99dd8e35601f82adf2a3101121028f191a4c3da4
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71039475"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117653"
 ---
 # <a name="dotnet-pack"></a>dotnet pack
 
@@ -23,7 +23,7 @@ ms.locfileid: "71039475"
 
 ## <a name="synopsis"></a>Özeti
 
-```console
+```dotnetcli
 dotnet pack [<PROJECT>|<SOLUTION>] [-c|--configuration] [--force] [--include-source] [--include-symbols] [--interactive] 
     [--no-build] [--no-dependencies] [--no-restore] [--nologo] [-o|--output] [--runtime] [-s|--serviceable] 
     [-v|--verbosity] [--version-suffix]
@@ -127,54 +127,54 @@ Web projeleri varsayılan olarak packable değildir. Varsayılan davranışı ge
 
 - Projeyi geçerli dizinde paketleme:
 
-  ```console
+  ```dotnetcli
   dotnet pack
   ```
 
 - `app1` Projeyi paketleme:
 
-  ```console
+  ```dotnetcli
   dotnet pack ~/projects/app1/project.csproj
   ```
 
 - Projeyi geçerli dizinde paketedin ve elde edilen paketleri `nupkgs` klasörüne yerleştirin:
 
-  ```console
+  ```dotnetcli
   dotnet pack --output nupkgs
   ```
 
 - Geçerli dizindeki `nupkgs` projeyi klasöre paketlayın ve derleme adımını atlayın:
 
-  ```console
+  ```dotnetcli
   dotnet pack --no-build --output nupkgs
   ```
 
 - Projenin sürüm soneki `<VersionSuffix>$(VersionSuffix)</VersionSuffix>` *. csproj* dosyasında olarak yapılandırıldığında, geçerli projeyi paketleyin ve elde edilen paket sürümünü verilen sonek ile güncelleştirin:
 
-  ```console
+  ```dotnetcli
   dotnet pack --version-suffix "ci-1234"
   ```
 
 - Paket sürümünü `PackageVersion` MSBuild özelliği ile `2.1.0` olarak ayarlayın:
 
-  ```console
+  ```dotnetcli
   dotnet pack -p:PackageVersion=2.1.0
   ```
 
 - Projeyi belirli bir [hedef çerçeve](../../standard/frameworks.md)için paketleme:
 
-  ```console
+  ```dotnetcli
   dotnet pack -p:TargetFrameworks=net45
   ```
 
 - Projeyi paketleme ve geri yükleme işlemi için belirli bir çalışma zamanı (Windows 10) kullanın (.NET Core SDK 2,0 ve sonraki sürümler):
 
-  ```console
+  ```dotnetcli
   dotnet pack --runtime win10-x64
   ```
 
 - Bir [. nuspec dosyası](https://docs.microsoft.com/nuget/reference/msbuild-targets#packing-using-a-nuspec)kullanarak projeyi paketleme:
 
-  ```console
+  ```dotnetcli
   dotnet pack ~/projects/app1/project.csproj -p:NuspecFile=~/projects/app1/project.nuspec -p:NuspecBasePath=~/projects/app1/nuget
   ```

@@ -4,12 +4,12 @@ description: .NET Framework projelerine yönelik WCF Svcutil aracına benzer şe
 author: mlacouture
 ms.date: 02/22/2019
 ms.custom: seodec18
-ms.openlocfilehash: 7c3e2f7bcfb337a09a9cc13068c22d496762a90f
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: c6eb17ca6cd4ce920cd358a87d2a4a6759dc3439
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70969934"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117253"
 ---
 # <a name="wcf-dotnet-svcutil-tool-for-net-core"></a>.NET Core için WCF DotNet-Svcutil aracı
 
@@ -64,14 +64,14 @@ Bir Windows, macOS veya Linux komut penceresinde aşağıdaki adımları uygulay
 
 2. [`dotnet new`](../tools/dotnet-new.md) Komutunu aşağıdaki gibi C# kullanarak bu dizinde yeni bir Web projesi oluşturun:
 
-    ```console
+    ```dotnetcli
     dotnet new web
     ```
 
 3. NuGet paketini bir CLI aracı olarak yükler: [ `dotnet-svcutil` ](https://nuget.org/packages/dotnet-svcutil) <!-- markdownlint-disable MD023 -->
     # <a name="dotnet-svcutil-2xtabdotnetsvcutil2x"></a>[DotNet-Svcutil 2. x](#tab/dotnetsvcutil2x)
 
-    ```console
+    ```dotnetcli
     dotnet tool install --global dotnet-svcutil
     ```
 
@@ -86,7 +86,7 @@ Bir Windows, macOS veya Linux komut penceresinde aşağıdaki adımları uygulay
 
     Ardından aşağıdaki [`dotnet restore`](../tools/dotnet-restore.md) komutu kullanarak _DotNet-Svcutil_ paketini şu şekilde geri yükleyin:
 
-    ```console
+    ```dotnetcli
     dotnet restore
     ```
 
@@ -96,13 +96,13 @@ Bir Windows, macOS veya Linux komut penceresinde aşağıdaki adımları uygulay
 
     # <a name="dotnet-svcutil-2xtabdotnetsvcutil2x"></a>[DotNet-Svcutil 2. x](#tab/dotnetsvcutil2x)
 
-    ```console
+    ```dotnetcli
     dotnet-svcutil http://contoso.com/SayHello.svc
     ```
 
     # <a name="dotnet-svcutil-1xtabdotnetsvcutil1x"></a>[DotNet-Svcutil 1. x](#tab/dotnetsvcutil1x)
 
-    ```console
+    ```dotnetcli
     dotnet svcutil http://contoso.com/SayHello.svc
     ```
 
@@ -114,7 +114,7 @@ Oluşturulan dosya _Merhaba Svcutil/ServiceReference/Reference. cs_olarak kayded
 
 1. Aşağıdaki gibi, [`dotnet restore`](../tools/dotnet-restore.md) komutunu kullanarak WCF paketlerini geri yükleyin:
 
-    ```console
+    ```dotnetcli
     dotnet restore
     ```
 
@@ -148,7 +148,7 @@ Oluşturulan dosya _Merhaba Svcutil/ServiceReference/Reference. cs_olarak kayded
 
 5. [`dotnet run`](../tools/dotnet-run.md) Komutunu kullanarak uygulamayı aşağıdaki gibi çalıştırın:
 
-    ```console
+    ```dotnetcli
     dotnet run
     ```
 
@@ -159,13 +159,13 @@ Aşağıdaki çıktıyı görmeniz gerekir: "Merhaba DotNet-Svcutil!"
 `dotnet-svcutil` Araç parametrelerinin ayrıntılı bir açıklaması için, yardım parametresini aşağıdaki gibi geçirerek aracı çağırın:
 # <a name="dotnet-svcutil-2xtabdotnetsvcutil2x"></a>[DotNet-Svcutil 2. x](#tab/dotnetsvcutil2x)
 
-```console
+```dotnetcli
 dotnet-svcutil --help
 ```
 
 # <a name="dotnet-svcutil-1xtabdotnetsvcutil1x"></a>[DotNet-Svcutil 1. x](#tab/dotnetsvcutil1x)
 
-```console
+```dotnetcli
 dotnet svcutil --help
 ```
 

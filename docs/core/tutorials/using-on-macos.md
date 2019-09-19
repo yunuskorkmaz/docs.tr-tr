@@ -3,12 +3,12 @@ title: "Öğretici: Visual Studio Code kullanarak macOS 'ta .NET Core çözümü
 description: Bu belge, Visual Studio Code kullanarak bir .NET Core çözümü oluşturmak için adımlar ve iş akışı sağlar.
 ms.date: 03/23/2017
 ms.custom: seodec18
-ms.openlocfilehash: 022afd99c6d36d7a60ac40f3f27ba073c5470bd2
-ms.sourcegitcommit: a2d0e1f66367367065bc8dc0dde488ab536da73f
+ms.openlocfilehash: 5df43ae235b9fd901a65f7f8898bec67e24de682
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71082808"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117359"
 ---
 # <a name="tutorial-create-a-net-core-solution-in-macos-using-visual-studio-code"></a>Öğretici: Visual Studio Code kullanarak macOS 'ta .NET Core çözümü oluşturma
 
@@ -33,19 +33,19 @@ Visual Studio Code başlatın. Visual Studio Code ' de gömülü bir terminal a�
 
 Bir veya daha fazla .NET Core projesi için kapsayıcı görevi gören bir çözüm dosyası oluşturarak başlayın. Terminalde, *altın*adlı yeni [`dotnet new`](../tools/dotnet-new.md) bir klasör içinde *altın. sln* yeni bir çözüm oluşturmak için komutunu çalıştırın:
 
-```console
+```dotnetcli
 dotnet new sln -o golden
 ```
 
 New *altın* klasörüne gidin ve Kitaplık klasöründe,*Library. csproj* ve *Class1.cs*olmak üzere iki dosya üreten *bir kitaplık projesi* oluşturmak için aşağıdaki komutu yürütün:
 
-```console
+```dotnetcli
 dotnet new classlib -o library
 ```
 
 Yeni oluşturulan *Library. csproj* projesini çözüme eklemek için [komutunuyürütün:`dotnet sln`](../tools/dotnet-sln.md)
 
-```console
+```dotnetcli
 dotnet sln add library/library.csproj
 ```
 
@@ -63,7 +63,7 @@ dotnet sln add library/library.csproj
 
 Kitaplık yöntemlerimiz JSON biçimindeki nesneleri serileştirmek ve serisini kaldıramıyor. JSON serileştirme ve serisini kaldırma desteklemek için `Newtonsoft.Json` NuGet paketine bir başvuru ekleyin. Komut `dotnet add` , projeye yeni öğeler ekler. Bir NuGet paketine başvuru eklemek için [`dotnet add package`](../tools/dotnet-add-package.md) komutunu kullanın ve paketin adını belirtin:
 
-```console
+```dotnetcli
 dotnet add library package Newtonsoft.Json
 ```
 
@@ -77,7 +77,7 @@ Bu, `Newtonsoft.Json` ve bağımlılıklarını kitaplık projesine ekler. Alter
 
 [](#dotnet-restore-note) Bağımlılıkları geri yükleyen (bkz. Note) ve bir Project. varlıklar. JSON dosyası dahil olmak üzere, içinde üç dosya içeren kitaplık içinde bir obj klasörü oluşturur: [`dotnet restore`](../tools/dotnet-restore.md)
 
-```console
+```dotnetcli
 dotnet restore
 ```
 
@@ -100,7 +100,7 @@ Sınıfı, iki sayının toplamını döndüren, `Get`ancak toplamı bir dizeye 
 
 [`dotnet build`](../tools/dotnet-build.md) Komutuyla kitaplığı oluşturun. Bu, *altın/Library/bin/Debug/Netstandard 1.4*altında bir *Library. dll* dosyası üretir:
 
-```console
+```dotnetcli
 dotnet build
 ```
 
@@ -108,19 +108,19 @@ dotnet build
 
 Kitaplık için bir test projesi oluşturun. *Altın* klasörden yeni bir test projesi oluşturun:
 
-```console
+```dotnetcli
 dotnet new xunit -o test-library
 ```
 
 Çözüme test projesi ekleyin:
 
-```console
+```dotnetcli
 dotnet sln add test-library/test-library.csproj
 ```
 
 Önceki bölümde oluşturduğunuz kitaplığa bir proje başvurusu ekleyerek derleyicinin kitaplık projesini bulup kullanmasını sağlayabilirsiniz. [`dotnet add reference`](../tools/dotnet-add-reference.md) Şu komutu kullanın:
 
-```console
+```dotnetcli
 dotnet add test-library/test-library.csproj reference library/library.csproj
 ```
 
@@ -154,7 +154,7 @@ Birim testini (`Assert.NotEqual`) ilk oluşturduğunuzda 42 değerini 19 + 23 (v
 
 *Altın* klasöründen aşağıdaki komutları yürütün:
 
-```console
+```dotnetcli
 dotnet restore 
 dotnet test test-library/test-library.csproj
 ```
@@ -163,7 +163,7 @@ Bu komutlar, bağımlılıkları geri yüklemek, onları derlemek ve testleri ç
 
 *UnitTest1.cs* dosyasını düzenleyin ve onaylama `Assert.NotEqual` öğesini olarak `Assert.Equal`değiştirin. Bu saati geçen testi yeniden çalıştırmak için *altın* klasöründen aşağıdaki komutu yürütün:
 
-```console
+```dotnetcli
 dotnet test test-library/test-library.csproj
 ```
 
@@ -173,19 +173,19 @@ Aşağıdaki adımlar üzerinden oluşturduğunuz konsol uygulaması, daha önce
 
 *Altın* klasöründen yeni bir konsol uygulaması oluşturun:
 
-```console
+```dotnetcli
 dotnet new console -o app
 ```
 
 Konsol uygulaması projesini çözüme ekleyin:
 
-```console
+```dotnetcli
 dotnet sln add app/app.csproj
 ```
 
 Şu `dotnet add reference` komutu çalıştırarak kitaplıkta bağımlılığı oluşturun:
 
-```console
+```dotnetcli
 dotnet add app/app.csproj reference library/library.csproj
 ```
 
@@ -204,7 +204,7 @@ using Library;
 
 Yürütülebilir dosyayı çalıştırmak `dotnet run` için aşağıdaki komutu yürütün; `-p` burada `dotnet run` , ana uygulamanın projesini belirtir. Uygulama "Yanıt 42" dizesini üretir.
 
-```console
+```dotnetcli
 dotnet run -p app/app.csproj
 ```
 

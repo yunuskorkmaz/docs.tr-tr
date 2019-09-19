@@ -4,12 +4,12 @@ description: Genel bir aracın nasıl oluşturulacağını açıklar. Genel ara�
 author: Thraka
 ms.author: adegeo
 ms.date: 08/22/2018
-ms.openlocfilehash: f60e26d14e89b6b7c34b32bf9a114fe4ad691981
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 5c2b1e459f0308f5f96eb041c10f4d7a7ae0ca20
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202769"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117439"
 ---
 # <a name="create-a-net-core-global-tool-using-the-net-core-cli"></a>.NET Core CLI kullanarak bir .NET Core genel aracı oluşturun
 
@@ -23,7 +23,7 @@ Bu makale bir proje oluşturmak ve yönetmek için .NET Core CLI kullanır.
 
 Örnek aracımız, bir ASCII bot üreten ve bir ileti yazdıran bir konsol uygulaması olacaktır. İlk olarak, yeni bir .NET Core konsol uygulaması oluşturun.
 
-```console
+```dotnetcli
 dotnet new console -o botsay
 ```
 
@@ -64,7 +64,7 @@ static void Main(string[] args)
 
 ### <a name="create-the-bot"></a>Bot oluşturma
 
-Sonra, bir dize parametresi alan adlı `ShowBot` yeni bir yöntem ekleyin. Bu yöntem, iletiyi ve ASCII bot 'ı yazdırır. Bir dotnetbot kodu [dotnetbot](https://github.com/dotnet/core/blob/master/samples/dotnetsay/Program.cs) örneğinden alındı.
+Sonra, bir dize parametresi alan adlı `ShowBot` yeni bir yöntem ekleyin. Bu yöntem, iletiyi ve ASCII bot 'ı yazdırır. Bir [dotnetbot kodu dotnetbot](https://github.com/dotnet/core/blob/master/samples/dotnetsay/Program.cs) örneğinden alındı.
 
 ```csharp
 static void ShowBot(string message)
@@ -117,7 +117,7 @@ static void ShowBot(string message)
 
 Projeyi çalıştırın ve çıktıyı görüntüleyin. Farklı sonuçları görmek için komut satırının bu çeşitlemelerini deneyin:
 
-```csharp
+```dotnetcli
 dotnet run
 dotnet run -- "Hello from the bot"
 dotnet run -- hello from the bot
@@ -158,7 +158,7 @@ SEÇIM NuGet paketinin üretileceği yer. NuGet paketi, .NET Core CLI genel ara�
 
 Ardından, uygulamanız için bir NuGet paketi oluşturun.
 
-```console
+```dotnetcli
 dotnet pack
 ```
 
@@ -166,7 +166,7 @@ Dosya, dosyadan `<PackageOutputPath>` xml değeri `botsay.csproj` tarafından ta
 
 Artık bir paketiniz olduğuna göre, aracı bu paketten yükleyebilirsiniz:
 
-```console
+```dotnetcli
 dotnet tool install --global --add-source ./nupkg botsay
 ```
 
@@ -188,6 +188,6 @@ Artık araçtan bir yanıt yazabilir `botsay` ve yanıt alabilirsiniz.
 
 Araç ile deneme tamamladıktan sonra, aşağıdaki komutla kaldırabilirsiniz:
 
-```console
+```dotnetcli
 dotnet tool uninstall -g botsay
 ```

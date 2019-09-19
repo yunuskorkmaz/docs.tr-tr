@@ -3,12 +3,12 @@ title: DotNet NuGet Yereller komutu
 description: DotNet NuGet Yereller komutu http-istek önbelleği, geçici önbellek veya makine genelindeki genel paketler klasörü gibi yerel NuGet kaynaklarını temizler veya listeler.
 author: karann-msft
 ms.date: 06/26/2019
-ms.openlocfilehash: 0cf025f91a7582fafc401799cd1d8b933b087535
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 482e841d3b402084eb8c7f2456779f1600a5dd19
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202471"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117621"
 ---
 # <a name="dotnet-nuget-locals"></a>dotnet nuget locals
 
@@ -24,7 +24,7 @@ ms.locfileid: "70202471"
 
 ## <a name="synopsis"></a>Özeti
 
-```console
+```dotnetcli
 dotnet nuget locals <CACHE_LOCATION> [(-c|--clear)|(-l|--list)] [--force-english-output]
 dotnet nuget locals [-h|--help]
 ```
@@ -66,31 +66,31 @@ dotnet nuget locals [-h|--help]
 
 * Tüm yerel önbellek dizinlerinin (http-önbellek dizini, genel paketler önbellek dizini ve geçici önbellek dizini) yollarını görüntüler:
 
-  ```console
+  ```dotnetcli
   dotnet nuget locals –l all
   ```
 
 * Yerel http önbelleği dizininin yolunu görüntüler:
 
-  ```console
+  ```dotnetcli
   dotnet nuget locals --list http-cache
   ```
 
 * Tüm yerel önbellek dizinlerindeki tüm dosyaları temizler (http-önbellek dizini, genel paketler önbellek dizini ve geçici önbellek dizini):
 
-  ```console
+  ```dotnetcli
   dotnet nuget locals --clear all
   ```
 
 * Yerel genel paketler önbellek dizinindeki tüm dosyaları temizler:
 
-  ```console
+  ```dotnetcli
   dotnet nuget locals -c global-packages
   ```
 
 * Yerel geçici önbellek dizinindeki tüm dosyaları temizler:
 
-  ```console
+  ```dotnetcli
   dotnet nuget locals -c temp
   ```
 

@@ -1,12 +1,14 @@
 ---
 title: Üye erişim işleçleri- C# başvuru
 description: Tür üyelerine C# erişmek için kullanabileceğiniz işleçler hakkında bilgi edinin.
-ms.date: 05/09/2019
+ms.date: 09/18/2019
 author: pkulikov
 f1_keywords:
 - ._CSharpKeyword
 - '[]_CSharpKeyword'
 - ()_CSharpKeyword
+- ^_CSharpKeyword
+- .._CSharpKeyword
 helpviewer_keywords:
 - member access operators [C#]
 - member access operator [C#]
@@ -25,12 +27,17 @@ helpviewer_keywords:
 - method invocation [C#]
 - delegate invocation [C#]
 - () operator [C#]
-ms.openlocfilehash: 5ff5e68fbce320076e6d18e9e139b418a15bba77
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+- ^ operator [C#]
+- index from end operator [C#]
+- hat operator [C#]
+- .. operator [C#]
+- range operator [C#]
+ms.openlocfilehash: 45af31d10d77f4c63b27b34595b97fdd11ef95a1
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69924635"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71116132"
 ---
 # <a name="member-access-operators-c-reference"></a>Üye erişim işleçleri (C# başvuru)
 
@@ -40,6 +47,8 @@ Bir tür üyesine eriştiğinizde aşağıdaki işleçleri kullanabilirsiniz:
 - [(dizi öğesi veya Dizin Oluşturucu erişimi): bir dizi öğesine veya bir tür dizin oluşturucusuna erişmek için `[]` ](#indexer-operator-)
 - [ve (nullkoşulluişleçler):yalnızcabirişlenennulldeğilseüyeveyaöğeerişimişlemigerçekleştirmek`?[]`için `?.` ](#null-conditional-operators--and-)
 - (çağırma): erişilen bir yöntemi çağırmak veya bir temsilciyi çağırmak için [ `()` ](#invocation-operator-)
+- (uçtan dizin): öğe konumunun bir sıranın sonundan olduğunu göstermek için [ `^` ](#index-from-end-operator-)
+- (Aralık): dizi öğeleri aralığını almak için kullanabileceğiniz bir dizin aralığı belirtmek için [ `..` ](#range-operator-)
 
 ## <a name="member-access-operator-"></a>Üye erişim işleci.
 
@@ -149,9 +158,37 @@ Ayrıca, bir ifadede işlemlerin değerlendirileceği sırayı ayarlamak için p
 
 Açık tür dönüştürmeleri gerçekleştiren [atama ifadeleri](type-testing-and-cast.md#cast-operator-), parantez de kullanır.
 
+## <a name="index-from-end-operator-"></a>Bitiş işlecinden Dizin ^
+
+C# 8,0 ve sonraki sürümlerde `^` kullanılabilen işleç, öğe konumunun bir dizinin sonundan olduğunu gösterir. Bir uzunluk `length`sırası için, `^n` bir dizi başlangıcının sonuna `length - n` kadar olan öğesine işaret eder. Örneğin, `^1` bir sıranın son öğesine işaret eder ve `^length` dizinin ilk öğesine işaret eder.
+
+[!code-csharp[index from end](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#IndexFromEnd)]
+
+Yukarıdaki örnekte gösterildiği gibi, ifadesi `^e` <xref:System.Index?displayProperty=nameWithType> türüdür. İfadesinde `^e` `int` ,`e` sonucu örtük olarak dönüştürülebilir olmalıdır.
+
+Ayrıca bir dizin aralığı oluşturmak `^` için işlecini [Range işleciyle](#range-operator-) de kullanabilirsiniz. Daha fazla bilgi için bkz. [Dizinler ve aralıklar](../../tutorials/ranges-indexes.md).
+
+## <a name="range-operator-"></a>Aralık işleci..
+
+C# 8,0 ve sonraki sürümlerde `..` kullanılabilen işleç, işlenen olarak bir dizin aralığının başlangıcını ve sonunu belirtir. Sol işlenen bir aralığın *kapsamlı* bir başlangıcı olur. Sağ işlenen bir aralığın *dışlamalı* bir sonu. Her iki işlenen de, aşağıdaki örnekte gösterildiği gibi, bir sıranın başından veya sonundan bir dizin olabilir:
+
+[!code-csharp[range examples](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#Ranges)]
+
+Yukarıdaki örnekte gösterildiği gibi, ifadesi `a..b` <xref:System.Range?displayProperty=nameWithType> türüdür. İfadesinde `a..b`, `a` `int` ve sonuçları`b` örtülü olarak veya<xref:System.Index>olarak dönüştürülebilir olmalıdır.
+
+Açık uçlu bir Aralık almak için `..` işlecin işlenenlerinden herhangi birini atlayabilirsiniz:
+
+- `a..`eşdeğerdir`a..^0`
+- `..b`eşdeğerdir`0..b`
+- `..`eşdeğerdir`0..^0`
+
+[!code-csharp[ranges with omitted operands](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#RangesOptional)]
+
+Daha fazla bilgi için bkz. [Dizinler ve aralıklar](../../tutorials/ranges-indexes.md).
+
 ## <a name="operator-overloadability"></a>Operatör overloadability
 
-`.` Ve`()` işleçleri aşırı yüklenemez. İşleci `[]` , aşırı yüklenebilir olmayan bir işleç olarak kabul edilir. Kullanıcı tanımlı türlerle Dizin oluşturmayı desteklemek için [Dizin oluşturucular](../../programming-guide/indexers/index.md) kullanın.
+,,, Ve`..` işleçleri aşırı yüklenemez. `^` `()` `.` İşleci `[]` , aşırı yüklenebilir olmayan bir işleç olarak kabul edilir. Kullanıcı tanımlı türlerle Dizin oluşturmayı desteklemek için [Dizin oluşturucular](../../programming-guide/indexers/index.md) kullanın.
 
 ## <a name="c-language-specification"></a>C# dili belirtimi
 

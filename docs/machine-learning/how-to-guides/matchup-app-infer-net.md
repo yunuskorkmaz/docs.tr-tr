@@ -3,12 +3,12 @@ title: Infer.NET ve dayalı programlamasında bir oyun eşleştirme listesi uygu
 description: Basitleştirilmiş bir Trueskıll sürümüne göre bir oyun eşleme listesi uygulaması oluşturmak için dayalı Programming with Infer.NET ile nasıl kullanacağınızı öğrenin.
 ms.date: 05/06/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: aa3ad9528238e4f5a5eb187af71f2d2da1ea9cba
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: edb747355f2d41d0400c6a989eea37423bbda2b4
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70855791"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117993"
 ---
 # <a name="create-a-game-match-up-list-app-with-infernet-and-probabilistic-programming"></a>Infer.NET ve dayalı programlamasında bir oyun eşleştirme listesi uygulaması oluşturma
 
@@ -28,7 +28,7 @@ Dayalı programlama, gerçek dünyada işlemlerin istatistiksel modellerini olu�
 
 1. Yeni bir komut istemi açın ve aşağıdaki komutları çalıştırın:
 
-```console
+```dotnetcli
 dotnet new console -o myApp
 cd myApp
 ```
@@ -39,7 +39,7 @@ cd myApp
 
 Infer.NET kullanmak için `Microsoft.ML.Probabilistic.Compiler` paketini yüklemeniz gerekir. Komut isteminde aşağıdaki komutu çalıştırın:
 
-```console
+```dotnetcli
 dotnet add package Microsoft.ML.Probabilistic.Compiler
 ```
 
@@ -130,7 +130,7 @@ namespace myApp
 
 Komut isteminde aşağıdaki komutu çalıştırın:
 
-```console
+```dotnetcli
 dotnet run
 ```
 

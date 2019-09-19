@@ -8,12 +8,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 04/05/2019
 ms.custom: seoapril2019
-ms.openlocfilehash: 7927cd65de31ba6e835aabdbbd89e410d10d2822
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: ba68425fe37c5b939da22edad38bb03afd2b9068
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70104784"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117320"
 ---
 # <a name="get-started-with-c"></a>C ile çalışmaya başlama\#
 
@@ -27,9 +27,9 @@ Aşağıdaki konular kullanılabilir:
 
 - [Visual Studio 2017’de .NET Core ile bir C# Merhaba Dünya uygulaması derleme](../../core/tutorials/with-visual-studio.md)
 
-   Visual Studio 'nun en son sürümü olan Visual Studio 2017, uygulamalarınızı Windows için tümleşik bir geliştirme ortamından kodlamanıza, derlemenize, çalıştırmanıza, hata ayıklamanıza, profilinize ve yayımlamanıza olanak sağlar.
+   Visual Studio 2019, uygulamalarınızı Windows veya Mac için tümleşik bir geliştirme ortamından kodlamanıza, derlemeye, çalıştırmanıza, hata ayıklamanıza, profilinize ve yayımlamanıza olanak sağlar.
 
-   Bu konu, basit bir Merhaba Dünya uygulaması oluşturup çalıştırmanıza ve sonra biraz daha etkileşimli Merhaba Dünya uygulaması çalıştıracak şekilde değiştirmenize olanak sağlar. Uygulamanızı oluşturmayı ve çalıştırmayı tamamladıktan sonra, nasıl [hata ayıklaması](../../core/tutorials/debugging-with-visual-studio.md) yapacağınızı ve .NET Core tarafından desteklenen herhangi bir platformda çalıştırılabilmesi için [](../../core/tutorials/publishing-with-visual-studio.md) nasıl yayımlayacağınızı öğrenebilirsiniz.
+   Bu konu, basit bir Merhaba Dünya uygulaması oluşturup çalıştırmanıza ve sonra biraz daha etkileşimli Merhaba Dünya uygulaması çalıştıracak şekilde değiştirmenize olanak sağlar. Uygulamanızı oluşturmayı ve çalıştırmayı tamamladıktan sonra, nasıl [hata ayıklaması](../../core/tutorials/debugging-with-visual-studio.md) yapacağınızı ve .NET Core tarafından desteklenen herhangi bir platformda çalıştırılabilmesi için nasıl [yayımlayacağınızı](../../core/tutorials/publishing-with-visual-studio.md) öğrenebilirsiniz.
 
 - [Visual Studio 2017’de C# ve .NET Core ile bir sınıf kitaplığı derleme](../../core/tutorials/library-with-visual-studio.md)
 

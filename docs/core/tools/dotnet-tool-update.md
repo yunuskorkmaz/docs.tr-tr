@@ -1,25 +1,25 @@
 ---
-title: DotNet tool güncelleştirme komutu
-description: Dotnet aracı güncelleştirme komut belirtilen .NET Core genel aracı makinenizde güncelleştirir.
+title: DotNet Aracı güncelleştirme komutu
+description: DotNet Aracı güncelleştirme komutu makinenizde belirtilen .NET Core küresel aracını güncelleştirir.
 ms.date: 05/29/2018
-ms.openlocfilehash: bc7edada013c118564d44cbe4542dacb76925692
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: b10ce39c8b9d4df23243bcf672454a455e34eec1
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61648548"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117528"
 ---
-# <a name="dotnet-tool-update"></a>DotNet aracı güncelleştirme
+# <a name="dotnet-tool-update"></a>dotnet tool update
 
 [!INCLUDE [topic-appliesto-net-core-21plus.md](../../../includes/topic-appliesto-net-core-21plus.md)]
 
 ## <a name="name"></a>Ad
 
-`dotnet tool update` -Güncelleştirmeleri belirtilen [.NET Core genel aracı](global-tools.md) makinenizde.
+`dotnet tool update`-Makinenizde belirtilen [.NET Core küresel aracı](global-tools.md) 'nı güncelleştirir.
 
-## <a name="synopsis"></a>Synopsis
+## <a name="synopsis"></a>Özeti
 
-```console
+```dotnetcli
 dotnet tool update <PACKAGE_NAME> <-g|--global> [--configfile] [--framework] [-v|--verbosity]
 dotnet tool update <PACKAGE_NAME> <--tool-path> [--configfile] [--framework] [-v|--verbosity]
 dotnet tool update <-h|--help>
@@ -27,58 +27,58 @@ dotnet tool update <-h|--help>
 
 ## <a name="description"></a>Açıklama
 
-`dotnet tool update` Komutu, paketin en son kararlı sürüme makinenizde .NET Core genel Araçları'nı güncelleştirmek bir yol sağlar. Komut kaldırır ve etkili bir şekilde güncelleştirirken bir aracı yükler. Komutunu kullanmak için ya da bir araç kullanarak kullanıcı genelinde yükleme güncelleştirmek istediğiniz belirtmeniz gerekir `--global` nerede yolunu belirtin veya seçeneği kullanılarak yüklenen aracı `--tool-path` seçeneği.
+Komut `dotnet tool update` , makinenizde .NET Core küresel araçlarını paketin en son kararlı sürümüne güncelleştirmeniz için bir yol sağlar. Komut, bir aracı kaldırır ve etkin bir şekilde güncelleştiren bir araç yükler. Komutunu kullanmak için, `--global` seçeneğini kullanarak Kullanıcı genelindeki bir yüklemeden bir aracı güncelleştirmek istediğinizi belirtmeniz veya `--tool-path` seçeneği kullanılarak aracın yüklendiği konuma bir yol belirtmeniz gerekir.
 
 ## <a name="arguments"></a>Arguments
 
 `PACKAGE_NAME`
 
-.NET Core genel güncelleştirme için Aracı'nı içeren NuGet paket adı/kimliği. Paket adını kullanarak bulabilirsiniz [dotnet araç listesi](dotnet-tool-list.md) komutu.
+Güncelleştirilecek .NET Core küresel aracını içeren NuGet paketinin adı/KIMLIĞI. [DotNet araç listesi](dotnet-tool-list.md) komutunu kullanarak paket adını bulabilirsiniz.
 
 ## <a name="options"></a>Seçenekler
 
 `--add-source <SOURCE>`
 
-Yükleme sırasında kullanmak üzere ek bir NuGet paket kaynağı ekler.
+Yükleme sırasında kullanmak üzere ek bir NuGet paketi kaynağı ekler.
 
 `--configfile <FILE>`
 
-NuGet yapılandırma (*nuget.config*) dosyasını kullanın.
+Kullanılacak NuGet yapılandırma (*NuGet. config*) dosyası.
 
 `--framework <FRAMEWORK>`
 
-Belirtir [hedef Framework'ü](../../standard/frameworks.md) araç için güncelleştirilecek.
+Aracının güncelleştirilmesi için [hedef çerçeveyi](../../standard/frameworks.md) belirtir.
 
 `-g|--global`
 
-Güncelleştirme için kullanıcı genelinde aracı olduğunu belirtir. İle birleştirilemez `--tool-path` seçeneği. Bu seçeneği belirtmezseniz, belirtmeniz gerekir `--tool-path` seçeneği.
+Güncelleştirmenin Kullanıcı genelindeki bir araç için olduğunu belirtir. `--tool-path` Seçeneğiyle birleştirilemez. Bu seçeneği belirtmezseniz, `--tool-path` seçeneğini belirtmeniz gerekir.
 
 `-h|--help`
 
-Komut için kısa bir Yardım yazdırır.
+Komut için kısa bir yardım yazdırır.
 
 `--tool-path <PATH>`
 
-Genel aracı yüklendiği konum belirtir. YOL mutlak veya göreli olabilir. İle birleştirilemez `--global` seçeneği. Bu seçeneği belirtmezseniz, belirtmeniz gerekir `--global` seçeneği.
+Genel aracın yüklendiği konumu belirtir. YOL mutlak veya göreli olabilir. `--global` Seçeneğiyle birleştirilemez. Bu seçeneği belirtmezseniz, `--global` seçeneğini belirtmeniz gerekir.
 
 `-v|--verbosity <LEVEL>`
 
-Komutun ayrıntı düzeyini ayarlar. İzin verilen değerler `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, ve `diag[nostic]`.
+Komutun ayrıntı düzeyini ayarlar. İzin verilen değerler `q[uiet]` `m[inimal]` ,`n[ormal]`,, ve .`diag[nostic]` `d[etailed]`
 
 ## <a name="examples"></a>Örnekler
 
-Güncelleştirmeleri [dotnetsay](https://www.nuget.org/packages/dotnetsay/) genel aracı:
+[Dotnetdeyin](https://www.nuget.org/packages/dotnetsay/) genel aracını güncelleştirir:
 
 `dotnet tool update -g dotnetsay`
 
-Güncelleştirmeleri [dotnetsay](https://www.nuget.org/packages/dotnetsay/) genel aracı, belirli bir Windows klasöründe bulunur:
+Belirli bir Windows klasöründe bulunan [dotnetsöyleme](https://www.nuget.org/packages/dotnetsay/) küresel aracını güncelleştirir:
 
 `dotnet tool update dotnetsay --tool-path c:\global-tools`
 
-Güncelleştirmeleri [dotnetsay](https://www.nuget.org/packages/dotnetsay/) genel aracı, belirli bir Linux/macOS klasöründe bulunur:
+Belirli bir Linux/macOS klasöründe bulunan [dotnetsay](https://www.nuget.org/packages/dotnetsay/) küresel aracını güncelleştirir:
 
 `dotnet tool update dotnetsay --tool-path ~/bin`
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [.NET core Araçları Genel](global-tools.md)
+- [.NET Core küresel araçları](global-tools.md)

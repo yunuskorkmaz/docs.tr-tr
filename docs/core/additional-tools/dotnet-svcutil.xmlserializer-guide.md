@@ -3,12 +3,12 @@ title: .NET Core 'da DotNet-Svcutil. XmlSerializer kullanma
 description: .NET Core projeleri için bir serileştirme `dotnet-svcutil.xmlserializer` derlemesini önceden oluşturmak üzere NuGet paketini nasıl kullanabileceğinizi öğrenin.
 author: huanwu
 ms.date: 11/27/2018
-ms.openlocfilehash: a98f8d30f2e37b722a3bf1f93be8fe9df540a468
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: f1eebeb70206ce883a8e4e4bbd5216ae0ba5507c
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70848973"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117272"
 ---
 # <a name="using-dotnet-svcutilxmlserializer-on-net-core"></a>.NET Core 'da DotNet-Svcutil. XmlSerializer kullanma
 
@@ -39,7 +39,7 @@ Bir .net `dotnet-svcutil.xmlserializer` Core konsol uygulamasında kullanmak iç
 
 2. .NET Core 2,1 veya sonraki sürümlerini hedefleyen WCF istemci uygulaması olarak bir .NET Core konsol uygulaması oluşturun. Örneğin, aşağıdaki komutla ' MyWCFClient ' adlı bir uygulama oluşturun:
 
-    ```console
+    ```dotnetcli
     dotnet new console --name MyWCFClient
     ```
 
@@ -51,7 +51,7 @@ Bir .net `dotnet-svcutil.xmlserializer` Core konsol uygulamasında kullanmak iç
 
 3. Aşağıdaki komutu çalıştırarak öğesine `System.ServiceModel.Http` bir paket başvurusu ekleyin:
 
-    ```console
+    ```dotnetcli
     dotnet add package System.ServiceModel.Http
     ```
 
@@ -84,7 +84,7 @@ Bir .net `dotnet-svcutil.xmlserializer` Core konsol uygulamasında kullanmak iç
 
 5. Aşağıdaki komutu çalıştırarak `dotnet-svcutil.xmlserializer` pakete bir başvuru ekleyin:
   
-    ```console
+    ```dotnetcli
     dotnet add package dotnet-svcutil.xmlserializer
     ```
 

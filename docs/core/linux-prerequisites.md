@@ -4,12 +4,12 @@ description: Linux makinelerde .NET Core uygulamaları geliştirmek, dağıtmak 
 author: thraka
 ms.author: adegeo
 ms.date: 12/14/2018
-ms.openlocfilehash: 5fcf931572f3c7e9b9857d2e91e9d620c7aad0bd
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 31c53b2cc0fe576e56685f4a5561258136fd2541
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70969876"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71116588"
 ---
 # <a name="prerequisites-for-net-core-on-linux"></a>Linux üzerinde .NET Core önkoşulları
 
@@ -150,7 +150,7 @@ Linux 'ta iki yükleyici paketi seçeneği vardır:
 
 Komut dosyası, şu anda .NET Core 1,1 olan en son "LTS" sürümünü yüklemek için varsayılan değerdir. .NET Core 2,1 yüklemek için betiği aşağıdaki anahtarla çalıştırın:
 
-```console
+```bash
 ./dotnet-install.sh -c Current
 ```
 

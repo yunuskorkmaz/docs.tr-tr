@@ -2,12 +2,12 @@
 title: DotNet paket Ekle komutu
 description: "' DotNet Add Package ' komutu, bir projeye NuGet paket başvurusu eklemek için uygun bir seçenek sağlar."
 ms.date: 06/26/2019
-ms.openlocfilehash: 124e42b1d5897802bb1698c8e22b7e76031391a2
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 9445cf686ec1733f5a8b3403b7efea3a544fbc99
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105159"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117789"
 ---
 # <a name="dotnet-add-package"></a>dotnet add package
 
@@ -96,19 +96,19 @@ info : PackageReference for package 'Newtonsoft.Json' version '12.0.1' added to 
 
 - Bir `Newtonsoft.Json` projeye NuGet paketi Ekle:
 
-  ```console
+  ```dotnetcli
   dotnet add package Newtonsoft.Json
   ```
 
 - Bir projeye paketin belirli bir sürümünü ekleyin:
 
-  ```console
+  ```dotnetcli
   dotnet add ToDo.csproj package Microsoft.Azure.DocumentDB.Core -v 1.0.0
   ```
 
 - Belirli bir NuGet kaynağını kullanarak bir paket ekleyin:
 
-  ```console
+  ```dotnetcli
   dotnet add package Microsoft.AspNetCore.StaticFiles -s https://dotnet.myget.org/F/dotnet-core/api/v3/index.json
   ```
 

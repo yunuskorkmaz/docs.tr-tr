@@ -2,12 +2,12 @@
 title: DotNet-başvuru komutu Ekle
 description: DotNet başvuru komutu, proje başvurularına proje eklemek için uygun bir seçenek sağlar.
 ms.date: 06/26/2019
-ms.openlocfilehash: 867596058aad8f9c38918e6d6657709d0d0699b3
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 06d10f6903251bc9d29ae856a900a20610565a14
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70784053"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117784"
 ---
 # <a name="dotnet-add-reference"></a>DotNet-başvuru Ekle
 
@@ -65,18 +65,18 @@ Komut `dotnet add reference` , projeye proje başvuruları eklemek için uygun b
 
 * Proje başvurusu Ekle:
 
-  ```console
+  ```dotnetcli
   dotnet add app/app.csproj reference lib/lib.csproj
   ```
 
 * Geçerli dizindeki projeye birden çok proje başvurusu ekleyin:
 
-  ```console
+  ```dotnetcli
   dotnet add reference lib1/lib1.csproj lib2/lib2.csproj
   ```
 
 * Linux/Unix üzerinde glob bir model kullanarak birden çok proje başvurusu ekleme:
 
-  ```console
+  ```dotnetcli
   dotnet add app/app.csproj reference **/*.csproj
   ```

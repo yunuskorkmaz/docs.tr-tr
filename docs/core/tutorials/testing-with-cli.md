@@ -4,12 +4,12 @@ description: Bu öğreticide, .NET Core projelerini komut satırından düzenlem
 author: cartermp
 ms.date: 09/10/2018
 ms.custom: seodec18
-ms.openlocfilehash: a8724c971521b8d65700d61a1ce523c1dfdddf0a
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: d93ba5f41f1e7b5818790d0853bd219466b317ee
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70203004"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117378"
 ---
 # <a name="organizing-and-testing-projects-with-the-net-core-command-line"></a>.NET Core komut satırı ile projeleri düzenleme ve test etme
 
@@ -29,7 +29,7 @@ Konsol uygulamasına yeni türler eklemek istiyorsanız, türleri uygulamaya iç
 
 Ancak, bu yalnızca projenizin boyutu nispeten küçük olduğunda iyi bir şekilde geçerlidir. Projeye 20 tür eklerseniz ne olacağını anlaz edebilir misiniz? Projenin, bu birçok dosya üzerinde gezinilmesi ve projenin kök dizinini oluşturma konusunda kesinlikle kolay olması gerekmez.
 
-Projeyi düzenlemek için yeni bir klasör oluşturun ve bunu tür dosyalarını tutacak şekilde modelleyen şekilde adlandırın. Tür dosyalarını *modeller* klasörüne yerleştirin:
+Projeyi düzenlemek için yeni bir klasör oluşturun ve bunu tür dosyalarını tutacak şekilde *modelleyen* şekilde adlandırın. Tür dosyalarını *modeller* klasörüne yerleştirin:
 
 ```
 /MyProject
@@ -86,7 +86,7 @@ Belirtilen dosya içeriğiyle aşağıdaki klasör yapısını oluşturun:
 
 Aşağıdaki komutu yürütün:
 
-```console
+```dotnetcli
 dotnet run
 ```
 
@@ -107,7 +107,7 @@ Meow!
 
 Test projesi şu anda içindeki `NewTypes` türleri test edemez ve `NewTypes` projeye bir proje başvurusu gerektiriyor. Bir proje başvurusu eklemek için [`dotnet add reference`](../tools/dotnet-add-reference.md) komutunu kullanın:
 
-```console
+```dotnetcli
 dotnet add reference ../../src/NewTypes/NewTypes.csproj
 ```
 

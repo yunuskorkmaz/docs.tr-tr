@@ -2,12 +2,12 @@
 title: DotNet test komutu
 description: DotNet test komutu, belirli bir projedeki birim testlerini yürütmek için kullanılır.
 ms.date: 05/29/2018
-ms.openlocfilehash: 49926b35b418e93237a159758903c535ec6c4006
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 306b6f8d890e567afc419b0408d7e683baaa814d
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70988538"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117570"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
@@ -23,7 +23,7 @@ ms.locfileid: "70988538"
 
 # <a name="net-core-21tabnetcore21"></a>[.NET Core 2,1](#tab/netcore21)
 
-```console
+```dotnetcli
 dotnet test [<PROJECT>] [-a|--test-adapter-path] [--blame] [-c|--configuration] [--collect] [-d|--diag] [-f|--framework] [--filter]
     [-l|--logger] [--no-build] [--no-restore] [-o|--output] [-r|--results-directory] [-s|--settings] [-t|--list-tests] 
     [-v|--verbosity] [-- <RunSettings arguments>]
@@ -33,7 +33,7 @@ dotnet test [-h|--help]
 
 # <a name="net-core-20tabnetcore20"></a>[.NET Core 2,0](#tab/netcore20)
 
-```console
+```dotnetcli
 dotnet test [<PROJECT>] [-a|--test-adapter-path] [-c|--configuration] [--collect] [-d|--diag] [-f|--framework] [--filter]
     [-l|--logger] [--no-build] [--no-restore] [-o|--output] [-r|--results-directory] [-s|--settings] [-t|--list-tests] [-v|--verbosity]
 
@@ -42,7 +42,7 @@ dotnet test [-h|--help]
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1. x](#tab/netcore1x)
 
-```console
+```dotnetcli
 dotnet test [<PROJECT>] [-a|--test-adapter-path] [-c|--configuration] [-d|--diag] [-f|--framework] [--filter] [-l|--logger] [--no-build] [-o|--output] [-s|--settings] [-t|--list-tests]  [-v|--verbosity]
 
 dotnet test [-h|--help]
@@ -278,7 +278,7 @@ Projedeki testleri geçerli dizinde çalıştırın ve TRX biçiminde bir test s
 
 | Test çerçevesi | Desteklenen özellikler                                                                                      |
 | -------------- | --------------------------------------------------------------------------------------------------------- |
-| MSTest         | <ul><li>FullyQualifiedName</li><li>Ad</li><li>Sınıf</li><li>Priority</li><li>TestCategory</li></ul> |
+| MSTest         | <ul><li>FullyQualifiedName</li><li>Ad</li><li>Sınıf</li><li>Öncelik</li><li>TestCategory</li></ul> |
 | xUnit          | <ul><li>FullyQualifiedName</li><li>DisplayName</li><li>Lerdir</li></ul>                                   |
 
 , `<operator>` Özelliği ve değeri arasındaki ilişkiyi açıklar:

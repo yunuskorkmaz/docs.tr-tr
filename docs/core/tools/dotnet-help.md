@@ -2,12 +2,12 @@
 title: DotNet yardım komutu
 description: DotNet yardım komutu, belirtilen komut için çevrimiçi daha ayrıntılı belgeler gösterir.
 ms.date: 08/08/2019
-ms.openlocfilehash: e76f858f2529afc50646473f1aab9d52730cff16
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 533f2c47fa7ec14d31368538092fec2490234820
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70990468"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117721"
 ---
 # <a name="dotnet-help-reference"></a>DotNet yardım başvurusu
 
@@ -45,6 +45,6 @@ ms.locfileid: "70990468"
 
 * [DotNet yeni](dotnet-new.md) komutunun belgeler sayfasını açar:
 
-  ```console
+  ```dotnetcli
   dotnet help new
   ```

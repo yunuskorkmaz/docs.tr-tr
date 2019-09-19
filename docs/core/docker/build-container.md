@@ -4,12 +4,12 @@ description: Bu öğreticide, Docker ile bir .NET Core uygulamasını kapsayıya
 ms.date: 06/26/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: f0e0fad9bde4c35fb5c5b0b505b9fa8441e432ba
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 5e05fd2a38770ce348fbbfcfaa88267217b806bf
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926313"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71116564"
 ---
 # <a name="tutorial-containerize-a-net-core-app"></a>Öğretici: .NET Core uygulamasını kapsayıcılı hale getirme
 
@@ -55,7 +55,7 @@ Bu dosyayı kaydedin. Dosya varlığı, .NET Core 'un bu klasörden ve aşağıd
 
 Docker kapsayıcısının çalışacağı bir .NET Core uygulamasına ihtiyacınız vardır. Terminalinizi açın, henüz yapmadıysanız bir çalışma klasörü oluşturun ve bunu girin. Çalışma klasöründe, uygulama adlı bir alt dizinde yeni bir proje oluşturmak için aşağıdaki komutu çalıştırın:
 
-```console
+```dotnetcli
 dotnet new console -o app -n myapp
 ```
 
@@ -146,7 +146,7 @@ Uygulama için komut satırına bir sayı geçirirseniz, bu miktarı yalnızca b
 
 Çalışma klasöründen, örnek kaynak kodu ile **uygulama** klasörünü girin ve şu komutu çalıştırın:
 
-```console
+```dotnetcli
 dotnet publish -c Release
 ```
 

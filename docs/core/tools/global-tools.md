@@ -4,12 +4,12 @@ description: .NET Core genel araçlarının ne olduğuna ve bunlara yönelik .NE
 author: KathleenDollard
 ms.date: 05/29/2018
 ms.custom: seodec18
-ms.openlocfilehash: 9ff7e33a50eb0c5fb649b44dda6d72412a134584
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 01c1463ceddcd64e5bab05b95a5ae4a91b6da838
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202583"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117457"
 ---
 # <a name="net-core-global-tools-overview"></a>.NET Core genel araçlarına genel bakış
 
@@ -49,7 +49,7 @@ Araç NuGet üzerinde barındırılıyorsa, aracı arayarak yazarı ve istatisti
 
 Küresel bir araç yüklemek için [DotNet aracı install](dotnet-tool-install.md) .NET Core CLI komutunu kullanın. Aşağıdaki örnek, genel bir aracın varsayılan konuma nasıl yükleneceğini göstermektedir:
 
-```console
+```dotnetcli
 dotnet tool install -g dotnetsay
 ```
 
@@ -57,7 +57,7 @@ Araç yüklenemezse hata iletileri görüntülenir. Beklediğiniz akışların d
 
 Bir yayın öncesi sürüm veya aracın belirli bir sürümünü yüklemeye çalışıyorsanız, sürüm numarasını aşağıdaki biçimi kullanarak belirtebilirsiniz:
 
-```console
+```dotnetcli
 dotnet tool install -g <package-name> --version <version-number>
 ```
 
@@ -94,7 +94,7 @@ dotnetsay
 
 Araç yazarı, aracın `dotnet` istem bağlamında görünmesini istiyorlarsa, bu, şöyle bir şekilde bir `dotnet <command>`şekilde yazmış olabilirler, örneğin:
 
-```console
+```dotnetcli
 dotnet doc
 ```
 
@@ -120,7 +120,7 @@ Bir uygulama uygun bir çalışma zamanı bulamazsa, çalışmaz ve bir hata bil
 
 Başka bir sorun ortaya çıkabilir, önceki önizleme sırasında oluşturulan küresel bir araç, şu anda yüklü olan .NET Core çalışma zamanları ile çalışmayabilir. Makinenizde hangi çalışma zamanlarının yüklü olduğunu aşağıdaki komutu kullanarak görebilirsiniz:
 
-```console
+```dotnetcli
 dotnet --list-runtimes
 ```
 
@@ -141,24 +141,24 @@ Genel aracının yazarına başvurun ve araç paketlerini, güncelleştirilmiş 
 
 Genel araçlar için hangi komutların kullanılabildiğini öğrenmek için:
 
-```console
+```dotnetcli
 dotnet tool --help
 ```
 
 Küresel bir aracın güncelleştirilmesi, en son kararlı sürümle kaldırılması ve yeniden yüklenmesi ile ilgilidir. Genel bir aracı güncelleştirmek için [DotNet Aracı güncelleştirme](dotnet-tool-update.md) komutunu kullanın:
 
-```console
+```dotnetcli
 dotnet tool update -g <packagename>
 ```
 
 [DotNet aracını kaldırma](dotnet-tool-uninstall.md)Işlemini kullanarak genel bir aracı kaldırma:
 
-```console
+```dotnetcli
 dotnet tool uninstall -g <packagename>
 ```
 
 Makinede yüklü olan tüm genel araçları, sürüm ve komutlarıyla birlikte göstermek için [DotNet araç listesi](dotnet-tool-list.md) komutunu kullanın:
 
-```console
+```dotnetcli
 dotnet tool list -g
 ```

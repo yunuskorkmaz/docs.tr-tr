@@ -3,12 +3,12 @@ title: global.json’a genel bakış
 description: .NET Core CLI komutlarını çalıştırırken .NET Core SDK sürümünü ayarlamak için Global. json dosyasını nasıl kullanacağınızı öğrenin.
 ms.date: 12/03/2018
 ms.custom: updateeachrelease, seodec18
-ms.openlocfilehash: 3c3793011560cd7428e47bd3340d0a935247760f
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 2c1fec102993b61e1eb699e8d3508b773302f569
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70849604"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117426"
 ---
 # <a name="globaljson-overview"></a>global.json’a genel bakış
 
@@ -53,7 +53,7 @@ Aşağıdaki örnek, bir *Global. JSON* dosyasının içeriğini gösterir:
 
 *Global. JSON* dosyasında bir tane ayarlamak için hangi sürümlerin kullanılabildiğini bilmek yararlı olur. Desteklenen kullanılabilir SDK 'ların tam listesini [.NET Core](https://dotnet.microsoft.com/download/dotnet-core) ' u indirin sayfasından bulabilirsiniz. .NET Core 2,1 SDK ile başlayarak, makinenizde zaten yüklü olan SDK sürümlerini doğrulamak için aşağıdaki komutu çalıştırabilirsiniz:
 
-```console
+```dotnetcli
 dotnet --list-sdks
 ```
 
@@ -61,7 +61,7 @@ Makinenize ek .NET Core SDK sürümleri yüklemek için [.NET Core 'U indir](htt
 
 Aşağıdaki örneğe benzer şekilde, [DotNet New](dotnet-new.md) komutunu yürüterek geçerli dizinde yeni bir *Global. JSON* dosyası oluşturabilirsiniz:
 
-```console
+```dotnetcli
 dotnet new globaljson --sdk-version 2.2.100
 ```
 

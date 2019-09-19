@@ -1,20 +1,20 @@
 ---
-title: Eğitilen bir modelin ile tahminlerde
-description: Eğitilen bir modeli kullanarak tahmin yapmayı öğrenin
-ms.date: 06/20/2019
+title: Eğitilen bir modelle tahminlere sahip olun
+description: Eğitilen bir model kullanarak tahminleri yapmayı öğrenin
+ms.date: 09/18/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to
-ms.openlocfilehash: ef2b22ff220d1fce1ec43f26c7d51f7e551e038d
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: 33e0cb74342ca3e82ff5f108453d63e022d63d20
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67307391"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71118021"
 ---
-# <a name="make-predictions-with-a-trained-model"></a>Eğitilen bir modelin ile tahminlerde
+# <a name="make-predictions-with-a-trained-model"></a>Eğitilen bir modelle tahminlere sahip olun
 
-Eğitilen bir modelin tahminlerde bulunmak üzere kullanmayı öğrenin
+Öngörüler yapmak için eğitilen bir model kullanmayı öğrenin
 
 ## <a name="create-data-models"></a>Veri modelleri oluşturma
 
@@ -38,23 +38,21 @@ public class HousingData
 
 ### <a name="output-data"></a>Çıktı verileri
 
-Gibi `Features` ve `Label` giriş sütun adları, ML.NET modeli tarafından üretilen tahmin edilen değer sütunlar için varsayılan adları vardır. Göreve bağlı olarak, ad farklı olabilir.
+`Features` Ve`Label` giriş sütunu adları gibi ml.net, bir model tarafından üretilen tahmin edilen değer sütunlarının varsayılan adlarına sahiptir. Göreve bağlı olarak, ad farklı olabilir.
 
-Bu örnekte kullanılan algoritmayı doğrusal regresyon algoritması çıkış sütununun varsayılan adı olduğu `Score` tarafından tanımlanan [ `ColumnName` ](xref:Microsoft.ML.Data.ColumnNameAttribute) özniteliği `PredictedPrice` özelliği.
+Bu örnekte kullanılan algoritma bir doğrusal regresyon algoritması olduğundan, çıkış sütununun `Score` varsayılan adı, `PredictedPrice` özelliğindeki [`ColumnName`](xref:Microsoft.ML.Data.ColumnNameAttribute) özniteliği tarafından tanımlanır.
 
 ```csharp
-class HousingPrediction : HousingData
+class HousingPrediction
 {
     [ColumnName("Score")]
     public float PredictedPrice { get; set; }
 }
 ```
 
-`HousingPrediction` Veri modeli devraldığı `HousingData` özgün görselleştirmek kolay hale getirmek için veri modeli tarafından oluşturulan çıktı yanı sıra giriş.  
+## <a name="set-up-a-prediction-pipeline"></a>Tahmin işlem hattı ayarlama
 
-## <a name="set-up-a-prediction-pipeline"></a>Bir öngörü işlem hattı ayarlayın
-
-Olup yapmadan tek veya toplu tahmin, tahmin işlem hattı uygulamasına yüklü olması gerekir. Bu işlem hattı, hem veri ön işleme dönüşümleri, hem de eğitim modeli içerir. Aşağıdaki kod parçacığında tahmin işlem hattı adlı bir dosyadan yükler `model.zip`.
+Tek veya toplu bir tahmin yapılıp yapılmayacağını belirtir, tahmin işlem hattının uygulamaya yüklenmesi gerekir. Bu işlem hattı hem veri ön işleme dönüştürmelerini hem de eğitilen modeli içerir. Aşağıdaki kod parçacığı, adlı `model.zip`bir dosyadan tahmin işlem hattını yükler.
 
 ```csharp
 //Create MLContext 
@@ -67,14 +65,14 @@ ITransformer predictionPipeline = mlContext.Model.Load("model.zip", out predicti
 
 ## <a name="single-prediction"></a>Tek tahmin
 
-Tek bir tahminde bulunmak için oluşturun bir [ `PredictionEngine` ](xref:Microsoft.ML.PredictionEngine%602) yüklenen tahmin işlem hattını kullanma.
+Tek bir tahmin yapmak için, yüklenmiş tahmin [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) işlem hattını kullanarak bir oluşturun.
 
 ```csharp
 // Create PredictionEngines
 PredictionEngine<HousingData, HousingPrediction> predictionEngine = mlContext.Model.CreatePredictionEngine<HousingData, HousingPrediction>(predictionPipeline);
 ```
 
-Ardından, [ `Predict` ](xref:Microsoft.ML.PredictionEngineBase%602.Predict*) yöntemi ve verilerinizi giriş parametresi olarak geçirin. Bu kullanırken olduğunu [ `Predict` ](xref:Microsoft.ML.PredictionEngineBase%602.Predict*) yöntemi giriş olmasını gerekli olmadığı bir [ `IDataView` ](xref:Microsoft.ML.IDataView)). Giriş veri türü bir nesne geçirdiğiniz şekilde bunu rahatça giriş veri türü işleme internalizes olmasıdır. Ayrıca, bu yana `CurrentPrice` hedef veya yeni verileri kullanarak tahmin etmek çalıştığınız etiket şu anda hiçbir değerini olduğu varsayılır.
+Ardından, [`Predict`](xref:Microsoft.ML.PredictionEngineBase%602.Predict*) yöntemini kullanın ve giriş verilerinizi parametre olarak geçirin. [`Predict`](xref:Microsoft.ML.PredictionEngineBase%602.Predict*) Yöntemini kullanmanın girişin bir [`IDataView`](xref:Microsoft.ML.IDataView)olması gerekmez). Bunun nedeni, girdi veri türünün bir nesnesini geçirebilmeniz için giriş veri türü işlemesini uygun bir şekilde iletmektir. Ayrıca, `CurrentPrice` yeni verileri kullanarak tahmin etmeye çalıştığınız hedef veya etiket olduğundan, bu, şu anda bunun için bir değer olmadığı varsayılır.
 
 ```csharp
 // Input Data
@@ -88,11 +86,11 @@ HousingData inputData = new HousingData
 HousingPrediction prediction = predictionEngine.Predict(inputData);
 ```
 
-Erişirseniz `Score` özelliği `prediction` nesne almanız gerekir bir değer benzer `150079`.
+Nesnenin özelliğine eriştiğinizde şuna benzer `150079`bir değer almalısınız. `Score` `prediction`
 
-## <a name="batch-prediction"></a>Batch tahmin
+## <a name="multiple-predictions"></a>Birden çok tahmin
 
-Aşağıdaki veriler göz önünde bulundurulduğunda, içine yüklemek bir [ `IDataView` ](xref:Microsoft.ML.IDataView). Bu durumda, adını [ `IDataView` ](xref:Microsoft.ML.IDataView) olduğu `inputData`. Çünkü `CurrentPrice` hedef veya yeni verileri kullanarak tahmin etmek çalıştığınız etiket şu anda hiçbir değerini olduğu varsayılır.
+Aşağıdaki veriler verildiğinde, ' a [`IDataView`](xref:Microsoft.ML.IDataView)yükleyin. Bu durumda, öğesinin [`IDataView`](xref:Microsoft.ML.IDataView) `inputData`adı. Yeni `CurrentPrice` verileri kullanarak tahmin etmeye çalıştığınız hedef veya etiket olduğundan, bu, şu anda bunun için bir değer olmadığı varsayılır.
 
 ```csharp
 // Actual data
@@ -116,24 +114,24 @@ HousingData[] housingData = new HousingData[]
 };
 ```
 
-Ardından, [ `Transform` ](xref:Microsoft.ML.ITransformer.Transform*) veri dönüşümleri uygulayın ve tahminler üretmek için yöntemi.
+Ardından, veri dönüşümlerini [`Transform`](xref:Microsoft.ML.ITransformer.Transform*) uygulamak ve tahmin oluşturmak için yöntemini kullanın.
 
 ```csharp
 // Predicted Data
 IDataView predictions = predictionPipeline.Transform(inputData);
 ```
 
-Tahmin edilen değerleri kullanarak inceleyin. [ `GetColumn` ](xref:Microsoft.ML.Data.ColumnCursorExtensions.GetColumn*) yöntemi.
+[`GetColumn`](xref:Microsoft.ML.Data.ColumnCursorExtensions.GetColumn*) Yöntemini kullanarak tahmin edilen değerleri inceleyin.
 
 ```csharp
 // Get Predictions
 float[] scoreColumn = predictions.GetColumn<float>("Score").ToArray();
 ```
 
-Tahmin edilen puan sütundaki değerleri aşağıdaki gibi görünmelidir:
+Puan sütunundaki tahmin edilen değerler aşağıdaki gibi görünmelidir:
 
-| Gözlem | Tahmin |
+| Kümesinin | Tahmin |
 |---|---|
-| 1\. | 144638.2 |
-| 2 | 150079.4 |
-| 3 | 107789.8 |
+| 1\. | 144638,2 |
+| 2 | 150079,4 |
+| 3 | 107789,8 |

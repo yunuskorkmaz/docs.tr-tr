@@ -5,12 +5,12 @@ author: mlacouture
 ms.date: 01/19/2017
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: e10f09d3f7146817770e74aa173f742322aafafc
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 4a9c24455136fe4ccd13379d05c16d6b7cbf85de
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926607"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117020"
 ---
 # <a name="using-microsoft-xml-serializer-generator-on-net-core"></a>.NET Core 'da Microsoft XML serileştirici üreticisini kullanma
 
@@ -44,7 +44,7 @@ Aşağıdaki yönergelerde, bir .NET Core konsol uygulamasında XML serileştiri
 
 Bir komut istemi açın ve *MyApp*adlı bir klasör oluşturun. Oluşturduğunuz klasöre gidin ve aşağıdaki komutu yazın:
 
-```console
+```dotnetcli
 dotnet new console
 ```
 
@@ -54,7 +54,7 @@ Başvurusunu projenize eklemek için [komutunukullanın.`dotnet add package`](..
 
 Tür:
 
-```console
+```dotnetcli
 dotnet add package Microsoft.XmlSerializer.Generator -v 1.0.0
 ```
 
@@ -107,7 +107,7 @@ Hala *MyApp* klasöründe, uygulamayı ile [`dotnet run`](../tools/dotnet-run.md
 
 Konsol pencerenize aşağıdaki komutu yazın:
 
-```console
+```dotnetcli
 dotnet run
 ```
 

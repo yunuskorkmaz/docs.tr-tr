@@ -3,16 +3,16 @@ title: Dizinler ve aralıklar kullanarak veri aralıklarını keşfet
 description: Bu gelişmiş öğreticide, sıralı bir veri kümesinin dilimlerini incelemek üzere dizinler ve aralıklar kullanarak verileri araştırmanızı öğretilir.
 ms.date: 04/19/2019
 ms.custom: mvc
-ms.openlocfilehash: 27f4b90f130345dd10517a5de78c759066afdf07
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: d0eeadfff9732ced22e045536a88ed49cd98bbaa
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926645"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117839"
 ---
 # <a name="indices-and-ranges"></a>Dizinler ve aralıklar
 
-Aralıklar ve dizinler <xref:System.Array>, bir, <xref:System.Span%601>veya <xref:System.ReadOnlySpan%601>içinde tek öğe veya aralıklara erişmek için bir kısa söz dizimi sağlar. Bu özellikler, bir dizideki tek öğelere veya öğe aralıklarına erişmek için daha kısa, sözdizimini açık bir şekilde etkinleştirir.
+Aralıklar <xref:System.Array>ve dizinler <xref:System.String> <xref:System.ReadOnlySpan%601>, bir,, veya içinde tek öğe veya aralıklara erişmek için bir kısa sözdizimi sağlar. <xref:System.Span%601> Bu özellikler, bir dizideki tek öğelere veya öğe aralıklarına erişmek için daha kısa, sözdizimini açık bir şekilde etkinleştirir.
 
 Bu öğreticide, aşağıdakileri nasıl yapacağınızı öğreneceksiniz:
 
@@ -24,12 +24,12 @@ Bu öğreticide, aşağıdakileri nasıl yapacağınızı öğreneceksiniz:
 
 ## <a name="language-support-for-indices-and-ranges"></a>Dizinler ve aralıklar için dil desteği
 
-Bu dil desteği iki yeni türe ve iki yeni işleçlere dayanır.
+Bu dil desteği iki yeni türe ve iki yeni işleçlere dayanır:
 
 - <xref:System.Index?displayProperty=nameWithType>bir dizinin dizisini temsil eder.
-- Bir dizinin bir sıranın sonuna göreli olduğunu belirten işleç.`^`
+- Bir dizinin bir sıranın sonuna `^`göreli olduğunu belirten bitiş işlecinden dizin.
 - <xref:System.Range?displayProperty=nameWithType>bir dizinin alt aralığını temsil eder.
-- Aralık işleci (`..`), bir aralığın işlenenleri olarak başlangıcını ve sonunu belirtir.
+- Aralık işleci `..`, bir aralığın işlenenlerinin başlangıcını ve sonunu belirtir.
 
 Dizin kurallarıyla başlayalım. Bir dizi `sequence`düşünün. Dizin, ile `sequence[0]`aynıdır. `0` Dizin, ile `sequence[sequence.Length]`aynıdır. `^0` `sequence[^0]` Bunun gibi`sequence[sequence.Length]` bir özel durum oluşturur. Herhangi bir sayı `n`için Dizin `^n` aynı `sequence[sequence.Length - n]`olur.
 

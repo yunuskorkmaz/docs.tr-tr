@@ -4,12 +4,12 @@ description: .NET Core CLI araçlarını kullanarak .NET Core kitaplıkları olu
 author: cartermp
 ms.date: 05/01/2017
 ms.custom: seodec18
-ms.openlocfilehash: 90d960c996acd5a34ffb2215344e123dabad1014
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 536319bc02b45e7948c89ae67988e821a55a842d
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70849486"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117419"
 ---
 # <a name="developing-libraries-with-cross-platform-tools"></a>Platformlar Arası Araçlarla Kitaplık Geliştirme
 
@@ -249,7 +249,7 @@ Platformlar arasında test etmek önemlidir. Kutusundan [xUnit](https://xunit.gi
 
 1. Paketleri geri yükle ve projeleri oluştur:
 
-   ```bash
+   ```dotnetcli
    dotnet restore
    dotnet build
    ```
@@ -321,7 +321,7 @@ Bu, yukarıya üç projeyi ve bunları birbirine bağlayan bir çözüm dosyası
 
 Bir projeye başvurmak için en iyi yöntem .NET Core CLI bir proje başvurusu eklemek için kullanmaktır. **Awesomelibrary. CSharp** ve **Awesomelibrary. FSharp** proje dizinlerinde aşağıdaki komutu çalıştırabilirsiniz:
 
-```console
+```dotnetcli
 dotnet add reference ../AwesomeLibrary.Core/AwesomeLibrary.Core.csproj
 ```
 

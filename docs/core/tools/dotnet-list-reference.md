@@ -1,17 +1,17 @@
 ---
-title: DotNet Listele başvuru komutu
-description: Dotnet listesi başvuru komut listesi projeden projeye başvurular için uygun bir seçenek sağlar.
+title: DotNet liste başvurusu komutu
+description: DotNet liste başvurusu komutu, projeyi Proje başvurularına göre listelemek için kullanışlı bir seçenek sağlar.
 ms.date: 06/26/2019
-ms.openlocfilehash: 1f87ff89997cdaa6d0095a4db9f28a2e7cb7e6a9
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: b4b82ca1e7aeb2b73d9f99aff1c97452b2166770
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67421837"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117670"
 ---
 # <a name="dotnet-list-reference"></a>dotnet list reference
 
-**Bu konu için geçerlidir: ✓** .NET Core SDK'sı 1.x ve sonraki sürümler
+**Bu konu şu şekilde geçerlidir: ✓** .NET Core 1. x SDK ve sonraki sürümleri
 
 <!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
@@ -19,38 +19,38 @@ ms.locfileid: "67421837"
 
 ## <a name="name"></a>Ad
 
-`dotnet list reference` -Projeden projeye başvurular listelenmektedir.
+`dotnet list reference`-Projeden projeye başvuruları listeler.
 
-## <a name="synopsis"></a>Synopsis
+## <a name="synopsis"></a>Özeti
 
 `dotnet list [<PROJECT>|<SOLUTION>] reference [-h|--help]`
 
 ## <a name="description"></a>Açıklama
 
-`dotnet list reference` Komut listesi proje başvurularını belirtilen proje veya çözüm için uygun bir seçenek sağlar.
+Komut `dotnet list reference` , belirli bir proje veya çözümün proje başvurularını listelemek için uygun bir seçenek sağlar.
 
 ## <a name="arguments"></a>Arguments
 
 * **`PROJECT | SOLUTION`**
 
-  Başvuruları listelemek için kullanılacak proje veya çözüm dosyasını belirtir. Belirtilmezse, komut, bir proje dosyasını geçerli dizinde arar.
+  Başvuruları listelemek için kullanılacak proje veya çözüm dosyasını belirtir. Belirtilmemişse, komut geçerli dizinde bir proje dosyası arar.
 
 ## <a name="options"></a>Seçenekler
 
 * **`-h|--help`**
 
-  Komut için kısa bir Yardım yazdırır.
+  Komut için kısa bir yardım yazdırır.
 
 ## <a name="examples"></a>Örnekler
 
-* Belirtilen proje için proje başvuruları listeleyin:
+* Belirtilen proje için proje başvurularını listeleyin:
 
-  ```console
+  ```dotnetcli
   dotnet list app/app.csproj reference
   ```
 
-* Geçerli dizinde proje için proje başvuruları listeleyin:
+* Geçerli dizindeki projenin proje başvurularını listeleyin:
 
-  ```console
+  ```dotnetcli
   dotnet list reference
   ```
