@@ -4,12 +4,12 @@ description: HDInsight için bir .NET Apache Spark uygulamasının nasıl dağı
 ms.date: 05/17/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 9da0e0fd83d70887109c63a5e95ec0b0b31a2edd
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 2e8da5497035a83fde75bf91a7d21437d510b480
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928477"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117970"
 ---
 # <a name="deploy-a-net-for-apache-spark-application-to-azure-hdinsight"></a>Azure HDInsight 'a bir .NET Apache Spark uygulaması dağıtma
 
@@ -49,7 +49,7 @@ Başlamadan önce aşağıdakileri yapın:
 
    Linux üzerinde aşağıdaki komutu çalıştırabilirsiniz.
 
-   ```bash
+   ```dotnetcli
    dotnet publish -c Release -f netcoreapp2.1 -r ubuntu.16.04-x64
    ```
 
