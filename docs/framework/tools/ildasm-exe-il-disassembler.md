@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: db27f6b2-f1ec-499e-be3a-7eecf95ca42b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d9e6d9e57528f3eae9b30706013a0529313877c7
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 9d08d6164c00d2b5b750c9edda46a7be18153152
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894873"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044652"
 ---
 # <a name="ildasmexe-il-disassembler"></a>Ildasm.exe (IL Ayrıştırıcı)
 
 Il ayırıcı, Il derleyiciciye (*Ilasm. exe*) yardımcı olan bir araçtır. *Ildadsm. exe* , ara DIL (IL) kodu içeren bir taşınabilir ÇALıŞTıRıLABILIR (PE) dosyası alır ve *Ilasm. exe*' ye giriş olarak uygun bir metin dosyası oluşturur.
 
-Bu araç, Visual Studio ile birlikte otomatik olarak yüklenir. Aracı çalıştırmak için, Visual Studio için Geliştirici Komut İstemi (veya Windows 7 ' de Visual Studio komut Istemi) kullanın. Daha fazla bilgi için bkz. [komut istemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md).
+Bu araç, Visual Studio ile birlikte otomatik olarak yüklenir. Aracı çalıştırmak için, Visual Studio için Geliştirici Komut İstemi (veya Windows 7 ' de Visual Studio komut Istemi) kullanın. Daha fazla bilgi için bkz. [komut istemleri](developer-command-prompt-for-vs.md).
 
 Komut satırına şunu yazın:
 
@@ -186,7 +186,7 @@ ildasm /item:"MyClass::MyMethod(class [mscorlib]System.AppDomain(class [mscorlib
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Araçlar](../../../docs/framework/tools/index.md)
-- [Ilasm.exe (IL Derleyici)](../../../docs/framework/tools/ilasm-exe-il-assembler.md)
+- [Araçlar](index.md)
+- [Ilasm.exe (IL Derleyici)](ilasm-exe-il-assembler.md)
 - [Yönetilen Yürütme İşlemi](../../standard/managed-execution-process.md)
-- [Komut İstemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [Komut İstemleri](developer-command-prompt-for-vs.md)

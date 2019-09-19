@@ -2,12 +2,12 @@
 title: Visual Studio Code ile F# çalışmaya başlama
 description: Visual Studio Code ve ıonıde eklenti Suite ile nasıl kullanacağınızı F# öğrenin.
 ms.date: 12/23/2018
-ms.openlocfilehash: baaa87207122cfe314972aee5dfaf8a41de2c394
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 2fa0518488d37b2130aaba96028ac92dac77eb97
+ms.sourcegitcommit: a2d0e1f66367367065bc8dc0dde488ab536da73f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629973"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71082995"
 ---
 # <a name="get-started-with-f-in-visual-studio-code"></a>Visual Studio Code ile F# çalışmaya başlama
 
@@ -24,7 +24,7 @@ Yeni F# bir proje oluşturmak için Visual Studio Code yeni bir klasörde açın
 
 Sonra, komut paletini açın ( **> komut paletini görüntüleyin**) ve aşağıdakileri yazın:
 
-```
+```console
 > F# new project
 ```
 
@@ -74,7 +74,7 @@ Bu üç şey oldu:
 2. Bu, FSI işlemi üzerinde vurguladığınız kodu gönderdi.
 3. FSI işlemi, üzerinden gönderdiğiniz kodu değerlendirdi.
 
-Üzerinden gönderildikleriniz bir işleviydi [](../language-reference/functions/index.md), artık bu işlevi FSI ile çağırabilirsiniz! Etkileşimli pencerede şunları yazın:
+Üzerinden gönderildikleriniz bir [işleviydi](../language-reference/functions/index.md), artık bu işlevi FSI ile çağırabilirsiniz! Etkileşimli pencerede şunları yazın:
 
 ```fsharp
 toPigLatin "banana";;
@@ -158,7 +158,7 @@ Her iki metin satırını da seçin ve bu satırları FSI içinde yürütmek iç
 
 Ardından, FSI penceresinde, daha önce tanımladığınız `PigLatin` modülün bulunduğu işlevi çağırın:
 
-```
+```console
 > PigLatin.toPigLatin "banana";;
 val it : string = "ananabay"
 > PigLatin.toPigLatin "apple";;

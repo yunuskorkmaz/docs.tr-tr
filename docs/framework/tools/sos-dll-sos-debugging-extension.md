@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 9ac1b522-77ab-4cdc-852a-20fcdc9ae498
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c5033b32c1623885b5408f428ce4bc4202d50ce1
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 9a8d41228c46de0f18b5a92def0591d6373d3d69
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894623"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044092"
 ---
 # <a name="sosdll-sos-debugging-extension"></a>SOS. dll (SOS hata ayıklama uzantısı)
 
@@ -74,7 +74,7 @@ SOS hata ayıklama uzantısı (SOS. dll), iç ortak dil çalışma zamanı (CLR)
 |**IP2MD** \< *Kod adresi*>|JIT ile derlenen kodda belirtilen adresteki yapıyıgörüntüler.`MethodDesc`|
 |`ListNearObj`(`lno` *) obj_address\<>*|Belirtilen adresten önceki ve sonraki nesneleri görüntüler. Komut, yönetilen bir nesnenin (geçerli bir yöntem tablosuna dayalı olarak) ve bağımsız değişken adresini izleyen nesnenin geçerli bir başlangıcı gibi görünen çöp toplama yığınında adresi arar.|
 |**MinidumpMode** [**0**] [**1**]|Bir mini döküm kullanırken, güvenli olmayan komutların çalışmasını önler.<br /><br /> Bu özelliği etkinleştirmek için **0** geçirin veya **1 ' i** devre dışı bırakın. Varsayılan olarak, **MinidumpMode** değeri **0**olarak ayarlanır.<br /><br /> **. Dump/m** komutu veya **. dump** komutuyla oluşturulan mini dökümler, clr 'ye özgü sınırlı verilere sahıptır ve yalnızca bir sos komutlarının alt kümesini çalıştırmanızı sağlar. Gerekli bellek alanları eşleşmediğinden veya kısmen eşleştiğinden, bazı komutlar beklenmeyen hatalarla başarısız olabilir. Bu seçenek, mini dökümlere karşı güvenli olmayan komutları çalıştırmaktan sizi korur.|
-|**Name2EE** \< *Modül*adıtürü> veya*Yöntem* adı\<><br /><br /> -veya-<br /><br /> **Name2EE** Modül adı **!** \<> *tür veya yöntem adı* \<>|Belirtilen modüldeki belirtilen tür `EEClass` veya metodun yapısınıveyapısınıgörüntüler.`MethodTable`<br /><br /> Belirtilen modülün işlemde yüklenmesi gerekir.<br /><br /> Uygun tür adını almak için, [ıdisksm. exe ' yi (IL Disassembler)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)kullanarak modüle göz atabilirsiniz. Ayrıca, yüklenmiş tüm `*` yönetilen modülleri aramak için modül adı parametresi olarak da geçiş yapabilirsiniz. *Modül adı* parametresi, `mscorlib` ya `image00400000`da gibi bir modülün hata ayıklayıcı adı olabilir.<br /><br /> Bu`module`komut <`!`> Windows>hataayıklayıcısözdiziminidestekler<.`type` Tür, tam olarak nitelenmiş olmalıdır.|
+|**Name2EE** \< *Modül*adıtürü> veya*Yöntem* adı\<><br /><br /> -veya-<br /><br /> **Name2EE** Modül adı **!** \<> *tür veya yöntem adı* \<>|Belirtilen modüldeki belirtilen tür `EEClass` veya metodun yapısınıveyapısınıgörüntüler.`MethodTable`<br /><br /> Belirtilen modülün işlemde yüklenmesi gerekir.<br /><br /> Uygun tür adını almak için, [ıdisksm. exe ' yi (IL Disassembler)](ildasm-exe-il-disassembler.md)kullanarak modüle göz atabilirsiniz. Ayrıca, yüklenmiş tüm `*` yönetilen modülleri aramak için modül adı parametresi olarak da geçiş yapabilirsiniz. *Modül adı* parametresi, `mscorlib` ya `image00400000`da gibi bir modülün hata ayıklayıcı adı olabilir.<br /><br /> Bu`module`komut <`!`> Windows>hataayıklayıcısözdiziminidestekler<.`type` Tür, tam olarak nitelenmiş olmalıdır.|
 |**ObjSize** [\<*Nesne adresi*>] &#124; [ **-Aggregate**] [ **-stat**]|Belirtilen nesnenin boyutunu görüntüler. Herhangi bir parametre belirtmezseniz, **ObjSize** komutu yönetilen iş parçacıklarında bulunan tüm nesnelerin boyutunu görüntüler, işlemdeki tüm çöp toplayıcı tanıtıcılarını görüntüler ve bu tutamaçlar tarafından işaret edilen nesnelerin boyutunu toplar. **ObjSize** komutu, üst öğeye ek olarak tüm alt nesnelerin boyutunu içerir.<br /><br /> **-Aggregate** seçeneği, hala kök olarak belirtilen türlerin ayrıntılı bir görünümünü almak için **-stat** bağımsız değişkeniyle birlikte kullanılabilir. **! Dumpheap-stat** ve **! ObjSize-Aggregate-stat**kullanarak, artık hangi nesnelerin kök olmadığını belirleyebilir ve çeşitli bellek sorunlarını tanılayabilirsiniz.|
 |**PrintException** [ **-iç içe**] [ **-Lines**] [\<*Özel durum nesnesi adresi*>]<br /><br /> -veya-<br /><br /> **PE** [ **-iç içe**] [\<*Özel durum nesnesi adresi*>]|Belirtilen adresteki <xref:System.Exception> sınıftan türetilmiş herhangi bir nesnenin alanlarını görüntüler ve biçimlendirir. Bir adres belirtmezseniz, **PrintException** komutu geçerli iş parçacığında oluşturulan son özel durumu görüntüler.<br /><br /> **İç içe** geçmiş seçeneği, iç içe geçmiş özel durum nesneleri hakkındaki ayrıntıları görüntüler.<br /><br /> **-Lines** seçeneği, varsa, kaynak bilgilerini görüntüler.<br /><br /> Bu komutu, bir ikili dizi olan `_stackTrace` alanını biçimlendirmek ve görüntülemek için kullanabilirsiniz.|
 |**ProcInfo** [ **-env**] [ **-Time**] [ **-mem**]|İşlem, çekirdek CPU süresi ve bellek kullanımı istatistikleri için ortam değişkenlerini görüntüler.|
@@ -206,5 +206,5 @@ Aşağıdaki komut, modüldeki `02000003` `unittest.exe`adresteki meta veri beli
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Araçlar](../../../docs/framework/tools/index.md)
-- [Komut İstemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [Araçlar](index.md)
+- [Komut İstemleri](developer-command-prompt-for-vs.md)

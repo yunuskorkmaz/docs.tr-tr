@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: b224d7c0-35f8-4e82-a705-dd76795e8d16
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 808f0f8ac6caf15be0bf1ba8735521871c9b94d7
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 417550397582641c5a8fa97c061377beadfb0e6f
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70851604"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045574"
 ---
 # <a name="packaging-and-deploying-resources-in-net-apps"></a>.NET uygulamalarında kaynakları paketleme ve dağıtma
 
@@ -58,7 +58,7 @@ Bu modelin çeşitli avantajları vardır:
 Uygulamanızın kaynaklarını paketlemeyi seçtiğinizde, ortak dil çalışma zamanının beklediği kaynak adlandırma kurallarını kullanarak bunları adlandırmalısınız. Çalışma zamanı bir kaynağı kültür adına göre tanımlar. Her kültüre, genellikle bir dille ilişkili iki harfli, küçük harfli bir kültür adının birleşimi ve gerekirse, bir ülke veya bölgeyle ilişkili iki harfli, büyük harfli bir alt kültür adı olan benzersiz bir ad verilir. Alt kültür adı, bir tire (-) ile ayrılmış olarak kültür adını izler. Japonca, Japonya 'da konuşulan Japonca için ja-JP, Birleşik Devletler Ingilizce için en-US, Almanya 'da konuşulan olarak Almanca için de, Almanya için de ve [Windows tarafından desteklenen dil/bölge adları listesindeki](https://docs.microsoft.com/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c) **Dil etiketi** sütununa bakın. Kültür adları [BCP 47](https://tools.ietf.org/html/bcp47)tarafından tanımlanan standardı izler.
 
 > [!NOTE]
-> Kaynak dosyaları oluşturma hakkında daha fazla bilgi için bkz. [kaynak dosyaları oluşturma](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md) ve [uydu derlemeleri oluşturma](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md).
+> Kaynak dosyaları oluşturma hakkında daha fazla bilgi için bkz. [kaynak dosyaları oluşturma](creating-resource-files-for-desktop-apps.md) ve [uydu derlemeleri oluşturma](creating-satellite-assemblies-for-desktop-apps.md).
 
 <a name="cpconpackagingdeployingresourcesanchor1"></a>
 
@@ -73,9 +73,9 @@ Arama performansını geliştirmek için, <xref:System.Resources.NeutralResource
 .NET Framework kaynak geri dönüş işlemi aşağıdaki adımları içerir:
 
 > [!TIP]
-> Kaynak geri dönüş işlemini ve kaynak derlemeler için çalışma zamanı araştırmalarını iyileştirmek için [ \<relativebindforresources >](../../../docs/framework/configure-apps/file-schema/runtime/relativebindforresources-element.md) yapılandırma öğesini kullanabilirsiniz. Daha fazla bilgi için [kaynak geri dönüş Işlemini En Iyi duruma getirme](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md#Optimizing) bölümüne bakın.
+> Kaynak geri dönüş işlemini ve kaynak derlemeler için çalışma zamanı araştırmalarını iyileştirmek için [ \<relativebindforresources >](../configure-apps/file-schema/runtime/relativebindforresources-element.md) yapılandırma öğesini kullanabilirsiniz. Daha fazla bilgi için [kaynak geri dönüş Işlemini En Iyi duruma getirme](packaging-and-deploying-resources-in-desktop-apps.md#Optimizing) bölümüne bakın.
 
-1. Çalışma zamanı, uygulamanız için istenen kültür ile eşleşen bir derleme için [genel derleme önbelleğini](../../../docs/framework/app-domains/gac.md) denetler.
+1. Çalışma zamanı, uygulamanız için istenen kültür ile eşleşen bir derleme için [genel derleme önbelleğini](../app-domains/gac.md) denetler.
 
      Genel derleme önbelleği, birçok uygulama tarafından paylaşılan kaynak derlemelerini depolayabilirler. Bu, oluşturduğunuz her uygulamanın dizin yapısına belirli kaynak kümelerini dahil etmek zorunda kalmaktan kurtarır. Çalışma zamanı derlemeye bir başvuru bulursa, istenen kaynak için derlemeyi arar. Girdiyi derlemede bulursa, istenen kaynağı kullanır. Girişi bulamazsa, aramaya devam eder.
 
@@ -112,13 +112,13 @@ Arama performansını geliştirmek için, <xref:System.Resources.NeutralResource
 
 Aşağıdaki koşullarda, çalışma zamanının uydu derlemelerindeki kaynakları arayacağı süreci iyileştirebilirsiniz
 
-- Uydu derlemeleri kod derlemesiyle aynı konumda dağıtılır. Kod derlemesi [genel derleme önbelleğinde](../../../docs/framework/app-domains/gac.md)yüklüyse, uydu derlemeleri genel bütünleştirilmiş kod önbelleğine de yüklenir. Kod derlemesi bir dizinde yüklüyse, uydu derlemeleri bu dizinin kültüre özgü klasörlerine yüklenir.
+- Uydu derlemeleri kod derlemesiyle aynı konumda dağıtılır. Kod derlemesi [genel derleme önbelleğinde](../app-domains/gac.md)yüklüyse, uydu derlemeleri genel bütünleştirilmiş kod önbelleğine de yüklenir. Kod derlemesi bir dizinde yüklüyse, uydu derlemeleri bu dizinin kültüre özgü klasörlerine yüklenir.
 
 - Uydu derlemeleri isteğe bağlı olarak yüklenmez.
 
 - Uygulama kodu <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> olayı işlemez.
 
-`enabled` [ \<Relativebindforresources >](../../../docs/framework/configure-apps/file-schema/runtime/relativebindforresources-element.md) öğesini ekleyerek ve özniteliğini `true` aşağıdaki gibi uygulama yapılandırma dosyasında olarak ayarlayarak uydu derlemeleri için araştırmayı iyileştirebilirsiniz örneğinde.
+`enabled` [ \<Relativebindforresources >](../configure-apps/file-schema/runtime/relativebindforresources-element.md) öğesini ekleyerek ve özniteliğini `true` aşağıdaki gibi uygulama yapılandırma dosyasında olarak ayarlayarak uydu derlemeleri için araştırmayı iyileştirebilirsiniz örneğinde.
 
 ```xml
 <configuration>
@@ -128,7 +128,7 @@ Aşağıdaki koşullarda, çalışma zamanının uydu derlemelerindeki kaynaklar
 </configuration>
 ```
 
-Uydu derlemeleri için iyileştirilmiş araştırma bir katılım özelliğidir. Diğer bir deyişle, çalışma zamanı, `enabled` uygulama yapılandırma dosyasında [ \<relativebindforresources >](../../../docs/framework/configure-apps/file-schema/runtime/relativebindforresources-element.md) öğesi mevcut olmadığı ve özniteliği ayarlanmış olmadığı sürece [kaynak geri dönüş işleminde](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md#cpconpackagingdeployingresourcesanchor1) belgelenen adımları izler. `true`. Bu durumda, bir uydu derlemesini araştırma işlemi aşağıdaki gibi değiştirilmiştir:
+Uydu derlemeleri için iyileştirilmiş araştırma bir katılım özelliğidir. Diğer bir deyişle, çalışma zamanı, `enabled` uygulama yapılandırma dosyasında [ \<relativebindforresources >](../configure-apps/file-schema/runtime/relativebindforresources-element.md) öğesi mevcut olmadığı ve özniteliği ayarlanmış olmadığı sürece [kaynak geri dönüş işleminde](packaging-and-deploying-resources-in-desktop-apps.md#cpconpackagingdeployingresourcesanchor1) belgelenen adımları izler. `true`. Bu durumda, bir uydu derlemesini araştırma işlemi aşağıdaki gibi değiştirilmiştir:
 
 - Çalışma zamanı, uydu derlemesi için araştırma yapmak üzere ana kod derlemesinin konumunu kullanır. Üst derleme genel derleme önbelleğinde yüklüyse, çalışma zamanı önbellekte araştırıyor ancak uygulamanın dizininde değil. Üst derleme bir uygulama dizinine yüklenirse, çalışma zamanı uygulama dizininde araştırıyor ancak genel derleme önbelleğinde değil.
 
@@ -186,7 +186,7 @@ Greeting=Bon jour!
 Greeting=Добрый день
 ```
 
-Bu iki dosya, komut satırından [kaynak dosya Oluşturucu (Resgen. exe)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) çalıştırılarak. resources dosyalarına derlenir. Fransızca dil kaynağı için komut şu şekilde olur:
+Bu iki dosya, komut satırından [kaynak dosya Oluşturucu (Resgen. exe)](../tools/resgen-exe-resource-file-generator.md) çalıştırılarak. resources dosyalarına derlenir. Fransızca dil kaynağı için komut şu şekilde olur:
 
 **Resgen. exe resources. fr. txt**
 
@@ -194,7 +194,7 @@ Rusça dil kaynağı için komut şu şekilde olur:
 
 **Resgen. exe resources. ru. txt**
 
-. Resources dosyaları, Fransızca dili kaynağı için komut satırından aşağıdaki gibi, [derleme Bağlayıcısı (al. exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) çalıştırılarak dinamik bağlantı kitaplıklarına katıştırılır:
+. Resources dosyaları, Fransızca dili kaynağı için komut satırından aşağıdaki gibi, [derleme Bağlayıcısı (al. exe)](../tools/al-exe-assembly-linker.md) çalıştırılarak dinamik bağlantı kitaplıklarına katıştırılır:
 
 **Al/t: lib/Embed: resources. fr. resources/Culture: fr/Out: fr\Example1.resources.dll**
 
@@ -233,7 +233,7 @@ Zaman veya bütçe kısıtlamaları, uygulamanızın desteklediği her alt kült
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Masaüstü Uygulamalarındaki Kaynaklar](../../../docs/framework/resources/index.md)
-- [Genel Derleme Önbelleği](../../../docs/framework/app-domains/gac.md)
-- [Kaynak Dosyaları Oluşturma](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)
-- [Uydu Derlemeleri Oluşturma](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)
+- [Masaüstü Uygulamalarındaki Kaynaklar](index.md)
+- [Genel Derleme Önbelleği](../app-domains/gac.md)
+- [Kaynak Dosyaları Oluşturma](creating-resource-files-for-desktop-apps.md)
+- [Uydu Derlemeleri Oluşturma](creating-satellite-assemblies-for-desktop-apps.md)

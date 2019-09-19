@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 ms.assetid: f9532629-6594-4a41-909f-d083f30a42f3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ba60b6d97d1441cefc9392067c797504f454ac59
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 9d120dcf49f1c9097eee04434062a0363a7e144a
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894525"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049971"
 ---
 # <a name="apis-that-rely-on-reflection"></a>Yansıma kullanan API'ler
-Bazı durumlarda, kodda yansıma kullanımı belirgin değildir ve bu nedenle .NET Native araç zinciri çalışma zamanında gereken meta verileri korumaz. Bu konu, yansıma API 'sinin bir parçası olarak kabul edilmeyen ancak yansıma dosyasını başarıyla yürütmek için kullanan bazı ortak API 'Leri veya ortak programlama düzenlerini ele almaktadır. Bunları kaynak kodunuzda kullanıyorsanız, bu API 'lere yapılan çağrıların bir [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) özel durumu veya çalışma zamanında başka bir özel durum oluşturmaması için çalışma zamanı yönergeleri (. RD. xml) dosyasına bunlarla ilgili bilgi ekleyebilirsiniz.  
+Bazı durumlarda, kodda yansıma kullanımı belirgin değildir ve bu nedenle .NET Native araç zinciri çalışma zamanında gereken meta verileri korumaz. Bu konu, yansıma API 'sinin bir parçası olarak kabul edilmeyen ancak yansıma dosyasını başarıyla yürütmek için kullanan bazı ortak API 'Leri veya ortak programlama düzenlerini ele almaktadır. Bunları kaynak kodunuzda kullanıyorsanız, bu API 'lere yapılan çağrıların bir [MissingMetadataException](missingmetadataexception-class-net-native.md) özel durumu veya çalışma zamanında başka bir özel durum oluşturmaması için çalışma zamanı yönergeleri (. RD. xml) dosyasına bunlarla ilgili bilgi ekleyebilirsiniz.  
   
 ## <a name="typemakegenerictype-method"></a>Type. MakeGenericType yöntemi  
  Aşağıdaki gibi bir kod kullanarak `AppClass<T>` <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType> yöntemini çağırarak bir genel türü dinamik olarak oluşturabilirsiniz:  
@@ -27,7 +27,7 @@ Bazı durumlarda, kodda yansıma kullanımı belirgin değildir ve bu nedenle .N
   
  Bu <xref:System.Type.GetType%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> yöntem çağrısının başarılı olmasını ve geçerli <xref:System.Type> bir nesne döndürmesini sağlar.  
   
- Ancak, örneklenmemiş genel tür için meta veriler eklediğinizde bile <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType> yöntemi çağırmak bir [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) özel durumu oluşturur:  
+ Ancak, örneklenmemiş genel tür için meta veriler eklediğinizde bile <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType> yöntemi çağırmak bir [MissingMetadataException](missingmetadataexception-class-net-native.md) özel durumu oluşturur:  
   
 Bu işlem, performans nedenleriyle aşağıdaki tür için meta veriler kaldırıldığından yürütülemiyor:  
   
@@ -92,5 +92,5 @@ Unfortunately, no further information is available.
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Başlarken](../../../docs/framework/net-native/getting-started-with-net-native.md)
-- [Çalışma Zamanı Yönergeleri (rd.xml) Yapılandırma Dosyası Başvurusu](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [Başlarken](getting-started-with-net-native.md)
+- [Çalışma Zamanı Yönergeleri (rd.xml) Yapılandırma Dosyası Başvurusu](runtime-directives-rd-xml-configuration-file-reference.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: f93b03b0-1778-43fc-bc6d-35983d210e74
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d6517edcc2784b7d70c08c4d15d837fc1f209c49
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 6e15ef69c4777cdafe2e5861050a1ccc1f6a1a70
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69928236"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046012"
 ---
 # <a name="how-to-examine-and-instantiate-generic-types-with-reflection"></a>Nasıl yapılır: Yansıma ile Genel Türleri İnceleme ve Örnek Oluşturma
 Genel türler hakkında bilgi, genel türü temsil eden bir <xref:System.Type> nesneyi inceleyerek, diğer türlerle ilgili bilgilerle aynı şekilde alınır: Prensibi, genel bir türün genel tür parametrelerini temsil eden bir <xref:System.Type> nesne listesi içerir. Bu bölümdeki ilk yordam genel türleri inceler.  
@@ -119,6 +119,6 @@ Genel türler hakkında bilgi, genel türü temsil eden bir <xref:System.Type> n
 
 - <xref:System.Type>
 - <xref:System.Reflection.MethodInfo>
-- [Yansıma ve Genel Türler](../../../docs/framework/reflection-and-codedom/reflection-and-generic-types.md)
-- [Tür Bilgilerini Görüntüleme](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)
+- [Yansıma ve Genel Türler](reflection-and-generic-types.md)
+- [Tür Bilgilerini Görüntüleme](viewing-type-information.md)
 - [Genel Türler](../../standard/generics/index.md)

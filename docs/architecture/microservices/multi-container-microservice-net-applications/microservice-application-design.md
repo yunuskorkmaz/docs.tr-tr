@@ -2,12 +2,12 @@
 title: Mikro hizmet odaklı bir uygulama tasarlama
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | Mikro hizmet odaklı bir uygulamanın avantajlarını ve altlarını anlayın ve bu sayede bilinçli bir karar alabilirsiniz.
 ms.date: 10/02/2018
-ms.openlocfilehash: ddca4ecf0b0ed1103e4da75ecc759546d6e53800
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: dc3c8ccd95505cb828383f499b9bf950e7c12a30
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926534"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71039823"
 ---
 # <a name="designing-a-microservice-oriented-application"></a>Mikro hizmet odaklı bir uygulama tasarlama
 
@@ -89,8 +89,8 @@ Bu nedenle, mikro hizmetler (ve bu uygulamadaki veritabanları için de) dağıt
 
 ### <a name="additional-resources"></a>Ek kaynaklar
 
-- **eShopOnContainers GitHub deposu. Başvuru uygulaması için kaynak kodu**\
-    <https://aka.ms/eShopOnContainers/>
+- **eShopOnContainers GitHub deposu. Başvuru uygulaması için kaynak kodu** \
+  <https://aka.ms/eShopOnContainers/>
 
 ## <a name="benefits-of-a-microservice-based-solution"></a>Mikro hizmet tabanlı bir çözümün avantajları
 
@@ -118,7 +118,7 @@ Bunun gibi bir mikro hizmet tabanlı çözümün birçok avantajı vardır:
 
 Buna benzer bir mikro hizmet tabanlı çözüm de bazı dezavantajları vardır:
 
-**Dağıtılmış uygulama**. Uygulamayı dağıtmak, Hizmetleri tasarlarken ve oluştururken geliştiriciler için karmaşıklık ekler. Örneğin, geliştiriciler, test ve özel durum işleme için karmaşıklık ekleyen HTTP veya AMPQ gibi protokolleri kullanarak Interservice iletişimi uygulamalıdır. Ayrıca sisteme gecikme süresi ekler.
+**Dağıtılmış uygulama**. Uygulamayı dağıtmak, Hizmetleri tasarlarken ve oluştururken geliştiriciler için karmaşıklık ekler. Örneğin, geliştiriciler, test ve özel durum işleme için karmaşıklık ekleyen HTTP veya AMPQ gibi protokolleri kullanarak hizmet dışı iletişim uygulamalıdır. Ayrıca sisteme gecikme süresi ekler.
 
 **Dağıtım karmaşıklığı**. Onlarca mikro hizmet türüne sahip ve yüksek ölçeklenebilirlik gerektiren bir uygulama (hizmet başına çok sayıda örnek oluşturamayacak ve bu hizmetlerin birçok konakta dengelenmesi gerekir), BT işlemleri ve yönetimi için yüksek düzeyde dağıtım karmaşıklığı anlamına gelir. Mikro hizmet odaklı bir altyapı (Orchestrator ve Scheduler gibi) kullanmıyorsanız, bu ek karmaşıklık iş uygulamasının kendisinden daha fazla geliştirme çabasına gerek duyar.
 

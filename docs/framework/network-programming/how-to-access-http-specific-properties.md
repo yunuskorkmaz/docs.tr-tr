@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f8848c7e-f5c5-4d42-b86d-9951ff8f4146
-ms.openlocfilehash: 044a48aaffbd2d4ef490405a65236b17ecca1fbf
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f902fb3ee97e94c85192836be047dfe632249735
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645801"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048487"
 ---
 # <a name="how-to-access-http-specific-properties"></a>Nasıl yapılır: HTTP’ye Özgü Özelliklere Erişim
-Bu örnek HTTP devre dışı bırakma gösterir **tutma** davranışı ve get protokol sürümü, Web sunucusu vm'sinden sayı.  
+Bu örnekte, HTTP **canlı tutma** davranışının nasıl kapatılacağı ve Web sunucusundan protokol sürüm numarası alma gösterilmektedir.  
   
 ## <a name="example"></a>Örnek  
   
@@ -45,12 +45,12 @@ HttpWResp.Close();
 ```  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
- Bu örnek gerektirir:  
+ Bu örnek şunları gerektirir:  
   
-- Başvurular **System.Net** ad alanı.  
+- **System.net** ad alanına başvurular.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Ara Sunucu Üzerinden İnternet Erişimi](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)
-- [Uygulama Protokolleri Kullanma](../../../docs/framework/network-programming/using-application-protocols.md)
-- [HTTP](../../../docs/framework/network-programming/http.md)
+- [Ara Sunucu Üzerinden İnternet Erişimi](accessing-the-internet-through-a-proxy.md)
+- [Uygulama Protokolleri Kullanma](using-application-protocols.md)
+- [HTTP](http.md)

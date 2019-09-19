@@ -6,35 +6,35 @@ helpviewer_keywords:
 - network resources, caching
 - Internet, caching
 ms.assetid: fc258a40-f370-434f-ae09-4a8cb11ddaeb
-ms.openlocfilehash: 265b4e451ebb76dbabe0d3e0df065504a3891f32
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7e131963999db3e3d5e0e6f3fa110da36e6452a1
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033169"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048881"
 ---
 # <a name="cache-management-for-network-applications"></a>Ağ Uygulamaları için Önbellek Yönetimi
-Bu konu ve alt ilgili konuları kullanılarak elde edilen kaynaklar için önbelleğe alma açıklayan <xref:System.Net.WebClient>, <xref:System.Net.WebRequest>, <xref:System.Net.HttpWebRequest>, ve <xref:System.Net.FtpWebRequest> sınıfları.  
+Bu konu ve ilgili <xref:System.Net.WebClient>alt konuları <xref:System.Net.HttpWebRequest>, <xref:System.Net.WebRequest>,, ve <xref:System.Net.FtpWebRequest> sınıfları kullanılarak elde edilen kaynaklar için önbelleğe almayı anlatmaktadır.  
   
- Geçici depolama bir uygulama tarafından istenen kaynak, bir önbellek sağlar. Bir uygulama birden çok kez aynı kaynak isterse, kaynak sunucudan yeniden isteme yükünden önbellekten döndürülebilir. Önbelleğe alma işlemi, istenen kaynak almak için gereken süreyi azaltarak uygulama performansı artırabilir. Önbelleğe alma sunucuya sayısını azaltarak ağ trafiğini de azaltabilir. Önbelleğe alma performansını artırır, ancak kaynak döndürülen riskini artırır. eski önbelleğe alma kullanımda değilse, sunucu tarafından gönderilen kaynak aynı değil, yani bir uygulamadır.  
+ Önbellek, bir uygulama tarafından istenen kaynakların geçici olarak depolanmasını sağlar. Bir uygulama aynı kaynağı birden çok kez isterse, kaynak önbellekten döndürülebileceğinden, sunucudan yeniden istek yükünü ortadan kaldırır. Önbelleğe alma, istenen bir kaynağı almak için gereken süreyi azaltarak uygulama performansını iyileştirebilir. Önbelleğe alma, sunucuya gidiş dönüş sayısını azaltarak da ağ trafiğini azaltabilir. Önbelleğe alma performansı artırırken, uygulamaya döndürülen kaynağın eskimiş olması, yani önbelleğe alma kullanımda değilse sunucu tarafından gönderilen kaynakla aynı olmaması anlamına gelir.  
   
- Önbelleğe alma, yetkisiz kullanıcılara veya işlemlere hassas verileri okumak izin verebilir. Önbelleğe alınmış bir kimliği doğrulanmış yanıt, ek bir yetkilendirme olmadan önbellekten alınabilir. Önbelleğe alma etkinse değiştirmek <xref:System.Net.WebRequest.CachePolicy%2A> için <xref:System.Net.Cache.RequestCacheLevel.BypassCache> veya <xref:System.Net.Cache.RequestCacheLevel.NoCacheNoStore> bu istek için önbelleğe alma devre dışı bırakmak için.  
+ Önbelleğe alma, yetkisiz kullanıcıların veya işlemlerin hassas verileri okumasına izin verebilir. Önbelleğe alınan kimliği doğrulanmış bir yanıt, ek bir yetkilendirme olmadan önbellekten alınabilir. Önbelleğe alma etkinse, bu istek için <xref:System.Net.WebRequest.CachePolicy%2A> önbelleğe <xref:System.Net.Cache.RequestCacheLevel.BypassCache> almayı <xref:System.Net.Cache.RequestCacheLevel.NoCacheNoStore> devre dışı bırakmak için veya olarak değiştirin.  
   
- Önbelleğe alma, güvenlik kaygıları nedeniyle olduğunu **değil** orta katman senaryoları için önerilir.  
+ Güvenlik sorunları nedeniyle, orta katman senaryolarında önbelleğe **alma önerilmez.**  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Önbellek İlkesi](../../../docs/framework/network-programming/cache-policy.md)  
- Açıklayan bir önbellek İlkesi ve nasıl bir tane tanımlayacaksınız.  
+ [Önbellek İlkesi](cache-policy.md)  
+ Önbellek ilkesinin ne olduğunu ve bir tane tanımlanacağını açıklar.  
   
- [Konum Temelli Önbellek İlkeleri](../../../docs/framework/network-programming/location-based-cache-policies.md)  
- Konum temelli önbellek ilkesi için Köprü Metni Aktarım Protokolü (http ve https) kaynaklar kullanılabilir her türünü tanımlar.  
+ [Konum Temelli Önbellek İlkeleri](location-based-cache-policies.md)  
+ Köprü Metni Aktarım Protokolü (http ve https) kaynakları için kullanılabilen her bir konum tabanlı önbellek ilkesi türünü tanımlar.  
   
- [Saat Temelli Önbellek İlkeleri](../../../docs/framework/network-programming/time-based-cache-policies.md)  
- Bir saat temelli önbellek İlkesi özelleştirmek için kullanılan ölçütleri açıklanmaktadır.  
+ [Saat Temelli Önbellek İlkeleri](time-based-cache-policies.md)  
+ Zaman tabanlı önbellek ilkesini özelleştirmek için kullanılabilecek kriterleri açıklar.  
   
- [Ağ Uygulamalarında Önbelleğe Almayı Yapılandırma](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md)  
- Önbellek ilkeleri ve önbelleğe almayı kullanmak istekleri program aracılığıyla oluşturmayı açıklar.  
+ [Ağ Uygulamalarında Önbelleğe Almayı Yapılandırma](configuring-caching-in-network-applications.md)  
+ Program aracılığıyla önbellek ilkelerinin ve önbelleğe alma kullanan isteklerin nasıl oluşturulduğunu açıklar.  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Net.Cache>  
- Kullanılarak elde edilen kaynaklarının önbellek ilkelerini tanımlamak için kullanılan sabit listeleri ve türlerini tanımlayan <xref:System.Net.WebRequest>, <xref:System.Net.HttpWebRequest>, ve <xref:System.Net.FtpWebRequest> sınıfları.
+ <xref:System.Net.WebRequest> ,<xref:System.Net.HttpWebRequest>Ve sınıfları<xref:System.Net.FtpWebRequest> kullanılarak elde edilen kaynaklar için önbellek ilkelerini tanımlamak üzere kullanılan türleri ve numaralandırmaları tanımlar.

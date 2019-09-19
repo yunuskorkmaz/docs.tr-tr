@@ -2,12 +2,12 @@
 title: Esnek Türler
 description: Bir parametre, değişken F# veya değerin belirtilen tür ile uyumlu bir türe sahip olduğunu gösteren esnek tür ek açıklamasını nasıl kullanacağınızı öğrenin.
 ms.date: 05/16/2016
-ms.openlocfilehash: 43caa6cd35630df648beda5cc43cffae2ecd6f6a
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: bf05f78f163d1f9c73c667df60925b66a5315627
+ms.sourcegitcommit: a2d0e1f66367367065bc8dc0dde488ab536da73f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630265"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71083072"
 ---
 # <a name="flexible-types"></a>Esnek Türler
 
@@ -57,7 +57,7 @@ Aşağıdaki kod, esnek `Seq.concat` türler kullanarak destekleyerek kullanabil
 
 Çıktı aşağıdaki gibidir:
 
-```
+```console
 seq [1; 2; 3; 4; ...]
 seq [1; 2; 3; 4; ...]
 seq [1; 2; 3; 4; ...]

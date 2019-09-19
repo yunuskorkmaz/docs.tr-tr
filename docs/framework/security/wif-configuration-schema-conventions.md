@@ -3,15 +3,15 @@ title: WIF Yapılandırma Şeması Kuralları
 ms.date: 03/30/2017
 ms.assetid: f7864356-f72f-4cae-995c-18e0431f8a58
 author: BrucePerlerMS
-ms.openlocfilehash: 6e13915121884ecb4a0e54344e02d29650f54c6f
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: c02d467260a5197cdd01a3819f8a323655a8a08f
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70851485"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045091"
 ---
 # <a name="wif-configuration-schema-conventions"></a>WIF Yapılandırma Şeması Kuralları
-Bu konuda, Windows Identity Foundation (WIF) yapılandırma konularında kullanılan kurallar ele alınmaktadır ve [ \<System. IdentityModel](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md) [ \< > ve ' de kullanılan bazı ortak özellikler ve öznitelikler açıklanmaktadır. System. IdentityModel. Services >](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md) bölümler.  
+Bu konuda, Windows Identity Foundation (WIF) yapılandırma konularında kullanılan kurallar ele alınmaktadır ve [ \<System. IdentityModel](../configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md) [ \< > ve ' de kullanılan bazı ortak özellikler ve öznitelikler açıklanmaktadır. System. IdentityModel. Services >](../configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md) bölümler.  
   
 <a name="BKMK_Modes"></a>   
 ## <a name="modes"></a>Mod  
@@ -44,5 +44,5 @@ Bu konuda, Windows Identity Foundation (WIF) yapılandırma konularında kullan�
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [\<System. IdentityModel >](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md)
-- [\<System. IdentityModel. Services >](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md)
+- [\<System. IdentityModel >](../configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md)
+- [\<System. IdentityModel. Services >](../configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md)

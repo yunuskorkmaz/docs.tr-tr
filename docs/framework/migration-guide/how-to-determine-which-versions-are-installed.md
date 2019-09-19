@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8d719debd39309415f996d655c68abd8c80ec5e3
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 0df5a5be2997958faa43ee67ae64fc37e1998414
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928416"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051599"
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>Nasıl yapılır: Hangi .NET Framework sürümlerinin yüklendiğini belirleme
 
@@ -72,7 +72,7 @@ Bir bilgisayarda yüklü olan CLR sürümlerinin bir listesini almak için bir a
 
 3. **Yayın**ADLı bir DWORD girişini denetleyin. Varsa, .NET Framework 4,5 veya sonraki sürümlerin yüklü olması gerekir. Değeri, .NET Framework belirli bir sürümüne karşılık gelen bir sürüm anahtarıdır. Aşağıdaki şekilde, örneğin, **Sürüm** girişinin değeri *378389*' dir. Bu, .NET Framework 4,5 ' in sürüm anahtarıdır.
 
-     ![.NET Framework 4,5 Için kayıt defteri girişi](media/clr-installdir.png ".NET Framework 4,5 Için kayıt defteri girişi")
+     ![.NET Framework 4,5 Için kayıt defteri girişi](./media/clr-installdir.png ".NET Framework 4,5 Için kayıt defteri girişi")
 
 Aşağıdaki tabloda, .NET Framework 4,5 ve üzeri sürümler için tek tek işletim sistemlerindeki **Sürüm** DWORD değeri listelenmektedir.
 
@@ -163,7 +163,7 @@ Farklı bir en düşük gerekli .NET Framework sürümünü denetlemek için, bu
 
     Aşağıdaki şekilde, .NET Framework 3,5 için alt anahtar ve **Sürüm** girişi gösterilmektedir.
 
-    ![3,5 .NET Framework için kayıt defteri girişi.](media/net-4-and-earlier.png ".NET Framework 3,5 ve önceki sürümler")
+    ![3,5 .NET Framework için kayıt defteri girişi.](./media/net-4-and-earlier.png ".NET Framework 3,5 ve önceki sürümler")
 
 <a name="net_c"></a>
 

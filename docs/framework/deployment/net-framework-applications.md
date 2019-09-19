@@ -7,23 +7,23 @@ helpviewer_keywords:
 ms.assetid: 139d4cb1-5972-40f4-bdd8-1ce68e4dfb80
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7876e21286ee16f16fa51939b09ffd0583b134d0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 92c7bbfe2c35aa1474c83eae49240af39b664714
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61644529"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052056"
 ---
 # <a name="deploying-net-framework-applications"></a>.NET Framework Uygulamalarını Dağıtma
-.NET Framework belgelerinin bu bölümü, uygulamanızın performansını iyileştirme derlemeleri yükleme ve derleme başvurularını çözümlemek için yönergeler de dahil olmak üzere, .NET Framework uygulamalarını dağıtmak için gerekli bilgileri sağlar. Yerel görüntü oluşturma.  
+.NET Framework belgelerinin bu bölümü, derlemeleri yükleme, derleme başvurularını çözme ve uygulamanızın performansını artırma yönergeleri dahil .NET Framework uygulamaları dağıtmaya yönelik temel bilgileri sağlar Yerel görüntü oluşturma aracılığıyla.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Çalışma Zamanının Bütünleştirilmiş Kodların Konumunu Bulması](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
- Ortak dil çalışma zamanının nasıl bulur açıklar ve uygulamanızı oluşturan derlemeleri bağlar.  
+ [Çalışma Zamanının Bütünleştirilmiş Kodların Konumunu Bulması](how-the-runtime-locates-assemblies.md)  
+ Ortak dil çalışma zamanının uygulamanızı oluşturan derlemeleri nasıl bulup bağladığını açıklar.  
   
- [Bütünleştirilmiş Kod Yükleme için En İyi Yöntemler](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)  
- Yol açabilir türü kimliği sorunları önlemek için yollar ele alınmaktadır <xref:System.InvalidCastException>, <xref:System.MissingMethodException>ve diğer hataları.  
+ [Bütünleştirilmiş Kod Yükleme için En İyi Yöntemler](best-practices-for-assembly-loading.md)  
+ <xref:System.InvalidCastException> ,<xref:System.MissingMethodException>, Ve diğer hatalara yol açabilecek kimlik tür sorunlarından kaçınmanın yollarını açıklar.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Geliştirme Kılavuzu](../../../docs/framework/development-guide.md)
+- [Geliştirme Kılavuzu](../development-guide.md)

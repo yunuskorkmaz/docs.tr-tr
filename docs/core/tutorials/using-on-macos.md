@@ -1,17 +1,16 @@
 ---
-title: MacOS üzerinde .NET Core kullanmaya başlama
+title: "Öğretici: Visual Studio Code kullanarak macOS 'ta .NET Core çözümü oluşturma"
 description: Bu belge, Visual Studio Code kullanarak bir .NET Core çözümü oluşturmak için adımlar ve iş akışı sağlar.
-author: bleroy
 ms.date: 03/23/2017
 ms.custom: seodec18
-ms.openlocfilehash: 572174cb09dbde03095fa9444989356038bab9b7
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 022afd99c6d36d7a60ac40f3f27ba073c5470bd2
+ms.sourcegitcommit: a2d0e1f66367367065bc8dc0dde488ab536da73f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70849351"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71082808"
 ---
-# <a name="get-started-with-net-core-on-macos"></a>MacOS üzerinde .NET Core kullanmaya başlama
+# <a name="tutorial-create-a-net-core-solution-in-macos-using-visual-studio-code"></a>Öğretici: Visual Studio Code kullanarak macOS 'ta .NET Core çözümü oluşturma
 
 Bu belge, macOS için .NET Core çözümü oluşturmaya yönelik adımları ve iş akışını sağlar. Projeler, birim testleri oluşturma, hata ayıklama araçlarını kullanma ve [NuGet](https://www.nuget.org/)aracılığıyla üçüncü taraf kitaplıklarını birleştirme hakkında bilgi edinin.
 
@@ -32,13 +31,13 @@ Bu öğreticide, üç proje oluşturursunuz: bir kitaplık projesi, bu kitaplık
 
 Visual Studio Code başlatın. Visual Studio Code ' de gömülü bir terminal açmak için <kbd>CTRL</kbd> + <kbd>\`</kbd> tuşuna basın (backquote veya backtick karakteri) veya menüden **> tümleşik Terminal görüntüle** ' yi seçin. Visual Studio Code dışında çalışmayı tercih ediyorsanız, bir dış kabuğu Explorer **komut istemi** komutunda aç (Mac veya Linux 'ta**terminalde aç** ) ile açabilirsiniz.
 
-Bir veya daha fazla .NET Core projesi için kapsayıcı görevi gören bir çözüm dosyası oluşturarak başlayın. Terminalde bir *altın* klasör oluşturun ve klasörü açın. Bu klasör çözümünüzün köküdür. Yeni bir çözüm oluşturmak için [komutunuçalıştırın,altın.`dotnet new`](../tools/dotnet-new.md) sln:
+Bir veya daha fazla .NET Core projesi için kapsayıcı görevi gören bir çözüm dosyası oluşturarak başlayın. Terminalde, *altın*adlı yeni [`dotnet new`](../tools/dotnet-new.md) bir klasör içinde *altın. sln* yeni bir çözüm oluşturmak için komutunu çalıştırın:
 
 ```console
-dotnet new sln
+dotnet new sln -o golden
 ```
 
-*Altın* *klasöründen, Kitaplık klasöründe,* *Library. csproj* ve *Class1.cs*olmak üzere iki dosya üreten bir kitaplık projesi oluşturmak için aşağıdaki komutu yürütün:
+New *altın* klasörüne gidin ve Kitaplık klasöründe,*Library. csproj* ve *Class1.cs*olmak üzere iki dosya üreten *bir kitaplık projesi* oluşturmak için aşağıdaki komutu yürütün:
 
 ```console
 dotnet new classlib -o library

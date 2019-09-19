@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: daf9d9d5-84ac-4bd9-a864-27665ffd0f5c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: de7df6ae2d6463d05d1680c288dd202edc639b09
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8902f9a6f37ab45929e147af5f899ef49c4a42b0
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69949115"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051950"
 ---
 # <a name="install-the-net-framework-for-developers"></a>Geliştiriciler için .NET Framework yüklemesi
 
@@ -28,7 +28,7 @@ Bu makalede, .NET Framework .NET Framework 4,5 ' den bilgisayarınıza .NET Fram
 
 [!INCLUDE[net-framework-4-versions](../../../includes/net-framework-4x-versions.md)]
 
-.NET Framework sürümleri ve bir bilgisayara hangi sürümlerin yüklendiğini belirleme hakkında daha fazla bilgi için bkz. [sürümler ve bağımlılıklar](../migration-guide/versions-and-dependencies.md) ve [nasıl yapılır: Hangi .NET Framework sürümlerinin yükleneceğini](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)saptayın.
+.NET Framework sürümleri ve bir bilgisayara hangi sürümlerin yüklendiğini belirleme hakkında daha fazla bilgi için bkz. [sürümler ve bağımlılıklar](../migration-guide/versions-and-dependencies.md) ve [nasıl yapılır: Hangi .NET Framework sürümlerinin yükleneceğini](../migration-guide/how-to-determine-which-versions-are-installed.md)saptayın.
 
 > [!NOTE]
 > 3,5 .NET Framework hakkında daha fazla bilgi için bkz. [Windows 10, Windows 8.1 ve Windows 8 ' de 3,5 .NET Framework](dotnet-35-windows-10.md).
@@ -58,7 +58,7 @@ Desteklenen tüm platformlarda, varsa .NET Framework belirli bir sürümü için
 
 Tam liste için bkz. [sistem gereksinimleri](../get-started/system-requirements.md).
 
-Hem kullanıcılar hem de geliştiriciler için .NET Framework genel bir giriş için bkz. Başlarken [](../get-started/index.md). .NET Framework uygulamanıza dağıtma hakkında daha fazla bilgi için bkz. [Dağıtım Kılavuzu](../deployment/deployment-guide-for-developers.md). .NET Framework mimarisi ve temel özellikleri hakkında bilgi edinmek için bkz. [genel bakış](../get-started/overview.md).
+Hem kullanıcılar hem de geliştiriciler için .NET Framework genel bir giriş için [bkz. Başlarken](../get-started/index.md). .NET Framework uygulamanıza dağıtma hakkında daha fazla bilgi için bkz. [Dağıtım Kılavuzu](../deployment/deployment-guide-for-developers.md). .NET Framework mimarisi ve temel özellikleri hakkında bilgi edinmek için bkz. [genel bakış](../get-started/overview.md).
 
 ## <a name="installation-choices"></a>Yükleme seçenekleri
 
@@ -212,7 +212,7 @@ Aşağıdaki tabloda desteklenen diller listelenmiştir.
 | İtalyanca               | içerdiği      |
 | Japonca              | Sofya      |
 | Korece                | dili      |
-| Norveççe             | eşleşen      |
+| Norveççe             | Eşleşen      |
 | Lehçe                | pl      |
 | Portekizce (Brezilya)   | pt-BR   |
 | Portekizce (Portekiz) | pt-PT   |
@@ -227,7 +227,7 @@ Aşağıdaki tabloda desteklenen diller listelenmiştir.
 
 - .NET Framework yeni başladıysanız, önemli kavramlara ve bileşenlere giriş için [genel bakış](../get-started/overview.md) bölümüne bakın.
 
-- .NET Framework 4,5 ve sonraki tüm sürümlerindeki yeni özellikler ve geliştirmeler için bkz. yenilikler. [](../../../docs/framework/whats-new/index.md)
+- .NET Framework 4,5 ve sonraki tüm sürümlerindeki yeni özellikler ve geliştirmeler için [bkz. yenilikler](../whats-new/index.md).
 
 - .NET Framework uygulamanıza dağıtma hakkında ayrıntılı bilgi için bkz. [geliştiriciler Için dağıtım kılavuzu](../deployment/deployment-guide-for-developers.md).
 

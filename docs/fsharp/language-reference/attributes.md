@@ -2,12 +2,12 @@
 title: Öznitelikler
 description: Özniteliklerin bir F# programlama yapısına nasıl uygulanacağını nasıl etkinleştirebileceğinizi öğrenin.
 ms.date: 05/16/2016
-ms.openlocfilehash: c9691a13ff1e9e892e93a967136a99849da25f1f
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: 08d50f7f57b6c0a81221e8f635f77f67750d0ff9
+ms.sourcegitcommit: a2d0e1f66367367065bc8dc0dde488ab536da73f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69567505"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71082932"
 ---
 # <a name="attributes"></a>Öznitelikler
 
@@ -27,8 +27,8 @@ ms.locfileid: "69567505"
 
 *Bağımsız değişkenler* öznitelik türü için oluşturucunun bağımsız değişkenidir. Bir özniteliğin varsayılan Oluşturucusu varsa, bağımsız değişken listesi ve parantezleri atlanabilir. Öznitelikler hem Konumsal bağımsız değişkenleri hem de adlandırılmış bağımsız değişkenleri destekler. *Konumsal bağımsız değişkenler* göründükleri sırada kullanılan bağımsız değişkenlerdir. Adlandırılmış bağımsız değişkenler, özniteliğinde ortak özellikler varsa kullanılabilir. Bunları, bağımsız değişken listesinde aşağıdaki sözdizimini kullanarak ayarlayabilirsiniz.
 
-```
-*property-name* = *property-value*
+```fsharp
+property-name = property-value
 ```
 
 Bu tür özellik başlatmaları herhangi bir sırada olabilir, ancak bunların herhangi bir Konumsal bağımsız değişkeni izlemesi gerekir. Aşağıda Konumsal bağımsız değişkenleri ve özellik başlatmaları kullanan bir özniteliğe örnek verilmiştir.
@@ -85,7 +85,7 @@ Genellikle öznitelik hedefini açıkça belirtmeniz gerekmese de, bir özniteli
     <td><pre lang="fsharp"><code>[&lt;property: Obsolete&gt;] this.MyProperty = x</code></pre></td> 
   </tr>
   <tr>
-    <td>larına</td>
+    <td>Larına</td>
     <td><pre lang="fsharp"><code>member this.MyMethod([&lt;param: Out&gt;] x : ref&lt;int&gt;) = x := 10</code></pre></td> 
   </tr>
   <tr>

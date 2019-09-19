@@ -2,12 +2,12 @@
 title: Mac için Visual Studio ile F# çalışmaya başlama
 description: Mac için Visual Studio ile kullanmayı F# öğrenin.
 ms.date: 07/03/2018
-ms.openlocfilehash: 679ed1ea28f5d0e0d910dbd407b38d1d2f0314f6
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: d3604178f93cf17d21f25b09084be7e7977378b5
+ms.sourcegitcommit: a2d0e1f66367367065bc8dc0dde488ab536da73f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629759"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71082970"
 ---
 # <a name="get-started-with-f-in-visual-studio-for-mac"></a>Mac için Visual Studio ile F# çalışmaya başlama
 
@@ -25,7 +25,7 @@ Mac için Visual Studio ' deki en temel projelerden biri konsol uygulamasıdır.
 
 4. Projenize bir ad verin ve uygulama için istediğiniz seçenekleri belirleyin.  Ekranın yanındaki Önizleme bölmesi, seçilen seçeneklere göre oluşturulacak dizin yapısını gösterecek şekilde görüntülenir.  
 
-5.           **Oluştur**'a tıklayın.  Artık Çözüm Gezgini bir F# proje görmeniz gerekir.
+5. **Oluştur**'a tıklayın.  Artık Çözüm Gezgini bir F# proje görmeniz gerekir.
 
 ## <a name="writing-your-code"></a>Kodunuzu yazma
 
@@ -35,7 +35,7 @@ Mac için Visual Studio ' deki en temel projelerden biri konsol uygulamasıdır.
 
 Önceki kod örneğinde, adlı `square` `x` bir girişi alan ve kendisiyle çarpar bir işlev tanımlandı.  F# [Tür çıkarımı](../language-reference/type-inference.md)kullandığından, türünün `x` belirtilmesi gerekmez.  F# Derleyici, çarpma 'nın geçerli olduğu türleri anlamıştır ve nasıl `x` `square` çağrılacaktır temel alınarak bir tür atar.  Üzerine `square`geldiğinizde, aşağıdakileri görmeniz gerekir:
 
-```
+```console
 val square: x:int -> int
 ```
 
@@ -51,7 +51,7 @@ Kodu çalıştırabilir ve en üst düzey menüsünde **Çalıştır** ' a tıkl
 
 Şimdi, Mac için Visual Studio oluşan konsol penceresinde yazdırılmış olan aşağıdakileri görmeniz gerekir:
 
-```
+```console
 12 squared is 144!
 ```
 
@@ -63,7 +63,7 @@ Mac için Visual Studio içinde görsel F# araç oluşturma özelliğinin en iyi
 
 Kullanmaya başlamak için kodunuzda tanımlanan `square` işlevi vurgulayın.  Sonra, üst düzey menüsünden **Düzenle** ' ye tıklayın.  Sonra **seçimi etkileşimli olarak F# gönder**' i seçin.  Bu, kodu F# etkileşimli pencerede yürütür.  Alternatif olarak, seçime sağ tıklayıp **seçimi etkileşimli öğesine F# gönder**' i seçebilirsiniz.  F# Etkileşimli pencerenin içinde aşağıdaki gibi göründüğünü görmeniz gerekir:
 
-```
+```console
 >
 
 val square : x:int -> int
@@ -73,7 +73,7 @@ val square : x:int -> int
 
 Bu, işlevin üzerine gelindiğinde daha önce gördüğünüz `square` işlev için aynı işlev imzasını gösterir.  `square` Artık F# etkileşimli işlemde tanımlandığından, farklı değerlerle çağırabilirsiniz:
 
-```
+```console
 > square 12;;
 val it : int = 144
 >square 13;;
@@ -82,7 +82,7 @@ val it : int = 169
 
 Bu, işlevi yürütür, sonucu yeni bir ada `it`bağlar ve türünü ve `it`değerini görüntüler.  Her satırı ile birlikte `;;`sonlandırabilmeniz gerektiğini unutmayın.  Bu, işlev F# çağrın ne zaman tamamlandığını etkileşimli olarak bilir.  Etkileşimli ' F# de yeni işlevler de tanımlayabilirsiniz:
 
-```
+```console
 > let isOdd x = x % 2 <> 0;;
 
 val isOdd : x:int -> bool
@@ -93,14 +93,14 @@ val it : bool = false
 
 Yukarıdaki yeni bir işlevi `isOdd`tanımlar, ve tek bir `int` olup olmadığını denetler.  Bu işlevi, farklı girişlerle ne döndürdüğünü görmek için çağırabilirsiniz.  İşlev çağrılarının içindeki işlevleri çağırabilirsiniz:
 
-```
+```console
 > isOdd (square 15);;
 val it : bool = true
 ```
 
 Ayrıca, değeri iki işlev için ardışık düzen için [Kanal-iletme işlecini](../language-reference/symbol-and-operator-reference/index.md) de kullanabilirsiniz:
 
-```
+```console
 > 15 |> square |> isOdd;;
 val it : bool = true
 ```

@@ -2,12 +2,12 @@
 title: Docker kapsayıcıları için ne zaman .NET Framework seçilmelidir?
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | Docker kapsayıcıları için .NET Framework seçme
 ms.date: 01/07/2019
-ms.openlocfilehash: 0b948017c3bbbcc8c43d5d2d9698d9a1a6f9deed
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 575af1bc1966a25a01acdcfe106870ad1b7c477d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70784089"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71039648"
 ---
 # <a name="when-to-choose-net-framework-for-docker-containers"></a>Docker kapsayıcıları için ne zaman .NET Framework seçilmelidir?
 
@@ -45,22 +45,22 @@ Resmi [.NET Core yol haritasında](https://github.com/aspnet/Home/wiki/Roadmap)l
 
 ## <a name="using-a-platform-or-api-that-does-not-support-net-core"></a>.NET Core desteklemeyen bir platform veya API kullanma
 
-Bazı Microsoft veya üçüncü taraf platformları .NET Core ' u desteklemez. Örneğin, bazı Azure Hizmetleri, .NET Core üzerinde tüketim için henüz kullanılamayan bir SDK sağlar. Bu geçicidir çünkü tüm Azure hizmetleri sonunda .NET Core 'u kullanacaktır. Örneğin, [.NET Core Için Azure DocumentDB SDK 'sı](https://www.nuget.org/packages/Microsoft.Azure.DocumentDB.Core/1.2.1) , 16 Kasım 2016 ' de önizleme olarak yayımlanmıştır, ancak artık kararlı bir sürüm olarak genel kullanıma sunulmuştur (GA).
+Bazı Microsoft veya üçüncü taraf platformları .NET Core ' u desteklemez. Örneğin, bazı Azure Hizmetleri, .NET Core üzerinde tüketim için henüz kullanılamayan bir SDK sağlar. Bu geçicidir çünkü tüm Azure hizmetleri sonunda .NET Core 'u kullanacaktır. Örneğin, [.NET Core Için Azure DocumentDB SDK 'sı](https://www.nuget.org/packages/Microsoft.Azure.DocumentDB.Core) , 16 Kasım 2016 ' de önizleme olarak yayımlanmıştır, ancak artık kararlı bir sürüm olarak genel kullanıma sunulmuştur (GA).
 
 Bu sırada, Azure 'daki herhangi bir platform veya hizmet, istemci API 'SI ile .NET Core 'u desteklemiyorsa, Azure hizmetindeki veya .NET Framework istemci SDK 'sindeki eşdeğer REST API de kullanabilirsiniz.
 
 ### <a name="additional-resources"></a>Ek kaynaklar
 
 - **.NET Core Kılavuzu**  
-    [https://docs.microsoft.com/dotnet/core/index](../../../core/index.md)
+  [https://docs.microsoft.com/dotnet/core/index](../../../core/index.md)
 
 - **.NET Framework 'den .NET Core 'a taşıma**  
-    [https://docs.microsoft.com/dotnet/core/porting/index](../../../core/porting/index.md)
+  [https://docs.microsoft.com/dotnet/core/porting/index](../../../core/porting/index.md)
 
 - **Docker kılavuzunda .NET Core**[https://docs.microsoft.com/dotnet/core/docker/introduction](../../../core/docker/introduction.md)
 
 - **.NET bileşenlerine genel bakış**  
-    [https://docs.microsoft.com/dotnet/standard/components](../../../standard/components.md)
+  [https://docs.microsoft.com/dotnet/standard/components](../../../standard/components.md)
 
 >[!div class="step-by-step"]
 >[Önceki](net-core-container-scenarios.md)İleri

@@ -2,12 +2,12 @@
 title: Hesaplama İfadeleri
 description: "' De F# denetim akışı yapıları ve bağlamaları kullanılarak sıralanmak ve birleştirilebilecek hesaplamalar yazmak için uygun bir sözdizimi oluşturmayı öğrenin."
 ms.date: 03/15/2019
-ms.openlocfilehash: bca328a09ff61fb76d30960221ee3350fcc25fc1
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 9222be5a585914761d3001d6649b196030eec05e
+ms.sourcegitcommit: a2d0e1f66367367065bc8dc0dde488ab536da73f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70106579"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71083051"
 ---
 # <a name="computation-expressions"></a>Hesaplama İfadeleri
 
@@ -32,7 +32,7 @@ Her hesaplama ifadesi bir *Oluşturucu* türü tarafından desteklenir. Oluştur
 
 Tüm hesaplama ifadeleri aşağıdaki biçimdedir:
 
-```
+```fsharp
 builder-expr { cexper }
 ```
 

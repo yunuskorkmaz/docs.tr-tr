@@ -1,18 +1,20 @@
 ---
 title: .NET 'te JSON serileştirme
-ms.date: 09/02/2019
+author: tdykstra
+ms.author: tdykstra
+ms.date: 09/16/2019
 helpviewer_keywords:
 - JSON serialization
 - serializing objects
 - serialization
 - objects, serializing
 ms.assetid: 4d1111c0-9447-4231-a997-96a2b74b3453
-ms.openlocfilehash: 0085179163d4d7abdea8958795aa89ee5d27ab09
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
-ms.translationtype: HT
+ms.openlocfilehash: 6cb45fded220b6123dbf4461f5f1cf1c3556ff69
+ms.sourcegitcommit: a2d0e1f66367367065bc8dc0dde488ab536da73f
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71054351"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71083089"
 ---
 # <a name="json-serialization-in-net"></a>.NET 'te JSON serileştirme
 

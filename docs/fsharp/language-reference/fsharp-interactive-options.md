@@ -1,73 +1,73 @@
 ---
 title: F# Etkileşimli Seçenekleri
-description: Tarafından desteklenen komut satırı seçenekleri hakkında F# etkileşimli, fsi.exe.
+description: Etkileşimli, fsi. exe tarafından F# desteklenen komut satırı seçenekleri hakkında bilgi edinin.
 ms.date: 05/16/2016
-ms.openlocfilehash: cca1ef6671878acb1b837d6590139d5de7b7167d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c9cd5c2e73a6e2f6ce0a9b2f2a631b6a2658423c
+ms.sourcegitcommit: a2d0e1f66367367065bc8dc0dde488ab536da73f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61996807"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71083113"
 ---
 # <a name="f-interactive-options"></a>F# Etkileşimli Seçenekleri
 
 > [!NOTE]
-> Bu makalede, şu anda Windows deneyimi yalnızca açıklanmıştır.  Yazılacak.
+> Bu makalede şu anda yalnızca Windows deneyimi açıklanmaktadır.  Yeniden yazılır.
 
-Bu konu tarafından desteklenen komut satırı seçeneklerini açıklar F# Interactive `fsi.exe`. F#Etkileşimli aynı komut satırı seçeneklerinin çoğunu kabul F# derleyici, ancak ayrıca bazı ek seçenekleri de kabul eder.
+Bu konu, F# `fsi.exe`etkileşimli tarafından desteklenen komut satırı seçeneklerini açıklar. F#Etkileşimli, F# derleyici ile aynı komut satırı seçeneklerinin birçoğunu kabul eder, ancak aynı zamanda bazı ek seçenekleri de kabul eder.
 
-## <a name="using-f-interactive-for-scripting"></a>Kullanarak F# etkileşimli betik oluşturma
-F#Etkileşimli `fsi.exe`, etkileşimli olarak başlatılabilir veya betik çalıştırmak için komut satırından başlatılabilir. Komut satırı sözdizimi
+## <a name="using-f-interactive-for-scripting"></a>Betik F# için etkileşimli kullanma
+F#Etkileşimli, `fsi.exe`, etkileşimli olarak başlatılabilir veya bir betiği çalıştırmak için komut satırından başlatılabilir. Komut satırı söz dizimi
 
-```
+```console
 > fsi.exe [options] [ script-file [arguments] ]
 ```
 
-Dosya uzantısı F# betik dosyaları `.fsx`.
+Betik dosyaları F# `.fsx`için dosya uzantısı.
 
-## <a name="table-of-f-interactive-options"></a>Tablonun F# etkileşimli seçenekleri
-Aşağıdaki tablo tarafından desteklenen seçenekleri özetler F# etkileşimli. Bu seçenekler, komut satırında veya Visual Studio IDE ile ayarlayabilirsiniz. Visual Studio IDE'de bu seçenekleri ayarlamak için açın **Araçları** menüsünde **seçenekleri...** , ardından  **F# Araçları** düğümünü seçip alt  **F# etkileşimli**.
+## <a name="table-of-f-interactive-options"></a>F# Etkileşimli seçenekler tablosu
+Aşağıdaki tabloda etkileşimli tarafından F# desteklenen seçenekler özetlenmektedir. Bu seçenekleri komut satırında veya Visual Studio IDE aracılığıyla ayarlayabilirsiniz. Bu seçenekleri Visual Studio IDE 'de ayarlamak için, **Araçlar** menüsünü açın, **Seçenekler...** ' i seçin, sonra  **F# araçlar** düğümünü genişletin ve  **F# etkileşimli**' i seçin.
 
-Listeleri göründüğü F# etkileşimli seçenek bağımsız değişkeni, liste öğeleri noktalı virgülle ayrılmış (`;`).
+F# Etkileşimli seçenek bağımsız değişkenlerinde listelerin göründüğü, liste öğeleri noktalı virgülle (`;`) ayrılır.
 
 |Seçenek|Açıklama|
 |------|-----------|
-|**--**|Söyleyin için kullanılan F# kalan bağımsız değişkenleri komut satırı bağımsız değişkenleri olarak değerlendirilecek etkileşimli F# program veya komut dosyası kodu listesini kullanarak erişebileceğiniz **fsi.CommandLineArgs**.|
-|**--checked**[**+**&#124;**-**]|Aynı **fsc.exe** derleyici seçeneği. Daha fazla bilgi için [derleyici seçenekleri](compiler-options.md).|
-|**--codepage:&lt;int&gt;**|Aynı **fsc.exe** derleyici seçeneği. Daha fazla bilgi için [derleyici seçenekleri](compiler-options.md).|
-|**--consolecolors**[**+**&#124;**-**]|Çıkış, uyarı ve hata iletilerini renkte çıkarma.|
-|**--crossoptimize**[**+**&#124;**-**]|Etkinleştirin veya zakazuje optimalizaci mezi moduly.|
-|**--debug**[**+**&#124;**-**]<br /><br />**--hata ayıklama:**[**tam**&#124;**pdbonly**&#124;**taşınabilir**&#124;**katıştırılmış**]<br /><br />**-g**[**+**&#124;**-**]<br /><br />**-g:**[**tam**&#124;**pdbonly**&#124;**taşınabilir**&#124;**katıştırılmış**]|Aynı **fsc.exe** derleyici seçeneği. Daha fazla bilgi için [derleyici seçenekleri](compiler-options.md).|
-|**--tanımlayın:&lt;dize&gt;**|Aynı **fsc.exe** derleyici seçeneği. Daha fazla bilgi için [derleyici seçenekleri](compiler-options.md).|
-|**--deterministic**[**+**&#124;**-**]|(Modülü sürüm GUID'si ve zaman damgası dahil) belirlenimci bir derleme oluşturur.|
-|**--Yönet**|Bildirir F# dosyaları yükledikten veya verilen komut satırı üzerinde betiği çalıştırdıktan sonra çıkmak için etkileşimli.|
-|**--fullpaths**|Aynı **fsc.exe** derleyici seçeneği. Daha fazla bilgi için [derleyici seçenekleri](compiler-options.md).|
-|**--gui**[**+**&#124;**-**]|Etkinleştirir veya Windows Forms olay döngüsünü devre dışı bırakır. Varsayılan durumda etkindir.|
-|**--Yardım**<br /><br />**-?**|Komut satırı sözdizimi ve her seçeneğin kısa bir açıklamasını görüntülemek için kullanılır.|
-|**--lib:&lt;klasör listesi&gt;**<br /><br />**-I:&lt;klasör listesi&gt;**|Aynı **fsc.exe** derleyici seçeneği. Daha fazla bilgi için [derleyici seçenekleri](compiler-options.md).|
-|**--Yük:&lt;dosya adı&gt;**|Başlangıçta verilen kaynak kodu derler ve derlenmiş yükler F# oturuma oluşturur. Hedef kaynak gibi komut dosyası yönergeleri içeriyorsa **#use** veya **#load**, kullanmanız gereken **--kullanın** veya **#use** yerine **--yük** veya **#load**.|
-|**--mlcompatibility**|Aynı **fsc.exe** derleyici seçeneği. Daha fazla bilgi için [derleyici seçenekleri](compiler-options.md).|
-|**--noframework**|Aynı **fsc.exe** derleyici seçeneği. Daha fazla bilgi için [derleyici seçenekleri](compiler-options.md)|
-|**--nologo**|Aynı **fsc.exe** derleyici seçeneği. Daha fazla bilgi için [derleyici seçenekleri](compiler-options.md).|
-|**--nowarn:&lt;uyarı listesi&gt;**|Aynı **fsc.exe** derleyici seçeneği. Daha fazla bilgi için [derleyici seçenekleri](compiler-options.md).|
-|**--optimize**[**+**&#124;**-**]|Aynı **fsc.exe** derleyici seçeneği. Daha fazla bilgi için [derleyici seçenekleri](compiler-options.md).|
-|**--preferreduilang:&lt;dil&gt;**| Tercih edilen çıkış dilini kültür adı (örneğin, es-ES, ja-JP) belirtir. |
-|**--quiet**|Bastır F# etkileşimli derleyicisinin çıktısının **stdout** akış.|
-|**--Teklif hata ayıklama**|Ek hata ayıklama bilgilerinin türetilmiştir ifadeler yayınlaması gerektiğini belirtir F# değişmez ve yansıtılan tanımlar. Hata ayıklama bilgileri için özel özniteliklerine eklenir bir F# ifadesi Ağaç düğümünün. Bkz: [kod tırnak işaretleri](code-quotations.md) ve [Expr.CustomAttributes](https://msdn.microsoft.com/library/eb89943f-5f5b-474e-b125-030ca412edb3).|
-|**--readline**[**+**&#124;**-**]|Etkinleştirmek veya etkileşimli modda sekme tamamlama devre dışı bırakın.|
-|**--başvuru:&lt;dosya adı&gt;**<br /><br />**-r:&lt;dosya adı&gt;**|Aynı **fsc.exe** derleyici seçeneği. Daha fazla bilgi için [derleyici seçenekleri](compiler-options.md).|
-|**--shadowcopyreferences**[**+**&#124;**-**]|Tarafından kilitlenmiş gelen başvuruları engeller F# etkileşimli işlem.|
-|**--simpleresolution**|Derleme başvurularının MSBuild çözünürlük yerine dizin tabanlı kuralları kullanarak çözer.|
-|**--tailcalls**[**+**&#124;**-**]|Etkinleştirin veya tail özyinelemeli işlevler için kullanılabilmeleri yığın çerçevesinin tail IL yönergesinin kullanımını devre dışı. Bu seçenek varsayılan olarak etkindir.|
-|**--targetprofile:&lt;dize&gt;**|Bu derlemenin hedef çerçeve profilini belirtir. Mscorlib veya netcore netstandard değerler geçerlidir.  Mscorlib varsayılandır.|
-|**--kullanın:&lt;dosya adı&gt;**|Yorumlayıcıya verilen dosyanın başlangıçta ilk giriş olarak kullanılmasını bildirir.|
-|**--utf8output**|Fsc.exe derleme seçeneği ile aynıdır. Daha fazla bilgi için [derleyici seçenekleri](compiler-options.md).|
-|**--uyar:&lt;uyarı düzeyi&gt;**|Aynı **fsc.exe** derleyici seçeneği. Daha fazla bilgi için [derleyici seçenekleri](compiler-options.md).|
-|**--warnaserror**[**+**&#124;**-**]|Aynı **fsc.exe** derleyici seçeneği. Daha fazla bilgi için [derleyici seçenekleri](compiler-options.md).|
-|**--warnaserror**[**+**&#124;**-**]:**&lt;int-list&gt;**|Aynı **fsc.exe** derleyici seçeneği. Daha fazla bilgi için [derleyici seçenekleri](compiler-options.md).|
+|**--**|F# Etkileşimli olarak kalan bağımsız değişkenleri F# program veya betiğe komut satırı bağımsız değişkenleri olarak değerlendirmek için kullanılır. Bu, **fsi. Commandbir**listesini kullanarak koda erişebilirsiniz.|
+|**--checked**[ **+** &#124; **-** ]|**FSC. exe** derleyici seçeneğiyle aynı. Daha fazla bilgi için bkz. [derleyici seçenekleri](compiler-options.md).|
+|**--CodePage:&lt;int&gt;**|**FSC. exe** derleyici seçeneğiyle aynı. Daha fazla bilgi için bkz. [derleyici seçenekleri](compiler-options.md).|
+|**--consolecolors** [ **+** &#124; **-** ]|Uyarı ve hata iletilerini renkli olarak verir.|
+|**--çapraz iyileştirme** [ **+** &#124; **-** ]|Modüller arası iyileştirmeleri etkinleştirin veya devre dışı bırakın.|
+|**--debug**[ **+** &#124; **-** ]<br /><br />**--Hata Ayıkla:** [**tam**&#124;**pdbportable**&#124;&#124;**Embedded**]<br /><br />**-g**[ **+** &#124; **-** ]<br /><br />**-g:** [**tam**&#124;**pdbportable**&#124;&#124;**Embedded**]|**FSC. exe** derleyici seçeneğiyle aynı. Daha fazla bilgi için bkz. [derleyici seçenekleri](compiler-options.md).|
+|**--tanımla:&lt;dize&gt;**|**FSC. exe** derleyici seçeneğiyle aynı. Daha fazla bilgi için bkz. [derleyici seçenekleri](compiler-options.md).|
+|**--deterministic**[ **+** &#124; **-** ]|Belirleyici derleme üretir (Modül sürümü GUID 'i ve zaman damgası dahil).|
+|**--Exec**|Dosyaları F# yükledikten veya komut satırında verilen betik dosyasını çalıştırdıktan sonra etkileşimli olarak çıkış ister.|
+|**--fullpaths**|**FSC. exe** derleyici seçeneğiyle aynı. Daha fazla bilgi için bkz. [derleyici seçenekleri](compiler-options.md).|
+|**--GUI** [ **+** &#124; **-** ]|Windows Forms olay döngüsünü etkinleştirilir veya devre dışı bırakır. Varsayılan değer etkindir.|
+|**--yardım**<br /><br />**-?**|Komut satırı söz dizimini ve her seçeneğin kısa bir açıklamasını göstermek için kullanılır.|
+|**--lib:&lt;Klasör-Listele&gt;**<br /><br />**-I:&lt;klasör-liste&gt;**|**FSC. exe** derleyici seçeneğiyle aynı. Daha fazla bilgi için bkz. [derleyici seçenekleri](compiler-options.md).|
+|**--Yükle:&lt;dosya adı&gt;**|Başlangıçta verilen kaynak kodu derler ve derlenen F# yapıları oturuma yükler. Hedef kaynak **#use** veya **#load**gibi komut dosyası yönergeleri içeriyorsa,-- **Load** veya **#load**yerine **--Use** veya **#use** kullanmanız gerekir.|
+|**--mlcompatibility**|**FSC. exe** derleyici seçeneğiyle aynı. Daha fazla bilgi için bkz. [derleyici seçenekleri](compiler-options.md).|
+|**--noframework**|**FSC. exe** derleyici seçeneğiyle aynı. Daha fazla bilgi için bkz. [derleyici seçenekleri](compiler-options.md)|
+|**--nologo**|**FSC. exe** derleyici seçeneğiyle aynı. Daha fazla bilgi için bkz. [derleyici seçenekleri](compiler-options.md).|
+|**--nowarn:&lt;uyarı-liste&gt;**|**FSC. exe** derleyici seçeneğiyle aynı. Daha fazla bilgi için bkz. [derleyici seçenekleri](compiler-options.md).|
+|**--optimize** et [ **+** &#124; **-** ]|**FSC. exe** derleyici seçeneğiyle aynı. Daha fazla bilgi için bkz. [derleyici seçenekleri](compiler-options.md).|
+|**--preferreduilang:&lt;lang&gt;**| Tercih edilen çıkış dili kültür adını belirtir (örneğin, ES-ES, ja-JP). |
+|**--quiet**|Etkileşimli F# çıktıyı **stdout** akışına karşı gizleyin.|
+|**--alıntılar-hata ayıkla**|Ek hata ayıklama bilgilerinin, alıntı sabit değerleri ve yansıtılan tanımlardan F# türetilmiş ifadeler için yayınlanmasının gerektiğini belirtir. Hata ayıklama bilgileri, bir F# ifade ağacı düğümünün özel özniteliklerine eklenir. Bkz. [kod teklifleri](code-quotations.md) ve [Expr. CustomAttributes](https://msdn.microsoft.com/library/eb89943f-5f5b-474e-b125-030ca412edb3).|
+|**--ReadLine** [ **+** &#124; **-** ]|Etkileşimli modda sekme tamamlamayı etkinleştirin veya devre dışı bırakın.|
+|**--Başvuru:&lt;dosya adı&gt;**<br /><br />**-r:&lt;dosya adı&gt;**|**FSC. exe** derleyici seçeneğiyle aynı. Daha fazla bilgi için bkz. [derleyici seçenekleri](compiler-options.md).|
+|**--shadowcopyreferences** [ **+** &#124; **-** ]|, Başvuruların F# etkileşimli işlem tarafından kilitlenmesini engeller.|
+|**--simpleresolution**|MSBuild çözümlemesi yerine dizin tabanlı kurallar kullanarak derleme başvurularını çözümler.|
+|**--edilecek çağrılar** [ **+** &#124; **-** ]|Tail Özyinelemeli işlevler için yığın çerçevesinin yeniden kullanılmasını sağlayan tail Il yönergesinin kullanımını etkinleştirin veya devre dışı bırakın. Bu seçenek varsayılan olarak etkindir.|
+|**--targetprofile:&lt;dize&gt;**|Bu derlemenin hedef çerçeve profilini belirtir. Geçerli değerler mscorlib, netcore veya Netstandard ' dır.  Varsayılan olarak mscorlib 'dir.|
+|**--şunu kullanın&lt;: dosya adı&gt;**|Yorumlayıcıya ilk girdi olarak başlangıçta verilen dosyayı kullanmasını söyler.|
+|**--utf8output**|FSC. exe derleyici seçeneğiyle aynı. Daha fazla bilgi için bkz. [derleyici seçenekleri](compiler-options.md).|
+|**--warn:&lt;uyarı düzeyi&gt;**|**FSC. exe** derleyici seçeneğiyle aynı. Daha fazla bilgi için bkz. [derleyici seçenekleri](compiler-options.md).|
+|**--warnaserror**[ **+** &#124; **-** ]|**FSC. exe** derleyici seçeneğiyle aynı. Daha fazla bilgi için bkz. [derleyici seçenekleri](compiler-options.md).|
+|**--warnaserror**[ **+** &#124; **-** ]: **&lt;int-list&gt;**|**FSC. exe** derleyici seçeneğiyle aynı. Daha fazla bilgi için bkz. [derleyici seçenekleri](compiler-options.md).|
 
 ## <a name="related-topics"></a>İlgili Konular
 
 |Başlık|Açıklama|
 |-----|-----------|
-|[Derleyici Seçenekleri](compiler-options.md)|Kullanılabilir komut satırı seçeneklerini açıklar F# derleyicisi **fsc.exe**.|
+|[Derleyici Seçenekleri](compiler-options.md)|, F# **FSC. exe**derleyicisi için kullanılabilen komut satırı seçeneklerini açıklar.|

@@ -9,26 +9,26 @@ helpviewer_keywords:
 - cache [.NET Framework], time-based policies
 - default time-based cache policy
 ms.assetid: 6bfce066-a2e7-4add-a05e-85c12ec9f07f
-ms.openlocfilehash: 99f9905109a4deabe3cfb2e3616913e84f565cb7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0aaa26f67ef1ef191060e682690fa14de328b812
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61642444"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048101"
 ---
 # <a name="how-to-set-the-default-time-based-cache-policy-for-an-application"></a>Nasıl yapılır: Uygulama için Varsayılan Saat Temelli Önbellek İlkesi Ayarlama
-Önbelleğe alınmış kaynak gönderilen üst bilgiler ve 13 ve RFC 2616, kullanılabilir 14 bölümlerde tanımlanan önbellek davranışı tarafından tanımlanan önbellek davranışı bir uygulamanın varsayılan saat temelli önbellek ilkesini sağlayan [Internet Engineering Task Force () IETF)](https://www.ietf.org/) Web sitesi. Bu, çoğu uygulama için uygun önbellek davranıştır.  
+Varsayılan zaman tabanlı önbellek ilkesi, bir uygulamanın önbelleğe alınmış kaynakla gönderilen üstbilgiler ve 2616 13. bölümlerde tanımlanan önbellek davranışı ve [Internet Mühendisliği görev zorlaması 'nda (IETF)](https://www.ietf.org/) kullanılabilir. Websitesi. Bu, çoğu uygulama için uygun önbellek davranışıdır.  
   
-### <a name="to-set-the-default-automatic-policy-for-an-application"></a>Bir uygulama için varsayılan otomatik İlkesi ayarlama  
+### <a name="to-set-the-default-automatic-policy-for-an-application"></a>Bir uygulamanın varsayılan otomatik ilkesini ayarlamak için  
   
-1. Varsayılan zaman tabanlı ilke nesnesi oluşturun.  
+1. Varsayılan bir zamana dayalı ilke nesnesi oluşturun.  
   
-2. Uygulama etki alanı için varsayılan olarak ilkesi ayarlayın.  
+2. İlke nesnesini, uygulama etki alanı için varsayılan olarak ayarlayın.  
   
 ## <a name="example"></a>Örnek  
- Bu bölümdeki iki örneği aynı ilkeler üretir.  
+ Bu bölümdeki iki örnek özdeş ilkeler üretir.  
   
- Aşağıdaki örnek, zamana bağlı bir varsayılan ilke oluşturur ve uygulama etki alanı için varsayılan olarak ayarlar.  
+ Aşağıdaki örnek, varsayılan bir zamana dayalı ilke oluşturur ve bunu uygulama etki alanı için varsayılan olarak ayarlar.  
   
 ```csharp  
 public static void SetDefaultTimeBasedPolicy ()  
@@ -45,7 +45,7 @@ Public Shared Sub SetDefaultTimeBasedPolicy ()
 End Sub  
 ```  
   
- Varsayılan saat temelli önbellek İlkesi kullanarak da oluşturabilirsiniz <xref:System.Net.Cache.RequestCachePolicy> aşağıdaki örnekte gösterildiği gibi sınıf:  
+ Aşağıdaki örnekte gösterildiği gibi <xref:System.Net.Cache.RequestCachePolicy> sınıfını kullanarak varsayılan zaman tabanlı önbellek ilkesi de oluşturabilirsiniz:  
   
 ```csharp  
 public static void SetDefaultTimeBasedPolicy2()  
@@ -64,8 +64,8 @@ End Sub
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Ağ Uygulamaları için Önbellek Yönetimi](../../../docs/framework/network-programming/cache-management-for-network-applications.md)
-- [Önbellek İlkesi](../../../docs/framework/network-programming/cache-policy.md)
-- [Konum Temelli Önbellek İlkeleri](../../../docs/framework/network-programming/location-based-cache-policies.md)
-- [Saat Temelli Önbellek İlkeleri](../../../docs/framework/network-programming/time-based-cache-policies.md)
-- [\<requestCaching > öğesi (ağ ayarları)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)
+- [Ağ Uygulamaları için Önbellek Yönetimi](cache-management-for-network-applications.md)
+- [Önbellek İlkesi](cache-policy.md)
+- [Konum Temelli Önbellek İlkeleri](location-based-cache-policies.md)
+- [Saat Temelli Önbellek İlkeleri](time-based-cache-policies.md)
+- [\<requestCaching > öğesi (ağ ayarları)](../configure-apps/file-schema/network/requestcaching-element-network-settings.md)

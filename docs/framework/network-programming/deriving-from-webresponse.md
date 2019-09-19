@@ -4,44 +4,44 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Deriving from WebResponse
 ms.assetid: f11d4866-a199-4087-9306-a5a4c18b13db
-ms.openlocfilehash: 6bdb21b8aaf8deb39e3abd68a69a9a5a10247e6f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bd06928b08eb085ef13371687fb1e5b92c6c1d86
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61642951"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048577"
 ---
 # <a name="deriving-from-webresponse"></a>WebResponse’tan Türetme
-<xref:System.Net.WebResponse> .NET Framework takılabilir Protokolü modeli uygun bir protokole özgü yanıt oluşturmak için temel yöntemleri ve özellikleri sağlayan soyut bir temel sınıfı. Kullanan uygulamalar <xref:System.Net.WebRequest> istek verileri bir sınıfa kaynaklardan gelen yanıtları almak bir **WebResponse**. Protokole özgü **WebResponse** alt öğeleri, soyut üyelerini uygulanmalı **WebResponse** sınıfı.  
+<xref:System.Net.WebResponse> Sınıfı, .NET Framework takılabilir protokol modeline uyan, protokole özgü bir yanıt oluşturmak için temel yöntemleri ve özellikleri sağlayan bir soyut temel sınıftır. Kaynaklardan veri istemek için <xref:System.Net.WebRequest> sınıfını kullanan uygulamalar, yanıtları bir **WebResponse**içinde alır. Protokole özgü **WebResponse** alt öğeleri, **WebResponse** sınıfının soyut üyelerini uygulamalıdır.  
   
- İlişkili **WebRequest** sınıfı oluşturmalısınız **WebResponse** alt öğeleri. Örneğin, <xref:System.Net.HttpWebResponse> örnekleri yalnızca arama sonucu oluşturulan <xref:System.Net.HttpWebRequest.GetResponse%2A?displayProperty=nameWithType> veya <xref:System.Net.HttpWebRequest.EndGetResponse%2A?displayProperty=nameWithType>. Her **WebResponse** yüklenmek üzere tasarlanmamıştır ve bir kaynağa bir isteğinin sonucunu içerir.  
+ İlişkili **WebRequest** sınıfı **WebResponse** alt öğeleri oluşturmalıdır. Örneğin, <xref:System.Net.HttpWebResponse> örnekleri yalnızca veya <xref:System.Net.HttpWebRequest.EndGetResponse%2A?displayProperty=nameWithType>çağırmanın <xref:System.Net.HttpWebRequest.GetResponse%2A?displayProperty=nameWithType> sonucu olarak oluşturulur. Her **WebResponse** bir kaynağa yönelik isteğin sonucunu içerir ve yeniden kullanılması amaçlanmamıştır.  
   
-## <a name="contentlength-property"></a>ContentLength özelliğinin  
- <xref:System.Net.WebResponse.ContentLength%2A> Özelliği tarafından döndürülen akış kullanılabilir veri bayt sayısını gösterir <xref:System.Net.WebResponse.GetResponseStream%2A> yöntemi. **ContentLength** özelliği, üst bilgi veya meta veri bilgileri, sunucu tarafından döndürülen bayt sayısını gösteren değil; yalnızca İstenen kaynak verinin bayt sayısını gösterir.  
+## <a name="contentlength-property"></a>ContentLength özelliği  
+ Özelliği, <xref:System.Net.WebResponse.GetResponseStream%2A> yöntemi tarafından döndürülen akıştan kullanılabilen veri baytlarının sayısını belirtir. <xref:System.Net.WebResponse.ContentLength%2A> **ContentLength** özelliği, sunucu tarafından döndürülen üst bilgi veya meta veri bilgisinin bayt sayısını göstermez; yalnızca istenen kaynaktaki verilerin bayt sayısını gösterir.  
   
 ## <a name="contenttype-property"></a>ContentType özelliği  
- <xref:System.Net.WebResponse.ContentType%2A> Özelliği, protokol, sunucu tarafından gönderilen içerik türünü tanımlamak için istemciye gönderilecek gerektirdiği herhangi bir özel bilgiyi sağlar. Döndürülen verileri MIME içerik türü genellikle budur.  
+ <xref:System.Net.WebResponse.ContentType%2A> Özelliği, protokolizin sunucu tarafından gönderilen içeriğin türünü belirlemek üzere istemciye göndermenizi gerektiren özel bilgileri sağlar. Genellikle bu, döndürülen verilerin MIME içerik türüdür.  
   
-## <a name="headers-property"></a>Üst özellik  
- <xref:System.Net.WebResponse.Headers%2A> Özelliği, rastgele bir ad/değer çiftleri Yanıtlı ilişkili meta verileri koleksiyonunu içerir. Ad/değer çifti eklenebilir olarak ifade edilebilir protokolü için gerekli tüm meta verilere **üstbilgileri** özelliği.  
+## <a name="headers-property"></a>Headers özelliği  
+ <xref:System.Net.WebResponse.Headers%2A> Özelliği, yanıtıyla ilişkili meta verilerin ad/değer çiftlerinin rastgele bir koleksiyonunu içerir. Protokol için gereken tüm meta **veriler, bir** ad/değer çifti olarak ifade edilebilir.  
   
- Kullanmak için gerekli **üstbilgileri** özelliğinin üstbilgi meta verileri kullanmak için. Protokole özgü meta veriler özellik olarak kullanıma sunulabilecek; Örneğin, <xref:System.Net.HttpWebResponse.LastModified%2A?displayProperty=nameWithType> özelliği kullanıma sunan **son değiştirilme** HTTP üstbilgisi. Üst bilgi meta verilerini bir özellik olarak kullanıma sunduğunuzda, kullanarak ayarlamak aynı özellik vermemelidir **üstbilgileri** özelliği.  
+ Üst bilgi meta verilerini kullanmak için **üstbilgiler** özelliğini kullanmanız gerekli değildir. Protokole özgü meta veriler, özellikler olarak gösterilebilir; Örneğin, <xref:System.Net.HttpWebResponse.LastModified%2A?displayProperty=nameWithType> özelliği, **son değiştirilen** http üstbilgisini kullanıma sunar. Üst bilgi meta verilerini özellik olarak kullanıma sundığınızda, **üst bilgiler** özelliği kullanılarak aynı özelliğin belirtilmesine izin vermeniz gerekir.  
   
 ## <a name="responseuri-property"></a>ResponseUri özelliği  
- <xref:System.Net.WebResponse.ResponseUri%2A> Özelliği gerçekten yanıtı verdi kaynağın URI'sini içerir. Yeniden yönlendirme, desteklemeyen protokoller için **ResponseUri** aynı olacaktır <xref:System.Net.WebRequest.RequestUri%2A> özelliği **WebRequest** yanıtı oluşturulur. İstek yönlendirme protokolü destekliyorsa, **ResponseUri** yanıt URI'sini içerir.  
+ <xref:System.Net.WebResponse.ResponseUri%2A> Özelliği, yanıtı gerçekten sağlayan kaynağın URI 'sini içerir. Yeniden yönlendirmeyi desteklemeyen protokoller için **ResponseURI** , yanıtı oluşturan <xref:System.Net.WebRequest.RequestUri%2A> **WebRequest** özelliği ile aynı olacaktır. Protokol isteği yeniden yönlendirmeyi destekliyorsa, **ResponseUri** yanıtın URI 'sini içerir.  
   
 ## <a name="close-method"></a>Close Yöntemi  
- <xref:System.Net.WebResponse.Close%2A> Yöntemi istek ve yanıt tarafından yapılan tüm bağlantılar kapatır ve yanıt tarafından kullanılan kaynakları temizler. **Kapat** yöntemi yanıt tarafından kullanılan tüm stream örnekleri kapanır, ancak yanıt akışı yapılan bir çağrıyla daha önce kapalıysa bir özel durum oluşturmaz <xref:System.IO.Stream.Close%2A?displayProperty=nameWithType> yöntemi.  
+ <xref:System.Net.WebResponse.Close%2A> Yöntemi, istek ve yanıt tarafından yapılan tüm bağlantıları kapatır ve yanıt tarafından kullanılan kaynakları temizler. **Close** yöntemi, yanıt tarafından kullanılan tüm akış örneklerini kapatır, ancak yanıt akışı daha önce <xref:System.IO.Stream.Close%2A?displayProperty=nameWithType> yönteme bir çağrı tarafından kapatılmışsa bir özel durum oluşturmaz.  
   
 ## <a name="getresponsestream-method"></a>GetResponseStream yöntemi  
- <xref:System.Net.WebResponse.GetResponseStream%2A> Yöntem, istenen kaynak yanıtı içeren bir akış döndürür. Yanıt akışına yalnızca kaynak tarafından döndürülen veriler içerir. herhangi bir üst bilgi veya meta veriler yanıta dahil verilecek yanıtı çıkartılır ve uygulamaya protokole özgü özellikleri aracılığıyla sunulan veya **üstbilgileri** özelliği.  
+ <xref:System.Net.WebResponse.GetResponseStream%2A> Yöntemi, istenen kaynaktaki yanıtı içeren bir akış döndürür. Yanıt akışı yalnızca kaynak tarafından döndürülen verileri içerir; yanıtta yer alan tüm üst bilgiler veya meta veriler yanıttan çıkarılır ve protokole özgü özellikler ya da **üstbilgiler** özelliği aracılığıyla uygulamaya sunulur.  
   
- Tarafından döndürülen akış örneğini **GetResponseStream** yöntemi uygulama tarafından sahip olunan ve kapatmadan kapatılabilir **WebResponse**. Kural olarak, çağırma **WebResponse.Close** yöntemi tarafından döndürülen akış da kapatır **GetResponse yanıtına**.  
+ **GetResponseStream** yöntemi tarafından döndürülen akış örneği uygulamaya aittir ve **WebResponse**kapatılmadan kapatılabilir. Kurala göre, **WebResponse. Close** yöntemini çağırmak **GetResponse**tarafından döndürülen akışı da kapatır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Net.WebResponse>
 - <xref:System.Net.HttpWebResponse>
 - <xref:System.Net.FileWebResponse>
-- [Takılabilir Protokoller Programlama](../../../docs/framework/network-programming/programming-pluggable-protocols.md)
-- [WebRequest’ten Türetme](../../../docs/framework/network-programming/deriving-from-webrequest.md)
+- [Takılabilir Protokoller Programlama](programming-pluggable-protocols.md)
+- [WebRequest’ten Türetme](deriving-from-webrequest.md)

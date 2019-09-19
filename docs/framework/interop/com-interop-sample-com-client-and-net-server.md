@@ -10,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: a219cb2c-9fa2-4c90-9b26-939e0788f178
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4a928dde8615589cbc8e502a9b5dd033beded4c9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 48bd536cedd6a9689cdb18cca457ff06473396b5
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61643497"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051862"
 ---
 # <a name="com-interop-sample-com-client-and-net-server"></a>COM Birlikte Çalışma Örneği: COM İstemcisi ve .NET Sunucusu
-Bu örnek, birlikte çalışabilirlik gösterir bir [COM istemcisi](#cpconcominteropsamplecomclientnetserveranchor1) ve [.NET sunucu](#cpconcominteropsamplecomclientnetserveranchor2) ipotek hesaplamalar gerçekleştiren. Bu örnekte, istemci oluşturur ve yönetilen örneği çağrıları `Loan` sınıfı, dört bağımsız değişken (Bu dört sıfıra eşit bir) geçirir örneği ve hesaplamalar görüntüler. Bu örnekteki kod örnekleri, bu bölümde görünür.  
+Bu örnek, bir [com istemcisinin](#cpconcominteropsamplecomclientnetserveranchor1) ve ipotek hesaplamaları gerçekleştiren bir [.net sunucusunun](#cpconcominteropsamplecomclientnetserveranchor2) birlikte çalışmasını gösterir. Bu örnekte, istemci yönetilen `Loan` sınıfın bir örneğini oluşturur ve çağırır, örnek olarak dört bağımsız değişken geçirir (Bu dördü sıfıra eşit bir tane) ve hesaplamalar görüntülenir. Bu örnekteki kod örnekleri bu bölümün tamamında görüntülenir.  
   
 <a name="cpconcominteropsamplecomclientnetserveranchor1"></a>   
-## <a name="com-client"></a>COM istemcisi  
+## <a name="com-client"></a>COM Istemcisi  
   
 ```cpp  
 // ConLoan.cpp : Defines the entry point for the console application.  
@@ -88,7 +88,7 @@ int main(int argc, char* argv[])
 ```  
   
 <a name="cpconcominteropsamplecomclientnetserveranchor2"></a>   
-## <a name="net-server"></a>.NET sunucu  
+## <a name="net-server"></a>.NET Server  
   
 ```vb  
 Imports System  
@@ -391,4 +391,4 @@ namespace LoanLib {
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [.NET Framework Bileşenlerini COM'da Gösterme](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)
+- [.NET Framework Bileşenlerini COM'da Gösterme](exposing-dotnet-components-to-com.md)

@@ -1,18 +1,18 @@
 ---
-title: <Parameter> Öğesi (.NET yerel)
+title: <Parameter>Öğesi (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: 22aaa1f3-596f-4733-93db-f4bcabcb5240
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2d2dbff544f991712ad26f2cb12d638801b5a3fb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5c9a462e75df535504d0e98c22c34c11ff7af7d8
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61867062"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049342"
 ---
-# <a name="parameter-element-net-native"></a>\<Parametresi > öğesi (.NET yerel)
-Bir yönteme geçirilen bağımsız değişken türünü yansıma ilkesini uygular.  
+# <a name="parameter-element-net-native"></a>\<Parameter > öğesi (.NET Native)
+Bir yönteme geçirilen bağımsız değişkenin türüne yansıma ilkesi uygular.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,29 +37,29 @@ Bir yönteme geçirilen bağımsız değişken türünü yansıma ilkesini uygul
   
 |Öznitelik|Öznitelik türü|Açıklama|  
 |---------------|--------------------|-----------------|  
-|`Name`|Genel|Gerekli öznitelik. Parametre adı. Örneğin, yöntem imzası için `String.CompareTo(Object value)`, değerini `Name` özniteliktir "value".|  
-|`Activate`|Yansıma|İsteğe bağlı öznitelik. Oluşturucular örneklerinin etkinleştirmesi için çalışma zamanı erişimi denetler.|  
-|`Browse`|Yansıma|İsteğe bağlı öznitelik. Program öğeleri hakkında bilgi için sorgulama kontrol eder, ancak herhangi bir çalışma zamanı erişim sağlamaz.|  
-|`Dynamic`|Yansıma|İsteğe bağlı öznitelik. Dinamik programlama etkinleştirmek için Oluşturucular, yöntemler, alanlar, özellikler ve olaylar, tüm tür üyelerini, çalışma zamanı erişimi denetler.|  
-|`Serialize`|Serileştirme|İsteğe bağlı öznitelik. Oluşturucular, alanları ve tür örnekleri sıralanabilir ve kitaplıkları gibi Newtonsoft JSON seri hale getirici tarafından serisi etkinleştirmek için özellikler, çalışma zamanı erişimi denetler.|  
-|`DataContractSerializer`|Serileştirme|İsteğe bağlı öznitelik. Denetimleri İlkesi kullanan Serileştirmenin <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> sınıfı.|  
-|`DataContractJsonSerializer`|Serileştirme|İsteğe bağlı öznitelik. İlke kullanan bir JSON serileştirme denetleyen <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> sınıfı.|  
-|`XmlSerializer`|Serileştirme|İsteğe bağlı öznitelik. İlke kullanan bir XML serileştirme denetleyen <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType> sınıfı.|  
-|`MarshalObject`|Birlikte çalışma|İsteğe bağlı öznitelik. Denetim İlkesi WinRT ve COM başvuru türlerini hazırlama|  
-|`MarshalDelegate`|Birlikte çalışma|İsteğe bağlı öznitelik. Yerel kod için işlev işaretçileri olarak temsilci türleri hazırlama için ilke denetler.|  
-|`MarshalStructure`|Birlikte çalışma|İsteğe bağlı öznitelik. Yerel kod için değer türlerini hazırlama için ilke denetler.|  
+|`Name`|Genel|Gerekli öznitelik. Parametre adı. Örneğin, yöntem imzası `String.CompareTo(Object value)`için, `Name` özniteliği değeri "Value" olur.|  
+|`Activate`|Yansıma|İsteğe bağlı öznitelik. Örneklerin etkinleştirilmesini sağlamak için oluşturuculara çalışma zamanı erişimini denetler.|  
+|`Browse`|Yansıma|İsteğe bağlı öznitelik. Program öğeleri hakkında bilgi sorgulamayı denetler, ancak hiçbir çalışma zamanı erişimini etkinleştirmez.|  
+|`Dynamic`|Yansıma|İsteğe bağlı öznitelik. Dinamik programlamayı etkinleştirmek için oluşturucular, Yöntemler, alanlar, Özellikler ve olaylar dahil olmak üzere tüm tür üyelerine çalışma zamanı erişimini denetler.|  
+|`Serialize`|Serileştirme|İsteğe bağlı öznitelik. Tür örneklerinin, Newtonsoft JSON serileştirici gibi kitaplıklar tarafından serileştirilmesi ve seri durumdan çıkarılmakta olması için oluşturuculara, alanlara ve özelliklere çalışma zamanı erişimini denetler.|  
+|`DataContractSerializer`|Serileştirme|İsteğe bağlı öznitelik. <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> Sınıfını kullanan serileştirme için ilkeyi denetler.|  
+|`DataContractJsonSerializer`|Serileştirme|İsteğe bağlı öznitelik. <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> Sınıfını kullanan JSON serileştirme için ilkeyi denetler.|  
+|`XmlSerializer`|Serileştirme|İsteğe bağlı öznitelik. <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType> Sınıfını kullanan XML serileştirme ilkesini denetler.|  
+|`MarshalObject`|Interop|İsteğe bağlı öznitelik. WinRT ve COM 'a başvuru türlerini hazırlama ilkesini denetler.|  
+|`MarshalDelegate`|Interop|İsteğe bağlı öznitelik. Temsilci türlerini yerel koda işlev işaretçileri olarak hazırlama ilkesini denetler.|  
+|`MarshalStructure`|Interop|İsteğe bağlı öznitelik. Değer türlerini yerel koda hazırlama ilkesini denetler.|  
   
 ## <a name="name-attribute"></a>Ad özniteliği  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|*parameter_name*|İlke uygulandığı yöntem parametresi adı. Örneğin, yöntem imzası için `String.CompareTo(Object value)`, değerini `Name` özniteliktir "value".|  
+|*parameter_name*|İlkenin uygulandığı Yöntem parametresinin adı. Örneğin, yöntem imzası `String.CompareTo(Object value)`için, `Name` özniteliği değeri "Value" olur.|  
   
 ## <a name="all-other-attributes"></a>Diğer tüm öznitelikler  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|*policy_setting*|Bu ilke türü için geçerli ayar. Olası değerler `All`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal`, ve `Required All`. Daha fazla bilgi için [çalışma zamanı yönerge İlkesi ayarları](../../../docs/framework/net-native/runtime-directive-policy-settings.md).|  
+|*policy_setting*|Bu ilke türüne uygulanacak ayar. Olası değerler şunlardır `All` `Public` ,,`PublicAndInternal`,, ve .`Required All` `Required Public` `Required PublicAndInternal` Daha fazla bilgi için bkz. [çalışma zamanı yönergesi Ilke ayarları](runtime-directive-policy-settings.md).|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -68,14 +68,14 @@ Bir yönteme geçirilen bağımsız değişken türünü yansıma ilkesini uygul
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<Yöntem >](../../../docs/framework/net-native/method-element-net-native.md)|Çalışma zamanı yansıma ilkesini yapıcıya veya yönteme için geçerlidir.|  
+|[\<Yöntem >](method-element-net-native.md)|Çalışma zamanı yansıtma ilkesini bir oluşturucuya veya yöntemine uygular.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `<Parameter>` Öğesi alt öğesi olan [ \<yöntemi >](../../../docs/framework/net-native/method-element-net-native.md) öğesi ve belirli bir yöntem parametresine ilkeyi uygulamak için kullanılır. Belirli bir yöntem parametre adı yerine türüne göre belirtilir. Bir ilke türü gibi temsil eden en az bir öznitelik `Activate` veya `Dynamic`, mevcut olması gerekir.  
+ Öğesi, metot > öğesinin bir alt [ \<](method-element-net-native.md) öğesidir ve ilkeyi belirli bir yöntem `<Parameter>` parametresine uygulamak için kullanılır. Belirli yöntem parametresi, türüne göre değil, adıyla belirtilir. `Activate` Veya`Dynamic`gibi bir ilke türünü temsil eden en az bir özniteliğin mevcut olması gerekir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [\<Yöntem > öğesi](../../../docs/framework/net-native/method-element-net-native.md)
-- [Çalışma Zamanı Yönergeleri (rd.xml) Yapılandırma Dosyası Başvurusu](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
-- [Çalışma Zamanı Yönerge İlkesi Ayarları](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
-- [Çalışma Zamanı Yönerge Öğeleri](../../../docs/framework/net-native/runtime-directive-elements.md)
+- [\<Metot > öğesi](method-element-net-native.md)
+- [Çalışma Zamanı Yönergeleri (rd.xml) Yapılandırma Dosyası Başvurusu](runtime-directives-rd-xml-configuration-file-reference.md)
+- [Çalışma Zamanı Yönerge İlkesi Ayarları](runtime-directive-policy-settings.md)
+- [Çalışma Zamanı Yönerge Öğeleri](runtime-directive-elements.md)

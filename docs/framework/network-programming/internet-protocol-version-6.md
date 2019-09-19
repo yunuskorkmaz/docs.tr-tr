@@ -8,57 +8,57 @@ helpviewer_keywords:
 - Internet Protocol version 6, improvements
 - Internet Protocol version 6
 ms.assetid: e6fa8ebd-010a-4c48-a5ec-a5102c53c06f
-ms.openlocfilehash: 0851ad42cd5ce2dd6b49ad7656479d5237fd5874
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 367db4fa4e585d6066009dbd1afacb154829319a
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647354"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047871"
 ---
 # <a name="internet-protocol-version-6"></a>İnternet Protokolü Sürüm 6
-Internet Protokolü sürüm 6 (IPv6) yeni bir Internet'e ağ katmanı standart protokoller paketidir. IPv6 adres tükenmesi, güvenlik, otomatik yapılandırma, genişletilebilirlik ve benzeri için haklısın ile birçok (IPv4 olarak bilinir) Internet Protokolü paketinin geçerli sürümü, sorunu çözmek için tasarlanmıştır. IPv6, yeni türde uygulamalar, eşler arası ile mobil uygulamalar dahil olmak üzere etkinleştirmek için yeteneklerini genişletir. Geçerli IPv4 protokolünün ana sorunlar şunlardır:  
+Internet Protokolü sürüm 6 (IPv6), Internet ağ katmanı için yeni bir standart protokoller paketidir. IPv6, Internet Protokolü paketi 'nin geçerli sürümünün (IPv4 olarak bilinir), aşalım, güvenlik, otomatik yapılandırma, genişletilebilirlik vb. gibi birçok sorununu çözmek için tasarlanmıştır. IPv6, eşler arası ve mobil uygulamalar da dahil olmak üzere yeni uygulama türlerini etkinleştirmek için Internet 'in yeteneklerini genişletir. Geçerli IPv4 protokolünün başlıca sorunları aşağıda verilmiştir:  
   
-- Hızlı tükenmesi adres alanı.  
+- Adres alanının hızlı bir şekilde çıkarılması.  
   
-     Bu, tek bir genel IP adresi için birden çok özel adresleri eşlenen ağ adres çevirileri (NAT) kullanımını açmıştır. Bu mekanizma tarafından oluşturulmuş ana sorunu işlem ek yükü ve uçtan uca bağlantısının olmaması.  
+     Bu, birden çok özel adresi tek bir genel IP adresine eşleyen ağ adresi çeviricileri (NAT) kullanımına yol açmıştır. Bu mekanizma tarafından oluşturulan başlıca sorunlar, ek yükü ve uçtan uca bağlantının eksikliğinden oluşur.  
   
-- Hiyerarşi desteği eksikliği.  
+- Hiyerarşi desteğinin bulunmaması.  
   
-     Önceden tanımlanmış devralınan sınıf kuruluşunu nedeniyle IPv4 true hiyerarşik dönülemiyor. IP adresleri, ağ topolojisini gerçekten eşleyen bir şekilde yapı mümkün değildir. Bu önemli bir tasarım kusurunu Internet üzerindeki herhangi bir konuma IPv4 paketlerini iletmek büyük yönlendirme tablolarını gereksinimini oluşturur.  
+     Devralınan önceden tanımlanmış sınıf kuruluşunda, IPv4 gerçek hiyerarşik desteğe sahip değildir. IP adreslerini gerçekten ağ topolojisini eşleyen bir şekilde yapılandırmak olanaksızdır. Bu önemli tasarım kusuru, Internet 'teki herhangi bir konuma IPv4 paketleri sunmaya yönelik büyük yönlendirme tablolarına yönelik ihtiyacı oluşturur.  
   
 - Karmaşık ağ yapılandırması.  
   
-     IPv4 ile adresi statik olarak atanması gerekir veya DHCP gibi bir Yapılandırma Protokolü kullanarak. İdeal durumda, konaklar üzerinde DHCP altyapı yönetimini kullanan girmesi gerekmez. Bunun yerine, bunlar bulunduğu oldukları ağ kesiminde tabanlı ağınıza ağı kendileri yapılandırmak mümkün olur.  
+     IPv4 ile adreslerin statik olarak atanması veya DHCP gibi bir yapılandırma Protokolü kullanılması gerekir. İdeal bir durumda, konaklar bir DHCP altyapısının yönetimine güvenmelidir. Bunun yerine kendilerini bulundukları ağ kesimine göre yapılandırabilirler.  
   
-- Yerleşik kimlik doğrulama ve gizliliği eksiği.  
+- Yerleşik kimlik doğrulaması ve gizlilik eksikliği yok.  
   
-     IPv4 destek kimlik doğrulaması veya alışverişi olur verilerin şifrelenmesini sağlayan bir mekanizma gerektirmez. Bu, IPv6 ile değiştirir. Internet Protokolü güvenliği (IPSec), bir IPv6 desteği gereksinimdir.  
+     IPv4, değiştirilen verilerin kimlik doğrulaması veya şifrelemesini sağlayan herhangi bir mekanizma için destek gerektirmez. Bu, IPv6 ile değiştirilir. Internet Protokolü güvenliği (IPSec) bir IPv6 destek gereksinimidir.  
   
- Yeni bir protokolü paketi aşağıdaki temel gereksinimleri karşılaması gerekir:  
+ Yeni bir protokol paketinin aşağıdaki temel gereksinimleri karşılaması gerekir:  
   
-- Büyük ölçekli Yönlendirme ve düşük yüklerle ele alıyor.  
+- Düşük ek yüklerle büyük ölçekli yönlendirme ve adresleme.  
   
-- Otomatik yapılandırma için çeşitli bağlantı durumlarda.  
+- Çeşitli bağlama durumları için otomatik yapılandırma.  
   
-- Yerleşik kimlik doğrulama ve gizliliği.  
+- Yerleşik kimlik doğrulaması ve gizlilik.  
   
- Daha fazla bilgi için [IPv6 adresleme](../../../docs/framework/network-programming/ipv6-addressing.md), [IPv6 yönlendirme](../../../docs/framework/network-programming/ipv6-routing.md), [IPv6 otomatik yapılandırma](../../../docs/framework/network-programming/ipv6-auto-configuration.md), [etkinleştirme ve devre dışı bırakma IPv6](../../../docs/framework/network-programming/enabling-and-disabling-ipv6.md), ve [Nasıl yapılır: IPv6 desteğini etkinleştirmek için bilgisayar yapılandırma dosyasını değiştirme](../../../docs/framework/network-programming/how-to-modify-the-computer-configuration-file-to-enable-ipv6-support.md).  
+ Daha fazla bilgi için bkz. [IPv6 adresleme](ipv6-addressing.md), [IPv6 yönlendirme](ipv6-routing.md), [IPv6 otomatik yapılandırma](ipv6-auto-configuration.md), [IPv6 'yı etkinleştirme ve devre dışı bırakma](enabling-and-disabling-ipv6.md)ve [nasıl yapılır: IPv6 desteğini](how-to-modify-the-computer-configuration-file-to-enable-ipv6-support.md)etkinleştirmek Için bilgisayar yapılandırma dosyasını değiştirin.  
   
 ## <a name="references"></a>Referanslar  
- Konumunda bulabilirsiniz seçili RFC belgeleri aşağıda verilmiştir [Internet Engineering Task Force (IETF)](https://www.ietf.org/) Web sitesi:  
+ Aşağıda, [Internet Mühendisliği görev gücü (IETF)](https://www.ietf.org/) Web SITESINDE bulabileceğiniz RFC belgelerinin seçildiği verilmiştir:  
   
-- RFC 1287, doğrultusunda gelecekteki Internet mimarisi.  
+- RFC 1287, gelecekteki Internet mimarisine doğru.  
   
-- RFC 1454, IP'ın sonraki sürümü için teklifleri karşılaştırması.  
+- RFC 1454, IP 'nin sonraki sürümü için tekliflerin karşılaştırması.  
   
-- RFC 2373, IP sürümü 6 Adresleme Mimarisi.  
+- RFC 2373, IP sürüm 6 Adresleme Mimarisi.  
   
-- RFC 2374, IPv6 toplanabilir genel tek noktaya yayın adresi biçimi.  
+- Bir IPv6 toplanabilir genel tek noktaya yayın adresi biçimi olan RFC 2374.  
   
- Üzerinde IPv6 ilgili bilgiler bulabilirsiniz [IP sürüm 6 (IPv6)](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd379498%28v=ws.10%29).  
+ IPv6 ile ilgili bilgileri [IP sürüm 6 (IPv6)](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd379498%28v=ws.10%29)üzerinde de bulabilirsiniz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [IPv6 yuva örnek](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/ms180981%28v=vs.85%29)
-- [Ağ Programlama Örnekleri](../../../docs/framework/network-programming/network-programming-samples.md)
-- [Yuvalar](../../../docs/framework/network-programming/sockets.md)
+- [IPv6 yuvaları örneği](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/ms180981%28v=vs.85%29)
+- [Ağ Programlama Örnekleri](network-programming-samples.md)
+- [Yuvalar](sockets.md)

@@ -7,169 +7,169 @@ helpviewer_keywords:
 ms.assetid: 167a4459-bb6e-476c-9046-7920880f2bb5
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c7969c0a3f5f828f1a1c0d4f33b82881130c6e15
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 58249a0e080e045223bdaf170f2eaedb67fc0dea
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61949259"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046382"
 ---
 # <a name="method-etw-events"></a>Yöntem ETW Olayları
 
-<a name="top"></a> Bu olaylar yöntemlere özel bilgiler toplayın. Bu olayların yükünü sembol çözümlemesi için gereklidir. Ayrıca, bu olayların sayısı gibi yararlı bilgileri bir yöntemi çağrıldı sağlar.
+<a name="top"></a>Bu olaylar yöntemlere özgü bilgiler toplar. Bu olayların yükü sembol çözümlemesi için gereklidir. Ayrıca, bu olaylar yöntemin kaç kez çağrıldığı gibi yararlı bilgiler sağlar.
 
-Tüm yöntemi olayları "Bilgilendirici (4)" düzeyine sahip. Tüm yöntemi ayrıntılı olayları "Ayrıntılı (5)" düzeyine sahip.
+Tüm Yöntem olayları "bilgilendirme (4)" düzeyine sahiptir. Tüm Yöntem ayrıntılı olayları "verbose (5)" düzeyine sahiptir.
 
-Tarafından tetiklenen tüm yöntemi olayları `JITKeyword` (0x10) anahtar sözcüğü veya `NGenKeyword` çalışma zamanı sağlayıcısı altında (0x20) anahtar sözcüğü veya `JitRundownKeyword` (0x10) veya `NGENRundownKeyword` (0x20) Özet sağlayıcı altında.
+Tüm `JITKeyword` Yöntem olayları, (0x10) anahtar sözcüğü `NGenKeyword` veya çalışma zamanı sağlayıcısı `JitRundownKeyword` altındaki (0x20) anahtar sözcüğü veya (0x10) ya `NGENRundownKeyword` da (0x20) özet sağlayıcısının altında oluşturulur.
 
-CLR yöntemini olayları daha aşağıdaki alt bölümlere:
+CLR yöntemi olayları aşağıda verilmiştir:
 
-- [CLR yöntem olayları](#clr_method_events)
+- [CLR yöntemi olayları](#clr_method_events)
 
-- [CLR yöntemini işaret olayları](#clr_method_marker_events)
+- [CLR Yöntem Işaretleyici olayları](#clr_method_marker_events)
 
-- [CLR yöntemini ayrıntılı olayları](#clr_method_verbose_events)
+- [CLR metodu ayrıntılı olayları](#clr_method_verbose_events)
 
-- [MethodJittingStarted olay](#methodjittingstarted_event)
+- [Methodjtingstarted olayı](#methodjittingstarted_event)
 
 <a name="clr_method_events"></a>
 
-## <a name="clr-method-events"></a>CLR yöntem olayları
+## <a name="clr-method-events"></a>CLR yöntemi olayları
 
-Aşağıdaki tabloda, düzeyi ve anahtar sözcüğü gösterir. (Daha fazla bilgi için [CLR ETW anahtar sözcükleri ve Düzeyler](../../../docs/framework/performance/clr-etw-keywords-and-levels.md).)
+Aşağıdaki tabloda anahtar sözcüğü ve düzeyi gösterilmektedir. (Daha fazla bilgi için bkz. [CLR ETW anahtar sözcükleri ve düzeyleri](clr-etw-keywords-and-levels.md).)
 
-|Olayı için anahtar sözcüğü|Düzey|
+|Olayı yükseltmek için anahtar sözcük|Düzey|
 |-----------------------------------|-----------|
-|`JITKeyword` (0x10) çalışma zamanı sağlayıcısı|Bilgilendirici (4)|
-|`NGenKeyword` (0x20) çalışma zamanı sağlayıcısı|Bilgilendirici (4)|
-|`JitRundownKeyword` Özet sağlayıcısı (0x10)|Bilgilendirici (4)|
-|`NGENRundownKeyword` Özet sağlayıcısı (0x20)|Bilgilendirici (4)|
+|`JITKeyword`(0x10) çalışma zamanı sağlayıcısı|Bilgilendirici (4)|
+|`NGenKeyword`(0x20) çalışma zamanı sağlayıcısı|Bilgilendirici (4)|
+|`JitRundownKeyword`(0x10) Özeti sağlayıcı|Bilgilendirici (4)|
+|`NGENRundownKeyword`(0x20) Özeti sağlayıcı|Bilgilendirici (4)|
 
-Aşağıdaki tabloda, olay bilgileri gösterilmektedir.
+Aşağıdaki tabloda olay bilgileri gösterilmektedir.
 
 |Olay|Olay Kimliği|Açıklama|
 |-----------|--------------|-----------------|
-|`MethodLoad_V1`|136|Bir yöntem olduğunda ortaya yeni yüklenen zamanında (JIT yüklenen) ya da NGEN resmi yüklendikten. Dinamik ve genel yöntemler bu sürümü yöntemi yükler için kullanmayın. JIT Yardımcıları hiçbir zaman bu sürümü kullanın.|
-|`MethodUnLoad_V1`|137|Bir modül kaldırılır ya da bir uygulama etki alanı edildiğinde oluşturulur. Dinamik yöntemler, bu sürümü için yöntemi bellekten hiçbir zaman kullanın.|
-|`MethodDCStart_V1`|137|Başlangıç özeti sırasında yöntemlerini numaralandırır.|
-|`MethodDCEnd_V1`|138|Bir Özet sonu sırasında yöntemlerini numaralandırır.|
+|`MethodLoad_V1`|136|Bir yöntem yüklendiğinde (JıT-yüklü) veya bir NGEN görüntüsünün yüklendiği zaman tetiklenir. Dinamik ve genel yöntemler bu sürümü Yöntem yüklemeleri için kullanmaz. JıT yardımcıları bu sürümü hiçbir şekilde kullanmaz.|
+|`MethodUnLoad_V1`|137|Bir modül kaldırıldığında veya bir uygulama etki alanı yok edildiğinde tetiklenir. Dinamik yöntemler bu sürümü Yöntem kaldırmalar için hiçbir şekilde kullanmaz.|
+|`MethodDCStart_V1`|137|Başlangıç özeti sırasında yöntemleri numaralandırır.|
+|`MethodDCEnd_V1`|138|Son Özeti sırasında yöntemleri numaralandırır.|
 
-Aşağıdaki tabloda, olay verilerini gösterir.
+Aşağıdaki tabloda olay verileri gösterilmektedir.
 
 |Alan adı|Veri türü|Açıklama|
 |----------------|---------------|-----------------|
-|MethodID|Kazanma: UInt64|Bir yöntem benzersiz tanımlayıcısı. JIT yardımcı yöntemler için bu yöntem için başlangıç adresi ayarlanır.|
-|Modül kimliği|Kazanma: UInt64|Bu yöntem (0 için JIT Yardımcıları) ait olduğu modül tanıtıcısı.|
-|MethodStartAddress|Kazanma: UInt64|Başlangıç adresi yöntemi.|
-|MethodSize|Kazanma: UInt32|Yönteminin boyutu.|
-|MethodToken|Kazanma: UInt32|dinamik yöntemleri ve JIT Yardımcıları için 0.|
-|MethodFlags|Kazanma: UInt32|0x1: Dinamik yöntem.<br /><br /> 0x2: Genel yöntem.<br /><br /> 0x4: JIT olarak derlenmiş kod yöntemi (Aksi NGEN yerel görüntü kodu).<br /><br /> 0x8: Yardımcı yöntemi.|
-|ClrInstanceID|Kazanma: UInt16|CLR veya CoreCLR örneği için benzersiz kimlik.|
+|Methoddıd|Win: UInt64|Metodun benzersiz tanımlayıcısı. JıT yardımcı yöntemleri için bu, yönteminin başlangıç adresine ayarlanır.|
+|Modül kimliği|Win: UInt64|Bu yöntemin ait olduğu modülün tanımlayıcısı (JıT yardımcıları için 0).|
+|MethodStartAddress|Win: UInt64|Metodun başlangıç adresi.|
+|MethodSize|Win: UInt32|Metodun boyutu.|
+|MethodToken|Win: UInt32|dinamik yöntemler ve JıT yardımcıları için 0.|
+|MethodFlags|Win: UInt32|0x1 Dinamik yöntem.<br /><br /> 0x2 Genel yöntem.<br /><br /> 4, JıT derlenmiş kod yöntemi (Aksi takdirde NGEN yerel görüntü kodu).<br /><br /> 0x8 Yardımcı yöntemi.|
+|ClrInstanceID|Win: UInt16|CLR veya CoreCLR örneği için benzersiz KIMLIK.|
 
 [Başa dön](#top)
 
 <a name="clr_method_marker_events"></a>
 
-## <a name="clr-method-marker-events"></a>CLR yöntemini işaret olayları
+## <a name="clr-method-marker-events"></a>CLR Yöntem Işaretleyici olayları
 
-Bu olaylar yalnızca Özet sağlayıcı altında üretilir. Bunlar yöntemi numaralandırma bir başlangıç sırasında sonunu belirtmek veya özeti bitmelidir. (Diğer bir deyişle, bunlar yükseltilir, `NGENRundownKeyword`, `JitRundownKeyword`, `LoaderRundownKeyword`, veya `AppDomainResourceManagementRundownKeyword` anahtar sözcüğü etkindir.)
+Bu olaylar yalnızca Özet sağlayıcının altında oluşturulur. Bir başlangıç veya bitiş Özeti sırasında Yöntem numaralandırması sonunu işaret eder. (Yani `NGENRundownKeyword`,,, veya `JitRundownKeyword` `AppDomainResourceManagementRundownKeyword` anahtar sözcüğü etkinleştirildiğinde tetiklenir `LoaderRundownKeyword`.)
 
-Aşağıdaki tabloda, düzeyi ve anahtar sözcüğü gösterir.
+Aşağıdaki tabloda anahtar sözcüğü ve düzeyi gösterilmektedir.
 
-|Olayı için anahtar sözcüğü|Düzey|
+|Olayı yükseltmek için anahtar sözcük|Düzey|
 |-----------------------------------|-----------|
-|`AppDomainResourceManagementRundownKeyword` Özet sağlayıcısı (0x800)|Bilgilendirici (4)|
-|`JitRundownKeyword` Özet sağlayıcısı (0x10)|Bilgilendirici (4)|
-|`NGENRundownKeyword` Özet sağlayıcısı (0x20)|Bilgilendirici (4)|
+|`AppDomainResourceManagementRundownKeyword`(0x800) runaşağı sağlayıcı|Bilgilendirici (4)|
+|`JitRundownKeyword`(0x10) Özeti sağlayıcı|Bilgilendirici (4)|
+|`NGENRundownKeyword`(0x20) Özeti sağlayıcı|Bilgilendirici (4)|
 
-Aşağıdaki tabloda, olay bilgileri gösterilmektedir.
+Aşağıdaki tabloda olay bilgileri gösterilmektedir.
 
 |Olay|Olay Kimliği|Açıklama|
 |-----------|--------------|----------------|
-|`DCStartInit_V1`|147|Numaralandırma sırasında bir başlangıç özeti başlamadan önce gönderilir.|
-|`DCStartComplete_V1`|145|Numaralandırma sırasında bir başlangıç özeti sonunda gönderilir.|
-|`DCEndInit_V1`|148|Özet sonu sırasında numaralandırma başlamadan önce gönderilir.|
-|`DCEndComplete_V1`|146|Numaralandırma sırasında bir Özet sonu sonunda gönderilir.|
+|`DCStartInit_V1`|147|Başlangıç özeti sırasında numaralandırmanın başlangıcından önce gönderilir.|
+|`DCStartComplete_V1`|145|Bir başlangıç Özeti sırasında numaralandırmanın sonuna gönderilir.|
+|`DCEndInit_V1`|148|Son Özeti sırasında numaralandırmanın başlangıcından önce gönderilir.|
+|`DCEndComplete_V1`|146|Son Özeti sırasında numaralandırmanın sonuna gönderilir.|
 
-Aşağıdaki tabloda, olay verilerini gösterir.
+Aşağıdaki tabloda olay verileri gösterilmektedir.
 
 |Alan adı|Veri türü|Açıklama|
 |----------------|---------------|-----------------|
-|ClrInstanceID|Kazanma: UInt16|CLR veya CoreCLR örneği için benzersiz kimlik.|
+|ClrInstanceID|Win: UInt16|CLR veya CoreCLR örneği için benzersiz KIMLIK.|
 
 [Başa dön](#top)
 
 <a name="clr_method_verbose_events"></a>
 
-## <a name="clr-method-verbose-events"></a>CLR yöntemini ayrıntılı olayları
+## <a name="clr-method-verbose-events"></a>CLR metodu ayrıntılı olayları
 
-Aşağıdaki tabloda, düzeyi ve anahtar sözcüğü gösterir.
+Aşağıdaki tabloda anahtar sözcüğü ve düzeyi gösterilmektedir.
 
-|Olayı için anahtar sözcüğü|Düzey|
+|Olayı yükseltmek için anahtar sözcük|Düzey|
 |-----------------------------------|-----------|
-|`JITKeyword` (0x10) çalışma zamanı sağlayıcısı|Ayrıntılı (5)|
-|`NGenKeyword` (0x20) çalışma zamanı sağlayıcısı|Ayrıntılı (5)|
-|`JitRundownKeyword` Özet sağlayıcısı (0x10)|Ayrıntılı (5)|
-|`NGENRundownKeyword` Özet sağlayıcısı (0x20)|Ayrıntılı (5)|
+|`JITKeyword`(0x10) çalışma zamanı sağlayıcısı|Verbose (5)|
+|`NGenKeyword`(0x20) çalışma zamanı sağlayıcısı|Verbose (5)|
+|`JitRundownKeyword`(0x10) Özeti sağlayıcı|Verbose (5)|
+|`NGENRundownKeyword`(0x20) Özeti sağlayıcı|Verbose (5)|
 
-Aşağıdaki tabloda, olay bilgileri gösterilmektedir.
+Aşağıdaki tabloda olay bilgileri gösterilmektedir.
 
 |Olay|Olay Kimliği|Açıklama|
 |-----------|--------------|-----------------|
-|`MethodLoadVerbose_V1`|143|Bir yöntem JIT yüklü olduğunda veya bir NGEN resmi yüklendikten oluşturulur. Dinamik ve genel yöntemler bu sürümü yöntemi yükler için her zaman kullanın. JIT Yardımcıları her zaman bu sürümü kullanın.|
-|`MethodUnLoadVerbose_V1`|144|Dinamik bir yöntem yok, modül kaldırılır veya uygulama etki alanı edildiğinde oluşturulur. Dinamik yöntemler, her zaman bu sürümü için yöntemi bellekten kullanın.|
-|`MethodDCStartVerbose_V1`|141|Başlangıç özeti sırasında yöntemlerini numaralandırır.|
-|`MethodDCEndVerbose_V1`|142|Bir Özet sonu sırasında yöntemlerini numaralandırır.|
+|`MethodLoadVerbose_V1`|143|Bir yöntem JıT olarak yüklendiğinde veya bir NGEN görüntüsü yüklendiğinde tetiklenir. Dinamik ve genel yöntemler her zaman Yöntem yüklemeleri için bu sürümü kullanır. JıT yardımcıları her zaman bu sürümü kullanır.|
+|`MethodUnLoadVerbose_V1`|144|Dinamik bir yöntem yok edildiğinde, bir modül kaldırıldığında veya bir uygulama etki alanı yok edildiğinde tetiklenir. Dinamik yöntemler her zaman bu sürümü Yöntem kaldırmalar için kullanır.|
+|`MethodDCStartVerbose_V1`|141|Başlangıç özeti sırasında yöntemleri numaralandırır.|
+|`MethodDCEndVerbose_V1`|142|Son Özeti sırasında yöntemleri numaralandırır.|
 
-Aşağıdaki tabloda, olay verilerini gösterir.
+Aşağıdaki tabloda olay verileri gösterilmektedir.
 
 |Alan adı|Veri türü|Açıklama|
 |----------------|---------------|-----------------|
-|MethodID|Kazanma: UInt64|Yöntem benzersiz tanımlayıcısı. JIT yardımcı yöntemler için yöntem için başlangıç adresi ayarlayın.|
-|Modül kimliği|Kazanma: UInt64|Bu yöntem (0 için JIT Yardımcıları) ait olduğu modül tanıtıcısı.|
-|MethodStartAddress|Kazanma: UInt64|Başlangıç adresi.|
-|MethodSize|Kazanma: UInt32|Yöntem uzunluğu.|
-|MethodToken|Kazanma: UInt32|dinamik yöntemleri ve JIT Yardımcıları için 0.|
-|MethodFlags|Kazanma: UInt32|0x1: Dinamik yöntem.<br /><br /> 0x2: Genel yöntem.<br /><br /> 0x4: (Aksi takdirde, NGen.exe ile oluşturulan) JIT olarak derlenmiş yöntemi<br /><br /> 0x8: Yardımcı yöntemi.|
-|MethodNameSpace|Kazanma: UnicodeString|Yöntemiyle ilişkili tam ad alanı adı.|
-|methodName|Kazanma: UnicodeString|Yöntemiyle ilişkili tam sınıf adı.|
-|MethodSignature|Kazanma: UnicodeString|(Virgülle ayrılmış listesi tür adları) metodun imzası.|
-|ClrInstanceID|Kazanma: UInt16|CLR veya CoreCLR örneği için benzersiz kimlik.|
+|Methoddıd|Win: UInt64|Metodun benzersiz tanıtıcısı. JıT yardımcı yöntemleri için, yönteminin başlangıç adresine ayarlanır.|
+|Modül kimliği|Win: UInt64|Bu yöntemin ait olduğu modülün tanımlayıcısı (JıT yardımcıları için 0).|
+|MethodStartAddress|Win: UInt64|Başlangıç adresi.|
+|MethodSize|Win: UInt32|Yöntem uzunluğu.|
+|MethodToken|Win: UInt32|dinamik yöntemler ve JıT yardımcıları için 0.|
+|MethodFlags|Win: UInt32|0x1 Dinamik yöntem.<br /><br /> 0x2 Genel yöntem.<br /><br /> 4, JıT derlenmiş yöntemi (Aksi takdirde, NGen. exe tarafından oluşturulur)<br /><br /> 0x8 Yardımcı yöntemi.|
+|MethodNameSpace|Win: UnicodeString|Yöntemiyle ilişkili tam ad alanı adı.|
+|MethodName|Win: UnicodeString|Yöntemiyle ilişkili tam sınıf adı.|
+|MethodSignature|Win: UnicodeString|Metodun imzası (tür adlarının virgülle ayrılmış listesi).|
+|ClrInstanceID|Win: UInt16|CLR veya CoreCLR örneği için benzersiz KIMLIK.|
 
 [Başa dön](#top)
 
 <a name="methodjittingstarted_event"></a>
 
-## <a name="methodjittingstarted-event"></a>MethodJittingStarted olay
+## <a name="methodjittingstarted-event"></a>Methodjtingstarted olayı
 
-Aşağıdaki tabloda, düzeyi ve anahtar sözcüğü gösterir.
+Aşağıdaki tabloda anahtar sözcüğü ve düzeyi gösterilmektedir.
 
-|Olayı için anahtar sözcüğü|Düzey|
+|Olayı yükseltmek için anahtar sözcük|Düzey|
 |-----------------------------------|-----------|
-|`JITKeyword` (0x10) çalışma zamanı sağlayıcısı|Ayrıntılı (5)|
-|`NGenKeyword` (0x20) çalışma zamanı sağlayıcısı|Ayrıntılı (5)|
-|`JitRundownKeyword` Özet sağlayıcısı (0x10)|Ayrıntılı (5)|
-|`NGENRundownKeyword` Özet sağlayıcısı (0x20)|Ayrıntılı (5)|
+|`JITKeyword`(0x10) çalışma zamanı sağlayıcısı|Verbose (5)|
+|`NGenKeyword`(0x20) çalışma zamanı sağlayıcısı|Verbose (5)|
+|`JitRundownKeyword`(0x10) Özeti sağlayıcı|Verbose (5)|
+|`NGENRundownKeyword`(0x20) Özeti sağlayıcı|Verbose (5)|
 
-Aşağıdaki tabloda, olay bilgileri gösterilmektedir.
+Aşağıdaki tabloda olay bilgileri gösterilmektedir.
 
 |Olay|Olay Kimliği|Açıklama|
 |-----------|--------------|-----------------|
-|`MethodJittingStarted`|145|JIT olarak derlenmiş bir yöntem olduğunda oluşturulur.|
+|`MethodJittingStarted`|145|Bir yöntem JıT olarak derlendiğinde tetiklenir.|
 
-Aşağıdaki tabloda, olay verilerini gösterir.
+Aşağıdaki tabloda olay verileri gösterilmektedir.
 
 |Alan adı|Veri türü|Açıklama|
 |----------------|---------------|-----------------|
-|MethodID|Kazanma: UInt64|Yöntem benzersiz tanımlayıcısı.|
-|Modül kimliği|Kazanma: UInt64|Bu yöntemin ait olduğu için modül tanıtıcısı.|
-|MethodToken|Kazanma: UInt32|dinamik yöntemleri ve JIT Yardımcıları için 0.|
-|MethodILSize|Kazanma: UInt32|JIT-derlenmiş yöntem için Microsoft Ara dilini (MSIL) boyutu.|
-|MethodNameSpace|Kazanma: UnicodeString|Yöntemiyle ilişkili tam sınıf adı.|
-|methodName|Kazanma: UnicodeString|Yöntemin adı.|
-|MethodSignature|Kazanma: UnicodeString|(Virgülle ayrılmış listesi tür adları) metodun imzası.|
-|ClrInstanceID|Kazanma: UInt16|CLR veya CoreCLR örneği için benzersiz kimlik.|
+|Methoddıd|Win: UInt64|Metodun benzersiz tanıtıcısı.|
+|Modül kimliği|Win: UInt64|Bu yöntemin ait olduğu modülün tanımlayıcısı.|
+|MethodToken|Win: UInt32|dinamik yöntemler ve JıT yardımcıları için 0.|
+|Methoddilsize|Win: UInt32|JıT olarak derlenen metodun Microsoft ara dili (MSIL) boyutu.|
+|MethodNameSpace|Win: UnicodeString|Yöntemiyle ilişkili tam sınıf adı.|
+|MethodName|Win: UnicodeString|Metodun adı.|
+|MethodSignature|Win: UnicodeString|Metodun imzası (tür adlarının virgülle ayrılmış listesi).|
+|ClrInstanceID|Win: UInt16|CLR veya CoreCLR örneği için benzersiz KIMLIK.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [CLR ETW Olayları](../../../docs/framework/performance/clr-etw-events.md)
+- [CLR ETW Olayları](clr-etw-events.md)

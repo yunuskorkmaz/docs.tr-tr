@@ -10,12 +10,12 @@ helpviewer_keywords:
 - UI Automation, registering provider assemblies
 - provider assemblies, registering
 ms.assetid: a03af4d9-2771-43cc-b07b-d468dca23190
-ms.openlocfilehash: ed45b7e5d60e42f03bce8b9dc4abbf8226916304
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 18a63a955fdf782670bb60dfc6845261990cdcd1
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966351"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042780"
 ---
 # <a name="register-a-client-side-provider-assembly"></a>İstemci Tarafı Sağlayıcı Derlemesini Kaydetme
 > [!NOTE]
@@ -31,4 +31,4 @@ ms.locfileid: "69966351"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [İstemci Tarafı UI Otomasyonu Sağlayıcı Oluşturma](../../../docs/framework/ui-automation/create-a-client-side-ui-automation-provider.md)
+- [İstemci Tarafı UI Otomasyonu Sağlayıcı Oluşturma](create-a-client-side-ui-automation-provider.md)

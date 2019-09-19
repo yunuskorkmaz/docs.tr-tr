@@ -6,12 +6,12 @@ helpviewer_keywords:
 - client-side UI Automation provider, implementation
 - provider implementation, UI Automation
 ms.assetid: 3584c0a1-9cd0-4968-8b63-b06390890ef6
-ms.openlocfilehash: 9079dfa03ab81bfa6875e43bfa8a6e5351e0a35d
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.openlocfilehash: 28179ecd27c98f1de5662908ced3ea0e49cb87ad
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70015110"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71043956"
 ---
 # <a name="client-side-ui-automation-provider-implementation"></a>İstemci Tarafı UI Otomasyon Sağlayıcıyı Uygulama
 > [!NOTE]
@@ -25,7 +25,7 @@ ms.locfileid: "70015110"
   
  [!INCLUDE[TLA2#tla_winvista](../../../includes/tla2sharptla-winvista-md.md)]Standart [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] ve Windows Forms denetimleri için sağlayıcıları sağlar. Ayrıca, bir geri dönüş sağlayıcısı, başka [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] bir sunucu tarafı sağlayıcı veya proxy tarafından sunulmayan ancak Microsoft Etkin Erişilebilirlik uygulamasına sahip olan herhangi bir denetime kısmi destek verir. Bu sağlayıcıların tümü otomatik olarak yüklenir ve istemci uygulamaları tarafından kullanılabilir.  
   
- [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] Ve Windows Forms denetimleri hakkında daha fazla bilgi için bkz. [standart denetimler için UI Otomasyon desteği](../../../docs/framework/ui-automation/ui-automation-support-for-standard-controls.md).  
+ [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] Ve Windows Forms denetimleri hakkında daha fazla bilgi için bkz. [standart denetimler için UI Otomasyon desteği](ui-automation-support-for-standard-controls.md).  
   
  Uygulamalar diğer istemci tarafı sağlayıcılarını de kaydedebilir.  
   
@@ -51,5 +51,5 @@ ms.locfileid: "70015110"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [İstemci Tarafı UI Otomasyonu Sağlayıcı Oluşturma](../../../docs/framework/ui-automation/create-a-client-side-ui-automation-provider.md)
-- [UI Otomasyonu Sağlayıcıları Bir İstemci Programında Uygulama](../../../docs/framework/ui-automation/implement-ui-automation-providers-in-a-client-application.md)
+- [İstemci Tarafı UI Otomasyonu Sağlayıcı Oluşturma](create-a-client-side-ui-automation-provider.md)
+- [UI Otomasyonu Sağlayıcıları Bir İstemci Programında Uygulama](implement-ui-automation-providers-in-a-client-application.md)

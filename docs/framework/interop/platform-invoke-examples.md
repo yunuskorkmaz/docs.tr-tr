@@ -15,24 +15,24 @@ helpviewer_keywords:
 ms.assetid: 15926806-f0b7-487e-93a6-4e9367ec689f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 37a864083fa7cfbea16614a94454571f31deed3a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 89c2043570b9e2798ef41984b889791ddfe1d526
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61872618"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051657"
 ---
 # <a name="platform-invoke-examples"></a>Platform Çağırma Örnekleri
-Aşağıdaki örnekler çağırmak nasıl gösterir **MessageBox** User32.dll, basit bir dize bağımsız değişken geçirme işlevi. Örneklerde, <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> ayarlanmış **otomatik** karakter genişliği belirlemek ve dize sıralama hedef platform izin vermek için.  
+Aşağıdaki örnekler, bir bağımsız değişken olarak basit bir dize geçirerek User32. dll ' de **MessageBox** işlevinin nasıl tanımlanacağını ve çağrılacağını gösterir. Örneklerde, <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> alan, hedef platformun karakter genişliğini ve dize sıralamasını belirlemesine izin vermek için **Auto** olarak ayarlanır.  
   
  [!code-cpp[Conceptual.Interop.PInvoke#1](../../../samples/snippets/cpp/VS_Snippets_CLR/Conceptual.Interop.PInvoke/cpp/Example.cpp#1)] 
  [!code-csharp[Conceptual.Interop.PInvoke#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.Interop.PInvoke/cs/Example1.cs#1)] 
  [!code-vb[Conceptual.Interop.PInvoke#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.Interop.PInvoke/vb/Example1.vb#1)]  
   
- Diğer örnekler için [Platform Çağırma ile veri hazırlama](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md).  
+ Ek örnekler için bkz. [Platform çağırma Ile verileri sıralama](marshaling-data-with-platform-invoke.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Runtime.InteropServices.DllImportAttribute>
-- [Yönetilen Kodda Prototipler Oluşturma](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)
-- [Karakter Kümesi Belirtme](../../../docs/framework/interop/specifying-a-character-set.md)
+- [Yönetilen Kodda Prototipler Oluşturma](creating-prototypes-in-managed-code.md)
+- [Karakter Kümesi Belirtme](specifying-a-character-set.md)

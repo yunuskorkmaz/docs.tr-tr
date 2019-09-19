@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 4b2fcf8a-429d-43ce-8334-e026040be8bb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e61ae55673cbf745ea4c637c5206efe41d8ab276
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e0eeaee969eda5e4d0ea1a119991456668c7d44f
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946668"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051736"
 ---
 # <a name="how-to-register-primary-interop-assemblies"></a>Nasıl yapılır: Birincil Birlikte Çalışma Derlemelerini Kaydetme
 
@@ -24,7 +24,7 @@ Sınıflar yalnızca COM birlikte çalışabilirliğine göre sıralanabilir ve 
 
  Üçüncü taraf COM türlerini açığa çıkarmak için planlamasanız bile, birincil birlikte çalışma derlemesini kullanmak COM bileşenleriyle birlikte çalışma görevini kolaylaştırabilir. Ancak, bu strateji, bir satıcının birincil birlikte çalışma derlemesinde tanımlı türler üzerinde yapabildikleri değişikliklerden ayrı bir işlem sağlar. Uygulamanız bu tür yalıtımı gerektirdiğinde, birincil birlikte çalışma derlemesini kullanmak yerine kendi birlikte çalışma derlemenizi oluşturun.
 
- Visual Studio ile başvurmadan önce, satın alınan tüm birincil birlikte çalışma derlemelerini geliştirme bilgisayarınıza kaydetmeniz gerekir. Visual Studio, bir COM tür kitaplığından bir türe ilk kez başvurduğunuzda bir birincil birlikte çalışma derlemesini arar ve kullanır. Visual Studio, tür kitaplığıyla ilişkili birincil birlikte çalışma derlemesini bulamıyorsa, bunun yerine bir birlikte çalışma derlemesi oluşturmak için size veya tekliflerini almanızı ister. Benzer şekilde, [tür kitaplığı alma programı (Tlbimp. exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md) , birincil birlikte çalışma derlemelerini bulmak için kayıt defterini de kullanır.
+ Visual Studio ile başvurmadan önce, satın alınan tüm birincil birlikte çalışma derlemelerini geliştirme bilgisayarınıza kaydetmeniz gerekir. Visual Studio, bir COM tür kitaplığından bir türe ilk kez başvurduğunuzda bir birincil birlikte çalışma derlemesini arar ve kullanır. Visual Studio, tür kitaplığıyla ilişkili birincil birlikte çalışma derlemesini bulamıyorsa, bunun yerine bir birlikte çalışma derlemesi oluşturmak için size veya tekliflerini almanızı ister. Benzer şekilde, [tür kitaplığı alma programı (Tlbimp. exe)](../tools/tlbimp-exe-type-library-importer.md) , birincil birlikte çalışma derlemelerini bulmak için kayıt defterini de kullanır.
 
  Visual Studio 'Yu kullanmayı planlamıyorsanız birincil birlikte çalışma derlemelerini kaydetmek gerekli olmasa da, kayıt iki avantaj sağlar:
 
@@ -32,7 +32,7 @@ Sınıflar yalnızca COM birlikte çalışabilirliğine göre sıralanabilir ve 
 
 - Yanlışlıkla yeni bir birlikte çalışma derlemesini oluşturmaktan ve kullanmaktan kaçınabilirsiniz. daha sonra, daha sonra, kayıtlı bir birincil birlikte çalışma derlemesine sahip olduğunuz bir türe başvurmak için Visual Studio 'Yu kullanabilirsiniz.
 
-Birincil birlikte çalışma derlemesini kaydetmek için [derleme kayıt aracı 'nı (Regasm. exe)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md) kullanın.
+Birincil birlikte çalışma derlemesini kaydetmek için [derleme kayıt aracı 'nı (Regasm. exe)](../tools/regasm-exe-assembly-registration-tool.md) kullanın.
 
 ## <a name="to-register-a-primary-interop-assembly"></a>Birincil birlikte çalışma derlemesini kaydetmek için
 

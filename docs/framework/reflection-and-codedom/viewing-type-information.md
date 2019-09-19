@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7e7303a9-4064-4738-b4e7-b75974ed70d2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e658b2c86eecdbc45a9adde8d28cfb890dd591b9
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a5417f330040c2b6ce08a53920f9a92117624a80
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69956655"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045767"
 ---
 # <a name="viewing-type-information"></a>Tür Bilgilerini Görüntüleme
 <xref:System.Type?displayProperty=nameWithType> Sınıfı, yansıma için bir merkezidir. Ortak dil çalışma zamanı, yansıma istediğinde yüklenen bir tür için **türü** oluşturur. Bu tür hakkındaki her şeyi bulmak için bir **tür** nesnesinin yöntemlerini, alanlarını, özelliklerini ve iç içe geçmiş sınıfları kullanabilirsiniz.  
@@ -26,7 +26,7 @@ ms.locfileid: "69956655"
  Yüklü <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType> olmayan <xref:System.Reflection.Assembly.GetTypes%2A?displayProperty=nameWithType> derlemelerden, istediğiniz tür veya türlerin adını geçirerek **tür** nesneleri almak için veya kullanın. Zaten <xref:System.Type.GetType%2A?displayProperty=nameWithType> yüklü olan bir derlemeden **tür** nesnelerini almak için kullanın. Modül <xref:System.Reflection.Module.GetType%2A?displayProperty=nameWithType> türü <xref:System.Reflection.Module.GetTypes%2A?displayProperty=nameWithType> nesneleri almak için ve kullanın.  
   
 > [!NOTE]
-> Genel türleri ve yöntemleri incelemek ve işlemek istiyorsanız, lütfen [yansıma ve genel türler](../../../docs/framework/reflection-and-codedom/reflection-and-generic-types.md) bölümünde sunulan ek bilgilere ve [nasıl yapılır: Yansıma](../../../docs/framework/reflection-and-codedom/how-to-examine-and-instantiate-generic-types-with-reflection.md)ile genel türleri Inceleyin ve örnek oluşturun.  
+> Genel türleri ve yöntemleri incelemek ve işlemek istiyorsanız, lütfen [yansıma ve genel türler](reflection-and-generic-types.md) bölümünde sunulan ek bilgilere ve [nasıl yapılır: Yansıma](how-to-examine-and-instantiate-generic-types-with-reflection.md)ile genel türleri Inceleyin ve örnek oluşturun.  
   
  Aşağıdaki örnek, bir derlemenin <xref:System.Reflection.Assembly> nesne ve modülünü almak için gereken söz dizimini gösterir.  
   
@@ -90,4 +90,4 @@ ms.locfileid: "69956655"
 - <xref:System.Reflection.FieldInfo>
 - <xref:System.Reflection.EventInfo>
 - <xref:System.Reflection.ParameterInfo>
-- [Yansıma ve Genel Türler](../../../docs/framework/reflection-and-codedom/reflection-and-generic-types.md)
+- [Yansıma ve Genel Türler](reflection-and-generic-types.md)

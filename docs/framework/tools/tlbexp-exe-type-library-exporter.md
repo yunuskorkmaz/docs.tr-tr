@@ -10,17 +10,17 @@ helpviewer_keywords:
 ms.assetid: a487d61b-d166-467b-a7ca-d8b52fbff42d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f990c5194c2e5dc1422aab96c7608c019ae9855b
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 84ae47b984d6a1a207e6678e30991073ba02a438
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894757"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044001"
 ---
 # <a name="tlbexpexe-type-library-exporter"></a>Tlbexp.exe (Tür Kitaplığı Dışarı Aktarıcı)
 Tür Kitaplığı Verme Programı, bir ortak dil çalışma zamanı derlemesinde tanımlanan türleri açıklayan bir tür kitaplığı üretir.  
   
- Bu araç, Visual Studio ile birlikte otomatik olarak yüklenir. Aracı çalıştırmak için, Visual Studio için Geliştirici Komut İstemi (veya Windows 7 ' de Visual Studio komut Istemi) kullanın. Daha fazla bilgi için bkz. [komut istemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+ Bu araç, Visual Studio ile birlikte otomatik olarak yüklenir. Aracı çalıştırmak için, Visual Studio için Geliştirici Komut İstemi (veya Windows 7 ' de Visual Studio komut Istemi) kullanın. Daha fazla bilgi için bkz. [komut istemleri](developer-command-prompt-for-vs.md).  
   
  Komut satırına şunu yazın:  
   
@@ -64,11 +64,11 @@ tlbexp assemblyName [options]
   
  Tüm derleme bir kez dönüştürülür. Derlemede tanımlanan türlerin bir alt kümesi için tür bilgisi üretmek üzere Tlbexp.exe'yi kullanamazsınız.  
   
- [Tür kitaplığı alma programı (Tlbimp. exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)kullanılarak içeri aktarılan bir derlemeden bir tür kitaplığı oluşturmak Için Tlbexp. exe ' yi kullanamazsınız. Onun yerine, Tlbimp.exe ile içeri aktarılan özgün tür kitaplığına başvurmanız gerekir. Tlbimp.exe kullanılarak içeri aktarılan derlemelere başvuran bir derlemeden bir tür kitaplığını içeri aktarabilirsiniz. Aşağıdaki örnekler bölümüne bakın.  
+ [Tür kitaplığı alma programı (Tlbimp. exe)](tlbimp-exe-type-library-importer.md)kullanılarak içeri aktarılan bir derlemeden bir tür kitaplığı oluşturmak Için Tlbexp. exe ' yi kullanamazsınız. Onun yerine, Tlbimp.exe ile içeri aktarılan özgün tür kitaplığına başvurmanız gerekir. Tlbimp.exe kullanılarak içeri aktarılan derlemelere başvuran bir derlemeden bir tür kitaplığını içeri aktarabilirsiniz. Aşağıdaki örnekler bölümüne bakın.  
   
  Tlbexp.exe, üretilen tür kitaplıklarını geçerli çalışma dizinine veya çıktı dosyası için belirtilen dizine yerleştirir. Tek bir derleme, birçok tür kitaplığının üretilmesine neden olabilir.  
   
- Tlbexp.exe bir tür kitaplığı oluşturur ama bunu kaydetmez. Bu, her ikisi de bir tür kitaplığı oluşturup kaydeden [Derleme Kayıt aracına (Regasm. exe)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md)karşılık gelir. COM ile bir tür kitaplığı üretmek ve kaydetmek için, Regasm.exe'yi kullanın.  
+ Tlbexp.exe bir tür kitaplığı oluşturur ama bunu kaydetmez. Bu, her ikisi de bir tür kitaplığı oluşturup kaydeden [Derleme Kayıt aracına (Regasm. exe)](regasm-exe-assembly-registration-tool.md)karşılık gelir. COM ile bir tür kitaplığı üretmek ve kaydetmek için, Regasm.exe'yi kullanın.  
   
  `/win32` Ya`/win64` da seçeneğini belirtmezseniz, Tlbexp. exe, derlemeyi gerçekleştirdiğiniz bilgisayarın türüne karşılık gelen bir 32-bit veya 64 bit tür kitaplığı oluşturur (32 bit veya 64 bit bilgisayar). Çapraz derleme amacıyla, 32 bitlik bir bilgisayarda `/win64` seçeneğini kullanarak 64 bit tür kitaplığı oluşturabilir ve `/win32` bir 32-bit tür kitaplığı oluşturmak için 64-bit bir bilgisayarda seçeneğini kullanabilirsiniz. 32 bitlik tür kitaplıklarında, <xref:System.Runtime.InteropServices.ComTypes.SYSKIND> değer olarak <xref:System.Runtime.InteropServices.ComTypes.SYSKIND.SYS_WIN32>ayarlanır. 64 bitlik tür kitaplıklarında, <xref:System.Runtime.InteropServices.ComTypes.SYSKIND> değer olarak <xref:System.Runtime.InteropServices.ComTypes.SYSKIND.SYS_WIN64>ayarlanır. Tüm veri türü dönüşümleri (örneğin, ve `IntPtr` `UIntPtr`gibi işaretçi ölçekli veri türleri) uygun şekilde dönüştürülür.  
   
@@ -132,8 +132,8 @@ tlbexp Sample.dll
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Runtime.InteropServices.TypeLibExporterFlags>
-- [Araçlar](../../../docs/framework/tools/index.md)
-- [Regasm.exe (Derleme Kayıt Aracı)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md)
+- [Araçlar](index.md)
+- [Regasm.exe (Derleme Kayıt Aracı)](regasm-exe-assembly-registration-tool.md)
 - [Derlemeden tür kitaplığına dönüştürme Özeti](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/xk1120c3(v=vs.100))
-- [Tlbimp.exe (Tür Kitaplığı İçeri Aktarıcı)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)
-- [Komut İstemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [Tlbimp.exe (Tür Kitaplığı İçeri Aktarıcı)](tlbimp-exe-type-library-importer.md)
+- [Komut İstemleri](developer-command-prompt-for-vs.md)

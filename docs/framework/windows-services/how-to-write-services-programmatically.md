@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows Service applications, creating
 ms.assetid: 3abbb2ec-78d2-41e6-b9f9-6662d4e2cdc7
 author: ghogen
-ms.openlocfilehash: 29e0b95ad91c93f3a23246daf2be128b10d7e2ce
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 5637d569ad5261bff6865af4ab2ed8b7631d2d38
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69952403"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053553"
 ---
 # <a name="how-to-write-services-programmatically"></a>Nasıl yapılır: Hizmetleri Program Aracılığıyla Yazma
 Windows hizmeti proje şablonunu kullanmayı tercih ederseniz, devralma ve diğer altyapı öğelerini kendiniz ayarlayarak kendi hizmetlerinizi yazabilirsiniz. Programlı olarak bir hizmet oluşturduğunuzda, şablonun sizin için başka bir tanıtıcı tutacağından birkaç adım gerçekleştirmeniz gerekir:  
@@ -59,21 +59,21 @@ Windows hizmeti proje şablonunu kullanmayı tercih ederseniz, devralma ve diğe
   
 6. İçin özel işlem tanımlamak istediğiniz diğer yöntemleri geçersiz kılın ve hizmetin her durumda gerçekleşmesi gereken eylemleri belirlemek için kod yazın.  
   
-7. Hizmet uygulamanız için gerekli yükleyicileri ekleyin. Daha fazla bilgi için [nasıl yapılır: Hizmet uygulamanıza](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)yükleyicileri ekleyin.  
+7. Hizmet uygulamanız için gerekli yükleyicileri ekleyin. Daha fazla bilgi için [nasıl yapılır: Hizmet uygulamanıza](how-to-add-installers-to-your-service-application.md)yükleyicileri ekleyin.  
   
 8. **Build** menüsünden **Build Solution** ' i seçerek projenizi oluşturun.  
   
     > [!NOTE]
     > Projenizi çalıştırmak için F5 tuşuna basmayın; bir hizmet projesini bu şekilde çalıştıramazsınız.  
   
-9. Hizmetinizi yüklemek için bir kurulum projesi ve özel eylemler oluşturun. Bir örnek için bkz [. İzlenecek yol: Bileşen tasarımcısında](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)bir Windows hizmeti uygulaması oluşturma.  
+9. Hizmetinizi yüklemek için bir kurulum projesi ve özel eylemler oluşturun. Bir örnek için bkz [. İzlenecek yol: Bileşen tasarımcısında](walkthrough-creating-a-windows-service-application-in-the-component-designer.md)bir Windows hizmeti uygulaması oluşturma.  
   
-10. Hizmetini yükleyin. Daha fazla bilgi için [nasıl yapılır: Hizmetleri](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)yükleme ve kaldırma.  
+10. Hizmetini yükleyin. Daha fazla bilgi için [nasıl yapılır: Hizmetleri](how-to-install-and-uninstall-services.md)yükleme ve kaldırma.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Windows Hizmeti Uygulamalarına Giriş](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
-- [Nasıl yapılır: Windows Hizmetleri oluşturma](../../../docs/framework/windows-services/how-to-create-windows-services.md)
-- [Nasıl yapılır: Hizmet uygulamanıza yükleyiciler ekleme](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)
-- [Nasıl yapılır: Hizmetlerle Ilgili bilgileri günlüğe kaydet](../../../docs/framework/windows-services/how-to-log-information-about-services.md)
-- [İzlenecek yol: Bileşen tasarımcısında bir Windows hizmeti uygulaması oluşturma](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)
+- [Windows Hizmeti Uygulamalarına Giriş](introduction-to-windows-service-applications.md)
+- [Nasıl yapılır: Windows Hizmetleri oluşturma](how-to-create-windows-services.md)
+- [Nasıl yapılır: Hizmet uygulamanıza yükleyiciler ekleme](how-to-add-installers-to-your-service-application.md)
+- [Nasıl yapılır: Hizmetlerle Ilgili bilgileri günlüğe kaydet](how-to-log-information-about-services.md)
+- [İzlenecek yol: Bileşen tasarımcısında bir Windows hizmeti uygulaması oluşturma](walkthrough-creating-a-windows-service-application-in-the-component-designer.md)

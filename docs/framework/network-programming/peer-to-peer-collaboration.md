@@ -2,44 +2,44 @@
 title: Eşler Arası İş Birliği
 ms.date: 03/30/2017
 ms.assetid: b6216d88-bccb-4a59-9f1c-9f751708e811
-ms.openlocfilehash: 0c257782ad391bb8de61caffdd13af1f2872ef6c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7cf92f6bf3c269e584cb8b3cdcf910be5b89fd7e
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623170"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047378"
 ---
 # <a name="peer-to-peer-collaboration"></a>Eşler arası işbirliği
 
-Eşler arası ağ Internet kenarında birden fazla yalnızca istemci tabanlı bilgi işlem görevleri için mevcut görece güçlü bilgisayarlar (kişisel bilgisayarlar) kullanımını ' dir. Modern kişisel bilgisayar (PC) çok hızlı bir işlemci, çok sayıda bellek ve bunların hiçbiri tam e-posta ve Web'e göz atma gibi ortak bilgi işlem görevlerini gerçekleştirirken kullanılan büyük sabit disk var. Modern PC kolayca hem istemci hem de birçok türdeki uygulamayı (bir eş) sunucusu olarak işlev görebilir.  
+Eşler arası ağ, yalnızca istemci tabanlı bilgi işlem görevlerinin daha fazla olması için Internet 'in kenarında bulunan görece güçlü bilgisayarların (kişisel bilgisayarlar) kullanımından yararlanılır. Modern kişisel bilgisayar (PC) çok hızlı bir işlemciye, büyük belleğe ve e-posta ve Web 'e göz atma gibi yaygın bilgi işlem görevleri gerçekleştirirken tam olarak kullanılan büyük bir sabit diske sahiptir. Modern bılgısayar, birçok tür uygulama için kolayca istemci ve sunucu (eş) görevi görür.  
   
-Eşler arası işbirliği altyapısı, kişilerin Windows Vista ve sonraki platformları bana hizmet yakın yararlanan Microsoft Windows Eşler arası altyapısının basitleştirilmiş bir uygulamadır. Bir alt ağ içinde eş özellikli uygulamalar için en iyi şekilde kullanılan, kişilere yakın service bana çalışır, internet uç noktalar veya kişiler de hizmet olsa da. Bu ortak kişi iletişim uç noktaları, kullanılabilirlik ve varolup olmadığını belirlemek için Live Messenger ve canlı kullanan diğer uygulamalar tarafından kullanılan Yöneticisi kullanmaktadır.  
+Eşler arası Işbirliği altyapısı, Windows Vista ve sonraki platformlarda hizmet Yakınımdaki kişilerden yararlanan Microsoft Windows Eşler arası altyapısı 'nın basitleştirilmiş bir uygulamasıdır. En iyi yöntem, hizmet Yakınımdaki Kişiler 'in çalıştığı bir alt ağ içinde, İnternet uç noktalarına veya kişilerine da hizmet verebilir. Canlı Messenger ve diğer canlı özellikli uygulamalar tarafından, iletişim uç noktalarını, kullanılabilirliği ve varlığı tespit etmek üzere kullanılan ortak Iletişim Yöneticisi 'Ni içerir.  
   
 ## <a name="collaboration-applications"></a>İşbirliği uygulamaları
 
- Tipik bir eşler arası işbirliği uygulaması, aşağıdaki adımlardan oluşur:  
+ Tipik bir eşler arası işbirliği uygulaması aşağıdaki adımlardan oluşur:  
   
-- Eş bir işbirliği oturumu barındırma isteyen bir eş kimliğini belirler.  
+- Eş, işbirliği oturumunu barındırmak isteyen bir eşin kimliğini belirler  
   
-- Bir oturum barındırmak için bir istek, bu şekilde, gönderilir ve işbirliği etkinlik yönetmek konak eş kabul eder.  
+- Bir oturumu barındırma isteği gönderilir, bir şekilde ve konak eşi işbirliği etkinliğini yönetmeyi kabul eder.  
   
-- Konak bir oturuma (istek sahibine dahil) alt ağda bulunan kişileri davet eder.  
+- Ana bilgisayar, alt ağdaki (istek sahibi dahil) kişileri bir oturuma davet eder.  
   
-- İşbirliği yapmak istediğiniz tüm eşleri kişi yöneticilerinin konağa ekleyebilir.  
+- İşbirliği yapmak isteyen tüm Peers ana bilgisayar, iletişim yöneticilerine eklenebilir.  
   
-- Çoğu eşleri, kabul edilen veya reddedilen zamanında konak eş dön davet yanıt gönderir.  
+- Çoğu eş, kabul edilen veya reddedilen davet yanıtlarını, ana bilgisayar eşine zamanında geri gönderilir.  
   
-- Konak eşler arası işbirliği yapmak istediğiniz tüm eşleri abone olur.  
+- İşbirliği yapmak isteyen tüm Peers konak eşine abone olur.  
   
-- Eşlerden ilk işbirliği etkinliklerini gerçekleştirirken, konak eş için kişi kendi Yöneticisi uzak eşlerden ekleyebilir. Ayrıca tüm davet yanıtlarını belirlemek için kim, kimin reddetti ve kimin değil yanıtlamasından kabul etti işler.  Bunu verilmemesi olanlar için davetiye iptal edin veya başka bir etkinliği gerçekleştirin.  
+- Eşler ilk işbirliği etkinliklerini gerçekleştirirken, konak eşi uzak eşleri ilgili kişi yöneticisine ekleyebilir. Ayrıca kimlerin kabul edildiğini, kimin reddettiğini ve kimin yanıtlanmadığını belirleme için tüm davet yanıtlarını işler.  Yanıtlamadığınıza veya başka bir etkinliğe yönelik davetleri iptal edebilir.  
   
-- Bu noktada, konak eş, davet edilen meslektaşlarınızla bir işbirliği oturumu başlatın veya ile işbirliği altyapınızın bir uygulamayı kaydetme.  P2p uygulamaları eşler arası işbirliği altyapısı kullanır ve <xref:System.Net.PeerToPeer.Collaboration> oyunlar, Bülten panosu, konferans ve diğer durum sunucusuz uygulamalar için iletişimleri için ad alanı.  
+- Bu noktada, konak eşi tüm davet eden eşleri ile bir işbirliği oturumu başlatabilir veya bir uygulamayı işbirliği altyapısına kaydedebilir.  P2P uygulamaları, Oyunlar, bülten panoları, konferans ve diğer sunucusuz <xref:System.Net.PeerToPeer.Collaboration> varlık uygulamalarına yönelik iletişimleri koordine etmek için eşler arası işbirliği altyapısını ve ad alanını kullanır.  
   
 ## <a name="peer-to-peer-networking-security"></a>Eşler arası ağ güvenliği  
 
- Bir Active Directory etki alanında etki alanı denetleyicileri, Kerberos kullanarak kimlik doğrulama hizmetleri sağlar. Bir eş sunucusuz ortamda eşlere kendi kimlik doğrulaması sağlamanız gerekir. Ağ eşler için herhangi bir düğüm her eşin güvenilen kök deposunda bir kök sertifika gereksinimi kaldırma, bir CA olarak işlev görebilir. X.509 sertifikaları biçimlendirilmiş otomatik olarak imzalanan sertifikaları kullanarak kimlik doğrulaması sağlanır. Ortak anahtar/özel anahtar çifti ve özel anahtar ile imzalanmış bir sertifika oluşturur. her eş tarafından oluşturulan sertifikaları şunlardır. Otomatik olarak imzalanan sertifika kimlik doğrulaması ve eş varlık hakkında bilgi sağlamak için kullanılır. X.509 kimlik doğrulaması gibi izleme için geri güvenilir bir ortak anahtar sertifikaları zincirine eş ağ kimlik doğrulaması kullanır.  
+ Active Directory etki alanında, etki alanı denetleyicileri Kerberos kullanarak kimlik doğrulama hizmetleri sağlar. Sunucusuz bir eş ortamında, eşler kendi kimlik doğrulamasını sağlamalıdır. Eşler arası ağ için, herhangi bir düğüm CA işlevi görebilir ve her eşin güvenilen kök deposundaki bir kök sertifika gereksinimini ortadan kaldırır. Kimlik doğrulaması, X. 509.440 sertifikaları olarak biçimlendirilen, otomatik olarak imzalanan sertifikalar kullanılarak sağlanır. Bunlar, ortak anahtar/özel anahtar çiftini ve özel anahtar kullanılarak imzalanmış sertifikayı üreten her bir eş tarafından oluşturulan sertifikalardır. Otomatik olarak imzalanan sertifika, kimlik doğrulaması için kullanılır ve eş varlık hakkında bilgi sağlar. X. 509.440 kimlik doğrulaması gibi, Eş ağ kimlik doğrulaması da güvenilen bir ortak anahtara geri doğru bir sertifika zincirini izleme işlemi kullanır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Net.PeerToPeer.Collaboration>
-- [System.Net.PeerToPeer.Collaboration Ad Alanı Hakkında](../../../docs/framework/network-programming/about-the-system-net-peertopeer-collaboration-namespace.md)
+- [System.Net.PeerToPeer.Collaboration Ad Alanı Hakkında](about-the-system-net-peertopeer-collaboration-namespace.md)

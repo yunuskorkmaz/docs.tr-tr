@@ -13,12 +13,12 @@ helpviewer_keywords:
 - logs, service applications
 ms.assetid: c0d8140f-c055-4d8e-a2e0-37358a550116
 author: ghogen
-ms.openlocfilehash: 1ffc698910fe722fe761c62b87b059068d5f243f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 3c974d5a98f8056e45899b109878e5a28ab2938e
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69935517"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053614"
 ---
 # <a name="how-to-log-information-about-services"></a>Nasıl yapılır: Hizmet Bilgilerini Günlüğe Kaydetme
 Varsayılan olarak, tüm Windows hizmeti projelerinin uygulama olay günlüğü ile etkileşim kurma ve bu bilgilere yazma bilgileri ve özel durumları vardır. Uygulamanızda bu işlevselliği <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> isteyip istemediğinizi belirtmek için özelliğini kullanın. Varsayılan olarak, Windows hizmeti proje şablonuyla oluşturduğunuz her hizmet için günlük kaydı açıktır. Bir <xref:System.Diagnostics.EventLog> bileşenin örneğini oluşturmak veya bir kaynağı el <xref:System.Diagnostics.EventLog> ile kaydetmek zorunda kalmadan hizmet bilgilerini bir günlüğe yazmak için sınıfının statik bir biçimini kullanabilirsiniz.  
@@ -71,4 +71,4 @@ Varsayılan olarak, tüm Windows hizmeti projelerinin uygulama olay günlüğü 
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Windows Hizmeti Uygulamalarına Giriş](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
+- [Windows Hizmeti Uygulamalarına Giriş](introduction-to-windows-service-applications.md)

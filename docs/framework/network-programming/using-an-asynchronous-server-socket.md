@@ -17,12 +17,12 @@ helpviewer_keywords:
 - protocols, sockets
 - Internet, sockets
 ms.assetid: 813489a9-3efd-41b6-a33f-371d55397676
-ms.openlocfilehash: 58c9e0846e09774d8c97089016086ecddd2d17ee
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 11ed53a4e51ba6993fd4e240116b0e1de910a01e
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69938406"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047042"
 ---
 # <a name="using-an-asynchronous-server-socket"></a>Zaman Uyumsuz Sunucu Yuvası Kullanma
 Zaman uyumsuz sunucu yuvaları, ağ hizmeti isteklerini işlemek için .NET Framework zaman uyumsuz programlama modeli kullanır. Sınıfı standart .NET Framework zaman uyumsuz adlandırma düzenine uyar; Örneğin, zaman uyumlu <xref:System.Net.Sockets.Socket.Accept%2A> yöntemi zaman uyumsuz <xref:System.Net.Sockets.Socket.BeginAccept%2A> ve <xref:System.Net.Sockets.Socket.EndAccept%2A> yöntemlere karşılık gelir. <xref:System.Net.Sockets.Socket>  
@@ -270,7 +270,7 @@ public static void ReadCallback(IAsyncResult ar)
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Zaman Uyumlu Sunucu Yuvası Kullanma](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)
-- [Zaman Uyumsuz Sunucu Yuvası Örneği](../../../docs/framework/network-programming/asynchronous-server-socket-example.md)
+- [Zaman Uyumlu Sunucu Yuvası Kullanma](using-a-synchronous-server-socket.md)
+- [Zaman Uyumsuz Sunucu Yuvası Örneği](asynchronous-server-socket-example.md)
 - [İş parçacığı oluşturma](../../standard/threading/index.md)
-- [Yuvalarla Dinleme](../../../docs/framework/network-programming/listening-with-sockets.md)
+- [Yuvalarla Dinleme](listening-with-sockets.md)

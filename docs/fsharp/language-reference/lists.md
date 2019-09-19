@@ -2,12 +2,12 @@
 title: Listeler
 description: Aynı türdeki F# sıralı, sabit bir öğe serisi olan listeler hakkında bilgi edinin.
 ms.date: 05/16/2016
-ms.openlocfilehash: e8c4a464306cfedfd36a4685507684d3a1a97a2e
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 72f1779d7d077da0f1f4804df93fa4ac11f9b2e3
+ms.sourcegitcommit: a2d0e1f66367367065bc8dc0dde488ab536da73f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630736"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71082907"
 ---
 # <a name="lists"></a>Listeler
 
@@ -99,7 +99,7 @@ Aşağıdaki kod örneği, bir liste üzerinde işlemler gerçekleştiren özyin
 
 Çıktı aşağıdaki şekilde olacaktır:
 
-```
+```console
 Primes Up To 100:
 [2; 3; 5; 7; 11; 13; 17; 19; 23; 29; 31; 37; 41; 43; 47; 53; 59; 61; 67; 71; 73; 79; 83; 89; 97]
 ```
@@ -120,7 +120,7 @@ Aşağıdaki kod öğesinin `List.exists`kullanımını gösterir.
 
 Çıktı aşağıdaki şekilde olacaktır:
 
-```
+```console
 For list [0; 1; 2; 3], contains zero is true
 ```
 
@@ -130,7 +130,7 @@ Aşağıdaki örnek öğesinin `List.exists2`kullanımını gösterir.
 
 Çıktı aşağıdaki şekilde olacaktır:
 
-```
+```console
 Lists [1; 2; 3; 4; 5] and [5; 4; 3; 2; 1] have at least one equal element at the same position.
 ```
 
@@ -140,7 +140,7 @@ List [. forall](https://msdn.microsoft.com/library/e11a5233-d612-40ac-833b-d5cf4
 
 Çıktı aşağıdaki şekilde olacaktır:
 
-```
+```console
 true
 false
 ```
@@ -151,7 +151,7 @@ Benzer şekilde, [List. forall2](https://msdn.microsoft.com/library/bb611f02-827
 
 Çıktı aşağıdaki şekilde olacaktır:
 
-```
+```console
 true
 false
 ```
@@ -168,7 +168,7 @@ Aşağıdaki örnek öğesinin `List.sort`kullanımını gösterir.
 
 Çıktı aşağıdaki şekilde olacaktır:
 
-```
+```console
 [-2; 1; 4; 5; 8]
 ```
 
@@ -178,7 +178,7 @@ Aşağıdaki örnek öğesinin `List.sortBy`kullanımını gösterir.
 
 Çıktı aşağıdaki şekilde olacaktır:
 
-```
+```console
 [1; -2; 4; 5; 8]
 ```
 
@@ -188,7 +188,7 @@ Sonraki örnek öğesinin `List.sortWith`kullanımını gösterir. Bu örnekte, 
 
 Çıktı aşağıdaki şekilde olacaktır:
 
-```
+```console
 [{ID = 92;
 Rev = 1;}; {ID = 92;
 Rev = 1;}; {ID = 100;
@@ -213,7 +213,7 @@ Sonuç 5 ' tir.
 
 Çıktı aşağıdaki şekilde olacaktır:
 
-```
+```console
 "b"
 ```
 
@@ -223,7 +223,7 @@ Başka bir arama işlemleri grubu olan [List. tryFind](https://msdn.microsoft.co
 
 Çıktı aşağıdaki şekilde olacaktır:
 
-```
+```console
 The first even value is 22.
 The first even value is at position 8.
 ```
@@ -252,7 +252,7 @@ Tanımlama gruplarını içeren listeler, zip ve unzip işlevleri tarafından de
 
 Çıktı aşağıdaki şekilde olacaktır:
 
-```
+```console
 [(1, -1); (2, -2); (3; -3)]
 ```
 
@@ -262,7 +262,7 @@ Aşağıdaki kod örneği öğesinin `List.zip3`kullanımını gösterir.
 
 Çıktı aşağıdaki şekilde olacaktır:
 
-```
+```console
 [(1, -1, 0); (2, -2, 0); (3, -3, 0)]
 ```
 
@@ -274,7 +274,7 @@ Aşağıdaki kod örneği [List. unzip](https://msdn.microsoft.com/library/639db
 
 Çıktı aşağıdaki şekilde olacaktır:
 
-```
+```console
 ([1; 3], [2; 4])
 [1; 3] [2; 4]
 ```
@@ -285,19 +285,19 @@ Aşağıdaki kod örneği [List. unzip3](https://msdn.microsoft.com/library/4307
 
 Çıktı aşağıdaki şekilde olacaktır:
 
-```
+```console
 ([1; 4], [2; 5], [3; 6])
 ```
 
 ### <a name="operating-on-list-elements"></a>Liste öğelerinde çalışma
 
-F#liste öğelerinde çeşitli işlemleri destekler. Listenin her öğesinde bir işlevi çağırmanızı sağlayan en basit [List. iter](https://msdn.microsoft.com/library/f778d075-81a9-4994-af60-cddcc53a201f). Her bir öğenin dizininin her biri için çağrılan işleve bir bağımsız değişken olarak geçirilme `List.iter` hariç olmak üzere, iki [listedeki](https://msdn.microsoft.com/library/6dd21ae6-5c00-41cd-8306-821e513d8f60)öğeler üzerinde bir işlem gerçekleştirmenize olanak sağlayan Çeşitlemeler içerir [List. iter2.](https://msdn.microsoft.com/library/ea3b7761-916c-4016-9bd8-651124c98b40) öğesi ve, `List.iter2` ve `List.iteri`işlevlerinin bir birleşimi olan [List. iteri2](https://msdn.microsoft.com/library/9658d740-9be5-4bf7-b663-c8ab2b3e196c). Aşağıdaki kod örneği bu işlevleri gösterir.
+F#liste öğelerinde çeşitli işlemleri destekler. Listenin her öğesinde bir işlevi çağırmanızı sağlayan en basit [List. iter](https://msdn.microsoft.com/library/f778d075-81a9-4994-af60-cddcc53a201f). Her bir öğenin dizininin her biri için çağrılan işleve bir bağımsız değişken olarak [geçirilme](https://msdn.microsoft.com/library/6dd21ae6-5c00-41cd-8306-821e513d8f60) `List.iter` hariç olmak üzere, iki listedeki öğeler üzerinde bir işlem gerçekleştirmenize olanak sağlayan Çeşitlemeler içerir [List. iter2.](https://msdn.microsoft.com/library/ea3b7761-916c-4016-9bd8-651124c98b40) öğesi ve, `List.iter2` ve `List.iteri`işlevlerinin bir birleşimi olan [List. iteri2](https://msdn.microsoft.com/library/9658d740-9be5-4bf7-b663-c8ab2b3e196c). Aşağıdaki kod örneği bu işlevleri gösterir.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lists/snippet17.fs)]
 
 Çıktı aşağıdaki şekilde olacaktır:
 
-```
+```console
 List.iter: element is 1
 List.iter: element is 2
 List.iter: element is 3
@@ -318,7 +318,7 @@ Liste öğelerini dönüştüren başka bir sık kullanılan işlev List [. Map]
 
 Çıktı aşağıdaki şekilde olacaktır:
 
-```
+```console
 [2; 3; 4]
 ```
 
@@ -328,7 +328,7 @@ Aşağıdaki örnek öğesinin `List.map2`kullanımını gösterir.
 
 Çıktı aşağıdaki şekilde olacaktır:
 
-```
+```console
 [5; 7; 9]
 ```
 
@@ -338,7 +338,7 @@ Aşağıdaki örnek öğesinin `List.map3`kullanımını gösterir.
 
 Çıktı aşağıdaki şekilde olacaktır:
 
-```
+```console
 [7; 10; 13]
 ```
 
@@ -348,7 +348,7 @@ Aşağıdaki örnek öğesinin `List.mapi`kullanımını gösterir.
 
 Çıktı aşağıdaki şekilde olacaktır:
 
-```
+```console
 [1; 3; 5]
 ```
 
@@ -358,7 +358,7 @@ Aşağıdaki örnek öğesinin `List.mapi2`kullanımını gösterir.
 
 Çıktı aşağıdaki şekilde olacaktır:
 
-```
+```console
 [0; 7; 18]
 ```
 
@@ -368,7 +368,7 @@ Aşağıdaki örnek öğesinin `List.mapi2`kullanımını gösterir.
 
 Çıktı aşağıdaki şekilde olacaktır:
 
-```
+```console
 [1; 2; 3; 2; 4; 6; 3; 6; 9]
 ```
 
@@ -386,7 +386,7 @@ Aşağıdaki kod, bir sözcük listesinden büyük `List.choose` harfli sözcük
 
 Çıktı aşağıdaki şekilde olacaktır:
 
-```
+```console
 ["Rome's"; "Bob's"]
 ```
 
@@ -398,7 +398,7 @@ Listeler birlikte birleştirilebilir. İki listeyi tek tek birleştirmek için [
 
 ### <a name="fold-and-scan-operations"></a>Katlama ve tarama Işlemleri
 
-Bazı liste işlemleri liste öğeleri arasında bağımlılıkları kapsar. Katlama ve tarama işlemleri, her öğe `List.iter` üzerinde `List.map` bir işlevi çağırmanıza benzer ancak bu işlemler, hesaplama aracılığıyla bilgi taşıyan bir ek parametre sağlar.
+Bazı liste işlemleri liste öğeleri arasında bağımlılıkları kapsar. Katlama ve tarama işlemleri, her öğe `List.iter` üzerinde `List.map` bir işlevi çağırmanıza benzer ancak bu işlemler, hesaplama aracılığıyla *bilgi taşıyan bir* ek parametre sağlar.
 
 Bir `List.fold` liste üzerinde hesaplama gerçekleştirmek için kullanın.
 

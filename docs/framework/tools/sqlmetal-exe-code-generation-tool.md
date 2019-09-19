@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LINQ to SQL, DBML files
 - LINQ to SQL, SQLMetal
 ms.assetid: 819e5a96-7646-4fdb-b14b-fe31221b0614
-ms.openlocfilehash: 0d12196acab5a50f7dd6fc78e6dccc098cf3e2de
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: d5b4c2b59b585b3d3a3584ef9055e70c9d998e85
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894614"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044085"
 ---
 # <a name="sqlmetalexe-code-generation-tool"></a>SqlMetal.exe (Kod Üretme Aracı)
 SqlMetal komut satırı aracı .NET Framework [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)] bileşeni için kod ve eşleme oluşturur. Bu konunun ilerisinde görünen seçenekleri uygulayarak, SqlMetal'den aşağıdakileri içeren çeşitli farklı eylemler gerçekleştirmesini isteyebilirsiniz:  
@@ -30,7 +30,7 @@ SqlMetal komut satırı aracı .NET Framework [!INCLUDE[vbtecdlinq](../../../inc
 > [!NOTE]
 > Visual Studio kullanan geliştiriciler de Nesne İlişkisel Tasarımcısı varlık sınıfları oluşturmak için kullanabilir. Komut satırı yaklaşımı, büyük veritabanları için uygun düşmektedir. SqlMetal bir komut satırı aracı olduğundan, bir oluşturma işleminde kullanabilirsiniz.  
   
- Aracı çalıştırmak için, Visual Studio için Geliştirici Komut İstemi (veya Windows 7 ' de Visual Studio komut Istemi) kullanın. Daha fazla bilgi için bkz. [komut istemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md). Komut isteminde aşağıdakileri yazın:  
+ Aracı çalıştırmak için, Visual Studio için Geliştirici Komut İstemi (veya Windows 7 ' de Visual Studio komut Istemi) kullanın. Daha fazla bilgi için bkz. [komut istemleri](developer-command-prompt-for-vs.md). Komut isteminde aşağıdakileri yazın:  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -77,7 +77,7 @@ sqlmetal [options] [<input file>]
 |**/Context:**  *tür\<>*|Veri bağlamı sınıfının adını belirtir. Varsayılan değer: Veritabanı adından türetilir.|  
 |**/entitybase:**  *tür\<>*|Üretilen kodda varlık sınıflarının temel sınıfını belirtir. Varsayılan değer: Varlıkların temel sınıfı yok.|  
 |**/plurleştir**|Sınıf ve üye adlarını otomatik olarak çoğullaştırır veya tekilleştirir.<br /><br /> Bu seçenek yalnızca ABD 'de kullanılabilir İngilizce sürümü.|  
-|**/Serialization:**  *seçenek\<>*|Seri hale getirilebilir sınıflar oluşturur.<br /><br /> *Geçerli\<Seçenek >* : Hiçbiri, tek yönlü. Varsayılan değer: Yok.<br /><br /> Daha fazla bilgi için bkz. [serileştirme](../../../docs/framework/data/adonet/sql/linq/serialization.md).|  
+|**/Serialization:**  *seçenek\<>*|Seri hale getirilebilir sınıflar oluşturur.<br /><br /> *Geçerli\<Seçenek >* : Hiçbiri, tek yönlü. Varsayılan değer: Yok.<br /><br /> Daha fazla bilgi için bkz. [serileştirme](../data/adonet/sql/linq/serialization.md).|  
   
  **Giriş dosyası**  
   
@@ -134,6 +134,6 @@ sqlmetal [options] [<input file>]
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapılır: Visual Basic veya içinde nesne modeli oluşturmaC#](../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)
-- [LINQ to SQL’de Kod Oluşturma](../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)
-- [Dış Eşleme](../../../docs/framework/data/adonet/sql/linq/external-mapping.md)
+- [Nasıl yapılır: Visual Basic veya içinde nesne modeli oluşturmaC#](../data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)
+- [LINQ to SQL’de Kod Oluşturma](../data/adonet/sql/linq/code-generation-in-linq-to-sql.md)
+- [Dış Eşleme](../data/adonet/sql/linq/external-mapping.md)

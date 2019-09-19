@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - UI Automation
 ms.assetid: e7ec856e-41ee-47b1-9d57-b75a3dad088c
-ms.openlocfilehash: 3c7dc456b9378f1eab09a2300e379d9156722485
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 667f0ded506305f3d7eb1ac5c43d3f65aab2cca9
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926970"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71043044"
 ---
 # <a name="accessibility"></a>Erişilebilirlik
 > [!NOTE]
@@ -22,14 +22,14 @@ ms.locfileid: "70926970"
  Bu belgede, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] yönetilen kod için API açıklanmaktadır. İçindeki [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] C++için programlama hakkında bilgi için bkz. [Win32 uygulamaları için UI Otomasyonu](/windows/desktop/winauto/windows-automation-api-portal).  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [En İyi Erişilebilirlik Uygulamaları](../../../docs/framework/ui-automation/accessibility-best-practices.md)  
- [UI Otomasyonu Temelleri](../../../docs/framework/ui-automation/index.md)  
- [Yönetilen Kod İçin UI Otomasyonu Sağlayıcıları](../../../docs/framework/ui-automation/ui-automation-providers-for-managed-code.md)  
- [Yönetilen Kod İçin UI Otomasyonu İstemcileri](../../../docs/framework/ui-automation/ui-automation-clients-for-managed-code.md)  
- [UI Otomasyonu Denetim Desenleri](../../../docs/framework/ui-automation/ui-automation-control-patterns.md)  
- [UI Otomasyonu Metin Deseni](../../../docs/framework/ui-automation/ui-automation-text-pattern.md)  
- [UI Otomasyonu Denetim Türleri](../../../docs/framework/ui-automation/ui-automation-control-types.md)  
- [UI Otomasyonu Belirtimi ve Topluluk Taahhüdü](../../../docs/framework/ui-automation/ui-automation-specification-and-community-promise.md)  
+ [En İyi Erişilebilirlik Uygulamaları](accessibility-best-practices.md)  
+ [UI Otomasyonu Temelleri](index.md)  
+ [Yönetilen Kod İçin UI Otomasyonu Sağlayıcıları](ui-automation-providers-for-managed-code.md)  
+ [Yönetilen Kod İçin UI Otomasyonu İstemcileri](ui-automation-clients-for-managed-code.md)  
+ [UI Otomasyonu Denetim Desenleri](ui-automation-control-patterns.md)  
+ [UI Otomasyonu Metin Deseni](ui-automation-text-pattern.md)  
+ [UI Otomasyonu Denetim Türleri](ui-automation-control-types.md)  
+ [UI Otomasyonu Belirtimi ve Topluluk Taahhüdü](ui-automation-specification-and-community-promise.md)  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
 

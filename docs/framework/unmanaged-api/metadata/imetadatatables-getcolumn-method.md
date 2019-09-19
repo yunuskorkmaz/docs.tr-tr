@@ -1,6 +1,6 @@
 ---
 title: IMetaDataTables::GetColumn Yöntemi
-ms.date: 03/30/2017
+ms.date: 02/25/2019
 api_name:
 - IMetaDataTables.GetColumn
 api_location:
@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 22f9ceab2f01ac12762710f313c56f3f0ee4e6be
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 853f137d91e1b3eb4f3f65a06522618f8441dcb3
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781538"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053671"
 ---
 # <a name="imetadatatablesgetcolumn-method"></a>IMetaDataTables::GetColumn Yöntemi
-Belirtilen sütun ve satır tablodaki hücre bulunan değere bir işaretçi alır.  
+Verilen tablodaki belirtilen sütun ve satır hücresinde bulunan değere bir işaretçi alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,27 +38,49 @@ HRESULT GetColumn (
 );  
 ```  
   
-## <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler
+
  `ixTbl`  
- [in] Tablo dizini.  
+ 'ndaki Tablonun dizini.  
   
  `ixCol`  
- [in] Tablodaki sütun dizini.  
+ 'ndaki Tablodaki sütunun dizini.  
   
  `rid`  
- [in] Tablodaki satır dizini.  
+ 'ndaki Tablodaki satırın dizini.  
   
  `pVal`  
- [out] Hücrenin değerini bir işaretçi.  
+ dışı Hücredeki değere yönelik bir işaretçi.  
+ 
+## <a name="remarks"></a>Açıklamalar
+
+Üzerinden `pVal` döndürülen değerin yorumlandığına sütunun türüne bağlıdır. Sütun türü, [IMetaDataTables. GetColumnInfo](imetadatatables-getcolumninfo-method.md)çağırarak belirlenebilir.
+
+- **GetColumn** yöntemi, **RID** veya **codedtoken** türündeki sütunları otomatik olarak tam 32-bit `mdToken` değerlere dönüştürür.
+- Ayrıca, 8 bit veya 16 bit değerleri otomatik olarak tam 32-bit değerlerine dönüştürür. 
+- *Yığın* türü sütunlarında, döndürülen *Pval* karşılık gelen yığında bir dizin olacaktır.
+
+| Sütun türü              | pVal içerir | Yorum                          |
+|--------------------------|---------------|-----------------------------------|
+| `0`..`iRidMax`<br>(0.. 63)  | mdToken     | *Pval* , tam bir belirteç içerir. İşlevi, RID 'yi otomatik olarak tam belirtece dönüştürür. |
+| `iCodedToken`..`iCodedTokenMax`<br>(64.. 95) | mdToken | Dönüş sonrasında *Pval* bir tam belirteç içerecektir. İşlevi CodedToken 'ı otomatik olarak tam belirtece açar. |
+| `iSHORT`(96)            | Int16         | Otomatik olarak 32 bit olarak oturum açın.  |
+| `iUSHORT`(97)           | UInt16        | Otomatik olarak 32 bit olarak oturum açın.  |
+| `iLONG`(98)             | Int32         |                                        | 
+| `iULONG`(99)            | UInt32        |                                        |
+| `iBYTE`(100)            | Bayt          | Otomatik olarak 32 bit olarak oturum açın.  |
+| `iSTRING`(101)          | Dize yığın dizini | *Pval* , dize yığınında bir dizindir. Gerçek sütun dize değerini almak için [IMetaDataTables:: GetString](imetadatatables-getstring-method.md) kullanın. |
+| `iGUID`(102)            | GUID yığın dizini | *Pval* , GUID yığınının bir dizinidir. Gerçek sütun GUID değerini almak için [IMetaDataTables:: GetGuid](imetadatatables-getguid-method.md) kullanın. |
+| `iBLOB`(103)            | Blob yığın dizini | *Pval* , blob yığınında bir dizindir. Gerçek sütun blobu değerini almak için [IMetaDataTables:: GetBlob](imetadatatables-getblob-method.md) kullanın. |
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** COR.h  
+ **Üst bilgi** Cor. h  
   
- **Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan  
+ **Kitaplığı** MsCorEE. dll içinde kaynak olarak kullanılır  
   
- **.NET framework sürümleri** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -3,17 +3,17 @@ title: WIF ve Web Grupları
 ms.date: 03/30/2017
 ms.assetid: fc3cd7fa-2b45-4614-a44f-8fa9b9d15284
 author: BrucePerlerMS
-ms.openlocfilehash: 09d5f3f745f170439a7fbf160b78439c103623b9
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 32d2875ebe0a46b9f9b1856ed70a30114793e492
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70851529"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045247"
 ---
 # <a name="wif-and-web-farms"></a>WIF ve Web Grupları
 Bir Web grubunda dağıtılan bir bağlı olan taraf (RP) uygulamasının kaynaklarını güvenli hale getirmek için Windows Identity Foundation (WıF) kullandığınızda, WıF 'nin farklı bir şekilde çalışan RP uygulamasının örneklerinden belirteçleri işleyebilmesinin için özel adımlar uygulamanız gerekir gruptaki bilgisayarlar. Bu işleme, oturum belirteci imzalarını doğrulamak, oturum belirteçlerini şifrelemek ve şifrelerini çözmek, oturum belirteçlerini önbelleğe almak ve yeniden yürütülmüş güvenlik belirteçlerini algılamak içerir.  
   
- Tipik durumda, bir RP uygulamasının kaynaklarının güvenliğini sağlamak için WıF kullanıldığında (RP 'nin tek bir bilgisayarda veya bir Web grubunda mi çalıştığını belirtir), güvenlik belirteci hizmetinden (STS) alınan güvenlik belirtecine göre istemciyle birlikte bir oturum oluşturulur. Bu, istemcinin WıF kullanılarak güvenliği sağlanmış her uygulama kaynağı için STS 'de kimlik doğrulaması yapmasını zorlamamaktır. WıF oturumlarını işleme hakkında daha fazla bilgi için bkz. [WIF oturum yönetimi](../../../docs/framework/security/wif-session-management.md).  
+ Tipik durumda, bir RP uygulamasının kaynaklarının güvenliğini sağlamak için WıF kullanıldığında (RP 'nin tek bir bilgisayarda veya bir Web grubunda mi çalıştığını belirtir), güvenlik belirteci hizmetinden (STS) alınan güvenlik belirtecine göre istemciyle birlikte bir oturum oluşturulur. Bu, istemcinin WıF kullanılarak güvenliği sağlanmış her uygulama kaynağı için STS 'de kimlik doğrulaması yapmasını zorlamamaktır. WıF oturumlarını işleme hakkında daha fazla bilgi için bkz. [WIF oturum yönetimi](wif-session-management.md).  
   
  Varsayılan ayarlar kullanıldığında, WıF şunları yapar:  
   
@@ -40,7 +40,7 @@ Bir Web grubunda dağıtılan bir bağlı olan taraf (RP) uygulamasının kaynak
     </securityTokenHandlers>  
     ```  
   
-- Dağıtılmış önbelleğe alma ve uygulama, diğer bir deyişle, RP 'nin çalıştığı gruptaki tüm bilgisayarlardan erişilebilen bir önbellek. <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache> Yapılandırma dosyasında [ \<SessionSecurityTokenCache >](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/sessionsecuritytokencache.md) öğesi belirterek, dağıtılmış önbelleğinizi kullanmak için RP 'yi yapılandırın. Gerekli olmaları durumunda `<sessionSecurityTokenCache>` öğenin <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache.LoadCustomConfiguration%2A?displayProperty=nameWithType> alt öğelerini uygulamak için türetilmiş sınıfınıza yöntemi geçersiz kılabilirsiniz.  
+- Dağıtılmış önbelleğe alma ve uygulama, diğer bir deyişle, RP 'nin çalıştığı gruptaki tüm bilgisayarlardan erişilebilen bir önbellek. <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache> Yapılandırma dosyasında [ \<SessionSecurityTokenCache >](../configure-apps/file-schema/windows-identity-foundation/sessionsecuritytokencache.md) öğesi belirterek, dağıtılmış önbelleğinizi kullanmak için RP 'yi yapılandırın. Gerekli olmaları durumunda `<sessionSecurityTokenCache>` öğenin <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache.LoadCustomConfiguration%2A?displayProperty=nameWithType> alt öğelerini uygulamak için türetilmiş sınıfınıza yöntemi geçersiz kılabilirsiniz.  
   
     ```xml  
     <caches>  
@@ -52,7 +52,7 @@ Bir Web grubunda dağıtılan bir bağlı olan taraf (RP) uygulamasının kaynak
   
      Dağıtılmış önbellek oluşturmanın bir yolu, özel önbelleğiniz için bir WCF ön ucu sağlamaktır. WCF önbelleğe alma hizmeti uygulama hakkında daha fazla bilgi için bkz. [WCF önbelleğe alma hizmeti](#BKMK_TheWCFCachingService). RP uygulamasının önbelleğe alma hizmetini çağırmak için kullanabileceği bir WCF istemcisi uygulama hakkında daha fazla bilgi için bkz. [WCF önbelleğe alma istemcisi](#BKMK_TheWCFClient).  
   
-- Uygulamanız yeniden yürütülmüş belirteçleri tespit ederse, belirteç yeniden yürütme önbelleği <xref:System.IdentityModel.Tokens.TokenReplayCache> için, [ \<TokenReplayCache](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaycache.md) içindeki Token replay Caching hizmetine işaret ederek benzer bir dağıtılmış önbelleğe alma stratejisi izlemeniz gerekir > yapılandırma öğesi.  
+- Uygulamanız yeniden yürütülmüş belirteçleri tespit ederse, belirteç yeniden yürütme önbelleği <xref:System.IdentityModel.Tokens.TokenReplayCache> için, [ \<TokenReplayCache](../configure-apps/file-schema/windows-identity-foundation/tokenreplaycache.md) içindeki Token replay Caching hizmetine işaret ederek benzer bir dağıtılmış önbelleğe alma stratejisi izlemeniz gerekir > yapılandırma öğesi.  
   
 > [!IMPORTANT]
 > Bu konudaki örnek XML ve kodun hepsi, [ClaimsAwareWebFarm](https://go.microsoft.com/fwlink/?LinkID=248408) örneğinden alınmıştır.  
@@ -137,7 +137,7 @@ namespace WcfSessionSecurityTokenCacheService
   
 <a name="BKMK_TheWCFClient"></a>   
 ## <a name="the-wcf-caching-client"></a>WCF önbelleğe alma Istemcisi  
- Bu bölümde, ' dan <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache> türetilen ve önbelleğe alma hizmetine yapılan çağrıları temsil eden bir sınıfın uygulanması gösterilmektedir. Bu sınıfı aşağıdaki XML 'de olduğu gibi [ \<SessionSecurityTokenCache >](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/sessionsecuritytokencache.md) öğesi aracılığıyla kullanmak için RP uygulamasını yapılandırın  
+ Bu bölümde, ' dan <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache> türetilen ve önbelleğe alma hizmetine yapılan çağrıları temsil eden bir sınıfın uygulanması gösterilmektedir. Bu sınıfı aşağıdaki XML 'de olduğu gibi [ \<SessionSecurityTokenCache >](../configure-apps/file-schema/windows-identity-foundation/sessionsecuritytokencache.md) öğesi aracılığıyla kullanmak için RP uygulamasını yapılandırın  
   
 ```xml  
 <caches>  
@@ -255,4 +255,4 @@ namespace CacheLibrary
 - <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache>
 - <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler>
 - <xref:System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler>
-- [WIF Oturum Yönetimi](../../../docs/framework/security/wif-session-management.md)
+- [WIF Oturum Yönetimi](wif-session-management.md)

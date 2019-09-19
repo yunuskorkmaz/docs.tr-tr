@@ -2,12 +2,12 @@
 title: Soyut sınıflar
 description: Bazı veya F# tüm üyeleri uygulanmayan ve çeşitli nesne türleri kümesinin yaygın işlevlerini temsil eden soyut sınıflar hakkında bilgi edinin.
 ms.date: 05/16/2016
-ms.openlocfilehash: a6bbfc23b858d5f3833f3f52b6dca46753080f03
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: d7fc87178cff7c5c824992c97198b49f87025f00
+ms.sourcegitcommit: a2d0e1f66367367065bc8dc0dde488ab536da73f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629673"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71082954"
 ---
 # <a name="abstract-classes"></a>Soyut sınıflar
 
@@ -48,7 +48,7 @@ Döndürme yöntemi, kendi simetri nedeniyle dönüş sabiti olan Circle sınıf
 
 **Çıkış:**
 
-```
+```console
 Perimeter of square with side length 10.000000 is 40.000000
 Circumference of circle with radius 5.000000 is 31.415927
 Area of Square: 100.000000

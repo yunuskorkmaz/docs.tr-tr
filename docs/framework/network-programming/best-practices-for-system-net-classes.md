@@ -10,28 +10,28 @@ helpviewer_keywords:
 - best practices, data requests
 - receiving data, best practices
 ms.assetid: 716decc6-5952-47b7-9c5a-ba6fc5698684
-ms.openlocfilehash: 57d0c3640c65d425ded63f53e32416053c3eb926
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c7324dcbc27c95c7d799592700d46c195e7d952b
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624673"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048888"
 ---
 # <a name="best-practices-for-systemnet-classes"></a>System.Net Sınıfları için En İyi Yöntemler
-Aşağıdaki öneriler içinde bulunan sınıfları kullanmanıza yardımcı olacak <xref:System.Net> en iyi kendi lehlerine için:  
+Aşağıdaki öneriler, ' de <xref:System.Net> bulunan sınıfları en iyi avantajları ile kullanmanıza yardımcı olur:  
   
-- Aktarım Katmanı Güvenliği (TLS) en iyi yöntemler için bkz: [Aktarım Katmanı Güvenliği (TLS) en iyi yöntemler .NET Framework ile](tls.md).
+- Aktarım Katmanı Güvenliği (TLS) en iyi uygulamaları için bkz. [.NET Framework Ile Aktarım Katmanı Güvenliği (TLS) en iyi uygulamaları](tls.md).
 
-- Kullanım <xref:System.Net.WebRequest> ve <xref:System.Net.WebResponse> mümkün olduğunda yerine alt sınıflar için tür atama. Kullanan uygulamalar **WebRequest** ve **WebResponse** yeni Internet protokollerinden kapsamlı bir kod değişikliği gerekmeden yararlanabilirsiniz.  
+- Alt <xref:System.Net.WebRequest> sınıflara <xref:System.Net.WebResponse> tür atama yapmak yerine ve mümkün olan her seferinde kullanın. **WebRequest** ve **WebResponse** kullanan uygulamalar, kapsamlı kod değişikliklerine gerek duymadan yeni Internet protokollerinden yararlanabilir.  
   
-- Kullanarak sunucu üzerinde çalışan ASP.NET uygulamaları yazarken **System.Net** sınıfları, genellikle zaman uyumsuz yöntemler için kullanılacak bir performans açısından iyi <xref:System.Net.WebRequest.GetResponse%2A> ve <xref:System.Net.WebResponse.GetResponseStream%2A>.  
+- **System.net** sınıflarını kullanarak bir sunucuda çalışan ASP.NET uygulamaları yazarken, bir performans açısından, ve <xref:System.Net.WebRequest.GetResponse%2A> <xref:System.Net.WebResponse.GetResponseStream%2A>için zaman uyumsuz yöntemleri kullanmak genellikle daha iyidir.  
   
-- Bir Internet kaynağına için açılan bağlantılar sayısı, ağ performansını ve aktarım hızı üzerinde önemli bir etkisi olabilir. **System.Net** varsayılan olarak konak başına uygulama başına iki bağlantı kullanır. Ayarı <xref:System.Net.ServicePoint.ConnectionLimit%2A> özelliğinde <xref:System.Net.ServicePoint> için uygulamanızı belirli bir ana bilgisayar için bu sayıyı artırabilirsiniz. Ayarı <xref:System.Net.ServicePointManager.DefaultPersistentConnectionLimit?displayProperty=nameWithType> özelliği, tüm konaklar için bu varsayılan artırabilirsiniz.  
+- Bir Internet kaynağına açılan bağlantı sayısı, ağ performansı ve verimlilik üzerinde önemli bir etkiye sahip olabilir. **System.net** , varsayılan olarak her konak için uygulama başına iki bağlantı kullanır. Uygulamanız için içindeki <xref:System.Net.ServicePoint> özelliğinin ayarlanması, belirli bir konak için bu sayıyı artırabilir. <xref:System.Net.ServicePoint.ConnectionLimit%2A> Özelliği ayarlamak <xref:System.Net.ServicePointManager.DefaultPersistentConnectionLimit?displayProperty=nameWithType> , tüm konaklar için bu varsayılanı artırabilir.  
   
-- Yuva düzeyi protokolleri yazarken kullanmaya çalıştığınızda <xref:System.Net.Sockets.TcpClient> veya <xref:System.Net.Sockets.UdpClient> mümkün olduğunda doğrudan yazmak yerine bir <xref:System.Net.Sockets.Socket>. Bu iki istemci sınıfları bağlantı ayrıntılarını işlemek gerek kalmadan TCP ve UDP yuva oluşturulmasını kapsüller.  
+- Yuva düzeyi protokoller yazarken, ' a <xref:System.Net.Sockets.TcpClient> <xref:System.Net.Sockets.Socket>doğrudan yazmak yerine veya <xref:System.Net.Sockets.UdpClient> mümkün olduğunca kullanmayı deneyin. Bu iki istemci sınıfı, bağlantının ayrıntılarını işleyebilmeniz gerekmeden TCP ve UDP yuvaları oluşturmayı kapsüller.  
   
-- Kimlik bilgileri gerektiren siteleri erişirken <xref:System.Net.CredentialCache> bunları her istekle sağlama yerine kimlik bilgileri önbellek oluşturmak için sınıf. **CredentialCache** sınıfı önbellek oluşturma ve sunma URL'sini temel alarak kimlik bilgileri sorumluluğu, yoğun bir istekle sunmak için uygun kimlik bilgilerini bulmak için arama yapar.  
+- Kimlik bilgileri gerektiren sitelere erişirken, her istekte bunları <xref:System.Net.CredentialCache> sağlamak yerine, kimlik bilgilerinin bir önbelleğini oluşturmak için sınıfını kullanın. **CredentialCache** sınıfı, bir istekle birlikte sunmak üzere uygun kimlik bilgisini bulmak için önbelleği arar, bu da URL 'ye göre kimlik bilgileri oluşturma ve sunma sorumluluğunu ortadan kaldırmak.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [.NET Framework'te Ağ Programlaması](../../../docs/framework/network-programming/index.md)
+- [.NET Framework'te Ağ Programlaması](index.md)
