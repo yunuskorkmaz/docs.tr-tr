@@ -1,84 +1,84 @@
 ---
-title: DotNet tool güncelleştirme komutu
-description: Dotnet aracı güncelleştirme komut belirtilen .NET Core genel aracı makinenizde güncelleştirir.
+title: DotNet Aracı güncelleştirme komutu
+description: DotNet Aracı güncelleştirme komutu makinenizde belirtilen .NET Core küresel aracını güncelleştirir.
 ms.date: 05/29/2018
-ms.openlocfilehash: bc7edada013c118564d44cbe4542dacb76925692
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: b10ce39c8b9d4df23243bcf672454a455e34eec1
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61648548"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117528"
 ---
-# <a name="dotnet-tool-update"></a><span data-ttu-id="0b30f-103">DotNet aracı güncelleştirme</span><span class="sxs-lookup"><span data-stu-id="0b30f-103">dotnet tool update</span></span>
+# <a name="dotnet-tool-update"></a><span data-ttu-id="ff567-103">dotnet tool update</span><span class="sxs-lookup"><span data-stu-id="ff567-103">dotnet tool update</span></span>
 
 [!INCLUDE [topic-appliesto-net-core-21plus.md](../../../includes/topic-appliesto-net-core-21plus.md)]
 
-## <a name="name"></a><span data-ttu-id="0b30f-104">Ad</span><span class="sxs-lookup"><span data-stu-id="0b30f-104">Name</span></span>
+## <a name="name"></a><span data-ttu-id="ff567-104">Ad</span><span class="sxs-lookup"><span data-stu-id="ff567-104">Name</span></span>
 
-<span data-ttu-id="0b30f-105">`dotnet tool update` -Güncelleştirmeleri belirtilen [.NET Core genel aracı](global-tools.md) makinenizde.</span><span class="sxs-lookup"><span data-stu-id="0b30f-105">`dotnet tool update` - Updates the specified [.NET Core Global Tool](global-tools.md) on your machine.</span></span>
+<span data-ttu-id="ff567-105">`dotnet tool update`-Makinenizde belirtilen [.NET Core küresel aracı](global-tools.md) 'nı güncelleştirir.</span><span class="sxs-lookup"><span data-stu-id="ff567-105">`dotnet tool update` - Updates the specified [.NET Core Global Tool](global-tools.md) on your machine.</span></span>
 
-## <a name="synopsis"></a><span data-ttu-id="0b30f-106">Synopsis</span><span class="sxs-lookup"><span data-stu-id="0b30f-106">Synopsis</span></span>
+## <a name="synopsis"></a><span data-ttu-id="ff567-106">Özeti</span><span class="sxs-lookup"><span data-stu-id="ff567-106">Synopsis</span></span>
 
-```console
+```dotnetcli
 dotnet tool update <PACKAGE_NAME> <-g|--global> [--configfile] [--framework] [-v|--verbosity]
 dotnet tool update <PACKAGE_NAME> <--tool-path> [--configfile] [--framework] [-v|--verbosity]
 dotnet tool update <-h|--help>
 ```
 
-## <a name="description"></a><span data-ttu-id="0b30f-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="0b30f-107">Description</span></span>
+## <a name="description"></a><span data-ttu-id="ff567-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="ff567-107">Description</span></span>
 
-<span data-ttu-id="0b30f-108">`dotnet tool update` Komutu, paketin en son kararlı sürüme makinenizde .NET Core genel Araçları'nı güncelleştirmek bir yol sağlar.</span><span class="sxs-lookup"><span data-stu-id="0b30f-108">The `dotnet tool update` command provides a way for you to update .NET Core Global Tools on your machine to the latest stable version of the package.</span></span> <span data-ttu-id="0b30f-109">Komut kaldırır ve etkili bir şekilde güncelleştirirken bir aracı yükler.</span><span class="sxs-lookup"><span data-stu-id="0b30f-109">The command uninstalls and reinstalls a tool, effectively updating it.</span></span> <span data-ttu-id="0b30f-110">Komutunu kullanmak için ya da bir araç kullanarak kullanıcı genelinde yükleme güncelleştirmek istediğiniz belirtmeniz gerekir `--global` nerede yolunu belirtin veya seçeneği kullanılarak yüklenen aracı `--tool-path` seçeneği.</span><span class="sxs-lookup"><span data-stu-id="0b30f-110">To use the command, you either have to specify that you want to update a tool from a user-wide installation using the `--global` option or specify a path to where the tool is installed using the `--tool-path` option.</span></span>
+<span data-ttu-id="ff567-108">Komut `dotnet tool update` , makinenizde .NET Core küresel araçlarını paketin en son kararlı sürümüne güncelleştirmeniz için bir yol sağlar.</span><span class="sxs-lookup"><span data-stu-id="ff567-108">The `dotnet tool update` command provides a way for you to update .NET Core Global Tools on your machine to the latest stable version of the package.</span></span> <span data-ttu-id="ff567-109">Komut, bir aracı kaldırır ve etkin bir şekilde güncelleştiren bir araç yükler.</span><span class="sxs-lookup"><span data-stu-id="ff567-109">The command uninstalls and reinstalls a tool, effectively updating it.</span></span> <span data-ttu-id="ff567-110">Komutunu kullanmak için, `--global` seçeneğini kullanarak Kullanıcı genelindeki bir yüklemeden bir aracı güncelleştirmek istediğinizi belirtmeniz veya `--tool-path` seçeneği kullanılarak aracın yüklendiği konuma bir yol belirtmeniz gerekir.</span><span class="sxs-lookup"><span data-stu-id="ff567-110">To use the command, you either have to specify that you want to update a tool from a user-wide installation using the `--global` option or specify a path to where the tool is installed using the `--tool-path` option.</span></span>
 
-## <a name="arguments"></a><span data-ttu-id="0b30f-111">Arguments</span><span class="sxs-lookup"><span data-stu-id="0b30f-111">Arguments</span></span>
+## <a name="arguments"></a><span data-ttu-id="ff567-111">Arguments</span><span class="sxs-lookup"><span data-stu-id="ff567-111">Arguments</span></span>
 
 `PACKAGE_NAME`
 
-<span data-ttu-id="0b30f-112">.NET Core genel güncelleştirme için Aracı'nı içeren NuGet paket adı/kimliği.</span><span class="sxs-lookup"><span data-stu-id="0b30f-112">Name/ID of the NuGet package that contains the .NET Core Global Tool to update.</span></span> <span data-ttu-id="0b30f-113">Paket adını kullanarak bulabilirsiniz [dotnet araç listesi](dotnet-tool-list.md) komutu.</span><span class="sxs-lookup"><span data-stu-id="0b30f-113">You can find the package name using the [dotnet tool list](dotnet-tool-list.md) command.</span></span>
+<span data-ttu-id="ff567-112">Güncelleştirilecek .NET Core küresel aracını içeren NuGet paketinin adı/KIMLIĞI.</span><span class="sxs-lookup"><span data-stu-id="ff567-112">Name/ID of the NuGet package that contains the .NET Core Global Tool to update.</span></span> <span data-ttu-id="ff567-113">[DotNet araç listesi](dotnet-tool-list.md) komutunu kullanarak paket adını bulabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="ff567-113">You can find the package name using the [dotnet tool list](dotnet-tool-list.md) command.</span></span>
 
-## <a name="options"></a><span data-ttu-id="0b30f-114">Seçenekler</span><span class="sxs-lookup"><span data-stu-id="0b30f-114">Options</span></span>
+## <a name="options"></a><span data-ttu-id="ff567-114">Seçenekler</span><span class="sxs-lookup"><span data-stu-id="ff567-114">Options</span></span>
 
 `--add-source <SOURCE>`
 
-<span data-ttu-id="0b30f-115">Yükleme sırasında kullanmak üzere ek bir NuGet paket kaynağı ekler.</span><span class="sxs-lookup"><span data-stu-id="0b30f-115">Adds an additional NuGet package source to use during installation.</span></span>
+<span data-ttu-id="ff567-115">Yükleme sırasında kullanmak üzere ek bir NuGet paketi kaynağı ekler.</span><span class="sxs-lookup"><span data-stu-id="ff567-115">Adds an additional NuGet package source to use during installation.</span></span>
 
 `--configfile <FILE>`
 
-<span data-ttu-id="0b30f-116">NuGet yapılandırma (*nuget.config*) dosyasını kullanın.</span><span class="sxs-lookup"><span data-stu-id="0b30f-116">The NuGet configuration (*nuget.config*) file to use.</span></span>
+<span data-ttu-id="ff567-116">Kullanılacak NuGet yapılandırma (*NuGet. config*) dosyası.</span><span class="sxs-lookup"><span data-stu-id="ff567-116">The NuGet configuration (*nuget.config*) file to use.</span></span>
 
 `--framework <FRAMEWORK>`
 
-<span data-ttu-id="0b30f-117">Belirtir [hedef Framework'ü](../../standard/frameworks.md) araç için güncelleştirilecek.</span><span class="sxs-lookup"><span data-stu-id="0b30f-117">Specifies the [target framework](../../standard/frameworks.md) to update the tool for.</span></span>
+<span data-ttu-id="ff567-117">Aracının güncelleştirilmesi için [hedef çerçeveyi](../../standard/frameworks.md) belirtir.</span><span class="sxs-lookup"><span data-stu-id="ff567-117">Specifies the [target framework](../../standard/frameworks.md) to update the tool for.</span></span>
 
 `-g|--global`
 
-<span data-ttu-id="0b30f-118">Güncelleştirme için kullanıcı genelinde aracı olduğunu belirtir.</span><span class="sxs-lookup"><span data-stu-id="0b30f-118">Specifies that the update is for a user-wide tool.</span></span> <span data-ttu-id="0b30f-119">İle birleştirilemez `--tool-path` seçeneği.</span><span class="sxs-lookup"><span data-stu-id="0b30f-119">Can't be combined with the `--tool-path` option.</span></span> <span data-ttu-id="0b30f-120">Bu seçeneği belirtmezseniz, belirtmeniz gerekir `--tool-path` seçeneği.</span><span class="sxs-lookup"><span data-stu-id="0b30f-120">If you don't specify this option, you must specify the `--tool-path` option.</span></span>
+<span data-ttu-id="ff567-118">Güncelleştirmenin Kullanıcı genelindeki bir araç için olduğunu belirtir.</span><span class="sxs-lookup"><span data-stu-id="ff567-118">Specifies that the update is for a user-wide tool.</span></span> <span data-ttu-id="ff567-119">`--tool-path` Seçeneğiyle birleştirilemez.</span><span class="sxs-lookup"><span data-stu-id="ff567-119">Can't be combined with the `--tool-path` option.</span></span> <span data-ttu-id="ff567-120">Bu seçeneği belirtmezseniz, `--tool-path` seçeneğini belirtmeniz gerekir.</span><span class="sxs-lookup"><span data-stu-id="ff567-120">If you don't specify this option, you must specify the `--tool-path` option.</span></span>
 
 `-h|--help`
 
-<span data-ttu-id="0b30f-121">Komut için kısa bir Yardım yazdırır.</span><span class="sxs-lookup"><span data-stu-id="0b30f-121">Prints out a short help for the command.</span></span>
+<span data-ttu-id="ff567-121">Komut için kısa bir yardım yazdırır.</span><span class="sxs-lookup"><span data-stu-id="ff567-121">Prints out a short help for the command.</span></span>
 
 `--tool-path <PATH>`
 
-<span data-ttu-id="0b30f-122">Genel aracı yüklendiği konum belirtir.</span><span class="sxs-lookup"><span data-stu-id="0b30f-122">Specifies the location where the Global Tool is installed.</span></span> <span data-ttu-id="0b30f-123">YOL mutlak veya göreli olabilir.</span><span class="sxs-lookup"><span data-stu-id="0b30f-123">PATH can be absolute or relative.</span></span> <span data-ttu-id="0b30f-124">İle birleştirilemez `--global` seçeneği.</span><span class="sxs-lookup"><span data-stu-id="0b30f-124">Can't be combined with the `--global` option.</span></span> <span data-ttu-id="0b30f-125">Bu seçeneği belirtmezseniz, belirtmeniz gerekir `--global` seçeneği.</span><span class="sxs-lookup"><span data-stu-id="0b30f-125">If you don't specify this option, you must specify the `--global` option.</span></span>
+<span data-ttu-id="ff567-122">Genel aracın yüklendiği konumu belirtir.</span><span class="sxs-lookup"><span data-stu-id="ff567-122">Specifies the location where the Global Tool is installed.</span></span> <span data-ttu-id="ff567-123">YOL mutlak veya göreli olabilir.</span><span class="sxs-lookup"><span data-stu-id="ff567-123">PATH can be absolute or relative.</span></span> <span data-ttu-id="ff567-124">`--global` Seçeneğiyle birleştirilemez.</span><span class="sxs-lookup"><span data-stu-id="ff567-124">Can't be combined with the `--global` option.</span></span> <span data-ttu-id="ff567-125">Bu seçeneği belirtmezseniz, `--global` seçeneğini belirtmeniz gerekir.</span><span class="sxs-lookup"><span data-stu-id="ff567-125">If you don't specify this option, you must specify the `--global` option.</span></span>
 
 `-v|--verbosity <LEVEL>`
 
-<span data-ttu-id="0b30f-126">Komutun ayrıntı düzeyini ayarlar.</span><span class="sxs-lookup"><span data-stu-id="0b30f-126">Sets the verbosity level of the command.</span></span> <span data-ttu-id="0b30f-127">İzin verilen değerler `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, ve `diag[nostic]`.</span><span class="sxs-lookup"><span data-stu-id="0b30f-127">Allowed values are `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, and `diag[nostic]`.</span></span>
+<span data-ttu-id="ff567-126">Komutun ayrıntı düzeyini ayarlar.</span><span class="sxs-lookup"><span data-stu-id="ff567-126">Sets the verbosity level of the command.</span></span> <span data-ttu-id="ff567-127">İzin verilen değerler `q[uiet]` `m[inimal]` ,`n[ormal]`,, ve .`diag[nostic]` `d[etailed]`</span><span class="sxs-lookup"><span data-stu-id="ff567-127">Allowed values are `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, and `diag[nostic]`.</span></span>
 
-## <a name="examples"></a><span data-ttu-id="0b30f-128">Örnekler</span><span class="sxs-lookup"><span data-stu-id="0b30f-128">Examples</span></span>
+## <a name="examples"></a><span data-ttu-id="ff567-128">Örnekler</span><span class="sxs-lookup"><span data-stu-id="ff567-128">Examples</span></span>
 
-<span data-ttu-id="0b30f-129">Güncelleştirmeleri [dotnetsay](https://www.nuget.org/packages/dotnetsay/) genel aracı:</span><span class="sxs-lookup"><span data-stu-id="0b30f-129">Updates the [dotnetsay](https://www.nuget.org/packages/dotnetsay/) Global Tool:</span></span>
+<span data-ttu-id="ff567-129">[Dotnetdeyin](https://www.nuget.org/packages/dotnetsay/) genel aracını güncelleştirir:</span><span class="sxs-lookup"><span data-stu-id="ff567-129">Updates the [dotnetsay](https://www.nuget.org/packages/dotnetsay/) Global Tool:</span></span>
 
 `dotnet tool update -g dotnetsay`
 
-<span data-ttu-id="0b30f-130">Güncelleştirmeleri [dotnetsay](https://www.nuget.org/packages/dotnetsay/) genel aracı, belirli bir Windows klasöründe bulunur:</span><span class="sxs-lookup"><span data-stu-id="0b30f-130">Updates the [dotnetsay](https://www.nuget.org/packages/dotnetsay/) Global Tool located on a specific Windows folder:</span></span>
+<span data-ttu-id="ff567-130">Belirli bir Windows klasöründe bulunan [dotnetsöyleme](https://www.nuget.org/packages/dotnetsay/) küresel aracını güncelleştirir:</span><span class="sxs-lookup"><span data-stu-id="ff567-130">Updates the [dotnetsay](https://www.nuget.org/packages/dotnetsay/) Global Tool located on a specific Windows folder:</span></span>
 
 `dotnet tool update dotnetsay --tool-path c:\global-tools`
 
-<span data-ttu-id="0b30f-131">Güncelleştirmeleri [dotnetsay](https://www.nuget.org/packages/dotnetsay/) genel aracı, belirli bir Linux/macOS klasöründe bulunur:</span><span class="sxs-lookup"><span data-stu-id="0b30f-131">Updates the [dotnetsay](https://www.nuget.org/packages/dotnetsay/) Global Tool located on a specific Linux/macOS folder:</span></span>
+<span data-ttu-id="ff567-131">Belirli bir Linux/macOS klasöründe bulunan [dotnetsay](https://www.nuget.org/packages/dotnetsay/) küresel aracını güncelleştirir:</span><span class="sxs-lookup"><span data-stu-id="ff567-131">Updates the [dotnetsay](https://www.nuget.org/packages/dotnetsay/) Global Tool located on a specific Linux/macOS folder:</span></span>
 
 `dotnet tool update dotnetsay --tool-path ~/bin`
 
-## <a name="see-also"></a><span data-ttu-id="0b30f-132">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="0b30f-132">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ff567-132">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="ff567-132">See also</span></span>
 
-- [<span data-ttu-id="0b30f-133">.NET core Araçları Genel</span><span class="sxs-lookup"><span data-stu-id="0b30f-133">.NET Core Global Tools</span></span>](global-tools.md)
+- [<span data-ttu-id="ff567-133">.NET Core küresel araçları</span><span class="sxs-lookup"><span data-stu-id="ff567-133">.NET Core Global Tools</span></span>](global-tools.md)
