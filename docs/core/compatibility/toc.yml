@@ -2,7 +2,7 @@
   items:
     - name: Hataya neden olan değişiklikleri değerlendirme
       href: index.md
-    - name: Yeni değişiklikler
-      href: breaking-changes.md
     - name: Hataya neden olan değişiklik kategorileri
       href: categories.md
+    - name: Yeni değişiklikler
+      href: breaking-changes.md

@@ -152,7 +152,7 @@
               href: keywords/try-finally.md
             - name: try-catch-finally
               href: keywords/try-catch-finally.md
-        - name: İşaretli ve İşaretsiz
+        - name: Checked ve Unchecked
           items:
             - name: Genel Bakış
               href: keywords/checked-and-unchecked.md
@@ -190,7 +190,7 @@
               href: keywords/using-static.md
             - name: using Deyimi
               href: keywords/using-statement.md
-        - name: extern diğer adı
+        - name: extern alias
           href: keywords/extern-alias.md
     - name: Tür testi anahtar sözcükleri
       items:
@@ -202,7 +202,7 @@
           href: keywords/new-constraint.md
         - name: Burada
           href: keywords/where-generic-type-constraint.md
-    - name: Erişim Anahtar Sözcükleri
+    - name: Anahtar Sözcüklere Erişim
       items:
         - name: taban
           href: keywords/base.md
@@ -244,7 +244,7 @@
       items:
         - name: Hızlı başvuru
           href: keywords/query-keywords.md
-        - name: from yan tümcesi
+        - name: from tümcesi
           href: keywords/from-clause.md
         - name: where tümcesi
           href: keywords/where-clause.md
@@ -293,7 +293,7 @@
       displayName: '>, <, >=, <=, greater, less'
     - name: Üye erişimi işleçleri
       href: operators/member-access-operators.md
-      displayName: '., [], ?., ?[], (), indexer, null-conditional, Elvis, invocation'
+      displayName: '., [], ?., ?[], (), indexer, null-conditional, Elvis, invocation, ^, index from end, hat, .., range'
     - name: Tür testi ve atama işleçleri
       href: operators/type-testing-and-cast.md
       displayName: 'is operator, is keyword, as operator, as keyword, typeof, (), conversion'
