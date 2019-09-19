@@ -1,6 +1,6 @@
 ---
-title: Görüntü .NET hata ayıklamayı kolaylaştırma
-description: Anahtarları IDE kullanarak daha kolay hata ayıklama için yürütülebilir bir imaj yapılandırmak ve komut satırı seçenekleri öğrenin.
+title: .NET sürümünde bir görüntünün hata ayıklamayı kolaylaştırın
+description: IDE anahtarlarını ve komut satırı seçeneklerini kullanarak daha kolay hata ayıklama için yürütülebilir bir görüntünün nasıl yapılandırılacağını öğrenin.
 ms.date: 08/30/2018
 helpviewer_keywords:
 - images [.NET Framework], debugging
@@ -9,30 +9,30 @@ helpviewer_keywords:
 ms.assetid: 7d90ea7a-150f-4f97-98a7-f9c26541b9a3
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5bab707afb059d4fcbd46a9ee54edead991be523
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1b64bd1e112932f394bb473a21642d37e28e39d3
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61754225"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052508"
 ---
-# <a name="making-an-image-easier-to-debug-in-net"></a>Görüntü .NET hata ayıklamayı kolaylaştırma
+# <a name="making-an-image-easier-to-debug-in-net"></a>.NET sürümünde bir görüntünün hata ayıklamayı kolaylaştırın
 
-Yönetilmeyen kod derlenirken ayar IDE anahtarlar veya komut satırı seçenekleri tarafından hata ayıklama için yürütülebilir bir imaj yapılandırabilirsiniz. Örneğin, kullanabileceğiniz /**zı** Visual c++ komut satırı seçeneği hata ayıklama sembol dosyalarını (dosya uzantısı .pdb) yaymak için isteyebilir. Benzer şekilde, /**Od** iyileştirme devre dışı bırakmak için derleyici komut satırı seçeneği bildirir. Elde edilen kod daha yavaş çalışır, ancak bu gerekli olmalıdır hata ayıklamak daha kolay olur.
+Yönetilmeyen kod derlenirken, IDE anahtarlarını veya komut satırı seçeneklerini ayarlayarak hata ayıklama için çalıştırılabilir bir görüntü yapılandırabilirsiniz. Örneğin, hata ayıklama sembol dosyalarını (dosya uzantısı. pdb) yaymasını Istemek C++ Için Visual 'teki/zı komut satırı seçeneğini kullanabilirsiniz. Benzer şekilde,/**od** komut satırı seçeneği derleyiciye iyileştirmeyi devre dışı bırakmayı söyler. Elde edilen kod daha yavaş çalışır, ancak bunun daha kolay hata ayıklaması gerekir, bu gerekli olacaktır.
 
-.NET Framework derleme yönetilen kod, Visual C++, Visual Basic ve C# gibi derleyicileri, kaynak programın Microsoft Ara diline (MSIL) derleyin. MSIL JIT olarak derlenmiş, yürütme, yerel makine koda hemen önce ise. Olarak yönetilmeyen kod ile ayar IDE anahtarlar veya komut satırı seçenekleri tarafından hata ayıklama için yürütülebilir bir imaj yapılandırabilirsiniz. Ayrıca, aynı şekilde çok hata ayıklama için JIT derleme yapılandırabilirsiniz.
+.NET Framework yönetilen kodu derlerken, görsel C++gibi derleyiciler, Visual Basic ve C# kaynak programını MICROSOFT ara dili (MSIL) olarak derler. MSIL daha sonra, yürütmeden önce, yerel makine koduna, daha sonra JıT olarak derlenir. Yönetilmeyen kodda olduğu gibi, IDE anahtarlarını veya komut satırı seçeneklerini ayarlayarak hata ayıklama için çalıştırılabilir bir görüntü yapılandırabilirsiniz. Ayrıca, JıT derlemesini hata ayıklama için aynı şekilde de yapılandırabilirsiniz.
 
-JIT yapılandırmanın iki boyutu vardır:
+Bu JıT yapılandırmasının iki yönü vardır:
 
-- İzleme bilgileri JIT Derleyici isteyebilir. Bu, hata ayıklayıcı için MSIL oluşan bir zincir makine kodu karşılığı ile eşleşecek şekilde ve yerel değişkenlere ve işlev bağımsız değişkenleri depolandığı izlemenizi mümkün kılar. İstekte gerekmez. Bu nedenle .NET Framework sürüm 2.0 ile başlayarak, JIT Derleyici her zaman izleme bilgilerini oluşturur.
+- İzleme bilgilerini oluşturmak için JıT derleyicisini isteyebilirsiniz. Bu, hata ayıklayıcının makine kodu karşılık gelen bir MSIL zinciri ile eşleşmesini ve yerel değişkenlerin ve işlev bağımsız değişkenlerinin nerede depolandığını izlemenizi olanaklı kılar. .NET Framework sürüm 2,0 ' den başlayarak, JıT derleyicisi her zaman izleme bilgilerini oluşturur, bu nedenle isteği isteme gereksinimi yoktur.
 
-- Sonuçta elde edilen makine kodu şekilde JIT derleyicisi isteyebilir.
+- Elde edilen makine kodunu iyileştirmeden JıT derleyicisini isteyebilirsiniz.
 
-Normalde, oluşturduğu MSIL derleyici bu JIT Derleyici seçeneklerinin gerektiği gibi IDE anahtarlar veya örneğin, belirttiğiniz komut satırı seçenekleri göre ayarlar /**Od**.
+Normalde, MSIL 'yi üreten derleyici bu JıT derleyici seçeneklerini, belirttiğiniz IDE anahtarlarına veya komut satırı seçeneklerine göre (örneğin,/**od**) uygun şekilde ayarlar.
 
-Bazı durumlarda, böylece makine ürettiği kodu hata ayıklama daha kolaydır, JIT Derleyici davranışını değiştirmek isteyebilirsiniz. Örneğin, izleme bilgileri bir perakende derleme için JIT oluşturmak veya en iyi duruma getirme denetlemek isteyebilirsiniz. Bir başlatma (.ini) dosyası ile bunu yapabilirsiniz.
+Bazı durumlarda, JıT derleyicisinin davranışını, oluşturduğu makine kodunun hata ayıklaması daha kolay olacak şekilde değiştirmek isteyebilirsiniz. Örneğin, bir perakende derleme veya denetim iyileştirmesi için JıT izleme bilgileri oluşturmak isteyebilirsiniz. Bunu bir başlatma (. ini) dosyası ile yapabilirsiniz.
 
-Örneğin, derleme, hata ayıklamak istiyorsanız adlı *MyApp.exe*, adlı bir metin dosyasını oluşturup *MyApp.ini*, aynı klasörde *MyApp.exe*, içeren Bu üç satırı:
+Örneğin, hata ayıklamak istediğiniz derleme *MyApp. exe*olarak adlandırılmışsa, MyApp. *ini*adlı bir metin dosyasını aşağıdaki üç satırı içeren *MyApp. exe*ile aynı klasörde oluşturabilirsiniz:
 
 ```ini
 [.NET Framework Debugging Control]
@@ -40,21 +40,21 @@ GenerateTrackingInfo=1
 AllowOptimize=0
 ```
 
-Her seçeneğin değeri 0 veya 1 olarak ayarlayabilirsiniz ve herhangi bir mevcut seçeneği 0 olarak varsayılır. Ayarı `GenerateTrackingInfo` 1 ve `AllowOptimize` kolay hata ayıklama 0 olarak sağlar.
+Her seçeneğin değerini 0 veya 1 olarak ayarlayabilir ve yok seçeneğinin varsayılan değeri 0 ' dır. 1 `GenerateTrackingInfo` ve`AllowOptimize` 0 olarak ayarlandığında en kolay hata ayıklama sağlanır.
 
-.NET Framework sürüm 2.0 ile başlayarak, JIT Derleyici her zaman değerinden bağımsız izleme bilgilerini oluşturur `GenerateTrackingInfo`; ancak `AllowOptimize` değeri yine de bir etkiye sahiptir. Kullanırken [Ngen.exe (yerel Görüntü Oluşturucu)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) iyileştirme olmadan yerel görüntü derleneceği .ini dosya hedef klasörde mevcut olmalıdır `AllowOptimize=0` zaman Ngen.exe yürütür. Bir derlemeyi iyileştirme olmadan önceden derlenmiş, NGen.exe kullanarak önceden derlenmiş kodu kaldırmanız gerekir **/ uninstall** gibi en iyi duruma getirilmiş kodu önceden derlemek için Ngen.exe yeniden çalıştırmadan önce seçeneği. .İni dosyası klasörde mevcut değilse, varsayılan olarak Ngen.exe kodu en iyi duruma getirilmiş olarak işlemini gerçekleştirir.
+.NET Framework sürüm 2,0 ' den başlayarak, JIT derleyicisi her zaman için `GenerateTrackingInfo`değerinden bağımsız olarak izleme bilgilerini oluşturur; ancak `AllowOptimize` , değer hala bir etkiye sahip olur. [Ngen. exe (yerel görüntü Oluşturucu)](../tools/ngen-exe-native-image-generator.md) kullanılırken yerel görüntüyü iyileştirme olmadan önceden derlemek için, Ngen. exe yürütüldüğünde. ini dosyası hedef klasörde `AllowOptimize=0` bulunmalıdır. En iyi duruma getirme olmadan bir derlemeyi önceden derlenmiş hale getirdiniz, Ngen. exe ' yi yeniden çalıştırmadan önce Ngen **. exe '** yi kullanarak önceden derlenmiş kodu kaldırmalısınız. . İni dosyası klasöründe yoksa, varsayılan olarak Ngen. exe kodu en iyileştirilmiş olarak önceden derler.
 
-<xref:System.Diagnostics.DebuggableAttribute?displayProperty=nameWithType> Derleme ayarlarını denetler. **DebuggableAttribute** JIT derleyicisi ve/veya en iyi duruma getirme izleme bilgileri oluşturan olup olmadığını denetleyen iki alan içerir. .NET Framework sürüm 2.0 ile başlayarak, JIT Derleyici her zaman bir izleme bilgilerini oluşturur.
+, <xref:System.Diagnostics.DebuggableAttribute?displayProperty=nameWithType> Bir derlemenin ayarlarını denetler. Hata ayıklama **Ggableattribute** , JIT derleyicisinin izleme bilgilerini iyileştirip/veya üretmeyeceğini denetleyen iki alan içerir. .NET Framework sürüm 2,0 ' den başlayarak, JıT derleyicisi her zaman izleme bilgilerini oluşturur.
 
-Bir perakende derleme için derleyiciler herhangi ayarlamamanız **DebuggableAttribute**. Varsayılan olarak, JIT Derleyici en yüksek performans, makine kodu hata ayıklama uygulamalarınızdaki oluşturur. JIT izleme biraz performansı düşürür, etkinleştirip devre dışı bırakma iyileştirme çok performansı düşürür.
+Bir perakende derlemesi için, derleyiciler herhangi bir hata ayıklama **Ggableattribute**ayarlanmamış. Varsayılan olarak, JIT derleyicisi makine kodunda hata ayıklamak için en yüksek performansı, en zor 'yi oluşturur. JıT izlemenin etkinleştirilmesi performansı biraz düşürür ve en iyi duruma getirme performansı çok büyük ölçüde azaltır.
 
-**DebuggableAttribute** aynı anda tüm bir derleme, derleme içindeki tek tek modülleri için geçerlidir. Geliştirme araçları gerekir bu nedenle ekleme özel öznitelikler için bütünleştirilmiş kod meta veri belirteci, bir derleme zaten oluşturuldu, veya sınıfa çağrılır, **System.Runtime.CompilerServices.AssemblyAttributesGoHere**. ALink Aracı'nı sonra bunlar yükseltir **DebuggableAttribute** her modül öznitelikleri derlemeye bunlar bir bir parçası haline gelir. Bir çakışma varsa, ALINK işlemi başarısız olur.
+Hata ayıklama **Ggableattribute** , derleme içindeki ayrı modüller için değil, bir kerede tüm derleme için geçerlidir. Bu nedenle geliştirme araçları, derleme meta veri belirtecine, bir derleme zaten oluşturulmuşsa veya **System. Runtime. CompilerServices. AssemblyAttributesGoHere**adlı sınıfa özel öznitelikler iliştirmelidir. Sonra ALink aracı **, bu hata** ayıklama kodu özniteliklerini her modülden bir parçası haline geldikleri derlemeye yükseltir. Bir çakışma varsa, ALink işlemi başarısız olur.
 
 > [!NOTE]
-> Microsoft Visual C++ derleyicisi sürümünde .NET Framework 1.0 ekler **DebuggableAttribute** olduğunda **/CLR** ve **/zi** derleyici seçenekleri belirtilir. Sürümünde .NET Framework 1.1, veya eklemelisiniz **DebuggableAttribute** el ile kod veya kullanım, **assemblydebug** bağlayıcı seçeneği.
+> .NET Framework sürüm 1,0 ' de C++ , **/clr** ve **/Zi** derleyici seçenekleri belirtildiğinde Microsoft Visual derleyicisi, hata **ayıklayıcıggableattribute** öğesini ekler. .NET Framework sürüm 1,1 ' de, hata **ayıklıbağlantı özniteliği** kodunuza el ile eklemeniz veya **/ASSEMBLYDEBUG** bağlayıcı seçeneğini kullanmanız gerekir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hata Ayıklama, İzleme ve Profil Oluşturma](../../../docs/framework/debug-trace-profile/index.md)
-- [JIT-Ekleme Hata Ayıklamayı Etkinleştirme](../../../docs/framework/debug-trace-profile/enabling-jit-attach-debugging.md)
+- [Hata Ayıklama, İzleme ve Profil Oluşturma](index.md)
+- [JIT-Ekleme Hata Ayıklamayı Etkinleştirme](enabling-jit-attach-debugging.md)
 - [Profil oluşturmayı etkinleştirme](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/s5ec0es1(v=vs.100))

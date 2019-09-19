@@ -5,12 +5,12 @@ helpviewer_keywords:
 - controls, UI Automation support for
 - UI Automation, support for standard controls
 ms.assetid: 3770ea8a-2655-4add-9c59-fe0610ad5084
-ms.openlocfilehash: d83713a81e7675a68482890c2401f1a0a6803abc
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 6cbf31c8a1cdf6e853e56445d22f4a7513bd1859
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69914227"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042003"
 ---
 # <a name="ui-automation-support-for-standard-controls"></a>Standart Denetimler İçin UI Otomasyon Desteği
 > [!NOTE]
@@ -55,7 +55,7 @@ ms.locfileid: "69914227"
 |#32768|Menü|  
 |#32768|MenuItem|  
 |msctls_progress32|ProgressBar|  
-|RichEdit|Belgedeki. Bkz. Note.|  
+|RichEdit|belgedeki. Bkz. Note.|  
 |RichEdit20A|Belge|  
 |RichEdit20W|Belge|  
 |RichEdit50W|Belge|  
@@ -169,4 +169,4 @@ ms.locfileid: "69914227"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [UI Otomasyonu Denetim Türleri](../../../docs/framework/ui-automation/ui-automation-control-types.md)
+- [UI Otomasyonu Denetim Türleri](ui-automation-control-types.md)

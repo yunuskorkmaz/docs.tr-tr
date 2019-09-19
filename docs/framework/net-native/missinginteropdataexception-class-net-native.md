@@ -7,12 +7,12 @@ dev_langs:
 ms.assetid: eab4bcf8-9f5f-4731-87d8-842748a6062a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3b8d84f8ea9cf8f94cb7a2b155c5d40c6de2979a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8d916aa5e19b8ce583984d9a8e9708d34cf0adfb
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69941693"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049538"
 ---
 # <a name="missinginteropdataexception-class-net-native"></a>MissingInteropDataException Sınıfı (.NET Yerel)
 **Windows 10 için Windows uygulamaları için .NET, yalnızca .NET Native**  
@@ -22,7 +22,7 @@ ms.locfileid: "69941693"
  **Uzayına** System. Runtime. CompilerServices  
   
 > [!IMPORTANT]
-> `MissingInteropDataException` Sınıfı yalnızca .NET Native araç zinciri tarafından dahili kullanıma yöneliktir. Üçüncü taraf kodda kullanılmak üzere değildir veya uygulama kodunuzda özel durumu işlemelisiniz. Bunun yerine, [çalışma zamanı yönergeleri dosyanıza](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)girdiler ekleyerek özel durumu ortadan kaldırabilirsiniz. Daha fazla bilgi için, açıklamalar bölümüne bakın.  
+> `MissingInteropDataException` Sınıfı yalnızca .NET Native araç zinciri tarafından dahili kullanıma yöneliktir. Üçüncü taraf kodda kullanılmak üzere değildir veya uygulama kodunuzda özel durumu işlemelisiniz. Bunun yerine, [çalışma zamanı yönergeleri dosyanıza](runtime-directives-rd-xml-configuration-file-reference.md)girdiler ekleyerek özel durumu ortadan kaldırabilirsiniz. Daha fazla bilgi için, açıklamalar bölümüne bakın.  
   
 ## <a name="syntax"></a>Sözdizimi  
  [!code-csharp[ProjectN#21](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/missinginteropdataexception_syntax1.cs#21)]
@@ -72,7 +72,7 @@ ms.locfileid: "69941693"
 ## <a name="usage-details"></a>Kullanım ayrıntıları  
  Tür bilgileri kullanılamadığından bir com veya Windows çalışma zamanı bileşenine bir yöntem çağrısı yapılmazsa özeldurumoluşturulur.`MissingInteropDataException`  
   
- Çalışma zamanında bir uygulama için kullanılabilen meta veriler, çalışma zamanı yönergeleri (XML yapılandırma) dosyası, \*. RD. xml tarafından tanımlanır. Uygulamanızın bu özel durumu oluşturmasını engellemek için bu dosyayı, çalışma zamanında bulunması gereken meta verileri tanımlamak üzere değiştirmelisiniz. En yaygın olarak, çalışma zamanı yönergeleri dosyasındaki uygun program `MarshalObject`öğesine `MarshalDelegate`bir, `MarshalStructure` veya özniteliği ekleyerek bu hatayı ele alırsınız. Bu dosyanın biçimi hakkında daha fazla bilgi için bkz. [çalışma zamanı yönergeleri (RD. xml) yapılandırma dosyası başvurusu](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md).  
+ Çalışma zamanında bir uygulama için kullanılabilen meta veriler, çalışma zamanı yönergeleri (XML yapılandırma) dosyası, \*. RD. xml tarafından tanımlanır. Uygulamanızın bu özel durumu oluşturmasını engellemek için bu dosyayı, çalışma zamanında bulunması gereken meta verileri tanımlamak üzere değiştirmelisiniz. En yaygın olarak, çalışma zamanı yönergeleri dosyasındaki uygun program `MarshalObject`öğesine `MarshalDelegate`bir, `MarshalStructure` veya özniteliği ekleyerek bu hatayı ele alırsınız. Bu dosyanın biçimi hakkında daha fazla bilgi için bkz. [çalışma zamanı yönergeleri (RD. xml) yapılandırma dosyası başvurusu](runtime-directives-rd-xml-configuration-file-reference.md).  
   
 > [!IMPORTANT]
 > Bu özel durum, uygulamanız için gereken meta verilerin çalışma zamanında kullanılabilir olmadığını gösterdiği için, bu özel durumu bir `try` / `catch` blokta tutamamalısınız. Bunun yerine, özel durumun nedenini tanılamanıza ve ilgili girişi bir çalışma zamanı yönergeleri dosyasına ekleyerek ortadan kaldırmanız gerekir.  
@@ -82,5 +82,5 @@ ms.locfileid: "69941693"
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Exception?displayProperty=nameWithType>
-- [MissingMetadataException Sınıfı](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md)
-- [Çalışma Zamanı Yönergeleri (rd.xml) Yapılandırma Dosyası Başvurusu](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [MissingMetadataException Sınıfı](missingmetadataexception-class-net-native.md)
+- [Çalışma Zamanı Yönergeleri (rd.xml) Yapılandırma Dosyası Başvurusu](runtime-directives-rd-xml-configuration-file-reference.md)

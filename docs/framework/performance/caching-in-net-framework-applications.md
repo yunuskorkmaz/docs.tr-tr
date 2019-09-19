@@ -6,12 +6,12 @@ helpviewer_keywords:
 - caching [.NET Framework]
 - caching [ASP.NET]
 ms.assetid: c4b47ee0-4b82-4124-9bce-818088385e34
-ms.openlocfilehash: b1d9b12a46d674bf591457cdc90c66fc16818734
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 704efed96c18f23d34d8a583d3121fc08b9e22e1
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70927041"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046784"
 ---
 # <a name="caching-in-net-framework-applications"></a>.NET Framework Uygulamalarında Önbelleğe Alma
 Önbelleğe alma, verileri hızlı erişim için bellekte depolamanıza olanak sağlar. Verilere yeniden erişildiğinde, uygulamalar verileri özgün kaynaktan almak yerine önbellekten alabilir. Bu, performansı ve ölçeklenebilirliği iyileştirebilir. Ayrıca, veri kaynağı geçici olarak kullanılamadığında önbelleğe alma verilerin kullanılabilir olmasını sağlar.  
@@ -41,7 +41,7 @@ ms.locfileid: "70927041"
 > [!NOTE]
 > Sınıfı, <xref:System.Web.Caching> ad alanında tanımlanan ASP.net Cache nesnesi üzerinde modellenir. <xref:System.Runtime.Caching.MemoryCache> Bu nedenle, ASP.NET 'in önceki sürümlerinde sağlanmış mantığa benzer iç önbelleğe alma mantığı.  
   
- WPF uygulamasında önbelleğe alma için kullanmanın bir örneği için bkz [. İzlenecek yol: Bir WPF uygulamasında](../../../docs/framework/wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md)uygulama verilerini önbelleğe alma.  
+ WPF uygulamasında önbelleğe alma için kullanmanın bir örneği için bkz [. İzlenecek yol: Bir WPF uygulamasında](../wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md)uygulama verilerini önbelleğe alma.  
   
 ## <a name="caching-in-aspnet-applications"></a>ASP.NET uygulamalarında önbelleğe alma  
  <xref:System.Runtime.Caching> Ad alanındaki önbelleğe alma sınıfları, ASP.NET içinde verileri önbelleğe alma işlevselliği sağlar.  
@@ -79,5 +79,5 @@ ms.locfileid: "70927041"
 
 - <xref:System.Runtime.Caching.ObjectCache>
 - <xref:System.Runtime.Caching.MemoryCache>
-- [İzlenecek yol: WPF uygulamasında uygulama verilerini önbelleğe alma](../../../docs/framework/wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md)
+- [İzlenecek yol: WPF uygulamasında uygulama verilerini önbelleğe alma](../wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md)
 - [İzlenecek yol: Uygulama verilerini ASP.NET içinde önbelleğe alma](https://docs.microsoft.com/previous-versions/ff477235(v=vs.100))

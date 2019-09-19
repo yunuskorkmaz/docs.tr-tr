@@ -9,37 +9,37 @@ helpviewer_keywords:
 - staleness of cached resources
 - age of cached resources
 ms.assetid: 7f775925-89a1-4956-ba90-c869c1749a94
-ms.openlocfilehash: 3819882fe4a93016b25c10daa198a24fe7b0e951
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e21cfc28407ba67afdce8d72e5e52c12ab359059
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624680"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048834"
 ---
 # <a name="cache-policy-interactionmaximum-age-and-maximum-staleness"></a>Önbellek İlkesi Etkileşimi — Yaş Üst Sınırı ve En Fazla Eskime
-İstemci uygulamayı çevrimiçiyken içeriği getirildiğinden emin olun yardımcı olmak için istemci önbellek İlkesi ve sunucu yeniden doğrulama gereksinimleri etkileşimi her zaman en koruyucu önbellek İlkesi'nde sonuçlanır. Bu konu başlığı altındaki tüm örnekler, 1 Ocak önbelleğe alınır ve 4 Ocak süresi bir kaynağın önbellek ilkesini gösterir.  
+En son içeriğin istemci uygulamasına döndürüldüğünden emin olmak için, istemci önbellek ilkesi ve sunucu yeniden doğrulama gereksinimlerinin etkileşimi her zaman en klasik önbellek ilkesine neden olur. Bu konudaki tüm örneklerde, 1 Ocak tarihinde önbelleğe alınan ve 4 Ocak tarihinde sona erecek bir kaynağın önbellek ilkesi gösterilmektedir.  
   
- Aşağıdaki örneklerde, en fazla eskime değeri (`maxStale`) en uzun bir geçerlilik süresi ile birlikte kullanılır (`maxAge`):  
+ Aşağıdaki örneklerde, en yüksek stalet değeri (`maxStale`) en fazla Age (`maxAge`) ile birlikte kullanılır:  
   
-- Önbellek İlkesi ayarlarsa `maxAge` = 5 gün ve belirttiğinde bir `maxStale` değeri, için uygun `maxAge` içeriği değerdir kullanılabilir 6 Ocak tarihine kadar. Ancak, sunucunun yeniden doğrulama gereksinimlerine göre içeriği 4 Ocak süresi dolar. İçerik sona erme tarihi (ER) daha pasif olduğundan, öncelikli `maxAge` ilkesi. Bu nedenle, içerik 4 Ocak süresi dolar ve rağmen en yüksek yaşı ulaşılmadı yeniden doğrulanır gerekir.  
+- Önbellek ilkesi = 5 gün `maxAge` ayarlar ve `maxAge` değere göre `maxStale` değer belirtmezse, içerik 6 Ocak 'a kadar kullanılabilir. Ancak, sunucunun yeniden doğrulama gereksinimlerine göre, içerik 4 Ocak tarihinde sona erer. İçerik sona erme tarihi daha pasif (daha önce) olduğundan, `maxAge` ilkeye göre önceliklidir. Bu nedenle, içerik 4 Ocak tarihinde sona erer ve en yüksek yaşına ulaşılmasa bile yeniden doğrulanması gerekir.  
   
-- Önbellek İlkesi ayarlarsa `maxAge` = 5 gün ve `maxStale` = 3 gün göre `maxAge` içeriği değerdir kullanılabilir 6 Ocak tarihine kadar. Şunlara göre `maxStale` içeriği değerdir kullanılabilir Ocak 7 kadar. Bu nedenle, içerik 6 Ocak yeniden doğrulanır.  
+- Önbellek ilkesi `maxAge` değere göre = `maxAge` 5 gün ve `maxStale` = 3 gün ayarladıysanız, içerik 6 Ocak 'a kadar kullanılabilir. `maxStale` Değere göre, içerik 7 Ocak tarihine kadar kullanılabilir. Bu nedenle, içerik 6 Ocak 'ta yeniden onaylanır.  
   
-- Önbellek İlkesi ayarlarsa `maxAge` = 5 gün ve `maxStale` = 1 gün göre `maxAge` içeriği değerdir kullanılabilir 6 Ocak tarihine kadar. Şunlara göre `maxStale` içeriği değerdir kullanılabilir 5 Ocak tarihine kadar. Bu nedenle, içerik 5 Ocak yeniden doğrulanır.  
+- Önbellek ilkesi `maxAge` değere göre = `maxAge` 5 gün ve `maxStale` = 1 gün ayarladıysanız, içerik 6 Ocak 'a kadar kullanılabilir. `maxStale` Değere göre, içerik 5 Ocak 'a kadar kullanılabilir. Bu nedenle, içerik 5 Ocak 'ta yeniden onaylanır.  
   
- En uzun geçerlilik süresi içerik sona erme tarihinden daha az olduğunda, her zaman daha pasif önbelleğe alma davranışını korunacağını ve en fazla eskime değeri etkisizdir. Aşağıdaki örnekler en fazla eskime ayarı etkisini gösterir (`maxStale`) değeri yaş üst sınırını (`maxAge`) içerik süresi dolmadan önce ulaştı:  
+ Maksimum yaş, içerik sona erme tarihinden daha az olduğunda, daha fazla koruyucu önbelleğe alma davranışı her zaman korunur ve en yüksek stalet değeri bir etkiye sahip değildir. Aşağıdaki örneklerde, en yüksek yaş (`maxStale``maxAge`) değerinin, içeriğin süresi dolmadan önce ne kadar dolacağını gösteren en yüksek bir stalet () değeri ayarlamanın etkisi gösterilmektedir:  
   
-- Önbellek İlkesi ayarlarsa `maxAge` = 1 gün ve için bir değer belirtmiyor `maxStale` değeri, içeriği yeniden doğrulanır 2 Ocak rağmen süresi geçmemiş.  
+- Önbellek ilkesi = 1 gün `maxAge` ayarlıyor ve değer için `maxStale` değer belirtmezse, süresi dolmasa bile 2 Ocak 'ta içerik yeniden onaylanır.  
   
-- Önbellek İlkesi ayarlarsa `maxAge` = 1 gün ve `maxStale` = 3 gün içeriği daha pasif ilke ayarı zorunlu tutmak için 2 Ocak'ta yeniden doğrulanır.  
+- Önbellek ilkesi = 1 gün `maxAge` ve `maxStale` = 3 gün ayarlaırsa, daha koruyucu ilke ayarını zorlamak için içerik 2 Ocak 'ta yeniden onaylanır.  
   
-- Önbellek İlkesi ayarlarsa `maxAge` = 1 gün ve `maxStale` = 1 gün, içeriğin 2 Ocak yeniden doğrulanır.  
+- Önbellek ilkesi `maxAge` = 1 gün ve `maxStale` = 1 gün ise, içerik 2 Ocak 'ta yeniden onaylanır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Ağ Uygulamaları için Önbellek Yönetimi](../../../docs/framework/network-programming/cache-management-for-network-applications.md)
-- [Önbellek İlkesi](../../../docs/framework/network-programming/cache-policy.md)
-- [Konum Temelli Önbellek İlkeleri](../../../docs/framework/network-programming/location-based-cache-policies.md)
-- [Saat Temelli Önbellek İlkeleri](../../../docs/framework/network-programming/time-based-cache-policies.md)
-- [Ağ Uygulamalarında Önbelleğe Almayı Yapılandırma](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md)
-- [Önbellek İlkesi Etkileşimi — Yaş Üst Sınırı ve En Az Eskime](../../../docs/framework/network-programming/cache-policy-interaction-maximum-age-and-minimum-freshness.md)
+- [Ağ Uygulamaları için Önbellek Yönetimi](cache-management-for-network-applications.md)
+- [Önbellek İlkesi](cache-policy.md)
+- [Konum Temelli Önbellek İlkeleri](location-based-cache-policies.md)
+- [Saat Temelli Önbellek İlkeleri](time-based-cache-policies.md)
+- [Ağ Uygulamalarında Önbelleğe Almayı Yapılandırma](configuring-caching-in-network-applications.md)
+- [Önbellek İlkesi Etkileşimi — Yaş Üst Sınırı ve En Az Eskime](cache-policy-interaction-maximum-age-and-minimum-freshness.md)
