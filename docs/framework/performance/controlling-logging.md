@@ -6,12 +6,12 @@ helpviewer_keywords:
 ms.assetid: ce13088e-3095-4f0e-9f6b-fad30bbd3d41
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1648af8c3dc407581714e8e863fe4972d6ffadbc
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 45df41e10dc81bc6011e5329723bca55925825f9
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894941"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046679"
 ---
 # <a name="controlling-net-framework-logging"></a>.NET Framework Günlük Kaydını Denetleme
 
@@ -85,7 +85,7 @@ Bir kullanıcının, günlüğü etkinleştirmek için üç şeyi belirtmesi ger
 
 ## <a name="viewing-clr-etw-events"></a>CLR ETW olaylarını görüntüleme
 
-CLR ETW olaylarını görüntülemek için aşağıda listelenen komutları kullanın. Olayların açıklaması için bkz. [CLR ETW olayları](../../../docs/framework/performance/clr-etw-events.md).
+CLR ETW olaylarını görüntülemek için aşağıda listelenen komutları kullanın. Olayların açıklaması için bkz. [CLR ETW olayları](clr-etw-events.md).
 
 ### <a name="to-view-clr-etw-events-using-tracerpt"></a>Tracerpt kullanarak CLR ETW olaylarını görüntülemek için
 
@@ -114,4 +114,4 @@ CLR ETW olaylarını görüntülemek için aşağıda listelenen komutları kull
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Windows performans araç seti](/windows-hardware/test/wpt/)
-- [Ortak Dil Çalışma Zamanı Modülünde ETW Olayları](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md)
+- [Ortak Dil Çalışma Zamanı Modülünde ETW Olayları](etw-events-in-the-common-language-runtime.md)

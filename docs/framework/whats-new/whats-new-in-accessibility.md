@@ -9,12 +9,12 @@ helpviewer_keywords:
 - what's new [.NET Framework]
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 410f95b373e079fe959068a6540642a6ad043e95
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 22e1ae495276b0c474ad47f695d8410288289f83
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69952817"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053731"
 ---
 # <a name="whats-new-in-accessibility-in-the-net-framework"></a>.NET Framework erişilebilirlik yenilikleri
 
@@ -169,7 +169,7 @@ if (raiseMethod != null) {
 
 Aşağıdaki şekilde, Kullanıcı klavyeyle bir düğme seçtiğinde araç ipucunu gösterir.
 
-![Kullanıcı klavyeyle bir düğmeye gittiğinde araç ipucu](media/tooltip.png)
+![Kullanıcı klavyeyle bir düğmeye gittiğinde araç ipucu](./media/tooltip.png)
 
 <a name="wpf48" />
 
@@ -189,7 +189,7 @@ Daraltılmış veya gizli görünürlüğe sahip öğeler artık ekran okuyucu t
 
 Bu özelliği kullanmak için XAML kodunuza eklemeniz ve uygun fırçayı ya da bağlamayı kullanmanız yeterlidir. Ortaya çıkan metin seçimi şöyle görünür:
 
-![Kullanıcı klavyeyle bir düğmeye gittiğinde araç ipucu](media/selectiontextbrush-property.png)
+![Kullanıcı klavyeyle bir düğmeye gittiğinde araç ipucu](./media/selectiontextbrush-property.png)
 
 `SelectionBrush` Ve`SelectionTextBrush` özelliklerinin kullanımını, uygun olmayan bir arka plan ve ön plan renk kombinasyonu oluşturmak için birleştirebilirsiniz.
 
@@ -482,11 +482,11 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
   Sonra: 
 
-  ![Erişilebilirlik geliştirmelerinden önce odaklı genişletici denetimi](media/expander-before.png)
+  ![Erişilebilirlik geliştirmelerinden önce odaklı genişletici denetimi](./media/expander-before.png)
 
   Sonra 
 
-  ![Erişilebilirlik geliştirmelerinden sonra odak ile genişletici denetimi](media/expander-after.png)
+  ![Erişilebilirlik geliştirmelerinden sonra odak ile genişletici denetimi](./media/expander-after.png)
 
 - <xref:System.Windows.Controls.CheckBox>ve <xref:System.Windows.Controls.RadioButton> denetimler
 
@@ -494,11 +494,11 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
   Sonra: 
 
-  ![Erişilebilirlik geliştirmelerinden önce odak içeren yüksek karşıtlık radyo düğmesi](media/radio-button-before.png)
+  ![Erişilebilirlik geliştirmelerinden önce odak içeren yüksek karşıtlık radyo düğmesi](./media/radio-button-before.png)
 
   Sonra 
 
-  ![Erişilebilirlik geliştirmelerinden sonra odak ile yüksek karşıtlık radyo düğmesi](media/radio-button-after.png)
+  ![Erişilebilirlik geliştirmelerinden sonra odak ile yüksek karşıtlık radyo düğmesi](./media/radio-button-after.png)
 
 - <xref:System.Windows.Controls.ComboBox>denetimle
 
@@ -506,31 +506,31 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
   Sonra: 
 
-  ![ComboBox, erişilebilirlik geliştirmelerinden önce kenarlık ve metin devre dışı](media/combo-disabled-before.png)
+  ![ComboBox, erişilebilirlik geliştirmelerinden önce kenarlık ve metin devre dışı](./media/combo-disabled-before.png)
 
   Sonra   
 
-  ![ComboBox, erişilebilirlik iyileştirmelerinden sonra devre dışı bırakıldı kenarlık ve metin](media/combo-disabled-after.png)
+  ![ComboBox, erişilebilirlik iyileştirmelerinden sonra devre dışı bırakıldı kenarlık ve metin](./media/combo-disabled-after.png)
 
   Ayrıca, devre dışı bırakılmış ve odaklanmış düğmeler doğru tema rengini kullanır.
 
   Sonra:
 
-  ![Erişilebilirlik geliştirmelerinden önceki düğme teması renkleri](media/button-themes-before.png) 
+  ![Erişilebilirlik geliştirmelerinden önceki düğme teması renkleri](./media/button-themes-before.png) 
 
   Sonra 
 
-  ![Erişilebilirlik geliştirmelerinden sonra düğme teması renkleri](media/button-themes-after.png) 
+  ![Erişilebilirlik geliştirmelerinden sonra düğme teması renkleri](./media/button-themes-after.png) 
 
   Son olarak, .NET Framework 4,7 ve önceki sürümlerde, açılır okun <xref:System.Windows.Controls.ComboBox> görünmez olması nedeniyle bir `Toolbar.ComboBoxStyleKey` denetimin stilini ayarlama. Bu sorun, .NET Framework 4.7.1 ile başlayarak düzeltilir. Örneğin:
 
   Sonra: 
 
-  ![Erişilebilirlik geliştirmelerinden önce Toolbar. ComboBoxStyleKey](media/comboboxstylekey-before.png) 
+  ![Erişilebilirlik geliştirmelerinden önce Toolbar. ComboBoxStyleKey](./media/comboboxstylekey-before.png) 
 
   Sonra 
 
-  ![Erişilebilirlik geliştirmelerinden sonra Toolbar. ComboBoxStyleKey](media/comboboxstylekey-after.png) 
+  ![Erişilebilirlik geliştirmelerinden sonra Toolbar. ComboBoxStyleKey](./media/comboboxstylekey-after.png) 
 
 - <xref:System.Windows.Controls.DataGrid>denetimle
 
@@ -538,21 +538,21 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
   Sonra: 
 
-  ![Erişilebilirlik geliştirmelerinden önce sıralama göstergesi oku](media/sort-indicator-before.png) 
+  ![Erişilebilirlik geliştirmelerinden önce sıralama göstergesi oku](./media/sort-indicator-before.png) 
 
   Sonra   
 
-  ![Erişilebilirlik geliştirmelerinden sonra sıralama göstergesi oku](media/sort-indicator-after.png) 
+  ![Erişilebilirlik geliştirmelerinden sonra sıralama göstergesi oku](./media/sort-indicator-after.png) 
 
   Ayrıca, .NET Framework 4,7 ve önceki sürümlerde, varsayılan bağlantı stili, fare üzerinde yüksek karşıtlık modlarında yanlış bir renge değiştirilmiştir. Bu, .NET Framework 4.7.1 ile başlayarak çözümlenir. Benzer şekilde <xref:System.Windows.Controls.DataGrid> , CheckBox sütunları .NET Framework 4.7.1 ile başlayan klavye odağı geri bildirimi için beklenen renkleri kullanır.
 
   Sonra: 
 
-  ![Erişilebilirlik geliştirmelerinden önce DataGrid varsayılan bağlantı stili](media/default-link-style-before.png) 
+  ![Erişilebilirlik geliştirmelerinden önce DataGrid varsayılan bağlantı stili](./media/default-link-style-before.png) 
 
   Sonra    
 
-  ![Erişilebilirlik geliştirmelerinden sonra DataGrid varsayılan bağlantı stili](media/default-link-style-after.png) 
+  ![Erişilebilirlik geliştirmelerinden sonra DataGrid varsayılan bağlantı stili](./media/default-link-style-after.png) 
 
 .NET Framework 4.7.1 ' deki WPF Erişilebilirlik iyileştirmeleri hakkında daha fazla bilgi için bkz. [WPF 'de erişilebilirlik geliştirmeleri](../migration-guide/retargeting/4.7-4.7.1.md#accessibility-improvements-in-wpf).
 
@@ -583,11 +583,11 @@ Yüksek karşıtlıklı değişikliklere örnek olarak şunlar verilebilir:
 
   Sonra:
 
-  ![Erişilebilirlik geliştirmelerinden önce devre dışı metin](media/wf-disabled-before.png) 
+  ![Erişilebilirlik geliştirmelerinden önce devre dışı metin](./media/wf-disabled-before.png) 
 
   Sonra
 
-  ![Erişilebilirlik geliştirmelerinden sonra devre dışı metin](media/wf-disabled-after.png) 
+  ![Erişilebilirlik geliştirmelerinden sonra devre dışı metin](./media/wf-disabled-after.png) 
 
 - Iş parçacığı özel durumu Iletişim kutusunda yüksek karşıtlık geliştirmeleri.
 
