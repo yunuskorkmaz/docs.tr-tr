@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 027832a2-9b43-4fd9-9b45-7f4196261a4e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 09179ebe123f1287c8b057783bb421153f5e1183
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: a53c8b7b88bd25a6611c33218c7a386de55889e9
+ms.sourcegitcommit: 3ac05b2c386c8cc5e73f4c7665f6c0a7ed3da1bd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894186"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71151760"
 ---
 # <a name="marshaling-classes-structures-and-unions"></a>Sınıflar, Yapılar ve Birleşimleri Hazırlama
 Sınıflar ve yapılar .NET Framework benzerdir. Her ikisinde de alanlar, Özellikler ve olaylar olabilir. Statik ve statik olmayan yöntemlere de sahip olabilirler. Bir önemli farkı, yapıların değer türleri ve sınıfların başvuru türleridir.  
@@ -108,7 +108,7 @@ typedef struct _MYARRAYSTRUCT
   
  Bu örnekteki tüm yapılar için, <xref:System.Runtime.InteropServices.StructLayoutAttribute> üyelerin bellekte sırayla, göründükleri sırada düzenlendiğinden emin olmak için özniteliği uygulanır.  
   
- Sınıfı,`TestStructInStruct` ,ve`App`sınıfıtarafından çağrılan yöntemler için yönetilen prototürler içerir. `TestArrayInStruct` `TestStructInStruct3` `LibWrap` Her prototip, aşağıdaki gibi tek bir parametre bildirir:  
+ Sınıfı,`TestStructInStruct` ,ve`App`sınıfıtarafından çağrılan yöntemler için yönetilen prototürler içerir. `TestArrayInStruct` `TestStructInStruct3` `NativeMethods` Her prototip, aşağıdaki gibi tek bir parametre bildirir:  
   
 - `TestStructInStruct`parametresi olarak yazmak `MyPerson2` için bir başvuru bildirir.  
   
@@ -159,7 +159,7 @@ typedef struct _WIN32_FIND_DATA
   
  Bu örnekte, `FindData` sınıfı özgün yapıdaki her öğe için karşılık gelen bir veri üyesini ve katıştırılmış yapıyı içerir. İki orijinal karakter arabelleği yerine, sınıf yerine dizeler koyar. **MarshalAsAttribute** <xref:System.Runtime.InteropServices.UnmanagedType> numaralandırmayı, yönetilmeyen yapılar içinde görünen satır içi, sabit uzunlukta karakter dizilerini belirlemek için kullanılan **ByValTStr**olarak ayarlar.  
   
- Sınıfı, `FindData` sınıfının bir parametre olarak geçişini sağlayan `FindFirstFile` , yönetilen bir prototipi içerir. `LibWrap` Parametre, <xref:System.Runtime.InteropServices.InAttribute> ve <xref:System.Runtime.InteropServices.OutAttribute> öznitelikleri ile bildirilmelidir çünkü başvuru türleri olan sınıflar varsayılan olarak parametrelerde olarak geçirilir.  
+ Sınıfı, `FindData` sınıfının bir parametre olarak geçişini sağlayan `FindFirstFile` , yönetilen bir prototipi içerir. `NativeMethods` Parametre, <xref:System.Runtime.InteropServices.InAttribute> ve <xref:System.Runtime.InteropServices.OutAttribute> öznitelikleri ile bildirilmelidir çünkü başvuru türleri olan sınıflar varsayılan olarak parametrelerde olarak geçirilir.  
   
 ### <a name="declaring-prototypes"></a>Prototipleri Bildirme  
  [!code-cpp[Conceptual.Interop.Marshaling#17](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.interop.marshaling/cpp/findfile.cpp#17)]
@@ -202,7 +202,7 @@ union MYUNION2
   
  `MyUnion2_1`ve `MyUnion2_2` sırasıyla bir değer türü (tamsayı) ve bir dize içerir. Yönetilen kodda, değer türleri ve başvuru türlerinin örtüşmesine izin verilmez. Bu örnek, çağıranın aynı yönetilmeyen işlevi çağırırken her iki türü de kullanmasını sağlamak için yöntem aşırı yüklemesini kullanır. Düzeni `MyUnion2_1` açıktır ve kesin bir fark değeri içerir. Buna karşılık, `MyUnion2_2` başvuru türlerinde açık mizanpajlara izin verilmediğinden sıralı bir düzene sahiptir. Özniteliği, UNION 'nin <xref:System.Runtime.InteropServices.UnmanagedType> yönetilmeyen gösterimi içinde görünen satır içi, sabit uzunlukta karakter dizilerini belirlemek için kullanılan ByValTStr olarak ayarlanır. <xref:System.Runtime.InteropServices.MarshalAsAttribute>  
   
- `LibWrap` `TestUnion` Sınıfı ve`TestUnion2` yöntemlerinin prototiplerini içerir. `TestUnion2`, parametreleri bildirmek `MyUnion2_1` `MyUnion2_2` için aşırı yüklendi.  
+ `NativeMethods` `TestUnion` Sınıfı ve`TestUnion2` yöntemlerinin prototiplerini içerir. `TestUnion2`, parametreleri bildirmek `MyUnion2_1` `MyUnion2_2` için aşırı yüklendi.  
   
 ### <a name="declaring-prototypes"></a>Prototipleri Bildirme  
  [!code-cpp[Conceptual.Interop.Marshaling#28](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.interop.marshaling/cpp/unions.cpp#28)]
@@ -242,7 +242,7 @@ typedef struct _SYSTEMTIME {
   
  Bu örnekte, `SystemTime` sınıfı sınıf üyeleri olarak temsil edilen orijinal yapının öğelerini içerir. <xref:System.Runtime.InteropServices.StructLayoutAttribute> Özniteliği, üyelerin bellekte sırayla, göründükleri sırada düzenlendiğinden emin olmak üzere ayarlanır.  
   
- Sınıfı, varsayılan olarak `SystemTime` sınıfı bir ın/ `GetSystemTime` out parametresi olarak ileten yönteminin yönetilen bir prototipini içerir. `LibWrap` Parametre, <xref:System.Runtime.InteropServices.InAttribute> ve <xref:System.Runtime.InteropServices.OutAttribute> öznitelikleri ile bildirilmelidir çünkü başvuru türleri olan sınıflar varsayılan olarak parametrelerde olarak geçirilir. Çağıranın sonuçları alması için, bu [yönlü özniteliklerin](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/77e6taeh(v=vs.100)) açıkça uygulanması gerekir. Sınıfı, `SystemTime` sınıfının yeni bir örneğini oluşturur ve veri alanlarına erişir. `App`  
+ Sınıfı, varsayılan olarak `SystemTime` sınıfı bir ın/ `GetSystemTime` out parametresi olarak ileten yönteminin yönetilen bir prototipini içerir. `NativeMethods` Parametre, <xref:System.Runtime.InteropServices.InAttribute> ve <xref:System.Runtime.InteropServices.OutAttribute> öznitelikleri ile bildirilmelidir çünkü başvuru türleri olan sınıflar varsayılan olarak parametrelerde olarak geçirilir. Çağıranın sonuçları alması için, bu [yönlü özniteliklerin](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/77e6taeh(v=vs.100)) açıkça uygulanması gerekir. Sınıfı, `SystemTime` sınıfının yeni bir örneğini oluşturur ve veri alanlarına erişir. `App`  
   
 ### <a name="code-samples"></a>Kod Örnekleri  
  [!code-cpp[Conceptual.Interop.Marshaling#25](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.interop.marshaling/cpp/systime.cpp#25)]
@@ -266,7 +266,7 @@ typedef struct _MYSTRSTRUCT2
   
  Sınıf `MyStruct` , ANSI karakterlerinden oluşan bir dize nesnesi içerir. <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet> Alan ANSI biçimini belirtir. `MyUnsafeStruct`, bir dize yerine <xref:System.IntPtr> tür içeren bir yapıdır.  
   
- Sınıfı, aşırı yüklenmiş `TestOutArrayOfStructs` prototip metodunu içerir. `LibWrap` Bir yöntem parametre olarak bir işaretçi bildirirse, sınıf `unsafe` anahtar sözcüğüyle işaretlenmelidir. Visual Basic güvenli olmayan kod kullanamadığından, aşırı yüklenmiş yöntem, güvensiz değiştirici ve `MyUnsafeStruct` yapı gereksizdir.  
+ Sınıfı, aşırı yüklenmiş `TestOutArrayOfStructs` prototip metodunu içerir. `NativeMethods` Bir yöntem parametre olarak bir işaretçi bildirirse, sınıf `unsafe` anahtar sözcüğüyle işaretlenmelidir. Visual Basic güvenli olmayan kod kullanamadığından, aşırı yüklenmiş yöntem, güvensiz değiştirici ve `MyUnsafeStruct` yapı gereksizdir.  
   
  Sınıfı, diziyi iletmek `UsingMarshaling` için gereken tüm görevleri gerçekleştiren yöntemini uygular. `App` Dizi `out` (`ByRef` Visual Basic) anahtar sözcüğüyle işaretlenir ve bu, verilerin çağrıdan çağırana 'e geçtiği anlamına gelir. Uygulama aşağıdaki <xref:System.Runtime.InteropServices.Marshal> sınıf yöntemlerini kullanır:  
   

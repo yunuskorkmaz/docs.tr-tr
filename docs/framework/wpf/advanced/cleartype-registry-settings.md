@@ -5,12 +5,12 @@ helpviewer_keywords:
 - ClearType [WPF], registry settings
 - typography [WPF], ClearType registry settings
 ms.assetid: 56f314bb-b30b-4f67-8492-8b8a9fa432ae
-ms.openlocfilehash: 5113de6d8d333983e6e26579ff9803a9f5a62816
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: ab6ff2ba6e0f3f1ea9e34de80b67276a990bc83b
+ms.sourcegitcommit: 3ac05b2c386c8cc5e73f4c7665f6c0a7ed3da1bd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70254168"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71151841"
 ---
 # <a name="cleartype-registry-settings"></a>ClearType Kayıt Defteri Ayarları
 Bu konu, WPF uygulamaları tarafından kullanılan Microsoft ClearType kayıt defteri ayarlarına genel bir bakış sağlar.  
@@ -63,7 +63,7 @@ Bu konu, WPF uygulamaları tarafından kullanılan Microsoft ClearType kayıt de
   
 <a name="gamma_level"></a>   
 ## <a name="gamma-level"></a>Gama düzeyi  
- Gama düzeyi piksel değeri ve ışıklılık arasındaki doğrusal olmayan ilişkiyi ifade eder. Gama düzeyi ayarı, görüntüleme cihazının fiziksel özelliklerine karşılık gelmelidir; Aksi takdirde, işlenen çıktıda deformasyonlar olabilir. Örneğin, test çok geniş veya çok dar görünebilir ya da karakterlerin dikey steklerin kenarları üzerinde renkli fringes görünebilir.  
+ Gama düzeyi piksel değeri ve ışıklılık arasındaki doğrusal olmayan ilişkiyi ifade eder. Gama düzeyi ayarı, görüntüleme cihazının fiziksel özelliklerine karşılık gelmelidir; Aksi takdirde, işlenen çıktıda deformasyonlar olabilir. Örneğin, metin çok geniş veya çok dar görünebilir veya karakterlerin dikey metinlerin kenarları üzerinde renkli fringes görünebilir.  
   
  Gama düzeyi 1000 ile 2200 arasında değişen bir tamsayı değeridir. Varsayılan düzey 1900 ' dir.  
   

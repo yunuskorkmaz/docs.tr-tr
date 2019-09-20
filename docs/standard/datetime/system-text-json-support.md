@@ -13,17 +13,18 @@ helpviewer_keywords:
 - JSON Serializer, JSON Reader, JSON Writer
 - Converter, JSON Converter, DateTime Converter
 - ISO, ISO 8601, ISO 8601-1:2019
-ms.openlocfilehash: 5bff01b10b2bdea4fdcfee86e348c47f44d50103
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: 83b1b3a7db63154dccc07325b1a1948a2db3953a
+ms.sourcegitcommit: 3ac05b2c386c8cc5e73f4c7665f6c0a7ed3da1bd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70374470"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71151822"
 ---
 # <a name="datetime-and-datetimeoffset-support-in-systemtextjson"></a>System.Text.Json üzerinde DateTime ve DateTimeOffset desteği
 
 System. Text. JSON kitaplığı ISO 8601:-2019 genişletilmiş profiline <xref:System.DateTime> göre <xref:System.DateTimeOffset> ayrıştırır ve yazar ve değerlerini kaydeder.
 [Dönüştürücüler](https://docs.microsoft.com/dotnet/api/system.text.json.serialization.jsonconverter-1?view=netcore-3.0) ile <xref:System.Text.Json.JsonSerializer>serileştirme ve seri durumdan çıkarma için özel destek sağlar.
+Ayrıca, ve <xref:System.Text.Json.Utf8JsonReader> <xref:System.Text.Json.Utf8JsonWriter>kullanılırken özel destek de uygulanabilir.
 
 ## <a name="support-for-the-iso-8601-12019-format"></a>ISO 8601-1:2019 biçimi desteği
 
@@ -31,72 +32,90 @@ System. Text. JSON kitaplığı ISO 8601:-2019 genişletilmiş profiline <xref:S
 
 <xref:System.DateTime>ve <xref:System.DateTimeOffset> veriler ile <xref:System.Text.Json.JsonSerializer>seri hale getirilebilir:
 
-[!code-csharp[example-serializing-with-jsonserializer](~/samples/snippets/standard/datetime/json/serializing-with-jsonserializer.cs)]
+[!code-csharp[example-serializing-with-jsonserializer](~/samples/snippets/standard/datetime/json/csharp/serializing-with-jsonserializer/Program.cs)]
 
 Ayrıca, şu şekilde <xref:System.Text.Json.JsonSerializer>seri durumdan çıkarılabilirler:
 
-[!code-csharp[example-deserializing-with-jsonserializer-valid](~/samples/snippets/standard/datetime/json/deserializing-with-jsonserializer-valid.cs)]
+[!code-csharp[example-deserializing-with-jsonserializer-valid](~/samples/snippets/standard/datetime/json/csharp/deserializing-with-jsonserializer-valid/Program.cs)]
 
 Varsayılan seçeneklerle, giriş <xref:System.DateTime> ve <xref:System.DateTimeOffset> metin temsilleri, genişletilmiş ISO 8601-1:2019 profiline uymalıdır.
 Profille uyumlu olmayan temsiller serisini kaldırma girişimi bir <xref:System.Text.Json.JsonSerializer> <xref:System.Text.Json.JsonException>oluşturulmasına neden olur:
 
-[!code-csharp[example-deserializing-with-jsonserializer-error](~/samples/snippets/standard/datetime/json/deserializing-with-jsonserializer-error.cs)]
+[!code-csharp[example-deserializing-with-jsonserializer-error](~/samples/snippets/standard/datetime/json/csharp/deserializing-with-jsonserializer-error/Program.cs)]
 
 , <xref:System.Text.Json.JsonDocument> <xref:System.DateTime> Ve temsilleridahilolmaküzerebirJSONyükününiçeriğineyapılandırılmışerişimsağlar.<xref:System.DateTimeOffset> Aşağıdaki örnekte, bir sıcaklığın toplanması verildiğinde, Mondays ortalama sıcaklık hesaplanabilecek nasıl hesaplanacağı gösterilmektedir:
 
-[!code-csharp[example-computing-with-jsondocument-valid](~/samples/snippets/standard/datetime/json/computing-with-jsondocument-valid.cs)]
+[!code-csharp[example-computing-with-jsondocument-valid](~/samples/snippets/standard/datetime/json/csharp/computing-with-jsondocument-valid/Program.cs)]
 
 Uyumsuz <xref:System.DateTime> gösterimlerle yük verilen ortalama sıcaklığın hesaplanmaya çalışılması, şunu oluşturmasına neden <xref:System.Text.Json.JsonDocument> <xref:System.FormatException>olur:
 
-[!code-csharp[example-computing-with-jsondocument-error](~/samples/snippets/standard/datetime/json/computing-with-jsondocument-error.cs)]
+[!code-csharp[example-computing-with-jsondocument-error](~/samples/snippets/standard/datetime/json/csharp/computing-with-jsondocument-error/Program.cs)]
 
 Alt düzey <xref:System.Text.Json.Utf8JsonWriter> yazmaları <xref:System.DateTime> ve <xref:System.DateTimeOffset> verileri:
 
-[!code-csharp[example-writing-with-utf8jsonwriter](~/samples/snippets/standard/datetime/json/writing-with-utf8jsonwriter.cs)]
+[!code-csharp[example-writing-with-utf8jsonwriter](~/samples/snippets/standard/datetime/json/csharp/writing-with-utf8jsonwriter/Program.cs)]
 
 <xref:System.Text.Json.Utf8JsonReader>ayrıştırır <xref:System.DateTime> ve<xref:System.DateTimeOffset> veriler:
 
-[!code-csharp[example-reading-with-utf8jsonreader-valid](~/samples/snippets/standard/datetime/json/reading-with-utf8jsonreader-valid.cs)]
+[!code-csharp[example-reading-with-utf8jsonreader-valid](~/samples/snippets/standard/datetime/json/csharp/reading-with-utf8jsonreader-valid/Program.cs)]
 
 Uyumlu olmayan biçimleri <xref:System.Text.Json.Utf8JsonReader> okumaya çalışmak bunun <xref:System.FormatException>oluşturulmasına neden olur:
 
-[!code-csharp[example-reading-with-utf8jsonreader-error](~/samples/snippets/standard/datetime/json/reading-with-utf8jsonreader-error.cs)]
+[!code-csharp[example-reading-with-utf8jsonreader-error](~/samples/snippets/standard/datetime/json/csharp/reading-with-utf8jsonreader-error/Program.cs)]
 
-## <a name="custom-support-for-xrefsystemdatetime-and-xrefsystemdatetimeoffset-in-xrefsystemtextjsonjsonserializer"></a><xref:System.DateTime> Ve<xref:System.DateTimeOffset> için özel destek<xref:System.Text.Json.JsonSerializer>
+## <a name="custom-support-for-xrefsystemdatetime-and-xrefsystemdatetimeoffset"></a>Ve için <xref:System.DateTime> özel destek<xref:System.DateTimeOffset>
+
+### <a name="when-using-xrefsystemtextjsonjsonserializer"></a>Kullanırken<xref:System.Text.Json.JsonSerializer>
 
 Seri hale getiricinin özel ayrıştırma veya biçimlendirme gerçekleştirmesini istiyorsanız [özel dönüştürücüler](https://docs.microsoft.com/dotnet/api/system.text.json.serialization.jsonconverter-1?view=netcore-3.0)uygulayabilirsiniz.
 İşte birkaç örnek:
 
-### <a name="using-datetimeoffsetparse-and-datetimeoffsettostring"></a>Ve `DateTime(Offset).Parse` kullanma`DateTime(Offset).ToString`
+#### <a name="using-datetimeoffsetparse-and-datetimeoffsettostring"></a>Ve `DateTime(Offset).Parse` kullanma`DateTime(Offset).ToString`
 
 Giriş <xref:System.DateTime> `DateTime(Offset).Parse` veya <xref:System.DateTimeOffset> metin gösterimlerinizin biçimlerini belirleyebulamıyorsanız, dönüştürücüyü okuma mantığınızdaki yöntemi kullanabilirsiniz. Bu, kullanmanıza olanak sağlar. ISO olmayan 8601 dizeleri ve genişletilmiş ISO <xref:System.DateTime> 8601-1:2019 <xref:System.DateTimeOffset> profiline uymayan ISO 8601 biçimleri dahil olmak üzere çeşitli ve metin biçimlerini ayrıştırmak için net kapsamlı destek. Bu yaklaşım, seri hale getiricinin yerel uygulamasını kullanmaktan önemli ölçüde daha az performansız.
 
 Serileştirme için, dönüştürücüyü dönüştürücü yazma mantığınızdaki ' de kullanabilirsiniz `DateTime(Offset).ToString` . Bu <xref:System.DateTime> , [Standart Tarih ve saat biçimlerinden](https://docs.microsoft.com/dotnet/standard/base-types/standard-date-and-time-format-strings)birini ve [özel tarih ve saat biçimlerini](https://docs.microsoft.com/dotnet/standard/base-types/custom-date-and-time-format-strings)kullanarak yazmanızı ve <xref:System.DateTimeOffset> değerleri yazmanızı sağlar.
 Bu, serileştiricinin yerel uygulamasını kullanmaktan çok önemli ölçüde daha düşüktür.
 
-[!code-csharp[example-showing-datetime-parse](~/samples/snippets/standard/datetime/json/datetime-converter-examples/example1/Program.cs)]
+[!code-csharp[example-showing-datetime-parse](~/samples/snippets/standard/datetime/json/csharp/datetime-converter-examples/example1/Program.cs)]
 
 > [!NOTE]
 > <xref:System.Text.Json.Serialization.JsonConverter%601>, Ve `T` olduğunda <xref:System.DateTime>, parametresi her zaman`typeof(DateTime)`olur. `typeToConvert`
 Parametresi, çok biçimli durumları işlemek için ve genel türler kullanılırken performanslı bir şekilde `typeof(T)` yararlanmak için yararlıdır.
 
-### <a name="using-xrefsystembufferstextutf8parser-and-xrefsystembufferstextutf8formatter"></a>Ve <xref:System.Buffers.Text.Utf8Parser> kullanma<xref:System.Buffers.Text.Utf8Formatter>
+#### <a name="using-xrefsystembufferstextutf8parser-and-xrefsystembufferstextutf8formatter"></a>Ve <xref:System.Buffers.Text.Utf8Parser> kullanma<xref:System.Buffers.Text.Utf8Formatter>
 
 Giriş <xref:System.DateTime> veya<xref:System.DateTimeOffset> metin gösterimleriniz "R", "l", "O" veya "G" [Standart Tarih ve saat biçimi dizelerinden](https://docs.microsoft.com/dotnet/standard/base-types/standard-date-and-time-format-strings)biriyle uyumluysa veya isterseniz, dönüştürücü mantığınızdaki hızlı UTF-8 tabanlı ayrıştırma ve biçimlendirme yöntemlerini kullanabilirsiniz. bu biçimlerden birine göre yazın. Bu, ve `DateTime(Offset).Parse` `DateTime(Offset).ToString`kullanmaktan çok daha hızlıdır.
 
 Bu örnekte <xref:System.DateTime> [, değerleri "R" standart biçimine](https://docs.microsoft.com/dotnet/standard/base-types/standard-date-and-time-format-strings#the-rfc1123-r-r-format-specifier)göre seri hale getirilen ve serileştiren özel bir dönüştürücü gösterilmektedir:
 
-[!code-csharp[example-showing-utf8-parser-and-formatter](~/samples/snippets/standard/datetime/json/datetime-converter-examples/example2/Program.cs)]
+[!code-csharp[example-showing-utf8-parser-and-formatter](~/samples/snippets/standard/datetime/json/csharp/datetime-converter-examples/example2/Program.cs)]
 
 > [!NOTE]
 > "R" standart biçimi her zaman 29 karakter uzunluğunda olacaktır.
 
-### <a name="using-datetimeoffsetparse-as-a-fallback-to-the-serializers-native-parsing"></a>Seri `DateTime(Offset).Parse` hale getiricinin yerel ayrıştırmaya geri dönüş olarak kullanma
+#### <a name="using-datetimeoffsetparse-as-a-fallback-to-the-serializers-native-parsing"></a>Seri `DateTime(Offset).Parse` hale getiricinin yerel ayrıştırmaya geri dönüş olarak kullanma
 
 Genellikle giriş <xref:System.DateTime> veya <xref:System.DateTimeOffset> verilerinizi genişletilmiş ISO 8601-1:2019 profiline uyacak şekilde bekleliyorsanız, serileştiricinin yerel ayrıştırma mantığını kullanabilirsiniz. Ayrıca, bir geri dönüş mekanizmasını tek bir durumda uygulayabilirsiniz.
 Bu örnekte, kullanarak <xref:System.DateTime> <xref:System.Text.Json.Utf8JsonReader.TryGetDateTime(System.DateTime@)>bir metin temsilini ayrıştırmaya başarısız olduktan sonra dönüştürücünün verileri <xref:System.DateTime.Parse(System.String)>başarıyla ayrıştırır.
 
-[!code-csharp[example-showing-datetime-parse-as-fallback](~/samples/snippets/standard/datetime/json/datetime-converter-examples/example3/Program.cs)]
+[!code-csharp[example-showing-datetime-parse-as-fallback](~/samples/snippets/standard/datetime/json/csharp/datetime-converter-examples/example3/Program.cs)]
+
+### <a name="when-writing-with-xrefsystemtextjsonutf8jsonwriter"></a>İle yazarken<xref:System.Text.Json.Utf8JsonWriter>
+
+<xref:System.DateTime> İle `ReadOnlySpan<Byte>` <xref:System.String> <xref:System.Text.Json.JsonEncodedText> `ReadOnlySpan<Char>`özel veya <xref:System.DateTimeOffset> metin temsili yazmak isterseniz, özel gösteriminizi bir,, veya olarak biçimlendirebilir, ardından karşılık gelen <xref:System.Text.Json.Utf8JsonWriter> [Utf8JsonWriter. WriteStringValue](https://docs.microsoft.com/dotnet/api/system.text.json.utf8jsonwriter.writestringvalue?view=netcore-3.0) veya [Utf8JsonWriter. WriteString](https://docs.microsoft.com/dotnet/api/system.text.json.utf8jsonwriter.writestring?view=netcore-3.0) yöntemi.
+
+Aşağıdaki örnek, ile <xref:System.DateTime> <xref:System.DateTime.ToString(System.String,System.IFormatProvider)>nasıl özel bir biçimin oluşturulabileceğini gösterir <xref:System.Text.Json.Utf8JsonWriter.WriteStringValue(System.String)> ve yöntemi ile yazılır:
+
+[!code-csharp[example-custom-writing-with-utf8jsonwriter](~/samples/snippets/standard/datetime/json/csharp/custom-writing-with-utf8jsonwriter/Program.cs)]
+
+### <a name="when-reading-with-xrefsystemtextjsonutf8jsonreader"></a>İle okurken<xref:System.Text.Json.Utf8JsonReader>
+
+<xref:System.DateTime> İle <xref:System.DateTimeOffset> <xref:System.Text.Json.Utf8JsonReader.GetString>özel veya metin gösterimini okumak istiyorsanız, geçerli JSON belirtecinin değerini bir <xref:System.String> using olarak alabilir ve ardından özel mantık kullanarak değeri ayrıştırın. <xref:System.Text.Json.Utf8JsonReader>
+
+Aşağıdaki örnek <xref:System.DateTimeOffset> <xref:System.Text.Json.Utf8JsonReader.GetString>, kullanarak bir özel metin gösteriminin nasıl alınamayacağını gösterir ve kullanılarak <xref:System.DateTimeOffset.ParseExact(System.String,System.String,System.IFormatProvider)>ayrıştırılır:
+
+[!code-csharp[example-custom-reading-with-utf8jsonreader](~/samples/snippets/standard/datetime/json/csharp/custom-reading-with-utf8jsonreader/Program.cs)]
 
 ## <a name="the-extended-iso-8601-12019-profile-in-systemtextjson"></a>System. Text. JSON dosyasındaki genişletilmiş ISO 8601-1:2019 profili
 
@@ -179,3 +198,5 @@ Biçimlendirme için aşağıdaki ayrıntı düzeyi düzeyleri tanımlanmıştı
     4. "yyyy'-'MM'-'dd'T'HH ': ' mm ': ' ss '. ' FFFFFFF (' + '/'-') HH ': ' mm "
 
         Bir <xref:System.DateTime> veya<xref:System.DateTimeOffset> kesirli saniye ve yerel bir uzaklığa göre biçimlendirmek için kullanılır.
+
+Varsa, en fazla 7 kesirli basamak yazılır. Bu, bu çözünürlükle <xref:System.DateTime> sınırlı olan uygulamayla hizalanır.

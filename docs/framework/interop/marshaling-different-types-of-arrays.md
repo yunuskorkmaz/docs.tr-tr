@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: c5ac9920-5b6e-4dc9-bf2d-1f6f8ad3b0bf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 358c7f1a339fd473271574a4e97e201f5c15f871
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 8cbc904b56237d3c875566ee1276c121dae70c4c
+ms.sourcegitcommit: 3ac05b2c386c8cc5e73f4c7665f6c0a7ed3da1bd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894173"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71151751"
 ---
 # <a name="marshaling-different-types-of-arrays"></a>Farklı Dizi Türlerini Hazırlama
 Dizi, aynı türde bir veya daha fazla öğe içeren Yönetilen koddaki bir başvuru türüdür. Diziler başvuru türleri olsa da, yönetilmeyen işlevlere parametre olarak geçirilir. Bu davranış, yönetilen dizilerin ın/out parametreleri gibi yönetilen nesnelere geçirilme yöntemi ile tutarlı değildir. Daha fazla bilgi için bkz. [kopyalama ve sabitleme](copying-and-pinning.md).  
@@ -104,7 +104,7 @@ typedef struct _MYPERSON
   
  Bu örnekte, `MyPoint` ve `MyPerson` yapıları gömülü türler içerir. <xref:System.Runtime.InteropServices.StructLayoutAttribute> Özniteliği, üyelerin bellekte sırayla, göründükleri sırada düzenlendiğinden emin olmak üzere ayarlanır.  
   
- Sınıfı, `App` sınıfı tarafından çağrılan bir yöntemler kümesi içerir. `LibWrap` Dizileri geçirme hakkında ayrıntılı bilgi için aşağıdaki örnekteki açıklamalara bakın. Başvuru türü olan bir dizi, varsayılan olarak bir ın parametresi olarak geçirilir. Çağıranın sonuçları alması için, **InAttribute** ve **OutAttribute** 'un, diziyi içeren bağımsız değişkene açıkça uygulanması gerekir.  
+ Sınıfı, `App` sınıfı tarafından çağrılan bir yöntemler kümesi içerir. `NativeMethods` Dizileri geçirme hakkında ayrıntılı bilgi için aşağıdaki örnekteki açıklamalara bakın. Başvuru türü olan bir dizi, varsayılan olarak bir ın parametresi olarak geçirilir. Çağıranın sonuçları alması için, **InAttribute** ve **OutAttribute** 'un, diziyi içeren bağımsız değişkene açıkça uygulanması gerekir.  
   
 ### <a name="declaring-prototypes"></a>Prototipleri Bildirme  
  [!code-csharp[Conceptual.Interop.Marshaling#31](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.interop.marshaling/cs/arrays.cs#31)]
