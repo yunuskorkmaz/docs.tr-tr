@@ -13,17 +13,17 @@ helpviewer_keywords:
 - JSON Serializer, JSON Reader, JSON Writer
 - Converter, JSON Converter, DateTime Converter
 - ISO, ISO 8601, ISO 8601-1:2019
-ms.openlocfilehash: 83b1b3a7db63154dccc07325b1a1948a2db3953a
-ms.sourcegitcommit: 3ac05b2c386c8cc5e73f4c7665f6c0a7ed3da1bd
+ms.openlocfilehash: 000a6b6dc892e65b50ae413ab3cb95d2a73ef0ef
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71151822"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182581"
 ---
 # <a name="datetime-and-datetimeoffset-support-in-systemtextjson"></a>System.Text.Json üzerinde DateTime ve DateTimeOffset desteği
 
 System. Text. JSON kitaplığı ISO 8601:-2019 genişletilmiş profiline <xref:System.DateTime> göre <xref:System.DateTimeOffset> ayrıştırır ve yazar ve değerlerini kaydeder.
-[Dönüştürücüler](https://docs.microsoft.com/dotnet/api/system.text.json.serialization.jsonconverter-1?view=netcore-3.0) ile <xref:System.Text.Json.JsonSerializer>serileştirme ve seri durumdan çıkarma için özel destek sağlar.
+[Dönüştürücüler](xref:System.Text.Json.Serialization.JsonConverter%601) ile <xref:System.Text.Json.JsonSerializer>serileştirme ve seri durumdan çıkarma için özel destek sağlar.
 Ayrıca, ve <xref:System.Text.Json.Utf8JsonReader> <xref:System.Text.Json.Utf8JsonWriter>kullanılırken özel destek de uygulanabilir.
 
 ## <a name="support-for-the-iso-8601-12019-format"></a>ISO 8601-1:2019 biçimi desteği
@@ -67,7 +67,7 @@ Uyumlu olmayan biçimleri <xref:System.Text.Json.Utf8JsonReader> okumaya çalı�
 
 ### <a name="when-using-xrefsystemtextjsonjsonserializer"></a>Kullanırken<xref:System.Text.Json.JsonSerializer>
 
-Seri hale getiricinin özel ayrıştırma veya biçimlendirme gerçekleştirmesini istiyorsanız [özel dönüştürücüler](https://docs.microsoft.com/dotnet/api/system.text.json.serialization.jsonconverter-1?view=netcore-3.0)uygulayabilirsiniz.
+Seri hale getiricinin özel ayrıştırma veya biçimlendirme gerçekleştirmesini istiyorsanız [özel dönüştürücüler](xref:System.Text.Json.Serialization.JsonConverter%601)uygulayabilirsiniz.
 İşte birkaç örnek:
 
 #### <a name="using-datetimeoffsetparse-and-datetimeoffsettostring"></a>Ve `DateTime(Offset).Parse` kullanma`DateTime(Offset).ToString`

@@ -14,18 +14,18 @@ ms.assetid: 020c9df4-fdc5-4dae-815a-963ecae5668c
 author: gewarren
 ms.author: gewarren
 manager: jillfra
-ms.openlocfilehash: 4fd1f1dc0c2c0ad9ae2009ed592e48b8eeaa2783
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: f051d7a51a5f4ff8debf40fafbb8acfd8f7098f5
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373682"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182634"
 ---
 # <a name="walkthrough-serialize-collections-of-standard-types"></a>İzlenecek yol: Standart türlerin koleksiyonlarını serileştirme
 
 Özel denetimleriniz bazen bir koleksiyonu özellik olarak kullanıma sunar. Bu izlenecek yol, <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute> bir koleksiyonun tasarım zamanında nasıl serileştirildiği denetlemek için sınıfının nasıl kullanılacağını gösterir. <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Content> Değer koleksiyon özelliğine uygulandığında, özelliğin serileştirilmesi gerekir.
 
-Bu konudaki kodu tek bir liste olarak kopyalamak için bkz [. nasıl yapılır: Standart türlerin koleksiyonlarını DesignerSerializationVisibilityAttribute](/previous-versions/visualstudio/visual-studio-2013/ms171833(v=vs.120))ile serileştirme.
+Bu konudaki kodu tek bir liste olarak kopyalamak için bkz [. nasıl yapılır: Standart türlerin koleksiyonlarını DesignerSerializationVisibilityAttribute](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171833(v=vs.120))ile serileştirme.
 
 ## <a name="prerequisites"></a>Önkoşullar
 
@@ -129,11 +129,11 @@ Denetiminizin serileştirme davranışını test etmek için, bunu bir forma yer
 
 Standart türlerden oluşan bir koleksiyonun nasıl serileştirildiğini öğrendikten sonra, özel denetimlerinizi tasarım zamanı ortamına göre daha ayrıntılı bir şekilde tümleştirmeyi düşünün. Aşağıdaki konularda, özel denetimlerinizin tasarım zamanı tümleştirmesinin nasıl geliştirileceğini anlatmaktadır:
 
-- [Tasarım zamanı mimarisi](/previous-versions/visualstudio/visual-studio-2013/c5z9s1h4(v=vs.120))
+- [Tasarım zamanı mimarisi](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/c5z9s1h4(v=vs.120))
 
 - [Windows Forms Denetimlerindeki Öznitelikler](attributes-in-windows-forms-controls.md)
 
-- [Tasarımcı serileştirmesine genel bakış](/previous-versions/visualstudio/visual-studio-2013/ms171834(v=vs.120))
+- [Tasarımcı serileştirmesine genel bakış](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171834(v=vs.120))
 
 - [İzlenecek yol: Visual Studio tasarım zamanı özelliklerinden faydalanan bir Windows Forms denetimi oluşturma](creating-a-wf-control-design-time-features.md)
 

@@ -9,86 +9,86 @@ helpviewer_keywords:
 - implementing add-in pipeline segments [WPF]
 - add-in [WPF], returns a UI
 ms.assetid: 57f274b7-4c66-4b72-92eb-81939a393776
-ms.openlocfilehash: ccc918a9e8ca5e09cfebf1724519e8e6f9d1d32e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1886703e089ed538f68a7221906d815a8ae72076
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64627346"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182664"
 ---
 # <a name="how-to-create-an-add-in-that-returns-a-ui"></a>Nasıl yapılır: UI Döndüren Eklenti Oluşturma
-Bu örnek, bir Windows Presentation Foundation (WPF) bir konak WPF tek başına uygulama döndüren bir eklenti oluşturma işlemi gösterilmektedir.  
+Bu örnek, bir konak WPF tek başına uygulamasına Windows Presentation Foundation (WPF) döndüren bir eklentinin nasıl oluşturulacağını gösterir.  
   
- Eklentinin bir WPF kullanıcı denetimi olan bir kullanıcı Arabirimi döndürür. Tek bir düğme, tıklandığında, kullanıcı denetiminin içeriği olan bir ileti kutusu görüntüler. WPF tek başına uygulama eklenti barındırır ve (eklenti tarafından döndürülen) kullanıcı denetimi ana uygulama penceresini içeriğini görüntüler.  
+ Eklenti, WPF Kullanıcı denetimi olan bir kullanıcı arabirimi döndürür. Kullanıcı denetiminin içeriği, tıklandığında bir ileti kutusu görüntüleyen tek bir düğmedir. WPF tek başına uygulaması eklentiyi barındırır ve Kullanıcı denetimini (eklenti tarafından döndürülen) ana uygulama penceresinin içeriği olarak görüntüler.  
   
- **Önkoşullar**  
+ **Önkoşullar  
   
- Bu örnekte, bu senaryoyu WPF uzantıları için .NET Framework eklenti modeli vurgular ve aşağıdaki varsayar:  
+ Bu örnek, WPF uzantılarını bu senaryoyu etkinleştiren .NET Framework eklenti modeline vurgular ve şunları varsayar:  
   
-- Bilgi işlem hattı, eklenti ve konak geliştirme gibi .NET Framework eklenti modeli, sahibi. Bu kavramları alışkın değilseniz bkz [eklentiler ve genişletilebilirlik](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)). Bir işlem hattı, bir eklenti ve ana bilgisayar uygulamasına uygulanışı gösteren bir öğretici için bkz [izlenecek yol: Genişletilebilir uygulama oluşturma](../../add-ins/walkthrough-create-extensible-app.md).  
+- İşlem hattı, eklenti ve konak geliştirme dahil .NET Framework eklenti modeli hakkında bilgi. Bu kavramları tanımıyorsanız, bkz. eklentiler [ve genişletilebilirlik](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)). Bir işlem hattının, eklentinin ve ana bilgisayar uygulamasının uygulanmasını gösteren bir öğretici için bkz [. İzlenecek yol: Genişletilebilir bir uygulama](../../add-ins/walkthrough-create-extensible-app.md)oluşturma.  
   
-- WPF uzantıları için burada bulunan .NET Framework eklenti modeli bilgi: [WPF Eklentilerine Genel Bakış](wpf-add-ins-overview.md).  
+- .NET Framework eklenti modeli için WPF uzantıları hakkında bilgi edinebilirsiniz, burada bulunabilir: [WPF Eklentilerine Genel Bakış](wpf-add-ins-overview.md).  
   
 ## <a name="example"></a>Örnek  
- Bir WPF UI döndüren eklenti oluşturmak için her işlem hattı segment, eklenti ve ana bilgisayar uygulaması için özel kod gerektirir.  
+ WPF Kullanıcı arabirimini döndüren bir eklenti oluşturmak için her bir ardışık düzen segmenti, eklentisi ve ana bilgisayar uygulaması için belirli bir kod gerekir.  
 
 <a name="Contract"></a>   
 ## <a name="implementing-the-contract-pipeline-segment"></a>Sözleşme ardışık düzen segmentini uygulama  
- Bir yöntem tarafından bir kullanıcı Arabirimi döndürmek için anlaşma tanımlanmalıdır ve dönüş değerinin türü olmalıdır <xref:System.AddIn.Contract.INativeHandleContract>. Bu tarafından gösterilmiştir `GetAddInUI` yöntemi `IWPFAddInContract` aşağıdaki kodda.  
+ Bir yöntem, bir kullanıcı arabirimi döndürmek için sözleşme tarafından tanımlanmalıdır ve dönüş değeri türünde <xref:System.AddIn.Contract.INativeHandleContract>olmalıdır. Bu, aşağıdaki koddaki `GetAddInUI` `IWPFAddInContract` sözleşmenin yöntemi tarafından gösterilmiştir.  
   
  [!code-csharp[SimpleAddInReturnsAUISample#ContractCode](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInReturnsAUISample/CSharp/Contracts/IWPFAddInContract.cs#contractcode)]
  [!code-vb[SimpleAddInReturnsAUISample#ContractCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SimpleAddInReturnsAUISample/VisualBasic/Contracts/IWPFAddInContract.vb#contractcode)]  
   
 <a name="AddInView"></a>   
-## <a name="implementing-the-add-in-view-pipeline-segment"></a>Eklenti görünümü işlem hattı segmentini uygulama  
- Eklenti uyguladığından [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] alt sınıfları sağlar <xref:System.Windows.FrameworkElement>, belirtilirler eklenti görünümü metodunda `IWPFAddInView.GetAddInUI` türünde bir değer döndürmelidir <xref:System.Windows.FrameworkElement>. Aşağıdaki kod, bir arabirim uygulanan sözleşme, eklenti görünümünü gösterir.  
+## <a name="implementing-the-add-in-view-pipeline-segment"></a>Eklenti görünümü ardışık düzen segmentini uygulama  
+ Eklenti, [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] öğesinin <xref:System.Windows.FrameworkElement>alt sınıfları olarak sağladığından, ilişkili `IWPFAddInView.GetAddInUI` eklenti görünümündeki yöntemi türünde <xref:System.Windows.FrameworkElement>bir değer döndürmelidir. Aşağıdaki kod, bir arabirim olarak uygulanan, sözleşmenin eklenti görünümünü gösterir.  
   
  [!code-csharp[SimpleAddInReturnsAUISample#AddInViewCode](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInReturnsAUISample/CSharp/AddInViews/IWPFAddInView.cs#addinviewcode)]
  [!code-vb[SimpleAddInReturnsAUISample#AddInViewCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SimpleAddInReturnsAUISample/VisualBasic/AddInViews/IWPFAddInView.vb#addinviewcode)]  
   
 <a name="AddInSideAdapter"></a>   
-## <a name="implementing-the-add-in-side-adapter-pipeline-segment"></a>Ekleme tarafı bağdaştırıcısı işlem hattı segmentini uygulama  
- Sözleşme yöntemi döndürür bir <xref:System.AddIn.Contract.INativeHandleContract>, ancak eklenti döndürür bir <xref:System.Windows.FrameworkElement> (eklenti görünümü belirtildiği gibi). Sonuç olarak, <xref:System.Windows.FrameworkElement> dönüştürülmelidir bir <xref:System.AddIn.Contract.INativeHandleContract> yalıtım sınırı geçmeden önce. Bu iş tarafından Ekle tarafı bağdaştırıcısı çağrılarak gerçekleştirilir <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>aşağıdaki kodda gösterildiği gibi.  
+## <a name="implementing-the-add-in-side-adapter-pipeline-segment"></a>Eklenti tarafı bağdaştırıcısı ardışık düzen segmentini uygulama  
+ Anlaşma yöntemi bir <xref:System.AddIn.Contract.INativeHandleContract>döndürür, ancak eklenti bir <xref:System.Windows.FrameworkElement> (eklenti görünümü tarafından belirtildiği gibi) döndürür. Sonuç olarak, <xref:System.Windows.FrameworkElement> yalıtım sınırını geçmeden <xref:System.AddIn.Contract.INativeHandleContract> önce ' a dönüştürülmesi gerekir. Bu iş, aşağıdaki kodda gösterildiği gibi, çağırarak <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>eklenti bağdaştırıcısı tarafından gerçekleştirilir.  
   
  [!code-csharp[SimpleAddInReturnsAUISample#AddInSideAdapterCode](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInReturnsAUISample/CSharp/AddInSideAdapters/WPFAddIn_ViewToContractAddInSideAdapter.cs#addinsideadaptercode)]
  [!code-vb[SimpleAddInReturnsAUISample#AddInSideAdapterCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SimpleAddInReturnsAUISample/VisualBasic/AddInSideAdapters/WPFAddIn_ViewToContractAddInSideAdapter.vb#addinsideadaptercode)]  
   
 <a name="HostView"></a>   
-## <a name="implementing-the-host-view-pipeline-segment"></a>Ana görünüm ardışık düzen segmentini uygulama  
- Ana bilgisayar uygulaması görüntüleyeceği için bir <xref:System.Windows.FrameworkElement>, yöntem için karşılık gelen ana görünümünde `IWPFAddInHostView.GetAddInUI` türünde bir değer döndürmelidir <xref:System.Windows.FrameworkElement>. Aşağıdaki kod, bir arabirim uygulanan sözleşme ana görünümünde gösterir.  
+## <a name="implementing-the-host-view-pipeline-segment"></a>Konak görünümü ardışık düzen segmentini uygulama  
+ Konak uygulama bir <xref:System.Windows.FrameworkElement>olarak görüntüleyeceği için, konak görünümündeki, ile `IWPFAddInHostView.GetAddInUI` ilişkili olan yöntemi türünde <xref:System.Windows.FrameworkElement>bir değer döndürmelidir. Aşağıdaki kod, bir arabirim olarak uygulanan sözleşmenin ana bilgisayar görünümünü gösterir.  
   
  [!code-csharp[SimpleAddInReturnsAUISample#HostViewCode](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInReturnsAUISample/CSharp/HostViews/IWPFAddInHostView.cs#hostviewcode)]
  [!code-vb[SimpleAddInReturnsAUISample#HostViewCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SimpleAddInReturnsAUISample/VisualBasic/HostViews/IWPFAddInHostView.vb#hostviewcode)]  
   
 <a name="HostSideAdapter"></a>   
-## <a name="implementing-the-host-side-adapter-pipeline-segment"></a>Konak tarafı bağdaştırıcısı işlem hattı segmentini uygulama  
- Sözleşme yöntemi döndürür bir <xref:System.AddIn.Contract.INativeHandleContract>, ana bilgisayar uygulaması bekliyor, ancak bir <xref:System.Windows.FrameworkElement> (ana görünümünde tarafından belirtildiği gibi). Sonuç olarak, <xref:System.AddIn.Contract.INativeHandleContract> dönüştürülmelidir bir <xref:System.Windows.FrameworkElement> yalıtım sınırı geçmesinden sonra. Bu iş tarafından konak tarafı bağdaştırıcısı çağrılarak gerçekleştirilir <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A>aşağıdaki kodda gösterildiği gibi.  
+## <a name="implementing-the-host-side-adapter-pipeline-segment"></a>Konak tarafı bağdaştırıcısı ardışık düzen segmentini uygulama  
+ Anlaşma yöntemi bir <xref:System.AddIn.Contract.INativeHandleContract>döndürür, ancak konak uygulama bir <xref:System.Windows.FrameworkElement> (konak görünümü tarafından belirtildiği gibi) bekler. Sonuç olarak <xref:System.AddIn.Contract.INativeHandleContract> , yalıtım sınırı geçtikten <xref:System.Windows.FrameworkElement> sonra öğesine dönüştürülmelidir. Bu iş, aşağıdaki kodda gösterildiği gibi çağırarak <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A>konak tarafı bağdaştırıcısı tarafından gerçekleştirilir.  
   
  [!code-csharp[SimpleAddInReturnsAUISample#HostSideAdapterCode](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInReturnsAUISample/CSharp/HostSideAdapters/WPFAddIn_ContractToViewHostSideAdapter.cs#hostsideadaptercode)]
  [!code-vb[SimpleAddInReturnsAUISample#HostSideAdapterCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SimpleAddInReturnsAUISample/VisualBasic/HostSideAdapters/WPFAddIn_ContractToViewHostSideAdapter.vb#hostsideadaptercode)]  
   
 <a name="AddIn"></a>   
-## <a name="implementing-the-add-in"></a>Eklenti uygulama  
- Oluşturulan, eklenti görünümü eklenti ve Ekle tarafı bağdaştırıcısı (`WPFAddIn1.AddIn`) uygulamalıdır `IWPFAddInView.GetAddInUI` döndürülecek yöntemi bir <xref:System.Windows.FrameworkElement> nesne (bir <xref:System.Windows.Controls.UserControl> Bu örnekte). Uygulamasını <xref:System.Windows.Controls.UserControl>, `AddInUI`, aşağıdaki kodda gösterilmiştir.  
+## <a name="implementing-the-add-in"></a>Eklentiyi uygulama  
+ Eklenti tarafı bağdaştırıcısı ve eklenti görünümü oluşturulduğunda,`WPFAddIn1.AddIn`eklenti () bir <xref:System.Windows.FrameworkElement> nesne <xref:System.Windows.Controls.UserControl> döndürmek için `IWPFAddInView.GetAddInUI` yöntemini uygulamalıdır (Bu örnekte,). ,, ' Nin <xref:System.Windows.Controls.UserControl> `AddInUI`uygulanması aşağıdaki kodla gösterilir.  
   
  [!code-xaml[SimpleAddInReturnsAUISample#AddInUIMarkup](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInReturnsAUISample/CSharp/WPFAddIn1/AddInUI.xaml#addinuimarkup)]  
   
  [!code-csharp[SimpleAddInReturnsAUISample#AddInUICodeBehind](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInReturnsAUISample/CSharp/WPFAddIn1/AddInUI.xaml.cs#addinuicodebehind)]
  [!code-vb[SimpleAddInReturnsAUISample#AddInUICodeBehind](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SimpleAddInReturnsAUISample/VisualBasic/WPFAddIn1/AddInUI.xaml.vb#addinuicodebehind)]  
   
- Uygulamasını `IWPFAddInView.GetAddInUI` eklenti tarafından yeni bir örneğini döndürülecek yalnızca erişmesi `AddInUI`aşağıdaki kodda gösterildiği gibi.  
+ Eklenti `IWPFAddInView.GetAddInUI` tarafından uygulanması, aşağıdaki kodda gösterildiği gibi yalnızca yeni bir `AddInUI`örneğini döndürmelidir.  
   
  [!code-csharp[SimpleAddInReturnsAUISample#AddInCode](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInReturnsAUISample/CSharp/WPFAddIn1/AddIn.cs#addincode)]
  [!code-vb[SimpleAddInReturnsAUISample#AddInCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SimpleAddInReturnsAUISample/VisualBasic/WPFAddIn1/AddIn.vb#addincode)]  
   
 <a name="App"></a>   
-## <a name="implementing-the-host-application"></a>Konak uygulamanın uygulama  
- Konak tarafı bağdaştırıcısı ile oluşturulan ana görünümünde, konak uygulama .NET Framework eklenti modeli kullanabileceğiniz işlem hattı açmak için bir ana bilgisayar görünümü eklenti ve çağrı alma `IWPFAddInHostView.GetAddInUI` yöntemi. Aşağıdaki kodda adımları gösterilmektedir.  
+## <a name="implementing-the-host-application"></a>Konak uygulamasını uygulama  
+ Konak tarafı bağdaştırıcısı ve konak görünümü oluşturulduğunda konak uygulama, .NET Framework eklenti modelini kullanarak işlem hattını açabilir, eklentinin bir konak görünümünü alabilir ve `IWPFAddInHostView.GetAddInUI` metodunu çağırabilir. Bu adımlar aşağıdaki kodda gösterilmiştir.  
   
  [!code-csharp[SimpleAddInReturnsAUISample#GetUICode](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInReturnsAUISample/CSharp/Host/MainWindow.xaml.cs#getuicode)]
  [!code-vb[SimpleAddInReturnsAUISample#GetUICode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SimpleAddInReturnsAUISample/VisualBasic/Host/MainWindow.xaml.vb#getuicode)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Eklentiler ve Genişletilebilirlik](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
+- [Eklentiler ve Genişletilebilirlik](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
 - [WPF Eklentilerine Genel Bakış](wpf-add-ins-overview.md)

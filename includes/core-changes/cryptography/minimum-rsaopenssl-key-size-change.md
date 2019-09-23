@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 07ab65de16b72bd0844a39e4b35235c5f043f3ec
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: e3bda3cf6319d8c988b6c897b78869f517f9616a
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117166"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182076"
 ---
 ### <a name="minimum-size-for-rsaopenssl-key-generation-has-increased"></a>RSAOpenSsl anahtar üretimi için en düşük boyut arttı
 
@@ -12,11 +12,11 @@ Linux üzerinde yeni RSA anahtarları oluşturmak için en düşük boyut, 384 b
 
 #### <a name="change-description"></a>Açıklamayı Değiştir
 
-.NET Core 3,0 ' den itibaren, < System. Security. Cryptography. `LegalKeySizes` RSA ' dan RSA örneklerinde özelliği tarafından raporlanan minimum geçerli anahtar boyutu. Create% 2A? DisplayProperty = namewithtype >, < System. Security. Cryptography. rsaopenssl.% 23ctor% 2A? displayProperty = nameWithType > ve < System. Security. Cryptography. RSACryptoServicePlatform.% 23ctor% 2A? displayProperty = nameWithType >, Linux üzerinde 384 ' den 512 ' e artmıştır.
+.Net `LegalKeySizes` Core 3,0 ' den <xref:System.Security.Cryptography.RSA.Create%2A?displayProperty=nameWithType>itibaren, Linux üzerinde, <xref:System.Security.Cryptography.RSAOpenSsl.%23ctor%2A?displayProperty=nameWithType>ve <xref:System.Security.Cryptography.RSACryptoServiceProvider.%23ctor%2A?displayProperty=nameWithType> Linux üzerinde RSA örneklerinde özelliği tarafından raporlanan en düşük yasal anahtar boyutu 384 ' den 512 ' ye yükselmiştir.
 
 Sonuç olarak, .NET Core 2,2 ve önceki sürümlerde, gibi bir yöntem çağrısı `RSA.Create(384)` başarılı olur. .NET Core 3,0 ve sonraki sürümlerinde Yöntem çağrısı `RSA.Create(384)` , boyutun çok küçük olduğunu belirten bir özel durum oluşturur.
 
-Bu değişiklikler, Linux üzerinde şifreleme işlemlerini gerçekleştiren OpenSSL, 1.0.2 ve 1.1.0 sürümleri arasında en düşük bir değer oluşturduğundan yapılmıştır.  .NET Core 3,0, OpenSSL 1.1. x-1.0. x ' i tercih eder ve bildirilen en düşük sürüm, bu yeni daha yüksek bağımlılık sınırlamasını yansıtacak şekilde tetiklenir.
+Bu değişiklik, Linux üzerinde şifreleme işlemlerini gerçekleştiren OpenSSL, 1.0.2 ve 1.1.0 sürümleri arasında en düşük bir değer oluşturduğundan yapılmıştır. .NET Core 3,0, OpenSSL 1.1. x-1.0. x ' i tercih eder ve bildirilen en düşük sürüm, bu yeni daha yüksek bağımlılık sınırlamasını yansıtacak şekilde tetiklenir.
 
 #### <a name="version-introduced"></a>Sunulan sürüm
 

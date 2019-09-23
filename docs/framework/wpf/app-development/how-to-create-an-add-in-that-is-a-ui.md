@@ -12,23 +12,23 @@ helpviewer_keywords:
 - implementing UI add-ins [WPF]
 - pipeline segments [WPF], creating add-ins
 ms.assetid: 86375525-282b-4039-8352-8680051a10ea
-ms.openlocfilehash: fa30b7860bd8afdb68b0b54cd8d40f3e1ec86077
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b0e847061a30e93d36997ab603c52715e2730765
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69949126"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182645"
 ---
 # <a name="how-to-create-an-add-in-that-is-a-ui"></a>Nasıl yapılır: UI Olan Eklenti Oluşturma
 Bu örnek, WPF tek başına uygulaması tarafından barındırılan Windows Presentation Foundation (WPF) olan bir eklentinin nasıl oluşturulacağını gösterir.  
   
  Eklenti, WPF Kullanıcı denetimi olan bir kullanıcı arabirimi. Kullanıcı denetiminin içeriği, tıklandığında bir ileti kutusu görüntüleyen tek bir düğmedir. WPF tek başına uygulaması, ana uygulama penceresinin içeriği olarak eklenti Kullanıcı arabirimini barındırır.  
   
- **Önkoşullar**  
+ **Önkoşullar  
   
  Bu örnek, WPF uzantılarını bu senaryoyu etkinleştiren .NET Framework eklenti modeline vurgular ve şunları varsayar:  
   
-- İşlem hattı, eklenti ve konak geliştirme dahil .NET Framework eklenti modeli hakkında bilgi. Bu kavramları tanımıyorsanız, bkz. eklentiler [ve genişletilebilirlik](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)). Bir işlem hattının, eklentinin ve ana bilgisayar uygulamasının uygulanmasını gösteren bir öğretici için bkz [. İzlenecek yol: Genişletilebilir bir uygulama](/previous-versions/dotnet/netframework-4.0/bb788290(v%3dvs.100))oluşturma.  
+- İşlem hattı, eklenti ve konak geliştirme dahil .NET Framework eklenti modeli hakkında bilgi. Bu kavramları tanımıyorsanız, bkz. eklentiler [ve genişletilebilirlik](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)). Bir işlem hattının, eklentinin ve ana bilgisayar uygulamasının uygulanmasını gösteren bir öğretici için bkz [. İzlenecek yol: Genişletilebilir bir uygulama](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb788290(v%3dvs.100))oluşturma.  
   
 - .NET Framework eklentisi modeline WPF uzantıları hakkında bilgi. Bkz. [WPF Eklentilerine Genel Bakış](wpf-add-ins-overview.md).  
   
@@ -120,5 +120,5 @@ Ana bilgisayar uygulaması, dolaylı olarak ana bilgisayar görünümünü konak
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Eklentiler ve Genişletilebilirlik](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
+- [Eklentiler ve Genişletilebilirlik](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
 - [WPF Eklentilerine Genel Bakış](wpf-add-ins-overview.md)

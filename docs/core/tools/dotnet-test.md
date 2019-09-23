@@ -2,12 +2,12 @@
 title: DotNet test komutu
 description: DotNet test komutu, belirli bir projedeki birim testlerini yürütmek için kullanılır.
 ms.date: 05/29/2018
-ms.openlocfilehash: 306b6f8d890e567afc419b0408d7e683baaa814d
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: c3115d546efb1f076ae9f9731f83a12183aa4154
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117570"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182508"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
@@ -122,7 +122,7 @@ Test sonuçlarının yerleştirileceği dizin. Belirtilen dizin yoksa, oluşturu
 
 `-s|--settings <SETTINGS_FILE>`
 
-Testleri çalıştırmak için kullanılacak dosya.`.runsettings` [Birim testlerini bir `.runsettings` dosya kullanarak yapılandırın.](/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file?view=vs-2019)
+Testleri çalıştırmak için kullanılacak dosya.`.runsettings` [Birim testlerini bir `.runsettings` dosya kullanarak yapılandırın.](/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file)
 
 `-t|--list-tests`
 
@@ -192,7 +192,7 @@ Test sonuçlarının yerleştirileceği dizin. Belirtilen dizin yoksa, oluşturu
 
 `-s|--settings <SETTINGS_FILE>`
 
-Testleri çalıştırmak için kullanılacak dosya.`.runsettings` [Birim testlerini bir `.runsettings` dosya kullanarak yapılandırın.](/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file?view=vs-2019)
+Testleri çalıştırmak için kullanılacak dosya.`.runsettings` [Birim testlerini bir `.runsettings` dosya kullanarak yapılandırın.](/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file)
 
 `-t|--list-tests`
 
@@ -242,7 +242,7 @@ Test projesi çalıştırılmadan önce derlenmez.
 
 `-s|--settings <SETTINGS_FILE>`
 
-Testleri çalıştırmak için kullanılacak dosya.`.runsettings` [Birim testlerini bir `.runsettings` dosya kullanarak yapılandırın.](/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file?view=vs-2019)
+Testleri çalıştırmak için kullanılacak dosya.`.runsettings` [Birim testlerini bir `.runsettings` dosya kullanarak yapılandırın.](/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file)
 
 `-t|--list-tests`
 

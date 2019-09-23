@@ -12,12 +12,12 @@ helpviewer_keywords:
 - add-ins [WPF], architecture
 - add-ins [WPF], limitations
 ms.assetid: 00b4c776-29a8-4dba-b603-280a0cdc2ade
-ms.openlocfilehash: 4fd8fe00fe6974bdcbf7b4af4da25150996de8c3
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: a146f15a1c2755f254e198d471a42ca9ec29b072
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68401701"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182539"
 ---
 # <a name="wpf-add-ins-overview"></a>WPF Eklentilerine Genel Bakış
 
@@ -27,7 +27,7 @@ ms.locfileid: "68401701"
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-.NET Framework eklentisi modeliyle benzerlik gerekli. Daha fazla bilgi için bkz. eklentiler [ve genişletilebilirlik](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)).
+.NET Framework eklentisi modeliyle benzerlik gerekli. Daha fazla bilgi için bkz. eklentiler [ve genişletilebilirlik](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)).
 
 <a name="AddInsOverview"></a>
 
@@ -66,7 +66,7 @@ Eklentilerin kullanılabilmesi için, ana bilgisayar uygulamalarının bunları 
 Son olarak, güçlü bir eklenti modelinin geliştirilmesi, önemsiz olmayan bir zorunluluğudur. Bu nedenle .NET Framework, eklenti modelleri oluşturmak için bir altyapı sağlar.
 
 > [!NOTE]
-> Eklentiler hakkında daha ayrıntılı bilgi için bkz. eklentiler [ve genişletilebilirlik](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)).
+> Eklentiler hakkında daha ayrıntılı bilgi için bkz. eklentiler [ve genişletilebilirlik](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)).
 
 <a name="NETFrameworkAddInModelOverview"></a>
 
@@ -127,7 +127,7 @@ WPF Kullanıcı arabirimi türleri uzaktan erişilebilir değildir. WPF, sorunu 
 
 Bir eklentinin bir konak uygulamasına bir kullanıcı arabirimi döndürmesi için aşağıdakiler gereklidir:
 
-1. Ana bilgisayar uygulaması, eklenti ve işlem hattı, .NET Framework [eklentileri ve genişletilebilirlik](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)) belgelerinde açıklandığı şekilde oluşturulmalıdır.
+1. Ana bilgisayar uygulaması, eklenti ve işlem hattı, .NET Framework [eklentileri ve genişletilebilirlik](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)) belgelerinde açıklandığı şekilde oluşturulmalıdır.
 
 2. Sözleşmenin, bir Kullanıcı <xref:System.AddIn.Contract.IContract> arabirimi döndürmesi ve bir UI döndürmesi gerekir, sözleşmenin bir dönüş değeri türünde <xref:System.AddIn.Contract.INativeHandleContract>bir yöntem bildirmesi gerekir.
 
@@ -147,7 +147,7 @@ UI döndüren bir eklentinin nasıl uygulanacağını gösteren bir örnek için
 
 Bir eklenti bir kullanıcı arabirimi olduğunda aşağıdakiler gereklidir:
 
-1. Ana bilgisayar uygulaması, eklenti ve işlem hattı, .NET Framework [eklentileri ve genişletilebilirlik](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)) belgelerinde açıklandığı şekilde oluşturulmalıdır.
+1. Ana bilgisayar uygulaması, eklenti ve işlem hattı, .NET Framework [eklentileri ve genişletilebilirlik](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)) belgelerinde açıklandığı şekilde oluşturulmalıdır.
 
 2. Eklentiye ait sözleşme arabiriminin uygulanması <xref:System.AddIn.Contract.INativeHandleContract>gerekir.
 
@@ -311,7 +311,7 @@ Varsayılan olarak, birden çok uygulama etki alanı kullanıldığında, her bi
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.LoaderOptimizationAttribute>
-- [Eklentiler ve Genişletilebilirlik](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
+- [Eklentiler ve Genişletilebilirlik](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
 - [Uygulama Etki Alanları](../../app-domains/application-domains.md)
 - [.NET Framework uzaktan Iletişim genel bakış](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/kwdt6w2k(v=vs.100))
 - [Nesneleri Uzaktan erişilebilir hale getirme](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/wcf3swha(v=vs.100))

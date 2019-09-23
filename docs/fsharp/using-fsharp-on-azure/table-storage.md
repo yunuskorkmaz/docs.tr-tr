@@ -3,12 +3,12 @@ title: F# kullanarak Azure Tablo depolama kullanmaya başlama
 description: Yapılandırılmış verileri Azure Tablo depolama veya Azure Cosmos DB kullanarak bulutta depolayın.
 author: sylvanc
 ms.date: 03/26/2018
-ms.openlocfilehash: f5fe2fe667b6d529bba4d29729a975c7890b5aba
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 509435d47231040362586fa263fbecb1125f862b
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929000"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182606"
 ---
 # <a name="get-started-with-azure-table-storage-and-the-azure-cosmos-db-table-api-using-f"></a>F kullanarak Azure Tablo depolama ve Azure Cosmos DB Tablo API'si kullanmaya başlama\#
 
@@ -192,7 +192,7 @@ Bir depolama hesabındaki bir tabloyu silebilirsiniz. Silinen bir tablo, silme i
 Artık tablo depolamanın temellerini öğrendiğinize göre, daha karmaşık depolama görevleri ve Azure Cosmos DB Tablo API'si hakkında bilgi edinmek için bu bağlantıları izleyin.
 
 - [Azure Cosmos DB Tablo API’sine Giriş](https://docs.microsoft.com/azure/cosmos-db/table-introduction)
-- [.NET başvurusu için Depolama İstemci Kitaplığı](https://docs.microsoft.com/dotnet/api/overview/azure/storage?view=azure-dotnet)
+- [.NET başvurusu için Depolama İstemci Kitaplığı](https://docs.microsoft.com/dotnet/api/overview/azure/storage)
 - [Azure depolama türü sağlayıcısı](https://fsprojects.github.io/AzureStorageTypeProvider/)
 - [Azure depolama ekibi blogu](https://blogs.msdn.microsoft.com/windowsazurestorage/)
 - [Bağlantı dizelerini yapılandırma](https://docs.microsoft.com/azure/storage/common/storage-configure-connection-string)

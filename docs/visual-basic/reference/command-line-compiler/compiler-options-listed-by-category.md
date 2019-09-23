@@ -4,12 +4,12 @@ ms.date: 04/12/2018
 helpviewer_keywords:
 - Visual Basic compiler, options
 ms.assetid: fbe36f7a-7cfa-4f77-a8d4-2be5958568e3
-ms.openlocfilehash: d8a1e36c0932de9bf50c109ea979a1e358795388
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: 8f09566585c06531a346b0143a6002c2854a0b01
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331548"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182559"
 ---
 # <a name="visual-basic-compiler-options-listed-by-category"></a>Kategoriye göre listelenmiş Visual Basic derleyici seçenekleri
 Visual Basic komut satırı derleyicisi, Visual Studio tümleşik geliştirme ortamı (IDE) içinden program derlemek için alternatif olarak sağlanır. Aşağıda, işlevsel kategoriye göre sıralanan Visual Basic komut satırı derleyici seçeneklerinin bir listesi verilmiştir.  
@@ -72,7 +72,7 @@ Visual Basic komut satırı derleyicisi, Visual Studio tümleşik geliştirme or
 |[-warnaserror](../../../visual-basic/reference/command-line-compiler/warnaserror.md)|Hatalara yönelik uyarıları yükseltir.|  
 |`-ruleset:<file>`|Belirli tanılamayı devre dışı bırakan bir RuleSet dosyası belirtin.|  
   
-## <a name="help"></a>Help  
+## <a name="help"></a>Yardım  
   
 |Seçenek|Amaç|  
 |---|---|  
@@ -129,4 +129,4 @@ Visual Basic komut satırı derleyicisi, Visual Studio tümleşik geliştirme or
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Alfabetik olarak listelenen Visual Basic derleyici seçenekleri](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-alphabetically.md)
-- [Proje ve çözüm özelliklerini yönetme](/visualstudio/ide/managing-project-and-solution-properties?view=vs-2017)
+- [Proje ve çözüm özelliklerini yönetme](/visualstudio/ide/managing-project-and-solution-properties)
