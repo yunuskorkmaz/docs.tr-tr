@@ -1,0 +1,55 @@
+---
+title: Bulutta yerel iletişim desenleri
+description: Bulutta yerel uygulamalarda önemli hizmet iletişim sorunları hakkında bilgi edinin
+author: robvet
+ms.date: 08/31/2019
+ms.openlocfilehash: 0123d2e3da1bf8df29efcf2595a38c377dd1d1a1
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71183380"
+---
+# <a name="cloud-native-communication-patterns"></a><span data-ttu-id="05d78-103">Bulutta yerel iletişim desenleri</span><span class="sxs-lookup"><span data-stu-id="05d78-103">Cloud-native communication patterns</span></span>
+
+[!INCLUDE [book-preview](../../../includes/book-preview.md)]
+
+<span data-ttu-id="05d78-104">Bir bulutta yerel sistem oluştururken, iletişim önemli bir tasarım kararı haline gelir.</span><span class="sxs-lookup"><span data-stu-id="05d78-104">When constructing a cloud-native system, communication becomes a significant design decision.</span></span> <span data-ttu-id="05d78-105">Ön uç istemci uygulaması, arka uç mikro hizmeti ile nasıl iletişim kurar?</span><span class="sxs-lookup"><span data-stu-id="05d78-105">How does a front-end client application communicate with a back-end microservice?</span></span> <span data-ttu-id="05d78-106">Arka uç mikro hizmetleri birbirleriyle nasıl iletişim kurar?</span><span class="sxs-lookup"><span data-stu-id="05d78-106">How do back-end microservices communicate with each other?</span></span> <span data-ttu-id="05d78-107">Bulutta yerel uygulamalarda iletişim uygularken dikkate alınması gereken ilkeler, desenler ve en iyi uygulamalar nelerdir?</span><span class="sxs-lookup"><span data-stu-id="05d78-107">What are the principles, patterns, and best practices to consider when implementing communication in cloud-native applications?</span></span>
+
+## <a name="communication-considerations"></a><span data-ttu-id="05d78-108">İletişim konuları</span><span class="sxs-lookup"><span data-stu-id="05d78-108">Communication considerations</span></span>
+
+<span data-ttu-id="05d78-109">Tek parçalı bir uygulamada, iletişim basittir.</span><span class="sxs-lookup"><span data-stu-id="05d78-109">In a monolithic application, communication is straightforward.</span></span> <span data-ttu-id="05d78-110">Kod modülleri bir sunucuda aynı yürütülebilir alanda (işlem) birlikte yürütülür.</span><span class="sxs-lookup"><span data-stu-id="05d78-110">The code modules execute together in the same executable space (process) on a server.</span></span> <span data-ttu-id="05d78-111">Bu yaklaşım, her şey paylaşılan bellekte birlikte çalıştığı için performans avantajlarına sahip olabilir, ancak bakım, geliştirilmesi ve ölçeklendirilmesi zor olan sıkı şekilde bağlanmış bir koda neden olur.</span><span class="sxs-lookup"><span data-stu-id="05d78-111">This approach can have performance advantages as everything runs together in shared memory, but results in tightly coupled code that becomes difficult to maintain, evolve, and scale.</span></span>
+
+<span data-ttu-id="05d78-112">Bulutta yerel sistemler, çok küçük ve bağımsız mikro hizmetlerden oluşan mikro hizmet tabanlı bir mimari uygular.</span><span class="sxs-lookup"><span data-stu-id="05d78-112">Cloud-native systems implement a microservice-based architecture with many small, independent microservices.</span></span> <span data-ttu-id="05d78-113">Her mikro hizmet ayrı bir işlemde yürütülür ve genellikle bir *kümeye*dağıtılan bir kapsayıcı içinde çalışır.</span><span class="sxs-lookup"><span data-stu-id="05d78-113">Each microservice executes in a separate process and typically runs inside a container that is deployed to a *cluster*.</span></span> 
+
+<span data-ttu-id="05d78-114">Bir küme, yüksek oranda kullanılabilir bir ortam oluşturmak için bir sanal makine havuzunu birlikte gruplandırır.</span><span class="sxs-lookup"><span data-stu-id="05d78-114">A cluster groups a pool of virtual machines together to form a highly available environment.</span></span> <span data-ttu-id="05d78-115">Kapsayıcılı mikro hizmetleri dağıtmaktan ve yönetmekten sorumlu olan bir Orchestration aracıyla yönetilirler.</span><span class="sxs-lookup"><span data-stu-id="05d78-115">They're managed with an orchestration tool, which is responsible for deploying and managing the containerized microservices.</span></span> <span data-ttu-id="05d78-116">Şekil 4-1, tam olarak yönetilen [Azure Kubernetes hizmetleriyle](https://docs.microsoft.com/azure/aks/intro-kubernetes)Azure bulutuna dağıtılan bir [Kubernetes](https://kubernetes.io) kümesini gösterir.</span><span class="sxs-lookup"><span data-stu-id="05d78-116">Figure 4-1 shows a [Kubernetes](https://kubernetes.io) cluster deployed into the Azure cloud with the fully managed [Azure Kubernetes Services](https://docs.microsoft.com/azure/aks/intro-kubernetes).</span></span>
+
+![Azure 'da bir Kubernetes kümesi](./media/kubernetes-cluster-in-azure.png)
+
+<span data-ttu-id="05d78-118">**Şekil 4-1**.</span><span class="sxs-lookup"><span data-stu-id="05d78-118">**Figure 4-1**.</span></span> <span data-ttu-id="05d78-119">Azure 'da bir Kubernetes kümesi</span><span class="sxs-lookup"><span data-stu-id="05d78-119">A Kubernetes cluster in Azure</span></span>
+
+<span data-ttu-id="05d78-120">Mikro hizmetler, küme genelinde API 'Ler ve mesajlaşma teknolojileri aracılığıyla birbirleriyle iletişim kurar.</span><span class="sxs-lookup"><span data-stu-id="05d78-120">Across the cluster, microservices communicate with each other through APIs and messaging technologies.</span></span>
+
+<span data-ttu-id="05d78-121">Birçok avantaj sağlarken, mikro hizmetler ücretsiz öğle yemeği değildir.</span><span class="sxs-lookup"><span data-stu-id="05d78-121">While they provide many benefits, microservices are no free lunch.</span></span> <span data-ttu-id="05d78-122">Bileşenler arasındaki yerel işlem içi Yöntem çağrıları artık ağ çağrılarıyla değiştirilmiştir.</span><span class="sxs-lookup"><span data-stu-id="05d78-122">Local in-process method calls between components are now replaced with network calls.</span></span> <span data-ttu-id="05d78-123">Her mikro hizmet, sisteminize karmaşıklık ekleyen bir ağ protokolü üzerinden iletişim kurmalıdır:</span><span class="sxs-lookup"><span data-stu-id="05d78-123">Each microservice must communicate over a network protocol, which adds complexity to your system:</span></span>
+
+- <span data-ttu-id="05d78-124">Ağ tıkanıklığı, gecikme süresi ve geçici hatalar, sabit bir konudur.</span><span class="sxs-lookup"><span data-stu-id="05d78-124">Network congestion, latency, and transient faults are a constant concern.</span></span>
+
+- <span data-ttu-id="05d78-125">Dayanıklılık (diğer bir deyişle, başarısız isteklerin yeniden denenme) gereklidir.</span><span class="sxs-lookup"><span data-stu-id="05d78-125">Resiliency (that is, retrying failed requests) is essential.</span></span>
+
+- <span data-ttu-id="05d78-126">Bazı çağrıların tutarlı durumda tutulması için [ıdempotent](https://www.restapitutorial.com/lessons/idempotency.html) olması gerekir.</span><span class="sxs-lookup"><span data-stu-id="05d78-126">Some calls must be [idempotent](https://www.restapitutorial.com/lessons/idempotency.html) as to keep consistent state.</span></span>
+
+- <span data-ttu-id="05d78-127">Her mikro hizmet için çağrı kimlik doğrulaması ve yetkilendirme gerekir.</span><span class="sxs-lookup"><span data-stu-id="05d78-127">Each microservice must authenticate and authorize calls.</span></span>
+
+- <span data-ttu-id="05d78-128">Her iletinin serileştirilmesi ve ardından seri durumdan çıkarılmalıdır ve bu pahalı olabilir.</span><span class="sxs-lookup"><span data-stu-id="05d78-128">Each message must be serialized and then deserialized - which can be expensive.</span></span>
+
+- <span data-ttu-id="05d78-129">İleti şifreleme/şifre çözme önemli hale gelir.</span><span class="sxs-lookup"><span data-stu-id="05d78-129">Message encryption/decryption becomes important.</span></span>
+
+<span data-ttu-id="05d78-130">Book [.net mikro hizmetleri: Microsoft 'tan ücretsiz olarak kullanılabilen Kapsayıcılı .NET uygulamaları](https://docs.microsoft.com/dotnet/standard/microservices-architecture/)için mimari, mikro hizmet uygulamalarına yönelik iletişim desenlerinin ayrıntılı bir kapsamını sağlar.</span><span class="sxs-lookup"><span data-stu-id="05d78-130">The book [.NET Microservices: Architecture for Containerized .NET Applications](https://docs.microsoft.com/dotnet/standard/microservices-architecture/), available for free from Microsoft, provides an in-depth coverage of communication patterns for microservice applications.</span></span> <span data-ttu-id="05d78-131">Bu bölümde, Azure bulutu 'nda bulunan uygulama seçenekleriyle birlikte bu desenlere yönelik yüksek düzeyde bir genel bakış sunuyoruz.</span><span class="sxs-lookup"><span data-stu-id="05d78-131">In this chapter, we provide a high-level overview of these patterns along with implementation options available in the Azure cloud.</span></span>
+
+<span data-ttu-id="05d78-132">Bu bölümde, önce ön uç uygulamaları ve arka uç mikro hizmetleri arasındaki iletişimi ele alacağız.</span><span class="sxs-lookup"><span data-stu-id="05d78-132">In this chapter, we'll first address communication between front-end applications and back-end microservices.</span></span> <span data-ttu-id="05d78-133">Ardından arka uç mikro hizmetlerinin birbirleriyle iletişim kurmasına bakacağız.</span><span class="sxs-lookup"><span data-stu-id="05d78-133">We'll then look at back-end microservices communicate with each other.</span></span> <span data-ttu-id="05d78-134">Yukarı ve gRPC iletişim teknolojisini keşfereceğiz.</span><span class="sxs-lookup"><span data-stu-id="05d78-134">We'll explore the up and gRPC communication technology.</span></span> <span data-ttu-id="05d78-135">Son olarak, hizmet kafesi teknolojisini kullanarak yeni yenilikçi iletişim desenleri inceleyeceğiz.</span><span class="sxs-lookup"><span data-stu-id="05d78-135">Finally, we'll look new innovative communication patterns using service mesh technology.</span></span> <span data-ttu-id="05d78-136">Ayrıca, Azure bulutunun bulut Yerel iletişimini desteklemek için farklı türlerde *yedekleme hizmetleri* sağladığını de göreceğiz.</span><span class="sxs-lookup"><span data-stu-id="05d78-136">We'll also see how the Azure cloud provides different kinds of *backing services* to support cloud-native communication.</span></span>  
+
+
+>[!div class="step-by-step"]
+><span data-ttu-id="05d78-137">[Önceki](other-deployment-options.md)
+>[İleri](front-end-communication.md)</span><span class="sxs-lookup"><span data-stu-id="05d78-137">[Previous](other-deployment-options.md)
+[Next](front-end-communication.md)</span></span>
