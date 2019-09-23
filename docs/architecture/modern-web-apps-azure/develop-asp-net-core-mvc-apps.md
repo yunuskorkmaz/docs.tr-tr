@@ -4,12 +4,12 @@ description: ASP.NET Core ve Azure ile modern web uygulamalarını mimarın ASP.
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 51feb770e84af170bf31a6ba363a1d9e72616284
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: 19d1d5f81b5be9b843698b6e61d8571d4edfa66f
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373772"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71181944"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>ASP.NET Core MVC uygulamaları geliştirin
 
@@ -109,7 +109,7 @@ Web API projeleri, tek tek denetleyicilere, bir temel denetleyici sınıfına ve
 > - **Yorsa**
  > <https://docs.microsoft.com/aspnet/core/mvc/controllers/filters>
 > - **ApiController özniteliği**
- > <https://docs.microsoft.com/aspnet/core/web-api/?view=aspnetcore-2.2>
+ > <https://docs.microsoft.com/aspnet/core/web-api/>
 
 ## <a name="working-with-dependencies"></a>Bağımlılıklarla çalışma
 
@@ -603,5 +603,5 @@ _[Bölüm 10](development-process-for-azure.md)' da Azure dağıtım seçenekler
 >   <https://docs.microsoft.com/azure/application-gateway/application-gateway-introduction>
 
 >[!div class="step-by-step"]
->[Önceki](common-client-side-web-technologies.md)İleri
->[](work-with-data-in-asp-net-core-apps.md)
+>[Önceki](common-client-side-web-technologies.md)
+>[İleri](work-with-data-in-asp-net-core-apps.md)

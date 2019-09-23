@@ -2,12 +2,12 @@
 title: Devre kesici modelini uygulama
 description: Devre kesici düzeninin http yeniden denemeleri için tamamlayıcı bir sistem olarak nasıl uygulanacağını öğrenin.
 ms.date: 10/16/2018
-ms.openlocfilehash: f40a8eec50a4293e4dfb4df647ce3f69f6dc361b
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: eec14273cb9480df51d6e5865106ccfc045845c4
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70296102"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71181934"
 ---
 # <a name="implement-the-circuit-breaker-pattern"></a>Devre Kesici desenini uygulama
 
@@ -55,7 +55,7 @@ static IAsyncPolicy<HttpResponseMessage> GetCircuitBreakerPolicy()
 }
 ```
 
-Yukarıdaki kod örneğinde, devre kesici ilkesi, http istekleri yeniden denendiğinde beş ardışık hata olduğunda devre dışı bırakıldığında veya açılacak şekilde yapılandırılır. Bu durumda, devre 30 saniye boyunca kesilir: Bu dönemde, çağrılar aslında yerleştirilmektense devre kesici tarafından hemen başarısız olur.  İlke, [ilgili özel durumları ve http durum kodlarını](/aspnet/core/fundamentals/http-requests?view=aspnetcore-2.1#handle-transient-faults) hata olarak otomatik olarak yorumlar.  
+Yukarıdaki kod örneğinde, devre kesici ilkesi, http istekleri yeniden denendiğinde beş ardışık hata olduğunda devre dışı bırakıldığında veya açılacak şekilde yapılandırılır. Bu durumda, devre 30 saniye boyunca kesilir: Bu dönemde, çağrılar aslında yerleştirilmektense devre kesici tarafından hemen başarısız olur.  İlke, [ilgili özel durumları ve http durum kodlarını](/aspnet/core/fundamentals/http-requests#handle-transient-faults) hata olarak otomatik olarak yorumlar.  
 
 Devre kesiciler, HTTP çağrısını gerçekleştiren istemci uygulama veya hizmetten farklı bir ortamda dağıtılan belirli bir kaynakta bir geri dönüş altyapısına yeniden yönlendirmek için de kullanılmalıdır. Bu şekilde, veri merkezinde yalnızca arka uç mikro hizmetlerinizi etkileyen ancak istemci uygulamalarınıza yönelik bir kesinti varsa, istemci uygulamalar geri dönüş hizmetlerine yeniden yönlendirebilir. Polly, bu [Yük devretme ilkesi](https://github.com/App-vNext/Polly/wiki/Polly-Roadmap#failover-policy) senaryosuna otomatik hale getirmek için yeni bir ilke planlıyor. 
 
@@ -148,5 +148,5 @@ Son olarak, için `CircuitBreakerPolicy` `Isolate` başka bir olasılık (açık
   [https://docs.microsoft.com/azure/architecture/patterns/circuit-breaker](/azure/architecture/patterns/circuit-breaker)
 
 >[!div class="step-by-step"]
->[Önceki](implement-http-call-retries-exponential-backoff-polly.md)İleri
->[](monitor-app-health.md)
+>[Önceki](implement-http-call-retries-exponential-backoff-polly.md)
+>[İleri](monitor-app-health.md)

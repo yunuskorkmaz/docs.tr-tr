@@ -2,12 +2,12 @@
 title: Yüksek ölçeklenebilirlik ve kullanılabilirlik için mikro hizmetleri ve çok kapsayıcılı uygulamaları yönetme
 description: Azure Kubernetes hizmetini kullanarak bir uygulamayı dağıtmayı öğrenin.
 ms.date: 02/15/2019
-ms.openlocfilehash: 88e76b4b0a3686f4227a6aee1b7fbd2bfe55fdcc
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 0aa2f83fbf8f9a8815d65730002943cca748643d
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70295377"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182364"
 ---
 # <a name="deploy-to-azure-kubernetes-service-aks"></a>Azure Kubernetes Service’e (AKS) Dağıtma
 
@@ -19,12 +19,12 @@ AKS kullanılmadan önce sahip olmanın önkoşulları şunlardır:
 - Windows geliştirme makinesi
   - Windows üzerinde geliştirici modu etkin
   - Linux için Windows alt sistemi
-- [Windows, Mac veya Linux](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest) 'ta yüklü Azure-CLI
+- [Windows, Mac veya Linux](https://docs.microsoft.com/cli/azure/install-azure-cli) 'ta yüklü Azure-CLI
 
 > [!NOTE]
 > Hakkında ayrıntılı bilgi edinmek için:
 >
-> Azure-CLı:<https://docs.microsoft.com/cli/azure/index?view=azure-cli-latest>
+> Azure-CLı:<https://docs.microsoft.com/cli/azure/index>
 >
 > Linux için Windows alt sistemi:<https://docs.microsoft.com/windows/wsl/about>
 
@@ -79,5 +79,5 @@ kubectl get nodes
 **Şekil 4-20**. `kubectl get nodes`komut sonucu.
 
 >[!div class="step-by-step"]
->[Önceki](orchestrate-high-scalability-availability.md)İleri
->[](docker-apps-development-environment.md)
+>[Önceki](orchestrate-high-scalability-availability.md)
+>[İleri](docker-apps-development-environment.md)
