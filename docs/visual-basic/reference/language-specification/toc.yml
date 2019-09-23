@@ -25,6 +25,8 @@
       href: ../../../../_vblang/spec/expressions.md
     - name: Belge Açıklamaları
       href: ../../../../_vblang/spec/documentation-comments.md
+    - name: Aşırı yükleme çözümü
+      href: ../../../../_vblang/spec/overload-resolution.md
     - name: Dilbilgisi
       items:
         - name: vb.html
