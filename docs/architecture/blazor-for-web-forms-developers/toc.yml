@@ -1,0 +1,31 @@
+- name: ASP.NET Web Forms geliştiricileri için Blazor e-kitabı
+  href: index.md
+  items:
+    - name: Giriş
+      href: introduction.md
+    - name: Mimari karşılaştırması
+      href: architecture-comparison.md
+    - name: Barındırma modelleri
+      href: hosting-models.md
+    - name: Proje yapısı
+      href: project-structure.md
+    - name: Başlangıç
+      href: app-startup.md
+    - name: Bileşenler
+      href: components.md
+    - name: 'Sayfalar, yönlendirme ve düzenler'
+      href: pages-routing-layouts.md
+    - name: Durum yönetimi
+      href: state-management.md
+    - name: Formlar ve doğrulama
+      href: forms-validation.md
+    - name: Verilerle ilgilenme
+      href: data.md
+    - name: Ara yazılım
+      href: middleware.md
+    - name: Yapılandırma
+      href: config.md
+    - name: Güvenlik
+      href: security-authentication-authorization.md
+    - name: Geçiş
+      href: migration.md
