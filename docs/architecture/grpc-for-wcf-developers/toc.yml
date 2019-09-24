@@ -1,0 +1,89 @@
+- name: WCF Geliştiricileri için gRPC
+  href: index.md
+  items:
+    - name: Giriş
+      href: introduction.md
+    - name: gRPC'ye genel bakış
+      href: grpc-overview.md
+      items:
+        - name: gRPC'nin RPC yaklaşımı
+          href: approach.md
+        - name: Arabirim Tanımlama Dili
+          href: interface-definition-language.md
+        - name: Ağ protokolleri
+          href: network-protocols.md
+        - name: WCF geliştiricilerine neden gRPC önerilir?
+          href: Why-grpc.md
+    - name: Protokol Arabellekleri
+      href: protocol-buffers.md
+      items:
+        - name: Protobuf iletileri
+          href: protobuf-messages.md
+        - name: Protobuf skaler veri türleri
+          href: protobuf-data-types.md
+        - name: Protobuf iç içe türleri
+          href: protobuf-nested-types.md
+        - name: Listeler ve diziler için yinelenen alanlar
+          href: protobuf-repeated.md
+        - name: Protobuf ayrılmış alanları
+          href: protobuf-reserved.md
+        - name: Değişken türler için Protobuf Any ve OneOf alanları
+          href: protobuf-any-oneof.md
+        - name: Protobuf sabit listeleri
+          href: protobuf-enums.md
+        - name: Protobuf sözlük eşlemeleri
+          href: protobuf-maps.md
+    - name: WCF hizmetlerini gRPC ile karşılaştırma
+      href: wcf-services-to-grpc-comparison.md
+      items:
+        - name: WCF Uç Noktaları ve gRPC yöntemleri
+          href: wcf-endpoints-grpc-methods.md
+        - name: WCF bağlamaları ve aktarımları
+          href: wcf-bindings.md
+        - name: RPC türleri
+          href: rpc-types.md
+        - name: Meta Veriler
+          href: metadata.md
+        - name: Hata işleme
+          href: error-handling.md
+        - name: WS-* protokolleri
+          href: ws-protocols.md
+    - name: WCF çözümünü gRPC'ye geçirme
+      href: migrate-wcf-to-grpc.md
+      items:
+        - name: Yeni bir ASP.NET Core gRPC projesi oluşturma
+          href: create-project.md
+        - name: WCF istek-yanıt hizmetini gRPC'ye geçirme
+          href: migrate-request-reply.md
+        - name: WCF çift yönlü hizmetlerini gRPC'ye geçirme
+          href: migrate-duplex-services.md
+        - name: gRPC akış hizmetleri ile yinelenen alanlar karşılaştırması
+          href: streaming-versus-repeated.md
+        - name: İstemci kitaplıkları
+          href: client-libraries.md
+    - name: gRPC uygulamalarında güvenlik
+      href: security.md
+      items:
+        - name: Çağrı kimlik bilgileri
+          href: call-credentials.md
+        - name: Kanal kimlik bilgileri
+          href: channel-credentials.md
+        - name: Şifreleme
+          href: encryption.md
+    - name: Üretimde gRPC
+      href: grpc-in-production.md
+      items:
+        - name: Şirket içinde barındırılan uygulamalar
+          href: self-hosted.md
+        - name: Docker
+          href: docker.md
+        - name: Kubernetes
+          href: kubernetes.md
+        - name: gRPC ve Service Mesh
+          href: service-mesh.md
+        - name: Yük dengeleme
+          href: load-balancing.md
+        - name: Uygulama Performansı Yönetimi
+          href: application-performance-management.md
+    - name: Ek
+      href: appendix.md

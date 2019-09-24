@@ -1,0 +1,93 @@
+- name: Azure için Bulutta Yerel .NET Uygulamaları Tasarlama
+  href: index.md
+  items:
+    - name: Bulutta yerel uygulamalara giriş
+      href: introduction.md
+      items:
+        - name: Bulutta Yerel'i tanımlama
+          href: definition.md
+        - name: Bulutta Yerel için aday uygulamalar
+          href: candidate-apps.md
+    - name: eShopOnContainers başvuru uygulamasına giriş
+      href: introduce-eshoponcontainers-reference-app.md
+      items:
+        - name: eShopOnContainers'ı Azure Hizmetlerine eşleme
+          href: map-eshoponcontainers-azure-services.md
+        - name: eShopOnContainers'ı Azure'a dağıtma
+          href: deploy-eshoponcontainers-azure.md
+        - name: Merkezi yapılandırma
+          href: centralized-configuration.md
+    - name: Bulutta yerel .NET uygulamalarını ölçeklendirme
+      href: scale-applications.md
+      items:
+        - name: Kapsayıcılardan ve düzenleyicilerden yararlanma
+          href: leverage-containers-orchestrators.md
+        - name: Sunucusuz işlevlerden yararlanma
+          href: leverage-serverless-functions.md
+        - name: Kapsayıcıları ve sunucusuz yaklaşımları birleştirme
+          href: combine-containers-serverless-approaches.md
+        - name: Azure’da kapsayıcıları dağıtma
+          href: deploy-containers-azure.md
+        - name: Kapsayıcıları ve sunucusuz uygulamaları ölçeklendirme
+          href: scale-containers-serverless.md
+        - name: Diğer dağıtım seçenekleri
+          href: other-deployment-options.md
+    - name: Bulutta yerel iletişim desenleri
+      href: communication-patterns.md
+      items:
+        - name: Ön uç istemci iletişimi
+          href: front-end-communication.md
+        - name: Hizmetten hizmete iletişim
+          href: service-to-service-communication.md
+        - name: REST ve gRPC
+          href: rest-grpc.md
+        - name: Service Mesh iletişim altyapısı
+          href: service-mesh-communication-infrastructure.md
+    - name: Dağıtılmış Veriler
+      href: distributed-data.md
+      items:
+        - name: Bulutta yerel veri desenleri
+          href: data-patterns.md
+        - name: Azure'da Veri Depolama
+          href: azure-data-storage.md
+    - name: Bulutta yerel dayanıklılık
+      href: resiliency.md
+      items:
+        - name: Uygulama dayanıklılığı desenleri
+          href: application-resiliency-patterns.md
+        - name: Azure ile bulut altyapısı dayanıklılığı
+          href: infrastructure-resiliency-azure.md
+        - name: Dayanıklı iletişim
+          href: resilient-communications.md
+    - name: İzleme ve sistem durumu
+      href: monitoring-health.md
+      items:
+        - name: Gözlemlenebilirlik desenleri
+          href: observability-patterns.md
+        - name: Elastik Yığın ile günlüğe kaydetme
+          href: logging-with-elastic-stack.md
+        - name: Azure Kubernetes Service'te İzleme
+          href: monitoring-azure-kubernetes.md
+        - name: Azure İzleyici
+          href: azure-monitor.md
+    - name: Kimlik
+      href: identity.md
+      items:
+        - name: Bulutta yerel uygulamalarda kimlik doğrulaması ve yetkilendirme
+          href: authentication-authorization.md
+        - name: Azure Active Directory
+          href: azure-active-directory.md
+        - name: Kimlik Sunucusu
+          href: identity-server.md
+    - name: Güvenlik
+      href: security.md
+      items:
+        - name: Bulutta yerel uygulamalar için Azure Güvenliği
+          href: azure-security.md
+    - name: Bulutta yerel DevOps
+      href: devops.md
+      items:
+        - name: Kod olarak Altyapı
+          href: infrastructure-as-code.md
+        - name: Bulutta Yerel Uygulama Paketleri
+          href: application-bundles.md

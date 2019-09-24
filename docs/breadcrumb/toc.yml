@@ -19,6 +19,9 @@
             - name: .NET mikro hizmetleri - Mimari e-kitabı
               tocHref: /dotnet/architecture/microservices/
               topicHref: /dotnet/architecture/microservices/index
+            - name: Yerel Bulut
+              tocHref: /dotnet/architecture/cloud-native/
+              topicHref: /dotnet/architecture/cloud-native/index
             - name: .NET uygulamalarını modernleştirme e-kitabı
               tocHref: /dotnet/architecture/modernize-with-azure-containers/
               topicHref: /dotnet/architecture/modernize-with-azure-containers/index
@@ -28,6 +31,12 @@
             - name: Sunucusuz uygulamalar e-kitabı
               tocHref: /dotnet/architecture/serverless/
               topicHref: /dotnet/architecture/serverless/index
+            - name: ASP.NET Web Forms geliştiricileri için Blazor e-kitabı
+              tocHref: /dotnet/architecture/blazor-for-web-forms-developers/
+              topicHref: /dotnet/architecture/blazor-for-web-forms-developers/index
+            - name: WCF Geliştiricileri için ASP.NET Core gRPC
+              tocHref: /dotnet/architecture/grpc-for-wcf-developers/
+              topicHref: /dotnet/architecture/grpc-for-wcf-developers/index
         - name: .NET Kılavuzu
           tocHref: /dotnet/standard/
           topicHref: /dotnet/standard/index
