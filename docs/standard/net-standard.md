@@ -3,15 +3,16 @@ title: .NET Standard
 description: .NET Standard, sürümleri ve bunu destekleyen .NET uygulamaları hakkında bilgi edinin.
 author: mairaw
 ms.author: mairaw
-ms.date: 08/30/2019
+ms.date: 09/23/2019
 ms.technology: dotnet-standard
+ms.custom: updateeachrelease
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.openlocfilehash: f479bbec504a965fde08af6d000d4be75ca85f8d
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 026224ca2941e7694fc1b80939e6d283d75db32e
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70205597"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71214443"
 ---
 # <a name="net-standard"></a>.NET Standard
 
@@ -83,7 +84,7 @@ Türetilmiş yapıtlar, daha kolay okunması ve belirli geliştirici senaryolar�
 
 .NET Standard başvuru derlemelerinin birincil dağıtım aracı [NuGet paketlerdir](../core/packages.md). Uygulamalar, her .NET uygulaması için uygun olan çeşitli yollarla dağıtılır.
 
-NuGet paketleri bir veya daha fazla [](frameworks.md)çerçeveyi hedeflemelidir. .NET Standard paketleri ".NET Standard" çerçevesini hedefleyin. `netstandard` [Compact TFI](frameworks.md) kullanarak .NET Standard çerçevesini hedefleyebilirsiniz (örneğin, `netstandard1.4`). Birden çok çalışma zamanında çalıştırılması amaçlanan kitaplıkların bu çerçeveyi hedeflemesi gerekir. En geniş API kümesi için, kullanılabilir API `netstandard2.0` sayısı .NET Standard 1,6 ile 2,0 arasında iki katına çıkardığından hedefleyin.
+NuGet paketleri bir [veya daha fazla](frameworks.md)çerçeveyi hedeflemelidir. .NET Standard paketleri ".NET Standard" çerçevesini hedefleyin. `netstandard` [Compact TFI](frameworks.md) kullanarak .NET Standard çerçevesini hedefleyebilirsiniz (örneğin, `netstandard1.4`). Birden çok çalışma zamanında çalıştırılması amaçlanan kitaplıkların bu çerçeveyi hedeflemesi gerekir. En geniş API kümesi için, kullanılabilir API `netstandard2.0` sayısı .NET Standard 1,6 ile 2,0 arasında iki katına çıkardığından hedefleyin.
 
 Metapackage, [`NETStandard.Library`](https://www.nuget.org/packages/NETStandard.Library/) .NET Standard tanımlayan tüm NuGet paketleri kümesine başvurur.  Hedefetmenin `netstandard` en yaygın yolu, bu metapackage 'e başvurarak yapılır. Bu, .NET Standard tanımlayan ~ 40 .NET kitaplıklarına ve ilişkili API 'lere erişim sağlar. Ek API 'lere erişim sağlamak için, `netstandard` hedef olan ek paketlere başvurabilirsiniz.
 

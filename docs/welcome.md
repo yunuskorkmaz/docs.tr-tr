@@ -3,14 +3,14 @@ title: .NET 'e hoş geldiniz
 description: .NET teknolojileri ailesine Başlarken.
 author: mairaw
 ms.author: mairaw
-ms.date: 05/06/2019
+ms.date: 09/23/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: 2927b892f8f83366a46cb113b3f0233bbd168974
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 0b4a2380bf2ddb59c181a07d7f8a006d6252d11f
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70855472"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216858"
 ---
 # <a name="welcome-to-net"></a>.NET 'e hoş geldiniz
 
@@ -29,10 +29,10 @@ Bulut, IoT ve ücretsiz platformlar arası araçlar kullanan oyunlar gibi .NET i
 
 Ayrıca, en son .NET olaylarını izleyin:
 
-- [Microsoft Connect ()](https://www.microsoft.com/connectevent)
-- [Microsoft derleme 2018](https://channel9.msdn.com/Events/Build/2018)
+- [Microsoft derleme](https://www.microsoft.com/build)
 - [.NET conf](https://www.dotnetconf.net/)
-
+- [Microsoft Connect ()](https://www.microsoft.com/connectevent)
+- 
 .NET uygulamalarına ve desteklenen dillere eklenen en son özellikler hakkında daha fazla bilgi için aşağıdaki makalelere bakın:
 
 - [​.NET Core'daki Yenilikler](core/whats-new/index.md)
@@ -52,8 +52,15 @@ Bu belge platformlar ve diller genelinde .NET 'in kapsamını içerir. Aşağıd
 - [Visual Basic Kılavuzu](visual-basic/index.md)
 - [ML.NET Kılavuzu](machine-learning/index.yml)
 - [Apache Spark için .NET](spark/index.yml)
+- [.NET uygulama mimarisi](architecture/index.yml)
 
 Ayrıca, [.NET API başvurusuna](/dotnet/api)de gidebilirsiniz.
+
+## <a name="videos"></a>Videolar
+
+Web, mobil, Masaüstü, C#makine öğrenimi, kapsayıcılar/Docker, veri erişimi ve daha fazlasına yönelik videoları keşfedebilirsiniz:
+
+[.NET 101 video serisi](https://dotnet.microsoft.com/learn/videos)
 
 ## <a name="open-source"></a>Açık kaynak
 

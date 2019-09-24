@@ -1,15 +1,15 @@
 ---
-title: Son değişiklikler, sürüm 2,2, 3,0-.NET Core
+title: Şifreleme bölünmesi, sürüm 2,2, 3,0-.NET Core
 description: Sürüm 2,2 ' den, .NET Core, ASP.NET Core ve EF Core sürüm 3,0 ' den son değişiklikleri listeler.
 ms.date: 09/10/2019
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e488e04c06972399bb2b20f349c216098b6dd41d
+ms.openlocfilehash: 44caf042404d44ec4c5cb7b7e25883d8460efeb5
 ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216401"
+ms.locfileid: "71217068"
 ---
 # <a name="breaking-changes-for-migration-from-version-22-to-30"></a>2,2 sürümünden 3,0 sürümüne geçiş için son değişiklikler
 
@@ -65,10 +65,6 @@ Sürüm 2,2 ' den .NET Core, ASP.NET Core veya EF Core 3,0 sürümüne geçiş y
 ## <a name="visual-basic"></a>Visual Basic
 
 [!INCLUDE[vbNewLine is obsolete](~/includes/core-changes/visualbasic/vbnewline-is-obsolete.md)]
-
-## <a name="aspnet-core"></a>ASP.NET Core
-
-[ASP.NET Core Son değişiklik duyuruları (GitHub 'da)](https://github.com/aspnet/Announcements/issues?q=is%3Aissue+is%3Aopen+label%3A%22Breaking+change%22+label%3A3.0.0)
 
 ## <a name="entity-framework-core"></a>Entity Framework Core
 

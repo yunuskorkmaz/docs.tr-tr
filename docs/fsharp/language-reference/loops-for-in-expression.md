@@ -2,12 +2,12 @@
 title: 'Döngüler: for...in İfadesi'
 description: F# İçin bkz.... ifade döngüsü yapısı, sıralanabilir bir koleksiyondaki bir düzenin eşleşmelerini yinelemek için kullanılır.
 ms.date: 05/16/2016
-ms.openlocfilehash: 640b0f91f6c641f3b49a99dc67abe7e4c31911ea
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 5a2ca59ca4199ece5d78010ff780e86ae2b25181
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630720"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216450"
 ---
 # <a name="loops-forin-expression"></a>Döngüler: for...in İfadesi
 
@@ -44,7 +44,7 @@ Aşağıdaki kod örnekleri, `for...in` ifadesinin kullanımını gösterir.
 
 Çıktı aşağıdaki gibidir:
 
-```
+```console
 1
 5
 100
@@ -58,7 +58,7 @@ Aşağıdaki örnek, bir sıranın üzerinde nasıl döngü yapılacağını ve 
 
 Çıktı aşağıdaki gibidir:
 
-```
+```console
 1 squared is 1
 2 squared is 4
 3 squared is 9
@@ -77,7 +77,7 @@ Aşağıdaki örnek, bir basit tamsayı aralığının nasıl ekleneceğini gös
 
 İşlev1 çıkışı aşağıdaki gibidir.
 
-```
+```console
 1 2 3 4 5 6 7 8 9 10
 ```
 
@@ -87,7 +87,7 @@ Aşağıdaki örnek, aralığın her bir öğesini de içeren, bir Aralık üzer
 
 Çıkışı `function2` aşağıdaki gibidir.
 
-```
+```console
 1 3 5 7 9
 ```
 
@@ -97,7 +97,7 @@ Aşağıdaki örnek, bir karakter aralığının nasıl kullanılacağını gös
 
 Çıkışı `function3` aşağıdaki gibidir.
 
-```
+```console
 a b c d e f g h i j k l m n o p q r s t u v w x y z
 ```
 
@@ -107,7 +107,7 @@ Aşağıdaki örnek, bir ters yineleme için negatif atlama değeri kullanmayı 
 
 Çıkışı `function4` aşağıdaki gibidir.
 
-```
+```console
 10 9 8 7 6 5 4 3 2 1 ... Lift off!
 ```
 
@@ -117,7 +117,7 @@ Aralığın başlangıcı ve bitişi, aşağıdaki kodda olduğu gibi işlevler 
 
 Bu girişle çıkış `function5` aşağıdaki gibidir.
 
-```
+```console
 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18
 ```
 
@@ -127,7 +127,7 @@ Sonraki örnekte, öğe döngüde gerekli olmadığında bir joker karakteri (\_
 
 Çıktı aşağıdaki gibidir:
 
-```
+```console
 Number of elements in list1: 5
 ```
 

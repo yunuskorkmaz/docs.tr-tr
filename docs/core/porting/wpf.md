@@ -5,12 +5,12 @@ author: Thraka
 ms.author: adegeo
 ms.date: 03/27/2019
 ms.custom: ''
-ms.openlocfilehash: 1528e578a978de38998b3f3f4b7beb72ff7422d4
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 4ff3ca9610e7fa9355931ca2013def1157fab8b2
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117065"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216189"
 ---
 # <a name="how-to-port-a-wpf-desktop-app-to-net-core"></a>Nasıl yapılır: .NET Core 'a bir WPF Masaüstü uygulaması bağlantı noktası
 
@@ -52,7 +52,7 @@ Bu makalede, geçiş için kullanılan dosya türlerini tanımlamak için çeşi
 
 01. Farklı bir WPF sürümü kullanıyorsunuz.
 
-    .NET Core 3,0 Preview 1 yayınlanmışsa, WPF GitHub üzerinde açık kaynak olarak çıktı. .NET Core WPF kodu, .NET Framework WPF kod tabanının çatalından oluşur. Bazı farklılıklar olabilir ve uygulamanızın bağlantı noktası olmayacaktır.
+    .NET Core 3,0 Preview 1 yayınlandığında, WPF GitHub 'da açık kaynak olarak oluştu. .NET Core WPF kodu, .NET Framework WPF kod temelinin çatalından oluşur. Bazı farklılıklar olabilir ve uygulamanızın bağlantı noktası olmayacaktır.
 
 01. [Windows Uyumluluk Paketi][compat-pack] , geçiş yapmanıza yardımcı olabilir.
 

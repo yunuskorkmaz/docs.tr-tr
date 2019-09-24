@@ -3,12 +3,12 @@ title: Zaman uyumsuz akışlar oluşturma ve kullanma
 description: Bu gelişmiş öğreticide, zaman uyumsuz akışlarının oluşturulması ve kullanılması, zaman uyumsuz olarak oluşturulabilecek veri dizileri ile çalışmak için daha doğal bir yol sağlar.
 ms.date: 02/10/2019
 ms.custom: mvc
-ms.openlocfilehash: 3fdf5299deca365c62a00a8320ea335e96d9078c
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 04c4fe1c7e33138273c5b49c6985efc60767a724
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926699"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216560"
 ---
 # <a name="tutorial-generate-and-consume-async-streams-using-c-80-and-net-core-30"></a>Öğretici: 8,0 ve .NET Core 3,0 kullanarak C# zaman uyumsuz akışlar oluşturun ve kullanın
 
@@ -24,7 +24,7 @@ Bu öğreticide, aşağıdakileri nasıl yapacağınızı öğreneceksiniz:
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-C# 8,0 Beta derleyicisi dahil olmak üzere, makinenizi .NET Core çalıştıracak şekilde ayarlamanız gerekir. C# 8 Beta derleyicisi, [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)veya en son [.NET Core 3,0 Preview SDK](https://dotnet.microsoft.com/download/dotnet-core/3.0)ile başlayarak kullanılabilir. Zaman uyumsuz akışlar ilk olarak .NET Core 3,0 Preview 1 sürümünde kullanılabilir.
+Makinenizi, C# 8,0 derleyicisi dahil .NET Core çalıştıracak şekilde ayarlamanız gerekir. 8 C# derleyicisi, [Visual Studio 2019 sürüm 16,3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) veya [.NET Core 3,0 SDK](https://dotnet.microsoft.com/download)ile başlayarak kullanılabilir.
 
 GitHub GraphQL uç noktasına erişebilmek için bir [GitHub erişim belirteci](https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/#creating-a-token) oluşturmanız gerekir. GitHub erişim belirteciniz için aşağıdaki izinleri seçin:
 

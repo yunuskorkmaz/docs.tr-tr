@@ -6,12 +6,12 @@ ms.topic: tutorial
 ms.custom: mvc
 ms.author: nakersha
 author: natke
-ms.openlocfilehash: 2dd10c0843b2bea4755d5f4f0aceea6509c7cf46
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 38b935814d713284dae1ca931b90c63bbcac332b
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71054309"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216889"
 ---
 # <a name="tutorial-analyze-sentiment-of-movie-reviews-using-a-pre-trained-tensorflow-model-in-mlnet"></a>Öğretici: ML.NET ' de önceden eğitilen bir TensorFlow modeli kullanarak film incelemelerinin yaklaşımını çözümleyin
 
@@ -21,6 +21,7 @@ Bu öğreticide kullanılan TensorFlow modeli, ıMDB veritabanından Film İncel
 
 Bu öğreticide şunların nasıl yapıladığını öğreneceksiniz:
 > [!div class="checklist"]
+>
 > * Önceden eğitilen bir TensorFlow modeli yükleme
 > * Web sitesi açıklama metnini model için uygun özelliklere Dönüştür
 > * Tahmin yapmak için modeli kullanma
@@ -120,7 +121,7 @@ Değişken uzunluğu özellik dizisi daha sonra sabit 600 uzunluğuna yeniden bo
     [!code-csharp[Prediction](~/samples/machine-learning/tutorials/TextClassificationTF/Program.cs#Prediction "Declare prediction class")]
 
     `MovieReviewSentimentPrediction`, model eğitiminden sonra kullanılan tahmin sınıfıdır. `MovieReviewSentimentPrediction`tek `float` bir Array (`Prediction`) ve bir `VectorType` özniteliğe sahiptir.
-    
+
 ### <a name="create-the-mlcontext-lookup-dictionary-and-action-to-resize-features"></a>Özellikleri yeniden boyutlandırmak için MLContext, arama sözlüğü ve eylemi oluşturma
 
 [Mlcontext sınıfı](xref:Microsoft.ML.MLContext) tüm ml.NET işlemleri için bir başlangıç noktasıdır. Başlatma `mlContext` , model oluşturma iş akışı nesneleri genelinde paylaşılabilecek yeni bir ml.net ortamı oluşturur. Entity Framework, kavramsal `DBContext` olarak da benzerdir.
@@ -191,7 +192,7 @@ Değişken uzunluğu özellik dizisi daha sonra sabit 600 uzunluğuna yeniden bo
 
 1. Ardışık düzen aracılığıyla model oluşturmak için kodu ekleyin:
 
-    [!code-csharp[SnippetCreateModel](~/samples/machine-learning/tutorials/TextClassificationTF/Program.cs#SnippetCreateModel)]  
+    [!code-csharp[SnippetCreateModel](~/samples/machine-learning/tutorials/TextClassificationTF/Program.cs#SnippetCreateModel)]
 
     `Fit` Yöntemi çağırarak, işlem hattındaki tahmini zincirinden bir ml.net modeli oluşturulur. Bu durumda, TensorFlow modeli önceden eğitilen için, modeli oluşturmak üzere herhangi bir veri vermedik. `Fit` Yöntemin gereksinimlerini karşılamak için boş bir veri görünümü nesnesi sağlıyoruz.
 
@@ -200,10 +201,10 @@ Değişken uzunluğu özellik dizisi daha sonra sabit 600 uzunluğuna yeniden bo
 1. Yönteminin altına aşağıdaki `PredictSentiment`yöntemiekleyin `Main` :
 
     ```csharp
-        public static void PredictSentiment(MLContext mlContext, ITransformer model)
-        {
+    public static void PredictSentiment(MLContext mlContext, ITransformer model)
+    {
 
-        }
+    }
     ```
 
 1. `PredictSentiment()` Yönteminin ilk satırı `PredictionEngine` olarak oluşturmak için aşağıdaki kodu ekleyin:
@@ -241,8 +242,8 @@ Uygulamanızı derleyin ve çalıştırın.
 Sonuçlarınız aşağıdakine benzer olmalıdır. İşlem sırasında iletiler görüntülenir. Uyarıları görebilir veya iletileri işleme alabilirsiniz. Bu iletiler, açıklık açısından aşağıdaki sonuçlardan kaldırılmıştır.
 
 ```console
-   Number of classes: 2
-   Is sentiment/review positive ? Yes
+Number of classes: 2
+Is sentiment/review positive ? Yes
 ```
 
 Tebrikler! Artık ml.net ' de önceden eğitilen `TensorFlow` bir modeli yeniden kullandığınızda, iletilerin sınıflandırılmasına ve tahmine yönelik bir makine öğrenimi modelini başarıyla oluşturdunuz.
@@ -251,6 +252,7 @@ Bu öğreticinin kaynak kodunu [DotNet/Samples](https://github.com/dotnet/sample
 
 Bu öğreticide, şunların nasıl yapıldığını öğrendiniz:
 > [!div class="checklist"]
+>
 > * Önceden eğitilen bir TensorFlow modeli yükleme
 > * Web sitesi açıklama metnini model için uygun özelliklere Dönüştür
 > * Tahmin yapmak için modeli kullanma

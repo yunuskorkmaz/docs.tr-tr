@@ -1,69 +1,97 @@
-### YamlMime:YamlDocument
-documentType: LandingData
+### YamlMime:Landing
 title: ML.NET belgeleri
+summary: Açık kaynak ML.NET kullanarak makine öğrenimi çözümleri oluşturma ve bunları uygulamalarla tümleştirme hakkında bilgi edinin. Öğreticiler, kod örnekleri ve daha fazlası size nasıl yapılacağını göstermektedir.
 metadata:
-  document_id: na
-  title: 'ML.NET belgeleri-öğreticiler, API başvurusu'
-  meta.description: 'Learn how to use ML.NET, an open-source and cross-platform machine learning framework you can use to build custom machine learning solutions and integrate them into .NET applications. Incorporate AI into your apps using the .NET skills you already have and without leaving .NET.'
+  title: ML.NET belgeleri-öğreticiler, API başvurusu
+  description: Açık kaynak ML.NET kullanarak makine öğrenimi çözümleri oluşturma ve bunları uygulamalarla tümleştirme hakkında bilgi edinin. Öğreticiler, kod örnekleri ve daha fazlası size nasıl yapılacağını göstermektedir.
+  ms.prod: dotnet-ml
   ms.topic: landing-page
-  ms.date: 09/16/2019
-  ms.author: nakersha
+  ms.collection: collection
   author: natke
-abstract:
-  description: 'Özel makine öğrenimi çözümleri oluşturmak ve bunları .NET uygulamalarıyla tümleştirmek için açık kaynaklı ve platformlar arası bir makine öğrenimi çerçevesi olan ML.NET ''yi nasıl kullanacağınızı öğrenin. Öğreticiler, kod örnekleri, API başvurusu ve diğer belgeler size nasıl yapılacağını göstermektedir.'
-sections:
-  - title: Adım adım öğreticiler
-    items:
-      - type: paragraph
-        text: 'ML.NET ile ortak çözümler oluşturmayı öğrenin:'
-      - type: paragraph
-        text: '<b>Ml.NET API ''si Ile geliştirin</b>:'
-      - type: list
-        style: unordered
-        items:
-          - html: <a href="/dotnet/machine-learning/tutorials/sentiment-analysis">İkili sınıflandırma kullanarak yaklaşımı çözümleme</a>
-          - html: <a href="/dotnet/machine-learning/tutorials/github-issue-classification">Birden çok Lass sınıflandırması kullanarak GitHub sorunlarını kategorilere ayırma</a></li>
-          - html: <a href="/dotnet/machine-learning/tutorials/predict-prices">Gerileme kullanarak fiyatları tahmin etme</a>
-          - html: <a href="/dotnet/machine-learning/tutorials/iris-clustering">Kümeleme kullanarak çiçekleri özelliklere göre kategorilere ayırma</a>
-          - html: <a href="/dotnet/machine-learning/tutorials/movie-recommendation">Matris factoru ile bir film öneren oluşturma</a>
-          - html: <a href="/dotnet/machine-learning/tutorials/image-classification">TensorFlow ile özel görüntü Sınıflandırıcısı oluşturma</a>
-          - html: <a href="/dotnet/machine-learning/tutorials/object-detection-onnx">ONNX ile görüntülerdeki nesneleri Algıla</a>
-          - html: <a href="/dotnet/machine-learning/tutorials/text-classification-tf">TensorFlow kullanarak film incelemelerinin yaklaşımını sınıflandırın</a>
-      - type: paragraph
-        text: 'Grafik Visual Studio uzantısı olan <b>model Oluşturucu ''Yu kullanın</b>:'
-      - type: list
-        style: unordered
-        items:
-          - html: <a href="/dotnet/machine-learning/tutorials/predict-prices-with-model-builder">Model Oluşturucu ile fiyatları tahmin etme</a>
-          - html: <a href="/dotnet/machine-learning/tutorials/sentiment-analysis-model-builder">Yaklaşımı çözümlemek için bir Razor Pages Web uygulaması oluşturun</a>
-      - type: paragraph
-        text: '<b>Ml.net CLI ''Yi çalıştırın</b>:'
-      - type: list
-        style: unordered
-        items:
-          - html: <a href="/dotnet/machine-learning/tutorials/mlnet-cli">ML.NET CLı ile yaklaşımı çözümleyin</a>
-  - title: Örnekler
-    items:
-      - type: paragraph
-        text: 'C# Ve F#içindeki uygulamalar için GitHub ''daki <a href="https://github.com/dotnet/machinelearning-samples">örnekler deposuna</a> bakın.'
-  - title: Başvuru
-    items:
-      - type: paragraph
-        text: <b>ML.NET API 'SI</b>
-      - type: list
-        style: unordered
-        items:
-          - html: '<a href="/dotnet/api/?view=ml-dotnet">Release ml.NET API ''si</a> , veri işleme bileşenleri, ikili sınıflandırma için algoritmalar, birden çok Lass sınıflandırması, regresyon, anomali algılama, zaman serisi ve tahmin, derecelendirme, model kaydetme ve yükleme, Onnx ve TensorFlow için bileşenler içerir model işleme ve çok daha fazlası!'
-          - html: '<a href="/dotnet/api/?view=ml-dotnet-preview">Preview ml.NET API ''si</a> , öneri görevleri için algoritmalar ve standart derin öğrenme modelleri için destek içerir.'
-      - type: paragraph
-        text: <b>Oto ml API 'SI</b>
-      - type: list
-        style: unordered
-        items:
-          - html: <a href="/dotnet/api/index?view=automl-dotnet">Auto ML API 'SI</a>
-      - type: paragraph
-        text: <b>ML.NET CLı başvurusu</b>
-      - type: list
-        style: unordered
-        items:
-          - html: <a href="/dotnet/machine-learning/reference/ml-net-cli-reference">ML.NET CLı komut başvurusu</a>
+  ms.author: nakersha
+  ms.date: 09/23/2019
+  ms.openlocfilehash: f6f4d0c516a1310df5c497a3f4e7331877f3c5a9
+  ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+  ms.translationtype: MT
+  ms.contentlocale: tr-TR
+  ms.lasthandoff: 09/24/2019
+  ms.locfileid: "71216645"
+landingContent:
+- title: ML.NET hakkında
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: ML.NET nedir?
+      url: how-does-mldotnet-work.md
+  - linkListType: concept
+    links:
+    - text: Machine Learning model türleri
+      url: resources/tasks.md
+    - text: Algoritma seçme
+      url: how-to-choose-an-ml-net-algorithm.md
+    - text: Veri dönüştürmeleri
+      url: resources/transforms.md
+- title: Model oluşturucuyu kullanma
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Model Oluşturucu nedir?
+      url: automate-training-with-model-builder.md
+  - linkListType: quickstart
+    links:
+    - text: Model Oluşturucu’yu yükleme
+      url: how-to-guides/install-model-builder.md
+  - linkListType: tutorial
+    links:
+    - text: Fiyatları tahmin etme-model Oluşturucu
+      url: tutorials/predict-prices-with-model-builder.md
+    - text: Yaklaşımı çözümlemek için bir Razor Pages Web uygulaması oluşturun
+      url: tutorials/sentiment-analysis-model-builder.md
+- title: API 'yi kullanmaya başlama
+  linkLists:
+  - linkListType: tutorial
+    links:
+    - text: Aktarım öğrenimi ile bir TensorFlow görüntü Sınıflandırıcısı oluşturma
+      url: tutorials/image-classification.md
+    - text: Web sitesi yorumu yaklaşımını çözümle
+      url: tutorials/sentiment-analysis.md
+    - text: ONNX kullanarak resimlerdeki nesneleri Algıla
+      url: tutorials/object-detection-onnx.md
+  - linkListType: how-to-guide
+    links:
+    - text: Çeşitli kaynaklardan veri yükleme
+      url: how-to-guides/load-data-ml-net.md
+    - text: Model oluşturmaya yönelik verileri hazırlama
+      url: how-to-guides/prepare-data-ml-net.md
+    - text: Bir modeli eğitme & değerlendirin
+      url: how-to-guides/train-machine-learning-model-ml-net.md
+    - text: Eğitilen bir modelle tahminlere sahip olun
+      url: how-to-guides/machine-learning-model-predictions-ml-net.md
+    - text: Eğitilen bir model & kaydetme ve yükleme
+      url: how-to-guides/save-load-machine-learning-models-ml-net.md
+- title: ML.NET CLı 'yi kullanma
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: ML.NET CLı ile model eğitimi otomatikleştirin
+      url: automate-training-with-cli.md
+  - linkListType: quickstart
+    links:
+    - text: ML.NET CLı 'yı yükler
+      url: how-to-guides/install-ml-net-cli.md
+  - linkListType: tutorial
+    links:
+    - text: Yaklaşım-ml.net CLI &, oto ml 'yi çözümle
+      url: tutorials/mlnet-cli.md
+- title: API başvurusu
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: ML.NET API başvurusu
+      url: https://docs.microsoft.com/dotnet/api/?view=ml-dotnet
+    - text: ML.NET API başvurusu (Önizleme)
+      url: https://docs.microsoft.com/dotnet/api/?view=ml-dotnet-preview
+    - text: ML.NET CLı başvurusu
+      url: reference/ml-net-cli-reference.md
+    - text: Oto ml API başvurusu
+      url: https://docs.microsoft.com/dotnet/api/?view=automl-dotnet

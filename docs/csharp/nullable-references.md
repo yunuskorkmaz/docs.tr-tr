@@ -2,12 +2,12 @@
 title: Boş değer atanabilir başvuru türleri
 description: Bu makalede, 8 ' C# e eklenen Nullable başvuru türlerine genel bir bakış sağlanır. Yeni ve mevcut projeler için özelliği, null başvuru özel durumlarına karşı nasıl güvenlik sağladığını öğreneceksiniz.
 ms.date: 02/19/2019
-ms.openlocfilehash: e66d74cdde3b3de9ec3f1b435cdbd3e3b24c2663
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 7ca3ebc413fbe335f79d415249b952132c38f552
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70851069"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71214405"
 ---
 # <a name="nullable-reference-types"></a>Boş değer atanabilir başvuru türleri
 
@@ -83,7 +83,7 @@ Ayrıca, aynı bağlamlarını projenizde her yerde ayarlamak için yönergeleri
 
 Varsayılan null atanabilir ek açıklaması ve uyarı bağlamları `disabled`şunlardır. Bu karar, mevcut kodunuzun değişiklik yapılmadan ve yeni bir uyarı oluşturmadan derlendiğini gösterir.
 
-### <a name="nullable-annotation-context"></a>Null yapılabilir ek açıklama bağlamı
+## <a name="nullable-annotation-context"></a>Null yapılabilir ek açıklama bağlamı
 
 Derleyici, devre dışı bırakılmış bir null yapılabilir ek açıklama bağlamında aşağıdaki kuralları kullanır:
 

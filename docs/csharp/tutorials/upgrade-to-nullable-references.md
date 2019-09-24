@@ -3,12 +3,12 @@ title: Null yapılabilir başvuru türleriyle tasarım
 description: Bu gelişmiş öğretici, null yapılabilir başvuru türlerine giriş sağlar. Başvuru değerleri null olduğunda ve derleyicinin null olmadıklarında zorunlu olmadığı durumlarda tasarım amacınızı ifade etmek için bilgi edineceksiniz.
 ms.date: 02/19/2019
 ms.custom: mvc
-ms.openlocfilehash: 0c95065e6c380fab6ba33432a32b3297e78027a3
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 616c9fdbe62d8147fb74fefc878f9277c2a1156b
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926622"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71214290"
 ---
 # <a name="tutorial-migrate-existing-code-with-nullable-reference-types"></a>Öğretici: Mevcut kodu Nullable başvuru türleriyle geçirin
 
@@ -25,7 +25,7 @@ Bu öğreticide, aşağıdakileri nasıl yapacağınızı öğreneceksiniz:
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-C# 8,0 Beta derleyicisi dahil olmak üzere, makinenizi .NET Core çalıştıracak şekilde ayarlamanız gerekir. C# 8 Beta derleyicisi, [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)veya en son [.NET Core 3,0 Önizleme](https://dotnet.microsoft.com/download/dotnet-core/3.0)sürümü ile kullanılabilir.
+Makinenizi, C# 8,0 derleyicisi dahil .NET Core çalıştıracak şekilde ayarlamanız gerekir. 8 C# derleyicisi, [Visual Studio 2019 sürüm 16,3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) veya [.NET Core 3,0 SDK](https://dotnet.microsoft.com/download)ile başlayarak kullanılabilir.
 
 Bu öğreticide, Visual Studio veya C# .NET Core CLI dahil olmak üzere, .net hakkında bilgi sahibi olduğunuz varsayılır.
 

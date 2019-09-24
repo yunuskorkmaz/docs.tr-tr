@@ -18,12 +18,12 @@ helpviewer_keywords:
 - format specifiers, standard numeric format strings
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c99e3bc59266846fcd5c5774b6050b4e075cbc3f
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: b2f997cf398e59f8e30ac87c1e0360e43a448e85
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70374505"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216715"
 ---
 # <a name="standard-numeric-format-strings"></a>Standart Sayısal Biçim Dizeleri
 
@@ -117,10 +117,10 @@ Sonuç dizesi geçerli <xref:System.Globalization.NumberFormatInfo> nesnenin bi�
 |<xref:System.Globalization.NumberFormatInfo.CurrencyGroupSeparator%2A>|Tam sayı gruplarını ayıran dizeyi tanımlar.|
 |<xref:System.Globalization.NumberFormatInfo.CurrencyGroupSizes%2A>|Bir grup içinde görüntülenen tamsayı basamak sayısını tanımlar.|
 
-Aşağıdaki örnek, para birimi <xref:System.Double> biçim belirticisiyle bir değeri biçimlendirir.
+Aşağıdaki örnek para birimi biçim <xref:System.Double> belirticisiyle bir değeri biçimlendirir:
 
 [!code-cpp[Formatting.Numeric.Standard#1](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#1)]
-[!code-csharp-interactive[Formatting.Numeric.Standard#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#1)]
+[!code-csharp[Formatting.Numeric.Standard#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#1)]
 [!code-vb[Formatting.Numeric.Standard#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/Standard.vb#1)]
 
 [Tabloya dön](#table)
@@ -165,10 +165,10 @@ Sonuç dizesi geçerli <xref:System.Globalization.NumberFormatInfo> nesnenin bi�
 |<xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A>|Tamsayı basamağını, katsayıdaki ondalık basamaklardan ayıran dizeyi tanımlar.|
 |<xref:System.Globalization.NumberFormatInfo.PositiveSign%2A>|Bir üssün pozitif olduğunu belirten dizeyi tanımlar.|
 
-Aşağıdaki örnek, bir <xref:System.Double> değeri üstel biçim belirleyicisi ile biçimlendirir.
+Aşağıdaki örnek, bir <xref:System.Double> değeri üstel biçim belirleyicisi ile biçimlendirir:
 
 [!code-cpp[Formatting.Numeric.Standard#3](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#3)]
-[!code-csharp-interactive[Formatting.Numeric.Standard#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#3)]
+[!code-csharp[Formatting.Numeric.Standard#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#3)]
 [!code-vb[Formatting.Numeric.Standard#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/Standard.vb#3)]
 
 [Tabloya dön](#table)
@@ -189,10 +189,10 @@ Sonuç dizesi geçerli <xref:System.Globalization.NumberFormatInfo> nesnenin bi�
 |<xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A>|Tamsayı basamaklarını ondalık basamaklardan ayıran dizeyi tanımlar.|
 |<xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A>|Varsayılan ondalık basamak sayısını tanımlar. B değeri hassasiyet belirleyici kullanılarak geçersiz kılınabilir.|
 
-Aşağıdaki örnek bir <xref:System.Double> <xref:System.Int32> ve değerini sabit noktalı Biçim belirleyicisi ile biçimlendirir.
+Aşağıdaki örnek bir <xref:System.Double> <xref:System.Int32> ve değerini sabit noktalı Biçim belirleyicisi ile biçimlendirir:
 
 [!code-cpp[Formatting.Numeric.Standard#4](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#4)]
-[!code-csharp-interactive[Formatting.Numeric.Standard#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#4)]
+[!code-csharp[Formatting.Numeric.Standard#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#4)]
 [!code-vb[Formatting.Numeric.Standard#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/Standard.vb#4)]
 
 [Tabloya dön](#table)
@@ -236,10 +236,10 @@ Sonuç dizesi geçerli <xref:System.Globalization.NumberFormatInfo> nesnenin bi�
 |<xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A>|Tamsayı basamaklarını ondalık basamaklardan ayıran dizeyi tanımlar.|
 |<xref:System.Globalization.NumberFormatInfo.PositiveSign%2A>|Bir üssün pozitif olduğunu belirten dizeyi tanımlar.|
 
-Aşağıdaki örnek, çeşitli kayan nokta değerlerini genel biçim belirteci ile biçimlendirir.
+Aşağıdaki örnek, kayan nokta değerlerini genel biçim belirticisi ile biçimlendirir:
 
 [!code-cpp[Formatting.Numeric.Standard#5](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#5)]
-[!code-csharp-interactive[Formatting.Numeric.Standard#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#5)]
+[!code-csharp[Formatting.Numeric.Standard#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#5)]
 [!code-vb[Formatting.Numeric.Standard#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/Standard.vb#5)]
 
 [Tabloya dön](#table)
@@ -261,10 +261,10 @@ Sonuç dizesi geçerli <xref:System.Globalization.NumberFormatInfo> nesnenin bi�
 |<xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A>|Tamsayı ve ondalık basamakları ayıran dizeyi tanımlar.|
 |<xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A>|Varsayılan ondalık basamak sayısını tanımlar. B değeri bir hassasiyet belirleyici kullanılarak geçersiz kılınabilir.|
 
-Aşağıdaki örnek, çeşitli kayan nokta değerlerini sayı biçim belirteci ile biçimlendirir.
+Aşağıdaki örnek, belirtilen kayan nokta değerlerini sayı Biçim belirleyicisi ile biçimlendirir:
 
 [!code-cpp[Formatting.Numeric.Standard#6](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#6)]
-[!code-csharp-interactive[Formatting.Numeric.Standard#6](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#6)]
+[!code-csharp[Formatting.Numeric.Standard#6](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#6)]
 [!code-vb[Formatting.Numeric.Standard#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/Standard.vb#6)]
 
 [Tabloya dön](#table)
@@ -288,10 +288,10 @@ Aşağıdaki tabloda döndürülen dizenin biçimlendirmesini <xref:System.Globa
 |<xref:System.Globalization.NumberFormatInfo.PercentGroupSeparator%2A>|Tam sayı gruplarını ayıran dizeyi tanımlar.|
 |<xref:System.Globalization.NumberFormatInfo.PercentGroupSizes%2A>|Bir grup içinde görüntülenen tamsayı basamak sayısını tanımlar.|
 
-Aşağıdaki örnek, kayan nokta değerlerini yüzdelik biçim belirteci ile biçimlendirir.
+Aşağıdaki örnek, kayan nokta değerlerini yüzde Biçim belirleyicisi ile biçimlendirir:
 
 [!code-cpp[Formatting.Numeric.Standard#7](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#7)]
-[!code-csharp-interactive[Formatting.Numeric.Standard#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#7)]
+[!code-csharp[Formatting.Numeric.Standard#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#7)]
 [!code-vb[Formatting.Numeric.Standard#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/Standard.vb#7)]
 
 [Tabloya dön](#table)
@@ -324,9 +324,9 @@ Aşağıdaki örnek, bir <xref:System.Numerics.BigInteger> değeri gidiş dönü
 > [!IMPORTANT]
 > Bazı durumlarda, <xref:System.Double> "R" standart sayısal biçim dizesiyle biçimlendirilen değerler, veya `/platform:anycpu` anahtarları kullanılarak derlenirse ve 64 bitlik sistemlerde çalıştırıldığında, `/platform:x64` başarılı bir şekilde gidiş dönüş değildir. Daha fazla bilgi için aşağıdaki paragrafa bakın.
 
-"R" standart sayısal biçim <xref:System.Double> dizesiyle biçimlendirilen değer sorununa geçici bir çözüm bulmak için, `/platform:x64` veya `/platform:anycpu` anahtarları kullanılarak derlenirse ve 64 bitlik sistemlerde çalıştırıldığında, başarıyla yuvarlanmaz. <xref:System.Double> "G17" standart sayısal biçim dizesi kullanılarak değerler. Aşağıdaki örnek, başarılı bir şekilde gidiş dönüş olmayan bir <xref:System.Double> değerle "R" biçim dizesini ve ayrıca özgün değeri başarıyla yuvarlamak için "G17" biçim dizesini kullanır.
+"R" standart sayısal biçim <xref:System.Double> dizesiyle biçimlendirilen değer sorununa geçici bir çözüm bulmak için, `/platform:x64` veya `/platform:anycpu` anahtarları kullanılarak derlenirse ve 64 bitlik sistemlerde çalıştırıldığında, başarıyla yuvarlanmaz. <xref:System.Double> "G17" standart sayısal biçim dizesi kullanılarak değerler. Aşağıdaki örnek, başarılı bir şekilde gidiş dönüş olmayan bir <xref:System.Double> değerle "R" biçim dizesini ve ayrıca özgün değeri başarıyla yuvarlamak için "G17" biçim dizesini kullanır:
 
-[!code-csharp-interactive[System.Double.ToString#5](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.Double.ToString/cs/roundtripex1.cs#RoundTrip)]
+[!code-csharp[System.Double.ToString#5](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.Double.ToString/cs/roundtripex1.cs#RoundTrip)]
 [!code-vb[System.Double.ToString#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Double.ToString/vb/roundtripex1.vb#5)]
 
 [Tabloya dön](#table)
@@ -380,7 +380,7 @@ Biçim dizesi ne olursa olsun, <xref:System.Single> bir veya <xref:System.Double
 
 Aşağıdaki örnek, bir tamsayı ve kayan nokta sayısal değerini ing-ABD kültürü ve tüm standart sayısal biçim tanımlayıcılarını kullanarak biçimlendirir. Bu örnek, iki özel sayısal türü (<xref:System.Double> ve <xref:System.Int32>) kullanır, ancak diğer sayısal temel <xref:System.Int32>türlerin <xref:System.Int64>(<xref:System.Byte>, <xref:System.SByte>, <xref:System.Int16> ,,,,,,,,,,,,,,,<xref:System.UInt16>, ,<xref:System.UInt64>,, ,ve<xref:System.Single>). <xref:System.Numerics.BigInteger> <xref:System.Decimal> <xref:System.UInt32>
 
-[!code-csharp-interactive[system.x.tostring-and-culture#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.X.ToString-and-Culture/cs/xts.cs#FinalExample)]
+[!code-csharp[system.x.tostring-and-culture#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.X.ToString-and-Culture/cs/xts.cs#FinalExample)]
 [!code-vb[system.x.tostring-and-culture#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.X.ToString-and-Culture/vb/xts.vb#1)]
 
 ## <a name="see-also"></a>Ayrıca bkz.

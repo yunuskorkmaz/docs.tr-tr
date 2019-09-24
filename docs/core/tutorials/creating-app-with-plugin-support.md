@@ -4,12 +4,12 @@ description: Eklentileri destekleyen bir .NET Core uygulaması oluşturmayı ö�
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/28/2019
-ms.openlocfilehash: 54a4459619ee69fc74a14da7ff7fe10a472a4433
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: e8b02d9b2175b4663e665db1a5a40a9bf3c44d10
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70849439"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216249"
 ---
 # <a name="create-a-net-core-application-with-plugins"></a>Eklentilerle .NET Core uygulaması oluşturma
 
@@ -22,15 +22,29 @@ Bu öğreticide nasıl yapılacağı gösterilmektedir:
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-- [.NET Core 3,0 Preview 2 SDK](https://dotnet.microsoft.com/download) veya daha yeni bir sürümünü yükler.
+- [.NET Core 3,0](https://dotnet.microsoft.com/download) veya daha yeni bir sürümünü yükler.
 
 ## <a name="create-the-application"></a>Uygulama oluşturma
 
 İlk adım, uygulamayı oluşturmaktır:
 
-1. Yeni bir klasör oluşturun ve bu klasörde ' i çalıştırın `dotnet new console -o AppWithPlugin`. 
-2. Projeyi daha kolay hale getirmek için bir Visual Studio çözüm dosyası oluşturun. Aynı `dotnet new sln` klasörde çalıştırın. 
-3. Uygulama `dotnet sln add AppWithPlugin/AppWithPlugin.csproj` projesini çözüme eklemek için ' i çalıştırın.
+1. Yeni bir klasör oluşturun ve bu klasörde aşağıdaki komutu çalıştırın:
+
+    ```dotnetcli
+    dotnet new console -o AppWithPlugin
+    ```
+
+2. Projeyi daha kolay hale getirmek için kullanarak bir Visual Studio çözüm dosyası oluşturun. Aynı klasörde aşağıdaki komutu çalıştırın:
+
+    ```dotnetcli
+    dotnet new sln
+    ```
+
+3. Uygulama projesini çözüme eklemek için aşağıdaki komutu çalıştırın:
+
+    ```dotnetcli
+    dotnet sln add AppWithPlugin/AppWithPlugin.csproj
+    ```
 
 Şimdi uygulamamızın iskektlerini dolduracağız. *Appwithplugin/program. cs* dosyasındaki kodu aşağıdaki kodla değiştirin:
 
@@ -203,8 +217,18 @@ Her eklenti için farklı `PluginLoadContext` bir örnek kullanarak, Eklentiler,
 
 Kök klasöre geri döndüğünüzde şunları yapın:
 
-1. `dotnet new classlib -o HelloPlugin` Adlı`HelloPlugin`yeni bir sınıf kitaplığı projesi oluşturmak için öğesini çalıştırın.
-2. `dotnet sln add HelloPlugin/HelloPlugin.csproj` Projeyi`AppWithPlugin` çözüme eklemek için ' i çalıştırın. 
+1. Adlı `HelloPlugin`yeni bir sınıf kitaplığı projesi oluşturmak için aşağıdaki komutu çalıştırın:
+    
+    ```dotnetcli
+    dotnet new classlib -o HelloPlugin
+    ```
+
+2. Projeyi `AppWithPlugin` çözüme eklemek için aşağıdaki komutu çalıştırın:
+
+    ```dotnetcli
+    dotnet sln add HelloPlugin/HelloPlugin.csproj
+    ```
+
 3. *Merhaba Plugin/Class1. cs* dosyasını aşağıdaki içeriklerle *HelloCommand.cs* adlı bir dosyayla değiştirin:
 
 [!code-csharp[the-hello-plugin](~/samples/core/extensions/AppWithPlugin/HelloPlugin/HelloCommand.cs)]

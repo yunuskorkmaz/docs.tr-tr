@@ -3,12 +3,12 @@ title: Null yapılabilir başvuru türleriyle tasarım
 description: Bu gelişmiş öğretici, null yapılabilir başvuru türlerine giriş sağlar. Başvuru değerleri null olduğunda ve derleyicinin null olmadıklarında zorunlu olmadığı durumlarda tasarım amacınızı ifade etmek için bilgi edineceksiniz.
 ms.date: 02/19/2019
 ms.custom: mvc
-ms.openlocfilehash: e046ca88eecfe97cfc8553a2c661be930cc73465
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: ea8059061dccc85060b4f6244ff0d7be9b7708b8
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926664"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71214420"
 ---
 # <a name="tutorial-express-your-design-intent-more-clearly-with-nullable-and-non-nullable-reference-types"></a>Öğretici: Null yapılabilir ve null yapılamayan başvuru türleriyle tasarım amacınızı daha net bir şekilde ifade edin
 
@@ -25,7 +25,7 @@ Bu öğreticide, aşağıdakileri nasıl yapacağınızı öğreneceksiniz:
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-C# 8,0 Beta derleyicisi dahil olmak üzere, makinenizi .NET Core çalıştıracak şekilde ayarlamanız gerekir. C# 8 Beta derleyicisi, [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)veya en son [.NET Core 3,0 Önizleme](https://dotnet.microsoft.com/download/dotnet-core/3.0)sürümü ile kullanılabilir.
+C# 8,0 Beta derleyicisi dahil olmak üzere, makinenizi .NET Core çalıştıracak şekilde ayarlamanız gerekir. C# 8 Beta derleyicisi, [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)veya [.NET Core 3,0](https://dotnet.microsoft.com/download/dotnet-core/3.0)ile kullanılabilir.
 
 Bu öğreticide, Visual Studio veya C# .NET Core CLI dahil olmak üzere, .net hakkında bilgi sahibi olduğunuz varsayılır.
 

@@ -2,12 +2,12 @@
 title: 'Döngüler: while...do İfadesi'
 description: Bkz. while... do ifadesi, belirtilen test koşulu true olduğunda yinelemeli yürütme (döngü) gerçekleştirmek için kullanılır.
 ms.date: 05/16/2016
-ms.openlocfilehash: f05bdd9f8f4b9446d59f68e1231fb75e18e9b526
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 73526279358db101f8d07721a200920f1e87f119
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630759"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216627"
 ---
 # <a name="loops-whiledo-expression"></a>Döngüler: while...do İfadesi
 
@@ -30,7 +30,7 @@ Aşağıdaki örnek, `while...do` ifadesinin kullanımını gösterir.
 
 Önceki kodun çıktısı, en fazla 10 olan 1 ile 20 arasında rastgele sayıların bir akışıdır.
 
-```
+```console
 13 19 8 18 16 2 10
 Found a 10!
 ```

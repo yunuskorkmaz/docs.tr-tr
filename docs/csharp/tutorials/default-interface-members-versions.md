@@ -3,12 +3,12 @@ title: İçindeki varsayılan arabirim üyelerini kullanarak arabirimleri güven
 description: Bu gelişmiş öğreticide, var olan arabirim tanımlarına, bu arabirimi uygulayan tüm sınıfları ve yapıları bozmadan nasıl güvenli bir şekilde yeni yetenekler ekleyebileceğiniz açıklanır.
 ms.date: 05/06/2019
 ms.custom: mvc
-ms.openlocfilehash: 6a723a116d420dd43d2adeef98b824445dd4f0d7
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 271c737e17cc2b93424108e7e1d434fd1c7198be
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926711"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216571"
 ---
 # <a name="tutorial-update-interfaces-with-default-interface-members-in-c-80"></a>Öğretici: 8,0 'de C# varsayılan arabirim üyeleriyle arabirimleri güncelleştirme
 
@@ -24,7 +24,7 @@ Bu öğreticide, aşağıdakileri nasıl yapacağınızı öğreneceksiniz:
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-C# 8,0 Preview derleyicisi dahil olmak üzere makinenizi .NET Core çalıştıracak şekilde ayarlamanız gerekir. C# 8,0 Preview derleyicisi, [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)veya en son [.NET Core 3,0 Preview SDK](https://dotnet.microsoft.com/download/dotnet-core/3.0)ile başlayarak kullanılabilir. Varsayılan arabirim üyeleri .NET Core 3,0 Preview 4 ' ten başlayarak kullanılabilir.
+Makinenizi, C# 8,0 derleyicisi dahil .NET Core çalıştıracak şekilde ayarlamanız gerekir. 8,0 C# derleyicisi, [Visual Studio 2019 sürüm 16,3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) veya [.NET Core 3,0 SDK](https://dotnet.microsoft.com/download)ile başlayarak kullanılabilir.
 
 ## <a name="scenario-overview"></a>Senaryoya genel bakış
 

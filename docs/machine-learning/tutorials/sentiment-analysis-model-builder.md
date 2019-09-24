@@ -6,12 +6,12 @@ author: luisquintanilla
 ms.author: luquinta
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: c6184e097daf4604173db9e2a34606e68eb0fdc8
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 375440d98fd728cc89c1ac620614067edbd3adf8
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71054323"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216884"
 ---
 # <a name="tutorial-analyze-sentiment-of-website-comments-in-a-web-application-using-mlnet-model-builder"></a>Öğretici: ML.NET model Oluşturucu kullanarak Web uygulamasındaki Web sitesindeki açıklamaları çözümleme
 
@@ -22,13 +22,14 @@ Bu öğreticide, Web sitesi açıklamalarından gerçek zamanlı olarak yaklaş�
 Bu öğreticide şunların nasıl yapıladığını öğreneceksiniz:
 
 > [!div class="checklist"]
-> * ASP.NET Core Razor Pages uygulaması oluşturma
-> * Verileri hazırlama ve anlama
-> * Senaryo seçin
-> * Verileri yükleme
-> * Modeli eğitme
-> * Modeli değerlendirme
-> * Tahmin için modeli kullanma
+>
+> - ASP.NET Core Razor Pages uygulaması oluşturma
+> - Verileri hazırlama ve anlama
+> - Senaryo seçin
+> - Verileri yükleme
+> - Modeli eğitme
+> - Modeli değerlendirme
+> - Tahmin için modeli kullanma
 
 > [!NOTE]
 > Model Oluşturucu Şu anda önizleme aşamasındadır.
@@ -43,17 +44,17 @@ Bu öğreticinin kaynak kodunu [DotNet/machinöğrenim-örnekleri](https://githu
 
 1. ASP.NET Core bir **Razor Pages uygulaması**oluşturun.
 
-    1. Visual Studio 'Yu açın ve menü çubuğundan **dosya > yeni > projesi** öğesini seçin. 
-    1. Yeni proje iletişim kutusunda, **Visual C#**  düğümünü ve ardından **Web** düğümünü seçin. 
-    1. **ASP.NET Core Web uygulaması** proje şablonunu seçin. 
+    1. Visual Studio 'Yu açın ve menü çubuğundan **dosya > yeni > projesi** öğesini seçin.
+    1. Yeni proje iletişim kutusunda, **Visual C#**  düğümünü ve ardından **Web** düğümünü seçin.
+    1. **ASP.NET Core Web uygulaması** proje şablonunu seçin.
     1. **Ad** metin kutusuna "SentimentRazor" yazın.
-    1. **Çözüm için dizin oluşturma** onay kutusu varsayılan olarak denetlenmelidir. Böyle bir durum söz konusu değilse, kontrol edin. 
+    1. **Çözüm için dizin oluşturma** onay kutusu varsayılan olarak denetlenmelidir. Böyle bir durum söz konusu değilse, kontrol edin.
     1. **Tamam** düğmesini seçin.
     1. Pencerede farklı ASP.NET Core proje türlerini görüntüleyen **Web uygulaması** ' nı seçin ve ardından **Tamam** düğmesini seçin.
 
 ## <a name="prepare-and-understand-the-data"></a>Verileri hazırlama ve anlama
 
-[Vikipedi Detox veri kümesini](https://raw.githubusercontent.com/dotnet/machinelearning/master/test/data/wikipedia-detox-250-line-data.tsv)indirin. Web sayfası açıldığında, sayfaya sağ tıklayın, **farklı kaydet** ' i seçin ve dosyayı bilgisayarınızda herhangi bir yere kaydedin. 
+[Vikipedi Detox veri kümesini](https://raw.githubusercontent.com/dotnet/machinelearning/master/test/data/wikipedia-detox-250-line-data.tsv)indirin. Web sayfası açıldığında, sayfaya sağ tıklayın, **farklı kaydet** ' i seçin ve dosyayı bilgisayarınızda herhangi bir yere kaydedin.
 
 *Vivtox-250-Line-Data. tsv* veri kümesindeki her satır, visede bir kullanıcı tarafından bırakılan farklı bir gözden geçirmeyi temsil eder. İlk sütun metnin (0-Toxic, 1 ' in Toxic) yaklaşımını temsil eder ve ikinci sütun Kullanıcı tarafından bırakılan yorumu temsil eder. Sütunlar sekmelerle ayrılır. Veriler aşağıdaki gibi görünür:
 
@@ -67,7 +68,7 @@ Bu öğreticinin kaynak kodunu [DotNet/machinöğrenim-örnekleri](https://githu
 
 ![](./media/sentiment-analysis-model-builder/model-builder-screen.png)
 
-Modelinize eğitebilmeniz için, model Oluşturucu tarafından sağlanan kullanılabilir makine öğrenimi senaryoları listesinden seçim yapmanız gerekir. 
+Modelinize eğitebilmeniz için, model Oluşturucu tarafından sağlanan kullanılabilir makine öğrenimi senaryoları listesinden seçim yapmanız gerekir.
 
 1. **Çözüm Gezgini**, *SentimentRazor* projesine sağ tıklayın ve**Machine Learning** **Ekle** > ' yi seçin.
 1. Bu örnek için senaryo, yaklaşım analiziydi. Model Oluşturucu aracının *senaryo* adımında **yaklaşım Analizi** senaryosunu seçin.
@@ -85,7 +86,7 @@ Model Oluşturucu iki kaynaktan (bir SQL Server veritabanı ya da yerel bir dosy
 
 Bu öğreticide fiyat tahmin modelini eğitmek için kullanılan makine öğrenimi görevi ikili sınıflandırmasıdır. Model oluşturma işlemi sırasında model Oluşturucu, veri kümeniz için en iyi işlem modelini bulmak üzere farklı ikili sınıflandırma algoritmalarını ve ayarlarını kullanarak modelleri ayrı ayrı işler.
 
-Modelin eğitilmesi için gereken süre, veri miktarına müşterinizin istekleriyle orantılı. Model Oluşturucu, veri kaynağınızın boyutuna bağlı olarak, **tren süresi (saniye)** için varsayılan bir değer seçer. 
+Modelin eğitilmesi için gereken süre, veri miktarına müşterinizin istekleriyle orantılı. Model Oluşturucu, veri kaynağınızın boyutuna bağlı olarak, **tren süresi (saniye)** için varsayılan bir değer seçer.
 
 1. Model Oluşturucu değeri, " **saniye)** ila 10 saniye arasında bir süre olarak ayarlasa da, 30 saniyeye yükseltin. Daha uzun bir süre için eğitim, model oluşturucunun en iyi modeli aramada daha fazla sayıda algoritmaların ve parametrelerin birleşimini keşfetmesine olanak tanır.
 1. **Eğitimi Başlat**' ı seçin.
@@ -122,8 +123,8 @@ Eğitim sürecinin bir sonucu olarak iki proje oluşturulacaktır.
 
 1. Razor Pages uygulamanızın içinde eğitilen modeli kullanmak için, *SentimentRazorML. model* projesine bir başvuru ekleyin.
 
-    1. **SentimentRazor** projesi öğesine sağ tıklayın. 
-    1. **> başvuru Ekle**' yi seçin. 
+    1. **SentimentRazor** projesi öğesine sağ tıklayın.
+    1. **> başvuru Ekle**' yi seçin.
     1. **Projeler > çözüm** düğümünü seçin ve listeden **SentimentRazorML. model** projesini kontrol edin.
     1. **Tamam**’ı seçin.
 
@@ -132,21 +133,21 @@ Eğitim sürecinin bir sonucu olarak iki proje oluşturulacaktır.
 Tek bir tahmin yapmak için kullanın [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602). Uygulamanızda kullanabilmeniz [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) için, gerektiğinde oluşturmanız gerekir. Bu durumda, dikkate alınması gereken en iyi yöntem bağımlılık ekleme yöntemidir.
 
 > [!WARNING]
-> [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602), iş parçacığı açısından güvenli değildir. Gelişmiş performans ve iş parçacığı güvenliği için, uygulama `PredictionEnginePool` kullanımı için `PredictionEngine` bir [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) nesne oluşturan hizmetini kullanın. [ASP.NET Core içinde nesne havuzları `PredictionEngine` oluşturma ve kullanma](https://devblogs.microsoft.com/cesardelatorre/how-to-optimize-and-run-ml-net-models-on-scalable-asp-net-core-webapis-or-web-apps/)hakkında daha fazla bilgi edinmek için aşağıdaki blog gönderisini okuyun. 
+> [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602), iş parçacığı açısından güvenli değildir. Gelişmiş performans ve iş parçacığı güvenliği için, uygulama `PredictionEnginePool` kullanımı için `PredictionEngine` bir [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) nesne oluşturan hizmetini kullanın. [ASP.NET Core içinde nesne havuzları `PredictionEngine` oluşturma ve kullanma](https://devblogs.microsoft.com/cesardelatorre/how-to-optimize-and-run-ml-net-models-on-scalable-asp-net-core-webapis-or-web-apps/)hakkında daha fazla bilgi edinmek için aşağıdaki blog gönderisini okuyun.
 
 1. *Microsoft.Extensions.ml* NuGet paketini yükler:
 
-    1. **Çözüm Gezgini**, projeye sağ tıklayın ve **NuGet Paketlerini Yönet**' i seçin. 
-    1. Paket kaynağı olarak "nuget.org" öğesini seçin. 
-    1. **Araştır** sekmesini seçin ve **Microsoft.Extensions.ml**için arama yapın. 
-    1. Listeden paketi seçin ve ardından **Install** düğmesini seçin. 
+    1. **Çözüm Gezgini**, projeye sağ tıklayın ve **NuGet Paketlerini Yönet**' i seçin.
+    1. Paket kaynağı olarak "nuget.org" öğesini seçin.
+    1. **Araştır** sekmesini seçin ve **Microsoft.Extensions.ml**için arama yapın.
+    1. Listeden paketi seçin ve ardından **Install** düğmesini seçin.
     1. **Değişiklikleri Önizle** Iletişim kutusunda **Tamam** düğmesini seçin
-    1. Listelenen paketlerin lisans koşullarını kabul ediyorsanız, **Lisans kabulü** Iletişim kutusunda **kabul ediyorum** düğmesini seçin. 
+    1. Listelenen paketlerin lisans koşullarını kabul ediyorsanız, **Lisans kabulü** Iletişim kutusunda **kabul ediyorum** düğmesini seçin.
 
 1. *SentimentRazor* projesindeki *Startup.cs* dosyasını açın.
 1. *Microsoft.Extensions.ml* NuGet paketini ve *SentimentRazorML. model* projesine başvurmak için aşağıdaki using deyimlerini ekleyin:
 
-    [!code-csharp [StartupUsings](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Startup.cs#L12-L14)]        
+    [!code-csharp [StartupUsings](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Startup.cs#L12-L14)]
 
 1. Eğitilen model dosyasının konumunu depolamak için genel bir değişken oluşturun.
 
@@ -172,7 +173,7 @@ Tahmine dayalı, uygulamanın ana sayfasında yapılır. Bu nedenle, Kullanıcı
 
     [!code-csharp [IndexUsings](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Pages/Index.cshtml.cs#L7-L8)]
 
-    `PredictionEnginePool` Sınıfında yapılandırılan`Startup` ' ı kullanmak için, onu kullanmak istediğiniz modelin oluşturucusuna eklemek gerekir. 
+    `PredictionEnginePool` Sınıfında yapılandırılan`Startup` ' ı kullanmak için, onu kullanmak istediğiniz modelin oluşturucusuna eklemek gerekir.
 
 1. `PredictionEnginePool` Sınıfının içine başvurmak için bir değişken ekleyin. `IndexModel`
 
@@ -195,15 +196,15 @@ Tahmine dayalı, uygulamanın ana sayfasında yapılır. Bu nedenle, Kullanıcı
 
     1. Yöntemi içinde, kullanıcının girişi boş veya null olduğunda nötr yaklaşım döndürün. `OnGetAnalyzeSentiment`
 
-        [!code-csharp [InitInput](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Pages/Index.cshtml.cs#L28)] 
-    
-    1. Geçerli bir giriş verildiğinde yeni bir örneğini `ModelInput`oluşturun. 
+        [!code-csharp [InitInput](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Pages/Index.cshtml.cs#L28)]
 
-        [!code-csharp [InitInput](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Pages/Index.cshtml.cs#L29)] 
+    1. Geçerli bir giriş verildiğinde yeni bir örneğini `ModelInput`oluşturun.
+
+        [!code-csharp [InitInput](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Pages/Index.cshtml.cs#L29)]
 
     1. Yaklaşımı tahmin `PredictionEnginePool` etmek için kullanın.
 
-        [!code-csharp [MakePrediction](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Pages/Index.cshtml.cs#L30)] 
+        [!code-csharp [MakePrediction](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Pages/Index.cshtml.cs#L30)]
 
     1. Tahmin `bool` edilen değeri, aşağıdaki kodla birlikte Toxic öğesine dönüştürün.
 
@@ -217,7 +218,7 @@ Tahmine dayalı, uygulamanın ana sayfasında yapılır. Bu nedenle, Kullanıcı
 
 Tarafından döndürülen sonuçlar, `OnGetAnalyzeSentiment` `Index` Web sayfasında dinamik olarak görüntülenir.
 
-1. *Pages* dizinindeki *Index. cshtml* dosyasını açın ve içeriğini şu kodla değiştirin: 
+1. *Pages* dizinindeki *Index. cshtml* dosyasını açın ve içeriğini şu kodla değiştirin:
 
     [!code-cshtml [IndexPage](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Pages/Index.cshtml)]
 
@@ -257,13 +258,14 @@ Model Oluşturucu tarafından oluşturulan projelere daha sonra başka bir çöz
 
 Bu öğreticide, şunların nasıl yapıldığını öğrendiniz:
 > [!div class="checklist"]
-> * ASP.NET Core Razor Pages uygulaması oluşturma
-> * Verileri hazırlama ve anlama
-> * Senaryo seçin
-> * Verileri yükleme
-> * Modeli eğitme
-> * Modeli değerlendirme
-> * Tahmin için modeli kullanma
+>
+> - ASP.NET Core Razor Pages uygulaması oluşturma
+> - Verileri hazırlama ve anlama
+> - Senaryo seçin
+> - Verileri yükleme
+> - Modeli eğitme
+> - Modeli değerlendirme
+> - Tahmin için modeli kullanma
 
 ### <a name="additional-resources"></a>Ek Kaynaklar
 

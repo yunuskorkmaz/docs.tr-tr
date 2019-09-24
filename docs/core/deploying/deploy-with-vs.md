@@ -8,12 +8,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: 0a886c77204697268adf4ee7bc4b62184b056112
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 4e8fbfa14c241c79f8708dfc2b288eeff2899891
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70969962"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216243"
 ---
 # <a name="deploy-net-core-apps-with-visual-studio"></a>Visual Studio ile .NET Core uygulamaları dağıtma
 
@@ -26,7 +26,7 @@ Aşağıdaki bölümlerde, aşağıdaki dağıtım türlerini oluşturmak için 
 - Kendi içinde dağıtım
 - Üçüncü taraf bağımlılıklarla kendi kendine kapsanan dağıtım
 
-.NET Core uygulamaları geliştirmek için Visual Studio 'Yu kullanma hakkında bilgi için bkz. [Windows üzerinde .NET Core önkoşulları](../windows-prerequisites.md#prerequisites-with-visual-studio-2017).
+.NET Core uygulamaları geliştirmek için Visual Studio 'Yu kullanma hakkında bilgi için bkz. [Windows üzerinde .NET Core önkoşulları](../windows-prerequisites.md#prerequisites-to-develop-net-core-apps-with-visual-studio).
 
 ## <a name="framework-dependent-deployment"></a>Framework bağımlı dağıtım
 

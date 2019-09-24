@@ -2,12 +2,12 @@
 title: 'Öğretici: Tür Sağlayıcısı Oluşturma'
 description: Temel kavramları göstermek üzere çeşitli basit F# tür sağlayıcılarını inceleyerek F# 3,0 'de kendi tür sağlayıcılarınızı oluşturmayı öğrenin.
 ms.date: 02/02/2019
-ms.openlocfilehash: 800b5a670b7f25f462e1ce23c3d40fd2eab3b102
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 8d1a1fedf03437ccbacd40616cc7dc3e1da435b2
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991875"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71214276"
 ---
 # <a name="tutorial-create-a-type-provider"></a>Öğretici: Tür Sağlayıcısı Oluşturma
 
@@ -152,13 +152,13 @@ Sağlayıcıyı yeniden yapılandırmadan önce, sağlayıcı DLL 'yi kullanan t
 
 Print deyimlerini kullanarak bu sağlayıcıda hata ayıklamak için, sağlayıcıda bir sorun ortaya çıkaran bir betik oluşturun ve ardından aşağıdaki kodu kullanın:
 
-```
+```console
 fsc.exe -r:bin\Debug\HelloWorldTypeProvider.dll script.fsx
 ```
 
 Visual Studio 'yu kullanarak bu sağlayıcıda hata ayıklamak için, Visual Studio Geliştirici Komut İstemi yönetici kimlik bilgileriyle açın ve şu komutu çalıştırın:
 
-```
+```console
 devenv.exe /debugexe fsc.exe -r:bin\Debug\HelloWorldTypeProvider.dll script.fsx
 ```
 
@@ -899,7 +899,7 @@ let function1 () =
 
 Ildadsm. exe kullanılarak derlenen ortaya çıkan kodun bir görüntüsü aşağıda verilmiştir:
 
-```
+```il
 .class public abstract auto ansi sealed Module1
 extends [mscorlib]System.Object
 {
@@ -933,13 +933,11 @@ Tür sağlayıcıları yazarken aşağıdaki kuralları gözlemleyin.
 
 **Bağlantı protokolleri Için sağlayıcılar** Genel olarak, veri ve hizmet bağlantı protokollerinin (OData veya SQL bağlantıları gibi) çoğu için sağlayıcı dll 'lerinin adları `TypeProvider` veya `TypeProviders`ile bitmelidir. Örneğin, aşağıdaki dizeye benzer bir DLL adı kullanın:
 
-```
-  Fabrikam.Management.BasicTypeProviders.dll
-```
+`Fabrikam.Management.BasicTypeProviders.dll`
 
 Belirttiğiniz türlerin karşılık gelen ad alanının üyesi olduğundan emin olun ve uygulanan bağlantı protokolünü belirtin:
 
-```
+```fsharp
   Fabrikam.Management.BasicTypeProviders.WmiConnection<…>
   Fabrikam.Management.BasicTypeProviders.DataProtocolConnection<…>
 ```
@@ -1128,8 +1126,8 @@ Aşağıdaki araçları kullanarak tür sağlayıcılarını çağırabilirsiniz
 
 Bir test betik dosyasında (örneğin, Script. FSX) FSC. exe ' yi kullanarak genellikle tür sağlayıcılarının hatalarını kolayca ayıklayabilirsiniz. Bir komut isteminden bir hata ayıklayıcı başlatabilirsiniz.
 
-```
-  devenv /debugexe fsc.exe script.fsx
+```console
+devenv /debugexe fsc.exe script.fsx
 ```
 
   Print-stdout günlük kaydını kullanabilirsiniz.

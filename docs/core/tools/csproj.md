@@ -2,12 +2,12 @@
 title: .NET Core için csproj biçimine eklemeler
 description: Mevcut ve .NET Core csproj dosyaları arasındaki farklılıklar hakkında bilgi edinin
 ms.date: 04/08/2019
-ms.openlocfilehash: 13239b5235138cc6994841bbb81f8f12e661e337
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 89ab22f0c5e69f29ff31e13d46dce8ba278d08da
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70969840"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216207"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>.NET Core için csproj biçimine eklemeler
 
@@ -125,13 +125,13 @@ Projede birden çok hedef çerçeve varsa, komutun sonuçları MSBuild özelliğ
 
 ### <a name="sdk-attribute"></a>SDK özniteliği
 
-`<Project>` *. Csproj* dosyasının kök öğesi adlı `Sdk`yeni bir özniteliğe sahiptir. `Sdk`Proje tarafından hangi SDK 'nın kullanılacağını belirtir. [Katman, katmanlama belgesinde](cli-msbuild-architecture.md) açıklandığı gibi, .NET Core kodu oluşturabileceğiniz MSBuild [görevleri](/visualstudio/msbuild/msbuild-tasks) ve [hedefleri](/visualstudio/msbuild/msbuild-targets) kümesidir. .NET Core araçları ile üç ana SDK ve .NET Core 3,0 Preview kullanırken ek iki SDK sunuyoruz:
+`<Project>` *. Csproj* dosyasının kök öğesi adlı `Sdk`yeni bir özniteliğe sahiptir. `Sdk`Proje tarafından hangi SDK 'nın kullanılacağını belirtir. [Katman, katmanlama belgesinde](cli-msbuild-architecture.md) açıklandığı gibi, .NET Core kodu oluşturabileceğiniz MSBuild [görevleri](/visualstudio/msbuild/msbuild-tasks) ve [hedefleri](/visualstudio/msbuild/msbuild-targets) kümesidir. .NET Core için aşağıdaki SDK 'lar mevcuttur:
 
 1. KIMLIĞINE sahip .NET Core SDK`Microsoft.NET.Sdk`
 2. KIMLIĞINE sahip .NET Core Web SDK 'Sı`Microsoft.NET.Sdk.Web`
 3. KIMLIKLI .NET Core Razor sınıf kitaplığı SDK 'Sı`Microsoft.NET.Sdk.Razor`
-4. Kimliği `Microsoft.NET.Sdk.Worker` (.NET Core 3,0 Preview) ile birlikte .NET Core Worker hizmeti
-5. Kimliği `Microsoft.NET.Sdk.WindowsDesktop` (.NET Core 3,0 Preview) ile birlikte .NET Core WinForms ve WPF
+4. Kimliği `Microsoft.NET.Sdk.Worker` (.NET Core 3,0 ' den beri) olan .NET Core Worker hizmeti
+5. Kimliği `Microsoft.NET.Sdk.WindowsDesktop` (.NET Core 3,0 ' den beri) olan .NET Core WinForms ve WPF
 
 .NET Core araçları 'nı kullanabilmeniz `Sdk` ve kodunuzu derlemek için `<Project>` öğesi için bu kimliklerden birine ayarlanmış özniteliğin olması gerekir.
 
@@ -264,7 +264,7 @@ Paket için telif hakkı ayrıntıları.
 
 ### <a name="packagelicenseexpression"></a>PackageLicenseExpression
 
-Bir [Spdx lisans tanımlayıcısı](https://spdx.org/licenses/) veya ifadesi. Örneğin: `Apache-2.0`.
+Bir [Spdx lisans tanımlayıcısı](https://spdx.org/licenses/) veya ifadesi. Örneğin, uygulamasında yönetilen Hyper-V konakları olarak eklemek için aşağıdaki yordamı kullanabilirsiniz.
 
 [Spdx lisans tanımlayıcılarının](https://spdx.org/licenses/)listesi aşağıda verilmiştir. NuGet.org, lisans türü ifadesi kullanılırken yalnızca OSı veya FSF onaylı lisansları kabul eder.
 

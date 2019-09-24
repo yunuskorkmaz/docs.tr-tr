@@ -2,12 +2,12 @@
 title: Desen Eşleştirme
 description: Verileri mantıksal yapılara göre karşılaştırmak, F# verileri yapısal parçalar halinde çıkarmak veya verilerden bilgi ayıklamak için desenlerin ' de nasıl kullanıldığını öğrenin.
 ms.date: 05/16/2016
-ms.openlocfilehash: 60e0d6cd550724bc8448fddd7b163c2c9f1637be
-ms.sourcegitcommit: 8c6426a3d2adff5fbcbe1fed0f28eda718c15351
+ms.openlocfilehash: 0e14fa00103742bbf5f054f8c04a7669ed767e63
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68733472"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216804"
 ---
 # <a name="pattern-matching"></a>Desen Eşleştirme
 
@@ -95,7 +95,7 @@ Adlandırılmış alanın kullanımı isteğe bağlıdır, bu nedenle önceki ö
 
 Birden çok alan belirttiğinizde, noktalı virgül kullanın (;) ayırıcı olarak.
 
-```
+```fsharp
 match shape with
 | Rectangle(height = h; width = w) -> printfn "Rectangle with height %f and width %f" h w
 | _ -> ()

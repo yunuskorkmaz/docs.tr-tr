@@ -2,12 +2,12 @@
 title: İşleç Aşırı Yüklemesi
 description: Bir sınıf veya kayıt türündeki ve içindeki F#genel düzeyde aritmetik işleçleri aşırı yüklemeyi öğrenin.
 ms.date: 05/16/2016
-ms.openlocfilehash: c656c1c47938e62386c8f063cf9a6caaaf69d0fe
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: d902a06193481ed87131b3336cd8a2ff54b811b4
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627393"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216840"
 ---
 # <a name="operator-overloading"></a>İşleç Aşırı Yüklemesi
 
@@ -135,7 +135,7 @@ Aşağıdaki kod, bir kesir türü uygulamak için işleç aşırı yüklemesi k
 
 **Çıkış:**
 
-```
+```console
 3/4 + 1/2 = 5/4
 3/4 - 1/2 = 1/4
 3/4 * 1/2 = 3/8

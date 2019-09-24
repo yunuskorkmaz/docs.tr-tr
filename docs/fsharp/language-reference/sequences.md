@@ -2,12 +2,12 @@
 title: Diziler
 description: Büyük, sıralı bir F# veri koleksiyonunuz olduğunda ancak tüm öğeleri kullanmak zorunda olmadığınız durumlarda dizileri nasıl kullanacağınızı öğrenin.
 ms.date: 02/19/2019
-ms.openlocfilehash: a57142c5d07455cff02b0b691ebccb9cb9f347fd
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 63e878c2c11db25a08d449070ab779a6e6a2c2eb
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627169"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216764"
 ---
 # <a name="sequences"></a>Diziler
 
@@ -82,7 +82,7 @@ Sağladığınız bir işlev kullanılarak öğelerin oluşturulduğu bir sıra 
 
 Çıktı
 
-```
+```console
 0 10 20 30 40
 ```
 
@@ -104,7 +104,7 @@ Sağladığınız bir işlev kullanılarak öğelerin oluşturulduğu bir sıra 
 
 Çıktı aşağıdaki şekilde olacaktır:
 
-```
+```console
 The sequence seq1 contains numbers from 0 to 20.
 
 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20
@@ -134,7 +134,7 @@ Aşağıdaki kod, ve `Seq.truncate` `Seq.take`arasındaki farklılıkları göst
 
 Çıkış, hata gerçekleşmeden önce aşağıdaki gibidir.
 
-```
+```console
 1 4 9 16 25 
 1 4 9 16 25 36 49 64 81 100 
 1 4 9 16 25 
@@ -149,7 +149,7 @@ Aşağıdaki kod örneği, `Seq.takeWhile` `Seq.skip`ve arasındaki farklılıkl
 
 Çıktı aşağıdaki gibidir:
 
-```
+```console
 1 4 9 
 36 49 64 81 100 
 16 25 36 49 64 81 100
@@ -171,7 +171,7 @@ Aşağıdaki kod örneği öğesinin `Seq.windowed`kullanımını gösterir. Bu 
 
 İlk sıra:
 
-```
+```console
 1.0 1.5 2.0 1.5 1.0 1.5 
 
 Windows of length 3: 
@@ -203,7 +203,7 @@ Aşağıdaki kod öğesinin `Seq.compareWith`kullanımını gösterir.
 
 Çıktı aşağıdaki gibidir:
 
-```
+```console
 (1, 34) (2, 33) (0, 33)
 ```
 
@@ -217,7 +217,7 @@ Aşağıdaki kod örneği, 1 ile 100 arasındaki `Seq.groupBy` sayıların sıra
 
 Çıktı aşağıdaki gibidir:
 
-```
+```console
 (1, seq [1; 4; 7; 10; ...]) (2, seq [2; 5; 8; 11; ...]) (0, seq [3; 6; 9; 12; ...])
 ```
 

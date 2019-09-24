@@ -1,17 +1,17 @@
 ---
 title: C# 8,0 C# kılavuzundaki yenilikler
-description: 8,0 ' de C# bulunan yeni özelliklere genel bakış alın. Bu makale, Preview 5 ile güncel değildir.
+description: 8,0 ' de C# bulunan yeni özelliklere genel bakış alın.
 ms.date: 09/20/2019
-ms.openlocfilehash: a434d1f7598bc3f6787f7466e48fb161db192761
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 95331c8dd8e8b5e0d5af242752565d8e93120937
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71182402"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216484"
 ---
 # <a name="whats-new-in-c-80"></a>C# 8,0 sürümündeki yenilikler
 
-C# Dilde daha önce deneyebileceğiniz birçok geliştirme vardır.
+C#8,0 aşağıdaki özellikleri ve geliştirmeleri C# dile ekler:
 
 - [Salt okunur Üyeler](#readonly-members)
 - [Varsayılan arabirim üyeleri](#default-interface-members)
@@ -30,9 +30,6 @@ C# Dilde daha önce deneyebileceğiniz birçok geliştirme vardır.
 - [Yönetilmeyen oluşturulmuş türler](#unmanaged-constructed-types)
 - [iç içe ifadelerde stackalloc](#stackalloc-in-nested-expressions)
 - [Ara değerli tam dizelerin geliştirilmesi](#enhancement-of-interpolated-verbatim-strings)
-
-> [!NOTE]
-> Bu makale 8,0 Preview 5 için C# son güncelleştirilme aşamasındadır.
 
 Bu makalenin geri kalanında bu özellikler kısaca açıklanmaktadır. Ayrıntılı makalelerin nerede kullanılabildiği, bu öğreticiler ve genel bakışların bağlantıları sağlanmıştır. `dotnet try` Genel aracı kullanarak ortamınızdaki bu özellikleri keşfedebilirsiniz:
 

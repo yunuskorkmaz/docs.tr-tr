@@ -5,14 +5,14 @@ author: Thraka
 ms.author: adegeo
 ms.date: 03/01/2019
 ms.custom: ''
-ms.openlocfilehash: b2a660d2fc42f0dfe932afce167058f7c1efc92b
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 7480c86af1acd482adff5e3e24dc229f24af0e5b
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71116521"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216325"
 ---
-# <a name="how-to-port-a-windows-forms-desktop-app-to-net-core"></a>Nasıl yapılır: .NET Core 'a Windows Forms masaüstü uygulaması bağlantı noktası
+# <a name="how-to-port-a-windows-forms-desktop-app-to-net-core"></a>Nasıl Yapılır: .NET Core 'a Windows Forms masaüstü uygulaması bağlantı noktası
 
 Bu makalede Windows Forms tabanlı masaüstü uygulamanızın .NET Framework .NET Core 3,0 ' ye nasıl bağlantı kurulacağı açıklanmaktadır. .NET Core 3,0 SDK Windows Forms uygulamaları için destek içerir. Windows Forms hala yalnızca Windows Framework ' ü ve Windows üzerinde çalışır. Bu örnek, projenizi oluşturmak ve yönetmek için .NET Core SDK CLı kullanır.
 
@@ -50,7 +50,7 @@ Bir .NET Framework Windows Forms uygulamasının taşıma sırasında göz önü
 
 01. Farklı bir Windows Forms sürümü kullanıyorsunuz.
 
-    .NET Core 3,0 Preview 1 yayınlandığında, Windows Forms GitHub üzerinde açık kaynak olarak gitti. .NET Core Windows Forms kodu, .NET Framework Windows Forms kod tabanının bir çatalından oluşur. Bazı farklılıklar olabilir ve uygulamanızın bağlantı noktası olmayacaktır.
+    .NET Core 3,0 Preview 1 yayınlandığında, Windows Forms GitHub 'da açık kaynak olarak gitti. .NET Core Windows Forms kodu, .NET Framework Windows Forms kod temelinin çatalından oluşur. Bazı farklılıklar olabilir ve uygulamanızın bağlantı noktası olmayacaktır.
 
 01. [Windows Uyumluluk Paketi][compat-pack] , geçiş yapmanıza yardımcı olabilir.
 

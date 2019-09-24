@@ -6,40 +6,25 @@ dev_langs:
 - vb
 author: thraka
 ms.author: adegeo
-ms.date: 09/17/2019
-ms.openlocfilehash: 45d5117f264a24c2658debad9a111d4d4b9b9a8e
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.date: 09/22/2019
+ms.openlocfilehash: ddb758b942099657708e79b590c7817c309396d7
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71182447"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216268"
 ---
-# <a name="whats-new-in-net-core-30-release-candidate-1"></a>.NET Core 3,0 'deki yenilikler (Release Candidate 1)
+# <a name="whats-new-in-net-core-30"></a>​.NET Core 3.0’daki yenilikler
 
-Bu makalede sürüm adayı 1 (RC1) ile .NET Core 3,0 ' deki yenilikler açıklanır. En büyük geliştirmelerden biri, Windows Masaüstü uygulamaları için destek içerir (yalnızca Windows). .NET Core 3,0 SDK bileşeni Windows Masaüstü 'Nü kullanarak Windows Forms ve Windows Presentation Foundation (WPF) uygulamalarınızın bağlantı noktası oluşturabilirsiniz. Temiz olması için, Windows Masaüstü bileşeni yalnızca Windows 'da desteklenir ve Windows 'a dahildir. Daha fazla bilgi için bu makalenin devamındaki [Windows Masaüstü](#windows-desktop) bölümüne bakın.
+Bu makalede .NET Core 3,0 ' deki yenilikler açıklanır. En büyük geliştirmelerden biri, Windows Masaüstü uygulamaları için destek içerir (yalnızca Windows). .NET Core 3,0 SDK bileşeni Windows Masaüstü 'Nü kullanarak Windows Forms ve Windows Presentation Foundation (WPF) uygulamalarınızın bağlantı noktası oluşturabilirsiniz. Temiz olması için, Windows Masaüstü bileşeni yalnızca Windows 'da desteklenir ve Windows 'a dahildir. Daha fazla bilgi için bu makalenin devamındaki [Windows Masaüstü](#windows-desktop) bölümüne bakın.
 
-.NET Core 3,0, 8,0 için C# destek ekler. [Visual Studio 2019 16,3 Preview 4](https://visualstudio.microsoft.com/vs/preview/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+preview), [Mac için Visual Studio 8,3](/visualstudio/mac/install-preview)veya  **C# uzantıya**sahip [Visual Studio Code](https://code.visualstudio.com/) kullanmanız kesinlikle önerilir.
+.NET Core 3,0, 8,0 için C# destek ekler. [Visual Studio 2019 16,3](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019), [Mac için Visual Studio 8,3](/visualstudio/mac/install-preview)veya  **C# uzantıya**sahip [Visual Studio Code](https://code.visualstudio.com/) kullanmanız kesinlikle önerilir.
 
-Şimdi Windows, macOS veya Linux 'ta [.NET Core 3,0 RC1 'Yi indirin ve kullanmaya](https://aka.ms/netcore3download) başlayın.
+Şimdi Windows, macOS veya Linux 'ta [.NET Core 3,0 'Yi indirin ve](https://aka.ms/netcore3download) kullanmaya başlayın.
 
-Her önizleme sürümü hakkında daha fazla bilgi için aşağıdaki duyurulara bakın:
+Yayın hakkında daha fazla bilgi için bkz. [.NET Core 3,0 duyurusu](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0/).
 
-- [.NET Core 3,0 RC1 duyurusu](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-release-candidate-1/)
-- [.NET Core 3,0 Preview 9 duyurusu](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-9/)
-- [.NET Core 3,0 Preview 8 duyurusu](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-8/)
-- [.NET Core 3,0 Preview 7 duyurusu](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-7/)
-- [.NET Core 3,0 Preview 6 duyurusu](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-6/)
-- [.NET Core 3,0 Preview 5 duyurusu](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-5/)
-- [.NET Core 3,0 Preview 4 duyurusu](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-preview-4/)
-- [.NET Core 3,0 Preview 3 duyurusu](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-preview-3/)
-- [.NET Core 3,0 Preview 2 duyurusu](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-preview-2/)
-- [.NET Core 3,0 Preview 1 ilanı](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-preview-1-and-open-sourcing-windows-desktop-frameworks/)
-
-## <a name="production-supported-preview"></a>Üretim için desteklenen Önizleme
-
-.NET Core RC1, Microsoft tarafından hazırlanarak üretim olarak kabul edilir ve tam olarak desteklenmektedir. Sürüm 7 ' den itibaren, yayınlar yeni özellikler eklemek yerine polishing .NET Core 3,0 ' ye odaklanacaktır. RC1 'de nelerin değiştiği hakkında daha fazla bilgi için bkz. [RC1 duyurusu](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-release-candidate-1/).
-
-Önceki bir önizleme sürümünü kullanıyorsanız, devam eden "canlı çalış" desteği için RC1 'e geçmeniz gerekir.
+.NET Core RC1, Microsoft tarafından önceden hazırlanmıştı ve tam olarak desteklenmektedir. Önizleme sürümü kullanıyorsanız, devam eden destek için RTM sürümüne geçmeniz gerekir.
 
 ## <a name="net-core-sdk-windows-installer"></a>.NET Core SDK Windows Installer
 
@@ -47,9 +32,9 @@ Windows için MSI Yükleyicisi, .NET Core 3,0 ile başlayarak değiştirilmişti
 
 Sürüm oluşturma hakkında daha fazla bilgi için bkz. [.NET Core 'un sürümü oluşturma konusuna genel bakış](../versions/index.md).
 
-## <a name="c-80-preview"></a>C#8,0 Önizleme
+## <a name="c-80"></a>C#8,0
 
-.NET Core 3,0, C# 8 önizlemeyi destekler. 8,0 özellikleri hakkında C# daha fazla bilgi için bkz. [ C# 8,0](../../csharp/whats-new/csharp-8.md)sürümündeki yenilikler.
+C#8,0 Ayrıca, null yapılabilir başvuru türleri özelliği, zaman uyumsuz akışlar ve daha fazla desen içeren bu sürümün bir parçasıdır. 8,0 özellikleri hakkında C# daha fazla bilgi için bkz. [ C# 8,0](../../csharp/whats-new/csharp-8.md)sürümündeki yenilikler.
 
 ## <a name="net-standard-21"></a>.NET Standard 2,1
 
@@ -515,7 +500,7 @@ Linux 'ta seri bağlantı noktası için sınırlı destek hakkında daha fazla 
 
 ## <a name="docker-and-cgroup-memory-limits"></a>Docker ve cgroup bellek sınırları
 
-Preview 3 ' ü kullanmaya başlamadan, Docker ile Linux üzerinde .NET Core 3,0 çalıştırmak, cgroup bellek limitleriyle daha iyi çalışır. İle `docker run -m`gibi bellek limitleriyle bir Docker kapsayıcısı çalıştırmak, .NET Core 'un davranış şeklini değiştirir.
+Docker ile Linux üzerinde .NET Core 3,0 çalıştırmak, cgroup bellek limitleriyle daha iyi çalışır. İle `docker run -m`gibi bellek limitleriyle bir Docker kapsayıcısı çalıştırmak, .NET Core 'un davranış şeklini değiştirir.
 
 - Varsayılan atık toplayıcı (GC) yığın boyutu: kapsayıcıda bellek sınırının en fazla 20 MB veya% 75 ' si.
 - Açık Boyut, mutlak bir sayı veya cgroup sınırının yüzdesi olarak ayarlanabilir.

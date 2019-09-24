@@ -2,12 +2,12 @@
 title: Başvuru Hücreleri
 description: Başvuru semantiğine sahip kesilebilir değerler oluşturmanıza olanak sağlayan depolama konumları olan başvuru hücrelerinin nasıl F# olduğunu öğrenin.
 ms.date: 05/16/2016
-ms.openlocfilehash: faaa4a6b54ff0366163b6821edff7fa4cb2f5a88
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 2bca7797b272c0e7d5bf54df07041dc08e33709a
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627241"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216773"
 ---
 # <a name="reference-cells"></a>Başvuru Hücreleri
 
@@ -66,7 +66,7 @@ Temeldeki değere erişmek için çeşitli yollar vardır. Başvuru işleci (`!`
 
 Çıktı aşağıdaki gibidir:
 
-```
+```console
 10
 10
 11

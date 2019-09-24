@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: e9d76d5907e7d700fc57117ccb43f8c430c615b0
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: d48ced9d0201a33f9149aba155ddd3d8bc04c93f
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71181712"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71217047"
 ---
 ### <a name="serializableattribute-removed-from-some-windows-forms-types"></a>SerializableAttribute bazı Windows Forms türlerinden kaldırıldı
 
@@ -28,7 +28,7 @@ Aşağıdaki türler .NET Framework <xref:System.SerializableAttribute> içindek
 
 Tarihsel olarak, bu serileştirme mekanizması ciddi bakım ve güvenlik sorunlarına sahipti. Türlerin `SerializableAttribute` sürdürülmesi, bu türlerin sürümden sürüme serileştirme değişiklikleri ve potansiyel olarak çerçeve serileştirme değişiklikleri için test olması gerektiği anlamına gelir. Bu, bu türleri daha da gelişmesini zorlaştırır ve bakım açısından maliyetli olabilir. Bu türlerin bilinen bir ikili serileştirme senaryosu yoktur, bu da özniteliği kaldırmanın etkilerini en aza indirir.
 
-Daha fazla bilgi için bkz. <https://docs.microsoft.com/en-us/dotnet/standard/serialization/binary-serialization>.
+Daha fazla bilgi için bkz. [ikili serileştirme](~/docs/standard/serialization/binary-serialization.md).
 
 #### <a name="version-introduced"></a>Sunulan sürüm
 
@@ -46,7 +46,7 @@ Windows Forms
 
 - Yok.
 
-<!-- 
+<!--
 
 ### Affected APIs
 

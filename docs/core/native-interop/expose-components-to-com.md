@@ -1,5 +1,5 @@
 ---
-title: .NET Core Bileşenlerini COM’da Gösterme
+title: .NET Core bileşenlerini COM 'a gösterme
 ms.date: 07/12/2019
 helpviewer_keywords:
 - exposing .NET Core components to COM
@@ -8,14 +8,14 @@ helpviewer_keywords:
 ms.assetid: 21271167-fe7f-46ba-a81f-a6812ea649d4
 author: jkoritzinsky
 ms.author: jekoritz
-ms.openlocfilehash: 686d1b31478121a8b2c907d99672a5fcc3438a71
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 8f9624414a2b423bd43e8790d11b70ae1ca6286d
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70849036"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216232"
 ---
-# <a name="exposing-net-core-components-to-com"></a>.NET Core Bileşenlerini COM’da Gösterme
+# <a name="exposing-net-core-components-to-com"></a>.NET Core bileşenlerini COM 'a gösterme
 
 .NET Core 'da, .NET nesnelerinizi COM 'a sunma süreci, .NET Framework karşılaştırmaya kıyasla önemli ölçüde basitleştirilmiştir. Aşağıdaki süreç, bir sınıfı COM 'a nasıl kullanıma sunabileceğiniz konusunda size yol gösterecektir. Bu öğreticide nasıl yapılacağı gösterilmektedir:
 
@@ -25,20 +25,28 @@ ms.locfileid: "70849036"
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-- [.NET Core 3,0 Preview 7 SDK 'sını](https://dotnet.microsoft.com/download) veya daha yeni bir sürümünü yükler.
+- [.NET Core 3,0 SDK](https://dotnet.microsoft.com/download) veya daha yeni bir sürümü yükler.
 
 ## <a name="create-the-library"></a>Kitaplığı oluşturma
 
 İlk adım, kitaplığı oluşturmaktır.
 
-1. Yeni bir klasör oluşturun ve bu klasörde ' i çalıştırın `dotnet new classlib`.
+1. Yeni bir klasör oluşturun ve bu klasörde aşağıdaki komutu çalıştırın:
+    
+    ```dotnetcli
+    dotnet new classlib
+    ```
+
 2. Açık `Class1.cs`.
 3. Dosyanın `using System.Runtime.InteropServices;` en üstüne ekleyin.
-4. Adlı `IServer`bir arabirim oluşturun. Örneğin:[!code-csharp[The IServer interface](~/samples/core/extensions/COMServerDemo/COMContract/IServer.cs)]
-5. `[Guid("<IID>")]` Öğesini, uygulamayı uyguladığınız com arabirimi için arabirim GUID 'i ile birlikte arabirimine ekleyin. Örneğin: `[Guid("fe103d6e-e71b-414c-80bf-982f18f6c1c7")]`. Bu GUID 'nin COM için bu arabirimin tek tanımlayıcısı olduğundan, bu GUID 'in benzersiz olması gerektiğini unutmayın. Visual Studio 'da, GUID oluştur ' a giderek bir GUID oluşturabilirsiniz > Guid Oluştur aracını açın.
+4. Adlı `IServer`bir arabirim oluşturun. Örneğin:
+
+   [!code-csharp[The IServer interface](~/samples/core/extensions/COMServerDemo/COMContract/IServer.cs)]
+
+5. `[Guid("<IID>")]` Öğesini, uygulamayı uyguladığınız com arabirimi için arabirim GUID 'i ile birlikte arabirimine ekleyin. Örneğin, uygulamasında yönetilen Hyper-V konakları olarak eklemek için aşağıdaki yordamı kullanabilirsiniz. Bu GUID 'nin COM için bu arabirimin tek tanımlayıcısı olduğundan, bu GUID 'in benzersiz olması gerektiğini unutmayın. Visual Studio 'da, GUID oluştur ' a giderek bir GUID oluşturabilirsiniz > Guid Oluştur aracını açın.
 6. `[InterfaceType]` Arabirimine özniteliği ekleyin ve arabiriminizdeki hangi temel com arabirimlerini uygulanacağını belirtin.
 7. `Server` Uygulayan`IServer`adlı bir sınıf oluşturun.
-8. `[Guid("<CLSID>")]` Öğesini, uyguladığınız com sınıfı için sınıf tanımlayıcısı GUID 'i ile sınıfına ekleyin. Örneğin: `[Guid("9f35b6f5-2c05-4e7f-93aa-ee087f6e7ab6")]`. Arabirim GUID 'SI ile olduğu gibi bu GUID, bu arabirimin COM için tek tanımlayıcısı olduğundan benzersiz olmalıdır.
+8. `[Guid("<CLSID>")]` Öğesini, uyguladığınız com sınıfı için sınıf tanımlayıcısı GUID 'i ile sınıfına ekleyin. Örneğin, uygulamasında yönetilen Hyper-V konakları olarak eklemek için aşağıdaki yordamı kullanabilirsiniz. Arabirim GUID 'SI ile olduğu gibi bu GUID, bu arabirimin COM için tek tanımlayıcısı olduğundan benzersiz olmalıdır.
 9. `[ComVisible(true)]` Özniteliğini hem arabirimine hem de sınıfına ekleyin.
 
 > [!IMPORTANT]

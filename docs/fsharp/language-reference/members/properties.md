@@ -2,12 +2,12 @@
 title: Özellikler
 description: Bir nesneyle F# ilişkili değerleri temsil eden Üyeler olan özellikler hakkında bilgi edinin.
 ms.date: 05/16/2016
-ms.openlocfilehash: c202927fd0022e042703640cd55fb632c7e36068
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: c71d61e033501c2d535b5582c82d36ed8cb2241b
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627417"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216424"
 ---
 # <a name="properties"></a>Özellikler
 
@@ -93,7 +93,7 @@ printfn "class1.ExplicitProperty = %d" class1.ExplicitProperty
 
 **Output**
 
-```
+```console
 class1.AutoProperty = 1853799794
 class1.AutoProperty = 1853799794
 class1.ExplicitProperty = 978922705
