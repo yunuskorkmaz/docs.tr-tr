@@ -1,16 +1,16 @@
 ---
-title: Hizmet ağı iletişim altyapısı
+title: Service Mesh iletişim altyapısı
 description: Hizmet ağı teknolojilerinin bulut Yerel mikro hizmet iletişimini nasıl kolaylaştırması hakkında bilgi edinin
 author: robvet
 ms.date: 09/10/2019
-ms.openlocfilehash: dc9237197732ea622aad726583140623b0a5a4f4
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 884b3bf9afd80144a36d3328af916f1c1f12bf4f
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71184787"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71214341"
 ---
-# <a name="service-mesh-communication-infrastructure"></a>Hizmet ağı iletişim altyapısı
+# <a name="service-mesh-communication-infrastructure"></a>Service Mesh iletişim altyapısı
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
@@ -74,4 +74,4 @@ Daha sonra bulut Yerel sistemlerdeki dağıtılmış verilere ve sunmakta olduğ
 
 >[!div class="step-by-step"]
 >[Önceki](rest-grpc.md)
->[İleri](distributed-data.md) <!-- Next Chapter -->
+>[İleri](distributed-data.md)

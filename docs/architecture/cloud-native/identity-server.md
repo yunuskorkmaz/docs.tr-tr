@@ -2,12 +2,12 @@
 title: Cloud Native uygulamalar için IdentityServer
 description: Azure için Cloud Native .NET uygulamaları tasarlama | IdentityServer
 ms.date: 06/30/2019
-ms.openlocfilehash: 69084ad19a353b2152b67957ee944f6ce36ce370
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 6217f6093d8dc9df6ab058ebdbf99197752aee0c
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71183079"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71214024"
 ---
 # <a name="identityserver-for-cloud-native-applications"></a>Bulutta yerel uygulamalar için IdentityServer
 
@@ -47,7 +47,7 @@ Identityserver4 açık kaynak ve ücretsiz olarak kullanılabilir. Bunu, NuGet p
 
 ## <a name="configuration"></a>Yapılandırma
 
-IdentityServer, her bir özel yüklemenin parçası olarak yapılandırılabilen farklı protokol türlerini ve sosyal kimlik doğrulama sağlayıcılarını destekler. Bu, genellikle `Startup` `ConfigureServices` yönteminde ASP.NET Core uygulamanın sınıfında yapılır. Yapılandırma desteklenen protokollerin ve kullanılacak sunucuların ve uç noktaların yollarını belirtmeyi içerir. Şekil 8-X ıdentityserver4 hızlı başlangıç Kullanıcı arabirimi projesinden alınan bir örnek yapılandırmayı gösterir:
+IdentityServer, her bir özel yüklemenin parçası olarak yapılandırılabilen farklı protokol türlerini ve sosyal kimlik doğrulama sağlayıcılarını destekler. Bu, genellikle `Startup` `ConfigureServices` yönteminde ASP.NET Core uygulamanın sınıfında yapılır. Yapılandırma desteklenen protokollerin ve kullanılacak sunucuların ve uç noktaların yollarını belirtmeyi içerir. Şekil 8-2, ıdentityserver4 hızlı başlangıç Kullanıcı arabirimi projesinden alınan bir örnek yapılandırmayı gösterir:
 
 ```csharp
 public class Startup
@@ -90,7 +90,7 @@ public class Startup
 }
 ```
 
-**Şekil 8-X**. IdentityServer yapılandırılıyor.
+**Şekil 8-2**. IdentityServer yapılandırılıyor.
 
 IdentityServer, çeşitli protokolleri ve konfigürasyonları test etmek için kullanılabilecek bir genel tanıtım sitesi de barındırır. Bu, üzerinde bulunur [https://demo.identityserver.io/](https://demo.identityserver.io/) ve davranışını buna göre `client_id` yapılandırma hakkında bilgi içerir.
 
@@ -106,4 +106,4 @@ Birçok bulutta yerel uygulama, Ön uçtaki sunucu tarafı API 'Leri ve zengin i
 
 >[!div class="step-by-step"]
 >[Önceki](azure-active-directory.md)
->[İleri](security.md) <!-- Next Chapter -->
+>[İleri](security.md)

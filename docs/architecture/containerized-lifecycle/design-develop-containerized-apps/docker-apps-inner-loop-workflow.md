@@ -2,12 +2,12 @@
 title: Docker uygulamaları için iç döngü geliştirme iş akışı
 description: Docker uygulamalarının geliştirilmesi için "Inner loop" iş akışını öğrenin.
 ms.date: 02/15/2019
-ms.openlocfilehash: ce573546f61b98c2f93e998203497fa949e9efe8
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 04e1b29e6a0cef89df05cc9124806c74a38b5249
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70295847"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71214357"
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>Docker uygulamaları için iç döngü geliştirme iş akışı
 
@@ -47,8 +47,7 @@ Uygulamanızı geliştirme yönteminiz, Docker olmadan yaptığınız yönteme b
 
 Mac ve Windows için Docker 'ın en son sürümlerinde, Docker uygulamalarının geliştirilmesi her zamankinden daha kolay olur ve Kurulum basittir.
 
-> [! BILGI
->
+> [!TIP]
 > Docker for Windows ayarlama hakkında yönergeler için bölümüne gidin <https://docs.docker.com/docker-for-windows/>.
 >
 >Mac için Docker 'ı ayarlamaya ilişkin yönergeler için adresine gidin <https://docs.docker.com/docker-for-mac/>.
@@ -57,8 +56,7 @@ Ayrıca, Docker CLı kullanırken uygulamanızı geliştirebilmeniz için bir ko
 
 Microsoft, Mac, Windows ve Linux 'ta desteklenen basit bir kod Düzenleyicisi olan Visual Studio Code sağlar ve IntelliSense 'i [birçok dil](https://code.visualstudio.com/docs/languages/overview) (JavaScript, .net, Go, Java, Ruby, Python ve en modern diller) [için destek sağlar. hata ayıklama](https://code.visualstudio.com/Docs/editor/debugging), git ve uzantılar [ile tümleştirme](https://code.visualstudio.com/Docs/editor/versioncontrol) [desteği](https://code.visualstudio.com/docs/extensions/overview). Bu düzenleyici Mac ve Linux geliştiricileri için harika bir uyum. Windows 'da, tam Visual Studio uygulamasını da kullanabilirsiniz.
 
-> [! BILGI
->
+> [!TIP]
 > Windows, Mac veya Linux için Visual Studio Code yükleme yönergeleri için adresine gidin <https://code.visualstudio.com/docs/setup/setup-overview/>.
 >
 > Mac için Docker 'ı ayarlamaya ilişkin yönergeler için adresine gidin <https://docs.docker.com/docker-for-mac/>.
@@ -94,7 +92,6 @@ Dağıtılması için bir `DockerFile` özel görüntü ve dağıtılacak kapsay
 `DockerFile` Genellikle uygulamanızın veya hizmetinizin kök klasörüne yerleştirilir ve Docker 'ın o uygulamayı veya hizmeti nasıl ayarlayacağını ve çalıştıracağını bilmesi için gerekli komutları içerir. Kodunuzu oluşturup `DockerFile` projenize (node. js, .NET Core vb.) birlikte ekleyebilirsiniz, ya da ortama yeni başladıysanız aşağıdaki ipucuna göz atın.
 
 > [!TIP]
->
 > Docker kapsayıcılarınız `Dockerfile` ile ilgili ve `docker-compose.yml` dosyalarını kullanırken size rehberlik etmek için Docker uzantısını kullanabilirsiniz. Sonuç olarak, bu tür dosyaları bu araç olmadan yazarsınız, ancak Docker uzantısının kullanılması, öğrenme eğinizi hızlandırmaya yönelik iyi bir başlangıç noktasıdır.
 
 Şekil 4-24 ' de, bir Docker-Compose dosyasının VS Code için Docker uzantısını kullanarak nasıl eklendiğini görebilirsiniz.
@@ -133,8 +130,7 @@ DockerFile 'da, Docker 'ı çalışma zamanında kullanacağınız (bağlantı n
 
 Kullanmakta olduğunuz dile ve çerçeveye bağlı olarak Dockerfile içinde ek yapılandırma ayarları belirtebilirsiniz. Örneğin, `ENTRYPOINT` `["dotnet", "MySingleContainerWebApp.dll"]` çizgi, Docker 'a .NET Core uygulaması çalıştırmasını söyler. .NET uygulamasını derlemek ve çalıştırmak için SDK ve .NET Core CLI (`dotnet CLI`) kullanıyorsanız, bu ayar farklı olur. Buradaki anahtar noktası, GIRIŞ noktası satırı ve diğer ayarların, uygulamanız için seçtiğiniz dile ve platforma bağlı olmasına bağlıdır.
 
-> [! BILGI
->
+> [!TIP]
 > .NET Core uygulamaları için Docker görüntüleri oluşturma hakkında daha fazla bilgi için adresine gidin <https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images>.
 >
 > Kendi görüntülerinizi oluşturma hakkında daha fazla bilgi edinmek için adresine gidin <https://docs.docker.com/engine/tutorials/dockerimages/>.
@@ -154,7 +150,6 @@ Docker 'daki bu [makalede](https://docs.docker.com/engine/userguide/eng-image/ba
 Uygulamanızı içeren her bir özel hizmet için ilgili bir görüntü oluşturmanız gerekir. Uygulamanız tek bir hizmetten veya Web uygulamasından yapılırsa yalnızca tek bir görüntüye ihtiyacınız vardır.
 
 > [!NOTE]
->
 > "Dış döngü DevOps iş akışını" hesaba katdığınızda,, kaynak kodunuzu bir git deposuna (sürekli tümleştirme) gönderdiğinizde görüntüler otomatik bir yapı işlemi tarafından oluşturulur ve bu sayede, görüntüler bu genel ortamda şu şekilde oluşturulur. kaynak kodu.
 >
 > Ancak, bu dış döngü rotasına gitmeden önce, Docker uygulamasının doğru şekilde çalıştığından emin olunması gerekir, böylece kaynak denetim sistemine (git, vb.) düzgün çalışmayan bir kod göndermezsiniz.
@@ -275,5 +270,5 @@ Ayrıca, sonraki bölümde açıklandığı gibi Windows veya Mac için Visual S
 > Node. js Docker kapsayıcılarının hatalarını ayıklama hakkında daha fazla bilgi edinmek <https://blog.docker.com/2016/07/live-debugging-docker/> için <https://blogs.msdn.microsoft.com/user_ed/2016/02/27/visual-studio-code-new-features-13-big-debugging-updates-rich-object-hover-conditional-breakpoints-node-js-mono-more/>ve ' a gidin.
 
 >[!div class="step-by-step"]
->[Önceki](docker-apps-development-environment.md)İleri
->[](visual-studio-tools-for-docker.md)
+>[Önceki](docker-apps-development-environment.md)
+>[İleri](visual-studio-tools-for-docker.md)

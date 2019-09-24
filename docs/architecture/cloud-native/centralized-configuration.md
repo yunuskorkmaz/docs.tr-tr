@@ -2,12 +2,12 @@
 title: Merkezi yapılandırma
 description: Azure Key Vault kullanan merkezi yapılandırma, bulutta yerel uygulamaların yönetilmesini kolaylaştırabilir.
 ms.date: 06/30/2019
-ms.openlocfilehash: f4f495591550abccf2c64ef24cbe7620b039d8ca
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 4c516b6773d913acd71ff06742302e9766a141e2
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71183520"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71214001"
 ---
 # <a name="centralized-configuration"></a>Merkezi yapılandırma
 
@@ -27,4 +27,4 @@ Merkezi yapılandırma sayesinde, Merkezi günlük uç noktası gibi tüm uygula
 
 >[!div class="step-by-step"]
 >[Önceki](deploy-eshoponcontainers-azure.md)
->[İleri](scale-applications.md) <!-- Next Chapter -->
+>[İleri](scale-applications.md)

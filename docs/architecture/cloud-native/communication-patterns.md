@@ -3,12 +3,12 @@ title: Bulutta yerel iletişim desenleri
 description: Bulutta yerel uygulamalarda önemli hizmet iletişim sorunları hakkında bilgi edinin
 author: robvet
 ms.date: 08/31/2019
-ms.openlocfilehash: 0123d2e3da1bf8df29efcf2595a38c377dd1d1a1
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 3bda9baa516b7bd8f893e0f58bbe5e2bfde2b61d
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71183380"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71214006"
 ---
 # <a name="cloud-native-communication-patterns"></a>Bulutta yerel iletişim desenleri
 
@@ -20,7 +20,7 @@ Bir bulutta yerel sistem oluştururken, iletişim önemli bir tasarım kararı h
 
 Tek parçalı bir uygulamada, iletişim basittir. Kod modülleri bir sunucuda aynı yürütülebilir alanda (işlem) birlikte yürütülür. Bu yaklaşım, her şey paylaşılan bellekte birlikte çalıştığı için performans avantajlarına sahip olabilir, ancak bakım, geliştirilmesi ve ölçeklendirilmesi zor olan sıkı şekilde bağlanmış bir koda neden olur.
 
-Bulutta yerel sistemler, çok küçük ve bağımsız mikro hizmetlerden oluşan mikro hizmet tabanlı bir mimari uygular. Her mikro hizmet ayrı bir işlemde yürütülür ve genellikle bir *kümeye*dağıtılan bir kapsayıcı içinde çalışır. 
+Bulutta yerel sistemler, çok küçük ve bağımsız mikro hizmetlerden oluşan mikro hizmet tabanlı bir mimari uygular. Her mikro hizmet ayrı bir işlemde yürütülür ve genellikle bir *kümeye*dağıtılan bir kapsayıcı içinde çalışır.
 
 Bir küme, yüksek oranda kullanılabilir bir ortam oluşturmak için bir sanal makine havuzunu birlikte gruplandırır. Kapsayıcılı mikro hizmetleri dağıtmaktan ve yönetmekten sorumlu olan bir Orchestration aracıyla yönetilirler. Şekil 4-1, tam olarak yönetilen [Azure Kubernetes hizmetleriyle](https://docs.microsoft.com/azure/aks/intro-kubernetes)Azure bulutuna dağıtılan bir [Kubernetes](https://kubernetes.io) kümesini gösterir.
 
@@ -46,8 +46,7 @@ Birçok avantaj sağlarken, mikro hizmetler ücretsiz öğle yemeği değildir. 
 
 Book [.net mikro hizmetleri: Microsoft 'tan ücretsiz olarak kullanılabilen Kapsayıcılı .NET uygulamaları](https://docs.microsoft.com/dotnet/standard/microservices-architecture/)için mimari, mikro hizmet uygulamalarına yönelik iletişim desenlerinin ayrıntılı bir kapsamını sağlar. Bu bölümde, Azure bulutu 'nda bulunan uygulama seçenekleriyle birlikte bu desenlere yönelik yüksek düzeyde bir genel bakış sunuyoruz.
 
-Bu bölümde, önce ön uç uygulamaları ve arka uç mikro hizmetleri arasındaki iletişimi ele alacağız. Ardından arka uç mikro hizmetlerinin birbirleriyle iletişim kurmasına bakacağız. Yukarı ve gRPC iletişim teknolojisini keşfereceğiz. Son olarak, hizmet kafesi teknolojisini kullanarak yeni yenilikçi iletişim desenleri inceleyeceğiz. Ayrıca, Azure bulutunun bulut Yerel iletişimini desteklemek için farklı türlerde *yedekleme hizmetleri* sağladığını de göreceğiz.  
-
+Bu bölümde, önce ön uç uygulamaları ve arka uç mikro hizmetleri arasındaki iletişimi ele alacağız. Ardından arka uç mikro hizmetlerinin birbirleriyle iletişim kurmasına bakacağız. Yukarı ve gRPC iletişim teknolojisini keşfereceğiz. Son olarak, hizmet kafesi teknolojisini kullanarak yeni yenilikçi iletişim desenleri inceleyeceğiz. Ayrıca, Azure bulutunun bulut Yerel iletişimini desteklemek için farklı türlerde *yedekleme hizmetleri* sağladığını de göreceğiz.
 
 >[!div class="step-by-step"]
 >[Önceki](other-deployment-options.md)

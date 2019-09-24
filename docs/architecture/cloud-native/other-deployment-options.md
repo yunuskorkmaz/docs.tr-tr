@@ -2,12 +2,12 @@
 title: Diğer kapsayıcı dağıtım seçenekleri
 description: Azure kullanarak diğer kapsayıcı dağıtım seçenekleri
 ms.date: 06/30/2019
-ms.openlocfilehash: 892514417cb8650c28b7491315f767758278ad6e
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 1fcb57eedec8c9f5574fffcf409b316332032062
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71184885"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71214449"
 ---
 # <a name="other-container-deployment-options"></a>Diğer kapsayıcı dağıtım seçenekleri
 
@@ -48,4 +48,4 @@ Azure Container Instances, Azure 'da kapsayıcı çalıştırmanın en hızlı v
 
 >[!div class="step-by-step"]
 >[Önceki](scale-containers-serverless.md)
->[İleri](communication-patterns.md) <!-- Next Chapter -->
+>[İleri](communication-patterns.md)

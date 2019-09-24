@@ -2,12 +2,12 @@
 title: Azure platformu dayanıklılığı
 description: Azure için Cloud Native .NET uygulamaları tasarlama | Azure ile bulut altyapısı dayanıklılığı
 ms.date: 06/30/2019
-ms.openlocfilehash: 5d8ddc65ccdf4bb305be62e5caca30eab49f87e2
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 7f148588be97fa6bf8a055f5f5bed8e23908277f
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71182981"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71214202"
 ---
 # <a name="azure-platform-resiliency"></a>Azure platformu dayanıklılığı
 
@@ -68,7 +68,7 @@ Bulut ölçeklendiriliyor. Sistem yükünü artırmak/azaltmak için sistem kayn
 
 - *Platform otomatik ölçeklendirme özelliklerinin avantajlarından yararlanın.* Özel veya üçüncü taraf mekanizmalarının yerine, mümkün olduğunda yerleşik otomatik ölçeklendirme özellikleri kullanın. Mümkün olduğunda, kaynakların bir başlangıç gecikmesi olmadan kullanılabilir olduğundan emin olmak için zamanlanmış ölçekleme kurallarını kullanın, ancak kurallara uygun şekilde, isteğe bağlı olarak, talep halinde beklenmedik değişikliklerle ve bu kurallara otomatik ölçeklendirme ekleyin. Daha fazla bilgi için bkz. [Otomatik ölçeklendirme Kılavuzu](https://docs.microsoft.com/azure/architecture/best-practices/auto-scaling).
 
- - *Ölçeği artırma kararlılığı.* Son bir uygulama, iş kaybı olmadan trafikte anında ani artışları hızlı bir şekilde karşılayabilmeniz için kararlılığı en iyi şekilde ölçeklendirmektir. Daha sonra, sistem kararlı kalmasını sağlamak için ölçeği azaltın (yani gereksiz kaynakları kaldırın). Bunu yapmanın basit bir yolu, ölçeklendirme işlemleri arasında bekleme süresi, kaynak eklemek için beş dakika, örnekleri kaldırmak için en fazla 15 dakika olan seyrek erişimli süreyi ayarlamanıza yöneliktir.
+- *Ölçeği artırma kararlılığı.* Son bir uygulama, iş kaybı olmadan trafikte anında ani artışları hızlı bir şekilde karşılayabilmeniz için kararlılığı en iyi şekilde ölçeklendirmektir. Daha sonra, sistem kararlı kalmasını sağlamak için ölçeği azaltın (yani gereksiz kaynakları kaldırın). Bunu yapmanın basit bir yolu, ölçeklendirme işlemleri arasında bekleme süresi, kaynak eklemek için beş dakika, örnekleri kaldırmak için en fazla 15 dakika olan seyrek erişimli süreyi ayarlamanıza yöneliktir.
 
 ## <a name="built-in-retry-in-services"></a>Hizmetlerde yerleşik yeniden deneme
 

@@ -3,12 +3,12 @@ title: REST ve gRPC
 description: Bkz. The The The The The The The The the Cloud-Native Applications ve HTTP REST 'den farklı
 author: robvet
 ms.date: 09/08/2019
-ms.openlocfilehash: 020b29fc13c72d7e42e5b555fe81e2836c907d6e
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: d888069168aee1fcfb13354f4b6f9ae2c8d1f233
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71184822"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71214540"
 ---
 # <a name="rest-and-grpc"></a>REST ve gRPC
 
@@ -30,7 +30,7 @@ gRPC, hafif ve yüksek performanslı bir modern RPC çerçevesidir. Aktarım Pro
 
 gRPC, Java, C#, golang ve NodeJS dahil olmak üzere en popüler platformlar arasında desteklenir. 
 
-## <a name="protocol-buffers"></a>Protokol arabellekleri
+## <a name="protocol-buffers"></a>Protokol Arabellekleri
 
 gRPC, veri göndermek ve almak için [protokol arabellekleri](https://developers.google.com/protocol-buffers/docs/overview) veya prototip iletiler adlı başka bir açık kaynaklı teknolojinin ayraçlarını alır. [WCF veri sözleşmesine](https://docs.microsoft.com/dotnet/framework/wcf/feature-details/using-data-contracts)benzer şekilde, prototipleme sistemler için yapılandırılmış verileri okuma ve yazma olarak serileştirir. XML veya JSON gibi insan tarafından okunabilen biçimlerin yükünü azaltır.
 
@@ -74,4 +74,3 @@ Bu kitabın yazıldığı sırada tarayıcıların çoğu, gRPC için sınırlı
 >[!div class="step-by-step"]
 >[Önceki](service-to-service-communication.md)
 >[İleri](service-mesh-communication-infrastructure.md)
-

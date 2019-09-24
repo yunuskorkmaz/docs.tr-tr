@@ -3,12 +3,12 @@ title: Azure için Cloud Native .NET uygulamaları tasarlama
 description: Kapsayıcılardan, mikro hizmetlerden ve sunucusuz özelliklerden yararlanarak bulutta yerel uygulamalar oluşturmaya yönelik bir kılavuz.
 author: ardalis
 ms.date: 03/07/2019
-ms.openlocfilehash: ce9898366d0327dd619b36cdf1487229d9cda7f5
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 67e235b051702308d2455b2501bfb59a4317635b
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71183044"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71214172"
 ---
 # <a name="architecting-cloud-native-net-applications-for-azure"></a>Azure için Cloud Native .NET uygulamaları tasarlama
 
@@ -40,7 +40,7 @@ Docker balina logosu, Docker, Inc 'nin tescilli ticari markasıdır. İzin taraf
 
 Diğer tüm işaretler ve amblemler kendi sahiplerinin mülkiyetindedir.
 
-Geliştirici
+Düzenliyor
 
 > **Steve "ardalış" Smith** -yazılım mimarı ve trainer- [Ardalis.com](https://ardalis.com)
 >

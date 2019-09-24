@@ -2,12 +2,12 @@
 title: Bulutta yerel uygulamalar için Azure güvenliği
 description: Azure için Cloud Native .NET uygulamaları tasarlama | Cloud Native uygulamalar için Azure güvenliği
 ms.date: 06/30/2019
-ms.openlocfilehash: 79e1ec9bd91285041791e36275b03f128f2fe136
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 1eb371e5c8497d769265791ae28fd2b3fcfd7387
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71183611"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71214129"
 ---
 # <a name="azure-security-for-cloud-native-apps"></a>Bulutta yerel uygulamalar için Azure güvenliği
 
@@ -265,8 +265,8 @@ Cosmos DB müşteri şifreleme anahtarları sağlamak için sağlamasa da, takı
 
 ## <a name="keeping-secure"></a>Güvenli tutma
 
-Azure, yüksek güvenlikli bir ürünü serbest bırakmak için gereken tüm araçlara sahiptir. Ancak, bir zincir en zayıf bağlantı kadar güçlü olur. Azure üzerinde dağıtılan uygulamalar uygun bir güvenlik anlayış ve iyi güvenlik denetimi ile geliştirilmemişse, zincirde zayıf bağlantı haline gelir. Azure 'da yüklü yazılımların Azure 'un kendisi kadar güvenli olduğundan emin olmak için kullanılabilen çok sayıda harika Statik Analiz Aracı, şifreleme kitaplığı ve güvenlik uygulaması vardır. WhiteSource ([statik analiz araçları](https://www.whitesourcesoftware.com/), [şifreleme kitaplıkları](https://www.libressl.org/)ve [güvenlik uygulamaları](https://azure.microsoft.com/resources/videos/red-vs-blue-internal-security-penetration-testing-of-microsoft-azure/), LibreSSL (https://www.libressl.org/) ve [Red). Mavi-iç güvenlik Microsoft Azure](https://azure.microsoft.com/resources/videos/red-vs-blue-internal-security-penetration-testing-of-microsoft-azure/) testi, sırasıyla bu örneklere örnektir. 
+Azure, yüksek güvenlikli bir ürünü serbest bırakmak için gereken tüm araçlara sahiptir. Ancak, bir zincir en zayıf bağlantı kadar güçlü olur. Azure üzerinde dağıtılan uygulamalar uygun bir güvenlik anlayış ve iyi güvenlik denetimi ile geliştirilmemişse, zincirde zayıf bağlantı haline gelir. Azure 'da yüklü yazılımların Azure 'un kendisi kadar güvenli olduğundan emin olmak için kullanılabilen çok sayıda harika Statik Analiz Aracı, şifreleme kitaplığı ve güvenlik uygulaması vardır. [statik analiz araçları](https://www.whitesourcesoftware.com/), [şifreleme kitaplıkları](https://www.libressl.org/)ve [güvenlik uygulamaları](https://azure.microsoft.com/resources/videos/red-vs-blue-internal-security-penetration-testing-of-microsoft-azure/), [LibreSSL](https://www.libressl.org/) ve [Red karşılaştırması. Mavi-iç güvenlik Microsoft Azure](https://azure.microsoft.com/resources/videos/red-vs-blue-internal-security-penetration-testing-of-microsoft-azure/) testi, sırasıyla bu örneklere örnektir. 
 
 >[!div class="step-by-step"]
 >[Önceki](security.md)
->[İleri](devops.md) <!-- Next Chapter -->
+>[İleri](devops.md)

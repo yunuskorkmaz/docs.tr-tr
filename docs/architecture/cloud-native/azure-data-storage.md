@@ -2,12 +2,12 @@
 title: Azure 'da veri depolama
 description: Azure için Cloud Native .NET uygulamaları tasarlama | Azure 'da veri depolama
 ms.date: 06/30/2019
-ms.openlocfilehash: ef9a83745b723dce90bc3e48eecbc9690fd386ab
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 5e1182af61401990112135c2f7a3dd37508c9e72
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71183632"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71214107"
 ---
 # <a name="data-storage-in-azure"></a>Azure 'da veri depolama
 
@@ -213,4 +213,4 @@ Redde için Azure Cache, bellek içi veri önbelleği, dağıtılmış ilişkise
 
 >[!div class="step-by-step"]
 >[Önceki](data-patterns.md)
->[İleri](resiliency.md) <!-- Next Chapter -->
+>[İleri](resiliency.md)

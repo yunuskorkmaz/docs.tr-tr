@@ -3,12 +3,12 @@ title: Cloud Native için aday uygulamalar
 description: Bulut Yerel yaklaşımdan hangi tür uygulamaların avantajına yarar olduğunu öğrenin
 author: robvet
 ms.date: 08/20/2019
-ms.openlocfilehash: 3ee13d4c636d08a58a7dcab6883725a55a08ae65
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: a06ecdd9bfb3bd50757c484115eb123862a1bb9e
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71183527"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71214008"
 ---
 # <a name="candidate-apps-for-cloud-native"></a>Cloud Native için aday uygulamalar
 
@@ -93,4 +93,4 @@ Bu konuda daha ayrıntılı bilgi edinmek için artık Cloud Native 'e çok daha
 
 >[!div class="step-by-step"]
 >[Önceki](definition.md)
->[İleri](introduce-eshoponcontainers-reference-app.md) <!-- Next Chapter -->
+>[İleri](introduce-eshoponcontainers-reference-app.md)

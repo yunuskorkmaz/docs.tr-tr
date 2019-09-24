@@ -2,12 +2,12 @@
 title: Docker uygulamaları için geliştirme ortamı
 description: Docker geliştirme yaşam döngüsünü destekleyen en önemli geliştirme aracı seçeneklerini öğrenin.
 ms.date: 02/15/2019
-ms.openlocfilehash: 0f71ffa5e6870f45908e4def6577120a17ec744c
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 35236e75f47e830d0970ca9cfd074d9a69e6f85c
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70295303"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71214297"
 ---
 # <a name="development-environment-for-docker-apps"></a>Docker uygulamaları için geliştirme ortamı
 
@@ -20,7 +20,6 @@ Tam ve güçlü bir IDE ya da hafif ve çevik bir düzenleyiciyi tercih ediyorsa
 Herhangi bir geliştirme dilini destekleyen basit, platformlar arası bir düzenleyiciyi tercih ediyorsanız, Visual Studio Code ve Docker CLı kullanabilirsiniz. Bu ürünler, geliştirici iş akışını hızlandırma açısından kritik olan basit ancak sağlam bir deneyim sağlar. Docker geliştiricileri, "Docker for Mac" veya "Docker for Windows" (geliştirme ortamı) yükleyerek, tek bir Docker CLı kullanarak hem Windows hem de Linux (çalışma zamanı ortamı) için uygulama oluşturabilir. Ayrıca, Visual Studio Code Dockerfiles için IntelliSense ile Docker uzantılarını ve düzenleyiciden Docker komutlarını çalıştırmak için kısayol görevlerini destekler.
 
 > [!NOTE]
->
 > Visual Studio Code indirmek için bölümüne gidin <https://code.visualstudio.com/download>.
 >
 > Mac ve Windows için Docker indirmek için adresine gidin <https://www.docker.com/products/docker>.
@@ -47,5 +46,5 @@ En modern dillerle Microsoft araçları 'nı kullanarak Docker uygulamaları gel
 Temel olarak, Linux veya Windows 'da Docker tarafından desteklenen tüm modern dilleri kullanabilirsiniz.
 
 >[!div class="step-by-step"]
->[Önceki](deploy-azure-kubernetes-service.md)İleri
->[](docker-apps-inner-loop-workflow.md)
+>[Önceki](deploy-azure-kubernetes-service.md)
+>[İleri](docker-apps-inner-loop-workflow.md)

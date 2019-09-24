@@ -1,13 +1,13 @@
 ---
-title: Esnek iletişim
+title: Dayanıklı iletişim
 description: Azure için Cloud Native .NET uygulamaları tasarlama | Esnek Iletişim
 ms.date: 06/30/2019
-ms.openlocfilehash: 75a2ffe611ad0cf4bfa20efb49a6993bdbe6b073
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: d7fd4552059f527ad5166dcb6be04248bfad8e4a
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71184850"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71214496"
 ---
 # <a name="resilient-communications"></a>Dayanıklı iletişimler
 
@@ -75,4 +75,4 @@ Azure bulut, Azure Kubernetes Hizmetleri içinde bu şekilde çalışan ve doğr
 
 >[!div class="step-by-step"]
 >[Önceki](infrastructure-resiliency-azure.md)
->[İleri](monitoring-health.md) <!-- Next Chapter -->
+>[İleri](monitoring-health.md)
