@@ -39,7 +39,7 @@
       items:
         - name: Sınıf Kitaplığına Genel Bakış
           href: standard/class-library-overview.md
-        - name: Temel Türler
+        - name: Taban Türleri
           href: standard/base-types/
     - name: .NET Sınıf kitaplıkları
       href: standard/class-libraries.md
@@ -144,7 +144,7 @@
       href: standard/security/
     - name: Serileştirme
       href: standard/serialization/
-    - name: Çoklu Platformlar için Geliştirme
+    - name: Birden Çok Platform için Geliştirme
       href: standard/cross-platform/
 - name: .NET Core Kılavuzu
   href: core/index.md
@@ -498,7 +498,7 @@
           href: framework/wcf/
         - name: Windows Workflow Foundation
           href: framework/windows-workflow-foundation/
-        - name: Windows Hizmeti Uygulamaları
+        - name: Windows Hizmet Uygulamaları
           href: framework/windows-services/
         - name: 64 bitlik Uygulamalar
           href: framework/64-bit-apps.md
@@ -599,7 +599,7 @@
       href: csharp/tour-of-csharp/
     - name: 'C# yenilikleri'
       items:
-        - name: 'C# 8.0 - Önizleme 5'
+        - name: 'C# 8.0'
           href: csharp/whats-new/csharp-8.md
         - name: 'C# 7.3'
           href: csharp/whats-new/csharp-7-3.md
@@ -1117,7 +1117,7 @@
           href: visual-basic/programming-guide/program-structure/how-to-label-statements.md
         - name: Koddaki Özel Karakterler
           href: visual-basic/programming-guide/program-structure/special-characters-in-code.md
-        - name: Code’daki Açıklamalar
+        - name: Kod Açıklamaları
           href: visual-basic/programming-guide/program-structure/comments-in-code.md
         - name: Code’da Öğe Adları Olarak Anahtar Sözcükler
           href: visual-basic/programming-guide/program-structure/keywords-as-element-names-in-code.md

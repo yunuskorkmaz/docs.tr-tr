@@ -5,13 +5,13 @@ hide_bc: true
 title: .NET Belgeleri
 description: C#, Visual Basic ve F# kullanarak herhangi bir platformda çeşitli uygulamalar oluşturmak için .NET kullanmayı öğrenin. API başvurusuna, örnek koda, öğreticilere ve daha fazlasına göz atın.
 ms.custom: updateeachrelease
-ms.date: 12/04/2018
-ms.openlocfilehash: c2a70c2d297b1ec2ef797e9d6084339f32c59c48
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.date: 09/23/2019
+ms.openlocfilehash: cb567ea473e99c3bbd3d63a2328d45e94ca742ff
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70799296"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216693"
 ---
 <!-- markdownlint-disable MD033 -->
 <div id="main" class="v2">
@@ -36,7 +36,7 @@ ms.locfileid: "70799296"
                 </a>
             </li>
             <li>
-                <a href="/dotnet/api/?view=netcore-2.2">
+                <a href="/dotnet/api/?view=netcore-3.0">
                     <div class="cardSize">
                         <div class="cardPadding">
                             <div class="card">
@@ -77,11 +77,11 @@ ms.locfileid: "70799296"
         <h1>.NET Belgeleri</h1>
         <ul class="pivots">
             <li>
-                <a data-default="true" href="#docs">Docs</a>
+                <a data-default="true" href="#docs">Belgeler</a>
                 <ul id="docs">
                     <li>
-                        <a href="#getstarted">Kullanmaya Başlama</a>
-                        <ul id="getstarted" class="cardsF">
+                        <a href="#dotnetguides">.NET Kılavuzları</a>
+                        <ul id="dotnetguides" class="cardsF">
                             <li>
                                 <div class="cardSize">
                                     <div class="cardPadding">
@@ -94,6 +94,7 @@ ms.locfileid: "70799296"
                                             <div class="cardText">
                                                 <h3><a href="/dotnet/standard/">.NET Kılavuzu</a></h3>
                                                 <p><a href="/dotnet/standard/get-started">Başlarken</a></p>
+                                                <p><a href="https://docs.microsoft.com/learn/browse/?roles=developer&products=dotnet">Uygulamalı Öğrenme Modülleri</a></p>
                                                 <p><a href="/dotnet/standard/tour">.NET Turu</a></p>
                                                 <p><a href="/dotnet/standard/components">.NET Mimari Kavramları</a></p>
                                             </div>
@@ -267,6 +268,68 @@ ms.locfileid: "70799296"
                         </ul>
                     </li>
                     <li>
+                        <a href="#getstarted">Başlarken</a>
+                        <ul id="getstarted" class="cardsC">
+                            <li>
+                                <a href="/dotnet/csharp/tutorials/intro-to-csharp/hello-world">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage bgdAccent1">
+                                                        <img src="/dotnet/images/hub/net-docs-csharp.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>C# diline giriş</h3>
+                                                    <p>Hızlı etkileşimli başlangıç.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/dotnet/core/get-started">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage bgdAccent1">
+                                                        <img src="/dotnet/images/hub/net-docs-dotnet-core.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>İlk .NET Core uygulamanızı oluşturma</h3>
+                                                    <p>İlk .NET Core konsol uygulamanızı oluşturmayı öğrenin.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://dotnet.microsoft.com/learn/aspnet/hello-world-tutorial/intro">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage bgdAccent1">
+                                                        <img src="/dotnet/images/hub/net-docs-web-1.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>İlk web uygulamanızı oluşturma</h3>
+                                                    <p>İlk ASP.NET Core web uygulamanızı oluşturmayı öğrenin.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
                         <a href="#web">Web</a>
                         <ul id="web" class="cardsC">
                             <li>
@@ -280,7 +343,7 @@ ms.locfileid: "70799296"
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>İlk uygulamanızı oluşturun</h3>
+                                                    <h3>İlk web uygulamanızı oluşturma</h3>
                                                     <p>İlk ASP.NET Core web uygulamanızı oluşturmayı öğrenin.</p>
                                                 </div>
                                             </div>
@@ -662,7 +725,7 @@ ms.locfileid: "70799296"
                         </ul>
                     </li>
                     <li>
-                        <a href="#ml-ai">Makine Öğrenmesi ve AI</a>
+                        <a href="#ml-ai">Makine Öğrenimi ve AI</a>
                         <ul id="ml-ai" class="cardsC">
                             <li>
                                 <a href="/dotnet/machine-learning/">
