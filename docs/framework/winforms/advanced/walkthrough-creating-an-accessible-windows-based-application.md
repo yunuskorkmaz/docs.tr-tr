@@ -5,13 +5,16 @@ helpviewer_keywords:
 - accessibility [Windows Forms], Windows applications
 - Windows applications [Windows Forms], accessibility
 - applications [Windows Forms], accessibility
+dev_langs:
+- csharp
+- vb
 ms.assetid: 654c7f2f-1586-480b-9f12-9d9b8f5cc32b
-ms.openlocfilehash: 5768177401504f4776a34e499d07b7600597175a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: de25c3dcf33471a1aadb4445a83affab9c40914b
+ms.sourcegitcommit: 1e72e2990220b3635cebc39586828af9deb72d8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69957191"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71306333"
 ---
 # <a name="walkthrough-creating-an-accessible-windows-based-application"></a>İzlenecek yol: Erişilebilir bir Windows Tabanlı Uygulama Oluşturma
 
@@ -68,77 +71,77 @@ Denetimleri bir forma eklerken, erişilebilir bir uygulama oluşturmak için aş
 
 - Denetimleri forma ekleyin ve aşağıda açıklandığı gibi özellikleri ayarlayın. Form üzerinde denetimlerin nasıl düzenlendiğini gösteren bir model için tablonun sonundaki resme bakın.
 
-   |Nesne|Özellik|Değer|
+   |Object|Özellik|Value|
    |------------|--------------|-----------|
    |Form1|Erişilebilir açıklama|Sipariş formu|
    ||Erişilebilir ad|Sipariş formu|
    ||Yazı tipi boyutu|10|
-   ||Metin|Pizza sırası formu|
-   |PictureBox|Ad|Le|
+   ||Text|Pizza sırası formu|
+   |PictureBox|Name|Le|
    ||Erişilebilir açıklama|Pizza dilimi|
    ||Erişilebilir ad|Şirket logosu|
-   ||Görüntü|Herhangi bir simge veya bit eşlem|
-   |Etiketle|Ad|companyLabel|
-   ||Metin|İyi pizza|
+   ||Image|Herhangi bir simge veya bit eşlem|
+   |Etiket|Name|companyLabel|
+   ||Text|İyi pizza|
    ||Atan|1\.|
    ||Erişilebilir açıklama|Şirket adı|
    ||Erişilebilir ad|Şirket adı|
    ||Rengi|Mavi|
    ||ForeColor|Renkle|
    ||Yazı tipi boyutu|18|
-   |Etiketle|Ad|customerLabel|
-   ||Metin|& adı|
+   |Etiket|Name|customerLabel|
+   ||Text|& adı|
    ||Atan|2|
    ||Erişilebilir açıklama|Müşteri adı etiketi|
    ||Erişilebilir ad|Müşteri adı etiketi|
    ||Useanımsatıcı|Doğru|
-   |TextBox|Ad|customerName|
-   ||Metin|seçim|
+   |TextBox|Name|customerName|
+   ||Text|seçim|
    ||Atan|3|
    ||Erişilebilir açıklama|Müşteri adı|
    ||Erişilebilir ad|Müşteri adı|
-   |GroupBox|Ad|sizeOptions|
+   |GroupBox|Name|sizeOptions|
    ||Erişilebilir açıklama|Pizza boyut seçenekleri|
    ||Erişilebilir ad|Pizza boyut seçenekleri|
-   ||Metin|Pizza boyutu|
+   ||Text|Pizza boyutu|
    ||Atan|4|
-   |RadioButton|Ad|smallPizza|
-   ||Metin|& küçük $6,00|
+   |RadioButton|Name|smallPizza|
+   ||Text|& küçük $6,00|
    ||İşaretli|Doğru|
    ||Atan|0|
    ||Erişilebilir açıklama|Küçük pizza|
    ||Erişilebilir ad|Küçük pizza|
-   |RadioButton|Ad|largePizza|
-   ||Metin|& büyük $10,00|
+   |RadioButton|Name|largePizza|
+   ||Text|& büyük $10,00|
    ||Atan|1\.|
    ||Erişilebilir açıklama|Büyük pizza|
    ||Erişilebilir ad|Büyük pizza|
-   |Etiketle|Ad|toppingsLabel|
-   ||Metin|& toppings ($0,75)|
+   |Etiket|Name|toppingsLabel|
+   ||Text|& toppings ($0,75)|
    ||Atan|5|
    ||Erişilebilir açıklama|Toppings etiketi|
    ||Erişilebilir ad|Toppings etiketi|
    ||Useanımsatıcı|Doğru|
-   |CheckedListBox|Ad|toppings|
+   |CheckedListBox|Name|toppings|
    ||Atan|6|
    ||Erişilebilir açıklama|Kullanılabilir toppings|
    ||Erişilebilir ad|Kullanılabilir toppings|
    ||Öğeler|Pepperoni, sausage, Mushodalar|
-   |Düğme|Ad|sıra|
-   ||Metin|& sırası|
+   |Düğme|Name|sıra|
+   ||Text|& sırası|
    ||Atan|7|
    ||Erişilebilir açıklama|Siparişin toplamı|
    ||Erişilebilir ad|Toplam sıra|
-   |Düğme|Ad|İptal|
-   ||Metin|& Iptal et|
+   |Düğme|Name|İptal|
+   ||Text|& Iptal et|
    ||Atan|8|
    ||Erişilebilir açıklama|Siparişi iptal et|
    ||Erişilebilir ad|Siparişi iptal et|
-   |MainMenu|Ad|Birmainmenu|
-   |MenuItem|Ad|fileCommands|
-   ||Metin|& dosyası|
-   |MenuItem|Ad|exitApp|
-   ||Metin|E & çı|
+   |MainMenu|Name|Birmainmenu|
+   |MenuItem|Name|fileCommands|
+   ||Text|& dosyası|
+   |MenuItem|Name|exitApp|
+   ||Text|E & çı|
 
    Formunuz aşağıdaki görüntüye benzer bir şekilde görünür:
 
@@ -165,96 +168,88 @@ Uygulamamızda, Color `lblCompanyName`için sistem ayarlarını kullanmayan tek 
 1. Etiketin renklerini sistem renkleriyle ayarlamak için bir yöntem oluşturun.
 
     ```vb
-    ' Visual Basic
     Private Sub SetColorScheme()
-       If SystemInformation.HighContrast Then
-          companyLabel.BackColor = SystemColors.Window
-          companyLabel.ForeColor = SystemColors.WindowText
-       Else
-          companyLabel.BackColor = Color.Blue
-          companyLabel.ForeColor = Color.Yellow
-       End If
+        If SystemInformation.HighContrast Then
+            companyLabel.BackColor = SystemColors.Window
+            companyLabel.ForeColor = SystemColors.WindowText
+        Else
+            companyLabel.BackColor = Color.Blue
+            companyLabel.ForeColor = Color.Yellow
+        End If
     End Sub
     ```
 
     ```csharp
-    // C#
     private void SetColorScheme()
     {
-       if (SystemInformation.HighContrast)
-       {
-          companyLabel.BackColor = SystemColors.Window;
-          companyLabel.ForeColor = SystemColors.WindowText;
-       }
-       else
-       {
-          companyLabel.BackColor = Color.Blue;
-          companyLabel.ForeColor = Color.Yellow;
-       }
+        if (SystemInformation.HighContrast)
+        {
+            companyLabel.BackColor = SystemColors.Window;
+            companyLabel.ForeColor = SystemColors.WindowText;
+        }
+        else
+        {
+            companyLabel.BackColor = Color.Blue;
+            companyLabel.ForeColor = Color.Yellow;
+        }
     }
     ```
 
-2. Form oluşturucusunda`Public Sub New()` C#yordamı çağırın (Visual Basic ve `public class Form1` görselde). `SetColorScheme` Visual Basic oluşturucuya erişmek için, **Windows Form Tasarımcısı tarafından üretilen kod**etiketli bölgeyi genişletmeniz gerekecektir.
+2. Form oluşturucusunda`Public Sub New()` C#yordamı çağırın (Visual Basic ve `public Form1()` görselde). `SetColorScheme` Visual Basic oluşturucuya erişmek için, **Windows Form Tasarımcısı tarafından üretilen kod**etiketli bölgeyi genişletmeniz gerekecektir.
 
     ```vb
-    ' Visual Basic
     Public Sub New()
-       MyBase.New()
-       InitializeComponent()
-       SetColorScheme()
+        MyBase.New()
+        InitializeComponent()
+        SetColorScheme()
     End Sub
     ```
 
     ```csharp
-    // C#
     public Form1()
     {
-       InitializeComponent();
-       SetColorScheme();
+        InitializeComponent();
+        SetColorScheme();
     }
     ```
 
 3. <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> Olaya yanıt vermek için uygun imzayla bir olay yordamı oluşturun.
 
     ```vb
-    ' Visual Basic
-    Protected Sub UserPreferenceChanged(ByVal sender As Object, _
-    ByVal e As Microsoft.Win32.UserPreferenceChangedEventArgs)
-       SetColorScheme()
+    Protected Sub UserPreferenceChanged(sender As Object, _
+    e As Microsoft.Win32.UserPreferenceChangedEventArgs)
+        SetColorScheme()
     End Sub
     ```
 
     ```csharp
-    // C#
     public void UserPreferenceChanged(object sender,
     Microsoft.Win32.UserPreferenceChangedEventArgs e)
     {
-       SetColorScheme();
+        SetColorScheme();
     }
     ```
 
 4. Olay yordamını sistem olayına bağlamak için, çağrısından `InitializeComponents`sonra form oluşturucusuna kod ekleyin. Bu yöntem `SetColorScheme` yordamı çağırır.
 
     ```vb
-    ' Visual Basic
     Public Sub New()
-       MyBase.New()
-       InitializeComponent()
-       SetColorScheme()
-       AddHandler Microsoft.Win32.SystemEvents.UserPreferenceChanged, _
-          AddressOf Me.UserPreferenceChanged
+        MyBase.New()
+        InitializeComponent()
+        SetColorScheme()
+        AddHandler Microsoft.Win32.SystemEvents.UserPreferenceChanged, _
+           AddressOf Me.UserPreferenceChanged
     End Sub
     ```
 
     ```csharp
-    // C#
     public Form1()
     {
-       InitializeComponent();
-       SetColorScheme();
-       Microsoft.Win32.SystemEvents.UserPreferenceChanged
-          += new Microsoft.Win32.UserPreferenceChangedEventHandler(
-          this.UserPreferenceChanged);
+        InitializeComponent();
+        SetColorScheme();
+        Microsoft.Win32.SystemEvents.UserPreferenceChanged
+           += new Microsoft.Win32.UserPreferenceChangedEventHandler(
+           this.UserPreferenceChanged);
     }
     ```
 
@@ -264,34 +259,27 @@ Uygulamamızda, Color `lblCompanyName`için sistem ayarlarını kullanmayan tek 
     > Sistem olay kodu, ana uygulamadan ayrı bir iş parçacığı çalıştırır. Olayı yayınlamayın, olaya yedeklediğiniz kod Program kapatıldıktan sonra bile çalışacaktır.
 
     ```vb
-    ' Visual Basic
     Protected Overloads Overrides Sub Dispose(ByVal disposing As Boolean)
-       If disposing Then
-          If Not (components Is Nothing) Then
-             components.Dispose()
-          End If
-       End If
-       RemoveHandler Microsoft.Win32.SystemEvents.UserPreferenceChanged, _
-          AddressOf Me.UserPreferenceChanged
-       MyBase.Dispose(disposing)
+        If disposing AndAlso components IsNot Nothing Then
+            components.Dispose()
+        End If
+        RemoveHandler Microsoft.Win32.SystemEvents.UserPreferenceChanged, _
+           AddressOf Me.UserPreferenceChanged
+        MyBase.Dispose(disposing)
     End Sub
     ```
 
     ```csharp
-    // C#
-    protected override void Dispose( bool disposing )
+    protected override void Dispose(bool disposing)
     {
-       if( disposing )
-       {
-          if (components != null)
-          {
-             components.Dispose();
-          }
-       }
-       Microsoft.Win32.SystemEvents.UserPreferenceChanged
-          -= new Microsoft.Win32.UserPreferenceChangedEventHandler(
-          this.UserPreferenceChanged);
-       base.Dispose( disposing );
+        if(disposing && components != null)
+        {
+            components.Dispose();
+        }
+        Microsoft.Win32.SystemEvents.UserPreferenceChanged
+           -= new Microsoft.Win32.UserPreferenceChangedEventHandler(
+           this.UserPreferenceChanged);
+        base.Dispose( disposing );
     }
     ```
 

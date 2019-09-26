@@ -1,75 +1,99 @@
 ---
-title: Model oluşturucuyu yükleme
-description: ML.NET Model Oluşturucu aracı yüklemeyi öğrenin
+title: Model Oluşturucu nasıl yüklenir
+description: ML.NET model Oluşturucu aracını yüklemeyi öğrenin
 author: luisquintanilla
 ms.author: luquinta
 ms.date: 06/21/2019
 ms.custom: mvc, how-to
-ms.openlocfilehash: 54ab595c56f816517180aab48022c7df207fe84d
-ms.sourcegitcommit: 52e588dc2ee74d484cd07ac60076be25cbf777ab
+ms.openlocfilehash: b0d45ab7807bf84b98c58e85580d5aa04d0c5f7d
+ms.sourcegitcommit: 1e72e2990220b3635cebc39586828af9deb72d8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67410652"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71306320"
 ---
-# <a name="how-to-install-mlnet-model-builder"></a>ML.NET Model oluşturucuyu yükleme
+# <a name="how-to-install-mlnet-model-builder"></a>ML.NET model Oluşturucusu nasıl yüklenir
 
-Machine learning .NET uygulamalarınıza eklemek için ML.NET Model Oluşturucu yüklemeyi öğrenin.
+.NET uygulamalarınıza makine öğrenimi eklemek için ML.NET model Oluşturucu 'Yu yüklemeyi öğrenin.
 
 > [!NOTE]
-> Model Oluşturucu şu anda Önizleme aşamasındadır.
+> Model Oluşturucu Şu anda önizleme aşamasındadır.
 
 ## <a name="pre-requisites"></a>Ön koşullar
 
-- Visual Studio 2017 15.9.12 veya üzeri / Visual Studio 2019
-- .NET core 2.1 veya üzeri SDK'sı
+- Visual Studio 2017 15.9.12 veya üzeri/Visual Studio 2019
+- .NET Core 2,1 veya üzeri SDK
 
 ## <a name="limitations"></a>Sınırlamalar
 
-- ML.NET Model Oluşturucu uzantısı şu anda yalnızca Visual Studio Windows üzerinde çalışır.
-- Eğitim veri kümesi sınırını 1 GB
-- SQL Server eğitimi için 100 bin satır sınırı vardır.
-- Visual Studio 2017 için Microsoft SQL Server veri araçları desteklenmiyor
+- ML.NET model Oluşturucu uzantısı Şu anda yalnızca Windows üzerinde Visual Studio 'da çalışıyor.
+- Eğitim veri kümesi sınır 1 GB
+- SQL Server eğitim için 100.000 satırlık bir sınıra sahiptir
+- Visual Studio 2017 için Microsoft SQL Server veri araçları desteklenmez
 
 ## <a name="install"></a>Yükleme
 
-Visual Studio Market aracılığıyla veya içinden ML.NET Model Oluşturucu yüklenebilir Visual Studio. 
+ML.NET model Oluşturucusu Visual Studio Market aracılığıyla veya Visual Studio içinden yüklenebilir. 
 
 ### <a name="visual-studio-marketplace"></a>Visual Studio Market
 
-1. İndirmesine [Visual Studio Market](https://marketplace.visualstudio.com/items?itemName=MLNET.07)
-1. İlgili Visual Studio sürümünü yüklemek için istemleri takip edin
+1. [Visual Studio Market](https://marketplace.visualstudio.com/items?itemName=MLNET.07) 'ten indir
+1. İlgili Visual Studio sürümüne yüklemek için istemleri izleyin
 
 ### <a name="visual-studio-2017"></a>Visual Studio 2017
 
-1. Menü çubuğunda **Araçları** > **Uzantılar ve güncelleştirmeler**
-1. İçinde *uzantı ve güncelleştirmeler* anında, select *çevrimiçi* düğümü.
-1. Arama çubuğunda arama *ML.NET Model Oluşturucu* sonuçlarından ML.NET Model Oluşturucu (Önizleme) seçin.
-1. Yüklemeyi tamamlamak için istemleri takip edin
+1. Menü çubuğunda **Araçlar** > **Uzantılar ve güncelleştirmeler** ' i seçin.
+
+    ![VS2017 Open Extensions Manager iletişim kutusu](./media/install-model-builder/vs2017-open-extensions-manager.png)
+
+1. *Uzantı ve güncelleştirmeler* Istemi içinde *çevrimiçi* düğümünü seçin.
+1. Arama çubuğunda *ml.net model Oluşturucu* araması yapın ve sonuçlardan ml.net model Oluşturucu (Önizleme) öğesini seçin.
+
+    ![VS2017 arama ve model Oluşturucu uzantısını Uzantı Yöneticisi iletişim kutusunda ara](./media/install-model-builder/vs2017-install-model-builder.png)
+
+1. Yüklemeyi tamamlamaya yönelik istemleri izleyin
 
 ### <a name="visual-studio-2019"></a>Visual Studio 2019
 
-1. Menü çubuğunda, seçin **uzantıları** > **uzantıları Yönet**
-1. İçinde *uzantı ve güncelleştirmeler* anında, select *çevrimiçi* düğümü.
-1. Tür *ML.NET Model Oluşturucu* ML.NET Model Oluşturucu (Önizleme) arama çubuğuna seçin
-1. Yüklemeyi tamamlamak için istemleri takip edin
+1. Menü çubuğunda **Uzantılar** > **Yönet uzantıları** ' nı seçin.
+
+    ![VS2019 Open Extensions Manager iletişim kutusu](./media/install-model-builder/vs2019-open-extensions-manager.png)
+
+1. *Uzantı ve güncelleştirmeler* Istemi içinde *çevrimiçi* düğümünü seçin.
+1. Arama çubuğuna *ml.net model Oluşturucu* yazın ml.net model Oluşturucu (Önizleme) öğesini seçin
+
+    ![VS2019 arama ve model Oluşturucu uzantısını Uzantı Yöneticisi iletişim kutusunda ara](./media/install-model-builder/vs2019-install-model-builder.png)
+
+1. Yüklemeyi tamamlamaya yönelik istemleri izleyin
 
 ## <a name="uninstall"></a>Kaldır
 
 ### <a name="visual-studio-2017"></a>Visual Studio 2017
 
-1. Menü çubuğunda, seçin **Araçları** > **Uzantılar ve güncelleştirmeler**
-1. İçinde *uzantı ve güncelleştirmeler* isteminde, genişletme *yüklü* düğümünü seçip alt *araçları*
-1. Araçları listesinden ML.NET Model Oluşturucu (Önizleme) seçin ve ardından seçin *Kaldır*
-1. Kaldırma işlemini tamamlamak için istemleri izleyin.
+1. Menü çubuğunda **Araçlar** > **Uzantılar ve güncelleştirmeler** ' i seçin.
+
+    ![VS2017 Uzantıları Yönet iletişim kutusunu aç](./media/install-model-builder/vs2017-open-extensions-manager.png)
+
+1. *Uzantı ve güncelleştirmeler* istemi Içinde, *yüklü* düğümü genişletin ve *Araçlar* ' ı seçin.
+1. Araçlar listesinden ML.NET model Oluşturucu (Önizleme) öğesini seçin ve ardından *Kaldır* ' ı seçin.
+
+    ![VS2017 model Oluşturucu uzantısını uzantılar Yöneticisi iletişim kutusunda ara ve Kaldır](./media/install-model-builder/vs2017-uninstall-model-builder.png)
+
+1. Kaldırma işlemini gerçekleştirmek için istemleri izleyin.
 
 ### <a name="visual-studio-2019"></a>Visual Studio 2019
 
-1. Menü çubuğunda, seçin **uzantıları** > **uzantıları Yönet**
-1. İçinde *uzantı ve güncelleştirmeler* isteminde, genişletme *yüklü* düğümünü seçip alt *araçları*
-1. Araçları listesinden ML.NET Model Oluşturucu (Önizleme) seçin ve ardından seçin *Kaldır*
-1. Kaldırma işlemini tamamlamak için istemleri izleyin.
+1. Menü çubuğunda **Uzantılar** > **Yönet uzantıları** ' nı seçin.
+
+    ![VS2019 Uzantıları Yönet iletişim kutusunu aç](./media/install-model-builder/vs2019-open-extensions-manager.png)
+
+1. *Uzantı ve güncelleştirmeler* istemi Içinde, *yüklü* düğümü genişletin ve *Araçlar* ' ı seçin.
+1. Araçlar listesinden ML.NET model Oluşturucu (Önizleme) öğesini seçin ve ardından *Kaldır* ' ı seçin.
+
+    ![VS2019 model Oluşturucu uzantısını uzantılar Yöneticisi iletişim kutusunda ara ve Kaldır](./media/install-model-builder/vs2019-uninstall-model-builder.png)
+
+1. Kaldırma işlemini gerçekleştirmek için istemleri izleyin.
 
 ## <a name="upgrade"></a>Upgrade
 
-Yükseltme işlemi, yükleme işlemine benzerdir. Visual Studio Market'ten en son sürümü yükleyin ya da Visual Studio Uzantı Yöneticisi'ni kullanın.
+Yükseltme işlemi, yükleme işlemine benzer. Visual Studio Market 'den en son sürümü indirin ya da Visual Studio 'da Extensions Manager 'ı kullanın.
