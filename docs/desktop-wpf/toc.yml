@@ -1,0 +1,32 @@
+- name: .NET Core için Windows Presentation Foundation
+  items:
+    - name: Genel Bakış
+      items:
+        - name: WPF nedir?
+          href: overview/index.md
+    - name: Başlarken
+      items:
+        - name: WPF uygulaması oluşturma
+          href: 'https://docs.microsoft.com/visualstudio/get-started/csharp/tutorial-wpf?toc=/dotnet/desktop-wpf/toc.json&bc=/dotnet/breadcrumb/toc.json'
+    - name: Geçiş
+      items:
+        - name: .NET Framework’ten farkları
+          href: migration/differences-from-net-framework.md
+        - name: Framework’ten Core’a geçiş
+          href: migration/convert-project-from-net-framework.md
+    - name: Temel Konular
+      items:
+        - name: XAML
+          href: fundamentals/xaml.md
+        - name: Kaynakları tanımlama
+          href: fundamentals/xaml-resources-define.md
+        - name: Stiller ve şablonlar
+          items:
+            - name: Genel Bakış
+              href: fundamentals/styles-templates-overview.md
+            - name: Stil oluşturma ve uygulama
+              href: fundamentals/styles-templates-create-apply-style.md
+    - name: Verilerle çalışma
+      items:
+        - name: Veri bağlamaya genel bakış
+          href: data/data-binding-overview.md

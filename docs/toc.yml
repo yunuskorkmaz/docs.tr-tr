@@ -151,7 +151,7 @@
   items:
     - name: .NET Core hakkında
       href: core/about.md
-    - name: Kullanmaya başlayın
+    - name: Başlarken
       href: core/get-started.md
       items:
         - name: 'C# ve Visual Studio Code kullanmaya başlama'
@@ -302,7 +302,7 @@
           href: /visualstudio/test/live-unit-testing-start
     - name: Sürekli Tümleştirme
       href: core/tools/using-ci-with-cli.md
-    - name: Sürüm Oluşturma
+    - name: Sürüm oluşturma
       href: core/versions/index.md
       items:
         - name: .NET Core sürüm seçimi
@@ -532,6 +532,8 @@
       href: framework/tools/
     - name: Ek Sınıf Kitaplıkları ve API'ler
       href: framework/additional-apis/
+- name: .NET Masaüstü Kılavuzu - WPF
+  href: desktop-wpf/
 - name: 'C# Kılavuzu'
   href: csharp/index.md
   items:
@@ -701,7 +703,7 @@
           href: csharp/programming-guide/interop/index.md
         - name: Kodunuzu belgeleme
           href: csharp/codedoc.md
-        - name: Sürüm Oluşturma
+        - name: Sürüm oluşturma
           href: csharp/versioning.md
     - name: 'C# Kullanımı Hakkındaki Konular'
       items:
@@ -1428,13 +1430,13 @@
               href: visual-basic/language-reference/modifiers/protected.md
             - name: Protected Friend
               href: visual-basic/language-reference/modifiers/protected-friend.md
-            - name: Ortak
+            - name: Genel
               href: visual-basic/language-reference/modifiers/public.md
             - name: ReadOnly
               href: visual-basic/language-reference/modifiers/readonly.md
             - name: Shadows
               href: visual-basic/language-reference/modifiers/shadows.md
-            - name: Shared
+            - name: Paylaşımlı
               href: visual-basic/language-reference/modifiers/shared.md
             - name: Statik
               href: visual-basic/language-reference/modifiers/static.md
@@ -1789,7 +1791,7 @@
                   href: visual-basic/language-reference/statements/with-end-with-statement.md
                 - name: Yield Deyimi
                   href: visual-basic/language-reference/statements/yield-statement.md
-            - name: Tümceler
+            - name: Yan tümceler
               href: visual-basic/language-reference/statements/clauses.md
               items:
                 - name: Alias Yan Tümcesi
