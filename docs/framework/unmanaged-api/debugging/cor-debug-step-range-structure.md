@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8bda8079cff8f5e8fafade03a02c3dfe8798c5ca
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 11d5e2eb5e2743fca4876ed09add79be3eba514f
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740773"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274201"
 ---
-# <a name="cordebugsteprange-structure"></a><span data-ttu-id="c6093-102">COR_DEBUG_STEP_RANGE Yapısı</span><span class="sxs-lookup"><span data-stu-id="c6093-102">COR_DEBUG_STEP_RANGE Structure</span></span>
-<span data-ttu-id="c6093-103">Kod aralığı uzaklık bilgilerini içerir.</span><span class="sxs-lookup"><span data-stu-id="c6093-103">Contains the offset information for a range of code.</span></span>  
+# <a name="cor_debug_step_range-structure"></a><span data-ttu-id="62769-102">COR_DEBUG_STEP_RANGE Yapısı</span><span class="sxs-lookup"><span data-stu-id="62769-102">COR_DEBUG_STEP_RANGE Structure</span></span>
+<span data-ttu-id="62769-103">Bir kod aralığı için konum bilgilerini içerir.</span><span class="sxs-lookup"><span data-stu-id="62769-103">Contains the offset information for a range of code.</span></span>  
   
- <span data-ttu-id="c6093-104">Bu yapı tarafından kullanılan [ICorDebugStepper::steprange](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-steprange-method.md) yöntemi.</span><span class="sxs-lookup"><span data-stu-id="c6093-104">This structure is used by the [ICorDebugStepper::StepRange](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-steprange-method.md) method.</span></span>  
+ <span data-ttu-id="62769-104">Bu yapı, [ICorDebugStepper:: StepRange](icordebugstepper-steprange-method.md) yöntemi tarafından kullanılır.</span><span class="sxs-lookup"><span data-stu-id="62769-104">This structure is used by the [ICorDebugStepper::StepRange](icordebugstepper-steprange-method.md) method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c6093-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="c6093-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="62769-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="62769-105">Syntax</span></span>  
   
 ```cpp  
 typedef struct {  
@@ -37,24 +37,24 @@ typedef struct {
 } COR_DEBUG_STEP_RANGE;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="c6093-106">Üyeler</span><span class="sxs-lookup"><span data-stu-id="c6093-106">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="62769-106">Üyeler</span><span class="sxs-lookup"><span data-stu-id="62769-106">Members</span></span>  
   
-|<span data-ttu-id="c6093-107">Üye</span><span class="sxs-lookup"><span data-stu-id="c6093-107">Member</span></span>|<span data-ttu-id="c6093-108">Açıklama</span><span class="sxs-lookup"><span data-stu-id="c6093-108">Description</span></span>|  
+|<span data-ttu-id="62769-107">Üye</span><span class="sxs-lookup"><span data-stu-id="62769-107">Member</span></span>|<span data-ttu-id="62769-108">Açıklama</span><span class="sxs-lookup"><span data-stu-id="62769-108">Description</span></span>|  
 |------------|-----------------|  
-|`startOffset`|<span data-ttu-id="c6093-109">Aralığın başlangıç uzaklığı.</span><span class="sxs-lookup"><span data-stu-id="c6093-109">The offset of the beginning of the range.</span></span>|  
-|`endOffset`|<span data-ttu-id="c6093-110">Aralığın uzaklığı.</span><span class="sxs-lookup"><span data-stu-id="c6093-110">The offset of the end of the range.</span></span>|  
+|`startOffset`|<span data-ttu-id="62769-109">Aralığın başındaki fark.</span><span class="sxs-lookup"><span data-stu-id="62769-109">The offset of the beginning of the range.</span></span>|  
+|`endOffset`|<span data-ttu-id="62769-110">Aralığın sonundaki fark.</span><span class="sxs-lookup"><span data-stu-id="62769-110">The offset of the end of the range.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="c6093-111">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="c6093-111">Requirements</span></span>  
- <span data-ttu-id="c6093-112">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c6093-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="62769-111">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="62769-111">Requirements</span></span>  
+ <span data-ttu-id="62769-112">**Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="62769-112">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c6093-113">**Üst bilgi:** CorDebug.idl</span><span class="sxs-lookup"><span data-stu-id="c6093-113">**Header:** CorDebug.idl</span></span>  
+ <span data-ttu-id="62769-113">**Üst bilgi** CorDebug. IDL</span><span class="sxs-lookup"><span data-stu-id="62769-113">**Header:** CorDebug.idl</span></span>  
   
- <span data-ttu-id="c6093-114">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c6093-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="62769-114">**Kitaplığı** Corguid. lib</span><span class="sxs-lookup"><span data-stu-id="62769-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="c6093-115">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c6093-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="62769-115">**.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="62769-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c6093-116">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="c6093-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="62769-116">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="62769-116">See also</span></span>
 
-- [<span data-ttu-id="c6093-117">StepRange Yöntemi</span><span class="sxs-lookup"><span data-stu-id="c6093-117">StepRange Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-steprange-method.md)
-- [<span data-ttu-id="c6093-118">Hata Ayıklama Yapıları</span><span class="sxs-lookup"><span data-stu-id="c6093-118">Debugging Structures</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [<span data-ttu-id="c6093-119">Hata Ayıklama</span><span class="sxs-lookup"><span data-stu-id="c6093-119">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [<span data-ttu-id="62769-117">StepRange Yöntemi</span><span class="sxs-lookup"><span data-stu-id="62769-117">StepRange Method</span></span>](icordebugstepper-steprange-method.md)
+- [<span data-ttu-id="62769-118">Hata Ayıklama Yapıları</span><span class="sxs-lookup"><span data-stu-id="62769-118">Debugging Structures</span></span>](debugging-structures.md)
+- [<span data-ttu-id="62769-119">Hata Ayıklama</span><span class="sxs-lookup"><span data-stu-id="62769-119">Debugging</span></span>](index.md)
