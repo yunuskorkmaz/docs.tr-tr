@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5a839eb2edd36dc726c819a819fd4d427fbaea40
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a5d44f9b5dc42147959d3f1d127a64d39258f515
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740996"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274271"
 ---
 # <a name="clrdatacreateinstance-function"></a>CLRDataCreateInstance İşlevi
-Belirtilen hedef öğe için bir arabirimi nesnesi oluşturur.  
+Belirtilen hedef öğe için bir arabirim nesnesi oluşturur.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,26 +39,26 @@ HRESULT CLRDataCreateInstance (
   
 ## <a name="parameters"></a>Parametreler  
  `iid`  
- [in] Oluşturulacak arabirimi tanımlayıcısı.  
+ 'ndaki Oluşturulacak arabirimin tanımlayıcısı.  
   
  `target`  
- [in] Bir kullanıcı olarak uygulanan bir işaretçiye [Iclrdatatarget](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md) arabirimi nesnesi oluşturulacağı hedef öğeyi temsil eden nesne.  
+ 'ndaki Arabirim nesnesinin oluşturulacağı hedef öğeyi temsil eden, Kullanıcı tarafından uygulanan [ICLRDataTarget](iclrdatatarget-interface.md) nesnesine yönelik bir işaretçi.  
   
  `iface`  
- [out] Döndürülen arabirim nesnesinin adresine yönelik işaretçi.  
+ dışı Döndürülen arabirim nesnesinin adresine yönelik bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `ICLRDataTarget` Nesne, hata ayıklama uygulamanın yazıcı tarafından uygulanır. Uygulama, temsil ettiği hedef öğesinin türüne bağlıdır. Hedef öğe, bir işlem, bellek dökümü, uzak makine vb. olabilir.  
+ `ICLRDataTarget` Nesnesi, hata ayıklama uygulamasının yazarı tarafından uygulanır. Uygulama, temsil edilen hedef öğe türüne bağlıdır. Hedef öğe bir işlem, bellek dökümü, uzak makine vb. olabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üst bilgi:** ClrData.idl  
+ **Üst bilgi** ClrData. IDL  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplığı** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hata Ayıklama Genel Statik İşlevleri](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)
+- [Hata Ayıklama Genel Statik İşlevleri](debugging-global-static-functions.md)

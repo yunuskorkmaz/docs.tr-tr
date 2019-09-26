@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: d26cf45a0243d61757af5d9d0c00cf135ae15bdf
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 7ace405e2624f15b1cdb6d383222ae87c93289bb
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740862"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274102"
 ---
 # <a name="clrdatasourcetype-enumeration"></a>CLRDataSourceType numaralandırması
 
@@ -41,20 +41,20 @@ typedef enum
 
 | Üye                        | Açıklama                           |
 | ----------------------------- | ------------------------------------- |
-| `CLRDATA_SOURCE_TYPE_INVALID` | Başka bir şey geçerli olduğunu belirtmek için |
+| `CLRDATA_SOURCE_TYPE_INVALID` | Başka hiçbir şeyin uygulanacağını belirtmek için |
 
 ## <a name="remarks"></a>Açıklamalar
 
-Bu numaralandırma, çalışma zamanı içinde yaşar ve herhangi bir üst bilgiler veya kitaplık dosyaları gösterilmez. Bunu kullanmak için yukarıda kodunuzda tanımlandığı gibi bir sabit listesi tanımlayın. Bu diğer adı için de geçerlidir `CLRDATA_ENUM` belirtildiği gibi [ortak veri türleri](../../../../docs/framework/unmanaged-api/common-data-types-unmanaged-api-reference.md).
+Bu numaralandırma çalışma zamanının içinde bulunur ve herhangi bir üst bilgi veya kitaplık dosyası aracılığıyla gösterilmez. Kullanmak için, kodunuzda yukarıda tanımlanan bir sabit listesi tanımlayın. Bu, `CLRDATA_ENUM` [ortak veri türlerinde](../common-data-types-unmanaged-api-reference.md)bahsedildiği gibi, için de başka bir ad sağlar.
 
 ## <a name="requirements"></a>Gereksinimler
 
-**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
-**Üst bilgi:** Yok.  
-**Kitaplığı:** None  
-**.NET framework sürümleri:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
+**Üst bilgi** Yok.  
+**Kitaplığı** Yok.  
+**.NET Framework sürümleri:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hata Ayıklama](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [Hata Ayıklama Sabit Listeleri](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [Hata Ayıklama](index.md)
+- [Hata Ayıklama Sabit Listeleri](debugging-enumerations.md)

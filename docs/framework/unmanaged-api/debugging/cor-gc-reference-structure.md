@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 61a9cad9d0ce807d62c811e77402b8cc6d8c6905
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: cc0b67621f77c0741e0b63b84ab1794530d6280b
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740696"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274232"
 ---
-# <a name="corgcreference-structure"></a>COR_GC_REFERENCE Yapısı
-Atık olarak toplanmış olacak bir nesneyle ilgili bilgileri içerir.  
+# <a name="cor_gc_reference-structure"></a>COR_GC_REFERENCE Yapısı
+Atık olarak toplanmış bir nesne hakkındaki bilgileri içerir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,38 +41,38 @@ typedef struct _COR_GC_REFERENCE {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`domain`|Bir işaretçi tanıtıcı veya nesne ait olduğu uygulama etki alanı. Değeri aşağıdakilerden biri olabilir `null`.|  
-|`location`|Bir Icordebugvalue veya atık olarak toplanmış olmasını nesnesine karşılık gelen bir Icordebugreferencevalue arabirimi.|  
-|`type`|A [CorGCReferenceType](../../../../docs/framework/unmanaged-api/debugging/corgcreferencetype-enumeration.md) kök nereden geldiğini belirten numaralandırma değeri. Daha fazla bilgi için Açıklamalar bölümüne bakın.|  
-|`extraData`|Atık olarak toplanmış alınacak nesneyi ilgili ek veriler. Bu bilgileri gösterildiği gibi kaynak nesnenin bağlıdır `type` alan. Daha fazla bilgi için Açıklamalar bölümüne bakın.|  
+|`domain`|Tanıtıcının veya nesnenin ait olduğu uygulama etki alanına yönelik bir işaretçi. Değeri `null`olabilir.|  
+|`location`|Atık toplanan nesneye karşılık gelen bir ICorDebugValue ya da ICorDebugReferenceValue arabirimi.|  
+|`type`|Kökün nereden geldiğini gösteren bir [CorGCReferenceType](corgcreferencetype-enumeration.md) numaralandırma değeri. Daha fazla bilgi için, açıklamalar bölümüne bakın.|  
+|`extraData`|Atık olarak toplanmış nesne hakkında ek veriler. Bu bilgiler, `type` alanı tarafından belirtildiği gibi nesnenin kaynağına bağlıdır. Daha fazla bilgi için, açıklamalar bölümüne bakın.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `type` Alan bir [CorGCReferenceType](../../../../docs/framework/unmanaged-api/debugging/corgcreferencetype-enumeration.md) başvuru nereden geldiğini belirten numaralandırma değeri. Belirli bir `COR_GC_REFERENCE` değerini herhangi bir yönetilen nesneler aşağıdaki türde yansıtmak:  
+ Alan, başvurunun nereden geldiğini gösteren bir CorGCReferenceType numaralandırma değeridir. [](corgcreferencetype-enumeration.md) `type` Belirli `COR_GC_REFERENCE` bir değer, aşağıdaki yönetilen nesne türlerinden herhangi birini yansıtabilir:  
   
-- Tüm yönetilen yığında nesneleri (`CorGCReferenceType.CorReferenceStack`). Bu, ortak dil çalışma zamanı tarafından oluşturulan nesnelerin yanı sıra yönetilen kod kullanarak canlı başvurular içerir.  
+- Tüm yönetilen yığınlardaki (`CorGCReferenceType.CorReferenceStack`) nesneler. Bu, Yönetilen koddaki canlı başvuruların yanı sıra ortak dil çalışma zamanı tarafından oluşturulan nesneleri içerir.  
   
-- Nesne işleyicisi tablosundan (`CorGCReferenceType.CorHandle*`). Bu güçlü atıflar içerir (`HNDTYPE_STRONG` ve `HNDTYPE_REFCOUNT`) ve Modül içindeki statik değişkenler.  
+- Tanıtıcı tablosundan nesneler (`CorGCReferenceType.CorHandle*`). Bu, bir modüldeki tanımlayıcı`HNDTYPE_STRONG` başvuruları `HNDTYPE_REFCOUNT`(ve) ve statik değişkenleri içerir.  
   
-- Sonlandırma sırasından nesneleri (`CorGCReferenceType.CorReferenceFinalizer`). Sonlandırıcı çalıştırılana dek Sonlandırıcı kuyruğunda nesneleri kökleri.  
+- Sonlandırıcı kuyruğundan nesneler (`CorGCReferenceType.CorReferenceFinalizer`). Sonlandırıcı, Sonlandırıcı çalıştırılıncaya kadar kök nesneleri kuyruğa al.  
   
- `extraData` Alanı başvuru kaynağı (veya tür) bağlı olarak ek veri içeriyor. Olası değerler şunlardır:  
+ Bu `extraData` alan, başvurunun kaynağına (veya türüne) bağlı olarak ek veriler içerir. Olası değerler şunlardır:  
   
-- `DependentSource`. Varsa `type` olduğu `CorGCREferenceType.CorHandleStrongDependent`, bu alan, etkin değilse, atık olarak toplanmış alınacak nesneyi kökleri nesnedir `COR_GC_REFERENCE.Location`.  
+- `DependentSource`. Eğer ise, bu alan, etkin ise, nesne üzerinde `COR_GC_REFERENCE.Location`çöp toplanabilecek nesneyi köklendirilir. `CorGCREferenceType.CorHandleStrongDependent` `type`  
   
-- `RefCount`. Varsa `type` olduğu `CorGCREferenceType.CorHandleStrongRefCount`, tanıtıcı başvurusu sayısı bu alandır.  
+- `RefCount`. `type` İse`CorGCREferenceType.CorHandleStrongRefCount`, bu alan tanıtıcının başvuru sayısıdır.  
   
-- `Size`. Varsa `type` olduğu `CorGCREferenceType.CorHandleStrongSizedByref`, bu alan atık toplayıcı nesne kökleri hesaplanan nesne ağacının son boyutudur. Bu hesaplama mutlaka güncel olmadığını unutmayın.  
+- `Size`. `type` İse`CorGCREferenceType.CorHandleStrongSizedByref`, bu alan çöp toplayıcının nesne köklerinin hesaplandığı nesne ağacının son boyutudur. Bu hesaplamanın güncel olduğunu unutmayın.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplığı** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hata Ayıklama Yapıları](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [Hata Ayıklama](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Hata Ayıklama Yapıları](debugging-structures.md)
+- [Hata Ayıklama](index.md)

@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3dd233643bd18b60b7d6176c34ee57e4061daf7c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f7b340a73aa9eaebca9c0d78563ae298557039b8
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740660"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274187"
 ---
-# <a name="corheapinfo-structure"></a>COR_HEAPINFO Yapısı
-Numaralandırılabilir olup olmadığı dahil çöp toplama yığınındaki hakkında genel bilgiler sağlar.  
+# <a name="cor_heapinfo-structure"></a>COR_HEAPINFO Yapısı
+Çöp toplama yığını hakkında, numaralandırılabilir olup olmadığı dahil genel bilgiler sağlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -42,27 +42,27 @@ typedef struct _COR_HEAPINFO {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`areGCStructuresValid`|`true` Çöp toplama yapıları geçerli ve yığın numaralandırılabilir; Aksi takdirde, `false`.|  
-|`pointerSize`|Hedef mimari işaretçilerde bayt cinsinden boyutu.|  
-|`numHeaps`|Mantıksal çöp toplama işleminde yığınlardaki sayısı.|  
-|`concurrent`|`TRUE` eş zamanlı varsa (arka plan) çöp toplama etkin; Aksi takdirde, `FALSE`.|  
-|`gcType`|Üye [CorDebugGCType](../../../../docs/framework/unmanaged-api/debugging/cordebuggctype-enumeration.md) atık toplayıcı bir iş istasyonunda veya sunucuda çalışıp çalışmadığını gösteren sabit listesi.|  
+|`areGCStructuresValid`|`true`çöp toplama yapıları geçerliyse ve yığın Numaralandırılabilir. Aksi takdirde `false`,.|  
+|`pointerSize`|Hedef mimarideki işaretçilerin bayt cinsinden boyutu.|  
+|`numHeaps`|İşlemdeki mantıksal çöp toplama yığınlarını sayısı.|  
+|`concurrent`|`TRUE`eş zamanlı (arka plan) çöp toplama etkinse; Aksi takdirde `FALSE`,.|  
+|`gcType`|Çöp toplayıcısının bir iş istasyonunda veya sunucuda çalışıp çalışmadığını belirten, [Cordebugggctype](cordebuggctype-enumeration.md) numaralandırmasının bir üyesi.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Örneği `COR_HEAPINFO` yapısı çağırarak döndürülür [Icordebugprocess5::getgcheapınformation](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-getgcheapinformation-method.md) yöntemi.  
+ `COR_HEAPINFO` [ICorDebugProcess5:: GetGCHeapInformation](icordebugprocess5-getgcheapinformation-method.md) yöntemi çağırarak yapının bir örneği döndürülür.  
   
- Her zaman işaretlemeniz gerekir çöp toplama yığını üzerindeki nesneler numaralandırılırken önce `areGCStructuresValid` alanı yığın numaralandırılabilir bir durumda olduğundan emin olun. Daha fazla bilgi için [Icordebugprocess5::getgcheapınformation](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-getgcheapinformation-method.md) yöntemi.  
+ Çöp toplama yığınında nesneleri numaralandırmadan önce, yığının sıralanabilir bir durumda olduğundan emin `areGCStructuresValid` olmak için alanı her zaman denetlemeniz gerekir. Daha fazla bilgi için bkz. [ICorDebugProcess5:: GetGCHeapInformation](icordebugprocess5-getgcheapinformation-method.md) yöntemi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplığı** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hata Ayıklama Yapıları](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [Hata Ayıklama](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Hata Ayıklama Yapıları](debugging-structures.md)
+- [Hata Ayıklama](index.md)

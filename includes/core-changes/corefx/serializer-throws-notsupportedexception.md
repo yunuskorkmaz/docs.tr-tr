@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 39d1b2dba8077bf9bf998775f8967d455f36b549
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: a35439efce25db94e70420fc6aeaf04816525758
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71119284"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71263315"
 ---
 ### <a name="json-serializer-exception-type-changed-from-jsonexception-to-notsupportedexception"></a>JSON serileştirici özel durum türü `JsonException` iken`NotSupportedException`
 
@@ -14,12 +14,12 @@ ms.locfileid: "71119284"
 
 .NET Core 3,0 Preview 6 ' da Preview 8 ' de, seri hale getirici <xref:System.Text.Json.JsonException> desteklenmeyen bir türetilmiş koleksiyon türüyle karşılaşıldığında bir oluşturur. *Desteklenmeyen bir türetilmiş koleksiyon türü* , aşağıdaki türlerden birine atanabilir olmayan herhangi bir koleksiyon türüdür:
 
- - <xref:System.Collections.IList>
- - <xref:System.Collections.Generic.ICollection%601>
- - <xref:System.Collections.Generic.Stack%601>
- - <xref:System.Collections.Generic.Queue%601>`
- - <xref:System.Collections.IDictionary>
- - [IDictionary\<dizesi, T >](xref:System.Collections.Generic.IDictionary%602)
+- <xref:System.Collections.IList>
+- <xref:System.Collections.Generic.ICollection%601>
+- <xref:System.Collections.Generic.Stack%601>
+- <xref:System.Collections.Generic.Queue%601>`
+- <xref:System.Collections.IDictionary>
+- [IDictionary\<dizesi, T >](xref:System.Collections.Generic.IDictionary%602)
 
 .NET Core 3,0 Preview 9 ' dan itibaren, seri hale getirici <xref:System.NotSupportedException> desteklenmeyen bir koleksiyon türüyle karşılaşıldığında bir oluşturur. Yeni özel durum türü, serisini kaldırma işleminin başarısız olduğunu daha iyi yansıtır.
 

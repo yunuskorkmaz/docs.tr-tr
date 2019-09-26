@@ -7,10 +7,10 @@ helpviewer_keywords:
 - groups [Windows Forms], in Windows Forms controls
 ms.assetid: 8b615000-69d9-4c64-acaf-b54fa09b69e3
 ms.openlocfilehash: b63bcd9e5e357db350cc2987e09af84eb58bdcff
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69039408"
 ---
 # <a name="how-to-group-items-in-a-windows-forms-listview-control-using-the-designer"></a>Nasıl yapılır: Tasarımcı Kullanarak Windows Forms ListView Denetimindeki Öğeleri Gruplandırma
@@ -28,7 +28,7 @@ Gruplamayı etkinleştirmek için önce tasarımcıda veya program aracılığı
 
 ## <a name="to-add-or-remove-groups-in-the-designer"></a>Tasarımcıda grup eklemek veya kaldırmak için
 
-1. **Özellikler** penceresinde,![ özelliğin<xref:System.Windows.Forms.ListView.Groups%2A> yanındaki Visual Studio](./media/visual-studio-ellipsis-button.png)'nun Özellikler penceresi (...) üç nokta (...) düğmesine tıklayın.
+1. **Özellikler** penceresinde](./media/visual-studio-ellipsis-button.png)![, özelliğin<xref:System.Windows.Forms.ListView.Groups%2A> yanındaki Visual Studio 'nun Özellikler penceresi (... **) üç nokta (.** ..) düğmesine tıklayın.
 
      **ListViewGroup koleksiyonu Düzenleyicisi** görünür.
 
@@ -36,7 +36,7 @@ Gruplamayı etkinleştirmek için önce tasarımcıda veya program aracılığı
 
 ## <a name="to-assign-items-to-groups-in-the-designer"></a>Tasarımcı 'daki gruplara öğe atamak için
 
-1. **Özellikler** penceresinde,![ özelliğin<xref:System.Windows.Forms.ListView.Items%2A> yanındaki Visual Studio](./media/visual-studio-ellipsis-button.png)'nun Özellikler penceresi (...) üç nokta (...) düğmesine tıklayın.
+1. **Özellikler** penceresinde](./media/visual-studio-ellipsis-button.png)![, özelliğin<xref:System.Windows.Forms.ListView.Items%2A> yanındaki Visual Studio 'nun Özellikler penceresi (... **) üç nokta (.** ..) düğmesine tıklayın.
 
      **ListViewItem koleksiyonu Düzenleyicisi** görünür.
 

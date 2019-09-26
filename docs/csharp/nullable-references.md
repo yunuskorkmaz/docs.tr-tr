@@ -2,12 +2,12 @@
 title: Boş değer atanabilir başvuru türleri
 description: Bu makalede, 8 ' C# e eklenen Nullable başvuru türlerine genel bir bakış sağlanır. Yeni ve mevcut projeler için özelliği, null başvuru özel durumlarına karşı nasıl güvenlik sağladığını öğreneceksiniz.
 ms.date: 02/19/2019
-ms.openlocfilehash: 7ca3ebc413fbe335f79d415249b952132c38f552
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 80018aaa409e7b4c188362482705de33ac5afd85
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71214405"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71272787"
 ---
 # <a name="nullable-reference-types"></a>Boş değer atanabilir başvuru türleri
 
@@ -35,7 +35,7 @@ string? name;
 
 Tür adına eklenmemiş olan `?` herhangi bir değişken **null yapılamayan bir başvuru türüdür**. Bu özellik, bu özelliği etkinleştirdiğinizde var olan koddaki tüm başvuru türü değişkenlerini içerir.
 
-Derleyici, null olabilen bir başvurunun boş olmayan olarak bilinmesinin bilinmediğini anlamak için statik analizi kullanır. Null olduğunda, null olabilen bir başvuruya başvuru yaptığınızda derleyici sizi uyarır. Bir değişken adından sonra, **null-forverme işlecini** (`!`) kullanarak bu davranışı geçersiz kılabilirsiniz. Örneğin, `name` değişkenin null olmadığını, ancak derleyici bir uyarı olduğunu biliyorsanız, derleyicinin analizini geçersiz kılmak için aşağıdaki kodu yazabilirsiniz:
+Derleyici, null olabilen bir başvurunun boş olmayan olarak bilinmesinin bilinmediğini anlamak için statik analizi kullanır. Null olduğunda, null olabilen bir başvuruya başvuru yaptığınızda derleyici sizi uyarır. Değişken adının ardından **null-forverme işlecini** `!` kullanarak bu davranışı geçersiz kılabilirsiniz. Örneğin, `name` değişkenin null olmadığını, ancak derleyici bir uyarı olduğunu biliyorsanız, derleyicinin analizini geçersiz kılmak için aşağıdaki kodu yazabilirsiniz:
 
 ```csharp
 name!.Length;
@@ -58,7 +58,7 @@ Değişken bildirimindeki bir türün null olabilme değeri, değişkenin bildir
 
 Null yapılabilir bağlamlar, derleyicinin başvuru türü değişkenlerini nasıl yorumlayacağını öğrenmek için ayrıntılı denetimi etkinleştirir. Herhangi bir kaynak satırının **Nullable ek açıklama bağlamı** veya `disabled`' `enabled` dir. Tüm kodunuzu null yapılabilir birC# `disabled` bağlamda derlemek için önceden 8 derleyicisini düşünebilirsiniz: Herhangi bir başvuru türü null olabilir. **Null olabilir uyarılar bağlamı** veya `enabled` `disabled`olarak ayarlanabilir. Null yapılabilir uyarılar bağlamı, akış analizini kullanarak derleyici tarafından oluşturulan uyarıları belirtir.
 
-Null yapılabilir ek açıklama bağlamı ve null yapılabilir uyarı bağlamı, `Nullable` `csproj` dosyanızdaki öğe kullanılarak bir proje için ayarlanabilir. Bu öğe, derleyicinin türlerin null olduğunu ve hangi uyarıların oluşturulduğunu nasıl yorumlayacağını yapılandırır. Geçerli ayarlar şunlardır:
+`Nullable` *. Csproj* dosyanızdaki öğesi kullanılarak bir proje için Nullable ek açıklama bağlamı ve null yapılabilir uyarı bağlamı ayarlanabilir. Bu öğe, derleyicinin türlerin null olduğunu ve hangi uyarıların oluşturulduğunu nasıl yorumlayacağını yapılandırır. Geçerli ayarlar şunlardır:
 
 - `enable`: Null yapılabilir ek açıklama bağlamı **etkindir**. Null yapılabilir uyarı bağlamı **etkin**.
   - Bir başvuru türü değişkenleri, `string` Örneğin, null değer atanamaz.  Tüm null değer alabilirlik uyarıları etkin.
@@ -68,9 +68,6 @@ Null yapılabilir ek açıklama bağlamı ve null yapılabilir uyarı bağlamı,
   - Bir başvuru türü değişkenleri, zorunluluvou. Tüm null değer alabilirlik uyarıları etkin.
 - `disable`: Null yapılabilir ek açıklama bağlamı **devre dışı**. Null yapılabilir uyarı bağlamı **devre dışı**.
   - Başvuru türündeki değişkenler, daha önceki sürümlerinde olduğu gibi, zorunluluvou 'lardır C#. Tüm null değer alabilirlik uyarıları devre dışı bırakıldı.
-
-> [!IMPORTANT]
-> Öğe daha önce adlandırılmıştı `NullableContextOptions`. `Nullable` Yeniden adlandırma, Visual Studio 2019, 16,2-P1 ile birlikte gönderilir. 3\.0.100-preview5-011568 .NET Core SDK bu değişikliğe sahip değil. .NET Core CLI kullanıyorsanız, sonraki önizleme kullanılabilir olana kadar kullanmanız `NullableContextOptions` gerekir.
 
 Ayrıca, aynı bağlamlarını projenizde her yerde ayarlamak için yönergeleri de kullanabilirsiniz:
 
@@ -101,7 +98,7 @@ Derleyici, etkinleştirilmiş bir null yapılabilir ek açıklama bağlamında a
 - Herhangi bir Nullable başvuru türü (değişken `?` bildiriminde bulunan tür öğesinden sonra belirtilen) null olabilir. Statik analiz, başvurunun başvurulduğunu null dışında bir değer olarak bilinmeyeceğini belirler. Aksi takdirde, derleyici sizi uyarır.
 - Null yapılabilir bir başvurunun null olmadığını bildirmek için null-forverme işlecini kullanabilirsiniz.
 
-Etkin bir null yapılabilir ek açıklama bağlamında, `?` başvuru türüne eklenen karakter **null yapılabilir bir başvuru türü**bildirir. İfadenin null olmadığını bildirmek için **null forgilelik işleci** (`!`) bir ifadeye eklenebilir.
+Etkin bir null yapılabilir ek açıklama bağlamında, `?` başvuru türüne eklenen karakter **null yapılabilir bir başvuru türü**bildirir. İfadenin null olmadığını bildirmek için **null-forverme işleci** `!` bir ifadeye eklenebilir.
 
 ## <a name="nullable-warning-context"></a>Null yapılabilir uyarı bağlamı
 

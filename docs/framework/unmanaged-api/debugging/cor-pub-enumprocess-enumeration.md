@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 412e2bb7da7b5b3396342df169d56d2724ddb466
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: eab5fc13b74d8af4f0baaa3953c5c73ea255bfe6
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740554"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274014"
 ---
-# <a name="corpubenumprocess-enumeration"></a>COR_PUB_ENUMPROCESS Numaralandırması
-Numaralandırılacak işlem türünü belirtir.  
+# <a name="cor_pub_enumprocess-enumeration"></a>COR_PUB_ENUMPROCESS Numaralandırması
+Numaralandırılacak işlemin türünü tanımlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,17 +41,17 @@ typedef enum {
 |`COR_PUB_MANAGEDONLY`|Yönetilen bir işlem.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Yönetilmeyen hata ayıklama API'ın geçerli sürümü yalnızca işlemler yönetilen numaralandırır.  
+ Yönetilmeyen hata ayıklama API 'sinin geçerli sürümü yalnızca yönetilen işlemi numaralandırır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üst bilgi:** CorPub.idl, CorPub.h  
+ **Üst bilgi** CorPub. IDL, CorPub. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplığı** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hata Ayıklama Sabit Listeleri](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [Hata Ayıklama Sabit Listeleri](debugging-enumerations.md)

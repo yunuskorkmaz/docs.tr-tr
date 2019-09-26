@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1793547cfc0d9637352b62ff47beee41e9f5ac5c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6bd274b1eb14532629580e777288317186544912
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740516"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274157"
 ---
-# <a name="cortypelayout-structure"></a>COR_TYPE_LAYOUT Yapısı
-Bellekte bir nesne düzeni hakkında bilgiler sağlar.  
+# <a name="cor_type_layout-structure"></a>COR_TYPE_LAYOUT Yapısı
+Bellekteki bir nesnenin düzeni hakkında bilgi sağlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -42,25 +42,25 @@ typedef struct COR_TYPE_LAYOUT {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`parentID`|Bu tür için üst tür tanımlayıcısı. Bu NULL türü kimliği olacaktır (token1 = 0, token2 = 0) için tür kimliği karşılık geliyorsa <xref:System.Object?displayProperty=nameWithType>.|  
-|`objectSize`|Bu türdeki bir nesnenin temel boyutu. Değişken olmayan boyutlu nesnelerin toplam boyutu budur.|  
-|`numFields`|Bu tür nesneler dahil alanlarının sayısı.|  
-|`boxOffset`|Bu tür Kutulu, bir nesnenin alanlarını başlangıç uzaklığı. Bu alan, yalnızca temel öğeleri ve yapıları gibi değer türleri için geçerlidir.|  
-|`type`|Bu tür ait olduğu CorElementType.|  
+|`parentID`|Bu türe üst türün tanımlayıcısı. Bu, tür kimliği öğesine <xref:System.Object?displayProperty=nameWithType>KARŞıLıK geliyorsa, null tür kimliği (token1 = 0, token2 = 0) olacaktır.|  
+|`objectSize`|Bu türdeki bir nesnenin temel boyutu. Bu, değişken olmayan ölçekli nesnelerin toplam boyutudur.|  
+|`numFields`|Bu türün nesnelerine dahil edilen alan sayısı.|  
+|`boxOffset`|Bu tür paketlenise, bir nesne alanlarının başlangıç boşluğu. Bu alan, yalnızca temel öğeler ve yapılar gibi değer türleri için geçerlidir.|  
+|`type`|Bu türün ait olduğu CorElementType.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Varsa `numFields` , sıfırdan büyük çağırabilirsiniz [Icordebugprocess5::gettypefields](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-gettypefields-method.md) bu tür alanları hakkında bilgi edinmek için yöntemi. Varsa `type` olduğu `ELEMENT_TYPE_STRING`, `ELEMENT_TYPE_ARRAY`, veya `ELEMENT_TYPE_SZARRAY`, bu tür nesnelerin boyutunu değişkendir ve geçirebilirsiniz [cor_typeıd](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) için yapı [Icordebugprocess5::getarraylayout ](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-getarraylayout-method.md) yöntemi.  
+ Sıfırdan büyükse, bu türdeki alanlarla ilgili bilgi almak için [ICorDebugProcess5:: GetTypeFields](icordebugprocess5-gettypefields-method.md) metodunu çağırabilirsiniz. `numFields` `ELEMENT_TYPE_STRING` [](cor-typeid-structure.md) , `type` Veya`ELEMENT_TYPE_SZARRAY`ise, bu türün nesnelerinin boyutu değişkendir ve COR_TYPEID yapısını [ICorDebugProcess5:: GetArrayLayout](icordebugprocess5-getarraylayout-method.md) metoduna geçirebilirsiniz. `ELEMENT_TYPE_ARRAY`  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplığı** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hata Ayıklama Yapıları](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [Hata Ayıklama](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Hata Ayıklama Yapıları](debugging-structures.md)
+- [Hata Ayıklama](index.md)

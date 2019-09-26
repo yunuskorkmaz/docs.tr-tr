@@ -18,15 +18,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a9eb9bb1e4abeb98d8d0ba2b052612d918c45f22
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3a05a779d4a56eb8f881da1824d5ffaa363b5a01
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741091"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274276"
 ---
 # <a name="closeclrenumeration-function"></a>CloseCLREnumeration İşlevi
-Bir dizi tarafından döndürülen tanıtıcı bulunan geçerli ortak dil çalışma zamanı (CLR) devam başlangıç olaylara kapatır [EnumerateCLRs işlevi](../../../../docs/framework/unmanaged-api/debugging/enumerateclrs-function.md)ve tanıtıcı ve dize yolu diziler için belleği serbest bırakır.  
+Geçerli ortak dil çalışma zamanı (CLR) Continue-, [EnumerateCLRs işlevi](enumerateclrs-function.md)tarafından döndürülen bir dizi tanıtıcıda bulunan Başlangıç olaylarını kapatır ve tanıtıcı ve dize yolu dizileri için belleği serbest bırakır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,29 +40,29 @@ HRESULT CloseCLREnumeration (
   
 ## <a name="parameters"></a>Parametreler  
  `pHandleArray`  
- [in] Sağlayıcıdan döndürülen olay tanıtıcı dizisine işaretçisine [EnumerateCLRs işlevi](../../../../docs/framework/unmanaged-api/debugging/enumerateclrs-function.md).  
+ 'ndaki [EnumerateCLRs işlevinden](enumerateclrs-function.md)döndürülen olay tanıtıcısı dizisine yönelik işaretçi.  
   
  `pStringArray`  
- [in] CLR dize yolları öğesinden döndürülen bir dizi işaretçi [EnumerateCLRs işlevi](../../../../docs/framework/unmanaged-api/debugging/enumerateclrs-function.md).  
+ 'ndaki [EnumerateCLRs işlevinden](enumerateclrs-function.md)döndürülen CLR dize yollarının dizisine yönelik işaretçi.  
   
  `dwArrayLength`  
- [in] Boyutu (uzunluk) ya da içeren DWORD `pHandleArray` veya `pStringArray` (bunlar aynıdır).  
+ 'ndaki `pHandleArray` Ya`pStringArray` da (uzunluk) boyutunu (aynı) içeren DWORD.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  S_OK  
- Tanıtıcıları açan [EnumerateCLRs işlevi](../../../../docs/framework/unmanaged-api/debugging/enumerateclrs-function.md) kapalı olduğundan ve tanıtıcı ve dize diziler için ayrılan belleği serbest.  
+ [EnumerateCLRs işlevi](enumerateclrs-function.md) tarafından açılan tutamaçlar kapatılır ve tanıtıcı ve dize dizileri için ayrılan bellek serbest bırakılır.  
   
  E_INVALIDARG  
- Uzunluğunu `pHandleArray` geçirilen uzunluğu eşleşmiyor `dwArrayLength`.  
+ `pHandleArray` Uzunluğu`dwArrayLength`geçilen uzunlukla eşleşmiyor.  
   
- E_FAIL (veya diğer E_ dönüş kodları)  
- İşlev için belleği serbest silemiyor `pHandleArray` ve `pStringArray`.  
+ E_FAıL (veya diğer E_ dönüş kodları)  
+ İşlevi ve `pHandleArray` `pStringArray`için belleği serbest bırakılamıyor.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Başlık:** dbgshim.h  
+ **Üstbilgi:** dbgshim. h  
   
- **Kitaplığı:** dbgshim.dll  
+ **Kitaplık:** dbgshim. dll  
   
- **.NET framework sürümleri:** 3.5 SP1
+ **.NET Framework sürümleri:** 3.5 SP1

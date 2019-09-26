@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6875ce0e7ae4cefa9b0c8abaded0dd4535bdf838
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 50dd4acece43628b20b6bc50a539ee197e865855
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740829"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274152"
 ---
-# <a name="coractivefunction-structure"></a>COR_ACTIVE_FUNCTION Yapısı
-Bir iş parçacığının çerçevelerde şu an etkin olan işlevler hakkında bilgiler içerir. Bu yapı tarafından kullanılan [Icordebugthread2::getactivefunctions](../../../../docs/framework/unmanaged-api/debugging/icordebugthread2-getactivefunctions-method.md) yöntemi.  
+# <a name="cor_active_function-structure"></a>COR_ACTIVE_FUNCTION Yapısı
+Şu anda bir iş parçacığının çerçevelerinde etkin olan işlevlerle ilgili bilgiler içerir. Bu yapı, [ICorDebugThread2:: GetActiveFunctions](icordebugthread2-getactivefunctions-method.md) yöntemi tarafından kullanılır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -42,22 +42,22 @@ typedef struct  _COR_ACTIVE_FUNCTION {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`pAppDomain`|Uygulama etki alanı sahibi işaretçisine `ilOffset` alan.|  
-|`pModule`|İşaretçi modülü sahibine `ilOffset` alan.|  
-|`pFunction`|İşaretçi işlevi sahibine `ilOffset` alan.|  
-|`ilOffset`|Çerçevenin Microsoft Ara dili (MSIL) uzaklığı.|  
-|`flags`|Sonra genişletilebilmek için ayrılmış.|  
+|`pAppDomain`|`ilOffset` Alanın uygulama etki alanı sahibine yönelik işaretçi.|  
+|`pModule`|`ilOffset` Alanın modül sahibine yönelik işaretçi.|  
+|`pFunction`|`ilOffset` Alanın işlev sahibine yönelik işaretçi.|  
+|`ilOffset`|Çerçevenin Microsoft ara dili (MSIL) kayması.|  
+|`flags`|Gelecekteki genişletilebilirlik için ayrılmıştır.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug.idl  
+ **Üst bilgi** CorDebug. IDL  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplığı** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hata Ayıklama Yapıları](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [Hata Ayıklama](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Hata Ayıklama Yapıları](debugging-structures.md)
+- [Hata Ayıklama](index.md)

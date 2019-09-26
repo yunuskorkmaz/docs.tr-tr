@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5787f9f143e99ab30879ddcf8168b0e840b2fb4e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 67b85917be590bdba7ed3f10972ad39b731dbcdd
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740977"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274237"
 ---
 # <a name="clrdataenummemoryflags-enumeration"></a>CLRDataEnumMemoryFlags Numaralandırması
-Hangi bellek bölgeleri için bir çağrı gösterir [Iclrdataenummemoryregions::enummemoryregions](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregions-enummemoryregions-method.md) yöntemini içerir.  
+Hangi bellek bölgelerinin [ıclrdataenummemoryregion:: EnumMemoryRegion](iclrdataenummemoryregions-enummemoryregions-method.md) yöntemine yönelik bir çağrı içermesi gerektiğini gösterir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,18 +40,18 @@ typedef enum CLRDataEnumMemoryFlags {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`CLRDATA_ENUM_MEM_DEFAULT`|Bir mini döküm, diğer bir deyişle, seyrek bellek dökümü.|  
-|`CLRDATA_ENUM_MEM_HEAP`|Bir tam bir yığın dökümü oluşturulur.|  
+|`CLRDATA_ENUM_MEM_DEFAULT`|Bir mini döküm, diğer bir deyişle seyrek bellek dökümü.|  
+|`CLRDATA_ENUM_MEM_HEAP`|Tam bir yığın dökümü.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üst bilgi:** ClrData.idl, ClrData.h  
+ **Üst bilgi** ClrData. IDL, ClrData. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplığı** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hata Ayıklama Sabit Listeleri](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [Hata Ayıklama Sabit Listeleri](debugging-enumerations.md)

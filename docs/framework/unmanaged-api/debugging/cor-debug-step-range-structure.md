@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8bda8079cff8f5e8fafade03a02c3dfe8798c5ca
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 11d5e2eb5e2743fca4876ed09add79be3eba514f
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740773"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274201"
 ---
-# <a name="cordebugsteprange-structure"></a>COR_DEBUG_STEP_RANGE Yapısı
-Kod aralığı uzaklık bilgilerini içerir.  
+# <a name="cor_debug_step_range-structure"></a>COR_DEBUG_STEP_RANGE Yapısı
+Bir kod aralığı için konum bilgilerini içerir.  
   
- Bu yapı tarafından kullanılan [ICorDebugStepper::steprange](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-steprange-method.md) yöntemi.  
+ Bu yapı, [ICorDebugStepper:: StepRange](icordebugstepper-steprange-method.md) yöntemi tarafından kullanılır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,20 +41,20 @@ typedef struct {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`startOffset`|Aralığın başlangıç uzaklığı.|  
-|`endOffset`|Aralığın uzaklığı.|  
+|`startOffset`|Aralığın başındaki fark.|  
+|`endOffset`|Aralığın sonundaki fark.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug.idl  
+ **Üst bilgi** CorDebug. IDL  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplığı** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [StepRange Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-steprange-method.md)
-- [Hata Ayıklama Yapıları](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [Hata Ayıklama](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [StepRange Yöntemi](icordebugstepper-steprange-method.md)
+- [Hata Ayıklama Yapıları](debugging-structures.md)
+- [Hata Ayıklama](index.md)

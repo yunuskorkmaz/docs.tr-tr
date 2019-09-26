@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 83dac3b9b2ac396cdef19695fcce0f7e20485a50
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 57de11c1c40c05befcf3c99c31c2e07e1ecaec5a
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740398"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71273965"
 ---
 # <a name="cordebugblockingobject-structure"></a>CorDebugBlockingObject Yapısı
-Bir iş parçacığı ve iş parçacığı engellenir belirli bir nedenle engelleyen bir nesneyi tanımlar.  
+Bir iş parçacığını engelleyen bir nesne ve iş parçacığının engellediği belirli bir nedeni tanımlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,22 +41,22 @@ CorDebugBlockingReason blockingReason;
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`pBlockingObject`|Nesne üzerinde iş parçacığını engelliyor. Bu nesne yalnızca geçerli eşitleme durumunun süresi boyunca geçerlidir. İki iş parçacığı aynı eşitlenmiş durum içinde'aynı nesne üzerinde engelliyorsanız bekleyebilir [Icordebugvalue::getaddress](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-getaddress-method.md) aynı değeri döndürmek için yöntemi. Ancak, arabirimler olabilir veya eşdeğer bir işaretçi olabilir.|  
-|`dwTimeout`|Engelleme işleminden önce milisaniye sayısını, zaman aşımı veya onu olacağı zaman aşımına gösteren SONSUZ değer olur. Zaman aşımı değerini durdurma işlemi, yine de kalan saat için toplam süreyi belirtir.|  
-|`blockingReason`|Neden iş parçacığı bu nesne üzerinde engellenir.|  
+|`pBlockingObject`|İş parçacığının engellediği nesne. Bu nesne yalnızca geçerli eşitlenmiş durumun süresi için geçerlidir. Aynı eşitlenmiş durum içindeki aynı nesnede iki iş parçacığı engellenirse, [ICorDebugValue:: GetAddress](icordebugvalue-getaddress-method.md) yönteminin aynı değeri döndürmesini beklemeniz gerekebilir. Ancak, arabirimler işaretçi eşdeğeri olabilir veya olmayabilir.|  
+|`dwTimeout`|Engelleme işlemi zaman aşımına geçmeden önce geçen milisaniye sayısı veya sonsuz değeri, zaman aşımına gerekmediğini gösterir. Zaman aşımı değeri, hala kalan süre değil, engelleyici işlem için geçen sürenin toplam uzunluğunu belirtir.|  
+|`blockingReason`|Bu nesne üzerinde iş parçacığının engellendiği neden.|  
   
 ## <a name="remarks"></a>Açıklamalar  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug.idl  
+ **Üst bilgi** CorDebug. IDL  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplığı** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hata Ayıklama Yapıları](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [Hata Ayıklama](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Hata Ayıklama Yapıları](debugging-structures.md)
+- [Hata Ayıklama](index.md)

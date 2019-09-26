@@ -4,17 +4,17 @@ description: Temel sınıf kitaplığı olan .NET CoreFx 'teki son değişiklikl
 ms.date: 09/20/2019
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7940da342bae6a745b6729ad00c42dbde27a96c8
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 3838bcd7c127860a8307fe31bd85ed5addffb59e
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71217138"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71272707"
 ---
 # <a name="corefx-breaking-changes"></a>CoreFx değişiklikleri
 
 > [!IMPORTANT]
-> Bu makale yapım aşamasındadır. Bu, .NET Core önemli değişikliklerinin tamamen bir listesi değildir. .NET Core ile ilgili değişiklikler hakkında daha fazla bilgi için GitHub 'daki DotNet/docs deposundaki tek tek [değişiklikler sorunlarını](https://github.com/dotnet/docs/issues?q=is%3Aissue+is%3Aopen+label%3Abreaking-change) inceleyebilirsiniz. 
+> Bu makale yapım aşamasındadır. Bu, .NET Core önemli değişikliklerinin tamamen bir listesi değildir. .NET Core ile ilgili değişiklikler hakkında daha fazla bilgi için GitHub 'daki DotNet/docs deposundaki tek tek [değişiklikler sorunlarını](https://github.com/dotnet/docs/issues?q=is%3Aissue+is%3Aopen+label%3Abreaking-change) inceleyebilirsiniz.
 
 Aşağıda .NET Core sürümüne göre CoreFx 'in son değişikliklerinin bir listesi verilmiştir. CoreFx, .NET Core tarafından kullanılan temel öğeler ve diğer genel türler sağlar.
 
@@ -65,4 +65,3 @@ Aşağıda .NET Core sürümüne göre CoreFx 'in son değişikliklerinin bir li
 ***
 
 [!INCLUDE[ZipArchiveEntry no longer handles archives with inconsistent entry sizes](~/includes/core-changes/corefx/ziparchiveentry-and-inconsistent-entry-sizes.md)]
-

@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e46118e97a4b888a16f12cf6705d2b7e67bbf7ec
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: fce803544b393ac2c441779183cbf49d4c39bdae
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740353"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71273986"
 ---
 # <a name="cordebugchainreason-enumeration"></a>CorDebugChainReason Numaralandırması
-Neden veya çağrı zincirinin başlatma nedenlerle gösterir.  
+Bir çağrı zincirinin başlatılması için neden veya nedenleri gösterir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -50,32 +50,32 @@ typedef enum CorDebugChainReason {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`CHAIN_NONE`|Hiçbir çağrı zinciri başlatıldı.|  
-|`CHAIN_CLASS_INIT`|Zincir Oluşturucu tarafından başlatıldı.|  
-|`CHAIN_EXCEPTION_FILTER`|Zinciri, özel durum Filtresi tarafından başlatıldı.|  
-|`CHAIN_SECURITY`|Zincir güvenlik zorlar kod tarafından başlatıldı.|  
-|`CHAIN_CONTEXT_POLICY`|Zincirdeki bir bağlam İlkesi tarafından başlatıldı.|  
+|`CHAIN_NONE`|Hiçbir çağrı zinciri başlatılmadı.|  
+|`CHAIN_CLASS_INIT`|Zincir bir Oluşturucu tarafından başlatıldı.|  
+|`CHAIN_EXCEPTION_FILTER`|Zincir bir özel durum filtresi tarafından başlatıldı.|  
+|`CHAIN_SECURITY`|Zincir, güvenliği zorlayan kod tarafından başlatıldı.|  
+|`CHAIN_CONTEXT_POLICY`|Zincir bir bağlam ilkesi tarafından başlatıldı.|  
 |`CHAIN_INTERCEPTION`|Kullanılmadı.|  
 |`CHAIN_PROCESS_START`|Kullanılmadı.|  
-|`CHAIN_THREAD_START`|Zincir tarafından bir iş parçacığı yürütme başlangıcı başlatıldı.|  
-|`CHAIN_ENTER_MANAGED`|Zincirinin yönetilen koda giriş tarafından başlatıldı.|  
-|`CHAIN_ENTER_UNMANAGED`|Zincir yönetilmeyen koda giriş tarafından başlatıldı.|  
+|`CHAIN_THREAD_START`|Zincir, iş parçacığı yürütme başlangıcı tarafından başlatıldı.|  
+|`CHAIN_ENTER_MANAGED`|Zincir, yönetilen koda giriş tarafından başlatıldı.|  
+|`CHAIN_ENTER_UNMANAGED`|Zincir, yönetilmeyen koda giriş tarafından başlatıldı.|  
 |`CHAIN_DEBUGGER_EVAL`|Kullanılmadı.|  
 |`CHAIN_CONTEXT_SWITCH`|Kullanılmadı.|  
-|`CHAIN_FUNC_EVAL`|Zincirdeki bir işlev değerlendirmesi tarafından başlatıldı.|  
+|`CHAIN_FUNC_EVAL`|Zincir bir işlev değerlendirmesi tarafından başlatıldı.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Kullanım [Icordebugchain::getreason](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-getreason-method.md) başlatma bir çağrı zincirinin nedenlerini belirlemek için yöntemi.  
+ Bir çağrı zincirinin başlatılması nedenlerini belirlemek için [ıcordebugzincirine:: GetReason](icordebugchain-getreason-method.md) metodunu kullanın.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplığı** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hata Ayıklama Sabit Listeleri](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [Hata Ayıklama Sabit Listeleri](debugging-enumerations.md)

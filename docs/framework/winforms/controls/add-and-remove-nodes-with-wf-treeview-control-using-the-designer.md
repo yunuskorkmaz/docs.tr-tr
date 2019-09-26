@@ -8,10 +8,10 @@ helpviewer_keywords:
 - TreeView control [Windows Forms], adding nodes
 ms.assetid: 35bf1750-045e-4ec5-97cb-b47b0dbdaa2c
 ms.openlocfilehash: ef3a963b5621f0b972b02a007681f600fbdb1050
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69040071"
 ---
 # <a name="how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control-using-the-designer"></a>Nasıl yapılır: Tasarımcı Kullanarak Windows Forms TreeView Denetimi ile Düğüm Ekleme ve Kaldırma
@@ -24,7 +24,7 @@ Aşağıdaki yordam, bir <xref:System.Windows.Forms.TreeView> denetim içeren bi
 
 1. <xref:System.Windows.Forms.TreeView> Denetimi seçin.
 
-2. **Özellikler** penceresinde,![ özelliğin<xref:System.Windows.Forms.TreeView.Nodes%2A> yanındaki Visual Studio](./media/visual-studio-ellipsis-button.png)'nun Özellikler penceresi (...) üç nokta (...) düğmesine tıklayın.
+2. **Özellikler** penceresinde](./media/visual-studio-ellipsis-button.png)![, özelliğin<xref:System.Windows.Forms.TreeView.Nodes%2A> yanındaki Visual Studio 'nun Özellikler penceresi (... **) üç nokta (.** ..) düğmesine tıklayın.
 
      **TreeNode Düzenleyicisi** görünür.
 

@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 2f34ae3e6687027aeb75e7ea169487fc8cbda466
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3f6928832d822422177ebd7def142422953468a0
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741037"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274287"
 ---
-# <a name="clrdatailaddressmap-structure"></a>CLRDATA_IL_ADDRESS_MAP Yapısı
+# <a name="clrdata_il_address_map-structure"></a>CLRDATA_IL_ADDRESS_MAP Yapısı
 
-Bir IL adresi eşleme tanımlar.
+Bir Il 'yi eşlemek için bir Il tanımlar.
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -44,24 +44,24 @@ typedef struct
 
 | Üye         | Açıklama                                            |
 | -------------- | ------------------------------------------------------ |
-| `ilOffset`     | Kapsanan adresi aralığı için IL uzaklığı              |
+| `ilOffset`     | Kapsanan adres aralığı için Il kayması              |
 | `startAddress` | Aralığın başlangıç adresi.                        |
 | `endAddress`   | Aralığın bitiş adresi.                          |
-| `type`         | Veri türü. Bu değer şu anda kullanılmıyor |
+| `type`         | Verilerin türü. Bu değer şu anda kullanılmıyor |
 
 ## <a name="remarks"></a>Açıklamalar
 
-Bu yapı, çalışma zamanı içinde yer alan ve herhangi bir üst bilgiler veya kitaplık dosyaları gösterilmez. Bunu kullanmak için yapı, yukarıda belirtildiği gibi burada tanımlarsınız `CLRDATA_ADDRESS` 64-bit işaretsiz tamsayıdır.
+Bu yapı çalışma zamanının içinde bulunur ve herhangi bir üst bilgi veya kitaplık dosyası aracılığıyla gösterilmez. Kullanmak için, yapıyı yukarıda belirtilen şekilde tanımlayın; burada `CLRDATA_ADDRESS` 64 bitlik işaretsiz bir tamsayıdır.
 
 ## <a name="requirements"></a>Gereksinimler
 
-**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
-**Üst bilgi:** Yok.  
-**Kitaplığı:** None   
-**.NET framework sürümleri:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
+**Üst bilgi** Yok.  
+**Kitaplığı** Yok.   
+**.NET Framework sürümleri:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [CLRDataSourceType numaralandırması](../../../../docs/framework/unmanaged-api/debugging/clrdatasourcetype-enumeration.md)
-- [Hata Ayıklama](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [Hata Ayıklama Yapıları](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [CLRDataSourceType numaralandırması](clrdatasourcetype-enumeration.md)
+- [Hata Ayıklama](index.md)
+- [Hata Ayıklama Yapıları](debugging-structures.md)

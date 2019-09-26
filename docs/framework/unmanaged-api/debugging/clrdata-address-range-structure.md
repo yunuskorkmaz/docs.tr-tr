@@ -15,14 +15,14 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: afcb4e642c9b54107423f7474771fdc28cde709e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8eb841b4c4f06a3932805ae6222bdd693def5ea0
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741021"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274307"
 ---
-# <a name="clrdataaddressrange-structure"></a>CLRDATA_ADDRESS_RANGE Yapısı
+# <a name="clrdata_address_range-structure"></a>CLRDATA_ADDRESS_RANGE Yapısı
 
 Bir adres aralığı tanımlar.
 
@@ -47,16 +47,16 @@ typedef struct
 
 ## <a name="remarks"></a>Açıklamalar
 
-Bu yapı, çalışma zamanı içinde yer alan ve herhangi bir üst bilgiler veya kitaplık dosyaları gösterilmez. Bunu kullanmak için yapı, yukarıda belirtildiği gibi burada tanımlarsınız `CLRDATA_ADDRESS` 64-bit işaretsiz tamsayıdır.
+Bu yapı çalışma zamanının içinde bulunur ve herhangi bir üst bilgi veya kitaplık dosyası aracılığıyla gösterilmez. Kullanmak için, yapıyı yukarıda belirtilen şekilde tanımlayın; burada `CLRDATA_ADDRESS` 64 bitlik işaretsiz bir tamsayıdır.
 
 ## <a name="requirements"></a>Gereksinimler
 
-**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
-**Üst bilgi:** Yok.  
-**Kitaplığı:** None  
-**.NET framework sürümleri:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
+**Üst bilgi** Yok.  
+**Kitaplığı** Yok.  
+**.NET Framework sürümleri:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hata Ayıklama](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [Hata Ayıklama Yapıları](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [Hata Ayıklama](index.md)
+- [Hata Ayıklama Yapıları](debugging-structures.md)

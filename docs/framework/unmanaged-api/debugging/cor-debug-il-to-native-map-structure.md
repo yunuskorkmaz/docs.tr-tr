@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 238e59978bd084379fe6c0576107d674812bce8d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: babb1ace1385c241b782691f22bfb4fbb689e310
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740789"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274069"
 ---
-# <a name="cordebugiltonativemap-structure"></a>COR_DEBUG_IL_TO_NATIVE_MAP Yapısı
-Yerel kod için Microsoft Ara dil (MSIL) kodu eşlemek için kullanılan uzaklıkları içerir.  
+# <a name="cor_debug_il_to_native_map-structure"></a>COR_DEBUG_IL_TO_NATIVE_MAP Yapısı
+Microsoft ara dili (MSIL) kodunu yerel kodla eşlemek için kullanılan uzaklıkları içerir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,22 +40,22 @@ typedef struct COR_DEBUG_IL_TO_NATIVE_MAP {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`ilOffset`|MSIL kodunun uzaklığı.|  
-|`nativeStartOffset`|Yerel kod başlangıç uzaklığı.|  
-|`nativeEndOffset`|Yerel kod sonuna uzaklığı.|  
+|`ilOffset`|MSIL kodunun boşluğu.|  
+|`nativeStartOffset`|Yerel kodun başlangıcının boşluğu.|  
+|`nativeEndOffset`|Yerel kodun sonundaki fark.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üst bilgi:** CorProf.idl, CorDebug.idl  
+ **Üst bilgi** CorProf. IDL, CorDebug. IDL  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplığı** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [GetILToNativeMapping Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getiltonativemapping-method.md)
-- [GetILToNativeMapping Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-getiltonativemapping-method.md)
-- [Hata Ayıklama Yapıları](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [Hata Ayıklama](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [GetILToNativeMapping Yöntemi](../profiling/icorprofilerinfo-getiltonativemapping-method.md)
+- [GetILToNativeMapping Yöntemi](icordebugcode-getiltonativemapping-method.md)
+- [Hata Ayıklama Yapıları](debugging-structures.md)
+- [Hata Ayıklama](index.md)

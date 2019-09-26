@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services, learn more
 - WCF Data Services, scenarios
 ms.assetid: 7c82658f-e7c0-46b6-834d-6592f67ab5ea
-ms.openlocfilehash: eaf92bea30b80a47d0f623e38eed7768bccdbb6a
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 9e70e2fff0bee22bcb7d7668f33302f7e7013117
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928497"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71273143"
 ---
 # <a name="application-scenarios-wcf-data-services"></a>Uygulama senaryoları (WCF Veri Hizmetleri)
 
@@ -18,7 +18,7 @@ ms.locfileid: "70928497"
 
 Bir veritabanındaki ilişkisel verileri bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] akış olarak kullanıma sunun.
 
-- [Hızlı başlangıç](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)
+- [Hızlı başlangıç](quickstart-wcf-data-services.md)
 
 - [Verilerinizi Hizmet Olarak Kullanıma Sunma](exposing-your-data-as-a-service-wcf-data-services.md)
 
@@ -26,7 +26,7 @@ Bir veritabanındaki ilişkisel verileri bir [!INCLUDE[ssODataShort](../../../..
 
 Rastgele clr veri sınıflarını bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] akış olarak kullanıma sunun.
 
-- [Verilerinizi Hizmet Olarak Kullanıma Sunma](../../../../docs/framework/data/wcf/exposing-your-data-as-a-service-wcf-data-services.md)
+- [Verilerinizi Hizmet Olarak Kullanıma Sunma](exposing-your-data-as-a-service-wcf-data-services.md)
 
 - [Nasıl yapılır: Yansıma sağlayıcısını kullanarak veri hizmeti oluşturma](create-a-data-service-using-rp-wcf-data-services.md)
 
@@ -34,7 +34,7 @@ Rastgele clr veri sınıflarını bir [!INCLUDE[ssODataShort](../../../../includ
 
 .NET Framework tabanlı [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] bir istemci uygulamasında bir akışı kullanın.
 
-- [Hızlı başlangıç](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)
+- [Hızlı başlangıç](quickstart-wcf-data-services.md)
 
 - [İstemci Uygulamasında Veri Hizmeti Kullanma](using-a-data-service-in-a-client-application-wcf-data-services.md)
 
@@ -50,7 +50,7 @@ Silverlight tabanlı [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-m
 
 Ajax tabanlı [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] bir istemci uygulamasında bir akışı kullanın.
 
-- [İstemci Uygulamasında Veri Hizmeti Kullanma](../../../../docs/framework/data/wcf/using-a-data-service-in-a-client-application-wcf-data-services.md)
+- [İstemci Uygulamasında Veri Hizmeti Kullanma](using-a-data-service-in-a-client-application-wcf-data-services.md)
 
 - [OData URI kuralları](https://go.microsoft.com/fwlink/?LinkId=185564)
 
@@ -58,7 +58,7 @@ Ajax tabanlı [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 
 
 İstemci ve sunucu arasında veri aktarmak için kullanan [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] uçtan uca bir veri çözümü oluşturun.
 
-- [Hızlı başlangıç](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)
+- [Hızlı başlangıç](quickstart-wcf-data-services.md)
 
 - [İstemci Uygulamasında Veri Hizmeti Kullanma](using-a-data-service-in-a-client-application-wcf-data-services.md)
 
@@ -66,7 +66,7 @@ Ajax tabanlı [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 
 
 İstemcide gecikme sorunlarından kaçınmak için [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] akışı zaman uyumsuz olarak kullanan .NET Framework tabanlı bir istemci uygulaması oluşturun.
 
-- [Nasıl yapılır: Zaman uyumsuz veri hizmeti sorguları yürütme](../../../../docs/framework/data/wcf/how-to-execute-asynchronous-data-service-queries-wcf-data-services.md)
+- [Nasıl yapılır: Zaman uyumsuz veri hizmeti sorguları yürütme](how-to-execute-asynchronous-data-service-queries-wcf-data-services.md)
 
 - [Zaman Uyumsuz İşlemler](asynchronous-operations-wcf-data-services.md)
 
@@ -74,13 +74,13 @@ Ajax tabanlı [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 
 
 Bir akış olarak erişilen [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] ve değiştirilen bir ikili büyük nesneyle akışı kullanıma sunma ve kullanma.
 
-- [Akış Sağlayıcısı](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md)
+- [Akış Sağlayıcısı](streaming-provider-wcf-data-services.md)
 
 - [İkili Verilerle Çalışma](working-with-binary-data-wcf-data-services.md)
 
 Bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] Windows Presentation Framework (WPF) uygulamasındaki denetimlere akış bağlayın.
 
-- [Veriyi Denetimlere Bağlama](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md)
+- [Veriyi Denetimlere Bağlama](binding-data-to-controls-wcf-data-services.md)
 
 - [Nasıl yapılır: Windows Presentation Foundation öğelerine veri bağlama](bind-data-to-wpf-elements-wcf-data-services.md)
 
@@ -88,13 +88,13 @@ Bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] Windows Pr
 
 Veri doğrulama ve sorgu için rol tabanlı filtreleme gerçekleştirmek üzere veri hizmetine gelen iletileri kesme.
 
-- [Nasıl yapılır: Veri hizmeti Iletilerini kesme](../../../../docs/framework/data/wcf/how-to-intercept-data-service-messages-wcf-data-services.md)
+- [Nasıl yapılır: Veri hizmeti Iletilerini kesme](how-to-intercept-data-service-messages-wcf-data-services.md)
 
 - [Durdurucular](interceptors-wcf-data-services.md)
 
 Özel hizmet davranışlarını etkinleştirmek için bir veri hizmeti üzerinde uç noktalar oluşturun.
 
-- [Nasıl yapılır: Hizmet Işlemi tanımlama](../../../../docs/framework/data/wcf/how-to-define-a-service-operation-wcf-data-services.md)
+- [Nasıl yapılır: Hizmet Işlemi tanımlama](how-to-define-a-service-operation-wcf-data-services.md)
 
 - [Hizmet İşlemleri](service-operations-wcf-data-services.md)
 

@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2efe159eaa8b49d4d3825e9737593d0a12fc4d4c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f857f773f02da25fe6650000be777b8290f5af91
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740740"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274054"
 ---
-# <a name="corfield-structure"></a>COR_FIELD Yapısı
-Bir alan bir nesne hakkında bilgi sağlar.  
+# <a name="cor_field-structure"></a>COR_FIELD Yapısı
+Bir nesne içindeki bir alan hakkında bilgi sağlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,23 +41,23 @@ typedef struct COR_FIELD{
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`token`|Bir `mdFieldDef` alan bilgilerini almak için kullanılan belirteç.|  
-|`offset`|Nesne yer alan verilere bayt cinsinden uzaklığı.|  
-|`id`|A [cor_typeıd](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) bu alanın türünü tanımlayan bir değer.|  
-|`fieldType`|Alan türünü belirten bir CorElementType sabit listesi değer.|  
+|`token`|Alan `mdFieldDef` bilgilerini almak için kullanılabilen bir belirteç.|  
+|`offset`|Nesnedeki alan verilerine göre bayt cinsinden fark.|  
+|`id`|Bu alanın türünü tanımlayan bir [COR_TYPEID](cor-typeid-structure.md) değeri.|  
+|`fieldType`|Alanın türünü gösteren bir CorElementType numaralandırma değeri.|  
   
 ## <a name="remarks"></a>Açıklamalar  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplığı** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hata Ayıklama Yapıları](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [Hata Ayıklama](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Hata Ayıklama Yapıları](debugging-structures.md)
+- [Hata Ayıklama](index.md)

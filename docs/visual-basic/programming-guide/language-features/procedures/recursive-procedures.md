@@ -10,42 +10,44 @@ helpviewer_keywords:
 - functions [Visual Basic], calling recursively
 - recursion
 ms.assetid: ba1d3962-b4c3-48d3-875e-96fdb4198327
-ms.openlocfilehash: de9a2af9fc3cd78879b6525245727a6f52d51c63
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b08a06a07f134b7c95251848862d39339e59fe61
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61791852"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274351"
 ---
 # <a name="recursive-procedures-visual-basic"></a>Özyinelemeli Yordamlar (Visual Basic)
-A *özyinelemeli* yordam, kendi kendini çağıran bir kullanılır. Genel olarak, Visual Basic kod yazmak için en etkili yolu değil.  
+
+*Özyinelemeli* yordam kendisini çağıran bir yordamdır. Genel olarak, Visual Basic kodu yazmak için en etkili yol değildir.  
   
- Aşağıdaki yordam, özgün bağımsız değişkeninin faktöriyelini hesaplamak için özyineleme kullanır.  
+ Aşağıdaki yordam, orijinal bağımsız değişkeninin faktöriyelini hesaplamak için özyineleme kullanır.  
   
  [!code-vb[VbVbcnProcedures#51](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#51)]  
   
-## <a name="considerations-with-recursive-procedures"></a>Özyinelemeli yordamlar hakkında konuları  
- **Koşullar sınırlama**. Özyineleme sonlandırabilirsiniz en az bir koşul için test etmek için bir özyinelemeli yordamı tasarlamanız gerekir ve ayrıca burada herhangi bir koşul makul bir özyinelemeli çağrıların sayısı içinde sağlanırsa durum işlemesi gerekir. Başarısız karşılanabiliyorsa en az bir koşul olmadan yordamınız sonsuz bir döngüde yürütmenin bir yüksek riskli çalıştırır.  
-  
- **Bellek kullanımı**. Uygulamanızı yerel değişkenler için alan sınırlı bir süre vardır. Bir yordam kendisini çağıran her zaman daha bu alan yerel değişkenlerini ek kopyalarını kullanır. Bu işlem süresiz olarak devam ederse, sonunda neden olan bir <xref:System.StackOverflowException> hata.  
-  
- **Verimliliği**. Neredeyse her zaman bir döngü için özyineleme birbirinin yerine kullanabilir. Bir döngü, ek depolama alanı'nı başlatma ve değerler döndüren argümanları başlatır, yükü yok. Performansınızı özyinelemeli çağrılar çok daha iyi olabilir.  
-  
- **Karşılıklı özyineleme**. Her iki yordam çağırırsanız çok kötü performans veya hatta bir sonsuz döngüye mümkün görebilirsiniz. Bu tür bir tasarım tek özyinelemeli yordamla aynı oluşturur, ancak algılama ve hata ayıklamayı daha zor olabilir.  
-  
- **Parantezler ile çağırma**. Olduğunda bir `Function` yordam çağrıları kendisini yinelemeli olarak, hiçbir bağımsız değişken listesi olsa bile, parantezli yordam adı izlemelidir. Aksi halde, işlev adı alınmış işlevinin dönüş değerini temsil eden olarak.  
-  
- **Test**. Bir özyinelemeli yordam yazarsanız, bu çok dikkatli bir şekilde her zaman bir sınırlama bazı koşullar karşıladığından emin olmak için test etmelisiniz. Ayrıca, özyinelemeli çağrı sayısı çok fazla olması nedeniyle bellek yetersiz çalıştıramazsınız emin olmalısınız.  
-  
+## <a name="considerations-with-recursive-procedures"></a>Özyinelemeli yordamlarla ilgili konular
+
+ **Koşulları sınırlandırma**. Özyineleme 'yi sonlandıran en az bir koşul için test etmek üzere yinelemeli bir yordam tasarlaması gerekir ve ayrıca makul sayıda özyinelemeli çağrı içinde böyle bir koşulun karşılanmadığı durumu da işlemeniz gerekir. Başarısız olmadan karşılanabilecek en az bir koşul olmadan, yordamınız sonsuz bir döngüde yürütmenin yüksek bir riskini çalıştırır.
+
+ **Bellek kullanımı**. Uygulamanızın yerel değişkenler için sınırlı miktarda alanı vardır. Her bir yordam kendi kendine her çağırdığında, yerel değişkenlerinin ek kopyaları için bu alanın daha fazlasını kullanır. Bu işlem süresiz olarak devam ederse, bir <xref:System.StackOverflowException> hataya neden olur.
+
+ **Verimlilik**. Özyineleme için neredeyse her zaman bir döngü kullanabilirsiniz. Döngü, bağımsız değişken geçirme, ek depolama başlatma ve değer döndürme ek yüküne sahip değildir. Performans özyinelemeli çağrılar olmadan çok daha iyi olabilir.
+
+ **Karşılıklı özyineleme**. İki yordam de varsa, çok kötü performans veya sonsuz bir döngü gözlemleyebilirsiniz. Böyle bir tasarım, tek bir özyinelemeli yordamla aynı sorunları sunar, ancak algılaması ve hata ayıklaması zor olabilir.
+
+ **Parantez Ile çağırma**. Bir `Function` yordam yinelemeli olarak çağırdığında, bağımsız değişken listesi olmasa bile, parantez ile yordam adını izlemelisiniz. Aksi takdirde, işlev adı işlevin dönüş değerini temsil eden olarak alınır.
+
+ **Test ediliyor**. Özyinelemeli bir yordam yazarsanız, her zaman sınırlandırma koşullarını karşıladığından emin olmak için bunu dikkatle sınamanız gerekir. Ayrıca çok fazla özyinelemeli çağrı olduğundan belleği tükendiğinizden emin olmanız gerekir.
+
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.StackOverflowException>
-- [Yordamlar](./index.md)
-- [Alt Yordamlar](./sub-procedures.md)
-- [İşlev Yordamları](./function-procedures.md)
-- [Özellik Yordamları](./property-procedures.md)
-- [İşleç Yordamları](./operator-procedures.md)
-- [Yordam Parametreleri ve Bağımsız Değişkenleri](./procedure-parameters-and-arguments.md)
-- [Yordam Aşırı Yüklemesi](./procedure-overloading.md)
-- [Yordam Sorunlarını Giderme](./troubleshooting-procedures.md)
-- [Döngü Yapıları](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)
+- [Yordamlar](index.md)
+- [Alt Yordamlar](sub-procedures.md)
+- [İşlev Yordamları](function-procedures.md)
+- [Özellik Yordamları](property-procedures.md)
+- [İşleç Yordamları](operator-procedures.md)
+- [Yordam Parametreleri ve Bağımsız Değişkenleri](procedure-parameters-and-arguments.md)
+- [Yordam Aşırı Yüklemesi](procedure-overloading.md)
+- [Yordam Sorunlarını Giderme](troubleshooting-procedures.md)
+- [Döngü Yapıları](../control-flow/loop-structures.md)

@@ -4,17 +4,17 @@ description: .NET Core için Windows Forms 'deki son değişiklikleri listeler.
 ms.date: 09/20/2019
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3b08361bc71149f517d070a58c97d243840500ea
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 436088836ff5441e426379bb41f96821cbc7e500
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71217089"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71272729"
 ---
 # <a name="breaking-changes-in-windows-forms"></a>Windows Forms 'deki değişiklikler kesiliyor
 
 > [!IMPORTANT]
-> Bu makale yapım aşamasındadır. Bu, .NET Core önemli değişikliklerinin tamamen bir listesi değildir. .NET Core ile ilgili değişiklikler hakkında daha fazla bilgi için GitHub 'daki DotNet/docs deposundaki tek tek [değişiklikler sorunlarını](https://github.com/dotnet/docs/issues?q=is%3Aissue+is%3Aopen+label%3Abreaking-change) inceleyebilirsiniz. 
+> Bu makale yapım aşamasındadır. Bu, .NET Core önemli değişikliklerinin tamamen bir listesi değildir. .NET Core ile ilgili değişiklikler hakkında daha fazla bilgi için GitHub 'daki DotNet/docs deposundaki tek tek [değişiklikler sorunlarını](https://github.com/dotnet/docs/issues?q=is%3Aissue+is%3Aopen+label%3Abreaking-change) inceleyebilirsiniz.
 
 Aşağıda, .NET Core sürümüne göre Windows Forms yapılan son değişikliklerin bir listesi verilmiştir.
 
@@ -55,7 +55,6 @@ Aşağıda, .NET Core sürümüne göre Windows Forms yapılan son değişiklikl
 [!INCLUDE[SerializableAttribute removed from some Windows Forms types](~/includes/core-changes/windowsforms/remove-serializationattribute.md)]
 
 ## <a name="net-core-30"></a>.NET Core 3.0
-
 
 [!INCLUDE[Control.DefaultFont changed to Segoe UI 9pt](~/includes/core-changes/windowsforms/control-defaultfont-changed.md)]
 

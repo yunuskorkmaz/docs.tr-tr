@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eef2d75a2c8a3445c7f8666fec5be9e4d089e3cb
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: aabf3ac4e51280bd847d145e15ad804d514ede2c
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740526"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274004"
 ---
-# <a name="corsegment-structure"></a>COR_SEGMENT Yapısı
-Bellek yönetilen yığında bir bölge hakkında bilgi içerir.  
+# <a name="cor_segment-structure"></a>COR_SEGMENT Yapısı
+Yönetilen yığında bir bellek bölgesi hakkındaki bilgileri içerir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,26 +41,26 @@ typedef struct _COR_SEGMENT {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`start`|Bellek bölgesini başlangıç adresi.|  
-|`end`|Bellek bölgesini bitiş adresi.|  
-|`gen`|A [CorDebugGenerationTypes](../../../../docs/framework/unmanaged-api/debugging/cordebuggenerationtypes-enumeration.md) bellek bölgesini neslini belirten sabit listesi üyesi.|  
-|`heap`|Bellek bölgesini bulunduğu yığın sayısı. Daha fazla bilgi için Açıklamalar bölümüne bakın.|  
+|`start`|Bellek bölgesinin başlangıç adresi.|  
+|`end`|Bellek bölgesinin bitiş adresi.|  
+|`gen`|Bellek bölgesinin üretimini gösteren [CorDebugGenerationTypes](cordebuggenerationtypes-enumeration.md) sabit listesi üyesi.|  
+|`heap`|Bellek bölgesinin bulunduğu yığın numarası. Daha fazla bilgi için Açıklamalar bölümüne bakın.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `COR_SEGMENTS` Yapıyı yönetilen yığında bellek bölgesini temsil eder.  `COR_SEGMENTS` nesneleri üyeleridir [ICorDebugHeapRegionEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugheapsegmentenum-interface.md) çağırarak doldurulur koleksiyon nesnesine [Icordebugprocess5::enumerateheapregions](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumerateheapregions-method.md) yöntemi.  
+ `COR_SEGMENTS` Yapı, yönetilen yığında bir bellek bölgesini temsil eder.  `COR_SEGMENTS`nesneler, [ICorDebugProcess5:: Enumerateheapregion](icordebugprocess5-enumerateheapregions-method.md) yöntemi çağırarak doldurulan [ICorDebugHeapRegionEnum](icordebugheapsegmentenum-interface.md) koleksiyon nesnesinin üyeleridir.  
   
- `heap` Karşılık gelen bildirilen yığın işlemci sayısı bir alandır. İş istasyonu çöp toplama yığınında yalnızca bir olduğundan iş istasyonu atık toplayıcıları değeri her zaman sıfırdır. Sunucu atık toplayıcıları, yığın bağlı işlemciye değerine karşılık gelir. Olabilir, daha fazla veya daha az çöp toplama yığınlardaki atık toplayıcının uygulama ayrıntılarını nedeniyle gerçek işlemci sayısından unutmayın.  
+ `heap` Alan, bildirilen yığına karşılık gelen işlemci numarasıdır. İş istasyonları yalnızca bir atık toplama yığınına sahip olduğundan, iş istasyonu atık toplayıcıları için değeri her zaman sıfırdır. Sunucu çöp toplayıcıları için, değeri yığının eklendiği işlemciye karşılık gelir. Çöp toplayıcısının uygulama ayrıntıları nedeniyle gerçek işlemcilerin olduğu daha fazla veya daha az atık toplama yığınlarının olabileceğini unutmayın.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplığı** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hata Ayıklama Yapıları](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [Hata Ayıklama](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Hata Ayıklama Yapıları](debugging-structures.md)
+- [Hata Ayıklama](index.md)

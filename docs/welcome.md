@@ -5,12 +5,12 @@ author: mairaw
 ms.author: mairaw
 ms.date: 09/23/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: 0b4a2380bf2ddb59c181a07d7f8a006d6252d11f
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: bc525aeefe2c247c610886fae6ae7d79cb9e6517
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216858"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274327"
 ---
 # <a name="welcome-to-net"></a>.NET 'e hoş geldiniz
 
@@ -32,7 +32,7 @@ Ayrıca, en son .NET olaylarını izleyin:
 - [Microsoft derleme](https://www.microsoft.com/build)
 - [.NET conf](https://www.dotnetconf.net/)
 - [Microsoft Connect ()](https://www.microsoft.com/connectevent)
-- 
+
 .NET uygulamalarına ve desteklenen dillere eklenen en son özellikler hakkında daha fazla bilgi için aşağıdaki makalelere bakın:
 
 - [​.NET Core'daki Yenilikler](core/whats-new/index.md)
