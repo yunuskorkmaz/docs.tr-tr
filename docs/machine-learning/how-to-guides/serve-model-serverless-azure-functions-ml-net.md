@@ -1,16 +1,16 @@
 ---
 title: Modeli Azure İşlevleri’ne dağıtma
 description: Azure Işlevleri 'ni kullanarak Internet üzerinden tahmin için ML.NET yaklaşım analizi makine öğrenimi modelini sunar
-ms.date: 08/20/2019
+ms.date: 09/12/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to
-ms.openlocfilehash: 96b62017994da5b7b209c441b3e7fb760cad5201
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: ef028fee6cafcf4a775e061d9a5f91f0cf9a7e36
+ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666677"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71332704"
 ---
 # <a name="deploy-a-model-to-azure-functions"></a>Modeli Azure İşlevleri’ne dağıtma
 
@@ -66,23 +66,11 @@ Yaklaşımı tahmin etmek için bir sınıf oluşturun. Projenize yeni bir sın�
 
 1. **Yeni Azure işlevi** Iletişim kutusunda **http tetikleyicisi**' ni seçin. Ardından **Tamam** düğmesini seçin.
 
-    *AnalyzeSentiment.cs* dosyası kod düzenleyicisinde açılır. Aşağıdaki `using` ifadeyi *AnalyzeSentiment.cs*öğesinin en üstüne ekleyin:
+    *AnalyzeSentiment.cs* dosyası kod düzenleyicisinde açılır. Aşağıdaki `using` ifadesini *AnalyzeSentiment.cs*öğesinin en üstüne ekleyin:
 
-    ```csharp
-    using System;
-    using System.IO;
-    using System.Threading.Tasks;
-    using Microsoft.AspNetCore.Mvc;
-    using Microsoft.Azure.WebJobs;
-    using Microsoft.Azure.WebJobs.Extensions.Http;
-    using Microsoft.AspNetCore.Http;
-    using Microsoft.Extensions.Logging;
-    using Newtonsoft.Json;
-    using Microsoft.Extensions.ML;
-    using SentimentAnalysisFunctionsApp.DataModels;
-    ```
+    [!code-csharp [AnalyzeUsings](~/machinelearning-samples/samples/csharp/end-to-end-apps/ScalableMLModelOnAzureFunction/SentimentAnalysisFunctionsApp/AnalyzeSentiment.cs#L1-L11)]
 
-    Varsayılan olarak, `AnalyzeSentiment` `static`sınıfı. `static` Anahtar sözcüğünü sınıf tanımından kaldırdığınızdan emin olun.
+    Varsayılan olarak, `AnalyzeSentiment` sınıfı `static` ' dir. Sınıf tanımından `static` anahtar sözcüğünü kaldırdığınızdan emin olun.
 
     ```csharp
     public class AnalyzeSentiment
@@ -101,53 +89,28 @@ Giriş verileriniz ve tahminlerinizi için bazı sınıflar oluşturmanız gerek
 
     *SentimentData.cs* dosyası kod düzenleyicisinde açılır. Aşağıdaki using ifadesini *SentimentData.cs*öğesinin en üstüne ekleyin:
 
-    ```csharp
-    using Microsoft.ML.Data;
-    ```
+    [!code-csharp [SentimentDataUsings](~/machinelearning-samples/samples/csharp/end-to-end-apps/ScalableMLModelOnAzureFunction/SentimentAnalysisFunctionsApp/DataModels/SentimentData.cs#L1)]
 
     Mevcut sınıf tanımını kaldırın ve aşağıdaki kodu *SentimentData.cs* dosyasına ekleyin:
-    
-    ```csharp
-    public class SentimentData
-    {
-        [LoadColumn(0)]
-        public string SentimentText;
 
-        [LoadColumn(1)]
-        [ColumnName("Label")]
-        public bool Sentiment;
-    }
-    ```
+    [!code-csharp [SentimentData](~/machinelearning-samples/samples/csharp/end-to-end-apps/ScalableMLModelOnAzureFunction/SentimentAnalysisFunctionsApp/DataModels/SentimentData.cs#L5-L13)]
 
 4. Çözüm Gezgini, *veri modelleri* dizinine sağ tıklayın ve sonra **> yeni öğe Ekle**' yi seçin.
 5. **Yeni öğe Ekle** Iletişim kutusunda **sınıf** ' ı seçin ve **ad** alanını *SentimentPrediction.cs*olarak değiştirin. Sonra **Ekle** düğmesini seçin. *SentimentPrediction.cs* dosyası kod düzenleyicisinde açılır. Aşağıdaki using ifadesini *SentimentPrediction.cs*öğesinin en üstüne ekleyin:
 
-    ```csharp
-    using Microsoft.ML.Data;
-    ```
+    [!code-csharp [SentimentPredictionUsings](~/machinelearning-samples/samples/csharp/end-to-end-apps/ScalableMLModelOnAzureFunction/SentimentAnalysisFunctionsApp/DataModels/SentimentPrediction.cs#L1)]
 
     Mevcut sınıf tanımını kaldırın ve aşağıdaki kodu *SentimentPrediction.cs* dosyasına ekleyin:
 
-    ```csharp
-    public class SentimentPrediction : SentimentData
-    {
+    [!code-csharp [SentimentPrediction](~/machinelearning-samples/samples/csharp/end-to-end-apps/ScalableMLModelOnAzureFunction/SentimentAnalysisFunctionsApp/DataModels/SentimentPrediction.cs#L5-L14)]
 
-        [ColumnName("PredictedLabel")]
-        public bool Prediction { get; set; }
-
-        public float Probability { get; set; }
-
-        public float Score { get; set; }
-    }
-    ```
-
-    `SentimentPrediction``SentimentData` ,`SentimentText` özelliğindeki özgün verilere ve model tarafından oluşturulan çıktıya erişim sağlayan öğesinden devralır.
+    `SentimentPrediction`, `SentimentText` özelliğindeki özgün verilere ve model tarafından oluşturulan çıktıya erişim sağlayan `SentimentData` ' den devralır.
 
 ## <a name="register-predictionenginepool-service"></a>PredictionEnginePool hizmetini Kaydet
 
-Tek bir tahmin yapmak için kullanın [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602). Uygulamanızda kullanabilmeniz [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) için, gerektiğinde oluşturmanız gerekir. Bu durumda, dikkate alınması gereken en iyi yöntem bağımlılık ekleme yöntemidir.
+Tek bir tahmin yapmak için bir [@no__t](xref:Microsoft.ML.PredictionEngine%602)oluşturmanız gerekir. [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602), iş parçacığı açısından güvenli değildir. Ayrıca, uygulamanızın içinde gerek duyduğu her yerde bir örneği oluşturmanız gerekir. Uygulamanız büyüdükçe, bu işlem yönetilebilir hale gelebilir. Daha iyi performans ve iş parçacığı güvenliği için, uygulamanız genelinde kullanılmak üzere bir [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) nesnesi oluşturan bağımlılık ekleme ve `PredictionEnginePool` hizmeti birleşimini kullanın.
 
-Aşağıdaki bağlantı, [bağımlılık ekleme](https://en.wikipedia.org/wiki/Dependency_injection)hakkında bilgi edinmek istiyorsanız daha fazla bilgi sağlar.
+Aşağıdaki bağlantı, [bağımlılık ekleme](https://en.wikipedia.org/wiki/Dependency_injection)hakkında daha fazla bilgi edinmek istiyorsanız daha fazla bilgi sağlar.
 
 1. **Çözüm Gezgini**, projeye sağ tıklayın ve ardından**Yeni öğe** **Ekle** > ' yi seçin.
 1. **Yeni öğe Ekle** Iletişim kutusunda **sınıf** ' ı seçin ve **ad** alanını *Startup.cs*olarak değiştirin. Sonra **Ekle** düğmesini seçin. 
@@ -172,32 +135,29 @@ Aşağıdaki bağlantı, [bağımlılık ekleme](https://en.wikipedia.org/wiki/D
             public override void Configure(IFunctionsHostBuilder builder)
             {
                 builder.Services.AddPredictionEnginePool<SentimentData, SentimentPrediction>()
-                    .FromFile("MLModels/sentiment_model.zip");
+                    .FromFile(modelName: "SentimentAnalysisModel", filePath:"MLModels/sentiment_model.zip", watchForChanges: true);
             }
         }
     }
     ```
 
-Yüksek düzeyde bu kod, uygulama tarafından el ile yapmak yerine nesneleri ve hizmetleri otomatik olarak başlatır.
+Yüksek düzeyde, bu kod, uygulama tarafından el ile yapmak yerine, daha sonra kullanmak üzere nesne ve hizmetleri otomatik olarak başlatır. 
 
-> [!WARNING]
-> [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602), iş parçacığı açısından güvenli değildir. Gelişmiş performans ve iş parçacığı güvenliği için, uygulama `PredictionEnginePool` kullanımı için `PredictionEngine` bir [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) nesne oluşturan hizmetini kullanın. 
+Makine öğrenimi modelleri statik değildir. Yeni eğitim verileri kullanılabilir hale geldiğinde, model geri çekme ve yeniden dağıtılır. Bir modelin en son sürümünü uygulamanıza almanın bir yolu, uygulamanın tamamını yeniden dağıtmaktan biridir. Ancak bu, uygulama kapalı kalma süresini tanıtır. @No__t-0 hizmeti, uygulamanızı kapatmak zorunda kalmadan güncelleştirilmiş bir modeli yeniden yüklemek için bir mekanizma sağlar. 
+
+@No__t-0 parametresini `true` olarak ayarlayın ve `PredictionEnginePool`, dosya sistemi değişiklik bildirimlerini dinleyen ve dosyada değişiklik olduğunda olay başlatan bir [`FileSystemWatcher`](xref:System.IO.FileSystemWatcher) başlatır. Bu, modeli otomatik olarak yeniden yüklemek için `PredictionEnginePool` ' a sorar.
+
+Model `modelName` parametresiyle tanımlanır, böylece değişiklik yapıldığında uygulama başına birden fazla model yeniden yüklenebilir. 
+
+Alternatif olarak, uzaktan depolanan modellerle çalışırken `FromUri` yöntemini kullanabilirsiniz. Dosya değiştirilen olayları izlemek yerine `FromUri`, uzak konumu değişiklikler için yoklar. Yoklama aralığı varsayılan olarak 5 dakikadır. Uygulama gereksinimlerine bağlı olarak yoklama aralığını artırabilir veya azaltabilirsiniz.
 
 ## <a name="load-the-model-into-the-function"></a>Modeli işleve yükleme
 
 Aşağıdaki kodu, *çözümleyiciler* sınıfının içine ekleyin:
 
-```csharp
-private readonly PredictionEnginePool<SentimentData, SentimentPrediction> _predictionEnginePool;
+[!code-csharp [AnalyzeCtor](~/machinelearning-samples/samples/csharp/end-to-end-apps/ScalableMLModelOnAzureFunction/SentimentAnalysisFunctionsApp/AnalyzeSentiment.cs#L18-L24)]
 
-// AnalyzeSentiment class constructor
-public AnalyzeSentiment(PredictionEnginePool<SentimentData, SentimentPrediction> predictionEnginePool)
-{
-    _predictionEnginePool = predictionEnginePool;
-}
-```
-
-Bu kod, `PredictionEnginePool` bağımlılığı ekleme yoluyla aldığınız işlevin oluşturucusuna geçirerek öğesine atar.
+Bu kod, bağımlılığı ekleme yoluyla aldığınız işlevin oluşturucusuna geçirerek `PredictionEnginePool` ' a atar.
 
 ## <a name="use-the-model-to-make-predictions"></a>Tahminleri yapmak için modeli kullanın
 
@@ -214,9 +174,9 @@ ILogger log)
     //Parse HTTP Request Body
     string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
     SentimentData data = JsonConvert.DeserializeObject<SentimentData>(requestBody);
-    
+
     //Make Prediction
-    SentimentPrediction prediction = _predictionEnginePool.Predict(data);
+    SentimentPrediction prediction = _predictionEnginePool.Predict(modelName: "SentimentAnalysisModel", example: data);
 
     //Convert prediction to string
     string sentiment = Convert.ToBoolean(prediction.Prediction) ? "Positive" : "Negative";
@@ -226,7 +186,7 @@ ILogger log)
 }
 ```
 
-Yöntem yürütüldüğünde, http isteğinden gelen veriler seri durumdan çıkarılmış olur ve `PredictionEnginePool`için giriş olarak kullanılır. `Run` Daha `Predict` sonra yöntemi bir tahmin oluşturmak ve sonucu kullanıcıya döndürmek için çağrılır. 
+@No__t-0 yöntemi yürütüldüğünde, HTTP isteğinden gelen veriler seri durumdan çıkarılan ve `PredictionEnginePool` için giriş olarak kullanılır. @No__t-0 yöntemi, `Startup` sınıfında kayıtlı `SentimentAnalysisModel` ' i kullanarak tahmine dayalı hale getirmek için olarak çağrılır ve başarılı olursa sonuçları kullanıcıya geri döndürür.
 
 ## <a name="test-locally"></a>Yerel olarak test etme
 

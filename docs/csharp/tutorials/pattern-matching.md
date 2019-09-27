@@ -3,12 +3,12 @@ title: Veri türlerini genişletmek için model eşleştirme özelliklerini kull
 description: Bu gelişmiş öğreticide, ayrı olarak oluşturulan verileri ve algoritmaları kullanarak işlevsellik oluşturmak için model eşleştirme tekniklerini nasıl kullanabileceğiniz gösterilmektedir.
 ms.date: 03/13/2019
 ms.custom: mvc
-ms.openlocfilehash: 9266bb1e998fba77c27e17e498b72f4a5925dd7a
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 036a6bcda04771eb8cf3699af8756e83bb144389
+ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216543"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71332359"
 ---
 # <a name="tutorial-using-pattern-matching-features-to-extend-data-types"></a>Öğretici: Veri türlerini genişletmek için model eşleştirme özelliklerini kullanma
 
@@ -240,6 +240,9 @@ vehicle switch
     DeliveryTruck t when (t.GrossWeightClass > 5000) => 10.00m + 5.00m,
     DeliveryTruck t when (t.GrossWeightClass < 3000) => 10.00m - 2.00m,
     DeliveryTruck t => 10.00m,
+    
+    { }     => throw new ArgumentException(message: "Not a known vehicle type", paramName: nameof(vehicle)),
+    null    => throw new ArgumentNullException(nameof(vehicle))
 };
 ```
 
@@ -294,7 +297,7 @@ Bu özellik için model eşleştirmeyi kullanacaksınız, ancak diğer teknikler
 
 Aşağıdaki tabloda, giriş değerleri ve en yüksek fiyatlandırma çarpanı birleşimleri gösterilmektedir:
 
-| Gün        | Zaman         | Yön | Premium |
+| Gün        | Time         | Direction | Premium |
 | ---------- | ------------ | --------- |--------:|
 | HAFTANINGÜNÜ    | sabah aceleniz | Gelen   | x 2,00  |
 | HAFTANINGÜNÜ    | sabah aceleniz | Giden  | x 1,00  |

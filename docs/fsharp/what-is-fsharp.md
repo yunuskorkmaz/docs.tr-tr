@@ -2,14 +2,14 @@
 title: F# nedir?
 description: F# Programlama dilinin ne olduğu ve F# programlamanın nasıl olduğu hakkında bilgi edinin. Zengin veri türleri, işlevleri ve nasıl birbirine sığması hakkında bilgi edinin.
 ms.date: 08/03/2018
-ms.openlocfilehash: 0c576fe49fadebd68e4fc9d2b20ea8f0cb991af5
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 3cba509f59a8e81e1a0264de7451e9d80304d768
+ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630453"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71332728"
 ---
-# <a name="what-is-f"></a>F nedir?\#
+# <a name="what-is-f"></a>F @ no__t-0 nedir?
 
 F#, doğru ve sürdürülebilir kod yazmayı kolaylaştıran işlevsel bir programlama dilidir.
 
@@ -100,7 +100,7 @@ F#işlevler ayrıca birinci sınıftır, yani Parametreler olarak geçirilebilir
 F#, veri ve işlevsellik Blend gerektiğinde yararlı veri türleri olan nesneler için tam desteğe sahiptir. F#işlevleri nesneleri işlemek için kullanılır.
 
 ```fsharp
-type Set<[<EqualityConditionOn>] 'T when 'T: comparison>(elements: seq<'T>) =
+type Set<'T when 'T: comparison>(elements: seq<'T>) =
     member s.IsEmpty = // Implementation elided
     member s.Contains (value) =// Implementation elided
     member s.Add (value) = // Implementation elided
@@ -110,7 +110,6 @@ type Set<[<EqualityConditionOn>] 'T when 'T: comparison>(elements: seq<'T>) =
     interface IEnumerable<‘T>
     interface IReadOnlyCollection<‘T>
 
-[<RequireQualifiedAccess>]
 module Set =
     let isEmpty (set: Set<'T>) = set.IsEmpty
 

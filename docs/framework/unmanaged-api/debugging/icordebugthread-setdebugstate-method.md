@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 66f60b2342b6ff64f1329cbe57032291d5139384
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 15e18888e307a14c4396966afc0a623e1acba104
+ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67770595"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71332804"
 ---
 # <a name="icordebugthreadsetdebugstate-method"></a>ICorDebugThread::SetDebugState Yöntemi
-Bu Icordebugthread hata ayıklama durumunu açıklayan bir bayrak ayarlar.  
+Bu ICorDebugThread 'in hata ayıklama durumunu tanımlayan bayrakları ayarlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,16 +37,16 @@ HRESULT SetDebugState (
   
 ## <a name="parameters"></a>Parametreler  
  `state`  
- [in] Bu iş parçacığı hata ayıklama durumunu belirten CorDebugThreadState sabit listesi değerlerinin Bitsel bir birleşimi.  
+ 'ndaki Bu iş parçacığının hata ayıklama durumunu belirten, CorDebugThreadState numaralandırma değerlerinin bit düzeyinde birleşimi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `SetDebugState` Geçerli iş parçacığı hata ayıklama durumunu ayarlar. (İşlemi devam için gerçek geçerli durumunda olsaydı "Geçerli hata ayıklama durumunu" hata ayıklama durumunu gösterir.) Normal bu THREAD_RUNNING değerdir. Yalnızca hata ayıklayıcı, bir iş parçacığı hata ayıklama durumunu etkileyebilir. Hata ayıklama durumlarını son boyunca devam eder, bir iş parçacığı üzerinde birden çok THREAD_SUSPENDed devam tutmak istiyorsanız, bunu ayarlamalı ve bundan sonra endişelenmenize gerek yok. İş parçacıklarını askıya alma ve sürdürme işlemi kilitlenmeler, genellikle olsa da neden olabilir. Bu bir iç kalitesi iş parçacıklarında ve işlemlerde ve tasarım. Zaman uyumsuz olarak bir hata ayıklayıcı kesme ve kilitlenme ayırmak için iş parçacığı sürdürme. Kullanıcı durumu iş parçacığının USER_UNSAFE_POINT içeriyorsa, iş parçacığı bir çöp toplama (GC) engelliyor olabilir. Bu, askıya alınan iş parçacığı bir kilitlenmeye neden olan bir çok daha yüksek şansı anlamına gelir. Bu, hata ayıklama olaylarını zaten kuyruğa alınmış etkilemeyebilir. Bu nedenle bir hata ayıklayıcı tüm olay sırasındaki boşaltma (çağırarak [Icordebugcontroller::hasqueuedcallbacks](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-hasqueuedcallbacks-method.md)) askıya alma ya da iş parçacıklarını önce. Aksi takdirde, zaten askıya aldı düşündüğü bir iş parçacığı üzerinde olayları alabilirsiniz.  
+ `SetDebugState`, iş parçacığının geçerli hata ayıklama durumunu ayarlar. ("Geçerli hata ayıklama durumu" işlemi devam etseydi, gerçek geçerli durum değil, hata ayıklama durumunu temsil eder.) Bunun normal değeri THREAD_RUN ' dir. Yalnızca hata ayıklayıcı bir iş parçacığının hata ayıklama durumunu etkileyebilir. Hata ayıklama durumları son boyunca devam eder, bu nedenle bir iş parçacığı THREAD_SUSPENDed birden çok defa devam etmek istiyorsanız, bir kez ayarlayabilir ve bundan sonra endişelenmenize gerek kalmaz. İş parçacıklarını askıya almak ve işlemi sürdürmek kilitlenmeye neden olabilir, ancak bu genellikle düşüktür. Bu, iş parçacıklarının ve işlemlerin gerçek bir kalitesidir ve tasarıma göre yapılır. Hata ayıklayıcı kilitlenme kesmek için zaman uyumsuz olarak kesintiye uğratır ve iş parçacıklarını sürdürür. İş parçacığının kullanıcı durumu USER_UNSAFE_POINT içeriyorsa, iş parçacığı çöp toplamayı (GC) engelliyor olabilir. Bu, askıya alınan iş parçacığının kilitlenmeye neden olma olasılığını çok daha yüksek olduğu anlamına gelir. Bu, zaten kuyruğa alınmış olan hata ayıklama olaylarını etkilemeyebilir. Bu nedenle, iş parçacıklarını askıya almadan veya devam ettirmeden önce hata ayıklayıcı tüm olay kuyruğunu ( [ICorDebugController:: HasQueuedCallbacks](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-hasqueuedcallbacks-method.md)çağırarak) boşaltmalıdır. Diğer bir deyişle, zaten askıya alınmış olduğunu düşündüğü bir iş parçacığında olayları alabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplığı** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

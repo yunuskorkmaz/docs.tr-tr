@@ -4,12 +4,12 @@ description: .NET Core genel araçlarının ne olduğuna ve bunlara yönelik .NE
 author: KathleenDollard
 ms.date: 05/29/2018
 ms.custom: seodec18
-ms.openlocfilehash: 01c1463ceddcd64e5bab05b95a5ae4a91b6da838
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 40a0aabcf523e8dac9a3ad226064bbb3c1b3ce5b
+ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117457"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71332016"
 ---
 # <a name="net-core-global-tools-overview"></a>.NET Core genel araçlarına genel bakış
 
@@ -70,7 +70,7 @@ Tool 'dotnetsay' (version '2.0.0') was successfully installed.
 
 Genel araçlar varsayılan dizine veya belirli bir konuma yüklenebilir. Varsayılan dizinler şunlardır:
 
-| OS          | Yol                          |
+| OS          | `Path`                          |
 |-------------|-------------------------------|
 | Linux/macOS | `$HOME/.dotnet/tools`         |
 | Windows     | `%USERPROFILE%\.dotnet\tools` |
@@ -107,31 +107,6 @@ Ayrıca, aracın Web sitesinde veya aşağıdaki komutlardan birini yazarak kull
 dotnet <command> --help
 ```
 
-### <a name="what-could-go-wrong"></a>Hatalı gidebilirler
-
-Küresel araçlar, [çerçeveye bağlı uygulamalardır](../deploying/index.md#framework-dependent-deployments-fdd)ve bu, makinenizde yüklü bir .NET Core çalışma zamanına bağlı olarak gelir. Beklenen çalışma zamanı bulunamazsa, normal .NET Core çalışma zamanı alma-iletme kurallarını izler:
-
-* Bir uygulama, belirtilen birincil ve ikincil sürümün en yüksek düzeltme eki sürümüne ileri kaydedilir.
-* Eşleşen bir ana ve alt sürüm numarasına sahip eşleşen bir çalışma zamanı yoksa, sonraki en düşük sürüm kullanılır.
-* Çalışma zamanının veya önizleme sürümleri ile sürüm sürümlerinin önizleme sürümleri arasında ileri alma gerçekleşmez. Bu nedenle, önizleme sürümleri kullanılarak oluşturulan küresel araçların, yazar tarafından yeniden oluşturulması ve yeniden yayımlanması ve yeniden yüklenmesi gerekir.
-* .NET Core 2,1 Preview 1 ' de oluşturulan genel araçlarla ilgili ek sorunlar oluşabilir. Daha fazla bilgi için bkz. [.NET Core 2,1 Preview 2 bilinen sorunlar](https://github.com/dotnet/core/blob/master/release-notes/2.1/Preview/2.1.0-preview2-known-issues.md).
-
-Bir uygulama uygun bir çalışma zamanı bulamazsa, çalışmaz ve bir hata bildirir.
-
-Başka bir sorun ortaya çıkabilir, önceki önizleme sırasında oluşturulan küresel bir araç, şu anda yüklü olan .NET Core çalışma zamanları ile çalışmayabilir. Makinenizde hangi çalışma zamanlarının yüklü olduğunu aşağıdaki komutu kullanarak görebilirsiniz:
-
-```dotnetcli
-dotnet --list-runtimes
-```
-
-Genel aracının yazarına başvurun ve araç paketlerini, güncelleştirilmiş bir sürüm numarasıyla NuGet 'e yeniden derleyip yeniden yayımlayabilecekleri konusunda bilgi görüntüleyin. NuGet üzerinde paketi güncelleştirdikten sonra kopyanızı güncelleştirebilirsiniz.
-
-.NET Core CLI, ilk kullanımındaki yol ortam değişkenine varsayılan konumları eklemeye çalışır. Ancak, konumun otomatik olarak yola eklenebileceği birkaç senaryo vardır, örneğin:
-
-* `DOTNET_SKIP_FIRST_TIME_EXPERIENCE` Ortam değişkenini ayarladıysanız.
-* MacOS üzerinde. *tar. gz* dosyalarını *. pkg*değil kullanarak .NET Core SDK yüklediyseniz.
-* Linux 'ta, yolu yapılandırmak için kabuk ortam dosyasını düzenlemeniz gerekir.
-
 ## <a name="other-cli-commands"></a>Diğer CLı komutları
 
 .NET Core SDK .NET Core küresel araçlarını destekleyen diğer komutları içerir. Aşağıdaki seçeneklerden biriyle komutlardan birini kullanın: `dotnet tool`
@@ -162,3 +137,7 @@ Makinede yüklü olan tüm genel araçları, sürüm ve komutlarıyla birlikte g
 ```dotnetcli
 dotnet tool list -g
 ```
+
+## <a name="see-also"></a>Ayrıca bkz.
+
+* [.NET Core araç kullanımı sorunlarını giderme](troubleshoot-usage-issues.md)

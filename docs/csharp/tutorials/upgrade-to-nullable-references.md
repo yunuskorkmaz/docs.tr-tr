@@ -3,12 +3,12 @@ title: Null yapılabilir başvuru türleriyle tasarım
 description: Bu gelişmiş öğretici, null yapılabilir başvuru türlerine giriş sağlar. Başvuru değerleri null olduğunda ve derleyicinin null olmadıklarında zorunlu olmadığı durumlarda tasarım amacınızı ifade etmek için bilgi edineceksiniz.
 ms.date: 02/19/2019
 ms.custom: mvc
-ms.openlocfilehash: 616c9fdbe62d8147fb74fefc878f9277c2a1156b
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 842b1bb6e0d3032c6181cccf77934541754ff8ec
+ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71214290"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71332325"
 ---
 # <a name="tutorial-migrate-existing-code-with-nullable-reference-types"></a>Öğretici: Mevcut kodu Nullable başvuru türleriyle geçirin
 
@@ -52,9 +52,6 @@ Dil sürümünü yükseltmek 8,0 seçer C# , ancak null yapılabilir ek açıkla
 ```xml
 <Nullable>enable</Nullable>
 ```
-
-> [!IMPORTANT]
-> Öğe daha önce adlandırılmıştı `NullableContextOptions`. `Nullable` Yeniden adlandırma, Visual Studio 2019, 16,2-P1 ile birlikte gönderilir. 3\.0.100-preview5-011568 .NET Core SDK bu değişikliğe sahip değil. .NET Core CLI kullanıyorsanız, sonraki önizleme kullanılabilir olana kadar kullanmanız `NullableContextOptions` gerekir.
 
 Bir test derlemesi yapın ve uyarı listesine dikkat edin. Bu küçük uygulamada, derleyici beş uyarı üretir, bu nedenle null yapılabilir ek açıklama bağlamını etkin bırakıp tüm proje için uyarıları düzeltmeye başlayabilirsiniz.
 

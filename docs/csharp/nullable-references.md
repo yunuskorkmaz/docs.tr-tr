@@ -2,12 +2,12 @@
 title: Boş değer atanabilir başvuru türleri
 description: Bu makalede, 8 ' C# e eklenen Nullable başvuru türlerine genel bir bakış sağlanır. Yeni ve mevcut projeler için özelliği, null başvuru özel durumlarına karşı nasıl güvenlik sağladığını öğreneceksiniz.
 ms.date: 02/19/2019
-ms.openlocfilehash: 80018aaa409e7b4c188362482705de33ac5afd85
-ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
+ms.openlocfilehash: 05a8e14a7c51df685b3ffdf16aab997da0a8036f
+ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71272787"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71332367"
 ---
 # <a name="nullable-reference-types"></a>Boş değer atanabilir başvuru türleri
 
@@ -74,9 +74,12 @@ Ayrıca, aynı bağlamlarını projenizde her yerde ayarlamak için yönergeleri
 - `#nullable enable`: Null yapılabilir ek açıklama bağlamını ve null yapılabilir uyarı bağlamını **etkin**olarak ayarlar.
 - `#nullable disable`: Nullable ek açıklama bağlamını ve null yapılabilir uyarı bağlamını **devre dışı**olarak ayarlar.
 - `#nullable restore`: Null yapılabilir ek açıklama bağlamını ve null yapılabilir uyarı bağlamını proje ayarlarına geri yükler.
-- `#pragma warning disable nullable`: Null yapılabilir uyarı bağlamını **devre dışı**olarak ayarlayın.
-- `#pragma warning enable nullable`: Null yapılabilir uyarı bağlamını **etkin**olarak ayarlayın.
-- `#pragma warning restore nullable`: Null yapılabilir uyarı bağlamını proje ayarlarına geri yükler.
+- `#nullable disable warnings`: Null yapılabilir uyarı bağlamını **devre dışı**olarak ayarlayın.
+- `#nullable enable warnings`: Null yapılabilir uyarı bağlamını **etkin**olarak ayarlayın.
+- `#nullable restore warnings`: Null yapılabilir uyarı bağlamını proje ayarlarına geri yükler.
+- `#nullable disable annotations`: Null yapılabilir ek açıklama bağlamını **devre dışı**olarak ayarlayın.
+- `#nullable enable annotations`: Null yapılabilir ek açıklama bağlamını **etkin**olarak ayarlayın.
+- `#nullable restore annotations`: Ek açıklama uyarı bağlamını proje ayarlarına geri yükler.
 
 Varsayılan null atanabilir ek açıklaması ve uyarı bağlamları `disabled`şunlardır. Bu karar, mevcut kodunuzun değişiklik yapılmadan ve yeni bir uyarı oluşturmadan derlendiğini gösterir.
 

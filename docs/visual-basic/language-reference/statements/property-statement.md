@@ -1,5 +1,5 @@
 ---
-title: Property deyimi (Visual Basic)
+title: Property açıklaması (Visual Basic)
 ms.date: 05/12/2018
 f1_keywords:
 - vb.PropertySet
@@ -11,16 +11,16 @@ helpviewer_keywords:
 - property procedures [Visual Basic], Property statements
 - Property keyword [Visual Basic]
 ms.assetid: 3155edaf-8ebd-45c6-9cef-11d5d2dc8d38
-ms.openlocfilehash: 55da13eec9dc555c320ecd48d22d984dfcfea84c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2c3e417aad404171a43342dc92773615ec350ef5
+ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64751059"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71332742"
 ---
 # <a name="property-statement"></a>Property Deyimi
 
-Adı bir özelliği ve depolamak ve özelliğin değerini almak için kullanılan özellik yordamlarını bildirir.
+Bir özelliğin adını ve özellik değerini depolamak ve almak için kullanılan özellik yordamlarını bildirir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -45,43 +45,43 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
 
 - `attributelist`
 
-  İsteğe bağlı. Bu özellik için geçerli olan özniteliklerin listesi veya `Get` veya `Set` yordamı. Bkz: [öznitelik listesi](../../../visual-basic/language-reference/statements/attribute-list.md).
+  İsteğe bağlı. Bu özelliğe veya `Get` veya `Set` yordama uygulanan özniteliklerin listesi. Bkz. [öznitelik listesi](attribute-list.md).
 
 - `Default`
 
-  İsteğe bağlı. Bu özellik bir sınıf ya da yapı üzerinde tanımlandığı için varsayılan özelliği olduğunu belirtir. Varsayılan özellikleri parametreleri kabul etmeniz gerekir ve ayarlanabilir ve özellik adı belirtmeden alınır. Özellik olarak bildirirseniz `Default`, kullanamazsınız `Private` özelliği veya ya da kendi özellik yordamları.
+  İsteğe bağlı. Bu özelliğin tanımlandığı sınıf veya yapı için varsayılan özellik olduğunu belirtir. Varsayılan Özellikler parametreleri kabul etmeli ve özellik adı belirtilmeden ayarlanabilir ve alınmış olabilir. Özelliği `Default` olarak bildirirseniz, özellik üzerinde veya özellik yordamlarından birinde `Private` kullanamazsınız.
 
 - `accessmodifier`
 
-  İsteğe bağlı `Property` deyimi ve en fazla bir `Get` ve `Set` deyimleri. Aşağıdakilerden biri olabilir:
+  @No__t-0 ifadesinde ve `Get` ve `Set` deyimlerinin en üstünde yer alan isteğe bağlıdır. Aşağıdakilerden biri olabilir:
 
-  - [Public](../../../visual-basic/language-reference/modifiers/public.md)
+  - [Public](../modifiers/public.md)
 
-  - [Protected](../../../visual-basic/language-reference/modifiers/protected.md)
+  - [Protected](../modifiers/protected.md)
 
-  - [Friend](../../../visual-basic/language-reference/modifiers/friend.md)
+  - [Friend](../modifiers/friend.md)
 
-  - [Private](../../../visual-basic/language-reference/modifiers/private.md)
+  - [Private](../modifiers/private.md)
 
-  - [Protected Friend](../../language-reference/modifiers/protected-friend.md)
+  - [Protected Friend](../modifiers/protected-friend.md)
 
-  - [Private Protected](../../language-reference/modifiers/private-protected.md)
+  - [Private Protected](../modifiers/private-protected.md)
 
-  Bkz: [erişim düzeyini Visual Basic'te](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).
+  [Visual Basic erişim düzeylerine](../../programming-guide/language-features/declared-elements/access-levels.md)bakın.
 
 - `propertymodifiers`
 
   İsteğe bağlı. Aşağıdakilerden biri olabilir:
 
-  - [Overloads](../../../visual-basic/language-reference/modifiers/overloads.md)
+  - [Overloads](../modifiers/overloads.md)
 
-  - [Overrides](../../../visual-basic/language-reference/modifiers/overrides.md)
+  - [Overrides](../modifiers/overrides.md)
 
-  - [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)
+  - [Overridable](../modifiers/overridable.md)
 
-  - [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)
+  - [NotOverridable](../modifiers/notoverridable.md)
 
-  - [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md)
+  - [MustOverride](../modifiers/mustoverride.md)
 
   - `MustOverride Overrides`
 
@@ -89,74 +89,74 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
 
 - `Shared`
 
-  İsteğe bağlı. Bkz: [paylaşılan](../../../visual-basic/language-reference/modifiers/shared.md).
+  İsteğe bağlı. Bkz. [paylaşılan](../modifiers/shared.md).
 
 - `Shadows`
 
-  İsteğe bağlı. Bkz: [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).
+  İsteğe bağlı. Bkz. [gölgeler](../modifiers/shadows.md).
 
 - `ReadOnly`
 
-  İsteğe bağlı. Bkz: [salt okunur](../../../visual-basic/language-reference/modifiers/readonly.md).
+  İsteğe bağlı. Bkz. [ReadOnly](../modifiers/readonly.md).
 
 - `WriteOnly`
 
-  İsteğe bağlı. Bkz: [WriteOnly](../../../visual-basic/language-reference/modifiers/writeonly.md).
+  İsteğe bağlı. Bkz. [WriteOnly](../modifiers/writeonly.md).
 
 - `Iterator`
 
-  İsteğe bağlı. Bkz: [yineleyici](../../../visual-basic/language-reference/modifiers/iterator.md).
+  İsteğe bağlı. Bkz. [Yineleyici](../modifiers/iterator.md).
 
 - `name`
 
-  Gerekli. Özelliğin adı. Bkz: [bildirilen öğe adları](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).
+  Gerekli. Özelliğin adı. Bkz. [tanımlanmış öğe adları](../../programming-guide/language-features/declared-elements/declared-element-names.md).
 
 - `parameterlist`
 
-  İsteğe bağlı. Bu özelliğin parametreleri ve olası ek parametrelerini temsil eden yerel değişken adlarının listesini `Set` yordamı. Bkz: [parametre listesi](../../../visual-basic/language-reference/statements/parameter-list.md).
+  İsteğe bağlı. Bu özelliğin parametrelerini temsil eden yerel değişken adlarının listesi ve `Set` yordamının olası ek parametreleri. Bkz. [parametre listesi](parameter-list.md).
 
 - `returntype`
 
-  Gerekli if `Option Strict` olduğu `On`. Bu özellik tarafından döndürülen değerin veri türü.
+  @No__t-0 `On` ise gereklidir. Bu özellik tarafından döndürülen değerin veri türü.
 
 - `Implements`
 
-  İsteğe bağlı. Bu özellik bir veya daha fazla özellik, her biri bu özelliğin içeren sınıf veya yapı tarafından uygulanan bir arabirim içinde tanımlanmış uygulayan gösterir. Bkz: [uygulayan deyimi](../../../visual-basic/language-reference/statements/implements-statement.md).
+  İsteğe bağlı. Bu özelliğin, her biri bu özelliğin kapsayan sınıf veya yapı tarafından uygulanan bir arabirimde tanımlanan bir veya daha fazla özelliği uyguladığını gösterir. Bkz. [Implements açıklaması](implements-statement.md).
 
 - `implementslist`
 
-  Gerekli if `Implements` sağlanır. Uygulanan özelliklerin listesi.
+  @No__t-0 sağlanırsa gereklidir. Uygulanan özelliklerin listesi.
 
   `implementedproperty [ , implementedproperty ... ]`
 
-  Her `implementedproperty` aşağıdaki söz dizimini ve bölümleri vardır:
+  Her `implementedproperty` aşağıdaki söz dizimi ve bölümlere sahiptir:
 
   `interface.definedname`
 
-  |Bölümü|Açıklama|
+  |Bölümüyle|Açıklama|
   |---|---|
-  |`interface`|Gerekli. Bu özellik tarafından uygulanan arabirimin adını sınıf veya yapı içeren.|
-  |`definedname`|Gerekli. Ad tarafından özelliği tanımlanan `interface`.|
+  |`interface`|Gerekli. Bu özelliğin içeren sınıf veya yapı tarafından uygulanan bir arabirimin adı.|
+  |`definedname`|Gerekli. @No__t-0 ' da tanımlanan özelliğin adı.|
 
 - `Get`
 
-  İsteğe bağlı. Özellik işaretlenmişse gerekli `WriteOnly`. Başlatan bir `Get` özelliğinin değeri döndürmek için kullanılan bir özellik yordamı.
+  İsteğe bağlı. Özellik `ReadOnly` olarak işaretlenmişse gereklidir. Özelliğin değerini döndürmek için kullanılan `Get` özellik yordamını başlatır.  @No__t-0 deyimleri [Otomatik uygulanan özelliklerle](../../programming-guide/language-features/procedures/auto-implemented-properties.md)kullanılmaz.
 
 - `statements`
 
-  İsteğe bağlı. İçinde çalıştırılacak deyimler bloğunu `Get` veya `Set` yordamı.
+  İsteğe bağlı. @No__t-0 veya `Set` yordamı içinde çalıştırılacak deyimler bloğu.
 
 - `End Get`
 
-  Sonlandırır `Get` özellik yordamı.
+  @No__t-0 özellik yordamını sonlandırır.
 
 - `Set`
 
-  İsteğe bağlı. Özellik işaretlenmişse gerekli `ReadOnly`. Başlatan bir `Set` özellik değerini depolamak için kullanılan bir özellik yordamı.
+  İsteğe bağlı. Özellik `WriteOnly` olarak işaretlenmişse gereklidir. Özelliğin değerini depolamak için kullanılan `Set` özellik yordamını başlatır.  @No__t-0 deyimleri [Otomatik uygulanan özelliklerle](../../programming-guide/language-features/procedures/auto-implemented-properties.md)kullanılmaz.
 
 - `End Set`
 
-  Sonlandırır `Set` özellik yordamı.
+  @No__t-0 özellik yordamını sonlandırır.
 
 - `End Property`
 
@@ -164,41 +164,41 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
 
 ## <a name="remarks"></a>Açıklamalar
 
-`Property` Deyimi, özelliğin bildirimini sunar. Bir özelliğin sahip olabileceği bir `Get` yordamı (salt okunur), bir `Set` yordamı (salt okunur) veya her iki (okuma ve yazma). Atlayabilirsiniz `Get` ve `Set` otomatik uygulanan bir özellik kullanıldığında yordamı. Daha fazla bilgi için [Implemented Properties](../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md).
+@No__t-0 ifadesinde bir özelliğin bildirimi tanıtılmaktadır. Bir özellik `Get` yordamına (salt okuma), bir `Set` yordama (salt yazılır) veya her ikisine (okuma-yazma) sahip olabilir. Otomatik uygulanan bir özellik kullanırken `Get` ve `Set` yordamını atlayabilirsiniz. Daha fazla bilgi için bkz. [Otomatik uygulanan özellikler](../../programming-guide/language-features/procedures/auto-implemented-properties.md).
 
-Kullanabileceğiniz `Property` yalnızca sınıf düzeyinde. Başka bir deyişle *bildirim içeriğinin* bir özellik bir sınıf, yapı, modül veya arabirimi olması gerekir ve bir kaynak dosyası, ad alanı, yordam veya blok olamayacağı için. Daha fazla bilgi için [bildirim bağlamları ve varsayılan erişim düzeyleri](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).
+@No__t-0 ' i yalnızca sınıf düzeyinde kullanabilirsiniz. Yani bir özelliğin *Bildirim bağlamı* bir sınıf, yapı, modül veya arabirim olmalıdır ve kaynak dosya, ad alanı, yordam veya blok olamaz. Daha fazla bilgi için bkz. [bildirim bağlamları ve varsayılan erişim düzeyleri](declaration-contexts-and-default-access-levels.md).
 
-Varsayılan olarak, genel erişim özelliklerini kullanın. Bir özelliğin erişim düzeyiyle bir erişim değiştiricisidir düzenleyebilirsiniz `Property` deyimi ve isteğe bağlı olarak ayarlayabilir, özellik yordamları daha kısıtlayıcı bir erişim düzeyi.
+Varsayılan olarak, Özellikler ortak erişim kullanır. Bir özelliğin erişim düzeyini `Property` ifadesinde bir erişim değiştiricisiyle ayarlayabilir ve isteğe bağlı olarak özellik yordamlarından birini daha kısıtlayıcı bir erişim düzeyine ayarlayabilirsiniz.
 
-Visual Basic için bir parametre geçirir `Set` yordam sırasında özelliği atamaları. İçin bir parametre belirtmezseniz `Set`, tümleşik geliştirme ortamı (IDE) adlı bir örtük parametresini kullanan `value`. Bu parametre, özelliğe atanacak değer tutar. Genellikle bu değer özel bir yerel değişkene depolayın ve döndürün. her `Get` yordamı çağrılır.
+Visual Basic, özellik atamaları sırasında bir parametreyi `Set` yordamına geçirir. @No__t-0 için bir parametre belirtmezseniz, tümleşik geliştirme ortamı (IDE), `value` adlı örtük bir parametre kullanır. Bu parametre, özelliğine atanacak değeri tutar. Genellikle bu değeri özel bir yerel değişkende depolar ve `Get` yordamı çağrıldığında bunu döndürün.
 
 ## <a name="rules"></a>Kurallar
 
-- **Karışık erişim düzeyleri.** Okuma-yazma özelliği tanımlıyorsanız, isteğe bağlı olarak farklı erişim düzeyi için belirtebilirsiniz `Get` veya `Set` yordamı, ancak ikisine birden değil. Bunu yaparsanız, yordam erişim düzeyi özellik erişim düzeyinden daha kısıtlayıcı olmalıdır. Örneğin, özellik bildirilirse `Friend`, bildirebilirsiniz `Set` yordamı `Private`, ama `Public`.
+- **Karışık erişim düzeyleri.** Okuma-yazma özelliği tanımlıyorsanız, isteğe bağlı olarak `Get` veya `Set` yordamı için farklı bir erişim düzeyi belirtebilirsiniz, ancak her ikisini birden belirtemezsiniz. Bunu yaparsanız, yordam erişim düzeyinin özelliğin erişim düzeyinden daha kısıtlayıcı olması gerekir. Örneğin, özellik `Friend` olarak bildirilirse, `Set` yordamını `Private` değil, `Public` olarak bildirebilirsiniz.
 
-  Tanımlıyorsanız, bir `ReadOnly` veya `WriteOnly` özelliği, tek bir özellik yordamı (`Get` veya `Set`sırasıyla) tüm özelliği temsil eder. İki erişim düzeyi özelliği ayarlamanız gerekir çünkü bu tür bir yordam için bir farklı erişim düzeyi bildiremezsiniz.
+  @No__t-0 veya `WriteOnly` özelliği tanımlıyorsanız, tek özellik yordamı (sırasıyla `Get` veya `Set`) tüm özelliği temsil eder. Bu tür bir yordam için farklı bir erişim düzeyi bildiremezsiniz, çünkü bu özellik için iki erişim düzeyi ayarlayacaktı.
 
-- **Dönüş türü.** `Property` Deyimi döndürdüğü değerin veri türü bildirebilirsiniz. Herhangi bir veri türü veya bir sabit listesi, yapısı, sınıf veya arabirim adını belirtebilirsiniz.
+- **Dönüş türü.** @No__t-0 bildirimi, döndürdüğü değerin veri türünü bildirebilirler. Herhangi bir veri türü veya bir numaralandırma, yapı, sınıf veya arabirim adı belirtebilirsiniz.
 
-  Siz belirtmezseniz `returntype`, özellik döndürür `Object`.
+  @No__t-0 belirtmezseniz, özellik `Object` döndürür.
 
-- **Uygulama.** Bu özellik kullanıyorsa `Implements` anahtar sözcüğü, kapsayan sınıf veya yapı olmalıdır bir `Implements` hemen deyimi, `Class` veya `Structure` deyimi. `Implements` Deyimi belirttiğiniz her arabirim içermelidir `implementslist`. Ancak, bir arabirim tarafından tanımlayan adı `Property` (içinde `definedname`) bu özelliğin adı ile aynı olması gerekmez (içinde `name`).
+- **Paylaşır.** Bu özellik `Implements` anahtar sözcüğünü kullanıyorsa, kapsayan sınıf veya yapının `Class` veya `Structure` ifadesiyle hemen sonra bir `Implements` ifadesine sahip olması gerekir. @No__t-0 ifadesinin `implementslist` ' de belirtilen her arabirimi içermesi gerekir. Ancak, `Property` ' ı tanımlayan adın (`definedname` ' de), bu özelliğin adıyla aynı olması gerekmez (`name` ' de).
 
 ## <a name="behavior"></a>Davranış
 
-- **Bir özellik yordamı döndürüyor.** Zaman `Get` veya `Set` yordamı çağıran koda döndürür, kendisini çağıran deyiminin sonrasındaki deyime ile yürütme devam eder.
+- **Bir özellik yordamından döndürülüyor.** @No__t-0 veya `Set` yordamı çağıran koda döndüğünde, yürütme onu çağıran deyimden sonraki deyimle devam eder.
 
-  `Exit Property` Ve `Return` deyimleri neden hemen bir çıkış bir özellik yordamı. Herhangi bir sayıda `Exit Property` ve `Return` deyimleri yordamda herhangi bir yerinde görünebilir ve karıştırabilir miyim `Exit Property` ve `Return` deyimleri.
+  @No__t-0 ve `Return` deyimleri, bir özellik yordamından anında çıkış oluşmasına neden olur. Herhangi bir sayıda `Exit Property` ve `Return` deyimi yordamda herhangi bir yerde görünebilir ve `Exit Property` ve `Return` deyimlerini karıştırabilirsiniz.
 
-- **Dönüş değeri.** Bir değer döndürmek için bir `Get` yordam, özellik adı için değer atamak veya olmasını bir `Return` deyimi. Aşağıdaki örnek, özellik adı için dönüş değeri atar `quoteForTheDay` ve ardından `Exit Property` döndürülecek deyimi.
+- **Dönüş değeri.** @No__t-0 yordamından bir değer döndürmek için, değeri özellik adına atayabilir ya da bir `Return` ifadesine dahil edebilirsiniz. Aşağıdaki örnek, dönüş değerini `quoteForTheDay` özellik adına atar ve sonra geri dönmek için `Exit Property` ifadesini kullanır.
 
   [!code-vb[VbVbalrStatements#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#27)]
 
   [!code-vb[VbVbalrStatements#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#28)]
 
-  Kullanırsanız `Exit Property` değerine atama olmadan `name`, `Get` yordamı özelliğin veri türü için varsayılan değeri döndürür.
+  @No__t-1 ' e bir değer atamadan `Exit Property` ' ı kullanırsanız, `Get` yordamı özelliğin veri türü için varsayılan değeri döndürür.
 
-  `Return` Deyimi aynı anda atar `Get` yordamı dönüş değeri ve yordamdan çıkar. Aşağıdaki örnekte bu gösterir.
+  Aynı anda `Return` deyimleri, `Get` yordam dönüş değeri atar ve yordamdan çıkar. Aşağıdaki örnek bunu gösterir.
 
   [!code-vb[VbVbalrStatements#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#27)]
 
@@ -206,15 +206,15 @@ Visual Basic için bir parametre geçirir `Set` yordam sırasında özelliği at
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, bir sınıftaki bir özelliği bildirir.
+Aşağıdaki örnek bir sınıfında bir özelliği bildirir.
 
 [!code-vb[VbVbalrStatements#51](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#51)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Otomatik Uygulanan Özellikler](../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md)
-- [Nesneler ve Sınıflar](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
-- [Get Deyimi](../../../visual-basic/language-reference/statements/get-statement.md)
-- [Set Deyimi](../../../visual-basic/language-reference/statements/set-statement.md)
-- [Parametre Listesi](../../../visual-basic/language-reference/statements/parameter-list.md)
-- [Default](../../../visual-basic/language-reference/modifiers/default.md)
+- [Otomatik Uygulanan Özellikler](../../programming-guide/language-features/procedures/auto-implemented-properties.md)
+- [Nesneler ve Sınıflar](../../programming-guide/language-features/objects-and-classes/index.md)
+- [Get Deyimi](get-statement.md)
+- [Set Deyimi](set-statement.md)
+- [Parametre Listesi](parameter-list.md)
+- [Varsayılan](../modifiers/default.md)

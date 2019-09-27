@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 08/27/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 956cbedd7e354b36c447bdc06ea996948c745264
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 4856608e2c944c3a0fee65a328076bf1581f3d2a
+ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929086"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71332632"
 ---
 # <a name="tutorial-detect-objects-using-onnx-in-mlnet"></a>Öğretici: ML.NET içinde ONNX kullanarak nesneleri Algıla
 
@@ -19,7 +19,7 @@ Görüntülerdeki nesneleri saptamak için ML.NET ' de önceden eğitilen bir ON
 
 Bir nesne algılama modelini sıfırdan eğitmek için milyonlarca parametre, büyük miktarda etiketli eğitim verisi ve çok miktarda bilgi işlem kaynağı (yüzlerce GPU saati) ayarlanması gerekir. Önceden eğitilen bir modelin kullanılması, eğitim sürecini kısayola etmenizi sağlar.
 
-Bu öğreticide şunların nasıl yapıladığını öğreneceksiniz:
+Bu öğreticide şunların nasıl yapıldığını öğreneceksiniz:
 > [!div class="checklist"]
 >
 > - Sorunu anlama
@@ -45,7 +45,7 @@ Bu örnek, önceden eğitilen derinlemesine öğrenme ONNX modelini kullanarak b
 
 Nesne algılama bir bilgisayar vizyonu sorunudur. Görüntü sınıflandırmasıyla yakından ilgili olarak, nesne algılama görüntü sınıflandırmasını daha ayrıntılı bir ölçekte gerçekleştirir. Nesne algılama hem görüntüler içindeki varlıkları bulur _hem_ de kategorilere ayırır. Görüntüler farklı türlerde birden çok nesne içerdiğinde nesne algılamayı kullanın.
 
-![](./media/object-detection-onnx/img-classification-obj-detection.PNG)
+![Sol taraftaki bir köpek için görüntü sınıflandırmasını gösteren yan yana görüntüler ve bir kökten bir grubun nesne sınıflandırması doğru görünür](./media/object-detection-onnx/img-classification-obj-detection.PNG)
 
 Nesne algılama için bazı kullanım örnekleri şunları içerir:
 
@@ -66,7 +66,7 @@ Farklı türlerde sinir Networks, en yaygın çok katmanlı Perceptron (MLP), ev
 
 Nesne algılama bir görüntü işleme görevidir. Bu nedenle, bu sorunu çözmek için eğitilen çoğu derin öğrenme modeli CNNs ' dir. Bu öğreticide kullanılan model, YOLOv2 modelinin kağıda açıklanan daha kompakt bir sürümü olan küçük YOLOv2 modelidir: ["YOLO9000: RedMon ve Fadhari](https://arxiv.org/pdf/1612.08242.pdf)tarafından daha Iyi, daha hızlı, daha güçlü. Küçük YOLOv2, Pascal VOC veri kümesi üzerinde eğitilir ve 20 farklı nesne sınıfı tahmin edebilen 15 katmandan oluşur. Küçük YOLOv2 özgün YOLOv2 modelinin sıkıştırılmış bir sürümü olduğundan, hız ve doğruluk arasında bir zorunluluğunu getirir yapılır. Modeli oluşturan farklı katmanlar netron gibi araçlar kullanılarak görselleştirilir. Modelin araştırılama, her katmanın, ilgili giriş/çıkış boyutlarıyla birlikte katman adını içerdiği sinir ağını oluşturan tüm katmanlar arasında bağlantı eşlemesini elde edecektir. Modelin girişlerini ve çıkışlarını tanımlamakta kullanılan veri yapıları, teniler olarak bilinir. Teniler, verileri N boyutlu bir şekilde depolayan kapsayıcılar olarak düşünülebilir. Küçük YOLOv2 durumunda, giriş katmanının adı olur `image` ve bir boyut `3 x 416 x 416`gerektirir. Çıktı katmanının adı olur `grid` ve boyutların `125 x 13 x 13`bir çıkış eğilimi oluşturur.
 
-![](./media/object-detection-onnx/netron-model-map.png)
+![Gizli katmanlara bölünmekte olan giriş katmanı, çıkış katmanı](./media/object-detection-onnx/netron-model-map.png)
 
 YOLO modeli bir görüntü `3(RGB) x 416px x 416px`alır. Model bu girişi alır ve bir çıktı üretmek için farklı katmanlardan geçirir. Çıktı, giriş görüntüsünü kılavuzdaki her hücreyle `13 x 13` `125` değerleri içeren bir kılavuza böler.
 
@@ -74,11 +74,11 @@ YOLO modeli bir görüntü `3(RGB) x 416px x 416px`alır. Model bu girişi alır
 
 Open sinir Network Exchange (ONNX), AI modelleri için açık kaynak biçimidir. ONNX çerçeveler arasında birlikte çalışabilirliği destekler. Bu, bir modeli PyTorch gibi birçok popüler makine öğrenimi çerçevelerinden birinde eğitebileceğiniz anlamına gelir, ONNX biçimine dönüştürebilir ve ML.NET gibi farklı bir çerçevede ONNX modelini kullanabilirsiniz. Daha fazla bilgi edinmek için [Onnx Web sitesini](https://onnx.ai/)ziyaret edin.
 
-![](./media/object-detection-onnx/onnx-frameworks.png)
+![Onnx ' e aktarılan ve daha sonra diğer ONNX desteklenen biçimler tarafından kullanılan ONNX desteklenen biçimler](./media/object-detection-onnx/onnx-frameworks.png)
 
 Önceden eğitilen küçük YOLOv2 modeli, katmanların serileştirilmiş bir gösterimi ve bu katmanların öğrenilen desenleri ile ONNX biçiminde depolanır. ML.net ' de, onnx ile birlikte çalışabilirlik, [`ImageAnalytics`](xref:Microsoft.ML.Transforms.Image) ve [`OnnxTransformer`](xref:Microsoft.ML.Transforms.Onnx.OnnxTransformer) NuGet paketleriyle birlikte sağlanır. Paket [`ImageAnalytics`](xref:Microsoft.ML.Transforms.Image) , bir görüntüyü alan ve bir tahmin veya eğitim işlem hattına giriş olarak kullanılabilecek sayısal değerlere kodlayan bir dizi dönüştürme içerir. [`OnnxTransformer`](xref:Microsoft.ML.Transforms.Onnx.OnnxTransformer) Paket onnx çalışma zamanından yararlanır ve belirtilen girişe göre tahmine dayalı hale getirmek için bu modeli kullanır.
 
-![](./media/object-detection-onnx/onnx-ml-net-integration.png)
+![ONNX dosyasının ONNX çalışma zamanına ve son olarak C# uygulamaya veri akışı](./media/object-detection-onnx/onnx-ml-net-integration.png)
 
 ## <a name="set-up-the-net-core-project"></a>.NET Core projesini ayarlama
 
@@ -183,7 +183,7 @@ Yeni oluşturulan *Datayapýlarý* dizininde giriş veri sınıfınızı oluştu
 
 Model, her kılavuz `13 x 13` `32px x 32px`hücresinin bulunduğu bir görüntüyü kılavuza böler. Her kılavuz hücresi, 5 olası nesne sınırlayıcı kutusu içerir. Bir sınırlayıcı kutusunda 25 öğe vardır:
 
-![](./media/object-detection-onnx/model-output-description.png)
+![Sol taraftaki kılavuz örneği ve sağ taraftaki sınırlayıcı kutu örneği](./media/object-detection-onnx/model-output-description.png)
 
 - `x`sınırlama kutusu merkezinin ilişkilendirildiği kılavuz hücresine göre x konumu.
 - `y`sınırlama kutusu merkezinin ilişkilendirildiği kılavuz hücresine göre y konumu.
@@ -703,7 +703,7 @@ person and its Confidence score: 0.5551759
 
 Sınırlayıcı kutuları olan görüntüleri görmek için `assets/images/output/` dizine gidin. Aşağıda, işlenen görüntülerden birindeki bir örnek verilmiştir.
 
-![](./media/object-detection-onnx/image3.jpg)
+![Bir atma odasının örnek işlenmiş görüntüsü](./media/object-detection-onnx/image3.jpg)
 
 Tebrikler! Artık ml.net ' de önceden eğitilen `ONNX` bir modeli yeniden çalıştırarak nesne algılama için bir makine öğrenimi modelini başarıyla oluşturdunuz.
 

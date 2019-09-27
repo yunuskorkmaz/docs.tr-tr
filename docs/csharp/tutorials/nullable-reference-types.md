@@ -3,12 +3,12 @@ title: Null yapılabilir başvuru türleriyle tasarım
 description: Bu gelişmiş öğretici, null yapılabilir başvuru türlerine giriş sağlar. Başvuru değerleri null olduğunda ve derleyicinin null olmadıklarında zorunlu olmadığı durumlarda tasarım amacınızı ifade etmek için bilgi edineceksiniz.
 ms.date: 02/19/2019
 ms.custom: mvc
-ms.openlocfilehash: ea8059061dccc85060b4f6244ff0d7be9b7708b8
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 6b127cce66f2f9ced3cee29336b39e2976e03619
+ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71214420"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71332338"
 ---
 # <a name="tutorial-express-your-design-intent-more-clearly-with-nullable-and-non-nullable-reference-types"></a>Öğretici: Null yapılabilir ve null yapılamayan başvuru türleriyle tasarım amacınızı daha net bir şekilde ifade edin
 
@@ -43,12 +43,6 @@ Visual Studio 'da ya da kullanarak `dotnet new console`komut satırından yeni b
 <LangVersion>8.0</LangVersion>
 <Nullable>enable</Nullable>
 ```
-
-> [!IMPORTANT]
-> Öğe daha önce adlandırılmıştı `NullableContextOptions`. `Nullable` Yeniden adlandırma, Visual Studio 2019, 16,2-P1 ile birlikte gönderilir. 3\.0.100-preview5-011568 .NET Core SDK bu değişikliğe sahip değil. .NET Core CLI kullanıyorsanız, sonraki önizleme kullanılabilir olana kadar kullanmanız `NullableContextOptions` gerekir.
-
-> [!NOTE]
-> C# 8 serbest bırakıldığında (Önizleme modunda değil), `Nullable` bu öğe yeni proje şablonları tarafından eklenir. Bu şekilde, el ile eklemeniz gerekir.
 
 ### <a name="design-the-types-for-the-application"></a>Uygulama için türleri tasarlama
 

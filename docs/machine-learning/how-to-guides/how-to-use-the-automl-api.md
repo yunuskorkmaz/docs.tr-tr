@@ -3,12 +3,12 @@ title: ML.NET otomatik ML API 'sini kullanma
 description: ML.NET otomatikleştirilen ML API 'SI, model oluşturma işlemini otomatikleştirir ve dağıtım için hazırlamış bir model oluşturur. Otomatik makine öğrenimi görevlerini yapılandırmak için kullanabileceğiniz seçenekleri öğrenin.
 ms.date: 04/24/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: 02e4203b0d9f388c7bd7133f3cd4e97cc60cff14
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: a7057337fb6ff19a1e402d7bf74a766b246ea3c1
+ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929377"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71332713"
 ---
 # <a name="how-to-use-the-mlnet-automated-machine-learning-api"></a>ML.NET otomatik makine öğrenimi API 'sini kullanma
 
@@ -126,6 +126,9 @@ Yukarıdaki örnekte gösterildiği gibi en iyileştirme ölçümü, model eğit
 |PositiveRecall
 
 ## <a name="data-pre-processing-and-featurization"></a>Veri ön işleme ve özellik kazandırma sayesinde
+
+> [!NOTE]
+> Özellik sütunu yalnızca [`Boolean`](https://docs.microsoft.com/en-us/dotnet/api/system.boolean), [`Single`](https://docs.microsoft.com/en-us/dotnet/api/system.single)ve [`String`](https://docs.microsoft.com/en-us/dotnet/api/system.string)türlerini destekler.
 
 Verilerin ön işlemesi varsayılan olarak gerçekleşir ve aşağıdaki adımlar sizin için otomatik olarak gerçekleştirilir:
 

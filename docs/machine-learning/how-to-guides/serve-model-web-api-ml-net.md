@@ -1,16 +1,16 @@
 ---
 title: ASP.NET Core Web API 'sinde model dağıtma
 description: ASP.NET Core Web API 'sini kullanarak Internet üzerinden ML.NET yaklaşım analizi makine öğrenimi modelini sunar
-ms.date: 08/20/2019
+ms.date: 09/11/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to
-ms.openlocfilehash: 8d21ae5ae3aa4701ddd7d042d5069351c22864bb
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 1173315bbc88797ce0c6d0fcc9597896f14889ac
+ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71182555"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71332698"
 ---
 # <a name="deploy-a-model-in-an-aspnet-core-web-api"></a>ASP.NET Core Web API 'sinde model dağıtma
 
@@ -103,9 +103,9 @@ Giriş verileriniz ve tahminlerinizi için bazı sınıflar oluşturmanız gerek
 
 ## <a name="register-predictionenginepool-for-use-in-the-application"></a>Uygulamada kullanmak için PredictionEnginePool Kaydet
 
-Tek bir tahmin yapmak için kullanın [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602). Uygulamanızda kullanabilmeniz [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) için, gerektiğinde oluşturmanız gerekir. Bu durumda, dikkate alınması gereken en iyi yöntem bağımlılık ekleme yöntemidir.
+Tek bir tahmin yapmak için bir [@no__t](xref:Microsoft.ML.PredictionEngine%602)oluşturmanız gerekir. [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602), iş parçacığı açısından güvenli değildir. Ayrıca, uygulamanızın içinde gerek duyduğu her yerde bir örneği oluşturmanız gerekir. Uygulamanız büyüdükçe, bu işlem yönetilebilir hale gelebilir. Daha iyi performans ve iş parçacığı güvenliği için, uygulamanız genelinde kullanılmak üzere bir [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) nesnesi oluşturan bağımlılık ekleme ve `PredictionEnginePool` hizmeti birleşimini kullanın.
 
-[ASP.NET Core ' de bağımlılık ekleme](/aspnet/core/fundamentals/dependency-injection)hakkında bilgi edinmek istiyorsanız aşağıdaki bağlantıda daha fazla bilgi sağlanmaktadır.
+[ASP.NET Core ' de bağımlılık ekleme](https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-2.1)hakkında daha fazla bilgi edinmek istiyorsanız aşağıdaki bağlantıda daha fazla bilgi sağlanmaktadır.
 
 1. *Startup.cs* sınıfını açın ve aşağıdaki using ifadesini dosyanın en üstüne ekleyin:
 
@@ -126,14 +126,19 @@ Tek bir tahmin yapmak için kullanın [`PredictionEngine`](xref:Microsoft.ML.Pre
     {
         services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         services.AddPredictionEnginePool<SentimentData, SentimentPrediction>()
-            .FromFile("MLModels/sentiment_model.zip");
+            .FromFile(modelName: "SentimentAnalysisModel", filePath:"MLModels/sentiment_model.zip", watchForChanges: true);
     }
     ```
 
-Yüksek düzeyde bu kod, uygulama tarafından el ile yapmak yerine nesneleri ve hizmetleri otomatik olarak başlatır.
+Yüksek düzeyde, bu kod, uygulama tarafından el ile yapmak yerine, daha sonra kullanmak üzere nesne ve hizmetleri otomatik olarak başlatır. 
 
-> [!WARNING]
-> [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602), iş parçacığı açısından güvenli değildir. Gelişmiş performans ve iş parçacığı güvenliği için, uygulama `PredictionEnginePool` kullanımı için `PredictionEngine` bir [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) nesne oluşturan hizmetini kullanın. [ASP.NET Core içinde nesne havuzları `PredictionEngine` oluşturma ve kullanma](https://devblogs.microsoft.com/cesardelatorre/how-to-optimize-and-run-ml-net-models-on-scalable-asp-net-core-webapis-or-web-apps/)hakkında daha fazla bilgi edinmek için aşağıdaki blog gönderisini okuyun.  
+Makine öğrenimi modelleri statik değildir. Yeni eğitim verileri kullanılabilir hale geldiğinde, model geri çekme ve yeniden dağıtılır. Bir modelin en son sürümünü uygulamanıza almanın bir yolu, uygulamanın tamamını yeniden dağıtmaktan biridir. Ancak bu, uygulama kapalı kalma süresini tanıtır. @No__t-0 hizmeti, uygulamanızı kapatmak zorunda kalmadan güncelleştirilmiş bir modeli yeniden yüklemek için bir mekanizma sağlar. 
+
+@No__t-0 parametresini `true` olarak ayarlayın ve `PredictionEnginePool`, dosya sistemi değişiklik bildirimlerini dinleyen ve dosyada değişiklik olduğunda olay başlatan bir [`FileSystemWatcher`](xref:System.IO.FileSystemWatcher) başlatır. Bu, modeli otomatik olarak yeniden yüklemek için `PredictionEnginePool` ' a sorar.
+
+Model `modelName` parametresiyle tanımlanır, böylece değişiklik yapıldığında uygulama başına birden fazla model yeniden yüklenebilir. 
+
+Alternatif olarak, uzaktan depolanan modellerle çalışırken `FromUri` yöntemini kullanabilirsiniz. Dosya değiştirilen olayları izlemek yerine `FromUri`, uzak konumu değişiklikler için yoklar. Yoklama aralığı varsayılan olarak 5 dakikadır. Uygulama gereksinimlerine bağlı olarak yoklama aralığını artırabilir veya azaltabilirsiniz.
 
 ## <a name="create-predict-controller"></a>Tahmin denetleyicisi oluştur
 
@@ -170,7 +175,7 @@ Gelen HTTP isteklerinizi işlemek için bir denetleyici oluşturun.
                 return BadRequest();
             }
 
-            SentimentPrediction prediction = _predictionEnginePool.Predict(input);
+            SentimentPrediction prediction = _predictionEnginePool.Predict(modelName: "SentimentAnalysisModel", example: input);
 
             string sentiment = Convert.ToBoolean(prediction.Prediction) ? "Positive" : "Negative";
 
@@ -179,7 +184,7 @@ Gelen HTTP isteklerinizi işlemek için bir denetleyici oluşturun.
     }
     ```
 
-Bu kod, `PredictionEnginePool` bağımlılığı ekleme yoluyla aldığınız denetleyicinin oluşturucusuna geçirerek öğesine atar. Ardından, `Predict` `Post` denetleyicinin yöntemi tahmin yapmak `PredictionEnginePool` için öğesini kullanır ve başarılı olursa sonuçları kullanıcıya geri döndürür.
+Bu kod, `PredictionEnginePool` bağımlılığı ekleme yoluyla aldığınız denetleyicinin oluşturucusuna geçirerek öğesine atar. Ardından, `Predict` denetleyicisinin `Post` yöntemi `Startup` sınıfında kayıtlı `SentimentAnalysisModel` ' ü kullanarak tahminleri yapmak için `PredictionEnginePool` kullanır ve başarılı olursa sonuçları kullanıcıya geri döndürür.
 
 ## <a name="test-web-api-locally"></a>Web API 'sini yerel olarak test etme
 

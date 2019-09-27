@@ -6,14 +6,15 @@ helpviewer_keywords:
 - writing extension methods [Visual Basic]
 - extension methods [Visual Basic]
 ms.assetid: fb2739cc-958d-4ef4-a38b-214a74c93413
-ms.openlocfilehash: 7a7a9d16d9f69071e9d1dacb0558f7ca92e1d21e
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 31ccb18e0e6d1569764ec2a67201d7f758129425
+ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68631026"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71332756"
 ---
 # <a name="how-to-write-an-extension-method-visual-basic"></a>Nasıl yapılır: Uzantı metodu yazma (Visual Basic)
+
 Uzantı yöntemleri varolan bir sınıfa Yöntemler eklemenizi sağlar. Genişletme yöntemi, bu sınıfın bir örneği gibi çağrılabilir.
 
 ### <a name="to-define-an-extension-method"></a>Bir genişletme yöntemi tanımlamak için
@@ -36,13 +37,14 @@ Uzantı yöntemleri varolan bir sınıfa Yöntemler eklemenizi sağlar. Genişle
 
     ```vb
     <Extension()>
-    Public Sub SubName (ByVal para1 As ExtendedType, <other parameters>)
+    Public Sub SubName(para1 As ExtendedType, <other parameters>)
          ' < Body of the method >
     End Sub
     ```
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnek, modülünde `StringExtensions`bir genişletme yöntemi bildirir. İkinci bir modül, `Module1`yöntemini içeri `StringExtensions` aktarır ve çağırır. Uzantı yöntemi çağrıldığında kapsam içinde olmalıdır. Genişletme yöntemi `PrintAndPunctuate` , <xref:System.String> sınıfını bir parametre olarak gönderilen bir noktalama sembolleri dizesi gelen dize örneğini görüntüleyen bir yöntemle genişletir.
+
+ Aşağıdaki örnek, `StringExtensions` modülünde bir genişletme yöntemi bildirir. İkinci bir modül olan `Module1`, `StringExtensions` içeri aktarır ve yöntemini çağırır. Uzantı yöntemi çağrıldığında kapsam içinde olmalıdır. @No__t-0 uzantı metodu, <xref:System.String> sınıfını, dize örneğini görüntüleyen ve ardından parametre olarak gönderilen bir noktalama sembolleri dizesi olan bir yöntemle genişletir.
   
 ```vb
 ' Declarations will typically be in a separate module.
@@ -50,8 +52,7 @@ Imports System.Runtime.CompilerServices
 
 Module StringExtensions
     <Extension()>
-    Public Sub PrintAndPunctuate(ByVal aString As String,
-                                 ByVal punc As String)
+    Public Sub PrintAndPunctuate(aString As String, punc As String)
         Console.WriteLine(aString & punc)
     End Sub
 
@@ -75,16 +76,17 @@ Module Module1
 End Module
 ```
   
- Yöntemin iki parametre ile tanımlandığından ve yalnızca bir ile çağırdığına dikkat edin. Yöntem tanımındaki ilk parametre `aString`, yöntemini çağıran örneği `String` olan öğesine `example`bağlanır. Örneğin çıktısı aşağıdaki gibidir:
+ Yöntemin iki parametre ile tanımlandığından ve yalnızca bir ile çağırdığına dikkat edin. Yöntem tanımındaki `aString` olan ilk parametre, yöntemi çağıran `String` örneği olan `example` ' e bağlanır. Örneğin çıktısı aşağıdaki gibidir:
   
- `Hello?`  
-  
- `Hello!!!!`  
+ ```console
+ Hello?
+ Hello!!!!
+ ```
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Runtime.CompilerServices.ExtensionAttribute>
-- [Genişletme Yöntemleri](./extension-methods.md)
-- [Module Deyimi](../../../../visual-basic/language-reference/statements/module-statement.md)
-- [Yordam Parametreleri ve Bağımsız Değişkenleri](./procedure-parameters-and-arguments.md)
-- [Visual Basic kapsam](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
+- [Genişletme Yöntemleri](extension-methods.md)
+- [Module Deyimi](../../../language-reference/statements/module-statement.md)
+- [Yordam Parametreleri ve Bağımsız Değişkenleri](procedure-parameters-and-arguments.md)
+- [Visual Basic kapsam](../declared-elements/scope.md)
