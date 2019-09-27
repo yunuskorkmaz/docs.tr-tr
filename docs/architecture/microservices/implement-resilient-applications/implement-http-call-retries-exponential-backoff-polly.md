@@ -2,12 +2,12 @@
 title: Polly üstel geri alma ile HTTP çağrı yeniden denemelerini uygulama
 description: Polly ve HttpClientFactory ile HTTP başarısızlıklarını nasıl ele alabileceğinizi öğrenin.
 ms.date: 01/07/2019
-ms.openlocfilehash: aa500b5525eff9f0bbf91bf98de8945f7c84704f
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: de1dad44b1ddc7b04438fb380f240d3be33bbb83
+ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70296074"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71331974"
 ---
 # <a name="implement-http-call-retries-with-exponential-backoff-with-httpclientfactory-and-polly-policies"></a>HttpClientFactory ve Polly ilkeleriyle üstel geri alma ile HTTP çağrı yeniden denemeleri uygulayın
 
@@ -21,7 +21,7 @@ Aşağıdaki adımlarda, önceki bölümde açıklanan HttpClientFactory ile tü
 
 **ASP.NET Core 2,2 paketlerine başvurun**
 
-`HttpClientFactory`, .NET Core 2,1 sürümünden itibaren kullanılabilir ancak projenizde NuGet 'den en son ASP.NET Core 2,2 paketlerini kullanmanızı öneririz. Genellikle `AspNetCore` metapackage ve uzantı paketinin `Microsoft.Extensions.Http.Polly`olması gerekir.
+`HttpClientFactory`, .NET Core 2,1 ' den bu yana kullanılabilir ancak projenizde NuGet 'den en son ASP.NET Core 2,2 paketlerini kullanmanızı öneririz. Genellikle `AspNetCore` metapackage ve Extension Package-1 @no__t gerekir.
 
 **Başlangıçta, bir istemciyi Polly 'nin yeniden deneme ilkesiyle yapılandırma**
 
@@ -34,9 +34,9 @@ services.AddHttpClient<IBasketService, BasketService>()
         .AddPolicyHandler(GetRetryPolicy());
 ```
 
-**Addpolicyhandler ()** yöntemi, kullanacağınız `HttpClient` nesnelere ilke ekler. Bu durumda, üstel geri alma ile http yeniden denemeleri için bir Polly ilkesi ekliyor.
+**Addpolicyhandler ()** yöntemi, kullanacağınız `HttpClient` nesnelerine ilke ekler. Bu durumda, üstel geri alma ile http yeniden denemeleri için bir Polly ilkesi ekliyor.
 
-Daha modüler bir yaklaşıma sahip olmak için, aşağıdaki kodda gösterildiği gibi, http yeniden deneme ilkesi `Startup.cs` dosya içinde ayrı bir yöntemde tanımlanabilir:
+Daha modüler bir yaklaşıma sahip olmak için http yeniden deneme Ilkesi, aşağıdaki kodda gösterildiği gibi `Startup.cs` dosyasında ayrı bir yöntemde tanımlanabilir:
 
 ```csharp
 static IAsyncPolicy<HttpResponseMessage> GetRetryPolicy()
@@ -50,8 +50,6 @@ static IAsyncPolicy<HttpResponseMessage> GetRetryPolicy()
 ```
 
 Polly, yeniden deneme sayısı, üstel geri alma yapılandırması ve hatayı günlüğe kaydetme gibi bir HTTP özel durumu olduğunda gerçekleştirilecek eylemleri içeren bir yeniden deneme ilkesi tanımlayabilirsiniz. Bu durumda, ilke iki saniyeden itibaren bir üstel yeniden denemeye altı kez denemek üzere yapılandırılır. 
-
-Bu nedenle, altı kez denenecek ve her yeniden deneme arasındaki saniyeler iki saniyeden itibaren üstel olacaktır.
 
 ## <a name="add-a-jitter-strategy-to-the-retry-policy"></a>Yeniden deneme ilkesine bir değişim stratejisi ekleyin
 
@@ -78,9 +76,9 @@ Policy
 - **Polly (.NET esnekliği ve geçici hata işleme kitaplığı)**  
   <https://github.com/App-vNext/Polly>
 
-- **Marc Brooker. Den Rastgele hale getirmek için şeyleri daha Iyi hale getirme**  
+- **Marc Brooker. Den Rastgele bir işlem yapın @ no__t-0  
   <https://brooker.co.za/blog/2015/03/21/backoff.html>
 
 >[!div class="step-by-step"]
->[Önceki](explore-custom-http-call-retries-exponential-backoff.md)İleri
->[](implement-circuit-breaker-pattern.md)
+>[Önceki](explore-custom-http-call-retries-exponential-backoff.md)
+>[İleri](implement-circuit-breaker-pattern.md)

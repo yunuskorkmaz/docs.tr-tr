@@ -4,17 +4,17 @@ description: ASP.NET Core ve Azure ile modern web uygulamalarını mimarın ASP.
 author: ardalis
 ms.author: wiwagn
 ms.date: 06/06/2019
-ms.openlocfilehash: 7cfb9ada4f963aa392a41cfb9f1b2df22f542d41
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: ed8771a4d79b45d8fad0e5309c886c2e00402ec7
+ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70296401"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71331996"
 ---
 # <a name="azure-hosting-recommendations-for-aspnet-core-web-apps"></a>ASP.NET Core Web uygulamaları için Azure barındırma önerileri
 
 > "Her yerde iş kolu liderlerinin her ikisi de, buluttan uygulamaları (SaaS olarak da bilinir) almak ve bunları dergi abonelikleri gibi ödemeleri için BT departmanlarını atlar. Hizmete artık gerek duyulmuyorsa, köşede kullanılmayan bir ekipman olmadan aboneliği iptal edebilirler. "  
-> _\-Darıl Pköpmer, Gartner analist_
+> _\- Daristl Pköpmer, Gartner analist_
 
 Uygulamanızın ihtiyaçları ve mimarisi ne olursa olsun Microsoft Azure destekleyebilir. Barındırma gereksinimleriniz, statik bir Web sitesi veya onlarca hizmetlerden oluşan gelişmiş bir uygulama kadar basit olabilir. ASP.NET Core tek parçalı Web uygulamaları ve destekleyici hizmetler için önerilen birkaç tanınmış yapılandırma vardır. Bu makaledeki öneriler, tam uygulamalar, bireysel süreçler veya veriler arasında barındırılacak kaynak türüne göre gruplandırılır.
 
@@ -108,9 +108,9 @@ App Service ' de çalışmak için önemli değişiklikler gerektiren mevcut bir
 
 ## <a name="logical-processes"></a>Mantıksal süreçler
 
-Uygulamanın geri kalanından ayrışlabilecek tek tek mantıksal işlemler, Azure Işlevlerine "sunucusuz" bir şekilde dağıtılabilir. Azure Işlevleri, belirli bir sorun için ihtiyaç duyduğunuz kodu, uygulamayı veya altyapıyı çalıştırmak için herhangi bir endişelenmeden yazmanızı sağlar. C\#, F\#, Node. js, Python ve php dahil olmak üzere çeşitli programlama dilleri arasından seçim yapabilirsiniz. Bu, eldeki görev için en üretken dili seçmenizi sağlar. Bulut tabanlı çoğu çözüm gibi, yalnızca kullandığınız süre için ödeme yaparsınız ve gerektiğinde ölçeği ölçeklendirmek için Azure Işlevlerine güvenebilirsiniz.
+Uygulamanın geri kalanından ayrışlabilecek tek tek mantıksal işlemler, Azure Işlevlerine "sunucusuz" bir şekilde dağıtılabilir. Azure Işlevleri, belirli bir sorun için ihtiyaç duyduğunuz kodu, uygulamayı veya altyapıyı çalıştırmak için herhangi bir endişelenmeden yazmanızı sağlar. C @ no__t-0, F @ no__t-1, Node. js, Python ve PHP dahil olmak üzere çeşitli programlama dilleri arasından seçim yapabilirsiniz. Bu, eldeki görev için en üretken dili seçmenizi sağlar. Bulut tabanlı çoğu çözüm gibi, yalnızca kullandığınız süre için ödeme yaparsınız ve gerektiğinde ölçeği ölçeklendirmek için Azure Işlevlerine güvenebilirsiniz.
 
-## <a name="data"></a>Veri
+## <a name="data"></a>Data
 
 Azure çok çeşitli veri depolama seçenekleri sunarak uygulamanızın söz konusu veriler için uygun veri sağlayıcısını kullanabilmesi için.
 
@@ -124,9 +124,9 @@ Uygulama davranışını düzenlemek için kullanılan geçici komut veya olay t
 
 Uygulamanızın gereksinimleri mimarisini dikte etmelidir. Kullanılabilir birçok farklı Azure hizmeti vardır. Doğru birinin seçilmesi önemli bir karardır. Microsoft, yaygın senaryolar için optimize edilmiş tipik mimarilerin tanımlanmasına yardımcı olmak için bir başvuru mimarileri Galerisi sunar. Uygulamanızın gereksinimlerine yakın bir şekilde eşleşen bir başvuru mimarisi bulabilir veya en azından bir başlangıç noktası sunar.
 
-Şekil 11-2, örnek bir başvuru mimarisini gösterir. Bu diyagramda, pazarlama için en iyi duruma getirilmiş Sitecore içerik yönetimi sistem web sitesi için önerilen bir mimari yaklaşımı açıklanmaktadır.
+Şekil 11-1, örnek bir başvuru mimarisini gösterir. Bu diyagramda, pazarlama için en iyi duruma getirilmiş Sitecore içerik yönetimi sistem web sitesi için önerilen bir mimari yaklaşımı açıklanmaktadır.
 
-![](./media/image11-2.png)
+![Şekil 11-1](./media/image11-2.png)
 
 **Şekil 11-1.** Sitecore pazarlama web sitesi başvuru mimarisi.
 

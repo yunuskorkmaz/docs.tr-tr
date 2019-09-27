@@ -2,12 +2,12 @@
 title: Kapsayıcı tabanlı uygulamalar için Azure işlem platformları seçme
 description: Azure bulut ve Windows kapsayıcıları ile mevcut .NET uygulamalarını modernleştirin | Kapsayıcı tabanlı uygulamalar için Azure işlem platformları seçme
 ms.date: 05/04/2018
-ms.openlocfilehash: 64ae542e006bf7a5d7a0be08fe1cff9770552a77
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 54c5945326fb8a50a39c50552a413580926da2c7
+ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68677038"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71331971"
 ---
 # <a name="choosing-azure-compute-platforms-for-container-based-applications"></a>Kapsayıcı tabanlı uygulamalar için Azure işlem platformları seçme
 
@@ -25,10 +25,10 @@ Ancak, ürünün seçimi belirli uygulamanızın ihtiyaçlarına ve özellikleri
 
 Uygulamanın ihtiyaçlarına daha derin bir çözümledikten sonra, seçilen ürün farklı olabilir. Ancak, başlangıç noktası olarak, belirli önceliğe göre değerlendirme ve test etmeye başlayabileceğiniz ilk kılavuzluk olması iyi bir yoldur.
 
-Bir sonraki şekilde, farklı türde uygulamalar ve bunlara yönelik ideal Azure barındırma senaryolarına ait bir döküm görebilirsiniz.
+Şekil 1 ' de, farklı türde uygulamalar ve bunlara yönelik ideal Azure barındırma senaryolarına ait bir döküm görebilirsiniz.
 
-![](./media/image8.5.png)
+![Şekil 1](./media/image8.5.png)
 
 > [!div class="step-by-step"]
-> [Önceki](when-to-deploy-windows-containers-to-azure-container-service-kubernetes.md)İleri
-> [](build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud.md)
+> [Önceki](when-to-deploy-windows-containers-to-azure-container-service-kubernetes.md)
+> [İleri](build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud.md)

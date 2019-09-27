@@ -4,12 +4,12 @@ description: ASP.NET Core ve Azure ile modern web uygulamalarını mimarın Orta
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: a521be147c462146775caa81b6a31fb37b4103af
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 8985434467346acc360e9a89c052803f495e87d1
+ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926675"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71332003"
 ---
 # <a name="common-web-application-architectures"></a>Ortak web uygulaması mimarileri
 
@@ -170,7 +170,7 @@ ASP.NET Core MVC uygulamasındaki kullanıcı arabirimi katmanı, uygulamanın g
 ### <a name="ui-layer-types"></a>UI katman türleri
 
 - Denetleyiciler
-- FilTReleri
+- Filtreler
 - Görünümler
 - ViewModel 'lar
 - Başlangıç
@@ -186,7 +186,7 @@ Tek ve tek parçalı dağıtım temelli bir Web uygulaması veya hizmeti oluştu
 
 Bu modeli yönetmek için, uygulamayı temsil etmek üzere tek bir kapsayıcı dağıtırsınız. Ölçeklemek için, yalnızca bir yük dengeleyiciye sahip ek kopyalar eklemeniz yeterlidir. Kolaylık, tek bir kapsayıcıda veya VM 'de tek bir dağıtımı yönetmekten gelir.
 
-![](./media/image5-13.png)
+![Şekil 5-13](./media/image5-13.png)
 
 Şekil 5-13 ' de gösterildiği gibi, her bir kapsayıcı içinde birden çok bileşen/kitaplık veya iç katman ekleyebilirsiniz. Ancak, _"bir kapsayıcı tek bir işlem yaptığı ve tek bir işlemde_yaptığı" kapsayıcı ilkesini takip eden tek parçalı desenler bir çakışma olabilir.
 
@@ -198,7 +198,7 @@ Genellikle, büyük olasılıkla ölçeklendirmeniz gereken, ürün bilgileri bi
 
 Tek parçalı yaklaşım yaygındır ve birçok kuruluş bu mimari yaklaşımla geliştirilmektedir. Çoğu, diğerleri sınırlara vururken çok iyi sonuç elde edilir. Bu modelde birçok uygulama tasarlanıyor, çünkü araçlar ve altyapı hizmet yönelimli mimariler (SOA) oluşturmak için çok zor olduğundan, uygulama grew 'a kadar ihtiyacı görmez. Tek parçalı yaklaşım sınırlarına ulaşacağınızı fark ederseniz, kapsayıcıyı daha iyi hale getirebilmesine olanak tanımak üzere uygulamayı bölmek ve mikro hizmetler bir sonraki mantıksal adım olabilir.
 
-![](./media/image5-14.png)
+![Şekil 5-14](./media/image5-14.png)
 
 Microsoft Azure tek parçalı uygulamalar dağıtmak, her örnek için adanmış VM 'Ler kullanılarak elde edilebilir. [Azure sanal makine ölçek kümelerini](https://docs.microsoft.com/azure/virtual-machine-scale-sets/)kullanarak VM 'leri kolayca ölçeklendirebilirsiniz. [Azure Uygulama Hizmetleri](https://azure.microsoft.com/services/app-service/) tek parçalı uygulamalar çalıştırabilir ve VM 'leri yönetmek zorunda kalmadan örnekleri kolayca ölçeklendirebilir. Azure Uygulama Hizmetleri, tek tek Docker Kapsayıcıları örnekleri çalıştırabilir ve dağıtımı basitleştirir. Docker 'ı kullanarak tek bir VM 'yi Docker Konağı olarak dağıtabilir ve birden çok örnek çalıştırabilirsiniz. Şekil 5-14 ' de gösterildiği gibi Azure dengeleyicisi 'ni kullanarak ölçeklendirmeyi yönetebilirsiniz.
 
@@ -305,5 +305,5 @@ Visual Studio kullanarak uygulamanıza Docker desteği eklemek istiyorsanız, bu
   <https://aka.ms/MicroservicesEbook>
 
 >[!div class="step-by-step"]
->[Önceki](architectural-principles.md)İleri
->[](common-client-side-web-technologies.md)
+>[Önceki](architectural-principles.md)
+>[İleri](common-client-side-web-technologies.md)
