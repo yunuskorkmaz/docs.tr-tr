@@ -5,18 +5,18 @@ metadata:
   title: Apache Spark belgeleri için .NET
   description: .NET kodu yazdığınız her yerde Apache Spark veri, gerçek zamanlı akış, makine öğrenimi ve geçici sorgular işlemek için Apache Spark .NET kullanmayı öğrenin.
   services: service
-  ms.service: dotnet-spark
+  ms.prod: dotnet-spark
   ms.topic: landing-page
   ms.collection: collection
   author: mamccrea
   ms.author: mamccrea
   ms.date: 09/11/2019
-  ms.openlocfilehash: 9836e97aa2a958792fe95c8a1241d284ef860c45
-  ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+  ms.openlocfilehash: bce56c20e30df1f6eb6d6be5edb7ea766a783d83
+  ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 09/12/2019
-  ms.locfileid: "70928510"
+  ms.lasthandoff: 09/27/2019
+  ms.locfileid: "71332558"
 landingContent:
 - title: Apache Spark için .NET hakkında
   linkLists:
@@ -30,7 +30,7 @@ landingContent:
       url: /dotnet/api/?view=spark-dotnet
     - text: GitHub
       url: https://github.com/dotnet/spark
-- title: Kullanmaya başlayın
+- title: başlarken
   linkLists:
   - linkListType: tutorial
     links:
