@@ -2,12 +2,12 @@
 title: C# 7,2 sürümündeki yenilikler
 description: C# 7,2 sürümündeki yeni özelliklere genel bakış.
 ms.date: 08/16/2017
-ms.openlocfilehash: a2010b2bda769a625deb545964a2cc127aaf2e06
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: d559f07c501b2a79472d01e2815b50cd8f0f57a5
+ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105739"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71332314"
 ---
 # <a name="whats-new-in-c-72"></a>C# 7,2 sürümündeki yenilikler
 
@@ -36,7 +36,7 @@ Bu makalenin geri kalanında her özelliğe bir genel bakış sunulmaktadır. He
 1. [DotNet-TRY](https://github.com/dotnet/try/blob/master/README.md#setup) küresel aracını yükler.
 1. [DotNet/TRY-Samples](https://github.com/dotnet/try-samples) deposunu kopyalayın.
 1. *TRY-Samples* deposu için geçerli dizini *csharp7* alt dizinine ayarlayın.
-1. `dotnet try`'i çalıştırın.
+1. `dotnet try` öğesini çalıştırın.
 
 ## <a name="safe-efficient-code-enhancements"></a>Güvenli verimli kod geliştirmeleri
 
@@ -63,7 +63,7 @@ Yöntem çağrıları artık, adlandırılmış bağımsız değişkenler doğru
 int binaryValue = 0b_0101_0101;
 ```
 
-## <a name="_private-protected_-access-modifier"></a>_özel korumalı_ erişim değiştiricisi
+## <a name="private-protected-access-modifier"></a>*özel korumalı* erişim değiştiricisi
 
 Yeni bir bileşik erişim değiştiricisi: `private protected` bir üyeye, aynı derlemede belirtilen sınıf veya türetilmiş sınıfları içeren bir üyeye erişilebildiğini gösterir. Aynı derlemede bulunan türetilmiş sınıfların veya sınıfların erişimine `private protected` izinverdiğinden,aynıderlemedebelirtilentüretilmiştürlereerişimikısıtlar.`protected internal`
 
