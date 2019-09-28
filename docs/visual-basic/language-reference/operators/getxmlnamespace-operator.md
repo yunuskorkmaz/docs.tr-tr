@@ -8,44 +8,44 @@ helpviewer_keywords:
 - GetXmlNamespace operator [Visual Basic]
 - GetXmlNamespace keyword [Visual Basic]
 ms.assetid: d0d28cfd-0755-4896-ae0b-4981aa35517c
-ms.openlocfilehash: 757ca54e5ba370bf2cc48bc70499e7b43ec96ef6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bfccdcd9b5d35418b206dfa9fefffb5ddab69c66
+ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61751377"
+ms.lasthandoff: 09/28/2019
+ms.locfileid: "71592161"
 ---
 # <a name="getxmlnamespace-operator-visual-basic"></a>GetXmlNamespace İşleci (Visual Basic)
-Alır <xref:System.Xml.Linq.XNamespace> belirtilen XML ad alanı öneki için karşılık gelen nesne.  
+Belirtilen XML ad alanı ön ekine karşılık gelen <xref:System.Xml.Linq.XNamespace> nesnesini alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```vb  
 GetXmlNamespace(xmlNamespacePrefix)  
 ```  
   
 ## <a name="parts"></a>Bölümler  
  `xmlNamespacePrefix`  
- İsteğe bağlı. XML ad alanı öneki tanımlayan dize. Belirtilirse, bu dizenin geçerli bir XML tanımlayıcısı olmalıdır. Daha fazla bilgi için [adları, bildirilmiş XML öğeleri ve özniteliklerinin](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md). Önek yok belirtilirse, varsayılan ad alanı döndürülür. Boş ad alanı varsayılan ad alanı yok belirtilirse, döndürülür.  
+ İsteğe bağlı. XML ad alanı önekini tanımlayan dize. Sağlanırsa, bu dize geçerli bir XML tanımlayıcısı olmalıdır. Daha fazla bilgi için bkz. [BELIRTILEN XML öğelerinin ve özniteliklerin adları](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md). Hiçbir önek belirtilmemişse, varsayılan ad alanı döndürülür. Varsayılan ad alanı belirtilmemişse boş ad alanı döndürülür.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- <xref:System.Xml.Linq.XNamespace> XML ad alanı öneki için karşılık gelen nesne.  
+ XML ad alanı ön ekine karşılık gelen <xref:System.Xml.Linq.XNamespace> nesnesi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `GetXmlNamespace` İşleci alır <xref:System.Xml.Linq.XNamespace> XML ad alanı öneki için karşılık gelen nesne `xmlNamespacePrefix`.  
+ @No__t-0 işleci, XML ad alanı öneki `xmlNamespacePrefix` ' ye karşılık gelen <xref:System.Xml.Linq.XNamespace> nesnesini alır.  
   
- XML ad alanı öneklerini doğrudan XML sabit değerleri ve XML eksen özellikleri de kullanabilirsiniz. Ancak, kullanmalısınız `GetXmlNamespace` işleci için bir ad alanı öneki dönüştürmek için bir <xref:System.Xml.Linq.XNamespace> kodunuzda kullanmadan önce nesne. Bir nitelenmemiş öğe adı için eklediğiniz bir <xref:System.Xml.Linq.XNamespace> tam alınacak nesne <xref:System.Xml.Linq.XName> nesnesi, hangi çok [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] yöntemleri gerektirir.  
+ XML ad alanı öneklerini doğrudan XML değişmez değerleri ve XML eksen özellikleri içinde kullanabilirsiniz. Ancak, kodunuzda kullanabilmeniz için bir ad alanı önekini <xref:System.Xml.Linq.XNamespace> nesnesine dönüştürmek üzere `GetXmlNamespace` işlecini kullanmanız gerekir. @No__t-0 nesnesine nitelenmemiş bir öğe adı ekleyerek, çok sayıda [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] yönteminin gerektirdiği tam bir <xref:System.Xml.Linq.XName> nesnesi alabilirsiniz.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek alır `ns` olarak bir XML ad alanı öneki. XML değişmez değer oluşturmak ve bir nitelenmiş ada sahip ilk alt düğüm erişmek için bir ad alanı öneki kullanır `ns:phone`. Daha sonra bu alt düğüme geçirir `ShowName` kullanarak tam bir ad oluşturur alt yordam `GetXmlNamespace` işleci. `ShowName` Alt yordam daha sonra tam adı için geçirir <xref:System.Xml.Linq.XNode.Ancestors%2A> üst almak için yöntemi `ns:contact` düğümü.  
+ Aşağıdaki örnek, `ns` ' i bir XML ad alanı öneki olarak içeri aktarır. Daha sonra bir XML sabit değeri oluşturmak için ad alanının önekini kullanır ve nitelenmiş ada `ns:phone` olan ilk alt düğüme erişin. Daha sonra bu alt düğümü, `GetXmlNamespace` işlecini kullanarak tam bir ad oluşturan `ShowName` alt yordama geçirir. @No__t-0 alt yordamı, üst `ns:contact` düğümünü almak için tam adı <xref:System.Xml.Linq.XNode.Ancestors%2A> yöntemine geçirir.  
   
  [!code-vb[VbXMLSamples#38](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/GetXmlNamespace.vb#38)]  
   
- Çağırdığınızda `TestGetXmlNamespace.RunSample()`, aşağıdaki metni içeren bir ileti kutusu görüntüler:  
+ @No__t-0 ' ı çağırdığınızda, aşağıdaki metni içeren bir ileti kutusu görüntüler:  
   
  `Name: Patrick Hines`  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Imports Deyimi (XML Ad Alanı)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md)
-- [Visual Basic'de XML'e erişme](../../../visual-basic/programming-guide/language-features/xml/accessing-xml.md)
+- [Visual Basic XML 'e erişme](../../../visual-basic/programming-guide/language-features/xml/accessing-xml.md)

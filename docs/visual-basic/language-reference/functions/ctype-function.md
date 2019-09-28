@@ -9,60 +9,60 @@ helpviewer_keywords:
 - CType function
 - conversions [Visual Basic], expression
 ms.assetid: dd4b29e7-6fa1-428c-877e-69955420bb72
-ms.openlocfilehash: dbf01263723a9e2890dab57d5ffc3d467ed250fc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4a0391b0a5d76f36803b433369d4832c02b05e09
+ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61801685"
+ms.lasthandoff: 09/28/2019
+ms.locfileid: "71592106"
 ---
 # <a name="ctype-function-visual-basic"></a>CType İşlevi (Visual Basic)
 
-Belirtilen veri türü, nesne, yapısı, sınıf veya arabirim için bir ifade açıkça dönüştürülmesinin sonucunu döndürür.
+Bir ifadeyi belirtilen veri türüne, nesneye, yapıya, sınıfa veya arabirime açıkça dönüştürmenin sonucunu döndürür.
 
 ## <a name="syntax"></a>Sözdizimi
 
-```
+```vb
 CType(expression, typename)
 ```
 
 ## <a name="parts"></a>Bölümler
 
-`expression` Herhangi bir geçerli ifade. Varsa değerini `expression` tarafından izin verilen aralığın dışında `typename`, Visual Basic bir özel durum oluşturur.
+`expression` geçerli bir ifade. @No__t-0 değeri `typename` tarafından izin verilen aralığın dışındaysa Visual Basic bir özel durum oluşturur.
 
-`typename` Dahilinde geçerli olan herhangi bir ifade bir `As` yan tümcesinde bir `Dim` deyimi, diğer bir deyişle, tüm veri türü, nesne, yapısı, sınıfı veya arabirim adı.
+`typename` bir `Dim` deyimindeki bir `As` yan tümcesi içinde geçerli olan herhangi bir ifade, diğer bir deyişle, herhangi bir veri türü, nesne, yapı, sınıf veya arabirimin adı.
 
 ## <a name="remarks"></a>Açıklamalar
 
 > [!TIP]
-> Bir tür dönüştürmesi gerçekleştirmek için aşağıdaki işlevler de kullanabilirsiniz:
+> Bir tür dönüştürmesi gerçekleştirmek için aşağıdaki işlevleri de kullanabilirsiniz:
 >
-> - Dönüştürme işlevleri gibi yazın `CByte`, `CDbl`, ve `CInt` belirli veri türüne dönüştürme yapan. Daha fazla bilgi için [tür dönüştürme işlevleri](../../../visual-basic/language-reference/functions/type-conversion-functions.md).
-> - [DirectCast işleci](../../../visual-basic/language-reference/operators/directcast-operator.md) veya [TryCast işleci](../../../visual-basic/language-reference/operators/trycast-operator.md). Bu işleçler, bir türden devralamaz veya diğer türü uyguluyor gerektirir. Biraz daha iyi performans sağlarlar `CType` ve ondan dönüştürme yaparken `Object` veri türü.
+> - Belirli bir veri türüne dönüştürme gerçekleştiren `CByte`, `CDbl` ve `CInt` gibi tür dönüştürme işlevleri. Daha fazla bilgi için bkz. [tür dönüştürme işlevleri](../../../visual-basic/language-reference/functions/type-conversion-functions.md).
+> - [DirectCast İşleci](../../../visual-basic/language-reference/operators/directcast-operator.md) veya [TryCast İşleci](../../../visual-basic/language-reference/operators/trycast-operator.md). Bu işleçler, bir türün diğer türden devralmasını veya uygulamayı gerektirir. @No__t-1 veri türüne dönüştürülürken `CType` ' dan daha iyi bir performans sağlayabilir.
 
-`CType` Bu da dönüştürme kodunun ifadeyi değerlendiren kodun bir parçası olduğu anlamına gelir derlenmiş satır içidir. Bazı durumlarda, dönüştürmeyi gerçekleştirmek için bir yordam çağrılmadığından kod daha hızlı çalışır.
+`CType`, satır içi olarak derlenir, bu da dönüştürme kodunun ifadeyi değerlendiren kodun bir parçası olduğu anlamına gelir. Bazı durumlarda, dönüştürme işlemini gerçekleştirmek için hiçbir yordam çağrılmadığından kod daha hızlı çalışır.
 
-Öğesinden dönüştürme tanımlanmadıysa `expression` için `typename` (örneğin, `Integer` için `Date`), Visual Basic bir derleme zamanı hata iletisi görüntüler.
+@No__t-0 ' dan `typename` ' e (örneğin, `Integer` ' ye `Date`) bir dönüştürme tanımlanmazsa, Visual Basic bir derleme zamanı hata iletisi görüntüler.
 
-Çalışma zamanında bir dönüştürme başarısız olursa uygun özel durum oluşturulur. Bir daraltma dönüşümü başarısız olursa bir <xref:System.OverflowException> en yaygın sonuçtur. Dönüştürme tanımlanmamışsa, bir <xref:System.InvalidCastException> oluşturulur. Örneğin, bu durum meydana gelebilir `expression` türünde `Object` ve onun çalışma zamanı tür dönüştürmesi bulunmadığında `typename`.
+Çalışma zamanında bir dönüştürme başarısız olursa, uygun özel durum oluşturulur. Daraltma dönüştürmesi başarısız olursa, en sık kullanılan sonuç <xref:System.OverflowException> ' dır. Dönüştürme tanımlanmamışsa, <xref:System.InvalidCastException> oluşturulur. Örneğin, `expression` `Object` türünde ise ve çalışma zamanı türünün `typename` ' ye dönüştürülmesine sahip olması durumunda bu durum oluşabilir.
 
-Veri türü `expression` veya `typename` bir sınıf veya yapı tanımladığınız, tanımlayabileceğiniz `CType` sınıf veya yapıda dönüştürme işleci. Böylece `CType` işlevi gören bir *işleci aşırı*. Bunu yaparsanız, sınıf veya yapı, oluşturulabilecek özel durumlar dahil olmak üzere ve dönüştürmelerin davranışını denetleyebilirsiniz.
+@No__t-0 veya `typename` ' in veri türü tanımladığınız bir sınıf veya yapı ise, bu sınıf veya yapıda `CType` ' i dönüştürme işleci olarak tanımlayabilirsiniz. Bu, `CType` ' ın *aşırı yüklenmiş bir operatör*olarak çalışmasını sağlar. Bunu yaparsanız, oluşturulabilecek özel durumlar da dahil olmak üzere sınıfınıza veya yapınızı dönüştürme davranışını kontrol edebilirsiniz.
 
 ## <a name="overloading"></a>Aşırı Yükleme
 
-`CType` İşleci de aşırı yüklenebilir bir sınıf veya yapı, kodunuz dışında tanımlanan. Kodunuz için veya bu tür bir sınıf veya yapı dönüştürüldüyse davranışını anladığınızdan emin olun, `CType` işleci. Daha fazla bilgi için [işleç yordamları](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).
+@No__t-0 işleci, kodunuzun dışında tanımlanan bir sınıf veya yapı üzerinde de aşırı yüklenebilir. Kodunuz bu tür bir sınıfa veya yapıya dönüştürürse, `CType` işlecinin davranışını anladığınızdan emin olun. Daha fazla bilgi için bkz. [operatör yordamları](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).
 
 ## <a name="converting-dynamic-objects"></a>Dinamik nesneleri dönüştürme
 
-Dinamik nesnelerin tür dönüştürmeleri kullanan kullanıcı tanımlı dinamik dönüştürmeler tarafından gerçekleştirilen <xref:System.Dynamic.DynamicObject.TryConvert%2A> veya <xref:System.Dynamic.DynamicMetaObject.BindConvert%2A> yöntemleri. Dinamik nesnelerle çalışıyorsanız kullanın <xref:Microsoft.VisualBasic.Conversion.CTypeDynamic%2A> dinamik nesneyi dönüştürmek için yöntemi.
+Dinamik nesnelerin tür dönüştürmeleri, <xref:System.Dynamic.DynamicObject.TryConvert%2A> veya <xref:System.Dynamic.DynamicMetaObject.BindConvert%2A> yöntemlerini kullanan kullanıcı tanımlı dinamik dönüştürmeler tarafından gerçekleştirilir. Dinamik nesnelerle çalışıyorsanız, dinamik nesneyi dönüştürmek için <xref:Microsoft.VisualBasic.Conversion.CTypeDynamic%2A> yöntemini kullanın.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnekte `CType` bir ifadeye dönüştürmek için işlevi `Single` veri türü.
+Aşağıdaki örnek, bir ifadeyi `Single` veri türüne dönüştürmek için `CType` işlevini kullanır.
 
 [!code-vb[VbVbalrFunctions#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#24)]
 
-Diğer örnekler için [örtük ve açık dönüştürmeler](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md).
+Daha fazla örnek için bkz. [örtük ve açık dönüştürmeler](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -71,5 +71,5 @@ Diğer örnekler için [örtük ve açık dönüştürmeler](../../../visual-bas
 - [Tür Dönüştürme İşlevleri](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
 - [Dönüştürme İşlevleri](../../../visual-basic/language-reference/functions/conversion-functions.md)
 - [Operator Deyimi](../../../visual-basic/language-reference/statements/operator-statement.md)
-- [Nasıl yapılır: Bir dönüşüm işleci tanımlama](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)
-- [.NET Framework'te tür dönüştürme](../../../standard/base-types/type-conversion.md)
+- [Nasıl yapılır: Dönüştürme Işleci tanımlama @ no__t-0
+- [.NET Framework dönüştürme türü](../../../standard/base-types/type-conversion.md)

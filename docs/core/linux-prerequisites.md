@@ -1,15 +1,15 @@
 ---
 title: Linux üzerinde .NET Core önkoşulları
 description: Linux makinelerde .NET Core uygulamaları geliştirmek, dağıtmak ve çalıştırmak için desteklenen Linux sürümleri ve .NET Core bağımlılıkları.
-author: thraka
-ms.author: adegeo
-ms.date: 12/14/2018
-ms.openlocfilehash: 31c53b2cc0fe576e56685f4a5561258136fd2541
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+author: leecow
+ms.author: leecow
+ms.date: 09/25/2019
+ms.openlocfilehash: 4c5d79459c9d69111ca6452d9305f0deb37212b8
+ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71116588"
+ms.lasthandoff: 09/28/2019
+ms.locfileid: "71591695"
 ---
 # <a name="prerequisites-for-net-core-on-linux"></a>Linux üzerinde .NET Core önkoşulları
 
@@ -25,69 +25,82 @@ Bu makalede, Linux üzerinde .NET Core uygulamaları geliştirmek için gereken 
 
 <!-- markdownlint-disable MD025 -->
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2. x](#tab/netcore2x)
+# <a name="net-core-30tabnetcore30"></a>[.NET Core 3.0](#tab/netcore30)
 
-.NET Core 2. x, Linux 'u tek bir işletim sistemi olarak değerlendirir. Desteklenen Linux dağıtımları için tek bir Linux derlemesi (yonga mimarisi başına) vardır. 
-
-İndirme bağlantıları ve daha fazla bilgi için bkz. [.net core 2,2 İndirmeleri](https://dotnet.microsoft.com/download/dotnet-core/2.2) veya [.NET Core 2,1 İndirmeleri](https://dotnet.microsoft.com/download/dotnet-core/2.1).
-
-.NET Core 2. x, aşağıdaki Linux dağıtımları/sürümlerinde desteklenir:
-
-* Red Hat Enterprise Linux 7, 6-64-bit (`x86_64` veya `amd64`)
-* CentOS 7-64-bit (`x86_64` veya `amd64`) 
-* Oracle Linux 7-64 bit (`x86_64` veya) `amd64` 
-* Fedora 28, 27-64-bit (`x86_64` veya `amd64`) 
-* 9 (64-bit, `arm32`), 8,7 veya sonraki sürümler-64-bit (`x86_64` veya `amd64`)
-* Ubuntu 18,04 (64-bit, `arm32`), 16,04, 14,04-64-bit (`x86_64` veya `amd64`)
-* Linux Mint 18, 17-64-bit (`x86_64` veya `amd64`)
-* openSUSE 42,3 veya sonraki sürümleri-64-bit (`x86_64` veya `amd64`)
-* Suse Enterprise Linux (SLES) 12 Service Pack 2 veya üzeri-64-bit (`x86_64` veya `amd64`)
-* Alp Linux 3,7 veya sonraki sürümleri-64-bit (`x86_64` veya `amd64`)
-
-.NET Core 2,1 ve .NET Core 2,2 tarafından desteklenen işletim sistemlerinin, dağıtımların ve sürümlerin tamamı, destek SISTEMI sürümleri ve yaşam döngüsü ilkesi için [.net core 2,1 desteklenen](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md) işletim sistemi sürümleri ve [.NET Core 2,2 desteklenen işletim sistemi sürümleri](https://github.com/dotnet/core/blob/master/release-notes/2.2/2.2-supported-os.md) ' ne bakın Köprü.
-
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1. x](#tab/netcore1x)
-
-İndirme bağlantıları ve daha fazla bilgi için bkz. [.net core 1,1 İndirmeleri](https://dotnet.microsoft.com/download/dotnet-core/1.1) veya [.NET Core 1,0 İndirmeleri](https://dotnet.microsoft.com/download/dotnet-core/1.0).
-
-.NET Core 1. x, aşağıdaki Linux 64-bit (`x86_64` veya `amd64`) dağıtımları/sürümlerinde desteklenir:
-
-* Red Hat Enterprise Linux 7
-* CentOS 7
-* Oracle Linux 7
-* Fedora 28 (.NET Core 1,1), 27
-* 8,2 veya sonraki sürümlerini kaldırma
-* Ubuntu 18,04 (.NET Core 1,1), 16,04, 14,04
-* Linux Mint 17
-* openSUSE 42,3 veya sonraki sürümleri (.NET Core 1,1)
-
-.NET Core 1. x desteklenen işletim sistemlerinin tüm listesi için bkz. .NET Core [1.](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0-supported-os.md) x tarafından desteklenen işletim sistemleri, destek sistemi sürümlerinin dışında ve yaşam döngüsü ilkesi bağlantıları.
-
-# <a name="net-core-30-preview-1tabnetcore30"></a>[.NET Core 3,0 Preview 1](#tab/netcore30)
-
-.NET Core 3,0 Preview 1, Linux 'u tek bir işletim sistemi olarak değerlendirir. Desteklenen Linux dağıtımları için tek bir Linux derlemesi (yonga mimarisi başına) vardır. 
+.NET Core 3,0, Linux 'u tek bir işletim sistemi olarak değerlendirir. Desteklenen Linux dağıtımları için tek bir Linux derlemesi (yonga mimarisi başına) vardır. 
 
 İndirme bağlantıları ve daha fazla bilgi için bkz. [.NET Core 3,0 İndirmeleri](https://dotnet.microsoft.com/download/dotnet-core/3.0).
 
-.NET Core 3,0 Preview 1, aşağıdaki Linux dağıtımları/sürümlerinde desteklenir. 
+.NET Core 3,0, aşağıdaki Linux dağıtımları/sürümlerinde desteklenir):
 
-OS                            | Sürüm               | Mimarileri  
-------------------------------|-----------------------|----------------
-Red Hat Enterprise Linux      | 6                     | X64
-Red Hat Enterprise Linux<br>CentOS<br>Oracle Linux  | 7                     | X64
-Fedora                        | 28                    | X64
-Debian                        | 9                     | x64, ARM32\*, ARM64\*
-Ubuntu                        | 16.04 +, 18.04 +        | x64, ARM32\*, ARM64\*
-Linux Mint                    | 18                    | X64
-openSUSE                      | 42.3 +                 | X64
-SUSE Enterprise Linux (SLES)  | 12 SP2 +               | X64
-Alp Linux                  | 3.8 +                  | x64, ARM64
+> [!NOTE]
+> @No__t-0 simgesi en düşük sürümü temsil eder.
 
-\*ARM32 ve ARM64 desteği, de, 9 ve Ubuntu 16,04 ile başlar. Bu detrolar 'ın önceki sürümleri ARM yongalarında desteklenmez.
+| OS                             | Version               | Mimarileri    |
+| ------------------------------ | --------------------- | ---------------- |
+| Red Hat Enterprise Linux       | 6 +, 7                 | X64 |
+| Oracle Linux                   | 7                     | X64 |
+| CentOS                         | 7                     | X64 |
+| Fedora                         | 29 +                   | X64 |
+| Debian                         | 9 +                    | x64, ARM32, ARM64 |
+| Ubuntu                         | 16.04 +                | x64, ARM32, ARM64 |
+| Linux Mint                     | 18 +                   | X64 |
+| openSUSE                       | 15 +                   | X64 |
+| SUSE Enterprise Linux (SLES)   | 12 SP2 +               | X64 |
+| Alp Linux                   | 3.8 +                  | x64, ARM64 |
 
 .NET Core 3,0 desteklenen işletim sistemlerinin, dağıtımların ve sürümlerin, destek SISTEMI sürümlerinden ve yaşam döngüsü ilke bağlantılarının tüm listesi için bkz. [.net core 3,0 desteklenen IŞLETIM sistemi sürümleri](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md) .
 
 ARM64 üzerinde .NET Core 3,0 yükleme hakkında daha fazla bilgi için bkz. [LINUX ARM64 üzerinde .net core 3,0 yükleme](https://gist.github.com/richlander/467813274cea8abc624553ee72b28213).
+
+# <a name="net-core-22tabnetcore22"></a>[.NET Core 2,2](#tab/netcore22)
+
+.NET Core 2,2, Linux 'u tek bir işletim sistemi olarak değerlendirir. Desteklenen Linux dağıtımları için tek bir Linux derlemesi (yonga mimarisi başına) vardır.
+
+İndirme bağlantıları ve daha fazla bilgi için bkz. [.NET Core 2,2 İndirmeleri](https://dotnet.microsoft.com/download/dotnet-core/2.2).
+
+.NET Core 2,2, aşağıdaki Linux dağıtımları/sürümlerinde desteklenir:
+
+> [!NOTE]
+> @No__t-0 simgesi en düşük sürümü temsil eder.
+
+| OS                             |  Version                |  Mimarileri   |
+| ------------------------------ | ----------------------- | ---------------- |
+| Red Hat Enterprise Linux       |  6, 7                   | X64 |
+| Oracle Linux                   |  7                      | X64 |
+| CentOS                         |  7                      | X64 |
+| Fedora                         |  29, 30                 | X64 |
+| Debian                         |  9                      | x64, ARM32 |
+| Ubuntu                         |  16,04, 18,04, 18,10    | x64, ARM32 |
+| Linux Mint                     |  17, 18                 | X64 |
+| openSUSE                       |  15 +                    | X64 |
+| SUSE Enterprise Linux (SLES)   |  12 SP2 +                | X64 |
+| Alp Linux                   |  3.7 +                   | X64 |
+
+.NET Core 2,2 desteklenen işletim sistemlerinin, dağıtımların ve sürümlerin, destek SISTEMI sürümlerinden ve yaşam döngüsü ilke bağlantılarının tüm listesi için bkz. [.net core 2,2 desteklenen IŞLETIM sistemi sürümleri](https://github.com/dotnet/core/blob/master/release-notes/2.2/2.2-supported-os.md) .
+
+# <a name="net-core-21tabnetcore21"></a>[.NET Core 2,1](#tab/netcore21)
+
+.NET Core 2,1, Linux 'u tek bir işletim sistemi olarak değerlendirir. Desteklenen Linux dağıtımları için tek bir Linux derlemesi (yonga mimarisi başına) vardır.
+
+İndirme bağlantıları ve daha fazla bilgi için bkz. [.NET Core 2,1 İndirmeleri](https://dotnet.microsoft.com/download/dotnet-core/2.1).
+
+.NET Core 2,1, aşağıdaki Linux dağıtımları/sürümlerinde desteklenir:
+
+| OS                             |  Version                |  Mimarileri   |
+| ------------------------------ | ----------------------- | ---------------- |
+| Red Hat Enterprise Linux       |  6, 7, 8                | X64 |
+| Oracle Linux                   |  7                      | X64 |
+| CentOS                         |  7                      | X64 |
+| Fedora                         |  29, 30                 | X64 |
+| Debian                         |  9                      | x64, ARM32 |
+| Ubuntu                         |  16,04, 18,04, 19,04    | x64, ARM32 |
+| Linux Mint                     |  17, 18                 | X64 |
+| openSUSE                       |  42.3 +                  | X64 |
+| SUSE Enterprise Linux (SLES)   |  12 SP2 +                | X64 |
+| Alp Linux                   |  3.7 +                   | X64 |
+
+.NET Core 2,1 desteklenen işletim sistemlerinin, dağıtımların ve sürümlerin, destek SISTEMI sürümlerinden ve yaşam döngüsü ilke bağlantılarının tüm listesi için bkz. [.net core 2,1 desteklenen IŞLETIM sistemi sürümleri](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md) .
 
 ---
 

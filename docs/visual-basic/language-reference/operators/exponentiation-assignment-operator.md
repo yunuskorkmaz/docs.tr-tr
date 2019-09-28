@@ -9,43 +9,43 @@ helpviewer_keywords:
 - ^= operator [Visual Basic]
 - compound assignment statements [Visual Basic]
 ms.assetid: 397da132-2d96-4a85-a7bc-f7c730a608c9
-ms.openlocfilehash: fe5d7b3dcb55192167512e0934e09cff7dfddb6d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 382e0b27c2dbf27e5acccf29f1b8d2b002cb6664
+ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61778527"
+ms.lasthandoff: 09/28/2019
+ms.locfileid: "71592231"
 ---
 # <a name="-operator-visual-basic"></a>^= İşleci (Visual Basic)
-Bir değişken veya özellik değerini bir ifade değeri oluşturur ve sonucu değişken veya özellik için atar.  
+Bir değişkenin veya özelliğin değerini bir ifadenin gücüne yükseltir ve sonucu değişkene veya özelliğe geri atar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```vb  
 variableorproperty ^= expression  
 ```  
   
 ## <a name="parts"></a>Bölümler  
  `variableorproperty`  
- Gerekli. Tüm sayısal değişken veya özellik.  
+ Gerekli. Herhangi bir sayısal değişken veya özellik.  
   
  `expression`  
  Gerekli. Herhangi bir sayısal ifade.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Öğe sol tarafındaki `^=` işleci, bir basit skaler değişkeni, bir özellik veya dizi öğesi olabilir. Değişken veya özellik olamaz [salt okunur](../../../visual-basic/language-reference/modifiers/readonly.md).  
+ @No__t-0 işlecinin sol tarafındaki öğe basit bir skaler değişken, bir özellik veya bir dizi öğesi olabilir. Değişken veya özellik [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)olamaz.  
   
- `^=` İşleci ilk başlatır değişken veya özellik (üzerinde işlecinin sol tarafı) değerini gücüne (işlecin sağ tarafındaki) ifade değeri. İşleci, bu işlemin sonucunu daha sonra değişken veya özellik için atar.  
+ @No__t-0 işleci ilk olarak, değişkenin veya özelliğin değerini (işlecin sol tarafında) ifadenin değerinin (işlecin sağ tarafında) kuvvetine yükseltir. İşleci daha sonra bu işlemin sonucunu değişkenine veya özelliğe geri atar.  
   
- Visual Basic içinde üs her zaman gerçekleştirir [Double veri türü](../../../visual-basic/language-reference/data-types/double-data-type.md). Tüm farklı türündeki işlenenler için dönüştürülür `Double`, ve sonucu her zaman `Double`.  
+ Visual Basic her zaman [Double veri türünde](../../../visual-basic/language-reference/data-types/double-data-type.md)üs gerçekleştirir. Farklı türdeki işlenenler `Double` ' a dönüştürülür ve sonuç her zaman `Double` ' dir.  
   
- Değerini `expression` kesir olabilir negatif veya her ikisini de.  
+ @No__t-0 değeri kesirli, negatif veya her ikisi olabilir.  
   
 ## <a name="overloading"></a>Aşırı Yükleme  
- [^ İşleci](../../../visual-basic/language-reference/operators/exponentiation-operator.md) olabilir *aşırı*, işleneni, sınıf veya yapı türüne sahip olduğunda bir sınıf veya yapı davranışını tanımlayabilirsiniz, anlamına gelir. Aşırı yükleme `^` işleci davranışını etkileyen `^=` işleci. Kodunuzu kullanıyorsa `^=` bir sınıf veya aşırı yapısı `^`, yeniden tanımlanan davranışını anladığınızdan emin olun. Daha fazla bilgi için [işleç yordamları](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+ [^ İşleci](../../../visual-basic/language-reference/operators/exponentiation-operator.md) *aşırı*yüklenebilir, yani bir işlenen bu sınıf veya yapının türüne sahip olduğunda bir sınıf veya yapının davranışını yeniden tanımlayabileceği anlamına gelir. @No__t aşırı yükleme-0 işleci `^=` işlecinin davranışını etkiler. Kodunuz, `^` ' i aşırı yükleyen bir sınıf veya yapıda `^=` kullanıyorsa, yeniden tanımlanmış davranışını anladığınızdan emin olun. Daha fazla bilgi için bkz. [operatör yordamları](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte `^=` değerini artırmak için işleci `Integer` değişkenini ikinci değişken ve ata birinci değişken sonucu.  
+ Aşağıdaki örnek, bir `Integer` değişkeninin değerini ikinci bir değişkenin gücüne yükseltmek ve sonucu ilk değişkene atamak için `^=` işlecini kullanır.  
   
  [!code-vb[VbVbalrOperators#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#21)]  
   
@@ -54,6 +54,6 @@ variableorproperty ^= expression
 - [^ İşleci](../../../visual-basic/language-reference/operators/exponentiation-operator.md)
 - [Atama İşleçleri](../../../visual-basic/language-reference/operators/assignment-operators.md)
 - [Aritmetik İşleçler](../../../visual-basic/language-reference/operators/arithmetic-operators.md)
-- [Visual Basic'de İşleç önceliği](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [Visual Basic operatör önceliği](../../../visual-basic/language-reference/operators/operator-precedence.md)
 - [İşlevselliğe Göre Listelenmiş İşleçler](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
 - [Deyimler](../../../visual-basic/programming-guide/language-features/statements.md)

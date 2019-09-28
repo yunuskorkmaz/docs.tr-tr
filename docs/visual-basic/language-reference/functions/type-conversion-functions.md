@@ -81,19 +81,19 @@ helpviewer_keywords:
 - rounding numbers [Visual Basic], banker's rounding
 - type conversion [Visual Basic], Visual Basic vs. .NET Framework
 ms.assetid: d9d8d165-f967-44ff-a6cd-598e4740a99e
-ms.openlocfilehash: 3321a9a290e6ba49be289848e4d16907ad9edbda
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6b448fa23368f7a0848c44362337b0ccc70b6162
+ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662588"
+ms.lasthandoff: 09/28/2019
+ms.locfileid: "71592070"
 ---
 # <a name="type-conversion-functions-visual-basic"></a>Tür Dönüştürme İşlevleri (Visual Basic)
-Bu da dönüştürme kodunun ifadeyi değerlendiren kodun bir parçası olduğu anlamına derlenmiş satır içi işlevlerdir. Bazen bir yordam performansı artıran dönüştürme gerçekleştirmek için hiçbir çağrı yoktur. Her işlev bir özel veri türü için bir ifade olacak şekilde zorlar.  
+Bu işlevler satır içi olarak derlenir, yani dönüştürme kodu, ifadeyi değerlendiren kodun bir parçasıdır. Bazen dönüştürmeyi gerçekleştirmek için bir yordam çağrısı yoktur ve bu da performansı geliştirir. Her işlev bir ifadeyi belirli bir veri türüne zorlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```vb  
 CBool(expression)  
 CByte(expression)  
 CChar(expression)  
@@ -112,38 +112,38 @@ CULng(expression)
 CUShort(expression)  
 ```  
   
-## <a name="part"></a>Bölümü  
+## <a name="part"></a>Bölümüyle  
  `expression`  
- Gerekli. Herhangi bir ifade kaynak veri türü.  
+ Gerekli. Kaynak veri türünün herhangi bir ifadesi.  
   
 ## <a name="return-value-data-type"></a>Dönüş değeri veri türü  
- İşlev adı, aşağıdaki tabloda gösterildiği gibi döndürür, değeri veri türünü belirler.  
+ İşlev adı, aşağıdaki tabloda gösterildiği gibi, döndürdüğü değerin veri türünü belirler.  
   
-|İşlev adı|Dönüş veri türü|İçin aralık `expression` bağımsız değişken|  
+|İşlev adı|Dönüş veri türü|@No__t-0 bağımsız değişkeni aralığı|  
 |-------------------|----------------------|-------------------------------------|  
-|`CBool`|[Boolean Veri Türü](../../../visual-basic/language-reference/data-types/boolean-data-type.md)|Herhangi bir geçerli `Char` veya `String` veya sayısal ifade.|  
-|`CByte`|[Byte Veri Türü](../../../visual-basic/language-reference/data-types/byte-data-type.md)|<xref:System.Byte.MinValue?displayProperty=nameWithType> (0) aracılığıyla <xref:System.Byte.MaxValue?displayProperty=nameWithType> (255) (işaretsiz); kesirli bölümleri yuvarlanır.<sup> 1</sup><br/><br/>Visual Basic 15,8 ile başlayarak, Visual Basic ile bayt dönüştürme kayan nokta performansını iyileştirir `CByte` işlev; bkz [açıklamalar](#remarks) bölümünde daha fazla bilgi için. Bkz: [CInt örnek](#cint-example) bölüm bir örnek.|  
-|`CChar`|[Char Veri Türü](../../../visual-basic/language-reference/data-types/char-data-type.md)|Herhangi bir geçerli `Char` veya `String` ifadesi; yalnızca ilk karakteri bir `String` dönüştürülür; değeri 0-65535 (işaretsiz) olabilir.|  
-|`CDate`|[Date Veri Türü](../../../visual-basic/language-reference/data-types/date-data-type.md)|Tüm geçerli temsili bir tarih ve saat.|  
-|`CDbl`|[Double Veri Türü](../../../visual-basic/language-reference/data-types/double-data-type.md)|-1.79769313486231570E + 308 - aracılığıyla 4.94065645841246544E-324; negatif değerleri 4.94065645841246544E-324 1.79769313486231570E + 308 pozitif değerler için aracılığıyla.|  
-|`CDec`|[Decimal Veri Türü](../../../visual-basic/language-reference/data-types/decimal-data-type.md)|sıfır ölçeklendirilmiş sayılar için diğer bir deyişle, ondalık konumu olmayan sayılar 79,228,162,514,264,337,593,543,950,335 +/-. 28 ondalık basamaklı sayılar için +/-7.9228162514264337593543950335 aralığıdır. En küçük olası sıfır olmayan 0.0000000000000000000000000001 (+/-1E-28) sayısıdır.|  
-|`CInt`|[Integer Veri Türü](../../../visual-basic/language-reference/data-types/integer-data-type.md)|<xref:System.Int32.MinValue?displayProperty=nameWithType> (-2.147.483.648) aracılığıyla <xref:System.Int32.MaxValue?displayProperty=nameWithType> (2.147.483.647); kesirli bölümleri yuvarlanır.<sup> 1</sup> <br/><br/>Visual Basic 15,8 ile başlayarak, Visual Basic ile tamsayı dönüştürmesi için kayan nokta performansını iyileştirir `CInt` işlev; bkz [açıklamalar](#remarks) bölümünde daha fazla bilgi için. Bkz: [CInt örnek](#cint-example) bölüm bir örnek. |  
-|`CLng`|[Long Veri Türü](../../../visual-basic/language-reference/data-types/long-data-type.md)|<xref:System.Int64.MinValue?displayProperty=nameWithType> (-9,223,372,036,854,775,808) aracılığıyla <xref:System.Int64.MaxValue?displayProperty=nameWithType> (9.223.372.036.854.775.807); kesirli bölümleri yuvarlanır.<sup> 1</sup><br/><br/>Visual Basic 15,8 ile başlayarak, Visual Basic ile 64-bit tamsayıya dönüştürme kayan nokta performansını iyileştirir `CLng` işlev; bkz [açıklamalar](#remarks) bölümünde daha fazla bilgi için. Bkz: [CInt örnek](#cint-example) bölüm bir örnek.|  
+|`CBool`|[Boolean Veri Türü](../../../visual-basic/language-reference/data-types/boolean-data-type.md)|Geçerli @no__t 0 veya `String` veya sayısal ifade.|  
+|`CByte`|[Byte Veri Türü](../../../visual-basic/language-reference/data-types/byte-data-type.md)|<xref:System.Byte.MinValue?displayProperty=nameWithType> (0)-<xref:System.Byte.MaxValue?displayProperty=nameWithType> (255) (işaretsiz); kesirli parçalar yuvarlanır. <sup>1</sup><br/><br/>Visual Basic 15,8 ' den başlayarak, Visual Basic kayan noktanın performansını `CByte` işleviyle birlikte bayt dönüştürmeye en iyi duruma getirir; daha fazla bilgi için [açıklamalar](#remarks) bölümüne bakın. Örnek için [CInt örnek](#cint-example) bölümüne bakın.|  
+|`CChar`|[Char Veri Türü](../../../visual-basic/language-reference/data-types/char-data-type.md)|Geçerli `Char` veya `String` ifadesi; yalnızca bir `String` ' nin ilk karakteri dönüştürülür; değer 0 ile 65535 (işaretsiz) olabilir.|  
+|`CDate`|[Date Veri Türü](../../../visual-basic/language-reference/data-types/date-data-type.md)|Tarih ve saatin geçerli bir gösterimi.|  
+|`CDbl`|[Double Veri Türü](../../../visual-basic/language-reference/data-types/double-data-type.md)|-1.79769313486231570 e + 308 ile-4.94065645841246544 E-324 arasında negatif değerler için; 4.94065645841246544 e-324-1.79769313486231570 E + 308 arası pozitif değerler için.|  
+|`CDec`|[Decimal Veri Türü](../../../visual-basic/language-reference/data-types/decimal-data-type.md)|+/-79228162514264337593543950335 sıfır ölçekli sayılar, diğer bir deyişle ondalık basamak içermeyen sayılar. 28 ondalık basamak içeren sayılar için, Aralık +/-7.9228162514264337593543950335 olur. Olası en küçük sıfır olmayan sayı 0,0000000000000000000000000001 ' dir (+/-1E-28).|  
+|`CInt`|[Integer Veri Türü](../../../visual-basic/language-reference/data-types/integer-data-type.md)|<xref:System.Int32.MinValue?displayProperty=nameWithType> (-2.147.483.648) ile <xref:System.Int32.MaxValue?displayProperty=nameWithType> (2.147.483.647) arasında; kesirli parçalar yuvarlanır. <sup>1</sup> <br/><br/>Visual Basic 15,8 ' den başlayarak, Visual Basic kayan noktanın performansını `CInt` işleviyle tamsayı dönüştürmeye en iyi duruma getirir; daha fazla bilgi için [açıklamalar](#remarks) bölümüne bakın. Örnek için [CInt örnek](#cint-example) bölümüne bakın. |  
+|`CLng`|[Long Veri Türü](../../../visual-basic/language-reference/data-types/long-data-type.md)|<xref:System.Int64.MinValue?displayProperty=nameWithType> (-9223372036854775808) ile <xref:System.Int64.MaxValue?displayProperty=nameWithType> (9.223.372.036.854.775.807) arasında; kesirli parçalar yuvarlanır. <sup>1</sup><br/><br/>Visual Basic 15,8 ' den başlayarak, Visual Basic kayan noktanın performansını `CLng` işleviyle 64 bit tamsayı dönüştürmeye iyileştirir; daha fazla bilgi için [açıklamalar](#remarks) bölümüne bakın. Örnek için [CInt örnek](#cint-example) bölümüne bakın.|  
 |`CObj`|[Object Veri Türü](../../../visual-basic/language-reference/data-types/object-data-type.md)|Herhangi bir geçerli ifade.|  
-|`CSByte`|[SByte Veri Türü](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)|<xref:System.SByte.MinValue?displayProperty=nameWithType> (-128) aracılığıyla <xref:System.SByte.MaxValue?displayProperty=nameWithType> (127); kesirli bölümleri yuvarlanır.<sup> 1</sup><br/><br/>Visual Basic 15,8 ile başlayarak, Visual Basic ile işaretli bayt dönüştürme kayan nokta performansını iyileştirir `CSByte` işlev; bkz [açıklamalar](#remarks) bölümünde daha fazla bilgi için. Bkz: [CInt örnek](#cint-example) bölüm bir örnek.|  
-|`CShort`|[Short Veri Türü](../../../visual-basic/language-reference/data-types/short-data-type.md)|<xref:System.Int16.MinValue?displayProperty=nameWithType> (-32.768) aracılığıyla <xref:System.Int16.MaxValue?displayProperty=nameWithType> (32.767); kesirli bölümleri yuvarlanır.<sup> 1</sup><br/><br/>Visual Basic 15,8 ile başlayarak, Visual Basic ile 16 bit tam sayı dönüşümü kayan nokta performansını iyileştirir `CShort` işlev; bkz [açıklamalar](#remarks) bölümünde daha fazla bilgi için. Bkz: [CInt örnek](#cint-example) bölüm bir örnek.|  
-|`CSng`|[Single Veri Türü](../../../visual-basic/language-reference/data-types/single-data-type.md)|-3.402823E + 38 ile - 1.401298E-45 negatif değerleri; 1.401298E-45 3.402823E + 38 pozitif değerler için aracılığıyla.|  
-|`CStr`|[String Veri Türü](../../../visual-basic/language-reference/data-types/string-data-type.md)|Döndüren `CStr` bağımlı `expression` bağımsız değişken. Bkz: [CStr işlevi dönüş değerleri](../../../visual-basic/language-reference/functions/return-values-for-the-cstr-function.md).|  
-|`CUInt`|[UInteger Veri Türü](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)|<xref:System.UInt32.MinValue?displayProperty=nameWithType> (0) aracılığıyla <xref:System.UInt32.MaxValue?displayProperty=nameWithType> (4.294.967.295'e) (işaretsiz); kesirli bölümleri yuvarlanır.<sup> 1</sup><br/><br/>Visual Basic 15,8 ile başlayarak, Visual Basic ile işaretsiz tamsayı dönüştürme kayan nokta performansını iyileştirir `CUInt` işlev; bkz [açıklamalar](#remarks) bölümünde daha fazla bilgi için. Bkz: [CInt örnek](#cint-example) bölüm bir örnek.|  
-|`CULng`|[ULong Veri Türü](../../../visual-basic/language-reference/data-types/ulong-data-type.md)|<xref:System.UInt64.MinValue?displayProperty=nameWithType> (0) aracılığıyla <xref:System.UInt64.MaxValue?displayProperty=nameWithType> (18,446,744,073,709,551,615) (işaretsiz); kesirli bölümleri yuvarlanır.<sup> 1</sup><br/><br/>Visual Basic 15,8 ile başlayarak, Visual Basic ile işaretsiz uzun tamsayı dönüştürmesi için kayan nokta performansını iyileştirir `CULng` işlev; bkz [açıklamalar](#remarks) bölümünde daha fazla bilgi için. Bkz: [CInt örnek](#cint-example) bölüm bir örnek.|  
-|`CUShort`|[UShort Veri Türü](../../../visual-basic/language-reference/data-types/ushort-data-type.md)|<xref:System.UInt16.MinValue?displayProperty=nameWithType> (0) aracılığıyla <xref:System.UInt16.MaxValue?displayProperty=nameWithType> (65,535) (işaretsiz); kesirli bölümleri yuvarlanır.<sup> 1</sup><br/><br/>Visual Basic 15,8 ile başlayarak, Visual Basic ile 16 bit işaretsiz tamsayı dönüştürme kayan nokta performansını iyileştirir `CUShort` işlev; bkz [açıklamalar](#remarks) bölümünde daha fazla bilgi için. Bkz: [CInt örnek](#cint-example) bölüm bir örnek.|  
+|`CSByte`|[SByte Veri Türü](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)|<xref:System.SByte.MinValue?displayProperty=nameWithType> (-128) ile <xref:System.SByte.MaxValue?displayProperty=nameWithType> (127) arasında; kesirli parçalar yuvarlanır. <sup>1</sup><br/><br/>Visual Basic 15,8 ' den başlayarak, Visual Basic kayan noktalı olarak işaretli bayt dönüştürme performansını `CSByte` işleviyle iyileştirir; daha fazla bilgi için [açıklamalar](#remarks) bölümüne bakın. Örnek için [CInt örnek](#cint-example) bölümüne bakın.|  
+|`CShort`|[Short Veri Türü](../../../visual-basic/language-reference/data-types/short-data-type.md)|<xref:System.Int16.MinValue?displayProperty=nameWithType> (-32.768) ile <xref:System.Int16.MaxValue?displayProperty=nameWithType> (32.767) arasında; kesirli parçalar yuvarlanır. <sup>1</sup><br/><br/>Visual Basic 15,8 ' den başlayarak, Visual Basic kayan noktanın performansını `CShort` işleviyle 16 bit tam sayı dönüştürmesi ile iyileştirir; daha fazla bilgi için [açıklamalar](#remarks) bölümüne bakın. Örnek için [CInt örnek](#cint-example) bölümüne bakın.|  
+|`CSng`|[Single Veri Türü](../../../visual-basic/language-reference/data-types/single-data-type.md)|-3.402823 e + 38 ila-1.401298 E-45 negatif değerler için; 1.401298 e-45 ile pozitif değerler için 3.402823 E + 38 arası.|  
+|`CStr`|[String Veri Türü](../../../visual-basic/language-reference/data-types/string-data-type.md)|@No__t-0 `expression` bağımsız değişkenine göre değişir. Bkz. [CStr işlevi Için dönüş değerleri](../../../visual-basic/language-reference/functions/return-values-for-the-cstr-function.md).|  
+|`CUInt`|[UInteger Veri Türü](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)|<xref:System.UInt32.MinValue?displayProperty=nameWithType> (0)-<xref:System.UInt32.MaxValue?displayProperty=nameWithType> (4.294.967.295) (işaretsiz); kesirli parçalar yuvarlanır. <sup>1</sup><br/><br/>Visual Basic 15,8 ' den başlayarak, Visual Basic kayan noktanın performansını `CUInt` işleviyle işaretsiz tamsayı dönüştürmeye en iyi duruma getirir; daha fazla bilgi için [açıklamalar](#remarks) bölümüne bakın. Örnek için [CInt örnek](#cint-example) bölümüne bakın.|  
+|`CULng`|[ULong Veri Türü](../../../visual-basic/language-reference/data-types/ulong-data-type.md)|<xref:System.UInt64.MinValue?displayProperty=nameWithType> (0)-<xref:System.UInt64.MaxValue?displayProperty=nameWithType> (18446744073709551615) (işaretsiz); kesirli parçalar yuvarlanır. <sup>1</sup><br/><br/>Visual Basic 15,8 ' den başlayarak, Visual Basic kayan noktanın performansını `CULng` işleviyle işaretsiz uzun tamsayı dönüştürmeye en iyi duruma getirir; daha fazla bilgi için [açıklamalar](#remarks) bölümüne bakın. Örnek için [CInt örnek](#cint-example) bölümüne bakın.|  
+|`CUShort`|[UShort Veri Türü](../../../visual-basic/language-reference/data-types/ushort-data-type.md)|<xref:System.UInt16.MinValue?displayProperty=nameWithType> (0)-<xref:System.UInt16.MaxValue?displayProperty=nameWithType> (65.535) (işaretsiz); kesirli parçalar yuvarlanır. <sup>1</sup><br/><br/>Visual Basic 15,8 ' den başlayarak, Visual Basic kayan noktanın performansını `CUShort` işleviyle işaretsiz 16 bit tam sayı dönüştürmesi ile iyileştirir; daha fazla bilgi için [açıklamalar](#remarks) bölümüne bakın. Örnek için [CInt örnek](#cint-example) bölümüne bakın.|  
   
- <sup>1</sup> kesirli bölümleri çağrılan yuvarlama özel bir tür tabi olabilir *banker yuvarlama*. "Açıklamalar" daha fazla bilgi için bkz.  
+ <sup>1</sup> kesirli parçalar *banker 'in yuvarlanması*adlı özel bir yuvarlama türüne tabi olabilir. Daha fazla bilgi için "açıklamalar" başlığına bakın.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bir kural olarak, .NET Framework yöntemlerini değişkenden Visual Basic tür dönüştürme işlevleri gibi kullanmalısınız `ToString()`, ya da üzerinde <xref:System.Convert> sınıfı veya tek tek tür yapı ya da sınıfı. Visual Basic işlevleri, Visual Basic kod ile en iyi etkileşim sağlamak için tasarlanmıştır ve ayrıca kaynak kodunuzu daha kısa ve kolay okunur hale. Ayrıca, .NET Framework dönüştürme yöntemleri her zaman aynı sonucu dönüştürülürken bir örnek için Visual Basic işlevleri olarak vermez `Boolean` için `Integer`. Daha fazla bilgi için [veri türleri sorunlarını giderme](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).  
+ Bir kural olarak, <xref:System.Convert> sınıfında veya tek bir tür yapısında ya da sınıfında `ToString()` gibi .NET Framework yöntemlere tercih olarak Visual Basic tür dönüştürme işlevlerini kullanmanız gerekir. Visual Basic işlevleri Visual Basic kodla en iyi etkileşim için tasarlanmıştır ve ayrıca, kaynak kodunuzu daha kısa ve daha kolay okunabilir hale getirir. Ayrıca, .NET Framework dönüştürme yöntemleri her zaman Visual Basic işlevlerle aynı sonuçları oluşturmaz; Örneğin, `Boolean` ' ı `Integer` ' e dönüştürme. Daha fazla bilgi için bkz. [sorun giderme veri türleri](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).  
 
-Geçirdiğinizde, Visual Basic 15,8 ile başlayarak, kayan-noktaya-boolean'dan tamsayıya dönüştürmeyi performansını optimize edilmiştir <xref:System.Single> veya <xref:System.Double> değeri bir tamsayı dönüştürme işlevleri aşağıdaki yöntemlerle döndürdü (`CByte`, `CShort`, `CInt`, `CLng`, `CSByte`, `CUShort`, `CUInt`, `CULng`):
+Visual Basic 15,8 ' den itibaren, aşağıdaki yöntemler tarafından döndürülen <xref:System.Single> veya <xref:System.Double> değerini tamsayı dönüştürme işlevlerinden birine geçirdiğinizde (`CByte`, `CShort`, `CInt`, @no__) kayan noktalı tamsayı dönüştürme performansı en iyi duruma getirilmiştir. t-5, `CSByte`, `CUShort`, `CUInt`, `CULng`):
 
 - <xref:Microsoft.VisualBasic.Conversion.Fix(System.Double)?displayProperty=nameWithType>
 - <xref:Microsoft.VisualBasic.Conversion.Fix(System.Object)?displayProperty=nameWithType>
@@ -156,7 +156,7 @@ Geçirdiğinizde, Visual Basic 15,8 ile başlayarak, kayan-noktaya-boolean'dan t
 - <xref:System.Math.Round(System.Double)?displayProperty=nameWithType>
 - <xref:System.Math.Truncate(System.Double)?displayProperty=nameWithType>
 
-Bu iyileştirme, çok sayıda iki kat daha hızlı şekilde çalışması için tamsayı dönüştürmeleri yapan kod sağlar. Aşağıdaki örnekte, bu en iyi duruma getirilmiş kayan-noktaya boolean'dan tamsayıya dönüştürme gösterilmektedir:
+Bu iyileştirme, çok sayıda tamsayı dönüştürme yapan kodun hızlı bir şekilde çalışmasını sağlar. Aşağıdaki örnekte, bu en iyileştirilmiş kayan noktadan tamsayı dönüştürmeleri gösterilmektedir:
 
 ```vb
 Dim s As Single = 173.7619
@@ -171,50 +171,50 @@ Dim i3 As Integer = CInt(Math.Round(s))        ' Result: 174
 
 ## <a name="behavior"></a>Davranış  
   
-- **Zorlama.** Genel olarak, varsayılan veri türü yerine belirli bir veri türüne bir işlemin sonucunu coerce için veri türü dönüştürme işlevleri kullanabilirsiniz. Örneğin, `CDec` burada tek duyarlıklı, çift duyarlıklı veya tamsayı aritmetik normalde geçtiğine durumlarda ondalık aritmetik zorlamak için.  
+- **Zorlama.** Genel olarak, bir işlemin sonucunu varsayılan veri türü yerine belirli bir veri türüne zorlamak için veri türü dönüştürme işlevlerini kullanabilirsiniz. Örneğin, tek duyarlıklı, çift duyarlıklı veya tamsayı aritmetiğinin normalde gerçekleştiği durumlarda ondalık aritmetiğini zorlamak için `CDec` kullanın.  
   
-- **Dönüştürme başarısız.** Varsa `expression` işleve geçirilen için hangi BT dönüştürülmekte olan veri türü aralığının dışında olduğundan bir <xref:System.OverflowException> gerçekleşir.  
+- **Dönüştürme başarısız oldu.** İşleve geçirilen `expression`, dönüştürülecek veri türü aralığının dışındaysa, bir <xref:System.OverflowException> oluşur.  
   
-- **Kesirli bölümleri.** Bir tam sayıya nonintegral değeri dönüştürdüğünüzde türü, tamsayı dönüştürme işlevleri (`CByte`, `CInt`, `CLng`, `CSByte`, `CShort`, `CUInt`, `CULng`, ve `CUShort`) Kaldır kesirli bölümü ve değeri en yakın tamsayıya yuvarlar.  
+- **Kesirli parçalar.** İntegral olmayan bir değeri integral türüne dönüştürdüğünüzde, tamsayı dönüştürme işlevleri (`CByte`, `CInt`, `CLng`, `CSByte`, `CShort`, `CUInt`, `CULng` ve `CUShort`) Kesirli parçayı kaldırır ve değeri en yakın tamsayıya yuvarlar.  
   
-     Kesirli bölümü tam olarak ise 0,5, tamsayı dönüştürme işlevleri yuvarlak kendisine en yakın çift tamsayıya. Örneğin, 0 ve 1.5 hem de 2 yuvarlak 2.5 0,5 yuvarlar. Bazen adlandırılır *banker yuvarlama*, ve amacı dengelemek birlikte birçok sayı eklerken birikebilir sapması.  
+     Kesirli bölüm tam olarak 0,5 ise, tamsayı dönüştürme işlevleri onu en yakın çift tamsayıya yuvarlar. Örneğin, 0,5, 0, 1,5 ve 2,5 her ikisi de 2 ' ye yuvarlanır. Bu bazen Banker yuvarlama olarak adlandırılır ve amacı, bu tür sayıları birlikte eklerken *birikmekte*olan bir sapma için telafi sağlamaktır.  
   
-     `CInt` ve `CLng` farklı <xref:Microsoft.VisualBasic.Conversion.Int%2A> ve <xref:Microsoft.VisualBasic.Conversion.Fix%2A> hangi round, bir sayının kesirli kısmını yerine truncate işlevleri. Ayrıca, `Fix` ve `Int` , geçirdiğiniz her zaman aynı veri türünde bir değer döndürür.  
+     `CInt` ve `CLng` <xref:Microsoft.VisualBasic.Conversion.Int%2A> ve <xref:Microsoft.VisualBasic.Conversion.Fix%2A> işlevlerinden farklıdır, bu, sayının kesirli kısmını yuvarlayıp keser. Ayrıca, `Fix` ve `Int` her zaman, geçirdiğiniz veri türünde bir değer döndürür.  
   
-- **Tarih/saat dönüştürme.** Kullanım <xref:Microsoft.VisualBasic.Information.IsDate%2A> işlevi bir tarih ve saat değeri dönüştürülebilir ise belirlemek için. `CDate` Tarih değişmez değerleri ve zaman değişmez ancak sayısal değerleri algılar. Visual Basic 6.0 dönüştürülecek `Date` değerini bir `Date` değer Visual Basic 2005 veya sonraki sürümler, kullanabileceğiniz <xref:System.DateTime.FromOADate%2A?displayProperty=nameWithType> yöntemi.  
+- **Tarih/saat dönüştürmeleri.** Değerin tarih ve saate dönüştürülebileceğini öğrenmek için <xref:Microsoft.VisualBasic.Information.IsDate%2A> işlevini kullanın. `CDate`, tarih değişmez değerlerini ve zaman rakamlarını tanır, ancak sayısal değerleri tanımaz. Visual Basic 6,0 `Date` değerini Visual Basic 2005 veya sonraki sürümlerde `Date` değerine dönüştürmek için <xref:System.DateTime.FromOADate%2A?displayProperty=nameWithType> yöntemini kullanabilirsiniz.  
   
-- **Nötr tarih/saat değerleri.** [Date veri türü](../../../visual-basic/language-reference/data-types/date-data-type.md) her zaman tarih ve saat bilgileri içerir. Tür dönüştürme amacı doğrultusunda, Visual Basic 1/1/0001 (Ocak 1 yılının 1) olarak göz önünde bulundurur bir *bağımsız değer* tarihini ve 00:00:00 (gece yarısı) süresi için bağımsız bir değer olarak. Dönüştürürseniz, bir `Date` bir dize değerine `CStr` nötr değerlerini sonuç dizesindeki içermez. Örneğin, dönüştürmek, `#January 1, 0001 9:30:00#` bir dize, "9:30:00 AM" sonucudur; tarih bilgisi bastırılır. Ancak, tarih bilgileri özgün hala mevcut `Date` değeri ve işlevlerinde aşağıdaki gibi kurtarılabilir <xref:Microsoft.VisualBasic.DateAndTime.DatePart%2A> işlevi.  
+- **Bağımsız tarih/saat değerleri.** [Tarih veri türü](../../../visual-basic/language-reference/data-types/date-data-type.md) her zaman hem tarih hem de saat bilgilerini içerir. Tür dönüştürme amaçları doğrultusunda Visual Basic, 1/1/0001 (yıl 1 ' den 1 ' de) tarih için nötr bir *değer* ve 00:00:00 (gece yarısı) zaman için nötr bir değer olacak şekilde değerlendirir. Bir `Date` değerini bir dizeye dönüştürürseniz, `CStr` sonuç dizesinde nötr değerler içermez. Örneğin, `#January 1, 0001 9:30:00#` ' ı bir dizeye dönüştürürseniz, sonuç "9:30:00" olur; tarih bilgileri bastırılır. Ancak, tarih bilgileri özgün `Date` değerinde hala vardır ve <xref:Microsoft.VisualBasic.DateAndTime.DatePart%2A> işlevi gibi işlevlerle kurtarılabilir.  
   
-- **Kültür duyarlılık.** Dizeleri içeren tür dönüştürme işlevleri, uygulama için geçerli kültür ayarlara dayanan dönüştürmeler gerçekleştirin. Örneğin, `CDate` tarih biçimleri sisteminizin yerel ayarına göre tanır. Gün, ay ve yıl bölgeniz için doğru sırada sağlamanız gerekir ya da tarih doğru şekilde yorumlanabilir değil. "Çarşamba" gibi bir haftanın gün dize içeriyorsa, uzun tarih biçimi tanınmıyor.  
+- **Kültür duyarlılığı.** Dizeleri içeren tür dönüştürme işlevleri, uygulamanın geçerli kültür ayarlarına bağlı olarak dönüştürme işlemleri gerçekleştirir. Örneğin, `CDate`, sisteminizin yerel ayara göre tarih biçimlerini tanır. Yerel ayarınız için doğru sırada gün, ay ve yıl girmelisiniz veya tarih doğru şekilde yorumlanmayabilir. Uzun tarih biçimi, "Çarşamba" gibi bir haftanın günü dizesi içeriyorsa tanınmıyor.  
   
-     İçin veya bir biçimde, yerel ayar tarafından belirtilen dışında bir değer bir dize gösterimini dönüştürmek istiyorsanız, Visual Basic tür dönüştürme işlevleri kullanamazsınız. Bunu yapmak için `ToString(IFormatProvider)` ve `Parse(String, IFormatProvider)` yöntemleri bu değerin türü. Örneğin, <xref:System.Double.Parse%2A?displayProperty=nameWithType> bir dizeye dönüştürürken bir `Double`ve <xref:System.Double.ToString%2A?displayProperty=nameWithType> türünde bir değer dönüştürülürken `Double` bir dize.  
+     Bir değerin dize gösterimine ya da yerel ayarınız tarafından belirtilenden farklı bir biçimde dönüştürmeniz gerekiyorsa Visual Basic tür dönüştürme işlevlerini kullanamazsınız. Bunu yapmak için, bu değerin türünün `ToString(IFormatProvider)` ve `Parse(String, IFormatProvider)` yöntemlerini kullanın. Örneğin, bir dizeyi `Double` ' e dönüştürürken <xref:System.Double.Parse%2A?displayProperty=nameWithType> kullanın ve `Double` türündeki bir değeri bir dizeye dönüştürürken <xref:System.Double.ToString%2A?displayProperty=nameWithType> kullanın.  
   
 ## <a name="ctype-function"></a>CType İşlevi  
- [CType işlevi](../../../visual-basic/language-reference/functions/ctype-function.md) ikinci bağımsız değişken `typename`ve olacak şekilde zorlar `expression` için `typename`burada `typename` veri türü, yapı, sınıf veya arabirim için hangi verilmesiyle geçerli bir dönüşümü olabilir.  
+ [CType işlevi](../../../visual-basic/language-reference/functions/ctype-function.md) ikinci bir bağımsız değişken alır, `typename` ve `expression` ' yi `typename` ' e zorlar; burada `typename`, geçerli bir dönüştürme var olan herhangi bir veri türü, yapı, sınıf veya arabirim olabilir.  
   
- Bir karşılaştırması `CType` diğer tür dönüşüm anahtar sözcükleri ile bkz: [DirectCast işleci](../../../visual-basic/language-reference/operators/directcast-operator.md) ve [TryCast işleci](../../../visual-basic/language-reference/operators/trycast-operator.md).  
+ Diğer tür dönüştürme anahtar sözcükleriyle `CType` ' ı bir karşılaştırma için bkz. [DirectCast İşleci](../../../visual-basic/language-reference/operators/directcast-operator.md) ve [TryCast İşleci](../../../visual-basic/language-reference/operators/trycast-operator.md).  
   
 ## <a name="cbool-example"></a>CBool örneği  
- Aşağıdaki örnekte `CBool` ifadeleri dönüştürmek için işlevi `Boolean` değerleri. Bir ifade sıfır olmayan bir değer olarak değerlendirilirse `CBool` döndürür `True`; Aksi halde döndürür `False`.  
+ Aşağıdaki örnek, ifadeleri `Boolean` değerlerine dönüştürmek için `CBool` işlevini kullanır. Bir ifade sıfır dışında bir değer olarak değerlendirilirse, `CBool` döndürür `True`; Aksi takdirde, `False` döndürür.  
   
  [!code-vb[VbVbalrFunctions#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#1)]  
   
 ## <a name="cbyte-example"></a>CByte örneği  
- Aşağıdaki örnekte `CByte` bir ifadeye dönüştürmek için işlevi bir `Byte`.  
+ Aşağıdaki örnek, bir ifadeyi `Byte` ' e dönüştürmek için `CByte` işlevini kullanır.  
   
  [!code-vb[VbVbalrFunctions#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#2)]  
   
 ## <a name="cchar-example"></a>CChar örneği  
- Aşağıdaki örnekte `CChar` ilk karakteri dönüştürmek için işlevi bir `String` ifade bir `Char` türü.  
+ Aşağıdaki örnek, bir `String` ifadesinin ilk karakterini `Char` türüne dönüştürmek için `CChar` işlevini kullanır.  
   
  [!code-vb[VbVbalrFunctions#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#3)]  
   
- Giriş bağımsız değişkeni için `CChar` veri türünde olmalıdır `Char` veya `String`. Kullanamazsınız `CChar` çünkü bir karakter, bir sayı dönüştürmek için `CChar` bir sayısal veri türü kabul edemez. Aşağıdaki örnek, bir kod noktası (karakter kodu) temsil eden bir sayı alır ve karşılık gelen karaktere dönüştürür. Kullandığı <xref:Microsoft.VisualBasic.Interaction.InputBox%2A> basamak dizisini elde etmek için işlevi `CInt` dize türüne dönüştürmek için `Integer`, ve `ChrW` sayı türüne dönüştürmek için `Char`.  
+ @No__t-0 ' a ait giriş bağımsız değişkeni `Char` veya `String` veri türünde olmalıdır. Bir sayıyı bir karaktere dönüştürmek için `CChar` ' ı kullanamazsınız, çünkü `CChar` sayısal bir veri türünü kabul edemez. Aşağıdaki örnek, bir kod noktasını temsil eden bir sayı edinir (karakter kodu) ve karşılık gelen karaktere dönüştürür. @No__t-0 işlevini kullanarak, dizeyi `Integer` türüne dönüştürmek için `CInt` ve sayıyı `Char` türüne dönüştürmek için `ChrW`.  
   
  [!code-vb[VbVbalrFunctions#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#4)]  
   
 ## <a name="cdate-example"></a>CDate örneği  
- Aşağıdaki örnekte `CDate` dizelere dönüştürmek için işlevi `Date` değerleri. Genel olarak, kodlama sabit tarih ve saat dizeleri (Bu örnekte gösterildiği gibi) önerilmez. Tarih değişmez değerleri ve #Feb 12 1969 # gibi zaman değişmez değerleri kullanın ve # 4:45:23 PM #, bunun yerine.  
+ Aşağıdaki örnek, `CDate` işlevini kullanarak dizeleri `Date` değerlerine dönüştürür. Genel olarak, sabit kodlama tarihleri ve saatleri dizeler (Bu örnekte gösterildiği gibi) önerilmez. #Feb 12, 1969 # ve #4:45:23 PM # gibi tarih değişmez değerlerini ve zaman değişmez değerlerini kullanın.  
   
  [!code-vb[VbVbalrFunctions#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#5)]  
   
@@ -222,65 +222,65 @@ Dim i3 As Integer = CInt(Math.Round(s))        ' Result: 174
  [!code-vb[VbVbalrFunctions#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#6)]  
   
 ## <a name="cdec-example"></a>CDec örneği  
- Aşağıdaki örnekte `CDec` sayısal bir değere dönüştürmek için işlevi `Decimal`.  
+ Aşağıdaki örnek, sayısal bir değeri `Decimal` ' e dönüştürmek için `CDec` işlevini kullanır.  
   
  [!code-vb[VbVbalrFunctions#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#7)]  
   
 ## <a name="cint-example"></a>CInt örneği  
- Aşağıdaki örnekte `CInt` değerine dönüştürmek için işlevi `Integer`.  
+ Aşağıdaki örnek, bir değeri `Integer` ' e dönüştürmek için `CInt` işlevini kullanır.  
   
  [!code-vb[VbVbalrFunctions#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#8)]  
 
 ## <a name="clng-example"></a>CLng örneği
- Aşağıdaki örnekte `CLng` değerlerine dönüştürmek için işlevi `Long`.  
+ Aşağıdaki örnek, değerleri `Long` ' e dönüştürmek için `CLng` işlevini kullanır.  
   
  [!code-vb[VbVbalrFunctions#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#9)]  
   
 ## <a name="cobj-example"></a>CObj örneği  
- Aşağıdaki örnekte `CObj` sayısal bir değere dönüştürmek için işlevi `Object`. `Object` Değişkenin kendisine işaret yalnızca dört bayt işaretçi içeren `Double` atanmış değer.  
+ Aşağıdaki örnek, sayısal bir değeri `Object` ' e dönüştürmek için `CObj` işlevini kullanır. @No__t-0 değişkeni, kendisine atanan @no__t 1 değerini gösteren yalnızca dört baytlık bir işaretçi içerir.  
   
  [!code-vb[VbVbalrFunctions#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#10)]  
   
 ## <a name="csbyte-example"></a>CSByte örneği  
- Aşağıdaki örnekte `CSByte` sayısal bir değere dönüştürmek için işlevi `SByte`.  
+ Aşağıdaki örnek, sayısal bir değeri `SByte` ' e dönüştürmek için `CSByte` işlevini kullanır.  
   
  [!code-vb[VbVbalrFunctions#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#11)]  
   
 ## <a name="cshort-example"></a>CShort örneği  
- Aşağıdaki örnekte `CShort` sayısal bir değere dönüştürmek için işlevi `Short`.  
+ Aşağıdaki örnek, sayısal bir değeri `Short` ' e dönüştürmek için `CShort` işlevini kullanır.  
   
  [!code-vb[VbVbalrFunctions#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#12)]  
   
 ## <a name="csng-example"></a>CSng örneği  
- Aşağıdaki örnekte `CSng` değerlerine dönüştürmek için işlevi `Single`.  
+ Aşağıdaki örnek, değerleri `Single` ' e dönüştürmek için `CSng` işlevini kullanır.  
   
  [!code-vb[VbVbalrFunctions#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#13)]  
   
 ## <a name="cstr-example"></a>CStr örneği  
- Aşağıdaki örnekte `CStr` sayısal bir değere dönüştürmek için işlevi `String`.  
+ Aşağıdaki örnek, sayısal bir değeri `String` ' e dönüştürmek için `CStr` işlevini kullanır.  
   
  [!code-vb[VbVbalrFunctions#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#14)]  
   
- Aşağıdaki örnekte `CStr` dönüştürmek için işlevi `Date` değerler `String` değerleri.  
+ Aşağıdaki örnek, `Date` değerlerini `String` değerlerine dönüştürmek için `CStr` işlevini kullanır.  
   
  [!code-vb[VbVbalrFunctions#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#15)]  
   
- `CStr` her zaman oluşturur bir `Date` geçerli yerel ayar için örneğin, standart kısa biçiminde bir değer "6/15/2003 4:35:47 PM". Ancak, `CStr` bastırır *nötr değerleri* , 1/1/0001 tarih ve saat için 00:00:00 için.  
+ `CStr`, geçerli yerel ayar için standart kısa biçimde her zaman bir `Date` değeri işler (örneğin, "6/15/2003 4:35:47 PM"). Ancak, `CStr`, tarih ve 00:00:00 için *bağımsız 1/1/0001 nötr değerlerini* saat için bastırır.  
   
- Tarafından döndürülen değerleri hakkında daha fazla ayrıntı için `CStr`, bkz: [CStr işlevinin dönüş değerleri](../../../visual-basic/language-reference/functions/return-values-for-the-cstr-function.md).  
+ @No__t-0 tarafından döndürülen değerler hakkında daha fazla ayrıntı için bkz. [CStr işlevi Için dönüş değerleri](../../../visual-basic/language-reference/functions/return-values-for-the-cstr-function.md).  
   
-## <a name="cuint-example"></a>Cuınt örneği  
- Aşağıdaki örnekte `CUInt` sayısal bir değere dönüştürmek için işlevi `UInteger`.  
+## <a name="cuint-example"></a>CUInt örneği  
+ Aşağıdaki örnek, sayısal bir değeri `UInteger` ' e dönüştürmek için `CUInt` işlevini kullanır.  
   
  [!code-vb[VbVbalrFunctions#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#16)]  
   
-## <a name="culng-example"></a>CULng örneği  
- Aşağıdaki örnekte `CULng` sayısal bir değere dönüştürmek için işlevi `ULong`.  
+## <a name="culng-example"></a>Külörnek örneği  
+ Aşağıdaki örnek, sayısal bir değeri `ULong` ' e dönüştürmek için `CULng` işlevini kullanır.  
   
  [!code-vb[VbVbalrFunctions#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#17)]  
   
 ## <a name="cushort-example"></a>CUShort örneği  
- Aşağıdaki örnekte `CUShort` sayısal bir değere dönüştürmek için işlevi `UShort`.  
+ Aşağıdaki örnek, sayısal bir değeri `UShort` ' e dönüştürmek için `CUShort` işlevini kullanır.  
   
  [!code-vb[VbVbalrFunctions#18](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#18)]  
   
@@ -298,4 +298,4 @@ Dim i3 As Integer = CInt(Math.Round(s))        ' Result: 174
 - <xref:Microsoft.VisualBasic.Conversion.Str%2A>
 - <xref:Microsoft.VisualBasic.Conversion.Val%2A>
 - [Dönüştürme İşlevleri](../../../visual-basic/language-reference/functions/conversion-functions.md)
-- [Visual Basic'de tür dönüştürmeleri](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [Visual Basic dönüşümler yazın](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)

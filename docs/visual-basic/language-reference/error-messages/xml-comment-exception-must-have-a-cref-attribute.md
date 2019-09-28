@@ -7,28 +7,28 @@ f1_keywords:
 helpviewer_keywords:
 - BC42319
 ms.assetid: 62eeeba3-6811-48be-b1ef-c2e4feda3177
-ms.openlocfilehash: 91bde92e2184c90b14838a09a89a6d261447f139
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2e57dc63cb7ad8b2e061296a082d6fa79b464f08
+ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662606"
+ms.lasthandoff: 09/28/2019
+ms.locfileid: "71592036"
 ---
 # <a name="xml-comment-exception-must-have-a-cref-attribute"></a>XML açıklama özel durumunda 'cref' özniteliği olmalıdır
-\<Özel durum > etiketi yöntemi tarafından oluşturulan özel durumları belge için bir yol sağlar. Gerekli `cref` öznitelik belgeleri Oluşturucu tarafından denetlenir bir üyenin adını belirtir. Üye varsa, kurallı öğe adı belgeleri dosyasına çevrilir.  
+@No__t-0exception > etiketi, bir yöntem tarafından oluşturulan özel durumları belgelemek için bir yol sağlar. Gerekli `cref` özniteliği, belge Oluşturucu tarafından denetlenen bir üyenin adını belirtir. Üye varsa, belge dosyasında kurallı öğe adına çevrilir.  
   
- **Hata Kimliği:** BC42319  
+ **Hata KIMLIĞI:** BC42319  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-- Ekleme `cref` özniteliğini aşağıdaki gibi özel durumu:  
+- @No__t-0 özniteliğini özel duruma aşağıdaki şekilde ekleyin:  
   
-    ```  
-    '''<exception cref="member">description</exception>  
+    xml  
+    ' ' '<exception cref="member">açıklaması</exception>  
     ```  
   
-## <a name="see-also"></a>Ayrıca bkz.
+## See also
 
-- [\<Özel Durum >](../../../visual-basic/language-reference/xmldoc/exception.md)
-- [Nasıl yapılır: XML belgesi oluşturma](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)
-- [XML Açıklama Etiketleri](../../../visual-basic/language-reference/xmldoc/index.md)
+- [\<exception>](../../../visual-basic/language-reference/xmldoc/exception.md)
+- [How to: Create XML Documentation](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)
+- [XML Comment Tags](../../../visual-basic/language-reference/xmldoc/index.md)

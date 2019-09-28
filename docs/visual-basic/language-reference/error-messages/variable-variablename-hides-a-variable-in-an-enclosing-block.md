@@ -7,32 +7,32 @@ f1_keywords:
 helpviewer_keywords:
 - BC30616
 ms.assetid: e7658ebc-da45-451b-a409-a0f8915f0beb
-ms.openlocfilehash: 36fe543dd4546c6fe930f259a55cea856917370f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4312abef83728f432e2f6a492e5acad3450719b1
+ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662659"
+ms.lasthandoff: 09/28/2019
+ms.locfileid: "71592059"
 ---
-# <a name="variable-variablename-hides-a-variable-in-an-enclosing-block"></a>Değişken '\<variablename >' kapsayan bir blok içinde bir değişken gizliyor
-İçine bir blokta bir değişkeni başka bir yerel değişken aynı ada sahip.  
+# <a name="variable-variablename-hides-a-variable-in-an-enclosing-block"></a>' @No__t-0variablename > ' değişkeni kapsayan bir blokta bir değişkeni gizliyor
+Bir blok içine alınmış bir değişken, başka bir yerel değişkenle aynı ada sahiptir.  
   
- **Hata Kimliği:** BC30616  
+ **Hata KIMLIĞI:** BC30616  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-- Böylece, aynı diğer herhangi bir yerel değişkenler değil kapalı bloktaki değişkeni yeniden adlandırın. Örneğin:  
+- Diğer yerel değişkenlerle aynı olmaması için, ekteki bloktaki değişkeni yeniden adlandırın. Örneğin:  
   
-    ```  
+    ```vb  
     Dim a, b, x As Integer  
     If a = b Then  
        Dim y As Integer = 20 ' Uniquely named block variable.  
     End If  
     ```  
   
-- Bu hatanın yaygın bir nedeni kullanımıdır `Catch e As Exception` içinde bir olay işleyicisi. Bu durumda, ad `Catch` bloğu değişkeni `ex` yerine `e`.  
+- Bu hatanın yaygın bir nedeni, bir olay işleyicisi içinde `Catch e As Exception` ' ın kullanılması. Bu durumda, `Catch` blok değişkenini `e` yerine @no__t olarak adlandırın.  
   
-- Bu hatanın başka bir ortak kaynak içinde bildirilen yerel değişken erişme denemesi, bir `Try` ayrı bir engelleme `Catch` blok. Bunu düzeltmek için değişken dışında bildirmek `Try...Catch...Finally` yapısı.  
+- Bu hatanın daha yaygın bir kaynağı, farklı bir `Catch` bloğunda `Try` bloğu içinde belirtilen yerel bir değişkene erişme girişiminde bulunur. Bunu düzeltmek için değişkeni `Try...Catch...Finally` yapısının dışında bildirin.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

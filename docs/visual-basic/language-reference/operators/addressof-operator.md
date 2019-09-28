@@ -8,38 +8,38 @@ helpviewer_keywords:
 - AddressOf operator [Visual Basic]
 - addresses, passing to API procedures
 ms.assetid: 8105a59d-60d8-4ab5-b221-5899cdfacbf4
-ms.openlocfilehash: 098ca95687d8b0e9f4ac90d5c7e0df9a9a0ad950
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2ebadf5ded1a23fe46b8e16cf18ae265b5d3c255
+ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67760382"
+ms.lasthandoff: 09/28/2019
+ms.locfileid: "71591662"
 ---
 # <a name="addressof-operator-visual-basic"></a>AddressOf İşleci (Visual Basic)
-Özel yordam başvuran bir temsilci örneği oluşturur.  
+Belirli yordama başvuran bir temsilci örneği oluşturur.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```vb  
 AddressOf procedurename  
 ```  
   
 ## <a name="parts"></a>Bölümler  
  `procedurename`  
- Gerekli. Yeni oluşturulan temsilci tarafından başvurulabilmesi için yordamı belirtir.  
+ Gerekli. Yeni oluşturulan temsilci tarafından başvurulacak prosedürü belirtir.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `AddressOf` İşleci sub veya function tarafından belirtilen işaret eden bir temsilci oluşturur `procedurename`. Bir örnek yöntemi temsilci örneği hem yöntemi başvuruyor belirtilen yordam olduğunda. Ardından, temsilci çağrıldığında belirtilen örneğinin belirtilen yöntem çağrılır.  
+ @No__t-0 işleci, `procedurename` tarafından belirtilen Sub veya Function öğesine işaret eden bir temsilci oluşturur. Belirtilen yordam bir örnek yöntemi olduğunda, temsilci hem örneğe hem de yöntemine başvurur. Ardından, temsilci çağrıldığında belirtilen örnek için belirtilen yöntem çağrılır.  
   
- `AddressOf` İşleci, bir temsilci Oluşturucu işleneni kullanılabilir veya bir bağlamda, temsilci türü belirlenebilir derleyici tarafından kullanılabilir.  
+ @No__t-0 işleci bir temsilci oluşturucusunun işleneni olarak kullanılabilir ya da temsilci türünün derleyici tarafından belirlenebileceği bir bağlamda kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
- Bu örnekte `AddressOf` işlemek için bir temsilci atamak için işleç `Click` düğmesinin olay.  
+ Bu örnek, bir düğmenin `Click` olayını işlemek üzere bir temsilci belirlemek için `AddressOf` işlecini kullanır.  
   
  [!code-vb[VbVbalrDelegates#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#8)]  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte `AddressOf` iş parçacığı başlangıç işlevi atamak için işleç.  
+ Aşağıdaki örnek, bir iş parçacığının başlangıç işlevini belirlemek için `AddressOf` işlecini kullanır.  
   
  [!code-vb[VbVbalrDelegates#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#9)]  
   

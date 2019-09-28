@@ -5,12 +5,12 @@ f1_keywords:
 - NETSDK1045
 ms.custom: updateeachvsrelease
 ms.date: 09/20/2019
-ms.openlocfilehash: c46a1f12ca20c0e21ee205e409a2a5a89e3389b3
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: b1557e6910cb6d0b6d7e2b3ce2aec97d3715fec7
+ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71214557"
+ms.lasthandoff: 09/28/2019
+ms.locfileid: "71591665"
 ---
 # <a name="prerequisites-for-net-core-on-windows"></a>Windows üzerinde .NET Core önkoşulları
 
@@ -29,13 +29,10 @@ Aşağıdaki makalelerde sürüm başına .NET Core tarafından desteklenen işl
 * [.NET Core 3.0](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md)
 * [.NET Core 2,2](https://github.com/dotnet/core/blob/master/release-notes/2.2/2.2-supported-os.md)
 * [.NET Core 2,1](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md)
-* [.NET Core 1,0](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0-supported-os.md)
 
 İndirme bağlantıları ve daha fazla bilgi için bkz. eski sürümler için en son sürümü veya [.net İndirmeleri arşivini](https://dotnet.microsoft.com/download/archives#dotnet-core) indirmek üzere [.net İndirmeleri](https://dotnet.microsoft.com/download) .
 
 ## <a name="net-core-dependencies"></a>.NET Core bağımlılıkları
-
-.NET Core 1,1 ve önceki sürümleri, Windows 10 C++ ve windows Server 2016 ' den önceki Windows sürümlerinde çalışırken görsel yeniden dağıtılabilir gerektirir. Bu bağımlılık, .NET Core yükleyicisi tarafından otomatik olarak yüklenir.
 
 [Microsoft Visual C++ 2015 Redistributable güncelleştirme 3](https://www.microsoft.com/download/details.aspx?id=52685) , şu durumlarda el ile yüklenmelidir:
 
@@ -66,9 +63,9 @@ Her .NET Core sürümünde en düşük Visual Studio sürümü gerekir. Visual S
 
 Aşağıdaki tabloda her SDK için en düşük sürüm listelenmektedir:
 
-| .NET Core SDK sürümü | Visual Studio sürüm                      |
+| .NET Core SDK sürümü | Visual Studio sürümü                      |
 | --------------------- | ------------------------------------------ |
-| 3.0                   | Visual Studio 2019 sürüm 16,3 veya üzeri. |
+| 3,0                   | Visual Studio 2019 sürüm 16,3 veya üzeri. |
 | 2.2                   | Visual Studio 2017 sürüm 15,9 veya üzeri. |
 | 2.1                   | Visual Studio 2017 sürüm 15,7 veya üzeri. |
 | 'in                   | Visual Studio 2017 sürüm 15,0 veya üzeri. |
@@ -108,6 +105,7 @@ Visual Studio 'Yu .NET Core 3,0 SDK ile yapılandırdıktan sonra, aşağıdaki 
 
 .NET Core 2,2 SDK kullanarak Visual Studio 2017 ' de .NET Core uygulamaları geliştirmek için:
 
+* **.NET Core platformlar arası geliştirme** iş yükü ( **diğer araç kümeleri** bölümünde) seçiliyken [Visual Studio 2019 sürüm 16,3 veya üstünü indirip yükleyin](/visualstudio/install/install-visual-studio) .
 * **.NET Core platformlar arası geliştirme** iş yükü ( **diğer araç kümeleri** bölümünde) seçiliyken [Visual Studio 2017 sürüm 15.9.0 veya üstünü indirip yükleyin](/visualstudio/install/install-visual-studio) .
 
 ![".NET Core platformlar arası geliştirme" iş yükü seçiliyken Visual Studio 2017 yüklemesinin ekran görüntüsü](./media/windows-prerequisites/vs-2017-workloads.jpg)
@@ -131,19 +129,5 @@ Visual Studio 'Yu .NET Core 2,2 SDK ile yapılandırdıktan sonra, aşağıdaki 
 * Mevcut .NET Core 1. x ve 2. x projelerini açın, derleyin ve çalıştırın.
 * .NET Core 1. x ve 2. x projelerini .NET Core 2,2, derlemek ve çalıştırmak için yeniden hedefleyin.
 * Yeni .NET Core 2,2 projeleri oluşturun.
-
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1. x](#tab/netcore1x)
-
-Visual Studio 'da .NET Core 1. x uygulamaları geliştirmek için, [Visual studio 2017](/visualstudio/install/install-visual-studio) ' i **".NET Core platformlar arası geliştirme"** Iş yükü ( **diğer araç kümeleri** bölümünde) seçili olacak şekilde indirip yükleyin.
-
-![".NET Core platformlar arası geliştirme" iş yükü seçiliyken Visual Studio 2017 yüklemesinin ekran görüntüsü](./media/windows-prerequisites/vs-workloads.jpg)
-
-> [!IMPORTANT]
-> .NET Core 1. x geliştirme için Visual Studio 2015 kullanmak mümkündür, ancak aşağıdaki nedenlerden dolayı önerilmez:
->
-> * .NET Core araçları, desteklenmeyen bir önizleme sürümüdür.
-> * Projeler, kullanım dışı olan Project. JSON tabanlıdır.
->
-> Proje biçimi değişiklikleri hakkında daha fazla bilgi için bkz. [değişikliklere Ilişkin üst düzey genel bakış](./tools/cli-msbuild-architecture.md).
 
 ---

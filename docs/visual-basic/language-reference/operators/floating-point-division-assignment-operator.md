@@ -10,50 +10,50 @@ helpviewer_keywords:
 - operator /=
 - compound assignment statements [Visual Basic]
 ms.assetid: a1e22d0e-8380-4761-9da1-84fb51c34821
-ms.openlocfilehash: d9d3fa021654d3be1b9d304beb83caa737660264
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b4855e8270a329f9345339060a323b5ca9cd9792
+ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61778475"
+ms.lasthandoff: 09/28/2019
+ms.locfileid: "71592183"
 ---
 # <a name="-operator-visual-basic"></a>/= İşleci (Visual Basic)
-Bir değişken veya özellik değeri tarafından bir ifadenin değerine böler ve kayan noktalı bir sonuç değişken veya özellik atar.  
+Bir değişkenin veya özelliğin değerini bir ifadenin değerine böler ve kayan nokta sonucunu değişkenine veya özelliğe atar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```vb  
 variableorproperty /= expression  
 ```  
   
 ## <a name="parts"></a>Bölümler  
  `variableorproperty`  
- Gerekli. Tüm sayısal değişken veya özellik.  
+ Gerekli. Herhangi bir sayısal değişken veya özellik.  
   
  `expression`  
  Gerekli. Herhangi bir sayısal ifade.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Öğe sol tarafındaki `/=` işleci, bir basit skaler değişkeni, bir özellik veya dizi öğesi olabilir. Değişken veya özellik olamaz [salt okunur](../../../visual-basic/language-reference/modifiers/readonly.md).  
+ @No__t-0 işlecinin sol tarafındaki öğe basit bir skaler değişken, bir özellik veya bir dizi öğesi olabilir. Değişken veya özellik [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)olamaz.  
   
- `/=` İşleci ilk ayırır değişken veya özellikte (işlecinin sol tarafı) değerini (işlecin sağ tarafındaki) ifadesinin değere göre. İşleci, kayan nokta, işlemin sonucunu daha sonra değişken veya özellik atar.  
+ @No__t-0 işleci ilk olarak değişkenin değerini (işlecin sol tarafında), ifadenin değeri (işlecin sağ tarafında) ile ayırır (işlecin sağ tarafındaki). İşleci daha sonra bu işlemin kayan nokta sonucunu değişkenine veya özelliğe atar.  
   
- Bu bildirimi atar bir `Double` değişken ya da sol taraftaki özelliğin değeri. Varsa `Option Strict` olduğu `On`, `variableorproperty` olmalıdır bir `Double`. Varsa `Option Strict` olduğu `Off`, Visual Basic örtülü bir dönüştürme uygulayan ve çıkan değeri atar `variableorproperty`, çalışma zamanında olası bir hata ile. Daha fazla bilgi için [Widening ve daraltma dönüşümleri](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md) ve [Option Strict deyimi](../../../visual-basic/language-reference/statements/option-strict-statement.md).  
+ Bu ifade, soldaki değişkene veya özelliğe `Double` değeri atar. @No__t-0 `On` ise, `variableorproperty` `Double` olmalıdır. @No__t-0 `Off` ise, Visual Basic örtük bir dönüştürme gerçekleştirir ve elde edilen değeri, çalışma zamanında olası bir hatayla `variableorproperty` ' ye atar. Daha fazla bilgi için bkz. [genişletme ve daraltma dönüştürmeleri](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md) ve [Option Strict deyimdir](../../../visual-basic/language-reference/statements/option-strict-statement.md).  
   
 ## <a name="overloading"></a>Aşırı Yükleme  
- [/ İşleci (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-operator.md) olabilir *aşırı*, işleneni, sınıf veya yapı türüne sahip olduğunda bir sınıf veya yapı davranışını tanımlayabilirsiniz, anlamına gelir. Aşırı yükleme `/` işleci davranışını etkileyen `/=` işleci. Kodunuzu kullanıyorsa `/=` bir sınıf veya aşırı yapısı `/`, yeniden tanımlanan davranışını anladığınızdan emin olun. Daha fazla bilgi için [işleç yordamları](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+ [/İşleci (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-operator.md) *aşırı*yüklenebilir, yani bir işlenen bu sınıf veya yapının türüne sahip olduğunda bir sınıf veya yapının davranışını yeniden tanımlayabileceği anlamına gelir. @No__t aşırı yükleme-0 işleci `/=` işlecinin davranışını etkiler. Kodunuz, `/` ' i aşırı yükleyen bir sınıf veya yapıda `/=` kullanıyorsa, yeniden tanımlanmış davranışını anladığınızdan emin olun. Daha fazla bilgi için bkz. [operatör yordamları](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte `/=` bir bölme işleci `Integer` değişkenini, saniye ve sayının ilk değişkenine atayın.  
+ Aşağıdaki örnek, bir `Integer` değişkenini ikinci kez bölmek ve bölümü ilk değişkene atamak için `/=` işlecini kullanır.  
   
  [!code-vb[VbVbalrOperators#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#17)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [/ İşleci (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-operator.md)
-- [\\= İşleci](../../../visual-basic/language-reference/operators/integer-division-assignment-operator.md)
+- [/İşleci (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-operator.md)
+- [\\ = Işleci](../../../visual-basic/language-reference/operators/integer-division-assignment-operator.md)
 - [Atama İşleçleri](../../../visual-basic/language-reference/operators/assignment-operators.md)
 - [Aritmetik İşleçler](../../../visual-basic/language-reference/operators/arithmetic-operators.md)
-- [Visual Basic'de İşleç önceliği](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [Visual Basic operatör önceliği](../../../visual-basic/language-reference/operators/operator-precedence.md)
 - [İşlevselliğe Göre Listelenmiş İşleçler](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
 - [Deyimler](../../../visual-basic/programming-guide/language-features/statements.md)
