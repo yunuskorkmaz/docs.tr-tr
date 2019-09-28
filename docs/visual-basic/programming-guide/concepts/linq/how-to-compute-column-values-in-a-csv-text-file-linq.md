@@ -1,22 +1,22 @@
 ---
-title: 'Nasıl yapılır: İşlem sütun değerleri bir CSV metinde dosyasında (LINQ) (Visual Basic)'
+title: 'Nasıl yapılır: Bir CSV metin dosyasındaki (LINQ) (Visual Basic) sütun değerlerini hesaplama'
 ms.date: 07/20/2015
 ms.assetid: 88b2b9f3-c82e-41f3-b1b4-26ede5973a02
-ms.openlocfilehash: 21f4e6445824a6664b5eaa7ff793ee925aa06cef
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: c7874615d62b09f3317a3ef39c28a0e74fd349d1
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592995"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71351751"
 ---
-# <a name="how-to-compute-column-values-in-a-csv-text-file-linq-visual-basic"></a><span data-ttu-id="7962e-102">Nasıl yapılır: İşlem sütun değerleri bir CSV metinde dosyasında (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="7962e-102">How to: Compute Column Values in a CSV Text File (LINQ) (Visual Basic)</span></span>
-<span data-ttu-id="7962e-103">Bu örnek bir .csv dosyası sütunlarda gibi toplam, ortalama, Min ve Max toplama hesaplamalar gerçekleştirmek nasıl gösterir.</span><span class="sxs-lookup"><span data-stu-id="7962e-103">This example shows how to perform aggregate computations such as Sum, Average, Min, and Max on the columns of a .csv file.</span></span> <span data-ttu-id="7962e-104">Burada gösterilen örnek ilkeleri diğer yapılandırılmış metin türü için uygulanabilir.</span><span class="sxs-lookup"><span data-stu-id="7962e-104">The example principles that are shown here can be applied to other types of structured text.</span></span>  
+# <a name="how-to-compute-column-values-in-a-csv-text-file-linq-visual-basic"></a><span data-ttu-id="35758-102">Nasıl yapılır: Bir CSV metin dosyasındaki (LINQ) (Visual Basic) sütun değerlerini hesaplama</span><span class="sxs-lookup"><span data-stu-id="35758-102">How to: Compute Column Values in a CSV Text File (LINQ) (Visual Basic)</span></span>
+<span data-ttu-id="35758-103">Bu örnek, bir. csv dosyasının sütunlarında Sum, Average, min ve Max gibi toplam hesaplamaların nasıl gerçekleştirileceğini gösterir.</span><span class="sxs-lookup"><span data-stu-id="35758-103">This example shows how to perform aggregate computations such as Sum, Average, Min, and Max on the columns of a .csv file.</span></span> <span data-ttu-id="35758-104">Burada gösterilen örnek ilkeler diğer yapılandırılmış metin türlerine uygulanabilir.</span><span class="sxs-lookup"><span data-stu-id="35758-104">The example principles that are shown here can be applied to other types of structured text.</span></span>  
   
-### <a name="to-create-the-source-file"></a><span data-ttu-id="7962e-105">Kaynak dosyası oluşturmak için</span><span class="sxs-lookup"><span data-stu-id="7962e-105">To create the source file</span></span>  
+### <a name="to-create-the-source-file"></a><span data-ttu-id="35758-105">Kaynak dosyayı oluşturmak için</span><span class="sxs-lookup"><span data-stu-id="35758-105">To create the source file</span></span>  
   
-1. <span data-ttu-id="7962e-106">Aşağıdaki satırları scores.csv adlı bir dosyaya kopyalayın ve proje klasörünüze kaydedin.</span><span class="sxs-lookup"><span data-stu-id="7962e-106">Copy the following lines into a file that is named scores.csv and save it in your project folder.</span></span> <span data-ttu-id="7962e-107">İlk sütunda bir öğrenci Kimliğini temsil eder ve sonraki sütun, dört sınavları puanları temsil varsayılır.</span><span class="sxs-lookup"><span data-stu-id="7962e-107">Assume that the first column represents a student ID, and subsequent columns represent scores from four exams.</span></span>  
+1. <span data-ttu-id="35758-106">Aşağıdaki satırları puanlarını. csv adlı bir dosyaya kopyalayın ve proje klasörünüze kaydedin.</span><span class="sxs-lookup"><span data-stu-id="35758-106">Copy the following lines into a file that is named scores.csv and save it in your project folder.</span></span> <span data-ttu-id="35758-107">İlk sütunun bir öğrenci KIMLIĞINI temsil ettiğini ve sonraki sütunlarda dört sınavın puanlarını temsil ettiğini varsayın.</span><span class="sxs-lookup"><span data-stu-id="35758-107">Assume that the first column represents a student ID, and subsequent columns represent scores from four exams.</span></span>  
   
-    ```  
+    ```csv  
     111, 97, 92, 81, 60  
     112, 75, 84, 91, 39  
     113, 88, 94, 65, 91  
@@ -31,7 +31,7 @@ ms.locfileid: "65592995"
     122, 94, 92, 91, 91  
     ```  
   
-## <a name="example"></a><span data-ttu-id="7962e-108">Örnek</span><span class="sxs-lookup"><span data-stu-id="7962e-108">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="35758-108">Örnek</span><span class="sxs-lookup"><span data-stu-id="35758-108">Example</span></span>  
   
 ```vb  
 Class SumColumns  
@@ -140,12 +140,12 @@ End Class
 ' Exam #4 Average: 76.92 High Score: 94 Low Score: 39  
 ```  
   
- <span data-ttu-id="7962e-109">Sorgu kullanarak çalışır <xref:System.String.Split%2A> her metin satırının bir dizisine dönüştürmek için yöntemi.</span><span class="sxs-lookup"><span data-stu-id="7962e-109">The query works by using the <xref:System.String.Split%2A> method to convert each line of text into an array.</span></span> <span data-ttu-id="7962e-110">Her dizi öğesi bir sütunu temsil eder.</span><span class="sxs-lookup"><span data-stu-id="7962e-110">Each array element represents a column.</span></span> <span data-ttu-id="7962e-111">Son olarak, her sütundaki metin sayısal gösterimine dönüştürülür.</span><span class="sxs-lookup"><span data-stu-id="7962e-111">Finally, the text in each column is converted to its numeric representation.</span></span> <span data-ttu-id="7962e-112">Bağımsız değişkende dosyanızı sekmeyle ayrılmış bir dosya ise, yalnızca güncelleştirme `Split` yönteme `\t`.</span><span class="sxs-lookup"><span data-stu-id="7962e-112">If your file is a tab-separated file, just update the argument in the `Split` method to `\t`.</span></span>  
+ <span data-ttu-id="35758-109">Sorgu, her metin satırını bir diziye dönüştürmek için <xref:System.String.Split%2A> yöntemini kullanarak işe yarar.</span><span class="sxs-lookup"><span data-stu-id="35758-109">The query works by using the <xref:System.String.Split%2A> method to convert each line of text into an array.</span></span> <span data-ttu-id="35758-110">Her dizi öğesi bir sütunu temsil eder.</span><span class="sxs-lookup"><span data-stu-id="35758-110">Each array element represents a column.</span></span> <span data-ttu-id="35758-111">Son olarak, her sütundaki metin sayısal gösterimine dönüştürülür.</span><span class="sxs-lookup"><span data-stu-id="35758-111">Finally, the text in each column is converted to its numeric representation.</span></span> <span data-ttu-id="35758-112">Dosyanız sekmeyle ayrılmış bir dosya ise, `Split` yöntemindeki bağımsız değişkeni `\t` ' e güncelleştirmeniz yeterlidir.</span><span class="sxs-lookup"><span data-stu-id="35758-112">If your file is a tab-separated file, just update the argument in the `Split` method to `\t`.</span></span>  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="7962e-113">Kod Derleniyor</span><span class="sxs-lookup"><span data-stu-id="7962e-113">Compiling the Code</span></span>  
-<span data-ttu-id="7962e-114">VB.NET konsol uygulama projesi oluşturmak bir `Imports` System.Linq ad alanı bildirimi.</span><span class="sxs-lookup"><span data-stu-id="7962e-114">Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.</span></span>
+## <a name="compiling-the-code"></a><span data-ttu-id="35758-113">Kod Derleniyor</span><span class="sxs-lookup"><span data-stu-id="35758-113">Compiling the Code</span></span>  
+<span data-ttu-id="35758-114">System. Linq ad alanı için `Imports` ifadesiyle bir VB.NET konsol uygulaması projesi oluşturun.</span><span class="sxs-lookup"><span data-stu-id="35758-114">Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.</span></span>
   
-## <a name="see-also"></a><span data-ttu-id="7962e-115">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="7962e-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="35758-115">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="35758-115">See also</span></span>
 
-- [<span data-ttu-id="7962e-116">LINQ ve dizeler (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="7962e-116">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
-- [<span data-ttu-id="7962e-117">LINQ ve dosya dizinleri (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="7962e-117">LINQ and File Directories (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [<span data-ttu-id="35758-116">LINQ ve dizeler (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="35758-116">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [<span data-ttu-id="35758-117">LINQ ve dosya dizinleri (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="35758-117">LINQ and File Directories (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

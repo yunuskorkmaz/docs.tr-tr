@@ -2,30 +2,30 @@
 title: İş Akışı için İzlemeyi Yapılandırma
 ms.date: 03/30/2017
 ms.assetid: 905adcc9-30a0-4918-acd6-563f86db988a
-ms.openlocfilehash: d8d3293fd2b271c0e1a00a1fca30d5ecd166df12
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: 889efc804bb45b384dfde5b4deb520a81d1e5486
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66690569"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71353057"
 ---
-# <a name="configuring-tracking-for-a-workflow"></a><span data-ttu-id="c8138-102">İş Akışı için İzlemeyi Yapılandırma</span><span class="sxs-lookup"><span data-stu-id="c8138-102">Configuring Tracking for a Workflow</span></span>
+# <a name="configuring-tracking-for-a-workflow"></a><span data-ttu-id="97b4e-102">İş Akışı için İzlemeyi Yapılandırma</span><span class="sxs-lookup"><span data-stu-id="97b4e-102">Configuring Tracking for a Workflow</span></span>
 
-<span data-ttu-id="c8138-103">Bir iş akışı, üç şekilde yürütebilirsiniz:</span><span class="sxs-lookup"><span data-stu-id="c8138-103">A workflow can execute in three ways:</span></span>
+<span data-ttu-id="97b4e-103">Bir iş akışı üç şekilde çalıştırılabilir:</span><span class="sxs-lookup"><span data-stu-id="97b4e-103">A workflow can execute in three ways:</span></span>
 
-- <span data-ttu-id="c8138-104">Barındırılan <xref:System.ServiceModel.Activities.WorkflowServiceHost></span><span class="sxs-lookup"><span data-stu-id="c8138-104">Hosted in <xref:System.ServiceModel.Activities.WorkflowServiceHost></span></span>
+- <span data-ttu-id="97b4e-104">@No__t içinde barındırılan-0</span><span class="sxs-lookup"><span data-stu-id="97b4e-104">Hosted in <xref:System.ServiceModel.Activities.WorkflowServiceHost></span></span>
 
-- <span data-ttu-id="c8138-105">Olarak yürütülen bir <xref:System.Activities.WorkflowApplication></span><span class="sxs-lookup"><span data-stu-id="c8138-105">Executed as a <xref:System.Activities.WorkflowApplication></span></span>
+- <span data-ttu-id="97b4e-105">@No__t olarak yürütüldü-0</span><span class="sxs-lookup"><span data-stu-id="97b4e-105">Executed as a <xref:System.Activities.WorkflowApplication></span></span>
 
-- <span data-ttu-id="c8138-106">Kullanarak doğrudan yürütüldü <xref:System.Activities.WorkflowInvoker></span><span class="sxs-lookup"><span data-stu-id="c8138-106">Executed directly using <xref:System.Activities.WorkflowInvoker></span></span>
+- <span data-ttu-id="97b4e-106">@No__t ile doğrudan yürütülür-0</span><span class="sxs-lookup"><span data-stu-id="97b4e-106">Executed directly using <xref:System.Activities.WorkflowInvoker></span></span>
 
-<span data-ttu-id="c8138-107">Barındırma seçeneği iş akışı bağlı olarak, bir izleme katılımcı, kod veya yapılandırma dosyası aracılığıyla eklenebilir.</span><span class="sxs-lookup"><span data-stu-id="c8138-107">Depending on the workflow hosting option, a tracking participant can be added either through code or through a configuration file.</span></span> <span data-ttu-id="c8138-108">Bu konu, izleme için izleme katılımcı ekleyerek nasıl yapılandırıldığını açıklar. bir <xref:System.Activities.WorkflowApplication> ve bir <xref:System.ServiceModel.Activities.WorkflowServiceHost>ve kullanırken izlemeyi etkinleştirme <xref:System.Activities.WorkflowInvoker>.</span><span class="sxs-lookup"><span data-stu-id="c8138-108">This topic describes how tracking is configured by adding a tracking participant to a <xref:System.Activities.WorkflowApplication> and to a <xref:System.ServiceModel.Activities.WorkflowServiceHost>, and how to enable tracking when using <xref:System.Activities.WorkflowInvoker>.</span></span>
+<span data-ttu-id="97b4e-107">İş akışı barındırma seçeneğine bağlı olarak, bir izleme katılımcısı kod aracılığıyla veya bir yapılandırma dosyası aracılığıyla eklenebilir.</span><span class="sxs-lookup"><span data-stu-id="97b4e-107">Depending on the workflow hosting option, a tracking participant can be added either through code or through a configuration file.</span></span> <span data-ttu-id="97b4e-108">Bu konu, izlemenin bir <xref:System.Activities.WorkflowApplication> ' a ve <xref:System.ServiceModel.Activities.WorkflowServiceHost> ' e bir izleme katılımcısı ekleyerek nasıl yapılandırıldığını ve <xref:System.Activities.WorkflowInvoker> kullanılırken izlemenin nasıl etkinleştirileceğini açıklar.</span><span class="sxs-lookup"><span data-stu-id="97b4e-108">This topic describes how tracking is configured by adding a tracking participant to a <xref:System.Activities.WorkflowApplication> and to a <xref:System.ServiceModel.Activities.WorkflowServiceHost>, and how to enable tracking when using <xref:System.Activities.WorkflowInvoker>.</span></span>
 
-## <a name="configuring-workflow-application-tracking"></a><span data-ttu-id="c8138-109">İzleme iş akışı uygulamasını yapılandırma</span><span class="sxs-lookup"><span data-stu-id="c8138-109">Configuring Workflow Application Tracking</span></span>
+## <a name="configuring-workflow-application-tracking"></a><span data-ttu-id="97b4e-109">Iş akışı uygulama Izlemeyi yapılandırma</span><span class="sxs-lookup"><span data-stu-id="97b4e-109">Configuring Workflow Application Tracking</span></span>
 
-<span data-ttu-id="c8138-110">Bir iş akışı kullanarak çalıştırabilirsiniz <xref:System.Activities.WorkflowApplication> sınıfı.</span><span class="sxs-lookup"><span data-stu-id="c8138-110">A workflow can run using the <xref:System.Activities.WorkflowApplication> class.</span></span> <span data-ttu-id="c8138-111">Bu konuda izleme için nasıl yapılandırıldığını gösterir. bir [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] iş akışı uygulama için izleme katılımcı ekleyerek <xref:System.Activities.WorkflowApplication> iş akışı ana bilgisayarı.</span><span class="sxs-lookup"><span data-stu-id="c8138-111">This topic demonstrates how tracking is configured for a [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] workflow application by adding a tracking participant to the <xref:System.Activities.WorkflowApplication> workflow host.</span></span> <span data-ttu-id="c8138-112">Bu durumda, iş akışını bir iş akışı uygulaması çalışır.</span><span class="sxs-lookup"><span data-stu-id="c8138-112">In this case, the workflow runs as a workflow application.</span></span> <span data-ttu-id="c8138-113">Şirket içinde barındırılan bir .exe olan bir iş akışı uygulama kodu (yerine bir yapılandırma dosyası kullanarak), yapılandırma dosyası kullanarak <xref:System.Activities.WorkflowApplication> sınıfı.</span><span class="sxs-lookup"><span data-stu-id="c8138-113">You configure a workflow application through code (rather than by using a configuration file), which is a self-hosted .exe file using the <xref:System.Activities.WorkflowApplication> class.</span></span> <span data-ttu-id="c8138-114">İzleme katılımcı bir uzantısı olarak eklenmiş <xref:System.Activities.WorkflowApplication> örneği.</span><span class="sxs-lookup"><span data-stu-id="c8138-114">The tracking participant is added as an extension to the <xref:System.Activities.WorkflowApplication> instance.</span></span> <span data-ttu-id="c8138-115">Bu ekleyerek yapılır <xref:System.Activities.Tracking.TrackingParticipant> WorkflowApplication örneği için uzantıları koleksiyonu.</span><span class="sxs-lookup"><span data-stu-id="c8138-115">This is done by adding the <xref:System.Activities.Tracking.TrackingParticipant> to the extensions collection for the WorkflowApplication instance.</span></span>
+<span data-ttu-id="97b4e-110">Bir iş akışı <xref:System.Activities.WorkflowApplication> sınıfı kullanılarak çalıştırılabilir.</span><span class="sxs-lookup"><span data-stu-id="97b4e-110">A workflow can run using the <xref:System.Activities.WorkflowApplication> class.</span></span> <span data-ttu-id="97b4e-111">Bu konu, <xref:System.Activities.WorkflowApplication> iş akışı konağına izleme katılımcısı ekleyerek izlemenin [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] iş akışı uygulaması için nasıl yapılandırıldığını gösterir.</span><span class="sxs-lookup"><span data-stu-id="97b4e-111">This topic demonstrates how tracking is configured for a [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] workflow application by adding a tracking participant to the <xref:System.Activities.WorkflowApplication> workflow host.</span></span> <span data-ttu-id="97b4e-112">Bu durumda iş akışı, iş akışı uygulaması olarak çalışır.</span><span class="sxs-lookup"><span data-stu-id="97b4e-112">In this case, the workflow runs as a workflow application.</span></span> <span data-ttu-id="97b4e-113">Bir iş akışı uygulamasını, <xref:System.Activities.WorkflowApplication> sınıfını kullanan şirket içinde barındırılan bir. exe dosyası olan kod aracılığıyla (bir yapılandırma dosyası kullanmak yerine) yapılandırırsınız.</span><span class="sxs-lookup"><span data-stu-id="97b4e-113">You configure a workflow application through code (rather than by using a configuration file), which is a self-hosted .exe file using the <xref:System.Activities.WorkflowApplication> class.</span></span> <span data-ttu-id="97b4e-114">İzleme katılımcısı <xref:System.Activities.WorkflowApplication> örneğine bir uzantı olarak eklenir.</span><span class="sxs-lookup"><span data-stu-id="97b4e-114">The tracking participant is added as an extension to the <xref:System.Activities.WorkflowApplication> instance.</span></span> <span data-ttu-id="97b4e-115">Bu işlem, WorkflowApplication örneği için Uzantılar koleksiyonuna <xref:System.Activities.Tracking.TrackingParticipant> eklenerek yapılır.</span><span class="sxs-lookup"><span data-stu-id="97b4e-115">This is done by adding the <xref:System.Activities.Tracking.TrackingParticipant> to the extensions collection for the WorkflowApplication instance.</span></span>
 
-<span data-ttu-id="c8138-116">Bir iş akışı uygulama için eklediğiniz <xref:System.Activities.Tracking.EtwTrackingParticipant> aşağıdaki kodda gösterildiği gibi davranış uzantısı.</span><span class="sxs-lookup"><span data-stu-id="c8138-116">For a workflow application, you can add the <xref:System.Activities.Tracking.EtwTrackingParticipant> behavior extension as shown in the following code.</span></span>
+<span data-ttu-id="97b4e-116">Bir iş akışı uygulaması için aşağıdaki kodda gösterildiği gibi <xref:System.Activities.Tracking.EtwTrackingParticipant> davranış uzantısını ekleyebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="97b4e-116">For a workflow application, you can add the <xref:System.Activities.Tracking.EtwTrackingParticipant> behavior extension as shown in the following code.</span></span>
 
 ```csharp
 LogActivity activity = new LogActivity();
@@ -48,11 +48,11 @@ EtwTrackingParticipant trackingParticipant =
 instance.Extensions.Add(trackingParticipant);
 ```
 
-### <a name="configuring-workflow-service-tracking"></a><span data-ttu-id="c8138-117">Yapılandırma iş akışı hizmeti izleme</span><span class="sxs-lookup"><span data-stu-id="c8138-117">Configuring Workflow Service Tracking</span></span>
+### <a name="configuring-workflow-service-tracking"></a><span data-ttu-id="97b4e-117">Iş akışı hizmeti Izlemeyi yapılandırma</span><span class="sxs-lookup"><span data-stu-id="97b4e-117">Configuring Workflow Service Tracking</span></span>
 
-<span data-ttu-id="c8138-118">Bir iş akışı içinde barındırıldığında, bir WCF hizmeti olarak kullanıma sunulabilecek <xref:System.ServiceModel.Activities.WorkflowServiceHost> hizmet ana bilgisayarı.</span><span class="sxs-lookup"><span data-stu-id="c8138-118">A workflow can be exposed as a WCF service when hosted in the <xref:System.ServiceModel.Activities.WorkflowServiceHost> service host.</span></span> <span data-ttu-id="c8138-119"><xref:System.ServiceModel.Activities.WorkflowServiceHost> özel bir .NET ServiceHost uygulama iş akışı tabanlı bir hizmet için geçerlidir.</span><span class="sxs-lookup"><span data-stu-id="c8138-119"><xref:System.ServiceModel.Activities.WorkflowServiceHost> is a specialized .NET ServiceHost implementation for a workflow-based service.</span></span> <span data-ttu-id="c8138-120">Bu bölümde izleme için yapılandırma açıklanmaktadır bir [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] çalışan iş akışı hizmeti <xref:System.ServiceModel.Activities.WorkflowServiceHost>.</span><span class="sxs-lookup"><span data-stu-id="c8138-120">This section explains how to configure tracking for a [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] workflow service running in <xref:System.ServiceModel.Activities.WorkflowServiceHost>.</span></span> <span data-ttu-id="c8138-121">Bu bir Web.config dosyası (bir Web barındırılan hizmeti) veya bir App.config dosyası (bir hizmeti bir konsol uygulaması gibi bir tek başına uygulama içinde barındırılan) aracılığıyla bir hizmet davranışını belirterek veya kod için bir izleme özgü davranışı ekleyerek yapılandırılır <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> koleksiyonu hizmet ana bilgisayarı.</span><span class="sxs-lookup"><span data-stu-id="c8138-121">It is configured through a Web.config file (for a Web-hosted service) or an App.config file (for a service hosted in a stand-alone application, such as a console application) by specifying a service behavior or through code by adding a tracking-specific behavior to the <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> collection for the service host.</span></span>
+<span data-ttu-id="97b4e-118">Bir iş akışı, <xref:System.ServiceModel.Activities.WorkflowServiceHost> hizmet konağında barındırıldığında bir WCF hizmeti olarak gösterilebilir.</span><span class="sxs-lookup"><span data-stu-id="97b4e-118">A workflow can be exposed as a WCF service when hosted in the <xref:System.ServiceModel.Activities.WorkflowServiceHost> service host.</span></span> <span data-ttu-id="97b4e-119"><xref:System.ServiceModel.Activities.WorkflowServiceHost>, iş akışı tabanlı hizmet için özelleşmiş bir .NET ServiceHost uygulamasıdır.</span><span class="sxs-lookup"><span data-stu-id="97b4e-119"><xref:System.ServiceModel.Activities.WorkflowServiceHost> is a specialized .NET ServiceHost implementation for a workflow-based service.</span></span> <span data-ttu-id="97b4e-120">Bu bölümde, <xref:System.ServiceModel.Activities.WorkflowServiceHost> ' de çalışan [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] iş akışı hizmeti için izlemenin nasıl yapılandırılacağı açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="97b4e-120">This section explains how to configure tracking for a [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] workflow service running in <xref:System.ServiceModel.Activities.WorkflowServiceHost>.</span></span> <span data-ttu-id="97b4e-121">Bir Web. config dosyası (Web 'de barındırılan bir hizmet için) veya bir App. config dosyası aracılığıyla, bir hizmet davranışı belirterek veya ' ye izlemeye özgü bir davranış ekleyerek kod aracılığıyla bir uygulama. config dosyası (konsol uygulaması gibi tek başına bir uygulamada barındırılan bir hizmet için) ile yapılandırılır. hizmet ana bilgisayarı için <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> koleksiyonu.</span><span class="sxs-lookup"><span data-stu-id="97b4e-121">It is configured through a Web.config file (for a Web-hosted service) or an App.config file (for a service hosted in a stand-alone application, such as a console application) by specifying a service behavior or through code by adding a tracking-specific behavior to the <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> collection for the service host.</span></span>
 
-<span data-ttu-id="c8138-122">Barındırılan bir iş akışı hizmeti için <xref:System.ServiceModel.WorkflowServiceHost>, ekleyebileceğiniz <xref:System.Activities.Tracking.EtwTrackingParticipant> kullanarak <`behavior`> öğesinde aşağıdaki örnekte gösterildiği gibi bir yapılandırma dosyası.</span><span class="sxs-lookup"><span data-stu-id="c8138-122">For a workflow service hosted in <xref:System.ServiceModel.WorkflowServiceHost>, you can add the <xref:System.Activities.Tracking.EtwTrackingParticipant> using the <`behavior`> element in a configuration file, as shown in the following example.</span></span>
+<span data-ttu-id="97b4e-122">@No__t-0 ' da barındırılan bir iş akışı hizmeti için, aşağıdaki örnekte gösterildiği gibi, bir yapılandırma dosyasındaki < `behavior` > öğesini kullanarak <xref:System.Activities.Tracking.EtwTrackingParticipant> ekleyebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="97b4e-122">For a workflow service hosted in <xref:System.ServiceModel.WorkflowServiceHost>, you can add the <xref:System.Activities.Tracking.EtwTrackingParticipant> using the <`behavior`> element in a configuration file, as shown in the following example.</span></span>
 
 ```xml
 <behaviors>
@@ -64,10 +64,10 @@ instance.Extensions.Add(trackingParticipant);
 <behaviors>
 ```
 
-<span data-ttu-id="c8138-123">Alternatif olarak, bir iş akışı hizmeti için barındırılan <xref:System.ServiceModel.WorkflowServiceHost>, ekleyebileceğiniz <xref:System.Activities.Tracking.EtwTrackingParticipant> kod aracılığıyla davranış uzantısı.</span><span class="sxs-lookup"><span data-stu-id="c8138-123">Alternatively, for a workflow service hosted in <xref:System.ServiceModel.WorkflowServiceHost>, you can add the <xref:System.Activities.Tracking.EtwTrackingParticipant> behavior extension through code.</span></span> <span data-ttu-id="c8138-124">Özel İzleme Katılımcı eklemek için yeni bir davranış uzantısı oluşturun ve eklemek <xref:System.ServiceModel.ServiceHost> aşağıdaki örnekte gösterildiği gibi.</span><span class="sxs-lookup"><span data-stu-id="c8138-124">To add a custom tracking participant, create a new behavior extension and add it to the <xref:System.ServiceModel.ServiceHost> as shown in the following example code.</span></span>
+<span data-ttu-id="97b4e-123">Alternatif olarak, <xref:System.ServiceModel.WorkflowServiceHost> ' da barındırılan bir iş akışı hizmeti için, kod aracılığıyla <xref:System.Activities.Tracking.EtwTrackingParticipant> davranış uzantısını ekleyebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="97b4e-123">Alternatively, for a workflow service hosted in <xref:System.ServiceModel.WorkflowServiceHost>, you can add the <xref:System.Activities.Tracking.EtwTrackingParticipant> behavior extension through code.</span></span> <span data-ttu-id="97b4e-124">Özel bir izleme katılımcısı eklemek için yeni bir davranış uzantısı oluşturun ve aşağıdaki örnek kodda gösterildiği gibi <xref:System.ServiceModel.ServiceHost> ' a ekleyin.</span><span class="sxs-lookup"><span data-stu-id="97b4e-124">To add a custom tracking participant, create a new behavior extension and add it to the <xref:System.ServiceModel.ServiceHost> as shown in the following example code.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="c8138-125">Özel İzleme katılımcı ekleyen bir özel davranış öğesi oluşturmak nasıl gösteren örnek kodunu görüntülemek istiyorsanız, başvurmak [izleme](./samples/tracking.md) örnekleri.</span><span class="sxs-lookup"><span data-stu-id="c8138-125">If you want to view sample code that shows how to create a custom behavior element that adds a custom tracking participant, refer to the [Tracking](./samples/tracking.md) samples.</span></span>
+> <span data-ttu-id="97b4e-125">Özel bir izleme katılımcısı ekleyen özel bir davranış öğesinin nasıl oluşturulacağını gösteren örnek kodu görüntülemek istiyorsanız [izleme](./samples/tracking.md) örneklerine bakın.</span><span class="sxs-lookup"><span data-stu-id="97b4e-125">If you want to view sample code that shows how to create a custom behavior element that adds a custom tracking participant, refer to the [Tracking](./samples/tracking.md) samples.</span></span>
 
 ```csharp
 ServiceHost svcHost = new ServiceHost(typeof(WorkflowService), new
@@ -81,9 +81,9 @@ svcHost.Description.Behaviors.Add(trackingBehavior);
 svcHost.Open();
 ```
 
-<span data-ttu-id="c8138-126">İzleme katılımcı için iş akışı hizmeti konağı davranışı için bir genişletme olarak eklenir.</span><span class="sxs-lookup"><span data-stu-id="c8138-126">The tracking participant is added to the workflow service host as an extension to the behavior.</span></span>
+<span data-ttu-id="97b4e-126">İzleme katılımcısı, iş akışı hizmet ana bilgisayarına davranışın uzantısı olarak eklenir.</span><span class="sxs-lookup"><span data-stu-id="97b4e-126">The tracking participant is added to the workflow service host as an extension to the behavior.</span></span>
 
-<span data-ttu-id="c8138-127">Bu örnek kod, bir izleme profili yapılandırma dosyasından okuma işlemi gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="c8138-127">This sample code below shows how to read a tracking profile from configuration file.</span></span>
+<span data-ttu-id="97b4e-127">Aşağıdaki örnek kod, yapılandırma dosyasından bir izleme profilinin nasıl okunacağını gösterir.</span><span class="sxs-lookup"><span data-stu-id="97b4e-127">This sample code below shows how to read a tracking profile from configuration file.</span></span>
 
 ```csharp
 TrackingProfile GetProfile(string profileName, string displayName)
@@ -95,10 +95,7 @@ TrackingProfile GetProfile(string profileName, string displayName)
                 return null;
             }
 
-            if (profileName == null)
-            {
-                profileName = "";
-            }
+            profileName ??= "";
 
             //Find the profile with the specified profile name in the list of profile found in config
             var match = from p in new List<TrackingProfile>(trackingSection.TrackingProfiles)
@@ -122,7 +119,7 @@ TrackingProfile GetProfile(string profileName, string displayName)
             return trackingProfile;
 ```
 
-<span data-ttu-id="c8138-128">Bu örnek kod, bir iş akışı ana bilgisayarı için bir izleme profili ekleme işlemi gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="c8138-128">This sample code shows how to add a tracking profile to a workflow host.</span></span>
+<span data-ttu-id="97b4e-128">Bu örnek kod, bir iş akışı konağına izleme profilinin nasıl ekleneceğini gösterir.</span><span class="sxs-lookup"><span data-stu-id="97b4e-128">This sample code shows how to add a tracking profile to a workflow host.</span></span>
 
 ```csharp
 WorkflowServiceHost workflowServiceHost = serviceHostBase as WorkflowServiceHost;
@@ -137,11 +134,11 @@ if (null != workflowServiceHost)
 ```
 
 > [!NOTE]
-> <span data-ttu-id="c8138-129">İzleme profilleri ile ilgili daha fazla bilgi için [izleme profilleri](https://go.microsoft.com/fwlink/?LinkId=201310).</span><span class="sxs-lookup"><span data-stu-id="c8138-129">For more information on tracking profiles, refer to [Tracking Profiles](https://go.microsoft.com/fwlink/?LinkId=201310).</span></span>
+> <span data-ttu-id="97b4e-129">İzleme profilleri hakkında daha fazla bilgi için bkz. [Izleme profilleri](https://go.microsoft.com/fwlink/?LinkId=201310).</span><span class="sxs-lookup"><span data-stu-id="97b4e-129">For more information on tracking profiles, refer to [Tracking Profiles](https://go.microsoft.com/fwlink/?LinkId=201310).</span></span>
 
-### <a name="configuring-tracking-using-workflowinvoker"></a><span data-ttu-id="c8138-130">Workflowınvoker kullanarak izlemeyi yapılandırma</span><span class="sxs-lookup"><span data-stu-id="c8138-130">Configuring tracking using WorkflowInvoker</span></span>
+### <a name="configuring-tracking-using-workflowinvoker"></a><span data-ttu-id="97b4e-130">Workflowwınvoker kullanarak izlemeyi yapılandırma</span><span class="sxs-lookup"><span data-stu-id="97b4e-130">Configuring tracking using WorkflowInvoker</span></span>
 
-<span data-ttu-id="c8138-131">İzleme kullanarak çalıştırılan bir iş akışı için yapılandırmak için <xref:System.Activities.WorkflowInvoker>, izleme sağlayıcısı için bir genişletme olarak ekleme bir <xref:System.Activities.WorkflowInvoker> örneği.</span><span class="sxs-lookup"><span data-stu-id="c8138-131">To configure tracking for a workflow executed using <xref:System.Activities.WorkflowInvoker>, add the tracking provider as an extension to a <xref:System.Activities.WorkflowInvoker> instance.</span></span> <span data-ttu-id="c8138-132">Aşağıdaki kod örneği dandır [özel izleme](./samples/custom-tracking.md) örnek.</span><span class="sxs-lookup"><span data-stu-id="c8138-132">The following code example is from the [Custom Tracking](./samples/custom-tracking.md) sample.</span></span>
+<span data-ttu-id="97b4e-131">@No__t-0 kullanılarak yürütülen bir iş akışına yönelik izlemeyi yapılandırmak için, izleme sağlayıcısını bir <xref:System.Activities.WorkflowInvoker> örneğine uzantı olarak ekleyin.</span><span class="sxs-lookup"><span data-stu-id="97b4e-131">To configure tracking for a workflow executed using <xref:System.Activities.WorkflowInvoker>, add the tracking provider as an extension to a <xref:System.Activities.WorkflowInvoker> instance.</span></span> <span data-ttu-id="97b4e-132">Aşağıdaki kod örneği, [özel izleme](./samples/custom-tracking.md) örneğinden yapılır.</span><span class="sxs-lookup"><span data-stu-id="97b4e-132">The following code example is from the [Custom Tracking](./samples/custom-tracking.md) sample.</span></span>
 
 ```csharp
 WorkflowInvoker invoker = new WorkflowInvoker(BuildSampleWorkflow());
@@ -149,49 +146,49 @@ invoker.Extensions.Add(customTrackingParticipant);
 invoker.Invoke();
 ```
 
-### <a name="viewing-tracking-records-in-event-viewer"></a><span data-ttu-id="c8138-133">Olay Görüntüleyicisi'nde kayıtları izleme görüntüleme</span><span class="sxs-lookup"><span data-stu-id="c8138-133">Viewing tracking records in Event Viewer</span></span>
+### <a name="viewing-tracking-records-in-event-viewer"></a><span data-ttu-id="97b4e-133">Olay Görüntüleyicisi izleme kayıtlarını görüntüleme</span><span class="sxs-lookup"><span data-stu-id="97b4e-133">Viewing tracking records in Event Viewer</span></span>
 
-<span data-ttu-id="c8138-134">Analitik günlüğünü ve hata ayıklama günlüğünü WF yürütme - izleme zaman görüntülemek için belirli ilgilenilen iki Olay Görüntüleyicisi günlükleri vardır.</span><span class="sxs-lookup"><span data-stu-id="c8138-134">There are two Event Viewer logs of particular interest to view when tracking WF execution - the Analytic log and the Debug log.</span></span> <span data-ttu-id="c8138-135">Hem de Microsoft altında bulunan&#124;Windows&#124;uygulama uygulamalarının düğümü.</span><span class="sxs-lookup"><span data-stu-id="c8138-135">Both reside under the Microsoft&#124;Windows&#124;Application Server-Applications node.</span></span> <span data-ttu-id="c8138-136">Bu bölümde günlüklere tek bir uygulama olayları yerine tüm sistem üzerinde bir etkisi olan olayları içerir.</span><span class="sxs-lookup"><span data-stu-id="c8138-136">Logs within this section contain events from a single application rather than events that have an impact on the entire system.</span></span>
+<span data-ttu-id="97b4e-134">WF yürütmesi izlenirken, analiz günlüğü ve hata ayıklama günlüğünde görüntülemek için belirli bir ilgi çekici iki Olay Görüntüleyicisi günlüğü vardır.</span><span class="sxs-lookup"><span data-stu-id="97b4e-134">There are two Event Viewer logs of particular interest to view when tracking WF execution - the Analytic log and the Debug log.</span></span> <span data-ttu-id="97b4e-135">Her ikisi de Microsoft&#124;Windows&#124;uygulama sunucusu-uygulamalar düğümü altında bulunur.</span><span class="sxs-lookup"><span data-stu-id="97b4e-135">Both reside under the Microsoft&#124;Windows&#124;Application Server-Applications node.</span></span> <span data-ttu-id="97b4e-136">Bu bölümün içindeki günlüklerde, tüm sistem üzerinde bir etkisi olan olaylar yerine tek bir uygulamanın olayları bulunur.</span><span class="sxs-lookup"><span data-stu-id="97b4e-136">Logs within this section contain events from a single application rather than events that have an impact on the entire system.</span></span>
 
-<span data-ttu-id="c8138-137">Hata ayıklama izleme olayları hata ayıklama günlüğüne yazılır.</span><span class="sxs-lookup"><span data-stu-id="c8138-137">Debug trace events are written to the Debug Log.</span></span> <span data-ttu-id="c8138-138">Olay Görüntüleyicisi'nde WF hata ayıklama izleme olaylarını toplamak için hata ayıklama günlüğünü etkinleştirin.</span><span class="sxs-lookup"><span data-stu-id="c8138-138">To collect WF debug trace events in the Event Viewer, enable the Debug Log.</span></span>
+<span data-ttu-id="97b4e-137">Hata ayıklama izleme olayları hata ayıklama günlüğüne yazılır.</span><span class="sxs-lookup"><span data-stu-id="97b4e-137">Debug trace events are written to the Debug Log.</span></span> <span data-ttu-id="97b4e-138">Olay Görüntüleyicisi WF hata ayıklama izleme olaylarını toplamak için, hata ayıklama günlüğünü etkinleştirin.</span><span class="sxs-lookup"><span data-stu-id="97b4e-138">To collect WF debug trace events in the Event Viewer, enable the Debug Log.</span></span>
 
-1. <span data-ttu-id="c8138-139">Olay Görüntüleyicisi'ni açmak için **Başlat**ve ardından **çalıştırın.**</span><span class="sxs-lookup"><span data-stu-id="c8138-139">To open Event Viewer, click **Start**, and then click **Run.**</span></span> <span data-ttu-id="c8138-140">Çalıştır iletişim kutusuna `eventvwr`.</span><span class="sxs-lookup"><span data-stu-id="c8138-140">In the Run dialog, type `eventvwr`.</span></span>
+1. <span data-ttu-id="97b4e-139">Olay Görüntüleyicisi açmak için **Başlat**' a ve ardından Çalıştır ' a tıklayın **.**</span><span class="sxs-lookup"><span data-stu-id="97b4e-139">To open Event Viewer, click **Start**, and then click **Run.**</span></span> <span data-ttu-id="97b4e-140">Çalıştır iletişim kutusunda `eventvwr` yazın.</span><span class="sxs-lookup"><span data-stu-id="97b4e-140">In the Run dialog, type `eventvwr`.</span></span>
 
-2. <span data-ttu-id="c8138-141">Olay Görüntüleyicisi'ni iletişim kutusunda Genişlet **uygulama ve hizmet günlükleri** düğümü.</span><span class="sxs-lookup"><span data-stu-id="c8138-141">In the Event Viewer dialog, expand the **Applications and Services Logs** node.</span></span>
+2. <span data-ttu-id="97b4e-141">Olay Görüntüleyicisi iletişim kutusunda, **uygulamalar ve hizmetler günlükleri** düğümünü genişletin.</span><span class="sxs-lookup"><span data-stu-id="97b4e-141">In the Event Viewer dialog, expand the **Applications and Services Logs** node.</span></span>
 
-3. <span data-ttu-id="c8138-142">Genişletin **Microsoft**, **Windows**, ve **uygulama uygulamalarının** düğümleri.</span><span class="sxs-lookup"><span data-stu-id="c8138-142">Expand the **Microsoft**, **Windows**, and **Application Server-Applications** nodes.</span></span>
+3. <span data-ttu-id="97b4e-142">**Microsoft**, **Windows**ve **uygulama sunucusu-uygulamalar** düğümlerini genişletin.</span><span class="sxs-lookup"><span data-stu-id="97b4e-142">Expand the **Microsoft**, **Windows**, and **Application Server-Applications** nodes.</span></span>
 
-4. <span data-ttu-id="c8138-143">Sağ **hata ayıklama** düğümü altında **uygulama uygulamalarının** düğüm ve select **günlüğü etkinleştir**.</span><span class="sxs-lookup"><span data-stu-id="c8138-143">Right-click the **Debug** node under the **Application Server-Applications** node, and select **Enable Log**.</span></span>
+4. <span data-ttu-id="97b4e-143">**Uygulama sunucusu-uygulamalar** düğümünün altındaki **hata ayıklama** düğümüne sağ tıklayın ve **günlüğü etkinleştir**' i seçin.</span><span class="sxs-lookup"><span data-stu-id="97b4e-143">Right-click the **Debug** node under the **Application Server-Applications** node, and select **Enable Log**.</span></span>
 
-5. <span data-ttu-id="c8138-144">İzlemenin etkin uygulamanızı izleme olayları oluşturmak üzere yürütün.</span><span class="sxs-lookup"><span data-stu-id="c8138-144">Execute your tracing-enabled application to generate tracing events.</span></span>
+5. <span data-ttu-id="97b4e-144">İzleme olaylarını oluşturmak için izleme özellikli uygulamanızı yürütün.</span><span class="sxs-lookup"><span data-stu-id="97b4e-144">Execute your tracing-enabled application to generate tracing events.</span></span>
 
-6. <span data-ttu-id="c8138-145">Sağ **hata ayıklama** düğümünü seçip alt **yenileyin.**</span><span class="sxs-lookup"><span data-stu-id="c8138-145">Right-click the **Debug** node and select **Refresh.**</span></span> <span data-ttu-id="c8138-146">Olayları izleme Orta bölmede görünür olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="c8138-146">Tracing events should be visible in the center pane.</span></span>
+6. <span data-ttu-id="97b4e-145">**Hata ayıklama** düğümüne sağ tıklayın ve Yenile ' yi seçin **.**</span><span class="sxs-lookup"><span data-stu-id="97b4e-145">Right-click the **Debug** node and select **Refresh.**</span></span> <span data-ttu-id="97b4e-146">İzleme olayları, Orta bölmede görünür olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="97b4e-146">Tracing events should be visible in the center pane.</span></span>
 
-<span data-ttu-id="c8138-147">WF 4, izleme kayıtları bir ETW (olay izleme için Windows) oturumu Yazar izleme katılımcı sağlar.</span><span class="sxs-lookup"><span data-stu-id="c8138-147">WF 4 provides a tracking participant that writes tracking records to an ETW (Event Tracing for Windows) session.</span></span> <span data-ttu-id="c8138-148">ETW İzleme katılımcı abone izleme kayıtları için bir izleme profili ile yapılandırılır.</span><span class="sxs-lookup"><span data-stu-id="c8138-148">The ETW tracking participant is configured with a tracking profile to subscribe to tracking records.</span></span> <span data-ttu-id="c8138-149">İzleme etkin olduğunda, hataları kayıtları izleme için ETW gönderilir.</span><span class="sxs-lookup"><span data-stu-id="c8138-149">When tracking is enabled, errors tracking records are emitted to ETW.</span></span> <span data-ttu-id="c8138-150">ETW olayları (100 113 aralığını arasında) izleme ETW İzleme katılımcı tarafından yayılan izleme olaylarını karşılık gelen yazılmış analitik günlüğü için.</span><span class="sxs-lookup"><span data-stu-id="c8138-150">ETW tracking events (between the range of 100-113) corresponding to the tracking events emitted by the ETW tracking participant are written to the Analytic Log.</span></span>
+<span data-ttu-id="97b4e-147">WF 4, izleme kayıtlarını ETW (Windows için olay Izleme) oturumuna yazan bir izleme katılımcısı sağlar.</span><span class="sxs-lookup"><span data-stu-id="97b4e-147">WF 4 provides a tracking participant that writes tracking records to an ETW (Event Tracing for Windows) session.</span></span> <span data-ttu-id="97b4e-148">ETW izleme katılımcısı, kayıtları izlemeye abone olmak için bir izleme profili ile yapılandırılır.</span><span class="sxs-lookup"><span data-stu-id="97b4e-148">The ETW tracking participant is configured with a tracking profile to subscribe to tracking records.</span></span> <span data-ttu-id="97b4e-149">İzleme etkinleştirildiğinde, hata izleme kayıtları ETW 'ye dağıtılır.</span><span class="sxs-lookup"><span data-stu-id="97b4e-149">When tracking is enabled, errors tracking records are emitted to ETW.</span></span> <span data-ttu-id="97b4e-150">ETW izleme katılımcısı tarafından yayılan izleme olaylarına karşılık gelen ETW izleme olayları (100-113 aralığı arasında) analitik günlüğe yazılır.</span><span class="sxs-lookup"><span data-stu-id="97b4e-150">ETW tracking events (between the range of 100-113) corresponding to the tracking events emitted by the ETW tracking participant are written to the Analytic Log.</span></span>
 
-<span data-ttu-id="c8138-151">İzleme kayıtları görüntülemek için aşağıdaki adımları izleyin.</span><span class="sxs-lookup"><span data-stu-id="c8138-151">To view tracking records, follow these steps.</span></span>
+<span data-ttu-id="97b4e-151">İzleme kayıtlarını görüntülemek için aşağıdaki adımları izleyin.</span><span class="sxs-lookup"><span data-stu-id="97b4e-151">To view tracking records, follow these steps.</span></span>
 
-1. <span data-ttu-id="c8138-152">Olay Görüntüleyicisi'ni açmak için **Başlat**ve ardından **çalıştırın.**</span><span class="sxs-lookup"><span data-stu-id="c8138-152">To open Event Viewer, click **Start**, and then click **Run.**</span></span> <span data-ttu-id="c8138-153">Çalıştır iletişim kutusuna `eventvwr`.</span><span class="sxs-lookup"><span data-stu-id="c8138-153">In the Run dialog, type `eventvwr`.</span></span>
+1. <span data-ttu-id="97b4e-152">Olay Görüntüleyicisi açmak için **Başlat**' a ve ardından Çalıştır ' a tıklayın **.**</span><span class="sxs-lookup"><span data-stu-id="97b4e-152">To open Event Viewer, click **Start**, and then click **Run.**</span></span> <span data-ttu-id="97b4e-153">Çalıştır iletişim kutusunda `eventvwr` yazın.</span><span class="sxs-lookup"><span data-stu-id="97b4e-153">In the Run dialog, type `eventvwr`.</span></span>
 
-2. <span data-ttu-id="c8138-154">Olay Görüntüleyicisi'ni iletişim kutusunda Genişlet **uygulama ve hizmet günlükleri** düğümü.</span><span class="sxs-lookup"><span data-stu-id="c8138-154">In the Event Viewer dialog, expand the **Applications and Services Logs** node.</span></span>
+2. <span data-ttu-id="97b4e-154">Olay Görüntüleyicisi iletişim kutusunda, **uygulamalar ve hizmetler günlükleri** düğümünü genişletin.</span><span class="sxs-lookup"><span data-stu-id="97b4e-154">In the Event Viewer dialog, expand the **Applications and Services Logs** node.</span></span>
 
-3. <span data-ttu-id="c8138-155">Genişletin **Microsoft**, **Windows**, ve **uygulama uygulamalarının** düğümleri.</span><span class="sxs-lookup"><span data-stu-id="c8138-155">Expand the **Microsoft**, **Windows**, and **Application Server-Applications** nodes.</span></span>
+3. <span data-ttu-id="97b4e-155">**Microsoft**, **Windows**ve **uygulama sunucusu-uygulamalar** düğümlerini genişletin.</span><span class="sxs-lookup"><span data-stu-id="97b4e-155">Expand the **Microsoft**, **Windows**, and **Application Server-Applications** nodes.</span></span>
 
-4. <span data-ttu-id="c8138-156">Sağ **analitik** düğümünde **uygulama uygulamalarının** düğüm ve Seç **günlüğü etkinleştir**.</span><span class="sxs-lookup"><span data-stu-id="c8138-156">Right-click the **Analytic** node under the **Application Server-Applications** node, and select **Enable Log**.</span></span>
+4. <span data-ttu-id="97b4e-156">**Uygulama sunucusu-uygulamalar** düğümünün altındaki **analitik** düğüme sağ tıklayın ve **günlüğü etkinleştir**' i seçin.</span><span class="sxs-lookup"><span data-stu-id="97b4e-156">Right-click the **Analytic** node under the **Application Server-Applications** node, and select **Enable Log**.</span></span>
 
-5. <span data-ttu-id="c8138-157">İzleme etkinleştirilmiş uygulamanızı izleme kayıtları oluşturmak için yürütün.</span><span class="sxs-lookup"><span data-stu-id="c8138-157">Execute your tracking-enabled application to generate tracking records.</span></span>
+5. <span data-ttu-id="97b4e-157">İzleme etkin uygulamanızı, izleme kayıtları oluşturmak için yürütün.</span><span class="sxs-lookup"><span data-stu-id="97b4e-157">Execute your tracking-enabled application to generate tracking records.</span></span>
 
-6. <span data-ttu-id="c8138-158">Sağ **analitik** düğümünü seçip alt **yenileyin.**</span><span class="sxs-lookup"><span data-stu-id="c8138-158">Right-click the **Analytic** node and select **Refresh.**</span></span> <span data-ttu-id="c8138-159">Kayıtları İzleme Orta bölmede görünür olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="c8138-159">Tracking records should be visible in the center pane.</span></span>
+6. <span data-ttu-id="97b4e-158">**Analitik** düğümüne sağ tıklayın ve Yenile ' yi seçin **.**</span><span class="sxs-lookup"><span data-stu-id="97b4e-158">Right-click the **Analytic** node and select **Refresh.**</span></span> <span data-ttu-id="97b4e-159">İzleme kayıtları, Orta bölmede görünür olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="97b4e-159">Tracking records should be visible in the center pane.</span></span>
 
-<span data-ttu-id="c8138-160">Aşağıdaki görüntüde, Olay Görüntüleyicisi'nde izleme olayları gösterir:</span><span class="sxs-lookup"><span data-stu-id="c8138-160">The following image shows tracking events in the event viewer:</span></span>
+<span data-ttu-id="97b4e-160">Aşağıdaki görüntüde olay görüntüleyicisinde izleme olayları gösterilmektedir:</span><span class="sxs-lookup"><span data-stu-id="97b4e-160">The following image shows tracking events in the event viewer:</span></span>
 
-![Kayıtları İzleme Olay Görüntüleyicisi'ni gösteren ekran görüntüsü.](./media/configuring-tracking-for-a-workflow/tracking-event-viewer.png)
+![İzleme kayıtlarını gösteren Olay Görüntüleyicisi ekran görüntüsü.](./media/configuring-tracking-for-a-workflow/tracking-event-viewer.png)
 
-### <a name="registering-an-application-specific-provider-id"></a><span data-ttu-id="c8138-162">Bir uygulamaya özgü sağlayıcı kimliği kaydediliyor</span><span class="sxs-lookup"><span data-stu-id="c8138-162">Registering an application-specific provider ID</span></span>
+### <a name="registering-an-application-specific-provider-id"></a><span data-ttu-id="97b4e-162">Uygulamaya özgü bir sağlayıcı KIMLIĞINI kaydetme</span><span class="sxs-lookup"><span data-stu-id="97b4e-162">Registering an application-specific provider ID</span></span>
 
-<span data-ttu-id="c8138-163">Olayları bir belirli uygulama günlüğüne yazılması gerekirse, yeni sağlayıcı bildirimi kaydetmek için şu adımları izleyin.</span><span class="sxs-lookup"><span data-stu-id="c8138-163">If events need to be written to a specific application log, follow these steps to register the new provider manifest.</span></span>
+<span data-ttu-id="97b4e-163">Olayların belirli bir uygulama günlüğüne yazılması gerekiyorsa, yeni sağlayıcı bildirimini kaydetmek için aşağıdaki adımları izleyin.</span><span class="sxs-lookup"><span data-stu-id="97b4e-163">If events need to be written to a specific application log, follow these steps to register the new provider manifest.</span></span>
 
-1. <span data-ttu-id="c8138-164">Sağlayıcı Kimliği uygulama yapılandırma dosyasında bildirin.</span><span class="sxs-lookup"><span data-stu-id="c8138-164">Declare the provider ID in the application configuration file.</span></span>
+1. <span data-ttu-id="97b4e-164">Uygulama yapılandırma dosyasında sağlayıcı KIMLIĞINI bildirin.</span><span class="sxs-lookup"><span data-stu-id="97b4e-164">Declare the provider ID in the application configuration file.</span></span>
 
     ```xml
     <system.serviceModel>
@@ -199,21 +196,21 @@ invoker.Invoke();
     </system.serviceModel>
     ```
 
-2. <span data-ttu-id="c8138-165">Bildirim dosyası %windir%\Microsoft.NET\Framework kopyalayın\\\<en son sürümünü [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]> \Microsoft.Windows.ApplicationServer.Applications.man geçici bir konuma ve yeniden adlandırın Microsoft.Windows.ApplicationServer.Applications_Provider1.man</span><span class="sxs-lookup"><span data-stu-id="c8138-165">Copy the manifest file from %windir%\Microsoft.NET\Framework\\\<latest version of [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]>\Microsoft.Windows.ApplicationServer.Applications.man to a temporary location, and rename it to Microsoft.Windows.ApplicationServer.Applications_Provider1.man</span></span>
+2. <span data-ttu-id="97b4e-165">Bildirim dosyasını%windir%\Microsoft.NET\Framework @ no__t-0 @ no__t-1En son sürümü olan [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] > \Microsoft.Windows.ApplicationServer.Applications.man geçici bir konuma kopyalayın ve şu şekilde yeniden adlandırın Microsoft. Windows. ApplicationServer. Applications_Provider1. Man</span><span class="sxs-lookup"><span data-stu-id="97b4e-165">Copy the manifest file from %windir%\Microsoft.NET\Framework\\\<latest version of [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]>\Microsoft.Windows.ApplicationServer.Applications.man to a temporary location, and rename it to Microsoft.Windows.ApplicationServer.Applications_Provider1.man</span></span>
 
-3. <span data-ttu-id="c8138-166">Bildirim dosyasında GUID, yeni bir GUID ile değiştirin.</span><span class="sxs-lookup"><span data-stu-id="c8138-166">Change the GUID in the manifest file to the new GUID.</span></span>
-
-    ```xml
-    <provider name="Microsoft-Windows-Application Server-Applications" guid="{2720e974-9fe9-477a-bb60-81fe3bf91eec}"
-    ```
-
-4. <span data-ttu-id="c8138-167">Varsayılan sağlayıcıyı kaldırmak istemiyorsanız sağlayıcı adını değiştirin.</span><span class="sxs-lookup"><span data-stu-id="c8138-167">Change the provider name if you do not want to uninstall the default provider.</span></span>
+3. <span data-ttu-id="97b4e-166">Bildirim dosyasındaki GUID 'yi yeni GUID ile değiştirin.</span><span class="sxs-lookup"><span data-stu-id="97b4e-166">Change the GUID in the manifest file to the new GUID.</span></span>
 
     ```xml
     <provider name="Microsoft-Windows-Application Server-Applications" guid="{2720e974-9fe9-477a-bb60-81fe3bf91eec}"
     ```
 
-5. <span data-ttu-id="c8138-168">Sağlayıcı adı önceki adımda değiştirdiyseniz, bildirim dosyasında kanal adları yeni sağlayıcı ad ile değiştirin.</span><span class="sxs-lookup"><span data-stu-id="c8138-168">If you changed the provider name in the previous step, change the channel names in the manifest file to the new provider name.</span></span>
+4. <span data-ttu-id="97b4e-167">Varsayılan Sağlayıcıyı kaldırmak istemiyorsanız sağlayıcı adını değiştirin.</span><span class="sxs-lookup"><span data-stu-id="97b4e-167">Change the provider name if you do not want to uninstall the default provider.</span></span>
+
+    ```xml
+    <provider name="Microsoft-Windows-Application Server-Applications" guid="{2720e974-9fe9-477a-bb60-81fe3bf91eec}"
+    ```
+
+5. <span data-ttu-id="97b4e-168">Önceki adımda sağlayıcı adını değiştirdiyseniz, bildirim dosyasındaki kanal adlarını yeni sağlayıcı adıyla değiştirin.</span><span class="sxs-lookup"><span data-stu-id="97b4e-168">If you changed the provider name in the previous step, change the channel names in the manifest file to the new provider name.</span></span>
 
     ```xml
     <channel name="Microsoft-Windows-Application Server-Applications_Provider1/Admin" chid="ADMIN_CHANNEL" symbol="ADMIN_CHANNEL" type="Admin" enabled="false" isolation="Application" message="$(string.MICROSOFT_WINDOWS_APPLICATIONSERVER_APPLICATIONS.channel.ADMIN_CHANNEL.message)" />
@@ -223,43 +220,43 @@ invoker.Invoke();
     <channel name="Microsoft-Windows-Application Server-Applications_Provider1/Perf" chid="PERF_CHANNEL" symbol="PERF_CHANNEL" type="Analytic" enabled="false" isolation="Application" message="$(string.MICROSOFT_WINDOWS_APPLICATIONSERVER_APPLICATIONS.channel.PERF_CHANNEL.message)" />
     ```
 
-6. <span data-ttu-id="c8138-169">Aşağıdaki adımları izleyerek kaynak DLL'si oluşturur.</span><span class="sxs-lookup"><span data-stu-id="c8138-169">Generate the resource DLL by following these steps.</span></span>
+6. <span data-ttu-id="97b4e-169">Aşağıdaki adımları izleyerek kaynak DLL 'sini oluşturun.</span><span class="sxs-lookup"><span data-stu-id="97b4e-169">Generate the resource DLL by following these steps.</span></span>
 
-    1. <span data-ttu-id="c8138-170">Windows SDK'sını yükleyin.</span><span class="sxs-lookup"><span data-stu-id="c8138-170">Install the Windows SDK.</span></span> <span data-ttu-id="c8138-171">Windows SDK'sı ileti derleyicisi içerir ([mc.exe](https://go.microsoft.com/fwlink/?LinkId=184606)) ve kaynak derleyicisi ([rc.exe](https://go.microsoft.com/fwlink/?LinkId=184605)).</span><span class="sxs-lookup"><span data-stu-id="c8138-171">The Windows SDK includes the message compiler ([mc.exe](https://go.microsoft.com/fwlink/?LinkId=184606)) and resource compiler ([rc.exe](https://go.microsoft.com/fwlink/?LinkId=184605)).</span></span>
+    1. <span data-ttu-id="97b4e-170">Windows SDK 'i yükler.</span><span class="sxs-lookup"><span data-stu-id="97b4e-170">Install the Windows SDK.</span></span> <span data-ttu-id="97b4e-171">Windows SDK, ileti derleyicisini ([mc. exe](https://go.microsoft.com/fwlink/?LinkId=184606)) ve kaynak derleyicisini ([rc. exe](https://go.microsoft.com/fwlink/?LinkId=184605)) içerir.</span><span class="sxs-lookup"><span data-stu-id="97b4e-171">The Windows SDK includes the message compiler ([mc.exe](https://go.microsoft.com/fwlink/?LinkId=184606)) and resource compiler ([rc.exe](https://go.microsoft.com/fwlink/?LinkId=184605)).</span></span>
 
-    2. <span data-ttu-id="c8138-172">Windows SDK Komut İstemi'nde mc.exe yeni bildirim dosyasını çalıştırın.</span><span class="sxs-lookup"><span data-stu-id="c8138-172">In a Windows SDK command prompt, run mc.exe on the new manifest file.</span></span>
+    2. <span data-ttu-id="97b4e-172">Windows SDK komut isteminde, yeni bildirim dosyasında Mc. exe ' yi çalıştırın.</span><span class="sxs-lookup"><span data-stu-id="97b4e-172">In a Windows SDK command prompt, run mc.exe on the new manifest file.</span></span>
 
         ```console
         mc.exe Microsoft.Windows.ApplicationServer.Applications_Provider1.man
         ```
 
-    3. <span data-ttu-id="c8138-173">Önceki adımda oluşturulan kaynak dosyada RC.exe çalıştırın.</span><span class="sxs-lookup"><span data-stu-id="c8138-173">Run rc.exe on the resource file generated in the previous step.</span></span>
+    3. <span data-ttu-id="97b4e-173">Önceki adımda oluşturulan kaynak dosyasında RC. exe ' yi çalıştırın.</span><span class="sxs-lookup"><span data-stu-id="97b4e-173">Run rc.exe on the resource file generated in the previous step.</span></span>
 
         ```console
         rc.exe  Microsoft.Windows.ApplicationServer.Applications_Provider1.rc
         ```
 
-    4. <span data-ttu-id="c8138-174">NewProviderReg.cs adlı bir boş cs dosyası oluşturun.</span><span class="sxs-lookup"><span data-stu-id="c8138-174">Create an empty cs file called NewProviderReg.cs.</span></span>
+    4. <span data-ttu-id="97b4e-174">NewProviderReg.cs adlı boş bir cs dosyası oluşturun.</span><span class="sxs-lookup"><span data-stu-id="97b4e-174">Create an empty cs file called NewProviderReg.cs.</span></span>
 
-    5. <span data-ttu-id="c8138-175">Bir kaynak DLL'si C# derleyicisi kullanarak oluşturun.</span><span class="sxs-lookup"><span data-stu-id="c8138-175">Create a resource DLL using the C# compiler.</span></span>
+    5. <span data-ttu-id="97b4e-175">C# Derleyiciyi kullanarak bir kaynak dll 'si oluşturun.</span><span class="sxs-lookup"><span data-stu-id="97b4e-175">Create a resource DLL using the C# compiler.</span></span>
 
         ```console
         csc /target:library /win32res:Microsoft.Windows.ApplicationServer.Applications_Provider1.res NewProviderReg.cs /out:Microsoft.Windows.ApplicationServer.Applications_Provider1.dll
         ```
 
-    6. <span data-ttu-id="c8138-176">Bildirim dosyasında kaynak ve ileti dll adı `Microsoft.Windows.ApplicationServer.Applications.Provider1.man` yeni dll adı.</span><span class="sxs-lookup"><span data-stu-id="c8138-176">Change the resource and message dll name in the manifest file from `Microsoft.Windows.ApplicationServer.Applications.Provider1.man` to the new dll name.</span></span>
+    6. <span data-ttu-id="97b4e-176">Bildirim dosyasındaki kaynak ve ileti DLL adını `Microsoft.Windows.ApplicationServer.Applications.Provider1.man` ' dan yeni dll adına değiştirin.</span><span class="sxs-lookup"><span data-stu-id="97b4e-176">Change the resource and message dll name in the manifest file from `Microsoft.Windows.ApplicationServer.Applications.Provider1.man` to the new dll name.</span></span>
 
         ```xml
         <provider name="Microsoft-Windows-Application Server-Applications_Provider1" guid="{2720e974-9fe9-477a-bb60-81fe3bf91eec}" symbol="Microsoft_Windows_ApplicationServer_ApplicationEvents" resourceFileName="<dll directory>\Microsoft.Windows.ApplicationServer.Applications_Provider1.dll" messageFileName="<dll directory>\Microsoft.Windows.ApplicationServer.Applications_Provider1.dll">
         ```
 
-    7. <span data-ttu-id="c8138-177">Kullanım [wevtutil](https://go.microsoft.com/fwlink/?LinkId=184608) bildirim kaydedilecek.</span><span class="sxs-lookup"><span data-stu-id="c8138-177">Use [wevtutil](https://go.microsoft.com/fwlink/?LinkId=184608) to register the manifest.</span></span>
+    7. <span data-ttu-id="97b4e-177">Bildirimi kaydetmek için [wevtutil](https://go.microsoft.com/fwlink/?LinkId=184608) kullanın.</span><span class="sxs-lookup"><span data-stu-id="97b4e-177">Use [wevtutil](https://go.microsoft.com/fwlink/?LinkId=184608) to register the manifest.</span></span>
 
         ```console
         wevtutil im Microsoft.Windows.ApplicationServer.Applications_Provider1.man
         ```
 
-## <a name="see-also"></a><span data-ttu-id="c8138-178">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="c8138-178">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="97b4e-178">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="97b4e-178">See also</span></span>
 
-- [<span data-ttu-id="c8138-179">Windows Server App Fabric izleme</span><span class="sxs-lookup"><span data-stu-id="c8138-179">Windows Server App Fabric Monitoring</span></span>](https://go.microsoft.com/fwlink/?LinkId=201273)
-- [<span data-ttu-id="c8138-180">App Fabric ile uygulamaları izleme</span><span class="sxs-lookup"><span data-stu-id="c8138-180">Monitoring Applications with App Fabric</span></span>](https://go.microsoft.com/fwlink/?LinkId=201275)
+- [<span data-ttu-id="97b4e-179">Windows Server App Fabric Izleme</span><span class="sxs-lookup"><span data-stu-id="97b4e-179">Windows Server App Fabric Monitoring</span></span>](https://go.microsoft.com/fwlink/?LinkId=201273)
+- [<span data-ttu-id="97b4e-180">App Fabric ile uygulamaları izleme</span><span class="sxs-lookup"><span data-stu-id="97b4e-180">Monitoring Applications with App Fabric</span></span>](https://go.microsoft.com/fwlink/?LinkId=201275)

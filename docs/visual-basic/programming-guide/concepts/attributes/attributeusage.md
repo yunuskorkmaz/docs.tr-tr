@@ -2,15 +2,15 @@
 title: AttributeUsage (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 48757216-c21d-4051-86d5-8a3e03c39d2c
-ms.openlocfilehash: 1841171f2f3fc26ba9244c72c69960b765d39807
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 84c3d175aede5d8066198592ffac601c0bd97620
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61789122"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71351820"
 ---
-# <a name="attributeusage-visual-basic"></a><span data-ttu-id="a929a-102">AttributeUsage (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a929a-102">AttributeUsage (Visual Basic)</span></span>
-<span data-ttu-id="a929a-103">Özel bir öznitelik sınıfı nasıl kullanılabileceğini belirler.</span><span class="sxs-lookup"><span data-stu-id="a929a-103">Determines how a custom attribute class can be used.</span></span> <span data-ttu-id="a929a-104">`AttributeUsage` Yeni öznitelik nasıl uygulanabileceğini kontrol etmek için özel öznitelik tanımlarına uygulanabilir bir özniteliktir.</span><span class="sxs-lookup"><span data-stu-id="a929a-104">`AttributeUsage` is an attribute that can be applied to custom attribute definitions to control how the new attribute can be applied.</span></span> <span data-ttu-id="a929a-105">Varsayılan ayarlar, açıkça uygulandığında şöyle görünür:</span><span class="sxs-lookup"><span data-stu-id="a929a-105">The default settings look like this when applied explicitly:</span></span>  
+# <a name="attributeusage-visual-basic"></a><span data-ttu-id="81a52-102">AttributeUsage (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="81a52-102">AttributeUsage (Visual Basic)</span></span>
+<span data-ttu-id="81a52-103">Özel bir öznitelik sınıfının nasıl kullanılabileceğini belirler.</span><span class="sxs-lookup"><span data-stu-id="81a52-103">Determines how a custom attribute class can be used.</span></span> <span data-ttu-id="81a52-104">`AttributeUsage`, yeni özniteliğin nasıl uygulanabileceğini denetlemek için özel öznitelik tanımlarına uygulanabilen bir özniteliktir.</span><span class="sxs-lookup"><span data-stu-id="81a52-104">`AttributeUsage` is an attribute that can be applied to custom attribute definitions to control how the new attribute can be applied.</span></span> <span data-ttu-id="81a52-105">Varsayılan ayarlar açıkça uygulandığında şöyle görünür:</span><span class="sxs-lookup"><span data-stu-id="81a52-105">The default settings look like this when applied explicitly:</span></span>  
   
 ```vb  
 <System.AttributeUsage(System.AttributeTargets.All,   
@@ -21,9 +21,9 @@ Class NewAttribute
 End Class  
 ```  
   
- <span data-ttu-id="a929a-106">Bu örnekte, `NewAttribute` sınıfı olabilir herhangi bir öznitelik mümkün kod varlık, ancak yalnızca bir kez her varlık için uygulanır.</span><span class="sxs-lookup"><span data-stu-id="a929a-106">In this example, the `NewAttribute` class can be applied to any attribute-able code entity, but can be applied only once to each entity.</span></span> <span data-ttu-id="a929a-107">Temel bir sınıfa uygulandığında türetilmiş sınıflar tarafından devralınır.</span><span class="sxs-lookup"><span data-stu-id="a929a-107">It is inherited by derived classes when applied to a base class.</span></span>  
+ <span data-ttu-id="81a52-106">Bu örnekte, `NewAttribute` sınıfı öznitelik özellikli herhangi bir kod varlığına uygulanabilir, ancak her bir varlığa yalnızca bir kez uygulanabilir.</span><span class="sxs-lookup"><span data-stu-id="81a52-106">In this example, the `NewAttribute` class can be applied to any attribute-able code entity, but can be applied only once to each entity.</span></span> <span data-ttu-id="81a52-107">Temel sınıfa uygulandığında türetilmiş sınıflar tarafından devralınır.</span><span class="sxs-lookup"><span data-stu-id="81a52-107">It is inherited by derived classes when applied to a base class.</span></span>  
   
- <span data-ttu-id="a929a-108">`AllowMultiple` Ve `Inherited` bu kodu aynı etkiye sahiptir. Bu nedenle bağımsız değişken isteğe bağlıdır:</span><span class="sxs-lookup"><span data-stu-id="a929a-108">The `AllowMultiple` and `Inherited` arguments are optional, so this code has the same effect:</span></span>  
+ <span data-ttu-id="81a52-108">@No__t-0 ve `Inherited` bağımsız değişkenleri isteğe bağlıdır, bu nedenle bu kod aynı etkiye sahiptir:</span><span class="sxs-lookup"><span data-stu-id="81a52-108">The `AllowMultiple` and `Inherited` arguments are optional, so this code has the same effect:</span></span>  
   
 ```vb  
 <System.AttributeUsage(System.AttributeTargets.All)>   
@@ -32,7 +32,7 @@ Class NewAttribute
 End Class  
 ```  
   
- <span data-ttu-id="a929a-109">İlk `AttributeUsage` bağımsız değişkeni olmalıdır bir veya daha fazla öğeleri <xref:System.AttributeTargets> sabit listesi.</span><span class="sxs-lookup"><span data-stu-id="a929a-109">The first `AttributeUsage` argument must be one or more elements of the <xref:System.AttributeTargets> enumeration.</span></span> <span data-ttu-id="a929a-110">Birden çok hedef türü, OR işleci, bu gibi birlikte bağlanabilir:</span><span class="sxs-lookup"><span data-stu-id="a929a-110">Multiple target types can be linked together with the OR operator, like this:</span></span>  
+ <span data-ttu-id="81a52-109">İlk `AttributeUsage` bağımsız değişkeni <xref:System.AttributeTargets> Numaralandırmadaki bir veya daha fazla öğe olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="81a52-109">The first `AttributeUsage` argument must be one or more elements of the <xref:System.AttributeTargets> enumeration.</span></span> <span data-ttu-id="81a52-110">Birden çok hedef türü, OR işleciyle birlikte bağlanabilir ve şöyle olabilir:</span><span class="sxs-lookup"><span data-stu-id="81a52-110">Multiple target types can be linked together with the OR operator, like this:</span></span>  
   
 ```vb  
 Imports System  
@@ -45,7 +45,7 @@ Class NewPropertyOrFieldAttribute
 End Class  
 ```  
   
- <span data-ttu-id="a929a-111">Varsa `AllowMultiple` bağımsız değişkeni ayarlanır `true`, sonra elde edilen özniteliği, bu gibi tek bir varlık için birden çok kez uygulanabilir:</span><span class="sxs-lookup"><span data-stu-id="a929a-111">If the `AllowMultiple` argument is set to `true`, then the resulting attribute can be applied more than once to a single entity, like this:</span></span>  
+ <span data-ttu-id="81a52-111">@No__t-0 bağımsız değişkeni `true` olarak ayarlandıysa, sonuçta elde edilen öznitelik tek bir varlığa birden çok kez uygulanabilir, örneğin şöyle olabilir:</span><span class="sxs-lookup"><span data-stu-id="81a52-111">If the `AllowMultiple` argument is set to `true`, then the resulting attribute can be applied more than once to a single entity, like this:</span></span>  
   
 ```vb  
 Imports System  
@@ -62,9 +62,9 @@ Class Class1
 End Class  
 ```  
   
- <span data-ttu-id="a929a-112">Bu durumda `MultiUseAttr` art arda çünkü uygulanabilir `AllowMultiple` ayarlanır `true`.</span><span class="sxs-lookup"><span data-stu-id="a929a-112">In this case `MultiUseAttr` can be applied repeatedly because `AllowMultiple` is set to `true`.</span></span> <span data-ttu-id="a929a-113">Birden çok öznitelik uygulamak için gösterilen iki biçimi geçerli değil.</span><span class="sxs-lookup"><span data-stu-id="a929a-113">Both formats shown for applying multiple attributes are valid.</span></span>  
+ <span data-ttu-id="81a52-112">Bu durumda, `AllowMultiple` `true` olarak ayarlandığı için-0 @no__t tekrar tekrar uygulanabilir.</span><span class="sxs-lookup"><span data-stu-id="81a52-112">In this case `MultiUseAttr` can be applied repeatedly because `AllowMultiple` is set to `true`.</span></span> <span data-ttu-id="81a52-113">Birden çok özniteliği uygulamak için gösterilen her iki biçim de geçerlidir.</span><span class="sxs-lookup"><span data-stu-id="81a52-113">Both formats shown for applying multiple attributes are valid.</span></span>  
   
- <span data-ttu-id="a929a-114">Varsa `Inherited` ayarlanır `false`, ardından öznitelik öznitelendirilen bir sınıftan türetilmiş sınıflar tarafından devralınır değil.</span><span class="sxs-lookup"><span data-stu-id="a929a-114">If `Inherited` is set to `false`, then the attribute is not inherited by classes that are derived from a class that is attributed.</span></span> <span data-ttu-id="a929a-115">Örneğin:</span><span class="sxs-lookup"><span data-stu-id="a929a-115">For example:</span></span>  
+ <span data-ttu-id="81a52-114">@No__t-0 ' ı `false` olarak ayarlarsanız öznitelik, öznitelikli bir sınıftan türetilmiş sınıflar tarafından devralınmaz.</span><span class="sxs-lookup"><span data-stu-id="81a52-114">If `Inherited` is set to `false`, then the attribute is not inherited by classes that are derived from a class that is attributed.</span></span> <span data-ttu-id="81a52-115">Örneğin:</span><span class="sxs-lookup"><span data-stu-id="81a52-115">For example:</span></span>  
   
 ```vb  
 Imports System  
@@ -86,15 +86,15 @@ Class DClass
 End Class  
 ```  
   
- <span data-ttu-id="a929a-116">Bu durumda `Attr1` uygulanmaz `DClass` devralma aracılığıyla.</span><span class="sxs-lookup"><span data-stu-id="a929a-116">In this case `Attr1` is not applied to `DClass` via inheritance.</span></span>  
+ <span data-ttu-id="81a52-116">Bu durumda `Attr1` devralma yoluyla `DClass` ' e uygulanmaz.</span><span class="sxs-lookup"><span data-stu-id="81a52-116">In this case `Attr1` is not applied to `DClass` via inheritance.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="a929a-117">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="a929a-117">Remarks</span></span>  
- <span data-ttu-id="a929a-118">`AttributeUsage` Özniteliği, bir tek kullanımlık özniteliğin birden çok kez aynı sınıfa uygulanamaz.</span><span class="sxs-lookup"><span data-stu-id="a929a-118">The `AttributeUsage` attribute is a single-use attribute--it cannot be applied more than once to the same class.</span></span> <span data-ttu-id="a929a-119">`AttributeUsage` için bir diğer addır <xref:System.AttributeUsageAttribute>.</span><span class="sxs-lookup"><span data-stu-id="a929a-119">`AttributeUsage` is an alias for <xref:System.AttributeUsageAttribute>.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="81a52-117">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="81a52-117">Remarks</span></span>  
+ <span data-ttu-id="81a52-118">@No__t-0 özniteliği tek başına kullanılan bir özniteliktir; aynı sınıfa birden çok kez uygulanamaz.</span><span class="sxs-lookup"><span data-stu-id="81a52-118">The `AttributeUsage` attribute is a single-use attribute--it cannot be applied more than once to the same class.</span></span> <span data-ttu-id="81a52-119">`AttributeUsage`, <xref:System.AttributeUsageAttribute> için bir diğer addır.</span><span class="sxs-lookup"><span data-stu-id="81a52-119">`AttributeUsage` is an alias for <xref:System.AttributeUsageAttribute>.</span></span>  
   
- <span data-ttu-id="a929a-120">Daha fazla bilgi için [erişme öznitelikleri kullanarak yansıma (Visual Basic) tarafından](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md).</span><span class="sxs-lookup"><span data-stu-id="a929a-120">For more information, see [Accessing Attributes by Using Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md).</span></span>  
+ <span data-ttu-id="81a52-120">Daha fazla bilgi için bkz. [yansıma kullanarak özniteliklere erişme (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md).</span><span class="sxs-lookup"><span data-stu-id="81a52-120">For more information, see [Accessing Attributes by Using Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="a929a-121">Örnek</span><span class="sxs-lookup"><span data-stu-id="a929a-121">Example</span></span>  
- <span data-ttu-id="a929a-122">Aşağıdaki örnek, etkisini gösterir `Inherited` ve `AllowMultiple` bağımsız değişkenleri `AttributeUsage` özniteliği ve nasıl bir sınıfa uygulanan özel öznitelikler listelenebilir.</span><span class="sxs-lookup"><span data-stu-id="a929a-122">The following example demonstrates the effect of the `Inherited` and `AllowMultiple` arguments to the `AttributeUsage` attribute, and how the custom attributes applied to a class can be enumerated.</span></span>  
+## <a name="example"></a><span data-ttu-id="81a52-121">Örnek</span><span class="sxs-lookup"><span data-stu-id="81a52-121">Example</span></span>  
+ <span data-ttu-id="81a52-122">Aşağıdaki örnek, `Inherited` ve `AllowMultiple` bağımsız değişkenlerinin `AttributeUsage` özniteliğine ve bir sınıfa uygulanan özel özniteliklerin nasıl numaralandırılacağını gösterir.</span><span class="sxs-lookup"><span data-stu-id="81a52-122">The following example demonstrates the effect of the `Inherited` and `AllowMultiple` arguments to the `AttributeUsage` attribute, and how the custom attributes applied to a class can be enumerated.</span></span>  
   
 ```vb  
 Imports System  
@@ -149,9 +149,9 @@ Public Class TestAttributeUsage
 End Class  
 ```  
   
-## <a name="sample-output"></a><span data-ttu-id="a929a-123">Örnek Çıktı</span><span class="sxs-lookup"><span data-stu-id="a929a-123">Sample Output</span></span>  
+## <a name="sample-output"></a><span data-ttu-id="81a52-123">Örnek Çıktı</span><span class="sxs-lookup"><span data-stu-id="81a52-123">Sample Output</span></span>  
   
-```  
+```console  
 Attributes on Base Class:  
 A1  
 A2  
@@ -161,13 +161,13 @@ A3
 A2  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="a929a-124">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="a929a-124">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="81a52-124">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="81a52-124">See also</span></span>
 
 - <xref:System.Attribute>
 - <xref:System.Reflection>
-- [<span data-ttu-id="a929a-125">Visual Basic programlama kılavuzu</span><span class="sxs-lookup"><span data-stu-id="a929a-125">Visual Basic Programming Guide</span></span>](../../../../visual-basic/programming-guide/index.md)
-- [<span data-ttu-id="a929a-126">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="a929a-126">Attributes</span></span>](../../../../standard/attributes/index.md)
-- [<span data-ttu-id="a929a-127">Yansıma (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a929a-127">Reflection (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/reflection.md)
-- [<span data-ttu-id="a929a-128">Öznitelikler (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a929a-128">Attributes (Visual Basic)</span></span>](../../../../visual-basic/language-reference/attributes.md)
-- [<span data-ttu-id="a929a-129">Özel öznitelikler (Visual Basic) oluşturma</span><span class="sxs-lookup"><span data-stu-id="a929a-129">Creating Custom Attributes (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md)
-- [<span data-ttu-id="a929a-130">(Visual Basic) yansıma kullanarak özniteliklere erişme</span><span class="sxs-lookup"><span data-stu-id="a929a-130">Accessing Attributes by Using Reflection (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)
+- [<span data-ttu-id="81a52-125">Visual Basic programlama kılavuzu</span><span class="sxs-lookup"><span data-stu-id="81a52-125">Visual Basic Programming Guide</span></span>](../../../../visual-basic/programming-guide/index.md)
+- [<span data-ttu-id="81a52-126">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="81a52-126">Attributes</span></span>](../../../../standard/attributes/index.md)
+- [<span data-ttu-id="81a52-127">Yansıma (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="81a52-127">Reflection (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/reflection.md)
+- [<span data-ttu-id="81a52-128">Öznitelikler (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="81a52-128">Attributes (Visual Basic)</span></span>](../../../../visual-basic/language-reference/attributes.md)
+- [<span data-ttu-id="81a52-129">Özel öznitelikler oluşturma (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="81a52-129">Creating Custom Attributes (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md)
+- [<span data-ttu-id="81a52-130">Yansıma kullanarak özniteliklere erişme (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="81a52-130">Accessing Attributes by Using Reflection (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)

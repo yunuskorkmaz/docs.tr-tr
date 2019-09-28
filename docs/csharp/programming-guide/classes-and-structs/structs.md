@@ -1,42 +1,42 @@
 ---
-title: Yapılar - C# Programlama Kılavuzu
+title: Yapılar- C# Programlama Kılavuzu
 ms.custom: seodec18
 ms.date: 08/21/2018
 helpviewer_keywords:
 - C# language, structs
 - structs [C#]
 ms.assetid: b7cf4ff2-0eb7-4e5c-93d5-b2196b4f5d89
-ms.openlocfilehash: 063d7e3b68fbe6c01ff0df4ae935fec5af6f6891
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: df2a235651a2242ffe18df377dce9995af31e99f
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67743842"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71392457"
 ---
-# <a name="structs-c-programming-guide"></a><span data-ttu-id="0e0bc-102">Yapılar (C# Programlama Kılavuzu)</span><span class="sxs-lookup"><span data-stu-id="0e0bc-102">Structs (C# Programming Guide)</span></span>
+# <a name="structs-c-programming-guide"></a><span data-ttu-id="abf71-102">Yapılar (C# Programlama Kılavuzu)</span><span class="sxs-lookup"><span data-stu-id="abf71-102">Structs (C# Programming Guide)</span></span>
 
-<span data-ttu-id="0e0bc-103">Yapılar kullanarak tanımlanmış [yapı](../../language-reference/keywords/struct.md) anahtar sözcüğü, örneğin:</span><span class="sxs-lookup"><span data-stu-id="0e0bc-103">Structs are defined by using the [struct](../../language-reference/keywords/struct.md) keyword, for example:</span></span>  
+<span data-ttu-id="abf71-103">Yapılar [struct](../../language-reference/keywords/struct.md) anahtar sözcüğü kullanılarak tanımlanır, örneğin:</span><span class="sxs-lookup"><span data-stu-id="abf71-103">Structs are defined by using the [struct](../../language-reference/keywords/struct.md) keyword, for example:</span></span>  
   
  [!code-csharp[csProgGuideObjects#39](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#39)]  
   
-<span data-ttu-id="0e0bc-104">Yapılar sınıflar olarak aynı sözdizimini çoğunu paylaşır.</span><span class="sxs-lookup"><span data-stu-id="0e0bc-104">Structs share most of the same syntax as classes.</span></span> <span data-ttu-id="0e0bc-105">Struct'ın adı geçerli C# olmalıdır [tanımlayıcı adı](../inside-a-program/identifier-names.md).</span><span class="sxs-lookup"><span data-stu-id="0e0bc-105">The name of the struct must be a valid C# [identifier name](../inside-a-program/identifier-names.md).</span></span> <span data-ttu-id="0e0bc-106">Yapılar aşağıdaki yollarla sınıfları daha büyük/küçük harf sınırlıdır:</span><span class="sxs-lookup"><span data-stu-id="0e0bc-106">Structs are more limited than classes in the following ways:</span></span>  
+<span data-ttu-id="abf71-104">Yapılar, aynı sözdiziminin büyük bir kısmını sınıflarla paylaşır.</span><span class="sxs-lookup"><span data-stu-id="abf71-104">Structs share most of the same syntax as classes.</span></span> <span data-ttu-id="abf71-105">Yapının adı geçerli C# bir [tanımlayıcı adı](../inside-a-program/identifier-names.md)olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="abf71-105">The name of the struct must be a valid C# [identifier name](../inside-a-program/identifier-names.md).</span></span> <span data-ttu-id="abf71-106">Yapılar aşağıdaki yollarla sınıflardan daha sınırlıdır:</span><span class="sxs-lookup"><span data-stu-id="abf71-106">Structs are more limited than classes in the following ways:</span></span>  
   
-- <span data-ttu-id="0e0bc-107">Const veya statik olarak bildirilirler sürece bir yapının bildirimi içinde alanları başlatılamıyor.</span><span class="sxs-lookup"><span data-stu-id="0e0bc-107">Within a struct declaration, fields cannot be initialized unless they are declared as const or static.</span></span>  
-- <span data-ttu-id="0e0bc-108">Bir yapı, parametresiz bir oluşturucu (parametresiz bir oluşturucu) veya bir sonlandırıcı bildiremezsiniz.</span><span class="sxs-lookup"><span data-stu-id="0e0bc-108">A struct cannot declare a parameterless constructor (a constructor without parameters) or a finalizer.</span></span>  
-- <span data-ttu-id="0e0bc-109">Yapılar, atamaya bağlı kopyalanır.</span><span class="sxs-lookup"><span data-stu-id="0e0bc-109">Structs are copied on assignment.</span></span> <span data-ttu-id="0e0bc-110">Bir yapı için yeni bir değişken atandığında, tüm verileri kopyalanır ve yeni bir kopyasını değişiklik özgün kopya verileri değiştirmez.</span><span class="sxs-lookup"><span data-stu-id="0e0bc-110">When a struct is assigned to a new variable, all the data is copied, and any modification to the new copy does not change the data for the original copy.</span></span> <span data-ttu-id="0e0bc-111">Bu ne zaman değerinin koleksiyonlar ile çalışma gibi türleri unutmamak önemlidir `Dictionary<string, myStruct>`.</span><span class="sxs-lookup"><span data-stu-id="0e0bc-111">This is important to remember when working with collections of value types such as `Dictionary<string, myStruct>`.</span></span>  
-- <span data-ttu-id="0e0bc-112">Başvuru türleri sınıflar, aksine, değer türleri birimleridir.</span><span class="sxs-lookup"><span data-stu-id="0e0bc-112">Structs are value types, unlike classes, which are reference types.</span></span>  
-- <span data-ttu-id="0e0bc-113">Sınıflardan farklı olarak, yapılar kullanmadan oluşturulabilir bir `new` işleci.</span><span class="sxs-lookup"><span data-stu-id="0e0bc-113">Unlike classes, structs can be instantiated without using a `new` operator.</span></span>  
-- <span data-ttu-id="0e0bc-114">Yapılar parametrelerine sahip oluşturucular bildirebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="0e0bc-114">Structs can declare constructors that have parameters.</span></span>
-- <span data-ttu-id="0e0bc-115">Bir yapı, başka bir yapı veya sınıfından devralamaz ve temel bir sınıfı olamaz.</span><span class="sxs-lookup"><span data-stu-id="0e0bc-115">A struct cannot inherit from another struct or class, and it cannot be the base of a class.</span></span> <span data-ttu-id="0e0bc-116">Tüm yapıları doğrudan devralan <xref:System.ValueType>, işlevinden devralan <xref:System.Object>.</span><span class="sxs-lookup"><span data-stu-id="0e0bc-116">All structs inherit directly from <xref:System.ValueType>, which inherits from <xref:System.Object>.</span></span>  
-- <span data-ttu-id="0e0bc-117">Bir yapı, arabirim uygulayabilir.</span><span class="sxs-lookup"><span data-stu-id="0e0bc-117">A struct can implement interfaces.</span></span>
-- <span data-ttu-id="0e0bc-118">Bir yapı olamaz `null`, ve bir yapı değişkene atanamaz `null` boş değer atanabilir bir tür değişkenin bildirildiği sürece.</span><span class="sxs-lookup"><span data-stu-id="0e0bc-118">A struct cannot be `null`, and a struct variable cannot be assigned `null` unless the variable is declared as a nullable type.</span></span>
+- <span data-ttu-id="abf71-107">Bir struct bildiriminde, alanlar const veya static olarak bildirilmeyen sürece başlatılamaz.</span><span class="sxs-lookup"><span data-stu-id="abf71-107">Within a struct declaration, fields cannot be initialized unless they are declared as const or static.</span></span>  
+- <span data-ttu-id="abf71-108">Struct parametresiz bir Oluşturucu (parametresiz bir Oluşturucu) veya sonlandırıcısı bildiremez.</span><span class="sxs-lookup"><span data-stu-id="abf71-108">A struct cannot declare a parameterless constructor (a constructor without parameters) or a finalizer.</span></span>  
+- <span data-ttu-id="abf71-109">Yapılar atamaya kopyalanır.</span><span class="sxs-lookup"><span data-stu-id="abf71-109">Structs are copied on assignment.</span></span> <span data-ttu-id="abf71-110">Bir yapı yeni bir değişkene atandığında, tüm veriler kopyalanır ve yeni kopyada yapılan değişiklikler özgün kopyanın verilerini değiştirmez.</span><span class="sxs-lookup"><span data-stu-id="abf71-110">When a struct is assigned to a new variable, all the data is copied, and any modification to the new copy does not change the data for the original copy.</span></span> <span data-ttu-id="abf71-111">Bu, `Dictionary<string, myStruct>` gibi değer türlerinin koleksiyonlarıyla çalışırken unutmamak önemlidir.</span><span class="sxs-lookup"><span data-stu-id="abf71-111">This is important to remember when working with collections of value types such as `Dictionary<string, myStruct>`.</span></span>  
+- <span data-ttu-id="abf71-112">Yapılar, başvuru türleri olan sınıfların aksine değer türlerdir.</span><span class="sxs-lookup"><span data-stu-id="abf71-112">Structs are value types, unlike classes, which are reference types.</span></span>  
+- <span data-ttu-id="abf71-113">Sınıfların aksine, yapılar `new` işleci kullanılmadan örneklenebilir.</span><span class="sxs-lookup"><span data-stu-id="abf71-113">Unlike classes, structs can be instantiated without using a `new` operator.</span></span>  
+- <span data-ttu-id="abf71-114">Yapılar, parametreleri olan oluşturucular bildirebilir.</span><span class="sxs-lookup"><span data-stu-id="abf71-114">Structs can declare constructors that have parameters.</span></span>
+- <span data-ttu-id="abf71-115">Yapı, başka bir struct veya sınıftan devralınabilir ve bir sınıfın temeli olamaz.</span><span class="sxs-lookup"><span data-stu-id="abf71-115">A struct cannot inherit from another struct or class, and it cannot be the base of a class.</span></span> <span data-ttu-id="abf71-116">Tüm yapılar, <xref:System.Object> ' den devralan <xref:System.ValueType> ' dan devralır.</span><span class="sxs-lookup"><span data-stu-id="abf71-116">All structs inherit directly from <xref:System.ValueType>, which inherits from <xref:System.Object>.</span></span>  
+- <span data-ttu-id="abf71-117">Bir struct, arabirimler uygulayabilir.</span><span class="sxs-lookup"><span data-stu-id="abf71-117">A struct can implement interfaces.</span></span>
+- <span data-ttu-id="abf71-118">Bir struct `null` olamaz ve değişken Nullable bir değer türü olarak bildirilemediği sürece bir struct değişkeni `null` atanamaz.</span><span class="sxs-lookup"><span data-stu-id="abf71-118">A struct cannot be `null`, and a struct variable cannot be assigned `null` unless the variable is declared as a nullable value type.</span></span>
   
-## <a name="see-also"></a><span data-ttu-id="0e0bc-119">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="0e0bc-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="abf71-119">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="abf71-119">See also</span></span>
 
-- [<span data-ttu-id="0e0bc-120">C# Programlama Kılavuzu</span><span class="sxs-lookup"><span data-stu-id="0e0bc-120">C# Programming Guide</span></span>](../index.md)
-- [<span data-ttu-id="0e0bc-121">Sınıflar ve Yapılar</span><span class="sxs-lookup"><span data-stu-id="0e0bc-121">Classes and Structs</span></span>](index.md)
-- [<span data-ttu-id="0e0bc-122">Sınıflar</span><span class="sxs-lookup"><span data-stu-id="0e0bc-122">Classes</span></span>](classes.md)
-- [<span data-ttu-id="0e0bc-123">Boş Değer Atanabilir Tipler</span><span class="sxs-lookup"><span data-stu-id="0e0bc-123">Nullable Types</span></span>](../nullable-types/index.md)
-- [<span data-ttu-id="0e0bc-124">Tanımlayıcı adları</span><span class="sxs-lookup"><span data-stu-id="0e0bc-124">Identifier names</span></span>](../inside-a-program/identifier-names.md)
-- [<span data-ttu-id="0e0bc-125">Yapıları Kullanma</span><span class="sxs-lookup"><span data-stu-id="0e0bc-125">Using Structs</span></span>](using-structs.md)
-- [<span data-ttu-id="0e0bc-126">Nasıl yapılır: Yapı geçirme ile Metoda sınıf başvurusu geçirme arasındaki farkı bilme</span><span class="sxs-lookup"><span data-stu-id="0e0bc-126">How to: Know the Difference Between Passing a Struct and Passing a Class Reference to a Method</span></span>](how-to-know-the-difference-passing-a-struct-and-passing-a-class-to-a-method.md)
+- [<span data-ttu-id="abf71-120">C# Programlama Kılavuzu</span><span class="sxs-lookup"><span data-stu-id="abf71-120">C# Programming Guide</span></span>](../index.md)
+- [<span data-ttu-id="abf71-121">Sınıflar ve Yapılar</span><span class="sxs-lookup"><span data-stu-id="abf71-121">Classes and Structs</span></span>](index.md)
+- [<span data-ttu-id="abf71-122">Sınıflar</span><span class="sxs-lookup"><span data-stu-id="abf71-122">Classes</span></span>](classes.md)
+- [<span data-ttu-id="abf71-123">Null yapılabilir değer türleri</span><span class="sxs-lookup"><span data-stu-id="abf71-123">Nullable value types</span></span>](../nullable-types/index.md)
+- [<span data-ttu-id="abf71-124">Tanımlayıcı adları</span><span class="sxs-lookup"><span data-stu-id="abf71-124">Identifier names</span></span>](../inside-a-program/identifier-names.md)
+- [<span data-ttu-id="abf71-125">Yapıları Kullanma</span><span class="sxs-lookup"><span data-stu-id="abf71-125">Using Structs</span></span>](using-structs.md)
+- <span data-ttu-id="abf71-126">[Nasıl yapılır: Yapı geçirme ve bir sınıf başvurusunu bir yönteme geçirme arasındaki farkı öğrenin @ no__t-0</span><span class="sxs-lookup"><span data-stu-id="abf71-126">[How to: Know the Difference Between Passing a Struct and Passing a Class Reference to a Method](how-to-know-the-difference-passing-a-struct-and-passing-a-class-to-a-method.md)</span></span>
