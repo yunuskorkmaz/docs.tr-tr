@@ -1,17 +1,17 @@
 ---
 title: 'Öğretici: Yaklaşım-ikili sınıflandırmayı çözümle'
 description: Bu öğreticide, Web sitesi açıklamalarından yaklaşımı sınıflandırın bir Razor Pages uygulamasının nasıl oluşturulacağı ve uygun eylemin nasıl yapılacağı gösterilmektedir. İkili yaklaşım Sınıflandırıcısı, Visual Studio 'da model Oluşturucu kullanır.
-ms.date: 09/13/2019
+ms.date: 09/26/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 375440d98fd728cc89c1ac620614067edbd3adf8
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 0878a9318e7c60be29eeac9fb4efd47e408ab660
+ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216884"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71332576"
 ---
 # <a name="tutorial-analyze-sentiment-of-website-comments-in-a-web-application-using-mlnet-model-builder"></a>Öğretici: ML.NET model Oluşturucu kullanarak Web uygulamasındaki Web sitesindeki açıklamaları çözümleme
 
@@ -19,7 +19,7 @@ Bir Web uygulamasının içinde gerçek zamanlı açıklamalardan yaklaşımı �
 
 Bu öğreticide, Web sitesi açıklamalarından gerçek zamanlı olarak yaklaşım sınıflandıran bir ASP.NET Core Razor Pages uygulamasının nasıl oluşturulacağı gösterilmektedir.
 
-Bu öğreticide şunların nasıl yapıladığını öğreneceksiniz:
+Bu öğreticide şunların nasıl yapıldığını öğreneceksiniz:
 
 > [!div class="checklist"]
 >
@@ -66,7 +66,7 @@ Bu öğreticinin kaynak kodunu [DotNet/machinöğrenim-örnekleri](https://githu
 
 ## <a name="choose-a-scenario"></a>Senaryo seçin
 
-![](./media/sentiment-analysis-model-builder/model-builder-screen.png)
+![Visual Studio 'da model Oluşturucu Sihirbazı](./media/sentiment-analysis-model-builder/model-builder-screen.png)
 
 Modelinize eğitebilmeniz için, model Oluşturucu tarafından sağlanan kullanılabilir makine öğrenimi senaryoları listesinden seçim yapmanız gerekir.
 
@@ -79,7 +79,8 @@ Model Oluşturucu iki kaynaktan (bir SQL Server veritabanı ya da yerel bir dosy
 
 1. Model Oluşturucu aracının veri adımında, veri kaynağı açılır listesinden **Dosya** ' yı seçin.
 1. **Dosya seçin** metin kutusunun yanındaki düğmeyi seçin ve dosya Gezgini 'ni kullanarak, *vibtox-250-Line-Data. tsv* dosyasına gidin ve seçin.
-1. Açılan menüyü **tahmin etmek Için etiket veya sütundaki** **yaklaşımı seçin**
+1. **Tahmin edilecek sütun (etiket)** açılan **listesini seçin.**
+1. **Giriş sütunları (Özellikler)** açılır menüsü için varsayılan değerleri bırakın.
 1. Model Oluşturucu aracında bir sonraki adıma geçmek için **eğitme** bağlantısını seçin.
 
 ## <a name="train-the-model"></a>Modeli eğitme
@@ -117,23 +118,13 @@ Eğitim sürecinin bir sonucu olarak iki proje oluşturulacaktır.
     Aşağıdaki projeler **Çözüm Gezgini**görünmelidir:
 
     - *SentimentRazorML. ConsoleApp*: Model eğitimi ve tahmin kodunu içeren bir .NET Core konsol uygulaması.
-    - *SentimentRazorML. model*: Eğitim sırasında en iyi gerçekleştirme modelinin kalıcı sürümü ve giriş ve çıkış modeli verilerinin şemasını tanımlayan veri modellerini içeren .NET Standard sınıf kitaplığı.
+    - *SentimentRazorML. model*: Giriş ve çıkış modeli verilerinin şemasını ve eğitim sırasında en iyi uygulanan modelin kaydedilmiş sürümünü tanımlayan veri modellerini içeren .NET Standard sınıf kitaplığı.
 
     Bu öğretici için, *SentimentRazorML. model* projesi yalnızca, tahmine dayalı olarak konsolu yerine *SentimentRazor* Web uygulamasında yapılabilmesi için kullanılır. *SentimentRazorML. ConsoleApp* , Puanlama için kullanılmayacak olsa da, daha sonra yeni verileri kullanarak modeli yeniden eğitebilmek için kullanılabilir. Yeniden eğitim, Bu öğreticinin kapsamı dışındadır.
 
-1. Razor Pages uygulamanızın içinde eğitilen modeli kullanmak için, *SentimentRazorML. model* projesine bir başvuru ekleyin.
-
-    1. **SentimentRazor** projesi öğesine sağ tıklayın.
-    1. **> başvuru Ekle**' yi seçin.
-    1. **Projeler > çözüm** düğümünü seçin ve listeden **SentimentRazorML. model** projesini kontrol edin.
-    1. **Tamam**’ı seçin.
-
 ### <a name="configure-the-predictionengine-pool"></a>PredictionEngine havuzunu yapılandırma
 
-Tek bir tahmin yapmak için kullanın [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602). Uygulamanızda kullanabilmeniz [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) için, gerektiğinde oluşturmanız gerekir. Bu durumda, dikkate alınması gereken en iyi yöntem bağımlılık ekleme yöntemidir.
-
-> [!WARNING]
-> [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602), iş parçacığı açısından güvenli değildir. Gelişmiş performans ve iş parçacığı güvenliği için, uygulama `PredictionEnginePool` kullanımı için `PredictionEngine` bir [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) nesne oluşturan hizmetini kullanın. [ASP.NET Core içinde nesne havuzları `PredictionEngine` oluşturma ve kullanma](https://devblogs.microsoft.com/cesardelatorre/how-to-optimize-and-run-ml-net-models-on-scalable-asp-net-core-webapis-or-web-apps/)hakkında daha fazla bilgi edinmek için aşağıdaki blog gönderisini okuyun.
+Tek bir tahmin yapmak için bir [@no__t](xref:Microsoft.ML.PredictionEngine%602)oluşturmanız gerekir. [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602), iş parçacığı açısından güvenli değildir. Ayrıca, uygulamanızın içinde gerek duyduğu her yerde bir örneği oluşturmanız gerekir. Uygulamanız büyüdükçe, bu işlem yönetilebilir hale gelebilir. Daha iyi performans ve iş parçacığı güvenliği için, uygulamanız genelinde kullanılmak üzere bir [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) nesnesi oluşturan bağımlılık ekleme ve `PredictionEnginePool` hizmeti birleşimini kullanın.
 
 1. *Microsoft.Extensions.ml* NuGet paketini yükler:
 
@@ -250,7 +241,7 @@ Uygulamanız ayarlandığına göre, tarayıcınızda başlatması gereken uygul
 
 Uygulama başlatıldığında, *model Oluşturucu* seyrek erişimli yazın! metin alanına. Görünen tahmini yaklaşım, *Toxic*olmamalıdır.
 
-![](./media/sentiment-analysis-model-builder/web-app.png)
+![Tahmin edilen yaklaşım penceresiyle pencere çalıştırma](./media/sentiment-analysis-model-builder/web-app.png)
 
 Model Oluşturucu tarafından oluşturulan projelere daha sonra başka bir çözümün içinde başvurulmaları gerekiyorsa, bunları `C:\Users\%USERNAME%\AppData\Local\Temp\MLVSTools` dizin içinde bulabilirsiniz.
 

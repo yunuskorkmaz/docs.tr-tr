@@ -1,46 +1,46 @@
 ---
-title: Başvuru dönüş değerleri ve ref yerel ayarlar (C# Kılavuzu)
-description: Başvuru dönüş ve ref yerel değerlerine tanımlanacağını ve kullanılacağını öğrenin
+title: Ref dönüş değerleri ve ref YerellerC# (kılavuz)
+description: Ref return ve ref yerel değerlerini tanımlama ve kullanma hakkında bilgi edinin
 author: rpetrusha
 ms.author: ronpet
 ms.date: 04/04/2018
-ms.openlocfilehash: fcac162f63438b6cbe54908383467d4b0f227c39
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e23007deffea0f542d623be918cd1c61496d1362
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61703055"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71353891"
 ---
 # <a name="ref-returns-and-ref-locals"></a>Ref dönüşler ve ref yerel ayarlar
 
-C# 7.0 ile başlayarak, C# (ref döndürür) başvuru dönüş değerleri destekler. Başvuru dönüş değeri bir değer yerine bir değişken bir başvuru arayana geri döndürmek bir yöntem sağlar. Çağırana döndürülen değişkeni değere veya başvuruya göre döndürülmedi yokmuş gibi kabul seçebilirsiniz. Arayan, döndürülen değer, bir ref yerel olarak adlandırılan bir başvuru kendisi yeni bir değişken oluşturabilirsiniz.
+7,0 ile C# başlayarak, C# başvuru dönüş değerlerini (Ref dönüşler) destekler. Bir başvuru dönüş değeri, bir yöntemin bir değer yerine bir değişkene geri dönmesi için bir başvuru döndürmesini sağlar. Çağıran, döndürülen değişkeni değere veya başvuruya göre döndürülmüş gibi kabul edebilir. Çağıran, başvuru yerel olarak adlandırılan döndürülen değere bir başvuru olan yeni bir değişken oluşturabilir.
 
 ## <a name="what-is-a-reference-return-value"></a>Başvuru dönüş değeri nedir?
 
-Çoğu geliştirici için çağrılan bir yöntem bağımsız değişken geçirme ile ilgili bilgi sahibi olduğunuz *başvuruya göre*. Çağrılan yöntemin bağımsız değişken listesinin bir değişken başvuruyla geçirildi içerir. Tarafından çağrılan yöntem değerine yapılan tüm değişiklikler arayan tarafından gözlenmiştir. A *başvuru dönüş değeri* döndüren bir yöntemi gösterir bir *başvuru* (veya diğer ad) bazı değişken. Bu değişkenin kapsamı yöntemi eklemeniz gerekir. Değişkenin ömrü yöntemi iadesini genişletmeniz gerekir. Yöntem tarafından döndürülen değişkeni yöntemin dönüş değeri çağıran tarafından yapılan değişiklikler yapılır.
+Çoğu geliştirici, bir bağımsız değişkeni *başvuruya göre*çağrılan bir yönteme geçirmeyi öğrenmektir. Çağrılan yöntemin bağımsız değişken listesi, başvuruya göre geçirilmiş bir değişken içerir. Çağrılan yönteme göre değerinde yapılan tüm değişiklikler arayan tarafından izlenir. Bir *Başvuru dönüş değeri* , bir yöntemin bazı değişkene bir *başvuru* (veya diğer ad) döndürdüğü anlamına gelir. Bu değişkenin kapsamı yöntemi içermelidir. Bu değişkenin yaşam süresi yöntemin geri dönüşlerinin ötesinde genişlemelidir. Metodun dönüş değerindeki çağıran tarafından yapılan değişiklikler, yöntemi tarafından döndürülen değişkene yapılır.
 
-Döndüren bir yöntemi bildirmek bir *başvuru dönüş değeri* yöntemi bir değişkene bir diğer ad verdiğini gösterir. Tasarım amacı genellikle çağıran kod değişken değiştirmek için de dahil olmak üzere diğer ad üzerinden erişim gerektiğidir. Yöntemleri başvuruya göre dönüş türü olamaz takip eden `void`.
+Bir yöntemin bir *Başvuru dönüş değeri* döndürdüğünü bildirmek, yöntemin bir değişkene bir diğer ad döndürdüğünü gösterir. Tasarım amacı, genellikle çağıran kodun, diğer ad üzerinden bu değişkene, değiştirmek de dahil olmak üzere erişim sahibi olması gerekir. Başvuruya göre döndüren yöntemlerin dönüş türü `void` olamaz.
 
-Başvuru dönüş değeri olarak bir yöntem döndüren bir ifade üzerinde bazı kısıtlamalar vardır. Kısıtlamaları şunlardır:
+İfadede bir yöntemin başvuru dönüş değeri olarak döndürebilen bazı kısıtlamalar vardır. Sınırlamalar şunları içerir:
 
-- Dönüş değeri, yöntemin yürütülmesi genişletir bir yaşam süresi olması gerekir. Diğer bir deyişle, bu yöntemin döndürdüğü yerel bir değişkende olamaz. Bu yönteme geçirilen bağımsız değişken olabilir veya bir örnek veya bir sınıfın statik alanı olabilir. Derleyici Hatası CS8168, yerel bir değişken oluşturur dönüş çalışılırken "döndüremiyor yerel 'obj' başvuruya göre bir ref yerel öğesi olmadığından."
+- Dönüş değeri, yönteminin yürütülmesini aşan bir yaşam süresine sahip olmalıdır. Diğer bir deyişle, bu, döndüren yöntemde yerel bir değişken olamaz. Bir sınıfın örneği veya statik alanı olabilir veya yöntemine geçirilen bir bağımsız değişken olabilir. Yerel bir değişken döndürme girişimi, "yerel ' obj" bir ref yerel olmadığından, "yerel ' obj ' başvuru ile döndürülemiyor."
 
-- Dönüş değeri, değişmez değer olamaz `null`. Döndüren `null` CS8156 "bir ifade başvuru ile döndürülemez olduğundan bu bağlamda kullanılamaz.", derleyici hatası oluşturur
+- Dönüş değeri `null` sabit değeri olamaz. @No__t-0 döndüren derleyici hatası CS8156, "başvuruya göre döndürülmeyebilir çünkü bu bağlamda bir ifade kullanılamaz."
 
-   Bir yöntem dönüş ref ile bir diğer ad değeri şu anda null (örneklenmemiş) değeri bir değişkene döndürebilir veya [boş değer atanabilir tür](../nullable-types/index.md) için bir değer türü.
- 
-- Dönüş değeri bir sabit bir numaralandırma üyesine olamaz, değer tarafından dönen değer bir özelliği veya yöntemi bir `class` veya `struct`. Derleyici Hatası CS8156 "bir ifade başvuru ile döndürülemez olduğundan bu bağlamda kullanılamaz.", bu kuralın ihlali oluşturur
+   Ref Return içeren bir yöntem, değeri şu anda null (örneklenmiş) değeri olan bir değişkene veya bir değer türü için null [yapılabilir değer türüne](../nullable-types/index.md) sahip bir diğer ad döndürebilir.
 
-Ayrıca, başvuru döndürmek zaman uyumsuz yöntemlerde değerlere izin verilmez. Zaman uyumsuz bir yöntemin dönüş değerini hala bilinmiyor ancak yürütme bitmeden önce döndürebilir.
- 
+- Dönüş değeri bir sabit, bir numaralandırma üyesi, bir özellikten değere göre dönüş değeri veya `class` veya `struct` yöntemi olamaz. Bu kuralın ihlal edildiğinde derleyici hatası CS8156, "bir ifade başvuru ile döndürülmeyebilir çünkü bu bağlamda kullanılamaz."
+
+Buna ek olarak, zaman uyumsuz metotlarda başvuru dönüş değerlerine izin verilmez. Zaman uyumsuz bir yöntem yürütmeyi bitmeden önce dönebilir, ancak dönüş değeri hala bilinmez.
+
 ## <a name="defining-a-ref-return-value"></a>Başvuru dönüş değeri tanımlama
 
-Döndüren bir yöntem bir *başvuru dönüş değeri* aşağıdaki iki koşulları karşılaması gerekir:
+*Başvuru dönüş değeri* döndüren bir yöntem aşağıdaki iki koşulu karşılamalıdır:
 
-- Yöntem imzası içerir [ref](../../language-reference/keywords/ref.md) önünde dönüş türü anahtar sözcüğü.
-- Her [dönüş](../../language-reference/keywords/return.md) deyimi yöntemin gövdesinde [ref](../../language-reference/keywords/ref.md) döndürülen örneğinin adını önünde anahtar sözcüğü.
+- Yöntem imzası, dönüş türünün önünde [ref](../../language-reference/keywords/ref.md) anahtar sözcüğünü içerir.
+- Yöntem gövdesindeki her [dönüş](../../language-reference/keywords/return.md) ifadesinde, döndürülen örnek adının önünde [başvuru](../../language-reference/keywords/ref.md) anahtar sözcüğü bulunur.
 
-Aşağıdaki örnek, bir başvuru döndürür ve koşullarını bu karşılayan bir yöntemi gösterir. bir `Person` adlı nesne `p`:
+Aşağıdaki örnek, bu koşulları karşılayan bir yöntemi gösterir ve `p` adlı `Person` nesnesine bir başvuru döndürür:
 
 ```csharp
 public ref Person GetContactInformation(string fname, string lname)
@@ -50,76 +50,76 @@ public ref Person GetContactInformation(string fname, string lname)
 }
 ```
 
-## <a name="consuming-a-ref-return-value"></a>Başvuru dönüş değeri kullanma
+## <a name="consuming-a-ref-return-value"></a>Ref dönüş değeri kullanma
 
-Başvuru dönüş değeri çağrılan yöntemin kapsamında başka bir değişkene bir diğer ad:. Yorumlaması için tüm dönüş başvurusuna sahip değişkeni kullanarak, diğer adları kullanın:
+Ref dönüş değeri, çağrılan metodun kapsamındaki başka bir değişken için diğer addır. Ref Return öğesinin herhangi bir kullanımını, diğer ad olan değişkeni kullanarak yorumlayabilir.
 
-- Değişkene bir değer atadığınız değeri atadığınızda, bu diğer adları.
-- Değerlerini okumak, değişkenin değerini okuyorsanız, diğer adları.
-- Bu dönüş yaparsa *başvuruya göre*, bir diğer ad, aynı değişkene döndürüyor.
-- Başka bir yönteme geçirdiğinizde *başvuruya göre*, bir değişken başvurusu'nu geçirme, diğer adları.
-- Yaptığınızda bir [ref yerel](#ref-locals) aynı değişkene yeni bir diğer ad yaptığınız diğer ad.
+- Değerini atadığınızda, diğer ad olan değişkene bir değer atarsınız.
+- Değerini okurken, diğer adı değişkenin değerini Okuyorda olursunuz.
+- *Başvuruya göre*geri döndürülürken, aynı değişkene bir diğer ad döndürürler.
+- *Başvuruya göre*başka bir yönteme geçirirseniz, diğer ad olan değişkene bir başvuru geçirolursunuz.
+- Bir [ref yerel](#ref-locals) diğer adı yaptığınızda aynı değişkene yeni bir diğer ad yaparsınız.
 
-## <a name="ref-locals"></a>Ref yerel ayarlar
+## <a name="ref-locals"></a>Başvuru yerelleri
 
-Varsayar `GetContactInformation` yöntemi bildirilen bir başvuru dönüş:
+@No__t-0 yönteminin bir ref Return olarak bildirildiği varsayılır:
 
 ```csharp
 public ref Person GetContactInformation(string fname, string lname)
 ```
 
-Bir değere göre ataması, bir değişkenin değerini okur ve yeni bir değişkene atar:
+Değere göre atama bir değişkenin değerini okur ve bunu yeni bir değişkene atar:
 
 ```csharp
 Person p = contacts.GetContactInformation("Brandie", "Best");
 ```
 
-Yukarıdaki atamanın bildirir `p` yerel bir değişken olarak. İlk değeri tarafından döndürülen değer okumasını kopyalanır `GetContactInformation`. Gelecekteki atamaların `p` tarafından döndürülen değişkenin değerini değiştirmez `GetContactInformation`. Değişken `p` artık döndürülen değişkenine diğer ad değil.
+Yukarıdaki atama `p` ' i yerel bir değişken olarak bildirir. İlk değeri `GetContactInformation` tarafından döndürülen değerin okunmasından kopyalanır. @No__t-0 ' a yönelik sonraki atamalar `GetContactInformation` tarafından döndürülen değişkenin değerini değiştirmez. @No__t-0 değişkeni artık döndürülen değişken için bir diğer ad değil.
 
-Bildirdiğiniz bir *ref yerel* değişken özgün değere diğer kopyalamak için. Aşağıdaki atama `p` döndürüldüğü değişkeni için bir diğer addır `GetContactInformation`.
+Diğer adı özgün değerine kopyalamak için bir *ref yerel* değişkeni bildirirsiniz. Aşağıdaki atamada, `p` `GetContactInformation` ' den döndürülen değişkenin diğer adıdır.
 
 ```csharp
 ref Person p = ref contacts.GetContactInformation("Brandie", "Best");
 ```
 
-Sonraki kullanımını `p` tarafından döndürülen değişkenini kullanarak aynı `GetContactInformation` çünkü `p` Bu değişken için bir diğer addır. Değişikliklerini `p` döndürüldüğü değişkeni de değiştirmeniz `GetContactInformation`.
+@No__t-0 ' ın sonraki kullanımı, bu değişken için `p` bir diğer ad olduğundan, `GetContactInformation` tarafından döndürülen değişkeni kullanmakla aynıdır. @No__t-0 ' da yapılan değişiklikler ayrıca `GetContactInformation` ' den döndürülen değişkeni de değiştirir.
 
-`ref` Anahtar sözcüğü kullanılır yerel değişken bildiriminde önce her ikisini de *ve* yöntemi çağırmadan önce. 
+@No__t-0 anahtar sözcüğü, hem yerel değişken bildiriminden önce *hem* de yöntem çağrısından önce kullanılır. 
 
-Başvuruya göre bir değer aynı şekilde erişebilirsiniz. Bazı durumlarda, bir değere Başvuruya göre erişmeden performansı büyük olasılıkla pahalı kopyalama işlemi tarafından artırır. Örneğin, aşağıdaki ifade bir değer başvurmak için kullanılan bir ref yerel değer nasıl tanımlayabilirsiniz gösterir.
+Başvuruya göre bir değere aynı şekilde erişebilirsiniz. Bazı durumlarda, başvuruya göre değere erişmek, potansiyel olarak pahalı bir kopyalama işlemini önleyerek performansı artırır. Örneğin, aşağıdaki ifade bir değere başvurmak için kullanılan bir başvuru yerel değerini nasıl tanımlayacağınızı gösterir.
 
 ```csharp
 ref VeryLargeStruct reflocal = ref veryLargeStruct;
 ```
 
-`ref` Anahtar sözcüğü kullanılır yerel değişken bildiriminde önce her ikisini de *ve* değerinden ikinci örnekte önce. Her ikisi de içerecek şekilde hatası `ref` değişken bildirimi anahtar sözcükleri ve derleyici hatası CS8172, her iki örnek sonucu atama "başlatamıyor bir başvuruya göre değişken değeri." 
+@No__t-0 anahtar sözcüğü, hem yerel *değişken bildiriminden önce hem de* ikinci örnekteki değerden önce kullanılır. Değişken bildiriminde hem `ref` anahtar kelimelerin hem de atamanın dahil edilmemesi, "derleyici hatası CS8172," bir değere sahip bir başvuruya göre değişkeni başlatamıyor. " 
 
-C# 7.3 önce ref yerel değişkenleri başlatıldıktan sonra farklı bir depolama alanına başvurmak için başkasına alınamadı. Bu kısıtlama kaldırıldı. Aşağıdaki örnek, bir yeniden atama gösterir:
+C# 7,3 ' den önce, ref yerel değişkenleri, başlatıldıktan sonra farklı depolamaya başvuracak şekilde yeniden atanamadı. Bu kısıtlama kaldırılmıştır. Aşağıdaki örnekte bir yeniden atama gösterilmektedir:
 
 ```csharp
 ref VeryLargeStruct reflocal = ref veryLargeStruct; // initialization
 refLocal = ref anotherVeryLargeStruct; // reassigned, refLocal refers to different storage.
 ```
 
- Bunlar bildirildiğinde ref yerel değişkenleri hala başlatılması gerekir.
+ Ref yerel değişkenlerinin, bildirildiği zaman yine de başlatılmış olması gerekir.
 
-## <a name="ref-returns-and-ref-locals-an-example"></a>Ref dönüşler ve ref yerel ayarlar: örneği
+## <a name="ref-returns-and-ref-locals-an-example"></a>Ref, ve ref yerelleri: bir örnek
 
-Aşağıdaki örnekte tanımlayan bir `NumberStore` tamsayı değerleri dizisi depolayan sınıf. `FindNumber` Yöntemi başvuruya göre büyük veya ona eşit bir bağımsız değişken olarak geçirilen ilk sayı döndürür. Büyüktür veya eşittir bağımsız değişken numarası yok ise, yöntem dizin 0 döndürür. 
+Aşağıdaki örnek, bir tamsayı değerleri dizisini depolayan `NumberStore` sınıfını tanımlar. @No__t-0 yöntemi, bir bağımsız değişken olarak geçirilen sayıdan daha büyük veya ona eşit olan ilk sayı başvuruya göre döndürülür. Bir sayı bağımsız değişkenden büyük veya ona eşit değilse, yöntem 0 dizininden sayı döndürür. 
 
 [!code-csharp[ref-returns](../../../../samples/snippets/csharp/programming-guide/ref-returns/NumberStore.cs#1)]
 
-Aşağıdaki örnek çağrıları `NumberStore.FindNumber` büyüktür veya eşittir 16 ilk değerini almak için yöntemi. Çağıran yöntemi tarafından döndürülen değer ardından iki katına çıkar. Değişikliğin dizi öğelerinin değerinde yansıtıldığını örneğin çıktısında gösterildiği `NumberStore` örneği.
+Aşağıdaki örnek, 16 ' dan büyük veya buna eşit ilk değeri almak için `NumberStore.FindNumber` yöntemini çağırır. Çağıran, yöntemi tarafından döndürülen değeri iki katına çıkarır. Örneğin çıktısı, `NumberStore` örneğinin dizi öğelerinin değerinde yansıtılan değişikliği gösterir.
 
 [!code-csharp[ref-returns](../../../../samples/snippets/csharp/programming-guide/ref-returns/NumberStore.cs#2)]
 
-Başvuru dönüş değerleri için desteği olmadan değerini birlikte dizi öğenin dizinini döndüren ve bu tür bir işlem gerçekleştirilir. Çağıran, ayrı yöntem çağrısında değerini değiştirmek için bu dizini sonra kullanabilirsiniz. Ancak, çağırana erişmek ve büyük olasılıkla diğer dizi değerlerini değiştirmek için dizini değiştirebilirsiniz.  
+Başvuru dönüş değerleri için destek olmadan, bu tür bir işlem, dizi öğesinin dizinini değeriyle birlikte döndürerek gerçekleştirilir. Çağıran, bu dizini kullanarak değeri ayrı bir yöntem çağrısında değiştirebilir. Bununla birlikte, çağıran dizine erişim için de değişiklik yapabilir ve muhtemelen diğer dizi değerlerini değiştirebilir.  
 
-Aşağıdaki örnekte gösterildiği nasıl `FindNumber` yöntemi C# ref yerel yeniden atama kullanılacak 7.3 sonra yeniden:
+Aşağıdaki örnek, `FindNumber` yönteminin, ref yerel yeniden atamasını kullanmak üzere C# 7,3 sonrasında nasıl yeniden yazılabilir olduğunu gösterir:
 
 [!code-csharp[ref-returns](../../../../samples/snippets/csharp/programming-guide/ref-returns/NumberStoreUpdated.cs#1)]
 
-Bu ikinci sürüm numarasını Aranan dizinin sonuna yakın olduğu senaryolarda uzun dizileri ile daha verimli olur.
+Bu ikinci sürüm, aranan sayının dizinin sonuna yakın olduğu senaryolarda daha uzun dizileriyle daha etkilidir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

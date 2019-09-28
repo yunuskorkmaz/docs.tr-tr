@@ -2,12 +2,12 @@
 title: Zaman uyumsuz bir görevi veya görev listesini iptal etme (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: a9ee1b71-5bec-4736-a1e9-448042dd7215
-ms.openlocfilehash: 2b2fa7447c046f70c840791e7fe9bd874ff3795f
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 73627455b1f4460edfe165126a388e961e98921f
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630949"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71353133"
 ---
 # <a name="cancel-an-async-task-or-a-list-of-tasks-visual-basic"></a>Zaman uyumsuz bir görevi veya görev listesini iptal etme (Visual Basic)
 
@@ -44,11 +44,11 @@ Tüm Windows Presentation Foundation (WPF) projesini [zaman uyumsuz örnekten in
 
 Aşağıdaki değişiklikler bir Web sitesini indiren uygulamaya bir **iptal** düğmesi ekler. Örneği indirmek veya derlemek istemiyorsanız, bu konunun sonundaki "tüm örnekler" bölümünde son ürünü gözden geçirebilirsiniz. Yıldız işaretleri koddaki değişiklikleri işaretler.
 
-Örneği kendiniz oluşturmak için, "örneği Indirme" bölümündeki yönergeleri izleyin, ancak **Başlangıç projesi** olarak, **1. aşama**yerine **startercode** ' u seçin.
+Örneği kendiniz oluşturmak için, "örneği Indirme" bölümündeki yönergeleri izleyin, ancak **Başlangıç projesi** olarak, **1. aşama yerine** **startercode** ' u seçin.
 
 Ardından, bu projenin MainWindow. xaml. vb dosyasına aşağıdaki değişiklikleri ekleyin.
 
-1. Kendisine erişen `CancellationTokenSource` tüm yöntemler `cts`için kapsam içinde olan bir değişken bildirin.
+1. Kendisine erişen tüm yöntemler için kapsam içinde olan `CancellationTokenSource` değişkeni `cts` ' i bildirin.
 
     ```vb
     Class MainWindow
@@ -57,7 +57,7 @@ Ardından, bu projenin MainWindow. xaml. vb dosyasına aşağıdaki değişiklik
         Dim cts As CancellationTokenSource
     ```
 
-2. **İptal** düğmesi için aşağıdaki olay işleyicisini ekleyin. Olay işleyicisi, Kullanıcı iptali <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> istediğinde bildirimde `cts` bulunan yöntemini kullanır.
+2. **İptal** düğmesi için aşağıdaki olay işleyicisini ekleyin. Olay işleyicisi, Kullanıcı iptali istediğinde `cts` ' i bilgilendirmek için <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> yöntemini kullanır.
 
     ```vb
     ' ***Add an event handler for the Cancel button.
@@ -69,16 +69,16 @@ Ardından, bu projenin MainWindow. xaml. vb dosyasına aşağıdaki değişiklik
     End Sub
     ```
 
-3. **Başlat** düğmesi `startButton_Click`için olay işleyicisinde aşağıdaki değişiklikleri yapın.
+3. @No__t-1 ' i **Başlat** düğmesi için olay işleyicisinde aşağıdaki değişiklikleri yapın.
 
-    - `CancellationTokenSource` ,`cts`İçin örneğini oluşturun.
+    - @No__t-0 `cts` ' i oluşturun.
 
       ```vb
       ' ***Instantiate the CancellationTokenSource.
       cts = New CancellationTokenSource()
       ```
 
-    - Belirtilen bir Web sitesinin `AccessTheWebAsync`içeriğini yükleyen çağrısında, <xref:System.Threading.CancellationTokenSource.Token%2A?displayProperty=nameWithType> özelliğini `cts` bağımsız değişken olarak gönderin. Özelliği `Token` , iptal isteniyorsa iletiyi yayar. Kullanıcı indirme işlemini iptal etmeyi seçerse bir ileti görüntüleyen bir catch bloğu ekleyin. Aşağıdaki kod değişiklikleri gösterir.
+    - Belirtilen bir Web sitesinin içeriğini indiren `AccessTheWebAsync` ' a yapılan çağrıda, bir bağımsız değişken olarak `cts` ' nin <xref:System.Threading.CancellationTokenSource.Token%2A?displayProperty=nameWithType> özelliğini gönderin. @No__t-0 özelliği iptali isteniyorsa iletiyi yayar. Kullanıcı indirme işlemini iptal etmeyi seçerse bir ileti görüntüleyen bir catch bloğu ekleyin. Aşağıdaki kod değişiklikleri gösterir.
 
       ```vb
       Try
@@ -97,9 +97,9 @@ Ardından, bu projenin MainWindow. xaml. vb dosyasına aşağıdaki değişiklik
       End Try
       ```
 
-4. İçinde `AccessTheWebAsync`, bir Web <xref:System.Net.Http.HttpClient.GetAsync%28System.String%2CSystem.Threading.CancellationToken%29?displayProperty=nameWithType> sitesinin içeriğini indirmek `GetAsync` için <xref:System.Net.Http.HttpClient> türünde yönteminin aşırı yüklemesini kullanın. İkinci bağımsız değişken olarak `ct`, `AccessTheWebAsync`parametresini geçirin. <xref:System.Threading.CancellationToken> Kullanıcı **iptal** düğmesini seçerse, belirteç iletiyi taşır.
+4. @No__t-0 ' da, bir Web sitesinin içeriğini indirmek için <xref:System.Net.Http.HttpClient> türünde `GetAsync` yönteminin <xref:System.Net.Http.HttpClient.GetAsync%28System.String%2CSystem.Threading.CancellationToken%29?displayProperty=nameWithType> aşırı yüklemesini kullanın. İkinci bağımsız değişken olarak `AccessTheWebAsync` ' nin <xref:System.Threading.CancellationToken> parametresi `ct` ' ı geçirin. Kullanıcı **iptal** düğmesini seçerse, belirteç iletiyi taşır.
 
-    Aşağıdaki kod, içindeki `AccessTheWebAsync`değişiklikleri gösterir.
+    Aşağıdaki kod `AccessTheWebAsync` ' daki değişiklikleri gösterir.
 
     ```vb
     ' ***Provide a parameter for the CancellationToken.
@@ -125,23 +125,23 @@ Ardından, bu projenin MainWindow. xaml. vb dosyasına aşağıdaki değişiklik
     End Function
     ```
 
-5. Programı iptal ederseniz, aşağıdaki çıktıyı üretir.
+5. Programı iptal ederseniz aşağıdaki çıktıyı üretir:
 
-    ```
+    ```console
     Ready to download.
     Length of the downloaded string: 158125.
     ```
 
-    Program içeriği indirmeyi bitirmeden **iptal** düğmesini seçerseniz, program aşağıdaki çıktıyı üretir.
+    Program içeriği indirmeyi bitirmeden **iptal** düğmesini seçerseniz, program aşağıdaki çıktıyı üretir:
 
-    ```
+    ```console
     Ready to download.
     Download canceled.
     ```
 
 ## <a name="BKMK_CancelaListofTasks"></a>Görev listesini iptal etme
 
-Aynı `CancellationTokenSource` örneği her görevle ilişkilendirerek, daha fazla görevi iptal etmek için önceki örneği genişletebilirsiniz. **İptal** düğmesini seçerseniz, henüz tamamlanmamış tüm görevleri iptal edersiniz.
+Aynı `CancellationTokenSource` örneğini her görevle ilişkilendirerek, daha fazla görevi iptal etmek için önceki örneği genişletebilirsiniz. **İptal** düğmesini seçerseniz, henüz tamamlanmamış tüm görevleri iptal edersiniz.
 
 ### <a name="downloading-the-example"></a>Örnek indiriliyor
 
@@ -185,14 +185,14 @@ Tüm Windows Presentation Foundation (WPF) projesini [zaman uyumsuz örnekten in
     End Function
     ```
 
-2. İçindeki `AccessTheWebAsync`yöntemi çağırın.
+2. @No__t-0 ' da yöntemi çağırın.
 
     ```vb
     ' ***Call SetUpURLList to make a list of web addresses.
     Dim urlList As List(Of String) = SetUpURLList()
     ```
 
-3. Listesindeki her bir Web adresini `AccessTheWebAsync` işlemek için aşağıdaki döngüsünü ekleyin.
+3. Listedeki her bir Web adresini işlemek için aşağıdaki döngüyü `AccessTheWebAsync` ' a ekleyin.
 
     ```vb
     ' ***Add a loop to process the list of web addresses.
@@ -210,21 +210,21 @@ Tüm Windows Presentation Foundation (WPF) projesini [zaman uyumsuz örnekten in
     Next
     ```
 
-4. , `AccessTheWebAsync` Uzunlukları gösterdiği için yöntemin herhangi bir şey döndürmesi gerekmez. Return ifadesini kaldırın ve yöntemin dönüş türünü <xref:System.Threading.Tasks.Task> <xref:System.Threading.Tasks.Task%601>yerine olarak değiştirin.
+4. @No__t-0 uzunlukları gösterdiği için yöntemin her şeyi döndürmesi gerekmez. Return ifadesini kaldırın ve yöntemin dönüş türünü <xref:System.Threading.Tasks.Task%601> yerine <xref:System.Threading.Tasks.Task> olarak değiştirin.
 
     ```vb
     Async Function AccessTheWebAsync(ct As CancellationToken) As Task
     ```
 
-    Bir ifadesi yerine deyimi `startButton_Click` kullanarak yöntemini çağırın.
+    Bir ifadesi yerine bir deyim kullanarak `startButton_Click` ' dan yöntemi çağırın.
 
     ```vb
     Await AccessTheWebAsync(cts.Token)
     ```
 
-5. Programı iptal ederseniz, aşağıdaki çıktıyı üretir.
+5. Programı iptal ederseniz aşağıdaki çıktıyı üretir:
 
-    ```
+    ```console
     Length of the downloaded string: 35939.
 
     Length of the downloaded string: 237682.
@@ -244,7 +244,7 @@ Tüm Windows Presentation Foundation (WPF) projesini [zaman uyumsuz örnekten in
 
     İndirmeler tamamlanmadan önce **iptal** düğmesini seçerseniz, çıkış, iptalden önce tamamlanan indirmelerin uzunluklarını içerir.
 
-    ```
+    ```console
     Length of the downloaded string: 35939.
 
     Length of the downloaded string: 237682.
@@ -258,7 +258,7 @@ Tüm Windows Presentation Foundation (WPF) projesini [zaman uyumsuz örnekten in
 
 Aşağıdaki bölümler, önceki örneklerin her birine ilişkin kodu içerir. İçin <xref:System.Net.Http>bir başvuru eklemeniz gerektiğini unutmayın.
 
-Projeleri [zaman uyumsuz örnekten indirebilirsiniz: Uygulamanızı](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)hassas bir şekilde ayarlama.
+Projeleri [Async örneğinden indirebilirsiniz: Uygulamanızı](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)hassas bir şekilde ayarlama.
 
 ### <a name="cancel-a-task-example"></a>Bir görev örneğini iptal etme
 

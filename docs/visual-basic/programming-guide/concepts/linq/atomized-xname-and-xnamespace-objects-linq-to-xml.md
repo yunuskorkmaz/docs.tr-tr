@@ -1,29 +1,29 @@
 ---
-title: Parçalara ayrılmış XName ve XNamespace nesneleri (LINQ to XML) (Visual Basic)
+title: Atomlanmış XName ve XNamespace nesneleri (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 21ee7585-7df9-40b4-8c76-a12bb5f29bb3
-ms.openlocfilehash: fe0c4429c89e0028b3b012c87684bd14048de27a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ae6d21c21aac4455e7932015c131fb4295673056
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61951937"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71351834"
 ---
-# <a name="atomized-xname-and-xnamespace-objects-linq-to-xml-visual-basic"></a>Parçalara ayrılmış XName ve XNamespace nesneleri (LINQ to XML) (Visual Basic)
+# <a name="atomized-xname-and-xnamespace-objects-linq-to-xml-visual-basic"></a>Atomlanmış XName ve XNamespace nesneleri (LINQ to XML) (Visual Basic)
 
-<xref:System.Xml.Linq.XName> ve <xref:System.Xml.Linq.XNamespace> nesneler *parçalara ayrılmış*; diğer bir deyişle, bunlar, bunlar aynı tam ada içeriyorsa, aynı nesneye başvurur. Bu, sorgular için performans avantajlarının verir: Eşitlik için iki parçalara ayrılmış ad karşılaştırdığınızda, temel alınan Ara dil, yalnızca iki başvurunun aynı nesneye işaret olup olmadığını belirlemek vardır. Arka plandaki kod, zaman alıcı olabilir karşılaştırmalar, dize yok.
+<xref:System.Xml.Linq.XName> ve <xref:System.Xml.Linq.XNamespace> nesneleri *atomlanmış*; diğer bir deyişle, aynı nitelikli adı içeriyorsa, aynı nesneye başvurur. Bu, sorgular için performans avantajları verir: İki atomılı adı eşitlik için karşılaştırdığınızda, temel alınan ara dilin yalnızca iki başvuruyu aynı nesneye işaret edip etmediğini belirlemesi gerekir. Temel alınan kodun, zaman alıcı olabilecek dize karşılaştırmaları yapması gerekmez.
 
-## <a name="atomization-semantics"></a>Parçalara ayırma semantiği
+## <a name="atomization-semantics"></a>Atomleştirme semantiği
 
-Parçalara ayırma anlamına iki <xref:System.Xml.Linq.XName> nesneler aynı yerel ada sahip ve aynı ad alanında oldukları, aynı örneğini paylaşırlar. Aynı şekilde, iki <xref:System.Xml.Linq.XNamespace> nesnelerin aynı ad alanı URI vardır, aynı örneğini paylaşırlar.
+Atomleştirme, iki <xref:System.Xml.Linq.XName> nesnesinin aynı yerel ada sahip olması ve aynı ad alanında olmaları durumunda aynı örneği paylaştıkları anlamına gelir. Aynı şekilde, iki <xref:System.Xml.Linq.XNamespace> nesnesi aynı ad alanı URI 'sine sahip ise, aynı örneği paylaşır.
 
-Parçalara ayrılmış nesneleri etkinleştirmek bir sınıf için bir sınıf için oluşturucu özel ve ortak olmalıdır. Bu durum, kurucu ortak, parçalara ayrılmış olmayan bir nesne oluşturabilirsiniz olmasıdır. <xref:System.Xml.Linq.XName> Ve <xref:System.Xml.Linq.XNamespace> sınıfları uygulayan bir dizeye dönüştürmek için bir örtülü dönüştürme işlecine bir <xref:System.Xml.Linq.XName> veya <xref:System.Xml.Linq.XNamespace>. Örneği bu nesnelerin nereden budur. Oluşturucusuna erişilemediğinden bir kurucu kullanarak örneği alınamıyor.
+Atomlanmış nesneleri etkinleştirmek için bir sınıf için, sınıf için Oluşturucu genel değil, özel olmalıdır. Bunun nedeni, oluşturucunun genel olması, atomsuz olmayan bir nesne oluşturmanız olabilir. @No__t-0 ve <xref:System.Xml.Linq.XNamespace> sınıfları bir dizeyi <xref:System.Xml.Linq.XName> veya <xref:System.Xml.Linq.XNamespace> ' e dönüştürmek için örtük bir dönüştürme işleci uygular. Bu nesnelerin bir örneğini alma işlemi budur. Oluşturucuya erişilemediği için bir oluşturucuyu kullanarak bir örnek alınamaz.
 
-<xref:System.Xml.Linq.XName> ve <xref:System.Xml.Linq.XNamespace> Ayrıca iki olan başvuruları aynı örneğe karşılaştırılan nesne olup olmadığını belirlemek için eşitlik ve eşitsizlik, işleçler.
+<xref:System.Xml.Linq.XName> ve <xref:System.Xml.Linq.XNamespace> eşitlik ve eşitsizlik işleçlerini da uygular ve karşılaştırılan iki nesnenin aynı örneğe başvuru olup olmadığını tespit edin.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki kod, bazı oluşturur <xref:System.Xml.Linq.XElement> nesneleri ve aynı örnek paylaşım aynı adları gösterir.
+Aşağıdaki kod bazı <xref:System.Xml.Linq.XElement> nesneleri oluşturur ve aynı adların aynı örneği paylaşılacağını gösterir.
 
 ```vb
 Dim r1 As New XElement("Root", "data1")
@@ -46,14 +46,14 @@ End If
 
 Bu örnek aşağıdaki çıktıyı üretir:
 
-```
+```console
 r1 and r2 have names that refer to the same instance.
 The name of r1 and the name in 'n' refer to the same instance.
 ```
 
-Alan eksen yöntemlerden birini kullandığınızda, daha önce bahsedildiği gibi faydası parçalara ayrılmış nesnelerin ise bir <xref:System.Xml.Linq.XName> parametre olarak, eksen yöntemi yalnızca iki başvuru istenen öğeleri seçmek için aynı örnek adlarını belirlemek vardır.
+Daha önce bahsedildiği gibi, atomlanmış nesnelerin avantajı, bir parametre olarak <xref:System.Xml.Linq.XName> alan eksen yöntemlerinden birini kullandığınızda, eksen yönteminin yalnızca iki adların istenen öğeleri seçmek için aynı örneğe başvurulacağını belirlemesi gerekir.
 
-Aşağıdaki örnek geçen bir <xref:System.Xml.Linq.XName> için <xref:System.Xml.Linq.XContainer.Descendants%2A> ardından parçalara ayırma deseni nedeniyle daha iyi performans olan yöntem çağrısı.
+Aşağıdaki örnek, <xref:System.Xml.Linq.XName> ' ı <xref:System.Xml.Linq.XContainer.Descendants%2A> yöntem çağrısına geçirir ve daha sonra atomleştirme düzeniyle daha iyi performansa sahiptir.
 
 ```vb
 Dim root As New XElement("Root", New XElement("C1", 1), New XElement("Z1", New XElement("C1", 2), New XElement("C1", 1)))

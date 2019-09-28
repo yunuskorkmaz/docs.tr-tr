@@ -1,5 +1,5 @@
 ---
-title: Boş değer atanabilen değer türleri - Visual Basic
+title: Null yapılabilir değer türleri-Visual Basic
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Nullable
@@ -10,63 +10,63 @@ helpviewer_keywords:
 - nullable types [Visual Basic]
 - data types [Visual Basic], nullable
 ms.assetid: 9ac3b602-6f96-4e6d-96f7-cd4e81c468a6
-ms.openlocfilehash: 46564d2c509fe2b53b9662ee441ab8b85fccc693
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 072496a560775a8f79274f1d44dd389d6ed5b40d
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65642130"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71351768"
 ---
 # <a name="nullable-value-types-visual-basic"></a>Boş Değer Atanabilen Değer Türleri (Visual Basic)
 
-Bazen belirli durumlarda tanımlı bir değer olmayan bir değer türü ile çalışır. Örneğin, bir veritabanı bir alana atanan bir değere sahip değil ve anlamlı atanan bir değere sahip arasında ayırt etmek olabilir. Değer türleri, normal değerlerini veya null değeri olması için genişletilebilir. Böyle bir uzantı olarak adlandırılan bir *boş değer atanabilir tür*.
+Bazen belirli koşullarda tanımlı bir değere sahip olmayan bir değer türüyle çalışırsınız. Örneğin, bir veritabanındaki bir alanın anlamlı bir değere sahip olan ve atanan bir değere sahip olmayan bir değeri ayırt etmek zorunda olması gerekebilir. Değer türleri, normal değerlerini veya null değeri alacak şekilde genişletilebilir. Böyle bir uzantıya *null atanabilir tür*denir.
 
-Her bir boş değer atanabilir tür genel oluşturulan <xref:System.Nullable%601> yapısı. İşle ilgili etkinlikler izleyen bir veritabanı göz önünde bulundurun. Aşağıdaki örnek bir boş değer atanabilir yapıları `Boolean` yazın ve bu tür bir değişken bildirir. Bildirim üç şekilde yazabilirsiniz:
+Her null yapılabilir tür, genel <xref:System.Nullable%601> yapısından oluşturulur. İş ile ilgili etkinlikleri izleyen bir veritabanını göz önünde bulundurun. Aşağıdaki örnek, null olabilen `Boolean` türü oluşturur ve bu türde bir değişken bildirir. Bildirimi üç şekilde yazabilirsiniz:
 
 [!code-vb[VbVbalrNullableValue#1](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrNullableValue/VB/Class1.vb#1)]
 
-Değişken `ridesBusToWork` değerini tutabilen `True`, değerini `False`, ya da hiç değer. İlk varsayılan değeri yok, hangi bilgilerin henüz bu kişinin elde edilmiş değil, bu durumda gelebilir değerdir. Buna karşılık, `False` bilgi edinmiş olması ve kişi çalışmak için veri yolu bulutumuzda değil anlamına gelebilir.
+@No__t-0 değişkeni, `True` değeri, `False` değeri veya hiçbir değer içermiyor olabilir. İlk varsayılan değeri hiçbir değer değildir, bu durumda bilgilerin bu kişi için henüz alınmamıştır. Buna karşılık, `False`, bilgilerin elde edilildiği ve kişinin veri yolunun çalışmasına izin verebilecek anlamına gelebilir.
 
-Boş değer atanabilir türler ile değişkenleri ve özellikleri bildirme ve bir dizi öğelerini boş değer atanabilir bir tür bildirebilirsiniz. Parametre olarak boş değer atanabilir tiplerde yordamları bildirebilir ve boş değer atanabilir bir tür döndürebilir bir `Function` yordamı.
+Null yapılabilir türler ile değişkenleri ve özellikleri bildirebilirsiniz ve null yapılabilir bir türdeki öğelerle bir dizi bildirebilirsiniz. Null yapılabilir türler içeren yordamları parametreler olarak bildirebilirsiniz ve bir `Function` yordamından null yapılabilir bir tür döndürebilirsiniz.
 
-Bir dizi gibi bir başvuru türü üzerinde boş değer atanabilir bir tür oluşturulamaz bir `String`, veya bir sınıf. Temel alınan türü bir değer türü olması gerekir. Daha fazla bilgi için [değer türleri ve başvuru türleri](value-types-and-reference-types.md).
+Dizi, `String` veya sınıf gibi bir başvuru türü üzerinde null yapılabilir bir tür oluşturamazsınız. Temel alınan tür bir değer türü olmalıdır. Daha fazla bilgi için bkz. [değer türleri ve başvuru türleri](value-types-and-reference-types.md).
 
-## <a name="using-a-nullable-type-variable"></a>Boş değer atanabilir tür değişken kullanma
+## <a name="using-a-nullable-type-variable"></a>Null yapılabilir bir tür değişkeni kullanma
 
-Boş değer atanabilir bir tür en önemli üyeleri kendi <xref:System.Nullable%601.HasValue%2A> ve <xref:System.Nullable%601.Value%2A> özellikleri. Boş değer atanabilir bir türde bir değişken için <xref:System.Nullable%601.HasValue%2A> değişkeni tanımlı bir değer içerip içermediğini belirtir. Varsa <xref:System.Nullable%601.HasValue%2A> olduğu `True`, değerini okuyabilirsiniz <xref:System.Nullable%601.Value%2A>. Unutmayın hem <xref:System.Nullable%601.HasValue%2A> ve <xref:System.Nullable%601.Value%2A> olan `ReadOnly` özellikleri.
+Null yapılabilir bir türün en önemli üyeleri <xref:System.Nullable%601.HasValue%2A> ve <xref:System.Nullable%601.Value%2A> özelliklerdir. Null yapılabilir bir tür değişkeni için <xref:System.Nullable%601.HasValue%2A>, değişkenin tanımlanmış bir değer içerip içermediğini söyler. @No__t-0 `True` ise, <xref:System.Nullable%601.Value%2A> ' den değeri okuyabilirsiniz. Hem <xref:System.Nullable%601.HasValue%2A> hem de <xref:System.Nullable%601.Value%2A> ' in `ReadOnly` özellikleri olduğunu unutmayın.
 
-### <a name="default-values"></a>Varsayılan değerler
+### <a name="default-values"></a>Varsayılan Değerler
 
-Null yapılabilir bir tür bir değişken bildirdiğinizde, <xref:System.Nullable%601.HasValue%2A> özelliği varsayılan değerine sahip `False`. Bu, varsayılan olarak, kendi temel değer türünün varsayılan değeri yerine tanımlı hiçbir değer değişkeni olduğu anlamına gelir. Aşağıdaki örnekte, değişken `numberOfChildren` tanımlanmış hiçbir değer olsa bile varsayılan değerine sahip başlangıçta `Integer` türü: 0.
+Null yapılabilir bir türe sahip bir değişken bildirdiğinizde <xref:System.Nullable%601.HasValue%2A> özelliği varsayılan değer olan `False` ' dir. Bu, varsayılan olarak değişkenin temel alınan değer türünün varsayılan değeri yerine tanımlanmış bir değere sahip olmadığı anlamına gelir. Aşağıdaki örnekte, `Integer` türünün varsayılan değeri 0 olsa da, başlangıçta `numberOfChildren` değişkeni tanımlı bir değere sahip değildir.
 
 [!code-vb[VbVbalrNullableValue#2](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrNullableValue/VB/Class1.vb#2)]
 
-Bir null değer tanımsız veya bilinmeyen bir değeri belirtmek kullanışlıdır. Varsa `numberOfChildren` olarak bildirilmiş `Integer`, bilgileri şu anda kullanılabilir değil oluşturabilecek herhangi bir değer olacaktır.
+Null değer, tanımsız veya bilinmeyen bir değeri göstermek için yararlıdır. @No__t-0 `Integer` olarak bildirilirse, bilgilerin şu anda kullanılabilir olmadığını gösterebilen bir değer yoktur.
 
-### <a name="storing-values"></a>Değerlerini depolama
+### <a name="storing-values"></a>Değerler depolanıyor
 
-Bir değer bir değişken veya özellik boş değer atanabilir bir tür içinde normal şekilde depolayın. Aşağıdaki örnek bir değişkene bir değer atar `numberOfChildren` önceki örnekte bildirilen.
+Bir değeri, genel olarak null yapılabilir bir türdeki bir değişkende veya özellikte depoladığınızda. Aşağıdaki örnek, önceki örnekte belirtilen `numberOfChildren` değişkenine bir değer atar.
 
 [!code-vb[VbVbalrNullableValue#3](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrNullableValue/VB/Class1.vb#3)]
 
-Bir değişken veya boş değer atanabilir bir tür özelliği tanımlı bir değer içeriyorsa, atanan bir değere sahip değil, ilk durumuna geri dönmek neden olabilir. Değişken veya özelliğini ayarlayarak bunu `Nothing`aşağıdaki örnekte gösterildiği gibi.
+Null yapılabilir bir türün bir değişkeni veya özelliği tanımlanmış bir değer içeriyorsa, kendisine atanmış bir değere sahip olmadığı ilk durumuna dönüşmesine neden olabilirsiniz. Bu, aşağıdaki örnekte gösterildiği gibi değişkeni veya özelliği `Nothing` olarak ayarlayarak yapabilirsiniz.
 
 [!code-vb[VbVbalrNullableValue#4](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrNullableValue/VB/Class1.vb#4)]
 
 > [!NOTE]
-> Atayabilseniz `Nothing` boş değer atanabilir bir tür bir değişken için sizin için test edilemez `Nothing` eşittir işareti kullanılarak. Eşittir işareti kullanan karşılaştırma `someVar = Nothing`, her zaman değerlendirilir `Nothing`. Değişkenin sınayabilirsiniz <xref:System.Nullable%601.HasValue%2A> özelliği `False`, veya test kullanarak `Is` veya `IsNot` işleci.
+> @No__t-0 ' ı null olabilen bir tür değişkenine atayabilseniz de, eşittir işaretini kullanarak `Nothing` için test edilemez. Eşittir işaretini kullanan karşılaştırma, `someVar = Nothing`, her zaman `Nothing` olarak değerlendirilir. Değişkenin <xref:System.Nullable%601.HasValue%2A> özelliğini `False` için test edebilir veya `Is` veya `IsNot` işlecini kullanarak test edebilirsiniz.
 
-### <a name="retrieving-values"></a>Değerlerini alma
+### <a name="retrieving-values"></a>Değerler alınıyor
 
-Boş değer atanabilir bir tür değişkeninin değerini almak için önce test etmelisiniz kendi <xref:System.Nullable%601.HasValue%2A> özellik değeri olduğundan emin olmak için. Değeri okunamıyor çalışırsanız, <xref:System.Nullable%601.HasValue%2A> olduğu `False`, Visual Basic oluşturur bir <xref:System.InvalidOperationException> özel durum. Aşağıdaki örnek, değişken okumak için önerilen yol gösterir. `numberOfChildren` önceki örneklerin.
+Null yapılabilir bir türdeki değişkenin değerini almak için, ilk olarak bir değere sahip olduğunu onaylamak için <xref:System.Nullable%601.HasValue%2A> özelliğini sınamalısınız. @No__t-0 `False` olduğunda değeri okumaya çalışırsanız, Visual Basic <xref:System.InvalidOperationException> özel durumu oluşturur. Aşağıdaki örnek, önceki örneklerin `numberOfChildren` değişkenini okumak için önerilen yöntemi gösterir.
 
 [!code-vb[VbVbalrNullableValue#5](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrNullableValue/VB/Class1.vb#5)]
 
-## <a name="comparing-nullable-types"></a>Boş değer atanabilir türler karşılaştırma
+## <a name="comparing-nullable-types"></a>Null yapılabilir türleri karşılaştırma
 
-Boş değer atanabilir olduğunda `Boolean` değişkenleri, Boolean ifadeleri kullanılır, sonucu olabilir `True`, `False`, veya `Nothing`. Gerçekte tablosudur aşağıdaki `And` ve `Or`. Çünkü `b1` ve `b2` artık üç olası değer vardır değerlendirilecek dokuz birleşimleri vardır.
+Null yapılabilir `Boolean` değişkenleri Boole ifadelerinde kullanıldığında, sonuç `True`, `False` veya `Nothing` olabilir. @No__t-0 ve `Or` için Truth tablosu aşağıda verilmiştir. @No__t-0 ve `b2` ' in artık üç olası değeri olduğundan, değerlendirmek için dokuz birleşim vardır.
 
-|b1|b2|B1 ve b2|B1 veya b2|
+|B1|B2|B1 ve B2|B1 veya B2|
 |--------|--------|---------------|--------------|
 |`Nothing`|`Nothing`|`Nothing`|`Nothing`|
 |`Nothing`|`True`|`Nothing`|`True`|
@@ -78,38 +78,37 @@ Boş değer atanabilir olduğunda `Boolean` değişkenleri, Boolean ifadeleri ku
 |`False`|`True`|`False`|`True`|
 |`False`|`False`|`False`|`False`|
 
-Bir Boolean değişkenin veya ifadenin değerini olduğunda `Nothing`, ne olduğunu `true` ya da `false`. Aşağıdaki örnek göz önünde bulundurun.
+Bir Boole değişkeninin veya ifadesinin değeri `Nothing` olduğunda, `true` veya `false` ' dir. Aşağıdaki örneği göz önünde bulundurun.
 
 [!code-vb[VbVbalrNullableValue#6](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrNullableValue/VB/Class1.vb#6)]
 
-Bu örnekte, `b1 And b2` değerlendiren `Nothing`. Sonuç olarak, `Else` yan tümcesi her yürütüldüğünde `If` bildirimi ve çıktı şu şekildedir:
+Bu örnekte, `b1 And b2` `Nothing` olarak değerlendirilir. Sonuç olarak, `Else` yan tümcesi her `If` ifadesinde yürütülür ve çıkış aşağıdaki gibidir:
 
 `Expression is not true`
 
 `Expression is not false`
 
 > [!NOTE]
-> `AndAlso` ve `OrElse`, kullanım, değerlendirme, kısa devre oluşturur gerekir değerlendirmek için ikinci işlenenleri ilk olarak değerlendirildiğinde `Nothing`.
+> `AndAlso` ve `OrElse`, kısa devre değerlendirmesi kullanan, ilk @no__t 2 ' yi değerlendirirken ikinci işlenenlerini değerlendirmelidir.
 
 ## <a name="propagation"></a>Yayma
 
-Birini veya her ikisini işlenenlerin aritmetik, karşılaştırma, kaydırma veya türü işlem, boş değer atanabilir işleminin sonucu ayrıca boş değer atanabilir. Her iki işlenen de olmayan değerlere sahip `Nothing`, ne gibi temel alınan değerlerin işlenenden işlemin gerçekleştirilmesinden boş değer atanabilir bir tür. Aşağıdaki örnekte, değişken `compare1` ve `sum1` örtük olarak belirlenmiş. Bunlar üzerinde fare işaretçisini getirdiğinizde, derleyici boş değer atanabilir türler ikisinin için çıkarsar olduğunu görürsünüz.
+Aritmetik, karşılaştırma, kaydırma veya tür işleminin işlenenlerinin bir veya her ikisi null yapılabilir ise, işlemin sonucu da null yapılabilir olur. Her iki işlenen de `Nothing` olmayan değerler içeriyorsa, işlem null yapılabilir bir tür olmadığı gibi, işlenenlerin temel değerlerinde yapılır. Aşağıdaki örnekte `compare1` ve `sum1` değişkenleri örtük olarak türdedir. Fare işaretçisini bunlar üzerinde bekletirseniz, derleyicinin her ikisi için null yapılabilir türler olduğunu görürsünüz.
 
 [!code-vb[VbVbalrNullableValue#7](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrNullableValue/VB/Class1.vb#7)]
 
-Bir veya iki işlenenin değerini varsa `Nothing`, sonuç olacaktır `Nothing`.
+Bir veya her iki işlenen de `Nothing` değerine sahip olursa sonuç `Nothing` olur.
 
 [!code-vb[VbVbalrNullableValue#8](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrNullableValue/VB/Class1.vb#8)]
 
-## <a name="using-nullable-types-with-data"></a>Verilerle boş değer atanabilir türleri kullanma
+## <a name="using-nullable-types-with-data"></a>Null yapılabilir türleri verilerle kullanma
 
-Boş değer atanabilir türler kullanmak için en önemli yerlerden biri bir veritabanı hizmetidir. Tüm veritabanı nesneleri şu anda boş değer atanabilir türler desteklese de, tasarımcı tarafından oluşturulan tablo bağdaştırıcıları yapın. Bkz: [boş değer atanabilir türler için TableAdapter desteği](/visualstudio/data-tools/fill-datasets-by-using-tableadapters#tableadapter-support-for-nullable-types).
+Veritabanı, null yapılabilir türler kullanmak için en önemli yerlerden biridir. Tüm veritabanı nesneleri şu anda null yapılabilir türleri desteklememektedir, ancak tasarımcı tarafından oluşturulan tablo bağdaştırıcıları. [Nullable türler Için TableAdapter desteği](/visualstudio/data-tools/fill-datasets-by-using-tableadapters#tableadapter-support-for-nullable-types)'ne bakın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.InvalidOperationException>
 - <xref:System.Nullable%601.HasValue%2A>
-- [Boş Değer Atanabilir Tipleri Kullanma](../../../../csharp/programming-guide/nullable-types/using-nullable-types.md)
 - [Veri Türleri](index.md)
 - [Değer Türleri ve Başvuru Türleri](value-types-and-reference-types.md)
 - [Veri Türü Sorunlarını Giderme](troubleshooting-data-types.md)
@@ -118,3 +117,4 @@ Boş değer atanabilir türler kullanmak için en önemli yerlerden biri bir ver
 - [Yerel Çıkarım](../variables/local-type-inference.md)
 - [Is İşleci](../../../language-reference/operators/is-operator.md)
 - [IsNot İşleci](../../../language-reference/operators/isnot-operator.md)
+- [Nullable değer türlerini kullanma (C#)](../../../../csharp/programming-guide/nullable-types/using-nullable-types.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - C# language, types
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: 422613a9016efb55c299f24c50cd2eec6c2c1069
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: a5ccd0e9e0e3e5bedad06a619be115c362b38e0d
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69588407"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71392159"
 ---
 # <a name="types-c-programming-guide"></a>Türler (C# Programlama Kılavuzu)
 
@@ -64,7 +64,7 @@ Daha fazla bilgi için bkz. [atama ve tür dönüştürmeleri](./casting-and-typ
 
 ## <a name="built-in-types"></a>Yerleşik türler
 
-C#tamsayılar, kayan nokta değerleri, Boole ifadeleri, metin karakterleri, ondalık değerler ve diğer veri türlerini temsil etmek için standart bir yerleşik sayısal türler kümesi sağlar. Ayrıca yerleşik `string` ve `object` türler vardır. Bunlar, herhangi bir C# programda kullanabilmeniz için kullanılabilir. Yerleşik türler hakkında daha fazla bilgi için bkz. [Yerleşik türler Için başvuru tabloları](../../language-reference/keywords/built-in-types-table.md).
+C#tamsayılar, kayan nokta değerleri, Boole ifadeleri, metin karakterleri, ondalık değerler ve diğer veri türlerini temsil etmek için standart bir yerleşik sayısal türler kümesi sağlar. Ayrıca yerleşik `string` ve `object` türleri vardır. Bunlar, herhangi bir C# programda kullanabilmeniz için kullanılabilir. Yerleşik türler hakkında daha fazla bilgi için bkz. [Yerleşik türler Için başvuru tabloları](../../language-reference/keywords/built-in-types-table.md).
 
 ## <a name="custom-types"></a>Özel türler
 
@@ -74,9 +74,9 @@ Kendi özel türlerinizi oluşturmak için [struct](../../language-reference/key
 
 .NET 'teki tür sistemi hakkında iki temel noktayı anlamak önemlidir:
 
-- Devralma ilkesini destekler. Türler, *temel türler*olarak adlandırılan diğer türlerden türetilebilir. Türetilmiş tür, yöntemleri, özellikleri ve temel türün diğer üyelerini devralır (bazı kısıtlamalarla). Temel tür başka bir türden türetebilir, bu durumda türetilmiş tür, devralma hiyerarşisindeki her iki temel türün üyelerini devralır. <xref:System.Int32?displayProperty=nameWithType> (C# Anahtar sözcük: [int](../../language-reference/builtin-types/integral-numeric-types.md)) gibi yerleşik sayısal türler dahil olmak üzere tüm türler, sonunda <xref:System.Object?displayProperty=nameWithType> (C# anahtar sözcük: [nesne](../../language-reference/keywords/object.md)) tek bir temel türden türetilir. Bu Birleşik tür hiyerarşisine [ortak tür sistemi](../../../standard/base-types/common-type-system.md) (Cts) denir. ' De C#devralma hakkında daha fazla bilgi için bkz. [Devralma](../classes-and-structs/inheritance.md).
+- Devralma ilkesini destekler. Türler, *temel türler*olarak adlandırılan diğer türlerden türetilebilir. Türetilmiş tür, yöntemleri, özellikleri ve temel türün diğer üyelerini devralır (bazı kısıtlamalarla). Temel tür başka bir türden türetebilir, bu durumda türetilmiş tür, devralma hiyerarşisindeki her iki temel türün üyelerini devralır. @No__t-C# 0 (anahtar sözcük: [int](../../language-reference/builtin-types/integral-numeric-types.md)) gibi yerleşik sayısal türler dahil olmak üzere tüm türler, sonunda <xref:System.Object?displayProperty=nameWithType> (C# anahtar sözcük: [nesne](../../language-reference/keywords/object.md)) olan tek bir temel türden türetilir. Bu Birleşik tür hiyerarşisine [ortak tür sistemi](../../../standard/base-types/common-type-system.md) (Cts) denir. ' De C#devralma hakkında daha fazla bilgi için bkz. [Devralma](../classes-and-structs/inheritance.md).
 
-- CTS içindeki her tür, bir *değer türü* veya bir *başvuru türü*olarak tanımlanır. Bu, .NET sınıf kitaplığı 'ndaki tüm özel türleri ve ayrıca kendi Kullanıcı tanımlı türlerinizi içerir. [Struct](../../language-reference/keywords/struct.md) anahtar sözcüğünü kullanarak tanımladığınız türler değer türleridir; Tüm yerleşik sayısal türler `structs`. [Sınıf](../../language-reference/keywords/class.md) anahtar sözcüğünü kullanarak tanımladığınız türler başvuru türleridir. Başvuru türleri ve değer türlerinde farklı derleme zamanı kuralları ve farklı çalışma zamanı davranışları vardır.
+- CTS içindeki her tür, bir *değer türü* veya bir *başvuru türü*olarak tanımlanır. Bu, .NET sınıf kitaplığı 'ndaki tüm özel türleri ve ayrıca kendi Kullanıcı tanımlı türlerinizi içerir. [Struct](../../language-reference/keywords/struct.md) anahtar sözcüğünü kullanarak tanımladığınız türler değer türleridir; Tüm yerleşik sayısal türler `structs` ' dir. [Sınıf](../../language-reference/keywords/class.md) anahtar sözcüğünü kullanarak tanımladığınız türler başvuru türleridir. Başvuru türleri ve değer türlerinde farklı derleme zamanı kuralları ve farklı çalışma zamanı davranışları vardır.
 
 Aşağıdaki çizimde, CTS 'deki değer türleri ve başvuru türleri arasındaki ilişki gösterilmektedir.
 
@@ -87,9 +87,9 @@ Aşağıdaki görüntüde, CTS 'deki değer türleri ve başvuru türleri göste
 > [!NOTE]
 > En yaygın olarak kullanılan türlerin <xref:System> ad alanında düzenlendiğini görebilirsiniz. Ancak, bir türün bulunduğu ad alanının, bir değer türü veya başvuru türü olup olmadığı bir ilişkisi yoktur.
 
-### <a name="value-types"></a>Değer Türleri
+### <a name="value-types"></a>Değer türleri
 
-Değer türleri <xref:System.ValueType?displayProperty=nameWithType>öğesinden türetilir, öğesinden <xref:System.Object?displayProperty=nameWithType>türetilir. Öğesinden <xref:System.ValueType?displayProperty=nameWithType> türetilen türlerin clr 'de özel davranışı vardır. Değer türü değişkenleri doğrudan değerlerini içerir, bu da belleğin, değişkenin bildirildiği bağlamda satır içi olarak ayrıldığı anlamına gelir. Değer türü değişkenler için ayrı bir yığın ayırma veya çöp toplama ek yükü yoktur.
+Değer türleri, <xref:System.Object?displayProperty=nameWithType> ' den türetilen <xref:System.ValueType?displayProperty=nameWithType> ' dan türetilir. @No__t-0 ' dan türetilen türlerin CLR 'de özel davranışı vardır. Değer türü değişkenleri doğrudan değerlerini içerir, bu da belleğin, değişkenin bildirildiği bağlamda satır içi olarak ayrıldığı anlamına gelir. Değer türü değişkenler için ayrı bir yığın ayırma veya çöp toplama ek yükü yoktur.
 
 Değer türlerinin iki kategorisi vardır: [struct](../../language-reference/keywords/struct.md) ve [enum](../../language-reference/keywords/enum.md).
 
@@ -108,7 +108,7 @@ int i = 5;
 char c = 'Z';
 ```
 
-Değer türleri *Sealed*' dir; bu, örneğin, öğesinden <xref:System.Int32?displayProperty=nameWithType>bir tür türetmeyeceğiniz ve bir yapının yalnızca <xref:System.ValueType?displayProperty=nameWithType>devralabileceği şekilde, Kullanıcı tanımlı herhangi bir sınıftan veya yapıdan devralacak bir yapı tanımlayabilmeniz anlamına gelir. Ancak, bir struct bir veya daha fazla arabirim uygulayabilir. Yapı türünü, uygulayan herhangi bir arabirim türüne çevirebilirsiniz; Bu, bir *kutulama* işleminin yapıyı yönetilen yığında bir başvuru türü nesnesinin içine sarmasına neden olur. Paketleme işlemleri, bir değer türünü bir veya herhangi bir <xref:System.Object?displayProperty=nameWithType> arabirim türünü giriş parametresi olarak alan bir yönteme geçirdiğinizde oluşur. Daha fazla bilgi için bkz. [kutulama ve kutudan](./boxing-and-unboxing.md)çıkarma.
+Değer türleri *Sealed*olur, yani örneğin, <xref:System.Int32?displayProperty=nameWithType> ' den bir tür türetilemez ve bir yapı yalnızca <xref:System.ValueType?displayProperty=nameWithType> ' den devralabileceği için Kullanıcı tanımlı herhangi bir sınıftan veya yapıdan devralacak bir yapı tanımlayamazsınız. Ancak, bir struct bir veya daha fazla arabirim uygulayabilir. Yapı türünü, uygulayan herhangi bir arabirim türüne çevirebilirsiniz; Bu, bir *kutulama* işleminin yapıyı yönetilen yığında bir başvuru türü nesnesinin içine sarmasına neden olur. Kutulama işlemleri, bir değer türünü <xref:System.Object?displayProperty=nameWithType> veya herhangi bir arabirim türünü giriş parametresi olarak alan bir yönteme geçirdiğinizde oluşur. Daha fazla bilgi için bkz. [kutulama ve kutudan](./boxing-and-unboxing.md)çıkarma.
 
 Kendi özel değer türlerinizi oluşturmak için [struct](../../language-reference/keywords/struct.md) anahtar sözcüğünü kullanırsınız. Genellikle, bir yapı aşağıdaki örnekte gösterildiği gibi küçük bir ilgili değişkenler kümesi için kapsayıcı olarak kullanılır:
 
@@ -116,24 +116,24 @@ Kendi özel değer türlerinizi oluşturmak için [struct](../../language-refere
 
 Yapılar hakkında daha fazla bilgi için bkz. [yapılar](../classes-and-structs/structs.md). .NET 'teki değer türleri hakkında daha fazla bilgi için bkz. [değer türleri](../../language-reference/keywords/value-types.md).
 
-Değer türlerinin diğer kategorisi [sabit listesi](../../language-reference/keywords/enum.md)' dir. Enum, adlandırılmış integral sabitleri kümesini tanımlar. Örneğin, <xref:System.IO.FileMode?displayProperty=nameWithType> .NET sınıf kitaplığındaki sabit listesi, bir dosyanın nasıl açılacağını belirten adlandırılmış sabit tamsayılar kümesi içerir. Aşağıdaki örnekte gösterildiği gibi tanımlanmıştır:
+Değer türlerinin diğer kategorisi [sabit listesi](../../language-reference/keywords/enum.md)' dir. Enum, adlandırılmış integral sabitleri kümesini tanımlar. Örneğin, .NET sınıf kitaplığındaki <xref:System.IO.FileMode?displayProperty=nameWithType> numaralandırması, bir dosyanın nasıl açılacağını belirten adlandırılmış sabit tamsayılar kümesi içerir. Aşağıdaki örnekte gösterildiği gibi tanımlanmıştır:
 
 [!code-csharp[csProgGuideTypes#44](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#44)]
 
-`System.IO.FileMode.Create` Sabitin değeri 2 ' dir. Ancak ad, kaynak kodu okuyan insanlar için çok daha anlamlı olur ve bu nedenle sabit değişmez sayılar yerine Numaralandırmaların kullanılması daha iyidir. Daha fazla bilgi için bkz. <xref:System.IO.FileMode?displayProperty=nameWithType>.
+@No__t-0 sabiti 2 değerine sahiptir. Ancak ad, kaynak kodu okuyan insanlar için çok daha anlamlı olur ve bu nedenle sabit değişmez sayılar yerine Numaralandırmaların kullanılması daha iyidir. Daha fazla bilgi için bkz. <xref:System.IO.FileMode?displayProperty=nameWithType>.
 
-Tüm numaralandırmalar öğesinden <xref:System.Enum?displayProperty=nameWithType> <xref:System.ValueType?displayProperty=nameWithType>devralan öğesinden devralır. Yapılar için uygulanan tüm kurallar, numaralandırmalar için de geçerlidir. Numaralandırmalar hakkında daha fazla bilgi için bkz. [numaralandırma türleri](../enumeration-types.md).
+Tüm numaralandırmalar, <xref:System.ValueType?displayProperty=nameWithType> ' den devralan <xref:System.Enum?displayProperty=nameWithType> ' dan devralır. Yapılar için uygulanan tüm kurallar, numaralandırmalar için de geçerlidir. Numaralandırmalar hakkında daha fazla bilgi için bkz. [numaralandırma türleri](../enumeration-types.md).
 
-### <a name="reference-types"></a>Başvuru Türleri
+### <a name="reference-types"></a>Başvuru türleri
 
-[Class](../../language-reference/keywords/class.md), [Delegate](../../language-reference/keywords/delegate.md), array veya [Interface](../../language-reference/keywords/interface.md) olarak tanımlanan bir tür, bir *başvuru türüdür*. Çalışma zamanında, bir başvuru türü değişkeni bildirdiğinizde, [New](../../language-reference/operators/new-operator.md) işlecini kullanarak açıkça bir nesne oluşturana veya onu kullanarak `new`başka bir yerde oluşturulmuş bir nesne atayarak, değişken [null](../../language-reference/keywords/null.md) değerini içerir. Aşağıdaki örnekte gösterildiği gibi:
+[Class](../../language-reference/keywords/class.md), [Delegate](../../language-reference/keywords/delegate.md), array veya [Interface](../../language-reference/keywords/interface.md) olarak tanımlanan bir tür, bir *başvuru türüdür*. Çalışma zamanında, bir başvuru türünde bir değişken bildirdiğinizde, [New](../../language-reference/operators/new-operator.md) işlecini kullanarak açıkça bir nesne [oluşturana veya](../../language-reference/keywords/null.md) bir nesneyi başka bir @no__t yerde oluşturulmuş bir nesne (örneğin, Aşağıdaki örnek:
 
 ```csharp
 MyClass mc = new MyClass();
 MyClass mc2 = mc;
 ```
 
-Bir arabirim, kendisini uygulayan bir sınıf nesnesiyle birlikte başlatılmalıdır. Uygularsa `IMyInterface`, aşağıdaki örnekte gösterildiği `IMyInterface` gibi bir örneği oluşturursunuz: `MyClass`
+Bir arabirim, kendisini uygulayan bir sınıf nesnesiyle birlikte başlatılmalıdır. @No__t-0 `IMyInterface` ' i uygularsa, aşağıdaki örnekte gösterildiği gibi bir `IMyInterface` örneği oluşturursunuz:
 
 ```csharp
 IMyInterface iface = new MyClass();
@@ -141,7 +141,7 @@ IMyInterface iface = new MyClass();
 
 Nesne oluşturulduğunda, bellek yönetilen yığında ayrılır ve değişken yalnızca nesnenin konumuna bir başvuru içerir. Yönetilen yığında bulunan türler, her ikisi de ayrıldıklarında ve *çöp toplama*olarak bilinen clr 'nin otomatik bellek yönetimi işlevselliği tarafından geri kazanıyorsa ek yük gerektirir. Ancak çöp toplama da yüksek oranda iyileştirilmiştir ve çoğu senaryoda bir performans sorunu oluşturmaz. Çöp toplama hakkında daha fazla bilgi için bkz. [Otomatik bellek yönetimi](../../../standard/automatic-memory-management.md).
 
-Tüm diziler, öğeleri değer türleri olsa bile başvuru türlerdir. Diziler <xref:System.Array?displayProperty=nameWithType> sınıfından dolaylı olarak türetilir, ancak aşağıdaki örnekte gösterildiği gibi bunları tarafından C#verilen Basitleştirilmiş sözdizimi ile bildirir ve kullanabilirsiniz:
+Tüm diziler, öğeleri değer türleri olsa bile başvuru türlerdir. Diziler, <xref:System.Array?displayProperty=nameWithType> sınıfından dolaylı olarak türetilir, ancak aşağıdaki örnekte gösterildiği gibi bunları tarafından C#verilen Basitleştirilmiş sözdizimi ile bildirir ve kullanabilirsiniz:
 
 [!code-csharp[csProgGuideTypes#45](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#45)]
 
@@ -149,15 +149,15 @@ Başvuru türleri devralmayı tamamen destekler. Bir sınıf oluşturduğunuzda,
 
 ## <a name="types-of-literal-values"></a>Değişmez değer türleri
 
-' C#De, değişmez değerler derleyicisinden bir tür alır. Sayının sonuna bir harf ekleyerek sayısal bir sabit değerin nasıl yazılması gerektiğini belirtebilirsiniz. Örneğin, 4,56 değerinin bir float olarak değerlendirilip değerlendirilmeyeceğini belirtmek için, sayıdan sonra bir "f" veya "F" ekleyin: `4.56f`. Hiçbir harf eklenyoksa, derleyici değişmez değer için bir tür çıkarması olur. Hangi türlerin harf sonekleriyle belirtibileceği hakkında daha fazla bilgi için bkz. [değer türlerinde](../../language-reference/keywords/value-types.md)bağımsız türler için başvuru sayfaları.
+' C#De, değişmez değerler derleyicisinden bir tür alır. Sayının sonuna bir harf ekleyerek sayısal bir sabit değerin nasıl yazılması gerektiğini belirtebilirsiniz. Örneğin, 4,56 değerinin bir float olarak değerlendirilip değerlendirilmeyeceğini belirtmek için, sayının sonuna bir "f" veya "F" ekleyin: `4.56f`. Hiçbir harf eklenyoksa, derleyici değişmez değer için bir tür çıkarması olur. Hangi türlerin harf sonekleriyle belirtibileceği hakkında daha fazla bilgi için bkz. [değer türlerinde](../../language-reference/keywords/value-types.md)bağımsız türler için başvuru sayfaları.
 
-Değişmez değerler yazıldığı ve tüm türler sonunda ' den <xref:System.Object?displayProperty=nameWithType>türettiğinden, aşağıdaki gibi bir kod yazabilir ve derleyebilirsiniz:
+Değişmez değerler yazıldığı ve tüm türlerin sonunda <xref:System.Object?displayProperty=nameWithType> ' dan türetiğinden, aşağıdaki gibi bir kod yazabilir ve derleyebilirsiniz:
 
 [!code-csharp[csProgGuideTypes#37](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#37)]
 
-## <a name="generic-types"></a>Genel Türler
+## <a name="generic-types"></a>Genel türler
 
-Bir tür, istemci kodunun türün bir örneğini oluşturduğunda sağladığı gerçek tür ( *somut tür*) için yer tutucu olarak görev yapan bir veya daha fazla *tür parametresiyle* bildirilemez. Bu tür türler *Genel türler*olarak adlandırılır. Örneğin, .NET türü <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> , kuralına göre bir tür parametresine sahiptir. Türün bir örneğini oluşturduğunuzda, listenin içereceği nesnelerin türünü (örneğin, dize) belirtirsiniz:
+Bir tür, istemci kodunun türün bir örneğini oluşturduğunda sağladığı gerçek tür ( *somut tür*) için yer tutucu olarak görev yapan bir veya daha fazla *tür parametresiyle* bildirilemez. Bu tür türler *Genel türler*olarak adlandırılır. Örneğin, <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> .NET türü, kuralına göre bir tür parametresine *sahiptir.* Türün bir örneğini oluşturduğunuzda, listenin içereceği nesnelerin türünü (örneğin, dize) belirtirsiniz:
 
 ```csharp
 List<string> stringList = new List<string>();
@@ -166,17 +166,17 @@ stringList.Add("String example");
 stringList.Add(4);
 ```
 
-Tür parametresinin kullanımı, her öğeyi [nesneye](../../language-reference/keywords/object.md)dönüştürmek zorunda kalmadan her türlü öğe türünü tutmak için aynı sınıfı yeniden kullanmayı mümkün kılar. Derleyici, koleksiyon öğelerinin belirli türünü bildiğinden ve derleme zamanında bir hata yükseltebileceği için, genel koleksiyon sınıfları *kesin türü belirtilmiş koleksiyonlar* olarak adlandırılır. Örneğin, `stringList` önceki örnek. Daha fazla bilgi için bkz. [Genel türler](../generics/index.md).
+Tür parametresinin kullanımı, her öğeyi [nesneye](../../language-reference/keywords/object.md)dönüştürmek zorunda kalmadan her türlü öğe türünü tutmak için aynı sınıfı yeniden kullanmayı mümkün kılar. Derleyici, koleksiyon öğelerinin belirli türünü bildiğinden ve derleme zamanında bir hata tetikleyebildiğinden, genel koleksiyon sınıfları *kesin türü belirtilmiş koleksiyonlar* olarak adlandırılır ve örneğin, bu durumda `stringList` nesnesine bir tamsayı eklemeye çalışırsanız önceki örnek. Daha fazla bilgi için bkz. [Genel türler](../generics/index.md).
 
-## <a name="implicit-types-anonymous-types-and-nullable-types"></a>Örtük türler, anonim türler ve null yapılabilir türler
+## <a name="implicit-types-anonymous-types-and-nullable-value-types"></a>Örtük türler, anonim türler ve null yapılabilir değer türleri
 
 Daha önce belirtildiği gibi, [var](../../language-reference/keywords/var.md) anahtar sözcüğünü kullanarak yerel bir değişkeni (sınıf üyelerini değil) örtük olarak yazabilirsiniz. Değişken hala derleme zamanında bir tür alır, ancak tür derleyici tarafından sağlanır. Daha fazla bilgi için bkz. [örtülü olarak yazılan yerel değişkenler](../classes-and-structs/implicitly-typed-local-variables.md).
 
 Bazı durumlarda, yöntem sınırlarını depolamayı veya geçişi istemediğiniz ilgili değerlerin basit kümeleri için adlandırılmış bir tür oluşturmak uygun değildir. Bu amaçla *anonim türler* oluşturabilirsiniz. Daha fazla bilgi için bkz. [anonim türler](../classes-and-structs/anonymous-types.md).
 
-Sıradan değer türlerinin değeri [null](../../language-reference/keywords/null.md)olamaz. Ancak, türden sonra bir `?` ekleyerek null olabilen değer türleri oluşturabilirsiniz. Örneğin, `int?` [null](../../language-reference/keywords/null.md)değeri de `int` olan bir türdür. CTS 'de, null yapılabilir türler genel yapı türünün <xref:System.Nullable%601?displayProperty=nameWithType>örnekleridir. Null yapılabilir türler, sayısal değerlerin null olabileceği veritabanlarına ve veritabanlarından veri geçirirken özellikle kullanışlıdır. Daha fazla bilgi için bkz. [Nullable türler](../nullable-types/index.md).
+Sıradan değer türlerinin değeri [null](../../language-reference/keywords/null.md)olamaz. Ancak, türden sonra `?` ' ı birleştirerek null yapılabilir değer türleri oluşturabilirsiniz. Örneğin, `int?`, [null](../../language-reference/keywords/null.md)değeri de olan bir `int` türüdür. Null yapılabilir değer türleri, <xref:System.Nullable%601?displayProperty=nameWithType> genel yapı türünün örnekleridir. Null olabilen değer türleri, genellikle sayısal değerlerin null olabileceği veritabanlarına ve veritabanlarından veri geçirirken faydalıdır. Daha fazla bilgi için bkz. [Nullable değer türleri](../nullable-types/index.md).
 
-## <a name="related-sections"></a>İlgili Bölümler
+## <a name="related-sections"></a>İlgili bölümler
 
 Daha fazla bilgi için aşağıdaki konulara bakın:
 
@@ -196,7 +196,7 @@ Daha fazla bilgi için aşağıdaki konulara bakın:
 
 - [Genel Türler](../generics/index.md)
 
-## <a name="c-language-specification"></a>C# Dil Belirtimi
+## <a name="c-language-specification"></a>C# dili belirtimi
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 

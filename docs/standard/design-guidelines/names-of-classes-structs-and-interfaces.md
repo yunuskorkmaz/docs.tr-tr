@@ -13,44 +13,44 @@ helpviewer_keywords:
 - generic type parameters
 ms.assetid: 87a4b0da-ed64-43b1-ac43-968576c444ce
 author: KrzysztofCwalina
-ms.openlocfilehash: c0790cd20daf859ec81e2252dc9bce46673daf90
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2ecd708ccb8eb91270e8ef9c174b8d7e599a2629
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945515"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71353711"
 ---
 # <a name="names-of-classes-structs-and-interfaces"></a>Sınıf, Yapı ve Arabirimlerin Adları
-Adlandırma yönergeleri izleyin, genel bir tür adlandırma için geçerlidir.  
+Aşağıdaki adlandırma yönergeleri genel tür adlandırması için geçerlidir.  
   
  **✓ DO** sınıflar ve yapılar isimleri veya PascalCasing kullanarak isim deyimlere ile ad.  
   
- Fiili tümcecikleri adlandırılır yöntemleri, bu tür adlarını ayırır.  
+ Bu, tür adlarını, fiil tümcecikleriyle adlandırılan metotlardan ayırır.  
   
  **✓ DO** ad arabirimleri sıfat tümcecikleri veya bazen isimleri veya isim deyimleri ile.  
   
- Nadiren isimleri ve isim ifadeleri kullanılmalıdır ve bir Özet sınıf ve bir arabirim türü olması gerektiğini gösterebilir.  
+ İsimler ve ad tümcecikleri nadiren kullanılmalıdır ve bu, türün bir arabirim değil, soyut bir sınıf olması gerektiğini gösteriyor olabilir.  
   
  **X DO NOT** bir önek (örneğin, "C") sınıfı adlar verin.  
   
  **✓ CONSIDER** adını bitiş türetilmiş adıyla sınıflar temel sınıf.  
   
- Bu çok okunabilir ve ilişki açıkça açıklar. Bu kod bazı örnekleri şunlardır: `ArgumentOutOfRangeException`, bir tür olduğundan, `Exception`, ve `SerializableAttribute`, bir tür olduğundan, `Attribute`. Ancak, bu kılavuzu uygulama içinde makul yükümlülükten kullanmak önemlidir; Örneğin, `Button` sınıfı, bir tür, `Control` olay rağmen `Control` adını görünmez.  
+ Bu çok okunabilir ve ilişkiyi açık bir şekilde açıklar. Kodda buna örnek olarak şunlar verilebilir: `ArgumentOutOfRangeException`, bu tür bir `Exception` ve `SerializableAttribute` `Attribute` türüdür. Ancak, bu kılavuz uygulanırken makul bir karardır kullanılması önemlidir; Örneğin, `Button` sınıfı bir `Control` olayıdır, ancak `Control` adında görünmeyebilir.  
   
  **✓ DO** öneki arabirimi adları harfle türü bir arabirim olduğunu belirtmek için ediyorum.  
   
- Örneğin, `IComponent` (tanımlayıcı ad), `ICustomAttributeProvider` (isim deyim) ve `IPersistable` (gelen) uygun arabirimi adlarıdır. Diğer tür adları ile kısaltmalar önleyebilmemizdir.  
+ Örneğin, `IComponent` (açıklayıcı ad), `ICustomAttributeProvider` (ad tümceciği) ve `IPersistable` (sıfatıcı) uygun arabirim adlarıdır. Diğer tür adlarında olduğu gibi kısaltmaların önüne kaçının.  
   
  **✓ DO** göre "t" arabirimi adı öneki burada sınıfıdır arabirimi standart uygulaması bir sınıf – arabirim çifti tanımlarken yalnızca adları farklı olduğundan emin olun.  
   
 ## <a name="names-of-generic-type-parameters"></a>Genel tür parametrelerinin adları  
- Genel türler için .NET Framework 2.0 eklendi. Yeni bir tür tanımlayıcı adlı bir özelliği kullanıma *tür parametresi*.  
+ .NET Framework 2,0 ' e Genel türler eklendi. Özellik, *Type parametresi*olarak adlandırılan yeni bir tanımlayıcı türü sunmuştur.  
   
  **✓ DO** tamamen kendinden açıklamalıdır tek harfli adıdır ve açıklayıcı bir ad, değer Ekle değil sürece genel tür parametreleri ile açıklayıcı adlar adı.  
   
  **✓ CONSIDER** kullanarak `T` tek tek harfli tür parametresi türleriyle türü parametre adı olarak.  
   
-```  
+```csharp  
 public int IComparer<T> { ... }  
 public delegate bool Predicate<T>(T item);  
 public struct Nullable<T> where T:struct { ... }  
@@ -58,7 +58,7 @@ public struct Nullable<T> where T:struct { ... }
   
  **✓ DO** önek tanımlayıcı türü parametre adları ile `T`.  
   
-```  
+```csharp  
 public interface ISessionChannel<TSession> where TSession : ISession {  
     TSession Session { get; }  
 }  
@@ -66,25 +66,25 @@ public interface ISessionChannel<TSession> where TSession : ISession {
   
  **✓ CONSIDER** kısıtlamaları belirten yerleştirilen bir tür parametresi parametresi adına üzerinde.  
   
- Örneğin, bir parametre, için kısıtlı `ISession` olarak adlandırılabilir `TSession`.  
+ Örneğin, `ISession` ile kısıtlanmış bir parametre `TSession` olarak çağrılabilir.  
   
-## <a name="names-of-common-types"></a>Ortak Tür adları  
+## <a name="names-of-common-types"></a>Ortak türlerin adları  
  **✓ DO** türetilmiş veya belirli .NET Framework türleri uygulama türleri adlandırırken aşağıdaki tabloda açıklanan yönergeleri izleyin.  
   
-|Temel tür|Türetilmiş ve uygulama türü Kılavuzu|  
+|Temel tür|Türetilmiş/uygulama türü Kılavuzu|  
 |---------------|------------------------------------------|  
 |`System.Attribute`|**✓ DO** özel öznitelik sınıfları adlarına "Özniteliği" soneki ekleyin.|  
 |`System.Delegate`|**✓ DO** olayları kullanılan temsilciler adlarını "EventHandler" soneki ekleyin.<br /><br /> **✓ DO** olay işleyicileri olarak kullanılanların dışındaki "Geri çağırma" adlarına temsilcileri soneki ekleyin.<br /><br /> **X DO NOT** temsilciye "Temsilci" soneki ekleyin.|  
 |`System.EventArgs`|**✓ DO** "EventArgs." soneki ekleyin|  
 |`System.Enum`|**X DO NOT** bu sınıftan türeyen; bunun yerine, dili tarafından desteklenen anahtar sözcüğü kullanın; örneğin, C# ' ta kullanmak `enum` anahtar sözcüğü.<br /><br /> **X DO NOT** "Enum" veya "Bayrağı." soneki ekleyin|  
 |`System.Exception`|**✓ DO** "Özel durum." soneki ekleyin|  
-|`IDictionary` <br /> `IDictionary<TKey,TValue>`|**✓ DO** "Sözlük." soneki ekleyin Unutmayın `IDictionary` belirli bir koleksiyon türüdür, ancak bu kılavuz aşağıdaki daha genel koleksiyonlar yönerge göre önceliklidir.|  
+|`IDictionary` <br /> `IDictionary<TKey,TValue>`|**✓ DO** "Sözlük." soneki ekleyin @No__t-0 ' ın belirli bir koleksiyon türüdür, ancak bu kılavuz, aşağıdaki genel Koleksiyonlar Kılavuzu ' na göre önceliklidir.|  
 |`IEnumerable` <br /> `ICollection` <br /> `IList` <br /> `IEnumerable<T>` <br /> `ICollection<T>` <br /> `IList<T>`|**✓ DO** "Koleksiyonu." soneki ekleyin|  
 |`System.IO.Stream`|**✓ DO** "Akış" soneki ekleyin|  
 |`CodeAccessPermission IPermission`|**✓ DO** "İzni." soneki ekleyin|  
   
-## <a name="naming-enumerations"></a>Adlandırma sabit listeleri  
- Numaralandırma türleri (numaralandırmalar olarak da bilinir) adlarını genel standart türü adlandırma kuralları (PascalCasing, vb.) izlemelidir. Ancak, özellikle numaralandırmalar için geçerli olan ek yönergeler de vardır.  
+## <a name="naming-enumerations"></a>Sabit listeleri adlandırma  
+ Genel olarak numaralandırma türlerinin (numaralandırmalar olarak da bilinir) adları, standart tür adlandırma kurallarını (Pascalbüyük harfleri, vb.) izlemelidir. Ancak, özel olarak Numaralandırmalar için uygulanan ek yönergeler vardır.  
   
  **✓ DO** değerlerinin bit alanları olmadığı sürece bir sabit listesi için tekil tür adı kullanın.  
   
@@ -98,7 +98,7 @@ public interface ISessionChannel<TSession> where TSession : ISession {
   
  *Kısımları © 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*  
   
- *İzni Pearson eğitim, Inc. tarafından yeniden yazdırılmaları [çerçeve tasarım yönergeleri: Kuralları, deyimlerini ve yeniden kullanılabilir .NET kitaplıkları, sürüm 2 için desenler](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams, 22 Eki 2008 Addison Wesley Professional ile Microsoft Windows geliştirme serisi bir parçası olarak yayımlandı.*  
+ @no__t, [Framework tasarım yönergelerinden Pearson Eğitim, Inc. izni ile 0Reyazdırılmıştır: Microsoft Windows geliştirme serisi 'nin bir parçası olarak, .NET kitaplıkları için 2. sürüm @ no__t-0, Vazysztof Cwalina ve atacan Abkms, yayımlandı Ekim 22, 2008 ile Addison-Wesley Professional için kurallar, deyimler ve desenler. *  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

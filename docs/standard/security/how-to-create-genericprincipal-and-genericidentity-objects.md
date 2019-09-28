@@ -13,20 +13,20 @@ helpviewer_keywords:
 ms.assetid: 465694cf-258b-4747-9dae-35b01a5bcdbb
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b47f4c093acb094188cbd5a8a0a0026c67eb3f2c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1f768242bffe619051779f87e950138ae9fcec6c
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61795167"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71353180"
 ---
 # <a name="how-to-create-genericprincipal-and-genericidentity-objects"></a>Nasıl yapılır: GenericPrincipal ve GenericIdentity Nesneleri Oluşturma
 
-Kullanabileceğiniz <xref:System.Security.Principal.GenericIdentity> sınıfı ile birlikte <xref:System.Security.Principal.GenericPrincipal> var olan bir Yetkilendirme düzeni bağımsız bir Windows etki alanı oluşturmak için sınıf.
+Bir Windows etki alanından bağımsız olarak bulunan bir yetkilendirme şeması oluşturmak için <xref:System.Security.Principal.GenericIdentity> sınıfını <xref:System.Security.Principal.GenericPrincipal> sınıfıyla birlikte kullanabilirsiniz.
 
 ### <a name="to-create-a-genericprincipal-object"></a>GenericPrincipal nesnesi oluşturmak için
 
-1. Kimlik sınıfının yeni bir örneğini oluşturun ve tutmak istediğiniz adı ile başlatın. Aşağıdaki kod yeni bir oluşturur **Genericıdentity** adıyla başlatır ve nesne `MyUser`.
+1. Identity sınıfının yeni bir örneğini oluşturun ve onu tutmak istediğiniz adla başlatın. Aşağıdaki kod, yeni bir **GenericIdentity** nesnesi oluşturur ve `MyUser` adıyla başlatır.
 
     ```vb
     Dim myIdentity As New GenericIdentity("MyUser")
@@ -36,7 +36,7 @@ Kullanabileceğiniz <xref:System.Security.Principal.GenericIdentity> sınıfı i
     GenericIdentity myIdentity = new GenericIdentity("MyUser");
     ```
 
-2. Yeni bir örneğini oluşturma **GenericPrincipal** sınıfı ve önceden oluşturulmuş başlatmak **Genericıdentity** nesne ve ilişkili istediğiniz rolleri temsil eden bir dize dizisi Bu asıl. Aşağıdaki kod örneği, bir yönetici rolü ve bir kullanıcı rolünü temsil eden bir dize dizisi belirtir. **GenericPrincipal** ardından önceki başlatılır **Genericıdentity** ve dize dizisi.
+2. **GenericPrincipal** sınıfının yeni bir örneğini oluşturun ve daha önce oluşturulan **GenericIdentity** nesnesiyle ve bu sorumluya ilişkilendirilmesini istediğiniz rolleri temsil eden dizeler dizisiyle başlatın. Aşağıdaki kod örneği, bir yönetici rolünü ve Kullanıcı rolünü temsil eden dizelerin dizisini belirtir. **GenericPrincipal** daha sonra önceki **GenericIdentity** ve String dizisi ile başlatılır.
 
     ```vb
     Dim myStringArray As String() = {"Manager", "Teller"}
@@ -48,7 +48,7 @@ Kullanabileceğiniz <xref:System.Security.Principal.GenericIdentity> sınıfı i
     GenericPrincipal myPrincipal = new GenericPrincipal(myIdentity, myStringArray);
     ```
 
-3. Geçerli iş parçacığına asıl eklemek için aşağıdaki kodu kullanın. Bu durumlarda, burada birkaç kez sorumlu doğrulanması gerekir, uygulamanızı çalıştıran başka bir kod tarafından doğrulanmalıdır veya tarafından doğrulanmalıdır değerli bir <xref:System.Security.Permissions.PrincipalPermission> nesne. Rol tabanlı doğrulama hala asıl nesne üzerinde iş parçacığına eklemeden de gerçekleştirebilirsiniz. Daha fazla bilgi için [asıl nesneyi değiştirme](../../../docs/standard/security/replacing-a-principal-object.md).
+3. Geçerli iş parçacığına asıl eklemek için aşağıdaki kodu kullanın. Bu, sorumlunun birkaç kez doğrulanması gerektiği durumlarda, uygulamanızda çalışan diğer kod tarafından doğrulanması veya <xref:System.Security.Permissions.PrincipalPermission> nesnesi tarafından doğrulanması gerekir. Principal nesnesinde, iş parçacığına iliştirmeden rol tabanlı doğrulama işlemi gerçekleştirmeye devam edebilirsiniz. Daha fazla bilgi için bkz. [Principal nesnesini değiştirme](../../../docs/standard/security/replacing-a-principal-object.md).
 
     ```vb
     Thread.CurrentPrincipal = myPrincipal
@@ -60,7 +60,7 @@ Kullanabileceğiniz <xref:System.Security.Principal.GenericIdentity> sınıfı i
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki kod örneği, bir örneğini oluşturmak gösterilmiştir bir **GenericPrincipal** ve **Genericıdentity**. Bu kod, bu nesnelerin değerleri konsola görüntüler.
+Aşağıdaki kod örneği, **GenericPrincipal** ve **GenericIdentity**'nin bir örneğinin nasıl oluşturulacağını göstermektedir. Bu kod, bu nesnelerin değerlerini konsola görüntüler.
 
 ```vb
 Imports System
@@ -134,9 +134,9 @@ public class Class1
 }
 ```
 
-Çalıştırıldığında, uygulama aşağıdakine benzer bir çıktı görüntüler.
+Yürütüldüğünde, uygulama aşağıdakine benzer bir çıktı görüntüler.
 
-```
+```console
 The Name is: MyIdentity
 The IsAuthenticated is: True
 Is this a Manager? True

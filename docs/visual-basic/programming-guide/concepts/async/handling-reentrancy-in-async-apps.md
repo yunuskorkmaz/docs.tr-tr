@@ -2,12 +2,12 @@
 title: Zaman uyumsuz uygulamalarda yeniden girişi işleme (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: ef3dc73d-13fb-4c5f-a686-6b84148bbffe
-ms.openlocfilehash: bc8156b1d2baa53255870364e680d62d7b93a50f
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 199b7ce2cb8b3f3b8e220f9e2bab7e9c39a8d033
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630944"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71352005"
 ---
 # <a name="handling-reentrancy-in-async-apps-visual-basic"></a>Zaman uyumsuz uygulamalarda yeniden girişi işleme (Visual Basic)
 
@@ -22,7 +22,7 @@ Bu konudaki örnekte, kullanıcılar bir dizi Web sitesini indiren ve indirilen 
 
 Aşağıdaki örnek, Kullanıcı **Başlat** düğmesini yalnızca bir kez seçerse beklenen çıktıyı gösterir. İndirilen Web sitelerinin listesi, her sitenin bayt cinsinden boyutu ile görüntülenir. Toplam bayt sayısı sonda görüntülenir.
 
-```
+```console
 1. msdn.microsoft.com/library/hh191443.aspx                83732
 2. msdn.microsoft.com/library/aa578028.aspx               205273
 3. msdn.microsoft.com/library/jj155761.aspx                29019
@@ -37,7 +37,7 @@ TOTAL bytes returned:  890591
 
 Ancak Kullanıcı düğmeyi birden çok kez seçerse, olay işleyicisi sürekli olarak çağrılır ve yükleme işlemi her seferinde yeniden girilir. Sonuç olarak, birkaç zaman uyumsuz işlem aynı anda çalışır, çıkış sonuçları birbirine bırakır ve toplam bayt sayısı kafa karıştırıcı olur.
 
-```
+```console
 1. msdn.microsoft.com/library/hh191443.aspx                83732
 2. msdn.microsoft.com/library/aa578028.aspx               205273
 3. msdn.microsoft.com/library/jj155761.aspx                29019
@@ -92,9 +92,9 @@ Uygulamanızın ne yaptığını istediğinize bağlı olarak çeşitli yollarla
 
 ### <a name="BKMK_DisableTheStartButton"></a>Başlat düğmesini devre dışı bırak
 
-`StartButton_Click` Olay işleyicisinin en üstündeki düğmeyi devre dışı bırakarak, bir işlem çalışırken **Başlat** düğmesini engelleyebilirsiniz. Böylece, kullanıcılar uygulamayı yeniden çalıştırabilmeleri için işlem `Finally` bittiğinde düğmeyi bir blok içinden yeniden etkinleştirebilirsiniz.
+@No__t-1 olay işleyicisinin en üstündeki düğmeyi devre dışı bırakarak, bir işlem çalışırken **Başlat** düğmesini engelleyebilirsiniz. Sonra, kullanıcıların uygulamayı yeniden çalıştırabilmeleri için işlem bittiğinde `Finally` bloğu içinden düğmeyi yeniden etkinleştirebilirsiniz.
 
-Aşağıdaki kod, yıldız işaretiyle işaretlenen bu değişiklikleri gösterir. Bu konunun sonundaki koda değişiklikleri ekleyebilir veya tamamlanmış uygulamayı [zaman uyumsuz örneklerden indirebilirsiniz: .NET masaüstü uygulamalarında](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06)yeniden giriş yapın. Proje adı DisableStartButton ' dir.
+Aşağıdaki kod, yıldız işaretiyle işaretlenen bu değişiklikleri gösterir. Bu konunun sonundaki koda değişiklikleri ekleyebilir veya tamamlanmış uygulamayı [Async örneklerinden indirebilirsiniz: .NET masaüstü uygulamalarında yeniden giriş yapın @ no__t-0. Proje adı DisableStartButton ' dir.
 
 ```vb
 Private Async Sub StartButton_Click(sender As Object, e As RoutedEventArgs)
@@ -117,7 +117,7 @@ Private Async Sub StartButton_Click(sender As Object, e As RoutedEventArgs)
 End Sub
 ```
 
-Değişikliklerin bir sonucu olarak, Web siteleri indirilirken düğme yanıt `AccessTheWebAsync` vermez, bu nedenle işlem yeniden girilemez.
+Değişikliklerin bir sonucu olarak, `AccessTheWebAsync` Web sitelerini indirirken, işlem yeniden girilemediğinden düğme yanıt vermez.
 
 ### <a name="BKMK_CancelAndRestart"></a>Işlemi iptal edin ve yeniden başlatın
 
@@ -125,9 +125,9 @@ Değişikliklerin bir sonucu olarak, Web siteleri indirilirken düğme yanıt `A
 
 İptal hakkında daha fazla bilgi için bkz. [zaman uyumsuz uygulamanızda Ince ayar yapma (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md).
 
-Bu senaryoyu ayarlamak için, [Örnek uygulamayı gözden geçirmek ve çalıştırmak](#BKMD_SettingUpTheExample)için belirtilen temel kodda aşağıdaki değişiklikleri yapın. Ayrıca, tamamlanmış uygulamayı [zaman uyumsuz örneklerden indirebilirsiniz: .NET masaüstü uygulamalarında](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06)yeniden giriş yapın. Bu projenin adı, yeniden başlatma.
+Bu senaryoyu ayarlamak için, [Örnek uygulamayı gözden geçirmek ve çalıştırmak](#BKMD_SettingUpTheExample)için belirtilen temel kodda aşağıdaki değişiklikleri yapın. Tamamlanmış uygulamayı [Async örneklerinden de indirebilirsiniz: .NET masaüstü uygulamalarında yeniden giriş yapın @ no__t-0. Bu projenin adı, yeniden başlatma.
 
-1. Tüm yöntemler <xref:System.Threading.CancellationTokenSource> için kapsam `cts`içinde olan bir değişken bildirin.
+1. Tüm yöntemler için kapsam içinde olan <xref:System.Threading.CancellationTokenSource> değişkeni `cts` bildirin.
 
     ```vb
     Class MainWindow // Or Class MainPage
@@ -136,7 +136,7 @@ Bu senaryoyu ayarlamak için, [Örnek uygulamayı gözden geçirmek ve çalışt
         Dim cts As CancellationTokenSource
     ```
 
-2. ' `StartButton_Click`De, bir işlemin zaten devam edilip edilmeyeceğini saptayın. Değeri `cts` ise`Nothing`, hiçbir işlem zaten etkin değildir. Değer değilse `Nothing`, zaten çalışmakta olan işlem iptal edilir.
+2. @No__t-0 ' da bir işlemin zaten devam edilip edilmeyeceğini saptayın. @No__t-0 değeri `Nothing` ise, hiçbir işlem zaten etkin değildir. Değer `Nothing` değilse, zaten çalışmakta olan işlem iptal edilir.
 
     ```vb
     ' *** If a download process is already underway, cancel it.
@@ -145,7 +145,7 @@ Bu senaryoyu ayarlamak için, [Örnek uygulamayı gözden geçirmek ve çalışt
     End If
     ```
 
-3. Geçerli `cts` işlemi temsil eden farklı bir değere ayarlayın.
+3. @No__t-0 ' i geçerli işlemi temsil eden farklı bir değere ayarlayın.
 
     ```vb
     ' *** Now set cts to cancel the current process if the button is chosen again.
@@ -153,7 +153,7 @@ Bu senaryoyu ayarlamak için, [Örnek uygulamayı gözden geçirmek ve çalışt
     cts = newCTS
     ```
 
-4. Öğesinin `StartButton_Click`sonunda, geçerli işlem tamamlanmıştır, bu nedenle `cts` değerini olarak `Nothing`ayarlayın.
+4. @No__t-0 ' nın sonunda, geçerli işlem tamamlanmıştır, bu nedenle `cts` değerini `Nothing` ' e geri ayarlayın.
 
     ```vb
     ' *** When the process completes, signal that another process can proceed.
@@ -162,7 +162,7 @@ Bu senaryoyu ayarlamak için, [Örnek uygulamayı gözden geçirmek ve çalışt
     End If
     ```
 
-Aşağıdaki kod, içindeki `StartButton_Click`tüm değişiklikleri gösterir. Ekler yıldız işaretiyle işaretlenir.
+Aşağıdaki kod `StartButton_Click` ' daki tüm değişiklikleri gösterir. Ekler yıldız işaretiyle işaretlenir.
 
 ```vb
 Private Async Sub StartButton_Click(sender As Object, e As RoutedEventArgs)
@@ -197,13 +197,13 @@ Private Async Sub StartButton_Click(sender As Object, e As RoutedEventArgs)
 End Sub
 ```
 
-' `AccessTheWebAsync`De, aşağıdaki değişiklikleri yapın.
+@No__t-0 ' da, aşağıdaki değişiklikleri yapın.
 
-- İptal belirtecini `StartButton_Click`kabul etmek için bir parametre ekleyin.
+- @No__t-0 ' dan iptal belirtecini kabul etmek için bir parametre ekleyin.
 
-- `GetAsync` <xref:System.Net.Http.HttpClient.GetAsync%2A> Bir<xref:System.Threading.CancellationToken> bağımsız değişkeni kabul ettiğinden Web sitelerini indirmek için yöntemini kullanın.
+- @No__t-1 <xref:System.Threading.CancellationToken> bağımsız değişkenini kabul ettiğinden Web sitelerini indirmek için <xref:System.Net.Http.HttpClient.GetAsync%2A> yöntemini kullanın.
 
-- İndirilen her `DisplayResults` Web sitesinin sonuçlarını göstermek için çağrılmadan önce, geçerli işlemin `ct` iptal edildiğini doğrulamak için denetleyin.
+- İndirilen her Web sitesinin sonuçlarını göstermek için `DisplayResults` ' ı çağırmadan önce, geçerli işlemin iptal edildiğini doğrulamak için `ct` ' i işaretleyin.
 
  Aşağıdaki kod, yıldız işaretiyle işaretlenen bu değişiklikleri gösterir.
 
@@ -245,9 +245,9 @@ Private Async Function AccessTheWebAsync(ct As CancellationToken) As Task
 End Function
 ```
 
-Bu uygulama çalışırken **Başlat** düğmesini birkaç kez seçerseniz, aşağıdaki çıktıya benzeyen sonuçlar üretmelidir.
+Bu uygulama çalışırken **Başlat** düğmesini birkaç kez seçerseniz, aşağıdaki çıktıya benzeyen sonuçlar üretmelidir:
 
-```
+```console
 1. msdn.microsoft.com/library/hh191443.aspx                83732
 2. msdn.microsoft.com/library/aa578028.aspx               205273
 3. msdn.microsoft.com/library/jj155761.aspx                29019
@@ -273,19 +273,19 @@ Download canceled.
 TOTAL bytes returned:  890591
 ```
 
-Kısmi listeleri ortadan kaldırmak için, kullanıcının işlemi her yeniden başlatışında metin `StartButton_Click` kutusunu temizlemek için içindeki ilk kod satırının açıklamasını kaldırın.
+Kısmi listeleri ortadan kaldırmak için, Kullanıcı işlemi her yeniden başlattığında metin kutusunu temizlemek üzere `StartButton_Click` ' daki ilk kod satırının açıklamasını kaldırın.
 
 ### <a name="BKMK_RunMultipleOperations"></a>Birden çok Işlemi çalıştırma ve çıktıyı sıraya alma
 
 Bu üçüncü örnek, Kullanıcı **Başlat** düğmesini her seçtiğinde uygulamanın başka bir zaman uyumsuz işlem başlatması ve tüm işlemlerin tamamlamada çalışması için en karmaşıktır. Tüm istenen işlemler, listeden zaman uyumsuz olarak Web sitelerini indirir, ancak işlemlerden alınan çıkış sıralı olarak sunulur. Diğer bir deyişle, gerçek indirme etkinliği araya eklemeli, bu da bir yandan [yeniden](#BKMK_RecognizingReentrancy) giriş, ancak her grup için sonuçların listesi ayrı olarak sunulur.
 
-İşlemler, görüntüleme işlemi için <xref:System.Threading.Tasks.Task>bir `pendingWork`ağ geçidi denetleyicisi görevi gören küresel bir şekilde paylaşır.
+İşlemler, görüntüleme işlemi için bir ağ geçidi denetleyicisi görevi gören küresel bir <xref:System.Threading.Tasks.Task> `pendingWork` ' i paylaşır.
 
 Değişiklikleri [uygulamayı oluşturma](#BKMK_BuildingTheApp)bölümünde koda yapıştırarak bu örneği çalıştırabilir veya örneği Indirmek Için [uygulamayı indirme](#BKMK_DownloadingTheApp) bölümündeki yönergeleri izleyerek örneği indirip queueresults projesini çalıştırabilirsiniz.
 
 Aşağıdaki çıktıda, Kullanıcı **Başlat** düğmesini yalnızca bir kez seçerse sonuç gösterilmektedir. Harf etiketi,, sonucun **Başlangıç** düğmesinin seçildiği ilk sefer olduğunu gösterir. Sayılar, indirme hedefleri listesindeki URL 'lerin sırasını gösterir.
 
-```
+```console
 #Starting group A.
 #Task assigned for group A.
 
@@ -305,7 +305,7 @@ TOTAL bytes returned:  918876
 
 Kullanıcı **Başlat** düğmesini üç kez seçerse, uygulama aşağıdaki satırlara benzer bir çıktı üretir. Numara işareti (#) ile başlayan bilgi satırları, uygulamanın ilerlemesini izler.
 
-```
+```console
 #Starting group A.
 #Task assigned for group A.
 
@@ -375,11 +375,11 @@ Class MainWindow    ' Class MainPage in Windows Store app.
     Private group As Char = ChrW(AscW("A") - 1)
 ```
 
-`Task` Değişkeni,görüntülemesürecinifazlagörürveherhangibirgrubunbaşkabirgrubungörüntülemeişlemini`pendingWork`kesintiye uğramasını önler. Karakter değişkeni `group`, sonuçların beklenen sırada göründüğünü doğrulamak için farklı gruplardan çıktıyı Etiketler.
+@No__t-0 değişkeni, `pendingWork`, görüntüleme işlemini aşırı görür ve herhangi bir grubun başka bir grubun görüntüleme işlemini kesintiye uğramasını önler. @No__t-0 karakter değişkeni, sonuçların beklenen sırada göründüğünü doğrulamak için farklı gruplardan çıktıyı Etiketler.
 
 #### <a name="the-click-event-handler"></a>Click olay Işleyicisi
 
-Olay işleyicisi `StartButton_Click`, Kullanıcı **Başlat** düğmesini her seçtiğinde grup harfini artırır. Ardından işleyici, indirme `AccessTheWebAsync` işlemini çalıştırmak için çağırır.
+@No__t-0 olay işleyicisi, Kullanıcı **Başlat** düğmesini her seçtiğinde grup harfini arttırır. Sonra işleyici, indirme işlemini çalıştırmak için `AccessTheWebAsync` ' ı çağırır.
 
 ```vb
 Private Async Sub StartButton_Click(sender As Object, e As RoutedEventArgs)
@@ -405,11 +405,11 @@ End Sub
 
 #### <a name="the-accessthewebasync-method"></a>AccessTheWebAsync yöntemi
 
-Bu örnek iki `AccessTheWebAsync` yönteme böler. İlk yöntem `AccessTheWebAsync`, bir grup için tüm indirme görevlerini başlatır ve görüntüleme işlemini denetlemek `pendingWork` için ayarlar. Yöntemi, bir dil ile tümleşik sorgu (LINQ sorgusu) kullanır <xref:System.Linq.Enumerable.ToArray%2A> ve tüm indirme görevlerini aynı anda başlatır.
+Bu örnek `AccessTheWebAsync` ' i iki yönteme ayırır. İlk yöntem `AccessTheWebAsync`, bir grup için tüm indirme görevlerini başlatır ve görüntüleme işlemini denetlemek için `pendingWork` ayarlar. Yöntemi, aynı anda tüm indirme görevlerini başlatmak için bir dil ile tümleşik sorgu (LINQ sorgusu) ve <xref:System.Linq.Enumerable.ToArray%2A> kullanır.
 
-`AccessTheWebAsync`ardından, `FinishOneGroupAsync` her indirmenin tamamlanmasını beklemek için çağırır ve uzunluğunu görüntüler.
+`AccessTheWebAsync`, her indirmenin tamamlanmasını beklemek için `FinishOneGroupAsync` ' i çağırır ve uzunluğunu görüntüler.
 
-`FinishOneGroupAsync``pendingWork` içinde`AccessTheWebAsync`öğesine atanan bir görev döndürür. Bu değer, görev tamamlanmadan önce başka bir işlem kesintiye uğramasını önler.
+`FinishOneGroupAsync` `AccessTheWebAsync` ' de `pendingWork` ' e atanmış bir görev döndürür. Bu değer, görev tamamlanmadan önce başka bir işlem kesintiye uğramasını önler.
 
 ```vb
 Private Async Function AccessTheWebAsync(grp As Char) As Task(Of Char)
@@ -442,7 +442,7 @@ End Function
 
 Bu yöntem bir gruptaki indirme görevleri boyunca geçiş yapar, her birini bekliyor, indirilen Web sitesinin uzunluğunu görüntülüyor ve uzunluğu toplamına ekliyor.
 
-' Deki `FinishOneGroupAsync` ilk ifade, `pendingWork` yöntemi girerken, zaten görüntüleme işleminde olan veya zaten bekleyen bir işlemi etkilemediğinden emin olmak için kullanır. Bu tür bir işlem devam ediyorsa, giriş işleminin tamamlanmasını beklemesi gerekir.
+@No__t-0 ' daki ilk ifade, yöntemin, zaten görüntüleme sürecinde olan veya zaten bekleyen bir işlemi etkilemediğinden emin olmak için `pendingWork` ' i kullanır. Bu tür bir işlem devam ediyorsa, giriş işleminin tamamlanmasını beklemesi gerekir.
 
 ```vb
 Private Async Function FinishOneGroupAsync(urls As List(Of String), contentTasks As Task(Of Byte())(), grp As Char) As Task
@@ -479,7 +479,7 @@ Bu örneği, [uygulamayı oluştururken](#BKMK_BuildingTheApp)koda değişiklikl
 
 - Bir grup, önceki bir grup çıktısını görüntülerken başlatılabilir, ancak önceki grubun çıktısının görüntülenmediği kesintiye uğramaz.
 
-  ```
+  ```console
   #Starting group A.
   #Task assigned for group A. Download tasks are active.
 
@@ -513,16 +513,16 @@ Bu örneği, [uygulamayı oluştururken](#BKMK_BuildingTheApp)koda değişiklikl
   TOTAL bytes returned:  915908
   ```
 
-- Görev, yalnızca`FinishOneGroupAsync` ilk başlatılan A grubu için başlar. `Nothing` `pendingWork` A grubu, ulaştığı `FinishOneGroupAsync`zaman bir await ifadesini henüz tamamlamamıştı. Bu nedenle, denetim öğesine `AccessTheWebAsync`döndürülmemiştir ve ilk `pendingWork` atama gerçekleşmemiştir.
+- @No__t-0 görevi, yalnızca ilk başlatılan A grubu için `FinishOneGroupAsync` ' nin başlangıcında `Nothing` ' dir. A grubu, `FinishOneGroupAsync` ' A ulaştığında bir await ifadesini henüz tamamlamamıştı. Bu nedenle, denetim `AccessTheWebAsync` ' a döndürülmedi ve `pendingWork` ' e ilk atama gerçekleşmemiştir.
 
-- Aşağıdaki iki satır, her zaman çıktıda birlikte görüntülenir. Bu kod, içindeki bir grubun işlemini başlatma ve `StartButton_Click` `pendingWork`grup için bir görev atama arasında hiçbir şekilde kesintiye uğramaz.
+- Aşağıdaki iki satır, her zaman çıktıda birlikte görüntülenir. Kod, `StartButton_Click` ' da grup işlemini başlatma ve grup için bir görev `pendingWork` ' e atanırken hiçbir şekilde kesintiye uğramaz.
 
-  ```
+  ```console
   #Starting group B.
   #Task assigned for group B. Download tasks are active.
   ```
 
-  Bir grup `StartButton_Click`girdikten sonra işlem, işlem girene `FinishOneGroupAsync`kadar await ifadesi tamamlanmaz. Bu nedenle, başka hiçbir işlem bu kod segmenti sırasında denetim elde edebilir.
+  Bir grup `StartButton_Click` girdikten sonra işlem, işlem `FinishOneGroupAsync` girene kadar await ifadesi tamamlanmaz. Bu nedenle, başka hiçbir işlem bu kod segmenti sırasında denetim elde edebilir.
 
 ## <a name="BKMD_SettingUpTheExample"></a>Örnek uygulamayı inceleme ve çalıştırma
 
@@ -533,7 +533,7 @@ Bu örneği, [uygulamayı oluştururken](#BKMK_BuildingTheApp)koda değişiklikl
 
 ### <a name="BKMK_DownloadingTheApp"></a>Uygulama indiriliyor
 
-1. [Zaman uyumsuz örneklerden sıkıştırılmış dosyayı indirin: .NET masaüstü uygulamalarında](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06)yeniden giriş yapın.
+1. @No__t-0Async örneklerinden sıkıştırılmış dosyayı indirin: .NET masaüstü uygulamalarında yeniden giriş yapın @ no__t-0.
 
 2. İndirdiğiniz dosyayı sıkıştırmasını açın ve ardından Visual Studio 'Yu başlatın.
 
@@ -561,7 +561,7 @@ Aşağıdaki bölümde, örneği WPF uygulaması olarak derlemek için kod sağl
 
 4. Proje türleri listesinde **WPF uygulaması**' nı seçin.
 
-5. Projeyi `WebsiteDownloadWPF`adlandırın ve **Tamam** düğmesini seçin.
+5. Projeyi `WebsiteDownloadWPF` olarak adlandırın ve ardından **Tamam** düğmesini seçin.
 
      Yeni proje **Çözüm Gezgini**görüntülenir.
 
@@ -589,7 +589,7 @@ Aşağıdaki bölümde, örneği WPF uygulaması olarak derlemek için kod sağl
 
      Bir metin kutusu ve bir düğme içeren basit bir pencere, MainWindow. xaml **Tasarım** görünümünde görünür.
 
-8. İçin <xref:System.Net.Http>bir başvuru ekleyin.
+8. @No__t-0 için bir başvuru ekleyin.
 
 9. **Çözüm Gezgini**, MainWindow. xaml. vb için kısayol menüsünü açın ve **kodu görüntüle**' yi seçin.
 
@@ -677,5 +677,5 @@ Aşağıdaki bölümde, örneği WPF uygulaması olarak derlemek için kod sağl
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [İzlenecek yol: Async ve await kullanarak Web 'e erişme (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [İzlenecek yol: Async ve await kullanarak Web 'e erişme (Visual Basic) ](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [Async ve await ile zaman uyumsuz programlama (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)

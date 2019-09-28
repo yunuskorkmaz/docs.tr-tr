@@ -2,15 +2,15 @@
 title: AttributeUsage (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 48757216-c21d-4051-86d5-8a3e03c39d2c
-ms.openlocfilehash: 1841171f2f3fc26ba9244c72c69960b765d39807
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 84c3d175aede5d8066198592ffac601c0bd97620
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61789122"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71351820"
 ---
 # <a name="attributeusage-visual-basic"></a>AttributeUsage (Visual Basic)
-Özel bir öznitelik sınıfı nasıl kullanılabileceğini belirler. `AttributeUsage` Yeni öznitelik nasıl uygulanabileceğini kontrol etmek için özel öznitelik tanımlarına uygulanabilir bir özniteliktir. Varsayılan ayarlar, açıkça uygulandığında şöyle görünür:  
+Özel bir öznitelik sınıfının nasıl kullanılabileceğini belirler. `AttributeUsage`, yeni özniteliğin nasıl uygulanabileceğini denetlemek için özel öznitelik tanımlarına uygulanabilen bir özniteliktir. Varsayılan ayarlar açıkça uygulandığında şöyle görünür:  
   
 ```vb  
 <System.AttributeUsage(System.AttributeTargets.All,   
@@ -21,9 +21,9 @@ Class NewAttribute
 End Class  
 ```  
   
- Bu örnekte, `NewAttribute` sınıfı olabilir herhangi bir öznitelik mümkün kod varlık, ancak yalnızca bir kez her varlık için uygulanır. Temel bir sınıfa uygulandığında türetilmiş sınıflar tarafından devralınır.  
+ Bu örnekte, `NewAttribute` sınıfı öznitelik özellikli herhangi bir kod varlığına uygulanabilir, ancak her bir varlığa yalnızca bir kez uygulanabilir. Temel sınıfa uygulandığında türetilmiş sınıflar tarafından devralınır.  
   
- `AllowMultiple` Ve `Inherited` bu kodu aynı etkiye sahiptir. Bu nedenle bağımsız değişken isteğe bağlıdır:  
+ @No__t-0 ve `Inherited` bağımsız değişkenleri isteğe bağlıdır, bu nedenle bu kod aynı etkiye sahiptir:  
   
 ```vb  
 <System.AttributeUsage(System.AttributeTargets.All)>   
@@ -32,7 +32,7 @@ Class NewAttribute
 End Class  
 ```  
   
- İlk `AttributeUsage` bağımsız değişkeni olmalıdır bir veya daha fazla öğeleri <xref:System.AttributeTargets> sabit listesi. Birden çok hedef türü, OR işleci, bu gibi birlikte bağlanabilir:  
+ İlk `AttributeUsage` bağımsız değişkeni <xref:System.AttributeTargets> Numaralandırmadaki bir veya daha fazla öğe olmalıdır. Birden çok hedef türü, OR işleciyle birlikte bağlanabilir ve şöyle olabilir:  
   
 ```vb  
 Imports System  
@@ -45,7 +45,7 @@ Class NewPropertyOrFieldAttribute
 End Class  
 ```  
   
- Varsa `AllowMultiple` bağımsız değişkeni ayarlanır `true`, sonra elde edilen özniteliği, bu gibi tek bir varlık için birden çok kez uygulanabilir:  
+ @No__t-0 bağımsız değişkeni `true` olarak ayarlandıysa, sonuçta elde edilen öznitelik tek bir varlığa birden çok kez uygulanabilir, örneğin şöyle olabilir:  
   
 ```vb  
 Imports System  
@@ -62,9 +62,9 @@ Class Class1
 End Class  
 ```  
   
- Bu durumda `MultiUseAttr` art arda çünkü uygulanabilir `AllowMultiple` ayarlanır `true`. Birden çok öznitelik uygulamak için gösterilen iki biçimi geçerli değil.  
+ Bu durumda, `AllowMultiple` `true` olarak ayarlandığı için-0 @no__t tekrar tekrar uygulanabilir. Birden çok özniteliği uygulamak için gösterilen her iki biçim de geçerlidir.  
   
- Varsa `Inherited` ayarlanır `false`, ardından öznitelik öznitelendirilen bir sınıftan türetilmiş sınıflar tarafından devralınır değil. Örneğin:  
+ @No__t-0 ' ı `false` olarak ayarlarsanız öznitelik, öznitelikli bir sınıftan türetilmiş sınıflar tarafından devralınmaz. Örneğin:  
   
 ```vb  
 Imports System  
@@ -86,15 +86,15 @@ Class DClass
 End Class  
 ```  
   
- Bu durumda `Attr1` uygulanmaz `DClass` devralma aracılığıyla.  
+ Bu durumda `Attr1` devralma yoluyla `DClass` ' e uygulanmaz.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `AttributeUsage` Özniteliği, bir tek kullanımlık özniteliğin birden çok kez aynı sınıfa uygulanamaz. `AttributeUsage` için bir diğer addır <xref:System.AttributeUsageAttribute>.  
+ @No__t-0 özniteliği tek başına kullanılan bir özniteliktir; aynı sınıfa birden çok kez uygulanamaz. `AttributeUsage`, <xref:System.AttributeUsageAttribute> için bir diğer addır.  
   
- Daha fazla bilgi için [erişme öznitelikleri kullanarak yansıma (Visual Basic) tarafından](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md).  
+ Daha fazla bilgi için bkz. [yansıma kullanarak özniteliklere erişme (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md).  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, etkisini gösterir `Inherited` ve `AllowMultiple` bağımsız değişkenleri `AttributeUsage` özniteliği ve nasıl bir sınıfa uygulanan özel öznitelikler listelenebilir.  
+ Aşağıdaki örnek, `Inherited` ve `AllowMultiple` bağımsız değişkenlerinin `AttributeUsage` özniteliğine ve bir sınıfa uygulanan özel özniteliklerin nasıl numaralandırılacağını gösterir.  
   
 ```vb  
 Imports System  
@@ -151,7 +151,7 @@ End Class
   
 ## <a name="sample-output"></a>Örnek Çıktı  
   
-```  
+```console  
 Attributes on Base Class:  
 A1  
 A2  
@@ -169,5 +169,5 @@ A2
 - [Öznitelikler](../../../../standard/attributes/index.md)
 - [Yansıma (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)
 - [Öznitelikler (Visual Basic)](../../../../visual-basic/language-reference/attributes.md)
-- [Özel öznitelikler (Visual Basic) oluşturma](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md)
-- [(Visual Basic) yansıma kullanarak özniteliklere erişme](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)
+- [Özel öznitelikler oluşturma (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md)
+- [Yansıma kullanarak özniteliklere erişme (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)

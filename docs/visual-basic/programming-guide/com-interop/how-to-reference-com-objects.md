@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Visual Basic başvurusu COM nesneleri'
+title: 'Nasıl yapılır: Visual Basic COM nesnelerine başvuru'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - COM interop [Visual Basic], referencing COM objects
@@ -8,49 +8,49 @@ helpviewer_keywords:
 - COM objects, referencing
 - interop assemblies
 ms.assetid: 9c518fb4-27d9-4112-9e6a-5a7d0210af6f
-ms.openlocfilehash: df234ecaf25243dbdf2d6552942ca86001d4a6fe
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 8e502dc9a279d9271a61fd2cf7a6afb564f09125
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592181"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71351990"
 ---
-# <a name="how-to-reference-com-objects-from-visual-basic"></a>Nasıl yapılır: Visual Basic başvurusu COM nesneleri
-Visual Basic'te tür kitaplıklarını sahip bir COM nesnelerine başvuru ekleme birlikte çalışma derlemesi oluşturulması için COM kitaplığı gerektirir. COM nesnesinin üyeleri için başvurular birlikte çalışma derlemesine yönlendirilir ve ardından gerçek COM nesneye iletilir. COM nesnesi alınan yanıtları birlikte çalışma derlemesine yönlendirilir ve .NET Framework uygulamanızı iletilir.  
+# <a name="how-to-reference-com-objects-from-visual-basic"></a>Nasıl yapılır: Visual Basic COM nesnelerine başvuru
+Visual Basic, tür kitaplıklarının bulunduğu COM nesnelerine başvurular eklemek için COM kitaplığı için birlikte çalışma derlemesinin oluşturulması gerekir. COM nesnesinin üyelerine yapılan başvurular birlikte çalışma derlemesine yönlendirilir ve ardından gerçek COM nesnesine iletilir. COM nesnesinden gelen yanıtlar birlikte çalışma derlemesine yönlendirilir ve .NET Framework uygulamanıza iletilir.  
   
- Tür bilgilerini COM nesnesi için bir .NET derlemesine gömerek birlikte çalışma derlemesi kullanmadan bir COM nesnesi başvuruda bulunabilir. Tür bilgilerini katıştırma için ayarlanmış `Embed Interop Types` özelliğini `True` için COM nesnesine başvuru. Komut satırı derleyicisini kullanarak derlemek kullanırsanız `/link` COM kitaplığı başvurmak için seçeneği. Daha fazla bilgi için [/Link (Visual Basic)](../../../visual-basic/reference/command-line-compiler/link.md).  
+ Bir .NET derlemesine COM nesnesinin tür bilgilerini gömerek derleme kullanmadan bir COM nesnesine başvurabilirsiniz. Tür bilgilerini eklemek için, COM nesnesine başvuru için `Embed Interop Types` özelliğini `True` olarak ayarlayın. Komut satırı derleyicisini kullanarak derlerken, COM kitaplığına başvurmak için `/link` seçeneğini kullanın. Daha fazla bilgi için bkz. [/Link (Visual Basic)](../../../visual-basic/reference/command-line-compiler/link.md).  
   
- Tümleşik geliştirme ortamından (IDE) bir tür kitaplığına bir başvuru eklediğinizde, Visual Basic birlikte çalışma derlemeleri otomatik olarak oluşturur. Komut satırından çalışırken, birlikte çalışma derlemelerini el ile oluşturmak için Tlbimp yardımcı programını kullanabilirsiniz.  
+ Visual Basic, tümleşik geliştirme ortamından (IDE) bir tür kitaplığına bir başvuru eklediğinizde otomatik olarak birlikte çalışma derlemeleri oluşturur. Komut satırından çalışırken, Tlbimp yardımcı programını kullanarak birlikte çalışma derlemelerini el ile oluşturabilirsiniz.  
   
-### <a name="to-add-references-to-com-objects"></a>COM nesnelerinin başvuruları eklemek için  
+### <a name="to-add-references-to-com-objects"></a>COM nesnelerine başvuru eklemek için  
   
-1. Üzerinde **proje** menüsünde seçin **Başvuru Ekle** ve ardından **COM** iletişim kutusundaki sekmesi.  
+1. **Proje** menüsünde, **Başvuru Ekle** ' yi seçin ve ardından iletişim kutusunda **com** sekmesine tıklayın.  
   
 2. COM nesneleri listesinden kullanmak istediğiniz bileşeni seçin.  
   
-3. Birlikte çalışma derlemesi erişimini basitleştirmek için ekleme bir `Imports` sınıfı veya modülü COM nesnesi içinde kullanacağınız üstüne deyimi. Örneğin, aşağıdaki kod örneği ad alanını içeri aktarır `INKEDLib` başvurulan nesneler için `Microsoft InkEdit Control 1.0` kitaplığı.  
+3. Birlikte çalışma derlemesine erişimi basitleştirmek için, COM nesnesini kullanacağınız sınıfın veya modülün en üstüne bir `Imports` ifadesini ekleyin. Örneğin, aşağıdaki kod örneği, `Microsoft InkEdit Control 1.0` kitaplığında başvurulan nesneler için `INKEDLib` ad alanını içeri aktarır.  
   
      [!code-vb[VbVbalrInterop#40](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#40)]  
   
 ### <a name="to-create-an-interop-assembly-using-tlbimp"></a>Tlbimp kullanarak birlikte çalışma derlemesi oluşturmak için  
   
-1. Tlbimp konumunu zaten arama yolu bir parçası değilse ve değil o anda bulunduğu dizinde arama yoluna ekleyin.  
+1. Tlbimp 'nin konumunu, zaten arama yolunun bir parçası değilse ve şu anda bulunduğu dizinde değilseniz arama yoluna ekleyin.  
   
-2. Çağrı, bir komut isteminden aşağıdaki bilgileri sağlayarak Tlbimp:  
+2. Aşağıdaki bilgileri sağlayarak bir komut isteminden Tlbimp 'i çağırın:  
   
-    - Ad ve tür kitaplığı içeren DLL konumunu  
+    - Tür kitaplığını içeren DLL 'nin adı ve konumu  
   
-    - Ad ve konum bilgileri yerleştirilmesi gereken ad alanı  
+    - Bilgilerin yerleştirilmesi gereken ad alanının adı ve konumu  
   
-    - Ad ve hedef birlikte çalışma bütünleştirilmiş kod konumu  
+    - Hedef birlikte çalışma derlemesinin adı ve konumu  
   
-     Aşağıdaki kod, bir örnek sağlar:  
+     Aşağıdaki kod bir örnek sağlar:  
   
-    ```  
+    ```console  
     Tlbimp test3.dll /out:NameSpace1 /out:Interop1.dll  
     ```  
   
-     Kayıtsız COM nesneleri için bile, tür kitaplıkları için birlikte çalışma derlemeleri oluşturmak için Tlbimp kullanabilirsiniz. Ancak, birlikte çalışma derlemesi tarafından başvurulan COM nesneleri kullanılacak oldukları bilgisayarda düzgün bir şekilde kaydedilmesi gerekir. Bir COM nesnesi ile Windows işletim sisteminde Regsvr32 yardımcı programını kullanarak kaydedebilirsiniz.  
+     Kayıtsız COM nesneleri için bile tür kitaplıkları için birlikte çalışma derlemeleri oluşturmak üzere Tlbimp kullanabilirsiniz. Bununla birlikte, birlikte çalışma derlemelerinin başvurduğu COM nesneleri, kullanıldığı bilgisayarda düzgün şekilde kaydedilmelidir. Windows işletim sistemine dahil edilen regsvr32 yardımcı programını kullanarak bir COM nesnesini kaydedebilirsiniz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -3,12 +3,12 @@ title: C# Kılavuz geçmişi C#
 description: Dil en eski sürümlerinde ne şekilde görünür ve bu tarihten sonra nasıl gelişmiştir?
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: 304c433e7f15301b77e8b2440e27795dcdea345c
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: e8bf39716482eb94e5686c1a150667be9f8ef620
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70893169"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71391955"
 ---
 # <a name="the-history-of-c"></a>C geçmişi\#
 
@@ -57,7 +57,7 @@ C#sürüm 1,2, Visual Studio 2003 ile birlikte gönderilir. Dilde birkaç küç�
 - [Genel Türler](../programming-guide/generics/index.md)
 - [Kısmi türler](../programming-guide/classes-and-structs/partial-classes-and-methods.md#partial-classes)
 - [Anonim Yöntemler](../language-reference/operators/delegate-operator.md)
-- [Null yapılabilir türler](../programming-guide/nullable-types/index.md)
+- [Null yapılabilir değer türleri](../programming-guide/nullable-types/index.md)
 - [Yineleyiciler](../programming-guide/concepts/iterators.md)
 - [Kovaryans ve değişken sapması](../programming-guide/concepts/covariance-contravariance/index.md)
 

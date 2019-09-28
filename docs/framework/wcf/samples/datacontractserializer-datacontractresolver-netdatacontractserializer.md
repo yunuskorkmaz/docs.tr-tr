@@ -2,22 +2,22 @@
 title: NetDataContractSerializer İşlevselliğini Sağlamak için DataContractSerializer ve DataContractResolver Kullanma
 ms.date: 03/30/2017
 ms.assetid: 1376658f-f695-45f7-a7e0-94664e9619ff
-ms.openlocfilehash: d7102e60c8b5302d4f3bc83b356dbc7de117f57a
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: e52b6da80100cbffb7dc8725d16c31a67bc19445
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70039871"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71351656"
 ---
 # <a name="using-datacontractserializer-and-datacontractresolver-to-provide-the-functionality-of-netdatacontractserializer"></a>NetDataContractSerializer İşlevselliğini Sağlamak için DataContractSerializer ve DataContractResolver Kullanma
-Bu örnek, öğesinin <xref:System.Runtime.Serialization.DataContractSerializer> kullanımı ile <xref:System.Runtime.Serialization.DataContractResolver> aynı işlevleri nasıl <xref:System.Runtime.Serialization.NetDataContractSerializer>sağladığını gösterir. Bu örnek, <xref:System.Runtime.Serialization.DataContractResolver> <xref:System.Runtime.Serialization.DataContractSerializer>için nasıl oluşturulacağını ve nasıl ekleneceğini gösterir.
+Bu örnek, <xref:System.Runtime.Serialization.DataContractSerializer> ' ın uygun <xref:System.Runtime.Serialization.DataContractResolver> ' in kullanımını <xref:System.Runtime.Serialization.NetDataContractSerializer> ile aynı işlevleri sağlar. Bu örnek, uygun @no__t nasıl oluşturulacağını ve <xref:System.Runtime.Serialization.DataContractSerializer> ' e nasıl ekleneceğini gösterir.
 
 ## <a name="sample-details"></a>Örnek Ayrıntılar
- <xref:System.Runtime.Serialization.NetDataContractSerializer>, önemli bir yoldan farklıdır: <xref:System.Runtime.Serialization.NetDataContractSerializer> seri hale getirilen XML 'de clr türü bilgilerini içerir, ancak <xref:System.Runtime.Serialization.DataContractSerializer> bunu yapmaz. <xref:System.Runtime.Serialization.DataContractSerializer> Bu nedenle <xref:System.Runtime.Serialization.NetDataContractSerializer> , yalnızca serileştirme ve serisini kaldırma uçları aynı CLR türlerini paylaşıyorsa kullanılabilir. Ancak, performansı <xref:System.Runtime.Serialization.NetDataContractSerializer>daha iyi olduğundan kullanılması <xref:System.Runtime.Serialization.DataContractSerializer> önerilir. İçine bir <xref:System.Runtime.Serialization.DataContractSerializer> <xref:System.Runtime.Serialization.DataContractResolver> ekleyerek ' de seri hale getirilen bilgileri değiştirebilirsiniz.
+ <xref:System.Runtime.Serialization.NetDataContractSerializer> <xref:System.Runtime.Serialization.DataContractSerializer> ' den çok önemli bir şekilde farklılık gösterir: <xref:System.Runtime.Serialization.NetDataContractSerializer> seri hale getirilmiş XML içindeki CLR türü bilgilerini içerir, ancak <xref:System.Runtime.Serialization.DataContractSerializer> desteklemez. Bu nedenle, <xref:System.Runtime.Serialization.NetDataContractSerializer> yalnızca serileştirme ve seri durumdan çıkarma aynı CLR türlerini paylaşıyorsa kullanılabilir. Ancak, <xref:System.Runtime.Serialization.DataContractSerializer> kullanılması önerilir çünkü performansı <xref:System.Runtime.Serialization.NetDataContractSerializer> ' den daha iyidir. @No__t-0 ' da seri hale getirilen bilgileri bir <xref:System.Runtime.Serialization.DataContractResolver> ekleyerek değiştirebilirsiniz.
 
- Bu örnek iki projeden oluşur. İlk proje, bir <xref:System.Runtime.Serialization.NetDataContractSerializer> nesneyi seri hale getirmek için kullanır. İkinci proje, birinci <xref:System.Runtime.Serialization.DataContractSerializer> projeyle aynı <xref:System.Runtime.Serialization.DataContractResolver> işlevselliği sağlamak için ile ile kullanır.
+ Bu örnek iki projeden oluşur. İlk proje, bir nesneyi seri hale getirmek için <xref:System.Runtime.Serialization.NetDataContractSerializer> kullanır. İkinci proje, ilk projeyle aynı işlevselliği sağlamak için bir <xref:System.Runtime.Serialization.DataContractResolver> ile <xref:System.Runtime.Serialization.DataContractSerializer> kullanır.
 
- Aşağıdaki kod örneği, DCSwithDCR projesinde öğesine <xref:System.Runtime.Serialization.DataContractResolver> <xref:System.Runtime.Serialization.DataContractSerializer> eklenen `MyDataContractResolver` özel bir adlandırılmış öğesinin uygulamasını gösterir.
+ Aşağıdaki kod örneği, DCSwithDCR projesinde <xref:System.Runtime.Serialization.DataContractSerializer> ' ye eklenen `MyDataContractResolver` adlı özel bir @no__t uygulamasını gösterir.
 
 ```csharp
 class MyDataContractResolver : DataContractResolver
@@ -33,10 +33,7 @@ class MyDataContractResolver : DataContractResolver
     public override Type ResolveName(string typeName, string typeNamespace, DataContractResolver knownTypeResolver)
     {
         Type type = knownTypeResolver.ResolveName(typeName, typeNamespace, null);
-        if (type == null)
-        {
-            type = Type.GetType(typeName + ", " + typeNamespace);
-        }
+        type ??= Type.GetType(typeName + ", " + typeNamespace);
         return type;
     }
 

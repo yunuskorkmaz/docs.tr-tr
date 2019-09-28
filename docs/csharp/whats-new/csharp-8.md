@@ -2,12 +2,12 @@
 title: C# 8,0 C# kılavuzundaki yenilikler
 description: 8,0 ' de C# bulunan yeni özelliklere genel bakış alın.
 ms.date: 09/20/2019
-ms.openlocfilehash: 95331c8dd8e8b5e0d5af242752565d8e93120937
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: ee0f6c9d7cfbe829508e3e0900e249c204266ca3
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216484"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71396031"
 ---
 # <a name="whats-new-in-c-80"></a>C# 8,0 sürümündeki yenilikler
 
@@ -36,7 +36,7 @@ Bu makalenin geri kalanında bu özellikler kısaca açıklanmaktadır. Ayrınt�
 1. [DotNet-TRY](https://github.com/dotnet/try/blob/master/README.md#setup) küresel aracını yükler.
 1. [DotNet/TRY-Samples](https://github.com/dotnet/try-samples) deposunu kopyalayın.
 1. *TRY-Samples* deposu için geçerli dizini *csharp8* alt dizinine ayarlayın.
-1. `dotnet try`'i çalıştırın.
+1. `dotnet try` öğesini çalıştırın.
 
 ## <a name="readonly-members"></a>Salt okunur Üyeler
 
@@ -375,18 +375,18 @@ Zaman uyumsuz akışları [oluşturma ve](../tutorials/generate-consume-asynchro
 
 ## <a name="indices-and-ranges"></a>Dizinler ve aralıklar
 
-Aralıklar ve dizinler, bir dizi, [dize](../language-reference/builtin-types/reference-types.md#the-string-type), <xref:System.Span%601>veya <xref:System.ReadOnlySpan%601>alt aralıkları belirtmek için bir kısa sözdizimi sağlar.
+Dizinler ve aralıklar bir dizideki tek öğelere veya aralıklara erişmek için bir kısa söz dizimi sağlar.
 
 Bu dil desteği iki yeni türe ve iki yeni işleçlere dayanır:
 
 - <xref:System.Index?displayProperty=nameWithType>bir dizinin dizisini temsil eder.
-- Bir dizinin sıranın sonuna göreli olduğunu belirten işleç.`^`
+- Bir dizinin dizinin sonuna göre olduğunu belirten `^` bitiş işlecinden dizin.
 - <xref:System.Range?displayProperty=nameWithType>bir dizinin alt aralığını temsil eder.
-- Aralık işleci (`..`), bir aralığın işlenenleri olarak başlangıcını ve sonunu belirtir.
+- Aralık işleci `..`, bir aralığın işlenenlerinin başlangıcını ve sonunu belirtir.
 
 Dizin kurallarıyla başlayalım. Bir dizi `sequence`düşünün. Dizin, ile `sequence[0]`aynıdır. `0` Dizin, ile `sequence[sequence.Length]`aynıdır. `^0` `sequence[^0]` Bunun gibi`sequence[sequence.Length]` bir özel durum oluşturur. Herhangi bir sayı `n`için Dizin `^n` aynı `sequence.Length - n`olur.
 
-Aralık, bir aralığın *başlangıcını* ve *sonunu* belirtir. Aralığın başlangıcı dahil, ancak aralığın sonu dışlamalı, ancak *Başlangıç* aralığa dahil değildir ancak *bitiş* aralığa eklenmez. Aralık, tüm aralığı temsil eden tüm `[0..sequence.Length]` aralığı temsileder.`[0..^0]` 
+Aralık, bir aralığın *başlangıcını* ve *sonunu* belirtir. Aralığın başlangıcı dahil, ancak aralığın sonu dışlamalı, ancak *Başlangıç* aralığa dahil değildir ancak *bitiş* aralığa eklenmez. Aralık, tüm aralığı temsil eden tüm `[0..sequence.Length]` aralığı temsileder.`[0..^0]`
 
 Birkaç örneğe bakalım. Başlangıç ve bitişten dizin ile açıklana ek olarak, aşağıdaki diziyi göz önünde bulundurun:
 
@@ -444,6 +444,8 @@ Aralık daha sonra `[` ve `]` karakterleri içinde kullanılabilir:
 ```csharp
 var text = words[phrase];
 ```
+
+Yalnızca dizin ve aralıkları destekleyen diziler değil. Dizin ve aralıkları [dize](../language-reference/builtin-types/reference-types.md#the-string-type), <xref:System.Span%601> veya <xref:System.ReadOnlySpan%601> ile de kullanabilirsiniz. Daha fazla bilgi için bkz. [Dizinler ve aralıklar için destek türü](../tutorials/ranges-indexes.md#type-support-for-indices-and-ranges).
 
 Dizinler ve [aralıklar](../tutorials/ranges-indexes.md)hakkında öğreticide dizinler ve aralıklar hakkında daha fazla bilgi bulabilirsiniz.
 

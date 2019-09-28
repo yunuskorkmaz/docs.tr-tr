@@ -1,18 +1,18 @@
 ---
 title: Dizinler ve aralıklar kullanarak veri aralıklarını keşfet
 description: Bu gelişmiş öğreticide, sıralı bir veri kümesinin dilimlerini incelemek üzere dizinler ve aralıklar kullanarak verileri araştırmanızı öğretilir.
-ms.date: 04/19/2019
+ms.date: 09/20/2019
 ms.custom: mvc
-ms.openlocfilehash: d0eeadfff9732ced22e045536a88ed49cd98bbaa
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: a879601e1358f72e80983992a3cd96ba1fb06a38
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117839"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71391959"
 ---
 # <a name="indices-and-ranges"></a>Dizinler ve aralıklar
 
-Aralıklar <xref:System.Array>ve dizinler <xref:System.String> <xref:System.ReadOnlySpan%601>, bir,, veya içinde tek öğe veya aralıklara erişmek için bir kısa sözdizimi sağlar. <xref:System.Span%601> Bu özellikler, bir dizideki tek öğelere veya öğe aralıklarına erişmek için daha kısa, sözdizimini açık bir şekilde etkinleştirir.
+Aralıklar ve dizinler, bir dizideki tek öğe veya aralıklara erişmek için bir kısa sözdizimi sağlar.
 
 Bu öğreticide, aşağıdakileri nasıl yapacağınızı öğreneceksiniz:
 
@@ -74,6 +74,14 @@ Ayrıca, aralıkları veya dizinleri değişken olarak da bildirebilirsiniz. De�
 Aşağıdaki örnekte, bu seçimlerin pek çok nedeni gösterilmektedir. Farklı birleşimler denemek için `z` , ve değiştirin `x`. `y` Denemeler `x` yaptığınızda, `y` 'den`y` küçük olan değerleri kullanın ve geçerli kombinasyonlardan daha küçüktür. `z` Aşağıdaki kodu yeni bir yöntemine ekleyin. Farklı birleşimler deneyin:
 
 [!code-csharp[SemanticsExamples](~/samples/csharp/tutorials/RangesIndexes/IndicesAndRanges.cs#IndicesAndRanges_Semantics)]
+
+## <a name="type-support-for-indices-and-ranges"></a>Dizinler ve aralıklar için tür desteği
+
+Bir tür, <xref:System.Index> veya <xref:System.Range> parametresiyle bir [Dizin Oluşturucu](../programming-guide/indexers/index.md) sağlıyorsa, sırasıyla dizinleri veya aralıkları açıkça destekler.
+
+Bir tür, erişilebilir bir alıcı ve `int` dönüş türüyle `Length` veya `Count` adlı bir **özellik varsa oluşturulabilir** . Dizinleri veya aralıkları açıkça desteklemeyen bir sayılabilir türü, bunlar için örtülü bir destek sağlayabilir. Daha fazla bilgi için, [özellik teklifi notunun](~/_csharplang/proposals/csharp-8.0/ranges.md) [örtük Dizin desteği](~/_csharplang/proposals/csharp-8.0/ranges.md#implicit-index-support) ve [örtük Aralık desteği](~/_csharplang/proposals/csharp-8.0/ranges.md#implicit-range-support) bölümlerine bakın.
+
+Örneğin, aşağıdaki .NET türleri hem dizinleri hem de aralıkları destekler: <xref:System.Array>, <xref:System.String>, <xref:System.Span%601> ve <xref:System.ReadOnlySpan%601>. @No__t-0 dizinleri destekler ancak aralıkları desteklemez.
 
 ## <a name="scenarios-for-indices-and-ranges"></a>Dizinler ve aralıklar için senaryolar
 

@@ -8,18 +8,18 @@ helpviewer_keywords:
 - indexers [C#]
 - C# language, indexers
 ms.assetid: 022cd27d-d5e0-4cfe-8b97-dc018cc3355d
-ms.openlocfilehash: 5b135fee12ac5b78b41a657f2eb458ea104143fc
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f0df3170289d780852ee14232e92c3b71412c548
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69923942"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71392373"
 ---
 # <a name="indexers-c-programming-guide"></a>Dizin Oluşturucular (C# Programlama Kılavuzu)
 
 Dizin oluşturucular, bir sınıf veya yapının örneklerinin, tıpkı diziler gibi dizine eklenmesine izin verir. Dizinli değer, açıkça bir tür veya örnek üyesi belirtilmeden ayarlanabilir veya alınabilir. Dizin oluşturucular, erişimcilerinin parametre kazanması dışında [özelliklere](../classes-and-structs/properties.md) benzer.  
- 
- Aşağıdaki örnek, değer atamak ve almak için basit [Get](../../language-reference/keywords/get.md) ve [set](../../language-reference/keywords/set.md) erişimcisi yöntemleriyle genel bir sınıf tanımlar. `Program` Sınıfı dizeleri depolamak için bu sınıfın bir örneğini oluşturur.  
+
+ Aşağıdaki örnek, değer atamak ve almak için basit [Get](../../language-reference/keywords/get.md) ve [set](../../language-reference/keywords/set.md) erişimcisi yöntemleriyle genel bir sınıf tanımlar. @No__t-0 sınıfı dizeleri depolamak için bu sınıfın bir örneğini oluşturur.  
   
  [!code-csharp[indexers#1](../../../../samples/snippets/csharp/programming-guide/indexers/indexer-1.cs)]  
   
@@ -32,9 +32,9 @@ Bir dizin oluşturucunun Get veya set erişimcisinin bir değer döndüren ya da
 
 [!code-csharp[indexers#2](../../../../samples/snippets/csharp/programming-guide/indexers/indexer-2.cs)]  
 
-İfade gövdesini `get` tanıtır ve anahtar sözcüğünün kullanılmadığını unutmayın. `=>` 
+@No__t-0 ' ın ifade gövdesini tanıtdığına ve `get` anahtar sözcüğünün kullanılmadığını unutmayın. 
 
-7,0 ile C# başlayarak, hem Get hem de set erişimcisi, ifade Bodied Üyeler olarak uygulanan bir uygulanmış olabilir. Bu durumda, hem hem `get` de `set` anahtar sözcüklerin kullanılması gerekir. Örneğin:
+7,0 ile C# başlayarak, hem Get hem de set erişimcisi, ifade Bodied Üyeler olarak uygulanan bir uygulanmış olabilir. Bu durumda, `get` ve `set` anahtar sözcüklerin kullanılması gerekir. Örneğin:
 
 [!code-csharp[indexers#3](../../../../samples/snippets/csharp/programming-guide/indexers/indexer-3.cs)]  
   
@@ -42,11 +42,11 @@ Bir dizin oluşturucunun Get veya set erişimcisinin bir değer döndüren ya da
   
 - Dizin oluşturucular, nesnelerin dizilere benzer bir şekilde dizine alınmasını sağlar.  
   
-- `get` Erişimci bir değer döndürür. `set` Erişimci bir değer atar.  
+- @No__t-0 erişimcisi bir değer döndürür. @No__t-0 erişimcisi bir değer atar.  
   
 - [Bu](../../language-reference/keywords/this.md) anahtar sözcük, Dizin oluşturucuyu tanımlamak için kullanılır.  
   
-- [Value](../../language-reference/keywords/value.md) anahtar sözcüğü, `set` Dizin Oluşturucu tarafından atanan değeri tanımlamak için kullanılır.  
+- [Value](../../language-reference/keywords/value.md) anahtar sözcüğü, `set` dizin oluşturucunun atandığı değeri tanımlamak için kullanılır.  
   
 - Dizin oluşturucuların bir tamsayı değeri ile dizinlenmesini gerekmez; Bu, belirli bir arama mekanizmasını nasıl tanımlayacaksınız.  
   

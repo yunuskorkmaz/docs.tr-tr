@@ -1,69 +1,72 @@
 ---
-title: Yapılar - C# Kılavuzu
+title: Yapılar- C# kılavuz
 description: Yapı türü ve bunları nasıl oluşturacağınız hakkında bilgi edinin
 ms.date: 10/12/2016
 ms.assetid: a7094b8c-7229-4b6f-82fc-824d0ea0ec40
-ms.openlocfilehash: fbaa7fcc26009fe3117784b411941d30af0ba3c5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e0974b7dcf3c0888cb52bea81b07a58e3a98640b
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64608016"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71396130"
 ---
 # <a name="structs"></a>Yapılar
-A *yapı* bir değer türüdür. Bir yapı oluşturulduğunda yapının atanmış olduğu değişken yapının gerçek verilerini tutar. Struct için yeni bir değişken atandığında kopyalanır. Bu nedenle yeni değişken ve özgün değişken aynı verilerin iki ayrı kopyasını içerir. Bir kopyaya yapılan değişiklikler diğer kopyayı etkilemez.
 
-Değer türü değişkenler doğrudan değerlerini, değişkenin bildirildiği hangi bağlamda satır içi bellek tahsis edildiği anlamına gelir içerir. Ayrı yığın atama veya değer türü değişkenler çöp toplama taşması yoktur.  
+*Struct* bir değer türüdür. Bir struct oluşturulduğunda, yapının atandığı değişken yapının gerçek verilerini barındırır. Yapı yeni bir değişkene atandığında, kopyalanır. Bu nedenle, yeni değişken ve özgün değişken aynı verilerin iki ayrı kopyasını içerir. Bir kopyada yapılan değişiklikler diğer kopyayı etkilemez.
+
+Değer türü değişkenleri doğrudan değerlerini içerir, bu da belleğin, değişkenin bildirildiği bağlamda satır içi olarak ayrıldığı anlamına gelir. Değer türü değişkenler için ayrı bir yığın ayırma veya çöp toplama ek yükü yoktur.  
   
-Değer türlerinin iki kategorisi vardır: [yapı](./language-reference/keywords/struct.md) ve [enum](./language-reference/keywords/enum.md).  
+Değer türlerinin iki kategorisi vardır: [struct](./language-reference/keywords/struct.md) ve [enum](./language-reference/keywords/enum.md).  
   
-Yerleşik sayısal türler yapı birimleridir ve özellikleri ve yöntemleri erişebileceğiniz sahiptirler:  
+Yerleşik sayısal türler yapı birimleridir ve erişebileceğiniz özelliklere ve yöntemlere sahiptirler:  
   
 [!code-csharp[Static Method](../../samples/snippets/csharp/concepts/structs/static-method.cs)]
   
-Ancak bildirmek ve bunların basit toplama olmayan türlermiş gibi bunlara değer atayamazsınız:  
+Ancak bunları, basit olmayan türler gibi bu değerlere bildirir ve bunlara atanır:  
   
 [!code-csharp[Assign Values](../../samples/snippets/csharp/concepts/structs/assign-value.cs)] 
   
-Değer türleri *korumalı*, yani, örneğin, bir türden türetilemez <xref:System.Int32>, ve bir yapı yalnızca kaynağından devralabileceğinden bir kullanıcı tanımlı sınıf veya yapıdan devralacak bir yapı tanımlayamazsınız <xref:System.ValueType> . Ancak, bir yapının bir veya daha fazla arabirim uygulayabilir. Bir yapı türünü bir arabirim türüne çevirebilirsiniz; Bu neden olan bir *kutulama* yönetilen yığında struct bir başvuru türü nesnesi içine sarmak için işlemi. Kutulama işlemleri, bir değer türü alan bir yönteme geçirdiğinizde meydana bir <xref:System.Object> giriş parametresi olarak. Daha fazla bilgi için [kutulama ve kutudan çıkarma](./programming-guide/types/boxing-and-unboxing.md ).  
+Değer türleri *Sealed*olur, yani örneğin, <xref:System.Int32> ' den bir tür türetilemez ve bir yapı yalnızca <xref:System.ValueType> ' den devralabileceği için Kullanıcı tanımlı herhangi bir sınıftan veya yapıdan devralacak bir yapı tanımlayamazsınız. Ancak, bir struct bir veya daha fazla arabirim uygulayabilir. Bir yapı türünü arabirim türüne çevirebilirsiniz; Bu, bir *kutulama* işleminin yapıyı yönetilen yığında bir başvuru türü nesnesinin içine sarmasına neden olur. Kutulama işlemleri bir değer türünü, giriş parametresi olarak <xref:System.Object> alan bir yönteme geçirdiğinizde oluşur. Daha fazla bilgi için bkz. [kutulama ve kutudan](./programming-guide/types/boxing-and-unboxing.md )çıkarma.  
   
-Kullandığınız [yapı](./language-reference/keywords/struct.md) kendi özel değer türlerinizi oluşturmak için anahtar sözcüğü. Genellikle, bir yapının bir kapsayıcı gibi küçük bir ilişkili değişken kümesi için aşağıdaki örnekte gösterildiği gibi kullanılır:  
+Kendi özel değer türlerinizi oluşturmak için [struct](./language-reference/keywords/struct.md) anahtar sözcüğünü kullanırsınız. Genellikle, bir yapı aşağıdaki örnekte gösterildiği gibi küçük bir ilgili değişkenler kümesi için kapsayıcı olarak kullanılır:  
   
 [!code-csharp[Struct Keyword](../../samples/snippets/csharp/concepts/structs/struct-keyword.cs)]  
   
-.NET Framework içindeki değer türleri hakkında daha fazla bilgi için bkz. [ortak tür sistemi](../standard/common-type-system.md).  
+.NET Framework değer türleri hakkında daha fazla bilgi için bkz. [ortak tür sistemi](../standard/common-type-system.md).  
     
-Yapılar sınıfları daha sınırlı olmasına karşın yapılar sınıfları, aynı söz dizimini çoğunu paylaşır:  
+Yapılar sınıflarla aynı sözdiziminin çoğunu paylaşır, ancak yapılar sınıflardan daha sınırlıdır:  
   
-- Alanlar olarak bildirilmedikleri sürece bir yapının bildirimi içinde başlatılamaz `const` veya `static`.  
+- Bir struct bildiriminde, `const` veya `static` olarak belirtilmedikçe alanlar başlatılamaz.  
   
-- Bir yapı, parametresiz bir oluşturucu (parametresiz bir oluşturucu) veya bir sonlandırıcı bildiremezsiniz.  
+- Struct parametresiz bir Oluşturucu (parametresiz bir Oluşturucu) veya sonlandırıcısı bildiremez.  
   
-- Yapılar, atamaya bağlı kopyalanır. Bir yapı için yeni bir değişken atandığında, tüm verileri kopyalanır ve yeni bir kopyasını değişiklik özgün kopya verileri değiştirmez. Bu, sözlük < string, myStruct > gibi değer türlerinin koleksiyonları ile çalışırken unutmamak önemlidir.  
+- Yapılar atamaya kopyalanır. Bir yapı yeni bir değişkene atandığında, tüm veriler kopyalanır ve yeni kopyada yapılan değişiklikler özgün kopyanın verilerini değiştirmez. Bu, sözlük < dize, myStruct > gibi değer türlerinin koleksiyonlarıyla çalışırken unutmamak önemlidir.  
   
-- Yapılar değer türüdür ve sınıflar, başvuru türleridir.  
+- Yapılar, değer türlerdir ve sınıflardır başvuru türleridir.  
   
-- Sınıflardan farklı olarak, yapılar kullanmadan oluşturulabilir bir `new` işleci.  
+- Sınıfların aksine, yapılar `new` işleci kullanılmadan örneklenebilir.  
   
-- Yapılar parametrelerine sahip oluşturucular bildirebilirsiniz.  
+- Yapılar, parametreleri olan oluşturucular bildirebilir.  
   
-- Bir yapı, başka bir yapı veya sınıfından devralamaz ve temel bir sınıfı olamaz. Tüm yapıları doğrudan devralan <xref:System.ValueType>, işlevinden devralan <xref:System.Object>.  
+- Yapı, başka bir struct veya sınıftan devralınabilir ve bir sınıfın temeli olamaz. Tüm yapılar, <xref:System.Object> ' den devralan <xref:System.ValueType> ' dan devralır.  
   
-- Bir yapı, arabirim uygulayabilir.
+- Bir struct, arabirimler uygulayabilir.
 
-## <a name="literal-values"></a>Değişmez değerler  
-C# dilinde değişmez değerler derleyiciden bir tür alır. Sayı sonuna bir harf ekleyerek sayısal değişmez değerin nasıl yazılacağını belirtebilirsiniz. Örneğin, 4.56 değerinin kaydırma olarak ele alınması gerektiğini belirtmek için bir "f" veya "F" sayı sonra Ekle: `4.56f`. Hiçbir harf eklenirse, derleyici çıkarımlar `double` değişmez değer türü. Hangi belirtilebilen türler harf sonekleri daha fazla bilgi için her bir türe ilişkin başvuru sayfalarına bakın [değer türleri](./language-reference/keywords/value-types.md).  
+## <a name="literal-values"></a>Değişmez değerler
+
+' C#De, değişmez değerler derleyicisinden bir tür alır. Sayının sonuna bir harf ekleyerek sayısal bir sabit değerin nasıl yazılması gerektiğini belirtebilirsiniz. Örneğin, 4,56 değerinin bir float olarak değerlendirilip değerlendirilmeyeceğini belirtmek için, sayının sonuna bir "f" veya "F" ekleyin: `4.56f`. Hiçbir harf eklenyoksa, derleyici değişmez değer için `double` türünü çıkaracaktır. Hangi türlerin harf sonekleriyle belirtibileceği hakkında daha fazla bilgi için bkz. [değer türlerinde](./language-reference/keywords/value-types.md)bağımsız türler için başvuru sayfaları.  
   
-Değişmez değerler olduğu ve tüm türler nihai olarak türetmek için gelen <xref:System.Object>, yazabilir ve aşağıdaki gibi kodu derleyin:  
+Değişmez değerler yazıldığı ve tüm türlerin sonunda <xref:System.Object> ' dan türetiğinden, aşağıdaki gibi bir kod yazabilir ve derleyebilirsiniz:  
   
 [!code-csharp[Literal Values](../../samples/snippets/csharp/concepts/structs/literals.cs)]
 
-Son iki örnekler C# 7.0 sunulan dil özellikleri gösterir. İlk olarak bir alt çizgi karakteri kullanmanıza olanak tanır bir *basamak ayıracı* sayısal değişmez değerleri içinde. Bunları okunabilirliği artırmak için basamakların arasında istediğiniz yere koyabilirsiniz. Değerin üzerinde etkiye sahiptirler.
+Son iki örnekte 7,0 ' de C# tanıtılan dil özellikleri gösterilmektedir. İlki, sayısal değişmez değerler içinde *rakam ayırıcısı* olarak bir alt çizgi karakterini kullanmanıza olanak sağlar. Okunabilirliği artırmak için bunları basamaklar arasında istediğiniz yere yerleştirebilirsiniz. Değer üzerinde hiçbir etkisi yoktur.
 
-İkinci gösterir *ikili sabit dizeler*, onaltılık gösterimini kullanmak yerine doğrudan bit desenleri belirtmek sağlar.
+İkincisi, onaltılık Gösterim kullanmak yerine doğrudan bit desenleri belirtmenize imkan tanıyan *ikili sabit değerleri*gösterir.
 
-## <a name="nullable-types"></a>Boş değer atanabilir tipler  
-Sıradan değer türleri değerine sahip [null](./language-reference/keywords/null.md). Ancak, boş değer atanabilen değer türleri ekleyerek oluşturabileceğiniz bir **?** sonra türü. Örneğin, **int?** olduğu bir **int** değeri de olabilir bir tür [null](./language-reference/keywords/null.md). CTS içinde boş değer atanabilir türler genel yapı türünün örnekleridir <xref:System.Nullable%601>. Boş değer atanabilir türler için ve veritabanlarına sayı değerleri null olabilir veri geçirirken özellikle kullanışlıdır. Daha fazla bilgi için [boş değer atanabilir türler (C# programlama Kılavuzu)](./programming-guide/nullable-types/index.md).
+## <a name="nullable-value-types"></a>Null yapılabilir değer türleri
+
+Sıradan değer türlerinin değeri [null](language-reference/keywords/null.md)olamaz. Ancak, türden sonra `?` ' ı birleştirerek null yapılabilir değer türleri oluşturabilirsiniz. Örneğin, `int?`, [null](./language-reference/keywords/null.md)değeri de olan bir `int` türüdür. Null yapılabilir değer türleri, <xref:System.Nullable%601> genel yapı türünün örnekleridir. Null olabilen değer türleri, genellikle sayısal değerlerin null veya tanımsız olabileceği veritabanlarına veri geçirirken faydalıdır. Daha fazla bilgi için bkz. [Nullable değer türleri](programming-guide/nullable-types/index.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

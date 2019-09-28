@@ -8,44 +8,48 @@ helpviewer_keywords:
 - Call statement [Visual Basic]
 - procedures [Visual Basic], calling
 ms.assetid: e5b31571-6867-406f-b8e7-a3f9aae4723a
-ms.openlocfilehash: 755443a99a1ad8b0430a76d2dba1ff27472d4c9d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: af0b62d6cfacbcf94f527e049e07e51bf496a6cf
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945073"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71392752"
 ---
 # <a name="call-statement-visual-basic"></a>Call Deyimi (Visual Basic)
-Aktarımı denetlemek için bir `Function`, `Sub`, veya dinamik bağlantı kitaplığı (DLL) yordam.  
-  
-## <a name="syntax"></a>Sözdizimi  
-  
-```  
-[ Call ] procedureName [ (argumentList) ]  
-```  
-  
-## <a name="parts"></a>Bölümler  
+
+Denetimi bir `Function`, `Sub` veya dinamik bağlantı kitaplığı (DLL) yordamına aktarır.
+
+## <a name="syntax"></a>Sözdizimi
+
+```vb
+[ Call ] procedureName [ (argumentList) ]
+```
+
+## <a name="parts"></a>Bölümler
+
 |||
 |---|---|
 |`procedureName`|Gerekli. Çağrılacak yordamın adı.|
-|`argumentList`|İsteğe bağlı. Değişkenlerin veya onu çağrıldığında yönteme bağımsız değişkenlerini temsil eden ifadelerin listesi. Birden çok bağımsız değişkeni virgülle ayrılır. Eklerseniz `argumentList`, parantez içine almalısınız.|
+|`argumentList`|İsteğe bağlı. Çağrıldığında yordama geçirilen bağımsız değişkenleri temsil eden değişkenlerin veya ifadelerin listesi. Birden çok bağımsız değişken virgülle ayrılır. @No__t-0 eklerseniz, parantez içine almanız gerekir.|
 |||
   
-## <a name="remarks"></a>Açıklamalar  
- Kullanabileceğiniz `Call` bir yordamı çağırdığınızda anahtar sözcüğü. Yordam çağrıları için bu anahtar sözcüğünü kullanmanız gerekmez.  
-  
- Tipik olarak kullandığınız `Call` adlı ifade bir tanımlayıcıyla başlatılamadığında anahtar sözcüğü. Kullanım `Call` anahtar sözcüğü diğer kullanımlar için önerilmez.  
-  
- Yordamı bir değer döndürürse `Call` deyimi atar.  
-  
-## <a name="example"></a>Örnek  
- Aşağıdaki kod iki örnek gösterir. burada `Call` bir yordam çağırmak anahtar sözcüğü gereklidir. Örneklerin her ikisi de adlı ifade bir tanımlayıcı ile başlamıyor.  
-  
+## <a name="remarks"></a>Açıklamalar
+
+ Bir yordamı çağırdığınızda `Call` anahtar sözcüğünü kullanabilirsiniz. Çoğu yordam çağrısı için bu anahtar sözcüğünü kullanmanız gerekmez.
+
+ Çağrılan ifade bir tanımlayıcı ile başlamadığınızda genellikle `Call` anahtar sözcüğünü kullanırsınız. Diğer kullanımlar için `Call` anahtar sözcüğünün kullanılması önerilmez.
+
+ Yordam bir değer döndürürse `Call` deyimleri onu atar.
+
+## <a name="example"></a>Örnek
+
+ Aşağıdaki kodda, bir yordamı çağırmak için `Call` anahtar sözcüğünün gerekli olduğu iki örnek gösterilmektedir. Her iki örnekte de çağrılan ifade bir tanımlayıcı ile başlamaz.
+
  [!code-vb[VbVbalrStatements#97](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#97)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Function Deyimi](../../../visual-basic/language-reference/statements/function-statement.md)
-- [Sub Deyimi](../../../visual-basic/language-reference/statements/sub-statement.md)
-- [Declare Deyimi](../../../visual-basic/language-reference/statements/declare-statement.md)
-- [Lambda İfadeleri](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
+- [Function Deyimi](function-statement.md)
+- [Sub Deyimi](sub-statement.md)
+- [Declare Deyimi](declare-statement.md)
+- [Lambda İfadeleri](../../programming-guide/language-features/procedures/lambda-expressions.md)
