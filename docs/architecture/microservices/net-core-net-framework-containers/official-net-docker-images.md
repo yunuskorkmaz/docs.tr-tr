@@ -2,18 +2,18 @@
 title: Resmi .NET Docker görüntüleri
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | Resmi .NET Docker görüntüleri
 ms.date: 01/07/2019
-ms.openlocfilehash: 749485bfe07e0245493da67af915805f644a1897
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 43b2f47912e38e99926d7f06c3cda72f17d0e3fc
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71039631"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71353871"
 ---
 # <a name="official-net-docker-images"></a>Resmi .NET Docker görüntüleri
 
 Resmi .NET Docker görüntüleri, Microsoft tarafından oluşturulan ve iyileştirilen Docker görüntüleridir. Bunlar, [Docker Hub](https://hub.docker.com/u/microsoft/)'daki Microsoft depolarında herkese açık bir şekilde sunulmaktadır. Her bir depo, .NET sürümlerine bağlı olarak birden çok görüntü içerebilir ve işletim sistemi ve sürümlere (Linux de, Linux alçam, Windows nano Server, Windows Server Core vb.) bağlıdır.
 
-.NET Core 2,1 sürümünden itibaren, ASP.NET Core dahil olmak üzere tüm .NET Core görüntüleri .NET Core görüntü deposundaki Docker Hub 'ında bulunabilir: <https://hub.docker.com/\_/microsoft-dotnet-core/>.
+.NET Core 2,1 sürümünden itibaren, ASP.NET Core dahil olmak üzere tüm .NET Core görüntüleri .NET Core görüntü deposundaki Docker Hub 'ında bulunabilir: <https://hub.docker.com/_/microsoft-dotnet-core/>.
 
 Çoğu görüntü deposu, yalnızca belirli bir çerçeve sürümü değil, aynı zamanda bir işletim sistemi (Linux veya Windows sürümü) seçmenize yardımcı olmak için kapsamlı etiketleme sağlar.
 
@@ -43,11 +43,11 @@ Bu iyileştirilmiş görüntüde yalnızca, uygulamayı çalıştırmak için ge
 
 Docker Hub 'ında .NET görüntü depoları araştırdığınızda, etiketlerle sınıflandırılan veya işaretli birden çok görüntü sürümü bulacaksınız. Bu Etiketler, ihtiyacınız olan sürüme bağlı olarak, aşağıdaki tabloda olduğu gibi, hangisinin kullanılacağına karar vermenize yardımcı olur:
 
-| Görüntü | Açıklamalar |
+| Image | Açıklamalar |
 |-------|----------|
 | mcr.microsoft.com/dotnet/core/aspnet:**2,2** | ASP.NET Core, yalnızca çalışma zamanı ve ASP.NET Core iyileştirmeleri, Linux ve Windows 'da (çoklu mimari) |
 | mcr.microsoft.com/dotnet/core/sdk:**2,2** | .NET Core, SDK 'lar dahil, Linux ve Windows üzerinde (çoklu mimari) |
 
 > [!div class="step-by-step"]
-> [Önceki](net-container-os-targets.md)İleri
-> [](../architect-microservice-container-applications/index.md)
+> [Önceki](net-container-os-targets.md)
+> [İleri](../architect-microservice-container-applications/index.md)
