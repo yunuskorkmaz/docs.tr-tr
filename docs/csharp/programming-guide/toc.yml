@@ -31,7 +31,7 @@
       href: generics/
     - name: Ad Alanları
       href: namespaces/
-    - name: Boş Değer Atanabilir Tipler
+    - name: Boş değer atanabilen değer türleri
       href: nullable-types/
     - name: Güvenli Olmayan Kod ve İşaretçiler
       href: unsafe-code-pointers/
