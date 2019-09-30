@@ -151,7 +151,7 @@
   items:
     - name: .NET Core hakkında
       href: core/about.md
-    - name: Başlarken
+    - name: Kullanmaya başlayın
       href: core/get-started.md
       items:
         - name: 'C# ve Visual Studio Code kullanmaya başlama'
@@ -302,7 +302,7 @@
           href: /visualstudio/test/live-unit-testing-start
     - name: Sürekli Tümleştirme
       href: core/tools/using-ci-with-cli.md
-    - name: Sürüm oluşturma
+    - name: Sürüm Oluşturma
       href: core/versions/index.md
       items:
         - name: .NET Core sürüm seçimi
@@ -317,13 +317,18 @@
       items:
         - name: Genel Bakış
           href: core/tools/index.md
-        - name: Genel Araçlar
+        - name: Araçlar
           expanded: true
           items:
-            - name: Genel Bakış
-              href: core/tools/global-tools.md
-            - name: Genel Araç Oluşturma
-              href: core/tools/global-tools-how-to-create.md
+            - name: Genel Araçlar
+              expanded: true
+              items:
+                - name: Genel Bakış
+                  href: core/tools/global-tools.md
+                - name: Genel Araç Oluşturma
+                  href: core/tools/global-tools-how-to-create.md
+            - name: Araç kullanım sorunlarını giderme
+              href: core/tools/troubleshoot-usage-issues.md
         - name: Yükseltilmiş erişim
           href: core/tools/elevated-access.md
         - name: Genişletilebilirlik Modeli
@@ -703,7 +708,7 @@
           href: csharp/programming-guide/interop/index.md
         - name: Kodunuzu belgeleme
           href: csharp/codedoc.md
-        - name: Sürüm oluşturma
+        - name: Sürüm Oluşturma
           href: csharp/versioning.md
     - name: 'C# Kullanımı Hakkındaki Konular'
       items:
@@ -1430,13 +1435,13 @@
               href: visual-basic/language-reference/modifiers/protected.md
             - name: Protected Friend
               href: visual-basic/language-reference/modifiers/protected-friend.md
-            - name: Genel
+            - name: Ortak
               href: visual-basic/language-reference/modifiers/public.md
             - name: ReadOnly
               href: visual-basic/language-reference/modifiers/readonly.md
             - name: Shadows
               href: visual-basic/language-reference/modifiers/shadows.md
-            - name: Paylaşımlı
+            - name: Shared
               href: visual-basic/language-reference/modifiers/shared.md
             - name: Statik
               href: visual-basic/language-reference/modifiers/static.md
@@ -1791,7 +1796,7 @@
                   href: visual-basic/language-reference/statements/with-end-with-statement.md
                 - name: Yield Deyimi
                   href: visual-basic/language-reference/statements/yield-statement.md
-            - name: Yan tümceler
+            - name: Tümceler
               href: visual-basic/language-reference/statements/clauses.md
               items:
                 - name: Alias Yan Tümcesi
