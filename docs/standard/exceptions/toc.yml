@@ -11,6 +11,8 @@
       href: how-to-explicitly-throw-exceptions.md
     - name: 'Nasıl yapılır: Kullanıcı Tanımlı Özel Durumlar Oluşturma'
       href: how-to-create-user-defined-exceptions.md
+    - name: 'Nasıl yapılır: yerelleştirilmiş özel durum iletileriyle kullanıcı tanımlı özel durumlar oluşturma'
+      href: how-to-create-localized-exception-messages.md
     - name: Kullanıcı Tarafından Filtrelenmiş Özel Durum İşleyicilerini Kullanma
       href: using-user-filtered-exception-handlers.md
     - name: 'Nasıl yapılır: Finally Blokları Kullanma'
