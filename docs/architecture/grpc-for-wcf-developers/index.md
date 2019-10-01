@@ -1,20 +1,22 @@
 ---
 title: WCF geliştiricileri için ASP.NET Core gRPC-WCF geliştiricileri için gRPC
-description: YAZILACAK
+description: YAZıLACAK
 author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 7d02d7914aed39613b4a41da55515df80abddfe8
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: dc39fc96e7154fb50acd0b65a58586b3fa12ab50
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71184451"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71696914"
 ---
-# <a name="aspnet-core-grpc-for-wcf-developers"></a>WCF geliştiricileri için ASP.NET Core gRPC
+# <a name="aspnet-core-grpc-for-wcf-developers"></a>WCF Geliştiricileri için ASP.NET Core gRPC
+
+[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 ![kapak resmi](./media/cover.png)
 
-YAYIMLAYAN
+YAYıMLAYAN
 
 Microsoft Geliştirici bölümü, .NET ve Visual Studio ürün ekipleri
 
@@ -32,9 +34,9 @@ Bu kitap, "olduğu gibi" verilmiştir ve yazarın görünümlerini ve opnons 'yi
 
 Burada gösterilen bazı örnekler yalnızca gösterim amaçlıdır ve hayal ürünüdür. Hiçbir gerçek ilişkilendirme veya bağlantı amaçlanmaz veya çıkarsanmamalıdır.
 
-Microsoft ve "ticari markalar" https://www.microsoft.com Web sayfasında listelenen ticari markalar, Microsoft şirketler grubunun ticari markalarıdır.
+Microsoft ve "ticari markalar" Web sayfasında https://www.microsoft.com konumunda listelenen ticari markalar, Microsoft şirketler grubunun ticari markalarıdır.
 
-Docker balina logosu, Docker, Inc 'nin tescilli ticari markasıdır. İzin tarafından kullanılır.
+Docker balina logosu,, izin tarafından kullanılan Docker, Inc. ' in tescilli ticari markasıdır.
 
 Diğer tüm işaretler ve amblemler kendi sahiplerinin mülkiyetindedir.
 

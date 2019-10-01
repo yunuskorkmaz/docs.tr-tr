@@ -1,23 +1,25 @@
 ---
-title: ASP.NET Web Forms geliştiricileri için Blazor
+title: ASP.NET Web Forms Geliştiricileri için Blazor
 description: Basit ve tanıdık bir şekilde Blazor ve .NET Core kullanarak .NET ile tam yığın Web uygulamaları oluşturmayı öğrenin.
 author: danroth27
 ms.author: daroth
 ms.date: 09/11/2019
-ms.openlocfilehash: a80483f6a1f1cb9e5a3e2ffff18cbd59c5b67af3
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 936f85d4fda9c5396a6586810735877488226157
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71183800"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71696925"
 ---
-# <a name="blazor-for-aspnet-web-forms-developers"></a>ASP.NET Web Forms geliştiricileri için Blazor
+# <a name="blazor-for-aspnet-web-forms-developers"></a>ASP.NET Web Forms Geliştiricileri için Blazor
+
+[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 ![Sunucusuz uygulamalar eKitap kapağını gösteren ekran görüntüsü.](./media/index/blazor-for-web-forms-developers-cover.png)
 
-> INDIRME:<https://aka.ms/blazor-ebook>
+> Şu adresten INDIRILEBILIR: <https://aka.ms/blazor-ebook>
 
-YAYIMLAYAN
+YAYıMLAYAN
 
 Microsoft Geliştirici bölümü, .NET ve Visual Studio ürün ekipleri
 
@@ -35,7 +37,7 @@ Bu kitap, "olduğu gibi" verilmiştir ve yazarın görünümlerini ve opnons 'yi
 
 Burada gösterilen bazı örnekler yalnızca gösterim amaçlıdır ve hayal ürünüdür. Hiçbir gerçek ilişkilendirme veya bağlantı amaçlanmaz veya çıkarsanmamalıdır.
 
-Microsoft ve "ticari markalar" <https://www.microsoft.com> Web sayfasında listelenen ticari markalar, Microsoft şirketler grubunun ticari markalarıdır.
+Microsoft ve "ticari markalar" Web sayfasında <https://www.microsoft.com> konumunda listelenen ticari markalar, Microsoft şirketler grubunun ticari markalarıdır.
 
 Mac ve macOS, Apple Inc. ' in ticari markalarıdır.
 
@@ -73,7 +75,7 @@ Bu kitap, kapsamlı bir geçiş kılavuzu değil, Blazor 'e giriş niteliğinded
 
 ### <a name="additional-resources"></a>Ek kaynaklar
 
-Resmi Blazor ana sayfası ve belgelerini adresinde <https://blazor.net>bulabilirsiniz.
+Resmi Blazor giriş sayfasını ve belgeleri <https://blazor.net> ' da bulabilirsiniz.
 
 ## <a name="send-your-feedback"></a>Geri bildiriminizi gönderin
 

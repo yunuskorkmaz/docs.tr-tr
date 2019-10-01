@@ -3,18 +3,20 @@ title: Azure için Cloud Native .NET uygulamaları tasarlama
 description: Kapsayıcılardan, mikro hizmetlerden ve sunucusuz özelliklerden yararlanarak bulutta yerel uygulamalar oluşturmaya yönelik bir kılavuz.
 author: ardalis
 ms.date: 03/07/2019
-ms.openlocfilehash: 67e235b051702308d2455b2501bfb59a4317635b
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 7f14a690d0153edc43f0ce7f4e91c9e9cd2c6858
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71214172"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71696787"
 ---
 # <a name="architecting-cloud-native-net-applications-for-azure"></a>Azure için Cloud Native .NET uygulamaları tasarlama
 
+[!INCLUDE [book-preview](../../../includes/book-preview.md)]
+
 ![kapak resmi](./media/cover.png)
 
-YAYIMLAYAN
+YAYıMLAYAN
 
 Microsoft Geliştirici bölümü, .NET ve Visual Studio ürün ekipleri
 
@@ -32,11 +34,11 @@ Bu kitap, "olduğu gibi" verilmiştir ve yazarın görünümlerini ve opnons 'yi
 
 Burada gösterilen bazı örnekler yalnızca gösterim amaçlıdır ve hayal ürünüdür. Hiçbir gerçek ilişkilendirme veya bağlantı amaçlanmaz veya çıkarsanmamalıdır.
 
-Microsoft ve "ticari markalar" https://www.microsoft.com Web sayfasında listelenen ticari markalar, Microsoft şirketler grubunun ticari markalarıdır.
+Microsoft ve "ticari markalar" Web sayfasında https://www.microsoft.com konumunda listelenen ticari markalar, Microsoft şirketler grubunun ticari markalarıdır.
 
 Mac ve macOS, Apple Inc. ' in ticari markalarıdır.
 
-Docker balina logosu, Docker, Inc 'nin tescilli ticari markasıdır. İzin tarafından kullanılır.
+Docker balina logosu,, izin tarafından kullanılan Docker, Inc. ' in tescilli ticari markasıdır.
 
 Diğer tüm işaretler ve amblemler kendi sahiplerinin mülkiyetindedir.
 

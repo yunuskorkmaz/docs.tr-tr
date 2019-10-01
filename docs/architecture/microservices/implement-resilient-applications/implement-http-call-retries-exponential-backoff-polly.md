@@ -2,12 +2,12 @@
 title: Polly üstel geri alma ile HTTP çağrı yeniden denemelerini uygulama
 description: Polly ve HttpClientFactory ile HTTP başarısızlıklarını nasıl ele alabileceğinizi öğrenin.
 ms.date: 01/07/2019
-ms.openlocfilehash: de1dad44b1ddc7b04438fb380f240d3be33bbb83
-ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
+ms.openlocfilehash: d5e0b6c830422990aaf1a5e3b6ae257eb3dae99c
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71331974"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71696909"
 ---
 # <a name="implement-http-call-retries-with-exponential-backoff-with-httpclientfactory-and-polly-policies"></a>HttpClientFactory ve Polly ilkeleriyle üstel geri alma ile HTTP çağrı yeniden denemeleri uygulayın
 
@@ -15,7 +15,7 @@ ms.locfileid: "71331974"
 
 Polly, esnekliği ve geçici hata işleme özellikleri sağlayan bir .NET kitaplığıdır. Yeniden deneme, devre kesici, Bulkhead yalıtımı, zaman aşımı ve geri dönüş gibi Polly ilkeler uygulayarak bu özellikleri uygulayabilirsiniz. Polly, .NET 4. x ve .NET Standard kitaplığı 1,0 (.NET Core ' u destekler) olarak hedefler.
 
-Ancak, HttpClient ile kendi özel kodunuzla Polly 'in kitaplığını kullanmak önemli ölçüde karmaşık olabilir. EShopOnContainers 'ın orijinal sürümünde, Polly tabanlı bir [ResilientHttpClient yapı taşı](https://github.com/dotnet-architecture/eShopOnContainers/commit/0c317d56f3c8937f6823cf1b45f5683397274815#diff-e6532e623eb606a0f8568663403e3a10) vardı. Ancak [Httpclientfactory](use-httpclientfactory-to-implement-resilient-http-requests.md)sürümü sayesınde dayanıklı http iletişimi, uygulama için çok daha basit hale gelmiştir, böylece, derleme bloğu eShopOnContainers 'dan kullanımdan kaldırılmıştır. 
+Ancak, HttpClient ile Polly 'in kitaplığını kullanmak için kendi özel kodunuzu yazmak önemli ölçüde karmaşık olabilir. EShopOnContainers 'ın orijinal sürümünde, Polly tabanlı bir [ResilientHttpClient yapı taşı](https://github.com/dotnet-architecture/eShopOnContainers/commit/0c317d56f3c8937f6823cf1b45f5683397274815#diff-e6532e623eb606a0f8568663403e3a10) vardı. Ancak [Httpclientfactory](use-httpclientfactory-to-implement-resilient-http-requests.md)sürümü sayesinde, çok daha basit hale gelmiştir ve derleme bloğunun eShopOnContainers 'dan kullanım dışı bırakılması. 
 
 Aşağıdaki adımlarda, önceki bölümde açıklanan HttpClientFactory ile tümleştirilen, http yeniden denemeleri nasıl kullanabileceğiniz gösterilmektedir.
 
@@ -76,7 +76,7 @@ Policy
 - **Polly (.NET esnekliği ve geçici hata işleme kitaplığı)**  
   <https://github.com/App-vNext/Polly>
 
-- **Marc Brooker. Den Rastgele bir işlem yapın @ no__t-0  
+- **Marc Brooker. Değişim: rastgele bir işlem yaparak daha Iyi hale getirme**  
   <https://brooker.co.za/blog/2015/03/21/backoff.html>
 
 >[!div class="step-by-step"]
