@@ -9,42 +9,42 @@ helpviewer_keywords:
 - TypeOf...Is expression
 - Is operator [Visual Basic]
 ms.assetid: 8045a6c8-2a83-45b6-ad47-d09a704c656d
-ms.openlocfilehash: a5481a9bce01e84ce4f078335c8cd15a747a3c51
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0351d224d9bf08a8f3ca74090de7b9c51c2c61bf
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69917213"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71701361"
 ---
 # <a name="is-operator-visual-basic"></a>Is İşleci (Visual Basic)
 İki nesne başvuru değişkenini karşılaştırır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```vb  
 result = object1 Is object2  
 ```  
   
 ## <a name="parts"></a>Bölümler  
  `result`  
- Gerekli. Herhangi `Boolean` bir değer.  
+ Gerekli. Herhangi bir `Boolean` değeri.  
   
  `object1`  
- Gerekli. Herhangi `Object` bir ad.  
+ Gerekli. Herhangi bir `Object` adı.  
   
  `object2`  
- Gerekli. Herhangi `Object` bir ad.  
+ Gerekli. Herhangi bir `Object` adı.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `Is` İşleci iki nesne başvurusunun aynı nesneye başvurmasını belirler. Ancak, değer karşılaştırmaları gerçekleştirmez. `object1` Ve her`object2` ikisi de`result` tam aynınesne`result` örneğine `True` başvurur,`False`ise, olur.  
+ @No__t-0 işleci, iki nesne başvurusunun aynı nesneye başvurmasını belirler. Ancak, değer karşılaştırmaları gerçekleştirmez. @No__t-0 ve `object2` her ikisi de tam aynı nesne örneğine başvurur, `result` `True`; Aksi takdirde, @no__t 4 `False` ' tir.  
   
- `Is`Ayrıca, `TypeOf` `TypeOf`... yapmak için anahtar sözcükle birlikte kullanılabilir. `Is` bir nesne değişkeninin bir veri türüyle uyumlu olup olmadığını test eden ifadesi.  
+ `Is`, bir nesne değişkeninin bir veri türüyle uyumlu olup olmadığını test eden `TypeOf`... `Is` ifadesi oluşturmak için `TypeOf` anahtar sözcüğüyle birlikte da kullanılabilir.  
   
 > [!NOTE]
-> `Is` Anahtar sözcüğü, [Select... içinde de kullanılır. Case bildirisi](../../../visual-basic/language-reference/statements/select-case-statement.md).  
+> @No__t-0 anahtar sözcüğü, Select... içinde de kullanılır [. Case bildirisi](../../../visual-basic/language-reference/statements/select-case-statement.md).  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, nesne başvuruları `Is` çiftlerini karşılaştırmak için işlecini kullanır. Sonuçlar, iki nesnenin aynı olup `Boolean` olmadığını temsil eden bir değere atanır.  
+ Aşağıdaki örnek, nesne başvuruları çiftlerini karşılaştırmak için `Is` işlecini kullanır. Sonuçlar, iki nesnenin aynı olup olmadığını gösteren `Boolean` değerine atanır.  
   
  [!code-vb[VbVbalrOperators#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#27)]  
   

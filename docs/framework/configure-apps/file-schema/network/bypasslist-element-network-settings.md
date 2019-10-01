@@ -8,20 +8,20 @@ helpviewer_keywords:
 - bypasslist element
 - <bypasslist> element
 ms.assetid: 124446b7-abb1-4e5e-a492-b64398f268f1
-ms.openlocfilehash: bd746f07b4c4eb08bf34b01d555b5799d9af0cf3
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 1dda43be8c0e0c94bdf7b57b67aa4d403b547f97
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69927470"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699549"
 ---
-# <a name="bypasslist-element-network-settings"></a>\<BypassList > öğesi (ağ ayarları)
+# <a name="bypasslist-element-network-settings"></a>\<bypasslist > öğesi (ağ ayarları)
 Proxy kullanmayan adresleri tanımlayan normal ifadeler kümesi sağlar.  
   
- \<Yapılandırma >  
-\<system.net>  
-\<defaultProxy >  
-\<BypassList >  
+[ **\<Yapılandırma >** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **@no__t -4system. net >** ](system-net-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<defaultProxy >** ](defaultproxy-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<bypasslist >**  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -51,9 +51,9 @@ Proxy kullanmayan adresleri tanımlayan normal ifadeler kümesi sağlar.
 |[defaultProxy](defaultproxy-element-network-settings.md)|Köprü Metni Aktarım Protokolü (HTTP) proxy sunucusunu yapılandırır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Atlama listesi, proxy sunucu aracılığıyla değil, doğrudan erişim <xref:System.Net.WebRequest> sağlayan URI 'leri tanımlayan normal ifadeler içerir.  
+ Atlama listesi, proxy sunucu aracılığıyla değil, <xref:System.Net.WebRequest> örneklerinin doğrudan erişebileceği URI 'Leri tanımlayan normal ifadeler içerir.  
   
- Bu öğe için bir normal ifade belirtirken dikkatli olmanız gerekir. "[A-z] +\\. contoso\\. com" normal ifadesi, contoso.com etki alanındaki herhangi bir konakla eşleşir, ancak aynı zamanda contoso.com.cpandl.com etki alanındaki herhangi bir konakla eşleşir. Yalnızca contoso.com etki alanındaki bir konağı eşleştirmek için bir tutturucu ("$"): "[a-z] +\\. contoso\\. com $" kullanın.  
+ Bu öğe için bir normal ifade belirtirken dikkatli olmanız gerekir. "[A-z] + @no__t -0.contoso\\.com" normal ifadesi contoso.com etki alanındaki herhangi bir konakla eşleşir, ancak aynı zamanda contoso.com.cpandl.com etki alanındaki herhangi bir konakla eşleşir. Yalnızca contoso.com etki alanındaki bir konağı eşleştirmek için bir tutturucu ("$"): "[a-z] + @no__t -0.contoso\\.com $" kullanın.  
   
  Normal ifadeler hakkında daha fazla bilgi için bkz. [Normal ifadeleri .NET Framework](../../../../standard/base-types/regular-expressions.md).  
   

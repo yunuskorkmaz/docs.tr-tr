@@ -10,20 +10,20 @@ helpviewer_keywords:
 - <remove> element, webRequestModules
 - <webRequestModules>, remove element
 ms.assetid: dd84d2fe-2f4f-457a-9d3c-441d0d21cc10
-ms.openlocfilehash: 20a586e945a889d1fd8a8d4c5c09c8b790c56fc3
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: f8209ea89ac8cd214389feddee8c475e10bc939a
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69664025"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71697813"
 ---
-# <a name="remove-element-for-webrequestmodules-network-settings"></a>\<webRequestModules için > öğesini kaldır (ağ ayarları)
+# <a name="remove-element-for-webrequestmodules-network-settings"></a>webRequestModules için \<remove > öğesi (ağ ayarları)
 Uygulamadan özel bir Web istek modülünü kaldırır.  
   
- \<Yapılandırma >  
-\<system.net>  
-\<webRequestModules >  
-\<> Kaldır  
+[ **\<Yapılandırma >** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **@no__t -4system. net >** ](system-net-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<webRequestModules >** ](webrequestmodules-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<remove >**  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -52,16 +52,16 @@ Uygulamadan özel bir Web istek modülünü kaldırır.
 |[webRequestModules](webrequestmodules-element-network-settings.md)|Ağ konaklarından bilgi istemek için kullanılacak modülleri belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `remove` Öğesi, belirtilen URI ön eki için kayıtlı Web isteği modülünü kaldırır.  
+ @No__t-0 öğesi, belirtilen URI ön eki için kayıtlı Web isteği modülünü kaldırır.  
   
- `prefix` Özniteliğin değeri geçerli bir URI 'nin baştaki karakterleri olmalıdır--örneğin, "`http`" veya "`http://www.contoso.com`".  
+ @No__t-0 özniteliğinin değeri, geçerli bir URI 'nin baştaki karakterleri olmalıdır--örneğin, "`http`" veya "`http://www.contoso.com`".  
   
 ## <a name="configuration-files"></a>Yapılandırma Dosyaları  
  Bu öğe, uygulama yapılandırma dosyasında veya makine yapılandırma dosyasında (Machine. config) kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
 
-Aşağıdaki örnek, HTTP için mevcut Web isteği modülünü kaldırır ve ardından HTTP istekleri `www.contoso.com`için yeni bir özel Web istek modülünü kaydeder.
+Aşağıdaki örnek, HTTP için mevcut Web isteği modülünü kaldırır ve sonra `www.contoso.com` ' a HTTP istekleri için yeni bir özel Web isteği modülü kaydeder.
   
 ```xml  
 <configuration>  

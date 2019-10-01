@@ -22,86 +22,86 @@ helpviewer_keywords:
 - data [Visual Basic], string comparisons
 - string comparison [Visual Basic], Like operators
 ms.assetid: 966283ec-80e2-4294-baa8-c75baff804f9
-ms.openlocfilehash: 38e56b8c0ec6bab89052ee42a2cd9c24053c658e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 795ecc2e80d57af29ccd50c50d2dd209c6425e40
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61768335"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71701129"
 ---
 # <a name="like-operator-visual-basic"></a>Like İşleci (Visual Basic)
-Bir dizeyi bir desene göre karşılaştırır.  
+Bir dizeyi bir düzene göre karşılaştırır.  
 
 > [!IMPORTANT]
-> `Like` İşleci şu anda desteklenmiyor .NET Core ve .NET Standard projeleri.
+> @No__t-0 işleci Şu anda .NET Core ve .NET Standard projelerinde desteklenmez.
 
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```vb  
 result = string Like pattern  
 ```  
   
 ## <a name="parts"></a>Bölümler  
  `result`  
- Gerekli. Tüm `Boolean` değişkeni. Sonuç bir `Boolean` belirten değer olup olmadığını `string` karşılayan `pattern`.  
+ Gerekli. Herhangi bir `Boolean` değişkeni. Sonuç, `string` ' in `pattern` ' y i karşılayıp karşılamadığını belirten `Boolean` değeridir.  
   
  `string`  
- Gerekli. Tüm `String` ifade.  
+ Gerekli. Herhangi bir `String` ifadesi.  
   
  `pattern`  
- Gerekli. Tüm `String` ifade "Açıklamalar" içinde tanımlanan desen eşleştirme kuralları uyumludur  
+ Gerekli. "Açıklamalar" bölümünde açıklanan desenler ile eşleşen kurallara uyan herhangi bir `String` ifadesi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Varsa değerini `string` bulunan deseni karşılayan `pattern`, `result` olduğu `True`. Dizeyi bir desen karşılamaz, `result` olduğu `False`. Her iki `string` ve `pattern` boş dizeleri olan sonuç `True`.  
+ @No__t-0 ' daki değer `pattern` ' de bulunan bir düzene uygunsa, `result` `True` ' dir. Dize, kalıbı karşılamaz `result` `False` ' dir. Hem `string` hem de `pattern` dizeler boşsa, sonuç `True` olur.  
   
 ## <a name="comparison-method"></a>Karşılaştırma yöntemi  
- Davranışını `Like` işleci bağlıdır [seçenek karşılaştırma ifadesini](../../../visual-basic/language-reference/statements/option-compare-statement.md). Her kaynak dosyası için varsayılan dize karşılaştırma yöntemi: `Option Compare Binary`.  
+ @No__t-0 işlecinin davranışı [Seçenek karşılaştırma bildirimine](../../../visual-basic/language-reference/statements/option-compare-statement.md)bağlıdır. Her kaynak dosya için varsayılan dize karşılaştırma yöntemi `Option Compare Binary` ' dır.  
   
-## <a name="pattern-options"></a>Düzen Seçenekleri  
- Yerleşik bir desenle eşleşen dize karşılaştırmaları için çok yönlü bir araç sağlar. Desen eşleştirme özellikleri, her bir karakterle Eşleştir imkan tanır `string` belirli bir karakter, bir joker karakter, karakter listesini ya da bir karakter aralığı. Aşağıdaki tablo, izin verilen karakter gösterir `pattern` ve bunların eşleşmesi.  
+## <a name="pattern-options"></a>Model seçenekleri  
+ Yerleşik model eşleştirme, dize karşılaştırmaları için çok yönlü bir araç sağlar. Desenler ile eşleşen özellikler, `string` ' daki her karakteri belirli bir karakter, joker karakter, bir karakter listesi veya karakter aralığı ile eşleştirirken izin verir. Aşağıdaki tabloda `pattern` ' da izin verilen karakterler ve bunların eşleştikleri gösterilmektedir.  
   
-|Karakter `pattern`|Eşleştirme `string`|  
+|@No__t karakterler-0|@No__t eşleşme-0|  
 |-----------------------------|-------------------------|  
 |`?`|Herhangi bir tek karakter|  
 |`*`|Sıfır veya daha fazla karakter|  
 |`#`|Herhangi bir tek basamak (0 – 9)|  
-|`[charlist]`|Herhangi bir tek karakterle `charlist`|  
-|`[!charlist]`|Herhangi bir tek karakterle içinde değil `charlist`|  
+|`[charlist]`|@No__t-0 ' da herhangi bir tek karakter|  
+|`[!charlist]`|@No__t olmayan tek bir karakter-0|  
   
-## <a name="character-lists"></a>Karakter listeler  
- Bir veya daha fazla karakter grubu (`charlist`) parantezleri içine alınan (`[ ]`) herhangi bir tek karakterle eşleştirmek için kullanılan `string` basamak dahil olmak üzere neredeyse her karakter kodu içerebilir.  
+## <a name="character-lists"></a>Karakter listeleri  
+ Köşeli ayraçlar (`[ ]`) içinde bir veya daha fazla karakter (`charlist`) grubu, `string` ' deki herhangi bir karakteri eşleştirmek için kullanılabilir ve rakamlar dahil neredeyse tüm karakter kodlarını içerebilir.  
   
- Ünlem işareti (`!`) başında `charlist` karakterler dışında herhangi bir karakterin varsa bir eşleşme yapılan anlamına gelir `charlist` bulunur `string`. Köşeli ayraç içine kullanıldığında, ünlem kendisi ile eşleşir.  
+ @No__t-1 ' in başındaki bir ünlem işareti (`!`), `string` ' te `charlist` ' deki karakterler dışında herhangi bir karakter bulunursa bir eşleşme yapıldığı anlamına gelir. Köşeli ayraçlar dışında kullanıldığında, ünlem işareti kendisiyle eşleşir.  
   
 ## <a name="special-characters"></a>Özel Karakterler  
- Özel karakterleri sol köşeli ayraç eşleştirmek için (`[`), soru işareti (`?`), numara işareti (`#`) ve yıldız işareti (`*`), bunları köşeli ayraç içine alın. Sağ köşeli ayraç (`]`) içindeki bir grubun kendisi eşleştirmek için kullanılamaz ancak tek bir karakter olarak bir grubun dışına kullanılabilir.  
+ Sol köşeli ayraç (`[`), soru işareti (`?`), sayı işareti (`#`) ve yıldız işareti (`*`) eşleştirmek için, bu karakterleri köşeli ayraç içine alın. Sağ köşeli ayraç (`]`), bir grup içinde kendisiyle eşleşecek şekilde kullanılamaz, ancak tek bir karakter olarak bir grup dışında kullanılabilir.  
   
- Karakter dizisi `[]` sıfır uzunlukta bir dize olarak kabul edilir (`""`). Ancak, ayraç içine bir karakter listesinin bir parçası olamaz. Bir konumda olup olmadığını denetlemek istiyorsanız `string` birini içeren karakter veya hiçbir karakter grubu kullandığınız `Like` iki kez. Bir örnek için bkz [nasıl yapılır: Bir dizeyi belirli bir desene göre eşleştirme](../../../visual-basic/programming-guide/language-features/operators-and-expressions/how-to-match-a-string-against-a-pattern.md).  
+ @No__t-0 karakter sırası sıfır uzunluklu bir dize (`""`) olarak kabul edilir. Ancak, köşeli ayraç içine alınmış bir karakter listesinin parçası olamaz. @No__t-0 ' daki bir konumun bir karakter grubundan birini mi yoksa herhangi bir karakteri mi içerdiğini denetlemek istiyorsanız, `Like` ' i iki kez kullanabilirsiniz. Bir örnek için bkz. [nasıl yapılır: bir dizeyi bir düzene göre eşleştirme](../../../visual-basic/programming-guide/language-features/operators-and-expressions/how-to-match-a-string-against-a-pattern.md).  
   
-## <a name="character-ranges"></a>Karakter aralığı  
- Kullanarak bir tire (`–`) alt ve üst sınırları aralığını ayırmak için `charlist` da karakter aralığını belirtebilirsiniz. Örneğin, `[A–Z]` karaktere karşılık gelen yerleştirin, sonuçları bir eşleşme `string` aralığındaki herhangi bir karakter içeren `A`–`Z`, ve `[!H–L]` karaktere karşılık gelen konum, içinde bir eşleşme sonuçları izin verilen aralığın dışında herhangi bir karakter içeren `H`–`L`.  
+## <a name="character-ranges"></a>Karakter aralıkları  
+ Aralığın alt ve üst sınırlarını ayırmak için kısa çizgi (`–`) kullanarak, `charlist` bir karakter aralığı belirtebilir. Örneğin, `string` ' deki karşılık gelen karakter konumu, `A` – `Z` aralığında herhangi bir karakter içeriyorsa ve `[!H–L]`, karşılık gelen karakter konumu dışında herhangi bir karakter içeriyorsa, `[A–Z]` eşleşme ile sonuçlanır. Aralık `H` – `L`.  
   
- Karakter aralığı belirttiğinizde, en düşükten en yükseğe yüksek için sıralama düzeni, diğer bir deyişle, artan sırada görünmelidir. Bu nedenle, `[A–Z]` geçerli bir düzen olduğunu ancak `[Z–A]` değil.  
+ Bir karakter aralığı belirttiğinizde, bu karakterlerin artan sıralama düzeninde görünmesi gerekir, yani en küçükten en büyüğe. Bu nedenle, `[A–Z]` geçerli bir örüntü, ancak `[Z–A]` değildir.  
   
-### <a name="multiple-character-ranges"></a>Birden çok karakter aralıkları  
- Aynı karakterin konumu için birden çok aralık belirtmek için sınırlayıcılar aynı ayraçlar içine yerleştirin. Örneğin, `[A–CX–Z]` karaktere karşılık gelen yerleştirin, sonuçları bir eşleşme `string` ya da aralıktaki herhangi bir karakter içeren `A`–`C` veya aralığını `X`–`Z`.  
+### <a name="multiple-character-ranges"></a>Birden çok karakter aralığı  
+ Aynı karakter konumu için birden çok Aralık belirtmek için, bunları sınırlayıcılar olmadan aynı köşeli ayraç içine alın. Örneğin, `string` ' deki karşılık gelen karakter konumu `A` – `C` aralığında ya da `X` – `Z` aralığında herhangi bir karakter içeriyorsa `[A–CX–Z]` bir eşleşme ile sonuçlanır.  
   
 ### <a name="usage-of-the-hyphen"></a>Kısa çizgi kullanımı  
- Bir tire (`–`) (sonra bir ünlem işareti varsa) başında veya sonunda görünebilir `charlist` kendisini eşleştirilecek. Herhangi diğer konumda kısa çizgi, kısa çizgi her iki tarafındaki karakterleri tarafından ayrılmış karakter aralığı tanımlar.  
+ Bir tire (`–`) başlangıcında (bir ünlem işaretiyle, varsa) veya `charlist` ' in sonuna ile eşleşmek üzere görünebilir. Diğer herhangi bir konumda, tire, tirein her iki tarafındaki karakterlerle sınırlandırılmış bir karakter aralığı tanımlar.  
   
 ## <a name="collating-sequence"></a>Harmanlama sırası  
- Belirtilen bir aralıktaki anlamını tarafından belirlenen şekilde çalışma zamanında sıralama karakter bağlıdır `Option Compare` ve sistemin yerel ayarı kodu çalışıyor. İle `Option Compare Binary`, aralığın `[A–E]` eşleşen `A`, `B`, `C`, `D`, ve `E`. İle `Option Compare Text`, `[A–E]` eşleşen `A`, `a`, `À`, `à`, `B`, `b`, `C`, `c`, `D`, `d`, `E`, ve `e`. Aralığın eşleşmiyor `Ê` veya `ê` sıralama düzeninde vurgulanmamış karakterden sonra vurgulu karakterlerin collate olduğundan.  
+ Belirtilen bir aralığın anlamı, `Option Compare` ve kodun üzerinde çalıştığı sistemin yerel ayar ayarı tarafından belirlendiği şekilde, çalışma zamanında karakter sıralamasına bağlıdır. @No__t-0 ile `[A–E]` aralığı `A`, `B`, `C`, `D` ve `E` ile eşleşir. @No__t-0 ile `[A–E]` ile `A`, `a`, `À`, `à`, `B`, `b`, `C`, `c`, 0, 1, 2 ve 3 arasında eşleşir. @No__t-0 veya `ê` ile eşleşmiyor çünkü aksanlı karakterler sıralama düzeninde vurgusuz sonra harmanlandıktan sonra harmanlama.  
   
-## <a name="digraph-characters"></a>Digraph karakter  
- Bazı dillerde, iki ayrı karakterleri temsil alfabetik karakterler vardır. Örneğin, çeşitli diller karakter kullanın `æ` karakterleri temsil etmek için `a` ve `e` birlikte görüntülendiğinde. `Like` İşleci tek digraph karakter ve karakterlerin tek tek iki eşdeğer olduğunu algılar.  
+## <a name="digraph-characters"></a>Digraf karakterleri  
+ Bazı dillerde, iki ayrı karakteri temsil eden alfabetik karakterler vardır. Örneğin, birkaç dil `æ` karakterini `a` ve `e` karakterlerini göstermek için kullanır. @No__t-0 işleci, tek bir digraf karakterinin ve iki ayrı karakterin eşdeğer olduğunu algılar.  
   
- Sistem yerel ayarları digraph karakter kullanan bir dil belirtildiğinde, bir olayın ya da tek digraph karakterinin `pattern` veya `string` diğer dizede eşdeğer iki karakter dizisiyle eşleşir. Benzer şekilde, bir digraph karakter `pattern` parantezleri içine alınan (tek başına bir liste veya bir aralıktaki) eşdeğer iki karakter dizisi ile eşleşen `string`.  
+ Sistem yerel ayarları 'nda bir digraf karakteri kullanan bir dil belirtildiğinde, `pattern` veya `string` ' de tek bir digraf karakterinin bir oluşumu, diğer dizedeki eşdeğer iki karakterli sırayla eşleşir. Benzer şekilde, köşeli ayraçlar içinde `pattern` ' daki bir digraf karakteri (bir listede veya bir aralıkta), `string` ' deki eşdeğer iki karakterlik sırayla eşleşir.  
   
 ## <a name="overloading"></a>Aşırı Yükleme  
- `Like` İşleci olabilir *aşırı*, işleneni, sınıf veya yapı türüne sahip olduğunda bir sınıf veya yapı davranışını tanımlayabilirsiniz, anlamına gelir. Kodunuz bu tür bir sınıf veya yapı üzerinde bu işleç kullanıyorsa, yeniden tanımlanan davranışını anladığınızdan emin olun. Daha fazla bilgi için [işleç yordamları](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+ @No__t-0 işleci *aşırı*yüklenebilir, yani bir işlenen bu sınıf veya yapının türüne sahip olduğunda bir sınıf veya yapının davranışını yeniden tanımlayabileceği anlamına gelir. Kodunuz böyle bir sınıf veya yapıda bu işleci kullanıyorsa, yeniden tanımlanmış davranışını anladığınızdan emin olun. Daha fazla bilgi için bkz. [operatör yordamları](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Örnek  
- Bu örnekte `Like` çeşitli desenleri için dizeleri karşılaştırmak için işleci. Tarihinden itibaren bu sonuçları bir `Boolean` her dize deseni karşılayıp karşılamadığını belirten değişkeni.  
+ Bu örnek, dizeleri çeşitli desenlerle karşılaştırmak için `Like` işlecini kullanır. Sonuçlar, her bir dizenin bu kalıbı karşılayıp karşılamadığını belirten `Boolean` değişkenine gider.  
   
  [!code-vb[VbVbalrOperators#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#30)]  
   
@@ -110,8 +110,8 @@ result = string Like pattern
 - <xref:Microsoft.VisualBasic.Strings.InStr%2A>
 - <xref:Microsoft.VisualBasic.Strings.StrComp%2A>
 - [Karşılaştırma İşleçleri](../../../visual-basic/language-reference/operators/comparison-operators.md)
-- [Visual Basic'de İşleç önceliği](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [Visual Basic operatör önceliği](../../../visual-basic/language-reference/operators/operator-precedence.md)
 - [İşlevselliğe Göre Listelenmiş İşleçler](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
 - [Option Compare Deyimi](../../../visual-basic/language-reference/statements/option-compare-statement.md)
 - [İşleçler ve İfadeler](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
-- [Nasıl yapılır: Bir dizeyi belirli bir desene göre eşleştirme](../../../visual-basic/programming-guide/language-features/operators-and-expressions/how-to-match-a-string-against-a-pattern.md)
+- [Nasıl yapılır: Bir Dizeyi Belirli Bir Desene Göre Eşleştirme](../../../visual-basic/programming-guide/language-features/operators-and-expressions/how-to-match-a-string-against-a-pattern.md)

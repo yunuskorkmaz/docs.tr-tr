@@ -8,18 +8,18 @@ helpviewer_keywords:
 - mscorlib element
 - <mscorlib> element
 ms.assetid: d549668f-31f1-4b92-8021-a9135c09ca3c
-ms.openlocfilehash: c780087246ea91846896037a245b82493251e538
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4e2159cda5f35b5795804dede09ec17d07d71b23
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69921063"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699739"
 ---
-# <a name="mscorlib-element-for-cryptography-settings"></a>\<Şifreleme ayarları için mscorlib > öğesi
-Cryptographrivsettings > öğesini içerir. [ \<](cryptographysettings-element.md)  
+# <a name="mscorlib-element-for-cryptography-settings"></a>Şifreleme ayarları için \<mscorlib > öğesi
+[@No__t-1Cryptographyısettings > öğesini](cryptographysettings-element.md)içerir.  
   
- \<Yapılandırma >  
-\<mscorlib >  
+[ **\<Yapılandırma >** ](../configuration-element.md)  
+&nbsp; @ no__t-1 **\<mscorlib >**  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -47,7 +47,7 @@ Cryptographrivsettings > öğesini içerir. [ \<](cryptographysettings-element.m
 |`configuration`|Her yapılandırma dosyasında yer alan ve ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan kök öğe.|  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, bir şifreleme sınıfına başvurmak ve çalışma zamanını yapılandırmak için  **\<mscorlib >** öğesinin nasıl kullanılacağını gösterir. Daha sonra "RSA" <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> dizesini yöntemine geçirebilir ve <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> metodunu kullanarak bir `MyCryptoRSAClass` nesne döndürebilirsiniz.  
+ Aşağıdaki örnek, bir şifreleme sınıfına başvurmak ve çalışma zamanını yapılandırmak için **\<mscorlib >** öğesinin nasıl kullanılacağını gösterir. Daha sonra, "RSA" dizesini <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> yöntemine geçirebilir ve <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> metodunu kullanarak `MyCryptoRSAClass` nesnesini döndürebilirsiniz.  
   
 ```xml  
 <configuration>  

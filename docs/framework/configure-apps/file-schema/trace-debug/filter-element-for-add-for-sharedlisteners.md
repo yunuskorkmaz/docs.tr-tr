@@ -1,5 +1,5 @@
 ---
-title: <filter>İçin için <add> öğesi<sharedListeners>
+title: <sharedListeners> için <add> <filter> öğesi
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sharedListeners/add/filter
@@ -10,21 +10,21 @@ helpviewer_keywords:
 - filters, trace listeners
 - trace listeners, filters
 ms.assetid: 7d4e7faa-2e4e-4379-ac76-f6cd7f2f8fac
-ms.openlocfilehash: 571a3add232f3e4f9747040dc104b85e8cc3085e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4e92f80e9f6069b5fa70501e13a55d5a6fe95e7a
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69920504"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71697320"
 ---
-# <a name="filter-element-for-add-for-sharedlisteners"></a>\<sharedListeners için \<> \<eklemek için > öğesini filtreleyin >
-`sharedListeners` Koleksiyondaki bir dinleyiciye bir filtre ekler.  
+# <a name="filter-element-for-add-for-sharedlisteners"></a>\<sharedListeners için \<> Add > öğesi @no__t
+@No__t-0 koleksiyonundaki bir dinleyiciye bir filtre ekler.  
   
- \<Yapılandırma >  
-\<System. Diagnostics >  
-\<sharedListeners > öğesi  
-\<> Ekle  
-\<Filtre >  
+[ **\<Yapılandırma >** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **\<system. Diagnostics >** ](system-diagnostics-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<sharedListeners >** ](sharedlisteners-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5[ **\<add >** ](add-element-for-sharedlisteners.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7 **\<filter >**  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,7 +40,7 @@ ms.locfileid: "69920504"
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|**type**|Gerekli öznitelik.<br /><br /> Filtrenin türünü belirtir. Türün tam adını ( <xref:System.Type.FullName%2A?displayProperty=nameWithType> özelliğinin biçiminde) veya derleme bilgileri de dahil olmak üzere tam nitelikli tür adını ( <xref:System.Type.AssemblyQualifiedName%2A?displayProperty=nameWithType> özelliğin biçiminde) kullanabilirsiniz. Tam nitelikli tür adı oluşturma hakkında bilgi için, bkz. [tam nitelikli tür adları belirtme](../../../reflection-and-codedom/specifying-fully-qualified-type-names.md).|  
+|**türüyle**|Gerekli öznitelik.<br /><br /> Filtrenin türünü belirtir. Türün tam adını (<xref:System.Type.FullName%2A?displayProperty=nameWithType> özelliğinin biçiminde) veya derleme bilgileri de dahil olmak üzere tam nitelikli tür adı kullanabilirsiniz (<xref:System.Type.AssemblyQualifiedName%2A?displayProperty=nameWithType> özelliğinin biçiminde). Tam nitelikli tür adı oluşturma hakkında bilgi için, bkz. [tam nitelikli tür adları belirtme](../../../reflection-and-codedom/specifying-fully-qualified-type-names.md).|  
 |**initializeData**|İsteğe bağlı öznitelik.<br /><br /> Belirtilen sınıf için oluşturucuya geçirilen dize.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
@@ -56,12 +56,12 @@ ms.locfileid: "69920504"
 |`add`|**SharedListeners** koleksiyonuna bir dinleyici ekler.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `<add>` Bir dinleyici `<sharedListeners>` öğenin öğesi içinde tanımlanmışsa, bu dinleyicinin filtresi `<add>` öğenin alt öğesi olan bir `<filter>` öğe içinde tanımlanmalıdır.  
+ Bir dinleyici `<sharedListeners>` öğesinin `<add>` öğesinde tanımlanmışsa, bu dinleyicinin filtresi, `<add>` öğesinin bir alt öğesi olan bir `<filter>` öğesinde tanımlanmalıdır.  
   
  Bu öğe makine yapılandırma dosyasında (Machine. config) ve uygulama yapılandırma dosyasında kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, `<filter>` `sharedListeners` koleksiyonundaki izleme dinleyicisine `console` bir filtre eklemek için öğesinin nasıl kullanılacağını gösterir.  
+ Aşağıdaki örnek, `sharedListeners` koleksiyonundaki `console` izleme dinleyicisine bir filtre eklemek için `<filter>` öğesinin nasıl kullanılacağını gösterir.  
   
 ```xml  
 <configuration>  

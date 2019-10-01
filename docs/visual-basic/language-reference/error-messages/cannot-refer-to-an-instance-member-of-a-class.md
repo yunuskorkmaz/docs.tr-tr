@@ -8,17 +8,17 @@ helpviewer_keywords:
 - Shared
 - BC30369
 ms.assetid: 39d9466b-c1f3-4406-91a5-3d6c52d23a3d
-ms.openlocfilehash: aad068b5857eb956ded63fa2a57cb163d3cf5c58
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a2a5ab99ff68e6dce783a2fd986ee6e8c15ae858
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62013848"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71701171"
 ---
 # <a name="cannot-refer-to-an-instance-member-of-a-class-from-within-a-shared-method-or-shared-member-initializer-without-an-explicit-instance-of-the-class"></a>Bir sınıfın örnek üyesine paylaştırılmış yöntem veya paylaştırılmış üye başlatıcıdan, sınıfın açık bir örneği olmadan başvurulamaz
-Paylaşılan bir yordam içinde bir sınıftan paylaşılmayan üyesi başvurmak çalıştınız. Aşağıdaki örnekte, böyle bir durum gösterilmektedir.  
+Paylaşılan bir yordamın içinden bir sınıfın paylaşılmayan üyesine başvurmaya çalıştınız. Aşağıdaki örnekte böyle bir durum gösterilmektedir.  
   
-```  
+```vb  
 Class sample  
     Public x as Integer  
     Public Shared Sub setX()  
@@ -27,21 +27,21 @@ Class sample
 End Class  
 ```  
   
- Yukarıdaki örnekte, atama ifadesi `x = 10` bu hata iletisini oluşturur. Paylaşılan bir yordam örneği bir değişkene erişmeye çalışıyor olmasıdır.  
+ Yukarıdaki örnekte, `x = 10` atama ifadesinde bu hata iletisi oluşturulur. Bunun nedeni, paylaşılan bir yordamın bir örnek değişkenine erişmeye çalışıyor olması.  
   
- Değişken `x` olarak bildirilmediğinden, bir örnek üyesi olduğu [paylaşılan](../../../visual-basic/language-reference/modifiers/shared.md). Sınıfın her örneğini `sample` kendi bağımsız değişkenini içeren `x`. Ne zaman bir örneği ayarlar veya değerini değiştirir `x`, değerini etkilemez `x` herhangi bir örneğindeki.  
+ @No__t-0 değişkeni, [paylaşılan](../../../visual-basic/language-reference/modifiers/shared.md)olarak bildirildiği için bir örnek üyesidir. @No__t-0 sınıfının her örneği kendi bağımsız değişkenini içerir `x`. Bir örnek `x` değerini ayarladığında veya değiştirdiğinde, başka bir örnekteki `x` değerini etkilemez.  
   
- Ancak, yordamın `setX` olduğu `Shared` sınıfın tüm örnekleri arasında `sample`. Başka bir deyişle, herhangi bir sınıf örneği ile ilişkili değildir, ancak bunun yerine tek tek örnekleri bağımsız olarak çalışır. Belirli bir örneği ile bağlantı olduğundan `setX` bir örnek değişkeni erişemez. Yalnızca çalışmalıdır `Shared` değişkenleri. Zaman `setX` ayarlar veya yeni değeri sınıfın tüm örnekleri için kullanılabilir, paylaşılan bir değişkenin değerini değiştirir.  
+ Ancak, `setX` yordamı, `sample` sınıfının tüm örnekleri arasında `Shared` ' dir. Bu, sınıfın herhangi bir örneğiyle ilişkilendirilmediği, ancak tek tek örneklerden bağımsız olarak çalışan bir anlamına gelir. Belirli bir örneğe sahip hiçbir bağlantısı olmadığından, `setX` bir örnek değişkenine erişemez. Yalnızca `Shared` değişkenlerinde çalışması gerekir. @No__t-0, paylaşılan bir değişkenin değerini ayarladığında veya değiştirdiğinde, bu yeni değer sınıfının tüm örnekleri için kullanılabilir.  
   
- **Hata Kimliği:** BC30369  
+ **Hata kimliği:** BC30369  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-1. Sınıfın tüm örnekleri arasında paylaşılan veya her örneği için tek tek tutulan üyesi için istediğinize karar verin.  
+1. Üyenin sınıfın tüm örnekleri arasında paylaşılmasını mi yoksa her örnek için bir bireyin mı saklanacağını belirleyin.  
   
-2. Üyenin tüm örnekleri arasında paylaşılması için tek bir kopyasını istiyorsanız ekleyin `Shared` üye bildirimi için anahtar sözcüğü. Korumak `Shared` yordamı bildirimindeki anahtar sözcüğü.  
+2. Üyenin tek bir kopyasının tüm örnekler arasında paylaşılmasını istiyorsanız üye bildirimine `Shared` anahtar sözcüğünü ekleyin. Yordam bildiriminde `Shared` anahtar sözcüğünü koruyun.  
   
-3. Her örnek kendi ayrı üye kopyasına sahip istiyorsanız belirtmeyin `Shared` üye bildirimi için. Kaldırma `Shared` yordam bildirimi from anahtar sözcüğü.  
+3. Her bir örneğin üyenin tek bir kopyasına sahip olmasını istiyorsanız, üye bildirimi için `Shared` belirtmeyin. Yordam bildiriminden `Shared` anahtar sözcüğünü kaldırın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - BC30801
 ms.assetid: 67743319-2d1c-496e-bfd9-22b046b43b5a
-ms.openlocfilehash: 3634ea4b97f25e41e27629c51119f2ea4df5f887
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: fa474aaff4b1ceaf9b80be5dbc869276a54a6e65
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64589770"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71700991"
 ---
 # <a name="labels-that-are-numbers-must-be-followed-by-colons"></a>Sayı olan etiketlerden sonra iki nokta işareti gelmelidir
-Satır numaraları etiketleri diğer tür olarak aynı kurallara uymanız ve iki nokta içermelidir.  
+Satır numaraları, diğer etiket türleriyle aynı kurallara uyar ve iki nokta üst üste içermelidir.  
   
- **Hata Kimliği:** BC30801  
+ **Hata kimliği:** BC30801  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-- İki nokta üst üste başındaki kod satırının numarasını koyun; Örneğin:  
+- Sayıyı, bir kod satırının başlangıcında bir iki nokta üst üste koyun; Örneğin:  
   
-    ```  
+    ```vb  
     400:    X += 1  
     ```  
   

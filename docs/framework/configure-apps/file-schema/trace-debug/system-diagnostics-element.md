@@ -8,18 +8,18 @@ helpviewer_keywords:
 - <system.diagnostics> element
 - system.diagnostics element
 ms.assetid: 3f348f42-fa72-4ff2-aa1c-bb9eecad4bb2
-ms.openlocfilehash: f3b4238a8d7028d47122a420526b38ee4f327332
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: dc05c46cb1ba74baceaaeadc2959a6889faf19c9
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69926939"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699188"
 ---
-# <a name="systemdiagnostics-element"></a>\<System. Diagnostics > öğesi
+# <a name="systemdiagnostics-element"></a>\<system. Diagnostics > öğesi
 İletileri ve bir izleme anahtarının ayarlandığı düzeyi depolayan, depolayan ve yönlendiren izleme dinleyicilerini belirtir.  
   
- \<Yapılandırma >  
-\<System. Diagnostics >  
+[ **\<Yapılandırma >** ](../configuration-element.md)  
+&nbsp; @ no__t-1 **\<system. diagnostics >**  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,12 +38,12 @@ ms.locfileid: "69926939"
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<onaylama >](assert-element.md)|<xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType> Yöntemini çağırdığınızda bir ileti kutusunun görüntülenip görüntülenmeyeceğini belirtir; Ayrıca, iletilerin yazılacağı dosyanın adını da belirtir.|  
+|[\<onaylama >](assert-element.md)|@No__t-0 yöntemini çağırdığınızda bir ileti kutusunun görüntülenip görüntülenmeyeceğini belirtir; Ayrıca, iletilerin yazılacağı dosyanın adını da belirtir.|  
 |[\<performanceCounters >](performancecounters-element.md)|Performans sayaçları tarafından paylaşılan genel belleğin boyutunu belirtir.|  
 |[\<sharedListeners >](sharedlisteners-element.md)|Herhangi bir kaynak veya izleme öğesinin başvurmasına yönelik dinleyicileri içerir. Paylaşılan dinleyiciler ada göre kaynaklara veya izlemelere eklenebilir olarak tanımlanan dinleyiciler.|  
-|[\<Kaynaklar >](sources-element.md)|İzleme iletilerini Başlatan izleme kaynaklarını belirtir.|  
-|[\<Anahtarlar >](switches-element.md)|İzleme anahtarlarını ve izleme anahtarlarının ayarlandığı düzeyleri içerir.|  
-|[\<İzleme >](trace-element.md)|İzleme iletilerini toplayıp depolayan, depolayan ve yönlendiren dinleyicileri içerir.|  
+|[\<kaynak >](sources-element.md)|İzleme iletilerini Başlatan izleme kaynaklarını belirtir.|  
+|[\<anahtarlar >](switches-element.md)|İzleme anahtarlarını ve izleme anahtarlarının ayarlandığı düzeyleri içerir.|  
+|[\<trace >](trace-element.md)|İzleme iletilerini toplayıp depolayan, depolayan ve yönlendiren dinleyicileri içerir.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
@@ -52,10 +52,10 @@ ms.locfileid: "69926939"
 |`configuration`|Her yapılandırma dosyasında yer alan ve ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan kök öğe.|  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, bir izleme anahtarı ve bir İzleme dinleyicisinin  **\<System. Diagnostics >** öğesinin içine nasıl ekleneceğini gösterir. İzleme anahtarı <xref:System.Diagnostics.TraceLevel> düzeyi olarak ayarlanır. `General` İzleme dinleyicisi `myListener` adlı `MyListener.log` bir dosya oluşturur ve çıktıyı dosyaya yazar.  
+ Aşağıdaki örnek, bir izleme anahtarı ve bir İzleme dinleyicisinin **\<System. diagnostics >** öğesinin içine nasıl ekleneceğini gösterir. @No__t-0 izleme anahtarı <xref:System.Diagnostics.TraceLevel> düzeyine ayarlanır. @No__t-0 adlı izleme dinleyicisi, `MyListener.log` adlı bir dosya oluşturur ve çıktıyı dosyaya yazar.  
   
 > [!NOTE]
-> .NET Framework sürüm 2,0 ' de, bir anahtarın değerini belirtmek için metin kullanabilirsiniz. Örneğin, `true` için bir <xref:System.Diagnostics.BooleanSwitch> veya gibi `Error` bir numaralandırma <xref:System.Diagnostics.TraceSwitch>değerini temsil eden metni kullanabilirsiniz. Satır `<add name="myTraceSwitch" value="Error" />` ile`<add name="myTraceSwitch" value="1" />`eşdeğerdir.  
+> .NET Framework sürüm 2,0 ' de, bir anahtarın değerini belirtmek için metin kullanabilirsiniz. Örneğin, bir <xref:System.Diagnostics.BooleanSwitch> için `true` belirtebilir veya bir <xref:System.Diagnostics.TraceSwitch> için `Error` gibi bir sabit listesi değerini temsil eden metni kullanabilirsiniz. @No__t-0 satırı `<add name="myTraceSwitch" value="1" />` ' e eşdeğerdir.  
   
 ```xml  
 <configuration>  

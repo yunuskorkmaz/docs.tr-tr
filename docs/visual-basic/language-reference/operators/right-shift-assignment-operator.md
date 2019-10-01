@@ -10,41 +10,41 @@ helpviewer_keywords:
 - compound assignment statements [Visual Basic]
 - '>>= operator [Visual Basic]'
 ms.assetid: 2bcd9abb-7a8c-4229-b75d-8816ff1dc700
-ms.openlocfilehash: 1076ce62077391f2c88ebdd621d1dbd6fb40d647
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 08d4e251a96ca387a709319e752351db6825d9e8
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61982390"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71701350"
 ---
-# <a name="-operator-visual-basic"></a>>> = işleci (Visual Basic)
-Bir değişken veya özellik değerini temel aritmetik sağa kaydırma gerçekleştirir ve sonucu değişken veya özellik için atar.  
+# <a name="-operator-visual-basic"></a>> > = Işleci (Visual Basic)
+Bir değişkenin veya özelliğin değerinde aritmetik sağa kaydırma gerçekleştirir ve sonucu değişkenine veya özelliğe geri atar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```vb  
 variableorproperty >>= amount  
 ```  
   
 ## <a name="parts"></a>Bölümler  
  `variableorproperty`  
- Gerekli. Değişken veya özellik bir tamsayı türü (`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, veya `ULong`).  
+ Gerekli. İntegral türünün değişkeni veya özelliği (`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long` veya `ULong`).  
   
  `amount`  
- Gerekli. Sayısal ifade bir veri türünün için widens `Integer`.  
+ Gerekli. @No__t-0 ' a widens bir veri türünün sayısal ifadesi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Öğe sol tarafındaki `>>=` işleci, bir basit skaler değişkeni, bir özellik veya dizi öğesi olabilir. Değişken veya özellik olamaz [salt okunur](../../../visual-basic/language-reference/modifiers/readonly.md).  
+ @No__t-0 işlecinin sol tarafındaki öğe basit bir skaler değişken, bir özellik veya bir dizi öğesi olabilir. Değişken veya özellik [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)olamaz.  
   
- `>>=` İşleci ilk değişken veya özellik değerini temel aritmetik sağa kaydırma gerçekleştirir. İşleci, bu işlemin sonucunu daha sonra değişken veya özellik için atar.  
+ @No__t-0 işleci ilk olarak değişkenin veya özelliğin değerinde bir aritmetik sağa kaydırma gerçekleştirir. İşleci daha sonra bu işlemin sonucunu değişkenine veya özelliğe geri atar.  
   
- Sonucu ucunu kaydırılacak bitlerin diğer sonunda yeniden girmesini yok anlamına gelir özelliği aritmetik kaydırmalar döngüsel, değildir. Aritmetik sağa kaydırma, en sağdaki bit ötesindeki kaydırılacak bitlerin atılır ve soldaki bit içine solda işleci boşaltılmış bit konumlarına yayılır. Olması durumunda başka bir deyişle `variableorproperty` negatif bir değere sahip boşaltılmış konumları birine ayarlanır. Varsa `variableorproperty` pozitif ise veya veri türünü işaretsiz bir türü ise, boşaltılmış konumları sıfır olarak ayarlanır.  
+ Aritmetik vardiyalar dairesel değildir, bu da sonucun bir sonunun dışına sürüklenen bitlerin diğer uçta yeniden tanıtılmadığını gösterir. Aritmetik sağa kaydırma ' de, en sağdaki bit konumlarından daha fazla kaydırılan bitler atılır ve en soldaki bit, sol taraftaki bit konumlarına yayılır. Bu, `variableorproperty` negatif bir değer içeriyorsa, karıştırılmış konumların bir tane olarak ayarlanmasıdır. @No__t-0 pozitifse veya veri türü işaretsiz bir tür ise, karıştırılmış konumlar sıfır olarak ayarlanır.  
   
 ## <a name="overloading"></a>Aşırı Yükleme  
- [>> İşleci](../../../visual-basic/language-reference/operators/right-shift-operator.md) olabilir *aşırı*, işleneni, sınıf veya yapı türüne sahip olduğunda bir sınıf veya yapı davranışını tanımlayabilirsiniz, anlamına gelir. Aşırı yükleme `>>` işleci davranışını etkileyen `>>=` işleci. Kodunuzu kullanıyorsa `>>=` bir sınıf veya aşırı yapısı `>>`, yeniden tanımlanan davranışını anladığınızdan emin olun. Daha fazla bilgi için [işleç yordamları](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+ [> > işleci](../../../visual-basic/language-reference/operators/right-shift-operator.md) *aşırı*yüklenebilir, yani bir işlenen bu sınıf veya yapının türüne sahip olduğunda bir sınıf veya yapının davranışını yeniden tanımlayabileceği anlamına gelir. @No__t aşırı yükleme-0 işleci `>>=` işlecinin davranışını etkiler. Kodunuz, `>>` ' i aşırı yükleyen bir sınıf veya yapıda `>>=` kullanıyorsa, yeniden tanımlanmış davranışını anladığınızdan emin olun. Daha fazla bilgi için bkz. [operatör yordamları](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte `>>=` bit desenini kaydırılacak işleci bir `Integer` değişken sağ tarafından belirtilen tutar ve sonucu bir değişkene atayın.  
+ Aşağıdaki örnek, bir `Integer` değişkeninin bit modelini belirtilen miktarda sağa kaydırmak ve sonucu değişkenine atamak için `>>=` işlecini kullanır.  
   
  [!code-vb[VbVbalrOperators#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#15)]  
   
@@ -53,6 +53,6 @@ variableorproperty >>= amount
 - [>> İşleci](../../../visual-basic/language-reference/operators/right-shift-operator.md)
 - [Atama İşleçleri](../../../visual-basic/language-reference/operators/assignment-operators.md)
 - [Bit Kaydırma İşleçleri](../../../visual-basic/language-reference/operators/bit-shift-operators.md)
-- [Visual Basic'de İşleç önceliği](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [Visual Basic operatör önceliği](../../../visual-basic/language-reference/operators/operator-precedence.md)
 - [İşlevselliğe Göre Listelenmiş İşleçler](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
 - [Deyimler](../../../visual-basic/programming-guide/language-features/statements.md)

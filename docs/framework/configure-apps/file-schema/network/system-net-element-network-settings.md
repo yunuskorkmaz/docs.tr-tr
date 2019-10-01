@@ -8,18 +8,18 @@ helpviewer_keywords:
 - system.Net element
 - <system.Net> element
 ms.assetid: 52de4d6c-b24d-44aa-ba7d-6b5061f1357e
-ms.openlocfilehash: 449146612938700f59f5e2ec761526d1dc66a3fc
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 810e942394c75c192e4423afe4c674ef3a2b9900
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663951"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71697501"
 ---
-# <a name="systemnet-element-network-settings"></a>\<System .net > öğesi (ağ ayarları)
+# <a name="systemnet-element-network-settings"></a>\<system .net > öğesi (ağ ayarları)
 .NET Framework ağa nasıl bağlanacağını belirten ayarları içerir.  
   
- \<Yapılandırma >  
-\<system.net>  
+[ **\<Yapılandırma >** ](../configuration-element.md)  
+&nbsp; @ no__t-1 **@no__t -3system. net >**  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -43,7 +43,7 @@ ms.locfileid: "69663951"
 |[defaultProxy](defaultproxy-element-network-settings.md)|Köprü Metni Aktarım Protokolü (HTTP) proxy sunucusunu yapılandırır.|  
 |[mailSettings](mailsettings-element-network-settings.md)|Basit Posta Aktarım Protokolü (SMTP) posta gönderme seçeneklerini yapılandırır.|  
 |[requestCaching](requestcaching-element-network-settings.md)|Ağ istekleri için önbelleğe alma mekanizmasını denetler.|  
-|[Ayarlar](settings-element-network-settings.md)|<xref:System.Net> Ve ilişkili alt ad alanlarındaki sınıflar için temel ağ seçeneklerini yapılandırır.|  
+|[Ayarlar](settings-element-network-settings.md)|@No__t-0 ve ilgili alt ad alanlarında sınıflar için temel ağ seçeneklerini yapılandırır.|  
 |[webRequestModules](webrequestmodules-element-network-settings.md)|Internet konaklarından bilgi istemek için kullanılacak modülleri belirtir.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
@@ -53,10 +53,10 @@ ms.locfileid: "69663951"
 |[yapılandırmada](../configuration-element.md)|Tüm ad alanları için ayarları içerir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- <xref:System.Net> [ System.net>öğesiveilgilialtad\<](system-net-element-network-settings.md) alanlarındaki sınıfların ayarlarını içerir. Ayarlar, Internet konaklarından bilgi almak için kimlik doğrulama modüllerini, bağlantı yönetimini, posta ayarlarını, proxy sunucusunu ve Internet istek modüllerini yapılandırır.  
+ [@No__t -1System. net >](system-net-element-network-settings.md) öğesi, <xref:System.Net> ve ilgili alt ad alanlarındaki sınıfların ayarlarını içerir. Ayarlar, Internet konaklarından bilgi almak için kimlik doğrulama modüllerini, bağlantı yönetimini, posta ayarlarını, proxy sunucusunu ve Internet istek modüllerini yapılandırır.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte, sınıfları tarafından <xref:System.Net> kullanılan tipik bir yapılandırma gösterilmektedir.  
+ Aşağıdaki örnekte <xref:System.Net> sınıfları tarafından kullanılan tipik bir yapılandırma gösterilmektedir.  
   
 ```xml  
 <configuration>  

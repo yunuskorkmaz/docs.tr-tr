@@ -20,12 +20,12 @@ helpviewer_keywords:
 - '@ identifier type character'
 - identifier type characters [Visual Basic], @
 ms.assetid: 1d855b45-afe2-45b0-a623-96b6f63a43d5
-ms.openlocfilehash: bab5a0bd7e0a85d550362bc3c1166566f6dcb81b
-ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
+ms.openlocfilehash: 892824b61cfb6a0172361d220c638cab0a78565d
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68512779"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71700872"
 ---
 # <a name="decimal-data-type-visual-basic"></a>Onluk Veri Türü (Visual Basic)
 
@@ -33,19 +33,19 @@ ms.locfileid: "68512779"
 
 ## <a name="remarks"></a>Açıklamalar
 
-`Decimal` Veri türü, bir sayı için en fazla sayıda önemli basamak sağlar. 29 ' dan fazla önemli basamağı destekler ve 7,9228 x 10 ^ 28 değerinden fazla değeri temsil edebilir. Çok sayıda basamak gerektiren, ancak yuvarlama hatalarını kabul edemeyecek finansal gibi hesaplamalar için özellikle uygundur.
+@No__t-0 veri türü, bir sayı için en çok önemli basamak sayısını sağlar. 29 ' dan fazla önemli basamağı destekler ve 7,9228 x 10 ^ 28 değerinden fazla değeri temsil edebilir. Çok sayıda basamak gerektiren, ancak yuvarlama hatalarını kabul edemeyecek finansal gibi hesaplamalar için özellikle uygundur.
 
-Varsayılan değeri `Decimal` 0 ' dır.
+@No__t-0 ' ın varsayılan değeri 0 ' dır.
 
 ## <a name="programming-tips"></a>Programlama İpuçları
 
-- **Duyarlılık.** `Decimal`kayan nokta veri türü değil. `Decimal` Yapı bir ikili tamsayı değerini, bir işaret biti ve değerin hangi kısmının ondalık kesir olduğunu belirten bir tamsayı ölçekleme faktörüyle birlikte tutar. Bu nedenle, sayıların `Decimal` , kayan nokta türlerinden (`Single` ve `Double`) daha kesin bir temsili vardır.
+- **Duyarlılık.** `Decimal` bir kayan nokta veri türü değil. @No__t-0 yapısı bir ikili tamsayı değerini, bir işaret biti ve değerin hangi bölümünün ondalık kesir olduğunu belirten bir tamsayı ölçekleme faktörüyle birlikte tutar. Bu nedenle, `Decimal` sayıları bellek içinde kayan nokta türlerinden daha kesin bir gösterimine sahiptir (`Single` ve `Double`).
 
-- **Performans.** `Decimal` Veri türü, tüm sayısal türlerin en yavaş türüdür. Veri türü seçmeden önce, performans için duyarlık önem derecesine sahip olmanız gerekir.
+- **Mının.** @No__t-0 veri türü, tüm sayısal türlerin en yavaş türüdür. Veri türü seçmeden önce, performans için duyarlık önem derecesine sahip olmanız gerekir.
 
-- **Kan.** Veya `Decimal` için`Double`widens veri türü. `Single` Bu, bir `Decimal` <xref:System.OverflowException?displayProperty=nameWithType> hatayla karşılaşmadan bu türlerden birine dönüştürebileceğiniz anlamına gelir.
+- **Kan.** @No__t-0 veri türü `Single` veya `Double` ' widens. Bu, <xref:System.OverflowException?displayProperty=nameWithType> hatasıyla karşılaşmadan `Decimal` ' y i bu türlerden birine dönüştürebileceğiniz anlamına gelir.
 
-- **Sondaki sıfırlar.** Visual Basic sondaki sıfırları bir `Decimal` sabit değer içinde depolamaz. Ancak, bir `Decimal` değişken sondaki tüm sıfırları elde edilen hesaplama sırasında korur. Aşağıdaki örnek bunu göstermektedir.
+- **Sondaki sıfırlar.** Visual Basic sondaki sıfırları bir `Decimal` değişmez değerinde depolamaz. Ancak, `Decimal` değişkeni sondaki tüm sıfırları elde edilen hesaplama sırasında korur. Aşağıdaki örnek bunu göstermektedir.
 
   ```vb
   Dim d1, d2, d3, d4 As Decimal
@@ -57,18 +57,18 @@ Varsayılan değeri `Decimal` 0 ' dır.
         ", d3 = " & CStr(d3) & ", d4 = " & CStr(d4))
   ```
 
-  Önceki örnekteki çıktısı `MsgBox` aşağıdaki gibidir:
+  Yukarıdaki örnekte `MsgBox` çıkışı aşağıdaki gibidir:
 
-  ```
+  ```console
   d1 = 2.375, d2 = 1.625, d3 = 4.000, d4 = 4
   ```
 
-- **Tür karakterleri.** Değişmez değer türü karakterini `D` bir sabit değere eklemek, `Decimal` veri türüne zorlar. Tanımlayıcı türü karakteri `@` herhangi bir tanımlayıcıya eklemek bunu öğesine `Decimal`zorlar.
+- **Tür karakterleri.** Değişmez değer türü karakterini bir hazır @no__t eklemek, `Decimal` veri türüne zorlar. Tanımlayıcı türü karakterini herhangi bir tanımlayıcıya eklemek @no__t `Decimal` ' e zorlar.
 
 - **Çerçeve türü.** .NET Framework karşılık gelen tür <xref:System.Decimal?displayProperty=nameWithType> yapısıdır.
 
 ## <a name="range"></a>Aralık
- `D` Bir`Decimal` değişkene veya sabitine büyük bir değer atamak için tür karakterini kullanmanız gerekebilir. Bu gereksinim, derleyicinin bir sabit değer türü karakteri değişmez `Long` değer olarak değişmez ve aşağıdaki örnekte gösterildiği gibi değişmez.
+ Bir `Decimal` değişkenine veya sabitine büyük bir değer atamak için `D` tür karakterini kullanmanız gerekebilir. Bu gereksinim, bir sabit değer türü karakteri değişmez değer olarak, aşağıdaki örnekte gösterildiği gibi, bir sabit değerin `Long` olarak yorumlaması derleyicisidir.
 
 ```vb
 Dim bigDec1 As Decimal = 9223372036854775807   ' No overflow.
@@ -76,11 +76,11 @@ Dim bigDec2 As Decimal = 9223372036854775808   ' Overflow.
 Dim bigDec3 As Decimal = 9223372036854775808D  ' No overflow.
 ```
 
-Öğesine atanan değer `bigDec1` için `Long`aralığında yer aldığından, için bildirimi bir taşma oluşturmaz. `Long` Değer `Decimal` değişkene atanabilir.
+@No__t-0 ' a yönelik bildirim bir taşma oluşturmaz çünkü kendisine atanan değer `Long` aralığı içinde. @No__t-0 değeri `Decimal` değişkenine atanabilir.
 
-Öğesine atanan değer `bigDec2` için `Long`çok büyük olduğundan, için bildirimi bir taşma hatası oluşturur. Sayısal sabit değer önce bir `Long`olarak yorumlanamadığından `Decimal` değişkenine atanamaz.
+@No__t-0 ' a yönelik bildirim, kendisine atanan değer `Long` için çok büyük olduğundan bir taşma hatası oluşturuyor. Sayısal sabit değer öncelikle `Long` olarak yorumlanamadığından, `Decimal` değişkenine atanamaz.
 
-İçin `bigDec3`, değişmez değer türü karakteri `D` , derleyicinin sabit değerini a `Decimal` `Long`yerine bir olarak yorumlamasını zorlayarak sorunu çözer.
+@No__t-0 için, değişmez değer türü karakteri `D`, derleyicinin sabit değeri `Long` yerine `Decimal` olarak yorumlamasını zorlayarak sorunu çözer.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

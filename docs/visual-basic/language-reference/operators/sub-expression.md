@@ -6,19 +6,19 @@ helpviewer_keywords:
 - Sub Expression [Visual Basic]
 - subroutines [Visual Basic], sub expressions
 ms.assetid: 36b6bfd1-6539-4d8f-a5eb-6541a745ffde
-ms.openlocfilehash: 6cdb75f150831ae3857a510d87b58773bdcf13c9
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2330b410f54b54d8f6cb7d8ad6f9b39a3f4d31bc
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64609607"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71701342"
 ---
 # <a name="sub-expression-visual-basic"></a>Alt İfade (Visual Basic)
-Parametreleri ve kodu tanımlayan bir alt yordam lambda ifadesi bildirir.  
+Bir altyordam lambda ifadesi tanımlayan parametreleri ve kodu bildirir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```vb  
 Sub ( [ parameterlist ] ) statement  
 - or -  
 Sub ( [ parameterlist ] )  
@@ -30,30 +30,30 @@ End Sub
   
 |Terim|Tanım|  
 |---|---|  
-|`parameterlist`|İsteğe bağlı. Yordam parametreleri temsil eden yerel değişken adlarının listesi. Liste boş olduğunda bile parantezler bulunmalıdır. Daha fazla bilgi için [parametre listesi](../../../visual-basic/language-reference/statements/parameter-list.md).|  
-|`statement`|Gerekli. Tek bir deyim.|  
-|`statements`|Gerekli. Deyimleri listesi.|  
+|`parameterlist`|İsteğe bağlı. Yordamın parametrelerini temsil eden yerel değişken adlarının bir listesi. Liste boş olduğunda bile parantezler mevcut olmalıdır. Daha fazla bilgi için bkz. [parametre listesi](../../../visual-basic/language-reference/statements/parameter-list.md).|  
+|`statement`|Gerekli. Tek bir ifade.|  
+|`statements`|Gerekli. Deyimler listesi.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- A *lambda ifadesi* bir ada sahip bir alt yordam olduğunu ve, bir veya daha fazla deyimi yürütür. Bir lambda ifadesi her yerde kullanabilirsiniz, bir temsilci türü dışında bir bağımsız değişken olarak kullanabileceğiniz `RemoveHandler`. Temsilciler ve lambda ifadeleri temsilciler ile kullanımı hakkında daha fazla bilgi için bkz. [temsilci bildirimi](../../../visual-basic/language-reference/statements/delegate-statement.md) ve [gevşek temsilci dönüşümü](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md).  
+ *Lambda ifadesi* , bir ada sahip olmayan ve bir veya daha fazla deyimi yürüten bir altyordam. @No__t-0 ' a bir bağımsız değişken hariç, bir temsilci türü kullanabileceğiniz her yerde lambda ifadesini kullanabilirsiniz. Temsilciler ve temsilcilerle lambda ifadelerinin kullanımı hakkında daha fazla bilgi için bkz. [Delegate deyimi](../../../visual-basic/language-reference/statements/delegate-statement.md) ve [gevşek temsilci dönüştürme](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md).  
   
 ## <a name="lambda-expression-syntax"></a>Lambda İfadesi Sözdizimi  
- Bir lambda ifadesi söz dizimi, standart bir alt yordam benzer. Farklar aşağıdaki gibidir:  
+ Bir lambda ifadesinin sözdizimi, standart bir alt yordamın sözdizimine benzer. Farklar şunlardır:  
   
-- Bir lambda ifadesi, bir adı yok.  
+- Lambda ifadesinin adı yoktur.  
   
-- Bir lambda ifadesi bir değiştirici gibi olamaz `Overloads` veya `Overrides`.  
+- Lambda ifadesi `Overloads` veya `Overrides` gibi bir değiştiriciye sahip olamaz.  
   
-- Tek satırlı lambda ifadesinin gövdesi bir deyim, bir ifade olmalıdır. Gövde, bir alt yordam çağrısı, ancak bir işlev yordam çağrısı değil, oluşabilir.  
+- Tek satırlık lambda ifadesinin gövdesi bir ifade değil, deyim olmalıdır. Gövde, bir alt yordam çağrısından oluşabilir, ancak bir işlev yordamına çağrı değildir.  
   
-- Bir lambda ifadesinde veri türleri veya tüm parametreleri anlaşılmalıdır tüm parametre ya da belirtmelisiniz.  
+- Bir lambda ifadesinde, tüm parametrelerin belirtilen veri türleri olmalıdır veya tüm parametrelerin çıkarsanmalıdır.  
   
-- İsteğe bağlı ve `ParamArray` parametreleri lambda ifadelerine izin verilmez.  
+- İsteğe bağlı ve `ParamArray` parametrelerine Lambda ifadelerinde izin verilmez.  
   
-- Genel Parametreler lambda ifadelerine izin verilmez.  
+- Lambda ifadelerinde genel parametrelere izin verilmez.  
   
 ## <a name="example"></a>Örnek  
- Bir değer konsola yazar bir lambda ifadesi örneği verilmiştir. Bu örnek, hem tek satır ve çok satırlı lambda ifadesi sözdizimi bir alt yordam gösterir. Daha fazla örnek için bkz. [Lambda ifadeleri](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).  
+ Aşağıda, konsola bir değer yazan bir lambda ifadesinin örneği verilmiştir. Örnek, bir altyordam için hem tek satırlı hem çok satırlı lambda ifadesi sözdizimini gösterir. Daha fazla örnek için bkz. [lambda ifadeleri](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).  
   
  [!code-vb[VbVbalrLambdas#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#15)]  
   

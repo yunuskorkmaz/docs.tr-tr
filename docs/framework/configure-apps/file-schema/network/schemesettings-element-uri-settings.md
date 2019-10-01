@@ -2,19 +2,19 @@
 title: <schemeSettings> Öğesi (Uri Ayarları)
 ms.date: 03/30/2017
 ms.assetid: 0ae45c6e-8c4c-4c0d-8b9f-a93824648890
-ms.openlocfilehash: 46012b15d41422fb3357e57438e320136809ef41
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 498aef77a1dfd8cffcac73b704b8d1bb6df5d165
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69664004"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71697764"
 ---
-# <a name="schemesettings-element-uri-settings"></a>\<> düzeni öğesi (URI ayarları)
-Belirli düzenler için <xref:System.Uri> nasıl ayrıştırılacaksınız belirtir.  
+# <a name="schemesettings-element-uri-settings"></a>\<Bir Mesettings > öğesi (Uri Ayarları)
+Belirli düzenler için <xref:System.Uri> ' ın nasıl ayrıştıralınacağını belirtir.  
   
- \<Yapılandırma >  
-\<Uri >  
-\<> düzeni  
+[ **\<Yapılandırma >** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **\<urı >** ](uri-element-uri-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 **\< Mesettings >**  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,10 +41,10 @@ Belirli düzenler için <xref:System.Uri> nasıl ayrıştırılacaksınız belir
   
 |**Öğe**|**Açıklama**|  
 |-----------------|---------------------|  
-|[uri](uri-element-uri-settings.md)|.NET Framework Tekdüzen Kaynak tanımlayıcıları (URI 'Ler) kullanarak ifade edilen Web adreslerini nasıl işleyeceğini belirten ayarları içerir.|  
+|[kullanılmamışsa](uri-element-uri-settings.md)|.NET Framework Tekdüzen Kaynak tanımlayıcıları (URI 'Ler) kullanarak ifade edilen Web adreslerini nasıl işleyeceğini belirten ayarları içerir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Varsayılan olarak, <xref:System.Uri?displayProperty=nameWithType> sınıfı yol sıkıştırmayı yürütmeden önce, yüzde olarak kodlanmış yol sınırlayıcılarını kaldırır. Bu, aşağıdaki gibi saldırılara karşı bir güvenlik mekanizması olarak uygulanmıştır:  
+ Varsayılan olarak, <xref:System.Uri?displayProperty=nameWithType> sınıfı, yol sıkıştırmayı yürütmeden önce yüzde kodlamalı yol sınırlayıcılarını kaldırır. Bu, aşağıdaki gibi saldırılara karşı bir güvenlik mekanizması olarak uygulanmıştır:  
   
  `http://www.contoso.com/..%2F..%2F/Windows/System32/cmd.exe?/c+dir+c:\`  
   
@@ -52,7 +52,7 @@ Belirli düzenler için <xref:System.Uri> nasıl ayrıştırılacaksınız belir
   
  `c:\Windows\System32\cmd.exe /c dir c:\`  
   
- Bu nedenle, sınıf <xref:System.Uri?displayProperty=nameWithType> ilk olarak yol sınırlayıcılarını iptal eder ve yol sıkıştırması uygular. Yukarıdaki kötü amaçlı URL 'yi sınıf oluşturucusuna geçirmenin sonucu <xref:System.Uri?displayProperty=nameWithType> aşağıdaki URI ile sonuçlanır:  
+ Bu nedenle, <xref:System.Uri?displayProperty=nameWithType> sınıfı ilk olarak yol sınırlayıcılarını yok eder ve ardından yol sıkıştırması uygular. Yukarıdaki kötü amaçlı URL 'YI <xref:System.Uri?displayProperty=nameWithType> sınıf oluşturucusuna geçirmenin sonucu aşağıdaki URI ile sonuçlanır:  
   
  `http://www.microsoft.com/Windows/System32/cmd.exe?/c+dir+c:\`  
   
@@ -62,7 +62,7 @@ Belirli düzenler için <xref:System.Uri> nasıl ayrıştırılacaksınız belir
  Bu öğe, uygulama yapılandırma dosyasında veya makine yapılandırma dosyasında (Machine. config) kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, http şeması için yüzde kodlamalı bir <xref:System.Uri> yol sınırlayıcılarını yok etmek üzere sınıfı tarafından kullanılan bir yapılandırmayı gösterir.  
+ Aşağıdaki örnek, http şeması için yüzde kodlamalı bir yol sınırlayıcılarını yok etmek üzere <xref:System.Uri> sınıfı tarafından kullanılan bir yapılandırmayı gösterir.  
   
 ```xml  
 <configuration>  

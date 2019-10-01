@@ -6,14 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - IsNot operator [Visual Basic]
 ms.assetid: 8dd2bcdb-0166-48a2-9094-60dfb448f36c
-ms.openlocfilehash: 7e1ac1004e671f592c03bd44ee7ec2e8cc572933
-ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
+ms.openlocfilehash: 32e8f9532244679d2994b0e3d98279d75f7e77b4
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71331624"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71701045"
 ---
 # <a name="isnot-operator-visual-basic"></a>IsNot İşleci (Visual Basic)
+
 İki nesne başvuru değişkenini karşılaştırır.
 
 ## <a name="syntax"></a>Sözdizimi
@@ -46,4 +47,4 @@ result = object1 IsNot object2
 - [Is İşleci](is-operator.md)
 - [TypeOf İşleci](typeof-operator.md)
 - [Visual Basic operatör önceliği](operator-precedence.md)
-- [Nasıl yapılır: Iki nesnenin aynı olup olmadığını test edin @ no__t-0
+- [Nasıl yapılır: İki Nesnenin Aynı Olup Olmadığını Test Etme](../../programming-guide/language-features/operators-and-expressions/how-to-test-whether-two-objects-are-the-same.md)

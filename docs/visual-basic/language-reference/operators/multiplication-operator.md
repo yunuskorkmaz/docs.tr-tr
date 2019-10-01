@@ -1,5 +1,5 @@
 ---
-title: '* İşleci (Visual Basic)'
+title: '* İşleç (Visual Basic)'
 ms.date: 07/20/2015
 f1_keywords:
 - vb.*
@@ -10,19 +10,19 @@ helpviewer_keywords:
 - multiplication operator [Visual Basic], syntax
 - math operators [Visual Basic]
 ms.assetid: 2b210382-99da-4195-89ba-b1d06f5e89ad
-ms.openlocfilehash: 09b95585325b05c0b7925c4c1c9e123f45791e10
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b5b601c7604cb7ce1afaebc98b2157634a77fda4
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61936649"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71701086"
 ---
 # <a name="-operator-visual-basic"></a>* İşleci (Visual Basic)
 İki sayıyı çarpar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```vb  
 number1 * number2  
 ```  
   
@@ -34,28 +34,28 @@ number1 * number2
 |`number2`|Gerekli. Herhangi bir sayısal ifade.|  
   
 ## <a name="result"></a>Sonuç  
- Sonuç ürünüdür `number1` ve `number2`.  
+ Sonuç `number1` ve `number2` ' in ürünüdür.  
   
 ## <a name="supported-types"></a>Desteklenen türler  
- İmzasız ve kayan nokta türleri dahil olmak üzere tüm sayısal türlerin ve `Decimal`.  
+ İşaretsiz ve kayan nokta türleri ve `Decimal` dahil olmak üzere tüm sayısal türler.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Sonuç veri türü işlenenden türlerine bağlıdır. Aşağıdaki tablo sonuç veri türünü nasıl belirlendiğini gösterir.  
+ Sonucun veri türü, işlenenlerinin türlerine bağlıdır. Aşağıdaki tabloda, sonucun veri türünün nasıl belirlendiği gösterilmektedir.  
   
 |İşlenen veri türleri|Sonuç veri türü|  
 |---|---|  
-|Her iki ifade de tamsayı veri türleri: ([SByte](../../../visual-basic/language-reference/data-types/sbyte-data-type.md), [bayt](../../../visual-basic/language-reference/data-types/byte-data-type.md), [kısa](../../../visual-basic/language-reference/data-types/short-data-type.md), [UShort](../../../visual-basic/language-reference/data-types/ushort-data-type.md), [tamsayı](../../../visual-basic/language-reference/data-types/integer-data-type.md), [Uınteger](../../../visual-basic/language-reference/data-types/uinteger-data-type.md), [uzun](../../../visual-basic/language-reference/data-types/long-data-type.md), [ULong](../../../visual-basic/language-reference/data-types/ulong-data-type.md))|Veri türleri için uygun bir sayısal veri türü `number1` ve `number2`. "Tamsayı aritmetik" tablolarında bkz [işleci sonuçlarını veri türleri](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md).|  
-|Her iki ifade [ondalık](../../../visual-basic/language-reference/data-types/decimal-data-type.md)|`Decimal`|  
-|Her iki ifade [tek](../../../visual-basic/language-reference/data-types/single-data-type.md)|`Single`|  
-|Bir kayan nokta veri türü ya da ifadesidir (`Single` veya [çift](../../../visual-basic/language-reference/data-types/double-data-type.md)) ancak ikisini birden `Single` (Not `Decimal` bir kayan nokta veri türü değil)|`Double`|  
+|Her iki ifade de İntegral veri türleridir[(SByte](../../../visual-basic/language-reference/data-types/sbyte-data-type.md), [byte](../../../visual-basic/language-reference/data-types/byte-data-type.md), [Short](../../../visual-basic/language-reference/data-types/short-data-type.md), [ushort](../../../visual-basic/language-reference/data-types/ushort-data-type.md), [Integer](../../../visual-basic/language-reference/data-types/integer-data-type.md), [UInteger](../../../visual-basic/language-reference/data-types/uinteger-data-type.md), [Long](../../../visual-basic/language-reference/data-types/long-data-type.md), [ulong](../../../visual-basic/language-reference/data-types/ulong-data-type.md))|@No__t-0 ve `number2` veri türleri için uygun bir sayısal veri türü. [Işleç sonuçlarının veri türlerinde](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md)"tamsayı aritmetiği" tablolarına bakın.|  
+|Her iki ifade de [Decimal](../../../visual-basic/language-reference/data-types/decimal-data-type.md)|`Decimal`|  
+|Her iki ifade de [tek](../../../visual-basic/language-reference/data-types/single-data-type.md)|`Single`|  
+|Her iki ifade de bir kayan nokta veri türüdür (`Single` veya [Double](../../../visual-basic/language-reference/data-types/double-data-type.md)), ancak `Single` değil (Not `Decimal` kayan nokta veri türü değildir)|`Double`|  
   
- Bir ifade değerlendirme sonucu [hiçbir şey](../../../visual-basic/language-reference/nothing.md), sıfır olarak kabul edilir.  
+ Bir ifade [hiçbir şey](../../../visual-basic/language-reference/nothing.md)olarak değerlendirilirse, sıfır olarak değerlendirilir.  
   
 ## <a name="overloading"></a>Aşırı Yükleme  
- `*` İşleci olabilir *aşırı*, işleneni, sınıf veya yapı türüne sahip olduğunda bir sınıf veya yapı davranışını tanımlayabilirsiniz, anlamına gelir. Kodunuz bu tür bir sınıf veya yapı üzerinde bu işleç kullanıyorsa, yeniden tanımlanan davranışını anladığınızdan emin olun. Daha fazla bilgi için [işleç yordamları](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+ @No__t-0 işleci *aşırı*yüklenebilir, yani bir işlenen bu sınıf veya yapının türüne sahip olduğunda bir sınıf veya yapının davranışını yeniden tanımlayabileceği anlamına gelir. Kodunuz böyle bir sınıf veya yapıda bu işleci kullanıyorsa, yeniden tanımlanmış davranışını anladığınızdan emin olun. Daha fazla bilgi için bkz. [operatör yordamları](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Örnek  
- Bu örnekte `*` iki sayının çarpılacak işleci. İki işlenenden ürün sonucudur.  
+ Bu örnek iki sayıyı çarpmak için `*` işlecini kullanır. Sonuç iki işlenenin ürünüdür.  
   
  [!code-vb[VbVbalrOperators#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#4)]  
   
@@ -63,6 +63,6 @@ number1 * number2
 
 - [*= İşleci](../../../visual-basic/language-reference/operators/multiplication-assignment-operator.md)
 - [Aritmetik İşleçler](../../../visual-basic/language-reference/operators/arithmetic-operators.md)
-- [Visual Basic'de İşleç önceliği](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [Visual Basic operatör önceliği](../../../visual-basic/language-reference/operators/operator-precedence.md)
 - [İşlevselliğe Göre Listelenmiş İşleçler](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
-- [Visual Basic'de aritmetik işleçler](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+- [Visual Basic aritmetik Işleçler](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)

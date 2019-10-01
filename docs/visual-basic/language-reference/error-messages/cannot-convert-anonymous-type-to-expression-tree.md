@@ -7,15 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC36548
 ms.assetid: 27de068f-080e-4160-86bf-1ec23fd1925a
-ms.openlocfilehash: 045061f403b301d460bc85d161c1d6dee9c7d9f1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ba14c0cd8781b8771ac8b746e3efec29a457294a
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64602397"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71701183"
 ---
 # <a name="cannot-convert-anonymous-type-to-expression-tree-because-it-contains-a-field-that-is-used-in-the-initialization-of-another-field"></a>Anonim türün bir alanı başka bir alanı başlatmak için kullanıldığından; anonim tür, ifade ağacına dönüştürülemiyor.
-Anonim türün başka bir özelliğini başlatmak için anonim türün bir özellik kullanıldığında, derleyici dönüştürülmesi anonim bir ifade ağacı kabul etmiyor. Örneğin, aşağıdaki kodda, `Prop1` başlatma listesinde bildirilen ve ardından ilk değeri olarak kullanılan `Prop2`.  
+Anonim türün başka bir özelliğini başlatmak için anonim türün bir özelliği kullanıldığında derleyici bir ifade ağacına anonim dönüştürmeyi kabul etmez. Örneğin, aşağıdaki kodda, `Prop1`, başlatma listesinde bildirilmiştir ve sonra `Prop2` için ilk değer olarak kullanılır.  
   
 ```vb  
 Module M2  
@@ -31,13 +31,13 @@ Module M2
 End Module  
 ```  
   
- **Hata Kimliği:** BC36548  
+ **Hata kimliği:** BC36548  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-- İlk değeri atamak `Prop1` yerel bir değişkene. Bu değişken hem de Ata `Prop1` ve `Prop2`aşağıdaki kodda gösterildiği gibi.  
+- @No__t-0 için başlangıç değerini yerel bir değişkene atayın. Aşağıdaki kodda gösterildiği gibi, bu değişkeni hem `Prop1` hem de `Prop2` ' e atayın.  
   
-    ```  
+    ```vb  
     Sub Main()  
   
         Dim temp = 2  
@@ -48,6 +48,6 @@ End Module
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Anonim türleri (Visual Basic)](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
+- [Anonim türler (Visual Basic)](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
 - [İfade ağaçları (Visual Basic)](../../programming-guide/concepts/expression-trees/index.md)
-- [Nasıl yapılır: (Visual Basic) dinamik sorgular derlemek için ifade ağaçları kullanma](../../programming-guide/concepts/expression-trees/how-to-use-expression-trees-to-build-dynamic-queries.md)
+- [Nasıl yapılır: dinamik sorgular oluşturmak için Ifade ağaçları kullanma (Visual Basic)](../../programming-guide/concepts/expression-trees/how-to-use-expression-trees-to-build-dynamic-queries.md)

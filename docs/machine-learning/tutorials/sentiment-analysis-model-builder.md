@@ -1,17 +1,17 @@
 ---
-title: 'Öğretici: Yaklaşım-ikili sınıflandırmayı çözümle'
+title: 'Öğretici: yaklaşım-ikili sınıflandırmayı çözümle'
 description: Bu öğreticide, Web sitesi açıklamalarından yaklaşımı sınıflandırın bir Razor Pages uygulamasının nasıl oluşturulacağı ve uygun eylemin nasıl yapılacağı gösterilmektedir. İkili yaklaşım Sınıflandırıcısı, Visual Studio 'da model Oluşturucu kullanır.
-ms.date: 09/26/2019
+ms.date: 09/30/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 0878a9318e7c60be29eeac9fb4efd47e408ab660
-ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
+ms.openlocfilehash: ce64f0d11b1da65e460235fdabc2b07e05ffcbe4
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71332576"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71700906"
 ---
 # <a name="tutorial-analyze-sentiment-of-website-comments-in-a-web-application-using-mlnet-model-builder"></a>Öğretici: ML.NET model Oluşturucu kullanarak Web uygulamasındaki Web sitesindeki açıklamaları çözümleme
 
@@ -19,7 +19,7 @@ Bir Web uygulamasının içinde gerçek zamanlı açıklamalardan yaklaşımı �
 
 Bu öğreticide, Web sitesi açıklamalarından gerçek zamanlı olarak yaklaşım sınıflandıran bir ASP.NET Core Razor Pages uygulamasının nasıl oluşturulacağı gösterilmektedir.
 
-Bu öğreticide şunların nasıl yapıldığını öğreneceksiniz:
+Bu öğreticide şunların nasıl yapıladığını öğreneceksiniz:
 
 > [!div class="checklist"]
 >
@@ -61,7 +61,7 @@ Bu öğreticinin kaynak kodunu [DotNet/machinöğrenim-örnekleri](https://githu
 | Yaklaşım | Sentimentmetni |
 | :---: | :---: |
 1\. | = = İşlenmemiş = = dude, o Carl resmini geri yüklemeniz veya başka bir şey yapmanız gerekir.
-1\. | = = TAMAM! = = IM, DAHA SONRA BIR WIKI 'YI DAHA SONRA!!!
+1\. | = = TAMAM! = = ıM, DAHA SONRA BIR WIKI 'YI DAHA SONRA!!!
 0 | Bunu umuyoruz.
 
 ## <a name="choose-a-scenario"></a>Senaryo seçin
@@ -70,12 +70,12 @@ Bu öğreticinin kaynak kodunu [DotNet/machinöğrenim-örnekleri](https://githu
 
 Modelinize eğitebilmeniz için, model Oluşturucu tarafından sağlanan kullanılabilir makine öğrenimi senaryoları listesinden seçim yapmanız gerekir.
 
-1. **Çözüm Gezgini**, *SentimentRazor* projesine sağ tıklayın ve**Machine Learning** **Ekle** > ' yi seçin.
+1. **Çözüm Gezgini**, *SentimentRazor* projesine sağ tıklayın ve **Ekle** > **Machine Learning**' yı seçin.
 1. Bu örnek için senaryo, yaklaşım analiziydi. Model Oluşturucu aracının *senaryo* adımında **yaklaşım Analizi** senaryosunu seçin.
 
 ## <a name="load-the-data"></a>Verileri yükleme
 
-Model Oluşturucu iki kaynaktan (bir SQL Server veritabanı ya da yerel bir dosya `csv` ) veya `tsv` biçimdeki verileri kabul eder.
+Model Oluşturucu iki kaynaktan verileri, bir SQL Server veritabanını veya `csv` veya `tsv` biçiminde yerel bir dosyayı kabul eder.
 
 1. Model Oluşturucu aracının veri adımında, veri kaynağı açılır listesinden **Dosya** ' yı seçin.
 1. **Dosya seçin** metin kutusunun yanındaki düğmeyi seçin ve dosya Gezgini 'ni kullanarak, *vibtox-250-Line-Data. tsv* dosyasına gidin ve seçin.
@@ -103,7 +103,7 @@ Modelin eğitilmesi için gereken süre, veri miktarına müşterinizin istekler
 
 ## <a name="evaluate-the-model"></a>Modeli değerlendirme
 
-Eğitim adımının sonucu, en iyi performansa sahip bir model olacaktır. Model Oluşturucu aracının değerlendir adımında, çıkış bölümü en iyi **model girişinde en** iyi işlem modeli tarafından kullanılan algoritmayı **(RKARE)** içerir. Ayrıca, ilk beş modeli ve bunların ölçümlerini içeren bir Özet tablosu.
+Eğitim adımının sonucu, en iyi performansa sahip bir model olacaktır. Model Oluşturucu aracının değerlendir adımında, çıkış **bölümü en iyi model girişinde en** iyi işlem modeli tarafından kullanılan algoritmayı ve **En Iyi model doğruluğunun**ölçümlerini içerir. Ayrıca, ilk beş modeli ve bunların ölçümlerini içeren bir Özet tablosu.
 
 Doğruluk ölçümlerinizi tatmin ediyorsanız, model doğruluğunu denemeye yönelik bazı kolay yollar, modelin eğilmesi veya daha fazla veri kullanmak için zaman miktarını artırmaktır. Aksi takdirde, model Oluşturucu aracında son adıma geçmek için **kod** bağlantısını seçin.
 
@@ -117,14 +117,14 @@ Eğitim sürecinin bir sonucu olarak iki proje oluşturulacaktır.
 
     Aşağıdaki projeler **Çözüm Gezgini**görünmelidir:
 
-    - *SentimentRazorML. ConsoleApp*: Model eğitimi ve tahmin kodunu içeren bir .NET Core konsol uygulaması.
-    - *SentimentRazorML. model*: Giriş ve çıkış modeli verilerinin şemasını ve eğitim sırasında en iyi uygulanan modelin kaydedilmiş sürümünü tanımlayan veri modellerini içeren .NET Standard sınıf kitaplığı.
+    - *SentimentRazorML. ConsoleApp*: model eğitimi ve tahmin kodunu içeren bir .NET Core konsol uygulaması.
+    - *SentimentRazorML. model*: giriş ve çıkış modeli verilerinin şemasını tanımlayan veri modellerini ve eğitim sırasında en iyi uygulanan modelin kaydedilmiş sürümünü içeren .NET Standard bir sınıf kitaplığı.
 
     Bu öğretici için, *SentimentRazorML. model* projesi yalnızca, tahmine dayalı olarak konsolu yerine *SentimentRazor* Web uygulamasında yapılabilmesi için kullanılır. *SentimentRazorML. ConsoleApp* , Puanlama için kullanılmayacak olsa da, daha sonra yeni verileri kullanarak modeli yeniden eğitebilmek için kullanılabilir. Yeniden eğitim, Bu öğreticinin kapsamı dışındadır.
 
 ### <a name="configure-the-predictionengine-pool"></a>PredictionEngine havuzunu yapılandırma
 
-Tek bir tahmin yapmak için bir [@no__t](xref:Microsoft.ML.PredictionEngine%602)oluşturmanız gerekir. [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602), iş parçacığı açısından güvenli değildir. Ayrıca, uygulamanızın içinde gerek duyduğu her yerde bir örneği oluşturmanız gerekir. Uygulamanız büyüdükçe, bu işlem yönetilebilir hale gelebilir. Daha iyi performans ve iş parçacığı güvenliği için, uygulamanız genelinde kullanılmak üzere bir [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) nesnesi oluşturan bağımlılık ekleme ve `PredictionEnginePool` hizmeti birleşimini kullanın.
+Tek bir tahmin yapmak için bir [@no__t](xref:Microsoft.ML.PredictionEngine%602)oluşturmanız gerekir. [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) , iş parçacığı açısından güvenli değildir. Ayrıca, uygulamanızın içinde gerek duyduğu her yerde bir örneği oluşturmanız gerekir. Uygulamanız büyüdükçe, bu işlem yönetilebilir hale gelebilir. Daha iyi performans ve iş parçacığı güvenliği için, uygulamanız genelinde kullanılmak üzere bir [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) nesnesi oluşturan bağımlılık ekleme ve `PredictionEnginePool` hizmeti birleşimini kullanın.
 
 1. *Microsoft.Extensions.ml* NuGet paketini yükler:
 
@@ -138,45 +138,75 @@ Tek bir tahmin yapmak için bir [@no__t](xref:Microsoft.ML.PredictionEngine%602)
 1. *SentimentRazor* projesindeki *Startup.cs* dosyasını açın.
 1. *Microsoft.Extensions.ml* NuGet paketini ve *SentimentRazorML. model* projesine başvurmak için aşağıdaki using deyimlerini ekleyin:
 
-    [!code-csharp [StartupUsings](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Startup.cs#L12-L14)]
+    ```csharp
+    using System.IO;
+    using Microsoft.Extensions.ML;
+    using SentimentRazorML.Model;
+    ```
 
 1. Eğitilen model dosyasının konumunu depolamak için genel bir değişken oluşturun.
 
-    [!code-csharp [ModelPath](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Startup.cs#L20)]
+    ```csharp
+    private readonly string _modelPath;
+    ```
 
-1. Model dosyası, uygulamanızın derleme dosyalarının yanı sıra derleme dizininde depolanır. Daha kolay erişim sağlamak için, `GetAbsolutePath` `Configure` yönteminden sonra adlı bir yardımcı yöntem oluşturun
+1. Model dosyası, uygulamanızın derleme dosyalarının yanı sıra derleme dizininde depolanır. Daha kolay erişim sağlamak için, `Configure` yönteminden sonra `GetAbsolutePath` adlı bir yardımcı yöntem oluşturun
 
-    [!code-csharp [GetAbsolutePathMethod](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Startup.cs#L66-L73)]
+    ```csharp
+    public static string GetAbsolutePath(string relativePath)
+    {
+        FileInfo _dataRoot = new FileInfo(typeof(Program).Assembly.Location);
+        string assemblyFolderPath = _dataRoot.Directory.FullName;
 
-1. Öğesini ayarlamak için `Startup` `GetAbsolutePath` sınıf`_modelPath`oluşturucusunda metodunu kullanın.
+        string fullPath = Path.Combine(assemblyFolderPath, relativePath);
+        return fullPath;
+    }    
+    ```
 
-    [!code-csharp [InitModelPath](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Startup.cs#L25)]
+1. @No__t-2 ' i ayarlamak için `Startup` sınıf oluşturucusunda `GetAbsolutePath` yöntemini kullanın.
 
-1. `ConfigureServices` Yöntemi için `PredictionEnginePool` uygulamanızı için yapılandırın:
+    ```csharp
+    _modelPath = GetAbsolutePath("MLModel.zip");
+    ```
 
-    [!code-csharp [InitPredEnginePool](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Startup.cs#L42)]
+1. @No__t-1 yönteminde uygulamanız için `PredictionEnginePool` yapılandırın:
+
+    ```csharp
+    services.AddPredictionEnginePool<ModelInput, ModelOutput>()
+            .FromFile(_modelPath);
+    ```
 
 ### <a name="create-sentiment-analysis-handler"></a>Yaklaşım Analizi işleyicisi oluşturma
 
-Tahmine dayalı, uygulamanın ana sayfasında yapılır. Bu nedenle, Kullanıcı girişini alan ve bir tahmin eklenmesi `PredictionEnginePool` için kullanması gereken bir yöntem.
+Tahmine dayalı, uygulamanın ana sayfasında yapılır. Bu nedenle, Kullanıcı girişi alan ve bir tahmin eklenmesi için `PredictionEnginePool` kullanan bir yöntem.
 
 1. *Pages* dizininde bulunan *Index.cshtml.cs* dosyasını açın ve aşağıdaki using deyimlerini ekleyin:
 
-    [!code-csharp [IndexUsings](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Pages/Index.cshtml.cs#L7-L8)]
+    ```csharp
+    using Microsoft.Extensions.ML;
+    using SentimentRazorML.Model;
+    ```
 
-    `PredictionEnginePool` Sınıfında yapılandırılan`Startup` ' ı kullanmak için, onu kullanmak istediğiniz modelin oluşturucusuna eklemek gerekir.
+    @No__t-1 sınıfında yapılandırılmış `PredictionEnginePool` ' ı kullanmak için, onu kullanmak istediğiniz modelin oluşturucusuna yazmanız gerekir.
 
-1. `PredictionEnginePool` Sınıfının içine başvurmak için bir değişken ekleyin. `IndexModel`
+1. @No__t-1 sınıfının içindeki `PredictionEnginePool` ' a başvuracak bir değişken ekleyin.
 
-    [!code-csharp [PredEnginePool](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Pages/Index.cshtml.cs#L14)]
+    ```csharp
+    private readonly PredictionEnginePool<ModelInput, ModelOutput> _predictionEnginePool;
+    ```
 
-1. `IndexModel` Sınıfında bir Oluşturucu oluşturun ve `PredictionEnginePool` hizmeti ona ekleyin.
+1. @No__t-0 sınıfında bir Oluşturucu oluşturun ve buna `PredictionEnginePool` hizmetini ekleyin.
 
-    [!code-csharp [IndexConstructor](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Pages/Index.cshtml.cs#L16-L19)]
+    ```csharp
+    public IndexModel(PredictionEnginePool<ModelInput, ModelOutput> predictionEnginePool)
+    {
+        _predictionEnginePool = predictionEnginePool;
+    }    
+    ```
 
-1. Web sayfasından alınan Kullanıcı girişinden tahminleri yapmak `PredictionEnginePool` için öğesini kullanan bir yöntem işleyicisi oluşturun.
+1. Web sayfasından alınan Kullanıcı girişinden tahminleri yapmak için `PredictionEnginePool` kullanan bir yöntem işleyicisi oluşturun.
 
-    1. `OnGet` Yönteminin altında, adlı yeni bir yöntem oluşturun`OnGetAnalyzeSentiment`
+    1. @No__t-0 yönteminin altında, `OnGetAnalyzeSentiment` adlı yeni bir yöntem oluşturun
 
         ```csharp
         public IActionResult OnGetAnalyzeSentiment([FromQuery] string text)
@@ -185,29 +215,39 @@ Tahmine dayalı, uygulamanın ana sayfasında yapılır. Bu nedenle, Kullanıcı
         }
         ```
 
-    1. Yöntemi içinde, kullanıcının girişi boş veya null olduğunda nötr yaklaşım döndürün. `OnGetAnalyzeSentiment`
+    1. @No__t-0 yönteminin içinde, kullanıcının girişi boş veya null olduğunda *nötr* yaklaşım döndürün.
 
-        [!code-csharp [InitInput](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Pages/Index.cshtml.cs#L28)]
+        ```csharp
+        if (String.IsNullOrEmpty(text)) return Content("Neutral");
+        ```
 
-    1. Geçerli bir giriş verildiğinde yeni bir örneğini `ModelInput`oluşturun.
+    1. Geçerli bir giriş verildiğinde @no__t yeni bir örneğini oluşturun-0.
 
-        [!code-csharp [InitInput](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Pages/Index.cshtml.cs#L29)]
+        ```csharp
+        var input = new ModelInput { SentimentText = text };
+        ```
 
-    1. Yaklaşımı tahmin `PredictionEnginePool` etmek için kullanın.
+    1. Duymayı tahmin etmek için `PredictionEnginePool` kullanın.
 
-        [!code-csharp [MakePrediction](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Pages/Index.cshtml.cs#L30)]
+        ```csharp
+        var prediction = _predictionEnginePool.Predict(input);
+        ```
 
-    1. Tahmin `bool` edilen değeri, aşağıdaki kodla birlikte Toxic öğesine dönüştürün.
+    1. Tahmin edilen `bool` değerini aşağıdaki kodla Toxic öğesine dönüştürün.
 
-        [!code-csharp [ConvertPrediction](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Pages/Index.cshtml.cs#L31)]
+        ```csharp
+        var sentiment = Convert.ToBoolean(prediction.Prediction) ? "Toxic" : "Not Toxic";
+        ```
 
     1. Son olarak, yaklaşımı Web sayfasına geri döndürün.
 
-        [!code-csharp [ReturnSentiment](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/Pages/Index.cshtml.cs#L32)]
+        ```csharp
+        return Content(sentiment);
+        ```
 
 ### <a name="configure-the-web-page"></a>Web sayfasını yapılandırma
 
-Tarafından döndürülen sonuçlar, `OnGetAnalyzeSentiment` `Index` Web sayfasında dinamik olarak görüntülenir.
+@No__t-0 tarafından döndürülen sonuçlar, `Index` Web sayfasında dinamik olarak görüntülenir.
 
 1. *Pages* dizinindeki *Index. cshtml* dosyasını açın ve içeriğini şu kodla değiştirin:
 
@@ -217,21 +257,21 @@ Tarafından döndürülen sonuçlar, `OnGetAnalyzeSentiment` `Index` Web sayfas�
 
     [!code-css [CssStyling](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/wwwroot/css/site.css#L61-L105)]
 
-1. Bundan sonra, Web sayfasından `OnGetAnalyzeSentiment` işleyiciye giriş göndermek için kod ekleyin.
+1. Bundan sonra, Web sayfasından `OnGetAnalyzeSentiment` işleyicisine giriş göndermek için kod ekleyin.
 
-    1. *Wwwroot\js* dizininde bulunan *site. js* dosyasında, `OnGetAnalyzeSentiment` işleyiciye Kullanıcı girişiyle bir http isteği almak için `getSentiment` adlı bir işlev oluşturun.
+    1. *Wwwroot\js* dizininde bulunan *site. js* dosyasında, `OnGetAnalyzeSentiment` IŞLEYICISINE Kullanıcı GIRIŞIYLE bir HTTP isteği almak için `getSentiment` adlı bir işlev oluşturun.
 
         [!code-javascript [GetSentimentMethod](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/wwwroot/js/site.js#L5-L10)]
 
-    1. Bunun altında, yaklaşım tahmin edildiğinde Web `updateMarker` sayfasındaki işaretin konumunu dinamik olarak güncelleştirmek için adlı başka bir işlev ekleyin.
+    1. Bunun altında, yaklaşım tahmin edildiğinde Web sayfasındaki işaretin konumunu dinamik olarak güncelleştirmek için `updateMarker` adlı başka bir işlev ekleyin.
 
         [!code-javascript [UpdateMarkerMethod](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/wwwroot/js/site.js#L12-L15)]
 
-    1. Kullanıcıdan girişi almak `updateSentiment` için çağrılan bir olay işleyici işlevi oluşturun, `getSentiment` işlevi kullanarak `OnGetAnalyzeSentiment` işleve gönderin ve işaretleyiciyi `updateMarker` işlevle güncelleştirin.
+    1. Kullanıcıdan girişi almak için `updateSentiment` adlı bir olay işleyici işlevi oluşturun, `getSentiment` işlevini kullanarak `OnGetAnalyzeSentiment` işlevine gönderin ve işaretçiyi `updateMarker` işleviyle güncelleştirin.
 
         [!code-javascript [UpdateSentimentMethod](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/wwwroot/js/site.js#L17-L34)]
 
-    1. Son olarak, olay işleyicisini kaydedin ve `textarea` `id=Message` özniteliği ile öğesine bağlayın.
+    1. Son olarak, olay işleyicisini kaydedin ve `id=Message` özniteliğiyle `textarea` öğesine bağlayın.
 
         [!code-javascript [UpdateSentimentEvtHandler](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/wwwroot/js/site.js#L36)]
 
@@ -243,11 +283,11 @@ Uygulama başlatıldığında, *model Oluşturucu* seyrek erişimli yazın! meti
 
 ![Tahmin edilen yaklaşım penceresiyle pencere çalıştırma](./media/sentiment-analysis-model-builder/web-app.png)
 
-Model Oluşturucu tarafından oluşturulan projelere daha sonra başka bir çözümün içinde başvurulmaları gerekiyorsa, bunları `C:\Users\%USERNAME%\AppData\Local\Temp\MLVSTools` dizin içinde bulabilirsiniz.
+Model Oluşturucu tarafından oluşturulan projelere daha sonra başka bir çözümün içinde başvurulmaları gerekiyorsa, bunları `C:\Users\%USERNAME%\AppData\Local\Temp\MLVSTools` dizininde bulabilirsiniz.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Bu öğreticide, şunların nasıl yapıldığını öğrendiniz:
+Bu öğreticide, nasıl yapılacağını öğrendiniz:
 > [!div class="checklist"]
 >
 > - ASP.NET Core Razor Pages uygulaması oluşturma

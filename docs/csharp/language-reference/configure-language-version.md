@@ -2,12 +2,12 @@
 title: C#dil sürümü oluşturma C# -kılavuz
 description: C# Dil sürümünün projenize göre nasıl belirlendiği hakkında bilgi edinin ve bunu el ile ayarlayabileceğiniz farklı değerler.
 ms.date: 07/10/2019
-ms.openlocfilehash: fae36f5305e23fbfa1c55c5881e37391670f93ab
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: aa4f16d91b38fec7f5d4cd0b2632e62552b64eb7
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70040345"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71698800"
 ---
 # <a name="c-language-versioning"></a>C#dil sürümü oluşturma
 
@@ -19,11 +19,13 @@ Bu makaledeki kurallar, Visual Studio 2019 veya .NET Core 3,0 SDK ile sunulan de
 
 Derleyici, bu kurallara göre bir varsayılan değer belirler:
 
-|Hedef çerçeve|sürüm|C#dil sürümü varsayılanı|
+|hedef çerçeve|sürüm|C#dil sürümü varsayılanı|
 |----------------|-------|---------------------------|
-|.NET Core|3.x|C#8,0|
+|.NET Core|3.x|C# 8.0|
 |.NET Core|2.x|C# 7.3|
-|.NET Standard|tüm|C# 7.3|
+|.NET Standard|2,1|C# 8.0|
+|.NET Standard|2,0|C# 7.3|
+|.NET Standard|'in|C# 7.3|
 |.NET Framework|tüm|C# 7.3|
 
 ## <a name="default-for-previews"></a>Önizlemeler için varsayılan
@@ -36,7 +38,7 @@ C# Sürümünüzü açıkça belirtmeniz gerekiyorsa, bunu birkaç şekilde yapa
 
 - [Proje dosyanızı](#edit-the-project-file)el ile düzenleyin.
 - [Bir alt dizinde birden çok proje için](#configure-multiple-projects)dil sürümünü ayarlayın.
-- Derleyici seçeneğini [ `-langversion` yapılandırma](compiler-options/langversion-compiler-option.md)
+- [@No__t-1 derleyici seçeneğini](compiler-options/langversion-compiler-option.md) yapılandırma
 
 ### <a name="edit-the-project-file"></a>Proje dosyasını düzenleme
 
@@ -48,7 +50,7 @@ Proje dosyanızdaki dil sürümünü ayarlayabilirsiniz. Örneğin, önizleme ö
 </PropertyGroup>
 ```
 
-Değer `preview` , derleyicinizin desteklediği en son C# önizleme dili sürümünü kullanır.
+@No__t-0 değeri, derleyicinizin desteklediği en son C# önizleme dili sürümünü kullanır.
 
 ### <a name="configure-multiple-projects"></a>Birden çok proje yapılandırma
 
@@ -70,13 +72,13 @@ Aşağıdaki tabloda tüm geçerli C# dil sürümleri gösterilmektedir. Daha es
 
 |Değer|Açıklama|
 |------------|-------------|
-|önizleme|Derleyici, en son önizleme sürümündeki tüm geçerli dil sözdizimini kabul eder.|
-|latest|Derleyici derleyicinin en son yayınlanan sürümünden (ikincil sürüm dahil) söz dizimini kabul eder.|
+|Önizleme|Derleyici, en son önizleme sürümündeki tüm geçerli dil sözdizimini kabul eder.|
+|sürümü|Derleyici derleyicinin en son yayınlanan sürümünden (ikincil sürüm dahil) söz dizimini kabul eder.|
 |Latestana|Derleyici derleyicinin en son yayınlanan ana sürümünden söz dizimini kabul eder.|
 |8.0|Derleyici yalnızca C# 8,0 veya daha düşük bir sözdiziminde bulunan sözdizimini kabul eder.|
-|7.3|Derleyici yalnızca C# 7,3 veya daha düşük bir sözdiziminde bulunan sözdizimini kabul eder.|
-|7.2|Derleyici yalnızca C# 7,2 veya daha düşük bir sözdiziminde bulunan sözdizimini kabul eder.|
-|7.1|Derleyici yalnızca C# 7,1 veya daha düşük bir sözdiziminde bulunan sözdizimini kabul eder.|
+|7,3|Derleyici yalnızca C# 7,3 veya daha düşük bir sözdiziminde bulunan sözdizimini kabul eder.|
+|7,2|Derleyici yalnızca C# 7,2 veya daha düşük bir sözdiziminde bulunan sözdizimini kabul eder.|
+|7,1|Derleyici yalnızca C# 7,1 veya daha düşük bir sözdiziminde bulunan sözdizimini kabul eder.|
 |7|Derleyici yalnızca C# 7,0 veya daha düşük bir sözdiziminde bulunan sözdizimini kabul eder.|
 |6|Derleyici yalnızca C# 6,0 veya daha düşük bir sözdiziminde bulunan sözdizimini kabul eder.|
 |5|Derleyici yalnızca C# 5,0 veya daha düşük bir sözdiziminde bulunan sözdizimini kabul eder.|

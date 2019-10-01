@@ -4,12 +4,12 @@ description: Yerelleştirilmiş özel durum iletileriyle Kullanıcı tanımlı �
 author: Youssef1313
 ms.author: ronpet
 ms.date: 09/13/2019
-ms.openlocfilehash: 1e5ef5658e4cb71d0689a1786494eaec57d4e7fb
-ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
+ms.openlocfilehash: b4aa567fccda9354bc5959d6b9838d678d53abef
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71332993"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71696711"
 ---
 # <a name="how-to-create-user-defined-exceptions-with-localized-exception-messages"></a>Nasıl yapılır: yerelleştirilmiş özel durum iletileriyle Kullanıcı tanımlı özel durumlar oluşturma
 
@@ -77,16 +77,22 @@ Bir `StudentName` özelliği içeren `StudentNotFoundException` oluşturmak iste
 throw new StudentNotFoundException("The student cannot be found.", "John");
 ```
 
-Önceki satırla ilgili sorun "öğrenci bulunamıyor" olarak belirlenir. yalnızca sabit bir dizedir. Yerelleştirilmiş bir uygulamada, Kullanıcı kültürüne bağlı olarak farklı iletilere sahip olmak istersiniz.
+Önceki satırla ilgili sorun `"The student cannot be found."` ' ın yalnızca sabit bir dizedir. Yerelleştirilmiş bir uygulamada, Kullanıcı kültürüne bağlı olarak farklı iletilere sahip olmak istersiniz.
 [Uydu derlemeleri](../../framework/resources/creating-satellite-assemblies-for-desktop-apps.md) bunu yapmanın iyi bir yoludur. Uydu derlemesi, belirli bir dilin kaynaklarını içeren bir. dll ' dir. Çalışma zamanında belirli bir kaynak istediğinizde, CLR bu kaynağı Kullanıcı kültürüne göre bulur. Bu kültür için uydu bütünleştirilmiş kodu bulunmazsa, varsayılan kültürün kaynakları kullanılır.
 
 Yerelleştirilmiş özel durum iletilerini oluşturmak için:
 
 1. Kaynak dosyalarını tutmak için *kaynaklar* adlı yeni bir klasör oluşturun.
-1. Buna yeni bir kaynak dosyası ekleyin. Visual Studio 'da, **Çözüm Gezgini**klasörü üzerinde sağ tıklayın ve  -> **Yeni öğe** -> **kaynak dosyası** **Ekle**' yi seçin. Dosyayı *Exceptionmessages. resx*olarak adlandırın. Bu, varsayılan kaynak dosyasıdır.
-1. Aşağıdaki görüntüde gösterildiği gibi, özel durum iletiniz için bir ad/değer çifti ekleyin: ![ varsayılan kültüre kaynak ekleyin @ no__t-1
+1. Buna yeni bir kaynak dosyası ekleyin. Visual Studio 'da, **Çözüm Gezgini**klasörü üzerinde sağ tıklayın ve  > **Yeni öğe** > **kaynak dosyası** **Ekle**' yi seçin. Dosyayı *Exceptionmessages. resx*olarak adlandırın. Bu, varsayılan kaynak dosyasıdır.
+1. Aşağıdaki görüntüde gösterildiği gibi, özel durum iletiniz için bir ad/değer çifti ekleyin:
+
+   ![Varsayılan kültüre kaynak ekleme](media/add-resources-to-default-culture.jpg)
+
 1. Fransızca için yeni bir kaynak dosyası ekleyin. *ExceptionMessages.fr-fr. resx*olarak adlandırın.
-1. Özel durum iletisi için bir ad/değer çifti ekleyin, ancak bir Fransızca değeri: ![Fr-FR kültürü @ no__t-1 ' e kaynak ekleme
+1. Özel durum iletisi için bir ad/değer çifti ekleyin, ancak bir Fransızca değeri:
+
+   ![Fr-FR kültürüne kaynak ekleme](media/add-resources-to-fr-culture.jpg)
+
 1. Projeyi oluşturduktan sonra, yapı çıkış klasörü, uydu derlemesi olan bir *. dll* dosyası ile *fr-fr* klasörünü içermelidir.
 1. Özel durumu aşağıdaki gibi kodla oluşturursunuz:
 

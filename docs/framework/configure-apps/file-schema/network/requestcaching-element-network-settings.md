@@ -8,19 +8,19 @@ helpviewer_keywords:
 - requestCaching element
 - <requestCaching> element
 ms.assetid: 9962a2fe-cbda-41a6-9377-571811eaea84
-ms.openlocfilehash: 2a3d0b182acad2351ed095934ca97c6194d344fc
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: f0979d2e0caeb0b22b90572aef0ad53235020f1d
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69659128"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71697833"
 ---
 # <a name="requestcaching-element-network-settings"></a>\<requestCaching > öğesi (ağ ayarları)
 Ağ istekleri için önbelleğe alma mekanizmasını denetler.  
   
- \<Yapılandırma >  
-\<system.net>  
-\<requestCaching >  
+[ **\<Yapılandırma >** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **@no__t -4system. net >** ](system-net-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 **\<requestCaching >**  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -42,9 +42,9 @@ Ağ istekleri için önbelleğe alma mekanizmasını denetler.
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|`isPrivateCache`|Önbelleğin, farklı kullanıcıların bilgileri arasında yalıtım verip içermediğini belirtir. Varsayılan değer `true` şeklindedir. Bu değer, orta `false` katman uygulamalar için olmalıdır.|  
+|`isPrivateCache`|Önbelleğin, farklı kullanıcıların bilgileri arasında yalıtım verip içermediğini belirtir. Varsayılan değer `true` şeklindedir. Bu değer, orta katman uygulamalar için `false` olmalıdır.|  
 |`disableAllCaching`|Tüm Web yanıtları için önbelleğe almanın devre dışı bırakıldığını belirtir ve program aracılığıyla geçersiz kılınamaz.|  
-|`defaultPolicyLevel`|<xref:System.Net.Cache.RequestCacheLevel> Numaralandırmadaki değerlerden biri. Varsayılan değer `BypassCache` şeklindedir.|  
+|`defaultPolicyLevel`|@No__t-0 numaralandırmasındaki değerlerden biri. Varsayılan değer `BypassCache` şeklindedir.|  
 |`unspecifiedMaximumAge`|İçeriğin süresi dolduğunda, varsayılan süreyi belirtir.|  
   
 ## <a name="policylevel-attribute"></a>policyLevel özniteliği  

@@ -1,21 +1,19 @@
 ---
-title: <Uri> Öğesi (Uri Ayarları)
+title: <uri> Öğesi (Uri Ayarları)
 ms.date: 03/30/2017
 ms.assetid: c22bab8b-477c-4ae4-8498-65ad409e0847
-ms.openlocfilehash: 80d71da5ca680872e4948fa8ff135fbbdf08cffe
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: a492baf9951466383ca0277a2927b8554e5bb332
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663974"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71697434"
 ---
-# <a name="uri-element-uri-settings"></a>\<Uri > öğesi (Uri Ayarları)
+# <a name="uri-element-uri-settings"></a>\<uri > öğesi (URI ayarları)
 .NET Framework Tekdüzen Kaynak tanımlayıcıları (URI 'Ler) kullanarak ifade edilen Web adreslerini nasıl işleyeceğini belirten ayarları içerir.  
   
-## <a name="schema-hierarchy"></a>Şema hiyerarşisi  
- [\<Yapılandırma > öğesi](../configuration-element.md)  
-  
- [\<Uri >](uri-element-uri-settings.md)  
+[ **\<Yapılandırma >** ](../configuration-element.md)  
+&nbsp; @ no__t-1 **\<uri >**  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -35,8 +33,8 @@ ms.locfileid: "69663974"
 |**Öğe**|**Açıklama**|  
 |-----------------|---------------------|  
 |[IDN](idn-element-uri-settings.md)|Uluslararası etki alanı adı (ıDN) ayrıştırma 'nın etki alanı adlarına uygulandığını belirtir.|  
-|[iriParsing](iriparsing-element-uri-settings.md)|Uluslararası kaynak tanımlayıcı (IRI) ayrıştırmanın uygulanıp uygulanmadığını <xref:System.Uri> ve IRI ayrıştırma kurallarının uygulanıp uygulanamayacağını belirtir.|  
-|[schemeSettings](schemesettings-element-uri-settings.md)|Belirli düzenler için <xref:System.Uri> nasıl ayrıştırılacaksınız belirtir.|  
+|[iriParsing](iriparsing-element-uri-settings.md)|Uluslararası kaynak tanımlayıcı (IRI) ayrıştırma <xref:System.Uri> ' a uygulanıp uygulanmadığını ve IRI ayrıştırma kurallarının uygulanıp uygulanamayacağını belirtir.|  
+|[schemeSettings](schemesettings-element-uri-settings.md)|Belirli düzenler için <xref:System.Uri> ' ın nasıl ayrıştıralınacağını belirtir.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
@@ -45,12 +43,12 @@ ms.locfileid: "69663974"
 |[yapılandırmada](../configuration-element.md)|Tüm ad alanları için ayarları içerir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Öğesi, <xref:System.Net> ad alanındaki sınıflar tarafından kullanılan <xref:System.Uri> sınıf üyeleri için ayarları içerir. `uri` Ayarlar IRI ve ıDN desteğini yapılandırır.  
+ @No__t-0 öğesi, <xref:System.Net> ad alanındaki sınıflar tarafından kullanılan <xref:System.Uri> sınıfının üyelerine yönelik ayarları içerir. Ayarlar IRI ve ıDN desteğini yapılandırır.  
   
 ## <a name="example"></a>Örnek  
   
 ### <a name="description"></a>Açıklama  
- Aşağıdaki örnek, IRI ayrıştırma ve IDN adlarını desteklemek <xref:System.Uri> için sınıfı tarafından kullanılan bir yapılandırmayı gösterir. Örnek, tüm düzen ayarlarını da temizler ve ardından http şeması için tam olmayan yüzde kodlamalı yol sınırlayıcıları için destek ekler.  
+ Aşağıdaki örnekte, IRI ayrıştırma ve ıDN adlarını desteklemek için <xref:System.Uri> sınıfı tarafından kullanılan bir yapılandırma gösterilmektedir. Örnek, tüm düzen ayarlarını da temizler ve ardından http şeması için tam olmayan yüzde kodlamalı yol sınırlayıcıları için destek ekler.  
   
 ### <a name="code"></a>Kod  
   

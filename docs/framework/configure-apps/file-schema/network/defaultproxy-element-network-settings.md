@@ -8,19 +8,19 @@ helpviewer_keywords:
 - defaultProxy element
 - <defaultProxy> element
 ms.assetid: 9d663c4b-07b4-4f6f-9b12-efbd3630354f
-ms.openlocfilehash: 7e49762ee017564734bfb2b2f7074d94b7eabe11
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 0945629c1395917bc1cf825f2ba84d20afa99957
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69659387"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71698202"
 ---
 # <a name="defaultproxy-element-network-settings"></a>\<defaultProxy > öğesi (ağ ayarları)
 Köprü Metni Aktarım Protokolü (HTTP) proxy sunucusunu yapılandırır.  
   
- \<Yapılandırma >  
-\<system.net>  
-\<defaultProxy >  
+[ **\<Yapılandırma >** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **@no__t -4system. net >** ](system-net-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 **\<defaultProxy >**  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -61,7 +61,7 @@ Köprü Metni Aktarım Protokolü (HTTP) proxy sunucusunu yapılandırır.
 ## <a name="remarks"></a>Açıklamalar  
  DefaultProxy öğesi boşsa, Internet Explorer 'daki proxy ayarları kullanılacaktır. Bu davranış .NET Framework 1,1 sürümünden farklıdır.  
   
- [Modül](module-element-network-settings.md) öğesi ortak olmayan bir tür belirtiyorsa, tür <xref:System.Net.IWebProxy> sınıftan türetilmez, bu nesnenin parametresiz oluşturucusundan bir özel durum meydana geldi veya bir özel durum oluştu sistem tarafından belirtilen varsayılan proxy. Özel durum üzerindeki özelliği, hatanın kök nedeni hakkında daha fazla bilgi içermelidir. <xref:System.Exception.InnerException%2A>  
+ [Modül](module-element-network-settings.md) öğesi ortak olmayan bir tür belirtiyorsa bir özel durum oluşur, tür <xref:System.Net.IWebProxy> sınıfından türetilmez, bu nesnenin parametresiz oluşturucusundan bir özel durum oluştu veya bir özel durum alınırken hata oluştu sistem tarafından belirtilen varsayılan proxy. Özel durumun <xref:System.Exception.InnerException%2A> özelliği, hatanın kök nedeni hakkında daha fazla bilgi içermelidir.  
   
 ## <a name="configuration-files"></a>Yapılandırma Dosyaları  
  Bu öğe, uygulama yapılandırma dosyasında veya makine yapılandırma dosyasında (Machine. config) kullanılabilir.  

@@ -1,5 +1,5 @@
 ---
-title: <remove>İçin için <listeners> öğesi<trace>
+title: <trace> için <listeners> <remove> öğesi
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/trace/listeners/remove
@@ -7,21 +7,21 @@ helpviewer_keywords:
 - remove element
 - <remove> element
 ms.assetid: 9a5cd1b5-be1a-485f-8f0c-2890ad3ef3e0
-ms.openlocfilehash: 0c5c9efb8a22d26ea5d4467f9628af5935d6dbad
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 56d1e56514aed98d5f3b9f7363e461af6ac68a8c
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69920483"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71697213"
 ---
-# <a name="remove-element-for-listeners-for-trace"></a>\<Trace için \< \<> > öğeyi kaldırın >
+# <a name="remove-element-for-listeners-for-trace"></a>\<trace için \<listeners > için \<> öğesini kaldırın >
 **Dinleyicileri** koleksiyondan bir dinleyiciyi kaldırır.  
   
- \<Yapılandırma >  
-\<System. Diagnostics >  
-\<İzleme >  
-\<dinleyiciler >  
-\<> Kaldır  
+[ **\<Yapılandırma >** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **\<system. Diagnostics >** ](system-diagnostics-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<trace >** ](trace-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5[ **\<listeners >** ](listeners-element-for-trace.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7 **\<remove >**  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -36,7 +36,7 @@ ms.locfileid: "69920483"
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|**name**|Gerekli öznitelik.<br /><br /> Dinleyici koleksiyonundan kaldırılacak dinleyicinin adı.|  
+|**ada**|Gerekli öznitelik.<br /><br /> **Dinleyici koleksiyonundan kaldırılacak** dinleyicinin adı.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -53,7 +53,7 @@ ms.locfileid: "69920483"
 ## <a name="remarks"></a>Açıklamalar  
   
 > [!NOTE]
-> <xref:System.Diagnostics.DefaultTraceListener> Koleksiyonundankaldırma<xref:System.Diagnostics.Trace.Assert%2A?displayProperty=nameWithType>,,, ve<xref:System.Diagnostics.Trace.Fail%2A?displayProperty=nameWithType> yöntemlerinin davranışını değiştirir. <xref:System.Diagnostics.Debug.Fail%2A?displayProperty=nameWithType> <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType> `Listeners` Ya da `Fail` yöntemini çağırmak normalde bir ileti kutusunun görüntülenmesine neden olur, ancak `Listeners` koleksiyonda değilse ileti kutusu görüntülenmez <xref:System.Diagnostics.DefaultTraceListener>. `Assert`  
+> @No__t-1 koleksiyonundan <xref:System.Diagnostics.DefaultTraceListener> ' ı kaldırmak, <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>, <xref:System.Diagnostics.Trace.Assert%2A?displayProperty=nameWithType>, <xref:System.Diagnostics.Debug.Fail%2A?displayProperty=nameWithType> ve <xref:System.Diagnostics.Trace.Fail%2A?displayProperty=nameWithType> yöntemlerinin davranışını değiştirir. @No__t-0 veya `Fail` yönteminin çağrılması normalde bir ileti kutusunun görüntülenmesine neden olur, ancak <xref:System.Diagnostics.DefaultTraceListener> `Listeners` koleksiyonunda değilse ileti kutusu görüntülenmez.  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek, izleme **dinleyicileri** koleksiyonundan varsayılan izleme dinleyicisinin nasıl kaldırılacağını gösterir.  

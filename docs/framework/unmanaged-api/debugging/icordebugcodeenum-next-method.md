@@ -17,44 +17,46 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e70f7ce9cd943fc3641eef710502ae7f50b369e1
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 076b5d628dfe83decdbbe2f5e74c50e08262c580
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67748552"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71700690"
 ---
 # <a name="icordebugcodeenumnext-method"></a>ICorDebugCodeEnum::Next Yöntemi
-Numaralandırma, geçerli konumdan başlayarak belirtilen "ICorDebugCode" örnek sayısını alır.  
-  
-## <a name="syntax"></a>Sözdizimi  
-  
-```cpp  
-HRESULT Next (  
-    [in] ULONG  celt,  
-    [out, size_is(celt), length_is(*pceltFetched)]  
-        ICorDebugCode *values[],  
-    [out] ULONG *pceltFetched  
-);  
-```  
-  
-## <a name="parameters"></a>Parametreler  
+
+Geçerli konumdan başlayarak Numaralandırmadaki belirtilen "ICorDebugCode" örneklerinin sayısını alır.
+
+## <a name="syntax"></a>Sözdizimi
+
+```cpp
+HRESULT Next (
+    [in] ULONG  celt,
+    [out, size_is(celt), length_is(*pceltFetched)]
+        ICorDebugCode *values[],
+    [out] ULONG *pceltFetched
+);
+```
+
+## <a name="parameters"></a>Parametreler
+
  `celt`  
- [in] Sayısını `ICorDebugCode` alınacak örnekleri.  
-  
+ 'ndaki Alınacak `ICorDebugCode` örnek sayısı.
+
  `values`  
- [out] Bir dizi işaretçileri, her biri için işaret eden bir `ICorDebugCode` nesne.  
-  
+ dışı Her biri `ICorDebugCode` nesnesine işaret eden işaretçiler dizisi.
+
  `pceltFetched`  
- [out] Bir işaretçi sayısına `ICorDebugCode` gerçekte döndürülen örnekleri. Bu değer null olabilir, `celt` biridir.  
-  
-## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
-  
- **Üst bilgi:** CorDebug.idl, CorDebug.h  
-  
- **Kitaplığı:** CorGuids.lib  
-  
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
-  
-## <a name="see-also"></a>Ayrıca bkz.
+ dışı Gerçekten döndürülen `ICorDebugCode` örnek sayısına yönelik bir işaretçi. @No__t-0 ise bu değer null olabilir.
+
+## <a name="requirements"></a>Gereksinimler
+
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).
+
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h
+
+ **Kitaplık:** Corguid. lib
+
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ 

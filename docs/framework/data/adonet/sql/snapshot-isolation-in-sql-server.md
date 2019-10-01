@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 43ae5dd3-50f5-43a8-8d01-e37a61664176
-ms.openlocfilehash: 2f17e9828f46e6355cdbbddb1b8a83f1188b1a01
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 6d85cc041850300d1d079b227dcb8ed9201a0502
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70791746"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699068"
 ---
 # <a name="snapshot-isolation-in-sql-server"></a>SQL Server'da Anlık Görüntü Yalıtımı
 Anlık görüntü yalıtımı OLTP uygulamaları için eşzamanlılık geliştirir.  
   
 ## <a name="understanding-snapshot-isolation-and-row-versioning"></a>Anlık görüntü yalıtımını ve satır sürüm oluşturmayı anlama  
- Anlık görüntü yalıtımı etkinleştirildikten sonra, her bir işlemin güncelleştirilmiş satır sürümleri **tempdb**içinde tutulur. Benzersiz bir işlem sıra numarası her bir işlemi tanımlar ve bu benzersiz numaralar her bir satır sürümü için kaydedilir. İşlem, işlemin sıra numarasından önce sıra numarası olan en son satır sürümleriyle birlikte kullanılabilir. İşlem başladıktan sonra oluşturulan daha yeni satır sürümleri işlem tarafından yok sayılır.  
+ Anlık görüntü yalıtımı etkinleştirildikten sonra, her bir işlem için güncelleştirilmiş satır sürümlerinin tutulması gerekir.  SQL Server 2019 ' dan önce bu sürümler **tempdb**'de depolandı. SQL Server 2019, kendi satır sürümleri kümesini gerektiren hızlandırılmış veritabanı kurtarma (ADR) özelliğine sahip yeni bir özellik sunar.  Bu nedenle, SQL Server 2019 itibariyle, ADR etkinleştirilmemişse, satır sürümleri **tempdb** 'de her zaman olarak tutulur.  ADR etkinse, hem anlık görüntü yalıtımı hem de ADR ile ilgili tüm satır sürümleri, kullanıcının belirttiği bir dosya grubunda bulunan Kullanıcı veritabanında bulunan ADR 'nin kalıcı sürüm deposunda (PVS) tutulur. Benzersiz bir işlem sıra numarası her bir işlemi tanımlar ve bu benzersiz numaralar her bir satır sürümü için kaydedilir. İşlem, işlemin sıra numarasından önce sıra numarası olan en son satır sürümleriyle birlikte kullanılabilir. İşlem başladıktan sonra oluşturulan daha yeni satır sürümleri işlem tarafından yok sayılır.  
   
  "Snapshot" terimi, işlemdeki tüm sorguların, işlem başladığında veritabanının durumuna bağlı olarak veritabanının aynı sürümünü veya anlık görüntüsünü görmesinin gerçeğini yansıtır. Bir anlık görüntü işleminde temel alınan veri satırlarında veya veri sayfalarında hiçbir kilit alınmadı. Bu, diğer işlemlerin önceki bir tamamlanmamış işlem tarafından engellenmeden yürütülmesine izin verir. Verileri değiştiren işlemler, verileri okuyan işlemleri engellemez ve verileri okuyan işlemler, normalde SQL Server ' de varsayılan okuma olarak KAYDEDILMIŞ yalıtım düzeyi altında olacak şekilde veri yazan işlemleri engellemez. Bu engelleyici olmayan davranış, karmaşık işlemler için kilitlenmeleri olasılığını önemli ölçüde azaltır.  
   
@@ -76,7 +76,7 @@ SET READ_COMMITTED_SNAPSHOT ON
  Anlık görüntü işlemi her zaman iyimser eşzamanlılık denetimini kullanır ve diğer işlemlerin satırları güncelleştirmesini engelleyecek herhangi bir kilidi stopajın. Anlık görüntü işlemi, işlem başladıktan sonra değiştirilen bir satıra bir güncelleştirmeyi kaydetmeye çalışırsa, işlem geri alınır ve bir hata oluşur.  
   
 ## <a name="working-with-snapshot-isolation-in-adonet"></a>ADO.NET içinde anlık görüntü yalıtımıyla çalışma  
- Anlık görüntü yalıtımı, ADO.NET tarafından <xref:System.Data.SqlClient.SqlTransaction> sınıfı tarafından desteklenir. Bir veritabanı, anlık görüntü yalıtımı için etkinleştirildiyse, ancak üzerinde READ_COMMITTED_SNAPSHOT için yapılandırılmamışsa, <xref:System.Data.SqlClient.SqlTransaction> <xref:System.Data.SqlClient.SqlConnection.BeginTransaction%2A> yöntemi çağırırken **IsolationLevel. Snapshot** numaralandırma değerini kullanarak bir öğesini başlatmanız gerekir. Bu kod parçası, bağlantının açık <xref:System.Data.SqlClient.SqlConnection> bir nesne olduğunu varsayar.  
+ Anlık görüntü yalıtımı, <xref:System.Data.SqlClient.SqlTransaction> sınıfı tarafından ADO.NET içinde desteklenir. Bir veritabanı, anlık görüntü yalıtımı için etkinleştirildiyse ancak READ_COMMITTED_SNAPSHOT için yapılandırılmamışsa, <xref:System.Data.SqlClient.SqlConnection.BeginTransaction%2A> metodunu çağırırken **IsolationLevel. Snapshot** numaralandırma değerini kullanarak bir <xref:System.Data.SqlClient.SqlTransaction> başlatmanız gerekir. Bu kod parçası, bağlantının açık bir <xref:System.Data.SqlClient.SqlConnection> nesnesi olduğunu varsayar.  
   
 ```vb  
 Dim sqlTran As SqlTransaction = _  

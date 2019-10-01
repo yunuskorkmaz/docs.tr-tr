@@ -8,21 +8,21 @@ helpviewer_keywords:
 - <nameEntry> element
 - nameEntry element
 ms.assetid: 7d7535e9-4b4a-4b8c-82e2-e40dff5a7821
-ms.openlocfilehash: d8f4d4aa9c80990cdf858da9fcdf6465438866cf
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a339638587f8b544bbc1b0073553f6232ce09694
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69927570"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699774"
 ---
 # <a name="nameentry-element"></a>\<nameEntry > öğesi
 Bir sınıf adını kolay bir algoritma adıyla eşleştirir, bu da bir sınıfın birçok kolay adına sahip olmasına olanak tanır.  
   
- \<Yapılandırma >  
-\<mscorlib >  
-\<Cryptographyısettings >  
-\<cryptoNameMapping >  
-\<nameEntry >  
+[ **\<Yapılandırma >** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **\<mscorlib >** ](mscorlib-element-for-cryptography-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<Cryptographrivsettings >** ](cryptographysettings-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5[ **\<cryptoNameMapping >** ](cryptonamemapping-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7 **\<nameEntry >**  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,8 +37,8 @@ Bir sınıf adını kolay bir algoritma adıyla eşleştirir, bu da bir sınıf�
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|**name**|Gerekli öznitelik.<br /><br /> Şifreleme sınıfının uyguladığı algoritmanın kolay adını belirtir.|  
-|**class**|Gerekli öznitelik.<br /><br /> CryptoClass > öğesindeki **Name** özniteliğinin [değerini belirtir. \<](cryptoclass-element.md)|  
+|**ada**|Gerekli öznitelik.<br /><br /> Şifreleme sınıfının uyguladığı algoritmanın kolay adını belirtir.|  
+|**class**|Gerekli öznitelik.<br /><br /> [@No__t-2cryptoClass >](cryptoclass-element.md) öğesindeki **Name** özniteliğinin değerini belirtir.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -51,10 +51,10 @@ Bir sınıf adını kolay bir algoritma adıyla eşleştirir, bu da bir sınıf�
 |`system.web`|ASP.NET yapılandırma bölümünün kök öğesini belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- **Ad** özniteliği ad <xref:System.Security.Cryptography> alanında bulunan soyut sınıflardan birinin adı olabilir. Bir soyut şifreleme sınıfında **Create** yöntemini çağırdığınızda, soyut sınıf adı <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A> yöntemine geçirilir. **CreateFromName** , **sınıf** özniteliği tarafından belirtilen türün bir örneğini döndürür. **Ad** özniteliği RSA gibi kısa bir addır, **CreateFromName** metodunu çağırırken bu adı kullanabilirsiniz.  
+ **Name** özniteliği, <xref:System.Security.Cryptography> ad alanında bulunan soyut sınıflardan birinin adı olabilir. Bir soyut şifreleme sınıfında **Create** yöntemini çağırdığınızda, soyut sınıf adı <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A> yöntemine geçirilir. **CreateFromName** , **sınıf** özniteliği tarafından belirtilen türün bir örneğini döndürür. **Ad** özniteliği RSA gibi kısa bir addır, **CreateFromName** metodunu çağırırken bu adı kullanabilirsiniz.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, bir şifreleme sınıfına başvurmak ve çalışma zamanını yapılandırmak için  **\<nameEntry >** öğesinin nasıl kullanılacağını gösterir. Daha sonra "RSA" <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> dizesini yöntemine geçirebilir ve <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> metodunu kullanarak bir `MyCryptoRSAClass` nesne döndürebilirsiniz.  
+ Aşağıdaki örnek, bir şifreleme sınıfına başvurmak ve çalışma zamanını yapılandırmak için **\<nameEntry >** öğesinin nasıl kullanılacağını gösterir. Daha sonra, "RSA" dizesini <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> yöntemine geçirebilir ve <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> metodunu kullanarak `MyCryptoRSAClass` nesnesini döndürebilirsiniz.  
   
 ```xml  
 <configuration>  

@@ -1,5 +1,5 @@
 ---
-title: <remove>İçin için <listeners> öğesi<source>
+title: <source> için <listeners> <remove> öğesi
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source/listeners/remove
@@ -7,22 +7,22 @@ helpviewer_keywords:
 - remove element for <listeners> for <source>
 - <remove> element for <listeners> for <source>
 ms.assetid: 3ff6b578-273d-407f-b07f-8251f1f9f5d0
-ms.openlocfilehash: edd27dd262004aead7db4d81db8ecab0e831dac1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4a11308278f755ec8271477352d91d8797d105c5
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69926987"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699494"
 ---
-# <a name="remove-element-for-listeners-for-source"></a>\<Kaynak > için \<> \<dinleyicileri > öğesini kaldır
-İzleme kaynağı için `Listeners` koleksiyondan bir dinleyiciyi kaldırır.  
+# <a name="remove-element-for-listeners-for-source"></a>\<source > için \<listeners > için \<> öğesini kaldırın
+İzleme kaynağı için `Listeners` koleksiyonundan bir dinleyiciyi kaldırır.  
   
- \<Yapılandırma >  
-\<System. Diagnostics >  
-\<Kaynaklar >  
-\<Kaynak >  
-\<dinleyiciler >  
-\<> Kaldır  
+[ **\<Yapılandırma >** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **\<system. Diagnostics >** ](system-diagnostics-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<sources >** ](sources-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5[ **\<source >** ](source-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7[ **&nbsp;0listeners >** ](listeners-element-for-source.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7 @ no__t-8 @ no__t-9 **&nbsp;1remove >**  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,7 +37,7 @@ ms.locfileid: "69926987"
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|`name`|Gerekli öznitelik.<br /><br /> `Listeners` Koleksiyondan kaldırılacak dinleyicinin adı.|  
+|`name`|Gerekli öznitelik.<br /><br /> @No__t-0 koleksiyonundan kaldırılacak dinleyicinin adı.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -53,14 +53,14 @@ ms.locfileid: "69926987"
 |`listeners`|İletileri toplayacak, depolayan ve yönlendiren dinleyicileri belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Öğesi `<remove>` , bir izleme kaynağı için belirtilen dinleyiciyi `Listeners` koleksiyondan kaldırır.  
+ @No__t-0 öğesi, izleme kaynağı için `Listeners` koleksiyonundan belirtilen dinleyiciyi kaldırır.  
   
- Örnek<xref:System.Diagnostics.TraceSource> `Listeners` özelliği<xref:System.Diagnostics.TraceSource.Listeners%2A> üzerinde <xref:System.Diagnostics.TraceListenerCollection.Remove%2A> yöntemini çağırarak bir izleme kaynağı için koleksiyondan bir öğeyi programlı bir şekilde kaldırabilirsiniz.  
+ @No__t-3 örneğinin <xref:System.Diagnostics.TraceSource.Listeners%2A> özelliğinde <xref:System.Diagnostics.TraceListenerCollection.Remove%2A> metodunu çağırarak, izleme kaynağı için `Listeners` koleksiyonundan bir öğeyi kaldırabilirsiniz.  
   
  Bu öğe makine yapılandırma dosyasında (Machine. config) ve uygulama yapılandırma dosyasında kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, öğesini izleme kaynağı `<remove>` `console` `Listeners` `<add>` koleksiyonuna`TraceSourceApp`eklemek için öğesini kullanmadan önce öğesinin nasıl kullanılacağını gösterir.  
+ Aşağıdaki örnek, `TraceSourceApp` ' ü izleme kaynağı için `Listeners` koleksiyonuna `console` dinleyicisini eklemek için `<add>` öğesini kullanmadan önce `<remove>` öğesinin nasıl kullanılacağını gösterir.  
   
 ```xml  
 <configuration>  
@@ -84,5 +84,5 @@ ms.locfileid: "69926987"
 - <xref:System.Diagnostics.TraceSource.Listeners%2A>
 - <xref:System.Diagnostics.TraceSource>
 - [İzleme ve Hata Ayıklama Ayarları Şeması](index.md)
-- [\<> Temizle](clear-element-for-listeners-for-source.md)
+- [\<clear >](clear-element-for-listeners-for-source.md)
 - [İzleme Dinleyicileri](../../../debug-trace-profile/trace-listeners.md)

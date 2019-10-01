@@ -1,39 +1,40 @@
 ---
-title: 'Nasıl yapılır: LINQ to XML örnekleri (Visual Basic) derleme'
+title: 'Nasıl yapılır: derleme LINQ to XML örnekleri-Visual Basic'
 ms.date: 07/20/2015
 ms.assetid: 565bca7a-ac8b-497f-8d8d-3323b3d7799e
-ms.openlocfilehash: c4c1f04e83eda88eb3d954a71ad5f14c309cda79
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f9c681280a512d7663c5d05c0251f411449379cb
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62054984"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71696809"
 ---
-# <a name="how-to-build-linq-to-xml-examples-visual-basic"></a>Nasıl yapılır: LINQ to XML örnekleri (Visual Basic) derleme
-Çeşitli kod parçacıkları ve bu belgedeki örneklerde, sınıfları ve türleri çeşitli ad alanları kullanın. Visual Basic kodunu derlerken sağlamak uygun ihtiyacınız `Imports` deyimleri.  
+# <a name="how-to-build-linq-to-xml-examples---visual-basic"></a>Nasıl yapılır: derleme LINQ to XML örnekleri-Visual Basic
+
+Bu belgelerdeki çeşitli kod parçacıkları ve örnekler çeşitli ad alanlarından sınıfları ve türleri kullanır. Visual Basic kodu derlerken, uygun `Imports` deyimlerini sağlamanız gerekir.
+
+## <a name="example"></a>Örnek
+
+Aşağıdaki kod, Visual Basic örneklerinin derlemek ve çalıştırmak için gereken `Imports` deyimlerini içerir. Her örnek için `Imports` deyimlerinin hepsi gerekli değildir.
   
-## <a name="example"></a>Örnek  
- Aşağıdaki kodu içeren `Imports` derlemek ve çalıştırmak için Visual Basic örnekleri gerektiren deyimleri. Tüm `Imports` deyimleri her örnek için gereklidir.  
-  
-```vb  
-Imports System  
-Imports System.Diagnostics  
-Imports System.Collections  
-Imports System.Collections.Generic  
-Imports System.Collections.Specialized  
-Imports System.Text  
-Imports System.Linq  
-Imports System.Xml  
-Imports System.Xml.Linq  
-Imports System.Xml.Schema  
-Imports System.Xml.XPath  
-Imports System.Xml.Xsl  
-Imports System.IO  
-Imports System.Threading  
-Imports System.Reflection  
-Imports System.IO.Packaging  
-```  
-  
+```vb
+Imports System.Diagnostics
+Imports System.Collections
+Imports System.Collections.Generic
+Imports System.Collections.Specialized
+Imports System.Text
+Imports System.Linq
+Imports System.Xml
+Imports System.Xml.Linq
+Imports System.Xml.Schema
+Imports System.Xml.XPath
+Imports System.Xml.Xsl
+Imports System.IO
+Imports System.Threading
+Imports System.Reflection
+Imports System.IO.Packaging
+```
+
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [LINQ to XML programlamaya genel bakış (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)
+- [LINQ to XML programlamaya genel bakış (Visual Basic)](linq-to-xml-programming-overview.md)

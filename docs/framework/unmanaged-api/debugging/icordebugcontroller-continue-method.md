@@ -17,44 +17,47 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c3a4e98a7265bda288b20b1cee1a10ab11990e8e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: bdf59ee3c7bf41a2bb0ff68db5e70dd5a519a0e9
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67748890"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71700776"
 ---
 # <a name="icordebugcontrollercontinue-method"></a>ICorDebugController::Continue Yöntemi
-Yönetilen iş parçacıklarının yürütülmesini çağrısı yapıldıktan sonra sürdürür [Stop yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-stop-method.md).  
-  
-## <a name="syntax"></a>Sözdizimi  
-  
-```cpp  
-HRESULT Continue (  
-    [in] BOOL fIsOutOfBand  
-);  
-```  
-  
-## <a name="parameters"></a>Parametreler  
+
+[Durdurma yöntemine](icordebugcontroller-stop-method.md)yapılan çağrıdan sonra yönetilen iş parçacıklarının yürütülmesini sürdürür.
+
+## <a name="syntax"></a>Sözdizimi
+
+```cpp
+HRESULT Continue (
+    [in] BOOL fIsOutOfBand
+);
+```
+
+## <a name="parameters"></a>Parametreler
+
  `fIsOutOfBand`  
- [in] Kümesine `true` ; bir bant dışı olay devam etmesini, aksi takdirde, kümesine `false`.  
+ 'ndaki Bant dışı bir olaydan devam ederseniz, `true` olarak ayarlayın; Aksi takdirde, `false` olarak ayarlayın.
+
+## <a name="remarks"></a>Açıklamalar
+
+`Continue` `ICorDebugController::Stop` yöntemine yapılan çağrıdan sonra işlem devam ettirir.
+
+Karışık modda hata ayıklama yaparken, bir bant dışı olaydan devam etmediğiniz takdirde Win32 olay iş parçacığında `Continue` ' ı çağırmayın.
+
+*Bant içi olay* , hata ayıklayıcının işlemin yönetilen durumuyla etkileşimi desteklediği yönetilen bir olaydır veya normal yönetilmeyen bir olaydır. Bu durumda, hata ayıklayıcı [ICorDebugUnmanagedCallback::D ebugEvent](icordebugunmanagedcallback-debugevent-method.md) geri aramasını alır `fOutOfBand` parametresi `false` olarak ayarlanmıştır.
   
-## <a name="remarks"></a>Açıklamalar  
- `Continue` işlem çağrısı yapıldıktan sonra devam eder `ICorDebugController::Stop` yöntemi.  
-  
- Karışık mod hata ayıklaması yaparken çağırmayın `Continue` Win32'olay iş parçacığı sürece bir bant dışı olay devam ediyoruz.  
-  
- Bir *bant dışı olay* yönetilen bir olay ya da hata ayıklayıcı sırasında işlem yönetilen durumu ile etkileşimi destekleyen normal yönetilmeyen bir olay. Bu durumda, hata ayıklayıcısı alıyor [Icordebugunmanagedcallback::debugevent](../../../../docs/framework/unmanaged-api/debugging/icordebugunmanagedcallback-debugevent-method.md) geri çağırmayı kendi `fOutOfBand` parametresini `false`.  
-  
- Bir *bant dışı olay* sırasında işlem yönetilen durumu ile etkileşimi olan imkansız olay nedeniyle işlem durdurulurken bir yönetilmeyen olaydır. Bu durumda, hata ayıklayıcısı alıyor `ICorDebugUnmanagedCallback::DebugEvent` geri çağırmayı kendi `fOutOfBand` parametresini `true`.  
-  
-## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
-  
- **Üst bilgi:** CorDebug.idl, CorDebug.h  
-  
- **Kitaplığı:** CorGuids.lib  
-  
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
-  
-## <a name="see-also"></a>Ayrıca bkz.
+*Bant dışı bir olay* , işlem olay nedeniyle durdurulduğunda işlemin yönetilen durumuyla etkileşimi mümkün olmadığı sürece yönetilmeyen bir olaydır. Bu durumda, hata ayıklayıcı `fOutOfBand` parametresiyle `true` olarak ayarlanan `ICorDebugUnmanagedCallback::DebugEvent` geri aramasını alır.
+
+## <a name="requirements"></a>Gereksinimler
+
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).
+
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h
+
+ **Kitaplık:** Corguid. lib
+
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ 

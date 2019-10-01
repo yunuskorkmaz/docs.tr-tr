@@ -8,19 +8,19 @@ helpviewer_keywords:
 - <connectionManagement> element
 - connectionManagement element
 ms.assetid: bedccaab-12a2-4511-8f67-e961f249aec6
-ms.openlocfilehash: faaba1b9de302ed916ad1a81c7e80b3fb5a67170
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: d377a77a4a1b4c57e9edd4fbfa364387f1bae479
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69664162"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699424"
 ---
 # <a name="connectionmanagement-element-network-settings"></a>\<connectionManagement > öğesi (ağ ayarları)
 Bir ağ konağına en fazla bağlantı sayısını belirtir.  
   
- \<Yapılandırma >  
-\<system.net>  
-\<connectionManagement >  
+[ **\<Yapılandırma >** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **@no__t -4system. net >** ](system-net-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 **\<connectionManagement >**  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -50,13 +50,13 @@ Bir ağ konağına en fazla bağlantı sayısını belirtir.
 |[system.net](system-net-element-network-settings.md)|.NET Framework ağa nasıl bağlanacağını belirten ayarları içerir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `connectionManagement` Öğesi bir sunucu veya sunucu grubu için en fazla bağlantı sayısını tanımlar.  
+ @No__t-0 öğesi, bir sunucu veya sunucu grubu için en fazla bağlantı sayısını tanımlar.  
   
 ## <a name="configuration-files"></a>Yapılandırma Dosyaları  
  Bu öğe, uygulama yapılandırma dosyasında veya makine yapılandırma dosyasında (Machine. config) kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, bir uygulamayı sunucuya `www.contoso.com` dört bağlantı ve diğer tüm sunuculara iki bağlantı kullanacak şekilde yapılandırır.  
+ Aşağıdaki örnek, bir uygulamayı sunucuya dört bağlantı `www.contoso.com` ve diğer tüm sunuculara iki bağlantı kullanacak şekilde yapılandırır.  
   
 ```xml  
 <configuration>  

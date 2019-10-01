@@ -7,17 +7,17 @@ helpviewer_keywords:
 - types [C#], built-in
 - built-in C# types
 ms.assetid: 54f901f2-bf2f-472c-ae8d-73e8ecfc57fe
-ms.openlocfilehash: 1f7248a23d53fb90202595defbf70e231bd1d5d3
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 687990cc86b3303bdef96af26be63af47410f8c0
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69605980"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71698788"
 ---
 # <a name="built-in-types-table-c-reference"></a>Yerleşik türler tablosu (C# başvuru)
 
-Aşağıdaki tabloda, <xref:System> ad alanındaki önceden tanımlanmış türlerin diğer adları C# olan yerleşik türler için anahtar sözcükler gösterilmektedir.  
-  
+Aşağıdaki tabloda, <xref:System> ad alanında önceden tanımlanmış C# türlerin diğer adları olan yerleşik türler için anahtar sözcükler gösterilmektedir:
+
 |C#türüyle|.NET türü|  
 |--------------|-------------------------|  
 |[bool](bool.md)|<xref:System.Boolean?displayProperty=nameWithType>|  
@@ -38,16 +38,16 @@ Aşağıdaki tabloda, <xref:System> ad alanındaki önceden tanımlanmış türl
   
 ## <a name="remarks"></a>Açıklamalar
 
-`object` Ve`string`hariç olmak üzere tablodaki tüm türler basit türler olarak adlandırılır.  
-  
-.NET türleri ve bunların C# tür anahtar sözcük diğer adları değiştirilebilir. Örneğin, aşağıdaki bildirimlerden birini kullanarak bir tamsayı değişkeni bildirebilirsiniz:  
+Tablodaki tüm türlere `object` ve `string` dışında, basit türler olarak başvurulur.
+
+.NET türleri ve bunların C# tür anahtar sözcük diğer adları değiştirilebilir. Örneğin, aşağıdaki bildirimlerden birini kullanarak bir tamsayı değişkeni bildirebilirsiniz:
 
 ```csharp
 int x = 123;
 System.Int32 y = 123;
 ```
 
-Belirtilen türü [](../operators/type-testing-and-cast.md#typeof-operator) temsil eden <xref:System.Type?displayProperty=nameWithType> örneği almak için typeof işlecini kullanın:
+Belirtilen türü temsil eden <xref:System.Type?displayProperty=nameWithType> örneğini almak için [typeof](../operators/type-testing-and-cast.md#typeof-operator) işlecini kullanın:
 
 ```csharp
 Type stringType = typeof(string);

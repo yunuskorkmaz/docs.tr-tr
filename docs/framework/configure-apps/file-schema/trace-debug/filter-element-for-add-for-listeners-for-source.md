@@ -1,5 +1,5 @@
 ---
-title: <filter><add> İçin için<listeners> öğesi<source>
+title: <source> için <listeners> için <add> <filter> öğesi
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#filter
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - <filter> element for <add> for <listeners> for <source>
 - filter element for <add> for <listeners> for <source>
 ms.assetid: 15808b80-4579-4c25-b385-178cfdf154ba
-ms.openlocfilehash: 0d25d0b955a94986147922914068c8a1cf2d96c4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ec288685f47c8a35e2371c31d359b604a4967196
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69920526"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71697169"
 ---
-# <a name="filter-element-for-add-for-listeners-for-source"></a>\<Kaynak > için \< \<dinleyicileriçin> eklemekiçin>öğesinifiltreleyin\<>
-İzleme kaynağı için `Listeners` koleksiyondaki bir dinleyiciye bir filtre ekler.  
+# <a name="filter-element-for-add-for-listeners-for-source"></a>\<source > için \<add > \<listeners için \<filter > öğesi >
+İzleme kaynağı için `Listeners` koleksiyonundaki bir dinleyiciye filtre ekler.  
   
- \<Yapılandırma >  
-\<System. Diagnostics >  
-\<Kaynaklar >  
-\<Kaynak >  
-\<dinleyiciler >  
-\<> Ekle  
-\<Filtre >  
+[ **\<Yapılandırma >** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **\<system. Diagnostics >** ](system-diagnostics-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<sources >** ](sources-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5[ **\<source >** ](source-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7[ **&nbsp;0listeners >** ](listeners-element-for-source.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7 @ no__t-8 @ no__t-9[ **&nbsp;2add >** ](add-element-for-listeners-for-source.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7 @ no__t-8 @ no__t-9 @ no__t-10 @ no__t-11 **&nbsp;3filter >**  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -42,7 +42,7 @@ ms.locfileid: "69920526"
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|`type`|Gerekli öznitelik.<br /><br /> <xref:System.Diagnostics.TraceFilter> Sınıftan devralması gereken filtrenin türünü belirtir. Türün <xref:System.Type.FullName%2A> özelliğine karşılık gelen, türün ad alanı nitelenmiş adını kullanabilirsiniz veya, <xref:System.Type.AssemblyQualifiedName%2A> özelliğine karşılık gelen derleme bilgileri de dahil olmak üzere tam nitelikli tür adını kullanabilirsiniz. Tam nitelikli tür adları hakkında daha fazla bilgi için bkz. [tam nitelikli tür adlarını belirtme](../../../reflection-and-codedom/specifying-fully-qualified-type-names.md).|  
+|`type`|Gerekli öznitelik.<br /><br /> @No__t-0 sınıfından devralması gereken filtrenin türünü belirtir. Türün <xref:System.Type.FullName%2A> özelliğine karşılık gelen ad alanı nitelenmiş adını kullanabilir veya <xref:System.Type.AssemblyQualifiedName%2A> özelliğine karşılık gelen derleme bilgileri de dahil olmak üzere tam tür adı kullanabilirsiniz. Tam nitelikli tür adları hakkında daha fazla bilgi için bkz. [tam nitelikli tür adlarını belirtme](../../../reflection-and-codedom/specifying-fully-qualified-type-names.md).|  
 |`initializeData`|İsteğe bağlı öznitelik.<br /><br /> Belirtilen filtre sınıfı için oluşturucuya geçirilen dize.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
@@ -57,15 +57,15 @@ ms.locfileid: "69920526"
 |`sources`|İzleme iletilerini Başlatan izleme kaynaklarını içerir.|  
 |`source`|İzleme iletilerini Başlatan bir izleme kaynağını belirtir.|  
 |`listeners`|İletileri toplayacak, depolayan ve yönlendiren dinleyicileri içerir. Dinleyiciler izleme çıkışını uygun bir hedefe yönlendirir.|  
-|`add`|İzleme kaynağı için `Listeners` koleksiyona bir dinleyici ekler.|  
+|`add`|İzleme kaynağı için `Listeners` koleksiyonuna bir dinleyici ekler.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Öğe, [yalnızca \<sharedListeners >](sharedlisteners-element.md)tanımlı `<add>` bir dinleyicinin adını değil, dinleyicinin türünü belirten bir izleme kaynağı dinleyicisi için bir öğe içinde bulunmalıdır. `<filter>` Dinleyici bir [ \<sharedListeners >](sharedlisteners-element.md)tanımlanmışsa, bu dinleyicinin filtresi o öğede tanımlanmalıdır.  
+ @No__t-0 öğesi, yalnızca bir [\<sharedListeners >](sharedlisteners-element.md)tanımlanan dinleyicinin adını değil, dinleyicinin türünü belirten bir izleme kaynak dinleyicisi için bir `<add>` öğesinde bulunmalıdır. Dinleyici bir [\<sharedListeners >](sharedlisteners-element.md)tanımlanmışsa, bu dinleyicinin filtresi o öğede tanımlanmalıdır.  
   
  Bu öğe makine yapılandırma dosyasında (Machine. config) ve uygulama yapılandırma dosyasında kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, izleme `<filter>` `Listeners` `console` kaynağı`myTraceSource`içinkoleksiyondaki dinleyiciye bir filtre eklemek için öğesinin nasıl kullanılacağını gösterir. `Error`  
+ Aşağıdaki örnek, `Error` olarak filtre olay düzeyini belirterek, izleme kaynağı `myTraceSource` için `Listeners` koleksiyonundaki dinleyic@no__t iye bir filtre eklemek için `<filter>` öğesinin nasıl kullanılacağını gösterir.  
   
 ```xml  
 <configuration>  

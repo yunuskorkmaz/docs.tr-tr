@@ -7,25 +7,25 @@ f1_keywords:
 helpviewer_keywords:
 - BC42026
 ms.assetid: 4fde9db6-3bf3-48dc-8e05-981bf08969da
-ms.openlocfilehash: 93d02618ff19f431b3602e74478337f6918df289
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 42177f22e632e4a05b1f0b4d934f3e56ab9ff0f2
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665152"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71698574"
 ---
-# <a name="expression-recursively-calls-the-containing-property-propertyname"></a>İfade yinelemeli olarak çağırıyor kapsayan özelliği '\<propertyname >'
-Bir deyimde `Set` yordamı bir özellik tanımı, özelliğin adını bir değer depolar.  
+# <a name="expression-recursively-calls-the-containing-property-propertyname"></a>İfade, içeren ' \<propertyname > ' özelliğini yinelemeli olarak çağırıyor
+Özellik tanımının `Set` yordamındaki bir ifade, özelliğin adına bir değer depolar.  
   
- Bir özelliğin değerini tutmak için önerilen yaklaşım tanımlamaktır bir `Private` değişken özelliğin kapsayıcısındaki ve her ikisinde de kullanın `Get` ve `Set` yordamları. `Set` Yordamı ardından depolamak gelen değeri bu `Private` değişkeni.  
+ Bir özelliğin değerini tutmak için önerilen yaklaşım, özelliğin kapsayıcısında `Private` değişkeni tanımlamak ve hem `Get` hem de `Set` yordamlarında kullanmaktır. @No__t-0 yordamının bu `Private` değişkeninde gelen değeri depolaması gerekir.  
   
- `Get` Yordamı davranacağını gibi bir `Function` yordam, özellik adı için bir değer atamak ve dönüş denetimi ile karşılaşıldığında `End Get` deyimi. Önerilen yaklaşım, ancak dahil etmektir `Private` değeri olarak değişken bir [dönüş deyimi](../../../visual-basic/language-reference/statements/return-statement.md).  
+ @No__t-0 yordamı, bir `Function` yordamı gibi davranır, böylece özellik adına bir değer atayabilir ve `End Get` ifadesiyle karşılaşarak denetim getirebilirsiniz. Ancak önerilen yaklaşım, [dönüş deyimindeki](../../../visual-basic/language-reference/statements/return-statement.md)değer olarak `Private` değişkenini dahil etmek için kullanılır.  
   
- `Set` Yordamı davranacağını gibi bir `Sub` bir değer döndürmeyen bir yordam,. Bu nedenle, içinde özel bir anlamı yordam veya özellik adına sahip bir `Set` yordam ve depolayamaz değeri içine.  
+ @No__t-0 yordamı, bir değer döndürmeyen bir `Sub` yordamı gibi davranır. Bu nedenle, yordam veya özellik adının `Set` yordamında özel bir anlamı yoktur ve buna bir değer depolayamezsiniz.  
   
- Aşağıdaki örnekte, ardından tarafından önerilen yaklaşım, bu hataya neden olabilecek bir yaklaşım gösterilmektedir.  
+ Aşağıdaki örnekte, bu hataya neden olabilecek yaklaşım ve önerilen yaklaşım gösterilmektedir.  
   
-```  
+```vb  
 Public Class illustrateProperties  
 ' The code in the following property causes this error.  
     Public Property badProp() As Char  
@@ -55,13 +55,13 @@ Public Class illustrateProperties
 End Class  
 ```  
   
- Varsayılan olarak, bu iletiyi bir uyarıdır. Uyarıları gizleme veya uyarıları hata olarak değerlendirmesini hakkında daha fazla bilgi için lütfen bkz [Visual Basic'teki uyarıları yapılandırma](/visualstudio/ide/configuring-warnings-in-visual-basic).  
+ Bu ileti, varsayılan olarak bir uyarıdır. Uyarıları gizleme veya uyarıları hata olarak değerlendirme hakkında daha fazla bilgi için lütfen bkz. [Visual Basic uyarıları yapılandırma](/visualstudio/ide/configuring-warnings-in-visual-basic).  
   
- **Hata Kimliği:** BC42026  
+ **Hata kimliği:** BC42026  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-- Yukarıdaki örnekte gösterildiği gibi önerilen yaklaşım kullanılacak özellik tanımını yeniden yazın.  
+- Önceki örnekte gösterildiği gibi önerilen yaklaşımı kullanmak için özellik tanımını yeniden yazın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -8,20 +8,20 @@ helpviewer_keywords:
 - <defaultFtpCachePolicy> element
 - defaultFtpCachePolicy element
 ms.assetid: 0eb0c5cb-dd97-484d-8614-785e88877abb
-ms.openlocfilehash: 7ff44f0251936d51b4e396c37c53322efa110227
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: fd1649edbf7a2c8546992019df667f27df68e02c
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69659416"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71698325"
 ---
 # <a name="defaultftpcachepolicy-element-network-settings"></a>\<defaultFtpCachePolicy > öğesi (ağ ayarları)
 FTP önbelleğe almanın etkin olup olmadığını ve varsayılan önbelleğe alma ilkesini açıklar.  
   
- \<Yapılandırma >  
-\<system.net>  
-\<requestCaching >  
-\<defaultFtpCachePolicy >  
+[ **\<Yapılandırma >** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **@no__t -4system. net >** ](system-net-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<requestCaching >** ](requestcaching-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<defaultFtpCachePolicy >**  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -65,7 +65,7 @@ FTP önbelleğe almanın etkin olup olmadığını ve varsayılan önbelleğe al
 ## <a name="remarks"></a>Açıklamalar  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, ' nin `NoCacheNoStore`bir FTP önbelleğe alma ilkesinin nasıl ekleneceğini gösterir.  
+ Aşağıdaki örnek, `NoCacheNoStore` ' ın bir FTP önbelleğe alma ilkesi belirtmeyi gösterir.  
   
 ```xml  
 <configuration>  

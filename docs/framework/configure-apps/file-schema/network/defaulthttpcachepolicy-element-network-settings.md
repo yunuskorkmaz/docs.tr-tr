@@ -8,20 +8,20 @@ helpviewer_keywords:
 - defaultHttpCachePolicy element
 - <defaultHttpCachePolicy> element
 ms.assetid: 2c1247d0-39b0-4c12-919a-a925ce075c79
-ms.openlocfilehash: 1dd31884a072d16ed004c0b49be61e8cee399787
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: f3b029e8b931e976bee85c98dd926e020c5b8743
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69664145"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71698274"
 ---
 # <a name="defaulthttpcachepolicy-element-network-settings"></a>\<defaultHttpCachePolicy > öğesi (ağ ayarları)
 HTTP önbelleğe almanın etkin olup olmadığını ve varsayılan önbelleğe alma ilkesini açıklar.  
   
- \<Yapılandırma >  
-\<system.net>  
-\<requestCaching >  
-\<defaultHttpCachePolicy >  
+[ **\<Yapılandırma >** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **@no__t -4system. net >** ](system-net-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<requestCaching >** ](requestcaching-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<defaultHttpCachePolicy >**  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -56,9 +56,9 @@ HTTP önbelleğe almanın etkin olup olmadığını ve varsayılan önbelleğe a
 |[requestCaching](requestcaching-element-network-settings.md)|Ağ istekleri için önbelleğe alma mekanizmasını denetler.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `policyLevel` Özniteliği için olan değer ya `Default`da `BypassCache` olur.  
+ @No__t-0 özniteliğinin değeri `BypassCache` ya da `Default` ' dir.  
   
- ,, Ve öğelerinindeğerleri`minimumFresh` d biçimindeki açık bir zaman aralığıdır. `maximumAge` `maximumStale` *SS*:*dd*:*SS* (gün, saat, dakika, saniye) veya sabitler `minValue` ya `maxValue`da uygun şekilde.  
+ @No__t-0, `maximumStale` ve `minimumFresh` öğelerinin değerleri, *d*biçimindeki açık bir zaman aralığıdır. *SS*:*dd*:*SS* (gün, saat, dakika, saniye) veya `minValue` veya `maxValue` sabitleri uygun şekilde.  
   
 ## <a name="configuration-files"></a>Yapılandırma Dosyaları  
  Bu öğe, uygulama yapılandırma dosyasında veya makine yapılandırma dosyasında (Machine. config) kullanılabilir.  

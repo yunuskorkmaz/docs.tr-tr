@@ -11,52 +11,52 @@ helpviewer_keywords:
 - conditional operator [Visual Basic]
 - If Operator [Visual Basic]
 ms.assetid: dd56c9df-7cd4-442c-9ba6-20c70ee44c8f
-ms.openlocfilehash: 9ab01755d75c91ce87acf83e7f406b26c466aef6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 244c0598c65ba691decc09c36293799571211a40
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61663511"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71701162"
 ---
 # <a name="if-operator-visual-basic"></a>If İşleci (Visual Basic)
-Kullanır, koşullu olarak iki değerden birini döndürmek için değerlendirmesi. `If` İşleci iki bağımsız değişkeni veya üç bağımsız değişken ile çağrılabilir.  
+İki değerden birini koşullu olarak döndürmek için kısa devre değerlendirmesi kullanır. @No__t-0 işleci üç bağımsız değişkenle veya iki bağımsız değişkenle çağrılabilir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```vb  
 If( [argument1,] argument2, argument3 )  
 ```  
   
-## <a name="if-operator-called-with-three-arguments"></a>İşleç üç bağımsız değişken ile çağrılırsa  
- Zaman `If` çağrılır üç bağımsız değişken kullanarak, ilk bağımsız değişkeni olarak dönüştürülebilen bir değere hesaplanmalıdır bir `Boolean`. Olduğunu `Boolean` , diğer iki bağımsız değişken değerlendirilir ve döndürülen değer belirler. Aşağıdaki listede yalnızca geçerli `If` işleci, üç bağımsız değişkenler kullanarak çağrılır.  
+## <a name="if-operator-called-with-three-arguments"></a>Eğer Işleci üç bağımsız değişkenle çağrılırsa  
+ @No__t-0 üç bağımsız değişken kullanılarak çağrıldığında, ilk bağımsız değişken, `Boolean` olarak yayınlanabileceğiniz bir değer olarak değerlendirilmelidir. Bu `Boolean` değeri, diğer iki bağımsız değişkenin hangisinin değerlendirileceğini ve döndürüldüğünü belirlemektir. Aşağıdaki liste yalnızca `If` işleci üç bağımsız değişken kullanılarak çağrıldığında geçerlidir.  
   
 ## <a name="parts"></a>Bölümler  
   
 |Terim|Tanım|  
 |---|---|  
-|`argument1`|Gerekli. `Boolean`. Değerlendirilip döndürülecek diğer bağımsız değişkenlerin belirler.|  
-|`argument2`|Gerekli. `Object`. Değerlendirilen ve döndürülen if `argument1` değerlendiren `True`.|  
-|`argument3`|Gerekli. `Object`. Değerlendirilen ve döndürülen if `argument1` değerlendiren `False` veya `argument1` olduğu bir [Nullable](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md) `Boolean` değerlendiren değişkeni [hiçbir şey](../../../visual-basic/language-reference/nothing.md).|  
+|`argument1`|Gerekli. `Boolean`. Değerlendirmek ve döndürmek için diğer bağımsız değişkenlerden hangisinin verileceğini belirler.|  
+|`argument2`|Gerekli. `Object`. @No__t-0 `True` olarak değerlendirilirse, değerlendirilir ve döndürülür.|  
+|`argument3`|Gerekli. `Object`. @No__t-0 `False` ' i değerlendirilirse veya `argument1` değeri [Nothing](../../../visual-basic/language-reference/nothing.md)olarak değerlendirilen bir [Nullable](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)`Boolean` değişkeni ise değerlendirilir ve döndürülür.|  
   
- Bir `If` üç bağımsız değişkenlerle çağrıldı işleci çalışır gibi bir `IIf` işlevi da kullanması hariç, değerlendirme kısa devre oluşturur. Bir `IIf` işlevi ise üç bağımsız değişkenlerinden biri her zaman değerlendirilir bir `If` üç bağımsız değişkenlere sahip bir işleç iki yalnızca değerlendirir. İlk `If` bağımsız değişken değerlendirilir ve sonuç olarak cast bir `Boolean` değeri `True` veya `False`. Değer ise `True`, `argument2` olan değerlendirilir ve değer döndürülür, ancak `argument3` değerlendirilmez. Varsa değerini `Boolean` ifade `False`, `argument3` olan değerlendirilir ve değer döndürülür, ancak `argument2` değerlendirilmez. Aşağıdaki örnekler, kullanımını gösterir `If` üç bağımsız değişken kullanıldığında:  
+ Üç bağımsız değişkenle çağrılan `If` işleci, kısa devre değerlendirmesi kullanması dışında `IIf` işlevi gibi çalışır. @No__t-0 işlevi her zaman bağımsız değişkenlerini değerlendirir, ancak üç bağımsız değişkenine sahip bir `If` işleci yalnızca ikisini değerlendirir. İlk `If` bağımsız değişkeni değerlendirilir ve sonuç, `Boolean` değeri `True` veya `False` olarak ayarlanır. Değer `True` ise, `argument2` değerlendirilir ve değeri döndürülür, ancak `argument3` değerlendirilmez. @No__t-0 ifadesinin değeri `False` ise, `argument3` değerlendirilir ve değeri döndürülür, ancak `argument2` değerlendirilmez. Aşağıdaki örneklerde, üç bağımsız değişken kullanıldığında `If` kullanımı gösterilmektedir:  
   
  [!code-vb[VbVbalrOperators#100](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class4.vb#100)]  
   
- Değerini aşağıdaki örnekte kısa devre değerlendirmesi. Örnek değişkeni ayırmak için iki deneme gösterir `number` değişkenin `divisor` olmadığı dışında `divisor` sıfırdır. Bu durumda 0 döndürdü ve çalışma zamanı hatası neden olacağından bölme işlemi gerçekleştirmek için hiç girişimde. Çünkü `If` ifade kullanır, değerlendirme kısa devre oluşturur, ikinci veya ilk bağımsız değişkenin değerine bağlı olarak, üçüncü bağımsız değişkeni değerlendirir. İlk bağımsız değişken true ise, bölen sıfır değil ve ikinci bağımsız değişkeni değerlendirir ve bölme işlemi gerçekleştirmek güvenlidir. İlk bağımsız değişken false ise, yalnızca üçüncü bağımsız değişken değerlendirilir ve 0 değeri döndürülür. Bölen 0 olduğunda, bu nedenle, hiçbir hata sonuçları ve bölme işlemi gerçekleştirmek için girişimde bulunulmaz. Ancak, çünkü `IIf` kullanmaz kısa devre değerlendirmesi, ilk bağımsız değişken false olduğunda bile ikinci bağımsız değişken değerlendirilir. Bu, bir çalışma zamanı sıfırla bölme hatasına neden olur.  
+ Aşağıdaki örnek, kısa devre değerlendirmesinin değerini gösterir. Örnekte, `divisor` sıfır olduğunda, `divisor` değişkenine `number` değişkenini bölmek için iki deneme gösterilmektedir. Bu durumda, 0 döndürülmeli ve bir çalışma zamanı hatası sonucunda, Bölüm gerçekleştirmek için bir deneme yapılmamalıdır. @No__t-0 ifadesi kısa devre değerlendirmesi kullandığından, ilk bağımsız değişkenin değerine bağlı olarak ikinci ya da üçüncü bağımsız değişkeni değerlendirir. İlk bağımsız değişken true ise, bölen sıfır değildir ve ikinci bağımsız değişkeni değerlendirmek ve bölme gerçekleştirmek güvenlidir. İlk bağımsız değişken false ise, yalnızca üçüncü bağımsız değişken değerlendirilir ve 0 döndürülür. Bu nedenle, bölen 0 olduğunda, bölme gerçekleştirmek için bir deneme yapılmaz ve hata sonucu yoktur. Ancak, `IIf` kısa devre değerlendirmesi kullanmıyorsa, ilk bağımsız değişken false olduğunda bile ikinci bağımsız değişken değerlendirilir. Bu, çalışma zamanı sıfıra bölme hatasına neden olur.  
   
  [!code-vb[VbVbalrOperators#101](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class4.vb#101)]  
   
-## <a name="if-operator-called-with-two-arguments"></a>İşleci iki bağımsız değişkeni ile çağrılırsa  
- İlk bağımsız değişkeni `If` atlanabilir. Bu, yalnızca iki bağımsız değişkeni kullanılarak çağrılacak işleci sağlar. Aşağıdaki listede yalnızca geçerli `If` işleci iki bağımsız değişkenlerle çağrılır.  
+## <a name="if-operator-called-with-two-arguments"></a>Eğer Işleci Iki bağımsız değişkenle çağrılırsa  
+ @No__t-0 ' a yönelik ilk bağımsız değişken atlanabilir. Bu, işlecin yalnızca iki bağımsız değişken kullanılarak çağrılmasına olanak sağlar. Aşağıdaki liste yalnızca `If` işleci iki bağımsız değişkenle çağrıldığında geçerlidir.  
   
 ## <a name="parts"></a>Bölümler  
   
 |Terim|Tanım|  
 |---|---|  
-|`argument2`|Gerekli. `Object`. Bir başvuru veya boş değer atanabilir tür olmalıdır. Değerlendirilir ve dışında hiçbir şeye sonucunu verdiğinde döndürülen `Nothing`.|  
-|`argument3`|Gerekli. `Object`. Değerlendirilen ve döndürülen if `argument2` değerlendiren `Nothing`.|  
+|`argument2`|Gerekli. `Object`. Başvuru veya null yapılabilir bir tür olmalıdır. @No__t-0 dışında bir şeyi değerlendirirken değerlendirilir ve döndürülür.|  
+|`argument3`|Gerekli. `Object`. @No__t-0 `Nothing` olarak değerlendirilirse, değerlendirilir ve döndürülür.|  
   
- Zaman `Boolean` bağımsız değişken atlanırsa, ilk bağımsız değişken başvuru veya boş değer atanabilir tür olmalıdır. İlk bağımsız değişken değerlendirilirse `Nothing`, ikinci bağımsız değişkenin değeri döndürülür. Diğer durumlarda, ilk bağımsız değişkenin değeri döndürülür. Aşağıdaki örnekte, bu değerlendirme nasıl çalıştığı gösterilmektedir.  
+ @No__t-0 bağımsız değişkeni atlandığında, ilk bağımsız değişken bir başvuru veya null yapılabilir bir tür olmalıdır. İlk bağımsız değişken `Nothing` olarak değerlendirilirse ikinci bağımsız değişkenin değeri döndürülür. Diğer tüm durumlarda, ilk bağımsız değişkenin değeri döndürülür. Aşağıdaki örnek, bu değerlendirmenin nasıl çalıştığını gösterir.  
   
  [!code-vb[VbVbalrOperators#102](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class4.vb#102)]  
   

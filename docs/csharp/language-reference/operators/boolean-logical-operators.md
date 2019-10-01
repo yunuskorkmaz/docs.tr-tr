@@ -1,7 +1,7 @@
 ---
 title: Boole mantıksal işleçler- C# başvuru
 description: Mantıksal olumsuzlama, birlikte (ve) ve kapsamlı ve dışlamalı (ya da) işlemleri Boolean işlenenleriyle gerçekleştiren işleçler hakkında C# bilgi edinin.
-ms.date: 04/08/2019
+ms.date: 09/27/2019
 author: pkulikov
 f1_keywords:
 - '!_CSharpKeyword'
@@ -32,12 +32,12 @@ helpviewer_keywords:
 - conditional OR operator [C#]
 - short-circuiting OR operator [C#]
 - '|| operator [C#]'
-ms.openlocfilehash: 39f5be7a667b4e37e84246ef0bfeb03c0099d4b7
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: cc25d4bfd444dc0acb30fc1c6e6c3c9918af537c
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71353368"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71698677"
 ---
 # <a name="boolean-logical-operators-c-reference"></a>Boole mantıksal işleçleri (C# başvuru)
 
@@ -54,6 +54,8 @@ Aşağıdaki işleçler [bool](../keywords/bool.md) işlenenleri ile mantıksal 
 @No__t-0 işleci, işleneninin mantıksal olumsuzunu hesaplar. Diğer bir deyişle, işlenen `false` olarak değerlendirilirse `false` ' yi ve işlenen `true` ' e değerlendirilirse,  ' yi üretir:
 
 [!code-csharp-interactive[logical negation](~/samples/csharp/language-reference/operators/BooleanLogicalOperators.cs#Negation)]
+
+8,0 ile C# başlayarak birli sonek `!` işleci bir null-Forin işleci. Etkin bir null yapılabilir ek açıklama bağlamında, bu ifadeyi, null olabilen bir başvuru türünün 0 @no__t, null olmadığını belirtmek için kullanırsınız: `x!`. Daha fazla bilgi için bkz. [Nullable başvuru türleri](../../nullable-references.md).
 
 ## <a name="logical-and-operator-"></a>Mantıksal AND işleci &amp;
 
@@ -115,7 +117,7 @@ Aşağıdaki örnekte, `||` işlecinin sağ işleneni, sol taraftaki işlenen `t
 
 @No__t-0 işlenenleri için, `&` ve `|` işleçleri üç değerli mantığı destekler. Bu işleçlerin semantiği aşağıdaki tablo tarafından tanımlanır:  
   
-|x|Y|x & y|x&#124;y|  
+|x|y|x & y|x&#124;y|  
 |----|----|----|----|  
 |true|true|true|true|  
 |true|false|false|true|  
@@ -137,7 +139,7 @@ Aşağıdaki örnekte gösterildiği gibi `!` ve `^` işleçlerini `bool?` işle
 
 ## <a name="compound-assignment"></a>Bileşik atama
 
-Bir ikili işleci `op`için, formun bileşik atama ifadesi
+Bir ikili işleci için `op`, formun bileşik atama ifadesi
 
 ```csharp
 x op= y
@@ -149,7 +151,7 @@ eşdeğerdir
 x = x op y
 ```
 
-`x` hariç yalnızca bir kez değerlendirilir.
+`x` yalnızca bir kez değerlendirilir.
 
 @No__t-0, `|` ve `^` işleçleri, aşağıdaki örnekte gösterildiği gibi bileşik atamayı destekler:
 
@@ -161,7 +163,7 @@ x = x op y
 
 Aşağıdaki liste, en yüksek öncelikten başlayarak mantıksal işleçleri en düşüğe göre sıralar:
 
-- Mantıksal Değilleme İşleci`!`
+- Mantıksal Değilleme İşleci `!`
 - Mantıksal AND işleci `&`
 - Mantıksal dışlamalı OR işleci `^`
 - Mantıksal OR işleci `|`

@@ -1,5 +1,5 @@
 ---
-title: '##Const yönergesi (Visual Basic)'
+title: '#Const yönergesi (Visual Basic)'
 ms.date: 07/20/2015
 f1_keywords:
 - vb.#Const
@@ -15,42 +15,42 @@ helpviewer_keywords:
 - Const statement [Visual Basic], directive (#Const)
 - 'declaring constants [Visual Basic], #const directive'
 ms.assetid: 707669e5-23f9-4f17-8622-a0d534429386
-ms.openlocfilehash: 5458bbebc6064eb6273b8deb5447b8941e1d233f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9b8d2da2158a8244b4533eb6ef49049949417216
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61746707"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71696847"
 ---
 # <a name="const-directive"></a>#Const Yönergesi
-Visual Basic için koşullu derleyici sabitlerini tanımlar.  
+Visual Basic için koşullu derleyici sabitleri tanımlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```vb  
 #Const constname = expression  
 ```  
   
 ## <a name="parts"></a>Bölümler  
  `constname`  
- Gerekli. Tanımlanan sabitin adı.  
+ Gerekli. Tanımlanmakta olan sabitin adı.  
   
  `expression`  
- Gerekli. Değişmez değeri, diğer koşullu derleyici sabiti ya da içeren tüm aritmetik veya mantıksal işleçleri dışında herhangi bir birleşimini `Is`.  
+ Gerekli. Değişmez değer, diğer koşullu derleyici sabiti veya `Is` dışında herhangi bir ya da tüm aritmetik veya mantıksal işleçler içeren herhangi bir bileşim.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Koşullu derleyici sabitleri, göründükleri dosyaya her zaman özeldir. Genel derleyici sabitlerini kullanarak oluşturulamıyor `#Const` yönergesi; oluşturup bunları yalnızca kullanıcı arabirimi veya ile `/define` derleyici seçeneği.  
+ Koşullu derleyici sabitleri, her zaman göründükleri dosya için özeldir. @No__t-0 yönergesini kullanarak ortak derleyici sabitleri oluşturamazsınız; Onları yalnızca Kullanıcı arabiriminde veya `/define` derleyici seçeneği ile oluşturabilirsiniz.  
   
- Yalnızca koşullu derleyici sabitlerini ve sabit değerlerde kullanabileceğiniz `expression`. İle tanımlanan bir standart sabit kullanarak `Const` bir hataya neden olur. Buna karşılık, tanımlı sabitler kullanabileceğiniz `#Const` koşullu derleme için yalnızca anahtar sözcüğü. Sabitler de tanımlanmamışsa, bu durumda bunlar değerine sahip `Nothing`.  
+ @No__t-0 ' da yalnızca koşullu derleyici sabitlerini ve sabit değerlerini kullanabilirsiniz. @No__t-0 ile tanımlanmış standart bir sabit kullanmak hataya neden olur. Buna karşılık, yalnızca koşullu derleme için `#Const` anahtar sözcüğüyle tanımlanmış sabitleri kullanabilirsiniz. Sabitler de tanımsız olabilir, bu durumda `Nothing` değeri vardır.  
   
 ## <a name="example"></a>Örnek  
- Bu örnekte `#Const` yönergesi.  
+ Bu örnek `#Const` yönergesini kullanır.  
   
  [!code-vb[VbVbalrConditionalComp#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConditionalComp/VB/Class1.vb#3)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [/ define (Visual Basic)](../../../visual-basic/reference/command-line-compiler/define.md)
+- [/define (Visual Basic)](../../../visual-basic/reference/command-line-compiler/define.md)
 - [#If...Then...#Else Yönergesi](../../../visual-basic/language-reference/directives/if-then-else-directives.md)
 - [Const Deyimi](../../../visual-basic/language-reference/statements/const-statement.md)
 - [Koşullu Derleme](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)

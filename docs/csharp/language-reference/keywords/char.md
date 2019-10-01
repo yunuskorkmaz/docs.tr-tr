@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - char data type [C#]
 ms.assetid: b51cf4fb-124c-4067-af48-afbac122b228
-ms.openlocfilehash: 255e69d3715a22e7933b4036e968e610657748cf
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 63f8871926e8c279678c59a2256bef46b2ff514e
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71353772"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71698781"
 ---
 # <a name="char-c-reference"></a>char (C# Başvurusu)
 
@@ -21,13 +21,13 @@ ms.locfileid: "71353772"
 
  Unicode karakterler, dünyanın her yerindeki yazılı dillerin çoğunu temsil etmek için kullanılır.
 
-|Type|Aralık|Size|.NET türü|
+|Tür|Aralık|Boyut|.NET türü|
 |----------|-----------|----------|-------------------------|
 |`char`|U + 0000-U + FFFF|Unicode 16 bit karakter|<xref:System.Char?displayProperty=nameWithType>|
 
 ## <a name="literals"></a>Sabit değerler
 
-@No__t-0 türündeki sabitler, karakter sabit değerleri, onaltılık kaçış dizisi veya Unicode temsili olarak yazılabilir. İntegral karakter kodlarını da çevirebilirsiniz. Aşağıdaki örnekte, dört `char` değişkenleri aynı karakterle `X` ile başlatılır:
+@No__t-0 türündeki sabitler, karakter sabit değerleri, onaltılık kaçış dizisi veya Unicode temsili olarak yazılabilir. İntegral karakter kodlarını da çevirebilirsiniz. Aşağıdaki örnekte, `char` dizisinin dört öğesi, `X` karakteriyle birlikte başlatılır:
 
 [!code-csharp[csrefKeywordsTypes#19](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/keywordsTypes.cs#19)]
 

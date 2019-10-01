@@ -10,20 +10,20 @@ helpviewer_keywords:
 - add element, connectionManagement
 - connectionManagement, add element
 ms.assetid: 856bf57d-1c63-46c7-a178-03d97b0a4149
-ms.openlocfilehash: 608c591b910252dd60950bf2aa7565d6df04d5fc
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 3742a040e8c16c38e495a0fd886c4c1f23780758
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69664223"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71698383"
 ---
-# <a name="add-element-for-connectionmanagement-network-settings"></a>\<connectionManagement için > öğesi ekleme (ağ ayarları)
+# <a name="add-element-for-connectionmanagement-network-settings"></a>\<connectionmanagement için > öğesi ekleme (ağ ayarları)
 Bağlantı yönetimi listesine bir IP adresi veya DNS adı ekler.  
   
- \<Yapılandırma >  
-\<system.net>  
-\<connectionManagement >  
-\<> Ekle  
+[ **\<Yapılandırma >** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **@no__t -4system. net >** ](system-net-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<connectionManagement >** ](connectionmanagement-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<add >**  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -54,15 +54,15 @@ Bağlantı yönetimi listesine bir IP adresi veya DNS adı ekler.
 |[connectionManagement](connectionmanagement-element-network-settings.md)|Bir ağ konağına en fazla bağlantı sayısını belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `address` Özniteliğin değeri tüm bağlantıları göstermek için bir yıldız işareti ya da formun `<schema>://<idn_hostname>[:<port>]`bir dizesi olmalıdır.  
+ @No__t-0 özniteliğinin değeri tüm bağlantıları göstermek için bir yıldız işareti ya da `<schema>://<idn_hostname>[:<port>]` biçiminde bir dize olmalıdır.  
   
- Herhangi bir HTTP API 'sine geçirilen URI Unicode içeriyorsa, <xref:System.Uri.DnsSafeHost%2A> bu ad dahili olarak dönüştürülür ve bu, punicode dize (geçerli IDN yapılandırmasına bağımlı davranışlar) döndürebilir.  
+ Herhangi bir HTTP API 'sine geçirilen URI Unicode içeriyorsa, ad bir punıcode dizesi (geçerli ıDN yapılandırmasına bağımlı davranış) döndürebilen <xref:System.Uri.DnsSafeHost%2A> kullanılarak dahili olarak dönüştürülür.  
   
 ## <a name="configuration-files"></a>Yapılandırma Dosyaları  
  Bu öğe, uygulama yapılandırma dosyasında veya makine yapılandırma dosyasında (Machine. config) kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, bir uygulamayı sunucuya `www.contoso.com` dört bağlantı ve diğer tüm sunuculara iki bağlantı kullanacak şekilde yapılandırır.  
+ Aşağıdaki örnek, bir uygulamayı sunucuya dört bağlantı `www.contoso.com` ve diğer tüm sunuculara iki bağlantı kullanacak şekilde yapılandırır.  
   
 ```xml  
 <configuration>  

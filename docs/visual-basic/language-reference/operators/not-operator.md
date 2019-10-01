@@ -14,40 +14,40 @@ helpviewer_keywords:
 - logical negation
 - operators [Visual Basic], negation
 ms.assetid: 8f2ea83c-d2ed-480a-a474-3042a1cad9b5
-ms.openlocfilehash: 29e2b159e4c6261a62e788b537102b9b457fe0c8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 5ebc5f9dbf674a9a6560bd96b3e8c9edcae08a81
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69955831"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71701076"
 ---
 # <a name="not-operator-visual-basic"></a>Not İşleci (Visual Basic)
-Bir `Boolean` ifadede mantıksal Olumsuzlaştırma veya sayısal ifadede bit tabanlı Olumsuzlaştırma gerçekleştirir.  
+@No__t-0 ifadesinde mantıksal Olumsuzlaştırma veya sayısal bir ifadede bit tabanlı Olumsuzlaştırma gerçekleştirir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```vb  
 result = Not expression  
 ```  
   
 ## <a name="parts"></a>Bölümler  
  `result`  
- Gerekli. Herhangi `Boolean` bir veya sayısal ifade.  
+ Gerekli. Herhangi bir `Boolean` veya sayısal ifade.  
   
  `expression`  
- Gerekli. Herhangi `Boolean` bir veya sayısal ifade.  
+ Gerekli. Herhangi bir `Boolean` veya sayısal ifade.  
   
 ## <a name="remarks"></a>Açıklamalar  
- İfadeler `Boolean` için aşağıdaki tabloda nasıl `result` belirlendiği gösterilmektedir.  
+ @No__t-0 ifadeleri için aşağıdaki tabloda `result` nasıl belirlendiği gösterilmektedir.  
   
-|`expression` İse|Öğesinin `result` değeri|  
+|@No__t-0 ise|@No__t-0 değeri|  
 |------------------------|------------------------------|  
 |`True`|`False`|  
 |`False`|`True`|  
   
- Sayısal ifadeler `Not` için işleç, herhangi bir sayısal ifadenin bit değerlerini tersine çevirir ve karşılık gelen `result` biti aşağıdaki tabloya göre ayarlar.  
+ Sayısal ifadeler için `Not` işleci herhangi bir sayısal ifadenin bit değerlerini tersine çevirir ve aşağıdaki tabloya göre `result` ' de karşılık gelen biti ayarlar.  
   
-|Eğer bit `expression` ise|İçindeki `result` bit|  
+|Bit `expression` ise|@No__t-0 ' daki bit|  
 |-------------------------------|----------------------------|  
 |1\.|0|  
 |0|1\.|  
@@ -56,20 +56,20 @@ result = Not expression
 > Mantıksal ve bit düzeyinde işleçler diğer aritmetik ve ilişkisel işleçlerden daha düşük önceliğe sahip olduğundan, doğru yürütmeyi sağlamak için herhangi bir bit düzeyinde işlemin parantez içine alınması gerekir.  
   
 ## <a name="data-types"></a>Veri Türleri  
- Boolean Olumsuzlaştırma için sonucun veri türü olur `Boolean`. Bit düzeyinde olumsuzlama için sonuç veri türü, ile `expression`aynıdır. Ancak, ifadesi `Decimal`ise sonuç olur `Long`.  
+ Boolean Olumsuzlaştırma için sonucun veri türü `Boolean` ' dır. Bit düzeyinde olumsuzlama için, sonuç veri türü `expression` ' y i ile aynıdır. Ancak, ifade `Decimal` ise sonuç `Long` ' dir.  
   
 ## <a name="overloading"></a>Aşırı Yükleme  
- İşleç aşırı yüklenebilir, yani işleneni Bu sınıf veya yapının türüne sahip olduğunda bir sınıf veya yapının davranışını yeniden tanımlayabileceği anlamına gelir. `Not` Kodunuz böyle bir sınıf veya yapıda bu işleci kullanıyorsa, yeniden tanımlanmış davranışını anladığınızdan emin olun. Daha fazla bilgi için bkz. [operatör yordamları](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+ @No__t-0 işleci *aşırı*yüklenebilir, yani işleneni Bu sınıf veya yapının türüne sahip olduğunda bir sınıf veya yapının davranışını yeniden tanımlayabileceği anlamına gelir. Kodunuz böyle bir sınıf veya yapıda bu işleci kullanıyorsa, yeniden tanımlanmış davranışını anladığınızdan emin olun. Daha fazla bilgi için bkz. [operatör yordamları](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, bir `Not` `Boolean` ifadede mantıksal olumsuzlama gerçekleştirmek için işlecini kullanır. Sonuç, ifadenin değerinin `Boolean` ters çevrilme değerini temsil eden bir değerdir.  
+ Aşağıdaki örnek, bir `Boolean` ifadesinde mantıksal olumsuzlama gerçekleştirmek için `Not` işlecini kullanır. Sonuç, ifadenin değerinin ters çevirmeyi temsil eden bir `Boolean` değeridir.  
   
  [!code-vb[VbVbalrOperators#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#33)]  
   
- Yukarıdaki örnek sırasıyla `False` ve `True`, sonuçları üretir.  
+ Yukarıdaki örnek sırasıyla `False` ve `True` sonuçları üretir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, bir sayısal `Not` ifadenin ayrı bitlerinin mantıksal olumsuzunu gerçekleştirmek için işlecini kullanır. Sonuç deseninin biti, işaret biti dahil olmak üzere işlenen deseninin karşılık gelen bitin ters olarak ayarlanır.  
+ Aşağıdaki örnek, sayısal bir ifadenin ayrı bitlerini mantıksal olarak gerçekleştirmek için `Not` işlecini kullanır. Sonuç deseninin biti, işaret biti dahil olmak üzere işlenen deseninin karşılık gelen bitin ters olarak ayarlanır.  
   
  [!code-vb[VbVbalrOperators#34](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#34)]  
   

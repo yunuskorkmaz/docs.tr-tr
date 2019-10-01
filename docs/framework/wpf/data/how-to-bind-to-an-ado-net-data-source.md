@@ -9,33 +9,33 @@ helpviewer_keywords:
 - ADO.NET data sources [WPF], binding to
 - binding [WPF], to ADO.NET data sources
 ms.assetid: a70c6d7b-7b38-4fdf-b655-4804db7c8315
-ms.openlocfilehash: 96f846db3f705972a4749460bf2c410483258572
-ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
+ms.openlocfilehash: dbe34cba8f01320fbf37beea65ed95656e09395c
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68238421"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71697137"
 ---
 # <a name="how-to-bind-to-an-adonet-data-source"></a>Nasıl yapılır: ADO.NET Veri Kaynağına Bağlama
 
-Bu örnek nasıl bağlanacağını gösterir. bir [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <xref:System.Windows.Controls.ListBox> ADO.NET denetimine `DataSet`.
+Bu örnekte, [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <xref:System.Windows.Controls.ListBox> denetiminin bir ADO.NET `DataSet` ' ye nasıl bağlanacağı gösterilmektedir.
 
 ## <a name="example"></a>Örnek
 
-Bu örnekte, bir `OleDbConnection` nesne olan veri kaynağına bağlanmak için kullanılan bir `Access MDB` bağlantı dizesinde belirtilen dosya. Bağlantı kurulduktan sonra bir `OleDbDataAdapter` nesnesi oluşturulur. `OleDbDataAdapter` Nesne yürüten bir select [!INCLUDE[TLA#tla_sql](../../../../includes/tlasharptla-sql-md.md)] deyimi kayıt veritabanından alınamıyor. Sonuçlardan [!INCLUDE[TLA2#tla_sql](../../../../includes/tla2sharptla-sql-md.md)] komut depolanır bir `DataTable` , `DataSet` çağırarak `Fill` yöntemi `OleDbDataAdapter`. `DataTable` Bu örnekte adlı `BookTable`. Bu örnek daha sonra Ayarlar <xref:System.Windows.FrameworkElement.DataContext%2A> özelliği <xref:System.Windows.Controls.ListBox> için `DataSet` nesne.
+Bu örnekte, bağlantı dizesinde belirtilen bir `Access MDB` dosyası olan veri kaynağına bağlanmak için bir `OleDbConnection` nesnesi kullanılır. Bağlantı kurulduktan sonra, `OleDbDataAdapter` nesnesi oluşturulur. @No__t-0 nesnesi bir SELECT Yapılandırılmış Sorgu Dili (SQL) ifadesini yürüterek kayıt kümesini veritabanından alır. SQL komutunun sonuçları, `OleDbDataAdapter` ' ün `Fill` yöntemini çağırarak `DataSet` ' in `DataTable` ' a depolanır. Bu örnekteki `DataTable` `BookTable` olarak adlandırılmıştır. Örnek sonra, <xref:System.Windows.Controls.ListBox> ' in <xref:System.Windows.FrameworkElement.DataContext%2A> özelliğini `DataSet` nesnesine ayarlar.
 
 [!code-csharp[ADODataSet#1](~/samples/snippets/csharp/VS_Snippets_Wpf/ADODataSet/CSharp/Window1.xaml.cs#1)]
 [!code-vb[ADODataSet#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ADODataSet/VisualBasic/Window1.xaml.vb#1)]
 
-Biz sonra bağlayabilirsiniz <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> özelliği <xref:System.Windows.Controls.ListBox> için `BookTable` , `DataSet`:
+Daha sonra <xref:System.Windows.Controls.ListBox> ' in <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> özelliğini @no__t 3 ' ün `BookTable` ' ye bağlayabiliriz:
 
 [!code-xaml[ADODataSet#2](~/samples/snippets/csharp/VS_Snippets_Wpf/ADODataSet/CSharp/Window1.xaml#2)]
 
-`BookItemTemplate` olan <xref:System.Windows.DataTemplate> verinin nasıl göründüğünü tanımlar:
+`BookItemTemplate`, verilerin nasıl göründüğünü tanımlayan <xref:System.Windows.DataTemplate> ' dir:
 
 [!code-xaml[ADODataSet#3](~/samples/snippets/csharp/VS_Snippets_Wpf/ADODataSet/CSharp/Window1.xaml#3)]
 
-`IntColorConverter` Dönüştürür bir `int` bir renk. Bu dönüştürücü kullanarak <xref:System.Windows.Controls.TextBlock.Background%2A> üçüncü rengini <xref:System.Windows.Controls.TextBlock> yeşil görünür değilse değerini `NumPages` Aksi takdirde 350'den küçük ve kırmızı olur. Dönüştürücü uygulanması burada gösterilmez.
+@No__t-0, bir `int` ' i renge dönüştürür. Bu dönüştürücünün kullanımıyla, `NumPages` değeri 350 ' den küçükse üçüncü <xref:System.Windows.Controls.TextBlock> ' in <xref:System.Windows.Controls.TextBlock.Background%2A> rengi yeşil görünür ve aksi takdirde Red olur. Dönüştürücünün uygulanması burada gösterilmez.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

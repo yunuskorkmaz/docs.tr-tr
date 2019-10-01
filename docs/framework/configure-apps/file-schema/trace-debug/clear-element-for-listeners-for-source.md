@@ -1,5 +1,5 @@
 ---
-title: <clear>İçin için <listeners> öğesi<source>
+title: <source> için <listeners> <clear> öğesi
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source/listeners/clear
@@ -7,22 +7,22 @@ helpviewer_keywords:
 - <clear> element for <listeners> for <source>
 - clear element for <listeners> for <source>
 ms.assetid: 76796bb2-9c0b-4526-8135-8bf18b16d8d9
-ms.openlocfilehash: 768d51a74b4c31d1250d2f5d6517f760f886e0a0
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 05c20040ef59f4dee6b15bbe0b0369281b532754
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69920547"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71697174"
 ---
-# <a name="clear-element-for-listeners-for-source"></a>\<Kaynak > için \< \<dinleyiciler > > öğeyi temizle
-İzleme kaynağı için koleksiyonu temizler. `Listeners`  
+# <a name="clear-element-for-listeners-for-source"></a>\<source > için \<listeners > için \<clear > öğesi
+Bir izleme kaynağı için `Listeners` koleksiyonunu temizler.  
   
- \<Yapılandırma >  
-\<System. Diagnostics >  
-\<Kaynaklar >  
-\<Kaynak >  
-\<dinleyiciler >  
-\<> Temizle  
+[ **\<Yapılandırma >** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **\<system. Diagnostics >** ](system-diagnostics-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<sources >** ](sources-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5[ **\<source >** ](source-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7[ **&nbsp;0listeners >** ](listeners-element-for-source.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7 @ no__t-8 @ no__t-9 **&nbsp;1clear >**  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -50,13 +50,13 @@ ms.locfileid: "69920547"
 |`listeners`|İletileri toplayacak, depolayan ve yönlendiren dinleyicileri belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Öğesi, dahil olmak üzere bir <xref:System.Diagnostics.DefaultTraceListener>izleme `Listeners` kaynağı için koleksiyondan tüm dinleyicileri kaldırır. `<clear>` Koleksiyonda başka hiçbir etkin `<clear>` dinleyici bulunmadığından emin olmak `<add>` için öğesini kullanmadan önce öğesini kullanabilirsiniz.  
+ @No__t-0 öğesi, <xref:System.Diagnostics.DefaultTraceListener> de dahil olmak üzere bir izleme kaynağı için `Listeners` koleksiyonundan tüm dinleyicileri kaldırır. Koleksiyonda başka hiçbir etkin dinleyici bulunmadığından emin olmak için `<add>` öğesini kullanmadan önce `<clear>` öğesini kullanabilirsiniz.  
   
 ## <a name="configuration-file"></a>Yapılandırma Dosyası  
  Bu öğe makine yapılandırma dosyasında (Machine. config) ve uygulama yapılandırma dosyasında kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, `<add>` öğeleri kullanarak, dinleyicileri `console` ve `<clear>` `textListener` `Listeners` izleme kaynağı`TraceSourceApp`koleksiyonuna eklemek için öğesinin nasıl kullanılacağını gösterir.  
+ Aşağıdaki örnek, `console` ve `textListener` ' ü izleme kaynağı `TraceSourceApp` koleksiyonuna eklemek için `<add>` öğelerini kullanmadan önce `<clear>` öğesinin nasıl kullanılacağını gösterir.  
   
 ```xml  
 <configuration>  

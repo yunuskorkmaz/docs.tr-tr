@@ -8,129 +8,132 @@ helpviewer_keywords:
 - troubleshooting procedures
 - procedures [Visual Basic], about procedures
 ms.assetid: 525721e8-2e02-4f75-b5d8-6b893462cf2b
-ms.openlocfilehash: 1a8cd568f1a9a05721f311cc72a22bfc2b6bcfc9
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d8309b9bd63a2a3d1b0b56f97be121a06b78d6b6
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625466"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71700128"
 ---
 # <a name="troubleshooting-procedures-visual-basic"></a>Yordam Sorunlarını Giderme (Visual Basic)
-Bu sayfada yordamlarla çalışırken oluşabilecek bazı yaygın sorunlar listelenir.  
+
+Bu sayfada, yordamlarla çalışırken oluşabilecek bazı yaygın sorunlar listelenmektedir.
+
+## <a name="returning-an-array-type-from-a-function-procedure"></a>Bir Işlev yordamından dizi türü döndürme
+
+ @No__t-0 yordamı bir dizi veri türü döndürürse, değerleri dizinin öğelerine depolamak için `Function` adını kullanamazsınız. Bunu yapmayı denerseniz, derleyici onu `Function` ' a bir çağrı olarak yorumlar. Aşağıdaki örnek derleyici hataları oluşturur.
+
+ ```vb
+ Function AllOnes(n As Integer) As Integer()
+     For i = 1 To n - 1
+         ' The following statement generates a COMPILER ERROR.
+         AllOnes(i) = 1
+     Next
+     ' The following statement generates a COMPILER ERROR.
+     Return AllOnes()
+ End Function
+ ```
   
-## <a name="returning-an-array-type-from-a-function-procedure"></a>Bir dizi türü döndüren bir işlev yordamdan  
- Varsa bir `Function` yordamı, bir dizi veri türü döndürür; kullanamazsınız `Function` dizinin öğeleri içinde değerleri depolamak için ad. Bunu yapmayı denerseniz derleyici, bir çağrı olarak yorumlar `Function`. Aşağıdaki örnek, derleyici hataları oluşturur.  
-  
- `Function allOnes(ByVal n As Integer) As Integer()`  
-  
- `For i As Integer = 1 To n - 1`  
-  
- `' The following statement generates a`   `COMPILER ERROR`  `.`  
-  
- `allOnes(i) = 1`  
-  
- `Next i`  
-  
- `' The following statement generates a`   `COMPILER ERROR`  `.`  
-  
- `Return allOnes()`  
-  
- `End Function`  
-  
- Deyim `allOnes(i) = 1` çağrılacak göründüğü için bir derleyici hatasına neden olur `allOnes` yanlış veri türünde bir bağımsız değişken ile (bir singleton `Integer` yerine bir `Integer` dizisi). Deyim `Return allOnes()` çağrılacak göründüğü için bir derleyici hatası oluşturur `allOnes` ile hiçbir bağımsız değişken.  
-  
- **Doğru yaklaşım:** Döndürülecek bir dizi öğelerini değiştirebilmesi için dahili bir dizi yerel bir değişken tanımlayın. Aşağıdaki örnek, hata olmadan derler.  
-  
- [!code-vb[VbVbcnProcedures#66](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#66)]  
-  
-## <a name="argument-not-being-modified-by-procedure-call"></a>Bağımsız değişken değil değiştirilen yordam çağrısı tarafından  
- Bir yordam çağıran koddaki bağımsız değişken arka plandaki bir programlama öğesi değiştirmeye izin vermek istiyorsanız, başvuruya göre geçmesi gerekir. Ancak geçirdiğiniz değere göre olsa bile bir yordam bir başvuru türü bağımsız değişkeni öğelerine erişebilirsiniz.  
-  
-- **Değişken arka plandaki**. Temel alınan değişken öğenin kendisinin değerini değiştirmek yordamı izin vermek için yordam parametre bildirmeniz gerekir [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md). Geçersiz kılarsınız çünkü Ayrıca, çağıran kodun bağımsız değişken parantez içine almalısınız değil `ByRef` mekanizması geçirme.  
-  
-- **Başvuru türü öğeleri**. Bir parametre bildirirseniz [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md), temel alınan değişken öğenin kendisinin yordamı değiştiremezsiniz. Ancak, bağımsız değişken bir başvuru türü ise, değişken değerini değiştiremez olsa bile yordamı işaret ettiği, nesnenin üyeleri değiştirebilir. Örneğin, bir dizi değişken bağımsız değişken ise yordamı için yeni bir dizi atama yapılamaz ancak bir veya daha fazla alt öğeleri değiştirebilirsiniz. Değiştirilen öğeler, temel alınan dizi değişkeni çağıran koddaki yansıtılır.  
-  
- Aşağıdaki örnek, bir dizi değişkenini değere göre alabilir ve çalışan iki yordamı alt öğelerde tanımlar. Yordam `increase` yalnızca her öğeye ekler. Yordam `replace` yeni bir dizi parametresine atar `a()` ve sonra her öğeye ekler. Ancak, yakaladığından çağıran koddaki temel alınan dizi değişkeni etkilemez çünkü `a()` bildirildiği `ByVal`.  
-  
- [!code-vb[VbVbcnProcedures#35](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#35)]  
-  
- [!code-vb[VbVbcnProcedures#38](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#38)]  
-  
- Aşağıdaki örnek çağrılar `increase` ve `replace`.  
-  
- [!code-vb[VbVbcnProcedures#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#37)]  
-  
- İlk `MsgBox` çağrı görüntüler "increase(n) sonra: 11, 21, 31, 41". Çünkü `n` bir başvuru türüdür `increase` kendisine geçirilen olsa bile, bu grubun üyeleri değiştirebilirsiniz `ByVal`.  
-  
- İkinci `MsgBox` çağrı görüntüler "replace(n) sonra: 11, 21, 31, 41". Çünkü `n` geçirilen `ByVal`, `replace` değişkeni değiştiremezsiniz `n` yeni bir dizi atayarak. Zaman `replace` yeni dizi örneği oluşturur `k` ve yerel bir değişkene atar `a`, başvuru kaybeder `n` çağıran kod tarafından geçirilen. Artırır, üyelerinin `a`, yalnızca yerel dizi `k` etkilenir.  
-  
- **Doğru yaklaşım:** Temel alınan değişken öğenin kendisini değiştirebilmesi için başvuruya göre geçirin. Aşağıdaki örnek, değişiklik bildiriminde gösterir. `replace` çağıran koddaki başka bir dizi yerine kendisine sağlayan.  
-  
- [!code-vb[VbVbcnProcedures#64](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#64)]  
-  
-## <a name="unable-to-define-an-overload"></a>Aşırı tanımlamak oluşturulamıyor  
- Bir yordamı aşırı yüklenmiş bir sürümünü tanımlamak istiyorsanız, aynı ada ancak farklı bir imza kullanmanız gerekir. Derleyici, aynı imzaya sahip bir aşırı bildirimden ayırt edilemiyor, bir hata oluşturur.  
-  
- *İmza* bir yordam yordam adı ve parametre listesine göre belirlenir. Her aşırı yükleme tüm diğer aşırı yüklemeler aynı ada sahip olmalıdır, ancak tüm bunları bir imza bileşenlerinin en az birinde farklı olmalıdır. Daha fazla bilgi için [yordam aşırı yüklemesi](./procedure-overloading.md).  
-  
- Aşağıdaki öğeler, bunlar parametre listesine ait olsa bile yordamın imza bileşenlerinin değildir:  
-  
-- Yordam değiştiricisi anahtar sözcükler gibi `Public`, `Shared`, ve `Static`  
-  
-- Parametre adları  
-  
-- Parametre değiştiricisi anahtar sözcükler gibi `ByRef` ve `Optional`  
-  
-- (bir dönüşüm işleci dışında) dönüş değerinin veri türü  
-  
- Yalnızca bir veya daha fazla önceki öğelerin değiştirerek bir yordamı aşırı yükleyemez.  
-  
- **Doğru yaklaşım:** Bir yordamı aşırı yükleme tanımlayabilmek için imza değişiklik gerekir. Aynı adı kullanmanız gerektiğinden, sayısını, sırasını veya parametrelerinin veri türleri farklı olmalıdır. Genel bir yordamda türü parametre sayısı değişebilir. İçinde bir dönüştürme operatörünün ([CType işlevi](../../../../visual-basic/language-reference/functions/ctype-function.md)), dönüş türü farklılık gösterebilir.  
-  
-### <a name="overload-resolution-with-optional-and-paramarray-arguments"></a>İsteğe bağlı bir çözümleme ve ParamArray bağımsız değişkenleri, aşırı yükleme  
- Bir veya daha fazla bilgi içeren bir yordamı aşırı yükleme varsa [isteğe bağlı](../../../../visual-basic/language-reference/modifiers/optional.md) parametreleri veya [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) parametre gerekir önlemek herhangi bir çoğaltma *örtük aşırı yüklemeleri*. Bilgi için [aşırı yükleme yordamları Hususlarına](./considerations-in-overloading-procedures.md).  
-  
-## <a name="calling-a-wrong-version-of-an-overloaded-procedure"></a>Yanlış bir sürümü, aşırı yüklenmiş bir yordamı çağırma  
- Bir yordamın birden fazla aşırı yüklenmiş sürümleri varsa, ile tüm bunların parametre listeleri hakkında bilgi sahibi olmanız ve Visual Basic çağrıları aşırı yüklemeler arasında nasıl çözümler? anlamanız gerekir. Aksi takdirde hedeflenen farklı bir aşırı yüklemesini çağırabilir.  
-  
- Hangi aşırı yüklemesini çağırmak istediğinizde belirlediğinizde, aşağıdaki kurallara uymanız dikkat edin:  
-  
-- Bağımsız değişkenlerin ve doğru sırada doğru numarayı girin.  
-  
-- İdeal olarak, değişkenleriniz, aynı veri türleri karşılık gelen parametre olmalıdır. Herhangi bir durumda, her bağımsız değişken veri türünü, karşılık gelen parametre genişlemesi gerekir. Bu bile geçerlidir [Option Strict deyimi](../../../../visual-basic/language-reference/statements/option-strict-statement.md) kümesine `Off`. Aşırı yükleme, bağımsız değişken listesinde, herhangi bir daraltma dönüşümü bir aşırı gerektiriyorsa, çağrılması için uygun değil.  
-  
-- Genişletme gerektiren bağımsız değişkenleri sağlayın, veri türlerini olabildiğince karşılık gelen parametre veri türleri için mümkün olduğunca yakın olun. İki veya daha fazla aşırı yüklemeler, bağımsız değişken veri türleri kabul ederseniz, derleyici çağrınız genişletme için en az miktarını çağıran aşırı çözümler.  
-  
- Kullanarak veri türü uyuşmazlığı olasılığını azaltabilirsiniz [CType işlevi](../../../../visual-basic/language-reference/functions/ctype-function.md) değişkenleriniz hazırlanırken dönüştürme anahtar sözcüğü.  
-  
-### <a name="overload-resolution-failure"></a>Aşırı yükleme çözümlemesi başarısız  
- Aşırı yüklenmiş bir yordamı çağırdığınızda derleyici aşırı tüm birini ortadan kaldırmak çalışır. Başarılı olursa, bu aşırı yükleme çağrısı çözümler. Tüm aşırı yüklemeler ortadan veya tek bir aday için uygun aşırı indiremezsiniz gerekiyorsa, bir hata oluşturur.  
-  
- Aşağıdaki örnekte, aşırı yükleme çözümleme işlemi gösterilmektedir.  
-  
- [!code-vb[VbVbcnProcedures#62](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#62)]  
-  
- [!code-vb[VbVbcnProcedures#63](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#63)]  
-  
- İlk çağrıda nedeniyle derleyici ilk aşırı yükleme ortadan ilk bağımsız değişken türünü (`Short`) daraltır karşılık gelen parametre türüne (`Byte`). Çünkü ikinci aşırı yükleme her bağımsız değişken türü, daha sonra üçüncü aşırı yükleme ortadan kaldırır (`Short` ve `Single`) üçüncü aşırı yükleme türüne karşılık gelen widens (`Integer` ve `Single`). İsteğe bağlı olarak derleyici arama için kullanır, böylece daha az genişletme, ikinci aşırı yükleme gerektirir.  
-  
- İkinci çağrıda, derleyici aşırı daraltma göndermemeniz hiçbirini ortadan olamaz. Daha az bir bağımsız değişken türlerini genişletme ile ikinci aşırı yükleme çağırabilirsiniz çünkü aynı nedenle, ilk çağrıda olduğu gibi üçüncü aşırı yükleme kaldırır. Ancak, derleyici ilk ve ikinci aşırı yükler arasında çözümlenemiyor. Her diğer karşılık gelen türe widens bir tanımlanan parametre türüne sahip (`Byte` için `Short`, ancak `Single` için `Double`). Derleyici, bu nedenle bir aşırı yükleme çözünürlüğü hata oluşturur.  
-  
- **Doğru yaklaşım:** Belirsizlik olmadan aşırı yüklenmiş bir yordamı çağırma yapabilmek için kullanmak [CType işlevi](../../../../visual-basic/language-reference/functions/ctype-function.md) parametre türleri için bağımsız değişken veri türleri eşleştirmek için. Aşağıdaki örnek, bir çağrı gösterir `z` , ikinci aşırı yükleme çözünürlüğü zorlar.  
-  
- [!code-vb[VbVbcnProcedures#65](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#65)]  
-  
-### <a name="overload-resolution-with-optional-and-paramarray-arguments"></a>İsteğe bağlı bir çözümleme ve ParamArray bağımsız değişkenleri, aşırı yükleme  
- Son parametre bildirilen dışında aynı imzaya bir yordamın iki aşırı yükleme varsa [isteğe bağlı](../../../../visual-basic/language-reference/modifiers/optional.md) birinde ve [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) diğerinde derleyici Bu yordam çağrısı çözümler en yakın eşleşme göre. Daha fazla bilgi için [aşırı yükleme çözünürlüğü](./overload-resolution.md).  
-  
+ @No__t-0 ifadesi, yanlış veri türünde bir bağımsız değişkenle (`Integer` dizisi yerine bir skaler `Integer`) `AllOnes` çağrısında göründüğünden bir derleyici hatası oluşturur. @No__t-0 ifadesi, bağımsız değişken olmadan `AllOnes` çağrısında göründüğünden bir derleyici hatası oluşturuyor.
+
+ **Doğru yaklaşım:** Döndürülecek bir dizinin öğelerini değiştirebilmek için, bir iç diziyi yerel bir değişken olarak tanımlayın. Aşağıdaki örnek hatasız derlenir.
+
+ [!code-vb[VbVbcnProcedures#66](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#66)]
+
+## <a name="argument-not-being-modified-by-procedure-call"></a>Bağımsız değişken yordam çağrısıyla değiştirilmiyor
+
+ Çağıran koddaki bağımsız değişkenin temelindeki bir programlama öğesini değiştirme yordamına izin vermeyi düşünüyorsanız, başvuruya göre geçirmeniz gerekir. Ancak bir yordam, bir başvuru türü bağımsız değişkeninin öğelerine değere göre geçseniz bile bu öğelere erişebilir.
+
+- **Temel alınan değişken**. Yordamın temel alınan değişken öğesinin değerini değiştirmesine izin vermek için, yordam [ByRef](../../../language-reference/modifiers/byref.md)parametresini bildirmelidir. Ayrıca, çağıran kod bağımsız değişkeni parantez içine içermemelidir, çünkü bu `ByRef` geçen mekanizmayı geçersiz kılar.
+
+- **Başvuru türü öğeleri**. Bir [ByVal](../../../language-reference/modifiers/byval.md)parametresi bildirirseniz yordam, temeldeki değişken öğesinin kendisini değiştiremez. Ancak bağımsız değişken bir başvuru türü ise, yordam değişkenin değerini değiştiremese de, işaret ettiği nesnenin üyelerini değiştirebilir. Örneğin, bağımsız değişken bir dizi değişkenidir, yordam buna yeni bir dizi atayamaz, ancak bir veya daha fazla öğesini değiştirebilir. Değiştirilen öğeler, çağıran koddaki temeldeki dizi değişkenine yansıtılır.
+
+ Aşağıdaki örnek, bir dizi değişkenini değere göre alan ve öğelerinde çalışan iki yordamı tanımlar. @No__t-0 yordamı her bir öğeye yalnızca bir tane ekler. @No__t-0 yordamı, `a()` parametresine yeni bir dizi atar ve sonra her öğeye bir tane ekler. Ancak, `a()` `ByVal` olarak bildirildiği için yeniden atama, çağıran koddaki temel alınan dizi değişkenini etkilemez.
+
+ [!code-vb[VbVbcnProcedures#35](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#35)]
+
+ [!code-vb[VbVbcnProcedures#38](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#38)]
+
+ Aşağıdaki örnekte `increase` ve `replace` çağrıları yapılır.
+
+ [!code-vb[VbVbcnProcedures#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#37)]
+
+ İlk `MsgBox` çağrısı "artdıktan sonra (n): 11, 21, 31, 41" görüntüler. @No__t-0 bir başvuru türü olduğundan, `increase` `ByVal` ' den geçirilse bile üyelerini değiştirebilir.
+
+ İkinci `MsgBox` çağrısı "yenisiyle değiştirildikten sonra (n): 11, 21, 31, 41" olarak görüntülenir. @No__t-0 `ByVal` geçirildiğinden `replace` ' ye yeni bir dizi atayarak `n` değişkeni değiştirilemez. @No__t-0, yeni `k` dizi örneğini oluşturduğunda ve onu `a` yerel değişkenine atadığında, çağıran kod tarafından geçirilen `n` başvurusunu kaybeder. @No__t-0 üyelerini artırdığı zaman, yalnızca `k` yerel dizisi etkilenir.
+
+ **Doğru yaklaşım:** Temel bir değişken öğesinin kendisini değiştirebilmek için, başvuruya göre geçirin. Aşağıdaki örnek, `replace` ' ın bildirimindeki değişikliği gösterir. Bu, çağıran koddaki bir diziyi bir dizi ile değiştirmesine izin verir.
+
+ [!code-vb[VbVbcnProcedures#64](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#64)]
+
+## <a name="unable-to-define-an-overload"></a>Aşırı yükleme tanımlanamıyor
+
+ Bir yordamın aşırı yüklenmiş bir sürümünü tanımlamak istiyorsanız, aynı adı ancak farklı bir imzayı kullanmanız gerekir. Derleyici, bildirimi aynı imzaya sahip bir aşırı yükten ayırt edemez bir hata oluşturur.
+
+ Bir yordamın *imzası* , yordam adı ve parametre listesine göre belirlenir. Her aşırı yükleme diğer tüm aşırı yüklemeleriyle aynı ada sahip olmalıdır, ancak imzaların diğer bileşenlerinden en az birinde farklı olmalıdır. Daha fazla bilgi için bkz. [yordam aşırı yüklemesi](procedure-overloading.md).
+
+ Aşağıdaki öğeler, parametre listesine ait olsalar bile bir yordamın imzasının bileşenleri değildir:
+
+- @No__t-0, `Shared` ve `Static` gibi yordam değiştirici anahtar sözcükleri
+
+- Parametre adları
+
+- @No__t-0 ve `Optional` gibi parametre değiştirici anahtar sözcükleri
+
+- Dönüş değerinin veri türü (dönüştürme işleci dışında)
+
+ Bir yordamı yalnızca bir veya daha fazla önceki öğeden farklı şekilde değiştirerek aşırı yükleyemezsiniz.
+
+ **Doğru yaklaşım:** Bir yordam aşırı yüklemesi tanımlayabilmek için imzayı değişiklik yapmanız gerekir. Aynı adı kullanmanız gerektiğinden, parametrelerin sayı, sıra veya veri türleri arasında değişiklik yapmanız gerekir. Genel yordamda, tür parametrelerinin sayısını değiştirebilirsiniz. Bir dönüştürme işlecinde ([CType işlevi](../../../language-reference/functions/ctype-function.md)), dönüş türünü değiştirebilirsiniz.
+
+### <a name="overload-resolution-with-optional-and-paramarray-arguments"></a>Isteğe bağlı ve ParamArray bağımsız değişkenleriyle aşırı yükleme çözümü
+
+ Bir veya daha fazla [Isteğe bağlı](../../../language-reference/modifiers/optional.md) parametre ya da bir [ParamArray](../../../language-reference/modifiers/paramarray.md) parametresiyle bir yordamı aşırı yüklüyorsanız, *örtük aşırı yüklemelerin*hiçbirini çoğaltmaktan kaçınmanız gerekir. Daha fazla bilgi için bkz. [yordamları aşırı yükleme](considerations-in-overloading-procedures.md).
+
+## <a name="calling-a-wrong-version-of-an-overloaded-procedure"></a>Aşırı yüklenmiş yordamın yanlış bir sürümünü çağırma
+
+ Bir yordamda birkaç aşırı yüklenmiş sürüm varsa, tüm parametre listelerine alışkın olmanız ve Visual Basic aşırı yüklemeler arasında çağrıların nasıl çözümlendiğini anlamanız gerekir. Aksi takdirde, amaçlanan bir aşırı yüklemeyi çağırabilirsiniz.
+
+ Hangi aşırı yüklemeyi çağırmak istediğinizi belirledikten sonra, aşağıdaki kuralları gözlemlemeye dikkat edin:
+
+- Doğru sayıda bağımsız değişken sağlayın ve doğru sırada.
+
+- İdeal olarak, bağımsız değişkenleriniz karşılık gelen parametrelerle tam olarak aynı veri türlerine sahip olmalıdır. Herhangi bir durumda, her bağımsız değişkenin veri türü karşılık gelen parametresinden sonra genişlemelidir. Bu, [katı ifadesiyle](../../../language-reference/statements/option-strict-statement.md) `Off` olarak ayarlanan seçenek de geçerlidir. Aşırı yükleme, bağımsız değişken listenizden herhangi bir daraltma dönüştürmesi gerektiriyorsa, bu aşırı yükleme çağrılabilir.
+
+- Genişleyen bir bağımsız değişken sağlarsanız, veri türlerini karşılık gelen parametre veri türlerine mümkün olduğunca yakın hale getirin. İki veya daha fazla aşırı yükleme bağımsız değişken veri türlerinizi kabul ettiğinde, derleyici en az genişletme miktarını çağıran aşırı yüklemeye yönelik çağrınızı çözer.
+
+ Bağımsız değişkenlerinizi hazırlarken [CType işlev](../../../language-reference/functions/ctype-function.md) dönüştürme anahtar sözcüğünü kullanarak veri türü uyuşmazlığı olasılığını azaltabilirsiniz.
+
+### <a name="overload-resolution-failure"></a>Aşırı yükleme çözümleme hatası
+
+ Aşırı yüklenmiş bir yordamı çağırdığınızda, derleyici aşırı yüklerden biri hariç tümünü ortadan kaldırmaya çalışır. Başarılı olursa, bu aşırı yüklemeye çağrı çözülür. Tüm aşırı yüklemeleri ortadan kaldırarsa veya uygun olan aşırı yüklemeleri tek bir aday için azaltamazsanız bir hata oluşturur.
+
+ Aşağıdaki örnek, aşırı yükleme çözümleme işlemini gösterir.
+
+ [!code-vb[VbVbcnProcedures#62](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#62)]
+
+ [!code-vb[VbVbcnProcedures#63](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#63)]
+
+ İlk çağrıda, derleyici ilk yeniden yüklemeyi ortadan kaldırır çünkü ilk bağımsız değişken türü (`Short`) karşılık gelen parametrenin türüne (`Byte`) daraltır. İkinci aşırı yükteki (`Short` ve `Single`) her bağımsız değişken türü üçüncü aşırı yüklemede (`Integer` ve `Single`) karşılık gelen türe widens için üçüncü aşırı yüklemeyi ortadan kaldırır. İkinci aşırı yükleme daha az genişletme gerektirir, bu nedenle derleyici onu çağrı için kullanır.
+
+ İkinci çağrıda, derleyici daraltma temelinde aşırı yüklemelerin hiçbirini ortadan kaldırmaz. İkinci aşırı yükleme, bağımsız değişken türlerini daha az genişletme ile çağırabildiğinden, birinci çağrıdan itibaren aynı nedenden dolayı üçüncü aşırı yüklemeyi ortadan kaldırır. Ancak, derleyici birinci ve ikinci aşırı yüklemeler arasında çözümlenemez. Her biri, widens-1 ' @no__t e @no__t, ancak `Single` ' ye `Double`) karşılık gelen türe sahip bir tanımlı parametre türüne sahiptir. Bu nedenle derleyici aşırı yükleme çözümlemesi hatası oluşturur.
+
+ **Doğru yaklaşım:** Aşırı yüklenmiş bir yordamı belirsizlik olmadan çağırabilmek için [CType işlevini](../../../language-reference/functions/ctype-function.md) kullanarak bağımsız değişken veri türlerini parametre türleriyle eşleştirin. Aşağıdaki örnek, ikinci aşırı yüklemeye çözüm zorlayan `z` ' a bir çağrı gösterir.
+
+ [!code-vb[VbVbcnProcedures#65](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#65)]
+
+### <a name="overload-resolution-with-optional-and-paramarray-arguments"></a>Isteğe bağlı ve ParamArray bağımsız değişkenleriyle aşırı yükleme çözümü
+
+ Bir yordamın iki aşırı yüklemesi aynı imzaya sahip ise, son parametrenin diğer bir ve [ParamArray](../../../language-reference/modifiers/paramarray.md) 'de [isteğe bağlı](../../../language-reference/modifiers/optional.md) olarak bildirildiği durumlar dışında, derleyici en yakın eşleşmeye göre o yordama bir çağrı çözer. Daha fazla bilgi için bkz. [aşırı yükleme çözünürlüğü](overload-resolution.md).
+
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Yordamlar](./index.md)
-- [Alt Yordamlar](./sub-procedures.md)
-- [İşlev Yordamları](./function-procedures.md)
-- [Özellik Yordamları](./property-procedures.md)
-- [İşleç Yordamları](./operator-procedures.md)
-- [Yordam Parametreleri ve Bağımsız Değişkenleri](./procedure-parameters-and-arguments.md)
-- [Yordam Aşırı Yüklemesi](./procedure-overloading.md)
-- [Yordamları Aşırı Yüklemeye İlişkin Düşünceler](./considerations-in-overloading-procedures.md)
-- [Aşırı Yükleme Çözümü](./overload-resolution.md)
+- [Yordamlar](index.md)
+- [Alt Yordamlar](sub-procedures.md)
+- [İşlev Yordamları](function-procedures.md)
+- [Özellik Yordamları](property-procedures.md)
+- [İşleç Yordamları](operator-procedures.md)
+- [Yordam Parametreleri ve Bağımsız Değişkenleri](procedure-parameters-and-arguments.md)
+- [Yordam Aşırı Yüklemesi](procedure-overloading.md)
+- [Yordamları Aşırı Yüklemeye İlişkin Düşünceler](considerations-in-overloading-procedures.md)
+- [Aşırı Yükleme Çözümü](overload-resolution.md)
