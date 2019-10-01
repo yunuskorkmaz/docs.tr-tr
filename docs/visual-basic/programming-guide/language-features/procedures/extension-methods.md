@@ -7,181 +7,178 @@ helpviewer_keywords:
 - extending data types [Visual Basic]
 - extension methods [Visual Basic]
 ms.assetid: b8020aae-374d-46a9-bcb7-8cc2390b93b6
-ms.openlocfilehash: 48a2609a1931e55d24d98cd2b336fc16c520c948
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b5ad066fe9ec40d715702ed99537f45b21c558cf
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64649644"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71701050"
 ---
-# <a name="extension-methods-visual-basic"></a><span data-ttu-id="7811d-102">Uzantı Yöntemleri (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="7811d-102">Extension Methods (Visual Basic)</span></span>
-<span data-ttu-id="7811d-103">Genişletme yöntemleri, geliştiricilerin zaten yeni bir türetilmiş tür oluşturmadan tanımlanan veri türlerine özel işlevsellik eklemek sağlar.</span><span class="sxs-lookup"><span data-stu-id="7811d-103">Extension methods enable developers to add custom functionality to data types that are already defined without creating a new derived type.</span></span> <span data-ttu-id="7811d-104">Genişletme yöntemleri mevcut türü bir örnek yöntemi gibi çağrılabilen bir yöntem yazmaktır mümkün kılar.</span><span class="sxs-lookup"><span data-stu-id="7811d-104">Extension methods make it possible to write a method that can be called as if it were an instance method of the existing type.</span></span>  
-  
-## <a name="remarks"></a><span data-ttu-id="7811d-105">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="7811d-105">Remarks</span></span>  
- <span data-ttu-id="7811d-106">Bir genişletme yöntemi yalnızca olabilir bir `Sub` yordamı veya `Function` yordamı.</span><span class="sxs-lookup"><span data-stu-id="7811d-106">An extension method can be only a `Sub` procedure or a `Function` procedure.</span></span> <span data-ttu-id="7811d-107">Bir uzantı özelliği, alan veya olay tanımlayamazsınız.</span><span class="sxs-lookup"><span data-stu-id="7811d-107">You cannot define an extension property, field, or event.</span></span> <span data-ttu-id="7811d-108">Tüm uzantı yöntemleri uzantı özniteliğiyle işaretlenmelidir `<Extension()>` gelen <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> ad alanı.</span><span class="sxs-lookup"><span data-stu-id="7811d-108">All extension methods must be marked with the extension attribute `<Extension()>` from the <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> namespace.</span></span>  
-  
- <span data-ttu-id="7811d-109">Bir genişletme yöntemi tanımındaki ilk parametre, yöntemin genişlettiği hangi veri türünü belirtir.</span><span class="sxs-lookup"><span data-stu-id="7811d-109">The first parameter in an extension method definition specifies which data type the method extends.</span></span> <span data-ttu-id="7811d-110">Yöntem çalıştırıldığında ilk parametre yöntemi çağıran veri türü örneğine bağlıdır.</span><span class="sxs-lookup"><span data-stu-id="7811d-110">When the method is run, the first parameter is bound to the instance of the data type that invokes the method.</span></span>  
-  
-## <a name="example"></a><span data-ttu-id="7811d-111">Örnek</span><span class="sxs-lookup"><span data-stu-id="7811d-111">Example</span></span>  
-  
-### <a name="description"></a><span data-ttu-id="7811d-112">Açıklama</span><span class="sxs-lookup"><span data-stu-id="7811d-112">Description</span></span>  
- <span data-ttu-id="7811d-113">Aşağıdaki örnekte tanımlayan bir `Print` uzantısı <xref:System.String> veri türü.</span><span class="sxs-lookup"><span data-stu-id="7811d-113">The following example defines a `Print` extension to the <xref:System.String> data type.</span></span> <span data-ttu-id="7811d-114">Yöntemini kullanan `Console.WriteLine` bir dize görüntülemek için.</span><span class="sxs-lookup"><span data-stu-id="7811d-114">The method uses `Console.WriteLine` to display a string.</span></span> <span data-ttu-id="7811d-115">Parametresi `Print` yöntemi `aString`, yöntem genişletir <xref:System.String> sınıfı.</span><span class="sxs-lookup"><span data-stu-id="7811d-115">The parameter of the `Print` method, `aString`, establishes that the method extends the <xref:System.String> class.</span></span>  
-  
- [!code-vb[VbVbalrExtensionMethods#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrExtensionMethods/VB/StringExtensions.vb#1)]  
-  
- <span data-ttu-id="7811d-116">Uzantı yöntemi tanımının uzantı özniteliğiyle işaretlendiğine dikkat edin `<Extension()>`.</span><span class="sxs-lookup"><span data-stu-id="7811d-116">Notice that the extension method definition is marked with the extension attribute `<Extension()>`.</span></span> <span data-ttu-id="7811d-117">Yöntemin tanımlandığı modülün işaretlenmesi isteğe bağlıdır, ancak her bir genişletme yöntemi işaretlenmelidir.</span><span class="sxs-lookup"><span data-stu-id="7811d-117">Marking the module in which the method is defined is optional, but each extension method must be marked.</span></span> <span data-ttu-id="7811d-118"><xref:System.Runtime.CompilerServices> Uzantı özniteliğine erişim sağlamak için içeri aktarılmalıdır.</span><span class="sxs-lookup"><span data-stu-id="7811d-118"><xref:System.Runtime.CompilerServices> must be imported in order to access the extension attribute.</span></span>  
-  
- <span data-ttu-id="7811d-119">Uzantı yöntemleri yalnızca modüllerde bildirilebilir.</span><span class="sxs-lookup"><span data-stu-id="7811d-119">Extension methods can be declared only within modules.</span></span> <span data-ttu-id="7811d-120">Genellikle, bir uzantı yönteminin tanımlandığı modül, çağrıldığı olarak aynı modül değil.</span><span class="sxs-lookup"><span data-stu-id="7811d-120">Typically, the module in which an extension method is defined is not the same module as the one in which it is called.</span></span> <span data-ttu-id="7811d-121">Kapsama alınmak üzere olması gerekiyorsa bunun yerine, genişletme yöntemini içeren modül içe aktarılır.</span><span class="sxs-lookup"><span data-stu-id="7811d-121">Instead, the module that contains the extension method is imported, if it needs to be, to bring it into scope.</span></span> <span data-ttu-id="7811d-122">İçeren modül sonra `Print` olan yöntem kapsamda gibi hiçbir bağımsız değişken alan normal bir örnek yöntem gibi çağrılabilir `ToUpper`:</span><span class="sxs-lookup"><span data-stu-id="7811d-122">After the module that contains `Print` is in scope, the method can be called as if it were an ordinary instance method that takes no arguments, such as `ToUpper`:</span></span>  
-  
- [!code-vb[VbVbalrExtensionMethods#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrExtensionMethods/VB/Class1.vb#2)]  
-  
- <span data-ttu-id="7811d-123">Sonraki örnek, `PrintAndPunctuate`, ayrıca bir uzantı olduğu <xref:System.String>, bu kez iki parametre ile tanımlanmıştır.</span><span class="sxs-lookup"><span data-stu-id="7811d-123">The next example, `PrintAndPunctuate`, is also an extension to <xref:System.String>, this time defined with two parameters.</span></span> <span data-ttu-id="7811d-124">İlk parametre `aString`, genişletme yönteminin genişletir <xref:System.String>.</span><span class="sxs-lookup"><span data-stu-id="7811d-124">The first parameter, `aString`, establishes that the extension method extends <xref:System.String>.</span></span> <span data-ttu-id="7811d-125">İkinci parametre `punc`, yöntem çağrıldığında, bağımsız değişken olarak geçirilen bir noktalama işaretleri dizesi olması amaçlanmıştır.</span><span class="sxs-lookup"><span data-stu-id="7811d-125">The second parameter, `punc`, is intended to be a string of punctuation marks that is passed in as an argument when the method is called.</span></span> <span data-ttu-id="7811d-126">Yöntem sonrasındaki noktalama işaretlerini görüntüler.</span><span class="sxs-lookup"><span data-stu-id="7811d-126">The method displays the string followed by the punctuation marks.</span></span>  
-  
- [!code-vb[VbVbalrExtensionMethods#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrExtensionMethods/VB/Class2.vb#3)]  
-  
- <span data-ttu-id="7811d-127">Yöntem için bir dize bağımsız değişken göndererek çağrılır `punc`: `example.PrintAndPunctuate(".")`</span><span class="sxs-lookup"><span data-stu-id="7811d-127">The method is called by sending in a string argument for `punc`: `example.PrintAndPunctuate(".")`</span></span>  
-  
- <span data-ttu-id="7811d-128">Aşağıdaki örnekte gösterildiği `Print` ve `PrintAndPunctuate` tanımlanan ve çağrılan.</span><span class="sxs-lookup"><span data-stu-id="7811d-128">The following example shows `Print` and `PrintAndPunctuate` defined and called.</span></span> <span data-ttu-id="7811d-129"><xref:System.Runtime.CompilerServices> Uzantı özniteliğine erişim sağlamak için tanım modülüne içe aktarılır.</span><span class="sxs-lookup"><span data-stu-id="7811d-129"><xref:System.Runtime.CompilerServices> is imported in the definition module in order to enable access to the extension attribute.</span></span>  
-  
-### <a name="code"></a><span data-ttu-id="7811d-130">Kod</span><span class="sxs-lookup"><span data-stu-id="7811d-130">Code</span></span>  
-  
-```vb  
-Imports System.Runtime.CompilerServices  
-  
-Module StringExtensions  
-  
-    <Extension()>   
-    Public Sub Print(ByVal aString As String)  
-        Console.WriteLine(aString)  
-    End Sub  
-  
-    <Extension()>   
-    Public Sub PrintAndPunctuate(ByVal aString As String,   
-                                 ByVal punc As String)  
-        Console.WriteLine(aString & punc)  
-    End Sub  
-  
-End Module  
-```  
-  
- <span data-ttu-id="7811d-131">Ardından, genişletme yöntemleri kapsama alınır ve çağrılır.</span><span class="sxs-lookup"><span data-stu-id="7811d-131">Next, the extension methods are brought into scope and called.</span></span>  
-  
-```vb  
-Imports ConsoleApplication2.StringExtensions  
-Module Module1  
-  
-    Sub Main()  
-  
-        Dim example As String = "Example string"  
-        example.Print()  
-  
-        example = "Hello"  
-        example.PrintAndPunctuate(".")  
-        example.PrintAndPunctuate("!!!!")  
-  
-    End Sub  
-End Module  
-```  
-  
-### <a name="comments"></a><span data-ttu-id="7811d-132">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="7811d-132">Comments</span></span>  
- <span data-ttu-id="7811d-133">Tüm bunlar çalıştırılabilmesi için gereken veya benzer genişletme yöntemlerini kapsam içinde yer.</span><span class="sxs-lookup"><span data-stu-id="7811d-133">All that is required to be able to run these or similar extension methods is that they be in scope.</span></span> <span data-ttu-id="7811d-134">Bir uzantı yöntemini içeren modül kapsamları dahilinde olması durumunda, Intellisense'te görünür duruma gelir ve normal bir örnek yöntem gibi çağrılabilir.</span><span class="sxs-lookup"><span data-stu-id="7811d-134">If the module that contains an extension method is in scope, it is visible in IntelliSense and can be called as if it were an ordinary instance method.</span></span>  
-  
- <span data-ttu-id="7811d-135">Yöntemler çağrıldığında hiçbir bağımsız değişken ilk parametre için gönderilmediğine dikkat edin.</span><span class="sxs-lookup"><span data-stu-id="7811d-135">Notice that when the methods are invoked, no argument is sent in for the first parameter.</span></span> <span data-ttu-id="7811d-136">Parametre `aString` önceki yöntem tanımlarını bağlı `example`, örneğini `String` onları çağırır.</span><span class="sxs-lookup"><span data-stu-id="7811d-136">Parameter `aString` in the previous method definitions is bound to `example`, the instance of `String` that calls them.</span></span> <span data-ttu-id="7811d-137">Derleyicinin kullanacağı `example` ilk parametreye gönderilen bağımsız değişken olarak.</span><span class="sxs-lookup"><span data-stu-id="7811d-137">The compiler will use `example` as the argument sent to the first parameter.</span></span>  
-  
- <span data-ttu-id="7811d-138">Ayarlanmış bir nesne için bir genişletme yöntemi çağrılırsa `Nothing`, genişletme yöntemi yürütülür.</span><span class="sxs-lookup"><span data-stu-id="7811d-138">If an extension method is called for an object that is set to `Nothing`, the extension method executes.</span></span> <span data-ttu-id="7811d-139">Bu sıradan örnek yöntemleri için geçerli değildir.</span><span class="sxs-lookup"><span data-stu-id="7811d-139">This does not apply to ordinary instance methods.</span></span> <span data-ttu-id="7811d-140">Açıkça denetleyebilirsiniz `Nothing` uzantı yönteminde.</span><span class="sxs-lookup"><span data-stu-id="7811d-140">You can explicitly check for `Nothing` in the extension method.</span></span>  
-  
-## <a name="types-that-can-be-extended"></a><span data-ttu-id="7811d-141">Genişletilebilen türler</span><span class="sxs-lookup"><span data-stu-id="7811d-141">Types That Can Be Extended</span></span>  
- <span data-ttu-id="7811d-142">Aşağıdakiler dahil olmak üzere bir Visual Basic parametre listesinde temsil edilebilir çoğu türlerinde bir genişletme yöntemi tanımlayabilirsiniz:</span><span class="sxs-lookup"><span data-stu-id="7811d-142">You can define an extension method on most types that can be represented in a Visual Basic parameter list, including the following:</span></span>  
-  
-- <span data-ttu-id="7811d-143">Sınıflar (başvuru türleri)</span><span class="sxs-lookup"><span data-stu-id="7811d-143">Classes (reference types)</span></span>  
-  
-- <span data-ttu-id="7811d-144">Yapılar (değer türleri)</span><span class="sxs-lookup"><span data-stu-id="7811d-144">Structures (value types)</span></span>  
-  
-- <span data-ttu-id="7811d-145">Arabirimler</span><span class="sxs-lookup"><span data-stu-id="7811d-145">Interfaces</span></span>  
-  
-- <span data-ttu-id="7811d-146">Temsilciler</span><span class="sxs-lookup"><span data-stu-id="7811d-146">Delegates</span></span>  
-  
-- <span data-ttu-id="7811d-147">ByRef ve ByVal bağımsız değişkenleri</span><span class="sxs-lookup"><span data-stu-id="7811d-147">ByRef and ByVal arguments</span></span>  
-  
-- <span data-ttu-id="7811d-148">Genel yöntem parametreleri</span><span class="sxs-lookup"><span data-stu-id="7811d-148">Generic method parameters</span></span>  
-  
-- <span data-ttu-id="7811d-149">Diziler</span><span class="sxs-lookup"><span data-stu-id="7811d-149">Arrays</span></span>  
-  
- <span data-ttu-id="7811d-150">İlk parametre genişletme yönteminin genişlettiği veri türünü belirttiğinden gereklidir ve isteğe bağlı olamaz.</span><span class="sxs-lookup"><span data-stu-id="7811d-150">Because the first parameter specifies the data type that the extension method extends, it is required and cannot be optional.</span></span> <span data-ttu-id="7811d-151">Bu nedenle `Optional` parametreleri ve `ParamArray` parametreleri parametre listesindeki ilk parametre olamaz.</span><span class="sxs-lookup"><span data-stu-id="7811d-151">For that reason, `Optional` parameters and `ParamArray` parameters cannot be the first parameter in the parameter list.</span></span>  
-  
- <span data-ttu-id="7811d-152">Genişletme yöntemleri geç bağlama kapsamında değerlendirilmez.</span><span class="sxs-lookup"><span data-stu-id="7811d-152">Extension methods are not considered in late binding.</span></span> <span data-ttu-id="7811d-153">Aşağıdaki örnekte, deyim `anObject.PrintMe()` başlatan bir <xref:System.MissingMemberException> özel durum, görüyorsanız, aynı özel durum ikinci `PrintMe` genişletme yöntemi tanımı silindiğinde.</span><span class="sxs-lookup"><span data-stu-id="7811d-153">In the following example, the statement `anObject.PrintMe()` raises a <xref:System.MissingMemberException> exception, the same exception you would see if the second `PrintMe` extension method definition were deleted.</span></span>  
-  
- [!code-vb[VbVbalrExtensionMethods#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrExtensionMethods/VB/Class6.vb#9)]  
-  
-## <a name="best-practices"></a><span data-ttu-id="7811d-154">En İyi Yöntemler</span><span class="sxs-lookup"><span data-stu-id="7811d-154">Best Practices</span></span>  
- <span data-ttu-id="7811d-155">Genişletme yöntemleri mevcut türü genişletmek için kullanışlı ve güçlü bir yol sağlar.</span><span class="sxs-lookup"><span data-stu-id="7811d-155">Extension methods provide a convenient and powerful way to extend an existing type.</span></span> <span data-ttu-id="7811d-156">Ancak, başarıyla kullanmak için dikkate alınması gereken bazı noktalar vardır.</span><span class="sxs-lookup"><span data-stu-id="7811d-156">However, to use them successfully, there are some points to consider.</span></span> <span data-ttu-id="7811d-157">Esas olarak sınıf kitaplıklarını yazarları için aşağıdaki maddeler geçerlidir, ancak bunlar genişletme yöntemlerini kullanan tüm uygulamaları etkileyebilir.</span><span class="sxs-lookup"><span data-stu-id="7811d-157">These considerations apply mainly to authors of class libraries, but they might affect any application that uses extension methods.</span></span>  
-  
- <span data-ttu-id="7811d-158">Genellikle sahibi olmadığınız türlere eklediğiniz genişletme yöntemleri daha denetim türlere eklenen genişletme yöntemlerinden daha savunmasızdır.</span><span class="sxs-lookup"><span data-stu-id="7811d-158">Most generally, extension methods that you add to types that you do not own are more vulnerable than extension methods added to types that you control.</span></span> <span data-ttu-id="7811d-159">Birkaç uzantı yöntemlerinizi engelleyebilecek birçok ait olmayan sınıflarda ortaya çıkabilir.</span><span class="sxs-lookup"><span data-stu-id="7811d-159">A number of things can occur in classes you do not own that can interfere with your extension methods.</span></span>  
-  
-- <span data-ttu-id="7811d-160">Parametreye daraltma dönüşümü bağımsız değişkenden parametreye ile çağrı deyimindeki bağımsız değişkenlerle uyumlu imzası olan bir erişilebilir örnek üye varsa, örnek yöntemi herhangi bir genişletme yöntemi yerine kullanılacaktır.</span><span class="sxs-lookup"><span data-stu-id="7811d-160">If any accessible instance member exists that has a signature that is compatible with the arguments in the calling statement, with no narrowing conversions required from argument to parameter, the instance method will be used in preference to any extension method.</span></span> <span data-ttu-id="7811d-161">Bu nedenle, uygun bir örnek yöntemi, belirli bir noktada bir sınıfa eklenirse, bağlı olduğunuz mevcut uzantı üyesi erişilemez duruma gelebilir.</span><span class="sxs-lookup"><span data-stu-id="7811d-161">Therefore, if an appropriate instance method is added to a class at some point, an existing extension member that you rely on may become inaccessible.</span></span>  
-  
-- <span data-ttu-id="7811d-162">Genişletme yönteminin yazarı diğer programcıların öncelik özgün öncelikli olabilecek, çakışan genişletme yöntemleri yazmasını engelleyemez.</span><span class="sxs-lookup"><span data-stu-id="7811d-162">The author of an extension method cannot prevent other programmers from writing conflicting extension methods that may have precedence over the original extension.</span></span>  
-  
-- <span data-ttu-id="7811d-163">Genişletme yöntemleri kendi ad alanına yerleştirerek sağlamlığı artırabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="7811d-163">You can improve robustness by putting extension methods in their own namespace.</span></span> <span data-ttu-id="7811d-164">Kitaplığınızı kullanan Tüketiciler, bir ad alanı dahil edebilir veya hariç veya kitaplık kalanından ayrı olarak ad alanları arasından seçim.</span><span class="sxs-lookup"><span data-stu-id="7811d-164">Consumers of your library can then include a namespace or exclude it, or select among namespaces, separately from the rest of the library.</span></span>  
-  
-- <span data-ttu-id="7811d-165">Özellikle, arabirimin veya sınıfın sahibi değil, bu sınıfları genişletmek yerine arabirimleri genişletmek daha güvenli olabilir.</span><span class="sxs-lookup"><span data-stu-id="7811d-165">It may be safer to extend interfaces than it is to extend classes, especially if you do not own the interface or class.</span></span> <span data-ttu-id="7811d-166">Arabirimdeki bir değişiklik, uygulandığı her sınıfı etkiler.</span><span class="sxs-lookup"><span data-stu-id="7811d-166">A change in an interface affects every class that implements it.</span></span> <span data-ttu-id="7811d-167">Bu nedenle, yazarın ekleme veya bir arabirimdeki yöntemlerde değiştirme olasılığı daha az olabilir.</span><span class="sxs-lookup"><span data-stu-id="7811d-167">Therefore, the author may be less likely to add or change methods in an interface.</span></span> <span data-ttu-id="7811d-168">Ancak, bir sınıf, aynı imzaya sahip genişletme yöntemleri olan iki arabirim uygularsa, her iki uzantı yöntemi görülebilir.</span><span class="sxs-lookup"><span data-stu-id="7811d-168">However, if a class implements two interfaces that have extension methods with the same signature, neither extension method is visible.</span></span>  
-  
-- <span data-ttu-id="7811d-169">Yapabilecekleriniz en belirgin türü genişletin.</span><span class="sxs-lookup"><span data-stu-id="7811d-169">Extend the most specific type you can.</span></span> <span data-ttu-id="7811d-170">Tür hiyerarşisinde çok türetildiği bir tür seçerseniz katmanı vardır örnek yöntemlerine veya yöntemlerinizle çakışabilecek genişletme yöntemlerine giriş olasılıklarını.</span><span class="sxs-lookup"><span data-stu-id="7811d-170">In a hierarchy of types, if you select a type from which many other types are derived, there are layers of possibilities for the introduction of instance methods or other extension methods that might interfere with yours.</span></span>  
-  
-## <a name="extension-methods-instance-methods-and-properties"></a><span data-ttu-id="7811d-171">Genişletme yöntemleri, örnek yöntemler ve Özellikler</span><span class="sxs-lookup"><span data-stu-id="7811d-171">Extension Methods, Instance Methods, and Properties</span></span>  
- <span data-ttu-id="7811d-172">Bir kapsamdaki örnek yöntemi deyim çağırma bağımsız değişkenlerle uyumlu imzası olan, örnek yöntemi yerine herhangi bir genişletme yöntemi seçilir.</span><span class="sxs-lookup"><span data-stu-id="7811d-172">When an in-scope instance method has a signature that is compatible with the arguments of a calling statement, the instance method is chosen in preference to any extension method.</span></span> <span data-ttu-id="7811d-173">Genişletme yönteminin eşleşmesi daha iyi olsa bile örnek yönteminindir.</span><span class="sxs-lookup"><span data-stu-id="7811d-173">The instance method has precedence even if the extension method is a better match.</span></span> <span data-ttu-id="7811d-174">Aşağıdaki örnekte, `ExampleClass` adlandırılmış bir örnek yöntemi içeren `ExampleMethod` türünde bir parametreye sahip `Integer`.</span><span class="sxs-lookup"><span data-stu-id="7811d-174">In the following example, `ExampleClass` contains an instance method named `ExampleMethod` that has one parameter of type `Integer`.</span></span> <span data-ttu-id="7811d-175">Genişletme yöntemi `ExampleMethod` genişletir `ExampleClass`, ve türünde bir parametreye sahip `Long`.</span><span class="sxs-lookup"><span data-stu-id="7811d-175">Extension method `ExampleMethod` extends `ExampleClass`, and has one parameter of type `Long`.</span></span>  
-  
- [!code-vb[VbVbalrExtensionMethods#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrExtensionMethods/VB/Class4.vb#4)]  
-  
- <span data-ttu-id="7811d-176">İlk çağrıda `ExampleMethod` aşağıdaki kodda genişletme yöntemini çağırır çünkü `arg1` olduğu `Long` ve yalnızca ile uyumlu `Long` genişletme yönteminin parametresi.</span><span class="sxs-lookup"><span data-stu-id="7811d-176">The first call to `ExampleMethod` in the following code calls the extension method, because `arg1` is `Long` and is compatible only with the `Long` parameter in the extension method.</span></span> <span data-ttu-id="7811d-177">İçin yapılan ikinci çağrı `ExampleMethod` sahip bir `Integer` bağımsız değişkeni, `arg2`, ve örnek yöntemini çağırır.</span><span class="sxs-lookup"><span data-stu-id="7811d-177">The second call to `ExampleMethod` has an `Integer` argument, `arg2`, and it calls the instance method.</span></span>  
-  
- [!code-vb[VbVbalrExtensionMethods#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrExtensionMethods/VB/Class4.vb#5)]  
-  
- <span data-ttu-id="7811d-178">Şimdi geriye doğru iki yöntemle parametrelerinin veri türleri:</span><span class="sxs-lookup"><span data-stu-id="7811d-178">Now reverse the data types of the parameters in the two methods:</span></span>  
-  
- [!code-vb[VbVbalrExtensionMethods#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrExtensionMethods/VB/Class5.vb#6)]  
-  
- <span data-ttu-id="7811d-179">Bu sefer kodda `Main` iki seferde de örnek yöntemini çağırır.</span><span class="sxs-lookup"><span data-stu-id="7811d-179">This time the code in `Main` calls the instance method both times.</span></span> <span data-ttu-id="7811d-180">Bunun nedeni, her ikisi de `arg1` ve `arg2` genişletme dönüştürmesi sahip `Long`, ve örnek yöntemin her iki durumda da uzantı yöntemini önceliklidir.</span><span class="sxs-lookup"><span data-stu-id="7811d-180">This is because both `arg1` and `arg2` have a widening conversion to `Long`, and the instance method takes precedence over the extension method in both cases.</span></span>  
-  
- [!code-vb[VbVbalrExtensionMethods#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrExtensionMethods/VB/Class5.vb#7)]  
-  
- <span data-ttu-id="7811d-181">Bu nedenle, bir genişletme yöntemi, bir mevcut örnek yönteminin yerine kullanılamaz.</span><span class="sxs-lookup"><span data-stu-id="7811d-181">Therefore, an extension method cannot replace an existing instance method.</span></span> <span data-ttu-id="7811d-182">Ancak, bir genişletme yöntemi örnek yöntemle aynı ada sahiptir ancak imzalar, her iki yöntem de erişilebilir.</span><span class="sxs-lookup"><span data-stu-id="7811d-182">However, when an extension method has the same name as an instance method but the signatures do not conflict, both methods can be accessed.</span></span> <span data-ttu-id="7811d-183">Örneğin, sınıf `ExampleClass` adında bir yöntem içeriyorsa `ExampleMethod` hiçbir bağımsız değişken, aynı ada sahip genişletme yöntemleri alır ancak farklı imzalara izin verilir, aşağıdaki kodda gösterildiği gibi.</span><span class="sxs-lookup"><span data-stu-id="7811d-183">For example, if class `ExampleClass` contains a method named `ExampleMethod` that takes no arguments, extension methods with the same name but different signatures are permitted, as shown in the following code.</span></span>  
-  
- [!code-vb[VbVbalrExtensionMethods#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrExtensionMethods/VB/Module3.vb#8)]  
-  
- <span data-ttu-id="7811d-184">Bu kodun çıktısı aşağıdaki gibidir:</span><span class="sxs-lookup"><span data-stu-id="7811d-184">The output from this code is as follows:</span></span>  
-  
- `Extension method`  
-  
- `Instance method`  
-  
- <span data-ttu-id="7811d-185">Durum özellikler ile daha basittir: genişletme yöntemi genişlettiği sınıfın bir özelliği aynı ada sahipse, genişletme yöntemi görünmez ve erişilemez.</span><span class="sxs-lookup"><span data-stu-id="7811d-185">The situation is simpler with properties: if an extension method has the same name as a property of the class it extends, the extension method is not visible and cannot be accessed.</span></span>  
-  
-## <a name="extension-method-precedence"></a><span data-ttu-id="7811d-186">Genişletme yöntemini önceliği</span><span class="sxs-lookup"><span data-stu-id="7811d-186">Extension Method Precedence</span></span>  
- <span data-ttu-id="7811d-187">Aynı imzaya sahip iki uzantı yöntemi kapsam içinde ve erişilebilir olduğunda, daha yüksek önceliğe sahip çağrılır.</span><span class="sxs-lookup"><span data-stu-id="7811d-187">When two extension methods that have identical signatures are in scope and accessible, the one with higher precedence will be invoked.</span></span> <span data-ttu-id="7811d-188">Bir uzantı yönteminin önceliği, yöntemi kapsam içine almak için kullanılan mekanizmaya dayanır.</span><span class="sxs-lookup"><span data-stu-id="7811d-188">An extension method's precedence is based on the mechanism used to bring the method into scope.</span></span> <span data-ttu-id="7811d-189">Aşağıdaki liste, yüksekten en düşüğe öncelik hiyerarşisini gösterir.</span><span class="sxs-lookup"><span data-stu-id="7811d-189">The following list shows the precedence hierarchy, from highest to lowest.</span></span>  
-  
-1. <span data-ttu-id="7811d-190">Geçerli modül içinde tanımlanan genişletme yöntemleri.</span><span class="sxs-lookup"><span data-stu-id="7811d-190">Extension methods defined inside the current module.</span></span>  
-  
-2. <span data-ttu-id="7811d-191">Genişletme yöntemleri veri türleri geçerli ad alanı veya üst öğelerinden birini üst öğe ad alanlarına daha yüksek bir önceliğe sahip alt ad alanları ile tanımlanır.</span><span class="sxs-lookup"><span data-stu-id="7811d-191">Extension methods defined inside data types in the current namespace or any one of its parents, with child namespaces having higher precedence than parent namespaces.</span></span>  
-  
-3. <span data-ttu-id="7811d-192">Geçerli dosyadaki herhangi bir türü alır içinde tanımlanan genişletme yöntemleri.</span><span class="sxs-lookup"><span data-stu-id="7811d-192">Extension methods defined inside any type imports in the current file.</span></span>  
-  
-4. <span data-ttu-id="7811d-193">Geçerli dosyadaki tüm ad alanı içeri aktarmaları içinde tanımlanan genişletme yöntemleri.</span><span class="sxs-lookup"><span data-stu-id="7811d-193">Extension methods defined inside any namespace imports in the current file.</span></span>  
-  
-5. <span data-ttu-id="7811d-194">Tüm proje düzeyi türündeki aktarılır tanımlanan genişletme yöntemleri.</span><span class="sxs-lookup"><span data-stu-id="7811d-194">Extension methods defined inside any project-level type imports.</span></span>  
-  
-6. <span data-ttu-id="7811d-195">Tüm proje düzeyindeki ad alanında aktarılır tanımlanan genişletme yöntemleri.</span><span class="sxs-lookup"><span data-stu-id="7811d-195">Extension methods defined inside any project-level namespace imports.</span></span>  
-  
- <span data-ttu-id="7811d-196">Öncelik belirsizliği, kaldırmazsa çağırdığınız yöntemi belirtmek için tam nitelikli adı kullanabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="7811d-196">If precedence does not resolve the ambiguity, you can use the fully qualified name to specify the method that you are calling.</span></span> <span data-ttu-id="7811d-197">Varsa `Print` yöntemi önceki örnekte bulunan adında bir modülde tanımlanan `StringExtensions`, tam nitelikli ad `StringExtensions.Print(example)` yerine `example.Print()`.</span><span class="sxs-lookup"><span data-stu-id="7811d-197">If the `Print` method in the earlier example is defined in a module named `StringExtensions`, the fully qualified name is `StringExtensions.Print(example)` instead of `example.Print()`.</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="7811d-198">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="7811d-198">See also</span></span>
+# <a name="extension-methods-visual-basic"></a><span data-ttu-id="6db78-102">Uzantı Yöntemleri (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6db78-102">Extension Methods (Visual Basic)</span></span>
+
+<span data-ttu-id="6db78-103">Uzantı yöntemleri, geliştiricilerin zaten yeni bir türetilmiş tür oluşturmadan tanımlanmış olan veri türlerine özel işlevler eklemesini sağlar.</span><span class="sxs-lookup"><span data-stu-id="6db78-103">Extension methods enable developers to add custom functionality to data types that are already defined without creating a new derived type.</span></span> <span data-ttu-id="6db78-104">Uzantı yöntemleri, var olan türün bir örnek yöntemi gibi çağrılabilecek bir yöntem yazmayı mümkün hale getirir.</span><span class="sxs-lookup"><span data-stu-id="6db78-104">Extension methods make it possible to write a method that can be called as if it were an instance method of the existing type.</span></span>
+  
+## <a name="remarks"></a><span data-ttu-id="6db78-105">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="6db78-105">Remarks</span></span>
+
+<span data-ttu-id="6db78-106">Genişletme yöntemi yalnızca bir `Sub` yordamı veya `Function` yordamı olabilir.</span><span class="sxs-lookup"><span data-stu-id="6db78-106">An extension method can be only a `Sub` procedure or a `Function` procedure.</span></span> <span data-ttu-id="6db78-107">Uzantı özelliğini, alanı veya olayı tanımlayamazsınız.</span><span class="sxs-lookup"><span data-stu-id="6db78-107">You cannot define an extension property, field, or event.</span></span> <span data-ttu-id="6db78-108">Tüm genişletme yöntemleri, <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> ad alanından `<Extension>` uzantı özniteliğiyle işaretlenmelidir ve bir [modülde](../../../language-reference/statements/module-statement.md)tanımlanması gerekir.</span><span class="sxs-lookup"><span data-stu-id="6db78-108">All extension methods must be marked with the extension attribute `<Extension>` from the <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> namespace and must be defined in a [Module](../../../language-reference/statements/module-statement.md).</span></span> <span data-ttu-id="6db78-109">Bir uzantı yöntemi bir modül dışında tanımlanmışsa, Visual Basic Derleyicisi Hata [BC36551](../../../misc/bc36551.md)oluşturur, "uzantı yöntemleri yalnızca modüllerde tanımlanabilir".</span><span class="sxs-lookup"><span data-stu-id="6db78-109">If an extension method is defined outside a module, the Visual Basic compiler generates error [BC36551](../../../misc/bc36551.md), "Extension methods can be defined only in modules".</span></span>
+
+<span data-ttu-id="6db78-110">Bir genişletme yöntemi tanımındaki ilk parametre, yöntemin hangi veri türünde genişletiğini belirtir.</span><span class="sxs-lookup"><span data-stu-id="6db78-110">The first parameter in an extension method definition specifies which data type the method extends.</span></span> <span data-ttu-id="6db78-111">Yöntemi çalıştırıldığında, ilk parametre yöntemini çağıran veri türü örneğine bağlanır.</span><span class="sxs-lookup"><span data-stu-id="6db78-111">When the method is run, the first parameter is bound to the instance of the data type that invokes the method.</span></span>
+
+<span data-ttu-id="6db78-112">@No__t-0 özniteliği yalnızca bir Visual Basic [`Module`](../../../language-reference/statements/module-statement.md), [`Sub`](../../../language-reference/statements/sub-statement.md)veya [`Function`](../../../language-reference/statements/function-statement.md)' a uygulanabilir.</span><span class="sxs-lookup"><span data-stu-id="6db78-112">The `Extension` attribute can only be applied to a Visual Basic [`Module`](../../../language-reference/statements/module-statement.md), [`Sub`](../../../language-reference/statements/sub-statement.md), or [`Function`](../../../language-reference/statements/function-statement.md).</span></span> <span data-ttu-id="6db78-113">Bunu bir `Class` veya `Structure` ' e uygularsanız Visual Basic Derleyicisi Hata [BC36550](../../../language-reference/error-messages/extension-attribute-can-be-applied-only-to-module-sub-or-function-declarations.md)oluşturuyor, "' Extension" özniteliği yalnızca ' Module ', ' Sub ' veya ' function ' bildirimlerine "uygulanabilir.</span><span class="sxs-lookup"><span data-stu-id="6db78-113">If you apply it to a `Class` or a `Structure`, the Visual Basic compiler generates error [BC36550](../../../language-reference/error-messages/extension-attribute-can-be-applied-only-to-module-sub-or-function-declarations.md), "'Extension' attribute can be applied only to 'Module', 'Sub', or 'Function' declarations".</span></span>
+
+## <a name="example"></a><span data-ttu-id="6db78-114">Örnek</span><span class="sxs-lookup"><span data-stu-id="6db78-114">Example</span></span>
+
+<span data-ttu-id="6db78-115">Aşağıdaki örnek, <xref:System.String> veri türüne `Print` uzantısını tanımlar.</span><span class="sxs-lookup"><span data-stu-id="6db78-115">The following example defines a `Print` extension to the <xref:System.String> data type.</span></span> <span data-ttu-id="6db78-116">Yöntemi bir dizeyi göstermek için `Console.WriteLine` kullanır.</span><span class="sxs-lookup"><span data-stu-id="6db78-116">The method uses `Console.WriteLine` to display a string.</span></span> <span data-ttu-id="6db78-117">@No__t-0 yönteminin parametresi `aString`, yönteminin <xref:System.String> sınıfını genişlettiğini belirler.</span><span class="sxs-lookup"><span data-stu-id="6db78-117">The parameter of the `Print` method, `aString`, establishes that the method extends the <xref:System.String> class.</span></span>
+  
+[!code-vb[VbVbalrExtensionMethods#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrExtensionMethods/VB/StringExtensions.vb#1)]
+
+<span data-ttu-id="6db78-118">Uzantı yöntemi tanımının `<Extension()>` uzantı özniteliğiyle işaretlendiğine dikkat edin.</span><span class="sxs-lookup"><span data-stu-id="6db78-118">Notice that the extension method definition is marked with the extension attribute `<Extension()>`.</span></span> <span data-ttu-id="6db78-119">Yöntemin tanımlandığı modülün işaretlenmesi isteğe bağlıdır, ancak her genişletme yöntemi işaretlenmelidir.</span><span class="sxs-lookup"><span data-stu-id="6db78-119">Marking the module in which the method is defined is optional, but each extension method must be marked.</span></span> <span data-ttu-id="6db78-120">Uzantı özniteliğine erişebilmek için <xref:System.Runtime.CompilerServices> içeri aktarılmalıdır.</span><span class="sxs-lookup"><span data-stu-id="6db78-120"><xref:System.Runtime.CompilerServices> must be imported in order to access the extension attribute.</span></span>
+
+<span data-ttu-id="6db78-121">Uzantı yöntemleri yalnızca modüller içinde bildirilemez.</span><span class="sxs-lookup"><span data-stu-id="6db78-121">Extension methods can be declared only within modules.</span></span> <span data-ttu-id="6db78-122">Genellikle, bir uzantı yönteminin tanımlandığı modül, çağrıldığı bir modül olarak değildir.</span><span class="sxs-lookup"><span data-stu-id="6db78-122">Typically, the module in which an extension method is defined is not the same module as the one in which it is called.</span></span> <span data-ttu-id="6db78-123">Bunun yerine, uzantı yöntemini içeren modül içeri aktarıldıysa, kapsama getirmek için içeri aktarılır.</span><span class="sxs-lookup"><span data-stu-id="6db78-123">Instead, the module that contains the extension method is imported, if it needs to be, to bring it into scope.</span></span> <span data-ttu-id="6db78-124">@No__t-0 içeren modül kapsamdadır, yöntemi, `ToUpper` gibi bağımsız değişken içermeyen sıradan bir örnek yöntemi gibi çağrılabilir:</span><span class="sxs-lookup"><span data-stu-id="6db78-124">After the module that contains `Print` is in scope, the method can be called as if it were an ordinary instance method that takes no arguments, such as `ToUpper`:</span></span>
+
+[!code-vb[VbVbalrExtensionMethods#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrExtensionMethods/VB/Class1.vb#2)]
+
+<span data-ttu-id="6db78-125">Sonraki örnek, `PrintAndPunctuate`, aynı zamanda iki parametre ile tanımlanan <xref:System.String> ' in bir uzantısıdır.</span><span class="sxs-lookup"><span data-stu-id="6db78-125">The next example, `PrintAndPunctuate`, is also an extension to <xref:System.String>, this time defined with two parameters.</span></span> <span data-ttu-id="6db78-126">@No__t-0 ilk parametresi, Uzantı yönteminin <xref:System.String> genişlettiğini belirler.</span><span class="sxs-lookup"><span data-stu-id="6db78-126">The first parameter, `aString`, establishes that the extension method extends <xref:System.String>.</span></span> <span data-ttu-id="6db78-127">@No__t-0 ikinci parametresi, yöntemi çağrıldığında bağımsız değişken olarak geçirilen bir noktalama işaretleri dizesi olarak tasarlanmıştır.</span><span class="sxs-lookup"><span data-stu-id="6db78-127">The second parameter, `punc`, is intended to be a string of punctuation marks that is passed in as an argument when the method is called.</span></span> <span data-ttu-id="6db78-128">Yöntemi, dizeyi ve ardından noktalama işaretlerini görüntüler.</span><span class="sxs-lookup"><span data-stu-id="6db78-128">The method displays the string followed by the punctuation marks.</span></span>
+
+[!code-vb[VbVbalrExtensionMethods#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrExtensionMethods/VB/Class2.vb#3)]
+
+<span data-ttu-id="6db78-129">Yöntemi `punc`: `example.PrintAndPunctuate(".")` için bir dize bağımsız değişkeninde göndererek çağrılır</span><span class="sxs-lookup"><span data-stu-id="6db78-129">The method is called by sending in a string argument for `punc`: `example.PrintAndPunctuate(".")`</span></span>
+
+<span data-ttu-id="6db78-130">Aşağıdaki örnekte `Print` ve `PrintAndPunctuate` tanımlanmış ve çağrıldı gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="6db78-130">The following example shows `Print` and `PrintAndPunctuate` defined and called.</span></span> <span data-ttu-id="6db78-131"><xref:System.Runtime.CompilerServices>, uzantı özniteliğine erişimi etkinleştirmek için tanım modülüne içeri aktarılır.</span><span class="sxs-lookup"><span data-stu-id="6db78-131"><xref:System.Runtime.CompilerServices> is imported in the definition module in order to enable access to the extension attribute.</span></span>
+
+
+```vb
+Imports System.Runtime.CompilerServices
+
+Module StringExtensions
+
+    <Extension()>
+    Public Sub Print(aString As String)
+        Console.WriteLine(aString)
+    End Sub
+
+    <Extension()>
+    Public Sub PrintAndPunctuate(aString As String, punc As String)
+        Console.WriteLine(aString & punc)
+    End Sub
+End Module
+```
+
+<span data-ttu-id="6db78-132">Ardından, uzantı yöntemleri kapsama alınır ve çağrılır:</span><span class="sxs-lookup"><span data-stu-id="6db78-132">Next, the extension methods are brought into scope and called:</span></span>
+
+```vb
+Imports ConsoleApplication2.StringExtensions
+
+Module Module1
+
+    Sub Main()
+        Dim example As String = "Example string"
+        example.Print()
+
+        example = "Hello"
+        example.PrintAndPunctuate(".")
+        example.PrintAndPunctuate("!!!!")
+    End Sub
+End Module
+```
+
+<span data-ttu-id="6db78-133">Bu veya benzer uzantı yöntemlerini çalıştırmak için gerekli olan tüm bunlar kapsam içinde yer alırlar.</span><span class="sxs-lookup"><span data-stu-id="6db78-133">All that is required to be able to run these or similar extension methods is that they be in scope.</span></span> <span data-ttu-id="6db78-134">Bir genişletme yöntemi içeren modül kapsamdadır, IntelliSense 'de görünür ve sıradan bir örnek yöntemi gibi çağrılabilir.</span><span class="sxs-lookup"><span data-stu-id="6db78-134">If the module that contains an extension method is in scope, it is visible in IntelliSense and can be called as if it were an ordinary instance method.</span></span>
+
+<span data-ttu-id="6db78-135">Yöntemler çağrıldığında, ilk parametre için ' de bir bağımsız değişken gönderildiğine dikkat edin.</span><span class="sxs-lookup"><span data-stu-id="6db78-135">Notice that when the methods are invoked, no argument is sent in for the first parameter.</span></span> <span data-ttu-id="6db78-136">Önceki yöntem tanımlarındaki `aString` parametresi, bunları çağıran `String` örneği olan `example` ' e bağlanır.</span><span class="sxs-lookup"><span data-stu-id="6db78-136">Parameter `aString` in the previous method definitions is bound to `example`, the instance of `String` that calls them.</span></span> <span data-ttu-id="6db78-137">Derleyici, ilk parametreye gönderilen bağımsız değişken olarak `example` kullanır.</span><span class="sxs-lookup"><span data-stu-id="6db78-137">The compiler will use `example` as the argument sent to the first parameter.</span></span>
+
+<span data-ttu-id="6db78-138">@No__t-0 olarak ayarlanmış bir nesne için bir genişletme yöntemi çağrılırsa, genişletme yöntemi yürütülür.</span><span class="sxs-lookup"><span data-stu-id="6db78-138">If an extension method is called for an object that is set to `Nothing`, the extension method executes.</span></span> <span data-ttu-id="6db78-139">Bu, sıradan örnek yöntemlerine uygulanmaz.</span><span class="sxs-lookup"><span data-stu-id="6db78-139">This does not apply to ordinary instance methods.</span></span> <span data-ttu-id="6db78-140">Uzantı yönteminde `Nothing` ' yı açıkça kontrol edebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="6db78-140">You can explicitly check for `Nothing` in the extension method.</span></span>
+
+## <a name="types-that-can-be-extended"></a><span data-ttu-id="6db78-141">Genişletilebilen türler</span><span class="sxs-lookup"><span data-stu-id="6db78-141">Types that can be extended</span></span>
+
+<span data-ttu-id="6db78-142">Aşağıdakiler de dahil olmak üzere Visual Basic parametre listesinde gösterilebilen çoğu tür için bir genişletme yöntemi tanımlayabilirsiniz:</span><span class="sxs-lookup"><span data-stu-id="6db78-142">You can define an extension method on most types that can be represented in a Visual Basic parameter list, including the following:</span></span>
+
+- <span data-ttu-id="6db78-143">Sınıflar (başvuru türleri)</span><span class="sxs-lookup"><span data-stu-id="6db78-143">Classes (reference types)</span></span>
+- <span data-ttu-id="6db78-144">Yapılar (değer türleri)</span><span class="sxs-lookup"><span data-stu-id="6db78-144">Structures (value types)</span></span>
+- <span data-ttu-id="6db78-145">Arabirimler</span><span class="sxs-lookup"><span data-stu-id="6db78-145">Interfaces</span></span>
+- <span data-ttu-id="6db78-146">Temsilciler</span><span class="sxs-lookup"><span data-stu-id="6db78-146">Delegates</span></span>
+- <span data-ttu-id="6db78-147">ByRef ve ByVal bağımsız değişkenleri</span><span class="sxs-lookup"><span data-stu-id="6db78-147">ByRef and ByVal arguments</span></span>
+- <span data-ttu-id="6db78-148">Genel yöntem parametreleri</span><span class="sxs-lookup"><span data-stu-id="6db78-148">Generic method parameters</span></span>
+- <span data-ttu-id="6db78-149">Diziler</span><span class="sxs-lookup"><span data-stu-id="6db78-149">Arrays</span></span>
+
+<span data-ttu-id="6db78-150">İlk parametre Uzantı yönteminin genişlettiği veri türünü belirttiğinden, gereklidir ve isteğe bağlı olamaz.</span><span class="sxs-lookup"><span data-stu-id="6db78-150">Because the first parameter specifies the data type that the extension method extends, it is required and cannot be optional.</span></span> <span data-ttu-id="6db78-151">Bu nedenle, `Optional` parametreleri ve `ParamArray` parametreleri parametre listesindeki ilk parametre olamaz.</span><span class="sxs-lookup"><span data-stu-id="6db78-151">For that reason, `Optional` parameters and `ParamArray` parameters cannot be the first parameter in the parameter list.</span></span>
+
+<span data-ttu-id="6db78-152">Genişletme metotları geç bağlamada dikkate alınmıyor.</span><span class="sxs-lookup"><span data-stu-id="6db78-152">Extension methods are not considered in late binding.</span></span> <span data-ttu-id="6db78-153">Aşağıdaki örnekte, `anObject.PrintMe()`, ikinci `PrintMe` uzantı yöntemi tanımının silinip silinmediğini göreceğiniz aynı özel durumu <xref:System.MissingMemberException> özel durumu oluşturur.</span><span class="sxs-lookup"><span data-stu-id="6db78-153">In the following example, the statement `anObject.PrintMe()` raises a <xref:System.MissingMemberException> exception, the same exception you would see if the second `PrintMe` extension method definition were deleted.</span></span>
+
+[!code-vb[VbVbalrExtensionMethods#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrExtensionMethods/VB/Class6.vb#9)]
+
+## <a name="best-practices"></a><span data-ttu-id="6db78-154">Önerilen uygulamalar</span><span class="sxs-lookup"><span data-stu-id="6db78-154">Best practices</span></span>
+
+<span data-ttu-id="6db78-155">Uzantı yöntemleri, var olan bir türü genişletmek için kullanışlı ve güçlü bir yol sağlar.</span><span class="sxs-lookup"><span data-stu-id="6db78-155">Extension methods provide a convenient and powerful way to extend an existing type.</span></span> <span data-ttu-id="6db78-156">Ancak, bunları başarılı bir şekilde kullanmak için göz önünde bulundurmanız gereken bazı noktaları vardır.</span><span class="sxs-lookup"><span data-stu-id="6db78-156">However, to use them successfully, there are some points to consider.</span></span> <span data-ttu-id="6db78-157">Bu konular temel olarak sınıf kitaplıklarının yazarlarına uygulanır, ancak uzantı yöntemlerini kullanan herhangi bir uygulamayı etkileyebilir.</span><span class="sxs-lookup"><span data-stu-id="6db78-157">These considerations apply mainly to authors of class libraries, but they might affect any application that uses extension methods.</span></span>
+
+<span data-ttu-id="6db78-158">Genellikle, sahip olmadığınız türlere eklediğiniz genişletme yöntemleri, denetlediğiniz türlere eklenen genişletme yöntemlerinden daha savunmasız olacaktır.</span><span class="sxs-lookup"><span data-stu-id="6db78-158">Most generally, extension methods that you add to types that you do not own are more vulnerable than extension methods added to types that you control.</span></span> <span data-ttu-id="6db78-159">Uzantı yöntemlerinizi kesintiye uğratabilecek, sahip olmadığınız sınıflarda bir dizi şey meydana gelebilir.</span><span class="sxs-lookup"><span data-stu-id="6db78-159">A number of things can occur in classes you do not own that can interfere with your extension methods.</span></span>
+
+- <span data-ttu-id="6db78-160">Çağırma deyimindeki bağımsız değişkenlerle uyumlu imzaya sahip herhangi bir erişilebilir örnek üye varsa, bağımsız değişkenden parametreye hiçbir daraltma dönüştürmesi gerekmiyorsa, örnek yöntemi herhangi bir genişletme yöntemine tercih edilir.</span><span class="sxs-lookup"><span data-stu-id="6db78-160">If any accessible instance member exists that has a signature that is compatible with the arguments in the calling statement, with no narrowing conversions required from argument to parameter, the instance method will be used in preference to any extension method.</span></span> <span data-ttu-id="6db78-161">Bu nedenle, belirli bir noktada bir sınıfa uygun bir örnek yöntemi eklenirse, kullandığınız mevcut bir uzantı üyesi erişilemez hale gelebilir.</span><span class="sxs-lookup"><span data-stu-id="6db78-161">Therefore, if an appropriate instance method is added to a class at some point, an existing extension member that you rely on may become inaccessible.</span></span>
+
+- <span data-ttu-id="6db78-162">Bir genişletme yönteminin yazarı, diğer programcıların özgün uzantıya göre önceliğe sahip olabilecek, çakışan uzantı yöntemleri yazmasını engelleyemez.</span><span class="sxs-lookup"><span data-stu-id="6db78-162">The author of an extension method cannot prevent other programmers from writing conflicting extension methods that may have precedence over the original extension.</span></span>
+
+- <span data-ttu-id="6db78-163">Uzantı yöntemlerini kendi ad alanına yerleştirerek sağlamlık düzeyini artırabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="6db78-163">You can improve robustness by putting extension methods in their own namespace.</span></span> <span data-ttu-id="6db78-164">Daha sonra kitaplığınızın tüketicileri, bir ad alanı içerebilir veya hariç tutabilir ya da kitaplığın geri kalanından ayrı olarak ad alanları arasından seçim yapabilir.</span><span class="sxs-lookup"><span data-stu-id="6db78-164">Consumers of your library can then include a namespace or exclude it, or select among namespaces, separately from the rest of the library.</span></span>
+
+- <span data-ttu-id="6db78-165">Arabirimleri genişletmekten daha güvenli olabilir, özellikle arabirimin veya sınıfınızın sahibi olmadığınız durumlarda sınıfları genişletebiliriz.</span><span class="sxs-lookup"><span data-stu-id="6db78-165">It may be safer to extend interfaces than it is to extend classes, especially if you do not own the interface or class.</span></span> <span data-ttu-id="6db78-166">Bir arabirimdeki değişiklik, onu uygulayan her sınıfı etkiler.</span><span class="sxs-lookup"><span data-stu-id="6db78-166">A change in an interface affects every class that implements it.</span></span> <span data-ttu-id="6db78-167">Bu nedenle, yazarın bir arabirimdeki yöntemleri ekleme veya değiştirme olasılığı daha düşüktür.</span><span class="sxs-lookup"><span data-stu-id="6db78-167">Therefore, the author may be less likely to add or change methods in an interface.</span></span> <span data-ttu-id="6db78-168">Ancak, bir sınıf aynı imzaya sahip uzantı yöntemlerine sahip iki arabirim uygularsa, hiçbir genişletme yöntemi görünür değildir.</span><span class="sxs-lookup"><span data-stu-id="6db78-168">However, if a class implements two interfaces that have extension methods with the same signature, neither extension method is visible.</span></span>
+
+- <span data-ttu-id="6db78-169">Kullanabileceğiniz en belirli türü genişletin.</span><span class="sxs-lookup"><span data-stu-id="6db78-169">Extend the most specific type you can.</span></span> <span data-ttu-id="6db78-170">Bir tür hiyerarşisinde, diğer birçok türden türetilmiş bir tür seçerseniz, örnek yöntemlerinin veya sizinkilerle karıştabilecek diğer uzantı yöntemlerinin tanıtımı için bazı olanaklar katmanları vardır.</span><span class="sxs-lookup"><span data-stu-id="6db78-170">In a hierarchy of types, if you select a type from which many other types are derived, there are layers of possibilities for the introduction of instance methods or other extension methods that might interfere with yours.</span></span>
+
+## <a name="extension-methods-instance-methods-and-properties"></a><span data-ttu-id="6db78-171">Uzantı yöntemleri, örnek yöntemleri ve Özellikler</span><span class="sxs-lookup"><span data-stu-id="6db78-171">Extension methods, instance methods, and properties</span></span>
+
+<span data-ttu-id="6db78-172">Kapsam içi bir örnek yöntemi, bir çağırma ifadesinin bağımsız değişkenleriyle uyumlu bir imzaya sahip olduğunda, örnek yöntemi herhangi bir genişletme yöntemine göre tercih edilir.</span><span class="sxs-lookup"><span data-stu-id="6db78-172">When an in-scope instance method has a signature that is compatible with the arguments of a calling statement, the instance method is chosen in preference to any extension method.</span></span> <span data-ttu-id="6db78-173">Uzantı yöntemi daha iyi bir eşleşme olsa bile örnek yöntemi önceliğe sahiptir.</span><span class="sxs-lookup"><span data-stu-id="6db78-173">The instance method has precedence even if the extension method is a better match.</span></span> <span data-ttu-id="6db78-174">Aşağıdaki örnekte, `ExampleClass`, `Integer` türünde bir parametreye sahip `ExampleMethod` adlı örnek bir yöntem içerir.</span><span class="sxs-lookup"><span data-stu-id="6db78-174">In the following example, `ExampleClass` contains an instance method named `ExampleMethod` that has one parameter of type `Integer`.</span></span> <span data-ttu-id="6db78-175">@No__t-0 genişletme yöntemi `ExampleClass` ' i genişletiyor ve `Long` türünde bir parametreye sahip.</span><span class="sxs-lookup"><span data-stu-id="6db78-175">Extension method `ExampleMethod` extends `ExampleClass`, and has one parameter of type `Long`.</span></span>
+
+[!code-vb[VbVbalrExtensionMethods#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrExtensionMethods/VB/Class4.vb#4)]
+
+<span data-ttu-id="6db78-176">Aşağıdaki kodda `ExampleMethod` ' a yapılan ilk çağrı uzantı yöntemini çağırır, çünkü `arg1` `Long` ' dir ve yalnızca genişletme yöntemindeki `Long` parametresiyle uyumludur.</span><span class="sxs-lookup"><span data-stu-id="6db78-176">The first call to `ExampleMethod` in the following code calls the extension method, because `arg1` is `Long` and is compatible only with the `Long` parameter in the extension method.</span></span> <span data-ttu-id="6db78-177">@No__t-0 ' a yapılan ikinci çağrının `Integer` bağımsız değişkeni `arg2` ' dir ve örnek yöntemi çağırır.</span><span class="sxs-lookup"><span data-stu-id="6db78-177">The second call to `ExampleMethod` has an `Integer` argument, `arg2`, and it calls the instance method.</span></span>
+
+[!code-vb[VbVbalrExtensionMethods#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrExtensionMethods/VB/Class4.vb#5)]
+
+<span data-ttu-id="6db78-178">Şimdi iki yöntemde parametrelerin veri türlerini tersine çevirin:</span><span class="sxs-lookup"><span data-stu-id="6db78-178">Now reverse the data types of the parameters in the two methods:</span></span>
+
+[!code-vb[VbVbalrExtensionMethods#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrExtensionMethods/VB/Class5.vb#6)]
+
+<span data-ttu-id="6db78-179">Bu kez `Main` ' daki kod her iki kez de örnek yöntemini çağırır.</span><span class="sxs-lookup"><span data-stu-id="6db78-179">This time the code in `Main` calls the instance method both times.</span></span> <span data-ttu-id="6db78-180">Bunun nedeni, hem `arg1` hem de `arg2` ' i n `Long` ' ye genişleyen dönüştürmeye sahiptir ve örnek yöntemi her iki durumda da uzantı yöntemine göre önceliklidir.</span><span class="sxs-lookup"><span data-stu-id="6db78-180">This is because both `arg1` and `arg2` have a widening conversion to `Long`, and the instance method takes precedence over the extension method in both cases.</span></span>
+
+[!code-vb[VbVbalrExtensionMethods#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrExtensionMethods/VB/Class5.vb#7)]
+
+<span data-ttu-id="6db78-181">Bu nedenle, bir genişletme yöntemi var olan bir örnek yönteminin yerini alamaz.</span><span class="sxs-lookup"><span data-stu-id="6db78-181">Therefore, an extension method cannot replace an existing instance method.</span></span> <span data-ttu-id="6db78-182">Ancak, bir genişletme yöntemi bir örnek yöntemiyle aynı ada sahip olsa da imzalar çakışmadığında her iki yönteme de erişilebilir.</span><span class="sxs-lookup"><span data-stu-id="6db78-182">However, when an extension method has the same name as an instance method but the signatures do not conflict, both methods can be accessed.</span></span> <span data-ttu-id="6db78-183">Örneğin, `ExampleClass` sınıfı, hiçbir bağımsız değişken alan `ExampleMethod` adlı bir yöntem içeriyorsa, aşağıdaki kodda gösterildiği gibi, aynı ada sahip ve farklı imzalara sahip genişletme yöntemlerine izin verilir.</span><span class="sxs-lookup"><span data-stu-id="6db78-183">For example, if class `ExampleClass` contains a method named `ExampleMethod` that takes no arguments, extension methods with the same name but different signatures are permitted, as shown in the following code.</span></span>
+
+[!code-vb[VbVbalrExtensionMethods#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrExtensionMethods/VB/Module3.vb#8)]
+
+<span data-ttu-id="6db78-184">Bu kodun çıktısı aşağıdaki gibidir:</span><span class="sxs-lookup"><span data-stu-id="6db78-184">The output from this code is as follows:</span></span>
+
+```console
+Extension method
+Instance method
+```
+
+<span data-ttu-id="6db78-185">Durum, özelliklerle daha basittir: bir genişletme yöntemi, genişlettiği sınıfın bir özelliği ile aynı ada sahipse, genişletme yöntemi görünür değildir ve erişilemez.</span><span class="sxs-lookup"><span data-stu-id="6db78-185">The situation is simpler with properties: if an extension method has the same name as a property of the class it extends, the extension method is not visible and cannot be accessed.</span></span>
+
+## <a name="extension-method-precedence"></a><span data-ttu-id="6db78-186">Uzantı yöntemi önceliği</span><span class="sxs-lookup"><span data-stu-id="6db78-186">Extension method precedence</span></span>
+
+<span data-ttu-id="6db78-187">Aynı imzaya sahip iki genişletme yöntemi kapsam içinde ve erişilebilir olduğunda, daha yüksek önceliğe sahip olan bir yöntem çağrılır.</span><span class="sxs-lookup"><span data-stu-id="6db78-187">When two extension methods that have identical signatures are in scope and accessible, the one with higher precedence will be invoked.</span></span> <span data-ttu-id="6db78-188">Uzantı yönteminin önceliği, yöntemi kapsama getirmek için kullanılan mekanizmaya dayanır.</span><span class="sxs-lookup"><span data-stu-id="6db78-188">An extension method's precedence is based on the mechanism used to bring the method into scope.</span></span> <span data-ttu-id="6db78-189">Aşağıdaki listede, en yüksekten en düşüğe öncelik hiyerarşisi gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="6db78-189">The following list shows the precedence hierarchy, from highest to lowest.</span></span>
+
+1. <span data-ttu-id="6db78-190">Geçerli modülün içinde tanımlanan genişletme yöntemleri.</span><span class="sxs-lookup"><span data-stu-id="6db78-190">Extension methods defined inside the current module.</span></span>
+
+2. <span data-ttu-id="6db78-191">Geçerli ad alanındaki veya üst öğelerinden herhangi birindeki veri türleri içinde tanımlanan uzantı yöntemleri, alt ad alanları üst ad alanlarından daha yüksek önceliğe sahip.</span><span class="sxs-lookup"><span data-stu-id="6db78-191">Extension methods defined inside data types in the current namespace or any one of its parents, with child namespaces having higher precedence than parent namespaces.</span></span>
+
+3. <span data-ttu-id="6db78-192">Herhangi bir tür içinde tanımlanan genişletme yöntemleri geçerli dosyaya içe aktarılır.</span><span class="sxs-lookup"><span data-stu-id="6db78-192">Extension methods defined inside any type imports in the current file.</span></span>
+
+4. <span data-ttu-id="6db78-193">Herhangi bir ad alanı içinde tanımlanan genişletme yöntemleri geçerli dosyaya içe aktarılır.</span><span class="sxs-lookup"><span data-stu-id="6db78-193">Extension methods defined inside any namespace imports in the current file.</span></span>
+
+5. <span data-ttu-id="6db78-194">Herhangi bir proje düzeyi türü içeri aktarma içinde tanımlanan genişletme yöntemleri.</span><span class="sxs-lookup"><span data-stu-id="6db78-194">Extension methods defined inside any project-level type imports.</span></span>
+
+6. <span data-ttu-id="6db78-195">Herhangi bir proje düzeyi ad alanı içeri aktarma içinde tanımlanan genişletme yöntemleri.</span><span class="sxs-lookup"><span data-stu-id="6db78-195">Extension methods defined inside any project-level namespace imports.</span></span>
+
+<span data-ttu-id="6db78-196">Öncelik belirsizlik çözümlenmezse, aradığınız yöntemi belirtmek için tam nitelikli adı kullanabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="6db78-196">If precedence does not resolve the ambiguity, you can use the fully qualified name to specify the method that you are calling.</span></span> <span data-ttu-id="6db78-197">Önceki örnekteki `Print` yöntemi `StringExtensions` adlı bir modülde tanımlanmışsa, tam adı `example.Print()` yerine `StringExtensions.Print(example)` olur.</span><span class="sxs-lookup"><span data-stu-id="6db78-197">If the `Print` method in the earlier example is defined in a module named `StringExtensions`, the fully qualified name is `StringExtensions.Print(example)` instead of `example.Print()`.</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="6db78-198">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="6db78-198">See also</span></span>
 
 - <xref:System.Runtime.CompilerServices>
 - <xref:System.Runtime.CompilerServices.ExtensionAttribute>
-- [<span data-ttu-id="7811d-199">Genişletme Yöntemleri</span><span class="sxs-lookup"><span data-stu-id="7811d-199">Extension Methods</span></span>](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md)
-- [<span data-ttu-id="7811d-200">Module Deyimi</span><span class="sxs-lookup"><span data-stu-id="7811d-200">Module Statement</span></span>](../../../../visual-basic/language-reference/statements/module-statement.md)
-- [<span data-ttu-id="7811d-201">Yordam Parametreleri ve Bağımsız Değişkenleri</span><span class="sxs-lookup"><span data-stu-id="7811d-201">Procedure Parameters and Arguments</span></span>](./procedure-parameters-and-arguments.md)
-- [<span data-ttu-id="7811d-202">İsteğe Bağlı Parametreler</span><span class="sxs-lookup"><span data-stu-id="7811d-202">Optional Parameters</span></span>](./optional-parameters.md)
-- [<span data-ttu-id="7811d-203">Parametre Dizileri</span><span class="sxs-lookup"><span data-stu-id="7811d-203">Parameter Arrays</span></span>](./parameter-arrays.md)
-- [<span data-ttu-id="7811d-204">Öznitelikler genel bakış</span><span class="sxs-lookup"><span data-stu-id="7811d-204">Attributes overview</span></span>](../../../../visual-basic/programming-guide/concepts/attributes/index.md)
-- [<span data-ttu-id="7811d-205">Visual Basic'de kapsam</span><span class="sxs-lookup"><span data-stu-id="7811d-205">Scope in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
+- [<span data-ttu-id="6db78-199">Genişletme Yöntemleri</span><span class="sxs-lookup"><span data-stu-id="6db78-199">Extension Methods</span></span>](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md)
+- [<span data-ttu-id="6db78-200">Module Deyimi</span><span class="sxs-lookup"><span data-stu-id="6db78-200">Module Statement</span></span>](../../../language-reference/statements/module-statement.md)
+- [<span data-ttu-id="6db78-201">Yordam Parametreleri ve Bağımsız Değişkenleri</span><span class="sxs-lookup"><span data-stu-id="6db78-201">Procedure Parameters and Arguments</span></span>](procedure-parameters-and-arguments.md)
+- [<span data-ttu-id="6db78-202">İsteğe Bağlı Parametreler</span><span class="sxs-lookup"><span data-stu-id="6db78-202">Optional Parameters</span></span>](optional-parameters.md)
+- [<span data-ttu-id="6db78-203">Parametre Dizileri</span><span class="sxs-lookup"><span data-stu-id="6db78-203">Parameter Arrays</span></span>](parameter-arrays.md)
+- [<span data-ttu-id="6db78-204">Özniteliklere genel bakış</span><span class="sxs-lookup"><span data-stu-id="6db78-204">Attributes overview</span></span>](../../concepts/attributes/index.md)
+- [<span data-ttu-id="6db78-205">Visual Basic kapsam</span><span class="sxs-lookup"><span data-stu-id="6db78-205">Scope in Visual Basic</span></span>](../declared-elements/scope.md)

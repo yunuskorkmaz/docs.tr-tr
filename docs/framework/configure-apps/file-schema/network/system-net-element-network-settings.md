@@ -8,55 +8,55 @@ helpviewer_keywords:
 - system.Net element
 - <system.Net> element
 ms.assetid: 52de4d6c-b24d-44aa-ba7d-6b5061f1357e
-ms.openlocfilehash: 449146612938700f59f5e2ec761526d1dc66a3fc
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 810e942394c75c192e4423afe4c674ef3a2b9900
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663951"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71697501"
 ---
-# <a name="systemnet-element-network-settings"></a><span data-ttu-id="ca108-102">\<System .net > öğesi (ağ ayarları)</span><span class="sxs-lookup"><span data-stu-id="ca108-102">\<system.Net> Element (Network Settings)</span></span>
-<span data-ttu-id="ca108-103">.NET Framework ağa nasıl bağlanacağını belirten ayarları içerir.</span><span class="sxs-lookup"><span data-stu-id="ca108-103">Contains settings that specify how the .NET Framework connects to the network.</span></span>  
+# <a name="systemnet-element-network-settings"></a><span data-ttu-id="19766-102">\<system .net > öğesi (ağ ayarları)</span><span class="sxs-lookup"><span data-stu-id="19766-102">\<system.Net> Element (Network Settings)</span></span>
+<span data-ttu-id="19766-103">.NET Framework ağa nasıl bağlanacağını belirten ayarları içerir.</span><span class="sxs-lookup"><span data-stu-id="19766-103">Contains settings that specify how the .NET Framework connects to the network.</span></span>  
   
- <span data-ttu-id="ca108-104">\<Yapılandırma ></span><span class="sxs-lookup"><span data-stu-id="ca108-104">\<configuration></span></span>  
-<span data-ttu-id="ca108-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="ca108-105">\<system.net></span></span>  
+[<span data-ttu-id="19766-104"> **\<Yapılandırma >** </span><span class="sxs-lookup"><span data-stu-id="19766-104">**\<configuration>**</span></span>](../configuration-element.md)  
+<span data-ttu-id="19766-105">&nbsp; @ no__t-1 **@no__t -3system. net >**</span><span class="sxs-lookup"><span data-stu-id="19766-105">&nbsp;&nbsp;**\<system.net>**</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ca108-106">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="ca108-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="19766-106">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="19766-106">Syntax</span></span>  
   
 ```xml  
 <system.net>   
 </system.net>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="ca108-107">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="ca108-107">Attributes and Elements</span></span>  
- <span data-ttu-id="ca108-108">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="ca108-108">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="19766-107">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="19766-107">Attributes and Elements</span></span>  
+ <span data-ttu-id="19766-108">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="19766-108">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="ca108-109">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="ca108-109">Attributes</span></span>  
- <span data-ttu-id="ca108-110">Yok.</span><span class="sxs-lookup"><span data-stu-id="ca108-110">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="19766-109">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="19766-109">Attributes</span></span>  
+ <span data-ttu-id="19766-110">Yok.</span><span class="sxs-lookup"><span data-stu-id="19766-110">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="ca108-111">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="ca108-111">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="19766-111">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="19766-111">Child Elements</span></span>  
   
-|<span data-ttu-id="ca108-112">**Öğe**</span><span class="sxs-lookup"><span data-stu-id="ca108-112">**Element**</span></span>|<span data-ttu-id="ca108-113">**Açıklama**</span><span class="sxs-lookup"><span data-stu-id="ca108-113">**Description**</span></span>|  
+|<span data-ttu-id="19766-112">**Öğe**</span><span class="sxs-lookup"><span data-stu-id="19766-112">**Element**</span></span>|<span data-ttu-id="19766-113">**Açıklama**</span><span class="sxs-lookup"><span data-stu-id="19766-113">**Description**</span></span>|  
 |-----------------|---------------------|  
-|[<span data-ttu-id="ca108-114">authenticationModules</span><span class="sxs-lookup"><span data-stu-id="ca108-114">authenticationModules</span></span>](authenticationmodules-element-network-settings.md)|<span data-ttu-id="ca108-115">Internet isteklerinin kimliğini doğrulamak için kullanılan modülleri belirtir.</span><span class="sxs-lookup"><span data-stu-id="ca108-115">Specifies modules used to authenticate Internet requests.</span></span>|  
-|[<span data-ttu-id="ca108-116">connectionManagement</span><span class="sxs-lookup"><span data-stu-id="ca108-116">connectionManagement</span></span>](connectionmanagement-element-network-settings.md)|<span data-ttu-id="ca108-117">Bir Internet ana bilgisayarına en fazla bağlantı sayısını belirtir.</span><span class="sxs-lookup"><span data-stu-id="ca108-117">Specifies the maximum number of connections to an Internet host.</span></span>|  
-|[<span data-ttu-id="ca108-118">defaultProxy</span><span class="sxs-lookup"><span data-stu-id="ca108-118">defaultProxy</span></span>](defaultproxy-element-network-settings.md)|<span data-ttu-id="ca108-119">Köprü Metni Aktarım Protokolü (HTTP) proxy sunucusunu yapılandırır.</span><span class="sxs-lookup"><span data-stu-id="ca108-119">Configures the Hypertext Transfer Protocol (HTTP) proxy server.</span></span>|  
-|[<span data-ttu-id="ca108-120">mailSettings</span><span class="sxs-lookup"><span data-stu-id="ca108-120">mailSettings</span></span>](mailsettings-element-network-settings.md)|<span data-ttu-id="ca108-121">Basit Posta Aktarım Protokolü (SMTP) posta gönderme seçeneklerini yapılandırır.</span><span class="sxs-lookup"><span data-stu-id="ca108-121">Configures Simple Mail Transport Protocol (SMTP) mail sending options.</span></span>|  
-|[<span data-ttu-id="ca108-122">requestCaching</span><span class="sxs-lookup"><span data-stu-id="ca108-122">requestCaching</span></span>](requestcaching-element-network-settings.md)|<span data-ttu-id="ca108-123">Ağ istekleri için önbelleğe alma mekanizmasını denetler.</span><span class="sxs-lookup"><span data-stu-id="ca108-123">Controls the caching mechanism for network requests.</span></span>|  
-|[<span data-ttu-id="ca108-124">Ayarlar</span><span class="sxs-lookup"><span data-stu-id="ca108-124">settings</span></span>](settings-element-network-settings.md)|<span data-ttu-id="ca108-125"><xref:System.Net> Ve ilişkili alt ad alanlarındaki sınıflar için temel ağ seçeneklerini yapılandırır.</span><span class="sxs-lookup"><span data-stu-id="ca108-125">Configures basic network options for classes in the <xref:System.Net> and related child namespaces.</span></span>|  
-|[<span data-ttu-id="ca108-126">webRequestModules</span><span class="sxs-lookup"><span data-stu-id="ca108-126">webRequestModules</span></span>](webrequestmodules-element-network-settings.md)|<span data-ttu-id="ca108-127">Internet konaklarından bilgi istemek için kullanılacak modülleri belirtir.</span><span class="sxs-lookup"><span data-stu-id="ca108-127">Specifies modules to use to request information from Internet hosts.</span></span>|  
+|[<span data-ttu-id="19766-114">authenticationModules</span><span class="sxs-lookup"><span data-stu-id="19766-114">authenticationModules</span></span>](authenticationmodules-element-network-settings.md)|<span data-ttu-id="19766-115">Internet isteklerinin kimliğini doğrulamak için kullanılan modülleri belirtir.</span><span class="sxs-lookup"><span data-stu-id="19766-115">Specifies modules used to authenticate Internet requests.</span></span>|  
+|[<span data-ttu-id="19766-116">connectionManagement</span><span class="sxs-lookup"><span data-stu-id="19766-116">connectionManagement</span></span>](connectionmanagement-element-network-settings.md)|<span data-ttu-id="19766-117">Bir Internet ana bilgisayarına en fazla bağlantı sayısını belirtir.</span><span class="sxs-lookup"><span data-stu-id="19766-117">Specifies the maximum number of connections to an Internet host.</span></span>|  
+|[<span data-ttu-id="19766-118">defaultProxy</span><span class="sxs-lookup"><span data-stu-id="19766-118">defaultProxy</span></span>](defaultproxy-element-network-settings.md)|<span data-ttu-id="19766-119">Köprü Metni Aktarım Protokolü (HTTP) proxy sunucusunu yapılandırır.</span><span class="sxs-lookup"><span data-stu-id="19766-119">Configures the Hypertext Transfer Protocol (HTTP) proxy server.</span></span>|  
+|[<span data-ttu-id="19766-120">mailSettings</span><span class="sxs-lookup"><span data-stu-id="19766-120">mailSettings</span></span>](mailsettings-element-network-settings.md)|<span data-ttu-id="19766-121">Basit Posta Aktarım Protokolü (SMTP) posta gönderme seçeneklerini yapılandırır.</span><span class="sxs-lookup"><span data-stu-id="19766-121">Configures Simple Mail Transport Protocol (SMTP) mail sending options.</span></span>|  
+|[<span data-ttu-id="19766-122">requestCaching</span><span class="sxs-lookup"><span data-stu-id="19766-122">requestCaching</span></span>](requestcaching-element-network-settings.md)|<span data-ttu-id="19766-123">Ağ istekleri için önbelleğe alma mekanizmasını denetler.</span><span class="sxs-lookup"><span data-stu-id="19766-123">Controls the caching mechanism for network requests.</span></span>|  
+|[<span data-ttu-id="19766-124">Ayarlar</span><span class="sxs-lookup"><span data-stu-id="19766-124">settings</span></span>](settings-element-network-settings.md)|<span data-ttu-id="19766-125">@No__t-0 ve ilgili alt ad alanlarında sınıflar için temel ağ seçeneklerini yapılandırır.</span><span class="sxs-lookup"><span data-stu-id="19766-125">Configures basic network options for classes in the <xref:System.Net> and related child namespaces.</span></span>|  
+|[<span data-ttu-id="19766-126">webRequestModules</span><span class="sxs-lookup"><span data-stu-id="19766-126">webRequestModules</span></span>](webrequestmodules-element-network-settings.md)|<span data-ttu-id="19766-127">Internet konaklarından bilgi istemek için kullanılacak modülleri belirtir.</span><span class="sxs-lookup"><span data-stu-id="19766-127">Specifies modules to use to request information from Internet hosts.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="ca108-128">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="ca108-128">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="19766-128">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="19766-128">Parent Elements</span></span>  
   
-|<span data-ttu-id="ca108-129">**Öğe**</span><span class="sxs-lookup"><span data-stu-id="ca108-129">**Element**</span></span>|<span data-ttu-id="ca108-130">**Açıklama**</span><span class="sxs-lookup"><span data-stu-id="ca108-130">**Description**</span></span>|  
+|<span data-ttu-id="19766-129">**Öğe**</span><span class="sxs-lookup"><span data-stu-id="19766-129">**Element**</span></span>|<span data-ttu-id="19766-130">**Açıklama**</span><span class="sxs-lookup"><span data-stu-id="19766-130">**Description**</span></span>|  
 |-----------------|---------------------|  
-|[<span data-ttu-id="ca108-131">yapılandırmada</span><span class="sxs-lookup"><span data-stu-id="ca108-131">configuration</span></span>](../configuration-element.md)|<span data-ttu-id="ca108-132">Tüm ad alanları için ayarları içerir.</span><span class="sxs-lookup"><span data-stu-id="ca108-132">Contains settings for all namespaces.</span></span>|  
+|[<span data-ttu-id="19766-131">yapılandırmada</span><span class="sxs-lookup"><span data-stu-id="19766-131">configuration</span></span>](../configuration-element.md)|<span data-ttu-id="19766-132">Tüm ad alanları için ayarları içerir.</span><span class="sxs-lookup"><span data-stu-id="19766-132">Contains settings for all namespaces.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="ca108-133">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="ca108-133">Remarks</span></span>  
- <span data-ttu-id="ca108-134"><xref:System.Net> [ System.net>öğesiveilgilialtad\<](system-net-element-network-settings.md) alanlarındaki sınıfların ayarlarını içerir.</span><span class="sxs-lookup"><span data-stu-id="ca108-134">The [\<system.net>](system-net-element-network-settings.md) element contains settings for classes in the <xref:System.Net> and related child namespaces.</span></span> <span data-ttu-id="ca108-135">Ayarlar, Internet konaklarından bilgi almak için kimlik doğrulama modüllerini, bağlantı yönetimini, posta ayarlarını, proxy sunucusunu ve Internet istek modüllerini yapılandırır.</span><span class="sxs-lookup"><span data-stu-id="ca108-135">The settings configure authentication modules, connection management, mail settings, the proxy server, and Internet request modules for receiving information from Internet hosts.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="19766-133">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="19766-133">Remarks</span></span>  
+ <span data-ttu-id="19766-134">[@No__t -1System. net >](system-net-element-network-settings.md) öğesi, <xref:System.Net> ve ilgili alt ad alanlarındaki sınıfların ayarlarını içerir.</span><span class="sxs-lookup"><span data-stu-id="19766-134">The [\<system.net>](system-net-element-network-settings.md) element contains settings for classes in the <xref:System.Net> and related child namespaces.</span></span> <span data-ttu-id="19766-135">Ayarlar, Internet konaklarından bilgi almak için kimlik doğrulama modüllerini, bağlantı yönetimini, posta ayarlarını, proxy sunucusunu ve Internet istek modüllerini yapılandırır.</span><span class="sxs-lookup"><span data-stu-id="19766-135">The settings configure authentication modules, connection management, mail settings, the proxy server, and Internet request modules for receiving information from Internet hosts.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="ca108-136">Örnek</span><span class="sxs-lookup"><span data-stu-id="ca108-136">Example</span></span>  
- <span data-ttu-id="ca108-137">Aşağıdaki örnekte, sınıfları tarafından <xref:System.Net> kullanılan tipik bir yapılandırma gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="ca108-137">The following example shows a typical configuration used by <xref:System.Net> classes.</span></span>  
+## <a name="example"></a><span data-ttu-id="19766-136">Örnek</span><span class="sxs-lookup"><span data-stu-id="19766-136">Example</span></span>  
+ <span data-ttu-id="19766-137">Aşağıdaki örnekte <xref:System.Net> sınıfları tarafından kullanılan tipik bir yapılandırma gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="19766-137">The following example shows a typical configuration used by <xref:System.Net> classes.</span></span>  
   
 ```xml  
 <configuration>  
@@ -92,6 +92,6 @@ ms.locfileid: "69663951"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="ca108-138">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="ca108-138">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="19766-138">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="19766-138">See also</span></span>
 
-- [<span data-ttu-id="ca108-139">Ağ Ayarları Şeması</span><span class="sxs-lookup"><span data-stu-id="ca108-139">Network Settings Schema</span></span>](index.md)
+- [<span data-ttu-id="19766-139">Ağ Ayarları Şeması</span><span class="sxs-lookup"><span data-stu-id="19766-139">Network Settings Schema</span></span>](index.md)

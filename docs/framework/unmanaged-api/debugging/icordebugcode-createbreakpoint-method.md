@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 07f8be1a1831bc00eea3cfb659b46b67b6a78711
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1ec7d615b99ac301948d7ea25318115713ce06ea
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67747726"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71700851"
 ---
-# <a name="icordebugcodecreatebreakpoint-method"></a><span data-ttu-id="c3084-102">ICorDebugCode::CreateBreakpoint Yöntemi</span><span class="sxs-lookup"><span data-stu-id="c3084-102">ICorDebugCode::CreateBreakpoint Method</span></span>
-<span data-ttu-id="c3084-103">Bu kod kesimi belirtilen uzaklık içinde bir kesme noktası oluşturur.</span><span class="sxs-lookup"><span data-stu-id="c3084-103">Creates a breakpoint in this code segment at the specified offset.</span></span>  
+# <a name="icordebugcodecreatebreakpoint-method"></a><span data-ttu-id="4a893-102">ICorDebugCode::CreateBreakpoint Yöntemi</span><span class="sxs-lookup"><span data-stu-id="4a893-102">ICorDebugCode::CreateBreakpoint Method</span></span>
+<span data-ttu-id="4a893-103">Belirtilen uzaklığında Bu kod kesiminde bir kesme noktası oluşturur.</span><span class="sxs-lookup"><span data-stu-id="4a893-103">Creates a breakpoint in this code segment at the specified offset.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c3084-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="c3084-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4a893-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="4a893-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT CreateBreakpoint (  
@@ -36,25 +36,23 @@ HRESULT CreateBreakpoint (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="c3084-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="c3084-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="4a893-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="4a893-105">Parameters</span></span>  
  `offset`  
- <span data-ttu-id="c3084-106">[in] Uzaklığı bir kesme noktası oluşturmak.</span><span class="sxs-lookup"><span data-stu-id="c3084-106">[in] The offset at which to create the breakpoint.</span></span>  
+ <span data-ttu-id="4a893-106">'ndaki Kesme noktasının oluşturulacağı konum.</span><span class="sxs-lookup"><span data-stu-id="4a893-106">[in] The offset at which to create the breakpoint.</span></span>  
   
  `ppBreakpoint`  
- <span data-ttu-id="c3084-107">[out] Kesme noktasını temsil eden bir "ICorDebugFunctionBreakpoint" nesnenin adresi için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="c3084-107">[out] A pointer to the address of an "ICorDebugFunctionBreakpoint" object that represents the breakpoint.</span></span>  
+ <span data-ttu-id="4a893-107">dışı Kesme noktasını temsil eden bir "ICorDebugFunctionBreakpoint" nesnesinin adresine yönelik bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="4a893-107">[out] A pointer to the address of an "ICorDebugFunctionBreakpoint" object that represents the breakpoint.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="c3084-108">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="c3084-108">Remarks</span></span>  
- <span data-ttu-id="c3084-109">Kesme noktası büyük/küçük harfe etkinleştirilmeden önce işlem nesnesine eklenmelidir.</span><span class="sxs-lookup"><span data-stu-id="c3084-109">Before the breakpoint is active, it must be added to the process object.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="4a893-108">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="4a893-108">Remarks</span></span>  
+ <span data-ttu-id="4a893-109">Kesme noktası etkin olmadan önce, işlem nesnesine eklenmelidir.</span><span class="sxs-lookup"><span data-stu-id="4a893-109">Before the breakpoint is active, it must be added to the process object.</span></span>  
   
- <span data-ttu-id="c3084-110">Microsoft Ara dil (MSIL) kodu bu koddur ve bir tam zamanında (JIT),-kesme noktası kod derlenmiş ve yerel sürümü JIT olarak derlenmiş kodda de uygulanır.</span><span class="sxs-lookup"><span data-stu-id="c3084-110">If this code is Microsoft intermediate language (MSIL) code, and there is a just-in-time (JIT)-compiled, native version of the code, the breakpoint will be applied in the JIT-compiled code as well.</span></span> <span data-ttu-id="c3084-111">(Aynı JIT olarak derlenmiş kodu daha sonra, geçerlidir.)</span><span class="sxs-lookup"><span data-stu-id="c3084-111">(The same is true if the code is JIT-compiled later.)</span></span>  
+ <span data-ttu-id="4a893-110">Bu kod Microsoft ara dili (MSIL) kodlarsa ve kodun tam zamanında (JıT) derlenmiş bir sürümü varsa, kesme noktası JıT ile derlenen kodda da uygulanır.</span><span class="sxs-lookup"><span data-stu-id="4a893-110">If this code is Microsoft intermediate language (MSIL) code, and there is a just-in-time (JIT)-compiled, native version of the code, the breakpoint will be applied in the JIT-compiled code as well.</span></span> <span data-ttu-id="4a893-111">(Kod JıT olarak derlenmişse, aynı değer de geçerlidir.)</span><span class="sxs-lookup"><span data-stu-id="4a893-111">(The same is true if the code is JIT-compiled later.)</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c3084-112">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="c3084-112">Requirements</span></span>  
- <span data-ttu-id="c3084-113">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c3084-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4a893-112">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="4a893-112">Requirements</span></span>  
+ <span data-ttu-id="4a893-113">**Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="4a893-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c3084-114">**Üst bilgi:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="c3084-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="4a893-114">**Üst bilgi:** CorDebug. IDL, CorDebug. h</span><span class="sxs-lookup"><span data-stu-id="4a893-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="c3084-115">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c3084-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="4a893-115">**Kitaplık:** Corguid. lib</span><span class="sxs-lookup"><span data-stu-id="4a893-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="c3084-116">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c3084-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="c3084-117">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="c3084-117">See also</span></span>
+ <span data-ttu-id="4a893-116">**.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4a893-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

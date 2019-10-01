@@ -8,31 +8,34 @@ helpviewer_keywords:
 - structures [Visual Basic], control
 - conditional statements [Visual Basic], control flow
 ms.assetid: 5623ef47-52b1-4202-befd-9af36422ec6f
-ms.openlocfilehash: 14133dc764d6708d8b7a3366038bc3240e5cbc76
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6a9b769c2ef7fe3b6e2d39279f11b49b64641339
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61906665"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71701025"
 ---
-# <a name="control-flow-in-visual-basic"></a><span data-ttu-id="3a4bc-102">Visual Basic'de Denetim Akışı</span><span class="sxs-lookup"><span data-stu-id="3a4bc-102">Control Flow in Visual Basic</span></span>
-<span data-ttu-id="3a4bc-103">Sol düzenlenmemiş bir program aracılığıyla kendi deyimleri baştan sona devam eder.</span><span class="sxs-lookup"><span data-stu-id="3a4bc-103">Left unregulated, a program proceeds through its statements from beginning to end.</span></span> <span data-ttu-id="3a4bc-104">Bazı basit programları, yalnızca bu tek yönlü akışıyla yazılabilir.</span><span class="sxs-lookup"><span data-stu-id="3a4bc-104">Some very simple programs can be written with only this unidirectional flow.</span></span> <span data-ttu-id="3a4bc-105">Ancak, güç çoğunu ve herhangi bir programlama dilinde yardımcı programı denetim ifadeleri ve döngüler ile yürütme sırasını değiştirme olanağı gelir.</span><span class="sxs-lookup"><span data-stu-id="3a4bc-105">However, much of the power and utility of any programming language comes from the ability to change execution order with control statements and loops.</span></span>  
+# <a name="control-flow-in-visual-basic"></a><span data-ttu-id="fd9c3-102">Visual Basic'de Denetim Akışı</span><span class="sxs-lookup"><span data-stu-id="fd9c3-102">Control Flow in Visual Basic</span></span>
+
+<span data-ttu-id="fd9c3-103">Yok edilecek, bir program deyimlerini baştan sona kadar ilerler.</span><span class="sxs-lookup"><span data-stu-id="fd9c3-103">Left unregulated, a program proceeds through its statements from beginning to end.</span></span> <span data-ttu-id="fd9c3-104">Bazı çok basit programlar yalnızca bu tek yönlü akışta yazılabilir.</span><span class="sxs-lookup"><span data-stu-id="fd9c3-104">Some very simple programs can be written with only this unidirectional flow.</span></span> <span data-ttu-id="fd9c3-105">Ancak, herhangi bir programlama dilinin gücünün ve yardımcı programının çoğu, denetim deyimleri ve döngüleriyle yürütme sırasını değiştirme özelliğinden gelir.</span><span class="sxs-lookup"><span data-stu-id="fd9c3-105">However, much of the power and utility of any programming language comes from the ability to change execution order with control statements and loops.</span></span>
+
+ <span data-ttu-id="fd9c3-106">Denetim yapıları, programınızın yürütme akışını daha sonra denetlemenizi sağlar.</span><span class="sxs-lookup"><span data-stu-id="fd9c3-106">Control structures allow you to regulate the flow of your program's execution.</span></span> <span data-ttu-id="fd9c3-107">Denetim yapılarını kullanarak, kararları veren veya eylemleri tekrardan yapan Visual Basic kod yazabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="fd9c3-107">Using control structures, you can write Visual Basic code that makes decisions or that repeats actions.</span></span> <span data-ttu-id="fd9c3-108">Diğer denetim yapıları, bir kaynağın elden çıkarılmasını garanti etmenize veya aynı nesne başvurusunda bir dizi deyim çalıştırmanıza izin verir.</span><span class="sxs-lookup"><span data-stu-id="fd9c3-108">Other control structures let you guarantee disposal of a resource or run a series of statements on the same object reference.</span></span>
   
- <span data-ttu-id="3a4bc-106">Denetim yapıları, program yürütmenin akışını olanak tanır.</span><span class="sxs-lookup"><span data-stu-id="3a4bc-106">Control structures allow you to regulate the flow of your program's execution.</span></span> <span data-ttu-id="3a4bc-107">Denetim yapıları kullanarak, kararları veya eylemleri yineler, Visual Basic kod yazabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="3a4bc-107">Using control structures, you can write Visual Basic code that makes decisions or that repeats actions.</span></span> <span data-ttu-id="3a4bc-108">Diğer denetim yapıları, bir kaynağın elden garanti ya da aynı nesne başvurusu üzerinde bir dizi deyim çalıştırmak olanak tanır.</span><span class="sxs-lookup"><span data-stu-id="3a4bc-108">Other control structures let you guarantee disposal of a resource or run a series of statements on the same object reference.</span></span>  
-  
-## <a name="in-this-section"></a><span data-ttu-id="3a4bc-109">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="3a4bc-109">In This Section</span></span>  
- [<span data-ttu-id="3a4bc-110">Karar Yapıları</span><span class="sxs-lookup"><span data-stu-id="3a4bc-110">Decision Structures</span></span>](../../../../visual-basic/programming-guide/language-features/control-flow/decision-structures.md)  
- <span data-ttu-id="3a4bc-111">Dal oluşturma için kullanılan denetim yapıları açıklar.</span><span class="sxs-lookup"><span data-stu-id="3a4bc-111">Describes control structures used for branching.</span></span>  
-  
- [<span data-ttu-id="3a4bc-112">Döngü Yapıları</span><span class="sxs-lookup"><span data-stu-id="3a4bc-112">Loop Structures</span></span>](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)  
- <span data-ttu-id="3a4bc-113">İşlemleri yinelemek için kullanılan denetim yapıları açıklar.</span><span class="sxs-lookup"><span data-stu-id="3a4bc-113">Discusses control structures used to repeat processes.</span></span>  
-  
- [<span data-ttu-id="3a4bc-114">Diğer Denetim Yapıları</span><span class="sxs-lookup"><span data-stu-id="3a4bc-114">Other Control Structures</span></span>](../../../../visual-basic/programming-guide/language-features/control-flow/other-control-structures.md)  
- <span data-ttu-id="3a4bc-115">Kaynak atma ve nesne erişimi için kullanılan denetim yapıları açıklar.</span><span class="sxs-lookup"><span data-stu-id="3a4bc-115">Describes control structures used for resource disposal and object access.</span></span>  
-  
- [<span data-ttu-id="3a4bc-116">İç İçe Geçmiş Denetim Yapıları</span><span class="sxs-lookup"><span data-stu-id="3a4bc-116">Nested Control Structures</span></span>](../../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)  
- <span data-ttu-id="3a4bc-117">Diğer denetim yapıları içindeki yapıları kapsar denetler.</span><span class="sxs-lookup"><span data-stu-id="3a4bc-117">Covers control structures inside other control structures.</span></span>  
-  
-## <a name="related-sections"></a><span data-ttu-id="3a4bc-118">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="3a4bc-118">Related Sections</span></span>  
- [<span data-ttu-id="3a4bc-119">Denetim Akışı Özeti</span><span class="sxs-lookup"><span data-stu-id="3a4bc-119">Control Flow Summary</span></span>](../../../../visual-basic/language-reference/keywords/control-flow-summary.md)  
- <span data-ttu-id="3a4bc-120">Bu konu üzerinde dil başvurusu sayfalara bağlantılar sağlar.</span><span class="sxs-lookup"><span data-stu-id="3a4bc-120">Provides links to language reference pages on this subject.</span></span>
+## <a name="in-this-section"></a><span data-ttu-id="fd9c3-109">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="fd9c3-109">In This Section</span></span>
+
+ [<span data-ttu-id="fd9c3-110">Karar Yapıları</span><span class="sxs-lookup"><span data-stu-id="fd9c3-110">Decision Structures</span></span>](decision-structures.md)  
+ <span data-ttu-id="fd9c3-111">Dallandırma için kullanılan denetim yapılarını açıklar.</span><span class="sxs-lookup"><span data-stu-id="fd9c3-111">Describes control structures used for branching.</span></span>
+
+ [<span data-ttu-id="fd9c3-112">Döngü Yapıları</span><span class="sxs-lookup"><span data-stu-id="fd9c3-112">Loop Structures</span></span>](loop-structures.md)  
+ <span data-ttu-id="fd9c3-113">İşlem yinelemek için kullanılan denetim yapılarını açıklar.</span><span class="sxs-lookup"><span data-stu-id="fd9c3-113">Discusses control structures used to repeat processes.</span></span>
+
+ [<span data-ttu-id="fd9c3-114">Diğer Denetim Yapıları</span><span class="sxs-lookup"><span data-stu-id="fd9c3-114">Other Control Structures</span></span>](other-control-structures.md)  
+ <span data-ttu-id="fd9c3-115">Kaynak çıkarma ve nesne erişimi için kullanılan denetim yapılarını açıklar.</span><span class="sxs-lookup"><span data-stu-id="fd9c3-115">Describes control structures used for resource disposal and object access.</span></span>
+
+ [<span data-ttu-id="fd9c3-116">İç İçe Geçmiş Denetim Yapıları</span><span class="sxs-lookup"><span data-stu-id="fd9c3-116">Nested Control Structures</span></span>](nested-control-structures.md)  
+ <span data-ttu-id="fd9c3-117">Diğer denetim yapıları içindeki denetim yapılarını kapsamaktadır.</span><span class="sxs-lookup"><span data-stu-id="fd9c3-117">Covers control structures inside other control structures.</span></span>
+
+## <a name="related-sections"></a><span data-ttu-id="fd9c3-118">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="fd9c3-118">Related Sections</span></span>
+
+ [<span data-ttu-id="fd9c3-119">Denetim Akışı Özeti</span><span class="sxs-lookup"><span data-stu-id="fd9c3-119">Control Flow Summary</span></span>](../../../language-reference/keywords/control-flow-summary.md)  
+ <span data-ttu-id="fd9c3-120">Bu konudaki dil başvurusu sayfalarına bağlantılar sağlar.</span><span class="sxs-lookup"><span data-stu-id="fd9c3-120">Provides links to language reference pages on this subject.</span></span>

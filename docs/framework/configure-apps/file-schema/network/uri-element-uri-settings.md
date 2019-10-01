@@ -1,58 +1,56 @@
 ---
-title: <Uri> Öğesi (Uri Ayarları)
+title: <uri> Öğesi (Uri Ayarları)
 ms.date: 03/30/2017
 ms.assetid: c22bab8b-477c-4ae4-8498-65ad409e0847
-ms.openlocfilehash: 80d71da5ca680872e4948fa8ff135fbbdf08cffe
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: a492baf9951466383ca0277a2927b8554e5bb332
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663974"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71697434"
 ---
-# <a name="uri-element-uri-settings"></a><span data-ttu-id="ec178-102">\<Uri > öğesi (Uri Ayarları)</span><span class="sxs-lookup"><span data-stu-id="ec178-102">\<Uri> Element (Uri Settings)</span></span>
-<span data-ttu-id="ec178-103">.NET Framework Tekdüzen Kaynak tanımlayıcıları (URI 'Ler) kullanarak ifade edilen Web adreslerini nasıl işleyeceğini belirten ayarları içerir.</span><span class="sxs-lookup"><span data-stu-id="ec178-103">Contains settings that specify how the .NET Framework handles web addresses expressed using uniform resource identifiers (URIs).</span></span>  
+# <a name="uri-element-uri-settings"></a><span data-ttu-id="b2f6d-102">\<uri > öğesi (URI ayarları)</span><span class="sxs-lookup"><span data-stu-id="b2f6d-102">\<uri> Element (Uri Settings)</span></span>
+<span data-ttu-id="b2f6d-103">.NET Framework Tekdüzen Kaynak tanımlayıcıları (URI 'Ler) kullanarak ifade edilen Web adreslerini nasıl işleyeceğini belirten ayarları içerir.</span><span class="sxs-lookup"><span data-stu-id="b2f6d-103">Contains settings that specify how the .NET Framework handles web addresses expressed using uniform resource identifiers (URIs).</span></span>  
   
-## <a name="schema-hierarchy"></a><span data-ttu-id="ec178-104">Şema hiyerarşisi</span><span class="sxs-lookup"><span data-stu-id="ec178-104">Schema Hierarchy</span></span>  
- [<span data-ttu-id="ec178-105">\<Yapılandırma > öğesi</span><span class="sxs-lookup"><span data-stu-id="ec178-105">\<configuration> Element</span></span>](../configuration-element.md)  
+[<span data-ttu-id="b2f6d-104"> **\<Yapılandırma >** </span><span class="sxs-lookup"><span data-stu-id="b2f6d-104">**\<configuration>**</span></span>](../configuration-element.md)  
+<span data-ttu-id="b2f6d-105">&nbsp; @ no__t-1 **\<uri >**</span><span class="sxs-lookup"><span data-stu-id="b2f6d-105">&nbsp;&nbsp;**\<uri>**</span></span>  
   
- [<span data-ttu-id="ec178-106">\<Uri ></span><span class="sxs-lookup"><span data-stu-id="ec178-106">\<uri></span></span>](uri-element-uri-settings.md)  
-  
-## <a name="syntax"></a><span data-ttu-id="ec178-107">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="ec178-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b2f6d-106">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="b2f6d-106">Syntax</span></span>  
   
 ```xml  
 <uri>  
 </uri>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="ec178-108">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="ec178-108">Attributes and Elements</span></span>  
- <span data-ttu-id="ec178-109">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="ec178-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="b2f6d-107">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="b2f6d-107">Attributes and Elements</span></span>  
+ <span data-ttu-id="b2f6d-108">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="b2f6d-108">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="ec178-110">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="ec178-110">Attributes</span></span>  
- <span data-ttu-id="ec178-111">Yok.</span><span class="sxs-lookup"><span data-stu-id="ec178-111">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="b2f6d-109">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="b2f6d-109">Attributes</span></span>  
+ <span data-ttu-id="b2f6d-110">Yok.</span><span class="sxs-lookup"><span data-stu-id="b2f6d-110">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="ec178-112">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="ec178-112">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="b2f6d-111">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="b2f6d-111">Child Elements</span></span>  
   
-|<span data-ttu-id="ec178-113">**Öğe**</span><span class="sxs-lookup"><span data-stu-id="ec178-113">**Element**</span></span>|<span data-ttu-id="ec178-114">**Açıklama**</span><span class="sxs-lookup"><span data-stu-id="ec178-114">**Description**</span></span>|  
+|<span data-ttu-id="b2f6d-112">**Öğe**</span><span class="sxs-lookup"><span data-stu-id="b2f6d-112">**Element**</span></span>|<span data-ttu-id="b2f6d-113">**Açıklama**</span><span class="sxs-lookup"><span data-stu-id="b2f6d-113">**Description**</span></span>|  
 |-----------------|---------------------|  
-|[<span data-ttu-id="ec178-115">IDN</span><span class="sxs-lookup"><span data-stu-id="ec178-115">idn</span></span>](idn-element-uri-settings.md)|<span data-ttu-id="ec178-116">Uluslararası etki alanı adı (ıDN) ayrıştırma 'nın etki alanı adlarına uygulandığını belirtir.</span><span class="sxs-lookup"><span data-stu-id="ec178-116">Specifies if Internationalized Domain Name (IDN) parsing is applied to domain names.</span></span>|  
-|[<span data-ttu-id="ec178-117">iriParsing</span><span class="sxs-lookup"><span data-stu-id="ec178-117">iriParsing</span></span>](iriparsing-element-uri-settings.md)|<span data-ttu-id="ec178-118">Uluslararası kaynak tanımlayıcı (IRI) ayrıştırmanın uygulanıp uygulanmadığını <xref:System.Uri> ve IRI ayrıştırma kurallarının uygulanıp uygulanamayacağını belirtir.</span><span class="sxs-lookup"><span data-stu-id="ec178-118">Specifies if International Resource Identifier (IRI) parsing is applied to <xref:System.Uri> and whether IRI parsing rules should be applied.</span></span>|  
-|[<span data-ttu-id="ec178-119">schemeSettings</span><span class="sxs-lookup"><span data-stu-id="ec178-119">schemeSettings</span></span>](schemesettings-element-uri-settings.md)|<span data-ttu-id="ec178-120">Belirli düzenler için <xref:System.Uri> nasıl ayrıştırılacaksınız belirtir.</span><span class="sxs-lookup"><span data-stu-id="ec178-120">Specifies how a <xref:System.Uri> will be parsed for specific schemes.</span></span>|  
+|[<span data-ttu-id="b2f6d-114">IDN</span><span class="sxs-lookup"><span data-stu-id="b2f6d-114">idn</span></span>](idn-element-uri-settings.md)|<span data-ttu-id="b2f6d-115">Uluslararası etki alanı adı (ıDN) ayrıştırma 'nın etki alanı adlarına uygulandığını belirtir.</span><span class="sxs-lookup"><span data-stu-id="b2f6d-115">Specifies if Internationalized Domain Name (IDN) parsing is applied to domain names.</span></span>|  
+|[<span data-ttu-id="b2f6d-116">iriParsing</span><span class="sxs-lookup"><span data-stu-id="b2f6d-116">iriParsing</span></span>](iriparsing-element-uri-settings.md)|<span data-ttu-id="b2f6d-117">Uluslararası kaynak tanımlayıcı (IRI) ayrıştırma <xref:System.Uri> ' a uygulanıp uygulanmadığını ve IRI ayrıştırma kurallarının uygulanıp uygulanamayacağını belirtir.</span><span class="sxs-lookup"><span data-stu-id="b2f6d-117">Specifies if International Resource Identifier (IRI) parsing is applied to <xref:System.Uri> and whether IRI parsing rules should be applied.</span></span>|  
+|[<span data-ttu-id="b2f6d-118">schemeSettings</span><span class="sxs-lookup"><span data-stu-id="b2f6d-118">schemeSettings</span></span>](schemesettings-element-uri-settings.md)|<span data-ttu-id="b2f6d-119">Belirli düzenler için <xref:System.Uri> ' ın nasıl ayrıştıralınacağını belirtir.</span><span class="sxs-lookup"><span data-stu-id="b2f6d-119">Specifies how a <xref:System.Uri> will be parsed for specific schemes.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="ec178-121">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="ec178-121">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="b2f6d-120">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="b2f6d-120">Parent Elements</span></span>  
   
-|<span data-ttu-id="ec178-122">**Öğe**</span><span class="sxs-lookup"><span data-stu-id="ec178-122">**Element**</span></span>|<span data-ttu-id="ec178-123">**Açıklama**</span><span class="sxs-lookup"><span data-stu-id="ec178-123">**Description**</span></span>|  
+|<span data-ttu-id="b2f6d-121">**Öğe**</span><span class="sxs-lookup"><span data-stu-id="b2f6d-121">**Element**</span></span>|<span data-ttu-id="b2f6d-122">**Açıklama**</span><span class="sxs-lookup"><span data-stu-id="b2f6d-122">**Description**</span></span>|  
 |-----------------|---------------------|  
-|[<span data-ttu-id="ec178-124">yapılandırmada</span><span class="sxs-lookup"><span data-stu-id="ec178-124">configuration</span></span>](../configuration-element.md)|<span data-ttu-id="ec178-125">Tüm ad alanları için ayarları içerir.</span><span class="sxs-lookup"><span data-stu-id="ec178-125">Contains settings for all namespaces.</span></span>|  
+|[<span data-ttu-id="b2f6d-123">yapılandırmada</span><span class="sxs-lookup"><span data-stu-id="b2f6d-123">configuration</span></span>](../configuration-element.md)|<span data-ttu-id="b2f6d-124">Tüm ad alanları için ayarları içerir.</span><span class="sxs-lookup"><span data-stu-id="b2f6d-124">Contains settings for all namespaces.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="ec178-126">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="ec178-126">Remarks</span></span>  
- <span data-ttu-id="ec178-127">Öğesi, <xref:System.Net> ad alanındaki sınıflar tarafından kullanılan <xref:System.Uri> sınıf üyeleri için ayarları içerir. `uri`</span><span class="sxs-lookup"><span data-stu-id="ec178-127">The `uri` element contains settings for members of the <xref:System.Uri> class used by classes in the <xref:System.Net> namespace.</span></span> <span data-ttu-id="ec178-128">Ayarlar IRI ve ıDN desteğini yapılandırır.</span><span class="sxs-lookup"><span data-stu-id="ec178-128">The settings configure support for IRI and IDN.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="b2f6d-125">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="b2f6d-125">Remarks</span></span>  
+ <span data-ttu-id="b2f6d-126">@No__t-0 öğesi, <xref:System.Net> ad alanındaki sınıflar tarafından kullanılan <xref:System.Uri> sınıfının üyelerine yönelik ayarları içerir.</span><span class="sxs-lookup"><span data-stu-id="b2f6d-126">The `uri` element contains settings for members of the <xref:System.Uri> class used by classes in the <xref:System.Net> namespace.</span></span> <span data-ttu-id="b2f6d-127">Ayarlar IRI ve ıDN desteğini yapılandırır.</span><span class="sxs-lookup"><span data-stu-id="b2f6d-127">The settings configure support for IRI and IDN.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="ec178-129">Örnek</span><span class="sxs-lookup"><span data-stu-id="ec178-129">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="b2f6d-128">Örnek</span><span class="sxs-lookup"><span data-stu-id="b2f6d-128">Example</span></span>  
   
-### <a name="description"></a><span data-ttu-id="ec178-130">Açıklama</span><span class="sxs-lookup"><span data-stu-id="ec178-130">Description</span></span>  
- <span data-ttu-id="ec178-131">Aşağıdaki örnek, IRI ayrıştırma ve IDN adlarını desteklemek <xref:System.Uri> için sınıfı tarafından kullanılan bir yapılandırmayı gösterir.</span><span class="sxs-lookup"><span data-stu-id="ec178-131">The following example shows a configuration used by the <xref:System.Uri> class to support IRI parsing and IDN names.</span></span> <span data-ttu-id="ec178-132">Örnek, tüm düzen ayarlarını da temizler ve ardından http şeması için tam olmayan yüzde kodlamalı yol sınırlayıcıları için destek ekler.</span><span class="sxs-lookup"><span data-stu-id="ec178-132">The example also clears all scheme settings and then adds support for not escaping percent-encoded path delimiters for the http scheme.</span></span>  
+### <a name="description"></a><span data-ttu-id="b2f6d-129">Açıklama</span><span class="sxs-lookup"><span data-stu-id="b2f6d-129">Description</span></span>  
+ <span data-ttu-id="b2f6d-130">Aşağıdaki örnekte, IRI ayrıştırma ve ıDN adlarını desteklemek için <xref:System.Uri> sınıfı tarafından kullanılan bir yapılandırma gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="b2f6d-130">The following example shows a configuration used by the <xref:System.Uri> class to support IRI parsing and IDN names.</span></span> <span data-ttu-id="b2f6d-131">Örnek, tüm düzen ayarlarını da temizler ve ardından http şeması için tam olmayan yüzde kodlamalı yol sınırlayıcıları için destek ekler.</span><span class="sxs-lookup"><span data-stu-id="b2f6d-131">The example also clears all scheme settings and then adds support for not escaping percent-encoded path delimiters for the http scheme.</span></span>  
   
-### <a name="code"></a><span data-ttu-id="ec178-133">Kod</span><span class="sxs-lookup"><span data-stu-id="ec178-133">Code</span></span>  
+### <a name="code"></a><span data-ttu-id="b2f6d-132">Kod</span><span class="sxs-lookup"><span data-stu-id="b2f6d-132">Code</span></span>  
   
 ```xml  
 <configuration>  
@@ -67,6 +65,6 @@ ms.locfileid: "69663974"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="ec178-134">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="ec178-134">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b2f6d-133">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="b2f6d-133">See also</span></span>
 
-- [<span data-ttu-id="ec178-135">Ağ Ayarları Şeması</span><span class="sxs-lookup"><span data-stu-id="ec178-135">Network Settings Schema</span></span>](index.md)
+- [<span data-ttu-id="b2f6d-134">Ağ Ayarları Şeması</span><span class="sxs-lookup"><span data-stu-id="b2f6d-134">Network Settings Schema</span></span>](index.md)

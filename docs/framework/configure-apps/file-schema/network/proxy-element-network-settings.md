@@ -8,22 +8,22 @@ helpviewer_keywords:
 - <proxy> element
 - proxy element
 ms.assetid: 37a548d8-fade-4ac5-82ec-b49b6c6cb22a
-ms.openlocfilehash: a183c4160c4cd55b05c5c23f7a10e3a1d1c74ea4
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 94858f141e7d540454fca9c151c760c37f9ebbb0
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69659284"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71697940"
 ---
-# <a name="proxy-element-network-settings"></a><span data-ttu-id="35778-102">\<Proxy > öğesi (ağ ayarları)</span><span class="sxs-lookup"><span data-stu-id="35778-102">\<proxy> Element (Network Settings)</span></span>
-<span data-ttu-id="35778-103">Bir ara sunucu tanımlar.</span><span class="sxs-lookup"><span data-stu-id="35778-103">Defines a proxy server.</span></span>  
+# <a name="proxy-element-network-settings"></a><span data-ttu-id="dcd83-102">\<proxy > öğesi (ağ ayarları)</span><span class="sxs-lookup"><span data-stu-id="dcd83-102">\<proxy> Element (Network Settings)</span></span>
+<span data-ttu-id="dcd83-103">Bir ara sunucu tanımlar.</span><span class="sxs-lookup"><span data-stu-id="dcd83-103">Defines a proxy server.</span></span>  
   
- <span data-ttu-id="35778-104">\<Yapılandırma ></span><span class="sxs-lookup"><span data-stu-id="35778-104">\<configuration></span></span>  
-<span data-ttu-id="35778-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="35778-105">\<system.net></span></span>  
-<span data-ttu-id="35778-106">\<defaultProxy ></span><span class="sxs-lookup"><span data-stu-id="35778-106">\<defaultProxy></span></span>  
-<span data-ttu-id="35778-107">\<Proxy ></span><span class="sxs-lookup"><span data-stu-id="35778-107">\<proxy></span></span>  
+[<span data-ttu-id="dcd83-104"> **\<Yapılandırma >** </span><span class="sxs-lookup"><span data-stu-id="dcd83-104">**\<configuration>**</span></span>](../configuration-element.md)  
+<span data-ttu-id="dcd83-105">&nbsp; @ no__t-1[ **@no__t -4system. net >** ](system-net-element-network-settings.md)</span><span class="sxs-lookup"><span data-stu-id="dcd83-105">&nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)</span></span>  
+<span data-ttu-id="dcd83-106">&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<defaultProxy >** ](defaultproxy-element-network-settings.md)</span><span class="sxs-lookup"><span data-stu-id="dcd83-106">&nbsp;&nbsp;&nbsp;&nbsp;[**\<defaultProxy>**](defaultproxy-element-network-settings.md)</span></span>  
+<span data-ttu-id="dcd83-107">&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<proxy >**</span><span class="sxs-lookup"><span data-stu-id="dcd83-107">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<proxy>**</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="35778-108">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="35778-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="dcd83-108">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="dcd83-108">Syntax</span></span>  
   
 ```xml  
 <proxy
@@ -35,46 +35,46 @@ ms.locfileid: "69659284"
 />
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="35778-109">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="35778-109">Attributes and Elements</span></span>  
- <span data-ttu-id="35778-110">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="35778-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="dcd83-109">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="dcd83-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="dcd83-110">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="dcd83-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="35778-111">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="35778-111">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="dcd83-111">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="dcd83-111">Attributes</span></span>  
   
-|<span data-ttu-id="35778-112">**Öznitelik**</span><span class="sxs-lookup"><span data-stu-id="35778-112">**Attribute**</span></span>|<span data-ttu-id="35778-113">**Açıklama**</span><span class="sxs-lookup"><span data-stu-id="35778-113">**Description**</span></span>|  
+|<span data-ttu-id="dcd83-112">**Öznitelik**</span><span class="sxs-lookup"><span data-stu-id="dcd83-112">**Attribute**</span></span>|<span data-ttu-id="dcd83-113">**Açıklama**</span><span class="sxs-lookup"><span data-stu-id="dcd83-113">**Description**</span></span>|  
 |-------------------|---------------------|  
-|`autoDetect`|<span data-ttu-id="35778-114">Proxy 'nin otomatik olarak algılanıp algılanmayacağını belirtir.</span><span class="sxs-lookup"><span data-stu-id="35778-114">Specifies whether the proxy is automatically detected.</span></span> <span data-ttu-id="35778-115">Varsayılan değer `unspecified` şeklindedir.</span><span class="sxs-lookup"><span data-stu-id="35778-115">The default value is `unspecified`.</span></span>|  
-|`bypassonlocal`|<span data-ttu-id="35778-116">Yerel kaynaklar için proxy 'nin atlanıp atlanmayacağını belirtir.</span><span class="sxs-lookup"><span data-stu-id="35778-116">Specifies whether the proxy is bypassed for local resources.</span></span> <span data-ttu-id="35778-117">Yerel sunucu (`http://localhost`, `http://loopback`, veya `http://127.0.0.1`) ve nokta (`http://webserver`) olmayan bir URI 'yi içerir.</span><span class="sxs-lookup"><span data-stu-id="35778-117">Local resources include the local server (`http://localhost`, `http://loopback`, or `http://127.0.0.1`) and a URI without a period (`http://webserver`).</span></span> <span data-ttu-id="35778-118">Varsayılan değer `unspecified` şeklindedir.</span><span class="sxs-lookup"><span data-stu-id="35778-118">The default value is `unspecified`.</span></span>|  
-|`proxyaddress`|<span data-ttu-id="35778-119">Kullanılacak proxy URI 'sini belirtir.</span><span class="sxs-lookup"><span data-stu-id="35778-119">Specifies the proxy URI to use.</span></span>|  
-|`scriptLocation`|<span data-ttu-id="35778-120">Yapılandırma betiğinin konumunu belirtir.</span><span class="sxs-lookup"><span data-stu-id="35778-120">Specifies the location of the configuration script.</span></span> <span data-ttu-id="35778-121">Bu öznitelikle `bypassonlocal` özniteliğini kullanmayın.</span><span class="sxs-lookup"><span data-stu-id="35778-121">Do not use the `bypassonlocal` attribute with this attribute.</span></span> |  
-|`usesystemdefault`|<span data-ttu-id="35778-122">Internet Explorer proxy ayarlarının kullanılıp kullanılmayacağını belirtir.</span><span class="sxs-lookup"><span data-stu-id="35778-122">Specifies whether to use Internet Explorer proxy settings.</span></span> <span data-ttu-id="35778-123">Olarak `true`ayarlanırsa, sonraki öznitelikler Internet Explorer proxy ayarlarını geçersiz kılar.</span><span class="sxs-lookup"><span data-stu-id="35778-123">If set to `true`, subsequent attributes will override Internet Explorer proxy settings.</span></span> <span data-ttu-id="35778-124">Varsayılan değer `unspecified` şeklindedir.</span><span class="sxs-lookup"><span data-stu-id="35778-124">The default value is `unspecified`.</span></span>|  
+|`autoDetect`|<span data-ttu-id="dcd83-114">Proxy 'nin otomatik olarak algılanıp algılanmayacağını belirtir.</span><span class="sxs-lookup"><span data-stu-id="dcd83-114">Specifies whether the proxy is automatically detected.</span></span> <span data-ttu-id="dcd83-115">Varsayılan değer `unspecified` şeklindedir.</span><span class="sxs-lookup"><span data-stu-id="dcd83-115">The default value is `unspecified`.</span></span>|  
+|`bypassonlocal`|<span data-ttu-id="dcd83-116">Yerel kaynaklar için proxy 'nin atlanıp atlanmayacağını belirtir.</span><span class="sxs-lookup"><span data-stu-id="dcd83-116">Specifies whether the proxy is bypassed for local resources.</span></span> <span data-ttu-id="dcd83-117">Yerel kaynaklar yerel sunucuyu (`http://localhost`, `http://loopback` veya `http://127.0.0.1`) ve nokta olmayan bir URI 'yi (`http://webserver`) içerir.</span><span class="sxs-lookup"><span data-stu-id="dcd83-117">Local resources include the local server (`http://localhost`, `http://loopback`, or `http://127.0.0.1`) and a URI without a period (`http://webserver`).</span></span> <span data-ttu-id="dcd83-118">Varsayılan değer `unspecified` şeklindedir.</span><span class="sxs-lookup"><span data-stu-id="dcd83-118">The default value is `unspecified`.</span></span>|  
+|`proxyaddress`|<span data-ttu-id="dcd83-119">Kullanılacak proxy URI 'sini belirtir.</span><span class="sxs-lookup"><span data-stu-id="dcd83-119">Specifies the proxy URI to use.</span></span>|  
+|`scriptLocation`|<span data-ttu-id="dcd83-120">Yapılandırma betiğinin konumunu belirtir.</span><span class="sxs-lookup"><span data-stu-id="dcd83-120">Specifies the location of the configuration script.</span></span> <span data-ttu-id="dcd83-121">Bu öznitelikle `bypassonlocal` özniteliğini kullanmayın.</span><span class="sxs-lookup"><span data-stu-id="dcd83-121">Do not use the `bypassonlocal` attribute with this attribute.</span></span> |  
+|`usesystemdefault`|<span data-ttu-id="dcd83-122">Internet Explorer proxy ayarlarının kullanılıp kullanılmayacağını belirtir.</span><span class="sxs-lookup"><span data-stu-id="dcd83-122">Specifies whether to use Internet Explorer proxy settings.</span></span> <span data-ttu-id="dcd83-123">@No__t-0 olarak ayarlanırsa, sonraki öznitelikler Internet Explorer proxy ayarlarını geçersiz kılar.</span><span class="sxs-lookup"><span data-stu-id="dcd83-123">If set to `true`, subsequent attributes will override Internet Explorer proxy settings.</span></span> <span data-ttu-id="dcd83-124">Varsayılan değer `unspecified` şeklindedir.</span><span class="sxs-lookup"><span data-stu-id="dcd83-124">The default value is `unspecified`.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="35778-125">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="35778-125">Child Elements</span></span>  
- <span data-ttu-id="35778-126">Yok.</span><span class="sxs-lookup"><span data-stu-id="35778-126">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="dcd83-125">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="dcd83-125">Child Elements</span></span>  
+ <span data-ttu-id="dcd83-126">Yok.</span><span class="sxs-lookup"><span data-stu-id="dcd83-126">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="35778-127">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="35778-127">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="dcd83-127">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="dcd83-127">Parent Elements</span></span>  
   
-|<span data-ttu-id="35778-128">**Öğe**</span><span class="sxs-lookup"><span data-stu-id="35778-128">**Element**</span></span>|<span data-ttu-id="35778-129">**Açıklama**</span><span class="sxs-lookup"><span data-stu-id="35778-129">**Description**</span></span>|  
+|<span data-ttu-id="dcd83-128">**Öğe**</span><span class="sxs-lookup"><span data-stu-id="dcd83-128">**Element**</span></span>|<span data-ttu-id="dcd83-129">**Açıklama**</span><span class="sxs-lookup"><span data-stu-id="dcd83-129">**Description**</span></span>|  
 |-----------------|---------------------|  
-|[<span data-ttu-id="35778-130">defaultProxy</span><span class="sxs-lookup"><span data-stu-id="35778-130">defaultProxy</span></span>](defaultproxy-element-network-settings.md)|<span data-ttu-id="35778-131">Köprü Metni Aktarım Protokolü (HTTP) proxy sunucusunu yapılandırır.</span><span class="sxs-lookup"><span data-stu-id="35778-131">Configures the Hypertext Transfer Protocol (HTTP) proxy server.</span></span>|  
+|[<span data-ttu-id="dcd83-130">defaultProxy</span><span class="sxs-lookup"><span data-stu-id="dcd83-130">defaultProxy</span></span>](defaultproxy-element-network-settings.md)|<span data-ttu-id="dcd83-131">Köprü Metni Aktarım Protokolü (HTTP) proxy sunucusunu yapılandırır.</span><span class="sxs-lookup"><span data-stu-id="dcd83-131">Configures the Hypertext Transfer Protocol (HTTP) proxy server.</span></span>|  
   
-## <a name="text-value"></a><span data-ttu-id="35778-132">Metin Değeri</span><span class="sxs-lookup"><span data-stu-id="35778-132">Text Value</span></span>  
+## <a name="text-value"></a><span data-ttu-id="dcd83-132">Metin Değeri</span><span class="sxs-lookup"><span data-stu-id="dcd83-132">Text Value</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="35778-133">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="35778-133">Remarks</span></span>  
- <span data-ttu-id="35778-134">Öğesi `proxy` , bir uygulama için ara sunucu tanımlar.</span><span class="sxs-lookup"><span data-stu-id="35778-134">The `proxy` element defines a proxy server for an application.</span></span> <span data-ttu-id="35778-135">Yapılandırma dosyasında bu öğe eksikse .NET Framework, Internet Explorer 'daki proxy ayarlarını kullanacaktır.</span><span class="sxs-lookup"><span data-stu-id="35778-135">If this element is missing from the configuration file, then the .NET Framework will use the proxy settings in Internet Explorer.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="dcd83-133">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="dcd83-133">Remarks</span></span>  
+ <span data-ttu-id="dcd83-134">@No__t-0 öğesi, bir uygulama için proxy sunucu tanımlar.</span><span class="sxs-lookup"><span data-stu-id="dcd83-134">The `proxy` element defines a proxy server for an application.</span></span> <span data-ttu-id="dcd83-135">Yapılandırma dosyasında bu öğe eksikse .NET Framework, Internet Explorer 'daki proxy ayarlarını kullanacaktır.</span><span class="sxs-lookup"><span data-stu-id="dcd83-135">If this element is missing from the configuration file, then the .NET Framework will use the proxy settings in Internet Explorer.</span></span>  
   
- <span data-ttu-id="35778-136">`proxyaddress` Özniteliğin değeri iyi biçimlendirilmiş bir Tekdüzen Kaynak göstergesi (URI) olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="35778-136">The value for the `proxyaddress` attribute should be a well-formed Uniform Resource Indicator (URI).</span></span>  
+ <span data-ttu-id="dcd83-136">@No__t-0 özniteliğinin değeri iyi biçimlendirilmiş bir Tekdüzen Kaynak göstergesi (URI) olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="dcd83-136">The value for the `proxyaddress` attribute should be a well-formed Uniform Resource Indicator (URI).</span></span>  
   
- <span data-ttu-id="35778-137">`scriptLocation` Öznitelik, proxy yapılandırma betikleri otomatik olarak algılanmasını ifade eder.</span><span class="sxs-lookup"><span data-stu-id="35778-137">The `scriptLocation` attribute refers to the automatic detection of proxy configuration scripts.</span></span> <span data-ttu-id="35778-138">Bu sınıf, Internet Explorer 'da **otomatik yapılandırma betiği kullan** seçeneği belirlendiğinde bir yapılandırma betiğini (genellikle WPAD. dat olarak adlandırılır) bulmaya çalışır. <xref:System.Net.WebProxy></span><span class="sxs-lookup"><span data-stu-id="35778-138">The <xref:System.Net.WebProxy> class will attempt to locate a configuration script (usually named Wpad.dat) when the **Use automatic configuration script** option is selected in Internet Explorer.</span></span> <span data-ttu-id="35778-139">Herhangi bir değere ayarlanırsa, `scriptLocation` yok sayılır. `bypassonlocal`</span><span class="sxs-lookup"><span data-stu-id="35778-139">If `bypassonlocal` is set to any value, `scriptLocation` is ignored.</span></span>
+ <span data-ttu-id="dcd83-137">@No__t-0 özniteliği, proxy yapılandırma betikleri otomatik algılamayı ifade eder.</span><span class="sxs-lookup"><span data-stu-id="dcd83-137">The `scriptLocation` attribute refers to the automatic detection of proxy configuration scripts.</span></span> <span data-ttu-id="dcd83-138">@No__t-0 sınıfı, Internet Explorer 'da **otomatik yapılandırma betiği kullan** seçeneği belirlendiğinde bir yapılandırma betiğini (genellikle WPAD. dat olarak adlandırılır) bulmaya çalışır.</span><span class="sxs-lookup"><span data-stu-id="dcd83-138">The <xref:System.Net.WebProxy> class will attempt to locate a configuration script (usually named Wpad.dat) when the **Use automatic configuration script** option is selected in Internet Explorer.</span></span> <span data-ttu-id="dcd83-139">@No__t-0 herhangi bir değere ayarlanırsa, `scriptLocation` yok sayılır.</span><span class="sxs-lookup"><span data-stu-id="dcd83-139">If `bypassonlocal` is set to any value, `scriptLocation` is ignored.</span></span>
   
- <span data-ttu-id="35778-140">2,0 sürümüne geçiş yapan .NET Framework sürüm 1,1 uygulamaları için özniteliğinikullanın.`usesystemdefault`</span><span class="sxs-lookup"><span data-stu-id="35778-140">Use the `usesystemdefault` attribute for .NET Framework version 1.1 applications that are migrating to version 2.0.</span></span>  
+ <span data-ttu-id="dcd83-140">2,0 sürümüne geçiş yapan .NET Framework sürüm 1,1 uygulamaları için `usesystemdefault` özniteliğini kullanın.</span><span class="sxs-lookup"><span data-stu-id="dcd83-140">Use the `usesystemdefault` attribute for .NET Framework version 1.1 applications that are migrating to version 2.0.</span></span>  
   
- <span data-ttu-id="35778-141">`proxyaddress` Öznitelik geçersiz bir varsayılan proxy belirtiyorsa bir özel durum oluşur.</span><span class="sxs-lookup"><span data-stu-id="35778-141">An exception is thrown if the `proxyaddress` attribute specifies an invalid default proxy.</span></span> <span data-ttu-id="35778-142">Özel durum üzerindeki özelliği, hatanın kök nedeni hakkında daha fazla bilgi içermelidir. <xref:System.Exception.InnerException%2A></span><span class="sxs-lookup"><span data-stu-id="35778-142">The <xref:System.Exception.InnerException%2A> property on the exception should have more information about the root cause of the error.</span></span>  
+ <span data-ttu-id="dcd83-141">@No__t-0 özniteliği geçersiz bir varsayılan proxy belirtiyorsa bir özel durum oluşur.</span><span class="sxs-lookup"><span data-stu-id="dcd83-141">An exception is thrown if the `proxyaddress` attribute specifies an invalid default proxy.</span></span> <span data-ttu-id="dcd83-142">Özel durumun <xref:System.Exception.InnerException%2A> özelliği, hatanın kök nedeni hakkında daha fazla bilgi içermelidir.</span><span class="sxs-lookup"><span data-stu-id="dcd83-142">The <xref:System.Exception.InnerException%2A> property on the exception should have more information about the root cause of the error.</span></span>  
   
-## <a name="configuration-files"></a><span data-ttu-id="35778-143">Yapılandırma Dosyaları</span><span class="sxs-lookup"><span data-stu-id="35778-143">Configuration Files</span></span>  
- <span data-ttu-id="35778-144">Bu öğe, uygulama yapılandırma dosyasında veya makine yapılandırma dosyasında (Machine. config) kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="35778-144">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
+## <a name="configuration-files"></a><span data-ttu-id="dcd83-143">Yapılandırma Dosyaları</span><span class="sxs-lookup"><span data-stu-id="dcd83-143">Configuration Files</span></span>  
+ <span data-ttu-id="dcd83-144">Bu öğe, uygulama yapılandırma dosyasında veya makine yapılandırma dosyasında (Machine. config) kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="dcd83-144">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="35778-145">Örnek</span><span class="sxs-lookup"><span data-stu-id="35778-145">Example</span></span>  
- <span data-ttu-id="35778-146">Aşağıdaki örnek, Internet Explorer proxy 'sinin varsayılan değerlerini kullanır, proxy adresini belirtir ve yerel erişim için ara sunucuyu atlar.</span><span class="sxs-lookup"><span data-stu-id="35778-146">The following example uses the defaults from the Internet Explorer proxy, specifies the proxy address, and bypasses the proxy for local access.</span></span>  
+## <a name="example"></a><span data-ttu-id="dcd83-145">Örnek</span><span class="sxs-lookup"><span data-stu-id="dcd83-145">Example</span></span>  
+ <span data-ttu-id="dcd83-146">Aşağıdaki örnek, Internet Explorer proxy 'sinin varsayılan değerlerini kullanır, proxy adresini belirtir ve yerel erişim için ara sunucuyu atlar.</span><span class="sxs-lookup"><span data-stu-id="dcd83-146">The following example uses the defaults from the Internet Explorer proxy, specifies the proxy address, and bypasses the proxy for local access.</span></span>  
   
 ```xml  
 <configuration>  
@@ -90,7 +90,7 @@ ms.locfileid: "69659284"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="35778-147">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="35778-147">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="dcd83-147">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="dcd83-147">See also</span></span>
 
 - <xref:System.Net.WebProxy?displayProperty=nameWithType>
-- [<span data-ttu-id="35778-148">Ağ Ayarları Şeması</span><span class="sxs-lookup"><span data-stu-id="35778-148">Network Settings Schema</span></span>](index.md)
+- [<span data-ttu-id="dcd83-148">Ağ Ayarları Şeması</span><span class="sxs-lookup"><span data-stu-id="dcd83-148">Network Settings Schema</span></span>](index.md)
