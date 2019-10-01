@@ -45,6 +45,10 @@
           href: tutorials/mlnet-cli.md
         - name: Model Oluşturucu ve Razor Pages kullanarak yaklaşımı analiz etme
           href: tutorials/sentiment-analysis-model-builder.md
+    - name: Infer.NET
+      items:
+        - name: Infer.NET ile olasılığa dayalı programlama
+          href: how-to-guides/matchup-app-infer-net.md
 - name: Kavramlar
   items:
     - name: ML.NET görevleri (model türleri)
@@ -95,10 +99,6 @@
           href: how-to-guides/install-ml-net-cli.md
         - name: Otomatik ML API’sini kullanma
           href: how-to-guides/how-to-use-the-automl-api.md
-    - name: Infer.NET
-      items:
-        - name: Infer.NET ile olasılığa dayalı programlama
-          href: how-to-guides/matchup-app-infer-net.md
 - name: Başvuru
   items:
     - name: API
