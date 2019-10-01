@@ -81,7 +81,7 @@
               href: remove-element-for-webrequestmodules-network-settings.md
             - name: webRequestModules için <clear> Öğesi (Ağ Ayarları)
               href: clear-element-for-webrequestmodules-network-settings.md
-    - name: <Uri> Öğesi (Uri Ayarları)
+    - name: <uri> Öğesi (Uri Ayarları)
       href: uri-element-uri-settings.md
       items:
         - name: <idn> Öğesi (Uri Ayarları)
