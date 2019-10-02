@@ -2,64 +2,64 @@
 title: Zaman uyumsuz görevleri tamamlarlar işleme
 ms.date: 09/12/2018
 ms.assetid: 25331850-35a7-43b3-ab76-3908e4346b9d
-ms.openlocfilehash: 464e6be108eef86a023a0bad225d2ad12bfb2c3e
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: b618fd6bf80551231d2b285fd0e8aef688d00d93
+ms.sourcegitcommit: 878ca7550b653114c3968ef8906da2b3e60e3c7a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926740"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71736725"
 ---
 # <a name="start-multiple-async-tasks-and-process-them-as-they-complete-c"></a>Birden çok zaman uyumsuz görev başlatın ve bunları tamamlarsa (C#) işleyin
 
-Kullanarak <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType>, aynı anda birden çok görev başlatabilir ve bunları, başlatıldıkları sırada işlemek yerine, bir kez işlem tamamlanır.
+@No__t-0 ' ı kullanarak, aynı anda birden çok görev başlatabilir ve bunları, başlatıldıkları sırada işlemek yerine, tek tek işleyebilir.
 
-Aşağıdaki örnek, bir görev koleksiyonu oluşturmak için bir sorgu kullanır. Her görev belirtilen bir Web sitesinin içeriğini indirir. Bir while döngüsünün her yinelemesinde, `WhenAny` geri beklenmiş bir çağrı, önce indirmeyi izleyen görevler koleksiyonundaki görevi döndürür. Bu görev koleksiyondan kaldırılır ve işlenir. Döngü, koleksiyon daha fazla görev içerene kadar yinelenir.
+Aşağıdaki örnek, bir görev koleksiyonu oluşturmak için bir sorgu kullanır. Her görev belirtilen bir Web sitesinin içeriğini indirir. Bir while döngüsünün her yinelemesinde, `WhenAny` ' a uygulanan bir çağrı, önce indirmeyi izleyen görevler koleksiyonundaki görevi döndürür. Bu görev koleksiyondan kaldırılır ve işlenir. Döngü, koleksiyon daha fazla görev içerene kadar yinelenir.
 
 > [!NOTE]
 > Örnekleri çalıştırmak için, bilgisayarınızda Visual Studio (2012 veya üzeri) ve .NET Framework 4,5 ya da daha yeni bir sürümü yüklü olmalıdır.
 
 ## <a name="download-an-example-solution"></a>Örnek çözüm indirin
 
-Tüm Windows Presentation Foundation (WPF) projesini [zaman uyumsuz örnekten indirebilirsiniz: Uygulamanızı](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) hassas ayarlamalar yapın ve ardından aşağıdaki adımları izleyin.
+Tüm Windows Presentation Foundation (WPF) projesini [zaman uyumsuz örnekten indirebilirsiniz: uygulamanızı Ince ayar](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) yapın ve ardından aşağıdaki adımları izleyin.
 
 > [!TIP]
-> Projeyi indirmek istemiyorsanız, bunun yerine bu konunun sonundaki MainWindow.xaml.cs dosyasını gözden geçirebilirsiniz.
+> Projeyi indirmek istemiyorsanız, bunun yerine bu konunun sonundaki *MainWindow.xaml.cs* dosyasını gözden geçirebilirsiniz.
 
-1. İndirdiğiniz dosyaları. zip dosyasından ayıklayın ve ardından Visual Studio 'Yu başlatın.
+1. İndirdiğiniz dosyaları *. zip* dosyasından ayıklayın ve ardından Visual Studio 'yu başlatın.
 
-2. Menü çubuğunda **Dosya** > **Aç** > **Proje/çözüm**' ı seçin.
+2. Menü çubuğunda **dosya** >  ' i**Aç** > **Proje/çözüm**' i seçin.
 
-3. **Proje Aç** iletişim kutusunda, indirdiğiniz örnek kodu tutan klasörü açın ve ardından AsyncFineTuningCS için çözüm (. sln) dosyasını açın.
+3. **Proje Aç** iletişim kutusunda, indirdiğiniz örnek kodu tutan klasörü açın ve ardından *AsyncFineTuningCS*/*AsyncFineTuningVB*için çözüm ( *. sln*) dosyasını açın.
 
 4. **Çözüm Gezgini**' de, **Processtasksastheyıfinish** projesinin kısayol menüsünü açın ve ardından **Başlangıç projesi olarak ayarla**' yı seçin.
 
-5. Programı çalıştırmak için **F5** tuşunu seçin (veya, programı hata ayıklamadan çalıştırmak için **CTRL**+**F5** tuşlarına basın).
+5. Programı hata ayıklamayla çalıştırmak için <kbd>F5</kbd> tuşunu seçin veya programı hata ayıklamadan çalıştırmak için <kbd>CTRL</kbd>+<kbd>F5</kbd> tuşlarına basın.
 
 6. İndirilen uzunluklarının her zaman aynı sırada görünmediğini doğrulamak için projeyi birkaç kez çalıştırın.
 
 ## <a name="create-the-program-yourself"></a>Programı kendiniz oluşturun
 
-Bu örnek, [bir tane tamamlandıktan sonra kalan zaman uyumsuz görevleri iptal etmeC#](./cancel-remaining-async-tasks-after-one-is-complete.md)bölümünde geliştirilen koda ekler () ve aynı kullanıcı arabirimini kullanır.
+Bu örnek, [bir tane tamamlandıktan sonra kalan zaman uyumsuz görevleri iptal etmeC#](cancel-remaining-async-tasks-after-one-is-complete.md)bölümünde geliştirilen koda ekler () ve aynı kullanıcı arabirimini kullanır.
 
-Örneği kendiniz oluşturmak için, örnek ' i [karşıdan yükleme](./cancel-remaining-async-tasks-after-one-is-complete.md#downloading-the-example) bölümündeki yönergeleri izleyin, ancak başlangıç projesi olarak, bir **erteleme görevi** ayarlayın. Bu konudaki `AccessTheWebAsync` değişiklikleri bu projedeki yöntemine ekleyin. Değişiklikler yıldız işaretiyle işaretlenir.
+Örneği kendiniz oluşturmak için, örnek ' i [karşıdan yükleme](cancel-remaining-async-tasks-after-one-is-complete.md#downloading-the-example) bölümündeki yönergeleri izleyin, ancak başlangıç projesi olarak, bir **erteleme görevi** ayarlayın. Bu konudaki değişiklikleri bu projedeki `AccessTheWebAsync` yöntemine ekleyin. Değişiklikler yıldız işaretiyle işaretlenir.
 
-Bu **görev** projesi, yürütüldüğünde bir görev koleksiyonu oluşturduğunda zaten bir sorgu içeriyor. Aşağıdaki kodda öğesine `ProcessURLAsync` yapılan her çağrı, `TResult` bir tam <xref:System.Threading.Tasks.Task%601>sayı olan bir döndürür:
+Bu **görev** projesi, yürütüldüğünde bir görev koleksiyonu oluşturduğunda zaten bir sorgu içeriyor. Aşağıdaki kodda `ProcessURLAsync` ' a yapılan her çağrı, `TResult` ' nin bir tamsayı olduğu bir <xref:System.Threading.Tasks.Task%601> döndürür:
 
 ```csharp
 IEnumerable<Task<int>> downloadTasksQuery = from url in urlList select ProcessURL(url, client, ct);
 ```
 
-Projenin MainWindow.xaml.cs dosyasında, `AccessTheWebAsync` yönteminde aşağıdaki değişiklikleri yapın.
+Projenin *MainWindow.xaml.cs* dosyasında `AccessTheWebAsync` yönteminde aşağıdaki değişiklikleri yapın:
 
-- Yerine uygulayarak <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType> sorguyu yürütün. <xref:System.Linq.Enumerable.ToArray%2A>
+- @No__t-1 yerine <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType> uygulayarak sorguyu yürütün.
 
     ```csharp
     List<Task<int>> downloadTasks = downloadTasksQuery.ToList();
     ```
 
-- Koleksiyondaki her `while` görev için aşağıdaki adımları gerçekleştiren bir döngü ekleyin:
+- Koleksiyondaki her görev için aşağıdaki adımları gerçekleştiren bir `while` döngüsü ekleyin:
 
-    1. Bu, indirme işleminin sona `WhenAny` ermesi için koleksiyondaki ilk görevi tanımlamak üzere öğesine bir çağrıyı bekler.
+    1. Bir `WhenAny` ' a bir çağrıyı, indirme işleminin bitmesini tamamlayacak koleksiyondaki ilk görevi belirlemek için bekler.
 
         ```csharp
         Task<int> firstFinishedTask = await Task.WhenAny(downloadTasks);
@@ -71,7 +71,7 @@ Projenin MainWindow.xaml.cs dosyasında, `AccessTheWebAsync` yönteminde aşağ�
         downloadTasks.Remove(firstFinishedTask);
         ```
 
-    3. `firstFinishedTask` Bir`ProcessURLAsync`çağrısıyla döndürülen await. Değişkeni bir <xref:System.Threading.Tasks.Task%601> WHERE`TReturn`tamsayıdır. `firstFinishedTask` Görev zaten tamamlanmış, ancak aşağıdaki örnekte gösterildiği gibi, indirilen Web sitesinin uzunluğunu almak için bu işlemi beklediniz.
+    3. Await `ProcessURLAsync` @no__t bir çağrı tarafından döndürülen-0. @No__t-0 değişkeni, `TReturn` ' nin bir tamsayı olduğu bir <xref:System.Threading.Tasks.Task%601> ' dir. Görev zaten tamamlanmış, ancak aşağıdaki örnekte gösterildiği gibi, indirilen Web sitesinin uzunluğunu almak için bu işlemi beklediniz. Görev hata verdiyse, `await`, `AggregateException` ' i oluşturacak `Result` özelliğinin okunmasından farklı olarak, `AggregateException` ' de depolanan ilk alt özel durumu oluşturur.
 
         ```csharp
         int length = await firstFinishedTask;
@@ -81,13 +81,13 @@ Projenin MainWindow.xaml.cs dosyasında, `AccessTheWebAsync` yönteminde aşağ�
 İndirilen uzunluklarının her zaman aynı sırada görünmediğini doğrulamak için programı birkaç kez çalıştırın.
 
 > [!CAUTION]
-> Az sayıda görevle `WhenAny` ilgili sorunları gidermek için örnekte açıklandığı gibi bir döngüde kullanabilirsiniz. Ancak, işlemek için çok sayıda göreviniz varsa diğer yaklaşımlar daha etkilidir. Daha fazla bilgi ve örnek için bkz. [görevleri tamamladıklarında işleme](https://devblogs.microsoft.com/pfxteam/processing-tasks-as-they-complete/).
+> Örneğin, az sayıda görev içeren sorunları çözümlemek için örnekte açıklandığı gibi `WhenAny` ' ı bir döngüde kullanabilirsiniz. Ancak, işlemek için çok sayıda göreviniz varsa diğer yaklaşımlar daha etkilidir. Daha fazla bilgi ve örnek için bkz. [görevleri tamamladıklarında işleme](https://devblogs.microsoft.com/pfxteam/processing-tasks-as-they-complete/).
 
 ## <a name="complete-example"></a>Örnek Tamam
 
-Aşağıdaki kod, örnek için MainWindow.xaml.cs dosyasının tüm metinkodudur. Yıldız işaretleri bu örnek için eklenen öğeleri işaretler. Ayrıca, için <xref:System.Net.Http>bir başvuru eklemeniz gerektiğini unutmayın.
+Aşağıdaki kod, örnek için *MainWindow.xaml.cs* dosyasının tüm metinkodudur. Yıldız işaretleri bu örnek için eklenen öğeleri işaretler. Ayrıca, <xref:System.Net.Http> için bir başvuru eklemeniz gerektiğini unutmayın.
 
-Projeyi [zaman uyumsuz örnekten indirebilirsiniz: Uygulamanızı](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)hassas bir şekilde ayarlama.
+Projeyi [zaman uyumsuz örnekten indirebilirsiniz: uygulamanızı hassas bir şekilde ayarlama](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea).
 
 ```csharp
 using System;
@@ -228,6 +228,6 @@ namespace ProcessTasksAsTheyFinish
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Threading.Tasks.Task.WhenAny%2A>
-- [Zaman uyumsuz uygulamanızda ince ayar yapma (C#)](./fine-tuning-your-async-application.md)
-- [Async ve await (C#) ile zaman uyumsuz programlama](./index.md)
-- [Zaman uyumsuz örnek: Uygulamanızda ince ayar yapma](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)
+- [Zaman uyumsuz uygulamanızda ince ayar yapma (C#)](fine-tuning-your-async-application.md)
+- [Async ve await (C#) ile zaman uyumsuz programlama](index.md)
+- [Zaman uyumsuz örnek: uygulamanıza Ince ayar yapma](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)

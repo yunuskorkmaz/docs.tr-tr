@@ -5,12 +5,12 @@ ms.date: 08/29/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to
-ms.openlocfilehash: 9617582c79b2278e3a68e7acf84568247b81eca1
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: 8090e4565a7e55aaa9cc9939e61eb728a169de8d
+ms.sourcegitcommit: 878ca7550b653114c3968ef8906da2b3e60e3c7a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70167653"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71736866"
 ---
 # <a name="explain-model-predictions-using-permutation-feature-importance"></a>Permütasyon özelliği önem derecesi kullanarak model tahminlerini açıklayın
 
@@ -18,17 +18,17 @@ ML.NET makine öğrenme modeli tahminlerini, katkı özelliklerinin permütasyon
 
 Makine öğrenimi modelleri genellikle giriş ve çıkış oluşturan siyah kutular olarak düşünülebilir. Çıktıyı etkileyen özellikler arasındaki ara adımlar veya etkileşimler nadiren anlaşılmıştır. Makine öğrenimi, sağlık hizmetleri gibi günlük hayatın daha belirgin yönlerine tanıtıldığında, Machine Learning modelinin neden yaptığı kararları nasıl yaptığını anlamak en önemli öneme sahiptir. Örneğin, bir makine öğrenimi modeliyle tanılar yapılırsa, sağlık uzmanlarının, bu, bu, tanılar haline gelen faktörleri bulmak için bir yol gerekir. Doğru tanısı sağlamak, hasta 'ın hızlı bir şekilde kurtarma yapıp yapmayacağı konusunda harika bir farklılık yapabilir. Bu nedenle, bir modeldeki explainability düzeyi arttıkça, daha yüksek güvenilirlikli sağlık uzmanlarının model tarafından yapılan kararları kabul etmesi veya reddetmesi gerekir.
 
-Farklı teknikler, bunlardan biri PFI olan modelleri açıklamak için kullanılır. PFı, [Breiman 'Nın *rastgele orman* kağıdı](https://www.stat.berkeley.edu/~breiman/randomforest2001.pdf)tarafından ilham olan sınıflandırma ve regresyon modellerini açıklamak için kullanılan bir tekniktir (bkz. Bölüm 10). Yüksek düzeyde, çalışma şekli, veri kümesinin tamamı için bir seferde bir özelliği rastgele karıştırarak ve ilgi çekici performans ölçüsünün ne kadarının azaldığından hesaplama. Değişiklik ne kadar büyükse, bu özellik o kadar önemli olur. 
+Farklı teknikler, bunlardan biri PFI olan modelleri açıklamak için kullanılır. PFı, [Breiman 'Nın *rastgele orman* kağıdı](https://www.stat.berkeley.edu/~breiman/randomforest2001.pdf) tarafından ilham olan sınıflandırma ve regresyon modellerini açıklamak için kullanılan bir tekniktir (bkz. Bölüm 10). Yüksek düzeyde, çalışma şekli, veri kümesinin tamamı için bir seferde bir özelliği rastgele karıştırarak ve ilgi çekici performans ölçüsünün ne kadarının azaldığından hesaplama. Değişiklik ne kadar büyükse, bu özellik o kadar önemli olur. 
 
 Ayrıca, en önemli özellikleri vurgulayarak model oluşturucular, gürültü ve eğitim süresini azaltan daha anlamlı özelliklerin bir alt kümesini kullanmaya odaklanabilir.
 
 ## <a name="load-the-data"></a>Verileri yükleme
 
-Bu örnek için kullanılan veri kümesindeki Özellikler 1-12 sütunlarında bulunur. Amaç tahmin `Price`etmek için tasarlanmıştır. 
+Bu örnek için kullanılan veri kümesindeki Özellikler 1-12 sütunlarında bulunur. Amaç @no__t tahmin etmek için gereklidir. 
 
 | Sütun | Özellik | Açıklama 
 | --- | --- | --- |
-| 1\. | Crimerde | GDP suta hızı başına
+| 1 | Crimerde | GDP suta hızı başına
 | 2 | ResidentialZones | Kasadaki mesken bölgeleri
 | 3 | Ticari bölgeler | Kasadaki yöresel olmayan bölgeler
 | 4 | Yaklaştığında su | Su gövdesine yakınlık
@@ -50,7 +50,7 @@ Veri kümesinin bir örneği aşağıda gösterilmiştir:
 2,98,16,1,0.25,10,5,1,8,689,13,36,12
 ```
 
-Bu örnekteki veriler, gibi `HousingPriceData` bir sınıf tarafından modellenebilir ve ' [`IDataView`](xref:Microsoft.ML.IDataView)a yüklenmiş olabilir.
+Bu örnekteki veriler `HousingPriceData` gibi bir sınıfa göre modellenebilir ve [`IDataView`](xref:Microsoft.ML.IDataView)' ye yüklenebilir.
 
 ```csharp
 class HousingPriceData
@@ -128,7 +128,7 @@ var sdcaModel = sdcaEstimator.Fit(preprocessedTrainData);
 
 ## <a name="explain-the-model-with-permutation-feature-importance-pfi"></a>Modeli permütasyon özelliği önem derecesi (PFı) ile açıklayın
 
-ML.NET içinde ilgili göreviniz [`PermutationFeatureImportance`](xref:Microsoft.ML.PermutationFeatureImportanceExtensions) için yöntemini kullanın.
+ML.NET içinde, ilgili göreviniz için [`PermutationFeatureImportance`](xref:Microsoft.ML.PermutationFeatureImportanceExtensions) metodunu kullanın.
 
 ```csharp
 ImmutableArray<RegressionMetricsStatistics> permutationFeatureImportance = 
@@ -137,9 +137,9 @@ ImmutableArray<RegressionMetricsStatistics> permutationFeatureImportance =
         .PermutationFeatureImportance(sdcaModel, preprocessedTrainData, permutationCount:3);
 ```
 
-Eğitim veri kümesinde kullanmanın [`PermutationFeatureImportance`](xref:Microsoft.ML.PermutationFeatureImportanceExtensions) sonucu [`RegressionMetricsStatistics`](xref:Microsoft.ML.Data.RegressionMetricsStatistics) bir [`ImmutableArray`](xref:System.Collections.Immutable.ImmutableArray) nesnedir. [`RegressionMetricsStatistics`](xref:Microsoft.ML.Data.RegressionMetricsStatistics)parametresi tarafından belirtilen permütasyon sayısına eşit olan [`RegressionMetrics`](xref:Microsoft.ML.Data.RegressionMetrics) birden çok gözlemde için Ortalama ve standart sapma gibi özet istatistikler sağlar. `permutationCount`
+Eğitim veri kümesinde [`PermutationFeatureImportance`](xref:Microsoft.ML.PermutationFeatureImportanceExtensions) kullanmanın sonucu, [`RegressionMetricsStatistics`](xref:Microsoft.ML.Data.RegressionMetricsStatistics) nesnelerinin [@no__t 3 ' ü](xref:System.Collections.Immutable.ImmutableArray) kullanmaktır. [`RegressionMetricsStatistics`](xref:Microsoft.ML.Data.RegressionMetricsStatistics) , `permutationCount` parametresi tarafından belirtilen permütasyon sayısına eşit [@no__t](xref:Microsoft.ML.Data.RegressionMetrics) olan birden çok gözlemye ve standart sapma için Ortalama ve standart sapma gibi özet istatistikler sağlar.
 
-Önem derecesi veya bu durumda, tarafından [`PermutationFeatureImportance`](xref:Microsoft.ML.PermutationFeatureImportanceExtensions) hesaplanan R-kare ölçümünde mutlak ortalama azalma, daha sonra en önemli olan en az önemli olarak sıralanır.  
+Önem derecesi veya bu durumda, [`PermutationFeatureImportance`](xref:Microsoft.ML.PermutationFeatureImportanceExtensions) Ile hesaplanan R-kare ölçümünde mutlak ortalama azalma, daha sonra en önemli olan en az önemli olarak sıralanır.  
 
 ```csharp
 // Order features by importance
@@ -156,7 +156,7 @@ foreach (var feature in featureImportanceMetrics)
 }
 ```
 
-İçindeki `featureImportanceMetrics` her bir özelliğin değerlerini yazdırmak, aşağıdakine benzer bir çıktı üretir. Bu değerler verilen verilere göre farklılık gösterdiğinden, farklı sonuçlar görmeyi beklemeniz gerektiğini aklınızda bulundurun.  
+@No__t-0 ' daki her bir özelliğin değerlerini yazdırmak, aşağıdakine benzer bir çıktı üretir. Bu değerler verilen verilere göre farklılık gösterdiğinden, farklı sonuçlar görmeyi beklemeniz gerektiğini aklınızda bulundurun.  
 
 | Özellik | R-kare olarak değiştir |
 |:--|:--:|
