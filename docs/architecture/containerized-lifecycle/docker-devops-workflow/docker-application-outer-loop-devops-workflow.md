@@ -1,15 +1,15 @@
 ---
-title: Bir Docker uygulaması için dış döngü DevOps iş akışındaki adımlar
+title: Docker uygulaması için dış döngü DevOps iş akışındaki adımlar
 description: DevOps iş akışının "dıştaki döngüsü" adımlarını öğrenin
 ms.date: 02/15/2019
-ms.openlocfilehash: e7a82d2e5a5d503e5efbe9ac8242b163baab1286
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 5687caff0c635e7add135654a8f564b2c509cbf8
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70295759"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834566"
 ---
-# <a name="steps-in-the-outer-loop-devops-workflow-for-a-docker-application"></a>Bir Docker uygulaması için dış döngü DevOps iş akışındaki adımlar
+# <a name="steps-in-the-outer-loop-devops-workflow-for-a-docker-application"></a>Docker uygulaması için dış döngü DevOps iş akışındaki adımlar
 
 Şekil 5-1, DevOps dış döngüsü iş akışından oluşan adımların uçtan uca bir listesini sunar.
 
@@ -19,7 +19,7 @@ ms.locfileid: "70295759"
 
 Şimdi bu adımların her birini daha ayrıntılı olarak inceleyelim.
 
-## <a name="step-1-inner-loop-development-workflow"></a>1\. Adım: İç döngü geliştirme iş akışı
+## <a name="step-1-inner-loop-development-workflow"></a>1\. Adım: Iç döngü geliştirme iş akışı
 
 Bu adım, Bölüm 4 ' te ayrıntılı olarak açıklanmıştır, ancak bir üst sınır, bir geliştiricinin CI ardışık düzen eylemlerini Başlatan kaynak denetimi yönetim sistemine (git gibi) kod iletmesinin ne kadar olduğunu burada bulabilirsiniz.
 
@@ -55,7 +55,7 @@ Docker ve Azure DevOps Services ile ilgili temel CI iş akışı adımları aşa
 
 1. Geliştirici bir SCC deposuna (git/Azure DevOps Services, GitHub, vb.) bir işlemeye gönderim sağlar.
 
-2. Azure DevOps Services veya git kullanıyorsanız, CI içinde yerleşik olarak bulunur, bu da Azure DevOps Services bir onay kutusu seçmenin basit olduğu anlamına gelir. Bir dış SCC (GitHub gibi) kullanıyorsanız, güncelleştirme Azure DevOps Services veya git `webhook` /GitHub ' a gönderim yapılır.
+2. Azure DevOps Services veya git kullanıyorsanız, CI içinde yerleşik olarak bulunur, bu da Azure DevOps Services bir onay kutusu seçmenin basit olduğu anlamına gelir. Bir dış SCC (GitHub gibi) kullanıyorsanız, `webhook` güncelleştirme Azure DevOps Services bildirir veya git/GitHub 'a gönderir.
 
 3. Azure DevOps Services, resmi açıklayan Dockerfile ve uygulama ve test kodu da dahil olmak üzere SCC deposunu çeker.
 
@@ -77,7 +77,7 @@ Azure Service Fabric, Azure Kubernetes hizmeti ve benzer tekliflerde derleme/tes
 
 Bu Visual Studio Team Services görevlerle, Azure 'da sağlanan bir Linux-Docker Konağı/VM ve tercih ettiğiniz Docker kayıt defteri (Azure Container Registry, Docker Hub, özel Docker DTR veya başka bir Docker kayıt defteri) ile Docker CI işlem hattınızı bir ile birleştirebilirsiniz. çok tutarlı bir yoldur.
 
-***Gereksinimler:***
+***Gereklilik***
 
 - Azure DevOps Services veya şirket içi yüklemeler için, Team Foundation Server 2015 güncelleştirme 3 veya sonraki bir sürümü.
 
@@ -104,7 +104,7 @@ Bu nedenle, CI işlem hattında uygulama kapsayıcıları oluşturulduktan sonra
 
 Tek bir konak kullanıyorsanız, tek bir VM 'de Docker ortamını test etmek ve doğrulamak üzere ilgili kapsayıcıları derlemek ve dağıtmak için Docker-Compose gibi Docker komutlarını kullanabilirsiniz. Ancak, DC/OS, Kubernetes veya Docker Sısınma gibi bir Orchestrator kümesiyle çalışıyorsanız, seçili kümenize/zamanlayıcıya bağlı olarak Kapsayıcılarınızı farklı bir mekanizma veya Orchestrator aracılığıyla dağıtmanız gerekir.
 
-Docker kapsayıcılarına karşı çalıştırabileceğiniz birçok test türü aşağıda verilmiştir:
+Aşağıda, Docker kapsayıcılarına karşı çalıştırabileceğiniz birkaç test türü verilmiştir:
 
 - Docker kapsayıcıları için birim testleri
 
@@ -122,7 +122,7 @@ Docker görüntüleri test edildikten ve doğrulandıktan sonra, bunları Docker
 
 (Git, vb.), SCC deponuzda (git, vb.) depolanan uygulama kodunun "Truth kaynağı", ikili uygulamanız veya bitlerin QA veya üretim ortamlarına dağıtılması için "gerçeği kaynağıdır".
 
-Genellikle, özel görüntüleriniz için Azure Container Registry ya da Docker güvenilen kayıt defteri gibi bir şirket içi kayıt defterinde veya kısıtlanmış erişimi olan bir ortak bulut kayıt defterinde (örneğin, Docker Hub), ancak kodunuzun açık kaynak olmaması durumunda satıcının güvenliğine güvenmeniz gerekir. Her iki durumda da, kullandığınız yöntem benzerdir ve Şekil 5-4 ' de gösterildiği `docker push` gibi komuta dayalıdır.
+Genellikle, özel görüntüleriniz için Azure Container Registry ya da Docker güvenilen kayıt defteri gibi bir şirket içi kayıt defterinde veya kısıtlanmış erişimi olan bir ortak bulut kayıt defterinde (örneğin, Docker Hub), ancak kodunuzun açık kaynak olmaması durumunda satıcının güvenliğine güvenmeniz gerekir. Her iki durumda da, kullandığınız yöntem benzerdir ve Şekil 5-4 ' de gösterildiği gibi `docker push` komutuna dayanır.
 
 ![Adım 3 ' te, tümleştirme ve test (CI) oluşturmak için, elde edilen Docker görüntülerini özel veya ortak bir kayıt defterine yayımlayabilirsiniz.](./media/image4.png)
 
@@ -130,13 +130,13 @@ Genellikle, özel görüntüleriniz için Azure Container Registry ya da Docker 
 
 Azure Container Registry, Amazon Web Services Container Registry, Google Container Registry, Quay kayıt defteri vb. gibi bulut satıcılarından çok sayıda Docker kayıt defteri teklifi vardır.
 
-Docker görevlerini kullanarak, Şekil 5-5 ' de gösterildiği gibi, birden çok etiketli bir `docker-compose.yml` dosya tarafından tanımlanan bir dizi hizmet görüntüsünü, kimliği doğrulanmış bir Docker kayıt defterine (Azure Container Registry gibi) gönderebilirsiniz.
+Docker görevlerini kullanarak, Şekil 5-5 ' de gösterildiği gibi, birden çok etiketli bir `docker-compose.yml` dosyası tarafından tanımlanan bir dizi hizmet görüntüsünü, kimliği doğrulanmış bir Docker kayıt defterine (Azure Container Registry gibi) gönderebilirsiniz.
 
 ![Azure DevOps 'daki bir kayıt defterine görüntü yayımlama adımının tarayıcı görünümü.](./media/image5.png)
 
 **Şekil 5-5**. Özel görüntüleri bir Docker kayıt defterine yayımlamak için Azure DevOps Services kullanma
 
-> [! BILGI] Azure Container Registry hakkında daha fazla bilgi Için bkz <https://aka.ms/azurecontainerregistry>.
+> [! BILGI] Azure Container Registry hakkında daha fazla bilgi Için bkz. <https://aka.ms/azurecontainerregistry>.
 
 ## <a name="step-4-cd-deploy"></a>4\. Adım: CD, dağıtma
 
@@ -152,19 +152,19 @@ Daha az karmaşık senaryoya ilk göz atalım: tek bir ortamda veya birden çok 
 
 **Şekil 5-6**. Uygulama kapsayıcılarını basit Docker ana bilgisayar ortamları kayıt defterine dağıtma
 
-Şekil 5-7 Görev Ekle iletişim kutusunda Docker Compose ' a tıklayarak yapı CI 'nizi Azure DevOps Services aracılığıyla QA/test ortamlarına nasıl bağlayabileceğinizi vurgular. Ancak, hazırlama veya üretim ortamlarına dağıtım yaparken, genellikle birden çok ortamı (QA, hazırlama ve üretim gibi) işleyen Release Management özellikleri kullanırsınız. Tek Docker konaklarına dağıtıyorsanız, bu, Azure DevOps Services "Docker Compose" görevini kullanıyor (Bu `docker-compose up` komut, alt ' ın altındaki komutu çağırır). Azure Kubernetes Service 'e (AKS) dağıtım yapıyorsanız, aşağıdaki bölümde açıklandığı gibi Docker dağıtım görevini kullanır.
+Şekil 5-7 Görev Ekle iletişim kutusunda Docker Compose ' a tıklayarak yapı CI 'nizi Azure DevOps Services aracılığıyla QA/test ortamlarına nasıl bağlayabileceğinizi vurgular. Ancak, hazırlama veya üretim ortamlarına dağıtım yaparken, genellikle birden çok ortamı (QA, hazırlama ve üretim gibi) işleyen Release Management özellikleri kullanırsınız. Tek Docker konaklarına dağıtım yapıyorsanız, bu, Azure DevOps Services "Docker Compose" görevini kullanıyor (söz konusu `docker-compose up` komutu çağrılıyor). Azure Kubernetes Service 'e (AKS) dağıtım yapıyorsanız, aşağıdaki bölümde açıklandığı gibi Docker dağıtım görevini kullanır.
 
 ![Docker Compose görevi ekleme tarayıcı görünümü.](./media/image7.png)
 
 **Şekil 5-7**. Bir Azure DevOps Services işlem hattına Docker Compose görevi ekleme
 
-Azure DevOps Services ' de bir yayın oluşturduğunuzda, bir giriş yapıtları kümesi alır. Bu yapıtlar, tüm ortamlarda yayının kullanım ömrü boyunca sabit olmak üzere tasarlanmıştır. Kapsayıcıları belirttiğinizde, giriş yapıtları dağıtılacak bir kayıt defterindeki görüntüleri belirler. Bu görüntülerin nasıl tanımlandığına bağlı olarak, yayının süresi boyunca aynı kalmaları garanti edilmez, bu da bir `myimage:latest` `docker-compose` dosyadan başvuru yaparken en belirgin durumdur.
+Azure DevOps Services ' de bir yayın oluşturduğunuzda, bir giriş yapıtları kümesi alır. Bu yapıtlar, tüm ortamlarda yayının kullanım ömrü boyunca sabit olmak üzere tasarlanmıştır. Kapsayıcıları belirttiğinizde, giriş yapıtları dağıtılacak bir kayıt defterindeki görüntüleri belirler. Bu görüntülerin nasıl tanımlandığına bağlı olarak, yayının süresi boyunca aynı kalmaları garanti edilmez, bir `docker-compose` dosyasından `myimage:latest` ' a başvurulduklarında en belirgin durumdur.
 
 Azure DevOps Services şablonlar, aynı görüntü ikilisini benzersiz şekilde tanımlamak için garanti edilen belirli bir kayıt defteri görüntüsü olan yapı yapıtları oluşturma olanağı sağlar. Bunlar, gerçekten bir yayına giriş olarak kullanmak istediğiniz şeydir.
 
 ### <a name="managing-releases-to-docker-environments-by-using-azure-devops-services-release-management"></a>Azure DevOps Services kullanarak, Docker ortamlarında yayınları yönetme Release Management
 
-Azure DevOps Services şablonları aracılığıyla yeni bir görüntü oluşturabilir, bunu bir Docker kayıt defterine yayımlayabilir, Linux veya Windows konakları üzerinde çalıştırabilir ve tüm uygulama olarak birden çok kapsayıcı dağıtmak için, tüm `docker-compose` Azure DevOps aracılığıyla gibi komutları kullanabilirsiniz. Hizmetler, Şekil 5-8 ' de gösterildiği gibi birden çok ortam için tasarlanan yetenekler Release Management.
+Azure DevOps Services şablonları aracılığıyla yeni bir görüntü oluşturabilir, bunu bir Docker kayıt defterine yayımlayabilir, Linux veya Windows konakları üzerinde çalıştırabilir ve tüm uygulama olarak birden çok kapsayıcı dağıtmak için `docker-compose` gibi komutları kullanın Azure DevOps Services Şekil 5-8 ' de gösterildiği gibi, birden çok ortam için tasarlanan özellikleri Release Management.
 
 ![Docker Compose sürümlerini yapılandıran Azure DevOps tarayıcı görünümü.](./media/image8.png)
 
@@ -184,7 +184,7 @@ Bir CD görünümü ve Azure DevOps Services özel olarak, Kapsayıcılı uygula
 
 **Şekil 5-9**. Dağıtılmış uygulamaları kapsayıcı hizmetine dağıtma
 
-Başlangıçta, belirli kümelere veya düzenleyicilerine dağıtım yaparken, her Orchestrator için (yani, Kubernetes ve Service Fabric farklı dağıtım mekanizmalarına sahip olan) geleneksel olarak belirli dağıtım betikleri ve mekanizmaları kullanacaksınız ve `docker-compose.yml` tanım dosyasını temel alan kullanımı `docker-compose` kolay araç. Ancak, Şekil 5-10 ' de gösterilen Azure DevOps Services Docker Deploy görevi sayesinde, araç artık sizin için "Çeviri" gerçekleştirtiğinden tanıdık `docker-compose.yml` dosyayı kullanarak desteklenen düzenleyicilerine de dağıtabilirsiniz ( `docker-compose.yml`Orchestrator tarafından gereken biçime dosya).
+Başlangıçta, belirli kümelere veya düzenleyicilerine dağıtım yaparken, her Orchestrator için (yani, Kubernetes ve Service Fabric farklı dağıtım mekanizmalarına sahip olan) geleneksel olarak belirli dağıtım betikleri ve mekanizmaları kullanacaksınız ve `docker-compose.yml` tanım dosyası temel alınarak kullanımı kolay `docker-compose` araç. Ancak, Şekil 5-10 ' de gösterilen Azure DevOps Services Docker Deploy görevi sayesinde, araç, sizin için "Çeviri" işlemini yerine getiren yalnızca tanıdık `docker-compose.yml` dosyanızı kullanarak desteklenen düzenleyiciler için de dağıtım yapabilirsiniz (`docker-compose.yml` dosyasından Orchestrator için gereken biçim).
 
 ![Azure DevOps 'da, Kubernetes 'e dağıt görevini gösteren tarayıcı görünümü.](./media/add-deploy-to-kubernetes-task.png)
 
@@ -196,18 +196,18 @@ Başlangıçta, belirli kümelere veya düzenleyicilerine dağıtım yaparken, h
 
 **Şekil 5-11**. Docker dağıtım görev tanımı, ACS DC/OS 'ye dağıtılıyor
 
-> [! BILGI] Azure DevOps Services ve Docker ile CD işlem hattı hakkında daha fazla bılgı edinmek Için şu adresi ziyaret edin<https://azure.microsoft.com/services/devops/pipelines>
+> [! BILGI] Azure DevOps Services ve Docker ile CD işlem hattı hakkında daha fazla bılgı edinmek Için <https://azure.microsoft.com/services/devops/pipelines> adresini ziyaret edin
 
-## <a name="step-5-run-and-manage"></a>5\. Adım: Çalıştır ve Yönet
+## <a name="step-5-run-and-manage"></a>5\. Adım: çalıştırma ve yönetme
 
 Kurumsal üretim düzeyinde uygulama çalıştırmak ve yönetmek için ve tek başına ve bu düzeyde (BT işlemleri) çalışan işlem ve kişilerin türü ve bu alanın büyük kapsamı nedeniyle, bir sonraki bölümün tamamının Bunu açıklayarak.
 
-## <a name="step-6-monitor-and-diagnose"></a>6\. Adım: İzleme ve tanılama
+## <a name="step-6-monitor-and-diagnose"></a>6\. Adım: Izleme ve tanılama
 
 Bu konu ayrıca, üretim sistemlerinde gerçekleştirdiği görevlerin bir parçası olarak sonraki bölümde ele alınmıştır. Bununla birlikte, uygulamanın sürekli geliştirilmesi için bu adımda elde edilen öngörülerin geliştirme ekibine geri akışı gerektiğini vurgulamak önemlidir. Bu görünüm noktasından de DevOps 'un bir parçası olsa da, görevler ve işlemler yaygın olarak gerçekleştirilir.
 
 Yalnızca izleme ve tanılama, DevOps bölgesi kapsamında% 100 olduğunda, geliştirme ekibi tarafından test veya beta ortamlarına karşı gerçekleştirilen izleme işlemleri ve analizlerdir. Bu işlem, yük testi gerçekleştirerek veya Beta Test edicilerin yeni sürümleri çalıştığı Beta ya da QA ortamlarını izleyerek yapılır.
 
 >[!div class="step-by-step"]
->[Önceki](index.md)İleri
->[](create-ci-cd-pipelines-azure-devops-services-aspnetcore-kubernetes.md)
+>[Önceki](index.md)
+>[İleri](create-ci-cd-pipelines-azure-devops-services-aspnetcore-kubernetes.md)

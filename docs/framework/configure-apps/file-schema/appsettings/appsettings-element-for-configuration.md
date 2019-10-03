@@ -53,8 +53,7 @@ ms.locfileid: "69921337"
 
 ## <a name="remarks"></a>Açıklamalar
 
-**
-          \<AppSettings >** öğesi veritabanı bağlantı dizeleri, dosya yolları, XML Web hizmeti URL'leri veya diğer özel yapılandırma bilgileri için gibi özel bir uygulama yapılandırma bilgilerini depolayan bir uygulama. <xref:System.Configuration.ConfigurationSettings>  **\<AppSettings >** öğesinde belirtilen anahtar/değer çiftlerine sınıfı kullanılarak kodla erişilir.
+**\<AppSettings >** öğesi veritabanı bağlantı dizeleri, dosya yolları, XML Web hizmeti URL'leri veya diğer özel yapılandırma bilgileri için gibi özel bir uygulama yapılandırma bilgilerini depolayan bir uygulama. <xref:System.Configuration.ConfigurationSettings>  **\<AppSettings >** öğesinde belirtilen anahtar/değer çiftlerine sınıfı kullanılarak kodla erişilir.
 
 *Web. config* ve uygulama yapılandırma dosyalarının  **\<appSettings >** öğesinde **File** özniteliğini kullanabilirsiniz. Bu öznitelik,  **\<** ek ayarlar sağlayan veya appSettings > öğesinde belirtilen ayarları geçersiz kılan bir yapılandırma dosyasını belirtir. **Dosya** özniteliği, bir Kullanıcı bir uygulama yapılandırma dosyasında belirtilen proje ayarlarını geçersiz kılmak istediğinde olduğu gibi, kaynak denetimi takım geliştirme senaryolarında kullanılabilir.
 

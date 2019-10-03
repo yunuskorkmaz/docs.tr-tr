@@ -1,13 +1,13 @@
 ---
-title: Bir mikro hizmete CQRS ve DDD desenlerini uygulama
+title: Mikro bir hizmette Basitleştirilmiş CQRS ve DDD desenleri uygulama
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | CQRS ve DDD desenleri arasındaki genel ilişkiyi anlayın.
 ms.date: 10/08/2018
-ms.openlocfilehash: 36bffce37176aed6c7d9daea7f2995952b58e895
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: f42b553fd30fdffdc6e325b11740fe9162aab7c8
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70296003"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834310"
 ---
 # <a name="apply-simplified-cqrs-and-ddd-patterns-in-a-microservice"></a>Mikro hizmette Basitleştirilmiş CQRS ve DDD desenleri uygulama
 
@@ -27,17 +27,19 @@ CQRS, diğer bağlamlarda bir okuma/yazma işlemi için iki nesneye sahip olduğ
 
 Bu tür bir hizmet örneği, eShopOnContainers başvuru uygulamasından sipariş eden mikro hizmettir. Bu hizmet, Basitleştirilmiş bir CQRS yaklaşımını temel alan bir mikro hizmet uygular. Tek bir veri kaynağını veya veritabanını kullanır, ancak Şekil 7-2 ' de gösterildiği gibi, işlem etki alanı için iki mantıksal model ve ggg desenleri.
 
-![Mantıksal sıralama mikro hizmeti, aynı Docker konağında olabilen veya bulunmayan sıralama veritabanını içerir. Veritabanının aynı Docker ana bilgisayarında olması, geliştirme için iyi, ancak üretim için değil.](./media/image2.png)
+![Yüksek düzey basitleştirilmiş bir CQRS ve DDD mikro hizmetini gösteren diyagram.](./media/apply-simplified-microservice-cqrs-ddd-patterns/simplified-cqrs-ddd-microservice.png)
 
 **Şekil 7-2**. Basitleştirilmiş CQRS ve DDD tabanlı mikro hizmet
+
+Mantıksal "sıralama" mikro hizmeti sıralama veritabanını içerir, ancak aynı Docker ana bilgisayarı olması gerekmez. Veritabanının aynı Docker ana bilgisayarında olması, geliştirme için iyi, ancak üretim için değil.
 
 Uygulama katmanı Web API 'SI olabilir. Buradaki önemli tasarım, mikro hizmetin sorguları ve Viewmodellerini (istemci uygulamalar için özel olarak oluşturulan veri modelleri), CQRS deseninin altındaki komutlardan, etki alanı modelinden ve işlemlerden ayırmıştır. Bu yaklaşım, sonraki bölümlerde açıklandığı gibi, yalnızca işlemler ve güncelleştirmeler için anlamlı olan DDD desenlerinden gelen kısıtlamaların ve kısıtlamalardan bağımsız olarak sorguları korur.
 
 ## <a name="additional-resources"></a>Ek kaynaklar
 
-- **Greg başak. Olay kaynağını alınmış bir sistemde** sürüm oluşturma (çevrimiçi e-kitabı okumak için ücretsiz) \
+- **Greg başak. Olay kaynağını alınmış bir sistemde sürüm oluşturma** (çevrimiçi e-kitabı okumak için ücretsiz) \
    <https://leanpub.com/esversioning/read>
 
 >[!div class="step-by-step"]
->[Önceki](index.md)İleri
->[](eshoponcontainers-cqrs-ddd-microservice.md)
+>[Önceki](index.md)
+>[İleri](eshoponcontainers-cqrs-ddd-microservice.md)

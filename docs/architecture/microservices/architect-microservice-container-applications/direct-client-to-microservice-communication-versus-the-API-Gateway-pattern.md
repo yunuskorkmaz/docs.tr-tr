@@ -2,12 +2,12 @@
 title: API ağ geçidi düzenine ve doğrudan istemciden mikro hizmete iletişime karşı
 description: API Gateway deseninin ve doğrudan istemciden mikro hizmet iletişiminin farklılıklarını ve kullanımlarını anlayın.
 ms.date: 01/07/2019
-ms.openlocfilehash: c54287ea3e99ff7fe9faf02898b8c322b756e26f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: d895ae50e50ade2f8285117491733d5c9814b732
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "70296818"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834446"
 ---
 # <a name="the-api-gateway-pattern-versus-the-direct-client-to-microservice-communication"></a>API ağ geçidi düzenine ve doğrudan istemciden mikro hizmete iletişime karşı
 
@@ -17,7 +17,7 @@ Mikro hizmetler mimarisinde, her mikro hizmet hassas uç noktalar kümesi (genel
 
 Olası bir yaklaşım doğrudan istemciden mikro hizmet iletişim mimarisini kullanmaktır. Bu yaklaşımda, bir istemci uygulaması, Şekil 4-12 ' de gösterildiği gibi, mikro hizmetlerden bazılarına doğrudan istek yapabilir.
 
-![Her uygulamanın tek tek mikro hizmetlerle iletişim kurduğu doğrudan istemciden mikro hizmet iletişim mimarisini gösteren diyagram.](./media/image12.png)
+![İstemciden mikro hizmet iletişim mimarisini gösteren diyagram.](./media/direct-client-to-microservice-communication-versus-the-API-Gateway-pattern/direct-client-to-microservice-communication.png)
 
 **Şekil 4-12**. Doğrudan istemciden mikro hizmete iletişim mimarisi kullanma
 
@@ -53,13 +53,13 @@ Mikro hizmetler mimarisinde, istemci uygulamalarının genellikle birden fazla m
 
 Bu nedenle, bir ara düzeyi veya yöneltme (ağ geçidi) katmanının olması, mikro hizmet tabanlı uygulamalar için çok kullanışlı olabilir. API ağ geçitleriniz yoksa, istemci uygulamalar istekleri doğrudan mikro hizmetlere göndermelidir ve aşağıdaki sorunlar gibi sorunlar oluşturur:
 
-- **Kuponu**: API ağ geçidi stili olmadan, istemci uygulamaları iç mikro hizmetlere bağlanmış demektir. İstemci uygulamaları, uygulamanın birden çok alanının mikro hizmetlerde nasıl parçalanduğuna bilmelidir. İç mikro hizmetleri geliştirme ve yeniden düzenleme işlemleri sırasında, istemci uygulamalarından gelen iç mikro hizmetlere doğrudan başvuru nedeniyle istemci uygulamalarında olumsuz değişikliklere neden olduğu için bu eylemlerin bakımı oldukça kötü olur. İstemci uygulamalarının sıklıkla güncelleştirilmeleri gerekir, çözüm daha zor hale getirir.
+- **Eşlenmesiz**: API ağ geçidi kalıbı olmadan, istemci uygulamaları iç mikro hizmetlerle birlikte bulunur. İstemci uygulamaları, uygulamanın birden çok alanının mikro hizmetlerde nasıl parçalanduğuna bilmelidir. İç mikro hizmetleri geliştirme ve yeniden düzenleme işlemleri sırasında, istemci uygulamalarından gelen iç mikro hizmetlere doğrudan başvuru nedeniyle istemci uygulamalarında olumsuz değişikliklere neden olduğu için bu eylemlerin bakımı oldukça kötü olur. İstemci uygulamalarının sıklıkla güncelleştirilmeleri gerekir, çözüm daha zor hale getirir.
 
-- **Gidiş dönüş sayısı çok fazla**: İstemci uygulamasındaki tek bir sayfa/ekran birden çok hizmete birkaç çağrı gerektirebilir. Bu, istemci ile sunucu arasında birden çok ağ gidiş dönüşde oluşmasına neden olabilir, önemli gecikme süresi ekler. Ara düzeyde işlenen toplama, istemci uygulaması için performans ve Kullanıcı deneyimini iyileştirebilir.
+- **Çok fazla gidiş dönüş**: istemci uygulamasındaki tek bir sayfa/ekran birden fazla hizmete çok sayıda çağrı gerektirebilir. Bu, istemci ile sunucu arasında birden çok ağ gidiş dönüşde oluşmasına neden olabilir, önemli gecikme süresi ekler. Ara düzeyde işlenen toplama, istemci uygulaması için performans ve Kullanıcı deneyimini iyileştirebilir.
 
-- **Güvenlik sorunları**: Ağ Geçidi olmadan, tüm mikro hizmetler "dış dünya" olarak sunulmalıdır, böylece istemci uygulamaları tarafından doğrudan kullanılmayan iç mikro hizmetleri gizleyerek saldırı yüzeyi daha büyük olur. Saldırı yüzeyi ne kadar küçük olursa, uygulamanız daha güvenli olabilir.
+- **Güvenlik sorunları**: ağ geçidi olmadan, tüm mikro hizmetler "dış dünya" olarak gösterilmelidir ve bu, doğrudan istemci uygulamaları tarafından kullanılmayan iç mikro hizmetleri gizleyerek saldırı yüzeyini daha büyük hale getirir. Saldırı yüzeyi ne kadar küçük olursa, uygulamanız daha güvenli olabilir.
 
-- **Çapraz kesme sorunları**: Herkese açık yayımlanan her mikro hizmet, yetkilendirme, SSL vb. gibi sorunları ele almalıdır. Birçok durumda, iç mikro hizmetlerin basitleşilmesi için bu konular tek bir katmanda işlenebilir.
+- **Çapraz kesme sorunları**: herkese açık yayımlanan her mikro hizmet, YETKILENDIRME, SSL vb. gibi sorunları ele almalıdır. Birçok durumda, iç mikro hizmetlerin basitleşilmesi için bu konular tek bir katmanda işlenebilir.
 
 ## <a name="what-is-the-api-gateway-pattern"></a>API ağ geçidi deseninin anlamı nedir?
 
@@ -69,11 +69,11 @@ Bu nedenle, API Gateway istemci uygulamaları ve mikro hizmetler arasında yer a
 
 Şekil 4-13, özel bir API ağ geçidinin yalnızca birkaç mikro hizmetle basitleştirilmiş bir mikro hizmet tabanlı mimariye nasıl uyadığını gösterir.
 
-![Özel bir hizmet olarak uygulanan bir API ağ geçidini gösteren diyagram, böylece uygulamalar tek bir uç noktaya bağlanır, bu da istekleri bağımsız mikro hizmetlere iletmek üzere yapılandırılmıştır.](./media/image13.png)
+![Özel hizmet olarak uygulanan bir API ağ geçidini gösteren diyagram.](./media/direct-client-to-microservice-communication-versus-the-API-Gateway-pattern/custom-service-api-gateway.png)
 
 **Şekil 4-13**. Özel hizmet olarak uygulanan bir API ağ geçidi kullanma
 
-Bu örnekte, API Gateway bir kapsayıcı olarak çalışan özel bir ASP.NET Core WebHost hizmeti olarak uygulanır.
+Uygulamalar, istekleri bağımsız mikro hizmetlere iletmek üzere yapılandırılmış tek bir uç noktaya, API ağ geçidine bağlanır. Bu örnekte, API Gateway bir kapsayıcı olarak çalışan özel bir ASP.NET Core WebHost hizmeti olarak uygulanır.
 
 Bu diyagramda, birden çok ve farklı istemci uygulamalarına yönelik tek bir özel API Gateway hizmeti kullandığınızı vurgulamak önemlidir. API Gateway hizmetiniz, istemci uygulamalarından birçok farklı gereksinime göre büyümekte ve gelişeceğinden, bu olgu önemli bir risk olabilir. Sonuç olarak, bu farklı gereksinimler ve etkili bir şekilde tek parçalı bir uygulamaya veya tek parçalı bir hizmete benzer bir şekilde, bu uygulama için de şişecektir. Bu nedenle, API ağ geçidini birden çok hizmete veya birden çok daha küçük API ağ geçidine, örneğin istemci uygulaması form faktörü türüne göre ayırmak çok fazla önerilir.
 
@@ -83,11 +83,11 @@ Bu nedenle, API ağ geçitleri iş sınırlarına ve istemci uygulamalarına gö
 
 API ağ geçidi katmanını birden çok API ağ geçidine bölmek için, uygulamanızın birden çok istemci uygulaması varsa, bu, birden çok API ağ geçidi türü tanımlanırken birincil bir Özet olabilir, böylece her bir istemci uygulamasının ihtiyaçlarına yönelik olarak farklı bir façlade sağlayabilirsiniz. Bu durum, her API ağ geçidinin her bir istemci uygulama türü için uyarlanmış farklı bir API sağlayabildiği ([BFF](https://samnewman.io/patterns/architectural/bff/)) adlı bir modeldir. Aşağıdaki görüntüde gösterildiği gibi birden çok iç mikro hizmet:
 
-![API ağ geçitlerinin istemci türüne göre birbirinden ayrılmış olduğu birden çok özel API ağ geçidini gösteren diyagram; biri mobil istemciler ve bir Web istemcileri için. Geleneksel bir Web uygulaması, Web API ağ geçidini kullanan bir MVC mikro hizmetine bağlanır.](./media/image13.1.png)
+![Birden çok özel API ağ geçidini gösteren diyagram.](./media/direct-client-to-microservice-communication-versus-the-API-Gateway-pattern/multiple-custom-api-gateways.png)
 
 **Şekil 4-13.1**. Birden çok özel API ağ geçidi kullanma
 
-Önceki görüntüde, çok ayrıntılı API ağ geçitleri olan basitleştirilmiş bir mimari gösterilmektedir. Bu durumda, her API ağ geçidi için tanımlanan sınırlar yalnızca, istemci uygulaması başına gereken API 'yi temel alan "ön uç için arka uç" ([BFF](https://samnewman.io/patterns/architectural/bff/)) düzenine dayanır. Ancak, daha büyük uygulamalarda Ayrıca daha fazla da ilerlemelidir ve ikinci bir tasarım özeti olarak iş sınırlarına göre ek API ağ geçitleri oluşturmalısınız.
+Şekil 4-13.1 istemci türüne göre ayrılmış API ağ geçitlerini gösterir; biri mobil istemciler ve bir Web istemcileri için. Geleneksel bir Web uygulaması, Web API ağ geçidini kullanan bir MVC mikro hizmetine bağlanır. Örnek, daha ayrıntılı API ağ geçitleri ile basitleştirilmiş bir mimari göstermektedir. Bu durumda, her API ağ geçidi için tanımlanan sınırlar yalnızca, istemci uygulaması başına gereken API 'yi temel alan "ön uç için arka uç" ([BFF](https://samnewman.io/patterns/architectural/bff/)) düzenine dayanır. Ancak, daha büyük uygulamalarda Ayrıca daha fazla da ilerlemelidir ve ikinci bir tasarım özeti olarak iş sınırlarına göre ek API ağ geçitleri oluşturmalısınız.
 
 ## <a name="main-features-in-the-api-gateway-pattern"></a>API ağ geçidi düzenindeki ana Özellikler
 
@@ -105,12 +105,12 @@ Daha fazla bilgi için bkz. [ağ geçidi toplama stili](https://docs.microsoft.c
 
 **Çapraz kesme sorunları veya ağ geçidi boşaltma.** Her bir API ağ geçidi ürünü tarafından sunulan özelliklere bağlı olarak, her bir mikro hizmetten bağımsız olarak tek bir katmanda çapraz kesme sorunlarını birleştirerek her bir mikro hizmetin uygulanmasını kolaylaştıran ağ geçidine işlevsellik devreolursunuz. Bu özellikle, aşağıdaki işlev gibi her iç mikro hizmette düzgün şekilde uygulanması karmaşık olabilecek özelleştirilmiş özellikler için kullanışlıdır:
 
-- Kimlik doğrulaması ve yetkilendirme
+- Kimlik doğrulama ve yetkilendirme
 - Hizmet bulma tümleştirmesi
-- Yanıtları Önbelleğe Alma
+- Yanıt önbelleğe alma
 - Yeniden deneme ilkeleri, devre kesici ve QoS
 - Hız sınırlandırma ve kısıtlama
-- Yük Dengeleme
+- Yük dengeleme
 - Günlüğe kaydetme, izleme, bağıntı
 - Üstbilgiler, sorgu dizeleri ve talep dönüştürme
 - IP beyaz listesi
@@ -126,13 +126,13 @@ Her uygulamaya bağlı olarak API ağ geçitleri ürünleri tarafından sunulan 
 
 ### <a name="azure-api-management"></a>Azure API Management
 
-[Azure API Management](https://azure.microsoft.com/services/api-management/) (Şekil 4-14 ' de gösterildiği gibi) yalnızca API ağ geçidi ihtiyaçlarınızı çözmemektedir, ancak API 'lerinizden öngörüleri toplama gibi özellikler sağlar. Bir API Management çözümü kullanıyorsanız, API Gateway yalnızca bu tam API Yönetimi çözümünde bulunan bir bileşendir.
+[Azure API Management](https://azure.microsoft.com/services/api-management/) (Şekil 4-14 ' de gösterildiği gibi) yalnızca API ağ geçidi gereksinimlerinizi çözmemektedir ancak API 'lerinizden öngörüleri toplama gibi özellikler sağlar. Bir API Management çözümü kullanıyorsanız, API Gateway yalnızca bu tam API Yönetimi çözümünde bulunan bir bileşendir.
 
-![Azure API Management, API ağ geçidinizi ve günlük, güvenlik, ölçüm vb. gibi yönetim gereksinimlerinizi çözer.](./media/api-gateway-azure-api-management.png)
+![API ağ geçidiniz olarak Azure API Management 'in nasıl kullanılacağını gösteren diyagram.](./media/direct-client-to-microservice-communication-versus-the-API-Gateway-pattern/api-gateway-azure-api-management.png)
 
 **Şekil 4-14**. API ağ geçidiniz için Azure API Management kullanma
 
-Bu durumda, Azure API Management gibi bir ürün kullanırken, bu tür API ağ geçitleri "THINNER" C# olduğundan, bir API ağ geçidine sahip olabilirsiniz. tek parçalı bileşen. 
+Azure API Management, API ağ geçidinizi ve günlük, güvenlik, ölçüm vb. gibi yönetim gereksinimlerinizi çözer. Bu durumda, Azure API Management gibi bir ürün kullanırken, bu tür API ağ geçitleri "THINNER" C# olduğundan, bir API ağ geçidine sahip olabilirsiniz. tek parçalı bileşen. 
 
 API Gateway ürünleri, genellikle iç mikro hizmetlerden API 'Leri filtreleyebileceğiniz ve bu tek katmandaki yayımlanmış API 'lere yetkilendirme yapan giriş iletişimi için ters bir ara sunucu gibi davranır.
 
@@ -170,10 +170,10 @@ Ayrıca, Pazar sunumu API ağ geçitleri özelliklerinde, Apiayıklanan, Kong, M
 
 ## <a name="additional-resources"></a>Ek kaynaklar
 
-- **Chris Richardson. Kalıp Ön uç için API ağ geçidi/arka uç** \
+- **Chris Richardson. Model: ön uç @no__t için API ağ geçidi/arka ucu**-1
   <https://microservices.io/patterns/apigateway.html>
 
-- **API ağ geçidi kalıbı** \
+- **API Gateway deseninin** \
   <https://docs.microsoft.com/azure/architecture/microservices/gateway>
 
 - **Toplama ve oluşturma deseninin** \
@@ -188,9 +188,9 @@ Ayrıca, Pazar sunumu API ağ geçitleri özelliklerinde, Apiayıklanan, Kong, M
 - **Clemens Valar. GIT 2016 ' de mesajlaşma ve mikro hizmetler (video)**  \
   <https://www.youtube.com/watch?v=rXi5CLjIQ9k>
 
-- **Bir Nutshell Içinde API ağ geçidi** (ASP.net Core API Gateway öğreticisi serisi) \
+- **Bir Nutshell Içinde API ağ geçidi** (ASP.NET Core API Gateway öğreticisi serisi) \
   <https://www.pogsdotnet.com/2018/08/api-gateway-in-nutshell.html>
 
 >[!div class="step-by-step"]
->[Önceki](identify-microservice-domain-model-boundaries.md)İleri
->[](communication-in-microservice-architecture.md)
+>[Önceki](identify-microservice-domain-model-boundaries.md)
+>[İleri](communication-in-microservice-architecture.md)

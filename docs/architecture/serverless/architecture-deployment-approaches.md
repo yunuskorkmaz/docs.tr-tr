@@ -4,14 +4,14 @@ description: IaaS, PaaS, kapsayıcılar ve sunucusuz arasında karşılaştırma
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 8a1203ea2fc7089223c03b3a3e02fd3303610272
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 4cc8442509fc8a0e2cc0eb797365423458e77684
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68676816"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834334"
 ---
-# <a name="architecture-deployment-approaches"></a>Mimari dağıtım yaklaşımları
+# <a name="architecture-deployment-approaches"></a>Mimari dağıtımı yaklaşımları
 
 Bir iş uygulaması tasarlamak için kullanılan mimari yaklaşımdan bağımsız olarak, bu uygulamaların uygulanması veya dağıtımı farklılık gösterebilir. İşletmeler, fiziksel donanımlardan sunucusuz işlevlere kadar her şeye yönelik uygulamalar barındırır.
 
@@ -97,7 +97,7 @@ Kapsayıcıların avantajları şunlardır:
 
 Bir kapsayıcı bir kapsayıcı ana bilgisayarında çalışır (Bu, sırasıyla bir çıplak makinede veya sanal makinede çalıştırılabilir). Birden çok kapsayıcı veya aynı kapsayıcıların örnekleri tek bir konakta çalışabilir. Doğru yük devretme ve dayanıklılık için kapsayıcılar ana bilgisayarlar arasında ölçeklendirilmesi gerekir.
 
-Docker Kapsayıcıları hakkında daha fazla bilgi için bkz. [Docker](../microservices/container-docker-introduction/docker-defined.md)nedir?
+Docker Kapsayıcıları hakkında daha fazla bilgi için bkz. [Docker nedir?](../microservices/container-docker-introduction/docker-defined.md).
 
 Her ana bilgisayar genelinde kapsayıcıları yönetmek için genellikle Kubernetes gibi bir düzenleme aracı gerekir. Orchestration çözümlerini yapılandırma ve yönetme, projelere ek yük ve karmaşıklık ekleyebilir. Neyse ki birçok bulut sağlayıcısı, kapsayıcıların yönetimini basitleştirmek için PaaS çözümleri aracılığıyla düzenleme hizmetleri sağlar.
 
@@ -138,10 +138,10 @@ Bir karma yaklaşım da dahil olmak üzere mimaride kullanılabilecek geniş kap
 
 |         |IaaS     |PaaS     |Kapsayıcı|Sunucusuz|
 |---------|---------|---------|---------|----------|
-|**Ölçek**|VM       |Örnek |Uygulama      |İşlev  |
-|**Soyutlar**|Donanım|Platform|İşletim sistemi Konağı|Çalışma zamanı   |
-|**Birim** |VM       |Project  |Görüntü    |Kod      |
-|**Ömür**|Ay|Gün-ay|Dakika-gün|Milisaniye-dakika|
+|**Ölçeklendirme**|VM       |Örnek |Uygulama      |İşlev  |
+|**Soyutlar**|Donanım|Platform|İşletim sistemi Konağı|Çalışma Zamanı   |
+|**Birim** |VM       |Project  |Görüntü    |Kodlayın      |
+|**Süre**|Ay|Gün-ay|Dakika-gün|Milisaniye-dakika|
 |**Ğuna**|Uygulamalar, bağımlılıklar, çalışma zamanı ve işletim sistemi|Uygulamalar ve bağımlılıklar|Uygulamalar, bağımlılıklar ve çalışma zamanı|İşlev
 
 * **Ölçek** , uygulamayı ölçeklendirmek için kullanılan birimi ifade eder
@@ -152,7 +152,7 @@ Bir karma yaklaşım da dahil olmak üzere mimaride kullanılabilecek geniş kap
 
 Sonraki bölüm sunucusuz mimariye, kullanım örneklerine ve tasarım düzenlerine odaklanacaktır.
 
-## <a name="recommended-resources"></a>Önerilen Kaynaklar
+## <a name="recommended-resources"></a>Önerilen kaynaklar
 
 * [Azure Uygulama Mimarisi Kılavuzu](https://docs.microsoft.com/azure/architecture/guide/)
 * [Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db)
@@ -166,5 +166,5 @@ Sonraki bölüm sunucusuz mimariye, kullanım örneklerine ve tasarım düzenler
 * [Wingtip bilet SaaS uygulaması](https://docs.microsoft.com/azure/sql-database/saas-tenancy-welcome-wingtip-tickets-app)
 
 >[!div class="step-by-step"]
->[Önceki](architecture-approaches.md)İleri
->[](serverless-architecture.md)
+>[Önceki](architecture-approaches.md)
+>[İleri](serverless-architecture.md)

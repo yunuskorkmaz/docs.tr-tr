@@ -1,15 +1,15 @@
 ---
-title: Mikro hizmetlerde esneklik ve yüksek kullanılabilirlik
+title: Mikro hizmetlerde dayanıklılık ve yüksek kullanılabilirlik
 description: Mikro hizmetlerin, geçici ağ ve bağımlılıklar hatalarıyla birlikte kullanılması için tasarlanmaları gerekir, bu da yüksek kullanılabilirlik elde etmek için dayanıklı olmalıdır.
 ms.date: 09/20/2018
-ms.openlocfilehash: bb1bef0c9cc08e43aed80a29effe89587fb296f6
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 6c110b0fe7a80842f12779494e5b0bdd29c5fb64
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70296256"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834347"
 ---
-# <a name="resiliency-and-high-availability-in-microservices"></a>Mikro hizmetlerde esneklik ve yüksek kullanılabilirlik
+# <a name="resiliency-and-high-availability-in-microservices"></a>Mikro hizmetlerde dayanıklılık ve yüksek kullanılabilirlik
 
 Beklenmedik hatalarla ilgilenirken, özellikle dağıtılmış bir sistemde çözülecek en zor sorunlardan biridir. Geliştiricilerin yazacağı kodun büyük bölümü özel durumları işlemeye ve bu da en fazla saatin test edilirken harcanmasını içerir. Sorun, hataların işlenmesi için kodun yazılmasından daha karmaşıktır. Mikro hizmetin çalıştığı makine başarısız olduğunda ne olur? Bu mikro hizmet başarısızlığını (kendi kendine yönelik bir sorun) algılamanıza gerek kalmaz, ancak mikro hizmetinizi yeniden başlatmak için de bir işlem yapmanız gerekir.
 
@@ -31,8 +31,8 @@ Bu kılavuzun [ASP.NET Core Hizmetleri bölümünde sistem durumu denetimleri uy
 
 Ayrıca [GitHub](https://github.com/Xabaril/BeatPulse) 'da ve bir [NuGet paketi](https://www.nuget.org/packages/BeatPulse/)olarak kullanılabilir olan uygun olmayan bir açık kaynaklı kitaplık kullanma seçeneğiniz de vardır. Bu kitaplık Ayrıca sistem durumu denetimleri de yapar ve bu da iki tür denetimi işler:
 
-- **Lida**: Mikro hizmetin etkin olup olmadığını denetler, diğer bir deyişle, istekleri kabul edebilir ve yanıtlayabilir. 
-- **Hazırlık**: Mikro hizmetin bağımlılıklarının (veritabanı, kuyruk hizmetleri vb.) kendi kendine hazırlanın olup olmadığını denetler, bu nedenle mikro hizmet bunun yapması gerekenleri gerçekleştirebilir. 
+- **Lida**: mikro hizmetin etkin olup olmadığını denetler, diğer bir deyişle, istekleri kabul edip yanıtlayabilir. 
+- **Hazırlık**: mikro hizmetin bağımlılıklarının (veritabanı, kuyruk hizmetleri vb.) kendi kendine hazır olup olmadığını denetler, bu nedenle mikro hizmet, ne olması gerektiğini yapabilir. 
 
 ### <a name="using-diagnostics-and-logs-event-streams"></a>Tanılama ve günlük olay akışlarını kullanma
 
@@ -46,7 +46,7 @@ Mikro hizmet tabanlı bir uygulama, olayların veya günlük dosyalarının çı
 
 Mikro hizmet tabanlı bir uygulama oluşturduğunuzda karmaşıklıkla uğraşmanız gerekir. Tabii ki tek bir mikro hizmet, ile uğraşmak için basittir, ancak onlarca veya yüzlerce tür ve mikro hizmetlerin binlerce örneği karmaşık bir sorundur. Yalnızca mikro hizmet mimarinizi oluşturma hakkında bilgi sahibi olmak için, kararlı ve birbirine bağlı bir sisteme sahip olmak istiyorsanız yüksek kullanılabilirlik, adreslenebilirlik, dayanıklılık, sağlık ve Tanılamalar da gereklidir.
 
-![Düzenleyiciler, mikro hizmetlerinizi çalıştırmaya yönelik bir destek platformu sağlar.](./media/image22.png)
+![Mikro hizmetler için destek platformu sağlayan kümelerin diyagramı.](./media/resilient-high-availability-microservices/microservice-platform.png)
 
 **Şekil 4-22**. Mikro hizmet platformu, bir uygulamanın sistem durumu yönetimi için temel
 
@@ -56,19 +56,19 @@ Farklı düzenleyiciler benzer şekilde değişebilir, ancak her biri tarafında
 
 ## <a name="additional-resources"></a>Ek kaynaklar
 
-- **On Iki öğeli uygulama. XI. Açıldığında Günlükleri olay akışları olarak işle** \
+- **On Iki öğeli App. XI. Günlükler: günlükleri olay akışları olarak Işle** \
   <https://12factor.net/logs>
 
 - **Microsoft tanılama EventFlow kitaplığı** GitHub deposu. \
   <https://github.com/Azure/diagnostics-eventflow>
 
-- **Azure Tanılama nedir?**  \
+- **Azure Tanılama** \
   <https://docs.microsoft.com/azure/azure-diagnostics>
 
-- **Windows bilgisayarlarını Azure Izleyici hizmetine bağlama** \
+- **Windows bilgisayarlarını Azure izleyici hizmetine bağlama** \
   <https://docs.microsoft.com/azure/azure-monitor/platform/agent-windows>
 
-- **Ne demek Istediğinizi günlüğe kaydetme: Anlam günlüğü uygulama bloğunu kullanma** \
+- **Ne demek Istediğinizi günlüğe kaydetme: anlam günlüğü uygulama bloğunu** \
   <https://docs.microsoft.com/previous-versions/msp-n-p/dn440729(v=pandp.60)>
 
 - **Splunk** Resmi site. \
@@ -78,5 +78,5 @@ Farklı düzenleyiciler benzer şekilde değişebilir, ancak her biri tarafında
   [https://docs.microsoft.com/dotnet/api/system.diagnostics.tracing.eventsource](xref:System.Diagnostics.Tracing.EventSource)
 
 >[!div class="step-by-step"]
->[Önceki](microservice-based-composite-ui-shape-layout.md)İleri
->[](scalable-available-multi-container-microservice-applications.md)
+>[Önceki](microservice-based-composite-ui-shape-layout.md)
+>[İleri](scalable-available-multi-container-microservice-applications.md)

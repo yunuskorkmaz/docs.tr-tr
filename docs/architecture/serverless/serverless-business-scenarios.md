@@ -4,12 +4,12 @@ description: Görüntü işlemeden mobil arka uçlarına ve ETL işlem hattına 
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: cb761524976125c816aae925f0c369eb8c76e7de
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 7024a33f8a7fccd6afa51c126454afedd87cceee
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926479"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834295"
 ---
 # <a name="serverless-business-scenarios-and-use-cases"></a>Sunucusuz iş senaryoları ve kullanım örnekleri
 
@@ -27,13 +27,13 @@ Ayrı bir tek sayfalı uygulama (SPA), görüntülerin ve meta verilerin bir lis
 
 ![Otomatik görüntü Galerisi](./media/automated-image-gallery.png)
 
-Mantıksal uygulamayı oluşturmak için tam depoya ve yönergelere buradan ulaşabilirsiniz: [Event Grid tutkalla](https://github.com/JeremyLikness/Event-Grid-Glue).
+Mantıksal uygulamayı oluşturmak için tam depo ve yönergeler buradan kullanılabilir: [Event Grid tutkalla](https://github.com/JeremyLikness/Event-Grid-Glue).
 
 ## <a name="cross-platform-mobile-client-using-xamarinforms-and-functions"></a>Xamarin. Forms ve işlevleri kullanan platformlar arası mobil istemci
 
 Bkz. Azure Web portalında veya Visual Studio 'da basit sunucusuz Azure Işlevi uygulama. Android, iOS ve Windows üzerinde çalışan Xamarin. Forms ile bir istemci oluşturun. Daha sonra uygulama, sunucu ile mobil istemciler arasında sunucusuz arka uca bir iletişim ortamı olarak JavaScript Nesne Gösterimi (JSON) kullanmak üzere iyileştirilmektedir.
 
-Daha fazla bilgi için bkz [. Xamarin. Forms istemcisiyle basit bir Azure Işlevi uygulama](https://azure.microsoft.com/resources/samples/functions-xamarin-getting-started/)
+Daha fazla bilgi için bkz. [Xamarin. Forms istemcisiyle basit bir Azure Işlevi uygulama](https://azure.microsoft.com/resources/samples/functions-xamarin-getting-started/).
 
 ## <a name="generate-a-photo-mosaic-with-serverless-image-recognition"></a>Sunucusuz görüntü tanıma ile fotoğraf mozaik oluşturma
 
@@ -55,7 +55,7 @@ Uygulama, bir uç noktanın eski şirket içi koddan sunucusuz bir uç noktaya y
 
 Proxy, bireysel istekleri sunucusuz işlevlere taşınırken yeniden yönlendirmek üzere güncellenen tek bir API uç noktası sağlar.
 
-Geçişin tamamında izlenecek bir video görüntüleyebilirsiniz: [Sunucusuz Azure işlevleri Ile kaldırın ve](https://channel9.msdn.com/Events/Connect/2017/E102)geçiş yapın. Örnek koda erişin: [Kendi uygulamanızı getirin](https://github.com/JeremyLikness/bring-own-app-connect-17).
+Geçişin tamamında izlenecek bir video görüntüleyebilirsiniz: [sunucusuz Azure işlevleri ile kaldırma ve kaydırma](https://channel9.msdn.com/Events/Connect/2017/E102). Örnek koda erişin: [kendi uygulamanızı getirin](https://github.com/JeremyLikness/bring-own-app-connect-17).
 
 ## <a name="parse-a-csv-file-and-insert-into-a-database"></a>Bir CSV dosyasını Ayrıştır ve veritabanına ekleyin
 
@@ -77,7 +77,7 @@ Daha sonra, toplanan veriler hakkında Öngörüler toplamak için bir Power BI 
 
 ![Power BI örneği](./media/power-bi-example.png)
 
-Yönergelerin bulunduğu tam bağlantı kısa bir deposu şurada bulunabilir: [Sunucusuz URL kısaltalayıcı](https://github.com/jeremylikness/serverless-url-shortener). Basitleştirilmiş bir sürüm hakkında buradan bilgi edinebilirsiniz: [Dakikalar içinde sunucusuz .NET uygulamaları Için Azure depolama](https://devblogs.microsoft.com/aspnet/azure-storage-for-serverless-net-apps-in-minutes/).
+Yönergelerin bulunduğu tam bağlantı kısa bir deposu şurada bulunabilir: [sunucusuz URL kısaltalayıcı](https://github.com/jeremylikness/serverless-url-shortener). Basitleştirilmiş bir sürüm hakkında buradan okuyabilirsiniz: [sunucusuz .NET uygulamaları Için Azure depolama, dakikalar içinde](https://devblogs.microsoft.com/aspnet/azure-storage-for-serverless-net-apps-in-minutes/).
 
 ## <a name="verify-device-connectivity-using-a-ping"></a>Ping kullanarak cihaz bağlantısını doğrulama
 
@@ -85,7 +85,7 @@ Yönergelerin bulunduğu tam bağlantı kısa bir deposu şurada bulunabilir: [S
 
 Daha fazla bilgi için bkz. [Azure IoT Hub ping](https://azure.microsoft.com/resources/samples/iot-hub-node-ping/).
 
-## <a name="recommended-resources"></a>Önerilen Kaynaklar
+## <a name="recommended-resources"></a>Önerilen kaynaklar
 
 * [Azure Işlevleri fotoğraf mozaik Oluşturucu](https://azure.microsoft.com/resources/samples/functions-dotnet-photo-mosaic/)
 * [Azure IoT Hub ping](https://azure.microsoft.com/resources/samples/iot-hub-node-ping/)
@@ -98,5 +98,5 @@ Daha fazla bilgi için bkz. [Azure IoT Hub ping](https://azure.microsoft.com/res
 * [Sunucusuz URL kısaltalayıcı](https://github.com/jeremylikness/serverless-url-shortener)
 
 >[!div class="step-by-step"]
->[Önceki](orchestration-patterns.md)İleri
->[](serverless-conclusion.md)
+>[Önceki](orchestration-patterns.md)
+>[İleri](serverless-conclusion.md)

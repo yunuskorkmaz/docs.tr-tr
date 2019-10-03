@@ -1,13 +1,13 @@
 ---
-title: Web API’si kullanarak mikro hizmet uygulama katmanını uygulama
+title: Web API 'sini kullanarak mikro hizmet uygulama katmanını uygulama
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | Bağımlılık ekleme ve ortalama düzenlerini ve bunların uygulama ayrıntılarını Web API 'SI uygulama katmanında anlayın.
 ms.date: 10/08/2018
-ms.openlocfilehash: c8447cfcd3155a873d61ee9287f58774392c279d
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 0f6f47dd5f67fb18695715e5cfc9179206ef6bcf
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70296755"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834361"
 ---
 # <a name="implement-the-microservice-application-layer-using-the-web-api"></a>Web API 'sini kullanarak mikro hizmet uygulama katmanını uygulama
 
@@ -17,7 +17,7 @@ Daha önce belirtildiği gibi, uygulama katmanı, oluşturduğunuz yapıtın (de
 
 Örneğin, sıralama mikro hizmetinin uygulama katmanı kodu, Şekil 7-23 ' de gösterildiği gibi doğrudan **sıralama. API** projesinin (bir ASP.NET Core Web API Projesi) bir parçası olarak uygulanır.
 
-![Sıralama. API mikro hizmeti 'nin, uygulama klasörü altındaki alt klasörleri gösteren Çözüm Gezgini görünümü: Davranışlar, komutlar, DomainEventHandlers, tümleştirme olayları, modeller, sorgular ve doğrulamalar.](./media/image20.png)
+![Sıralama. API mikro hizmeti 'nin, uygulama klasörü altındaki alt klasörleri gösteren Çözüm Gezgini görünümü: davranışlar, komutlar, DomainEventHandlers, ıntegrationevents, modeller, sorgular ve doğrulamalar.](./media/image20.png)
 
 **Şekil 7-23**. Sıralama. API ASP.NET Core Web API projesindeki uygulama katmanı
 
@@ -109,7 +109,7 @@ Bir IOC kapsayıcısına türlerin kaydedilmesinde en sık kullanılan desenler,
 
 #### <a name="additional-resources"></a>Ek kaynaklar
 
-- **Matthew King. Hizmetleri Itilen kayıt yaptırın** \
+- **Matthew King. Hizmetleri Itilen @no__t kaydetme**-1
   <https://www.mking.net/blog/registering-services-with-scrutor>
 
 - **Bir Hellang. İtilen.** GitHub deposu. \
@@ -164,7 +164,7 @@ Kayıt işlemi ve kavramlar, yerleşik ASP.NET Core IOC kapsayıcısına sahip t
 
 #### <a name="additional-resources"></a>Ek kaynaklar
 
-- **ASP.NET Core bağımlılık eklenmesine giriş** \
+- **ASP.NET Core @no__t bağımlılık eklenmesine giriş**-1
   [https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection](/aspnet/core/fundamentals/dependency-injection)
 
 - **Autofac.** Resmi belgeler. \
@@ -181,7 +181,7 @@ Komut deseninin, bu kılavuzda daha önce sunulan CQRS düzeniyle ilgili doğas�
 
 Şekil 7-24 ' de gösterildiği gibi, model, istemci tarafındaki komutları kabul etmeyi, etki alanı modeli kurallarına göre işlemeyi ve son olarak işlemler ile durumları kalıcı hale getirmeyi temel alır.
 
-![CQRS içindeki yazma tarafı için üst düzey görünüm: UI uygulaması, API aracılığıyla bir komut gönderir. Bu, etki alanı modeline ve veritabanını güncelleştirme altyapısına bağlıdır.](./media/image21.png)
+![CQRS: UI uygulamasındaki yazma tarafı üst düzey görünümü, etki alanı modeline ve veritabanını güncelleştirme altyapısına bağlı olan bir CommandHandler 'e yönelik API aracılığıyla bir komut gönderir.](./media/image21.png)
 
 **Şekil 7-24**. Bir CQRS deseninin içindeki komutların veya "işlem tarafındaki" üst düzey görünümü
 
@@ -203,7 +203,7 @@ Tek bir alıcıya komut gönderirsiniz; bir komut yayımlamayın. Yayımlama, bi
 
 Bir komut, bu komutu yürütmek için gereken tüm bilgileri içeren veri alanları veya Koleksiyonlar içeren bir sınıf ile uygulanır. Bir komut, özellikle değişiklik veya işlem istemek için kullanılan özel bir Veri Aktarımı nesne türüdür (DTO). Komutun kendisi, komutu işlemek için gereken bilgileri ve başka hiçbir şeyi temel alır.
 
-Aşağıdaki örnek basitleştirilmiş CreateOrderCommand sınıfını gösterir. Bu, eShopOnContainers 'daki sıralama mikro hizmetinde kullanılan sabit bir komuttur.
+Aşağıdaki örnek basitleştirilmiş `CreateOrderCommand` sınıfını gösterir. Bu, eShopOnContainers 'daki sıralama mikro hizmetinde kullanılan sabit bir komuttur.
 
 ```csharp
 // DDD and CQRS patterns comment
@@ -215,7 +215,7 @@ Aşağıdaki örnek basitleştirilmiş CreateOrderCommand sınıfını gösterir
 // http://cqrs.nu/Faq
 // https://docs.spine3.org/motivation/immutability.html
 // http://blog.gauffin.org/2012/06/griffin-container-introducing-command-support/
-// https://msdn.microsoft.com/library/bb383979.aspx
+// https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/how-to-implement-a-lightweight-class-with-auto-implemented-properties
 [DataContract]
 public class CreateOrderCommand
     :IAsyncRequest<bool>
@@ -285,9 +285,9 @@ Temel olarak, komut sınıfı, etki alanı model nesnelerini kullanarak bir iş 
 
 Ek bir özellik olarak, beklenen kullanım doğrudan etki alanı modeli tarafından işlendiklerinden, komutlar sabittir. Bunların öngörülen yaşam süresi boyunca değiştirmeleri gerekmez. Bir sınıfta C# , bir ayarlayıcıya ya da iç durumu değiştiren başka yöntemler yoksa, dengeshlik kullanılabilirliği elde edilebilir.
 
-Komutları bir serileştirme/seri durumdan çıkarma sürecinde işlem yapmanız veya beklemeniz durumunda, özelliklerin özel ayarlayıcı ve `[DataMember]` (veya `[JsonProperty]`) özniteliği olması gerektiğini unutmayın, aksi takdirde seri hale getirici bunu yapamaz hedef konumda nesneyi gerekli değerlerle yeniden yapılandırma.
+Komutları bir serileştirme/seri durumdan çıkarma işlemi boyunca işlem yapmak veya beklemek istiyorsanız, özelliklerin özel ayarlayıcı ve `[DataMember]` (ya da `[JsonProperty]`) özniteliği olması gerektiğini unutmayın, aksi takdirde seri hale getirici nesneyi şu konumda yeniden yapılandıramazlar: gerekli değerlere sahip hedef.
 
-Örneğin, sipariş oluşturmak için komut sınıfı büyük olasılıkla veri bakımından oluşturmak istediğiniz sıraya benzer, ancak büyük olasılıkla aynı özniteliklere gerek kalmaz. Örneğin, sıra henüz oluşturulmadığından CreateOrderCommand 'in bir sıra KIMLIĞI yoktur.
+Örneğin, sipariş oluşturmak için komut sınıfı büyük olasılıkla veri bakımından oluşturmak istediğiniz sıraya benzer, ancak büyük olasılıkla aynı özniteliklere gerek kalmaz. Örneğin, sipariş henüz oluşturulmadığından `CreateOrderCommand` ' ın bir sıra KIMLIĞI yoktur.
 
 Birçok komut sınıfı basit olabilir ve değiştirilmesi gereken bazı durumları hakkında yalnızca birkaç alan gerektirir. Bu durum, aşağıdakine benzer bir komut kullanarak bir siparişin durumunu "işlem sürüyor" iken "ücretli" veya "sevk edildi" olarak değiştirmeniz durumunda olur:
 
@@ -335,7 +335,7 @@ Buradaki önemli nokta, bir komut işlendiğinde, tüm etki alanı mantığını
 
 Komut işleyicileri karmaşıktır, çok fazla Logic ile, bu bir kod kokusu olabilir. Bunları gözden geçirin ve etki alanı mantığını bulursanız, bu etki alanı davranışını etki alanı nesnelerinin yöntemlerine (Toplam kök ve alt varlık) taşımak için kodu yeniden düzenleyin.
 
-Bir komut işleyici sınıfına örnek olarak, aşağıdaki kod, bu bölümün başlangıcında gördüğünüz CreateOrderCommandHandler sınıfını gösterir. Bu durumda, tanıtıcı yöntemini ve etki alanı modeli nesneleri/toplamaları ile işlemleri vurgulamak istiyoruz.
+Bir komut işleyici sınıfına örnek olarak aşağıdaki kod, bu bölümün başlangıcında gördüğünüz `CreateOrderCommandHandler` sınıfını gösterir. Bu durumda, tanıtıcı yöntemini ve etki alanı modeli nesneleri/toplamaları ile işlemleri vurgulamak istiyoruz.
 
 ```csharp
 public class CreateOrderCommandHandler
@@ -394,10 +394,10 @@ Bunlar bir komut işleyicisinin gerçekleşmesi gereken ek adımlardır:
 
 #### <a name="additional-resources"></a>Ek kaynaklar
 
-- **Seemann ' i işaretleyin. Sınırlar üzerinde uygulamalar nesne yönelimli değildir** \
+- **Seemann ' i işaretleyin. Sınırlar üzerinde uygulamalar nesne odaklı** \ değildir
   <https://blog.ploeh.dk/2011/05/31/AttheBoundaries,ApplicationsareNotObject-Oriented/>
 
-- **Komutlar ve olaylar** \
+- @No__t **komutları ve olayları**-1
   <http://cqrs.nu/Faq/commands-and-events>
 
 - **Komut işleyici ne yapar?** \
@@ -451,9 +451,9 @@ Bu nedenle, zaman uyumsuz bir kuyruğa gönderilen bir komut iletisi doğruland�
 
 Ayrıca, zaman uyumsuz komutlar tek yönlü bir komutlardır. Bu, bir [çevrimiçi konuşmada](https://groups.google.com/forum/#!msg/dddcqrs/xhJHVxDx2pM/WP9qP8ifYCwJ)Burtsev Alexey ve Greg başak arasında aşağıdaki ilginç alışverişte açıklandığı gibi, birçok durumda gerekli olmayabilir:
 
-> \[Burtsev Alexey\] , kişilerin zaman uyumsuz komut işleme veya tek yönlü komut mesajlaşmasını herhangi bir nedenle kullandıkları çok sayıda kod buldum (uzun bir işlem yapılmazlar, bunlar harici zaman uyumsuz kod yürütülemese de, bu uygulamalar bile çapraz uygulama değildir ileti veri yolu kullanımı sınırı). Bu gereksiz karmaşıklığa neden tanıtılsın? Aslında, şu ana kadar çok sayıda durumda çalışacak şekilde komut işleyicilerini engelleyen bir CQRS kod örneği görmedim.
+> \[Burtsev Alexey @ no__t-1 çok sayıda kod buldum. bu nedenle, kişilerin zaman uyumsuz komut işleme veya tek yönlü komut iletileri kullanması gerekir (bunlar uzun bir işlem yapılmazlar, bunlar dışarıdan zaman uyumsuz kod yürütülerek, bu uygulamalar bile çapraz uygulama değildir ileti veri yolu kullanımı sınırı). Bu gereksiz karmaşıklığa neden tanıtılsın? Aslında, şu ana kadar çok sayıda durumda çalışacak şekilde komut işleyicilerini engelleyen bir CQRS kod örneği görmedim.
 >
-> \[Greg başak\] \[... \] zaman uyumsuz bir komut yok; aslında başka bir olaydır. Bana gönderdiklerinizi kabul etmem ve bir olayı daha kabul eterdiğimde, bu, bir komut \[\]değil, bir şey yapmamızı söyledim. Bir şey yapıldığını söylemiş olursunuz. Bu, ilk başta küçük bir farklılık gibi görünüyor, ancak birçok etkileri vardır.
+> \[Greg başak @ no__t-1 \[... \] zaman uyumsuz bir komut yok; Bu aslında başka bir olaydır. Bana gönderdiklerinizi kabul etmem ve bir olayı nasıl yapacağımı kabul eterdiğimde, artık @no__t bir şey yapmamızı söyledim. Bu, @ no__t-1 komutu değildir. Bir şey yapıldığını söylemiş olursunuz. Bu, ilk başta küçük bir farklılık gibi görünüyor, ancak birçok etkileri vardır.
 
 Zaman uyumsuz komutlar, hataların belirtmenin basit bir yolu olmadığından, sistemin karmaşıklığını büyük ölçüde artırır. Bu nedenle, zaman uyumsuz komutlar, ölçekleme gereksinimlerinin gerekli olduğu durumlar dışında veya iç mikro hizmetleri mesajlaşma yoluyla iletişim kurarken özel durumlarda önerilmez. Bu durumlarda, hatalara yönelik ayrı bir raporlama ve kurtarma sistemi tasarlamanız gerekir.
 
@@ -473,14 +473,17 @@ Mediator deseninin kullanılması için başka bir neden, bu kılavuzu gözden g
 
 > Burada test etmeyi düşünüyordum. sisteminizin davranışına yönelik iyi bir tutarlı pencere sağlar. İstek, yanıt verme. Bu en boy, düzenli olarak davranmakta olan testlerin oluşturulmasına oldukça değerlidir.
 
-İlk olarak, yalnızca Mediator nesnesini kullanacağınız örnek bir WebAPI denetleyicisine göz atalım. Mediator nesnesini kullanmıyorsanız, bu denetleyicinin tüm bağımlılıklarını, bir günlükçü nesnesi ve diğerleri gibi şeyleri eklemeniz gerekir. Bu nedenle, Oluşturucu oldukça karmaşıktır. Diğer taraftan, Mediator nesnesini kullanırsanız, aşağıdaki örnekte olduğu gibi, her bir çapraz kesme işlemi için bir tane olmak üzere yalnızca birkaç bağımlılıkda olmak üzere denetleyicinizin Oluşturucusu çok daha basit olabilir.
+İlk olarak, yalnızca Mediator nesnesini kullanacağınız örnek bir WebAPI denetleyicisine göz atalım. Mediator nesnesini kullanmıyorsanız, bu denetleyiciye yönelik tüm bağımlılıkları, bir günlükçü nesnesi ve diğerleri gibi öğeleri eklemeniz gerekir. Bu nedenle, Oluşturucu oldukça karmaşıktır. Diğer taraftan, Mediator nesnesini kullanırsanız, aşağıdaki örnekte olduğu gibi, her bir çapraz kesme işlemi için bir tane olmak üzere yalnızca birkaç bağımlılıkda olmak üzere denetleyicinizin Oluşturucusu çok daha basit olabilir.
 
 ```csharp
 public class MyMicroserviceController : Controller
 {
     public MyMicroserviceController(IMediator mediator,
                                     IMyMicroserviceQueries microserviceQueries)
-    // ...
+    {
+        // ...
+    }
+}
 ```
 
 Mediator 'ın temiz ve yalın bir Web API denetleyici Oluşturucusu sağladığını görebilirsiniz. Ayrıca, denetleyici yöntemleri içinde Mediator nesnesine bir komut göndermek için kod neredeyse bir satırdır:
@@ -499,7 +502,7 @@ public async Task<IActionResult> ExecuteBusinessOperation([FromBody]RunOpCommand
 
 ### <a name="implement-idempotent-commands"></a>Idempotent komutlarını Uygula
 
-**Eshoponcontainers**'da, yukarıdaki sayıdan daha gelişmiş bir örnek, sıralama mikro hizmetinden CreateOrderCommand nesnesi gönderiliyor. Ancak, sipariş iş süreci biraz daha karmaşık olduğundan ve bizim örneğimizde, aslında sepet mikro hizmetinde başlatıldıklarından, CreateOrderCommand nesnesini gönderme eylemi, > adlı bir tümleştirme olay işleyicisinden gerçekleştirilir. UserCheckoutAcceptedIntegrationEvent.cs] (https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/IntegrationEvents/EventHandling/UserCheckoutAcceptedIntegrationEventHandler.cs) önceki daha basit örnekte olduğu gibi, istemci uygulamasından çağrılan basit bir WebAPI denetleyicisi yerine.
+**Eshoponcontainers**'da, yukarıdaki sayıdan daha gelişmiş bir örnek, sıralama mikro hizmetinden CreateOrderCommand nesnesi gönderiliyor. Ancak, sipariş iş süreci biraz daha karmaşık olduğundan ve bizim örneğimizde, aslında sepet mikro hizmetinde başlatıldıklarından, CreateOrderCommand nesnesini gönderme eylemi, > adlı bir tümleştirme olay işleyicisinden gerçekleştirilir. UserCheckoutAcceptedIntegrationEvent.cs] (https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/IntegrationEvents/EventHandling/UserCheckoutAcceptedIntegrationEventHandler.cs) ' dan önceki daha basit örnekte olduğu gibi, istemci uygulamasından çağrılan basit bir WebAPI denetleyicisi yerine.
 
 Bununla birlikte, aşağıdaki kodda gösterildiği gibi, komutunu MediatR 'ye gönderme eylemi oldukça benzerdir.
 
@@ -539,7 +542,7 @@ public class IdentifiedCommand<T, R> : IRequest<R>
 }
 ```
 
-Daha sonra, [IdentifiedCommandHandler.cs](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Commands/IdentifiedCommandHandler.cs) adlı IdentifiedCommand Için CommandHandler, iletinin bir parçası olarak gelen kimliğin bir tabloda zaten mevcut olup olmadığını denetler. Zaten varsa, bu komut yeniden işlenmeyecek, bu nedenle bir ıdempotent komutu olarak davranır. Bu altyapı kodu, `_requestManager.ExistAsync` aşağıdaki yöntem çağrısı tarafından gerçekleştirilir.
+Daha sonra, [IdentifiedCommandHandler.cs](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Commands/IdentifiedCommandHandler.cs) adlı IdentifiedCommand Için CommandHandler, iletinin bir parçası olarak gelen kimliğin bir tabloda zaten mevcut olup olmadığını denetler. Zaten varsa, bu komut yeniden işlenmeyecek, bu nedenle bir ıdempotent komutu olarak davranır. Bu altyapı kodu, aşağıdaki `_requestManager.ExistAsync` Yöntem çağrısı tarafından gerçekleştirilir.
 
 ```csharp
 // IdentifiedCommandHandler.cs
@@ -583,7 +586,7 @@ public class IdentifiedCommandHandler<T, R> :
 }
 ```
 
-IdentifiedCommand, bir iş komutunun zarfı gibi davrandığı için, tekrarlanmış bir kimlik olmadığından iş komutunun işlenmesi gerektiğinde, bu iç iş komutunu alır ve yukarıda gösterilen kodun en son bölümünde olduğu gibi bu iç iş komutunu yeniden gönderir. çalıştıran `_mediator.Send(message.Command)`, [IdentifiedCommandHandler.cs](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Commands/IdentifiedCommandHandler.cs).
+IdentifiedCommand, bir iş komutunun zarfı gibi davrandığı için, tekrarlanmış bir kimlik olmadığından iş komutunun işlenmesi gerektiğinde, bu iç iş komutunu alır ve yukarıda gösterilen kodun en son bölümünde olduğu gibi bu iç iş komutunu yeniden gönderir. `_mediator.Send(message.Command)`, [IdentifiedCommandHandler.cs](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Commands/IdentifiedCommandHandler.cs)üzerinden çalıştırılıyor.
 
 Bunu yaparken, aşağıdaki kodda gösterildiği gibi, işlem veritabanına karşı işlemleri çalıştıran [Createordercommandhandler](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Commands/CreateOrderCommandHandler.cs) olan bu örnekte iş komut işleyicisini bağlar ve çalıştırır.
 
@@ -659,7 +662,7 @@ public class MediatorModule : Autofac.Module
 
 Bu, MediatR ile "sihirli olur" dır.
 
-Her komut işleyicisi `IAsyncRequestHandler<T>` genel arabirimi uyguladığı için, derlemeleri kaydederken kod, `CommandHandlers` ile `Commands`ilişkili olduğu şekilde `IAsyncRequestHandler` işaretlenmiş `RegisteredAssemblyTypes` tüm türlerle kaydedilir, teşekkürler Aşağıdaki örnekte olduğu gibi, `CommandHandler` sınıfında belirtilen ilişkiye:
+Her komut işleyicisi genel `IAsyncRequestHandler<T>` arabirimini uyguladığı için, derlemeleri kaydederken, kod, `CommandHandlers` ' i `Commands` ile ilişkilendirerek `IAsyncRequestHandler` olarak işaretlenen tüm türler `RegisteredAssemblyTypes` ile kaydedilir, `CommandHandler` sınıfı, aşağıdaki örnekte olduğu gibi:
 
 ```csharp
 public class CreateOrderCommandHandler
@@ -667,7 +670,7 @@ public class CreateOrderCommandHandler
 {
 ```
 
-Komutları komut işleyicileriyle ilişkilendiren koddur. İşleyici sadece basit bir sınıftır, ancak öğesinden `RequestHandler<T>`devralır; burada T, komut türüdür ve mediaTR 'nin doğru yük (komut) ile çağrıldığından emin olur.
+Komutları komut işleyicileriyle ilişkilendiren koddur. İşleyici sadece basit bir sınıftır, ancak T `RequestHandler<T>` ' dan devralır, burada T, komut türüdür ve MediatR, doğru yük (komut) ile çağrıldığından emin olur.
 
 ## <a name="apply-cross-cutting-concerns-when-processing-commands-with-the-behaviors-in-mediatr"></a>MediatR 'deki davranışlar ile komutları işlerken çapraz kesme sorunları uygulayın
 
@@ -794,12 +797,12 @@ Benzer bir şekilde, bunları işlerken komutlara uygulamak istediğiniz ek yön
 
 ##### <a name="the-mediator-pattern"></a>Mediator deseninin
 
-- **Mediator stili** \
+- **Mediator deseninin** \
   [https://en.wikipedia.org/wiki/Mediator\_pattern](https://en.wikipedia.org/wiki/Mediator_pattern)
 
 ##### <a name="the-decorator-pattern"></a>Dekoratör deseninin
 
-- **Dekoratör stili** \
+- **Dekoratör deseninin** \
   [https://en.wikipedia.org/wiki/Decorator\_pattern](https://en.wikipedia.org/wiki/Decorator_pattern)
 
 ##### <a name="mediatr-jimmy-bogard"></a>MediatR (Jimmy Bogard)
@@ -807,25 +810,25 @@ Benzer bir şekilde, bunları işlerken komutlara uygulamak istediğiniz ek yön
 - **MediatR.** GitHub deposu. \
   <https://github.com/jbogard/MediatR>
 
-- **MediatR ve Automaber ile CQRS** \
+- **MediatR ve Automaber  \ Ile CQRS**
   <https://lostechies.com/jimmybogard/2015/05/05/cqrs-with-mediatr-and-automapper/>
 
-- **Denetleyicilerinizi bir diet 'e yerleştirin: Gönderi ve komutlar.** \
+- **Denetleyicilerinizi bir diet: gönderi ve komutlara yerleştirin.** \
   <https://lostechies.com/jimmybogard/2013/12/19/put-your-controllers-on-a-diet-posts-and-commands/>
 
-- **Bir Mediator işlem hattı ile çıkış çapraz kesme sorunları** \
+- **Bir Mediator işlem hattı Ile çıkış çapraz kesme sorunları**-1 @no__t
   <https://lostechies.com/jimmybogard/2014/09/09/tackling-cross-cutting-concerns-with-a-mediator-pipeline/>
 
-- **CQRS ve REST: kusursuz eşleşme** \
+- **CQRS ve Rest: kusursuz eşleşme** \
   <https://lostechies.com/jimmybogard/2016/06/01/cqrs-and-rest-the-perfect-match/>
 
-- **MediatR işlem hattı örnekleri** \
+- **MediaTR Işlem hattı örnekleri** \
   <https://lostechies.com/jimmybogard/2016/10/13/mediatr-pipeline-examples/>
 
-- **MediatR ve ASP.NET Core için dikey dilim test armatürleri** \
+- **MediatR ve ASP.NET Core @no__t Için dikey dilim test armatürleri**-1
   <https://lostechies.com/jimmybogard/2016/10/24/vertical-slice-test-fixtures-for-mediatr-and-asp-net-core/>
 
-- **Microsoft 'un bağımlılığı ekleme için MediatR uzantıları yayınlandı** \
+- **Microsoft bağımlılık ekleme Için mediaTR uzantıları @no__t yayınlandı**-1
   <https://lostechies.com/jimmybogard/2016/07/19/mediatr-extensions-for-microsoft-dependency-injection-released/>
 
 ##### <a name="fluent-validation"></a>Akıcı doğrulama
@@ -834,5 +837,5 @@ Benzer bir şekilde, bunları işlerken komutlara uygulamak istediğiniz ek yön
   <https://github.com/JeremySkinner/FluentValidation>
 
 > [!div class="step-by-step"]
-> [Önceki](microservice-application-layer-web-api-design.md)İleri
-> [](../implement-resilient-applications/index.md)
+> [Önceki](microservice-application-layer-web-api-design.md)
+> [İleri](../implement-resilient-applications/index.md)

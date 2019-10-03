@@ -2,12 +2,12 @@
 title: Zaman uyumsuz ileti tabanlı iletişim
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | Zaman uyumsuz ileti tabanlı iletişimler mikro hizmetler mimarisinde önemli bir kavramdır, çünkü mikro hizmetleri bir diğerinden bağımsız tutmanın en iyi yolu, Ayrıca, sonunda da eşzamanlı olarak eşitlenmektir.
 ms.date: 09/20/2018
-ms.openlocfilehash: 65bd0cd2b316fe7011ad8e878852547ee5949f09
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 109737a04eac8cfc30c746d283ca71c697f5b29d
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70295574"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834480"
 ---
 # <a name="asynchronous-message-based-communication"></a>Zaman uyumsuz ileti tabanlı iletişim
 
@@ -31,7 +31,7 @@ Tek alıcıdaki ileti tabanlı iletişim, bu yaklaşımı gösteren şekil 4-18 
 
 İleti tabanlı iletişim göndermeye başladıktan sonra (komutları veya olayları kullanarak), zaman uyumlu HTTP iletişimi ile ileti tabanlı iletişimi karıştırmaktan kaçının.
 
-![Tek bir mikro hizmet zaman uyumsuz ileti alıyor](./media/image18.png)
+![Tek bir mikro hizmet zaman uyumsuz ileti alıyor](./media/asynchronous-message-based-communication/single-receiver-message-based-communication.png)
 
 **Şekil 4-18**. Tek bir mikro hizmet zaman uyumsuz ileti alıyor
 
@@ -53,11 +53,11 @@ Daha önce [Dağıtılmış veri yönetimi sorunları ve çözümleri](distribut
 
 Önemli bir nokta, aynı olaya abone olan birden fazla mikro hizmet ile iletişim kurmak isteyebileceğiniz bir noktasıdır. Bunu yapmak için Şekil 4-19 ' de gösterildiği gibi, olay odaklı iletişime göre yayımla/abone ol iletilerini kullanabilirsiniz. Bu yayımla/abone olma mekanizması mikro hizmet mimarisine özel değildir. Bu, DDD 'daki [sınırlı bağlamların](https://martinfowler.com/bliki/BoundedContext.html) iletişim kurması veya [komut ve sorgu sorumluluklarının ayrılığı (CQRS)](https://martinfowler.com/bliki/CQRS.html) mimari deseninin yazma veritabanındaki okuma veritabanına nasıl yayılacağından benzerdir. Amaç, dağıtılmış sisteminizde birden çok veri kaynağı arasında nihai tutarlılık sağlamaktır.
 
-![Zaman uyumsuz olay odaklı iletişimde, bir mikro hizmet olayları bir olay veri yoluna yayımlar ve çok sayıda mikro hizmet bu hizmete abone olabilir ve bu, bildirim alabilir ve üzerinde işlem yapabilir.](./media/image19.png)
+![Zaman uyumsuz olay odaklı iletişimleri gösteren diyagram.](./media/asynchronous-message-based-communication/asynchronous-event-driven-communication.png)
 
 **Şekil 4-19**. Zaman uyumsuz olay odaklı ileti iletişimi
 
-Uygulamanız, olay odaklı ileti tabanlı iletişimler için kullanılacak protokolü tespit eder. [AMQP](https://en.wikipedia.org/wiki/Advanced_Message_Queuing_Protocol) , güvenilir sıraya alınmış iletişimin sağlanmasına yardımcı olabilir.
+Zaman uyumsuz olay odaklı iletişimde, bir mikro hizmet olayları bir olay veri yoluna yayımlar ve çok sayıda mikro hizmet bu hizmete abone olabilir ve bu, bildirim alabilir ve üzerinde işlem yapabilir. Uygulamanız, olay odaklı ileti tabanlı iletişimler için kullanılacak protokolü tespit eder. [AMQP](https://en.wikipedia.org/wiki/Advanced_Message_Queuing_Protocol) , güvenilir sıraya alınmış iletişimin sağlanmasına yardımcı olabilir.
 
 Bir olay veri yolu kullandığınızda, [Kbbitmq](https://www.rabbitmq.com/) gibi bir ileti ARACıSıDıR API kullanarak kod içeren bir soyutlama düzeyi (bir olay veri yolu arabirimi gibi) ve [konularla birlikte Azure Service Bus gibi bir hizmet veri yolu kullanmak isteyebilirsiniz ](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-dotnet-how-to-use-topics-subscriptions). Alternatif olarak, Event Bus ve Yayımla/abone ol sisteminizi ifade etmek için NServiceBus, Masstransıya ya da daha parlak gibi daha yüksek düzeyde bir Service Bus kullanmak isteyebilirsiniz.
 
@@ -86,24 +86,24 @@ Zaman uyumsuz iletişimin kullanılması sırasında göz önünde bulundurmanı
 - **Olay odaklı mesajlaşma** \
   <http://soapatterns.org/design_patterns/event_driven_messaging>
 
-- **Yayımla/abone ol kanalı** \
+- **Yayımla/abone ol** \
   <https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html>
 
 - **UDI Dahan. Açıklanan CQRS** \
   <http://udidahan.com/2009/12/09/clarified-cqrs/>
 
-- **Komut ve Sorgu Sorumluluklarının Ayrılığı (CQRS)**  \
+- **Komut ve sorgu sorumluluklarının ayrılığı (CQRS)**  \
   <https://docs.microsoft.com/azure/architecture/patterns/cqrs>
 
-- **Sınırlanmış bağlamlar arasında iletişim kurma** \
+- **Sınırlanmış bağlamlar arasında iletişim** \
   <https://docs.microsoft.com/previous-versions/msp-n-p/jj591572(v=pandp.10)>
 
 - **Nihai tutarlılık** \
   <https://en.wikipedia.org/wiki/Eventual_consistency>
 
-- **Jimmy Bogard. Esnekliği doğru yeniden düzenleme: Kupın değerlendirmesi** \
+- **Jimmy Bogard. Esnekliği 'e yeniden düzenleme: kup@no__t hesaplanıyor**-1
   <https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/>
 
 > [!div class="step-by-step"]
-> [Önceki](communication-in-microservice-architecture.md)İleri
-> [](maintain-microservice-apis.md)
+> [Önceki](communication-in-microservice-architecture.md)
+> [İleri](maintain-microservice-apis.md)

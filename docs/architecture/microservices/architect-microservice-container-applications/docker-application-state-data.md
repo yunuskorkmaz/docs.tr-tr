@@ -1,15 +1,15 @@
 ---
-title: Docker uygulamalarında durum ve veriler
+title: Docker uygulamalarındaki durum ve veriler
 description: Docker uygulamalarında durum ve veri yönetimi. Mikro hizmet örnekleri anlaşılabilir, ancak VERILER, mikro hizmetler ile nasıl işlenir.
 ms.date: 09/20/2018
-ms.openlocfilehash: bd0ac007479dcd51f2c639881273b81d1fd8b6d7
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 193ac143ca0cc42c248f449b1e1a1339af6f69d1
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71039587"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834423"
 ---
-# <a name="state-and-data-in-docker-applications"></a>Docker uygulamalarında durum ve veriler
+# <a name="state-and-data-in-docker-applications"></a>Docker uygulamalarındaki durum ve veriler
 
 Çoğu durumda, bir kapsayıcıyı bir işlem örneği olarak düşünebilirsiniz. İşlem kalıcı durumu korumaz. Bir kapsayıcı yerel depolama alanına yazabilirken, bir örneğin sonsuza kadar bir yerde olacağı varsayılırsa, bellekte tek bir konumun dayanıklı olacağını varsaymış oluyordu. Süreçler gibi kapsayıcı görüntülerinin birden çok örneğe sahip olduğunu veya sonunda sonlandırdığını varsaymalısınız. Bir kapsayıcı Orchestrator ile yönetilmiyorsa, bunların bir düğümden veya VM 'den diğerine taşınabileceğini varsaymalısınız.
 
@@ -47,17 +47,17 @@ Birimler adlandırılmış veya anonim olabilir (varsayılan). Adlandırılmış
 
 Şekil 4-5 ' de gösterildiği gibi, normal Docker birimleri kapsayıcı dışında, ancak konak sunucusunun veya VM 'nin fiziksel sınırları içinde depolanabilir. Ancak, Docker Kapsayıcıları bir konak sunucusundan veya VM 'den diğerine bir birime erişemez. Diğer bir deyişle, bu birimlerle, farklı Docker konaklarında çalışan kapsayıcılar arasında paylaşılan verileri yönetmek mümkün değildir, ancak uzak konakları destekleyen bir birim sürücüsüyle elde edilebilir.
 
-![Birimler, uzak konakları destekleyen uzak bir sürücü kullanmadığınız müddetçe, kapsayıcılar arasında yalnızca aynı konakta paylaşılabilir.](./media/image5.png)
+![Kapsayıcı tabanlı uygulamalar için birimleri ve dış veri kaynaklarını gösteren diyagram.](./media/docker-application-state-data/volumes-external-data-sources.png)
 
 **Şekil 4-5**. Kapsayıcı tabanlı uygulamalar için birimler ve dış veri kaynakları
 
-Ayrıca, Docker Kapsayıcıları bir Orchestrator tarafından yönetildiğinde, küme tarafından gerçekleştirilen iyileştirmelere bağlı olarak kapsayıcılar, konaklar arasında "taşıyabilir". Bu nedenle, iş verileri için veri birimleri kullanmanız önerilmez. Ancak, iş verilerinin tutarlılığını etkilemeyecek şekilde izleme dosyaları, zamana bağlı dosyalar veya benzer şekilde çalışmak için iyi bir mekanizmadır.
+Birimler, uzak konakları destekleyen uzak bir sürücü kullanmadığınız müddetçe, kapsayıcılar arasında yalnızca aynı konakta paylaşılabilir. Ayrıca, Docker Kapsayıcıları bir Orchestrator tarafından yönetildiğinde, küme tarafından gerçekleştirilen iyileştirmelere bağlı olarak kapsayıcılar, konaklar arasında "taşıyabilir". Bu nedenle, iş verileri için veri birimleri kullanmanız önerilmez. Ancak, iş verilerinin tutarlılığını etkilemeyecek şekilde izleme dosyaları, zamana bağlı dosyalar veya benzer şekilde çalışmak için iyi bir mekanizmadır.
 
 Azure SQL veritabanı, Azure Cosmos DB veya redde gibi uzak bir önbellek gibi **uzak veri kaynakları ve önbellek** araçları, kapsayıcısız geliştirilirken aynı şekilde Kapsayıcılı uygulamalarda kullanılabilir. Bu, iş uygulaması verilerinin depolanması için kendini kanıtlamış bir yoldur.
 
 **Azure depolama.** İş verilerinin genellikle Azure depolama gibi dış kaynaklara veya veritabanlarına yerleştirilmesi gerekir. Azure depolama, somut bir şekilde bulutta aşağıdaki hizmetleri sağlar:
 
-- Blob Storage yapılandırılmamış nesne verilerini depolar. Blob, belge veya medya dosyaları (görüntüler, ses ve video dosyaları) gibi herhangi bir tür metin veya ikili veri olabilir. BLOB depolama alanı da nesne depolama olarak adlandırılır.
+- Blob Storage yapılandırılmamış nesne verilerini depolar. Blob, belge veya medya dosyaları (görüntüler, ses ve video dosyaları) gibi herhangi bir tür metin veya ikili veri olabilir. Blob Storage ayrıca Nesne depolama olarak adlandırılır.
 
 - Dosya depolama, standart SMB protokolünü kullanarak eski uygulamalar için paylaşılan depolama alanı sağlar. Azure sanal makineleri ve bulut Hizmetleri, bağlı paylaşımlar aracılığıyla uygulama bileşenleri arasında dosya verilerini paylaşabilir. Şirket içi uygulamalar dosya hizmeti REST API aracılığıyla bir paylaşımdaki dosya verilerine erişebilir.
 
@@ -66,5 +66,5 @@ Azure SQL veritabanı, Azure Cosmos DB veya redde gibi uzak bir önbellek gibi *
 **İlişkisel veritabanları ve NoSQL veritabanları.** Dış veritabanları için SQL Server, PostgreSQL, Oracle veya Azure Cosmos DB, MongoDB gibi NoSQL veritabanları gibi çok sayıda seçenek vardır. Bu veritabanları tamamen farklı bir konu içinde olduklarından bu kılavuzun bir parçası olarak açıklanmıyor.
 
 >[!div class="step-by-step"]
->[Önceki](containerize-monolithic-applications.md)İleri
->[](service-oriented-architecture.md)
+>[Önceki](containerize-monolithic-applications.md)
+>[İleri](service-oriented-architecture.md)

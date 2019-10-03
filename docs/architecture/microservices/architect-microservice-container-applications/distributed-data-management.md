@@ -1,17 +1,17 @@
 ---
-title: Dağıtılmış veri yönetimi için sorunlar ve çözümler
+title: Dağıtılmış veri yönetimi ile ilgili sorunlar ve çözümler
 description: Mikro hizmetler dünyasında dağıtılmış veri yönetimiyle ilgili zorluk ve çözümlerin ne olduğunu öğrenin.
 ms.date: 09/20/2018
-ms.openlocfilehash: 7733a4523e147591151cd0dda26c43992dbe9a41
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: c30de24591d5a73fd34087f34a69e9c7ed54cd35
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70295526"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834451"
 ---
-# <a name="challenges-and-solutions-for-distributed-data-management"></a>Dağıtılmış veri yönetimi için sorunlar ve çözümler
+# <a name="challenges-and-solutions-for-distributed-data-management"></a>Dağıtılmış veri yönetimi ile ilgili sorunlar ve çözümler
 
-## <a name="challenge-1-how-to-define-the-boundaries-of-each-microservice"></a>Sınama \#1: Her mikro hizmetin sınırlarını tanımlama
+## <a name="challenge-1-how-to-define-the-boundaries-of-each-microservice"></a>Sınama \#1: her mikro hizmetin sınırlarını tanımlama
 
 Mikro hizmet sınırlarının tanımlanması büyük olasılıkla herkesin karşılaştığı ilk güçlük dır. Her mikro hizmet uygulamanızın bir parçası olmalıdır ve bu her mikro hizmet, ilettiği tüm avantajlarla ve güçlüklerle birlikte otonom olmalıdır. Ancak bu sınırları nasıl tanımlayabilirim?
 
@@ -19,7 +19,7 @@ Mikro hizmet sınırlarının tanımlanması büyük olasılıkla herkesin karş
 
 Her bağlam için farklı bir etki alanı ile birden çok uygulama bağlamı arasındaki sınırları nasıl tanımlayabilmeniz, her bir iş mikro hizmeti ve ilgili etki alanı modeli ve verileri için sınırları nasıl tanımlayabilmeniz gerekir. Bu mikro hizmetler arasındaki kuponu en aza indirmenize her zaman çalışılır. Bu kılavuz, bu kimlik ve etki alanı modeli tasarımı hakkında daha ayrıntılı bilgi, [her mikro hizmet için etki alanı modeli sınırlarını tanımlama](identify-microservice-domain-model-boundaries.md) bölümünde daha fazla ayrıntıya gider.
 
-## <a name="challenge-2-how-to-create-queries-that-retrieve-data-from-several-microservices"></a>Zorluk \#2: Çeşitli mikro hizmetlerden veri alan sorgular oluşturma
+## <a name="challenge-2-how-to-create-queries-that-retrieve-data-from-several-microservices"></a>Sınama \#2: çeşitli mikro hizmetlerden veri alan sorgular oluşturma
 
 İkinci bir sınama, birkaç mikro hizmetten veri alan sorguların nasıl uygulanacağı, uzak istemci uygulamalarından gelen mikro hizmetlerle geveze iletişiminden kaçınmaya yönelik bir sınamadır. Bir örnek, bir mobil uygulamadan, sepet, Katalog ve Kullanıcı kimliği mikro hizmetleri tarafından sahip olunan Kullanıcı bilgilerini göstermesi gereken tek bir ekran olabilir. Birden fazla mikro hizmette bulunan çok sayıda tabloyu içeren bir karmaşık rapor olabilir. Doğru çözüm, sorguların karmaşıklığına bağlıdır. Ancak, sistem iletişiminizdeki verimliliği artırmak isterseniz bilgileri toplamanın bir yolu olması gerekir. En popüler çözümler şunlardır.
 
@@ -37,7 +37,7 @@ Bu merkezi veritabanının yalnızca gerçek zamanlı veriler gerektirmeyen sorg
 
 Ancak, uygulama tasarımınız karmaşık sorgular için birden fazla mikro hizmetten sürekli bilgi toplamak içeriyorsa, kötü bir tasarımın belirtisi olabilir. mikro hizmet, diğer mikro hizmetlerden mümkün olduğunca yalıtılmış olmalıdır. (Bu, her zaman soğuk veri merkezi veritabanlarını kullanması gereken raporları/Analizi dışlar.) Bu sorunun olması, mikro hizmetleri birleştirmenin bir nedeni olabilir. Güçlü bağımlılıklar, cohezme ve veri toplama ile her bir mikro hizmetin dağıtımı ve dağıtım bağımsız çalışma sınırı dengelenmesi gerekir.
 
-## <a name="challenge-3-how-to-achieve-consistency-across-multiple-microservices"></a>Zorluk \#3: Birden çok mikro hizmet arasında tutarlılık elde etme
+## <a name="challenge-3-how-to-achieve-consistency-across-multiple-microservices"></a>Sınama \#3: birden fazla mikro hizmet arasında tutarlılık elde etme
 
 Daha önce belirtildiği gibi, her mikro hizmetin sahip olduğu veriler bu mikro hizmet için özeldir ve yalnızca mikro hizmet API 'SI kullanılarak erişilebilir. Bu nedenle, sunulan bir zorluk, birden fazla mikro hizmette tutarlılık sağlarken uçtan uca iş süreçlerini uygulama.
 
@@ -47,7 +47,7 @@ Bu uygulamanın kuramsal tek parçalı bir sürümünde, Ürünler tablosundaki 
 
 Ancak, mikro hizmet tabanlı bir uygulamada, ürün ve sepet tabloları ilgili mikro hizmetlere aittir. Bir mikro hizmet, Şekil 4-9 ' de gösterildiği gibi, başka bir mikro hizmetin kendisine ait olan ve doğrudan sorgularda bile kendi işlemlerinde sahip olan tabloları/depolamayı içermemelidir.
 
-![Mikro hizmet, başka bir mikro hizmette bulunan bir tabloya doğrudan erişemez, verilerin eşitlenmesi için nihai tutarlılık kullanılmalıdır.](./media/image9.png)
+![Mikro Hizmetler veritabanı verilerinin paylaşılacağını gösteren diyagram.](./media/distributed-data-management/indepentent-microservice-databases.png)
 
 **Şekil 4-9**. Mikro hizmet, başka bir mikro hizmette bulunan bir tabloya doğrudan erişemez
 
@@ -59,7 +59,7 @@ Sepet tablosu sepet mikro hizmetine ait olduğundan, Katalog mikro hizmeti sepet
 
 Bu sorun için iyi bir çözüm, olay odaklı iletişim ve bir Yayımla ve abone ol sistemi ile ifade edilen mikro hizmetler arasındaki nihai tutarlılığı kullanmaktır. Bu konular, bu kılavuzda daha sonra [zaman uyumsuz olay odaklı iletişim](asynchronous-message-based-communication.md#asynchronous-event-driven-communication) bölümünde ele alınmıştır.
 
-## <a name="challenge-4-how-to-design-communication-across-microservice-boundaries"></a>Zorluk \#4: Mikro hizmet sınırları genelinde iletişim tasarlama
+## <a name="challenge-4-how-to-design-communication-across-microservice-boundaries"></a>Sınama \#4: mikro hizmet sınırları genelinde iletişim tasarlama
 
 Mikro hizmet sınırları genelinde iletişim kurmak gerçek bir zorluk dır. Bu bağlamda iletişim, kullanmanız gereken Protokolü (HTTP ve REST, AMQP, mesajlaşma vb.) ifade etmez. Bunun yerine, hangi iletişim stilini kullanacağınızı ve özellikle mikro hizmetlerinizin ne şekilde bağlanmış olduğunu ele alınmaktadır. Bir başarısızlık düzeyine bağlı olarak, hata oluştuğunda sisteminizde bu hatanın etkisi önemli ölçüde farklılık gösterecektir.
 
@@ -83,13 +83,13 @@ Zaman uyumsuz iletişimin kullanımı, [zaman uyumsuz mikro hizmet tümleştirme
 
 ## <a name="additional-resources"></a>Ek kaynaklar
 
-- **CAP 'ler** \
+- Üst **sınır** \
   <https://en.wikipedia.org/wiki/CAP_theorem>
 
 - **Nihai tutarlılık** \
   <https://en.wikipedia.org/wiki/Eventual_consistency>
 
-- **Veri tutarlılığı öncü** \
+- **Veri tutarlılığı** \
   <https://docs.microsoft.com/previous-versions/msp-n-p/dn589800(v=pandp.10)>
 
 - **Marwler. CQRS (Komut ve Sorgu Sorumluluklarının Ayrılığı)**  \
@@ -98,15 +98,15 @@ Zaman uyumsuz iletişimin kullanımı, [zaman uyumsuz mikro hizmet tümleştirme
 - **Gerçekleştirilmiş görünüm** \
   <https://docs.microsoft.com/azure/architecture/patterns/materialized-view>
 
-- **Charles satırı. ACID ile TEMEL Veritabanı Işlem Işlemenin kaydırma pH** \
+- **Charles satırı. ACID ile temel: veritabanı Işlem Işleme** \ ' ın kaydırma pH
   <https://www.dataversity.net/acid-vs-base-the-shifting-ph-of-database-transaction-processing/>
 
-- **Telafi Işlemi** \
+- **Telafi işlemi** \
   <https://docs.microsoft.com/azure/architecture/patterns/compensating-transaction>
 
 - **UDI Dahan. Hizmet odaklı bileşim** \
   <http://udidahan.com/2014/07/30/service-oriented-composition-with-video/>
 
 >[!div class="step-by-step"]
->[Önceki](logical-versus-physical-architecture.md)İleri
->[](identify-microservice-domain-model-boundaries.md)
+>[Önceki](logical-versus-physical-architecture.md)
+>[İleri](identify-microservice-domain-model-boundaries.md)

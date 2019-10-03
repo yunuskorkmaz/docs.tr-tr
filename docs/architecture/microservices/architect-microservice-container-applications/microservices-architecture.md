@@ -2,12 +2,12 @@
 title: Mikro hizmetler mimarisi
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | Mikro hizmet mimarisinin 30,000 fit görünümü.
 ms.date: 09/20/2018
-ms.openlocfilehash: 3cf2a94140042d3cf76b5b63fe4e98638c56dbfe
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: d1c58d218be9e5f8c0ae8ae732f9bdd06674a2c2
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70295480"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834394"
 ---
 # <a name="microservices-architecture"></a>Mikro hizmetler mimarisi
 
@@ -19,11 +19,11 @@ Mikro hizmet mimarisi neden? Kısaca, uzun süreli çeviklik sağlar. Mikro hizm
 
 Ek bir avantaj olarak, mikro hizmetler bağımsız olarak ölçeklendirilebilir. Bir birim olarak ölçeklendirmeniz gereken tek bir tek tek parçalı uygulamaya sahip olmak yerine, belirli mikro hizmetleri de ölçeklendirebilirsiniz. Bu şekilde, uygulamanın ölçeklendirilmesi gerekmeyen diğer alanların ölçeğini genişletmek yerine, talebi desteklemek için yalnızca daha fazla işlem gücü veya ağ bant genişliğine ihtiyacı olan işlevsel alanı ölçeklendirebilirsiniz. Bu, daha az donanım gerektiğinden maliyet tasarrufu anlamına gelir.
 
-![Geleneksel tek parçalı yaklaşımda, uygulama tüm uygulamayı birkaç sunucu/VM 'de kopyalayarak ölçeklendirebilirler. Mikro hizmetler yaklaşımında işlevsellik, her hizmetin bağımsız olarak ölçeklenebilmesi için daha küçük hizmetlerde ayırt edilir.](./media/image6.png)
+![İki dağıtım yöntemi arasındaki farkların diyagramı.](./media/microservices-architecture/monolith-deployment-vs-microservice-approach.png)
 
 **Şekil 4-6**. Tek parçalı dağıtım, mikro hizmetler yaklaşımına karşı
 
-Şekil 4-6 gösterdiği gibi, mikro hizmetler yaklaşımı, karmaşık, büyük ve ölçeklenebilir uygulamaların belirli, küçük bölümlerini değiştirebildiğinden, her mikro hizmetin çevik değişikliklere ve hızlı yinelemesine izin verir.
+Şekil 4-6 gösterdiği gibi, geleneksel tek parçalı bir yaklaşımda, uygulama tüm uygulamayı birkaç sunucu/VM 'de kopyalayarak ölçeklendirebilirler. Mikro hizmetler yaklaşımında işlevsellik, her hizmetin bağımsız olarak ölçeklenebilmesi için daha küçük hizmetlerde ayırt edilir. Mikro hizmetler yaklaşımı, karmaşık, büyük ve ölçeklenebilir uygulamaların belirli, küçük bölümlerini değiştirebildiğinden, her mikro hizmetin çevik değişikliklere ve hızlı yinelemesine izin verir.
 
 Ayrıntılı mikro hizmet tabanlı uygulamaların mimarisi sürekli tümleştirme ve sürekli teslim uygulamalarına izin vermez. Ayrıca, uygulamaya yeni işlevlerin teslimini da hızlandırır. Uygulamaların hassas bir şekilde oluşturulması, mikro Hizmetleri birlikte çalıştırmanızı ve test etmenizi ve bunları aralarında açık sözleşmeleri sürdürirken olarak çalışabilen geliştirebilir. Arabirimleri veya sözleşmeleri değiştirmedikçe, herhangi bir mikro hizmetin iç uygulamasını değiştirebilir veya diğer mikro hizmetleri bozmadan yeni işlevler ekleyebilirsiniz.
 
@@ -43,7 +43,7 @@ Bu kılavuzda, bu kılavuzda yalnızca ilk üç tane ele alınmıştır veya sun
 
 ## <a name="additional-resources"></a>Ek kaynaklar
 
-- **Mark Russinovich. Mikro hizmetler Bulut tarafından desteklenen bir uygulama Devrimi** \
+- **Mark Russinovich. Mikro hizmetler: bulut tarafından desteklenen bir uygulama devrimi** \
   <https://azure.microsoft.com/blog/microservices-an-application-revolution-powered-by-the-cloud/>
 
 - **Marwler. Mikro hizmetler** \
@@ -55,9 +55,9 @@ Bu kılavuzda, bu kılavuzda yalnızca ilk üç tane ele alınmıştır veya sun
 - **Jimmy Nilsson. Öbek bulutu Bilgi Işlem** \
   <https://www.infoq.com/articles/CCC-Jimmy-Nilsson>
 
-- **Cesar de La Torre. Microsoft platformu ve araçları** ile Kapsayıcılı Docker uygulaması yaşam döngüsü (indirilebilir e-kitap) \
+- **Cesar de La Torre. Microsoft platformu ve araçları ile Kapsayıcılı Docker uygulaması yaşam döngüsü** (indirilebilir e-kitap) \
   <https://aka.ms/dockerlifecycleebook>
 
 >[!div class="step-by-step"]
->[Önceki](service-oriented-architecture.md)İleri
->[](data-sovereignty-per-microservice.md)
+>[Önceki](service-oriented-architecture.md)
+>[İleri](data-sovereignty-per-microservice.md)

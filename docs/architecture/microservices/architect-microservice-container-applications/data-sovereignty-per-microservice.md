@@ -1,15 +1,15 @@
 ---
-title: Mikro hizmet başına veri hakimiyeti
+title: Mikro hizmet başına veri egemenlik
 description: Mikro hizmet başına veri egementy, mikro hizmetlerin önemli noktalarından biridir. Her mikro hizmet veritabanının tek sahibi olmalıdır ve onu başka hiçbir olmadan paylaşmalıdır. Tabii ki, bir mikro hizmetin tüm örnekleri aynı yüksek kullanılabilirlik veritabanına bağlanır.
 ms.date: 09/20/2018
-ms.openlocfilehash: cd7be23800394b231e15bdc503d15a960a25a20a
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: 3261446a84038b7b634242b0a0737472965168de
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "70296806"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834460"
 ---
-# <a name="data-sovereignty-per-microservice"></a>Mikro hizmet başına veri hakimiyeti
+# <a name="data-sovereignty-per-microservice"></a>Mikro hizmet başına veri egemenlik
 
 Mikro hizmetler mimarisi için önemli bir kural, her mikro hizmetin kendi etki alanı verilerine ve mantığına sahip olması gerekir. Tam bir uygulamanın Logic ve verilerinin sahibi olduğu için, her mikro hizmetin kendi mantığını ve verileri, mikro hizmet başına bağımsız dağıtım ile bir otonom yaşam döngüsü altında sahip olması gerekir.
 
@@ -19,13 +19,13 @@ Bu ilke, her [sınırlanmış bağlam](https://martinfowler.com/bliki/BoundedCon
 
 Diğer taraftan, birçok uygulamada kullanılan geleneksel (tek parçalı veriler) yaklaşımının tek bir merkezi veritabanı veya yalnızca birkaç veritabanı olması gerekir. Bu genellikle Şekil 4-7 ' de gösterildiği gibi, tüm uygulama ve tüm iç alt sistemleri için kullanılan normalleştirilmiş bir SQL veritabanıdır.
 
-![Geleneksel yaklaşımda, genellikle katmanlı bir mimaride tüm hizmetler genelinde paylaşılan tek bir veritabanı vardır. Mikro hizmetler yaklaşımında her mikro hizmet modelin/verilerinin sahibi olur](./media/image7.png)
+![İki veritabanı yaklaşımının gösterildiği diyagram.](./media/data-sovereignty-per-microservice/data-sovereignty-comparison.png)
 
 **Şekil 4-7**. Veri egemenlik karşılaştırması: tek parçalı veritabanı ve mikro hizmetler karşılaştırması
 
-Merkezi veritabanı yaklaşımı başlangıçta daha basit bir şekilde görünür ve her şeyi tutarlı hale getirmek için farklı alt sistemlerde varlıkların yeniden kullanımını etkinleştirmek gibi görünüyor. Ancak gerçekliği, birçok farklı alt sistemi sunan ve çoğu durumda gerekmeyen öznitelikleri ve sütunları içeren çok büyük tablolar ile sona erdirmek ister. Kısa bir izleme için aynı fiziksel eşlemeyi kullanmaya çalışmak, gün uzunluğunda bir otomobil yolculuğu ve öğrenme Coğrafya almak gibidir.
+Geleneksel yaklaşımda, genellikle katmanlı bir mimaride tüm hizmetler genelinde paylaşılan tek bir veritabanı vardır. Mikro hizmetler yaklaşımında, her mikro hizmet modelin/verilerinin sahibi olur. Merkezi veritabanı yaklaşımı başlangıçta daha basit bir şekilde görünür ve her şeyi tutarlı hale getirmek için farklı alt sistemlerde varlıkların yeniden kullanımını etkinleştirmek gibi görünüyor. Ancak gerçekliği, birçok farklı alt sistemi sunan ve çoğu durumda gerekmeyen öznitelikleri ve sütunları içeren çok büyük tablolar ile sona erdirmek ister. Kısa bir izleme için aynı fiziksel eşlemeyi kullanmaya çalışmak, gün uzunluğunda bir otomobil yolculuğu ve öğrenme Coğrafya almak gibidir.
 
-Genellikle tek bir ilişkisel veritabanına sahip tek parçalı bir uygulama iki önemli avantaja sahiptir: [ACID işlemleri](https://en.wikipedia.org/wiki/ACID) ve SQL dili, her ikisi de uygulamanızla ilgili tüm tablolar ve veriler üzerinde çalışır. Bu yaklaşım, birden çok tablodan verileri birleştiren bir sorguyu kolayca yazmak için bir yol sağlar.
+Tek bir ilişkisel veritabanına sahip tek parçalı bir uygulamanın iki önemli avantajı vardır: [ACID işlemleri](https://en.wikipedia.org/wiki/ACID) ve SQL dili, her ikisi de uygulamanızla ilgili tüm tablolar ve veriler üzerinde çalışır. Bu yaklaşım, birden çok tablodan verileri birleştiren bir sorguyu kolayca yazmak için bir yol sağlar.
 
 Ancak, mikro hizmetler mimarisine geçtiğinizde veri erişimi çok daha karmaşık hale gelir. Ancak, bir mikro hizmet veya sınırlı bağlam içinde ACID işlemleri de kullanılabilir olduğunda bile, her bir mikro hizmetin sahip olduğu veriler bu mikro hizmete özeldir ve yalnızca mikro hizmet API 'SI aracılığıyla erişilebilir. Verilerin kapsüllenmesi, mikro hizmetlerin gevşek bir şekilde bağlanmış olmasını sağlar ve birbirinden bağımsız olarak gelişebilirler. Aynı verilere birden çok hizmet erişiyorsa, şema güncelleştirmeleri tüm hizmetlere yönelik Eşgüdümlü güncelleştirmeler gerektirir. Bu, mikro hizmet yaşam döngüsü bağımsız çalışma sınırı kesintiye uğratır. Ancak dağıtılmış veri yapıları, mikro hizmetler genelinde tek bir ACID işlemi yapamayacağınız anlamına gelir. Buna karşılık, bir iş süreci birden çok mikro hizmete yayıldığında nihai tutarlılığı kullanmanız gerekir. Bu, daha sonra açıklandığımız gibi, bütünlük kısıtlamaları oluşturamadığından veya ayrı veritabanları arasında dağıtılmış işlemler kullanamadığından basit SQL birleştirmelere uygulama çok daha zordur. Benzer şekilde, çok sayıda diğer ilişkisel veritabanı özelliği birden fazla mikro hizmette kullanılamaz.
 
@@ -47,7 +47,7 @@ Her sınırlanmış bağlam için bir hizmet tanımlamanın başlamak için iyi 
 
 ### <a name="additional-resources"></a>Ek kaynaklar
 
-- **Chris Richardson. Kalıp Hizmet başına veritabanı** \
+- **Chris Richardson. Model: hizmet başına veritabanı** \
   <https://microservices.io/patterns/data/database-per-service.html>
 
 - **Marwler. BoundedContext** \
@@ -56,9 +56,9 @@ Her sınırlanmış bağlam için bir hizmet tanımlamanın başlamak için iyi 
 - **Marwler. PolyglotPersistence** \
   <https://martinfowler.com/bliki/PolyglotPersistence.html>
 
-- **Alberto Brandolini. Bağlam eşleme ile stratejik etki alanı odaklı tasarım** \
+- **Alberto Brandolini. Bağlam eşleme  \ ile stratejik etki alanı odaklı tasarım**
   <https://www.infoq.com/articles/ddd-contextmapping>
 
 >[!div class="step-by-step"]
->[Önceki](microservices-architecture.md)İleri
->[](logical-versus-physical-architecture.md)
+>[Önceki](microservices-architecture.md)
+>[İleri](logical-versus-physical-architecture.md)

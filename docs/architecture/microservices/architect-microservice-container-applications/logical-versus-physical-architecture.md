@@ -1,15 +1,15 @@
 ---
-title: Mantıksal mimari ile fiziksel mimari karşılaştırması
+title: Mantıksal Mimari ve fiziksel mimariye karşı
 description: Mantıksal ve fiziksel mimarilerin farklarını anlayın.
 ms.date: 09/20/2018
-ms.openlocfilehash: c269369e9b5391e8d25ece46e6b08e34a82fbbba
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 8d1bfca190eb9b18d46625fa4afdec963eb07054
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70295495"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834397"
 ---
-# <a name="logical-architecture-versus-physical-architecture"></a>Mantıksal mimari ile fiziksel mimari karşılaştırması
+# <a name="logical-architecture-versus-physical-architecture"></a>Mantıksal Mimari ve fiziksel mimariye karşı
 
 Bu noktada, mantıksal mimari ve fiziksel mimari arasındaki farkın durdurulması ve ele alındığı ve bu durumun mikro hizmet tabanlı uygulamaların tasarımına nasıl uygulandığı açıklanmaktadır.
 
@@ -25,7 +25,7 @@ Bu nedenle, bir iş mikro hizmeti veya sınırlı bağlam fiziksel mimariye sahi
 
 Şekil 4-8 ' de gösterildiği gibi, katalog iş mikro hizmeti çeşitli hizmetlerden veya işlemlerden oluşabilir. Bunlar, HTTP veya diğer herhangi bir protokolü kullanarak birden çok ASP.NET Web API hizmeti veya başka türde bir hizmet olabilir. Daha da önemlisi, hizmetler aynı iş etki alanına göre aynı verileri paylaşabilir.
 
-![Bir API hizmeti olan bir arama hizmeti ve bir SQL Server veritabanı içeren katalog iş mikro hizmetinin diyagramı.](./media/image8.png)
+![Fiziksel sunucularla Katalog iş mikro hizmeti 'nin diyagramı.](./media/logical-versus-physical-architecture/multiple-physical-services.png)
 
 **Şekil 4-8**. Çeşitli fiziksel hizmetlerle iş mikro hizmeti
 
@@ -34,5 +34,5 @@ Bu nedenle, bir iş mikro hizmeti veya sınırlı bağlam fiziksel mimariye sahi
 Kısaca, mikro hizmetlerin mantıksal mimarisinin fiziksel dağıtım mimarisiyle her zaman uyması gerekmez. Bu kılavuzda, bir mikro hizmetten bahsettiğimiz zaman bir veya daha fazla (fiziksel) hizmetle eşlenecek bir iş veya mantıksal mikro hizmet demek sunuyoruz. Çoğu durumda bu tek bir hizmet olacaktır, ancak daha fazla olabilir.
 
 >[!div class="step-by-step"]
->[Önceki](data-sovereignty-per-microservice.md)İleri
->[](distributed-data-management.md)
+>[Önceki](data-sovereignty-per-microservice.md)
+>[İleri](distributed-data-management.md)

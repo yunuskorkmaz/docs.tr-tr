@@ -2,12 +2,12 @@
 title: Her mikro hizmet için etki alanı modeli sınırlarını tanımlama
 description: Bir ses mimarisine ulaşmak için büyük bir uygulamayı mikro hizmetlere bölümlemenin özünü inceleyelim.
 ms.date: 09/20/2018
-ms.openlocfilehash: aa903e13b20be1084fad60e6fb7bbb1c61403deb
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 9c433066dd8e93dbb09b15e58c9c85617775723d
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70295504"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834409"
 ---
 # <a name="identify-domain-model-boundaries-for-each-microservice"></a>Her mikro hizmet için etki alanı modeli sınırlarını tanımla
 
@@ -27,21 +27,21 @@ Etki alanı modelleri arasında çok sayıda güçlü ilişki varsa ve genellikl
 
 Her mikro hizmet için büyük bir etki alanı modelinin nasıl olması gerektiğine ilişkin en iyi yanıt, olası olarak, diğer bağlamlara geçiş yapmak zorunda kalmadan çalışmanıza olanak tanıyan bir otonom BC içermelidir. (diğer Mikro hizmetin modelleri). Şekil 4-10 ' de, birden fazla mikro hizmetin (birden çok BCs) kendi modeline sahip olduğunu ve uygulamanızda tanımlanan her bir etki alanının belirli gereksinimlerine bağlı olarak varlıkların nasıl tanımlanabileceğiz görebilirsiniz.
 
-![Aynı varlığın "kullanıcılar", "alıcılar", "Ödeiciler" ve "müşteriler" olarak göründüğü, sınırlı içeriğe bağlı olarak, çeşitli model sınırlarındaki (sınırlanmış bağlamlar) varlıklar](./media/image10.png)
+![Çeşitli model sınırlarındaki varlıkları gösteren diyagram.](./media/identify-microservice-domain-model-boundaries/identify-entities-microservice-model-boundries.png)
 
 **Şekil 4-10**. Varlıkları ve mikro hizmet modeli sınırlarını tanımlama
 
-Şekil 4-10, çevrimiçi bir konferans yönetim sistemiyle ilgili örnek bir senaryoyu göstermektedir. Etki alanı uzmanlarının sizin için tanımladığı etki alanlarına bağlı olarak, mikro hizmetler olarak uygulanabilecek birkaç IBH tanımladınız. Gördüğünüz gibi, ödeme mikro hizmetindeki ödemeler gibi yalnızca tek bir mikro hizmet modelinde bulunan varlıklar vardır. Bunlar, kolayca uygulanabilir.
+Şekil 4-10, çevrimiçi bir konferans yönetim sistemiyle ilgili örnek bir senaryoyu göstermektedir. Aynı varlık, sınırlı içeriğe bağlı olarak "kullanıcılar", "alıcılar", "Ödeiciler" ve "müşteriler" olarak görüntülenir. Etki alanı uzmanlarının sizin için tanımladığı etki alanlarına bağlı olarak, mikro hizmetler olarak uygulanabilecek birkaç IBH tanımladınız. Gördüğünüz gibi, ödeme mikro hizmetindeki ödemeler gibi yalnızca tek bir mikro hizmet modelinde bulunan varlıklar vardır. Bunlar, kolayca uygulanabilir.
 
 Ancak, farklı bir şekle sahip olan ancak aynı kimliği birden çok mikro hizmetten oluşan birden fazla etki alanı modeli genelinde paylaşan varlıklara de sahip olabilirsiniz. Örneğin, kullanıcı varlığı, konferanslar yönetim mikro hizmetinde tanımlanmıştır. Aynı kimliğe sahip aynı kullanıcı, sipariş mikro hizmetindeki alıcıların adı, ödeme mikro hizmetindeki ödeyen adı, hatta müşteri hizmeti mikro hizmetindeki müşteri olarak adlandırılan bir kullanıcı. Bunun nedeni, her etki alanı uzmanının kullandığı [ubititous diline](https://martinfowler.com/bliki/UbiquitousLanguage.html) bağlı olarak, bir kullanıcının farklı özniteliklere sahip farklı bir perspektife sahip olabilir. Konferanslar yönetimi adlı mikro hizmet modelindeki Kullanıcı varlığı, kişisel veri özniteliklerinin çoğuna sahip olabilir. Ancak, mikro hizmet ödemedeki veya mikro hizmet müşteri hizmetindeki müşteri şeklinin içindeki aynı kullanıcı aynı öznitelik listesine ihtiyaç duymayabilir.
 
 Şekil 4-11 ' de benzer bir yaklaşım gösterilmektedir.
 
-![Sınırlanmış bağlamlar arasında geleneksel bir veri modeli oluştururken, her sınırlanmış bağlamda farklı özniteliklere sahip aynı kimliği (alıcı da bir Kullanıcı) paylaşan farklı varlıklara sahip olabilirsiniz.](./media/image11.png)
+![Bir veri modelinin birden çok etki alanı modeline nasıl parçalanalınacağını gösteren diyagram.](./media/identify-microservice-domain-model-boundaries/decompose-traditional-data-models.png)
 
 **Şekil 4-11**. Geleneksel veri modellerini birden çok etki alanı modeline ayırmayı kaldırma
 
-Kullanıcının, kullanıcı varlığı olarak konferanslar yönetim mikro hizmet modelinde nasıl mevcut olduğunu ve ayrıca, aslında bir alıcı olduğunda kullanıcı hakkındaki alternatif özniteliklerle veya ayrıntılarla birlikte fiyatlandırma mikro hizmetindeki alıcı varlık biçiminde de mevcut olduğunu görebilirsiniz. Her mikro hizmet veya BC, bir Kullanıcı varlığıyla ilgili tüm verilerin, çözülme veya bağlam sorununa bağlı olarak yalnızca bir parçası olmasına gerek duymayabilir. Örneğin, fiyatlandırma mikro hizmet modelinde, alıcı başına lisans fiyatlarına göre fiyatlandırılması sırasında indirimlerin bir etkisi olacak şekilde, yalnızca KIMLIK (kimlik olarak) ve durum ' a gerek kalmaz.
+Sınırlanmış bağlamlar arasında geleneksel bir veri modeli oluştururken, her sınırlanmış bağlamda farklı özniteliklere sahip aynı kimliği (alıcı da bir Kullanıcı) paylaşan farklı varlıklara sahip olabilirsiniz. Kullanıcının, kullanıcı varlığı olarak konferanslar yönetim mikro hizmet modelinde nasıl mevcut olduğunu ve ayrıca, aslında bir alıcı olduğunda kullanıcı hakkındaki alternatif özniteliklerle veya ayrıntılarla birlikte fiyatlandırma mikro hizmetindeki alıcı varlık biçiminde de mevcut olduğunu görebilirsiniz. Her mikro hizmet veya BC, bir Kullanıcı varlığıyla ilgili tüm verilerin, çözülme veya bağlam sorununa bağlı olarak yalnızca bir parçası olmasına gerek duymayabilir. Örneğin, fiyatlandırma mikro hizmet modelinde, alıcı başına lisans fiyatlarına göre fiyatlandırılması sırasında indirimlerin bir etkisi olacak şekilde, yalnızca KIMLIK (kimlik olarak) ve durum ' a gerek kalmaz.
 
 Bilgisayar varlığı, her etki alanı modelinde aynı ada ancak farklı özniteliklere sahiptir. Ancak, Kullanıcı ve alıcı ile aynı KIMLIĞE göre, bilgisayar tarafından kimlik paylaşımı yapılır.
 
@@ -50,5 +50,5 @@ Temel olarak, birden çok hizmet (etki alanı) içinde bulunan ve bu kullanıcı
 Aynı kullanıcı varlığının, etki alanları genelinde aynı sayıda özniteliğe paylaştırmamasının çeşitli avantajları vardır. Bir avantaj, mikro hizmet modellerinin gerek duymayan verileri olmaması için yinelemeyi azaltmaktır. Başka bir avantaj, varlık başına belirli bir veri türüne sahip olan bir ana mikro hizmete sahiptir; böylece bu tür veriler için güncelleştirmeler ve sorgular yalnızca bu mikro hizmet tarafından çalıştırılır.
 
 >[!div class="step-by-step"]
->[Önceki](distributed-data-management.md)İleri
->[](direct-client-to-microservice-communication-versus-the-api-gateway-pattern.md)
+>[Önceki](distributed-data-management.md)
+>[İleri](direct-client-to-microservice-communication-versus-the-api-gateway-pattern.md)

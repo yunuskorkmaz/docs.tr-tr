@@ -1,25 +1,25 @@
 ---
-title: Yüksek ölçeklenebilirlik ve kullanılabilirlik için mikro hizmetleri ve çok kapsayıcılı uygulamaları yönetme
+title: Yüksek ölçeklenebilirlik ve kullanılabilirlik için mikro hizmetleri ve çok Kapsayıcılı uygulamaları düzenleme
 description: Yüksek ölçeklenebilirlik ve kullanılabilirlik için mikro hizmetleri ve çok Kapsayıcılı uygulamaları düzenleme seçeneklerini ve Kubernetes uygulama yaşam döngüsünü geliştirirken Azure Dev Spaces olasılıklarını öğrenin.
 ms.date: 09/20/2018
-ms.openlocfilehash: aef9dc2206c24d685610616a2a4d7850837b832d
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: f0efad0134ec95028ecd49ad8d294ae4813940e9
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71040086"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834317"
 ---
-# <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>Yüksek ölçeklenebilirlik ve kullanılabilirlik için mikro hizmetleri ve çok kapsayıcılı uygulamaları yönetme
+# <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>Yüksek ölçeklenebilirlik ve kullanılabilirlik için mikro hizmetleri ve çok Kapsayıcılı uygulamaları düzenleme
 
 Uygulamanız mikro hizmetleri temel alıyorsa veya yalnızca birden çok kapsayıcıyı ayırmak için, üretime yönelik uygulamalar için düzenleyiciler kullanmak gereklidir. Daha önce belirtildiği gibi, mikro hizmet tabanlı bir yaklaşımda, her mikro hizmet modelin ve verilerinin sahibi olur, böylece bir geliştirme ve dağıtım noktasından otonom hale gelir. Ancak, birden çok hizmetten (SOA gibi) oluşan daha geleneksel bir uygulamanız olsa da, dağıtılmış bir sistem olarak dağıtılması gereken tek bir iş uygulamasının bulunduğu birden fazla kapsayıcıyla veya hizmete sahip olursunuz. Bu tür sistemler, ölçeği genişletmek ve yönetmek için karmaşıktır; Bu nedenle, üretime hazırlı ve ölçeklenebilir çok kapsayıcılı bir uygulamaya sahip olmak istiyorsanız kesinlikle bir Orchestrator gerekir.
 
 Şekil 4-23, birden fazla mikro hizmetten (kapsayıcılardan) oluşan bir uygulama kümesine dağıtımı gösterir.
 
-![Bir kümede oluşturulan Docker uygulamaları: Her hizmet örneği için bir kapsayıcı kullanırsınız. Docker Kapsayıcıları "dağıtım birimleri" ve bir kapsayıcı bir Docker örneğidir. Bir konak birçok kapsayıcıyı işler](./media/image23.png)
+![Bir kümede oluşturulan Docker uygulamalarını gösteren diyagram.](./media/scalable-available-multi-container-microservice-applications/composed-docker-applications-cluster.png)
 
 **Şekil 4-23**. Kapsayıcılar kümesi
 
-Mantıksal bir yaklaşım gibi görünüyor. Ancak yük dengelemeyi nasıl ele alırken, yönlendirirsiniz ve bu oluşturulan uygulamalar nasıl düzenlenir?
+Her hizmet örneği için bir kapsayıcı kullanırsınız. Docker Kapsayıcıları "dağıtım birimleri" ve bir kapsayıcı bir Docker örneğidir. Bir konak birçok kapsayıcıyı işler. Mantıksal bir yaklaşım gibi görünüyor. Ancak yük dengelemeyi nasıl ele alırken, yönlendirirsiniz ve bu oluşturulan uygulamalar nasıl düzenlenir?
 
 Tek Docker konaklarındaki düz Docker altyapısı, tek bir konaktaki tek görüntü örneklerinin yönetilmesi ihtiyaçlarını karşılar, ancak daha karmaşık dağıtılmış uygulamalar için birden fazla konakta dağıtılan birden çok kapsayıcıyı yönetmek için olduğunda kısa sürer. Çoğu durumda kapsayıcıları otomatik olarak başlatacak bir yönetim platformuna ihtiyacınız vardır, her görüntü için birden çok örnek içeren kapsayıcılar, genişleme kapsayıcıları, gerektiğinde askıya alır veya onları kapatabilir ve ideal olarak ağ ve veri gibi kaynaklara nasıl erişebilecekleri de kontrol edersiniz Depo.
 
@@ -37,8 +37,8 @@ Bir kümenin ve Scheduler 'ın kavramlarıyla ilgili olarak, farklı satıcılar
 
 |     |   |
 |-----|---|
-| **Kubernetes** <br> ![Kubernetes logosu](./media/image24.png) | [*Kubernetes*](https://kubernetes.io/) , özellikleri düzenlemek için küme altyapısı ve kapsayıcı zamanlamalarından değişen işlevselliği sağlayan açık kaynaklı bir üründür. Ana bilgisayar kümelerinde uygulama kapsayıcılarının dağıtım, ölçeklendirme ve işlemlerini otomatikleştirmenizi sağlar. <br><br> *Kubernetes* , kolay yönetim ve bulma için uygulama kapsayıcılarını mantıksal birimlere gruplandıran kapsayıcı merkezli bir altyapı sağlar. <br><br> *Kubernetes* , Linux 'Ta, Windows 'da daha az olgun bir yerde. |
-| **Azure Kubernetes Service'i (AKS)** <br> ![Azure Kubernetes hizmet logosu](./media/image41.png) | [Aks](https://azure.microsoft.com/services/kubernetes-service/) , Azure 'Da Kubernetes kümesinin yönetimini, dağıtımını ve işlemlerini kolaylaştıran yönetilen bir Kubernetes kapsayıcı düzenleme hizmetidir. |
+| **Kubernetes** <br> ![ Kubernetes logosunun bir görüntüsü. ](./media/scalable-available-multi-container-microservice-applications/kubernetes-container-orchestration-system-logo.png) | [*Kubernetes*](https://kubernetes.io/) , özellikleri düzenlemek için küme altyapısı ve kapsayıcı zamanlamalarından değişen işlevselliği sağlayan açık kaynaklı bir üründür. Ana bilgisayar kümelerinde uygulama kapsayıcılarının dağıtım, ölçeklendirme ve işlemlerini otomatikleştirmenizi sağlar. <br><br> *Kubernetes* , kolay yönetim ve bulma için uygulama kapsayıcılarını mantıksal birimlere gruplandıran kapsayıcı merkezli bir altyapı sağlar. <br><br> *Kubernetes* , Linux 'Ta, Windows 'da daha az olgun bir yerde. |
+| **Azure Kubernetes Service (AKS)** <br> ![a Azure Kubernetes hizmet logosunun bir görüntüsü. ](./media/scalable-available-multi-container-microservice-applications/azure-kubernetes-service-logo.png) | [Aks](https://azure.microsoft.com/services/kubernetes-service/) , Azure 'Da Kubernetes kümesinin yönetimini, dağıtımını ve işlemlerini kolaylaştıran yönetilen bir Kubernetes kapsayıcı düzenleme hizmetidir. |
 
 ## <a name="using-container-based-orchestrators-in-microsoft-azure"></a>Microsoft Azure içinde kapsayıcı tabanlı düzenleyiciler kullanma
 
@@ -50,9 +50,9 @@ Bir Kubernetes kümesi, birden çok Docker barındırır ve bunları tek bir san
 
 AKS, Azure 'da Kapsayıcılı uygulamaları çalıştırmak üzere önceden yapılandırılmış bir sanal makine kümesinin oluşturulmasını, yapılandırılmasını ve yönetimini basitleştirmek için bir yol sağlar. Popüler açık kaynak zamanlama ve düzenleme araçlarının iyileştirilmiş bir yapılandırmasını kullanarak, AKS, Microsoft Azure kapsayıcıda kapsayıcı tabanlı uygulamalar dağıtmak ve yönetmek için mevcut becerilerinizi kullanmanıza veya büyük ve büyüyen bir topluluk uzmanlığına göre çizmenizi sağlar .
 
-Azure Kubernetes hizmeti, popüler Docker Kümelemesi açık kaynaklı araçların ve teknolojilerin yapılandırmasını özellikle Azure için iyileştirir. Kapsayıcılar ve uygulama yapılandırmanız için taşınabilirlik sağlayan bir açık çözüm alırsınız. Boyut, ana bilgisayar sayısı ve Orchestrator Araçları ' nı seçin ve AKS diğer her şeyi işler.
+Azure Kubernetes hizmeti, popüler Docker Kümelemesi açık kaynaklı araçların ve teknolojilerin yapılandırmasını özellikle Azure için iyileştirir. Hem kapsayıcılarınız hem de uygulama yapılandırmanız için taşınabilirlik sunan bir açık çözüm elde edersiniz. Boyut, ana bilgisayar sayısı ve Orchestrator Araçları ' nı seçin ve AKS diğer her şeyi işler.
 
-![Kubernetes küme yapısı: DNS, Zamanlayıcı, proxy, vb. ve kapsayıcıları barındıran çeşitli çalışan düğümlerini işleyen bir ana düğüm vardır.](media/image36.png)
+![Bir Kubernetes küme yapısını gösteren diyagram.](./media/scalable-available-multi-container-microservice-applications/kubernetes-cluster-simplified-structure.png)
 
 **Şekil 4-24**. Kubernetes kümesinin Basitleştirilmiş yapısı ve topolojisi
 
@@ -62,7 +62,7 @@ Azure Kubernetes hizmeti, popüler Docker Kümelemesi açık kaynaklı araçlar�
 
 Geliştirme ortamında, Docker yalnızca [Docker Desktop](https://docs.docker.com/install/)'ı yükleyerek tek bir geliştirme makinesinde (Windows 10 veya MacOS) çalışan Kubernetes [2018 Temmuz 'da duyuruldu](https://blog.docker.com/2018/07/kubernetes-is-now-available-in-docker-desktop-stable-channel/) . Şekil 4-25 ' de gösterildiği gibi daha sonra daha fazla tümleştirme testi için buluta dağıtabilirsiniz (AKS).
 
-![Docker, Docker Desktop ile Temmuz ' 2018 üzerinde Kubernetes kümeleri için geliştirme makinesi desteği duyuruldu.](media/image37.png) 
+![Bir geliştirme makinesinde Kubernetes 'i gösteren ve daha sonra AKS 'e dağıtılan diyagram](./media/scalable-available-multi-container-microservice-applications/kubernetes-development-environment.png) 
 
 **Şekil 4-25**. Geliştirme makinesi ve bulutu 'nda Kubernetes çalıştırma
 
@@ -88,7 +88,7 @@ Helk grafikleri ve Kubernetes hakkında daha fazla uygulama bilgisi için, [eSho
 
 ## <a name="use-azure-dev-spaces-for-your-kubernetes-application-lifecycle"></a>Kubernetes uygulama yaşam döngünüz için Azure Dev Spaces kullanın
 
-[Azure dev Spaces](https://docs.microsoft.com/azure/dev-spaces/azure-dev-spaces) takımlar için hızlı, yinelemeli bir Kubernetes geliştirme deneyimi sağlar. En düşük geliştirme makinesi kurulumu ile doğrudan Azure Kubernetes Service (AKS) ' de çalışan ve hata ayıklama kapsayıcılarını seçebilirsiniz. Visual Studio, Visual Studio Code veya komut satırı gibi tanıdık araçları kullanarak Windows, Mac veya Linux 'ta geliştirme yapın.
+[Azure dev Spaces](https://docs.microsoft.com/azure/dev-spaces/azure-dev-spaces) takımlar için hızlı, yinelemeli bir Kubernetes geliştirme deneyimi sağlar. Minimum geliştirme makinesi kurulumu ile, doğrudan Azure Kubernetes Service (AKS) içinde yinelemeli olarak kapsayıcıları çalıştırabilir ve kapsayıcıların hatasını ayıklayabilirsiniz. Windows, Mac veya Linux’ta, Visual Studio, Visual Studio Code veya komut satırı gibi bilindik araçları kullanarak geliştirme gerçekleştirin.
 
 Belirtildiği gibi, kapsayıcı tabanlı uygulamaları dağıtmada Azure Dev Spaces HELI grafiklerini kullanır.
 
@@ -96,11 +96,11 @@ Azure Dev Spaces, Visual Studio 2017 veya Visual Studio Code kullanarak doğruda
 
 Şekil 4-26 ' de gösterildiği gibi, Azure Dev Spaces en yüksek fark özelliği, kümedeki genel dağıtımın geri kalanı ile tümleştirilen ' Spaces ' oluşturma yeteneğidir.
 
-![Azure Dev Spaces, yeni sürümlerin test edilmesini kolaylaştırmak için üretim mikro hizmetlerini geliştirme kapsayıcı örneğiyle saydam bir şekilde karıştırarak ve eşleştirebilir.](media/image38.png)
+![Azure Dev Spaces birden çok boşluk kullanımını gösteren diyagram.](./media/scalable-available-multi-container-microservice-applications/use-multiple-spaces-azure-dev.png)
 
 **Şekil 4-26**. Azure Dev Spaces birden çok boşluk kullanma
 
-Temel olarak Azure 'da paylaşılan bir geliştirme alanı ayarlayabilirsiniz. Her geliştirici uygulamanın yalnızca bir kısmına odaklanabilir ve senaryolarının bağımlı olduğu diğer tüm hizmetleri ve bulut kaynaklarını zaten içeren bir geliştirme alanında ön taahhüt kodu geliştirebilir. Bağımlılıklar her zaman güncel değildir ve geliştiriciler üretimi yansıtan bir şekilde çalışır.
+Temel olarak Azure 'da paylaşılan bir geliştirme alanı ayarlayabilirsiniz. Her geliştirici uygulamanın yalnızca bir kısmına odaklanabilir ve senaryolarının bağımlı olduğu diğer tüm hizmetleri ve bulut kaynaklarını zaten içeren bir geliştirme alanında ön taahhüt kodu geliştirebilir. Bağımlılıklar her zaman günceldir ve geliştiriciler üretimi yansıtan bir şekilde çalışır.
 
 Azure Dev Spaces, bir alan kavramı sağlar. Bu, göreli yalıtımda çalışmanıza ve takımınızın çalışmasını bozmadan korku etmenize olanak tanır. Her dev alanı, "en iyi" ana geliştirme alanındaki bir mikro hizmeti (veya daha fazla), kendi süren iş mikro hizmetinizdeki bir mikro hizmeti (veya çok sayıda) geçersiz kılmanızı sağlayan hiyerarşik bir yapının parçasıdır.
 
@@ -112,7 +112,7 @@ Daha fazla bilgi için [Azure dev Spaces Ile takım geliştirme](https://docs.mi
 
 ## <a name="additional-resources"></a>Ek kaynaklar
 
-- **Azure Kubernetes Service (AKS) ile çalışmaya başlama** \
+- **Azure Kubernetes Service (AKS)**  \ ' i kullanmaya başlama
   <https://docs.microsoft.com/azure/aks/kubernetes-walkthrough-portal>
 
 - **Azure Dev Spaces** \
@@ -122,5 +122,5 @@ Daha fazla bilgi için [Azure dev Spaces Ile takım geliştirme](https://docs.mi
   <https://kubernetes.io/>
 
 >[!div class="step-by-step"]
->[Önceki](resilient-high-availability-microservices.md)İleri
->[](../docker-application-development-process/index.md)
+>[Önceki](resilient-high-availability-microservices.md)
+>[İleri](../docker-application-development-process/index.md)
