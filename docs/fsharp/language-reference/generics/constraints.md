@@ -1,17 +1,17 @@
 ---
 title: Kısıtlamalar
-description: Hakkında bilgi edinin F# bir genel tür veya işlev içinde bir tür bağımsız değişkeni için gereksinimleri belirtmek için genel tür parametreleri uygulanan kısıtlamaları.
+description: Genel tür F# veya işlevdeki bir tür bağımsız değişkeni için gereksinimleri belirtmek üzere genel tür parametrelerine uygulanan kısıtlamalar hakkında bilgi edinin.
 ms.date: 05/16/2016
-ms.openlocfilehash: bb6625636f0465dd608ae2e8a8986d043b62b6e4
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 9912ba63138d893a7c616661dd2b1cbdbe51916c
+ms.sourcegitcommit: 878ca7550b653114c3968ef8906da2b3e60e3c7a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66378193"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71736800"
 ---
 # <a name="constraints"></a>Kısıtlamalar
 
-Bu konu başlığı altında genel için uygulayabileceğiniz kısıtlamasını açıklayan bir genel tür veya işlev içinde bir tür bağımsız değişkeni için gereksinimleri belirleme için parametre türü.
+Bu konu başlığı altında, genel tür parametrelerine uygulayabileceğiniz kısıtlamalar açıklanmakta ve genel tür veya işlevdeki bir tür bağımsız değişkeni için gereksinimleri belirtebilirsiniz.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -21,31 +21,31 @@ type-parameter-list when constraint1 [ and constraint2]
 
 ## <a name="remarks"></a>Açıklamalar
 
-Genel tür içinde kullanılabilir türleri sınırlamak uygulayabileceğiniz çeşitli farklı kısıtlamaları vardır. Aşağıdaki tabloda, listeler ve bu kısıtlamaları açıklar.
+Genel bir türde kullanılabilecek türleri sınırlamak için uygulayabileceğiniz çeşitli farklı kısıtlamalar vardır. Aşağıdaki tabloda bu kısıtlamalar listelenmektedir ve açıklanmaktadır.
 
-|Kısıtlama|Sözdizimi|Açıklama|
+|Kısıtlaması|Sözdizimi|Açıklama|
 |----------|------|-----------|
-|Tür kısıtlaması|*tür-parametresi* :&gt; *türü*|Sağlanan türü belirtilen türünden eşit ya da bundan türetilmiş olmalıdır veya bir arabirim türü olduğundan, sağlanan türü arabirimini uygulaması gerekir.|
-|Null kısıtlaması|*tür-parametresi* : null|Sağlanan türü null sabiti desteklemesi gerekir. Bu, tüm .NET nesne türlerini içerir ancak değil F# listesi, tanımlama grubu, işlevi, sınıf, kaydı veya birleşim türleri.|
-|Açık bir üye kısıtlaması|[(]*tür-parametresi* [veya... veya *tür-parametresi*)]: (*üye imzası*)|Sağlanan tür bağımsız değişkenlerini en az biri belirtilen imzaya sahip bir üyesi olması gerekir; Genel kullanım için tasarlanmamıştır. Üyeleri ya da açıkça türü veya bir örtük tür uzantısı bir parçası için açık bir üye kısıtlaması geçerli hedefleri olarak tanımlanması gerekir.|
-|Oluşturucu kısıtlaması|*tür-parametresi* : (yeni: birimi -&gt; ' bir)|Sağlanan türü bir varsayılan oluşturucuya sahip olmalıdır.|
-|Değer türü kısıtlaması|: Yapı|Sağlanan türü, bir .NET değer türü olması gerekir.|
-|Başvuru türü kısıtlaması|: Yapı değil|Sağlanan türü, bir .NET başvuru türü olması gerekir.|
-|Sabit listesi türü kısıtlaması|: enum&lt;*underlying-type*&gt;|Sağlanan türü belirtilen temel türe sahip bir listeden seçimli türü olmalıdır; Genel kullanım için tasarlanmamıştır.|
-|Temsilci kısıtlaması|: delegate&lt;*tuple-parameter-type*, *return-type*&gt;|Sağlanan türü belirtilen bağımsız değişkenler olan bir temsilci türü ve dönüş değeri; Genel kullanım için tasarlanmamıştır.|
-|Karşılaştırma kısıtlaması|: karşılaştırma|Sağlanan türü karşılaştırma desteklemesi gerekir.|
-|Eşitliği kısıtlaması|: Eşitlik|Sağlanan türü eşitlik desteklemesi gerekir.|
-|Yönetilmeyen kısıtlaması|: Yönetilmeyen|Sağlanan türü, yönetilmeyen bir türü olmalıdır. Yönetilmeyen türler belirli temel türleri (`sbyte`, `byte`, `char`, `nativeint`, `unativeint`, `float32`, `float`, `int16`, `uint16`, `int32`, `uint32`, `int64`, `uint64`, veya `decimal`), numaralandırma türleri `nativeptr<_>`, veya alanları olmak üzere tüm yönetilmeyen tür genel olmayan yapısı.|
+|Tür kısıtlaması|*tür-parametresi* : &gt; *tür*|Belirtilen tür, belirtilen türe eşit veya ondan türetilmiş olmalıdır ya da tür bir arabirimse, belirtilen türün arabirimi uygulaması gerekir.|
+|NULL kısıtlaması|*tür parametresi* : null|Belirtilen tür null sabit değeri desteklemelidir. Bu, tüm .NET nesne türlerini içerir ancak F# liste, demet, işlev, sınıf, kayıt veya birleşim türlerini içerir.|
+|Açık üye kısıtlaması|[(]*tür-parametre* [veya... or *türü-parametresi*)]: (*üye-imza*)|Belirtilen tür bağımsız değişkenlerinden en az biri, belirtilen imzaya sahip bir üyeye sahip olmalıdır; yaygın kullanım için tasarlanmamıştır. Üyeler açık bir üye kısıtlaması için geçerli hedefler olmak üzere tür üzerinde açıkça tanımlanmalıdır veya örtük bir tür uzantısının bir bölümü olmalıdır.|
+|Oluşturucu kısıtlaması|*tür-parametresi* : (yeni: birim-&gt; ' a)|Belirtilen türün parametresiz bir oluşturucusu olmalıdır.|
+|Değer türü kısıtlaması|: struct|Belirtilen tür bir .NET değer türü olmalıdır.|
+|Başvuru türü kısıtlaması|: struct değil|Belirtilen tür bir .NET başvuru türü olmalıdır.|
+|Numaralandırma türü kısıtlaması|: enum @ no__t-0*temel türü*&gt;|Belirtilen tür, belirtilen temel alınan türe sahip bir numaralandırılmış tür olmalıdır; yaygın kullanım için tasarlanmamıştır.|
+|Temsilci kısıtlaması|: temsilci @ no__t-0*demet-parametre-türü*, *return-Type*&gt;|Belirtilen tür, belirtilen bağımsız değişkenlere ve dönüş değerine sahip bir temsilci türü olmalıdır; yaygın kullanım için tasarlanmamıştır.|
+|Karşılaştırma kısıtlaması|: karşılaştırma|Belirtilen tür karşılaştırmayı desteklemelidir.|
+|Eşitlik kısıtlaması|: eşitlik|Belirtilen tür eşitlik desteklemelidir.|
+|Yönetilmeyen kısıtlama|: yönetilmeyen|Belirtilen tür, yönetilmeyen bir tür olmalıdır. Yönetilmeyen türler, belirli basit türlerdir (`sbyte`, `byte`, `char`, `nativeint`, `unativeint`, `float32`, `float`, `int16`, `uint16`, `int32`, 0, 1, 2 veya 3), numaralandırma türleri, 4 veya genel olmayan bir alanları tüm yönetilmeyen türler olan yapı.|
 
-Genel kısıtlama türü ancak çalıştırılmadı türleri üzerinde kullanılabilir olan bir özelliği kullanmak kodunuzu sahip olduğunda bir kısıtlama eklemeniz gerekir. Örneğin, bir sınıf türünü belirtmek için tür kısıtlaması kullanırsanız, bu sınıfın genel işlev veya tür yöntemlerden birini kullanabilirsiniz.
+Kodunuzun kısıtlama türünde kullanılabilir ancak genel olarak türlerde olmayan bir özelliği kullanması gerektiğinde bir kısıtlama eklemeniz gerekir. Örneğin, bir sınıf türü belirtmek için tür kısıtlaması kullanırsanız, bu sınıfın yöntemlerinden birini genel işlevde veya türünde kullanabilirsiniz.
 
-Bir kısıtlama derleyici, kullandığınız özellikleri türü için çalışma zamanında sağlanan herhangi bir türü üzerinde kullanılabilir olacağını doğrulama yolu yoktur çünkü kısıtlamaları belirtme bazen açıkça tür parametreleri yazarken gereklidir parametre.
+Tür parametreleri açıkça yazılırken kısıtlamaların belirlenmesi bazen gereklidir, çünkü kısıtlama olmadan derleyici, kullanmakta olduğunuz özelliklerin tür için çalışma zamanında sağlanabilecek herhangi bir türde kullanılabilir olacağını doğrulama yöntemine sahip değildir. parametresinin.
 
-En yaygın kısıtlamaları, kullandığınız F# kod olan tür kısıtlamaları, temel sınıflar veya arabirimleri belirtin. Diğer kısıtlamalar da tarafından kullanılan F# İşleç aşırı yüklemesi aritmetik işleçler için uygulamak için kullanılan ya da devre dışı olduğundan, esas olarak sağlanan açık üye kısıtlaması gibi belirli işlevleri uygulamak için Kitaplık F# Ortak dil çalışma zamanı tarafından desteklenen tüm kısıtlamaları kümesini destekler.
+F# Kodda kullandığınız en yaygın kısıtlamalar, temel sınıfları veya arabirimleri belirten tür kısıtlamalarıdır. Diğer kısıtlamalar F# kitaplık tarafından, aritmetik işleçler için işleç aşırı yüklemesini uygulamak için kullanılan açık üye kısıtlaması gibi belirli işlevleri uygulamak için kullanılır ya da temel F# olarak sağlanır ortak dil çalışma zamanı tarafından desteklenen tüm kısıtlama kümesini destekler.
 
-Tür çıkarımı işlemi sırasında bazı kısıtlamalar, derleyici tarafından otomatik olarak algılanır. Örneğin, kullanırsanız `+` işleci bir işlevde, derleyici bir açık bir üye kısıtlama ifadesinde kullanılan değişken türleri algılar.
+Tür çıkarımı işlemi sırasında, bazı kısıtlamalar derleyici tarafından otomatik olarak algılanır. Örneğin, bir işlevde `+` işlecini kullanırsanız, derleyici ifadede kullanılan değişken türlerinde açık bir üye kısıtlaması kullanır.
 
-Aşağıdaki kod, bazı kısıtlaması bildirimlerini gösterir.
+Aşağıdaki kod bazı kısıtlama bildirimlerini gösterir:
 
 ```fsharp
 // Base Type Constraint
@@ -113,5 +113,5 @@ class end
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Genel Türler](index.md)
-- [Kısıtlamalar](constraints.md)
+- [Tür](index.md)
+- [Kısıtlamaları](constraints.md)
