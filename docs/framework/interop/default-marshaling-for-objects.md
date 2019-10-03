@@ -316,8 +316,8 @@ Aşağıdaki tabloda, çeşitler ve nesneler için yayma kuralları özetlenmekt
 |----------|--------|-----------------------------|
 |**Değişken** *v*|**Nesne** *o*|hiçbir zaman|
 |**Nesne** *o*|**Değişken** *v*|hiçbir zaman|
-|**Değişken*****BD\****|**Başvuru nesnesi** *o*|Her zaman|
-|**Başvuru nesnesi** *o*|**Değişken*****BD\****|Her zaman|
+|**Değişken**   ***\****  *pv*|**Başvuru nesnesi** *o*|Her zaman|
+|**Başvuru nesnesi** *o*|**Değişken**   ***\****  *pv*|Her zaman|
 |**Değişken** *v* **(VT_BYREF** *&#124;* **VT_\*)**|**Nesne** *o*|hiçbir zaman|
 |**Değişken** *v* **(VT_BYREF** *&#124;* **VT_)**|**Başvuru nesnesi** *o*|Yalnızca tür değişmemiştir.|
 
