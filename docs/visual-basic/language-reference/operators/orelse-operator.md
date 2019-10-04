@@ -1,5 +1,5 @@
 ---
-title: OrElse İşleci (Visual Basic)
+title: Oreli Işleci (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - OrElse
@@ -11,15 +11,15 @@ helpviewer_keywords:
 - short-circuit evaluation
 - OrElse operator [Visual Basic]
 ms.assetid: 253803d8-05b0-47d7-b213-abd222847779
-ms.openlocfilehash: 02be78c8f2b7529f1fb0e46e9fe610a3c66b0652
-ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
+ms.openlocfilehash: 8290e642db3ec76a931bdd2febe427309457bc86
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67860138"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71835238"
 ---
-# <a name="orelse-operator-visual-basic"></a>OrElse İşleci (Visual Basic)
-Kısa devre kapsamlı mantıksal veya işlecini iki gerçekleştirir.  
+# <a name="orelse-operator-visual-basic"></a>Oreli Işleci (Visual Basic)
+İki ifadeye kısa devre uygulayan kapsamlı mantıksal ayırma gerçekleştirir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -27,51 +27,51 @@ Kısa devre kapsamlı mantıksal veya işlecini iki gerçekleştirir.
 result = expression1 OrElse expression2  
 ```  
   
-## <a name="parts"></a>Bölümler  
+## <a name="parts"></a>Parçaya  
  `result`  
- Gerekli. Tüm `Boolean` ifade.  
+ Gereklidir. Herhangi bir `Boolean` ifadesi.  
   
  `expression1`  
- Gerekli. Tüm `Boolean` ifade.  
+ Gereklidir. Herhangi bir `Boolean` ifadesi.  
   
  `expression2`  
- Gerekli. Tüm `Boolean` ifade.  
+ Gereklidir. Herhangi bir `Boolean` ifadesi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bir mantıksal işlemi olduğu söylenir *kısa devre* , derlenmiş kod başka bir ifadenin sonucu bağlı olarak tek bir ifade değerlendirmesi devre dışı bırakabilir. Hesaplanan ilk ifadenin sonucu işlem son sonucunu belirlerse, ikinci ifade değerlendirilemiyor gerek yoktur nihai sonucu değiştiremezsiniz. Kısa devre Atlanan ifade karmaşıksa veya yordam çağrılarını içeriyorsa performansını iyileştirebilir.  
+ Derlenmiş kod, başka bir ifadenin sonucuna bağlı olarak bir ifadenin değerlendirmesini atlayabiliyorsa, mantıksal bir işlemin *kısa devre dışı* olduğu söylenir. Değerlendirilen ilk ifadenin sonucu işlemin nihai sonucunu belirlerse, nihai sonucu değiştiremediğinden ikinci ifadeyi değerlendirmeye gerek yoktur. Atlanan ifade karmaşık olduğunda veya yordam çağrıları içeriyorsa, kısa devre dışı hale getirebilirsiniz performansı iyileştirebilir.  
   
- Her ikisi de ifadeleri sonucunu verirse `True`, `result` olduğu `True`. Aşağıdaki tabloda gösterilmiştir nasıl `result` belirlenir.  
+ Ya da her iki ifade `True` ' ı değerlendirirken, `result` `True` ' dir. Aşağıdaki tabloda `result` ' ın nasıl belirlendiği gösterilmektedir.  
   
-|Varsa `expression1` olduğu|Ve `expression2` olduğu|Değerini `result` olduğu|  
+|@No__t-0 ise|Ve `expression2`|@No__t-0 değeri|  
 |-------------------------|--------------------------|------------------------------|  
-|`True`|(Değerlendirilmedi)|`True`|  
+|`True`|(değerlendirilmedi)|`True`|  
 |`False`|`True`|`True`|  
 |`False`|`False`|`False`|  
   
 ## <a name="data-types"></a>Veri Türleri  
- `OrElse` İşleci yalnızca tanımlanmış [Boole veri türü](../../../visual-basic/language-reference/data-types/boolean-data-type.md). Visual Basic, her işlenen gerektiği şekilde dönüştürür `Boolean` ifade değerlendirmeden önce. Sonucu bir sayısal tür için atarsanız, Visual Basic ondan dönüştürür `Boolean` o türe şekilde `False` olur `0` ve `True` olur `-1`.
-Daha fazla bilgi için [Boole tür dönüştürmeleri](../data-types/boolean-data-type.md#type-conversions)
+ @No__t-0 işleci yalnızca [Boole veri türü](../../../visual-basic/language-reference/data-types/boolean-data-type.md)için tanımlanır. Visual Basic, ifadeyi değerlendirmeden önce her işleneni gerektiği gibi `Boolean` ' a dönüştürür. Sonucu sayısal bir türe atarsanız, Visual Basic `Boolean` ' dan bu türe dönüştürür `False` `0` olur ve `True` `-1` olur.
+Daha fazla bilgi için bkz. [Boole tür dönüştürmeleri](../data-types/boolean-data-type.md#type-conversions).
   
-## <a name="overloading"></a>Aşırı Yükleme  
- [Veya işleci](../../../visual-basic/language-reference/operators/or-operator.md) ve [IsTrue işleci](../../../visual-basic/language-reference/operators/istrue-operator.md) olabilir *aşırı*, yani bu sınıf türünde bir işlenen sahip olduğunda bir sınıf veya yapı davranışlarını tanımlayabilirsiniz, veya yapısı. Aşırı yükleme `Or` ve `IsTrue` işleçleri davranışını etkileyen `OrElse` işleci. Kodunuzu kullanıyorsa `OrElse` bir sınıf veya aşırı yapısı `Or` ve `IsTrue`, yeniden tanımlanan davranışlarını anladığınızdan emin olun. Daha fazla bilgi için [işleç yordamları](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+## <a name="overloading"></a>Aşırı yükleme  
+ [OR işleci](../../../visual-basic/language-reference/operators/or-operator.md) ve [IsTrue işleci](../../../visual-basic/language-reference/operators/istrue-operator.md) *aşırı*yüklenebilir, bu da bir işlenen bu sınıf veya yapının türüne sahip olduğunda bir sınıf veya yapının davranışlarını yeniden tanımlayabileceği anlamına gelir. @No__t aşırı yükleme-0 ve `IsTrue` işleçleri `OrElse` işlecinin davranışını etkiler. Kodunuz, `Or` ve `IsTrue` ' yi aşırı yükleyen bir sınıf veya yapı üzerinde `OrElse` kullanıyorsa, yeniden tanımlanmış davranışlarını anladığınızdan emin olun. Daha fazla bilgi için bkz. [operatör yordamları](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte `OrElse` mantıksal veya işlecini iki ifadelerini gerçekleştirmek için işleci. Sonuç bir `Boolean` gösteren bir değer ya da iki ifadenin true olup olmadığını. İlk ifade yanlışsa `True`, ikinci değerlendirilmez.  
+ Aşağıdaki örnek, iki ifadeye mantıksal ayırıcı gerçekleştirmek için `OrElse` işlecini kullanır. Sonuç, iki ifadeden birinin doğru olup olmadığını temsil eden bir `Boolean` değeridir. İlk ifade `True` ise, ikincisi değerlendirilmez.  
   
  [!code-vb[VbVbalrOperators#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#37)]  
   
- Yukarıdaki örnekte sonuçlarını üretir `True`, `True`, ve `False` sırasıyla. Hesaplamasında `firstCheck`, ilk zaten olduğundan ikinci ifade değerlendirilmez `True`. Ancak, ikinci ifade hesaplamasına değerlendirilir `secondCheck`.  
+ Yukarıdaki örnek sırasıyla `True`, `True` ve `False` sonuçlarını üretir. @No__t-0 hesaplamasında ikinci ifade değerlendirilmez çünkü ilki zaten `True` ' dir. Ancak, ikinci ifade `secondCheck` hesaplamasında değerlendirilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte gösterildiği bir `If`... `Then` iki yordam çağrılarını içeren deyimi. İlk çağrı döndürürse `True`, ikinci yordam çağrılmaz. İkinci yordam, kodun bu bölümünü çalıştırıldığında, her zaman gerçekleştirilmesi gereken önemli görevleri gerçekleştiriyorsa bu beklenmeyen sonuçlara neden.  
+ Aşağıdaki örnek, iki yordam çağrısı içeren `If`... `Then` ifadesini gösterir. İlk çağrı `True` döndürürse ikinci yordam çağrılmaz. Bu, ikinci yordam kodun bu bölümü çalıştırıldığında her zaman gerçekleştirilmesi gereken önemli görevleri gerçekleştirdiğinde beklenmedik sonuçlar verebilir.  
   
  [!code-vb[VbVbalrOperators#38](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#38)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Mantıksal/bit düzeyinde işleçler (Visual Basic)](../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)
-- [Visual Basic'de İşleç önceliği](../../../visual-basic/language-reference/operators/operator-precedence.md)
-- [İşlevselliğe Göre Listelenmiş İşleçler](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
-- [Or İşleci](../../../visual-basic/language-reference/operators/or-operator.md)
-- [IsTrue İşleci](../../../visual-basic/language-reference/operators/istrue-operator.md)
-- [Visual Basic'de mantıksal ve bit düzeyinde işleçler](../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
+- [Mantıksal/bit düzeyinde Işleçler (Visual Basic)](../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)
+- [Visual Basic operatör önceliği](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [IŞLEVLERE göre listelenen işleçler](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
+- [Or Işleci](../../../visual-basic/language-reference/operators/or-operator.md)
+- [IsTrue Işleci](../../../visual-basic/language-reference/operators/istrue-operator.md)
+- [Visual Basic mantıksal ve bit düzeyinde Işleçler](../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)

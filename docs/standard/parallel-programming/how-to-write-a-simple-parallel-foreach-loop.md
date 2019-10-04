@@ -1,5 +1,5 @@
 ---
-title: Parallel.ForEach kullanarak basit bir paralel programı yazma
+title: Parallel. ForEach kullanarak basit bir paralel program yazın
 ms.date: 02/14/2019
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,47 +11,47 @@ helpviewer_keywords:
 ms.assetid: cb5fab92-1c19-499e-ae91-8b7525dd875f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 599432af178031a85dea4155a8fd2923f879a600
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9d54f06c1fc774a2e73b3b99a7d5bb24dd8baf3f
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61769219"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71835269"
 ---
-# <a name="how-to-write-a-simple-parallelforeach-loop"></a>Nasıl yapılır: Basit bir Parallel.ForEach döngüsü yazma
+# <a name="how-to-write-a-simple-parallelforeach-loop"></a>Nasıl yapılır: basit bir Parallel. ForEach Döngüsü Yazma
 
-Bu örnek nasıl kullanılacağını gösterir. bir <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> veri paralelliği herhangi birini etkinleştirmek için döngü <xref:System.Collections.IEnumerable?displayProperty=nameWithType> veya <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> veri kaynağı.
+Bu örnek, <xref:System.Collections.IEnumerable?displayProperty=nameWithType> veya <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> veri kaynağı üzerinde veri paralelliğini etkinleştirmek için <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> döngüsünün nasıl kullanılacağını gösterir.
 
 > [!NOTE]
-> Bu belgede lambda ifadeleri PLINQ'te temsilciler tanımlamak için kullanılır. İle lambda ifadelerine aşina değilseniz C# veya Visual Basic, bkz: [PLINQ ve TPL'deki Lambda ifadeleri](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md).
+> Bu belgede, PLıNQ içinde temsilciler tanımlamak için lambda ifadeleri kullanılmaktadır. Veya Visual Basic içindeki C# lambda ifadeleriyle ilgili bilgi sahibi değilseniz bkz. [PLıNQ ve TPL içindeki lambda ifadeleri](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md).
 
 ## <a name="example"></a>Örnek
 
-Bu örnekte birkaç .jpg dosya olduğunu varsayar bir *C:\Users\Public\Pictures\Sample resimleri* klasörü ve yeni bir alt klasör oluşturur *değiştirilen*. Örneği çalıştırdığınızda, her bir .jpg resim, döndürür. *örnek resimler* ve kaydeder *değiştirilen*. İki yolu gerektiği gibi değiştirebilirsiniz.
+Bu örnek, *C:\users\public\resim\sample resimler* klasöründe birkaç. jpg dosyası olduğunu varsayar ve *değiştirilmiş*adlı yeni bir alt klasör oluşturur. Örneği çalıştırdığınızda, *örnek resimlerde* her. jpg görüntüsünü döndürür ve *Değiştirilecek*şekilde kaydeder. Gerektiğinde iki yolu değiştirebilirsiniz.
 
 [!code-csharp[TPL_Parallel#03](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_parallel/cs/simpleforeach.cs#03)]
 [!code-vb[TPL_Parallel#03](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_parallel/vb/simpleforeach.vb#03)]
 
-A <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> döngü çalışır gibi bir <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> döngü. Döngü, kaynak koleksiyonu bölümler ve sistem ortamına bağlı olarak, birden çok iş parçacığı üzerinde çalışma zamanlar. Daha fazla işlemci sistem üzerinde paralel yöntemi daha hızlı çalışır. Bazı kaynak koleksiyonları için hızlı, kaynak ve döngü gerçekleştiren iş türünü boyutuna bağlı olarak sıralı bir döngü olabilir. Performans hakkında daha fazla bilgi için bkz: [veri ve görev paralelliği olası Tuzaklar](../../../docs/standard/parallel-programming/potential-pitfalls-in-data-and-task-parallelism.md)
+@No__t-0 döngüsü <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> döngüsü gibi çalışmaktadır. Döngü, kaynak koleksiyonu bölümler ve sistem ortamına göre birden çok iş parçacığında çalışmayı zamanlar. Sistemde daha fazla işlemci varsa, paralel yöntem daha hızlı çalışır. Bazı kaynak koleksiyonlarında, kaynağın boyutuna ve döngünün gerçekleştirdiği iş türüne bağlı olarak sıralı bir döngü daha hızlı olabilir. Performans hakkında daha fazla bilgi için bkz. [veri ve görev paralelliği Içindeki olası](potential-pitfalls-in-data-and-task-parallelism.md)bilgiler.
 
-Paralel döngüler hakkında daha fazla bilgi için bkz: [nasıl yapılır: Basit bir Parallel.For döngüsü yazma](../../../docs/standard/parallel-programming/how-to-write-a-simple-parallel-for-loop.md).
+Paralel döngüler hakkında daha fazla bilgi için bkz. [nasıl yapılır: basit bir Parallel. for döngüsü yazma](../../../docs/standard/parallel-programming/how-to-write-a-simple-parallel-for-loop.md).
 
-Kullanılacak <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> kullanabileceğiniz bir genel olmayan koleksiyonu ile <xref:System.Linq.Enumerable.Cast%2A?displayProperty=nameWithType> genişletme yöntemi, aşağıdaki örnekte gösterildiği gibi genel bir koleksiyon için koleksiyon dönüştürmek için:
+@No__t-0 ' ı genel olmayan bir koleksiyon ile kullanmak için, aşağıdaki örnekte gösterildiği gibi, koleksiyonu genel bir koleksiyona dönüştürmek için <xref:System.Linq.Enumerable.Cast%2A?displayProperty=nameWithType> genişletme yöntemini kullanabilirsiniz:
 
 [!code-csharp[TPL_Parallel#07](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_parallel/cs/nongeneric.cs#07)]
 [!code-vb[TPL_Parallel#07](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_parallel/vb/nongeneric.vb#07)]
 
-Paralel LINQ (PLINQ) işlenmesini paralel hale getirmek için de kullanabilirsiniz <xref:System.Collections.Generic.IEnumerable%601> veri kaynakları. PLINQ, döngü davranışı ifade etmek için bildirim temelli bir sorgu söz dizimi kullanmanıza olanak sağlar. Daha fazla bilgi için [paralel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md).
+Paralel LINQ (PLıNQ) kullanarak <xref:System.Collections.Generic.IEnumerable%601> veri kaynaklarını işlemeyi paralel hale getirmek de kullanabilirsiniz. PLıNQ, döngü davranışını ifade etmek için bildirime dayalı sorgu söz dizimi kullanmanıza olanak sağlar. Daha fazla bilgi için bkz. [Parallel LINQ (PLıNQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md).
 
-## <a name="compile-and-run-the-code"></a>Derleme ve kod çalıştırma
+## <a name="compile-and-run-the-code"></a>Kodu derleyin ve çalıştırın
 
-Kodu bir konsol uygulaması için .NET Framework veya .NET Core konsol uygulaması olarak derleyebilirsiniz.
+Kodu, .NET Framework için bir konsol uygulaması olarak veya .NET Core için bir konsol uygulaması olarak derleyebilirsiniz.
 
-Visual Studio'da Visual Basic vardır ve C# Windows Masaüstü ve .NET Core konsol uygulaması şablonları.
+Visual Studio 'da, Windows Masaüstü ve .NET C# Core için Visual Basic ve konsol uygulaması şablonları vardır.
 
-Komut satırından .NET Core ve CLI araçlarını da kullanabilirsiniz (örneğin, `dotnet new console` veya `dotnet new console -lang vb`), veya dosyayı oluşturmak ve komut satırı derleyicisi için bir .NET Framework uygulamasını kullanın.
+Komut satırından, .NET Core ve CLı araçlarını kullanabilirsiniz (örneğin, `dotnet new console` veya `dotnet new console -lang vb`) ya da dosyayı oluşturabilir ve bir .NET Framework uygulaması için komut satırı derleyicisini kullanabilirsiniz.
 
-Bir .NET Core projesi için başvuru gerekir **System.Drawing.Common** NuGet paketi. Visual Studio'da NuGet Paket Yöneticisi paketini yüklemek için kullanın. Alternatif olarak, pakete bir başvuru ekleyebilirsiniz, \*.csproj veya \*.vbproj dosyası:
+Bir .NET Core projesi için **System. Drawing. Common** NuGet paketine başvurmanız gerekir. Visual Studio 'da, paketi yüklemek için NuGet Paket Yöneticisi ' ni kullanın. Alternatif olarak, @no__t -0. csproj veya @no__t -1. vbproj dosyanızdaki pakete bir başvuru ekleyebilirsiniz:
  
 ```xml
 <ItemGroup>
@@ -59,12 +59,12 @@ Bir .NET Core projesi için başvuru gerekir **System.Drawing.Common** NuGet pak
 </ItemGroup>
 ```
 
-Komut satırından .NET Core konsol uygulaması çalıştırmak için kullanın `dotnet run` uygulamanızı içeren klasörden.
+Bir .NET Core konsol uygulamasını komut satırından çalıştırmak için, uygulamanızı içeren klasörden `dotnet run` ' ı kullanın.
 
-Konsol uygulamanızı Visual Studio'dan çalıştırmak için basın **F5**.
+Konsol uygulamanızı Visual Studio 'dan çalıştırmak için **F5**'e basın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Veri paralelliği](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)
-- [Paralel Programlama](../../../docs/standard/parallel-programming/index.md)
-- [Paralel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
+- [Paralel programlama](../../../docs/standard/parallel-programming/index.md)
+- [Parallel LINQ (PLıNQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)

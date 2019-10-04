@@ -3,24 +3,24 @@ title: C# C#
 description: Sayısal C# türleri, özelliklerini ve yöntemlerini inceleyerek bilgi edinin.
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: b0dbb654253b7c6a1ead8f0454be86227a4afb68
-ms.sourcegitcommit: 878ca7550b653114c3968ef8906da2b3e60e3c7a
+ms.openlocfilehash: 731824fefcf4966a885c53be8f71e77140541383
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71736713"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834093"
 ---
 # <a name="manipulate-integral-and-floating-point-numbers-in-c"></a>C @ no__t-0 içindeki integral ve kayan nokta numaralarını işleme
 
 Bu öğretici, size etkileşimli olarak C# sayısal türler öğretir. Küçük miktarlarda kod yazacaksınız, daha sonra bu kodu derleyip çalıştıracaksınız. Öğreticide, içindeki C#sayıları ve matematik işlemlerini keşfettiği bir dizi ders bulunur. Bu dersler, C# dilin temellerini öğretir.
 
-Bu öğreticide, geliştirme için kullanabileceğiniz bir makineniz olması beklenir. [10 dakika içinde Merhaba Dünya](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) .NET öğreticisi, yerel geliştirme ortamınızı Mac, PC veya Linux üzerinde ayarlamaya yönelik yönergeler içerir. Kullanacağınız komutlara hızlı bir genel bakış, daha fazla ayrıntı için bağlantılarla birlikte [geliştirme araçları hakkında bilgi sahibi olmaya gelmiştir](local-environment.md) .
+Bu öğreticide, geliştirme için kullanabileceğiniz bir makineniz olması beklenir. [10 dakika içinde Merhaba Dünya](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) .NET öğreticisi, Windows, Linux veya MacOS 'ta yerel geliştirme ortamınızı ayarlamaya yönelik yönergeler içerir. Kullanacağınız komutlara hızlı bir genel bakış, daha fazla ayrıntı için bağlantılarla birlikte [geliştirme araçları hakkında bilgi sahibi olmaya gelmiştir](local-environment.md) .
 
 ## <a name="explore-integer-math"></a>Tamsayı matematiğini keşfet
 
-Sayı adlı bir dizin oluşturun **-hızlı başlangıç**. Geçerli dizini yapın ve `dotnet new console -n NumbersInCSharp -o .` olarak çalıştırın.
+Sayı adlı bir dizin oluşturun *-hızlı başlangıç*. Geçerli dizini yapın ve `dotnet new console -n NumbersInCSharp -o .` olarak çalıştırın.
 
-**Program.cs** 'i en sevdiğiniz düzenleyicide açın ve `Console.WriteLine("Hello World!");` satırını aşağıdaki kodla değiştirin:
+*Program.cs* 'i en sevdiğiniz düzenleyicide açın ve `Console.WriteLine("Hello World!");` satırını aşağıdaki kodla değiştirin:
 
 ```csharp
 int a = 18;
@@ -31,7 +31,7 @@ Console.WriteLine(c);
 
 Komut pencerenizde `dotnet run` yazarak bu kodu çalıştırın.
 
-Yalnızca tamsayılarla temel matematik işlemlerinden birini gördünüz. @No__t-0 türü bir **tamsayıyı**, pozitif veya negatif bir tam sayıyı temsil eder. Ek için `+` sembolünü kullanırsınız. Tamsayılar için diğer yaygın matematik işlemleri şunlardır:
+Yalnızca tamsayılarla temel matematik işlemlerinden birini gördünüz. @No__t-0 türü bir **tamsayıyı**, sıfır, pozitif veya negatif bir tam sayıyı temsil eder. Ek için `+` sembolünü kullanırsınız. Tamsayılar için diğer yaygın matematik işlemleri şunlardır:
 
 - çıkarma için `-`
 - Çarpma için `*`
@@ -56,7 +56,7 @@ Komut pencerenizde `dotnet run` yazarak bu kodu çalıştırın.
 > Keşfederken C# (veya herhangi bir programlama dilini), kod yazarken hata oluşturursunuz. **Derleyici** bu hataları bulacak ve size rapor eder. Çıktı hata iletileri içerdiğinde, nelerin düzeltileceğini görmek için örnek koda ve penceredeki koda yakından bakın.
 > Bu alıştırma, C# kod yapısını öğrenmenize yardımcı olur.
 
-İlk adımı tamamladınız. Sonraki bölüme başlamadan önce geçerli kodu ayrı bir yönteme taşıyalim. Bu, yeni bir örnekle çalışmaya başlamasını kolaylaştırır. @No__t-0 yönteminizi `WorkingWithIntegers` olarak yeniden adlandırın ve `WorkingWithIntegers` ' i çağıran yeni bir `Main` yöntemi yazın. İşiniz bittiğinde kodunuzun şöyle görünmesi gerekir:
+İlk adımı tamamladınız. Sonraki bölüme başlamadan önce geçerli kodu ayrı bir yönteme taşıyalim. Bu, yeni bir örnekle çalışmaya başlamasını kolaylaştırır. @No__t-0 yönteminizi `WorkingWithIntegers` olarak yeniden adlandırın ve `WorkingWithIntegers` ' i çağıran yeni bir `Main` yöntemi yazın. Bitirdiğinizde, kodunuzun şöyle görünmesi gerekir:
 
 ```csharp
 using System;
@@ -277,7 +277,7 @@ Console.WriteLine(third);
 
 ***Sına***
 
-@No__t-0 türünü kullanarak büyük sayılar, küçük sayılar, çarpma ve bölme ile diğer hesaplamaları deneyin.  Daha karmaşık hesaplamalar deneyin.
+@No__t-0 türünü kullanarak büyük sayılar, küçük sayılar, çarpma ve bölme ile diğer hesaplamaları deneyin. Daha karmaşık hesaplamalar deneyin.
 
 Zorluğa bir süre harcadıktan sonra yazdığınız kodu alın ve yeni bir yönteme yerleştirin. Yeni yöntemin `WorkWithDoubles` olarak adlandırın.
 

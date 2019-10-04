@@ -6,14 +6,14 @@ helpviewer_keywords:
 - XML documentation [C#]
 - C# language, XML documentation features
 ms.assetid: 8f33917b-9577-4c9a-818a-640dbbb0b399
-ms.openlocfilehash: 259f0d5e7e1a67a273bccc7847c38a4d694c69ba
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 06b0c3b7877337d8a5703403af98dbacdf3ea93c
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69588098"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834170"
 ---
-# <a name="how-to-use-the-xml-documentation-features"></a>Nasıl yapılır: XML belgesi özelliklerini kullanma
+# <a name="how-to-use-the-xml-documentation-features"></a>Nasıl yapılır: XML belgeleri özelliklerini kullanma
 
 Aşağıdaki örnek, belgelenen bir türe temel bir genel bakış sağlar.
 
@@ -107,7 +107,7 @@ Aşağıdaki örnek, belgelenen bir türe temel bir genel bakış sağlar.
 </doc>
 ```
 
-## <a name="compiling-the-code"></a>Kodu derleme
+## <a name="compiling-the-code"></a>Kod derleme
 
 Örneği derlemek için aşağıdaki komut satırını yazın:
 
@@ -123,17 +123,19 @@ XML belgeleri///ile başlar. Yeni bir proje oluşturduğunuzda, sihirbazlar sizi
 
 - Geliştiriciler kendi etiket kümesini oluşturmak ücretsizdir. Önerilen bir etiket kümesi vardır ( [belge açıklamaları Için önerilen etiketlere](recommended-tags-for-documentation-comments.md)bakın). Önerilen etiketlerden bazılarının özel anlamları vardır:
 
-  - \<Param > etiketi parametreleri anlatmak için kullanılır. Kullanıldıysa, derleyici parametrenin var olduğunu ve tüm parametrelerin belgelerde açıklandığını doğrular. Doğrulama başarısız olursa, derleyici bir uyarı verir.
+  - @No__t-0param > etiketi parametreleri tanımlamakta kullanılır. Kullanıldıysa, derleyici parametrenin var olduğunu ve tüm parametrelerin belgelerde açıklandığını doğrular. Doğrulama başarısız olursa, derleyici bir uyarı verir.
 
-  - `cref` Özniteliği bir kod öğesine başvuru sağlamak için herhangi bir etikete iliştirilebilir. Derleyici bu kod öğesinin varolduğunu doğrular. Doğrulama başarısız olursa, derleyici bir uyarı verir. Derleyici, `cref` özniteliğinde açıklanan `using` bir türü ararken tüm deyimlere uyar.
+  - @No__t-0 özniteliği, bir kod öğesine başvuru sağlamak için herhangi bir etikete iliştirilebilir. Derleyici bu kod öğesinin varolduğunu doğrular. Doğrulama başarısız olursa, derleyici bir uyarı verir. Derleyici, `cref` özniteliğinde açıklanan bir türü ararken her bir `using` deyimi uyar.
 
-  - Özet \<> etiketi, Visual Studio içinde IntelliSense tarafından bir tür veya üyeyle ilgili ek bilgileri göstermek için kullanılır.
+  - @No__t-0summary > etiketi, Visual Studio içinde IntelliSense tarafından bir tür veya üyeyle ilgili ek bilgileri göstermek için kullanılır.
 
     > [!NOTE]
     > XML dosyası, tür ve Üyeler hakkında tam bilgi sağlamaz (örneğin, herhangi bir tür bilgisi içermez). Bir tür veya üye hakkında tam bilgi almak için, belge dosyasının gerçek tür veya üye üzerinde yansıma ile birlikte kullanılması gerekir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Programlama Kılavuzu](../index.md)
+- [C#Programlama Kılavuzu](../index.md)
 - [/Doc (C# derleyici seçenekleri)](../../language-reference/compiler-options/doc-compiler-option.md)
-- [XML Belge Açıklamaları](./index.md)
+- [XML belge açıklamaları](./index.md)
+- [DocFX belge işlemcisi](https://dotnet.github.io/docfx/)
+- [Sandrole belge işlemcisi](https://github.com/EWSoftware/SHFB)

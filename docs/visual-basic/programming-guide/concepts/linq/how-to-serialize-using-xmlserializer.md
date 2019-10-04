@@ -1,19 +1,19 @@
 ---
-title: 'Nasıl yapılır: XmlSerializer (Visual Basic) kullanarak seri hale getirme'
+title: 'Nasıl yapılır: XmlSerializer kullanarak serileştirme (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: cace24eb-0f43-4016-8e4b-199e5ef73a1c
-ms.openlocfilehash: 1799ef4a0d0f20cddc4514c9dc901047c631b158
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: afde54ed7d0e8049f52468e17f4500fb090f3124
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61614264"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71835119"
 ---
-# <a name="how-to-serialize-using-xmlserializer-visual-basic"></a>Nasıl yapılır: XmlSerializer (Visual Basic) kullanarak seri hale getirme
-Bu konuda serileştirir ve kullanarak çıkarır bir örnek gösterilmektedir <xref:System.Xml.Serialization.XmlSerializer>.  
+# <a name="how-to-serialize-using-xmlserializer-visual-basic"></a>Nasıl yapılır: XmlSerializer kullanarak serileştirme (Visual Basic)
+Bu konuda, <xref:System.Xml.Serialization.XmlSerializer> kullanarak seri hale getirilen ve seri hale getirilen bir örnek gösterilmektedir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, bir sayı içeren bir nesne oluşturur. <xref:System.Xml.Linq.XElement> nesneleri. Ardından bunları bir bellek akışa serileştirir ve bunları bellek akıştan serisini kaldırır.  
+ Aşağıdaki örnek <xref:System.Xml.Linq.XElement> nesneleri içeren bir dizi nesne oluşturur. Daha sonra bunları bir bellek akışına serileştirir ve sonra bellek akışından serileştirir.  
   
 ```vb  
 Imports System  
@@ -71,7 +71,7 @@ End Class
   
  Bu örnek aşağıdaki çıktıyı üretir:  
   
-```  
+```console  
 Testing for type: XElementNullContainer  
   Deserialized type: XElementNullContainer  
 Testing for type: System.Xml.Linq.XElement  
@@ -82,4 +82,4 @@ Testing for type: XElementContainer
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [(Visual Basic) XElement nesneleri içeren nesne grafiklerini serileştirme](../../../../visual-basic/programming-guide/concepts/linq/serializing-object-graphs-that-contain-xelement-objects.md)
+- [XElement nesneleri içeren nesne grafiklerini serileştirme (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/serializing-object-graphs-that-contain-xelement-objects.md)

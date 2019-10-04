@@ -2,41 +2,41 @@
 title: LINQ to XML olayları (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 34923928-b99c-4004-956e-38f6db25e910
-ms.openlocfilehash: dcdaf321cfb75ca77e1d8b3f5a541a9418c3f512
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d35f8063fe87ee4be3dd49a3c0221cb9c47cb22e
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62021277"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834976"
 ---
 # <a name="linq-to-xml-events-visual-basic"></a>LINQ to XML olayları (Visual Basic)
-[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] olayları bir XML ağacı değiştirildiğinde bildirim almak etkinleştirin.  
+[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] olayları, bir XML ağacı değiştiğinde size bildirim gönderilmesini sağlar.  
   
- Herhangi bir örneği için olayları ekleyebilirsiniz <xref:System.Xml.Linq.XObject>. Olay işleyicisi, ardından, değişiklikler için olayları alacaksınız <xref:System.Xml.Linq.XObject> ve tüm alt öğeleri. Örneğin, ağacının kökü için bir olay işleyicisi ekleme ve ağaç yapılan tüm değişiklikler bu olay işleyicisinden tanıtıcı.  
+ Bir @no__t örneğine olay ekleyebilirsiniz-0. Olay işleyicisi daha sonra bu <xref:System.Xml.Linq.XObject> ' a ve alt öğelerinden herhangi birine yapılan değişiklikler için olayları alır. Örneğin, ağacın köküne bir olay işleyicisi ekleyebilir ve ağaçtaki tüm değişiklikleri bu olay işleyicisinden işleyebilirsiniz.  
   
- Örnekler için [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] olayları görmek <xref:System.Xml.Linq.XObject.Changing> ve <xref:System.Xml.Linq.XObject.Changed>.  
+ @No__t-0 olaylarının örnekleri için bkz. <xref:System.Xml.Linq.XObject.Changing> ve <xref:System.Xml.Linq.XObject.Changed>.  
   
-## <a name="types-and-events"></a>Türleri ve olaylar  
- Olaylar ile çalışırken aşağıdaki türlerini kullanır:  
+## <a name="types-and-events"></a>Türler ve olaylar  
+ Olaylarla çalışırken aşağıdaki türleri kullanın:  
   
 |Tür|Açıklama|  
 |----------|-----------------|  
-|<xref:System.Xml.Linq.XObjectChange>|Olay türü için bir olay oluştuğunda belirtir bir <xref:System.Xml.Linq.XObject>.|  
-|<xref:System.Xml.Linq.XObjectChangeEventArgs>|İçin veri sağlayan <xref:System.Xml.Linq.XObject.Changing> ve <xref:System.Xml.Linq.XObject.Changed> olayları.|  
+|<xref:System.Xml.Linq.XObjectChange>|@No__t-0 için bir olay oluşturulduğunda olay türünü belirtir.|  
+|<xref:System.Xml.Linq.XObjectChangeEventArgs>|@No__t-0 ve <xref:System.Xml.Linq.XObject.Changed> olayları için veri sağlar.|  
   
- Bir XML ağacı değiştirdiğinizde, aşağıdaki olaylar oluşturulur:  
+ Bir XML ağacını değiştirirken aşağıdaki olaylar oluşturulur:  
   
 |Olay|Açıklama|  
 |-----------|-----------------|  
-|<xref:System.Xml.Linq.XObject.Changing>|Hemen önce gerçekleşir <xref:System.Xml.Linq.XObject> veya alt öğelerinden birini gittiğini değiştirin.|  
-|<xref:System.Xml.Linq.XObject.Changed>|Gerçekleşir, bir <xref:System.Xml.Linq.XObject> değiştirildi veya alt öğelerinden birini değiştirilmiştir.|  
+|<xref:System.Xml.Linq.XObject.Changing>|Bu <xref:System.Xml.Linq.XObject> veya alt öğelerinden herhangi birinin değişmesinden hemen önce gerçekleşir.|  
+|<xref:System.Xml.Linq.XObject.Changed>|@No__t-0 değiştirildiğinde veya alt öğelerinden herhangi biri değiştiğinde gerçekleşir.|  
   
 ## <a name="example"></a>Örnek  
   
 ### <a name="description"></a>Açıklama  
- Olayları toplama bazı bilgiler XML ağacındaki bulundurmak istediğinizde yararlıdır. Örneğin, toplam fatura satır öğelerini bir fatura toplamı korumak isteyebilirsiniz. Bu örnekte, toplam karmaşık öğesinin altındaki tüm alt öğeleri tutmak için olayları kullanır. `Items`.  
+ Olaylar, bir XML ağacındaki bazı toplu bilgileri korumak istediğinizde faydalıdır. Örneğin, faturanın satır öğelerinin toplamı olan bir fatura toplamı korumak isteyebilirsiniz. Bu örnek, `Items` karmaşık öğesi altındaki tüm alt öğelerin toplamını korumak için olayları kullanır.  
   
-### <a name="code"></a>Kod  
+### <a name="code"></a>Kodlayın  
   
 ```vb  
 Module Module1  
@@ -92,10 +92,10 @@ Module Module1
 End Module  
 ```  
   
-### <a name="comments"></a>Açıklamalar  
+### <a name="comments"></a>Yorumlar  
  Bu kod aşağıdaki çıktıyı üretir:  
   
-```  
+```console  
 Changed System.Xml.Linq.XElement Add  
 Changed System.Xml.Linq.XElement Add  
 Changed System.Xml.Linq.XText Remove  
@@ -116,4 +116,4 @@ Total:308
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Gelişmiş LINQ to XML programlama (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+- [Gelişmiş LINQ to XML Programlama (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

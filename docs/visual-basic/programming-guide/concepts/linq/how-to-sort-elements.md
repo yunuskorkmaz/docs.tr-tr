@@ -1,19 +1,19 @@
 ---
-title: 'Nasıl yapılır: Öğeleri Sırala (Visual Basic)'
+title: 'Nasıl yapılır: öğeleri sıralama (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: c2c09279-6c8a-482e-8e71-b1453a815052
-ms.openlocfilehash: f92d8ca36d1b322bb8d1538fd199e7256c982b85
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 1bd76ade02f8f891e98b048ac866b6b9de65062f
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710479"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71835091"
 ---
-# <a name="how-to-sort-elements-visual-basic"></a>Nasıl yapılır: Öğeleri Sırala (Visual Basic)
+# <a name="how-to-sort-elements-visual-basic"></a>Nasıl yapılır: öğeleri sıralama (Visual Basic)
 Bu örnek, sonuçlarını sıralayan bir sorgunun nasıl yazılacağını gösterir.  
   
 ## <a name="example"></a>Örnek  
- Bu örnek aşağıdaki XML belgesini kullanır: [Örnek XML dosyası: Sayısal veri (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md).  
+ Bu örnek, şu XML belgesini kullanır: [örnek xml dosyası: sayısal veri (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md).  
   
 ```vb  
 Dim root As XElement = XElement.Load("Data.xml")  
@@ -29,7 +29,7 @@ Next
   
  Bu kod aşağıdaki çıktıyı üretir:  
   
-```  
+```console  
 0.99  
 4.95  
 6.99  
@@ -42,7 +42,7 @@ Next
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek, bir ad alanında bulunan XML için aynı sorguyu gösterir. Daha fazla bilgi için bkz. [ad alanlarına genel bakış (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).  
   
- Bu örnek aşağıdaki XML belgesini kullanır: [Örnek XML dosyası: Bir ad alanındaki](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-in-a-namespace.md)sayısal veri.  
+ Bu örnek, şu XML belgesini kullanır: [örnek xml dosyası: bir ad alanında sayısal veri](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-in-a-namespace.md).  
   
 ```vb  
 Imports <xmlns='http://www.adatum.com'>  
@@ -64,7 +64,7 @@ End Module
   
  Bu kod aşağıdaki çıktıyı üretir:  
   
-```  
+```console  
 0.99  
 4.95  
 6.99  
@@ -76,5 +76,5 @@ End Module
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Verileri Sıralama](../../../../visual-basic/programming-guide/concepts/linq/sorting-data.md)
+- [Verileri sıralama](../../../../visual-basic/programming-guide/concepts/linq/sorting-data.md)
 - [Temel sorgular (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

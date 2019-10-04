@@ -1,28 +1,28 @@
 ---
-title: <bookmarkResumptionQuery>WCF
+title: '@no__t-WCF için 0'
 ms.date: 03/30/2017
 ms.assetid: 755a34f0-87c9-4a1e-ae4d-0fb8a6fbdc0e
-ms.openlocfilehash: 36d169b78e78692c7b45c75d5d375bddbba1c66f
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 8cb254599a9742305ec958fd77174f4c4b8a57c2
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70850111"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71833998"
 ---
-# <a name="bookmarkresumptionquery-of-wcf"></a>\<WCF 'nin bookmarkResumptionQuery >
+# <a name="bookmarkresumptionquery-of-wcf"></a>WCF \<bookmarkResumptionQuery >
 
 Bir iş akışı örneği içinde yer işaretinin sürdürme izlemek için kullanılan bir sorguyu temsil eder. Sorgu, bir izleme katılımcısı için yer işareti sürdürme kayıtlarına abone olmak için gereklidir.  
   
-Profil sorgularını izleme hakkında daha fazla bilgi için bkz. [Izleme profilleri](../../../windows-workflow-foundation/tracking-profiles.md)
+Profil sorgularını izleme hakkında daha fazla bilgi için bkz. [Izleme profilleri](../../../windows-workflow-foundation/tracking-profiles.md).
   
 [ **\<Yapılandırma >** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. serviceModel >** ](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<İzleme >** ](tracking-of-wcf.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Profiller >** \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<trackingProfile >** ](trackingprofile-of-wcf.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<iş akışı >** ](workflow-of-wcf.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<bookmarkResumptionQueries >** ](bookmarkresumptionqueries-of-wcf.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<bookmarkResumptionQuery >**  
+&nbsp; @ no__t-1[ **\<system. serviceModel >** ](system-servicemodel.md)\
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<tracking >** ](tracking-of-wcf.md)\
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<profiles >** \
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7[ **&nbsp;0trackingProfile >** ](trackingprofile-of-wcf.md)1
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7 @ no__t-8 @ no__t-9[ **&nbsp;2workflow >** ](workflow-of-wcf.md)3
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7 @ no__t-8 @ no__t-9 @ no__t-10 @ no__t-11[ **&nbsp;4bookmarkResumptionQueries >** ](bookmarkresumptionqueries-of-wcf.md)5
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7 @ no__t-8 @ no__t-9 @ no__t-10 @ no__t-11 @ no__t-12 @ no__t-13 **&nbsp;5bookmarkResumptionQuery >**  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -42,7 +42,7 @@ Profil sorgularını izleme hakkında daha fazla bilgi için bkz. [Izleme profil
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve öğeler
 
-Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
+Aşağıdaki bölümlerde öznitelikler, alt öğeler ve üst öğeler açıklanır.  
   
 ### <a name="attributes"></a>Öznitelikler  
   
@@ -50,9 +50,9 @@ Profil sorgularını izleme hakkında daha fazla bilgi için bkz. [Izleme profil
 |---------------|-----------------|  
 |`name`|Abone olunacak yer işareti kaydının adını belirten bir dize.|  
   
-### <a name="child-elements"></a>Alt öğeleri
+### <a name="child-elements"></a>Alt öğeler
 
-Yok.
+Hiçbiri.
   
 ### <a name="parent-elements"></a>Üst öğeler  
   
@@ -64,5 +64,5 @@ Yok.
 
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.BookmarkResumptionQueryElementCollection?displayProperty=nameWithType>
 - <xref:System.Activities.Tracking.BookmarkResumptionQuery?displayProperty=nameWithType>
-- [İş Akışı Takip ve İzleme](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)
-- [İzleme Profilleri](../../../windows-workflow-foundation/tracking-profiles.md)
+- [İş akışı Izleme ve Izleme](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [İzleme profilleri](../../../windows-workflow-foundation/tracking-profiles.md)

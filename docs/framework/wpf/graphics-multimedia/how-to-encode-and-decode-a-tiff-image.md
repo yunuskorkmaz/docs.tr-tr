@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Bir TIFF Görüntüsünü Kodlama ve Kodunu Çözme'
+title: 'Nasıl yapılır: bir TIFF görüntüsünü kodlama ve kodunu çözme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,25 +13,25 @@ helpviewer_keywords:
 - decoding image formats [WPF]
 - TIFF decoding [WPF]
 ms.assetid: 1dfe3209-fc73-40e6-ad1c-71c1c58b3364
-ms.openlocfilehash: 0b2b638d3aa81e48a1378794435d59da1b323aa2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 173a30e785b16a3617b82b771c463083356d6e6e
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61947556"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71835286"
 ---
-# <a name="how-to-encode-and-decode-a-tiff-image"></a>Nasıl yapılır: Bir TIFF Görüntüsünü Kodlama ve Kodunu Çözme
-Aşağıdaki örnekler nasıl kodlanacağını ve bir [!INCLUDE[TLA#tla_tiff](../../../../includes/tlasharptla-tiff-md.md)] belirli kullanarak görüntü <xref:System.Windows.Media.Imaging.TiffBitmapDecoder> ve <xref:System.Windows.Media.Imaging.TiffBitmapEncoder> nesneleri.  
+# <a name="how-to-encode-and-decode-a-tiff-image"></a>Nasıl yapılır: bir TIFF görüntüsünü kodlama ve kodunu çözme
+Aşağıdaki örneklerde, belirli <xref:System.Windows.Media.Imaging.TiffBitmapDecoder> ve <xref:System.Windows.Media.Imaging.TiffBitmapEncoder> nesnelerini kullanarak etiketli resim dosyası biçimi (TIFF) resminin kodunu çözme ve kodlama gösterilmektedir.  
   
 ## <a name="example"></a>Örnek  
- Bu örnek nasıl çözüleceğini gösteren bir [!INCLUDE[TLA2#tla_tiff](../../../../includes/tla2sharptla-tiff-md.md)] kullanarak görüntü bir <xref:System.Windows.Media.Imaging.TiffBitmapDecoder> gelen bir <xref:System.Uri>.  
+ Bu örnek, bir <xref:System.Uri> ' den <xref:System.Windows.Media.Imaging.TiffBitmapDecoder> kullanarak bir TIFF görüntüsünün kodunu nasıl çözebileceğinizi gösterir.  
   
  [!code-cpp[TiffBitmapDecoderEncoder#1](~/samples/snippets/cpp/VS_Snippets_Wpf/TiffBitmapDecoderEncoder/CPP/TiffEncoderDecoder.cpp#1)]
  [!code-csharp[TiffBitmapDecoderEncoder#1](~/samples/snippets/csharp/VS_Snippets_Wpf/TiffBitmapDecoderEncoder/CSharp/TiffEncoderDecoder.cs#1)]
  [!code-vb[TiffBitmapDecoderEncoder#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TiffBitmapDecoderEncoder/VB/TiffEncoderDecoder.vb#1)]  
   
 ## <a name="example"></a>Örnek  
- Bu örnek nasıl kodlanacağını gösterir bir <xref:System.Windows.Media.Imaging.BitmapSource> içine bir [!INCLUDE[TLA2#tla_tiff](../../../../includes/tla2sharptla-tiff-md.md)] kullanarak görüntü bir <xref:System.Windows.Media.Imaging.TiffBitmapEncoder>.  
+ Bu örnek, bir <xref:System.Windows.Media.Imaging.BitmapSource> <xref:System.Windows.Media.Imaging.TiffBitmapEncoder> kullanılarak TIFF görüntüsüne nasıl kodlanacağını gösterir.  
   
  [!code-cpp[TiffBitmapDecoderEncoder#4](~/samples/snippets/cpp/VS_Snippets_Wpf/TiffBitmapDecoderEncoder/CPP/TiffEncoderDecoder.cpp#4)]
  [!code-csharp[TiffBitmapDecoderEncoder#4](~/samples/snippets/csharp/VS_Snippets_Wpf/TiffBitmapDecoderEncoder/CSharp/TiffEncoderDecoder.cs#4)]
@@ -39,4 +39,4 @@ Aşağıdaki örnekler nasıl kodlanacağını ve bir [!INCLUDE[TLA#tla_tiff](..
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Görüntülemeye Genel Bakış](imaging-overview.md)
+- [Görüntülemeye genel bakış](imaging-overview.md)

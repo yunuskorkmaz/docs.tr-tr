@@ -1,21 +1,21 @@
 ---
-title: 'Nasıl yapılır: Bağlam temelinde öğeleri bulan bir sorgu yazın (Visual Basic)'
+title: 'Nasıl yapılır: bağlam temelinde öğeleri bulan bir sorgu yazma (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 0b085290-ddc1-4126-aaa0-e4c95a3d9a09
-ms.openlocfilehash: 1743a0793a8b572cb212d45a31924fe8eb93bf45
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: a7661ea35ff829875ee4c625c45da533865fea9f
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710412"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71835037"
 ---
-# <a name="how-to-write-a-query-that-finds-elements-based-on-context-visual-basic"></a>Nasıl yapılır: Bağlam temelinde öğeleri bulan bir sorgu yazın (Visual Basic)
+# <a name="how-to-write-a-query-that-finds-elements-based-on-context-visual-basic"></a>Nasıl yapılır: bağlam temelinde öğeleri bulan bir sorgu yazma (Visual Basic)
 Bazen, bağlamlarına göre öğeleri seçen bir sorgu yazmanız gerekebilir. Önceki veya sonraki eşdüzey öğelere göre filtrelemek isteyebilirsiniz. Alt veya üst öğe öğelerine göre filtrelemek isteyebilirsiniz.  
   
- Bunu, `where` bir sorgu yazarak ve yan tümcesindeki sorgunun sonuçlarını kullanarak yapabilirsiniz. İlk olarak null ile test etmeniz ve sonra değeri test etmeniz gerekiyorsa, bir `let` yan tümce içinde sorgu yapmak daha uygundur ve sonra sonuçları `where` yan tümce içinde kullanın.  
+ Bunu bir sorgu yazarak ve `where` yan tümcesinde sorgunun sonuçlarını kullanarak yapabilirsiniz. İlk olarak null ile test etmeniz ve sonra değeri test etmeniz gerekiyorsa, sorguyu `let` yan tümcesinde yapmak daha kolay olur ve sonra sonuçları `where` yan tümcesinde kullanır.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, hemen arkasından `p` bir `ul` öğesi olan tüm öğeleri seçer.  
+ Aşağıdaki örnek, hemen arkasından bir `ul` öğesi olan tüm `p` öğelerini seçer.  
   
 ```vb  
 Dim doc As XElement = _  
@@ -51,7 +51,7 @@ Next
   
  Bu kod aşağıdaki çıktıyı üretir:  
   
-```  
+```console  
 id = 1  
 id = 3  
 id = 6  
@@ -100,7 +100,7 @@ End Module
   
  Bu kod aşağıdaki çıktıyı üretir:  
   
-```  
+```console  
 id = 1  
 id = 3  
 id = 6  

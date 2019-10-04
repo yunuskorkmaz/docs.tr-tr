@@ -1,21 +1,21 @@
 ---
-title: Kesin Türü Belirtilmiş DataSets Oluşturma
+title: Kesin türü belirtilmiş veri kümeleri oluşturma
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 54333cbf-bb43-4314-a7d4-6dc1dd1c44b3
-ms.openlocfilehash: f1c1fd77bed700fae8e5a658da8b267120518ca9
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: ce7e5ad53f7aa5dad457ca1aa6ab76716086c0c3
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70786299"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71833985"
 ---
-# <a name="generating-strongly-typed-datasets"></a>Kesin Türü Belirtilmiş DataSets Oluşturma
-XML şeması tanım dili (xsd) standardına uygun bir XML şeması verildiğinde, Windows yazılım geliştirme seti (SDK) ile sağlanan <xref:System.Data.DataSet> xsd. exe aracını kullanarak kesin bir tür oluşturabilirsiniz.  
+# <a name="generating-strongly-typed-datasets"></a>Kesin türü belirtilmiş veri kümeleri oluşturma
+XML şeması tanım dili (XSD) standardına uygun bir XML şeması verildiğinde, Windows yazılım geliştirme seti (SDK) ile sağlanan XSD. exe aracını kullanarak türü kesin belirlenmiş <xref:System.Data.DataSet> oluşturabilirsiniz.  
   
- (Veritabanı tablolarından bir xsd oluşturmak için, bkz <xref:System.Data.DataSet.WriteXmlSchema%2A> . veya [Visual Studio 'da veri kümeleri ile çalışma](/visualstudio/data-tools/dataset-tools-in-visual-studio)).  
+ (Veritabanı tablolarından bir xsd oluşturmak için, bkz. <xref:System.Data.DataSet.WriteXmlSchema%2A> veya [Visual Studio 'Da veri kümeleriyle çalışma](/visualstudio/data-tools/dataset-tools-in-visual-studio)).  
   
  Aşağıdaki kod, bu aracı kullanarak bir **veri kümesi** oluşturmak için söz dizimini gösterir.  
   
@@ -23,7 +23,7 @@ XML şeması tanım dili (xsd) standardına uygun bir XML şeması verildiğinde
 xsd.exe /d /l:CS XSDSchemaFileName.xsd /eld /n:XSDSchema.Namespace  
 ```  
   
- Bu sözdiziminde, `/d` yönerge, araca bir **veri kümesi**oluşturmasını söyler ve `/l:` araca hangi dilin kullanılacağını (örneğin, C# veya Visual Basic .net) söyler. İsteğe bağlı `/eld` yönerge, oluşturulan **veri kümesinde** sorgulama yapmak için LINQ to DataSet kullanacağınızı belirtir. `/d` Seçenek de belirtildiğinde bu seçenek kullanılır. Daha fazla bilgi için bkz. [türü belirtilmiş veri kümelerini sorgulama](../querying-typed-datasets.md). İsteğe bağlı `/n:` yönerge, araca **XSDSchema. Namespace**adlı **veri kümesi** için de bir ad alanı oluşturmasını söyler. Komutun çıktısı, bir ADO.NET uygulamasında derlenebilecek ve kullanılabilecek olan XSDSchemaFileName.cs 'dir. Oluşturulan kod bir kitaplık veya modül olarak derlenebilir.  
+ Bu sözdiziminde, `/d` yönergesi araca bir **veri kümesi**oluşturmasını söyler ve `/l:` araca hangi dilin kullanılacağını söyler (örneğin, C# veya Visual Basic .net). İsteğe bağlı `/eld` yönergesi, oluşturulan **veri kümesinde** sorgulama yapmak için LINQ to DataSet kullanacağınızı belirtir. @No__t-0 seçeneği de belirtildiğinde bu seçenek kullanılır. Daha fazla bilgi için bkz. [türü belirtilmiş veri kümelerini sorgulama](../querying-typed-datasets.md). İsteğe bağlı `/n:` yönergesi, araca **XSDSchema. Namespace**adlı **veri kümesi** için de bir ad alanı oluşturmasını söyler. Komutun çıktısı, bir ADO.NET uygulamasında derlenebilecek ve kullanılabilecek olan XSDSchemaFileName.cs 'dir. Oluşturulan kod bir kitaplık veya modül olarak derlenebilir.  
   
  Aşağıdaki kod, C# derleyicinin (CSC. exe) kullanılarak oluşturulan kodu bir kitaplık olarak derlemek için söz dizimini gösterir.  
   
@@ -31,7 +31,7 @@ xsd.exe /d /l:CS XSDSchemaFileName.xsd /eld /n:XSDSchema.Namespace
 csc.exe /t:library XSDSchemaFileName.cs /r:System.dll /r:System.Data.dll  
 ```  
   
- Yönergesi, araca bir kitaplığa derlemeyi söyler `/r:` ve yönergeler derlemek için gereken bağımlı kitaplıkları belirler. `/t:` Komutun çıktısı, `/r:` yönergeyle bir ADO.NET uygulaması derlenirken derleyiciye geçirilebilen XSDSchemaFileName. dll ' dir.  
+ @No__t-0 yönergesi, araca bir kitaplığa derlemeyi söyler ve `/r:` yönergeleri derlemek için gereken bağımlı kitaplıkları belirtir. Komutun çıktısı, `/r:` yönergesi ile bir ADO.NET uygulaması derlenirken derleyiciye geçirilebilecek XSDSchemaFileName. dll ' dir.  
   
  Aşağıdaki kod, bir ADO.NET uygulamasında XSD. exe ' ye geçirilen ad alanına erişim söz dizimini gösterir.  
   
@@ -73,7 +73,7 @@ foreach(CustomerDataSet.CustomersRow customerRow in customers.Customers)
   Console.WriteLine(customerRow.CustomerID);  
 ```  
   
- Örnek için kullanılan XML şeması aşağıda verilmiştir.  
+ Örnek için kullanılan XML şeması aşağıda verilmiştir:
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -98,6 +98,6 @@ foreach(CustomerDataSet.CustomersRow customerRow in customers.Customers)
 
 - <xref:System.Data.DataColumnCollection>
 - <xref:System.Data.DataSet>
-- [Türü Belirtilmiş DataSets](typed-datasets.md)
-- [DataSets, DataTables ve DataViews](index.md)
-- [ADO.NET’e Genel Bakış](../ado-net-overview.md)
+- [Türü belirtilmiş veri kümeleri](typed-datasets.md)
+- [Veri kümeleri, DataTable ve DataView](index.md)
+- [ADO.NET genel bakış](../ado-net-overview.md)

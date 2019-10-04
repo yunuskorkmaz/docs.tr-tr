@@ -1,21 +1,21 @@
 ---
-title: 'Nasıl yapılır: Birden çok anahtar üzerindeki öğeleri sıralama (Visual Basic)'
+title: 'Nasıl yapılır: birden çok anahtar üzerinde öğeleri sıralama (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 0c4c1462-3047-4766-b9e2-7e0e9cc7f421
-ms.openlocfilehash: dfb70a0ea4430d6771c319ab8ed351e8507bd89d
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 9e70a54dcf7ff8cd2e0f767773ad7a56b1da2330
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710289"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71835135"
 ---
-# <a name="how-to-sort-elements-on-multiple-keys-visual-basic"></a>Nasıl yapılır: Birden çok anahtar üzerindeki öğeleri sıralama (Visual Basic)
+# <a name="how-to-sort-elements-on-multiple-keys-visual-basic"></a>Nasıl yapılır: birden çok anahtar üzerinde öğeleri sıralama (Visual Basic)
 Bu konu başlığı altında, birden çok anahtar üzerinde nasıl sıralama yapılacağı gösterilmektedir.  
   
 ## <a name="example"></a>Örnek  
  Bu örnekte, sonuçlar önce sevkiyat posta kodu tarafından, ardından sipariş tarihine göre sıralanır.  
   
- Bu örnek aşağıdaki XML belgesini kullanır: [Örnek XML dosyası: Müşteriler ve siparişler (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).  
+ Bu örnek, şu XML belgesini kullanır: [örnek xml dosyası: müşteriler ve siparişler (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).  
   
 ```vb  
 Dim co As XElement = XElement.Load("CustomersOrders.xml")  
@@ -36,7 +36,7 @@ Next
   
  Bu kod aşağıdaki çıktıyı üretir:  
   
-```  
+```console  
 CustomerID:LETSS EmployeeID:1 ShipPostalCode:94117 OrderDate:6/25/1997  
 CustomerID:LETSS EmployeeID:8 ShipPostalCode:94117 OrderDate:10/27/1997  
 CustomerID:LETSS EmployeeID:6 ShipPostalCode:94117 OrderDate:11/10/1997  
@@ -64,7 +64,7 @@ CustomerID:LAZYK EmployeeID:8 ShipPostalCode:99362 OrderDate:5/22/1997
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek, bir ad alanında bulunan XML için aynı sorguyu gösterir. Daha fazla bilgi için bkz. [ad alanlarına genel bakış (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).  
   
- Bu örnek aşağıdaki XML belgesini kullanır: [Örnek XML dosyası: Bir ad alanındaki](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-in-a-namespace.md)müşteriler ve siparişler.  
+ Bu örnek, şu XML belgesini kullanır: [örnek xml dosyası: bir ad alanındaki müşteriler ve siparişler](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-in-a-namespace.md).  
   
 ```vb  
 Imports <xmlns='http://www.adventure-works.com'>  
@@ -91,7 +91,7 @@ End Module
   
  Bu kod aşağıdaki çıktıyı üretir:  
   
-```  
+```console  
 CustomerID:LETSS EmployeeID:1 ShipPostalCode:94117 OrderDate:6/25/1997  
 CustomerID:LETSS EmployeeID:8 ShipPostalCode:94117 OrderDate:10/27/1997  
 CustomerID:LETSS EmployeeID:6 ShipPostalCode:94117 OrderDate:11/10/1997  

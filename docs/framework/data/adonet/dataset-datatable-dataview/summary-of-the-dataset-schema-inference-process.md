@@ -1,16 +1,16 @@
 ---
-title: DataSet Şema Çıkarımı İşleminin Özeti
+title: DataSet şeması çıkarımı Işleminin Özeti
 ms.date: 03/30/2017
 ms.assetid: fd0891c8-d068-4e30-a76f-7c375f078bf7
-ms.openlocfilehash: b0dd22412ddda86aa2883a26353abb1516a94e17
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 35e9b67d2d0a47aa69eabdb4b7e94f95b0b9589f
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70785948"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71833975"
 ---
-# <a name="summary-of-the-dataset-schema-inference-process"></a>DataSet Şema Çıkarımı İşleminin Özeti
-Çıkarım işlemi ilk olarak XML belgesinden, hangi öğelerin tablo olarak gösterileceğini belirler. Kalan XML 'den, çıkarım işlemi bu tabloların sütunlarını belirler. İç içe tablolar için, çıkarım işlemi iç <xref:System.Data.DataRelation> içe <xref:System.Data.ForeignKeyConstraint> ve nesneler oluşturur.  
+# <a name="summary-of-the-dataset-schema-inference-process"></a>DataSet şeması çıkarımı Işleminin Özeti
+Çıkarım işlemi ilk olarak XML belgesinden, hangi öğelerin tablo olarak gösterileceğini belirler. Kalan XML 'den, çıkarım işlemi bu tabloların sütunlarını belirler. İç içe tablolar için çıkarım işlemi iç içe <xref:System.Data.DataRelation> ve <xref:System.Data.ForeignKeyConstraint> nesneleri üretir.  
   
  Aşağıda, çıkarım kurallarının kısa bir özeti verilmiştir:  
   
@@ -20,7 +20,7 @@ ms.locfileid: "70785948"
   
 - Yinelenen öğeler tek bir tablo olarak algılanır.  
   
-- Belge, veya kök, öğe bir özniteliğe sahip değilse ve sütun olarak çıkarsanmayacak alt öğe yoksa, bir <xref:System.Data.DataSet>olarak algılanır. Aksi halde, belge öğesi tablo olarak algılanır.  
+- Belge, veya kök, öğe hiç bir özniteliğe sahip değilse ve sütun olarak çıkarsanmayacak alt öğe yoksa, @no__t 0 olarak algılanır. Aksi halde, belge öğesi tablo olarak algılanır.  
   
 - Öznitelikler sütun olarak algılanır.  
   
@@ -32,9 +32,9 @@ ms.locfileid: "70785948"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [XML’den DataSet İlişkisel Yapısını Çıkarma](inferring-dataset-relational-structure-from-xml.md)
-- [XML’den DataSet Yükleme](loading-a-dataset-from-xml.md)
-- [XML’den DataSet Schema Bilgilerini Yükleme](loading-dataset-schema-information-from-xml.md)
-- [DataSet içinde XML kullanma](using-xml-in-a-dataset.md)
-- [DataSets, DataTables ve DataViews](index.md)
-- [ADO.NET’e Genel Bakış](../ado-net-overview.md)
+- [XML 'den veri kümesi Ilişkisel yapısını erteleme](inferring-dataset-relational-structure-from-xml.md)
+- [XML 'den veri kümesi yükleme](loading-a-dataset-from-xml.md)
+- [XML 'den veri kümesi şema bilgilerini yükleme](loading-dataset-schema-information-from-xml.md)
+- [Bir veri kümesinde XML kullanma](using-xml-in-a-dataset.md)
+- [Veri kümeleri, DataTable ve DataView](index.md)
+- [ADO.NET genel bakış](../ado-net-overview.md)

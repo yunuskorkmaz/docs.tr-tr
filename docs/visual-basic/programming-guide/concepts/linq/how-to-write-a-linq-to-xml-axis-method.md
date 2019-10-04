@@ -1,21 +1,21 @@
 ---
-title: 'Nasıl yapılır: LINQ to XML eksen yöntemi (Visual Basic) yazma'
+title: 'Nasıl yapılır: LINQ to XML eksen yöntemi yazma (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: b676f025-a24c-4076-8713-aa809b2b8ce0
-ms.openlocfilehash: f10ee90076a71aa44f480639d3bc460ea59044ea
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 87c068c3a59f1ca8e62c092bf4841f50a26a7f6a
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61614602"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71835044"
 ---
-# <a name="how-to-write-a-linq-to-xml-axis-method-visual-basic"></a>Nasıl yapılır: LINQ to XML eksen yöntemi (Visual Basic) yazma
-XML ağacından koleksiyonları almak için kendi eksen yöntemler yazabilirsiniz. Bunu yapmak için en iyi yollarından biri öğe ve özniteliklerin koleksiyonunu döndüren bir uzantı metodu yazma sağlamaktır. Öğeler veya öznitelikleri, uygulamanızın gereksinimlerine göre belirli alt kümelerine döndürülecek genişletme yönteminizin yazabilirsiniz.  
+# <a name="how-to-write-a-linq-to-xml-axis-method-visual-basic"></a>Nasıl yapılır: LINQ to XML eksen yöntemi yazma (Visual Basic)
+Bir XML ağacından koleksiyonları almak için kendi eksen yöntemlerinizi yazabilirsiniz. Bunu gerçekleştirmenin en iyi yöntemlerinden biri, öğe veya özniteliklerin bir koleksiyonunu döndüren bir genişletme yöntemi yazmaktır. Uygulamanızın gereksinimlerine bağlı olarak, öğelerin veya özniteliklerin belirli alt kümelerini döndürmek için uzantı yönteminizi yazabilirsiniz.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, iki uzantı yöntemi kullanır. İlk genişletme yöntemi `GetXPath`, üzerinde çalıştığı <xref:System.Xml.Linq.XObject>ve değerlendirildiğinde döndüren bir XPath ifadesi bir düğüm veya öznitelik döndürür. İkinci bir genişletme yöntemi `Find`, üzerinde çalıştığı <xref:System.Xml.Linq.XElement>. Bir koleksiyonunu döndürür <xref:System.Xml.Linq.XAttribute> nesneleri ve <xref:System.Xml.Linq.XElement> bazı içeren nesneleri belirtilen metin.  
+ Aşağıdaki örnekte iki genişletme yöntemi kullanılmaktadır. İlk genişletme yöntemi olan `GetXPath`, <xref:System.Xml.Linq.XObject> ' de çalışır ve değerlendirildiğinde bir XPath ifadesi döndürür. İkinci genişletme yöntemi olan `Find`, <xref:System.Xml.Linq.XElement> üzerinde çalışır. @No__t-0 nesnelerinin ve belirli bir metni içeren <xref:System.Xml.Linq.XElement> nesnelerinin bir koleksiyonunu döndürür.  
   
- Bu örnek aşağıdaki XML belgesi kullanır: [Örnek XML dosyası: Birden fazla satın alma siparişi (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
+ Bu örnek, şu XML belgesini kullanır: [örnek xml dosyası: birden fazla satın alma siparişi (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
   
 ```vb  
 Imports System.Runtime.CompilerServices  
@@ -204,7 +204,7 @@ End Module
   
  Bu kod aşağıdaki çıktıyı üretir:  
   
-```  
+```console  
 /PurchaseOrders/PurchaseOrder[1]/@OrderDate  
 1999-10-20  
 /PurchaseOrders/PurchaseOrder[1]/Items/Item[2]/ShipDate  

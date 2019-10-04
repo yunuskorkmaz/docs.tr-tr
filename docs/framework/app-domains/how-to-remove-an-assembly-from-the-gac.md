@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Bir Derlemeyi Genel Derleme Önbelleğinden Kaldırma'
+title: 'Nasıl yapılır: genel bütünleştirilmiş kod önbelleğinden bir derlemeyi kaldırma'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - assemblies [.NET Framework], global assembly cache
@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: acdcc588-b458-436d-876c-726de68244c1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5aa88cbc73415695a1545704a2ad8cab535f011e
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 7a085ff6955f706bcd90f895c42e6405a28d408a
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053138"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834046"
 ---
-# <a name="how-to-remove-an-assembly-from-the-global-assembly-cache"></a>Nasıl yapılır: Bir Derlemeyi Genel Derleme Önbelleğinden Kaldırma
+# <a name="how-to-remove-an-assembly-from-the-global-assembly-cache"></a>Nasıl yapılır: genel bütünleştirilmiş kod önbelleğinden bir derlemeyi kaldırma
 
 Bir derlemeyi genel bütünleştirilmiş kod önbelleğinden (GAC) kaldırmanın iki yolu vardır:
 
@@ -28,32 +28,32 @@ Bir derlemeyi genel bütünleştirilmiş kod önbelleğinden (GAC) kaldırmanın
 
 - [Windows Installer](/windows/desktop/Msi/windows-installer-portal)kullanarak. Yükleme paketlerini ve üretim sistemlerini test ederken derlemeleri kaldırmak için bu seçeneği kullanmanız gerekir.
 
-### <a name="removing-an-assembly-with-gacutilexe"></a>Gacutil. exe ile bir derlemeyi kaldırma
+## <a name="removing-an-assembly-with-gacutilexe"></a>Gacutil. exe ile bir derlemeyi kaldırma
 
-1. Komut satırında, aşağıdaki komutu yazın:
+Komut isteminde aşağıdaki komutu yazın:
 
-    **Gacutil – u** *bütünleştirilmiş kod adı* \<>
+**Gacutil – u** \<*derleme adı*>
 
-    Bu komutta, *derleme adı* genel derleme önbelleğinden kaldırılacak derlemenin adıdır.
+Bu komutta, *derleme adı* genel derleme önbelleğinden kaldırılacak derlemenin adıdır.
 
-    > [!WARNING]
-    > Derlemenin bazı uygulamalar için hala gerekli olabileceği için, üretim sistemlerindeki derlemeleri kaldırmak üzere Gacutil. exe ' yi kullanmamalısınız. Bunun yerine, GAC içinde yüklediği her derleme için başvuru sayısını tutan Windows Installer kullanmanız gerekir.
+> [!WARNING]
+> Derlemenin bazı uygulamalar için hala gerekli olabileceği için, üretim sistemlerindeki derlemeleri kaldırmak üzere Gacutil. exe ' yi kullanmamalısınız. Bunun yerine, GAC içinde yüklediği her derleme için başvuru sayısını tutan Windows Installer kullanmanız gerekir.
 
- Aşağıdaki örnek, genel derleme önbelleğinden adlı `hello.dll` bir derlemeyi kaldırır.
+Aşağıdaki örnek, `hello.dll` adlı bir derlemeyi genel bütünleştirilmiş kod önbelleğinden kaldırır:
 
-```
+```console
 gacutil -u hello
 ```
 
-### <a name="removing-an-assembly-with-windows-installer"></a>Windows Installer bir derlemeyi kaldırma
+## <a name="removing-an-assembly-with-windows-installer"></a>Windows Installer bir derlemeyi kaldırma
 
-1. **Denetim Masası**'ndaki **Programlar ve Özellikler** uygulamasında kaldırmak istediğiniz uygulamayı seçin. Yükleme paketi GAC 'ye derlemeler yerleştirirse, Windows Installer başka bir uygulama tarafından kullanılmıyorsa, bu dosyaları kaldırır.
+**Denetim Masası**'ndaki **Programlar ve Özellikler** uygulamasında kaldırmak istediğiniz uygulamayı seçin. Yükleme paketi GAC 'ye derlemeler yerleştirirse, Windows Installer başka bir uygulama tarafından kullanılmıyorsa, bu dosyaları kaldırır.
 
-    > [!NOTE]
-    > Windows Installer GAC 'de yüklü derlemeler için bir başvuru sayısı tutar. Bir derleme GAC 'den yalnızca başvuru sayısı sıfıra ulaştığında kaldırılır. Bu, bir Windows Installer paketi tarafından yüklenen herhangi bir uygulama tarafından kullanılmadığını gösterir.
+> [!NOTE]
+> Windows Installer GAC 'de yüklü derlemeler için bir başvuru sayısı tutar. Bir derleme GAC 'den yalnızca başvuru sayısı sıfıra ulaştığında kaldırılır. Bu, bir Windows Installer paketi tarafından yüklenen herhangi bir uygulama tarafından kullanılmadığını gösterir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Bütünleştirilmiş Kodlar ve Genel Derleme Önbelleği ile Çalışma](working-with-assemblies-and-the-gac.md)
-- [Nasıl yapılır: Bir derlemeyi genel bütünleştirilmiş kod önbelleğine yükler](install-assembly-into-gac.md)
-- [Gacutil.exe (Genel Derleme Önbelleği Aracı)](../tools/gacutil-exe-gac-tool.md)
+- [Derlemeler ve genel derleme önbelleği ile çalışma](working-with-assemblies-and-the-gac.md)
+- [Nasıl yapılır: bir derlemeyi genel derleme önbelleğine yüklemek](install-assembly-into-gac.md)
+- [Gacutil. exe (Genel Bütünleştirilmiş Kod Önbelleği Aracı)](../tools/gacutil-exe-gac-tool.md)

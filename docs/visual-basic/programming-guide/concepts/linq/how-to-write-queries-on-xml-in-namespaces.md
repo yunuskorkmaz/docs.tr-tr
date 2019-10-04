@@ -1,16 +1,16 @@
 ---
-title: 'Nasıl yapılır: Ad alanlarında XML üzerinde sorgu yazma (Visual Basic)'
+title: 'Nasıl yapılır: ad alanlarında XML üzerinde sorgu yazma (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 7d4131b5-3288-414f-b77c-b2edc2a1f465
-ms.openlocfilehash: 3b910e8b46632fbff2228baef44a45e8c22d731e
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 71e66791b41e26ea13f828ef6239a8db9a9365b0
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68709871"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71835000"
 ---
-# <a name="how-to-write-queries-on-xml-in-namespaces-visual-basic"></a>Nasıl yapılır: Ad alanlarında XML üzerinde sorgu yazma (Visual Basic)
-Bir ad alanında olan XML üzerinde bir sorgu yazmak için, doğru ad alanına sahip <xref:System.Xml.Linq.XName> nesneleri kullanmanız gerekir.  
+# <a name="how-to-write-queries-on-xml-in-namespaces-visual-basic"></a>Nasıl yapılır: ad alanlarında XML üzerinde sorgu yazma (Visual Basic)
+Bir ad alanında olan XML üzerinde bir sorgu yazmak için, doğru ad alanına sahip <xref:System.Xml.Linq.XName> nesnelerini kullanmanız gerekir.  
   
  Visual Basic, en yaygın yaklaşım genel bir ad alanı tanımlamaktır ve sonra genel ad alanını kullanan XML değişmez değerlerini ve XML özelliklerini kullanır. Genel bir varsayılan ad alanı tanımlayabilirsiniz. Bu durumda, XML sabit değerlerinde bulunan öğeler varsayılan olarak ad alanında yer alabilir. Alternatif olarak, ön ek içeren bir genel ad alanı tanımlayabilir ve sonra öneki XML sabit değerlerinde ve XML özelliklerinde gereken şekilde kullanabilirsiniz. Diğer XML formlarında olduğu gibi, özniteliklerin her zaman varsayılan olarak ad alanı yoktur.  
   
@@ -45,14 +45,14 @@ End Module
   
  Bu örnek aşağıdaki çıktıyı üretir:  
   
-```  
+```console  
 1  
 2  
 3  
 ```  
   
 ## <a name="example"></a>Örnek  
- Ancak Visual Basic ' de, ön ek içeren bir ad alanı kullanan bir XML ağacına sorgu yazmak, varsayılan bir ad alanında bir XML ağacını sorgulamadan oldukça farklıdır. Genellikle, `Imports` ad alanını önek ile içeri aktarmak için ifadesini kullanırsınız. Ardından, XML ağacını oluştururken öğesi ve öznitelik adlarında öneki kullanın. Xml özelliklerini kullanarak bir XML ağacını sorgularken de ön eki kullanırsınız.  
+ Ancak Visual Basic ' de, ön ek içeren bir ad alanı kullanan bir XML ağacına sorgu yazmak, varsayılan bir ad alanında bir XML ağacını sorgulamadan oldukça farklıdır. Genellikle `Imports` ifadesini kullanarak ad alanını önekiyle içeri aktarabilirsiniz. Ardından, XML ağacını oluştururken öğesi ve öznitelik adlarında öneki kullanın. Xml özelliklerini kullanarak bir XML ağacını sorgularken de ön eki kullanırsınız.  
   
  Aşağıdaki örnek, öneki olan bir ad alanında olan bir XML ağacı oluşturur. Daha sonra bir öğe koleksiyonu alır.  
   
@@ -82,7 +82,7 @@ End Module
   
  Bu örnek aşağıdaki çıktıyı üretir:  
   
-```  
+```console  
 1  
 2  
 3  

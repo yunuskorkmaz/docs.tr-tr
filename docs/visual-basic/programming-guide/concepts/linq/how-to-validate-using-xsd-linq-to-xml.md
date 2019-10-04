@@ -1,19 +1,19 @@
 ---
-title: 'Nasıl yapılır: XSD (LINQ to XML) kullanarak doğrulama (Visual Basic)'
+title: 'Nasıl yapılır: XSD kullanarak doğrulama (LINQ to XML) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: a0fe88d4-4e77-49e7-90de-8953feeccc21
-ms.openlocfilehash: a29473b871961af0de033b77076686cc5b9dde0e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 67b197d3c92e7f72b7bda444f307b191eaec8304
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61613364"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71835060"
 ---
-# <a name="how-to-validate-using-xsd-linq-to-xml-visual-basic"></a>Nasıl yapılır: XSD (LINQ to XML) kullanarak doğrulama (Visual Basic)
-<xref:System.Xml.Schema> Ad alanı, bir XML ağacı bir XML Şeması Tanım Dili (XSD) dosyası karşı doğrulamak kolaylaştıran genişletme yöntemleri içerir. Daha fazla bilgi için <xref:System.Xml.Schema.Extensions.Validate%2A> yöntemi belgeleri.  
+# <a name="how-to-validate-using-xsd-linq-to-xml-visual-basic"></a>Nasıl yapılır: XSD kullanarak doğrulama (LINQ to XML) (Visual Basic)
+@No__t-0 ad alanı, bir xml ağacının bir XML şeması tanım dili (XSD) dosyasına göre doğrulanmasını kolaylaştıran uzantı yöntemleri içerir. Daha fazla bilgi için <xref:System.Xml.Schema.Extensions.Validate%2A> yöntemi belgelerine bakın.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, oluşturur bir <xref:System.Xml.Schema.XmlSchemaSet>, iki doğrular <xref:System.Xml.Linq.XDocument> nesnelere karşı şema kümesi. Belgeleri biri geçerli değil, diğer değil.  
+ Aşağıdaki örnek bir <xref:System.Xml.Schema.XmlSchemaSet> oluşturur ve sonra iki <xref:System.Xml.Linq.XDocument> nesnesini şema kümesine göre doğrular. Belgelerden biri geçerli, diğeri değildir.  
   
 ```vb  
 Dim errors As Boolean = False  
@@ -67,7 +67,7 @@ End Sub
   
  Bu örnek aşağıdaki çıktıyı üretir:  
   
-```  
+```console  
 Validating doc1  
 doc1 validated  
   
@@ -77,11 +77,11 @@ doc2 did not validate
 ```  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek XML belge gelen olduğunu doğrular [örnek XML dosyası: Müşteriler ve siparişler (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md) şemadan başına geçerli [örnek XSD dosyası: Müşteriler ve siparişler](../../../../visual-basic/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders.md). Ardından, kaynak XML belgesi değiştirir. Bu değişiklikleri `CustomerID` ilk müşteri özniteliği. XML belgesi artık doğrulayacak şekilde değişiklikten sonra siparişler ardından mevcut değil, bir müşteri için başvuracaktır.  
+ Aşağıdaki örnek, XML belgesinin [örnek XML dosyasından bulunduğunu doğrular: müşteriler ve siparişler (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md) [örnek xsd dosyasından şema başına geçerlidir: müşteriler ve siparişler](../../../../visual-basic/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders.md). Sonra kaynak XML belgesini değiştirir. İlk Müşterideki `CustomerID` özniteliğini değiştirir. Değişiklik sonrasında, siparişler var olmayan bir müşteriye başvuracaktır, bu nedenle XML belgesi artık doğrulanmaz.  
   
- Bu örnek aşağıdaki XML belgesi kullanır: [Örnek XML dosyası: Müşteriler ve siparişler (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).  
+ Bu örnek, şu XML belgesini kullanır: [örnek xml dosyası: müşteriler ve siparişler (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).  
   
- Bu örnek aşağıdaki XSD şeması kullanır: [Örnek XSD Dosyası: Müşteriler ve siparişler](../../../../visual-basic/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders.md).  
+ Bu örnek şu XSD şemasını kullanır: [örnek xsd dosyası: müşteriler ve siparişler](../../../../visual-basic/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders.md).  
   
 ```vb  
 Dim errors As Boolean = False  
@@ -113,7 +113,7 @@ End Sub
   
  Bu örnek aşağıdaki çıktıyı üretir:  
   
-```  
+```console  
 Attempting to validate  
 custOrdDoc validated  
   
@@ -125,4 +125,4 @@ custOrdDoc did not validate
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Xml.Schema.Extensions.Validate%2A>
-- [XML ağaçları (Visual Basic) oluşturma](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)
+- [XML ağaçları oluşturma (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)

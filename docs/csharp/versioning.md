@@ -3,12 +3,12 @@ title: C#Sürüm oluşturma C# -kılavuz
 description: Sürüm oluşturma 'nın ve .NET C# 'te nasıl çalıştığını anlama
 ms.date: 01/08/2017
 ms.assetid: aa8732d7-5cd0-46e1-994a-78017f20d861
-ms.openlocfilehash: 4c0d5b5c2ac40cb27c90b4908623dc75b26a80cc
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: dcfe373312b88c8ddd8587e27c566a90b25e3c13
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71699916"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834052"
 ---
 # <a name="versioning-in-c"></a>C @ no__t 'de sürüm oluşturma-0
 
@@ -75,7 +75,7 @@ Uygulamanızın kullandığı bir kitaplığın sürümünü güncelleştirmek i
 > Bu yaklaşım yalnızca `ReferencedLibrary` ' ın yeni sürümü uygulamanız ile ikili dosya uyumluysa çalışır.
 > Uyumluluk belirlenirken yapılan değişiklikler için yukarıdaki [geriye dönük uyumluluk](#backwards-compatibility) bölümüne bakın.
 
-### <a name="new"></a>new
+### <a name="new"></a>yeni
 
 Bir temel sınıfın devralınan üyelerini gizlemek için `new` değiştiricisini kullanın. Bu, türetilmiş sınıfların temel sınıflarda güncelleştirmelere yanıt verebildiği bir yoldur.
 
@@ -83,7 +83,7 @@ Aşağıdaki örneği uygulayın:
 
 [!code-csharp[Sample usage of the 'new' modifier](~/samples/csharp/versioning/new/Program.cs#sample)]
 
-**Output**
+**Çıktı**
 
 ```console
 A base method
@@ -95,13 +95,13 @@ Bu, bir kitaplığın yeni sürümündeki bir temel sınıf türetilmiş sınıf
 
 @No__t-0 değiştiricisi belirtilmediğinde, türetilmiş bir sınıf varsayılan olarak bir temel sınıfta çakışan üyeleri gizleyecek, ancak derleyici uyarısı üretilse de kod derlenir. Bu, yalnızca varolan bir sınıfa yeni üye eklemek, kitaplığınızın bu yeni sürümünün hem kaynak hem de ikilinin buna bağlı kodla uyumlu olmasını sağlar.
 
-### <a name="override"></a>override
+### <a name="override"></a>manızı
 
 @No__t-0 değiştiricisi, türetilmiş bir uygulamanın, bir temel sınıf üyesinin uygulamasını gizliyor yerine genişlettiği anlamına gelir. Temel sınıf üyesine `virtual` değiştiricisi uygulanmış olması gerekir.
 
 [!code-csharp[Sample usage of the 'override' modifier](../../samples/csharp/versioning/override/Program.cs#sample)]
 
-**Output**
+**Çıktı**
 
 ```console
 Base Method One: Method One
@@ -110,5 +110,4 @@ Derived Method One: Derived Method One
 
 @No__t-0 değiştiricisi derleme zamanında değerlendirilir ve geçersiz kılmak için bir sanal üye bulamazsa derleyici bir hata oluşturur.
 
-Ele alınan tekniklerin ve bunların hangi durumlardan hangilerinin kullanılacağını kavramanız, bir kitaplığın sürümleri arasında geçiş kolaylığı hızını artırmak için uzun bir yönteme gidecektir.
- 
+Ele alınan teknikler ve bunların kullanılacağı durumlar hakkında bilginiz varsa, bir kitaplığın sürümleri arasındaki geçişin hızını kolaylaştırmak için uzun bir yol olacaktır.

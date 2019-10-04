@@ -3,12 +3,12 @@ title: Null yapılabilir başvuru türleriyle tasarım
 description: Bu gelişmiş öğretici, null yapılabilir başvuru türlerine giriş sağlar. Başvuru değerleri null olduğunda ve derleyicinin null olmadıklarında zorunlu olmadığı durumlarda tasarım amacınızı ifade etmek için bilgi edineceksiniz.
 ms.date: 02/19/2019
 ms.custom: mvc
-ms.openlocfilehash: 8b7c512a2f6bd67b07d8e344ad126026048be172
-ms.sourcegitcommit: 878ca7550b653114c3968ef8906da2b3e60e3c7a
+ms.openlocfilehash: 5327a9babdf080a535e292cdcefba6da9d0a725b
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71736742"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834065"
 ---
 # <a name="tutorial-express-your-design-intent-more-clearly-with-nullable-and-non-nullable-reference-types"></a>Öğretici: tasarım amacınızı null olabilen ve null yapılamayan başvuru türleriyle daha net bir şekilde Ifade edin
 
@@ -196,7 +196,7 @@ Son adım, anket sonuçlarını görüntülemektir. Yazdığınız sınıfların
 
 [!code-csharp[ReportResponses](../../../samples/csharp/NullableIntroduction/NullableIntroduction/SurveyResponse.cs#SurveyStatus)]
 
-@No__t-0 null yapılamayan bir başvuru türü olduğundan, kendisine başvurulmadan önce hiçbir denetim gerekmez. @No__t-0 yöntemi null yapılamayan bir dize döndürür, bu nedenle varsayılan değer için ikinci bir bağımsız değişken alan `GetValueOrDefault` ' i aşırı yüklemeyi seçin.
+@No__t-0 null yapılabilir bir başvuru türü olduğundan, buna başvurulmadan önce null denetimleri gereklidir. @No__t-0 yöntemi null yapılamayan bir dize döndürür. bu nedenle, null birleşim işlecini kullanarak eksik bir yanıtın durumunu kapsamamız gerekir.
 
 Ardından, bu üç Expression-Bodied üyelerini `SurveyRun` sınıfına ekleyin:
 
