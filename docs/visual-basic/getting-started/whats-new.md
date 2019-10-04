@@ -8,33 +8,33 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-ms.openlocfilehash: 3638deeafc052a2da3b438de2c504a9955a15ad3
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: d286cc811c87f2d45d5a9e6d4e8acd9c430ff346
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70895263"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71835257"
 ---
 # <a name="whats-new-for-visual-basic"></a>Visual Basic yenilikler
 
 Bu konu, dilin en son sürümlerindeki yeni ve geliştirilmiş özelliklerin ayrıntılı açıklamaları ile her bir Visual Basic sürümü için temel özellik adlarını listeler.
 
-## <a name="current-version"></a>Güncel sürüm
+## <a name="current-version"></a>Geçerli sürüm
 
 Visual Basic 16,0/Visual Studio 2019 sürüm 16,0  
-Yeni özellikler için bkz. [Visual Basic 16,0](#visual-basic-160)
+Yeni özellikler için bkz. [Visual Basic 16,0](#visual-basic-160).
 
 ## <a name="previous-versions"></a>Önceki sürümler
 
-Visual Basic 15,8/Visual Studio 2017 sürüm 15,8 yeni özellikler Için bkz. [Visual Basic 15,8](#visual-basic-158)
+Visual Basic 15,8/Visual Studio 2017 sürüm 15,8 yeni özellikler Için bkz. [Visual Basic 15,8](#visual-basic-158).
 
-Visual Basic 15,5/Visual Studio 2017 sürüm 15,5 yeni özellikler Için bkz. [Visual Basic 15,5](#visual-basic-155)
+Visual Basic 15,5/Visual Studio 2017 sürüm 15,5 yeni özellikler Için bkz. [Visual Basic 15,5](#visual-basic-155).
 
-Visual Basic 15,3/Visual Studio 2017 sürüm 15,3 yeni özellikler Için bkz. [Visual Basic 15,3](#visual-basic-153)
+Visual Basic 15,3/Visual Studio 2017 sürüm 15,3 yeni özellikler Için bkz. [Visual Basic 15,3](#visual-basic-153).
 
-Visual Basic 2017/Visual Studio 2017 yeni özellikler Için bkz. [Visual Basic 2017](#visual-basic-2017)
+Visual Basic 2017/Visual Studio 2017 yeni özellikler Için bkz. [Visual Basic 2017](#visual-basic-2017).
 
-Visual Basic/Visual Studio 2015 yeni özellikler Için bkz. [Visual Basic 14](#visual-basic-14)
+Visual Basic/Visual Studio 2015 yeni özellikler Için bkz. [Visual Basic 14](#visual-basic-14).
 
 .NET Compiler Platform Visual Basic/Visual Studio 2013 teknoloji önizlemeleri ("Roslyn")
 
@@ -42,9 +42,9 @@ Visual Basic/Visual Studio 2012 `Async` ve `await` anahtar sözcükler, yineleyi
 
 Visual Basic, Visual Studio 2010 otomatik uygulanan özellikler, koleksiyon başlatıcıları, örtük satır devamlılığı, dinamik, genel ortak/Contra varyansı, genel ad alanı erişimi
 
-Visual Basic/Visual Studio 2008 dil ile tümleşik sorgu (LINQ), XML değişmez değerleri, yerel tür çıkarımı, nesne başlatıcıları, anonim türler, uzantı `var` yöntemleri, yerel tür çıkarımı `if` , lambda ifadeleri, işleç, kısmi Yöntemler, null yapılabilir değer türleri
+Visual Basic/Visual Studio 2008 dil ile tümleşik sorgu (LINQ), XML değişmez değerleri, yerel tür çıkarımı, nesne başlatıcıları, anonim türler, uzantı yöntemleri, yerel `var` tür çıkarımı, lambda ifadeleri, `if` işleci, kısmi Yöntemler, Nullable değer türleri
 
-Visual Basic/Visual Studio 2005 `My` tür ve yardımcı türleri (uygulama, bilgisayar, dosya sistemi, ağ erişimi)
+Visual Basic/Visual Studio 2005 `My` tür ve yardımcı türleri (uygulama, bilgisayar, dosya sistemi, ağ) için erişim
 
 Visual Basic/Visual Studio .NET 2003 bit kaydırma işleçleri, döngü değişkeni bildirimi
 
@@ -69,7 +69,7 @@ End Sub
 
 **En iyileştirilmiş kayan noktalı tamsayı dönüştürme**
 
-Visual Basic önceki sürümlerinde, [çift](../language-reference/data-types/double-data-type.md) ve [tek](../language-reference/data-types/single-data-type.md) değerlerin tamsayılara, görece düşük performansa göre dönüştürülmesi gerekir. Visual Basic 15,8, aşağıdaki yöntemlerden herhangi biri tarafından döndürülen değeri [iç Visual Basic tamsayı dönüştürme işlevlerinden](../language-reference/functions/type-conversion-functions.md) birine geçirdiğinizde (CByte, CShort, CInt,) kayan nokta dönüştürmelerinden oluşan performansı önemli ölçüde artırır. CLng, CSByte, CUShort, CUInt, Külng) ya da aşağıdaki yöntemlerin herhangi biri tarafından döndürülen değer, [kesin seçeneği](../language-reference/statements/option-strict-statement.md) olarak `Off`ayarlandığında tam olarak bir integral türüne dönüştürülebilir:
+Visual Basic önceki sürümlerinde, [çift](../language-reference/data-types/double-data-type.md) ve [tek](../language-reference/data-types/single-data-type.md) değerlerin tamsayılara, görece düşük performansa göre dönüştürülmesi gerekir. Visual Basic 15,8, aşağıdaki yöntemlerden herhangi biri tarafından döndürülen değeri [iç Visual Basic tamsayı dönüştürme işlevlerinden](../language-reference/functions/type-conversion-functions.md) birine geçirdiğinizde (CByte, CShort, CInt,) kayan nokta dönüştürmelerinden oluşan performansı önemli ölçüde artırır. CLng, CSByte, CUShort, CUInt, Külng) ya da aşağıdaki yöntemlerin herhangi biri tarafından döndürülen değer, [Strict](../language-reference/statements/option-strict-statement.md) `Off` ' ye ayarlandığında bir integral türüne dolaylı olarak dönüştürülebilir:
 
 - <xref:Microsoft.VisualBasic.Conversion.Fix(System.Double)?displayProperty=nameWithType>
 - <xref:Microsoft.VisualBasic.Conversion.Fix(System.Object)?displayProperty=nameWithType>
@@ -100,7 +100,7 @@ Bu, kayan nokta değerlerini yuvarlar değil, bu fazlağa göz atar.
 
 ## <a name="visual-basic-155"></a>Visual Basic 15,5
 
-[Girintili olmayan adlandırılmış bağımsız değişkenler](../programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md#mixing-arguments-by-position-and-by-name)
+[Sondaki adlandırılmış bağımsız değişkenler](../programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md#mixing-arguments-by-position-and-by-name)
 
 Visual Basic 15,3 ve önceki sürümlerde, bir yöntem bağımsız değişkenleri yalnızca konuma ve ada göre çağırarak, Konumsal bağımsız değişkenlerin adlandırılmış bağımsız değişkenlerden önce gelmesi gerekiyordu. Visual Basic 15,5 ' den başlayarak, son Konumsal bağımsız değişkene kadar olan tüm bağımsız değişkenler doğru konumda olduğu sürece konumsal ve adlandırılmış bağımsız değişkenler herhangi bir sırada görünebilir. Bu özellikle, kodu daha okunabilir hale getirmek için adlandırılmış bağımsız değişkenler kullanıldığında yararlıdır.
 
@@ -110,19 +110,19 @@ Visual Basic 15,3 ve önceki sürümlerde, bir yöntem bağımsız değişkenler
 StudentInfo.Display("Mary", age:=19, #9/21/1998#)
 ```
 
-[`Private Protected`üye erişim değiştiricisi](../language-reference/modifiers/private-protected.md)
+[`Private Protected` üye erişim değiştiricisi](../language-reference/modifiers/private-protected.md)
 
-Bu yeni anahtar sözcük birleşimi, kapsayan sınıf içindeki tüm üyeler tarafından erişilebilen bir üyeyi ve kapsayan sınıftan türetilmiş türleri, ancak yalnızca kapsayan derlemede bulunduklarında tanımlar. Yapılar devralınamadığı `Private Protected` için yalnızca bir sınıfın üyelerine uygulanabilir.
+Bu yeni anahtar sözcük birleşimi, kapsayan sınıf içindeki tüm üyeler tarafından erişilebilen bir üyeyi ve kapsayan sınıftan türetilmiş türleri, ancak yalnızca kapsayan derlemede bulunduklarında tanımlar. Yapılar devralınamadığı için `Private Protected` yalnızca bir sınıfın üyelerine uygulanabilir.
 
 **Baştaki onaltılık/ikili/sekizlik ayırıcı**
 
-Visual Basic 2017 alt çizgi karakteri (`_`) için rakam ayırıcısı olarak destek eklendi. Visual Basic 15,5 ' den başlayarak, alt çizgi karakterini ön ek ve onaltılık, ikili veya sekizlik basamaklar arasında önde gelen bir ayırıcı olarak kullanabilirsiniz. Aşağıdaki örnek, 3.271.948.384 onaltılık bir sayı olarak tanımlamak için önde gelen bir rakam ayırıcısı kullanır:
+Visual Basic 2017, bir rakam ayırıcısı olarak alt çizgi karakteri (`_`) için destek ekledi. Visual Basic 15,5 ' den başlayarak, alt çizgi karakterini ön ek ve onaltılık, ikili veya sekizlik basamaklar arasında önde gelen bir ayırıcı olarak kullanabilirsiniz. Aşağıdaki örnek, 3.271.948.384 onaltılık bir sayı olarak tanımlamak için önde gelen bir rakam ayırıcısı kullanır:
 
 ```vb
 Dim number As Integer = &H_C305_F860
 ```
 
-Alt çizgi karakterini baştaki ayırıcı olarak kullanmak için, Visual Basic projesi (\*. vbproj) dosyanıza aşağıdaki öğeyi eklemeniz gerekir:
+Alt çizgi karakterini baştaki ayırıcı olarak kullanmak için, Visual Basic projenize (@no__t -0. vbproj) aşağıdaki öğeyi eklemeniz gerekir:
 
 ```xml
 <PropertyGroup>
@@ -134,13 +134,13 @@ Alt çizgi karakterini baştaki ayırıcı olarak kullanmak için, Visual Basic 
 
 [**Adlandırılmış demet çıkarımı**](../programming-guide/language-features/data-types/tuples.md#inferred-tuple-element-names)
 
-Kayıt düzeni öğelerinin değerini değişkenlerden atadığınızda, Visual Basic demet öğelerinin adını karşılık gelen değişken adlarından anlar. bir demet öğesini açıkça adlandırmak zorunda değilsiniz. Aşağıdaki örnek, üç adlandırılmış öğe, `state` `stateName`,, ve `capital`içeren bir tanımlama grubu oluşturmak için çıkarımı kullanır.
+Kayıt düzeni öğelerinin değerini değişkenlerden atadığınızda, Visual Basic demet öğelerinin adını karşılık gelen değişken adlarından anlar. bir demet öğesini açıkça adlandırmak zorunda değilsiniz. Aşağıdaki örnek üç adlandırılmış öğe içeren bir tanımlama grubu oluşturmak için çıkarımı kullanır, `state`, `stateName` ve `capital`.
 
 [!code-vb[Inferred tuple names](../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/named-tuples/program.vb#2)]
 
 **Ek derleyici anahtarları**
 
-Visual Basic komut satırı derleyicisi artık başvuru derlemelerinin çıkışını denetlemek için [ **-refout**](../reference/command-line-compiler/refout-compiler-option.md) ve [ **-refonly**](../reference/command-line-compiler/refonly-compiler-option.md) derleyici seçeneklerini desteklemektedir. **-refout** , başvuru derlemesinin çıkış dizinini tanımlar ve **-refonly** yalnızca bir başvuru derlemesinin derleme tarafından çıkış olduğunu belirtir.
+Visual Basic komut satırı derleyicisi artık başvuru derlemelerinin çıkışını denetlemek için [**-refout**](../reference/command-line-compiler/refout-compiler-option.md) ve [**-refonly**](../reference/command-line-compiler/refonly-compiler-option.md) derleyici seçeneklerini desteklemektedir. **-refout** , başvuru derlemesinin çıkış dizinini tanımlar ve **-refonly** yalnızca bir başvuru derlemesinin derleme tarafından çıkış olduğunu belirtir.
 
 ## <a name="visual-basic-2017"></a>Visual Basic 2017
 
@@ -148,9 +148,9 @@ Visual Basic komut satırı derleyicisi artık başvuru derlemelerinin çıkış
 
 Tanımlama grupları, en yaygın olarak tek bir yöntem çağrısından birden çok değer döndürmek için kullanılan hafif bir veri yapısıdır. Genellikle, bir yöntemden birden çok değer döndürmek için aşağıdakilerden birini yapmanız gerekir:
 
-- Özel bir tür (a `Class` veya a `Structure`) tanımlayın. Bu, ağır bir çözümdür.
+- Özel bir tür (`Class` veya `Structure`) tanımlayın. Bu, ağır bir çözümdür.
 
-- Yönteminden bir değer döndürmenin yanı sıra bir veya daha fazla `ByRef` parametre tanımlayın.
+- Yönteminden bir değer döndürmenin yanı sıra bir veya daha fazla `ByRef` parametresi tanımlayın.
 
 Visual Basic, tanımlama gruplarını hızlıca tanımlamanızı, isteğe bağlı olarak anlam adlarını kendi değerlerine atamanızı ve değerlerini hızlıca almanızı sağlar. Aşağıdaki örnek <xref:System.Int32.TryParse%2A> yöntemine bir çağrı sarmalanmış ve bir tanımlama grubu döndürüyor.
 
@@ -162,17 +162,17 @@ Daha sonra yöntemi çağırabilir ve döndürülen kayıt grubunu aşağıdaki 
 
 **İkili sabit değerler ve basamak ayırıcıları**
 
-Ya da `&B` `&b`önekini kullanarak bir ikili sabit değeri tanımlayabilirsiniz. Bunlara ek olarak, okunabilirliği artırmak için bir rakam ayırıcısı `_`olarak alt çizgi karakterini de kullanabilirsiniz. Aşağıdaki örnek her iki özelliği de bir `Byte` değer atamak ve ondalık, onaltılı ve ikili sayı olarak göstermek için kullanır.
+@No__t-0 veya `&b` önekini kullanarak bir ikili sabit değeri tanımlayabilirsiniz. Ayrıca, okunabilirliği iyileştirmek için `_` alt çizgi karakterini bir rakam ayırıcısı olarak kullanabilirsiniz. Aşağıdaki örnek her iki özelliği de `Byte` değeri atamak ve bunu bir Decimal, onaltılı ve ikili sayı olarak göstermek için kullanır.
 
 [!code-vb[Binary](../../../samples/snippets/visualbasic/getting-started/bin-example.vb#1)]
 
 Daha fazla bilgi için [byte](../language-reference/data-types/byte-data-type.md#literal-assignments), [Integer](../language-reference/data-types/integer-data-type.md#literal-assignments), [Long](../language-reference/data-types/long-data-type.md#literal-assignments), [Short](../language-reference/data-types/short-data-type.md#literal-assignments), [SByte](../language-reference/data-types/sbyte-data-type.md#literal-assignments), [UInteger](../language-reference/data-types/uinteger-data-type.md#literal-assignments), [ulong](../language-reference/data-types/ulong-data-type.md#literal-assignments)ve [ushort](../language-reference/data-types/ushort-data-type.md#literal-assignments) veri türlerindeki "değişmez değer atamaları" bölümüne bakın.
 
-[Başvuru dönüş C# değerleri için destek](../programming-guide/language-features/procedures/ref-return-values.md)
+[**Başvuru dönüş C# değerleri için destek**](../programming-guide/language-features/procedures/ref-return-values.md)
 
 7,0 ile C# başlayarak, C# başvuru dönüş değerlerini destekler. Diğer bir deyişle, çağırma yöntemi başvuruya göre döndürülen bir değer aldığında, başvurunun değerini değiştirebilir. Visual Basic, başvuru dönüş değerleri olan Yöntemler yazmanıza izin vermez, ancak başvuru dönüş değerlerini kullanmanıza ve değiştirmenize izin verir.
 
-Örneğin, içinde C# yazılan aşağıdaki `Sentence` sınıf, belirtilen bir alt `FindNext` dizeyle başlayan bir tümcedeki sonraki sözcüğü bulan bir yöntemi içerir. Dize bir başvuru dönüş değeri olarak döndürülür ve yöntemine başvuruya göre geçirilen `Boolean` bir değişken aramanın başarılı olup olmadığını gösterir. Bu, arayanın yalnızca döndürülen değeri okuyamayacağı anlamına gelir; aynı zamanda değiştirebilir ve bu değişiklik `Sentence` sınıfında yansıtılır.
+Örneğin, içinde C# yazılan aşağıdaki `Sentence` sınıfı, belirtilen bir alt dizeyle başlayan bir tümcede bulunan sonraki kelimeyi bulan bir `FindNext` yöntemi içerir. Dize bir başvuru dönüş değeri olarak döndürülür ve yöntemine başvuruya göre geçirilen `Boolean` değişkeni aramanın başarılı olup olmadığını gösterir. Bu, arayanın yalnızca döndürülen değeri okuyamayacağı anlamına gelir; aynı zamanda değiştirebilir ve bu değişiklik `Sentence` sınıfında yansıtılır.
 
 [!code-csharp[Ref-Return](../../../samples/snippets/visualbasic/getting-started/ref-returns.cs)]
 
@@ -180,7 +180,7 @@ En basit biçimde, aşağıdaki gibi bir kod kullanarak tümcede bulunan kelimey
 
 [!code-vb[Ref-Return](../../../samples/snippets/visualbasic/getting-started/ref-return.vb#1)]
 
-Bu kodla ilgili bir sorun olsa da, bir eşleşme bulunmazsa yöntemin ilk sözcüğü döndürmesinin nedeni budur. Örnek, bir eşleşmenin bulunup bulunmadığını anlamak için `Boolean` bağımsız değişkenin değerini incelemediğinden, eşleşme yoksa ilk sözcüğü değiştirir. Aşağıdaki örnek, eşleşme yoksa ilk sözcüğü kendisiyle değiştirerek bunu düzeltir.
+Bu kodla ilgili bir sorun olsa da, bir eşleşme bulunmazsa yöntemin ilk sözcüğü döndürmesinin nedeni budur. Örnek, bir eşleşmenin bulunup bulunmadığını belirlemede `Boolean` bağımsız değişkeninin değerini incelemediğinden, eşleşme yoksa ilk sözcüğü değiştirir. Aşağıdaki örnek, eşleşme yoksa ilk sözcüğü kendisiyle değiştirerek bunu düzeltir.
 
 [!code-vb[Ref-Return](../../../samples/snippets/visualbasic/getting-started/ref-return.vb#2)]
 
@@ -206,7 +206,7 @@ Dizeler oluşturmak için dize ilişkilendirme ifadeleri kullanabilirsiniz.  Ent
 
 [Çok satırlı dize sabit değerleri](../../visual-basic/programming-guide/language-features/strings/string-basics.md)
 
-Dize sabit değerleri, yeni satır dizileri içerebilir.  Artık eski bir iş için kullanmak zorunda kalmayacak`<xml><![CDATA[...text with newlines...]]></xml>.Value`
+Dize sabit değerleri, yeni satır dizileri içerebilir.  Artık @no__t kullanımı için eski çalışmadan ihtiyacınız yok-0
 
 **Açıklamalar**
 
@@ -214,27 +214,27 @@ Dize sabit değerleri, yeni satır dizileri içerebilir.  Artık eski bir iş i�
 
 **Daha akıllı tam ad çözümlemesi**
 
-Gibi bilinen kod `Threading.Thread.Sleep(1000)`, "Threading" ad alanını aramak için kullanılan Visual Basic, System. Threading ve System. Windows. Threading arasında belirsizdir ve sonra bir hata bildirin.  Visual Basic artık olası ad alanlarını birlikte kabul eder.  Tamamlanma listesini gösterdiğinizde, Visual Studio Düzenleyicisi tamamlama listesindeki her iki türden üyeleri listeler.
+@No__t-0 gibi bilinen kod, "Threading" ad alanını aramak için kullanılan Visual Basic, System. Threading ve System. Windows. Threading arasında belirsizdir ve sonra bir hata bildirin.  Visual Basic artık olası ad alanlarını birlikte kabul eder.  Tamamlanma listesini gösterdiğinizde, Visual Studio Düzenleyicisi tamamlama listesindeki her iki türden üyeleri listeler.
 
 **Yıl-ilk tarih sabit değerleri**
 
-Tarih sabit değerlerini YYYY-AA-GG biçiminde `#2015-03-17 16:10 PM#`olabilir.
+Tarih sabit değerlerini YYYY-AA-GG biçiminde, `#2015-03-17 16:10 PM#` olabilir.
 
 **ReadOnly arabirim özellikleri**
 
 Salt okunur Arabirim özelliklerini bir ReadWrite özelliğini kullanarak uygulayabilirsiniz.  Arabirim minimum işlevselliği garanti eder ve bir uygulama sınıfının ayarlanmasının izin vermesini durdurmaz.
 
-[TypeOf \<Expr > IsNot \<türü >](../../visual-basic/language-reference/operators/typeof-operator.md)
+[TypeOf \<expr > IsNot \<Type >](../../visual-basic/language-reference/operators/typeof-operator.md)
 
-Kodunuzun daha okunaklı olması için artık ile `TypeOf` `IsNot`kullanabilirsiniz.
+Kodunuzun daha okunaklı olması için artık `IsNot` ile `TypeOf` kullanabilirsiniz.
 
-[#Disable Uyarı \<kimliği > ve #Enable Uyarı \<kimliği >](../../visual-basic/language-reference/directives/index.md)
+[#Disable uyarı \<KIMLIK > ve #Enable uyarı \<ıD >](../../visual-basic/language-reference/directives/index.md)
 
 Kaynak dosya içindeki bölgeler için belirli uyarıları devre dışı bırakabilir ve etkinleştirebilirsiniz.
 
 **XML belgesi açıklaması geliştirmeleri**
 
-Belge açıklamalarını yazarken, akıllı Düzenleyici ve parametre adlarını doğrulama, uygun işleme `crefs` (genel türler, işleçler, vb.), renklendirme ve yeniden düzenleme desteği alırsınız.
+Belge açıklamalarını yazarken, akıllı Düzenleyici ve parametre adlarını doğrulama, `crefs` (genel türler, işleçler, vs.), renklendirme ve yeniden düzenleme desteği alırsınız.
 
 [Kısmi modül ve arabirim tanımları](../../visual-basic/language-reference/modifiers/partial.md)
 
@@ -246,7 +246,7 @@ Sınıfların ve yapıların yanı sıra, kısmi modüller ve arabirimler bildir
 
 [Geçersiz kılmalar tanımları örtük aşırı yüklemelerdir](../../visual-basic/language-reference/modifiers/overrides.md)
 
-`Overrides` Değiştiricisini bir tanıma eklerseniz, derleyici ortak durumlarda daha az kod yazabileceğiniz şekilde `Overloads` dolaylı olarak ekler.
+@No__t-0 değiştiricisini bir tanıma eklerseniz, derleyici ortak durumlarda daha az kod yazabileceğiniz şekilde, `Overloads` ' i örtülü olarak ekler.
 
 **Öznitelikler bağımsız değişkenlerinde CObj 'a izin verilir**
 
@@ -254,7 +254,7 @@ Derleyici, kurulumlarını özniteliğinde kullanıldığında CObj (...) öğes
 
 **Farklı arabirimlerde belirsiz Yöntemler bildirme ve kullanma**
 
-Daha önce aşağıdaki kod, çağrı yapmak `IMock` veya çağırmak `GetDetails` için (Bu, ' de C#bildirildiği takdirde) hata veren hatalara sahiptir:
+Daha önce aşağıdaki kod, `IMock` veya çağırma `GetDetails` ' i (bunlar ' de C#bildirildiği takdirde) bildirmesinin önlendiğine yönelik hatalara sahiptir:
 
 ```vb
 Interface ICustomer
@@ -273,8 +273,8 @@ Interface IMock2 : Inherits ICustomer, ITime
 End Interface
 ```
 
-Derleyici, en uygun `GetDetails` çözümü seçmek için normal aşırı yükleme çözümleme kurallarını kullanacaktır ve örnekte gösterilenler gibi Visual Basic arabirim ilişkilerini bildirebilirsiniz.
+Artık derleyici, çağırmak için en uygun `GetDetails` ' ı seçmek üzere normal aşırı yükleme çözümleme kurallarını kullanacaktır ve Visual Basic içinde gösterildiği gibi arabirim ilişkilerini bildirebilirler.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Studio 2017'deki yenilikler](/visualstudio/ide/whats-new-in-visual-studio)
+- [Visual Studio 2017 ' deki yenilikler](/visualstudio/ide/whats-new-in-visual-studio)

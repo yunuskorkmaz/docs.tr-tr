@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Communication Foundation, requirements
 ms.assetid: c43918db-9a36-426c-9e8a-e1bd6688a5b7
-ms.openlocfilehash: 912cbc5088abb35dd8a95f4d9665bb24b6e2508c
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: ed9ea65e5b3d1fc59adbbdca11abf64f2d0acf69
+ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70855532"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71956947"
 ---
 # <a name="wcf-system-requirements"></a>WCF Sistem Gereksinimleri
 
@@ -17,16 +17,16 @@ Windows Communication Foundation (WCF), dağıtılmış uygulamalar oluşturmak 
 
 ## <a name="system-requirements"></a>Sistem Gereksinimleri
 
-WCF, üzerinde [!INCLUDE[wv](../../../includes/wv-md.md)]varsayılan olarak yüklenir.
+WCF, [!INCLUDE[wv](../../../includes/wv-md.md)] ' a varsayılan olarak yüklenir.
 
-WCF, [!INCLUDE[wxpsp2](../../../includes/wxpsp2-md.md)] [!INCLUDE[ws2003r2](../../../includes/ws2003r2-md.md)], veya[!INCLUDE[ws2003sp1](../../../includes/ws2003sp1-md.md)]üzerine de yüklenebilir.
+WCF Ayrıca [!INCLUDE[wxpsp2](../../../includes/wxpsp2-md.md)], Windows Server 2003 R2 veya [!INCLUDE[ws2003sp1](../../../includes/ws2003sp1-md.md)] ' de yüklenebilir.
 
 > [!NOTE]
-> WCF 'nin Message Queuing (MSMQ) [!INCLUDE[wv](../../../includes/wv-md.md)]işlevselliği yalnızca [!INCLUDE[ws2003sp1](../../../includes/ws2003sp1-md.md)], [!INCLUDE[ws2003r2](../../../includes/ws2003r2-md.md)], ve [!INCLUDE[wxppro](../../../includes/wxppro-md.md)]üzerinde desteklenir.
+> WCF 'nin Message Queuing (MSMQ) işlevselliği yalnızca [!INCLUDE[wv](../../../includes/wv-md.md)], Windows Server 2003 R2, [!INCLUDE[ws2003sp1](../../../includes/ws2003sp1-md.md)] ve Windows XP Professional 'da desteklenir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Kavramsal Genel Bakış](../../../docs/framework/wcf/conceptual-overview.md)
-- [Temel WCF Programlama](../../../docs/framework/wcf/basic-wcf-programming.md)
-- [WCF Özellik Ayrıntıları](../../../docs/framework/wcf/feature-details/index.md)
-- [Yönergeler ve En İyi Yöntemler](../../../docs/framework/wcf/guidelines-and-best-practices.md)
+- [Kavramsal Genel Bakış](conceptual-overview.md)
+- [Temel WCF Programlama](basic-wcf-programming.md)
+- [WCF Özellik Ayrıntıları](./feature-details/index.md)
+- [Yönergeler ve En İyi Yöntemler](guidelines-and-best-practices.md)

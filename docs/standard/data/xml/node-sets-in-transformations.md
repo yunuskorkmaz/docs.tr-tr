@@ -5,22 +5,22 @@ ms.technology: dotnet-standard
 ms.assetid: ad034f0e-ff8b-4a71-9a4c-528c754263c4
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8a84234ee797dac7487492dc92af2de4fa7ef503
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: fbcd9b93f63d48229c174b0f6518fd0150e98e18
+ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69962545"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71957026"
 ---
 # <a name="node-sets-in-transformations"></a>Dönüşümlerdeki Düğüm Kümeleri
 Düğüm kümeleri, XML yol dili (XPath) ifadelerinden döndürülen dört temel veri türünden biridir. Belge düzeninde oluşturulan ve yinelenen düğümleri olmayan düğümlerin sıralanmamış bir koleksiyonu olan düğüm kümesi, bir stil sayfasında bir değişkene atanabilir.  
   
 > [!NOTE]
-> <xref:System.Xml.Xsl.XslTransform> Sınıf .NET Framework 2,0 ' de kullanılmıyor. <xref:System.Xml.Xsl.XslCompiledTransform> Sınıfını kullanarak dönüşümler için Genişletilebilir Stil sayfası dili (XSLT) dönüşümleri gerçekleştirebilirsiniz. Daha fazla bilgi için, bkz. [XslCompiledTransform sınıfını kullanma](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) ve [XslTransform sınıfından geçiş](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md) .  
+> @No__t-0 sınıfı, .NET Framework 2,0 ' de kullanılmıyor. @No__t-0 sınıfını kullanarak dönüşümler için Genişletilebilir Stil sayfası dili (XSLT) dönüşümleri gerçekleştirebilirsiniz. Daha fazla bilgi için, bkz. [XslCompiledTransform sınıfını kullanma](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) ve [XslTransform sınıfından geçiş](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md) .  
   
- Düğüm kümeleri, XPath ifadelerinden döndürülen dört temel veri türünden biridir. Belge düzeninde oluşturulan ve yinelenen düğümleri olmayan düğümlerin sıralanmamış bir koleksiyonu olan düğüm kümesi, bir stil sayfasında bir değişkene atanabilir. Dönüşümdeki bir `select` öznitelikte kullanılan bir XPath ifadesinin sonucu olan bu düğüm kümesi, XML belge nesne modeli (DOM) bir düğüm kümesiyle aynı davranışa sahiptir. Bir düğüm kümesinde gezinme için, bir sonuç ağacı parçasının veya sonuç ağacı [](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md)parçasının aksine (örneğin, <xref:System.Xml.XPath.XPathNodeIterator> gezinti için) bir düğüm kümesi gezinmede gösterilen bir yöntem kümesini kullanarak gidebilirsiniz.  
+ Düğüm kümeleri, XPath ifadelerinden döndürülen dört temel veri türünden biridir. Belge düzeninde oluşturulan ve yinelenen düğümleri olmayan düğümlerin sıralanmamış bir koleksiyonu olan düğüm kümesi, bir stil sayfasında bir değişkene atanabilir. Dönüşümde `select` özniteliğinde kullanılan bir XPath ifadesinin sonucu olan bu düğüm kümesi, XML Belge Nesne Modeli (DOM) tarafından ayarlanan düğüm ile aynı davranışa sahiptir. Gezinti için <xref:System.Xml.XPath.XPathNodeIterator> ' i kullanan bir sonuç ağacı parçasının veya sonuç ağacı parçasının aksine, bir düğüm [kümesi üzerinde bir](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md)Yöntem kümesini kullanarak bir düğüm kümesinde gezinebilirsiniz.  
   
- Aşağıdaki kod örneği, bir stil sayfasındaki bir `variable` veya `parameter` öğesinin bir düğüm kümesini değerlendirirken bir düğüm kümesi üzerinde nasıl yineleceğini gösterir.  
+ Aşağıdaki kod örneği, bir stil sayfasındaki `variable` veya `parameter` öğesi düğüm kümesine değerlendirirken bir düğüm kümesi üzerinde nasıl yineleme yapılacağını gösterir.  
   
 ## <a name="style-sheet"></a>Stil sayfası  
   
@@ -60,7 +60,7 @@ Düğüm kümeleri, XML yol dili (XPath) ifadelerinden döndürülen dört temel
   
 ## <a name="output"></a>Çıkış  
   
-```  
+```output  
 ******  
 Seven Years in Trenton  
 ******  

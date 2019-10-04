@@ -2,12 +2,12 @@
 title: Docker uygulamaları için iç döngü geliştirme iş akışı
 description: Docker uygulamalarının geliştirilmesi için "Inner loop" iş akışını öğrenin.
 ms.date: 02/15/2019
-ms.openlocfilehash: c97cd9ba8d740f13c22caa45e344c4961e3b0600
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 565852511f3a837066d5da5cf0e3ab0a902dd7da
+ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834490"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71956539"
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>Docker uygulamaları için iç döngü geliştirme iş akışı
 
@@ -54,10 +54,10 @@ Mac ve Windows için Docker 'ın en son sürümlerinde, Docker uygulamalarının
 
 Ayrıca, Docker CLı kullanırken uygulamanızı geliştirebilmeniz için bir kod düzenleyicisine gerek duyarsınız.
 
-Microsoft, Mac, Windows ve Linux 'ta desteklenen basit bir kod Düzenleyicisi olan Visual Studio Code sağlar ve IntelliSense 'i [birçok dil](https://code.visualstudio.com/docs/languages/overview) (JavaScript, .net, Go, Java, Ruby, Python ve en modern diller) [için destek sağlar. hata ayıklama](https://code.visualstudio.com/Docs/editor/debugging), git ve uzantılar [ile tümleştirme](https://code.visualstudio.com/Docs/editor/versioncontrol) [desteği](https://code.visualstudio.com/docs/extensions/overview). Bu düzenleyici Mac ve Linux geliştiricileri için harika bir uyum. Windows 'da, tam Visual Studio uygulamasını da kullanabilirsiniz.
+Microsoft, Windows, Linux ve macOS 'ta desteklenen bir basit kod Düzenleyicisi olan Visual Studio Code sağlar ve IntelliSense 'i birçok dil (JavaScript, .NET, Go, Java, Ruby, Python ve en modern diller) [için destek](https://code.visualstudio.com/docs/languages/overview) sağlar. [hata ayıklama](https://code.visualstudio.com/Docs/editor/debugging), git ve uzantılar [ile tümleştirme](https://code.visualstudio.com/Docs/editor/versioncontrol) [desteği](https://code.visualstudio.com/docs/extensions/overview). Bu düzenleyici macOS ve Linux geliştiricileri için harika bir uyum. Windows 'da, Visual Studio 'Yu da kullanabilirsiniz.
 
 > [!TIP]
-> Windows, Mac veya Linux için Visual Studio Code yükleme yönergeleri için <https://code.visualstudio.com/docs/setup/setup-overview/> ' a gidin.
+> Windows, Linux veya macOS için Visual Studio Code yükleme yönergeleri için <https://code.visualstudio.com/docs/setup/setup-overview/> ' a gidin.
 >
 > Mac için Docker 'ı ayarlamaya ilişkin yönergeler için <https://docs.docker.com/docker-for-mac/> ' a gidin.
 
@@ -265,9 +265,8 @@ Bunu terminalden KıVRıMLı kullanarak test edebilirsiniz. Windows 'daki bir Do
 
 Ayrıca, sonraki bölümde açıklandığı gibi Windows veya Mac için Visual Studio 'Yu kullanırken Docker 'daki .NET Core veya .NET Framework kapsayıcılarında hata ayıklaması yapabilirsiniz.
 
-> [! BILGI
->
-> Node. js Docker kapsayıcılarının hatalarını ayıklama hakkında daha fazla bilgi edinmek için <https://blog.docker.com/2016/07/live-debugging-docker/> ve <https://blogs.msdn.microsoft.com/user_ed/2016/02/27/visual-studio-code-new-features-13-big-debugging-updates-rich-object-hover-conditional-breakpoints-node-js-mono-more/> ' e gidin.
+> [!TIP]
+> Node. js Docker kapsayıcılarında hata ayıklama hakkında daha fazla bilgi edinmek Için bkz. <https://blog.docker.com/2016/07/live-debugging-docker/> ve <https://blogs.msdn.microsoft.com/user_ed/2016/02/27/visual-studio-code-new-features-13-big-debugging-updates-rich-object-hover-conditional-breakpoints-node-js-mono-more/>.
 
 >[!div class="step-by-step"]
 >[Önceki](docker-apps-development-environment.md)

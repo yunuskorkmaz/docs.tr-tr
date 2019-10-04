@@ -2,12 +2,12 @@
 title: 'Nasıl yapılır: bir dizeyi ayrıştırma (C#)'
 ms.date: 07/20/2015
 ms.assetid: 81e5686c-9658-42d8-a7e3-b11be0a2c98b
-ms.openlocfilehash: da1c9d2573ac09a9db7f87c619f67bf0b2fb23ba
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 16310e37afec950c372c7b47637986bb0eb399b8
+ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834184"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71956615"
 ---
 # <a name="how-to-parse-a-string-c"></a>Nasıl yapılır: bir dizeyi ayrıştırma (C#)
 
@@ -53,3 +53,7 @@ Kök `Contacts` düğümünün iki `Contact` düğümü vardır. Ayrıştırılm
 List<XElement> contactNodes = contacts.Elements("Contact").ToList();
 Console.WriteLine(contactNodes[0]);
 ```
+
+## <a name="see-also"></a>Ayrıca bkz.
+
+- [Nasıl yapılır: belirli bir özniteliğe (C#) sahip bir öğe bulma](how-to-find-an-element-with-a-specific-attribute.md)

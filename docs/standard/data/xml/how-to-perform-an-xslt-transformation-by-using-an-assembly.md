@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Derleme Kullanarak XSLT Dönüşümü Gerçekleştirme'
+title: 'Nasıl yapılır: bütünleştirilmiş kod kullanarak XSLT dönüşümü gerçekleştirme'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,14 +8,14 @@ dev_langs:
 ms.assetid: 76ee440b-d134-4f8f-8262-b917ad6dcbf6
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4bf0669b94f925052ad5f139cce049018ce7da4f
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 7e998526f3e5fcefdf6b776fb493cf9625e6c696
+ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666526"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71957142"
 ---
-# <a name="how-to-perform-an-xslt-transformation-by-using-an-assembly"></a>Nasıl yapılır: Derleme Kullanarak XSLT Dönüşümü Gerçekleştirme
+# <a name="how-to-perform-an-xslt-transformation-by-using-an-assembly"></a>Nasıl yapılır: bütünleştirilmiş kod kullanarak XSLT dönüşümü gerçekleştirme
 XSLT derleyicisi (xsltc. exe) XSLT stil sayfalarını derler ve bir derleme oluşturur. Derleme doğrudan <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType> yöntemine geçirilebilir.  
   
 ### <a name="to-copy-the-xml-and-xslt-files-to-your-local-computer"></a>XML ve XSLT dosyalarını yerel bilgisayarınıza kopyalamak için  
@@ -87,7 +87,7 @@ XSLT derleyicisi (xsltc. exe) XSLT stil sayfalarını derler ve bir derleme olu�
     </xsl:stylesheet>  
     ```  
   
-- XML dosyasını yerel bilgisayarınıza kopyalayın ve adlandırın `books.xml`.  
+- XML dosyasını yerel bilgisayarınıza kopyalayın ve `books.xml` olarak adlandırın.  
   
     ```xml  
     <?xml version="1.0"?>  
@@ -132,17 +132,17 @@ XSLT derleyicisi (xsltc. exe) XSLT stil sayfalarını derler ve bir derleme olu�
   
 ### <a name="to-compile-the-style-sheet-with-the-script-enabled"></a>Komut dosyası etkinken stil sayfasını derlemek için.  
   
-1. Komut satırından aşağıdaki komutu yürütmek, ve `Transform.dll` `Transform_Script1.dll` adlı iki derleme oluşturur (Bu, varsayılan davranıştır. Aksi belirtilmedikçe, sınıfın adı ve derleme varsayılan olarak ana stil sayfasının adını alır):  
+1. Komut satırından aşağıdaki komutu yürütmek `Transform.dll` ve `Transform_Script1.dll` adlı iki derleme oluşturur (Bu, varsayılan davranıştır. Aksi belirtilmedikçe, sınıfın adı ve derleme varsayılan olarak ana stil sayfasının adını alır):  
   
-    ```  
+    ```console  
     xsltc /settings:script+ Transform.xsl  
+    ```
+  
+    Aşağıdaki komut, sınıf adını dönüştürmek için açıkça ayarlar:  
+  
+    ```console  
+    xsltc /settings:script+ /class:Transform Transform.xsl  
     ```  
-  
- Aşağıdaki komut, sınıf adını dönüştürmek için açıkça ayarlar:  
-  
-```  
-xsltc /settings:script+ /class:Transform Transform.xsl  
-```  
   
 ### <a name="to-include-the-compiled-assembly-as-a-reference-when-you-compile-your-code"></a>Kodunuzu derlerken derlenmiş derlemeyi başvuru olarak eklemek için.  
   
@@ -150,36 +150,36 @@ xsltc /settings:script+ /class:Transform Transform.xsl
   
 2. Komut satırı için C#, aşağıdakileri kullanın:  
   
-    ```  
+    ```console  
     csc myCode.cs /r:system.dll;system.xml.dll;Transform.dll  
     ```  
   
 3. Visual Basic olan komut satırı için aşağıdakini kullanın  
   
-    ```  
+    ```console  
     vbc myCode.vb /r:system.dll;system.xml.dll;Transform.dll  
     ```  
   
 ### <a name="to-use-the-compiled-assembly-in-your-code"></a>Kodunuzda derlenen derlemeyi kullanmak için.  
   
-1. Aşağıdaki örnek, derlenmiş stil sayfasını kullanarak XSLT dönüşümünün nasıl yürütüleceğini gösterir.  
+Aşağıdaki örnek, derlenmiş stil sayfasını kullanarak XSLT dönüşümünün nasıl yürütüleceğini gösterir.  
   
- [!code-csharp[XslTransform_XSLTC#1](../../../../samples/snippets/csharp/VS_Snippets_Data/XslTransform_XSLTC/CS/XslTransform_XSLTC.cs#1)]
- [!code-vb[XslTransform_XSLTC#1](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XslTransform_XSLTC/VB/XslTransform_XSLTC.vb#1)]  
+[!code-csharp[XslTransform_XSLTC#1](../../../../samples/snippets/csharp/VS_Snippets_Data/XslTransform_XSLTC/CS/XslTransform_XSLTC.cs#1)]
+[!code-vb[XslTransform_XSLTC#1](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XslTransform_XSLTC/VB/XslTransform_XSLTC.vb#1)]  
   
- Derlenmiş derlemeye dinamik olarak bağlanmak için, Değiştir  
+Derlenmiş derlemeye dinamik olarak bağlanmak için, Değiştir
   
-```  
-xslt.Load(typeof(Transform))  
-```  
-  
- örneklerini şununla değiştirin:  
-  
-```  
-xslt.Load(System.Reflection.Assembly.Load("Transform").GetType("Transform"))  
+```csharp  
+xslt.Load(typeof(Transform));  
 ```  
   
- Yukarıdaki örnekte. Assembly. Load yöntemi hakkında daha fazla bilgi için bkz.<xref:System.Reflection.Assembly.Load%2A>  
+örneklerini şununla değiştirin:  
+  
+```csharp 
+xslt.Load(System.Reflection.Assembly.Load("Transform").GetType("Transform"));  
+``` 
+  
+Yukarıdaki örnekte. Assembly. Load yöntemi hakkında daha fazla bilgi için bkz. <xref:System.Reflection.Assembly.Load%2A>.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

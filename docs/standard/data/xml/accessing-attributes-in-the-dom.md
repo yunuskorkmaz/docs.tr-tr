@@ -8,24 +8,24 @@ dev_langs:
 ms.assetid: ce2df341-a1a4-4e97-8e1b-cd45b8e3e71e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 08919e05f8396d37cb50ca24989b86000c854411
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 272c224c8a1c5061392856685f374237f8a10579
+ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61921647"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71956868"
 ---
 # <a name="accessing-attributes-in-the-dom"></a>DOM Özniteliklerine Erişim
 
-Öznitelikleri öğesi, öğenin alt öğelerine özellikleridir. Bu ayrım eşdüzey, üst ve alt düğümleri XML belge nesne modeli (DOM) gezinmek için kullanılan yöntemleri nedeniyle büyük/küçük harf önemlidir. Örneğin, **PreviousSibling** ve **NextSibling** yöntemleri öğeden bir özniteliği veya öznitelikleri arasında gezinmek için kullanılmaz. Bunun yerine bir öznitelik bir öğenin bir özelliktir ve sahibi bir öğe, sahip bir **OwnerElement** özelliği değil bir **özelliğindeki** özelliği ve gezinti farklı yöntemleri vardır.
+Öznitelikleri, öğesinin alt öğesi değil, öğesinin özelliklerdir. Bu ayrım, XML Belge Nesne Modeli (DOM) eşdüzey, üst ve alt düğümlerine gitmek için kullanılan yöntemler nedeniyle önemlidir. Örneğin, **previouseşdüzey** ve **nexteşdüzey** Yöntemler bir öğeden bir özniteliğe veya öznitelikler arasında gezinmek için kullanılmaz. Bunun yerine, bir özniteliği bir öğesinin özelliğidir ve bir öğesi tarafından sahiplenilir ve **ParentNode** özelliğine **sahip** değildir ve farklı gezinme yöntemlerine sahiptir.
 
-Geçerli düğüm bir öğe olduğunda kullanın **HasAttribute** öğeyle ilişkili herhangi bir özniteliği olup olmadığını görmek için yöntemi. Bir öğenin öznitelikleri tanındıktan sonra özniteliklere erişim için birden fazla yöntem vardır. Tek bir öznitelik öğeden geri almak için kullanabileceğiniz **GetAttribute** ve **GetAttributeNode** yöntemlerinin **XmlElement** veya tüm öznitelikleri edinebilirsiniz bir koleksiyona. Koleksiyon alma koleksiyon üzerinde yinelemek istiyorsanız kullanışlıdır. Öğenin tüm öznitelikleri istiyorsanız kullanın **öznitelikleri** öğe bir koleksiyona tüm öznitelikleri almak için özellik.
+Geçerli düğüm bir öğe olduğunda, öğesiyle ilişkili herhangi bir öznitelik olup olmadığını görmek için **HasAttribute** metodunu kullanın. Bir öğenin öznitelikleri olduğu bilindiğinde, özniteliklere erişmek için birden çok yöntem vardır. Öğesinden tek bir özniteliği almak için, **XmlElement** 'Nin **GetAttribute** ve **GetAttributeNode** yöntemlerini kullanabilirsiniz veya tüm öznitelikleri bir koleksiyonda elde edebilirsiniz. Koleksiyonu yinelemek gerekirse, koleksiyonu almak yararlı olur. Öğesinin tüm özniteliklerini istiyorsanız, tüm özniteliklerini bir koleksiyona almak için öğesinin **Attributes** özelliğini kullanın.
 
-## <a name="retrieving-all-attributes-into-a-collection"></a>Bir koleksiyona tüm özniteliklerini alma
+## <a name="retrieving-all-attributes-into-a-collection"></a>Tüm öznitelikleri bir koleksiyona alma
 
-Tüm öznitelikleri bir öğe düğümünün bir koleksiyona koymak istiyorsanız, çağrı **XmlElement.Attributes** özelliği. Bu alır **XmlAttributeCollection** , bir öğenin tüm özniteliklerini içerir. **XmlAttributeCollection** sınıfının devraldığı **XmlNamedNode** eşleme. Bu nedenle, yöntemleri ve özellikleri koleksiyonunda kullanılabilir bir adlandırılmış düğümün haritada mevcut kodlar ayrıca yöntemlere ve özelliklere özgü dahil **XmlAttributeCollection** gibi sınıf **ItemOf**  özelliği veya **ekleme** yöntemi. Öznitelik koleksiyondaki her öğe temsil eden bir **XmlAttribute** düğümü. Bir öğe üzerinde öznitelik sayısını bulmak için alma **XmlAttributeCollection**ve **sayısı** görmek için özellik kaç **XmlAttribute** düğümlerdir koleksiyonu.
+Bir öğe düğümünün tüm özniteliklerinin bir koleksiyona yerleştirileceğini istiyorsanız, **XmlElement. Attributes** özelliğini çağırın. Bu, bir öğenin tüm özniteliklerini içeren **XmlAttributeCollection** 'ı alır. **XmlAttributeCollection** sınıfı **xmlnamednode** eşlemesinden devralır. Bu nedenle, koleksiyonda bulunan Yöntemler ve özellikler, **XmlAttributeCollection** sınıfına özgü yöntemlere ve özelliklere ek olarak adlandırılmış bir düğüm eşlemesinde bulunan özellikleri içerir, örneğin **ItemOf** özelliği veya **append** yöntemi. Öznitelik koleksiyonundaki her öğe bir **XmlAttribute** düğümünü temsil eder. Bir öğedeki öznitelik sayısını bulmak için **XmlAttributeCollection**' ı alın ve koleksiyonda kaç **XmlAttribute** düğümünün olduğunu görmek için **Count** özelliğini kullanın.
 
-Aşağıdaki kod örneği, bir özniteliği almayı gösterilmektedir toplama ve kullanma **sayısı** üzerinde yineleme döngü dizini için yöntemi. Kodu daha sonra tek bir öznitelik koleksiyonundan alma ve değerinin görüntülendiğini gösterir.
+Aşağıdaki kod örneği, bir öznitelik koleksiyonunun nasıl alınacağını ve döngü dizini için **Count** yönteminin nasıl kullanılacağını gösterir. Kod bundan sonra koleksiyondan tek bir özniteliğin nasıl alınacağını ve değerinin nasıl görüntüleneceğini gösterir.
 
 ```vb
 Imports System
@@ -116,13 +116,13 @@ public class Sample
 }
 ```
 
-Bu örnek aşağıdaki çıkışı görüntüler:
+Bu örnek aşağıdaki çıktıyı görüntüler:
 
 **Output**
 
-Koleksiyondaki tüm öznitelikleri görüntüler.
+Koleksiyondaki tüm öznitelikleri görüntüleyin.
 
-```
+```console
 genre = novel
 ISBN = 1-861001-57-5
 misc = sale item
@@ -130,9 +130,9 @@ Display the attribute information.
 sale item
 ```
 
-Bir öznitelik koleksiyonu bilgileri adı veya dizin numarası tarafından alınabilir. Yukarıdaki örnekte, ada göre veri almak gösterilmektedir. Sonraki örnek dizin numarası ile verileri almak üzere nasıl gösterir.
+Bir öznitelik koleksiyonundaki bilgiler, ad veya dizin numarası ile alınabilir. Yukarıdaki örnekte, verilerin ada göre nasıl alınacağını gösterilmektedir. Sonraki örnek, verilerin dizin numarasına göre nasıl alınacağını gösterir.
 
-Çünkü **XmlAttributeCollection** koleksiyonudur ve yinelendiğinde adı veya dizin tarafından devralınırsa, bu örnek gösterir ilk özniteliği sıfır tabanlı dizin ve şu dosyayı kullanarak koleksiyon dışında seçerek **baseuri.xml**, giriş olarak.
+**XmlAttributeCollection** bir koleksiyon olduğundan ve ad ya da dizine göre yinelenebilir olduğundan, bu örnek, sıfır tabanlı bir dizin kullanarak koleksiyonun ilk özniteliğini seçip giriş olarak **baseUri. xml**dosyasını kullanarak gösterir.
 
 ### <a name="input"></a>Giriş
 
@@ -192,9 +192,9 @@ public class Sample
 }
 ```
 
-## <a name="retrieving-an-individual-attribute-node"></a>Tek bir öznitelik düğümü alınıyor
+## <a name="retrieving-an-individual-attribute-node"></a>Tek bir öznitelik düğümünü alma
 
-Bir öğe, tek öznitelik düğümü alınacağını <xref:System.Xml.XmlElement.GetAttributeNode%2A?displayProperty=nameWithType> yöntemi kullanılır. Türünde bir nesne döndürür **XmlAttribute**. Sonra bir **XmlAttribute**, tüm yöntemler ve özellikler kullanılabilir <xref:System.Xml.XmlAttribute?displayProperty=nameWithType> bulma gibi o nesne üzerindeki sınıf kullanılabilir **OwnerElement**.
+Bir öğeden tek bir öznitelik düğümü almak için <xref:System.Xml.XmlElement.GetAttributeNode%2A?displayProperty=nameWithType> yöntemi kullanılır. **XmlAttribute**türünde bir nesne döndürür. Bir **XmlAttribute**olduktan sonra, <xref:System.Xml.XmlAttribute?displayProperty=nameWithType> sınıfında bulunan tüm yöntemler ve özellikler, **Owner öğesini**bulma gibi bu nesnede kullanılabilir.
 
 ```vb
 Imports System
@@ -257,7 +257,7 @@ using System.Xml;
 }
 ```
 
-Önceki örnekte gösterilen şekilde tek öznitelik düğümü öznitelik koleksiyonundan alınır burada da yapabilirsiniz. Aşağıdaki kod örneğinde gösterildiği bir kod satırı tek bir özniteliği almayı dizin numarası ile XML belgesi kökünden yazılabilir nasıl ağacı, olarak da bilinen **DocumentElement** özelliği.
+Ayrıca, bir önceki örnekte gösterildiği gibi, öznitelik koleksiyonundan tek bir öznitelik düğümü alındığında da yapabilirsiniz. Aşağıdaki kod örneği, **DocumentElement** özelliği olarak da bilinen XML belge ağacının kökünden dizin numarasıyla tek bir özniteliği almak için nasıl bir kod satırı yazılacağını gösterir.
 
 ```csharp
 XmlAttribute attr = doc.DocumentElement.Attributes[0];

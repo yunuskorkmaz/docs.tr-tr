@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Hangi .NET Framework sürümlerinin yüklendiğini belirleme'
+title: 'Nasıl yapılır: hangi .NET Framework sürümlerinin yüklendiğini belirleme'
 ms.date: 04/18/2019
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0df5a5be2997958faa43ee67ae64fc37e1998414
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: abfa42be4b8c759da3fb34a2204058143e39689c
+ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71051599"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71956664"
 ---
-# <a name="how-to-determine-which-net-framework-versions-are-installed"></a>Nasıl yapılır: Hangi .NET Framework sürümlerinin yüklendiğini belirleme
+# <a name="how-to-determine-which-net-framework-versions-are-installed"></a>Nasıl yapılır: hangi .NET Framework sürümlerinin yüklendiğini belirleme
 
 Kullanıcılar bilgisayarlarına .NET Framework birden çok sürümünü [yükleyebilir](https://docs.microsoft.com/dotnet/framework/install) ve çalıştırabilir. Uygulamanızı geliştirirken veya dağıtırken, kullanıcının bilgisayarında hangi .NET Framework sürümlerinin yüklü olduğunu bilmeniz gerekebilir.
 
@@ -53,7 +53,7 @@ Bir bilgisayarda yüklü olan CLR sürümlerinin bir listesini almak için bir a
 - [Clrver aracını kullanma](#clr_a)
 - [Ortam sınıfını sorgulamak için kodu kullanma](#clr_b)
 
-.NET Framework her sürümü için yüklü güncelleştirmeleri algılama hakkında bilgi için bkz [. nasıl yapılır: Hangi .NET Framework güncelleştirmelerinin yükleneceğini](how-to-determine-which-net-framework-updates-are-installed.md)saptayın.
+.NET Framework her sürümü için yüklü güncelleştirmeleri algılama hakkında bilgi için bkz. [nasıl yapılır: hangi .NET Framework güncelleştirmelerinin yükleneceğini belirleme](how-to-determine-which-net-framework-updates-are-installed.md).
 
 ## <a name="find-newer-net-framework-versions-45-and-later"></a>Daha yeni .NET Framework sürümlerini bul (4,5 ve üzeri)
 
@@ -65,14 +65,14 @@ Bir bilgisayarda yüklü olan CLR sürümlerinin bir listesini almak için bir a
 
      Regedit 'i çalıştırmak için yönetici kimlik bilgilerine sahip olmanız gerekir.
 
-2. Kayıt Defteri Düzenleyicisi'nde, aşağıdaki alt anahtarı açın: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full**. **Tam** alt anahtar yoksa, .NET Framework 4,5 veya sonraki bir sürümü yüklü değildir.
+2. Kayıt Defteri Düzenleyicisi 'nde, aşağıdaki alt anahtarı açın: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full**. **Tam** alt anahtar yoksa, .NET Framework 4,5 veya sonraki bir sürümü yüklü değildir.
 
     > [!NOTE]
     > Kayıt defterindeki **net Framework kurulum** klasörü bir *noktayla başlamaz.*
 
 3. **Yayın**ADLı bir DWORD girişini denetleyin. Varsa, .NET Framework 4,5 veya sonraki sürümlerin yüklü olması gerekir. Değeri, .NET Framework belirli bir sürümüne karşılık gelen bir sürüm anahtarıdır. Aşağıdaki şekilde, örneğin, **Sürüm** girişinin değeri *378389*' dir. Bu, .NET Framework 4,5 ' in sürüm anahtarıdır.
 
-     ![.NET Framework 4,5 Için kayıt defteri girişi](./media/clr-installdir.png ".NET Framework 4,5 Için kayıt defteri girişi")
+     (./media/clr-installdir.png ".NET Framework 4,5 için .NET Framework 4,5 kayıt defteri girdisi") ![kayıt defteri girişi]
 
 Aşağıdaki tabloda, .NET Framework 4,5 ve üzeri sürümler için tek tek işletim sistemlerindeki **Sürüm** DWORD değeri listelenmektedir.
 
@@ -85,12 +85,12 @@ Aşağıdaki tabloda, .NET Framework 4,5 ve üzeri sürümler için tek tek işl
 |.NET Framework 4.5|Tüm Windows işletim sistemleri: 378389|
 |.NET Framework 4.5.1|Windows 8.1 ve Windows Server 2012 R2 'de: 378675<br />Diğer tüm Windows işletim sistemlerinde: 378758|
 |.NET Framework 4.5.2|Tüm Windows işletim sistemleri: 379893|
-|.NET Framework 4.6|Windows 10 ' da: 393295<br />Diğer tüm Windows işletim sistemlerinde: 393297|
+|.NET Framework 4.6|Windows 10:393295 ' de<br />Diğer tüm Windows işletim sistemlerinde: 393297|
 |.NET Framework 4.6.1|Windows 10 Kasım güncelleştirme sistemlerinde: 394254<br />Diğer tüm Windows işletim sistemlerinde (Windows 10 dahil): 394271|
-|.NET Framework 4.6.2|Windows 10 yıldönümü güncelleştirmesi ve Windows Server 2016: 394802<br />Diğer tüm Windows işletim sistemlerinde (diğer Windows 10 işletim sistemleri dahil): 394806|
-|.NET framework 4.7|Windows 10 Creators Update üzerinde: 460798<br />Diğer tüm Windows işletim sistemlerinde (diğer Windows 10 işletim sistemleri dahil): 460805|
-|.NET Framework 4.7.1|Windows 10 Fall Creators Update ve Windows Server, sürüm 1709: 461308<br/>Diğer tüm Windows işletim sistemlerinde (diğer Windows 10 işletim sistemleri dahil): 461310|
-|.NET Framework 4.7.2|Windows 10 Nisan 2018 güncelleştirmesi ve Windows Server, sürüm 1803 ' de: 461808<br/>Windows 10 Nisan 2018 güncelleştirmesi ve Windows Server, sürüm 1803 dışındaki tüm Windows işletim sistemlerinde: 461814|
+|.NET Framework 4.6.2|Windows 10 yıldönümü güncelleştirmesi ve Windows Server 2016:394802<br />Diğer tüm Windows işletim sistemlerinde (diğer Windows 10 işletim sistemleri dahil): 394806|
+|.NET Framework 4,7|Windows 10 Creators Update üzerinde: 460798<br />Diğer tüm Windows işletim sistemlerinde (diğer Windows 10 işletim sistemleri dahil): 460805|
+|.NET Framework 4.7.1|Windows 10 Fall Creators Update ve Windows Server, sürüm 1709:461308<br/>Diğer tüm Windows işletim sistemlerinde (diğer Windows 10 işletim sistemleri dahil): 461310|
+|.NET Framework 4.7.2|Windows 10 Nisan 2018 güncelleştirmesi ve Windows Server, sürüm 1803:461808<br/>Windows 10 Nisan 2018 güncelleştirmesi ve Windows Server, sürüm 1803 dışındaki tüm Windows işletim sistemlerinde: 461814|
 |.NET Framework 4,8|Windows 10 Mayıs 2019 güncelleştirmesi: 528040<br/>Tüm diğer Windows işletim sistemlerinde (diğer Windows 10 işletim sistemleri dahil): 528049|
 
 Bu değerleri şu şekilde kullanabilirsiniz:
@@ -105,7 +105,7 @@ Bu değerleri şu şekilde kullanabilirsiniz:
 
 ### <a name="find-net-framework-versions-45-and-later-with-code"></a>Kod ile 4,5 ve üzeri .NET Framework sürümlerini bulun
 
-1. Windows kayıt defterindeki <xref:Microsoft.Win32.RegistryKey.OpenSubKey%2A?displayProperty=nameWithType> **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full** alt anahtarına erişmek için veyöntemlerinikullanın.<xref:Microsoft.Win32.RegistryKey.OpenBaseKey%2A?displayProperty=nameWithType>
+1. Windows kayıt defterindeki **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full** alt anahtarına erişmek için <xref:Microsoft.Win32.RegistryKey.OpenBaseKey%2A?displayProperty=nameWithType> ve <xref:Microsoft.Win32.RegistryKey.OpenSubKey%2A?displayProperty=nameWithType> yöntemlerini kullanın.
 
     **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full** alt anahtarındaki **Release** DWORD girişinin varlığı, bir bilgisayarda .NET Framework 4,5 veya sonraki bir sürümün yüklü olduğunu gösterir.
 
@@ -128,15 +128,9 @@ Bu örnek sürüm denetimi için önerilen yöntemi izler:
 
 - **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full** alt anahtarının **yayın** girişinin değerini denetlemek için PowerShell komutlarını kullanın.
 
-Aşağıdaki örnekler, .NET Framework 4.6.2 veya sonraki bir sürümün yüklenip yüklenmediğini anlamak için **yayın** girişinin değerini denetler. Bu kod, `True` yüklenmişse ve `False` Aksi takdirde döndürülür.
+Aşağıdaki örnekler, .NET Framework 4.6.2 veya sonraki bir sürümün yüklenip yüklenmediğini anlamak için **yayın** girişinin değerini denetler. Bu kod, yüklenmişse `True` döndürür ve aksi takdirde `False`.
 
 ```PowerShell
-# PowerShell 5
- Get-ChildItem 'HKLM:\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full\' |  Get-ItemPropertyValue -Name Release | Foreach-Object { $_ -ge 394802 }
- ```
-
-```PowerShell
-# PowerShell 4
 (Get-ItemProperty "HKLM:SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full").Release -ge 394802
 ```
 
@@ -152,7 +146,7 @@ Farklı bir en düşük gerekli .NET Framework sürümünü denetlemek için, bu
 
     Regedit 'i çalıştırmak için yönetici kimlik bilgilerine sahip olmanız gerekir.
 
-2. Kayıt Defteri Düzenleyicisi'nde, aşağıdaki alt anahtarı açın: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP**:
+2. Kayıt Defteri Düzenleyicisi 'nde, aşağıdaki alt anahtarı açın: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP**:
 
     - 1,1 ile 3,5 arasındaki .NET Framework sürümleri için, yüklü her sürüm **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP** alt anahtarı altında bir alt anahtar olarak listelenir. Örneğin, **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v3.5**. Sürüm numarası, sürüm alt anahtarının **Sürüm** girişinde bir değer olarak depolanır.
 
@@ -169,7 +163,7 @@ Farklı bir en düşük gerekli .NET Framework sürümünü denetlemek için, bu
 
 ### <a name="find-net-framework-versions-182114-with-code"></a>.NET Framework sürüm 1&#8211;4 ile kodla bulun
 
-- Windows kayıt defterindeki **HKEY_LOCAL_MACHINE\Software\Microsoft\NET Framework setup\ndp** alt anahtarına erişmek için sınıfınıkullanın.<xref:Microsoft.Win32.RegistryKey?displayProperty=nameWithType>
+- Windows kayıt defterindeki **HKEY_LOCAL_MACHINE\Software\Microsoft\NET Framework Setup\NDP** alt anahtarına erişmek için <xref:Microsoft.Win32.RegistryKey?displayProperty=nameWithType> sınıfını kullanın.
 
 Aşağıdaki örnek, yüklü .NET Framework 1&#8211;4 sürümünü bulur:
 
@@ -184,7 +178,7 @@ Aşağıdaki örnek, yüklü .NET Framework 1&#8211;4 sürümünü bulur:
 
 Clr [Sürüm aracı 'nı (Clrver. exe)](../tools/clrver-exe-clr-version-tool.md) kullanarak bir bılgısayarda hangi CLR sürümlerinin yüklü olduğunu belirleme:
 
-- [Visual Studio için geliştirici komut istemi](https://docs.microsoft.com/dotnet/framework/tools/developer-command-prompt-for-vs)girin `clrver`.
+- [Visual Studio için Geliştirici Komut İstemi](https://docs.microsoft.com/dotnet/framework/tools/developer-command-prompt-for-vs)`clrver` girin.
 
     Örnek çıktı:
 
@@ -201,27 +195,27 @@ Clr [Sürüm aracı 'nı (Clrver. exe)](../tools/clrver-exe-clr-version-tool.md)
 > [!IMPORTANT]
 > .NET Framework 4,5 ve sonraki sürümlerinde, CLR sürümünü algılamak için <xref:System.Environment.Version%2A?displayProperty=nameWithType> özelliğini kullanmayın. Bunun yerine, kayıt defterini, [kodla .NET Framework sürümler 4,5 ve sonraki kısımlarında](#net_d)açıklandığı gibi sorgulayın.
 
-1. Nesneyi almak için <xref:System.Environment.Version?displayProperty=nameWithType>özelliğisorgulayın <xref:System.Version> .
+1. @No__t-1 nesnesini almak için <xref:System.Environment.Version?displayProperty=nameWithType> özelliğini sorgulayın.
 
-    Döndürülen `System.Version` nesne, şu anda kodu yürüten çalışma zamanının sürümünü tanımlar. Derleme sürümlerini veya çalışma zamanının bilgisayarda yüklü olabilecek diğer sürümlerini döndürmez.
+    Döndürülen `System.Version` nesnesi şu anda kodu yürüten çalışma zamanının sürümünü tanımlar. Derleme sürümlerini veya çalışma zamanının bilgisayarda yüklü olabilecek diğer sürümlerini döndürmez.
 
-    .NET Framework sürümleri 4, 4,5, 4.5.1 ve 4.5.2 için, döndürülen <xref:System.Version> nesnenin dize temsili 4.0.30319 biçimindedir. *xxxxx*, *xxxxx* 42000 ' den küçük. .NET Framework 4,6 ve sonraki sürümlerinde, 4.0.30319.42000 biçiminde olur.
+    .NET Framework sürümleri 4, 4,5, 4.5.1 ve 4.5.2 için, döndürülen <xref:System.Version> nesnesinin dize temsili 4.0.30319 biçimindedir. *xxxxx*, *xxxxx* 42000 ' den küçük. .NET Framework 4,6 ve sonraki sürümlerinde, 4.0.30319.42000 biçiminde olur.
 
-2. `Version` Nesneyi aldıktan sonra, aşağıdaki gibi sorgulayın:
+2. @No__t-0 nesnesine sahip olduktan sonra, bunu aşağıdaki gibi sorgulayın:
 
-   - Ana yayın tanımlayıcısı için (örneğin, sürüm 4,0 için *4* ), <xref:System.Version.Major%2A?displayProperty=nameWithType> özelliğini kullanın.
+   - Ana yayın tanımlayıcısı için (örneğin, sürüm 4,0 için *4* ) <xref:System.Version.Major%2A?displayProperty=nameWithType> özelliğini kullanın.
 
-   - Küçük yayın tanımlayıcısı için (örneğin, sürüm 4,0 için *0* ), <xref:System.Version.Minor%2A?displayProperty=nameWithType> özelliğini kullanın.
+   - Küçük yayın tanımlayıcısı için (örneğin, sürüm 4,0 için *0* ) <xref:System.Version.Minor%2A?displayProperty=nameWithType> özelliğini kullanın.
 
-   - Tüm sürüm dizesi için (örneğin, *4.0.30319.18010*), <xref:System.Version.ToString%2A?displayProperty=nameWithType> yöntemini kullanın. Bu yöntem, kodu yürüten çalışma zamanının sürümünü yansıtan tek bir değer döndürür. Bu, bilgisayarda yüklü olabilecek derleme sürümlerini veya diğer çalışma zamanı sürümlerini döndürmez.
+   - Tüm sürüm dizesi için (örneğin, *4.0.30319.18010*) <xref:System.Version.ToString%2A?displayProperty=nameWithType> metodunu kullanın. Bu yöntem, kodu yürüten çalışma zamanının sürümünü yansıtan tek bir değer döndürür. Bu, bilgisayarda yüklü olabilecek derleme sürümlerini veya diğer çalışma zamanı sürümlerini döndürmez.
 
-Aşağıdaki örnek CLR sürüm bilgilerini <xref:System.Environment.Version%2A?displayProperty=nameWithType> almak için özelliğini kullanır:
+Aşağıdaki örnek, CLR sürüm bilgilerini almak için <xref:System.Environment.Version%2A?displayProperty=nameWithType> özelliğini kullanır:
 
 [!code-csharp[ListVersions](../../../samples/snippets/csharp/framework/migration-guide/versions-installed2.cs)]
 [!code-vb[ListVersions](../../../samples/snippets/visualbasic/framework/migration-guide/versions-installed2.vb)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapılır: Hangi .NET Framework güncelleştirmelerinin yükleneceğini belirleme](how-to-determine-which-net-framework-updates-are-installed.md)
+- [Nasıl yapılır: hangi .NET Framework güncelleştirmelerinin yükleneceğini belirleme](how-to-determine-which-net-framework-updates-are-installed.md)
 - [Geliştiriciler için .NET Framework yüklemesi](../install/guide-for-developers.md)
 - [.NET Framework sürümleri ve bağımlılıklar](versions-and-dependencies.md)

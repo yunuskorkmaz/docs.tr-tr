@@ -8,24 +8,28 @@ dev_langs:
 ms.assetid: 00833027-1428-4586-83c1-42f5de3323d1
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 83eabbccfa2116142e9ee5889e3368ad4273b541
-ms.sourcegitcommit: 1e72e2990220b3635cebc39586828af9deb72d8c
+ms.openlocfilehash: ce0777ba71e5433b42b51ef1530e7a1a46905b25
+ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71306401"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71957010"
 ---
 # <a name="xdr-validation-with-xmlschemacollection"></a>XmlSchemaCollection ile XDR Doğrulaması
 
 Doğrulamak istediğiniz XML-Data azaltılmış (XDR) şeması **XmlSchemaCollection**içinde depolanıyorsa, şema koleksiyona eklendiğinde belirtilen ad alanı URI 'siyle ilişkilendirilir. **XmlValidatingReader** , XML belgesindeki ad alanı URI 'sini KOLEKSIYONDAKI bu URI 'ye karşılık gelen şemaya eşler.
 
 > [!IMPORTANT]
-> Sınıf artık kullanımdan kalkmıştır ve <xref:System.Xml.Schema.XmlSchemaSet> sınıfıyla değiştirilmiştir. <xref:System.Xml.Schema.XmlSchemaCollection> <xref:System.Xml.Schema.XmlSchemaSet> Sınıf hakkında daha fazla bilgi için bkz. [şema derlemesi için XmlSchemaSet](xmlschemaset-for-schema-compilation.md).
+> @No__t-0 sınıfı artık kullanımdan kaldırılmıştır ve <xref:System.Xml.Schema.XmlSchemaSet> sınıfıyla değiştirilmiştir. @No__t-0 sınıfı hakkında daha fazla bilgi için bkz. [şema derlemesi Için XmlSchemaSet](xmlschemaset-for-schema-compilation.md).
 
-Örneğin, XML belgesinin kök öğesi ise `<bookstore xmlns="urn:newbooks-schema">`, şema **XmlSchemaCollection** 'a eklendiğinde, aşağıdaki gibi aynı ad alanına başvurur:
+Örneğin, XML belgesinin kök öğesi `<bookstore xmlns="urn:newbooks-schema">` ise, şema **XmlSchemaCollection** 'a eklendiğinde, aşağıdaki gibi aynı ad alanına başvurur:
 
-```
+```vb
 xsc.Add("urn:newbooks-schema", "newbooks.xdr")
+```
+
+```csharp
+xsc.Add("urn:newbooks-schema", "newbooks.xdr");
 ```
 
 Aşağıdaki kod örneği, bir **XmlTextReader** alan ve **XMLSCHEMACOLLECTION**'a bir xdr şeması, Headcount. xdr ekleyen bir **XmlValidatingReader** oluşturur:

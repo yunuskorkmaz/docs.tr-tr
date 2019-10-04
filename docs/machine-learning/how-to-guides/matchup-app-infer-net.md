@@ -3,12 +3,12 @@ title: Infer.NET ve dayalı programlamasında bir oyun eşleştirme listesi uygu
 description: Basitleştirilmiş bir Trueskıll sürümüne göre bir oyun eşleme listesi uygulaması oluşturmak için dayalı Programming with Infer.NET ile nasıl kullanacağınızı öğrenin.
 ms.date: 05/06/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: edb747355f2d41d0400c6a989eea37423bbda2b4
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: f6f91aecfe7fdeffb7e8913309046c7942ecbab7
+ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117993"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71957206"
 ---
 # <a name="create-a-game-match-up-list-app-with-infernet-and-probabilistic-programming"></a>Infer.NET ve dayalı programlamasında bir oyun eşleştirme listesi uygulaması oluşturma
 
@@ -18,7 +18,7 @@ Bu nasıl yapılır Kılavuzu, Infer.NET kullanarak dayalı programlama hakkınd
 
 Dayalı programlama, gerçek dünyada işlemlerin istatistiksel modellerini oluşturmanızı sağlar.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Prerequisites
 
 - Yerel geliştirme ortamı kurulumu
 
@@ -33,7 +33,7 @@ dotnet new console -o myApp
 cd myApp
 ```
 
-`dotnet` Komut `new` türünde bir`console`uygulama oluşturur. Parametresi `-o` , uygulamanızın depolandığı yerde adlı `myApp` bir dizin oluşturur ve gerekli dosyalarla doldurur. `cd myApp` Komut sizi yeni oluşturulan uygulama dizinine koyar.
+@No__t-0 komutu `console` türünde bir `new` uygulaması oluşturur. @No__t-0 parametresi, uygulamanızın depolandığı `myApp` adlı bir dizin oluşturur ve gerekli dosyalarla doldurur. @No__t-0 komutu sizi yeni oluşturulan uygulama dizinine koyar.
 
 ## <a name="install-infernet-package"></a>Infer.NET paketi 'ni yükler
 
@@ -64,7 +64,7 @@ Oyun |Masının | Loser dili
 
 ## <a name="write-some-code"></a>Kod yazın
 
-Modeli tasarladıktan sonra, Infer.NET modelleme API 'sini kullanarak bunu bir dayalı programı olarak ifade etmek zaman alabilir. En `Program.cs` sevdiğiniz metin düzenleyicisinde açın ve tüm içeriğini aşağıdaki kodla değiştirin:
+Modeli tasarladıktan sonra, Infer.NET modelleme API 'sini kullanarak bunu bir dayalı programı olarak ifade etmek zaman alabilir. En sevdiğiniz metin düzenleyicisinde `Program.cs` ' ını açın ve tüm içeriğini aşağıdaki kodla değiştirin:
 
 ```csharp
 namespace myApp
@@ -138,7 +138,7 @@ dotnet run
 
 Sonuçlarınız aşağıdakine benzer olmalıdır:
 
-```
+```console
 Compiling model...done.
 Iterating:
 .........|.........|.........|.........|.........| 50

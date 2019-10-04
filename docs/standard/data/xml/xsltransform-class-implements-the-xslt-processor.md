@@ -8,35 +8,35 @@ dev_langs:
 ms.assetid: 88373fe2-4a6b-44f9-8a62-8a3e348e3a46
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7c36ff35622ae5c9cddf4ffd1ebd0a60feb348a8
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
+ms.openlocfilehash: 8cc3eb3e3f147d8ed15587946af743c96739a9b1
+ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67170888"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71956859"
 ---
 # <a name="xsltransform-class-implements-the-xslt-processor"></a>XslTransform Sınıfı XSLT İşlemcisini Uygular
 
 > [!NOTE]
-> <xref:System.Xml.Xsl.XslTransform> Sınıfı .NET Framework 2. 0'kullanılmıyor. Genişletilebilir Stil Sayfası Dil Dönüşümleri (XSLT) dönüştürmeleri için kullanarak gerçekleştirebileceğiniz <xref:System.Xml.Xsl.XslCompiledTransform> sınıfı. Bkz: [XslCompiledTransform sınıfını kullanma](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) ve [geçirme gelen XslTransform sınıfı](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md) daha fazla bilgi için.
+> @No__t-0 sınıfı, .NET Framework 2,0 ' de kullanılmıyor. @No__t-0 sınıfını kullanarak dönüşümler için Genişletilebilir Stil sayfası dili (XSLT) dönüşümleri gerçekleştirebilirsiniz. Daha fazla bilgi için, bkz. [XslCompiledTransform sınıfını kullanma](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) ve [XslTransform sınıfından geçiş](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md) .
 
-<xref:System.Xml.Xsl.XslTransform> XSLT Dönüşümleri (XSLT) sürüm 1.0 öneri uygulayan bir XSLT işlemci bir sınıftır. <xref:System.Xml.Xsl.XslTransform.Load%2A> Yöntemi bulur ve stil sayfalarını okur ve <xref:System.Xml.Xsl.XslTransform.Transform%2A> yöntemi, belirtilen kaynak belge dönüştürür. Uygulayan herhangi bir depolama <xref:System.Xml.XPath.IXPathNavigable> arabirimi, kaynak belge için kullanılabilir <xref:System.Xml.Xsl.XslTransform>. .NET Framework şu anda uygulayan <xref:System.Xml.XPath.IXPathNavigable> üzerinde arabirim <xref:System.Xml.XmlDocument>, <xref:System.Xml.XmlDataDocument>ve <xref:System.Xml.XPath.XPathDocument>, bunların tümü, bir dönüştürme için giriş kaynağı belge olarak kullanılabilir.
+@No__t-0 sınıfı, XSL dönüştürmeleri (XSLT) sürüm 1,0 önerisi uygulayan bir XSLT işlemcisidir. @No__t-0 yöntemi, stil sayfalarını bulur ve okur ve <xref:System.Xml.Xsl.XslTransform.Transform%2A> yöntemi verilen kaynak belgeyi dönüştürür. @No__t-0 arabirimini uygulayan tüm depolar, <xref:System.Xml.Xsl.XslTransform> için kaynak belge olarak kullanılabilir. .NET Framework şu anda <xref:System.Xml.XmlDocument>, <xref:System.Xml.XmlDataDocument> ve <xref:System.Xml.XPath.XPathDocument> <xref:System.Xml.XPath.IXPathNavigable> arabirimini uyguladığı için, bunların hepsi bir dönüşüme giriş kaynak belgesi olarak kullanılabilir.
 
-<xref:System.Xml.Xsl.XslTransform> Nesnesi .NET Framework, aşağıdaki ad alanıyla tanımlı XSLT 1.0 belirtimi yalnızca destekler:
+.NET Framework <xref:System.Xml.Xsl.XslTransform> nesnesi yalnızca aşağıdaki ad alanıyla tanımlanan XSLT 1,0 belirtimini destekler:
 
 ```xml
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
 ```
 
-Stil sayfası, yüklenebiliyor <xref:System.Xml.Xsl.XslTransform.Load%2A> aşağıdaki sınıflarının birinden yöntemi:
+Stil sayfası, aşağıdaki sınıflardan biri olan <xref:System.Xml.Xsl.XslTransform.Load%2A> yöntemi kullanılarak yüklenebilir:
 
 - XPathNavigator
 
-- XmlReader
+- Değerine
 
-- URL'yi temsil eden bir dize
+- URL 'YI temsil eden bir dize
 
-Var. farklı bir <xref:System.Xml.Xsl.XslTransform.Load%2A> yukarıdaki Giriş sınıflarının her biri için yöntemi. Bu sınıfların birinin bir arada bazı yöntemleri alır ve <xref:System.Xml.XmlResolver> bağımsız değişkenler olarak sınıf. <xref:System.Xml.XmlResolver> Tarafından başvurulan kaynakları bulur `<xsl:import>` veya `<xsl:include>` stil sayfası içinde bulunamadı. Aşağıdaki yöntemlerden bir dize olması <xref:System.Xml.XmlReader>, veya <xref:System.Xml.XPath.XPathNavigator> giriş olarak.
+Yukarıdaki giriş sınıflarının her biri için farklı bir <xref:System.Xml.Xsl.XslTransform.Load%2A> yöntemi vardır. Bazı yöntemler, bu sınıflardan birinin bir birleşimini ve <xref:System.Xml.XmlResolver> sınıfını bağımsız değişken olarak alır. @No__t-0, stil sayfasında `<xsl:import>` veya `<xsl:include>` tarafından başvurulan kaynakları bulur. Aşağıdaki yöntemler girdi olarak bir dize, <xref:System.Xml.XmlReader> veya <xref:System.Xml.XPath.XPathNavigator> alır.
 
 ```vb
 Overloads Public Sub Load(String)
@@ -70,27 +70,27 @@ Overloads Public Sub Load(XPathNavigator, XmlResolver, Evidence)
 public void Load(XPathNavigator, XmlResolver, Evidence);
 ```
 
-Çoğu <xref:System.Xml.Xsl.XslTransform.Load%2A> Al gösterilen yöntemleri bir <xref:System.Xml.XmlResolver> bir parametre olarak. <xref:System.Xml.XmlResolver> Stil sayfası ve import ve xsl başvuruda bulunulan tüm stil sayfaları kaldırılsın yüklemek için kullanılır: öğelerini içerir.
+Yukarıda gösterilen <xref:System.Xml.Xsl.XslTransform.Load%2A> yöntemlerinin çoğu parametre olarak bir <xref:System.Xml.XmlResolver> alır. @No__t-0, stil sayfasını ve xsl: import ve xsl: include öğelerinde başvurulan herhangi bir stil sayfasını yüklemek için kullanılır.
 
-Çoğu <xref:System.Xml.Xsl.XslTransform.Load%2A> yöntemleri de kanıt bir parametre olarak alır. Kanıt parametresi <xref:System.Security.Policy.Evidence> stil sayfası ile ilişkili. Stil sayfası güvenlik düzeyini ona başvuran tüm sonraki kaynakları güvenlik düzeyini etkiler, betik gibi içerdiği herhangi `document()` işlevleri kullanır ve herhangi bir uzantı nesnesi tarafından kullanılan <xref:System.Xml.Xsl.XsltArgumentList>.
+@No__t-0 yöntemlerinin çoğu ayrıca bir parametre olarak kanıt alır. Kanıt parametresi, stil sayfasıyla ilişkili <xref:System.Security.Policy.Evidence> ' dır. Stil sayfasının güvenlik düzeyi, başvurduğu komut dosyası, kullandığı @no__t 0 işlevleri ve <xref:System.Xml.Xsl.XsltArgumentList> tarafından kullanılan tüm uzantı nesneleri gibi referans yaptığı sonraki kaynakların güvenlik düzeyini etkiler.
 
-Stil sayfası kullanılarak yüklenmişse bir <xref:System.Xml.Xsl.XslTransform.Load%2A> bir URL parametresi ve kanıt içeren yöntemi sağlanır, stil sayfası kanıt, site ve bölge verilen URL'nin birleştirerek hesaplanır.
+Stil sayfası, URL parametresi içeren bir <xref:System.Xml.Xsl.XslTransform.Load%2A> yöntemi kullanılarak yüklenirse ve kanıt sağlanmazsa, stil sayfasının kanıtı, verilen URL 'nin sitesi ve bölgesi ile birleştirilerek hesaplanır.
 
-URI ya da bir kanıt sağlanırsa, stil sayfası kümesi kanıt tam olarak güvenilir. Stil sayfaları güvenilmeyen kaynaklardan yüklenemedi, veya güvenilir olmayan uzantı nesneleri eklemek <xref:System.Xml.Xsl.XsltArgumentList>.
+URI veya kanıt sağlanmazsa, stil sayfası için kanıt kümesi tam olarak güvenilirdir. Güvenilmeyen kaynaklardan stil sayfaları yüklemeyin veya @no__t güvenilmeyen uzantı nesneleri ekleyin-0.
 
-Güvenlik düzeyleri ve kanıt ve betik oluşturma nasıl etkilediği hakkında daha fazla bilgi için bkz. [XSLT stil sayfası komut dosyalarını kullanarak \<msxsl: script >](../../../../docs/standard/data/xml/xslt-stylesheet-scripting-using-msxsl-script.md). Güvenlik düzeyleri ve kanıt ve genişletme nesneleri nasıl etkilediği hakkında daha fazla bilgi için bkz: [stil sayfası parametreleri ve genişletme nesneleri için XsltArgumentList](../../../../docs/standard/data/xml/xsltargumentlist-for-style-sheet-parameters-and-extension-objects.md).
+Güvenlik düzeyleri ve kanıt ve komut dosyalarını nasıl etkilediği hakkında daha fazla bilgi için, bkz. [\<msxsl: script > kullanarak XSLT stil sayfası betiği](../../../../docs/standard/data/xml/xslt-stylesheet-scripting-using-msxsl-script.md). Güvenlik düzeyleri ve kanıt ve uzantı nesnelerini nasıl etkilediği hakkında bilgi için bkz. [stil sayfası parametreleri ve uzantı nesneleri Için XsltArgumentList](../../../../docs/standard/data/xml/xsltargumentlist-for-style-sheet-parameters-and-extension-objects.md).
 
-Güvenlik düzeyleri ve kanıt ve nasıl etkilediği hakkında bilgi için `document()` çalışması için bkz: [çözme dış XSLT stil sayfaları ile belgelerini](../../../../docs/standard/data/xml/resolving-external-xslt-style-sheets-and-documents.md).
+Güvenlik düzeyleri ve kanıtları ve `document()` işlevini nasıl etkilediği hakkında bilgi için bkz. [dış XSLT stil sayfalarını ve belgelerini çözümleme](../../../../docs/standard/data/xml/resolving-external-xslt-style-sheets-and-documents.md).
 
-Bir stil sayfası, giriş parametreleri sayısıyla sağlanabilir. Stil sayfası, uzantı nesneler üzerinde işlevler de çağırabilirsiniz. Hem parametreleri hem de genişletme nesneleri sağlanacak olan stil sayfası kullanılarak <xref:System.Xml.Xsl.XsltArgumentList> sınıfı. Hakkında daha fazla bilgi için <xref:System.Xml.Xsl.XsltArgumentList>, bkz: <xref:System.Xml.Xsl.XsltArgumentList>.
+Bir stil sayfası, bir dizi giriş parametresiyle sağlanabilir. Stil sayfası, uzantı nesnelerindeki işlevleri de çağırabilir. Hem parametre hem de uzantı nesneleri <xref:System.Xml.Xsl.XsltArgumentList> sınıfı kullanılarak stil sayfasına sağlanır. @No__t-0 hakkında daha fazla bilgi için bkz. <xref:System.Xml.Xsl.XsltArgumentList>.
 
-## <a name="recommended-secure-use-of-xsltransform-class"></a>XslTransform sınıfı önerilen güvenli kullanımı
+## <a name="recommended-secure-use-of-xsltransform-class"></a>XslTransform sınıfının önerilen güvenli kullanımı
 
-Stil sayfası güvenlik ayrıcalıkları sağlanan kanıta göre değişir. Aşağıdaki tabloda, stil sayfası konumunu özetler ve ne tür bir kanıt sağlamak için bir açıklama sağlar.
+Stil sayfasının güvenlik ayrıcalıkları, belirtilen kanıta bağımlıdır. Aşağıdaki tabloda stil sayfasının konumu özetlenmektedir ve ne tür bir kanıt verilecek olduğuna ilişkin bir açıklama verilir.
 
-- XSLT stil sayfası boş dış başvuru veya stil sayfası güvendiğiniz bir kod tabanından gelir.
+- XSLT stil sayfasının dış başvuruları yoktur veya stil sayfası güvendiğiniz bir kod tabanından gelir.
 
-  - Kanıt, derleme:
+  - Derlemeinizden kanıt sağlayın:
 
     ```vb
     Dim xslt = New XslTransform() xslt.Load(stylesheet, resolver, Me.GetType().Assembly.Evidence)
@@ -98,9 +98,9 @@ Stil sayfası güvenlik ayrıcalıkları sağlanan kanıta göre değişir. Aşa
     XsltTransform xslt = new XslTransform();  xslt.Load(stylesheet, resolver, this.GetType().Assembly.Evidence);
     ```
 
-- XSLT stil sayfası, dış bir kaynaktan geliyor. Kaynak dosyanın kaynağını bilinen ve doğrulanabilir bir URI yoktur.
+- XSLT stil sayfası bir dış kaynaktan gelir. Kaynağın kaynağı bilinirdi ve doğrulanabilir bir URI vardır.
 
-  - URI'yi kullanarak kanıt oluşturur.
+  - URI kullanarak kanıt oluşturun.
 
     ```vb
     Dim xslt As New XslTransform() Dim ev As Evidence = XmlSecureResolver.CreateEvidenceForUrl(stylesheetUri) xslt.Load(stylesheet, resolver, evidence)
@@ -108,19 +108,19 @@ Stil sayfası güvenlik ayrıcalıkları sağlanan kanıta göre değişir. Aşa
     XslTransform xslt = new XslTransform(); Evidence ev = XmlSecureResolver.CreateEvidenceForUrl(stylesheetUri); xslt.Load(stylesheet, resolver, evidence);
     ```
 
-- XSLT stil sayfası, dış bir kaynaktan geliyor. Kaynak kaynağı bilinmiyor.
+- XSLT stil sayfası bir dış kaynaktan gelir. Kaynağın kaynağı bilinmiyor.
 
-  - Kümesine kanıt `null`. Komut dosyası blokları işlenmedi, XSLT `document()` işlevi desteklenmiyor ve ayrıcalıklı genişletme nesneleri izin verilmiyor.
+  - Kanıtları `null` olarak ayarlayın. Betik blokları işlenmiyor, XSLT `document()` işlevi desteklenmiyor ve ayrıcalıklı uzantı nesnelerine izin verilmiyor.
 
-    Buna ek olarak da ayarlayabilirsiniz `resolver` parametresi `null` bu sağlar `xsl:import` ve `xsl:include` öğeleri işlenmedi.
+    Ayrıca, `resolver` parametresini `null` olarak ayarlayabilirsiniz; bu, `xsl:import` ve `xsl:include` öğelerinin işlenmemesini sağlar.
 
-- XSLT stil sayfası, dış bir kaynaktan geliyor. Kaynak kaynağı bilinmiyor ancak betik desteği gerektirir.
+- XSLT stil sayfası bir dış kaynaktan gelir. Kaynağın kaynağı bilinmiyor, ancak betik desteğine ihtiyacınız vardır.
 
-  - Kanıt çağrıyı yapandan isteyin.
+  - Çağırandan kanıt iste.
 
-## <a name="transformation-of-xml-data"></a>XML veri dönüştürme
+## <a name="transformation-of-xml-data"></a>XML verilerinin dönüştürülmesi
 
-Bir stil sayfası yüklendikten sonra Dönüşüm, aşağıdakilerden birini çağırarak başlar <xref:System.Xml.Xsl.XslTransform.Transform%2A> yöntemleri ve bir giriş kaynağı belge sağlama. <xref:System.Xml.Xsl.XslTransform.Transform%2A> Yöntemi aşırı yüklüdür farklı dönüştürme çıkışları sağlamak için. Aşağıdaki çıktı biçimlerde dönüşümü neden olabilir:
+Bir stil sayfası yüklendikten sonra, dönüştürme <xref:System.Xml.Xsl.XslTransform.Transform%2A> yöntemlerinden birini çağırarak ve bir giriş kaynak belgesi sağlayarak başlar. @No__t-0 yöntemi, farklı dönüştürme çıktıları sağlamak için aşırı yüklendi. Dönüştürme, aşağıdaki çıkış biçimlerine neden olabilir:
 
 - <xref:System.Xml.XmlReader>
 
@@ -130,9 +130,9 @@ Bir stil sayfası yüklendikten sonra Dönüşüm, aşağıdakilerden birini ça
 
 - <xref:System.IO.Stream>
 
-- Dosya dize URL'si
+- Dosyanın dize URL 'SI
 
-URL'de bulunan bir giriş belge dönüştürme, yaygın olarak kullanılan bir senaryo için bu son biçimi dizesi URL sağlar ve belge yazma çıkış URL'si. Bu <xref:System.Xml.Xsl.XslTransform.Transform%2A> bir XML belgesi bir dosyadan yüklemek, XSLT dönüşümü gerçekleştirme ve çıktıyı bir dosyaya yazmak için bir kolaylık yöntemi bir yöntemdir. Bu oluşturmak ve giriş kaynak belge yüklemek zorunda kalmasını önler ve ardından bir dosya akışına yazar. Aşağıdaki kod örneği bu kullanımı gösterir <xref:System.Xml.Xsl.XslTransform.Transform%2A> girdi ve çıktı olarak dize URL'yi kullanarak yöntemi:
+Bu son biçim olan dize URL 'si, URL 'de bulunan bir giriş belgesini dönüştürme ve belgeyi çıkış URL 'sine yazma konusunda yaygın olarak kullanılan bir senaryo sağlar. Bu <xref:System.Xml.Xsl.XslTransform.Transform%2A> yöntemi bir dosyadan XML belgesi yüklemek, XSLT dönüşümünü gerçekleştirmek ve çıktıyı bir dosyaya yazmak için kullanışlı bir yöntemdir. Bu, giriş kaynak belgesi oluşturup yüklemeyi ve ardından bir dosya akışına yazmanızı önler. Aşağıdaki kod örneğinde, giriş ve çıkış olarak dize URL 'sini kullanarak <xref:System.Xml.Xsl.XslTransform.Transform%2A> yönteminin bu kullanımı gösterilmektedir:
 
 ```vb
 Dim xsltransform As XslTransform = New XslTransform()
@@ -146,9 +146,9 @@ xsltransform.Load("favorite.xsl");
 xsltransform.Transform("MyDocument.xml", "TransformResult.xml", null);
 ```
 
-## <a name="transforming-a-section-of-an-xml-document"></a>Bir XML belgesi bir bölümünü dönüştürme
+## <a name="transforming-a-section-of-an-xml-document"></a>XML belgesinin bir bölümünü dönüştürme
 
-Dönüşümler belgenin bir bütün olarak uygular. Belge kök düğümü dışındaki bir düğümde geçirirseniz, diğer bir deyişle, bu dönüştürme süreci yüklenen belgedeki tüm düğümleri erişmesini engellemez. Sonuç ağacı parçası dönüştürmek için oluşturmalısınız bir <xref:System.Xml.XmlDocument> içeren yalnızca sonuç ağacı parçası ve, geçirmek <xref:System.Xml.XmlDocument> için <xref:System.Xml.Xsl.XslTransform.Transform%2A> yöntemi. Aşağıdaki örnek bir sonuç ağacı parçası üzerinde bir dönüştürme gerçekleştirir.
+Dönüşümler belgeye bir bütün olarak uygulanır. Diğer bir deyişle, belge kök düğümü dışında bir düğüm geçirirseniz, bu, dönüşüm işleminin yüklenen belgedeki tüm düğümlere erişmesini engellemez. Bir sonuç ağacı parçasını dönüştürmek için, yalnızca sonuç ağacı parçasını içeren bir <xref:System.Xml.XmlDocument> oluşturmanız ve bu <xref:System.Xml.XmlDocument> ' i <xref:System.Xml.Xsl.XslTransform.Transform%2A> yöntemine iletmeniz gerekir. Aşağıdaki örnek, bir sonuç ağacı parçasında bir dönüştürme gerçekleştirir.
 
 ```vb
 Dim xslt As New XslTransform()
@@ -180,14 +180,14 @@ Console.WriteLine("Passing " + tmpDoc.OuterXml + " to print_root.xsl");
 xslt.Transform(tmpDoc, null, Console.Out, null);
 ```
 
-Örnek library.xml kullanır ve print_root.xsl giriş olarak dosyaları ve aşağıdakileri konsola çıkarır.
+Örnek, input olarak Library. xml ve print_root. xsl dosyalarını kullanır ve aşağıdakileri konsola verir:
 
-```
+```console
 Passing <book genre="novel" ISBN="1-861001-57-5"><title>Pride And Prejudice</title></book> to print_root.xsl
 Root node is book.
 ```
 
-Library.XML
+Library. xml
 
 ```xml
 <library>
@@ -200,7 +200,7 @@ Library.XML
 </library>
 ```
 
-print_root.xsl
+print_root. Xsl
 
 ```xml
 <stylesheet version="1.0" xmlns="http://www.w3.org/1999/XSL/Transform" >
@@ -211,31 +211,31 @@ print_root.xsl
 </stylesheet>
 ```
 
-## <a name="migration-of-xslt-from-net-framework-version-10-to-net-framework-version-11"></a>.NET Framework sürüm 1.1 .NET Framework sürüm 1.0 XSLT geçişi
+## <a name="migration-of-xslt-from-net-framework-version-10-to-net-framework-version-11"></a>XSLT 'nin .NET Framework sürüm 1,0 ' den .NET Framework sürümüne geçişi 1,1
 
-Aşağıdaki tabloda eski .NET Framework sürüm 1.0 yöntemleri ve yeni .NET Framework sürüm 1.1 yöntemleri için gösterilmektedir <xref:System.Xml.Xsl.XslTransform.Load%2A> yöntemi. Yeni yöntemleri kanıt belirterek izinleri stil sayfası sınırlamanıza olanak sağlar.
+Aşağıdaki tabloda, <xref:System.Xml.Xsl.XslTransform.Load%2A> yöntemi için eski .NET Framework sürüm 1,0 yöntemleri ve yeni .NET Framework sürüm 1,1 yöntemleri gösterilmektedir. Yeni yöntemler, kanıt belirterek stil sayfasının izinlerini sınırlamanıza olanak tanır.
 
-|Eski .NET Framework sürüm 1.0 yük yöntemler|Değiştirme .NET Framework sürüm 1.1 yükleme yöntemleri|
+|Eski .NET Framework sürüm 1,0 yükleme yöntemleri|Değiştirme .NET Framework sürüm 1,1 yükleme yöntemleri|
 |------------------------------------------------------|---------------------------------------------------------|
-|(XPathNavigator giriş) yük;<br /><br /> Yük (XPathNavigator giriş, XmlResolver Çözümleyicisi);|Yük (XPathNavigator stil sayfası, XmlResolver Çözümleyici, kanıt kanıt);|
-|(IXPathNavigable stil sayfası) yük;<br /><br /> Yük (IXPathNavigable stil sayfası, XmlResolver Çözümleyicisi);|Yük (IXPathNavigable stil sayfası, XmlResolver Çözümleyici, kanıt kanıt);|
-|(XmlReader stil sayfası) yük;<br /><br /> Yük (XmlReader stil sayfası, XmlResolver Çözümleyicisi);|Yük (XmlReader stil sayfası, XmlResolver Çözümleyici, kanıt kanıt);|
+|Load (XPathNavigator girişi);<br /><br /> Load (XPathNavigator girişi, XmlResolver Çözümleyicisi);|Load (XPathNavigator stil sayfası, XmlResolver Çözümleyicisi, kanıt kanıtı);|
+|Load (ıxpathgezinebilir stil sayfası);<br /><br /> Load (ıxpathgezinilebilir stil sayfası, XmlResolver Çözümleyicisi);|Load (ıxpathgezinilebilir stil sayfası, XmlResolver Çözümleyicisi, kanıt kanıtı);|
+|Load (XmlReader stil sayfası);<br /><br /> Load (XmlReader stil sayfası, XmlResolver Çözümleyicisi);|Load (XmlReader stil sayfası, XmlResolver Çözümleyicisi, kanıt kanıtı);|
 
-Aşağıdaki tabloda eski ve yeni yöntemleri gösterilmektedir <xref:System.Xml.Xsl.XslTransform.Transform%2A> yöntemi. Yeni yöntemleri ele bir <xref:System.Xml.XmlResolver> nesne.
+Aşağıdaki tabloda <xref:System.Xml.Xsl.XslTransform.Transform%2A> yöntemi için eski ve yeni yöntemler gösterilmektedir. Yeni yöntemler <xref:System.Xml.XmlResolver> nesnesi alır.
 
-|.NET Framework sürüm 1.0 dönüştürme yöntemleri geçersiz|Değiştirme .NET Framework sürüm 1.1 yöntemleri dönüştürme|
+|Kullanımdan kalktı .NET Framework sürüm 1,0 dönüştürme yöntemleri|Değiştirme .NET Framework sürüm dönüştürme 1,1 yöntemleri|
 |-----------------------------------------------------------|--------------------------------------------------------------|
-|XmlReader Transform(XPathNavigator input, XsltArgumentList args)|XmlReader Transform(XPathNavigator input, XsltArgumentList args, XmlResolver resolver)|
-|XmlReader Transform(IXPathNavigable input, XsltArgumentList args)|XmlReader Transform(IXPathNavigable input, XsltArgumentList args, XmlResolver resolver)|
-|Void dönüştürme (XPathNavigator giriş, XsltArgumentList args, XmlWriter çıkış)|Void (XPathNavigator giriş, XsltArgumentList args, XmlWriter çıkış, XmlResolver Çözümleyicisi) dönüştürme|
-|Void dönüştürme (IXPathNavigable giriş, XsltArgumentList args, XmlWriter çıkış)|Void (IXPathNavigable giriş, XsltArgumentList args, XmlWriter çıkış, XmlResolver Çözümleyicisi) dönüştürme|
-|Void dönüştürme (XPathNavigator giriş, XsltArgumentList args, TextWriter çıkış)|Void (XPathNavigator giriş, XsltArgumentList args, TextWriter çıkış, XmlResolver Çözümleyicisi) dönüştürme|
-|Void dönüştürme (IXPathNavigable giriş, XsltArgumentList args, TextWriter çıkış)|Void (IXPathNavigable giriş, XsltArgumentList args, TextWriter çıkış, XmlResolver Çözümleyicisi) dönüştürme|
-|Void dönüştürme (XPathNavigator giriş, XsltArgumentList args, Stream çıkış)|Void (XPathNavigator giriş, XsltArgumentList args, Stream çıkış, XmlResolver Çözümleyicisi) dönüştürme|
-|Void dönüştürme (IXPathNavigable giriş, XsltArgumentList args, Stream çıkış)|Void (IXPathNavigable giriş, XsltArgumentList args, Stream çıkış, XmlResolver Çözümleyicisi) dönüştürme|
-|Void dönüştürme (dize giriş, dize çıkış);|Void dönüştürme (dize giriş, dize çıktısı, XmlResolver Çözümleyicisi);|
+|XmlReader dönüşümü (XPathNavigator girişi, XsltArgumentList bağımsız değişkenleri)|XmlReader Transform (XPathNavigator girişi, XsltArgumentList args, XmlResolver Çözümleyicisi)|
+|XmlReader Transform (ıxpathgezinebilir girişi, XsltArgumentList args)|XmlReader Transform (ıxpathgezinebilir Input, XsltArgumentList args, XmlResolver Çözümleyicisi)|
+|Void Transform (XPathNavigator girişi, XsltArgumentList args, XmlWriter çıktısı)|Void Transform (XPathNavigator girişi, XsltArgumentList args, XmlWriter çıktısı, XmlResolver Çözümleyicisi)|
+|Void Transform (ıxpathgezinebilir Input, XsltArgumentList args, XmlWriter output)|Void Transform (ıxpathgezinebilir Input, XsltArgumentList args, XmlWriter Output, XmlResolver Çözümleyicisi)|
+|Void Transform (XPathNavigator girişi, XsltArgumentList args, TextWriter çıkışı)|Void Transform (XPathNavigator girişi, XsltArgumentList args, TextWriter çıktısı, XmlResolver Çözümleyicisi)|
+|Void Transform (ıxpathgezinebilir Input, XsltArgumentList args, TextWriter output)|Void Transform (ıxpathgezinebilir Input, XsltArgumentList args, TextWriter Output, XmlResolver Çözümleyicisi)|
+|Void Transform (XPathNavigator girişi, XsltArgumentList args, akış çıkışı)|Void Transform (XPathNavigator girişi, XsltArgumentList args, Stream çıktısı, XmlResolver Çözümleyicisi)|
+|Void Transform (ıxpathgezinebilir Input, XsltArgumentList args, stream output)|Void Transform (ıxpathgezinebilir Input, XsltArgumentList args, Stream Output, XmlResolver Çözümleyicisi)|
+|Void Transform (dize girişi, dize çıktısı);|Void Transform (dize girişi, dize çıkışı, XmlResolver Çözümleyicisi);|
 
-<xref:System.Xml.Xsl.XslTransform.XmlResolver%2A?displayProperty=nameWithType> .NET Framework sürüm 1.1 özellik kullanılmıyor. Bunun yerine, yeni kullanın <xref:System.Xml.Xsl.XslTransform.Transform%2A> yeniden yüklemeleri hangi bir <xref:System.Xml.XmlResolver> nesne.
+@No__t-0 özelliği .NET Framework sürüm 1,1 ' de kullanılmıyor. Bunun yerine, bir <xref:System.Xml.XmlResolver> nesnesi alacak yeni <xref:System.Xml.Xsl.XslTransform.Transform%2A> aşırı yüklemelerini kullanın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

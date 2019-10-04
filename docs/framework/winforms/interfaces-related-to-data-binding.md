@@ -12,12 +12,12 @@ helpviewer_keywords:
 - data binding [Windows Forms], interfaces
 - IDataErrorInfo interface [Windows Forms], Windows Forms data binding
 ms.assetid: 14e49a2e-3e46-47ca-b491-70d546333277
-ms.openlocfilehash: 9f102b584d2ed0b5a9d2bbb0e7ce3f7871ec40b2
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 4e40f7ec1922cdf43e6a0b8f5734acaaeefbc514
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70046366"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834586"
 ---
 # <a name="interfaces-related-to-data-binding"></a>Veri Bağlama ile İlgili Arabirimler
 
@@ -25,136 +25,136 @@ ADO.NET ile uygulamanızın bağlama ihtiyaçlarını ve çalıştığınız ver
 
 ## <a name="consumers-of-data-binding-interfaces"></a>Veri bağlama arabirimlerinin tüketicileri
 
-Aşağıdaki bölümlerde iki arabirim nesnesi grubu açıklanır. İlk grup, veri kaynağı yazarları tarafından veri kaynaklarına uygulanan arabirimleri listeler. Bu arabirimler, çoğu durumda denetim veya bileşen Windows Forms olan veri kaynağı tüketicileri tarafından kullanılmak üzere tasarlanmıştır. İkinci grup, bileşen yazarları tarafından kullanılmak üzere tasarlanan arabirimleri listeler. Bileşen yazarları, Windows Forms veri bağlama altyapısı tarafından tüketilen veri bağlamayı destekleyen bir bileşen oluştururken bu arabirimleri kullanır. Veri bağlamayı etkinleştirmek için bu arabirimleri, formunuz ile ilişkili sınıflar içinde uygulayabilirsiniz; Her örnek, verilerle etkileşimi sağlayan bir arabirim uygulayan bir sınıf gösterir. Visual Studio hızlı uygulama geliştirme (RAD) veri tasarımı deneyimi araçları bu işlevden zaten faydalanır.
+Aşağıdaki bölümlerde, iki arabirim nesnesi grubu açıklanır. İlk grup, veri kaynağı yazarları tarafından veri kaynaklarına uygulanan arabirimleri listeler. Bu arabirimler, çoğu durumda denetim veya bileşen Windows Forms olan veri kaynağı tüketicileri tarafından kullanılmak üzere tasarlanmıştır. İkinci grup, bileşen yazarları tarafından kullanılmak üzere tasarlanan arabirimleri listeler. Bileşen yazarları, Windows Forms veri bağlama altyapısı tarafından tüketilen veri bağlamayı destekleyen bir bileşen oluştururken bu arabirimleri kullanır. Veri bağlamayı etkinleştirmek için bu arabirimleri, formunuz ile ilişkili sınıflar içinde uygulayabilirsiniz; Her örnek, verilerle etkileşimi sağlayan bir arabirim uygulayan bir sınıf gösterir. Visual Studio hızlı uygulama geliştirme (RAD) veri tasarımı deneyimi araçları bu işlevden zaten faydalanır.
 
 ### <a name="interfaces-for-implementation-by-data-source-authors"></a>Veri kaynağı yazarları tarafından uygulama için arabirimler
 
 Aşağıdaki arabirimler Windows Forms denetimleri tarafından kullanılmak üzere tasarlanmıştır:
 
-- <xref:System.Collections.IList>arayüz
+- <xref:System.Collections.IList> arabirimi
 
-  <xref:System.Collections.IList> Arabirimini uygulayan bir sınıf <xref:System.Array>, <xref:System.Collections.ArrayList>veya <xref:System.Collections.CollectionBase>olabilir. Bunlar türündeki <xref:System.Object>öğelerin dizinli listeleridir. Dizinin ilk öğesi türü belirlerken, bu listeler hogenou türleri içermelidir. <xref:System.Collections.IList>yalnızca çalışma zamanında bağlama için kullanılabilir olacaktır.
-
-  > [!NOTE]
-  > Windows Forms ile bağlama için iş nesnelerinin bir listesini oluşturmak istiyorsanız, ' yi kullanmayı göz önünde bulundurmanız <xref:System.ComponentModel.BindingList%601>gerekir. , <xref:System.ComponentModel.BindingList%601> İki yönlü Windows Forms veri bağlama için gereken birincil arabirimleri uygulayan genişletilebilir bir sınıftır.
-
-- <xref:System.ComponentModel.IBindingList>arayüz
-
-  Arabirimini uygulayan bir sınıf, <xref:System.ComponentModel.IBindingList> veri bağlama işlevlerinin çok daha yüksek bir düzeyini sağlar. Bu uygulama, liste öğelerinin değiştiği (örneğin, bir müşteri listesindeki üçüncü öğe, adres alanına bir değişikliğe sahip olduğu) ve listenin kendisinin ne zaman değiştiği (örneğin, Listedeki öğelerin sayısı artar veya azalır). Aynı verilere bağımlı birden fazla denetim olmasını planlıyorsanız ve denetimlerden birinde yapılan veri değişikliklerinin diğer bağlantılı denetimlere yayılması durumunda değişiklik bildirimi önemlidir.
+  @No__t-0 arabirimini uygulayan bir sınıf <xref:System.Array>, <xref:System.Collections.ArrayList> veya <xref:System.Collections.CollectionBase> olabilir. Bunlar <xref:System.Object> türündeki öğelerin dizinli listeleridir. Dizinin ilk öğesi türü belirlerken, bu listeler hogenou türleri içermelidir. <xref:System.Collections.IList> yalnızca çalışma zamanında bağlama için kullanılabilir.
 
   > [!NOTE]
-  > Değişiklik bildirimi, <xref:System.ComponentModel.IBindingList> arabirim için etkin olan <xref:System.ComponentModel.IBindingList.SupportsChangeNotification%2A> özelliği aracılığıyla etkinleştirilir ve bu `true`, listenin değiştiğini veya <xref:System.ComponentModel.IBindingList.ListChanged> listedeki bir öğenin değiştiğini belirten bir olay oluşturur.
+  > Windows Forms ile bağlama için iş nesnelerinin bir listesini oluşturmak istiyorsanız, <xref:System.ComponentModel.BindingList%601> ' ı kullanmayı göz önünde bulundurmanız gerekir. @No__t-0, iki yönlü Windows Forms veri bağlama için gereken birincil arabirimleri uygulayan genişletilebilir bir sınıftır.
 
-  Değişikliğin türü, <xref:System.ComponentModel.ListChangedType> <xref:System.ComponentModel.ListChangedEventArgs> parametresinin özelliği tarafından açıklanmıştır. Bu nedenle, veri modeli güncelleştirildiğinde aynı veri kaynağına bağlı diğer denetimler gibi bağımlı görünümler de güncelleştirilir. Bununla birlikte, listede yer alan nesneler, listenin <xref:System.ComponentModel.IBindingList.ListChanged> olayı yükseltebilmesi için, değiştiğinde listeyi bilgilendirmek zorunda kalır.
+- <xref:System.ComponentModel.IBindingList> arabirimi
 
-  > [!NOTE]
-  > , <xref:System.ComponentModel.BindingList%601> <xref:System.ComponentModel.IBindingList> Arabirimin genel bir uygulamasını sağlar.
-
-- <xref:System.ComponentModel.IBindingListView>arayüz
-
-  <xref:System.ComponentModel.IBindingListView> Arabirimini uygulayan bir sınıf <xref:System.ComponentModel.IBindingList>, uygulamasının tüm işlevlerini ve filtreleme ve gelişmiş sıralama işlevlerini sağlar. Bu uygulama, dize tabanlı filtreleme ve özellik tanımlayıcısı yön çiftleri ile birden çok sütunlu sıralama sağlar.
-
-- <xref:System.ComponentModel.IEditableObject>arayüz
-
-  Arabirimini uygulayan bir sınıf, <xref:System.ComponentModel.IEditableObject> nesne üzerinde yapılan değişiklikler kalıcı yapıldığında bir nesnenin denetimine izin verir. Bu uygulama <xref:System.ComponentModel.IEditableObject.BeginEdit%2A>, <xref:System.ComponentModel.IEditableObject.EndEdit%2A>, ve yöntemlerini, nesne üzerinde <xref:System.ComponentModel.IEditableObject.CancelEdit%2A> yapılan değişiklikleri geri almanıza olanak sağlayan, ve yöntemlerini kullanıma sunlar. Aşağıda <xref:System.ComponentModel.IEditableObject.BeginEdit%2A>, <xref:System.ComponentModel.IEditableObject.EndEdit%2A>, ve<xref:System.ComponentModel.IEditableObject.CancelEdit%2A> yöntemlerinin çalışmasının kısa bir açıklaması ve verilere yapılan değişikliklerin olası bir geri alınmasını sağlamak için bir diğeri ile birlikte nasıl çalıştıkları hakkında kısa bir açıklama verilmiştir:
-
-  - <xref:System.ComponentModel.IEditableObject.BeginEdit%2A> Yöntemi, bir nesne üzerinde bir düzenleme başlangıcını işaret eder. Bu arabirimi uygulayan bir nesnenin, <xref:System.ComponentModel.IEditableObject.BeginEdit%2A> <xref:System.ComponentModel.IEditableObject.CancelEdit%2A> yöntem çağrıldığında güncelleştirmelerin atılabileceği bir şekilde, bu işlemi bir bütün olarak bir yöntemle depolaması gerekir. Veri bağlama Windows Forms, tek bir düzenleme işleminin <xref:System.ComponentModel.IEditableObject.BeginEdit%2A> kapsamında birden çok kez çağrı yapabilirsiniz ( <xref:System.ComponentModel.IEditableObject.BeginEdit%2A>örneğin <xref:System.ComponentModel.IEditableObject.BeginEdit%2A> <xref:System.ComponentModel.IEditableObject.EndEdit%2A>,,,). Uygulamaları, ' nin daha önce çağrılmış <xref:System.ComponentModel.IEditableObject.BeginEdit%2A> olup olmadığını takip <xref:System.ComponentModel.IEditableObject.BeginEdit%2A> etmelidirvedahasonraöğesine<xref:System.ComponentModel.IEditableObject> yapılan çağrıları yoksayar. Bu yöntem birden çok kez çağrabileceğinden, sonraki çağrıların geri dönüşme durumunda olması önemlidir; diğer bir deyişle, <xref:System.ComponentModel.IEditableObject.BeginEdit%2A> sonraki çağrılar yapılan güncelleştirmeleri yok edebilir veya ilk <xref:System.ComponentModel.IEditableObject.BeginEdit%2A> çağrıda kaydedilen verileri değiştirebilir.
-
-  - Yöntemi, nesne şu anda düzenleme <xref:System.ComponentModel.IEditableObject.BeginEdit%2A> modundaysa, temel alınan nesneye çağrıldıktan sonra tüm değişiklikleri iter. <xref:System.ComponentModel.IEditableObject.EndEdit%2A>
-
-  - <xref:System.ComponentModel.IEditableObject.CancelEdit%2A> Yöntemi, nesnesinde yapılan tüm değişiklikleri atar.
-
-  <xref:System.ComponentModel.IEditableObject.BeginEdit%2A> ,<xref:System.ComponentModel.IEditableObject.EndEdit%2A>Ve yöntemlerinin<xref:System.ComponentModel.IEditableObject.CancelEdit%2A> nasıl çalıştığı hakkında daha fazla bilgi için bkz. [verileri veritabanına geri kaydetme](/visualstudio/data-tools/save-data-back-to-the-database).
-
-  Bu işlem veri işlevselliği kavramı <xref:System.Windows.Forms.DataGridView> denetim tarafından kullanılır.
-
-- <xref:System.ComponentModel.ICancelAddNew>arayüz
-
-  <xref:System.ComponentModel.ICancelAddNew> Arabirimi uygulayan bir sınıf genellikle <xref:System.ComponentModel.IBindingList> arabirimini uygular ve veri kaynağında <xref:System.ComponentModel.IBindingList.AddNew%2A> yöntemi ile yapılan bir ek geri alma olanağı sağlar. Veri kaynağınız <xref:System.ComponentModel.IBindingList> arabirimini uyguluyorsa, <xref:System.ComponentModel.ICancelAddNew> arabirimi de uygulamalıdır.
-
-- <xref:System.ComponentModel.IDataErrorInfo>arayüz
-
-  Arabirimi uygulayan bir sınıf, <xref:System.ComponentModel.IDataErrorInfo> nesnelerin bağlantılı denetimlere özel hata bilgileri sunmasını sağlar:
-
-  - <xref:System.ComponentModel.IDataErrorInfo.Error%2A> Özelliği genel hata iletisi metni döndürür (örneğin, "bir hata oluştu").
-
-  - Özelliği, sütundan belirli bir hata iletisiyle bir dize döndürür (örneğin, " `State` sütundaki değer geçersiz"). <xref:System.ComponentModel.IDataErrorInfo.Item%2A>
-
-- <xref:System.Collections.IEnumerable>arayüz
-
-  <xref:System.Collections.IEnumerable> Arabirimi uygulayan bir sınıf genellikle ASP.NET tarafından kullanılır. Bu arabirim için Windows Forms desteği yalnızca <xref:System.Windows.Forms.BindingSource> bileşeni aracılığıyla kullanılabilir.
+  @No__t-0 arabirimini uygulayan bir sınıf, veri bağlama işlevlerinin çok daha yüksek bir düzeyini sağlar. Bu uygulama, liste öğelerinin değiştiği (örneğin, bir müşteri listesindeki üçüncü öğe, adres alanına bir değişikliğe sahip olduğu) ve listenin kendisinin ne zaman değiştiği (örneğin, Listedeki öğelerin sayısı artar veya azalır). Aynı verilere bağımlı birden fazla denetim olmasını planlıyorsanız ve denetimlerden birinde yapılan veri değişikliklerinin diğer bağlantılı denetimlere yayılması durumunda değişiklik bildirimi önemlidir.
 
   > [!NOTE]
-  > Bileşen <xref:System.Windows.Forms.BindingSource> , bağlama amacıyla <xref:System.Collections.IEnumerable> tüm öğeleri ayrı bir listeye kopyalar.
+  > @No__t-0 arabirimi için değişiklik bildirimi etkinleştirilir <xref:System.ComponentModel.IBindingList.SupportsChangeNotification%2A> özelliği ile `true`, listenin değiştiğini veya listedeki bir öğenin değiştiğini belirten bir @no__t 3 olayı harekete geçirirse.
 
-- <xref:System.ComponentModel.ITypedList>arayüz
-
-  <xref:System.ComponentModel.ITypedList> Arabirimini uygulayan bir koleksiyon sınıfı, bağlantılı denetime sunulan sırayı ve özellik kümesini denetleme olanağı sağlar.
+  Değişikliğin türü, <xref:System.ComponentModel.ListChangedEventArgs> parametresinin <xref:System.ComponentModel.ListChangedType> özelliği tarafından tanımlanır. Bu nedenle, veri modeli güncelleştirildiğinde aynı veri kaynağına bağlı diğer denetimler gibi bağımlı görünümler de güncelleştirilir. Ancak, listede yer alan nesneler, listenin <xref:System.ComponentModel.IBindingList.ListChanged> olayını yükseltebilmesi için, değiştiğinde listeyi bilgilendirmek zorunda kalır.
 
   > [!NOTE]
-  > <xref:System.ComponentModel.ITypedList.GetItemProperties%2A> Yöntemini uyguladığınızda<xref:System.ComponentModel.PropertyDescriptor> ve dizi null olmadığında dizideki son giriş, başka bir öğe listesi olan List özelliğini açıklayan özellik tanımlayıcısı olacaktır.
+  > @No__t-0 <xref:System.ComponentModel.IBindingList> arabiriminin genel bir uygulamasını sağlar.
 
-- <xref:System.ComponentModel.ICustomTypeDescriptor>arayüz
+- <xref:System.ComponentModel.IBindingListView> arabirimi
 
-  <xref:System.ComponentModel.ICustomTypeDescriptor> Arabirimini uygulayan bir sınıf kendisiyle ilgili dinamik bilgiler sağlar. Bu arabirim öğesine <xref:System.ComponentModel.ITypedList> benzerdir, ancak listeler yerine nesneler için kullanılır. Bu arabirim tarafından <xref:System.Data.DataRowView> , temel alınan satırların şemasını projeye eklemek için kullanılır. Basit bir uygulama <xref:System.ComponentModel.ICustomTypeDescriptor> <xref:System.ComponentModel.CustomTypeDescriptor> sınıfı tarafından sağlanır.
+  @No__t-0 arabirimini uygulayan bir sınıf, bir <xref:System.ComponentModel.IBindingList> uygulamasının tüm işlevlerini ve filtreleme ve gelişmiş sıralama işlevlerini sağlar. Bu uygulama, dize tabanlı filtreleme ve özellik tanımlayıcısı yön çiftleri ile birden çok sütunlu sıralama sağlar.
 
-  > [!NOTE]
-  > Uygulayan <xref:System.ComponentModel.ICustomTypeDescriptor>türlere tasarım zamanı bağlamayı desteklemek için, türü Ayrıca, form üzerinde bir örnek olarak <xref:System.ComponentModel.IComponent> uygulamanız ve var olmalıdır.
+- <xref:System.ComponentModel.IEditableObject> arabirimi
 
-- <xref:System.ComponentModel.IListSource>arayüz
+  @No__t-0 arabirimini uygulayan bir sınıf, nesne üzerinde yapılan değişiklikler kalıcı yapıldığında bir nesnenin denetimine izin verir. Bu uygulama, nesne üzerinde yapılan değişiklikleri geri almanıza olanak sağlayan <xref:System.ComponentModel.IEditableObject.BeginEdit%2A>, <xref:System.ComponentModel.IEditableObject.EndEdit%2A> ve <xref:System.ComponentModel.IEditableObject.CancelEdit%2A> yöntemlerini kullanıma sunlar. Aşağıda, <xref:System.ComponentModel.IEditableObject.BeginEdit%2A>, <xref:System.ComponentModel.IEditableObject.EndEdit%2A> ve <xref:System.ComponentModel.IEditableObject.CancelEdit%2A> yöntemlerinin ve bir diğeri ile birlikte nasıl çalıştıkları hakkında kısa bir açıklama verilmiştir:
 
-  Arabirimi uygulayan bir sınıf, <xref:System.ComponentModel.IListSource> listede olmayan nesneler üzerinde liste tabanlı bağlamayı sağlar. Yöntemi <xref:System.ComponentModel.IListSource.GetList%2A> , öğesinden devraldığı<xref:System.Collections.IList>bir nesneden bağlanabilir bir liste döndürmek için kullanılır. <xref:System.ComponentModel.IListSource> <xref:System.ComponentModel.IListSource><xref:System.Data.DataSet> sınıfı tarafından kullanılır.
+  - @No__t-0 yöntemi bir nesne üzerinde bir düzenleme başlangıcını işaret eder. Bu arabirimi uygulayan bir nesnenin, <xref:System.ComponentModel.IEditableObject.CancelEdit%2A> yöntemi çağrıldığında güncelleştirmelerin atılabileceği şekilde <xref:System.ComponentModel.IEditableObject.BeginEdit%2A> yöntem çağrısından sonra tüm güncelleştirmeleri depolaması gerekir. Veri bağlama Windows Forms, tek bir düzenleme işleminin kapsamında (örneğin, <xref:System.ComponentModel.IEditableObject.BeginEdit%2A>, <xref:System.ComponentModel.IEditableObject.BeginEdit%2A>, <xref:System.ComponentModel.IEditableObject.EndEdit%2A>) <xref:System.ComponentModel.IEditableObject.BeginEdit%2A> ' ı birden çok kez çağırabilirsiniz. @No__t-0 ' ın uygulamaları, <xref:System.ComponentModel.IEditableObject.BeginEdit%2A> ' in zaten çağrıldığından ve <xref:System.ComponentModel.IEditableObject.BeginEdit%2A> ' ye yönelik sonraki çağrıları yoksaymalıdır. Bu yöntem birden çok kez çağrabileceğinden, sonraki çağrıların geri dönüşme durumunda olması önemlidir; diğer bir deyişle, sonraki <xref:System.ComponentModel.IEditableObject.BeginEdit%2A> çağrıları, yapılan güncelleştirmeleri yok edebilir veya ilk <xref:System.ComponentModel.IEditableObject.BeginEdit%2A> çağrısında kaydedilen verileri değiştirebilir.
 
-- <xref:System.ComponentModel.IRaiseItemChangedEvents>arayüz
+  - @No__t-0 yöntemi, nesne şu anda düzenleme modundaysa, temel alınan nesneye <xref:System.ComponentModel.IEditableObject.BeginEdit%2A> çağrıldıktan sonra tüm değişiklikleri gönderir.
 
-  <xref:System.ComponentModel.IRaiseItemChangedEvents> Arabirimi uygulayan bir sınıf, <xref:System.ComponentModel.IBindingList> arabirimi de uygulayan bağlanabilir bir listesidir. Bu arabirim, türünün <xref:System.ComponentModel.IBindingList.ListChanged> <xref:System.ComponentModel.IRaiseItemChangedEvents.RaisesItemChangedEvents%2A> özelliği aracılığıyla türünde <xref:System.ComponentModel.ListChangedType.ItemChanged> olayları harekete geçirmediğini göstermek için kullanılır.
+  - @No__t-0 yöntemi nesne üzerinde yapılan değişiklikleri atar.
 
-  > [!NOTE]
-  > Veri kaynağınız daha önce <xref:System.ComponentModel.IRaiseItemChangedEvents> açıklanan olay dönüşümünü listelemek için özelliği sağlıyorsa ve <xref:System.Windows.Forms.BindingSource> bileşeniyle etkileşime geçmek için öğesini uygulamanız gerekir. Aksi takdirde, <xref:System.Windows.Forms.BindingSource> olay dönüştürmeyi listelemek için özelliği de, daha yavaş performansa neden olur.
+  @No__t-0, <xref:System.ComponentModel.IEditableObject.EndEdit%2A> ve <xref:System.ComponentModel.IEditableObject.CancelEdit%2A> yöntemlerinin nasıl çalıştığı hakkında daha fazla bilgi için bkz. [verileri veritabanına geri kaydetme](/visualstudio/data-tools/save-data-back-to-the-database).
 
-- <xref:System.ComponentModel.ISupportInitialize>arayüz
+  Bu işlem veri işlevselliği kavramı <xref:System.Windows.Forms.DataGridView> denetimi tarafından kullanılır.
 
-  Arabirimi uygulayan bir bileşen, <xref:System.ComponentModel.ISupportInitialize> özellikleri ayarlamak ve ortak bağımlı özellikleri başlatmak için toplu iyileştirmelerin avantajlarından yararlanır. İki <xref:System.ComponentModel.ISupportInitialize> yöntem içerir:
+- <xref:System.ComponentModel.ICancelAddNew> arabirimi
 
-  - <xref:System.ComponentModel.ISupportInitialize.BeginInit%2A>nesne başlatmanın başlamasını bildirir.
+  @No__t-0 arabirimini uygulayan bir sınıf genellikle <xref:System.ComponentModel.IBindingList> arabirimini uygular ve <xref:System.ComponentModel.IBindingList.AddNew%2A> yöntemiyle veri kaynağına yapılan bir ek geri alma olanağı sağlar. Veri kaynağınız <xref:System.ComponentModel.IBindingList> arabirimini uyguluyorsa, <xref:System.ComponentModel.ICancelAddNew> arabirimini de uygulamalıdır.
 
-  - <xref:System.ComponentModel.ISupportInitialize.EndInit%2A>nesne başlatmasının tamamlantığına işaret eder.
+- <xref:System.ComponentModel.IDataErrorInfo> arabirimi
 
-- <xref:System.ComponentModel.ISupportInitializeNotification>arayüz
+  @No__t-0 arabirimini uygulayan bir sınıf, nesnelerin bağlantılı denetimlere özel hata bilgileri sunmasını sağlar:
 
-  <xref:System.ComponentModel.ISupportInitializeNotification> Arabirimini uygulayan bir bileşen de <xref:System.ComponentModel.ISupportInitialize> arabirimini uygular. Bu arabirim, başlatma işleminin tamamlandığını diğer <xref:System.ComponentModel.ISupportInitialize> bileşenlere bildirme olanağı sağlar. <xref:System.ComponentModel.ISupportInitializeNotification> Arabirim iki üye içerir:
+  - @No__t-0 özelliği genel hata iletisi metni döndürür (örneğin, "bir hata oluştu").
 
-  - <xref:System.ComponentModel.ISupportInitializeNotification.IsInitialized%2A>bileşenin başlatılmış `boolean` olup olmadığını gösteren bir değer döndürür.
+  - @No__t-0 özelliği sütundan belirli bir hata iletisiyle bir dize döndürür (örneğin, "`State` sütunundaki değer geçersiz").
 
-  - <xref:System.ComponentModel.ISupportInitializeNotification.Initialized><xref:System.ComponentModel.ISupportInitialize.EndInit%2A> çağrıldığında gerçekleşir.
+- <xref:System.Collections.IEnumerable> arabirimi
 
-- <xref:System.ComponentModel.INotifyPropertyChanged>arayüz
-
-  Bu arabirimi uygulayan bir sınıf, özellik değerlerinden herhangi biri değiştiğinde bir olayı başlatan türdür. Bu arabirim, bir denetimin her özelliği için bir değişiklik olayına sahip olan deseninin yerini alacak şekilde tasarlanmıştır. Bir iş nesnesi bir <xref:System.ComponentModel.BindingList%601>içinde kullanıldığında, <xref:System.ComponentModel.INotifyPropertyChanged> arabirimini uygulamalıdır ve BindingList\`1 olayları <xref:System.ComponentModel.BindingList%601.ListChanged> türündeki <xref:System.ComponentModel.ListChangedType.ItemChanged>olaylara dönüştürür <xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged> .
+  @No__t-0 arabirimini uygulayan bir sınıf genellikle ASP.NET tarafından kullanılır. Bu arabirim için Windows Forms desteği yalnızca <xref:System.Windows.Forms.BindingSource> bileşeni ile kullanılabilir.
 
   > [!NOTE]
-  > Değişiklik bildiriminin, ilişkili istemci ile bir veri kaynağı arasındaki bağlamada gerçekleşmesi için, bağlantılı veri kaynağı türü <xref:System.ComponentModel.INotifyPropertyChanged> arabirimi uygulamalıdır (tercih edilen) veya bağlama türü için *PropertyName* `Changed` olayları sağlayabilirsiniz. Ancak bunu yapmanız gerekmez.
+  > @No__t-0 bileşeni, tüm <xref:System.Collections.IEnumerable> öğelerini bağlama amacıyla ayrı bir listeye kopyalar.
+
+- <xref:System.ComponentModel.ITypedList> arabirimi
+
+  @No__t-0 arabirimini uygulayan bir koleksiyonlar sınıfı, bağlantılı denetime sunulan sırayı ve özellik kümesini denetleme olanağı sağlar.
+
+  > [!NOTE]
+  > @No__t-0 yöntemini uyguladığınızda ve <xref:System.ComponentModel.PropertyDescriptor> dizisi null olmadığında dizideki son giriş, başka bir öğe listesi olan List özelliğini açıklayan özellik tanımlayıcısı olacaktır.
+
+- <xref:System.ComponentModel.ICustomTypeDescriptor> arabirimi
+
+  @No__t-0 arabirimini uygulayan bir sınıf kendisiyle ilgili dinamik bilgiler sağlar. Bu arabirim <xref:System.ComponentModel.ITypedList> ' a benzerdir, ancak listeler yerine nesneler için kullanılır. Bu arabirim, temel alınan satırların şemasını projeye <xref:System.Data.DataRowView> tarafından kullanılır. @No__t-0 ' ın basit bir uygulanması <xref:System.ComponentModel.CustomTypeDescriptor> sınıfı tarafından sağlanır.
+
+  > [!NOTE]
+  > @No__t-0 uygulayan türlere tasarım zamanı bağlamayı desteklemek için, tür Ayrıca, <xref:System.ComponentModel.IComponent> ' i de uygular ve formda bir örnek olarak var olmalıdır.
+
+- <xref:System.ComponentModel.IListSource> arabirimi
+
+  @No__t-0 arabirimini uygulayan bir sınıf, listede olmayan nesneler üzerinde liste tabanlı bağlamayı sağlar. @No__t-1 ' in <xref:System.ComponentModel.IListSource.GetList%2A> yöntemi, <xref:System.Collections.IList> ' den kalıtımla almayan bir nesneden bağlanabilir bir liste döndürmek için kullanılır. <xref:System.ComponentModel.IListSource> <xref:System.Data.DataSet> sınıfı tarafından kullanılır.
+
+- <xref:System.ComponentModel.IRaiseItemChangedEvents> arabirimi
+
+  @No__t-0 arabirimini uygulayan bir sınıf, <xref:System.ComponentModel.IBindingList> arabirimini de uygulayan bağlanabilir bir listesidir. Bu arabirim, türünün <xref:System.ComponentModel.ListChangedType.ItemChanged> türünde <xref:System.ComponentModel.IBindingList.ListChanged> olaylarını <xref:System.ComponentModel.IRaiseItemChangedEvents.RaisesItemChangedEvents%2A> özelliği aracılığıyla mi harekete geçirmediğini göstermek için kullanılır.
+
+  > [!NOTE]
+  > Veri kaynağınız daha önce açıklanan olay dönüşümünü listelemek için özelliği sağlıyorsa ve <xref:System.Windows.Forms.BindingSource> bileşeniyle etkileşime geçmek <xref:System.ComponentModel.IRaiseItemChangedEvents> ' yı uygulamalısınız. Aksi takdirde, <xref:System.Windows.Forms.BindingSource>, olay dönüştürmeyi listelemek için özelliği de gerçekleştirecek daha yavaş performans elde eder.
+
+- <xref:System.ComponentModel.ISupportInitialize> arabirimi
+
+  @No__t-0 arabirimini uygulayan bir bileşen, özellikleri ayarlamak ve ortak bağımlı özellikleri başlatmak için toplu iyileştirmelerin avantajlarından yararlanır. @No__t-0 iki yöntem içerir:
+
+  - <xref:System.ComponentModel.ISupportInitialize.BeginInit%2A>, nesne başlatmanın başladığı sinyaldir.
+
+  - <xref:System.ComponentModel.ISupportInitialize.EndInit%2A>, nesne başlatmasının tamamlanmasının sona ermesini bildirir.
+
+- <xref:System.ComponentModel.ISupportInitializeNotification> arabirimi
+
+  @No__t-0 arabirimini uygulayan bir bileşen, <xref:System.ComponentModel.ISupportInitialize> arabirimini de uygular. Bu arabirim, başlatma işleminin tamamlandığını diğer <xref:System.ComponentModel.ISupportInitialize> bileşenlerine bildirim vermenize olanak tanır. @No__t-0 arabirimi iki üye içerir:
+
+  - <xref:System.ComponentModel.ISupportInitializeNotification.IsInitialized%2A>, bileşenin başlatılıp başlatılmayacağını gösteren bir `boolean` değeri döndürür.
+
+  - <xref:System.ComponentModel.ISupportInitialize.EndInit%2A> çağrıldığında <xref:System.ComponentModel.ISupportInitializeNotification.Initialized> oluşur.
+
+- <xref:System.ComponentModel.INotifyPropertyChanged> arabirimi
+
+  Bu arabirimi uygulayan bir sınıf, özellik değerlerinden herhangi biri değiştiğinde bir olayı başlatan türdür. Bu arabirim, bir denetimin her özelliği için bir değişiklik olayına sahip olan deseninin yerini alacak şekilde tasarlanmıştır. @No__t-0 ' da kullanıldığında, bir iş nesnesi <xref:System.ComponentModel.INotifyPropertyChanged> arabirimini uygulamalıdır ve BindingList @ no__t-21, @no__t 3 olayları <xref:System.ComponentModel.ListChangedType.ItemChanged> türündeki @no__t 4 olayına dönüştürür.
+
+  > [!NOTE]
+  > Değişiklik bildiriminin, ilişkili istemci ile veri kaynağı arasındaki bağlamada gerçekleşmesi için, bağlantılı veri kaynağı türü <xref:System.ComponentModel.INotifyPropertyChanged> arabirimini uygulamalıdır (tercih edilen) veya bağlama türü için *propertyName*`Changed` olay sağlayabilirsiniz, ancak siz her ikisi de kullanılmamalıdır.
 
 ### <a name="interfaces-for-implementation-by-component-authors"></a>Bileşen yazarları tarafından uygulama için arabirimler
 
 Aşağıdaki arabirimler Windows Forms veri bağlama motoru tarafından tüketimine yöneliktir:
 
-- <xref:System.Windows.Forms.IBindableComponent>arayüz
+- <xref:System.Windows.Forms.IBindableComponent> arabirimi
 
   Bu arabirimi uygulayan bir sınıf, veri bağlamayı destekleyen denetim olmayan bir bileşendir. Bu sınıf, bu arabirimin <xref:System.Windows.Forms.IBindableComponent.DataBindings%2A> ve <xref:System.Windows.Forms.IBindableComponent.BindingContext%2A> özellikleri aracılığıyla bileşenin veri bağlamalarını ve bağlama bağlamını döndürür.
 
   > [!NOTE]
-  > Bileşeniniz öğesinden <xref:System.Windows.Forms.Control>devralırsa, <xref:System.Windows.Forms.IBindableComponent> arabirimini uygulamanız gerekmez.
+  > Bileşeniniz <xref:System.Windows.Forms.Control> ' dan devralırsa, <xref:System.Windows.Forms.IBindableComponent> arabirimini uygulamanız gerekmez.
 
-- <xref:System.Windows.Forms.ICurrencyManagerProvider>arayüz
+- <xref:System.Windows.Forms.ICurrencyManagerProvider> arabirimi
 
-  <xref:System.Windows.Forms.ICurrencyManagerProvider> Arabirimini uygulayan bir sınıf, bu bileşenle ilişkili bağlamaları yönetmek için kendi kendine <xref:System.Windows.Forms.CurrencyManager> sağlayan bir bileşendir. Özel <xref:System.Windows.Forms.CurrencyManager> erişimi, <xref:System.Windows.Forms.ICurrencyManagerProvider.CurrencyManager%2A> özelliği tarafından sağlanır.
+  @No__t-0 arabirimini uygulayan bir sınıf, bu bileşenle ilişkili bağlamaları yönetmek için kendi <xref:System.Windows.Forms.CurrencyManager> sağlayan bir bileşendir. Özel @no__t erişim-0 <xref:System.Windows.Forms.ICurrencyManagerProvider.CurrencyManager%2A> özelliği tarafından sağlanır.
 
   > [!NOTE]
-  > Devralan <xref:System.Windows.Forms.Control> bir sınıf, kendi <xref:System.Windows.Forms.Control.BindingContext%2A> özelliği aracılığıyla bağlamaları otomatik olarak yönetir, bu nedenle uygulamanız <xref:System.Windows.Forms.ICurrencyManagerProvider> gereken durumlar oldukça nadir olur.
+  > @No__t-0 ' dan devralan bir sınıf <xref:System.Windows.Forms.Control.BindingContext%2A> özelliği aracılığıyla bağlamaları otomatik olarak yönetir, bu nedenle <xref:System.Windows.Forms.ICurrencyManagerProvider> ' yi uygulamanız gereken durumlar oldukça nadir olur.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Veri Bağlama ve Windows Forms](data-binding-and-windows-forms.md)
-- [Nasıl yapılır: Bir Windows formunda basit bağlantılı denetim oluşturma](how-to-create-a-simple-bound-control-on-a-windows-form.md)
+- [Nasıl yapılır: Bir Windows Formunda Basit Bağlantılı Denetim Oluşturma](how-to-create-a-simple-bound-control-on-a-windows-form.md)
 - [Windows Forms Veri Bağlama](windows-forms-data-binding.md)

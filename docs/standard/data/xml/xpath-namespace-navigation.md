@@ -5,24 +5,24 @@ ms.technology: dotnet-standard
 ms.assetid: 06cc7abb-7416-415c-9dd6-67751b8cabd5
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cbc45d2c6587f5ff94c5cfbe0251d4b0ebca4231
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f6facc047d87c503313015eff4e869861cd6b301
+ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62026802"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71957007"
 ---
 # <a name="xpath-namespace-navigation"></a>XPath Ad Alanı Gezintisi
-XPath sorguları ile XML belgeleri kullanmak için doğru adres XML ad alanları ve ad alanları tarafından içerilen öğelerin sahip. Ad alanları, adları, birden fazla bağlamında kullanıldığında oluşabilecek belirsizlikleri önleyebilir. Örneğin, adı `ID` farklı bir XML belgesi öğelerle ilişkili birden fazla tanımlayıcı bakabilirsiniz. Namespace sözdizimi URI'ler, adları ve bir XML belgesinin öğelerini ayırt önekler belirtir.  
+XML belgeleriyle XPath sorguları kullanmak için, XML ad alanlarını ve ad alanları tarafından içerilen öğeleri doğru bir şekilde ele almanız gerekir. Ad alanları, adlar birden fazla bağlamda kullanıldığında oluşabilecek belirsizlikleri önler; Örneğin, `ID` adı bir XML belgesinin farklı öğeleriyle ilişkili birden fazla tanımlayıcıya başvurabilir. Ad alanı sözdizimi, bir XML belgesinin öğelerini ayırt eden URI 'Leri, adları ve önekleri belirtir.  
   
- Bu konudaki örnek, bir XML belgesi ile gezinme, ön ekleri kullanımını gösterir <xref:System.Xml.XPath.XPathNavigator>. Ad alanları ve söz dizimi hakkında daha fazla bilgi için bkz: [XML dosyaları: XML ad alanları anlama](https://docs.microsoft.com/previous-versions/dotnet/articles/bb986013(v=msdn.10)).  
+ Bu konudaki örnekte, <xref:System.Xml.XPath.XPathNavigator> ile bir XML belgesinde gezinme içindeki ön eklerin kullanımı gösterilmektedir. Ad alanları ve sözdizimi hakkında daha fazla bilgi için bkz. [XML Files: XML ad alanlarını anlama](https://docs.microsoft.com/previous-versions/dotnet/articles/bb986013(v=msdn.10)).  
   
-## <a name="namespace-declarations"></a>Namespace bildirimi  
- Namespace bildirimi bir XML belgesinin öğelerini ayrılabilen ve hale adreslenebilir bir örneğini kullanırken <xref:System.Xml.XPath.XPathNavigator>. Namespace ön ekleri, ad alanları ele almak için kısa bir söz dizimi sağlar.  
+## <a name="namespace-declarations"></a>Ad alanı bildirimleri  
+ Ad alanı bildirimleri bir XML belgesi öğelerini, bir @no__t örneği kullanılırken ayırt edilemez ve adreslenebilir hale getirir. Ad alanı önekleri ad alanlarını adresleme için kısa bir sözdizimi sağlar.  
   
- Ön ekleri form tarafından tanımlanır: `<e:Envelope xmlns:e=http://schemas.xmlsoap.org/soap/envelope/>.` Bu sözdizimi ön eki "`e`" ad alanı için biçimsel URI kısaltmasıdır. Tanımlayabilirsiniz `Body` öğesi bir üyesi olarak `Envelope` sözdizimini kullanarak ad alanı: `e:Body`.  
+ Ön ekler şu biçimde tanımlanır: Bu sözdiziminde, `<e:Envelope xmlns:e=http://schemas.xmlsoap.org/soap/envelope/>.` Bu sözdiziminde, "`e`" öneki, ad alanının biçimsel URI 'SI için bir kısaltmadır. @No__t-0 öğesini `Envelope` ad alanının bir üyesi olarak tanımlayabilir: `e:Body`.  
   
- Aşağıdaki XML belgesi olarak başvurulan `response.xml` Gezinti örnekte sonraki bölümde yer.  
+ Sonraki bölümde gezinti örneğinde aşağıdaki XML belgesine `response.xml` olarak başvurulur.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -37,38 +37,32 @@ XPath sorguları ile XML belgeleri kullanmak için doğru adres XML ad alanları
 </e:Envelope>  
 ```  
   
-## <a name="navigation-by-namespace-prefix"></a>Gezinti Namespace ön eke göre  
- Bu bölümdeki kod <xref:System.Xml.XPath.XPathNavigator> ve <xref:System.Xml.XmlNamespaceManager> nesnelerin `Search` öğeden bir önceki bölümdeki XML belgesi. Sorgu `xpath` ad alanı öneklerini her öğe üzerinde yolu içerir. Her öğe içeren ad alanlarını kesin kimliğini belirterek garantiler doğru gitme `Search` öğe tarafından <xref:System.Xml.XPath.XPathNavigator.SelectSingleNode%2A> yöntemi.  
+## <a name="navigation-by-namespace-prefix"></a>Ad alanı ön ekine göre gezinti  
+ Bu bölümdeki kod, önceki bölümdeki XML belgesinden `Search` öğesini seçmek için <xref:System.Xml.XPath.XPathNavigator> ve <xref:System.Xml.XmlNamespaceManager> nesnelerini kullanır. Sorgu `xpath` yoldaki her öğe için ad alanı öneklerini içerir. Her bir öğeyi içeren ad alanlarının kesin kimliğini belirtmek <xref:System.Xml.XPath.XPathNavigator.SelectSingleNode%2A> yöntemi tarafından `Search` öğesine doğru gezinmeyi sağlar.  
   
-```  
+```csharp  
 using (XmlReader reader = XmlReader.Create("response.xml"))  
-            {  
-                XPathDocument doc = new XPathDocument(reader);  
-                XPathNavigator nav = doc.CreateNavigator();  
-                XmlNamespaceManager nsmgr =  
-                         new XmlNamespaceManager(nav.NameTable);  
-                nsmgr.AddNamespace("e",   
-                         @"http://schemas.xmlsoap.org/soap/envelope/");  
-                nsmgr.AddNamespace("s",   
-                            @"http://schemas.microsoft.com/v1/Search");  
-                nsmgr.AddNamespace("r",   
-                   @"http://schemas.microsoft.com/v1/Search/metadata");  
-                nsmgr.AddNamespace("i",   
-                         @"http://www.w3.org/2001/XMLSchema-instance");  
+{  
+    XPathDocument doc = new XPathDocument(reader);  
+    XPathNavigator nav = doc.CreateNavigator();
   
-                string xpath = "/e:Envelope/e:Body/s:Search";  
+    XmlNamespaceManager nsmgr = new XmlNamespaceManager(nav.NameTable);  
+    nsmgr.AddNamespace("e", @"http://schemas.xmlsoap.org/soap/envelope/");  
+    nsmgr.AddNamespace("s", @"http://schemas.microsoft.com/v1/Search");  
+    nsmgr.AddNamespace("r", @"http://schemas.microsoft.com/v1/Search/metadata");  
+    nsmgr.AddNamespace("i", @"http://www.w3.org/2001/XMLSchema-instance");  
   
-                XPathNavigator element = nav.SelectSingleNode(xpath, nsmgr);  
+    string xpath = "/e:Envelope/e:Body/s:Search";  
   
-                Console.WriteLine("Element Prefix:" + element.Prefix +   
-                           " Local name:" + element.LocalName);  
-                Console.WriteLine("Namespace URI: " +   
-                            element.NamespaceURI);  
+    XPathNavigator element = nav.SelectSingleNode(xpath, nsmgr);  
   
-            }  
+    Console.WriteLine("Element Prefix:" + element.Prefix +   
+    " Local name:" + element.LocalName);  
+    Console.WriteLine("Namespace URI: " + element.NamespaceURI);  
+}  
 ```  
   
- Tam ad alanları ve adlarını niteleme duyarlılık kolaylık sağlamak amacıyla büyük. Biraz deneme belge tanımı ve kod önceki örneklerde, tam öğe adları olmadan Gezinti istisnalar fırlatıyorsa doğrular. Örneğin, öğe tanımı: `<Search xmlns="http://schemas.microsoft.com/v1/Search">`ve sorgu: dize `xpath = "/s:Envelope/s:Body/Search";` ad alanı öneki olmadan `Search` öğeyi döndürür `null` yerine `Search` öğesi.  
+ Tam nitelikli ad alanları ve adların duyarlığı bir rahatlığından daha fazla. Belge tanımı ve önceki örneklerde bulunan kod içeren küçük bir deneme, tam olarak nitelenen öğe adları olmayan gezinmenin özel durum oluşturduğunu doğrular. Örneğin, öğe tanımı: `<Search xmlns="http://schemas.microsoft.com/v1/Search">` ve sorgu: `Search` öğesinde ad alanı öneki olmadan `xpath = "/s:Envelope/s:Body/Search";` dizesi, `Search` öğesi yerine `null` döndürür.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

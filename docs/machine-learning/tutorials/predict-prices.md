@@ -4,12 +4,12 @@ description: Bu öğreticide, özellikle New York City taksi Fares fiyatlarını
 ms.date: 09/30/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18, title-hack-0516
-ms.openlocfilehash: 8db6b0c9ae1fd98724eda285423960546be8bac6
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 51617d14e84fa46464d7b44dbdb20afaf196924f
+ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71700955"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71957377"
 ---
 # <a name="tutorial-predict-prices-using-regression-with-mlnet"></a>Öğretici: ML.NET ile gerileme kullanarak fiyatları tahmin etme
 
@@ -188,7 +188,7 @@ Aşağıdaki kodu kullanarak, `Main` yönteminden yeni yönteme bir çağrı ekl
 
 [!code-csharp[LoadTestDataset](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#15 "Load the test dataset")]
 
-Ardından, aşağıdaki kodu `EvaluateModel()` ' e ekleyerek `Test` verisini dönüştürün:
+Ardından, aşağıdaki kodu `Evaluate()` ' e ekleyerek `Test` verisini dönüştürün:
 
 [!code-csharp[PredictWithTransformer](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#16 "Predict using the Transformer")]
 
