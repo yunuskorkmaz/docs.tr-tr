@@ -7,16 +7,16 @@ helpviewer_keywords:
 - RelativeSource markup extensions [WPF]
 - XAML [WPF], RelativeSource markup extension
 ms.assetid: 26be4721-49b5-4717-a92e-7d54ad0d3a81
-ms.openlocfilehash: a6a7d615a3a54fbc75bb86b295fdf80433a31dc5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7a9c9fe379f361dec0d65b71c4d883958be9ed2f
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62053502"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834823"
 ---
 # <a name="relativesource-markupextension"></a>RelativeSource MarkupExtension
 
-Özelliklerini belirtir bir <xref:System.Windows.Data.RelativeSource> içinde kullanılacak bağlama kaynağı, bir [Binding Markup Extension](binding-markup-extension.md), veya ayarlarken <xref:System.Windows.Data.Binding.RelativeSource%2A> özelliği bir <xref:System.Windows.Data.Binding> XAML içinde oluşturulmuş bir öğe.
+Bir <xref:System.Windows.Data.RelativeSource> bağlama kaynağının özelliklerini, bir [bağlama Işaretleme uzantısı](binding-markup-extension.md)içinde kullanılmak üzere veya xaml 'de kurulu bir <xref:System.Windows.Data.Binding> öğesinin @no__t özelliğini ayarlarken belirler.
 
 ## <a name="xaml-attribute-usage"></a>XAML Öznitelik Kullanımı
 
@@ -40,7 +40,7 @@ ms.locfileid: "62053502"
 </Binding>
 ```
 
--veya-
+veya
 
 ```xml
 <Binding>
@@ -58,30 +58,30 @@ ms.locfileid: "62053502"
 
 |||
 |-|-|
-|`modeEnumValue`|Aşağıdakilerden biri:<br /><br /> -Dize belirteci `Self`; karşılık gelen bir <xref:System.Windows.Data.RelativeSource> ile oluşturulmuş kendi <xref:System.Windows.Data.RelativeSource.Mode%2A> özelliğini <xref:System.Windows.Data.RelativeSourceMode.Self>.<br />-Dize belirteci `TemplatedParent`; karşılık gelen bir <xref:System.Windows.Data.RelativeSource> ile oluşturulmuş kendi <xref:System.Windows.Data.RelativeSource.Mode%2A> özelliğini <xref:System.Windows.Data.RelativeSourceMode.TemplatedParent>.<br />-Dize belirteci `PreviousData`; karşılık gelen bir <xref:System.Windows.Data.RelativeSource> ile oluşturulmuş kendi <xref:System.Windows.Data.RelativeSource.Mode%2A> özelliğini <xref:System.Windows.Data.RelativeSourceMode.PreviousData>.<br />-Aşağıda hakkında bilgi için `FindAncestor` modu.|
-|`FindAncestor`|Dize belirteci `FindAncestor`. Bu belirteci kullanarak moda girer bir `RelativeSource` 'un üst türü ve isteğe bağlı olarak üst düzeyini belirtir. Bu karşılık gelen bir <xref:System.Windows.Data.RelativeSource> ile oluşturulmuş kendi <xref:System.Windows.Data.RelativeSource.Mode%2A> özelliğini <xref:System.Windows.Data.RelativeSourceMode.FindAncestor>.|
-|`typeName`|Gerekli `FindAncestor` modu. Dolduran bir türün adını <xref:System.Windows.Data.RelativeSource.AncestorType%2A> özelliği.|
-|`intLevel`|İçin isteğe bağlı `FindAncestor` modu. Öncül düzeyi (Mantıksal ağaçta üst yön doğrultusunda değerlendirilen.)|
+|`modeEnumValue`|Aşağıdakilerden biri:<br /><br /> -@No__t-0; dize belirteci <xref:System.Windows.Data.RelativeSource.Mode%2A> özelliği <xref:System.Windows.Data.RelativeSourceMode.Self> olarak ayarlanmış şekilde oluşturulan <xref:System.Windows.Data.RelativeSource> öğesine karşılık gelir.<br />-@No__t-0; dize belirteci <xref:System.Windows.Data.RelativeSource.Mode%2A> özelliği <xref:System.Windows.Data.RelativeSourceMode.TemplatedParent> olarak ayarlanmış şekilde oluşturulan <xref:System.Windows.Data.RelativeSource> öğesine karşılık gelir.<br />-@No__t-0; dize belirteci <xref:System.Windows.Data.RelativeSource.Mode%2A> özelliği <xref:System.Windows.Data.RelativeSourceMode.PreviousData> olarak ayarlanmış şekilde oluşturulan <xref:System.Windows.Data.RelativeSource> öğesine karşılık gelir.<br />-@No__t-0 modu hakkında daha fazla bilgi için aşağıya bakın.|
+|`FindAncestor`|@No__t-0 dize belirteci. Bu belirteci kullanmak `RelativeSource` ' ın bir üst türü ve isteğe bağlı olarak bir üst düzeyi belirttiğinden bir mod girer. Bu, <xref:System.Windows.Data.RelativeSource.Mode%2A> özelliği <xref:System.Windows.Data.RelativeSourceMode.FindAncestor> olarak ayarlanmış şekilde oluşturulan <xref:System.Windows.Data.RelativeSource> ' a karşılık gelir.|
+|`typeName`|@No__t-0 modu için gereklidir. @No__t-0 özelliğini dolduran bir türün adı.|
+|`intLevel`|@No__t-0 modu için isteğe bağlı. Öncül düzeyi (Mantıksal ağaçta üst yön doğrultusunda değerlendirilen.)|
 
 ## <a name="remarks"></a>Açıklamalar
 
-`{RelativeSource TemplatedParent}` bağlama kullanımları, denetime ait kullanıcı ve denetim mantığının ayrımı daha büyük bir kavramı ele alan önemli bir tekniktir. Bu, şablon tanımı içinden şablonlu üst öğeye (şablonun uygulandığı çalışma zamanı nesnesi örneği) bağlanmaya olanak verir. Bu durum için [TemplateBinding Markup Extension](templatebinding-markup-extension.md) aslında şu bağlama ifadesi için bir toplu olduğu: `{Binding RelativeSource={RelativeSource TemplatedParent}}`. `TemplateBinding` veya `{RelativeSource TemplatedParent}` kullanımları, her ikisi de, bir şablon tanımlayan XAML içinde yalnızca ilgilidir. Daha fazla bilgi için [TemplateBinding işaretleme uzantısı](templatebinding-markup-extension.md)
+`{RelativeSource TemplatedParent}` bağlama kullanımları, bir denetimin kullanıcı arabiriminin ve denetim mantığının ayrılma açısından daha büyük bir kavramı adresleyen anahtar tekniğidir. Bu, şablon tanımı içinden şablonlu üst öğeye (şablonun uygulandığı çalışma zamanı nesnesi örneği) bağlanmaya olanak verir. Bu durumda, [TemplateBinding Biçimlendirme Uzantısı](templatebinding-markup-extension.md) aslında aşağıdaki bağlama ifadesi için bir toplu özelliktir: `{Binding RelativeSource={RelativeSource TemplatedParent}}`. `TemplateBinding` veya `{RelativeSource TemplatedParent}` kullanımları, yalnızca bir şablonu tanımlayan XAML içinde ilgilidir. Daha fazla bilgi için bkz. [TemplateBinding Işaretleme uzantısı](templatebinding-markup-extension.md).
 
-`{RelativeSource FindAncestor}` esas olarak denetim şablonları veya öngörülebilir kendi kullanıcı Arabirimi bileşimlerinde, burada bir denetimi her zaman belirli bir üst öğe türünün görsel ağacında olması beklenen durumlarda kullanılır. Örneğin, bir öğeler denetiminin öğeleri kullanabilirsiniz `FindAncestor` öğelerin özelliklerine bağlanacağını kullanımları üst üst denetim. Veya bir şablonda denetim bileşiminin parçası olan öğeler kullanabileceğiniz `FindAncestor` , aynı bileşim yapısı içinde üst öğelere bağlar.
+`{RelativeSource FindAncestor}`, bir denetimin her zaman belirli bir üst türün görsel ağacında olması beklenildiği durumlar için genellikle denetim şablonlarında veya tahmin edilebilir kendiliğinden dahil edilen kullanıcı arabirimi kompozisyonlarında kullanılır. Örneğin, bir öğe denetiminin öğeleri kendi öğelerinin özelliklerine bağlamak için `FindAncestor` kullanımları kullanabilir. Ya da bir şablonda denetim kompozisyonunun parçası olan öğeler, aynı bileşim yapısındaki üst öğelere `FindAncestor` bağlamaları kullanabilir.
 
-Nesne öğesi sözdizimi içinde `FindAncestor` ikinci nesne öğesi sözdizimi özellikle için kullanılan XAML sözdizimi bölümlerinde gösterilen modu `FindAncestor` modu. `FindAncestor` mod gerektirir bir <xref:System.Windows.Data.RelativeSource.AncestorType%2A> değeri. Ayarlamalısınız <xref:System.Windows.Data.RelativeSource.AncestorType%2A> kullanarak bir özniteliği olarak bir [x: Type işaretleme uzantısı](../../xaml-services/x-type-markup-extension.md) Aranılacak türü referansı. <xref:System.Windows.Data.RelativeSource.AncestorType%2A> Değeri, bağlama isteği çalışma zamanında işlendiğinde kullanılır.
+XAML sözdizimi bölümlerinde gösterilen `FindAncestor` modunun nesne öğesi söz diziminde, ikinci nesne öğesi sözdizimi özellikle `FindAncestor` modu için kullanılır. `FindAncestor` modu <xref:System.Windows.Data.RelativeSource.AncestorType%2A> değeri gerektirir. Aranacak üst öğe türüne bir [X:Type Işaretleme uzantısı](../../xaml-services/x-type-markup-extension.md) başvurusu kullanarak bir öznitelik olarak <xref:System.Windows.Data.RelativeSource.AncestorType%2A> ayarlamanız gerekir. @No__t-0 değeri, bağlama isteği çalışma zamanında işlendiğinde kullanılır.
 
-İçin `FindAncestor` modu, isteğe bağlı özellik <xref:System.Windows.Data.RelativeSource.AncestorLevel%2A> durumlarda üst arama belirsizliğinin ortadan kaldırılmasını yardımcı olabilecek birden fazla üst öğe ağacında varolan bu türün büyük olasılıkla olduğu.
+@No__t-0 modu için, isteğe bağlı özellik <xref:System.Windows.Data.RelativeSource.AncestorLevel%2A>, öğe ağacında var olan bir türün birden fazla üst öğesi olduğu durumlarda üst aramanın belirsizliğini ortadan kaldırmaya yardımcı olabilir.
 
-Nasıl kullanılacağı hakkında daha fazla bilgi için `FindAncestor` modu bkz <xref:System.Windows.Data.RelativeSource>.
+@No__t-0 modunun nasıl kullanılacağı hakkında daha fazla bilgi için, bkz. <xref:System.Windows.Data.RelativeSource>.
 
-`{RelativeSource Self}` senaryolarda yararlıdır bu iki özellik arasında var. burada örnek bir özellik aynı örneğini ve hiçbir genel bağımlılık özelliği ilişkisi (zorlama gibi) başka bir özelliğin değerini zaten bağlı olmamalıdır. İki özellik mevcut bir nesne üzerinde değerleri değişmez olarak aynı olacak (ve aynı şekilde), ayrıca uygulayabilirsiniz nadir olmasına rağmen bir `Converter` parametresi içeren bir bağlamaya `{RelativeSource Self}`ve kaynak arasında dönüştürmek için dönüştürücüyü kullanabilirsiniz ve Hedef türü. Başka bir senaryo için `{RelativeSource Self}` parçası olarak bir <xref:System.Windows.MultiDataTrigger>.
+`{RelativeSource Self}`, bir örneğin bir özelliğinin aynı örneğe ait başka bir özelliğin değerine bağlı olması gereken ve bu iki özellik arasında (zorlama gibi) herhangi bir genel bağımlılık özelliği ilişkisinin zaten mevcut olduğu senaryolar için yararlıdır. Bir nesne üzerinde, değerlerin bire bir özdeş (ve özdeş olarak yazılmış) gibi iki özelliği var olsa da, `{RelativeSource Self}` içeren bir bağlamaya `Converter` parametresi uygulayabilir ve kaynak ve hedef türleri arasında dönüştürme yapmak için dönüştürücüyü kullanabilirsiniz. @No__t-0 ' a yönelik başka bir senaryo <xref:System.Windows.MultiDataTrigger> ' in bir parçasıdır.
 
-Örneğin, aşağıdaki XAML tanımlayan bir <xref:System.Windows.Shapes.Rectangle> hangi değer için girilen öğesi böyle <xref:System.Windows.FrameworkElement.Width%2A>, <xref:System.Windows.Shapes.Rectangle> her zaman bir kare olacağı: `<Rectangle Width="200" Height="{Binding RelativeSource={RelativeSource Self}, Path=Width}" .../>`
+Örneğin, aşağıdaki XAML, <xref:System.Windows.FrameworkElement.Width%2A> için hangi değerin girildiğine bakılmaksızın bir <xref:System.Windows.Shapes.Rectangle> öğesi tanımlar, <xref:System.Windows.Shapes.Rectangle> her zaman bir kare olur: `<Rectangle Width="200" Height="{Binding RelativeSource={RelativeSource Self}, Path=Width}" .../>`
 
-`{RelativeSource PreviousData}` Veri şablonları veya bağlamaları veri kaynağı olarak bir koleksiyon burada kullanıyorsanız durumlarda yararlı olur. Kullanabileceğiniz `{RelativeSource PreviousData}` koleksiyondaki bitişik veri öğeleri arasındaki ilişkileri vurgulamak için. İlgili bir teknik bir <xref:System.Windows.Data.MultiBinding> veri kaynağı ve iki öğe ve özellikleri arasındaki farkı belirlemek için bu bağlama üzerinde bir dönüştürücü geçerli ve önceki öğeler arasında.
+`{RelativeSource PreviousData}`, veri şablonlarında ya da bağlamaların veri kaynağı olarak bir koleksiyon kullandığı durumlarda faydalıdır. Koleksiyondaki bitişik veri öğeleri arasındaki ilişkileri vurgulamak için `{RelativeSource PreviousData}` ' yı kullanabilirsiniz. İlgili bir teknik, veri kaynağındaki geçerli ve önceki öğeler arasında <xref:System.Windows.Data.MultiBinding> oluşturmak ve iki öğe ile özellikleri arasındaki farkı belirlemek için o bağlama üzerinde bir dönüştürücü kullanmaktır.
 
-Aşağıdaki örnekte, ilk <xref:System.Windows.Controls.TextBlock> öğeleri şablon geçerli sayıyı gösterir. İkinci <xref:System.Windows.Controls.TextBlock> bağlamanın bir <xref:System.Windows.Data.MultiBinding> iki olup sahip <xref:System.Windows.Data.Binding> seçmenlere: geçerli kayıt ve kullanarak, önceki veri kaydını kasıtlı olarak kullanan bir bağlama `{RelativeSource PreviousData}`. Ardından, üzerinde bir dönüştürücü <xref:System.Windows.Data.MultiBinding> farkı hesaplar ve bağlamaya geri döndürür.
+Aşağıdaki örnekte, öğeler şablonundaki ilk <xref:System.Windows.Controls.TextBlock> geçerli sayıyı görüntüler. İkinci <xref:System.Windows.Controls.TextBlock> bağlama, aday olarak iki <xref:System.Windows.Data.Binding> ' ye sahip olan bir <xref:System.Windows.Data.MultiBinding> ' dir: geçerli kayıt ve `{RelativeSource PreviousData}` ' i kullanarak bir önceki veri kaydını kasıtlı olarak kullanan bir bağlama. Sonra, <xref:System.Windows.Data.MultiBinding> üzerindeki bir dönüştürücü farkı hesaplar ve bağlamaya döndürür.
 
 ```xml
 <ListBox Name="fibolist">
@@ -103,11 +103,11 @@ Aşağıdaki örnekte, ilk <xref:System.Windows.Controls.TextBlock> öğeleri ş
     </ListBox.ItemTemplate>
 ```
 
-Bir kavram, burada kapsanmayan olarak veri bağlamasını açıklama bkz [Data Binding Overview](../data/data-binding-overview.md).
+Kavram olarak veri bağlamayı açıklamak burada ele alınmamalıdır, bkz. [veri bağlamaya genel bakış](../data/data-binding-overview.md).
 
-İçinde [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] XAML işlemci uygulamasında, bu işaretleme uzantısının işlenmesi tarafından tanımlanır <xref:System.Windows.Data.RelativeSource> sınıfı.
+@No__t-0 XAML işlemci uygulamasında, bu biçimlendirme uzantısının işlenmesi <xref:System.Windows.Data.RelativeSource> sınıfı tarafından tanımlanır.
 
-`RelativeSource` bir işaretleme uzantısıdır. Biçimlendirme uzantıları, genellikle öznitelik değerlerinin değişmez değerler veya işleyici isimleri dışına çıkma gereksinimi olduğunda ve bu gereksinim, belirli türler veya özellikler üzerine tür dönüştürücülerini koymaktan daha genel olduğunda uygulanır. XAML kullanım içindeki tüm biçimlendirme uzantıları `{` ve `}` karakter olarak bir XAML işlemcisinin bir işaretleme uzantısı özniteliği işlenmesi gerektiğini, kuralına göre kendi öznitelik sözdizimi. Daha fazla bilgi için [biçimlendirme uzantıları ve WPF XAML](markup-extensions-and-wpf-xaml.md).
+`RelativeSource` bir biçimlendirme uzantısıdır. Biçimlendirme uzantıları, genellikle öznitelik değerlerinin değişmez değerler veya işleyici isimleri dışına çıkma gereksinimi olduğunda ve bu gereksinim, belirli türler veya özellikler üzerine tür dönüştürücülerini koymaktan daha genel olduğunda uygulanır. XAML 'deki tüm biçimlendirme uzantıları, öznitelik sözdiziminde `{` ve `}` karakterlerini kullanır. Bu, XAML işlemcisinin bir biçimlendirme uzantısının özniteliği işlemesi gerektiğini tanıdığı kuraldır. Daha fazla bilgi için bkz. [Biçimlendirme uzantıları ve WPF XAML](markup-extensions-and-wpf-xaml.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

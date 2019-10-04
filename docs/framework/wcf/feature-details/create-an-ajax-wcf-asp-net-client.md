@@ -2,14 +2,14 @@
 title: Visual Studio 'da AJAX etkin bir WCF hizmeti ve ASP.NET Istemcisi oluşturma
 ms.date: 08/17/2018
 ms.assetid: 95012df8-2a66-420d-944a-8afab261013e
-ms.openlocfilehash: 1f5c9eb1750b0df28836f147d5b4be1b223bb52e
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: a6d6e87de6200a5cb9bba566d595066673cdf9cf
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053689"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834784"
 ---
-# <a name="how-to-create-an-ajax-enabled-wcf-service-and-an-aspnet-client-that-accesses-the-service"></a>Nasıl yapılır: Hizmete erişen AJAX etkin bir WCF hizmeti ve ASP.NET Istemcisi oluşturma
+# <a name="how-to-create-an-ajax-enabled-wcf-service-and-an-aspnet-client-that-accesses-the-service"></a>Nasıl yapılır: AJAX Etkin Bir WCF Hizmeti ve Hizmete Erişen Bir ASP.NET İstemcisi Oluşturma
 
 Bu konuda, Visual Studio kullanarak hizmete erişen bir AJAX özellikli Windows Communication Foundation (WCF) hizmeti ve bir ASP.NET istemcisi oluşturma konusu gösterilmektedir.
 
@@ -17,9 +17,9 @@ Bu konuda, Visual Studio kullanarak hizmete erişen bir AJAX özellikli Windows 
 
 1. Visual Studio'yu açın.
 
-1. **Dosya** menüsünden **Yeni** > **Proje** ' yi seçin.
+1. **Dosya** menüsünden **Yeni** > **Proje** ' yi seçin
 
-1. **Yeni proje** iletişim kutusunda, **yüklü** >   > **görsel C#**  **Web** kategorisini genişletin ve sonra **ASP.NET Web uygulaması (.NET Framework)** öğesini seçin.
+1. **Yeni proje** iletişim kutusunda, **yüklü** > **görsel C#**  > **Web** kategorisini genişletin ve sonra **ASP.NET Web uygulaması (.NET Framework)** öğesini seçin.
 
 1. Projeyi **SandwichServices** olarak adlandırın ve **Tamam**' a tıklayın.
 
@@ -29,15 +29,15 @@ Bu konuda, Visual Studio kullanarak hizmete erişen bir AJAX özellikli Windows 
 
 ## <a name="add-a-web-form"></a>Web formu ekleme
 
-1. **Çözüm Gezgini** ' de SandwichServices projesine sağ tıklayın ve**Yeni öğe** **Ekle** > ' yi seçin.
+1. **Çözüm Gezgini** ' de SandwichServices projesine sağ tıklayın ve @no__t **Ekle**-2**Yeni öğe**' yi seçin.
 
-1. **Yeni öğe Ekle** iletişim kutusunda,  >  **yüklü** > **görsel C#**  **Web** kategorisini genişletin ve ardından **Web formu** şablonunu seçin.
+1. **Yeni öğe Ekle** iletişim kutusunda, **yüklü** > **görsel C#**  > **Web** kategorisini genişletin ve ardından **Web formu** şablonunu seçin.
 
 1. Varsayılan adı (**WebForm1**) kabul edin ve **Ekle**' yi seçin.
 
    **Kaynak** görünümünde *WebForm1. aspx* açılır.
 
-1. Aşağıdaki biçimlendirmeyi  **\<body >** etiketleri içine ekleyin:
+1. Aşağıdaki biçimlendirmeyi **\<body >** etiketlerinin içine ekleyin:
 
    ```html
    <input type="button" value="Price of 3 sandwiches" onclick="Calculate()"/>
@@ -47,9 +47,9 @@ Bu konuda, Visual Studio kullanarak hizmete erişen bir AJAX özellikli Windows 
 
 ## <a name="create-an-ajax-enabled-wcf-service"></a>AJAX etkin bir WCF hizmeti oluşturma
 
-1. **Çözüm Gezgini** ' de SandwichServices projesine sağ tıklayın ve**Yeni öğe** **Ekle** > ' yi seçin.
+1. **Çözüm Gezgini** ' de SandwichServices projesine sağ tıklayın ve @no__t **Ekle**-2**Yeni öğe**' yi seçin.
 
-1. **Yeni öğe Ekle** iletişim kutusunda,  >  **yüklü** > **görsel C#**  **Web** kategorisini genişletin ve ardından **WCF hizmeti (AJAX etkin)** şablonunu seçin.
+1. **Yeni öğe Ekle** iletişim kutusunda, **yüklü** > **C#görsel** > **Web** kategorisini genişletin ve ardından **WCF hizmeti (AJAX etkin)** şablonunu seçin.
 
    ![Visual Studio 'da WCF hizmeti (AJAX etkin) öğe şablonu](./media/create-an-ajax-wcf-asp-net-client/add-wcf-service.png)
 
@@ -75,7 +75,7 @@ Bu konuda, Visual Studio kullanarak hizmete erişen bir AJAX özellikli Windows 
 
 3. **AJAX Uzantıları** düğümünü genişletin ve bir **ScriptManager** 'ı sürükleyip form üzerine bırakın.
 
-4. **Kaynak** görünümüne geri döndüğünüzde, WCF hizmeti yolunu belirtmek için  **\<ScriptManager >** etiketleri arasına aşağıdaki kodu ekleyin:
+4. **Kaynak** görünümüne geri döndüğünüzde, WCF hizmetinin yolunu belirtmek için **\<scriptmanager >** etiketleri arasına aşağıdaki kodu ekleyin:
 
     ```xml
     <Services>
@@ -83,7 +83,7 @@ Bu konuda, Visual Studio kullanarak hizmete erişen bir AJAX özellikli Windows 
     </Services>
     ```
 
-5. JavaScript işlevi `Calculate()`için kodu ekleyin. Web formunun **baş** bölümüne aşağıdaki kodu yerleştirin:
+5. JavaScript işlevi için kodu ekleyin `Calculate()`. Web formunun **baş** bölümüne aşağıdaki kodu yerleştirin:
 
     ```html
     <script type="text/javascript">
@@ -102,11 +102,11 @@ Bu konuda, Visual Studio kullanarak hizmete erişen bir AJAX özellikli Windows 
 
    Bu kod, üç Sandwiches için fiyat hesaplamak üzere CostService yöntemini çağırır ve sonra sonucu **Additionresult**adlı yayılma alanında görüntüler.
 
-## <a name="run-the-program"></a>Programı çalıştırma
+## <a name="run-the-program"></a>Programı Çalıştır
 
-*WebForm1. aspx* ' in odağa sahip olduğundan emin olun ve sonra Web istemcisini başlatmak için **Başlat** düğmesine basın. Düğmenin yeşil bir üçgeni vardır ve **IIS Express (Microsoft Edge)** gibi bir şey diyor. İsterseniz **F5**'e de basabilirsiniz. Beklenen "3,75" çıktısını oluşturmak için **3 Sandwiches** düğmesine tıklayın.
+*WebForm1. aspx* ' in odağa sahip olduğundan emin olun ve sonra Web istemcisini başlatmak için **Başlat** düğmesine basın. Düğmenin yeşil bir üçgeni vardır ve **IIS Express (Microsoft Edge)** gibi bir şey diyor. İsterseniz <kbd>F5</kbd>'e de basabilirsiniz. Beklenen "3,75" çıktısını oluşturmak için **3 Sandwiches** düğmesine tıklayın.
 
-## <a name="example-code"></a>Örnek kod
+## <a name="example"></a>Örnek
 
 *CostService.svc.cs* dosyasındaki tam kod aşağıda verilmiştir:
 

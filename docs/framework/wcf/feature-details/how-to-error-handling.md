@@ -2,28 +2,28 @@
 title: 'Nasıl yapılır: Hata İşleme'
 ms.date: 03/30/2017
 ms.assetid: de566e39-9358-44ff-8244-780f6b799966
-ms.openlocfilehash: 4958e7914d9feb32dc00d11a215cf8247e9baffc
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 3b8e48a74ff7671b942b5499fb3a0b5d0f389d61
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67424598"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834709"
 ---
 # <a name="how-to-error-handling"></a>Nasıl yapılır: Hata İşleme
 
-Bu konuda, hata işleme kullanan bir yönlendirme yapılandırması oluşturma için gerekli temel adımlar açıklanmaktadır. Bu örnekte, bir hedef uç noktasına iletileri yönlendirilir. Bir ağ veya iletişim ilgili bir hata nedeniyle bir ileti gönderilemezse (<xref:System.ServiceModel.CommunicationException>), ileti başka bir uç noktasına gönderilir.
+Bu konuda, hata işleme kullanan bir yönlendirme yapılandırması oluşturmak için gereken temel adımlar özetlenmektedir. Bu örnekte, iletiler bir hedef uç noktaya yönlendirilir. Bir ileti ağ veya iletişimle ilgili bir başarısızlık (<xref:System.ServiceModel.CommunicationException>) nedeniyle iletilemez, ileti alternatif bir uç noktaya yeniden gönderilir.
 
 > [!NOTE]
-> Bir ağ hatası benzetimini yapmak için bu örnekte kullanılan hedef uç nokta adresi yanlış içerir. Bu uç nokta başarısız kıl hiçbir hizmet olarak yönlendirilmiş iletiler belirtilen adresinde dinlemede.
+> Bir ağ hatasının benzetimini yapmak için, bu örnekte kullanılan hedef uç noktası yanlış bir adres içeriyor. Belirtilen adreste hiçbir hizmet dinlemede olmadığından, bu uç noktaya yönlendirilen iletiler başarısız olur.
 
 > [!NOTE]
-> Bu konuda yer alan örnek zaman aşımı ayarlarını açıkça açıklanmamıştır, ancak bunlar dikkate hata işleme kullanırken atmanız gerekir. Hatalarla karşılaştı, istemci yanıt almadan önce karşılaştı, ek bir gecikme olur. Hata yönlendirme yapılacak bir yedekleme uç noktasına göndermesi dener hizmetinin, alınan olmasıdır. Zaman aşımı değerlerini ilişkili birincil ve yedek hedef uç noktaları büyük olduğundan, başarıyla gönderilmeden önce ileti yedekleme listesinde birden fazla uç nokta üzerinde başarısız olarak istemci kadar uzun bir gecikme.
+> Bu konuda yer alan örnek, zaman aşımı ayarlarını açıkça ele almadığı sürece, hata işleme kullanırken bunları dikkate almanız gerekir. Hatalarla karşılaşıldığında, istemci yanıt almadan önce ek bir gecikme ile karşılaşıldı. Bunun nedeni, hatanın yönlendirme hizmetinde alınması ve daha sonra iletiyi bir yedekleme uç noktasına göndermenizi dener. Birincil ve yedek hedef uç noktalarıyla ilişkili zaman aşımı değerleri büyükse, ileti başarıyla gönderilmeden önce yedekleme listesindeki birden fazla uç nokta üzerinde hata verdiğinde, istemci uzun bir gecikmeyle karşılaşabilir.
 >
-> Yönlendirme hizmeti, bir filtre ile ilişkili tüm uç noktalar için zaman aşımı değerini toplamına eşit en büyük gecikme karşılaşabilirsiniz olduğundan, buna göre istemcide beklenen zaman aşımını artırın öneririz.
+> Yönlendirme hizmeti bir filtreyle ilişkili tüm uç noktalar için zaman aşımı değerinin toplamına eşit olan en büyük gecikmeyle karşılaştırabileceğinizden, istemcide beklenen zaman aşımını de artırmanız önerilir.
 
-### <a name="implement-error-handling"></a>Hata işleme uygulama
+### <a name="implement-error-handling"></a>Hata Işlemeyi Uygula
 
-1. Temel yönlendirme hizmeti yapılandırmasını hizmet tarafından sunulan hizmet uç noktası belirterek oluşturun. Aşağıdaki örnek, iletileri almak için kullanılan bir tek hizmet uç noktası tanımlar. Ayrıca, ileti göndermek için kullanılan istemci uç noktalarını tanımlar; deadDestination ve realDestination. DeadDestination uç nokta çalışan bir hizmete başvurmuyor ve bu uç noktaya iletileri gönderirken, bir ağ hatası benzetimini yapmak için kullanılan bir adres içeriyor.
+1. Hizmet tarafından açığa çıkarılan hizmet uç noktasını belirterek temel yönlendirme hizmeti yapılandırmasını oluşturun. Aşağıdaki örnek, ileti almak için kullanılan tek bir hizmet uç noktasını tanımlar. Ayrıca, ileti göndermek için kullanılan istemci uç noktalarını tanımlar; deadDestination ve realDestination. DeadDestination uç noktası, çalışan bir hizmete başvurmayan ve bu uç noktaya ileti gönderilirken bir ağ başarısızlığının benzetimini yapmak için kullanılan bir adres içeriyor.
 
     ```xml
     <services>
@@ -58,7 +58,7 @@ Bu konuda, hata işleme kullanan bir yönlendirme yapılandırması oluşturma i
     </client>
     ```
 
-2. Hedef Uç noktalara iletileri yönlendirmek için kullanılan filtreler tanımlar.  Bu örnekte, MatchAll filtre, yönlendirme hizmeti tarafından alınan tüm iletileri eşleştirmek için kullanılır.
+2. İletileri hedef uç noktalara yönlendirmek için kullanılan filtreleri tanımlayın.  Bu örnekte, bir MatchAll filtresi, yönlendirme hizmeti tarafından alınan tüm iletileri eşleştirmek için kullanılır.
 
     ```xml
     <filters>
@@ -67,9 +67,9 @@ Bu konuda, hata işleme kullanan bir yönlendirme yapılandırması oluşturma i
     </filters>
     ```
 
-3. Bir ileti bir ağ veya iletişim hatası durumunda birincil hedef uç noktasına gönderilirken gönderilen uç noktaları içeren yedekleme uç nokta listesi tanımlar. Aşağıdaki örnek, bir uç nokta içeren bir yedekleme listesini tanımlar; Ancak, birden fazla uç nokta yedekleme listesinde belirtilebilir.
+3. Bir iletinin bir ağ olayında gönderildiği bitiş noktalarını veya birincil hedef uç noktasına gönderilirken iletişim hatasını içeren yedekleme uç noktası listesini tanımlayın. Aşağıdaki örnek bir uç nokta içeren bir yedekleme listesi tanımlar; Ancak, bir yedekleme listesinde birden fazla uç nokta belirtilebilir.
 
-     Yedekleme listesinde birden fazla uç noktası, bir ağ içeriyorsa veya yönlendirme hizmeti iletişim hatası oluşur, listedeki ilk uç nokta ileti göndermeye çalışır. Bu uç noktaya gönderirken bir ağ veya iletişim hatası meydana gelirse, yönlendirme hizmeti listede yer alan sonraki uç nokta ileti göndermeye çalışır. Hizmet, ileti başarıyla gönderildi, tüm yedekleme uç noktaları bir ağ veya iletişimleri ile ilgili bir hata döndürür veya ileti gönderilir ve ağ dışı uç noktanın döndürdüğü kadar yedekleme uç noktası listesindeki her bir uç nokta için ileti gönderilirken devam eder iletişim ilgili olmayan bir hata oluştu.
+     Yedekleme listesi birden çok uç nokta içeriyorsa, bir ağ veya iletişim hatası oluştuğunda, ileti listedeki ilk uç noktaya gönderilmeye çalışır. Bu uç noktaya gönderilirken bir ağ veya iletişim hatası oluşursa, yönlendirme hizmeti iletiyi listede yer alan bir sonraki uç noktaya göndermeye çalışır. Hizmet, ileti başarıyla gönderilene kadar yedekleme uç noktası listesindeki her bir uç noktaya iletiyi göndermeye devam eder, tüm yedekleme uç noktaları ağ veya iletişimlerle ilgili bir hata döndürmüyor, ya da ileti gönderilir ve uç nokta ağ olmayan bir değer döndürür. iletişimlerle ilgili olmayan hata.
 
     ```xml
     <backupLists>
@@ -79,7 +79,7 @@ Bu konuda, hata işleme kullanan bir yönlendirme yapılandırması oluşturma i
     </backupLists>
     ```
 
-4. Filtre deadDestination uç nokta ve yedekleme uç nokta listesi ile ilişkilendirir filtre tablo tanımlayın.  Yönlendirme hizmeti, ilk filtresiyle ilişkili hedef uç nokta ileti göndermeye çalışır. DeadDestination çalışan bir hizmete başvurmuyor bir adres içerdiğinden, bu bir ağ hatasına neden olur. Yönlendirme hizmeti, ardından backupEndpointList içinde belirtilen uç nokta ileti göndermeye çalışır.
+4. Filtreyi deadDestination bitiş noktasıyla ve yedekleme uç noktası listesiyle ilişkilendiren filtre tablosunu tanımlayın.  Yönlendirme hizmeti ilk olarak iletiyi filtreyle ilişkili hedef uç noktaya gönderilmeye çalışır. DeadDestination, çalışan bir hizmete başvurmayan bir adres içerdiğinden, bu durum Ağ hatasına neden olur. Yönlendirme hizmeti daha sonra iletiyi backupEndpointList öğesinde belirtilen uç noktaya gönderme girişiminde bulunur.
 
     ```xml
     <filterTables>
@@ -93,7 +93,7 @@ Bu konuda, hata işleme kullanan bir yönlendirme yapılandırması oluşturma i
           </filterTables>
     ```
 
-5. Filtre tablosunda yer alan filtre karşı gelen iletileri değerlendirmek için yönlendirme davranışı kullanarak hizmet uç noktaları ile filtreleme tablosu ilişkilendirmelisiniz.  Aşağıdaki örnek, hizmet uç noktaları ile ilişkilendirmeyi "filterTable1" gösterir.
+5. Gelen iletileri filtre tablosunda bulunan filtreye karşı değerlendirmek için, yönlendirme davranışını kullanarak filtre tablosunu hizmet uç noktalarıyla ilişkilendirmeniz gerekir.  Aşağıdaki örnek, "filterTable1" ın hizmet uç noktalarıyla ilişkilendirilmesini gösterir.
 
     ```xml
     <behaviors>
@@ -108,7 +108,7 @@ Bu konuda, hata işleme kullanan bir yönlendirme yapılandırması oluşturma i
 
 ## <a name="example"></a>Örnek
 
-Yapılandırma dosyasının tam bir listesi verilmiştir.
+Yapılandırma dosyasının tüm listesi aşağıda verilmiştir:
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>

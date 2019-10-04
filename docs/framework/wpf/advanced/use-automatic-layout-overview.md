@@ -5,117 +5,117 @@ helpviewer_keywords:
 - layout [WPF], automatic
 - automatic layout [WPF]
 ms.assetid: 6fed9264-18bb-4d05-8867-1fe356c6f687
-ms.openlocfilehash: d4a0fd819d08fdd936dd1ef35e8cd8c00947f9e0
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 0253c57f080705b648d9f416368d0fe974ac83ab
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67662672"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834664"
 ---
 # <a name="use-automatic-layout-overview"></a>Otomatik Düzen Kullanımına Genel Bakış
 
-Bu konu nasıl yazılacağı konusunda geliştiriciler için yönergeler tanıtır [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] yerelleştirilebilir uygulamalarla [!INCLUDE[TLA#tla_ui#plural](../../../../includes/tlasharptla-uisharpplural-md.md)]. Geçmişte, zaman alıcı bir işlem bir kullanıcı Arabirimi yerelleştirmesi oluştu. Kullanıcı Arabirimi için uyarlandığı her bir dilin piksel piksel ayarlama gereklidir. Doğru tasarıma ve doğru kodlama standartları ile Bugün [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] yerelleştiriciler yeniden boyutlandırma ve yeniden konumlandırma yapmak için daha az olması oluşturulabilir. Daha kolay yeniden boyutlandırılan ve konumlandırılabilir uygulamalar yazma yaklaşım otomatik düzen olarak adlandırılır ve kullanarak gerçekleştirilebilir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulama tasarım.
+Bu konu, yerelleştirilebilir [!INCLUDE[TLA#tla_ui#plural](../../../../includes/tlasharptla-uisharpplural-md.md)] ile [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] uygulamalarının nasıl yazılacağı konusunda geliştiriciler için yönergeler tanıtır. Geçmişte, bir kullanıcı arabiriminin yerelleştirilmesi zaman alan bir işlemdir. Kullanıcı arabiriminin uyarlandığı her dil piksel ayarı için gereken bir piksel. Günümüzde, doğru tasarım ve doğru kodlama standartlarıyla [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)], Yerellerle yeniden boyutlandırılması ve bunu yeniden konumlandırılması için oluşturulabilir. Daha kolay yeniden boyutlandırılabilir ve yeniden konumlandırılabilir uygulamaları yazma yaklaşımına otomatik düzen denir ve [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulama tasarımı kullanılarak elde edilebilir.
 
 <a name="advantages_of_autolayout"></a>
 
-## <a name="advantages-of-using-automatic-layout"></a>Otomatik Düzen kullanmanın avantajları
+## <a name="advantages-of-using-automatic-layout"></a>Otomatik düzen kullanmanın avantajları
 
-Çünkü [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Sunumda güçlü ve esnek, farklı dillerde gereksinimlerine uyacak şekilde ayarlanmış bir uygulamada düzen öğelerini olanağı sağlar. Aşağıdaki liste bazı otomatik düzen avantajları işaret eder.
+@No__t-0 sunum sistemi güçlü ve esnek olduğundan, bir uygulamadaki öğeleri farklı dillerin gereksinimlerine uyacak şekilde ayarlayabilme yeteneği sağlar. Aşağıdaki liste otomatik düzenin avantajlarından bazılarını gösterir.
 
-- Kullanıcı Arabirimi, herhangi bir dilde de görüntüler.
+- UI tüm dillerde iyi görüntülenir.
 
-- Metin çevrildikten sonra konumunu ve boyutunu denetimleri yeniden ayarlama gereksinimini azaltır.
+- Metin çevrildikten sonra denetimlerin yalnızca konumunu ve boyutunu ayarlama gereksinimini azaltır.
 
-- Pencere boyutu yeniden ayarlama gereksinimini azaltır.
+- Yalnızca pencere boyutunu ayarlama gereksinimini azaltır.
 
-- UI düzeni, herhangi bir dilde düzgün bir şekilde işler.
+- Kullanıcı arabirimi düzeni herhangi bir dilde düzgün şekilde işler.
 
-- Yerelleştirme, dize çevirisinden biraz daha fazla noktasına azaltılabilir.
+- Yerelleştirme, dize çevirinden çok daha fazla olduğu noktaya azaltılabilir.
 
 <a name="autolayout_controls"></a>
 
-## <a name="automatic-layout-and-controls"></a>Otomatik Düzen ve denetimler
+## <a name="automatic-layout-and-controls"></a>Otomatik düzen ve denetimler
 
-Otomatik Düzen bir denetimin boyutunu otomatik olarak ayarlamasına olanak sağlar. Örneğin, bir denetimi, bir dizenin uzunluğunu uyum sağlayacak şekilde değiştirebilirsiniz. Bu özellik, dize çevrilecek yerelleştiriciler sağlar; Bunlar artık çevrilmiş metin sığdırmak için yeniden boyutlandırma gerekir. Aşağıdaki örnek, bir düğme ile İngilizce içeriği oluşturur.
+Otomatik düzen, bir uygulamanın bir denetimin boyutunu otomatik olarak ayarlamasını sağlar. Örneğin, bir denetim bir dizenin uzunluğuna uyum sağlayacak şekilde değişebilir. Bu özellik, Yerelleştiricilerin dizeyi çevirmesini sağlar; Artık, çevrilmiş metne sığacak şekilde denetimi yeniden boyutlandırmaları gerekmez. Aşağıdaki örnek, Ingilizce içerikli bir düğme oluşturur.
 
 [!code-xaml[LocalizationBtn_snip#1](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizationBtn_snip/CS/Pane1.xaml#1)]
 
-Örnekte, İspanyolca bir düğme oluşturmak için yapmanız gereken tek şey metni değiştirme. Örneğin,
+Örnekte, bir Ispanyolca düğme yapmak için yapmanız gerekir, metni değiştirir. Örneğin,
 
 [!code-xaml[LocalizationBtn#1](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizationBtn/CS/Pane1.xaml#1)]
 
-Aşağıdaki grafikte, kod örnekleri çıktı gösterilmektedir:
+Aşağıdaki grafik kod örneklerinin çıkışını gösterir:
 
-![Farklı dillerde metinle aynı düğmesi](./media/use-automatic-layout-overview/auto-resizable-button.png)
+![Farklı dillerdeki metinle aynı düğme](./media/use-automatic-layout-overview/auto-resizable-button.png)
 
 <a name="autolayout_coding"></a>
 
-## <a name="automatic-layout-and-coding-standards"></a>Otomatik Düzen ve kodlama standartları
+## <a name="automatic-layout-and-coding-standards"></a>Otomatik düzen ve kodlama standartları
 
-Otomatik düzen yaklaşımı kullanarak, kodlama ve tasarım standartlar ve tam olarak yerelleştirilebilir UI üretmek için kurallar kümesi gerektirir. Aşağıdaki yönergeler, kodlamanızı otomatik düzen yardımcı olur.
+Otomatik düzen yaklaşımını kullanmak, tam olarak yerelleştirilebilir bir kullanıcı arabirimi oluşturmak için bir kodlama ve tasarım standartları ve kuralları gerektirir. Aşağıdaki kılavuzlar otomatik düzen kodlamasına yardımcı olur.
 
-**Mutlak Konumlar kullanmayın**
+**Mutlak konumlar kullanmayın**
 
-- Kullanmayın <xref:System.Windows.Controls.Canvas> çünkü öğeleri mutlak konumlandırır.
+- Öğeleri kesinlikle konumlandırdığından <xref:System.Windows.Controls.Canvas> kullanmayın.
 
-- Kullanım <xref:System.Windows.Controls.DockPanel>, <xref:System.Windows.Controls.StackPanel>, ve <xref:System.Windows.Controls.Grid> denetimleri konumlandırmak için.
+- Denetimleri konumlandırmak için <xref:System.Windows.Controls.DockPanel>, <xref:System.Windows.Controls.StackPanel> ve <xref:System.Windows.Controls.Grid> kullanın.
 
-Çeşitli türlerde panolar hakkında bir tartışma için bkz. [panellere genel bakış](../controls/panels-overview.md).
+Çeşitli panel türleri hakkında bir tartışma için bkz. [panellere genel bakış](../controls/panels-overview.md).
 
-**Bir pencere için sabit bir boyuta ayarlı değil**
+**Pencere için sabit boyut ayarlamayın**
 
-- Kullanım <xref:System.Windows.Window.SizeToContent%2A?displayProperty=nameWithType>. Örneğin:
+- @No__t-0 kullanın. Örneğin:
 
   [!code-xaml[LocalizationGrid#2](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizationGrid/CS/Pane1.xaml#2)]
 
-**Ekleme bir <xref:System.Windows.FrameworkElement.FlowDirection%2A>**
+**@No__t ekleyin-1**
 
-- Ekleme bir <xref:System.Windows.FrameworkElement.FlowDirection%2A> uygulamanızın kök öğesine.
+- Uygulamanızın kök öğesine <xref:System.Windows.FrameworkElement.FlowDirection%2A> ekleyin.
 
-  WPF yatay desteklemek için kullanışlı bir yol, çift yönlü ve dikey düzeni sağlar. Sunum çerçevesinde <xref:System.Windows.FrameworkElement.FlowDirection%2A> özelliği düzeni tanımlamak için kullanılabilir. Akış yönü modelleri şunlardır:
+  WPF, yatay, çift yönlü ve dikey düzenleri desteklemek için kullanışlı bir yol sağlar. Sunum çerçevesinde <xref:System.Windows.FrameworkElement.FlowDirection%2A> özelliği düzeni tanımlamak için kullanılabilir. Akış yönü desenleri şunlardır:
 
-  - <xref:System.Windows.FlowDirection.LeftToRight?displayProperty=nameWithType> (LrTb) — Latin, Doğu Asya ve benzeri için yatay düzeni.
+  - <xref:System.Windows.FlowDirection.LeftToRight?displayProperty=nameWithType> (LrTb) — Latin, Doğu Asya ve diğerleri için yatay düzen.
 
-  - <xref:System.Windows.FlowDirection.RightToLeft?displayProperty=nameWithType> (RlTb): Arapça, İbranice ve benzeri için çift yönlü.
+  - <xref:System.Windows.FlowDirection.RightToLeft?displayProperty=nameWithType> (RlTb) — Arapça, Ibranice ve diğerleri için çift yönlü.
 
-**Bileşik yazı tipleri yerine fiziksel yazı tiplerini kullanma**
+**Fiziksel yazı tipleri yerine bileşik yazı tiplerini kullanın**
 
-- Bileşik yazı tipleriyle <xref:System.Windows.Controls.Control.FontFamily%2A> özelliği yerelleştirilmiş gerekmez.
+- Bileşik yazı tipleriyle <xref:System.Windows.Controls.Control.FontFamily%2A> özelliğinin yerelleştirilmesi gerekmez.
 
-- Geliştiriciler, aşağıdaki yazı tipleri kullanın veya kendi oluşturun.
+- Geliştiriciler aşağıdaki yazı tiplerinden birini kullanabilir veya kendi türlerini oluşturabilir.
 
-  - Genel kullanıcı arabirimi
-  - Genel San Serif
-  - Genel Serif
+  - Genel Kullanıcı arabirimi
+  - Global San Serif
+  - Küresel tırnaklı
 
-**XML: lang Ekle**
+**XML ekle: lang**
 
-- Ekleme `xml:lang` Kullanıcı Arabiriminizin kök öğesi gibi öznitelik `xml:lang="en-US"` İngilizce bir uygulama için.
+- @No__t-0 özniteliğini, Kullanıcı arabiriminin kök öğesine (örneğin, Ingilizce bir uygulama için `xml:lang="en-US"`) ekleyin.
 
-- Bileşik yazı tipleri kullandığından `xml:lang` hangi yazı tipinin kullanılacağını belirlemek için çok dilli senaryoları desteklemek için bu özelliği ayarlayın.
+- Bileşik yazı tiplerinde kullanılacak yazı tipini belirlemek için `xml:lang` kullanıldığından, bu özelliği çok dilli senaryoları destekleyecek şekilde ayarlayın.
 
 <a name="autolay_grids"></a>
 
-## <a name="automatic-layout-and-grids"></a>Otomatik Düzen ve Kılavuzlar
+## <a name="automatic-layout-and-grids"></a>Otomatik düzen ve Izgaralar
 
-<xref:System.Windows.Controls.Grid> Öğeleri konumlandırmak bir geliştirici sağladığından öğesi, otomatik düzen için yararlıdır. A <xref:System.Windows.Controls.Grid> denetimidir kullanılabilir alan bir sütun ve satır düzenlemeyi kullanarak, kendi alt öğeleri arasında dağıtma özelliğine sahiptir. Kullanıcı Arabirimi öğeleri birden çok hücre yayılabilir ve Kılavuzlar Kılavuzlar içinde olması mümkündür. Kılavuzlar, oluşturmayı ve karmaşık UI konumlandırmayı etkinleştirmek için kullanışlıdır. Aşağıdaki örnek, bazı düğme ve metin konumlandırmak için bir kılavuz kullanmayı gösterir. Hücre genişliği ve yüksekliği ayarlandığından bildirimi <xref:System.Windows.GridUnitType.Auto>; bu nedenle, resim sığacak şekilde düğmesi bir görüntü içeren hücreye ayarlanır.
+@No__t-0 öğesi, bir geliştiricinin öğeleri konumlandırmalarını sağladığından otomatik düzen için yararlıdır. @No__t-0 denetimi, bir sütun ve satır düzenlemesi kullanarak, alt öğeleri arasında kullanılabilir alanı dağıtabilme özelliğine sahiptir. UI öğeleri birden çok hücreye yayılabilir ve Kılavuzlar içinde ızgaralar olması mümkündür. Kılavuzlar, karmaşık UI oluşturmanıza ve konumlandıramanıza olanak sağladığından faydalıdır. Aşağıdaki örnek, bazı düğmeleri ve metinleri konumlandırmak için bir kılavuz kullanmayı gösterir. Hücrelerin yüksekliğinin ve genişliğinin <xref:System.Windows.GridUnitType.Auto>; olarak ayarlandığını unutmayın. Bu nedenle, bir görüntüyle birlikte düğme içeren hücre, görüntüye sığacak şekilde ayarlanır.
 
 [!code-xaml[LocalizationGrid#1](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizationGrid/CS/Pane1.xaml#1)]
 
-Aşağıdaki grafikte önceki kod tarafından üretilen kılavuz gösterir.
+Aşağıdaki grafikte, önceki kod tarafından üretilen kılavuz gösterilmektedir.
 
-![Grid örneği](./media/glob-grid.png "glob_grid") kılavuz
+![Grid örnek](./media/glob-grid.png "glob_grid") Grid
 
 <a name="autolay_grids_issharedsizescope"></a>
 
-## <a name="automatic-layout-and-grids-using-the-issharedsizescope-property"></a>Otomatik Düzen ve Kılavuzlar IsSharedSizeScope özelliğini kullanma
+## <a name="automatic-layout-and-grids-using-the-issharedsizescope-property"></a>IsSharedSizeScope özelliğini kullanarak otomatik düzen ve Izgaralar
 
-A <xref:System.Windows.Controls.Grid> öğesi, içeriğin sığacağı şekilde ayarlama denetimler oluşturmak için yerelleştirilebilir uygulamalarda kullanışlıdır. Ancak, denetimlerin içeriği ne olursa olsun, belirli bir boyutu korumak için istediğiniz zaman zaman. Örneğin, "Tamam" varsa, "İptal" ve "düğmeleri İçeriği sığdırmak için büyük olasılıkla istemezsiniz düğmeleri göz at". Bu durumda <xref:System.Windows.Controls.Grid.IsSharedSizeScope%2A?displayProperty=nameWithType> ekli özellik aynı boyutlandırma birden çok kılavuz öğesinin arasında paylaşmak için yararlıdır. Aşağıdaki örnek, sütun ve satır boyutlandırma birden çok arasında veri paylaşmayı gösterilmiştir <xref:System.Windows.Controls.Grid> öğeleri.
+@No__t-0 öğesi, yerelleştirilebilir uygulamalarda içeriğe uyacak şekilde ayarlanabilecek denetimler oluşturmak için faydalıdır. Ancak, her zaman, içeriklere bakılmaksızın denetimlerin belirli bir boyutunu korumasını istersiniz. Örneğin, "Tamam", "Iptal" ve "gözatmaya" düğmeleri varsa, büyük olasılıkla düğmelerin içeriğe sığması için boyutlandırılmayacağını istemezsiniz. Bu durumda <xref:System.Windows.Controls.Grid.IsSharedSizeScope%2A?displayProperty=nameWithType> eklenmiş özelliği, birden çok Grid öğesi arasında aynı boyutlandırmayı paylaşmak için yararlıdır. Aşağıdaki örnek, birden fazla <xref:System.Windows.Controls.Grid> öğesi arasında sütun ve satır boyutlandırma verilerinin nasıl paylaşılacağını gösterir.
 
 [!code-xaml[gridIssharedsizescopeProp#2](~/samples/snippets/csharp/VS_Snippets_Wpf/gridIssharedsizescopeProp/CSharp/Window1.xaml#2)]
 
 > [!NOTE]
-> Tam kod örneği için bkz. [arasında boyutlandırma özelliklerini Kılavuzlar paylaşımı](../controls/how-to-share-sizing-properties-between-grids.md)
+> Tüm kod örneği için bkz. [Kılavuzlar arasında boyutlandırma özelliklerini paylaşma](../controls/how-to-share-sizing-properties-between-grids.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

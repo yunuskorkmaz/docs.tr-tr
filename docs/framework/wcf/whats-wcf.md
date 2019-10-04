@@ -6,93 +6,93 @@ helpviewer_keywords:
 - technology overview [WCF]
 - WCF [WCF], technology overview
 ms.assetid: 40e1009d-ef15-450b-9848-62eabe5e5738
-ms.openlocfilehash: a7db79185d4445c68adda214d10be6d31f6ed9e0
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 21a01c5d59d30ac89f6baa19dbcdcf718a1b7d88
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67425107"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834845"
 ---
 # <a name="what-is-windows-communication-foundation"></a>Windows Communication Foundation nedir?
-Windows Communication Foundation (WCF) hizmet odaklı uygulamalar oluşturmaya yönelik bir çerçevedir. WCF kullanarak, verileri zaman uyumsuz ileti olarak bir hizmetin uç noktasından diğerine gönderebilirsiniz. Hizmet uç noktası, IIS tarafından barındırılan sürekli olarak kullanılabilir bir hizmetin parçası veya barındırılan bir uygulamada bir hizmet olabilir. Bir uç nokta, bir istemci bir hizmet uç noktasından verileri isteyen bir hizmet olabilir. İletileri bir tek karakter ya da XML olarak gönderilen word kadar basit veya bir ikili veri akışı gibi karmaşık olabilir. Bazı örnek senaryolar şunlardır:
+Windows Communication Foundation (WCF), hizmet yönelimli uygulamalar oluşturmaya yönelik bir çerçevedir. WCF kullanarak, verileri bir hizmet uç noktasından diğerine zaman uyumsuz iletiler olarak gönderebilirsiniz. Hizmet uç noktası, IIS tarafından barındırılan bir sürekli kullanılabilir hizmetin parçası olabilir veya bir uygulamada barındırılan bir hizmet olabilir. Uç nokta, hizmet uç noktasından veri isteyen bir hizmetin istemcisi olabilir. İletiler, tek bir karakter veya bir kelime olarak bir XML olarak gönderilebilir ya da ikili veri akışı gibi karmaşık olabilir. Birkaç örnek senaryo şunlardır:
 
-- İş işlemleri için güvenli bir hizmet.
+- İş işlemlerini işlemek için güvenli bir hizmet.
 
-- Trafik rapor ya da diğer izleme hizmeti gibi diğer kullanıcılarla, geçerli veri sağlayan bir hizmettir.
+- Trafik raporu ya da başka bir izleme hizmeti gibi geçerli verileri başkalarına sağlayan bir hizmet.
 
-- İletişim veya gerçek zamanlı veri değişimi iki kişinin sağlayan bir sohbet hizmeti.
+- İki kişinin gerçek zamanlı olarak iletişim kurmasına veya veri alışverişi yapmasına olanak tanıyan bir sohbet hizmeti.
 
-- Veriler için bir veya daha fazla hizmet yoklar ve mantıksal sunuda sunan bir Pano uygulaması.
+- Veri için bir veya daha fazla hizmeti yoklayan ve mantıksal bir sunuda sunan bir pano uygulaması.
 
-- Bir WCF hizmeti olarak Windows Workflow Foundation kullanılarak uygulanan bir iş akışı gösterme.
+- WCF hizmeti olarak Windows Workflow Foundation kullanılarak uygulanan bir iş akışını ortaya çıkarma.
 
-- Bir Silverlight uygulamasını bir hizmet için en yeni verileri yoklamak üzere akışları.
+- En son veri akışları için bir hizmeti yoklamaya yönelik bir Silverlight uygulaması.
 
-Söz konusu uygulamalar WCF varlığını önce olası oluşturulurken, WCF uç noktaları geliştirilmesini her zamankinden daha kolay hale getirir. Özet olarak, WCF Web hizmetlerini ve Web hizmeti istemcileriyle oluşturma yönetilebilir bir yaklaşım sunmak üzere tasarlanmıştır.
+Bu tür uygulamalar WCF 'nin mevcut olmasından önce mümkün olsa da WCF, uç noktaların geliştirilmesini her zamankinden daha kolay hale getirir. Özet olarak, WCF, Web Hizmetleri ve Web hizmeti istemcileri oluşturmaya yönelik yönetilebilir bir yaklaşım sunmak üzere tasarlanmıştır.
 
 ## <a name="features-of-wcf"></a>WCF özellikleri
 
-WCF aşağıdaki özellikleri içerir. Daha fazla bilgi için [WCF özellik ayrıntıları](../../../docs/framework/wcf/feature-details/index.md).
+WCF aşağıdaki özellik kümesini içerir. Daha fazla bilgi için bkz. [WCF özellik ayrıntıları](../../../docs/framework/wcf/feature-details/index.md).
 
-- **Hizmet yönlendirmesi**
+- **Hizmet yönü**
 
-     WS standartları kullanarak, bir sonucu olan WCF oluşturmanıza olanak sağlayan *hizmet odaklı* uygulamalar. Hizmet odaklı mimari (SOA) veri göndermek ve almak için Web Hizmetleri güvenme ' dir. Hizmetleri olma genel avantajı zamanı gevşek bağlanmış yerine bir uygulamadan diğerine kodlanmış vardır. Zamanı gevşek bağlanmış bir ilişki temel anlaşmalar karşılandığından sürece herhangi bir platform üzerinde oluşturulan herhangi bir istemci herhangi bir hizmete bağlanabilir anlamına gelir.
+     WS standartları kullanmanın bir sonucu olarak WCF, *hizmet yönelimli* uygulamalar oluşturmanıza olanak sağlar. Hizmet odaklı mimari (SOA), Web hizmetlerine veri gönderme ve alma konusunda rahatlıdır. Hizmetler, bir uygulamadan diğerine sabit kodlanmış olmak yerine gevşek olarak bağlanmış olmasının genel avantajına sahiptir. Gevşek olarak bağlanmış bir ilişki, herhangi bir platformda oluşturulan herhangi bir istemcinin, gerekli sözleşmelerin karşılandığı sürece herhangi bir hizmete bağlanabileceği anlamına gelir.
 
 - **Birlikte çalışabilirlik**
 
-     WCF Web hizmeti birlikte çalışabilirlik modern endüstri standartlarını uygular. Desteklenen standartları hakkında daha fazla bilgi için bkz. [birlikte çalışabilirlik ve tümleştirme](../../../docs/framework/wcf/feature-details/interoperability-and-integration.md).
+     WCF, Web hizmeti birlikte çalışabilirliği için modern endüstri standartları uygular. Desteklenen standartlar hakkında daha fazla bilgi için bkz. [birlikte çalışabilirlik ve tümleştirme](../../../docs/framework/wcf/feature-details/interoperability-and-integration.md).
 
-- **Birden çok ileti desenleri**
+- **Birden çok Ileti deseni**
 
-     İletiler çeşitli desenlerden birini değiştirilir. Burada bir uç nokta ikinci bir uç noktasından veri istekleri istek/yanıt deseni en yaygın desen var. İkinci uç nokta yanıtlar. Bir tek yönlü mesaj, tek bir uç nokta herhangi bir yanıt beklentisi olmadan bir ileti gönderir gibi diğer düzenleri vardır. Burada iki uç nokta bağlantı kurmak ve verileri geri ve ileri bir anlık Mesajlaşma programına benzer göndermesini çift yönlü değişim deseni buna daha karmaşık bir desendir. WCF kullanarak desenlerini nasıl farklı ileti değişimi uygulanacağı hakkında daha fazla bilgi için bkz [sözleşmeleri](../../../docs/framework/wcf/feature-details/contracts.md).
+     İletiler birkaç desenden birinde değiştirilir. En yaygın model, bir uç noktanın ikinci bir uç noktadan veri istediği istek/yanıt modelidir. İkinci uç nokta yanıt verir. Tek bir uç noktanın bir yanıtın beklentisi olmadan ileti gönderdiği tek yönlü ileti gibi başka desenler de vardır. Daha karmaşık bir model, iki uç noktanın bir bağlantı kurmasını ve verileri bir anlık ileti programına benzer bir şekilde geri göndermesini ve geri göndermesini sağlar. WCF kullanarak farklı ileti değişimi düzenlerini uygulama hakkında daha fazla bilgi için bkz. [sözleşmeleri](../../../docs/framework/wcf/feature-details/contracts.md).
 
 - **Hizmet meta verileri**
 
-     WCF WSDL, XML şema ve WS-Policy gibi endüstri standartlarından belirtilen biçimi kullanarak Yayımlama hizmeti meta verileri destekler. Bu meta veriler otomatik olarak oluşturmak ve WCF hizmetlerine erişmek için istemcileri yapılandırmak için kullanılabilir. Meta verileri, HTTP ve HTTPS üzerinden yayımlanabilir veya Web hizmeti meta veri değişimi standardını kullanarak. Daha fazla bilgi için [meta verileri](../../../docs/framework/wcf/feature-details/metadata.md).
+     WCF, WSDL, XML Schema ve WS-Policy gibi sektör standartlarında belirtilen biçimleri kullanarak hizmet meta verilerini yayımlamayı destekler. Bu meta veriler, WCF hizmetlerine erişim için istemcileri otomatik olarak oluşturmak ve yapılandırmak üzere kullanılabilir. Meta veriler HTTP ve HTTPS üzerinden yayımlanabilir veya Web hizmeti meta veri değişimi standardı kullanılarak yapılandırılabilir. Daha fazla bilgi için bkz. [meta veriler](../../../docs/framework/wcf/feature-details/metadata.md).
 
 - **Veri Anlaşmaları**
 
-     .NET Framework kullanarak WCF oluşturulduğundan, ayrıca kod dostu uygulamak istediğiniz sözleşmeleri sağlama yöntemleri içerir. Sözleşmeler Evrensel tür veri anlaşması biridir. Visual C# veya Visual Basic kullanarak hizmetinizin kod gibi esas olarak, verileri işlemek için en kolay yolu, veri varlığına ait özelliklere sahip bir veri varlığı temsil eden sınıflar oluşturmaktır. Bu kolay bir şekilde verilerle çalışmaya yönelik kapsamlı bir sistem WCF içerir. Verileri temsil eden sınıfları oluşturduktan sonra hizmetinizin tasarladığınız veri türleriyle uyumlu istemcilerin meta verileri otomatik olarak oluşturur. Daha fazla bilgi için [kullanarak veri sözleşmeleri](../../../docs/framework/wcf/feature-details/using-data-contracts.md)
+     WCF .NET Framework kullanılarak oluşturulduğundan, zorlamak istediğiniz sözleşmeleri sağlamaya yönelik kod kullanımı kolay yöntemler de içerir. Evrensel türdeki sözleşmeler, veri sözleşmelerinden biridir. Temelde, Visual C# veya Visual Basic kullanarak hizmetinizi kodlarınızda, verileri işlemenin en kolay yolu, veri varlığına ait özelliklerle bir veri varlığını temsil eden sınıflar oluşturmaktır. WCF, verilerle bu kolay şekilde çalışmaya yönelik kapsamlı bir sistem içerir. Verileri temsil eden sınıfları oluşturduktan sonra hizmetiniz, tasarlanan veri türleriyle uyumlu olmasını sağlayan meta verileri otomatik olarak oluşturur. Daha fazla bilgi için bkz. [Veri Sözleşmelerini Kullanma](../../../docs/framework/wcf/feature-details/using-data-contracts.md).
 
-- **Güvenlik**
+- **Security**
 
-     Gizliliğinizi korumak için iletileri şifrelenebilir ve kullanıcıların iletileri almasına izin verilmeden önce kimlik doğrulaması gerektirebilir. Güvenlik, SSL veya WS-SecureConversation gibi iyi bilinen standartları kullanarak uygulanabilir. Daha fazla bilgi için [güvenlik](../../../docs/framework/wcf/feature-details/security.md).
+     Gizli iletiler, gizliliği korumak için şifrelenebilir ve kullanıcıların ileti almasına izin verilmeden önce kimlik doğrulamasından geçmesini zorunlu kılabilirsiniz. Güvenlik, SSL veya WS-SecureConversation gibi iyi bilinen standartlar kullanılarak uygulanabilir. Daha fazla bilgi için bkz. [güvenlik](../../../docs/framework/wcf/feature-details/security.md).
 
-- **Birden çok aktarımları ve kodlamaları**
+- **Çoklu aktarımlar ve kodlamalar**
 
-     İletileri herhangi birkaç yerleşik aktarım protokolünü ve kodlamaları gönderilebilir. En sık kullanılan protokol ve kodlama olan metin kodlanmış SOAP iletilerini World Wide Web üzerinde kullanım için Köprü Metni Aktarım Protokolü (HTTP) kullanarak göndermek için. Alternatif olarak, WCF, TCP üzerinden iletileri göndermenizi sağlar kanallar veya MSMQ adlı. Bu iletiler kodlanmış metin ya da en iyi duruma getirilmiş bir ikili biçimi kullanarak.  İkili verileri verimli bir şekilde MTOM standardını kullanarak gönderilebilir. Sağlanan taşımalar veya Kodlamalar hiçbiri gereksinimlerinize uygun değilse kendi özel oluşturabilirsiniz taşıma veya kodlama. Aktarım ve WCF tarafından desteklenen Kodlamalar hakkında daha fazla bilgi için bkz. [taşımalar](../../../docs/framework/wcf/feature-details/transports.md).
+     İletiler, çeşitli yerleşik taşıma protokollerinden ve kodlamalarda gönderilebilir. En yaygın protokol ve kodlama, World Wide Web kullanım için Köprü Metni Aktarım Protokolü (HTTP) kullanarak metin kodlu SOAP iletileri göndermektir. Alternatif olarak, WCF TCP, adlandırılmış kanallar veya MSMQ üzerinden iletiler göndermenizi sağlar. Bu iletiler metin olarak kodlanabilir veya iyileştirilmiş bir ikili biçimi kullanıyor olabilir.  İkili veriler, MTOM standardı kullanılarak verimli bir şekilde gönderilebilir. Belirtilen aktarımların veya kodlamaların hiçbiri ihtiyaçlarınıza uygun değilse kendi özel bir aktarım veya kodlama oluşturabilirsiniz. WCF tarafından desteklenen aktarımlar ve kodlamalar hakkında daha fazla bilgi için bkz. [taşımalar](../../../docs/framework/wcf/feature-details/transports.md).
 
-- **Güvenilir ve kuyruğa alınmış iletileri**
+- **Güvenilir ve kuyruğa alınan Iletiler**
 
-     WCF WS-Reliable Mesajlaşma uygulanan ve MSMQ kullanarak güvenilir oturumlar kullanan güvenilir ileti alışverişi destekler. Wcf'de güvenilir ve kuyruğa alınan Mesajlaşma desteği hakkında daha fazla bilgi için bkz. [kuyruklar ve güvenilir oturumlar](../../../docs/framework/wcf/feature-details/queues-and-reliable-sessions.md).
+     WCF, WS-güvenilir mesajlaşma ve MSMQ kullanılarak uygulanan güvenilir oturumları kullanarak güvenilir ileti değişimini destekler. WCF 'de güvenilir ve kuyruğa alınmış mesajlaşma desteği hakkında daha fazla bilgi için bkz. [Kuyruklar ve güvenilir oturumlar](../../../docs/framework/wcf/feature-details/queues-and-reliable-sessions.md).
 
-- **Dayanıklı ileti**
+- **Dayanıklı Iletiler**
 
-     Dayanıklı ileti asla iletişim kesinti nedeniyle kayıp biridir. Dayanıklı ileti deseni iletilerin her zaman bir veritabanına kaydedilir. Bir kesinti oluşursa, veritabanı bağlantı geri geldiğinde, iletiyi exchange sürdürmek sağlar. Ayrıca, Windows Workflow Foundation (WF) kullanarak dayanıklı ileti oluşturabilirsiniz. Daha fazla bilgi için [iş akışı Hizmetleri](../../../docs/framework/wcf/feature-details/workflow-services.md).
+     Dayanıklı bir ileti, iletişimdeki kesintiden dolayı hiçbir şekilde kaybedilmez. Dayanıklı bir ileti düzenindeki iletiler her zaman bir veritabanına kaydedilir. Bir kesinti oluşursa, veritabanı bağlantı geri yüklendiğinde ileti değişimini sürdürmeniz için izin verir. Windows Workflow Foundation (WF) kullanarak da dayanıklı bir ileti oluşturabilirsiniz. Daha fazla bilgi için bkz. [Workflow Services](../../../docs/framework/wcf/feature-details/workflow-services.md).
 
 - **İşlemler**
 
-     WCF işlem üç işlem modeli kullanarak da destekler: WS-AtomicTransactions, API'leri <xref:System.Transactions> ad ve Microsoft Dağıtılmış İşlem Düzenleyicisi. Wcf'de destek işlem hakkında daha fazla bilgi için bkz [işlemleri](../../../docs/framework/wcf/feature-details/transactions-in-wcf.md).
+     WCF Ayrıca üç işlem modelinden birini kullanarak işlemleri destekler: WS-AtomicTransactions, <xref:System.Transactions> ad alanındaki API 'Ler ve Microsoft Dağıtılmış İşlem Düzenleyicisi. WCF 'de işlem desteği hakkında daha fazla bilgi için bkz. [işlemler](../../../docs/framework/wcf/feature-details/transactions-in-wcf.md).
 
 - **AJAX ve REST desteği**
 
-     REST, gelişen bir Web 2.0 teknolojisini örneğidir. WCF bir SOAP Zarfı içinde sarmalanmamış "Düz" XML verileri işlemek için yapılandırılabilir. WCF ayrıca ATOM (bir popüler RSS standart) ve JavaScript nesne gösterimi (JSON) gibi bile XML olmayan biçimleri gibi belirli XML Biçimleri destekleyecek şekilde genişletilebilir.
+     REST, gelişen Web 2,0 teknolojisine bir örnektir. WCF, bir SOAP zarfında sarmalanmamış "düz" XML verilerini işleyecek şekilde yapılandırılabilir. WCF Ayrıca, ATOM (popüler bir RSS standardı) gibi belirli XML biçimlerini ve hatta JavaScript Nesne Gösterimi (JSON) gibi XML olmayan biçimleri desteklemek için de genişletilebilir.
 
 - **Genişletilebilirlik**
 
-     WCF mimarisinin bir dizi genişletilebilirlik noktaları vardır. Fazladan yetenek gerekiyorsa, bir hizmet davranışını özelleştirmenizi giriş noktaları sayısı vardır. Kullanılabilir genişletilebilirlik hakkında daha fazla bilgi için bkz: noktaları [genişletme WCF](../../../docs/framework/wcf/extending/index.md).
+     WCF mimarisi birçok genişletilebilirlik noktasına sahiptir. Ek yetenek gerekliyse, bir hizmetin davranışını özelleştirmenizi sağlayan çeşitli giriş noktaları vardır. Kullanılabilir genişletilebilirlik noktaları hakkında daha fazla bilgi için bkz. [WCF genişletme](../../../docs/framework/wcf/extending/index.md).
 
-## <a name="wcf-integration-with-other-microsoft-technologies"></a>Diğer Microsoft teknolojileri ile WCF tümleştirmesi
+## <a name="wcf-integration-with-other-microsoft-technologies"></a>Diğer Microsoft teknolojileriyle WCF tümleştirmesi
 
-WCF esnek bir platformdur. Bu aşırı esnekliği sunmamız nedeniyle, WCF, diğer Microsoft ürünlerinde birkaç de kullanılır. WCF ile ilgili temel bilgileri anlayarak, ayrıca bu ürünlerden birini kullanırsanız hemen bir avantajı da vardır.
+WCF, esnek bir platformdur. Bu aşırı esneklik nedeniyle, WCF diğer birçok Microsoft ürününde de kullanılır. WCF temel bilgilerini öğrenerek, bu ürünlerden herhangi birini de kullanıyorsanız, hemen avantajınız vardır.
 
-WCF ile kullanmak üzere ilk teknoloji Windows Workflow Foundation (WF) oluştu. İş akışları uygulama geliştirmeyi kapsayan iş akışı adımları olarak "etkinlikler" basitleştirin Windows Workflow Foundation'ın ilk sürümünde, iş akışı için bir ana bilgisayar oluşturmak bir geliştirici vardı. WCF ile tümleşik Windows Workflow Foundation'ın sonraki sürümü. Bir WCF Hizmeti kolayca barındırılması herhangi bir iş akışının izin verilir. Visual Studio 2012 veya sonraki bir sürümde WF/WCF proje türü otomatik olarak seçerek bunu yapabilirsiniz.
+WCF ile eşleştirmeye yönelik ilk teknoloji Windows Workflow Foundation (WF) idi. İş akışları, iş akışındaki adımları "Etkinlikler" olarak kapsülleyerek uygulama geliştirmeyi basitleştirir. Windows Workflow Foundation ilk sürümünde, bir geliştiricinin iş akışı için bir konak oluşturması gerekiyordu. Windows Workflow Foundation sonraki sürümü WCF ile tümleştirildi. Bu, herhangi bir iş akışının bir WCF hizmetinde kolayca barındırılmasına izin verilir. Bunu, Visual Studio 2012 veya sonraki sürümlerde WF/WCF proje türünü otomatik olarak seçerek yapabilirsiniz.
 
-Microsoft BizTalk Server R2, ayrıca WCF iletişim teknolojisi olarak kullanır. BizTalk alma ve standartlaştırılmış bir biçimden diğerine dönüştürme tasarlanmıştır. İleti Merkezi ileti kutusu için ileti katı bir eşleme kullanılarak dönüştürülüp veya kendi iş akışı altyapısı gibi BizTalk özellikleri birini kullanarak teslim edilmelidir. BizTalk artık ileti kutusuna iletileri ulaştırmak üzere WCF satır iş kolu (LOB) Bağdaştırıcısı'nı kullanabilirsiniz.
+Microsoft BizTalk Server R2 Ayrıca WCF 'yi bir iletişim teknolojisi olarak kullanır. BizTalk, verileri standartlaştırılmış bir biçimden diğerine alıp dönüştürmek üzere tasarlanmıştır. İletiler, iletinin katı eşleme kullanılarak veya iş akışı altyapısı gibi BizTalk özelliklerinden biri kullanılarak dönüştürülebileceği merkezi ileti kutusuna teslim alınmalıdır. BizTalk, ileti kutusuna ileti teslim etmek için artık WCF Iş kolu (LOB) bağdaştırıcı kullanabilir.
 
-Microsoft Silverlight geliştiriciler (örneğin, video akışı) medya yoğunluklu Web siteleri oluşturmasına imkan tanıyan birlikte çalışabilir ve zengin Web uygulamaları oluşturmaya yönelik bir platformdur. Sürüm 2 ile başlayarak, Silverlight, WCF bitiş noktalarını Silverlight uygulamalarını bağlamak için iletişim teknolojisi olarak WCF yaptıysa.
+Microsoft Silverlight, geliştiricilerin medya yoğun Web siteleri (örneğin, akış videosu) oluşturmalarına olanak tanıyan, birlikte çalışabilen zengin Web uygulamaları oluşturmaya yönelik bir platformdur. Sürüm 2 ' den başlayarak, Silverlight, Silverlight uygulamalarını WCF uç noktalarına bağlamaya yönelik bir iletişim teknolojisi olarak WCF 'yi içerir.
 
-Uygulama sunucusu Windows Server AppFabric barındırma özellikleri iletişimi için WCF kullanan uygulamaları dağıtma ve yönetme için özel olarak tasarlanmıştır. Barındırma özellikleri, WCF özellikli uygulamalar için özel olarak tasarlanmış zengin araç ve yapılandırma seçenekleri içerir.
+Windows Server AppFabric uygulama sunucusunun barındırma özellikleri, iletişim için WCF kullanan uygulamaları dağıtmak ve yönetmek için özel olarak tasarlanmıştır. Barındırma özellikleri, WCF özellikli uygulamalar için özel olarak tasarlanmış zengin araç ve yapılandırma seçeneklerini içerir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

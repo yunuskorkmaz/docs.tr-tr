@@ -1,15 +1,15 @@
 ---
-title: 'Nasıl yapılır: Dinamik Güncelleştirme'
+title: 'Nasıl yapılır: Dinamik Güncelleme'
 ms.date: 03/30/2017
 ms.assetid: 9b8f6e0d-edab-4a7e-86e3-8c66bebc64bb
-ms.openlocfilehash: 0a103e980d0d1be08f3ae6850c6af64405582c7b
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 95d99afd09daf4d9bf3937a71d7773332ff1bc14
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972084"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834717"
 ---
-# <a name="how-to-dynamic-update"></a>Nasıl yapılır: Dinamik Güncelleştirme
+# <a name="how-to-dynamic-update"></a>Nasıl yapılır: Dinamik Güncelleme
 Bu konuda, yönlendirme yapılandırmasını oluşturmak ve dinamik olarak güncelleştirmek için gereken temel adımlar özetlenmektedir. Bu örnekte, ilk yönlendirme yapılandırması yapılandırma dosyasından alınır ve tüm iletileri regularCalc Hesaplayıcı hizmetine yönlendirir; Ancak, bu daha sonra kaynak uç noktasını roundingCalc hizmeti değiştirmek için programlı olarak güncelleştirilir.  
   
 > [!NOTE]
@@ -18,7 +18,7 @@ Bu konuda, yönlendirme yapılandırmasını oluşturmak ve dinamik olarak günc
 > [!NOTE]
 > Dinamik güncelleştirmeler yalnızca bellekte oluşur ve yapılandırma dosyalarının değiştirilmesine neden olmaz.  
   
- Hem regularCalc hem de roundingCalc, ekleme, çıkarma, çarpma ve bölme işlemlerini destekler; Ancak roundingCalc, döndürmeden önce tüm hesaplamaları en yakın tamsayı değerine yuvarlar. Bir yapılandırma dosyası, tüm iletileri regularCalc hizmetine yönlendirmek üzere hizmetini yapılandırmak için kullanılır. Yönlendirme hizmeti başlatıldıktan sonra, <xref:System.ServiceModel.Routing.RoutingExtension.ApplyConfiguration%2A> iletileri roundingcalc hizmetine yönlendirmek üzere hizmeti yeniden yapılandırmak için kullanılır.  
+ Hem regularCalc hem de roundingCalc, ekleme, çıkarma, çarpma ve bölme işlemlerini destekler; Ancak roundingCalc, döndürmeden önce tüm hesaplamaları en yakın tamsayı değerine yuvarlar. Bir yapılandırma dosyası, tüm iletileri regularCalc hizmetine yönlendirmek üzere hizmetini yapılandırmak için kullanılır. Yönlendirme hizmeti başlatıldıktan sonra, iletileri roundingCalc hizmetine yönlendirmek üzere hizmeti yeniden yapılandırmak için <xref:System.ServiceModel.Routing.RoutingExtension.ApplyConfiguration%2A> kullanılır.  
   
 ### <a name="implement-initial-configuration"></a>Ilk yapılandırmayı Uygula  
   
@@ -78,7 +78,7 @@ Bu konuda, yönlendirme yapılandırmasını oluşturmak ve dinamik olarak günc
     ```  
   
 ## <a name="implement-dynamic-configuration"></a>Dinamik yapılandırmayı Uygula  
- Yönlendirme hizmetinin dinamik yapılandırması yalnızca yeni <xref:System.ServiceModel.Routing.RoutingConfiguration> bir oluşturma ve geçerli yapılandırmayı değiştirmek için kullanılarak <xref:System.ServiceModel.Routing.RoutingExtension.ApplyConfiguration%2A> kod içinde gerçekleştirilebilir.  Bu örnekte, yönlendirme hizmeti bir konsol uygulaması içinde kendiliğinden barındırılır. Uygulama başladıktan sonra, iletilerin yönlendirildiği hedef uç noktasını yapılandırmak için konsol penceresine ' Regular ' veya ' yuvarla ' girerek yönlendirme yapılandırmasını değiştirebilirsiniz; ' Regular ' girildiğinde regularCalc, aksi takdirde, ' yuvarlama ' girildiğinde roundingCalc.  
+ Yönlendirme hizmetinin dinamik yapılandırması yalnızca yeni bir <xref:System.ServiceModel.Routing.RoutingConfiguration> oluşturarak ve geçerli yapılandırmayı değiştirmek için <xref:System.ServiceModel.Routing.RoutingExtension.ApplyConfiguration%2A> kullanılarak kod içinde gerçekleştirilebilir.  Bu örnekte, yönlendirme hizmeti bir konsol uygulaması içinde kendiliğinden barındırılır. Uygulama başladıktan sonra, iletilerin yönlendirildiği hedef uç noktasını yapılandırmak için konsol penceresine ' Regular ' veya ' yuvarla ' girerek yönlendirme yapılandırmasını değiştirebilirsiniz; ' Regular ' girildiğinde regularCalc, aksi takdirde, ' yuvarlama ' girildiğinde roundingCalc.  
   
 1. Yönlendirme hizmetini desteklemek için aşağıdaki using deyimleri eklenmelidir.  
   
@@ -117,7 +117,7 @@ Bu konuda, yönlendirme yapılandırmasını oluşturmak ve dinamik olarak günc
     }  
     ```  
   
-3. Yönlendirme yapılandırmasını dinamik olarak güncelleştirmek için yeni bir yönlendirme yapılandırmasının oluşturulması gerekir. Bu, mevcut yönlendirme yapılandırmasının tamamen yerini alacak şekilde, yeni yönlendirme yapılandırması için gereken tüm uç noktaları, filtreleri ve filtre tablolarını içermelidir. Yeni yönlendirme yapılandırmasını kullanmak için yeni yapılandırmayı çağırmanız <xref:System.ServiceModel.Routing.RoutingExtension.ApplyConfiguration%2A> ve geçirmeniz gerekir.  
+3. Yönlendirme yapılandırmasını dinamik olarak güncelleştirmek için yeni bir yönlendirme yapılandırmasının oluşturulması gerekir. Bu, mevcut yönlendirme yapılandırmasının tamamen yerini alacak şekilde, yeni yönlendirme yapılandırması için gereken tüm uç noktaları, filtreleri ve filtre tablolarını içermelidir. Yeni yönlendirme yapılandırmasını kullanmak için, <xref:System.ServiceModel.Routing.RoutingExtension.ApplyConfiguration%2A> ' ı çağırmanız ve yeni yapılandırmayı geçirmeniz gerekir.  
   
      Hizmetin kullanıcı girişine göre yeniden yapılandırılması için aşağıdaki kodu daha önce tanımlanan while döngüsüne ekleyin.  
   
@@ -163,7 +163,8 @@ Bu konuda, yönlendirme yapılandırmasını oluşturmak ve dinamik olarak günc
     > Yeni bir RoutingConfiguration sağlamaya yönelik Yöntem RoutingExtension hizmeti uzantısında yer aldığı için, yeni RoutingConfiguration nesneleri, veya ServiceHost öğesine bir başvuru elde eden ya da alabileceği WCF genişletilebilirlik modeli içinde sağlanabilir ServiceExtensions (örneğin, başka bir ServiceExtension).
   
 ## <a name="example"></a>Örnek  
- Aşağıda, bu örnekte kullanılan konsol uygulamasının tamamen bir listesi verilmiştir.  
+
+Bu örnekte kullanılan konsol uygulamasının tüm listesi aşağıda verilmiştir:
   
 ```csharp
 //-----------------------------------------------------------------  
@@ -241,7 +242,8 @@ namespace Microsoft.Samples.AdvancedFilters
 ```  
   
 ## <a name="example"></a>Örnek  
- Aşağıda, bu örnekte kullanılan yapılandırma dosyasının tamamen bir listesi verilmiştir.  
+ 
+Aşağıda, bu örnekte kullanılan yapılandırma dosyasının tamamen bir listesi verilmiştir:
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -298,4 +300,4 @@ namespace Microsoft.Samples.AdvancedFilters
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Yönlendirme Hizmetleri](../../../../docs/framework/wcf/samples/routing-services.md)
+- [Yönlendirme Hizmetleri](../samples/routing-services.md)
