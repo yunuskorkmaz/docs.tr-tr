@@ -12,82 +12,88 @@ helpviewer_keywords:
 - program termination
 - execution [Visual Basic], stopping
 ms.assetid: 760bfb32-5c3f-4bdb-a432-9a6001c92db7
-ms.openlocfilehash: 1f386694bd7425ee530b9305ab684b730f9b73c8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9c25653809c51662ea5b606ab97be6a9b50d5986
+ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61638122"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71956941"
 ---
-# <a name="exit-statement-visual-basic"></a><span data-ttu-id="a5630-102">Exit Deyimi (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a5630-102">Exit Statement (Visual Basic)</span></span>
-<span data-ttu-id="a5630-103">Bir yordam ya da bloktan çıkıp ve denetim yordam çağrısı ya da blok tanımının takiben deyime hemen aktarır.</span><span class="sxs-lookup"><span data-stu-id="a5630-103">Exits a procedure or block and transfers control immediately to the statement following the procedure call or the block definition.</span></span>  
-  
-## <a name="syntax"></a><span data-ttu-id="a5630-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="a5630-104">Syntax</span></span>  
-  
-```  
-Exit { Do | For | Function | Property | Select | Sub | Try | While }  
-```  
-  
-## <a name="statements"></a><span data-ttu-id="a5630-105">Deyimler</span><span class="sxs-lookup"><span data-stu-id="a5630-105">Statements</span></span>  
- `Exit Do`  
- <span data-ttu-id="a5630-106">Hemen çıkar `Do` döngü, bunu görünür.</span><span class="sxs-lookup"><span data-stu-id="a5630-106">Immediately exits the `Do` loop in which it appears.</span></span> <span data-ttu-id="a5630-107">Yürütme devam eder, deyimi aşağıdaki `Loop` deyimi.</span><span class="sxs-lookup"><span data-stu-id="a5630-107">Execution continues with the statement following the `Loop` statement.</span></span> <span data-ttu-id="a5630-108">`Exit Do` yalnızca içinde kullanılan bir `Do` döngü.</span><span class="sxs-lookup"><span data-stu-id="a5630-108">`Exit Do` can be used only inside a `Do` loop.</span></span> <span data-ttu-id="a5630-109">Kullanıldığında içinde iç içe geçmiş `Do` döngüleri `Exit Do` en içteki döngüden çıkılıp ve yüksek düzeye iç içe aktarır.</span><span class="sxs-lookup"><span data-stu-id="a5630-109">When used within nested `Do` loops, `Exit Do` exits the innermost loop and transfers control to the next higher level of nesting.</span></span>  
-  
- `Exit For`  
- <span data-ttu-id="a5630-110">Hemen çıkar `For` döngü, bunu görünür.</span><span class="sxs-lookup"><span data-stu-id="a5630-110">Immediately exits the `For` loop in which it appears.</span></span> <span data-ttu-id="a5630-111">Yürütme devam eder, deyimi aşağıdaki `Next` deyimi.</span><span class="sxs-lookup"><span data-stu-id="a5630-111">Execution continues with the statement following the `Next` statement.</span></span> <span data-ttu-id="a5630-112">`Exit For` yalnızca içinde kullanılan bir `For`... `Next` veya `For Each`... `Next` döngü.</span><span class="sxs-lookup"><span data-stu-id="a5630-112">`Exit For` can be used only inside a `For`...`Next` or `For Each`...`Next` loop.</span></span> <span data-ttu-id="a5630-113">Kullanıldığında içinde iç içe geçmiş `For` döngüleri `Exit For` en içteki döngüden çıkılıp ve yüksek düzeye iç içe aktarır.</span><span class="sxs-lookup"><span data-stu-id="a5630-113">When used within nested `For` loops, `Exit For` exits the innermost loop and transfers control to the next higher level of nesting.</span></span>  
-  
- `Exit Function`  
- <span data-ttu-id="a5630-114">Hemen çıkar `Function` göründüğü yordamı.</span><span class="sxs-lookup"><span data-stu-id="a5630-114">Immediately exits the `Function` procedure in which it appears.</span></span> <span data-ttu-id="a5630-115">Yürütme devam eder, adlı deyiminin sonrasındaki deyime ile `Function` yordamı.</span><span class="sxs-lookup"><span data-stu-id="a5630-115">Execution continues with the statement following the statement that called the `Function` procedure.</span></span> <span data-ttu-id="a5630-116">`Exit Function` yalnızca içinde kullanılan bir `Function` yordamı.</span><span class="sxs-lookup"><span data-stu-id="a5630-116">`Exit Function` can be used only inside a `Function` procedure.</span></span>  
-  
- <span data-ttu-id="a5630-117">Dönüş değeri belirtmek için değer önce bir satırda işlevi adı atayabilirsiniz `Exit Function` deyimi.</span><span class="sxs-lookup"><span data-stu-id="a5630-117">To specify a return value, you can assign the value to the function name on a line before the `Exit Function` statement.</span></span> <span data-ttu-id="a5630-118">Dönüş değeri atamak ve bir deyim işlev çıkmak için bunun yerine kullanabileceğiniz [dönüş deyimi](../../../visual-basic/language-reference/statements/return-statement.md).</span><span class="sxs-lookup"><span data-stu-id="a5630-118">To assign the return value and exit the function in one statement, you can instead use the [Return Statement](../../../visual-basic/language-reference/statements/return-statement.md).</span></span>  
-  
- `Exit Property`  
- <span data-ttu-id="a5630-119">Hemen çıkar `Property` göründüğü yordamı.</span><span class="sxs-lookup"><span data-stu-id="a5630-119">Immediately exits the `Property` procedure in which it appears.</span></span> <span data-ttu-id="a5630-120">Yürütme devam eder, çağrılan deyimiyle `Property` yordamı, diğer bir deyişle, isteme veya özelliğin değerini ayarlamak deyimi.</span><span class="sxs-lookup"><span data-stu-id="a5630-120">Execution continues with the statement that called the `Property` procedure, that is, with the statement requesting or setting the property's value.</span></span> <span data-ttu-id="a5630-121">`Exit Property` yalnızca bir özelliğin içinde kullanılabilir `Get` veya `Set` yordamı.</span><span class="sxs-lookup"><span data-stu-id="a5630-121">`Exit Property` can be used only inside a property's `Get` or `Set` procedure.</span></span>  
-  
- <span data-ttu-id="a5630-122">Bir dönüş değeri belirtmek için bir `Get` yordamı, önce bir satırda işlevi adı değeri atayabilir `Exit Property` deyimi.</span><span class="sxs-lookup"><span data-stu-id="a5630-122">To specify a return value in a `Get` procedure, you can assign the value to the function name on a line before the `Exit Property` statement.</span></span> <span data-ttu-id="a5630-123">Çıkış ve dönüş değeri atamak `Get` bir deyim yordamda, bunun yerine kullanabileceğiniz `Return` deyimi.</span><span class="sxs-lookup"><span data-stu-id="a5630-123">To assign the return value and exit the `Get` procedure in one statement, you can instead use the `Return` statement.</span></span>  
-  
- <span data-ttu-id="a5630-124">İçinde bir `Set` yordamı `Exit Property` deyimi, `Return` deyimi.</span><span class="sxs-lookup"><span data-stu-id="a5630-124">In a `Set` procedure, the `Exit Property` statement is equivalent to the `Return` statement.</span></span>  
-  
- `Exit Select`  
- <span data-ttu-id="a5630-125">Hemen çıkar `Select Case` hangi görünmesini engelleyin.</span><span class="sxs-lookup"><span data-stu-id="a5630-125">Immediately exits the `Select Case` block in which it appears.</span></span> <span data-ttu-id="a5630-126">Yürütme devam eder, deyimi aşağıdaki `End Select` deyimi.</span><span class="sxs-lookup"><span data-stu-id="a5630-126">Execution continues with the statement following the `End Select` statement.</span></span> <span data-ttu-id="a5630-127">`Exit Select` yalnızca içinde kullanılan bir `Select Case` deyimi.</span><span class="sxs-lookup"><span data-stu-id="a5630-127">`Exit Select` can be used only inside a `Select Case` statement.</span></span>  
-  
- `Exit Sub`  
- <span data-ttu-id="a5630-128">Hemen çıkar `Sub` göründüğü yordamı.</span><span class="sxs-lookup"><span data-stu-id="a5630-128">Immediately exits the `Sub` procedure in which it appears.</span></span> <span data-ttu-id="a5630-129">Yürütme devam eder, adlı deyiminin sonrasındaki deyime ile `Sub` yordamı.</span><span class="sxs-lookup"><span data-stu-id="a5630-129">Execution continues with the statement following the statement that called the `Sub` procedure.</span></span> <span data-ttu-id="a5630-130">`Exit Sub` yalnızca içinde kullanılan bir `Sub` yordamı.</span><span class="sxs-lookup"><span data-stu-id="a5630-130">`Exit Sub` can be used only inside a `Sub` procedure.</span></span>  
-  
- <span data-ttu-id="a5630-131">İçinde bir `Sub` yordamı `Exit Sub` deyimi, `Return` deyimi.</span><span class="sxs-lookup"><span data-stu-id="a5630-131">In a `Sub` procedure, the `Exit Sub` statement is equivalent to the `Return` statement.</span></span>  
-  
- `Exit Try`  
- <span data-ttu-id="a5630-132">Hemen çıkar `Try` veya `Catch` hangi görünmesini engelleyin.</span><span class="sxs-lookup"><span data-stu-id="a5630-132">Immediately exits the `Try` or `Catch` block in which it appears.</span></span> <span data-ttu-id="a5630-133">Yürütme devam eder ile `Finally` varsa veya deyimi aşağıdaki `End Try` deyimi Aksi takdirde.</span><span class="sxs-lookup"><span data-stu-id="a5630-133">Execution continues with the `Finally` block if there is one, or with the statement following the `End Try` statement otherwise.</span></span> <span data-ttu-id="a5630-134">`Exit Try` yalnızca içinde kullanılan bir `Try` veya `Catch` bloğu ve değil iç bir `Finally` blok.</span><span class="sxs-lookup"><span data-stu-id="a5630-134">`Exit Try` can be used only inside a `Try` or `Catch` block, and not inside a `Finally` block.</span></span>  
-  
- `Exit While`  
- <span data-ttu-id="a5630-135">Hemen çıkar `While` döngü, bunu görünür.</span><span class="sxs-lookup"><span data-stu-id="a5630-135">Immediately exits the `While` loop in which it appears.</span></span> <span data-ttu-id="a5630-136">Yürütme devam eder, deyimi aşağıdaki `End While` deyimi.</span><span class="sxs-lookup"><span data-stu-id="a5630-136">Execution continues with the statement following the `End While` statement.</span></span> <span data-ttu-id="a5630-137">`Exit While` yalnızca içinde kullanılan bir `While` döngü.</span><span class="sxs-lookup"><span data-stu-id="a5630-137">`Exit While` can be used only inside a `While` loop.</span></span> <span data-ttu-id="a5630-138">Kullanıldığında içinde iç içe geçmiş `While` döngüleri `Exit While` döngü yukarıda bir iç içe düzeyi döngü denetim aktarır burada `Exit While` gerçekleşir.</span><span class="sxs-lookup"><span data-stu-id="a5630-138">When used within nested `While` loops, `Exit While` transfers control to the loop that is one nested level above the loop where `Exit While` occurs.</span></span>  
-  
-## <a name="remarks"></a><span data-ttu-id="a5630-139">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="a5630-139">Remarks</span></span>  
- <span data-ttu-id="a5630-140">Karıştırmayın `Exit` ifadelerle `End` deyimleri.</span><span class="sxs-lookup"><span data-stu-id="a5630-140">Do not confuse `Exit` statements with `End` statements.</span></span> <span data-ttu-id="a5630-141">`Exit` bir deyim sonu tanımlamıyor.</span><span class="sxs-lookup"><span data-stu-id="a5630-141">`Exit` does not define the end of a statement.</span></span>  
-  
-## <a name="example"></a><span data-ttu-id="a5630-142">Örnek</span><span class="sxs-lookup"><span data-stu-id="a5630-142">Example</span></span>  
- <span data-ttu-id="a5630-143">Aşağıdaki örnekte, döngü koşuluna döngü durdurur, `index` değişkendir 100'den büyük.</span><span class="sxs-lookup"><span data-stu-id="a5630-143">In the following example, the loop condition stops the loop when the `index` variable is greater than 100.</span></span> <span data-ttu-id="a5630-144">`If` Döngü deyimi ancak neden `Exit Do` döngüyü dizin değişkeni 10'dan büyük olduğunda durdurmak için deyimi.</span><span class="sxs-lookup"><span data-stu-id="a5630-144">The `If` statement in the loop, however, causes the `Exit Do` statement to stop the loop when the index variable is greater than 10.</span></span>  
-  
- [!code-vb[VbVbalrStatements#133](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class10.vb#133)]  
-  
-## <a name="example"></a><span data-ttu-id="a5630-145">Örnek</span><span class="sxs-lookup"><span data-stu-id="a5630-145">Example</span></span>  
- <span data-ttu-id="a5630-146">Aşağıdaki örnek, işlev adını dönüş değeri atar `myFunction`ve ardından `Exit Function` işlevden döndürülecek.</span><span class="sxs-lookup"><span data-stu-id="a5630-146">The following example assigns the return value to the function name `myFunction`, and then uses `Exit Function` to return from the function.</span></span>  
-  
- [!code-vb[VbVbalrStatements#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#23)]  
-  
-## <a name="example"></a><span data-ttu-id="a5630-147">Örnek</span><span class="sxs-lookup"><span data-stu-id="a5630-147">Example</span></span>  
- <span data-ttu-id="a5630-148">Aşağıdaki örnekte [dönüş deyimi](../../../visual-basic/language-reference/statements/return-statement.md) dönüş değerini atayın ve işlev çıkın.</span><span class="sxs-lookup"><span data-stu-id="a5630-148">The following example uses the [Return Statement](../../../visual-basic/language-reference/statements/return-statement.md) to assign the return value and exit the function.</span></span>  
-  
- [!code-vb[VbVbalrStatements#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#24)]  
-  
-## <a name="see-also"></a><span data-ttu-id="a5630-149">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="a5630-149">See also</span></span>
+# <a name="exit-statement-visual-basic"></a><span data-ttu-id="7c0e9-102">Exit Deyimi (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="7c0e9-102">Exit Statement (Visual Basic)</span></span>
 
-- [<span data-ttu-id="a5630-150">Continue Deyimi</span><span class="sxs-lookup"><span data-stu-id="a5630-150">Continue Statement</span></span>](../../../visual-basic/language-reference/statements/continue-statement.md)
-- [<span data-ttu-id="a5630-151">Do...Loop Deyimi</span><span class="sxs-lookup"><span data-stu-id="a5630-151">Do...Loop Statement</span></span>](../../../visual-basic/language-reference/statements/do-loop-statement.md)
-- [<span data-ttu-id="a5630-152">End Deyimi</span><span class="sxs-lookup"><span data-stu-id="a5630-152">End Statement</span></span>](../../../visual-basic/language-reference/statements/end-statement.md)
-- [<span data-ttu-id="a5630-153">For Each...Next Deyimi</span><span class="sxs-lookup"><span data-stu-id="a5630-153">For Each...Next Statement</span></span>](../../../visual-basic/language-reference/statements/for-each-next-statement.md)
-- [<span data-ttu-id="a5630-154">For...Next Deyimi</span><span class="sxs-lookup"><span data-stu-id="a5630-154">For...Next Statement</span></span>](../../../visual-basic/language-reference/statements/for-next-statement.md)
-- [<span data-ttu-id="a5630-155">Function Deyimi</span><span class="sxs-lookup"><span data-stu-id="a5630-155">Function Statement</span></span>](../../../visual-basic/language-reference/statements/function-statement.md)
-- [<span data-ttu-id="a5630-156">Return Deyimi</span><span class="sxs-lookup"><span data-stu-id="a5630-156">Return Statement</span></span>](../../../visual-basic/language-reference/statements/return-statement.md)
-- [<span data-ttu-id="a5630-157">Stop Deyimi</span><span class="sxs-lookup"><span data-stu-id="a5630-157">Stop Statement</span></span>](../../../visual-basic/language-reference/statements/stop-statement.md)
-- [<span data-ttu-id="a5630-158">Sub Deyimi</span><span class="sxs-lookup"><span data-stu-id="a5630-158">Sub Statement</span></span>](../../../visual-basic/language-reference/statements/sub-statement.md)
-- [<span data-ttu-id="a5630-159">Try...Catch...Finally Deyimi</span><span class="sxs-lookup"><span data-stu-id="a5630-159">Try...Catch...Finally Statement</span></span>](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
+<span data-ttu-id="7c0e9-103">Bir yordam veya bloğundan çıkar ve denetimi yordam çağrısının veya blok tanımının ardından gelen deyime hemen aktarır.</span><span class="sxs-lookup"><span data-stu-id="7c0e9-103">Exits a procedure or block and transfers control immediately to the statement following the procedure call or the block definition.</span></span>
+
+## <a name="syntax"></a><span data-ttu-id="7c0e9-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="7c0e9-104">Syntax</span></span>
+
+```vb
+Exit { Do | For | Function | Property | Select | Sub | Try | While }
+```
+
+## <a name="statements"></a><span data-ttu-id="7c0e9-105">Deyimler</span><span class="sxs-lookup"><span data-stu-id="7c0e9-105">Statements</span></span>
+
+ `Exit Do`  
+ <span data-ttu-id="7c0e9-106">Görüntülenen `Do` döngüsünden hemen çıkar.</span><span class="sxs-lookup"><span data-stu-id="7c0e9-106">Immediately exits the `Do` loop in which it appears.</span></span> <span data-ttu-id="7c0e9-107">Yürütme `Loop` ifadesiyle sonraki deyimle devam eder.</span><span class="sxs-lookup"><span data-stu-id="7c0e9-107">Execution continues with the statement following the `Loop` statement.</span></span> <span data-ttu-id="7c0e9-108">`Exit Do`, yalnızca bir `Do` döngüsü içinde kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="7c0e9-108">`Exit Do` can be used only inside a `Do` loop.</span></span> <span data-ttu-id="7c0e9-109">İç içe `Do` döngüleri içinde kullanıldığında, `Exit Do` en içteki döngüden çıkar ve denetimi sonraki daha yüksek iç içe geçme düzeyine aktarır.</span><span class="sxs-lookup"><span data-stu-id="7c0e9-109">When used within nested `Do` loops, `Exit Do` exits the innermost loop and transfers control to the next higher level of nesting.</span></span>
+
+ `Exit For`  
+ <span data-ttu-id="7c0e9-110">Görüntülenen `For` döngüsünden hemen çıkar.</span><span class="sxs-lookup"><span data-stu-id="7c0e9-110">Immediately exits the `For` loop in which it appears.</span></span> <span data-ttu-id="7c0e9-111">Yürütme `Next` ifadesiyle sonraki deyimle devam eder.</span><span class="sxs-lookup"><span data-stu-id="7c0e9-111">Execution continues with the statement following the `Next` statement.</span></span> <span data-ttu-id="7c0e9-112">`Exit For`, yalnızca bir `For`... `Next` veya `For Each`... `Next` döngüsü içinde kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="7c0e9-112">`Exit For` can be used only inside a `For`...`Next` or `For Each`...`Next` loop.</span></span> <span data-ttu-id="7c0e9-113">İç içe `For` döngüleri içinde kullanıldığında, `Exit For` en içteki döngüden çıkar ve denetimi sonraki daha yüksek iç içe geçme düzeyine aktarır.</span><span class="sxs-lookup"><span data-stu-id="7c0e9-113">When used within nested `For` loops, `Exit For` exits the innermost loop and transfers control to the next higher level of nesting.</span></span>
+
+ `Exit Function`  
+ <span data-ttu-id="7c0e9-114">' In göründüğü `Function` yordamından hemen çıkar.</span><span class="sxs-lookup"><span data-stu-id="7c0e9-114">Immediately exits the `Function` procedure in which it appears.</span></span> <span data-ttu-id="7c0e9-115">Yürütme, `Function` yordamını çağıran deyimden sonraki deyimle devam eder.</span><span class="sxs-lookup"><span data-stu-id="7c0e9-115">Execution continues with the statement following the statement that called the `Function` procedure.</span></span> <span data-ttu-id="7c0e9-116">`Exit Function`, yalnızca bir `Function` yordamı içinde kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="7c0e9-116">`Exit Function` can be used only inside a `Function` procedure.</span></span>
+
+ <span data-ttu-id="7c0e9-117">Bir dönüş değeri belirtmek için, `Exit Function` ifadesinden önceki bir satırdaki işlev adına değeri atayabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="7c0e9-117">To specify a return value, you can assign the value to the function name on a line before the `Exit Function` statement.</span></span> <span data-ttu-id="7c0e9-118">Dönüş değerini atamak ve tek bir ifadede işlevinden çıkmak için, bunun yerine [return ifadesini](return-statement.md)kullanabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="7c0e9-118">To assign the return value and exit the function in one statement, you can instead use the [Return Statement](return-statement.md).</span></span>
+
+ `Exit Property`  
+ <span data-ttu-id="7c0e9-119">' In göründüğü `Property` yordamından hemen çıkar.</span><span class="sxs-lookup"><span data-stu-id="7c0e9-119">Immediately exits the `Property` procedure in which it appears.</span></span> <span data-ttu-id="7c0e9-120">Yürütme, `Property` yordamını çağıran deyimle devam eder, diğer bir deyişle, özellik değerini talep eden veya ayarla.</span><span class="sxs-lookup"><span data-stu-id="7c0e9-120">Execution continues with the statement that called the `Property` procedure, that is, with the statement requesting or setting the property's value.</span></span> <span data-ttu-id="7c0e9-121">`Exit Property`, yalnızca bir özelliğin `Get` veya `Set` yordamı içinde kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="7c0e9-121">`Exit Property` can be used only inside a property's `Get` or `Set` procedure.</span></span>
+
+ <span data-ttu-id="7c0e9-122">Bir `Get` yordamında bir dönüş değeri belirtmek için, değeri `Exit Property` ifadesinden önceki bir satırdaki işlev adına atayabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="7c0e9-122">To specify a return value in a `Get` procedure, you can assign the value to the function name on a line before the `Exit Property` statement.</span></span> <span data-ttu-id="7c0e9-123">Dönüş değerini atamak ve tek bir ifadede `Get` yordamından çıkmak için, bunun yerine `Return` ifadesini kullanabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="7c0e9-123">To assign the return value and exit the `Get` procedure in one statement, you can instead use the `Return` statement.</span></span>
+
+ <span data-ttu-id="7c0e9-124">@No__t-0 yordamında `Exit Property` deyimleri `Return` ifadesiyle eşdeğerdir.</span><span class="sxs-lookup"><span data-stu-id="7c0e9-124">In a `Set` procedure, the `Exit Property` statement is equivalent to the `Return` statement.</span></span>
+
+ `Exit Select`  
+ <span data-ttu-id="7c0e9-125">Görüntülenen `Select Case` bloğundan hemen çıkar.</span><span class="sxs-lookup"><span data-stu-id="7c0e9-125">Immediately exits the `Select Case` block in which it appears.</span></span> <span data-ttu-id="7c0e9-126">Yürütme `End Select` ifadesiyle sonraki deyimle devam eder.</span><span class="sxs-lookup"><span data-stu-id="7c0e9-126">Execution continues with the statement following the `End Select` statement.</span></span> <span data-ttu-id="7c0e9-127">`Exit Select`, yalnızca bir `Select Case` ifadesinde kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="7c0e9-127">`Exit Select` can be used only inside a `Select Case` statement.</span></span>
+
+ `Exit Sub`  
+ <span data-ttu-id="7c0e9-128">' In göründüğü `Sub` yordamından hemen çıkar.</span><span class="sxs-lookup"><span data-stu-id="7c0e9-128">Immediately exits the `Sub` procedure in which it appears.</span></span> <span data-ttu-id="7c0e9-129">Yürütme, `Sub` yordamını çağıran deyimden sonraki deyimle devam eder.</span><span class="sxs-lookup"><span data-stu-id="7c0e9-129">Execution continues with the statement following the statement that called the `Sub` procedure.</span></span> <span data-ttu-id="7c0e9-130">`Exit Sub`, yalnızca bir `Sub` yordamı içinde kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="7c0e9-130">`Exit Sub` can be used only inside a `Sub` procedure.</span></span>
+
+ <span data-ttu-id="7c0e9-131">@No__t-0 yordamında `Exit Sub` deyimleri `Return` ifadesiyle eşdeğerdir.</span><span class="sxs-lookup"><span data-stu-id="7c0e9-131">In a `Sub` procedure, the `Exit Sub` statement is equivalent to the `Return` statement.</span></span>
+
+ `Exit Try`  
+ <span data-ttu-id="7c0e9-132">@No__t-0 veya `Catch` bloğundan hemen çıkar.</span><span class="sxs-lookup"><span data-stu-id="7c0e9-132">Immediately exits the `Try` or `Catch` block in which it appears.</span></span> <span data-ttu-id="7c0e9-133">Yürütme, varsa `Finally` bloğu ile devam eder veya `End Try` deyiminden sonraki deyimle devam eder.</span><span class="sxs-lookup"><span data-stu-id="7c0e9-133">Execution continues with the `Finally` block if there is one, or with the statement following the `End Try` statement otherwise.</span></span> <span data-ttu-id="7c0e9-134">`Exit Try`, yalnızca bir `Try` veya `Catch` bloğunda kullanılabilir ve `Finally` bloğu içinde kullanılamaz.</span><span class="sxs-lookup"><span data-stu-id="7c0e9-134">`Exit Try` can be used only inside a `Try` or `Catch` block, and not inside a `Finally` block.</span></span>
+
+ `Exit While`  
+ <span data-ttu-id="7c0e9-135">Görüntülenen `While` döngüsünden hemen çıkar.</span><span class="sxs-lookup"><span data-stu-id="7c0e9-135">Immediately exits the `While` loop in which it appears.</span></span> <span data-ttu-id="7c0e9-136">Yürütme `End While` ifadesiyle sonraki deyimle devam eder.</span><span class="sxs-lookup"><span data-stu-id="7c0e9-136">Execution continues with the statement following the `End While` statement.</span></span> <span data-ttu-id="7c0e9-137">`Exit While`, yalnızca bir `While` döngüsü içinde kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="7c0e9-137">`Exit While` can be used only inside a `While` loop.</span></span> <span data-ttu-id="7c0e9-138">İç içe `While` döngüleri içinde kullanıldığında, `Exit While` denetimi, döngünün üzerinde `Exit While` gerçekleştiği bir iç içe bir düzey olan döngüye aktarır.</span><span class="sxs-lookup"><span data-stu-id="7c0e9-138">When used within nested `While` loops, `Exit While` transfers control to the loop that is one nested level above the loop where `Exit While` occurs.</span></span>
+
+## <a name="remarks"></a><span data-ttu-id="7c0e9-139">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="7c0e9-139">Remarks</span></span>
+
+<span data-ttu-id="7c0e9-140">@No__t-0 deyimlerini `End` deyimleriyle karıştırmayın.</span><span class="sxs-lookup"><span data-stu-id="7c0e9-140">Do not confuse `Exit` statements with `End` statements.</span></span> <span data-ttu-id="7c0e9-141">`Exit` bir deyimin sonunu tanımlamaz.</span><span class="sxs-lookup"><span data-stu-id="7c0e9-141">`Exit` does not define the end of a statement.</span></span>
+
+## <a name="example"></a><span data-ttu-id="7c0e9-142">Örnek</span><span class="sxs-lookup"><span data-stu-id="7c0e9-142">Example</span></span>
+
+<span data-ttu-id="7c0e9-143">Aşağıdaki örnekte, `index` değişkeni 100 ' den büyükse döngü koşulu döngüyü sonlandırır.</span><span class="sxs-lookup"><span data-stu-id="7c0e9-143">In the following example, the loop condition stops the loop when the `index` variable is greater than 100.</span></span> <span data-ttu-id="7c0e9-144">Ancak, döngüdeki `If` ifadesinde, dizin değişkeni 10 ' dan büyük olduğunda `Exit Do` ifadesinin döngüyü durdurmasına neden olur.</span><span class="sxs-lookup"><span data-stu-id="7c0e9-144">The `If` statement in the loop, however, causes the `Exit Do` statement to stop the loop when the index variable is greater than 10.</span></span>
+
+[!code-vb[VbVbalrStatements#133](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class10.vb#133)]
+
+## <a name="example"></a><span data-ttu-id="7c0e9-145">Örnek</span><span class="sxs-lookup"><span data-stu-id="7c0e9-145">Example</span></span>
+
+<span data-ttu-id="7c0e9-146">Aşağıdaki örnek, `myFunction` işlev adına dönüş değeri atar ve sonra işlevden dönmek için `Exit Function` kullanır:</span><span class="sxs-lookup"><span data-stu-id="7c0e9-146">The following example assigns the return value to the function name `myFunction`, and then uses `Exit Function` to return from the function:</span></span>
+
+[!code-vb[VbVbalrStatements#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#23)]
+
+## <a name="example"></a><span data-ttu-id="7c0e9-147">Örnek</span><span class="sxs-lookup"><span data-stu-id="7c0e9-147">Example</span></span>
+
+<span data-ttu-id="7c0e9-148">Aşağıdaki örnek, dönüş değerini atamak ve işlevden çıkmak için [return ifadesini](return-statement.md) kullanır:</span><span class="sxs-lookup"><span data-stu-id="7c0e9-148">The following example uses the [Return Statement](return-statement.md) to assign the return value and exit the function:</span></span>
+
+[!code-vb[VbVbalrStatements#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#24)]
+
+## <a name="see-also"></a><span data-ttu-id="7c0e9-149">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="7c0e9-149">See also</span></span>
+
+- [<span data-ttu-id="7c0e9-150">Continue Deyimi</span><span class="sxs-lookup"><span data-stu-id="7c0e9-150">Continue Statement</span></span>](continue-statement.md)
+- [<span data-ttu-id="7c0e9-151">Do...Loop Deyimi</span><span class="sxs-lookup"><span data-stu-id="7c0e9-151">Do...Loop Statement</span></span>](do-loop-statement.md)
+- [<span data-ttu-id="7c0e9-152">End Deyimi</span><span class="sxs-lookup"><span data-stu-id="7c0e9-152">End Statement</span></span>](end-statement.md)
+- [<span data-ttu-id="7c0e9-153">For Each...Next Deyimi</span><span class="sxs-lookup"><span data-stu-id="7c0e9-153">For Each...Next Statement</span></span>](for-each-next-statement.md)
+- [<span data-ttu-id="7c0e9-154">For...Next Deyimi</span><span class="sxs-lookup"><span data-stu-id="7c0e9-154">For...Next Statement</span></span>](for-next-statement.md)
+- [<span data-ttu-id="7c0e9-155">Function Deyimi</span><span class="sxs-lookup"><span data-stu-id="7c0e9-155">Function Statement</span></span>](function-statement.md)
+- [<span data-ttu-id="7c0e9-156">Return Deyimi</span><span class="sxs-lookup"><span data-stu-id="7c0e9-156">Return Statement</span></span>](return-statement.md)
+- [<span data-ttu-id="7c0e9-157">Stop Deyimi</span><span class="sxs-lookup"><span data-stu-id="7c0e9-157">Stop Statement</span></span>](stop-statement.md)
+- [<span data-ttu-id="7c0e9-158">Sub Deyimi</span><span class="sxs-lookup"><span data-stu-id="7c0e9-158">Sub Statement</span></span>](sub-statement.md)
+- [<span data-ttu-id="7c0e9-159">Try...Catch...Finally Deyimi</span><span class="sxs-lookup"><span data-stu-id="7c0e9-159">Try...Catch...Finally Statement</span></span>](try-catch-finally-statement.md)
