@@ -1,23 +1,23 @@
 ---
-title: Görsel Basic2 XML değişmez değerlerine giriş
+title: Visual Basic2 'de XML değişmez değerlerine giriş
 ms.date: 07/20/2015
 ms.assetid: 94fc0e03-978e-4c08-ab6c-0dc3c1e64f10
-ms.openlocfilehash: 68ba1e018d4ad9501532745a88090f0f756b5c17
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5355a3c0f01bb247e38e52816693ee47d7d50556
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61834281"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834987"
 ---
-# <a name="introduction-to-xml-literals-in-visual-basic"></a><span data-ttu-id="2a5b1-102">Visual Basic'de XML değişmez değerlerine giriş</span><span class="sxs-lookup"><span data-stu-id="2a5b1-102">Introduction to XML Literals in Visual Basic</span></span>
-<span data-ttu-id="2a5b1-103">Bu bölümde, Visual Basic'te XML ağaçları oluşturma hakkında bilgi sağlar.</span><span class="sxs-lookup"><span data-stu-id="2a5b1-103">This section provides information about creating XML trees in Visual Basic.</span></span>  
+# <a name="introduction-to-xml-literals-in-visual-basic"></a><span data-ttu-id="55bb7-102">Visual Basic XML değişmez değerlerine giriş</span><span class="sxs-lookup"><span data-stu-id="55bb7-102">Introduction to XML Literals in Visual Basic</span></span>
+<span data-ttu-id="55bb7-103">Bu bölüm, Visual Basic XML ağaçları oluşturma hakkında bilgi sağlar.</span><span class="sxs-lookup"><span data-stu-id="55bb7-103">This section provides information about creating XML trees in Visual Basic.</span></span>  
   
- <span data-ttu-id="2a5b1-104">LINQ sorguları sonuçları içerik olarak bir XML ağacı için kullanma hakkında daha fazla bilgi için bkz: [işlevsel oluşturma (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-construction-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="2a5b1-104">For information about using the results of LINQ queries as the content for an XML tree, see [Functional Construction (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-construction-linq-to-xml.md).</span></span>  
+ <span data-ttu-id="55bb7-104">XML ağacının içeriği olarak LINQ sorgularının sonuçlarını kullanma hakkında daha fazla bilgi için bkz. [Işlevsel oluşturma (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-construction-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="55bb7-104">For information about using the results of LINQ queries as the content for an XML tree, see [Functional Construction (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-construction-linq-to-xml.md).</span></span>  
   
- <span data-ttu-id="2a5b1-105">Visual Basic'de XML değişmez değerleri hakkında daha fazla bilgi için bkz. [XML Visual Basic'te LINQ genel bakış](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="2a5b1-105">For more information on XML literals in Visual Basic, see [Overview of LINQ to XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md).</span></span>  
+ <span data-ttu-id="55bb7-105">Visual Basic XML değişmez değerleri hakkında daha fazla bilgi için bkz. [Visual Basic LINQ to XML genel bakış](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="55bb7-105">For more information on XML literals in Visual Basic, see [Overview of LINQ to XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md).</span></span>  
   
-## <a name="creating-xml-trees"></a><span data-ttu-id="2a5b1-106">XML Ağaçları Oluşturma</span><span class="sxs-lookup"><span data-stu-id="2a5b1-106">Creating XML Trees</span></span>  
- <span data-ttu-id="2a5b1-107">Aşağıdaki örnek nasıl oluşturulacağını gösterir. bir <xref:System.Xml.Linq.XElement>, bu durumda `contacts`:</span><span class="sxs-lookup"><span data-stu-id="2a5b1-107">The following example shows how to create an <xref:System.Xml.Linq.XElement>, in this case `contacts`:</span></span>  
+## <a name="creating-xml-trees"></a><span data-ttu-id="55bb7-106">XML ağaçları oluşturma</span><span class="sxs-lookup"><span data-stu-id="55bb7-106">Creating XML Trees</span></span>  
+ <span data-ttu-id="55bb7-107">Aşağıdaki örnek, bu durumda <xref:System.Xml.Linq.XElement> `contacts` ' in nasıl oluşturulacağını gösterir:</span><span class="sxs-lookup"><span data-stu-id="55bb7-107">The following example shows how to create an <xref:System.Xml.Linq.XElement>, in this case `contacts`:</span></span>  
   
 ```vb  
 Dim contacts As XElement = _  
@@ -35,42 +35,42 @@ Dim contacts As XElement = _
     </Contacts>  
 ```  
   
-### <a name="creating-an-xelement-with-simple-content"></a><span data-ttu-id="2a5b1-108">Bir XElement ile basit içerik oluşturma</span><span class="sxs-lookup"><span data-stu-id="2a5b1-108">Creating an XElement with Simple Content</span></span>  
- <span data-ttu-id="2a5b1-109">Oluşturabileceğiniz bir <xref:System.Xml.Linq.XElement> basit içerik aşağıdaki gibi içerir:</span><span class="sxs-lookup"><span data-stu-id="2a5b1-109">You can create an <xref:System.Xml.Linq.XElement> that contains simple content, as follows:</span></span>  
+### <a name="creating-an-xelement-with-simple-content"></a><span data-ttu-id="55bb7-108">Basit Içerikle XElement oluşturma</span><span class="sxs-lookup"><span data-stu-id="55bb7-108">Creating an XElement with Simple Content</span></span>  
+ <span data-ttu-id="55bb7-109">Basit içerik içeren <xref:System.Xml.Linq.XElement> ' ı aşağıdaki gibi oluşturabilirsiniz:</span><span class="sxs-lookup"><span data-stu-id="55bb7-109">You can create an <xref:System.Xml.Linq.XElement> that contains simple content, as follows:</span></span>  
   
 ```vb  
 Dim n as XElement = <Customer>Adventure Works</Customer>  
 Console.WriteLine(n)   
 ```  
   
- <span data-ttu-id="2a5b1-110">Bu örnek aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="2a5b1-110">This example produces the following output:</span></span>  
+ <span data-ttu-id="55bb7-110">Bu örnek aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="55bb7-110">This example produces the following output:</span></span>  
   
 ```xml  
 <Customer>Adventure Works</Customer>  
 ```  
   
-### <a name="creating-an-empty-element"></a><span data-ttu-id="2a5b1-111">Boş bir öğe oluşturma</span><span class="sxs-lookup"><span data-stu-id="2a5b1-111">Creating an Empty Element</span></span>  
- <span data-ttu-id="2a5b1-112">Boş bir oluşturabilirsiniz <xref:System.Xml.Linq.XElement>gibi:</span><span class="sxs-lookup"><span data-stu-id="2a5b1-112">You can create an empty <xref:System.Xml.Linq.XElement>, as follows:</span></span>  
+### <a name="creating-an-empty-element"></a><span data-ttu-id="55bb7-111">Boş bir öğe oluşturma</span><span class="sxs-lookup"><span data-stu-id="55bb7-111">Creating an Empty Element</span></span>  
+ <span data-ttu-id="55bb7-112">Boş bir <xref:System.Xml.Linq.XElement>, aşağıdaki gibi oluşturabilirsiniz:</span><span class="sxs-lookup"><span data-stu-id="55bb7-112">You can create an empty <xref:System.Xml.Linq.XElement>, as follows:</span></span>  
   
 ```vb  
 Dim n As XElement = <Customer/>  
 Console.WriteLine(n)  
 ```  
   
- <span data-ttu-id="2a5b1-113">Bu örnek aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="2a5b1-113">This example produces the following output:</span></span>  
+ <span data-ttu-id="55bb7-113">Bu örnek aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="55bb7-113">This example produces the following output:</span></span>  
   
 ```xml  
 <Customer />  
 ```  
   
-### <a name="using-embedded-expressions"></a><span data-ttu-id="2a5b1-114">Katıştırılmış ifadeler kullanma</span><span class="sxs-lookup"><span data-stu-id="2a5b1-114">Using Embedded Expressions</span></span>  
- <span data-ttu-id="2a5b1-115">XML değişmez değerlerini ve önemli bir özelliği, katıştırılmış ifadeler sağlarlar ' dir.</span><span class="sxs-lookup"><span data-stu-id="2a5b1-115">An important feature of XML literals is that they allow embedded expressions.</span></span> <span data-ttu-id="2a5b1-116">Katıştırılmış ifadeler bir ifadeyi değerlendirir ve sonuçları XML ağacına eklemek etkinleştirin.</span><span class="sxs-lookup"><span data-stu-id="2a5b1-116">Embedded expressions enable you to evaluate an expression and insert the results of the expression into the XML tree.</span></span> <span data-ttu-id="2a5b1-117">İfade için bir tür olarak değerlendirilirse <xref:System.Xml.Linq.XElement>, öğenin ağacına eklenir.</span><span class="sxs-lookup"><span data-stu-id="2a5b1-117">If the expression evaluates to a type of <xref:System.Xml.Linq.XElement>, an element is inserted into the tree.</span></span> <span data-ttu-id="2a5b1-118">İfade için bir tür olarak değerlendirilirse <xref:System.Xml.Linq.XAttribute>, bir öznitelik ağacına eklenir.</span><span class="sxs-lookup"><span data-stu-id="2a5b1-118">If the expression evaluates to a type of <xref:System.Xml.Linq.XAttribute>, an attribute is inserted into the tree.</span></span> <span data-ttu-id="2a5b1-119">Yalnızca geçerli olduğu yerlerde ağacına öğeler ve öznitelikler ekleyebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="2a5b1-119">You can insert elements and attributes into the tree only where they are valid.</span></span>  
+### <a name="using-embedded-expressions"></a><span data-ttu-id="55bb7-114">Katıştırılmış Ifadeler kullanma</span><span class="sxs-lookup"><span data-stu-id="55bb7-114">Using Embedded Expressions</span></span>  
+ <span data-ttu-id="55bb7-115">XML sabit değerlerinin önemli bir özelliği, katıştırılmış ifadelere izin verleridir.</span><span class="sxs-lookup"><span data-stu-id="55bb7-115">An important feature of XML literals is that they allow embedded expressions.</span></span> <span data-ttu-id="55bb7-116">Katıştırılmış ifadeler bir ifadeyi değerlendirmenizi ve ifadenin sonuçlarını XML ağacına eklemeyi sağlar.</span><span class="sxs-lookup"><span data-stu-id="55bb7-116">Embedded expressions enable you to evaluate an expression and insert the results of the expression into the XML tree.</span></span> <span data-ttu-id="55bb7-117">İfade <xref:System.Xml.Linq.XElement> türü olarak değerlendirilirse, ağaca bir öğe eklenir.</span><span class="sxs-lookup"><span data-stu-id="55bb7-117">If the expression evaluates to a type of <xref:System.Xml.Linq.XElement>, an element is inserted into the tree.</span></span> <span data-ttu-id="55bb7-118">İfade <xref:System.Xml.Linq.XAttribute> türü olarak değerlendirilirse, ağaca bir öznitelik eklenir.</span><span class="sxs-lookup"><span data-stu-id="55bb7-118">If the expression evaluates to a type of <xref:System.Xml.Linq.XAttribute>, an attribute is inserted into the tree.</span></span> <span data-ttu-id="55bb7-119">Öğeleri ve öznitelikleri yalnızca geçerli oldukları yerde ağaca ekleyebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="55bb7-119">You can insert elements and attributes into the tree only where they are valid.</span></span>  
   
- <span data-ttu-id="2a5b1-120">Tek bir ifade yalnızca katıştırılmış bir ifadeyi gidebilirsiniz dikkat edin önemlidir.</span><span class="sxs-lookup"><span data-stu-id="2a5b1-120">It is important to note that only a single expression can go into an embedded expression.</span></span> <span data-ttu-id="2a5b1-121">Birden çok deyime katıştırılamıyor.</span><span class="sxs-lookup"><span data-stu-id="2a5b1-121">You cannot embed multiple statements.</span></span> <span data-ttu-id="2a5b1-122">Bir ifade tek bir satır geçerse, satır devamı karakteri kullanmanız gerekir.</span><span class="sxs-lookup"><span data-stu-id="2a5b1-122">If an expression extends beyond a single line, you must use the line continuation character.</span></span>  
+ <span data-ttu-id="55bb7-120">Yalnızca tek bir ifadenin katıştırılmış ifadeye gidebileceğini unutmayın.</span><span class="sxs-lookup"><span data-stu-id="55bb7-120">It is important to note that only a single expression can go into an embedded expression.</span></span> <span data-ttu-id="55bb7-121">Birden çok deyimi katıştıramazsınız.</span><span class="sxs-lookup"><span data-stu-id="55bb7-121">You cannot embed multiple statements.</span></span> <span data-ttu-id="55bb7-122">Bir ifade tek bir çizgiyi aşarsa, satır devamlılık karakterini kullanmanız gerekir.</span><span class="sxs-lookup"><span data-stu-id="55bb7-122">If an expression extends beyond a single line, you must use the line continuation character.</span></span>  
   
- <span data-ttu-id="2a5b1-123">Var olan düğümleri (öğeler dahil) ve yeni bir XML ağacı öznitelikleri ve var olan düğümleri zaten shapemap varsa eklemek için bir katıştırılmış deyim kullanırsanız, düğüm klonlanır.</span><span class="sxs-lookup"><span data-stu-id="2a5b1-123">If you use an embedded expression to add existing nodes (including elements) and attributes to a new XML tree and if the existing nodes are already parented, the nodes are cloned.</span></span> <span data-ttu-id="2a5b1-124">Yeni kopyalanan düğümleri yeni XML ağacına eklenir.</span><span class="sxs-lookup"><span data-stu-id="2a5b1-124">The newly cloned nodes are attached to the new XML tree.</span></span> <span data-ttu-id="2a5b1-125">Var olan düğümleri arasındaki shapemap değil, düğümler yalnızca yeni XML ağacına eklenir.</span><span class="sxs-lookup"><span data-stu-id="2a5b1-125">If the existing nodes are not parented, the nodes are simply attached to the new XML tree.</span></span> <span data-ttu-id="2a5b1-126">Bu konu Son örnekte bu gösterir.</span><span class="sxs-lookup"><span data-stu-id="2a5b1-126">The last example in this topic demonstrates this.</span></span>  
+ <span data-ttu-id="55bb7-123">Varolan düğümleri (öğeler dahil) ve özniteliklerini yeni bir XML ağacına eklemek için katıştırılmış bir ifade kullanırsanız ve mevcut düğümlerin zaten üst öğesi varsa, düğümler klonlanır.</span><span class="sxs-lookup"><span data-stu-id="55bb7-123">If you use an embedded expression to add existing nodes (including elements) and attributes to a new XML tree and if the existing nodes are already parented, the nodes are cloned.</span></span> <span data-ttu-id="55bb7-124">Yeni kopyalanan düğümler yeni XML ağacına eklenir.</span><span class="sxs-lookup"><span data-stu-id="55bb7-124">The newly cloned nodes are attached to the new XML tree.</span></span> <span data-ttu-id="55bb7-125">Mevcut düğümler üst öğe değilse, düğümler yalnızca yeni XML ağacına eklenir.</span><span class="sxs-lookup"><span data-stu-id="55bb7-125">If the existing nodes are not parented, the nodes are simply attached to the new XML tree.</span></span> <span data-ttu-id="55bb7-126">Bu konudaki son örnekte bu gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="55bb7-126">The last example in this topic demonstrates this.</span></span>  
   
- <span data-ttu-id="2a5b1-127">Aşağıdaki örnek, katıştırılmış bir ifade ağacına bir öğe eklemek için kullanır:</span><span class="sxs-lookup"><span data-stu-id="2a5b1-127">The following example uses an embedded expression to insert an element into the tree:</span></span>  
+ <span data-ttu-id="55bb7-127">Aşağıdaki örnek, ağaca bir öğe eklemek için gömülü bir ifade kullanır:</span><span class="sxs-lookup"><span data-stu-id="55bb7-127">The following example uses an embedded expression to insert an element into the tree:</span></span>  
   
 ```vb  
 xmlTree1 As XElement = _  
@@ -84,7 +84,7 @@ Dim xmlTree2 As XElement = _
 Console.WriteLine(xmlTree2)  
 ```  
   
- <span data-ttu-id="2a5b1-128">Bu örnek aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="2a5b1-128">This example produces the following output:</span></span>  
+ <span data-ttu-id="55bb7-128">Bu örnek aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="55bb7-128">This example produces the following output:</span></span>  
   
 ```xml  
 <Root>  
@@ -92,8 +92,8 @@ Console.WriteLine(xmlTree2)
 </Root>  
 ```  
   
-### <a name="using-embedded-expressions-for-content"></a><span data-ttu-id="2a5b1-129">İçerik için katıştırılmış ifadeleri kullanma</span><span class="sxs-lookup"><span data-stu-id="2a5b1-129">Using Embedded Expressions for Content</span></span>  
- <span data-ttu-id="2a5b1-130">Bir öğenin içeriğini sağlamak için katıştırılmış bir ifade kullanabilirsiniz:</span><span class="sxs-lookup"><span data-stu-id="2a5b1-130">You can use an embedded expression to supply the content of an element:</span></span>  
+### <a name="using-embedded-expressions-for-content"></a><span data-ttu-id="55bb7-129">Içerik için katıştırılmış Ifadeler kullanma</span><span class="sxs-lookup"><span data-stu-id="55bb7-129">Using Embedded Expressions for Content</span></span>  
+ <span data-ttu-id="55bb7-130">Bir öğenin içeriğini sağlamak için gömülü bir ifade kullanabilirsiniz:</span><span class="sxs-lookup"><span data-stu-id="55bb7-130">You can use an embedded expression to supply the content of an element:</span></span>  
   
 ```vb  
 Dim str As String  
@@ -102,14 +102,14 @@ Dim root As XElement = <Root><%= str %></Root>
 Console.WriteLine(root)  
 ```  
   
- <span data-ttu-id="2a5b1-131">Bu örnek aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="2a5b1-131">This example produces the following output:</span></span>  
+ <span data-ttu-id="55bb7-131">Bu örnek aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="55bb7-131">This example produces the following output:</span></span>  
   
 ```xml  
 <Root>Some content</Root>  
 ```  
   
-### <a name="using-a-linq-query-in-an-embedded-expression"></a><span data-ttu-id="2a5b1-132">Katıştırılmış bir ifadede bir LINQ Sorgu kullanma</span><span class="sxs-lookup"><span data-stu-id="2a5b1-132">Using a LINQ Query in an Embedded Expression</span></span>  
- <span data-ttu-id="2a5b1-133">Bir öğenin içeriğini bir LINQ sorgusunun sonuçları kullanabilirsiniz:</span><span class="sxs-lookup"><span data-stu-id="2a5b1-133">You can use the results of a LINQ query for the content of an element:</span></span>  
+### <a name="using-a-linq-query-in-an-embedded-expression"></a><span data-ttu-id="55bb7-132">Katıştırılmış Ifadede LINQ sorgusu kullanma</span><span class="sxs-lookup"><span data-stu-id="55bb7-132">Using a LINQ Query in an Embedded Expression</span></span>  
+ <span data-ttu-id="55bb7-133">Bir öğenin içeriği için LINQ sorgusunun sonuçlarını kullanabilirsiniz:</span><span class="sxs-lookup"><span data-stu-id="55bb7-133">You can use the results of a LINQ query for the content of an element:</span></span>  
   
 ```vb  
 Dim arr As Integer() = {1, 2, 3}  
@@ -122,7 +122,7 @@ Dim n As XElement = _
 Console.WriteLine(n)  
 ```  
   
- <span data-ttu-id="2a5b1-134">Bu örnek aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="2a5b1-134">This example produces the following output:</span></span>  
+ <span data-ttu-id="55bb7-134">Bu örnek aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="55bb7-134">This example produces the following output:</span></span>  
   
 ```xml  
 <Root>  
@@ -132,8 +132,8 @@ Console.WriteLine(n)
 </Root>  
 ```  
   
-### <a name="using-embedded-expressions-for-node-names"></a><span data-ttu-id="2a5b1-135">Düğüm adları için katıştırılmış ifadeleri kullanma</span><span class="sxs-lookup"><span data-stu-id="2a5b1-135">Using Embedded Expressions for Node Names</span></span>  
- <span data-ttu-id="2a5b1-136">Katıştırılmış ifadeler, öznitelik adları, öznitelik değerleri, öğe adları ve değerleri hesaplamak için de kullanabilirsiniz:</span><span class="sxs-lookup"><span data-stu-id="2a5b1-136">You can also use embedded expressions to calculate attribute names, attribute values, element names, and element values:</span></span>  
+### <a name="using-embedded-expressions-for-node-names"></a><span data-ttu-id="55bb7-135">Düğüm adları için katıştırılmış Ifadeler kullanma</span><span class="sxs-lookup"><span data-stu-id="55bb7-135">Using Embedded Expressions for Node Names</span></span>  
+ <span data-ttu-id="55bb7-136">Öznitelik adlarını, öznitelik değerlerini, öğe adlarını ve öğe değerlerini hesaplamak için katıştırılmış ifadeler de kullanabilirsiniz:</span><span class="sxs-lookup"><span data-stu-id="55bb7-136">You can also use embedded expressions to calculate attribute names, attribute values, element names, and element values:</span></span>  
   
 ```vb  
 Dim eleName As String = "ele"  
@@ -149,7 +149,7 @@ Dim n As XElement = _
 Console.WriteLine(n)  
 ```  
   
- <span data-ttu-id="2a5b1-137">Bu örnek aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="2a5b1-137">This example produces the following output:</span></span>  
+ <span data-ttu-id="55bb7-137">Bu örnek aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="55bb7-137">This example produces the following output:</span></span>  
   
 ```xml  
 <Root att="aValue">  
@@ -157,8 +157,8 @@ Console.WriteLine(n)
 </Root>  
 ```  
   
-### <a name="cloning-vs-attaching"></a><span data-ttu-id="2a5b1-138">Kopyalama ve Ekleme Karşılaştırması</span><span class="sxs-lookup"><span data-stu-id="2a5b1-138">Cloning vs. Attaching</span></span>  
- <span data-ttu-id="2a5b1-139">Var olan düğümleri arasındaki shapemap zaten varsa var olan düğümleri (öğeler dahil) ve öznitelikler yeni bir XML ağacına eklemek için bir katıştırılmış deyim kullanırsanız, daha önce belirtildiği gibi düğümler kopyalanır ve yeni kopyalanan düğümleri yeni XML ağacına eklenir.</span><span class="sxs-lookup"><span data-stu-id="2a5b1-139">As mentioned earlier, if you use an embedded expression to add existing nodes (including elements) and attributes to a new XML tree, if the existing nodes are already parented, the nodes are cloned and the newly cloned nodes are attached to the new XML tree.</span></span> <span data-ttu-id="2a5b1-140">Var olan düğümleri arasındaki shapemap değil, bunlar yalnızca yeni XML ağacına eklenir.</span><span class="sxs-lookup"><span data-stu-id="2a5b1-140">If the existing nodes are not parented, they are simply attached to the new XML tree.</span></span>  
+### <a name="cloning-vs-attaching"></a><span data-ttu-id="55bb7-138">Kopyalama ve Iliştirme</span><span class="sxs-lookup"><span data-stu-id="55bb7-138">Cloning vs. Attaching</span></span>  
+ <span data-ttu-id="55bb7-139">Daha önce belirtildiği gibi, var olan düğümleri (öğeler dahil) ve özniteliklerini yeni bir XML ağacına eklemek için katıştırılmış bir ifade kullanırsanız, varolan düğümlerin zaten üst öğesi varsa, düğümler kopyalanır ve yeni kopyalanan düğümler yeni XML ağacına eklenir.</span><span class="sxs-lookup"><span data-stu-id="55bb7-139">As mentioned earlier, if you use an embedded expression to add existing nodes (including elements) and attributes to a new XML tree, if the existing nodes are already parented, the nodes are cloned and the newly cloned nodes are attached to the new XML tree.</span></span> <span data-ttu-id="55bb7-140">Mevcut düğümler üst öğe değilse, bunlar yalnızca yeni XML ağacına eklenir.</span><span class="sxs-lookup"><span data-stu-id="55bb7-140">If the existing nodes are not parented, they are simply attached to the new XML tree.</span></span>  
   
 ```vb  
 ' Create a tree with a child element.  
@@ -188,13 +188,13 @@ Console.WriteLine("Child2 was {0}", _
     "attached", "cloned"))  
 ```  
   
- <span data-ttu-id="2a5b1-141">Bu örnek aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="2a5b1-141">This example produces the following output:</span></span>  
+ <span data-ttu-id="55bb7-141">Bu örnek aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="55bb7-141">This example produces the following output:</span></span>  
   
-```  
+```console  
 Child1 was cloned  
 Child2 was attached  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="2a5b1-142">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="2a5b1-142">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="55bb7-142">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="55bb7-142">See also</span></span>
 
-- [<span data-ttu-id="2a5b1-143">XML ağaçları (Visual Basic) oluşturma</span><span class="sxs-lookup"><span data-stu-id="2a5b1-143">Creating XML Trees (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)
+- [<span data-ttu-id="55bb7-143">XML ağaçları oluşturma (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="55bb7-143">Creating XML Trees (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)

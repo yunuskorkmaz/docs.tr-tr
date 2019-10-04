@@ -1,22 +1,22 @@
 ---
-title: 'Nasıl yapılır: Gruplar (LINQ) (Visual Basic) kullanarak bir dosyayı birden çok dosyaya bölme'
+title: 'Nasıl yapılır: grupları (LINQ) kullanarak bir dosyayı birçok dosyaya bölme (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 5e8b2a2b-0b1d-4933-8a2b-03e91dfaf77f
-ms.openlocfilehash: 3c3d0d4d8c45ba2d7016636f0272ace0fdc6ffa3
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: e12de7380ca34478506fde98aecae2501d2529ee
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592471"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71835107"
 ---
-# <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-visual-basic"></a><span data-ttu-id="9e2ab-102">Nasıl yapılır: Gruplar (LINQ) (Visual Basic) kullanarak bir dosyayı birden çok dosyaya bölme</span><span class="sxs-lookup"><span data-stu-id="9e2ab-102">How to: Split a File Into Many Files by Using Groups (LINQ) (Visual Basic)</span></span>
-<span data-ttu-id="9e2ab-103">Bu örnekte, iki dosya içeriklerini birleştirme ve ardından yeni bir şekilde verileri düzenleme yeni dosyaları bir dizi oluşturmak için yollarından biri gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="9e2ab-103">This example shows one way to merge the contents of two files and then create a set of new files that organize the data in a new way.</span></span>  
+# <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-visual-basic"></a><span data-ttu-id="cb6fb-102">Nasıl yapılır: grupları (LINQ) kullanarak bir dosyayı birçok dosyaya bölme (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="cb6fb-102">How to: Split a File Into Many Files by Using Groups (LINQ) (Visual Basic)</span></span>
+<span data-ttu-id="cb6fb-103">Bu örnek, iki dosyanın içeriğini birleştirmenin bir yolunu gösterir ve ardından verileri yeni bir şekilde düzenleyen yeni bir dosya kümesi oluşturur.</span><span class="sxs-lookup"><span data-stu-id="cb6fb-103">This example shows one way to merge the contents of two files and then create a set of new files that organize the data in a new way.</span></span>  
   
-### <a name="to-create-the-data-files"></a><span data-ttu-id="9e2ab-104">Veri dosyaları oluşturmak için</span><span class="sxs-lookup"><span data-stu-id="9e2ab-104">To create the data files</span></span>  
+### <a name="to-create-the-data-files"></a><span data-ttu-id="cb6fb-104">Veri dosyalarını oluşturmak için</span><span class="sxs-lookup"><span data-stu-id="cb6fb-104">To create the data files</span></span>  
   
-1. <span data-ttu-id="9e2ab-105">Bu adlar names1.txt adlı bir metin dosyasına kopyalayabilir ve proje klasörünüze kaydedin:</span><span class="sxs-lookup"><span data-stu-id="9e2ab-105">Copy these names into a text file that is named names1.txt and save it in your project folder:</span></span>  
+1. <span data-ttu-id="cb6fb-105">Bu adları names1. txt adlı bir metin dosyasına kopyalayın ve proje klasörünüze kaydedin:</span><span class="sxs-lookup"><span data-stu-id="cb6fb-105">Copy these names into a text file that is named names1.txt and save it in your project folder:</span></span>  
   
-    ```  
+    ```text  
     Bankov, Peter  
     Holm, Michael  
     Garcia, Hugo  
@@ -29,9 +29,9 @@ ms.locfileid: "65592471"
     Garcia, Debra  
     ```  
   
-2. <span data-ttu-id="9e2ab-106">Bu adlar names2.txt adlı bir metin dosyasına kopyalayabilir ve proje klasörünüze kaydedin: İki dosyayı bazı adları ortak gerektiğini unutmayın.</span><span class="sxs-lookup"><span data-stu-id="9e2ab-106">Copy these names into a text file that is named names2.txt and save it in your project folder: Note that the two files have some names in common.</span></span>  
+2. <span data-ttu-id="cb6fb-106">Bu adları names2. txt adlı bir metin dosyasına kopyalayın ve proje klasörünüze kaydedin: iki dosyanın ortak olarak bazı adlara sahip olduğunu unutmayın.</span><span class="sxs-lookup"><span data-stu-id="cb6fb-106">Copy these names into a text file that is named names2.txt and save it in your project folder: Note that the two files have some names in common.</span></span>  
   
-    ```  
+    ```text  
     Liu, Jinghao  
     Bankov, Peter  
     Holm, Michael  
@@ -44,7 +44,7 @@ ms.locfileid: "65592471"
     El Yassir, Mehdi  
     ```  
   
-## <a name="example"></a><span data-ttu-id="9e2ab-107">Örnek</span><span class="sxs-lookup"><span data-stu-id="9e2ab-107">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="cb6fb-107">Örnek</span><span class="sxs-lookup"><span data-stu-id="cb6fb-107">Example</span></span>  
   
 ```vb  
 Class SplitWithGroups  
@@ -113,12 +113,12 @@ End Class
 '    Toyoshima, Tim  
 ```  
   
- <span data-ttu-id="9e2ab-108">Program, veri dosyaları aynı klasörde her grup için ayrı bir dosyaya yazar.</span><span class="sxs-lookup"><span data-stu-id="9e2ab-108">The program writes a separate file for each group in the same folder as the data files.</span></span>  
+ <span data-ttu-id="cb6fb-108">Program, veri dosyalarıyla aynı klasöre her bir grup için ayrı bir dosya yazar.</span><span class="sxs-lookup"><span data-stu-id="cb6fb-108">The program writes a separate file for each group in the same folder as the data files.</span></span>  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="9e2ab-109">Kod Derleniyor</span><span class="sxs-lookup"><span data-stu-id="9e2ab-109">Compiling the Code</span></span>  
-<span data-ttu-id="9e2ab-110">VB.NET konsol uygulama projesi oluşturmak bir `Imports` System.Linq ad alanı bildirimi.</span><span class="sxs-lookup"><span data-stu-id="9e2ab-110">Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.</span></span>
+## <a name="compiling-the-code"></a><span data-ttu-id="cb6fb-109">Kodu derleme</span><span class="sxs-lookup"><span data-stu-id="cb6fb-109">Compiling the Code</span></span>  
+<span data-ttu-id="cb6fb-110">System. Linq ad alanı için `Imports` ifadesiyle bir VB.NET konsol uygulaması projesi oluşturun.</span><span class="sxs-lookup"><span data-stu-id="cb6fb-110">Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.</span></span>
   
-## <a name="see-also"></a><span data-ttu-id="9e2ab-111">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="9e2ab-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="cb6fb-111">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="cb6fb-111">See also</span></span>
 
-- [<span data-ttu-id="9e2ab-112">LINQ ve dizeler (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9e2ab-112">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
-- [<span data-ttu-id="9e2ab-113">LINQ ve dosya dizinleri (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9e2ab-113">LINQ and File Directories (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [<span data-ttu-id="cb6fb-112">LINQ ve dizeler (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="cb6fb-112">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [<span data-ttu-id="cb6fb-113">LINQ ve dosya dizinleri (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="cb6fb-113">LINQ and File Directories (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
