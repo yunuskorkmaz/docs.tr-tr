@@ -4,12 +4,12 @@ description: Databricks 'e Apache Spark uygulamasının bir .NET uygulamasını 
 ms.date: 05/17/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: f90d0fa4bdefe94dcf8390698e6445fad77a1bc2
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 035a3c36337413153ee0370aec154d48b84a4711
+ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117938"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71957248"
 ---
 # <a name="deploy-a-net-for-apache-spark-application-to-databricks"></a>Databricks 'e Apache Spark uygulamasına yönelik bir .NET dağıtımı
 
@@ -24,7 +24,7 @@ Bu öğreticide şunların nasıl yapıladığını öğreneceksiniz:
 > - Uygulamanızı Databricks 'e dağıtın
 > - Uygulamanızı çalıştırma
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Prerequisites
 
 Başlamadan önce aşağıdakileri yapın:
 
@@ -37,9 +37,9 @@ Başlamadan önce aşağıdakileri yapın:
 
 1. Kümenize dağıtılacak bir [Microsoft. spark. Worker](https://github.com/dotnet/spark/releases) Linux netcoreapp sürümü seçin.
 
-   Örneğin, kullanmak `.NET for Apache Spark v0.1.0` `netcoreapp2.1`istiyorsanız [Microsoft. spark. Worker. netcoreapp 2.1. Linux-x64-0.1.0. tar. gz](https://github.com/dotnet/spark/releases/download/v0.1.0/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.1.0.tar.gz)dosyasını indirirsiniz.
+   Örneğin, `netcoreapp2.1` kullanarak `.NET for Apache Spark v0.1.0` ' ı istiyorsanız, [Microsoft. spark. Worker. netcoreapp 2.1. Linux-x64-0.1.0. tar. gz](https://github.com/dotnet/spark/releases/download/v0.1.0/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.1.0.tar.gz)dosyasını indirirsiniz.
 
-2. Kümenizin `Microsoft.Spark.Worker.<release>.tar.gz` erişimi olan bir dağıtılmış dosya sistemine (örneğin, dBFS) yükleyin ve [install-Worker.sh](https://github.com/dotnet/spark/blob/master/deployment/install-worker.sh) .
+2. @No__t-0 ve [install-Worker.sh](https://github.com/dotnet/spark/blob/master/deployment/install-worker.sh) ' i, kümenizin erişimi olan bir dağıtılmış dosya sistemine (ÖRNEĞIN, dBFS) yükleyin.
 
 ## <a name="prepare-your-net-for-apache-spark-app"></a>Apache Spark uygulamanızı .NET 'e hazırlama
 
@@ -53,9 +53,9 @@ Başlamadan önce aşağıdakileri yapın:
    dotnet publish -c Release -f netcoreapp2.1 -r ubuntu.16.04-x64
    ```
 
-3. Yayımlanan `<your app>.zip` dosyalar için üretin.
+3. Yayımlanan dosyalar için `<your app>.zip` üretir.
 
-   Kullanarak `zip`Linux üzerinde aşağıdaki komutu çalıştırabilirsiniz.
+   Linux üzerinde `zip` kullanarak aşağıdaki komutu çalıştırabilirsiniz.
 
    ```bash
    zip -r <your app>.zip .
@@ -80,7 +80,7 @@ Databricks, mevcut bir etkin kümeye .NET Apache Spark uygulamaları göndermeni
 
 Bu adım, bir küme için yalnızca bir kere gereklidir.
 
-1. [DB-init.sh](https://github.com/dotnet/spark/blob/master/deployment/db-init.sh) ve install-Worker.sh [](https://github.com/dotnet/spark/blob/master/deployment/install-worker.sh
+1. [DB-init.sh](https://github.com/dotnet/spark/blob/master/deployment/db-init.sh) ve [install-Worker.sh](https://github.com/dotnet/spark/blob/master/deployment/install-worker.sh
 ) 'i yerel makinenize indirin.
 
 2. **DB-init.sh** öğesini, kümenize indirmek ve yüklemek istediğiniz **Microsoft. spark. Worker** sürümüne işaret etmek üzere değiştirin.
@@ -105,7 +105,7 @@ Bu adım, bir küme için yalnızca bir kere gereklidir.
 
 ## <a name="run-your-app"></a>Uygulamanızı çalıştırma 
 
-İşinizi databricks `spark-submit` 'e göndermek için ya da kullanabilirsiniz `set JAR` .
+@No__t-0 veya `spark-submit` ' i kullanarak işinizi Databricks 'e gönderebilirsiniz.
 
 ### <a name="use-set-jar"></a>Set JAR kullanın
 
@@ -115,15 +115,15 @@ Bu adım, bir küme için yalnızca bir kere gereklidir.
 
 1. Databricks kümenize gidin ve sol taraftaki menüden **işler** ' i seçin. Ardından **kavanı ayarla**' yı seçin.
 
-2. Uygun `microsoft-spark-<spark-version>-<spark-dotnet-version>.jar` dosyayı karşıya yükleyin.
+2. Uygun `microsoft-spark-<spark-version>-<spark-dotnet-version>.jar` dosyasını karşıya yükleyin.
 
 3. Parametreleri uygun şekilde ayarlayın.
 
-   ```
-   Main Class: org.apache.spark.deploy.dotnet.DotnetRunner
-   Arguments /dbfs/apps/<your-app-name>.zip <your-app-main-class>
-   ```
- 
+   | Parametre   | Değer                                                |
+   |-------------|------------------------------------------------------|
+   | Ana sınıf  | org. Apache. spark. deploy. DotNet. DotnetRunner          |
+   | Arguments   | /dBFS/Apps/<-app-name >. zip <-App-Main-sınıfınızın > |
+
 4. **Kümeyi** , önceki bölümde Için **Init betiğini** oluşturduğunuz var olan kümeye işaret etmek üzere yapılandırın.
 
 #### <a name="publish-and-run-your-app"></a>Uygulamanızı yayımlayın ve çalıştırın
@@ -161,7 +161,7 @@ Bu adım, bir küme için yalnızca bir kere gereklidir.
 
 1. [Bir Iş oluşturun](https://docs.databricks.com/user-guide/jobs.html) ve **Spark-gönder**' i seçin.
 
-2. Aşağıdaki `spark-submit` parametrelerle yapılandırın:
+2. Aşağıdaki parametrelerle `spark-submit` yapılandırın:
 
       ```bash
       ["--files","/dbfs/<path-to>/<app assembly/file to deploy to worker>","--class","org.apache.spark.deploy.dotnet.DotnetRunner","/dbfs/<path-to>/microsoft-spark-<spark_majorversion.spark_minorversion.x>-<spark_dotnet_version>.jar","/dbfs/<path-to>/<app name>.zip","<app bin name>","app arg1","app arg2"]
