@@ -331,12 +331,10 @@
           href: how-to-retrieve-data-from-the-clipboard.md
     - name: Windows Forms Uygulamalarında Ağ İletişimi
       href: networking-in-windows-forms-applications.md
-    - name: Windows Forms’u Genelleştirme
+    - name: Windows Formlarını Genelleştirme
       href: globalizing-windows-forms.md
       items:
-        - name: Kodlama ve Windows Forms Genelleştirme
-          href: encoding-and-windows-forms-globalization.md
-        - name: Windows Forms ve Denetimlerindeki Uluslararası Yazı Tipleri
+        - name: Windows Formları ve Denetimlerindeki Uluslararası Yazı Tipleri
           href: international-fonts-in-windows-forms-and-controls.md
         - name: Windows Forms Uygulamalarında İki Yönlü Destek
           href: bi-directional-support-for-windows-forms-applications.md
