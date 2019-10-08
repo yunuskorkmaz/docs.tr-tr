@@ -8,19 +8,19 @@ helpviewer_keywords:
 - Take While clause [Visual Basic]
 - Take While statement [Visual Basic]
 ms.assetid: db8f9f2f-fc9f-4a6c-b0b8-1bf048147e11
-ms.openlocfilehash: 080a106fc1deeb54165511ed03d7c7c5d2060f21
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fe6ee470698504bc0434930cc9aa6de712e04254
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945203"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72004679"
 ---
 # <a name="take-while-clause-visual-basic"></a>Take While Tümcesi (Visual Basic)
-Belirtilen koşul sürece öğeleri bir koleksiyona dahil `true` ve kalan öğeleri atlar.  
+Belirtilen koşul `true` olduğu ve kalan öğeleri atlayan sürece bir koleksiyondaki öğeleri içerir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```vb  
 Take While expression  
 ```  
   
@@ -28,21 +28,21 @@ Take While expression
   
 |Terim|Tanım|  
 |---|---|  
-|`expression`|Gerekli. Test etmek için öğeleri için bir koşulu temsil eden bir ifade. İfade döndürmelidir bir `Boolean` değer veya bir işlev eşdeğer gibi bir `Integer` olarak değerlendirilecek bir `Boolean`.|  
+|`expression`|Gerekli. İçin öğeleri test eden bir koşulu temsil eden bir ifade. İfade, bir @no__t 0 değeri veya bir `Boolean` olarak değerlendirilecek `Integer` gibi işlevsel eşdeğerini döndürmelidir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `Take While` Yan tümcesi başından itibaren bir sorgu sonucunun öğelerini sağlanan kadar içerir `expression` döndürür `false`. Sonra `expression` döndürür `false`, sorgunun kalan tüm öğeleri içerir. `expression` Kalan sonuçları göz ardı edilir.  
+ @No__t-0 yan tümcesi, sağlanan `expression` `false` dönene kadar bir sorgu sonucunun başından itibaren öğeleri içerir. @No__t-0 ' ı `false` döndürürse, sorgu kalan tüm öğeleri atlar. @No__t-0, kalan sonuçlar için yok sayılır.  
   
- `Take While` Yan tümcesi farklıdır `Where` yan tümcesinde, `Where` yan tümcesi, bir sorgudan belirli bir koşulu karşılayan tüm öğeleri dahil etmek için kullanılabilir. `Take While` Yan tümcesi koşulu karşılanmadı yalnızca ilk kez kadar öğeleri içerir. `Take While` Bir sıralı sorgu sonucu ile çalışırken yan tümcesi en kullanışlı.  
+ @No__t-0 yan tümcesi, `Where` yan tümcesinin belirli bir koşulu karşılayan bir sorgudaki tüm öğeleri dahil etmek için kullanılabilir `Where` tümceciğinden farklıdır. @No__t-0 yan tümcesi yalnızca koşul karşılanmadığı sürece öğeleri içerir. @No__t-0 yan tümcesi, sıralı bir sorgu sonucuyla çalışırken en yararlı seçenektir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod örneğinde `Take While` ilk müşteri siparişleri olmadan bulunana kadar sonuçları almak için yan tümcesi.  
+ Aşağıdaki kod örneği, hiçbir sipariş olmadan ilk müşteri bulunana kadar sonuçları almak için `Take While` yan tümcesini kullanır.  
   
  [!code-vb[VbSimpleQuerySamples#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#2)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Basic'de LINQ'e giriş](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [Visual Basic LINQ 'e giriş](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
 - [Sorgular](../../../visual-basic/language-reference/queries/index.md)
 - [Select Yan Tümcesi](../../../visual-basic/language-reference/queries/select-clause.md)
 - [From Yan Tümcesi](../../../visual-basic/language-reference/queries/from-clause.md)

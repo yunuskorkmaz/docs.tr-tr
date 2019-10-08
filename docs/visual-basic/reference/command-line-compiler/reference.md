@@ -9,21 +9,25 @@ helpviewer_keywords:
 - reference compiler option [Visual Basic]
 - -r compiler option [Visual Basic]
 ms.assetid: 66bdfced-bbf6-43d1-a554-bc0990315737
-ms.openlocfilehash: 2394a23ddd59d09ce53c78fc4486fc5bae9e8516
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 552fbcf920be609de83708a995a87761f6080220
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583366"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005264"
 ---
 # <a name="-reference-visual-basic"></a>-başvuru (Visual Basic)
-Derleyicinin tür bilgilerini belirli derlemelerde şu anda derleme proje kullanılabilir hale getirmek neden olur.  
+Derleyicinin, belirtilen derlemelerde bulunan tür bilgilerini şu anda derlediğiniz projede kullanılabilir hale getirmesine neden olur.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```console  
 -reference:fileList  
-' -or-  
+```
+
+veya
+
+```console
 -r:fileList  
 ```  
   
@@ -31,27 +35,27 @@ Derleyicinin tür bilgilerini belirli derlemelerde şu anda derleme proje kullan
   
 |Terim|Tanım|  
 |---|---|  
-|`fileList`|Gerekli. Derleme dosya adlarının virgülle ayrılmış liste. Dosya adı boşluk içeriyorsa adı tırnak içine alın.|  
+|`fileList`|Gerekli. Bütünleştirilmiş kod dosyası adlarının virgülle ayrılmış listesi. Dosya adı bir boşluk içeriyorsa, adı tırnak işaretleri içine alın.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- İçeri aktardığınız dosya, derleme meta verileri içermelidir. Yalnızca genel türleri derlemenin dışında görünür. [/Addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md) seçenek, bir modülden meta verileri alır.  
+ İçeri aktardığınız dosya (ler) bütünleştirilmiş kod meta verisi içermelidir. Yalnızca ortak türler derleme dışında görünür. [/Addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md) seçeneği bir modülden meta verileri içeri aktarır.  
   
- Bir bütünleştirilmiş kodu (bütünleştirilmiş kod: A) başvuruda bulunursanız kendisi başvuran bir derlemeyle (derlemeyi B), başvuru derlemesi B, gerekir:  
+ Kendisi başka bir derlemeye (derleme B) başvuran bir derlemeye (derleme A) başvuruyorsa, şu durumlarda derleme B 'ye başvurmanız gerekir:  
   
-- Bir derlemeden bir tür bir tür tarafından devralındığında veya derleme B'deki bir arabirim uygular.  
+- Derleme A 'dan bir tür bir türden devralınır veya derleme B 'den bir arabirim uygular.  
   
-- Bir alan, özelliği, olay veya dönüş türü veya parametresi türü derleme b olan yöntemi çağrılır.  
+- B derlemesinden dönüş türü veya parametre türü olan bir alan, özellik, olay veya yöntem çağrılır.  
   
- Kullanım [- LIBPATH](../../../visual-basic/reference/command-line-compiler/libpath.md) için bir veya daha fazla, derleme başvuruları bulunduğu dizini belirtin.  
+ Bir veya daha fazla derleme başvurularınızın bulunduğu dizini belirtmek için [-libpath](../../../visual-basic/reference/command-line-compiler/libpath.md) kullanın.  
   
- Derleyicinin derlemede (modül değil) bir türü tanıması, türü çözümlemeye zorlanması gerekir. Bunu yapmak nasıl ilişkin bir örnek, bir türün örneğini tanımlamaktır. Yollar, derleyici bir derlemede bulunan tür adlarını çözmek kullanılabilir. Örneğin, bir derleme içinde bulunan bir türden devralıyorsanız, tür adı ardından derleyiciye bildiği.  
+ Derleyicinin bir derlemede (modül değil) bir türü tanıması için, türün çözümlenmesinin zorunlu olması gerekir. Bunu nasıl yapabileceğiniz bir örnek, türün bir örneğini tanımlamaktır. Derleyici için bir derlemede tür adlarını çözümlemek için diğer yollar mevcuttur. Örneğin, derlemedeki bir türden devralma yaparsanız, tür adı derleyici tarafından bilinmiş olur.  
   
- Yaygın olarak kullanılan .NET Framework derlemelerine başvuran, nezahrnovat yanıt dosyası varsayılan olarak kullanılır. Kullanma `-noconfig` derleyici nezahrnovat kullanmak istemiyorsanız.  
+ Yaygın olarak kullanılan .NET Framework derlemelerine başvuran Vbc. rsp yanıt dosyası varsayılan olarak kullanılır. Derleyicinin Vbc. rsp kullanmasını istemiyorsanız, `-noconfig` kullanın.  
   
- Kısa formunu da `-reference` olduğu `/r`.  
+ @No__t-0 ' ın kısa biçimi `/r` ' dir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki komut, kaynak dosyası derler `Input.vb` ve başvuru derlemeleri `Metad1.dll` ve `Metad2.dll` üretmek için `Out.exe`.  
+ Aşağıdaki komut, `Metad1.dll` ve `Metad2.dll` ' den `Out.exe` üretmek için kaynak dosyayı `Input.vb` ve başvuru derlemelerini derler.  
   
 ```console
 vbc -reference:metad1.dll,metad2.dll -out:out.exe input.vb  

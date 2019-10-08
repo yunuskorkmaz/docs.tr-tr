@@ -1,5 +1,5 @@
 ---
-title: Join Tümcesi (Visual Basic)
+title: JOIN tümcesi (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - vb.QueryJoinIn
@@ -10,63 +10,63 @@ helpviewer_keywords:
 - Join statement [Visual Basic]
 - Join clause [Visual Basic]
 ms.assetid: 6dd37936-b27c-4e00-98ad-154b23f4de64
-ms.openlocfilehash: 21432b95b30ae38ac2cbc9e55b5a3066f0bef665
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8eab7db00515f55b086b5e1beddd149f966cb27a
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945294"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72001930"
 ---
-# <a name="join-clause-visual-basic"></a>Join Tümcesi (Visual Basic)
-İki koleksiyonu tek bir koleksiyon halinde birleştirir. Birleştirme işlemi anahtarların eşleşmesi temeline göre ve kullandığı `Equals` işleci.  
+# <a name="join-clause-visual-basic"></a>JOIN tümcesi (Visual Basic)
+İki koleksiyonu tek bir koleksiyon halinde birleştirir. JOIN işlemi, eşleşen anahtarlara dayalıdır ve `Equals` işlecini kullanır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```vb  
 Join element In collection _  
   [ joinClause _ ]   
   [ groupJoinClause ... _ ]   
 On key1 Equals key2 [ And key3 Equals key4 [... ]  
 ```  
   
-## <a name="parts"></a>Bölümler  
+## <a name="parts"></a>Parçaya  
  `element`  
- Gerekli. Denetim değişkeni birleştirilen koleksiyonu.  
+ Gereklidir. Birleştirilen koleksiyonun denetim değişkeni.  
   
  `collection`  
- Gerekli. Sol tarafında belirtilen toplama ile birleştirmek için koleksiyon `Join` işleci. A `Join` yan tümcesi iç içe geçirilemez başka `Join` yan tümcesi veya bir `Group Join` yan tümcesi.  
+ Gereklidir. @No__t-0 işlecinin sol tarafında tanımlanan koleksiyonla birleştirilecek koleksiyon. @No__t-0 yan tümcesi, başka bir `Join` yan tümcesinde veya `Group Join` yan tümcesinde iç içe olabilir.  
   
  `joinClause`  
- İsteğe bağlı. Bir veya daha fazla ek `Join` daha da fazla yan tümce sorgu daraltın.  
+ İsteğe bağlı. Sorguyu daha da daraltmak için bir veya daha fazla ek `Join` yan tümcesi.  
   
  `groupJoinClause`  
- İsteğe bağlı. Bir veya daha fazla ek `Group Join` daha da fazla yan tümce sorgu daraltın.  
+ İsteğe bağlı. Sorguyu daha da daraltmak için bir veya daha fazla ek `Group Join` yan tümcesi.  
   
  `key1` `Equals` `key2`  
- Gerekli. Birleştirilen koleksiyonlar için anahtarları tanımlar. Kullanmalısınız `Equals` birleştirilen koleksiyonları'ndaki anahtarları Karşılaştırılacak işleci. Birleştirme koşulları kullanarak birleştirebilirsiniz `And` birden çok anahtar tanımlamak için işleci. `key1` sol tarafındaki koleksiyondan olmalıdır `Join` işleci. `key2` sağ alt tarafında koleksiyondan olmalıdır `Join` işleci.  
+ Gereklidir. Katılmakta olan koleksiyonlar için anahtarları tanımlar. Birleştirilecek koleksiyonlardan anahtarları karşılaştırmak için `Equals` işlecini kullanmanız gerekir. Birden çok anahtarı belirlemek için `And` işlecini kullanarak Birleştirme koşullarını birleştirebilirsiniz. `key1` `Join` işlecinin sol tarafındaki koleksiyonda olmalıdır. `key2`, `Join` işlecinin sağ tarafındaki koleksiyondan olmalıdır.  
   
- Birleşim koşulunda kullanılan anahtarları koleksiyonundan birden fazla öğe içeren ifadeler olabilir. Ancak, her anahtar ifadesi yalnızca kendi ilgili koleksiyondaki öğeler içerebilir.  
+ JOIN koşulunda kullanılan anahtarlar, koleksiyondan birden fazla öğe içeren ifadeler olabilir. Ancak, her anahtar ifadesi yalnızca ilgili koleksiyonundan öğe içerebilir.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `Join` Yan tümcesi birleştirilen koleksiyonları anahtar değerlerinden eşleşmesi temeline göre iki koleksiyon birleştirir. Sonuçta elde edilen koleksiyon değerleri sol tarafında belirtilen koleksiyondaki herhangi bir birleşimini içerebilir `Join` işleci ile tanımlanan koleksiyonu `Join` yan tümcesi. Sorgu tarafından koşulu için belirtilen sonuç döndürür `Equals` işleci karşılanıyorsa. Bunun eşdeğeri olan bir `INNER JOIN` SQL.  
+ @No__t-0 yan tümcesi, katılmakta olan koleksiyonlardan eşleşen anahtar değerlerini temel alarak iki koleksiyonu birleştirir. Elde edilen koleksiyon, `Join` işlecinin sol tarafında tanımlanan koleksiyondaki herhangi bir değer birleşimini ve `Join` yan tümcesinde tanımlanan koleksiyonu içerebilir. Sorgu yalnızca `Equals` işleci tarafından belirtilen koşulun karşılandığı sonuçları döndürür. Bu, SQL 'de `INNER JOIN` ile eşdeğerdir.  
   
- Birden çok kullanabileceğiniz `Join` tek bir koleksiyon iki veya daha fazla koleksiyonlara katılmak için bir sorgu yan tümcelerinde.  
+ İki veya daha fazla koleksiyonu tek bir koleksiyonda birleştirmek için bir sorguda birden çok `Join` yan tümcesini kullanabilirsiniz.  
   
- Koleksiyonları olmadan birleştirmek için örtük bir birleşim gerçekleştirebileceğiniz `Join` yan tümcesi. Bunu yapmak için birden çok dahil `In` yan tümcelerinde, `From` yan tümcesini belirtin bir `Where` birleştirme için kullanmak istediğiniz anahtarları tanımlayan yan tümcesi.  
+ @No__t-0 yan tümcesi olmadan koleksiyonları birleştirmek için örtük bir birleştirme gerçekleştirebilirsiniz. Bunu yapmak için, `From` yan tümcesine birden çok `In` yan tümce ekleyin ve JOIN için kullanmak istediğiniz anahtarları tanımlayan bir `Where` yan tümcesi belirtin.  
   
- Kullanabileceğiniz `Group Join` koleksiyonları tek bir hiyerarşik koleksiyon halinde birleştirmek için yan tümcesi. Bu benzer bir `LEFT OUTER JOIN` SQL.  
+ Koleksiyonları tek bir hiyerarşik koleksiyonda birleştirmek için `Group Join` yan tümcesini kullanabilirsiniz. Bu, SQL 'de `LEFT OUTER JOIN` gibidir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod örneği, müşterilerin listesini siparişlerini ile birleştirmek için örtük bir birleşim gerçekleştirir.  
+ Aşağıdaki kod örneği, bir müşteri listesini siparişleriyle birlikte birleştirmek için örtük bir birleştirme gerçekleştirir.  
   
  [!code-vb[VbSimpleQuerySamples#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#13)]  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod örneği iki koleksiyonu kullanarak birleştirir `Join` yan tümcesi.  
+ Aşağıdaki kod örneği, `Join` yan tümcesini kullanarak iki koleksiyonu birleştirir.  
   
  [!code-vb[VbSimpleQuerySamples#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples2.vb#12)]  
   
- Bu örnekte, aşağıdakine benzer bir çıktı oluşturur:  
+ Bu örnek aşağıdakine benzer bir çıktı oluşturacaktır:  
   
  `winlogon (968), Windows Logon`  
   
@@ -75,11 +75,11 @@ On key1 Equals key2 [ And key3 Equals key4 [... ]
  `cmd (5136), Command Window`  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod örneği iki koleksiyonu kullanarak birleştirir `Join` iki anahtar sütunlarıyla yan tümcesi.  
+ Aşağıdaki kod örneği iki koleksiyon birleştirir `Join` yan tümcesini iki anahtar sütunla birlikte kullanarak.  
   
  [!code-vb[VbSimpleQuerySamples#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples3.vb#17)]  
   
- Örneğin, aşağıdakine benzer bir çıktı oluşturur:  
+ Örnek aşağıdakine benzer bir çıktı oluşturacaktır:  
   
  `winlogon (968), Windows Logon, Priority = 13`  
   
@@ -89,9 +89,9 @@ On key1 Equals key2 [ And key3 Equals key4 [... ]
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Basic'de LINQ'e giriş](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [Visual Basic LINQ 'e giriş](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
 - [Sorgular](../../../visual-basic/language-reference/queries/index.md)
-- [Select Yan Tümcesi](../../../visual-basic/language-reference/queries/select-clause.md)
-- [From Yan Tümcesi](../../../visual-basic/language-reference/queries/from-clause.md)
-- [Group Join Yan Tümcesi](../../../visual-basic/language-reference/queries/group-join-clause.md)
-- [Where Yan Tümcesi](../../../visual-basic/language-reference/queries/where-clause.md)
+- [Select yan tümcesi](../../../visual-basic/language-reference/queries/select-clause.md)
+- [From yan tümcesi](../../../visual-basic/language-reference/queries/from-clause.md)
+- [Group JOIN yan tümcesi](../../../visual-basic/language-reference/queries/group-join-clause.md)
+- [WHERE yan tümcesi](../../../visual-basic/language-reference/queries/where-clause.md)

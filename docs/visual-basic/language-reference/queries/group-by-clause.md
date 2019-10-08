@@ -12,19 +12,19 @@ helpviewer_keywords:
 - Group By statement [Visual Basic]
 - Group By clause [Visual Basic]
 ms.assetid: b1b5dcea-6654-473b-a2db-01f7e4c265d7
-ms.openlocfilehash: 04378d2c9a7e565343ff663997e2a3e61f04f9d2
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 8b3a480c226debc529c268e83437d15192592bd3
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66423582"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72004761"
 ---
 # <a name="group-by-clause-visual-basic"></a>Group By Tümcesi (Visual Basic)
-Bir sorgu sonucunun öğelerini gruplandırır. Ayrıca her grup için toplama işlevleri uygulamak için kullanılabilir. Gruplandırma işlemi, bir veya daha fazla anahtarlar üzerinde temel alır.  
+Bir sorgu sonucunun öğelerini gruplandırır. , Her gruba toplam işlevleri uygulamak için de kullanılabilir. Gruplandırma işlemi bir veya daha fazla anahtara göre belirlenir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```vb  
 Group [ listField1 [, listField2 [...] ] By keyExp1 [, keyExp2 [...] ]  
   Into aggregateList  
 ```  
@@ -33,45 +33,45 @@ Group [ listField1 [, listField2 [...] ] By keyExp1 [, keyExp2 [...] ]
   
 - `listField1`, `listField2`  
   
-     İsteğe bağlı. Bir veya daha fazla alan sorgu değişkeni veya açıkça gruplandırılmış sonuca dahil için alanları tanımlayan değişkenleri. Sorgu değişkeni veya değişkenleri tüm alanlar, hiçbir alan belirtilmesi durumunda, gruplandırılmış sonuca dahil edilir.  
+     İsteğe bağlı. Gruplanmış sonuca dahil edilecek alanları açıkça tanımlayan sorgu değişkeninin veya değişkenlerinin bir veya daha fazla alanı. Hiçbir alan belirtilmemişse, sorgu değişkeni veya değişkenlerinin tüm alanları gruplanmış sonuca dahil edilir.  
   
 - `keyExp1`  
   
-     Gerekli. Öğe grupları belirlemek için kullanılacak anahtarı tanımlayan bir ifade. Bir bileşik anahtarı belirtmek için birden fazla anahtar belirtebilir.  
+     Gerekli. Öğe gruplarını belirlemekte kullanılacak anahtarı tanımlayan bir ifade. Bileşik bir anahtar belirtmek için birden fazla anahtar belirtebilirsiniz.  
   
 - `keyExp2`  
   
-     İsteğe bağlı. İle birlikte bir veya daha fazla ek anahtarlar `keyExp1` bileşik bir anahtar oluşturmak için.  
+     İsteğe bağlı. Bileşik anahtar oluşturmak için `keyExp1` ile birleştirilen bir veya daha fazla ek anahtar.  
   
 - `aggregateList`  
   
-     Gerekli. Grupların nasıl toplanır tanımlayan bir veya daha fazla ifadeler. Gruplandırılmış sonuçlar için bir üye adını tanımlamak için kullanmak `Group` anahtar sözcüğü aşağıdaki biçimlerden birini olabilir:  
+     Gerekli. Grupların nasıl toplanacağına ilişkin bir veya daha fazla ifade. Gruplanmış sonuçların üye adını belirlemek için, aşağıdaki biçimlerden birinde olabilecek `Group` anahtar sözcüğünü kullanın:  
   
-    ```  
+    ```vb  
     Into Group  
     ```  
   
-     -veya-  
+     veya  
   
-    ```  
+    ```vb  
     Into <alias> = Group  
     ```  
   
-     Gruba uygulanacak toplama işlevleri de içerebilir.  
+     Gruba uygulanacak toplama işlevlerini de ekleyebilirsiniz.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Kullanabileceğiniz `Group By` yan bir sorgunun sonuçlarını gruplarına bölün. Gruplama, bir anahtar veya birden çok anahtarlarını içeren bir bileşik anahtarı temel alır. Eşleşen anahtar değerleri ile ilişkili olan öğeler aynı grupta dahil edilir.  
+ Bir sorgunun sonuçlarını gruplara bölmek için `Group By` yan tümcesini kullanabilirsiniz. Gruplandırma bir anahtara veya birden çok anahtardan oluşan bileşik anahtara göre belirlenir. Eşleşen anahtar değerleriyle ilişkili öğeler aynı gruba dahil edilir.  
   
- Kullandığınız `aggregateList` parametresinin `Into` yan tümcesi ve `Group` grubuna başvurmak için kullanılan bir üye adını tanımlamak için anahtar sözcüğü. Toplama işlevi de içerebilir `Into` gruplandırılmış öğeler için değeri hesaplamak için yan tümcesi. Standart toplama işlevleri bir listesi için bkz. [Aggregate tümcesi](../../../visual-basic/language-reference/queries/aggregate-clause.md).  
+ @No__t-1 yan tümcesinin `aggregateList` parametresini ve gruba başvurmak için kullanılan üye adını belirlemek için `Group` anahtar sözcüğünü kullanırsınız. Gruplanmış öğelerin değerlerini hesaplamak için `Into` yan tümcesine toplama işlevleri de ekleyebilirsiniz. Standart toplama işlevlerinin bir listesi için bkz. [Aggregate yan tümcesi](../../../visual-basic/language-reference/queries/aggregate-clause.md).  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod örneği, bulundukları konuma göre (ülke/bölge) müşterilerin listesini gruplandırır ve her gruptaki müşterilerin sayısını sağlar. Sonuçlar, ülke/bölge adına göre sıralanır. Gruplandırılmış sonuçlar Şehir adına göre sıralanır.  
+ Aşağıdaki kod örneği, konumlarına (ülke/bölge) göre müşterilerin bir listesini gruplandırır ve her bir gruptaki müşterilerin sayısını sağlar. Sonuçlar ülke/bölge adına göre sıralanır. Gruplanmış sonuçlar şehir adına göre sıralanır.  
   
  [!code-vb[VbSimpleQuerySamples#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#11)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Basic'de LINQ'e giriş](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [Visual Basic LINQ 'e giriş](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
 - [Sorgular](../../../visual-basic/language-reference/queries/index.md)
 - [Select Yan Tümcesi](../../../visual-basic/language-reference/queries/select-clause.md)
 - [From Yan Tümcesi](../../../visual-basic/language-reference/queries/from-clause.md)

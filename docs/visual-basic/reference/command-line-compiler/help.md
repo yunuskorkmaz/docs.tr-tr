@@ -9,21 +9,25 @@ helpviewer_keywords:
 - -? compiler option [Visual Basic]
 - '? compiler option [Visual Basic]'
 ms.assetid: eb984aa5-ac98-4d0b-a0d2-24238d7bc8dc
-ms.openlocfilehash: 287a2ed3f54f85435a986d3a6ecd77f7009fb195
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 33b1837415001253122388f7b4992abf6f96903f
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69938221"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005611"
 ---
 # <a name="-help---visual-basic"></a>-help, -? (Visual Basic)
 Derleyici seçeneklerini görüntüler.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```console  
 -help  
-' -or-  
+```
+
+veya  
+
+```console
 -?  
 ```  
   
@@ -31,12 +35,12 @@ Derleyici seçeneklerini görüntüler.
  Bu seçeneği bir derlemeye eklerseniz, hiçbir çıktı dosyası oluşturulmaz ve hiçbir derleme gerçekleşmez.  
   
 > [!NOTE]
-> Bu `-help` seçenek, Visual Studio geliştirme ortamı içinden kullanılamaz; yalnızca komut satırından derlenirken kullanılabilir.  
+> @No__t-0 seçeneği, Visual Studio geliştirme ortamı içinden kullanılamaz; yalnızca komut satırından derlenirken kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki kod, komut satırından yardım görüntüler.  
   
-```  
+```console  
 vbc -help  
 ```  
   

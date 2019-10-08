@@ -10,19 +10,19 @@ helpviewer_keywords:
 - From clause [Visual Basic]
 - From statement [Visual Basic]
 ms.assetid: 83e3665e-68a0-4540-a3a3-3d777a0f95d5
-ms.openlocfilehash: 23b277b2eb14ea6722295aab8d7190d78def6f36
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 781902f1bf28bd029c8d9825aee155a6691cbae9
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64639628"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72004784"
 ---
 # <a name="from-clause-visual-basic"></a>From Tümcesi (Visual Basic)
-Bir veya daha fazla aralık değişkenleri ve bir sorgu koleksiyonu belirtir.  
+Bir veya daha fazla Aralık değişkenini ve sorgulanacak bir koleksiyonu belirtir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```vb  
 From element [ As type ] In collection [ _ ]  
   [, element2 [ As type2 ] In collection2 [, ... ] ]  
 ```  
@@ -31,48 +31,48 @@ From element [ As type ] In collection [ _ ]
   
 |Terim|Tanım|  
 |---|---|  
-|`element`|Gerekli. A *aralık değişkeni* koleksiyon öğelerinde yineleme yapmak için kullanılır. Aralık değişkeni için her üye için kullanılır `collection` sorgu gezinir gibi `collection`. Sıralanabilir bir tür olmalıdır.|  
-|`type`|İsteğe bağlı. Türünü `element`. Hayır ise `type` belirtilen türü `element` içinden gösterilen `collection`.|  
-|`collection`|Gerekli. Koleksiyona sorgulanacağı anlamına gelir. Sıralanabilir bir tür olmalıdır.|  
+|`element`|Gerekli. Koleksiyonun öğeleri boyunca yinelemek için kullanılan bir *Aralık değişkeni* . Sorgu `collection` ' de yineleme yaparken, `collection` ' ın her üyesine başvurmak için bir Aralık değişkeni kullanılır. Sıralanabilir bir tür olmalıdır.|  
+|`type`|İsteğe bağlı. @No__t türü-0. @No__t-0 belirtilmemişse, `element` türü `collection` ' den çıkarsanamıyor.|  
+|`collection`|Gerekli. Sorgulanacak koleksiyona başvurur. Sıralanabilir bir tür olmalıdır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `From` Yan tümcesi bir sorgu ve kaynak koleksiyonu bir öğesine başvurmak için kullanılan değişkenleri için kaynak verilerini tanımlamak için kullanılır. Bu değişkenleri olarak adlandırılmasının *aralık değişkenleri*. `From` Aşağıdakiler haricinde bir sorgu yan tümcesi gereklidir `Aggregate` yan tümcesi döndürür yalnızca toplu sonuçları, bir sorgu tanımlamak için kullanılır. Daha fazla bilgi için [Aggregate tümcesi](../../../visual-basic/language-reference/queries/aggregate-clause.md).  
+ @No__t-0 yan tümcesi, bir sorgunun kaynak verilerini ve kaynak koleksiyondaki bir öğeye başvurmak için kullanılan değişkenleri belirlemek için kullanılır. Bu değişkenlere *Aralık değişkenleri*denir. @No__t-0 yan tümcesi, yalnızca toplanmış sonuçları döndüren bir sorguyu tanımlamak için `Aggregate` yan tümcesinin kullanıldığı durumlar dışında, bir sorgu için gereklidir. Daha fazla bilgi için bkz. [toplama yan tümcesi](../../../visual-basic/language-reference/queries/aggregate-clause.md).  
   
- Birden çok belirtebilirsiniz `From` birleştirilecek olan birden çok koleksiyon belirlemek üzere bir sorgu yan tümcelerinde. Birden çok koleksiyon belirtildiğinde, bunlar üzerinden bağımsız olarak yinelendiğinde veya ilişkili oldukları varsa bunları birleştirebilirsiniz. Kullanarak, örtük olarak bir koleksiyonları birleştirebilirsiniz `Select` yan tümcesi kullanılarak açık şekilde veya `Join` veya `Group Join` yan tümceleri. Alternatif olarak, birden çok aralık değişkenleri ve Koleksiyonlar tek bir belirtebilirsiniz `From` her ilgili aralık değişkeni ve diğerlerinden virgülle ayırarak toplama yan tümcesi. Aşağıdaki kod örneği her iki sözdizimi seçeneklerini gösterir `From` yan tümcesi.  
+ Birleştirilecek birden çok koleksiyonu belirlemek için bir sorguda birden fazla `From` yan tümcesi belirtebilirsiniz. Birden çok koleksiyon belirtildiğinde, bunlar birbirinden bağımsız olarak yinelenir veya ilişkili olmaları durumunda bunlara katılabilirler. @No__t-0 yan tümcesini kullanarak veya açıkça `Join` veya `Group Join` yan tümceleri kullanarak koleksiyonlar ekleyebilirsiniz. Alternatif olarak, tek bir `From` yan tümcesinde birden çok Aralık değişkeni ve koleksiyonlar belirterek, her ilgili Aralık değişkeni ve koleksiyon diğerlerinden virgülle ayrılır. Aşağıdaki kod örneği `From` yan tümcesi için her iki sözdizimi seçeneğini gösterir.  
   
  [!code-vb[VbSimpleQuerySamples#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#21)]  
   
- `From` Yan tümcesi bir sorgu kapsamına benzer kapsamını tanımlar bir `For` döngü. Bu nedenle, her `element` aralık değişkeni bir sorgu kapsamında benzersiz adlara sahip olmalıdır. Birden çok belirtebildiğinizden `From` izleyen bir sorgu için yan tümceler `From` yan tümceleri aralık değişkenleri başvurabilir `From` yan tümcesi veya başvurabilir aralık değişkenleri önceki `From` yan tümcesi. Örneğin, aşağıdaki örnekte iç içe bir gösterir `From` burada ikinci yan tümcesinde toplama temel bir özelliği birinci yan tümce de Aralık değişkeninin yan tümcesi.  
+ @No__t-0 yan tümcesi, bir `For` döngüsünün kapsamına benzer bir sorgunun kapsamını tanımlar. Bu nedenle, bir sorgunun kapsamındaki her @no__t 0 Aralık değişkeni benzersiz bir ada sahip olmalıdır. Bir sorgu için birden çok `From` yan tümcesi belirtebileceğiniz için, sonraki `From` yan tümceleri `From` yan tümcesindeki Aralık değişkenlerine başvurabilir veya önceki bir `From` yan tümcesindeki Aralık değişkenlerine başvurabilir. Örneğin, aşağıdaki örnek, ikinci yan tümcesindeki koleksiyonun ilk yan tümcesindeki Range değişkeninin bir özelliğine dayandığı iç içe `From` yan tümcesini gösterir.  
   
  [!code-vb[VbSimpleQuerySamples#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#22)]  
   
- Her `From` yan tümcesi sorguyu daraltmak için ek sorgu yan tümceleri herhangi bir birleşimi tarafından takip. Sorgu aşağıdaki yollarla daraltabilirsiniz:  
+ Her `From` yan tümcesine sorgu iyileştirmek için ek sorgu yan tümcelerinin herhangi bir birleşimi gelebilir. Sorguyu aşağıdaki yollarla geliştirebilirsiniz:  
   
-- Örtük olarak kullanarak birden çok koleksiyon birleştirme `From` ve `Select` yan tümcesi kullanılarak açık şekilde veya `Join` veya `Group Join` yan tümceleri.  
+- Birden çok koleksiyonu dolaylı olarak `From` ve `Select` yan tümceleri kullanarak veya `Join` veya `Group Join` yan tümceleri kullanarak açıkça birleştirin.  
   
-- Kullanım `Where` sorgu sonucu filtrelemek için yan tümcesi.  
+- Sorgu sonucunu filtrelemek için `Where` yan tümcesini kullanın.  
   
-- Sonuç kullanarak sıralama `Order By` yan tümcesi.  
+- @No__t-0 yan tümcesini kullanarak sonucu sıralayın.  
   
-- Şuna benzer sonuçlar gruplamak kullanarak `Group By` yan tümcesi.  
+- Benzer sonuçları, `Group By` yan tümcesini kullanarak birlikte gruplandırın.  
   
-- Kullanım `Aggregate` yan tümcesi için tüm sorgu sonucu değerlendiremedik toplama işlevleri tanımlamak için.  
+- Tüm sorgu sonucu için değerlendirmek üzere toplama işlevlerini belirlemek için `Aggregate` yan tümcesini kullanın.  
   
-- Kullanım `Let` yan tanıtan bir yineleme değişkeninin değeri ifade yerine bir koleksiyona göre belirlenir.  
+- Değeri bir koleksiyon yerine bir ifade tarafından belirlenen bir yineleme değişkenini tanıtmak için `Let` yan tümcesini kullanın.  
   
-- Kullanım `Distinct` yan yinelenen sorgu sonuçları yoksay.  
+- Yinelenen sorgu sonuçlarını yoksaymak için `Distinct` yan tümcesini kullanın.  
   
-- Kullanarak, döndürülecek sonuç parçalarını tanımlamak `Skip`, `Take`, `Skip While`, ve `Take While` yan tümceleri.  
+- @No__t-0, `Take`, `Skip While` ve `Take While` yan tümcelerini kullanarak döndürülecek sonuç parçalarını belirler.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki sorgu ifadesi kullanan bir `From` yan tümcesinin aralık değişkenini bildirmek için `cust` her `Customer` nesnesine `customers` koleksiyonu. `Where` Yan tümcesi, çıkış belirtilen bölgeden müşterilere kısıtlamak için aralık değişkeni kullanır. `For Each` Döngü, her müşteri için şirket adı sorgu sonucu görüntüler.  
+ Aşağıdaki sorgu ifadesi, `customers` koleksiyonundaki her bir `Customer` nesnesi için bir Aralık değişkeni `cust` olarak bildirmek üzere bir `From` yan tümcesi kullanır. @No__t-0 yan tümcesi, belirtilen bölgedeki müşterilere çıktıyı kısıtlamak için Aralık değişkenini kullanır. @No__t-0 döngüsü sorgu sonucunda her müşteri için şirket adını görüntüler.  
   
  [!code-vb[VbSimpleQuerySamples#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#23)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Sorgular](../../../visual-basic/language-reference/queries/index.md)
-- [Visual Basic'de LINQ'e giriş](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [Visual Basic LINQ 'e giriş](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
 - [For Each...Next Deyimi](../../../visual-basic/language-reference/statements/for-each-next-statement.md)
 - [For...Next Deyimi](../../../visual-basic/language-reference/statements/for-next-statement.md)
 - [Select Yan Tümcesi](../../../visual-basic/language-reference/queries/select-clause.md)

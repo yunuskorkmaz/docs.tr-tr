@@ -1,24 +1,24 @@
 ---
-title: -platform (Visual Basic)
+title: -Platform (Visual Basic)
 ms.date: 03/13/2018
 helpviewer_keywords:
 - platform compiler option [Visual Basic]
 - /platform compiler option [Visual Basic]
 - -platform compiler option [Visual Basic]
 ms.assetid: f9bc61e6-e854-4ae1-87b9-d6244de23fd1
-ms.openlocfilehash: eb5513c6d8e4085e1b3f69de1d36a007fa27271e
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 21526484b8423f9b366da64307bc44f8fb061fe9
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66380308"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005299"
 ---
-# <a name="-platform-visual-basic"></a>-platform (Visual Basic)
-Çıkış dosyası hangi ortak dil çalışma zamanı (CLR) platform sürümünü çalıştırabilirsiniz belirtir.  
+# <a name="-platform-visual-basic"></a>-Platform (Visual Basic)
+Ortak dil çalışma zamanının (CLR) hangi platform sürümünün çıkış dosyasını çalıştırabileceği belirtir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```console  
 -platform:{ x86 | x64 | Itanium | arm | anycpu | anycpu32bitpreferred }  
 ```  
   
@@ -26,56 +26,56 @@ ms.locfileid: "66380308"
   
 |Terim|Tanım|  
 |---|---|  
-|`x86`|Derlemenizi 32-bit, x86 ile uyumlu bir CLR tarafından çalıştırılacak derler.|  
-|`x64`|Derlemenizi 64 bit CLR tarafından AMD64 veya EM64T yönerge kümesini destekleyen bir bilgisayarda çalıştırılması için derler.|  
-|`Itanium`|Derlemenizi 64 bit CLR tarafından bir Itanium işlemci bir bilgisayarda çalıştırılması için derler.|  
-|`arm`|ARM (Gelişmiş RISC makinesi) işlemciye sahip bir bilgisayarda çalıştırmak için derlemenizi derler.|  
-|`anycpu`|Herhangi bir platform üzerinde çalıştırmasını derlemenizin derler. Uygulamayı Windows 32-bit sürümlerinde 32 bit uygulama olarak ve Windows 64 bit sürümlerinde 64 bit uygulama olarak çalışır. Bu bayrak varsayılan değerdir.|  
-|`anycpu32bitpreferred`|Herhangi bir platform üzerinde çalıştırmasını derlemenizin derler. Uygulama bir 32 bit uygulama olarak, hem 32-bit hem de 64 bit Windows sürümlerinde çalışır. Bu bayrak, yalnızca yürütülebilir dosyalar için geçerlidir (. EXE) ve .NET Framework 4.5 gerektirir.|  
+|`x86`|Derlemenizi 32 bit, x86 uyumlu CLR tarafından çalıştırılacak şekilde derler.|  
+|`x64`|, Derlemenizi AMD64 veya EM64T yönerge kümesini destekleyen bir bilgisayarda 64 bitlik CLR tarafından çalıştırılacak şekilde derler.|  
+|`Itanium`|Derlemenizi, Itanium işlemcisi olan bir bilgisayarda 64 bitlik CLR tarafından çalıştırılacak şekilde derler.|  
+|`arm`|Derlemenizi ARM (Gelişmiş RıSC makinesi) işlemcisi olan bir bilgisayarda çalıştırılacak şekilde derler.|  
+|`anycpu`|Derlemenizi herhangi bir platformda çalışacak şekilde derler. Uygulama Windows 'un 32 bit sürümlerinde 32 bitlik bir uygulama olarak ve Windows 'un 64 bit sürümlerinde bir 64 bit uygulama olarak çalışacaktır. Bu bayrak varsayılan değerdir.|  
+|`anycpu32bitpreferred`|Derlemenizi herhangi bir platformda çalışacak şekilde derler. Uygulama, Windows 'un hem 32 bit hem de 64-bit sürümlerinde 32 bitlik bir uygulama olarak çalışacaktır. Bu bayrak yalnızca yürütülebilir dosyalar için geçerlidir (. EXE) ve .NET Framework 4,5 gerektirir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Kullanım `-platform` çıktı dosyası tarafından hedeflenen işlemci türünü belirtmek için seçeneği.  
+ Çıkış dosyasının hedeflediği işlemcinin türünü belirtmek için `-platform` seçeneğini kullanın.  
   
- Genel olarak, .NET Framework derlemeleri Visual Basic'te yazılmış aynı platformdan bağımsız olarak çalışır. Ancak, farklı platformlarda farklı şekilde davranan bazı durumlar vardır. Bu yaygın durumlar şunlardır:  
+ Genel olarak, Visual Basic yazılan .NET Framework derlemeleri platformdan bağımsız olarak aynı çalışacaktır. Ancak, farklı platformlarda farklı şekilde davranan bazı durumlar vardır. Bu ortak durumlar şunlardır:  
   
-- Herhangi bir işaretçi türü gibi platforma göre boyutunu değiştiren üyeler içeren yapılar.  
+- Herhangi bir işaretçi türü gibi, platforma bağlı olarak boyutu değiştiren Üyeler içeren yapılar.  
   
 - Sabit boyutlar içeren işaretçi aritmetiği.  
   
 - Tanıtıcılar için `Integer` yerine <xref:System.IntPtr> kullanan yanlış platform çağrıları veya COM bildirimleri.  
   
-- Atama <xref:System.IntPtr> için `Integer`.  
+- @No__t-0 `Integer` ' e atama.  
   
-- Platform kullanarak çağırma veya COM birlikte çalışma bileşenlerle tüm platformlarda mevcut değildir.  
+- Tüm platformlarda mevcut olmayan bileşenlerle platform Invoke veya COM birlikte çalışma kullanma.  
   
- **-Platform** seçeneği kodunuzun çalışacak mimarisi hakkında varsayımlar yapmış biliyorsanız, bazı sorunları azaltmak. Özellikle:  
+ Kodunuzun çalışacağı mimariyle ilgili varsayımlar yaptığını biliyorsanız, **-Platform** seçeneği bazı sorunları azaltır. Engelle  
   
-- Bir 64 bit platformları hedefleyen karar ve uygulamanın bir 32-bit makinede çalıştırılması, hata iletisi çok daha önce gelir ve bu anahtarı kullanmadan oluşan bir hata daha sorunu daha yöneliktir.  
+- 64 bitlik bir platformu hedefistemediğinize karar verirseniz ve uygulama 32 bit makinede çalışıyorsa, hata iletisi daha önce gelir ve sorunu bu anahtarı kullanmadan oluşan hatadan daha da hedeflenmiştir.  
   
-- Ayarlarsanız `x86` seçeneğinde bayrağı ve uygulamayı daha sonra bir 64-bit makinede çalıştırmak, uygulamayı yerel olarak çalıştırmak yerine WOW alt sistemi çalıştırır.  
+- Seçeneğinde `x86` bayrağını ayarlarsanız ve uygulama daha sonra bir 64 bit makinede çalışıyorsa, uygulama yerel olarak çalıştırmak yerine WOW alt sisteminde çalışır.  
   
- Bir 64 bit Windows işletim sisteminde:  
+ 64 bitlik bir Windows işletim sisteminde:  
   
-- Derlenmiş derlemelerde `-platform:x86` WOW64 altında çalışan 32 bitlik CLR üzerinde yürütülür.  
+- @No__t-0 ile derlenen derlemeler, WOW64 altında çalışan 32 bitlik CLR üzerinde yürütülür.  
   
-- Yürütülebilir dosyalar ile derlenmiş olan `-platform:anycpu` 64 bitlik CLR yürütülür.  
+- @No__t-0 ile derlenen çalıştırılabilir dosyalar 64 bitlik CLR üzerinde yürütülür.  
   
-- Bir DLL ile derlenmiş `-platform:anycpu` aynı CLR'yi işlem içine yüklenmiş olarak yürütülür.  
+- @No__t-0 ile derlenen bir DLL, yüklendiği işlemle aynı CLR üzerinde yürütülür.  
   
-- İle derlenen yürütülebilir dosyaları `-platform:anycpu32bitpreferred` 32 bitlik CLR yürütülür.  
+- @No__t-0 ile derlenen çalıştırılabilir dosyalar 32 bitlik CLR üzerinde yürütülür.  
   
- Bir Windows 64-bit sürümünü çalıştırmak için uygulama geliştirme hakkında daha fazla bilgi için bkz. [64-bit uygulamalar](../../../framework/64-bit-apps.md).  
+ Windows 'un 64 bitlik bir sürümünde çalışacak bir uygulama geliştirme hakkında daha fazla bilgi için bkz. [64-bit uygulamalar](../../../framework/64-bit-apps.md).  
   
-### <a name="to-set--platform-in-the-visual-studio-ide"></a>Ayarlanacak - Visual Studio IDE'de platformu  
+### <a name="to-set--platform-in-the-visual-studio-ide"></a>Visual Studio IDE 'de set-platform  
   
-1. İçinde **Çözüm Gezgini**, projeyi seçin açın **proje** menüsüne ve ardından **özellikleri**.  
+1. **Çözüm Gezgini**, projeyi seçin, **Proje** menüsünü açın ve ardından **Özellikler**' e tıklayın.  
   
-2. Üzerinde **derleme** sekmesinde seçin veya temizleyin **32 bit tercih et** onay kutusunu veya **hedef CPU** listesinde, bir değer seçin.  
+2. **Derle** sekmesinde, **32 bit tercih** et onay kutusunu seçin veya temizleyin veya **hedef CPU** listesinden bir değer seçin.  
   
-     Daha fazla bilgi için [derleme sayfası, Proje Tasarımcısı (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic).  
+     Daha fazla bilgi için bkz. [derleme sayfası, proje Tasarımcısı (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic).  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte nasıl kullanılacağı gösterilmektedir `-platform` derleyici seçeneği.  
+ Aşağıdaki örnek `-platform` derleyici seçeneğinin nasıl kullanılacağını göstermektedir.  
   
 ```console
 vbc -platform:x86 myFile.vb  
@@ -83,6 +83,6 @@ vbc -platform:x86 myFile.vb
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [/ target (Visual Basic)](target.md)
+- [/target (Visual Basic)](target.md)
 - [Visual Basic komut satırı derleyicisi](index.md)
 - [Örnek Derleme Komut Satırları](sample-compilation-command-lines.md)

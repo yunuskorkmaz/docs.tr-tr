@@ -5,50 +5,50 @@ helpviewer_keywords:
 - deterministic compiler option [Visual Basic]
 - -deterministic compiler option [Visual Basic]
 - -deterministic compiler option [Visual Basic]
-ms.openlocfilehash: 95c9add0521208ef04ff47c071a2e04abc968f27
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6a83b636dd83534788f3a38971e0fef2919314f5
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61648743"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005632"
 ---
 # <a name="-deterministic"></a>-deterministic
 
-Bayt için çıktısı, aynı girişleri için derlemeler arasında özdeş bir derleme oluşturmak derleyicinin neden olur.
+Derleyicinin bayt çıkışı, aynı girişlerin derlemeleri arasında özdeş olan bir derleme üretmesine neden olur.
 
 ## <a name="syntax"></a>Sözdizimi
 
-```
+```console
 -deterministic
 ```
 
 ## <a name="remarks"></a>Açıklamalar
 
-Derleyici bir zaman damgası ve rastgele sayı oluşturulan bir GUID ekler olduğundan varsayılan olarak, belirli bir giriş kümesini derleyici çıktısını benzersizdir. Kullandığınız `-deterministic` üretmek için seçeneği bir *belirlenimci derlemeyi*, bir giriş aynı kaldığı sürece ikili içeriğe sahip derlemeler arasında aynı.
+Varsayılan olarak, belirli bir giriş kümesinden Derleyici çıktısı benzersizdir, çünkü derleyici bir zaman damgası ve rastgele sayıdan oluşturulan bir GUID ekliyor. Değer aynı kaldığı sürece, bir *belirleyici derleme*oluşturmak için `-deterministic` seçeneğini kullanın.
 
-Derleyici, aşağıdaki girişleri gerekircilik amacıyla göz önünde bulundurur:
+Derleyici, belirlemeleri için aşağıdaki girişleri dikkate alır:
 
-- Komut satırı parametreleri dizisi.
-- Derleyicinin .rsp yanıt dosyasının içeriği.
-- Kullanılan derleme kesin sürümünü ve onun başvurulmuş derlemeler.
+- Komut satırı parametrelerinin sırası.
+- Derleyicinin. rsp yanıt dosyasının içeriği.
+- Kullanılan derleyicinin kesin sürümü ve başvurulan derlemeleri.
 - Geçerli dizin yolu.
-- Tüm dosyaları ikili içeriğini açıkça derleyici doğrudan veya dolaylı olarak dahil olmak üzere geçirilen:
-  - Kaynak dosyaları
+- Açıkça derleyiciye doğrudan veya dolaylı olarak geçirilen tüm dosyaların ikili içeriği:
+  - Kaynak dosyalar
   - Başvurulan derlemeler
-  - Başvurulan modül
+  - Başvurulan modüller
   - Kaynaklar
   - Tanımlayıcı ad anahtar dosyası
-  - @ yanıt dosyaları
+  - @ Yanıt dosyaları
   - Çözümleyiciler
-  - Rulesets
-  - Çözümleyiciler tarafından kullanılan ek dosyalar
-- Geçerli kültür (hangi tanılama ve özel durum iletileri üretilir dilin).
-- Varsayılan kodlama (veya mevcut kod sayfasında) kodlama belirtilmezse.
-- Varlığı, var olmayan ve derleyicinin arama yolları dosya içeriklerini (örneğin, tarafından belirtilen `/lib` veya `/recurse`).
-- Derleyici çalıştığı CLR platform.
-- Değerini `%LIBPATH%`, çözümleyici bağımlılık yükleniyor etkileyebilir.
+  - RuleSets
+  - Çözümleyiciler tarafından kullanılabilecek ek dosyalar
+- Geçerli kültür (tanılama ve özel durum iletilerinin oluşturulduğu dil için).
+- Kodlama belirtilmemişse, varsayılan kodlama (veya geçerli kod sayfası).
+- Derleyicinin arama yollarındaki dosyaların varlığı, var olmayan ve içeriği (örneğin, `/lib` veya `/recurse`).
+- Derleyicinin çalıştırıldığı CLR platformu.
+- Çözümleyici bağımlılığı yüklemeyi etkileyebilecek `%LIBPATH%` değeri.
 
-Kaynakları genel kullanıma açık olduğunda, belirlenimci derlemeyi güvenilir bir kaynaktan bir ikili derlenmiş olup olmadığını kurmak için kullanılabilir. Ayrıca bir ikili değişiklikleri bağımlı derleme adımları yürütülecek gerekip gerekmediğini belirlemek için bir sürekli derleme sistemi de yararlı olabilir.
+Kaynaklar herkese açık olduğunda, bir ikilinin güvenilir bir kaynaktan derlenip derlenmediğini oluşturmak için belirleyici derleme kullanılabilir. Ayrıca, bir ikiliye yapılan değişikliklere bağımlı derleme adımlarının yürütülmesi gerekip gerekmediğini belirlemek için sürekli bir derleme sisteminde de yararlı olabilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

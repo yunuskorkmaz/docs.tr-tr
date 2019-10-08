@@ -10,49 +10,49 @@ helpviewer_keywords:
 - Order By clause [Visual Basic]
 - Order By statement [Visual Basic]
 ms.assetid: fa911282-6b81-44c7-acfa-46b5bb93df75
-ms.openlocfilehash: 1c84a4cdb4a149154d459ca4d9c290ed360d1772
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f8ee46b12e84f99629c3a92057fc3a7bb8a3c2e8
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61712571"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72004947"
 ---
 # <a name="order-by-clause-visual-basic"></a>Order By Tümcesi (Visual Basic)
-Sorgu sonucu için sıralama düzenini belirtir.  
+Bir sorgu sonucu için sıralama düzenini belirtir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```vb  
 Order By orderExp1 [ Ascending | Descending ] [, orderExp2 [...] ]  
 ```  
   
 ## <a name="parts"></a>Bölümler  
  `orderExp1`  
- Gerekli. Döndürülen değerlerin nasıl tanımlayan bir veya daha fazla alanlardan geçerli sorgu sonucu. Alan adlarını, virgül (,) ile ayrılmalıdır. Her bir alan olarak kullanarak azalan veya artan düzende sıralanmış olarak tanımlayabilirsiniz `Ascending` veya `Descending` anahtar sözcükleri. Hayır ise `Ascending` veya `Descending` anahtar sözcüğü belirtilmediğinde, varsayılan sıralama artan düzendedir. Sıralama düzeni alanlarını öncelik soldan sağa atanır.  
+ Gerekli. Geçerli sorgu sonucundan döndürülen değerlerin nasıl sıraya alınacağını belirleyen bir veya daha fazla alan. Alan adları virgüller (,) ile ayrılmalıdır. @No__t-0 veya `Descending` anahtar sözcüklerini kullanarak her bir alanı artan veya azalan düzende sıralanmış olarak belirleyebilirsiniz. @No__t-0 veya `Descending` anahtar sözcüğü belirtilmemişse, varsayılan sıralama düzeni artan olur. Sıralama düzeni alanlarına soldan sağa öncelik verilir.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Kullanabileceğiniz `Order By` bir sorgunun sonuçlarını sıralamak için yan tümcesi. `Order By` Yan tümcesinin aralık değişkeni geçerli kapsam için temel bir sonuç yalnızca sıralayabilirsiniz. Örneğin, `Select` yan tümcesi bir sorgu ifadesinde yeni yineleme değişkenleri ile ilgili kapsam için yeni bir kapsam tanıtır. Aralık önce tanımlanan değişkenler bir `Select` sorgu yan tümcesinde kullanılamaz sonra `Select` yan tümcesi. Bu nedenle, sonuçlarınızı kullanılamaz bir alana göre sıralamak isterseniz `Select` yan tümcesi gerekir put `Order By` yan tümcesi önce `Select` yan tümcesi. Bir örneği olduğunda bunu yapmak gerekir, sorgu sonucu bir parçası olarak döndürülmez alanlara göre sıralamak istediğinizi olduğunda.  
+ Bir sorgunun sonuçlarını sıralamak için `Order By` yan tümcesini kullanabilirsiniz. @No__t-0 yan tümcesi yalnızca geçerli kapsamın Aralık değişkenine göre bir sonuç sıralayabilir. Örneğin, `Select` yan tümcesi, bu kapsam için yeni yineleme değişkenleriyle bir sorgu ifadesinde yeni bir kapsam sunar. Sorgudaki `Select` yan tümcesinden önce tanımlanan Aralık değişkenleri `Select` yan tümcesinden sonra kullanılamaz. Bu nedenle, sonuçlarınızı `Select` yan tümcesinde kullanılamayan bir alana göre sıralamak isterseniz, `Select` yan tümcesinin önüne `Order By` yan tümcesini koymanız gerekir. Bunu yapmanız gereken bir örnek, sorgunuzu sonucun bir parçası olarak döndürülmüyor alanlara göre sıralamak isteeceklerdir.  
   
- Artan ve azalan bir alan uygulaması tarafından belirlenir <xref:System.IComparable> alanın veri türü için arabirim. Veri türü uygulamazsa <xref:System.IComparable> arabirimi, sıralama düzeni göz ardı edilir.  
+ Bir alan için artan ve azalan sıralama, alanın veri türü için <xref:System.IComparable> arabiriminin uygulamasına göre belirlenir. Veri türü <xref:System.IComparable> arabirimini uygulamadığı takdirde sıralama düzeni yok sayılır.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki sorgu ifadesi kullanan bir `From` yan tümcesinin aralık değişkenini bildirmek için `book` için `books` koleksiyonu. `Order By` Yan tümce sorgu sonucuna göre artan düzende (varsayılan) fiyatı sıralar. Kitapları ile aynı fiyat üzerinden, artan düzende başlığa göre sıralanır. `Select` Yan tümcesi seçer `Title` ve `Price` sorgu tarafından döndürülen değer olarak özellikleri.  
+ Aşağıdaki sorgu ifadesi bir `From` yan tümcesini kullanarak `books` koleksiyonu için-1 @no__t bir Aralık değişkeni bildirir. @No__t-0 yan tümcesi, sorgu sonucunu fiyata göre artan sırada sıralar (varsayılan). Aynı fiyata sahip olan kitaplar başlığa göre artan sırada sıralanır. @No__t-0 yan tümcesi, sorgu tarafından döndürülen değerler olarak `Title` ve `Price` özelliklerini seçer.  
   
  [!code-vb[VbSimpleQuerySamples#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#24)]  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki sorgu ifadesi kullanan `Order By` sorgu sonucuna göre azalan düzende fiyatı sıralamak için yan tümcesi. Kitapları ile aynı fiyat üzerinden, artan düzende başlığa göre sıralanır.  
+ Aşağıdaki sorgu ifadesi, sorgu sonucunu fiyata göre azalan sırada sıralamak için `Order By` yan tümcesini kullanır. Aynı fiyata sahip olan kitaplar başlığa göre artan sırada sıralanır.  
   
  [!code-vb[VbSimpleQuerySamples#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#25)]  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki sorgu ifadesi kullanan bir `Select` yan kitap başlığını seçin, fiyat, yayımlama tarihi ve yazar. Ardından doldurur `Title`, `Price`, `PublishDate`, ve `Author` yeni kapsam için Aralık değişkeninin alanları. `Order By` Yan tümcesi yeni aralık değişkeni yazar adı, kitap başlığı ve fiyat göre sıralar. Her sütun (artan) varsayılan sıraya göre sıralanır.  
+ Aşağıdaki sorgu ifadesi, kitap başlığı, Fiyat, yayımlama tarihi ve yazar seçmek için bir `Select` yan tümcesi kullanır. Ardından, yeni kapsamın aralık değişkeninin `Title`, `Price`, `PublishDate` ve `Author` alanlarını doldurur. @No__t-0 yan tümcesi, yeni Aralık değişkenini yazar adına, kitap başlığına ve ardından fiyata göre sıralar. Her sütun varsayılan sırada sıralanır (artan).  
   
  [!code-vb[VbSimpleQuerySamples#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#26)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Basic'de LINQ'e giriş](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [Visual Basic LINQ 'e giriş](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
 - [Sorgular](../../../visual-basic/language-reference/queries/index.md)
 - [Select Yan Tümcesi](../../../visual-basic/language-reference/queries/select-clause.md)
 - [From Yan Tümcesi](../../../visual-basic/language-reference/queries/from-clause.md)

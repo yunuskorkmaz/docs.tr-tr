@@ -9,21 +9,25 @@ helpviewer_keywords:
 - -res compiler option [Visual Basic]
 - resource compiler option [Visual Basic]
 ms.assetid: eee2f227-91f2-4f2b-a9d6-1c51c5320858
-ms.openlocfilehash: 2d7da572ecc8d7d20917eaa244eefbcd7abe61f0
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 5bedc346381f6de293933dce14a8c5c3044b246f
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65589517"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005196"
 ---
 # <a name="-resource-visual-basic"></a>-Kaynak (Visual Basic)
-Yönetilen kaynak bir derlemeye gömer.  
+Bir derlemede yönetilen bir kaynak gömer.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```console  
 -resource:filename[,identifier[,public|private]]  
-' -or-  
+```
+
+veya  
+
+```console
 -res:filename[,identifier[,public|private]]  
 ```  
   
@@ -31,20 +35,20 @@ Yönetilen kaynak bir derlemeye gömer.
   
 |Terim|Tanım|  
 |---|---|  
-|`filename`|Gerekli. Çıkış dosyasına eklemek için kaynak dosyanın adı. Varsayılan olarak, `filename` derleme içinde geneldir. Dosya adı tırnak içine alın ("") bir boşluk içeriyorsa.|  
-|`identifier`|İsteğe bağlı. Kaynağın mantıksal adı; yüklemek için kullanılan ad. Varsayılan dosya adıdır. İsteğe bağlı olarak, kaynak olarak aşağıdaki genel veya özel derleme bildiriminde olup olmadığını belirtebilirsiniz: `-res:filename.res, myname.res, public`|  
+|`filename`|Gerekli. Çıkış dosyasına eklemek için kaynak dosyasının adı. Varsayılan olarak, `filename`, derlemede ortaktır. Bir boşluk içeriyorsa dosya adını tırnak işaretleri ("") içine alın.|  
+|`identifier`|İsteğe bağlı. Kaynağın mantıksal adı; yüklemek için kullanılan ad. Varsayılan değer, dosyanın adıdır. İsteğe bağlı olarak, aşağıdaki gibi, derleme bildiriminde kaynağın genel mi yoksa özel mi olduğunu belirtebilirsiniz: `-res:filename.res, myname.res, public`|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Kullanım `-linkresource` kaynak dosyası çıkış dosyasına koymadan bir kaynak bir derlemeye bağlanır.  
+ Kaynak dosyasını çıkış dosyasına yerleştirmeksizin bir kaynağı derlemeye bağlamak için `-linkresource` kullanın.  
   
- Varsa `filename` , örneğin, tarafından oluşturulmuş bir .NET Framework kaynak dosyası [Resgen.exe (kaynak dosya oluşturucu)](../../../framework/tools/resgen-exe-resource-file-generator.md) veya geliştirme ortamında üyelerle erişilebileceğini <xref:System.Resources> (bkz: adalanı<xref:System.Resources.ResourceManager> daha fazla bilgi için). Çalışma zamanında diğer kaynaklara erişmek için aşağıdaki yöntemlerden birini kullanın: <xref:System.Reflection.Assembly.GetManifestResourceInfo%2A>, <xref:System.Reflection.Assembly.GetManifestResourceNames%2A>, veya <xref:System.Reflection.Assembly.GetManifestResourceStream%2A>.  
+ @No__t-0 oluşturulmuş bir .NET Framework kaynak dosyası ise (örneğin, [Resgen. exe (kaynak dosya Oluşturucu)](../../../framework/tools/resgen-exe-resource-file-generator.md) veya geliştirme ortamında, <xref:System.Resources> ad alanındaki üyelerle erişilebilir (daha fazla bilgi için bkz. <xref:System.Resources.ResourceManager>). Çalışma zamanında diğer tüm kaynaklara erişmek için aşağıdaki yöntemlerden birini kullanın: <xref:System.Reflection.Assembly.GetManifestResourceInfo%2A>, <xref:System.Reflection.Assembly.GetManifestResourceNames%2A> veya <xref:System.Reflection.Assembly.GetManifestResourceStream%2A>.  
   
- Kısa formunu da `-resource` olduğu `-res`.  
+ @No__t-0 ' ın kısa biçimi `-res` ' dir.  
   
- Nasıl ayarlanacağı hakkında daha fazla bilgi için `-resource` Visual Studio IDE'de bkz [uygulama kaynaklarını yönetme (.NET)](/visualstudio/ide/managing-application-resources-dotnet).  
+ Visual Studio IDE 'de `-resource` ' ı ayarlama hakkında daha fazla bilgi için bkz. [uygulama kaynaklarını yönetme (.net)](/visualstudio/ide/managing-application-resources-dotnet).  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod derlenir `In.vb` ve kaynak dosyası ekler `Rf.resource`.  
+ Aşağıdaki kod `In.vb` derler ve kaynak dosyası `Rf.resource` ' i iliştirir.  
   
 ```console
 vbc -res:rf.resource in.vb  

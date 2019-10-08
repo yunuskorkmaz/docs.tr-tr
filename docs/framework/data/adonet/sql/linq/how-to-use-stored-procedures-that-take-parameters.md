@@ -1,26 +1,26 @@
 ---
-title: 'Nasıl yapılır: Parametre Alan Saklı Yordamlar Kullanma'
+title: 'Nasıl yapılır: parametre alma saklı yordamlarını kullanma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: b935fd84-cb9c-4205-8c48-658d5db2ec93
-ms.openlocfilehash: c2b657f704d072b987578be5520a58d007ecac37
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: e9d77cd1dc82e1b103c5f0d9f3f447ed105acaec
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71353012"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72003250"
 ---
-# <a name="how-to-use-stored-procedures-that-take-parameters"></a>Nasıl yapılır: Parametre Alan Saklı Yordamlar Kullanma
+# <a name="how-to-use-stored-procedures-that-take-parameters"></a>Nasıl yapılır: parametre alma saklı yordamlarını kullanma
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], çıkış parametrelerini başvuru parametrelerine eşler ve değer türleri için parametreyi null yapılabilir olarak bildirir.  
   
- Bir satır kümesi döndüren sorguda bir giriş parametresinin nasıl kullanılacağına ilişkin bir örnek için bkz. [Nasıl yapılır: Satır kümelerini Döndür @ no__t-0.  
+ Bir satır kümesi döndüren sorguda giriş parametresinin nasıl kullanılacağına ilişkin bir örnek için bkz. [nasıl yapılır: satır kümelerini döndürme](how-to-return-rowsets.md).  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek tek bir giriş parametresi (müşteri KIMLIĞI) alır ve bir out parametresi (bu müşterinin toplam satışları) döndürür.  
   
-```  
+```sql
 CREATE PROCEDURE [dbo].[CustOrderTotal]   
 @CustomerID nchar(5),  
 @TotalSales money OUTPUT  

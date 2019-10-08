@@ -21,42 +21,42 @@ helpviewer_keywords:
 - current instance [Visual Basic], Me keyword
 - MyBase keyword [Visual Basic], relationship to similar programming elements
 ms.assetid: f8e241ae-b1ed-4886-9aa0-08c632154029
-ms.openlocfilehash: 3eca756429c5fec8f324a17350844b59baf9ccf7
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 7df146e09a1d7cd730f4cf539d6823f7ced44bd1
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586259"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72002538"
 ---
 # <a name="me-my-mybase-and-myclass-in-visual-basic"></a>Visual Basic'de Me, My, MyBase ve MyClass
-`Me`, `My`, `MyBase`, ve `MyClass` Visual Basic'te adlarının benzer ancak farklı amaçlara sahip. Bu konuda bunları ayırt etmek için bunların her biri açıklanmaktadır.  
+`Me`, `My`, `MyBase` ve Visual Basic `MyClass` benzer adlara sahiptir, ancak farklı amaçlara sahiptir. Bu konu, bu varlıkların her birini ayırt edebilmek için açıklar.  
   
 ## <a name="me"></a>Beni  
- `Me` Anahtar sözcüğü bir sınıf veya yapı içinde kod şu anda Yürütülüyor belirli örneğine başvurmak için bir yol sağlar. `Me` bir nesne değişkeni veya bir yapı değişken geçerli örneğine başvurma gibi davranır. Kullanarak `Me` başka bir sınıf, yapı veya modül bir yordam için bir sınıf veya yapı şu anda yürütülen örneği hakkında bilgi geçirmek için özellikle yararlıdır.  
+ @No__t-0 anahtar sözcüğü, kodun Şu anda yürütüldüğü bir sınıfın veya yapının belirli bir örneğine başvurmak için bir yol sağlar. `Me`, geçerli örneğe başvuran bir nesne değişkeni ya da bir yapı değişkeni gibi davranır. @No__t-0 kullanmak, bir sınıfın veya yapının Şu anda yürütülmekte olan örneği hakkındaki bilgileri başka bir sınıf, yapı veya modüldeki bir yordama iletmek için özellikle yararlıdır.  
   
- Örneğin, bir modülde aşağıdaki yordam olduğunu varsayalım.  
+ Örneğin, bir modülde aşağıdaki yordama sahip olduğunuzu varsayalım.  
   
-```  
+```vb  
 Sub ChangeFormColor(FormName As Form)  
    Randomize()  
    FormName.BackColor = Color.FromArgb(Rnd() * 256, Rnd() * 256, Rnd() * 256)  
 End Sub  
 ```  
   
- Bu yordam çağrısı ve geçerli örneğini geçirin <xref:System.Windows.Forms.Form> aşağıdaki deyimi kullanarak bir bağımsız değişken olarak sınıf.  
+ Aşağıdaki ifadeyi kullanarak, bu yordamı çağırabilir ve <xref:System.Windows.Forms.Form> sınıfının geçerli örneğini bir bağımsız değişken olarak geçirebilirsiniz.  
   
-```  
+```vb  
 ChangeFormColor(Me)  
 ```  
   
 ## <a name="my"></a>Benim  
- `My` Özellik .NET Framework sınıfları, bilgisayar, uygulama, ayarları, kaynakları ve benzeri ile etkileşim kurmak Visual Basic kullanıcı etkinleştirme sayısını kolay ve sezgisel erişim sağlar.  
+ @No__t-0 özelliği, Visual Basic kullanıcının bilgisayar, uygulama, ayarlar, kaynaklar vb. ile etkileşime geçmesini sağlayan bir dizi .NET Framework sınıfa kolay ve sezgisel erişim sağlar.  
   
 ## <a name="mybase"></a>MyBase  
- `MyBase` Anahtar sözcüğü davranacağını gibi geçerli bir sınıf örneğinin temel sınıfına başvuran bir nesne değişkeni. `MyBase` yaygın olarak geçersiz kılınan ya da türetilen bir sınıfta gölgeli bir temel sınıf üyelerinin erişmek için kullanılır. `MyBase.New` bir temel sınıf oluşturucusu bir türetilmiş sınıf oluşturucusunda açıkça çağırmak için kullanılır.  
+ @No__t-0 anahtar sözcüğü, sınıfın geçerli örneğinin temel sınıfına başvuran bir nesne değişkeni gibi davranır. `MyBase` genellikle türetilmiş bir sınıfta geçersiz kılınan veya gölgeli temel sınıf üyelerine erişmek için kullanılır. `MyBase.New`, türetilmiş bir sınıf oluşturucusundan bir taban sınıf oluşturucuyu açıkça çağırmak için kullanılır.  
   
-## <a name="myclass"></a>MyClass  
- `MyClass` Anahtar sözcüğü davranacağını gibi bir nesne değişkeninin özgün olarak uygulandığı bir sınıfın geçerli örneğine başvurma. `MyClass` benzer `Me`, ancak yöntem'ymiş gibi üzerindeki tüm yöntem çağrılarını kabul edilir `NotOverridable`.  
+## <a name="myclass"></a>Sınıfım  
+ @No__t-0 anahtar sözcüğü, başlangıçta uygulanmış olan bir sınıfın geçerli örneğine başvuran bir nesne değişkeni gibi davranır. `MyClass`, `Me` ile benzerdir, ancak üzerinde tüm Yöntem çağrıları Yöntem `NotOverridable` gibi değerlendirilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

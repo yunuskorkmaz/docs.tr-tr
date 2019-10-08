@@ -6,33 +6,33 @@ helpviewer_keywords:
 - -nostdlib compiler option [Visual Basic]
 - /nostdlib compiler option [Visual Basic]
 ms.assetid: 140381b8-dc96-4ad5-ae11-792c9ed0be4d
-ms.openlocfilehash: 19a70e500f6b75fd003bdb798f242cddb3926935
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 819505df2e7d5f93302f9ed601de856e36ed7124
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964358"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005407"
 ---
 # <a name="-nostdlib-visual-basic"></a>-nostdlib (Visual Basic)
 Derleyicinin standart kitaplıklara otomatik olarak başvurmasına neden olur.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```console  
 -nostdlib  
 ```  
   
 ## <a name="remarks"></a>Açıklamalar  
- `-nostdlib` Seçeneği, System. dll derlemesine otomatik başvuruyu kaldırır ve derleyicinin Vbc. rsp dosyasını okumasını önler. Vbc. exe dosyası ile aynı dizinde bulunan Vbc. rsp dosyası, yaygın olarak kullanılan .NET Framework derlemelerine başvurur ve `System` ve `Microsoft.VisualBasic` ad alanlarını içeri aktarır.  
+ @No__t-0 seçeneği, System. dll derlemesine otomatik başvuruyu kaldırır ve derleyicinin Vbc. rsp dosyasını okumasını önler. Vbc. exe dosyası ile aynı dizinde bulunan Vbc. rsp dosyası, yaygın olarak kullanılan .NET Framework derlemelerine başvurur ve `System` ve `Microsoft.VisualBasic` ad alanlarını içeri aktarır.  
   
 > [!NOTE]
 > Mscorlib. dll ve Microsoft. VisualBasic. dll derlemelerine her zaman başvurulur.  
   
 > [!NOTE]
-> Bu `-nostdlib` seçenek, Visual Studio geliştirme ortamı içinden kullanılamaz; yalnızca komut satırından derlenirken kullanılabilir.  
+> @No__t-0 seçeneği, Visual Studio geliştirme ortamı içinden kullanılamaz; yalnızca komut satırından derlenirken kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod standart kitaplıklara `T2.vb` başvurulmadan derlenir. Nesneyi kaldırmak için `_MYTYPE` koşullu derleme sabitinin "Empty" dizesini ayarlamanız gerekir. `My`  
+ Aşağıdaki kod, standart kitaplıklara başvurulmadan `T2.vb` derler. @No__t-1 nesnesini kaldırmak için `_MYTYPE` koşullu derleme sabitini "Empty" dizesine ayarlamanız gerekir.  
   
 ```console
 vbc -nostdlib -define:_MYTYPE=\"Empty\" T2.vb  

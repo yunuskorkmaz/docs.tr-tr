@@ -9,39 +9,39 @@ helpviewer_keywords:
 - optionexplicit compiler option [Visual Basic]
 - -optionexplicit compiler option [Visual Basic]
 ms.assetid: 5d296ab3-bafe-4c4d-9887-78f162ed86c7
-ms.openlocfilehash: 54d438541e8840e4394b24b20b4f394ff8cdb820
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5c0946b94bfe02d797d1a484088869375703eb6a
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61788953"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005308"
 ---
 # <a name="-optionexplicit"></a>-optionexplicit
-Bunlar kullanılmadan önce değişkenleri bildirilmedikçe derleyici hatalarını raporlamak için neden olur.  
+Değişkenler kullanılmadan önce bildirilmemiş olursa derleyicinin hata raporlamasına neden olur.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```console  
 -optionexplicit[+ | -]  
 ```  
   
 ## <a name="arguments"></a>Arguments  
  `+` &#124; `-`  
- İsteğe bağlı. Belirtin `-optionexplicit+` değişkenleri açık bildirimini gerektiren. `-optionexplicit+` Seçenek varsayılandır ve aynı `-optionexplicit`. `-optionexplicit-` Örtük bir değişken bildirimi seçeneği sağlar.  
+ İsteğe bağlı. Değişkenlerin açık bildirimini gerektirmek için `-optionexplicit+` belirtin. @No__t-0 seçeneği varsayılandır ve `-optionexplicit` ile aynıdır. @No__t-0 seçeneği, değişkenlerin örtülü bildirimini sunar.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Kaynak kodu dosyası içeriyorsa bir [Option Explicit deyimi](../../../visual-basic/language-reference/statements/option-explicit-statement.md), deyim geçersiz kılmalar `-optionexplicit` komut satırı derleyicisini ayarı.  
+ Kaynak kodu dosyası [açık bir seçenek ifade](../../../visual-basic/language-reference/statements/option-explicit-statement.md)içeriyorsa, ifade `-optionexplicit` komut satırı derleyici ayarını geçersiz kılar.  
   
-### <a name="to-set--optionexplicit-in-the-visual-studio-ide"></a>-Optionexplicit Visual Studio IDE'de ayarlamak için  
+### <a name="to-set--optionexplicit-in-the-visual-studio-ide"></a>Visual Studio IDE 'de ayarlamak için-OptionExplicit  
   
-1. Seçili bir projeyi **Çözüm Gezgini**. Üzerinde **proje** menüsünü tıklatın **özellikleri**.   
+1. **Çözüm Gezgini**' de bir proje seçili olmalıdır. **Proje** menüsünde **Özellikler**' e tıklayın.   
   
-2. Tıklayın **derleme** sekmesi.  
+2. **Derle** sekmesine tıklayın.  
   
-3. Değer değiştirme **Option Explicit** kutusu.  
+3. **Açık** kutudaki değeri değiştirin.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod zaman derler `-optionexplicit-` kullanılır.  
+ Aşağıdaki kod `-optionexplicit-` kullanıldığında derlenir.  
   
  [!code-vb[VbVbalrCompiler#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCompiler/VB/OptionExplicitOff.vb#5)]  
   

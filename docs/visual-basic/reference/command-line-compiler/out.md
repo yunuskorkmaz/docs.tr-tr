@@ -1,24 +1,24 @@
 ---
-title: -out (Visual Basic)
+title: -Out (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - /out compiler option [Visual Basic]
 - -out compiler option [Visual Basic]
 - out compiler option [Visual Basic]
 ms.assetid: 9f148c15-0909-4cb8-a2db-777f8a8b45ae
-ms.openlocfilehash: 5dcf9dc5cc0987e965aba7fd2b8821252e19a655
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6b005ac26e3fffad350cb4ce52f7757c9fff2ac1
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61788901"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005338"
 ---
-# <a name="-out-visual-basic"></a>-out (Visual Basic)
-Çıkış dosyasının adını belirtir.  
+# <a name="-out-visual-basic"></a>-Out (Visual Basic)
+Çıktı dosyasının adını belirtir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```console  
 -out:filename  
 ```  
   
@@ -26,19 +26,19 @@ ms.locfileid: "61788901"
   
 |Terim|Tanım|  
 |---|---|  
-|`filename`|Gerekli. Derleyici çıktı dosyası adını oluşturur. Dosya adı boşluk içeriyorsa adı tırnak içine alın. ("").|  
+|`filename`|Gerekli. Derleyicinin oluşturduğu çıkış dosyasının adı. Dosya adı bir boşluk içeriyorsa, adı tırnak işaretleri ("") içine alın.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Oluşturulacak dosyanın uzantısı ve tam adı belirtin. Bunu yapmazsanız, .exe dosyasını dan kaynak kodu içeren dosyanın adını alır. `Sub Main` yordam ve .dll dosyası ilk kaynak kodu dosyasından adını alır.  
+ Oluşturulacak dosyanın tam adını ve uzantısını belirtin. Bunu yapmazsanız,. exe dosyası adını `Sub Main` yordamını içeren kaynak kodu dosyasından alır ve. dll dosyası adı ilk kaynak kodu dosyasından alır.  
   
- Bir .exe veya .dll uzantısı olmadan bir dosya adı belirtirseniz, derleyicinin uzantısını otomatik sizin için belirtilen değer bağlı olarak ekler `-target` derleyici seçeneği.  
+ Bir. exe veya. dll uzantısı olmadan bir dosya adı belirtirseniz, derleyici, `-target` derleyici seçeneği için belirtilen değere bağlı olarak uzantıyı sizin için otomatik olarak ekler.  
   
-|-Out Visual Studio tümleşik geliştirme ortamında ayarlamak için|  
+|Visual Studio tümleşik geliştirme ortamında ayarlamak için|  
 |---|  
-|1.  Seçili bir projeyi **Çözüm Gezgini**. Üzerinde **proje** menüsünü tıklatın **özellikleri**. <br />2.  Tıklayın **uygulama** sekmesi.<br />3.  Değer değiştirme **derleme adı** kutusu.|  
+|1. **Çözüm Gezgini**bir proje seçili olmalıdır. **Proje** menüsünde **Özellikler**' e tıklayın. <br />2. **uygulama** sekmesine tıklayın.<br />3. **derleme adı** kutusundaki değeri değiştirin.|  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod derlenir `T2.vb` ve çıktı dosyası oluşturur `T2.exe`.  
+ Aşağıdaki kod `T2.vb` derler ve `T2.exe` çıkış dosyası oluşturur.  
   
 ```console
 vbc t2.vb -out:t3.exe  

@@ -1,5 +1,5 @@
 ---
-title: -tanımlama (Visual Basic)
+title: -tanımla (Visual Basic)
 ms.date: 03/10/2018
 helpviewer_keywords:
 - -d compiler option [Visual Basic]
@@ -9,21 +9,25 @@ helpviewer_keywords:
 - /define compiler option [Visual Basic]
 - define compiler option [Visual Basic]
 ms.assetid: f735c57d-1cf9-4f2f-a26f-0de630fd4077
-ms.openlocfilehash: d0a483e7a3c9e9863db39e89d655cf172c1e8c81
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5b2c0173416418f67446c5441a93e5b06e93dc12
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61649731"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72002375"
 ---
-# <a name="-define-visual-basic"></a>-tanımlama (Visual Basic)
+# <a name="-define-visual-basic"></a>-tanımla (Visual Basic)
 Koşullu derleyici sabitlerini tanımlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```console  
 -define:["]symbol[=value][,symbol[=value]]["]  
-' -or-  
+```
+
+veya
+
+```console  
 -d:["]symbol[=value][,symbol[=value]]["]  
 ```  
   
@@ -31,24 +35,24 @@ Koşullu derleyici sabitlerini tanımlar.
   
 |Terim|Tanım|  
 |---|---|  
-|`symbol`|Gerekli. Tanımlamak için simge.|  
-|`value`|İsteğe bağlı. Atanacak değer `symbol`. Varsa `value` bir dizedir, geçen dilerle ters eğik çizgi /-tırnak içine alınmalıdır (\\") tırnak işaretleri yerine. Değer belirtilmezse sonra olacak şekilde gerçekleştirilen True.|  
+|`symbol`|Gerekli. Tanımlanacak simge.|  
+|`value`|İsteğe bağlı. @No__t atanacak değer-0. @No__t-0 bir dizeyse, tırnak işaretleri yerine ters eğik çizgi/tırnak işareti dizileri (\\ ") arasına alınmalıdır. Hiçbir değer belirtilmemişse, true olarak alınır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `-define` Seçeneğinin etkisi bir kullanmaya benzer bir `#Const` önişlemci yönergesi ile tanımlanan, sabitleri dışında kaynak dosyanızdaki `-define` herkese açık ve projedeki tüm dosyalar için geçerlidir.  
+ @No__t-0 seçeneği, kaynak dosyanızda `#Const` önişlemcisi yönergesini kullanmayla benzer bir etkiye sahiptir, ancak `-define` ile tanımlanmış sabitler ortak olur ve projedeki tüm dosyalar için geçerlidir.  
   
- Bu seçenekle tarafından oluşturulan simgeleri kullanabilirsiniz `#If`... `Then`... `#Else` yönergesi, kaynak dosyaları koşullu olarak derleyebilirsiniz.  
+ Bu seçenek tarafından oluşturulan sembolleri, kaynak dosyaları koşullu olarak derlemek için `#If`... `Then`... `#Else` yönergesi ile kullanabilirsiniz.  
   
- `-d` öğesinin kısa biçimidir `-define`.  
+ `-d`, `-define` ' in kısa biçimidir.  
   
- Birden çok sembolleriyle tanımlayabilirsiniz `-define` sembol tanımlarını ayırmak için virgül kullanarak.  
+ Sembol tanımlarını ayırmak için virgül kullanarak, `-define` ile birden çok sembol tanımlayabilirsiniz.  
   
-|Ayarlama / Visual Studio tümleşik geliştirme ortamında tanımlamak için|  
+|Visual Studio tümleşik geliştirme ortamında/define ayarlamak için|  
 |---|  
-|1.  Seçili bir projeyi **Çözüm Gezgini**. Üzerinde **proje** menüsünü tıklatın **özellikleri**. <br />2.  Tıklayın **derleme** sekmesi.<br />3.  **Gelişmiş**'e tıklayın.<br />4.  Değer değiştirme **özel sabitleri** kutusu.|  
+|1. **Çözüm Gezgini**bir proje seçili olmalıdır. **Proje** menüsünde **Özellikler**' e tıklayın. <br />2. **Derle** sekmesine tıklayın.<br />3. **Gelişmiş**'e tıklayın.<br />4. **Özel sabitler** kutusundaki değeri değiştirin.|  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod, tanımlar ve sonra iki koşullu derleyici sabitlerini kullanır.  
+ Aşağıdaki kod, iki koşullu derleyici sabiti tanımlar ve kullanır.  
   
  [!code-vb[VbVbalrCompiler#45](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCompiler/VB/Class1.vb#45)]  
   

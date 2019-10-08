@@ -5,18 +5,18 @@ helpviewer_keywords:
 - Span elements [WPF]
 - bidirectional features [WPF]
 ms.assetid: fd850e25-7dba-408c-b521-8873e51dc968
-ms.openlocfilehash: 2a599322ef955b9f702f8960f294f5d093ede74a
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 6cd16f4d5586dcee54152b430f14911f5a9c5682
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834742"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005131"
 ---
 # <a name="bidirectional-features-in-wpf-overview"></a>WPF Genel Bakışında Çift Yönlü Özellikler
 
 Diğer herhangi bir geliştirme platformunun aksine, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] çift yönlü içeriğin hızlı bir şekilde geliştirilmesini destekleyen birçok özelliğe sahiptir (örneğin, soldan sağa ve sağdan sola veriler aynı belgede bulunur). Aynı zamanda, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], Arapça ve Ibranice kullanıcılar gibi çift yönlü özellikler gerektiren kullanıcılar için mükemmel bir deneyim oluşturur.
 
-Aşağıdaki bölümlerde çift yönlü içeriğin en iyi görüntüsüne nasıl ulaşılacağını gösteren örneklerle birlikte birçok çift yönlü özellikler açıklanmaktadır. Örneklerin çoğu [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] ' ı kullanır, ancak bu kavramları C# veya Microsoft Visual Basic koduna kolayca uygulayabilirsiniz.
+Aşağıdaki bölümlerde çift yönlü içeriğin en iyi görüntüsüne nasıl ulaşılacağını gösteren örneklerle birlikte birçok çift yönlü özellikler açıklanmaktadır. Çoğu örnek XAML kullanır, ancak bu kavramları C# veya Microsoft Visual Basic koduna kolayca uygulayabilirsiniz.
 
 <a name="FlowDirection"></a>
 
@@ -136,7 +136,7 @@ Aşağıdaki örnek bir @no__t çizer-0 @ no__t-1. (Sola doğru çizmek için, <
 
 **Görüntü**
 
-@No__t-0 bir görüntüyü görüntüleyen bir denetimi temsil eder. @No__t-0 ' da, görüntülenecek <xref:System.Windows.Controls.Image> ' in [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] ' i tanımlayan bir <xref:System.Windows.Controls.Image.Source%2A> özelliği ile birlikte kullanılabilir.
+@No__t-0 bir görüntüyü görüntüleyen bir denetimi temsil eder. XAML 'de, görüntülenecek <xref:System.Windows.Controls.Image> ' nin @no__t tanımlayan bir <xref:System.Windows.Controls.Image.Source%2A> özelliği ile birlikte kullanılabilir.
 
 Diğer [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] öğelerinden farklı olarak, bir <xref:System.Windows.Controls.Image> kapsayıcının <xref:System.Windows.FlowDirection> ' i döndürmez. Ancak, <xref:System.Windows.FlowDirection> açıkça <xref:System.Windows.FlowDirection.RightToLeft> olarak ayarlandıysa, yatay olarak çevrilmiş bir <xref:System.Windows.Controls.Image> görüntülenir. Bu, çift yönlü içerik geliştiricileri için kullanışlı bir özellik olarak uygulanır; Bazı durumlarda görüntüyü yatay olarak çevirme istenen etkiyi üretir.
 
@@ -249,7 +249,7 @@ text1.Language = System.Windows.Markup.XmlLanguage.GetLanguage(System.Globalizat
 
 <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType>, geçerli iş parçacığı tarafından çalışma zamanında kullanılan geçerli kültürü temsil eder.
 
-Son [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] örneğinizdeki örnek aşağıdaki örneğe benzer olmalıdır.
+Son XAML örneğinizi aşağıdaki örneğe benzer olmalıdır.
 
 [!code-xaml[Numbers2#Numbers2](~/samples/snippets/csharp/VS_Snippets_Wpf/Numbers2/CS/Window1.xaml#numbers2)]
 

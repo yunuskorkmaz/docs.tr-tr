@@ -1,27 +1,27 @@
 ---
-title: 'Nasıl yapılır: Skaler Değerli Kullanıcı Tanımlı İşlevler Kullanma'
+title: 'Nasıl yapılır: skaler değerli Kullanıcı tanımlı Işlevler kullanma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 714e252f-c053-4bbb-b1f3-924111cd4d97
-ms.openlocfilehash: da4e5e8fe4682191a0c8e2b0ce6a7b945fe63deb
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: dfe82fd50eb3eedeaff9082a4288901f72197795
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70781478"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72003230"
 ---
-# <a name="how-to-use-scalar-valued-user-defined-functions"></a>Nasıl yapılır: Skaler Değerli Kullanıcı Tanımlı İşlevler Kullanma
-<xref:System.Data.Linq.Mapping.FunctionAttribute> Özniteliğini kullanarak, bir sınıfta tanımlanan istemci yöntemini Kullanıcı tanımlı bir işlev ile eşleyebilirsiniz. Yöntemin gövdesi, yöntem çağrısının amacını yakalayan bir ifade oluşturur ve bu ifadeyi <xref:System.Data.Linq.DataContext> çeviri ve yürütmeye geçirir.  
+# <a name="how-to-use-scalar-valued-user-defined-functions"></a>Nasıl yapılır: skaler değerli Kullanıcı tanımlı Işlevler kullanma
+@No__t-0 özniteliğini kullanarak, bir sınıfta tanımlanan bir istemci yöntemini Kullanıcı tanımlı bir işlev ile eşleyebilirsiniz. Yöntemin gövdesi, yöntem çağrısının amacını yakalayan bir ifade oluşturur ve bu ifadeyi çeviri ve yürütme için <xref:System.Data.Linq.DataContext> ' a geçirir.  
   
 > [!NOTE]
-> Doğrudan yürütme yalnızca işlev bir sorgu dışında çağrıldığında gerçekleşir. Daha fazla bilgi için [nasıl yapılır: Kullanıcı tanımlı Işlevleri satır Içinde](how-to-call-user-defined-functions-inline.md)çağırın.  
+> Doğrudan yürütme yalnızca işlev bir sorgu dışında çağrıldığında gerçekleşir. Daha fazla bilgi için bkz. [nasıl yapılır: Kullanıcı tanımlı Işlevleri Iç satır Içinde çağırma](how-to-call-user-defined-functions-inline.md).  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki SQL kodu, skaler değerli Kullanıcı tanımlı bir işlev `ReverseCustName()`gösterir.  
+ Aşağıdaki SQL kodu, skalar değerli Kullanıcı tanımlı bir işlevi `ReverseCustName()` ' dır.  
   
-```  
+```sql  
 CREATE FUNCTION ReverseCustName(@string varchar(100))  
 RETURNS varchar(100)  
 AS  

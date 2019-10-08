@@ -1,29 +1,29 @@
 ---
-title: 'Nasıl yapılır: XML (Visual Basic) LINQ kullanarak dönüştürme'
+title: "Nasıl yapılır: XML'i LINQ Kullanarak Dönüştürme (Visual Basic)"
 ms.date: 07/20/2015
 helpviewer_keywords:
 - XML [Visual Basic], transforming
 - LINQ to XML [Visual Basic], transforming XML
 ms.assetid: 815687f4-0bc2-4c0b-adc6-d78744aa356f
-ms.openlocfilehash: c34d3988c89e0ce07676e9181200fc039010b50a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 08378775f2c30d8ebfcc4f7ceea6fc3ecb2066e5
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62028440"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72003254"
 ---
-# <a name="how-to-transform-xml-by-using-linq-visual-basic"></a>Nasıl yapılır: XML (Visual Basic) LINQ kullanarak dönüştürme
-[XML değişmez değerleri](../../../../visual-basic/language-reference/xml-literals/index.md) XML bir kaynaktan okunan ve yeni bir XML biçimine dönüştürmek kolaylaştırır. Dönüştürülecek içeriği almak için LINQ sorguları yararlanın veya var olan bir belgeyi içeriği yeni bir XML biçimine değiştirin.  
+# <a name="how-to-transform-xml-by-using-linq-visual-basic"></a>Nasıl yapılır: XML'i LINQ Kullanarak Dönüştürme (Visual Basic)
+[XML değişmez değerleri](../../../../visual-basic/language-reference/xml-literals/index.md) , BIR kaynaktan XML okumayı ve bunu yenı bir XML biçimine dönüştürmeyi kolaylaştırır. Dönüştürülecek içeriği almak veya varolan bir belgedeki içeriği yeni bir XML biçimiyle değiştirmek için LINQ sorgularından yararlanabilirsiniz.  
   
- Bu konudaki örnek, bir tarayıcıda görüntülenecek HTML içeriği XML kaynak belgesinden dönüştürür.  
+ Bu konudaki örnek, bir XML kaynak belgesinden içeriği bir tarayıcıda görüntülenmek üzere HTML 'ye dönüştürür.  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-### <a name="to-transform-an-xml-document"></a>Bir XML belgesi dönüştürmek için  
+### <a name="to-transform-an-xml-document"></a>Bir XML belgesini dönüştürmek için  
   
-1. Visual Studio'da yeni bir Visual Basic projesinde oluşturma **konsol uygulaması** proje şablonu.  
+1. Visual Studio 'da, **konsol uygulaması** proje şablonunda yeni bir Visual Basic projesi oluşturun.  
   
-2. Visual Basic kodunu değiştirmek için projeyi oluşturduğunuzda Module1.vb dosyasını çift tıklatın. Aşağıdaki kodu ekleyin `Sub Main` , `Module1` modülü. Kaynak XML belgesi olarak bu kod oluşturur bir <xref:System.Xml.Linq.XDocument> nesne.  
+2. Visual Basic kodunu değiştirmek için projede oluşturulan Module1. vb dosyasını çift tıklatın. Aşağıdaki kodu `Module1` modülünün `Sub Main` ' a ekleyin. Bu kod, kaynak XML belgesini <xref:System.Xml.Linq.XDocument> nesnesi olarak oluşturur.  
   
     ```vb  
     Dim catalog =   
@@ -57,11 +57,11 @@ ms.locfileid: "62028440"
         </Catalog>  
     ```  
   
-     [Nasıl yapılır: Dosya, dize veya Stream XML yükleme](../../../../visual-basic/programming-guide/language-features/xml/how-to-load-xml-from-a-file-string-or-stream.md).  
+     [Nasıl yapılır: bir dosyadan, dizeden veya AKıŞTAN XML yükleme](../../../../visual-basic/programming-guide/language-features/xml/how-to-load-xml-from-a-file-string-or-stream.md).  
   
-3. Kaynak XML belgesi oluşturmak için kod sonra tüm almak için aşağıdaki kodu ekleyin \<kitap > Nesne öğeleri ve bunları bir HTML belgesine dönüştürün. Listesini \<kitap > öğeleri koleksiyonunu döndüren bir LINQ Sorgu kullanarak oluşturulan <xref:System.Xml.Linq.XElement> dönüştürülmüş HTML içeren nesneleri. Kaynak belgedeki XML biçiminde değerleri koymak için katıştırılmış ifadeleri'ni kullanabilirsiniz.  
+3. Kaynak XML belgesini oluşturma kodundan sonra, \<Book > öğelerini nesnesinden alıp bir HTML belgesine dönüştürmek için aşağıdaki kodu ekleyin. @No__t-0Book > öğelerinin listesi, dönüştürülmüş HTML içeren <xref:System.Xml.Linq.XElement> nesnelerinin bir koleksiyonunu döndüren bir LINQ sorgusu kullanılarak oluşturulur. Kaynak belgeden yeni XML biçiminde değerleri yerleştirmek için katıştırılmış ifadeleri kullanabilirsiniz.  
   
-     Sonuçta elde edilen HTML belgesi kullanarak bir dosyaya yazılır <xref:System.Xml.Linq.XElement.Save%2A> yöntemi.  
+     Elde edilen HTML belgesi, <xref:System.Xml.Linq.XElement.Save%2A> yöntemi kullanılarak bir dosyaya yazılır.  
   
     ```vb  
     Dim htmlOutput =   
@@ -82,11 +82,11 @@ ms.locfileid: "62028440"
     htmlOutput.Save("BookDescription.html")  
     ```  
   
-4. Sonra `Sub Main` , `Module1`, yeni bir yöntem ekleyin (`Sub`) dönüştürmek için bir \<açıklaması > düğümü belirtilen HTML biçiminde. Bu yöntem önceki adımda kod tarafından çağrılır ve biçimini korumak için kullanılan \<açıklaması > öğeleri.  
+4. @No__t-0 ' dan `Module1` ' den sonra, \<Description > düğümünü belirtilen HTML biçimine dönüştürmek için yeni bir Yöntem (`Sub`) ekleyin. Bu yöntem, önceki adımda kod tarafından çağrılır ve \<Description > öğelerinin biçimini korumak için kullanılır.  
   
-     Bu yöntem, alt öğelerini değiştirir \<açıklaması > HTML öğesi. `ReplaceWith` Yöntemi, alt öğelerine konumunu korumak için kullanılır. Dönüştürülen içeriğini \<açıklaması > öğesi, bir HTML paragrafta eklenir (\<p >) öğesi. <xref:System.Xml.Linq.XContainer.Nodes%2A> Dönüştürülmüş içeriğini almak için kullanılan özellik \<açıklaması > öğesi. Bu, dönüştürülen içeriği alt öğeleri dahil edilmesini sağlar.  
+     Bu yöntem, \<Description > öğesinin alt öğelerini HTML ile değiştirir. @No__t-0 yöntemi alt öğelerin konumunu korumak için kullanılır. @No__t-0Description > öğesinin dönüştürülmüş içeriği bir HTML paragrafına (\<p >) eklenir. @No__t-0 özelliği, \<Description > öğesinin dönüştürülmüş içeriğini almak için kullanılır. Bu, alt öğelerin dönüştürülmüş içeriğe dahil edilmesini sağlar.  
   
-     Sonra aşağıdaki kodu ekleyin `Sub Main` , `Module1`.  
+     @No__t-0 ' a `Module1` ' den sonra aşağıdaki kodu ekleyin.  
   
     ```vb  
     Public Function TransformDescription(ByVal desc As XElement) As XElement  
@@ -116,9 +116,9 @@ ms.locfileid: "62028440"
   
 5. Değişikliklerinizi kaydedin.  
   
-6. Kodu çalıştırmak için F5 tuşuna basın. Belgenin kaydedilip sonuç aşağıdakine benzer:  
+6. Kodu çalıştırmak için F5 tuşuna basın. Sonuç olarak kaydedilen belge aşağıdakine benzeyecektir:  
   
-    ```  
+    ```html  
     <?xml version="1.0"?>  
     <html>  
       <body>  
@@ -158,8 +158,8 @@ ms.locfileid: "62028440"
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [XML Değişmez Değerleri](../../../../visual-basic/language-reference/xml-literals/index.md)
-- [Visual Basic'de XML düzenleme](../../../../visual-basic/programming-guide/language-features/xml/manipulating-xml.md)
+- [Visual Basic XML 'yi düzenleme](../../../../visual-basic/programming-guide/language-features/xml/manipulating-xml.md)
 - [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)
-- [Nasıl yapılır: Dosya, dize veya Stream XML yükleme](../../../../visual-basic/programming-guide/language-features/xml/how-to-load-xml-from-a-file-string-or-stream.md)
+- [Nasıl yapılır: Dosya, Dize veya Akıştan XML Yükleme](../../../../visual-basic/programming-guide/language-features/xml/how-to-load-xml-from-a-file-string-or-stream.md)
 - [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
-- [Visual Basic'de LINQ'e giriş](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [Visual Basic LINQ 'e giriş](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)

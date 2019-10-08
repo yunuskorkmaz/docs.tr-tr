@@ -6,98 +6,98 @@ f1_keywords:
 helpviewer_keywords:
 - Const statement [Visual Basic]
 ms.assetid: 495b318d-b7c5-4198-94f8-0790a541b07a
-ms.openlocfilehash: 9d2e0c7b2b81a79f95fa852b3975f4512d87f8e0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 522ac71767707ae90a3f1d11d45ef8b29471ae6c
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623987"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005115"
 ---
 # <a name="const-statement-visual-basic"></a>Const Deyimi (Visual Basic)
-Bildirir ve bir veya daha fazla sabitlerini tanımlar.  
+Bir veya daha fazla sabiti bildirir ve tanımlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```vb  
 [ <attributelist> ] [ accessmodifier ] [ Shadows ]   
 Const constantlist  
 ```  
   
 ## <a name="parts"></a>Bölümler  
  `attributelist`  
- İsteğe bağlı. İçin tüm sabit uygulanan öznitelikler listesinde bu deyiminde bildirilen. Bkz: [öznitelik listesi](../../../visual-basic/language-reference/statements/attribute-list.md) açılı ayraçlar içinde ("`<`"ve"`>`").  
+ İsteğe bağlı. Bu bildirimde belirtilen tüm sabitlere uygulanan özniteliklerin listesi. Bkz. [öznitelik listesine](../../../visual-basic/language-reference/statements/attribute-list.md) açılı ayraçlar ("`<`" ve "`>`").  
   
  `accessmodifier`  
- İsteğe bağlı. Hangi kod bu sabiti erişebileceğini belirtmek için bunu kullanın. Olabilir [genel](../../../visual-basic/language-reference/modifiers/public.md), [korumalı](../../../visual-basic/language-reference/modifiers/protected.md), [arkadaş](../../../visual-basic/language-reference/modifiers/friend.md), [Protected Friend](../modifiers/protected-friend.md), [özel](../../../visual-basic/language-reference/modifiers/private.md), veya [Korunan özel](../../language-reference/modifiers/private-protected.md).
+ İsteğe bağlı. Bu sabitlere hangi kodun erişebileceğini belirtmek için bunu kullanın. [Ortak](../../../visual-basic/language-reference/modifiers/public.md), [korumalı](../../../visual-basic/language-reference/modifiers/protected.md), [arkadaş](../../../visual-basic/language-reference/modifiers/friend.md), [korumalı arkadaş](../modifiers/protected-friend.md), [özel](../../../visual-basic/language-reference/modifiers/private.md)veya [özel korumalı](../../language-reference/modifiers/private-protected.md)olabilir.
   
  `Shadows`  
- İsteğe bağlı. Bu, yeniden bildirmek ve temel sınıfta bir programlama öğesi gizlemek için kullanın. Bkz: [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).  
+ İsteğe bağlı. Bir temel sınıftaki programlama öğesini yeniden bildirmek ve gizlemek için bunu kullanın. Bkz. [gölgeler](../../../visual-basic/language-reference/modifiers/shadows.md).  
   
  `constantlist`  
- Gerekli. Bu deyiminde bildirilen sabit listesi.  
+ Gerekli. Bu bildirimde bildirildiği sabitlerin listesi.  
   
  `constant` `[ ,` `constant` `... ]`  
   
- Her `constant` aşağıdaki söz dizimini ve bölümleri vardır:  
+ Her `constant` aşağıdaki söz dizimi ve bölümlere sahiptir:  
   
  `constantname` `[ As` `datatype` `] =` `initializer`  
   
-|Bölümü|Açıklama|  
+|Bölümüyle|Açıklama|  
 |----------|-----------------|  
-|`constantname`|Gerekli. Sabit adı. Bkz: [bildirilen öğe adları](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
-|`datatype`|Gerekli if `Option Strict` olduğu `On`. Sabit veri türü.|  
-|`initializer`|Gerekli. Derleme zamanında değerlendirilir ve sabiti için atanan ifade.|  
+|`constantname`|Gerekli. Sabitin adı. Bkz. [tanımlanmış öğe adları](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
+|`datatype`|@No__t-0 `On` ise gereklidir. Sabitin veri türü.|  
+|`initializer`|Gerekli. Derleme zamanında değerlendirilen ve sabitine atanan ifade.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Uygulamanızda asla değişmez bir değer varsa, adlandırılmış bir konstantu ve değişmez değer yerine kullanın. Bir ad, bir değer kolaydır. Yalnızca bir kez konstantu ve birçok yerde kodunuzda kullanabilirsiniz. Sonraki bir sürümde değeri yeniden tanımlanacak ihtiyacınız varsa `Const` deyimi bir değişiklik yapmanız gereken tek yerdir.  
+ Uygulamanızda hiçbir değişiklik olmayan bir değer varsa, adlandırılmış bir sabit tanımlayabilir ve bunu bir sabit değer yerine kullanabilirsiniz. Bir ad, bir değerden daha kolay anımsanacak. Sabiti yalnızca bir kez tanımlayabilir ve kodunuzda birçok yerde kullanabilirsiniz. Daha sonraki bir sürümde değeri yeniden tanımlamanız gerekiyorsa `Const` ifadesinde değişiklik yapmanız gereken tek yer vardır.  
   
- Kullanabileceğiniz `Const` yalnızca düzeyinde modülü veya yordam. Başka bir deyişle *bildirim içeriğinin* bir değişken sınıf, yapı, modülü, yordam veya blok olmalıdır ve bir kaynak dosyası, ad alanı veya arabirimi olamaz. Daha fazla bilgi için [bildirim bağlamları ve varsayılan erişim düzeyleri](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
+ @No__t-0 ' i yalnızca modül veya yordam düzeyinde kullanabilirsiniz. Diğer bir deyişle, bir değişken için *Bildirim bağlamı* bir sınıf, yapı, modül, yordam veya blok olmalıdır ve kaynak dosya, ad alanı veya arabirim olamaz. Daha fazla bilgi için bkz. [bildirim bağlamları ve varsayılan erişim düzeyleri](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
   
- Yerel Sabitleri (bir yordam) içindeki varsayılan genel erişim ve bunlar üzerinde herhangi bir erişim değiştiricileri kullanamazsınız. Özel erişim sınıfı ve modül üye Sabitleri (dışında herhangi bir yordam) varsayılan ve yapı üyesi sabitleri varsayılan genel erişim için. Erişim değiştiricileri ile kullanıcıların erişim düzeylerini ayarlayabilirsiniz.  
+ Yerel sabitler (bir yordam içinde) varsayılan olarak genel erişime ve bunlara hiçbir erişim değiştiricilerini kullanamazsınız. Sınıf ve modül üyesi sabitleri (herhangi bir yordam dışında), özel erişim için varsayılan olarak, üye sabitlerinin varsayılan olarak ortak erişimine sahiptir. Erişim değiştiricilerini kullanarak erişim düzeylerini ayarlayabilirsiniz.  
   
 ## <a name="rules"></a>Kurallar  
   
-- **Bildirim bağlamı.** Bir sabit bildirilen her türlü yordam dışında Modül düzeyinde bir *üyeye sabitine*; yapısı, sınıfın bir üyesidir veya modül bildiren.  
+- **Bildirim bağlamı.** Modül düzeyinde belirtilen bir sabit, herhangi bir yordamın dışında, bir *üye sabiti*; Onu bildiren sınıf, yapı veya modülün bir üyesidir.  
   
-     Yordam düzeyinde bildirilen bir sabit değeri bir *yerel sabit*; yordam veya onu bildiren blok için yereldir.  
+     Yordam düzeyinde belirtilen bir sabit, yerel bir *sabittir*; Bu, onu bildiren yordamın veya bloğun yereldir.  
   
-- **Öznitelikleri.** Öznitelikleri yalnızca üye sabitleri için değil, yerel sabit uygulayabilirsiniz. Bir özniteliği derleme meta bilgileri yerel sabitler gibi geçici depolama için anlamlı değil katkıda bulunur.  
+- **Özelliklerine.** Öznitelikleri yerel sabitlere değil yalnızca üye sabitlerine uygulayabilirsiniz. Bir öznitelik, bilgileri derlemenin meta verilerine katkıda bulunur ve bu, yerel sabitler gibi geçici depolama için anlamlı değildir.  
   
-- **Değiştiriciler.** Varsayılan olarak, tüm sabittir `Shared`, `Static`, ve `ReadOnly`. Bu anahtar sözcüklerden biri bir sabiti bildirirken kullanamazsınız.  
+- **İlerine.** Varsayılan olarak, tüm sabitler `Shared`, `Static` ve `ReadOnly` ' dir. Bir sabit bildirirken bu anahtar sözcüklerden hiçbirini kullanamazsınız.  
   
-     Yordam düzeyinde kullanamazsınız `Shadows` veya herhangi bir erişim değiştiricilerine yerel sabitleri bildirmek için.  
+     Yordam düzeyinde, yerel sabitleri bildirmek için `Shadows` veya herhangi bir erişim değiştiricilerini kullanamazsınız.  
   
-- **Birden fazla sabit.** Aynı bildirim deyiminde birkaç sabitleri bildirebilirsiniz belirtme `constantname` her biri için bölüm. Birden fazla sabit virgülle ayrılır.  
+- **Birden çok sabit.** Aynı bildirim ifadesinde, her biri için `constantname` bölümünü belirterek birçok sabit bildirebilirsiniz. Birden çok sabit virgülle ayrılır.  
   
 ## <a name="data-type-rules"></a>Veri türü kuralları  
   
-- **Veri türleri.** `Const` İfadesi bir değişken veri türünü bildirebilirsiniz. Herhangi bir veri türü veya bir numaralandırma adını belirtebilirsiniz.  
+- **Veri türleri.** @No__t-0 bildirimi, bir değişkenin veri türünü bildirebilirler. Herhangi bir veri türü veya bir numaralandırma adı belirtebilirsiniz.  
   
-- **Varsayılan türü.** Siz belirtmezseniz `datatype`, veri türü sabit alır `initializer`. Her ikisini de belirtirseniz `datatype` ve `initializer`, veri türü `initializer` dönüştürülebilmelidir `datatype`. Kullanılmazsa `datatype` ya da `initializer` varsa, veri türü için varsayılan değerleri `Object`.  
+- **Varsayılan tür.** @No__t-0 ' ı belirtmezseniz, sabit `initializer` ' in veri türünü alır. @No__t-0 ve `initializer` ' i belirtirseniz, `initializer` ' nin veri türü `datatype` ' e dönüştürülebilir olmalıdır. Ne `datatype` ne de `initializer` yoksa, veri türü varsayılan olarak `Object` ' dir.  
   
-- **Farklı türler.** Farklı veri türleri farklı sabitleri için ayrı bir kullanarak belirtebileceğiniz `As` bildirdiğiniz her bir değişken yan tümcesi. Ancak, ortak bir'ı kullanarak aynı türde olacak şekilde birkaç sabitleri bildiremezsiniz `As` yan tümcesi.  
+- **Farklı türler.** Bildirdiğiniz her değişken için ayrı bir `As` yan tümcesi kullanarak farklı sabitler için farklı veri türleri belirtebilirsiniz. Ancak, ortak bir `As` yan tümcesini kullanarak aynı türde olan birkaç sabiti bildiremezsiniz.  
   
-- **Başlatma.** Her sabiti değerini başlatmalıdır `constantlist`. Kullandığınız `initializer` sabiti için atanmış bir ifade sağlamanız için. İfade değişmez değerleri, önceden tanımlanmış diğer sabitleri ve önceden tanımlanmış numaralandırma üyeleri herhangi bir birleşimi olabilir. Bu öğeleri birleştirin, aritmetik ve mantıksal işleçlerini kullanabilirsiniz.  
+- **Başlatılmasında.** @No__t-0 ' da her bir sabit değeri başlatmalısınız. @No__t-0 kullanarak sabitine atanacak bir ifade sağlayabilirsiniz. İfade, herhangi bir sabit değer, önceden tanımlanmış diğer sabitler ve önceden tanımlanmış sabit listesi üyeleri olabilir. Bu tür öğeleri birleştirmek için aritmetik ve mantıksal işleçler kullanabilirsiniz.  
   
-     Değişkenler veya işlevlerinde kullanılamaz `initializer`. Bununla birlikte, dönüşüm anahtar sözcükleri gibi kullanabileceğiniz `CByte` ve `CShort`. Ayrıca `AscW` bir sabit ile çağırırsanız `String` veya `Char` bağımsız değişkeni, derleme zamanında değerlendirilebilen olduğundan.  
+     @No__t-0 ' da değişkenleri veya işlevleri kullanamazsınız. Ancak, `CByte` ve `CShort` gibi dönüştürme anahtar sözcüklerini kullanabilirsiniz. @No__t-0 ' ı bir sabit `String` veya `Char` bağımsız değişkeniyle çağırırsanız, bu, derleme zamanında değerlendirilebileceğinizden de kullanabilirsiniz.  
   
 ## <a name="behavior"></a>Davranış  
   
-- **Kapsam.** Yerel sabitleri, yordam veya blok içinde yalnızca erişilebilir. Üye sabitleri herhangi bir yerde kendi sınıf, yapı veya modül içinde erişilebilir.  
+- **Kapsam.** Yerel sabitler yalnızca kendi yordamının veya bloğunun içinden erişilebilir. Üye sabitlerine, sınıfları, yapısı veya modülü içinde herhangi bir yerden erişilebilir.  
   
-- **Nitelik.** Kod bir sınıf dışında yapısını veya modülünü üye sabitin adı bu sınıf, yapı veya modül adıyla nitelemeniz gerekir. Bir yordam veya blok Bu yordam veya blok içinde herhangi bir yerel sabit başvurulamaz dışındaki kod.  
+- **Yeter.** Bir sınıf, yapı veya modülün dışındaki kodun, bir üye sabitinin adını bu sınıf, yapı veya modülün adı ile nitelemeniz gerekir. Bir yordamın veya bloğun dışındaki kod, bu yordam veya blok içindeki herhangi bir yerel sabitlere başvuramaz.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte `Const` sabitler değişmez değerler yerine kullanılmak için deyimi.  
+ Aşağıdaki örnek, sabit değerlerin yerine kullanılacak sabitleri bildirmek için `Const` ifadesini kullanır.  
   
  [!code-vb[VbVbalrStatements#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#13)]  
   
 ## <a name="example"></a>Örnek  
- Veri türüne sahip bir sabit tanımlarsanız `Object`, isteğe bağlı olarak Visual Basic Derleyicisi türünü verir `initializer`, yerine `Object`. Aşağıdaki örnekte, sabit `naturalLogBase` çalışma zamanı türü `Decimal`.  
+ @No__t-0 veri türüyle bir sabit tanımlarsanız Visual Basic derleyici, `Object` yerine `initializer` türü verir. Aşağıdaki örnekte, `naturalLogBase` ' ın sabit `Decimal` çalışma zamanı türü vardır.  
   
  [!code-vb[VbVbalrStatements#87](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#87)]  
   
- Önceki örnekte <xref:System.Type.ToString%2A> metodunda <xref:System.Type> tarafından döndürülen nesne [GetType işleci](../../../visual-basic/language-reference/operators/gettype-operator.md), çünkü <xref:System.Type> dönüştürülemez `String` kullanarak `CStr`.  
+ Yukarıdaki örnekte, <xref:System.Type> `CStr` kullanılarak `String` ' e dönüştürülemediği için, [GetType işleci](../../../visual-basic/language-reference/operators/gettype-operator.md)tarafından döndürülen <xref:System.Type> nesnesi üzerinde <xref:System.Type.ToString%2A> yöntemini kullanır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

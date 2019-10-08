@@ -1,19 +1,19 @@
 ---
-title: 'Nasıl yapılır: Uzantı metodu yazma (Visual Basic)'
+title: 'Nasıl yapılır: Uzantı Metodu Yazma (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - extending data types [Visual Basic]
 - writing extension methods [Visual Basic]
 - extension methods [Visual Basic]
 ms.assetid: fb2739cc-958d-4ef4-a38b-214a74c93413
-ms.openlocfilehash: 31ccb18e0e6d1569764ec2a67201d7f758129425
-ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
+ms.openlocfilehash: d01596d50db8ba1078e8ac82caa951418645c977
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71332756"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72004607"
 ---
-# <a name="how-to-write-an-extension-method-visual-basic"></a>Nasıl yapılır: Uzantı metodu yazma (Visual Basic)
+# <a name="how-to-write-an-extension-method-visual-basic"></a>Nasıl yapılır: Uzantı Metodu Yazma (Visual Basic)
 
 Uzantı yöntemleri varolan bir sınıfa Yöntemler eklemenizi sağlar. Genişletme yöntemi, bu sınıfın bir örneği gibi çağrılabilir.
 
@@ -27,11 +27,13 @@ Uzantı yöntemleri varolan bir sınıfa Yöntemler eklemenizi sağlar. Genişle
     Imports System.Runtime.CompilerServices
     ```
 
-3. Yeni veya mevcut uygulamanızdaki bir modül içinde, yöntem tanımını uzantı özniteliğiyle başlatın:
+3. Yeni veya mevcut uygulamanızdaki bir modül içinde [`<Extension>`](xref:System.Runtime.CompilerServices.ExtensionAttribute) özniteliğiyle yöntem tanımını başlatın:
 
     ```vb
     <Extension()>
     ```
+ 
+   @No__t-0 özniteliğinin, bir Visual Basic [modülünde](../../../language-reference/statements/module-statement.md)yalnızca bir yönteme (bir `Sub` veya `Function` yordam) uygulanabileceğini unutmayın. Bunu bir `Class` veya `Structure` ' deki bir yönteme uygularsanız, Visual Basic Derleyicisi Hata [BC36551](../../../misc/bc36551.md)oluşturuyor, "uzantı yöntemleri yalnızca modüllerde tanımlanabilir."
 
 4. Yöntemi sıradan bir şekilde bildirin, ancak ilk parametre türü genişletmek istediğiniz veri türü olmalıdır.
 

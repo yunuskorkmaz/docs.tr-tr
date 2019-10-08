@@ -1,24 +1,24 @@
 ---
-title: -LIBPATH
+title: -libpath
 ms.date: 03/10/2018
 helpviewer_keywords:
 - libpath compiler option [Visual Basic]
 - /libpath compiler option [Visual Basic]
 - -libpath compiler option [Visual Basic]
 ms.assetid: 5f1c26c9-3455-4e89-bdf3-b12d6c2e655b
-ms.openlocfilehash: b7bfcb0f2034145822922126fe61efea8d8ef269
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8f4e415576562885c9edbd3d2dddbe2a271e9923
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61793932"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005458"
 ---
-# <a name="-libpath"></a>-LIBPATH
-Başvurulan bütünleştirilmiş kodların konumunu belirtir.  
+# <a name="-libpath"></a>-libpath
+Başvurulan derlemelerin konumunu belirtir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```console  
 -libpath:dirList  
 ```  
   
@@ -26,31 +26,31 @@ Başvurulan bütünleştirilmiş kodların konumunu belirtir.
   
 |Terim|Tanım|  
 |---|---|  
-|`dirList`|Gerekli. Sahipse başvurulan bir derleme aramak derleyicinin dizinlerin noktalı virgülle ayrılmış listesi bulunamadı veya geçerli çalışma dizinine (içinden, derleyiciyi çağırdığınız dizin) veya ortak dil çalışma zamanının sistem dizini. Dizin adı boşluk içeriyorsa adı tırnak içine alın. ("").|  
+|`dirList`|Gerekli. Başvurulan bir derlemenin geçerli çalışma dizininde (derleyicisini çağırmakta olduğunuz dizin) veya ortak dil çalışma zamanının sistem dizininde bulunamaması halinde, derleyicinin aranacağı dizinlerin noktalı virgülle ayrılmış listesi. Dizin adı bir boşluk içeriyorsa, adı tırnak işaretleri ("") içine alın.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `-libpath` Seçeneği tarafından başvurulan derlemelerin konumunu belirten [-başvuru](../../../visual-basic/reference/command-line-compiler/reference.md) seçeneği.  
+ @No__t-0 seçeneği, [-Reference](../../../visual-basic/reference/command-line-compiler/reference.md) seçeneğinin başvurduğu derlemelerin konumunu belirtir.  
   
- Derleyici şu sıralamadaki tam olmayan bütünleştirilmiş kod başvuruları arar:  
+ Derleyici, aşağıdaki sırada tam olarak nitelenen derleme başvurularını arar:  
   
-1. Geçerli çalışma dizini. Bu, derleyicinin çağırıldığı dizinidir.  
+1. Geçerli çalışma dizini. Bu, derleyicinin çağrıldığı dizindir.  
   
 2. Ortak dil çalışma zamanı sistem dizini.  
   
-3. Tarafından belirtilen dizinlerde `/libpath`.  
+3. @No__t-0 tarafından belirtilen dizinler.  
   
-4. LIB ortam değişkeni tarafından belirtilen dizinler.  
+4. LıB ortam değişkeni tarafından belirtilen dizinler.  
   
- `-libpath` Eklenebilir; belirtme seçeneği, birden çok kez önceki tüm değerlere ekler.  
+ @No__t-0 seçeneği eklenebilir; bir defadan fazla belirtmek önceki değerlere ekler.  
   
- Kullanım `-reference` bir bütünleştirilmiş kod başvurusu belirtmek için.  
+ Derleme başvurusunu belirtmek için `-reference` kullanın.  
   
-|/ Libpath Visual Studio'da ayarlamak için tümleşik geliştirme ortamı|  
+|Visual Studio tümleşik geliştirme ortamında/LIBPATH ayarlamak için|  
 |---|  
-|1.  Seçili bir projeyi **Çözüm Gezgini**. Üzerinde **proje** menüsünü tıklatın **özellikleri**. <br />2.  Tıklayın **başvuruları** sekmesi.<br />3.  Tıklayın **başvuru yolları...**  düğmesi.<br />4.  İçinde **başvuru yolları** iletişim kutusunda, dizin adı girin **klasör:** kutusu.<br />5.  Tıklayın **klasörü Ekle**.|  
+|1. **Çözüm Gezgini**bir proje seçili olmalıdır. **Proje** menüsünde **Özellikler**' e tıklayın. <br />2. **Başvurular** sekmesine tıklayın.<br />3. **başvuru yolları...** düğmesine tıklayın.<br />4. **başvuru yolları** iletişim kutusunda dizin adını **klasör:** kutusuna girin.<br />5. **Klasör Ekle**'ye tıklayın.|  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod derlenir `T2.vb` bir .exe dosyası oluşturmak için. Derleyici, derleme başvuruları için çalışma dizininde, C: sürücüsünün kök dizinindeki ve C: sürücüsünde yeni derlemeler dizininde arar.  
+ Aşağıdaki kod, bir. exe dosyası oluşturmak için `T2.vb` derler. Derleyici, C: sürücüsünün kök dizininde ve derleme başvuruları için C: sürücüsünün yeni derlemeler dizininde çalışma dizinine bakar.  
   
 ```console  
 vbc -libpath:c:\;"c:\New Assemblies" -reference:t2.dll t2.vb  

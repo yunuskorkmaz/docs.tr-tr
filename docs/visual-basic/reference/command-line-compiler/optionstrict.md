@@ -8,49 +8,49 @@ helpviewer_keywords:
 - optionstrict compiler option [Visual Basic]
 - /optionstrict compiler option [Visual Basic]
 ms.assetid: c7b10086-0fa4-49db-b3c8-4ae0db5957da
-ms.openlocfilehash: 22423877325806e6e6abe535ad98530eb924780e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6d281fe07754f0471f8d6c0e31cf3ea890060504
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625902"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005342"
 ---
 # <a name="-optionstrict"></a>-optionstrict
-Örtük tür dönüştürmelerini kısıtlamak için katı türü anlamları zorlar.  
+Örtük tür dönüşümlerini kısıtlamak için katı tür semantiğini zorlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```console  
 -optionstrict[+ | -]  
 -optionstrict[:custom]  
 ```  
   
 ## <a name="arguments"></a>Arguments  
  `+` &#124; `-`  
- İsteğe bağlı. `-optionstrict+` Seçeneği örtük tür dönüştürme kısıtlar. Bu seçenek için varsayılan değer `-optionstrict-`. `-optionstrict+` Seçeneği aynıdır `-optionstrict`. Esnek türü anlamları için her ikisini de kullanabilirsiniz.  
+ İsteğe bağlı. @No__t-0 seçeneği örtük tür dönüştürmeyi kısıtlar. Bu seçenek için varsayılan değer `-optionstrict-` ' dır. @No__t-0 seçeneği, `-optionstrict` ile aynıdır. Hem izin veren tür semantiğinin hem de kullanabilirsiniz.  
   
  `custom`  
- Gerekli. Katı dil semantiği değil uymaya uyar.  
+ Gerekli. Katı dil semantiklerine uyulmadığında uyar.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Zaman `-optionstrict+` kıyaslandığında geçerli tür dönüştürmelerine yalnızca bir örtülü olarak yapılabilir. Örtük tür dönüştürmelerini atama gibi daraltma bir `Decimal` türü nesnesi bir tamsayı türü nesne, hata olarak raporlanır.  
+ @No__t-0 etkin olduğunda, yalnızca genişletme türü dönüşümleri örtülü olarak yapılabilir. Bir tamsayı türü nesnesine `Decimal` tür nesnesi atama gibi örtülü daraltma türü dönüştürmeleri hata olarak bildirilir.  
   
- Daraltma örtük tür dönüştürmelerini için Uyarılar oluşturmak için `-optionstrict:custom`. Kullanım `-nowarn:numberlist` belirli uyarılarını gözardı etme ve `-warnaserror:numberlist` belirli uyarıları hata olarak değerlendirilecek.  
+ Örtük daraltma türü dönüştürmeleri için uyarı oluşturmak üzere `-optionstrict:custom` kullanın. Belirli uyarıları yok saymak için `-nowarn:numberlist` ve belirli uyarıları hata olarak değerlendirmek için `-warnaserror:numberlist` kullanın.  
   
-### <a name="to-set--optionstrict-in-the-visual-studio-ide"></a>-Optionstrict Visual Studio IDE'de ayarlamak için  
+### <a name="to-set--optionstrict-in-the-visual-studio-ide"></a>Visual Studio IDE 'de-OptionStrict öğesini ayarlamak için  
   
-1. Seçili bir projeyi **Çözüm Gezgini**. Üzerinde **proje** menüsünü tıklatın **özellikleri.**   
+1. **Çözüm Gezgini**' de bir proje seçili olmalıdır. **Proje** menüsünde Özellikler ' e tıklayın **.**   
   
-2. Tıklayın **derleme** sekmesi.  
+2. **Derle** sekmesine tıklayın.  
   
-3. Değer değiştirme **Option Strict** kutusu.  
+3. **Seçenek katı** kutusunda değeri değiştirin.  
   
-### <a name="to-set--optionstrict-programmatically"></a>-Optionstrict program üzerinden ayarlamak için  
+### <a name="to-set--optionstrict-programmatically"></a>Program aracılığıyla ayarlama-OptionStrict  
   
-- Bkz: [Option Strict deyimi](../../../visual-basic/language-reference/statements/option-strict-statement.md).  
+- Bkz. [Option Strict deyimdir](../../../visual-basic/language-reference/statements/option-strict-statement.md).  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod derlenir `Test.vb` katı tür semantiği kullanarak.  
+ Aşağıdaki kod, `Test.vb` ' i katı tür semantiğini kullanarak derler.  
   
 ```console
 vbc -optionstrict+ test.vb  

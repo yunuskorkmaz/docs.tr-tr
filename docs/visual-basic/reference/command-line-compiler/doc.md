@@ -6,21 +6,25 @@ helpviewer_keywords:
 - -doc compiler option [Visual Basic]
 - /doc compiler option [Visual Basic]
 ms.assetid: 5fc32ec9-a149-4648-994c-a8d0cccd0a65
-ms.openlocfilehash: c3bff4e44ddee1c4dfb6ab366464ad54e991b595
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3da049b912d791f26814bb4b6cbb70998803726a
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624275"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005641"
 ---
 # <a name="-doc"></a>-doc
-Belge yorumlarını bir XML dosyasına işler.  
+Belge açıklamalarını bir XML dosyasına işler.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```console  
 -doc[+ | -]  
-' -or-  
+```
+
+veya  
+
+```console
 -doc:file  
 ```  
   
@@ -28,30 +32,30 @@ Belge yorumlarını bir XML dosyasına işler.
   
 |Terim|Tanım|  
 |---|---|  
-|`+` &#124; `-`|İsteğe bağlı. Belirtme +, veya yalnızca `-doc`, derleyicinin belgelendirme bilgilerini oluşturmak ve bir XML dosyasında yerleştirin. Belirtme `-` eşdeğeri değildir belirtme `-doc`, oluşturulacak belge bilgi neden.|  
-|`file`|Gerekli if `-doc:` kullanılır. Kaynak kodu dosyaları derleme açıklamalardan doldurulur çıkış XML dosyasını belirtir. Dosya adı boşluk içeriyorsa adı tırnak işaretleri ile çevreleyen ("").|  
+|`+` &#124; `-`|İsteğe bağlı. \+ Veya yalnızca `-doc` belirtildiğinde, derleyicinin belge bilgilerini oluşturup bir XML dosyasına yerleştirmesini sağlar. @No__t-0 ' ı belirtmek, `-doc` Belirtmemeye değil, hiçbir belge bilgisinin oluşturulmamasına neden olan eşdeğerdir.|  
+|`file`|@No__t-0 kullanılırsa gereklidir. Derlemenin kaynak kodu dosyalarındaki yorumlarla doldurulan çıkış XML dosyasını belirtir. Dosya adı bir boşluk içeriyorsa, adı tırnak işaretleri ("") içine alın.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `-doc` Seçeneği denetimleri olmadığını derleyici içeren belge yorumlarını bir XML dosyası oluşturur. Kullanırsanız `-doc:file` söz dizimini `file` parametre XML dosyasının adını belirtir. Kullanırsanız `-doc` veya `-doc+`, derleyicinin XML dosya adı yürütülebilir dosya veya derleyici oluşturma kitaplığından alır. Kullanırsanız `-doc-` veya belirtmeyin `-doc` seçeneği, derleyicinin bir XML dosyası oluşturmaz.  
+ @No__t-0 seçeneği, derleyicinin belge açıklamalarını içeren bir XML dosyası oluşturup oluşturmayacağını denetler. @No__t-0 sözdizimini kullanırsanız, `file` parametresi, XML dosyasının adını belirtir. @No__t-0 veya `-doc+` kullanırsanız, derleyici XML dosya adını derleyicinin oluşturmakta olduğu yürütülebilir dosya veya kitaplıktan alır. @No__t-0 kullanırsanız veya `-doc` seçeneğini belirtmezseniz, derleyici bir XML dosyası oluşturmaz.  
   
- Kaynak kodu dosyalarında belge açıklamaları aşağıdaki tanımları koyabilirsiniz:  
+ Kaynak kodu dosyalarında, belge açıklamaları aşağıdaki tanımlardan önce olabilir:  
   
-- Kullanıcı tanımlı türleri, aşağıdaki gibi bir [sınıfı](../../../visual-basic/language-reference/statements/class-statement.md) veya [arabirimi](../../../visual-basic/language-reference/statements/interface-statement.md)  
+- Bir [sınıf](../../../visual-basic/language-reference/statements/class-statement.md) veya [arabirim](../../../visual-basic/language-reference/statements/interface-statement.md) gibi Kullanıcı tanımlı türler  
   
-- Bir alan gibi bir üye [olay](../../../visual-basic/language-reference/statements/event-statement.md), [özelliği](../../../visual-basic/language-reference/statements/property-statement.md), [işlevi](../../../visual-basic/language-reference/statements/function-statement.md), veya [alt yordam](../../../visual-basic/language-reference/statements/sub-statement.md).  
+- Alan, [olay](../../../visual-basic/language-reference/statements/event-statement.md), [özellik](../../../visual-basic/language-reference/statements/property-statement.md), [işlev](../../../visual-basic/language-reference/statements/function-statement.md)veya alt [yordam](../../../visual-basic/language-reference/statements/sub-statement.md)gibi Üyeler.  
   
- Visual Studio ile oluşturulan XML dosyasını kullanmak için [IntelliSense](/visualstudio/ide/using-intellisense) özelliği, desteklemek istediğiniz derleme ile aynı olması, XML dosyasının dosya adı sağlar. Visual Studio projesinde derlemeye başvurulduğundan, .xml dosyasını da bulunur, böylece XML dosyasını derleme olarak aynı dizinde olduğundan emin olun. XML belge dosyaları, IntelliSense, kod bir proje veya içinde bir proje tarafından başvurulan projeler için çalışması gerekli değildir.  
+ Oluşturulan XML dosyasını Visual Studio [IntelliSense](/visualstudio/ide/using-intellisense) özelliğiyle birlikte kullanmak IÇIN, XML dosyasının dosya adının desteklemek istediğiniz derlemeyle aynı olmasına izin verin. XML dosyasının derlemeyle aynı dizinde olduğundan emin olun; böylece derlemeye Visual Studio projesinde başvuruluyorsa,. xml dosyası da bulunur. IntelliSense 'in bir proje içinde veya bir proje tarafından başvurulan projelerde kod için çalışması için XML belge dosyaları gerekli değildir.  
   
- Derleme sürece `/target:module`, etiket XML dosyasını içeren `<assembly></assembly>`. Bu etiketler, derleme çıktı dosyası için derleme bildirimini içeren dosya adını belirtin.  
+ @No__t-0 ile derlemediğiniz takdirde, XML dosyası `<assembly></assembly>` etiketlerini içerir. Bu Etiketler, derlemenin çıkış dosyası için derleme bildirimini içeren dosyanın adını belirtir.  
   
- Bkz: [XML açıklama etiketleri](../../../visual-basic/language-reference/xmldoc/index.md) kodunuza yorumlar gelen belgeleri oluşturmak yöntemleri.  
+ Kodunuzda açıklamalardan belge oluşturma yolları için bkz. [XML açıklama etiketleri](../../../visual-basic/language-reference/xmldoc/index.md) .  
   
-|Ayarlanacak - doc Visual Studio tümleşik geliştirme ortamı|  
+|Visual Studio tümleşik geliştirme ortamında belge ayarlamak için|  
 |---|  
-|1.  Seçili bir projeyi **Çözüm Gezgini**. Üzerinde **proje** menüsünü tıklatın **özellikleri**. <br />2.  Tıklayın **derleme** sekmesi.<br />3.  Değer kümesindeki **oluşturmak XML belge dosyası** kutusu.|  
+|1. **Çözüm Gezgini**bir proje seçili olmalıdır. **Proje** menüsünde **Özellikler**' e tıklayın. <br />2. **Derle** sekmesine tıklayın.<br />3. **XML belgesi oluştur dosyası** kutusunda değeri ayarlayın.|  
   
 ## <a name="example"></a>Örnek  
- Bkz: [kodunuzu belgeleme XML ile](../../../visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md) örneği.  
+ Bkz. bir örnek için [kodunuzu XML Ile belgeleme](../../../visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md) .  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

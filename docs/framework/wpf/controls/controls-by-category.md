@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [WPF], listed by category
 ms.assetid: f8a1f78e-d9fa-4367-9ec6-f084577e83bb
-ms.openlocfilehash: b86684bab6c552102af7486b2c9ab49ea703a175
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 41cbe57f1e3711bb4e18b2b4da28c26ebbd2bc60
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64627296"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005698"
 ---
 # <a name="controls-by-category"></a>Kategoriye Göre Denetimler
-Windows Presentation Foundation (WPF) denetimleri mantıksal olarak birkaç kategoride gruplandırılabilir. Bu kategoriler, hangi denetimlerin benzer kullanım düzenlerini veya işlevselliğine sahip olduğunu görmenize yardımcı olarak senaryonuz için uygun denetimi seçmek için kullanılabilir.  
+Windows Presentation Foundation (WPF) denetimleri, çeşitli kategorilerde mantıksal olarak gruplandırılabilir. Bu kategoriler, hangi denetimlerin benzer kullanım desenleri veya işlevselliğine sahip olduğunu görmenizi sağlayan senaryonuz için uygun denetimi seçmek üzere kullanılabilir.  
   
 ## <a name="layout"></a>Düzen  
- Düzen denetimleri, boyutu, boyut, konum ve alt öğelerini düzenleme yönetmek için kullanılır.  
+ Düzen denetimleri, alt öğelerin boyutunu, boyutlarını, konumunu ve yerleşimini yönetmek için kullanılır.  
   
 - <xref:System.Windows.Controls.Border>  
   
@@ -56,14 +56,14 @@ Windows Presentation Foundation (WPF) denetimleri mantıksal olarak birkaç kate
 - <xref:System.Windows.Controls.WrapPanel>  
   
 ## <a name="buttons"></a>Düğmeler  
- Düğmeler, en temel kullanıcı arabirimi denetimleri biridir. Uygulamaları genellikle bazı görevleri gerçekleştirmek <xref:System.Windows.Controls.Primitives.ButtonBase.Click> kullanıcı bunlar üzerinde tıkladığında bir olay.  
+ Düğmeler en temel kullanıcı arabirimi denetimlerinden biridir. Uygulamalar, bir Kullanıcı bu kullanıcılara tıkladığında <xref:System.Windows.Controls.Primitives.ButtonBase.Click> olayında genellikle bir görev gerçekleştirir.  
   
 - <xref:System.Windows.Controls.Button>  
   
 - <xref:System.Windows.Controls.Primitives.RepeatButton>  
   
-## <a name="data-display"></a>Verileri görüntüleme  
- Veri görüntüleme denetimleri, bir veri kaynağından bilgi göstermek için kullanılır.  
+## <a name="data-display"></a>Veri görüntüleme  
+ Veri görüntüleme denetimleri, bir veri kaynağından bilgileri göstermek için kullanılır.  
   
 - <xref:System.Windows.Controls.DataGrid>  
   
@@ -71,15 +71,15 @@ Windows Presentation Foundation (WPF) denetimleri mantıksal olarak birkaç kate
   
 - <xref:System.Windows.Controls.TreeView>  
   
-## <a name="date-display-and-selection"></a>Tarih görüntüleme ve seçimi  
- Tarih denetimleri görüntülemek ve Takvim bilgileri seçmek için kullanılır.  
+## <a name="date-display-and-selection"></a>Tarih görüntüleme ve seçim  
+ Tarih denetimleri, takvim bilgilerini göstermek ve seçmek için kullanılır.  
   
 - <xref:System.Windows.Controls.Calendar>  
   
 - <xref:System.Windows.Controls.DatePicker>  
   
 ## <a name="menus"></a>Menüler  
- Menüleri, eylemlerin grubuna veya bağlamsal Yardım sağlamak için kullanılır.  
+ Menüler, ilgili eylemleri gruplamak veya bağlamsal yardım sağlamak için kullanılır.  
   
 - <xref:System.Windows.Controls.ContextMenu>  
   
@@ -88,7 +88,7 @@ Windows Presentation Foundation (WPF) denetimleri mantıksal olarak birkaç kate
 - <xref:System.Windows.Controls.ToolBar>  
   
 ## <a name="selection"></a>Seçim  
- Seçim denetimleri, bir veya daha fazla seçeneklerini seçmesini sağlamak için kullanılır.  
+ Seçim denetimleri, bir kullanıcının bir veya daha fazla seçenek seçmesini sağlamak için kullanılır.  
   
 - <xref:System.Windows.Controls.CheckBox>  
   
@@ -101,7 +101,7 @@ Windows Presentation Foundation (WPF) denetimleri mantıksal olarak birkaç kate
 - <xref:System.Windows.Controls.Slider>  
   
 ## <a name="navigation"></a>Gezinti  
- Gezinti denetimlerinin hedefleme çerçeveleri oluşturarak uygulama gezinti deneyimini geliştirmek veya sekmeli uygulama görünümü.  
+ Gezinti denetimleri, hedefleme çerçeveleri veya sekmeli uygulama görünümü oluşturarak uygulama gezinti deneyimini geliştirir veya genişletir.  
   
 - <xref:System.Windows.Controls.Frame>  
   
@@ -114,7 +114,7 @@ Windows Presentation Foundation (WPF) denetimleri mantıksal olarak birkaç kate
 - <xref:System.Windows.Controls.TabControl>  
   
 ## <a name="dialog-boxes"></a>İletişim Kutuları  
- İletişim kutuları, yazdırma gibi ortak kullanıcı etkileşim senaryoları için hedeflenen destek sağlar.  
+ İletişim kutuları, yazdırma gibi yaygın kullanıcı etkileşimi senaryoları için hedeflenen destek sağlar.  
   
 - <xref:Microsoft.Win32.OpenFileDialog>  
   
@@ -123,7 +123,7 @@ Windows Presentation Foundation (WPF) denetimleri mantıksal olarak birkaç kate
 - <xref:Microsoft.Win32.SaveFileDialog>  
   
 ## <a name="user-information"></a>Kullanıcı bilgileri  
- Kullanıcı bilgileri denetimleri bağlamsal geri bildirim sağlamak veya bir uygulamanın kullanıcı arabirimini açıklamak. Kullanıcı, genellikle bu denetimler ile etkileşim kurmaz.  
+ Kullanıcı bilgileri denetimleri, bağlamsal geri bildirim sağlar veya uygulamanın kullanıcı arabirimini açıklığa kavuşturun. Kullanıcı genellikle bu denetimlerle etkileşime giremezsiniz.  
   
 - <xref:System.Windows.Controls.AccessText>  
   
@@ -140,7 +140,7 @@ Windows Presentation Foundation (WPF) denetimleri mantıksal olarak birkaç kate
 - <xref:System.Windows.Controls.ToolTip>  
   
 ## <a name="documents"></a>Belgeler  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] belgeleri görüntülemek için çeşitli özel denetimler içerir. Bu denetimler hedeflenen kullanıcı senaryo temel alınarak okuma deneyimini iyileştirir.  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], belgeleri görüntülemek için çeşitli özelleştirilmiş denetimler içerir. Bu denetimler, hedeflenen Kullanıcı senaryosuna göre okuma deneyimini iyileştirir.  
   
 - <xref:System.Windows.Controls.DocumentViewer>  
   
@@ -153,7 +153,7 @@ Windows Presentation Foundation (WPF) denetimleri mantıksal olarak birkaç kate
 - <xref:System.Windows.Controls.StickyNoteControl>  
   
 ## <a name="input"></a>Giriş  
- Giriş denetimleri, kullanıcının giriş metin ve diğer içerikleri sağlar.  
+ Giriş denetimleri, kullanıcının metin ve diğer içerikleri girmesini sağlar.  
   
 - <xref:System.Windows.Controls.TextBox>  
   
@@ -161,8 +161,8 @@ Windows Presentation Foundation (WPF) denetimleri mantıksal olarak birkaç kate
   
 - <xref:System.Windows.Controls.PasswordBox>  
   
-## <a name="media"></a>Medya  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] en popüler görüntü biçimleri için [codec] yanı sıra, ses ve video içeriğine barındırmak için tümleşik destek içerir.  
+## <a name="media"></a>Medyasını  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] hem ses hem de video içeriğini barındırmak için tümleşik destek ve en popüler görüntü biçimleri için [codec bileşenleri] içerir.  
   
 - <xref:System.Windows.Controls.Image>  
   
@@ -171,7 +171,7 @@ Windows Presentation Foundation (WPF) denetimleri mantıksal olarak birkaç kate
 - <xref:System.Windows.Controls.SoundPlayerAction>  
   
 ## <a name="digital-ink"></a>Dijital Mürekkep  
- Dijital mürekkep denetimleri sağlamak için tümleşik destek [!INCLUDE[TLA#tla_tpc](../../../../includes/tlasharptla-tpc-md.md)] mürekkep görüntüleme ve mürekkep giriş gibi özellikleri.  
+ Dijital mürekkep denetimleri, mürekkep görüntüleme ve mürekkep girişi gibi Tablet PC özellikleri için tümleşik destek sağlar.  
   
 - <xref:System.Windows.Controls.InkCanvas>  
   

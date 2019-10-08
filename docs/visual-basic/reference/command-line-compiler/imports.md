@@ -1,24 +1,24 @@
 ---
-title: -alır (Visual Basic)
+title: -içeri aktarmalar (Visual Basic)
 ms.date: 03/10/2018
 helpviewer_keywords:
 - /imports compiler option [Visual Basic]
 - imports compiler option [Visual Basic]
 - -imports compiler option [Visual Basic]
 ms.assetid: 9a93fb53-c080-497b-bf9b-441022dbbc39
-ms.openlocfilehash: 075eeccc7d80943d2757a97b9a355bbea3ef9d4e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 929e24a1ffd02d4e21ab1b925ddd59050b5d3cc4
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61663251"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005566"
 ---
-# <a name="-imports-visual-basic"></a>-alır (Visual Basic)
-Ad alanları, belirtilen bir derlemesinden içeri aktarır.  
+# <a name="-imports-visual-basic"></a>-içeri aktarmalar (Visual Basic)
+Belirtilen bir derlemeden ad alanlarını içeri aktarır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```console  
 -imports:namespaceList  
 ```  
   
@@ -29,16 +29,16 @@ Ad alanları, belirtilen bir derlemesinden içeri aktarır.
 |`namespaceList`|Gerekli. İçeri aktarılacak ad alanlarının virgülle ayrılmış listesi.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `-imports` Seçeneği geçerli kaynak dosyalarının veya tüm başvurulan bütünleştirilmiş koddan küme içinde tanımlanan herhangi bir ad alanı içeri aktarır.  
+ @No__t-0 seçeneği, geçerli kaynak dosyaları kümesi içinde veya başvurulan herhangi bir derlemeden tanımlanmış herhangi bir ad alanını içeri aktarır.  
   
- Belirtilen bir ad alanı üyelerini `-imports` derlemedeki tüm kaynak kodu dosyaları için kullanılabilir. Kullanma [Imports deyimi (.NET Namespace ve türü)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) tek kaynak kodu dosyasında bir ad alanını kullanacak şekilde.  
+ @No__t-0 ile belirtilen bir ad alanındaki Üyeler, derlemedeki tüm kaynak kodu dosyaları için kullanılabilir. Tek kaynak kodu dosyasında bir ad alanı kullanmak için [Imports ifadesini (.net ad alanı ve türü)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) kullanın.  
   
-|Ayarlamak için/Visual Studio tümleşik geliştirme ortamında içeri aktarır|  
+|Visual Studio tümleşik geliştirme ortamında/Imports ayarlamak için|  
 |---|  
-|1.  Seçili bir projeyi **Çözüm Gezgini**. Üzerinde **proje** menüsünü tıklatın **özellikleri**. <br />2.  Tıklayın **başvuruları** sekmesi.<br />3.  Ad alanı adının kutuya girin **kullanıcı içeri aktarma eklemek** düğmesi.<br />4.  Tıklayın **kullanıcı içeri aktarma eklemek** düğmesi.|  
+|1. **Çözüm Gezgini**bir proje seçili olmalıdır. **Proje** menüsünde **Özellikler**' e tıklayın. <br />2. **Başvurular** sekmesine tıklayın.<br />3. ad alanı adını **Kullanıcı Içeri aktarma Ekle** düğmesinin yanındaki kutuya girin.<br />4. **Kullanıcı Içeri aktarma Ekle** düğmesine tıklayın.|  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod zaman derler `/imports:system.globalization` belirtilir. Bu olmadan başarılı derleme ya da gerektiren bir `Imports System.Globalization` deyimi kaynak kodu dosyasının başında eklenir veya özellik tam olarak nitelenmiş `System.Globalization.CultureInfo.CurrentCulture.Name`.
+ Aşağıdaki kod `/imports:system.globalization` belirtildiğinde derlenir. Bu olmadan başarılı derleme, kaynak kodu dosyasının başına `Imports System.Globalization` ifadesinin eklenmesini veya özelliğin tam olarak `System.Globalization.CultureInfo.CurrentCulture.Name` olarak nitelenmesini gerektirir.
 
 ```vb
 Module Example

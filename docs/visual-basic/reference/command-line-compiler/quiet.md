@@ -9,28 +9,28 @@ helpviewer_keywords:
 - /quiet compiler option [Visual Basic]
 - quiet compiler option [Visual Basic]
 ms.assetid: 5d77fa23-4c50-4708-8535-649912b098e8
-ms.openlocfilehash: a22773e2e37eb60ab6f1e88305266f41764311e7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6e773c60469e8426956c92a5aa377741ba5af4d3
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61788854"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005284"
 ---
 # <a name="-quiet"></a>-quiet
 
-Derleyici, kod söz dizimi ile ilgili hatalar ve Uyarılar için görüntülenmesini engeller.
+Derleyicinin sözdizimiyle ilgili hatalar ve uyarılar için kod görüntülemesini engeller.
 
 ## <a name="syntax"></a>Sözdizimi
 
-```
+```console
 -quiet
 ```
 
 ## <a name="remarks"></a>Açıklamalar
 
-Varsayılan olarak, `-quiet` etkili değildir. Derleyici bir söz dizimi ile ilgili hata veya uyarı bildirdiğinde, ayrıca kaynak kod satırından çıkarır. Derleyici çıkışı çözümlenemedi uygulamalar için derleyicinin yalnızca metin tanı çıktısını almak daha kullanışlı olabilir.
+Varsayılan olarak, `-quiet` geçerli değildir. Derleyici söz dizimi ile ilgili bir hata veya uyarı bildirdiğinde, satır kaynak kodundan de çıkış olur. Derleyici çıkışını ayrıştırmaya yönelik uygulamalar için derleyicinin yalnızca Tanılamanın metnini çıktısının daha kullanışlı olabilir.
 
-Aşağıdaki örnekte, `Module1` olmadan derlendiğinde kaynak kodu içeren bir hata verir `-quiet`.
+Aşağıdaki örnekte, `Module1` `-quiet` olmadan derlendiğinde kaynak kodu içeren bir hata verir.
 
 ```vb
 Module Module1
@@ -49,20 +49,20 @@ C:\projects\vb2.vb(3) : error BC30451: 'x' is not declared. It may be inaccessib
         ~
 ```
 
-İle derlenmiş `-quiet`, yalnızca aşağıdaki derleyici çıkışı:
+@No__t-0 ile derlenirse, derleyici yalnızca şunları verir:
 
-```
+```console
 E:\test\t2.vb(3) : error BC30451: Name 'x' is not declared.
 ```
 
 > [!NOTE]
-> `-quiet` Seçeneği, Visual Studio geliştirme ortamında kullanılabilir değil; yalnızca komut satırından derleme yapılırken kullanılabilir.
+> @No__t-0 seçeneği, Visual Studio geliştirme ortamı içinden kullanılamaz; yalnızca komut satırından derlenirken kullanılabilir.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki kod derlenir `T2.vb` ve ilgili söz dizimleri derleyici tanılaması için kod görüntülemez:
+Aşağıdaki kod `T2.vb` derler ve söz dizimi ile ilgili derleyici tanılamaları için kod görüntülemez:
 
-```
+```console
 vbc -quiet t2.vb
 ```
 

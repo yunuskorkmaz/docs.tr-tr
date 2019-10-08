@@ -9,47 +9,47 @@ helpviewer_keywords:
 - -optioncompare compiler option [Visual Basic]
 - /optioncompare compiler option [Visual Basic]
 ms.assetid: 7237b766-b44d-4cc5-9a3c-885348a7d9e4
-ms.openlocfilehash: fd26643c2c289459b1e7b158952c402e42bae39b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ee130073b95dfbab5616a54c188b09fa92ccc930
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64639876"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005354"
 ---
 # <a name="-optioncompare"></a>-optioncompare
-Dize karşılaştırmaları nasıl yapılacağını belirtir.  
+Dize karşılaştırmalarının nasıl yapılacağını belirtir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```console  
 -optioncompare:{binary | text}  
 ```  
   
 ## <a name="remarks"></a>Açıklamalar  
- Belirtebileceğiniz `-optioncompare` içindeki iki farklı: `-optioncompare:binary` ikili dize karşılaştırmaları, kullanılacak ve `-optioncompare:text` metin dize karşılaştırmaları kullanılacak. Varsayılan olarak, derleyicinin kullandığı `-optioncompare:binary`.  
+ @No__t-0 ' ı iki formdan birinde belirtebilirsiniz: ikili dize karşılaştırmaları kullanmak için `-optioncompare:binary` ve metin dizesi karşılaştırmaları kullanmak için `-optioncompare:text`. Varsayılan olarak, derleyici `-optioncompare:binary` ' ı kullanır.  
   
- Microsoft Windows içinde mevcut kod sayfasında ikili sıralama düzenini belirler. Tipik ikili sıralama düzeninde aşağıdaki gibidir:  
+ Microsoft Windows 'da, geçerli kod sayfası ikili sıralama düzenini belirler. Tipik bir ikili sıralama düzeni aşağıdaki gibidir:  
   
  `A < B < E < Z < a < b < e < z < À < Ê < Ø < à < ê < ø`  
   
- Metin tabanlı dize karşılaştırmaları büyük/küçük harfe metin sıralama düzeni, sisteminizin yerel ayarı tarafından belirlenen temel alır. Normal metin sıralama düzeni aşağıdaki gibidir:  
+ Metin tabanlı dize karşılaştırmaları, sisteminizin yerel ayarı tarafından belirlenen, büyük/küçük harfe duyarsız metin sıralama düzenini temel alır. Tipik bir metin sıralama düzeni aşağıdaki gibidir:  
   
  `(A = a) < (À = à) < (B=b) < (E=e) < (Ê = ê) < (Z=z) < (Ø = ø)`  
   
-### <a name="to-set--optioncompare-in-the-visual-studio-ide"></a>-Optioncompare Visual Studio IDE'de ayarlamak için  
+### <a name="to-set--optioncompare-in-the-visual-studio-ide"></a>Visual Studio IDE 'de set-OptionCompare  
   
-1. Seçili bir projeyi **Çözüm Gezgini**. Üzerinde **proje** menüsünü tıklatın **özellikleri**.   
+1. **Çözüm Gezgini**' de bir proje seçili olmalıdır. **Proje** menüsünde **Özellikler**' e tıklayın.   
   
-2. Tıklayın **derleme** sekmesi.  
+2. **Derle** sekmesine tıklayın.  
   
-3. Değer değiştirme **Option Compare** kutusu.  
+3. **Seçenek karşılaştırma** kutusundaki değeri değiştirin.  
   
-### <a name="to-set--optioncompare-programmatically"></a>-Optioncompare program üzerinden ayarlamak için  
+### <a name="to-set--optioncompare-programmatically"></a>Programlı olarak ayarlama-OptionCompare  
   
-- Bkz: [Option Compare deyimi](../../../visual-basic/language-reference/statements/option-compare-statement.md).  
+- Bkz. [Option Compare deyimin](../../../visual-basic/language-reference/statements/option-compare-statement.md).  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod derlenir `ProjFile.vb` ve ikili dize karşılaştırmaları kullanır.  
+ Aşağıdaki kod `ProjFile.vb` derler ve ikili dize karşılaştırmaları kullanır.  
   
 ```console
 vbc -optioncompare:binary projFile.vb  

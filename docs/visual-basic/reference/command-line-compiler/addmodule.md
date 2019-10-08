@@ -6,19 +6,19 @@ helpviewer_keywords:
 - addmodule compiler option [Visual Basic]
 - -addmodule compiler option [Visual Basic]
 ms.assetid: fb4b89d4-4926-4f20-868d-427fa28497b2
-ms.openlocfilehash: 0e0915a2534f950cec074632a59750c3f96b679d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: fbe3634d1fbc03acd56ef7276d65fd54493b9806
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69962454"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72002422"
 ---
 # <a name="-addmodule"></a>-addmodule
 Derleyicinin, belirtilen dosya (lar) dan tüm tür bilgilerini şu anda derlediğiniz projede kullanılabilir hale getirmesine neden olur.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```console  
 -addmodule:fileList  
 ```  
   
@@ -27,16 +27,16 @@ Derleyicinin, belirtilen dosya (lar) dan tüm tür bilgilerini şu anda derledi�
  Gerekli. Meta veri içeren ancak derleme bildirimleri içermeyen dosyaların virgülle ayrılmış listesi. Boşluk içeren dosya adları tırnak işaretleri ("") içine alınmalıdır.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `fileList` Parametresi tarafından listelenen dosyaların `-target:module` seçeneğiyle oluşturulması veya `-target:module`başka bir derleyicinin eşdeğeri olması gerekir.  
+ @No__t-0 parametresiyle listelenen dosyalar `-target:module` seçeneği ile oluşturulmalıdır ya da başka bir derleyicinin `-target:module` ' ye denk gelmelidir.  
   
- İle `-addmodule` eklenen tüm modüller, çalışma zamanında çıkış dosyası ile aynı dizinde olmalıdır. Diğer bir deyişle, derleme zamanında herhangi bir dizinde bir modül belirtebilirsiniz, ancak modülün çalışma zamanında uygulama dizininde olması gerekir. Aksi takdirde bir <xref:System.TypeLoadException> hata alırsınız.  
+ @No__t-0 ile eklenen tüm modüller, çalışma zamanında çıkış dosyası ile aynı dizinde olmalıdır. Diğer bir deyişle, derleme zamanında herhangi bir dizinde bir modül belirtebilirsiniz, ancak modülün çalışma zamanında uygulama dizininde olması gerekir. Değilse, @no__t 0 hatası alırsınız.  
   
- `-target:module` İle `-addmodule` [](../../../visual-basic/reference/command-line-compiler/target.md) dışındaherhangibirhedefVisualBasic(örtükveyaaçık)herhangibirseçeneğibelirtirseniz,budosyaprojeninderlemesininbirparçasıhaline`-addmodule`gelir. Bir veya daha fazla dosya eklenmiş `-addmodule`bir çıkış dosyası çalıştırmak için bütünleştirilmiş kod gereklidir.  
+ @No__t-2 ile `-target:module` dışında herhangi bir[hedef Visual Basic (](../../../visual-basic/reference/command-line-compiler/target.md) örtük veya açık) seçeneğini belirtirseniz, `-addmodule` ' e geçirdiğiniz dosyalar projenin derlemesinin bir parçası haline gelir. @No__t-0 ile eklenen bir veya daha fazla dosya içeren bir çıkış dosyası çalıştırmak için bütünleştirilmiş kod gereklidir.  
   
  Bütünleştirilmiş kod içeren bir dosyadan meta verileri içeri aktarmak için [/Reference (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md) kullanın.  
   
 > [!NOTE]
-> Bu `-addmodule` seçenek, Visual Studio geliştirme ortamı içinden kullanılamaz; yalnızca komut satırından derlenirken kullanılabilir.  
+> @No__t-0 seçeneği, Visual Studio geliştirme ortamı içinden kullanılamaz; yalnızca komut satırından derlenirken kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki kod bir modül oluşturur.  
@@ -47,7 +47,7 @@ Derleyicinin, belirtilen dosya (lar) dan tüm tür bilgilerini şu anda derledi�
   
  [!code-vb[VbVbalrCompiler#48](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCompiler/VB/OptionStrictOff.vb#48)]  
   
- Çalıştırdığınızda `t1`, çıkış çıkışları `802`.  
+ @No__t-0 ' ı çalıştırdığınızda `802` çıkışı yapılır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

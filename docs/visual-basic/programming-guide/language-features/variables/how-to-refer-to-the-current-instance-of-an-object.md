@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: (Visual Basic) bir nesnenin geçerli örneğine başvurma'
+title: 'Nasıl yapılır: Bir Nesnenin Geçerli Örneğine Başvurma (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - variables [Visual Basic], object
@@ -8,28 +8,28 @@ helpviewer_keywords:
 - current instance
 - object variables [Visual Basic]
 ms.assetid: 7f9b2c77-03cd-428f-adc2-b18070226e7c
-ms.openlocfilehash: 70955cd55dfb91d4111e59ae58bfe409a4470433
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6c216dbc59bcad7a9f24bb01f856c3d29c288dbb
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64663538"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005659"
 ---
-# <a name="how-to-refer-to-the-current-instance-of-an-object-visual-basic"></a>Nasıl yapılır: (Visual Basic) bir nesnenin geçerli örneğine başvurma
-*Geçerli örneğin* nesnenin hangi kod şu anda Yürütülüyor örneğidir.  
+# <a name="how-to-refer-to-the-current-instance-of-an-object-visual-basic"></a>Nasıl yapılır: Bir Nesnenin Geçerli Örneğine Başvurma (Visual Basic)
+Bir nesnenin *geçerli örneği* , kodun Şu anda yürütüldüğü örneğidir.  
   
- Kullandığınız `Me` geçerli örneğine başvurma anahtar sözcüğü.  
+ Geçerli örneğe başvurmak için `Me` anahtar sözcüğünü kullanırsınız.  
   
-### <a name="to-refer-to-the-current-instance"></a>Geçerli örneğine başvurma  
+### <a name="to-refer-to-the-current-instance"></a>Geçerli örneğe başvurmak için  
   
-- Kullanma `Me` anahtar sözcüğü nerede normalde kullandığınız bir nesne değişkeninin adı.  
+- Normalde bir nesne değişkeninin adını kullanacağınız `Me` anahtar sözcüğünü kullanın.  
   
-    ```  
+    ```vb  
     Me.ForeColor = System.Drawing.Color.Crimson  
     Me.Close()  
     ```  
   
-     Olsa da `Me` davranacağını gibi bir nesne değişkeni, bildirmek veya herhangi bir şey atayın. `Me` her zaman geçerli örneğine başvurur.  
+     @No__t-0 bir nesne değişkeni gibi davransa da, bunu bildiremez veya buna hiçbir şey atayamazsınız. `Me` her zaman geçerli örneğe başvurur.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -1,24 +1,24 @@
 ---
-title: 'İzlenecek yol: Verileri Düzenleme (Visual Basic)'
+title: 'İzlenecek yol: verileri düzenleme (Visual Basic)'
 ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: 1f6a54f6-ec33-452a-a37d-48122207bf14
-ms.openlocfilehash: a74216c53c45790b974938c7155e0b5e1043ac13
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 7acce3f8483fab3c2978de7cbd1b9d875900f1d3
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70792293"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72003389"
 ---
-# <a name="walkthrough-manipulating-data-visual-basic"></a>İzlenecek yol: Verileri Düzenleme (Visual Basic)
-Bu izlenecek yol, bir veritabanındaki verileri eklemek, değiştirmek [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ve silmek için temel uçtan uca bir senaryo sağlar. Müşteri eklemek, bir müşterinin adını değiştirmek ve bir siparişi silmek için örnek Northwind veritabanının bir kopyasını kullanacaksınız.  
+# <a name="walkthrough-manipulating-data-visual-basic"></a>İzlenecek yol: verileri düzenleme (Visual Basic)
+Bu izlenecek yol, bir veritabanındaki verileri eklemek, değiştirmek ve silmek için temel bir uçtan uca [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] senaryosu sağlar. Müşteri eklemek, bir müşterinin adını değiştirmek ve bir siparişi silmek için örnek Northwind veritabanının bir kopyasını kullanacaksınız.  
   
  [!INCLUDE[note_settings_general](../../../../../../includes/note-settings-general-md.md)]  
   
  Bu izlenecek yol Visual Basic geliştirme ayarları kullanılarak yazılmıştır.  
   
-## <a name="prerequisites"></a>Önkoşullar  
+## <a name="prerequisites"></a>Prerequisites  
  Bu izlenecek yol aşağıdakileri gerektirir:  
   
 - Bu izlenecek yol, dosyaları tutmak için adanmış bir klasör ("c:\linqtest2") kullanır. Yönergeye başlamadan önce bu klasörü oluşturun.  
@@ -31,14 +31,14 @@ Bu izlenecek yol, bir veritabanındaki verileri eklemek, değiştirmek [!INCLUDE
   
      Bu dosyayı Nesne İlişkisel Tasarımcısı ya da SQLMetal aracını kullanarak oluşturabilirsiniz. Bu izlenecek yol, aşağıdaki komut satırı ile SQLMetal Aracı kullanılarak yazılmıştır:  
   
-     **sqlmetal /code:"c:\linqtest2\northwind.vb" /language:vb "C:\linqtest2\northwnd.mdf" /pluralize**  
+     **SqlMetal/Code: "c:\linqtest2\northwind.exe"/Language: vb "C:\linqtest2\kuzeydoğu WND.exe"/plurleştir**  
   
      Daha fazla bilgi için bkz. [SqlMetal. exe (kod üretme aracı)](../../../../tools/sqlmetal-exe-code-generation-tool.md).  
   
-## <a name="overview"></a>Genel Bakış  
+## <a name="overview"></a>Genel bakış  
  Bu izlenecek yol altı ana görevden oluşur:  
   
-- Visual Studio 'da çözüm oluşturma. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]  
+- Visual Studio 'da [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] çözümü oluşturuluyor.  
   
 - Veritabanı kod dosyası projeye ekleniyor.  
   
@@ -51,7 +51,7 @@ Bu izlenecek yol, bir veritabanındaki verileri eklemek, değiştirmek [!INCLUDE
 - Bu değişiklikler Northwind veritabanına gönderiliyor.  
   
 ## <a name="creating-a-linq-to-sql-solution"></a>LINQ to SQL çözümü oluşturma  
- Bu ilk görevde, bir [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] proje derlemek ve çalıştırmak için gerekli başvuruları içeren bir Visual Studio çözümü oluşturursunuz.  
+ Bu ilk görevde, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] projesi derlemek ve çalıştırmak için gerekli başvuruları içeren bir Visual Studio çözümü oluşturursunuz.  
   
 #### <a name="to-create-a-linq-to-sql-solution"></a>LINQ to SQL çözümü oluşturmak için  
   
@@ -63,10 +63,10 @@ Bu izlenecek yol, bir veritabanındaki verileri eklemek, değiştirmek [!INCLUDE
   
 4. **Ad** kutusuna **Linqdatalationtionapp**yazın.  
   
-5. **Tamam**'ı tıklatın.  
+5. **Tamam**'a tıklayın.  
   
 ## <a name="adding-linq-references-and-directives"></a>LINQ başvuruları ve yönergeleri ekleme  
- Bu izlenecek yol, projenize varsayılan olarak yüklenmemiş olabilecek derlemeleri kullanır. Projenizde bir başvuru olarak listelenmiyorsa (Çözüm Gezgini **tüm dosyaları göster** ' e tıklayın ve **Başvurular** düğümünü genişletin), aşağıdaki adımlarda açıklandığı gibi ekleyin. `System.Data.Linq`  
+ Bu izlenecek yol, projenize varsayılan olarak yüklenmemiş olabilecek derlemeleri kullanır. @No__t-0, projenizde bir başvuru olarak listelenmiyorsa ( **Çözüm Gezgini** **tüm dosyaları göster** ' e tıklayın ve **Başvurular** düğümünü genişletin), aşağıdaki adımlarda açıklandığı gibi ekleyin.  
   
 #### <a name="to-add-systemdatalinq"></a>System. Data. LINQ eklemek için  
   
@@ -96,7 +96,7 @@ Bu izlenecek yol, bir veritabanındaki verileri eklemek, değiştirmek [!INCLUDE
   
 #### <a name="to-set-up-and-test-the-database-connection"></a>Veritabanı bağlantısını ayarlama ve test etme  
   
-1. Aşağıdaki kodu yazın veya içine `Sub Main`yapıştırın:  
+1. Aşağıdaki kodu @no__t yazın veya yapıştırın-0:  
   
      [!code-vb[DLinqWalk3VB#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk3VB/vb/Module1.vb#2)]  
   
@@ -107,13 +107,13 @@ Bu izlenecek yol, bir veritabanındaki verileri eklemek, değiştirmek [!INCLUDE
      **Konsol** penceresinde ENTER tuşuna basarak veya Visual Studio **hata ayıklama** menüsünde **hata ayıklamayı Durdur** ' u tıklatarak uygulamayı kapatın.  
   
 ## <a name="creating-a-new-entity"></a>Yeni varlık oluşturma  
- Yeni varlık oluşturma basittir. Anahtar`New` sözcüğünü kullanarak nesneler ( `Customer`gibi) oluşturabilirsiniz.  
+ Yeni varlık oluşturma basittir. @No__t-1 anahtar sözcüğünü kullanarak nesneleri (`Customer`) oluşturabilirsiniz.  
   
- Bu ve aşağıdaki bölümlerde yalnızca yerel önbellekte değişiklik yapmakta olursunuz. Bu izlenecek yolun sonuna doğru çağrı <xref:System.Data.Linq.DataContext.SubmitChanges%2A> yapana kadar veritabanına hiçbir değişiklik gönderilmez.  
+ Bu ve aşağıdaki bölümlerde yalnızca yerel önbellekte değişiklik yapmakta olursunuz. Bu izlenecek yolun sonuna doğru <xref:System.Data.Linq.DataContext.SubmitChanges%2A> çağrısı yapılıncaya kadar veritabanına hiçbir değişiklik gönderilmez.  
   
 #### <a name="to-add-a-new-customer-entity-object"></a>Yeni bir müşteri varlık nesnesi eklemek için  
   
-1. ' `Customer` `Console.ReadLine` Den önce aşağıdaki kodu ekleyerek yeni bir oluşturun: `Sub Main`  
+1. @No__t-2 ' de `Console.ReadLine` ' den önce aşağıdaki kodu ekleyerek yeni bir @no__t oluştur-0:  
   
      [!code-vb[DLinqWalk3VB#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk3VB/vb/Module1.vb#3)]  
   
@@ -132,11 +132,11 @@ Bu izlenecek yol, bir veritabanındaki verileri eklemek, değiştirmek [!INCLUDE
 3. Hata ayıklamayı durdurmak için **konsol** penceresinde ENTER tuşuna basın.  
   
 ## <a name="updating-an-entity"></a>Bir varlığı güncelleştirme  
- Aşağıdaki adımlarda, bir `Customer` nesnesi alacak ve özelliklerinden birini değiştirecaksınız.  
+ Aşağıdaki adımlarda `Customer` nesnesi alacak ve özelliklerinden birini değiştirecaksınız.  
   
 #### <a name="to-change-the-name-of-a-customer"></a>Müşterinin adını değiştirmek için  
   
-- Aşağıdaki kodu yukarıya `Console.ReadLine()`ekleyin:  
+- Aşağıdaki kodu ekleyin `Console.ReadLine()`:  
   
      [!code-vb[DLinqWalk3VB#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk3VB/vb/Module1.vb#4)]  
   
@@ -147,7 +147,7 @@ Bu izlenecek yol, bir veritabanındaki verileri eklemek, değiştirmek [!INCLUDE
   
 #### <a name="to-delete-a-row"></a>Bir satırı silmek için  
   
-- Aşağıdaki kodu hemen yukarıya `Console.ReadLine()`ekleyin:  
+- Aşağıdaki kodu hemen yukarıya ekleyin `Console.ReadLine()`:  
   
      [!code-vb[DLinqWalk3VB#5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk3VB/vb/Module1.vb#5)]  
   
@@ -156,11 +156,11 @@ Bu izlenecek yol, bir veritabanındaki verileri eklemek, değiştirmek [!INCLUDE
   
 #### <a name="to-submit-changes-to-the-database"></a>Değişiklikleri veritabanına göndermek için  
   
-1. Aşağıdaki kodu hemen yukarıya `Console.ReadLine`ekleyin:  
+1. Aşağıdaki kodu hemen yukarıya ekleyin `Console.ReadLine`:  
   
      [!code-vb[DLinqWalk3VB#6](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk3VB/vb/Module1.vb#6)]  
   
-2. Değişiklikleri gönderme etkilerine ilişkin önceki ve `SubmitChanges`sonraki etkileri göstermek için aşağıdaki kodu (sonra) ekleyin:  
+2. Değişiklikleri gönderme etkilerine ilişkin önceki ve sonraki etkileri göstermek için aşağıdaki kodu ekleyin (`SubmitChanges` ' dan sonra):  
   
      [!code-vb[DLinqWalk3VB#7](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk3VB/vb/Module1.vb#7)]  
   
@@ -168,7 +168,7 @@ Bu izlenecek yol, bir veritabanındaki verileri eklemek, değiştirmek [!INCLUDE
   
      Konsol penceresi şu şekilde görünür:  
   
-    ```  
+    ```console
     Customers matching CA before update:  
     Customer ID: CACTU  
     Customer ID: RICAR  

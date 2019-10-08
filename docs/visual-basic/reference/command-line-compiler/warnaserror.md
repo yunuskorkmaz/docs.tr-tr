@@ -6,19 +6,19 @@ helpviewer_keywords:
 - /warnaserror compiler option [Visual Basic]
 - -warnaserror compiler option [Visual Basic]
 ms.assetid: 49819f1d-a1bd-4201-affe-5afe6d9712e1
-ms.openlocfilehash: 4382ec8feda2df1e83fd2fdc509abb66984e501f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8af6d3ef4efecd53dcf38c33d0aa2cf182f07d30
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69937246"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72004653"
 ---
 # <a name="-warnaserror-visual-basic"></a>-warnaserror (Visual Basic)
 Derleyicinin bir uyarının ilk oluşumunu hata olarak ele almasına neden olur.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```console  
 -warnaserror[+ | -][:numberList]  
 ```  
   
@@ -26,36 +26,36 @@ Derleyicinin bir uyarının ilk oluşumunu hata olarak ele almasına neden olur.
   
 |Terim|Tanım|  
 |---|---|  
-|+ &#124; -|İsteğe bağlı. Varsayılan olarak etkin `-warnaserror-` olur; uyarılar derleyicinin bir çıkış dosyası üretmasını engellemez. `-warnaserror` İle`-warnaserror+`aynı olan seçeneği, uyarıların hata olarak işlenmesine neden olur.|  
-|`numberList`|İsteğe bağlı. `-warnaserror` Seçeneğin uygulandığı uyarı kimliği numaralarının virgülle ayrılmış listesi. Hiçbir uyarı kimliği belirtilmemişse, `-warnaserror` Bu seçenek tüm uyarılar için geçerlidir.|  
+|+ &#124; -|İsteğe bağlı. Varsayılan olarak, `-warnaserror-` geçerli olur; Uyarılar derleyicinin bir çıkış dosyası üretmasını engellemez. @No__t-1 ile aynı olan `-warnaserror` seçeneği, uyarıların hata olarak işlenmesine neden olur.|  
+|`numberList`|İsteğe bağlı. @No__t-0 seçeneğinin uygulandığı uyarı KIMLIĞI numaralarının virgülle ayrılmış listesi. Hiçbir uyarı KIMLIĞI belirtilmemişse, `-warnaserror` seçeneği tüm uyarılar için geçerlidir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `-warnaserror` Seçeneği tüm uyarıları hata olarak değerlendirir. Normalde uyarı olarak bildirilen tüm iletiler, bunun yerine hata olarak bildirilir. Derleyici aynı uyarının sonraki tekrarlamalarını uyarılarla bildirir.  
+ @No__t-0 seçeneği tüm uyarıları hata olarak değerlendirir. Normalde uyarı olarak bildirilen tüm iletiler, bunun yerine hata olarak bildirilir. Derleyici aynı uyarının sonraki tekrarlamalarını uyarılarla bildirir.  
   
- Varsayılan olarak, `-warnaserror-` uyarıların yalnızca bilgilendirici olmasına neden olan, etkin olur. `-warnaserror` İle`-warnaserror+`aynı olan seçeneği, uyarıların hata olarak işlenmesine neden olur.  
+ Varsayılan olarak, `-warnaserror-` geçerli olur ve bu da uyarıların bilgilendirici olmasına neden olur. @No__t-1 ile aynı olan `-warnaserror` seçeneği, uyarıların hata olarak işlenmesine neden olur.  
   
  Yalnızca birkaç özel uyarının hata olarak değerlendirilmesini istiyorsanız, hata olarak değerlendirilecek uyarı numaralarının virgülle ayrılmış bir listesini belirtebilirsiniz.  
   
 > [!NOTE]
-> Bu `-warnaserror` seçenek uyarıların nasıl görüntülendiğini denetlemez. Uyarıları devre dışı bırakmak için [-nowarn](../../../visual-basic/reference/command-line-compiler/nowarn.md) seçeneğini kullanın.  
+> @No__t-0 seçeneği, uyarıların nasıl görüntülendiğini denetlemez. Uyarıları devre dışı bırakmak için [-nowarn](../../../visual-basic/reference/command-line-compiler/nowarn.md) seçeneğini kullanın.  
   
 |Visual Studio IDE 'de tüm uyarıları hata olarak değerlendirmek için-warnaserror öğesini ayarlamak için|  
 |---|  
-|1.  **Çözüm Gezgini**' de bir proje seçili olmalıdır. **Proje** menüsünde **Özellikler**' e tıklayın. <br />2.  **Derle** sekmesine tıklayın.<br />3.  **Tüm uyarıları devre dışı bırak** onay kutusunun işaretinin kaldırıldığından emin olun.<br />4.  **Tüm uyarıları hata olarak değerlendir** onay kutusunu işaretleyin.|  
+|1. **Çözüm Gezgini**bir proje seçili olmalıdır. **Proje** menüsünde **Özellikler**' e tıklayın. <br />2. **Derle** sekmesine tıklayın.<br />3. **tüm uyarıları devre dışı bırak** onay kutusunun işaretinin kaldırıldığından emin olun.<br />4. **tüm uyarıları hata olarak işle** onay kutusunu işaretleyin.|  
   
 |Visual Studio IDE 'de belirli uyarıları hata olarak değerlendirmek için-warnaserror 'yi ayarlamak için|  
 |---|  
-|1.  **Çözüm Gezgini**' de bir proje seçili olmalıdır. **Proje** menüsünde **Özellikler**' e tıklayın.<br />2.  **Derle** sekmesine tıklayın.<br />3.  **Tüm uyarıları devre dışı bırak** onay kutusunun işaretinin kaldırıldığından emin olun.<br />4.  **Tüm uyarıları hata olarak işle** onay kutusunun işaretinin kaldırıldığından emin olun.<br />5.  Hata olarak değerlendirilmesi gereken uyarıya bitişik **bildirim** sütunundan **hata** seçin.|  
+|1. **Çözüm Gezgini**bir proje seçili olmalıdır. **Proje** menüsünde **Özellikler**' e tıklayın.<br />2. **Derle** sekmesine tıklayın.<br />3. **tüm uyarıları devre dışı bırak** onay kutusunun işaretinin kaldırıldığından emin olun.<br />4. **tüm uyarıları hata olarak işle** onay kutusunun işaretinin kaldırıldığından emin olun.<br />5. hata olarak değerlendirilmesi gereken uyarıya bitişik **bildirim** sütunundan **hata** seçin.|  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod, derleyicisini derler `In.vb` ve bulduğu her uyarının ilk oluşumu için bir hata görüntüleyecek şekilde yönlendirir.  
+ Aşağıdaki kod `In.vb` derler ve derleyicinin bulduğu her uyarının ilk oluşumu için bir hata görüntülemesi için yönlendirir.  
   
 ```console
 vbc -warnaserror in.vb  
 ```  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod, bir `T2.vb` hata olarak yalnızca kullanılmayan yerel değişkenler (42024) için uyarıyı derler ve değerlendirir.  
+ Aşağıdaki kod `T2.vb` derler ve yalnızca kullanılmayan yerel değişkenler (42024) için uyarıyı hata olarak değerlendirir.  
   
 ```console
 vbc -warnaserror:42024 t2.vb  

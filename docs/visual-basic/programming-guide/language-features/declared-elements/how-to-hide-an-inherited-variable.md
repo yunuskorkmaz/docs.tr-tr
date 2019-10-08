@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: (Visual Basic) devralınmış değişkeni gizleme'
+title: 'Nasıl yapılır: Devralınmış Değişkeni Gizleme (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - qualification [Visual Basic], of element names
@@ -11,57 +11,58 @@ helpviewer_keywords:
 - declared elements [Visual Basic], about declared elements
 - variables [Visual Basic], hiding inherited
 ms.assetid: 765728d9-7351-4a30-999d-b5f34f024412
-ms.openlocfilehash: ee147ecd00b88b538ace32844c42ac9c5022b2ef
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f575830df44076f694c1dfb2f68379594240fb80
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61794699"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72004851"
 ---
-# <a name="how-to-hide-an-inherited-variable-visual-basic"></a>Nasıl yapılır: (Visual Basic) devralınmış değişkeni gizleme
-Türetilmiş bir sınıf kendi temel sınıfının tüm tanımları devralır. Bir öğe temel sınıf aynı adı kullanarak bir değişkeni tanımlamak istiyorsanız, gizleyebilirsiniz, veya *gölge*, türetilen sınıfta Değişkeninizi tanımladığınızda, temel sınıf öğesi. Bunu yaparsanız, türetilmiş sınıftaki kod açıkça gölgeleme mekanizması atlar sürece Değişkeninizi erişir.  
+# <a name="how-to-hide-an-inherited-variable-visual-basic"></a>Nasıl yapılır: Devralınmış Değişkeni Gizleme (Visual Basic)
+
+Türetilmiş bir sınıf, temel sınıfının tüm tanımlarını devralır. Temel sınıfın bir öğesiyle aynı adı kullanarak bir değişken tanımlamak istiyorsanız, türetilmiş sınıfta değişkeninizi tanımlarken bu temel sınıf öğesini gizleyebilir veya *gölgelendirebilir*. Bunu yaparsanız, bu türetilmiş sınıftaki kod, gölgeleme mekanizmasını açıkça atladıkça değişkeninizin erişimine erişir.
+
+Devralınan bir değişkeni gizlemek isteyebileceğiniz diğer bir neden de temel sınıf düzeltmesine karşı koruma sağlar. Temel sınıf, devraldığınız öğeyi değiştiren bir değişikliği olumsuz etkileyebilir. Bu durumda, `Shadows` değiştiricisi türetilmiş sınıftan başvuruları, temel sınıf öğesi yerine, değişkeninizden çözümlenecek şekilde zorlar.
+
+## <a name="to-hide-an-inherited-variable"></a>Devralınan bir değişkeni gizlemek için
+
+1. Gizlemek istediğiniz değişkenin sınıf düzeyinde (herhangi bir yordam dışında) bildirilmesine dikkat edin. Aksi takdirde, bunu gizlemeniz gerekmez.
   
- Devralınmış değişkeni gizleme isteyebileceğiniz diğer bir neden, temel sınıf düzeltme karşı korunmasını sağlamaktır. Temel sınıf devralma öğe değiştiren bir değişiklik uygulanabilir. Böyle bir durumda `Shadows` değiştiricisi değişkeninize, temel sınıf öğenin yerine çözülmesi türetilmiş sınıf başvurularından zorlar.  
+2. Türetilmiş sınıfınız içinde, değişkeninizi bildiren bir [Dim ekstresi](../../../language-reference/statements/dim-statement.md) yazın. Devralınan değişkenle aynı adı kullanın.
+
+3. Bildirime [gölgeler](../../../language-reference/modifiers/shadows.md) anahtar sözcüğünü ekleyin.
+
+     Türetilmiş sınıftaki kod, değişken adına başvurduğunda, derleyici değişkeninizin başvurusunu çözer.
+
+     Aşağıdaki örnek, devralınan bir değişkenin gölgelendirdiğini gösterir:
   
-### <a name="to-hide-an-inherited-variable"></a>Devralınmış değişkeni gizleme  
-  
-1. Gizlemek istediğiniz değişken sınıf düzeyinde (dışında herhangi bir yordam) bildirildiğinden emin olun. Aksi takdirde gizlemek gerekmez.  
-  
-2. Türetilmiş sınıf içinde yazma bir [Dim deyimi](../../../../visual-basic/language-reference/statements/dim-statement.md) , değişken bildirme. Aynı ada, devralınmış değişkeni kullanın.  
-  
-3. Dahil [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md) bildirimindeki anahtar sözcüğü.  
-  
-     Türetilmiş sınıftaki kod değişken adıdır, derleyici Değişkeninizi başvuruyu çözümler.  
-  
-     Aşağıdaki örnek, devralınan bir değişken gölgeleme gösterir.  
-  
-    ```  
-    Public Class shadowBaseClass  
+    ```vb  
+    Public Class ShadowBaseClass  
         Public shadowString As String = "This is the base class string."  
     End Class  
-    Public Class shadowDerivedClass  
-        Inherits shadowBaseClass  
+    Public Class ShadowDerivedClass  
+        Inherits ShadowBaseClass  
         Public Shadows shadowString As String = "This is the derived class string."  
-        Public Sub showStrings()  
-            Dim s As String = "Unqualified shadowString: " & shadowString &  
-                vbCrLf & "MyBase.shadowString: " & MyBase.shadowString  
+        Public Sub ShowStrings()  
+            Dim s As String = $"Unqualified shadowString: {shadowString}{vbCrLf}MyBase.shadowString: {MyBase.shadowString}"
             MsgBox(s)  
         End Sub  
     End Class  
     ```  
   
-     Yukarıdaki örnekte değişkeni bildirir `shadowString` temel sınıf ve türetilen sınıfta gölgeliyor. Yordamı `showStrings` türetilmiş bir sınıf içindeki dize gölgeleme sürümünü görüntüler, ad `shadowString` yetkili değil. Ardından gölgeli sürüm görüntüler, `shadowString` ile tam olduğundan `MyBase` anahtar sözcüğü.  
+     Yukarıdaki örnek, temel sınıfta `shadowString` değişkenini bildirir ve türetilmiş sınıfta gölgeleri. Türetilmiş sınıftaki `ShowStrings` yordamı, `shadowString` adı nitelenmediği zaman, dizenin gölgeleme sürümünü görüntüler. Daha sonra, `shadowString` `MyBase` anahtar sözcüğüyle uygun olduğunda gölgeli sürümü görüntüler.  
   
-## <a name="robust-programming"></a>Güçlü Programlama  
- Gölgeleme, bir değişken aynı ada sahip birden fazla sürümünü tanıtır. Kod açıklaması değişken adıdır, derleyici başvurusu açığını giderir sürüm kod açıklaması konumunu ve uygun bir dize varlığını gibi faktörlere bağlıdır. Bu gölgeli bir değişkenin istenmeyen bir sürüme başvuran riskini artırabilir. Bu riski tam olarak gölgeli bir değişken tüm başvurularını uygun tarafından düşürebilirsiniz.  
-  
+## <a name="robust-programming"></a>Güçlü programlama
+
+Gölgeleme aynı ada sahip bir değişkenin birden fazla sürümünü tanıtır. Bir kod açıklaması değişken adına başvurduğunda, derleyicinin başvuruyu çözümleyen sürüm, kod ifadesinin konumu ve uygun bir dizenin varlığı gibi faktörlere bağlıdır. Bu, gölgelendirilmiş bir değişkenin istenmeyen bir sürümüne başvurma riskini artırabilir. Gölgelendirilmiş bir değişkene tüm başvuruları tam olarak niteleyerek bu riski düşürebilirsiniz.
+
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Bildirilmiş Öğelere Başvurular](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
-- [Visual Basic'de gölgeleme](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
-- [Gölgeleme ve Geçersiz Kılma Arasındaki Farklar](../../../../visual-basic/programming-guide/language-features/declared-elements/differences-between-shadowing-and-overriding.md)
-- [Nasıl yapılır: Değişkeninizle aynı ada sahip bir değişkeni gizleme](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-a-variable-with-the-same-name-as-your-variable.md)
-- [Nasıl yapılır: Türetilmiş sınıf tarafından gizlenen bir değişkene erişme](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-access-a-variable-hidden-by-a-derived-class.md)
+- [Bildirilmiş Öğelere Başvurular](references-to-declared-elements.md)
+- [Visual Basic gölgeleme](shadowing.md)
+- [Gölgeleme ve Geçersiz Kılma Arasındaki Farklar](differences-between-shadowing-and-overriding.md)
+- [Nasıl yapılır: Değişkeninizle Aynı Adı Taşıyan Bir Değişkeni Gizleme](how-to-hide-a-variable-with-the-same-name-as-your-variable.md)
+- [Nasıl yapılır: Türetilmiş Sınıf Tarafından Gizlenen Bir Değişkene Erişme](how-to-access-a-variable-hidden-by-a-derived-class.md)
 - [Overrides](../../../../visual-basic/language-reference/modifiers/overrides.md)
-- [Me, My, MyBase ve MyClass](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)
-- [Devralma Temelleri](../../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)
+- [Me, My, MyBase ve MyClass](../../program-structure/me-my-mybase-and-myclass.md)
+- [Devralma Temelleri](../objects-and-classes/inheritance-basics.md)

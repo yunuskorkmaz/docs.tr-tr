@@ -8,19 +8,19 @@ helpviewer_keywords:
 - /optioninfer compiler option [Visual Basic]
 - optioninfer compiler option [Visual Basic]
 ms.assetid: f6c09db1-0553-464a-abe3-d4510c61d6ed
-ms.openlocfilehash: 4848dec148bc528e7a30940643e3364f1bb5f805
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c6fc7e9dcfbce938ad75b0f357c2bfa9cd10703a
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69939198"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005315"
 ---
 # <a name="-optioninfer"></a>-optioninfer
 Değişken bildirimlerinde yerel tür çıkarımı kullanımını mümkün.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```console  
 -optioninfer[+ | -]  
 ```  
   
@@ -28,10 +28,10 @@ Değişken bildirimlerinde yerel tür çıkarımı kullanımını mümkün.
   
 |Terim|Tanım|  
 |---|---|  
-|`+` &#124; `-`|İsteğe bağlı. Yerel `-optioninfer+` tür çıkarımını etkinleştirmek veya `-optioninfer-` engellemek için belirtin. Belirtilen değer olmadan `-optioninfer+`seçeneği, ile aynıdır. `-optioninfer` `-optioninfer` Anahtar mevcut olmadığında varsayılan değer de `-optioninfer+`vardır. Varsayılan değer Vbc. rsp yanıt dosyasında ayarlanır.|  
+|`+` &#124; `-`|İsteğe bağlı. Yerel tür çıkarımını etkinleştirmek için `-optioninfer+` belirtin veya bunu engellemek için-1 @no__t. Değer belirtilmemiş `-optioninfer` seçeneği, `-optioninfer+` ile aynıdır. @No__t-0 anahtarı mevcut olmadığında varsayılan değer de `-optioninfer+` ' dir. Varsayılan değer Vbc. rsp yanıt dosyasında ayarlanır.|  
   
 > [!NOTE]
-> Söz konusu seçeneği, `-noconfig` Vbc. rsp ' de belirtilenler yerine derleyicinin iç varsayılan değerlerini koruma için kullanabilirsiniz. Bu seçenek için varsayılan derleyicidir `-optioninfer-`.  
+> @No__t-0 seçeneğini kullanarak derleyicinin iç varsayılan değerlerini, vbc. rsp ' de belirtilenler yerine koruyabilirsiniz. Bu seçenek için varsayılan derleyici `-optioninfer-` ' dır.  
   
 ## <a name="remarks"></a>Açıklamalar  
  Kaynak kodu dosyası bir [seçenek çıkarımı bildirisi](../../../visual-basic/language-reference/statements/option-infer-statement.md)içeriyorsa, ifade `-optioninfer` komut satırı derleyici ayarını geçersiz kılar.  
@@ -43,7 +43,7 @@ Değişken bildirimlerinde yerel tür çıkarımı kullanımını mümkün.
 2. **Derle** sekmesinde, **seçenek çıkarımı** kutusunda değeri değiştirin.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod, yerel `test.vb` tür çıkarımı etkin ile derlenir.  
+ Aşağıdaki kod, `test.vb` ' i yerel tür çıkarımı etkin ile derler.  
   
 ```console
 vbc -optioninfer+ test.vb  

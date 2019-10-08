@@ -17,70 +17,70 @@ helpviewer_keywords:
 - local variables [Visual Basic], declarations
 - scope [Visual Basic], variables
 ms.assetid: d8f10226-92b1-480f-9f53-df377b2d7e15
-ms.openlocfilehash: 4706f306e8db252b35148f8e6a0f8c42122f5482
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 726347efc2e12100f7d89348a316037babc785e5
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583382"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72003305"
 ---
 # <a name="variable-declaration-in-visual-basic"></a>Visual Basic'de Değişken Bildirimi
-Adı ve Özellikler belirtmek için bir değişken bildirir. Değişkenler için bildirimi deyim [Dim deyimi](../../../../visual-basic/language-reference/statements/dim-statement.md). Konumuna ve içeriği değişkenin özelliklerini belirler.  
+Adını ve özelliklerini belirtmek için bir değişken bildirirsiniz. Değişkenler için bildirim bildirimi, [Dim deyimidir](../../../../visual-basic/language-reference/statements/dim-statement.md). Konumu ve içeriği, değişkenin özelliklerini tespit.  
   
- Değişken adlandırma kuralları ve hususlar için bu konudaki [bildirilen öğe adları](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
+ Değişken adlandırma kuralları ve konuları için bkz. [bildirilmemiş öğe adları](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
   
 ## <a name="declaration-levels"></a>Bildirim düzeyleri  
   
 ### <a name="local-and-member-variables"></a>Yerel ve üye değişkenleri  
- A *yerel değişken* bir yordam içinde bildirilen biridir. A *üye değişkeni* üyesi olan bir Visual Basic türü; bir sınıf, yapı veya modül içine, ancak bu sınıf, yapı veya modül iç herhangi bir yordam içinde değil Modül düzeyinde bildirilmiş.  
+ *Yerel değişken* , bir yordam içinde belirtilen biridir. *Üye değişkeni* , Visual Basic türünün bir üyesidir; modül düzeyinde, bir sınıf, yapı veya modül içinde, ancak bu sınıf, yapı veya modülle iç yordam içinde değil, modül düzeyinde bildirilmiştir.  
   
 ### <a name="shared-and-instance-variables"></a>Paylaşılan ve örnek değişkenleri  
- Bir sınıf veya yapı olup olmadığına paylaşıldığından üzerinde bir üye değişkeni kategorisine bağlıdır. İle bildirilirse [paylaşılan](../../../../visual-basic/language-reference/modifiers/shared.md) olduğu anahtar sözcüğü, bir *paylaşılan değişken*, ve sınıf veya yapının tüm örnekleri arasında paylaşılan tek bir kopyası bulunmaktadır.  
+ Bir sınıf veya yapıda, bir üye değişkeninin kategorisi paylaşılıp paylaşıldığına bağlıdır. [Paylaşılan](../../../../visual-basic/language-reference/modifiers/shared.md) anahtar sözcüğü ile bildirilirse, *paylaşılan bir değişkendir*ve sınıf veya yapının tüm örnekleri arasında paylaşılan tek bir kopyada bulunur.  
   
- Aksi durumda olduğu bir *örnek değişkeni*, ve her sınıfın veya yapının örneği için ayrı bir kopyası oluşturulur. Belirli bir kopyasını bir örnek değişkeni, sınıfın veya yapının içinde oluşturulduğu örneği kullanılabilir. Herhangi bir örneğine sınıfın veya yapının örneği değişkeninde bir kopyasını bağımsızdır.  
+ Aksi takdirde, bir *örnek değişkenidir*ve sınıfın ya da yapının her örneği için ayrı bir kopyası oluşturulur. Örnek değişkeninin belirli bir kopyası yalnızca oluşturulduğu sınıf veya yapının örneği için kullanılabilir. Sınıf veya yapının diğer örneğindeki örnek değişkeninin bir kopyasından bağımsızdır.  
   
-## <a name="declaring-data-type"></a>Verisi türünü bildirme  
- [Olarak](../../../../visual-basic/language-reference/statements/as-clause.md) yan tümcesi bildirim deyiminde veri türü veya nesne türü bildirme değişkenin tanımlamanıza izin verir. Bir değişken için aşağıdaki türlerinden herhangi birini belirtebilirsiniz:  
+## <a name="declaring-data-type"></a>Veri türü bildirme  
+ Bildirim deyimindeki [as](../../../../visual-basic/language-reference/statements/as-clause.md) yan tümcesi, bildirdiğiniz değişkenin veri türünü veya nesne türünü tanımlamanızı sağlar. Bir değişken için aşağıdaki türlerden herhangi birini belirtebilirsiniz:  
   
-- Basit bir veri türü, gibi `Boolean`, `Long`, veya `Decimal`  
+- @No__t-0, `Long` veya `Decimal` gibi bir Öğesel veri türü  
   
-- Bir dizi ya da yapı gibi bir bileşik veri türü  
+- Dizi veya yapı gibi bir bileşik veri türü  
   
-- Bir nesne türü veya uygulamanızdaki veya başka bir uygulamada tanımlanmış sınıf  
+- Uygulamanızda ya da başka bir uygulamada tanımlanan bir nesne türü veya sınıf  
   
-- Gibi bir .NET Framework sınıf <xref:System.Windows.Forms.Label> veya <xref:System.Windows.Forms.TextBox>  
+- @No__t-0 veya <xref:System.Windows.Forms.TextBox> gibi bir .NET Framework sınıfı  
   
-- Bir arabirim türü, gibi <xref:System.IComparable> veya <xref:System.IDisposable>  
+- @No__t-0 veya <xref:System.IDisposable> gibi bir arabirim türü  
   
- Veri türü yinelemek zorunda kalmadan birkaç bir ifade değişkenleri bildirebilirsiniz. Değişkenleri aşağıdaki deyimlerinde `i`, `j`, ve `k` türü olarak bildirilmiş `Integer`, `l` ve `m` olarak `Long`, ve `x` ve `y` olarak`Single`:  
+ Veri türünü yinelemek zorunda kalmadan, tek bir bildirimde birkaç değişken bildirebilirsiniz. Aşağıdaki deyimlerde `i`, `j` ve `k` değişkenleri `Integer`, `l` ve `m` olarak `Long` ve `x` ve `y` `Single` olarak bildirilmiştir:  
   
-```  
+```vb  
 Dim i, j, k As Integer  
 ' All three variables in the preceding statement are declared as Integer.  
 Dim l, m As Long, x, y As Single  
 ' In the preceding statement, l and m are Long, x and y are Single.  
 ```  
   
- Veri türleri hakkında daha fazla bilgi için bkz. [veri türleri](../../../../visual-basic/programming-guide/language-features/data-types/index.md). Nesneleri hakkında daha fazla bilgi için bkz. [nesneler ve sınıflar](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md) ve [bileşenler ile programlama](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/0ffkdtkf(v=vs.120)).  
+ Veri türleri hakkında daha fazla bilgi için bkz. [veri türleri](../../../../visual-basic/programming-guide/language-features/data-types/index.md). Nesneler hakkında daha fazla bilgi için bkz. [nesneler ve sınıflar](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md) ve [bileşenlerle programlama](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/0ffkdtkf(v=vs.120)).  
   
 ## <a name="local-type-inference"></a>Yerel Tür Arabirimi  
- *Anlam çıkarma* olmadan bildirilen yerel değişkenlerin veri türlerini belirlemek için kullanılan bir `As` yan tümcesi. Derleyici, başlatma ifadesinin türünden değişkeninin türü çıkarır. Bu, açıkça bir türü bildirmeden değişkenler bildirmek sağlar. Aşağıdaki örnekte, her ikisi de `num1` ve `num2` tamsayı olarak kesin olarak belirlenmiştir.  
+ *Tür çıkarımı* , `As` tümcesi olmadan belirtilen yerel değişkenlerin veri türlerini belirlemekte kullanılır. Derleyici, değişkenin türünü başlatma ifadesinin türünden algılar. Bu, açıkça bir tür belirtmeden değişkenleri bildirmenize olanak sağlar. Aşağıdaki örnekte, hem `num1` hem de `num2` türü kesin olarak tam sayı olarak türdedir.  
   
  [!code-vb[VbVbalrTypeInference#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrTypeInference/VB/Class1.vb#1)]  
   
- Yerel tür çıkarımı kullanmak istiyorsanız `Option Infer` ayarlanmalıdır `On`. Daha fazla bilgi için [yerel tür çıkarımı](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md) ve [Option Infer deyimi](../../../../visual-basic/language-reference/statements/option-infer-statement.md).  
+ Yerel tür çıkarımı kullanmak istiyorsanız, `Option Infer` ' ı `On` olarak ayarlamanız gerekir. Daha fazla bilgi için bkz. [Yerel tür çıkarımı](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md) ve [Option Infer deyimleri](../../../../visual-basic/language-reference/statements/option-infer-statement.md).  
   
-## <a name="characteristics-of-declared-variables"></a>Bildirilen değişkenlerin özellikleri  
- *Ömrü* değişkenini süre sırasında hangi BT kullanım için kullanılabilir. (Bir yordam veya sınıf gibi) bildirir öğesi varolmaya devam eder sürece genel olarak, bir değişken mevcut. Değişken, kapsayıcı öğe ömründen uzun varolan devam gerekmez, bildiriminde özel bir şey yapmanız gerekmez. Değişken, kapsayıcı öğe artık var olmaya devam yapması gerekiyorsa, dahil edebileceğiniz `Static` veya `Shared` anahtar sözcüğü, `Dim` deyimi. Daha fazla bilgi için [Visual Basic'de ömür](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md).  
+## <a name="characteristics-of-declared-variables"></a>Belirtilen değişkenlerin özellikleri  
+ Bir değişkenin kullanım *ömrü* , kullanım için kullanılabilir olduğu süredir. Genel olarak, bir değişken, kendisini bildiren öğe (bir yordam veya sınıf gibi) var olmaya devam ettiği sürece vardır. Değişkenin, kapsayan öğesinin yaşam süresinden daha fazla devam etmesi gerekmiyorsa, bildirimde özel bir şey yapmanız gerekmez. Değişkenin, kapsayan öğesinden daha uzun bir süre var olmaya devam etmesi gerekiyorsa, `Dim` ifadesinde `Static` veya `Shared` anahtar sözcüğünü dahil edebilirsiniz. Daha fazla bilgi için [Visual Basic ömrü](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)' ne bakın.  
   
- *Kapsam* değişkeninin adını nitelemeden başvurduğu tüm kod kümesidir. Bir değişkenin kapsamı burada bildirildiği tarafından belirlenir. Kodu belirli bir bölgede yer alan adlarıyla nitelemeniz gerek kalmadan bu bölgede tanımlanan değişkenleri kullanabilirsiniz. Daha fazla bilgi için [Visual Basic'de kapsam](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md).  
+ Bir değişkenin *kapsamı* , adını nitelemeden kendisine başvurabilen tüm kod kümesidir. Bir değişkenin kapsamı, bildirildiği yere göre belirlenir. Belirli bir bölgede bulunan kod, adlarını nitelemek zorunda kalmadan bu bölgede tanımlanan değişkenleri kullanabilir. Daha fazla bilgi için [Visual Basic kapsam](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)bölümüne bakın.  
   
- Bir değişkenin *erişim düzeyi* erişim iznine sahip kod kapsamını olduğu. Bu erişim değiştiricisi tarafından belirlenir (gibi [genel](../../../../visual-basic/language-reference/modifiers/public.md) veya [özel](../../../../visual-basic/language-reference/modifiers/private.md)) kullandığınız `Dim` deyimi. Daha fazla bilgi için [erişim düzeyini Visual Basic'te](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
+ Bir değişkenin *erişim düzeyi* , erişim izni olan kodun kapsamı olur. Bu, `Dim` ifadesinde kullandığınız erişim değiştiricisine ( [genel](../../../../visual-basic/language-reference/modifiers/public.md) veya [özel](../../../../visual-basic/language-reference/modifiers/private.md)) göre belirlenir. Daha fazla bilgi için bkz. [Visual Basic erişim düzeyleri](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapılır: Yeni değişken oluşturma](../../../../visual-basic/programming-guide/language-features/variables/how-to-create-a-new-variable.md)
-- [Nasıl yapılır: İçine ve dışına bir değişken veri taşıma](../../../../visual-basic/programming-guide/language-features/variables/how-to-move-data-into-and-out-of-a-variable.md)
+- [Nasıl yapılır: Yeni Değişken Oluşturma](../../../../visual-basic/programming-guide/language-features/variables/how-to-create-a-new-variable.md)
+- [Nasıl yapılır: Bir Değişkende Veri Ekleme Çıkarma](../../../../visual-basic/programming-guide/language-features/variables/how-to-move-data-into-and-out-of-a-variable.md)
 - [Veri Türleri](../../../../visual-basic/language-reference/data-types/index.md)
 - [Protected](../../../../visual-basic/language-reference/modifiers/protected.md)
 - [Friend](../../../../visual-basic/language-reference/modifiers/friend.md)

@@ -8,19 +8,19 @@ helpviewer_keywords:
 - Let clause [Visual Basic]
 - Let statement [Visual Basic]
 ms.assetid: 981aa516-16eb-4c53-b1f1-5aa3e82f316e
-ms.openlocfilehash: ff298f001a2d865446436e8099a2fbbef593a00a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 88166a040823cfefe623f672e556c364d652a7fc
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62054204"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72004734"
 ---
 # <a name="let-clause-visual-basic"></a>Let Tümcesi (Visual Basic)
-Bir değeri hesaplar ve bir sorgu içinde yeni bir değişkene atar.  
+Bir değeri hesaplar ve sorgu içindeki yeni bir değişkene atar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```vb  
 Let variable = expression [, ...]  
 ```  
   
@@ -28,22 +28,22 @@ Let variable = expression [, ...]
   
 |Terim|Tanım|  
 |---|---|  
-|`variable`|Gerekli. Sağlanan ifade sonuçlarını başvurmak için kullanılan bir diğer ad.|  
-|`expression`|Gerekli. Değerlendirilecek ve belirtilen değişkene atanan bir ifade.|  
+|`variable`|Gerekli. Sağlanan ifadenin sonuçlarına başvurmak için kullanılabilecek bir diğer ad.|  
+|`expression`|Gerekli. Değerlendirilecek ve belirtilen değişkene atanacak bir ifade.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `Let` Yan tümcesi işlem değerleri her sorgu sonuç ve bir diğer ad kullanarak başvuru olanak sağlar. Diğer ad diğer yan tümcelerinde gibi kullanılabilir `Where` yan tümcesi. `Let` Yan tümcesi çünkü Sorguda ifade yan tümcesi için bir diğer ad belirtin ve ifade yan tümcesi kullanıldığında her zaman diğer adı yerine daha kolay olan bir sorgu deyimi oluşturmanıza olanak sağlar.  
+ @No__t-0 yan tümcesi, her sorgu sonucu için değerleri hesaplamanızı ve bir diğer ad kullanarak bunları başvurmanızı sağlar. Diğer ad, `Where` yan tümcesi gibi diğer yan tümcelerde kullanılabilir. @No__t-0 yan tümcesi, sorguda yer alan bir ifade yan tümcesi için bir diğer ad belirtebileceğiniz ve ifade yan tümcesinin her kullanıldığı her seferinde yerine geçecek bir sorgu deyimi oluşturmanıza olanak sağlar.  
   
- Herhangi bir sayıda içerebilir `variable` ve `expression` atamalarını `Let` yan tümcesi. Her atama virgülle (,) ayırın.  
+ @No__t-2 yan tümcesinde herhangi bir sayıda `variable` ve `expression` ataması ekleyebilirsiniz. Her atamayı virgülle ayırın (,).  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod örneğinde `Let` ürünleri yüzde 10 indirim işlem yan tümcesi.  
+ Aşağıdaki kod örneği, ürünlerde yüzde 10 indirimi hesaplamak için `Let` yan tümcesini kullanır.  
   
  [!code-vb[VbSimpleQuerySamples#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#16)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Basic'de LINQ'e giriş](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [Visual Basic LINQ 'e giriş](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
 - [Sorgular](../../../visual-basic/language-reference/queries/index.md)
 - [Select Yan Tümcesi](../../../visual-basic/language-reference/queries/select-clause.md)
 - [From Yan Tümcesi](../../../visual-basic/language-reference/queries/from-clause.md)

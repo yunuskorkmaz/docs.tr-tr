@@ -1,5 +1,5 @@
 ---
-title: 'Performansı iyileştirme: Uygulama Kaynakları'
+title: 'Performansı İyileştirme: uygulama kaynakları'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - application resources [WPF], performance
@@ -9,34 +9,34 @@ helpviewer_keywords:
 - brushes [WPF], performance
 - sharing brushes without copying [WPF]
 ms.assetid: 62b88488-c08e-4804-b7de-a1c34fbe929c
-ms.openlocfilehash: 362d0f0fd3282365e5e05dcd43c49a9fd2ddc9a7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 759d02afe1934d2ace4ed226d5d911db2d676d98
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62017949"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005045"
 ---
-# <a name="optimizing-performance-application-resources"></a>Performansı iyileştirme: Uygulama Kaynakları
-[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] benzer yazılmış öğeler arasında tutarlı bir görünüm veya davranış destekleyebilir uygulama kaynaklarını paylaşmasına olanak sağlar. Bu konu, bu alandaki yardımcı olabilecek bazı öneriler, uygulamalarınızın performansını sağlar.  
+# <a name="optimizing-performance-application-resources"></a>Performansı İyileştirme: uygulama kaynakları
+[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], benzer türde öğelerde tutarlı bir görünüm veya davranışı destekleyebilmeniz için uygulama kaynaklarını paylaşmanıza olanak sağlar. Bu konuda, bu alanda uygulamalarınızın performansını artırmanıza yardımcı olabilecek birkaç öneri sunulmaktadır.  
   
- Kaynaklar hakkında daha fazla bilgi için bkz. [XAML kaynakları](xaml-resources.md).  
+ Kaynaklar hakkında daha fazla bilgi için bkz. [xaml kaynakları](xaml-resources.md).  
   
 ## <a name="sharing-resources"></a>Kaynakları paylaşma  
- Uygulamanız özel denetimlerini kullanır ve kaynakları tanımlayan bir <xref:System.Windows.ResourceDictionary> (veya XAML kaynakları düğümü) ya da kaynakları tanımlayan önerilir <xref:System.Windows.Application> veya <xref:System.Windows.Window> nesne düzeyinde ya da bunları varsayılan tema olarak tanımlayın özel denetimler. Bir özel denetimin kaynakları tanımlama <xref:System.Windows.ResourceDictionary> denetimin her örneği için bir performans etkisi uygular. Örneğin, bir özel denetim kaynak tanımının bir parçası ve özel denetimin birçok örneği tanımlanan yoğun performans fırça işlemleriniz varsa, uygulamanın çalışma kümesinin önemli ölçüde artıracak.  
+ Uygulamanız özel denetimler kullanıyorsa ve bir <xref:System.Windows.ResourceDictionary> (ya da XAML Kaynakları düğümünde) kaynaklarını tanımlıyorsa, kaynakları <xref:System.Windows.Application> veya <xref:System.Windows.Window> nesne düzeyinde tanımlamanız ya da bunları özel denetimler için varsayılan Temada tanımlamanız önerilir. Özel bir denetim @no__t kaynak tanımlamak, bu denetimin her örneği için bir performans etkisi uygular. Örneğin, özel bir denetimin kaynak tanımının bir parçası olarak tanımlanan performans yoğunluğu olan fırça işlemleri ve özel denetimin birçok örneği varsa, uygulamanın çalışma kümesi önemli ölçüde artacaktır.  
   
- Bu noktayı anlamak için aşağıdakileri dikkate alın. Kullanarak bir kart oyun geliştirdiğinizi varsayalım [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Kart oyunları için 52 farklı yüzleri 52 kartlarla gerekir. Özel bir kart denetimi uygulamak karar verin ve kart özel denetiminizin kaynakları (her bir kartın ön yüzü temsil eden) 52 Fırçalar tanımlayın. Ana uygulamanızda, başlangıçta bu kart özel denetimi 52 örneğini oluşturun. Her kart özel denetim örneği 52 örneklerini oluşturur <xref:System.Windows.Media.Brush> 52 * 52 toplam sağlayan nesneleri <xref:System.Windows.Media.Brush> uygulamanızdaki nesneleri. Kart özel denetim kaynaklarına fırçaları taşıyarak <xref:System.Windows.Application> veya <xref:System.Windows.Window> nesne düzeyinde veya özel denetim için varsayılan temayı tanımlayarak 52 Fırçalar şimdi paylaşıyorsunuz olduğundan uygulama çalışma kümesini azaltın kart denetimi 52 örnekleri arasında.  
+ Bu noktayı göstermek için aşağıdakileri göz önünde bulundurun. @No__t-0 kullanarak bir kart oyunu geliştirdiğinizi varsayalım. Çoğu kart oyunlarında, 52 farklı yüzlerle 52 kart gerekir. Bir kart özel denetimi uygulamaya karar verirsiniz ve kart özel denetiminizin kaynaklarında 52 fırçalar (her biri bir kart yüzünü temsil eder) tanımlarsınız. Ana uygulamanızda başlangıçta bu kart özel denetiminin 52 örneğini oluşturursunuz. Her bir kart özel denetimi örneği, uygulamanızda toplam 52 * 52 <xref:System.Windows.Media.Brush> nesnesi sağlayan <xref:System.Windows.Media.Brush> nesnelerinin 52 örneğini üretir. @No__t-0 veya <xref:System.Windows.Window> nesne düzeyine olan fırçaları, kart özel denetim kaynaklarından dışarı taşıyarak veya özel denetim için varsayılan Temada tanımlayarak, 52 fırçalarını 52 arasında paylaşmakta olduğunuz için uygulamanın çalışma kümesini azaltabilirsiniz. kart denetiminin örnekleri.  
   
-## <a name="sharing-a-brush-without-copying"></a>Bir fırçaları kopyalamadan paylaşma  
- Aynı kullanarak birden çok öğe varsa <xref:System.Windows.Media.Brush> nesne, fırça kaynağı olarak tanımlayın ve bunun yerine fırça satır içinde tanımlama başvuru [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)]. Bu yöntem bir örnek oluşturur ve onu, Fırçalar satır içinde tanımlama bilgileriyse tekrar [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] her öğe için yeni bir örneğini oluşturur.  
+## <a name="sharing-a-brush-without-copying"></a>Bir fırçayı kopyalamadan paylaşma  
+ Aynı <xref:System.Windows.Media.Brush> nesnesini kullanarak birden çok öğeye sahipseniz, fırçayı bir kaynak olarak tanımlayın ve XAML 'de fırça satır içi tanımlamak yerine ona başvurun. Bu yöntem bir örnek oluşturacak ve onu yeniden kullanacaktır, ancak XAML 'de fırça satır içi tanımlamak her öğe için yeni bir örnek oluşturur.  
   
- Bu noktaya aşağıdaki biçimlendirme örneği gösterilmektedir:  
+ Aşağıdaki biçimlendirme örneği bu noktayı gösterir:  
   
  [!code-xaml[Performance#PerformanceSnippet7](~/samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/BrushResource.xaml#performancesnippet7)]  
   
-## <a name="use-static-resources-when-possible"></a>Mümkün olduğunda, statik kaynakları kullanma  
- Statik kaynak, bir başvuru zaten tanımlanmış bir kaynağa bakarak, tüm XAML özelliği özniteliği için bir değer sağlar. Bu kaynak için arama davranışı derleme zamanı aramasına benzer.  
+## <a name="use-static-resources-when-possible"></a>Mümkün olduğunda statik kaynakları kullan  
+ Statik bir kaynak, önceden tanımlanmış bir kaynağa bir başvuru arayarak herhangi bir XAML özellik özniteliği için bir değer sağlar. Bu kaynak için arama davranışı, derleme zamanı aramasına benzer.  
   
- Dinamik bir kaynak, diğer taraftan, ilk derleme sırasında geçici bir ifade yaratacak ve istenen kaynak değeri bir nesne oluşturmak için gerçekten gerekli olana kadar bu nedenle kaynaklara arama erteleme. Bu kaynak için arama davranışı bir performans etkisi uygular çalışma zamanı arama için benzerdir. Statik kaynakları yalnızca gerektiğinde dinamik kaynakları kullanarak uygulamanızı mümkün olduğunca kullanın.  
+ Diğer yandan dinamik bir kaynak, ilk derleme sırasında geçici bir ifade oluşturur ve bu nedenle istenen kaynak değeri gerçekten bir nesne oluşturmak için gerekene kadar kaynakları aramayı erteler. Bu kaynağın arama davranışı, bir performans etkisi sağlayan çalışma zamanı aramasına benzer. Uygulamanızda mümkün olduğunda statik kaynakları, yalnızca gerektiğinde dinamik kaynakları kullanarak kullanın.  
   
  Aşağıdaki biçimlendirme örneği her iki tür kaynak kullanımını gösterir:  
   
@@ -44,12 +44,12 @@ ms.locfileid: "62017949"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [WPF Uygulama Performansını İyileştirme](optimizing-wpf-application-performance.md)
-- [Uygulama Performansını Planlama](planning-for-application-performance.md)
+- [WPF uygulama performansını iyileştirme](optimizing-wpf-application-performance.md)
+- [Uygulama performansını planlama](planning-for-application-performance.md)
 - [Donanımdan Yararlanma](optimizing-performance-taking-advantage-of-hardware.md)
-- [Düzen ve Tasarım](optimizing-performance-layout-and-design.md)
-- [2B Grafikleri ve Görüntüleme](optimizing-performance-2d-graphics-and-imaging.md)
-- [Nesne Davranışı](optimizing-performance-object-behavior.md)
+- [Düzen ve tasarım](optimizing-performance-layout-and-design.md)
+- [2B grafikler ve görüntüleme](optimizing-performance-2d-graphics-and-imaging.md)
+- [Nesne davranışı](optimizing-performance-object-behavior.md)
 - [Metin](optimizing-performance-text.md)
-- [Veri Bağlama](optimizing-performance-data-binding.md)
-- [Diğer Performans Önerileri](optimizing-performance-other-recommendations.md)
+- [Veri bağlama](optimizing-performance-data-binding.md)
+- [Diğer performans önerileri](optimizing-performance-other-recommendations.md)

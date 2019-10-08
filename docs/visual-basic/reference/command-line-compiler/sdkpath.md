@@ -9,19 +9,19 @@ helpviewer_keywords:
 - /sdkpath compiler option [Visual Basic]
 - sdkpath compiler option [Visual Basic]
 ms.assetid: fec8a3f1-b791-4a37-8af7-344859f8212d
-ms.openlocfilehash: 25368d23c398fb3674d5c2d75d4997f917a1c3d6
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 46cec7ac3cb78c4fc97e299535f9085eff6daeff
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69937350"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72004687"
 ---
 # <a name="-sdkpath"></a>-sdkpath
 Mscorlib. dll ve Microsoft. VisualBasic. dll dosyasının konumunu belirtir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```console  
 -sdkpath:path  
 ```  
   
@@ -30,15 +30,15 @@ Mscorlib. dll ve Microsoft. VisualBasic. dll dosyasının konumunu belirtir.
  Derleme için kullanılacak mscorlib. dll ve Microsoft. VisualBasic. dll sürümlerini içeren dizin. Bu yol, yükleninceye kadar doğrulanmaz. Dizin adını bir boşluk içeriyorsa tırnak işaretleri ("") içine alın.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu seçenek, Visual Basic derleyicisine mscorlib. dll ve Microsoft. VisualBasic. dll dosyalarını varsayılan olmayan bir konumdan yüklemesini söyler. Seçeneği-netcf ile kullanılmak üzere tasarlanmıştır. [](../../../visual-basic/reference/command-line-compiler/netcf.md) `-sdkpath` .NET Compact Framework, cihazlarda bulunmayan türlerin ve dil özelliklerinin kullanımını önlemek için bu destek kitaplıklarının farklı sürümlerini kullanır.  
+ Bu seçenek, Visual Basic derleyicisine mscorlib. dll ve Microsoft. VisualBasic. dll dosyalarını varsayılan olmayan bir konumdan yüklemesini söyler. @No__t-0 seçeneği [-netcf](../../../visual-basic/reference/command-line-compiler/netcf.md)ile kullanılmak üzere tasarlanmıştır. .NET Compact Framework, cihazlarda bulunmayan türlerin ve dil özelliklerinin kullanımını önlemek için bu destek kitaplıklarının farklı sürümlerini kullanır.  
   
 > [!NOTE]
-> Bu `-sdkpath` seçenek, Visual Studio geliştirme ortamı içinden kullanılamaz; yalnızca komut satırından derlenirken kullanılabilir. Visual Basic bir cihaz projesi yüklendiğinde bu seçenekayarlanır.`-sdkpath`  
+> @No__t-0 seçeneği, Visual Studio geliştirme ortamı içinden kullanılamaz; yalnızca komut satırından derlenirken kullanılabilir. @No__t-0 seçeneği, bir Visual Basic cihaz projesi yüklendiğinde ayarlanır.  
   
- Derleyicinin `-vbruntime` derleyici seçeneğini kullanarak Visual Basic çalışma zamanı kitaplığı başvurusu olmadan derlenmesi gerektiğini belirtebilirsiniz. Daha fazla bilgi için bkz. [-vbruntime](../../../visual-basic/reference/command-line-compiler/vbruntime.md).  
+ @No__t-0 derleyici seçeneğini kullanarak derleyicinin Visual Basic çalışma zamanı kitaplığına bir başvuru olmadan derlenmesi gerektiğini belirtebilirsiniz. Daha fazla bilgi için bkz. [-vbruntime](../../../visual-basic/reference/command-line-compiler/vbruntime.md).  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod, C `Myfile.vb` sürücüsündeki .NET Compact Framework varsayılan yükleme dizininde bulunan mscorlib. dll ve Microsoft. VisualBasic. dll sürümlerini kullanarak .NET Compact Framework ile derlenir. Genellikle .NET Compact Framework en son sürümünü kullanırsınız.  
+ Aşağıdaki kod, C sürücüsündeki .NET Compact Framework varsayılan yükleme dizininde bulunan mscorlib. dll ve Microsoft. VisualBasic. dll sürümlerini kullanarak .NET Compact Framework `Myfile.vb` ' ı derler. Genellikle .NET Compact Framework en son sürümünü kullanırsınız.  
   
 ```console
 vbc -netcf -sdkpath:"c:\Program Files\Microsoft Visual Studio .NET 2003\CompactFrameworkSDK\v1.0.5000\Windows CE " myfile.vb  

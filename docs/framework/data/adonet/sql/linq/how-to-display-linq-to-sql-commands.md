@@ -1,19 +1,19 @@
 ---
-title: 'Nasıl yapılır: LINQ to SQL Komutlarını Görüntüleme'
+title: 'Nasıl yapılır: LINQ to SQL komutları görüntüleme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 1decb05e-37ad-4ed6-ab2f-071eb4c4f628
-ms.openlocfilehash: 2f562dfd8f13c107249e697b77de7538df56fe2f
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: ec5010a42980e2d7a1a03c31d396cac6b6934a58
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70781952"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72002929"
 ---
-# <a name="how-to-display-linq-to-sql-commands"></a>Nasıl yapılır: LINQ to SQL Komutlarını Görüntüleme
-SQL <xref:System.Data.Linq.DataContext.GetCommand%2A> komutlarını ve diğer bilgileri göstermek için kullanın.  
+# <a name="how-to-display-linq-to-sql-commands"></a>Nasıl yapılır: LINQ to SQL komutları görüntüleme
+SQL komutlarını ve diğer bilgileri göstermek için <xref:System.Data.Linq.DataContext.GetCommand%2A> kullanın.  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnekte, konsol penceresi sorgudaki çıktıyı, ardından oluşturulan SQL komutlarını, komut türünü ve bağlantı türünü görüntüler.  
@@ -23,7 +23,7 @@ SQL <xref:System.Data.Linq.DataContext.GetCommand%2A> komutlarını ve diğer bi
   
  Çıktı aşağıdaki gibi görünür:  
   
-```  
+```console  
 Customers from London:  
     Thomas Hardy  
     Victoria Ashworth  
@@ -35,7 +35,7 @@ Customers from London:
     Dominique Perrier  
 ```  
   
-```  
+```console  
 Command Text:  
 SELECT [t0].[CustomerID], [t0].[CompanyName], [t0].[ContactName], [t0].[ContactT  
 itle], [t0].[Address], [t0].[City], [t0].[Region], [t0].[PostalCode], [t0].[Coun  

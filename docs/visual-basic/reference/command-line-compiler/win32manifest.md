@@ -6,19 +6,19 @@ helpviewer_keywords:
 - win32manifest compiler option [Visual Basic]
 - -win32manifest compiler option [Visual Basic]
 ms.assetid: 9e3191b4-90db-41c8-966a-28036fd20005
-ms.openlocfilehash: 6eb9d50a3ecd80acb0349f1ba315d9cf8ccc6dc2
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: cae6b34aadf6698a337e52aa1ea1ce44206836ac
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69937234"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72004629"
 ---
 # <a name="-win32manifest-visual-basic"></a>-win32manifest (Visual Basic)
 Bir projenin taşınabilir yürütülebilir (PE) dosyasına gömülecek Kullanıcı tanımlı bir Win32 uygulama bildirim dosyası tanımlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```console  
 -win32manifest: fileName  
 ```  
   
@@ -38,13 +38,13 @@ Bir projenin taşınabilir yürütülebilir (PE) dosyasına gömülecek Kullanı
   
  Aşağıdaki koşullardan biri doğru ise uygulamanız sanallaştırmaya tabi olacaktır:  
   
-1. `-nowin32manifest` Seçeneğini`-win32resource` kullanarak, seçeneğini kullanarak sonraki bir derleme adımında veya bir Windows kaynak (. res) dosyasının parçası olarak bir bildirim sağlamaz.  
+1. @No__t-0 seçeneğini kullanın ve `-win32resource` seçeneğini kullanarak bir sonraki derleme adımında veya Windows kaynak (. res) dosyasının bir parçası olarak bir bildirim sağlamaz.  
   
 2. İstenen yürütme düzeyini belirtmeyen özel bir bildirim sağlarsınız.  
   
  Visual Studio varsayılan bir. manifest dosyası oluşturur ve yürütülebilir dosyanın yanı sıra hata ayıklama ve sürüm dizinlerinde depolar. Varsayılan App. manifest dosyasını, proje Tasarımcısı 'ndaki **uygulama** sekmesinde **UAC ayarlarını görüntüle** ' ye tıklayarak görüntüleyebilir veya düzenleyebilirsiniz. Daha fazla bilgi için bkz. [uygulama sayfası, proje Tasarımcısı (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic).  
   
- Uygulama bildirimini özel derleme sonrası bir adım olarak veya `-nowin32manifest` seçeneğini kullanarak bir Win32 kaynak dosyasının parçası olarak sağlayabilirsiniz. Uygulamanızın Windows Vista 'da dosya veya kayıt defteri sanallaştırmaya tabi olmasını istiyorsanız bu seçeneği kullanın. Bu, derleyicinin PE dosyasında varsayılan bir bildirim oluşturmasını ve katıştırmasını engeller.  
+ Uygulama bildirimini, bir derleme sonrası özel adım olarak veya `-nowin32manifest` seçeneğini kullanarak bir Win32 kaynak dosyasının parçası olarak sağlayabilirsiniz. Uygulamanızın Windows Vista 'da dosya veya kayıt defteri sanallaştırmaya tabi olmasını istiyorsanız bu seçeneği kullanın. Bu, derleyicinin PE dosyasında varsayılan bir bildirim oluşturmasını ve katıştırmasını engeller.  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek, Visual Basic derleyicisinin bir PE 'ye eklediği varsayılan bildirimi gösterir.  

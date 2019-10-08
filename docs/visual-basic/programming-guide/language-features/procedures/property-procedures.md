@@ -1,5 +1,5 @@
 ---
-title: Özellik Yordamları (Visual Basic)
+title: Özellik yordamları (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Set statement [Visual Basic], Property procedures
@@ -13,36 +13,36 @@ helpviewer_keywords:
 - property procedures
 - Get statement [Visual Basic], property procedures
 ms.assetid: 46a98379-e1a2-45dd-a48c-b51213f5ab07
-ms.openlocfilehash: b637f6a5f3ef367dfe769c2878878eeb938e3c81
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f3b57ae45815fbd91cad17cddbed4d01037eb92f
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64638810"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72002091"
 ---
-# <a name="property-procedures-visual-basic"></a>Özellik Yordamları (Visual Basic)
-Bir özellik yordamı bir özel özellik bir modül, sınıf veya yapı işleyen Visual Basic deyimleri bir dizisidir. Özellik yordamları olan olarak da bilinen *özellik erişimcileri*.  
+# <a name="property-procedures-visual-basic"></a>Özellik yordamları (Visual Basic)
+Özellik yordamı bir modül, sınıf veya yapıda özel bir özelliği düzenleyen Visual Basic deyimlerinin bir dizisidir. Özellik yordamları, *özellik erişimcileri*olarak da bilinir.  
   
- Visual Basic için aşağıdaki özellik yordamları sağlar:  
+ Visual Basic aşağıdaki özellik yordamları için sağlar:  
   
-- A `Get` yordamı bir özelliğinin değerini döndürür. Bir ifade özelliğinde eriştiğinde çağrılır.  
+- @No__t-0 yordamı bir özelliğin değerini döndürür. Bir ifadede özelliğe eriştiğinizde çağrılır.  
   
-- A `Set` yordamı bir özellik içeren bir nesne başvurusu bir değere ayarlar. Özellik için bir değer atadığınızda çağrılır.  
+- @No__t-0 yordamı, bir özelliği bir nesne başvurusu dahil olmak üzere bir değere ayarlar. Özelliğe bir değer atadığınızda çağrılır.  
   
- Özellik yordamları kullanarak çiftlerinde genellikle tanımlamak `Get` ve `Set` deyimleri, ancak tanımlayabilirsiniz tek başına ya da yordam özellik salt okunur ise ([alma deyimi](../../../../visual-basic/language-reference/statements/get-statement.md)) veya salt yazılır ([ayarlayın Deyimi](../../../../visual-basic/language-reference/statements/set-statement.md)).  
+ Genellikle özellik yordamlarını `Get` ve `Set` deyimlerini kullanarak çiftler halinde tanımlarsınız, ancak özellik salt okunurdur ([Get deyimi](../../../../visual-basic/language-reference/statements/get-statement.md)) veya salt yazılır ([küme deyimi](../../../../visual-basic/language-reference/statements/set-statement.md)) ise tek başına yordamı tanımlayabilirsiniz.  
   
- Atlayabilirsiniz `Get` ve `Set` otomatik uygulanan bir özellik kullanıldığında yordamı. Daha fazla bilgi için [Implemented Properties](./auto-implemented-properties.md).  
+ Otomatik uygulanan bir özellik kullanırken `Get` ve `Set` yordamını atlayabilirsiniz. Daha fazla bilgi için bkz. [Otomatik uygulanan özellikler](./auto-implemented-properties.md).  
   
- Özellikler, sınıflar, yapılar ve modülleri tanımlayabilirsiniz. Özellikleri `Public` varsayılan olarak, yani çağırabilirsiniz bunları yerden uygulamanızdaki özelliğin kapsayıcı erişebilirsiniz.  
+ Sınıflar, yapılar ve modüllerde özellikler tanımlayabilirsiniz. Özellikler, varsayılan olarak `Public` ' dır. Bu, uygulamanızın, özelliğin kapsayıcısına erişebilen her yerden çağırabileceği anlamına gelir.  
   
- Özellikler ve değişkenlerin bir karşılaştırması için bkz. [arasındaki farklar özelliklerini ve Visual Basic'te değişkenler](./differences-between-properties-and-variables.md).  
+ Özelliklerin ve değişkenlerin karşılaştırması için [Visual Basic Özellikler ve değişkenler arasındaki farklılıklar](./differences-between-properties-and-variables.md)bölümüne bakın.  
   
-## <a name="declaration-syntax"></a>Bildirim Sözdizimi  
- İçine alınmış bir kod bloğunu tarafından tanımlanan bir özellik [Property deyimi](../../../../visual-basic/language-reference/statements/property-statement.md) ve `End Property` deyimi. Bir bildirim deyiminin alınmış bir dahili bloğu olarak her bir özellik yordamı bu blok içinde görünür (`Get` veya `Set`) ile eşleşen `End` bildirimi.  
+## <a name="declaration-syntax"></a>Bildirim söz dizimi  
+ Özelliğin kendisi, [özellik bildiriminde](../../../../visual-basic/language-reference/statements/property-statement.md) ve `End Property` ifadesinde yer alan bir kod bloğu tarafından tanımlanır. Bu bloğun içinde her özellik yordamı bir bildirim bildirimi (`Get` veya `Set`) ve eşleşen `End` bildirimi içinde iç bir blok olarak görünür.  
   
- Bir özellik ve işlemleri bildirmek için sözdizimi aşağıdaki gibidir:  
+ Bir özelliği ve yordamlarını bildirmek için sözdizimi aşağıdaki gibidir:  
   
-```  
+```vb  
 [Default] [Modifiers] Property PropertyName[(ParameterList)] [As DataType]  
     [AccessLevel] Get  
         ' Statements of the Get procedure.  
@@ -59,61 +59,61 @@ End Property
 [Default] [Modifiers] Property PropertyName [(ParameterList)] [As DataType]  
 ```  
   
- `Modifiers` Erişim düzeyi ve aşırı yüklemesi, geçersiz kılma, paylaşımı ve Gölgeleme, ilgili bilgileri yanı sıra özelliğin salt okunur veya sadece yazılabilir olup belirtebilirsiniz. `AccessLevel` Üzerinde `Get` veya `Set` yordamı özelliği için belirtilen erişim düzeyi daha kısıtlayıcı olan herhangi bir düzeyinde olabilir. Daha fazla bilgi için [Property deyimi](../../../../visual-basic/language-reference/statements/property-statement.md).  
+ @No__t-0, aşırı yükleme, geçersiz kılma, paylaşma ve gölgeleme ile ilgili erişim düzeyini ve bilgileri belirtebilir, özelliğin salt okunurdur mi yoksa salt yazılır mı olduğunu belirtir. @No__t-1 veya `Set` yordamındaki `AccessLevel`, özelliğin kendisi için belirtilen erişim düzeyinden daha kısıtlayıcı olan herhangi bir düzey olabilir. Daha fazla bilgi için bkz. [özellik açıklaması](../../../../visual-basic/language-reference/statements/property-statement.md).  
   
 ### <a name="data-type"></a>Veri Türü  
- Bir özelliğin veri türü ve asıl erişim düzeyi tanımlanan `Property` deyimi, özellik yordamları içinde değil. Bir özellik, yalnızca bir veri türü olabilir. Örneğin, depolamak için bir özellik tanımlanamaz bir `Decimal` değer ancak almak bir `Double` değeri.  
+ Özelliğin veri türü ve asıl erişim düzeyi, özellik yordamlarında değil, `Property` ifadesinde tanımlanır. Bir özellik yalnızca bir veri türüne sahip olabilir. Örneğin, bir `Decimal` değeri depolamak için bir özellik tanımlayamazsınız, ancak bir `Double` değeri alabilirsiniz.  
   
 ### <a name="access-level"></a>Erişim düzeyi  
- Ancak, bir özellik için bir asıl erişim düzeylerini tanımlayın ve kendi özellik yordamları biriyle erişim düzeyi kısıtlamanız. Örneğin, tanımlayabileceğiniz bir `Public` özelliği ve tanımlayabilirsiniz bir `Private Set` yordamı. `Get` Yordamı kalır `Public`. Bir özelliğin yordamlar yalnızca birinde erişim düzeyini değiştirebilir ve yalnızca bunu asıl erişim düzeyi daha kısıtlayıcı bir duruma getirebilirsiniz. Daha fazla bilgi için [nasıl yapılır: Bir özelliği karışık erişim düzeyleriyle bildirme](./how-to-declare-a-property-with-mixed-access-levels.md).  
+ Ancak, bir özellik için bir asıl erişim düzeyi tanımlayabilir ve özellik yordamlarından birinde erişim düzeyini daha da kısıtlayabilirsiniz. Örneğin, bir `Public` özelliği tanımlayabilir ve sonra bir `Private Set` yordamı tanımlayabilirsiniz. @No__t-0 yordamı-1 @no__t kalır. Erişim düzeyini bir özelliğin yordamlarından yalnızca birinde değiştirebilirsiniz ve yalnızca asıl erişim düzeyinden daha kısıtlayıcı hale getirebilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: karışık erişim düzeylerine sahip bir özellik bildirme](./how-to-declare-a-property-with-mixed-access-levels.md).  
   
 ## <a name="parameter-declaration"></a>Parametre bildirimi  
- Her parametre için yaptığınız gibi bildirdiğiniz [alt yordamlar](./sub-procedures.md)geçirme mekanizması olmalı, dışında `ByVal`.  
+ Geçiş mekanizmasının `ByVal` olması dışında, her bir parametreyi [alt yordamlar](./sub-procedures.md)için yaptığınız gibi bildirirsiniz.  
   
- Parametre listesindeki her parametre için sözdizimi aşağıdaki gibidir:  
+ Parametre listesindeki her bir parametre için sözdizimi aşağıdaki gibidir:  
   
  `[Optional] ByVal [ParamArray] parametername As datatype`  
   
- Parametre isteğe bağlıysa, varsayılan değer bildiriminin bir parçası olarak da belirtmeniz gerekir. Varsayılan bir değer belirtmek için sözdizimi aşağıdaki gibidir:  
+ Parametre isteğe bağlı ise, bildiriminin bir parçası olarak bir varsayılan değer de belirtmeniz gerekir. Varsayılan bir değer belirtmek için sözdizimi aşağıdaki gibidir:  
   
  `Optional ByVal parametername As datatype = defaultvalue`  
   
-## <a name="property-value"></a>Özellik Değeri  
- İçinde bir `Get` yordamı, dönüş değeri, çağıran ifadeye özelliğinin değeri olarak sağlanır.  
+## <a name="property-value"></a>Özellik değeri  
+ @No__t-0 yordamında, dönüş değeri, özelliğin değeri olarak çağırma ifadesine sağlanır.  
   
- İçinde bir `Set` yordamı, yeni özellik değeri için parametresi geçirilir `Set` deyimi. Bir parametre açıkça bildirirseniz özelliği olarak aynı veri türünde bildirmeniz gerekir. Bir parametre bildirmeyin, derleyici örtük parametresini kullanır. `Value` özelliğe atanacak yeni değeri gösterecek.  
+ @No__t-0 yordamında, yeni özellik değeri `Set` ifadesinin parametresine geçirilir. Açıkça bir parametre bildirirseniz, özelliği ile aynı veri türüyle bildirmeniz gerekir. Bir parametre bildirmezsiniz, derleyici, özelliğe atanacak yeni değeri göstermek için, `Value` örtük parametresini kullanır.  
   
-## <a name="calling-syntax"></a>Arama söz dizimi  
- Bir özellik yordamı örtük olarak özelliğine başvuru yaparak çağırın. İsteğe bağlı olmayan tüm bağımsız değişkenler için değer sağlamanız gereken dışında aynı şekilde, bir değişken adını kullanırsınız özelliğin adını kullanın ve bağımsız değişken listesi parantez içine almalısınız. Hiçbir bağımsız değişken sağlanmadıysa, parantezler isteğe bağlı olarak atlayabilirsiniz.  
+## <a name="calling-syntax"></a>Çağırma sözdizimi  
+ Özelliğe başvuru yaparak bir özellik yordamını örtük olarak çağırılır. Özelliği, isteğe bağlı olmayan tüm bağımsız değişkenlerin değerlerini sağlamanız ve bağımsız değişken listesini parantez içine almanız gerekir, ancak, özelliğin adını bir değişkenin adını kullandığınız şekilde kullanırsınız. Herhangi bir bağımsız değişken sağlanmazsa, isteğe bağlı olarak ayraçları atlayabilirsiniz.  
   
- Örtük çağrıyla sözdizimi bir `Set` yordam şu şekildedir:  
+ @No__t-0 yordamına örtük çağrının sözdizimi aşağıdaki gibidir:  
   
  `propertyname[(argumentlist)] = expression`  
   
- Örtük çağrıyla sözdizimi bir `Get` yordam şu şekildedir:  
+ @No__t-0 yordamına örtük çağrının sözdizimi aşağıdaki gibidir:  
   
  `lvalue = propertyname[(argumentlist)]`  
   
  `Do While (propertyname[(argumentlist)] > expression)`  
   
 ### <a name="illustration-of-declaration-and-call"></a>Bildirim ve çağrı gösterimi  
- Aşağıdaki özelliği tam adı, iki bağlı ad, ad ve Soyadı depolar. Çağıran kod zaman okur `fullName`, `Get` yordam iki bağlı adları birleştirir ve tam adını döndürür. Çağıran kod yeni bir tam ad atarken `Set` yordamı iki bağlı adlarına sonu dener. Bir alan bulamazsa, tüm ad depolar.  
+ Aşağıdaki özellik, tam adı iki anayent adı, ad ve soyadı olarak depolar. Çağıran kod `fullName` ' ı okuduğunda, `Get` yordamı iki anayent adını birleştirir ve tam adı döndürür. Çağıran kod yeni bir tam ad atarken, `Set` yordamı onu iki anayada bölmek için çalışır. Bir boşluk bulamazsa, ilk ad olarak tümünü depolar.  
   
  [!code-vb[VbVbcnProcedures#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#8)]  
   
- Aşağıdaki örnek özellik yordamları tipik çağrıları gösterir `fullName`.  
+ Aşağıdaki örnek `fullName` ' ın özellik yordamlarına yapılan tipik çağrıları gösterir.  
   
  [!code-vb[VbVbcnProcedures#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#9)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Yordamlar](./index.md)
-- [İşlev Yordamları](./function-procedures.md)
-- [İşleç Yordamları](./operator-procedures.md)
-- [Yordam Parametreleri ve Bağımsız Değişkenleri](./procedure-parameters-and-arguments.md)
-- [Visual Basic'de özellikler ile değişkenler arasındaki farklar](./differences-between-properties-and-variables.md)
+- [Yordamların](./index.md)
+- [İşlev yordamları](./function-procedures.md)
+- [İşleç yordamları](./operator-procedures.md)
+- [Yordam parametreleri ve bağımsız değişkenleri](./procedure-parameters-and-arguments.md)
+- [Visual Basic Özellikler ve değişkenler arasındaki farklar](./differences-between-properties-and-variables.md)
 - [Nasıl yapılır: Özellik oluşturma](./how-to-create-a-property.md)
-- [Nasıl yapılır: Bir özellik yordamı çağırma](./how-to-call-a-property-procedure.md)
-- [Nasıl yapılır: Bildirme ve Visual Basic'te bir varsayılan özelliğini çağırın](./how-to-declare-and-call-a-default-property.md)
-- [Nasıl yapılır: Bir özelliğe değer ekleme](./how-to-put-a-value-in-a-property.md)
-- [Nasıl yapılır: Bir özellikten değer alma](./how-to-get-a-value-from-a-property.md)
+- [Nasıl yapılır: bir özellik yordamı çağırma](./how-to-call-a-property-procedure.md)
+- [Nasıl yapılır: Visual Basic varsayılan bir özellik bildirme ve çağırma](./how-to-declare-and-call-a-default-property.md)
+- [Nasıl yapılır: bir özelliğe değer koyma](./how-to-put-a-value-in-a-property.md)
+- [Nasıl yapılır: bir özellikten değer alma](./how-to-get-a-value-from-a-property.md)

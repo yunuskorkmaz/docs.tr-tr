@@ -7,35 +7,35 @@ helpviewer_keywords:
 - Continue statement [Visual Basic]
 - loops, transferring to next iteration
 ms.assetid: 3ad00103-358b-4af3-a3a8-1b9ea0e995d3
-ms.openlocfilehash: 5523be69f2901851c86f6c0263548e3577507ff9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9ee5fb19db6eafeb7e4bed12935d0b950d6368d6
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61638252"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005110"
 ---
 # <a name="continue-statement-visual-basic"></a>Continue Deyimi (Visual Basic)
-Hemen bir döngünün sonraki yinelemesine için aktarımları denetimi.  
+Denetimi bir döngünün sonraki yinelemesine hemen aktarır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```vb  
 Continue { Do | For | While }  
 ```  
   
 ## <a name="remarks"></a>Açıklamalar  
- Aktarabilir miyim içinde bir `Do`, `For`, veya `While` Bu döngünün sonraki yinelemesine döngü. Denetim aktarma için eşdeğer olan hemen döngü koşul testi geçer `For` veya `While` deyimi veya `Do` veya `Loop` içeren ifade `Until` veya `While` yan tümcesi.  
+ @No__t-0, `For` veya `While` döngüsünün içinden bu döngünün bir sonraki yinelemesine aktarabilirsiniz. Denetim, `For` veya `While` ifadesine veya `Until` veya `While` yan tümcesini içeren @no__t 2 veya `Loop` bildirimine aktarılmaya eşdeğer olan döngü koşulu testine anında geçirilir.  
   
- Kullanabileceğiniz `Continue` aktarımlarına izin veren döngü herhangi bir konumda. Aktarım Denetimi verme kuralları ile aynıdır [GoTo deyimi](../../../visual-basic/language-reference/statements/goto-statement.md).  
+ @No__t-0 ' yı döngüdeki aktarımlara izin veren herhangi bir konumda kullanabilirsiniz. Denetimin aktarılmasına izin veren kurallar [goto ifadesiyle](../../../visual-basic/language-reference/statements/goto-statement.md)aynıdır.  
   
- Örneğin, bir döngü içinde tamamen bağımsız bir `Try` bloğu bir `Catch` bloğu veya `Finally` bloğu kullanabilirsiniz `Continue` döngü dışına aktarmak için. Diğer yandan Eğer `Try`... `End Try` yapısı döngü içinde bulunan, kullanamazsınız `Continue` kontrolünü dışarı aktarmak için `Finally` bloğunda kullanabilirsiniz, dışarı aktarmak için bir `Try` veya `Catch` yalnızca tamamen tanesi aktarırsanız engelle `Try`... `End Try` yapısı.  
+ Örneğin, bir döngü tamamen bir `Try` bloğu, `Catch` bloğu veya `Finally` bloğu içinde yer alıyorsa, döngünün dışına aktarmak için `Continue` ' ü kullanabilirsiniz. Diğer taraftan, `Try`... `End Try` yapısı döngü içinde yer alıyorsa, `Finally` bloğundan denetimi aktarmak için `Continue` ' yi kullanamazsınız ve bunu yalnızca tamamen dışarı aktarırsanız, `Try` veya `Catch` bloğunun dışına aktarmak için kullanabilirsiniz. _T-6... `End Try` yapısı.  
   
- İç içe döngüleri aynı tür, örneğin varsa bir `Do` döngü içindeki başka `Do` döngüsü, bir `Continue Do` ifade en içteki bir sonraki yinelemesine atlar `Do` içerdiği döngü. Kullanamazsınız `Continue` aynı tür içeren bir döngünün sonraki yinelemesine atlanacak.  
+ Aynı türde iç içe geçmiş döngülerine sahipseniz, örneğin başka bir `Do` döngüsünde `Do` döngüsü varsa, `Continue Do` bir ifade kendisini içeren en içteki `Do` döngüsünün bir sonraki yinelemesine atlar. Aynı türdeki bir kapsayan döngünün sonraki yinelemesine atlamak için `Continue` kullanamazsınız.  
   
- Farklı türlerde iç içe döngüleri örnek varsa bir `Do` döngü içinde bir `For` döngüsü kullanarak ya da döngünün sonraki yinelemesine atlayabilirsiniz `Continue Do` veya `Continue For`.  
+ Farklı türlerde iç içe geçmiş döngülerine sahipseniz (örneğin, bir `For` döngüsünde `Do` döngüsü), `Continue Do` veya `Continue For` ' ü kullanarak iki döngünün bir sonraki yinelemesine atlayabilirsiniz.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod örneğinde `Continue While` bölen sıfırsa bir dizi için bir sonraki sütununu atlama deyimi. `Continue While` İçinde bir `For` döngü. İçin aktarır `While col < lastcol` en içteki sonraki yinelemesine deyimi `While` içeren döngü `For` döngü.  
+ Aşağıdaki kod örneği, bir bölen sıfırsa bir dizinin sonraki sütununa atlamak için `Continue While` ifadesini kullanır. @No__t-0 bir `For` döngüsü içinde. @No__t-2 döngüsünü içeren en içteki `While` döngüsünün bir sonraki yinelemesi olan `While col < lastcol` ifadesine aktarır.  
   
  [!code-vb[VbVbalrStatements#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#14)]  
   

@@ -2,12 +2,12 @@
 title: SQL Server CLR Tümleştirmesine Giriş
 ms.date: 03/30/2017
 ms.assetid: 551d2290-ed80-49be-b377-44b32444da1c
-ms.openlocfilehash: fb812a8e524148c507d26ea32e0b4263a4998153
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 76c6fb4cb37807f286f1f1f2aeedbdea6c74fe38
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70782270"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72002138"
 ---
 # <a name="introduction-to-sql-server-clr-integration"></a>SQL Server CLR Tümleştirmesine Giriş
 Ortak dil çalışma zamanı (CLR) Microsoft .NET çerçevesinin kalbidir ve tüm .NET Framework kodu için yürütme ortamı sağlar. CLR içinde çalışan kod, yönetilen kod olarak adlandırılır. CLR, tam zamanında (JıT) derleme, bellek ayırma ve yönetme, tür güvenliğini zorlama, özel durum işleme, iş parçacığı yönetimi ve güvenlik dahil olmak üzere program yürütmesi için gereken çeşitli işlevleri ve hizmetleri sağlar.  
@@ -23,16 +23,16 @@ Ortak dil çalışma zamanı (CLR) Microsoft .NET çerçevesinin kalbidir ve tü
 - [Ortak dil çalışma zamanı (CLR) tümleştirmesine genel bakış](https://go.microsoft.com/fwlink/?LinkId=115242)  
   
 ## <a name="enabling-clr-integration"></a>CLR tümleştirmesini etkinleştirme  
- Ortak dil çalışma zamanı (CLR) tümleştirme özelliği Microsoft SQL Server ' de varsayılan olarak kapalıdır ve CLR tümleştirmesi kullanılarak uygulanan nesneleri kullanabilmek için etkinleştirilmelidir. Transact-SQL kullanarak clr tümleştirmesini etkinleştirmek için, `clr enabled` `sp_configure` saklı yordamın seçeneğini gösterildiği gibi kullanın:  
+ Ortak dil çalışma zamanı (CLR) tümleştirme özelliği Microsoft SQL Server ' de varsayılan olarak kapalıdır ve CLR tümleştirmesi kullanılarak uygulanan nesneleri kullanabilmek için etkinleştirilmelidir. Transact-SQL kullanarak CLR tümleştirmesini etkinleştirmek için, `sp_configure` saklı yordamının gösterildiği gibi `clr enabled` seçeneğini kullanın:  
   
-```  
+```sql  
 sp_configure 'clr enabled', 1  
 GO  
 RECONFIGURE  
 GO  
 ```  
   
- `clr enabled` Seçeneği 0 olarak ayarlayarak clr tümleştirmesini devre dışı bırakabilirsiniz. CLR tümleştirmesini devre dışı bıraktığınızda, SQL Server tüm CLR yordamlarını yürütmeyi durduruyor ve tüm uygulama etki alanlarını kaldırır.  
+ @No__t-0 seçeneğini 0 olarak ayarlayarak CLR tümleştirmesini devre dışı bırakabilirsiniz. CLR tümleştirmesini devre dışı bıraktığınızda, SQL Server tüm CLR yordamlarını yürütmeyi durduruyor ve tüm uygulama etki alanlarını kaldırır.  
   
  Daha ayrıntılı bilgi için, kullanmakta olduğunuz SQL Server sürümü için SQL Server Books Online sürümüne bakın.  
   

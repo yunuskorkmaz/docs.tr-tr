@@ -9,19 +9,19 @@ helpviewer_keywords:
 - -rootnamespace compiler option [Visual Basic]
 - rootnamespace compiler option [Visual Basic]
 ms.assetid: e9245edf-6bef-420d-a7c7-324117752783
-ms.openlocfilehash: ff4b1729f1b9fb1d698b4b5b1e3711ce3d27b4db
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4df4e74fc13c922f51f5b74c3c152bdea28b4431
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61639041"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005202"
 ---
 # <a name="-rootnamespace"></a>-rootnamespace
-Tüm tür bildirimleri için bir ad alanını belirtir.  
+Tüm tür bildirimleri için bir ad alanı belirtir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```console  
 -rootnamespace:namespace  
 ```  
   
@@ -29,19 +29,19 @@ Tüm tür bildirimleri için bir ad alanını belirtir.
   
 |Terim|Tanım|  
 |---|---|  
-|`namespace`|Geçerli proje için tüm tür bildirimleri içine almak, ad alanının adı.|  
+|`namespace`|Geçerli proje için tüm tür bildirimlerinin içine alınacağı ad alanının adı.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Visual Studio yürütülebilir dosyası (Devenv.exe) oluşturulmuş bir projeyi derlemek için Visual Studio tümleşik geliştirme ortamında kullanım kullanırsanız `-rootnamespace` değerini belirtmek için <xref:VSLangProj80.VBProjectProperties3.RootNamespace%2A> özelliği. Bkz: [Devenv komut satırı anahtarları](/visualstudio/ide/reference/devenv-command-line-switches) daha fazla bilgi için.  
+ Visual Studio tümleşik geliştirme ortamında oluşturulan bir projeyi derlemek için Visual Studio yürütülebilir dosyası (devenv. exe) kullanırsanız, <xref:VSLangProj80.VBProjectProperties3.RootNamespace%2A> özelliğinin değerini belirtmek için `-rootnamespace` ' ı kullanın. Daha fazla bilgi için bkz. [Devenv komut satırı anahtarları](/visualstudio/ide/reference/devenv-command-line-switches) .  
   
- Ortak dil çalışma zamanı MSIL Disassembler kullanın (`Ildasm.exe`), çıkış dosyasında ad alanı adları görüntülemek için.  
+ Çıkış dosyanızdaki ad alanı adlarını görüntülemek için ortak dil çalışma zamanı MSIL Disassembler (`Ildasm.exe`) kullanın.  
   
-|-Rootnamespace Visual Studio tümleşik geliştirme ortamında ayarlamak için|  
+|Visual Studio tümleşik geliştirme ortamında Set-RootNamespace|  
 |---|  
-|1.  Seçili bir projeyi **Çözüm Gezgini**. Üzerinde **proje** menüsünü tıklatın **özellikleri**. <br />2.  Tıklayın **uygulama** sekmesi.<br />3.  Değer değiştirme **kök Namespace** kutusu.|  
+|1. **Çözüm Gezgini**bir proje seçili olmalıdır. **Proje** menüsünde **Özellikler**' e tıklayın. <br />2. **uygulama** sekmesine tıklayın.<br />3. **kök ad alanı** kutusundaki değeri değiştirin.|  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod derlenir `In.vb` ve ad alanındaki tüm tür bildirimleri kapsayan `mynamespace`.  
+ Aşağıdaki kod `In.vb` derler ve ad alanındaki tüm tür bildirimlerini `mynamespace` ' de barındırır.  
   
 ```console
 vbc -rootnamespace:mynamespace in.vb  

@@ -6,19 +6,19 @@ helpviewer_keywords:
 - /nowarn compiler option [Visual Basic]
 - -nowarn compiler option [Visual Basic]
 ms.assetid: 7ebf2106-0652-4fdc-bf60-70fc86465d83
-ms.openlocfilehash: 31f7a2b771cfa1bcc6581d720aa0de3505aec826
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 880fdf4931dadea547d64d0506bd3e978956468e
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61788992"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005405"
 ---
 # <a name="-nowarn"></a>-nowarn
-Derleyicinin, uyarı oluşturma yeteneğini engeller.  
+Derleyicinin uyarı oluşturma yeteneğini engeller.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```console  
 -nowarn[:numberList]  
 ```  
   
@@ -26,28 +26,28 @@ Derleyicinin, uyarı oluşturma yeteneğini engeller.
   
 |Terim|Tanım|  
 |---|---|  
-|`numberList`|İsteğe bağlı. Derleyici göndermeme uyarı kimliği numaralarını virgülle ayrılmış liste. Uyarı kimlikleri belirtilmezse, tüm uyarıları görüntülenmez.|  
+|`numberList`|İsteğe bağlı. Derleyicinin bastırmaları gereken uyarı KIMLIĞI numaralarının virgülle ayrılmış listesi. Uyarı kimlikleri belirtilmemişse, tüm uyarılar bastırılır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `-nowarn` Seçeneği derleyici uyarıları oluşturmaya değil neden olur. Tek bir uyarıyı bastırmak için uyarı kimliği sağlayın. `-nowarn` izleyen iki nokta üst üste seçeneği. Birden çok uyarı numaralarını virgülle ayırın.  
+ @No__t-0 seçeneği derleyicinin uyarı üretmesine neden olur. Tek bir uyarıyı bastırmak için, iki nokta üst üste takip eden `-nowarn` seçeneğine uyarı KIMLIĞINI sağlayın. Birden çok uyarı numarasını virgülle ayırın.  
   
- Uyarı tanımlayıcısının yalnızca sayısal parçası belirtmeniz gerekir. Örneğin, BC42024, kullanılmayan yerel değişkenler için uyarıyı gizlemek istiyorsanız belirtin `-nowarn:42024`.  
+ Uyarı tanımlayıcısının yalnızca sayısal kısmını belirtmeniz gerekir. Örneğin, kullanılmayan yerel değişkenlerin uyarısı olan BC42024 ' ı bastırmak istiyorsanız `-nowarn:42024` belirtin.  
   
- Uyarı Kimliği numaralarını hakkında daha fazla bilgi için bkz. [Visual Basic'teki uyarıları yapılandırma](/visualstudio/ide/configuring-warnings-in-visual-basic).  
+ Uyarı KIMLIĞI numaraları hakkında daha fazla bilgi için bkz. [Visual Basic uyarıları yapılandırma](/visualstudio/ide/configuring-warnings-in-visual-basic).  
   
-|-Nowarn Visual Studio tümleşik geliştirme ortamında ayarlamak için|  
+|Visual Studio tümleşik geliştirme ortamında-nowarn 'yi ayarlamak için|  
 |---|  
-|1.  Seçili bir projeyi **Çözüm Gezgini**. Üzerinde **proje** menüsünü tıklatın **özellikleri**. <br />2.  Tıklayın **derleme** sekmesi.<br />3.  Seçin **tüm uyarıları devre dışı bırak** tüm uyarıları devre dışı bırakmak için onay kutusunu işaretleyin.<br />     - veya -<br />     Belirli bir uyarı devre dışı bırakmak için **hiçbiri** uyarı bitişik aşağı açılan listeden.|  
+|1. **Çözüm Gezgini**bir proje seçili olmalıdır. **Proje** menüsünde **Özellikler**' e tıklayın. <br />2. **Derle** sekmesine tıklayın.<br />3. tüm uyarıları devre dışı bırakmak için **tüm uyarıları devre dışı bırak** onay kutusunu seçin.<br />     veya<br />     Belirli bir uyarıyı devre dışı bırakmak için, uyarının yanındaki açılan listeden **hiçbiri** ' ne tıklayın.|  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod derlenir `T2.vb` ve tüm uyarıları göstermez.  
+ Aşağıdaki kod `T2.vb` derler ve herhangi bir uyarı görüntülemez.  
   
 ```console
 vbc -nowarn t2.vb  
 ```  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod derlenir `T2.vb` ve kullanılmayan yerel değişkenler (42024) için uyarıları göstermez.  
+ Aşağıdaki kod `T2.vb` derler ve kullanılmayan yerel değişkenler için uyarıları görüntülemez (42024).  
   
 ```console
 vbc -nowarn:42024 t2.vb  

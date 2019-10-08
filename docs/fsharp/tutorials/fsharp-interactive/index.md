@@ -1,15 +1,15 @@
 ---
-title: F# Etkileşimli (fsi.exe) Başvurusu
+title: F#Etkileşimli (fsi. exe) başvurusu
 description: Etkileşimli ( F# fsi. exe) bir kodu konsolda etkileşimli olarak çalıştırmak F# veya betikleri yürütmek F# için nasıl kullanılacağını öğrenin.
 ms.date: 05/16/2016
-ms.openlocfilehash: 4e6ea1e42be180e88349acc9da7d5ef19a8ddedd
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 4e8521677cad5f4e62d2822837818292c55da96d
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71214262"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72002067"
 ---
-# <a name="interactive-programming-with-f"></a>F ile etkileşimli programlama\#
+# <a name="interactive-programming-with-f"></a>F @ no__t ile etkileşimli programlama-0
 
 > [!NOTE]
 > Bu makalede şu anda yalnızca Windows deneyimi açıklanmaktadır.  Yeniden yazılır.
@@ -22,10 +22,10 @@ F#Etkileşimli (fsi. exe) kodu konsolda etkileşimli olarak F# çalıştırmak v
 Konsolundan etkileşimli F# çalıştırmak için, fsi. exe ' yi çalıştırın.  Şu şekilde fsi. exe ' yi bulacaksınız:
 
 ```console
-C:\Program Files (x86)\Microsoft Visual Studio\2017\<sku>\Common7\IDE\CommonExtensions\Microsoft\FSharp
+C:\Program Files (x86)\Microsoft Visual Studio\2019\<sku>\Common7\IDE\CommonExtensions\Microsoft\FSharp
 ```
 
-nerede `sku` `Community`, veyaolur`Enterprise`. `Professional`
+`sku` `Community`, `Professional` ya da `Enterprise` ' dir.
 
 Kullanılabilen komut satırı seçenekleri hakkında daha fazla bilgi için bkz [ F# . Interactive Options](../../language-reference/fsharp-interactive-options.md).
 
@@ -43,7 +43,7 @@ Bazı kitaplıklara başvuruda bulunan bir proje açıksa, F# **Çözüm Gezgini
 
 Ayarları ayarlayarak F# etkileşimli komut satırı bağımsız değişkenlerini (Seçenekler) kontrol edebilirsiniz. **Araçlar** menüsünde **Seçenekler...** ' i seçin ve ardından  **F# araçlar**' ı genişletin. Değiştirebileceğiniz iki ayar F# etkileşimli seçenekler ve **64-bit F# etkileşimli** ayarıdır ve yalnızca, bir 64 bit makinede F# etkileşimli olarak çalışıyorsanız ilgilidir. Bu ayar, bir 32 bit veya 64 bit işlem olarak çalıştırılıp çalıştırılmayacağını anlamak için makine mimarisini kullanan fsi. exe veya fsıanycpu. exe ' nin adanmış 64 bit sürümünü çalıştırmak isteyip istemediğinizi belirler.
 
-## <a name="scripting-with-f"></a>F ile betik oluşturma\#
+## <a name="scripting-with-f"></a>F @ no__t-0 ile betik oluşturma
 Betikler **. FSX** veya **. fsscript**dosya uzantısını kullanır. Kaynak kodu derlemek ve daha sonra derlenen derlemeyi çalıştırmak yerine, yalnızca **fsi. exe** ' yi çalıştırabilir ve F# Kaynak Kodu betiğinin dosya adını belirtebilir, kodu F# etkileşimli olarak okur ve gerçek zamanlı olarak yürütür.
 
 ## <a name="differences-between-the-interactive-scripting-and-compiled-environments"></a>Etkileşimli, komut dosyası ve derlenmiş ortamlar arasındaki farklar
@@ -51,7 +51,7 @@ Etkileşimli olarak F# kod derlerken, ister etkileşimli çalışıyor ister bir
 
 Etkileşimli olarak F# , derleyicisini yürütürken kullanılamayan komut dosyalarını yürütürken bazı yönergeler kullanılabilir. Aşağıdaki tabloda, etkileşimli kullanırken F# kullanılabilen yönergeler özetlenmektedir.
 
-|Yönergesi|Açıklama|
+|Deki|Açıklama|
 |---------|-----------|
 |**#help**|Kullanılabilir yönergeler hakkındaki bilgileri görüntüler.|
 |**#I**|Bir derleme arama yolunu tırnak işaretleri halinde belirtir.|
@@ -97,5 +97,5 @@ test
 
 |Başlık|Açıklama|
 |-----|-----------|
-|[F# Interactive Seçenekleri](../../language-reference/fsharp-interactive-options.md)|F# Etkileşimli, fsi. exe için komut satırı söz dizimini ve seçeneklerini açıklar.|
+|[F#Etkileşimli Seçenekler](../../language-reference/fsharp-interactive-options.md)|F# Etkileşimli, fsi. exe için komut satırı söz dizimini ve seçeneklerini açıklar.|
 |[F#Etkileşimli kitaplık başvurusu](https://msdn.microsoft.com/visualfsharpdocs/conceptual/fsharp-interactive-library-reference)|Etkileşimli olarak F# kod yürütürken kullanılabilen kitaplık işlevlerini açıklar.|

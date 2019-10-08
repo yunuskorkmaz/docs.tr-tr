@@ -9,24 +9,24 @@ helpviewer_keywords:
 - colors of elements [WPF], changing
 - elements [WPF], changing color of
 ms.assetid: 7e246802-3625-47a7-ae9d-c8a2a40fd040
-ms.openlocfilehash: 744963cc543110121a777e1d4c3cdcb3cec40d9e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5c59dc5f2f8f26fac69933f9ef641a3a51306619
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61776902"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72004827"
 ---
 # <a name="how-to-change-the-color-of-an-element-using-focus-events"></a>Nasıl yapılır: Odak Olaylarını Kullanarak Öğenin Rengini Değiştirme
-Bu örnek, kazançlar ve odağından kullanarak öğenin rengini değiştirme gösterir <xref:System.Windows.UIElement.GotFocus> ve <xref:System.Windows.UIElement.LostFocus> olayları.  
+Bu örnek, <xref:System.Windows.UIElement.GotFocus> ve <xref:System.Windows.UIElement.LostFocus> olaylarını kullanarak odak kazanırsa ve kaybettiğinde bir öğenin renginin nasıl değiştirileceğini gösterir.  
   
- Bu örnekte oluşan bir [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] dosyası ve bir arka plan kod dosyası.  
+ Bu örnek [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] dosyasından ve arka plan kod dosyasından oluşur.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki [!INCLUDE[TLA2#tla_titlexaml](../../../../includes/tla2sharptla-titlexaml-md.md)] iki oluşur kullanıcı arabirimi oluşturan <xref:System.Windows.Controls.Button> nesneleri ve ekler için olay işleyicileri <xref:System.Windows.UIElement.GotFocus> ve <xref:System.Windows.UIElement.LostFocus> olayları <xref:System.Windows.Controls.Button> nesneleri.  
+ Aşağıdaki XAML, iki <xref:System.Windows.Controls.Button> nesnesinden oluşan Kullanıcı arabirimini oluşturur ve <xref:System.Windows.Controls.Button> nesnelerine <xref:System.Windows.UIElement.GotFocus> ve <xref:System.Windows.UIElement.LostFocus> olayları için olay işleyicileri ekler.  
   
  [!code-xaml[gotfocusLostfocusEffectUsingEvent#GotLostFocusSampleXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/gotfocusLostfocusEffectUsingEvent/CSharp/Window1.xaml#gotlostfocussamplexaml)]  
   
- Aşağıdaki kod oluşturur <xref:System.Windows.UIElement.GotFocus> ve <xref:System.Windows.UIElement.LostFocus> olay işleyicileri.  Zaman <xref:System.Windows.Controls.Button> klavye odağı kazandığında <xref:System.Windows.Controls.Control.Background%2A> , <xref:System.Windows.Controls.Button> kırmızıya değiştirilir.  Zaman <xref:System.Windows.Controls.Button> klavye odağından <xref:System.Windows.Controls.Control.Background%2A> , <xref:System.Windows.Controls.Button> beyaz olarak değiştirilir.  
+ Aşağıdaki kod arkasında <xref:System.Windows.UIElement.GotFocus> ve <xref:System.Windows.UIElement.LostFocus> olay işleyicileri oluşturulur.  @No__t-0, klavye odağı aldığında, @no__t 2 ' nin <xref:System.Windows.Controls.Control.Background%2A> ' i kırmızıya değiştirilir.  @No__t-0 klavye odağını kaybettiğinde, <xref:System.Windows.Controls.Button> ' nin <xref:System.Windows.Controls.Control.Background%2A> ' i yeniden beyaza dönüştürülür.  
   
  [!code-csharp[gotfocusLostfocusEffectUsingEvent#GotLostFocusSampleEventHandlers](~/samples/snippets/csharp/VS_Snippets_Wpf/gotfocusLostfocusEffectUsingEvent/CSharp/Window1.xaml.cs#gotlostfocussampleeventhandlers)]
  [!code-vb[gotfocusLostfocusEffectUsingEvent#GotLostFocusSampleEventHandlers](~/samples/snippets/visualbasic/VS_Snippets_Wpf/gotfocusLostfocusEffectUsingEvent/VisualBasic/Window1.xaml.vb#gotlostfocussampleeventhandlers)]  

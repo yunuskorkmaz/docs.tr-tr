@@ -9,47 +9,47 @@ helpviewer_keywords:
 - netcf compiler option [Visual Basic]
 - /netcf compiler option [Visual Basic]
 ms.assetid: db7cfa59-c315-401c-a59b-0daf355343d6
-ms.openlocfilehash: 028fa148d0e5622648a5fdfff1789c3d0bfde057
-ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
+ms.openlocfilehash: 3df7e622f97a5a1291736180e3964b1b3deaea2f
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67268286"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005450"
 ---
 # <a name="-netcf"></a>-netcf
 
-.NET Compact Framework'ü hedefleyen derleyicinin ayarlar.
+.NET Compact Framework hedeflemek için derleyiciyi ayarlar.
 
 ## <a name="syntax"></a>Sözdizimi
 
-```
+```console
 -netcf
 ```
 
 ## <a name="remarks"></a>Açıklamalar
 
-`-netcf` Seçeneği tam .NET Framework yerine .NET Compact Framework'ü hedeflemek Visual Basic Derleyicisi neden olur. Yalnızca tam .NET Framework içinde mevcut olan dil işlevselliği devre dışı bırakıldı.
+@No__t-0 seçeneği, Visual Basic derleyicinin tam .NET Framework yerine .NET Compact Framework hedeflemesini sağlar. Yalnızca tam .NET Framework mevcut olan dil işlevselliği devre dışıdır.
 
-`-netcf` Seçeneği ile kullanılmak üzere tasarlanmıştır [- sdkpath](../../../visual-basic/reference/command-line-compiler/sdkpath.md). Devre dışı dil özellikleri `-netcf` aynı dil özellikleri ile hedeflenen dosyalarda mevcut olan `-sdkpath`.
+@No__t-0 seçeneği [-SdkPath](../../../visual-basic/reference/command-line-compiler/sdkpath.md)ile kullanılmak üzere tasarlanmıştır. @No__t-0 tarafından devre dışı bırakılan dil özellikleri, `-sdkpath` ile hedeflenen dosyalarda bulunmayan dil özellikleridir.
 
 > [!NOTE]
-> `-netcf` Seçeneği, Visual Studio geliştirme ortamında kullanılabilir değil; yalnızca komut satırından derleme yapılırken kullanılabilir. `-netcf` Seçeneği, Visual Basic cihaz projesi yüklendiğinde ayarlanır.
+> @No__t-0 seçeneği, Visual Studio geliştirme ortamı içinden kullanılamaz; yalnızca komut satırından derlenirken kullanılabilir. @No__t-0 seçeneği, bir Visual Basic cihaz projesi yüklendiğinde ayarlanır.
 
-`-netcf` Seçeneği aşağıdaki dil özellikleri değiştirir:
+@No__t-0 seçeneği aşağıdaki dil özelliklerini değiştirir:
 
-- [Son \<anahtar sözcüğü > deyimi](../../../visual-basic/language-reference/statements/end-keyword-statement.md) anahtar sözcüğü bir programın yürütülmesini sonlandıran, devre dışı bırakıldı. Aşağıdaki programın olmadan çalışır ve `-netcf` ile derleme zamanında başarısız olduğunda `-netcf`.
+- Bir programın yürütülmesini sonlandıran [End \<Anahtar sözcüğü > deyimin](../../../visual-basic/language-reference/statements/end-keyword-statement.md) anahtar sözcüğü devre dışı bırakıldı. Aşağıdaki program `-netcf` olmadan derlenir ve çalışır, ancak `-netcf` ile derleme zamanında başarısız olur.
 
   [!code-vb[VbVbalrCompiler#34](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCompiler/VB/netcf.vb#34)]
 
-- Geç bağlama, tüm formları içinde devre dışı bırakıldı. Tanınan geç bağlama senaryoları karşılaştı, derleme zamanı hatalarına üretilir. Aşağıdaki programın olmadan çalışır ve `-netcf` ile derleme zamanında başarısız olduğunda `-netcf`.
+- Tüm formlarda geç bağlama devre dışıdır. Derleme zamanı hataları, tanınan geç bağlama senaryolarıyla karşılaşıldığında oluşturulur. Aşağıdaki program `-netcf` olmadan derlenir ve çalışır, ancak `-netcf` ile derleme zamanında başarısız olur.
 
   [!code-vb[VbVbalrCompiler#35](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCompiler/VB/OptionStrictOff.vb#35)]
 
-- [Otomatik](../../../visual-basic/language-reference/modifiers/auto.md), [ANSI](../../../visual-basic/language-reference/modifiers/ansi.md), ve [Unicode](../../../visual-basic/language-reference/modifiers/unicode.md) değiştiriciler devre dışı bırakıldı. Söz dizimi [Declare Deyimi'nin](../../../visual-basic/language-reference/statements/declare-statement.md) deyimi için değişiklik de `Declare Sub|Function name Lib "library" [Alias "alias"] [([arglist])]`. Aşağıdaki kod etkisini gösterir `-netcf` bir derleme üzerinde.
+- [Auto](../../../visual-basic/language-reference/modifiers/auto.md), [ANSI](../../../visual-basic/language-reference/modifiers/ansi.md)ve [Unicode](../../../visual-basic/language-reference/modifiers/unicode.md) değiştiricileri devre dışıdır. [Declare ifade](../../../visual-basic/language-reference/statements/declare-statement.md) ifadesinin sözdizimi de `Declare Sub|Function name Lib "library" [Alias "alias"] [([arglist])]` olarak değiştirilir. Aşağıdaki kod bir derlemede `-netcf` ' ın etkisini gösterir.
 
   [!code-vb[VbVbalrCompiler#36](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCompiler/VB/OptionStrictOff.vb#36)]
 
-- Visual Basic kaldırılan Visual Basic 6.0 anahtar sözcüklerini kullanarak, farklı bir hata oluşturur, `-netcf` kullanılır. Bu, aşağıdaki anahtar sözcükler için hata iletileri etkiler:
+- Visual Basic kaldırılmış Visual Basic 6,0 anahtar sözcüklerini kullanmak `-netcf` kullanıldığında farklı bir hata oluşturur. Bu, aşağıdaki anahtar sözcüklerin hata iletilerini etkiler:
 
   - `Open`
 
@@ -85,7 +85,7 @@ ms.locfileid: "67268286"
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki kod derlenir `Myfile.vb` .NET Compact Framework ile mscorlib.dll'nin ve Microsoft.VisualBasic.dll'nin sürümlerini kullanan C sürücüsünde .NET Compact Framework'ün varsayılan yükleme dizini bulunamadı. Genellikle, .NET Compact Framework en son sürümünü kullanmanız gerekir.
+Aşağıdaki kod, C sürücüsündeki .NET Compact Framework varsayılan yükleme dizininde bulunan mscorlib. dll ve Microsoft. VisualBasic. dll sürümlerini kullanarak .NET Compact Framework `Myfile.vb` ' ı derler. Genellikle .NET Compact Framework en son sürümünü kullanırsınız.
 
 ```console
 vbc -netcf -sdkpath:"c:\Program Files\Microsoft Visual Studio .NET 2003\CompactFrameworkSDK\v1.0.5000\Windows CE " myfile.vb
