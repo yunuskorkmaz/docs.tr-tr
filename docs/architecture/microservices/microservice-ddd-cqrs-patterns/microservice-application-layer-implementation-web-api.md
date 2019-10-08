@@ -1,13 +1,13 @@
 ---
-title: Web API 'sini kullanarak mikro hizmet uygulama katmanını uygulama
+title: Web API’si kullanarak mikro hizmet uygulama katmanını uygulama
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | Bağımlılık ekleme ve ortalama düzenlerini ve bunların uygulama ayrıntılarını Web API 'SI uygulama katmanında anlayın.
 ms.date: 10/08/2018
-ms.openlocfilehash: 0f6f47dd5f67fb18695715e5cfc9179206ef6bcf
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: d462f692366575fd01842f41252fc96658fdcac5
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834361"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72002341"
 ---
 # <a name="implement-the-microservice-application-layer-using-the-web-api"></a>Web API 'sini kullanarak mikro hizmet uygulama katmanını uygulama
 
@@ -502,7 +502,7 @@ public async Task<IActionResult> ExecuteBusinessOperation([FromBody]RunOpCommand
 
 ### <a name="implement-idempotent-commands"></a>Idempotent komutlarını Uygula
 
-**Eshoponcontainers**'da, yukarıdaki sayıdan daha gelişmiş bir örnek, sıralama mikro hizmetinden CreateOrderCommand nesnesi gönderiliyor. Ancak, sipariş iş süreci biraz daha karmaşık olduğundan ve bizim örneğimizde, aslında sepet mikro hizmetinde başlatıldıklarından, CreateOrderCommand nesnesini gönderme eylemi, > adlı bir tümleştirme olay işleyicisinden gerçekleştirilir. UserCheckoutAcceptedIntegrationEvent.cs] (https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/IntegrationEvents/EventHandling/UserCheckoutAcceptedIntegrationEventHandler.cs) ' dan önceki daha basit örnekte olduğu gibi, istemci uygulamasından çağrılan basit bir WebAPI denetleyicisi yerine.
+**Eshoponcontainers**'da, yukarıdaki sayıdan daha gelişmiş bir örnek, sıralama mikro hizmetinden CreateOrderCommand nesnesi gönderiliyor. Ancak, sipariş iş süreci biraz daha karmaşıktır ve bizim örneğimizde, aslında sepet mikro hizmetinde başlatılır, CreateOrderCommand nesnesini gönderme eylemi, adlı [bir tümleştirme olay işleyiciden gerçekleştirilir. ](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/IntegrationEvents/EventHandling/UserCheckoutAcceptedIntegrationEventHandler.cs)Önceki daha basit örnekte olduğu gibi, istemci uygulamasından çağrılan basit bir WebAPI denetleyicisi yerine Usercheckoutacceptedıntegrationevent.
 
 Bununla birlikte, aşağıdaki kodda gösterildiği gibi, komutunu MediatR 'ye gönderme eylemi oldukça benzerdir.
 

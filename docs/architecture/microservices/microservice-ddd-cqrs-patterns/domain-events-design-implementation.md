@@ -2,12 +2,12 @@
 title: Etki alanı olayları. Tasarım ve uygulama
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | Toplamalar arasında iletişim kurmak için önemli bir kavram olan etki alanı olaylarının derinlemesine bir görünümünü alın.
 ms.date: 10/08/2018
-ms.openlocfilehash: 46341bbc3ee3e5713707cc6a18b678d51102b64d
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 4fe0c1fa04bbecb64783e070838ab796de4f90d6
+ms.sourcegitcommit: 10db6551ea3c971470cf5d2cc21ba1cbcefe5c55
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926553"
+ms.lasthandoff: 10/08/2019
+ms.locfileid: "72031845"
 ---
 # <a name="domain-events-design-and-implementation"></a>Etki alanı olayları: tasarım ve uygulama
 
@@ -21,9 +21,9 @@ Etki alanı olaylarının önemli bir avantajı, yan etkilerin açık olarak ifa
 
 Örneğin, yalnızca Entity Framework kullanıyorsanız ve bazı olayların yeniden eylemde olması gerekiyorsa, büyük olasılıkla olayın tetiklediği her şeyi kodlıyoruz. Bu nedenle kural, örtülü olarak, koda bağlı ve koda bakmamız gerekir. Bu durumda, kuralın burada uygulandığını fark edersiniz.
 
-Diğer taraftan, etki alanı olaylarının kullanılması kavramı açık hale getirir, çünkü bir `DomainEvent` ve en az bir tane `DomainEventHandler` vardır.
+Diğer taraftan, etki alanı olaylarının kullanılması kavramı açık hale getirir çünkü bir `DomainEvent` ve en az bir `DomainEventHandler` vardır.
 
-Örneğin, eshoponcontainers uygulamasında, bir sipariş oluşturulduğunda Kullanıcı bir alıcı `OrderStartedDomainEvent` haline gelir ve bu nedenle, `ValidateOrAddBuyerAggregateWhenOrderStartedDomainEventHandler`temel kavramda etkin hale getirilir.
+Örneğin, eShopOnContainers uygulamasında bir sipariş oluşturulduğunda, Kullanıcı bir alıcı haline gelir, bu nedenle `OrderStartedDomainEvent` oluşturulur ve `ValidateOrAddBuyerAggregateWhenOrderStartedDomainEventHandler` ' de işlenir.
 
 Kısaca etki alanı etkinlikleri, etki alanı uzmanları tarafından sağlanan ubititous diline bağlı olarak etki alanı kurallarını hızlı bir şekilde ifade etmenize yardımcı olur. Etki alanı olayları aynı etki alanındaki sınıflar arasındaki kaygıları daha iyi bir şekilde ayırmayı de olanaklı hale getirir.
 
@@ -61,7 +61,7 @@ Etki alanı olaylarını işlemek bir uygulama konusudur. Etki alanı modeli kat
 
 Etki alanı olayları, herhangi bir sayıda uygulama eylemini tetiklemek için de kullanılabilir ve daha fazla önemli olan bu sayının gelecekte ayrılmış bir şekilde artması için açık olması gerekir. Örneğin, sipariş başlatıldığında, bu bilgileri diğer toplamalara yaymak veya bildirimler gibi uygulama eylemlerini yükseltmek için bir etki alanı olayı yayımlamak isteyebilirsiniz.
 
-Anahtar noktası, bir etki alanı olayı gerçekleştiğinde yürütülecek eylemlerin açık sayısıdır. Sonuç olarak, etki alanı ve uygulamadaki eylemler ve kurallar büyüyecektir. Bir şeyin oluşması, ancak kodunuzun "tutkalla" ile (diğer bir deyişle, ile belirli nesneler kullanılarak `new`) bir kez eşitlenmesinin ardından, her yeni eylem eklemek için, çalışmayı değiştirmeniz gerekir ve test edilmiş kod.
+Anahtar noktası, bir etki alanı olayı gerçekleştiğinde yürütülecek eylemlerin açık sayısıdır. Sonuç olarak, etki alanı ve uygulamadaki eylemler ve kurallar büyüyecektir. Bir şeyin anlamı artar, ancak kodunuz "tutkalla" ile (diğer bir deyişle, `new` ile) birleştirildiğinde, her yeni eylem eklemek için de çalışmayı değiştirmeniz gerekir ve bu işlemler test edilen kod.
 
 Bu değişiklik yeni hatalara neden olabilir ve bu yaklaşım da [kesintisiz](https://en.wikipedia.org/wiki/SOLID) [açık/kapalı ilkesine](https://en.wikipedia.org/wiki/Open/closed_principle) karşı gider. Yalnızca, işlemleri düzenleyen özgün sınıf, [tek sorumluluk prensibi (SRP) Ile aynı](https://en.wikipedia.org/wiki/Single_responsibility_principle)şekilde büyütülür ve büyümeye devam edecektir.
 
@@ -84,7 +84,7 @@ Diğer taraftan, etki alanı olaylarını kullanıyorsanız, sorumlulukları Bu 
 
 Olay işleyicileri genellikle uygulama katmanında bulunur çünkü, mikro hizmet davranışı için depolar veya bir uygulama API 'SI gibi altyapı nesneleri kullanacaksınız. Bu anlamda, olay işleyicileri komut işleyicileriyle benzerdir, bu nedenle her ikisi de uygulama katmanının bir parçasıdır. Önemli fark, bir komutun yalnızca bir kez işlenmesi gerektiğidir. Her işleyici için farklı bir amaçla birden çok alıcı veya olay işleyicisi tarafından alınabileceğinden, bir etki alanı olayı sıfır veya *n* kez işlenebilir.
 
-Etki alanı başına açık sayıda işleyicinin olması, mevcut kodu etkilemeden, gerek olmadan birçok etki alanı kuralı eklemenize olanak tanır. Örneğin, aşağıdaki iş kuralının uygulanması çok sayıda olay işleyicisi (ya da yalnızca bir tane) eklemek kadar kolay olabilir:
+Etki alanı başına açık sayıda işleyicinin olması, mevcut kodu etkilemeden gereken sayıda etki alanı kuralı eklemenize olanak sağlar. Örneğin, aşağıdaki iş kuralının uygulanması çok sayıda olay işleyicisi (ya da yalnızca bir tane) eklemek kadar kolay olabilir:
 
 > Mağazadaki bir müşteri tarafından satın alınan toplam miktar, herhangi bir sayıda sipariş için $6.000 değerini aşarsa, her yeni siparişe% 10 kapalı indirimi uygular ve gelecekteki siparişler için bu indirimle ilgili bir e-posta ile müşteriyi bilgilendirir.
 
@@ -130,7 +130,7 @@ Burada, etki alanı olaylarının zaman uyumsuz olarak işlenebilmesi, olay nesn
 
 Sonraki soru, bir etki alanı olayının ilgili olay işleyicilerine ulaşmasını sağlayacak şekilde nasıl tetiklemedir. Birden çok yaklaşımdan yararlanabilirsiniz.
 
-UDI Dahan başlangıçta önerilir (örneğin, [etki alanı olayları](http://udidahan.com/2008/08/25/domain-events-take-2/)gibi bazı ilgili gönderilerde) olayları yönetmek ve yükseltmek için statik bir sınıf kullanın. Bu, DomainEvents adlı statik bir sınıfı içerebilir ve bu, etki alanı olaylarını, çağrıldığında, gibi `DomainEvents.Raise(Event myEvent)`bir sözdizimi kullanarak bir şekilde doğrudan tetikleyebilir. Jimmy Bogard bir blog gönderisi yazdı ([etki alanınızı güçlendirerek: Etki alanı](https://lostechies.com/jimmybogard/2010/04/08/strengthening-your-domain-domain-events/)olayları) benzer bir yaklaşımı öneriyor.
+UDI Dahan başlangıçta önerilir (örneğin, [etki alanı olayları](http://udidahan.com/2008/08/25/domain-events-take-2/)gibi bazı ilgili gönderilerde) olayları yönetmek ve yükseltmek için statik bir sınıf kullanın. Bu, DomainEvents adlı statik bir sınıfı içerebilir ve bu, etki alanı olaylarını, çağrıldığında, `DomainEvents.Raise(Event myEvent)` gibi bir sözdizimi kullanarak doğrudan tetikleyebilir. Jimmy Bogard, benzer bir yaklaşım öneren bir blog gönderisi ([etki alanınızı güçleyebilirsiniz: etki alanı olayları](https://lostechies.com/jimmybogard/2010/04/08/strengthening-your-domain-domain-events/)) yazdı.
 
 Ancak, etki alanı olayları sınıfı statikse, Ayrıca, işleyiciler için hemen de dağıtım yapılır. Bu, test ve hata ayıklamayı daha zor hale getirir, çünkü yan etkileri olan olay işleyicileri olay oluşturulduktan hemen sonra yürütülür. Test ve hata ayıklama yaparken, üzerine odaklanmak ve yalnızca geçerli toplama sınıflarında neler olduğunu yapmak istersiniz; başka toplamalar veya uygulama mantığı ile ilgili yan etkileri için aniden başka olay işleyicilerine yeniden yönlendirilmek istemezsiniz. Sonraki bölümde açıklandığı gibi diğer yaklaşımların gelişmesinin nedeni budur.
 
@@ -216,15 +216,15 @@ Toplamalar genelinde tek bir işlem yapılıp yapılmayacağını ve bu toplamal
 
 > Toplamaları kapsayan herhangi bir kuralın her zaman güncel olması beklenmez. Olay işleme, toplu işlem veya diğer güncelleştirme mekanizmaları aracılığıyla, diğer bağımlılıklar belirli bir süre içinde çözülebilir. (sayfa 128)
 
-Vaughn versuz, aşağıdaki [etkili toplama tasarımında şunu söylemiştir. Bölüm II: Toplamaları birlikte](https://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf)çalışır hale getirme:
+Vaughn versuz, aşağıdaki etkili toplama tasarımında şunu söylemiştir [. Bölüm II: toplamalar birlikte çalışır hale getirme](https://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf):
 
-> Bu nedenle, bir toplu örnek üzerinde bir komut yürütülerek bir veya daha fazla toplamada ek iş kurallarının yürütülmesi gerekir, nihai tutarlılık \[kullanın...\] Bir DDD modelinde nihai tutarlılığı desteklemeye yönelik pratik bir yöntem vardır. Toplama yöntemi bir veya daha fazla zaman uyumsuz aboneye teslim edilen zaman bir etki alanı olayını yayımlar.
+> Bu nedenle, bir toplama örneğinde bir komutun yürütülmesi için bir veya daha fazla toplamada ek iş kurallarının yürütülmesi gerekiyorsa, son tutarlılığı kullanın \[... \] bir DDD modelinde nihai tutarlılığı desteklemeye yönelik pratik bir yoldur. Toplama yöntemi bir veya daha fazla zaman uyumsuz aboneye teslim edilen zaman bir etki alanı olayını yayımlar.
 
 Bu kalationale, birçok toplama veya varlığı kapsayan işlemler yerine hassas işlemleri benimseme tabanlıdır. İkinci durumda, veritabanı kilitlerinin sayısının yüksek ölçeklenebilirlik gereksinimlerine sahip büyük ölçekli uygulamalarda önemli olacağı fikir. Yüksek düzeyde ölçeklenebilir uygulamaların birden çok toplama arasında anlık işlem tutarlılığı olmaması, nihai tutarlılık kavramını kabul etmenize yardımcı olur. Atomik değişiklikler genellikle işletme tarafından gerekli değildir ve belirli işlemler için atomik işlemler gerekip gerekmediğini söylemek için etki alanı uzmanlarının sorumluluğunda olması gerekir. Bir işlemin her zaman birden çok toplama arasında atomik bir işleme ihtiyacı varsa, toplamanız büyük veya doğru şekilde tasarlanmamalıdır.
 
 Ancak, Jimmy Bogard gibi diğer geliştiriciler ve mimarlar, tek bir işlemi birkaç toplama arasında dağıtmayı, ancak yalnızca bu ek toplamalar aynı orijinal komutun yan etkileri ile ilgili olduğunda geçerlidir. Örneğin, [daha Iyi bir etki alanı olayları](https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/)düzeninde Bogard şöyle diyor:
 
-> Genellikle, bir etki alanı olayının yan etkilerinin aynı mantıksal işlem içinde gerçekleşmesini istiyorum, ancak etki alanı olayını \[yükseltmek için aynı kapsamda olması gerekmez...\] İşleminizi işlemeden hemen önce, olaylarımızı ilgili işleyicilerle gönderiyoruz.
+> Genellikle, bir etki alanı olayının yan etkilerinin aynı mantıksal işlem içinde gerçekleşmesini istiyorum, ancak \[... \] etki alanı olayını yükseltmeden hemen önce, olaylarımızı işlemeden ileridir.
 
 İlk işlemi gerçekleştirmeden *önce* etki alanı olaylarını dağıtırsanız, bu olayların yan etkilerinin aynı işleme dahil edilmesini istiyor olabilirsiniz. Örneğin, EF DbContext SaveChanges yöntemi başarısız olursa işlem, ilgili etki alanı olay işleyicileri tarafından uygulanan herhangi bir yan efekt işleminin sonucu da dahil olmak üzere tüm değişiklikleri geri alınacaktır. Bunun nedeni, DbContext yaşam kapsamının varsayılan olarak "kapsamlıdır" olarak tanımlanmış olmasından kaynaklanır. Bu nedenle, DbContext nesnesi aynı kapsam veya nesne grafiğinde oluşturulan birden çok depo nesnesi arasında paylaşılır. Bu saatle çakışan Web API 'SI veya MVC uygulamaları geliştirirken HttpRequest kapsamıyla birlikte.
 
@@ -234,7 +234,7 @@ Telafi eylemlerine izin veren bir yol, etki alanı olaylarını, özgün işlemi
 
 Herhangi bir durumda, ihtiyacınız olan yaklaşımı seçebilirsiniz. Ancak ilk ertelenmiş yaklaşım — işlemeden önce olayları oluştururken tek bir işlem kullanmanız gerekir. EF Core ve ilişkisel bir veritabanı kullanırken en basit yaklaşım olur. Birçok iş durumunda uygulanması ve geçerli olması daha kolaydır. Ayrıca, eShopOnContainers 'daki sıralama mikro hizmetinde kullanılan yaklaşımdır.
 
-Ancak bu olayları ilgili olay işleyicileriyle nasıl gerçekten gönderir? Önceki örnekte gördüğünüz nesne nedir? `_mediator` Olaylar ile olay işleyicileri arasında eşleme yapmak için kullandığınız teknikler ve yapıtlar ile aynı olması gerekir.
+Ancak bu olayları ilgili olay işleyicileriyle nasıl gerçekten gönderir? Önceki örnekte gördüğünüz `_mediator` nesnesi nedir? Olaylar ile olay işleyicileri arasında eşleme yapmak için kullandığınız teknikler ve yapıtlar ile aynı olması gerekir.
 
 ### <a name="the-domain-event-dispatcher-mapping-from-events-to-event-handlers"></a>Etki alanı olay dağıtıcısı: olaylardan olay işleyicilerine eşleme
 
@@ -353,30 +353,30 @@ Belirtildiği gibi, etki alanınız içindeki değişikliklerin yan etkilerini a
 - **Jimmy Bogard. Daha iyi bir etki alanı olayları deseninin** \
   <https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/>
 
-- **Vaughn versuz. Etkili toplu tasarım bölümü II: Toplamaları birlikte çalışır hale getirme** \
+- **Vaughn versuz. Etkili toplu tasarım bölümü II: toplamalar @no__t birlikte çalışır hale getirme**-1
   [https://dddcommunity.org/wp-content/uploads/files/pdf\_articles/Vernon\_2011\_2.pdf](https://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf)
 
-- **Jimmy Bogard. Etki alanınızı güçlendirerek: Etki alanı olayları** \
+- **Jimmy Bogard. Etki alanınızı güçlendirerek: etki alanı olayları** \
   <https://lostechies.com/jimmybogard/2010/04/08/strengthening-your-domain-domain-events/>
 
-- **Üzerinde bulunan Truong. Etki alanı olayları deseninin örneği** \
+- Üzerinde bulunan **Truong. Etki alanı olayları deseninin örneği** \
   <https://www.tonytruong.net/domain-events-pattern-example/>
 
-- **UDI Dahan. Tamamen kapsüllenmiş etki alanı modelleri oluşturma** \
+- **UDI Dahan. Tam kapsüllenmiş etki alanı modelleri oluşturma** \
   <http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/>
 
-- **UDI Dahan. Etki alanı olayları – 2. alın** \
+- **UDI Dahan. Etki alanı olayları – 2 @no__t al**-1
   <http://udidahan.com/2008/08/25/domain-events-take-2/>
 
-- **UDI Dahan. Etki alanı olayları-sallanmayı** \
+- **UDI Dahan. Etki alanı olayları-Sal@no__t**-1
   <http://udidahan.com/2009/06/14/domain-events-salvation/>
 
 - **Jan kroni. Etki alanı olaylarını yayımlamayın, döndürün!** \
   <https://blog.jayway.com/2013/06/20/dont-publish-domain-events-return-them/>
 
-- **Cesar de La Torre. Etki alanı olayları ile DDD ve mikro hizmet mimarilerinde tümleştirme olayları** \
+- **Cesar de La Torre. Etki alanı olayları ile ve mikro hizmet mimarilerinde @no__t tümleştirme olayları**-1
   <https://devblogs.microsoft.com/cesardelatorre/domain-events-vs-integration-events-in-domain-driven-design-and-microservices-architectures/>
 
 >[!div class="step-by-step"]
->[Önceki](client-side-validation.md)İleri
->[](infrastructure-persistence-layer-design.md)
+>[Önceki](client-side-validation.md)
+>[İleri](infrastructure-persistence-layer-design.md)
