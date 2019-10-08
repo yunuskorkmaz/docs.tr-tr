@@ -1,5 +1,5 @@
 ---
-title: Join Tümcesi (Visual Basic)
+title: JOIN tümcesi (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - vb.QueryJoinIn
@@ -10,63 +10,63 @@ helpviewer_keywords:
 - Join statement [Visual Basic]
 - Join clause [Visual Basic]
 ms.assetid: 6dd37936-b27c-4e00-98ad-154b23f4de64
-ms.openlocfilehash: 21432b95b30ae38ac2cbc9e55b5a3066f0bef665
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8eab7db00515f55b086b5e1beddd149f966cb27a
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945294"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72001930"
 ---
-# <a name="join-clause-visual-basic"></a><span data-ttu-id="50871-102">Join Tümcesi (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="50871-102">Join Clause (Visual Basic)</span></span>
-<span data-ttu-id="50871-103">İki koleksiyonu tek bir koleksiyon halinde birleştirir.</span><span class="sxs-lookup"><span data-stu-id="50871-103">Combines two collections into a single collection.</span></span> <span data-ttu-id="50871-104">Birleştirme işlemi anahtarların eşleşmesi temeline göre ve kullandığı `Equals` işleci.</span><span class="sxs-lookup"><span data-stu-id="50871-104">The join operation is based on matching keys and uses the `Equals` operator.</span></span>  
+# <a name="join-clause-visual-basic"></a><span data-ttu-id="79f71-102">JOIN tümcesi (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="79f71-102">Join Clause (Visual Basic)</span></span>
+<span data-ttu-id="79f71-103">İki koleksiyonu tek bir koleksiyon halinde birleştirir.</span><span class="sxs-lookup"><span data-stu-id="79f71-103">Combines two collections into a single collection.</span></span> <span data-ttu-id="79f71-104">JOIN işlemi, eşleşen anahtarlara dayalıdır ve `Equals` işlecini kullanır.</span><span class="sxs-lookup"><span data-stu-id="79f71-104">The join operation is based on matching keys and uses the `Equals` operator.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="50871-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="50871-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="79f71-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="79f71-105">Syntax</span></span>  
   
-```  
+```vb  
 Join element In collection _  
   [ joinClause _ ]   
   [ groupJoinClause ... _ ]   
 On key1 Equals key2 [ And key3 Equals key4 [... ]  
 ```  
   
-## <a name="parts"></a><span data-ttu-id="50871-106">Bölümler</span><span class="sxs-lookup"><span data-stu-id="50871-106">Parts</span></span>  
+## <a name="parts"></a><span data-ttu-id="79f71-106">Parçaya</span><span class="sxs-lookup"><span data-stu-id="79f71-106">Parts</span></span>  
  `element`  
- <span data-ttu-id="50871-107">Gerekli.</span><span class="sxs-lookup"><span data-stu-id="50871-107">Required.</span></span> <span data-ttu-id="50871-108">Denetim değişkeni birleştirilen koleksiyonu.</span><span class="sxs-lookup"><span data-stu-id="50871-108">The control variable for the collection being joined.</span></span>  
+ <span data-ttu-id="79f71-107">Gereklidir.</span><span class="sxs-lookup"><span data-stu-id="79f71-107">Required.</span></span> <span data-ttu-id="79f71-108">Birleştirilen koleksiyonun denetim değişkeni.</span><span class="sxs-lookup"><span data-stu-id="79f71-108">The control variable for the collection being joined.</span></span>  
   
  `collection`  
- <span data-ttu-id="50871-109">Gerekli.</span><span class="sxs-lookup"><span data-stu-id="50871-109">Required.</span></span> <span data-ttu-id="50871-110">Sol tarafında belirtilen toplama ile birleştirmek için koleksiyon `Join` işleci.</span><span class="sxs-lookup"><span data-stu-id="50871-110">The collection to combine with the collection identified on the left side of the `Join` operator.</span></span> <span data-ttu-id="50871-111">A `Join` yan tümcesi iç içe geçirilemez başka `Join` yan tümcesi veya bir `Group Join` yan tümcesi.</span><span class="sxs-lookup"><span data-stu-id="50871-111">A `Join` clause can be nested in another `Join` clause, or in a `Group Join` clause.</span></span>  
+ <span data-ttu-id="79f71-109">Gereklidir.</span><span class="sxs-lookup"><span data-stu-id="79f71-109">Required.</span></span> <span data-ttu-id="79f71-110">@No__t-0 işlecinin sol tarafında tanımlanan koleksiyonla birleştirilecek koleksiyon.</span><span class="sxs-lookup"><span data-stu-id="79f71-110">The collection to combine with the collection identified on the left side of the `Join` operator.</span></span> <span data-ttu-id="79f71-111">@No__t-0 yan tümcesi, başka bir `Join` yan tümcesinde veya `Group Join` yan tümcesinde iç içe olabilir.</span><span class="sxs-lookup"><span data-stu-id="79f71-111">A `Join` clause can be nested in another `Join` clause, or in a `Group Join` clause.</span></span>  
   
  `joinClause`  
- <span data-ttu-id="50871-112">İsteğe bağlı.</span><span class="sxs-lookup"><span data-stu-id="50871-112">Optional.</span></span> <span data-ttu-id="50871-113">Bir veya daha fazla ek `Join` daha da fazla yan tümce sorgu daraltın.</span><span class="sxs-lookup"><span data-stu-id="50871-113">One or more additional `Join` clauses to further refine the query.</span></span>  
+ <span data-ttu-id="79f71-112">İsteğe bağlı.</span><span class="sxs-lookup"><span data-stu-id="79f71-112">Optional.</span></span> <span data-ttu-id="79f71-113">Sorguyu daha da daraltmak için bir veya daha fazla ek `Join` yan tümcesi.</span><span class="sxs-lookup"><span data-stu-id="79f71-113">One or more additional `Join` clauses to further refine the query.</span></span>  
   
  `groupJoinClause`  
- <span data-ttu-id="50871-114">İsteğe bağlı.</span><span class="sxs-lookup"><span data-stu-id="50871-114">Optional.</span></span> <span data-ttu-id="50871-115">Bir veya daha fazla ek `Group Join` daha da fazla yan tümce sorgu daraltın.</span><span class="sxs-lookup"><span data-stu-id="50871-115">One or more additional `Group Join` clauses to further refine the query.</span></span>  
+ <span data-ttu-id="79f71-114">İsteğe bağlı.</span><span class="sxs-lookup"><span data-stu-id="79f71-114">Optional.</span></span> <span data-ttu-id="79f71-115">Sorguyu daha da daraltmak için bir veya daha fazla ek `Group Join` yan tümcesi.</span><span class="sxs-lookup"><span data-stu-id="79f71-115">One or more additional `Group Join` clauses to further refine the query.</span></span>  
   
- <span data-ttu-id="50871-116">`key1` `Equals` `key2`</span><span class="sxs-lookup"><span data-stu-id="50871-116">`key1` `Equals` `key2`</span></span>  
- <span data-ttu-id="50871-117">Gerekli.</span><span class="sxs-lookup"><span data-stu-id="50871-117">Required.</span></span> <span data-ttu-id="50871-118">Birleştirilen koleksiyonlar için anahtarları tanımlar.</span><span class="sxs-lookup"><span data-stu-id="50871-118">Identifies keys for the collections being joined.</span></span> <span data-ttu-id="50871-119">Kullanmalısınız `Equals` birleştirilen koleksiyonları'ndaki anahtarları Karşılaştırılacak işleci.</span><span class="sxs-lookup"><span data-stu-id="50871-119">You must use the `Equals` operator to compare keys from the collections being joined.</span></span> <span data-ttu-id="50871-120">Birleştirme koşulları kullanarak birleştirebilirsiniz `And` birden çok anahtar tanımlamak için işleci.</span><span class="sxs-lookup"><span data-stu-id="50871-120">You can combine join conditions by using the `And` operator to identify multiple keys.</span></span> <span data-ttu-id="50871-121">`key1` sol tarafındaki koleksiyondan olmalıdır `Join` işleci.</span><span class="sxs-lookup"><span data-stu-id="50871-121">`key1` must be from the collection on the left side of the `Join` operator.</span></span> <span data-ttu-id="50871-122">`key2` sağ alt tarafında koleksiyondan olmalıdır `Join` işleci.</span><span class="sxs-lookup"><span data-stu-id="50871-122">`key2` must be from the collection on the right side of the `Join` operator.</span></span>  
+ <span data-ttu-id="79f71-116">`key1` `Equals` `key2`</span><span class="sxs-lookup"><span data-stu-id="79f71-116">`key1` `Equals` `key2`</span></span>  
+ <span data-ttu-id="79f71-117">Gereklidir.</span><span class="sxs-lookup"><span data-stu-id="79f71-117">Required.</span></span> <span data-ttu-id="79f71-118">Katılmakta olan koleksiyonlar için anahtarları tanımlar.</span><span class="sxs-lookup"><span data-stu-id="79f71-118">Identifies keys for the collections being joined.</span></span> <span data-ttu-id="79f71-119">Birleştirilecek koleksiyonlardan anahtarları karşılaştırmak için `Equals` işlecini kullanmanız gerekir.</span><span class="sxs-lookup"><span data-stu-id="79f71-119">You must use the `Equals` operator to compare keys from the collections being joined.</span></span> <span data-ttu-id="79f71-120">Birden çok anahtarı belirlemek için `And` işlecini kullanarak Birleştirme koşullarını birleştirebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="79f71-120">You can combine join conditions by using the `And` operator to identify multiple keys.</span></span> <span data-ttu-id="79f71-121">`key1` `Join` işlecinin sol tarafındaki koleksiyonda olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="79f71-121">`key1` must be from the collection on the left side of the `Join` operator.</span></span> <span data-ttu-id="79f71-122">`key2`, `Join` işlecinin sağ tarafındaki koleksiyondan olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="79f71-122">`key2` must be from the collection on the right side of the `Join` operator.</span></span>  
   
- <span data-ttu-id="50871-123">Birleşim koşulunda kullanılan anahtarları koleksiyonundan birden fazla öğe içeren ifadeler olabilir.</span><span class="sxs-lookup"><span data-stu-id="50871-123">The keys used in the join condition can be expressions that include more than one item from the collection.</span></span> <span data-ttu-id="50871-124">Ancak, her anahtar ifadesi yalnızca kendi ilgili koleksiyondaki öğeler içerebilir.</span><span class="sxs-lookup"><span data-stu-id="50871-124">However, each key expression can contain only items from its respective collection.</span></span>  
+ <span data-ttu-id="79f71-123">JOIN koşulunda kullanılan anahtarlar, koleksiyondan birden fazla öğe içeren ifadeler olabilir.</span><span class="sxs-lookup"><span data-stu-id="79f71-123">The keys used in the join condition can be expressions that include more than one item from the collection.</span></span> <span data-ttu-id="79f71-124">Ancak, her anahtar ifadesi yalnızca ilgili koleksiyonundan öğe içerebilir.</span><span class="sxs-lookup"><span data-stu-id="79f71-124">However, each key expression can contain only items from its respective collection.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="50871-125">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="50871-125">Remarks</span></span>  
- <span data-ttu-id="50871-126">`Join` Yan tümcesi birleştirilen koleksiyonları anahtar değerlerinden eşleşmesi temeline göre iki koleksiyon birleştirir.</span><span class="sxs-lookup"><span data-stu-id="50871-126">The `Join` clause combines two collections based on matching key values from the collections being joined.</span></span> <span data-ttu-id="50871-127">Sonuçta elde edilen koleksiyon değerleri sol tarafında belirtilen koleksiyondaki herhangi bir birleşimini içerebilir `Join` işleci ile tanımlanan koleksiyonu `Join` yan tümcesi.</span><span class="sxs-lookup"><span data-stu-id="50871-127">The resulting collection can contain any combination of values from the collection identified on the left side of the `Join` operator and the collection identified in the `Join` clause.</span></span> <span data-ttu-id="50871-128">Sorgu tarafından koşulu için belirtilen sonuç döndürür `Equals` işleci karşılanıyorsa.</span><span class="sxs-lookup"><span data-stu-id="50871-128">The query will return only results for which the condition specified by the `Equals` operator is met.</span></span> <span data-ttu-id="50871-129">Bunun eşdeğeri olan bir `INNER JOIN` SQL.</span><span class="sxs-lookup"><span data-stu-id="50871-129">This is equivalent to an `INNER JOIN` in SQL.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="79f71-125">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="79f71-125">Remarks</span></span>  
+ <span data-ttu-id="79f71-126">@No__t-0 yan tümcesi, katılmakta olan koleksiyonlardan eşleşen anahtar değerlerini temel alarak iki koleksiyonu birleştirir.</span><span class="sxs-lookup"><span data-stu-id="79f71-126">The `Join` clause combines two collections based on matching key values from the collections being joined.</span></span> <span data-ttu-id="79f71-127">Elde edilen koleksiyon, `Join` işlecinin sol tarafında tanımlanan koleksiyondaki herhangi bir değer birleşimini ve `Join` yan tümcesinde tanımlanan koleksiyonu içerebilir.</span><span class="sxs-lookup"><span data-stu-id="79f71-127">The resulting collection can contain any combination of values from the collection identified on the left side of the `Join` operator and the collection identified in the `Join` clause.</span></span> <span data-ttu-id="79f71-128">Sorgu yalnızca `Equals` işleci tarafından belirtilen koşulun karşılandığı sonuçları döndürür.</span><span class="sxs-lookup"><span data-stu-id="79f71-128">The query will return only results for which the condition specified by the `Equals` operator is met.</span></span> <span data-ttu-id="79f71-129">Bu, SQL 'de `INNER JOIN` ile eşdeğerdir.</span><span class="sxs-lookup"><span data-stu-id="79f71-129">This is equivalent to an `INNER JOIN` in SQL.</span></span>  
   
- <span data-ttu-id="50871-130">Birden çok kullanabileceğiniz `Join` tek bir koleksiyon iki veya daha fazla koleksiyonlara katılmak için bir sorgu yan tümcelerinde.</span><span class="sxs-lookup"><span data-stu-id="50871-130">You can use multiple `Join` clauses in a query to join two or more collections into a single collection.</span></span>  
+ <span data-ttu-id="79f71-130">İki veya daha fazla koleksiyonu tek bir koleksiyonda birleştirmek için bir sorguda birden çok `Join` yan tümcesini kullanabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="79f71-130">You can use multiple `Join` clauses in a query to join two or more collections into a single collection.</span></span>  
   
- <span data-ttu-id="50871-131">Koleksiyonları olmadan birleştirmek için örtük bir birleşim gerçekleştirebileceğiniz `Join` yan tümcesi.</span><span class="sxs-lookup"><span data-stu-id="50871-131">You can perform an implicit join to combine collections without the `Join` clause.</span></span> <span data-ttu-id="50871-132">Bunu yapmak için birden çok dahil `In` yan tümcelerinde, `From` yan tümcesini belirtin bir `Where` birleştirme için kullanmak istediğiniz anahtarları tanımlayan yan tümcesi.</span><span class="sxs-lookup"><span data-stu-id="50871-132">To do this, include multiple `In` clauses in your `From` clause and specify a `Where` clause that identifies the keys that you want to use for the join.</span></span>  
+ <span data-ttu-id="79f71-131">@No__t-0 yan tümcesi olmadan koleksiyonları birleştirmek için örtük bir birleştirme gerçekleştirebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="79f71-131">You can perform an implicit join to combine collections without the `Join` clause.</span></span> <span data-ttu-id="79f71-132">Bunu yapmak için, `From` yan tümcesine birden çok `In` yan tümce ekleyin ve JOIN için kullanmak istediğiniz anahtarları tanımlayan bir `Where` yan tümcesi belirtin.</span><span class="sxs-lookup"><span data-stu-id="79f71-132">To do this, include multiple `In` clauses in your `From` clause and specify a `Where` clause that identifies the keys that you want to use for the join.</span></span>  
   
- <span data-ttu-id="50871-133">Kullanabileceğiniz `Group Join` koleksiyonları tek bir hiyerarşik koleksiyon halinde birleştirmek için yan tümcesi.</span><span class="sxs-lookup"><span data-stu-id="50871-133">You can use the `Group Join` clause to combine collections into a single hierarchical collection.</span></span> <span data-ttu-id="50871-134">Bu benzer bir `LEFT OUTER JOIN` SQL.</span><span class="sxs-lookup"><span data-stu-id="50871-134">This is like a `LEFT OUTER JOIN` in SQL.</span></span>  
+ <span data-ttu-id="79f71-133">Koleksiyonları tek bir hiyerarşik koleksiyonda birleştirmek için `Group Join` yan tümcesini kullanabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="79f71-133">You can use the `Group Join` clause to combine collections into a single hierarchical collection.</span></span> <span data-ttu-id="79f71-134">Bu, SQL 'de `LEFT OUTER JOIN` gibidir.</span><span class="sxs-lookup"><span data-stu-id="79f71-134">This is like a `LEFT OUTER JOIN` in SQL.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="50871-135">Örnek</span><span class="sxs-lookup"><span data-stu-id="50871-135">Example</span></span>  
- <span data-ttu-id="50871-136">Aşağıdaki kod örneği, müşterilerin listesini siparişlerini ile birleştirmek için örtük bir birleşim gerçekleştirir.</span><span class="sxs-lookup"><span data-stu-id="50871-136">The following code example performs an implicit join to combine a list of customers with their orders.</span></span>  
+## <a name="example"></a><span data-ttu-id="79f71-135">Örnek</span><span class="sxs-lookup"><span data-stu-id="79f71-135">Example</span></span>  
+ <span data-ttu-id="79f71-136">Aşağıdaki kod örneği, bir müşteri listesini siparişleriyle birlikte birleştirmek için örtük bir birleştirme gerçekleştirir.</span><span class="sxs-lookup"><span data-stu-id="79f71-136">The following code example performs an implicit join to combine a list of customers with their orders.</span></span>  
   
  [!code-vb[VbSimpleQuerySamples#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#13)]  
   
-## <a name="example"></a><span data-ttu-id="50871-137">Örnek</span><span class="sxs-lookup"><span data-stu-id="50871-137">Example</span></span>  
- <span data-ttu-id="50871-138">Aşağıdaki kod örneği iki koleksiyonu kullanarak birleştirir `Join` yan tümcesi.</span><span class="sxs-lookup"><span data-stu-id="50871-138">The following code example joins two collections by using the `Join` clause.</span></span>  
+## <a name="example"></a><span data-ttu-id="79f71-137">Örnek</span><span class="sxs-lookup"><span data-stu-id="79f71-137">Example</span></span>  
+ <span data-ttu-id="79f71-138">Aşağıdaki kod örneği, `Join` yan tümcesini kullanarak iki koleksiyonu birleştirir.</span><span class="sxs-lookup"><span data-stu-id="79f71-138">The following code example joins two collections by using the `Join` clause.</span></span>  
   
  [!code-vb[VbSimpleQuerySamples#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples2.vb#12)]  
   
- <span data-ttu-id="50871-139">Bu örnekte, aşağıdakine benzer bir çıktı oluşturur:</span><span class="sxs-lookup"><span data-stu-id="50871-139">This example will produce output similar to the following:</span></span>  
+ <span data-ttu-id="79f71-139">Bu örnek aşağıdakine benzer bir çıktı oluşturacaktır:</span><span class="sxs-lookup"><span data-stu-id="79f71-139">This example will produce output similar to the following:</span></span>  
   
  `winlogon (968), Windows Logon`  
   
@@ -74,12 +74,12 @@ On key1 Equals key2 [ And key3 Equals key4 [... ]
   
  `cmd (5136), Command Window`  
   
-## <a name="example"></a><span data-ttu-id="50871-140">Örnek</span><span class="sxs-lookup"><span data-stu-id="50871-140">Example</span></span>  
- <span data-ttu-id="50871-141">Aşağıdaki kod örneği iki koleksiyonu kullanarak birleştirir `Join` iki anahtar sütunlarıyla yan tümcesi.</span><span class="sxs-lookup"><span data-stu-id="50871-141">The following code example joins two collections by using the `Join` clause with two key columns.</span></span>  
+## <a name="example"></a><span data-ttu-id="79f71-140">Örnek</span><span class="sxs-lookup"><span data-stu-id="79f71-140">Example</span></span>  
+ <span data-ttu-id="79f71-141">Aşağıdaki kod örneği iki koleksiyon birleştirir `Join` yan tümcesini iki anahtar sütunla birlikte kullanarak.</span><span class="sxs-lookup"><span data-stu-id="79f71-141">The following code example joins two collections by using the `Join` clause with two key columns.</span></span>  
   
  [!code-vb[VbSimpleQuerySamples#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples3.vb#17)]  
   
- <span data-ttu-id="50871-142">Örneğin, aşağıdakine benzer bir çıktı oluşturur:</span><span class="sxs-lookup"><span data-stu-id="50871-142">The example will produce output similar to the following:</span></span>  
+ <span data-ttu-id="79f71-142">Örnek aşağıdakine benzer bir çıktı oluşturacaktır:</span><span class="sxs-lookup"><span data-stu-id="79f71-142">The example will produce output similar to the following:</span></span>  
   
  `winlogon (968), Windows Logon, Priority = 13`  
   
@@ -87,11 +87,11 @@ On key1 Equals key2 [ And key3 Equals key4 [... ]
   
  `explorer (2424), File Explorer, Priority = 8`  
   
-## <a name="see-also"></a><span data-ttu-id="50871-143">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="50871-143">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="79f71-143">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="79f71-143">See also</span></span>
 
-- [<span data-ttu-id="50871-144">Visual Basic'de LINQ'e giriş</span><span class="sxs-lookup"><span data-stu-id="50871-144">Introduction to LINQ in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
-- [<span data-ttu-id="50871-145">Sorgular</span><span class="sxs-lookup"><span data-stu-id="50871-145">Queries</span></span>](../../../visual-basic/language-reference/queries/index.md)
-- [<span data-ttu-id="50871-146">Select Yan Tümcesi</span><span class="sxs-lookup"><span data-stu-id="50871-146">Select Clause</span></span>](../../../visual-basic/language-reference/queries/select-clause.md)
-- [<span data-ttu-id="50871-147">From Yan Tümcesi</span><span class="sxs-lookup"><span data-stu-id="50871-147">From Clause</span></span>](../../../visual-basic/language-reference/queries/from-clause.md)
-- [<span data-ttu-id="50871-148">Group Join Yan Tümcesi</span><span class="sxs-lookup"><span data-stu-id="50871-148">Group Join Clause</span></span>](../../../visual-basic/language-reference/queries/group-join-clause.md)
-- [<span data-ttu-id="50871-149">Where Yan Tümcesi</span><span class="sxs-lookup"><span data-stu-id="50871-149">Where Clause</span></span>](../../../visual-basic/language-reference/queries/where-clause.md)
+- [<span data-ttu-id="79f71-144">Visual Basic LINQ 'e giriş</span><span class="sxs-lookup"><span data-stu-id="79f71-144">Introduction to LINQ in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [<span data-ttu-id="79f71-145">Sorgular</span><span class="sxs-lookup"><span data-stu-id="79f71-145">Queries</span></span>](../../../visual-basic/language-reference/queries/index.md)
+- [<span data-ttu-id="79f71-146">Select yan tümcesi</span><span class="sxs-lookup"><span data-stu-id="79f71-146">Select Clause</span></span>](../../../visual-basic/language-reference/queries/select-clause.md)
+- [<span data-ttu-id="79f71-147">From yan tümcesi</span><span class="sxs-lookup"><span data-stu-id="79f71-147">From Clause</span></span>](../../../visual-basic/language-reference/queries/from-clause.md)
+- [<span data-ttu-id="79f71-148">Group JOIN yan tümcesi</span><span class="sxs-lookup"><span data-stu-id="79f71-148">Group Join Clause</span></span>](../../../visual-basic/language-reference/queries/group-join-clause.md)
+- [<span data-ttu-id="79f71-149">WHERE yan tümcesi</span><span class="sxs-lookup"><span data-stu-id="79f71-149">Where Clause</span></span>](../../../visual-basic/language-reference/queries/where-clause.md)
