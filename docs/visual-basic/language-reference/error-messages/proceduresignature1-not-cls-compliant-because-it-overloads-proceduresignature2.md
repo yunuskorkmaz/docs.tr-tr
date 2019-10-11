@@ -1,5 +1,5 @@
 ---
-title: <proceduresignature1> CLS uyumlu değil çünkü <proceduresignature2> sırasıyla farklı kendisinden yalnızca dizi parametresi türleri dizisi veya dizi parametresi türleri dizisiyle
+title: Kendisinden yalnızca dizi parametresi türleri dizisiyle veya dizi parametresi türleri sırasıyla farklı olan <proceduresignature2> öğesini aşırı yüklediğinden <proceduresignature1> CLS uyumlu değil
 ms.date: 07/20/2015
 f1_keywords:
 - vbc40035
@@ -7,41 +7,41 @@ f1_keywords:
 helpviewer_keywords:
 - BC40035
 ms.assetid: 50a66dbe-2c1e-41bf-96bc-369301c891ac
-ms.openlocfilehash: 9006e12838581a98c7e7945278c7d767a3074259
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6143ebfbe7f131b0e196e531ed4282c8333be4ea
+ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64661794"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72250177"
 ---
-# <a name="proceduresignature1-is-not-cls-compliant-because-it-overloads-proceduresignature2-which-differs-from-it-only-by-array-of-array-parameter-types-or-by-the-rank-of-the-array-parameter-types"></a>\<proceduresignature1 > CLS uyumlu değil çünkü \<proceduresignature2 > sırasıyla farklı kendisinden yalnızca dizi parametresi türleri dizisi veya dizi parametresi türleri dizisiyle
-Bir yordam veya özellik olarak işaretlenmiş `<CLSCompliant(True)>` zaman başka bir yordam veya özellik geçersiz kılar ve kendi parametre listeleri arasındaki tek fark düzensiz bir dizi iç içe geçme düzeyi veya bir dizi derecesi.  
+# <a name="proceduresignature1-is-not-cls-compliant-because-it-overloads-proceduresignature2-which-differs-from-it-only-by-array-of-array-parameter-types-or-by-the-rank-of-the-array-parameter-types"></a>\<proceduresignature1 > CLS uyumlu değildir çünkü bundan yalnızca dizi parametresi türleri dizisiyle veya dizi parametresi türlerinin derecesine göre farklı olan \<proceduresignature2 > aşırı yükler
+
+Bir yordam veya özellik, başka bir yordamı veya özelliği geçersiz kıldığında `<CLSCompliant(True)>` olarak işaretlenir ve parametre listeleri arasındaki tek fark, pürüzlü bir dizinin veya bir dizinin derecelendirmesinin iç içe geçmiş düzeyidir.
   
- Aşağıdaki bildirimler, ikinci ve üçüncü bildirimleri bu hata oluşturur.  
+ Aşağıdaki bildirimlerde ikinci ve üçüncü bildirimler bu hatayı oluşturur:
   
- `Overloads Sub processArray(ByVal arrayParam() As Integer)`  
+ `Overloads Sub ProcessArray(arrayParam() As Integer)`  
   
- `Overloads Sub processArray(ByVal arrayParam()() As Integer)`  
+ `Overloads Sub ProcessArray(arrayParam()() As Integer)`  
   
- `Overloads Sub processArray(ByVal arrayParam(,) As Integer)`  
+ `Overloads Sub ProcessArray(arrayParam(,) As Integer)`  
   
- Özgün tek boyutlu parametresi ikinci bildirim değişiklikleri `arrayParam` oluşan bir dizi için. Üçüncü bildirimi değişiklikleri `arrayParam` iki boyutlu bir dizi (Boyut 2). Visual Basic bu değişiklikleri yalnızca biri tarafından farklı aşırı yüklemeler sağlar, ancak bu aşırı yükleme ile uyumlu değil [dil bağımsızlığı ve dilden bağımsız bileşenler](../../../standard/language-independence-and-language-independent-components.md) (CLS).  
+ İkinci bildirim, tek boyutlu `arrayParam` parametresini dizi dizileri olarak değiştirir. Üçüncü bildirim `arrayParam` ' i iki boyutlu diziye (sıra 2) değiştirir. Visual Basic aşırı yüklemelerin yalnızca bu değişikliklerden yalnızca biri tarafından farklı olmasına izin verdiğinden, bu aşırı yükleme [Dil bağımsızlığı ve dilden bağımsız bileşenler](../../../standard/language-independence-and-language-independent-components.md) (CLS) ile uyumlu değildir.  
   
- Uyguladığınızda <xref:System.CLSCompliantAttribute> bir programlama öğesine özniteliğin ayarladığınız `isCompliant` ya da parametre `True` veya `False` uyumluluk veya uyumsuzluk belirtmek için. Bu parametre için varsayılan yok ve bir değer sağlamanız gerekir.  
+ Bir programlama öğesine <xref:System.CLSCompliantAttribute> ' ı uyguladığınızda, `isCompliant` parametresini `True` ' ye veya `False` ' ü, uyumluluk veya uyumsuzluk olduğunu gösterecek şekilde ayarlarsınız. Bu parametre için varsayılan yoktur ve bir değer belirtmeniz gerekir.  
   
- Geçerli <xref:System.CLSCompliantAttribute> bir öğe için uyumsuz olarak değerlendirilir.  
+ @No__t-0 ' ı bir öğeye uygulamazsanız, uyumsuz olduğu kabul edilir.  
   
- Varsayılan olarak, bu iletiyi bir uyarıdır. Uyarıları gizleme veya uyarıları hata olarak değerlendirmesini hakkında daha fazla bilgi için bkz: [Visual Basic'teki uyarıları yapılandırma](/visualstudio/ide/configuring-warnings-in-visual-basic).  
+ Bu ileti, varsayılan olarak bir uyarıdır. Uyarıları gizleme veya uyarıları hata olarak değerlendirme hakkında daha fazla bilgi için bkz. [Visual Basic uyarıları yapılandırma](/visualstudio/ide/configuring-warnings-in-visual-basic).  
   
- **Hata Kimliği:** BC40035  
+ **Hata kimliği:** BC40035  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-- CLS uyumluluğu gerektiriyorsa, yalnızca bu Yardım sayfasında Alıntı yapılan değişiklikler dışındaki yöntemlerle birbirinden farklı aşırı yüklemelerine tanımlayın.  
-  
-- Aşırı yüklemeler farklı olduğunu gerekiyorsa yalnızca bu Yardım Alıntı yapılan değişiklikler sayfasında, kaldırmak <xref:System.CLSCompliantAttribute> tanımlarını gelen veya olarak işaretlerken `<CLSCompliant(False)>`.  
+- CLS uyumluluğu gerekiyorsa, yalnızca bu Yardım sayfasında alıntı yapılan değişikliklerden daha fazla şekilde, aşırı yüklerinizi birbirlerinden farklı olacak şekilde tanımlayın.
+- Aşırı yüklemelerin yalnızca bu Yardım sayfasında alıntı yapılan değişiklikler tarafından farklı olmasını istiyorsanız, <xref:System.CLSCompliantAttribute> ' ı tanımlarından kaldırın veya `<CLSCompliant(False)>` olarak işaretleyin.
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Yordam Aşırı Yüklemesi](../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md)
-- [Overloads](../../../visual-basic/language-reference/modifiers/overloads.md)
+- [Yordam Aşırı Yüklemesi](../../programming-guide/language-features/procedures/procedure-overloading.md)
+- [Overloads](../modifiers/overloads.md)

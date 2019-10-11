@@ -1,37 +1,35 @@
 ---
 title: Yönetilmeyen kitaplık yükleme algoritması-.NET Core
 description: .NET Core 'da yönetilmeyen derleme yükleme algoritmasının ayrıntılarının açıklaması
-ms.date: 08/09/2019
+ms.date: 10/09/2019
 author: sdmaclea
 ms.author: stmaclea
-ms.openlocfilehash: 8240cb730180637393e2545f8013d3f1439be719
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.openlocfilehash: c651aa6e0f37a968e6f8b26d1909def6fa488ccd
+ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70017331"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72250034"
 ---
 # <a name="unmanaged-native-library-loading-algorithm"></a>Yönetilmeyen (yerel) kitaplık yükleme algoritması
 
 Yönetilmeyen kitaplıklar, çeşitli aşamalar içeren bir algoritmayla bulunur ve yüklenir.
 
-Aşağıdaki algoritma, yerel kitaplıkların aracılığıyla `PInvoke`nasıl yükleneceğini açıklar.
+Aşağıdaki algoritma, yerel kitaplıkların `PInvoke` ile nasıl yükleneceğini açıklar.
 
-## <a name="pinvoke-load-library-algorithm"></a>`PInvoke`Yükleme Kitaplığı algoritması
+## <a name="pinvoke-load-library-algorithm"></a>`PInvoke` yükleme kitaplığı algoritması
 
-`PInvoke`yönetilmeyen bir derlemeyi yüklemeye çalışırken aşağıdaki algoritmayı kullanır:
+`PInvoke`, yönetilmeyen bir derlemeyi yüklemeye çalışırken aşağıdaki algoritmayı kullanır:
 
-1. `active` Öğesini<xref:System.Runtime.Loader.AssemblyLoadContext>saptayın. Yönetilmeyen yük kitaplığı için, `active` assemblyloadcontext, ' `PInvoke`ın çağıranıdır.
+1. @No__t-0 <xref:System.Runtime.Loader.AssemblyLoadContext> ' i saptayın. Yönetilmeyen bir yük kitaplığı için `active` AssemblyLoadContext, `PInvoke` tanımlayan derlemeden biridir.
 
-2. `active` İçin,derlemeyişuşekildeöncelik<xref:System.Runtime.Loader.AssemblyLoadContext>sırasına göre bulmayı deneyin:
+2. @No__t-0 <xref:System.Runtime.Loader.AssemblyLoadContext> için, derlemeyi şu şekilde öncelik sırasına göre bulmayı deneyin:
     * Önbelleği denetleniyor.
 
-    * İşlev tarafından ayarlanan <xref:System.Runtime.InteropServices.DllImportResolver?displayProperty=nameWithType> geçerli temsilciyi çağırma. <xref:System.Runtime.InteropServices.NativeLibrary.SetDllImportResolver(System.Reflection.Assembly,System.Runtime.InteropServices.DllImportResolver)?displayProperty=nameWithType>
+    * @No__t-1 işlevi tarafından ayarlanan geçerli <xref:System.Runtime.InteropServices.DllImportResolver?displayProperty=nameWithType> temsilcisi çağrılıyor.
 
-    * <xref:System.Runtime.Loader.AssemblyLoadContext.LoadUnmanagedDll%2A?displayProperty=nameWithType> İşlevi çağrılıyor.
+    * @No__t-1 AssemblyLoadContext üzerinde <xref:System.Runtime.Loader.AssemblyLoadContext.LoadUnmanagedDll%2A?displayProperty=nameWithType> işlevi çağrılıyor.
 
-    * Örneğin önbelleği denetleniyor ve [yönetilmeyen (yerel) kitaplık yoklama](default-probing.md#unmanaged-native-library-probing) mantığını çalıştırıyor. <xref:System.AppDomain>
+    * @No__t-0 örneğinin önbelleği denetleniyor ve [yönetilmeyen (yerel) kitaplık yoklama](default-probing.md#unmanaged-native-library-probing) mantığını çalıştırılıyor.
 
-    * Assemblyloadcontext`active` için olay oluşturma. <xref:System.Runtime.Loader.AssemblyLoadContext.ResolvingUnmanagedDll?displayProperty=nameWithType>
-
-3. Yönetilmeyen kitaplık yeni yüklenmişse, <xref:System.AppDomain.AssemblyLoad?displayProperty=nameWithType> olay tetiklenir.
+    * @No__t-1 AssemblyLoadContext için <xref:System.Runtime.Loader.AssemblyLoadContext.ResolvingUnmanagedDll?displayProperty=nameWithType> olayı oluşturma.

@@ -1,5 +1,5 @@
 ---
-title: .NET 'te JSON serileştirme
+title: .NET kullanarak C# JSON serisini serileştirme ve serisini kaldırma
 author: tdykstra
 ms.author: tdykstra
 ms.date: 09/16/2019
@@ -9,16 +9,16 @@ helpviewer_keywords:
 - serialization
 - objects, serializing
 ms.assetid: 4d1111c0-9447-4231-a997-96a2b74b3453
-ms.openlocfilehash: 6cb45fded220b6123dbf4461f5f1cf1c3556ff69
-ms.sourcegitcommit: a2d0e1f66367367065bc8dc0dde488ab536da73f
+ms.openlocfilehash: 5ce98a7908470a402779436db43333d46f5101fc
+ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71083089"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72180151"
 ---
-# <a name="json-serialization-in-net"></a>.NET 'te JSON serileştirme
+# <a name="json-serialization-in-net---overview"></a>.NET 'te JSON serileştirme-genel bakış
 
-Ad `System.Text.Json` alanı, JavaScript nesne gösterimi (JSON) öğesine ve öğesinden serileştirmek için işlevsellik sağlar.
+@No__t-0 ad alanı, JavaScript Nesne Gösterimi (JSON) ' den serileştirmek ve seri durumdan çıkarmak için işlevsellik sağlar.
 
 Kitaplık tasarımı, kapsamlı bir özellik kümesi üzerinden yüksek performans ve düşük bellek ayırmayı vurgular. Yerleşik UTF-8 desteği, UTF-8 olarak kodlanmış JSON metnini okuma ve yazma sürecini en iyi duruma getirir. Bu, Web ve disk üzerindeki dosyalardaki veriler için en yaygın kodlama olur.
 
@@ -29,13 +29,13 @@ Kitaplık Ayrıca, bellek içi belge nesne modeli (DOM) ile çalışmak için s�
 * Kitaplığı, [.NET Core 3,0](https://aka.ms/netcore3download) paylaşılan çerçevesinin bir parçası olarak yerleşik olarak bulunur.
 * Diğer hedef çerçeveler için [System. Text. JSON](https://www.nuget.org/packages/System.Text.Json) NuGet paketini yükler. Paket şunları destekler:
   * .NET Standard 2,0 ve sonraki sürümler
-  * .NET Framework 4,61 ve sonraki sürümler
-  * .NET Core 2,0 ve sonraki sürümleri
+  * .NET Framework 4.6.1 ve sonraki sürümler
+  * .NET Core 2,0, 2,1 ve 2,2
 
 ## <a name="additional-resources"></a>Ek kaynaklar
 
 * [Kitaplığı kullanma](system-text-json-how-to.md)
-* [Kaynak kodu](https://github.com/dotnet/corefx/tree/master/src/System.Text.Json)
+* [Kaynak kod](https://github.com/dotnet/corefx/tree/master/src/System.Text.Json)
 * [API başvurusu](xref:System.Text.Json)
 * [Yol Haritası](https://github.com/dotnet/corefx/blob/master/src/System.Text.Json/roadmap/README.md)
 * DotNet/corefx deposundaki GitHub sorunları

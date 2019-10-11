@@ -5,19 +5,19 @@ ms.date: 09/11/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to
-ms.openlocfilehash: 1173315bbc88797ce0c6d0fcc9597896f14889ac
-ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
+ms.openlocfilehash: 42f8d51f2547cd6f3240a05420b2da10b7cf52e3
+ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71332698"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72179389"
 ---
 # <a name="deploy-a-model-in-an-aspnet-core-web-api"></a>ASP.NET Core Web API 'sinde model dağıtma
 
 Bir ASP.NET Core Web API 'SI kullanarak Web 'de önceden eğitilen ML.NET makine öğrenimi modelini nasıl kullanacağınızı öğrenin. Bir Web API 'SI üzerinde bir modele hizmet sunmak, standart HTTP yöntemleri aracılığıyla tahmine dayalı hale getirilmiş.
 
 > [!NOTE]
-> `PredictionEnginePool`Hizmet Uzantısı Şu anda önizleme aşamasındadır.
+> `PredictionEnginePool` hizmet uzantısı Şu anda önizleme aşamasındadır.
 
 ## <a name="prerequisites"></a>Önkoşullar
 
@@ -99,11 +99,11 @@ Giriş verileriniz ve tahminlerinizi için bazı sınıflar oluşturmanız gerek
     }
     ```
 
-    `SentimentPrediction`öğesinden `SentimentData`devralır. Bu, `SentimentText` özellikte orijinal verileri, model tarafından oluşturulan çıktıyı birlikte görmenizi kolaylaştırır. 
+    `SentimentPrediction` `SentimentData` ' den devralır. Bu, `SentimentText` özelliğindeki özgün verileri, model tarafından oluşturulan çıkışın yanında görmeyi kolaylaştırır. 
 
 ## <a name="register-predictionenginepool-for-use-in-the-application"></a>Uygulamada kullanmak için PredictionEnginePool Kaydet
 
-Tek bir tahmin yapmak için bir [@no__t](xref:Microsoft.ML.PredictionEngine%602)oluşturmanız gerekir. [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602), iş parçacığı açısından güvenli değildir. Ayrıca, uygulamanızın içinde gerek duyduğu her yerde bir örneği oluşturmanız gerekir. Uygulamanız büyüdükçe, bu işlem yönetilebilir hale gelebilir. Daha iyi performans ve iş parçacığı güvenliği için, uygulamanız genelinde kullanılmak üzere bir [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) nesnesi oluşturan bağımlılık ekleme ve `PredictionEnginePool` hizmeti birleşimini kullanın.
+Tek bir tahmin yapmak için bir [@no__t](xref:Microsoft.ML.PredictionEngine%602)oluşturmanız gerekir. [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) , iş parçacığı açısından güvenli değildir. Ayrıca, uygulamanızın içinde gerek duyduğu her yerde bir örneği oluşturmanız gerekir. Uygulamanız büyüdükçe, bu işlem yönetilebilir hale gelebilir. Daha iyi performans ve iş parçacığı güvenliği için, uygulamanız genelinde kullanılmak üzere bir [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) nesnesi oluşturan bağımlılık ekleme ve `PredictionEnginePool` hizmeti birleşimini kullanın.
 
 [ASP.NET Core ' de bağımlılık ekleme](https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-2.1)hakkında daha fazla bilgi edinmek istiyorsanız aşağıdaki bağlantıda daha fazla bilgi sağlanmaktadır.
 
@@ -138,7 +138,16 @@ Makine öğrenimi modelleri statik değildir. Yeni eğitim verileri kullanılabi
 
 Model `modelName` parametresiyle tanımlanır, böylece değişiklik yapıldığında uygulama başına birden fazla model yeniden yüklenebilir. 
 
-Alternatif olarak, uzaktan depolanan modellerle çalışırken `FromUri` yöntemini kullanabilirsiniz. Dosya değiştirilen olayları izlemek yerine `FromUri`, uzak konumu değişiklikler için yoklar. Yoklama aralığı varsayılan olarak 5 dakikadır. Uygulama gereksinimlerine bağlı olarak yoklama aralığını artırabilir veya azaltabilirsiniz.
+> [!TIP]
+> Alternatif olarak, uzaktan depolanan modellerle çalışırken `FromUri` yöntemini kullanabilirsiniz. Dosya değiştirilen olayları izlemek yerine `FromUri`, uzak konumu değişiklikler için yoklar. Yoklama aralığı varsayılan olarak 5 dakikadır. Uygulama gereksinimlerine bağlı olarak yoklama aralığını artırabilir veya azaltabilirsiniz. Aşağıdaki kod örneğinde, `PredictionEnginePool` her dakikada belirtilen URI 'de depolanan modeli yoklar.
+>    
+>```csharp
+>builder.Services.AddPredictionEnginePool<SentimentData, SentimentPrediction>()
+>   .FromUri(
+>       modelName: "SentimentAnalysisModel", 
+>       uri:"https://github.com/dotnet/samples/raw/master/machine-learning/models/sentimentanalysis/sentiment_model.zip", 
+>       period: TimeSpan.FromMinutes(1));
+>```
 
 ## <a name="create-predict-controller"></a>Tahmin denetleyicisi oluştur
 
@@ -184,7 +193,7 @@ Gelen HTTP isteklerinizi işlemek için bir denetleyici oluşturun.
     }
     ```
 
-Bu kod, `PredictionEnginePool` bağımlılığı ekleme yoluyla aldığınız denetleyicinin oluşturucusuna geçirerek öğesine atar. Ardından, `Predict` denetleyicisinin `Post` yöntemi `Startup` sınıfında kayıtlı `SentimentAnalysisModel` ' ü kullanarak tahminleri yapmak için `PredictionEnginePool` kullanır ve başarılı olursa sonuçları kullanıcıya geri döndürür.
+Bu kod, bağımlılığı ekleme yoluyla aldığınız denetleyicinin oluşturucusuna geçirerek `PredictionEnginePool` ' a atar. Ardından, `Predict` denetleyicisinin `Post` yöntemi `Startup` sınıfında kayıtlı `SentimentAnalysisModel` ' ü kullanarak tahminleri yapmak için `PredictionEnginePool` kullanır ve başarılı olursa sonuçları kullanıcıya geri döndürür.
 
 ## <a name="test-web-api-locally"></a>Web API 'sini yerel olarak test etme
 
@@ -207,4 +216,4 @@ Tebrikler! ASP.NET Core bir Web API 'SI kullanarak internet üzerinden tahmin et
 
 ## <a name="next-steps"></a>Sonraki Adımlar
 
-- [Azure’a dağıtma](/aspnet/core/tutorials/publish-to-azure-webapp-using-vs#deploy-the-app-to-azure)
+- [Azure’a Dağıtma](/aspnet/core/tutorials/publish-to-azure-webapp-using-vs#deploy-the-app-to-azure)

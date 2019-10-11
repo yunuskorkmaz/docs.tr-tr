@@ -1,15 +1,15 @@
 ---
-title: EShopOnContainers 'ı Azure hizmetleriyle eşleme
+title: eShopOnContainers'ı Azure Hizmetlerine eşleme
 description: EShopOnContainers 'ı Azure Kubernetes hizmeti, API Gateway ve Azure Service Bus gibi Azure hizmetleriyle eşleme.
 ms.date: 06/30/2019
-ms.openlocfilehash: feb6d8f5ca05ab55ce4695d1200766a18b8f744a
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 67430da18c0a12c694426214de33e85c2113e454
+ms.sourcegitcommit: 992f80328b51b165051c42ff5330788627abe973
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71182820"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72275810"
 ---
-# <a name="mapping-eshoponcontainers-to-azure-services"></a>EShopOnContainers 'ı Azure hizmetleriyle eşleme
+# <a name="mapping-eshoponcontainers-to-azure-services"></a>eShopOnContainers'ı Azure Hizmetlerine eşleme
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
@@ -17,8 +17,7 @@ Gerekli olmasa da, proje bulutta yerel bir uygulama olarak oluşturulduğundan, 
 
 Uygulamanın mimarisi Şekil 2-5 ' de gösterilmiştir. Sol tarafta, mobil, geleneksel web ve Web tek sayfalı uygulama (SPA) türleri ile ayrılmış olan istemci uygulamalar vardır. Sağ tarafta, her biri Docker kapsayıcılarında ve Kubernetes kümelerinde barındırılabilen sistem oluşturan sunucu tarafı bileşenleridir. Geleneksel Web uygulaması, sarı renkle gösterilen ASP.NET Core MVC uygulaması tarafından desteklenir. Bu uygulama ve mobil ve Web SPA uygulamaları, tek tek mikro hizmetlerle bir veya daha fazla API ağ geçidi üzerinden iletişim kurar. API ağ geçitleri, her bir ağ geçidinin belirli bir ön uç istemcisini destekleyecek şekilde tasarlandığı anlamına gelen "ön uçlar için arka uçlar" (BFF) düzenine uyar. Tek tek mikro hizmetler, API ağ geçitlerinin sağında listelenir ve hem iş mantığını hem de bazı kalıcılık deposu türlerini içerir. Farklı hizmetler SQL Server veritabanları, Redsıs Cache örnekleri ve MongoDB/CosmosDB mağazalarını kullanır. En sağdaki, mikro hizmetler arasında iletişim kurmak için kullanılan sistemin olay veri yolu.
 
-![eshoponcontainers mimari](./media/eshoponcontainers-architecture.png)
-**Şekil 2-5**. EShopOnContainers mimarisi.
+![eShopOnContainers mimarisi @ no__t-1**şekil 2-5**. EShopOnContainers mimarisi.
 
 Bu mimarinin sunucu tarafı bileşenleri, Azure hizmetlerine kolayca eşlenir.
 
@@ -26,7 +25,7 @@ Bu mimarinin sunucu tarafı bileşenleri, Azure hizmetlerine kolayca eşlenir.
 
 Azure Kubernetes Service (AKS) ile ASP.NET Core MVC uygulamalarından bağımsız olarak Katalog ve sıralama mikro hizmetleri olan uygulama kapsayıcısı barındırılan Hizmetleri, barındırılabilecek ve yönetilebilir. Uygulama Docker ve Kubernetes 'te yerel olarak çalışabilir ve aynı kapsayıcılar, AKS içinde barındırılan hazırlama ve üretim ortamlarına dağıtılabilir. Sonraki bölümde görüyoruz, bu işlem otomatikleştirilebilir.
 
-AKS, bağımsız kapsayıcı kümeleri için yönetim hizmetleri sağlar. Uygulama, yukarıdaki mimari diyagramında gösterilen her mikro hizmet için ayrı AKS kümeleri dağıtır. Bu yaklaşım her bir hizmetin, kaynak taleplerine göre bağımsız olarak her birine erişmesini sağlar. Her mikro hizmet de bağımsız olarak dağıtılabilir ve ideal olarak bu tür dağıtımlar sıfır sistem kapalı kalma süresine neden olur.
+AKS, bağımsız kapsayıcı kümeleri için yönetim hizmetleri sağlar. Uygulama, yukarıdaki mimari diyagramında gösterilen her mikro hizmet için ayrı AKS kümeleri dağıtır. Bu yaklaşım, her bir hizmetin, kaynak taleplerine göre bağımsız olarak ölçeklendirilmesine olanak tanır. Her mikro hizmet de bağımsız olarak dağıtılabilir ve ideal olarak bu tür dağıtımlar sıfır sistem kapalı kalma süresine neden olur.
 
 ## <a name="api-gateway"></a>API ağ geçidi
 

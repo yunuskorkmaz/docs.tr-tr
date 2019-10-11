@@ -1,21 +1,21 @@
 ---
-title: 'Nasıl yapılır: Belirli bir alt öğeye sahip bir öğe bulun (Visual Basic)'
+title: 'Nasıl yapılır: belirli bir alt öğeye sahip bir öğe bulma (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: b0d0a463-6a85-46c3-8453-ad25b0ecf93c
-ms.openlocfilehash: af8667b6aa6870accb62fa22bd5243ce029b32c9
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 4df2f8f55a516665c02d12c3bdf6569601db30c2
+ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68709067"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72249907"
 ---
-# <a name="how-to-find-an-element-with-a-specific-child-element-visual-basic"></a>Nasıl yapılır: Belirli bir alt öğeye sahip bir öğe bulun (Visual Basic)
+# <a name="how-to-find-an-element-with-a-specific-child-element-visual-basic"></a>Nasıl yapılır: belirli bir alt öğeye sahip bir öğe bulma (Visual Basic)
 Bu konu, belirli bir değere sahip bir alt öğesi olan belirli bir öğenin nasıl bulunacağını gösterir.  
   
 ## <a name="example"></a>Örnek  
- Örnek, "Examp2 `Test` . exe" değerine `CommandLine` sahip bir alt öğesi olan öğesini bulur.  
+ Örnek, "Examp2. EXE" değerine sahip bir `CommandLine` alt öğesi olan `Test` öğesini bulur.  
   
- Bu örnek aşağıdaki XML belgesini kullanır: [Örnek XML dosyası: Test yapılandırması (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-test-configuration-linq-to-xml.md).  
+ Bu örnek, şu XML belgesini kullanır: [örnek xml dosyası: test yapılandırması (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-test-configuration-linq-to-xml.md).  
   
 ```vb  
 Dim root As XElement = XElement.Load("TestConfig.xml")  
@@ -30,7 +30,7 @@ Next
   
  Bu kod aşağıdaki çıktıyı üretir:  
   
-```  
+```console  
 0002  
 0006  
 ```  
@@ -40,7 +40,7 @@ Next
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek, bir ad alanında bulunan XML için aynı sorguyu gösterir. Daha fazla bilgi için bkz. [ad alanlarına genel bakış (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).  
   
- Bu örnek aşağıdaki XML belgesini kullanır: [Örnek XML dosyası: Bir ad alanında](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-test-configuration-in-a-namespace.md)test yapılandırması.  
+ Bu örnek, şu XML belgesini kullanır: [örnek xml dosyası: bir ad alanında test yapılandırması](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-test-configuration-in-a-namespace.md).  
   
 ```vb  
 Imports <xmlns='http://www.adatum.com'>  
@@ -61,7 +61,7 @@ End Module
   
  Bu kod aşağıdaki çıktıyı üretir:  
   
-```  
+```console  
 0002  
 0006  
 ```  

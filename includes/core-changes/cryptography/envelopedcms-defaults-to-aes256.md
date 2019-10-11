@@ -1,20 +1,20 @@
 ---
-ms.openlocfilehash: b965c3a975b0f2cadd906799fef1665261d96d6e
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: f9000b19997201c2d3de0643669f9029ff1ca31c
+ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71181999"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72237480"
 ---
 ### <a name="envelopedcms-defaults-to-aes-256-encryption"></a>EnvelopedCms varsayılan değer AES-256 şifrelemesi
 
-Tarafından `EnvelopedCms` kullanılan varsayılan simetrik şifreleme algoritması, TripleDES 'ten AES-256 ' e değişmiştir.
+@No__t-0 tarafından kullanılan varsayılan simetrik şifreleme algoritması, TripleDES 'ten AES-256 olarak değiştirilmiştir.
 
-#### <a name="details"></a>Ayrıntılar
+#### <a name="change-description"></a>Açıklamayı Değiştir
 
-.NET Core Preview 7 ve önceki sürümlerinde, <xref:System.Security.Cryptography.Pkcs.EnvelopedCms> bir Oluşturucu aşırı yüklemesi aracılığıyla simetrik şifreleme algoritması belirtmeden verileri şifrelemek için kullanıldığında, veriler TripleDES/3DES/3dea/DES3-engelleyebilecek algoritmayla şifrelenir.
+.NET Core Preview 7 ve önceki sürümlerinde, bir Oluşturucu aşırı yüklemesi aracılığıyla simetrik şifreleme algoritması belirtmeden verileri şifrelemek için <xref:System.Security.Cryptography.Pkcs.EnvelopedCms> kullanıldığında, veriler TripleDES/3DES/3DEA/DES3-ENGELLEYEBILECEK algoritmayla şifrelenir.
 
-.NET Core 3,0 Preview 8 ' den itibaren ( [System. Security. Cryptography. Pkcs](https://www.nuget.org/packages/System.Security.Cryptography.Pkcs/) NuGet paketinin sürümü 4.6.0 aracılığıyla), varsayılan algoritma, algoritma modernleştirme için AES-256 olarak değiştirilmiştir ve varsayılan seçeneklerin güvenliğini artırır. Bir ileti alıcı sertifikasında (EC olmayan) bir Diffie-Hellman ortak anahtarı varsa, temel platformdaki sınırlamalar <xref:System.Security.Cryptography.CryptographicException> nedeniyle şifreleme işlemi başarısız olabilir.
+.NET Core 3,0 Preview 8 ' den itibaren ( [System. Security. Cryptography. Pkcs](https://www.nuget.org/packages/System.Security.Cryptography.Pkcs/) NuGet paketinin sürümü 4.6.0 aracılığıyla), varsayılan algoritma, algoritma modernleştirme için AES-256 olarak değiştirilmiştir ve varsayılan seçeneklerin güvenliğini artırır. Bir ileti alıcı sertifikasında (EC olmayan) bir Diffie-Hellman ortak anahtarı varsa, temeldeki platformda sınırlamalar nedeniyle şifreleme işlemi bir <xref:System.Security.Cryptography.CryptographicException> ile başarısız olabilir.
 
 Aşağıdaki örnek kodda, veriler .NET Core 3,0 Preview 7 veya daha önceki sürümlerde çalışıyorsa üç aylık bir şekilde şifrelenir. .NET Core 3,0 Preview 8 veya üzeri sürümlerde çalışıyorsa, AES-256 ile şifrelenir.
 
@@ -30,7 +30,7 @@ return cms.Encode();
 
 #### <a name="recommended-action"></a>Önerilen eylem
 
-Değişiklik tarafından olumsuz bir şekilde etkilenmiyorsanız, bu tür <xref:System.Security.Cryptography.Pkcs.EnvelopedCms> <xref:System.Security.Cryptography.Pkcs.AlgorithmIdentifier>bir parametre içeren bir oluşturucuda, şifreleme algoritması tanımlayıcısını açıkça belirterek TripleDES şifrelemesini geri yükleyebilirsiniz:
+Değişiklik tarafından olumsuz bir şekilde etkilenmiyorsanız, şifreleme algoritması tanımlayıcısını, <xref:System.Security.Cryptography.Pkcs.AlgorithmIdentifier> türünde bir parametre içeren bir <xref:System.Security.Cryptography.Pkcs.EnvelopedCms> oluşturucuda açıkça belirterek Üçlü şifrelemeyi geri yükleyebilirsiniz. Örneğin:
 
 ```csharp
 Oid tripleDesOid = new Oid("1.2.840.113549.3.7", null);

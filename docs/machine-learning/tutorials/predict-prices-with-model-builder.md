@@ -1,21 +1,21 @@
 ---
-title: 'Öğretici: Model Oluşturucu ile gerileme kullanarak fiyatları tahmin etme'
+title: 'Öğretici: model Oluşturucu ile gerileme kullanarak fiyatları tahmin etme'
 description: Bu öğreticide, özellikle New York City taksi Fares fiyatlarını tahmin etmek için ml.net model Oluşturucu kullanarak bir gerileme modeli oluşturma gösterilmektedir.
 author: luisquintanilla
 ms.author: luquinta
-ms.date: 09/26/2019
+ms.date: 10/08/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: c7075e64738279cd712f5db837074a44e96db954
-ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
+ms.openlocfilehash: a851bf3c405d15243bc1457b8c3dff815d072ebe
+ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71332590"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72180279"
 ---
-# <a name="tutorial-predict-prices-using-regression-with-model-builder"></a>Öğretici: Model Oluşturucu ile gerileme kullanarak fiyatları tahmin etme
+# <a name="tutorial-predict-prices-using-regression-with-model-builder"></a>Öğretici: model Oluşturucu ile gerileme kullanarak fiyatları tahmin etme
 
-Fiyatları tahmin etmek için bir gerileme modeli () oluşturmak üzere ML.NET model Oluşturucu 'Yu nasıl kullanacağınızı öğrenin.  Bu öğreticide geliştirdiğiniz .NET konsol uygulaması, geçmiş New York taksi tarifeli havayolu verilerine dayalı olarak taksi Fares 'yi tahmin eder.
+Fiyatları tahmin etmek için bir gerileme modeli oluşturmak üzere ML.NET model Oluşturucu 'Yu nasıl kullanacağınızı öğrenin.  Bu öğreticide geliştirdiğiniz .NET konsol uygulaması, geçmiş New York taksi tarifeli havayolu verilerine dayalı olarak taksi Fares 'yi tahmin eder.
 
 Model Oluşturucu fiyat tahmin şablonu, sayısal tahmin değeri gerektiren herhangi bir senaryo için kullanılabilir. Örnek senaryolar şunlardır: ev fiyat tahmini, talep tahmini ve satış tahmini.
 
@@ -32,7 +32,7 @@ Bu öğreticide şunların nasıl yapıldığını öğreneceksiniz:
 > [!NOTE]
 > Model Oluşturucu Şu anda önizleme aşamasındadır.
 
-## <a name="pre-requisites"></a>Ön koşullar
+## <a name="pre-requisites"></a>Önkoşullar
 
 Önkoşul ve Yükleme yönergelerinin bir listesi için [model Oluşturucu Yükleme Kılavuzu](../how-to-guides/install-model-builder.md)' nu ziyaret edin.
 
@@ -54,7 +54,7 @@ Bu öğreticide şunların nasıl yapıldığını öğreneceksiniz:
 
 1. **Çözüm Gezgini**, *Taxi-fare-train. csv* dosyasına sağ tıklayın ve **Özellikler**' i seçin. **Gelişmiş**' in altında, **Çıkış Dizinine Kopyala** değerini **daha yeniyse kopyala**olarak değiştirin.
 
-`taxi-fare-train.csv` Veri kümesindeki her satır bir TAXI tarafından yapılan gelişlerin ayrıntılarını içerir.
+@No__t-0 veri kümesindeki her satır, bir TAXI tarafından yapılan gelişlerin ayrıntılarını içerir.
 
 1. **Taxi-fare-train. csv** veri kümesini açın
 
@@ -68,13 +68,13 @@ Bu öğreticide şunların nasıl yapıldığını öğreneceksiniz:
     - **payment_type:** Ödeme yöntemi (nakit veya kredi kartı) bir özelliktir.
     - **fare_amount:** Ödenen toplam TAXI tarifeli havayolu etikettir.
 
-`label` Tahmin etmek istediğiniz sütundur. Regresyon görevi gerçekleştirirken, amaç sayısal bir değeri tahmin etmek için kullanılır. Bu fiyat tahmin senaryosunda, bir TAXI arttırıldığında 'nın maliyeti tahmin ediliyor. Bu nedenle, **fare_amount** etikettir. `features` ,`label`Modeli tahmin etmek için size izin verdiğiniz girişlerdir. Bu durumda, **trip_time_in_secs** özel durumu ile sütunların geri kalanı, tarifeli havayolu tutarını tahmin etmek için özellik veya giriş olarak kullanılır.
+@No__t-0, tahmin etmek istediğiniz sütundur. Regresyon görevi gerçekleştirirken, amaç sayısal bir değeri tahmin etmek için kullanılır. Bu fiyat tahmin senaryosunda, bir TAXI arttırıldığında 'nın maliyeti tahmin ediliyor. Bu nedenle, **fare_amount** etikettir. Tanımlanan `features`, modele `label` tahmin etmek için verdiğiniz girişlerdir. Bu durumda, **trip_time_in_secs** özel durumu ile sütunların geri kalanı, tarifeli havayolu tutarını tahmin etmek için özellik veya giriş olarak kullanılır.
 
 ## <a name="choose-a-scenario"></a>Senaryo seçin
 
-Modelinize eğitebilmeniz için, model Oluşturucu tarafından sağlanan kullanılabilir makine öğrenimi senaryoları listesinden seçim yapmanız gerekir. Bu durumda senaryo `Price Prediction`.
+Modelinize eğitebilmeniz için, model Oluşturucu tarafından sağlanan kullanılabilir makine öğrenimi senaryoları listesinden seçim yapmanız gerekir. Bu durumda, senaryo `Price Prediction` ' dır.
 
-1. **Çözüm Gezgini**, *taxifaretahmin* projesine sağ tıklayın ve**Machine Learning** **Ekle** > ' yi seçin.
+1. **Çözüm Gezgini**, *taxifaretahmine* projesine sağ tıklayın ve **Ekle** > **Machine Learning**' yı seçin.
 1. Model Oluşturucu aracının senaryo adımında *fiyat tahmini* senaryosu ' nı seçin.
 
 ## <a name="load-the-data"></a>Verileri yükleme
@@ -106,7 +106,7 @@ Eğitim tamamlandıktan sonra değerlendir adımına gidin.
 
 ## <a name="evaluate-the-model"></a>Modeli değerlendirme
 
-Eğitim adımının sonucu, en iyi performansa sahip bir model olacaktır. Model Oluşturucu aracının değerlendir adımında, çıkış bölümü en iyi *model girişinde en* iyi işlem modeli tarafından kullanılan algoritmayı *(RKARE)* içerir. Ayrıca, ilk beş modeli ve bunların ölçümlerini içeren bir Özet tablosu.
+Eğitim adımının sonucu, en iyi performansa sahip bir model olacaktır. Model Oluşturucu aracının değerlendir adımında, çıkış *bölümü en iyi model girişinde en* iyi işlem modeli tarafından kullanılan algoritmayı *(RKARE)* içerir. Ayrıca, ilk beş modeli ve bunların ölçümlerini içeren bir Özet tablosu.
 
 Doğruluk ölçümlerinizi tatmin ediyorsanız, model doğruluğunu denemeye yönelik bazı kolay yollar, modelin eğilmesi veya daha fazla veri kullanmak için zaman miktarını artırmaktır. Aksi takdirde, kod adımına gidin.
 
@@ -114,8 +114,8 @@ Doğruluk ölçümlerinizi tatmin ediyorsanız, model doğruluğunu denemeye yö
 
 Eğitim sürecinin bir sonucu olarak iki proje oluşturulacaktır.
 
-- TaxiFarePredictionML. ConsoleApp: Model eğitimi ve örnek tüketim kodu içeren bir .NET Core konsol uygulaması.
-- TaxiFarePredictionML. Model: Giriş ve çıkış modeli verilerinin şemasını tanımlayan veri modellerini, eğitim sırasında en iyi gerçekleştirme modelinin kaydedilmiş sürümünü ve tahmin yapmak için `ConsumeModel` adlı bir yardımcı sınıfı içeren .NET Standard bir sınıf kitaplığı.
+- TaxiFarePredictionML. ConsoleApp: model eğitimi ve örnek tüketim kodu içeren bir .NET Core konsol uygulaması.
+- TaxiFarePredictionML. Model: giriş ve çıkış modeli verilerinin şemasını tanımlayan veri modellerini, eğitim sırasında en iyi gerçekleştirme modelinin kaydedilmiş sürümünü ve tahmine dayalı hale getirmek için `ConsumeModel` adlı bir yardımcı sınıfı içeren .NET Standard bir sınıf kitaplığı.
 
 1. Model Oluşturucu aracının kod adımında, otomatik olarak oluşturulan projeleri çözüme eklemek için **Proje Ekle** ' yi seçin.
 1. *Program.cs* dosyasını *Taxifaretahmin* projesinde açın.
@@ -159,7 +159,7 @@ Eğitim sürecinin bir sonucu olarak iki proje oluşturulacaktır.
     Predicted Fare: 14.96086
     ```
 
-Oluşturulan projelere başka bir çözümün içinde daha sonraki bir zamanda başvurmanız gerekirse, bunları `C:\Users\%USERNAME%\AppData\Local\Temp\MLVSTools` dizin içinde bulabilirsiniz.
+Oluşturulan projelere başka bir çözümün içinde daha sonraki bir zamanda başvurmanız gerekirse, bunları `C:\Users\%USERNAME%\AppData\Local\Temp\MLVSTools` dizininde bulabilirsiniz.
 
 ## <a name="next-steps"></a>Sonraki Adımlar
 

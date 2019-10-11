@@ -9,12 +9,12 @@ metadata:
   level: Beginner
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: 6dfbbbb6ef64b3dbb83d15ba66860acb7c5b3585
-  ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+  ms.openlocfilehash: fb08cef284a016dd65c99a1efb0a661624a731f1
+  ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 09/10/2019
-  ms.locfileid: "70850748"
+  ms.lasthandoff: 10/09/2019
+  ms.locfileid: "72179002"
 items:
 - durationInMinutes: 1
   content: >
@@ -22,7 +22,7 @@ items:
 - title: Liste oluşturma
   durationInMinutes: 2
   content: >
-    Etkileşimli pencerede aşağıdaki kodu çalıştırın. Bunu yapmak için, etkileşimli pencereye (adınızla değiştirin `<name>` ) aşağıdaki kod bloğunu yazın ve **Çalıştır** düğmesine tıklayın:
+    Etkileşimli pencerede aşağıdaki kodu çalıştırın. Bunu yapmak için, etkileşimli pencereye aşağıdaki kod bloğunu yazın (`<name>` ' ı adınızla değiştirin) ve **Çalıştır** düğmesine tıklayın:
 
 
     ```csharp
@@ -38,10 +38,13 @@ items:
     ```
 
 
+    Bunu ortamınızda çalıştırıyorsanız, bunun yerine [Yerel sürümün](arrays-and-collections.md) yönergelerini izlemelisiniz.
+
+
     Dizelerin bir listesini oluşturdunuz, bu listeye üç ad eklediniz ve adları tüm büyük harfler halinde yazdırdık. Önceki öğreticilerde, listede döngü gerçekleştirmek için öğrenmiş olduğunuz kavramları kullanıyorsunuz.
 
 
-    Adları görüntülenecek kod, [dize ilişkilendirme](../../language-reference/tokens/interpolated.md) özelliğini kullanır. Bir `string` karakterden`$` önce karakterinden sonra, dize bildirimine C# kod ekleyebilirsiniz. Gerçek dize, bu C# kodun oluşturduğu değerle değiştirir. Bu örnekte, <xref:System.String.ToUpper%2A?displayProperty=nameWithType> yöntemini çağırdığı için `{name.ToUpper()}` , her bir adla ' ı, büyük harflere dönüştürülecek şekilde değiştirir.
+    Adları görüntülenecek kod, [dize ilişkilendirme](../../language-reference/tokens/interpolated.md) özelliğini kullanır. @No__t-1 karakteriyle `string` ' dan önce, dize bildirimine C# kod ekleyebilirsiniz. Gerçek dize, bu C# kodun oluşturduğu değerle değiştirir. Bu örnekte, <xref:System.String.ToUpper%2A?displayProperty=nameWithType> yöntemini çağırdığından, `{name.ToUpper()}` ' ı her bir adla değiştirir ve büyük harflere dönüştürülür.
 
 
     Araştırma devam edelim.
@@ -56,7 +59,7 @@ items:
     Oluşturduğunuz koleksiyon <xref:System.Collections.Generic.List%601> türünü kullanır. Bu tür öğe dizilerini depolar. Açılı ayraçlar arasındaki öğelerin türünü belirtirsiniz.
 
 
-    Bu <xref:System.Collections.Generic.List%601> türün önemli bir yönü büyümenin veya küçülebileceği, öğe eklemenize veya kaldırmanıza imkan sağlar. İçeriğini görüntülendikten sonra içerikleri değiştirerek sonuçları görebilirsiniz. Zaten yazdığınız kodun altına aşağıdaki kodu ekleyin (içeriği yazdıran döngünün altında):
+    Bu @no__t önemli bir yönü-0 türü, öğe eklemenize veya kaldırmanıza olanak tanıyan büyümeye veya küçülebilir. İçeriğini görüntülendikten sonra içerikleri değiştirerek sonuçları görebilirsiniz. Zaten yazdığınız kodun altına aşağıdaki kodu ekleyin (içeriği yazdıran döngünün altında):
 
 
     ```csharp
@@ -81,7 +84,7 @@ items:
     Listenin sonuna iki ad daha eklediniz. Ayrıca bir tane de kaldırmış olursunuz. Bu kod bloğunun çıktısı başlangıçtaki içerikleri gösterir, ardından boş bir satırı ve yeni içerikleri yazdırır.
 
 
-    , <xref:System.Collections.Generic.List%601> Tek tek öğeleri **dizine** göre de başvurmanızı sağlar. `[` Ve`]` belirteçlerini kullanarak öğelere erişirsiniz. Aşağıdaki kodu zaten yazdıklarınız altına ekleyin ve deneyin:
+    @No__t-0, tek tek öğeleri **dizine** göre de başvurmanızı sağlar. Öğelere `[` ve `]` belirteçleri kullanarak erişirsiniz. Aşağıdaki kodu zaten yazdıklarınız altına ekleyin ve deneyin:
 
 
     ```csharp
@@ -112,7 +115,7 @@ items:
 - title: Arama ve sıralama listeleri
   durationInMinutes: 5
   content: >
-    Örneklerimizde görece küçük listeler kullanılıyor, ancak uygulamalarınız genellikle binlerce numaralandırma olan çok sayıda öğesi olan listeler oluşturabilir. Bu daha büyük koleksiyonlardaki öğeleri bulmak için listede farklı öğeler için arama yapmanız gerekir. <xref:System.Collections.Generic.List%601.IndexOf%2A> Yöntemi bir öğe arar ve öğenin dizinini döndürür. Nasıl çalıştığını görmek için deneyin.  Şu ana kadar yazdıklarınız için aşağıdaki kodu ekleyin:
+    Örneklerimizde görece küçük listeler kullanılıyor, ancak uygulamalarınız genellikle binlerce numaralandırma olan çok sayıda öğesi olan listeler oluşturabilir. Bu daha büyük koleksiyonlardaki öğeleri bulmak için listede farklı öğeler için arama yapmanız gerekir. @No__t-0 yöntemi bir öğe arar ve öğenin dizinini döndürür. Nasıl çalıştığını görmek için deneyin.  Şu ana kadar yazdıklarınız için aşağıdaki kodu ekleyin:
 
 
     ```csharp
@@ -127,10 +130,10 @@ items:
     ```
 
 
-    Listede bir öğe olup olmadığını bilmiyor olabilirsiniz, bu nedenle tarafından <xref:System.Collections.Generic.List%601.IndexOf%2A>döndürülen dizini her zaman denetlemeniz gerekir. -1 ise, öğe bulunamadı.
+    Listede bir öğe olup olmadığını bilmiyor olabilirsiniz, bu nedenle <xref:System.Collections.Generic.List%601.IndexOf%2A> tarafından döndürülen dizini her zaman denetlemeniz gerekir. -1 ise, öğe bulunamadı.
 
 
-    Listenizdeki öğeler de sıralanmış olabilir. <xref:System.Collections.Generic.List%601.Sort%2A> Yöntemi, listedeki tüm öğeleri normal sıralarına göre sıralar (dizeler söz konusu olduğunda alfabetik olarak). Bu kodu ekleyin ve yeniden çalıştırın:
+    Listenizdeki öğeler de sıralanmış olabilir. @No__t-0 yöntemi listedeki tüm öğeleri normal sıralarına göre sıralar (dizeler söz konusu olduğunda alfabetik olarak). Bu kodu ekleyin ve yeniden çalıştırın:
 
 
     ```csharp
@@ -152,7 +155,7 @@ items:
 - title: Diğer türlerin listeleri
   durationInMinutes: 5
   content: >
-    Şu ana kadar listelerdeki `string` türü kullanıyorsunuz. Farklı bir tür kullanalım. <xref:System.Collections.Generic.List%601> Bir sayı kümesi oluşturalım. Şimdiye kadar yazdığınız kodu silin ve aşağıdaki kodla değiştirin:
+    Şu ana kadar listelerde `string` türü kullanıyorsunuz. @No__t-0 ' i farklı bir tür kullanarak yapalim. Bir sayı kümesi oluşturalım. Şimdiye kadar yazdığınız kodu silin ve aşağıdaki kodla değiştirin:
 
 
     ```csharp

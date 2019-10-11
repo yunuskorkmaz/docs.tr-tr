@@ -3,18 +3,18 @@ title: Null yapılabilir başvuru türleriyle tasarım
 description: Bu gelişmiş öğretici, null yapılabilir başvuru türlerine giriş sağlar. Başvuru değerleri null olduğunda ve derleyicinin null olmadıklarında zorunlu olmadığı durumlarda tasarım amacınızı ifade etmek için bilgi edineceksiniz.
 ms.date: 02/19/2019
 ms.custom: mvc
-ms.openlocfilehash: 914a1eeee2d3d1843bf597f94761e39d16331b5c
-ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.openlocfilehash: beecab2be57367dc0a200ff4f6067549cf1e7c51
+ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71956658"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72179786"
 ---
 # <a name="tutorial-express-your-design-intent-more-clearly-with-nullable-and-non-nullable-reference-types"></a>Öğretici: tasarım amacınızı null olabilen ve null yapılamayan başvuru türleriyle daha net bir şekilde Ifade edin
 
 C#8, null olabilen değer türleri için aynı şekilde, başvuru türlerini tamamlayan **null yapılabilir başvuru türlerini**tanıtır. Türe bir `?` ekleyerek **null olabilen bir başvuru türü** olarak bir değişken bildirirsiniz. Örneğin `string?`, Nullable `string` temsil eder. Tasarım amacınızı daha net bir şekilde ifade etmek için bu yeni türleri kullanabilirsiniz: bazı değişkenlerin *her zaman bir değeri olması gerekir*, bazılarında *bir değer eksik*olabilir.
 
-Bu öğreticide, aşağıdakileri nasıl yapacağınızı öğreneceksiniz:
+Bu öğreticide şunların nasıl yapıldığını öğreneceksiniz:
 
 > [!div class="checklist"]
 >
@@ -23,9 +23,9 @@ Bu öğreticide, aşağıdakileri nasıl yapacağınızı öğreneceksiniz:
 > - Derleyicinin bu tasarım kararlarını zorladığı kodu yazın.
 > - Kendi tasarımlarınızın Nullable başvuru özelliğini kullanın
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Önkoşullar
 
-Makinenizi, C# 8,0 derleyicisi dahil .NET Core çalıştıracak şekilde ayarlamanız gerekir. C# 8 derleyicisi, [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)veya [.NET Core 3,0](https://dotnet.microsoft.com/download/dotnet-core/3.0)ile kullanılabilir.
+Makinenizi, C# 8,0 derleyicisi dahil .NET Core çalıştıracak şekilde ayarlamanız gerekir. C# 8,0 derleyicisi, [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)veya [.NET Core 3,0](https://dotnet.microsoft.com/download/dotnet-core/3.0)ile kullanılabilir.
 
 Bu öğreticide, Visual Studio veya C# .NET Core CLI dahil olmak üzere, .net hakkında bilgi sahibi olduğunuz varsayılır.
 
@@ -37,7 +37,7 @@ Bu örnek için yazdığınız kod, amacı ifade eder ve derleyici bu amacı zor
 
 ## <a name="create-the-application-and-enable-nullable-reference-types"></a>Uygulamayı oluşturun ve null yapılabilir başvuru türlerini etkinleştirin
 
-Visual Studio 'da ya da `dotnet new console` kullanarak komut satırından yeni bir konsol uygulaması oluşturun. @No__t-0 ' a kadar uygulamayı adlandırın. Uygulamayı oluşturduktan sonra, projenin tamamını @no__t 0 **Nullable ek açıklama bağlamında**derlediğini belirtmeniz gerekir. @No__t-0 dosyasını açın ve `PropertyGroup` öğesine bir `Nullable` öğesi ekleyin. Değerini `enabled` olarak ayarlayın. 8 projesinde bile **null yapılabilir başvuru türleri** özelliğini kabul etmeniz gerekir. C# Bunun nedeni, özellik açık olduğunda, mevcut başvuru değişkeni bildirimleri **null yapılamayan başvuru türleri**haline gelir. Bu karar, var olan kodun doğru null denetimleri olmayan sorunları bulmaya yardımcı olur, ancak özgün tasarım hedefini doğru bir şekilde yansıtmayabilir:
+Visual Studio 'da ya da `dotnet new console` kullanarak komut satırından yeni bir konsol uygulaması oluşturun. @No__t-0 ' a kadar uygulamayı adlandırın. Uygulamayı oluşturduktan sonra, tüm projenin etkinleştirilmiş bir **null yapılabilir ek açıklama bağlamında**derlendiğini belirtmeniz gerekir. *. Csproj* dosyasını açın ve `PropertyGroup` öğesine `Nullable` öğesi ekleyin. Değerini `enable` olarak ayarlayın. 8,0 projesinde bile **null yapılabilir başvuru türleri** özelliğini kabul etmeniz gerekir. C# Bunun nedeni, özellik açık olduğunda, mevcut başvuru değişkeni bildirimleri **null yapılamayan başvuru türleri**haline gelir. Bu karar, var olan kodun doğru null denetimleri olmayan sorunları bulmaya yardımcı olur, ancak özgün tasarım hedefini doğru bir şekilde yansıtmayabilir:
 
 ```xml
 <Nullable>enable</Nullable>
@@ -84,7 +84,7 @@ namespace NullableIntroduction
 }
 ```
 
-Derleyici, her başvuru türü değişken bildirimini, null yapılabilir etkin bağlamdaki kod için **null yapılamayan** bir başvuru türü olarak yorumlar. Aşağıdaki kodda gösterildiği gibi soru metni ve soru türü için özellikler ekleyerek ilk uyarılarınızı görebilirsiniz:
+Derleyici, her başvuru türü değişkeni bildirimini, etkin bir Nullable ek açıklama bağlamındaki kod için **null yapılamayan** bir başvuru türü olarak yorumlar. Aşağıdaki kodda gösterildiği gibi soru metni ve soru türü için özellikler ekleyerek ilk uyarılarınızı görebilirsiniz:
 
 ```csharp
 namespace NullableIntroduction
@@ -134,7 +134,7 @@ Düzenleyicinizde *program.cs* 'e geçin ve `Main` ' in içeriğini aşağıdaki
 
 [!code-csharp[AddQuestions](~/samples/csharp/NullableIntroduction/NullableIntroduction/Program.cs#AddQuestions)]
 
-Projenin tamamı null yapılabilir etkin bir bağlamda olduğundan, null olamayan bir başvuru türü bekleyen herhangi bir yönteme `null` geçirdiğinizde uyarılar alırsınız. @No__t-0 ' a aşağıdaki satırı ekleyerek deneyin:
+Projenin tamamı etkin bir null yapılabilir ek açıklama bağlamında olduğundan, null olamayan bir başvuru türü bekleyen herhangi bir yönteme `null` geçirdiğinizde uyarılar alırsınız. @No__t-0 ' a aşağıdaki satırı ekleyerek deneyin:
 
 ```csharp
 surveyRun.AddQuestion(QuestionType.Text, default);
@@ -209,7 +209,7 @@ Son olarak, aşağıdaki döngüyü `Main` yönteminin altına ekleyin:
 
 Bu kodda `null` denetimleri gerekmez, çünkü hepsi null yapılamayan başvuru türleri döndürecek şekilde temel arabirimleri tasarlamış oldunuz.
 
-## <a name="get-the-code"></a>Kodu alın
+## <a name="get-the-code"></a>Kodu edinin
 
 Örnek deponuzdan, [CSharp/Nullabletanıtım](https://github.com/dotnet/samples/tree/master/csharp/NullableIntroduction) klasöründe bulunan [örnek](https://github.com/dotnet/samples) depomuza yönelik kodu alabilirsiniz.
 

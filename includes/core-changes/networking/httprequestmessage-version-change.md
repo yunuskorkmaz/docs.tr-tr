@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 78d2ec6fb505573ad36d55a9ca0a20452b7fa244
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: b50a108d2efbfd3da0d690cb02537a12f766b26b
+ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72002868"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72237479"
 ---
 ### <a name="default-value-of-httprequestmessageversion-changed-to-11"></a>HttpRequestMessage. Version öğesinin varsayılan değeri 1,1 olarak değiştirildi 
 
@@ -14,7 +14,7 @@ ms.locfileid: "72002868"
 
 .NET Core 3.0
 
-#### <a name="details"></a>Ayrıntılar
+#### <a name="change-description"></a>Açıklamayı Değiştir
 
 .NET Core 1,0 ile 2,0 arasında, <xref:System.Net.Http.HttpRequestMessage.Version?displayProperty=fullName> özelliğinin varsayılan değeri 1,1 ' dir. .NET Core 2,1 ile başlayarak, 2,1 olarak değiştirilmiştir. 
 

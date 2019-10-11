@@ -1,5 +1,5 @@
 ---
-title: ​.NET Core 2.1’deki yenilikler
+title: .NET Core 2,1 ' deki yenilikler
 description: .NET Core 2,1 ' de bulunan yeni özellikler hakkında bilgi edinin.
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 author: rpetrusha
 ms.author: ronpet
 ms.date: 10/10/2018
-ms.openlocfilehash: ace8c644fd5aa13e29961b7eb44e923556571c75
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 18c8d566c3b79c131a3d031e5bdf3b37996d9115
+ms.sourcegitcommit: 10db6551ea3c971470cf5d2cc21ba1cbcefe5c55
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834255"
+ms.lasthandoff: 10/08/2019
+ms.locfileid: "72031854"
 ---
-# <a name="whats-new-in-net-core-21"></a>​.NET Core 2.1’deki yenilikler
+# <a name="whats-new-in-net-core-21"></a>.NET Core 2,1 ' deki yenilikler
 
 .NET Core 2,1, aşağıdaki alanlarda geliştirmeler ve yeni özellikler içerir:
 
@@ -25,7 +25,7 @@ ms.locfileid: "71834255"
 - [JıT derleme geliştirmeleri](#jit-compiler-improvements)
 - [API değişiklikleri](#api-changes)
 
-## <a name="tooling"></a>Araçlar
+## <a name="tooling"></a>Araçları
 
 .NET Core 2,1 ' de yer alan araç, .NET Core 2,1 SDK (v 2.1.300), aşağıdaki değişiklikleri ve geliştirmeleri içerir:
 
@@ -65,11 +65,11 @@ Yalnızca .NET Core SDK bir parçası olarak [`DotnetCliToolReference`](../tools
 
 - `dotnet ef`, Entity Framework Core uygulamalardaki veritabanlarını, <xref:Microsoft.EntityFrameworkCore.DbContext> nesneleri ve geçişleri yönetmeye yönelik bir araçtır. Daha fazla bilgi için bkz. [.NET komut satırı araçlarını EF Core](/ef/core/miscellaneous/cli/dotnet).
 
-### <a name="global-tools"></a>Genel Araçlar
+### <a name="global-tools"></a>Küresel Araçlar
 
 .NET Core 2,1, *genel araçları* destekler-diğer bir deyişle, komut satırından küresel olarak kullanılabilir özel araçlar. .NET Core 'un önceki sürümlerindeki genişletilebilirlik modeli, yalnızca [`DotnetCliToolReference` ' i](../tools/extensibility.md#consuming-per-project-tools)kullanarak her proje için kullanılabilir özel araçları kullanıma sunulmuştur.
 
-Küresel bir araç yüklemek için [DotNet aracı install](../tools/dotnet-tool-install.md) komutunu kullanın. Örneğin:
+Küresel bir araç yüklemek için [DotNet aracı install](../tools/dotnet-tool-install.md) komutunu kullanın. Örnek:
 
 ```dotnetcli
 dotnet tool install -g dotnetsay
@@ -122,7 +122,7 @@ Bu ayarı, üç şekilde değiştirebilirsiniz:
 
 Düzeltme Eki Sürümü ileri, bu ayardan bağımsızdır ve herhangi bir olası küçük veya büyük sürüm ileri doğru uygulandıktan sonra yapılır.
 
-## <a name="deployment"></a>Dağıtım
+## <a name="deployment"></a>Kurulum
 
 ### <a name="self-contained-application-servicing"></a>Kendi içinde uygulama Bakımı
 
@@ -213,7 +213,7 @@ Aşağıdaki örnek, bir dizinin 10 öğelerinin sanal görünümünü sağlamak
 
 - Statik <xref:System.Security.Cryptography.RandomNumberGenerator.Fill%2A?displayProperty=nameWithType> yöntemi rastgele değerlerle bir <xref:System.Span%601> doldurur.
 
-- @No__t-0 artık Linux ve maxOS üzerinde desteklenmektedir.
+- @No__t-0 artık Linux ve macOS 'ta desteklenmektedir.
 
 - Eliptik Eğri Diffie-Hellman (ECDH) artık <xref:System.Security.Cryptography.ECDiffieHellman?displayProperty=nameWithType> sınıf ailesinde kullanılabilir. Yüzey alanı .NET Framework ile aynıdır.
 
@@ -249,6 +249,6 @@ Linux ve macOS 'ta, işlem başına temelinde yalnızca <xref:System.Net.Http.Ht
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [​.NET Core'daki Yenilikler](index.md)
+- [.NET Core 'daki yenilikler](index.md)
 - [EF Core 2,1 ' deki yeni özellikler](/ef/core/what-is-new/ef-core-2.1)
 - [ASP.NET Core 2,1 ' deki yenilikler](/aspnet/core/aspnetcore-2.1)

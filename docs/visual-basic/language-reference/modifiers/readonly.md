@@ -10,12 +10,12 @@ helpviewer_keywords:
 - properties [Visual Basic], read-only
 - read-only variables
 ms.assetid: e868185d-6142-4359-a2fd-a7965cadfce8
-ms.openlocfilehash: 01c441576cb4247933c053f2043296733f99fdeb
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 748c38835cec83cefe54535f90d40ec3a030e4f4
+ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965416"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72250384"
 ---
 # <a name="readonly-visual-basic"></a>ReadOnly (Visual Basic)
 Bir değişkenin veya özelliğin okunup yazılamayacağını belirtir.  
@@ -24,44 +24,43 @@ Bir değişkenin veya özelliğin okunup yazılamayacağını belirtir.
   
 ## <a name="rules"></a>Kurallar  
   
-- **Bildirim bağlamı.** Yalnızca modül düzeyinde `ReadOnly` kullanabilirsiniz. Diğer bir deyişle, bir `ReadOnly` öğe için bildirim bağlamı bir sınıf, yapı veya modül olmalıdır ve kaynak dosya, ad alanı veya yordam olamaz.  
+- **Bildirim bağlamı.** @No__t-0 ' i yalnızca modül düzeyinde kullanabilirsiniz. Yani, bir `ReadOnly` öğesi için bildirim bağlamı bir sınıf, yapı veya modül olmalıdır ve kaynak dosya, ad alanı veya yordam olamaz.  
   
-- **Birleşik değiştiriciler.** Aynı bildirimde ile `ReadOnly` `Static` birlikte belirtemezsiniz.  
+- **Birleşik değiştiriciler.** Aynı bildirimde `Static` ile birlikte `ReadOnly` belirtemezsiniz.  
   
-- **Değer atama.** Bir `ReadOnly` özelliği kullanan kod, değerini ayarlayamadı. Ancak, temel alınan depolamaya erişimi olan kod herhangi bir zamanda değeri atayabilir veya değiştirebilir.  
+- **Değer atama.** @No__t-0 özelliği kullanan kod, değerini ayarlayamadı. Ancak, temel alınan depolamaya erişimi olan kod herhangi bir zamanda değeri atayabilir veya değiştirebilir.  
   
-     Bir `ReadOnly` değişkene yalnızca bildiriminde veya tanımlandığı bir sınıf veya yapının oluşturucusunda bir değer atayabilirsiniz.  
+     @No__t-0 değişkenine bir değeri yalnızca bildiriminde veya tanımlandığı bir sınıfın veya yapının oluşturucusunda atayabilirsiniz.  
   
 ## <a name="when-to-use-a-readonly-variable"></a>Salt okunur değişken ne zaman kullanılır?  
- Sabit bir değer bildirmek ve atamak için [const bildirimini](../../../visual-basic/language-reference/statements/const-statement.md) kullanamadığınız durumlar vardır. Örneğin, `Const` deyimi atamak istediğiniz veri türünü kabul etmeyebilir veya bir sabit ifadeyle derleme zamanında değeri hesaplamayabilir. Derleme zamanında değeri bile bilmiyor olabilirsiniz. Bu durumlarda, sabit bir değeri tutmak için `ReadOnly` bir değişken kullanabilirsiniz.  
+ Sabit bir değer bildirmek ve atamak için [const bildirimini](../../../visual-basic/language-reference/statements/const-statement.md) kullanamadığınız durumlar vardır. Örneğin, `Const` deyimi atamak istediğiniz veri türünü kabul etmeyebilir veya bir sabit ifadeyle derleme zamanında değeri hesaplamayabilir. Derleme zamanında değeri bile bilmiyor olabilirsiniz. Bu durumlarda, sabit bir değeri tutmak için `ReadOnly` değişkeni kullanabilirsiniz.  
   
 > [!IMPORTANT]
-> Değişkenin veri türü bir dizi veya sınıf örneği gibi bir başvuru türü ise, bu değişkenin kendisi `ReadOnly`olsa bile üyeleri değiştirilebilir. Aşağıdaki örnek bunu göstermektedir.  
+> Değişkenin veri türü bir dizi veya sınıf örneği gibi bir başvuru türü ise, değişkenin kendisi `ReadOnly` olsa bile üyeleri değiştirilebilir. Aşağıdaki örnek bunu göstermektedir.  
   
- `ReadOnly characterArray() As Char = {"x"c, "y"c, "z"c}`  
+ ```vb
+ ReadOnly characterArray() As Char = {"x"c, "y"c, "z"c}
+ Sub ChangeArrayElement()
+     characterArray(1) = "M"c
+ End Sub
+ ```
   
- `Sub changeArrayElement()`  
+ Başlatıldığında, `characterArray()` tarafından işaret edilen dizi "x", "y" ve "z" karakterlerini barındırır. @No__t-0 değişkeni `ReadOnly` olduğundan, başlatıldıktan sonra değerini değiştiremezsiniz; diğer bir deyişle, buna yeni bir dizi atayamazsınız. Ancak, bir veya daha fazla dizi üyesinin değerlerini değiştirebilirsiniz. @No__t-0 yordamına bir çağrı takip ettikten sonra, `characterArray()` tarafından işaret edilen dizi "x", "e" ve "z" karakterlerini barındırır.
   
- `characterArray(1) = "M"c`  
+ Bunun, yordamın, çağıran bağımsız değişkenin kendisini değiştirmesini engelleyen bir yordam parametresi olarak bildirilmesinin benzer olduğuna, ancak onun üyelerini değiştirmesine izin verdiğinden [emin olun.](byval.md)  
   
- `End Sub`  
+## <a name="example"></a>Örnek
+
+Aşağıdaki örnek, bir çalışanın işe alındığı tarih için bir `ReadOnly` özelliği tanımlar. Sınıfı, özellik değerini dahili olarak bir `Private` değişkeni olarak depolar ve yalnızca sınıfın içindeki kod bu değeri değiştirebilir. Ancak, özelliği `Public` ' dır ve sınıfa erişebilen tüm kodlar özelliği okuyabilir.
   
- Başlatıldığında, tarafından `characterArray()` işaret edilen dizi "x", "y" ve "z" barındırır. `characterArray` Değişken`ReadOnly`olduğundan, değeri başlatıldıktan sonra değiştiremezsiniz; diğer bir deyişle, buna yeni bir dizi atayamazsınız. Ancak, bir veya daha fazla dizi üyesinin değerlerini değiştirebilirsiniz. Yordama `changeArrayElement`yapılan bir çağrıdan sonra, işaret eden `characterArray()` dizi "x", "e" ve "z" barındırır.  
+[!code-vb[VbVbalrKeywords#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class1.vb#4)]
   
- Bunun, yordamın, çağıran bağımsız değişkenin kendisini değiştirmesini engelleyen bir yordam [](../../../visual-basic/language-reference/modifiers/byval.md)parametresi olarak bildirilmesinin benzer olduğuna, ancak onun üyelerini değiştirmesine izin verdiğinden emin olun.  
+@No__t-0 değiştiricisi şu bağlamlarda kullanılabilir:
   
-## <a name="example"></a>Örnek  
- Aşağıdaki örnek, bir çalışanın `ReadOnly` işe alındığı tarih için bir özelliği tanımlar. Sınıfı, özellik değerini dahili olarak bir `Private` değişken olarak depolar ve yalnızca sınıfın içindeki kod bu değeri değiştirebilir. Ancak, özelliği olur `Public`ve sınıfa erişebilen tüm kodlar özelliği okuyabilir.  
-  
- [!code-vb[VbVbalrKeywords#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class1.vb#4)]  
-  
- `ReadOnly` Değiştirici şu bağlamlarda kullanılabilir:  
-  
- [Dim Deyimi](../../../visual-basic/language-reference/statements/dim-statement.md)  
-  
- [Property Deyimi](../../../visual-basic/language-reference/statements/property-statement.md)  
+- [Dim Deyimi](../statements/dim-statement.md) 
+- [Property Deyimi](../statements/property-statement.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [WriteOnly](../../../visual-basic/language-reference/modifiers/writeonly.md)
-- [Anahtar Sözcükler](../../../visual-basic/language-reference/keywords/index.md)
+- [WriteOnly](writeonly.md)
+- [Anahtar Sözcükler](../keywords/index.md)

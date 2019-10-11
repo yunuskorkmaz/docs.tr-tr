@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -langversion compiler option [C#]
 - langversion compiler option [C#]
 ms.assetid: 3fb00b05-a0ff-4782-b313-13a4c0f62d94
-ms.openlocfilehash: af441c0fd040897ebcd7af2edd6122a47e70468a
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 81cf336f94815dd3f2c88995eb34ae03b8220097
+ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72002124"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72179916"
 ---
 # <a name="-langversion-c-compiler-options"></a>-langversion (C# derleyici seçenekleri)
 
@@ -63,7 +63,7 @@ C# Dil sürümünü belirtmek için diğer yollar için [ C# dil sürümünü se
 
 Bu derleyici seçeneğini program aracılığıyla ayarlama hakkında daha fazla bilgi için bkz. <xref:VSLangProj80.CSharpProjectConfigurationProperties3.LanguageVersion%2A>.
 
-### <a name="c-language-specification"></a>C#Dil belirtimi
+## <a name="c-language-specification"></a>C#dil belirtimi
 
 |Sürüm|Bağlantı|Açıklama|
 |-------|----|-----------|
@@ -75,19 +75,23 @@ Bu derleyici seçeneğini program aracılığıyla ayarlama hakkında daha fazla
 |C#1,2|[BELGEYI indir](https://www.ecma-international.org/publications/files/ECMA-ST-ARCH/ECMA-334%202nd%20edition%20December%202002.pdf)|C#Dil belirtimi sürüm 1,2: Microsoft Corporation|
 |C#1,0|[BELGEYI indir](https://www.ecma-international.org/publications/files/ECMA-ST-ARCH/ECMA-334%201st%20edition%20December%202001.pdf)|C#Dil belirtimi sürüm 1,0: Microsoft Corporation|
 
-### <a name="minimum-compiler-version-needed-to-support-all-language-features"></a>Tüm dil özelliklerini desteklemek için gereken en düşük derleyici sürümü
+## <a name="minimum-sdk-version-needed-to-support-all-language-features"></a>Tüm dil özelliklerini desteklemek için gereken en düşük SDK sürümü
 
-CS80: Microsoft Visual Studio/derleme araçları 2019, sürüm 16 veya .NET Core 3,0 SDK  
-CS73: Microsoft Visual Studio/derleme araçları 2017, sürüm 15,7  
-CS72: Microsoft Visual Studio/derleme araçları 2017, sürüm 15,5  
-CS71: Microsoft Visual Studio/derleme araçları 2017, sürüm 15,3  
-CS7: Microsoft Visual Studio/derleme araçları 2017  
-CS6: Microsoft Visual Studio/derleme araçları 2015  
-CS5: Microsoft Visual Studio/derleme araçları 2012 veya paketlenmiş .NET Framework 4,5 derleyicisi  
-CS4: Microsoft Visual Studio/derleme araçları 2010 veya paketlenmiş .NET Framework 4,0 derleyicisi  
-CS3: Microsoft Visual Studio/derleme araçları 2008 veya paketlenmiş .NET Framework 3,5 derleyicisi  
-ISO2: Microsoft Visual Studio/derleme araçları 2005 veya paketlenmiş .NET Framework 2,0 derleyicisi  
-ISO1: Microsoft Visual Studio/derleme araçları .NET 2002 veya paketlenmiş. N Framework 1,0 derleyicisi  
+Aşağıdaki tabloda, karşılık gelen dil sürümünü destekleyen C# DERLEYICIYLE SDK 'nın en düşük sürümleri listelenmiştir:
+
+|C#Sürüm|En düşük SDK sürümü|
+|----------|-------------------|
+|C#8,0| Microsoft Visual Studio/derleme araçları 2019, sürüm 16,3 veya .NET Core 3,0 SDK |
+|C#7,3| Microsoft Visual Studio/derleme araçları 2017, sürüm 15,7 |
+|C#7,2| Microsoft Visual Studio/derleme araçları 2017, sürüm 15,5 |
+|C#7,1| Microsoft Visual Studio/derleme araçları 2017, sürüm 15,3 |
+|C#7,0| Microsoft Visual Studio/derleme araçları 2017 |
+|C#inç| Microsoft Visual Studio/derleme araçları 2015 |
+|C#e| Microsoft Visual Studio/derleme araçları 2012 veya paketlenmiş .NET Framework 4,5 derleyicisi |
+|C#4| Microsoft Visual Studio/derleme araçları 2010 veya paketlenmiş .NET Framework 4,0 derleyicisi |
+|C#03| Microsoft Visual Studio/derleme araçları 2008 veya paketlenmiş .NET Framework 3,5 derleyicisi |
+|C#iki| Microsoft Visual Studio/derleme araçları 2005 veya paketlenmiş .NET Framework 2,0 derleyicisi |
+|C#1.0/1.2 | Microsoft Visual Studio/derleme araçları .NET 2002 veya paketlenmiş .NET Framework 1,0 derleyicisi |
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

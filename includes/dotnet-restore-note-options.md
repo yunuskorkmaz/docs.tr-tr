@@ -1,12 +1,12 @@
 ---
-ms.openlocfilehash: 497ac09e5c9a10470d3ae1932d7e3dc114d121dd
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 47811d3fab2e4fa531d383dfe818e3cac5613eb3
+ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65632001"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72179974"
 ---
 > [!NOTE]
-> .NET Core 2.0 ile başlayarak, çalıştırma gerekmez [ `dotnet restore` ](~/docs/core/tools/dotnet-restore.md) tüm komutlar tarafından gibi örtük olarak çalıştırıldığında çünkü `dotnet build` ve `dotnet run`, gerçekleşmesi için bir geri yükleme gerektirir. Bunu hala geçerli bir komut burada açık bir geri yükleme yaparsanız anlamlı, bazı senaryolarda olduğu gibi [sürekli tümleştirme derlemeleri Azure DevOps Hizmetleri'nde](/azure/devops/build-release/apps/aspnet/build-aspnet-core) veya açıkça zaman denetlemek için gereken derleme sistemlerinde geri yükleme gerçekleşir.
+> .NET Core 2,0 ' den başlayarak [`dotnet restore`](~/docs/core/tools/dotnet-restore.md) ' i çalıştırmanız gerekmez, çünkü `dotnet build` ve `dotnet run` gibi geri yükleme gerektiren tüm komutlar tarafından örtük olarak çalıştırılır. Bir açık geri yüklemeyi yapmanın, Azure DevOps Services veya derleme sistemlerindeki [sürekli tümleştirme yapıları](/azure/devops/build-release/apps/aspnet/build-aspnet-core) gibi, geri yükleme işleminin gerçekleştiği süreyi açıkça denetması gereken belirli senaryolarda geçerli bir komuttur.
 >
-> Bu komut ayrıca destekler `dotnet restore` seçenekleri uzun biçiminde geçirildiğinde (örneğin, `--source`). Form Seçenekleri gibi kısa `-s`, desteklenmez.
+> Bu komut, uzun biçimde geçirildiğinde `dotnet restore` seçeneklerini de destekler (örneğin, `--source`). @No__t-0 gibi kısa form seçenekleri desteklenmez.

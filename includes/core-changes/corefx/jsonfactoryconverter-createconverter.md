@@ -1,18 +1,18 @@
 ---
-ms.openlocfilehash: e16f0c8ede5e1a24d4fc4606c3c25225ea72e750
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: f5b0064f9f01923c6353fd8e2b274bd7407ccbd8
+ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117137"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72237484"
 ---
 ### <a name="jsonfactoryconvertercreateconverter-signature-changed"></a>JsonFactoryConverter. CreateConverter imzası değişti
 
-<xref:System.Text.Json.Serialization.JsonConverterFactory> Sınıfların oluşumunu kolaylaştırmak için <xref:System.Text.Json.Serialization.JsonConverterFactory.CreateConverter%2A> , yöntemi genel yapıldı ve türünde <xref:System.Text.Json.JsonSerializerOptions>ikinci bir bağımsız değişken verildi.
+@No__t-0 sınıflarının birleşimini kolaylaştırmak için, <xref:System.Text.Json.Serialization.JsonConverterFactory.CreateConverter%2A> yöntemi genel hale getirilir ve <xref:System.Text.Json.JsonSerializerOptions> türünde ikinci bir bağımsız değişken verildi.
 
-#### <a name="details"></a>Ayrıntılar
+#### <a name="change-description"></a>Açıklamayı Değiştir
 
-.NET Core sürümündeki 3,0 `CreateConverter` Preview 8 ' den önceki yöntemin imzası: 
+.NET Core 'da sürüm 3,0 Preview 8 ' den önceki `CreateConverter` yönteminin imzası: 
 
 ```csharp
 namespace System.Text.Json.Serialization
@@ -36,7 +36,7 @@ namespace System.Text.Json.Serialization
 }
 ```
 
-Bu değişiklikten önce, bunu yapmanın kolay bir yolu <xref:System.Text.Json.Serialization.JsonConverter%601> olmadığından, korumalı fabrika dönüştürücülerini oluşturmak zordur. Fabrika yöntemini herkese açık hale getirme ve ayrıca, daha <xref:System.Text.Json.JsonSerializerOptions> fazla esnek bileşim için geçerli izin vermeyi geçirme.
+Bu değişiklikten önce, <xref:System.Text.Json.Serialization.JsonConverter%601> ' ı almanın kolay bir yolu olmadığından, korumalı fabrika dönüştürücüleri oluşturmak zordur. Fabrika yöntemini ortak hale getirme ve aynı zamanda geçerli <xref:System.Text.Json.JsonSerializerOptions> ' y i daha esnek bir bileşim sağlamak.
 
 #### <a name="version-introduced"></a>Sunulan sürüm
 

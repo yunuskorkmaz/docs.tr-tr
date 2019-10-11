@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9ba6c46116d809e2881eee37b080e1952e2eb6a0
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 0c0fa0e2c59856beda65ec5804b8896352db98b3
+ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70895275"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72180189"
 ---
 # <a name="fundamentals-of-garbage-collection"></a>Çöp toplamanın temelleri
 
@@ -50,7 +50,7 @@ Aşağıdaki listede, önemli CLR belleği kavramları özetlenmektedir.
 
 - Sanal bellek üç durumda olabilir:
 
-  - Süz. Bellek bloğunun kendisine başvuru yoktur ve ayırma için kullanılabilir.
+  - Ücretsizdir. Bellek bloğunun kendisine başvuru yoktur ve ayırma için kullanılabilir.
 
   - Ayrılamadı. Bellek bloğu kullanım için kullanılabilir ve diğer herhangi bir ayırma isteği için kullanılamaz. Ancak, bu bellek bloğunda verileri kaydedilene kadar depoleyemez.
 
@@ -74,7 +74,7 @@ Fiziksel bellek baskısı (yani fiziksel bellek talebi) düşük olsa bile sayfa
 
 - Yönetilen yığında ayrılmış nesneler tarafından kullanılan bellek, kabul edilebilir bir eşik geçirir. İşlem çalışırken bu eşik sürekli olarak ayarlanır.
 
-- <xref:System.GC.Collect%2A?displayProperty=nameWithType> Yöntemi çağrılır. Neredeyse tüm durumlarda, çöp toplayıcı sürekli çalıştığından bu yöntemi çağırmanız gerekmez. Bu yöntem öncelikle benzersiz durumlar ve test için kullanılır.
+- @No__t-0 yöntemi çağrılır. Neredeyse tüm durumlarda, çöp toplayıcı sürekli çalıştığından bu yöntemi çağırmanız gerekmez. Bu yöntem öncelikle benzersiz durumlar ve test için kullanılır.
 
 [Başa dön](#top)
 
@@ -135,7 +135,7 @@ Kısa ömürlü nesiller, kısa ömürlü segment olarak bilinen bellek segmenti
 
 Kısa ömürlü segmentin boyutu sistemin 32 veya 64 bit olmasına ve çalıştırdığı çöp toplayıcı türüne bağlı olarak farklılık gösterir. Varsayılan değerler aşağıdaki tabloda gösterilmiştir.
 
-||32 bit:|64 bit|
+||32 bit|64 bit|
 |-|-------------|-------------|
 |İş istasyonu GC|16 MB|256 MB|
 |Sunucu GC|64 MB|4 GB|
@@ -162,7 +162,7 @@ Bir çöp toplama işlemi aşağıdaki aşamaları içerir:
 
   2\. nesil koleksiyonlar birden çok parçayı kaplayabildiğinden, 2. nesil olarak yükseltilen nesneler eski bir kesime taşınabilir. 2\. nesil ve 2. nesil ve 2. nesil daha fazla VNet, 1. kuşak olarak yükseltildikleri için farklı bir kesime taşınabilir.
 
-  Genellikle büyük nesne yığını düzenlenmez, çünkü büyük nesneleri kopyalamak bir performans cezası uygular. Ancak, .NET Framework 4.5.1 başlayarak, <xref:System.Runtime.GCSettings.LargeObjectHeapCompactionMode%2A?displayProperty=nameWithType> özelliği, isteğe bağlı olarak büyük nesne yığınını sıkıştırmak için kullanabilirsiniz.
+  Genellikle büyük nesne yığını düzenlenmez, çünkü büyük nesneleri kopyalamak bir performans cezası uygular. Ancak, .NET Framework 4.5.1 başlayarak, isteğe bağlı olarak büyük nesne yığınını sıkıştırmak için <xref:System.Runtime.GCSettings.LargeObjectHeapCompactionMode%2A?displayProperty=nameWithType> özelliğini kullanabilirsiniz.
 
 Çöp toplayıcı, nesnelerin canlı olup olmadığını anlamak için aşağıdaki bilgileri kullanır:
 
@@ -176,7 +176,7 @@ Bir çöp toplama işlemi aşağıdaki aşamaları içerir:
 
 Aşağıdaki çizimde, çöp toplamayı tetikleyen ve diğer iş parçacıklarının askıya alınmasına neden olan bir iş parçacığı gösterilmektedir.
 
-![Bir iş parçacığı bir çöp toplama işlemi tetiklerse](../../../docs/standard/garbage-collection/media/gc-triggered.png "GC_Triggered") Çöp toplamayı tetikleyen iş parçacığı
+Bir iş parçacığı(../../../docs/standard/garbage-collection/media/gc-triggered.png "çöp") toplamayı tetiklediğinde bir ![Iş parçacığı çöp toplamayı tetiklerse]
 
 [Başa dön](#top)
 
@@ -198,7 +198,7 @@ Sonlandırılabilir bir nesnenin etkin olmadığı tespit edildiğinde, temizlem
 
 Çöp toplayıcı kendi kendini ayarlamadır ve çok çeşitli senaryolarda çalışabilir. Bir yapılandırma dosyası ayarını, iş yükünün özelliklerine göre çöp toplamanın türünü ayarlamak için kullanabilirsiniz. CLR aşağıdaki çöp toplama türlerini sağlar:
 
-- Tüm istemci iş istasyonları ve tek başına bilgisayarlar için olan iş istasyonu atık toplama. Bu, çalışma zamanı yapılandırma şemasında [ \<gcServer > öğesi](../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) için varsayılan ayardır.
+- Tüm istemci iş istasyonları ve tek başına bilgisayarlar için olan iş istasyonu atık toplama. Bu, çalışma zamanı yapılandırma şemasında [\<gcServer > öğesi](../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) için varsayılan ayardır.
 
   İş istasyonu atık toplama işlemi eşzamanlı olabilir veya eşzamanlı olmayan bir şekilde olabilir. Eşzamanlı atık toplama, yönetilen iş parçacıklarının bir çöp toplama sırasında işlemlere devam etmesine olanak sağlar.
 
@@ -208,13 +208,13 @@ Sonlandırılabilir bir nesnenin etkin olmadığı tespit edildiğinde, temizlem
 
 Aşağıdaki çizimde, bir sunucusunda çöp toplamayı gerçekleştiren adanmış iş parçacıkları gösterilmektedir.
 
-![Sunucu atık toplama Iş parçacıkları](../../../docs/standard/garbage-collection/media/gc-server.png "GC_Server") Sunucu atık toplama
+![Sunucu atık toplama Iş parçacıkları](../../../docs/standard/garbage-collection/media/gc-server.png "sunucu çöp toplama iş parçacıkları")
 
 ### <a name="configuring-garbage-collection"></a>Çöp toplamayı yapılandırma
 
-CLR 'nin gerçekleştirmesini istediğiniz çöp toplamanın türünü belirtmek için çalışma zamanı yapılandırma şemasının [ \<gcServer > öğesini](../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) kullanabilirsiniz. Bu öğenin `enabled` özniteliği (varsayılan) olarak `false` ayarlandığında, CLR iş istasyonu atık toplama işlemini gerçekleştirir. `enabled` Özniteliğini olarak`true`ayarladığınızda, CLR sunucu çöp toplama işlemini gerçekleştirir.
+CLR 'nin gerçekleştirmesini istediğiniz çöp toplamanın türünü belirtmek için çalışma zamanı yapılandırma şemasının [\<gcServer > öğesini](../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) kullanabilirsiniz. Bu öğenin `enabled` özniteliği `false` (varsayılan) olarak ayarlandığında, CLR iş istasyonu atık toplama işlemini gerçekleştirir. @No__t-0 özniteliğini `true` olarak ayarladığınızda, CLR sunucu çöp toplama işlemini gerçekleştirir.
 
-Eşzamanlı atık toplama, çalışma zamanı yapılandırma şemasının [ \<gcConcurrent > öğesiyle](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) belirtildi. Varsayılan ayar `enabled`. Bu ayar hem eşzamanlı hem de arka plan çöp toplamayı denetler.
+Eşzamanlı atık toplama, çalışma zamanı yapılandırma şemasının [\<gcConcurrent > öğesiyle](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) belirtildi. Varsayılan ayar `enabled` ' dır. Bu ayar hem eşzamanlı hem de arka plan çöp toplamayı denetler.
 
 Ayrıca, yönetilmeyen barındırma arabirimleriyle sunucu çöp toplamayı belirtebilirsiniz. ASP.NET ve SQL Server, uygulamanız bu ortamların birinde barındırılıyorsa sunucu çöp toplamayı otomatik olarak etkinleştirdiğine unutmayın.
 
@@ -226,7 +226,7 @@ Ayrıca, yönetilmeyen barındırma arabirimleriyle sunucu çöp toplamayı beli
 
   Yerel kod çalıştıran iş parçacıkları askıya alınmaz.
 
-- İş istasyonu çöp toplama işlemi, [ \<gcServer >](../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) ayarından bağımsız olarak yalnızca bir işlemciye sahip olan bir bilgisayarda kullanılır. Sunucu çöp toplamayı belirtirseniz, CLR eşzamanlılık devre dışı olan iş istasyonu çöp toplamayı kullanır.
+- İş istasyonu çöp toplama, [\<gcServer >](../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) ayarından bağımsız olarak yalnızca bir işlemciye sahip olan bir bilgisayarda kullanılır. Sunucu çöp toplamayı belirtirseniz, CLR eşzamanlılık devre dışı olan iş istasyonu çöp toplamayı kullanır.
 
 Aşağıda sunucu çöp toplama için iş parçacığı ve performans konuları verilmiştir:
 
@@ -252,7 +252,7 @@ Bir uygulamanın yüzlerce örneğini çalıştırıyorsanız, eşzamanlı atık
 
 Eşzamanlı atık toplama, bir koleksiyon için duraklamaları en aza indirerek etkileşimli uygulamaların daha fazla yanıt vermesini sağlar. Yönetilen iş parçacıkları, eşzamanlı atık toplama iş parçacığı çalışırken çoğu zaman çalışmaya devam edebilir. Çöp toplama işlemi gerçekleşirken bu, daha kısa duraklamalar oluşur.
 
-Birkaç işlem çalışırken performansı artırmak için, eşzamanlı atık toplamayı devre dışı bırakın. Bunu, uygulamanın yapılandırma dosyasına bir [ \<gcConcurrent > öğesi](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) ekleyerek ve `enabled` özniteliğinin değerini olarak `"false"`ayarlayarak yapabilirsiniz.
+Birkaç işlem çalışırken performansı artırmak için, eşzamanlı atık toplamayı devre dışı bırakın. Bunu, uygulamanın yapılandırma dosyasına bir [\<gcConcurrent > öğesi](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) ekleyerek ve `enabled` özniteliğinin değerini `"false"` olarak ayarlayarak yapabilirsiniz.
 
 Eş zamanlı çöp toplama, adanmış bir iş parçacığında gerçekleştirilir. Varsayılan olarak, CLR, eşzamanlı atık toplama özellikli iş istasyonu çöp toplamayı çalıştırır. Bu, tek işlemci ve çok işlemcili bilgisayarlar için geçerlidir.
 
@@ -262,7 +262,7 @@ Eşzamanlı atık toplama işlemi, eşzamanlı toplama sırasında nesneleri ay�
 
 Aşağıdaki çizimde ayrı bir adanmış iş parçacığında gerçekleştirilen eşzamanlı çöp toplama gösterilmektedir.
 
-![Eşzamanlı atık toplama Iş parçacıkları](../../../docs/standard/garbage-collection/media/gc-concurrent.png "GC_Concurrent") Eşzamanlı atık toplama
+Eşzamanlı ![atık toplama Iş parçacıkları](../../../docs/standard/garbage-collection/media/gc-concurrent.png "eşzamanlı atık toplama iş parçacıkları")
 
 [Başa dön](#top)
 
@@ -270,7 +270,7 @@ Aşağıdaki çizimde ayrı bir adanmış iş parçacığında gerçekleştirile
 
 ## <a name="background-workstation-garbage-collection"></a>Arka plan iş istasyonu çöp toplama
 
-Arka plan atık toplama, .NET Framework 4 ile başlayarak eşzamanlı iş istasyonu çöp toplama yerini alır ve .NET Framework 4,5 ile başlayan eşzamanlı sunucu çöp toplama yerini alır.  Arka plan atık toplamada, 2. nesil toplama işlemi devam ederken, kısa ömürlü nesiller (0 ve 1) gerektiği şekilde toplanır. Özel bir iş parçacığında gerçekleştirilir ve yalnızca 2. nesil koleksiyonlar için geçerlidir. Arka plan atık toplama otomatik olarak varsayılan olarak etkindir ve .NET Framework uygulamalarında [ \<gcConcurrent >](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) yapılandırma ayarıyla etkinleştirilebilir veya devre dışı bırakılabilir. 
+Arka plan atık toplama, .NET Framework 4 ile başlayarak eşzamanlı iş istasyonu çöp toplama yerini alır ve .NET Framework 4,5 ile başlayan eşzamanlı sunucu çöp toplama yerini alır.  Arka plan atık toplamada, 2. nesil toplama işlemi devam ederken, kısa ömürlü nesiller (0 ve 1) gerektiği şekilde toplanır. Özel bir iş parçacığında gerçekleştirilir ve yalnızca 2. nesil koleksiyonlar için geçerlidir. Arka plan atık toplama otomatik olarak varsayılan olarak etkindir ve .NET Framework uygulamalarında [\<gcConcurrent >](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) yapılandırma ayarıyla etkinleştirilebilir veya devre dışı bırakılabilir. 
 
 > [!NOTE]
 > Arka plan atık toplama yalnızca .NET Framework 4 ve üzeri sürümlerde kullanılabilir. .NET Framework 4 ' te yalnızca iş istasyonu çöp toplama için desteklenir. .NET Framework 4,5 ' den başlayarak, arka plan atık toplama hem iş istasyonu hem de sunucu çöp toplama için kullanılabilir.
@@ -283,7 +283,7 @@ Arka plan atık toplama sırasında kısa ömürlü çöp koleksiyonları gerçe
 
 Aşağıdaki çizimde, bir iş istasyonunda ayrı bir adanmış iş parçacığında gerçekleştirilen arka plan atık toplama işlemi gösterilmektedir:
 
-![Arka plan iş istasyonu çöp toplamayı gösteren diyagram.](./media/fundamentals/background-workstation-garbage-collection.png)
+![Arka plan iş istasyonu çöp toplamayı gösteren diyagram.](./media/fundamentals/background-workstation-garbage-collection.png "Arka plan iş istasyonu çöp toplamayı gösteren diyagram.")
 
 [Başa dön](#top)
 
@@ -291,12 +291,12 @@ Aşağıdaki çizimde, bir iş istasyonunda ayrı bir adanmış iş parçacığ�
 
 ## <a name="background-server-garbage-collection"></a>Arka plan sunucusu çöp toplama
 
-.NET Framework 4,5 ile başlayarak, arka plan sunucusu çöp toplama sunucu çöp toplama için varsayılan moddur. Bu modu seçmek için, `enabled` [ \<gcServer > öğesinin](../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) özniteliğini çalışma zamanı yapılandırma şemasında olarak `true` ayarlayın. Bu mod, önceki bölümde açıklanan arka plan iş istasyonu çöp toplamasına benzer şekilde çalışır, ancak birkaç farklılık vardır. Arka plan iş istasyonu çöp toplama, bir adanmış arka plan atık toplama iş parçacığı kullanır, ancak arka plan sunucusu çöp toplama, genellikle her mantıksal işlemci için ayrılmış bir iş parçacığı kullanır. İş istasyonu arka plan atık toplama iş parçacığından farklı olarak, bu iş parçacıkları zaman aşımına uğrar.
+.NET Framework 4,5 ile başlayarak, arka plan sunucusu çöp toplama sunucu çöp toplama için varsayılan moddur. Bu modu seçmek için, [\<gcServer > öğesinin](../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) `enabled` özniteliğini çalışma zamanı yapılandırma şemasında `true` olarak ayarlayın. Bu mod, önceki bölümde açıklanan arka plan iş istasyonu çöp toplamasına benzer şekilde çalışır, ancak birkaç farklılık vardır. Arka plan iş istasyonu çöp toplama, bir adanmış arka plan atık toplama iş parçacığı kullanır, ancak arka plan sunucusu çöp toplama, genellikle her mantıksal işlemci için ayrılmış bir iş parçacığı kullanır. İş istasyonu arka plan atık toplama iş parçacığından farklı olarak, bu iş parçacıkları zaman aşımına uğrar.
 
 Aşağıdaki çizimde, bir sunucudaki ayrı bir adanmış iş parçacığında gerçekleştirilen arka plan atık toplama işlemi gösterilmektedir:
 
-![Arka plan sunucusu çöp toplamayı gösteren diyagram.](./media/fundamentals/background-server-garbage-collection.png)
+![Arka plan sunucusu çöp toplamayı gösteren diyagram.](./media/fundamentals/background-server-garbage-collection.png "Arka plan sunucusu çöp toplamayı gösteren diyagram.")
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Atık Toplama](../../../docs/standard/garbage-collection/index.md)
+- [Çöp toplama](../../../docs/standard/garbage-collection/index.md)

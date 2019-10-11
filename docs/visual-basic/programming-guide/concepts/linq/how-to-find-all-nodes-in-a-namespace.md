@@ -1,19 +1,19 @@
 ---
-title: 'Nasıl yapılır: Tüm düğümleri bulma bir Namespace (Visual Basic)'
+title: 'Nasıl yapılır: ad alanındaki tüm düğümleri bulma (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: b735d7da-5727-48a3-ab57-a16378adc32e
-ms.openlocfilehash: c04447df1d4a3e29558a3bad172715d2bdee340b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5ccc996aa986c97fdffb3deeea36346da726a588
+ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61855679"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72249940"
 ---
-# <a name="how-to-find-all-nodes-in-a-namespace-visual-basic"></a>Nasıl yapılır: Tüm düğümleri bulma bir Namespace (Visual Basic)
-Her bir öğe veya öznitelik, belirli bir ad alanındaki tüm düğümleri bulmak için ad alanı filtreleyebilirsiniz.  
+# <a name="how-to-find-all-nodes-in-a-namespace-visual-basic"></a>Nasıl yapılır: ad alanındaki tüm düğümleri bulma (Visual Basic)
+Söz konusu ad alanındaki tüm düğümleri bulmak için her öğe veya özniteliğin ad alanı üzerinde filtre uygulayabilirsiniz.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, bir XML ağacı ile iki ad alanı oluşturur. Ağacı ile yineleme ve tüm öğeleri ve öznitelikleri o ad alanlarından birinde adlarını yazdırır.  
+ Aşağıdaki örnek iki ad alanı olan bir XML ağacı oluşturur. Daha sonra ağaç üzerinde dolaşır ve bu ad alanlarından birindeki tüm öğelerin ve özniteliklerin adlarını yazdırır.  
   
 ```vb  
 Imports <xmlns:aw="http://www.adventure-works.com">  
@@ -45,16 +45,16 @@ End Module
   
  Bu kod aşağıdaki çıktıyı üretir:  
   
-```  
+```console  
 Nodes in the http://www.adventure-works.com namespace  
 {http://www.adventure-works.com}Child3  
 {http://www.adventure-works.com}GrandChild2  
 ```  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki sorgu tarafından erişilen XML dosyasını iki farklı ad alanlarında, satın alma siparişleri içerir. Sorgu yalnızca öğeleri ad alanlarından birinde yeni bir ağaç oluşturur.  
+ Aşağıdaki sorgu tarafından erişilen XML dosyası, satın alma emirlerini iki farklı ad alanında içerir. Sorgu, yalnızca ad alanlarından birindeki öğeleri içeren yeni bir ağaç oluşturur.  
   
- Bu örnek aşağıdaki XML belgesi kullanır: [Örnek XML dosyası: Birleştirilmiş satın alma siparişleri](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-consolidated-purchase-orders.md).  
+ Bu örnek, şu XML belgesini kullanır: [örnek xml dosyası: birleştirilmiş satın alma siparişleri](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-consolidated-purchase-orders.md).  
   
 ```vb  
 Imports <xmlns:aw="http://www.adventure-works.com">  

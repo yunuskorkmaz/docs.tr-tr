@@ -1,21 +1,21 @@
 ---
-title: 'Nasıl yapılır: Öğe adlarını filtrele (LINQ to XML) (Visual Basic)'
+title: 'Nasıl yapılır: öğe adlarını filtreleme (LINQ to XML) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: b1437b4a-48aa-4546-834a-d6d3ab015fe1
-ms.openlocfilehash: f64f80b1544e8c5f2d55a44dafe01fee8758d611
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 9af4b11d6b539b976e225df6a911e2a80429d2fb
+ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68709712"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72250019"
 ---
-# <a name="how-to-filter-on-element-names-linq-to-xml-visual-basic"></a>Nasıl yapılır: Öğe adlarını filtrele (LINQ to XML) (Visual Basic)
-' In <xref:System.Collections.Generic.IEnumerable%601> <xref:System.Xml.Linq.XElement>döndürdüğü yöntemlerden birini çağırdığınızda, öğe adı üzerinde filtre uygulayabilirsiniz.  
+# <a name="how-to-filter-on-element-names-linq-to-xml-visual-basic"></a>Nasıl yapılır: öğe adlarını filtreleme (LINQ to XML) (Visual Basic)
+@No__t-0 <xref:System.Xml.Linq.XElement> döndüren yöntemlerden birini çağırdığınızda, öğe adı üzerinde filtre uygulayabilirsiniz.  
   
 ## <a name="example"></a>Örnek  
  Bu örnek, yalnızca belirtilen ada sahip alt öğeleri içerecek şekilde filtrelenen alt öğelerin bir koleksiyonunu alır.  
   
- Bu örnek aşağıdaki XML belgesini kullanır: [Örnek XML dosyası: Tipik satın alma siparişi (LINQ to XML](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md)).  
+ Bu örnek, şu XML belgesini kullanır: [örnek xml dosyası: tipik satın alma siparişi (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md).  
   
 ```vb  
 Dim po As XElement = XElement.Load("PurchaseOrder.xml")  
@@ -29,12 +29,12 @@ Next
   
  Bu kod aşağıdaki çıktıyı üretir:  
   
-```  
+```console  
 ProductName:Lawnmower  
 ProductName:Baby Monitor  
 ```  
   
- Koleksiyonları<xref:System.Xml.Linq.XElement> döndüren <xref:System.Collections.Generic.IEnumerable%601> diğer yöntemler aynı kalıbı izler. İmzaları <xref:System.Xml.Linq.XContainer.Elements%2A> ve ile <xref:System.Xml.Linq.XContainer.Descendants%2A>benzerdir. Aşağıda benzer yöntem imzaları olan yöntemlerin tamamı listelenmiştir:  
+ @No__t-1 koleksiyonlarının <xref:System.Collections.Generic.IEnumerable%601> döndüren diğer yöntemler aynı kalıbı izler. İmzaları <xref:System.Xml.Linq.XContainer.Elements%2A> ve <xref:System.Xml.Linq.XContainer.Descendants%2A> ' e benzerdir. Aşağıda benzer yöntem imzaları olan yöntemlerin tamamı listelenmiştir:  
   
 - <xref:System.Xml.Linq.XNode.Ancestors%2A>  
   
@@ -53,7 +53,7 @@ ProductName:Baby Monitor
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek, bir ad alanında bulunan XML için aynı sorguyu gösterir. Daha fazla bilgi için bkz. [ad alanlarına genel bakış (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).  
   
- Bu örnek aşağıdaki XML belgesini kullanır: [Örnek XML dosyası: Bir ad alanında](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-in-a-namespace.md)tipik satın alma siparişi.  
+ Bu örnek, şu XML belgesini kullanır: [örnek xml dosyası: bir ad alanında tipik satın alma siparişi](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-in-a-namespace.md).  
   
 ```vb  
 Imports <xmlns:aw="http://www.adventure-works.com">  
@@ -73,7 +73,7 @@ End Module
   
  Bu kod aşağıdaki çıktıyı üretir:  
   
-```  
+```console  
 {http://www.adventure-works.com}ProductName:Lawnmower  
 {http://www.adventure-works.com}ProductName:Baby Monitor  
 ```  

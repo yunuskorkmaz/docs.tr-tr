@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30686
 ms.assetid: 784fefec-ef57-48cf-b960-957df419b439
-ms.openlocfilehash: a36cfe8e5496bbfd1941afa8a46086491ae96a2a
-ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
+ms.openlocfilehash: f76163d58f3f11d3ca946525a1604abc3ebba68d
+ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68512746"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72250378"
 ---
-# <a name="default-property-access-is-ambiguous-between-the-inherited-interface-members-defaultpropertyname-of-interface-interfacename1-and-defaultpropertyname-of-interface-interfacename2"></a>Varsayılan\<Özellik erişimi, '\<\<interfacename1 > ' arabiriminin ' defaultpropertyname > ' ve ' defaultpropertyname > '\< arabiriminin devralınan üyesi arasında belirsiz interfacename2 > '
+# <a name="default-property-access-is-ambiguous-between-the-inherited-interface-members-defaultpropertyname-of-interface-interfacename1-and-defaultpropertyname-of-interface-interfacename2"></a>' @No__t-3ınterfacename2 > ' arabiriminin ' \<ınterfacename1 > ' ve ' \<defaultpropertyname > ' arabiriminin devralınan ' \<defaultpropertyname > ' arabirim üyeleri arasında varsayılan özellik erişimi belirsiz
 
 Bir arabirim, her biri aynı ada sahip bir varsayılan özellik bildiren iki arabirimden devralınır. Derleyici, bu varsayılan özelliğe bir erişimi nitelemeden çözümleyemiyor. Aşağıdaki örnek bunu göstermektedir.
 
@@ -36,19 +36,19 @@ Public Class testClass
 End Class
 ```
 
-Belirttiğinizde `testObj(1)`, derleyici onu varsayılan özelliğe çözümlemeye çalışır. Ancak, devralınan arabirimler nedeniyle mümkün olan iki varsayılan özellik bulunur, bu nedenle derleyici bu hatayı bildirir.
+@No__t-0 belirttiğinizde, derleyici onu varsayılan özelliğe çözümlemeye çalışır. Ancak, devralınan arabirimler nedeniyle mümkün olan iki varsayılan özellik bulunur, bu nedenle derleyici bu hatayı bildirir.
 
-**Hata KIMLIĞI:** BC30686
+**Hata kimliği:** BC30686
 
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için
 
-- Aynı ada sahip tüm üyeleri devrmaktan kaçının. Yukarıdaki örnekte, `testObj` üyesi `Iface2`yoksa,,, ve daha sonra bunu şöyle bildirin:
+- Aynı ada sahip tüm üyeleri devrmaktan kaçının. Yukarıdaki örnekte, `testObj` ' ın üyesi yoksa, `Iface2` ' i yoksa, aşağıdaki gibi bildirin:
 
   ```vb
   Dim testObj As Iface1
   ```
 
-  \-veya
+  \-veya-
 
 - Devralan arabirimi bir sınıfta uygulayın. Ardından, devralınan özelliklerden her birini farklı adlarla uygulayabilirsiniz. Ancak, bunlardan yalnızca biri uygulama sınıfının varsayılan özelliği olabilir. Aşağıdaki örnek bunu göstermektedir.
 
@@ -66,4 +66,4 @@ Belirttiğinizde `testObj(1)`, derleyici onu varsayılan özelliğe çözümleme
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Arabirimler](../../../visual-basic/programming-guide/language-features/interfaces/index.md)
+- [Arabirimler](../../programming-guide/language-features/interfaces/index.md)

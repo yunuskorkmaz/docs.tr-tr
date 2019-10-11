@@ -2,16 +2,16 @@
 title: Mikro hizmetlere dayalı bileşik UI oluşturma
 description: Mikro hizmetler mimarisi yalnızca arka uç için değil. Ön uçta kullanmak için bir göz atma görünümü alın.
 ms.date: 09/20/2018
-ms.openlocfilehash: 60e0e6d59738f3f1fec31226cb842ceb1af303e4
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 1861d3bb6e5d4a0226aa8f3f72a2e0d3e83be56f
+ms.sourcegitcommit: 992f80328b51b165051c42ff5330788627abe973
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834370"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72275734"
 ---
 # <a name="creating-composite-ui-based-on-microservices"></a>Mikro hizmetlere dayalı bileşik UI oluşturma
 
-Mikro hizmetler mimarisi genellikle sunucu tarafı işleme verileriyle ve mantığıyla başlar. Ancak, daha gelişmiş bir yaklaşım, mikro hizmetlere göre uygulama kullanıcı arabirimini de tasarlayamalıdır. Bu, sunucu üzerinde mikro hizmetler ve mikro hizmetleri kullanan tek parçalı bir istemci uygulaması yerine mikro hizmetler tarafından oluşturulan bileşik bir kullanıcı arabirimine sahip olma anlamına gelir. Bu yaklaşımda, oluşturduğunuz mikro hizmetler hem Logic hem de görsel gösterimiyle tamamlanabilir.
+Mikro hizmetler mimarisi genellikle sunucu tarafı işleme verileriyle ve mantığıyla başlar, ancak çoğu durumda Kullanıcı arabirimi hala tek bir şekilde ele alınır. Ancak, [mikro ön uçlar](https://martinfowler.com/articles/micro-frontends.html)adlı daha gelişmiş bir yaklaşım da mikro hizmetlere göre uygulama kullanıcı arabirimini tasarlayamalıdır. Bu, sunucu üzerinde mikro hizmetler ve mikro hizmetleri kullanan tek parçalı bir istemci uygulaması yerine mikro hizmetler tarafından oluşturulan bileşik bir kullanıcı arabirimine sahip olma anlamına gelir. Bu yaklaşımda, oluşturduğunuz mikro hizmetler hem Logic hem de görsel gösterimiyle tamamlanabilir.
 
 Şekil 4-20, tek parçalı bir istemci uygulamasından yalnızca mikro hizmetlerin tüketen daha basit bir yaklaşım gösterir. Kuşkusuz, HTML ve JavaScript üreten bir ASP.NET MVC hizmetine sahip olabilirsiniz. Bu şekilde, mikro hizmetleri kullanan tek bir (tek parçalı) istemci kullanıcı arabirimine sahip olduğunuz ve Kullanıcı arabirimi şeklinin (HTML ve JavaScript) değil Logic ve verilere odaklandığınız bir basitlik basitleştirılmıştır.
 
@@ -39,19 +39,25 @@ Ancak, mikro hizmetlere dayalı bileşik UI hakkında daha fazla bilgi edinmek i
 
 ## <a name="additional-resources"></a>Ek kaynaklar
 
-- **ASP.net (belirli bir Atölyesi) kullanan bileşik Kullanıcı arabirimi** \
+- **Mikro ön uçlar (Marwler 'in blogu)**  
+  <https://martinfowler.com/articles/micro-frontends.html>
+  
+- **Mikro ön uçlar (Michael geers sitesi)**  
+  <https://micro-frontends.org/>
+  
+- **ASP.NET kullanarak bileşik Kullanıcı arabirimi (belirli bir Atölyesi)**  
   <https://github.com/Particular/Workshop/tree/master/demos/asp-net-core>
 
-- **Ruben Oostinga. Mikro hizmetler mimarisinde tek parçalı ön uç** \
+- **Ruben Oostinga. Mikro hizmetler mimarisinde tek parçalı ön uç**  
   <https://xebia.com/blog/the-monolithic-frontend-in-the-microservices-architecture/>
 
-- **Mauro Servienti. Daha iyi kullanıcı arabirimi kompozisyonunun gizli dizisi** \
+- **Mauro Servienti. Daha iyi kullanıcı arabirimi kompozisyonunun gizli dizisi**  
   <https://particular.net/blog/secret-of-better-ui-composition>
 
-- **Viktor Farcic. Ön uç Web bileşenlerini mikro hizmetlere @no__t ekleme**-1
+- **Viktor Farcic. Ön uç Web bileşenlerini mikro hizmetlere ekleme**  
   <https://technologyconversations.com/2015/08/09/including-front-end-web-components-into-microservices/>
 
-- **Mikro hizmet mimarisinde ön uç yönetimi** \
+- **Mikro hizmet mimarisinde ön uç yönetimi**  
   <https://allegro.tech/2016/03/Managing-Frontend-in-the-microservices-architecture.html>
 
 >[!div class="step-by-step"]

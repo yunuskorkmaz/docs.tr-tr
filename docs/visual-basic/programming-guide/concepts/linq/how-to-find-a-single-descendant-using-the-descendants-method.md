@@ -1,19 +1,19 @@
 ---
-title: 'Nasıl yapılır: Alt öğeler yöntemini kullanarak tek bir alt öğe bulma (Visual Basic)'
+title: 'Nasıl yapılır: alt öğeler yöntemini kullanarak tek bir alt öğe bulma (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 0c03468c-efc8-4140-98f3-fb67acd9e8e1
-ms.openlocfilehash: 7e90e7e8c4a6cd4c91b15037be0fa422dd2108e3
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: dbde5686d1b7670290d434c0a04515cbc10622fd
+ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68709083"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72249958"
 ---
-# <a name="how-to-find-a-single-descendant-using-the-descendants-method-visual-basic"></a>Nasıl yapılır: Alt öğeler yöntemini kullanarak tek bir alt öğe bulma (Visual Basic)
-Tek bir benzersiz şekilde <xref:System.Xml.Linq.XContainer.Descendants%2A> adlandırılmış öğe bulmak için bir kodu hızlı bir şekilde yazmak üzere eksen yöntemini kullanabilirsiniz. Bu teknik özellikle belirli bir ada sahip belirli bir alt öğe bulmak istediğinizde yararlıdır. İstenen öğeye gitmek için kodu yazabilirsiniz, ancak <xref:System.Xml.Linq.XContainer.Descendants%2A> eksen kullanılarak kodun yazılması genellikle daha hızlı ve kolaydır.  
+# <a name="how-to-find-a-single-descendant-using-the-descendants-method-visual-basic"></a>Nasıl yapılır: alt öğeler yöntemini kullanarak tek bir alt öğe bulma (Visual Basic)
+Tek bir benzersiz şekilde adlandırılmış öğe bulmak için kodu hızlı bir şekilde yazmak üzere <xref:System.Xml.Linq.XContainer.Descendants%2A> eksen yöntemini kullanabilirsiniz. Bu teknik özellikle belirli bir ada sahip belirli bir alt öğe bulmak istediğinizde yararlıdır. İstenen öğeye gitmek için kodu yazabilirsiniz, ancak <xref:System.Xml.Linq.XContainer.Descendants%2A> eksenini kullanarak kodun yazılması genellikle daha hızlı ve kolaydır.  
   
 ## <a name="example"></a>Örnek  
- Bu örnek, <xref:System.Linq.Enumerable.First%2A> standart sorgu işlecini kullanır.  
+ Bu örnek <xref:System.Linq.Enumerable.First%2A> standart sorgu işlecini kullanır.  
   
 ```vb  
 Dim root As XElement = _  
@@ -39,7 +39,7 @@ Console.WriteLine(grandChild3)
   
  Bu kod aşağıdaki çıktıyı üretir:  
   
-```  
+```console  
 GC3 Value  
 ```  
   
@@ -76,7 +76,7 @@ End Module
   
  Bu kod aşağıdaki çıktıyı üretir:  
   
-```  
+```console  
 GC3 Value  
 ```  
   

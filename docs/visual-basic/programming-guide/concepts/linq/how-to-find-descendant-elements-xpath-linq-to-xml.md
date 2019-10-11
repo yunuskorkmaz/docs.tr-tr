@@ -1,23 +1,23 @@
 ---
-title: 'Nasıl yapılır: (XPath-LINQ to XML) alt öğeleri bulma (Visual Basic)'
+title: 'Nasıl yapılır: alt öğeleri bulma (XPath-LINQ to XML) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: e7e2dc9e-bda9-420d-a5b1-4fabf1cca46b
-ms.openlocfilehash: 09f12dca7b6278327394126ffb0950682d285f88
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3ee496c1a3e797a8edaf5878d9832583396a851f
+ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61780568"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72250131"
 ---
-# <a name="how-to-find-descendant-elements-xpath-linq-to-xml-visual-basic"></a>Nasıl yapılır: (XPath-LINQ to XML) alt öğeleri bulma (Visual Basic)
-Bu konuda, belirli bir ada sahip alt öğeleri almak gösterilmektedir.  
+# <a name="how-to-find-descendant-elements-xpath-linq-to-xml-visual-basic"></a>Nasıl yapılır: alt öğeleri bulma (XPath-LINQ to XML) (Visual Basic)
+Bu konu, belirli bir ada sahip alt öğelerin nasıl alınacağını gösterir.  
   
- XPath ifadesi `//Name`.  
+ XPath ifadesi `//Name` ' dır.  
   
 ## <a name="example"></a>Örnek  
- Bu örnek adlı tüm alt öğeleri bulan `Name`.  
+ Bu örnek `Name` adlı tüm alt öğeleri bulur.  
   
- Bu örnek aşağıdaki XML belgesi kullanır: [Örnek XML dosyası: Birden fazla satın alma siparişi (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
+ Bu örnek, şu XML belgesini kullanır: [örnek xml dosyası: birden fazla satın alma siparişi (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
   
 ```vb  
       Dim po As XDocument = XDocument.Load("PurchaseOrders.xml")  
@@ -41,7 +41,7 @@ Next
   
  Bu örnek aşağıdaki çıktıyı üretir:  
   
-```  
+```console
 Results are identical  
 <Name>Ellen Adams</Name>  
 <Name>Tai Yee</Name>  
@@ -53,4 +53,4 @@ Results are identical
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [LINQ to XML için XPath kullanıcıları (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [XPath kullanıcıları için LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

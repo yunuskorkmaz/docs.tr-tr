@@ -1,20 +1,20 @@
 ---
-ms.openlocfilehash: 377f22409558c21d1c57f6214c13572dedf9e419
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 375a6f57a867c2a11fe95753c1085d6d708db2bd
+ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71217075"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72237485"
 ---
 ### <a name="jsonencodedtextencode-methods-have-an-additional-javascriptencoder-argument"></a>JsonEncodedText. Encode yöntemlerinde ek bir JavaScriptEncoder bağımsız değişkeni vardır
 
-.NET Core 3,0 Preview 8 ' <xref:System.Text.Json.JsonEncodedText.Encode%2A?displayProperty=nameWithType> den itibaren Yöntemler isteğe bağlı <xref:System.Text.Encodings.Web.JavaScriptEncoder> bir bağımsız değişken içerir.
+.NET Core 3,0 Preview 8 ' den başlayarak <xref:System.Text.Json.JsonEncodedText.Encode%2A?displayProperty=nameWithType> yöntemleri isteğe bağlı bir <xref:System.Text.Encodings.Web.JavaScriptEncoder> bağımsız değişkeni içerir.
 
-#### <a name="details"></a>Ayrıntılar
+#### <a name="change-description"></a>Açıklamayı Değiştir
 
-.NET Core 3,0 yeni bir tür içerir: XREF: System. Text. JSON. JsonEncodedText. Encode% 2A? displayProperty = nameWithType >. .NET Core 3,0 Preview 8 ' den itibaren, tüm <xref:System.Text.Json.JsonEncodedText.Encode%2A?displayProperty=nameWithType> yöntem aşırı yüklemelerinin imzası isteğe bağlı <xref:System.Text.Encodings.Web.JavaScriptEncoder> bir parametre içerecek şekilde değiştirilmiştir. Bu değişiklik, farklı veya özel bir kodlayıcı için izin vermek üzere yapılmıştır.
+.NET Core 3,0 yeni bir tür içerir: XREF: System. Text. JSON. JsonEncodedText. Encode% 2A? displayProperty = nameWithType >. .NET Core 3,0 Preview 8 ' den itibaren, tüm <xref:System.Text.Json.JsonEncodedText.Encode%2A?displayProperty=nameWithType> yöntem aşırı yüklemelerinin imzası isteğe bağlı bir <xref:System.Text.Encodings.Web.JavaScriptEncoder> parametresi içerecek şekilde değiştirilmiştir. Bu değişiklik, farklı veya özel bir kodlayıcı için izin vermek üzere yapılmıştır.
 
-.NET Core 3,0 Preview `Encode` 7 ' deki yöntemlerin imzası şunlardır:
+.NET Core 3,0 Preview 7 ' de `Encode` yöntemlerinin imzası şunlardır:
 
 ```csharp
 namespace System.Text.Json
@@ -28,7 +28,7 @@ namespace System.Text.Json
 }
 ```
 
-.NET Core 3,0 Preview 8 `Encode` ve sonraki sürümlerinde aynı yöntemlerin imzası:
+.NET Core 3,0 Preview 8 ve sonraki sürümlerinde aynı `Encode` yöntemlerinin imzası:
 
 ```csharp
 namespace System.Text.Json

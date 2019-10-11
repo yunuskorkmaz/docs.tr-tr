@@ -1,19 +1,19 @@
 ---
-title: 'Nasıl yapılır: Isteğe bağlı bir öğe (Visual Basic) üzerinde filtrele'
+title: 'Nasıl yapılır: Isteğe bağlı bir öğeyi filtreleme (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: a74b76ad-6889-4185-a189-d6ef2c63841e
-ms.openlocfilehash: 4de8c0b07eebc340a53785e6b932a66cb9d2fec9
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 01ab143dd48b0cb0ff74aa039fa292501654056a
+ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710414"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72249997"
 ---
-# <a name="how-to-filter-on-an-optional-element-visual-basic"></a>Nasıl yapılır: Isteğe bağlı bir öğe (Visual Basic) üzerinde filtrele
-Bazen, XML belgenizde bulunduğundan emin olmasanız da bir öğeye filtre uygulamak isteyebilirsiniz. Arama, belirli bir öğede alt öğe yoksa, filtre uygulayarak bir null başvuru özel durumu tetiklememesi için yürütülmelidir. Aşağıdaki örnekte, `Child5` öğesinin bir `Type` alt öğesi yoktur, ancak sorgu yine de doğru yürütülür.  
+# <a name="how-to-filter-on-an-optional-element-visual-basic"></a>Nasıl yapılır: Isteğe bağlı bir öğeyi filtreleme (Visual Basic)
+Bazen, XML belgenizde bulunduğundan emin olmasanız da bir öğeye filtre uygulamak isteyebilirsiniz. Arama, belirli bir öğede alt öğe yoksa, filtre uygulayarak bir null başvuru özel durumu tetiklememesi için yürütülmelidir. Aşağıdaki örnekte, `Child5` öğesi bir `Type` alt öğesine sahip değil, ancak sorgu yine de doğru şekilde yürütülüyor.  
   
 ## <a name="example"></a>Örnek  
- Bu örnek, <xref:System.Xml.Linq.Extensions.Elements%2A> genişletme yöntemini kullanır.  
+ Bu örnek <xref:System.Xml.Linq.Extensions.Elements%2A> genişletme yöntemini kullanır.  
   
 ```vb  
 Dim root As XElement = _   
@@ -50,7 +50,7 @@ Next
   
  Bu kod aşağıdaki çıktıyı üretir:  
   
-```  
+```console  
 Child One Text  
 Child Two Text  
 Child Four Text  
@@ -100,7 +100,7 @@ End Module
   
  Bu kod aşağıdaki çıktıyı üretir:  
   
-```  
+```console  
 Child One Text  
 Child Two Text  
 Child Four Text  

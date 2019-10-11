@@ -11,12 +11,12 @@ metadata:
   nextTutorialTitle: İçindeki dallar ve döngülerC#
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: af06d938f86841620784909b16e72d000452fc2a
-  ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+  ms.openlocfilehash: 5ea939172b35e4380ed3f32d7d06b5749d2005a0
+  ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 09/10/2019
-  ms.locfileid: "70850680"
+  ms.lasthandoff: 10/09/2019
+  ms.locfileid: "72179872"
 items:
 - durationInMinutes: 1
   content: >
@@ -40,14 +40,17 @@ items:
     ```
 
 
-    Yalnızca tamsayılarla temel matematik işlemlerinden birini gördünüz. Tür bir tamsayıyı, pozitif veya negatif bir tam sayıyı temsil eder. **** `int` Eklemek için `+` simgesini kullanın. Tamsayılar için diğer yaygın matematik işlemleri şunlardır:
+    Bunu ortamınızda çalıştırıyorsanız, bunun yerine [Yerel sürümün](numbers-in-csharp-local.md) yönergelerini izlemelisiniz.
 
 
-    - `-`çıkarma için
+    Yalnızca tamsayılarla temel matematik işlemlerinden birini gördünüz. @No__t-0 türü bir **tamsayıyı**, pozitif veya negatif bir tam sayıyı temsil eder. Ek için `+` sembolünü kullanırsınız. Tamsayılar için diğer yaygın matematik işlemleri şunlardır:
 
-    - `*`Çarpma için
 
-    - `/`Bölüm için
+    - çıkarma için `-`
+
+    - Çarpma için `*`
+
+    - Bölüm için `/`
 
 
     > [!TIP]
@@ -189,7 +192,7 @@ items:
   content: >
     Bu son örnek, bu tamsayı bölümünün sonucu ne olduğunu gösterdi.
 
-    **Geri kalanı** , **mod** `%` işleci, şu karakter ile alabilirsiniz:
+    @No__t-2 karakteri olan **Modül** işlecini kullanarak **kalanı** alabilirsiniz:
 
 
     ```csharp
@@ -211,7 +214,7 @@ items:
     ```
 
 
-    C# Tamsayı türü matematik tamlarından farklı bir şekilde farklılık gösterir: `int` türün en az ve en fazla sınırı vardır. Bu sınırları görmek için bu kodu etkileşimli pencerede çalıştırın:
+    C# Tamsayı türü matematik tamlarından farklı bir şekilde farklılık gösterir: `int` türü en az ve en fazla sınırlara sahiptir. Bu sınırları görmek için bu kodu etkileşimli pencerede çalıştırın:
 
 
     ```csharp
@@ -237,14 +240,14 @@ items:
     ```
 
 
-    Yanıtın en düşük (negatif) tamsayıya çok yakın olduğuna dikkat edin. Bu, ile `min + 2`aynıdır.
+    Yanıtın en düşük (negatif) tamsayıya çok yakın olduğuna dikkat edin. @No__t-0 ' dır.
 
     Toplama işlemi, tamsayılar için izin verilen değerleri **taşırdı** .
 
     Bir taşma, olası en büyük tamsayı değerinden en küçüğe "kaydırdığı için, yanıt çok büyük negatif bir sayıdır.
 
 
-    `int` Türü gereksinimlerinizi karşılamıyorsa, farklı sınırlara ve duyarlığa sahip başka sayısal türler vardır. Bundan sonra bu ileri keşfedelim.
+    @No__t-0 türü gereksinimlerinizi karşılamıyorsa, farklı sınırlara ve duyarlığa sahip başka sayısal türler vardır. Bundan sonra bu ileri keşfedelim.
 
 
     > [!NOTE]
@@ -253,7 +256,7 @@ items:
 - title: Double türüyle çalışma
   durationInMinutes: 5
   content: >
-    `double` Sayısal tür bir çift duyarlıklı kayan noktalı sayıyı temsil eder. Bu terimler sizin için yeni olabilir. **Kayan noktalı** sayı, çok büyük veya küçük olabilecek tamsayı olmayan sayıları temsil etmek için kullanışlıdır. **Çift duyarlıklı** , bu sayıların **tek duyarlığa**göre daha fazla duyarlık kullanılarak depolandığı anlamına gelir. Modern bilgisayarlarda, tek duyarlık sayılarıyla çift duyarlık kullanmak daha yaygındır.
+    @No__t-0 sayısal türü bir çift duyarlıklı kayan noktalı sayıyı temsil eder. Bu terimler sizin için yeni olabilir. **Kayan noktalı** sayı, çok büyük veya küçük olabilecek tamsayı olmayan sayıları temsil etmek için kullanışlıdır. **Çift duyarlıklı** , bu sayıların **tek duyarlığa**göre daha fazla duyarlık kullanılarak depolandığı anlamına gelir. Modern bilgisayarlarda, tek duyarlık sayılarıyla çift duyarlık kullanmak daha yaygındır.
 
     Keşfedelim. Etkileşimli pencerede aşağıdaki kodu deneyin ve sonucu görün:
 
@@ -305,7 +308,7 @@ items:
     ```
 
 
-    Bu değerler bilimsel gösterimde yazdırılır. Öğesinin solundaki sayı mantisinin ' `E` dir. Sağdaki sayı, 10 ' un üssü olarak üs değeri olan sayıdır.
+    Bu değerler bilimsel gösterimde yazdırılır. @No__t-0 ' ın solundaki sayı mantisinin ' dir. Sağdaki sayı, 10 ' un üssü olarak üs değeri olan sayıdır.
 
 
     Matematiği gibi ondalık sayılar gibi, içindeki Double C# değerleri de yuvarlama hataları içerebilir. Şu kodu deneyin:
@@ -320,13 +323,13 @@ items:
     ```
 
 
-    `0.3` Tekrarda tam olarak `1/3`aynı olmadığını bilirsiniz.
+    @No__t-0 tekrarın tam olarak `1/3` ile aynı olmadığını bilirsiniz.
 
 
     ***Sına***
 
 
-    `double` Türü kullanarak büyük sayılar, küçük sayılar, çarpma ve bölme ile diğer hesaplamaları deneyin.  Daha karmaşık hesaplamalar deneyin.
+    @No__t-0 türünü kullanarak büyük sayılar, küçük sayılar, çarpma ve bölme ile diğer hesaplamaları deneyin.  Daha karmaşık hesaplamalar deneyin.
 
 
     > [!NOTE]
@@ -335,7 +338,7 @@ items:
 - title: Sabit nokta türleriyle çalışma
   durationInMinutes: 8
   content: >
-    Temel sayısal türleri C#: tamsayılar ve Double değerleri ile gördünüz.  Öğreneceğinizi bir başka tür vardır: `decimal` türü. Türün daha küçük bir aralığı, ancak daha fazla `double`duyarlık vardır. `decimal` **Sabit nokta** terimi, ondalık noktanın (veya ikili noktanın) taşınmayacağı anlamına gelir. Bir göz atalım:
+    Temel sayısal türleri C#: tamsayılar ve Double değerleri ile gördünüz.  Öğreneceğinizi bir başka tür vardır: `decimal` türü. @No__t-0 türü daha küçük bir aralığa sahip ancak `double` ' den daha büyük duyarlığa sahiptir. **Sabit nokta** terimi, ondalık noktanın (veya ikili noktanın) taşınmayacağı anlamına gelir. Şimdi bir göz atalım:
 
 
     ```csharp
@@ -349,7 +352,7 @@ items:
     ```
 
 
-    Aralığın `double` türden küçük olduğuna dikkat edin. Aşağıdaki kodu deneyerek ondalık türüyle daha büyük duyarlık görebilirsiniz:
+    Aralığın `double` türünden küçük olduğuna dikkat edin. Aşağıdaki kodu deneyerek ondalık türüyle daha büyük duyarlık görebilirsiniz:
 
 
     ```csharp
@@ -370,7 +373,7 @@ items:
     ```
 
 
-    Sayıların son eki, bir sabitin `decimal` türü kullanması gerektiğini gösterir. `M`
+    Sayıların `M` soneki, bir sabitin `decimal` türünü kullanması gerektiğini gösterir.
 
 
     Ondalık türü kullanan matematik, ondalık noktanın sağında daha fazla basamağa sahip olduğuna dikkat edin.
@@ -379,7 +382,7 @@ items:
     ***Sına***
 
 
-    Farklı sayısal türleri gördüğünüze göre, yarıçapı 2,50 santimetre olan bir dairenin alanını hesaplayan bir kod yazın. Bir daire alanının, Radius ile çarpıldığı bir daire olduğunu unutmayın. Bir ipucu: .net, <xref:System.Math.PI?displayProperty=nameWithType> bu değer için kullanabileceğiniz PI için bir sabit içerir.
+    Farklı sayısal türleri gördüğünüze göre, yarıçapı 2,50 santimetre olan bir dairenin alanını hesaplayan bir kod yazın. Bir daire alanının, Radius ile çarpıldığı bir daire olduğunu unutmayın. Bir ipucu: .NET, bu değer için kullanabileceğiniz PI, <xref:System.Math.PI?displayProperty=nameWithType> için bir sabit içerir.
 
 
     > [!NOTE]
@@ -411,4 +414,4 @@ items:
     > [!NOTE]
 
     > Bu çevrimiçi kodlama deneyimi önizleme modundadır. Sorunlarla karşılaşırsanız, lütfen [DotNet/depoyu dene](https://github.com/dotnet/try/issues)' ye bildirin.
-- content: "\"Numaraları C#\" Etkileşimli öğreticiden tamamladınız. Sonraki etkileşimli öğreticiye başlamak için aşağıdaki **dallar ve döngüler** bağlantısına tıklayabilir veya [.net sitesini](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) ziyaret ederek .NET Core SDK indirebilir, makinenizde bir proje oluşturabilir ve kodlamaya devam edebilirsiniz. \"Sonraki adımlar\" bölümü, sizi bu öğreticilere geri getirir.\n\nAşağıdaki konularda, içindeki C# numaralar hakkında daha fazla bilgi edinebilirsiniz:\n\n- [Integral türleri](../../language-reference/builtin-types/integral-numeric-types.md)\n- [Kayan Nokta Türleri Tablosu](../../language-reference/builtin-types/floating-point-numeric-types.md)\n- [Yerleşik Türler Tablosu](../../language-reference/keywords/built-in-types-table.md)\n- [Örtük Sayısal Dönüştürmeler Tablosu](../../language-reference/keywords/implicit-numeric-conversions-table.md)\n- [Açık Sayısal Dönüştürmeler Tablosu](../../language-reference/keywords/explicit-numeric-conversions-table.md)"
+- content: "\"Numaraları C#\" Etkileşimli öğreticiden tamamladınız. Sonraki etkileşimli öğreticiye başlamak için aşağıdaki **dallar ve döngüler** bağlantısına tıklayabilir veya [.net sitesini](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) ziyaret ederek .NET Core SDK indirebilir, makinenizde bir proje oluşturabilir ve kodlamaya devam edebilirsiniz. \"Sonraki adımlar\" bölümü, sizi bu öğreticilere geri getirir.\n\nAşağıdaki konularda, içindeki C# numaralar hakkında daha fazla bilgi edinebilirsiniz:\n\n- [Integral türleri](../../language-reference/builtin-types/integral-numeric-types.md)\n- [Kayan nokta türleri tablosu](../../language-reference/builtin-types/floating-point-numeric-types.md)\n- [Yerleşik türler tablosu](../../language-reference/keywords/built-in-types-table.md)\n- [Örtük Sayısal dönüştürmeler tablosu](../../language-reference/keywords/implicit-numeric-conversions-table.md)\n- [Açık Sayısal Dönüşümler Tablosu](../../language-reference/keywords/explicit-numeric-conversions-table.md)"

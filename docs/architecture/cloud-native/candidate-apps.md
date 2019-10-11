@@ -3,12 +3,12 @@ title: Cloud Native için aday uygulamalar
 description: Bulut Yerel yaklaşımdan hangi tür uygulamaların avantajına yarar olduğunu öğrenin
 author: robvet
 ms.date: 08/20/2019
-ms.openlocfilehash: a06ecdd9bfb3bd50757c484115eb123862a1bb9e
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 6da531397e6103e5c59accf321bc5ae82153dded
+ms.sourcegitcommit: 992f80328b51b165051c42ff5330788627abe973
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71214008"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72275821"
 ---
 # <a name="candidate-apps-for-cloud-native"></a>Cloud Native için aday uygulamalar
 
@@ -36,8 +36,7 @@ Ardından eski sistemler vardır. Yeni uygulamalar oluşturmak istiyoruz, ancak 
 
 [Azure bulut ve Windows kapsayıcıları ile](https://dotnet.microsoft.com/download/thank-you/modernizing-existing-net-apps-ebook) ücretsiz Microsoft e-book modernleştirin mevcut .NET uygulamaları, şirket içi iş yüklerini buluta geçirmeye yönelik yönergeler sağlar. Şekil 1-8, eski uygulamaların modernleştirilmesi için tek, tek boyutlu uygun bir strateji olmadığını gösterir.
 
-![Eski iş yüklerini](./media/strategies-for-migrating-legacy-workloads.png)
-geçirme stratejileri**Şekil 1-8**. Eski iş yüklerini geçirme stratejileri
+Eski iş yüklerini geçirmeye yönelik ![Stratejileri @ no__t-1**şekil 1-8**. Eski iş yüklerini geçirme stratejileri
 
 Kritik olmayan tek parçalı uygulamalar hızlı bir kaldırma ve kaydırma ([bulut altyapıya](https://docs.microsoft.com/dotnet/standard/modernize-with-azure-and-containers/lift-and-shift-existing-apps-azure-iaas)yönelik) geçiş işleminden büyük ölçüde avantaj sağlıyor. Burada, şirket içi iş yükü, hiçbir değişiklik yapılmadan bulut tabanlı bir VM 'de yeniden barındırılır. Bu yaklaşım [IaaS (hizmet olarak altyapı) modeli](https://azure.microsoft.com/overview/what-is-iaas/)kullanır. Azure, böyle bir taşımanın daha kolay olması için ([Azure geçişi](https://aka.ms/azuremigrate), [Azure Site Recovery](https://azure.microsoft.com/services/site-recovery/)ve [Azure veritabanı geçiş hizmeti](https://azure.microsoft.com/campaigns/database-migration/)) gibi çeşitli araçlar içerir. Bu strateji bazı maliyet tasarrufu sağlayabilir, ancak bu gibi uygulamalar genellikle kilit açma ve bulut bilgi işlemin avantajlarından faydalanmayı sanallaştırmıştır. 
 
@@ -65,7 +64,7 @@ Doğru geçiş stratejisi, kuruluşunuzun önceliklerine ve hedeflediğiniz sist
 
 ## <a name="summary"></a>Özet
 
-Bu bölümde, bulutta yerel bilgi işlem tanıtıldık. Bulut Yerel uygulamasını hedefleyen anahtar özellikleri ile birlikte bir tanım sağladık. Bu yatırım ve çabayı göz ardı edebilir uygulama türlerini inceledik.
+Bu bölümde, bulutta yerel bilgi işlem tanıtıldık. Bulut Yerel uygulamasını hedefleyen anahtar özellikleri ile birlikte bir tanım sağladık. Bu yatırım ve çabayı göz ardı edebilir uygulama türlerine baktık.
 
 Bu konuda daha ayrıntılı bilgi edinmek için artık Cloud Native 'e çok daha ayrıntılı bir bakış sunuyoruz.
 
@@ -73,7 +72,7 @@ Bu konuda daha ayrıntılı bilgi edinmek için artık Cloud Native 'e çok daha
 
 - [Bulut Yerel Bilgi Işlem altyapısı](https://www.cncf.io/)
 
-- [.NET Mikro Hizmetleri: Kapsayıcılı .NET uygulamaları için mimari](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook)
+- [.NET mikro hizmetleri: Kapsayıcılı .NET uygulamaları için mimari](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook)
 
 - [Azure bulut ve Windows kapsayıcıları ile mevcut .NET uygulamalarını modernleştirin](https://dotnet.microsoft.com/download/thank-you/modernizing-existing-net-apps-ebook)
 
@@ -83,7 +82,7 @@ Bu konuda daha ayrıntılı bilgi edinmek için artık Cloud Native 'e çok daha
 
 - [Kod olarak altyapı nedir?](https://docs.microsoft.com/azure/devops/learn/what-is-infrastructure-as-code)
 
-- [Uıber mühendisin mikro dağıtımı: Her gün güvenle dağıtım](https://eng.uber.com/micro-deploy/)
+- [Uıber mühendisin mikro dağıtımı: her gün güvenle dağıtım](https://eng.uber.com/micro-deploy/)
 
 - [Netflix kodu dağıtır](https://www.infoq.com/news/2013/06/netflix/)
 
