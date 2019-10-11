@@ -1,5 +1,5 @@
 ### YamlMime:Tutorial
-title: <span data-ttu-id="c7475-101">İçindeki integral ve kayan noktalı sayıları işlemeC#</span><span class="sxs-lookup"><span data-stu-id="c7475-101">Manipulate integral and floating point numbers in C#</span></span>
+title: <span data-ttu-id="b6b30-101">İçindeki integral ve kayan noktalı sayıları işlemeC#</span><span class="sxs-lookup"><span data-stu-id="b6b30-101">Manipulate integral and floating point numbers in C#</span></span>
 metadata:
   title: C# C#
   description: Sayısal türlerle ilgili bu öğreticide, etkileşimli olarak öğrenmek C# için tarayıcınızı kullanacaksınız. Kod yazacak C# ve kodunuzu doğrudan tarayıcıda derleyip çalıştırmanın sonuçlarını görecekeceğiz.
@@ -8,23 +8,23 @@ metadata:
   ms.date: 08/24/2018
   level: Beginner
   nextTutorialHref: branches-and-loops.yml
-  nextTutorialTitle: <span data-ttu-id="c7475-105">İçindeki dallar ve döngülerC#</span><span class="sxs-lookup"><span data-stu-id="c7475-105">Branches and loops in C#</span></span>
+  nextTutorialTitle: <span data-ttu-id="b6b30-105">İçindeki dallar ve döngülerC#</span><span class="sxs-lookup"><span data-stu-id="b6b30-105">Branches and loops in C#</span></span>
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: af06d938f86841620784909b16e72d000452fc2a
-  ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+  ms.openlocfilehash: 5ea939172b35e4380ed3f32d7d06b5749d2005a0
+  ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 09/10/2019
-  ms.locfileid: "70850680"
+  ms.lasthandoff: 10/09/2019
+  ms.locfileid: "72179872"
 items:
 - durationInMinutes: 1
   content: >
-    <span data-ttu-id="c7475-106">Bu öğreticide, kodunuzu derleyip çalıştırmanın sonuçlarını yazmak C# C# ve görüntülemek için tarayıcınızı kullanarak etkileşimli olarak sayısal türleri öğretir.</span><span class="sxs-lookup"><span data-stu-id="c7475-106">This tutorial teaches you about the numeric types in C# interactively, using your browser to write C# and see the results of compiling and running your code.</span></span> <span data-ttu-id="c7475-107">İçindeki C#sayıları ve matematik işlemlerini keşfetmenizi sağlayan bir dizi ders içerir.</span><span class="sxs-lookup"><span data-stu-id="c7475-107">It contains a series of lessons that explore numbers and math operations in C#.</span></span> <span data-ttu-id="c7475-108">Bu dersler, C# dilin temellerini öğretir.</span><span class="sxs-lookup"><span data-stu-id="c7475-108">These lessons teach you the fundamentals of the C# language.</span></span>
-- title: <span data-ttu-id="c7475-109">Tamsayı matematiğini keşfet</span><span class="sxs-lookup"><span data-stu-id="c7475-109">Explore integer math</span></span>
+    <span data-ttu-id="b6b30-106">Bu öğreticide, kodunuzu derleyip çalıştırmanın sonuçlarını yazmak C# C# ve görüntülemek için tarayıcınızı kullanarak etkileşimli olarak sayısal türleri öğretir.</span><span class="sxs-lookup"><span data-stu-id="b6b30-106">This tutorial teaches you about the numeric types in C# interactively, using your browser to write C# and see the results of compiling and running your code.</span></span> <span data-ttu-id="b6b30-107">İçindeki C#sayıları ve matematik işlemlerini keşfetmenizi sağlayan bir dizi ders içerir.</span><span class="sxs-lookup"><span data-stu-id="b6b30-107">It contains a series of lessons that explore numbers and math operations in C#.</span></span> <span data-ttu-id="b6b30-108">Bu dersler, C# dilin temellerini öğretir.</span><span class="sxs-lookup"><span data-stu-id="b6b30-108">These lessons teach you the fundamentals of the C# language.</span></span>
+- title: <span data-ttu-id="b6b30-109">Tamsayı matematiğini keşfet</span><span class="sxs-lookup"><span data-stu-id="b6b30-109">Explore integer math</span></span>
   durationInMinutes: 4
   content: >
-    <span data-ttu-id="c7475-110">Etkileşimli pencerede aşağıdaki kodu çalıştırın.</span><span class="sxs-lookup"><span data-stu-id="c7475-110">Run the following code in the interactive window.</span></span> <span data-ttu-id="c7475-111">Bunu yapmak için, etkileşimli pencereye aşağıdaki kod bloğunu yazın ve **Çalıştır** düğmesine tıklayın:</span><span class="sxs-lookup"><span data-stu-id="c7475-111">To do that, type the following code block in the interactive window and click the **Run** button:</span></span>
+    <span data-ttu-id="b6b30-110">Etkileşimli pencerede aşağıdaki kodu çalıştırın.</span><span class="sxs-lookup"><span data-stu-id="b6b30-110">Run the following code in the interactive window.</span></span> <span data-ttu-id="b6b30-111">Bunu yapmak için, etkileşimli pencereye aşağıdaki kod bloğunu yazın ve **Çalıştır** düğmesine tıklayın:</span><span class="sxs-lookup"><span data-stu-id="b6b30-111">To do that, type the following code block in the interactive window and click the **Run** button:</span></span>
 
 
     ```csharp
@@ -40,25 +40,28 @@ items:
     ```
 
 
-    <span data-ttu-id="c7475-112">Yalnızca tamsayılarla temel matematik işlemlerinden birini gördünüz.</span><span class="sxs-lookup"><span data-stu-id="c7475-112">You've just seen one of the fundamental math operations with integers.</span></span> <span data-ttu-id="c7475-113">Tür bir tamsayıyı, pozitif veya negatif bir tam sayıyı temsil eder. \*\*\*\* `int`</span><span class="sxs-lookup"><span data-stu-id="c7475-113">The `int` type represents an **integer**, a positive or negative whole number.</span></span> <span data-ttu-id="c7475-114">Eklemek için `+` simgesini kullanın.</span><span class="sxs-lookup"><span data-stu-id="c7475-114">You use the `+` symbol for addition.</span></span> <span data-ttu-id="c7475-115">Tamsayılar için diğer yaygın matematik işlemleri şunlardır:</span><span class="sxs-lookup"><span data-stu-id="c7475-115">Other common mathematical operations for integers include:</span></span>
+    <span data-ttu-id="b6b30-112">Bunu ortamınızda çalıştırıyorsanız, bunun yerine [Yerel sürümün](numbers-in-csharp-local.md) yönergelerini izlemelisiniz.</span><span class="sxs-lookup"><span data-stu-id="b6b30-112">If you are running this on your environment, you should follow the instructions for the [local version](numbers-in-csharp-local.md) instead.</span></span>
 
 
-    - <span data-ttu-id="c7475-116">`-`çıkarma için</span><span class="sxs-lookup"><span data-stu-id="c7475-116">`-` for subtraction</span></span>
+    <span data-ttu-id="b6b30-113">Yalnızca tamsayılarla temel matematik işlemlerinden birini gördünüz.</span><span class="sxs-lookup"><span data-stu-id="b6b30-113">You've just seen one of the fundamental math operations with integers.</span></span> <span data-ttu-id="b6b30-114">@No__t-0 türü bir **tamsayıyı**, pozitif veya negatif bir tam sayıyı temsil eder.</span><span class="sxs-lookup"><span data-stu-id="b6b30-114">The `int` type represents an **integer**, a positive or negative whole number.</span></span> <span data-ttu-id="b6b30-115">Ek için `+` sembolünü kullanırsınız.</span><span class="sxs-lookup"><span data-stu-id="b6b30-115">You use the `+` symbol for addition.</span></span> <span data-ttu-id="b6b30-116">Tamsayılar için diğer yaygın matematik işlemleri şunlardır:</span><span class="sxs-lookup"><span data-stu-id="b6b30-116">Other common mathematical operations for integers include:</span></span>
 
-    - <span data-ttu-id="c7475-117">`*`Çarpma için</span><span class="sxs-lookup"><span data-stu-id="c7475-117">`*` for multiplication</span></span>
 
-    - <span data-ttu-id="c7475-118">`/`Bölüm için</span><span class="sxs-lookup"><span data-stu-id="c7475-118">`/` for division</span></span>
+    - <span data-ttu-id="b6b30-117">çıkarma için `-`</span><span class="sxs-lookup"><span data-stu-id="b6b30-117">`-` for subtraction</span></span>
+
+    - <span data-ttu-id="b6b30-118">Çarpma için `*`</span><span class="sxs-lookup"><span data-stu-id="b6b30-118">`*` for multiplication</span></span>
+
+    - <span data-ttu-id="b6b30-119">Bölüm için `/`</span><span class="sxs-lookup"><span data-stu-id="b6b30-119">`/` for division</span></span>
 
 
     > [!TIP]
 
-    > <span data-ttu-id="c7475-119">Bu etkileşimli öğreticide, etkileşimli pencerede yazdığınız kodu değiştirerek kendi kendinize araştırma yapabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="c7475-119">Throughout this interactive tutorial, you can explore on your own by modifying the code you've written in the interactive window.</span></span> <span data-ttu-id="c7475-120">Bu öğreticide, her adımda deneyebileceğiniz örnekler sağlanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="c7475-120">This tutorial provides examples that you can try at each step.</span></span>
+    > <span data-ttu-id="b6b30-120">Bu etkileşimli öğreticide, etkileşimli pencerede yazdığınız kodu değiştirerek kendi kendinize araştırma yapabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="b6b30-120">Throughout this interactive tutorial, you can explore on your own by modifying the code you've written in the interactive window.</span></span> <span data-ttu-id="b6b30-121">Bu öğreticide, her adımda deneyebileceğiniz örnekler sağlanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="b6b30-121">This tutorial provides examples that you can try at each step.</span></span>
 
 
-    <span data-ttu-id="c7475-121">Bu farklı işlemleri inceleyerek başlayın.</span><span class="sxs-lookup"><span data-stu-id="c7475-121">Start by exploring those different operations.</span></span> <span data-ttu-id="c7475-122">Bu işlemlerin her birini denemek için üçüncü satırı değiştirin.</span><span class="sxs-lookup"><span data-stu-id="c7475-122">Modify the third line to try each of these operations.</span></span> <span data-ttu-id="c7475-123">Her Düzenlemeden sonra **Çalıştır** düğmesine tıklayın.</span><span class="sxs-lookup"><span data-stu-id="c7475-123">After each edit, click the **Run** button.</span></span>
+    <span data-ttu-id="b6b30-122">Bu farklı işlemleri inceleyerek başlayın.</span><span class="sxs-lookup"><span data-stu-id="b6b30-122">Start by exploring those different operations.</span></span> <span data-ttu-id="b6b30-123">Bu işlemlerin her birini denemek için üçüncü satırı değiştirin.</span><span class="sxs-lookup"><span data-stu-id="b6b30-123">Modify the third line to try each of these operations.</span></span> <span data-ttu-id="b6b30-124">Her Düzenlemeden sonra **Çalıştır** düğmesine tıklayın.</span><span class="sxs-lookup"><span data-stu-id="b6b30-124">After each edit, click the **Run** button.</span></span>
 
 
-    <span data-ttu-id="c7475-124">StrA</span><span class="sxs-lookup"><span data-stu-id="c7475-124">Subtraction:</span></span>
+    <span data-ttu-id="b6b30-125">StrA</span><span class="sxs-lookup"><span data-stu-id="b6b30-125">Subtraction:</span></span>
 
 
     ```csharp
@@ -68,7 +71,7 @@ items:
     ```
 
 
-    <span data-ttu-id="c7475-125">Anda</span><span class="sxs-lookup"><span data-stu-id="c7475-125">Multiplication:</span></span>
+    <span data-ttu-id="b6b30-126">Anda</span><span class="sxs-lookup"><span data-stu-id="b6b30-126">Multiplication:</span></span>
 
 
     ```csharp
@@ -78,7 +81,7 @@ items:
     ```
 
 
-    <span data-ttu-id="c7475-126">Bölmenin</span><span class="sxs-lookup"><span data-stu-id="c7475-126">Division:</span></span>
+    <span data-ttu-id="b6b30-127">Bölmenin</span><span class="sxs-lookup"><span data-stu-id="b6b30-127">Division:</span></span>
 
 
     ```csharp
@@ -88,27 +91,27 @@ items:
     ```
 
 
-    <span data-ttu-id="c7475-127">İsterseniz aynı satırda birden çok matematik işlemi gerçekleştirerek da deneyebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="c7475-127">You can also experiment by performing multiple mathematics operations in the same line, if you'd like.</span></span>
+    <span data-ttu-id="b6b30-128">İsterseniz aynı satırda birden çok matematik işlemi gerçekleştirerek da deneyebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="b6b30-128">You can also experiment by performing multiple mathematics operations in the same line, if you'd like.</span></span>
 
 
     > [!TIP]
 
-    > <span data-ttu-id="c7475-128">Keşfederken C# (veya herhangi bir programlama dilini), kod yazarken hata oluşturursunuz.</span><span class="sxs-lookup"><span data-stu-id="c7475-128">As you explore C# (or any programming language), you'll make mistakes when you write code.</span></span> <span data-ttu-id="c7475-129">**Derleyici** bu hataları bulacak ve size rapor eder.</span><span class="sxs-lookup"><span data-stu-id="c7475-129">The **compiler** will find those errors and report them to you.</span></span> <span data-ttu-id="c7475-130">Çıktı hata iletileri içerdiğinde, nelerin düzeltileceğini görmek için örnek koda ve etkileşimli penceredeki koda yakından bakın.</span><span class="sxs-lookup"><span data-stu-id="c7475-130">When the output contains error messages, look closely at the example code, and the code in the interactive window to see what to fix.</span></span>
+    > <span data-ttu-id="b6b30-129">Keşfederken C# (veya herhangi bir programlama dilini), kod yazarken hata oluşturursunuz.</span><span class="sxs-lookup"><span data-stu-id="b6b30-129">As you explore C# (or any programming language), you'll make mistakes when you write code.</span></span> <span data-ttu-id="b6b30-130">**Derleyici** bu hataları bulacak ve size rapor eder.</span><span class="sxs-lookup"><span data-stu-id="b6b30-130">The **compiler** will find those errors and report them to you.</span></span> <span data-ttu-id="b6b30-131">Çıktı hata iletileri içerdiğinde, nelerin düzeltileceğini görmek için örnek koda ve etkileşimli penceredeki koda yakından bakın.</span><span class="sxs-lookup"><span data-stu-id="b6b30-131">When the output contains error messages, look closely at the example code, and the code in the interactive window to see what to fix.</span></span>
 
-    > <span data-ttu-id="c7475-131">Bu alıştırma, C# kod yapısını öğrenmenize yardımcı olur.</span><span class="sxs-lookup"><span data-stu-id="c7475-131">That exercise will help you learn the structure of C# code.</span></span>
+    > <span data-ttu-id="b6b30-132">Bu alıştırma, C# kod yapısını öğrenmenize yardımcı olur.</span><span class="sxs-lookup"><span data-stu-id="b6b30-132">That exercise will help you learn the structure of C# code.</span></span>
 
 
     > [!NOTE]
 
-    > <span data-ttu-id="c7475-132">Bu çevrimiçi kodlama deneyimi önizleme modundadır.</span><span class="sxs-lookup"><span data-stu-id="c7475-132">This online coding experience is in preview mode.</span></span> <span data-ttu-id="c7475-133">Sorunlarla karşılaşırsanız, lütfen [DotNet/depoyu dene](https://github.com/dotnet/try/issues)' ye bildirin.</span><span class="sxs-lookup"><span data-stu-id="c7475-133">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
-- title: <span data-ttu-id="c7475-134">İşlem sırasını keşfet</span><span class="sxs-lookup"><span data-stu-id="c7475-134">Explore order of operations</span></span>
+    > <span data-ttu-id="b6b30-133">Bu çevrimiçi kodlama deneyimi önizleme modundadır.</span><span class="sxs-lookup"><span data-stu-id="b6b30-133">This online coding experience is in preview mode.</span></span> <span data-ttu-id="b6b30-134">Sorunlarla karşılaşırsanız, lütfen [DotNet/depoyu dene](https://github.com/dotnet/try/issues)' ye bildirin.</span><span class="sxs-lookup"><span data-stu-id="b6b30-134">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
+- title: <span data-ttu-id="b6b30-135">İşlem sırasını keşfet</span><span class="sxs-lookup"><span data-stu-id="b6b30-135">Explore order of operations</span></span>
   durationInMinutes: 7
   content: >
-    <span data-ttu-id="c7475-135">C# Dil, matematiksel olarak öğrendiğiniz kurallarla tutarlı kurallara sahip farklı matematik işlemlerinin önceliğini tanımlar.</span><span class="sxs-lookup"><span data-stu-id="c7475-135">The C# language defines the precedence of different mathematics operations with rules consistent with the rules you learned in mathematics.</span></span>
+    <span data-ttu-id="b6b30-136">C# Dil, matematiksel olarak öğrendiğiniz kurallarla tutarlı kurallara sahip farklı matematik işlemlerinin önceliğini tanımlar.</span><span class="sxs-lookup"><span data-stu-id="b6b30-136">The C# language defines the precedence of different mathematics operations with rules consistent with the rules you learned in mathematics.</span></span>
 
-    <span data-ttu-id="c7475-136">Çarpma ve bölme, toplama ve çıkarma konusunda önceliklidir.</span><span class="sxs-lookup"><span data-stu-id="c7475-136">Multiplication and division take precedence over addition and subtraction.</span></span>
+    <span data-ttu-id="b6b30-137">Çarpma ve bölme, toplama ve çıkarma konusunda önceliklidir.</span><span class="sxs-lookup"><span data-stu-id="b6b30-137">Multiplication and division take precedence over addition and subtraction.</span></span>
 
-    <span data-ttu-id="c7475-137">Etkileşimli pencerede aşağıdaki kodu çalıştırarak bunu keşfedebilirsiniz:</span><span class="sxs-lookup"><span data-stu-id="c7475-137">Explore that by running the following code in the interactive window:</span></span>
+    <span data-ttu-id="b6b30-138">Etkileşimli pencerede aşağıdaki kodu çalıştırarak bunu keşfedebilirsiniz:</span><span class="sxs-lookup"><span data-stu-id="b6b30-138">Explore that by running the following code in the interactive window:</span></span>
 
 
     ```csharp
@@ -126,10 +129,10 @@ items:
     ```
 
 
-    <span data-ttu-id="c7475-138">Çıktı, çarpma 'nın ekleme işleminden önce gerçekleştirildiğini gösterir.</span><span class="sxs-lookup"><span data-stu-id="c7475-138">The output demonstrates that the multiplication is performed before the addition.</span></span>
+    <span data-ttu-id="b6b30-139">Çıktı, çarpma 'nın ekleme işleminden önce gerçekleştirildiğini gösterir.</span><span class="sxs-lookup"><span data-stu-id="b6b30-139">The output demonstrates that the multiplication is performed before the addition.</span></span>
 
 
-    <span data-ttu-id="c7475-139">Önce gerçekleştirilmesini istediğiniz işlemin veya işlemlerin çevresine parantez ekleyerek farklı bir işlem sırası zorlayabilirsiniz:</span><span class="sxs-lookup"><span data-stu-id="c7475-139">You can force a different order of operation by adding parentheses around the operation or operations you want performed first:</span></span>
+    <span data-ttu-id="b6b30-140">Önce gerçekleştirilmesini istediğiniz işlemin veya işlemlerin çevresine parantez ekleyerek farklı bir işlem sırası zorlayabilirsiniz:</span><span class="sxs-lookup"><span data-stu-id="b6b30-140">You can force a different order of operation by adding parentheses around the operation or operations you want performed first:</span></span>
 
 
     ```csharp
@@ -147,7 +150,7 @@ items:
     ```
 
 
-    <span data-ttu-id="c7475-140">Birçok farklı işlemi birleştirerek daha fazlasını keşfedebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="c7475-140">Explore more by combining many different operations.</span></span> <span data-ttu-id="c7475-141">Yukarıdaki dördüncü satırı şunun gibi bir şekilde değiştirin:</span><span class="sxs-lookup"><span data-stu-id="c7475-141">Replace the fourth line above with something like this:</span></span>
+    <span data-ttu-id="b6b30-141">Birçok farklı işlemi birleştirerek daha fazlasını keşfedebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="b6b30-141">Explore more by combining many different operations.</span></span> <span data-ttu-id="b6b30-142">Yukarıdaki dördüncü satırı şunun gibi bir şekilde değiştirin:</span><span class="sxs-lookup"><span data-stu-id="b6b30-142">Replace the fourth line above with something like this:</span></span>
 
 
     ```csharp
@@ -157,10 +160,10 @@ items:
     ```
 
 
-    <span data-ttu-id="c7475-142">Tamsayılar için ilginç bir davranış fark etmiş olabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="c7475-142">You may have noticed an interesting behavior for integers.</span></span> <span data-ttu-id="c7475-143">Sonucun ondalık veya kesir kısmını içermesini bekleseniz bile, tam sayı bölümü her zaman bir tamsayı sonucu üretir.</span><span class="sxs-lookup"><span data-stu-id="c7475-143">Integer division always produces an integer result, even when you'd expect the result to include a decimal or fractional portion.</span></span>
+    <span data-ttu-id="b6b30-143">Tamsayılar için ilginç bir davranış fark etmiş olabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="b6b30-143">You may have noticed an interesting behavior for integers.</span></span> <span data-ttu-id="b6b30-144">Sonucun ondalık veya kesir kısmını içermesini bekleseniz bile, tam sayı bölümü her zaman bir tamsayı sonucu üretir.</span><span class="sxs-lookup"><span data-stu-id="b6b30-144">Integer division always produces an integer result, even when you'd expect the result to include a decimal or fractional portion.</span></span>
 
 
-    <span data-ttu-id="c7475-144">Bu davranışı görmediyseniz, aşağıdakileri deneyin:</span><span class="sxs-lookup"><span data-stu-id="c7475-144">If you haven't seen this behavior, try the following:</span></span>
+    <span data-ttu-id="b6b30-145">Bu davranışı görmediyseniz, aşağıdakileri deneyin:</span><span class="sxs-lookup"><span data-stu-id="b6b30-145">If you haven't seen this behavior, try the following:</span></span>
 
 
     ```csharp
@@ -178,18 +181,18 @@ items:
     ```
 
 
-    <span data-ttu-id="c7475-145">Sonuçları görmek için yeniden **Çalıştır** ' a tıklayın.</span><span class="sxs-lookup"><span data-stu-id="c7475-145">Click **Run** again to see the results.</span></span>
+    <span data-ttu-id="b6b30-146">Sonuçları görmek için yeniden **Çalıştır** ' a tıklayın.</span><span class="sxs-lookup"><span data-stu-id="b6b30-146">Click **Run** again to see the results.</span></span>
 
 
     > [!NOTE]
 
-    > <span data-ttu-id="c7475-146">Bu çevrimiçi kodlama deneyimi önizleme modundadır.</span><span class="sxs-lookup"><span data-stu-id="c7475-146">This online coding experience is in preview mode.</span></span> <span data-ttu-id="c7475-147">Sorunlarla karşılaşırsanız, lütfen [DotNet/depoyu dene](https://github.com/dotnet/try/issues)' ye bildirin.</span><span class="sxs-lookup"><span data-stu-id="c7475-147">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
-- title: <span data-ttu-id="c7475-148">Tamsayı hassasiyetini ve limitleri keşfet</span><span class="sxs-lookup"><span data-stu-id="c7475-148">Explore integer precision and limits</span></span>
+    > <span data-ttu-id="b6b30-147">Bu çevrimiçi kodlama deneyimi önizleme modundadır.</span><span class="sxs-lookup"><span data-stu-id="b6b30-147">This online coding experience is in preview mode.</span></span> <span data-ttu-id="b6b30-148">Sorunlarla karşılaşırsanız, lütfen [DotNet/depoyu dene](https://github.com/dotnet/try/issues)' ye bildirin.</span><span class="sxs-lookup"><span data-stu-id="b6b30-148">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
+- title: <span data-ttu-id="b6b30-149">Tamsayı hassasiyetini ve limitleri keşfet</span><span class="sxs-lookup"><span data-stu-id="b6b30-149">Explore integer precision and limits</span></span>
   durationInMinutes: 5
   content: >
-    <span data-ttu-id="c7475-149">Bu son örnek, bu tamsayı bölümünün sonucu ne olduğunu gösterdi.</span><span class="sxs-lookup"><span data-stu-id="c7475-149">That last sample showed you that integer division truncates the result.</span></span>
+    <span data-ttu-id="b6b30-150">Bu son örnek, bu tamsayı bölümünün sonucu ne olduğunu gösterdi.</span><span class="sxs-lookup"><span data-stu-id="b6b30-150">That last sample showed you that integer division truncates the result.</span></span>
 
-    <span data-ttu-id="c7475-150">**Geri kalanı** , **mod** `%` işleci, şu karakter ile alabilirsiniz:</span><span class="sxs-lookup"><span data-stu-id="c7475-150">You can get the **remainder** by using the **modulo** operator, the `%` character:</span></span>
+    <span data-ttu-id="b6b30-151">@No__t-2 karakteri olan **Modül** işlecini kullanarak **kalanı** alabilirsiniz:</span><span class="sxs-lookup"><span data-stu-id="b6b30-151">You can get the **remainder** by using the **modulo** operator, the `%` character:</span></span>
 
 
     ```csharp
@@ -211,7 +214,7 @@ items:
     ```
 
 
-    <span data-ttu-id="c7475-151">C# Tamsayı türü matematik tamlarından farklı bir şekilde farklılık gösterir: `int` türün en az ve en fazla sınırı vardır.</span><span class="sxs-lookup"><span data-stu-id="c7475-151">The C# integer type differs from mathematical integers in one other way: the `int` type has minimum and maximum limits.</span></span> <span data-ttu-id="c7475-152">Bu sınırları görmek için bu kodu etkileşimli pencerede çalıştırın:</span><span class="sxs-lookup"><span data-stu-id="c7475-152">Run this code in the interactive window to see those limits:</span></span>
+    <span data-ttu-id="b6b30-152">C# Tamsayı türü matematik tamlarından farklı bir şekilde farklılık gösterir: `int` türü en az ve en fazla sınırlara sahiptir.</span><span class="sxs-lookup"><span data-stu-id="b6b30-152">The C# integer type differs from mathematical integers in one other way: the `int` type has minimum and maximum limits.</span></span> <span data-ttu-id="b6b30-153">Bu sınırları görmek için bu kodu etkileşimli pencerede çalıştırın:</span><span class="sxs-lookup"><span data-stu-id="b6b30-153">Run this code in the interactive window to see those limits:</span></span>
 
 
     ```csharp
@@ -225,7 +228,7 @@ items:
     ```
 
 
-    <span data-ttu-id="c7475-153">Hesaplama bu sınırları aşan bir değer üretirse, bir **yetersiz** yer veya **taşma** koşulunuz vardır.</span><span class="sxs-lookup"><span data-stu-id="c7475-153">If a calculation produces a value that exceeds those limits, you have an **underflow** or **overflow** condition.</span></span> <span data-ttu-id="c7475-154">Yanıt bir sınırdan diğerine kaydırılır.</span><span class="sxs-lookup"><span data-stu-id="c7475-154">The answer appears to wrap from one limit to the other.</span></span> <span data-ttu-id="c7475-155">Bir örnek görmek için bu iki satırı etkileşimli pencereye ekleyin:</span><span class="sxs-lookup"><span data-stu-id="c7475-155">Add these two lines to the interactive window to see an example:</span></span>
+    <span data-ttu-id="b6b30-154">Hesaplama bu sınırları aşan bir değer üretirse, bir **yetersiz** yer veya **taşma** koşulunuz vardır.</span><span class="sxs-lookup"><span data-stu-id="b6b30-154">If a calculation produces a value that exceeds those limits, you have an **underflow** or **overflow** condition.</span></span> <span data-ttu-id="b6b30-155">Yanıt bir sınırdan diğerine kaydırılır.</span><span class="sxs-lookup"><span data-stu-id="b6b30-155">The answer appears to wrap from one limit to the other.</span></span> <span data-ttu-id="b6b30-156">Bir örnek görmek için bu iki satırı etkileşimli pencereye ekleyin:</span><span class="sxs-lookup"><span data-stu-id="b6b30-156">Add these two lines to the interactive window to see an example:</span></span>
 
 
     ```csharp
@@ -237,25 +240,25 @@ items:
     ```
 
 
-    <span data-ttu-id="c7475-156">Yanıtın en düşük (negatif) tamsayıya çok yakın olduğuna dikkat edin.</span><span class="sxs-lookup"><span data-stu-id="c7475-156">Notice that the answer is very close to the minimum (negative) integer.</span></span> <span data-ttu-id="c7475-157">Bu, ile `min + 2`aynıdır.</span><span class="sxs-lookup"><span data-stu-id="c7475-157">It's the same as `min + 2`.</span></span>
+    <span data-ttu-id="b6b30-157">Yanıtın en düşük (negatif) tamsayıya çok yakın olduğuna dikkat edin.</span><span class="sxs-lookup"><span data-stu-id="b6b30-157">Notice that the answer is very close to the minimum (negative) integer.</span></span> <span data-ttu-id="b6b30-158">@No__t-0 ' dır.</span><span class="sxs-lookup"><span data-stu-id="b6b30-158">It's the same as `min + 2`.</span></span>
 
-    <span data-ttu-id="c7475-158">Toplama işlemi, tamsayılar için izin verilen değerleri **taşırdı** .</span><span class="sxs-lookup"><span data-stu-id="c7475-158">The addition operation **overflowed** the allowed values for integers.</span></span>
+    <span data-ttu-id="b6b30-159">Toplama işlemi, tamsayılar için izin verilen değerleri **taşırdı** .</span><span class="sxs-lookup"><span data-stu-id="b6b30-159">The addition operation **overflowed** the allowed values for integers.</span></span>
 
-    <span data-ttu-id="c7475-159">Bir taşma, olası en büyük tamsayı değerinden en küçüğe "kaydırdığı için, yanıt çok büyük negatif bir sayıdır.</span><span class="sxs-lookup"><span data-stu-id="c7475-159">The answer is a very large negative number because an overflow "wraps around" from the largest possible integer value to the smallest.</span></span>
+    <span data-ttu-id="b6b30-160">Bir taşma, olası en büyük tamsayı değerinden en küçüğe "kaydırdığı için, yanıt çok büyük negatif bir sayıdır.</span><span class="sxs-lookup"><span data-stu-id="b6b30-160">The answer is a very large negative number because an overflow "wraps around" from the largest possible integer value to the smallest.</span></span>
 
 
-    <span data-ttu-id="c7475-160">`int` Türü gereksinimlerinizi karşılamıyorsa, farklı sınırlara ve duyarlığa sahip başka sayısal türler vardır.</span><span class="sxs-lookup"><span data-stu-id="c7475-160">There are other numeric types with different limits and precision that you would use when the `int` type doesn't meet your needs.</span></span> <span data-ttu-id="c7475-161">Bundan sonra bu ileri keşfedelim.</span><span class="sxs-lookup"><span data-stu-id="c7475-161">Let's explore those next.</span></span>
+    <span data-ttu-id="b6b30-161">@No__t-0 türü gereksinimlerinizi karşılamıyorsa, farklı sınırlara ve duyarlığa sahip başka sayısal türler vardır.</span><span class="sxs-lookup"><span data-stu-id="b6b30-161">There are other numeric types with different limits and precision that you would use when the `int` type doesn't meet your needs.</span></span> <span data-ttu-id="b6b30-162">Bundan sonra bu ileri keşfedelim.</span><span class="sxs-lookup"><span data-stu-id="b6b30-162">Let's explore those next.</span></span>
 
 
     > [!NOTE]
 
-    > <span data-ttu-id="c7475-162">Bu çevrimiçi kodlama deneyimi önizleme modundadır.</span><span class="sxs-lookup"><span data-stu-id="c7475-162">This online coding experience is in preview mode.</span></span> <span data-ttu-id="c7475-163">Sorunlarla karşılaşırsanız, lütfen [DotNet/depoyu dene](https://github.com/dotnet/try/issues)' ye bildirin.</span><span class="sxs-lookup"><span data-stu-id="c7475-163">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
-- title: <span data-ttu-id="c7475-164">Double türüyle çalışma</span><span class="sxs-lookup"><span data-stu-id="c7475-164">Work with the double type</span></span>
+    > <span data-ttu-id="b6b30-163">Bu çevrimiçi kodlama deneyimi önizleme modundadır.</span><span class="sxs-lookup"><span data-stu-id="b6b30-163">This online coding experience is in preview mode.</span></span> <span data-ttu-id="b6b30-164">Sorunlarla karşılaşırsanız, lütfen [DotNet/depoyu dene](https://github.com/dotnet/try/issues)' ye bildirin.</span><span class="sxs-lookup"><span data-stu-id="b6b30-164">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
+- title: <span data-ttu-id="b6b30-165">Double türüyle çalışma</span><span class="sxs-lookup"><span data-stu-id="b6b30-165">Work with the double type</span></span>
   durationInMinutes: 5
   content: >
-    <span data-ttu-id="c7475-165">`double` Sayısal tür bir çift duyarlıklı kayan noktalı sayıyı temsil eder.</span><span class="sxs-lookup"><span data-stu-id="c7475-165">The `double` numeric type represents a double-precision floating point number.</span></span> <span data-ttu-id="c7475-166">Bu terimler sizin için yeni olabilir.</span><span class="sxs-lookup"><span data-stu-id="c7475-166">Those terms may be new to you.</span></span> <span data-ttu-id="c7475-167">**Kayan noktalı** sayı, çok büyük veya küçük olabilecek tamsayı olmayan sayıları temsil etmek için kullanışlıdır.</span><span class="sxs-lookup"><span data-stu-id="c7475-167">A **floating point** number is useful to represent non-integral numbers that may be very large or small in magnitude.</span></span> <span data-ttu-id="c7475-168">**Çift duyarlıklı** , bu sayıların **tek duyarlığa**göre daha fazla duyarlık kullanılarak depolandığı anlamına gelir.</span><span class="sxs-lookup"><span data-stu-id="c7475-168">**Double-precision** means that these numbers are stored using greater precision than **single-precision**.</span></span> <span data-ttu-id="c7475-169">Modern bilgisayarlarda, tek duyarlık sayılarıyla çift duyarlık kullanmak daha yaygındır.</span><span class="sxs-lookup"><span data-stu-id="c7475-169">On modern computers, it is more common to use double precision than single precision numbers.</span></span>
+    <span data-ttu-id="b6b30-166">@No__t-0 sayısal türü bir çift duyarlıklı kayan noktalı sayıyı temsil eder.</span><span class="sxs-lookup"><span data-stu-id="b6b30-166">The `double` numeric type represents a double-precision floating point number.</span></span> <span data-ttu-id="b6b30-167">Bu terimler sizin için yeni olabilir.</span><span class="sxs-lookup"><span data-stu-id="b6b30-167">Those terms may be new to you.</span></span> <span data-ttu-id="b6b30-168">**Kayan noktalı** sayı, çok büyük veya küçük olabilecek tamsayı olmayan sayıları temsil etmek için kullanışlıdır.</span><span class="sxs-lookup"><span data-stu-id="b6b30-168">A **floating point** number is useful to represent non-integral numbers that may be very large or small in magnitude.</span></span> <span data-ttu-id="b6b30-169">**Çift duyarlıklı** , bu sayıların **tek duyarlığa**göre daha fazla duyarlık kullanılarak depolandığı anlamına gelir.</span><span class="sxs-lookup"><span data-stu-id="b6b30-169">**Double-precision** means that these numbers are stored using greater precision than **single-precision**.</span></span> <span data-ttu-id="b6b30-170">Modern bilgisayarlarda, tek duyarlık sayılarıyla çift duyarlık kullanmak daha yaygındır.</span><span class="sxs-lookup"><span data-stu-id="b6b30-170">On modern computers, it is more common to use double precision than single precision numbers.</span></span>
 
-    <span data-ttu-id="c7475-170">Keşfedelim.</span><span class="sxs-lookup"><span data-stu-id="c7475-170">Let's explore.</span></span> <span data-ttu-id="c7475-171">Etkileşimli pencerede aşağıdaki kodu deneyin ve sonucu görün:</span><span class="sxs-lookup"><span data-stu-id="c7475-171">Try the following code in the interactive window and see the result:</span></span>
+    <span data-ttu-id="b6b30-171">Keşfedelim.</span><span class="sxs-lookup"><span data-stu-id="b6b30-171">Let's explore.</span></span> <span data-ttu-id="b6b30-172">Etkileşimli pencerede aşağıdaki kodu deneyin ve sonucu görün:</span><span class="sxs-lookup"><span data-stu-id="b6b30-172">Try the following code in the interactive window and see the result:</span></span>
 
 
     ```csharp
@@ -273,7 +276,7 @@ items:
     ```
 
 
-    <span data-ttu-id="c7475-172">Yanıtın, bölümün ondalık kısmını içerdiğine dikkat edin.</span><span class="sxs-lookup"><span data-stu-id="c7475-172">Notice that the answer includes the decimal portion of the quotient.</span></span> <span data-ttu-id="c7475-173">Double değerleri ile biraz daha karmaşık bir ifade deneyin:</span><span class="sxs-lookup"><span data-stu-id="c7475-173">Try a slightly more complicated expression with doubles:</span></span>
+    <span data-ttu-id="b6b30-173">Yanıtın, bölümün ondalık kısmını içerdiğine dikkat edin.</span><span class="sxs-lookup"><span data-stu-id="b6b30-173">Notice that the answer includes the decimal portion of the quotient.</span></span> <span data-ttu-id="b6b30-174">Double değerleri ile biraz daha karmaşık bir ifade deneyin:</span><span class="sxs-lookup"><span data-stu-id="b6b30-174">Try a slightly more complicated expression with doubles:</span></span>
 
 
     ```csharp
@@ -291,7 +294,7 @@ items:
     ```
 
 
-    <span data-ttu-id="c7475-174">Double değerinin aralığı tamsayı değerlerinden çok daha büyüktür.</span><span class="sxs-lookup"><span data-stu-id="c7475-174">The range of a double value is much greater than integer values.</span></span> <span data-ttu-id="c7475-175">Etkileşimli pencerede aşağıdaki kodu deneyin:</span><span class="sxs-lookup"><span data-stu-id="c7475-175">Try the following code in the interactive window:</span></span>
+    <span data-ttu-id="b6b30-175">Double değerinin aralığı tamsayı değerlerinden çok daha büyüktür.</span><span class="sxs-lookup"><span data-stu-id="b6b30-175">The range of a double value is much greater than integer values.</span></span> <span data-ttu-id="b6b30-176">Etkileşimli pencerede aşağıdaki kodu deneyin:</span><span class="sxs-lookup"><span data-stu-id="b6b30-176">Try the following code in the interactive window:</span></span>
 
 
     ```csharp
@@ -305,10 +308,10 @@ items:
     ```
 
 
-    <span data-ttu-id="c7475-176">Bu değerler bilimsel gösterimde yazdırılır.</span><span class="sxs-lookup"><span data-stu-id="c7475-176">These values are printed out in scientific notation.</span></span> <span data-ttu-id="c7475-177">Öğesinin solundaki sayı mantisinin ' `E` dir.</span><span class="sxs-lookup"><span data-stu-id="c7475-177">The number to the left of the `E` is the significand.</span></span> <span data-ttu-id="c7475-178">Sağdaki sayı, 10 ' un üssü olarak üs değeri olan sayıdır.</span><span class="sxs-lookup"><span data-stu-id="c7475-178">The number to the right is the exponent, as a power of 10.</span></span>
+    <span data-ttu-id="b6b30-177">Bu değerler bilimsel gösterimde yazdırılır.</span><span class="sxs-lookup"><span data-stu-id="b6b30-177">These values are printed out in scientific notation.</span></span> <span data-ttu-id="b6b30-178">@No__t-0 ' ın solundaki sayı mantisinin ' dir.</span><span class="sxs-lookup"><span data-stu-id="b6b30-178">The number to the left of the `E` is the significand.</span></span> <span data-ttu-id="b6b30-179">Sağdaki sayı, 10 ' un üssü olarak üs değeri olan sayıdır.</span><span class="sxs-lookup"><span data-stu-id="b6b30-179">The number to the right is the exponent, as a power of 10.</span></span>
 
 
-    <span data-ttu-id="c7475-179">Matematiği gibi ondalık sayılar gibi, içindeki Double C# değerleri de yuvarlama hataları içerebilir.</span><span class="sxs-lookup"><span data-stu-id="c7475-179">Just like decimal numbers in math, doubles in C# can have rounding errors.</span></span> <span data-ttu-id="c7475-180">Şu kodu deneyin:</span><span class="sxs-lookup"><span data-stu-id="c7475-180">Try this code:</span></span>
+    <span data-ttu-id="b6b30-180">Matematiği gibi ondalık sayılar gibi, içindeki Double C# değerleri de yuvarlama hataları içerebilir.</span><span class="sxs-lookup"><span data-stu-id="b6b30-180">Just like decimal numbers in math, doubles in C# can have rounding errors.</span></span> <span data-ttu-id="b6b30-181">Şu kodu deneyin:</span><span class="sxs-lookup"><span data-stu-id="b6b30-181">Try this code:</span></span>
 
 
     ```csharp
@@ -320,22 +323,22 @@ items:
     ```
 
 
-    <span data-ttu-id="c7475-181">`0.3` Tekrarda tam olarak `1/3`aynı olmadığını bilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="c7475-181">You know that `0.3` repeating is not exactly the same as `1/3`.</span></span>
+    <span data-ttu-id="b6b30-182">@No__t-0 tekrarın tam olarak `1/3` ile aynı olmadığını bilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="b6b30-182">You know that `0.3` repeating is not exactly the same as `1/3`.</span></span>
 
 
-    <span data-ttu-id="c7475-182">***Sına***</span><span class="sxs-lookup"><span data-stu-id="c7475-182">***Challenge***</span></span>
+    <span data-ttu-id="b6b30-183">***Sına***</span><span class="sxs-lookup"><span data-stu-id="b6b30-183">***Challenge***</span></span>
 
 
-    <span data-ttu-id="c7475-183">`double` Türü kullanarak büyük sayılar, küçük sayılar, çarpma ve bölme ile diğer hesaplamaları deneyin.</span><span class="sxs-lookup"><span data-stu-id="c7475-183">Try other calculations with large numbers, small numbers, multiplication and division using the `double` type.</span></span>  <span data-ttu-id="c7475-184">Daha karmaşık hesaplamalar deneyin.</span><span class="sxs-lookup"><span data-stu-id="c7475-184">Try more complicated calculations.</span></span>
+    <span data-ttu-id="b6b30-184">@No__t-0 türünü kullanarak büyük sayılar, küçük sayılar, çarpma ve bölme ile diğer hesaplamaları deneyin.</span><span class="sxs-lookup"><span data-stu-id="b6b30-184">Try other calculations with large numbers, small numbers, multiplication and division using the `double` type.</span></span>  <span data-ttu-id="b6b30-185">Daha karmaşık hesaplamalar deneyin.</span><span class="sxs-lookup"><span data-stu-id="b6b30-185">Try more complicated calculations.</span></span>
 
 
     > [!NOTE]
 
-    > <span data-ttu-id="c7475-185">Bu çevrimiçi kodlama deneyimi önizleme modundadır.</span><span class="sxs-lookup"><span data-stu-id="c7475-185">This online coding experience is in preview mode.</span></span> <span data-ttu-id="c7475-186">Sorunlarla karşılaşırsanız, lütfen [DotNet/depoyu dene](https://github.com/dotnet/try/issues)' ye bildirin.</span><span class="sxs-lookup"><span data-stu-id="c7475-186">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
-- title: <span data-ttu-id="c7475-187">Sabit nokta türleriyle çalışma</span><span class="sxs-lookup"><span data-stu-id="c7475-187">Work with fixed point types</span></span>
+    > <span data-ttu-id="b6b30-186">Bu çevrimiçi kodlama deneyimi önizleme modundadır.</span><span class="sxs-lookup"><span data-stu-id="b6b30-186">This online coding experience is in preview mode.</span></span> <span data-ttu-id="b6b30-187">Sorunlarla karşılaşırsanız, lütfen [DotNet/depoyu dene](https://github.com/dotnet/try/issues)' ye bildirin.</span><span class="sxs-lookup"><span data-stu-id="b6b30-187">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
+- title: <span data-ttu-id="b6b30-188">Sabit nokta türleriyle çalışma</span><span class="sxs-lookup"><span data-stu-id="b6b30-188">Work with fixed point types</span></span>
   durationInMinutes: 8
   content: >
-    <span data-ttu-id="c7475-188">Temel sayısal türleri C#: tamsayılar ve Double değerleri ile gördünüz.</span><span class="sxs-lookup"><span data-stu-id="c7475-188">You've seen the basic numeric types in C#: integers and doubles.</span></span>  <span data-ttu-id="c7475-189">Öğreneceğinizi bir başka tür vardır: `decimal` türü.</span><span class="sxs-lookup"><span data-stu-id="c7475-189">There is one other type to learn: the `decimal` type.</span></span> <span data-ttu-id="c7475-190">Türün daha küçük bir aralığı, ancak daha fazla `double`duyarlık vardır. `decimal`</span><span class="sxs-lookup"><span data-stu-id="c7475-190">The `decimal` type has a smaller range but greater precision than `double`.</span></span> <span data-ttu-id="c7475-191">**Sabit nokta** terimi, ondalık noktanın (veya ikili noktanın) taşınmayacağı anlamına gelir.</span><span class="sxs-lookup"><span data-stu-id="c7475-191">The term **fixed point** means that the decimal point (or binary point) doesn't move.</span></span> <span data-ttu-id="c7475-192">Bir göz atalım:</span><span class="sxs-lookup"><span data-stu-id="c7475-192">Let's take a look:</span></span>
+    <span data-ttu-id="b6b30-189">Temel sayısal türleri C#: tamsayılar ve Double değerleri ile gördünüz.</span><span class="sxs-lookup"><span data-stu-id="b6b30-189">You've seen the basic numeric types in C#: integers and doubles.</span></span>  <span data-ttu-id="b6b30-190">Öğreneceğinizi bir başka tür vardır: `decimal` türü.</span><span class="sxs-lookup"><span data-stu-id="b6b30-190">There is one other type to learn: the `decimal` type.</span></span> <span data-ttu-id="b6b30-191">@No__t-0 türü daha küçük bir aralığa sahip ancak `double` ' den daha büyük duyarlığa sahiptir.</span><span class="sxs-lookup"><span data-stu-id="b6b30-191">The `decimal` type has a smaller range but greater precision than `double`.</span></span> <span data-ttu-id="b6b30-192">**Sabit nokta** terimi, ondalık noktanın (veya ikili noktanın) taşınmayacağı anlamına gelir.</span><span class="sxs-lookup"><span data-stu-id="b6b30-192">The term **fixed point** means that the decimal point (or binary point) doesn't move.</span></span> <span data-ttu-id="b6b30-193">Şimdi bir göz atalım:</span><span class="sxs-lookup"><span data-stu-id="b6b30-193">Let's take a look:</span></span>
 
 
     ```csharp
@@ -349,7 +352,7 @@ items:
     ```
 
 
-    <span data-ttu-id="c7475-193">Aralığın `double` türden küçük olduğuna dikkat edin.</span><span class="sxs-lookup"><span data-stu-id="c7475-193">Notice that the range is smaller than the `double` type.</span></span> <span data-ttu-id="c7475-194">Aşağıdaki kodu deneyerek ondalık türüyle daha büyük duyarlık görebilirsiniz:</span><span class="sxs-lookup"><span data-stu-id="c7475-194">You can see the greater precision with the decimal type by trying the following code:</span></span>
+    <span data-ttu-id="b6b30-194">Aralığın `double` türünden küçük olduğuna dikkat edin.</span><span class="sxs-lookup"><span data-stu-id="b6b30-194">Notice that the range is smaller than the `double` type.</span></span> <span data-ttu-id="b6b30-195">Aşağıdaki kodu deneyerek ondalık türüyle daha büyük duyarlık görebilirsiniz:</span><span class="sxs-lookup"><span data-stu-id="b6b30-195">You can see the greater precision with the decimal type by trying the following code:</span></span>
 
 
     ```csharp
@@ -370,28 +373,28 @@ items:
     ```
 
 
-    <span data-ttu-id="c7475-195">Sayıların son eki, bir sabitin `decimal` türü kullanması gerektiğini gösterir. `M`</span><span class="sxs-lookup"><span data-stu-id="c7475-195">The `M` suffix on the numbers is how you indicate that a constant should use the `decimal` type.</span></span>
+    <span data-ttu-id="b6b30-196">Sayıların `M` soneki, bir sabitin `decimal` türünü kullanması gerektiğini gösterir.</span><span class="sxs-lookup"><span data-stu-id="b6b30-196">The `M` suffix on the numbers is how you indicate that a constant should use the `decimal` type.</span></span>
 
 
-    <span data-ttu-id="c7475-196">Ondalık türü kullanan matematik, ondalık noktanın sağında daha fazla basamağa sahip olduğuna dikkat edin.</span><span class="sxs-lookup"><span data-stu-id="c7475-196">Notice that the math using the decimal type has more digits to the right of the decimal point.</span></span>
+    <span data-ttu-id="b6b30-197">Ondalık türü kullanan matematik, ondalık noktanın sağında daha fazla basamağa sahip olduğuna dikkat edin.</span><span class="sxs-lookup"><span data-stu-id="b6b30-197">Notice that the math using the decimal type has more digits to the right of the decimal point.</span></span>
 
 
-    <span data-ttu-id="c7475-197">***Sına***</span><span class="sxs-lookup"><span data-stu-id="c7475-197">***Challenge***</span></span>
+    <span data-ttu-id="b6b30-198">***Sına***</span><span class="sxs-lookup"><span data-stu-id="b6b30-198">***Challenge***</span></span>
 
 
-    <span data-ttu-id="c7475-198">Farklı sayısal türleri gördüğünüze göre, yarıçapı 2,50 santimetre olan bir dairenin alanını hesaplayan bir kod yazın.</span><span class="sxs-lookup"><span data-stu-id="c7475-198">Now that you've seen the different numeric types, write code that calculates the area of a circle whose radius is 2.50 centimeters.</span></span> <span data-ttu-id="c7475-199">Bir daire alanının, Radius ile çarpıldığı bir daire olduğunu unutmayın.</span><span class="sxs-lookup"><span data-stu-id="c7475-199">Remember that the area of a circle is the radius squared multiplied by PI.</span></span> <span data-ttu-id="c7475-200">Bir ipucu: .net, <xref:System.Math.PI?displayProperty=nameWithType> bu değer için kullanabileceğiniz PI için bir sabit içerir.</span><span class="sxs-lookup"><span data-stu-id="c7475-200">One hint: .NET contains a constant for PI, <xref:System.Math.PI?displayProperty=nameWithType> that you can use for that value.</span></span>
+    <span data-ttu-id="b6b30-199">Farklı sayısal türleri gördüğünüze göre, yarıçapı 2,50 santimetre olan bir dairenin alanını hesaplayan bir kod yazın.</span><span class="sxs-lookup"><span data-stu-id="b6b30-199">Now that you've seen the different numeric types, write code that calculates the area of a circle whose radius is 2.50 centimeters.</span></span> <span data-ttu-id="b6b30-200">Bir daire alanının, Radius ile çarpıldığı bir daire olduğunu unutmayın.</span><span class="sxs-lookup"><span data-stu-id="b6b30-200">Remember that the area of a circle is the radius squared multiplied by PI.</span></span> <span data-ttu-id="b6b30-201">Bir ipucu: .NET, bu değer için kullanabileceğiniz PI, <xref:System.Math.PI?displayProperty=nameWithType> için bir sabit içerir.</span><span class="sxs-lookup"><span data-stu-id="b6b30-201">One hint: .NET contains a constant for PI, <xref:System.Math.PI?displayProperty=nameWithType> that you can use for that value.</span></span>
 
 
     > [!NOTE]
 
-    > <span data-ttu-id="c7475-201">Bu çevrimiçi kodlama deneyimi önizleme modundadır.</span><span class="sxs-lookup"><span data-stu-id="c7475-201">This online coding experience is in preview mode.</span></span> <span data-ttu-id="c7475-202">Sorunlarla karşılaşırsanız, lütfen [DotNet/depoyu dene](https://github.com/dotnet/try/issues)' ye bildirin.</span><span class="sxs-lookup"><span data-stu-id="c7475-202">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
+    > <span data-ttu-id="b6b30-202">Bu çevrimiçi kodlama deneyimi önizleme modundadır.</span><span class="sxs-lookup"><span data-stu-id="b6b30-202">This online coding experience is in preview mode.</span></span> <span data-ttu-id="b6b30-203">Sorunlarla karşılaşırsanız, lütfen [DotNet/depoyu dene](https://github.com/dotnet/try/issues)' ye bildirin.</span><span class="sxs-lookup"><span data-stu-id="b6b30-203">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
 
 
-    <span data-ttu-id="c7475-203">19 ila 20 arasında bir yanıt almanız gerekir.</span><span class="sxs-lookup"><span data-stu-id="c7475-203">You should get an answer between 19 and 20.</span></span>
-- title: <span data-ttu-id="c7475-204">Sınama Tamam</span><span class="sxs-lookup"><span data-stu-id="c7475-204">Complete challenge</span></span>
+    <span data-ttu-id="b6b30-204">19 ila 20 arasında bir yanıt almanız gerekir.</span><span class="sxs-lookup"><span data-stu-id="b6b30-204">You should get an answer between 19 and 20.</span></span>
+- title: <span data-ttu-id="b6b30-205">Sınama Tamam</span><span class="sxs-lookup"><span data-stu-id="b6b30-205">Complete challenge</span></span>
   durationInMinutes: 1
   content: >
-    <span data-ttu-id="c7475-205">Bunun gibi bir konuyla karşılaştınız mı?</span><span class="sxs-lookup"><span data-stu-id="c7475-205">Did you come up with something like this?</span></span>
+    <span data-ttu-id="b6b30-206">Bunun gibi bir konuyla karşılaştınız mı?</span><span class="sxs-lookup"><span data-stu-id="b6b30-206">Did you come up with something like this?</span></span>
 
 
     ```csharp
@@ -405,25 +408,25 @@ items:
     ```
 
 
-    <span data-ttu-id="c7475-206">İsterseniz başka formüller de deneyin.</span><span class="sxs-lookup"><span data-stu-id="c7475-206">Try some other formulas if you'd like.</span></span>
+    <span data-ttu-id="b6b30-207">İsterseniz başka formüller de deneyin.</span><span class="sxs-lookup"><span data-stu-id="b6b30-207">Try some other formulas if you'd like.</span></span>
 
 
     > [!NOTE]
 
-    > <span data-ttu-id="c7475-207">Bu çevrimiçi kodlama deneyimi önizleme modundadır.</span><span class="sxs-lookup"><span data-stu-id="c7475-207">This online coding experience is in preview mode.</span></span> <span data-ttu-id="c7475-208">Sorunlarla karşılaşırsanız, lütfen [DotNet/depoyu dene](https://github.com/dotnet/try/issues)' ye bildirin.</span><span class="sxs-lookup"><span data-stu-id="c7475-208">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
+    > <span data-ttu-id="b6b30-208">Bu çevrimiçi kodlama deneyimi önizleme modundadır.</span><span class="sxs-lookup"><span data-stu-id="b6b30-208">This online coding experience is in preview mode.</span></span> <span data-ttu-id="b6b30-209">Sorunlarla karşılaşırsanız, lütfen [DotNet/depoyu dene](https://github.com/dotnet/try/issues)' ye bildirin.</span><span class="sxs-lookup"><span data-stu-id="b6b30-209">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
 - content: >-
-    <span data-ttu-id="c7475-209">"Numaraları C#" Etkileşimli öğreticiden tamamladınız.</span><span class="sxs-lookup"><span data-stu-id="c7475-209">You've completed the "Numbers in C#" interactive tutorial.</span></span> <span data-ttu-id="c7475-210">Sonraki etkileşimli öğreticiye başlamak için aşağıdaki **dallar ve döngüler** bağlantısına tıklayabilir veya [.net sitesini](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) ziyaret ederek .NET Core SDK indirebilir, makinenizde bir proje oluşturabilir ve kodlamaya devam edebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="c7475-210">You can click the **Branches and Loops** link below to start the next interactive tutorial, or you can visit the [.NET site](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) to download the .NET Core SDK, create a project on your machine, and keep coding.</span></span> <span data-ttu-id="c7475-211">"Sonraki adımlar" bölümü, sizi bu öğreticilere geri getirir.</span><span class="sxs-lookup"><span data-stu-id="c7475-211">The "Next steps" section brings you back to these tutorials.</span></span>
+    <span data-ttu-id="b6b30-210">"Numaraları C#" Etkileşimli öğreticiden tamamladınız.</span><span class="sxs-lookup"><span data-stu-id="b6b30-210">You've completed the "Numbers in C#" interactive tutorial.</span></span> <span data-ttu-id="b6b30-211">Sonraki etkileşimli öğreticiye başlamak için aşağıdaki **dallar ve döngüler** bağlantısına tıklayabilir veya [.net sitesini](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) ziyaret ederek .NET Core SDK indirebilir, makinenizde bir proje oluşturabilir ve kodlamaya devam edebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="b6b30-211">You can click the **Branches and Loops** link below to start the next interactive tutorial, or you can visit the [.NET site](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) to download the .NET Core SDK, create a project on your machine, and keep coding.</span></span> <span data-ttu-id="b6b30-212">"Sonraki adımlar" bölümü, sizi bu öğreticilere geri getirir.</span><span class="sxs-lookup"><span data-stu-id="b6b30-212">The "Next steps" section brings you back to these tutorials.</span></span>
 
 
-    <span data-ttu-id="c7475-212">Aşağıdaki konularda, içindeki C# numaralar hakkında daha fazla bilgi edinebilirsiniz:</span><span class="sxs-lookup"><span data-stu-id="c7475-212">You can learn more about numbers in C# in the following topics:</span></span>
+    <span data-ttu-id="b6b30-213">Aşağıdaki konularda, içindeki C# numaralar hakkında daha fazla bilgi edinebilirsiniz:</span><span class="sxs-lookup"><span data-stu-id="b6b30-213">You can learn more about numbers in C# in the following topics:</span></span>
 
 
-    - [<span data-ttu-id="c7475-213">Integral türleri</span><span class="sxs-lookup"><span data-stu-id="c7475-213">Integral types</span></span>](../../language-reference/builtin-types/integral-numeric-types.md)
+    - [<span data-ttu-id="b6b30-214">Integral türleri</span><span class="sxs-lookup"><span data-stu-id="b6b30-214">Integral types</span></span>](../../language-reference/builtin-types/integral-numeric-types.md)
 
-    - [<span data-ttu-id="c7475-214">Kayan Nokta Türleri Tablosu</span><span class="sxs-lookup"><span data-stu-id="c7475-214">Floating-Point Types Table</span></span>](../../language-reference/builtin-types/floating-point-numeric-types.md)
+    - [<span data-ttu-id="b6b30-215">Kayan nokta türleri tablosu</span><span class="sxs-lookup"><span data-stu-id="b6b30-215">Floating-Point Types Table</span></span>](../../language-reference/builtin-types/floating-point-numeric-types.md)
 
-    - [<span data-ttu-id="c7475-215">Yerleşik Türler Tablosu</span><span class="sxs-lookup"><span data-stu-id="c7475-215">Built-In Types Table</span></span>](../../language-reference/keywords/built-in-types-table.md)
+    - [<span data-ttu-id="b6b30-216">Yerleşik türler tablosu</span><span class="sxs-lookup"><span data-stu-id="b6b30-216">Built-In Types Table</span></span>](../../language-reference/keywords/built-in-types-table.md)
 
-    - [<span data-ttu-id="c7475-216">Örtük Sayısal Dönüştürmeler Tablosu</span><span class="sxs-lookup"><span data-stu-id="c7475-216">Implicit Numeric Conversions Table</span></span>](../../language-reference/keywords/implicit-numeric-conversions-table.md)
+    - [<span data-ttu-id="b6b30-217">Örtük Sayısal dönüştürmeler tablosu</span><span class="sxs-lookup"><span data-stu-id="b6b30-217">Implicit Numeric Conversions Table</span></span>](../../language-reference/keywords/implicit-numeric-conversions-table.md)
 
-    - [<span data-ttu-id="c7475-217">Açık Sayısal Dönüştürmeler Tablosu</span><span class="sxs-lookup"><span data-stu-id="c7475-217">Explicit Numeric Conversions Table</span></span>](../../language-reference/keywords/explicit-numeric-conversions-table.md)
+    - [<span data-ttu-id="b6b30-218">Açık Sayısal Dönüşümler Tablosu</span><span class="sxs-lookup"><span data-stu-id="b6b30-218">Explicit Numeric Conversions Table</span></span>](../../language-reference/keywords/explicit-numeric-conversions-table.md)
