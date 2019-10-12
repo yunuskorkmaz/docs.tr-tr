@@ -1,5 +1,5 @@
 ---
-title: C# Başvurusu
+title: C#Başvurunun
 ms.date: 02/14/2017
 helpviewer_keywords:
 - Visual C#, language reference
@@ -8,33 +8,33 @@ helpviewer_keywords:
 - C# language, reference
 - reference, C# language
 ms.assetid: 06de3167-c16c-4e1a-b3c5-c27841d4569a
-ms.openlocfilehash: fd5c39bfcb05296a36d94ea64946f8c29ed7e4d6
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: df56287d161f7760e136eb80aa1a9171966df794
+ms.sourcegitcommit: 992f80328b51b165051c42ff5330788627abe973
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70925348"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72275805"
 ---
-# <a name="c-reference"></a>C# Başvurusu
+# <a name="c-reference"></a>C#Başvurunun
 Bu bölümde, anahtar sözcükler, C# işleçler, özel karakterler, Önişlemci yönergeleri, derleyici seçenekleri ve derleyici hataları ve uyarıları hakkında başvuru malzemeleri sağlanmaktadır.  
   
-## <a name="in-this-section"></a>Bu Bölümde  
- [C# Anahtar Sözcükleri](./keywords/index.md)  
+## <a name="in-this-section"></a>Bu bölümde  
+ [C#Lerimi](./keywords/index.md)  
  Anahtar sözcükler ve sözdizimi hakkında C# bilgi için bağlantılar sağlar.  
   
- [C# İşleçleri](./operators/index.md)  
+ [C#İşletmenlerinin](./operators/index.md)  
  İşleçler ve sözdizimi hakkında C# bilgi için bağlantılar sağlar.  
 
- [C# Özel Karakterleri](./tokens/index.md)  
+ [C#Özel karakterler](./tokens/index.md)  
  ' Deki C# özel bağlamsal karakterler ve kullanımları hakkındaki bilgilerin bağlantılarını sağlar.  
 
- [C# Ön İşlemci Yönergeleri](./preprocessor-directives/index.md)  
+ [C#Önişlemci yönergeleri](./preprocessor-directives/index.md)  
  C# Kaynak koda ekleme için derleyici komutları hakkındaki bilgilere bağlantılar sağlar.  
   
- [C# Derleyici Seçenekleri](./compiler-options/index.md)  
+ [C#Derleyici seçenekleri](./compiler-options/index.md)  
  Derleyici seçenekleri ve bunların nasıl kullanılacağı hakkında bilgi içerir.  
   
- [C# Derleyici Hataları](./compiler-messages/index.md)  
+ [C#Derleyici hataları](./compiler-messages/index.md)  
  C# Derleyici hatalarının ve uyarılarının nedenini ve düzeltmesini gösteren kod parçacıkları içerir.  
   
  [C#Dil belirtimi](../../../_csharplang/spec/introduction.md)  
@@ -46,24 +46,24 @@ Bu bölümde, anahtar sözcükler, C# işleçler, özel karakterler, Önişlemci
  7,0 ' de C# uygulanan çeşitli yeni özellikler vardır. Bunlar, model eşleştirme, yerel işlevler, çıkış değişkeni bildirimleri, throw ifadeleri, ikili sabit değerler ve basamak ayırıcıları içerirler. Bu klasör, bu özelliklerin her biri için belirtimleri içerir.
   
  [C#7,1 belirtim teklifleri](../../../_csharplang/proposals/csharp-7.1/async-main.md)  
- 7,1 ' C# ye eklenen yeni özellikler vardır. İlk olarak, veya `Main` `Task` `Task<int>`döndüren bir yöntem yazabilirsiniz. Bu, `async` `Main`değiştiricisini eklemenize olanak sağlar. `default` İfade, türün çıkarsanbileceği konumlarda bir tür olmadan kullanılabilir. Ayrıca demet üye adları da çıkarsanamıyor. Son olarak, bir model eşleştirme, genel türler ile kullanılabilir.
+ 7,1 ' C# ye eklenen yeni özellikler vardır. İlk olarak, `Task` veya `Task<int>` döndüren `Main` yöntemi yazabilirsiniz. Bu, `async` değiştiricisini `Main` ' e eklemenizi sağlar. @No__t-0 ifadesi, türün çıkarsanbileceği konumlarda bir tür olmadan kullanılabilir. Ayrıca demet üye adları da çıkarsanamıyor. Son olarak, bir model eşleştirme, genel türler ile kullanılabilir.
 
  [C#7,2 belirtim teklifleri](../../../_csharplang/proposals/csharp-7.2/readonly-ref.md)  
- C#7,2 çok sayıda küçük özellik ekledi. `in` Anahtar sözcüğünü kullanarak, ReadOnly başvuruya göre bağımsız değişkenleri geçirebilirsiniz. Ve ilgili türler için `Span` derleme zamanı güvenliğini desteklemeye yönelik bir dizi alt düzey değişiklik vardır. Bazı durumlarda, sonraki bağımsız değişkenlerin konumsal olduğu adlandırılmış bağımsız değişkenleri kullanabilirsiniz. Erişim `private protected` değiştiricisi, arayanların aynı derlemede uygulanan türetilmiş türlerle sınırlı olduğunu belirtmenizi sağlar. İşleci `?:` , bir değişkene bir başvuruya çözüm verebilir. Ayrıca, baştaki basamak ayırıcısını kullanarak onaltılık ve ikili sayıları biçimlendirebilirsiniz.
+ C#7,2 çok sayıda küçük özellik ekledi. @No__t-0 anahtar sözcüğünü kullanarak, ReadOnly başvuruya göre bağımsız değişkenler geçirebilirsiniz. @No__t-0 ve ilgili türler için derleme zamanı güvenliğini desteklemeye yönelik bir dizi alt düzey değişiklik vardır. Bazı durumlarda, sonraki bağımsız değişkenlerin konumsal olduğu adlandırılmış bağımsız değişkenleri kullanabilirsiniz. @No__t-0 erişim değiştiricisi, arayanların aynı derlemede uygulanan türetilmiş türlerle sınırlı olduğunu belirtmenizi sağlar. @No__t-0 işleci bir değişkene bir başvuruya çözümleyebilir. Ayrıca, baştaki basamak ayırıcısını kullanarak onaltılık ve ikili sayıları biçimlendirebilirsiniz.
 
  [C#7,3 belirtim teklifleri](../../../_csharplang/proposals/csharp-7.3/blittable.md)  
- C#7,3, birkaç küçük güncelleştirme içeren başka bir nokta sürümüdür. Yeni kısıtlamaları genel tür parametreleri üzerinde kullanabilirsiniz. Diğer değişiklikler, ayırmaların kullanılması `fixed` [`stackalloc`](./operators/stackalloc.md) dahil olmak üzere alanlarla çalışmayı kolaylaştırır. Anahtar sözcükle belirtilen yerel değişkenler `ref` , yeni depolama birimine başvuracak şekilde reasssigned olabilir. Öznitelikleri, derleyicinin ürettiği yedekleme alanını hedefleyen otomatik uygulanan özelliklere yerleştirebilirsiniz. , Başlatıcılarda ifade değişkenleri kullanılabilir. Tanımlama grupları, eşitlik (veya eşitsizlik) için karşılaştırılabilir. Aşırı yükleme çözümlemesi için bazı geliştirmeler de vardır.
+ C#7,3, birkaç küçük güncelleştirme içeren başka bir nokta sürümüdür. Yeni kısıtlamaları genel tür parametreleri üzerinde kullanabilirsiniz. Diğer değişiklikler, [`stackalloc`](./operators/stackalloc.md) ayırma kullanımı dahil `fixed` alanlarıyla çalışmayı kolaylaştırır. @No__t-0 anahtar sözcüğüyle belirtilen yerel değişkenler, yeni depolama alanına başvurmak için reasssigned olabilir. Öznitelikleri, derleyicinin ürettiği yedekleme alanını hedefleyen otomatik uygulanan özelliklere yerleştirebilirsiniz. , Başlatıcılarda ifade değişkenleri kullanılabilir. Tanımlama grupları, eşitlik (veya eşitsizlik) için karşılaştırılabilir. Aşırı yükleme çözümlemesi için bazı geliştirmeler de vardır.
   
  [C#8,0 belirtim teklifleri](../../../_csharplang/proposals/csharp-8.0/nullable-reference-types.md)  
- C#8,0, .NET Core 3,0 ile kullanılabilir. Özellikler, null yapılabilir başvuru türleri, özyinelemeli model eşleştirme, varsayılan arabirim üyeleri, zaman uyumsuz akışlar, aralıklar ve dizinler, model kullanarak ve using bildirimlerini, null birleştirme atamasını ve salt okunur örnek üyelerini içerir.
+ C#8,0, .NET Core 3,0 ile kullanılabilir. Özellikler, null yapılabilir başvuru türleri, özyinelemeli model eşleştirme, varsayılan arabirim yöntemleri, zaman uyumsuz akışlar, aralıklar ve dizinler, using bildirimleri kullanarak ve using bildirimlerini, null birleştirme atamasını ve salt okunur örnek üyelerini içerir.
   
-## <a name="related-sections"></a>İlgili Bölümler  
+## <a name="related-sections"></a>İlgili bölümler  
 
- [C# Kılavuzu](../index.md)  
+ [C#Rehberi](../index.md)  
  Görsel C# belgeler için bir portal sağlar.  
   
- [C# için Visual Studio Geliştirme Ortamını Kullanma](/visualstudio/get-started/csharp)  
+ [İçin Visual Studio geliştirme ortamını kullanmaC#](/visualstudio/get-started/csharp)  
  IDE ve düzenleyiciyi tanımlayan kavramsal ve görev konularına bağlantılar sağlar.  
   
- [C# Programlama Kılavuzu](../programming-guide/index.md)  
+ [C#Programlama Kılavuzu](../programming-guide/index.md)  
  C# Programlama dilinin kullanımı hakkındaki bilgileri içerir.

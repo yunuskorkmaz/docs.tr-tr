@@ -1,15 +1,15 @@
 ---
 title: DotNet derleme komutu
 description: DotNet derleme komutu bir projeyi ve tüm bağımlılıklarını oluşturur.
-ms.date: 08/08/2019
-ms.openlocfilehash: 6194d70a8a14e63adbcad39c7dabbbd220ca329d
-ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
-ms.translationtype: HT
+ms.date: 10/07/2019
+ms.openlocfilehash: db353feebab920dc8f63b9854d14f050adeb0b79
+ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72179976"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72250187"
 ---
-# <a name="dotnet-build"></a>DotNet derlemesi
+# <a name="dotnet-build"></a>dotnet build
 
 **Bu makale şu şekilde geçerlidir: ✓** .NET Core 1. x SDK ve sonraki sürümleri
 
@@ -17,7 +17,7 @@ ms.locfileid: "72179976"
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 -->
 
-## <a name="name"></a>Adı
+## <a name="name"></a>Name
 
 `dotnet build`-bir projeyi ve tüm bağımlılıklarını oluşturur.
 
@@ -50,7 +50,7 @@ Projenin yürütülebilir olup olmadığı veya proje dosyasındaki `<OutputType
 
 Bir kitaplık oluşturmak için `<OutputType>` özelliğini atlayın. Oluşturulan çıktıda ana fark, bir kitaplık için Il DLL 'sinin giriş noktaları içermemesi ve yürütülemeyecek.
 
-### <a name="msbuild"></a>MSBUILD
+### <a name="msbuild"></a>MSBuild
 
 `dotnet build`, projeyi derlemek için MSBuild kullanır, bu nedenle hem paralel hem de artımlı yapıları destekler. Daha fazla bilgi için bkz. [Artımlı derlemeler](/visualstudio/msbuild/incremental-builds).
 
@@ -58,7 +58,7 @@ Bir kitaplık oluşturmak için `<OutputType>` özelliğini atlayın. Oluşturul
 
 @No__t-0 ' ın çalıştırılması `dotnet msbuild -restore -target:Build` ' e eşdeğerdir.
 
-## <a name="arguments"></a>Bağımsız Değişkenler
+## <a name="arguments"></a>Arguments
 
 `PROJECT | SOLUTION`
 
@@ -66,9 +66,9 @@ Derlenecek proje veya çözüm dosyası. Bir proje veya çözüm dosyası belirt
 
 ## <a name="options"></a>Seçenekler
 
-* **`-c|--configuration {Debug|Release}`**
+* **`-c|--configuration {CONFIGURATION}`**
 
-  Yapı yapılandırmasını tanımlar. Varsayılan değer `Debug` ' dır.
+  Yapı yapılandırmasını tanımlar. Çoğu proje için varsayılan değer `Debug` ' dır, ancak projenizde derleme yapılandırma ayarlarını geçersiz kılabilirsiniz.
 
 * **`-f|--framework <FRAMEWORK>`**
 
@@ -112,7 +112,7 @@ Derlenecek proje veya çözüm dosyası. Bir proje veya çözüm dosyası belirt
 
 * **`-v|--verbosity <LEVEL>`**
 
-  MSBuild ayrıntı düzeyi düzeyini ayarlar. İzin verilen değerler `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` ve `diag[nostic]` ' dir. Varsayılan değer: `minimal`.
+  MSBuild ayrıntı düzeyi düzeyini ayarlar. İzin verilen değerler `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` ve `diag[nostic]` ' dir. Varsayılan, `minimal` değeridir.
 
 * **`--version-suffix <VERSION_SUFFIX>`**
 
