@@ -29,7 +29,7 @@
         - name: 'Nasıl yapılır: .NET Standard nesnesinin serileştirilebilir olup olmadığını belirleme'
           href: how-to-determine-if-netstandard-object-is-serializable.md
         - name: Örnekler
-          href: serialization-samples-binary.md
+          href: samples-binary.md
     - name: XML ve SOAP Serileştirme
       href: xml-and-soap-serialization.md
       items:
@@ -83,4 +83,4 @@
             - name: XML şema tanımı Aracı (XSD.exe'nin)
               href: xml-schema-definition-tool-xsd-exe.md
         - name: Örnekler
-          href: serialization-samples-xml.md
+          href: samples-xml.md
