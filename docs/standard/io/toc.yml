@@ -62,5 +62,7 @@
           href: how-to-use-anonymous-pipes-for-local-interprocess-communication.md
         - name: 'Nasıl yapılır: Ağ İşlemler Arası İletişimi için Adlandırılmış Kanallar Kullanma'
           href: how-to-use-named-pipes-for-network-interprocess-communication.md
+    - name: İşlem hatları
+      href: pipelines.md
     - name: Bellek Eşlemeli Dosyalar
       href: memory-mapped-files.md
