@@ -1,20 +1,20 @@
 ---
-title: Otomatik Düzen Kullanımına Genel Bakış
+title: Otomatik düzeni Kullan genel bakış
 ms.date: 03/30/2017
 helpviewer_keywords:
 - layout [WPF], automatic
 - automatic layout [WPF]
 ms.assetid: 6fed9264-18bb-4d05-8867-1fe356c6f687
-ms.openlocfilehash: 0253c57f080705b648d9f416368d0fe974ac83ab
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 2fe473da3eeabef3852e3003e61b3b9604332855
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834664"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72291262"
 ---
-# <a name="use-automatic-layout-overview"></a>Otomatik Düzen Kullanımına Genel Bakış
+# <a name="use-automatic-layout-overview"></a>Otomatik düzeni Kullan genel bakış
 
-Bu konu, yerelleştirilebilir [!INCLUDE[TLA#tla_ui#plural](../../../../includes/tlasharptla-uisharpplural-md.md)] ile [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] uygulamalarının nasıl yazılacağı konusunda geliştiriciler için yönergeler tanıtır. Geçmişte, bir kullanıcı arabiriminin yerelleştirilmesi zaman alan bir işlemdir. Kullanıcı arabiriminin uyarlandığı her dil piksel ayarı için gereken bir piksel. Günümüzde, doğru tasarım ve doğru kodlama standartlarıyla [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)], Yerellerle yeniden boyutlandırılması ve bunu yeniden konumlandırılması için oluşturulabilir. Daha kolay yeniden boyutlandırılabilir ve yeniden konumlandırılabilir uygulamaları yazma yaklaşımına otomatik düzen denir ve [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulama tasarımı kullanılarak elde edilebilir.
+Bu konuda, yerelleştirilebilir kullanıcı arabirimlerine (Usıs) sahip [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] uygulamalarının nasıl yazılacağı hakkında geliştiricilere yönelik yönergeler sunulmaktadır. Geçmişte, bir kullanıcı arabiriminin yerelleştirilmesi zaman alan bir işlemdir. Kullanıcı arabiriminin uyarlandığı her dil piksel ayarı için gereken bir piksel. Günümüzde, doğru tasarım ve doğru kodlama standartları sayesinde, Yerellerden daha az yeniden boyutlandırılması ve bunu yeniden konumlandırılması için Usıs oluşturulabilir. Daha kolay yeniden boyutlandırılabilir ve yeniden konumlandırılabilir uygulamaları yazma yaklaşımına otomatik düzen denir ve [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulama tasarımı kullanılarak elde edilebilir.
 
 <a name="advantages_of_autolayout"></a>
 
@@ -64,7 +64,7 @@ Otomatik düzen yaklaşımını kullanmak, tam olarak yerelleştirilebilir bir k
 
 **Pencere için sabit boyut ayarlamayın**
 
-- @No__t-0 kullanın. Örneğin:
+- @No__t-0 kullanın. Örnek:
 
   [!code-xaml[LocalizationGrid#2](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizationGrid/CS/Pane1.xaml#2)]
 
@@ -120,5 +120,5 @@ Aşağıdaki grafikte, önceki kod tarafından üretilen kılavuz gösterilmekte
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [WPF için Genelleştirme](globalization-for-wpf.md)
-- [Düğme Oluşturmak için Otomatik Düzeni Kullanma](how-to-use-automatic-layout-to-create-a-button.md)
-- [Otomatik Düzen için Kılavuz Kullanma](how-to-use-a-grid-for-automatic-layout.md)
+- [Düğme oluşturmak için otomatik düzeni kullanma](how-to-use-automatic-layout-to-create-a-button.md)
+- [Otomatik düzen için kılavuz kullanma](how-to-use-a-grid-for-automatic-layout.md)

@@ -1,19 +1,19 @@
 ---
-title: Bağıntı Sorunlarını Giderme
+title: Bağıntı sorunlarını giderme
 ms.date: 03/30/2017
 ms.assetid: 98003875-233d-4512-a688-4b2a1b0b5371
-ms.openlocfilehash: fecfaf7374823bb19a4ad3d7f6cb2dbbdf139703
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d4b7b4ecd724416256cf0b2499d7180200f4e75c
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61932827"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72291556"
 ---
-# <a name="troubleshooting-correlation"></a>Bağıntı Sorunlarını Giderme
-Bağıntı birbirleriyle ve doğru iş akışı örneği iş akışı hizmeti iletileri ilişkilendirmek için kullanılır, ancak doğru şekilde yapılandırılmamışsa, ileti alınmadı ve uygulamalar düzgün çalışmaz. Bu konu, bağıntı sorunlarını giderme için çeşitli yöntemler için genel bir bakış sağlar ve ayrıca bağıntı kullanırken oluşabilecek bazı yaygın sorunlar listelenir.
+# <a name="troubleshooting-correlation"></a>Bağıntı sorunlarını giderme
+Bağıntı, iş akışı hizmeti iletilerini birbirleriyle ve doğru iş akışı örneğiyle ilişkilendirmek için kullanılır, ancak doğru yapılandırılmamışsa, iletiler alınmaz ve uygulamalar düzgün çalışmayacaktır. Bu konu, bağıntı sorunlarını gidermeye yönelik çeşitli yöntemlere genel bir bakış sağlar ve bağıntı kullandığınızda oluşabilecek bazı yaygın sorunları da listeler.
 
-## <a name="handle-the-unknownmessagereceived-event"></a>UnknownMessageReceived olayını işle
- <xref:System.ServiceModel.ServiceHostBase.UnknownMessageReceived> Olay mevcut örneğine bağıntılı iletileri de dahil olmak üzere, bir hizmet tarafından bilinmeyen bir ileti alındığında gerçekleşir. Şirket içinde barındırılan hizmetler için bu olay ana uygulamada işlenebilir.
+## <a name="handle-the-unknownmessagereceived-event"></a>UnknownMessageReceived olayını işleme
+ @No__t-0 olayı, var olan bir örnekle bağıntılı olmayan iletiler de dahil olmak üzere bir hizmet tarafından bilinmeyen bir ileti alındığında oluşur. Şirket içinde barındırılan hizmetler için bu olay ana bilgisayar uygulamasında işlenebilir.
 
 ```csharp
 host.UnknownMessageReceived += delegate(object sender, UnknownMessageReceivedEventArgs e)
@@ -23,7 +23,7 @@ host.UnknownMessageReceived += delegate(object sender, UnknownMessageReceivedEve
 };
 ```
 
- Web barındırılan hizmetler için bu olay bir sınıftan türetme tarafından işlenebilen <xref:System.ServiceModel.Activities.Activation.WorkflowServiceHostFactory> ve geçersiz kılma <xref:System.ServiceModel.Activities.Activation.WorkflowServiceHostFactory.CreateWorkflowServiceHost%2A>.
+ Web 'de barındırılan hizmetler için, bu olay <xref:System.ServiceModel.Activities.Activation.WorkflowServiceHostFactory> ' dan bir sınıf türeterek ve <xref:System.ServiceModel.Activities.Activation.WorkflowServiceHostFactory.CreateWorkflowServiceHost%2A> geçersiz kılınarak işlenebilir.
 
 ```csharp
 class CustomFactory : WorkflowServiceHostFactory
@@ -45,15 +45,15 @@ class CustomFactory : WorkflowServiceHostFactory
 }
 ```
 
- Bu özel <xref:System.ServiceModel.Activities.Activation.WorkflowServiceHostFactory> ardından belirtilebilir `svc` dosya hizmeti.
+ Bu özel <xref:System.ServiceModel.Activities.Activation.WorkflowServiceHostFactory> daha sonra hizmetin `svc` dosyasında belirtilebilir.
 
 ```
 <% @ServiceHost Language="C#" Service="OrderServiceWorkflow" Factory="CustomFactory" %>
 ```
 
- Bu işleyici çağrıldığında ileti kullanılarak alınabilir <xref:System.ServiceModel.UnknownMessageReceivedEventArgs.Message%2A> özelliği <xref:System.ServiceModel.UnknownMessageReceivedEventArgs>ve şu iletiyi benzer.
+ Bu işleyici çağrıldığında ileti, <xref:System.ServiceModel.UnknownMessageReceivedEventArgs> ' in <xref:System.ServiceModel.UnknownMessageReceivedEventArgs.Message%2A> özelliği kullanılarak alınabilir ve aşağıdaki iletiye benzeyecektir.
 
-```Output
+```xml
 <s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
   <s:Header>
     <To s:mustUnderstand="1" xmlns="http://schemas.microsoft.com/ws/2005/05/addressing/none">http://localhost:8080/OrderService</To>
@@ -67,21 +67,21 @@ class CustomFactory : WorkflowServiceHostFactory
 </s:Envelope>
 ```
 
- Gönderilen iletileri incelemek için <xref:System.ServiceModel.ServiceHostBase.UnknownMessageReceived> işleyici neden ileti iş akışı hizmeti örneğine bağıntılı değil hakkında ipuçları sağlayabilir.
+ @No__t-0 işleyicisine dağıtılan iletilerin araştırmasının nedeni, iletinin neden iş akışı hizmeti örneğiyle bağıntılı olduğuna ilişkin ipuçları verebilir.
 
-## <a name="use-tracking-to-monitor-the-progress-of-the-workflow"></a>İş akışı ilerlemesini izlemek için izleme kullanma
- İzleme, bir iş akışı ilerlemesini izlemek için bir yol sağlar. Varsayılan olarak, iş akışı yaşam döngüsü olayları, etkinlik yaşam döngüsü olayları, hata yayma ve yer imi sürdürme izleme kayıtları yayılan. Ayrıca, özel izleme kayıtları, özel etkinlikler tarafından yayılabilir. Bağıntı sorunlarını giderirken, etkinlik kayıtlarını yer imi sürdürme kayıtları ve hata yayma kayıtları izleme en kullanışlı olan. Kayıtları İzleme etkinliği iş akışının geçerli ilerleme durumunu belirlemek için kullanılabilir ve hangi Mesajlaşma etkinlik şu anda iletileri için bekleyen belirlemenize yardımcı olabilir. İş akışı tarafından bir ileti alındı ve iş akışındaki tüm hataların bir kaydı hata yayma kayıtlara sağlamak belirttiğinden yer imi sürdürme kayıtları yararlı olur. İzlemeyi etkinleştirmek için istenen belirtin <xref:System.Activities.Tracking.TrackingParticipant> içinde <xref:System.ServiceModel.Activities.WorkflowServiceHost.WorkflowExtensions%2A> , <xref:System.ServiceModel.Activities.WorkflowServiceHost>. Aşağıdaki örnekte, `ConsoleTrackingParticipant` (gelen [özel izleme](../../../../docs/framework/windows-workflow-foundation/samples/custom-tracking.md) örnek) için varsayılan izleme profili kullanılarak yapılandırılır.
+## <a name="use-tracking-to-monitor-the-progress-of-the-workflow"></a>Iş akışının Ilerlemesini Izlemek için Izleme kullanma
+ İzleme, bir iş akışının ilerlemesini izlemek için bir yol sağlar. Varsayılan olarak, izleme kayıtları iş akışı yaşam döngüsü olayları, etkinlik yaşam döngüsü olayları, hata yayma ve yer işareti sürdürme için yayınlanır. Ayrıca, özel izleme kayıtları özel etkinlikler tarafından dağıtılabilir. Bağıntı sorunlarını giderirken, etkinlik izleme kayıtları, yer işareti sürdürme kayıtları ve hata yayma kayıtları en yararlı seçenektir. Etkinlik izleme kayıtları, iş akışının geçerli ilerlemesini belirlemek için kullanılabilir ve şu anda ileti için bekleyen mesajlaşma etkinliğini belirlemenize yardımcı olabilir. Yer işareti sürdürme kayıtları, iş akışı tarafından bir iletinin alındığını ve hata yayma kayıtları iş akışındaki hataların bir kaydını sağlar. İzlemeyi etkinleştirmek için, istenen <xref:System.Activities.Tracking.TrackingParticipant> ' ı <xref:System.ServiceModel.Activities.WorkflowServiceHost> ' nin <xref:System.ServiceModel.Activities.WorkflowServiceHost.WorkflowExtensions%2A> ' i belirtin. Aşağıdaki örnekte, `ConsoleTrackingParticipant` ( [özel izleme](../../../../docs/framework/windows-workflow-foundation/samples/custom-tracking.md) örneğinden) varsayılan izleme profili kullanılarak yapılandırılır.
 
 ```csharp
 host.WorkflowExtensions.Add(new ConsoleTrackingParticipant());
 ```
 
- İzleme katılımcı ConsoleTrackingParticipant gibi bir konsol penceresi olan şirket içinde barındırılan iş akışı hizmetleri için kullanışlıdır. Bir Web barındırılan hizmeti için izleme bilgilerini dayanıklı bir depoya kaydeder. bir izleme katılımcı, gibi yerleşik kullanılmalıdır <xref:System.Activities.Tracking.EtwTrackingParticipant>, ya da bilgileri bir dosyaya kaydeden bir özel izleme katılımcı.
+ Consoletrackingkatılımcı gibi bir izleme katılımcısı, bir konsol penceresi olan şirket içinde barındırılan iş akışı hizmetleri için yararlıdır. Web 'de barındırılan bir hizmet için izleme bilgilerini, yerleşik <xref:System.Activities.Tracking.EtwTrackingParticipant> ya da bilgileri bir dosyaya kaydeden özel bir izleme katılımcısı gibi dayanıklı bir depoya kaydeden bir izleme katılımcısı kullanılmalıdır.
 
- İzleme ve izleme Web barındırılan iş akışı hizmeti için yapılandırma hakkında daha fazla bilgi için bkz. [takip ve izleme iş akışı](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md), [yapılandırma izleme için bir iş akışı](../../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md)ve [ İzleme &#91;WF örnekleri&#93; ](../../../../docs/framework/windows-workflow-foundation/samples/tracking.md) örnekleri.
+ Web 'de barındırılan bir iş akışı hizmeti için izlemeyi izleme ve yapılandırma hakkında daha fazla bilgi için bkz. [iş akışı izleme ve izleme](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md), [iş akışı için izlemeyi yapılandırma](../../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md)ve [WF &#91;örnek&#93; örneklerini izleme](../../../../docs/framework/windows-workflow-foundation/samples/tracking.md) .
 
-## <a name="use-wcf-tracing"></a>WCF izleme kullanın
- WCF izleme ve iş akışı hizmetinden ileti akışı izlemeyi sağlar. Bu izleme bilgilerini, özellikle içerik temelli bağıntı için bağıntı sorunlarını giderirken yararlıdır. İzlemeyi etkinleştirmek için istenen izleme dinleyicilerine belirtin `system.diagnostics` bölümünü `web.config` Web barındırılan iş akışı hizmeti ise, dosya veya `app.config` dosyası workflow hizmet kendiliğinden barındırılır. İleti içeriğini izleme dosyası dahil edileceğini belirtin `true` için `logEntireMessage` içinde `messageLogging` öğesinde `diagnostics` bölümünü `system.serviceModel`. Aşağıdaki örnekte iletilerin içeriğine dahil olmak üzere, izleme bilgileri adlı bir dosyaya yazılacak yapılandırılmış `service.svclog`.
+## <a name="use-wcf-tracing"></a>WCF Izlemeyi kullan
+ WCF izleme, bir iş akışı hizmetine veya bir iş akışı hizmetinden ileti akışını izlemeyi sağlar. Bu izleme bilgileri, özellikle içerik tabanlı bağıntı için, bağıntı sorunlarını giderirken yararlıdır. İzlemeyi etkinleştirmek için, iş akışı hizmeti Web 'de barındırılıyorsa `web.config` dosyasının `system.diagnostics` bölümünde istenen izleme dinleyicilerini veya iş akışı hizmeti kendi kendine barındırıldığı durumda @no__t 2 dosyasını belirtin. İletilerin içeriğini izleme dosyasına eklemek için, `system.serviceModel` ' ün `diagnostics` bölümündeki `messageLogging` öğesinde `logEntireMessage` için `true` belirtin. Aşağıdaki örnekte, iletilerin içeriği de dahil olmak üzere izleme bilgileri, `service.svclog` adlı bir dosyaya yazılacak şekilde yapılandırılmıştır.
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -116,24 +116,24 @@ host.WorkflowExtensions.Add(new ConsoleTrackingParticipant());
 </configuration>
 ```
 
- Bulunan izleme bilgilerini görüntülemek için `service.svclog`, [hizmet izleme Görüntüleyicisi aracı (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) kullanılır. İleti içeriği görüntüleyin ve tam olarak ne geçirilen ve değeriyle aynı olup olmadığını görmek için içerik temelli bağıntı sorunlarını giderme verdiğinde, bu özellikle yararlı olur <xref:System.ServiceModel.CorrelationQuery> içerik temelli bağıntı için. WCF izleme hakkında daha fazla bilgi için bkz: [hizmet izleme Görüntüleyicisi aracı (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md), [yapılandırma izleme](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md), ve [sorun giderme uygulamanızkullanarakizlemeyi](../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md).
+ @No__t-0 ' da bulunan izleme bilgilerini görüntülemek için, [hizmet Izleme Görüntüleyicisi Aracı (SvcTraceViewer. exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) kullanılır. Bu özellikle, içerik tabanlı bağıntı sorunları giderirken yararlı olur çünkü ileti içeriğini görüntüleyebilir, tam olarak neyin geçtiğini görebilir ve içerik tabanlı bağıntı için <xref:System.ServiceModel.CorrelationQuery> ile eşleşip eşleşmediğine bakabilirsiniz. WCF izleme hakkında daha fazla bilgi için bkz. [hizmet Izleme Görüntüleyicisi Aracı (SvcTraceViewer. exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md), [Izlemeyi yapılandırma](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)ve [uygulamanızın sorunlarını gidermek için izlemeyi kullanma](../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md).
 
-## <a name="common-context-exchange-correlation-issues"></a>Ortak bağlam Exchange bağıntı sorunları
- Belirli türde bir bağlama için bağıntı düzgün çalışması için kullanıldığını bağıntı belirli türlerdeki gerektirir. Örnekler, iki yönlü bağlama gibi gerektiren istek-yanıt bağıntısı <xref:System.ServiceModel.BasicHttpBinding>ve bir bağlam tabanlı gibi bağlama gerektirir bağlam değişimi bağıntısı <xref:System.ServiceModel.BasicHttpContextBinding>. Bu istek-yanıt bağıntısı için yaygın bir sorun değildir, ancak yalnızca Bağlam tabanlı bağlamalar dahil olmak üzere birkaç vardır. Bu nedenle çoğu bağlamaları iki yönlü işlemlerini desteklemek <xref:System.ServiceModel.BasicHttpContextBinding>, <xref:System.ServiceModel.WSHttpContextBinding>, ve <xref:System.ServiceModel.NetTcpContextBinding>. Bu bağlamaların bir tanesini kullanılmaz bir iş akışı hizmeti için ilk çağrı başarılı olacaktır, ancak sonraki çağrılar, şunlarla birlikte başarısız olur <xref:System.ServiceModel.FaultException>.
+## <a name="common-context-exchange-correlation-issues"></a>Ortak bağlam değişim bağıntı sorunları
+ Belirli bağıntı türleri, bağıntı doğru şekilde çalışması için belirli bir bağlama türünün kullanılmasını gerektirir. Örneğin, <xref:System.ServiceModel.BasicHttpContextBinding> gibi bağlam tabanlı bağlama gerektiren <xref:System.ServiceModel.BasicHttpBinding> ve bağlam değişim bağıntısı gibi iki yönlü bir bağlama gerektiren istek-yanıt bağıntı örnekleri vardır. Çoğu bağlama iki yönlü işlemleri destekler. bu nedenle, istek-yanıt bağıntısı için yaygın bir sorun değildir, ancak yalnızca <xref:System.ServiceModel.BasicHttpContextBinding>, <xref:System.ServiceModel.WSHttpContextBinding> ve <xref:System.ServiceModel.NetTcpContextBinding> dahil olmak üzere yalnızca el ile bağlam tabanlı bağlamalar vardır. Bu bağlamalardan biri kullanılmazsa, bir iş akışı hizmetine yapılan ilk çağrı başarılı olur, ancak sonraki çağrılar aşağıdaki @no__t (0) ile başarısız olur.
 
-```Output
+```output
 There is no context attached to the incoming message for the service
 and the current operation is not marked with "CanCreateInstance = true".
 In order to communicate with this service check whether the incoming binding
 supports the context protocol and has a valid context initialized.
 ```
 
- Bağlam bağıntı için kullanılan bağlam bilgilerini tarafından döndürülen <xref:System.ServiceModel.Activities.SendReply> için <xref:System.ServiceModel.Activities.Receive> işlemi ise veya iki yönlü bir işlemi kullanarak arayan tarafından belirtilebilir, bağlam bağıntıyı başlatır etkinliği tek yönlü. Bağlamı arayan tarafından gönderilen değil veya iş akışı hizmeti sonra aynı tarafından döndürülen <xref:System.ServiceModel.FaultException> açıklanan daha önce bir sonraki işlemi çalıştırıldığında döndürülür.
+ Bağlam bağıntısı için kullanılan bağlam bilgileri, iki yönlü bir işlem kullanılırken bağlam bağıntısını Başlatan <xref:System.ServiceModel.Activities.Receive> etkinliğine @no__t veya işlem tek yönlü ise çağıran tarafından belirtilebilecek şekilde döndürülebilir. Bağlam, çağıran tarafından gönderilmezse veya iş akışı hizmeti tarafından döndürülürse, sonraki bir işlem çağrıldığında daha önce açıklanan <xref:System.ServiceModel.FaultException> döndürülür.
 
-## <a name="common-request-reply-correlation-issues"></a>Genel istek-yanıt bağıntısı sorunları
- İstek-yanıt bağıntısı ile kullanılan bir <xref:System.ServiceModel.Activities.Receive> / <xref:System.ServiceModel.Activities.SendReply> çifti ile bir iş akışı hizmeti içinde bir iki yönlü işlemini uygulamak için bir <xref:System.ServiceModel.Activities.Send> / <xref:System.ServiceModel.Activities.ReceiveReply> başka bir Web iki yönlü bir işlem çağıran çifti hizmeti. İki yönlü bir WCF hizmeti işlemi çağrılırken bir hizmet ya da geleneksel olabilir kesinlik temelli kod tabanlı WCF hizmeti veya bir iş akışı hizmeti olabilir. İki yönlü bir bağlama kullanılmalıdır, gibi istek-yanıt bağıntısı kullanılacak <xref:System.ServiceModel.BasicHttpBinding>, ve işlemleri çift yönlü olmalıdır.
+## <a name="common-request-reply-correlation-issues"></a>Ortak Istek-yanıt bağıntı sorunları
+ İstek-Yanıt Bağıntısı, bir iş akışı hizmetinde iki yönlü bir işlem uygulamak için bir <xref:System.ServiceModel.Activities.Receive> @ no__t-1 @ no__t-2 çifti ile ve başka bir Web hizmetinde iki yönlü bir işlem çağıran bir <xref:System.ServiceModel.Activities.Send> @ no__t-4 @ no__t-5 çifti ile kullanılır. Bir WCF hizmetinde iki yönlü bir işlem çağrılırken, hizmet geleneksel bir kesinlik temelli kod tabanlı WCF hizmeti olabilir veya bir iş akışı hizmeti olabilir. İstek-yanıt bağıntısını kullanmak için, <xref:System.ServiceModel.BasicHttpBinding> gibi iki yönlü bir bağlamanın kullanılması gerekir ve işlemler iki yönlü olmalıdır.
 
- İş akışı hizmeti paralel veya çakışan iki yönlü işlemlerini varsa <xref:System.ServiceModel.Activities.Receive> / <xref:System.ServiceModel.Activities.SendReply> veya <xref:System.ServiceModel.Activities.Send> / <xref:System.ServiceModel.Activities.ReceiveReply> çiftleri ve örtük bağıntı işlemek Yönetim tarafındansağlanan<xref:System.ServiceModel.Activities.WorkflowServiceHost>özellikle yüksek yoğunluk senaryolarda yeterli olmayabilir ve iletileri değil doğru yönlendirilir. Bu sorunun oluşmasını önlemek için her zaman açıkça belirttiğiniz önerilir bir <xref:System.ServiceModel.Activities.CorrelationHandle> istek-yanıt bağıntısı kullanırken. Kullanırken **SendAndReceiveReply** ve **ReceiveAndSendReply** Mesajlaşma bölümünden şablonları **araç kutusu** iş akışı Tasarımcısı'nda bir <xref:System.ServiceModel.Activities.CorrelationHandle> açıkça varsayılan olarak yapılandırılır. Kod kullanarak bir iş akışı oluşturma sırasında <xref:System.ServiceModel.Activities.CorrelationHandle> belirtilen <xref:System.ServiceModel.Activities.Receive.CorrelationInitializers%2A> çiftin ilk etkinlik. Aşağıdaki örnekte, bir <xref:System.ServiceModel.Activities.Receive> etkinlik açık bir yapılandırılmış <xref:System.ServiceModel.Activities.CorrelationInitializer.CorrelationHandle%2A> belirtilen <xref:System.ServiceModel.Activities.RequestReplyCorrelationInitializer>.
+ İş akışı hizmeti paralel veya <xref:System.ServiceModel.Activities.Receive> @ no__t-1 @ no__t-2 veya <xref:System.ServiceModel.Activities.Send> @ no__t-4 @ no__t-5 çiftlerine sahipse, <xref:System.ServiceModel.Activities.WorkflowServiceHost> tarafından sunulan örtük bağıntı tanıtıcısı yönetimi yeterli olmayabilir, özellikle yüksek stres durumunda senaryolar ve mesajlar doğru şekilde yönlendirilmeyebilir. Bu sorunun oluşmasını önlemek için, istek-yanıt bağıntısını kullanırken her zaman açıkça bir <xref:System.ServiceModel.Activities.CorrelationHandle> belirtmeniz önerilir. İş akışı tasarımcısında **araç kutusunun** Mesajlaşma bölümünde **SendAndReceiveReply** ve **ReceiveAndSendReply** şablonlarını kullanırken, bir <xref:System.ServiceModel.Activities.CorrelationHandle> varsayılan olarak açıkça yapılandırılır. Kodu kullanarak bir iş akışı oluştururken, <xref:System.ServiceModel.Activities.CorrelationHandle>, çiftin ilk etkinliğinin <xref:System.ServiceModel.Activities.Receive.CorrelationInitializers%2A> ' inde belirtilir. Aşağıdaki örnekte, <xref:System.ServiceModel.Activities.Receive> etkinliği <xref:System.ServiceModel.Activities.RequestReplyCorrelationInitializer> ' de belirtilen açık <xref:System.ServiceModel.Activities.CorrelationInitializer.CorrelationHandle%2A> ile yapılandırılır.
 
 ```csharp
 Variable<CorrelationHandle> RRHandle = new Variable<CorrelationHandle>();
@@ -161,21 +161,21 @@ SendReply ReplyToStartOrder = new SendReply
 // Construct a workflow using StartOrder and ReplyToStartOrder.
 ```
 
- Kalıcılık arasında izin verilmez bir <xref:System.ServiceModel.Activities.Receive> / <xref:System.ServiceModel.Activities.SendReply> çifti veya <xref:System.ServiceModel.Activities.Send> / <xref:System.ServiceModel.Activities.ReceiveReply> çifti. No-persist bölge hem etkinlikleri tamamlanana kadar sürer oluşturulur. Bir gecikme etkinliği gibi bir etkinliği bu no-persist bölgede ve boşta durumuna gelir iş akışının sağlar, bu konak olduklarında iş akışları kalıcı hale getirmek için yapılandırılmış boş olsa bile iş akışı kalıcı olmaz. Bir kalıcı etkinliği gibi bir etkinlik açıkça no-kalan bölgesinde kalıcı hale getirmek çalışırsa, önemli bir özel durum, iş akışı iptali oluşturulur ve <xref:System.ServiceModel.FaultException> çağırana döndürülür. Önemli özel durum iletisi "System.InvalidOperationException: Kalıcı etkinlikleri hiçbir Kalıcılık bloğu içinde bulunan yapılamıyor. ". Bu özel durumun çağırana döndürülen değil ancak izleme etkin olup olmadığını gözlemlendi. İleti için <xref:System.ServiceModel.FaultException> "işlemi gerçekleştirilemedi iş akışı örneği '5836145b 7da2 - 49 d 0-a052-a49162adeab6' tamamlandığından" olan arayana döndürülür.
+ @No__t-0 @ no__t-1 @ no__t-2 çifti veya <xref:System.ServiceModel.Activities.Send> @ no__t-4 @ no__t-5 çifti arasında Kalıcılık yapılmasına izin verilmez. Her iki etkinlik de tamamlanana kadar devam eden kalıcı olmayan bir bölge oluşturulur. Gecikme etkinliği gibi bir etkinlik bu kalıcı olmayan bir bölgede yer alıyorsa ve iş akışının boşta olmasına neden oluyorsa, ana bilgisayar boşta kaldığında iş akışlarını kalıcı hale getirmek üzere yapılandırılmış olsa bile, iş akışı devam etmez. Kalıcı etkinlik gibi bir etkinlik, kalıcı olmayan bir bölgede açık bir şekilde kalıcı hale getirmeye çalışırsa, önemli bir özel durum oluşturulur, iş akışı iptal edilir ve bir <xref:System.ServiceModel.FaultException> çağırana döndürülür. Önemli özel durum iletisi "System. InvalidOperationException: Persist etkinlikleri kalıcı olmayan bloklar içinde yer alamaz.". Bu özel durum çağırana döndürülmüyor, ancak izleme etkinse gözlemlenebilir. Arayana döndürülen <xref:System.ServiceModel.FaultException> için ileti "WorkflowInstance ' 5836145b-7dav2-49d0-a052-a49162adeab6 ' tamamlandığı için işlem gerçekleştirilemedi".
 
- İstek-yanıt bağıntısı hakkında daha fazla bilgi için bkz: [istek-yanıt](../../../../docs/framework/wcf/feature-details/request-reply-correlation.md).
+ İstek-yanıt bağıntısı hakkında daha fazla bilgi için bkz. [istek-yanıt](../../../../docs/framework/wcf/feature-details/request-reply-correlation.md).
 
-## <a name="common-content-correlation-issues"></a>Ortak içerik bağıntı sorunları
- Bir iş akışı hizmeti birden çok ileti alır ve istenen örneğine iletilerin verilerinde bir parçasını tanımlayan içerik temelli bağıntı kullanılır. İçerik temelli bağıntı iletisinde, bir müşteri numarası veya sipariş kimliği gibi doğru iş akışı örneği için iletileri yönlendirmek için bu verileri kullanır. Bu bölümde, içerik temelli bağıntı kullanırken oluşabilecek bazı yaygın sorunları açıklar.
+## <a name="common-content-correlation-issues"></a>Ortak Içerik bağıntı sorunları
+ İçerik tabanlı bağıntı, bir iş akışı hizmeti birden çok ileti aldığında ve değiştirilen iletilerde bir veri parçası istenen örneği tanımlarsa kullanılır. İçerik tabanlı bağıntı, iletileri doğru iş akışı örneğine yönlendirmek için bir müşteri numarası veya sipariş KIMLIĞI gibi iletideki bu verileri kullanır. Bu bölümde, içerik tabanlı bağıntı kullanılırken oluşabilecek bazı yaygın sorunlar açıklanmaktadır.
 
-### <a name="ensure-the-identifying-data-is-unique"></a>Benzersiz tanımlayıcı veri sağlayın
- Örneği tanımlamak için kullanılan verileri, bir bağıntı anahtarını karma haline getirilir. Bağıntı için kullanılan veri benzersizdir Aksi takdirde karma anahtarında çakışma ortaya çıktığında ve iletilerin misrouted neden güvence altına almak için dikkatli olunması gerekir. Örneğin, aynı ada sahip birden çok müşteriyi olabileceğinden yalnızca müşteri adına dayalı bir bağıntı bir çakışma neden olabilir. İki nokta üst üste (:) iletiyi ileti sorgunun anahtar ve değer daha sonra karma dizesi oluşturmak için sınırlandırmak için zaten kullanıldığından ilişkilendirmek için kullanılan verileri bir parçası olarak kullanılmamalıdır. Kalıcılık kullanılıyorsa geçerli tanımlayıcı verileri önceden Sürdürülen bir örneği tarafından kullanılmamış emin olun. Geçici olarak Kalıcılık devre dışı bırakmak, bu sorunu belirlemenize yardımcı olabilir. WCF izleme hesaplanan bağıntı anahtarı görüntülemek için kullanılabilir ve bu tür bir sorunu hata ayıklama için kullanışlıdır.
+### <a name="ensure-the-identifying-data-is-unique"></a>Tanımlayıcı verilerin benzersiz olduğundan emin olun
+ Örneği tanımlamak için kullanılan veriler bir bağıntı anahtarına karma hale getirilir. Bağıntı için kullanılan verilerin benzersiz olduğundan emin olmak için dikkatli olunmalıdır, aksi takdirde karma anahtardaki çakışmaların oluşması ve iletilerin hatalı yönlendirilmesine neden olabilir. Örneğin, aynı ada sahip birden fazla müşteri olabileceğinden, yalnızca müşteri adı temelinde bir bağıntı çakışmasına neden olabilir. İki nokta (:) ileti sorgusunun anahtar ve değerini daha sonra karma hale getirilen dizeyi oluşturacak şekilde sınırlandırmak için zaten kullanıldığından, iletiyi ilişkilendirmek için kullanılan verilerin bir parçası olarak kullanılmamalıdır. Kalıcılık kullanılıyorsa, geçerli tanımlama verilerinin önceden kalıcı bir örnek tarafından kullanılmadığından emin olun. Kalıcılığı geçici olarak devre dışı bırakmak bu sorunu belirlemenize yardımcı olabilir. WCF izleme, hesaplanan bağıntı anahtarını görüntülemek için kullanılabilir ve bu tür bir sorunu ayıklamak için faydalıdır.
 
 ### <a name="race-conditions"></a>Yarış durumları
- Bir ileti ve gerçekten başlatılmakta bağıntı alma hizmeti arasında bir süre izleme iletileri yoksayılacak küçük bir aralık mevcuttur. Bu iletiler, bir iş akışı hizmeti bir tek yönlü işlem istemci tarafından geçirilen verileri kullanarak içerik temelli bağıntı başlatır ve çağıran hemen izleme iletileri gönderir, bu zaman aralığı boyunca yoksayılacak. Bu bağıntı başlatmak için iki yönlü bir işlemi kullanarak veya kullanılarak önlenebilir bir <xref:System.ServiceModel.Activities.TransactedReceiveScope>.
+ Bir ileti alma ile bağıntıdan başlatılan bağıntı arasında küçük bir boşluk vardır ve bu süre, izleme iletilerinin yok sayılacak olur. Bir iş akışı hizmeti, istemciden tek yönlü bir işlem üzerinden geçirilen verileri kullanarak içerik tabanlı bağıntıyı başlatır ve arayan anında izleme iletileri gönderdiğinde, bu iletiler bu Aralık sırasında yok sayılır. Bu, bağıntıyı başlatmak için iki yönlü bir işlem kullanılarak veya <xref:System.ServiceModel.Activities.TransactedReceiveScope> kullanılarak kaçınılabilir.
 
-### <a name="correlation-query-issues"></a>Bağıntı sorgu sorunları
- Bağıntı sorgular, hangi verilerin iletide ileti ilişkilendirmek için kullanıldığını belirtmek için kullanılır. Bu veriler, bir XPath sorgusu kullanılarak belirtilir. Her şeyin doğru görünüyor olsa bile bir hizmete ileti gönderilir değil, bir XPath sorgusu yerine ileti verinin değerinin eşleşen değişmez bir değer belirtmek için sorun giderme için bir strateji olur. Değişmez değer belirtmek için kullanın `string` işlevi. Aşağıdaki örnekte, bir <xref:System.ServiceModel.MessageQuerySet> değişmez değerini kullanacak şekilde yapılandırılmış `11445` için `OrderId` ve XPath sorgusu kılınmıştır.
+### <a name="correlation-query-issues"></a>Bağıntı sorgusu sorunları
+ Bağıntı sorguları, iletiyi ilişkilendirmek için hangi verilerin kullanıldığını belirtmek için kullanılır. Bu veriler bir XPath sorgusu kullanılarak belirtilir. Her şey doğru gibi görünse de bir hizmete gönderilen iletiler dağıtılmazsa, sorun gidermeye yönelik bir strateji, bir XPath sorgusu yerine ileti verilerinin değeriyle eşleşen bir sabit değer belirtmektir. Bir sabit değer belirtmek için `string` işlevini kullanın. Aşağıdaki örnekte, bir <xref:System.ServiceModel.MessageQuerySet> `OrderId` ' nin sabit değer değerini kullanacak şekilde yapılandırılmıştır ve XPath sorgusunun @no__t açıklaması görüntülenir.
 
 ```csharp
 MessageQuerySet = new MessageQuerySet
@@ -188,7 +188,7 @@ MessageQuerySet = new MessageQuerySet
 }
 ```
 
- Bir XPath sorgusu data korelace alınır, hatalı yapılandırıldıysa, şu iletiyle bir hata döndürülür: "Boş bir sonuç kümesi bir bağıntı sorgu üretilenleri kaydeder. Lütfen bağıntı sorguları uç noktası için doğru şekilde yapılandırıldığından emin olun." Bu sorunu gidermek için hızlı bir şekilde, önceki bölümde açıklandığı bir değişmez değer ile XPath sorgusu değiştirmektir. XPath sorgusu Oluşturucusu'nda kullanmanız durumunda bu sorun oluşabilir **bağıntı başlatıcılar Ekle** veya **definice vlastnosti Correlateson** iletişim kutuları ve iş akışı hizmetinizi ileti sözleşmeleri kullanır. Aşağıdaki örnekte, bir ileti anlaşması sınıfı tanımlanır.
+ Bir XPath sorgusu, hiçbir bağıntı verisi alınmadıysa yanlış yapılandırılmışsa şu iletiyle bir hata döndürülür: "bir bağıntı sorgusu boş bir sonuç kümesi verdi. Lütfen uç nokta için bağıntı sorgularının doğru yapılandırıldığından emin olun. " Bu sorunu gidermeye yönelik bir hızlı yol, XPath sorgusunun önceki bölümde açıklanan şekilde değişmez değer değeriyle değiştirilmesini kullanmaktır. Bu sorun, **bağıntı başlatıcıları** veya **CorrelatesOn tanımı** Ekle iletişim kutularında XPath sorgu oluşturucuyu kullanırsanız ve iş akışı hizmetiniz ileti sözleşmeleri kullanıyorsa oluşabilir. Aşağıdaki örnekte, bir ileti sözleşmesi sınıfı tanımlanmıştır.
 
 ```csharp
 [MessageContract]
@@ -202,19 +202,19 @@ public class AddItemMessage
 }
 ```
 
- Bu ileti anlaşması tarafından kullanılan bir <xref:System.ServiceModel.Activities.Receive> bir iş akışında etkinlik. `CartId` Doğru örneği mesajıyla ileti üst bilgisinde kullanılır. XPath sorgusu, alır, `CartId` bağıntı iletişim kutuları sorgu oluşturulduğunda aşağıdaki hatalı XPath iş akışı Tasarımcısı'nda kullanılarak oluşturulur.
+ Bu ileti sözleşmesi, bir iş akışında <xref:System.ServiceModel.Activities.Receive> etkinliği tarafından kullanılır. İleti üstbilgisindeki `CartId`, iletiyi doğru örnekle ilişkilendirmek için kullanılır. @No__t-0 ' ı alan XPath sorgusu, iş akışı tasarımcısında bağıntı iletişim kutuları kullanılarak oluşturulduysa, aşağıdaki yanlış XPath sorgusu oluşturulur.
 
 ```
 sm:body()/xg0:AddItemMessage/xg0:CartId
 ```
 
- Bu XPath sorgusu doğru olması durumunda <xref:System.ServiceModel.Activities.Receive> etkinlik verilerini parametreleri kullanılır, ancak bir ileti anlaşması kullandığından yanlış. Aşağıdaki XPath sorgusu almak için doğru XPath sorgusu olduğundan `CartId` başlığından.
+ Bu XPath sorgusu, <xref:System.ServiceModel.Activities.Receive> etkinliği veri için parametreler kullanıyorsa, ancak bir ileti sözleşmesi kullandığından yanlış olur. Aşağıdaki XPath sorgusu, üst bilgiden `CartId` almak için doğru XPath sorgusudur.
 
 ```
 sm:header()/tempuri:CartId
 ```
 
-Bu, ileti gövdesi inceleyerek onaylanabilir.
+Bu, iletinin gövdesini inceleyerek onaylanır.
 
 ```xml
 <s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
@@ -230,7 +230,7 @@ Bu, ileti gövdesi inceleyerek onaylanabilir.
 </s:Envelope>
 ```
 
-Aşağıdaki örnekte gösterildiği bir <xref:System.ServiceModel.Activities.Receive> etkinlik için yapılandırılmış bir `AddItem` verileri almak için önceki ileti sözleşmesi kullanan işlemi. XPath sorgusu doğru yapılandırılmamış.
+Aşağıdaki örnekte, verileri almak için önceki ileti sözleşmesini kullanan bir `AddItem` işlemi için yapılandırılmış <xref:System.ServiceModel.Activities.Receive> etkinliği gösterilmektedir. XPath sorgusu doğru bir şekilde yapılandırılmıştır.
 
 ```xaml
 <Receive CorrelatesWith="[CCHandle] OperationName="AddItem" ServiceContractName="p:IService">

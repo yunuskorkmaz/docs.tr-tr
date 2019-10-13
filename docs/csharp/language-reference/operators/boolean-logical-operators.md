@@ -32,12 +32,12 @@ helpviewer_keywords:
 - conditional OR operator [C#]
 - short-circuiting OR operator [C#]
 - '|| operator [C#]'
-ms.openlocfilehash: cc25d4bfd444dc0acb30fc1c6e6c3c9918af537c
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: f711bd04aeadb584eac1ecb0b644a36e2e496d08
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71698677"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72290936"
 ---
 # <a name="boolean-logical-operators-c-reference"></a>Boole mantıksal işleçleri (C# başvuru)
 
@@ -51,11 +51,11 @@ Aşağıdaki işleçler [bool](../keywords/bool.md) işlenenleri ile mantıksal 
 
 ## <a name="logical-negation-operator-"></a>Mantıksal Değilleme İşleci!
 
-@No__t-0 işleci, işleneninin mantıksal olumsuzunu hesaplar. Diğer bir deyişle, işlenen `false` olarak değerlendirilirse `false` ' yi ve işlenen `true` ' e değerlendirilirse,  ' yi üretir:
+@No__t-0 işleci birli önek, işleneninin mantıksal olumsuzunu hesaplar. Diğer bir deyişle, işlenen `false` olarak değerlendirilirse `false` ' yi ve işlenen `true` ' e değerlendirilirse,  ' yi üretir:
 
 [!code-csharp-interactive[logical negation](~/samples/csharp/language-reference/operators/BooleanLogicalOperators.cs#Negation)]
 
-8,0 ile C# başlayarak birli sonek `!` işleci bir null-Forin işleci. Etkin bir null yapılabilir ek açıklama bağlamında, bu ifadeyi, null olabilen bir başvuru türünün 0 @no__t, null olmadığını belirtmek için kullanırsınız: `x!`. Daha fazla bilgi için bkz. [Nullable başvuru türleri](../../nullable-references.md).
+8,0 ile C# başlayarak birli sonek `!` işleci bir [null-Forin işleci](null-forgiving.md).
 
 ## <a name="logical-and-operator-"></a>Mantıksal AND işleci &amp;
 
@@ -117,17 +117,17 @@ Aşağıdaki örnekte, `||` işlecinin sağ işleneni, sol taraftaki işlenen `t
 
 @No__t-0 işlenenleri için, `&` ve `|` işleçleri üç değerli mantığı destekler. Bu işleçlerin semantiği aşağıdaki tablo tarafından tanımlanır:  
   
-|x|y|x & y|x&#124;y|  
+|x|Iz|x & y|x&#124;y|  
 |----|----|----|----|  
-|true|true|true|true|  
-|true|false|false|true|  
-|true|null|null|true|  
-|false|true|false|true|  
-|false|false|false|false|  
-|false|null|false|null|  
-|null|true|null|true|  
-|null|false|false|null|  
-|null|null|null|null|  
+|doğru|doğru|doğru|doğru|  
+|doğru|yanlış|yanlış|doğru|  
+|doğru|değer|değer|doğru|  
+|yanlış|doğru|yanlış|doğru|  
+|yanlış|yanlış|yanlış|yanlış|  
+|yanlış|değer|yanlış|değer|  
+|değer|doğru|değer|doğru|  
+|değer|yanlış|yanlış|değer|  
+|değer|değer|değer|değer|  
 
 Bu işleçlerin davranışı, null yapılabilir değer türleriyle tipik işleç davranışından farklıdır. Genellikle, bir değer türünün işlenenleri için tanımlanan bir işleç, karşılık gelen Nullable değer türünün işlenenleri ile de kullanılabilir. Bu tür bir operatör, işlenenlerinden herhangi biri `null` ise `null` üretir. Ancak, `&` ve `|` işleçleri, işlenenleri `null` olsa bile null olmayan bir şekilde üretebilir. Null yapılabilir değer türleriyle operatör davranışı hakkında daha fazla bilgi için, [Nullable değer türlerini kullanma](../../programming-guide/nullable-types/using-nullable-types.md) makalesindeki [işleçler](../../programming-guide/nullable-types/using-nullable-types.md#operators) bölümüne bakın.
 
@@ -182,7 +182,7 @@ Kullanıcı tanımlı bir tür, `!`, `&`, `|` ve `^` işleçlerini [aşırı](op
 
 Kullanıcı tanımlı bir tür, `&&` ve `||` Koşullu mantıksal işleçleri aşırı yükleyemez. Ancak, Kullanıcı tanımlı bir tür [doğru ve yanlış işleçleri](true-false-operators.md) ve `&` veya `|` işlecini belirli bir şekilde aşırı yükleiyorsa, sırasıyla `&&` veya `||` işlemi, bu türün işlenenleri için değerlendirilebilir. Daha fazla bilgi için, [ C# dil belirtiminin](~/_csharplang/spec/introduction.md) [Kullanıcı tanımlı Koşullu mantıksal işleçler](~/_csharplang/spec/expressions.md#user-defined-conditional-logical-operators) bölümüne bakın.
 
-## <a name="c-language-specification"></a>C# dili belirtimi
+## <a name="c-language-specification"></a>C#dil belirtimi
 
 Daha fazla bilgi için, [ C# dil belirtiminin](~/_csharplang/spec/introduction.md)aşağıdaki bölümlerine bakın:
 
@@ -194,5 +194,5 @@ Daha fazla bilgi için, [ C# dil belirtiminin](~/_csharplang/spec/introduction.m
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [C#başvurunun](../index.md)
-- [C# işleçleri](index.md)
+- [C#işletmenlerinin](index.md)
 - [Bit düzeyinde ve kaydırma işleçleri](bitwise-and-shift-operators.md)

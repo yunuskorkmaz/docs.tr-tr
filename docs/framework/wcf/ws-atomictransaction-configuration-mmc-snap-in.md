@@ -1,23 +1,23 @@
 ---
-title: WS-AtomicTransaction Yapılandırması MMC Ek Bileşeni
+title: WS-AtomicTransaction Yapılandırması MMC ek bileşeni
 ms.date: 03/30/2017
 ms.assetid: 23592973-1d51-44cc-b887-bf8b0d801e9e
-ms.openlocfilehash: 1fa0548e2d63562ddcb85fc6392bf5c99d67d6c7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 926332ac1873db89ce9332075380effdfdc1fc37
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69916811"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72291499"
 ---
-# <a name="ws-atomictransaction-configuration-mmc-snap-in"></a>WS-AtomicTransaction Yapılandırması MMC Ek Bileşeni
+# <a name="ws-atomictransaction-configuration-mmc-snap-in"></a>WS-AtomicTransaction Yapılandırması MMC ek bileşeni
 WS-AtomicTransaction Yapılandırması MMC ek bileşeni, hem yerel hem de uzak makinelerde WS-AtomicTransaction ayarlarının bir bölümünü yapılandırmak için kullanılır.  
   
 ## <a name="remarks"></a>Açıklamalar  
- [!INCLUDE[wxp](../../../includes/wxp-md.md)]Veya çalıştırıyorsanız[!INCLUDE[ws2003](../../../includes/ws2003-md.md)], MMC ek bileşeni **Denetim Masası/Yönetim Araçları/Bileşen Hizmetleri/** , Bilgisayarım ' a sağ tıklayıp Özellikler ' i seçerek bulunabilir. Bu, MSDTC 'yi yapılandırabileceğiniz konumdur. Yapılandırma için kullanılabilen seçenekler **ws-at** sekmesi altında gruplandırılır.  
+ @No__t-0 veya [!INCLUDE[ws2003](../../../includes/ws2003-md.md)] çalıştırıyorsanız, MMC ek bileşeni **Denetim Masası/Yönetim Araçları/Bileşen Hizmetleri/** **, Bilgisayarım ' a sağ tıklayıp** **Özellikler**' i seçerek bulunabilir. Bu, MSDTC 'yi yapılandırabileceğiniz konumdur. Yapılandırma için kullanılabilen seçenekler **ws-at** sekmesi altında gruplandırılır.  
   
- [!INCLUDE[lserver](../../../includes/lserver-md.md)]Windows Vista çalıştırıyorsanız veya MMC ek bileşeni, **Başlat** düğmesine tıklayıp `dcomcnfg.exe` **arama** kutusuna yazarak bulabilirsiniz. MMC açıldığında, **bilgisayar \ dağıtılmış işlem Koordinatlıklasör** düğümü ' ne gidin, sağ tıklayın ve **Özellikler**' i seçin. Yapılandırma için kullanılabilen seçenekler **ws-at** sekmesi altında gruplandırılır.  
+ Windows Vista veya [!INCLUDE[lserver](../../../includes/lserver-md.md)] çalıştırıyorsanız, MMC ek bileşeni **Başlat** düğmesine tıklayıp **arama** kutusuna `dcomcnfg.exe` yazarak bulunabilir. MMC açıldığında, **bilgisayar \ dağıtılmış işlem Koordinatlıklasör** düğümü ' ne gidin, sağ tıklayın ve **Özellikler**' i seçin. Yapılandırma için kullanılabilen seçenekler **ws-at** sekmesi altında gruplandırılır.  
   
- Önceki adımlar, yerel bir makineyi yapılandırmak için ek bileşeni başlatmak üzere kullanılır. Uzak bir makineyi yapılandırmak istiyorsanız, uzak makinenin adını **Denetim Masası/Yönetim Araçları/Bileşen Hizmetleri**/olarak bulun ve veya [!INCLUDE[wxp](../../../includes/wxp-md.md)] [!INCLUDE[ws2003](../../../includes/ws2003-md.md)]çalıştırıyorsanız benzer adımları gerçekleştirin. Windows Vista veya [!INCLUDE[lserver](../../../includes/lserver-md.md)]çalıştırıyorsanız, Vista ve [!INCLUDE[lserver](../../../includes/lserver-md.md)]için önceki adımları uygulayın, ancak uzak bilgisayarın düğümü altındaki **Dağıtılmış işlem koordinatı\local DTC** düğümünü kullanın.  
+ Önceki adımlar, yerel bir makineyi yapılandırmak için ek bileşeni başlatmak üzere kullanılır. Uzak bir makineyi yapılandırmak istiyorsanız, uzak makinenin adını **Denetim Masası/Yönetim Araçları/Bileşen Hizmetleri/** olarak bulmanız ve [!INCLUDE[wxp](../../../includes/wxp-md.md)] veya [!INCLUDE[ws2003](../../../includes/ws2003-md.md)] ' yi çalıştırıyorsanız benzer adımları gerçekleştirmeniz gerekir. Windows Vista veya [!INCLUDE[lserver](../../../includes/lserver-md.md)] çalıştırıyorsanız, Vista ve [!INCLUDE[lserver](../../../includes/lserver-md.md)] için önceki adımları izleyin, ancak uzak bilgisayarın düğümü altındaki **Dağıtılmış işlem Koordinatı\local DTC** düğümünü kullanın.  
   
  Araç tarafından sunulan kullanıcı arabirimini kullanmak için, aşağıdaki yolda bulunan WsatUI. dll dosyasını kaydetmeniz gerekir.  
   
@@ -25,7 +25,7 @@ WS-AtomicTransaction Yapılandırması MMC ek bileşeni, hem yerel hem de uzak m
   
  Kayıt aşağıdaki komutla yapılabilir.  
   
-```Output  
+```console
 regasm.exe /codebase WsatUI.dll  
 ```  
   
@@ -77,7 +77,7 @@ regasm.exe /codebase WsatUI.dll
   
  **Seçenekler** düğmesine tıkladığınızda, ek ayarları belirtebileceğiniz bir sayfa çağırılır.  
   
- **İzleme düzeyi** birleşimi kutusu, <xref:System.Diagnostics.TraceLevel> numaralandırmanın geçerli bir değeri arasından seçim yapmanıza olanak tanır. Ayrıca, Etkinlik izlemeyi, etkinlik yaymayı gerçekleştirmek veya kişisel olarak tanımlanabilir bilgileri toplamak istediğinizi belirtmek için onay kutularını da kullanabilirsiniz.  
+ **Izleme düzeyi** birleşimi kutusu, <xref:System.Diagnostics.TraceLevel> Numaralandırmadaki geçerli bir değer arasından seçim yapmanıza olanak tanır. Ayrıca, Etkinlik izlemeyi, etkinlik yaymayı gerçekleştirmek veya kişisel olarak tanımlanabilir bilgileri toplamak istediğinizi belirtmek için onay kutularını da kullanabilirsiniz.  
   
  Günlüğe kaydetme **oturum** grubu kutusunda günlük oturumlarını da belirtebilirsiniz.  
   
@@ -88,6 +88,6 @@ regasm.exe /codebase WsatUI.dll
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [WS-Atomic İşlem Desteğini Yapılandırma](../../../docs/framework/wcf/feature-details/configuring-ws-atomic-transaction-support.md)
-- [WS-AtomicTransaction Yapılandırma Yardımcı Programı (wsatConfig.exe)](../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)
-- [Yönetim ve Tanılama](../../../docs/framework/wcf/diagnostics/index.md)
+- [WS Atomik Işlem desteğini yapılandırma](../../../docs/framework/wcf/feature-details/configuring-ws-atomic-transaction-support.md)
+- [WS-AtomicTransaction Yapılandırma yardımcı programı (wsatConfig. exe)](../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)
+- [Yönetim ve tanılama](../../../docs/framework/wcf/diagnostics/index.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - international user interface [WPF], XAML
 - globalization [WPF]
 ms.assetid: 4571ccfe-8a60-4f06-9b37-7ac0b1c2d10f
-ms.openlocfilehash: 1ab372f69792a00160edb2542762298114d3f8b4
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 32caf87435e23008f9f300d231c2705e7894280f
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72003446"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72291467"
 ---
 # <a name="globalization-for-wpf"></a>WPF için Genelleştirme
 Bu konuda, küresel pazar için [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] uygulamaları yazarken bilmeniz gereken sorunlar açıklanır. Genelleştirme programlama öğeleri <xref:System.Globalization> ad alanında .NET içinde tanımlanmıştır.
@@ -36,7 +36,7 @@ Aşağıdaki örnekte, onaltılı bir karakter başvurusu gösterilmektedir. Ona
 ```
 
 <a name="encoding"></a>
-### <a name="encoding"></a>Şifreleme
+### <a name="encoding"></a>Encoding
  @No__t-0 tarafından desteklenen kodlama ASCII, [!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)] UTF-16 ve UTF-8 ' i destekler. Encoding deyimleri [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] belgesinin başlangıcıdır. Kodlama özniteliği yoksa ve hiçbir bayt sırası yoksa, ayrıştırıcı varsayılan olarak UTF-8 ' i belirler. UTF-8 ve UTF-16, tercih edilen kodlamalardır. UTF-7 desteklenmez. Aşağıdaki örnek, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] dosyasında UTF-8 kodlamasının nasıl belirtileceğini göstermektedir.
 
 ```xaml
@@ -56,7 +56,7 @@ Aşağıdaki örnekte, onaltılı bir karakter başvurusu gösterilmektedir. Ona
 ```
 
 <a name="unicode"></a>
-### <a name="unicode"></a>Unicode
+### <a name="unicode"></a>Kodlamaları
  [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], yedeklerin dahil olduğu tüm [!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)] özelliklerini destekler. Karakter kümesi [!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)] ' a eşlenildiği sürece, desteklenir. Örneğin, GB18030 Çince, Japonca ve Kore dili (CFK) uzantısı A ve B ve vekil çiftleri ile eşlenen bazı karakterleri tanıtır, bu nedenle tam olarak desteklenmektedir. @No__t-0 uygulaması, vekil çiftleri mi yoksa birleştirme karakterleri mi olduğunu anlamak zorunda kalmadan dizeleri işlemek için <xref:System.Globalization.StringInfo> kullanabilir.
 
 <a name="design_intl_ui_with_xaml"></a>
@@ -143,7 +143,7 @@ Aşağıdaki örnekte, onaltılı bir karakter başvurusu gösterilmektedir. Ona
 
 <a name="mui"></a>
 ### <a name="multilingual-user-interface"></a>Çok dilli kullanıcı arabirimi
- Çok dilli kullanıcı arabirimleri (MUI), bir dilden diğerine [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] ' a geçiş için bir Microsoft destedir. @No__t-0 uygulaması, MUI 'yi desteklemek için derleme modelini kullanır. Tek bir uygulama dilden bağımsız derlemeler ve dile bağlı uydu kaynak derlemeleri içerir. Giriş noktası yönetilen bir. EXE ana derlemede.  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] kaynak yükleyicisi, kaynak aramasını ve geri dönüşü desteklemek için [!INCLUDE[TLA2#tla_netframewk](../../../../includes/tla2sharptla-netframewk-md.md)] ' in kaynak yöneticisinden faydalanır. Birden çok dil uydu derlemesi aynı ana derlemeyle çalışır. Yüklenen kaynak derlemesi, geçerli iş parçacığının @no__t 0 ' a bağlıdır.
+ Çok dilli kullanıcı arabirimleri (MUI), tek bir dilden diğerine geçiş yapmak için Microsoft desteği sağlar. @No__t-0 uygulaması, MUI 'yi desteklemek için derleme modelini kullanır. Tek bir uygulama dilden bağımsız derlemeler ve dile bağlı uydu kaynak derlemeleri içerir. Giriş noktası yönetilen bir. EXE ana derlemede.  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] kaynak yükleyicisi, kaynak aramasını ve geri dönüşü desteklemek için [!INCLUDE[TLA2#tla_netframewk](../../../../includes/tla2sharptla-netframewk-md.md)] ' in kaynak yöneticisinden faydalanır. Birden çok dil uydu derlemesi aynı ana derlemeyle çalışır. Yüklenen kaynak derlemesi, geçerli iş parçacığının @no__t 0 ' a bağlıdır.
 
 <a name="localizable_ui"></a>
 ### <a name="localizable-user-interface"></a>Yerelleştirilebilir kullanıcı arabirimi
@@ -180,4 +180,4 @@ Aşağıdaki örnekte, onaltılı bir karakter başvurusu gösterilmektedir. Ona
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [WPF Genelleştirmesi ve Yerelleştirmesine Genel Bakış](wpf-globalization-and-localization-overview.md)
+- [WPF Genelleştirme ve yerelleştirme genel bakış](wpf-globalization-and-localization-overview.md)

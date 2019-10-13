@@ -2,14 +2,14 @@
 title: API 'Leri, null beklentilerini tanımlamak için özniteliklerle yükseltin
 description: Bu makalede, bağımsız değişkenlerin null durumunu ve API 'lerden dönüş değerlerini açıklayan açıklayıcı öznitelikler ekleme işlemleri ve teknikleri açıklanmaktadır
 ms.date: 07/31/2019
-ms.openlocfilehash: b6c6be213cb920459e5f1adbe3ee822ff6ddbf33
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: fedd701fb7a3bcdff96fc1abc5451cc59c01f34f
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834194"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72291315"
 ---
-# <a name="update-libraries-to-use-nullable-reference-types-and-communicate-nullable-rules-to-callers"></a>Kitaplıkları, null yapılabilir başvuru türlerini kullanacak şekilde güncelleştirin ve çağrı yapılabilir kuralları arayanlara iletişim kurar.
+# <a name="update-libraries-to-use-nullable-reference-types-and-communicate-nullable-rules-to-callers"></a>Kitaplıkları null yapılabilir başvuru türleri kullanacak şekilde güncelleştirme ve arayanlara null olabilecek kuralları iletişim kurma
 
 [Null yapılabilir başvuru türlerinin](nullable-references.md) eklenmesi, her değişken için `null` değerine izin verilip verilmeyeceğini veya beklenmediğini bildirebilmeniz anlamına gelir. Bu, kod yazarken harika bir deneyim sağlar. Null atanabilir olmayan bir değişken `null` olarak ayarlanmayabilir, uyarılar alırsınız. Nullable bir değişken, başvuru yapılmadan önce null olarak işaretli değilse uyarılar alırsınız. Kitaplıklarınızın güncelleştirilmesi zaman alabilir, ancak ödeme bu duruma göre yapılır. @No__t-1 değerine izin verildiğinde veya yasaklanmış *olduğunda* derleyiciye sağladığınız daha fazla bılgı, API 'nizin Kullanıcı tarafından daha iyi uyarıları alır. Tanıdık bir örnekle başlayalım. Kitaplığınızın bir kaynak dizesini almak için aşağıdaki API 'ye sahip olduğunu düşünün:
 
