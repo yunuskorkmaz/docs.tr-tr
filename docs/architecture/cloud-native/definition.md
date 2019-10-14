@@ -3,12 +3,12 @@ title: Cloud Native 'i tanımlama
 description: Bulutta yerel sistemler için yatak odası sağlayan temel sütunlar hakkında bilgi edinin
 author: robvet
 ms.date: 08/20/2019
-ms.openlocfilehash: 6a4a63f003c8ff0c7381d29f4e569838e45bd669
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 4236f0d6aca9d4348d4ead33f552f9a8a2c8c461
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71183471"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72291204"
 ---
 # <a name="defining-cloud-native"></a>Cloud Native 'i tanımlama
 
@@ -40,11 +40,11 @@ Bu teknikleri uygulayan bazı şirketler aşağıda verilmiştir. Elde ettikleri
 
 Gördüğünüz gibi, Netflix, Uber ve WeChat yüzlerce bağımsız mikro hizmetten oluşan sistemleri kullanıma sunar. Bu mimari stili, pazar koşullarına hızlı yanıt vermesini sağlar. Canlı, karmaşık bir uygulamanın küçük alanlarında anında güncelleştirebilir ve bu alanların gerektiği şekilde ölçeklendirilmesini sağlayabilirsiniz.
 
-Cloud Native 'in hızı ve çevikliği, bir dizi faktörden daha fazla bilgi gelir. Foremost, bulut altyapısıdır. Şekil 1-1 ' de gösterilen ek temel sütunlar, bulutta yerel sistemler için yatak odası da sağlar.
+Cloud Native 'in hızı ve çevikliği, bir dizi faktörden daha fazla bilgi gelir. Foremost, bulut altyapısıdır. Şekil 1-3 ' de gösterilen ek temel sütunlar, bulutta yerel sistemler için yatak odası da sağlar.
 
 ![Bulutta yerel temel sütunlar](./media/cloud-native-foundational-pillars.png)
 
-**Şekil 1-1**. Bulutta yerel temel sütunlar
+**Şekil 1-3**. Bulutta yerel temel sütunlar
 
 Her bir birimin önemini daha iyi anlamak için biraz zaman atalım.
 
@@ -54,7 +54,7 @@ Bulut Yerel sistemleri, bulut hizmeti modelinin tam avantajlarından yararlanır
 
 Dinamik, sanallaştırılmış bir bulut ortamında Misyonumuz için tasarlanan bu sistemler, [hizmet olarak platform (PaaS)](https://azure.microsoft.com/overview/what-is-paas/) işlem altyapısı ve yönetilen hizmetler için kapsamlı bir kullanım sağlar. Temel altyapıyı dakikalar içinde *atılabilir* tarafından sağlanır ve yeniden boyutlandırılıp, ölçeklendirildiğinde veya isteğe bağlı olarak, Otomasyon aracılığıyla kabul edilir.
 
-Pets 'in yaygın olarak [kabul edilen DevOps kavramını göz önünde bulundurun. Cattle](https://medium.com/@Joachim8675309/devops-concepts-pets-vs-cattle-2380b5aab313). Geleneksel bir veri merkezinde sunucular, anlamlı bir ad verilen bir fiziksel *makine olan ve*için kalan olarak değerlendirilir. Aynı makineye daha fazla kaynak ekleyerek ölçeklendirebilirsiniz (ölçeği büyütme). Sunucu hasta olursa, sistem durumuna geri dönebilirsiniz. Sunucu kullanılamaz hale gelirse herkes bildirimler.
+[Pets ve Cattle](https://medium.com/@Joachim8675309/devops-concepts-pets-vs-cattle-2380b5aab313)'ın yaygın olarak kabul edilen DevOps kavramını göz önünde bulundurun. Geleneksel bir veri merkezinde sunucular, anlamlı bir ad verilen bir fiziksel *makine olan ve*için kalan olarak değerlendirilir. Aynı makineye daha fazla kaynak ekleyerek ölçeklendirebilirsiniz (ölçeği büyütme). Sunucu hasta olursa, sistem durumuna geri dönebilirsiniz. Sunucu kullanılamaz hale gelirse herkes bildirimler.
 
 *Cattle* hizmet modeli farklı. Her örneği bir sanal makine veya kapsayıcı olarak temin edersiniz. Bunlar aynıdır ve hizmet-01, hizmet-02 vb. gibi bir sistem tanımlayıcısı atanır. Daha fazlasını oluşturarak ölçeklendirebilirsiniz (ölçeği genişletme). Biri kullanılamaz duruma geldiğinde hiçbir zaman bildirim.
 
@@ -76,9 +76,9 @@ Web tabanlı herhangi bir uygulama için geçerli olsa da birçok uygulama, bulu
 
 Aşağıdaki tablo, on Iki öğeli yöntemi vurgular:
 
-|    |  faktörü | Açıklama  |
+|    |  Çarpan | Açıklama  |
 | :-------- | :-------- | :-------- |
-| 1\. | Kod tabanı | Her mikro hizmet için kendi deposunda depolanan tek bir kod tabanı. Sürüm denetimiyle izlenen, birden çok ortama (QA, hazırlama, üretim) dağıtılabilir. |
+| 1 | Kod tabanı | Her mikro hizmet için kendi deposunda depolanan tek bir kod tabanı. Sürüm denetimiyle izlenen, birden çok ortama (QA, hazırlama, üretim) dağıtılabilir. |
 | 2 | Bağımlılıklar | Her mikro hizmet, sistemin tamamını etkilemeden değişiklikler yapmadan kendi bağımlılıklarını yalıtır ve paketler. |
 | 3 | Yapılandırmalar  | Yapılandırma bilgileri, mikro hizmetten ve externalized kod dışında bir yapılandırma yönetim aracı aracılığıyla taşınır. Aynı dağıtım, doğru yapılandırma uygulanmış ortamlar arasında yayabilir.  |
 | 4 | Hizmetleri yedekleme | Anormal kaynaklar (veri depoları, önbellekler, ileti aracıları) adreslenebilir bir URL aracılığıyla gösterilmelidir. Bunu yapmak, kaynağı uygulamadan ayırır ve bu sayede, bunu değiştirilebilir hale gelir.  |
@@ -88,7 +88,7 @@ Aşağıdaki tablo, on Iki öğeli yöntemi vurgular:
 | 8 | Eşzamanlılık | Hizmetler, en güçlü makinede bulunan tek bir büyük örneği ölçeklendirmenin aksine çok sayıda küçük özdeş işleme (kopya) arasında ölçeği genişleme. |
 | 9 | Disposability | Hizmet örnekleri, sistem doğru bir durumda kalacak şekilde ölçeklenebilirlik fırsatlarını ve düzgün kapanmaların artırılmasını sağlamak için atılabilir, favoring hızlı başlatmalar olmalıdır. Doğal olarak bu gereksinimi karşılayan Docker kapsayıcıları ve bir Orchestrator ile birlikte. |
 | 10 | Geliştirme ve üretim eşliği | Ortamları uygulama yaşam döngüsü genelinde mümkün olduğunca benzer şekilde tutun, maliyetli kısayollardan kaçının. Burada, kapsayıcıları benimseme, aynı yürütme ortamını yükselterek büyük ölçüde katkıda bulunabilir. |
-| 11 | Günlüğe Kaydetme | Mikro hizmetler tarafından oluşturulan günlükleri olay akışları olarak değerlendirin. Bunları bir Olay Toplayıcısı ile işleyin ve verileri Azure Izleyici veya splunk gibi veri madenciliği/günlük yönetim araçlarına ve sonuçta uzun süreli arşivleme ' ye yayın. |
+| 11 | Günlüğe kaydetme | Mikro hizmetler tarafından oluşturulan günlükleri olay akışları olarak değerlendirin. Bunları bir Olay Toplayıcısı ile işleyin ve verileri Azure Izleyici veya splunk gibi veri madenciliği/günlük yönetim araçlarına ve sonuçta uzun süreli arşivleme ' ye yayın. |
 | 12 | Yönetici süreçler | Yönetim/Yönetim görevlerini tek bir işlem olarak çalıştırın. Görevler, bir rapor için veri temizleme ve çekme analizlerini içerebilir. Bu görevleri yürüten araçlar, üretim ortamından, ancak uygulamadan ayrı olarak çağrılmalıdır. |
 
 Kitapta, [on Iki öğeli uygulamanın ötesinde](https://content.pivotal.io/blog/beyond-the-twelve-factor-app), ilk 12 faktörün (2011 ' de yazılmıştır) her biri Için Kevin Hoffman ayrıntılarına bakın. Ayrıca, kitap, günümüzün modern bulut uygulaması tasarımını yansıtan üç ek etken de sağlar.
@@ -113,7 +113,7 @@ Arka uç Çekirdek Hizmetleri birbirleriyle nasıl iletişim kuracaktır? Bağla
 
 İletişim, ayrıntılı Bölüm 4, *bulutta yerel Iletişim desenlerinde*ele alınmıştır.
 
-*Resiliency*
+*Dayanıklılık*
 
 Mikro hizmetler mimarisi, sisteminizi işlemden işlemden ağ iletişimine taşıtan. Dağıtılmış bir ortamda, B hizmeti A hizmetinden bir çağrıya yanıt vermediğinde ne olur? Service C geçici olarak kullanılamaz duruma geldiğinde ve BT yığınını çağıran ve sistem performansını azaldıkça ne olur?
 
@@ -131,7 +131,7 @@ Hizmetinize kimin eriştiğini ve sahip oldukları izinleri nasıl tanımlayacak
 
 Kimlik, ayrıntı Bölüm 8, *kimlik*kapsamında ele alınmıştır.
 
-## <a name="microservices"></a>Mikro hizmetler
+## <a name="microservices"></a>Mikro Hizmetler
 Modern uygulamalar oluşturmak için popüler bir mimari stili olan bulut Yerel sistemleri, mikro hizmetler 'i ördir.
 
 Paylaşılan bir yapı aracılığıyla etkileşen, bir dağıtılmış küçük ve bağımsız hizmetler olarak oluşturulan mikro hizmetler aşağıdaki özellikleri paylaşır:
@@ -146,15 +146,15 @@ Paylaşılan bir yapı aracılığıyla etkileşen, bir dağıtılmış küçük
 
 - Bir uygulama oluşturmak için bir araya alırlar.
 
-Şekil 1-2, mikro hizmetler yaklaşımına sahip tek parçalı bir uygulama yaklaşımını karşıttır. Tek bir işlemde yürütülen bir katmanlı mimariden tek tek nasıl oluştuğunu aklınızda yapın. Genellikle ilişkisel bir veritabanını kullanır. Ancak mikro hizmet yaklaşımı, işlevleri Logic ve verileri içeren bağımsız hizmetlere ayırır. Her mikro hizmet kendi veri deposunu barındırır.
+Şekil 1-4, mikro hizmetler yaklaşımına sahip tek parçalı bir uygulama yaklaşımını karşıttır. Tek bir işlemde yürütülen bir katmanlı mimariden tek tek nasıl oluştuğunu aklınızda yapın. Genellikle ilişkisel bir veritabanını kullanır. Ancak mikro hizmet yaklaşımı, işlevleri Logic ve verileri içeren bağımsız hizmetlere ayırır. Her mikro hizmet kendi veri deposunu barındırır.
 
 ![Tek parçalı dağıtım ve mikro hizmetler karşılaştırması](./media/monolithic-vs-microservices.png)
 
-**Şekil 1-2.** Tek parçalı dağıtım ve mikro hizmetler karşılaştırması
+**Şekil 1-4.** Tek parçalı dağıtım ve mikro hizmetler karşılaştırması
 
 Mikro hizmetlerin "bir kod temeli, bir uygulama" ilkesini, daha önce bölümünde açıklanan [on Iki öğeli uygulamadan](https://12factor.net/)nasıl yükseltileceğini aklınızda edin.
 
-> *Faktör \#1, "her bir mikro hizmet için kendi deposunda depolanan tek bir kod tabanı belirler. Sürüm denetimi ile izlenen, birden çok ortama dağıtabilir "*
+> *Faktör \#1 "her bir mikro hizmet için kendi deposunda depolanan tek bir kod tabanı belirler. Sürüm denetimi ile izlenen, birden çok ortama dağıtabilir "*
 
 ### <a name="why-microservices"></a>Mikro hizmetlerdeki neden?
 
@@ -166,7 +166,7 @@ Bu bölümde daha önce, mikro hizmetler ile tek bir şekilde oluşturulmuş bir
 
 - Her mikro hizmet bağımsız olarak ölçeklendirilebilen. Tüm uygulamanın tek bir birim olarak ölçeklendirilmesi yerine, yalnızca daha fazla işlem gücü veya ağ bant genişliği gerektiren hizmetleri ölçeklendirebilirsiniz. Ölçeklendirmeye yönelik bu ayrıntılı yaklaşım sisteminizin daha fazla denetimini sağlar ve sisteminizin bölümlerini ölçeklendirirken, her şeyi değil, genel maliyetleri azaltmaya yardımcı olur.
 
-Mikro hizmetleri anlamak için harika bir başvuru kılavuzu .net [mikro Hizmetleri ' dir: Kapsayıcılı .NET uygulamaları](https://docs.microsoft.com/dotnet/standard/microservices-architecture/)için mimari. Book derin, mikro hizmetler tasarımı ve mimarisine sahiptir. Microsoft 'tan ücretsiz bir indirme olarak sunulan [tam yığın mikro hizmet başvuru mimarisi](https://github.com/dotnet-architecture/eShopOnContainers) için bir yardımcı olur.
+Mikro hizmetleri anlamak için harika bir başvuru kılavuzu [.net mikro hizmetleri: Kapsayıcılı .NET uygulamaları Için mimari](https://docs.microsoft.com/dotnet/standard/microservices-architecture/). Book derin, mikro hizmetler tasarımı ve mimarisine sahiptir. Microsoft 'tan ücretsiz bir indirme olarak sunulan [tam yığın mikro hizmet başvuru mimarisi](https://github.com/dotnet-architecture/eShopOnContainers) için bir yardımcı olur.
 
 ### <a name="developing-microservices"></a>Mikro hizmetler geliştirme
 
@@ -186,17 +186,17 @@ Mikro hizmeti kapsayıcı basit ve basittir. Kod, bağımlılıkları ve çalı�
 
 Gerektiğinde, görüntüyü çalışan bir kapsayıcı örneğine dönüştürürler. Örnek, [kapsayıcı çalışma zamanı](https://kubernetes.io/docs/setup/production-environment/container-runtimes/) altyapısı yüklü olan herhangi bir bilgisayarda çalışır. Kapsayıcı hizmeti için gereken birçok örneğe sahip olabilirsiniz.
 
-Şekil 1-3, her biri kendi kapsayıcısında tek bir konakta çalışan üç farklı mikro hizmeti gösterir.
+Şekil 1-5, her biri kendi kapsayıcısında tek bir konakta çalışan üç farklı mikro hizmeti gösterir.
 
 ![Kapsayıcı ana bilgisayarında çalışan birden çok kapsayıcı](./media/hosting-mulitple-containers.png)  
 
-**Şekil 1-3**. Kapsayıcı ana bilgisayarında çalışan birden çok kapsayıcı
+**Şekil 1-5**. Kapsayıcı ana bilgisayarında çalışan birden çok kapsayıcı
 
 Her kapsayıcının kendi bağımlılık ve çalışma zamanı kümesini nasıl koruduğu ve bu farklılık fark edebilirsiniz. Burada, ürün mikro hizmetinin aynı konakta çalışan farklı sürümlerini görüyoruz. Her kapsayıcı, temel ana bilgisayar işletim sisteminin, belleğin ve işlemcinin bir dilimini paylaşır, ancak bir diğerinden yalıtılır. 
 
 Kapsayıcı modelinin, [on Iki öğeli uygulamadan](https://12factor.net/)"bağımlılıklar" ilkesini ne kadar iyi kapsayıyacağını göz önünde ayırın.
 
-> *2 \#. faktör, "her mikro hizmet kendi bağımlılıklarını yalıtır ve paketler, tüm sistemi etkilemeden değişiklikleri benimsemesini belirtir."*
+> *Faktör \#2 "her mikro hizmet, tüm sistemi etkilemeden değişiklikleri benimsemesini ve paketlerin nasıl olduğunu belirtir."*
 
 Kapsayıcılar hem Linux hem de Windows iş yüklerini destekler. Azure bulutu her ikisi de birlikte yer açar. Bu, Azure 'da en popüler işletim sistemi haline gelen Windows Server değil, bu Linux.
 
@@ -214,22 +214,22 @@ Temel işletim sistemi ve konak kaynaklarını paylaşarak, kapsayıcıların ta
 
 Docker görüntüleri oluşturma ve kapsayıcıları çalıştırma gibi araçlar da bunları yönetmek için araçlara ihtiyacınız vardır. Kapsayıcı yönetimi, kapsayıcı Orchestrator adlı özel bir yazılım programıyla yapılır. Ölçek üzerinde çalışırken, kapsayıcı düzenlemesi gereklidir. 
 
-Şekil 1-4 kapsayıcı düzenleyicilerinin sağladığı yönetim görevlerini gösterir.
+Şekil 1-6 kapsayıcı düzenleyicilerinin sağladığı yönetim görevlerini gösterir.
 
 ![Kapsayıcı yöneticileri](./media/what-container-orchestrators-do.png)
 
-**Şekil 1-4**. Kapsayıcı yöneticileri
+**Şekil 1-6**. Kapsayıcı yöneticileri
 
 Aşağıdaki tabloda, yaygın düzenleme görevleri açıklanmaktadır.
 
 |  Görevler | Açıklama  |
 | :-------- | :-------- |
-| Planlama | Kapsayıcı örneklerini otomatik olarak sağlayın.|
+| Zamanlama | Kapsayıcı örneklerini otomatik olarak sağlayın.|
 | Benzeşim/benzeşim önleme | Kullanılabilirlik ve performansa yardımcı olmak için, birbirleriyle yakın veya uzak kapsayıcıları sağlayın. |
-| Sistem durumu izleme | Sorunları otomatik olarak algıla ve düzelt.|
-| Yükünü | Başarısız örneği sağlıklı makinelere otomatik olarak yeniden sağlayın.|
+| Sistem durumunu izleme | Sorunları otomatik olarak algıla ve düzelt.|
+| Yük Devretme | Başarısız örneği sağlıklı makinelere otomatik olarak yeniden sağlayın.|
 | Ölçeklendirme | Talebi karşılamak için kapsayıcı örneğini otomatik olarak ekleyin veya kaldırın.|
-| Ağ Oluşturma | Kapsayıcı iletişimi için bir ağ kaplamasını yönetin.|
+| Networking (Ağ İletişimi) | Kapsayıcı iletişimi için bir ağ kaplamasını yönetin.|
 | Hizmet bulma | Kapsayıcıları, birbirini bulacak şekilde etkinleştirin.|
 | Çalışırken yükseltmeler | Sıfır kesinti dağıtımıyla artımlı yükseltmeleri koordine edin. Sorunlu değişiklikleri otomatik olarak geri alma.|
 
@@ -237,7 +237,7 @@ Düzenleyen 'in elden atılan ve eşzamanlılık ilkelerini, daha önce bölüm�
 
 > *Faktör \#9 "hizmet örneklerinin atılabilir olması gerektiğini belirtir, ölçeklenebilirlik fırsatlarını artırmak için hızlı başlatmalar favoring ve sistemi doğru bir durumda bırakmak için düzgün kapatmalar. Doğal olarak bu gereksinimi karşılayan Docker kapsayıcıları ve bir Orchestrator ile birlikte. "*
 
-> *Faktör \#8, "hizmetlerin çok sayıda küçük özdeş işleme (kopya) arasında ölçeğini, en güçlü makinede bulunan tek bir büyük örneği ölçeklendirmenin aksine belirtir."*
+> *Faktör \#8 "hizmetlerin çok sayıda küçük özdeş işleme (kopya) arasında ölçeğini, en güçlü makinede bulunan tek bir büyük örneği ölçeklendirmenin aksine belirtir."*
 
 Birçok kapsayıcı grubu mevcut olsa da, [Kubernetes](https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/) , bulutta yerel dünya için de standart hale geldi. Kapsayıcılı iş yüklerini yönetmek için taşınabilir, genişletilebilir ve açık kaynaklı bir platformdur. 
 
@@ -249,15 +249,15 @@ Azure Kubernetes Hizmetleri ayrıntılı Bölüm 2 ' de ele alınmıştır, *bul
 
 Bulutta yerel sistemler, veri depoları, ileti aracıları, izleme ve kimlik hizmetleri gibi birçok farklı yardımcı kaynağa bağlıdır. Bu hizmetler, [yedekleme hizmetleri](https://12factor.net/backing-services)olarak bilinir.
 
- Şekil 1-5, bulutta yerel sistemlerin kullandığı birçok ortak yedekleme hizmetini gösterir.
+ Şekil 1-7, bulutta yerel sistemlerin kullandığı birçok ortak yedekleme hizmetini gösterir.
 
 ![Ortak destek hizmetleri](./media/common-backing-services.png)
 
-**Şekil 1-5**. Ortak destek hizmetleri
+**Şekil 1-7**. Ortak destek hizmetleri
 
 Yedekleme Hizmetleri, "Statelesstik" ilkesini, bu bölümde daha önce açıklanan [on Iki öğeli uygulamadan](https://12factor.net/)yükseltir.
 
->*Faktör\#6* , "her mikro hizmetin kendi sürecinde yürütülmesi gerektiğini, çalışan diğer hizmetlerden yalıtılmış olduğunu belirtir. Externalize, dağıtılmış önbellek veya veri deposu gibi bir yedekleme hizmetine gerekli durumu. "
+>*Faktör \#6* , "her mikro hizmetin kendi sürecinde yürütülmesi gerektiğini, çalışan diğer hizmetlerden yalıtılmış olduğunu belirtir. Externalize, dağıtılmış önbellek veya veri deposu gibi bir yedekleme hizmetine gerekli durumu. "
 
 Kendi destek hizmetlerinizi barındırabilmeniz, ancak bu kaynakları lisanslamayı, sağlamaktan ve yönetmekten siz sorumlusunuz.
 
@@ -267,9 +267,9 @@ Bulutta yerel sistemler, yönetilen destek hizmetlerini bulut satıcılarından 
 
 Bir yedekleme hizmetini, bir dış yapılandırmada depolanan bilgiler (URL ve kimlik bilgileri) ile bir mikro hizmete dinamik olarak bağlı bir *kaynak*olarak değerlendirmek en iyi uygulamadır. Bu kılavuz, bölümünde daha önce açıklanan [on Iki öğeli uygulamada](https://12factor.net/)yer alınmıştır.
 
->*Faktör\#4* ' te, bir adreslenebilir URL aracılığıyla "yedekleme hizmetleri" gösterilmelidir. Bunu yapmak, kaynağı uygulamadan ayırır ve bu sayede, bunu değiştirilebilir olarak etkinleştirir. "
+>*Faktör \#4* , BIR adreslenebilir URL aracılığıyla "yedekleme hizmetleri" gösterilmelidir. Bunu yapmak, kaynağı uygulamadan ayırır ve bu sayede, bunu değiştirilebilir olarak etkinleştirir. "
 
->*Faktör\#3* "yapılandırma bilgilerinin, kod dışında bir yapılandırma yönetim aracı aracılığıyla mikro hizmetten ve externalized dışına taşındığını belirtir."
+>*Faktör \#3* "yapılandırma bilgilerinin, kod dışında bir yapılandırma yönetim aracı aracılığıyla mikro hizmetten ve externalized dışına taşındığını belirtir."
 
 Bu düzende, bir yedekleme hizmeti kod değişikliği yapılmadan iliştirilebilir ve ayrılabilir. Bir mikro hizmeti QA 'den hazırlama ortamına yükseltebilirsiniz. Mikro hizmet yapılandırmasını, hazırlama ' daki yedekleme hizmetlerini işaret etmek ve bir ortam değişkeni aracılığıyla kapsayıcınıza eklemek için güncelleştirin.
 
@@ -277,7 +277,7 @@ Bulut satıcıları, kendi özel destek hizmetleriyle iletişim kurması için A
 
 Yedekleme Hizmetleri, ayrıntılı Bölüm 5, *bulutta yerel veri desenleri*ve Bölüm 4, *bulutta yerel iletişim desenlerinde*ele alınmıştır.
 
-## <a name="automation"></a>Otomatikleştirme
+## <a name="automation"></a>Otomasyon
 
 Gördüğünüz gibi, bulut Yerel sistemleri, hızlı ve çeviklik sağlamak için mikro hizmetleri, kapsayıcıları ve modern sistem tasarımını imine dönüştürür. Ancak bu yalnızca hikayenin bir parçasıdır. Bu sistemlerin üzerinde çalıştığı bulut ortamlarını nasıl sağlayacaksınız? Uygulama özelliklerini ve güncelleştirmelerini hızlı bir şekilde nasıl dağıtırsınız? Tam resmi nasıl yuvarlıyorsunuz?
 
@@ -297,15 +297,15 @@ Makalesinde [kod olarak altyapı nedir](https://docs.microsoft.com/azure/devops/
 
 Daha önce bahsedilen [on Iki öğeli uygulama](https://12factor.net/), tamamlanan kodu çalışan bir uygulamaya dönüştürürken ayrı adımlar çağırır.
 
-> *Faktör\#5* , "her sürümün derleme, yayınlama ve çalıştırma aşamaları genelinde katı ayrımı zorunlu kılacak olduğunu belirtir. Her birinin benzersiz bir KIMLIKLE etiketlenmesi ve geri alma özelliğini desteklemesi gerekir. "
+> *Faktör \#5* , "her sürümün derleme, yayın ve çalıştırma aşamaları genelinde katı ayrımı zorunlu kılacak olduğunu belirtir. Her birinin benzersiz bir KIMLIKLE etiketlenmesi ve geri alma özelliğini desteklemesi gerekir. "
 
 Modern CI/CD sistemleri bu ilkeyi karşılamanın sağlanmasına yardımcı olur. Bunlar ayrı dağıtım adımları sağlar ve kullanıcılar için hazır olan tutarlı ve kalite kodu sağlanmasına yardımcı olur. 
 
-Şekil 1,6, dağıtım işlemi genelinde ayrımı gösterir.
+Şekil 1-8, dağıtım işlemi genelinde ayrımı gösterir.
 
 ![CI/CD ardışık düzeninde dağıtım adımları](./media/build-release-run-pipeline.png)
 
-**Şekil 1-6**. CI/CD ardışık düzeninde dağıtım adımları
+**Şekil 1-8**. CI/CD ardışık düzeninde dağıtım adımları
 
 Önceki şekilde, görevlerin ayrılmasındaki özel bir dikkat ödeyin. 
 
@@ -321,11 +321,11 @@ Bu uygulamalar uygulandığında kuruluşlar yazılımın nasıl sevk ettikleri 
 
 ### <a name="azure-pipelines"></a>Azure Pipelines
 
-Azure bulutu, Şekil 1-7 ' de gösterilen [Azure DevOps](https://azure.microsoft.com/services/devops/) teklifi 'nin bir parçası olan [Azure Pipelines](https://azure.microsoft.com/services/devops/pipelines/)adlı yenı bir CI/CD hizmeti içerir.
+Azure bulutu, Şekil 1-9 ' de gösterilen [Azure DevOps](https://azure.microsoft.com/services/devops/) teklifi 'nin bir parçası olan [Azure Pipelines](https://azure.microsoft.com/services/devops/pipelines/)adlı yenı bir CI/CD hizmeti içerir.
 
 ![DevOps 'da Azure Pipelines](./media/devops-components.png)
 
-**Şekil 1-7**. Azure DevOps teklifleri
+**Şekil 1-9**. Azure DevOps teklifleri
 
 Azure Pipelines, sürekli tümleştirme (CI) ve sürekli teslimi (CD) birleştiren bir bulut hizmetidir. Kodunuzu otomatik olarak test edebilir, oluşturabilir ve herhangi bir hedefe gönderebilirsiniz.
 

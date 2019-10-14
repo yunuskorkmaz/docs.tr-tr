@@ -1,15 +1,15 @@
 ---
-title: ASP.NET Core hizmetlerini ve web uygulamalarını test etme
+title: ASP.NET Core Hizmetleri ve Web uygulamalarını test etme
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | Kapsayıcılarda ASP.NET Core Hizmetleri ve Web uygulamalarını test etmek için bir mimari bulun.
 ms.date: 10/02/2018
-ms.openlocfilehash: 0a741fca84f456d635e1790d6be1c72e70345a24
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 042f7a6171a88025d3d4a8e37c4deceb416e5711
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70296542"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72291275"
 ---
-# <a name="testing-aspnet-core-services-and-web-apps"></a>ASP.NET Core hizmetlerini ve web uygulamalarını test etme
+# <a name="testing-aspnet-core-services-and-web-apps"></a>ASP.NET Core Hizmetleri ve Web uygulamalarını test etme
 
 Denetleyiciler, tüm ASP.NET Core API Service ve ASP.NET MVC web uygulamalarının merkezi bir parçasıdır. Bu nedenle, uygulamanız için amaçlanan gibi davrandıklarından emin olmanız gerekir. Otomatikleştirilmiş testler size bu güvenilirliği sağlayabilir ve üretime ulaşmadan önce hataları tespit edebilir.
 
@@ -31,7 +31,7 @@ Denetleyici eylemlerinizi birim testi yaparken, yalnızca davranışlarını oda
 
 Birim testleri xUnit.net, MSTest, moq veya NUnit gibi test çerçeveleri temelinde uygulanır. EShopOnContainers örnek uygulaması için xUnit kullandık.
 
-Bir Web API denetleyicisi için bir birim testi yazdığınızda, test, mümkün olduğunca hızlı çalışacak şekilde, C\#içindeki New anahtar sözcüğünü kullanarak doğrudan denetleyici sınıfını örnekleyebilirsiniz. Aşağıdaki örnek, [xUnit](https://xunit.github.io/) 'i test çerçevesi olarak kullanırken nasıl yapılacağını gösterir.
+Bir Web API denetleyicisi için bir birim testi yazdığınızda, test, mümkün olduğunca hızlı çalışacak şekilde C @ no__t-0 içindeki New anahtar sözcüğünü kullanarak doğrudan denetleyici sınıfını örnekleyebilirsiniz. Aşağıdaki örnek, [xUnit](https://xunit.github.io/) 'i test çerçevesi olarak kullanırken nasıl yapılacağını gösterir.
 
 ```csharp
 [Fact]
@@ -107,7 +107,7 @@ public class PrimeWebDefaultRequestShould
 - **Steve Smith. Tümleştirme testi** (ASP.NET Core) \
     [https://docs.microsoft.com/aspnet/core/test/integration-tests](/aspnet/core/test/integration-tests)
 
-- **DotNet testini kullanarak .NET Core 'da birim testi** \
+- **DotNet test  \ kullanarak .NET Core 'Da birim testi**
     [https://docs.microsoft.com/dotnet/core/testing/unit-testing-with-dotnet-test](../../../core/testing/unit-testing-with-dotnet-test.md)
 
 - **xUnit.net**. Resmi site. \
@@ -144,7 +144,7 @@ Başvuru uygulaması (eShopOnContainers) testleri yakın zamanda yeniden yapıla
 
 Mikro hizmet başına birim ve tümleştirme testi, her mikro hizmette bir test klasöründe bulunur ve uygulama, Şekil 6-25 ' de gösterildiği gibi çözüm klasöründeki test klasörü altında bir yük testi içerir.
 
-![EShopOnContainers içindeki testlerin yapısı: Her hizmetin birim ve işlev testlerini içeren bir "test" klasörü vardır. Çözüm "test" klasörünün altında, uygulama genelinde işlevsel testler ve yük testi vardır.](./media/image42.png)
+![EShopOnContainers içindeki testlerin yapısı: her hizmetin birim ve işlev testlerini içeren bir "test" klasörü vardır. Çözüm "test" klasörünün altında, uygulama genelinde işlevsel testler ve yük testi vardır.](./media/image42.png)
 
 **Şekil 6-25**. EShopOnContainers 'daki test klasörü yapısı
 
@@ -192,7 +192,7 @@ services:
 
 Bu nedenle, işlev/tümleştirme testlerini çalıştırmak için önce bu komutu çözüm test klasöründen çalıştırmanız gerekir:
 
-``` console
+```console
 docker-compose -f docker-compose-test.yml -f docker-compose-test.override.yml up
 ```
 
@@ -207,5 +207,5 @@ Gördüğünüz gibi, bu Docker-Compose dosyaları yalnızca Redsıs, Kbbitmq, S
     <https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/test/ServicesTests/LoadTest/>
 
 > [!div class="step-by-step"]
-> [Önceki](subscribe-events.md)İleri
-> [](background-tasks-with-ihostedservice.md)
+> [Önceki](subscribe-events.md)
+> [İleri](background-tasks-with-ihostedservice.md)

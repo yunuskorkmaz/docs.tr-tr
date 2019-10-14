@@ -580,8 +580,8 @@
           href: csharp/tutorials/exploration/interpolated-strings-local.md
         - name: Dize ilişkilendirmeye yönelik gelişmiş senaryolar
           href: csharp/tutorials/string-interpolation.md
-        - name: Arabirimleri varsayılan arabirim üyeleri ile güvenli bir şekilde güncelleştirme
-          href: csharp/tutorials/default-interface-members-versions.md
+        - name: Arabirimleri varsayılan arabirim metotları ile güvenli bir şekilde güncelleştirme
+          href: csharp/tutorials/default-interface-methods-versions.md
         - name: Dizin ve aralıkları keşfetme
           href: csharp/tutorials/ranges-indexes.md
         - name: Boş değer atanabilir başvuru türleri ile çalışma

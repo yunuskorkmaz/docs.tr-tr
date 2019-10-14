@@ -3,12 +3,12 @@ title: REST ve gRPC
 description: Bkz. The The The The The The The The the Cloud-Native Applications ve HTTP REST 'den farklı
 author: robvet
 ms.date: 09/08/2019
-ms.openlocfilehash: d888069168aee1fcfb13354f4b6f9ae2c8d1f233
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: fed8e7d86a8ddc268f1264728d9631a561c1b310
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71214540"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72291324"
 ---
 # <a name="rest-and-grpc"></a>REST ve gRPC
 
@@ -30,7 +30,7 @@ gRPC, hafif ve yüksek performanslı bir modern RPC çerçevesidir. Aktarım Pro
 
 gRPC, Java, C#, golang ve NodeJS dahil olmak üzere en popüler platformlar arasında desteklenir. 
 
-## <a name="protocol-buffers"></a>Protokol Arabellekleri
+## <a name="protocol-buffers"></a>Protokol arabellekleri
 
 gRPC, veri göndermek ve almak için [protokol arabellekleri](https://developers.google.com/protocol-buffers/docs/overview) veya prototip iletiler adlı başka bir açık kaynaklı teknolojinin ayraçlarını alır. [WCF veri sözleşmesine](https://docs.microsoft.com/dotnet/framework/wcf/feature-details/using-data-contracts)benzer şekilde, prototipleme sistemler için yapılandırılmış verileri okuma ve yazma olarak serileştirir. XML veya JSON gibi insan tarafından okunabilen biçimlerin yükünü azaltır.
 
@@ -38,7 +38,7 @@ Birçok nesne serileştirme tekniği, çalışma zamanında veri nesnelerinin ya
 
 ## <a name="grpc-support-in-net"></a>.NET ' te gRPC desteği
 
-Microsoft .NET Core Framework 3,0, gRPC için araç ve yerel destek içerir. Şekil 4-20, GRPC iskelet projesini bir gRPC hizmeti için dolandırıcılara bağlayan Visual Studio 2019 şablonunu gösterir. .NET Core 'un Windows, Linux, macOS platformlarını nasıl desteklediğine göz önünde.
+Microsoft .NET Core Framework 3,0, gRPC için araç ve yerel destek içerir. Şekil 4-20, GRPC iskelet projesini bir gRPC hizmeti için dolandırıcılara bağlayan Visual Studio 2019 şablonunu gösterir. .NET Core 'un Windows, Linux ve macOS platformlarını nasıl desteklediğine göz önünde.
 
 ![Visual Studio 2019 ' de gRPC desteği](./media/visual-studio-2019-grpc-template.png)
 

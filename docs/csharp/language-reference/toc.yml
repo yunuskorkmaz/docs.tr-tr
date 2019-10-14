@@ -200,7 +200,7 @@
       items:
         - name: new kısıtlaması
           href: keywords/new-constraint.md
-        - name: where
+        - name: Burada
           href: keywords/where-generic-type-constraint.md
     - name: Anahtar Sözcüklere Erişim
       items:
@@ -315,6 +315,9 @@
     - name: '?: işleci'
       href: operators/conditional-operator.md
       displayName: 'conditional, ternary, ref'
+    - name: '! (null-forgiving) işleci'
+      href: operators/null-forgiving.md
+      displayName: 'nullable reference, null-forgiveness'
     - name: '?? and ??= işleçleri'
       href: operators/null-coalescing-operator.md
       displayName: 'null-coalescing, assignment'
@@ -621,7 +624,7 @@
       href: ../../../_csharplang/proposals/csharp-8.0/nullable-reference-types-specification.md
     - name: Özyinelemeli desen eşleştirme
       href: ../../../_csharplang/proposals/csharp-8.0/patterns.md
-    - name: Varsayılan arabirim üyeleri
+    - name: Varsayılan arabirim metotları
       href: ../../../_csharplang/proposals/csharp-8.0/default-interface-methods.md
     - name: Zaman uyumsuz akışlar
       href: ../../../_csharplang/proposals/csharp-8.0/async-streams.md

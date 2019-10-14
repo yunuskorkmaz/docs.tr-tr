@@ -3,12 +3,12 @@ title: Cloud Native için aday uygulamalar
 description: Bulut Yerel yaklaşımdan hangi tür uygulamaların avantajına yarar olduğunu öğrenin
 author: robvet
 ms.date: 08/20/2019
-ms.openlocfilehash: 6da531397e6103e5c59accf321bc5ae82153dded
-ms.sourcegitcommit: 992f80328b51b165051c42ff5330788627abe973
+ms.openlocfilehash: e8d520e0a1ad5ab8854d0628daa56a390de523cd
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72275821"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72291225"
 ---
 # <a name="candidate-apps-for-cloud-native"></a>Cloud Native için aday uygulamalar
 
@@ -34,9 +34,11 @@ Ardından eski sistemler vardır. Yeni uygulamalar oluşturmak istiyoruz, ancak 
 
 ### <a name="modernizing-legacy-apps"></a>Eski uygulamaları modernleştiriliyor
 
-[Azure bulut ve Windows kapsayıcıları ile](https://dotnet.microsoft.com/download/thank-you/modernizing-existing-net-apps-ebook) ücretsiz Microsoft e-book modernleştirin mevcut .NET uygulamaları, şirket içi iş yüklerini buluta geçirmeye yönelik yönergeler sağlar. Şekil 1-8, eski uygulamaların modernleştirilmesi için tek, tek boyutlu uygun bir strateji olmadığını gösterir.
+[Azure bulut ve Windows kapsayıcıları ile](https://dotnet.microsoft.com/download/thank-you/modernizing-existing-net-apps-ebook) ücretsiz Microsoft e-book modernleştirin mevcut .NET uygulamaları, şirket içi iş yüklerini buluta geçirmeye yönelik yönergeler sağlar. Şekil 1-10, eski uygulamaların modernleştirilmesi için tek, tek boyutlu uygun bir strateji olmadığını gösterir.
 
-Eski iş yüklerini geçirmeye yönelik ![Stratejileri @ no__t-1**şekil 1-8**. Eski iş yüklerini geçirme stratejileri
+![Eski iş yüklerini geçirme stratejileri](./media/strategies-for-migrating-legacy-workloads.png)
+
+**Şekil 1-10**. Eski iş yüklerini geçirme stratejileri
 
 Kritik olmayan tek parçalı uygulamalar hızlı bir kaldırma ve kaydırma ([bulut altyapıya](https://docs.microsoft.com/dotnet/standard/modernize-with-azure-and-containers/lift-and-shift-existing-apps-azure-iaas)yönelik) geçiş işleminden büyük ölçüde avantaj sağlıyor. Burada, şirket içi iş yükü, hiçbir değişiklik yapılmadan bulut tabanlı bir VM 'de yeniden barındırılır. Bu yaklaşım [IaaS (hizmet olarak altyapı) modeli](https://azure.microsoft.com/overview/what-is-iaas/)kullanır. Azure, böyle bir taşımanın daha kolay olması için ([Azure geçişi](https://aka.ms/azuremigrate), [Azure Site Recovery](https://azure.microsoft.com/services/site-recovery/)ve [Azure veritabanı geçiş hizmeti](https://azure.microsoft.com/campaigns/database-migration/)) gibi çeşitli araçlar içerir. Bu strateji bazı maliyet tasarrufu sağlayabilir, ancak bu gibi uygulamalar genellikle kilit açma ve bulut bilgi işlemin avantajlarından faydalanmayı sanallaştırmıştır. 
 
@@ -68,7 +70,7 @@ Bu bölümde, bulutta yerel bilgi işlem tanıtıldık. Bulut Yerel uygulamasın
 
 Bu konuda daha ayrıntılı bilgi edinmek için artık Cloud Native 'e çok daha ayrıntılı bir bakış sunuyoruz.
 
-### <a name="references"></a>Referanslar
+### <a name="references"></a>Başvurular
 
 - [Bulut Yerel Bilgi Işlem altyapısı](https://www.cncf.io/)
 
