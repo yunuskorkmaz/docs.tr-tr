@@ -413,13 +413,13 @@ Console.WriteLine($"The last word is {words[^1]}");
 // writes "dog"
 ```
 
-Aşağıdaki kod, "hızlı", "kahverengi" ve "Fox" sözcüklerinin bulunduğu bir alt Aralık oluşturur. @No__t-0 ile `words[3]` arasında içerir. @No__t-0 öğesi Aralık içinde değil.
+Aşağıdaki kod, "quick", "brown" ve "Fox" sözcüklerinin bulunduğu bir alt Aralık oluşturur. @No__t-0 ile `words[3]` arasında içerir. @No__t-0 öğesi Aralık içinde değil.
 
 ```csharp
 var quickBrownFox = words[1..4];
 ```
 
-Aşağıdaki kod, "Lazy" ve "köpek" ile bir alt Aralık oluşturur. @No__t-0 ve `words[^1]` ' i içerir. @No__t-0 bitiş dizini dahil değil:
+Aşağıdaki kod, "Lazy" ve "dog" ile bir alt Aralık oluşturur. @No__t-0 ve `words[^1]` ' i içerir. @No__t-0 bitiş dizini dahil değil:
 
 ```csharp
 var lazyDog = words[^2..^0];
@@ -428,9 +428,9 @@ var lazyDog = words[^2..^0];
 Aşağıdaki örnekler, başlangıç, bitiş veya her ikisi için açık olarak biten aralıklar oluşturur:
 
 ```csharp
-var allWords = words[..]; // contains "The" through "dog".
-var firstPhrase = words[..4]; // contains "The" through "fox"
-var lastPhrase = words[6..]; // contains "the", "lazy" and "dog"
+var allWords = words[..]; // "The" ile başlayıp "dog" a kadar öğeleri içerir.
+var firstPhrase = words[..4]; // "The" ile başlayıp "fox" a kadar öğeleri içerir
+var lastPhrase = words[6..]; // "the", "lazy" ve "dog" öğelerini içerir
 ```
 
 Aralıkları, değişkenler olarak da bildirebilirsiniz:
