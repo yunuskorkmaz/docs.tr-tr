@@ -2,12 +2,12 @@
 title: Uygulama dayanıklılığı desenleri
 description: Azure için Cloud Native .NET uygulamaları tasarlama | Uygulama dayanıklılığı desenleri
 ms.date: 06/30/2019
-ms.openlocfilehash: 8455584fe1d5b02f6d9543c3bad32cca7369c158
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 67ae20f14a67f3a96d6c74cad727afe680ff3178
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71183723"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72315949"
 ---
 # <a name="application-resiliency-patterns"></a>Uygulama dayanıklılığı desenleri
 
@@ -27,7 +27,7 @@ Kendi dayanıklılık çatısını yazarken önemli ölçüde yatırım yapabili
 
 **Şekil 6-3**. Yeniden denenecek HTTP durum kodları
 
-Unuza 403-Yasak HTTP durum kodunu yeniden denesin mi? Hayır. Burada, sistem düzgün şekilde çalışır, ancak çağrıyı yapana istenen işlemi gerçekleştirme yetkisine sahip olmadıkları konusunda bilgilendirilir. Yalnızca hatalardan kaynaklanan işlemleri yeniden denemek için dikkatli olunmalıdır.
+Soru: 403-Yasak HTTP durum kodunu yeniden denesin mi? Hayır. Burada, sistem düzgün şekilde çalışır, ancak çağrıyı yapana istenen işlemi gerçekleştirme yetkisine sahip olmadıkları konusunda bilgilendirilir. Yalnızca hatalardan kaynaklanan işlemleri yeniden denemek için dikkatli olunmalıdır.
 
 Bölüm 1 ' de önerildiği gibi, bulutta yerel uygulamalar oluştururken Microsoft geliştiricilerinin .NET Core 'u hedeflemesi gerekir. Sürüm 2,1, URL tabanlı kaynaklarla etkileşim kurmak için HTTP Istemci örnekleri oluşturmak üzere [Httpclientfactory](https://www.stevejgordon.co.uk/introduction-to-httpclientfactory-aspnetcore) kitaplığı 'nı kullanıma sunmuştur. Özgün HTTPClient sınıfını yerine, Factory sınıfı birçok gelişmiş özelliği destekler, bunlardan biri de Polly dayanıklılık kitaplığıyla [sıkı bir şekilde tümleştirilmiştir](../microservices/implement-resilient-applications/implement-http-call-retries-exponential-backoff-polly.md) . Bununla birlikte, kısmi hataları ve bağlantı sorunlarını ele almak için uygulama başlangıç sınıfındaki dayanıklılık ilkelerini kolayca tanımlayabilirsiniz.
 
@@ -45,7 +45,7 @@ Dağıtılmış bir bulutta yerel ortamda, hizmet ve bulut kaynaklarına yapıla
 
 Önceki şekilde, bir istek işlemi için yeniden deneme biçimi uygulandı. Bir geri alma aralığı (bekleme süresi) ile başarısız olmadan önce, sonraki her denemede katlanarak çift yönlü olan iki saniyeden oluşan en fazla dört denemeye izin verecek şekilde yapılandırılmıştır.
 
-- İlk çağırma başarısız olur ve 500 HTTP durum kodunu döndürür. Uygulama iki saniye bekler ve çağrıyı yeniden oluşturur.
+- İlk çağırma başarısız olur ve 500 HTTP durum kodunu döndürür. Uygulama iki saniye bekler ve çağrıyı yeniden dener.
 - İkinci çağrı da başarısız olur ve 500 HTTP durum kodunu döndürür. Uygulama artık geri alma aralığını dört saniyeye ikiye katlanır ve çağrıyı yeniden dener.
 - Son olarak, üçüncü çağrı başarılı olur.
 - Bu senaryoda, yeniden deneme işlemi, çağrı başarısız olmadan önce geri alma süresini ikiye katlarken dört yeniden denemeye girişdi.

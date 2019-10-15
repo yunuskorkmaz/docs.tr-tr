@@ -2,12 +2,12 @@
 title: Karma bulut senaryolarına geçiş
 description: Azure bulut ve Windows kapsayıcıları ile mevcut .NET uygulamalarını modernleştirin | Karma bulut senaryolarına geçiş
 ms.date: 04/30/2018
-ms.openlocfilehash: 313608c41427b3833bbc873398595ceb37bd7c7d
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: 5f0819495080bc29ed1239b4a7ab8af31141881b
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373942"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72318456"
 ---
 # <a name="migrate-to-hybrid-cloud-scenarios"></a>Karma bulut senaryolarına geçiş
 
@@ -25,17 +25,17 @@ Azure Stack, kuruluşunuzun veri merkezinden Azure hizmetleri sunmanıza olanak 
 
 Şekil 4-13, Microsoft 'un sunduğu gerçek hibrit bulut platformunun bir genel görünümünü gösterir.
 
-![Azure Stack ve Azure ile Microsoft hibrit bulut platformu](./media/image13.jpg)
+![Azure Stack ve Azure ile Microsoft hibrit bulut platformu diyagramı.](./media/migrate-to-hybrid-cloud-scenarios/microsoft-hybrid-cloud-platform.png)
 
 **Şekil 4-13.** Azure Stack ve Azure ile Microsoft hibrit bulut platformu
 
 Azure Stack, gereksinimlerinizi karşılamak için iki dağıtım seçeneği sunulur:
 
-- Azure Stack tümleşik sistemleri
+- Azure Stack tümleşik sistemler
 
 - Azure Stack Geliştirme Seti
 
-### <a name="azure-stack-integrated-systems"></a>Azure Stack tümleşik sistemleri
+### <a name="azure-stack-integrated-systems"></a>Azure Stack tümleşik sistemler
 
 Azure Stack tümleşik sistemler, Microsoft ve donanım iş ortaklarının bir ortaklığı aracılığıyla sunulur. İş ortaklığı, yönetimin basitliği ile dengeli bulut adımlı yenilik sunan bir çözüm oluşturur. Azure Stack, donanım ve yazılım tümleştirilmiş bir sistem olarak sunulduğundan, doğru esneklik ve denetim elde edersiniz, ancak yine de buluttan yeniliği benimsemiş olursunuz. 4 ile 12 düğümden oluşan tümleşik sistemleri Azure Stack ve donanım ortağı ve Microsoft tarafından ortaklaşa desteklenir. Üretim iş yükleriniz için yeni senaryolar uygulamak üzere Azure Stack tümleşik sistemleri kullanın.
 
@@ -66,5 +66,5 @@ Microsoft Azure Stack Development Kit, Azure Stack hakkında değerlendirmek ve 
     <https://azure.microsoft.com/pricing/hybrid-benefit/>
 
 >[!div class="step-by-step"]
->[Önceki](modernize-your-apps-lifecycle-with-ci-cd-pipelines-and-devops-tools-in-the-cloud.md)İleri
->[](../walkthroughs-technical-get-started-overview.md)
+>[Önceki](modernize-your-apps-lifecycle-with-ci-cd-pipelines-and-devops-tools-in-the-cloud.md)
+>[İleri](../walkthroughs-technical-get-started-overview.md)

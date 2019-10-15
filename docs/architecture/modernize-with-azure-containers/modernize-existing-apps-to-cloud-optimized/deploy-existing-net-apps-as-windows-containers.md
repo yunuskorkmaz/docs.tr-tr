@@ -2,12 +2,12 @@
 title: Varolan .NET uygulamalarını Windows kapsayıcıları olarak dağıtma
 description: Azure bulut ve Windows kapsayıcıları ile mevcut .NET uygulamalarını modernleştirin | Mevcut .NET uygulamalarını Windows kapsayıcıları olarak dağıtma
 ms.date: 04/29/2018
-ms.openlocfilehash: d48acbb2e1c4858bf3146318f70dd7b8a7b62918
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 997b32e51272be2126bd824de1f8f026d77ca203
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926482"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72318632"
 ---
 # <a name="deploy-existing-net-apps-as-windows-containers"></a>Varolan .NET uygulamalarını Windows kapsayıcıları olarak dağıtma
 
@@ -51,7 +51,7 @@ Birçok kuruluş, aşağıdaki nedenlerden dolayı mevcut tek parçalı uygulama
 
 [Docker](https://www.docker.com/) , uygulamaların bulutta veya şirket içinde çalışabilen taşınabilir, kendi kendine yeterli kapsayıcılar olarak dağıtımını otomatik hale getiren [Açık kaynaklı bir projem](https://github.com/docker/docker) . Docker Ayrıca bu teknolojiyi tanıtan ve geliştikçe bir [şirkettir](https://www.docker.com/) . Şirket, Microsoft dahil olmak üzere Cloud, Linux ve Windows satıcılarıyla işbirliği içinde çalışmaktadır.
 
-![Docker, kapsayıcıyı karma bulutun tüm katmanlarında dağıtır](./media/image6.png)
+![Docker 'ın karma buluttaki kapsayıcıları nasıl dağıttığı gösteren diyagram.](./media/deploy-existing-net-apps-as-windows-containers/docker-deploys-containers-all-layers.png)
 
 **Şekil 4-6.** Docker, kapsayıcıyı karma bulutun tüm katmanlarında dağıtır
 
@@ -83,7 +83,7 @@ Linux için, resmi .NET Docker görüntülerinde (Deklik gibi) Çoklu destekler 
 
 Şekil 4-7, uygulamanın .NET Framework sürümüne bağlı olarak hedefleyebilir işletim sistemi sürümlerini gösterir.
 
-![.NET Framework sürümüne göre hedeflenecek işletim sistemleri](./media/image7.png)
+![.NET Framework sürümüne göre hangi işletim sisteminin hedeflenecek olduğunu gösteren diyagram.](./media/deploy-existing-net-apps-as-windows-containers/dotnet-framework-operating-systems.png)
 
 **Şekil 4-7.** .NET Framework sürümüne göre hedeflenecek işletim sistemleri
 
@@ -113,9 +113,9 @@ Orta 2017 ' den başlayarak, Docker 'da [çok katmanlı](https://github.com/moby
 
 Linux kapsayıcıları gibi Windows Server kapsayıcıları, Docker altyapısı kullanılarak yönetilir. Linux kapsayıcılarından farklı olarak, Windows kapsayıcıları iki farklı kapsayıcı türü veya çalışma zamanı-Windows Server kapsayıcıları ve Hyper-V yalıtımı içerir.
 
-**Windows Server kapsayıcıları**: İşlem ve ad alanı yalıtım teknolojisi aracılığıyla uygulama yalıtımı sağlar. Windows Server kapsayıcısı, kapsayıcı Konağı ve konakta çalışan tüm kapsayıcılar ile bir çekirdeği paylaşır. Bu kapsayıcılar, bir güvenlik sınırı sağlamaz ve güvenilmeyen kodu yalıtmak için kullanılmamalıdır. Paylaşılan çekirdek alanı nedeniyle, Bu kapsayıcılar aynı çekirdek sürümünü ve yapılandırmasını gerektirir.
+**Windows Server kapsayıcıları**: işlem ve ad alanı yalıtım teknolojisi aracılığıyla uygulama yalıtımı sağlar. Windows Server kapsayıcısı, kapsayıcı Konağı ve konakta çalışan tüm kapsayıcılar ile bir çekirdeği paylaşır. Bu kapsayıcılar, bir güvenlik sınırı sağlamaz ve güvenilmeyen kodu yalıtmak için kullanılmamalıdır. Paylaşılan çekirdek alanı nedeniyle, Bu kapsayıcılar aynı çekirdek sürümünü ve yapılandırmasını gerektirir.
 
-**Hyper-V yalıtımı**: , Her kapsayıcıyı yüksek oranda iyileştirilmiş bir VM üzerinde çalıştırarak Windows Server kapsayıcıları tarafından sunulan yalıtımın üzerine genişletilir. Bu yapılandırmada, kapsayıcı konağın çekirdeği aynı konaktaki diğer kapsayıcılarla paylaşılmaz. Bu kapsayıcılar, sanal makine ile aynı güvenlik açısından çok kiracılı barındırma için tasarlanmıştır. Bu kapsayıcılar, Konağı konaktaki konak veya diğer kapsayıcılarla paylaşmadığından, farklı sürüm ve yapılandırmalara sahip çekirdekler 'leri (desteklenen sürümlerle birlikte) çalıştırabilirler. Örneğin, Windows 10 ' da tüm Windows kapsayıcıları, Windows Server çekirdeği sürümünü ve yapılandırmasını kullanmak için Hyper-V yalıtımını kullanır.
+**Hyper-V yalıtımı**: her kapsayıcıyı yüksek oranda IYILEŞTIRILMIŞ bir VM üzerinde çalıştırarak Windows Server kapsayıcıları tarafından sunulan yalıtımın üzerinde genişler. Bu yapılandırmada, kapsayıcı konağın çekirdeği aynı konaktaki diğer kapsayıcılarla paylaşılmaz. Bu kapsayıcılar, sanal makine ile aynı güvenlik açısından çok kiracılı barındırma için tasarlanmıştır. Bu kapsayıcılar, Konağı konaktaki konak veya diğer kapsayıcılarla paylaşmadığından, farklı sürüm ve yapılandırmalara sahip çekirdekler 'leri (desteklenen sürümlerle birlikte) çalıştırabilirler. Örneğin, Windows 10 ' da tüm Windows kapsayıcıları, Windows Server çekirdeği sürümünü ve yapılandırmasını kullanmak için Hyper-V yalıtımını kullanır.
 
 Windows üzerinde veya Hyper-V yalıtımı olmadan bir kapsayıcı çalıştırmak, çalışma zamanı kararsıdır. Başlangıçta Hyper-V yalıtımı ile kapsayıcıyı oluşturmayı seçebilir ve çalışma zamanında onu bir Windows Server kapsayıcısı olarak çalıştırmayı tercih edebilirsiniz.
 
@@ -129,7 +129,7 @@ Windows üzerinde veya Hyper-V yalıtımı olmadan bir kapsayıcı çalıştırm
 
     <https://docs.microsoft.com/virtualization/windowscontainers/about/>
 
-- **Bilgi grafiği Microsoft ve kapsayıcılar**
+- **Infographic: Microsoft ve kapsayıcılar**
 
     <https://info.microsoft.com/rs/157-GQE-382/images/Container%20infographic%201.4.17.pdf>
 
@@ -138,21 +138,21 @@ Windows üzerinde veya Hyper-V yalıtımı olmadan bir kapsayıcı çalıştırm
 Önceki bölümlerde, Docker kapsayıcılarının avantajları ve .NET uygulamalarına özgü kapsayıcı görüntüleri hakkında ayrıntılı bilgiler de açıklanmıştı. Uygulamanın geliştirilmesi veya Kapsayıcılı olması için tüm bu genel bilgiler temel bir uygulamadır.
 Bununla birlikte, üretim dağıtım ortamı veya soru-cevap geliştirme/test Microsoft Azure ortamları hakkında düşünürken, bulutta tam bir kapsayıcı ekosistemi olan açık ve çok çeşitli seçenekler sağlar (Aşağıdaki diyagramda gösterilmektedir). Belirli uygulamanızın ihtiyaçlarına bağlı olarak, bir veya başka bir Azure ürünü seçmeniz gerekir.
 
-![Azure 'da kapsayıcı ekosistemi](./media/image7.5.png)
+![Azure 'da kapsayıcı ekosisteminin diyagramı.](./media/deploy-existing-net-apps-as-windows-containers/azure-container-ecosystem.png)
 
 **Şekil 4-7,5.** Azure 'da kapsayıcı ekosistemi
 
 Azure 'da kapsayıcı ekosisteminden, altyapı olarak kabul edilen kapsayıcıları destekleyen aşağıdaki ürünler:
 
 - **Azure Container Instances (ACI)**
-- **Azure sanal makineleri** (Kapsayıcının desteğiyle)
-- **Azure sanal makine ölçek kümeleri** (Kapsayıcının desteğiyle)
+- **Azure sanal makineleri** (kapsayıcının desteğiyle)
+- **Azure sanal makine ölçek kümeleri** (kapsayıcının desteğiyle)
 
 Bu üçünden, ACI, temel alınan işletim sistemini sürdürmenize gerek kalmaz, yükseltme/düzeltme eki uygulamanız gerekmez, ancak yine de altyapı düzeyinde konumlanır, bu da kitabın yaklaşan bölümlerinde daha da açıklanacaktır.
 
 Azure 'daki ve aynı anda PaaS (hizmet olarak platform) düzeyinde konumlandırılmış kapsayıcıları destekleyen ürünler şunlardır:
 
-- **Azure uygulama hizmeti**
+- **Azure App Service**
 - **Azure Kubernetes hizmeti (AKS ve ACS)**
 - **Azure Batch** 
 
@@ -163,5 +163,5 @@ Bunlara ek olarak, kapsayıcılarınızdaki Azure SQL veritabanı, Azure Redsıs
 Sonraki bölümlerde, Microsoft 'un bu Azure ürünlerinin ve çözümlerinin her birinin ne zaman kullanılacağı konusunda, özellikle Windows kapsayıcıları hedeflenirken bu önerileri inceleyebilirsiniz.
 
 >[!div class="step-by-step"]
->[Önceki](what-about-cloud-native-applications.md)İleri
->[](when-not-to-deploy-to-windows-containers.md)
+>[Önceki](what-about-cloud-native-applications.md)
+>[İleri](when-not-to-deploy-to-windows-containers.md)

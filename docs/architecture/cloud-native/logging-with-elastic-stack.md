@@ -1,23 +1,23 @@
 ---
-title: Esnek Stack ile günlüğe kaydetme
+title: Elastik Yığın ile günlüğe kaydetme
 description: Elastik yığın, Logstash ve kibana kullanarak günlüğe kaydetme
 ms.date: 09/23/2019
-ms.openlocfilehash: b3fd3ea30f46914e6513be79f7d949499142b381
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 62115edc3f64d87d2c3e84a7b5319ce42cbe729b
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71182834"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72315793"
 ---
-# <a name="logging-with-elastic-stack"></a>Esnek Stack ile günlüğe kaydetme 
+# <a name="logging-with-elastic-stack"></a>Elastik Yığın ile günlüğe kaydetme 
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-Birçok iyi Merkezi günlük aracı vardır ve daha pahalı seçeneklere karşı ücretsiz, açık kaynaklı araçlar ve maliyet bakımından farklılık gösterir. Birçok durumda, ücretsiz araçlar ücretli tekliflerle veya daha iyi bir seçenektir. Bu tür bir araç, üç açık kaynaklı bileşen birleşimidir: Elastik arama, Logstash ve kibana. Toplu olarak bu araçlar elastik yığın veya ELK yığını olarak bilinir.
+Birçok iyi Merkezi günlük aracı vardır ve daha pahalı seçeneklere karşı ücretsiz, açık kaynaklı araçlar ve maliyet bakımından farklılık gösterir. Birçok durumda, ücretsiz araçlar ücretli tekliflerle veya daha iyi bir seçenektir. Bu tür bir araç, üç açık kaynaklı bileşen birleşimidir: elastik arama, Logstash ve kibana. Toplu olarak bu araçlar elastik yığın veya ELK yığını olarak bilinir.
 
 ## <a name="what-are-the-advantages-of-elastic-stack"></a>Esnek yığının avantajları nelerdir?
 
-Elastik yığın, düşük maliyetli, ölçeklenebilir, bulut kullanımı kolay bir şekilde Merkezi günlük kaydı sağlar. Kullanıcı arabirimi, veri analizini kolaylaştırarak, bir clunky arabirimi ile uğraşmaya değil, verilerinizden verilerinize yönelik Öngörüler elde edebilirsiniz. Dağıtılmış uygulamanız daha fazla ve farklı hizmet türlerine yayıldığında, günlük ve ölçüm verilerini sisteme akışa almaya devam etmeyi beklemeniz için çok çeşitli girdileri destekler. Esnek yığın, büyük veri kümelerinde bile hızlı aramaları destekler, hatta büyük uygulamaların ayrıntılı verileri günlüğe kaydedebilmesini ve yine de bir performans açısından görünebilmesini olanaklı kılar.
+Elastik yığın, düşük maliyetli, ölçeklenebilir, bulut kullanımı kolay bir şekilde Merkezi günlük kaydı sağlar. Kullanıcı arabirimi, veri analizini kolaylaştırarak, bir clunky arabirimi ile uğraşmaya değil, verilerinizden verilerinize yönelik Öngörüler elde edebilirsiniz. Dağıtılmış uygulamanız daha fazla ve farklı hizmet türlerine yayıldığında, günlük ve ölçüm verilerini sisteme akışa almaya devam etmeyi beklemeniz için çok çeşitli girdileri destekler. Elastik yığın, büyük veri kümelerinde bile hızlı aramaları destekler, böylece büyük uygulamalar ayrıntılı verileri günlüğe kaydeder ve yine de bir performans üzerinde görünebilmesini sağlar.
 
 ## <a name="logstash"></a>Logstash
 
@@ -63,7 +63,7 @@ Elastik arama, geldikçe günlükleri dizinlebilecekleri güçlü bir arama alty
 
 Parametreleri içermesi için üretilmiş olan veya parametreleri Logstash işleme aracılığıyla bölüşdüğü olan günlük iletileri, bu bilgileri koruyan şekilde doğrudan sorgulanabilir.
 
-Tarafından `jill@example.com`ziyaret edilen ilk 10 sayfayı arayan bir sorgu, Şekil 7-4 ' de görünür.
+@No__t-0 tarafından ziyaret edilen ilk 10 sayfayı arayan sorgu Şekil 7-4 ' de görünür.
 
 ```
 "query": {

@@ -2,12 +2,12 @@
 title: Bulutta Yerel uygulamalar nedir?
 description: Azure bulut ve Windows kapsayıcıları ile mevcut .NET uygulamalarını modernleştirin | Bulutta yerel uygulamalar hakkında ne olacak?
 ms.date: 04/28/2018
-ms.openlocfilehash: 86153b04790eb21276e58b3fe33c0a680d9ea1c4
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: cf4c3b24a4eeb62ed84a5fccb294b675d38fcc36
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373912"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72318431"
 ---
 # <a name="what-about-cloud-native-applications"></a>Bulutta Yerel uygulamalar nedir?
 
@@ -15,7 +15,7 @@ ms.locfileid: "70373912"
 
 Şekil 4-3, uygulama içindeki bulutta yerel uygulamaların yer aldığı konumları konumlandırır.
 
-![Bulutta yerel uygulamaları konumlandırma](./media/image3.png)
+![Bulutta yerel uygulamaların nasıl konumlandıralınacağını gösteren diyagram.](./media/what-about-cloud-native-applications/positioning-cloud-native-applications.png)
 
 **Şekil 4-3.** Bulutta yerel uygulamaları konumlandırma
 
@@ -25,7 +25,7 @@ Bulutta yerel uygulamaların başlıca temel değerleri, çeviklik ile gelişebi
 
 Şekil 4-4, bulut Yerel modelinin ana özelliklerini gösterir.
 
-![Bulutta yerel özellikler, mikro hizmetler, kapsayıcılar, bulut-dayanıklı, düzenleyiciler ve sunucusuz](./media/image4.png)
+![Ana bulut Yerel özelliklerinin listelendiği diyagram.](./media/what-about-cloud-native-applications/cloud-native-characteristics.png)
 
 **Şekil 4-4.** Bulutta yerel özellikler
 
@@ -41,7 +41,7 @@ Cloud-Native, büyük ve görev açısından kritik uygulamalar için daha geli�
 
 [Bulut Yerel Bilgi Işlem altyapısı (CNCF)](https://www.cncf.io/) , bulutta yerel ilkelerin birincil promokdır. Microsoft, [CNCF 'nin bir üyesidir](https://azure.microsoft.com/blog/announcing-cncf/).
 
-Örnek bir tanım ve bulut Yerel uygulamalarının özellikleri hakkında daha fazla bilgi için bkz. Gartner, [bulutta yerel uygulamaları mimari ve tasarlama](https://www.gartner.com/doc/3181919/architect-design-cloudnative-applications). Microsoft 'un bulut Yerel uygulamasının nasıl uygulanacağı hakkında belirli yönergeler için bkz [. .net mikro hizmetleri: Kapsayıcılı .NET uygulamaları](https://aka.ms/microservicesebook)için mimari.
+Örnek bir tanım ve bulut Yerel uygulamalarının özellikleri hakkında daha fazla bilgi için bkz. Gartner, [bulutta yerel uygulamaları mimari ve tasarlama](https://www.gartner.com/doc/3181919/architect-design-cloudnative-applications). Microsoft 'un bulut Yerel uygulamasının nasıl uygulanacağı hakkında belirli yönergeler için bkz. [.net mikro hizmetleri: Kapsayıcılı .NET uygulamaları Için mimari](https://aka.ms/microservicesebook).
 
 Tam bir uygulamayı bulutta yerel modele geçirdiğinizde göz önünde bulundurmanız gereken en önemli faktör, mikro hizmet tabanlı bir mimariye yeniden mimarinizin olması gerekir. Bu, ilgili büyük yeniden düzenleme süreci nedeniyle geliştirmede önemli bir yatırım gerektirir. Bu seçenek genellikle yeni ölçeklenebilirlik düzeyi ve uzun süreli çeviklik gerektiren görev açısından kritik uygulamalar için seçilir. Ancak, yalnızca birkaç yeni senaryo için mikro hizmetler ekleyerek buluta yerel olarak taşımaya başlayabilir ve sonunda uygulamayı mikro hizmet olarak tamamen yeniden düzenleyin. Bu, bazı senaryolar için en iyi seçenek olan artımlı bir yaklaşımdır.
 
@@ -55,7 +55,7 @@ Ancak, mikro hizmetler yeni veya modern uygulamalar için zorunlu değildir. Mik
 
 Mikro hizmetler mimarisi, özerk hizmetler biçiminde birden çok bağımsız alt sistemi temel alan dağıtılmış ve büyük veya karmaşık görev açısından kritik uygulamalar için tercih edilen yaklaşım haline geliyor. Mikro hizmet tabanlı bir mimaride, bir uygulama bağımsız olarak geliştirilen, test edilmiş, sürümlü, dağıtılan ve ölçeklendirilen bir hizmetler koleksiyonu olarak oluşturulur. Bu, mikro hizmet başına herhangi bir ilgili, özerk veritabanı içerebilir.
 
-.NET Core kullanarak uygulayabileceğiniz mikro hizmetler mimarisine ayrıntılı bir bakış için bkz. indirilebilir PDF e-book [.net mikro hizmetleri: Kapsayıcılı .NET uygulamaları](https://aka.ms/microservicesebook)için mimari. Kılavuz ayrıca [çevrimiçi](../../microservices/index.md)olarak da kullanılabilir.
+.NET Core kullanarak uygulayabileceğiniz mikro hizmetler mimarisine ayrıntılı bir bakış için bkz. indirilebilir PDF e-book [.net mikro hizmetleri: Kapsayıcılı .NET uygulamaları Için mimari](https://aka.ms/microservicesebook). Kılavuz ayrıca [çevrimiçi](../../microservices/index.md)olarak da kullanılabilir.
 
 Ayrıca, mikro hizmetlerin güçlü yetenekler bağımsız dağıtım, güçlü alt sistem sınırları ve teknoloji çeşitlemesi sunabileceği senaryolarda bile, birçok yeni zorluk da daha da çalışırlar. Sorunlar, parçalanmış ve bağımsız veri modelleri gibi dağıtılmış uygulama geliştirmeyle ilgilidir; Mikro hizmetler arasında esnek iletişim sağlama; nihai tutarlılık gereksinimi; ve işlemsel karmaşıklık. Mikro hizmetler geleneksel tek parçalı uygulamalar ile karşılaştırıldığında daha yüksek düzeyde karmaşıklığa sahiptir.
 
@@ -66,5 +66,5 @@ Son bir notta, bu kavram hakkında tekrarlanabilecek risklere bile, uygulamalar�
 Herhangi bir durumda, bu kılavuz genellikle tek parçalı veya N katmanlı mimarilere sahip olan mevcut uygulamaların modernisini hedeflediğinden, bu mevcut yönergelerin geri kalanı tüm "mikro hizmet tabanlı uygulamalar yok" kısmında odaklanır.
 
 > [!div class="step-by-step"]
-> [Önceki](microsoft-technologies-in-cloud-optimized-applications.md)İleri
-> [](deploy-existing-net-apps-as-windows-containers.md)
+> [Önceki](microsoft-technologies-in-cloud-optimized-applications.md)
+> [İleri](deploy-existing-net-apps-as-windows-containers.md)

@@ -2,12 +2,12 @@
 title: Mevcut .NET uygulamalarını buluta Iyileştirilmiş uygulamalarla modernleştirin nedenleri
 description: Azure bulut ve Windows kapsayıcıları ile mevcut .NET uygulamalarını modernleştirin | Mevcut .NET uygulamalarını buluta Iyileştirilmiş uygulamalarla modernleştirin nedenleri
 ms.date: 04/28/2018
-ms.openlocfilehash: aabce73efaae520a3b59c70d53519b847f2c6a94
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: c86b9ec4d4a92b8daa0fceef0531ed955b9bb2bf
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373927"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72318557"
 ---
 # <a name="reasons-to-modernize-existing-net-apps-to-cloud-optimized-applications"></a>Mevcut .NET uygulamalarını buluta Iyileştirilmiş uygulamalarla modernleştirin nedenleri
 
@@ -21,7 +21,7 @@ En alttaki satır, bir kuruluşun bulut için optimize edilmiş uygulamaları ol
 
 ## <a name="cloud-optimized-application-principles-and-tenets"></a>Buluta Iyileştirilmiş uygulama ilkeleri ve tenetler 
 
-Buluttaki geliştirmeler genellikle iki hedefi karşılamaya odaklanılmıştır: Çevikliği artırarak maliyetleri azaltın ve iş artışını geliştirebilirsiniz. Bu hedefler, uygulamaları serbest bırakma ve sevk ettiğiniz sırada süreçler basitleştirilerek ve uçuşmadan elde edilir.
+Buluttaki geliştirmeler genellikle iki hedefi karşılamaya odaklanılmıştır: çevikliği artırarak maliyetleri azaltın ve iş artışını geliştirebilirsiniz. Bu hedefler, uygulamaları serbest bırakma ve sevk ettiğiniz sırada süreçler basitleştirilerek ve uçuşmadan elde edilir.
 
 Uygulamanızı bulutta En Iyi duruma getirilmiş bir şekilde, diğer şirket içi uygulamalardan uygulamanızı olarak çalışabilen geliştirin ve ardından bulutta uygulamanızı serbest bırakma, dağıtma, otomatik ölçeklendirme, izleme ve sorun giderme işlemleri yapabilirsiniz.
 
@@ -41,7 +41,7 @@ Aşağıdaki listede, bulutta Iyileştirilmiş uygulamalar için ana taraf veya 
 
 Şekil 4-2, buluta Iyileştirilmiş bir uygulamanın ana isteğe bağlı ananlarına gösterir. Uyguladığınız daha fazla sayıda işlem, müşterilerinizin beklentilerini karşıladığı için uygulamanızın başarılı olması için readier.
 
-![Bulut için Iyileştirilmiş uygulamanın ana paragraf oluşturma](./media/image2.png)
+![Bir buluta Iyileştirilmiş uygulamanın ana pillerinden oluşan şema.](./media/reasons-to-modernize-existing-net-apps-to-cloud-optimized-applications/main-pillars-cloud-optimized-application.png)
 
 **Şekil 4-2.** Bulut için Iyileştirilmiş uygulamanın ana paragraf oluşturma
 
@@ -66,5 +66,5 @@ Bu avantajların hepsi son olarak uçtan uca uygulama yaşam döngüleriniz içi
 Aşağıdaki bölümlerde, bu avantajlar daha ayrıntılı olarak açıklanmıştır ve belirli teknolojilere bağlanır.
 
 >[!div class="step-by-step"]
->[Önceki](index.md)İleri
->[](microsoft-technologies-in-cloud-optimized-applications.md)
+>[Önceki](index.md)
+>[İleri](microsoft-technologies-in-cloud-optimized-applications.md)

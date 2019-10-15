@@ -3,12 +3,12 @@ title: Hizmetten hizmete iletişim
 description: Arka uç bulutu yerel mikro hizmetlerinin diğer arka uç mikro hizmetleriyle nasıl iletişim kuracağını öğrenin.
 author: robvet
 ms.date: 09/09/2019
-ms.openlocfilehash: e9f27309fd6b03830ab3098d0fb08a7ecf5c0eaa
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 0917ae8bf38b117619cec63411ea8f4f084ae6f2
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71214393"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72315861"
 ---
 # <a name="service-to-service-communication"></a>Hizmetten hizmete iletişim
 
@@ -50,7 +50,7 @@ Başka bir mikro hizmete tek bir doğrudan HTTP çağrısı yapan seyrek erişim
 
 **Şekil 4-9**. HTTP sorgularını zincirleme
 
-Önceki görüntüde gösterilen tasarımda riski tamamen hayal edebilirsiniz. 3\. adım \#başarısız olursa ne olur? Ya da \#8. adım başarısız oldu mu? Nasıl kurtarılır? Temel alınan hizmet \#meşgul olduğu için 6. adım yavaşsa ne olur? Nasıl devam edersiniz? Tümü doğru çalışıyor olsa bile, her adımın gecikme süresinin toplamı olan bu çağrının tabi olacağı gecikmeyi düşünün.
+Önceki görüntüde gösterilen tasarımda riski tamamen hayal edebilirsiniz. @No__t-03 adımı başarısız olursa ne olur? Veya adım \#8 başarısız oluyor? Nasıl kurtarılır? Temel alınan hizmet meşgul olduğundan \#6 ' i yavaşsa ne olur? Nasıl devam edersiniz? Tümü doğru çalışıyor olsa bile, her adımın gecikme süresinin toplamı olan bu çağrının tabi olacağı gecikmeyi düşünün.
 
 Önceki görüntüde geçen büyük ölçüde, hizmetlerin en iyi modellenmedi. Bu, takımın tasarımını yeniden ziyaret behoove.
 
@@ -134,7 +134,7 @@ Daha fazla kurumsal özellik bölümlendirme ve oturumlardır. Geleneksel Servic
 
 [Service Bus oturumlar](https://codingcanvas.com/azure-service-bus-sessions/) , gruplandırılmanız için bir yol sağlar. İletilerin birlikte işlenmesi ve işlemin sonunda tamamlanması gereken bir iş akışı senaryosu düşünün. Tüm avantajlardan yararlanmak için, oturum açık olarak Kuyruk için etkin olmalıdır ve ilgili her bir ileti aynı oturum KIMLIĞINI içermelidir.
 
-Ancak bazı önemli uyarılar vardır: Service Bus kuyruğu boyutu 80 GB ile sınırlıdır ve bu, mağaza kuyruklarından kullanılabilir olandan çok daha küçüktür. Ayrıca, Service Bus kuyruklar bir temel maliyet ve işlem başına ücretlendirilir.
+Ancak bazı önemli uyarılar vardır: Service Bus kuyruk boyutu 80 GB ile sınırlıdır ve bu, mağaza kuyruklarından kullanılabilir olandan çok daha küçüktür. Ayrıca, Service Bus kuyruklar bir temel maliyet ve işlem başına ücretlendirilir.
 
 Şekil 4-14 Service Bus sırasının üst düzey mimarisini özetler.
 
@@ -166,7 +166,7 @@ Olay ile, sıraya alma teknolojisinden *konulara*geçiş yaptık. Bir [Konu](htt
 
 **Şekil 4-16**. Konu mimarisi
 
-Önceki şekilde, yayımcılar konuya iletiler gönderir. Son sırada aboneler aboneliklerden ileti alır. Ortasında, konu, koyu mavi kutular halinde gösterilen bir dizi *kurala*göre iletileri aboneliklere iletir. Kurallar, belirli iletileri bir aboneliğe ileten bir filtre işlevi görür. Burada, abonelik \#1 ve abonelik \#3 \#' e (abonelik 2 ' ye değil) bir "CreateOrder" olayı gönderilebilir. Abonelik \#2 ve abonelik \#3 ' e bir "ordercompleted" olayı gönderilebilir.
+Önceki şekilde, yayımcılar konuya iletiler gönderir. Son sırada aboneler aboneliklerden ileti alır. Ortasında, konu, koyu mavi kutular halinde gösterilen bir dizi *kurala*göre iletileri aboneliklere iletir. Kurallar, belirli iletileri bir aboneliğe ileten bir filtre işlevi görür. Burada bir "CreateOrder" olayı, abonelik \#1 ve abonelik \#3 ' e gönderilebilir, ancak abonelik \#2 ' ye uygulanmaz. Abonelik \#2 ve abonelik \#3 olan "OrderCompleted" olayı gönderilebilir.
 
 Azure bulutu iki farklı konu hizmetini destekler: Azure Service Bus konuları ve Azure EventGrid.
 
@@ -208,19 +208,19 @@ Event Grid, tam olarak yönetilen bir sunucusuz bulut hizmetidir. Bu, trafiğini
 
 ### <a name="streaming-messages-in-the-azure-cloud"></a>Azure bulutu 'nda akış iletileri
 
-Azure Service Bus ve Event Grid, bir Cosmos DB 'e eklenen yeni bir belge gibi tek ve ayrı olaylar sunan uygulamalar için harika destek sağlar. Ancak, bulutta yerel sisteminizin *ilgili olayların akışını*işlemesi gerekiyorsa ne olacak? [Olay akışları](https://msdn.microsoft.com/magazine/dn904671.aspx?f=255&MSPPError=-2147217396) daha karmaşıktır. Bunlar genellikle birbirleriyle sıralanmıştır ve bir grup olarak işlenmelidir.
+Azure Service Bus ve Event Grid, bir Cosmos DB eklenmiş yeni bir belge gibi tek ve ayrı olaylar sunan uygulamalar için harika destek sağlar. Ancak, bulutta yerel sisteminizin *ilgili olayların akışını*işlemesi gerekiyorsa ne olacak? [Olay akışları](https://msdn.microsoft.com/magazine/dn904671) daha karmaşıktır. Bunlar genellikle zaman içinde sıralanmıştır, birbirleriyle ilişkilidir ve bir grup olarak işlenmelidir.
 
 [Azure Olay Hub](https://azure.microsoft.com/services/event-hubs/) 'ı, olayları toplayan, dönüştüren ve depolayan bir veri akışı platformu ve olay alma hizmetidir. Bir telemetri bağlamından yayılan sürekli olay bildirimleri gibi akış verilerini yakalamak için ince ayar yapılır. Hizmet yüksek oranda ölçeklenebilir ve [saniye başına milyonlarca olayı depolayıp işleyebilir](https://docs.microsoft.com/azure/event-hubs/event-hubs-about). Şekil 4-18 ' de gösterildiği gibi, genellikle olay işlem hattının bir ön kapıdır ve olay tüketimine ait alma akışını ayırır.
 
-![Azure Olay Hub'ı](./media/azure-event-hub.png)
+![Azure Olay Hub 'ı](./media/azure-event-hub.png)
 
-**Şekil 4-18**. Azure Olay Hub'ı
+**Şekil 4-18**. Azure Olay Hub 'ı
 
 Olay Hub 'ı, düşük gecikme süresini ve yapılandırılabilir zaman bekletmesini destekler. Kuyrukların ve konuların aksine, bir tüketici tarafından okunduktan sonra olay verilerini saklayın Event Hubs. Bu özellik, iç ve dış diğer veri analizi hizmetlerinin, daha fazla analiz için verileri yeniden oynamalarını sağlar. Olay Hub 'ında depolanan olaylar yalnızca, varsayılan olarak bir gün olan ancak yapılandırılabilir olan bekletme döneminin süresi dolduktan sonra silinir.
 
 Olay Hub 'ı, HTTPS ve AMQP dahil olmak üzere ortak olay yayımlama protokollerini destekler. Ayrıca Kafka 1,0 de desteklenir. Mevcut Kafka uygulamaları, büyük Kafka kümelerinin yönetilmesine alternatif sağlayan Kafka protokolünü kullanarak [Olay Hub 'ı ile iletişim](https://docs.microsoft.com/azure/event-hubs/event-hubs-for-kafka-ecosystem-overview) kurabilir. Birçok açık kaynaklı bulut Yerel sistemi emayraç Kafka.
 
-Event Hubs, her tüketicinin ileti akışının yalnızca belirli bir alt kümesini veya bölümünü okuduğu [bölümlenmiş bir tüketici modeli](https://docs.microsoft.com/azure/event-hubs/event-hubs-features) aracılığıyla ileti akışı uygular. Bu düzende olay işleme için inanılmaz yatay ölçek etkinleştirilir ve sıralarda ve konularda kullanılamayan diğer akışa odaklanmış özellikler sağlanır. Bölüm bir olay hub'ında tutulan olayların sıralı dizisidir. Daha yeni olaylar geldikçe, bu sıranın sonuna eklenir. Şekil 4-19 bir olay hub 'ında Bölümlendirmeyi gösterir.
+Event Hubs, her tüketicinin ileti akışının yalnızca belirli bir alt kümesini veya bölümünü okuduğu [bölümlenmiş bir tüketici modeli](https://docs.microsoft.com/azure/event-hubs/event-hubs-features) aracılığıyla ileti akışı uygular. Bu düzende olay işleme için inanılmaz yatay ölçek etkinleştirilir ve sıralarda ve konularda kullanılamayan diğer akışa odaklanmış özellikler sağlanır. Bölüm, bir olay hub 'ında tutulan olayların sıralı dizisidir. Daha yeni olaylar geldikçe, bu sıranın sonuna eklenir. Şekil 4-19 bir olay hub 'ında Bölümlendirmeyi gösterir.
 
 ![Olay Hub 'ı bölümlendirme](./media/event-hub-partitioning.png)
 

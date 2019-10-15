@@ -2,12 +2,12 @@
 title: Dayanıklı iletişim
 description: Azure için Cloud Native .NET uygulamaları tasarlama | Esnek Iletişim
 ms.date: 06/30/2019
-ms.openlocfilehash: d7fd4552059f527ad5166dcb6be04248bfad8e4a
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 324f5426af1c892db73aa6fc2336a19b7a8e499e
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71214496"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72315805"
 ---
 # <a name="resilient-communications"></a>Dayanıklı iletişimler
 
@@ -20,7 +20,7 @@ Bu kitapta, geleneksel tek parçalı Uygulama tasarımının ötesine geçme ve 
 - *Resiliency.* Kısa süreli arızaların nasıl yönetileceği ve sistemin kararlı tutulması nasıl yapılır?
 - *Yük Dengeleme.* Gelen trafik bir hizmetin birden fazla örneğine nasıl dağıtılır?
 - *Güven.* Aktarım düzeyi şifreleme ve sertifika yönetimi gibi güvenlik sorunları nasıl zorlanır?
-- \* Dağıtılmış Izleme. -Birden çok tüketim hizmeti genelinde tek bir istek için izlenebilirliği ve izlemeyi nasıl ilişkilendirirsiniz ve yakalarsınız?
+- *Dağıtılmış Izleme.* -Birden çok tüketim hizmeti genelinde tek bir istek için izlenebilirliği ve izlemeyi nasıl ilişkilendirirsiniz ve yakalarsınız?
 
 Bu sorunlar çeşitli kitaplıklar ve çerçevelerle ele alınabilir, ancak kod tabanınızın içinde uygulanması pahalı, karmaşık ve zaman alıcı olabilir. Üstelik, altyapı sorunlarının iş mantığıyla birlikte bulunduğu bir çözüm ile bitimuz.
 
@@ -34,7 +34,7 @@ Bu sorunlar çeşitli kitaplıklar ve çerçevelerle ele alınabilir, ancak kod 
 
 Önceki şekilde, proxy 'nin mikro hizmetler ve küme arasındaki iletişimi nasıl kestiğine ve yönettiğini aklınızda olduğunu aklınızda.
 
-Hizmet kafesi, mantıksal olarak iki farklı bileşene ayrılır: [Veri düzlemi](https://blog.envoyproxy.io/service-mesh-data-plane-vs-control-plane-2774e720f7fc) ve [Denetim düzlemi](https://blog.envoyproxy.io/service-mesh-data-plane-vs-control-plane-2774e720f7fc). Şekil 6-10, bu bileşenleri ve bunların sorumluluklarını gösterir.
+Hizmet kafesi iki farklı bileşene mantıksal olarak ayrılır: bir [veri düzlemi](https://blog.envoyproxy.io/service-mesh-data-plane-vs-control-plane-2774e720f7fc) ve [Denetim düzlemi](https://blog.envoyproxy.io/service-mesh-data-plane-vs-control-plane-2774e720f7fc). Şekil 6-10, bu bileşenleri ve bunların sorumluluklarını gösterir.
 
 ![Hizmet ağı denetimi ve veri düzlemi](./media/istio-control-and-data-plane.png)
 

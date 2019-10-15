@@ -1,14 +1,14 @@
 ---
-title: Cloud Native 'i tanımlama
+title: Bulutta Yerel'i tanımlama
 description: Bulutta yerel sistemler için yatak odası sağlayan temel sütunlar hakkında bilgi edinin
 author: robvet
 ms.date: 08/20/2019
-ms.openlocfilehash: 4236f0d6aca9d4348d4ead33f552f9a8a2c8c461
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: c99a99ec2cd7a8c4263ae3321d5a836bc40da087
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291204"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72315939"
 ---
 # <a name="defining-cloud-native"></a>Cloud Native 'i tanımlama
 
@@ -32,7 +32,7 @@ Cloud Native, *hız* ve *çeviklik*hakkında çok daha fazla. İş sistemleri, i
 
 Bu teknikleri uygulayan bazı şirketler aşağıda verilmiştir. Elde ettikleri hız, çeviklik ve ölçeklenebilirlik hakkında düşünün.
 
-| Şirket | Deneyimleri | 
+| Şirketlerin | Deneyimleri | 
 | :-------- | :-------- |
 | [Netflix](https://www.infoq.com/news/2013/06/netflix/) | Üretimde 600 ' dür ve hizmet vardır. Günde yüz kez dağıtır. |
 | [Uber](https://eng.uber.com/micro-deploy/) | Üretimde 1000 + hizmet bulunur. Her hafta birkaç bin derleme dağıtır. | 
@@ -78,7 +78,7 @@ Aşağıdaki tablo, on Iki öğeli yöntemi vurgular:
 
 |    |  Çarpan | Açıklama  |
 | :-------- | :-------- | :-------- |
-| 1 | Kod tabanı | Her mikro hizmet için kendi deposunda depolanan tek bir kod tabanı. Sürüm denetimiyle izlenen, birden çok ortama (QA, hazırlama, üretim) dağıtılabilir. |
+| 1\. | Kod tabanı | Her mikro hizmet için kendi deposunda depolanan tek bir kod tabanı. Sürüm denetimiyle izlenen, birden çok ortama (QA, hazırlama, üretim) dağıtılabilir. |
 | 2 | Bağımlılıklar | Her mikro hizmet, sistemin tamamını etkilemeden değişiklikler yapmadan kendi bağımlılıklarını yalıtır ve paketler. |
 | 3 | Yapılandırmalar  | Yapılandırma bilgileri, mikro hizmetten ve externalized kod dışında bir yapılandırma yönetim aracı aracılığıyla taşınır. Aynı dağıtım, doğru yapılandırma uygulanmış ortamlar arasında yayabilir.  |
 | 4 | Hizmetleri yedekleme | Anormal kaynaklar (veri depoları, önbellekler, ileti aracıları) adreslenebilir bir URL aracılığıyla gösterilmelidir. Bunu yapmak, kaynağı uygulamadan ayırır ve bu sayede, bunu değiştirilebilir hale gelir.  |
@@ -88,7 +88,7 @@ Aşağıdaki tablo, on Iki öğeli yöntemi vurgular:
 | 8 | Eşzamanlılık | Hizmetler, en güçlü makinede bulunan tek bir büyük örneği ölçeklendirmenin aksine çok sayıda küçük özdeş işleme (kopya) arasında ölçeği genişleme. |
 | 9 | Disposability | Hizmet örnekleri, sistem doğru bir durumda kalacak şekilde ölçeklenebilirlik fırsatlarını ve düzgün kapanmaların artırılmasını sağlamak için atılabilir, favoring hızlı başlatmalar olmalıdır. Doğal olarak bu gereksinimi karşılayan Docker kapsayıcıları ve bir Orchestrator ile birlikte. |
 | 10 | Geliştirme ve üretim eşliği | Ortamları uygulama yaşam döngüsü genelinde mümkün olduğunca benzer şekilde tutun, maliyetli kısayollardan kaçının. Burada, kapsayıcıları benimseme, aynı yürütme ortamını yükselterek büyük ölçüde katkıda bulunabilir. |
-| 11 | Günlüğe kaydetme | Mikro hizmetler tarafından oluşturulan günlükleri olay akışları olarak değerlendirin. Bunları bir Olay Toplayıcısı ile işleyin ve verileri Azure Izleyici veya splunk gibi veri madenciliği/günlük yönetim araçlarına ve sonuçta uzun süreli arşivleme ' ye yayın. |
+| 11 | Günlüğe Kaydetme | Mikro hizmetler tarafından oluşturulan günlükleri olay akışları olarak değerlendirin. Bunları bir Olay Toplayıcısı ile işleyin ve verileri Azure Izleyici veya splunk gibi veri madenciliği/günlük yönetim araçlarına ve sonuçta uzun süreli arşivleme ' ye yayın. |
 | 12 | Yönetici süreçler | Yönetim/Yönetim görevlerini tek bir işlem olarak çalıştırın. Görevler, bir rapor için veri temizleme ve çekme analizlerini içerebilir. Bu görevleri yürüten araçlar, üretim ortamından, ancak uygulamadan ayrı olarak çağrılmalıdır. |
 
 Kitapta, [on Iki öğeli uygulamanın ötesinde](https://content.pivotal.io/blog/beyond-the-twelve-factor-app), ilk 12 faktörün (2011 ' de yazılmıştır) her biri Için Kevin Hoffman ayrıntılarına bakın. Ayrıca, kitap, günümüzün modern bulut uygulaması tasarımını yansıtan üç ek etken de sağlar.
@@ -113,7 +113,7 @@ Arka uç Çekirdek Hizmetleri birbirleriyle nasıl iletişim kuracaktır? Bağla
 
 İletişim, ayrıntılı Bölüm 4, *bulutta yerel Iletişim desenlerinde*ele alınmıştır.
 
-*Dayanıklılık*
+*Resiliency*
 
 Mikro hizmetler mimarisi, sisteminizi işlemden işlemden ağ iletişimine taşıtan. Dağıtılmış bir ortamda, B hizmeti A hizmetinden bir çağrıya yanıt vermediğinde ne olur? Service C geçici olarak kullanılamaz duruma geldiğinde ve BT yığınını çağıran ve sistem performansını azaldıkça ne olur?
 
@@ -131,7 +131,7 @@ Hizmetinize kimin eriştiğini ve sahip oldukları izinleri nasıl tanımlayacak
 
 Kimlik, ayrıntı Bölüm 8, *kimlik*kapsamında ele alınmıştır.
 
-## <a name="microservices"></a>Mikro Hizmetler
+## <a name="microservices"></a>Mikro hizmetler
 Modern uygulamalar oluşturmak için popüler bir mimari stili olan bulut Yerel sistemleri, mikro hizmetler 'i ördir.
 
 Paylaşılan bir yapı aracılığıyla etkileşen, bir dağıtılmış küçük ve bağımsız hizmetler olarak oluşturulan mikro hizmetler aşağıdaki özellikleri paylaşır:
@@ -154,7 +154,7 @@ Paylaşılan bir yapı aracılığıyla etkileşen, bir dağıtılmış küçük
 
 Mikro hizmetlerin "bir kod temeli, bir uygulama" ilkesini, daha önce bölümünde açıklanan [on Iki öğeli uygulamadan](https://12factor.net/)nasıl yükseltileceğini aklınızda edin.
 
-> *Faktör \#1 "her bir mikro hizmet için kendi deposunda depolanan tek bir kod tabanı belirler. Sürüm denetimi ile izlenen, birden çok ortama dağıtabilir "*
+> *Faktör \#1 "her bir mikro hizmet için kendi deposunda depolanan tek bir kod temeli belirler. Sürüm denetimiyle izlenen, birden çok ortama dağıtabilir. "*
 
 ### <a name="why-microservices"></a>Mikro hizmetlerdeki neden?
 
@@ -174,13 +174,13 @@ Mikro hizmetler, herhangi bir modern geliştirme platformunda oluşturulabilir.
 
 Microsoft .NET Core platformu harika bir seçimdir. Ücretsiz ve açık kaynak olmak üzere, mikro hizmet geliştirmeyi basitleştirmek için birçok yerleşik özelliği vardır. .NET Core platformlar arası bir platformdur. Uygulamalar Windows, macOS ve Linux 'un birçok özellikleri üzerinde oluşturulabilir ve çalıştırılabilir.
 
-.NET Core yüksek performansa sahiptir ve Node. js ve diğer tamamlanan platformlar ile karşılaştırıldığında iyi bir sonuç verir. Interest, [Techempower](https://www.techempower.com/) birçok Web uygulaması platformu ve çerçevesinde çok sayıda [performans karşılaştırmalı olarak kıyaslamalarından](https://www.techempower.com/benchmarks/#section=data-r17&hw=ph&test=plaintext) oluşur. .NET Core, Node. js ve diğer rekabet platformları üzerinde en iyi 10 ' un üzerinde puanlanır. 
+.NET Core yüksek performans düzeyine sahiptir ve Node. js ve diğer rekabet platformları karşılaştırmayla iyi bir şekilde puanlanır. Interest, [Techempower](https://www.techempower.com/) birçok Web uygulaması platformu ve çerçevesinde çok sayıda [performans karşılaştırmalı olarak kıyaslamalarından](https://www.techempower.com/benchmarks/#section=data-r17&hw=ph&test=plaintext) oluşur. .NET Core, Node. js ve diğer rekabet platformları üzerinde en iyi 10 ' un üzerinde puanlanır. 
 
 .NET Core, GitHub 'da Microsoft ve .NET Community tarafından korunur. 
 
 ## <a name="containers"></a>Kapsayıcılar
 
-Günümüzde, *bulut Native*ile ilgili herhangi bir konuşmada bahsedilen terim *kapsayıcısını* dinlemek için doğal. Bu kitapta, [bulutta yerel desenler](https://www.manning.com/books/cloud-native-patterns), yazar Cornelia Davis, "kapsayıcı, bulutta yerel yazılımın harika bir etkinleştiricisidir." Cloud Native Bilgi Işlem altyapısı, mikro hizmet kapsayıcılarını, bulut Yerel ız yolculuğuna başlayan kuruluşlar için kendi [bulut Yerel izleme](https://raw.githubusercontent.com/cncf/trailmap/master/CNCF_TrailMap_latest.png) kılavuzlarındaki ilk adım olarak koyar.
+Günümüzde, *bulut Native*ile ilgili herhangi bir konuşmada bahsedilen terim *kapsayıcısını* dinlemek doğal bir terimdir. Bu kitapta, [bulutta yerel desenler](https://www.manning.com/books/cloud-native-patterns), yazar Cornelia Davis, "kapsayıcı, bulutta yerel yazılımın harika bir etkinleştiricisidir." Cloud Native Bilgi Işlem altyapısı, mikro hizmet kapsayıcılarını, bulut Yerel ız yolculuğuna başlayan kuruluşlar için kendi [bulut Yerel izleme](https://raw.githubusercontent.com/cncf/trailmap/master/CNCF_TrailMap_latest.png) kılavuzlarındaki ilk adım olarak koyar.
 
 Mikro hizmeti kapsayıcı basit ve basittir. Kod, bağımlılıkları ve çalışma zamanı, [kapsayıcı görüntüsü](https://docs.docker.com/glossary/?term=image)adlı bir ikiliye paketlenmiştir. Görüntüler, görüntüler için bir depo veya kitaplık görevi gören bir [kapsayıcı kayıt defterinde](https://caylent.com/container-registries/)saklanır. Kayıt defteri, geliştirme bilgisayarınızda, veri merkezinizde veya genel bir bulutta bulunabilir. Docker, [Docker Hub](https://hub.docker.com/)aracılığıyla ortak bir kayıt defteri tutar. Azure bulutu, kapsayıcı görüntülerinin depolandığı bir [kapsayıcı kayıt defterinin](https://azure.microsoft.com/services/container-registry/) özelliklerini çalıştıracak bulut uygulamalarına yakın bir şekilde depolar.
 
@@ -224,12 +224,12 @@ Aşağıdaki tabloda, yaygın düzenleme görevleri açıklanmaktadır.
 
 |  Görevler | Açıklama  |
 | :-------- | :-------- |
-| Zamanlama | Kapsayıcı örneklerini otomatik olarak sağlayın.|
+| Planlama | Kapsayıcı örneklerini otomatik olarak sağlayın.|
 | Benzeşim/benzeşim önleme | Kullanılabilirlik ve performansa yardımcı olmak için, birbirleriyle yakın veya uzak kapsayıcıları sağlayın. |
-| Sistem durumunu izleme | Sorunları otomatik olarak algıla ve düzelt.|
-| Yük Devretme | Başarısız örneği sağlıklı makinelere otomatik olarak yeniden sağlayın.|
-| Ölçeklendirme | Talebi karşılamak için kapsayıcı örneğini otomatik olarak ekleyin veya kaldırın.|
-| Networking (Ağ İletişimi) | Kapsayıcı iletişimi için bir ağ kaplamasını yönetin.|
+| Sistem durumu izleme | Sorunları otomatik olarak algıla ve düzelt.|
+| Yükünü | Başarısız örneği sağlıklı makinelere otomatik olarak yeniden sağlayın.|
+| Lemeyle | Talebi karşılamak için kapsayıcı örneğini otomatik olarak ekleyin veya kaldırın.|
+| Ağ Oluşturma | Kapsayıcı iletişimi için bir ağ kaplamasını yönetin.|
 | Hizmet bulma | Kapsayıcıları, birbirini bulacak şekilde etkinleştirin.|
 | Çalışırken yükseltmeler | Sıfır kesinti dağıtımıyla artımlı yükseltmeleri koordine edin. Sorunlu değişiklikleri otomatik olarak geri alma.|
 
@@ -277,7 +277,7 @@ Bulut satıcıları, kendi özel destek hizmetleriyle iletişim kurması için A
 
 Yedekleme Hizmetleri, ayrıntılı Bölüm 5, *bulutta yerel veri desenleri*ve Bölüm 4, *bulutta yerel iletişim desenlerinde*ele alınmıştır.
 
-## <a name="automation"></a>Otomasyon
+## <a name="automation"></a>Otomatikleştirme
 
 Gördüğünüz gibi, bulut Yerel sistemleri, hızlı ve çeviklik sağlamak için mikro hizmetleri, kapsayıcıları ve modern sistem tasarımını imine dönüştürür. Ancak bu yalnızca hikayenin bir parçasıdır. Bu sistemlerin üzerinde çalıştığı bulut ortamlarını nasıl sağlayacaksınız? Uygulama özelliklerini ve güncelleştirmelerini hızlı bir şekilde nasıl dağıtırsınız? Tam resmi nasıl yuvarlıyorsunuz?
 
@@ -287,7 +287,7 @@ IAC ile platform sağlamayı ve uygulama dağıtımını otomatikleştirin. Asl�
 
 ### <a name="automating-infrastructure"></a>Altyapıyı otomatikleştirme
 
-[Azure Resource Manager](https://azure.microsoft.com/documentation/articles/resource-group-overview/), [Terrampaform ve [Azure CLI](https://docs.microsoft.com/cli/azure/?view=azure-cli-latest)gibi araçlar, ihtiyacınız olan bulut altyapısını bildirimli olarak betiğe olanak sağlar. Kaynak adları, konumlar, kapasiteler ve gizlilikler parametreleştirilenir ve dinamik. Betik sürümlenmiş ve projenizin yapıtı olarak kaynak denetimine iade edildi. Sistem ortamlarında QA, hazırlık ve üretim gibi tutarlı ve yinelenebilir bir altyapı sağlamak için betiği çağırılır. 
+[Azure Resource Manager](https://azure.microsoft.com/documentation/articles/resource-group-overview/), teraform ve [Azure CLI](https://docs.microsoft.com/cli/azure/)gibi araçlar, ihtiyacınız olan bulut altyapısını bildirimli olarak betiğe olanak sağlar. Kaynak adları, konumlar, kapasiteler ve gizlilikler parametreleştirilenir ve dinamik. Betik sürümlenmiş ve projenizin yapıtı olarak kaynak denetimine iade edildi. Sistem ortamlarında QA, hazırlık ve üretim gibi tutarlı ve yinelenebilir bir altyapı sağlamak için betiği çağırılır. 
 
 IAC, ıdempotent ' dir. Bu, yan etkileri olmadan aynı betiği çalıştırabilmeniz anlamına gelir. Ekibin bir değişiklik yapması gerekiyorsa betiği düzenleyip yeniden çalıştırır. Yalnızca güncelleştirilmiş kaynaklar etkilenir.
 
