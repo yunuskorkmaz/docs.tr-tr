@@ -1,21 +1,21 @@
 ---
-title: "Nasıl yapılır: (Visual Basic) XML'den metin dosyaları oluştur"
+title: "Nasıl yapılır: XML 'den metin dosyaları oluşturma (Visual Basic)"
 ms.date: 07/20/2015
 ms.assetid: 3b33f191-4abe-4419-b81b-3cb81d9a317f
-ms.openlocfilehash: 6273152995b458da110a2bda56ebdc35d49b6769
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1b383a0f3656558286bfe449ed72c633426b9410
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61780334"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320533"
 ---
-# <a name="how-to-generate-text-files-from-xml-visual-basic"></a><span data-ttu-id="719c9-102">Nasıl yapılır: (Visual Basic) XML'den metin dosyaları oluştur</span><span class="sxs-lookup"><span data-stu-id="719c9-102">How to: Generate Text Files from XML (Visual Basic)</span></span>
-<span data-ttu-id="719c9-103">Bu örnek, bir XML dosyasından bir virgülle ayrılmış değerler (CSV) dosyası oluşturmak nasıl gösterir.</span><span class="sxs-lookup"><span data-stu-id="719c9-103">This example shows how to generate a comma-separated values (CSV) file from an XML file.</span></span>  
+# <a name="how-to-generate-text-files-from-xml-visual-basic"></a><span data-ttu-id="6942f-102">Nasıl yapılır: XML 'den metin dosyaları oluşturma (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6942f-102">How to: Generate Text Files from XML (Visual Basic)</span></span>
+<span data-ttu-id="6942f-103">Bu örnek, bir XML dosyasından bir virgülle ayrılmış değerler (CSV) dosyasının nasıl oluşturulacağını gösterir.</span><span class="sxs-lookup"><span data-stu-id="6942f-103">This example shows how to generate a comma-separated values (CSV) file from an XML file.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="719c9-104">Örnek</span><span class="sxs-lookup"><span data-stu-id="719c9-104">Example</span></span>  
- <span data-ttu-id="719c9-105">Visual Basic sürümü, tek bir dize dizeleri koleksiyona toplamak için yordam kodu kullanır.</span><span class="sxs-lookup"><span data-stu-id="719c9-105">The Visual Basic version uses procedural code to aggregate the collection of strings into a single string.</span></span>  
+## <a name="example"></a><span data-ttu-id="6942f-104">Örnek</span><span class="sxs-lookup"><span data-stu-id="6942f-104">Example</span></span>  
+ <span data-ttu-id="6942f-105">Visual Basic sürümü, dizeler koleksiyonunu tek bir dizeye toplamak için yordamsal kodu kullanır.</span><span class="sxs-lookup"><span data-stu-id="6942f-105">The Visual Basic version uses procedural code to aggregate the collection of strings into a single string.</span></span>  
   
- <span data-ttu-id="719c9-106">Bu örnek aşağıdaki XML belgesi kullanır: [Örnek XML dosyası: Müşteriler ve siparişler (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="719c9-106">This example uses the following XML document: [Sample XML File: Customers and Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).</span></span>  
+ <span data-ttu-id="6942f-106">Bu örnek, şu XML belgesini kullanır: [örnek xml dosyası: müşteriler ve siparişler (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="6942f-106">This example uses the following XML document: [Sample XML File: Customers and Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).</span></span>  
   
 ```vb  
 Dim custOrd As XElement = XElement.Load("CustomersOrders.xml")  
@@ -42,15 +42,15 @@ Next
 Console.WriteLine(sb.ToString())  
 ```  
   
- <span data-ttu-id="719c9-107">Bu kod aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="719c9-107">This code produces the following output:</span></span>  
+ <span data-ttu-id="6942f-107">Bu kod aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="6942f-107">This code produces the following output:</span></span>  
   
-```  
+```console  
 GREAL,Great Lakes Food Market,Howard Snyder,Marketing Manager,(503) 555-7555,2732 Baker Blvd.,Eugene,OR,97403,USA  
 HUNGC,Hungry Coyote Import Store,Yoshi Latimer,Sales Representative,(503) 555-6874,City Center Plaza 516 Main St.,Elgin,OR,97827,USA  
 LAZYK,Lazy K Kountry Store,John Steel,Marketing Manager,(509) 555-7969,12 Orchestra Terrace,Walla Walla,WA,99362,USA  
 LETSS,Let's Stop N Shop,Jaime Yorres,Owner,(415) 555-5938,87 Polk St. Suite 5,San Francisco,CA,94117,USA  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="719c9-108">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="719c9-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6942f-108">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="6942f-108">See also</span></span>
 
-- [<span data-ttu-id="719c9-109">Projeksiyonlar ve Dönüşümler (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="719c9-109">Projections and Transformations (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+- [<span data-ttu-id="6942f-109">Tahminler ve dönüşümler (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6942f-109">Projections and Transformations (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
