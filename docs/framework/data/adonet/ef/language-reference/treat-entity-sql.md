@@ -2,19 +2,19 @@
 title: IŞLE (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 5b77f156-55de-4cb4-8154-87f707d4c635
-ms.openlocfilehash: b7393bef32b3e057eca51eb516cb72cd2de126c2
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 38099fa83ed78b40d46faeb5e617157f7aa7c1a1
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70248962"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319256"
 ---
 # <a name="treat-entity-sql"></a>IŞLE (Entity SQL)
 Belirli bir temel türdeki bir nesneyi belirtilen türetilmiş türün bir nesnesi olarak değerlendirir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```sql  
 TREAT ( expression as type)  
 ```  
   
@@ -35,36 +35,36 @@ TREAT ( expression as type)
  Belirtilen veri türünde bir değer.  
   
 ## <a name="remarks"></a>Açıklamalar  
- IŞLE ilgili sınıflar arasında yukarı atama gerçekleştirmek için kullanılır. Örneğin `Employee` , `TREAT(p AS NamespaceName.Employee)` `Person` `Employee` vep`Employee`türünden türetürse, genel bir örneği ' a aktarır; Yani, p 'yi kabul etmenizi sağlar. `Person` `Person`  
+ IŞLE ilgili sınıflar arasında yukarı atama gerçekleştirmek için kullanılır. Örneğin, `Employee` `Person` ' den türetilse ve p `Person` türündedir, `TREAT(p AS NamespaceName.Employee)` bir genel `Person` örneğini `Employee` ' e aktarır; Yani, p 'yi `Employee` olarak değerlendirmesine olanak tanır.  
   
  DEĞERLENDIR, aşağıdaki gibi bir sorgu yapabileceğiniz devralma senaryolarında kullanılır:  
   
-```  
+```sql  
 SELECT TREAT(p AS NamespaceName.Employee)  
 FROM ContainerName.Person AS p  
 WHERE p IS OF (NamespaceName.Employee)   
 ```  
   
- Bu sorgu, `Person` `Employee` varlıkları türüne aktarır. P değeri gerçekten tür `Employee`değilse, ifade değeri `null`verir.  
+ Bu sorgu `Person` varlıklarını `Employee` türüne yukarı aktarır. P değeri gerçekten `Employee` türünde değilse, ifade `null` değerini verir.  
   
 > [!NOTE]
-> Belirtilen ifade `Employee` , belirtilen veri türünün `Person`bir alt türü olmalıdır veya veri türü ifadenin bir alt türü olmalıdır. Aksi takdirde, ifade derleme zamanı hatasına neden olur.  
+> @No__t-0 belirtilen ifadesi belirtilen veri türünün bir alt türü olmalıdır `Person` veya veri türü ifadenin bir alt türü olmalıdır. Aksi takdirde, ifade derleme zamanı hatasına neden olur.  
   
  Aşağıdaki tabloda, bazı tipik desenler ve bazı daha az ortak desenler üzerinde işleme davranışı gösterilmektedir. Sağlayıcı çağrılmadan önce istemci tarafında tüm özel durumlar atılır:  
   
 |Desen|Davranış|  
 |-------------|--------------|  
-|`TREAT (null AS EntityType)`|Döndürür `DbNull`.|  
+|`TREAT (null AS EntityType)`|@No__t-0 döndürür.|  
 |`TREAT (null AS ComplexType)`|Bir özel durum oluşturur.|  
 |`TREAT (null AS RowType)`|Bir özel durum oluşturur/|  
-|`TREAT (EntityType AS EntityType)`|`EntityType` Veya`null`döndürür.|  
+|`TREAT (EntityType AS EntityType)`|@No__t-0 veya `null` döndürür.|  
 |`TREAT (ComplexType AS ComplexType)`|Bir özel durum oluşturur.|  
 |`TREAT (RowType AS RowType)`|Bir özel durum oluşturur.|  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki [!INCLUDE[esql](../../../../../../includes/esql-md.md)] sorgu, bir nesne türünü onsitekurs türünde bir nesne koleksiyonuna dönüştürmek için değerlendir işlecini kullanır. Sorgu, [okul modelini](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896300(v=vs.100))temel alır.  
+ Aşağıdaki [!INCLUDE[esql](../../../../../../includes/esql-md.md)] sorgusu, bir nesne türünün bir nesnesini Onsitekurs türünde bir nesne koleksiyonuna dönüştürmek için DEĞERLENDIR işlecini kullanır. Sorgu, [okul modelini](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896300(v=vs.100))temel alır.  
   
- [!code-csharp[DP EntityServices Concepts 2#TREAT_ISOF](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#treat_isof)]  
+ [!code-sql[DP EntityServices Concepts#TREAT_ISOF](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#treat_isof)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
