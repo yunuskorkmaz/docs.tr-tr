@@ -5,65 +5,65 @@ helpviewer_keywords:
 - WCF [WCF], documentation
 - Windows Communication Foundation [WCF], documentation
 ms.assetid: 2aa18c85-a4fd-4bb9-986a-a8249e4f8e0e
-ms.openlocfilehash: 7458caee29d576d8a9d38f01027c106d39a1daf2
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 12408bd9f10e7ed147a6c1adc0497d3b8d797e42
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591927"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319817"
 ---
 # <a name="guide-to-the-documentation"></a>Belgeler için Kılavuz
-Sağlanan Windows Communication Foundation (WCF) belgeler hakkında yönergeler aşağıda verilmiştir. Bağlantılı belgeleri başlangıç noktaları belirli ilgi alanlarına ve uzmanlık düzeylerine göre gruplandırılmış önerilir.  
+Burada verilen Windows Communication Foundation (WCF) belgeleriyle ilgili rehberlik vardır. Bağlantılı belgeler, belirli ilgi alanları ve uzmanlık düzeylerine göre gruplanan başlangıç noktaları için önerilir.  
   
- Belgeler ve Yardım Görüntüleyicisi tek başına bir sürümünü yüklemek için Yükle [Microsoft Windows SDK'sı v 7.1](https://go.microsoft.com/fwlink/?LinkID=194146&clcid=0x409).  
+ Belge ve Yardım Görüntüleyicisi 'nin tek başına bir sürümünü yüklemek için, [Microsoft Windows SDK v 7,1](https://go.microsoft.com/fwlink/?LinkID=194146&clcid=0x409)' yi indirin.  
   
-## <a name="new-to-windows-communication-foundation-programming"></a>Yeni Windows Communication Foundation programlama  
+## <a name="new-to-windows-communication-foundation-programming"></a>Windows Communication Foundation programlamaya yeni  
   
-- WCF ile programlama kullanmaya yeni başladıysanız ve yalnızca iş, listelenen konulara bakın örnek uygulamalar öğrenmek istiyorsanız [Windows Communication Foundation örnekleri](../../../docs/framework/wcf/samples/index.md).  
+- WCF ile programlama konusunda yeni olduğunuzda ve yalnızca çalışan örnek uygulamaları görmek istiyorsanız, [Windows Communication Foundation örneklerde](./samples/index.md)listelenen konulara bakın.  
   
-- Bir WCF hizmeti ve istemci oluşturmanın temel adımları anlatan bir öğretici için bkz. [başlangıç Öğreticisi](../../../docs/framework/wcf/getting-started-tutorial.md).  
+- WCF hizmeti ve istemcisi oluşturma hakkında temel adımlarda izlenecek bir öğretici için bkz. [Başlangıç Öğreticisi](getting-started-tutorial.md).  
   
-- WCF kavramları ilginizi çeken konulardaki değilse [kavramsal genel bakış](../../../docs/framework/wcf/conceptual-overview.md) bölümü.  
+- WCF 'nin arkasındaki kavramlarla ilgileniyorsanız [kavramsal genel bakış](conceptual-overview.md) bölümündeki konulara bakın.  
   
-- İstemci/sunucu güvenlik yapılandırmalarını grafik örneklerini görmek için bkz: [ortak güvenlik senaryoları](../../../docs/framework/wcf/feature-details/common-security-scenarios.md).  
+- İstemci/sunucu güvenlik yapılandırmalarının grafik örneklerini görmek için bkz. [ortak güvenlik senaryoları](./feature-details/common-security-scenarios.md).  
   
-## <a name="programming-in-depth"></a>Ayrıntılı programlama  
+## <a name="programming-in-depth"></a>Derinlemesine programlama  
   
-- Uygulama geliştirmeye başlamak için bkz hazırsanız [temel WCF programlama](../../../docs/framework/wcf/basic-wcf-programming.md).  
+- Bir uygulama geliştirmeye başlamaya hazırsanız bkz. [Temel WCF programlama](basic-wcf-programming.md).  
   
-- Belirli bir özellik veya WCF yetenek hakkında yönergeler arıyorsanız Bkz altında [WCF özellik ayrıntıları](../../../docs/framework/wcf/feature-details/index.md).  
+- Belirli bir özellik veya WCF özelliği hakkında rehberlik arıyorsanız, [WCF özellik ayrıntıları](./feature-details/index.md)altındaki konulara bakın.  
   
-- Genişletme veya gereksinimlerinize uyacak WCF özelleştirmek istiyorsanız, [genişletme WCF](../../../docs/framework/wcf/extending/index.md).  
+- WCF 'yi gereksinimlerinize uyacak şekilde genişletmek veya özelleştirmek isterseniz bkz. [WCF genişletme](./extending/index.md).  
   
-- Oluşturma ve WCF uygulamalarında hata ayıklamak için yardımcı araçlar hakkında daha fazla bilgi için bkz. [Windows Communication Foundation Araçları](../../../docs/framework/wcf/tools.md).  
+- WCF uygulamaları oluşturmaya ve hata ayıklamanıza yardımcı olan araçlar hakkında daha fazla bilgi için bkz. [Windows Communication Foundation araçları](tools.md).  
   
-- Yapılandırma XML dosyalarını kullanarak, WCF hizmetleri ve istemcilerin programlama birincil bir yoludur. Yapılandırma dosyalarında kullanılan XML öğeleri için başvuru belgeleri için bkz. [WCF yapılandırma şeması](../../../docs/framework/configure-apps/file-schema/wcf/index.md).  
+- XML dosyalarını kullanan yapılandırma, WCF Hizmetleri ve istemcilerini programlamanın birincil yoludur. Yapılandırma dosyalarında kullanılan XML öğelerine ilişkin başvuru belgeleri için bkz. [WCF yapılandırma şeması](../configure-apps/file-schema/wcf/index.md).  
   
 ## <a name="troubleshooting"></a>Sorun giderme  
- WCF ile ilgili yaygın sorunları giderme hakkında daha fazla bilgi için bkz: [WCF sorun giderme hızlı başlangıcı](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md).  
+ Yaygın WCF sorunlarını giderme hakkında daha fazla bilgi için bkz. [WCF sorun giderme hızlı başlangıç](wcf-troubleshooting-quickstart.md).  
   
-## <a name="using-windows-communication-foundation-with-other-technologies"></a>Diğer teknolojiler ile Windows Communication Foundation'ı kullanma  
+## <a name="using-windows-communication-foundation-with-other-technologies"></a>Diğer teknolojilerle Windows Communication Foundation kullanma  
   
-- ASP.NET istemcileri ile iletişim kuran bir hizmet oluşturmak için bkz: [nasıl yapılır: WCF hizmetini ASP.NET Web hizmeti istemcileriyle birlikte çalışmak için yapılandırma](../../../docs/framework/wcf/feature-details/config-wcf-service-with-aspnet-web-service.md).  
+- ASP.NET istemcilerle iletişim kuran bir hizmet oluşturmak için bkz. [nasıl yapılır: WCF hizmetini ASP.NET Web hizmeti istemcileriyle birlikte çalışmak üzere yapılandırma](./feature-details/config-wcf-service-with-aspnet-web-service.md).  
   
-- .NET Framework uzaktan iletişimi ile tümleştirme içinde açıklanan [.NET uzaktan iletişim uygulamalarını wcf'ye geçirme](../../../docs/framework/wcf/feature-details/migrating-net-remoting-applications-to-wcf.md).  
+- .NET Framework uzaktan iletişim ile tümleştirme, [.NET uzaktan Iletişim UYGULAMALARıNı WCF 'ye geçirme](./feature-details/migrating-net-remoting-applications-to-wcf.md)konusunda açıklanmaktadır.  
   
-- Varolan bir COM + uygulaması bir WCF hizmeti veya istemci ile tümleştirmek için bkz: [COM + uygulamaları ile tümleştirme genel bakış](../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications-overview.md).  
+- Mevcut bir COM+ uygulamasını bir WCF hizmeti veya istemcisiyle tümleştirmek için bkz. [com+ uygulamalarıyla tümleştirme genel bakış](./feature-details/integrating-with-com-plus-applications-overview.md).  
   
-- Mevcut bir COM uygulamasını bir WCF hizmeti veya istemci ile tümleştirmek için bkz: [COM uygulamaları ile tümleştirme](../../../docs/framework/wcf/feature-details/integrating-with-com-applications.md).  
+- Mevcut bir COM uygulamasını bir WCF hizmeti veya istemcisiyle tümleştirmek için bkz. [com uygulamalarıyla tümleştirme](./feature-details/integrating-with-com-applications.md).  
   
-- Mevcut bir MSMQ uygulamasını bir WCF hizmeti veya istemci ile tümleştirmek için bkz: [nasıl yapılır: Exchange ileti WCF uç noktaları ile kuyruğa alınan](../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md) ve [nasıl yapılır: WCF uç noktaları ile mesaj alışverişi ve ileti kuyruğa alma uygulamaları](../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md).  
+- Mevcut bir MSMQ uygulamasını bir WCF hizmeti veya istemcisiyle bütünleştirmek için bkz. [nasıl yapılır: WCF uç noktaları Ile sıraya alınan Iletileri Exchange](./feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md) ve [nasıl yapılır: WCF uç noktaları ve Message Queuing uygulamaları ile Exchange iletileri](./feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md).  
   
-- Bir hizmeti barındırmak için Internet Information Services (IIS) kullanmak için bkz: [barındırma hizmetleri](../../../docs/framework/wcf/hosting-services.md).  
+- Bir hizmeti barındırmak için Internet Information Services (IIS) kullanmak için bkz. [barındırma hizmetleri](hosting-services.md).  
   
-- WCF Web Hizmetleri uzantıları (WSE) 3.0 hizmeti kullanmak üzere kullanmak için bkz: [nasıl yapılır: WSE 3.0 erişimi hizmet](../../../docs/framework/wcf/feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md).  
+- WCF 'yi bir Web Hizmetleri uzantıları (WI) 3,0 hizmetini kullanmak üzere kullanmak için bkz. [nasıl yapılır: wvas 3,0 hizmetine erişme](./feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md).  
   
-## <a name="ws--protocols-supported-in-windows-communication-foundation"></a>WS-* Windows Communication Foundation'ı Desteklenen protokoller  
- Sistem tarafından sağlanan bağlamalar desteklenen protokollerin bir listesini görmek için bkz: [Web Hizmetleri protokolleri desteklenen System-Provided birlikte kullanılabilirlik bağlamaları ile](../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md). Sistem tarafından sağlanan bağlamalar listesini görmek için bkz: [System-Provided bağlamaları](../../../docs/framework/wcf/system-provided-bindings.md).  
+## <a name="ws--protocols-supported-in-windows-communication-foundation"></a>Windows Communication Foundation 'de desteklenen WS-* protokolleri  
+ Sistem tarafından belirtilen bağlamalarda desteklenen protokollerin listesini görmek için, bkz. sistem tarafından [sunulan birlikte çalışabilirlik bağlamaları tarafından desteklenen Web Hizmetleri protokolleri](./feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md). Sistem tarafından sunulan bağlamaların listesini görmek için bkz. [sistem tarafından sunulan bağlamalar](system-provided-bindings.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Windows Communication Foundation Örnekleri](../../../docs/framework/wcf/samples/index.md)
-- [Kavramsal Genel Bakış](../../../docs/framework/wcf/conceptual-overview.md)
-- [Yönergeler ve En İyi Yöntemler](../../../docs/framework/wcf/guidelines-and-best-practices.md)
-- [İstemci Derleme](../../../docs/framework/wcf/building-clients.md)
+- [Windows Communication Foundation Örnekleri](./samples/index.md)
+- [Kavramsal Genel Bakış](conceptual-overview.md)
+- [Yönergeler ve En İyi Yöntemler](guidelines-and-best-practices.md)
+- [İstemci Derleme](building-clients.md)

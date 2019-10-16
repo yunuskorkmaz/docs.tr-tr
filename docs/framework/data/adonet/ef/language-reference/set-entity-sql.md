@@ -2,19 +2,19 @@
 title: AYARLA (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 28b4deac-c7e4-4f09-b428-4d352ef2dc94
-ms.openlocfilehash: 76999bcbbb3b63fd945d2048734c58d97de8baea
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 9d4cdeac317509fd61741a19276a6764a1c2bfce
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70249234"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319348"
 ---
 # <a name="set-entity-sql"></a>AYARLA (Entity SQL)
 KÜME ifadesi, tüm yinelenen öğelerle kaldırılan yeni bir koleksiyon sunarak bir nesne koleksiyonunu bir kümesine dönüştürmek için kullanılır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```sql  
 SET ( expression )  
 ```  
   
@@ -23,22 +23,22 @@ SET ( expression )
  Bir koleksiyon döndüren geçerli bir sorgu ifadesi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Küme ifadesi `SET(c)` aşağıdaki SELECT deyimine mantıksal olarak eşdeğerdir:  
+ @No__t-0 kümesi ifadesi aşağıdaki SELECT deyimine mantıksal olarak eşdeğerdir:  
   
-```  
+```sql  
 SELECT VALUE DISTINCT c FROM c  
 ```  
   
- `SET`, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] ayarlanan işleçlerden biridir. Tüm [!INCLUDE[esql](../../../../../../includes/esql-md.md)] küme işleçleri soldan sağa değerlendirilir. Bkz [](except-entity-sql.md) . [!INCLUDE[esql](../../../../../../includes/esql-md.md)] set işleçleri için öncelik bilgileri hariç.  
+ `SET`, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] kümesi işleçlerinden biridir. Tüm [!INCLUDE[esql](../../../../../../includes/esql-md.md)] kümesi işleçleri soldan sağa değerlendirilir. @No__t-1 kümesi işleçleri için öncelik bilgisi [hariç](except-entity-sql.md) bölümüne bakın.  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki Entity SQL sorgu bir nesne koleksiyonunu bir kümesine dönüştürmek için SET ifadesini kullanır. Sorgu AdventureWorks Sales modelini temel alır. Bu sorguyu derlemek ve çalıştırmak için aşağıdaki adımları izleyin:  
   
-1. [Aşağıdaki adımları uygulayın: PrimitiveType sonuçları](../how-to-execute-a-query-that-returns-primitivetype-results.md)döndüren bir sorgu yürütün.  
+1. [Nasıl yapılır: PrimitiveType sonuçları döndüren bir sorgu yürütme](../how-to-execute-a-query-that-returns-primitivetype-results.md)bölümündeki yordamı izleyin.  
   
 2. Aşağıdaki sorguyu `ExecutePrimitiveTypeQuery` yöntemine bir bağımsız değişken olarak geçirin:  
   
- [!code-csharp[DP EntityServices Concepts 2#SET](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#set)]  
+ [!code-sql[DP EntityServices Concepts#SET](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#set)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

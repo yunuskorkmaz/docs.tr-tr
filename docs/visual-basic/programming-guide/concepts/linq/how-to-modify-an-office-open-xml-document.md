@@ -1,23 +1,23 @@
 ---
-title: 'Nasıl yapılır: Office Open XML belgesi (Visual Basic) değiştirme'
+title: 'Nasıl yapılır: bir Office Open XML belgesini değiştirme (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 1cefd7f5-8e39-44c4-869c-f8021538a777
-ms.openlocfilehash: 5ec5451112855b687abded3ec64dda18423881f1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0eb8704608fa7d529b32e44e754c0274d7a67b1d
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61942564"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319954"
 ---
-# <a name="how-to-modify-an-office-open-xml-document-visual-basic"></a>Nasıl yapılır: Office Open XML belgesi (Visual Basic) değiştirme
-Bu konuda kaydeder Office Open XML belge açılır ve değiştirdiği bir örnek sunulmaktadır.  
+# <a name="how-to-modify-an-office-open-xml-document-visual-basic"></a>Nasıl yapılır: bir Office Open XML belgesini değiştirme (Visual Basic)
+Bu konu, bir Office Open XML belgesi açan, değiştiren ve kaydeden bir örnek gösterir.  
   
- Office Open XML hakkında daha fazla bilgi için bkz. [Eric White'nın Blog](http://www.ericwhite.com).  
+ Office Open XML hakkında daha fazla bilgi için bkz. [Eric beyaz blogu](http://www.ericwhite.com).  
   
 ## <a name="example"></a>Örnek  
- Bu örnek, belgede ilk paragraf öğesini bulur. Paragrafın metni alır ve sonra da tüm metin siler paragrafta çalışır. Büyük harfe dönüştürülmüş ilk paragrafa metin içeren yeni metin çalıştırma oluşturur. Open XML pakete değiştirilmiş XML seri hale getirir ve bunu kapatır.  
+ Bu örnek belgedeki ilk paragraf öğesini bulur. Paragraftan metni alır ve ardından paragraftaki tüm metin çalıştırmalarını siler. Büyük harfe dönüştürülmüş ilk paragraf metniyle oluşan yeni bir metin çalıştırması oluşturur. Daha sonra değiştirilmiş XML 'i Open XML paketine serileştirir ve kapatır.  
   
- Bu örnekte WindowsBase derlemede bulunan sınıfları kullanır. Türleri kullanan <xref:System.IO.Packaging?displayProperty=nameWithType> ad alanı.  
+ Bu örnek, WindowsBase derlemesinde bulunan sınıfları kullanır. @No__t-0 ad alanındaki türleri kullanır.  
   
 ```vb  
 Imports <xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">  
@@ -135,11 +135,11 @@ Module Module1
 End Module  
 ```  
   
- Açarsanız `SampleDoc.docx` bu programını çalıştırdıktan sonra bu program belgedeki ilk paragrafa büyük harfe dönüştürülmüş görebilirsiniz.  
+ Bu programı çalıştırdıktan sonra `SampleDoc.docx` ' ı açarsanız, bu programın belgedeki ilk paragrafı büyük harflere dönüştürdüğünü görebilirsiniz.  
   
- Açıklanan örnek Open XML belge çalıştırdığınızda [kaynak Office Open XML belgesi (Visual Basic) oluşturulmasını](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md), bu örnek aşağıdaki çıktıyı üretir:  
+ [Kaynak Office Open XML belgesi (Visual Basic) oluşturma](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)bölümünde açıklanan örnek Open XML belgesiyle birlikte çalıştırıldığında, bu örnek aşağıdaki çıktıyı üretir:  
   
-```  
+```console  
 New first paragraph: >PARSING WORDPROCESSINGML WITH LINQ TO XML<  
 ```  
   

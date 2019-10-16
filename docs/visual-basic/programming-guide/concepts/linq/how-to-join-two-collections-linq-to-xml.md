@@ -1,37 +1,37 @@
 ---
-title: 'Nasıl yapılır: (LINQ to XML) iki koleksiyonu birleştirme (Visual Basic)'
+title: 'Nasıl yapılır: Iki koleksiyonu birleştirin (LINQ to XML) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 5a5758d4-906b-4285-908d-5b930db192e6
-ms.openlocfilehash: 85689fa756ab20a4dcd054b70eb3003c767936ea
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cb39895ec5916eb417fb2a161e7c1307087c09c5
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61778059"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320571"
 ---
-# <a name="how-to-join-two-collections-linq-to-xml-visual-basic"></a>Nasıl yapılır: (LINQ to XML) iki koleksiyonu birleştirme (Visual Basic)
-Bazen bir öğe veya öznitelik XML belgesindeki başka bir öğe veya öznitelik başvurabilir. Örneğin, [örnek XML dosyası: Müşteriler ve siparişler (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md) XML belgesi, müşterilerin listesini ve siparişlerinin listesi içerir. Her `Customer` öğesi içeren bir `CustomerID` özniteliği. Her `Order` öğesi içeren bir `CustomerID` öğesi. `CustomerID` Öğesi her sırada başvurduğu `CustomerID` öznitelik bir müşteri.  
+# <a name="how-to-join-two-collections-linq-to-xml-visual-basic"></a>Nasıl yapılır: Iki koleksiyonu birleştirin (LINQ to XML) (Visual Basic)
+XML belgesindeki bir öğe veya öznitelik, bazen başka bir öğe veya özniteliğe başvurabilir. Örneğin, [örnek xml dosyası: müşteriler ve siparişler (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md) XML belgesi, müşterilerin ve siparişlerin listesinin bir listesini içerir. Her `Customer` öğesi bir `CustomerID` özniteliği içerir. Her `Order` öğesi bir `CustomerID` öğesi içerir. Her bir siparişte `CustomerID` öğesi, bir müşterinin `CustomerID` özniteliğine başvurur.  
   
- Konu [örnek XSD dosyası: Müşteriler ve siparişler](../../../../visual-basic/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders.md) bu belgeyi doğrulamak için kullanılan bir XSD içerir. Kullandığı `xs:key` ve `xs:keyref` , kurmak için XSD özelliklerinin `CustomerID` özniteliği `Customer` öğesi olan bir anahtar ve arasında ilişki kurmak için `CustomerID` her öğe `Order` öğesi ve `CustomerID` her öznitelik `Customer` öğesi.  
+ [Örnek xsd dosyası: müşteriler ve siparişler](../../../../visual-basic/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders.md) , bu belgeyi doğrulamak için KULLANıLABILECEK bir xsd içerir. @No__t-3 öğesinin `CustomerID` özniteliğinin bir anahtar olduğunu ve her `Order` öğesinde `CustomerID` öğesi ile her `Customer` öğesindeki `CustomerID` özniteliğinde bir ilişki kurmayı belirlemek için, XSD 'nin `xs:key` ve `xs:keyref` özelliklerini kullanır.  
   
- İle [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], bu ilişkinin kullanarak yararlanabilirsiniz `Join` yan tümcesi.  
+ @No__t-0 ile, `Join` yan tümcesini kullanarak bu ilişkiyi kullanabilirsiniz.  
   
- Kullanılabilir hiçbir dizin olduğundan birleştirme gibi zayıf çalışma zamanı performansını olacağını unutmayın.  
+ Kullanılabilir dizin olmadığından, bu tür bir birleştirme çalışma zamanı performansına sahip olacaktır.  
   
- Hakkında ayrıntılı bilgi için `Join`, bkz: [birleştirme işlemleri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/join-operations.md).  
+ @No__t-0 hakkında daha ayrıntılı bilgi için bkz. [JOIN Operations (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/join-operations.md).  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek birleştirmeleri `Customer` öğelerine `Order` öğeleri içeren yeni bir XML belgesi oluşturur `CompanyName` siparişlerin öğesi.  
+ Aşağıdaki örnek, `Customer` öğelerini `Order` öğelerine birleştirir ve siparişlerdeki `CompanyName` öğesini içeren yeni bir XML belgesi oluşturur.  
   
- Örnek Belge şemada uygun doğrular sorguyu çalıştırmadan önce [örnek XSD dosyası: Müşteriler ve siparişler](../../../../visual-basic/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders.md). Bu, JOIN yan tümcesi her zaman çalışmasını sağlar.  
+ Sorguyu yürütmeden önce örnek, belgenin örnek XSD dosyasındaki şemayla uyumlu olduğunu doğrular [: müşteriler ve siparişler](../../../../visual-basic/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders.md). Bu, JOIN yan tümcesinin her zaman çalışmasına de sağlar.  
   
- Bu sorgu tüm ilk alır `Customer` öğeleri ve bunları birleştirir `Order` öğeleri. Yalnızca müşterilerle siparişler seçen bir `CustomerID` "K" büyüktür. Ardından yeni bir proje `Order` her sipariş içindeki müşteri bilgileri içeren öğe.  
+ Bu sorgu ilk olarak tüm `Customer` öğelerini alır ve sonra bunları `Order` öğelerine birleştirir. Yalnızca, "K" dan büyük `CustomerID` ' a sahip müşterilere ait siparişleri seçer. Ardından, her bir sırada müşteri bilgilerini içeren yeni bir `Order` öğesi projeler olur.  
   
- Bu örnek aşağıdaki XML belgesi kullanır: [Örnek XML dosyası: Müşteriler ve siparişler (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).  
+ Bu örnek, şu XML belgesini kullanır: [örnek xml dosyası: müşteriler ve siparişler (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).  
   
- Bu örnek aşağıdaki XSD şeması kullanır: [Örnek XSD Dosyası: Müşteriler ve siparişler](../../../../visual-basic/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders.md).  
+ Bu örnek şu XSD şemasını kullanır: [örnek xsd dosyası: müşteriler ve siparişler](../../../../visual-basic/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders.md).  
   
- Bu şekilde katılma çok iyi gerçekleştirmez olduğunu unutmayın. Birleşimler, doğrusal bir arama yoluyla gerçekleştirilir. Karma tabloları veya performansa yardımcı olmak için dizinleri yoktur.  
+ Bu biçimde birleştirme işlemi çok iyi gerçekleştirmez. Birleşimler, doğrusal bir arama yoluyla yapılır. Performansla ilgili yardım için hiçbir karma tablo veya dizin yok.  
   
 ```vb  
 Public Class Program  
@@ -87,7 +87,7 @@ End Class
   
  Bu kod aşağıdaki çıktıyı üretir:  
   
-```  
+```console
 Attempting to validate, custOrdDoc validated  
 <Root>  
   <Order>  

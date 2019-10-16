@@ -1,27 +1,27 @@
 ---
-title: 'Nasıl yapılır: Paragrafları alma Office Open XML belgesinden (Visual Basic)'
+title: 'Nasıl yapılır: bir Office Open XML belgesinden paragrafları alma (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 66053f21-9217-473c-a6f3-a0897be07756
-ms.openlocfilehash: 325f0d981c4988379938385fbfff5d36d0f5bff8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 42b6779fd3f9254fb1d57c44282809de462078db
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62054477"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320448"
 ---
-# <a name="how-to-retrieve-paragraphs-from-an-office-open-xml-document-visual-basic"></a>Nasıl yapılır: Paragrafları alma Office Open XML belgesinden (Visual Basic)
-Bu konuda, bir Office Open XML belge açılır ve belge paragraflarda bir koleksiyonunu alır. bir örnek sunulmaktadır.  
+# <a name="how-to-retrieve-paragraphs-from-an-office-open-xml-document-visual-basic"></a>Nasıl yapılır: bir Office Open XML belgesinden paragrafları alma (Visual Basic)
+Bu konuda, bir Office Open XML belgesi açan ve belgedeki tüm paragrafların bir koleksiyonunu alan bir örnek sunulmaktadır.  
   
- Office Open XML hakkında daha fazla bilgi için bkz. [Eric White'nın Blog](http://www.ericwhite.com).  
+ Office Open XML hakkında daha fazla bilgi için bkz. [Eric beyaz blogu](http://www.ericwhite.com).  
   
 ## <a name="example"></a>Örnek  
- Bu örnek, bir Office Open XML paket açtığında, belge ve stil bölümleri bulmak için Open XML paket içindeki ilişkileri kullanır. Ardından belge koleksiyonu paragraf içeren bir anonim tür yansıtma sorgular <xref:System.Xml.Linq.XElement> düğümü, her bir paragrafına stil adı ve her bir paragraf metni.  
+ Bu örnek, bir Office Open XML paketi açar, belgeyi ve stil parçalarını bulmak için Open XML paketi içindeki ilişkileri kullanır. Ardından belgeyi sorgular ve paragraf <xref:System.Xml.Linq.XElement> düğümü, her bir paragrafın stil adı ve her bir paragrafın metni içeren anonim bir türün bir koleksiyonunu yansıtır.  
   
- Örnek adlı bir genişletme yöntemi kullanan `StringConcatenate`, hangi sağlanır örnekte.  
+ Örnek, örnekte de sağlanan `StringConcatenate` adlı bir genişletme yöntemi kullanır.  
   
- Bu örneğin nasıl çalıştığını açıklayan ayrıntılı bir öğretici için bkz [saf işlevsel dönüşümleri XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md).  
+ Bu örneğin nasıl çalıştığını açıklayan ayrıntılı bir öğretici için bkz. [XML 'Nin saf Işlevsel dönüştürmeleri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md).  
   
- Bu örnekte WindowsBase derlemede bulunan sınıfları kullanır. Türleri kullanan <xref:System.IO.Packaging?displayProperty=nameWithType> ad alanı.  
+ Bu örnek, WindowsBase derlemesinde bulunan sınıfları kullanır. @No__t-0 ad alanındaki türleri kullanır.  
   
 ```vb  
 Imports <xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">  
@@ -152,9 +152,9 @@ Module Module1
 End Module  
 ```  
   
- Açıklanan örnek Open XML belge çalıştırdığınızda [kaynak Office Open XML belgesi (Visual Basic) oluşturulmasını](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md), bu örnek aşağıdaki çıktıyı üretir:  
+ [Kaynak Office Open XML belgesi (Visual Basic) oluşturma](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)bölümünde açıklanan örnek Open XML belgesiyle birlikte çalıştırıldığında, bu örnek aşağıdaki çıktıyı üretir:  
   
-```  
+```console  
 StyleName:Heading1 >Parsing WordprocessingML with LINQ to XML<  
 StyleName:Normal ><  
 StyleName:Normal >The following example prints to the console.<  

@@ -1,16 +1,16 @@
 ---
-title: 'Nasıl yapılır: Bir özniteliğin değerini alma (LINQ to XML) (Visual Basic)'
+title: 'Nasıl yapılır: bir özniteliğin değerini alma (LINQ to XML) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 5f4b3790-c83f-4eb3-a889-e3587edf3ca1
-ms.openlocfilehash: d03b2b146ad2f6b796ba6589cf99d06aa429535d
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 6f9a5936c962111eb75a05f5e3704f7132618143
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710504"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320470"
 ---
-# <a name="how-to-retrieve-the-value-of-an-attribute-linq-to-xml-visual-basic"></a>Nasıl yapılır: Bir özniteliğin değerini alma (LINQ to XML) (Visual Basic)
-Bu konu, özniteliklerin değerinin nasıl alınacağını gösterir. İki ana yol vardır: İstediğiniz türe çevirebilirsiniz <xref:System.Xml.Linq.XAttribute> ; açık dönüştürme işleci daha sonra öğenin veya özniteliğin içeriğini belirtilen türe dönüştürür. Alternatif olarak, <xref:System.Xml.Linq.XAttribute.Value%2A> özelliğini de kullanabilirsiniz. Ancak, atama genellikle daha iyi bir yaklaşımdır. Özniteliğini null yapılabilir bir türe çevirebilirsiniz, bu, var olabilen veya varolmayan bir özniteliğin değeri alınırken yazmak daha basittir. Bu tekniğin örnekleri için bkz [. nasıl yapılır: Bir öğenin değerini alın (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-retrieve-the-value-of-an-element-linq-to-xml.md).  
+# <a name="how-to-retrieve-the-value-of-an-attribute-linq-to-xml-visual-basic"></a>Nasıl yapılır: bir özniteliğin değerini alma (LINQ to XML) (Visual Basic)
+Bu konu, özniteliklerin değerinin nasıl alınacağını gösterir. İki ana yol vardır: <xref:System.Xml.Linq.XAttribute> ' yı istenen türe çevirebilirsiniz; Açık dönüştürme işleci daha sonra öğe veya özniteliğin içeriğini belirtilen türe dönüştürür. Alternatif olarak, <xref:System.Xml.Linq.XAttribute.Value%2A> özelliğini de kullanabilirsiniz. Ancak, atama genellikle daha iyi bir yaklaşımdır. Özniteliğini null yapılabilir bir türe çevirebilirsiniz, bu, var olabilen veya varolmayan bir özniteliğin değeri alınırken yazmak daha basittir. Bu tekniğin örnekleri için bkz. [nasıl yapılır: bir öğenin değerini alma (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-retrieve-the-value-of-an-element-linq-to-xml.md).  
   
 ## <a name="example"></a>Örnek  
  Visual Basic, bir özniteliğin değerini almak için tümleşik öznitelik özelliğini kullanabilirsiniz.  
@@ -62,7 +62,7 @@ End Module
   
  Bu örnek aşağıdaki çıktıyı üretir:  
   
-```  
+```console  
 abcde  
 ```  
   

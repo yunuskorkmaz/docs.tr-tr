@@ -4,37 +4,37 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - bindings [WCF]
 ms.assetid: 845df323-be53-4848-92ef-ba67a406484d
-ms.openlocfilehash: c948c20788ae4e16e6b626a3f168cf9dcb94d718
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7d2c27ad2b265a7feda5f013b5b0993a6cd83094
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61608885"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320765"
 ---
 # <a name="windows-communication-foundation-bindings"></a>Windows Communication Foundation Bağlamaları
-Windows Communication Foundation (WCF) hizmet uç noktası, diğer uç noktaları ile nasıl iletişim kurduğu bağlantılarını belirtin. En temel sırasında bir bağlama kullanılacak Aktarım (örneğin, HTTP veya TCP) belirtmeniz gerekir. Güvenlik ve işlem, bağlamaları desteği gibi diğer özellikleri de ayarlayabilirsiniz.  
+Bağlamalar Windows Communication Foundation (WCF) hizmet uç noktasının diğer uç noktalarla nasıl iletişim kuracağını belirtir. En temel tarafında, bir bağlama kullanılacak taşıma (örneğin, HTTP veya TCP) belirtmelidir. Ayrıca, güvenlik ve işlem desteği gibi diğer özellikleri bağlamalar aracılığıyla da ayarlayabilirsiniz.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [WCF Bağlamalarına Genel Bakış](../../../docs/framework/wcf/bindings-overview.md)  
- Hangi bağlama sistemi sağlar ve nasıl tanımlayın veya bunları değiştirme hangi WCF bağlamaları genel bakış yapın.  
+ [WCF Bağlamalarına Genel Bakış](bindings-overview.md)  
+ WCF bağlamalarının ne yaptığını, sistemin sağladığı bağlamaları ve bunları nasıl tanımlayacağınızı veya değiştirebileceğinize genel bakış.  
   
- [Sistem Tarafından Sağlanan Bağlamalar](../../../docs/framework/wcf/system-provided-bindings.md)  
- WCF ile dahil bağlamaları listesi. Bu bağlamaları, güvenlik ve ileti deseni gereksinimleri çoğunu kapsar.  
+ [Sistem Tarafından Sağlanan Bağlamalar](system-provided-bindings.md)  
+ WCF 'ye eklenen bağlamaların listesi. Bu bağlamalar, güvenlik ve ileti örüntülerinin çoğunluğunun çoğunu kapsar.  
   
- [Hizmetler ve İstemcileri Yapılandırmak için Bağlamaları Kullanma](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- Bir WCF bağlama, istemcileri için hizmet uç noktalarına bağlanmak için kullanması gereken önemli bilgiler içerir.  
+ [Hizmetler ve İstemcileri Yapılandırmak için Bağlamaları Kullanma](using-bindings-to-configure-services-and-clients.md)  
+ WCF bağlaması, istemcilerin hizmet uç noktalarına bağlanmak için kullanması gereken önemli bilgileri içerir.  
   
- [Hizmetler için Bağlamaları Yapılandırma](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md)  
- Yapılandırma, yönetici ve yükleyicileri hizmet uç noktaları için olan bağlamaları özelleştirmenizi sağlar.  
+ [Hizmetler için Bağlamaları Yapılandırma](configuring-bindings-for-wcf-services.md)  
+ Yapılandırma, yöneticilerin ve yükleyicilerin hizmet uç noktaları bağlamalarını özelleştirmesini sağlar.  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.ServiceModel.Channels>  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Uç noktalar: Adresleri, bağlamalar ve sözleşmeler](../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  
+ [Uç Noktalar: Adresler, Bağlamalar ve Anlaşmalar](./feature-details/endpoints-addresses-bindings-and-contracts.md)  
   
- [Bağlamalar](../../../docs/framework/wcf/feature-details/bindings.md)  
+ [Bağlamalar](./feature-details/bindings.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Özel Bağlamalar](../../../docs/framework/wcf/extending/custom-bindings.md)
+- [Özel Bağlamalar](./extending/custom-bindings.md)

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - sessions [WCF]
 ms.assetid: 864ba12f-3331-4359-a359-6d6d387f1035
-ms.openlocfilehash: 671e650a494d314ec1da1957eaae91e2d1811213
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: aea26c3a814a34c9d2985bb1bf02dbb80d32ef12
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69952834"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320283"
 ---
 # <a name="using-sessions"></a>Oturumları Kullanma
 Windows Communication Foundation (WCF) uygulamalarında, bir *oturum* bir ileti grubunu bir konuşmaya ilişkilendirir. WCF oturumları, ASP.NET uygulamalarında bulunan oturum nesnesinden farklıdır, farklı davranışları destekler ve farklı yollarla denetlenir. Bu konuda, oturum açma özelliklerinin WCF uygulamalarında etkinleştirilmesi ve bunların nasıl kullanılacağı açıklanmaktadır.  
@@ -30,7 +30,7 @@ Windows Communication Foundation (WCF) uygulamalarında, bir *oturum* bir ileti 
   
 - Bir WCF oturumuyla ilişkili genel veri deposu yok.  
   
- ASP.NET uygulamalarında <xref:System.Web.SessionState.HttpSessionState?displayProperty=nameWithType> sınıfı ve sağladığı işlevselliği biliyorsanız, bu tür oturum ve WCF oturumları arasında aşağıdaki farklılıkları fark edebilirsiniz:  
+ ASP.NET uygulamalarında <xref:System.Web.SessionState.HttpSessionState?displayProperty=nameWithType> sınıfına ve sağladığı işlevselliğe alışkın değilseniz, bu tür oturum ve WCF oturumları arasında aşağıdaki farklılıkları fark edebilirsiniz:  
   
 - ASP.NET oturumları her zaman sunucu tarafından başlatılır.  
   
@@ -49,7 +49,7 @@ Windows Communication Foundation (WCF) uygulamalarında, bir *oturum* bir ileti 
 - Oturumun oluşturulması ve sonlandırılmasını ve hizmetin hizmet örneği ile ilişkisini anlama ve denetleme.  
   
 ## <a name="default-execution-behavior-using-sessions"></a>Oturumları kullanan varsayılan yürütme davranışı  
- Oturumu başlatmayı deneyen bir bağlamaya *oturum tabanlı* bağlama denir. Hizmet sözleşmeleri, hizmet sözleşmesi arabirimindeki (veya sınıfında) <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A?displayProperty=nameWithType> özelliği <xref:System.ServiceModel.SessionMode?displayProperty=nameWithType> sabit listesi değerlerinden birine ayarlayarak, oturum tabanlı bağlamalar gerektirdiğini, bunlara izin vermenizi veya reddetmesini belirler. Varsayılan olarak, bu özelliğin <xref:System.ServiceModel.SessionMode.Allowed>değeri, bir istemci bir WCF Hizmeti uygulamasıyla oturum tabanlı bağlama kullanıyorsa, hizmet tarafından sağlanmış oturumu oluşturur ve kullanır.  
+ Oturumu başlatmayı deneyen bir bağlamaya *oturum tabanlı* bağlama denir. Hizmet sözleşmeleri, hizmet sözleşmesi arabirimindeki (veya sınıfında) <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A?displayProperty=nameWithType> özelliğini <xref:System.ServiceModel.SessionMode?displayProperty=nameWithType> sabit listesi değerlerinden birine ayarlayarak, oturum tabanlı bağlamaları gerektirdiğini, bunlara izin vermenizi veya reddetmesini belirler. Varsayılan olarak, bu özelliğin değeri <xref:System.ServiceModel.SessionMode.Allowed> ' dır, yani bir istemci bir WCF Hizmeti uygulamasıyla oturum tabanlı bir bağlama kullanıyorsa, hizmet tarafından sağlanmış oturumu belirler ve kullanır.  
   
  Bir WCF hizmeti bir istemci oturumu kabul ettiğinde, aşağıdaki özellikler varsayılan olarak etkindir:  
   
@@ -62,18 +62,18 @@ Windows Communication Foundation (WCF) uygulamalarında, bir *oturum* bir ileti 
   
  WCF, aşağıdaki oturum tabanlı uygulama davranışı türlerini sağlar:  
   
-- , <xref:System.ServiceModel.Channels.SecurityBindingElement?displayProperty=nameWithType> Her iki iletişimin de belirli bir güvenli konuşmaya karşı anlaştığı güvenlik tabanlı oturumları destekler. Daha fazla bilgi için bkz. [hizmetleri güvenli hale getirme](../../../docs/framework/wcf/securing-services.md). Örneğin, <xref:System.ServiceModel.WSHttpBinding?displayProperty=nameWithType> hem güvenlik oturumları hem de güvenilir oturumlar için destek içeren bağlama, varsayılan olarak yalnızca iletileri şifreleyen ve dijital olarak imzalayabilen güvenli bir oturum kullanır.  
+- @No__t-0, her iki iletişimin de belirli bir güvenli konuşmaya karşı anlaştığı güvenlik tabanlı oturumları destekler. Daha fazla bilgi için bkz. [hizmetleri güvenli hale getirme](securing-services.md). Örneğin, her iki güvenlik oturumu ve güvenilir oturum için destek içeren <xref:System.ServiceModel.WSHttpBinding?displayProperty=nameWithType> bağlama, varsayılan olarak yalnızca iletileri şifreleyen ve dijital olarak imzalayabilen güvenli bir oturum kullanır.  
   
-- Bağlama <xref:System.ServiceModel.NetTcpBinding?displayProperty=nameWithType> , tüm iletilerin yuva düzeyindeki bağlantıyla bağıntılı olduğundan emin olmak için TCP/IP tabanlı oturumları destekler.  
+- @No__t-0 bağlaması, tüm iletilerin yuva düzeyindeki bağlantıyla bağıntılı olduğundan emin olmak için TCP/IP tabanlı oturumları destekler.  
   
-- WS <xref:System.ServiceModel.Channels.ReliableSessionBindingElement?displayProperty=nameWithType> -ReliableMessaging belirtimini uygulayan öğesi, iletilerin sırayla teslim edileceği ve iletiler seyahat edildiğinde bile iletilerin alınmasını sağlayan güvenilir oturumlara yönelik destek sağlar. konuşma sırasında birden çok düğüm arasında. Daha fazla bilgi için bkz. [Güvenilir Oturumlar](../../../docs/framework/wcf/feature-details/reliable-sessions.md).  
+- WS-ReliableMessaging belirtimini uygulayan <xref:System.ServiceModel.Channels.ReliableSessionBindingElement?displayProperty=nameWithType> öğesi, iletilerin sırayla teslim edileceği ve iletilerin her zaman bir kez alınmak üzere yapılandırılabileceği güvenilir oturumlar için destek sağlar. konuşma sırasında birden çok düğüm. Daha fazla bilgi için bkz. [Güvenilir Oturumlar](./feature-details/reliable-sessions.md).  
   
-- Bağlama <xref:System.ServiceModel.NetMsmqBinding?displayProperty=nameWithType> , MSMQ veri birimi oturumları sağlar. Daha fazla bilgi için bkz. [WCF 'de kuyruklar](../../../docs/framework/wcf/feature-details/queues-in-wcf.md).  
+- @No__t-0 bağlaması MSMQ Datagram oturumları sağlar. Daha fazla bilgi için bkz. [WCF 'de kuyruklar](./feature-details/queues-in-wcf.md).  
   
- <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A> Özelliği ayarlamak, sözleşmenin gerektirdiği oturum türünü belirtmez, yalnızca bir tane gerektirir.  
+ @No__t-0 özelliğinin ayarlanması, sözleşmenin gerektirdiği oturum türünü belirtmez, yalnızca bir tane gerektirir.  
   
 ## <a name="creating-a-contract-that-requires-a-session"></a>Oturum gerektiren bir sözleşme oluşturma  
- Oturum gerektiren bir sözleşmenin oluşturulması, hizmet sözleşmesinin bildirdiği işlem grubunun tümünün aynı oturum içinde yürütülmesi ve iletilerin sırayla teslim edilmesi gerektiğini belirtir. Bir hizmet sözleşmesinin gerektirdiği oturum desteğinin düzeyini belirlemek için, hizmet sözleşmesi arabiriminizdeki veya <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A?displayProperty=nameWithType> sınıfınızın özelliğini, sözleşmenin değerini belirtmek için <xref:System.ServiceModel.SessionMode?displayProperty=nameWithType> numaralandırmanın değerine ayarlayın:  
+ Oturum gerektiren bir sözleşmenin oluşturulması, hizmet sözleşmesinin bildirdiği işlem grubunun tümünün aynı oturum içinde yürütülmesi ve iletilerin sırayla teslim edilmesi gerektiğini belirtir. Bir hizmet sözleşmesinin gerektirdiği oturum desteğinin düzeyini belirlemek için, hizmet sözleşmesi arabiriminizdeki veya sınıfınızın <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A?displayProperty=nameWithType> özelliğini <xref:System.ServiceModel.SessionMode?displayProperty=nameWithType> sabit listesinin değerine ayarlayın ve sözleşmenin şunları belirtin:  
   
 - Bir oturum gerektirir.  
   
@@ -81,9 +81,9 @@ Windows Communication Foundation (WCF) uygulamalarında, bir *oturum* bir ileti 
   
 - Bir oturumu yasaklar.  
   
- <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A> Ancak özelliğin ayarlanması, sözleşmenin gerektirdiği oturum tabanlı davranış türünü belirtir. Bu, WCF 'nin hizmet için yapılandırılmış bağlamanın (iletişim kanalını oluşturan) çalışma zamanında, bir hizmet uygularken bir oturum oluşturmadığını veya bir oturumu oluşturduğunu onaylamasını sağlar. Bu durumda, bağlama, tercih eden her türlü oturum tabanlı davranışla (güvenlik, taşıma, güvenilir veya bir bileşim) bu gereksinimi karşılayamaz. Tam davranış seçili <xref:System.ServiceModel.SessionMode?displayProperty=nameWithType> değere bağlıdır. Yapılandırılmış hizmetin bağlaması değerine <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A>uygun değilse, bir özel durum oluşturulur. Bağlama ve destek oturumlarını oluşturdukları kanallar, oturum tabanlı olarak kabul edilir.  
+ @No__t-0 özelliğinin ayarlanması, ancak sözleşmenin gerektirdiği oturum tabanlı davranış türünü belirtir. Bu, WCF 'nin hizmet için yapılandırılmış bağlamanın (iletişim kanalını oluşturan) çalışma zamanında, bir hizmet uygularken bir oturum oluşturmadığını veya bir oturumu oluşturduğunu onaylamasını sağlar. Bu durumda, bağlama, tercih eden her türlü oturum tabanlı davranışla (güvenlik, taşıma, güvenilir veya bir bileşim) bu gereksinimi karşılayamaz. Tam davranış seçili @no__t 0 değerine bağlıdır. Yapılandırılmış hizmetin bağlaması <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A> değerine uygun değilse, bir özel durum oluşturulur. Bağlama ve destek oturumlarını oluşturdukları kanallar, oturum tabanlı olarak kabul edilir.  
   
- Aşağıdaki hizmet sözleşmesi, `ICalculatorSession` içindeki tüm işlemlerin bir oturum içinde alışverişi gerektiğini belirtir. İşlemlerden hiçbiri `Equals` Yöntem dışında çağırana bir değer döndürmez. Ancak, yöntemi parametre içermez ve bu nedenle, yalnızca verilerin diğer işlemlere geçirilmiş bir oturum içinde sıfır olmayan bir değer döndürebilir. `Equals` Bu sözleşme, bir oturumun düzgün çalışmasını gerektirir. Belirli bir istemciyle ilişkili bir oturum olmadan, hizmet örneğinin bu istemcinin gönderdiği önceki verileri bilmesinin bir yolu yoktur.  
+ Aşağıdaki hizmet sözleşmesi, `ICalculatorSession` ' daki tüm işlemlerin bir oturum içinde alışverişi gerektiğini belirtir. İşlemlerden hiçbiri `Equals` yöntemi dışında çağırana bir değer döndürmez. Ancak, `Equals` yöntemi parametre alır ve bu nedenle, yalnızca verilerin diğer işlemlere geçirilmiş bir oturum içinde sıfır olmayan bir değer döndürebilir. Bu sözleşme, bir oturumun düzgün çalışmasını gerektirir. Belirli bir istemciyle ilişkili bir oturum olmadan, hizmet örneğinin bu istemcinin gönderdiği önceki verileri bilmesinin bir yolu yoktur.  
   
  [!code-csharp[S_Service_Session#1](../../../samples/snippets/csharp/VS_Snippets_CFX/s_service_session/cs/service.cs#1)]
  [!code-vb[S_Service_Session#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_service_session/vb/service.vb#1)]  
@@ -99,48 +99,48 @@ Windows Communication Foundation (WCF) uygulamalarında, bir *oturum* bir ileti 
   
 - Nesne başvurusu yok edildiğinde yıkıcı çağrılır.  
   
- Oturumlar, varsayılan hizmet örneği davranışı kullanıldığı sürece istemciler ve hizmetler arasında benzer bir davranışı etkinleştirir. Bir hizmet sözleşmesi oturumları gerektiriyorsa veya destekliyorsa, bir veya daha fazla sözleşme işlemi, <xref:System.ServiceModel.OperationContractAttribute.IsInitiating%2A> ve <xref:System.ServiceModel.OperationContractAttribute.IsTerminating%2A> özelliklerini ayarlayarak bir oturumu başlatma veya sonlandırma olarak işaretlenebilir.  
+ Oturumlar, varsayılan hizmet örneği davranışı kullanıldığı sürece istemciler ve hizmetler arasında benzer bir davranışı etkinleştirir. Bir hizmet sözleşmesi oturumları gerektiriyorsa veya destekliyorsa, bir veya daha fazla sözleşme işlemi <xref:System.ServiceModel.OperationContractAttribute.IsInitiating%2A> ve <xref:System.ServiceModel.OperationContractAttribute.IsTerminating%2A> özelliklerini ayarlayarak bir oturumu başlatma veya sonlandırma olarak işaretlenebilir.  
   
  *Başlatma işlemleri* , yeni bir oturumun ilk işlemi olarak çağrılması gereken olanlardır. Başlatma olmayan işlemler, en az bir başlatma işlemi çağrıldıktan sonra çağrılabilir. Bu nedenle, hizmet örneğinin başlangıcına uygun istemcilerden giriş almak üzere tasarlanan başlatma işlemlerini bildirerek hizmetinize yönelik bir dizi oturum Oluşturucu oluşturabilirsiniz. (Durum, ancak hizmet nesnesi değil, oturumla ilişkilendirilir.)  
   
  Diğer yandan, *Işlemleri sonlandırma*, var olan bir oturumda son ileti olarak çağrılması gereken olanlardır. Varsayılan durumda, WCF hizmet nesnesini ve hizmetin ilişkili olduğu oturum kapatıldıktan sonra bağlamını geri dönüştürür. Bu nedenle, hizmet örneğinin sonuna uygun bir işlevi gerçekleştirmek için tasarlanan sonlandırma işlemlerini bildirerek bir tür yıkıcı oluşturabilirsiniz.  
   
 > [!NOTE]
-> Varsayılan davranış yerel oluşturucular ve Yıkıcılar ile benzerliği olsa da, yalnızca benzerliği vardır. Herhangi bir WCF hizmeti işlemi, bir başlatma veya sonlandırma işlemi ya da aynı anda her ikisi de olabilir. Ayrıca, varsayılan durumda, başlatma işlemlerine herhangi bir sırada herhangi bir sayıda çağrılabilir. oturum kurulduktan ve hizmet örneğinin ömrünü açıkça denetmediğiniz ( <xref:System.ServiceModel.InstanceContext?displayProperty=nameWithType> nesneyi işleyerek) bir örnekle ilişkilendirildiğinde hiçbir ek oturum oluşturulmaz. Son olarak, durum hizmet nesnesi değil, oturumla ilişkilendirilir.  
+> Varsayılan davranış yerel oluşturucular ve Yıkıcılar ile benzerliği olsa da, yalnızca benzerliği vardır. Herhangi bir WCF hizmeti işlemi, bir başlatma veya sonlandırma işlemi ya da aynı anda her ikisi de olabilir. Ayrıca, varsayılan durumda, başlatma işlemlerine herhangi bir sırada herhangi bir sayıda çağrılabilir. oturum kurulduktan ve bir örnekle ilişkilendirildiğinde, hizmet örneğinin ömrünü açıkça denetmediğiniz (<xref:System.ServiceModel.InstanceContext?displayProperty=nameWithType> nesnesini işleyerek) başka bir oturum oluşturulmaz. Son olarak, durum hizmet nesnesi değil, oturumla ilişkilendirilir.  
   
- Örneğin, `ICalculatorSession` önceki örnekte kullanılan sözleşme, WCF istemci nesnesinin diğer bir işlemden önce `Clear` işlemi ilk kez çağırmasını ve bu WCF istemci nesnesiyle olan oturumun, `Equals` işlem. Aşağıdaki kod örneğinde, bu gereksinimleri zorlayan bir sözleşme gösterilmektedir. `Clear`bir oturumu başlatmak için önce çağrılmalıdır ve bu oturum çağrıldığında oturumu sonlandırır `Equals` .  
+ Örneğin, önceki örnekte kullanılan `ICalculatorSession` sözleşmesi, WCF istemci nesnesinin diğer herhangi bir işlemden önce `Clear` işlemini ilk kez çağırmasını ve bu WCF istemci nesnesiyle olan oturumun `Equals` işlemini çağırdığı sırada sonlanacak olmasını gerektirir. Aşağıdaki kod örneğinde, bu gereksinimleri zorlayan bir sözleşme gösterilmektedir. `Clear`, bir oturumu başlatmak için önce çağrılmalıdır ve `Equals` çağrıldığında bu oturum sona erer.  
   
  [!code-csharp[SCA.IsInitiatingIsTerminating#1](../../../samples/snippets/csharp/VS_Snippets_CFX/sca.isinitiatingisterminating/cs/service.cs#1)]
  [!code-vb[SCA.IsInitiatingIsTerminating#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/sca.isinitiatingisterminating/vb/service.vb#1)]  
   
  Hizmetler, istemcileri ile oturum başlatmazlar. WCF istemci uygulamalarında, oturum tabanlı kanalın yaşam süresi ve oturumun kendisinin ömrü arasında doğrudan bir ilişki bulunur. Bu nedenle, istemciler yeni oturum tabanlı kanallar oluşturarak ve oturum tabanlı kanalları düzgün bir şekilde kapatarak mevcut oturumları kopararak yeni oturumlar oluşturur. İstemci, aşağıdakilerden birini çağırarak hizmet uç noktasıyla bir oturum başlatır:  
   
-- <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType>bir çağrısıyla <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A?displayProperty=nameWithType>döndürülen kanalda.  
+- <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A?displayProperty=nameWithType> ' e yapılan bir çağrı tarafından döndürülen kanalda <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType>.  
   
-- <xref:System.ServiceModel.ClientBase%601.Open%2A?displayProperty=nameWithType>[ServiceModel meta veri yardımcı programı Aracı (Svcutil. exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)tarafından oluşturulan WCF istemci nesnesinde.  
+- [ServiceModel Metadata Utility aracı (Svcutil. exe)](servicemodel-metadata-utility-tool-svcutil-exe.md)tarafından oluşturulan WCF istemci nesnesinde <xref:System.ServiceModel.ClientBase%601.Open%2A?displayProperty=nameWithType>.  
   
 - Her iki tür WCF istemci nesnesi (varsayılan olarak, tüm işlemler başlatılıyor) üzerinde başlatma işlemi. İlk işlem çağrıldığında, WCF istemci nesnesi kanalı otomatik olarak açar ve bir oturum başlatır.  
   
  Genellikle bir istemci, aşağıdakilerden birini çağırarak bir hizmet uç noktasıyla oturumu sonlandırır:  
   
-- <xref:System.ServiceModel.ICommunicationObject.Close%2A?displayProperty=nameWithType>bir çağrısıyla <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A?displayProperty=nameWithType>döndürülen kanalda.  
+- <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A?displayProperty=nameWithType> ' e yapılan bir çağrı tarafından döndürülen kanalda <xref:System.ServiceModel.ICommunicationObject.Close%2A?displayProperty=nameWithType>.  
   
-- <xref:System.ServiceModel.ClientBase%601.Close%2A?displayProperty=nameWithType>Svcutil. exe tarafından oluşturulan WCF istemci nesnesi üzerinde.  
+- Svcutil. exe tarafından oluşturulan WCF istemci nesnesindeki <xref:System.ServiceModel.ClientBase%601.Close%2A?displayProperty=nameWithType>.  
   
 - Her iki tür WCF istemci nesnesi üzerinde sonlandırma işlemi (varsayılan olarak, hiçbir işlem sonlandıralınmaz; sözleşme açıkça bir sonlandırma işlemi belirtmelidir). İlk işlem çağrıldığında, WCF istemci nesnesi kanalı otomatik olarak açar ve bir oturum başlatır.  
   
- Örnekler için bkz [. nasıl yapılır: [Varsayılan hizmet davranışı](../../../docs/framework/wcf/samples/default-service-behavior.md) ve [örnek](../../../docs/framework/wcf/samples/instancing.md) oluşturma](../../../docs/framework/wcf/feature-details/how-to-create-a-service-that-requires-sessions.md) örneklerinin yanı sıra oturum gerektiren bir hizmet oluşturun.  
+ Örnekler için bkz. [nasıl yapılır: oturum gerektiren bir hizmet oluşturma](./feature-details/how-to-create-a-service-that-requires-sessions.md) ve [varsayılan hizmet davranışı](./samples/default-service-behavior.md) ve [örnek](./samples/instancing.md) oluşturma örnekleri.  
   
- İstemciler ve oturumlar hakkında daha fazla bilgi için bkz. [WCF Istemcisi kullanarak hizmetlere erişme](../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md).  
+ İstemciler ve oturumlar hakkında daha fazla bilgi için bkz. [WCF Istemcisi kullanarak hizmetlere erişme](./feature-details/accessing-services-using-a-client.md).  
   
 ## <a name="sessions-interact-with-instancecontext-settings"></a>Oturumlar InstanceContext ayarlarıyla etkileşim kurar  
- Bir sözleşmede <xref:System.ServiceModel.SessionMode> sabit listesi <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> ile belirli hizmet nesneleri arasındaki ilişkilendirmeyi denetleyen özelliği arasında bir etkileşim vardır. Daha fazla bilgi için bkz. [Oturumlar, örnek oluşturma ve eşzamanlılık](../../../docs/framework/wcf/feature-details/sessions-instancing-and-concurrency.md).  
+ Bir sözleşmede <xref:System.ServiceModel.SessionMode> numaralandırması ve <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> özelliği arasında, kanallar ve belirli hizmet nesneleri arasındaki ilişkilendirmeyi denetleyen bir etkileşim vardır. Daha fazla bilgi için bkz. [Oturumlar, örnek oluşturma ve eşzamanlılık](./feature-details/sessions-instancing-and-concurrency.md).  
   
 ### <a name="sharing-instancecontext-objects"></a>InstanceContext nesnelerini paylaşma  
- Ayrıca, bu ilişkilendirmeyi kendiniz gerçekleştirerek hangi oturum tabanlı kanalın veya çağrının hangi <xref:System.ServiceModel.InstanceContext> nesneyle ilişkili olduğunu da denetleyebilirsiniz. 
+ Ayrıca, bu ilişkilendirmeyi kendi başınıza gerçekleştirerek hangi oturum tabanlı kanalın veya çağrının hangi <xref:System.ServiceModel.InstanceContext> nesnesiyle ilişkilendirildiğini da denetleyebilirsiniz. 
   
 ## <a name="sessions-and-streaming"></a>Oturumlar ve akış  
- Aktarılacak büyük miktarda veriniz olduğunda, WCF 'deki akış aktarım modu, iletilerin arabelleğe alınması ve işlenmesi için varsayılan davranış için uygun bir alternatiftir. Oturum tabanlı bağlama ile çağrı akışı yaparken beklenmedik bir davranış alabilirsiniz. Kullanılan bağlama oturumları kullanacak şekilde yapılandırılmış olsa bile, tüm akış çağrıları, oturumları desteklemeyen tek bir kanal (Datagram kanalı) aracılığıyla yapılır. Birden çok istemci, oturum tabanlı bir bağlama üzerinden aynı hizmet nesnesine akış çağrıları yapar ve hizmet nesnesinin eşzamanlılık modu tek olarak ayarlanır ve örnek bağlam modu olarak `PerSession`ayarlanmışsa, tüm çağrılar veri birimi kanalının üzerinde ilermelidir ve bu nedenle tek seferde yalnızca bir çağrı işlenir. Daha sonra bir veya daha fazla istemci zaman aşımına uğrar. Bu soruna geçici bir çözüm olarak, hizmet nesnesinin `InstanceContextMode` `PerCall` ' i ' veya eşzamanlılık ' i ' i ' olarak ayarlayarak çalışabilirsiniz.  
+ Aktarılacak büyük miktarda veriniz olduğunda, WCF 'deki akış aktarım modu, iletilerin arabelleğe alınması ve işlenmesi için varsayılan davranış için uygun bir alternatiftir. Oturum tabanlı bağlama ile çağrı akışı yaparken beklenmedik bir davranış alabilirsiniz. Kullanılan bağlama oturumları kullanacak şekilde yapılandırılmış olsa bile, tüm akış çağrıları, oturumları desteklemeyen tek bir kanal (Datagram kanalı) aracılığıyla yapılır. Birden çok istemci, oturum tabanlı bir bağlama üzerinden aynı hizmet nesnesine akış çağrıları yapar ve hizmet nesnesinin eşzamanlılık modu tek olarak ayarlanır ve örnek bağlam modu `PerSession` olarak ayarlanırsa, tüm çağrılar veri birimi kanalında gelmelidir ve bu nedenle yalnızca bir çağrı bir seferde işlenir. Daha sonra bir veya daha fazla istemci zaman aşımına uğrar. Bu soruna geçici bir çözüm olarak, hizmet nesnesinin `InstanceContextMode` ' i `PerCall` ' e veya eşzamanlılığı birden çok olarak ayarlayarak çalışabilirsiniz.  
   
 > [!NOTE]
 > Yalnızca bir "oturum" var olduğundan, MaxConcurrentSessions bu durumda hiçbir etkiye sahip değildir.  

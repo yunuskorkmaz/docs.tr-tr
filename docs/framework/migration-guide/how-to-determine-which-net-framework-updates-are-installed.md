@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Hangi .NET Framework güvenlik güncelleştirmelerinin ve düzeltmelerinin yüklendiğini belirleme'
+title: 'Nasıl yapılır: hangi .NET Framework güvenlik güncelleştirmelerinin ve düzeltmelerin yüklendiğini belirleme'
 description: Bir bilgisayara hangi .NET Framework güvenlik güncelleştirmelerinin ve düzeltmelerin yüklendiğini belirlemeyi öğrenin.
 ms.date: 11/27/2017
 dev_langs:
@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: 53c7b5f7-d47a-402a-b194-7244a696a88b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c4c505c679c46494f7dc2534c2bbe9f50243a7dd
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 1c69d4bb370087dddafbfed41cbfb1fef229677c
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70790071"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72318965"
 ---
-# <a name="how-to-determine-which-net-framework-security-updates-and-hotfixes-are-installed"></a>Nasıl yapılır: Hangi .NET Framework güvenlik güncelleştirmelerinin ve düzeltmelerinin yüklendiğini belirleme
+# <a name="how-to-determine-which-net-framework-security-updates-and-hotfixes-are-installed"></a>Nasıl yapılır: hangi .NET Framework güvenlik güncelleştirmelerinin ve düzeltmelerin yüklendiğini belirleme
 
 Bu makalede, bir bilgisayara hangi .NET Framework güvenlik güncelleştirmelerinin ve düzeltmelerinin yüklendiğini nasıl bulacağınız açıklanmaktadır.
 
@@ -29,7 +29,7 @@ Bu makalede, bir bilgisayara hangi .NET Framework güvenlik güncelleştirmeleri
 
 Bir bilgisayarda yüklü .NET Framework her sürümü için yüklü güvenlik güncelleştirmeleri ve düzeltmeleri Windows kayıt defterinde listelenmiştir. Bu bilgileri görüntülemek için kayıt defteri Düzenleyicisi (*Regedit. exe*) programını kullanabilirsiniz.
 
-1. **Regedit. exe**programını açın. Windows 8 ve sonraki sürümlerinde ![Windows logo](../get-started/media/windowskeyboardlogo.png "windowskeyboardlogo")' ı **sağ tıklatın ve** ardından **Çalıştır**' ı seçin. **Aç** kutusunda, **Regedit** yazın ve **Tamam**' ı seçin.
+1. **Regedit. exe**programını açın. Windows 8 ve sonraki sürümlerde, ![Windows anahtar logosunun ekran görüntüsünü] **Başlat** ' a sağ tıklayın. (./media/how-to-determine-which-net-framework-updates-are-installed/windows-keyboard-logo.png "Windowskeyboardlogo")ve **Çalıştır**' ı seçin. **Aç** kutusunda, **Regedit** yazın ve **Tamam**' ı seçin.
 
 2. Kayıt Defteri Düzenleyicisi'nde, aşağıdaki alt anahtarı açın:
 
@@ -37,7 +37,7 @@ Bir bilgisayarda yüklü .NET Framework her sürümü için yüklü güvenlik g�
 
      Yüklü güncelleştirmeler, için uygulandıkları .NET Framework sürümünü tanımlayan alt anahtarlar altında listelenir. Her güncelleştirme bir Bilgi Bankası (KB) numarasıyla tanımlanır.
 
-Kayıt defteri düzenleyicisinde, her sürüm için .NET Framework sürümleri ve yüklü güncelleştirmeler farklı alt anahtarlarda saklanır. Yüklü sürüm numaralarını algılama hakkında daha fazla bilgi için bkz [. nasıl yapılır: Hangi .NET Framework sürümlerinin yükleneceğini](how-to-determine-which-versions-are-installed.md)saptayın.
+Kayıt defteri düzenleyicisinde, her sürüm için .NET Framework sürümleri ve yüklü güncelleştirmeler farklı alt anahtarlarda saklanır. Yüklü sürüm numaralarını algılama hakkında daha fazla bilgi için bkz. [nasıl yapılır: hangi .NET Framework sürümlerinin yüklendiğini belirleme](how-to-determine-which-versions-are-installed.md).
 
 ## <a name="to-find-installed-updates-by-querying-the-registry-in-code"></a>Kod içinde kayıt defterini sorgulayarak yüklü güncelleştirmeleri bulmak için
 
@@ -108,6 +108,6 @@ KB2600217
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapılır: Hangi .NET Framework sürümlerinin yüklendiğini belirleme](how-to-determine-which-versions-are-installed.md)
+- [Nasıl yapılır: hangi .NET Framework sürümlerinin yüklendiğini belirleme](how-to-determine-which-versions-are-installed.md)
 - [Geliştiriciler için .NET Framework yüklemesi](../install/guide-for-developers.md)
 - [Sürümler ve bağımlılıklar](versions-and-dependencies.md)

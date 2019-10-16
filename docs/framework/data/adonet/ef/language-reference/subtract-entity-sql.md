@@ -2,19 +2,19 @@
 title: '- Çıkarma (Entity SQL)'
 ms.date: 03/30/2017
 ms.assetid: bc4327f9-09c0-438f-a008-927c5c478040
-ms.openlocfilehash: 8b5cfee4c82757e55babdf1ad14f6cf3c743a5a2
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: fe9152100bddac86f3fb7fae1ab3c0b81ae58418
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70249012"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319323"
 ---
 # <a name="--subtract-entity-sql"></a>-(Çıkart) (Entity SQL)
 İki sayıyı çıkartır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```sql  
 expression - expression  
 ```  
   
@@ -28,11 +28,11 @@ expression - expression
 ## <a name="example"></a>Örnek  
  Aşağıdaki Entity SQL sorgusu iki sayıyı çıkarmak için-aritmetik işlecini kullanır. Sorgu AdventureWorks Sales modelini temel alır. Bu sorguyu derlemek ve çalıştırmak için aşağıdaki adımları izleyin:  
   
-1. [Aşağıdaki adımları uygulayın: StructuralType sonuçları](../how-to-execute-a-query-that-returns-structuraltype-results.md)döndüren bir sorgu yürütün.  
+1. [Nasıl yapılır: StructuralType sonuçları döndüren bir sorgu yürütme](../how-to-execute-a-query-that-returns-structuraltype-results.md)bölümündeki yordamı izleyin.  
   
 2. Aşağıdaki sorguyu `ExecuteStructuralTypeQuery` yöntemine bir bağımsız değişken olarak geçirin:  
   
- [!code-csharp[DP EntityServices Concepts 2#SUBTRACT](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#subtract)]  
+ [!code-sql[DP EntityServices Concepts#SUBTRACT](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#subtract)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

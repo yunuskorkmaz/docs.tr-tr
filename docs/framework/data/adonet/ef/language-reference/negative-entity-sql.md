@@ -2,19 +2,19 @@
 title: '- Negatif (Entity SQL)'
 ms.date: 03/30/2017
 ms.assetid: 208e54ef-4741-4ec5-89d6-6ff700863cb0
-ms.openlocfilehash: effd537bcd53052830f2195e18ca959b49d87255
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 7716b9115587a873531be9c14b7da93c7a148ed8
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70249932"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319531"
 ---
 # <a name="--negative-entity-sql"></a>-(Negatif) (Entity SQL)
 Sayısal bir ifadenin değerinin negatifini döndürür.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```sql  
 - expression  
 ```  
   
@@ -23,19 +23,19 @@ Sayısal bir ifadenin değerinin negatifini döndürür.
  Sayısal veri türlerinden herhangi birinin geçerli bir ifadesi.  
   
 ## <a name="result-types"></a>Sonuç türleri  
- Veri türü `expression`.  
+ @No__t-0 ' ın veri türü.  
   
 ## <a name="remarks"></a>Açıklamalar  
- İmzasız bir tür ise, sonuç türü, `expression`türü ile en yakından ilişkili olan imzalı tür olur. `expression` Örneğin, `expression` Byte türünde ise, Int16 türünde bir değer döndürülür.  
+ @No__t-0 işaretsiz bir tür ise, sonuç türü, `expression` türü ile en yakından ilişkili olan imzalı tür olur. Örneğin, `expression` bayt türünde ise, Int16 türünde bir değer döndürülür.  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki Entity SQL sorgusu, bir sayısal ifadenin değerinin negatifini döndürmek için-aritmetik işlecini kullanır. Sorgu AdventureWorks Sales modelini temel alır. Bu sorguyu derlemek ve çalıştırmak için aşağıdaki adımları izleyin:  
   
-1. [Aşağıdaki adımları uygulayın: StructuralType sonuçları](../how-to-execute-a-query-that-returns-structuraltype-results.md)döndüren bir sorgu yürütün.  
+1. [Nasıl yapılır: StructuralType sonuçları döndüren bir sorgu yürütme](../how-to-execute-a-query-that-returns-structuraltype-results.md)bölümündeki yordamı izleyin.  
   
 2. Aşağıdaki sorguyu `ExecuteStructuralTypeQuery` yöntemine bir bağımsız değişken olarak geçirin:  
   
- [!code-csharp[DP EntityServices Concepts 2#NEGATIVE](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#negative)]  
+ [!code-sql[DP EntityServices Concepts#NEGATIVE](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#negative)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

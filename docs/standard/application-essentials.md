@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 653da4ba-3752-4d1f-a08a-de017dc86ecc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f05f66af71b86ccaefe19c0ddce2bfe7572f1084
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d993042cbb435826b92bbcc62f1320a310a02627
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61627898"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320013"
 ---
 # <a name="net-framework-application-essentials"></a>.NET Framework Uygulama Temelleri
 .NET Framework belgelerinin bu bölümü, .NET Framework içindeki temel uygulama geliştirme görevleri hakkında bilgi sağlar.  
@@ -27,8 +27,8 @@ ms.locfileid: "61627898"
  [Genel Türler](../../docs/standard/generics/index.md)  
  .NET Framework tarafından sağlanan genel koleksiyonlar, temsilciler ve arabirimler dahil olmak üzere Genel Türler özelliğini açıklar. C#, Visual Basic ve Visual C++ özellik belgeleri ve Reflection gibi destek teknolojileri için bağlantılar sağlar.  
   
- [Sayısal türler](../../docs/standard/numerics.md)  
- .NET Framework'te sayısal türler açıklanmaktadır.  
+ [Numerics](../../docs/standard/numerics.md)  
+ .NET Framework sayı türlerini açıklar.  
   
  [Olaylar](../../docs/standard/events/index.md)  
  .NET Framework içindeki olay modeli için genel bir bakış sağlar.  
@@ -37,7 +37,7 @@ ms.locfileid: "61627898"
  .NET Framework tarafından sağlanan hata işlemeyi ve özel durumları işlemenin temellerini açıklar.  
   
  [Dosya ve Akış G/Ç'si](../../docs/standard/io/index.md)  
- Eşzamanlı ve eşzamansız dosya gerçekleştirebilir ve veri akışı erişimini nasıl ve yalıtılmış depolamanın kullanmayı açıklar.  
+ Zaman uyumlu ve zaman uyumsuz dosya ve veri akışı erişimini nasıl gerçekleştirebileceğinizi ve yalıtılmış depolama için nasıl kullanacağınızı açıklar.  
   
  [Tarihler, saatler ve saat dilimleri](../../docs/standard/datetime/index.md)  
  Saat dilimiyle uyumlu uygulamalarda saat dilimleri ve saat dilimi dönüşümleri ile nasıl çalışıldığını açıklar.  
@@ -54,8 +54,7 @@ ms.locfileid: "61627898"
  [Genelleştirme ve Yerelleştirme](../../docs/standard/globalization-localization/index.md)  
  Dünya çapında kullanıma hazır uygulamalar tasarlamanıza ve geliştirmenize yardımcı olacak bilgiler sağlar.  
   
- Erişilebilirlik  
- Kullanıcı arabirimi (UI) hakkındaki bilgiye programlı olarak erişim sağlayarak, yardımcı teknoloji ürünlerinin ve otomatikleştirilmiş test çerçeve gereksinimlerini karşılayan bir erişilebilirlik çerçevesi olan Microsoft UI Otomasyonu hakkında bilgi sağlar.  
+ [Erişilebilirlik](../../docs/framework/ui-automation/index.md) Kullanıcı arabirimi (UI) hakkındaki bilgilere programlı erişim sağlayarak yardımcı teknoloji ürünlerinin ve otomatikleştirilmiş test çerçevelerinin ihtiyaçlarını ele alan bir erişilebilirlik çerçevesi olan Microsoft UI Otomasyonu hakkında bilgi sağlar.  
   
  [Öznitelikler](../../docs/standard/attributes/index.md)  
  Meta verileri özelleştirmek için öznitelikleri nasıl kullanabileceğinizi açıklar.  
@@ -67,5 +66,5 @@ ms.locfileid: "61627898"
  [Geliştirme Kılavuzu](../../docs/framework/development-guide.md)  
  Dinamik programlama, birlikte çalışabilirlik, genişletilebilirlik, bellek yönetimi ve iş parçacığı oluşturma hakkında uygulama ve bilgilerinizi oluşturma, yapılandırma, hatasını ayıklama, güvenliğini sağlama ve dağıtma gibi, uygulama geliştirmesine yönelik tüm temel teknoloji alanları ve görevleri için kılavuz sağlar.  
   
- [Güvenlik](../../docs/standard/security/index.md)  
+ [Security](../../docs/standard/security/index.md)  
  Güvenli uygulama geliştirmeyi kolaylaştıran ortak dil çalışma zamanı ve .NET Framework'deki sınıflar ve hizmetler hakkında bilgi sağlar.

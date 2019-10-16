@@ -1,15 +1,15 @@
 ---
-title: Kurulum sorunlarını giderme
+title: Kurulum Sorunlarını Giderme
 ms.date: 03/30/2017
 ms.assetid: 1644f885-c408-4d5f-a5c7-a1a907bc8acd
-ms.openlocfilehash: 326daab1f7df5f8a4ea4f74fd8890031f243f7f5
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: 02e6446893e661a0ec0553b0ddf254c40595595c
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291518"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72321351"
 ---
-# <a name="troubleshooting-setup-issues"></a>Kurulum sorunlarını giderme
+# <a name="troubleshooting-setup-issues"></a>Kurulum Sorunlarını Giderme
 Bu konuda, Windows Communication Foundation (WCF) kurma sorunlarını nasıl giderebileceğiniz açıklanır.  
   
 ## <a name="some-windows-communication-foundation-registry-keys-are-not-repaired-by-performing-an-msi-repair-operation-on-the-net-framework-30"></a>Bazı Windows Communication Foundation kayıt defteri anahtarları, .NET Framework 3,0 üzerinde MSI onarım Işlemi gerçekleştirerek onarılmıyor  
@@ -40,11 +40,11 @@ Bu konuda, Windows Communication Foundation (WCF) kurma sorunlarını nasıl gid
   
      ServiceModelReg [11:09:59:046]: System. ApplicationException: beklenmeyen sonuç 3 "E:\WINDOWS\Microsoft.NET\Framework\v3.0\Windows Communication Foundation\ServiceModel.mof ile E:\WINDOWS\system32\wbem\mofcomp.exe yürütülüyor"  
   
-     veya  
+     veya:  
   
      ServiceModelReg [07:19:33:843]: System. TypeInitializationException: ' System. Management. ManagementPath ' için tür başlatıcısı özel durum oluşturdu. ---> System. Runtime. InteropServices. COMException (0x80040154): CLSID {CF4CC405-E2C5-4DDD-B3CE-5E7582D8C9FA} olan bileşen için COM sınıfı fabrikasını alma işlemi şu hata nedeniyle başarısız oldu: 80040154.  
   
-     veya  
+     veya:  
   
      ServiceModelReg [07:19:32:750]: System. ıO. FileNotFoundException: ' C:\WINDOWS\system32\wbem\mofcomp.exe ' dosyası veya bütünleştirilmiş kodu veya bağımlılıklarından biri yüklenemedi. Sistem belirtilen dosyayı bulamıyor.  
   
@@ -57,14 +57,14 @@ Bu konuda, Windows Communication Foundation (WCF) kurma sorunlarını nasıl gid
  **Denetim Masası**'Nda bulunan **Program Ekle/kaldır** uygulamasını kullanarak .NET Framework 3,0 yüklemesini onarın veya .NET Framework 3,0 ' i kaldırın/yeniden yükleyin.  
   
 ## <a name="repairing-net-framework-30-after-net-framework-35-installation-removes-configuration-elements-introduced-by-net-framework-35-in-machineconfig"></a>.NET Framework 3,5 yüklemesi sonrasında .NET Framework 3,0 onarma, Machine. config dosyasında .NET Framework 3,5 tarafından tanıtılan yapılandırma öğelerini kaldırır  
- @No__t-0 ' ı yükledikten sonra .NET Framework 3,0 ' yi onarırsanız, Machine. config dosyasında [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] tarafından tanıtılan yapılandırma öğeleri kaldırılır. Ancak, Web. config bozulmadan kalır. Geçici çözüm, bu ARP aracılığıyla [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] ' ı onarması veya `/c` anahtarıyla [Iş akışı hizmeti kayıt aracı 'nı (WFServicesReg. exe)](../../../docs/framework/wcf/workflow-service-registration-tool-wfservicesreg-exe.md) kullanmaktır.  
+ @No__t-0 ' ı yükledikten sonra .NET Framework 3,0 ' yi onarırsanız, Machine. config dosyasında [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] tarafından tanıtılan yapılandırma öğeleri kaldırılır. Ancak, Web. config bozulmadan kalır. Geçici çözüm, bu ARP aracılığıyla [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] ' ı onarması veya `/c` anahtarıyla [Iş akışı hizmeti kayıt aracı 'nı (WFServicesReg. exe)](workflow-service-registration-tool-wfservicesreg-exe.md) kullanmaktır.  
   
- [Workflow Service kayıt aracı (WFServicesReg. exe)](../../../docs/framework/wcf/workflow-service-registration-tool-wfservicesreg-exe.md) ,%windir%\Microsoft.NET\Framework\v3.5\ veya%windir%\Microsoft.NET\Framework64\v3.5\ adresinde bulunabilir  
+ [Workflow Service kayıt aracı (WFServicesReg. exe)](workflow-service-registration-tool-wfservicesreg-exe.md) ,%windir%\Microsoft.NET\Framework\v3.5\ veya%windir%\Microsoft.NET\Framework64\v3.5\ adresinde bulunabilir  
   
 ## <a name="configure-iis-properly-for-wcfwf-webhost-after-installing-net-framework-35"></a>.NET Framework 3,5 yükledikten sonra IIS 'Yi WCF/WF Webhost için düzgün şekilde yapılandırma  
  @No__t-0 yüklemesi, WCF ile ilgili ek IIS yapılandırma ayarlarını yapılandıramazsa, yükleme günlüğünde bir hata kaydeder ve devam eder. Gerekli yapılandırma ayarları eksik olduğundan, WorkflowServices uygulamalarını çalıştırma girişimleri başarısız olur. Örneğin, xoml veya Rules hizmeti yüklenirken hata oluşabilir.  
   
- Bu soruna geçici bir çözüm olarak, makinede IIS betik eşlemelerini doğru şekilde yapılandırmak için `/c` anahtarıyla [Iş akışı hizmeti kayıt aracı 'nı (WFServicesReg. exe)](../../../docs/framework/wcf/workflow-service-registration-tool-wfservicesreg-exe.md) kullanın. [Workflow Service kayıt aracı (WFServicesReg. exe)](../../../docs/framework/wcf/workflow-service-registration-tool-wfservicesreg-exe.md) ,%windir%\Microsoft.NET\Framework\v3.5\ veya%windir%\Microsoft.NET\Framework64\v3.5\ adresinde bulunabilir  
+ Bu soruna geçici bir çözüm olarak, makinede IIS betik eşlemelerini doğru şekilde yapılandırmak için `/c` anahtarıyla [Iş akışı hizmeti kayıt aracı 'nı (WFServicesReg. exe)](workflow-service-registration-tool-wfservicesreg-exe.md) kullanın. [Workflow Service kayıt aracı (WFServicesReg. exe)](workflow-service-registration-tool-wfservicesreg-exe.md) ,%windir%\Microsoft.NET\Framework\v3.5\ veya%windir%\Microsoft.NET\Framework64\v3.5\ adresinde bulunabilir  
   
 ## <a name="could-not-load-type-systemservicemodelactivationhttpmodule-from-assembly-systemservicemodel-version-3000-cultureneutral-publickeytokenb77a5c561934e089"></a>' System. ServiceModel. Activation. HttpModule ' türü, ' System. ServiceModel, Version 3.0.0.0, Culture = neutral, PublicKeyToken = b77a5c561934e089 ' derlemesinden yüklenemedi  
  Bu hata, [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] yüklüyse ve WCF HTTP etkinleştirmesi etkinleştirilmişse oluşur. Sorunu çözmek için, Visual Studio Geliştirici Komut İstemi içinden aşağıdaki komut satırını çalıştırın:  
@@ -75,4 +75,4 @@ aspnet_regiis.exe -i -enable
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Kurulum yönergeleri](../../../docs/framework/wcf/samples/set-up-instructions.md)
+- [Kurulum Yönergeleri](./samples/set-up-instructions.md)

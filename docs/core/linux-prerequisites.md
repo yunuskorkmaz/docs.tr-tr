@@ -3,13 +3,13 @@ title: Linux üzerinde .NET Core önkoşulları
 description: Linux makinelerde .NET Core uygulamaları geliştirmek, dağıtmak ve çalıştırmak için desteklenen Linux sürümleri ve .NET Core bağımlılıkları.
 author: leecow
 ms.author: leecow
-ms.date: 09/25/2019
-ms.openlocfilehash: 4c5d79459c9d69111ca6452d9305f0deb37212b8
-ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
+ms.date: 10/11/2019
+ms.openlocfilehash: bb9049059de9d8208fc92234b28acdfb3d7f0cb3
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/28/2019
-ms.locfileid: "71591695"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72318334"
 ---
 # <a name="prerequisites-for-net-core-on-linux"></a>Linux üzerinde .NET Core önkoşulları
 
@@ -36,7 +36,7 @@ Bu makalede, Linux üzerinde .NET Core uygulamaları geliştirmek için gereken 
 > [!NOTE]
 > @No__t-0 simgesi en düşük sürümü temsil eder.
 
-| OS                             | Version               | Mimarileri    |
+| ATAYAMADı                             | Version               | Mimarileri    |
 | ------------------------------ | --------------------- | ---------------- |
 | Red Hat Enterprise Linux       | 6 +, 7                 | X64 |
 | Oracle Linux                   | 7                     | X64 |
@@ -64,7 +64,7 @@ ARM64 üzerinde .NET Core 3,0 yükleme hakkında daha fazla bilgi için bkz. [LI
 > [!NOTE]
 > @No__t-0 simgesi en düşük sürümü temsil eder.
 
-| OS                             |  Version                |  Mimarileri   |
+| ATAYAMADı                             |  Version                |  Mimarileri   |
 | ------------------------------ | ----------------------- | ---------------- |
 | Red Hat Enterprise Linux       |  6, 7                   | X64 |
 | Oracle Linux                   |  7                      | X64 |
@@ -87,7 +87,7 @@ ARM64 üzerinde .NET Core 3,0 yükleme hakkında daha fazla bilgi için bkz. [LI
 
 .NET Core 2,1, aşağıdaki Linux dağıtımları/sürümlerinde desteklenir:
 
-| OS                             |  Version                |  Mimarileri   |
+| ATAYAMADı                             |  Version                |  Mimarileri   |
 | ------------------------------ | ----------------------- | ---------------- |
 | Red Hat Enterprise Linux       |  6, 7, 8                | X64 |
 | Oracle Linux                   |  7                      | X64 |
@@ -128,6 +128,13 @@ Ubuntu dağıtımları aşağıdaki kitaplıkların yüklü olmasını gerektiri
 * libunwind8
 * libuuid1
 
+*System. Drawing. Common* derlemesini kullanan .NET Core uygulamaları için aşağıdaki bağımlılığa de ihtiyacınız vardır:
+
+* libgdiplus (sürüm 6.0.1 veya üzeri)
+
+> [!NOTE]
+> Ubuntu 'ın çoğu sürümü libgdiplus 'in önceki bir sürümünü içerir. En son bir libgdiplus sürümünü sisteminize mono deposunu ekleyerek yükleyebilirsiniz. Daha fazla bilgi için bkz. <https://www.mono-project.com/download/stable/>.
+
 ### <a name="centos-and-fedora"></a>CentOS ve Fedora
 
 CentOS dağıtımları için aşağıdaki kitaplıkların yüklü olması gerekir:
@@ -139,7 +146,7 @@ CentOS dağıtımları için aşağıdaki kitaplıkların yüklü olması gereki
 * libıu
 * zlib
 
-Fedora kullanıcıları: OpenSSL sürümünüz > = 1,1 ise, COMPAT-openssl10 ' ı yüklemeniz gerekir.
+Fedora kullanıcıları: OpenSSL sürümünüz > = 1,1 Ise, COMPAT-openssl10 yüklemeniz gerekir.
 
 .NET Core 2,1 öncesi sürümler için aşağıdaki bağımlılıklar da gereklidir:
 
@@ -147,6 +154,13 @@ Fedora kullanıcıları: OpenSSL sürümünüz > = 1,1 ise, COMPAT-openssl10 ' �
 * libuuid
 
 Bağımlılıklar hakkında daha fazla bilgi için bkz. [kendi Içindeki Linux uygulamaları](https://github.com/dotnet/core/blob/master/Documentation/self-contained-linux-apps.md).
+
+*System. Drawing. Common* derlemesini kullanan .NET Core uygulamaları için aşağıdaki bağımlılığa de ihtiyacınız olacaktır:
+
+* libgdiplus (sürüm 6.0.1 veya üzeri)
+
+> [!NOTE]
+> CentOS ve Fedora sürümlerinin çoğu, libgdiplus 'in önceki bir sürümünü içerir. En son bir libgdiplus sürümünü sisteminize mono deposunu ekleyerek yükleyebilirsiniz. Daha fazla bilgi için bkz. <https://www.mono-project.com/download/stable/>.
 
 ## <a name="installing-net-core-dependencies-with-the-native-installers"></a>Yerel yükleyicilerle .NET Core bağımlılıklarını yükleme
 
@@ -159,7 +173,7 @@ Linux 'ta iki yükleyici paketi seçeneği vardır:
 
 ### <a name="scripting-installs-with-the-net-core-installer-script"></a>.NET Core yükleyici betiği ile betik yüklemeleri
 
-[DotNet-install betikleri](./tools/dotnet-install-script.md) , CLI araç zinciri ve paylaşılan çalışma zamanının yönetici olmayan bir yüklemesini gerçekleştirmek için kullanılır. Betiği konumundan <https://dot.net/v1/dotnet-install.sh>indirebilirsiniz.
+[DotNet-install betikleri](./tools/dotnet-install-script.md) , CLI araç zinciri ve paylaşılan çalışma zamanının yönetici olmayan bir yüklemesini gerçekleştirmek için kullanılır. Betiği <https://dot.net/v1/dotnet-install.sh> ' dan indirebilirsiniz.
 
 Komut dosyası, şu anda .NET Core 1,1 olan en son "LTS" sürümünü yüklemek için varsayılan değerdir. .NET Core 2,1 yüklemek için betiği aşağıdaki anahtarla çalıştırın:
 

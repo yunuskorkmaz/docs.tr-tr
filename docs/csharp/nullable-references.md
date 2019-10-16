@@ -1,13 +1,13 @@
 ---
 title: Boş değer atanabilir başvuru türleri
-description: Bu makalede, 8 ' C# e eklenen Nullable başvuru türlerine genel bir bakış sağlanır. Yeni ve mevcut projeler için özelliği, null başvuru özel durumlarına karşı nasıl güvenlik sağladığını öğreneceksiniz.
+description: Bu makalede, 8,0 ' C# ye eklenen null yapılabilir başvuru türlerine genel bir bakış sunulmaktadır. Yeni ve mevcut projeler için özelliği, null başvuru özel durumlarına karşı nasıl güvenlik sağladığını öğreneceksiniz.
 ms.date: 02/19/2019
-ms.openlocfilehash: 213f0e3d9ad84628dab02a1dc483513783b2ad6e
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: a108c73064b40171a58df0796d4a0b75eddebbff
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71699952"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319063"
 ---
 # <a name="nullable-reference-types"></a>Boş değer atanabilir başvuru türleri
 
@@ -35,13 +35,11 @@ string? name;
 
 @No__t-0 ' ın eklenmemiş olduğu herhangi bir değişken, **null olamayan bir başvuru türüdür**. Bu özellik, bu özelliği etkinleştirdiğinizde var olan koddaki tüm başvuru türü değişkenlerini içerir.
 
-Derleyici, null olabilen bir başvurunun boş olmayan olarak bilinmesinin bilinmediğini anlamak için statik analizi kullanır. Null olduğunda, null olabilen bir başvuruya başvuru yaptığınızda derleyici sizi uyarır. Bir değişken adından sonra, `!` **null-forverme işlecini** kullanarak bu davranışı geçersiz kılabilirsiniz. Örneğin, `name` değişkeni null olmadığını, ancak derleyici bir uyarı verir, derleyicinin analizini geçersiz kılmak için aşağıdaki kodu yazabilirsiniz:
+Derleyici, null olabilen bir başvurunun boş olmayan olarak bilinmesinin bilinmediğini anlamak için statik analizi kullanır. Null olduğunda, null olabilen bir başvuruya başvuru yaptığınızda derleyici sizi uyarır. Bir değişken adından sonra, `!` [null-forverme işlecini](language-reference/operators/null-forgiving.md) kullanarak bu davranışı geçersiz kılabilirsiniz. Örneğin, `name` değişkeni null olmadığını, ancak derleyici bir uyarı verir, derleyicinin analizini geçersiz kılmak için aşağıdaki kodu yazabilirsiniz:
 
 ```csharp
 name!.Length;
 ```
-
-Bu işleç hakkındaki ayrıntıları GitHub 'da [null yapılabilir başvuru türleri](../../_csharplang/proposals/csharp-8.0/nullable-reference-types-specification.md#the-null-forgiving-operator) belirtim teklifinde okuyabilirsiniz.
 
 ## <a name="nullability-of-types"></a>Türlerin null olabilme sayısı
 
@@ -49,14 +47,14 @@ Herhangi bir başvuru türü, uyarıların ne zaman oluşturulacağını açıkl
 
 - Null *atanabilir olmayan*: null bu türdeki değişkenlere atanamaz. Bu tür değişkenlerin, başvuru yapılmadan önce null olarak işaretli olması gerekmez.
 - *Nullable*: null, bu türdeki değişkenlere atanabilir. @No__t-0 ' i denetlemeden bu tür değişkenlerin başvurusunun kaldırılması bir uyarıya neden olur.
-- *Zorunluluvou*: Bu,C# 8 ön durumundadır. Bu tür değişkenlere başvuru yapılmadan başvuru yapılabilir veya atanabilir.
+- *Zorunluluvou*: bu,C# 8,0 öncesi durumundadır. Bu tür değişkenlere başvuru yapılmadan başvuru yapılabilir veya atanabilir.
 - *Bilinmiyor*: Bu, genellikle kısıtlamaların, türün *null yapılabilir* veya *null değer*atanabilir olması gerektiğini bildirmeyecek tür parametreleri içindir.
 
 Değişken bildirimindeki bir türün null olabilme değeri, değişkenin bildirildiği *null yapılabilir bağlam* tarafından denetlenir.
 
 ## <a name="nullable-contexts"></a>Null yapılabilir bağlamlar
 
-Null yapılabilir bağlamlar, derleyicinin başvuru türü değişkenlerini nasıl yorumlayacağını öğrenmek için ayrıntılı denetimi etkinleştirir. Verilen herhangi bir kaynak çizginin **null yapılabilir ek açıklama bağlamı** `enabled` veya `disabled` ' dir. @No__t 1 ' den fazla atanabilir bağlamdaC# tüm kodunuzun derlenmesi için önceden 8 derleyicisini düşünebilirsiniz: herhangi bir başvuru türü null olabilir. **Null yapılabilir uyarılar bağlamı** `enabled` veya `disabled` olarak ayarlanabilir. Null yapılabilir uyarılar bağlamı, akış analizini kullanarak derleyici tarafından oluşturulan uyarıları belirtir.
+Null yapılabilir bağlamlar, derleyicinin başvuru türü değişkenlerini nasıl yorumlayacağını öğrenmek için ayrıntılı denetimi etkinleştirir. Belirli bir kaynak çizginin **null yapılabilir ek açıklama bağlamı** etkin veya devre dışı. ÖncedenC# 8,0 derleyicisini, tüm kodunuzu devre dışı bırakılmış bir null yapılabilir bağlamda derleme olarak düşünebilirsiniz: herhangi bir başvuru türü null olabilir. **Null yapılabilir uyarılar bağlamı** da etkinleştirilebilir veya devre dışı bırakılabilir. Null yapılabilir uyarılar bağlamı, akış analizini kullanarak derleyici tarafından oluşturulan uyarıları belirtir.
 
 *. Csproj* dosyanızdaki `Nullable` öğesi kullanılarak bir proje için Nullable ek açıklama bağlamı ve null yapılabilir uyarı bağlamı ayarlanabilir. Bu öğe, derleyicinin türlerin null olduğunu ve hangi uyarıların oluşturulduğunu nasıl yorumlayacağını yapılandırır. Geçerli ayarlar şunlardır:
 
@@ -81,7 +79,7 @@ Ayrıca, aynı bağlamlarını projenizde her yerde ayarlamak için yönergeleri
 - `#nullable enable annotations`: null yapılabilir ek açıklama bağlamını **etkin**olarak ayarlayın.
 - `#nullable restore annotations`: ek açıklama uyarı bağlamını proje ayarlarına geri yükler.
 
-Varsayılan null atanabilir ek açıklaması ve uyarı bağlamları `disabled` ' dır. Bu karar, mevcut kodunuzun değişiklik yapılmadan ve yeni bir uyarı oluşturmadan derlendiğini gösterir.
+Varsayılan olarak, null yapılabilir ek açıklama ve uyarı bağlamları **devre dışıdır**. Bu, mevcut kodunuzun değişiklik yapılmadan ve yeni bir uyarı oluşturmadan derlendiğini gösterir.
 
 ## <a name="nullable-annotation-context"></a>Null yapılabilir ek açıklama bağlamı
 
@@ -110,10 +108,10 @@ Null yapılabilir uyarı bağlamı null yapılabilir ek açıklama bağlamından
 1. Değişken, null olmayan bir değere kesin olarak atandı.
 1. Değişken veya ifade, kendisine başvurulmadan önce null değere karşı denetlendi.
 
-Null yapılabilir uyarı bağlamı `enabled` olduğunda, derleyici bir değişken veya ifadeye, **belki de boş** bir durumda her başvurduğunda uyarı oluşturur. Ayrıca, null olabilen ek açıklama bağlamı `enabled` olduğunda, null olmayan bir başvuruya veya ifadeye **null** değer atanabilir bir başvuru türüne atandığında uyarılar oluşturulur.
+Null yapılabilir uyarı bağlamı etkin olduğunda, derleyici bir değişken veya ifadeye, **belki de null** bir durumda her başvuru yaptığınızda uyarılar oluşturur. Ayrıca, **null** olabilen bir tür veya ifade, etkin bir Nullable ek açıklama bağlamında null yapılamayan bir başvuru türüne atandığında uyarılar oluşturulur.
 
-## <a name="learn-more"></a>Daha fazla bilgi edinin
+## <a name="see-also"></a>Ayrıca bkz.
 
-- [Taslak Nullable başvuru belirtimi](https://github.com/dotnet/csharplang/blob/master/proposals/csharp-8.0/nullable-reference-types-specification.md)
+- [Taslak Nullable başvuru türleri belirtimi](~/_csharplang/proposals/csharp-8.0/nullable-reference-types-specification.md)
 - [Null yapılabilir başvurular öğreticisine giriş](tutorials/nullable-reference-types.md)
 - [Var olan bir kod temelinin Nullable başvurulara geçirilmesi](tutorials/upgrade-to-nullable-references.md)

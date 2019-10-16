@@ -4,69 +4,69 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - defining service contracts [WCF]
 ms.assetid: 036fae20-7c55-4002-b71d-ac4466e167a3
-ms.openlocfilehash: 5cbf7c16988d8b8858aa75f4e7a956fa371238dd
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0d569d12b5bc555a07e94fa89c5a19f52f4a6b6c
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64652040"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72318396"
 ---
 # <a name="designing-and-implementing-services"></a>Hizmetleri Tasarlama ve Uygulama
-Bu bölümde tanımlaması ve WCF sözleşmeleri gösterilmektedir. Ne bir uç nokta için dış dünya iletişim kuran bir hizmet sözleşmesi belirler. Daha somut bir düzeyde istek/yanıt gibi tek yönlü ve çift yönlü bir dizi temel ileti exchange desenleri (MEPs) ile düzenlenmiş belirli ileti hakkında bir deyim olduğu. Bir hizmet sözleşmesini ileti alışverişlerinde mantıksal olarak ilişkili bir dizi ise, bir hizmet işlemi bir tek ileti alışverişi olur. Örneğin, bir `Hello` işlemi (arayan Karşılama duyurmaktan biçimde) bir ileti açıkça kabul etmelidir ve olabilir veya (işlemin ilgili bağlı olarak) bir ileti döndürmeyebilir.  
+Bu bölümde, WCF sözleşmelerini tanımlama ve uygulama işlemlerinin nasıl yapılacağı gösterilir. Bir hizmet sözleşmesi, bir uç noktanın dış dünyaya ne iletişim kuracağını belirtir. Daha somut bir düzeyde, istek/yanıt, tek yönlü ve çift yönlü gibi temel ileti değişimi desenleri (MEPs) halinde düzenlenmiş belirli bir ileti kümesinin bir ifadesidir. Bir hizmet sözleşmesi mantıksal olarak ilişkili bir ileti değişimi kümesi ise, bir hizmet işlemi tek bir ileti alışverişi olur. Örneğin, bir @no__t 0 işlemi, tek bir ileti kabul etmelidir (Bu nedenle, çağıran selamlamayı duyurabilmesi) ve bir ileti döndürmeyebilir (işlemin ne olduğuna bağlı olarak).  
   
- Sözleşmeler ve diğer temel Windows Communication Foundation (WCF) kavramları hakkında daha fazla bilgi için bkz. [temel Windows Communication Foundation kavramları](../../../docs/framework/wcf/fundamental-concepts.md). Bu konu başlığı altında hizmet sözleşmelerini anlamaya odaklanır. Hizmet sözleşmeleri hizmetlerine bağlanmak için kullanan istemciler oluşturma hakkında daha fazla bilgi için bkz. [WCF istemcisi genel bakış](../../../docs/framework/wcf/wcf-client-overview.md).  
+ Sözleşmeler ve diğer çekirdek Windows Communication Foundation (WCF) kavramları hakkında daha fazla bilgi için bkz. [temel Windows Communication Foundation kavramlar](fundamental-concepts.md). Bu konu, hizmet sözleşmelerini anlamak için odaklanır. Hizmetlere bağlanmak için hizmet sözleşmeleri kullanan istemciler oluşturma hakkında daha fazla bilgi için bkz. [WCF Istemcisine genel bakış](wcf-client-overview.md).  
   
-## <a name="overview"></a>Genel Bakış  
- Bu konu, WCF hizmetleri tasarlama ve uygulama için bir üst düzey kavramsal yönlendirme sağlar. Alt konuları, tasarım ve uygulama özellikleri hakkında daha ayrıntılı bilgi sağlar. Tasarlama ve uygulama WCF uygulamanızı önce önerilen aldığınız:  
+## <a name="overview"></a>Genel bakış  
+ Bu konuda, WCF Hizmetleri tasarlamak ve uygulamak için yüksek düzeyde kavramsal bir yön sağlanır. Alt konuları, tasarım ve uygulamanın özellikleri hakkında daha ayrıntılı bilgi sağlar. WCF uygulamanızı tasarlamaya ve uygulamadan önce şunları yapmanız önerilir:  
   
-- Anlamak hizmet sözleşmesini ne olduğu, nasıl çalıştığını ve nasıl oluşturacağınızı.  
+- Hizmet sözleşmesinin ne olduğunu, nasıl çalıştığını ve bir tane nasıl oluşturulacağını anlayın.  
   
-- Sözleşmeler en düşük gereksinimleri durumunu anlamak, çalışma zamanı yapılandırma veya barındırma ortamı değil destekleyebilir.  
+- Sözleşmelerin durum, çalışma zamanı yapılandırması veya barındırma ortamının desteklemediği en düşük gereksinimleri anlayın.  
   
 ## <a name="service-contracts"></a>Hizmet Sözleşmeleri  
- Bir hizmet sözleşmesini aşağıdaki belirtir:  
+ Bir hizmet sözleşmesi şunları belirtir:  
   
-- Bir sözleşme işlemleri sunar.  
+- Bir sözleşmenin sunduğu işlemler.  
   
-- İşlem iletileri değiş tokuş imzası.  
+- Değiştirilen ileti bakımından işlemlerin imzası.  
   
-- Bu iletileri veri türleri.  
+- Bu iletilerin veri türleri.  
   
-- İşlemleri konumu.  
+- İşlemlerin konumu.  
   
-- Başarılı iletişim hizmetiyle desteklemek için kullanılan serileştirme biçimleri ve belirli protokoller.  
+- Hizmetle başarılı iletişimi desteklemek için kullanılan belirli protokoller ve serileştirme biçimleri.  
   
- Örneğin, bir satın alma siparişi sözleşme olabilir bir `CreateOrder` sipariş bilgileri bir girişi kabul eden bir işlem türleri ve siparişi tanımlayıcısı dahil olmak üzere, başarı veya başarısızlık durumu bilgilerini döndürür. Ayrıca olabilir bir `GetOrderStatus` işlemi, bir siparişi tanımlayıcısı kabul eden ve sipariş durumu bilgilerini döndürür. Bu tür bir hizmet sözleşmesini belirtmeniz gerekir:  
+ Örneğin, bir satınalma siparişi sözleşmesinin, sipariş bilgisi türleri girişi kabul eden bir `CreateOrder` işlemi olabilir ve bir sipariş tanımlayıcısı dahil olmak üzere başarı veya başarısızlık bilgilerini döndürür. Ayrıca, bir sıra tanımlayıcısını kabul eden ve sıra durum bilgilerini döndüren `GetOrderStatus` işlemi olabilir. Bu sıralamanın bir hizmet sözleşmesi şunları belirtir:  
   
-1. Satın alma siparişi sözleşme, toplamda `CreateOrder` ve `GetOrderStatus` operations.  
+1. Satın alma siparişi sözleşmesinin `CreateOrder` ve `GetOrderStatus` işlemlerinden bir şekilde olduğunu.  
   
-2. İşlemleri belirttiğiniz iletileri giriş ve çıkış iletileri.  
+2. İşlemler giriş iletileri ve çıkış iletileri belirtti.  
   
-3. Bu iletiler gerçekleştirebilirsiniz veriler.  
+3. Bu iletilerin taşıya, verileri.  
   
-4. Kategorik deyimleri hakkında iletişim altyapısı başarıyla iletileri işlemek için gerekli. Örneğin, bu Ayrıntılar arasında olup olmadığını ve hangi güvenlik formları başarılı iletişim kurmak için gereklidir.  
+4. İletileri başarıyla işlemek için gereken iletişim altyapısına ilişkin kategorik deyimler. Örneğin, bu ayrıntılar başarılı bir iletişim kurmak için hangi güvenlik biçimlerinin gerekli olup olmayacağını ve bu ayrıntıları içerir.  
   
- Bu tür birçok platformda (Microsoft olmayan platformlar dahil) diğer uygulamalara yönelik bilgileri iletmek için XML hizmet sözleşmelerini herkese açık şekilde standart XML biçimlerde, gibi ifade edilir [Web Hizmetleri Açıklama Dili](https://go.microsoft.com/fwlink/?LinkId=94952) () WSDL) ve [XML Şeması](https://go.microsoft.com/fwlink/?LinkId=94953) (XSD), diğerlerinin yanı sıra. Geliştiriciler için birçok platformda dil belirtiminin anladıkları olduğundan hem dillere birlikte çalışabilirliği etkinleştirmek için tasarlandığından hizmet ile iletişim kurabilen uygulamaları oluşturmak için bu genel sözleşme bilgileriniz kullanabilirsiniz Genel form, biçimleri ve protokolleri hizmetinin desteklediği açıklayarak. WCF bu tür bilgileri nasıl işlediği hakkında daha fazla bilgi için bkz. [meta verileri](../../../docs/framework/wcf/feature-details/metadata.md).  
+ Bu tür bilgileri birçok platformda diğer uygulamalarla (Microsoft dışı platformlar dahil) iletmek için XML hizmet sözleşmeleri, [Web Hizmetleri Açıklama Dili](https://go.microsoft.com/fwlink/?LinkId=94952) (wsdl) ve [XML ŞEMASı gibi standart XML biçimlerinde genel olarak ifade edilir ](https://go.microsoft.com/fwlink/?LinkId=94953)(Xsd), diğerleri arasında. Birçok platforma yönelik geliştiriciler, bu ortak sözleşme bilgilerini, her ikisi de belirtim dilini anladığından ve bu dillerin birlikte çalışabilirliği etkinleştirmek üzere tasarlandıkları için hizmetle iletişim kurabilen uygulamalar oluşturmak için kullanabilir. Hizmetin desteklediği ortak formları, biçimleri ve protokolleri açıklayarak. WCF 'nin bu tür bilgileri nasıl ele aldığı hakkında daha fazla bilgi için bkz. [metadata](./feature-details/metadata.md).  
   
- Sözleşmeler birçok yolu belirtilebilir ve WSDL ve XSD Hizmetleri erişilebilir bir şekilde tanımlamak için mükemmel dilleri olsa da, bunlar doğrudan kullanmak zor diller ve yalnızca bir hizmetin hizmet sözleşme uygulamaları açıklamalardır. Bu nedenle, WCF uygulamaları hizmet yapısını tanımlamak ve uygulamak için yönetilen öznitelikleri, arabirimler ve sınıflar kullanın.  
+ Sözleşmeler birçok yoldan ifade edilebilir, ancak WSDL ve XSD hizmetleri erişilebilir bir şekilde tanımlamaya yönelik harika diller olsa da, doğrudan kullanılması zor dillerdir ve hizmet sözleşmesi uygulamalarının sadece bir hizmet açıklamalarıdır. Bu nedenle, WCF uygulamaları bir hizmetin yapısını tanımlamak ve uygulamayı uygulamak için hem yönetilen öznitelikleri, arabirimleri hem de sınıfları kullanır.  
   
- Yönetilen türler tanımlanan elde edilen anlaşma olabilir *dışarı* meta veri olarak — WSDL ve XSD — istemcileri veya diğer hizmet uygulayıcılar tarafından gerektiğinde. Sonuç, tüm istemci uygulamaları için (genel meta verileri kullanarak) açıklanan basit bir programlama modeli olur. Temel alınan SOAP iletilerini, nakliye ve güvenlikle ilgili bilgiler ve benzeri ayrıntılarını gerekli ve türlerinden dönüşümler hizmet sözleşme tür sistemi XML türü sistemine otomatik olarak gerçekleştirir WCF bırakılabilir.  
+ Yönetilen türlerde tanımlanan sonuç sözleşmesi, istemciler veya diğer hizmet uygulayıcıları için gerektiğinde meta veriler (WSDL ve XSD) olarak *aktarılabilir* . Sonuç, herhangi bir istemci uygulamasına (ortak meta veriler kullanılarak) açıklanabilir ve basit bir programlama modelidir. Temel alınan SOAP iletilerinin ayrıntıları, ulaşım ve güvenlikle ilgili bilgiler, vb., hizmet sözleşmesi türü sistemine ve ' a yönelik gerekli dönüştürmeleri otomatik olarak XML türü sistemine uygulayan WCF 'ye bırakılabilir.  
   
- Sözleşmeleri tasarlama hakkında daha fazla bilgi için bkz. [Hizmet sözleşmeleri tasarlama](../../../docs/framework/wcf/designing-service-contracts.md). Sözleşmelerini uygulama hakkında daha fazla bilgi için bkz. [hizmet sözleşmelerini uygulama](../../../docs/framework/wcf/implementing-service-contracts.md).  
+ Sözleşmeleri tasarlama hakkında daha fazla bilgi için bkz. [hizmet sözleşmeleri tasarlama](designing-service-contracts.md). Sözleşmeleri uygulama hakkında daha fazla bilgi için bkz. [hizmet sözleşmelerini uygulama](implementing-service-contracts.md).  
   
-### <a name="messages-up-front-and-center"></a>Merkezi iletileri  
- Yönetilen arabirimler, sınıflar ve yöntemler modeli hizmet işlemlerine kullanmaktır basit uzaktan yordam çağrısı (RPC) kullanıldığında-yöntem imzaları hangi bir yönteme parametre geçirme ve dönüş değerleri alma içinde olan normal biçimini, stili işlevi, bir nesne veya başka bir kod türünden isteniyor. Örneğin, Visual Basic ve C++ COM gibi yönetilen dilleri kullanarak programcılar RPC stili yaklaşımın bilgilerini (nesneler veya arabirimleri kullanılarak olup olmadığını) WCF hizmet sözleşmelerini oluşturulmasını ndaki sorunları yaşayan olmadan uygulayabilirsiniz Dağıtılmış nesne sistemleri RPC stili. Hizmet yönlendirmesi kolaylığı ve aşina olduğunuz RPC korurken gevşek, ileti kaynaklı programlama avantajlarını programlama deneyimi sağlar.  
+### <a name="messages-up-front-and-center"></a>Ön ve Merkez iletileri  
+ Yönetilen arabirimleri, sınıfları ve hizmet işlemlerini modellemek için yöntemleri kullanmak, uzak yordam çağrısı (RPC)-stil yöntemi imzalarında kullanıldığında, parametreleri bir yönteme geçirmek ve dönüş değerlerini almak için normal bir biçim olduğunda basittir. bir nesneden veya diğer kod türünden işlevsellik isteme. Örneğin, Visual Basic ve C++ com gibi yönetilen dilleri kullanan PROGRAMCıLAR, RPC stili yaklaşımına (nesnelerin veya arabirimlerin kullanılmasına bakılmaksızın), ilgili sorunları yaşamaya gerek kalmadan WCF hizmet sözleşmeleri oluşturmaya yönelik bilgileri uygulayabilir RPC stili dağıtılmış nesne sistemlerinde. Hizmet yönü, esnek olarak bağlanmış, ileti yönelimli bir programlamanın sağladığı avantajlardan yararlanır ve bu sayede RPC programlama deneyiminin kolaylığını ve bu deneyimin kullanımını korur.  
   
- İleti kaynaklı uygulama programlama arabirimleri, ileti kuyrukları gibi Microsoft MSMQ gibi birçok Programcı daha rahat <xref:System.Messaging> .NET Framework veya HTTP istekleri gönderen yapılandırılmamış XML'de ad alanları. İleti düzeyi programlama hakkında daha fazla bilgi için bkz: [kullanarak ileti sözleşmeleri](../../../docs/framework/wcf/feature-details/using-message-contracts.md), [hizmet kanal düzeyi programlama](../../../docs/framework/wcf/extending/service-channel-level-programming.md), ve [POXuygulamalarıilebirlikteçalışabilirlik](../../../docs/framework/wcf/feature-details/interoperability-with-pox-applications.md).  
+ Birçok programcı, Microsoft MSMQ gibi ileti kuyrukları, .NET Framework <xref:System.Messaging> ad alanları veya HTTP isteklerinde yapılandırılmamış XML gönderirken birkaç kez daha rahat hale getirilmektedir. İleti düzeyinde programlama hakkında daha fazla bilgi için bkz. [POX uygulamalarıyla](./feature-details/interoperability-with-pox-applications.md) [İleti sözleşmeleri](./feature-details/using-message-contracts.md), [hizmet kanalı düzeyi programlama](./extending/service-channel-level-programming.md)ve birlikte çalışabilirliği kullanma.  
   
-### <a name="understanding-the-hierarchy-of-requirements"></a>Hiyerarşi gereksinimlerini anlama  
- Bir hizmet sözleşmesini işlemleri grupları; ileti değişim deseni, ileti türleri ve veri türleri bu iletileri carry belirtir. çalışma zamanı davranışını uygulama destek sözleşmesi olmalıdır kategorilerini belirtir (örneğin, iletileri imzalı şifrelenir ve gerekli olabilir). Hizmet sözleşmesi, tam olarak nasıl Bu gereksinimler, yalnızca, olması gereken karşılandığından belirtmiyor. Şifreleme ya da bir ileti imzalandığı şekilde en fazla uygulama ve uyumlu bir hizmet yapılandırmasını türüdür.  
+### <a name="understanding-the-hierarchy-of-requirements"></a>Gereksinimlerin hiyerarşisini anlama  
+ Bir hizmet sözleşmesi işlemleri gruplandırır; ileti değişim modelini, ileti türlerini ve bu iletilerin hangi veri türlerini taşımakta olduğunu belirtir; Ayrıca, bir uygulamanın sözleşmeyi desteklemek için sahip olması gereken çalışma zamanı davranışının kategorilerini gösterir (örneğin, iletilerin şifrelenmesini ve imzalanmasını gerektirebilir). Hizmet sözleşmesinin kendisi, bu gereksinimlerin nasıl karşılandığını tam olarak belirtmez, yalnızca bunların olması gerekir. Şifreleme türü veya bir iletinin imzalandığı yol, uyumlu bir hizmetin uygulamasına ve yapılandırmasına kadar.  
   
- Sözleşme davranış eklemek için belirli şeyleri hizmet sözleşmesi uygulama ve çalışma zamanı yapılandırma gerektiren şekilde dikkat edin. Önceki gereksinimler kümesine kullanmak için bir hizmeti kullanıma sunmak için karşılanması gereken gereksinimleri kümesini oluşturur. Bir sözleşme uygulama gereksinimlerini yaparsa, bir uygulama henüz gerektirebilir daha fazla çalıştırmak hizmet bağlamaları ve yapılandırma. Son olarak, ana bilgisayar uygulaması hizmet yapılandırması ve bağlamalar eklemek gereksinimlere desteklemelidir.  
+ Sözleşmenin, hizmet sözleşmesi uygulamasının belirli şeyleri ve davranış eklemesi için çalışma zamanı yapılandırmasını gerektirdiğini fark edebilirsiniz. Bir hizmeti önceki gereksinimler kümesinde kullanım derlemeleri için kullanıma sunmak üzere karşılanması gereken gereksinimler kümesi. Bir sözleşme uygulamanın gereksinimlerini yapıyorsa, bir uygulama hizmetin çalışmasına imkan tanıyan yapılandırma ve bağlamalardan daha fazlasını gerektirebilir. Son olarak, ana bilgisayar uygulaması hizmet yapılandırmasının ve bağlamaların eklemesi gereken tüm gereksinimleri de desteklemelidir.  
   
- Bu ek gereksinim işlem tasarlama, uygulama, yapılandırma ve bir Windows Communication Foundation (WCF) hizmeti uygulamasını barındıran çalışırken göz önünde bulundurmanız önemlidir. Örneğin, sözleşmenin bir oturumu desteklemek gerektiğini belirtebilirsiniz. Bu durumda, sözleşmeye dayalı bu gereksinimi desteklemek için bağlama yapılandırmanız gerekir ya da hizmet uygulamasında çalışmaz. Ya da Hizmetiniz Windows tümleşik kimlik doğrulaması gerektirir ve Internet Information Services (IIS) barındırılan hizmetin içinde bulunduğu Web uygulaması Windows tümleşik kimlik açık ve kapalı anonim destek sahip olmanız gerekir. Farklı hizmet konak uygulama türleri etkisini ve özellikleri hakkında daha fazla bilgi için bkz. [barındırma hizmetleri](../../../docs/framework/wcf/hosting-services.md).  
+ Bu ek gereksinim süreci, bir Windows Communication Foundation (WCF) hizmet uygulamasını tasarlarken, uygularken, yapılandırırken ve barındırırken göz önünde bulundurmanız önemlidir. Örneğin, sözleşme, bir oturumu desteklemesi gerektiğini belirtebilir. Bu durumda, bu, sözleşmeli gereksinimi destekleyecek şekilde bağlamayı yapılandırmanız veya hizmet uygulamasının çalışmamaları gerekir. Ya da hizmetiniz Windows tümleşik kimlik doğrulaması gerektiriyorsa ve Internet Information Services (IIS) içinde barındırılıyorsa, hizmetin bulunduğu Web uygulamasında Windows tümleşik kimlik doğrulamasının açık olması ve anonim desteğin kapalı olması gerekir. Farklı hizmet ana bilgisayarı uygulama türlerinin özellikleri ve etkileri hakkında daha fazla bilgi için bkz. [barındırma hizmetleri](hosting-services.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hizmet Sözleşmeleri Tasarlama](../../../docs/framework/wcf/designing-service-contracts.md)
-- [Hizmet Anlaşmalarını Uygulama](../../../docs/framework/wcf/implementing-service-contracts.md)
+- [Hizmet Sözleşmeleri Tasarlama](designing-service-contracts.md)
+- [Hizmet Anlaşmalarını Uygulama](implementing-service-contracts.md)

@@ -1,28 +1,28 @@
 ---
-title: 'Nasıl yapılır: (Visual Basic) LINQ ile ArrayList sorgulama'
+title: "Nasıl yapılır: LINQ ile ArrayList 'i sorgulama (Visual Basic)"
 ms.date: 07/20/2015
 ms.assetid: 176358a9-d765-4b57-9557-7feb4428138d
-ms.openlocfilehash: ed440a7970d0ef1a49af36fa56b1c7ca74715e5f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c9cc86c6f74c8edc628050c911474bf515784180
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61908173"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320320"
 ---
-# <a name="how-to-query-an-arraylist-with-linq-visual-basic"></a>Nasıl yapılır: (Visual Basic) LINQ ile ArrayList sorgulama
-LINQ Sorgu genel olmayan için kullanırken <xref:System.Collections.IEnumerable> koleksiyonlar gibi <xref:System.Collections.ArrayList>, koleksiyon içindeki nesneler belirli türünü yansıtacak şekilde Aralık değişkeninin türünü açıkça belirtmesi gerekir. Örneğin, bir <xref:System.Collections.ArrayList> , `Student` nesneleri, [From yan tümcesi](../../../../visual-basic/language-reference/queries/from-clause.md) şöyle görünmelidir:  
+# <a name="how-to-query-an-arraylist-with-linq-visual-basic"></a>Nasıl yapılır: LINQ ile ArrayList 'i sorgulama (Visual Basic)
+LINQ to <xref:System.Collections.ArrayList> gibi genel olmayan <xref:System.Collections.IEnumerable> koleksiyonlarını sorgulamak için kullandığınızda, koleksiyondaki nesne türlerini yansıtacak şekilde Aralık değişkeninin türünü açıkça bildirmeniz gerekir. Örneğin, <xref:System.Collections.ArrayList> `Student` nesneleriniz varsa [from yan tümcesinden](../../../../visual-basic/language-reference/queries/from-clause.md) aşağıdaki gibi görünmelidir:  
   
-```  
+```vb  
 Dim query = From student As Student In arrList   
-...  
+'...  
 ```  
   
- Aralık değişkeninin türünü belirterek, her öğe atama <xref:System.Collections.ArrayList> için bir `Student`.  
+ Aralık değişkeninin türünü belirterek, <xref:System.Collections.ArrayList> ' daki her öğeyi bir `Student` ' e dönüştürmektir.  
   
- Bir açık olarak aralık değişkeni bir sorgu ifadesinde kullanımını çağırmakla eşdeğerdir <xref:System.Linq.Enumerable.Cast%2A> yöntemi. <xref:System.Linq.Enumerable.Cast%2A> Belirtilen dönüştürme gerçekleştirilemediği takdirde, özel durum oluşturur. <xref:System.Linq.Enumerable.Cast%2A> ve <xref:System.Linq.Enumerable.OfType%2A> genel olmayan üzerinde çalışan iki standart sorgu işleci yöntemleri <xref:System.Collections.IEnumerable> türleri. Visual Basic'te açıkça çağırmalısınız <xref:System.Linq.Enumerable.Cast%2A> veri kaynağındaki belirli bir aralık değişkeni türü emin olmak için yöntemi. Daha fazla bilgi için [(Visual Basic) sorgu işlemlerinde tür ilişkileri](../../../../visual-basic/programming-guide/concepts/linq/type-relationships-in-query-operations.md).  
+ Sorgu ifadesinde açıkça yazılmış bir aralık değişkeninin kullanılması <xref:System.Linq.Enumerable.Cast%2A> yöntemini çağırmaya eşdeğerdir. <xref:System.Linq.Enumerable.Cast%2A> belirtilen tür dönüştürme gerçekleştirilemiyorsa bir özel durum oluşturur. <xref:System.Linq.Enumerable.Cast%2A> ve <xref:System.Linq.Enumerable.OfType%2A>, genel olmayan <xref:System.Collections.IEnumerable> türlerinde çalışan iki standart sorgu operatörü yöntemleridir. Visual Basic, belirli bir Aralık değişkeni türünü sağlamak için veri kaynağında <xref:System.Linq.Enumerable.Cast%2A> yöntemini açıkça çağırmanız gerekir. Daha fazla bilgi için bkz. [sorgu Işlemlerinde tür ilişkileri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/type-relationships-in-query-operations.md).  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, üzerinden basit bir sorguyu gösterir. bir <xref:System.Collections.ArrayList>. Bu örnek kodu çağırdığında nesne başlatıcıları kullanır Not <xref:System.Collections.ArrayList.Add%2A> yöntemi, ancak bu zorunlu değildir.  
+ Aşağıdaki örnek, <xref:System.Collections.ArrayList> üzerinde basit bir sorgu gösterir. Bu örnek, kod <xref:System.Collections.ArrayList.Add%2A> yöntemini çağırdığında nesne başlatıcıları kullanır, ancak bu bir gereklilik değildir.  
   
 ```vb  
 Imports System.Collections  
@@ -78,4 +78,4 @@ End Module
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [LINQ to Objects'in (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
+- [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)

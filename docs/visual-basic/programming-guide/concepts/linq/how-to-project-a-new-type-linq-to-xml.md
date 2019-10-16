@@ -1,21 +1,21 @@
 ---
-title: 'Nasıl yapılır: Yeni bir tür (LINQ to XML) proje (Visual Basic)'
+title: 'Nasıl yapılır: yeni bir tür proje (LINQ to XML) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 8cfb24f5-89b2-4cfb-b85d-e7963f8f1845
-ms.openlocfilehash: a94180705674c8aee3ce45607f89fdbba1c873b7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 64b563c57406caae7869905c417db9e6439e6157
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61757137"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72318364"
 ---
-# <a name="how-to-project-a-new-type-linq-to-xml-visual-basic"></a>Nasıl yapılır: Yeni bir tür (LINQ to XML) proje (Visual Basic)
-Bu bölümdeki diğer örnekler, sonuç olarak döndüren sorgular gösterilmesini <xref:System.Collections.Generic.IEnumerable%601> , <xref:System.Xml.Linq.XElement>, <xref:System.Collections.Generic.IEnumerable%601> , `string`, ve <xref:System.Collections.Generic.IEnumerable%601> , `int`. Bunlar ortak sonuç türleri, ancak her senaryo için uygun değildir. Çoğu durumda sorgularınızın döndürülecek isteyeceksiniz bir <xref:System.Collections.Generic.IEnumerable%601> başka bir tür.  
+# <a name="how-to-project-a-new-type-linq-to-xml-visual-basic"></a>Nasıl yapılır: yeni bir tür proje (LINQ to XML) (Visual Basic)
+Bu bölümdeki diğer örneklerde, <xref:System.Collections.Generic.IEnumerable%601> ' a <xref:System.Xml.Linq.XElement> ' a, <xref:System.Collections.Generic.IEnumerable%601> `string` ' i ve <xref:System.Collections.Generic.IEnumerable%601> ' ü `int` ' i döndürür. Bunlar yaygın sonuç türleridir, ancak her senaryo için uygun değildir. Çoğu durumda, sorgularınızın başka bir türün <xref:System.Collections.Generic.IEnumerable%601> döndürmesini isteyeceksiniz.  
   
 ## <a name="example"></a>Örnek  
- Bu örnek nesneleri oluşturmak nasıl gösterir `Select` yan tümcesi. Kod öncelikle bir oluşturucuya sahip yeni bir sınıf tanımlar ve sonra değiştirir `Select` deyimi deyim yeni sınıfının yeni bir örneğini olmasını sağlayın.  
+ Bu örnek `Select` yan tümcesindeki nesnelerin örneğini oluşturmayı gösterir. Kod ilk olarak bir Oluşturucu içeren yeni bir sınıf tanımlar ve ardından `Select` deyimini değiştirerek ifade yeni sınıfın yeni bir örneği olur.  
   
- Bu örnek aşağıdaki XML belgesi kullanır: [Örnek XML dosyası: Tipik satın alma siparişi (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md).  
+ Bu örnek, şu XML belgesini kullanır: [örnek xml dosyası: tipik satın alma siparişi (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md).  
   
 ```vb  
 Public Class NameQty  
@@ -43,15 +43,15 @@ Public Class Program
 End Class  
 ```  
   
- Bu örnekte `M:System.Xml.Linq.XElement.Element` konu başlığı altında tanıtılan yöntemi [nasıl yapılır: Tek bir alt öğe (LINQ to XML) alma (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-retrieve-a-single-child-element-linq-to-xml.md). Tarafından döndürülen öğe değerlerini almak için atamalar da kullandığı `M:System.Xml.Linq.XElement.Element` yöntemi.  
+ Bu örnek, [nasıl yapılır: tek bir alt öğe alma (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-retrieve-a-single-child-element-linq-to-xml.md)konusunda tanıtılan `M:System.Xml.Linq.XElement.Element` yöntemini kullanır. Ayrıca, `M:System.Xml.Linq.XElement.Element` yöntemiyle döndürülen öğelerin değerlerini almak için yayınları kullanır.  
   
  Bu örnek aşağıdaki çıktıyı üretir:  
   
-```  
+```console  
 Lawnmower:1  
 Baby Monitor:2  
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Projeksiyonlar ve Dönüşümler (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+- [Tahminler ve dönüşümler (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)

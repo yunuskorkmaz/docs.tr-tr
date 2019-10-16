@@ -2,18 +2,18 @@
 title: Uzamsal İşlevler
 ms.date: 03/30/2017
 ms.assetid: 90cb177d-88a0-45be-97e8-3b306283c6e0
-ms.openlocfilehash: 09402633c5e7f591a534992fc92655e6a2d1d88d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: eba384e77389f82006479f165178e80fcac244b1
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61797702"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319296"
 ---
 # <a name="spatial-functions"></a>Uzamsal İşlevler
-Uzamsal türler için sabit biçim yoktur. Ancak, iyi bilinen metin biçiminde dizeleriyle çağrı kurallı Entity Framework işlevleri kullanabilirsiniz. Örneğin, aşağıdaki işlev çağrısı geometri noktası oluşturur:  
+Uzamsal türler için değişmez değer biçimi yoktur. Ancak, Iyi bilinen metin biçiminde dizeler kullanarak çağırdığınız kurallı Entity Framework işlevleri kullanabilirsiniz. Örneğin, aşağıdaki işlev çağrısı bir geometri noktası oluşturur:  
   
-```  
+```sql  
 GeometryFromText('POINT (43 -73)')  
 ```  
   
- <xref:System.Data.Common.CommandTrees.ExpressionBuilder.Spatial.SpatialEdmFunctions> Yöntemi uzamsal kurallı Entity Framework yöntemleri vardır. Hangi parametreler bir işleve geçilmesi gerekir görmek için ilgilendiğiniz bir yöntemi tıklayın.
+ @No__t-0 yöntemlerinde tüm uzamsal kurallı Entity Framework yöntemleri vardır. Bir işleve hangi parametrelerin geçirilmesi gerektiğini görmek için bir ilgilendiğiniz yönteme tıklayın.

@@ -2,19 +2,19 @@
 title: IOF (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 5b2b0d34-d0a7-4bcd-baf2-58aa8456d00b
-ms.openlocfilehash: 3b746a82f72fc7f42f9d91ddd0a7d6f4f86ac0bb
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: c4c4cbf74cb17cf43e79c42ff42d1e68122fd534
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70250571"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319713"
 ---
 # <a name="isof-entity-sql"></a>IOF (Entity SQL)
 Bir ifadenin türünün belirtilen türde mi yoksa alt türlerinden biri mi olduğunu belirler.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```sql  
 expression IS [ NOT ] OF ( [ ONLY ] type )  
 ```  
   
@@ -22,22 +22,22 @@ expression IS [ NOT ] OF ( [ ONLY ] type )
  `expression`  
  Türünü belirleyecek geçerli bir sorgu ifadesi.  
   
- DEĞİL  
+ BAŞLATıLMADı  
  EDM 'yi geçersiz kılar. ' Nin Boolean sonucu.  
   
- YALNIZCA  
- Öğesinin `true` yalnızcatürü`type` ise ve alt türlerinden herhangi biri değilse, bu döndürdüğünü belirtir. `expression`  
+ YALNıZCA  
+ @No__t-0 ' ın, yalnızca `expression` ' in `type` tipinde olması ve alt türlerinden herhangi biri olmaması durumunda olduğunu belirtir.  
   
  `type`  
- Sınanacak `expression` tür. Tür ad alanı nitelenmiş olmalıdır.  
+ @No__t-0 ' dan test edilecek tür. Tür ad alanı nitelenmiş olmalıdır.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- `true`Eğer `expression` t ve t türünde ise, bir temel tür ya da türetilmiş bir `type`tür; çalışma zamanında null ise null `expression` ; Aksi durumda, `false`.  
+ @no__t `expression`, T türünde ise ve T bir temel tür ya da türetilmiş bir tür `type`; çalışma zamanında `expression` null ise null; Aksi takdirde, @no__t 4.  
   
 ## <a name="remarks"></a>Açıklamalar  
- İfadeler `expression IS NOT OF (type)` ve `expression IS NOT OF (ONLY type)` sırasıyla `NOT (expression IS OF (type))` ve ile`NOT (expression IS OF (ONLY type))`aynıdır.  
+ @No__t-0 ve `expression IS NOT OF (ONLY type)` ifadeleri sırasıyla `NOT (expression IS OF (type))` ve `NOT (expression IS OF (ONLY type))` ile eşdeğerdir.  
   
- Aşağıdaki tabloda, bazı tipik ve köşe `IS OF` desenlerinde işlecin davranışı gösterilmektedir. Sağlayıcı çağrılmadan önce istemci tarafında tüm özel durumlar atılır:  
+ Aşağıdaki tabloda, bazı tipik ve köşe desenleri üzerinde `IS OF` işlecinin davranışı gösterilmektedir. Sağlayıcı çağrılmadan önce istemci tarafında tüm özel durumlar atılır:  
   
 |Desen|Davranış|  
 |-------------|--------------|  
@@ -52,9 +52,9 @@ expression IS [ NOT ] OF ( [ ONLY ] type )
 |RowType, (RowType)|Oluşturur|  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki [!INCLUDE[esql](../../../../../../includes/esql-md.md)] sorgu, bir sorgu ifadesinin türünü tespit etmek için işleç ' i kullanır ve sonra bir nesne türünü, onsitekurs türünde bir nesne koleksiyonuna dönüştürmek için değerlendir işlecini kullanır. Sorgu, [okul modelini](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896300(v=vs.100))temel alır.  
+ Aşağıdaki [!INCLUDE[esql](../../../../../../includes/esql-md.md)] sorgusu, bir sorgu ifadesinin türünü tespit etmek için işleç ' i kullanır ve ardından bir nesneyi, bir nesne türünü Onsitekurs türünde bir nesne koleksiyonuna dönüştürmek için DEĞERLENDIR işlecini kullanır. Sorgu, [okul modelini](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896300(v=vs.100))temel alır.  
   
- [!code-csharp[DP EntityServices Concepts 2#TREAT_ISOF](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#treat_isof)]  
+ [! Code-SQL [DP EntityServices kavramları # TREAT_ISOF] ~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices kavramları/TSQL/EntitySql. SQL # TREAT_ISOF)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

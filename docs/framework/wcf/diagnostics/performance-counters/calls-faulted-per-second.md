@@ -2,25 +2,25 @@
 title: Saniyede Hatalı Çağrı
 ms.date: 03/30/2017
 ms.assetid: 81c88073-8e32-4520-a71a-2c56b71ee515
-ms.openlocfilehash: 5b7569b6a00757fbb863b90b25b44815a349ab07
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 424e658c2f8243fae1b4ebef8d98c57681166a67
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61797403"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72321080"
 ---
 # <a name="calls-faulted-per-second"></a>Saniyede Hatalı Çağrı
-Sayaç adı: Saniyede Hatalı Çağrı  
+Sayaç adı: Hatalı çağrı/saniye  
   
 ## <a name="description"></a>Açıklama  
- Döndürmüş bu işleme bir saniye içinde çağrı sayısı.  
+ Saniye içinde bu işleme hata döndüren çağrı sayısı.  
   
- Bu sayaç performans sayacı türüdür [PERF_COUNTER_COUNTER](https://go.microsoft.com/fwlink/?LinkID=94649), değeri aşağıdaki formül kullanılarak hesaplanır.  
+ Bu sayaç, değeri aşağıdaki formül kullanılarak hesaplanmış olan [PERF_COUNTER_COUNTER](https://go.microsoft.com/fwlink/?LinkID=94649)performans sayacı türüdür.  
   
- (1 - N 0 N) / ((D 1 - D 0) / F)  
+ (N 1-N 0)/((D 1-D 0)/F)  
   
- Windows Communication Foundation (WCF) uygulamaları, hizmet yöntemleri işleme hata bilgilerini SOAP hata iletileri kullanarak iletişim kurar. SOAP hatalarının bir hizmet işlemi için meta veriler bulunur ve bu nedenle istemcilerin yürütülmesi daha sağlam ve etkileşimli hale getirmek için kullanabileceği bir hataya sözleşmesi oluşturma iletisi türleridir. SOAP hataları XML formundaki istemcilere ifade olduğundan, yüksek düzeyde birlikte çalışabilir.  
+ Windows Communication Foundation (WCF) uygulamalarında, hizmet yöntemleri SOAP hata iletilerini kullanarak işlem hata bilgilerini iletişim kurar. SOAP hataları, bir hizmet işleminin meta verilerinde bulunan ileti türleridir ve bu nedenle, istemcilerinin yürütmesini daha sağlam veya etkileşimli hale getirmek için kullanabileceği bir hata sözleşmesi oluşturur. SOAP hataları, XML biçiminde istemcilere belirtilediğinden, bunlar çok fazla kullanılabilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Sözleşme ve Hizmetlerde Hataları Belirtme ve İşleme](../../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
+- [Sözleşme ve Hizmetlerde Hataları Belirtme ve İşleme](../../specifying-and-handling-faults-in-contracts-and-services.md)

@@ -1,23 +1,23 @@
 ---
-title: 'Nasıl yapılır: Dosyalardan içerik (LINQ) (Visual Basic) katılın'
+title: 'Nasıl yapılır: farklı dosyalardan Içerik ekleme (LINQ) (Visual Basic)'
 ms.date: 06/27/2018
 ms.assetid: e7530857-c467-41ea-9730-84e6b1065a4d
-ms.openlocfilehash: 0ac91ffaf914a8b799ad1124e9361595d482366b
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: f6fd9a1083cca941422eb89cd6bf23328fc8b5f6
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65593494"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320559"
 ---
-# <a name="how-to-join-content-from-dissimilar-files-linq-visual-basic"></a>Nasıl yapılır: Dosyalardan içerik (LINQ) (Visual Basic) katılın
+# <a name="how-to-join-content-from-dissimilar-files-linq-visual-basic"></a>Nasıl yapılır: farklı dosyalardan Içerik ekleme (LINQ) (Visual Basic)
 
-Bu örnek, eşleşen bir anahtar olarak kullanılan genel bir değer paylaşan iki virgülle ayrılmış dosyalardan alınan veriler nasıl gösterir. Bu teknik, iki elektronik alınan verileri birleştirmek varsa veya bir elektronik tablo ve dosya yeni bir dosyaya başka bir biçime sahip yararlı olabilir. Örnek yapılandırılmış metin herhangi bir türden ile çalışacak şekilde değiştirebilirsiniz.  
+Bu örnek, eşleşen anahtar olarak kullanılan ortak bir değeri paylaşan, virgülle ayrılmış iki dosyadan verilerin nasıl birleştirileceğini gösterir. Bu teknik, iki elektronik tablodan veya bir elektronik tabloda ve başka bir biçime sahip bir dosyadan yeni bir dosyaya veri birleştirmek istiyorsanız yararlı olabilir. Örneği herhangi bir tür yapılandırılmış metinle çalışacak şekilde değiştirebilirsiniz.  
   
-## <a name="to-create-the-data-files"></a>Veri dosyaları oluşturmak için
+## <a name="to-create-the-data-files"></a>Veri dosyalarını oluşturmak için
   
-1. Aşağıdaki satırları scores.csv adlı bir dosyaya kopyalayın ve proje klasörünüze kaydedin. Dosya, elektronik tablo verilerini temsil eder. Öğrenci Kimliği sütun 1 ve 2'den 5 test puanlarını sütunlardır.  
+1. Aşağıdaki satırları puanlarını. csv adlı bir dosyaya kopyalayın ve proje klasörünüze kaydedin. Dosya, elektronik tablo verilerini temsil eder. 1\. sütun, öğrencinin KIMLIĞIDIR ve 2 ile 5 arasındaki sütunlar test puanlarıdır.  
   
-    ```  
+    ```csv  
     111, 97, 92, 81, 60  
     112, 75, 84, 91, 39  
     113, 88, 94, 65, 91  
@@ -32,9 +32,9 @@ Bu örnek, eşleşen bir anahtar olarak kullanılan genel bir değer paylaşan i
     122, 94, 92, 91, 91  
     ```  
   
-2. Aşağıdaki satırları names.csv adlı bir dosyaya kopyalayın ve proje klasörünüze kaydedin. Öğrenci Soyadı, ad ve Öğrenci Kimliği içeren bir elektronik tablo dosyasını temsil eder  
+2. Aşağıdaki satırları Names. csv adlı bir dosyaya kopyalayın ve proje klasörünüze kaydedin. Dosya, öğrencinin Soyadı, adı ve öğrenci KIMLIĞINI içeren bir elektronik tabloyu temsil eder.  
   
-    ```  
+    ```csv  
     Omelchenko,Svetlana,111  
     O'Donnell,Claire,112  
     Mortensen,Sven,113  

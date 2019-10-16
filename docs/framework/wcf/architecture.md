@@ -6,46 +6,46 @@ helpviewer_keywords:
 - WCF [WCF], architecture
 - architecture [WCF]
 ms.assetid: a3bcb0a1-56ea-4ba6-9736-d260d90dade5
-ms.openlocfilehash: b0e4f9af0ff84a8d560b332d227b1ba9ae18bd4b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f34a05a436dd021f0d1fcc05f3a12a058123acdc
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61782464"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320832"
 ---
 # <a name="windows-communication-foundation-architecture"></a>Windows Communication Foundation Mimarisi
-Aşağıdaki grafikte, temel Windows Communication Foundation (WCF) mimari katmanları gösterilmektedir.  
+Aşağıdaki grafikte Windows Communication Foundation (WCF) mimarisinin ana katmanları gösterilmektedir.  
   
 ## <a name="wcf-architecture"></a>WCF mimarisi  
- ![WCF mimarisinin](../../../docs/framework/wcf/media/wcf-architecture.gif "WCF_Architecture")  
+ ![WCF mimarisi](./media/wcf-architecture.gif "WCF_Architecture")  
   
-### <a name="contracts-and-descriptions"></a>Sözleşmeler ve açıklamaları  
- Sözleşmeler, ileti sistemi çeşitli yönlerini tanımlar. Veri anlaşması bir hizmeti oluşturan veya tüketen her iletiyi yaptığı her bir parametre açıklanmıştır. İleti parametreleri tanım dili (XSD) belge anlayan XML belgeleri işlemek için herhangi bir sistem bu sayede XML şeması tarafından tanımlanır. İleti sözleşmesi, SOAP protokollerini kullanarak belirli bir ileti bölümlerini tanımlar ve birlikte çalışabilirlik gibi duyarlık talep ettiğinde, iletinin bölümleri üzerinde daha ayrıntılı denetim sağlar. Hizmet sözleşmesi hizmetinin gerçek yöntem imzaları belirtir ve bir Visual Basic veya Visual gibi desteklenen programlama dilleri için bir arabirim olarak dağıtılan C#.  
+### <a name="contracts-and-descriptions"></a>Sözleşmeler ve açıklamalar  
+ Sözleşmeler, ileti sisteminin çeşitli yönlerini tanımlar. Veri sözleşmesi, bir hizmetin oluşturabileceğiniz veya tüketebileceği her iletiyi oluşturan her parametreyi açıklar. İleti parametreleri, XML şeması tanım dili (XSD) belgeleri tarafından tanımlanır ve belgeyi işlemek için XML 'yi anlayan tüm sistemleri etkinleştirir. İleti anlaşması, SOAP protokollerini kullanarak belirli ileti parçalarını tanımlar ve birlikte çalışabilirlik bu tür duyarlık taleplerini daha ayrıntılı olarak kontrol etmenizi sağlar. Hizmet sözleşmesi, hizmetin gerçek Yöntem imzalarını belirtir ve Visual Basic veya görsel C#gibi desteklenen programlama dillerinden birinde bir arabirim olarak dağıtılır.  
   
- İlkeleri ve bağlamaları bir hizmetle iletişim kurmak için gerekli koşulları gidemez.  Örneğin, bağlama (en az) (örneğin, HTTP veya TCP) kullanılan taşıma ve kodlama belirtmeniz gerekir. İlkeleri, güvenlik gereksinimleri ve bir hizmetle iletişim kurmak için karşılanması gereken diğer koşulları içerir.  
+ İlkeler ve bağlamalar, bir hizmetle iletişim kurmak için gereken koşulları ifade edin.  Örneğin, bağlama (en azından), kullanılan taşıma (örneğin, HTTP veya TCP) ve bir kodlama belirtir. İlkeler, güvenlik gereksinimlerini ve hizmet ile iletişim kurmak için karşılanması gereken diğer koşulları içerir.  
   
 ### <a name="service-runtime"></a>Hizmet çalışma zamanı  
- Hizmet çalışma zamanı katmanını hizmetinin yalnızca gerçek işlemi sırasında meydana gelen diğer bir deyişle, hizmet çalışma zamanı davranışlarını davranışları içerir. İsteğe bağlı hizmeti için önceden belirlenmiş bir sınır büyürse kaç iletilerin işlenmesini denetimleri kısıtlama, hangi değiştirilebilir. Hata davranışı, bir iç hata hizmette, örneğin, istemciye hangi bilgilerin bildiriliyor denetleyerek meydana geldiğinde ne olacağını belirtir. (Çok fazla bilgi kötü niyetli bir kullanıcı bir saldırı bağlama içinde bir avantajı sağlayabilir.) Meta veri davranışını yöneten olup olmadığını ve nasıl meta veriler için dış dünya kullanılabilir hale getirileceğini. Örnek davranışını belirten kaç hizmeti örneklerini çalıştırılabilir (örneğin, tek tüm iletileri işlemek için yalnızca bir örneği belirtir). Bir hata oluşması durumunda geri alınmasını işlemler işlem davranışını etkinleştirir. Dağıtım davranışı bir ileti WCF altyapısı tarafından nasıl işlendiğini denetimidir.  
+ Hizmet çalışma zamanı katmanı, yalnızca hizmetin gerçek işlemi sırasında, diğer bir deyişle hizmetin çalışma zamanı davranışlarından oluşan davranışları içerir. Daraltma, hizmet talebi önceden ayarlanmış bir sınıra arttıkça değiştirilebilir olan kaç ileti işleneceğini denetler. Bir hata davranışı, hizmette bir iç hata oluştuğunda ne olduğunu belirtir, örneğin, istemciye hangi bilgilerin iletildiğini kontrol edin. (Çok fazla bilgi kötü amaçlı bir kullanıcıya saldırı bağlama konusunda avantaj verebilir.) Meta veri davranışı, meta verilerin dış dünyanın kullanımına açık yapılıp yapılmadığını yönetir. Örnek davranışı, hizmetin kaç örneğinin çalıştırılacağını belirtir (örneğin, tek tek bir örneği tüm iletileri işlemek için tek bir örnek belirtir). İşlem davranışı, bir hata oluşursa işlenen işlemlerin geri alınmasını mümkün olur. Dağıtım davranışı, bir iletinin WCF altyapısı tarafından nasıl işlendiği denetimidir.  
   
- Genişletilebilirlik çalışma zamanı işlemleri özelleştirmesini sağlar. Örneğin, ileti İnceleme bir iletinin bölümünü incelemek için özelliğidir ve parametre filtreleme, ileti üstbilgilerini gören filtreleri temel alarak gerçekleşmesi önceden belirlenmiş eylemleri sağlar.  
+ Genişletilebilirlik, çalışma zamanı işlemlerinin özelleştirilmesine izin vermez. Örneğin, ileti incelemesi bir iletinin parçalarını inceleme özelliğindedir ve parametre filtrelemesi, ileti üstbilgilerinde çalışan filtrelere göre önceden ayarlanmış eylemlerin oluşmasına olanak sağlar.  
   
 ### <a name="messaging"></a>İleti  
- Mesajlaşma katmanı oluşan *kanalları*. Bir kanal iletiyi şekilde, örneğin, bir ileti kimlik doğrulaması yaparak işleyen bir bileşenidir. Kanalları olarak da bilinen kümesidir bir *kanal yığın*. Kanallar, iletileri ve ileti üstbilgileri üzerinde çalışır. Bu, öncelikle İleti gövdeleri içeriğini işleme hakkında endişe hizmeti çalışma zamanı katmandan farklıdır.  
+ Mesajlaşma katmanı, *kanallardan*oluşur. Kanal, bir iletiyi bir ileti kimlik doğrulaması ile, örneğin, bir şekilde işleyen bir bileşendir. Kanal kümesi, *kanal yığını*olarak da bilinir. Kanallar iletiler ve ileti üstbilgilerinde çalışır. Bu, özellikle ileti gövdelerinin içeriklerinin işlenmesiyle ilgili olan hizmet çalışma zamanı katmanından farklıdır.  
   
- İki tür kanal vardır: taşıma kanalları ve protokol kanalını.  
+ İki tür kanal vardır: taşıma kanalları ve protokol kanalları.  
   
- Taşıma kanalları okuyup iletileri ağ (veya bazı başka bir iletişim noktası dış dünya ile). Bazı taşımalar bir kodlayıcı (XML Infosets temsil edilir) iletiler dönüştürmek ve ağın kullandığı bayt akışı gösterimden kullanın. Adlandırılmış Kanallar, TCP ve MSMQ HTTP taşımaları örnekleridir. XML ve en iyi duruma getirilmiş ikili Kodlamalar örnekleridir.  
+ Taşıma kanalları ağdan iletileri okur ve yazar (veya dış dünya ile diğer iletişim noktaları). Bazı aktarımlar, iletileri (XML bilgi kümeleri olarak temsil edilen) ağ tarafından kullanılan bayt akışı gösteriminden ve arasında dönüştürmek için bir kodlayıcı kullanır. Aktarım örnekleri HTTP, adlandırılmış kanallar, TCP ve MSMQ olarak adlandırılır. Kodlama örnekleri, XML ve iyileştirilmiş ikili bir örnektir.  
   
- Protokol kanalını okuyarak ya da ek üst bilgiler iletiye yazma ileti işleme protokolleri, genellikle uygulayın. WS-güvenlik ve güvenilirlik WS gibi protokolleri örnekleridir.  
+ Protokol kanalları ileti işleme protokollerini, genellikle iletiye ek üstbilgiler okuyarak veya yazarak uygular. Bu protokollerin örnekleri arasında WS-Security ve WS-güvenirlik bulunur.  
   
- Mesajlaşma katmanı, verileri exchange desenlerini ve olası biçimleri gösterilmektedir. WS-Security WS-güvenlik belirtiminin ileti katmanında güvenliği etkinleştirme uygulamasıdır. WS-Reliable Mesajlaşma kanalı ileti teslimi dair bir garanti sağlar. Kodlayıcıları ileti gereksinimlerine uyacak şekilde kullanılabilir Kodlamalar çeşitli sunar. HTTP kanalı, Köprü Metni Aktarım Protokolü ileti teslimi için kullanıldığını belirtir. TCP kanalı benzer şekilde, TCP protokolü belirtir. İşlem akışını kanal işlenen ileti desenleri yönetir. Adlandırılmış kanal işlemler arası iletişimi sağlar. MSMQ kanal MSMQ uygulamalarla birlikte çalışabilirlik sağlar.  
+ Mesajlaşma katmanı, verilerin olası biçimlerini ve değişim düzenlerini gösterir. WS-Security, ileti katmanında güvenliği etkinleştiren WS-güvenlik belirtiminin bir uygulamasıdır. WS-güvenilir mesajlaşma kanalı ileti teslimi garantisi verir. Kodlayıcılarda, iletinin ihtiyaçlarını karşılamak için kullanılabilecek çeşitli kodlamalar vardır. HTTP kanalı, ileti teslimi için Köprü Metni Aktarım protokolünün kullanıldığını belirtir. TCP kanalı benzer şekilde TCP protokolünü belirtir. Işlem akışı kanalı, işlem temelli ileti düzenlerini yönetir. Adlandırılmış kanal kanalı, işlemler arası iletişimi mümkün. MSMQ kanalı, MSMQ uygulamalarıyla birlikte çalışabilirlik özelliğini sunar.  
   
 ### <a name="hosting-and-activation"></a>Barındırma ve etkinleştirme  
- En son şekliyle, bir hizmet bir programdır. Diğer programları gibi bir hizmet, yürütülebilir bir dosyayı çalıştırmanız gerekir. Bu olarak bilinen bir *şirket içinde barındırılan* hizmeti.  
+ Son formunda bir hizmet bir programdır. Diğer programlar gibi, bir hizmetin yürütülebilir dosya içinde çalıştırılması gerekir. Bu, *kendi kendine barındırılan* hizmet olarak bilinir.  
   
- Hizmetleri ayrıca olabilir *barındırılan*, ya da IIS veya Windows Etkinleştirme Hizmeti (WAS) gibi bir dış aracı tarafından yönetilen bir yürütülebilir dosyayı çalıştırın. Çalıştıran bir bilgisayara dağıtıldığında otomatik olarak etkinleştirilmesini sağlar WCF uygulamaları SAHİPTİ. Hizmetleri, yürütülebilir dosyalar (.exe dosyaları) da bir el ile çalıştırılabilir. Hizmet ayrıca otomatik olarak bir Windows hizmeti olarak çalıştırılabilir. COM + bileşenleri, WCF hizmetleri da barındırılabilir.  
+ Hizmetler *Ayrıca, IIS*veya Windows etkinleştirme HIZMETI (was) gibi bir dış aracı tarafından yönetilen yürütülebilir dosya içinde de çalıştırılabilir. , WAS, çalıştıran bir bilgisayara dağıtıldığında WCF uygulamalarının otomatik olarak etkinleştirilmesini sağlar. Hizmetler Ayrıca çalıştırılabilir (. exe dosyaları) olarak el ile çalıştırılabilir. Bir hizmet, otomatik olarak bir Windows hizmeti olarak da çalıştırılabilir. COM+ bileşenleri, WCF Hizmetleri olarak da barındırılabilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Windows Communication Foundation nedir?](../../../docs/framework/wcf/whats-wcf.md)
-- [Temel Windows Communication Foundation Kavramları](../../../docs/framework/wcf/fundamental-concepts.md)
+- [Windows Communication Foundation nedir?](whats-wcf.md)
+- [Temel Windows Communication Foundation Kavramları](fundamental-concepts.md)

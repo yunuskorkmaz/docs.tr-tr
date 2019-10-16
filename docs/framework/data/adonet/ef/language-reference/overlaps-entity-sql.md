@@ -2,44 +2,44 @@
 title: ÖRTÜŞMELER (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 41743e89-79cb-4d7b-8a27-355b45024b61
-ms.openlocfilehash: fef90beebf1c2723c767eaf5155542ad40d5fcb8
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: bdee9281fd406a3d029d3a10536cbdd48d2f7a58
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70249729"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319422"
 ---
 # <a name="overlaps-entity-sql"></a>ÖRTÜŞMELER (Entity SQL)
 İki koleksiyonun ortak öğelere sahip olup olmadığını belirler.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```sql  
 expression OVERLAPS expression  
 ```  
   
 ## <a name="arguments"></a>Arguments  
  `expression`  
- Başka bir sorgu ifadesinden döndürülen koleksiyonla karşılaştırmak için bir koleksiyon döndüren geçerli bir sorgu ifadesi. Tüm ifadeler aynı türde veya ortak bir temel veya türetilmiş türde `expression`olmalıdır.  
+ Başka bir sorgu ifadesinden döndürülen koleksiyonla karşılaştırmak için bir koleksiyon döndüren geçerli bir sorgu ifadesi. Tüm ifadeler aynı türde veya ortak bir temel ya da türetilmiş türden `expression` olmalıdır.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- `true`İki koleksiyonun ortak öğeleri varsa; Aksi takdirde `false`,.  
+ İki koleksiyonun ortak öğeleri varsa `true`; Aksi takdirde, `false`.  
   
 ## <a name="remarks"></a>Açıklamalar  
  ÖRTÜŞMELER, aşağıdaki gibi işlevsel bir eşdeğer sağlar:  
   
  `EXISTS ( expression INTERSECT expression )`  
   
- Örtüşüyor, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] ayarlanan işleçlerden biridir. Tüm [!INCLUDE[esql](../../../../../../includes/esql-md.md)] küme işleçleri soldan sağa değerlendirilir. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Set işleçleri için öncelik bilgileri için bkz. [except](except-entity-sql.md).  
+ ÖRTÜŞÜYOR [!INCLUDE[esql](../../../../../../includes/esql-md.md)] kümesi işleçlerinden biridir. Tüm [!INCLUDE[esql](../../../../../../includes/esql-md.md)] kümesi işleçleri soldan sağa değerlendirilir. @No__t-0 kümesi işleçleri için öncelik bilgisi için, bkz. [except](except-entity-sql.md).  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki Entity SQL sorgusu, iki koleksiyonun ortak bir değere sahip olup olmadığını belirleyen ÖRTÜŞMELER işlecini kullanır. Sorgu AdventureWorks Sales modelini temel alır. Bunu derlemek ve çalıştırmak için aşağıdaki adımları izleyin:  
   
-1. [Aşağıdaki adımları uygulayın: StructuralType sonuçları](../how-to-execute-a-query-that-returns-structuraltype-results.md)döndüren bir sorgu yürütün.  
+1. [Nasıl yapılır: StructuralType sonuçları döndüren bir sorgu yürütme](../how-to-execute-a-query-that-returns-structuraltype-results.md)bölümündeki yordamı izleyin.  
   
 2. Aşağıdaki sorguyu `ExecuteStructuralTypeQuery` yöntemine bir bağımsız değişken olarak geçirin:  
   
- [!code-csharp[DP EntityServices Concepts 2#OVERLAPS](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#overlaps)]  
+ [!code-sql[DP EntityServices Concepts#OVERLAPS](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#overlaps)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

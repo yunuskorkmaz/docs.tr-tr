@@ -4,21 +4,21 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - service contracts [WCF], designing services and transactions
 ms.assetid: 864813ff-2709-4376-912d-f5c8d318c460
-ms.openlocfilehash: 9dfe34406bfda2c16bd2f0cd53796b2fcef07b57
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9110198fa64e43c20e1e6ba0dcf158dddeac93a6
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61967927"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72321145"
 ---
 # <a name="services-and-transactions"></a>Hizmetler ve İşlemler
-Windows Communication Foundation (WCF) uygulamaları bir istemci bir hareketi başlatabilir ve işlem içinde hizmet işlemini koordine edin. İstemciler bir işlem başlatmak ve birkaç hizmet işlemlerini çağırma ve hizmet işlemleri kaydedilmiş veya geri tek bir birim olarak emin olun.  
+Windows Communication Foundation (WCF) uygulamaları, istemci içinden bir işlem başlatabilir ve işlemi hizmet işlemi içinde koordine edebilir. İstemciler bir işlem başlatabilir ve çeşitli hizmet işlemlerini çağırabilir ve hizmet işlemlerinin tek bir birim olarak yapıldığından ya da geri alındığından emin olabilir.  
   
- İşlem davranışı hizmet sözleşmesindeki belirterek etkinleştirebilirsiniz bir <xref:System.ServiceModel.ServiceBehaviorAttribute> ve ayarı kendi <xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionIsolationLevel%2A> ve <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> istemci işlemleri gerektiren hizmet işlemleri için özellikleri. <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A> Parametresi, eğer işlenmeyen özel durumlar harekete yöntemi yürütür işlem otomatik olarak tamamlanıp tamamlanmadığını belirtir. Bu öznitelikler hakkında daha fazla bilgi için bkz: [ServiceModel işlem öznitelikleri](../../../docs/framework/wcf/feature-details/servicemodel-transaction-attributes.md).  
+ @No__t-0 belirterek ve istemci işlemleri gerektiren hizmet işlemleri için <xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionIsolationLevel%2A> ve <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> özelliklerini ayarlayarak, hizmet sözleşmesindeki işlem davranışını etkinleştirebilirsiniz. @No__t-0 parametresi, işlenmeyen özel durumlar atıldıysa yöntemin yürütüldüğü işlemin otomatik olarak tamamlanıp tamamlanmadığını belirtir. Bu öznitelikler hakkında daha fazla bilgi için bkz. [ServiceModel Işlem öznitelikleri](./feature-details/servicemodel-transaction-attributes.md).  
   
- Hizmet işlemleri gerçekleştirilir ve istemcinin işlemin bir parçası olan veritabanının güncelleştirmelerini günlüğe kaydetme gibi bir kaynak yöneticisi tarafından yönetilen çalışma.  
+ Hizmet işlemlerinde gerçekleştirilen ve veritabanı güncelleştirmelerini günlüğe kaydetme gibi bir kaynak yöneticisi tarafından yönetilen iş, istemci işleminin bir parçasıdır.  
   
- Aşağıdaki örnek, kullanımını gösterir <xref:System.ServiceModel.ServiceBehaviorAttribute> ve <xref:System.ServiceModel.OperationBehaviorAttribute> Hizmet tarafı işlem davranışını denetlemek için öznitelikleri.  
+ Aşağıdaki örnek, hizmet tarafı işlem davranışını denetlemek için <xref:System.ServiceModel.ServiceBehaviorAttribute> ve <xref:System.ServiceModel.OperationBehaviorAttribute> özniteliklerinin kullanımını gösterir.  
   
 ```csharp
 [ServiceBehavior(TransactionIsolationLevel = System.Transactions.IsolationLevel.Serializable)]  
@@ -59,7 +59,7 @@ public class CalculatorService: ICalculatorLog
 }  
 ```  
   
- İşlem etkinleştirebilir ve işlem akışı istemci yapılandırarak ve hizmet bağlamaları WS-AtomicTransaction protokolünü kullanmak için ve ayarı [ \<transactionFlow >](../../../docs/framework/configure-apps/file-schema/wcf/transactionflow.md) öğesine `true`gösterildiği gibi Aşağıdaki örnek yapılandırmada.  
+ İstemci ve hizmet bağlamalarını WS-AtomicTransaction protokolünü kullanacak şekilde yapılandırarak işlemleri ve işlem akışını etkinleştirebilir ve aşağıdaki örnekte gösterildiği gibi [\<transactionFlow >](../configure-apps/file-schema/wcf/transactionflow.md) öğesini `true` olarak ayarlayabilirsiniz yapılandırmada.  
   
 ```xml  
 <client>  
@@ -78,7 +78,7 @@ public class CalculatorService: ICalculatorLog
 </bindings>  
 ```  
   
- İstemciler, bir işlem oluşturarak başlayabilirsiniz bir <xref:System.Transactions.TransactionScope> ve işlemin kapsamı içinde hizmet işlemleri çağırma.  
+ İstemciler bir <xref:System.Transactions.TransactionScope> oluşturarak ve işlem kapsamındaki hizmet işlemlerini çağırarak bir işlem başlatabilir.  
   
 ```csharp
 using (TransactionScope ts = new TransactionScope(TransactionScopeOption.RequiresNew))  
@@ -90,6 +90,6 @@ using (TransactionScope ts = new TransactionScope(TransactionScopeOption.Require
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [System.ServiceModel İşlemsel Desteği](../../../docs/framework/wcf/feature-details/transactional-support-in-system-servicemodel.md)
-- [İşlem Modelleri](../../../docs/framework/wcf/feature-details/transaction-models.md)
-- [WS İşlem Akışı](../../../docs/framework/wcf/samples/ws-transaction-flow.md)
+- [System.ServiceModel İşlemsel Desteği](./feature-details/transactional-support-in-system-servicemodel.md)
+- [İşlem Modelleri](./feature-details/transaction-models.md)
+- [WS İşlem Akışı](./samples/ws-transaction-flow.md)

@@ -1,15 +1,15 @@
 ---
-title: WS-AtomicTransaction Yapılandırması MMC ek bileşeni
+title: WS-AtomicTransaction Yapılandırması MMC Ek Bileşeni
 ms.date: 03/30/2017
 ms.assetid: 23592973-1d51-44cc-b887-bf8b0d801e9e
-ms.openlocfilehash: 926332ac1873db89ce9332075380effdfdc1fc37
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: 04380a2a30aba85efb98ee8f9e24d0a6223a18a3
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291499"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320321"
 ---
-# <a name="ws-atomictransaction-configuration-mmc-snap-in"></a>WS-AtomicTransaction Yapılandırması MMC ek bileşeni
+# <a name="ws-atomictransaction-configuration-mmc-snap-in"></a>WS-AtomicTransaction Yapılandırması MMC Ek Bileşeni
 WS-AtomicTransaction Yapılandırması MMC ek bileşeni, hem yerel hem de uzak makinelerde WS-AtomicTransaction ayarlarının bir bölümünü yapılandırmak için kullanılır.  
   
 ## <a name="remarks"></a>Açıklamalar  
@@ -31,9 +31,9 @@ regasm.exe /codebase WsatUI.dll
   
  Temel WS-AtomicTransaction ayarlarını değiştirmek için bu aracı kullanabilirsiniz. Örneğin, WS-AtomicTransaction protokol desteğini etkinleştirebilir ve devre dışı bırakabilir, WS-AT için HTTP bağlantı noktalarını yapılandırabilir, HTTP bağlantı noktasına bir SSL sertifikası bağlayabilir, sertifika konu adlarını belirterek sertifikaları yapılandırabilir, Izleme modunu seçebilir ve ayarlayabilirsiniz Varsayılan ve en fazla zaman aşımları.  
   
- Yalnızca yerel makinede WS-AtomicTransaction desteğini yapılandırmanız gerekiyorsa, bu aracın komut satırı sürümünü kullanabilirsiniz. Komut satırı aracı hakkında daha fazla bilgi için, bkz. [WS-AtomicTransaction Yapılandırma yardımcı programı (wsatConfig. exe)](../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md) konusu.  
+ Yalnızca yerel makinede WS-AtomicTransaction desteğini yapılandırmanız gerekiyorsa, bu aracın komut satırı sürümünü kullanabilirsiniz. Komut satırı aracı hakkında daha fazla bilgi için, bkz. [WS-AtomicTransaction Yapılandırma yardımcı programı (wsatConfig. exe)](ws-atomictransaction-configuration-utility-wsatconfig-exe.md) konusu.  
   
- Hem MMC ek bileşeni hem de komut satırı aracının tüm WS-AT ayarlarını yapılandırmayı desteklemediğini bilmelisiniz. Bu ayarlar yalnızca kayıt defteri doğrudan değiştirilerek düzenlenebilir. Bu kayıt defteri ayarları hakkında daha fazla bilgi için bkz. [WS Atomik Işlem desteğini yapılandırma](../../../docs/framework/wcf/feature-details/configuring-ws-atomic-transaction-support.md).  
+ Hem MMC ek bileşeni hem de komut satırı aracının tüm WS-AT ayarlarını yapılandırmayı desteklemediğini bilmelisiniz. Bu ayarlar yalnızca kayıt defteri doğrudan değiştirilerek düzenlenebilir. Bu kayıt defteri ayarları hakkında daha fazla bilgi için bkz. [WS Atomik Işlem desteğini yapılandırma](./feature-details/configuring-ws-atomic-transaction-support.md).  
   
 ### <a name="user-interface-description"></a>Kullanıcı arabirimi açıklaması  
  **WS Atomik Işlem ağı desteğini etkinleştir**:  
@@ -84,10 +84,10 @@ regasm.exe /codebase WsatUI.dll
 > [!NOTE]
 > Başka bir izleme tüketicisi WS-AT İzleme sağlayıcısını kullanırken, izleme olayları için yeni bir günlüğe kaydetme oturumu oluşturamazsınız. Bu süre boyunca günlüğe kaydetmeyi yapılandırma girişimleri, "sağlayıcı etkinleştirilemedi. Hata kodu: 1 ".  
   
- İzleme ve günlüğe kaydetme hakkında daha fazla bilgi için bkz. [Yönetim ve tanılama](../../../docs/framework/wcf/diagnostics/index.md).  
+ İzleme ve günlüğe kaydetme hakkında daha fazla bilgi için bkz. [Yönetim ve tanılama](./diagnostics/index.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [WS Atomik Işlem desteğini yapılandırma](../../../docs/framework/wcf/feature-details/configuring-ws-atomic-transaction-support.md)
-- [WS-AtomicTransaction Yapılandırma yardımcı programı (wsatConfig. exe)](../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)
-- [Yönetim ve tanılama](../../../docs/framework/wcf/diagnostics/index.md)
+- [WS-Atomic İşlem Desteğini Yapılandırma](./feature-details/configuring-ws-atomic-transaction-support.md)
+- [WS-AtomicTransaction Yapılandırma Yardımcı Programı (wsatConfig.exe)](ws-atomictransaction-configuration-utility-wsatconfig-exe.md)
+- [Yönetim ve Tanılama](./diagnostics/index.md)

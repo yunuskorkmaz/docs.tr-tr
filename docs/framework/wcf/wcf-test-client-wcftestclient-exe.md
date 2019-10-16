@@ -2,17 +2,17 @@
 title: WCF Test İstemcisi (WcfTestClient.exe)
 ms.date: 03/30/2017
 ms.assetid: d4302855-677f-4640-aa90-c5d785d72fb7
-ms.openlocfilehash: e637a2bb26bd0cc4bea653155c2a85ef5af19fd9
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: ac89b234dfafe3f87f1423a04ce8e4dd6b44b991
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70038347"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72321183"
 ---
 # <a name="wcf-test-client-wcftestclientexe"></a>WCF Test İstemcisi (WcfTestClient.exe)
 Windows Communication Foundation (WCF) test Istemcisi (WcfTestClient. exe), kullanıcıların test parametreleri girmesini, bu girişi hizmete göndermesini ve hizmetin geri gönderdiği yanıtı görüntülemesini sağlayan bir GUI aracıdır. WCF hizmet ana bilgisayarı ile birleştirildiğinde sorunsuz bir hizmet testi deneyimi sağlar.
 
-Genellikle WCF test istemcisini (WcfTestClient. exe) şu konumda bulabilirsiniz: `C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE` -topluluk, hangi Visual Studio düzeyine bağlı olarak "Kurumsal", "profesyonel" veya "topluluk" olabilir.
+Genellikle WCF test Istemcisini (WcfTestClient. exe) şu konumda bulabilirsiniz: `C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE`-topluluk, hangi Visual Studio düzeyine bağlı olarak "Kurumsal", "profesyonel" veya "topluluk" olabilir.
 
 ## <a name="scenarios-for-using-test-client"></a>Test Istemcisi kullanma senaryoları
 
@@ -32,7 +32,7 @@ Ayrıca, birden çok hizmet içeren bir hizmet projesinde hata ayıklamanıza ya
 
 Ayrıca, Internet 'te rastgele bir hizmeti test etmek için Visual Studio dışında WCF test Istemcisini (WcfTestClient. exe) çağırabilirsiniz. Aracı bulmak için şu konuma gidin:
 
-`C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE`(Bu, topluluk "Kurumsal", "profesyonel" veya "topluluk" olabilir ve makinede hangi Visual Studio düzeyinin yüklü olduğuna bağlı olarak)
+`C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE` (topluluk, makinede hangi Visual Studio düzeyine yüklü olduğuna bağlı olarak "Kurumsal", "profesyonel" veya "topluluk" olabilir)
 
 Aracı kullanmak için dosya adına çift tıklayarak bu konumdan açın veya bir komut satırından başlatın.
 
@@ -40,7 +40,7 @@ WCF test Istemcisi, komut satırı bağımsız değişkenleri olarak rastgele sa
 
 `wcfTestClient.exe URI1 URI2 …`
 
-WCF Test istemcisi penceresi açıldıktan sonra **Dosya**->**Ekle hizmeti**' ne tıklayın ve açmak istediğiniz hizmetin uç nokta adresini girin.
+WCF test Istemcisi penceresi açıldıktan sonra **dosya**->**Hizmet Ekle**' ye tıklayın ve açmak istediğiniz hizmetin uç nokta adresini girin.
 
 ## <a name="wcf-test-client-user-interface"></a>WCF test Istemcisi Kullanıcı arabirimi
 
@@ -103,7 +103,7 @@ Ara sunucu oluşturma, ikili derleme veya hizmet çağırma sırasında, düzenl
 
 #### <a name="persist-client-configuration"></a>Istemci yapılandırmasını kalıcı yap
 
-**Araçlar**->**Seçenekler** **istemci yapılandırması** sekmesi, varsayılan olarak etkinleştirilen **Hizmetler seçeneği başlatılırken her zaman yeniden oluştur yapılandırmasını** içerir.-> Bu seçenek, WCF test Istemcisi 'nin bir hizmeti yükleyeceği her seferinde, en son hizmet sözleşmesi ve Service App. config dosyalarına göre bir yapılandırma dosyasını yeniden oluşturur.
+**Araçlar**->**seçenekleri**->**istemci yapılandırma** sekmesi, varsayılan olarak etkinleştirilen **Hizmetler seçeneği başlatılırken her zaman yeniden oluştur yapılandırmasını** içerir. Bu seçenek, WCF test Istemcisi 'nin bir hizmeti yükleyeceği her seferinde, en son hizmet sözleşmesi ve Service App. config dosyalarına göre bir yapılandırma dosyasını yeniden oluşturur.
 
 WCF hizmetiniz için istemci yapılandırmasını düzenlediyseniz ve hizmetinize hata ayıklamak için her zaman bu güncelleştirilmiş dosyayı kullanmak istiyorsanız, yeniden **Oluştur** seçeneğinin işaretini kaldırabilirsiniz. Bunu yaparak, hizmeti güncelleştirdiğinizde ve WCF test Istemcisini yeniden açtığınızda bile, güncelleştirilmiş hizmete bağlı olarak bir yeniden üretilme yerine, Client. dll. config dosyası önceden güncelleştirmiş olursunuz.
 
@@ -112,7 +112,7 @@ Ancak, yeniden üretilen ara sunucu ile tutarlı olması için yapılandırma do
 > [!CAUTION]
 > İstemci yapılandırma dosyasını değiştirdiyseniz ve gelecekte yeniden kullanmayı seçerseniz, dosyayı aşağıdaki konumda bulabilirsiniz:
 >
-> \Documents and Settings\\[Kullanıcı hesabı] \Belgelerim\test istemci projeleri.
+> \Documents and Settings @ no__t-0 [Kullanıcı hesabı] \Belgelerim\test Istemci projeleri.
 >
 > İstemci yapılandırma dosyasına depolanan güncelleştirilmiş kimlik bilgileri, bu klasörün Access Control listesi (ACL) tarafından korunur.
 
@@ -120,7 +120,7 @@ Ancak, yeniden üretilen ara sunucu ile tutarlı olması için yapılandırma do
 
 #### <a name="add-service"></a>Hizmet Ekle
 
-WCF test istemcisine bir hizmet eklemek için **Dosya**->**ekleme hizmeti** ' ne tıklayın. Daha sonra eklenecek hizmetin URI 'sini (uç nokta adresi) yazmanız gerekir. Hizmetin adresi bir MEX adresi veya WSDL adresi olabilir.
+WCF test Istemcisine bir hizmet eklemek için **dosya**->**Hizmet Ekle** ' ye tıklayın. Daha sonra eklenecek hizmetin URI 'sini (uç nokta adresi) yazmanız gerekir. Hizmetin adresi bir MEX adresi veya WSDL adresi olabilir.
 
 **Son hizmetler** alt menüsünde son eklenen 10 hizmet uç noktalarının listesini de bulabilirsiniz. Bunlardan birini seçerseniz, belirtilen hizmet WCF test Istemcisine eklenir.
 
@@ -144,7 +144,7 @@ Ara sunucu oluşturma, ikili derleme veya hizmet çağırma sırasında, bir hiz
 
 Varsayılan olarak, WCF test Istemcisi oluşturulan istemci kodunu ve yapılandırma dosyalarını "%appdata%\Local\temp\Test Istemci projeleri" klasöründe depolar. Bu klasör, WCF test Istemcisi çıktıktan sonra silinir. Bir yapılandırma dosyası WCF test Istemcisinde değiştirilirse ve **Hizmetler başlatılırken her zaman** yapılandırmayı yeniden oluştur seçeneği devre dışı bırakılmışsa, değiştirilen dosya "My Documents\mediconfig" klasörüne, eşleme Ile "My belgelerimin test istemci projeleri" altına kopyalanır ( meta veri-adres-dosya-adı) XML dosyası bir dizin olarak.
 
-Ayrıca, WCF test istemcisini bir komut satırında başlatabilir, oluşturulan dosyaları depolamak için `/ProjectPath` istenen yeni bir yol belirtmek için anahtarını kullanabilir veya varsayılan konumu geri yüklemek için `/RestoreProjectPath` anahtarını kullanabilirsiniz. Sözdizimi aşağıdaki gibidir:
+Ayrıca, bir komut satırında WCF test Istemcisini başlatabilir, oluşturulan dosyaları depolamak için yeni bir yol belirtmek üzere `/ProjectPath` anahtarını kullanın veya varsayılan konumu geri yüklemek için `/RestoreProjectPath` anahtarını kullanın. Sözdizimi aşağıdaki gibidir:
 
 `wcfTestClient.exe /ProjectPath [desired location]`
 
@@ -154,7 +154,7 @@ Bu komutun çalıştırılması WCF test Istemcisi 'ni açmaz. Yalnızca klasör
 
 WCF test Istemcisi tarafından desteklenen özelliklerin listesi aşağıda verilmiştir:
 
-- Hizmet çağrısı: İstek/yanıt ve tek yönlü ileti.
+- Hizmet çağrısı: Istek/yanıt ve tek yönlü ileti.
 
 - Bağlamalar: Svcutil. exe tarafından desteklenen tüm bağlamalar.
 
@@ -166,15 +166,15 @@ WCF test Istemcisi tarafından desteklenen özelliklerin listesi aşağıda veri
 
 WCF test Istemcisi tarafından desteklenmeyen özelliklerin listesi aşağıda verilmiştir:
 
-- Türler: <xref:System.IO.Stream>, <xref:System.ServiceModel.Channels.Message> <xref:System.Xml.Serialization.IXmlSerializable> , <xref:System.Xml.XmlElement> ,<xref:System.Xml.XmlNode>,, ilişkili<xref:System.Xml.Serialization.XmlSchemaProviderAttribute> özniteliği ve ve<xref:System.Xml.Linq.XElement>türleri dahil olmak üzere arabirimi uygulayan türler <xref:System.Xml.Linq.XDocument> <xref:System.Xml.XmlAttribute> ve ADO.net <xref:System.Data.DataTable> türü.
+- Türler: <xref:System.IO.Stream>, <xref:System.ServiceModel.Channels.Message>, <xref:System.Xml.XmlElement>, <xref:System.Xml.XmlAttribute>, <xref:System.Xml.XmlNode>, <xref:System.Xml.Serialization.IXmlSerializable> arabirimini uygulayan, ilgili <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> özniteliği ve <xref:System.Xml.Linq.XDocument> ve <xref:System.Xml.Linq.XElement> türleri ile ADO.NET <xref:System.Data.DataTable> türü gibi türler.
 
 - Çift yönlü sözleşme.
 
 - İşlem.
 
-- Güven CardSpace, sertifika ve Kullanıcı adı/parola.
+- Güvenlik: CardSpace, sertifika ve Kullanıcı adı/parola.
 
-- Lara WSFederationbinding, tüm bağlam bağlamaları ve https bağlama, WebHttpbinding (JSON yanıt iletisi desteği).
+- Bağlamalar: WSFederationbinding, tüm bağlam bağlamaları ve https bağlama, WebHttpbinding (JSON yanıt iletisi desteği).
 
 ## <a name="closing-wcf-test-client"></a>WCF test Istemcisi kapatılıyor
 
@@ -186,4 +186,4 @@ WCF test Istemcisini aşağıdaki yollarla kapatabilirsiniz:
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [WCF Hizmet Konağı (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)
+- [WCF Hizmet Konağı (WcfSvcHost.exe)](wcf-service-host-wcfsvchost-exe.md)

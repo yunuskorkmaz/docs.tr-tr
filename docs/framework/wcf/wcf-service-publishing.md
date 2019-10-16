@@ -2,26 +2,26 @@
 title: WCF Hizmet Yayımlama
 ms.date: 03/30/2017
 ms.assetid: c806b253-cd47-4b96-b831-e73cbf08808f
-ms.openlocfilehash: 44dd7f58129ddc356f362f9ef9527d85644fe821
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 90d2a841fa5ce14b1ad5295b3bb6493df0350339
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65635498"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72321233"
 ---
 # <a name="wcf-service-publishing"></a>WCF Hizmet Yayımlama
 
-Windows Communication Foundation (WCF) hizmet yayımlama, aslında bir üretim ortamında test amacıyla uygulamayı dağıtmak için WCF hizmet konağı ve WCF Test istemcisi tarafından sağlanan erken geliştirme ortamından ilerlediğini yardımcı olur. Son dağıtım planına göndermeden önce Windows Communication Foundation (WCF) hizmet yayımlama, WCF hizmeti doğru bir şekilde gerçekleştirir ve yayımlanmaya hazır olduğunu doğrulamak için kullanabilirsiniz. Ayrıca test etmek için çeşitli hedef konumlara WCF Hizmeti Kitaplıklarınızı dağıtmayı tercih edebilirsiniz.
+Windows Communication Foundation (WCF) hizmeti yayımlama, WCF hizmet ana bilgisayarı ve WCF test Istemcisi tarafından sunulan erken geliştirme ortamından, uygulamayı test amaçlı olarak bir üretim ortamına dağıtmak için ilerleyerek size yardımcı olur. Son bir dağıtım planına işlemeden önce, WCF hizmetinizin doğru şekilde gerçekleştiğini ve yayımlanmaya hazırlanmadığını doğrulamak için Windows Communication Foundation (WCF) hizmet yayımlamayı kullanabilirsiniz. Ayrıca, WCF hizmeti kitaplıklarınızı test için çeşitli hedef konumlara dağıtmayı seçebilirsiniz.
 
-## <a name="supported-services-and-target-locations"></a>Desteklenen hizmetler ve hedef konumları
+## <a name="supported-services-and-target-locations"></a>Desteklenen hizmetler ve hedef konumlar
 
-WCF hizmet yayımlama dizi WCF hizmet kitaplığı şablonları ve aşağıdakileri içerir, karşılık gelen öğe şablonları, oluşturulan yayımlama WCF hizmetleri destekler:
+WCF hizmeti yayımlama, WCF hizmet kitaplığı şablonları kümesinden oluşturulan WCF hizmetlerinin yayımlanmasını ve aşağıdakiler dahil olmak üzere ilgili öğe şablonlarını destekler:
 
-- Öğe şablonu ile WCF hizmet kitaplığı şablonu.
+- Öğe şablonu olan WCF hizmet kitaplığı şablonu.
 
-- Dağıtım hizmet kitaplığı.
+- Dağıtım Hizmeti kitaplığı.
 
-Bu hizmet şablonlarını seçerek bulabilirsiniz **dosya** > **yeni proje** > [**Visual Basic** veya **Visual C#** ] > **WCF**. Diğer (WCF iş akışı hizmeti uygulaması ve WCF hizmeti uygulaması gibi) bu konumda WCF şablonları için kullanarak yayımlayabileceğiniz [tek tıklamayla web uygulamaları için yayımlamayı](https://docs.microsoft.com/previous-versions/aspnet/dd465337(v=vs.110)).
+Bu hizmet şablonlarını **Dosya** > **Yeni proje** > [**Visual Basic** veya **Visual C#** ] > **WCF**' i seçerek bulabilirsiniz. Bu konumdaki diğer WCF şablonları için (WCF Iş akışı hizmeti uygulaması ve WCF hizmeti uygulaması dahil), [Web uygulamaları Için tek tıklamayla yayımlama](https://docs.microsoft.com/previous-versions/aspnet/dd465337(v=vs.110))kullanarak yayımlayabilirsiniz.
 
 Hizmet aşağıdaki hedef konumlara yayımlanabilir.
 
@@ -31,50 +31,50 @@ Hizmet aşağıdaki hedef konumlara yayımlanabilir.
 
 - FTP sitesi.
 
-## <a name="using-wcf-service-publishing"></a>Kullanarak WCF hizmet yayımlama
+## <a name="using-wcf-service-publishing"></a>WCF hizmeti yayımlamayı kullanma
 
-Bir hizmet uygulaması dağıtmak için aşağıdaki adımları gerçekleştirin:
+Bir hizmet uygulamasını dağıtmak için aşağıdaki adımları gerçekleştirin:
 
-1. Visual Studio yükseltilmiş ayrıcalıklarla açın (yürütülebilir dosyaya sağ tıklayıp seçin **yönetici olarak çalıştır** açmak için).  IIS 7.0 kullanıyorsanız veya daha sonra emin olun, Denetim Masası'ndaki "Turn Windows özelliklerini aç veya kapat" kullanarak "IIS metatabanı ve IIS6 yapılandırma Uyumluluğu" bileşeni yüklediniz.
+1. Yükseltilmiş ayrıcalıklarla Visual Studio 'Yu açın (yürütülebilir dosya üzerinde sağ tıklayın ve açmak için **yönetici olarak çalıştır** ' ı seçin).  IIS 7,0 veya sonraki bir sürümü kullanıyorsanız, Denetim Masası 'ndaki "Windows özelliklerini aç veya kapat" seçeneğini kullanarak "IIS metatabanı ve ııS6 yapılandırma uyumluluğu" bileşenini yüklediğinizden emin olun.
 
-2. Bir hizmet projesi açın, **derleme** > **Yayımla \<proje adı >** ana menüden veya projeye sağ **Çözüm Gezgini**tıklatıp **Yayımla**.
+2. Bir hizmet projesi açın, ana menüden @no__t **Oluştur**-1 **\<proje adı >** ' nı seçin ya da **Çözüm Gezgini** ' de projeye sağ tıklayıp **Yayımla**' ya tıklayın.
 
-3. **Yayımla** penceresi görüntülenir. Tıklayın **...** . hizmet için dağıtılması hedef konumu belirtmek için düğmesi. Yerel IIS, dosya sistemi veya FTP sitesi için uygulamayı dağıtmayı seçebilirsiniz. Yerel IIS uygulama dağıtımı, Web sitenizi seçin ve tıklayarak altında web uygulamanızı oluşturma **yeni Web uygulaması oluştur** simgesini sağ üst köşedeki.
+3. **Yayımla** penceresi görüntülenir. **..** . Öğesine tıklayın. düğmesini seçin ve hizmetin dağıtılması gereken hedef konumu belirtin. Uygulamayı yerel IIS, dosya sistemi veya FTP sitesine dağıtmayı seçebilirsiniz. Uygulamayı yerel IIS 'e dağıtıyorsanız, sağ üst köşedeki **Yeni Web uygulaması oluştur** simgesine tıklayarak web sitenizi seçip Web uygulamanızı oluşturabilirsiniz.
 
-4. Tıkladıktan sonra **Yayımla** ana penceresinde, Visual Studio, belirtilen hedef konum uygulamayı dağıtır ve Web.config .svc ve derleme dosyaları hedef dizine kopyalar. biçimindeki telefon numarasıdır. .Svc adını "ProjectName.ServiceName.svc" olacaktır. Hizmet başarıyla yayımlandıktan sonra şuna benzer şekilde Visual Studio çıktı penceresinde bir etkin bağlantı bulabilirsiniz "bağlanma `http://localhost/WebApplicationFolderName...`". CTRL tuşunu BASILI tutun ve hizmet dizin yapısını görüntülemek için Visual Studio içindeki bir tarayıcı sayfasını açmak için bağlantıya tıklayın.
+4. Ana pencerede **Yayımla** ' yı tıklattıktan sonra, Visual Studio uygulamayı belirtilen hedef konuma dağıtır ve Web. config,. svc ve derleme dosyalarını hedef dizine kopyalar. biçimindeki telefon numarasıdır. . Svc adı "ProjectName. ServiceName. svc" olacaktır. Hizmet başarıyla yayımlandıktan sonra, Visual Studio çıktı penceresinde "`http://localhost/WebApplicationFolderName...` ' a bağlanma" ile benzer bir anında bağlantı bulabilirsiniz. CTRL tuşuna basabilir ve bağlantıya tıklayarak Visual Studio içindeki bir tarayıcı sayfasını açabilirsiniz.
 
-     Siteye göz atın, IIS'de directory tarayıcı etkin olmadığından olabilir. Lütfen etkinleştirmek için "Şeyler deneyebilirsiniz" bölümünde ipuçlarını izleyin. Alternatif olarak, doğrudan yazmanız `http://localhost/WebApplicationFolderName/ProjectName.ServiceName.svc` hizmet sayfanızı görüntülemek için.
+     Siteye gözatamıyorsanız, dizin tarayıcısı IIS 'de etkinleştirilmemiş olabilir. ' İ etkinleştirmek için lütfen "deneyebileceğiniz şeyler" bölümündeki ipuçlarını izleyin. Alternatif olarak, hizmet sayfanızı görüntülemek için `http://localhost/WebApplicationFolderName/ProjectName.ServiceName.svc` ' ı doğrudan yazabilirsiniz.
 
-Kullanabileceğiniz **Yayımla** derleme, yapılandırma ve hedef konum projede tanımlanan tüm hizmetleri .svc dosya kopyalamak isteyip istemediğinizi belirtin ve hedef konumda var olan dosyaların üzerine yaz.
+Projede tanımlanan tüm hizmetlere ait derleme, yapılandırma ve. svc dosyalarını hedef konuma kopyalamak ve hedefteki mevcut dosyaların üzerine yazmak istediğinizi belirtmek için **Yayımla** ' yı kullanabilirsiniz.
 
-Yerel IIS uygulamanızı dağıtmayı tercih ederseniz, IIS kurulumuyla ilgili hatalarla karşılaşabilirsiniz. IIS düzgün yüklendiğinden emin olun. Girdiğiniz `http://localhost` tarayıcınızın adres çubuğuna ve onay mı IIS varsayılan sayfasını görüntüler. Bazı durumlarda sorunlar yanlış kayıt ASP.NET veya IIS WCF tarafından da kaynaklanabilir. Visual Studio için geliştirici komut istemi açın ve şu komutu çalıştırın `aspnet_regiis.exe -ir` ASP.NET kayıt sorunları düzeltin veya komutu çalıştırmak için `ServiceModelReg.exe –ia` WCF kayıt sorunlarını gidermek için.
+Uygulamanızı yerel IIS 'e dağıtmayı seçerseniz, IIS kurulumuyla ilgili hatalarla karşılaşabilirsiniz. Lütfen IIS 'nin düzgün yüklendiğinden emin olun. Tarayıcınızın adres çubuğuna `http://localhost` girebilir ve IIS varsayılan sayfasının görüntülenip görüntülenmeyeceğini kontrol edebilirsiniz. Bazı durumlarda, sorunlar da IIS 'de ASP.NET veya WCF 'nin hatalı kaydının oluşmasına neden olabilir. Visual Studio için Geliştirici Komut İstemi açabilir ve @no__t kayıt sorunlarını gidermek için-0 komutunu çalıştırabilir veya WCF kayıt sorunlarını gidermek için `ServiceModelReg.exe –ia` komutunu çalıştırabilirsiniz.
 
 ## <a name="files-generated-for-publishing"></a>Yayımlama için oluşturulan dosyalar
- Bir WCF hizmet Kitaplığı Web barındırılan kullanılabilmesi için öncelikle aşağıdaki dosyaları araç tarafından oluşturulan: derleme dosyalarını ve Web.config dosyasını .svc dosya. Tüm dosyalar hedef konuma kopyalanır. Hizmet ardından yayımlanır.
+ Bir WCF hizmeti kitaplığının Web 'de barındırılması için aşağıdaki dosyalar araç tarafından oluşturulur: derleme dosyaları, Web. config dosyası ve. svc dosyası. Tüm dosyalar hedef konuma kopyalanır. Hizmet daha sonra yayımlanır.
 
 ### <a name="assembly-files"></a>Derleme dosyaları
- Bir WCF Hizmeti yayımladığınızda, bu aracı kullanarak hizmet önce otomatik olarak oluşturulur ve derleme dosyalarını service projesinde derlemeden sonra oluşturulur.
+ Bu aracı kullanarak bir WCF hizmeti yayımladığınızda, önce otomatik olarak oluşturulur ve derleme dosyaları derlemeden sonra hizmet projesinde oluşturulur.
 
 ### <a name="svc-file"></a>. SVC dosyası
- Veya, bir sürüm doğruluğundan emin olmak için dosyanın var olup olmadığını yayımlama işlemi her bir WCF hizmeti için bir *.svc dosyası oluşturur. Svc dosyaları farklı iki çeşit vardır: bir WCF hizmet kitaplığı ve dağıtım hizmeti kitaplığı ve başka bir sıralı ve Durum makinesi iş akışı hizmet kitaplığı. Oluşturulan \*.svc dosyasını, hedef konum kök klasörüne kopyalanır.
+ Yayımlama işlemi, sürüm geçerliliğini sağlamak için her bir WCF hizmeti için dosyanın var olup olmadığına bakılmaksızın bir *. svc dosyası üretir. İki farklı türde svc dosyası vardır: bir adet WCF hizmet kitaplığı ve dağıtım hizmeti kitaplığı ve sıralı ve durum makinesi Iş akışı hizmet kitaplığı için başka bir tane. Oluşturulan @no__t -0. svc dosyası hedef konumdaki kök klasöre kopyalanır.
 
-### <a name="webconfig-file"></a>Web.config File
- Belirli hedef konuma, her bir hizmet projesi yayımlandığında bir Web.config dosyası oluşturulur.
+### <a name="webconfig-file"></a>Web. config dosyası
+ Bir hizmet projesi belirli bir hedef konuma yayımlandığında, Web. config dosyası oluşturulur.
 
- Oluşturulan Web.config dosyası Web barındırma ve App.config içeriğini aşağıdaki değişikliklerle birlikte WCF hizmet kitaplığı için faydalı olan Web bölümleri içerir:
+ Oluşturulan Web. config dosyası Web barındırma için yararlı olan Web bölümlerini ve WCF Hizmeti kitaplığı için App. config 'in içeriğini aşağıdaki değişikliklerle içerir:
 
-- Taban adresi çıkarılır.
+- Taban adres hariç tutulur.
 
-- Ayarlarında `<diagnostics>` öğesi, hedef platform izleme ayarlarını korumak için dışlanır.
+- @No__t-0 öğesindeki ayarlar, hedef platformun izleme ayarlarını korumak için dışlanır.
 
-## <a name="publishing-wcf-services-with-non-http-bindings-to-iis"></a>IIS WCF hizmetleri HTTP olmayan bağlamaları ile yayımlama
- IIS7.0 kullanıyorsanız veya daha sonra HTTP olmayan IIS bağlamaları ile WCF hizmetlerine yayımlayabilirsiniz. Bazı öncesi yapılandırmalar yapmanız gerekir. Daha fazla bilgi için lütfen konuları bakın [Windows İşlem Etkinleştirme hizmetinde barındırma](../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md).
+## <a name="publishing-wcf-services-with-non-http-bindings-to-iis"></a>HTTP olmayan bağlamalarla WCF hizmetlerini IIS 'ye yayımlama
+ IIS 7.0 veya üzerini kullanıyorsanız, HTTP olmayan bağlamalarla WCF hizmetlerini IIS 'e yayımlayabilirsiniz. Bazı ön yapılandırmalarda yapmanız gerekir. Daha fazla bilgi için lütfen [Windows Işlem etkinleştirme hizmeti 'Nde barındırma](./feature-details/hosting-in-windows-process-activation-service.md)konusunun konularına bakın.
 
 ## <a name="security"></a>Güvenlik
- IIS Yönetici hesabında çalıştırılmasına gerektirdiğinden yayımlama yerel IIS Yöneticisi ayrıcalığı gerektirir. IIS Yöneticisi ayrıcalığı olmayan bir kullanıcı WCF hizmet yayımlama açılırsa, bir hedef konum olarak kullanılabilir değil. Dosya sistemi veya FTP sitesi yayımlama yönetici ayrıcalığı çalışır.
+ IIS 'in yönetici hesabında çalışıyor olması gerektiğinden, yerel IIS 'de yayımlama için yönetici ayrıcalığı gerekir. Yönetici ayrıcalıkları olmayan bir Kullanıcı WCF hizmeti yayımlamayı açarsa, IIS hedef konum olarak kullanılamaz. Dosya sistemine yayımlama veya FTP sitesi, yönetici ayrıcalıkları olmadan çalışmaktadır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [WCF Visual Studio Şablonları](../../../docs/framework/wcf/wcf-vs-templates.md)
-- [WCF Hizmet Konağı (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)
-- [WCF Test İstemcisi (WcfTestClient.exe)](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md)
+- [WCF Visual Studio Şablonları](wcf-vs-templates.md)
+- [WCF Hizmet Konağı (WcfSvcHost.exe)](wcf-service-host-wcfsvchost-exe.md)
+- [WCF Test İstemcisi (WcfTestClient.exe)](wcf-test-client-wcftestclient-exe.md)

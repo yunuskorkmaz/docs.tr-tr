@@ -1,27 +1,27 @@
 ---
-title: 'Nasıl yapılır: (Visual Basic) bir ağaçtaki tüm düğümleri listeleyin'
+title: 'Nasıl yapılır: bir ağaçtaki tüm düğümleri listeleme (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: e19289c4-26d1-435b-b0db-fb8bc856b753
-ms.openlocfilehash: 6576beaaed00905ce7a09f338251934ea375cb7e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2c736f7e3a92e8aa92ac91ef4c32141128eff5db
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62021628"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320546"
 ---
-# <a name="how-to-list-all-nodes-in-a-tree-visual-basic"></a>Nasıl yapılır: (Visual Basic) bir ağaçtaki tüm düğümleri listeleyin
-Bazen bir ağaçtaki tüm düğümleri listelemek yararlıdır. Bu tam olarak bir yöntem veya özellik ağaç etkilemesi öğrenme zaman yararlı olabilir. Metin biçiminde tüm düğümleri listeleyen bir yaklaşım, tam olarak ve özellikle herhangi bir düğüm ağaçta tanımlayan bir XPath ifadesi oluşturmaktır.  
+# <a name="how-to-list-all-nodes-in-a-tree-visual-basic"></a>Nasıl yapılır: bir ağaçtaki tüm düğümleri listeleme (Visual Basic)
+Bazen bir ağaçtaki tüm düğümleri listelemek yararlı olur. Bu, bir yöntemin veya özelliğin ağacı nasıl etkilediğini tam olarak öğrenirken yararlı olabilir. Bir metinsel form içindeki tüm düğümleri listelemek için bir yaklaşım, ağaçtaki herhangi bir düğümü tam olarak ve özellikle tanımlayan bir XPath ifadesi oluşturmaktır.  
   
- XPath ifadeleri kullanarak yürütmek özellikle yararlı değil [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. XPath ifadeleri daha düşük performansa sahip [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] sorgular ve [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] çok daha güçlü sorgular. Ancak, XPath düğümleri XML ağacındaki tanımlamak için bir yol işe yarar.  
+ @No__t-0 kullanılarak XPath ifadelerinin yürütülmesi özellikle yararlı değildir. XPath ifadeleri [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] sorgulardan poorer performansa sahiptir ve [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] sorguları çok daha güçlüdür. Ancak, XML ağacındaki düğümleri belirlemenin bir yolu olarak, XPath iyi bir sonuç verir.  
   
 ## <a name="example"></a>Örnek  
- Bu örnek adlı bir işlev gösterir `GetXPath` XML ağacında, herhangi bir düğüm için belirli bir XPath ifadesi oluşturur. Bir ad alanı düğümleri olduğunda bile uygun XPath ifadeleri oluşturur. XPath ifadeleri, ad alanı öneklerini kullanılarak oluşturulur.  
+ Bu örnek, XML ağacındaki herhangi bir düğüm için belirli bir XPath ifadesi oluşturan `GetXPath` adlı bir işlevi gösterir. Düğümler bir ad alanında olduğunda bile uygun XPath ifadeleri oluşturur. XPath ifadeleri, ad alanı önekleri kullanılarak oluşturulur.  
   
- Örnek daha sonra birden fazla düğüm örneği içeren küçük bir XML ağacı oluşturur. Alt düğümler yinelenir ve her düğüm için XPath ifadesi yazdırır.  
+ Örnek daha sonra birkaç düğüm türüne örnek içeren küçük bir XML ağacı oluşturur. Daha sonra alt düğümler boyunca yinelenir ve her düğüm için XPath ifadesini yazdırır.  
   
- XML bildirimi ağacında bir düğümü olmadığını fark edeceksiniz.  
+ XML bildiriminin ağaçta bir düğüm olmadığına dikkat edin.  
   
- Birden fazla düğümleri içeren bir XML dosyası verilmiştir:  
+ Aşağıda, çeşitli düğüm türlerini içeren bir XML dosyası verilmiştir:  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>  
@@ -37,9 +37,9 @@ Bazen bir ağaçtaki tüm düğümleri listelemek yararlıdır. Bu tam olarak bi
 </Root>  
 ```  
   
- XPath ifadeleri olarak ifade edilen yukarıdaki XML ağacı düğümler listesi verilmiştir:  
+ Aşağıda, XPath ifadeleri olarak ifade edilen Yukarıdaki XML ağacındaki düğümlerin listesi verilmiştir:  
   
-```  
+```console
 /processing-instruction()  
 /Root  
 /Root/@AttName  

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - I/O [.NET], Pipelines
 author: rick-anderson
 ms.author: riande
-ms.openlocfilehash: 9e26fb36b77e38c81273ccda370a203dd3388e5c
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: 53d7bbf214a71daff9372efcd5978f34c066c657
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291741"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320000"
 ---
 # <a name="systemiopipelines-in-net"></a>.NET 'teki System. ıO. işlem hatları
 
@@ -55,13 +55,13 @@ Yukarıdaki sorunları onarmak için aşağıdaki değişiklikler gereklidir:
 
 * Yeni bir satır bulunana kadar gelen verileri arabelleğe koyun.
 * Arabellekte döndürülen tüm satırları ayrıştırın.
-* Satır 1 KB 'den büyük (1024 bayt) olabilir. Kodun, giriş arabelleğini yeniden boyutlandırılması gerekir ve tüm satır bulunur.
+* Satır 1 KB 'den büyük (1024 bayt) olabilir. Bu kodun, arabelleğin içindeki tamamlanma satırına sığması için sınırlayıcı bulunana kadar giriş arabelleğini yeniden boyutlandırması gerekir.
 
   * Arabellek yeniden boyutlandırılırsa, girişte daha uzun çizgiler göründüğü sürece daha fazla arabellek kopyası yapılır.
   * Harcanan alanı azaltmak için, satırları okumak için kullanılan arabelleği sıkıştırın.
 
 * Belleği sürekli ayırmayı önlemek için arabellek havuzu kullanmayı düşünün.
-* Aşağıdaki kod bu sorunlardan bazılarını ele alarak:
+* Aşağıdaki kod bu sorunlardan bazılarını ele alınmaktadır:
 
 [!code-csharp[](~/samples/snippets/csharp/pipelines/ProcessLinesAsync.cs?name=snippet)]
 
@@ -208,7 +208,7 @@ Aşağıdaki kod `PipeReader` ' dan gelen tüm iletileri okur ve her biri üzeri
 
 [!code-csharp[MyConnection1](~/samples/snippets/csharp/pipelines/MyConnection1.cs?name=snippet)]
 
-### <a name="cancellation"></a>İptal
+### <a name="cancellation"></a>İptal Etme
 
 `PipeReader.ReadAsync`:
 
@@ -322,7 +322,7 @@ Arabelleği okuyan yardımcıları yazarken, `Advance` çağrılmadan önce dön
 
 [!code-csharp[MyPipeWriter#2](~/samples/snippets/csharp/pipelines/MyPipeWriter.cs?name=snippet2)]
 
-### <a name="cancellation"></a>İptal
+### <a name="cancellation"></a>İptal Etme
 
 <xref:System.IO.Pipelines.PipeWriter.FlushAsync%2A> <xref:System.Threading.CancellationToken> geçirmeyi destekler. @No__t-0 ' ın geçirilmesi, bir temizleme işlemi sırasında belirteç iptal edildiğinde, bir `OperationCanceledException` ile sonuçlanır. `PipeWriter.FlushAsync`, bir özel durum oluşturmadan geçerli temizleme işlemini <xref:System.IO.Pipelines.PipeWriter.CancelPendingFlush%2A?displayProperty=nameWithType> aracılığıyla iptal etmenin bir yolunu destekler. @No__t-0 ' a çağırmak, geçerli veya sonraki `PipeWriter.FlushAsync` veya `PipeWriter.WriteAsync` çağrısının `IsCanceled` ile `true` olarak ayarlanmış bir <xref:System.IO.Pipelines.FlushResult> döndürmesini sağlar. Bu, bozucu olmayan ve olağanüstü olmayan bir şekilde boşaltmayı Temizleme için yararlı olabilir.
 
@@ -342,6 +342,6 @@ Arabelleği okuyan yardımcıları yazarken, `Advance` çağrılmadan önce dön
 
  @No__t-1 ve bir `PipeWriter` içeren `Pipe` ' dan farklı olarak, `IDuplexPipe` tam çift yönlü bağlantının tek tarafını temsil eder. Bu, @no__t yazılmış olan ve `PipeReader` ' den okunmayacak anlamına gelir.
 
-## <a name="streams"></a>Larındaki
+## <a name="streams"></a>Akışlar
 
 Akış verilerini okurken veya yazarken genellikle seri hale getirici kullanarak verileri okur ve serileştirici kullanarak verileri yazın. Bu okuma ve yazma akışı API 'Lerinin çoğu `Stream` parametresine sahiptir. Bu mevcut API 'lerle tümleştirmeyi kolaylaştırmak için `PipeReader` ve `PipeWriter` <xref:System.IO.Pipelines.PipeReader.AsStream%2A> ' yi kullanıma sunar.  <xref:System.IO.Pipelines.PipeWriter.AsStream%2A> `PipeReader` veya `PipeWriter` etrafında `Stream` uygulamasını döndürür.

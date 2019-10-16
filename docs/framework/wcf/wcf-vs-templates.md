@@ -2,12 +2,12 @@
 title: WCF Visual Studio Şablonları
 ms.date: 03/30/2017
 ms.assetid: 6a608575-3535-4190-89da-911e24c8374f
-ms.openlocfilehash: 8f7eb9ef5175c41a3378201f2f25f1fd914aef55
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 507599549bd75fb454483378e044b6b7581cf4a6
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69916786"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320481"
 ---
 # <a name="wcf-visual-studio-templates"></a>WCF Visual Studio Şablonları
 Windows Communication Foundation (WCF) Visual Studio şablonları, Visual Studio 'da kolayca WCF Hizmetleri ve çevreleyen uygulamalar oluşturmak için kullanabileceğiniz, önceden tanımlanmış proje ve öğe şablonlarıdır.  
@@ -27,7 +27,7 @@ Windows Communication Foundation (WCF) Visual Studio şablonları, Visual Studio
 - Uygulama yapılandırma dosyası (App. config). Yapılandırma dosyası, bir WCF hizmeti modelinin, güvenli bir HTTP bağlaması olan temel öğelerini sağlar. Ayrıca hizmet için bir uç nokta içerir ve meta veri değişimi etkinleştirilir.  
   
 > [!NOTE]
-> Visual Studio, varsayılan yapılandırma olan [WCF hizmet ana bilgisayarı (WcfSvcHost. exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)kullanılarak çalıştırıldığında proje için yapılandırma dosyası olarak App. config dosyasını tanıyacak şekilde yapılandırılmıştır. Hizmet kitaplığını bir yürütülebilir dosyada barındırdıysanız, dll 'Ler için yapılandırma dosyaları geçerli olmadığından, yapılandırma kodunu yürütülebilir dosyanın yapılandırma dosyasına taşımanız gerekir.  
+> Visual Studio, varsayılan yapılandırma olan [WCF hizmet ana bilgisayarı (WcfSvcHost. exe)](wcf-service-host-wcfsvchost-exe.md)kullanılarak çalıştırıldığında proje için yapılandırma dosyası olarak App. config dosyasını tanıyacak şekilde yapılandırılmıştır. Hizmet kitaplığını bir yürütülebilir dosyada barındırdıysanız, dll 'Ler için yapılandırma dosyaları geçerli olmadığından, yapılandırma kodunu yürütülebilir dosyanın yapılandırma dosyasına taşımanız gerekir.  
   
 ### <a name="wcf-service-application-template"></a>WCF hizmeti uygulama şablonu  
  WCF hizmeti uygulama şablonu, **Visual C#\Wcf** ve **Visual Basic\wcf**altındaki yeni proje iletişim kutusunda kullanılabilir.  
@@ -59,12 +59,12 @@ Windows Communication Foundation (WCF) Visual Studio şablonları, Visual Studio
  Mevcut proje bir Web projem ise, bir hizmet ana bilgisayar dosyası (Service1. svc) de oluşturulur.  
   
 ### <a name="wcf-wf-service-project-and-item-template"></a>WCF WF hizmeti projesi ve öğe şablonu.  
- Bu şablonlar, bir Web hizmeti gibi erişilebilen bir iş akışı olan Iş akışı hizmetini barındıran WCF Hizmetleri oluşturur. XAML veya kesinlik temelli programlama modelleri için ayrı şablonlar var. Şablonları kullanarak sıralı veya eyalet makinesi iş akışı oluşturabilirsiniz. Bu iş akışı türleri hakkında daha fazla bilgi için bkz [. nasıl yapılır: Bir Iş akışı](../windows-workflow-foundation/how-to-create-a-workflow.md)oluşturun. İş akışı projeleri oluşturma hakkında daha fazla bilgi için bkz. [eski Iş akışı projeleri oluşturma](/visualstudio/workflow-designer/creating-legacy-workflow-projects).  
+ Bu şablonlar, bir Web hizmeti gibi erişilebilen bir iş akışı olan Iş akışı hizmetini barındıran WCF Hizmetleri oluşturur. XAML veya kesinlik temelli programlama modelleri için ayrı şablonlar var. Şablonları kullanarak sıralı veya eyalet makinesi iş akışı oluşturabilirsiniz. Bu iş akışı türleri hakkında daha fazla bilgi için bkz. [nasıl yapılır: Iş akışı oluşturma](../windows-workflow-foundation/how-to-create-a-workflow.md). İş akışı projeleri oluşturma hakkında daha fazla bilgi için bkz. [eski Iş akışı projeleri oluşturma](/visualstudio/workflow-designer/creating-legacy-workflow-projects).  
   
  Visual Studio Tasarımcısı, kod tabanlı olanlar yerine XOML türü iş akışları kullanıldığında daha hızlı yanıt verir. XOML iş akışı oluşturulacak varsayılan iş akışı türüdür.  
   
 ### <a name="wcf-syndication-service-library-template"></a>WCF dağıtım hizmeti kitaplık şablonu  
- Bu şablon, akışınızı RSS veya ATOM biçiminde bir WCF hizmeti olarak kullanıma sunmanızı sağlar. Daha fazla bilgi için bkz. [WCF dağıtımı](../../../docs/framework/wcf/feature-details/wcf-syndication.md).  
+ Bu şablon, akışınızı RSS veya ATOM biçiminde bir WCF hizmeti olarak kullanıma sunmanızı sağlar. Daha fazla bilgi için bkz. [WCF dağıtımı](./feature-details/wcf-syndication.md).  
   
 #### <a name="changing-the-address-of-the-feed"></a>Akışın adresini değiştirme  
  Dağıtım şablonu, yürütme sırasında Internet Explorer 'ı kullanır. Visual Studio 'da **Çözüm Gezgini** ' nde projenize sağ tıkladığınızda **Özellikler**' i seçin, ardından **Hata Ayıkla** sekmesini seçin ve şablonun varsayılan adresini görebilirsiniz. Internet Explorer bu adreste akışı açmaya çalışır.  
@@ -80,9 +80,9 @@ Windows Communication Foundation (WCF) Visual Studio şablonları, Visual Studio
  Bu şablona erişmek için **Çözüm Gezgini**' de bir Web sitesine veya Web uygulaması projesine sağ tıklayın, **Yeni öğe Ekle**' ye tıklayın ve **Silverlight etkin WCF hizmeti**' ne tıklayın.  
   
 > [!NOTE]
-> Silverlight etkin WCF hizmeti herhangi bir güvenlik ayarını `basicHttpBinding` etkinleştirmeden bir uç nokta gösterir. Bu nedenle, hizmet hakkındaki bilgiler, bu hizmete bağlanan tüm istemciler tarafından elde edilebilir. Hizmet ve istemci arasında değiş tokuş edilen iletiler de imzalanmamıştır veya şifrelenmez. Uç noktanın düzgün şekilde güvenliğini sağlamak için ASP.NET Authentication, HTTPS veya diğer mekanizmaların kullanılması gerekir.  
+> Silverlight etkin WCF hizmeti herhangi bir güvenlik ayarını etkinleştirmeden bir `basicHttpBinding` uç noktası sunar. Bu nedenle, hizmet hakkındaki bilgiler, bu hizmete bağlanan tüm istemciler tarafından elde edilebilir. Hizmet ve istemci arasında değiş tokuş edilen iletiler de imzalanmamıştır veya şifrelenmez. Uç noktanın düzgün şekilde güvenliğini sağlamak için ASP.NET Authentication, HTTPS veya diğer mekanizmaların kullanılması gerekir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [WCF Hizmet Konağı (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)
-- [WCF Test İstemcisi (WcfTestClient.exe)](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md)
+- [WCF Hizmet Konağı (WcfSvcHost.exe)](wcf-service-host-wcfsvchost-exe.md)
+- [WCF Test İstemcisi (WcfTestClient.exe)](wcf-test-client-wcftestclient-exe.md)

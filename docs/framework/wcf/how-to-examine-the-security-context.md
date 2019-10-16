@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Güvenlik Bağlamını İnceleme'
+title: 'Nasıl Yapılır: Güvenlik Bağlamını İnceleme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,42 +9,42 @@ helpviewer_keywords:
 - WCF, security
 - Claimset class
 ms.assetid: 389b5a57-4175-4bc0-ada0-fc750d51149f
-ms.openlocfilehash: e67ac9c452337b6f490d99ea4430ec2a02b952a1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 328d47a583a4f047fd54589a82d339de2cb1a16f
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625798"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320986"
 ---
-# <a name="how-to-examine-the-security-context"></a>Nasıl yapılır: Güvenlik Bağlamını İnceleme
-Windows Communication Foundation (WCF) hizmetlerini programlama, hizmet güvenlik bağlamı hizmeti ile kimlik doğrulaması için kullanılan talep ve istemci kimlik bilgileri hakkındaki ayrıntıları belirlemenizi sağlar. Bu özellikleri kullanılarak yapılır <xref:System.ServiceModel.ServiceSecurityContext> sınıfı.  
+# <a name="how-to-examine-the-security-context"></a>Nasıl Yapılır: Güvenlik Bağlamını İnceleme
+Windows Communication Foundation (WCF) Hizmetleri programlamada, hizmet güvenlik bağlamı, hizmette kimlik doğrulaması yapmak için kullanılan istemci kimlik bilgileri ve talepler hakkındaki ayrıntıları belirlemenizi sağlar. Bu, <xref:System.ServiceModel.ServiceSecurityContext> sınıfının özellikleri kullanılarak yapılır.  
   
- Kullanarak geçerli istemci kimliğini gibi alabilirsiniz <xref:System.ServiceModel.ServiceSecurityContext.PrimaryIdentity%2A> veya <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A> özelliği. İstemci anonim olup olmadığını belirlemek için <xref:System.ServiceModel.ServiceSecurityContext.IsAnonymous%2A> özelliği.  
+ Örneğin, <xref:System.ServiceModel.ServiceSecurityContext.PrimaryIdentity%2A> veya <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A> özelliğini kullanarak geçerli istemcinin kimliğini alabilirsiniz. İstemcinin anonim olup olmadığını anlamak için <xref:System.ServiceModel.ServiceSecurityContext.IsAnonymous%2A> özelliğini kullanın.  
   
- Taleplerde koleksiyonu ile Yinelem yaparak istemci adına hangi talepleri yapılmıştır belirleyebilirsiniz <xref:System.ServiceModel.ServiceSecurityContext.AuthorizationContext%2A> özelliği.  
+ Ayrıca, <xref:System.ServiceModel.ServiceSecurityContext.AuthorizationContext%2A> özelliğindeki talepler koleksiyonunda yineleme yaparak istemci adına hangi taleplerin yapıldığını da belirleyebilirsiniz.  
   
-### <a name="to-get-the-current-security-context"></a>Geçerli güvenlik bağlamı almak için  
+### <a name="to-get-the-current-security-context"></a>Geçerli güvenlik bağlamını almak için  
   
-- Statik özellik erişim <xref:System.ServiceModel.ServiceSecurityContext.Current%2A> geçerli güvenlik bağlamı alınamıyor. Geçerli bağlamın iş başvurusundan özelliklerinden herhangi birini inceleyin.  
+- Geçerli güvenlik bağlamını almak için <xref:System.ServiceModel.ServiceSecurityContext.Current%2A> statik özelliğine erişin. Geçerli bağlamın özelliklerinden herhangi birini başvuruya göre inceleyin.  
   
-### <a name="to-determine-the-identity-of-the-caller"></a>Arayan kimliğini belirlemek için  
+### <a name="to-determine-the-identity-of-the-caller"></a>Arayanın kimliğini belirleme  
   
-1. Değerini yazdırmak <xref:System.ServiceModel.ServiceSecurityContext.PrimaryIdentity%2A> ve <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A> özellikleri.  
+1. @No__t-0 ve <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A> özelliklerinin değerini yazdırın.  
   
-### <a name="to-parse-the-claims-of-a-caller"></a>Çağıran talepleri ayrıştırılamıyor  
+### <a name="to-parse-the-claims-of-a-caller"></a>Bir arayanın taleplerini ayrıştırmak için  
   
-1. Geçerli dönüş <xref:System.IdentityModel.Policy.AuthorizationContext> sınıfı. Kullanım <xref:System.ServiceModel.ServiceSecurityContext.Current%2A> geçerli hizmet güvenlik bağlamı döndürür ve döndürmek için özellik `AuthorizationContext` kullanarak <xref:System.ServiceModel.ServiceSecurityContext.AuthorizationContext%2A> özelliği.  
+1. Geçerli <xref:System.IdentityModel.Policy.AuthorizationContext> sınıfını döndürün. Geçerli hizmet güvenlik bağlamını döndürmek için <xref:System.ServiceModel.ServiceSecurityContext.Current%2A> özelliğini kullanın, ardından <xref:System.ServiceModel.ServiceSecurityContext.AuthorizationContext%2A> özelliğini kullanarak `AuthorizationContext` ' i döndürün.  
   
-2. Koleksiyonu ayrıştırma <xref:System.IdentityModel.Claims.ClaimSet> tarafından döndürülen nesne <xref:System.IdentityModel.Policy.AuthorizationContext.ClaimSets%2A> özelliği <xref:System.IdentityModel.Policy.AuthorizationContext> sınıfı.  
+2. @No__t-2 sınıfının <xref:System.IdentityModel.Policy.AuthorizationContext.ClaimSets%2A> özelliği tarafından döndürülen <xref:System.IdentityModel.Claims.ClaimSet> nesnelerinin koleksiyonunu ayrıştırın.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek değerlerini yazdırır <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A> ve <xref:System.ServiceModel.ServiceSecurityContext.PrimaryIdentity%2A> geçerli güvenlik bağlamı özelliklerini ve <xref:System.IdentityModel.Claims.Claim.ClaimType%2A> özelliği, talep kaynak değerini ve <xref:System.IdentityModel.Claims.Claim.Right%2A> geçerli güvenlik her talep özelliği bağlamı.  
+ Aşağıdaki örnek geçerli güvenlik bağlamının <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A> ve <xref:System.ServiceModel.ServiceSecurityContext.PrimaryIdentity%2A> özelliklerinin ve <xref:System.IdentityModel.Claims.Claim.ClaimType%2A> özelliğinin, talebin kaynak değerinin ve geçerli güvenlik bağlamındaki her talebin <xref:System.IdentityModel.Claims.Claim.Right%2A> özelliğinin değerlerini yazdırır.  
   
  [!code-csharp[c_PrincipalPermissionAttribute#4](../../../samples/snippets/csharp/VS_Snippets_CFX/c_principalpermissionattribute/cs/source.cs#4)]
  [!code-vb[c_PrincipalPermissionAttribute#4](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_principalpermissionattribute/vb/source.vb#4)]  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
- Aşağıdaki ad kodunu kullanır:  
+ Kod aşağıdaki ad alanlarını kullanır:  
   
 - <xref:System>  
   
@@ -56,5 +56,5 @@ Windows Communication Foundation (WCF) hizmetlerini programlama, hizmet güvenli
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hizmetleri Güvenli Hale Getirme](../../../docs/framework/wcf/securing-services.md)
-- [Kimlik Doğrulama ile Hizmet Kimliği](../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
+- [Hizmetleri Güvenli Hale Getirme](securing-services.md)
+- [Kimlik Doğrulama ile Hizmet Kimliği](./feature-details/service-identity-and-authentication.md)

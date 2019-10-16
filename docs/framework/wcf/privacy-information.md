@@ -6,198 +6,198 @@ helpviewer_keywords:
 - WCF, privacy information
 - privacy information [WCF]
 ms.assetid: c9553724-f3e7-45cb-9ea5-450a22d309d9
-ms.openlocfilehash: 6da9e2a91fe8156c0631aa77594e3ed47d32cb8b
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 0b277728d2f2c224d5e45e3990ab2fd588bc81d3
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65882183"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72318690"
 ---
 # <a name="windows-communication-foundation-privacy-information"></a>Windows Communication Foundation Gizlilik Bilgileri
-Microsoft, son kullanıcılar gizlilik korumayı taahhüt eder. Sürüm 3.0, Windows Communication Foundation (WCF) kullanarak bir uygulamayı derlerken, uygulamanızı kullanıcılarınıza gizlilik etkileyebilir. Örneğin, uygulamanızın açıkça kullanıcı bilgilerini toplayabilir veya istek veya Web sitenize Internet üzerinden bilgi göndermek olabilir. Uygulamanızda Microsoft teknolojisini eklemek, bu teknoloji gizlilik etkileyebilecek kendi davranışını olabilir. Sizin veya son kullanıcı seçmediğiniz sürece farklı bize göndermek WCF bilgileri Microsoft'a uygulamanızdan göndermez.  
+Microsoft, son kullanıcıların gizliliğini korumayı taahhüt etmektedir. Windows Communication Foundation (WCF), sürüm 3,0 kullanarak bir uygulama oluşturduğunuzda, uygulamanız son kullanıcılarınızın gizliliğini etkileyebilir. Örneğin, uygulamanız kullanıcı iletişim bilgilerini açıkça toplayabilir veya Internet üzerinden Web sitenize bilgi talep edebilir veya gönderebilir. Uygulamanıza Microsoft teknolojisi eklerseniz, bu teknolojinin gizliliği etkileyebilecek kendi davranışı olabilir. WCF, siz veya son kullanıcı tarafından bize göndermek için seçim yapmadıkça Microsoft 'a herhangi bir bilgi göndermez.  
   
 ## <a name="wcf-in-brief"></a>WCF kısaca  
- WCF, dağıtılmış uygulamalar oluşturmalarını sağlayan bir Microsoft .NET Framework kullanarak dağıtılmış bir Mesajlaşma çerçevedir. İki uygulama arasında iletileri üstbilgi ve gövde bilgileri içerir.  
+ WCF, geliştiricilerin dağıtılmış uygulamalar oluşturmalarına olanak tanıyan Microsoft .NET çerçevesini kullanan dağıtılmış bir mesajlaşma çerçevesidir. İki uygulama arasında iletilen iletiler, üst bilgi ve gövde bilgilerini içerir.  
   
- İleti yönlendirme, güvenlik bilgileri, işlemlerin ve uygulama tarafından kullanılan hizmetlere bağlı olarak daha fazla üst bilgiler içerebilir. İletileri, genellikle varsayılan olarak şifrelenir. Kullanıldığında bir özel durum `BasicHttpBinding`, hangi güvenli olmayan, eski Web Hizmetleri ile kullanılmak üzere tasarlanmıştır. Uygulama Tasarımcısı nihai tasarımı için sorumlu olursunuz. İletiler SOAP'daki, uygulamaya özgü verileri içerir; Ancak, bu veriler, uygulama tanımlı kişisel bilgiler gibi WCF şifreleme veya gizliliği özelliklerini kullanarak güvenliği sağlanabilir. Aşağıdaki bölümlerde, büyük olasılıkla gizliliği etkileyen özellikleri açıklanmaktadır.  
+ Üst bilgiler, uygulama tarafından kullanılan hizmetlere bağlı olarak ileti yönlendirme, güvenlik bilgileri, işlemler ve daha fazlasını içerebilir. İletiler genellikle varsayılan olarak şifrelenir. Tek istisna, güvenli olmayan, eski Web hizmetleriyle kullanılmak üzere tasarlanan `BasicHttpBinding` ' ı kullanmaktır. Uygulama Tasarımcısı olarak son tasarımdan siz sorumlusunuz. SOAP gövdesindeki iletiler uygulamaya özgü verileri içerir; Ancak, uygulama tanımlı kişisel bilgiler gibi bu veriler, WCF şifreleme veya gizlilik özellikleri kullanılarak güvenliği sağlanmış olabilir. Aşağıdaki bölümlerde gizliliği potansiyel olarak etkileyebilecek özellikler açıklanır.  
   
 ## <a name="messaging"></a>İleti  
- Her WCF ileti belirten bir ileti hedef adres üstbilgisi sahiptir ve yanıt nereye.  
+ Her WCF iletisinde, ileti hedefini belirten ve yanıtın gitmesi gereken bir adres üst bilgisi vardır.  
   
- Uç nokta tanımlayan bir Tekdüzen Kaynak Tanımlayıcısı (URI), bir uç nokta adresi adresi bileşenidir. Adresi, bir ağ adresi veya mantıksal bir adres olabilir. Adres, makine adı (ana bilgisayar adı, tam etki alanı adı) ve bir IP adresi içerebilir. Uç nokta adresini bir genel benzersiz tanıtıcısı (GUID) de içerebilir veya geçici adresleme GUID'lerini koleksiyonu her adresi ayrım için kullanılır. Her ileti bir ileti kimliği bir GUID içerir. Bu özellik, WS-Addressing başvuru standart izler.  
+ Bir uç nokta adresinin adres bileşeni, uç noktasını tanımlayan bir Tekdüzen kaynak tanımlayıcısıdır (URI). Adres bir ağ adresi veya mantıksal adres olabilir. Adres, makine adı (ana bilgisayar adı, tam etki alanı adı) ve bir IP adresi içerebilir. Uç nokta adresi bir genel benzersiz tanımlayıcı (GUID) veya her bir adresi ayırt etmek için kullanılan geçici adresleme için GUID 'lerin bir koleksiyonunu da içerebilir. Her ileti, GUID olan bir ileti KIMLIĞI içerir. Bu özellik, WS-Addressing başvuru standardını izler.  
   
- WCF ileti katmanı herhangi bir kişisel bilgi yerel makineye yazmaz. Bir hizmet geliştirici (örneğin, bir kişinin adını kullanarak bir uç nokta adı veya göre uç noktanın Web kişisel bilgiler dahil olmak üzere bu tür bilgiler sunan bir hizmet oluşturduysanız ancak bunu kişisel bilgileri ağ düzeyinde yay Açıklama Dili ancak istemcilerin WSDL erişmek için https kullanmasını gerektirmeyen Hizmetleri). Ayrıca, bir geliştirici çalıştırıyorsa [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) kişisel bilgiler, Aracı'nın çıkış kullanıma sunduğu bir uç nokta aracı, bu bilgileri içerebilir ve çıktı dosyasına yazılır yerel sabit disk.  
+ WCF mesajlaşma katmanı, yerel makineye herhangi bir kişisel bilgi yazmaz. Ancak, bir hizmet geliştiricisi bu bilgileri açığa çıkaran bir hizmet (örneğin, bir uç nokta adında bir kişinin adını kullanarak ya da uç noktanın Web 'e kişisel bilgiler dahil) bir hizmet oluşturarsa, kişisel bilgileri ağ düzeyinde yayabilir. Hizmetler açıklaması dili, ancak istemcilerin WSDL 'ye erişmek için HTTPS kullanmasını gerektirmemelidir). Ayrıca bir geliştirici, kişisel bilgiler sunan bir uç noktaya karşı [ServiceModel meta veri yardımcı programı Aracı (Svcutil. exe)](servicemodel-metadata-utility-tool-svcutil-exe.md) aracını çalıştırıyorsa, aracın çıktısı bu bilgileri içerebilir ve çıkış dosyası yerel sabit diske yazılır.  
   
 ## <a name="hosting"></a>Barındırma  
- Wcf'de barındırma özellik uygulamalarını isteğe bağlı olarak Başlat veya birden çok uygulama arasında bağlantı noktası paylaşma olanağı sağlar. WCF uygulaması, Internet Information Services (IIS), ASP.NET ile benzer barındırılabilir.  
+ WCF 'deki barındırma özelliği, uygulamaların isteğe bağlı olarak başlamasını veya birden çok uygulama arasında bağlantı noktası paylaşımını etkinleştirmesini sağlar. WCF uygulaması, ASP.NET benzeri Internet Information Services (IIS) içinde barındırılabilir.  
   
- Barındırma belirli bilgilere ağda kullanıma sunmuyor ve makinede verileri korumaz.  
+ Barındırma, ağ üzerinde belirli bilgileri açığa çıkarır ve makinede veri bulundurmaz.  
   
 ## <a name="message-security"></a>İleti Güvenliği  
- WCF güvenlik Mesajlaşma uygulamaları için güvenlik olanaklarını sağlar. Kimlik doğrulama ve yetkilendirme sağlanan güvenlik işlevlerini içerir.  
+ WCF güvenliği, Mesajlaşma uygulamalarına yönelik güvenlik özellikleri sağlar. Belirtilen güvenlik işlevleri kimlik doğrulaması ve yetkilendirme içerir.  
   
- Kimlik doğrulaması, istemciler ve hizmetler arasında kimlik bilgilerini geçirerek gerçekleştirilir. Kimlik doğrulaması aktarım düzeyi güvenlik ile aşağıdakilerden biri olması veya SOAP ileti güvenlik gibi düzeyi:  
+ Kimlik doğrulaması, istemciler ve hizmetler arasında kimlik bilgileri geçirerek gerçekleştirilir. Kimlik doğrulaması, aktarım düzeyi güvenlik aracılığıyla veya SOAP ileti düzeyi güvenliği aracılığıyla aşağıdaki gibi olabilir:  
   
-- SOAP ileti güvenliğinde, kimlik doğrulama kullanıcı adı/parola, X.509 sertifikaları, Kerberos biletleri ve her biri, dağıtımcı bağlı olarak kişisel bilgiler içerebilir, SAML belirteçlerini gibi kimlik bilgileri aracılığıyla gerçekleştirilir.  
+- SOAP iletisi güvenliği 'nde kimlik doğrulaması, Kullanıcı adı/parolalar, X. 509.440 sertifikaları, Kerberos biletleri ve SAML belirteçleri gibi kimlik bilgileri aracılığıyla yapılır; bu, verenlere bağlı olarak kişisel bilgiler içerebilir.  
   
-- Aktarım güvenliği kullanarak, HTTP kimlik doğrulama düzenleri gibi geleneksel aktarım kimlik doğrulama mekanizmaları kimlik doğrulaması yapılır (temel, Digest, Negotiate, tümleşik Windows kimlik doğrulaması, None, NTLM ve anonim) ve form kimlik doğrulaması.  
+- Aktarım güvenliğini kullanarak, kimlik doğrulaması HTTP kimlik doğrulama şemaları (temel, Özet, anlaşma, tümleşik Windows yetkilendirmesi, NTLM, hiçbiri ve anonim) ve form kimlik doğrulaması gibi geleneksel aktarım kimlik doğrulama mekanizmaları aracılığıyla yapılır.  
   
- Kimlik doğrulaması iletişim uç noktaları arasında kurulan güvenli oturum neden olabilir. Oturum, güvenlik oturumu ömrünü süren bir GUID ile tanımlanır. Aşağıdaki tabloda neler tutulur gösterir ve burada.  
+ Kimlik doğrulama, iletişim noktaları arasında kurulan güvenli bir oturumun oluşmasına neden olabilir. Oturum, güvenlik oturumunun ömrünü sürdüeden bir GUID ile tanımlanır. Aşağıdaki tabloda neler olduğu ve nerede tutulduğu gösterilmektedir.  
   
 |Veri|Depolama|  
 |----------|-------------|  
-|Kullanıcı adı, X.509 sertifikaları, Kerberos belirteçleri ve kimlik bilgilerini başvurular gibi sunu kimlik.|Windows kimlik bilgisi yönetimi mekanizmalarını Windows sertifika deposu gibi.|  
-|Kullanıcı adları ve parolalar gibi kullanıcı üyelik bilgileri.|ASP.NET üyelik sağlayıcıları.|  
-|İstemci hizmetinin kimliğini doğrulamak için kullanılan hizmet kimlik bilgilerini.|Hizmet uç noktası adresi.|  
-|Arayan bilgileri.|Denetim günlükleri.|  
+|Kullanıcı adı, X. 509.440 sertifikaları, Kerberos belirteçleri ve kimlik bilgilerine yapılan başvurular gibi sunum kimlik bilgileri.|Windows sertifika deposu gibi standart Windows kimlik bilgisi yönetim mekanizmaları.|  
+|Kullanıcı üyeliği bilgileri, örneğin Kullanıcı adları ve parolalar.|ASP.NET üyelik sağlayıcıları.|  
+|Hizmetin istemcilere kimliğini doğrulamak için kullanılan hizmet hakkındaki kimlik bilgileri.|Hizmetin uç nokta adresi.|  
+|Çağıran bilgileri.|Denetim günlükleri.|  
   
 ## <a name="auditing"></a>Denetim  
- Denetim başarılı ve başarısız kimlik doğrulama ve yetkilendirme olayları kaydeder. Denetim kayıtları aşağıdaki verileri içerir: hizmet URI'si, eylemi URI'si ve arayanın kimliği.  
+ Denetim, kimlik doğrulama ve yetkilendirme olaylarının başarısını ve başarısızlığını kaydeder. Denetim kayıtları şu verileri içerir: hizmet URI 'SI, eylem URI 'SI ve arayanın kimliği.  
   
- Ayrıca denetim iletileri günlüğe kaydetme, üst bilgiler ve gövdeleri uygulamaya özgü verileri oturum açabilir çünkü zaman yönetici (bunu açma veya kapatma) ileti günlük kaydı yapılandırmasını değiştirir kaydeder. İçin [!INCLUDE[wxp](../../../includes/wxp-md.md)], bir kaydı uygulama olay günlüğüne kaydedilir. İçin [!INCLUDE[wv](../../../includes/wv-md.md)] ve [!INCLUDE[ws2003](../../../includes/ws2003-md.md)], bir kayıt güvenlik olay günlüğüne kaydedilir.  
+ Ayrıca Denetim, yönetici ileti günlüğe kaydetme yapılandırmasını değiştirdiğinde (açık veya kapalı), ileti günlüğü, uygulamaya özgü verileri üst bilgilerde ve gövdelerde günlüğe kaydeder. @No__t-0 için, uygulama olay günlüğüne bir kayıt kaydedilir. @No__t-0 ve [!INCLUDE[ws2003](../../../includes/ws2003-md.md)] için güvenlik olay günlüğüne bir kayıt kaydedilir.  
   
 ## <a name="transactions"></a>İşlemler  
- İşlem özelliği, bir WCF uygulaması işlem hizmetleri sağlar.  
+ İşlemler özelliği bir WCF uygulamasına işlem hizmetleri sağlar.  
   
- İşlem yayma kullanılan işlem üst işlem kimliği veya guıd'lerdir kaydı kimlikleri içerebilir.  
+ İşlem yayma işleminde kullanılan işlem üstbilgileri, GUID 'Leri olan Işlem kimliklerini veya kayıt kimliklerini içerebilir.  
   
- İşlem özelliği, işlem durumu yönetmek için Microsoft Dağıtılmış İşlem Düzenleyicisi (MSDTC) işlem yöneticisi (bir Windows bileşeni) kullanır. Varsayılan olarak, işlem yöneticileri arasındaki iletişimler şifrelenir. Uç nokta başvuruları, işlem kimlikleri ve liste işlem yöneticileri durumlarını kalıcı bir parçası olarak oturum açabilir. Bu durum ömrünü İşlem Yöneticisi'nin günlük dosyası ömrünü tarafından belirlenir. MSDTC hizmetinin sahibi ve bu günlüğünü tutar.  
+ Işlemler özelliği, işlem durumunu yönetmek için Microsoft Dağıtılmış İşlem Düzenleyicisi (MSDTC) Işlem yöneticisi 'Ni (bir Windows bileşeni) kullanır. Varsayılan olarak, Işlem yöneticileri arasındaki iletişimler şifrelenir. İşlem yöneticileri, sürekli durumunun bir parçası olarak uç nokta başvurularını, Işlem kimliklerini ve kayıt kimliklerini günlüğe kaydetmeyebilir. Bu durumun ömrü, Işlem yöneticisinin günlük dosyasının ömrü ile belirlenir. MSDTC hizmeti, bu günlüğün sahibi ve bakımını yapar.  
   
- İşlem özellik WS-düzenleme ve WS-Atomic işlem standartlarını uygular.  
+ Işlemler özelliği, WS-koordinasyon ve WS Atomik Işlem standartları uygular.  
   
 ## <a name="reliable-sessions"></a>Güvenilir oturumlar  
- Taşıma veya Ara hatalar oluştuğunda güvenilir oturumları wcf'de ileti aktarımını sağlar. Sağladıkları bir tam olarak-temel alınan aktarımda (örneğin, kablosuz ağ üzerinde bir TCP bağlantı) bağlantısını keser veya bir ileti (bir HTTP Proxy'si giden veya gelen bir ileti bırakılıyor) kaybeder olsa bile bir kez iletileri aktarmak. Güvenilir oturumlar da iletisi (çoklu yol yönlendirmesi olması durumunda gerçekleşebilir gibi), iletiler, gönderilen sıralamasını korur yeniden sıralama kurtarın.  
+ WCF 'de güvenilir oturumlar, aktarım veya aracı arızalarının oluşması durumunda iletilerin aktarılmasını sağlar. Bu kişiler, temeldeki taşımanın bağlantısı kesildiğinde (örneğin, kablosuz ağ üzerinde bir TCP bağlantısı) veya bir iletiyi kaybettiğinde (bir HTTP proxy 'si giden veya gelen bir iletiyi bırakırken) iletilerin tam olarak bir kez aktarılmasını sağlar. Güvenilir oturumlar Ayrıca iletilerin gönderilme sırasını koruyarak ileti yeniden sıralamasını (çok yollu yönlendirme durumunda olabileceği gibi) de kurtarır.  
   
- Güvenilir oturumlar WS-ReliableMessaging (WS-RM) protokolü kullanılarak uygulanır. Bunlar, belirli bir güvenilir oturum ile ilişkili tüm iletileri tanımlamak için kullanılan oturum bilgilerini içeren WS-RM üst bilgileri ekleyin. Her WS-RM oturumu bir GUID olan bir tanımlayıcı vardır.  
+ Güvenilir Oturumlar, WS-ReliableMessaging (WS-RM) protokolü kullanılarak uygulanır. Bunlar, belirli bir güvenilir oturumla ilişkili tüm iletileri tanımlamak için kullanılan oturum bilgilerini içeren WS-RM üst bilgilerini ekler. Her WS-RM oturumunun bir GUID olan bir tanımlayıcısı vardır.  
   
- Herhangi bir kişisel bilgi son kullanıcı makinesinde korunur.  
+ Son kullanıcının makinesinde kişisel bilgi korunmaz.  
   
 ## <a name="queued-channels"></a>Sıraya alınan kanallar  
- Kuyruklar, alıcı uygulamanın adına bir gönderen uygulamayı iletileri depolamak ve daha sonra bu alıcı uygulamasına iletileri iletebilir. Bunlar, örneğin, alıcı uygulamanın geçici olduğunda, alıcı uygulamaların Gönderen uygulamalardan ileti aktarımını sağlanmasına yardımcı olur. WCF aktarım olarak Microsoft Message Queuing (MSMQ) kullanarak sıraya alma için destek sağlar.  
+ Kuyruklar iletileri alıcı uygulama adına gönderen uygulamadan depolar ve daha sonra bu iletileri alıcı uygulamasına iletir. Bu kişiler, örneğin, alıcı uygulama geçici olduğunda, uygulamaları almaya yönelik uygulamalar gönderen iletiler aktarımının sağlanmasına yardımcı olur. WCF, taşıma olarak Microsoft Message Queuing (MSMQ) kullanarak sıraya alma desteği sağlar.  
   
- Sıraya alınan kanalları özellik üst bilgiler iletiye eklemez. Bunun yerine, uygun Message Queuing iletisi özellikleri kümesi ile bir Message Queuing iletisi oluşturur ve ileti Message Queuing sırasına koymak için Message Queuing yöntemleri çağırır. Message Queuing, Windows ile birlikte gelen bir isteğe bağlı bir bileşendir.  
+ Sıraya alınan kanallar özelliği bir iletiye üst bilgi eklemez. Bunun yerine, uygun Message Queuing ileti özellikleri ayarlanmış Message Queuing bir ileti oluşturur ve iletiyi Message Queuing kuyruğuna koymak için Message Queuing yöntemleri çağırır. Message Queuing, Windows ile birlikte gelen isteğe bağlı bir bileşendir.  
   
- Message Queuing sıraya alma altyapısı kullandığı için hiçbir bilgi kuyruğa alınmış kanalları özelliğiyle son kullanıcı makinesinde tutulmaz.  
+ Kuyruğa alma altyapısı olarak Message Queuing kullandığından, son kullanıcının makinesinde sıraya alınan kanallar özelliği korunmaz.  
   
 ## <a name="com-integration"></a>COM+ Tümleştirme  
- Bu özellik, WCF hizmetleri ile uyumlu olan hizmetleri oluşturmak için mevcut COM ve COM + işlevi sarmalar. Bu özellik belirli üst bilgiler kullanmayan ve son kullanıcının makinedeki veriler korunmaz.  
+ Bu özellik, WCF hizmetleriyle uyumlu hizmetler oluşturmak için mevcut COM ve COM+ işlevlerini sarmalanmış. Bu özellik belirli üst bilgileri kullanmaz ve son kullanıcının makinesinde verileri korumaz.  
   
-## <a name="com-service-moniker"></a>COM hizmet bilinen adı  
- Bu, standart bir WCF istemcisi için yönetilmeyen bir sarmalayıcı sağlar. Bu özellik, kablo özel üst bilgiler yok ya da makinedeki veriler devam etmez.  
+## <a name="com-service-moniker"></a>COM hizmeti bilinen adı  
+ Bu, standart bir WCF istemcisine yönetilmeyen bir sarmalayıcı sağlar. Bu özellik, hat üzerinde belirli üst bilgilere sahip değildir ve makinede verileri kalıcı hale getiremez.  
   
 ## <a name="peer-channel"></a>Eş Kanal  
- Eş kanal WCF kullanarak misyonumuz uygulamaların geliştirilmesini sağlar. Misyonumuz Mesajlaşma kafes bağlamında gerçekleşir. Kafes düğümleri katılabilir bir ad tarafından tanımlanır. Eş kanal içindeki her bir düğümün bir kullanıcı tarafından belirtilen bağlantı noktası TCP dinleyicisi oluşturur ve diğer düğümleri dayanıklılık sağlamak için ağ bağlantı kurar. Kafes diğer düğümlere bağlanmak için düğümleri de dinleyici adresi ve makinenin IP adresleri, diğer düğümlerle ağ dahil olmak üzere bazı veriler, exchange. Geçici ağ içinde gönderilen iletileri göndereni kurcalama ve ileti kimlik sahtekarlığı önlemek için ilgili güvenlik bilgileri içerebilir.  
+ Eş kanal, WCF kullanarak çok taraflı uygulamaların geliştirilmesini mümkün. Çok taraflı mesajlaşma, bir ağ bağlamında meydana gelir. Kafesler, düğümlerin katılabilme adı tarafından tanımlanır. Eş kanaldaki her düğüm, Kullanıcı tarafından belirtilen bağlantı noktasında bir TCP dinleyicisi oluşturur ve esneklik sağlamak için kafesteki diğer düğümlerle bağlantı kurar. Kafesteki diğer düğümlere bağlanmak için, düğümler aynı zamanda dinleyici adresi ve makinenin IP adresleri de dahil olmak üzere, ağ üzerindeki diğer düğümlerle birlikte bazı verileri de değiş tokuş eder. Ağ üzerinden gönderilen iletiler, ileti sızdırma ve izinsiz değişiklik yapılmasını engellemek için gönderiyle ilgili güvenlik bilgilerini içerebilir.  
   
- Herhangi bir kişisel bilgi, son kullanıcının makinede depolanır.  
+ Son kullanıcının makinesinde kişisel bilgi depolanmaz.  
   
-## <a name="it-professional-experience"></a>BT Uzmanı deneyimi  
+## <a name="it-professional-experience"></a>BT uzmanı deneyimi  
   
 ### <a name="tracing"></a>İzleme  
- WCF altyapısının tanılama özelliği, taşıma ve hizmet modeli katmanları ve etkinlikleri ve bu iletileri ile ilişkili olayları geçişine iletileri günlüğe kaydeder. Bu özellik varsayılan olarak kapalıdır. Uygulamanın yapılandırma dosyası kullanılarak etkinleştirilir ve izleme davranışı, çalışma zamanında WCF WMI sağlayıcısı kullanılarak değiştirilebilir. Etkinleştirildiğinde, izleme altyapısına iletileri, etkinlikleri ve olayları işlemeyi yapılandırılmış dinleyicilerine içeren bir Tanılama izleme yayar. Çıktı konumunu ve biçim yöneticinin dinleyici yapılandırma seçeneklerine göre belirlenir, ancak genellikle bir XML biçimli dosyasıdır. Yönetici, izleme dosyaları üzerinde erişim denetim listesi (ACL) ayarlamaktan sorumludur. Özellikle, Windows etkinleştirme sistem (WAS) tarafından barındırıldığında, yönetici dosyaları ortak sanal kök dizininden sunulur, bu fırça istenen değilse değil emin olmanız gerekir.  
+ WCF altyapısının tanılama özelliği, aktarım ve hizmet modeli katmanlarından geçen iletileri ve bu iletilerle ilişkili etkinlikleri ve olayları günlüğe kaydeder. Bu özellik varsayılan olarak kapalıdır. Uygulamanın yapılandırma dosyası kullanılarak etkinleştirilir ve izleme davranışı, çalışma zamanında WCF WMI sağlayıcısı kullanılarak değiştirilebilir. Etkinleştirildiğinde, izleme altyapısı, yapılandırılan dinleyicilerine ileti, etkinlik ve işleme olaylarını içeren bir tanılama izlemesi yayar. Çıktının biçimi ve konumu yöneticinin dinleyici yapılandırma seçeneklerine göre belirlenir, ancak genellikle XML biçimli bir dosyadır. Yönetici, izleme dosyalarındaki erişim denetim listesini (ACL) ayarlamaktan sorumludur. Özellikle, Windows etkinleştirme sistemi (WAS) tarafından barındırıldığında, yönetici, bu istenmiyorsa, dosyaların ortak sanal kök dizinden sunulmadığından emin olmalıdır.  
   
- İzlemenin iki tür vardır: İleti günlüğe kaydetme ve tanılama hizmet modeli, izleme, aşağıdaki bölümde açıklanan. Her kendi izleme kaynağı yapılandırılır: <xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A> ve <xref:System.ServiceModel>. Bu günlük izleme kaynakları her iki uygulamada yerel olarak veri yakalayın.  
+ İki tür izleme vardır: Ileti günlüğü ve hizmet modeli Tanılama izleme, aşağıdaki bölümde açıklanmıştır. Her tür kendi izleme kaynağı aracılığıyla yapılandırılır: <xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A> ve <xref:System.ServiceModel>. Bu günlüğe kaydetme izleme kaynaklarından her ikisi de, uygulamada yerel olan verileri yakalar.  
   
 ### <a name="message-logging"></a>İleti Günlüğe Kaydetme  
- İleti izleme kaynağı günlüğe kaydetme (<xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A>) sistemi üzerinden akan iletilerini günlüğe kaydetmek için bir yöneticinin sağlar. Yapılandırma yoluyla, kullanıcının tüm iletileri veya yalnızca ileti üstbilgileri, aktarımı ve/veya hizmet modeli katmanına kaydedilip edilmeyeceğini ve yanlış biçimlendirilmiş iletiler eklenip eklenmeyeceğini oturum karar verebilirsiniz. Ayrıca, kullanıcının hangi iletilerin kaydedilip kısıtlamak için filtreleme yapılandırabilirsiniz.  
+ İleti günlüğe kaydetme izleme kaynağı (<xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A>), yöneticinin sistem üzerinden akan iletileri günlüğe kaydetmeye izin verir. Yapılandırma sayesinde, Kullanıcı yalnızca tüm iletileri veya ileti üstbilgilerini günlüğe kaydetmek, aktarım ve/veya hizmet modeli katmanlarında günlüğe kaydedilip edilmeyeceğini ve hatalı biçimlendirilmiş iletilerin eklenip eklenmeyeceğini belirtir. Ayrıca Kullanıcı, hangi iletilerin günlüğe kaydedileceğini kısıtlamak için filtrelemeyi yapılandırabilir.  
   
- Varsayılan olarak, ileti günlüğe kaydetmeyi devre dışıdır. Yerel Makine Yöneticisi oturum açma ileti uygulama düzeyi yönetici önleyebilir.  
+ Varsayılan olarak, ileti günlüğe kaydetme devre dışıdır. Yerel Makine Yöneticisi, uygulama düzeyinde yöneticinin ileti oturumunu açmasını önleyebilir.  
   
-#### <a name="encrypted-and-decrypted-message-logging"></a>Şifrelenmiş ve şifresi çözülen ileti günlüğe kaydetme  
- İletileri günlüğe, şifrelenmiş veya şifresi aşağıdaki koşulları'nda açıklanan şekilde.  
+#### <a name="encrypted-and-decrypted-message-logging"></a>Şifrelenmiş ve şifresi çözülmüş Ileti günlüğe kaydetme  
+ Aşağıdaki koşullarda açıklandığı gibi iletiler günlüğe kaydedilir, şifrelenir veya çözülür.  
   
- Günlük aktarma  
- Taşıma düzeyinde gönderilen ve alınan iletileri günlüğe kaydeder. Bu iletiler, tüm üst bilgilerini içeren ve kablo ve alınan olduğunda gönderilmeden önce şifrelenmelidir.  
+ Aktarım günlüğü  
+ Aktarım düzeyinde alınan ve gönderilen iletileri günlüğe kaydeder. Bu iletiler tüm üst bilgileri içerir ve bu, hatta gönderilirken ve alındığında şifrelenir.  
   
- İletileri kablo gönderilmeden önce şifrelenir ve alındığında, oturum de şifrelenir. Bir güvenlik protokolü (https) kullanılan olduğunda, bir özel durumdur: Bunlar gönderilmeden önce sonra bile kablo şifrelenmiş alınan şifresi ardından kaydedilir.  
+ İletiler, Tel gönderilmeden ve alındıkları sırada şifrelenirse, bunlar da şifreli olarak kaydedilir. Bir güvenlik protokolünün kullanıldığı bir özel durum (https): daha sonra, bu dosyalar, kablo üzerinde şifrelenseler bile gönderilmeden ve alındıktan sonra günlüğe çözülür.  
   
  Hizmet günlüğü  
- Hemen önce ve kullanıcı kodu girdikten sonra kanal üst bilgi işlem gerçekleştikten sonra hizmet modeli düzeyinde gönderilen veya alınan iletileri günlüğe kaydeder.  
+ İleti üst bilgisi işleme gerçekleştirildikten sonra, Kullanıcı kodu girildikten hemen önce ve sonra, hizmet modeli düzeyinde alınan veya gönderilen iletileri günlüğe kaydeder.  
   
- Güvenli ve kablo şifrelenmiş olsa bile bu düzeyde günlüğe ileti şifresi çözülür.  
+ Bu düzeyde günlüğe kaydedilen iletiler, güvenli olsalar ve kabloda şifrelendiğinden bile çözülür.  
   
- Hatalı biçimlendirilmiş ileti günlüğe kaydetme  
- WCF altyapısı anlamak veya işleyemiyor iletileri günlüğe kaydeder.  
+ Hatalı biçimlendirilmiş Ileti günlüğü  
+ WCF altyapısının anlayabileceği veya işleyebileceğini iletileri günlüğe kaydeder.  
   
- İletileri halinde günlüğe kaydedilir-diğer bir deyişle, şifrelenmiş olup  
+ İletiler olduğu gibi kaydedilir, yani şifrelenir veya değildir  
   
- İletileri günlüğe kaydedildiğinde şifresi çözülmüş veya şifrelenmemiş form, varsayılan olarak WCF güvenlik anahtarları ve büyük olasılıkla kişisel bilgi gelen iletileri açmadan önce kaldırır. Hangi bilgilerin kaldırılır, sonraki bölümlerde açıklamak ve ne zaman. Makine Yöneticisi ve uygulama dağıtıcı hem gerçekleştirmeniz gereken belirli yapılandırma eylemleri, anahtarları ve olası kişisel bilgileri günlüğe kaydetmek için varsayılan davranışı değiştirmek için.  
+ İletiler, şifresi çözülmüş veya şifrelenmemiş biçimde günlüğe kaydedildiğinde, varsayılan olarak WCF güvenlik anahtarlarını ve bilgileri günlüğe kaydedilmeden önce iletilerden kaldırır. Sonraki bölümlerde hangi bilgilerin kaldırıldığı ve ne zaman olduğu açıklanır. Makine Yöneticisi ve uygulama dağıtıcısı, varsayılan davranışı günlük anahtarlarına ve potansiyel olarak kişisel bilgilere değiştirecek şekilde, her ikisi de belirli yapılandırma eylemlerini almalıdır.  
   
-#### <a name="information-removed-from-message-headers-when-logging-decryptedunencrypted-messages"></a>Bilgi iletisi üst bilgiler şifresi çözülür ve şifrelenmemiş iletileri günlüğe kaydedilirken kaldırıldı  
- Ne zaman şifresi çözülür ve şifrelenmemiş formunda güvenlik anahtarları iletileri günlüğe kaydedilir ve büyük olasılıkla kişisel bilgi kaldırıldığına varsayılan ileti üstbilgileri ve İleti gövdeleri önce günlüğe kaydedilir. Aşağıdaki liste, WCF anahtarları ve büyük olasılıkla kişisel bilgi dikkate gösterir.  
+#### <a name="information-removed-from-message-headers-when-logging-decryptedunencrypted-messages"></a>Şifresi çözülmüş/şifrelenmemiş Iletileri günlüğe kaydederken Ileti başlıklarından kaldırılan bilgiler  
+ İletiler, şifresi çözülmüş/şifrelenmemiş biçiminde günlüğe kaydedildiğinde, güvenlik anahtarları ve potansiyel olarak kişisel bilgiler, günlüğe kaydedilmeden önce ileti başlıklarından ve ileti gövdelerinde varsayılan olarak kaldırılır. Aşağıdaki listede, anahtarların ve potansiyel olarak kişisel bilgilerin hangi WCF tarafından kabul olduğu gösterilmektedir.  
   
- Kaldırılan anahtarları:  
+ Kaldırılan anahtarlar:  
   
- \- For xmlns:wst="http://schemas.xmlsoap.org/ws/2004/04/trust" and xmlns:wst="http://schemas.xmlsoap.org/ws/2005/02/trust"  
+ xmlns Için \-: WST = "http://schemas.xmlsoap.org/ws/2004/04/trust" ve xmlns: WST = "http://schemas.xmlsoap.org/ws/2005/02/trust"  
   
- wst:BinarySecret  
+ Wst: BinarySecret  
   
- WST:Entropy  
+ Wst: entropi  
   
- \- İçin xmlns:wsse = "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" ve xmlns:wsse = "http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"  
+ xmlns: WSO = "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" ve xmlns: WSO = "http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd" Için \-  
   
- wsse:Password  
+ WSS: parola  
   
- wsse:nonce  
+ WSS: nonce  
   
- Kaldırılır, olası kişisel bilgileri:  
+ Kaldırılan potansiyel kişisel bilgiler:  
   
- \- İçin xmlns:wsse = "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" ve xmlns:wsse = "http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"  
+ xmlns: WSO = "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" ve xmlns: WSO = "http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd" Için \-  
   
- wsse:username  
+ WSS: Kullanıcı adı  
   
- wsse:BinarySecurityToken  
+ WSS: BinarySecurityToken  
   
- \- For xmlns:saml="urn:oasis:names:tc:SAML:1.0:assertion" the items in bold (below) are removed:  
+ xmlns Için \-: SAML = "urn: oassıs: names: TC: SAML: 1.0: assertion" kalın (aşağıdaki) öğeleri kaldırılır:  
   
- \<onaylama  
+ \< onaylama  
   
- MajorVersion="1"  
+ MajorVersion = "1"  
   
- MinorVersion="1"  
+ MinorVersion = "1"  
   
- Onaylama kimliği = "[ID]"  
+ AssertionId 'si = "[KIMLIK]"  
   
- Veren = "[string]"  
+ Issuer = "[dize]"  
   
- IssueInstant="[dateTime]"  
+ IssueInstant = "[dateTime]"  
   
  >  
   
- \<Conditions NotBefore="[dateTime]" NotOnOrAfter="[dateTime]">  
+ \<Koşullar NotBefore = "[TarihSaat]" NotOnOrAfter = "[dateTime]" >  
   
  \<AudienceRestrictionCondition >  
   
- \<Hedef kitle > [URI]\</Audience > +  
+ \<Audience > [URI] \</hedef kitle > +  
   
- \</ AudienceRestrictionCondition > *  
+ \</AudienceRestrictionCondition > *  
   
- \<DoNotCacheCondition />*  
+ \<DoNotCacheCondition/> *  
   
- <\!--soyut temel tür  
+ < @ no__t-1--soyut temel tür  
   
- \<Koşul / > *  
+ \<Condition/> *  
   
  -->  
   
- \</ Koşulları >?  
+ \</koşullar >?  
   
  \<Öneri >  
   
- \<AssertionIDReference > [ID]\</AssertionIDReference > *  
+ \<AssertionIDReference > [KIMLIK] \</AssertionIDReference > *  
   
- \<Onaylama işlemi > [onaylama]\</Assertion > *  
+ \<Assertion > [onaylama] \</onaylama > *  
   
  [any] *  
   
- \</ Öneri >?  
+ \</öneri >?  
   
- <\!--Soyut taban türleri  
+ < @ no__t-1--soyut temel türler  
   
- \<Deyimi / > *  
+ \<Deyimin/> *  
   
- \<SubjectStatement >  
+ \<Subjectdeyimin >  
   
- \<Konu >  
+ \<Subject >  
   
  `<NameIdentifier`  
   
@@ -213,29 +213,29 @@ Microsoft, son kullanıcılar gizlilik korumayı taahhüt eder. Sürüm 3.0, Win
   
  \<SubjectConfirmation >  
   
- \<ConfirmationMethod > [anyURI]\</ConfirmationMethod > +  
+ \<ConfirmationMethod > [anyUri] \</ConfirmationMethod > +  
   
- \<SubjectConfirmationData > [any]\</SubjectConfirmationData >?  
+ \<SubjectConfirmationData > [any] \</SubjectConfirmationData >?  
   
- \<DS:KeyInfo >... \</ds:KeyInfo >?  
+ \<DS: KeyInfo >... \</DS: KeyInfo >?  
   
- \</ SubjectConfirmation >?  
+ \</SubjectConfirmation >?  
   
- \</ Konu >  
+ \</konu >  
   
- \</ SubjectStatement > *  
+ \</Subjectdeyimin > *  
   
  -->  
   
- \<AuthenticationStatement  
+ \<Authenticationdeyimin  
   
- AuthenticationMethod = "[URI]"  
+ AuthenticationMethod = "[Uri]"  
   
  AuthenticationInstant = "[dateTime]"  
   
  >  
   
- [Konu]  
+ Konusuna  
   
  `<SubjectLocality`  
   
@@ -247,74 +247,74 @@ Microsoft, son kullanıcılar gizlilik korumayı taahhüt eder. Sürüm 3.0, Win
   
  < AuthorityBinding  
   
- AuthorityKind="[QName]"  
+ AuthorityKind = "[QName]"  
   
- Konumu = "[URI]"  
+ Konum = "[Uri]"  
   
- Binding="[uri]"  
+ Binding = "[Uri]"  
   
  />*  
   
- \</ AuthenticationStatement > *  
+ \</Authenticationdeyimin > *  
   
- \<AttributeStatement >  
+ \<Attributedeyimin >  
   
- [Konu]  
+ Konusuna  
   
  \<Özniteliği  
   
- AttributeName = "[string]"  
+ AttributeName = "[dize]"  
   
- AttributeNamespace = "[URI]"  
+ AttributeNamespace = "[Uri]"  
   
  >  
   
  `<AttributeValue>[any]</AttributeValue>+`  
   
- \</ Öznitelik > +  
+ \</öznitelik > +  
   
- \</ AttributeStatement > *  
+ \</Attributedeyimin > *  
   
  \<AuthorizationDecisionStatement  
   
- Kaynak = "[URI]"  
+ Resource = "[Uri]"  
   
- Karar = "[izin&#124;Reddet&#124;belirsiz]"  
+ Karar = "[reddetme&#124;&#124;belirsiz izin ver]"  
   
  >  
   
- [Konu]  
+ Konusuna  
   
- \<Eylem Namespace = "[URI]" > [string] \< /eylem > +  
+ \<Action namespace = "[Uri]" > [dize] \</Eylem > +  
   
  \<Kanıt >  
   
- \<AssertionIDReference > [ID]\</AssertionIDReference > +  
+ \<AssertionIDReference > [KIMLIK] \</AssertionIDReference > +  
   
- \<Onaylama işlemi > [onaylama]\</Assertion > +  
+ \<Assertion > [onaylama] \</onaylama > +  
   
- \</ Kanıt >?  
+ \</kanıt >?  
   
- \</ AuthorizationDecisionStatement > *  
+ \</AuthorizationDecisionStatement > *  
   
- \</ Onaylama >  
+ \</onaylama >  
   
-#### <a name="information-removed-from-message-bodies-when-logging-decryptedunencrypted-messages"></a>Bilgi iletileri şifresi çözülür ve şifrelenmemiş açarken İleti gövdeleri kaldırıldı  
- Daha önce açıklandığı gibi WCF kaldırır anahtarları ve bilinen olası kişisel bilgileri günlüğe kaydedilen iletilere şifresi çözülür ve şifrelenmemiş ileti üstbilgileri. Ayrıca, WCF anahtarları ve bilinen olası kişisel bilgileri gövdesi öğeleri ve anahtar değişimi içinde yer alan güvenlik iletileri açıklayan eylemleri aşağıdaki listede, İleti gövdeleri kaldırır.  
+#### <a name="information-removed-from-message-bodies-when-logging-decryptedunencrypted-messages"></a>Şifresi çözülmüş/şifrelenmemiş Iletileri günlüğe kaydederken Ileti gövdelerinde kaldırılan bilgiler  
+ Daha önce açıklandığı gibi, WCF anahtarları ve bilinen potansiyel olarak kişisel bilgileri, günlüğe kaydedilen ve şifrelenmemiş iletiler için ileti başlıklarından kaldırır. Ayrıca, WCF anahtarlar ve bilinen potansiyel kişisel bilgileri, anahtar değişimine dahil olan güvenlik iletilerini açıklayan aşağıdaki listede bulunan gövde öğeleri ve eylemler için ileti gövdesinden kaldırır.  
   
  Aşağıdaki ad alanları için:  
   
- xmlns:WST = "http://schemas.xmlsoap.org/ws/2004/04/trust" ve xmlns:wst = "http://schemas.xmlsoap.org/ws/2005/02/trust" (örneğin, hiçbir eylem varsa kullanılabilir)  
+ xmlns: WST = "http://schemas.xmlsoap.org/ws/2004/04/trust" ve xmlns: WST = "http://schemas.xmlsoap.org/ws/2005/02/trust" (örneğin, kullanılabilir bir eylem yoksa)  
   
- Bilgiler, anahtar değişimi içeren bu gövdesi öğeler için kaldırılır:  
+ Bu gövde öğeleri için, anahtar değişimini içeren bilgiler kaldırılır:  
   
- wst:RequestSecurityToken  
+ Wst: RequestSecurityToken  
   
- wst:RequestSecurityTokenResponse  
+ Wst: RequestSecurityTokenResponse  
   
- wst:RequestSecurityTokenResponseCollection  
+ Wst: RequestSecurityTokenResponseCollection  
   
- Bilgi de aşağıdaki eylemlerin her birine kaldırılır:  
+ Bilgiler aşağıdaki eylemlerin her biri için de kaldırılır:  
   
 - `http://schemas.xmlsoap.org/ws/2005/02/trust/RST/Issue`
   
@@ -356,52 +356,52 @@ Microsoft, son kullanıcılar gizlilik korumayı taahhüt eder. Sürüm 3.0, Win
   
 - `http://schemas.xmlsoap.org/ws/2004/04/security/trust/RSTR/SCT-Amend`
   
-#### <a name="no-information-is-removed-from-application-specific-headers-and-body-data"></a>Hiçbir bilgi uygulamaya özgü üstbilgi ve gövde verilerini kaldırılır.  
- WCF uygulamaya özel üst bilgiler (örneğin, sorgu dizeleri) veya gövde verilerini (örneğin, kredi kartı numarası) kişisel bilgiler izlemez.  
+#### <a name="no-information-is-removed-from-application-specific-headers-and-body-data"></a>Uygulamaya özgü üst bilgilerden ve gövde verilerinden hiçbir bilgi kaldırılmadı  
+ WCF, uygulamaya özgü üst bilgilerde (örneğin, sorgu dizeleri) veya gövde verilerinde (örneğin, kredi kartı numarası) kişisel bilgileri izlemez.  
   
- Günlüğe ileti kaydetme açık olduğunda, uygulamaya özgü üst bilgilerinde kişisel bilgileri ve gövde bilgileri günlüklerde görülebilir. Yeniden uygulama dağıtıcı ACL'leri yapılandırma ve günlük dosyalarını ayarlamaktan sorumludur. Kendisi ayrıca kendisi bu bilgileri görünür olmasını istemez veya günlüğe sonra o günlük dosyalarından bu bilgiyi filtreleyebilirsiniz kapatmadan kapatabilirsiniz.  
+ İleti günlüğe kaydetme açık olduğunda, uygulamaya özgü üst bilgiler ve gövde bilgilerindeki kişisel bilgilere günlüklerde görünebilir. Daha sonra, yapılandırma ve günlük dosyalarındaki ACL 'Leri ayarlamaktan uygulama dağıtıcı sorumludur. Ayrıca, bu bilgilerin görünür olmasını istemediyse günlüğe kaydetmeyi kapatabilir veya günlüğe kaydedildikten sonra bu bilgileri günlük dosyalarından filtreleyebiliriz.  
   
-### <a name="service-model-tracing"></a>Hizmet modeli izleme  
- Hizmet modeli izleme kaynağı (<xref:System.ServiceModel>) ilgili ileti işleme için izlemeyi etkinliklerini ve olayları etkinleştirir. Bu özellik .NET Framework tanılama işlevlerini kullanır <xref:System.Diagnostics>. Olduğu gibi <xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A> özelliği, konumu ve kendi ACL kullanıcı-.NET Framework uygulama yapılandırma dosyaları kullanılarak yapılandırılabilir. Yönetici izleme etkinleştirdiğinde ileti günlüğe kaydetme gibi dosya konumu her zaman yapılandırılır; Bu nedenle, ACL yönetici denetler.  
+### <a name="service-model-tracing"></a>Hizmet modeli Izleme  
+ Hizmet modeli izleme kaynağı (<xref:System.ServiceModel>), ileti işlemeyle ilgili etkinliklerin ve olayların izlenmesini sağlar. Bu özellik <xref:System.Diagnostics> ' dan .NET Framework tanılama işlevini kullanır. @No__t-0 özelliğinde olduğu gibi, konum ve ACL 'SI, .NET Framework uygulama yapılandırma dosyaları kullanılarak Kullanıcı tarafından yapılandırılabilir. İleti günlüğe kaydetme sırasında, yönetici izlemeyi etkinleştirse de dosya konumu her zaman yapılandırılır; Bu nedenle, yönetici ACL 'yi denetler.  
   
- Kapsam içinde bir ileti olduğunda ileti üstbilgileri izlemelerini içerir. Önceki bölümde iletisi üst bilgilerinde olası kişisel bilgileri gizlemek için aynı kurallar geçerlidir: önceden tanımlanmış kişisel bilgileri varsayılan olarak izlemeleri üstbilgilerinde kaldırılır. Makine Yöneticisi hem uygulama dağıtıcı yapılandırma, olası kişisel bilgileri günlüğe kaydetmek için değiştirmeniz gerekir. Ancak, uygulamaya özgü üstbilgisinde bulunan kişisel bilgileri izlemelerinde günlüğe kaydedilir. Uygulama dağıtıcısı, ACL'leri yapılandırma ve izleme dosyalarını ayarlamaktan sorumludur. Kendisi ayrıca izlemeyi devre dışı kendisi bu bilgileri görünür olmasını istemez veya günlüğe sonra o izleme dosyalarını bu bilgiyi filtreleyebilirsiniz kapatabilirsiniz.  
+ İzlemeler, bir ileti kapsamda olduğunda ileti üst bilgileri içerir. Önceki bölümde bulunan ileti üstbilgilerinde kişisel bilgilerini gizlemek için de aynı kurallar geçerlidir: daha önce tanımlanan kişisel bilgiler, izlemelerin üst bilgilerinden varsayılan olarak kaldırılır. Makine Yöneticisi ve uygulama dağıtıcısı, olası kişisel bilgileri günlüğe kaydetmek için yapılandırmayı değiştirmeli. Bununla birlikte, uygulamaya özgü üst bilgilerde yer alan kişisel bilgilere izlemeler de kaydedilir. Uygulama dağıtıcı, yapılandırma ve izleme dosyalarındaki ACL 'Leri ayarlamaktan sorumludur. Ayrıca, bu bilgilerin görünür olmasını istememesi durumunda izlemeyi kapatabilir veya günlüğe kaydedildikten sonra bu bilgileri izleme dosyalarından filtreleyebilirler.  
   
- Farklı etkinlikler benzersiz kimliklerinin (etkinlik kimlikleri ve genellikle bir GUID olarak adlandırılır) ServiceModel izleme işleminin bir parçası olarak bir ileti olarak birbirine bağlama altyapısı farklı kısımlarını akar.  
+ ServiceModel Izlemenin bir parçası olarak, benzersiz kimlikler (etkinlik kimlikleri olarak adlandırılır ve tipik olarak bir GUID), altyapının farklı bölümleriyle bir ileti akışı olarak farklı etkinlikleri birbirine bağlar.  
   
-#### <a name="custom-trace-listeners"></a>Özel izleme dinleyicileri  
- Günlüğe kaydetme ve izleme her iki ileti için özel İzleme dinleyicisi, hangi izlemeleri ve iletileri kablo (örneğin, bir uzak veritabanına) gönderebilir yapılandırılabilir. Özel dinleyicilerini yapılandırmaya veya bunun kullanıcıların uygulama dağıtıcı sorumludur. Kendisi Ayrıca uzak konumu gösterilen herhangi bir kişisel bilgi ve düzgün şekilde bu konuma ACL uygulamak sorumludur.  
+#### <a name="custom-trace-listeners"></a>Özel Izleme dinleyicileri  
+ İleti günlüğe kaydetme ve izleme için, bir özel izleme dinleyicisi yapılandırılabilir ve bu da, hatta (örneğin, uzak bir veritabanına) izlemeleri ve iletileri gönderebilirler. Uygulama dağıtıcı, özel dinleyicileri yapılandırmadan veya kullanıcıların bunu yapabilmesini sağlamaktan sorumludur. Ayrıca, uzak konumda sunulan kişisel bilgilerden da sorumludur ve ACL 'Leri bu konuma doğru şekilde uygulamak için de sorumludur.  
   
-### <a name="other-features-for-it-professionals"></a>BT uzmanları için diğer özellikler  
- WCF WCF altyapısı yapılandırma bilgileri (Windows ile birlikte gelen) WMI üzerinden kullanıma sunan bir WMI sağlayıcısı var. Varsayılan olarak, WMI arabirimini yöneticiler tarafından kullanılabilir.  
+### <a name="other-features-for-it-professionals"></a>BT uzmanlarına yönelik diğer özellikler  
+ WCF, WMI aracılığıyla WCF altyapı yapılandırma bilgilerini kullanıma sunan bir WMI sağlayıcısına sahiptir (Windows ile gönderilir). Varsayılan olarak, WMI arabirimi Yöneticiler tarafından kullanılabilir.  
   
- WCF yapılandırma, .NET Framework yapılandırma mekanizması kullanır. Yapılandırma dosyalarını, makinenizde depolanır. Uygulama geliştiricisi ve yönetici ACL ve yapılandırma dosyaları her uygulamanın gereksinimleri için oluşturun. Bir yapılandırma dosyası, uç nokta adresleri ve sertifika deposundaki sertifikalar bağlantılar içerebilir. Sertifikalar, uygulama tarafından kullanılan özellikler çeşitli özelliklerini yapılandırmak için uygulama verilerini sağlamak için kullanılabilir.  
+ WCF yapılandırması .NET Framework yapılandırma mekanizmasını kullanır. Yapılandırma dosyaları makinede depolanır. Uygulama geliştiricisi ve Yöneticisi, uygulama gereksinimlerinin her biri için yapılandırma dosyalarını ve ACL 'yi oluşturur. Yapılandırma dosyası, uç nokta adreslerini ve sertifika deposundaki sertifikalara bağlantıları içerebilir. Sertifikalar, uygulama tarafından kullanılan özelliklerin çeşitli özelliklerini yapılandırmak için uygulama verileri sağlamak üzere kullanılabilir.  
   
- WCF de çağırarak .NET Framework işlem dökümü işlevselliğini kullanır <xref:System.Environment.FailFast%2A> yöntemi.  
+ WCF Ayrıca, <xref:System.Environment.FailFast%2A> yöntemini çağırarak .NET Framework işlem dökümü işlevini kullanır.  
   
-### <a name="it-pro-tools"></a>BT Uzmanı araçlarını  
- WCF de Windows SDK'yı sevk aşağıdaki BT profesyonel araçları sağlar.  
+### <a name="it-pro-tools"></a>BT uzmanı araçları  
+ WCF Ayrıca, Windows SDK teslim eden aşağıdaki BT uzmanı araçlarını da sağlar.  
   
-#### <a name="svctraceviewerexe"></a>SvcTraceViewer.exe  
- Görüntüleyici WCF izleme dosyaları görüntüler. Görüntüleyici izlemelerinde bulunan hangi bilgileri gösterir.  
+#### <a name="svctraceviewerexe"></a>SvcTraceViewer. exe  
+ Görüntüleyici, WCF izleme dosyalarını görüntüler. Görüntüleyici, izlemelerde hangi bilgilerin yer aldığı bilgisini gösterir.  
   
-#### <a name="svcconfigeditorexe"></a>SvcConfigEditor.exe  
- Düzenleyici, WCF yapılandırma dosyalarını oluşturmak ve düzenlemek kullanıcının sağlar. Düzenleyici, yapılandırma dosyalarında bulunan hangi bilgileri gösterir. Aynı görevi, bir metin düzenleyicisi ile gerçekleştirilebilir.  
+#### <a name="svcconfigeditorexe"></a>SvcConfigEditor. exe  
+ Düzenleyici, kullanıcının WCF yapılandırma dosyalarını oluşturmasına ve düzenlemesine izin verir. Düzenleyici, yapılandırma dosyalarında hangi bilgilerin yer aldığı bilgisini gösterir. Aynı görev bir metin Düzenleyicisi ile gerçekleştirilebilir.  
   
-#### <a name="servicemodelreg"></a>ServiceModel_Reg  
- Bu araç, bir makinedeki ServiceModel yükler yönetmesine olanak sağlar. Çalıştırır ve bu süreçte WCF yükleme yapılandırması hakkında daha fazla bilgi görüntüleyebilir, araç, konsol penceresinde durum iletilerini görüntüler.  
+#### <a name="servicemodel_reg"></a>ServiceModel_Reg  
+ Bu araç, kullanıcının bir makinedeki ServiceModel yüklemelerini yönetmesine olanak tanır. Araç, çalışırken bir konsol penceresinde durum iletilerini görüntüler ve süreçte, WCF yüklemesinin yapılandırmasıyla ilgili bilgileri görüntüleyebilir.  
   
-#### <a name="wsatconfigexe-and-wsatuidll"></a>WSATConfig.exe ve WSATUI.dll  
- Bu araçlar, BT uzmanlarının WCF'de birlikte çalışabilen WS-AtomicTransaction ağ desteğini yapılandırma olanak sağlar. Araçları görüntüleyebilir ve kayıt defterinde depolanan en yaygın kullanılan WS-AtomicTransaction ayarları değerlerini değiştirmesine izin verin.  
+#### <a name="wsatconfigexe-and-wsatuidll"></a>WSATConfig. exe ve WSATUı. dll  
+ Bu araçlar, BT uzmanlarının WCF 'de birlikte çalışabilen WS-AtomicTransaction ağ desteğini yapılandırmasına izin verir. Araçlar, kullanıcının kayıt defterinde depolanan en sık kullanılan WS-AtomicTransaction ayarlarının değerlerini değiştirmesine ve değiştirmesine izin verir.  
   
-## <a name="cross-cutting-features"></a>Çapraz özellikleri  
- Çapraz kesme özellikleridir. Diğer bir deyişle, bunlar önceki özelliklerden hiçbirini ile oluşturulmuş olabilir.  
+## <a name="cross-cutting-features"></a>Çapraz kesme özellikleri  
+ Aşağıdaki özellikler çapraz kesme. Diğer bir deyişle, önceki özelliklerden herhangi biri ile birleştirilebilir.  
   
 ### <a name="service-framework"></a>Hizmet Çerçevesi  
- Üst bilgiler iletiye bir CLR sınıfının bir örneği ile ilişkilendirir GUID'dir bir örnek kimliği içerebilir.  
+ Üst bilgiler bir CLR sınıfının örneğiyle bir iletiyi ilişkilendiren GUID olan bir örnek KIMLIĞI içerebilir.  
   
- Web Hizmetleri Açıklama Dili (WSDL), bağlantı noktasının bir tanım içeriyor. Her bağlantı noktası bir uç nokta adresi ve uygulama tarafından kullanılan hizmetler temsil eden bir bağlaması var. WSDL gösterme, yapılandırma kullanrak kapatılabilir. Makinede hiçbir bilgi tutulmaz.  
+ Web Hizmetleri Açıklama Dili (WSDL), bağlantı noktasının tanımını içerir. Her bağlantı noktasının bir uç nokta adresi ve uygulama tarafından kullanılan hizmetleri temsil eden bir bağlaması vardır. WSDL 'nin kullanıma sunulmasına yapılandırma kullanılarak kapatılabilir. Makinede bilgi korunmaz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Windows Communication Foundation'a](index.md)
-- [Güvenlik](../../../docs/framework/wcf/feature-details/security.md)
+- [Windows Communication Foundation](index.md)
+- [Security](./feature-details/security.md)

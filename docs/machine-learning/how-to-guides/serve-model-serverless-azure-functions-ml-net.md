@@ -1,35 +1,35 @@
 ---
-title: Azure Işlevlerine model dağıtma
+title: Modeli Azure İşlevleri’ne dağıtma
 description: Azure Işlevleri 'ni kullanarak Internet üzerinden tahmin için ML.NET yaklaşım analizi makine öğrenimi modelini sunar
 ms.date: 09/12/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to
-ms.openlocfilehash: 2abd8588aa314b630c995e0c78b5869ec00a89df
-ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
+ms.openlocfilehash: 31169116abdda7308ed216902b335a6b77fbcfc4
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72179371"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72321274"
 ---
-# <a name="deploy-a-model-to-azure-functions"></a>Azure Işlevlerine model dağıtma
+# <a name="deploy-a-model-to-azure-functions"></a>Modeli Azure İşlevleri’ne dağıtma
 
 Azure Işlevleri sunucusuz bir ortam aracılığıyla HTTP üzerinden tahmin için önceden eğitilen ML.NET makine öğrenimi modelini dağıtmayı öğrenin.
 
 > [!NOTE]
 > `PredictionEnginePool` hizmet uzantısı Şu anda önizleme aşamasındadır.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Prerequisites
 
 - ".NET Core platformlar arası geliştirme" iş yükü ve "Azure geliştirme" yüklü olan [Visual Studio 2017 15,6 veya üzeri](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) .
 - Microsoft. NET. SDK. Functions NuGet paketi sürüm 1.0.28 +.
 - [Azure Işlevleri araçları](/azure/azure-functions/functions-develop-vs#check-your-tools-version)
-- Powershell
+- PowerShell
 - Önceden eğitilen model. Kendi modelinizi derlemek için [ML.NET yaklaşım Analizi öğreticisini](../tutorials/sentiment-analysis.md) kullanın veya bu [önceden eğitilen yaklaşım Analizi Machine Learning modelini](https://github.com/dotnet/samples/blob/master/machine-learning/models/sentimentanalysis/sentiment_model.zip) indirin
 
 ## <a name="create-azure-functions-project"></a>Azure Işlevleri projesi oluştur
 
-1. Visual Studio 2017'yi açın. Menü çubuğundan **dosya** > **Yeni** > **Proje** ' yi seçin. **Yeni proje** iletişim kutusunda, **Visual C#**  düğümünü ve ardından **bulut** düğümünü seçin. Ardından **Azure işlevleri** proje şablonunu seçin. **Ad** metin kutusuna "SentimentAnalysisFunctionsApp" yazın ve **Tamam** düğmesini seçin.
+1. Visual Studio 2017 ' i açın. Menü çubuğundan **dosya** > **Yeni** > **Proje** ' yi seçin. **Yeni proje** iletişim kutusunda, **Visual C#**  düğümünü ve ardından **bulut** düğümünü seçin. Ardından **Azure işlevleri** proje şablonunu seçin. **Ad** metin kutusuna "SentimentAnalysisFunctionsApp" yazın ve **Tamam** düğmesini seçin.
 1. **Yeni proje** iletişim kutusunda, proje seçeneklerinin üzerindeki açılan menüyü açın ve **Azure işlevleri v2 (.NET Core)** seçeneğini belirleyin. Ardından, **http tetikleyicisi** projesini seçin ve **Tamam** düğmesini seçin.
 1. Modelinize kaydetmek için projenizde *Mlmodeller* adlı bir dizin oluşturun:
 
@@ -75,7 +75,7 @@ Yaklaşımı tahmin etmek için bir sınıf oluşturun. Projenize yeni bir sın�
     ```csharp
     public class AnalyzeSentiment
     {
-    
+
     }
     ```
 
@@ -85,7 +85,7 @@ Giriş verileriniz ve tahminlerinizi için bazı sınıflar oluşturmanız gerek
 
 1. Projenizde veri modellerinizi kaydetmek için *datamodeller* adlı bir dizin oluşturun: Çözüm Gezgini, projenize sağ tıklayın ve **> yeni klasör ekle**' yi seçin. "Datamodeller" yazın ve ENTER tuşuna basın.
 2. Çözüm Gezgini, *veri modelleri* dizinine sağ tıklayın ve sonra **> yeni öğe Ekle**' yi seçin.
-3. **Yeni öğe Ekle** Iletişim kutusunda **sınıf** ' ı seçin ve **ad** alanını *SentimentData.cs*olarak değiştirin. Sonra **Ekle** düğmesini seçin. 
+3. **Yeni öğe Ekle** Iletişim kutusunda **sınıf** ' ı seçin ve **ad** alanını *SentimentData.cs*olarak değiştirin. Sonra **Ekle** düğmesini seçin.
 
     *SentimentData.cs* dosyası kod düzenleyicisinde açılır. Aşağıdaki using ifadesini *SentimentData.cs*öğesinin en üstüne ekleyin:
 
@@ -113,7 +113,7 @@ Tek bir tahmin yapmak için bir [@no__t](xref:Microsoft.ML.PredictionEngine%602)
 Aşağıdaki bağlantı, [bağımlılık ekleme](https://en.wikipedia.org/wiki/Dependency_injection)hakkında daha fazla bilgi edinmek istiyorsanız daha fazla bilgi sağlar.
 
 1. **Çözüm Gezgini**, projeye sağ tıklayın ve ardından  > **Yeni öğe** **Ekle**' yi seçin.
-1. **Yeni öğe Ekle** Iletişim kutusunda **sınıf** ' ı seçin ve **ad** alanını *Startup.cs*olarak değiştirin. Sonra **Ekle** düğmesini seçin. 
+1. **Yeni öğe Ekle** Iletişim kutusunda **sınıf** ' ı seçin ve **ad** alanını *Startup.cs*olarak değiştirin. Sonra **Ekle** düğmesini seçin.
 
     *Startup.cs* dosyası kod düzenleyicisinde açılır. Aşağıdaki using ifadesini *Startup.cs*öğesinin en üstüne ekleyin:
 
@@ -141,13 +141,13 @@ Aşağıdaki bağlantı, [bağımlılık ekleme](https://en.wikipedia.org/wiki/D
     }
     ```
 
-Yüksek düzeyde, bu kod, uygulama tarafından el ile yapmak yerine, daha sonra kullanmak üzere nesne ve hizmetleri otomatik olarak başlatır. 
+Yüksek düzeyde, bu kod, uygulama tarafından el ile yapmak yerine, daha sonra kullanmak üzere nesne ve hizmetleri otomatik olarak başlatır.
 
-Makine öğrenimi modelleri statik değildir. Yeni eğitim verileri kullanılabilir hale geldiğinde, model geri çekme ve yeniden dağıtılır. Bir modelin en son sürümünü uygulamanıza almanın bir yolu, uygulamanın tamamını yeniden dağıtmaktan biridir. Ancak bu, uygulama kapalı kalma süresini tanıtır. @No__t-0 hizmeti, uygulamanızı kapatmak zorunda kalmadan güncelleştirilmiş bir modeli yeniden yüklemek için bir mekanizma sağlar. 
+Makine öğrenimi modelleri statik değildir. Yeni eğitim verileri kullanılabilir hale geldiğinde, model geri çekme ve yeniden dağıtılır. Bir modelin en son sürümünü uygulamanıza almanın bir yolu, uygulamanın tamamını yeniden dağıtmaktan biridir. Ancak bu, uygulama kapalı kalma süresini tanıtır. @No__t-0 hizmeti, uygulamanızı kapatmak zorunda kalmadan güncelleştirilmiş bir modeli yeniden yüklemek için bir mekanizma sağlar.
 
 @No__t-0 parametresini `true` olarak ayarlayın ve `PredictionEnginePool`, dosya sistemi değişiklik bildirimlerini dinleyen ve dosyada değişiklik olduğunda olay başlatan bir [`FileSystemWatcher`](xref:System.IO.FileSystemWatcher) başlatır. Bu, modeli otomatik olarak yeniden yüklemek için `PredictionEnginePool` ' a sorar.
 
-Model `modelName` parametresiyle tanımlanır, böylece değişiklik yapıldığında uygulama başına birden fazla model yeniden yüklenebilir. 
+Model `modelName` parametresiyle tanımlanır, böylece değişiklik yapıldığında uygulama başına birden fazla model yeniden yüklenebilir.
 
 > [!TIP]
 > Alternatif olarak, uzaktan depolanan modellerle çalışırken `FromUri` yöntemini kullanabilirsiniz. Dosya değiştirilen olayları izlemek yerine `FromUri`, uzak konumu değişiklikler için yoklar. Yoklama aralığı varsayılan olarak 5 dakikadır. Uygulama gereksinimlerine bağlı olarak yoklama aralığını artırabilir veya azaltabilirsiniz. Aşağıdaki kod örneğinde, `PredictionEnginePool` her dakikada belirtilen URI 'de depolanan modeli yoklar.
@@ -195,7 +195,7 @@ ILogger log)
 }
 ```
 
-@No__t-0 yöntemi yürütüldüğünde, HTTP isteğinden gelen veriler seri durumdan çıkarılan ve `PredictionEnginePool` için giriş olarak kullanılır. @No__t-0 yöntemi, `Startup` sınıfında kayıtlı `SentimentAnalysisModel` ' i kullanarak tahmine dayalı hale getirmek için olarak çağrılır ve başarılı olursa sonuçları kullanıcıya geri döndürür.
+@No__t-0 yöntemi yürütüldüğünde, HTTP isteğinden gelen veriler seri durumdan çıkarılan ve `PredictionEnginePool` için giriş olarak kullanılır. @No__t-0 yöntemi daha sonra `Startup` sınıfında kayıtlı `SentimentAnalysisModel` ' i kullanarak tahmine dayalı hale getirmek için çağrılır ve başarılı olursa sonuçları kullanıcıya geri döndürür.
 
 ## <a name="test-locally"></a>Yerel olarak test etme
 
@@ -209,13 +209,13 @@ Her şey ayarlandığına göre, uygulamayı test etmek zaman alabilir:
     ```
 
     Başarılı olursa, çıkış aşağıdaki metne benzer görünmelidir:
-    
+
     ```powershell
     Negative
     ```
 
-Tebrikler! Azure Işlevi kullanarak, internet üzerinden tahmine dayalı hale getirmek için modelinizi başarıyla sundu.
+Mühendisi! Azure Işlevi kullanarak, internet üzerinden tahmine dayalı hale getirmek için modelinizi başarıyla sundu.
 
 ## <a name="next-steps"></a>Sonraki Adımlar
 
-- [Azure’a Dağıtma](/azure/azure-functions/functions-develop-vs#publish-to-azure)
+- [Azure’a dağıtma](/azure/azure-functions/functions-develop-vs#publish-to-azure)

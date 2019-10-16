@@ -1,20 +1,20 @@
 ---
-title: 'Uç noktası: Başarısız Olan Çağrılar'
+title: 'Uç Noktası: Başarısız Olan Çağrılar'
 ms.date: 03/30/2017
 ms.assetid: 3bdca983-7199-4596-b7e1-de15c0766250
-ms.openlocfilehash: 819f8ebe50587577b400d9140e82447d8640cad5
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 70370a7e98d3844cd7b255ccb103fa70d6b25e30
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67422123"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319994"
 ---
-# <a name="endpoint-calls-failed"></a>Uç noktası: Başarısız Olan Çağrılar
-Sayaç adı: Başarısız olan çağrılar.  
+# <a name="endpoint-calls-failed"></a>Uç Noktası: Başarısız Olan Çağrılar
+Sayaç adı: çağrı başarısız oldu.  
   
 ## <a name="description"></a>Açıklama  
- Bu uç noktada işlenmeyen özel durumları ile çağrı sayısı. Var olan her zaman işlenmeyen bir özel durum Bu uç noktada Bu sayaç artırılır.  
+ Bu uç noktada işlenmemiş özel durumları olan çağrı sayısı. Bu uç noktada işlenmeyen bir özel durum olduğunda bu sayaç artırılır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Sözleşme ve Hizmetlerde Hataları Belirtme ve İşleme](../../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
+- [Sözleşme ve Hizmetlerde Hataları Belirtme ve İşleme](../../specifying-and-handling-faults-in-contracts-and-services.md)

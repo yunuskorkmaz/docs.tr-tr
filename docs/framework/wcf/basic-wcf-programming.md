@@ -8,40 +8,40 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], basic programming
 - Windows Communication Foundation [WCF], programming
 ms.assetid: 3ae3d498-f43c-4ecc-8cc0-6cbe36b62593
-ms.openlocfilehash: c4c8529eb477b31eba464c9b156569819ec22941
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e4212ca0b86e1c4e4dc74e4b68767b2ce866c9ee
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62000122"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320806"
 ---
 # <a name="basic-wcf-programming"></a>Temel WCF Programlama
-Bu bölüm, Windows Communication Foundation (WCF) uygulamaları oluşturmaya yönelik temel bilgiler sunar.  
+Bu bölümde Windows Communication Foundation (WCF) uygulamaları oluşturma temelleri sunulmaktadır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Temel Programlama Yaşam Döngüsü](../../../docs/framework/wcf/basic-programming-lifecycle.md)  
- Yaşam döngüsü tasarlama, oluşturma ve WCF hizmeti ve istemci uygulamaları dağıtma açıklanır.  
+ [Temel Programlama Yaşam Döngüsü](basic-programming-lifecycle.md)  
+ WCF hizmeti ve istemci uygulamaları tasarlama, oluşturma ve dağıtma yaşam döngüsünü açıklar.  
   
- [Hizmetleri Tasarlama ve Uygulama](../../../docs/framework/wcf/designing-and-implementing-services.md)  
- Tasarım ve bir hizmet sözleşmesini uygulama, bir ileti değişim deseni seçin, hatalı sözleşme ve hizmetler temel diğer yönleri belirtin açıklar.  
+ [Hizmetleri Tasarlama ve Uygulama](designing-and-implementing-services.md)  
+ Bir hizmet sözleşmesinin nasıl tasarlanacağını ve uygulanacağını, bir ileti değişim modelini, bir hata sözleşmesini ve hizmetlerin diğer temel yönlerini seçme işlemini açıklar.  
   
- [Hizmetleri Yapılandırma](../../../docs/framework/wcf/configuring-services.md)  
- Sözleşme gereksinimlerini desteklemek, yerel çalışma zamanı davranışını özelleştirebilirsiniz ve hizmet yayımlamak için adresini göstermek için bir WCF hizmetini yapılandırma açıklar.  
+ [Hizmetleri Yapılandırma](configuring-services.md)  
+ Sözleşme gereksinimlerini desteklemek, yerel çalışma zamanı davranışını özelleştirmek ve hizmeti yayımlanacak adresi belirtmek için bir WCF hizmetinin nasıl yapılandırılacağını açıklar.  
   
- [Barındırma Hizmetleri](../../../docs/framework/wcf/hosting-services.md)  
- Barındırma hizmetleri uygulamada temellerini açıklar.  
+ [Barındırma Hizmetleri](hosting-services.md)  
+ Bir uygulamada barındırma hizmetleri hakkında temel bilgileri açıklar.  
   
- [İstemci Derleme](../../../docs/framework/wcf/building-clients.md)  
- Meta veri Hizmetler'den, WCF istemci koda dönüştürmek, güvenlik sorunlarını ele ve yapı, yapılandırma ve bir WCF istemcisi barındırmak nasıl açıklar.  
+ [İstemci Derleme](building-clients.md)  
+ Hizmetlerden meta verilerin nasıl alınacağını, WCF istemci koduna dönüştürmeyi, güvenlik sorunlarını nasıl işleyeceğini ve bir WCF istemcisi oluşturma, yapılandırma ve barındırma konularını açıklar.  
   
- [Genişletilebilirliğe Genel Bakış](../../../docs/framework/wcf/introduction-to-extensibility.md)  
- Özel çözümler oluşturmak için WCF genişletileceğini açıklar.  
+ [Genişletilebilirliğe Genel Bakış](introduction-to-extensibility.md)  
+ Özel çözümler oluşturmak için WCF 'nin nasıl genişletileceğini açıklar.  
   
- [WCF Sorun Giderme Hızlı Başlangıcı](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md)  
- Oluşan en yaygın sorunlar, bunları çözmek için yapabilecekleriniz ve sorun hakkında daha fazla bilgi bulmak nereye bazılarını açıklar.  
+ [WCF Sorun Giderme Hızlı Başlangıcı](wcf-troubleshooting-quickstart.md)  
+ Oluşan en yaygın sorunlardan bazılarını, bunları çözmek için neler yapabileceğinizi ve sorun hakkında daha fazla bilgiyi nerede bulabileceğinizi açıklar.  
   
- [WCF ve ASP.NET Web API](../../../docs/framework/wcf/wcf-and-aspnet-web-api.md)  
- İki teknoloji, birbirine birbirleriyle ve bunların ne zaman kullanılacağı açıklanır.  
+ [WCF ve ASP.NET Web API](wcf-and-aspnet-web-api.md)  
+ İki teknolojiyi, birbirleriyle birbirleriyle ilişkilerini ve ne zaman kullanılacağını açıklar.  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.ServiceModel>  
@@ -51,20 +51,20 @@ Bu bölüm, Windows Communication Foundation (WCF) uygulamaları oluşturmaya y�
  <xref:System.ServiceModel.Description>  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Sistem Gereksinimleri](../../../docs/framework/wcf/wcf-system-requirements.md)  
+ [Sistem Gereksinimleri](wcf-system-requirements.md)  
   
- [Kavramsal Genel Bakış](../../../docs/framework/wcf/conceptual-overview.md)  
+ [Kavramsal Genel Bakış](conceptual-overview.md)  
   
- [Başlangıç Öğreticisi](../../../docs/framework/wcf/getting-started-tutorial.md)  
+ [Başlangıç Öğreticisi](getting-started-tutorial.md)  
   
- [Yönergeler ve En İyi Yöntemler](../../../docs/framework/wcf/guidelines-and-best-practices.md)  
+ [Yönergeler ve En İyi Yöntemler](guidelines-and-best-practices.md)  
   
- [Windows Communication Foundation Araçları](../../../docs/framework/wcf/tools.md)  
+ [Windows Communication Foundation Araçları](tools.md)  
   
  [Windows Communication Foundation (WCF) örnekleri](./samples/index.md)  
   
- [Başlarken](../../../docs/framework/wcf/samples/getting-started-sample.md)  
+ [Başlarken](./samples/getting-started-sample.md)  
   
- [Satır İçi Kod Kullanarak IIS Barındırma](../../../docs/framework/wcf/samples/iis-hosting-using-inline-code.md)  
+ [Satır İçi Kod Kullanarak IIS Barındırma](./samples/iis-hosting-using-inline-code.md)  
   
- [Kendini Barındırma](../../../docs/framework/wcf/samples/self-host.md)
+ [Kendini Barındırma](./samples/self-host.md)

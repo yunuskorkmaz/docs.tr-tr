@@ -2,19 +2,19 @@
 title: + (Dize birleştirme) (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 580130fa-6c7c-4f76-a47d-d22c27ccadf6
-ms.openlocfilehash: ef482a1206dea98cfb5a0ba5071acc130ef0cd18
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 9c078e193eeecd4d331c5e3c04c66dee2c4a1daa
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70249025"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319310"
 ---
 # <a name="-string-concatenation-entity-sql"></a>+ (Dize birleştirme) (Entity SQL)
 İki dizeyi birleştirir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```sql  
 expression + expression  
 ```  
   
@@ -28,11 +28,11 @@ expression + expression
 ## <a name="example"></a>Örnek  
  Aşağıdaki Entity SQL sorgusu iki dizeyi birleştiren + işlecini kullanır. Sorgu AdventureWorks Sales modelini temel alır. Bu sorguyu derlemek ve çalıştırmak için aşağıdaki adımları izleyin:  
   
-1. [Aşağıdaki adımları uygulayın: PrimitiveType sonuçları](../how-to-execute-a-query-that-returns-primitivetype-results.md)döndüren bir sorgu yürütün.  
+1. [Nasıl yapılır: PrimitiveType sonuçları döndüren bir sorgu yürütme](../how-to-execute-a-query-that-returns-primitivetype-results.md)bölümündeki yordamı izleyin.  
   
 2. Aşağıdaki sorguyu `ExecutePrimitiveTypeQuery` yöntemine bir bağımsız değişken olarak geçirin:  
   
- [!code-csharp[DP EntityServices Concepts 2#CONCAT](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#concat)]  
+ [!code-sql[DP EntityServices Concepts#CONCAT](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#concat)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
