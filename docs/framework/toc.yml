@@ -1,0 +1,66 @@
+- name: .NET Framework Kılavuzu
+  href: index.md
+- name: Yenilikler
+  href: whats-new/
+- name: Başlarken
+  href: get-started/
+- name: Yükleme kılavuzu
+  href: install/
+- name: Geçiş Kılavuzu
+  href: migration-guide/
+- name: Geliştirme Kılavuzu
+  href: development-guide.md
+  items:
+    - name: Uygulama Etki Alanları ve Derlemeler
+      href: app-domains/
+    - name: Masaüstü Uygulamalarındaki Kaynaklar
+      href: resources/
+    - name: Erişilebilirlik
+      href: ui-automation/
+    - name: Veri ve Modelleme
+      href: data/
+    - name: İstemci Uygulamaları
+      href: develop-client-apps.md
+      items:
+        - name: Windows Presentation Foundation
+          href: wpf/
+        - name: Windows Forms
+          href: winforms/
+    - name: WCF ile Hizmet Odaklı Uygulamalar
+      href: wcf/
+    - name: Windows Workflow Foundation
+      href: windows-workflow-foundation/
+    - name: Windows Hizmet Uygulamaları
+      href: windows-services/
+    - name: 64 bitlik Uygulamalar
+      href: 64-bit-apps.md
+    - name: ASP.NET ile Web Uygulamaları
+      href: develop-web-apps-with-aspnet.md
+    - name: .NET Framework'te Ağ Programlaması
+      href: network-programming/
+    - name: Uygulamaları Yapılandırma
+      href: configure-apps/
+    - name: .NET Yerel ile Uygulama Derleme
+      href: net-native/
+    - name: Windows Identity Foundation
+      href: security/
+    - name: 'Hata Ayıklama, İzleme ve Profil Oluşturma'
+      href: debug-trace-profile/
+    - name: Dağıtım
+      href: deployment/
+    - name: Performans
+      href: performance/
+    - name: Dinamik Programlama
+      href: reflection-and-codedom/
+    - name: Managed Extensibility Framework (MEF)
+      href: mef/
+    - name: Yönetilmeyen Kod ile Birlikte Çalışma
+      href: interop/
+    - name: Yönetilmeyen API Başvurusu
+      href: unmanaged-api/
+    - name: XAML Hizmetleri
+      href: xaml-services/
+- name: Araçlar
+  href: tools/
+- name: Ek Sınıf Kitaplıkları ve API'ler
+  href: additional-apis/

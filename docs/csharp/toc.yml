@@ -1,0 +1,198 @@
+- name: 'C# Kılavuzu'
+  href: index.md
+- name: Başlarken
+  href: getting-started/
+- name: Öğreticiler
+  items:
+    - name: Genel Bakış
+      href: tutorials/index.md
+    - name: 'C# ile programlamaya giriş'
+      items:
+        - name: İlk dersinizi seçme
+          href: tutorials/intro-to-csharp/index.md
+        - name: Merhaba dünya
+          href: tutorials/intro-to-csharp/hello-world.yml
+        - name: 'C# numaraları'
+          href: tutorials/intro-to-csharp/numbers-in-csharp.yml
+        - name: Dal ve döngüler
+          href: tutorials/intro-to-csharp/branches-and-loops.yml
+        - name: Liste koleksiyonları
+          href: tutorials/intro-to-csharp/list-collection.yml
+        - name: Yerel ortamınızda çalışma
+          items:
+            - name: Ortamınızı ayarlama
+              href: tutorials/intro-to-csharp/local-environment.md
+            - name: 'C# numaraları'
+              href: tutorials/intro-to-csharp/numbers-in-csharp-local.md
+            - name: Dal ve döngüler
+              href: tutorials/intro-to-csharp/branches-and-loops-local.md
+            - name: Liste koleksiyonları
+              href: tutorials/intro-to-csharp/arrays-and-collections.md
+            - name: Sınıflara giriş
+              href: tutorials/intro-to-csharp/introduction-to-classes.md
+    - name: 'C# 6’yı keşfetme'
+      href: tutorials/exploration/csharp-6.yml
+    - name: Dize ilişkilendirmeyi keşfetme - etkileşimli
+      href: tutorials/exploration/interpolated-strings.yml
+    - name: Dize ilişkilendirmeyi keşfetme - ortamınızda
+      href: tutorials/exploration/interpolated-strings-local.md
+    - name: Dize ilişkilendirmeye yönelik gelişmiş senaryolar
+      href: tutorials/string-interpolation.md
+    - name: Arabirimleri varsayılan arabirim metotları ile güvenli bir şekilde güncelleştirme
+      href: tutorials/default-interface-methods-versions.md
+    - name: Varsayılan arabirim metotlarıyla mixin işlevi oluşturma
+      href: tutorials/mixins-with-default-interface-methods.md
+    - name: Dizin ve aralıkları keşfetme
+      href: tutorials/ranges-indexes.md
+    - name: Boş değer atanabilir başvuru türleri ile çalışma
+      href: tutorials/nullable-reference-types.md
+    - name: Bir uygulamayı boş değer atanabilir başvuru türlerine yükseltme
+      href: tutorials/upgrade-to-nullable-references.md
+    - name: Asenkron akışlar oluşturma ve kullanma
+      href: tutorials/generate-consume-asynchronous-stream.md
+    - name: Desen eşleştirme kullanarak veri yeteneklerini geliştirme
+      href: tutorials/pattern-matching.md
+    - name: Konsol Uygulaması
+      href: tutorials/console-teleprompter.md
+    - name: REST İstemcisi
+      href: tutorials/console-webapiclient.md
+    - name: 'C# ve .NET içinde devralma'
+      href: tutorials/inheritance.md
+    - name: LINQ ile Çalışma
+      href: tutorials/working-with-linq.md
+    - name: Öznitelikleri Kullanma
+      href: tutorials/attributes.md
+- name: 'C# Turu'
+  href: tour-of-csharp/
+- name: 'C# yenilikleri'
+  items:
+    - name: 'C# 8.0'
+      href: whats-new/csharp-8.md
+    - name: 'C# 7.3'
+      href: whats-new/csharp-7-3.md
+    - name: 'C# 7.2'
+      href: whats-new/csharp-7-2.md
+    - name: 'C# 7.1'
+      href: whats-new/csharp-7-1.md
+    - name: 'C# 7.0'
+      href: whats-new/csharp-7.md
+    - name: 'C# 6'
+      href: whats-new/csharp-6.md
+    - name: 'C# Sürüm Geçmişi'
+      href: whats-new/csharp-version-history.md
+    - name: Dil ile çerçeve arasındaki ilişkiler
+      href: whats-new/relationships-between-language-and-library.md
+    - name: Sürüm ve güncelleştirme konusunda dikkat edilmesi gerekenler
+      href: whats-new/version-update-considerations.md
+- name: 'C# Kavramları'
+  items:
+    - name: 'C# Tür sistemi'
+      href: programming-guide/types/index.md
+    - name: Boş değer atanabilir başvuru türleri
+      href: nullable-references.md
+    - name: Null atanabilen API’leri öznitelikleri ve kısıtlamaları kullanarak açıklama
+      href: nullable-attributes.md
+    - name: Ad Alanları
+      href: programming-guide/namespaces/index.md
+    - name: Temel Türler
+      href: basic-types.md
+    - name: Sınıflar
+      href: programming-guide/classes-and-structs/classes.md
+    - name: Yapılar
+      href: structs.md
+    - name: Demetler
+      href: tuples.md
+    - name: Demetleri ve diğer türleri ayrıştırma
+      href: deconstruct.md
+    - name: Arabirimler
+      href: programming-guide/interfaces/index.md
+    - name: Yöntemler
+      href: methods.md
+    - name: Lambda İfadeleri
+      href: programming-guide/statements-expressions-operators/lambda-expressions.md
+    - name: Özellikler
+      href: properties.md
+    - name: Dizin Oluşturucular
+      href: indexers.md
+    - name: Atılanlar
+      href: discards.md
+    - name: Genel Türler
+      href: programming-guide/generics/index.md
+    - name: Yineleyiciler
+      href: iterators.md
+    - name: Temsilciler ve olaylar
+      items:
+        - name: Temsilcilere Giriş
+          href: delegates-overview.md
+        - name: System.Delegate ve temsilci anahtar sözcüğü
+          href: delegate-class.md
+        - name: Kesin Tür Belirtilmiş Temsilciler
+          href: delegates-strongly-typed.md
+        - name: Temsilciler için Ortak Desenler
+          href: delegates-patterns.md
+        - name: Olaylara Giriş
+          href: events-overview.md
+        - name: Standart .NET olay desenleri
+          href: event-pattern.md
+        - name: Güncelleştirilmiş .NET Olay Deseni
+          href: modern-events.md
+        - name: Temsilcileri ve Olayları Ayırt Etme
+          href: distinguish-delegates-events.md
+    - name: Dil ile Tümleşik Sorgu (LINQ)
+      href: linq/
+    - name: Zaman uyumsuz programlama
+      href: async.md
+    - name: Desen Eşleştirme
+      href: pattern-matching.md
+    - name: 'Güvenli, verimli kod yazma'
+      href: write-safe-efficient-code.md
+    - name: İfade Ağaçları
+      items:
+        - name: İfade ağaçlarına giriş
+          href: expression-trees.md
+        - name: İfade Ağaçları Açıklaması
+          href: expression-trees-explained.md
+        - name: İfade Ağaçlarını Destekleyen Çerçeve Türleri
+          href: expression-classes.md
+        - name: İfade Yürütme
+          href: expression-trees-execution.md
+        - name: İfade Yorumlama
+          href: expression-trees-interpreting.md
+        - name: İfade Derleme
+          href: expression-trees-building.md
+        - name: İfade Çevirme
+          href: expression-trees-translating.md
+        - name: Özet
+          href: expression-trees-summary.md
+    - name: Native ile birlikte çalışma
+      href: programming-guide/interop/index.md
+    - name: Kodunuzu belgeleme
+      href: codedoc.md
+    - name: Sürüm Oluşturma
+      href: versioning.md
+- name: 'C# Kullanımı Hakkındaki Konular'
+  items:
+    - name: Konu dizini
+      href: how-to/index.md
+    - name: '`String.Split` kullanarak dizeleri ayrıştırma'
+      href: how-to/parse-strings-using-split.md
+    - name: Dizeleri birleştirme
+      href: how-to/concatenate-multiple-strings.md
+    - name: Bir dizeyi DateTime olarak dönüştürme
+      href: ../standard/base-types/parsing-datetime.md
+    - name: Dizeleri arama
+      href: how-to/search-strings.md
+    - name: Dize içeriklerini değiştirme
+      href: how-to/modify-string-contents.md
+    - name: Dizeleri karşılaştırma
+      href: how-to/compare-strings.md
+    - name: 'Desen eşleştirme, is ve as işleçleri kullanarak güvenli bir şekilde tür dönüştürme'
+      href: how-to/safely-cast-using-pattern-matching-is-and-as-operators.md
+- name: .NET Compiler Platform SDK’sı (Roslyn API’leri)
+  href: roslyn-sdk/
+- name: 'C# Programlama Kılavuzu'
+  href: programming-guide/
+- name: Dil Başvurusu
+  href: language-reference/
+- name: İzlenecek Yollar
+  href: walkthroughs.md
