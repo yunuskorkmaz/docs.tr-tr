@@ -1,4 +1,4 @@
-- name: Ek sınıf kitaplıkları ve API'ler
+- name: Ek API’ler
   href: index.md
   items:
     - name: Microsoft.SqlServer.Server
@@ -7,6 +7,12 @@
           items:
             - name: SmiOrderProperty.Item
               href: microsoft.sqlserver.server.smiorderproperty.item.md
+    - name: Sistem
+      items:
+        - name: Exception Sınıfı
+          items:
+            - name: Exception.PrepForRemoting Metodu
+              href: system.exception.prepforremoting.md
     - name: System.Data.SqlTypes
       items:
         - name: SqlChars Sınıfı
