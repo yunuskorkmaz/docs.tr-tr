@@ -2,12 +2,12 @@
 title: Yüksek ölçeklenebilirlik ve kullanılabilirlik için mikro hizmetleri ve çok kapsayıcılı uygulamaları yönetme
 description: Gerçek üretim uygulamalarının, tüm kapsayıcıların sistem durumunu, iş yükünü ve yaşam döngülerini ele alan düzenleyiciler ile dağıtılması ve yönetilmesi gerekir.
 ms.date: 02/15/2019
-ms.openlocfilehash: 8f2cef774acde47e9a1bb4680342b5e2c66ac154
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: dcc1c8686210e34df33aef024429898a098fa33d
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70990491"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395405"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>Yüksek ölçeklenebilirlik ve kullanılabilirlik için mikro hizmetleri ve çok kapsayıcılı uygulamaları yönetme
 
@@ -15,7 +15,7 @@ Uygulamanızın mikro hizmetlere dayalı olması veya birden çok kapsayıcıya 
 
 Şekil 4-6, birden fazla mikro hizmetten (kapsayıcılardan) oluşan bir uygulama kümesine dağıtımı gösterir.
 
-![Bir kümede oluşturulan Docker uygulamaları: Her hizmet örneği için bir kapsayıcı kullanırsınız. Docker Kapsayıcıları "dağıtım birimleri" ve bir kapsayıcı bir Docker örneğidir. Bir konak birçok kapsayıcıyı işler](./media/image6.png)
+![Bir kümede oluşturulan Docker uygulamalarını gösteren diyagram.](./media/orchestrate-high-scalability-availability/composed-docker-applications-cluster.png)
 
 **Şekil 4-6**. Kapsayıcılar kümesi
 
@@ -37,10 +37,10 @@ Bir kümenin ve Scheduler 'ın kavramlarıyla ilgili olarak, farklı satıcılar
 
 | Platform | Açıklamalar |
 |:---:|:---|
-| **Kubernetes** <br/> ![Kubernetes logosu](./media/kubernetes-logo.png) | [*Kubernetes*](https://kubernetes.io/) , özellikleri düzenlemek için küme altyapısı ve kapsayıcı zamanlamalarından değişen işlevselliği sağlayan açık kaynaklı bir üründür. Ana bilgisayar kümelerinde uygulama kapsayıcılarının dağıtım, ölçeklendirme ve işlemlerini otomatikleştirmenizi sağlar. <br/> <br/> *Kubernetes* , kolay yönetim ve bulma için uygulama kapsayıcılarını mantıksal birimlere gruplandıran kapsayıcı merkezli bir altyapı sağlar. <br/> <br/> *Kubernetes* , Linux 'Ta, Windows 'da daha az olgun bir yerde. |
-| **Azure Kubernetes Service'i (AKS)** <br/> ![Azure Kubernetes hizmet logosu](./media/aks-logo.png) | [Azure Kubernetes hizmeti (AKS)](https://azure.microsoft.com/services/kubernetes-service/) , Azure 'Da Kubernetes kümesinin yönetimini, dağıtımını ve işlemlerini basitleştiren, yönetilen bir Kubernetes kapsayıcı düzenleme hizmetidir. |
-| **Azure Service Fabric** <br/> ![Azure Service Fabric logosu](./media/service-fabric-logo.png) | [Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-overview) , uygulama oluşturmaya yönelik bir Microsoft mikro hizmetler platformudur. Bu, hizmetlerin bir [Orchestrator](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-resource-manager-introduction) ve makine kümeleri oluşturur. Service Fabric, Hizmetleri kapsayıcı olarak veya düz süreçler olarak dağıtabilir. Aynı uygulama ve küme içindeki kapsayıcılardaki hizmetler ile süreçlerdeki hizmetleri de karıştırabilirler. <br/> <br/> *Service Fabric* kümeler Azure 'da, şirket içinde veya herhangi bir bulutta dağıtılabilir. Ancak, Azure 'da dağıtım, yönetilen bir yaklaşım ile basitleştirilmiştir. <br/> <br/> *Service Fabric* , [durum bilgisi olan hizmetler](https://azure.microsoft.com/documentation/articles/service-fabric-reliable-services-introduction/) ve [Reliable Actors](https://azure.microsoft.com/documentation/articles/service-fabric-reliable-actors-introduction/)gibi ek ve isteğe bağlı, seçkin [Service Fabric programlama modelleri](https://azure.microsoft.com/documentation/articles/service-fabric-choose-framework/) sağlar. <br/> <br/> *Service Fabric* , Windows 'Da (Windows 'da gelişen yıllar) ve Linux 'ta daha az olgun olması. <br/> <br/> Hem Linux hem de Windows kapsayıcıları 2017 tarihinden itibaren Service Fabric desteklenir. |
-| **Azure Service Fabric ağı** <br/> ![Azure Service Fabric kafes logosu](./media/azure-service-fabric-mesh-logo.png) | [*Azure Service Fabric ağı*](https://docs.microsoft.com/azure/service-fabric-mesh/service-fabric-mesh-overview) aynı güvenilirliği, görev açısından kritik performansı ve ölçeği Service Fabric olarak sunar, ancak aynı zamanda tamamen yönetilen ve sunucusuz bir platform sunar. Bir kümeyi, VM 'Leri, depolamayı veya ağ yapılandırmasını yönetmeniz gerekmez. Yalnızca uygulamanızın geliştirilmesine odaklanırsınız. <br/> <br/> *Service Fabric ağ* , hem Windows hem de Linux kapsayıcıları destekler, böylece dilediğiniz programlama diliyle ve çerçevesiyle geliştirebilirsiniz.
+| **Kubernetes** <br/> ![ Kubernetes logosunun bir görüntüsü. ](./media/orchestrate-high-scalability-availability/kubernetes-container-orchestration-system-logo.png) | [*Kubernetes*](https://kubernetes.io/) , özellikleri düzenlemek için küme altyapısı ve kapsayıcı zamanlamalarından değişen işlevselliği sağlayan açık kaynaklı bir üründür. Ana bilgisayar kümelerinde uygulama kapsayıcılarının dağıtım, ölçeklendirme ve işlemlerini otomatikleştirmenizi sağlar. <br/> <br/> *Kubernetes* , kolay yönetim ve bulma için uygulama kapsayıcılarını mantıksal birimlere gruplandıran kapsayıcı merkezli bir altyapı sağlar. <br/> <br/> *Kubernetes* , Linux 'Ta, Windows 'da daha az olgun bir yerde. |
+| **Azure Kubernetes hizmeti (AKS)** <br/> ![a Azure Kubernetes hizmet logosunun bir görüntüsü. ](./media/orchestrate-high-scalability-availability/azure-kubernetes-service-logo.png) | [Azure Kubernetes hizmeti (AKS)](https://azure.microsoft.com/services/kubernetes-service/) , Azure 'Da Kubernetes kümesinin yönetimini, dağıtımını ve işlemlerini basitleştiren, yönetilen bir Kubernetes kapsayıcı düzenleme hizmetidir. |
+| **Azure Service Fabric** <br/> ![a Azure Service Fabric logosunun bir görüntüsü. ](./media/orchestrate-high-scalability-availability/azure-service-fabric-logo.png) | [Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-overview) , uygulama oluşturmaya yönelik bir Microsoft mikro hizmetler platformudur. Bu, hizmetlerin bir [Orchestrator](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-resource-manager-introduction) ve makine kümeleri oluşturur. Service Fabric, Hizmetleri kapsayıcı olarak veya düz süreçler olarak dağıtabilir. Aynı uygulama ve küme içindeki kapsayıcılardaki hizmetler ile süreçlerdeki hizmetleri de karıştırabilirler. <br/> <br/> *Service Fabric* kümeler Azure 'da, şirket içinde veya herhangi bir bulutta dağıtılabilir. Ancak, Azure 'da dağıtım, yönetilen bir yaklaşım ile basitleştirilmiştir. <br/> <br/> *Service Fabric* , [durum bilgisi olan hizmetler](https://azure.microsoft.com/documentation/articles/service-fabric-reliable-services-introduction/) ve [Reliable Actors](https://azure.microsoft.com/documentation/articles/service-fabric-reliable-actors-introduction/)gibi ek ve isteğe bağlı, seçkin [Service Fabric programlama modelleri](https://azure.microsoft.com/documentation/articles/service-fabric-choose-framework/) sağlar. <br/> <br/> *Service Fabric* , Windows 'Da (Windows 'da gelişen yıllar) ve Linux 'ta daha az olgun olması. <br/> <br/> Hem Linux hem de Windows kapsayıcıları 2017 tarihinden itibaren Service Fabric desteklenir. |
+| **Azure Service Fabric ağı** <br/> ![a Azure Service Fabric kafes logosunun bir görüntüsü. ](./media/orchestrate-high-scalability-availability/azure-service-fabric-mesh-logo.png) | [*Azure Service Fabric ağı*](https://docs.microsoft.com/azure/service-fabric-mesh/service-fabric-mesh-overview) aynı güvenilirliği, görev açısından kritik performansı ve ölçeği Service Fabric olarak sunar, ancak aynı zamanda tamamen yönetilen ve sunucusuz bir platform sunar. Bir kümeyi, VM 'Leri, depolamayı veya ağ yapılandırmasını yönetmeniz gerekmez. Yalnızca uygulamanızın geliştirilmesine odaklanırsınız. <br/> <br/> *Service Fabric ağ* , hem Windows hem de Linux kapsayıcıları destekler, böylece dilediğiniz programlama diliyle ve çerçevesiyle geliştirebilirsiniz.
 
 ## <a name="using-container-based-orchestrators-in-azure"></a>Azure 'da kapsayıcı tabanlı düzenleyiciler kullanma
 
@@ -54,7 +54,7 @@ AKS, Azure 'da Kapsayıcılı uygulamaları çalıştırmak üzere önceden yap�
 
 Azure Kubernetes hizmeti, popüler Docker Kümelemesi açık kaynaklı araçların ve teknolojilerin yapılandırmasını özellikle Azure için iyileştirir. Kapsayıcılar ve uygulama yapılandırmanız için taşınabilirlik sağlayan bir açık çözüm alırsınız. Boyut, ana bilgisayar sayısı ve Orchestrator Araçları ' nı seçin ve AKS diğer her şeyi işler.
 
-![Kubernetes küme yapısı: DNS, Zamanlayıcı, proxy, vb. ve kapsayıcıları barındıran çeşitli çalışan düğümlerini işleyen bir ana düğüm vardır.](media/image36.png)
+![Bir Kubernetes küme yapısını gösteren diyagram.](./media/orchestrate-high-scalability-availability/kubernetes-cluster-simplified-structure.png)
 
 **Şekil 4-7**. Kubernetes kümesinin Basitleştirilmiş yapısı ve topolojisi
 
@@ -64,7 +64,7 @@ Azure Kubernetes hizmeti, popüler Docker Kümelemesi açık kaynaklı araçlar�
 
 [Docker 'ın 2018 Temmuz 'da duyurduğu](https://blog.docker.com/2018/07/kubernetes-is-now-available-in-docker-desktop-stable-channel/)geliştirme ortamında, Kubernetes yalnızca [Docker Desktop](https://www.docker.com/community-edition)'ı yükleyerek tek bir geliştirme makinesinde (Windows 10 veya MacOS) da çalıştırılabilir. Şekil 4-8 ' de gösterildiği gibi daha sonra daha fazla tümleştirme testi için buluta dağıtabilirsiniz (AKS).
 
-![Docker, Docker Desktop ile Temmuz ' 2018 üzerinde Kubernetes kümeleri için geliştirme makinesi desteği duyuruldu.](media/kubernetes-development-environment.png)
+![Bir geliştirici makinesinde Kubernetes 'i gösteren ve daha sonra AKS 'e dağıtılan diyagram.](./media/orchestrate-high-scalability-availability/kubernetes-development-environment.png)
 
 **Şekil 4-8**. Geliştirme makinesi ve bulutu 'nda Kubernetes çalıştırma
 
@@ -74,11 +74,11 @@ AKS 'yi kullanmaya başlamak için Azure portal veya CLı kullanarak bir AKS kü
 
 Varsayılan olarak AKS 'nin bir parçası olarak yüklenen yazılımların herhangi bir ücreti yoktur. Tüm varsayılan seçenekler açık kaynaklı yazılımlarla uygulanır. AKS, Azure 'da birden çok sanal makine için kullanılabilir. Yalnızca seçtiğiniz işlem örnekleri için ücretlendirilirsiniz, Ayrıca, depolama ve ağ gibi diğer temel altyapı kaynakları kullanılır. AKS 'in kendisi için artımlı ücret alınmaz.
 
-Kubernetes 'e `kubectl` ve özgün `.yaml` dosyalara bağlı olarak dağıtım hakkında daha fazla uygulama bilgisi için, [aks 'de (Azure Kubernetes hizmeti) eshoponcontainers 'ı ayarlama](https://github.com/dotnet-architecture/eShopOnContainers/wiki/10.-Setting-the-solution-up-in-AKS-(Azure-Kubernetes-Service))bölümüne bakın.
+@No__t-0 ve özgün `.yaml` dosyalarını temel alan Kubernetes 'e dağıtım hakkında daha fazla uygulama bilgisi için, [AKS 'de (Azure Kubernetes hizmeti) eShopOnContainers 'ı ayarlama](https://github.com/dotnet-architecture/eShopOnContainers/wiki/10.-Setting-the-solution-up-in-AKS-(Azure-Kubernetes-Service))bölümüne bakın.
 
 ## <a name="deploy-with-helm-charts-into-kubernetes-clusters"></a>Kubernetes kümelerine helk grafiklerle dağıtım
 
-Bir Kubernetes kümesine bir uygulama dağıttığınızda, önceki bölümde zaten belirtildiği gibi yerel biçime `kubectl.exe` (`.yaml` dosyalar) göre dağıtım dosyalarını kullanarak özgün CLI aracını kullanabilirsiniz. Ancak, karmaşık mikro hizmet tabanlı uygulamalar dağıtımında olduğu gibi daha karmaşık Kubernetes uygulamaları için [Held](https://helm.sh/)kullanılması önerilir.
+Bir Kubernetes kümesine bir uygulama dağıttığınızda, önceki bölümde zaten bahsedildiği gibi, özgün `kubectl.exe` CLı aracını yerel biçime (`.yaml` dosya) göre kullanarak dağıtım dosyalarını kullanabilirsiniz. Ancak, karmaşık mikro hizmet tabanlı uygulamalar dağıtımında olduğu gibi daha karmaşık Kubernetes uygulamaları için [Held](https://helm.sh/)kullanılması önerilir.
 
 HELI grafikleri, en karmaşık Kubernetes uygulamasını bile tanımlamanıza, sürümüne, yüklemenize, paylaşmanıza, yükseltmenize veya geri almanıza yardımcı olur.
 
@@ -96,13 +96,13 @@ Belirtildiği gibi, kapsayıcı tabanlı uygulamalar dağıtıldığında Azure 
 
 Azure Dev Spaces, yalnızca Visual Studio 2017 veya Visual Studio Code kullanarak doğrudan Azure 'daki genel bir Kubernetes kümesinde kodu hızlı bir şekilde yinelemenize ve hata ayıklamanıza olanak sağladığından geliştirme ekiplerinin Kubernetes üzerinde daha üretken olmasına yardımcı olur. Azure 'daki Kubernetes kümesi paylaşılan bir yönetilen Kubernetes kümesidir ve bu sayede ekibiniz birlikte çalışarak işbirliği yapabilir. Kodunuzu yalıtımlı olarak geliştirebilir, daha sonra genel kümeye dağıtabilir ve bağımlılıkları çoğaltmadan veya mocize etmeden diğer bileşenlerle uçtan uca test gerçekleştirebilirsiniz.
 
-Şekil 4-9 ' de gösterildiği gibi, Azure Dev Spaces en farklılaştırıcı özelliği, kümedeki genel dağıtımın geri kalanı ile tümleştirilen ' Spaces ' oluşturma yeteneğidir.
+Şekil 4-9 ' de gösterildiği gibi, Azure Dev Spaces en farklılaştırıcı özelliği, kümedeki genel dağıtımın geri kalanı ile tümleştirilen ' Spaces ' oluşturma yeteneğidir:
 
-![Azure Dev Spaces, yeni sürümlerin test edilmesini kolaylaştırmak için üretim mikro hizmetlerini geliştirme kapsayıcı örneğiyle saydam bir şekilde karıştırarak ve eşleştirebilir.](media/image38.png)
+![Azure Dev Spaces birden çok boşluk kullanımını gösteren diyagram.](./media/orchestrate-high-scalability-availability/use-multiple-spaces-azure-dev.png)
 
 **Şekil 4-9**. Azure Dev Spaces birden çok boşluk kullanma
 
-Temel olarak, Azure 'da paylaşılan bir geliştirme alanı ayarlayabilirsiniz. Her geliştirici uygulamanın yalnızca bir kısmına odaklanabilir ve senaryolarının bağımlı olduğu diğer tüm hizmetleri ve bulut kaynaklarını zaten içeren bir geliştirme alanında "önceden kaydedilmiş" kodu geliştirebilir. Bağımlılıklar her zaman güncel değildir ve geliştiriciler üretimi yansıtan bir şekilde çalışır.
+Azure Dev Spaces, yeni sürümlerin test edilmesini kolaylaştırmak için üretim mikro hizmetlerini geliştirme kapsayıcı örneğiyle saydam bir şekilde karıştırarak ve eşleştirebilir. Temel olarak, Azure 'da paylaşılan bir geliştirme alanı ayarlayabilirsiniz. Her geliştirici uygulamanın yalnızca bir kısmına odaklanabilir ve senaryolarının bağımlı olduğu diğer tüm hizmetleri ve bulut kaynaklarını zaten içeren bir geliştirme alanında "önceden kaydedilmiş" kodu geliştirebilir. Bağımlılıklar her zaman güncel değildir ve geliştiriciler üretimi yansıtan bir şekilde çalışır.
 
 Azure Dev Spaces, yalıtım halinde ve takım üyelerinizi bozmadan bir şekilde çalışmanıza olanak sağlayan bir alan kavramı sağlar. Bu özellik, URL öneklerini temel alır; bir kapsayıcının isteği için URL 'de bir dev Space öneki kullanırsanız Azure Dev Spaces, kapsayıcının Bu alan için dağıttığındaki özel bir sürümünü (varsa) çalıştırır. Aksi takdirde, genel/birleştirilmiş sürümü çalıştırır.
 
@@ -112,7 +112,7 @@ Daha fazla bilgi için [Azure dev Spaces Ile takım geliştirme](https://docs.mi
 
 ## <a name="additional-resources"></a>Ek kaynaklar
 
-- **Azure Kubernetes Service (AKS) ile çalışmaya başlama** \
+- **Azure Kubernetes Service (AKS)**  \ ' i kullanmaya başlama
   <https://docs.microsoft.com/azure/aks/kubernetes-walkthrough-portal>
 
 - **Azure Dev Spaces** \
@@ -137,11 +137,11 @@ Service Fabric, hizmetinizi nasıl derlemenize göre belirsiz ve herhangi bir te
 
 Şekil 4-10 ' da gösterildiği gibi, mikro hizmetleri basit süreçler olarak veya Docker Kapsayıcıları olarak Service Fabric oluşturabilir ve çalıştırabilirsiniz. Ayrıca, aynı Service Fabric kümesi içinde işlem tabanlı mikro hizmetler ile kapsayıcı tabanlı mikro hizmetleri karıştırmak da mümkündür.
 
-![Azure Service Fabric kümelerinin karşılaştırması: Her bir düğümün her mikro hizmet için tek bir işlem çalıştırdığı, mikro hizmetler, işlemler olarak; Her düğümün, mikro hizmet başına bir kapsayıcı olmak üzere birkaç kapsayıcıyla Docker çalıştırdığı kapsayıcılar olarak mikro hizmetler.](./media/azure-service-fabric-cluster-types.png)
+![Azure Service Fabric kümelerinin karşılaştırmasını gösteren diyagram.](./media/orchestrate-high-scalability-availability/azure-service-fabric-cluster-types.png)
 
 **Şekil 4-10**. Azure Service Fabric mikro Hizmetleri işlem olarak veya kapsayıcılar olarak dağıtma
 
-Linux ve Windows konaklarına dayalı Service Fabric kümeleri, sırasıyla Docker Linux kapsayıcılarını ve Windows kapsayıcılarını çalıştırabilir.
+İlk görüntüde, her düğümün her mikro hizmet için tek bir işlem çalıştırdığı, mikro Hizmetleri işlem olarak görürsünüz. İkinci görüntüde, mikro Hizmetleri kapsayıcı olarak görürsünüz; burada her düğüm, mikro hizmet başına bir kapsayıcı olmak üzere birkaç kapsayıcı ile Docker 'ı çalıştırır. Linux ve Windows konaklarına dayalı Service Fabric kümeleri, sırasıyla Docker Linux kapsayıcılarını ve Windows kapsayıcılarını çalıştırabilir.
 
 Azure Service Fabric 'de kapsayıcılar desteğiyle ilgili güncel bilgiler için, bkz. [Service Fabric ve kapsayıcılar](https://docs.microsoft.com/azure/service-fabric/service-fabric-containers-overview).
 
@@ -149,11 +149,11 @@ Service Fabric, fiziksel uygulamadan farklı bir mantıksal mimari (iş mikro hi
 
 Şekil 4-10 ' de gösterildiği gibi, bir mantıksal/iş mikro hizmet perspektifinden düşünürken, bir durum bilgisi olan güvenilir Service Fabric bir hizmet uygularken, genellikle iki adet hizmet katmanı uygulamanız gerekecektir. Birincisi, birden çok bölümü işleyen (her bölüm durum bilgisi olan bir hizmettir), durum bilgisi olan güvenilir bir hizmettir. İkincisi, birden çok bölüme veya durum bilgisi olmayan hizmet örneklerine yönlendirme ve veri toplama işlemi sırasında ön uç hizmet veya ağ geçidi hizmetidir. Bu ağ geçidi hizmeti, arka uç hizmetine erişirken yeniden deneme döngülerine sahip istemci tarafı iletişimini de işler. Özel hizmetinizi uygularsanız, bir ağ geçidi hizmeti olarak adlandırılır veya alternatif olarak Service Fabric [ters proxy](https://docs.microsoft.com/azure/service-fabric/service-fabric-reverseproxy)'yi de kullanabilirsiniz.
 
-![Service Fabric kapsayıcılarda durum bilgisi olan birkaç güvenilir hizmeti desteklemeye yönelik bir hizmet içerir.](./media/service-fabric-stateful-business-microservice.png)
+![Kapsayıcılarda durum bilgisi olan birkaç hizmeti gösteren diyagram.](./media/orchestrate-high-scalability-availability/service-fabric-stateful-business-microservice.png)
 
 **Şekil 4-11**. Çeşitli durum bilgisi olan hizmet örneklerine ve özel ağ geçidi ön ucuna sahip iş mikro hizmeti
 
-Herhangi bir durumda Service Fabric durum bilgisi olan Reliable Services kullandığınızda, birden fazla fiziksel hizmetten oluşan bir mantıksal veya iş mikro hizmeti (sınırlı bağlam) de vardır. Her biri, Şekil 4-11 ' de gösterildiği gibi, ağ geçidi hizmeti ve bölüm hizmeti ASP.NET Web API hizmetleri olarak uygulanabilir.
+Herhangi bir durumda Service Fabric durum bilgisi olan Reliable Services kullandığınızda, birden fazla fiziksel hizmetten oluşan bir mantıksal veya iş mikro hizmeti (sınırlı bağlam) de vardır. Her biri, Şekil 4-11 ' de gösterildiği gibi, ağ geçidi hizmeti ve bölüm hizmeti ASP.NET Web API hizmetleri olarak uygulanabilir. Service Fabric kapsayıcılarda durum bilgisi olan birkaç güvenilir hizmeti desteklemeye yönelik bir hizmet içerir.
 
 Service Fabric, hizmet gruplarını, Orchestrator veya Cluster için paketleme ve dağıtım birimi olan [Service Fabric bir uygulama](https://docs.microsoft.com/azure/service-fabric/service-fabric-application-model)olarak gruplandırabilir ve dağıtabilirsiniz. Bu nedenle, Service Fabric uygulaması bu özerk iş ve mantıksal mikro hizmet sınırına ya da sınırlanmış bağlamla eşleştirilebilir, bu nedenle bu hizmetleri olarak çalışabilen dağıtabilirsiniz.
 
@@ -161,15 +161,15 @@ Service Fabric, hizmet gruplarını, Orchestrator veya Cluster için paketleme v
 
 Service Fabric kapsayıcılarla ilgili olarak, Hizmetleri bir Service Fabric kümesi içindeki kapsayıcı görüntülerinde da dağıtabilirsiniz. Şekil 4-12 gösterdiği gibi, çoğu zaman hizmet başına yalnızca bir kapsayıcı olacaktır.
 
-![Service Fabric bir uygulama, bir dış veritabanına erişen birkaç kapsayıcıyı çalıştırabilir ve tüm küme bir Iş mikro hizmetinin mantıksal sınırı olabilir](./media/azure-service-fabric-business-microservice.png)
+![Bir veritabanında hizmet beslemenin tek bir kapsayıcısını gösteren diyagram.](./media/orchestrate-high-scalability-availability/azure-service-fabric-business-microservice.png)
 
 **Şekil 4-12**. Service Fabric 'de çeşitli hizmetler (kapsayıcılar) ile iş mikro hizmeti
 
-Ancak, "sidecar" kapsayıcıları (bir mantıksal hizmetin parçası olarak birlikte dağıtılması gereken iki kapsayıcı) de Service Fabric de mümkündür. Önemli olan şey, bir iş mikro hizmetinin çeşitli birlikte bulunan öğelerin etrafında mantıksal sınır olmasıdır. Çoğu durumda, tek bir veri modeli olan tek bir hizmet olabilir, ancak bazı durumlarda birçok fiziksel hizmete de sahip olabilirsiniz.
+Bir Service Fabric uygulama bir dış veritabanına erişen birkaç kapsayıcıyı çalıştırabilir ve tüm küme bir Iş mikro hizmetinin mantıksal sınırı olur. Ancak, "sidecar" kapsayıcıları (bir mantıksal hizmetin parçası olarak birlikte dağıtılması gereken iki kapsayıcı) de Service Fabric de mümkündür. Önemli olan şey, bir iş mikro hizmetinin çeşitli birlikte bulunan öğelerin etrafında mantıksal sınır olmasıdır. Çoğu durumda, tek bir veri modeli olan tek bir hizmet olabilir, ancak bazı durumlarda birçok fiziksel hizmete de sahip olabilirsiniz.
 
 , Şekil 4-13 ' de gösterildiği gibi, süreçlerdeki Hizmetleri ve kapsayıcılardaki hizmetleri aynı Service Fabric uygulamasına karıştırabileceğinizi unutmayın.
 
-![Aynı düğümde hem hizmetleri hem de kapsayıcıları çalıştıran bir Service Fabric uygulaması.](./media/business-microservice-mapped-to-service-fabric-application.png)
+![Süreçlerdeki Hizmetleri ve aynı uygulamadaki kapsayıcıları gösteren diyagram.](./media/orchestrate-high-scalability-availability/business-microservice-mapped-to-service-fabric-application.png)
 
 **Şekil 4-13**. Kapsayıcılar ve durum bilgisi olan hizmetlerle Service Fabric uygulamayla eşlenmiş iş mikro hizmeti
 
@@ -181,11 +181,11 @@ Daha önce belirtildiği gibi, her mikro hizmet (mantıksal sınırlı bağlam) 
 
 Ancak hizmetlerin kendisi de Service Fabric durum bilgisi alabilir, bu da verilerin mikro hizmette bulunduğu anlamına gelir. Bu veriler yalnızca aynı sunucuda değil, mikro hizmet sürecinde, bellekte ve sabit sürücülerde kalıcı olarak bulunabilir ve diğer düğümlere çoğaltılır. Şekil 4-14 farklı yaklaşımları gösterir.
 
-![Durum bilgisi olmayan hizmetlerde durum (Kalıcılık, veritabanı) mikro hizmette tutulur. Durum bilgisi olmayan hizmetler durumunda mikro hizmet içinde tutulur.](./media/stateless-vs-stateful-microservices.png)
+![Durum bilgisiz ve durum bilgisi olmayan bir hizmetin karşılaştırmasını gösteren diyagram.](./media/orchestrate-high-scalability-availability/stateless-vs-stateful-microservices.png)
 
 **Şekil 4-14**. Durum bilgisiz ve durum bilgisi olan mikro hizmetler
 
-Durum bilgisiz olmayan bir yaklaşım kusursuz olur ve yaklaşım geleneksel ve iyi bilinen desenlere benzer olduğundan, durum bilgisi olan mikro hizmetlerden daha kolay bir şekilde uygulanır. Ancak durum bilgisi olmayan mikro hizmetler işlem ve veri kaynakları arasında gecikme süresi getirmiyor. Ayrıca, ek önbellek ve kuyrukların performansını artırmaya çalışırken daha fazla hareketli parça de içerirler. Sonuç olarak, çok fazla katmana sahip karmaşık mimarilerde bitebilmeniz gerekir.
+Durum bilgisi olmayan hizmetlerde durum (Kalıcılık, veritabanı) mikro hizmette tutulur. Durum bilgisi olan hizmetlerde durum, mikro hizmet içinde tutulur. Durum bilgisiz olmayan bir yaklaşım kusursuz olur ve yaklaşım geleneksel ve iyi bilinen desenlere benzer olduğundan, durum bilgisi olan mikro hizmetlerden daha kolay bir şekilde uygulanır. Ancak durum bilgisi olmayan mikro hizmetler işlem ve veri kaynakları arasında gecikme süresi getirmiyor. Ayrıca, ek önbellek ve kuyrukların performansını artırmaya çalışırken daha fazla hareketli parça de içerirler. Sonuç olarak, çok fazla katmana sahip karmaşık mimarilerde bitebilmeniz gerekir.
 
 Buna karşılık, etki alanı mantığı ve verileri arasında gecikme olmadığı için [durum bilgisi olan mikro hizmetler](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-introduction#when-to-use-reliable-services-apis) , Gelişmiş senaryolarda Excel 'de bulunabilir. Yoğun veri işleme, oyun arka uçları, hizmet olarak veritabanları ve diğer düşük gecikmeli senaryolar, daha hızlı erişim için yerel durumu etkinleştiren durum bilgisi olan hizmetlerden yararlanır.
 
@@ -203,7 +203,7 @@ Azure Service Fabric ağı, geliştiricilerin herhangi bir altyapıyı yönetmek
 
 Şekil 4-15 ' de gösterildiği gibi, Service Fabric kafeste barındırılan uygulamalar, altyapıyı kapatmadan altyapı hakkında endişelenmeden çalışır ve ölçeklendirebilir.
 
-![Docker Desktop 'ta çalışan çok kapsayıcılı bir uygulama, altyapı hakkında endişelenmeden Azure Service Fabric ağı 'na dağıtılabilir.](media/image39.png)
+![Yerel depodan Service Fabric kafese dağıtımı gösteren diyagram.](media/orchestrate-high-scalability-availability/deploy-microservice-containers-apps-service-fabric-mesh.png)
 
 **Şekil 4-15**. Service Fabric ağı 'na mikro hizmet/kapsayıcı uygulaması dağıtma
 
@@ -215,10 +215,10 @@ Daha fazla bilgi için [Service Fabric kafes belgelerine](https://docs.microsoft
 
 Aşağıdaki tabloda, iş yükleri ve işletim sistemi odağına bağlı olarak hangi Orchestrator 'ın kullanılacağı hakkında rehberlik verilmektedir.
 
-![Azure Kubernetes Hizmetleri, Linux 'ta Windows 'dan daha fazla yetişkin olur ve genellikle kapsayıcılara göre mikro hizmetleri dağıtmak için kullanılır. Azure Service Fabric (hem küme hem de ağ), Windows 'da, genellikle, normal işlemlere ve durum bilgisi olan hizmet tabanlı mikro hizmetlere göre mikro hizmetler için kullanılan Linux 'tan daha fazla yetişkin 'dir.](media/image40.png)
+![Kubernetes ve Service Fabric karşılaştıran bir tablonun görüntüsü.](media/orchestrate-high-scalability-availability/orchestrator-selection-azure-guidance.png)
 
 **Şekil 4-16**. Azure kılavuzunda Orchestrator seçimi
 
 >[!div class="step-by-step"]
->[Önceki](soa-applications.md)İleri
->[](deploy-azure-kubernetes-service.md)
+>[Önceki](soa-applications.md)
+>[İleri](deploy-azure-kubernetes-service.md)

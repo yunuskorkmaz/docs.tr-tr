@@ -2,12 +2,12 @@
 title: Cloud Native DevOps
 description: Azure için Cloud Native .NET uygulamaları tasarlama | Cloud Native DevOps
 ms.date: 06/30/2019
-ms.openlocfilehash: a056da833d7c6da11ab956337b77deab5e9bd159
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 84d37d14af8a68a51088568ded05ceef2e5e11fb
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71183191"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72393723"
 ---
 # <a name="cloud-native-devops"></a>Cloud Native DevOps
 
@@ -15,7 +15,7 @@ ms.locfileid: "71183191"
 
 Yazılım danışmanlarına yönelik sık kullanılan mantradır, ortaya çıkar. Yazılım danışmanları bir konum olmadığı için bu değildir. Bunun nedeni, yazılımdaki sorulara hiç bir doğru yanıt olmaması nedeniyle oluşur. Mutlak doğru ve yanlış yoktur, ancak Opposites arasında bir denge vardır.
 
-Web uygulamaları geliştirmesinin iki ana okulu gibi gerçekleştirin: Tek sayfalı uygulamalar (maça 'Lar) sunucu tarafı uygulamalara karşı. Tek bir yandan, Kullanıcı deneyimi, maça ile daha iyi bir şekilde eğilimlidir ve Web sunucusuna giden trafik miktarı en aza indirilmesine olanak tanır ve bunları statik barındırma olarak basit bir şekilde barındırabilirsiniz. Diğer yandan, maça geliştirme ve test etme konusunda daha zor olmaya zorlar. Doğru seçim hangisi? Ayrıca, durumunuza bağlıdır.
+Örneğin, Web uygulamaları geliştirmesinin iki ana okulu olmak üzere: tek sayfalı uygulamalar (maça 'Lar) sunucu tarafı uygulamalara karşı gerçekleştirin. Tek bir yandan, Kullanıcı deneyimi, maça ile daha iyi bir şekilde eğilimlidir ve Web sunucusuna giden trafik miktarı en aza indirilmesine olanak tanır ve bunları statik barındırma olarak basit bir şekilde barındırabilirsiniz. Diğer yandan, maça geliştirme ve test etme konusunda daha zor olmaya zorlar. Doğru seçim hangisi? Ayrıca, durumunuza bağlıdır.
 
 Bulutta yerel uygulamalar aynı dichotomy öğesine etkilenmez. Geliştirme, kararlılık ve ölçeklenebilirlik hızı açısından açık avantajlar vardır ancak bunları yönetmek oldukça zor olabilir.
 
@@ -35,7 +35,7 @@ DevOps 'a geldiğinde altın bir hayosız yoktur. Hiç kimse, yüksek kaliteli u
 
 ## <a name="azure-devops"></a>Azure DevOps
 
-Azure DevOps 'ın uzun bir Pedigree vardır. Team Foundation Server ilk olarak çevrimiçi taşındığında ve çeşitli ad değişikliklerinden, köklerinin geri izini yapabilir: Visual Studio Online ve Visual Studio Team Services. Ancak, yıl boyunca öncüllerinden çok daha fazla hale geldi.
+Azure DevOps 'ın uzun bir Pedigree vardır. Team Foundation Server ilk olarak çevrimiçi taşındığında ve çeşitli ad değişikliklerinden sonra, köklerinin geri izini yapabilir: Visual Studio Online ve Visual Studio Team Services. Ancak, yıl boyunca öncüllerinden çok daha fazla hale geldi.
 
 Azure DevOps, beş ana bileşene ayrılmıştır:
 
@@ -78,13 +78,13 @@ Azure DevOps projesi içindeki mikro hizmetler için kod bölmek biraz daha zor 
 
 Mikro hizmetlerin arkasındaki önemli fikirlerden biri, hizmetlerin yığılıyor ve birbirinden ayrılması gerekir. Hizmetin sınırlarına karar vermek için etki alanı odaklı tasarım kullanırken hizmetler işlem sınırları olarak davranır. Veritabanı güncelleştirmeleri birden çok hizmete yayılmamalıdır. İlgili verilerin bu koleksiyonu, sınırlanmış bir bağlam olarak adlandırılır.  Bu fikir, mikro hizmet verilerinin, hizmetlerin geri kalanından ayrı ve otonom bir veritabanına yalıtımına göre yansıtılmıştır. Bu fikri, kaynak koda kadar tüm şekilde taşımak için harika bir fikir sunar.
 
-Ancak, bu yaklaşım sorunları olmadan değildir. Bizim için daha fazla ölçülü geliştirme sorunlarından biri bağımlılıkları yönetiyor. Ortalama `node_modules` dizini oluşturan dosya sayısını göz önünde bulundurun. Yeni bir yüklemenin, binlerce paket `create-react-app` ile karşılaşmanı olasıdır. Bu bağımlılıkların nasıl yönetileceği sorusu zor bir olaydır. 
+Ancak, bu yaklaşım sorunları olmadan değildir. Bizim için daha fazla ölçülü geliştirme sorunlarından biri bağımlılıkları yönetiyor. Ortalama `node_modules` dizinini oluşturan dosya sayısını göz önünde bulundurun. @No__t-0 gibi bir şeyin yeni yüklemesi, binlerce paket ile karşılaştırabileceği için büyük olasılıkla. Bu bağımlılıkların nasıl yönetileceği sorusu zor bir olaydır. 
 
-Bir bağımlılık güncelleştirilirse, aşağı akış paketleri de bu bağımlılığı güncelleştirmelidir. Ne yazık ki, her ne kadar `node_modules` , geliştirme işini sağlayan, dizin, tek bir paketin birden çok sürümü ile sona erirken, her biri farklı bir temposunda sürümü sürümlü diğer bir paketin bağımlılığı. Bir uygulama dağıtıldığında, hangi bağımlılık sürümü kullanılmalıdır? Şu anda üretimde olan sürüm mi? Şu anda beta sürümünde olan, ancak müşterinin üretime yaptığı zamana göre üretimde olma olasılığı yüksektir mi? Yalnızca mikro hizmetler kullanılarak çözümlenmeyen zor sorunlar.
+Bir bağımlılık güncelleştirilirse, aşağı akış paketleri de bu bağımlılığı güncelleştirmelidir. Ne yazık ki, `node_modules` dizini, her biri tek bir paketin birden çok sürümü ile sona erirken, her biri farklı bir temposunda sürümü sürümlü diğer bir paketin bağımlılığı olan her bir bir paketin bağımlılığı olan. Bir uygulama dağıtıldığında, hangi bağımlılık sürümü kullanılmalıdır? Şu anda üretimde olan sürüm mi? Şu anda beta sürümünde olan, ancak müşterinin üretime yaptığı zamana göre üretimde olma olasılığı yüksektir mi? Yalnızca mikro hizmetler kullanılarak çözümlenmeyen zor sorunlar.
 
 Çok çeşitli projeler tarafından bağımlı olan kitaplıklar vardır. Mikro hizmetleri her bir depodaki bir biriyle ayırarak iç bağımlılıklar, Azure Artifacts iç depo kullanılarak en iyi şekilde çözülebilir. Kitaplıklar için derlemeler, en son sürümlerini iç tüketim için Azure Artifacts içine gönderir. Yeni güncellenen paketlere bağımlılığı almak için aşağı akış projesi yine de el ile güncellenmelidir.
 
-Diğer bir dezavantajı ise kodu hizmetler arasında taşırken kendisini gösterir. Bir uygulamanın mikro hizmetlere ilk bölümünün% 100 doğru olduğunu düşünmesinin iyi hale getirilememesine karşın, gerçekliği nadiren bir hizmet bölme hatası yapmakla karşılaşıyoruz. Bu nedenle, işlevleri ve bunu destekleyen kodun hizmetten hizmete: depodan depoya taşınması gerekir. Bir depodan diğerine, kod, geçmişi kaybeder. Özellikle bir denetim durumunda, kod parçası üzerinde tam geçmişin çok değerli olduğu birçok durum vardır.
+Diğer bir dezavantajı ise kodu hizmetler arasında taşırken kendisini gösterir. Bir uygulamanın mikro hizmetlere ilk bölümünün %100 doğru olduğunu düşünmesinin iyi hale getirilememesine karşın, gerçekliği nadiren bir hizmet bölme hatası yapmakla karşılaşıyoruz. Bu nedenle, işlevleri ve bunu destekleyen kodun hizmetten hizmete: depodan depoya taşınması gerekir. Bir depodan diğerine, kod, geçmişi kaybeder. Özellikle bir denetim durumunda, kod parçası üzerinde tam geçmişin çok değerli olduğu birçok durum vardır.
 
 Son ve belki de en önemli dezavantajı değişiklikleri koordine etme. Doğru bir mikro hizmet uygulamasında hizmetler arasında dağıtım bağımlılığı olmamalıdır. Hizmet bir, B ve C 'nin gevşek bir şekilde, her türlü sırada dağıtılması mümkün olmalıdır. Bununla birlikte, aynı anda birden çok depodan geçen bir değişikliği yapmak istenen durumlar da vardır. Bazı örnekler, bir güvenlik deliği kapatmak veya tüm hizmetler tarafından kullanılan bir iletişim protokolünü değiştirmek için bir kitaplığı güncelleştirmeyi içerir.
 
@@ -118,7 +118,7 @@ Tek ve birden çok depolardan bağımsız olarak, her hizmetin kendi dizini olur
 
 ![Şekil 11-3 hem e-posta hem de oturum açma hizmetleri için standart bir dizin yapısı](./media/dir-struct.png)
 
-Yeni bir proje oluşturulduğunda, doğru yapıyı yerine koyan bir şablon kullanılmalıdır. Bu şablon, bir iskelet BENIOKU dosyası ve olan `azure-pipelines.yml`bu kullanışlı öğeleri de içerebilir. Herhangi bir mikro hizmet mimarisinde, projeler arasında yüksek ölçüde fark, hizmetlere karşı toplu işlemler yapar ve daha zordur.
+Yeni bir proje oluşturulduğunda, doğru yapıyı yerine koyan bir şablon kullanılmalıdır. Bu şablon, bir iskelet BENIOKU dosyası ve bir `azure-pipelines.yml` gibi faydalı öğeleri de içerebilir. Herhangi bir mikro hizmet mimarisinde, projeler arasında yüksek ölçüde fark, hizmetlere karşı toplu işlemler yapar ve daha zordur.
 
 Çeşitli kaynak kodu dizinleri içeren tüm dizin için şablon oluşturma sağlayabilen birçok araç vardır. [Yeumman](https://yeoman.io/) JavaScript dünyasında popüler ve GitHub, yakın zamanda aynı işlevselliğin çoğunu sağlayan [Depo şablonları](https://github.blog/2019-06-06-generate-new-repositories-with-repository-templates/)yayımlamıştır.
 
@@ -128,7 +128,7 @@ Herhangi bir projede görevleri yönetmek zor olabilir. En iyi geliştirici üre
 
 Bulutta yerel uygulamalar, geleneksel yazılım ürünlerinden daha küçük olma eğilimindedir veya en azından daha küçük hizmetlere bölünmüştür. Bu hizmetlerle ilgili sorunları veya görevleri izlemek, diğer herhangi bir yazılım projesiyle olduğu kadar önemli olmaya devam eder. Hiç kimse, bazı iş öğelerini izlemeyi kaybetmek veya bir müşteriye, sorununun düzgün şekilde günlüğe kaydedilmez. Panolar proje düzeyinde yapılandırılır, ancak her bir proje içinde, alan tanımlanabilir. Bunlar, çeşitli bileşenlerin tamamında sorunları ortadan kaldırma izni verir. Tüm işleri tek bir yerde tutmanın avantajı, iş öğelerini bir ekipten diğerine daha iyi anlaşıldığında daha kolay bir şekilde taşımanın avantajlarından biridir.
 
-Azure DevOps, önceden yapılandırılmış bir dizi popüler şablonlarla birlikte gelir. En temel yapılandırmada, tüm kullanıcılar kapsam içinde, hangi kişilerin üzerinde çalıştığı ve ne yapılması gerektiği hakkında bilgi verilir. Bu, yazılım oluşturma işleminin bu görünürlüğe sahip olması önemlidir. böylece iş, müşteriye bildirilen Önceliklendirmeleri ve tamamlanmış görevleri gerçekleştirebilir. Kuşkusuz, çok az sayıda yazılım projesi bir işlemi, ve `to do` `done`gibi `doing`basit bir şekilde kolaylaştırır. Kullanıcıların işleme veya `QA` `Detailed Specification` işleme gibi adımları eklemeye başlaması uzun sürmez.
+Azure DevOps, önceden yapılandırılmış bir dizi popüler şablonlarla birlikte gelir. En temel yapılandırmada, tüm kullanıcılar kapsam içinde, hangi kişilerin üzerinde çalıştığı ve ne yapılması gerektiği hakkında bilgi verilir. Bu, yazılım oluşturma işleminin bu görünürlüğe sahip olması önemlidir. böylece iş, müşteriye bildirilen Önceliklendirmeleri ve tamamlanmış görevleri gerçekleştirebilir. Kuşkusuz, çok az sayıda yazılım projesi `to do`, `doing` ve `done` kadar basit bir işlem sağlar. Kullanıcıların işleme `QA` veya `Detailed Specification` gibi adımları eklemeye başlaması uzun sürmez.
 
 Çevik yöntemlerden daha önemli parçalarından biri, düzenli aralıklarla kendi kendine iç denetim. Bu incelemeler, takımın karşılaştığı sorunlar ve nasıl iyileştirilen hakkında öngörü sağlamak için tasarlanmıştır. Bu, genellikle geliştirme sürecinde sorun ve özellik akışını değiştirmenin anlamı anlamına gelir. Bu nedenle, pano düzenlerini ek aşamalarla genişletmek mükemmel bir durumda.
 
@@ -166,7 +166,7 @@ Derleme ve teslim sürecini otomatikleştirmeye önem derecesi, bulutta yerel uy
 
 Azure DevOps, sürekli tümleştirme ve dağıtımı her zamankinden daha kolay hale getirmek için bir araç kümesi sağlar. Bu araçlar Azure Pipelines altında bulunur. Birincisi, YAML tabanlı derleme tanımlarını bir ölçekte çalıştırmaya yönelik bir araç olan Azure Derlemeleriyle yapılır. Kullanıcılar kendi derleme makinelerini getirebilir (derleme için çok dikkatli bir kurulum ortamı gerektiriyorsa) veya Azure 'da barındırılan sanal makinelerin sürekli yenilenmiş havuzundan bir makine kullanabilirsiniz. Bu barındırılan derleme aracıları, yalnızca .NET geliştirmesi değil, Java 'dan Python 'a kadar her şey için çok çeşitli geliştirme araçlarıyla önceden yüklenmiş olarak gelir.
 
-DevOps, her derleme için özelleştirilebilen çok sayıda kullanıma hazır derleme tanımları içerir. Yapı tanımları, kaynak kodla birlikte sürümlendiribilecekleri `azure-pipelines.yml` şekilde, adlı bir dosyada tanımlanır ve depoya iade edilir. Bu, değişiklikler yalnızca o dala iade edilebilir olduğundan, bir dalda derleme ardışık düzeninde değişiklik yapmayı çok daha kolay hale getirir. Şekil 11-8 `azure-pipelines.yml` ' de, tam çerçeve üzerinde ASP.NET Web uygulaması oluşturmaya yönelik bir örnek gösterilmektedir.
+DevOps, her derleme için özelleştirilebilen çok sayıda kullanıma hazır derleme tanımları içerir. Yapı tanımları `azure-pipelines.yml` adlı bir dosyada tanımlanır ve kaynak kodla birlikte sürümlendiribilecekleri şekilde depoya iade edilir. Bu, değişiklikler yalnızca o dala iade edilebilir olduğundan, bir dalda derleme ardışık düzeninde değişiklik yapmayı çok daha kolay hale getirir. Şekil 11-8 ' de, tam çerçeve üzerinde ASP.NET Web uygulaması oluşturmak için 0 @no__t bir örnek gösterilmektedir.
 
 ```yml
 name: $(rev:r)
@@ -200,7 +200,7 @@ steps:
   displayName: 'Build solution'
   inputs:
     solution: '$(solution)'
-    msbuildArgs: '/p:DeployOnBuild=true /p:WebPublishMethod=Package /p:PackageAsSingleFile=true /p:SkipInvalidConfigurations=true /p:PackageLocation="$(build.artifactstagingdirectory)\\"'
+    msbuildArgs: '-p:DeployOnBuild=true -p:WebPublishMethod=Package -p:PackageAsSingleFile=true -p:SkipInvalidConfigurations=true -p:PackageLocation="$(build.artifactstagingdirectory)\\"'
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
 
@@ -250,7 +250,7 @@ Derlemedeki her aşama, önceki aşamanın tamamlanmasına göre otomatik olarak
 
 ### <a name="versioning-releases"></a>Sürüm oluşturma sürümleri
 
-Yayınlar işlevini kullanmanın bir dezavantajı, iade edilmiş `azure-pipelines.yml` dosyada tanımlanamıyoruz. Proje şablonunuzda bir yayın iskeçine dahil etmek için dal başına sürüm tanımlarının olmasını sağlamak isteyebileceğiniz birçok neden vardır. Neyse ki, bazı aşamalar desteğini yapı bileşenine kaydırmak için iş devam etmektedir. Bu, çok aşamalı derleme olarak bilinir ve [ilk sürüm şimdi kullanılabilir](https://devblogs.microsoft.com/devops/whats-new-with-azure-pipelines/)olacaktır!
+Yayınlar işlevini kullanmanın bir dezavantajı, iade edilen `azure-pipelines.yml` dosyasında tanımlanamaz. Proje şablonunuzda bir yayın iskeçine dahil etmek için dal başına sürüm tanımlarının olmasını sağlamak isteyebileceğiniz birçok neden vardır. Neyse ki, bazı aşamalar desteğini yapı bileşenine kaydırmak için iş devam etmektedir. Bu, çok aşamalı derleme olarak bilinir ve [ilk sürüm şimdi kullanılabilir](https://devblogs.microsoft.com/devops/whats-new-with-azure-pipelines/)olacaktır!
 
 >[!div class="step-by-step"]
 >[Önceki](azure-security.md)

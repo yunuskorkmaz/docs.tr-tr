@@ -2,12 +2,12 @@
 title: Docker uygulamalarında durum ve veriler
 description: Kapsayıcılı uygulamalarda durumu kaydetmek için kullanılabilir seçeneğini öğrenin.
 ms.date: 02/15/2019
-ms.openlocfilehash: bc171a419632f2ac61c7c9bf6b201b84e0691c3a
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: b2368efb0eff2bdce48b77b2addcc4de89822c74
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70295693"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72394627"
 ---
 # <a name="state-and-data-in-docker-applications"></a>Docker uygulamalarında durum ve veriler
 
@@ -43,11 +43,11 @@ Birimler adlandırılmış veya anonim olabilir (varsayılan). Adlandırılmış
 
 **Bağlama bağlamalarda** uzun bir süre kullanılabilir ve bir kapsayıcıdaki bağlama noktasına herhangi bir klasörün eşlenmesiyle izin veriyor. BIND takmalar, birimlerden ve bazı önemli güvenlik sorunlarından daha fazla sınırlamalara sahiptir, bu nedenle birimler önerilen seçenektir.
 
-takar yalnızca konağın belleğinde yaşayan ve dosya sistemine hiçbir şekilde yazılmakta olan sanal klasörlerdir. **`tmpfs`** Bunlar hızlı ve güvenlidir, ancak bellek kullanır ve yalnızca kalıcı olmayan veriler için tasarlanmıştır.
+**`tmpfs` bağlama** yalnızca konağın belleğinde yaşayan ve dosya sistemine hiçbir şekilde yazılmakta olan sanal klasörlerdir. Bunlar hızlı ve güvenlidir, ancak bellek kullanır ve yalnızca kalıcı olmayan veriler için tasarlanmıştır.
 
 Şekil 4-5 ' de gösterildiği gibi, normal Docker birimleri kapsayıcı dışında, ancak konak sunucusunun veya VM 'nin fiziksel sınırları içinde depolanabilir. Ancak, Docker Kapsayıcıları bir birime bir konak sunucusundan veya VM 'den diğerine erişemez. Diğer bir deyişle, bu birimlerle, farklı Docker konaklarında çalışan kapsayıcılar arasında paylaşılan verileri yönetmek mümkün değildir, ancak uzak konakları destekleyen bir birim sürücüsüyle elde edilebilir.
 
-![Birimler, uzak konakları destekleyen uzak bir sürücü kullanmadığınız müddetçe, kapsayıcılar arasında yalnızca aynı konakta paylaşılabilir. ](./media/image5.png)
+![Kapsayıcılar dışında depolanan Docker birimlerinin gösterildiği diyagram.](./media/state-and-data-in-docker-applications/container-based-application-external-data-sources.png)
 
 **Şekil 4-5**. Kapsayıcı tabanlı uygulamalar için birimler ve dış veri kaynakları
 
@@ -66,5 +66,5 @@ Azure SQL veritabanı, Azure Cosmos DB veya redde gibi uzak bir önbellek gibi *
 **İlişkisel veritabanları ve NoSQL veritabanları.** Dış veritabanları için SQL Server, PostgreSQL, Oracle veya Azure Cosmos DB, MongoDB gibi NoSQL veritabanları gibi çok sayıda seçenek vardır. Bu veritabanları, farklı bir konu olduğundan, bu kılavuzun bir parçası olarak açıklanmıyor.
 
 >[!div class="step-by-step"]
->[Önceki](monolithic-applications.md)İleri
->[](soa-applications.md)
+>[Önceki](monolithic-applications.md)
+>[İleri](soa-applications.md)

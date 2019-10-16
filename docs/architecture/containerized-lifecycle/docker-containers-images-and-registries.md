@@ -2,12 +2,12 @@
 title: Docker kapsayıcıları, görüntüleri ve kayıt defterleri
 description: Kayıt defterlerinin, uygulamaları dağıtmanın Docker yolunda genel olarak oynamakta olduğu anahtar rolü öğrenin.
 ms.date: 02/15/2019
-ms.openlocfilehash: 7becadc3de16d96f8d6f167cf49c6cdd3bcc0d32
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 32240ac4f6dec67531d8e618cff153d235c073c7
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70295660"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72394621"
 ---
 # <a name="docker-containers-images-and-registries"></a>Docker kapsayıcıları, görüntüleri ve kayıt defterleri
 
@@ -19,9 +19,11 @@ Görüntüleri bir görüntü kitaplığı gibi davranan bir kayıt defterine de
 
 Şekil 1-4, Docker 'daki görüntülerin ve kayıt defterlerinin diğer bileşenlerle nasıl ilişkisi olduğunu gösterir. Ayrıca, satıcıların birden çok kayıt defteri teklifini gösterir.
 
-![Docker 'da temel taksonomi: Kayıt defteri, görüntülerin depolandığı ve hizmetleri ya da Web Apps 'i çalıştırmak üzere kapsayıcılar oluşturmak için çekilmek üzere kullanılabilecek bir Bookshelf gibidir. Şirket içinde ve genel bulutta özel Docker kayıt defterleri vardır. Docker Hub, Docker tarafından korunan ortak bir kayıt defteridir. Docker güvenilen kayıt defteri kurumsal düzeyde bir çözümde, Azure Azure Container Registry sunar. AWS, Google ve diğer kullanıcıların kapsayıcı kayıt defterleri de vardır.](./media/image4.png)
+![Docker 'da temel taksonomiyi gösteren bir diyagram.](./media/docker-containers-images-and-registries/taxonomy-docker-terms-concepts.png)
 
 **Şekil 1-4**. Docker hüküm ve kavramlarının sınıflandırması
+
+Kayıt defteri, görüntülerin depolandığı ve hizmetleri ya da Web Apps 'i çalıştırmak üzere kapsayıcılar oluşturmak için çekilmek üzere kullanılabilecek bir Bookshelf gibidir. Şirket içinde ve genel bulutta özel Docker kayıt defterleri vardır. Docker Hub, Docker tarafından korunan ortak bir kayıt defteridir. Docker güvenilen kayıt defteri kurumsal düzeyde bir çözümde, Azure Azure Container Registry sunar. AWS, Google ve diğer kullanıcıların kapsayıcı kayıt defterleri de vardır.
 
 Görüntüleri bir kayıt defterine yerleştirerek, tüm bağımlılıkları dahil olmak üzere statik ve değişmez uygulama bitlerini bir çerçeve düzeyinde saklayabilirsiniz. Daha sonra görüntüleri birden çok ortamda dağıtıp dağıtabilir ve böylece tutarlı bir dağıtım birimi sağlayabilirsiniz.
 
@@ -32,5 +34,5 @@ Görüntüleri bir kayıt defterine yerleştirerek, tüm bağımlılıkları dah
 - Resimleriniz ve seçtiğiniz dağıtım ortamınız arasında en düşük ağ gecikme süresine sahip olmak istiyorsunuz. Örneğin, üretim ortamınız Azure ise, büyük olasılıkla, ağ gecikmesi en düşük olması için görüntülerinizi [Azure Container Registry](https://azure.microsoft.com/services/container-registry/) saklamak isteyeceksiniz. Benzer bir şekilde, üretim ortamınız şirket içindeyse, aynı yerel ağ içinde şirket içi bir Docker güvenilir kayıt defteri kullanılabilir olmasını isteyebilirsiniz.
 
 >[!div class="step-by-step"]
->[Önceki](docker-terminology.md)İleri
->[](road-to-modern-applications-based-on-containers.md)
+>[Önceki](docker-terminology.md)
+>[İleri](road-to-modern-applications-based-on-containers.md)
