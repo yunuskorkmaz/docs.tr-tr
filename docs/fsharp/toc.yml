@@ -1,0 +1,272 @@
+- name: 'F# kılavuzu'
+  href: index.md
+- name: Başlarken
+  href: get-started/index.md
+  items:
+    - name: 'F# yükleme'
+      href: get-started/install-fsharp.md
+    - name: 'Visual Studio’da F# Kullanmaya Başlama'
+      href: get-started/get-started-visual-studio.md
+    - name: 'Mac için Visual Studio’da F# Kullanmaya Başlama'
+      href: get-started/get-started-with-visual-studio-for-mac.md
+    - name: 'Visual Studio Code ve Ionide’da F# Kullanmaya Başlama'
+      href: get-started/get-started-vscode.md
+    - name: '.NET Core CLI’de F# Kullanmaya Başlama'
+      href: get-started/get-started-command-line.md
+- name: 'F# nedir?'
+  href: what-is-fsharp.md
+- name: 'F# Turu'
+  href: tour.md
+- name: Öğreticiler
+  items:
+    - name: İşlevsel Programlamaya Giriş
+      href: introduction-to-functional-programming/index.md
+      items:
+        - name: Birinci sınıf işlevler
+          href: introduction-to-functional-programming/first-class-functions.md
+    - name: Zaman Uyumsuz ve Eş Zamanlı Programlama
+      items:
+        - name: Zaman Uyumsuz Programlama
+          href: tutorials/asynchronous-and-concurrent-programming/async.md
+    - name: Tür Sağlayıcıları
+      href: tutorials/type-providers/index.md
+      items:
+        - name: Tür Sağlayıcısı Oluşturma
+          href: tutorials/type-providers/creating-a-type-provider.md
+        - name: Tür Sağlayıcısı Güvenliği
+          href: tutorials/type-providers/type-provider-security.md
+        - name: Tür Sağlayıcıları Sorunlarını Giderme
+          href: tutorials/type-providers/troubleshooting-type-providers.md
+    - name: 'F# Etkileşimli'
+      href: tutorials/fsharp-interactive/index.md
+- name: 'F# Dili Başvurusu'
+  href: language-reference/index.md
+  items:
+    - name: Klavye Başvurusu
+      href: language-reference/keyword-reference.md
+    - name: Simge ve İşleç Başvurusu
+      href: language-reference/symbol-and-operator-reference/index.md
+      items:
+        - name: Aritmetik İşleçler
+          href: language-reference/symbol-and-operator-reference/arithmetic-operators.md
+        - name: Boole İşleçleri
+          href: language-reference/symbol-and-operator-reference/boolean-operators.md
+        - name: Bitwise İşleçleri
+          href: language-reference/symbol-and-operator-reference/bitwise-operators.md
+        - name: Boş Değer Atanabilir İşleçler
+          href: language-reference/symbol-and-operator-reference/nullable-operators.md
+    - name: İşlevler
+      href: language-reference/functions/index.md
+      items:
+        - name: let Bağlamaları
+          href: language-reference/functions/let-bindings.md
+        - name: do Bağlamaları
+          href: language-reference/functions/do-bindings.md
+        - name: 'Lambda İfadeleri: fun anahtar sözcüğü'
+          href: language-reference/functions/lambda-expressions-the-fun-keyword.md
+        - name: 'Yinelemeli İşlevler: rec anahtar sözcüğü'
+          href: language-reference/functions/recursive-functions-the-rec-keyword.md
+        - name: Girdi Noktası
+          href: language-reference/functions/entry-point.md
+        - name: Dış İşlevler
+          href: language-reference/functions/external-functions.md
+        - name: Satır İçi İşlevler
+          href: language-reference/functions/inline-functions.md
+    - name: Değerler
+      href: language-reference/values/index.md
+      items:
+        - name: Boş Değerler
+          href: language-reference/values/null-values.md
+    - name: Sabit değerler
+      href: language-reference/literals.md
+    - name: 'F# Türleri'
+      href: language-reference/fsharp-types.md
+    - name: Tür Çıkarma
+      href: language-reference/type-inference.md
+    - name: Temel Türler
+      href: language-reference/basic-types.md
+    - name: Birim Türü
+      href: language-reference/unit-type.md
+    - name: Dizeler
+      href: language-reference/strings.md
+    - name: Demetler
+      href: language-reference/tuples.md
+    - name: 'F# Koleksiyon Türleri'
+      href: language-reference/fsharp-collection-types.md
+    - name: Listeler
+      href: language-reference/lists.md
+    - name: Diziler
+      href: language-reference/arrays.md
+    - name: Diziler
+      href: language-reference/sequences.md
+    - name: Dilimler
+      href: language-reference/slices.md
+    - name: Seçenekler
+      href: language-reference/options.md
+    - name: Değer Seçenekleri
+      href: language-reference/value-options.md
+    - name: Sonuçlar
+      href: language-reference/results.md
+    - name: Genel Türler
+      href: language-reference/generics/index.md
+      items:
+        - name: Otomatik Genelleştirme
+          href: language-reference/generics/automatic-generalization.md
+        - name: Kısıtlamalar
+          href: language-reference/generics/constraints.md
+        - name: Statik Olarak Çözümlenmiş Tür Parametreleri
+          href: language-reference/generics/statically-resolved-type-parameters.md
+    - name: Kayıtlar
+      href: language-reference/records.md
+    - name: Anonim Kayıtlar
+      href: language-reference/anonymous-records.md
+    - name: Kayıt İfadelerini Kopyalama ve Güncelleştirme
+      href: language-reference/copy-and-update-record-expressions.md
+    - name: Ayrılmış Birleşimler
+      href: language-reference/discriminated-unions.md
+    - name: Numaralandırmalar
+      href: language-reference/enumerations.md
+    - name: Tür Kısaltmaları
+      href: language-reference/type-abbreviations.md
+    - name: Sınıflar
+      href: language-reference/classes.md
+    - name: Yapılar
+      href: language-reference/structures.md
+    - name: Devralma
+      href: language-reference/inheritance.md
+    - name: Arabirimler
+      href: language-reference/interfaces.md
+    - name: Soyut sınıflar
+      href: language-reference/abstract-classes.md
+    - name: Üyeler
+      href: language-reference/members/index.md
+      items:
+        - name: Sınıflardaki let Bağlamaları
+          href: language-reference/members/let-bindings-in-classes.md
+        - name: Sınıflardaki do Bağlamaları
+          href: language-reference/members/do-bindings-in-classes.md
+        - name: Özellikler
+          href: language-reference/members/properties.md
+        - name: Dizini Oluşturulan Özellikler
+          href: language-reference/members/indexed-properties.md
+        - name: Yöntemler
+          href: language-reference/members/methods.md
+        - name: Oluşturucular
+          href: language-reference/members/constructors.md
+        - name: Olaylar
+          href: language-reference/members/events.md
+        - name: 'Açık Alanlar: `val` Anahtar Sözcüğü'
+          href: language-reference/members/explicit-fields-the-val-keyword.md
+    - name: Tür Genişletmeleri
+      href: language-reference/type-extensions.md
+    - name: Parametreler ve Bağımsız Değişkenler
+      href: language-reference/parameters-and-arguments.md
+    - name: İşleç Aşırı Yüklemesi
+      href: language-reference/operator-overloading.md
+    - name: Esnek Türler
+      href: language-reference/flexible-types.md
+    - name: Temsilciler
+      href: language-reference/delegates.md
+    - name: Nesne İfadeleri
+      href: language-reference/object-expressions.md
+    - name: Atama ve Dönüştürmeler
+      href: language-reference/casting-and-conversions.md
+    - name: Erişim Denetimi
+      href: language-reference/access-control.md
+    - name: 'Koşullu İfadeler: if...then...else'
+      href: language-reference/conditional-expressions-if-then-else.md
+    - name: Eşleşme İfadeleri
+      href: language-reference/match-expressions.md
+    - name: Desen Eşleştirme
+      href: language-reference/pattern-matching.md
+    - name: Etkin Desenler
+      href: language-reference/active-patterns.md
+    - name: 'Döngüler: for...to İfadesi'
+      href: language-reference/loops-for-to-expression.md
+    - name: 'Döngüler: for...in İfadesi'
+      href: language-reference/loops-for-in-expression.md
+    - name: 'Döngüler: while...do İfadesi'
+      href: language-reference/loops-while-do-expression.md
+    - name: Onaylamalar
+      href: language-reference/assertions.md
+    - name: Özel Durum İşleme
+      href: language-reference/exception-handling/index.md
+      items:
+        - name: Özel Durum Türleri
+          href: language-reference/exception-handling/exception-types.md
+        - name: try...with İfadesi
+          href: language-reference/exception-handling/the-try-with-expression.md
+        - name: try...finally İfadesi
+          href: language-reference/exception-handling/the-try-finally-expression.md
+        - name: raise İşlevi
+          href: language-reference/exception-handling/the-raise-function.md
+        - name: failwith İşlevi
+          href: language-reference/exception-handling/the-failwith-function.md
+        - name: invalidArg İşlevi
+          href: language-reference/exception-handling/the-invalidArg-function.md
+    - name: Öznitelikler
+      href: language-reference/attributes.md
+    - name: 'Kaynak Yönetimi: use Anahtar Sözcüğü'
+      href: language-reference/resource-management-the-use-keyword.md
+    - name: Ad Alanları
+      href: language-reference/namespaces.md
+    - name: Modüller
+      href: language-reference/modules.md
+    - name: 'Önemli Bildirimler: open Anahtar Sözcüğü'
+      href: language-reference/import-declarations-the-open-keyword.md
+    - name: İmza Dosyaları
+      href: language-reference/signature-files.md
+    - name: Ölçü Birimleri
+      href: language-reference/units-of-measure.md
+    - name: XML Belgeleri
+      href: language-reference/xml-documentation.md
+    - name: Gecikmeli İfadeler
+      href: language-reference/lazy-expressions.md
+    - name: Hesaplama İfadeleri
+      href: language-reference/computation-expressions.md
+    - name: Zaman Uyumsuz İş Akışları
+      href: language-reference/asynchronous-workflows.md
+    - name: Sorgu İfadeleri
+      href: language-reference/query-expressions.md
+    - name: Kod Tırnak İşaretleri
+      href: language-reference/code-quotations.md
+    - name: Fixed anahtar sözcüğü
+      href: language-reference/fixed.md
+    - name: ByRef’ler
+      href: language-reference/byrefs.md
+    - name: Başvuru Hücreleri
+      href: language-reference/reference-cells.md
+    - name: Derleyici Yönergeleri
+      href: language-reference/compiler-directives.md
+    - name: Derleyici Seçenekleri
+      href: language-reference/compiler-options.md
+    - name: 'F# Etkileşimli Seçenekleri'
+      href: language-reference/fsharp-interactive-options.md
+    - name: 'Kaynak Satırı, Dosya ve Yol Tanımlayıcıları'
+      href: language-reference/source-line-file-path-identifiers.md
+    - name: Arayan Bilgileri
+      href: language-reference/caller-information.md
+    - name: Ayrıntılı Sözdizimi
+      href: language-reference/verbose-syntax.md
+- name: 'F# stil kılavuzu'
+  href: style-guide/index.md
+  items:
+    - name: 'F# kod biçimlendirme yönergeleri'
+      href: style-guide/formatting.md
+    - name: 'F# kodlama kuralları'
+      href: style-guide/conventions.md
+    - name: 'F# bileşen tasarımı yönergeleri'
+      href: style-guide/component-design-guidelines.md
+- name: 'Azure’da F# Kullanma'
+  href: using-fsharp-on-azure/index.md
+  items:
+    - name: 'F# kullanarak Azure Blob depolama kullanmaya başlama'
+      href: using-fsharp-on-azure/blob-storage.md
+    - name: 'F# kullanarak Azure Dosya depolama kullanmaya başlama'
+      href: using-fsharp-on-azure/file-storage.md
+    - name: 'F# kullanarak Azure Kuyruk depolama kullanmaya başlama'
+      href: using-fsharp-on-azure/queue-storage.md
+    - name: 'F# kullanarak Azure Tablo depolama kullanmaya başlama'
+      href: using-fsharp-on-azure/table-storage.md
+    - name: 'F# Azure Bağımlılıkları için Paket Yönetimi'
+      href: using-fsharp-on-azure/package-management.md
