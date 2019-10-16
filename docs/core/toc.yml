@@ -1,0 +1,331 @@
+- name: .NET Core Kılavuzu
+  href: index.md
+- name: .NET Core hakkında
+  href: about.md
+- name: Kullanmaya başlayın
+  href: get-started.md
+  items:
+    - name: 'C# ve Visual Studio Code kullanmaya başlama'
+      href: tutorials/with-visual-studio-code.md
+    - name: 'Visual Studio 2017’de .NET Core ile bir C# Merhaba Dünya uygulaması derleme'
+      href: tutorials/with-visual-studio.md
+    - name: Visual Studio 2017’de .NET Core ile bir Visual Basic Merhaba Dünya uygulaması derleme
+      href: tutorials/vb-with-visual-studio.md
+    - name: 'Visual Studio 2017’yi kullanarak C# veya Visual Basic .NET Core Merhaba Dünya uygulamanızda hata ayıklama'
+      href: tutorials/debugging-with-visual-studio.md
+    - name: Visual Studio 2017 ile Merhaba Dünya uygulamanızı yayımlama
+      href: tutorials/publishing-with-visual-studio.md
+    - name: 'Visual Studio 2017’de C# ve .NET Core ile bir .NET Standard kitaplığı derleme'
+      href: tutorials/library-with-visual-studio.md
+    - name: Visual Studio 2017’de Visual Basic ve .NET Core ile bir .NET Standard kitaplığı derleme
+      href: tutorials/vb-library-with-visual-studio.md
+    - name: Visual Studio 2017’de NET Core ile bir .NET Standard kitaplığını test etme
+      href: tutorials/testing-library-with-visual-studio.md
+    - name: Visual Studio 2017’de bir .NET Standard kitaplığı kullanma
+      href: tutorials/consuming-library-with-visual-studio.md
+- name: Windows Önkoşulları
+  href: windows-prerequisites.md
+- name: macOS Önkoşulları
+  href: macos-prerequisites.md
+- name: Linux Önkoşulları
+  href: linux-prerequisites.md
+- name: ​.NET Core’daki yenilikler
+  items:
+    - name: ​.NET Core 3.0’daki yenilikler
+      href: whats-new/dotnet-core-3-0.md
+    - name: ​.NET Core 2.2’deki yenilikler
+      href: whats-new/dotnet-core-2-2.md
+    - name: ​.NET Core 2.1’deki yenilikler
+      href: whats-new/dotnet-core-2-1.md
+    - name: ​.NET Core 2.0’deki yenilikler
+      href: whats-new/dotnet-core-2-0.md
+- name: Uygulama Uyumluluğu
+  href: compatibility/
+- name: Öğreticiler
+  href: tutorials/index.md
+  items:
+    - name: CLI için şablonlar
+      items:
+        - name: 1 - Öğe şablonu oluşturma
+          href: tutorials/cli-templates-create-item-template.md
+        - name: 2 - Proje şablonu oluşturma
+          href: tutorials/cli-templates-create-project-template.md
+        - name: 3 - Şablon paketi oluşturma
+          href: tutorials/cli-templates-create-template-pack.md
+    - name: MacOS üzerinde .NET Core kullanmaya başlama
+      href: tutorials/using-on-macos.md
+    - name: Mac için Visual Studio kullanarak macOS üzerinde .NET Core kullanmaya başlama
+      href: tutorials/using-on-mac-vs.md
+    - name: Mac için Visual Studio kullanarak macOS’ta eksiksiz bir .NET Core çözümü derleme
+      href: tutorials/using-on-mac-vs-full-solution.md
+    - name: CLI araçları ile .NET Core kullanmaya başlama
+      href: tutorials/using-with-xplat-cli.md
+    - name: .NET Core komut satırı ile projeleri düzenleme ve test etme
+      href: tutorials/testing-with-cli.md
+    - name: Platformlar Arası Araçlarla Kitaplık Geliştirme
+      href: tutorials/libraries.md
+    - name: Eklentilerle .NET Core uygulaması oluşturma
+      href: tutorials/creating-app-with-plugin-support.md
+    - name: ASP.NET Core uygulamaları geliştirme
+      href: tutorials/aspnet-core.md
+    - name: Yerel koddan .NET Core barındırma
+      href: tutorials/netcore-hosting.md
+- name: Native ile Birlikte Çalışma
+  items:
+    - name: .NET Core Bileşenlerini COM’da Gösterme
+      href: native-interop/expose-components-to-com.md
+- name: 'Paketler, Meta Paketler ve Çerçeveler'
+  href: packages.md
+- name: CLI’daki değişikliklere genel bakış
+  href: tools/cli-msbuild-architecture.md
+  items:
+    - name: Bağımlılık yönetimi
+      href: tools/dependencies.md
+    - name: Csproj biçimine eklenenler
+      href: tools/csproj.md
+- name: Geçiş
+  items:
+    - name: .NET Core 2.0’dan 2.1’e geçiş
+      href: migration/20-21.md
+    - name: Project.json’dan geçiş
+      href: migration/index.md
+    - name: Project.json ile csproj arasında eşleme
+      href: tools/project-json-to-csproj.md
+    - name: DNX’ten geçiş
+      href: migration/from-dnx.md
+- name: Uygulama Dağıtımı
+  href: deploying/index.md
+  items:
+    - name: CLI araçlarıyla uygulama dağıtma
+      href: deploying/deploy-with-cli.md
+    - name: Visual Studio ile uygulama dağıtma
+      href: deploying/deploy-with-vs.md
+    - name: Platformlar Arası Araçlarla NuGet Paketi Oluşturma
+      href: deploying/creating-nuget-packages.md
+    - name: Kendi içinde dağıtım çalışma zamanını ileri sarma
+      href: deploying/runtime-patch-selection.md
+    - name: Çalışma zamanı paket deposu
+      href: deploying/runtime-store.md
+- name: Docker
+  items:
+    - name: .NET ve Docker’a Giriş
+      href: docker/introduction.md
+    - name: .NET Core uygulamasını kapsayıcılı hale getirme
+      href: docker/build-container.md
+    - name: Visual Studio’da Kapsayıcı Araçları
+      href: /visualstudio/containers/overview
+- name: Tanılama araçları
+  items:
+    - name: Genel Bakış
+      href: diagnostics/index.md
+    - name: Yönetilen hata ayıklayıcıları
+      href: diagnostics/managed-debuggers.md
+    - name: Günlüğe kaydetme ve izleme
+      href: diagnostics/logging-tracing.md
+    - name: .NET Core CLI genel araçları
+      items:
+        - name: dotnet-counters
+          href: diagnostics/dotnet-counters.md
+        - name: dotnet-dump
+          href: diagnostics/dotnet-dump.md
+        - name: dotnet-trace
+          href: diagnostics/dotnet-trace.md
+- name: Birim Testi
+  href: testing/index.md
+  items:
+    - name: Birim testi en iyi deneyimler
+      href: testing/unit-testing-best-practices.md
+    - name: 'xUnit ile C# birim testi'
+      href: testing/unit-testing-with-dotnet-test.md
+    - name: 'NUnit ile C# birim testi'
+      href: testing/unit-testing-with-nunit.md
+    - name: 'MSTest ile C# birim testi'
+      href: testing/unit-testing-with-mstest.md
+    - name: 'xUnit ile F# birim testi'
+      href: testing/unit-testing-fsharp-with-dotnet-test.md
+    - name: 'NUnit ile F# birim testi'
+      href: testing/unit-testing-fsharp-with-nunit.md
+    - name: 'MSTest ile F# birim testi'
+      href: testing/unit-testing-fsharp-with-mstest.md
+    - name: xUnit ile VB birim testi
+      href: testing/unit-testing-visual-basic-with-dotnet-test.md
+    - name: NUnit ile VB birim testi
+      href: testing/unit-testing-visual-basic-with-nunit.md
+    - name: MSTest ile VB birim testi
+      href: testing/unit-testing-visual-basic-with-mstest.md
+    - name: Seçmeli birim testleri çalıştırma
+      href: testing/selective-unit-tests.md
+    - name: Birim testi yayımlanmış çıktısı
+      href: testing/unit-testing-published-output.md
+    - name: Visual Studio ile .NET Core projelerinde canlı birim testi
+      href: /visualstudio/test/live-unit-testing-start
+- name: Sürekli Tümleştirme
+  href: tools/using-ci-with-cli.md
+- name: Sürüm Oluşturma
+  href: versions/index.md
+  items:
+    - name: .NET Core sürüm seçimi
+      href: versions/selection.md
+    - name: Eski çalışma zamanlarını ve SDK’ları kaldırma
+      href: versions/remove-runtime-sdk-versions.md
+- name: Çalışma Zamanı Tanımlayıcısı (RID) kataloğu
+  href: rid-catalog.md
+- name: .NET Core SDK’sına Genel Bakış
+  href: sdk.md
+- name: .NET Core CLI
+  items:
+    - name: Genel Bakış
+      href: tools/index.md
+    - name: Araçlar
+      expanded: true
+      items:
+        - name: Genel Araçlar
+          expanded: true
+          items:
+            - name: Genel Bakış
+              href: tools/global-tools.md
+            - name: Genel Araç Oluşturma
+              href: tools/global-tools-how-to-create.md
+        - name: Araç kullanım sorunlarını giderme
+          href: tools/troubleshoot-usage-issues.md
+    - name: Yükseltilmiş erişim
+      href: tools/elevated-access.md
+    - name: Genişletilebilirlik Modeli
+      href: tools/extensibility.md
+    - name: Özel şablonlar
+      href: tools/custom-templates.md
+    - name: Sekme tamamlamayı etkinleştirme
+      href: tools/enable-tab-autocomplete.md
+    - name: Telemetri
+      href: tools/telemetry.md
+    - name: global.json’a genel bakış
+      href: tools/global-json.md
+    - name: Başvuru
+      items:
+        - name: dotnet
+          href: tools/dotnet.md
+        - name: dotnet build
+          href: tools/dotnet-build.md
+        - name: dotnet build-server
+          href: tools/dotnet-build-server.md
+        - name: dotnet clean
+          href: tools/dotnet-clean.md
+        - name: dotnet help
+          href: tools/dotnet-help.md
+        - name: dotnet migrate
+          href: tools/dotnet-migrate.md
+        - name: dotnet msbuild
+          href: tools/dotnet-msbuild.md
+        - name: dotnet new
+          href: tools/dotnet-new.md
+        - name: dotnet nuget
+          items:
+            - name: dotnet nuget delete
+              href: tools/dotnet-nuget-delete.md
+            - name: dotnet nuget locals
+              href: tools/dotnet-nuget-locals.md
+            - name: dotnet nuget push
+              href: tools/dotnet-nuget-push.md
+        - name: dotnet pack
+          href: tools/dotnet-pack.md
+        - name: dotnet publish
+          href: tools/dotnet-publish.md
+        - name: dotnet restore
+          href: tools/dotnet-restore.md
+        - name: dotnet run
+          href: tools/dotnet-run.md
+        - name: dotnet sln
+          href: tools/dotnet-sln.md
+        - name: dotnet store
+          href: tools/dotnet-store.md
+        - name: dotnet test
+          href: tools/dotnet-test.md
+        - name: dotnet tool
+          items:
+            - name: dotnet tool install
+              href: tools/dotnet-tool-install.md
+            - name: dotnet tool list
+              href: tools/dotnet-tool-list.md
+            - name: dotnet tool uninstall
+              href: tools/dotnet-tool-uninstall.md
+            - name: dotnet tool update
+              href: tools/dotnet-tool-update.md
+        - name: dotnet vstest
+          href: tools/dotnet-vstest.md
+        - name: dotnet-install scripts
+          href: tools/dotnet-install-script.md
+        - name: Proje başvurusu komutları
+          items:
+            - name: dotnet add reference
+              href: tools/dotnet-add-reference.md
+            - name: dotnet list reference
+              href: tools/dotnet-list-reference.md
+            - name: dotnet remove reference
+              href: tools/dotnet-remove-reference.md
+        - name: Proje paketi komutları
+          items:
+            - name: dotnet add package
+              href: tools/dotnet-add-package.md
+            - name: dotnet list package
+              href: tools/dotnet-list-package.md
+            - name: dotnet remove package
+              href: tools/dotnet-remove-package.md
+- name: .NET Core Ek Araçlar
+  href: additional-tools/index.md
+  items:
+    - name: WCF Web Service Reference Provider
+      href: additional-tools/wcf-web-service-reference-guide.md
+    - name: dotnet-svcutil
+      href: additional-tools/dotnet-svcutil-guide.md
+    - name: dotnet-svcutil.xmlserializer
+      href: additional-tools/dotnet-svcutil.xmlserializer-guide.md
+    - name: XML Serileştirici Oluşturucusu
+      href: additional-tools/xml-serializer-generator.md
+- name: .NET Framework’ten Taşıma
+  href: porting/index.md
+  items:
+    - name: .NET Core’da kullanılamayan .NET Framework teknolojileri
+      href: porting/net-framework-tech-unavailable.md
+    - name: Üçüncü taraf bağımlılıklarını çözümleme
+      href: porting/third-party-deps.md
+    - name: Kitaplıkları taşıma
+      href: porting/libraries.md
+    - name: .NET Core için proje düzenleme
+      href: porting/project-structure.md
+    - name: .NET Core’a taşıma konusunda yardımcı olabilecek araçlar
+      href: porting/tools.md
+    - name: Windows Uyumluluk Paketi Kullanma
+      href: porting/windows-compat-pack.md
+    - name: Windows Forms projelerini bağlama
+      href: porting/winforms.md
+    - name: WPF projelerini bağlama
+      href: porting/wpf.md
+- name: Bağımlılık yüklemesi
+  items:
+    - name: Genel Bakış
+      href: dependency-loading/overview.md
+    - name: AssemblyLoadContext’i anlama
+      href: dependency-loading/understanding-assemblyloadcontext.md
+    - name: Yükleme ayrıntıları
+      items:
+        - name: Varsayılan bağımlılık araştırması
+          href: dependency-loading/default-probing.md
+        - name: Yönetilen derlemeleri yükleme
+          href: dependency-loading/loading-managed.md
+        - name: Uydu derlemelerini yükleme
+          href: dependency-loading/loading-resources.md
+        - name: Yönetilmeyen kitaplıkları yükleme
+          href: dependency-loading/loading-unmanaged.md
+    - name: Öğreticiler
+      items:
+        - name: Eklentilerle .NET Core uygulaması oluşturma
+          href: tutorials/creating-app-with-plugin-support.md
+        - name: .NET Core’da kaldırabilme özelliğini kullanma ve hatalarını ayıklama
+          href: ../standard/assembly/unloadability-howto.md
+- name: Kaynaktan .NET Core derleme
+  href: build/index.md
+  items:
+    - name: .NET Core dağıtımı paketleme
+      href: build/distribution-packaging.md
+- name: VS 2015/project.json belgeleri
+  href: ../project-json.md

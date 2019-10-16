@@ -3,6 +3,8 @@
 - name: Genel Bakış
   expanded: true
   items:
+    - name: Apache Spark nedir?
+      href: what-is-spark.md
     - name: Apache Spark için .NET nedir?
       href: what-is-apache-spark-dotnet.md
 - name: Öğreticiler

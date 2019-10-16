@@ -33,7 +33,7 @@
         - name: İzleme ve telemetri ile uygulamalarınızı modernleştirme
           href: ./modernize-existing-apps-to-cloud-optimized/modernize-your-apps-with-monitoring-and-telemetry.md
         - name: Bulutta CI/CD işlem hatları ve DevOps araçları ile uygulama yaşam döngüsünü modernleştirme
-          href: ./modernize-existing-apps-to-cloud-optimized/modernize-your-apps-lifecycle-with-ci-cd-pipelines-and-devops-tools-in-the-cloud.md
+          href: ./modernize-existing-apps-to-cloud-optimized/life-cycle-ci-cd-pipelines-devops-tools.md
         - name: Karma bulut senaryolarına geçiş
           href: ./modernize-existing-apps-to-cloud-optimized/migrate-to-hybrid-cloud-scenarios.md
     - name: İzlenecek yollar ve teknik başlangıca genel bakış
