@@ -4,12 +4,12 @@ description: Bu öğreticide, Web sitesi açıklamalarından yaklaşımı sını
 ms.date: 09/30/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: c6b9d51a8ab91b4365c909993211f11ab3436808
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: e241ae8c0d39e6573b40c69611985f7095114629
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71700852"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320140"
 ---
 # <a name="tutorial-analyze-sentiment-of-website-comments-with-binary-classification-in-mlnet"></a>Öğretici: ML.NET 'de ikili sınıflandırmayla Web sitesi açıklamalarını çözümleyin
 
@@ -61,26 +61,21 @@ Bu öğreticinin kaynak kodunu [DotNet/Samples](https://github.com/dotnet/sample
 
     [!code-csharp[AddUsings](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#AddUsings "Add necessary usings")]
 
-2. Son indirilen veri kümesi dosya yolunu ve kaydedilen model dosyası yolunu tutmak için iki genel alan oluşturun:
-
-    - `_dataPath`, modeli eğitmek için kullanılan veri kümesinin yoluna sahiptir.
-    - `_modelPath`, eğitilen modelin kaydedildiği yolu içerir.
-
-3. Yolları belirtmek için, aşağıdaki kodu `Main` yönteminin üstüne doğru satıra ekleyin:
+1. Son indirilen veri kümesi dosya yolunu tutacak bir alan oluşturmak için, `Main` yönteminin hemen altına satıra aşağıdaki kodu ekleyin:
 
     [!code-csharp[Declare global variables](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#DeclareGlobalVariables "Declare global variables")]
 
-4. Ardından, giriş verileriniz ve tahminlerinizi için sınıflar oluşturun. Projenize yeni bir sınıf ekleyin:
+1. Ardından, giriş verileriniz ve tahminlerinizi için sınıflar oluşturun. Projenize yeni bir sınıf ekleyin:
 
     - **Çözüm Gezgini**, projeye sağ tıklayın ve ardından  > **Yeni öğe** **Ekle**' yi seçin.
 
     - **Yeni öğe Ekle** Iletişim kutusunda **sınıf** ' ı seçin ve **ad** alanını *SentimentData.cs*olarak değiştirin. Sonra **Ekle** düğmesini seçin.
 
-5. *SentimentData.cs* dosyası kod düzenleyicisinde açılır. Aşağıdaki `using` ifadesini *SentimentData.cs*öğesinin en üstüne ekleyin:
+1. *SentimentData.cs* dosyası kod düzenleyicisinde açılır. Aşağıdaki `using` ifadesini *SentimentData.cs*öğesinin en üstüne ekleyin:
 
     [!code-csharp[AddUsings](~/samples/machine-learning/tutorials/SentimentAnalysis/SentimentData.cs#AddUsings "Add necessary usings")]
 
-6. Mevcut sınıf tanımını kaldırın ve *SentimentData.cs* dosyasına `SentimentData` ve `SentimentPrediction` olmak üzere iki sınıfa sahip aşağıdaki kodu ekleyin:
+1. Mevcut sınıf tanımını kaldırın ve *SentimentData.cs* dosyasına `SentimentData` ve `SentimentPrediction` olmak üzere iki sınıfa sahip aşağıdaki kodu ekleyin:
 
     [!code-csharp[DeclareTypes](~/samples/machine-learning/tutorials/SentimentAnalysis/SentimentData.cs#DeclareTypes "Declare data record types")]
 
@@ -144,7 +139,7 @@ Bir modeli hazırlarken, modelin doğruluğunu test etmek için veri kümesinin 
 
     [!code-csharp[SplitData](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#SplitData "Split the Data")]
 
-    Önceki kod, yüklenen veri kümesini eğmek ve test veri kümelerine bölmek için [Traintestsplit ()](xref:Microsoft.ML.DataOperationsCatalog.TrainTestSplit%2A) yöntemini kullanır ve onları [Traintestdata](xref:Microsoft.ML.DataOperationsCatalog.TrainTestData) sınıfında döndürür. @No__t-0parametresiyle verilerin test kümesi yüzdesini belirtin. Varsayılan değer% 10 ' dur, bu durumda daha fazla veri değerlendirmek için% 20 kullanmanız gerekir.
+    Önceki kod, yüklenen veri kümesini eğmek ve test veri kümelerine bölmek için [Traintestsplit ()](xref:Microsoft.ML.DataOperationsCatalog.TrainTestSplit%2A) yöntemini kullanır ve onları [Traintestdata](xref:Microsoft.ML.DataOperationsCatalog.TrainTestData) sınıfında döndürür. @No__t-0parametresiyle verilerin test kümesi yüzdesini belirtin. Varsayılan değer %10 ' dur, bu durumda daha fazla veri değerlendirmek için %20 kullanmanız gerekir.
 
 2. @No__t-1 yönteminin sonundaki `splitDataView` döndürün:
 

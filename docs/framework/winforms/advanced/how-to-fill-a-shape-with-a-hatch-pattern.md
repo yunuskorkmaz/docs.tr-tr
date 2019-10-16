@@ -9,18 +9,18 @@ helpviewer_keywords:
 - shapes [Windows Forms], filling with patterns
 - brushes [Windows Forms], using hatch brushes
 ms.assetid: 9c8300ff-187b-404f-af1f-ebd499f5b16f
-ms.openlocfilehash: b9ecefb82aaaf896c4ed39733f1e8d7bd65c16d4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b80708f0ce722b1809fe49190639231e7e4c8329
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645456"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320066"
 ---
 # <a name="how-to-fill-a-shape-with-a-hatch-pattern"></a>Nasıl yapılır: Bir Şekli Tarama Deseniyle Doldurma
-Tarama deseniyle iki renkleri yapılır: arka plan ve arka plan üzerinde deseni oluşturan satırlar için. Kapalı bir şekli tarama deseniyle ile doldurmak için kullanmak bir <xref:System.Drawing.Drawing2D.HatchBrush> nesne. Aşağıdaki örnek, bir tarama deseniyle elips doldurmak gösterilmektedir:  
+İki renkten bir tarama kalıbı yapılır: biri arka plan ve diğeri arka plan üzerinde model oluşturan satırlar için. Kapalı bir şekli tarama düzeniyle doldurmanız için <xref:System.Drawing.Drawing2D.HatchBrush> nesnesi kullanın. Aşağıdaki örnek, bir elipsin bir tarama düzeniyle nasıl doldurulacağını göstermektedir:  
   
 ## <a name="example"></a>Örnek  
- <xref:System.Drawing.Drawing2D.HatchBrush.%23ctor%2A> Oluşturucusu üç bağımsız değişken alır: Tarama stilini, tarama çizginin rengini ve arka plan rengi. Tarama stili bağımsız değişken, herhangi bir değer olabilir <xref:System.Drawing.Drawing2D.HatchStyle> sabit listesi. Elli'den fazla öğe içinde <xref:System.Drawing.Drawing2D.HatchStyle> numaralandırma; bunlardan birkaçını öğeler, aşağıdaki listede gösterilir:  
+ @No__t-0 Oluşturucusu üç bağımsız değişken alır: tarama stili, tarama çizgisinin rengi ve arka plan rengi. Tarama stili bağımsız değişkeni <xref:System.Drawing.Drawing2D.HatchStyle> numaralandırmasından herhangi bir değer olabilir. @No__t-0 numaralandırmasında 50 taneden fazla öğe var; Bu öğelerin bazıları aşağıdaki listede gösteriliyor:  
   
 - <xref:System.Drawing.Drawing2D.HatchStyle.Horizontal>  
   
@@ -34,15 +34,15 @@ Tarama deseniyle iki renkleri yapılır: arka plan ve arka plan üzerinde deseni
   
 - <xref:System.Drawing.Drawing2D.HatchStyle.DiagonalCross>  
   
- Dolu Elips aşağıda gösterilmiştir.  
+ Aşağıdaki çizimde doldurulmuş elips gösterilmektedir.  
   
- ![Tarama desen](./media/hatch1.png "hatch1")  
+  ![Bir tarama deseninin doldurulduğu bir elips ekran görüntüsü.](./media/how-to-fill-a-shape-with-a-hatch-pattern/ellipse-filled-hatch.png "hatch1")
   
  [!code-csharp[System.Drawing.UsingABrush#41](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingABrush/CS/Class1.cs#41)]
  [!code-vb[System.Drawing.UsingABrush#41](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingABrush/VB/Class1.vb#41)]  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
- Yukarıdaki örnekte, Windows Forms ile kullanılmak üzere tasarlanmıştır ve gerektirir <xref:System.Windows.Forms.PaintEventArgs> `e`, parametre olduğu <xref:System.Windows.Forms.Control.Paint> olay işleyicisi.  
+ Yukarıdaki örnek, Windows Forms kullanımı için tasarlanmıştır ve <xref:System.Windows.Forms.Control.Paint> olay işleyicisinin parametresi olan <xref:System.Windows.Forms.PaintEventArgs> @ no__t-1 ' i gerektirir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

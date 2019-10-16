@@ -8,12 +8,12 @@ helpviewer_keywords:
 - service contracts [WCF], synchronous operations
 - service contracts [WCF], asynchronous operations
 ms.assetid: db8a51cb-67e6-411b-9035-e5821ed350c9
-ms.openlocfilehash: 14bf9c89fd7142746b93cc45af6c2152e8700571
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: eab8faa54aaf9031ac0809912bd659c43e39a11b
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988540"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72321387"
 ---
 # <a name="synchronous-and-asynchronous-operations"></a>Zaman Uyumlu ve Zaman Uyumsuz İşlemler
 Bu konuda, zaman uyumsuz hizmet işlemlerini uygulama ve çağırma ele alınmaktadır.  
@@ -34,11 +34,11 @@ Bu konuda, zaman uyumsuz hizmet işlemlerini uygulama ve çağırma ele alınmak
 - İleti alışverişi, istemci veya hizmet uygulanmadığına bakılmaksızın tek yönlü olabilir.  
   
 ### <a name="suggested-asynchronous-scenarios"></a>Önerilen zaman uyumsuz senaryolar  
- İşlem hizmeti kullanımı, g/ç işi gibi bir engelleme çağrısı yapıyorsa, bir hizmet işlemi uygulamasında zaman uyumsuz bir yaklaşım kullanın. Zaman uyumsuz bir işlem uygulamasında olduğunuzda, zaman uyumsuz çağrı yolunu mümkün olduğunca uzatmak için zaman uyumsuz işlemleri ve yöntemleri çağırmayı deneyin. Örneğin, içinden `BeginOperationOne()`öğesinden bir `BeginOperationTwo()` çağırın.  
+ İşlem hizmeti kullanımı, g/ç işi gibi bir engelleme çağrısı yapıyorsa, bir hizmet işlemi uygulamasında zaman uyumsuz bir yaklaşım kullanın. Zaman uyumsuz bir işlem uygulamasında olduğunuzda, zaman uyumsuz çağrı yolunu mümkün olduğunca uzatmak için zaman uyumsuz işlemleri ve yöntemleri çağırmayı deneyin. Örneğin, `BeginOperationOne()` içinden `BeginOperationTwo()` ' ı çağırın.  
   
 - Bir istemcide zaman uyumsuz bir yaklaşım kullanın veya aşağıdaki durumlarda uygulama çağırma:  
   
-- İşlemleri bir orta katmanlı uygulamadan çağırdıysanız. (Bu senaryolar hakkında daha fazla bilgi için bkz. [Orta katman Istemci uygulamaları](../../../docs/framework/wcf/feature-details/middle-tier-client-applications.md).)  
+- İşlemleri bir orta katmanlı uygulamadan çağırdıysanız. (Bu senaryolar hakkında daha fazla bilgi için bkz. [Orta katman Istemci uygulamaları](./feature-details/middle-tier-client-applications.md).)  
   
 - İşlemleri bir ASP.NET sayfasında çağırdıysanız zaman uyumsuz sayfalar kullanın.  
   
@@ -56,7 +56,7 @@ Bu konuda, zaman uyumsuz hizmet işlemlerini uygulama ve çağırma ele alınmak
 3. IAsyncResult zaman uyumsuz model  
   
 #### <a name="task-based-asynchronous-pattern"></a>Görev tabanlı zaman uyumsuz model  
- Görev tabanlı zaman uyumsuz model, zaman uyumsuz işlemleri uygulamak için tercih edilen bir yoldur çünkü en kolay ve en basit yoldur. Bu yöntemi kullanmak için, yalnızca hizmet işleminizi uygulayın ve > görev\<t için bir dönüş türü belirtin. burada T, mantıksal işlem tarafından döndürülen türdür. Örneğin:  
+ Görev tabanlı zaman uyumsuz model, zaman uyumsuz işlemleri uygulamak için tercih edilen bir yoldur çünkü en kolay ve en basit yoldur. Bu yöntemi kullanmak için yalnızca hizmet işleminizi uygulayın ve @ no__t-0T > görevinin dönüş türünü belirtin; burada T mantıksal işlem tarafından döndürülen türdür. Örneğin:  
   
 ```csharp  
 public class SampleService:ISampleService   
@@ -73,7 +73,7 @@ public class SampleService:ISampleService
 }  
 ```  
   
- SampleMethodTaskAsync işlemi, mantıksal işlem\<bir dize döndürdüğünden > Görev dizesi döndürür. Görev tabanlı zaman uyumsuz model hakkında daha fazla bilgi için, bkz. [görev tabanlı zaman uyumsuz model](https://go.microsoft.com/fwlink/?LinkId=232504).  
+ SampleMethodTaskAsync işlemi, mantıksal işlem bir dize döndürdüğünden @ no__t-0string > görevini döndürür. Görev tabanlı zaman uyumsuz model hakkında daha fazla bilgi için, bkz. [görev tabanlı zaman uyumsuz model](https://go.microsoft.com/fwlink/?LinkId=232504).  
   
 > [!WARNING]
 > Görev tabanlı zaman uyumsuz model kullanılırken, işlemin tamamlanması beklenirken bir özel durum oluşursa bir T:System.AggregateException oluşturulabilir. Bu özel durum istemci veya hizmetlerde oluşabilir  
@@ -110,19 +110,19 @@ public class AsyncExample
  Olay tabanlı zaman uyumsuz model hakkında daha fazla bilgi için bkz. [olay tabanlı zaman uyumsuz model](https://go.microsoft.com/fwlink/?LinkId=232515).  
   
 #### <a name="iasyncresult-asynchronous-pattern"></a>IAsyncResult zaman uyumsuz model  
- Bir hizmet işlemi .NET Framework zaman uyumsuz programlama modelini kullanarak zaman uyumsuz bir biçimde uygulanabilir ve `<Begin>` yöntemi <xref:System.ServiceModel.OperationContractAttribute.AsyncPattern%2A> özelliği olarak ayarlanmış şekilde `true`işaretleyerek. Bu durumda, zaman uyumsuz işlem eşzamanlı bir işlemle aynı biçimde meta verilerde gösterilir: İstek iletisi ve bağıntılı yanıt iletisi ile tek bir işlem olarak sunulur. İstemci programlama modellerinin bir seçimi vardır. Bu model, zaman uyumlu bir işlem olarak veya zaman uyumsuz bir işlem olarak temsil edebilirler, bu nedenle hizmetin bir istek çağrıldığı zaman yanıt iletisi değişimi gerçekleştirilir.  
+ Bir hizmet işlemi, .NET Framework zaman uyumsuz programlama düzeniyle birlikte zaman uyumsuz bir biçimde uygulanabilir ve `<Begin>` yöntemi `true` olarak ayarlanmış <xref:System.ServiceModel.OperationContractAttribute.AsyncPattern%2A> özelliği ile işaretleniyor. Bu durumda, zaman uyumsuz işlem eşzamanlı bir işlemle aynı biçimde meta verilerde kullanıma sunulur: istek iletisi ve bağıntılı yanıt iletisi ile tek bir işlem olarak sunulur. İstemci programlama modellerinin bir seçimi vardır. Bu model, zaman uyumlu bir işlem olarak veya zaman uyumsuz bir işlem olarak temsil edebilirler, bu nedenle hizmetin bir istek çağrıldığı zaman yanıt iletisi değişimi gerçekleştirilir.  
   
  Genel olarak, sistemlerin zaman uyumsuz doğası ile iş parçacıkları üzerinde bir bağımlılık almanız gerekmez.  İşlem gönderme işleminin çeşitli aşamalarına veri geçirmenin en güvenilir yolu, uzantıları kullanmaktır.  
   
- Bir örnek için bkz [. nasıl yapılır: Zaman uyumsuz bir hizmet Işlemi](../../../docs/framework/wcf/how-to-implement-an-asynchronous-service-operation.md)uygulayın.  
+ Bir örnek için bkz. [nasıl yapılır: zaman uyumsuz bir hizmet Işlemi uygulama](how-to-implement-an-asynchronous-service-operation.md).  
   
- İstemci uygulamasında nasıl çağrdığına `X` bakılmaksızın zaman uyumsuz olarak yürütülen bir sözleşme işlemi tanımlamak için:  
+ İstemci uygulamasında nasıl çağrdığına bakılmaksızın zaman uyumsuz olarak yürütülen @no__t bir sözleşme işlemini tanımlamak için:  
   
-- `BeginOperation` Ve`EndOperation`modelini kullanarak iki yöntem tanımlayın.  
+- @No__t-0 ve `EndOperation` modelini kullanarak iki yöntem tanımlayın.  
   
-- Yöntemi, işlem `in` için `ref` ve parametrelerini içerir ve bir <xref:System.IAsyncResult> tür döndürür. `BeginOperation`  
+- @No__t-0 yöntemi, işlem için `in` ve `ref` parametrelerini içerir ve bir <xref:System.IAsyncResult> türü döndürür.  
   
-- <xref:System.IAsyncResult> `ref` Yöntemi, ve`out` parametrelerini ve parametrelerini ve işlem dönüş türünü geri getiren `EndOperation` bir parametre içerir.  
+- @No__t-0 yöntemi, `out` ve `ref` parametrelerinin yanı sıra bir <xref:System.IAsyncResult> parametresi içerir ve işlemler dönüş türünü döndürür.  
   
  Örneğin, aşağıdaki yöntemine bakın.  
   
@@ -155,7 +155,7 @@ Function EndDoWork(ByRef inout As String, ByRef outonly As String, ByVal result 
 ```  
   
 > [!NOTE]
-> <xref:System.ServiceModel.OperationContractAttribute> Özniteliği yalnızca`BeginDoWork` yöntemine uygulanır. Elde edilen sözleşmede adlı `DoWork`bir wsdl işlemi vardır.  
+> @No__t-0 özniteliği yalnızca `BeginDoWork` yöntemine uygulanır. Sonuçta elde edilen sözleşmede `DoWork` adlı bir WSDL işlemi vardır.  
   
 ### <a name="client-side-asynchronous-invocations"></a>İstemci tarafı zaman uyumsuz çağırmaları  
  WCF istemci uygulaması, daha önce açıklanan üç zaman uyumsuz çağrı modelini kullanabilir  
@@ -166,31 +166,31 @@ Function EndDoWork(ByRef inout As String, ByRef outonly As String, ByVal result 
 await simpleServiceClient.SampleMethodTaskAsync("hello, world");  
 ```  
   
- Olay tabanlı zaman uyumsuz düzenin kullanılması yalnızca yanıtın bildirimini almak için bir olay işleyicisinin eklenmesini gerektirir ve sonuçta elde edilen olay kullanıcı arabirimi iş parçacığında otomatik olarak oluşturulur. Bu yaklaşımı kullanmak için, aşağıdaki örnekte olduğu gibi, **/Async** ve **/tcv: Version35** komut seçeneklerini [ServiceModel meta veri yardımcı programı Aracı (Svcutil. exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)ile birlikte belirtin.  
+ Olay tabanlı zaman uyumsuz düzenin kullanılması yalnızca yanıtın bildirimini almak için bir olay işleyicisinin eklenmesini gerektirir ve sonuçta elde edilen olay kullanıcı arabirimi iş parçacığında otomatik olarak oluşturulur. Bu yaklaşımı kullanmak için, aşağıdaki örnekte olduğu gibi, **/Async** ve **/tcv: Version35** komut seçeneklerini [ServiceModel meta veri yardımcı programı Aracı (Svcutil. exe)](servicemodel-metadata-utility-tool-svcutil-exe.md)ile birlikte belirtin.  
   
 ```  
 svcutil http://localhost:8000/servicemodelsamples/service/mex /async /tcv:Version35  
 ```  
   
- Bu tamamlandığında, Svcutil. exe, çağıran uygulamanın, yanıtı almak ve uygun eylemi gerçekleştirmek için bir olay işleyicisi uygulayıp atamasını sağlayan olay altyapısına sahip bir WCF istemci sınıfı oluşturur. Tüm bir örnek için bkz [. nasıl yapılır: Hizmet Işlemlerini zaman uyumsuz](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)olarak çağırın.  
+ Bu tamamlandığında, Svcutil. exe, çağıran uygulamanın, yanıtı almak ve uygun eylemi gerçekleştirmek için bir olay işleyicisi uygulayıp atamasını sağlayan olay altyapısına sahip bir WCF istemci sınıfı oluşturur. Tüm bir örnek için bkz. [nasıl yapılır: hizmet Işlemlerini zaman uyumsuz olarak çağırma](./feature-details/how-to-call-wcf-service-operations-asynchronously.md).  
   
- Ancak olay tabanlı zaman uyumsuz model yalnızca ' de [!INCLUDE[netfx35_long](../../../includes/netfx35-long-md.md)]kullanılabilir. Ayrıca, bir WCF istemci kanalının bir [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType>kullanılarak oluşturulması durumunda bile desteklenmez. WCF istemci kanalı nesneleri ile işlemlerinizi zaman uyumsuz olarak <xref:System.IAsyncResult?displayProperty=nameWithType> çağırmak için nesneleri kullanmanız gerekir. Bu yaklaşımı kullanmak için, aşağıdaki örnekte olduğu gibi [ServiceModel meta veri yardımcı programı Aracı (Svcutil. exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)ile **/Async** komut seçeneğini belirtin.  
+ Ancak, olay tabanlı zaman uyumsuz model yalnızca [!INCLUDE[netfx35_long](../../../includes/netfx35-long-md.md)] ' da kullanılabilir. Ayrıca, bir WCF istemci kanalı bir <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType> kullanılarak oluşturulduğunda [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] ' da desteklenmez. WCF istemci kanalı nesneleri ile işlemlerinizi zaman uyumsuz olarak çağırmak için <xref:System.IAsyncResult?displayProperty=nameWithType> nesnelerini kullanmanız gerekir. Bu yaklaşımı kullanmak için, aşağıdaki örnekte olduğu gibi [ServiceModel meta veri yardımcı programı Aracı (Svcutil. exe)](servicemodel-metadata-utility-tool-svcutil-exe.md)ile **/Async** komut seçeneğini belirtin.  
   
 ```  
 svcutil http://localhost:8000/servicemodelsamples/service/mex /async   
 ```  
   
- Bu, `<Begin>` her bir işlemin, <xref:System.ServiceModel.OperationContractAttribute.AsyncPattern%2A> özelliği olarak ayarlanan `true` ve karşılık gelen `<End>` bir yöntemi olan bir yöntem olarak modellendiği bir hizmet sözleşmesi oluşturur. Kullanarak tüm bir <xref:System.ServiceModel.ChannelFactory%601>örnek için bkz [. nasıl yapılır: Kanal fabrikası](../../../docs/framework/wcf/feature-details/how-to-call-operations-asynchronously-using-a-channel-factory.md)kullanarak işlemleri zaman uyumsuz olarak çağırın.  
+ Bu, her bir işlemin, <xref:System.ServiceModel.OperationContractAttribute.AsyncPattern%2A> özelliği `true` ' ye ve karşılık gelen bir `<End>` yöntemine ayarlanmış `<Begin>` yöntemi olarak modellendiği bir hizmet sözleşmesi oluşturur. @No__t-0 kullanan tam bir örnek için bkz. [nasıl yapılır: bir kanal fabrikası kullanarak Işlemleri zaman uyumsuz olarak çağırma](./feature-details/how-to-call-operations-asynchronously-using-a-channel-factory.md).  
   
- Her iki durumda da, bir uygulamanın zaman uyumsuz olarak yerel bir zaman uyumlu yöntemi çağırmak için aynı şekli kullanabilmesi gibi, uygulamalar zaman uyumsuz olarak bir işlemi çağırabilir. İşlemin nasıl uygulandığı, istemci için önemli değildir; Yanıt iletisi geldiğinde, içeriği istemcinin zaman uyumsuz <`End`> yöntemine gönderilir ve istemci bilgileri alır.  
+ Her iki durumda da, bir uygulamanın zaman uyumsuz olarak yerel bir zaman uyumlu yöntemi çağırmak için aynı şekli kullanabilmesi gibi, uygulamalar zaman uyumsuz olarak bir işlemi çağırabilir. İşlemin nasıl uygulandığı, istemci için önemli değildir; Yanıt iletisi geldiğinde, içeriği istemcinin zaman uyumsuz < `End` > yöntemine gönderilir ve istemci bu bilgileri alır.  
   
 ### <a name="one-way-message-exchange-patterns"></a>Tek yönlü Ileti değişimi desenleri  
- Ayrıca, tek yönlü işlemlere (ilişkili yanıt olmayan işlemler <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A?displayProperty=nameWithType> `true` ) istemci veya hizmet tarafından birbirinden bağımsız olarak gönderilebileceği zaman uyumsuz ileti değişim düzenlerini de oluşturabilirsiniz. tarafını. (Bu, çift yönlü ileti değişim modelini tek yönlü iletilerle kullanır.) Bu durumda, hizmet sözleşmesi, her iki tarafın da uygun olmayan zaman uyumsuz çağrılar veya uygulamalar olarak uygulayabilirler tek yönlü bir ileti değişimi belirtir. Genellikle, sözleşme tek yönlü bir ileti alışverişi olduğunda, bir ileti gönderildiğinde uygulama bir yanıt beklemez ve diğer işleri yapmaya devam edebileceğinden uygulamalar büyük ölçüde zaman uyumsuz olabilir.  
+ Ayrıca, tek yönlü işlemlere (<xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A?displayProperty=nameWithType> ' a ait `true` ' a ait hiçbir ilişkili yanıt olmayan işlemler), istemci veya hizmet tarafından diğer taraftan bağımsız olarak gönderilebileceği zaman uyumsuz ileti değişim düzenlerini de oluşturabilirsiniz. (Bu, çift yönlü ileti değişim modelini tek yönlü iletilerle kullanır.) Bu durumda, hizmet sözleşmesi, her iki tarafın da uygun olmayan zaman uyumsuz çağrılar veya uygulamalar olarak uygulayabilirler tek yönlü bir ileti değişimi belirtir. Genellikle, sözleşme tek yönlü bir ileti alışverişi olduğunda, bir ileti gönderildiğinde uygulama bir yanıt beklemez ve diğer işleri yapmaya devam edebileceğinden uygulamalar büyük ölçüde zaman uyumsuz olabilir.  
   
 ### <a name="event-based-asynchronous-clients-and-message-contracts"></a>Olay tabanlı zaman uyumsuz Istemciler ve Ileti sözleşmeleri  
- Olay tabanlı zaman uyumsuz model için, birden fazla değer döndürülürse, `Result` özellik olarak bir değer döndürülür ve diğerleri <xref:System.EventArgs> nesne üzerinde özellikler olarak döndürülür. Bunun sonucunda, bir istemci, olay tabanlı zaman uyumsuz komut seçeneklerini kullanarak meta verileri içeri aktardığında ve işlem birden fazla değer döndürürse, varsayılan <xref:System.EventArgs> nesne `Result` özellik olarak bir değer döndürür ve geri kalanı <xref:System.EventArgs> nesnenin özellikleri.  
+ Olay tabanlı zaman uyumsuz model için, birden fazla değer döndürülürse, bir değer `Result` özelliği olarak döndürülür ve diğerleri <xref:System.EventArgs> nesnesi üzerinde özellikler olarak döndürülür. Bunun sonucunda, bir istemci, olay tabanlı zaman uyumsuz komut seçeneklerini kullanarak meta verileri içeri aktardığında ve işlem birden fazla değer döndürürse, varsayılan <xref:System.EventArgs> nesnesi `Result` özelliği olarak bir değer döndürür ve geri kalan @no özelliklerdir __T-2 nesnesi.  
   
- İleti nesnesini `Result` özellik olarak almak ve döndürülen değerlerin bu nesnede özellikler olarak elde etmek istiyorsanız, **/MessageContract** komut seçeneğini kullanın. Bu, `Result` <xref:System.EventArgs> nesne üzerindeki özelliği olarak yanıt iletisini döndüren bir imza oluşturur. Tüm iç dönüş değerleri, yanıt iletisi nesnesinin özellikleridir.  
+ İleti nesnesini `Result` özelliği olarak almak ve döndürülen değerlerin bu nesnede özellikler olarak olmasını istiyorsanız **/MessageContract** komut seçeneğini kullanın. Bu, <xref:System.EventArgs> nesnesinde `Result` özelliği olarak yanıt iletisini döndüren bir imza oluşturur. Tüm iç dönüş değerleri, yanıt iletisi nesnesinin özellikleridir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

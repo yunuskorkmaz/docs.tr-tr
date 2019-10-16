@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Configuration file
 - configuration file schema
 ms.assetid: 2db21a57-5f64-426f-89df-fb0dc2d2def5
-ms.openlocfilehash: 8123a504e83164f2ae842755da8ff4d8850141d2
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 3d482e2b03346c9443066c480575a1394324b9bf
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70046028"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320700"
 ---
 # <a name="configuration-editor-tool-svcconfigeditorexe"></a>Yapılandırma Düzenleme Aracı (SvcConfigEditor.exe)
 
@@ -26,7 +26,7 @@ Hizmet yapılandırma Düzenleyicisi, WCF hizmeti veya istemcisini yapılandırm
 
 Standart System. Configuration şemasına uyan bazı yapılandırma dosyalarınız varsa, Kullanıcı arabirimiyle bağlamalar, davranış, hizmet ve Tanılamalar için belirli ayarları yönetebilirsiniz. Hizmet yapılandırma Düzenleyicisi, mevcut WCF yapılandırma dosyalarının yanı sıra yürütülebilir dosyalar, COM+ Hizmetleri ve Web 'de barındırılan hizmetler için ayarları yönetmenizi sağlar. Hizmet yapılandırma Düzenleyicisi ile Web 'de barındırılan bir hizmet açılırken, hem hizmetin kendi Yapılandırması hem de üst düzey düğümlerin devralınan yapılandırmalar bölümleri gösterilir.
 
-WCF yapılandırma ayarları yapılandırma dosyasının `<system.serviceModel>` bölümünde bulunduğundan, düzenleyici özel olarak bu öğenin içeriğinde çalışır ve aynı dosyadaki diğer öğelere erişemez. Mevcut yapılandırma dosyalarına doğrudan gidebilir veya hizmet, sanal dizin veya COM+ hizmeti içeren bir derleme seçebilirsiniz. Düzenleyici, söz konusu hizmet için yapılandırma dosyasını yükler ve kullanıcının yapılandırma dosyasının `<system.serviceModel>` bölümünde iç içe geçmiş öğeleri eklemesini veya varolan öğeleri düzenlemesini sağlar.
+WCF yapılandırma ayarları, yapılandırma dosyasının `<system.serviceModel>` bölümünde bulunduğundan, düzenleyici özel olarak bu öğenin içeriğinde çalışır ve aynı dosyadaki diğer öğelere erişemez. Mevcut yapılandırma dosyalarına doğrudan gidebilir veya hizmet, sanal dizin veya COM+ hizmeti içeren bir derleme seçebilirsiniz. Düzenleyici, söz konusu hizmet için yapılandırma dosyasını yükler ve kullanıcının yapılandırma dosyasının `<system.serviceModel>` bölümünde iç içe geçmiş öğeleri eklemesini veya varolan öğeleri düzenlemesini sağlar.
 
 Düzenleyici IntelliSense 'i destekler ve şema uyumluluğunu zorlar. Elde edilen çıktının yapılandırma dosyasının şemasıyla uyumlu olması ve sözdizimsel olarak doğru veri değerlerinin olması garanti edilir. Ancak, düzenleyici yapılandırma dosyasının anlam olarak geçerli olduğunu garanti etmez. Diğer bir deyişle, düzenleyici yapılandırma dosyasının yapılandırdığı hizmet ile çalışabileceğini garanti etmez.
 
@@ -35,13 +35,13 @@ Düzenleyici IntelliSense 'i destekler ve şema uyumluluğunu zorlar. Elde edile
 >
 > `<endpoint binding="basicHttpBinding" name="somename" />`
 >
-> Adı boş bir dizeye ayarlayarak ve dosyayı kaydettikten sonra, aşağıdaki örnekte gösterildiği gibi yapılandırma dosyası yine de `name` özniteliğini içerir.
+> Adı boş bir dizeye ayarlayarak ve dosyayı kaydettikten sonra, aşağıdaki örnekte gösterildiği gibi yapılandırma dosyası `name` özniteliğini yine de içerir.
 >
 > `<endpoint binding="basicHttpBinding" name="" />`
 >
 > Özniteliği temizlemek için, başka bir metin düzenleyicisi kullanarak öğeyi el ile düzenlemeniz gerekir.
 >
-> `clientCredential` Uç nokta davranışının `issueToken` öğesini kullandığınızda bu sorunla özellikle dikkatli olmanız gerekir. Özellikle, `address` `localIssuer` alt öğesinin özniteliği boş bir dize olmamalıdır. Yapılandırma düzenleyicisini kullanarak `address` özniteliği değiştirdiyseniz ve tamamen kaldırmak istiyorsanız, bunu düzenleyici dışında bir araç kullanarak yapmanız gerekir. Aksi takdirde, öznitelik boş bir dize içerir ve uygulamanız bir özel durum oluşturur.
+> @No__t-1 uç nokta davranışının `issueToken` öğesini kullandığınızda bu sorunla özellikle dikkatli olmanız gerekir. Özellikle, `localIssuer` alt öğesinin `address` özniteliği boş bir dize olmamalıdır. Yapılandırma düzenleyicisini kullanarak `address` özniteliğini değiştirdiyseniz ve tamamen kaldırmak istiyorsanız, bunu düzenleyici dışında bir araç kullanarak yapmanız gerekir. Aksi takdirde, öznitelik boş bir dize içerir ve uygulamanız bir özel durum oluşturur.
 
 ## <a name="using-the-configuration-editor"></a>Yapılandırma düzenleyicisini kullanma
 
@@ -61,7 +61,7 @@ Hizmet yapılandırma düzenleyicisinin Kullanıcı arabirimi aşağıdaki alanl
 
 ### <a name="opening-a-configuration-file"></a>Yapılandırma dosyası açılıyor
 
-1. WCF yükleme konumunuza gitmek için bir komut penceresi kullanarak hizmet yapılandırma düzenleyicisini başlatın ve ardından yazın `SvcConfigEditor.exe`.
+1. WCF yükleme konumunuza gitmek için bir komut penceresi kullanarak hizmet yapılandırma düzenleyicisini başlatın ve sonra `SvcConfigEditor.exe` yazın.
 
 2. **Dosya** menüsünde **Aç** ' ı seçin ve yönetmek istediğiniz dosya türüne tıklayın.
 
@@ -74,7 +74,7 @@ Görüntüleyici otomatik olarak yapılandırma birleştirme yolunu izler ve bir
 
 ### <a name="services"></a>Hizmetler
 
-**Hizmetler** düğümü, yapılandırma dosyasında şu anda atanmış olan tüm hizmetleri görüntüler. Ağaçtaki her alt düğüm, yapılandırma dosyasında <`services`> öğesinin bir alt öğesine karşılık gelir.
+**Hizmetler** düğümü, yapılandırma dosyasında şu anda atanmış olan tüm hizmetleri görüntüler. Ağaçtaki her alt düğüm, yapılandırma dosyasında < `services` > öğesinin bir alt öğesine karşılık gelir.
 
 **Hizmetler** düğümüne tıkladığınızda, **Ayrıntılar** bölmesindeki hizmet Özeti sayfasında görevleri görüntüleyebilir veya yapabilirsiniz.
 
@@ -82,9 +82,9 @@ Görüntüleyici otomatik olarak yapılandırma birleştirme yolunu izler ve bir
 
 Aşağıdaki yollarla yeni bir hizmet yapılandırması oluşturabilirsiniz:
 
-- Sihirbaz kullanarak: **Yeni hizmet oluştur bağlantısına tıklayın...** Sihirbazı başlatmak için görev bölmesinde veya Özet sayfasında. **Dosya** menüsündeki > **Yeni öğe Ekle**' de de yapabilirsiniz.
+- Sihirbaz kullanarak: **yeni hizmet oluştur bağlantısına tıklayın...** Sihirbazı başlatmak için görev bölmesinde veya Özet sayfasında. **Dosya** menüsündeki > **Yeni öğe Ekle**' de de yapabilirsiniz.
 
-- El ile oluştur: **Hizmetler** düğümüne sağ tıklayıp **yeni hizmet**' i seçebilirsiniz.
+- El ile oluştur: **Hizmetler** düğümüne sağ tıklayıp **yeni hizmet**seçeneğini belirleyebilirsiniz.
 
 #### <a name="creating-a-new-service-endpoint-configuration"></a>Yeni bir hizmet uç noktası yapılandırması oluşturuluyor
 
@@ -92,7 +92,7 @@ Aşağıdaki yollarla yeni bir hizmet uç noktası yapılandırması oluşturabi
 
 - Sihirbaz kullanarak oluşturma: **yeni hizmet uç noktası oluştur** bağlantısına tıklayın... Sihirbazı başlatmak için görev bölmesinde veya Özet sayfasında. **Dosya** menüsündeki > **Yeni öğe Ekle**' de de yapabilirsiniz.
 
-- El ile oluştur: Bir hizmet oluşturduktan sonra, **uç noktalar** düğümüne sağ tıklayıp "**yeni hizmet uç noktası**" seçeneğini belirleyebilirsiniz.
+- El ile oluştur: bir hizmet oluşturduktan sonra, **uç noktalar** düğümüne sağ tıklayıp "**yeni hizmet uç noktası**" seçeneğini belirleyebilirsiniz.
 
 #### <a name="editing-a-service-configuration"></a>Hizmet yapılandırmasını düzenle
 
@@ -114,14 +114,14 @@ Aşağıdaki yollarla yeni bir hizmet uç noktası yapılandırması oluşturabi
 
 3. İletişim kutusuna taban adresi URI 'sini yazın.
 
-4. **Tamam**'ı tıklatın.
+4. **Tamam**'a tıklayın.
 
 > [!NOTE]
-> Bu aracın içindeki [ \<baseAddressPrefixFilters >](../../../docs/framework/configure-apps/file-schema/wcf/baseaddressprefixfilters.md) değerini düzenleyemezsiniz. Bu öğeyi eklemek veya değiştirmek için bir metin Düzenleyicisi veya Visual Studio kullanmanız gerekir.
+> Bu aracın içindeki [\<baseAddressPrefixFilters >](../configure-apps/file-schema/wcf/baseaddressprefixfilters.md) değerini düzenleyemezsiniz. Bu öğeyi eklemek veya değiştirmek için bir metin Düzenleyicisi veya Visual Studio kullanmanız gerekir.
 
 ### <a name="client"></a>İstemci
 
-**İstemci** düğümü, yapılandırma dosyasındaki tüm istemci uç noktalarını görüntüler. Ağaçtaki her alt düğüm, yapılandırma dosyasında <`client`> öğesinin bir alt öğesine karşılık gelir.
+**İstemci** düğümü, yapılandırma dosyasındaki tüm istemci uç noktalarını görüntüler. Ağaçtaki her alt düğüm, yapılandırma dosyasında < `client` > öğesinin bir alt öğesine karşılık gelir.
 
 **İstemci** düğümüne tıkladığınızda, **Ayrıntılar bölmesindeki**istemci **Özeti sayfasında** görevleri görüntüleyebilir veya yapabilirsiniz.
 
@@ -129,9 +129,9 @@ Aşağıdaki yollarla yeni bir hizmet uç noktası yapılandırması oluşturabi
 
 Aşağıdaki yollarla yeni bir istemci uç noktası yapılandırması oluşturabilirsiniz:
 
-- Sihirbaza göre oluştur: **Yeni Istemci oluştur bağlantısına tıklayın...** Sihirbazı başlatmak için pencerenin sol alt kısmındaki **görev bölmesinde** veya **Özet sayfasında** . **Dosya** menüsündeki > **Yeni öğe Ekle**' de de yapabilirsiniz. Sihirbaz, istemci yapılandırmasının oluşturulduğu hizmet yapılandırmasının konumunu işaret etmesini ister. Daha sonra, bağlanılacak hizmet uç noktasını seçebilirsiniz.
+- Sihirbaza göre oluşturma: **Yeni Istemci oluştur bağlantısına tıklayın...** Sihirbazı başlatmak için pencerenin sol alt kısmındaki **görev bölmesinde** veya **Özet sayfasında** . **Dosya** menüsündeki > **Yeni öğe Ekle**' de de yapabilirsiniz. Sihirbaz, istemci yapılandırmasının oluşturulduğu hizmet yapılandırmasının konumunu işaret etmesini ister. Daha sonra, bağlanılacak hizmet uç noktasını seçebilirsiniz.
 
-- El ile oluştur: **İstemci**altındaki **uç noktalar** düğümüne sağ tıklayın ve **yeni istemci uç noktası**' nı seçin.
+- El ile oluştur: **istemci**altındaki **uç noktalar** düğümüne sağ tıklayın ve **yeni istemci uç noktası**' nı seçin.
 
 #### <a name="editing-a-client-endpoint-configuration"></a>Istemci uç noktası yapılandırmasını düzenle
 
@@ -175,13 +175,13 @@ Standart uç nokta yapılandırmasını aşağıdaki yollarla silebilirsiniz:
 
 - **Standart uç nokta** düğümüne tıklayın. **Görev** bölmesinde **standart uç nokta yapılandırmasını sil**' e tıklayın.
 
-Standart uç nokta kullanılıyorsa, onu silmeye çalıştığınızda bir uyarı iletisi görüntülenir: **Standart uç nokta kullanımda. Şimdi silerseniz, lütfen yapılandırmanın diğer bölümlerinde (örneğin, hizmet uç noktası veya istemci uç noktasında) tüm başvurularını sildiğinizden emin olun. Aksi takdirde, yapılandırma geçersiz olur ve bir dahaki sefer açılamaz. Standart uç noktayı silmek istediğinizden emin misiniz? "**
+Standart uç nokta kullanılıyorsa, onu silmeye çalıştığınızda bir uyarı iletisi görüntülenir: **standart uç nokta kullanımda. Şimdi silerseniz, lütfen yapılandırmanın diğer bölümlerinde (örneğin, hizmet uç noktası veya istemci uç noktasında) tüm başvurularını sildiğinizden emin olun. Aksi takdirde, yapılandırma geçersiz olur ve bir dahaki sefer açılamaz. Standart uç noktayı silmek istediğinizden emin misiniz? "**
 
 ### <a name="binding"></a>Bağlama
 
 Bağlama yapılandırması uç noktalarda bağlamaları yapılandırmak için kullanılır. Bu tür yapılandırma ayarları **bağlama** düğümünde depolanır. Ada ve birden çok uç noktaya göre bağlantı yapılandırmaları için uç noktalar tek bir bağlama yapılandırmasına başvurabilir.
 
-**Bağlamalar** düğümü yapılandırma dosyasındaki tüm bağlama ayarlarını görüntüler. Ağaçtaki her alt düğüm, yapılandırma dosyasındaki <`bindings`> öğesinde bir alt öğeye karşılık gelir.
+**Bağlamalar** düğümü yapılandırma dosyasındaki tüm bağlama ayarlarını görüntüler. Ağaçtaki her alt düğüm, yapılandırma dosyasında < `bindings` > öğesinde bir alt öğeye karşılık gelir.
 
 **Bağlamalar** düğümüne tıkladığınızda, **Ayrıntılar bölmesindeki**bağlama **Özeti sayfasında** görevleri görüntüleyebilir veya yapabilirsiniz.
 
@@ -225,7 +225,7 @@ Aşağıdaki yollarla yeni bir bağlama yapılandırması oluşturabilirsiniz.
 
 ### <a name="diagnostics"></a>Tanılamalar
 
-**Tanılama** düğümü yapılandırma dosyasındaki tüm tanılama ayarlarını görüntüler. Performans sayaçlarını açıp kapamanızı, Windows Yönetim Araçları (WMI) etkinleştirebilir veya devre dışı bırakmanızı, WCF izlemeyi yapılandırmanızı ve WCF ileti günlüğe kaydetmeyi yapılandırmanızı sağlar. **Tanılama** düğümündeki ayarlar`system.diagnostics` ,yapılandırma`<diagnostics>` dosyasında < > bölümüne ve bölümüne karşılıkgelir.`<system.serviceModel>`
+**Tanılama** düğümü yapılandırma dosyasındaki tüm tanılama ayarlarını görüntüler. Performans sayaçlarını açıp kapamanızı, Windows Yönetim Araçları (WMI) etkinleştirebilir veya devre dışı bırakmanızı, WCF izlemeyi yapılandırmanızı ve WCF ileti günlüğe kaydetmeyi yapılandırmanızı sağlar. **Tanılama** düğümündeki ayarlar < `system.diagnostics` > bölümüne ve yapılandırma dosyasında `<system.serviceModel>` ' teki `<diagnostics>` bölümüne karşılık gelir.
 
 **Tanılama** düğümüne tıkladığınızda, **Ayrıntılar bölmesindeki**tanılama **Özeti sayfasında** görevleri görüntüleyebilir veya yapabilirsiniz.
 
@@ -233,7 +233,7 @@ Aşağıdaki yollarla yeni bir bağlama yapılandırması oluşturabilirsiniz.
 
 1. **Tanılama** düğümüne tıklayın.
 
-2. **Performans sayaçlarını aç**' a tıklayın. Performans sayacının üç durumu vardır: Kapalı (varsayılan), ServiceOnly ve ALL. Bağlantıya tıkladığınızda bu üç durum arasındaki ayar geçiş yapar.
+2. **Performans sayaçlarını aç**' a tıklayın. Performans sayacının üç durumu vardır: kapalı (varsayılan), ServiceOnly ve ALL. Bağlantıya tıkladığınızda bu üç durum arasındaki ayar geçiş yapar.
 
 #### <a name="configuring-wmi-provider"></a>WMI sağlayıcısını yapılandırma
 
@@ -249,7 +249,7 @@ Standart özelliklerle bir WCF izleme dosyası oluşturabilir veya özel bir izl
 
 2. **Izlemeyi etkinleştir**' e tıklayın.
 
-3. İzleme düzeyini ayarlamak için **Izleme düzeyi** bağlantısına tıklayın. Altı izleme düzeyi vardır: Kapalı, kritik, hata, uyarı, bilgi ve ayrıntılı. **Etkinlik izleme** ve **yayma ETKINLIĞI** seçeneği, WCF etkinlik izleme özelliğini kullanmanıza olanak sağlar.
+3. İzleme düzeyini ayarlamak için **Izleme düzeyi** bağlantısına tıklayın. Altı izleme düzeyi vardır: kapalı, kritik, hata, uyarı, bilgi ve ayrıntılı. **Etkinlik izleme** ve **yayma ETKINLIĞI** seçeneği, WCF etkinlik izleme özelliğini kullanmanıza olanak sağlar.
 
 4. İzleme dosyasını ve seçeneklerini belirtmek için izleme dinleyicisi adına tıklayın.
 
@@ -360,7 +360,7 @@ Gelişmiş düğümlerdeki uzantı düğümlerinden birini seçin:
 
 2. Bir ad girin ve yazın.
 
-3. **Tamam**'ı tıklatın.
+3. **Tamam**'a tıklayın.
 
 4. Uzantı artık düzenleyicide uygun yerde görüntülenir. Örneğin, bir davranış öğesi uzantısı eklerseniz, kullanılabilir Uzantılar listesinde görünür.
 
@@ -374,7 +374,7 @@ Yeni bir yapılandırma dosyası oluşturmanın bir yolu, yeni hizmet öğesi Si
 
 #### <a name="creating-a-configuration-file"></a>Yapılandırma dosyası oluşturma
 
-1. WCF yükleme konumunuza gitmek için bir komut penceresi kullanarak hizmet yapılandırma düzenleyicisini başlatın ve ardından yazın `SvcConfigEditor.exe`.
+1. WCF yükleme konumunuza gitmek için bir komut penceresi kullanarak hizmet yapılandırma düzenleyicisini başlatın ve sonra `SvcConfigEditor.exe` yazın.
 
 2. **Dosya** menüsünde **Aç** ' ı seçin ve ardından, oluşturmak istediğiniz yapılandırma dosyasının türüne bağlı olarak **yürütülebilir**, **com+ hizmeti**veya **webhosted Service**' i tıklatın.
 
@@ -385,17 +385,17 @@ Yeni bir yapılandırma dosyası oluşturmanın bir yolu, yeni hizmet öğesi Si
 5. Yeni hizmeti oluşturmak için sihirbazdaki adımları izleyin.
 
 > [!NOTE]
-> Sihirbaz tarafından oluşturulan yapılandırma dosyasından NetPeerTcpBinding kullanmak istiyorsanız, bir bağlama yapılandırma öğesini el ile eklemeniz ve `mode` `security` öğesinin özniteliğini "none" olarak değiştirmeniz gerekir.
+> Sihirbaz tarafından oluşturulan yapılandırma dosyasından NetPeerTcpBinding kullanmak istiyorsanız, bir bağlama yapılandırma öğesini el ile eklemeniz ve `security` öğesinin `mode` özniteliğini "none" olarak değiştirmeniz gerekir.
 
 ## <a name="configuring-com"></a>COM+ yapılandırılıyor
 
-Hizmet yapılandırma Düzenleyicisi, var olan bir COM+ uygulaması için yeni bir yapılandırma dosyası oluşturmanızı veya mevcut bir COM+ yapılandırmasını düzenlemenizi sağlar. **Com sözleşmesi** düğümü yalnızca yapılandırma dosyasında <`comContract`> bölümü varsa görünür.
+Hizmet yapılandırma Düzenleyicisi, var olan bir COM+ uygulaması için yeni bir yapılandırma dosyası oluşturmanızı veya mevcut bir COM+ yapılandırmasını düzenlemenizi sağlar. **Com sözleşmesi** düğümü yalnızca yapılandırma dosyasında < `comContract` > bölümü varsa görünür.
 
 ### <a name="creating-a-new-com-configuration"></a>Yeni COM+ Yapılandırması Oluşturma
 
 Yeni bir COM+ Yapılandırması oluşturmadan önce, COM+ uygulamanızın Bileşen Hizmetleri 'nde yüklü olduğundan ve genel derleme önbelleği 'ne (GAC) kayıtlı olduğundan emin olun.
 
-1. **Dosya** menüsünü seçin-> -> **com+ uygulamasını tümleştirin.** Bu işlem, geçerli açılan dosyayı kapatır. Geçerli dosyada kaydedilmemiş veriler varsa, bir Kaydet iletişim kutusu görüntülenir. Ardından **com+ Tümleştirme Sihirbazı** başlatılır.
+1. **Dosya** menüsünü seçin->  -> **com+ uygulamasını** **tümleştirin**. Bu işlem, geçerli açılan dosyayı kapatır. Geçerli dosyada kaydedilmemiş veriler varsa, bir Kaydet iletişim kutusu görüntülenir. Ardından **com+ Tümleştirme Sihirbazı** başlatılır.
 
 2. İlk sayfada, ağaçtan COM+ uygulamasını seçin. COM+ uygulamanızı ağaçta bulamıyorsanız bileşen hizmetlerinde yüklü olduğunu ve genel derleme önbelleği 'ne (GAC) kayıtlı olduğunu doğrulayın.
 
@@ -409,7 +409,7 @@ Yeni bir COM+ Yapılandırması oluşturmadan önce, COM+ uygulamanızın Bileş
 
 ### <a name="editing-an-existing-com-configuration"></a>Var olan bir COM+ yapılandırmasını düzenle
 
-1. **Dosya** menüsünü seçin->**com+ hizmetini** **açın** -> ...
+1. **Dosya** menüsünü seçin->  -> **com+ hizmeti** **Aç**...
 
 2. Listeden düzenlemek istediğiniz COM+ hizmetini seçin.
 
@@ -420,6 +420,6 @@ Yeni bir COM+ Yapılandırması oluşturmadan önce, COM+ uygulamanızın Bileş
 
 ## <a name="security"></a>Güvenlik
 
-Yapılandırma Düzenleyicisi tarafından oluşturulan bir hizmet yapılandırma dosyasının güvenli olması garanti edilmez. WCF hizmetlerinizi güvenli hale getirme hakkında bilgi edinmek için lütfen [güvenlik](../../../docs/framework/wcf/feature-details/security.md) belgelerine bakın.
+Yapılandırma Düzenleyicisi tarafından oluşturulan bir hizmet yapılandırma dosyasının güvenli olması garanti edilmez. WCF hizmetlerinizi güvenli hale getirme hakkında bilgi edinmek için lütfen [güvenlik](./feature-details/security.md) belgelerine bakın.
 
 Ayrıca, yapılandırma Düzenleyicisi yalnızca geçerli WCF yapılandırma öğelerini okumak ve yazmak için kullanılabilir. Araç, şema uyumlu, Kullanıcı tanımlı öğeleri yoksayar. Ayrıca, bu öğeleri yapılandırma dosyasından kaldırmayı veya bilinen WCF öğelerinde etkilerini belirlemeyi denemez. Bu öğelerin uygulama veya sistem için tehdit oluşturmadığını belirleme kullanıcının sorumluluğundadır.

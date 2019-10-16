@@ -2,19 +2,19 @@
 title: 'Hizmet: Hatalı Çağrılar'
 ms.date: 03/30/2017
 ms.assetid: 6da7f100-3f61-4b3c-9409-fe1360829b8a
-ms.openlocfilehash: 233033eb32654b96efa6ddaa21991047d66873cb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d02139bcd6540fb973e0f1040c8877c04addc2f4
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61915648"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72321426"
 ---
 # <a name="service-calls-faulted"></a>Hizmet: Hatalı Çağrılar
 Sayaç adı: Hatalı çağrılar.  
   
 ## <a name="description"></a>Açıklama  
- Döndürmüş bu hizmete çağrı sayısı. Windows Communication Foundation (WCF) uygulamaları, hizmet yöntemleri işleme hata bilgilerini SOAP hata iletileri kullanarak iletişim kurar. SOAP hatalarının bir hizmet işlemi için meta veriler bulunur ve bu nedenle istemcilerin yürütülmesi daha sağlam ve etkileşimli hale getirmek için kullanabileceği bir hataya sözleşmesi oluşturma iletisi türleridir. SOAP hataları XML formundaki istemcilere ifade olduğundan, yüksek düzeyde birlikte çalışabilir.  
+ Bu hizmete hata döndüren çağrı sayısı. Windows Communication Foundation (WCF) uygulamalarında, hizmet yöntemleri SOAP hata iletilerini kullanarak işlem hata bilgilerini iletişim kurar. SOAP hataları, bir hizmet işleminin meta verilerinde bulunan ileti türleridir ve bu nedenle, istemcilerinin yürütmesini daha sağlam veya etkileşimli hale getirmek için kullanabileceği bir hata sözleşmesi oluşturur. SOAP hataları, XML biçiminde istemcilere belirtilediğinden, bunlar çok fazla kullanılabilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Sözleşme ve Hizmetlerde Hataları Belirtme ve İşleme](../../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
+- [Sözleşme ve Hizmetlerde Hataları Belirtme ve İşleme](../../specifying-and-handling-faults-in-contracts-and-services.md)

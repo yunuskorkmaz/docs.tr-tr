@@ -2,19 +2,19 @@
 title: SONRA (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 54222642-23c6-4f61-9861-67caca53ac5f
-ms.openlocfilehash: c64e440e8cd8f86706db69d923ba7085d0cb3b3a
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: ba01a978c53b58f7e6c1ac9bc42a97277ac64bbc
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70248986"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319291"
 ---
 # <a name="then-entity-sql"></a>SONRA (Entity SQL)
-Olarak `true`değerlendirildiğinde bir where yan tümcesinin sonucu.  
+@No__t-0 olarak değerlendirildiğinde bir where yan tümcesinin sonucu.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```sql  
 WHEN when_expression THEN then_expression  
 ```  
   
@@ -26,18 +26,18 @@ WHEN when_expression THEN then_expression
  Bir koleksiyon döndüren geçerli bir sorgu ifadesi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `then-expression`Değer `when_expression` değerlendirilirse,`true`sonuç karşılık gelir. Ne zaman koşullarından hiçbiri karşılanmıyorsa, olarak `else-expression` değerlendirilir. Ancak, Hayır `else-expression`ise sonuç null olur.  
+ @No__t-0 `true` değerini verirse, sonuç karşılık gelen `then-expression` ' dir. NE zaman koşullarından hiçbiri karşılanmıyorsa `else-expression` değerlendirilir. Ancak, `else-expression` yoksa sonuç null olur.  
   
  Bir örnek için bkz. [Case](case-entity-sql.md).  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki Entity SQL sorgusu, bir `Boolean` ifade kümesini değerlendirmek için Case ifadesini kullanır. Sorgu AdventureWorks Sales modelini temel alır. Bu sorguyu derlemek ve çalıştırmak için aşağıdaki adımları izleyin:  
+ Aşağıdaki Entity SQL sorgusu, bir `Boolean` ifadesi kümesini değerlendirmek için CASE ifadesini kullanır. Sorgu AdventureWorks Sales modelini temel alır. Bu sorguyu derlemek ve çalıştırmak için aşağıdaki adımları izleyin:  
   
-1. [Aşağıdaki adımları uygulayın: PrimitiveType sonuçları](../how-to-execute-a-query-that-returns-primitivetype-results.md)döndüren bir sorgu yürütün.  
+1. [Nasıl yapılır: PrimitiveType sonuçları döndüren bir sorgu yürütme](../how-to-execute-a-query-that-returns-primitivetype-results.md)bölümündeki yordamı izleyin.  
   
 2. Aşağıdaki sorguyu `ExecutePrimitiveTypeQuery` yöntemine bir bağımsız değişken olarak geçirin:  
   
- [!code-csharp[DP EntityServices Concepts 2#CASE_WHEN_THEN_ELSE](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#case_when_then_else)]  
+ [!code-sql[DP EntityServices Concepts#CASE_WHEN_THEN_ELSE](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#case_when_then_else)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

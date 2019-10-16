@@ -1,26 +1,26 @@
 ---
-title: 'Uç noktası: Saniyede Başarısız Olan Çağrı'
+title: 'Uç Noktası: Saniyede Başarısız Olan Çağrı'
 ms.date: 03/30/2017
 ms.assetid: bcbe9da4-c8dd-4e27-b630-11611adc7580
-ms.openlocfilehash: 52419f45adde768d19d6b46642d52ad0a1844197
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9634f8a170bb2fae2f15c3f00dcabb95d512c74e
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61797351"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72321455"
 ---
-# <a name="endpoint-calls-failed-per-second"></a>Uç noktası: Saniyede Başarısız Olan Çağrı
-Sayaç adı: Saniye başına başarısız olan çağrılar.  
+# <a name="endpoint-calls-failed-per-second"></a>Uç Noktası: Saniyede Başarısız Olan Çağrı
+Sayaç adı: saniye başına başarısız çağrı.  
   
 ## <a name="description"></a>Açıklama  
- Bu bitiş noktası tarafından saniyede alınan ve yakalanamayan özel durumları çağrı sayısı.  
+ İşlenmemiş özel durumları olan ve bu bitiş noktası tarafından bir saniyede alınan çağrıların sayısı.  
   
- Bu sayaç performans sayacı türüdür [PERF_COUNTER_COUNTER](https://go.microsoft.com/fwlink/?LinkID=94649), değeri aşağıdaki formül kullanılarak hesaplanır.  
+ Bu sayaç, değeri aşağıdaki formül kullanılarak hesaplanmış olan [PERF_COUNTER_COUNTER](https://go.microsoft.com/fwlink/?LinkID=94649)performans sayacı türüdür.  
   
- (1 - N 0 N) / ((D 1 - D 0) / F)  
+ (N 1-N 0)/((D 1-D 0)/F)  
   
- Var olan her zaman işlenmeyen bir özel durum Bu uç noktada Bu sayaç artırılır.  
+ Bu uç noktada işlenmeyen bir özel durum olduğunda bu sayaç artırılır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Sözleşme ve Hizmetlerde Hataları Belirtme ve İşleme](../../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
+- [Sözleşme ve Hizmetlerde Hataları Belirtme ve İşleme](../../specifying-and-handling-faults-in-contracts-and-services.md)
