@@ -1,9 +1,0 @@
-- name: Dizin Oluşturucular
-  href: index.md
-  items:
-    - name: Dizin Oluşturucular Kullanma
-      href: using-indexers.md
-    - name: Arabirimlerdeki Dizin Oluşturucular
-      href: indexers-in-interfaces.md
-    - name: Özellikler ve Dizin Oluşturucular Arasında Karşılaştırma
-      href: comparison-between-properties-and-indexers.md
