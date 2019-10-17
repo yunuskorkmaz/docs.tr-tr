@@ -1,9 +1,0 @@
-- name: Arabirimler
-  href: index.md
-  items:
-    - name: Belirtik Arabirim Kullanma
-      href: explicit-interface-implementation.md
-    - name: 'Nasıl yapılır: Arabirim Üyelerini Açıkça Uygulama'
-      href: how-to-explicitly-implement-interface-members.md
-    - name: 'Nasıl yapılır: İki Arabirimin Üyelerini Açıkça Uygulama'
-      href: how-to-explicitly-implement-members-of-two-interfaces.md

@@ -1,7 +1,0 @@
-- name: Boş değer atanabilen değer türleri
-  href: index.md
-  items:
-    - name: Boş değer atanabilen değer türlerini kullanma
-      href: using-nullable-types.md
-    - name: 'Nasıl yapılır: boş değer atanabilir değer türünü tanımlama'
-      href: how-to-identify-a-nullable-type.md

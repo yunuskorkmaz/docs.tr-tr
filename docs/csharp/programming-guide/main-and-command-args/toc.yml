@@ -1,9 +1,0 @@
-- name: Ana() ve komut satırı bağımsız değişkenleri
-  href: index.md
-  items:
-    - name: Komut Satırı Bağımsız Değişkenleri
-      href: command-line-arguments.md
-    - name: 'Nasıl yapılır: Komut Satırı Bağımsız Değişkenlerini Görüntüleme'
-      href: how-to-display-command-line-arguments.md
-    - name: Ana() Dönüş Değerleri
-      href: main-return-values.md

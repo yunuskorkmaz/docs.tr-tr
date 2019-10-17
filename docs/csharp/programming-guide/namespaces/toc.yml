@@ -1,7 +1,0 @@
-- name: Ad Alanları
-  href: index.md
-  items:
-    - name: Ad alanlarını kullanma
-      href: using-namespaces.md
-    - name: 'Nasıl yapılır: Ad Alanımı kullanma'
-      href: how-to-use-the-my-namespace.md
