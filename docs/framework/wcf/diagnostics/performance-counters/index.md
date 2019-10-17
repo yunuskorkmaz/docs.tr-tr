@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - performance counters [WCF]
 ms.assetid: f559b2bd-ed83-4988-97a1-e88f06646609
-ms.openlocfilehash: a13cc98a88ff81afd478eaa3e40286169811233a
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 73bb02379308fbfe507137e61ac8d84e6b9760b4
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320298"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395912"
 ---
 # <a name="wcf-performance-counters"></a>WCF Performans Sayaçları
 Windows Communication Foundation (WCF), uygulamanızın performansını ölçgetirmenize yardımcı olacak büyük bir performans sayacı kümesi içerir.  
@@ -118,19 +118,16 @@ config.Save();
 > Bir sözleşmede yinelenen işlem adları varsa, her iki işlem için yalnızca bir sayaç örneği alırsınız.  
   
 ## <a name="programming-the-wcf-performance-counters"></a>WCF performans sayaçlarını programlama  
- WCF performans sayaçlarına programlı bir şekilde erişebilmeniz için SDK yükleme klasörüne birkaç dosya yüklenir. Bu dosyalar aşağıdaki gibi listelenmiştir.  
+
+WCF performans sayaçlarına programlı bir şekilde erişebilmeniz için SDK yükleme klasörüne birkaç dosya yüklenir. Bu dosyalar aşağıdaki gibi listelenmiştir:
   
-- _ServiceModelEndpointPerfCounters. VRG  
+- *@no__t -1ServiceModelEndpointPerfCounters. VRG*
+- *@no__t -1ServiceModelOperationPerfCounters. VRG*
+- *@no__t -1ServiceModelServicePerfCounters. VRG*  
+- *@no__t -1SMSvcHostPerfCounters. VRG*
+- *@no__t -1Transactionköprüperfcounters. VRG*
   
-- _ServiceModelOperationPerfCounters. VRG  
-  
-- _ServiceModelServicePerfCounters. VRG  
-  
-- _SMSvcHostPerfCounters. VRG  
-  
-- _Transactionköprüperfcounters. VRG  
-  
- Sayaçlara programlı olarak erişme hakkında daha fazla bilgi için bkz. [performans sayacı programlama mimarisi](https://go.microsoft.com/fwlink/?LinkId=95179).  
+Sayaçlara programlı olarak erişme hakkında daha fazla bilgi için bkz. [performans sayacı programlama mimarisi](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/5f9bkxzf(v=vs.90)).
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

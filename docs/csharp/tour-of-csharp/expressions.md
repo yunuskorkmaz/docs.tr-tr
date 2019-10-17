@@ -1,33 +1,33 @@
 ---
-title: C#İfadeleri - Turu C# dil
-description: ifadeleri ve işlenenleri işleçleri olan yapı taşları C# dil
+title: C#İfadeler- C# dilin turu
+description: İfadeler, işlenenler ve işleçler, C# dilin yapı taşları
 ms.date: 04/25/2019
 ms.assetid: 20d5eb10-7381-47b9-ad90-f1cc895aa27e
-ms.openlocfilehash: 2553730d495942730c53d3646f35e80759a4d168
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: 4866d12118518827c1f7032ac09933927f0f3c52
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67609327"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395669"
 ---
 # <a name="expressions"></a>İfadeler
 
-*İfadeleri* oluşturulan *işlenenler* ve *işleçleri*. İfade işleçleri işlenenlere uygulamak için hangi işlemleri gösterir. İşleçler örnekler `+`, `-`, `*`, `/`, ve `new`. Değişmez değerler, alanlar, yerel değişkenleri ve ifadeleri işlenenler örnekleridir.
+*İfadeler* , *işlenenler* ve *işleçlerden*oluşturulur. Bir ifadenin işleçleri, işlenenlerin hangi işlemleri uygulanacağını gösterir. İşleç örnekleri `+`, `-`, `*`, `/` ve `new` ' ü içerir. İşlenenlerin örnekleri, sabit değerleri, alanları, yerel değişkenleri ve ifadeleri içerir.
 
-Bir ifade birden çok işleç içeren *öncelik* işleçleri tek tek işleçler değerlendirilme sırası denetler. Örneğin, ifade `x + y * z` değerlendirmesinde `x + (y * z)` çünkü `*` işleci daha yüksek önceliğe sahip `+` işleci.
+Bir ifade birden çok işleç içerdiğinde, işleçlerin *önceliği* ayrı işleçlerin değerlendirilme sırasını denetler. Örneğin, `*` işleci `+` işlecinden daha yüksek önceliğe sahip olduğundan `x + y * z` ifadesi `x + (y * z)` olarak değerlendirilir.
 
-Bir işlenen aynı önceliğe sahip iki işleç arasında gerçekleştiğinde *ilişkilendirilebilirliği* operatörleri işlemleri gerçekleştirilir sırasını denetler:
+Aynı önceliğe sahip iki işleç arasında bir işlenen gerçekleştiğinde, işleçlerin *ilişkilendirilebilirliği* , işlemlerin gerçekleştirileceği sırayı denetler:
 
-* Atama işleçleri hariç tüm ikili işleçler şunlardır *ilişkilendirilebilir*, yani işlemler soldan sağa doğru gerçekleştirilir. Örneğin, `x + y + z` değerlendirmesinde `(x + y) + z`.
-* Atama işleçleri ve koşullu işleç (`?:`) olan *sağla ilişkilendirilebilir*, sağdan sola işlemler gerçekleştirilir anlamına gelir. Örneğin, `x = y = z` değerlendirmesinde `x = (y = z)`.
+* Atama ve null birleşim işleçleri hariç olmak üzere tüm ikili işleçler *sola ilişkilendirilebilir*, yani işlemler soldan sağa yapılır. Örneğin, `x + y + z` `(x + y) + z` olarak değerlendirilir.
+* Atama işleçleri, null birleştirme `??` ve `??=` işleçleri ve koşullu işleç `?:` ' i sağ *ilişkilendirilebilir*, yani işlemler sağdan sola yapılır. Örneğin, `x = y = z` `x = (y = z)` olarak değerlendirilir.
 
-Öncelik ve ilişkisellik parantez kullanılarak denetlenebilir. Örneğin, `x + y * z` ilk çarpar `y` tarafından `z` ve ardından sonuca ekler `x`, ancak `(x + y) * z` ilk ekler `x` ve `y` ve sonucu çarpan `z`.
+Öncelik ve ilişkilendirilebilirlik, parantezler kullanılarak denetlenebilir. Örneğin, `x + y * z` ' ı ilk önce `z` ile @no__t çarpar ve sonra sonucu `x` ' e ekler, ancak `(x + y) * z` ' ü önce `x` ve `y` ' ı ekler ve ardından sonucu @no__t 7 ile çarpar.
 
-Çoğu işleçleri olabilir [ *aşırı*](../language-reference/operators/operator-overloading.md). İşleç aşırı yüklemesi, aşağıdakilerden birini veya her iki işlenen kullanıcı tanımlı sınıf veya yapı türü olduğu işlemlerinde belirtilmesi için kullanıcı tanımlı işleç uygulamalarına izin verir.
+Çoğu işleç [*aşırı*](../language-reference/operators/operator-overloading.md)yüklenebilir. İşleç aşırı yüklemesi, Kullanıcı tanımlı operatör uygulamalarının bir veya her ikisinin de Kullanıcı tanımlı sınıf veya yapı türünde olduğu işlemler için belirtilmesine izin verir.
 
-C#birkaç gerçekleştirmek için işleçleri sağlar [aritmetik](../language-reference/operators/arithmetic-operators.md), [mantıksal](../language-reference/operators/boolean-logical-operators.md), [bit düzeyinde and -shift ile](../language-reference/operators/bitwise-and-shift-operators.md) işlemleri ve [eşitlik](../language-reference/operators/equality-operators.md) ve [sipariş](../language-reference/operators/comparison-operators.md) karşılaştırmalar.
+C#[Aritmetik](../language-reference/operators/arithmetic-operators.md), [mantıksal](../language-reference/operators/boolean-logical-operators.md), [bit düzeyinde ve vardiya](../language-reference/operators/bitwise-and-shift-operators.md) işlemleri ile [eşitlik](../language-reference/operators/equality-operators.md) ve [sıra](../language-reference/operators/comparison-operators.md) karşılaştırmaları gerçekleştirmeye yönelik bir dizi işleç sağlar.
 
-Tam listesi için C# işleçler, öncelik düzeyine göre sıralanmış bkz [ C# işleçleri](../language-reference/operators/index.md).
+Öncelik düzeyine göre sıralanan C# işleçlerin tüm listesi için bkz [ C# . işleçler](../language-reference/operators/index.md).
 
 > [!div class="step-by-step"]
 > [Önceki](types-and-variables.md)

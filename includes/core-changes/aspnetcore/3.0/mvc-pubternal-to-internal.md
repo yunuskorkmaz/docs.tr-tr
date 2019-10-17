@@ -1,0 +1,75 @@
+---
+ms.openlocfilehash: 09fd95ba5f3aee59f2abdfbb4e64eb6202e2b873
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72394427"
+---
+### <a name="mvc-pubternal-types-changed-to-internal"></a>MVC: "Pubternal" türleri iç olarak değiştirildi
+
+ASP.NET Core 3,0 ' de, MVC içindeki tüm "pubternal" türleri desteklenen bir ad alanında `public` ya da uygun şekilde `internal` olarak güncelleştirildi.
+
+#### <a name="change-description"></a>Açıklamayı Değiştir
+
+ASP.NET Core, "pubternal" türleri `public` olarak belirtilir, ancak bir @no__t -1-sonfixed ad alanında yer alır. Bu türler `public` olsa da, destek ilkesi yoktur ve bu değişiklikler, son değişikliklere tabidir. Ne yazık ki, bu türlerin yanlışlıkla kullanılması yaygındır ve bu projelerde oluşan değişikliklere neden olacak ve Framework 'ün bakımını yapma yeteneğini sınırlandırmıştır.
+
+#### <a name="version-introduced"></a>Sunulan sürüm
+
+3.0
+
+#### <a name="old-behavior"></a>Eski davranış
+
+MVC 'deki bazı türler `public`, ancak `.Internal` ad alanında. Bu türlerin destek ilkesi yoktu ve değişiklikler ortadan kaldırıldı.
+
+#### <a name="new-behavior"></a>Yeni davranış
+
+Bu tür türler desteklenen bir ad alanında `public` ya da `internal` olarak işaretlenmiş olarak güncelleştirilir.
+
+#### <a name="reason-for-change"></a>Değişiklik nedeni
+
+"Pubternal" türlerinin yanlışlıkla kullanılması yaygındır ve bu projelerde oluşan değişikliklere neden olacak ve Framework 'ün bakımını yapma yeteneğini sınırlandırmıştır.
+
+#### <a name="recommended-action"></a>Önerilen eylem
+
+Gerçekten `public` olan ve yeni, desteklenen bir ad alanına taşınan türler kullanıyorsanız, başvurularınızı yeni ad alanlarıyla eşleşecek şekilde güncelleştirin.
+
+@No__t-0 olarak işaretlenen türler kullanıyorsanız, alternatif bulmanız gerekir. Daha önce "pubternal" türleri genel kullanım için hiçbir şekilde desteklenmez. Bu ad alanlarında uygulamalarınız için kritik olan belirli türler varsa, [ASPNET/AspNetCore](https://github.com/aspnet/AspNetCore/issues)' da bir sorun yayınlayın. İstenen türlerin @no__t yapılması için dikkat edilmesi gereken noktalar-0.
+
+#### <a name="category"></a>Kategori
+
+ASP.NET Core
+
+#### <a name="affected-apis"></a>Etkilenen API’ler
+
+Bu değişiklik aşağıdaki ad alanları türlerini içerir:
+
+- `Microsoft.AspNetCore.Mvc.Cors.Internal`
+- `Microsoft.AspNetCore.Mvc.DataAnnotations.Internal`
+- `Microsoft.AspNetCore.Mvc.Formatters.Internal`
+- `Microsoft.AspNetCore.Mvc.Formatters.Json.Internal`
+- `Microsoft.AspNetCore.Mvc.Formatters.Xml.Internal`
+- `Microsoft.AspNetCore.Mvc.Internal`
+- `Microsoft.AspNetCore.Mvc.ModelBinding.Internal`
+- `Microsoft.AspNetCore.Mvc.Razor.Internal`
+- `Microsoft.AspNetCore.Mvc.RazorPages.Internal`
+- `Microsoft.AspNetCore.Mvc.TagHelpers.Internal`
+- `Microsoft.AspNetCore.Mvc.ViewFeatures.Internal`
+
+<!--
+
+#### Affected APIs
+
+- `N:Microsoft.AspNetCore.Mvc.Cors.Internal`
+- `N:Microsoft.AspNetCore.Mvc.DataAnnotations.Internal`
+- `N:Microsoft.AspNetCore.Mvc.Formatters.Internal`
+- `N:Microsoft.AspNetCore.Mvc.Formatters.Json.Internal`
+- `N:Microsoft.AspNetCore.Mvc.Formatters.Xml.Internal`
+- `N:Microsoft.AspNetCore.Mvc.Internal`
+- `N:Microsoft.AspNetCore.Mvc.ModelBinding.Internal`
+- `N:Microsoft.AspNetCore.Mvc.Razor.Internal`
+- `N:Microsoft.AspNetCore.Mvc.RazorPages.Internal`
+- `N:Microsoft.AspNetCore.Mvc.TagHelpers.Internal`
+- `N:Microsoft.AspNetCore.Mvc.ViewFeatures.Internal`
+
+-->

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3acfa0da0caa29b503f47f23b0e9042d73ef0657
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: f2150351c97f6deae18177be642e6c3009422960
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71353395"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72393714"
 ---
 # <a name="whats-new-in-the-net-framework"></a>.NET Framework yenilikler
 
@@ -203,7 +203,7 @@ Karma mod yüksek DPı ölçeklendirme desteğini etkinleştirmek için aşağı
 
 - [Temel sınıflar](#core-472)
 - [ASP.NET](#asp-net472)
-- [Ağ](#net472)
+- [İşlemleri](#net472)
 - [SQL](#sql472)
 - [WPF](#wpf472)
 - [ClickOnce](#clickonce)
@@ -352,7 +352,7 @@ Windows API 'Leri kullanarak açma desteği, .NET Framework 4.7.2 ' i hedefleyen
 
 **Ek koleksiyon API 'Leri**
 
-.NET Framework 4.7.2, <xref:System.Collections.Generic.SortedSet%601> ve <xref:System.Collections.Generic.HashSet%601> türlerine bir dizi yeni API ekler. Bunlar:
+.NET Framework 4.7.2, <xref:System.Collections.Generic.SortedSet%601> ve <xref:System.Collections.Generic.HashSet%601> türlerine bir dizi yeni API ekler. Bu güncelleştirmeler şunlardır:
 
 - `TryGetValue` yöntemleri, diğer koleksiyon türlerinde kullanılan try modelini bu iki türe genişletir. Yöntemler şunlardır:
 
@@ -436,7 +436,7 @@ Web yapılandırma dosyasını değiştirerek <xref:System.Web.Security.FormsAut
 
 <a name="net472" />
 
-#### <a name="networking"></a>Ağ
+#### <a name="networking"></a>Ağ Oluşturma
 
 **HttpClientHandler özelliklerinin uygulanması**
 
@@ -542,7 +542,7 @@ public static event EventHandler<StaticResourceResolvedEventArgs> StaticResource
 ```
 
 ```vb
-Public Shared Event StaticResourceResolved As EventHandler(Of StaticResourceResolvedEventArgs)
+Public Shared Event StaticResourceResolved As EventHandler(Of StaticResourceResolvedEventArgs)
 ```
 
 Bu olay, çalışma zamanı bir [StaticResource](../wpf/advanced/staticresource-markup-extension.md) başvurusunu her çözdüğünde tetiklenir. @No__t-0 bağımsız değişkenleri çözümü anlatmaktadır ve [StaticResource](../wpf/advanced/staticresource-markup-extension.md) başvurusunu barındıran nesne ve özelliği ve çözüm için kullanılan @ no__t-2 ve anahtarı gösterir:
@@ -591,7 +591,7 @@ Windows Forms uygulama için, uygulama bildirimi yerine uygulama yapılandırma 
 
 - [Temel sınıflar](#core471)
 - [Ortak dil çalışma zamanı (CLR)](#clr)
-- [Ağ](#net471)
+- [İşlemleri](#net471)
 - [ASP.NET](#asp-net471)
 
 Ayrıca, .NET Framework 4.7.1 ' deki önemli bir odak, bir uygulamanın yardımcı teknoloji kullanıcıları için uygun bir deneyim sağlamasına izin veren gelişmiş erişilebilirliğe sahiptir. .NET Framework 4.7.1 ' deki erişilebilirlik geliştirmeleri hakkında daha fazla bilgi için [.NET Framework erişilebilirlik](whats-new-in-accessibility.md)yenilikleri bölümüne bakın.
@@ -632,7 +632,7 @@ Yapılandırma üreticileri, geliştiricilerin uygulamalar için yapılandırma 
 
 <a name="net471"/>
 
-#### <a name="networking"></a>Ağ
+#### <a name="networking"></a>Ağ Oluşturma
 
 **Message. HashAlgorithm için SHA-2 desteği**
 
@@ -673,7 +673,7 @@ ASP.NET, 23 olay içeren önceden tanımlanmış bir işlem hattındaki istekler
 .NET Framework 4,7, aşağıdaki alanlardaki yeni özellikler içerir:
 
 - [Temel sınıflar](#Core47)
-- [Ağ](#net47)
+- [İşlemleri](#net47)
 - [ASP.NET](#ASP-NET47)
 - [Windows Communication Foundation (WCF)](#wcf47)
 - [Windows Forms](#wf47)
@@ -701,7 +701,7 @@ GitHub 'da [4,7 .NET Framework şifreleme geliştirmesi örneği](https://gist.g
 
 <a name="net47" />
 
-#### <a name="networking"></a>Ağ
+#### <a name="networking"></a>Ağ Oluşturma
 
 .NET Framework 4,7, ağla ilgili aşağıdaki özelliği ekler:
 
@@ -743,7 +743,7 @@ WCF, .NET Framework 4,7 ' den itibaren, varsayılan ileti güvenlik protokolü o
 
 **WCF uygulamalarının ve WCF serileştirmenin güvenilirliği geliştirildi**
 
-WCF, yarış koşullarını ortadan kaldıran bir dizi kod değişikliği içerir, böylece performansı ve serileştirme seçeneklerinin güvenilirliğini geliştirir. Bunlar:
+WCF, yarış koşullarını ortadan kaldıran bir dizi kod değişikliği içerir, böylece performansı ve serileştirme seçeneklerinin güvenilirliğini geliştirir. Bu güncelleştirmeler şunlardır:
 
 - **SocketConnection. BeginRead** ve **SocketConnection. Read**çağrılarına zaman uyumsuz ve zaman uyumlu kod karıştırma için daha iyi destek.
 - **Sharedconnectionlistener** ve **DuplexChannelBinder**ile bağlantı iptal edildiğinde iyileştirilmiş güvenilirlik.
@@ -843,7 +843,7 @@ End Class
 
 Ardından, anahtar hata iletisi dizesi olan ve değeri yerelleştirilmiş hata iletisi olan DataAnnotation. yerelleştirme. fr. resx olan bir kaynak dosyası oluşturabilirsiniz. Dosyanın `App.LocalResources` klasöründe bulunması gerekir. Örneğin, aşağıdaki anahtar ve değeri yerelleştirilmiş Fransızca (fr) dil hata iletisinde verilmiştir:
 
-| Name                                 | Value                                     |
+| Name                                 | Değer                                     |
 | ------------------------------------ | ----------------------------------------- |
 | Derecelendirme 1 ile 10 arasında olmalıdır. | La Note DoIt être, diğer 1 et 10. |
 
@@ -1041,13 +1041,13 @@ Yeni `PoolBlockingPeriod` anahtar sözcüğünün eklenmesi, uygulamanız için 
 
 Azure SQL veritabanına bağlanan bir uygulama için bağlantı havuzu engelleme süresi devre dışıdır ve başka bir SQL Server örneğine bağlanan bir uygulama için bağlantı havuzu engelleme süresi etkindir. Varsayılan değer budur. Sunucu uç noktası adı aşağıdakilerden biriyle sonlanıyorsa, Azure SQL veritabanı olarak kabul edilir:
 
-- .database.windows.net
+- . database.windows.net
 
-- .database.chinacloudapi.cn
+- . database.chinacloudapi.cn
 
-- .database.usgovcloudapi.net
+- . database.usgovcloudapi.net
 
-- .database.cloudapi.de
+- . database.cloudapi.de
 
 <xref:System.Data.SqlClient.PoolBlockingPeriod.AlwaysBlock>
 
@@ -1132,9 +1132,9 @@ Bu değişikliği etkinleştirmek için, istemci uygulamanızın App. config vey
 
 SSL 3,0, aktarım güvenliği ile NetTcp kullanırken güvenli bir bağlantı anlaşması için kullanılan varsayılan protokol değildir. Çoğu durumda, TLS 1,0, NetTcp protokol listesine eklendiğinden, var olan uygulamalara hiçbir etkisi olmaz. Tüm mevcut istemciler, en az TLS 1,0 kullanarak bir bağlantı anlaşması yapabilmelidir. Ssl3 gerekliyse, anlaşmalı protokoller listesine eklemek için aşağıdaki yapılandırma mekanizmalarından birini kullanın.
 
-- <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement.SslProtocols%2A?displayProperty=nameWithType> Özelliği
+- @No__t-0 özelliği
 
-- <xref:System.ServiceModel.TcpTransportSecurity.SslProtocols%2A?displayProperty=nameWithType> Özelliği
+- @No__t-0 özelliği
 
 - [@No__t-3netTcpBinding >](../configure-apps/file-schema/wcf/nettcpbinding.md) bölümünün [\<transport >](../configure-apps/file-schema/wcf/transport-of-nettcpbinding.md) bölümü
 
@@ -1272,7 +1272,7 @@ Dönüştürülmüş masaüstü uygulamaları, UWP API 'Lerinin, canlı kutucuk 
 
 <a name="Crypto" />
 
-### <a name="cryptography-support-for-x509-certificates-containing-ecdsa"></a>To ECDSA içeren x509 sertifikaları için destek
+### <a name="cryptography-support-for-x509-certificates-containing-ecdsa"></a>Şifreleme: ECDSA içeren x509 sertifikaları için destek
 
 .NET Framework 4,6, x509 sertifikaları için RSACng desteğini ekledi. .NET Framework 4.6.1 ECDSA (Eliptik Eğri dijital Imza algoritması) x509 sertifikaları için destek ekler.
 
@@ -1355,7 +1355,7 @@ WPF, DX10 ve DX11 içeriğiyle birlikte çalışabilmeyi kolaylaştıran <xref:S
 
 <a name="WWF461" />
 
-### <a name="windows-workflow-foundation-transactions"></a>Windows Workflow Foundation: İşlemler
+### <a name="windows-workflow-foundation-transactions"></a>Windows Workflow Foundation: Işlemler
 
 @No__t-0 yöntemi artık işlemi yükseltmek için MSDTC dışında bir dağıtılmış işlem yöneticisi kullanabilir. Bunu, yeni <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%28System.Transactions.IPromotableSinglePhaseNotification%2CSystem.Guid%29?displayProperty=nameWithType> aşırı yüküne bir GUID işlem Promoter tanımlayıcısı belirterek yapabilirsiniz. Bu işlem başarılı olursa, işlemin özelliklerine yerleştirilmiş sınırlamalar vardır. MSDTC olmayan bir işlem promosyonu kaydedildikten sonra, bu yöntemler MSDTC 'ye yükseltme gerektirdiğinden aşağıdaki yöntemler bir @no__t (0) oluşturur:
 
@@ -1667,7 +1667,7 @@ Ngen pdb 'leri ile NGen, Il PDB 'ye bağımlılık olmadan IL-yerel eşlemeyi i�
 
   - **Farklı HTTP bağlantıları kullanarak ileti gönderme**
 
-    WCF artık kullanıcıların, farklı temel HTTP bağlantıları kullanılarak belirli iletilerin gönderilmesini sağlamasına izin veriyor. Bunu yapmanın iki yolu vardır:
+    WCF artık kullanıcıların, farklı temel HTTP bağlantıları kullanılarak belirli iletilerin gönderilmesini sağlamasına izin veriyor. Bunu yapmak için iki yol vardır:
 
     - **Bağlantı grubu adı ön eki kullanma**
 
@@ -1711,7 +1711,7 @@ Ngen pdb 'leri ile NGen, Il PDB 'ye bağımlılık olmadan IL-yerel eşlemeyi i�
 
   Varsayılan değer `false` şeklindedir.
 
-- **Ağ**
+- **İşlemleri**
 
   - **Yuva yeniden kullanımı**
 
@@ -1721,7 +1721,7 @@ Ngen pdb 'leri ile NGen, Il PDB 'ye bağımlılık olmadan IL-yerel eşlemeyi i�
 
     - @No__t-0 sabit listesi değeri.
 
-    - <xref:System.Net.ServicePointManager.ReusePort%2A?displayProperty=nameWithType> Özelliği.
+    - @No__t-0 özelliği.
 
     Varsayılan olarak, `HKLM\SOFTWARE\Microsoft\.NETFramework\v4.0.30319` kayıt defteri anahtarının `HWRPortReuseOnSocketBind` değeri 0x1 olarak ayarlanmadığı takdirde <xref:System.Net.ServicePointManager.ReusePort%2A?displayProperty=nameWithType> özelliği `false` ' dir. HTTP bağlantılarında yerel bağlantı noktası yeniden kullanımını etkinleştirmek için <xref:System.Net.ServicePointManager.ReusePort%2A?displayProperty=nameWithType> özelliğini `true` olarak ayarlayın. Bu, <xref:System.Net.Http.HttpClient> ve <xref:System.Net.HttpWebRequest> ' den giden TCP yuvası bağlantılarının, yerel bağlantı noktası yeniden kullanımını sağlayan yeni bir Windows 10 yuva seçeneği olan [SO_REUSE_UNICASTPORT](/windows/desktop/WinSock/sol-socket-socket-options)kullanmasına neden olur.
 
@@ -1848,7 +1848,7 @@ Ngen pdb 'leri ile NGen, Il PDB 'ye bağımlılık olmadan IL-yerel eşlemeyi i�
 
   - Windows 8.1, Windows Phone 8,1 ve Windows Phone Silverlight 8,1 ' i hedefleyen taşınabilir kitaplıklarda Windows Çalışma Zamanı API 'Leri kullanabilirsiniz.
 
-  - Windows 8.1 veya Windows Phone 8,1 ' i hedefliyorsanız taşınabilir kitaplıklara XAML (Windows. UI. XAML türleri) ekleyebilirsiniz. Aşağıdaki XAML şablonları desteklenir:  Boş sayfa, kaynak sözlüğü, şablonlu denetim ve Kullanıcı denetimi.
+  - Windows 8.1 veya Windows Phone 8,1 ' i hedefliyorsanız taşınabilir kitaplıklara XAML (Windows. UI. XAML türleri) ekleyebilirsiniz. Şu XAML şablonları desteklenir: boş sayfa, kaynak sözlüğü, şablonlu denetim ve Kullanıcı denetimi.
 
   - Windows 8.1 ve Windows Phone 8,1 ' i hedefleyen Mağaza uygulamalarında kullanılmak üzere taşınabilir bir Windows Çalışma Zamanı bileşeni (. winmd dosyası) oluşturabilirsiniz.
 
@@ -1862,11 +1862,11 @@ Ngen pdb 'leri ile NGen, Il PDB 'ye bağımlılık olmadan IL-yerel eşlemeyi i�
 
 .NET Framework 4.5.1 ' deki temel sınıflardaki yeni özellikler ve geliştirmeler şunları içerir:
 
-- Derlemeler için otomatik bağlama yeniden yönlendirme. Visual Studio 2013 başlayarak, .NET Framework 4.5.1 hedefleyen bir uygulama derlerken, uygulamanız veya bileşenleri aynı derlemenin birden çok sürümüne başvurduğu zaman bağlama yeniden yönlendirmeleri uygulama yapılandırma dosyasına eklenebilir. Ayrıca, .NET Framework eski sürümlerini hedefleyen projeler için bu özelliği etkinleştirebilirsiniz. Daha fazla bilgi için [nasıl yapılır: Otomatik bağlama yeniden yönlendirmeyi](../configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)etkinleştirin ve devre dışı bırakın.
+- Derlemeler için otomatik bağlama yeniden yönlendirme. Visual Studio 2013 başlayarak, .NET Framework 4.5.1 hedefleyen bir uygulama derlerken, uygulamanız veya bileşenleri aynı derlemenin birden çok sürümüne başvurduğu zaman bağlama yeniden yönlendirmeleri uygulama yapılandırma dosyasına eklenebilir. Ayrıca, .NET Framework eski sürümlerini hedefleyen projeler için bu özelliği etkinleştirebilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: otomatik bağlama yeniden yönlendirmeyi etkinleştirme ve devre dışı bırakma](../configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md).
 
 - Geliştiricilerin sunucu ve bulut uygulamalarının performansını geliştirmesine yardımcı olmak için tanılama bilgilerini toplama özelliği. Daha fazla bilgi için <xref:System.Diagnostics.Tracing.EventSource> sınıfındaki <xref:System.Diagnostics.Tracing.EventSource.WriteEventWithRelatedActivityId%2A> ve <xref:System.Diagnostics.Tracing.EventSource.WriteEventWithRelatedActivityIdCore%2A> yöntemlerine bakın.
 
-- Çöp toplama sırasında büyük nesne yığınını (LOH) açık bir şekilde sıkıştırabilme. Daha fazla bilgi için bkz <xref:System.Runtime.GCSettings.LargeObjectHeapCompactionMode%2A?displayProperty=nameWithType> . özelliği.
+- Çöp toplama sırasında büyük nesne yığınını (LOH) açık bir şekilde sıkıştırabilme. Daha fazla bilgi için <xref:System.Runtime.GCSettings.LargeObjectHeapCompactionMode%2A?displayProperty=nameWithType> özelliğine bakın.
 
 - .NET Framework güncelleştirmesinden sonra ASP.NET uygulama askıya alma, çok çekirdekli JıT geliştirmeleri ve daha hızlı uygulama başlatma gibi ek performans geliştirmeleri. Ayrıntılar için bkz. [.NET Framework 4.5.1 ilanı](https://devblogs.microsoft.com/dotnet/announcing-the-net-framework-4-5-1-preview/) ve [ASP.net App Suspend](https://devblogs.microsoft.com/dotnet/asp-net-app-suspend-responsive-shared-net-web-hosting/) blog gönderisi.
 
@@ -1914,7 +1914,7 @@ ASP.NET 4.5.1 içindeki yeni özellikler için bkz. [Visual Studio 2013 Sürüm 
 
 - Arka plan tam zamanında (JıT) derleme, isteğe bağlı olarak, uygulama performansını artırmak için çok çekirdekli işlemcilerde kullanılabilir. Bkz. <xref:System.Runtime.ProfileOptimization>.
 
-- Normal ifade altyapısının zaman aşımına uğramadan önce normal ifadeyi çözmeyi ne kadar süreyle deneyeceğini sınırlayabilme olanağı. Bkz. <xref:System.Text.RegularExpressions.Regex.MatchTimeout%2A?displayProperty=nameWithType> özelliği.
+- Normal ifade altyapısının zaman aşımına uğramadan önce normal ifadeyi çözmeyi ne kadar süreyle deneyeceğini sınırlayabilme olanağı. @No__t-0 özelliğine bakın.
 
 - Bir uygulama etki alanı için varsayılan kültürü tanımlama özelliği. @No__t-0 sınıfına bakın.
 
@@ -1994,7 +1994,7 @@ Ayrıca, 4,5 .NET Framework aşağıdaki ağ geliştirmelerini içerir:
 
 - Geliştirilmiş IPv6 desteği. Daha fazla bilgi için <xref:System.Net.NetworkInformation> ad alanı ' na bakın.
 
-- Çift modlu yuva desteği. Daha fazla bilgi için bkz <xref:System.Net.Sockets.Socket> . ve <xref:System.Net.Sockets.TcpListener> sınıfları.
+- Çift modlu yuva desteği. Daha fazla bilgi için <xref:System.Net.Sockets.Socket> ve <xref:System.Net.Sockets.TcpListener> sınıflarına bakın.
 
 <a name="client" />
 
@@ -2130,6 +2130,6 @@ Visual Studio 2012 ' deki (ve sonraki sürümlerde) taşınabilir sınıf kitapl
 
 - [.NET Framework ve Bant Dışı Yayınlar](../get-started/the-net-framework-and-out-of-band-releases.md)
 - [.NET Framework erişilebilirlik yenilikleri](whats-new-in-accessibility.md)
-- [Visual Studio 2017'deki yenilikler](/visualstudio/ide/whats-new-in-visual-studio)
+- [Visual Studio 2017 ' deki yenilikler](/visualstudio/ide/whats-new-in-visual-studio)
 - [ASP.NET](/aspnet)
 - [Görseldeki yeniliklerC++](/cpp/what-s-new-for-visual-cpp-in-visual-studio)

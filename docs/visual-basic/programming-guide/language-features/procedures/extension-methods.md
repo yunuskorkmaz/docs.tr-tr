@@ -7,17 +7,17 @@ helpviewer_keywords:
 - extending data types [Visual Basic]
 - extension methods [Visual Basic]
 ms.assetid: b8020aae-374d-46a9-bcb7-8cc2390b93b6
-ms.openlocfilehash: b5ad066fe9ec40d715702ed99537f45b21c558cf
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: d988ab36703bc20e6960d4b8ecc7a476d95ee9bc
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71701050"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72396006"
 ---
 # <a name="extension-methods-visual-basic"></a>Uzantı Yöntemleri (Visual Basic)
 
 Uzantı yöntemleri, geliştiricilerin zaten yeni bir türetilmiş tür oluşturmadan tanımlanmış olan veri türlerine özel işlevler eklemesini sağlar. Uzantı yöntemleri, var olan türün bir örnek yöntemi gibi çağrılabilecek bir yöntem yazmayı mümkün hale getirir.
-  
+
 ## <a name="remarks"></a>Açıklamalar
 
 Genişletme yöntemi yalnızca bir `Sub` yordamı veya `Function` yordamı olabilir. Uzantı özelliğini, alanı veya olayı tanımlayamazsınız. Tüm genişletme yöntemleri, <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> ad alanından `<Extension>` uzantı özniteliğiyle işaretlenmelidir ve bir [modülde](../../../language-reference/statements/module-statement.md)tanımlanması gerekir. Bir uzantı yöntemi bir modül dışında tanımlanmışsa, Visual Basic Derleyicisi Hata [BC36551](../../../misc/bc36551.md)oluşturur, "uzantı yöntemleri yalnızca modüllerde tanımlanabilir".
@@ -29,7 +29,7 @@ Bir genişletme yöntemi tanımındaki ilk parametre, yöntemin hangi veri tür�
 ## <a name="example"></a>Örnek
 
 Aşağıdaki örnek, <xref:System.String> veri türüne `Print` uzantısını tanımlar. Yöntemi bir dizeyi göstermek için `Console.WriteLine` kullanır. @No__t-0 yönteminin parametresi `aString`, yönteminin <xref:System.String> sınıfını genişlettiğini belirler.
-  
+
 [!code-vb[VbVbalrExtensionMethods#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrExtensionMethods/VB/StringExtensions.vb#1)]
 
 Uzantı yöntemi tanımının `<Extension()>` uzantı özniteliğiyle işaretlendiğine dikkat edin. Yöntemin tanımlandığı modülün işaretlenmesi isteğe bağlıdır, ancak her genişletme yöntemi işaretlenmelidir. Uzantı özniteliğine erişebilmek için <xref:System.Runtime.CompilerServices> içeri aktarılmalıdır.
@@ -45,7 +45,6 @@ Sonraki örnek, `PrintAndPunctuate`, aynı zamanda iki parametre ile tanımlanan
 Yöntemi `punc`: `example.PrintAndPunctuate(".")` için bir dize bağımsız değişkeninde göndererek çağrılır
 
 Aşağıdaki örnekte `Print` ve `PrintAndPunctuate` tanımlanmış ve çağrıldı gösterilmektedir. <xref:System.Runtime.CompilerServices>, uzantı özniteliğine erişimi etkinleştirmek için tanım modülüne içeri aktarılır.
-
 
 ```vb
 Imports System.Runtime.CompilerServices

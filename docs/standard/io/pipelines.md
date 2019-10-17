@@ -9,12 +9,12 @@ helpviewer_keywords:
 - I/O [.NET], Pipelines
 author: rick-anderson
 ms.author: riande
-ms.openlocfilehash: 53d7bbf214a71daff9372efcd5978f34c066c657
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 9efd7a7581a1e8bd2cb5f544edd1b4c965aa1866
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320000"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395920"
 ---
 # <a name="systemiopipelines-in-net"></a>.NET 'teki System. ıO. işlem hatları
 
@@ -23,6 +23,7 @@ ms.locfileid: "72320000"
 <a name="solve"></a>
 
 ## <a name="what-problem-does-systemiopipelines-solve"></a>System. ıO. hatlarını çözme sorunu
+
 <!-- corner case doesn't MT (machine translate)   -->
 Akış verilerini ayrıştırmaya yönelik uygulamalar, çok sayıda özel ve olağandışı kod akışına sahip ortak koddan oluşur. Ortak ve özel durum kodu karmaşık ve devam etmek zordur.
 
@@ -38,7 +39,7 @@ async Task ProcessLinesAsync(NetworkStream stream)
 {
     var buffer = new byte[1024];
     await stream.ReadAsync(buffer, 0, buffer.Length);
-    
+
     // Process a single line from the buffer
     ProcessLine(buffer);
 }
@@ -97,7 +98,7 @@ Ayrılmış açık arabellek yok. Tüm arabellek yönetimi, `PipeReader` ve `Pip
 * İki önemli bilgi parçasını içeren <xref:System.IO.Pipelines.ReadResult> döndürür:
 
   * @No__t-0 biçiminde okunan veriler.
-  * Verilerin sonuna (EOF) ulaşıldığını belirten bir Boole `IsCompleted`. 
+  * Verilerin sonuna (EOF) ulaşıldığını belirten bir Boole `IsCompleted`.
 
 Satır sonu (EOL) sınırlayıcısı bulduktan ve satırı ayrıştırdıktan sonra:
 
@@ -304,7 +305,7 @@ Arabelleği okuyan yardımcıları yazarken, `Advance` çağrılmadan önce dön
 
 ## <a name="pipewriter"></a>PipeWriter
 
-@No__t-0, arayanın adına yazma arabelleğini yönetir. `PipeWriter` [@no__t uygular-2](xref:System.Buffers.IBufferWriter`1). `IBufferWriter<byte>`, ek arabellek kopyaları olmadan yazma işlemleri gerçekleştirmek için arabelleklere erişim sağlamak mümkün hale getirir.
+@No__t-0, arayanın adına yazma arabelleğini yönetir. `PipeWriter` [@no__t uygular-2](xref:System.Buffers.IBufferWriter%601). `IBufferWriter<byte>`, ek arabellek kopyaları olmadan yazma işlemleri gerçekleştirmek için arabelleklere erişim sağlamak mümkün hale getirir.
 
 [!code-csharp[MyPipeWriter](~/samples/snippets/csharp/pipelines/MyPipeWriter.cs?name=snippet)]
 

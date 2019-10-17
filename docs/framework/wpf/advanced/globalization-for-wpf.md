@@ -7,12 +7,12 @@ helpviewer_keywords:
 - international user interface [WPF], XAML
 - globalization [WPF]
 ms.assetid: 4571ccfe-8a60-4f06-9b37-7ac0b1c2d10f
-ms.openlocfilehash: 32caf87435e23008f9f300d231c2705e7894280f
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: 7826bbfca09cce7508d7352c647bafae93504e58
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291467"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395837"
 ---
 # <a name="globalization-for-wpf"></a>WPF için Genelleştirme
 Bu konuda, küresel pazar için [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] uygulamaları yazarken bilmeniz gereken sorunlar açıklanır. Genelleştirme programlama öğeleri <xref:System.Globalization> ad alanında .NET içinde tanımlanmıştır.
@@ -23,7 +23,7 @@ Bu konuda, küresel pazar için [!INCLUDE[TLA#tla_winclient](../../../../include
 
 <a name="char_reference"></a>
 ### <a name="character-references"></a>Karakter başvuruları
-Bir karakter başvurusu, ondalık ya da onaltılı olarak temsil ettiği belirli [!INCLUDE[TLA#tla_unicode](../../../../includes/tlasharptla-unicode-md.md)] karakterinin UTF16 kod birimini verir. Aşağıdaki örnek, KıPTI büyük harfle veya ' Ϩ ' için ondalık bir karakter başvurusunu gösterir:
+Bir karakter başvurusu, ondalık ya da onaltılı olarak temsil ettiği belirli Unicode karakterinin UTF16 Code birimini verir. Aşağıdaki örnek, KıPTI büyük harfle veya ' Ϩ ' için ondalık bir karakter başvurusunu gösterir:
 
 ```
 &#1000;
@@ -36,8 +36,8 @@ Aşağıdaki örnekte, onaltılı bir karakter başvurusu gösterilmektedir. Ona
 ```
 
 <a name="encoding"></a>
-### <a name="encoding"></a>Encoding
- @No__t-0 tarafından desteklenen kodlama ASCII, [!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)] UTF-16 ve UTF-8 ' i destekler. Encoding deyimleri [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] belgesinin başlangıcıdır. Kodlama özniteliği yoksa ve hiçbir bayt sırası yoksa, ayrıştırıcı varsayılan olarak UTF-8 ' i belirler. UTF-8 ve UTF-16, tercih edilen kodlamalardır. UTF-7 desteklenmez. Aşağıdaki örnek, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] dosyasında UTF-8 kodlamasının nasıl belirtileceğini göstermektedir.
+### <a name="encoding"></a>Şifreleme
+ @No__t-0 tarafından desteklenen kodlama ASCII, UNICODE UTF-16 ve UTF-8 ' dir. Encoding deyimleri [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] belgesinin başlangıcıdır. Kodlama özniteliği yoksa ve hiçbir bayt sırası yoksa, ayrıştırıcı varsayılan olarak UTF-8 ' i belirler. UTF-8 ve UTF-16, tercih edilen kodlamalardır. UTF-7 desteklenmez. Aşağıdaki örnek, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] dosyasında UTF-8 kodlamasının nasıl belirtileceğini göstermektedir.
 
 ```xaml
 ?xml encoding="UTF-8"?
@@ -47,7 +47,7 @@ Aşağıdaki örnekte, onaltılı bir karakter başvurusu gösterilmektedir. Ona
 ### <a name="language-attribute"></a>Language özniteliği
  [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], bir öğenin Language özniteliğini temsil etmek için [XML: lang](../../xaml-services/xml-lang-handling-in-xaml.md) kullanır.  @No__t-0 sınıfından yararlanmak için, Language özniteliği değeri <xref:System.Globalization.CultureInfo> tarafından önceden tanımlanan kültür adlarından biri olmalıdır. [XML: lang](../../xaml-services/xml-lang-handling-in-xaml.md) , öğe ağacında (bağımlılık özelliği devralımı nedeniyle DEĞIL, XML kuralları tarafından) devralınabilir ve açıkça atanmamışsa boş bir dize olur.
 
- Language özniteliği, dialarcts 'yi belirtmek için çok yararlıdır. Örneğin, Fransızca Fransa, Quebec, Belçika ve Isviçre 'de farklı yazım, sözlük ve telaffuz vardır. Ayrıca, Çince, Japonca ve Korece [!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)] ' da kod noktalarını paylaşır, ancak İdeografik biçimleri farklıdır ve tamamen farklı yazı tiplerini kullanır.
+ Language özniteliği, dialarcts 'yi belirtmek için çok yararlıdır. Örneğin, Fransızca Fransa, Quebec, Belçika ve Isviçre 'de farklı yazım, sözlük ve telaffuz vardır. Ayrıca Çince, Japonca ve Korece kod noktalarını Unicode olarak paylaşır, ancak İdeografik biçimleri farklıdır ve tamamen farklı yazı tiplerini kullanır.
 
  Aşağıdaki [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] örnek, Kanada Fransızcası belirtmek için `fr-CA` dil özniteliğini kullanır.
 
@@ -56,8 +56,8 @@ Aşağıdaki örnekte, onaltılı bir karakter başvurusu gösterilmektedir. Ona
 ```
 
 <a name="unicode"></a>
-### <a name="unicode"></a>Kodlamaları
- [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], yedeklerin dahil olduğu tüm [!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)] özelliklerini destekler. Karakter kümesi [!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)] ' a eşlenildiği sürece, desteklenir. Örneğin, GB18030 Çince, Japonca ve Kore dili (CFK) uzantısı A ve B ve vekil çiftleri ile eşlenen bazı karakterleri tanıtır, bu nedenle tam olarak desteklenmektedir. @No__t-0 uygulaması, vekil çiftleri mi yoksa birleştirme karakterleri mi olduğunu anlamak zorunda kalmadan dizeleri işlemek için <xref:System.Globalization.StringInfo> kullanabilir.
+### <a name="unicode"></a>Unicode
+ [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], yedeklerin dahil olduğu tüm Unicode özelliklerini destekler. Karakter kümesi Unicode ile eşlenebilir olduğu sürece, desteklenir. Örneğin, GB18030 Çince, Japonca ve Kore dili (CFK) uzantısı A ve B ve vekil çiftleri ile eşlenen bazı karakterleri tanıtır, bu nedenle tam olarak desteklenmektedir. @No__t-0 uygulaması, vekil çiftleri mi yoksa birleştirme karakterleri mi olduğunu anlamak zorunda kalmadan dizeleri işlemek için <xref:System.Globalization.StringInfo> kullanabilir.
 
 <a name="design_intl_ui_with_xaml"></a>
 ## <a name="designing-an-international-user-interface-with-xaml"></a>XAML ile uluslararası bir kullanıcı arabirimi tasarlama
@@ -125,7 +125,7 @@ Aşağıdaki örnekte, onaltılı bir karakter başvurusu gösterilmektedir. Ona
 
  Tüm yazma sistemi motorları OpenType yazı tiplerini destekler. OpenType yazı tipleri, yazı tipi oluşturucularının daha iyi uluslararası ve yüksek kaliteli tipografik yazı tiplerini tasarlamasını sağlayan OpenType Düzen tablolarını içerebilir. OpenType yazı tipi düzen tabloları, metin düzenini geliştirmek için metin işleme uygulamalarını etkinleştiren glif değiştirmeleri, glif konumlandırma, gerekçe ve temel konumlandırma hakkında bilgiler içerir.
 
- OpenType yazı tipleri [!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)] kodlaması kullanarak büyük karakter kümelerinin işlenmesine izin verir. Bu tür bir kodlama, uluslararası ve tipografik glif çeşitleri için geniş uluslararası destek sunar.
+ OpenType yazı tipleri, Unicode kodlaması kullanarak büyük karakter kümelerinin işlenmesine izin verir. Bu tür bir kodlama, uluslararası ve tipografik glif çeşitleri için geniş uluslararası destek sunar.
 
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] metin işleme, çözüm bağımsızlığını destekleyen Microsoft ClearType alt piksel teknolojisi tarafından desteklenmektedir. Bu, okunabilirliği önemli ölçüde artırır ve tüm betikler için yüksek kaliteli dergi stil belgelerini destekleme yeteneği sağlar.
 
@@ -180,4 +180,4 @@ Aşağıdaki örnekte, onaltılı bir karakter başvurusu gösterilmektedir. Ona
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [WPF Genelleştirme ve yerelleştirme genel bakış](wpf-globalization-and-localization-overview.md)
+- [WPF Genelleştirmesi ve Yerelleştirmesine Genel Bakış](wpf-globalization-and-localization-overview.md)

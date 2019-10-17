@@ -1,5 +1,5 @@
 ---
-title: SqlStreamChars.SetLength(Int64) yöntemi (System.Data.SqlTypes)
+title: SqlStreamChars. SetLength (Int64) yöntemi (System. Data. SqlTypes)
 author: stevestein
 ms.author: sstein
 ms.date: 12/20/2018
@@ -12,16 +12,16 @@ api_location:
 - System.Data.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 6bdf7bf5b998135652bc63d8d3e6c71a61475d20
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 291d6e9395581f2370dafc728521a314d54a686d
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634290"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395720"
 ---
-# <a name="sqlstreamcharssetlengthint64-method"></a>SqlStreamChars.SetLength(Int64) yöntemi
+# <a name="sqlstreamcharssetlengthint64-method"></a>SqlStreamChars. SetLength (Int64) yöntemi
 
-Türetilen bir sınıfta geçersiz kılındığında, akış tarafından kullanılan kaynakları serbest bırakır. Bu yöntemi içeren derlemenin SQLAccess.dll bir arkadaş ilişkisi vardır. Bu, SQL Server tarafından kullanıma yöneliktir. Diğer veritabanları için veritabanı tarafından sağlanan barındırma mekanizmasına kullanın.
+Türetilmiş bir sınıfta geçersiz kılınırsa, akış tarafından kullanılan kaynakları serbest bırakır. Bu yöntemi içeren derlemenin SQLAccess. dll ile bir arkadaş ilişkisi vardır. SQL Server tarafından kullanılmak üzere tasarlanmıştır. Diğer veritabanları için, bu veritabanı tarafından sunulan barındırma mekanizmasını kullanın.
 
 ```csharp
 public abstract void SetLength (long value);
@@ -30,19 +30,19 @@ public abstract void SetLength (long value);
 ## <a name="parameters"></a>Parametreler
 
 `value`\
-İstenen bayt cinsinden geçerli akış uzunluğu.
+Geçerli akışın bayt cinsinden istenen uzunluğu.
 
 ## <a name="remarks"></a>Açıklamalar
 
 > [!WARNING]
-> `SqlStreamChars.SetLength` Yöntemi private olduğuna ve kodunuzda doğrudan kullanılmak üzere tasarlanmamıştır.
+> @No__t-0 Yöntemi özeldir ve doğrudan kodunuzda kullanılmamalıdır.
 >
-> Microsoft hiçbir koşulda, bir üretim uygulamasında bu alanı kullanımını desteklemez.
+> Microsoft, bu yöntemin herhangi bir koşulda bir üretim uygulamasında kullanımını desteklemez.
 
 ## <a name="requirements"></a>Gereksinimler
 
-**Namespace:** <xref:System.Data.SqlTypes>
+**Ad alanı:** <xref:System.Data.SqlTypes>
 
-**Derleme:** System.Data (içinde System.Data.dll)
+**Bütünleştirilmiş kod:** System. Data (System. Data. dll dosyasında)
 
-**.NET framework sürümleri:** 2.0 sürümünden itibaren kullanılabilir.
+**.NET Framework sürümleri:** 2,0 sürümünden itibaren kullanılabilir.

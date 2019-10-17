@@ -1,0 +1,98 @@
+---
+ms.openlocfilehash: ab7c097f6b65d539117e5a6ef38eb67b24695a32
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72394350"
+---
+### <a name="http-synchronous-io-disabled-in-all-servers"></a>HTTP: tüm sunucularda zaman uyumlu GÇ devre dışı
+
+ASP.NET Core 3,0 ' den başlayarak, zaman uyumlu sunucu işlemleri varsayılan olarak devre dışıdır.
+
+#### <a name="change-description"></a>Açıklamayı Değiştir
+
+`AllowSynchronousIO`, her bir sunucuda `HttpRequest.Body.Read`, `HttpResponse.Body.Write` ve `Stream.Flush` gibi zaman uyumlu GÇ API 'Lerini sağlayan veya devre dışı bırakan bir seçenektir. Bu API 'Ler, bir iş parçacığı kaynağı ve uygulama askıda kalıyor. ASP.NET Core 3,0 Preview 3 ' te başlayarak bu zaman uyumlu işlemler varsayılan olarak devre dışıdır.
+
+Etkilenen sunucular:
+
+- Kestrel
+- HttpSys
+- İşlem içi IIS
+- TestServer
+
+Şuna benzer hatalar beklenir:
+
+- `Synchronous operations are disallowed. Call ReadAsync or set AllowSynchronousIO to true instead.`
+- `Synchronous operations are disallowed. Call WriteAsync or set AllowSynchronousIO to true instead.`
+- `Synchronous operations are disallowed. Call FlushAsync or set AllowSynchronousIO to true instead.`
+
+Her sunucu, bu davranışı denetleyen `AllowSynchronousIO` seçeneğine sahiptir ve bunların tümü için varsayılan değer olarak `false` ' dir.
+
+Davranış, geçici bir risk azaltma olarak istek başına temelinde da geçersiz kılınabilir. Örneğin:
+
+```csharp
+var syncIOFeature = HttpContext.Features.Get<IHttpBodyControlFeature>();
+if (syncIOFeature != null)
+{
+    syncIOFeature.AllowSynchronousIO = true;
+}
+```
+
+@No__t-0 ile veya `Dispose` ' de zaman uyumlu API çağıran başka bir akışta sorun yaşıyorsanız, bunun yerine yeni `DisposeAsync` API 'sini çağırın.
+
+Tartışma için bkz. [ASPNET/AspNetCore # 7644](https://github.com/aspnet/AspNetCore/issues/7644).
+
+#### <a name="version-introduced"></a>Sunulan sürüm
+
+3.0
+
+#### <a name="old-behavior"></a>Eski davranış
+
+Varsayılan olarak `HttpRequest.Body.Read`, `HttpResponse.Body.Write` ve `Stream.Flush` ' ye izin verilir.
+
+#### <a name="new-behavior"></a>Yeni davranış
+
+Bu zaman uyumlu API 'Lere varsayılan olarak izin verilmez: 
+
+Şuna benzer hatalar beklenir:
+
+- `Synchronous operations are disallowed. Call ReadAsync or set AllowSynchronousIO to true instead.`
+- `Synchronous operations are disallowed. Call WriteAsync or set AllowSynchronousIO to true instead.`
+- `Synchronous operations are disallowed. Call FlushAsync or set AllowSynchronousIO to true instead.`
+
+#### <a name="reason-for-change"></a>Değişiklik nedeni
+
+Bu zaman uyumlu API 'Ler, bir iş parçacığı kaynağı ve uygulama askıda kalıyor. ASP.NET Core 3,0 Preview 3 ' te başlayarak, zaman uyumlu işlemler varsayılan olarak devre dışıdır.
+
+#### <a name="recommended-action"></a>Önerilen eylem
+
+Yöntemlerin zaman uyumsuz sürümlerini kullanın. Davranış, geçici bir risk azaltma olarak istek başına temelinde da geçersiz kılınabilir.
+
+```csharp
+var syncIOFeature = HttpContext.Features.Get<IHttpBodyControlFeature>();
+if (syncIOFeature != null)
+{
+    syncIOFeature.AllowSynchronousIO = true;
+}
+```
+
+#### <a name="category"></a>Kategori
+
+ASP.NET Core
+
+#### <a name="affected-apis"></a>Etkilenen API’ler
+
+- <xref:System.IO.Stream.Flush%2A?displayProperty=nameWithType>
+- <xref:System.IO.Stream.Read%2A?displayProperty=nameWithType>
+- <xref:System.IO.Stream.Write%2A?displayProperty=nameWithType>
+
+<!--
+
+#### Affected APIs
+
+- `Overload:System.IO.Stream.Flush`
+- `Overload:System.IO.Stream.Read`
+- `Overload:System.IO.Stream.Write`
+
+-->

@@ -1,5 +1,5 @@
 ---
-title: SqlStreamChars Oluşturucusu (System.Data.SqlTypes)
+title: SqlStreamChars Oluşturucusu (System. Data. SqlTypes)
 author: stevestein
 ms.author: sstein
 ms.date: 12/20/2018
@@ -12,16 +12,16 @@ api_location:
 - System.Data.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 7de715d2833f4aa26f8251e32e6bf8853b0bd704
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 34c5dcfe458ca57aa3bd5388e8b4c66c3c497df6
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634591"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395651"
 ---
 # <a name="sqlstreamchars-constructor"></a>SqlStreamChars Oluşturucusu
 
-Yeni bir örneğini başlatır `SqlStreamChars` sınıfı. Bu oluşturucu içeren derlemeyi bir arkadaş ilişkisine sahip SQLAccess.dll sahiptir. Bu, SQL Server tarafından kullanıma yöneliktir. Diğer veritabanları için veritabanı tarafından sağlanan barındırma mekanizmasına kullanın.
+@No__t-0 sınıfının yeni bir örneğini başlatır. Bu oluşturucuyu içeren derlemenin SQLAccess. dll ile bir arkadaş ilişkisi vardır. SQL Server tarafından kullanılmak üzere tasarlanmıştır. Diğer veritabanları için, bu veritabanı tarafından sunulan barındırma mekanizmasını kullanın.
 
 ```csharp
 protected SqlStreamChars ();
@@ -30,14 +30,14 @@ protected SqlStreamChars ();
 ## <a name="remarks"></a>Açıklamalar
 
 > [!WARNING]
-> `SqlStreamChars` Oluşturucu korunur ve kodunuzda doğrudan kullanılmak üzere tasarlanmamıştır.
+> @No__t-0 Oluşturucusu korunur ve doğrudan kodunuzda kullanılması amaçlıyordu.
 >
-> Microsoft hiçbir koşulda, bir üretim uygulamasında bu alanı kullanımını desteklemez.
+> Microsoft, bu oluşturucunun herhangi bir koşulda bir üretim uygulamasında kullanımını desteklemez.
 
 ## <a name="requirements"></a>Gereksinimler
 
-**Namespace:** <xref:System.Data.SqlTypes>
+**Ad alanı:** <xref:System.Data.SqlTypes>
 
-**Derleme:** System.Data (içinde System.Data.dll)
+**Bütünleştirilmiş kod:** System. Data (System. Data. dll dosyasında)
 
-**.NET framework sürümleri:** 2.0 sürümünden itibaren kullanılabilir.
+**.NET Framework sürümleri:** 2,0 sürümünden itibaren kullanılabilir.

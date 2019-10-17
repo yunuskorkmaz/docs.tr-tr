@@ -1,5 +1,5 @@
 ---
-title: SqlStreamChars.Flush yöntemi (System.Data.SqlTypes)
+title: SqlStreamChars. Flush yöntemi (System. Data. SqlTypes)
 author: stevestein
 ms.author: sstein
 ms.date: 12/20/2018
@@ -12,16 +12,16 @@ api_location:
 - System.Data.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 411bd0036de904dd485d9fb54fa5fd45e3b55dbb
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 38ade5ce38cfe5003b2d06c0d8bb2db1a20bc05b
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634329"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395620"
 ---
-# <a name="sqlstreamcharsflush-method"></a>SqlStreamChars.Flush yöntemi
+# <a name="sqlstreamcharsflush-method"></a>SqlStreamChars. Flush yöntemi
 
-Türetilen bir sınıfta geçersiz kılındığında, bu akış için tüm arabellekler temizler ve herhangi arabelleğe alınan verileri temel alınan cihaza yazılmasına neden olur. Bu yöntemi içeren derlemenin SQLAccess.dll bir arkadaş ilişkisi vardır. Bu, SQL Server tarafından kullanıma yöneliktir. Diğer veritabanları için veritabanı tarafından sağlanan barındırma mekanizmasına kullanın.
+Türetilmiş bir sınıfta geçersiz kılınırsa, bu akış için tüm arabellekleri temizler ve arabelleğe alınan verilerin temeldeki cihaza yazılmasına neden olur. Bu yöntemi içeren derlemenin SQLAccess. dll ile bir arkadaş ilişkisi vardır. SQL Server tarafından kullanılmak üzere tasarlanmıştır. Diğer veritabanları için, bu veritabanı tarafından sunulan barındırma mekanizmasını kullanın.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -32,14 +32,14 @@ public abstract void Flush ();
 ## <a name="remarks"></a>Açıklamalar
 
 > [!WARNING]
-> `SqlStreamChars.Flush` Yöntemi private olduğuna ve kodunuzda doğrudan kullanılmak üzere tasarlanmamıştır.
+> @No__t-0 Yöntemi özeldir ve doğrudan kodunuzda kullanılmamalıdır.
 >
-> Microsoft hiçbir koşulda, bir üretim uygulamasında bu alanı kullanımını desteklemez.
+> Microsoft, bu yöntemin herhangi bir koşulda bir üretim uygulamasında kullanımını desteklemez.
 
 ## <a name="requirements"></a>Gereksinimler
 
-**Namespace:** <xref:System.Data.SqlTypes>
+**Ad alanı:** <xref:System.Data.SqlTypes>
 
-**Derleme:** System.Data (içinde System.Data.dll)
+**Bütünleştirilmiş kod:** System. Data (System. Data. dll dosyasında)
 
-**.NET framework sürümleri:** 2.0 sürümünden itibaren kullanılabilir.
+**.NET Framework sürümleri:** 2,0 sürümünden itibaren kullanılabilir.

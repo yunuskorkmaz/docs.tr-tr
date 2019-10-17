@@ -1,5 +1,5 @@
 ---
-title: SqlStreamChars.Length özelliği (System.Data.SqlTypes)
+title: SqlStreamChars. length Özelliği (System. Data. SqlTypes)
 author: stevestein
 ms.author: sstein
 ms.date: 12/19/2018
@@ -13,16 +13,16 @@ api_location:
 - System.Data.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 8f318f593237dc555d546858152bb03546c8306b
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 2171b10d1c0eb7bcad894cc44c5103bdab18b0a5
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634448"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395601"
 ---
-# <a name="sqlstreamcharslength-property"></a>SqlStreamChars.Length özelliği
+# <a name="sqlstreamcharslength-property"></a>SqlStreamChars. length özelliği
 
-Türetilen bir sınıfta geçersiz kılındığında, geçerli akış uzunluğunu alır. Bu özellik içeren derleme SQLAccess.dll bir arkadaş ilişkisi vardır. Bu, SQL Server tarafından kullanıma yöneliktir. Diğer veritabanları için veritabanı tarafından sağlanan barındırma mekanizmasına kullanın.
+Türetilmiş bir sınıfta geçersiz kılındığında, geçerli akışın uzunluğunu alır. Bu özelliği içeren derlemenin SQLAccess. dll ile bir Friend ilişkisi vardır. SQL Server tarafından kullanılmak üzere tasarlanmıştır. Diğer veritabanları için, bu veritabanı tarafından sunulan barındırma mekanizmasını kullanın.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -38,14 +38,14 @@ Akışın uzunluğu.
 ## <a name="remarks"></a>Açıklamalar
 
 > [!WARNING]
-> `SqlStreamChars.Length` Özelliği özeldir ve kodunuzda doğrudan kullanılmak üzere tasarlanmamıştır.
+> @No__t-0 özelliği özeldir ve doğrudan kodunuzda kullanılmamalıdır.
 >
-> Microsoft hiçbir koşulda, bir üretim uygulamasında bu alanı kullanımını desteklemez.
+> Microsoft, bu özelliğin herhangi bir koşulda bir üretim uygulamasında kullanımını desteklemez.
 
 ## <a name="requirements"></a>Gereksinimler
 
-**Namespace:** <xref:System.Data.SqlTypes>
+**Ad alanı:** <xref:System.Data.SqlTypes>
 
-**Derleme:** System.Data (içinde System.Data.dll)
+**Bütünleştirilmiş kod:** System. Data (System. Data. dll dosyasında)
 
-**.NET framework sürümleri:** 2.0 sürümünden itibaren kullanılabilir.
+**.NET Framework sürümleri:** 2,0 sürümünden itibaren kullanılabilir.

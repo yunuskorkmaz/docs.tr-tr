@@ -1,5 +1,5 @@
 ---
-title: SqlStreamChars.Close yöntemi (System.Data.SqlTypes)
+title: SqlStreamChars. Close yöntemi (System. Data. SqlTypes)
 author: stevestein
 ms.author: sstein
 ms.date: 12/20/2018
@@ -12,16 +12,16 @@ api_location:
 - System.Data.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 942ee987f1c56abe2cb1718347886dd397e7217e
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: c33c60842d181be7011528ca7550f3d09f291f43
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634348"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395632"
 ---
-# <a name="sqlstreamcharsclose-method"></a>SqlStreamChars.Close yöntemi
+# <a name="sqlstreamcharsclose-method"></a>SqlStreamChars. Close yöntemi
 
-Geçerli akışı kapatır ve akış ile ilişkili tüm sistem kaynakları serbest bırakır. Bu yöntemi içeren derlemenin SQLAccess.dll bir arkadaş ilişkisi vardır. Bu, SQL Server tarafından kullanıma yöneliktir. Diğer veritabanları için veritabanı tarafından sağlanan barındırma mekanizmasına kullanın.
+Geçerli akışı kapatır ve akışla ilişkili tüm sistem kaynaklarını serbest bırakır. Bu yöntemi içeren derlemenin SQLAccess. dll ile bir arkadaş ilişkisi vardır. SQL Server tarafından kullanılmak üzere tasarlanmıştır. Diğer veritabanları için, bu veritabanı tarafından sunulan barındırma mekanizmasını kullanın.
 
 ```csharp
 public virtual void Close ();
@@ -30,14 +30,14 @@ public virtual void Close ();
 ## <a name="remarks"></a>Açıklamalar
 
 > [!WARNING]
-> `SqlStreamChars.Close` Yöntemi private olduğuna ve kodunuzda doğrudan kullanılmak üzere tasarlanmamıştır.
+> @No__t-0 Yöntemi özeldir ve doğrudan kodunuzda kullanılmamalıdır.
 >
-> Microsoft hiçbir koşulda, bir üretim uygulamasında bu alanı kullanımını desteklemez.
+> Microsoft, bu yöntemin herhangi bir koşulda bir üretim uygulamasında kullanımını desteklemez.
 
 ## <a name="requirements"></a>Gereksinimler
 
-**Namespace:** <xref:System.Data.SqlTypes>
+**Ad alanı:** <xref:System.Data.SqlTypes>
 
-**Derleme:** System.Data (içinde System.Data.dll)
+**Bütünleştirilmiş kod:** System. Data (System. Data. dll dosyasında)
 
-**.NET framework sürümleri:** 2.0 sürümünden itibaren kullanılabilir.
+**.NET Framework sürümleri:** 2,0 sürümünden itibaren kullanılabilir.

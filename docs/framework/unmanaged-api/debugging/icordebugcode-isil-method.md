@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0a81f4a53954c559ab12e27bcf039b7b1a1804cc
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 1b7cbadbd1494d5e4d1488dd12296f4f90890127
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71700790"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395492"
 ---
 # <a name="icordebugcodeisil-method"></a>ICorDebugCode::IsIL Yöntemi
 
@@ -37,16 +37,16 @@ HRESULT IsIL (
 ```
 
 ## <a name="parameters"></a>Parametreler
- `pbIL`  
- [out] `true` bu `ICorDebugCode`, MSIL içinde derlenen kodu temsil ediyorsa; Aksi takdirde, `false`.
+
+`pbIL`  
+[out] `true` bu `ICorDebugCode`, MSIL içinde derlenen kodu temsil ediyorsa; Aksi takdirde, `false`.
 
 ## <a name="requirements"></a>Gereksinimler
 
- **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
+**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).
 
- **Üst bilgi:** CorDebug. IDL, CorDebug. h  
+**Üst bilgi:** CorDebug. IDL, CorDebug. h
 
- **Kitaplık:** Corguid. lib  
+**Kitaplık:** Corguid. lib
 
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
- 
+**.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

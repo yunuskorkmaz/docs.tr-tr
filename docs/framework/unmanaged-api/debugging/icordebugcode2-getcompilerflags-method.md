@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1605ee92c8743606ff0e958f112a2d90af43e03a
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 3ebed8ea1d4943007f8f18b0baa1c676a78207c2
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71700709"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395500"
 ---
 # <a name="icordebugcode2getcompilerflags-method"></a>ICorDebugCode2::GetCompilerFlags Metodu
 
@@ -38,16 +38,15 @@ HRESULT GetCompilerFlags (
 
 ## <a name="parameters"></a>Parametreler
 
- `pdwFlags`  
- dışı JıT derleyicisinin veya yerel görüntü oluşturucunun davranışını belirten [CorDebugJITCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflags-enumeration.md) numaralandırması değerine yönelik bir işaretçi.
+`pdwFlags`  
+dışı JıT derleyicisinin veya yerel görüntü oluşturucunun davranışını belirten [CorDebugJITCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflags-enumeration.md) numaralandırması değerine yönelik bir işaretçi.
 
 ## <a name="requirements"></a>Gereksinimler
 
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).
+**Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).
 
- **Üst bilgi:** CorDebug. IDL, CorDebug. h
+**Üst bilgi:** CorDebug. IDL, CorDebug. h
 
- **Kitaplık:** Corguid. lib
+**Kitaplık:** Corguid. lib
 
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
- 
+**.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

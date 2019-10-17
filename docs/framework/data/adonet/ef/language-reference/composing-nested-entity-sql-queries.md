@@ -1,19 +1,19 @@
 ---
-title: Iç Içe Entity SQL sorguları oluşturma
+title: İç İçe Geçmiş Entity SQL Sorguları Oluşturma
 ms.date: 03/30/2017
 ms.assetid: 685d4cd3-2c1f-419f-bb46-c9d97a351eeb
-ms.openlocfilehash: 0ab92c1e41c89f141c3cbd37be3e1e18e64d9666
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: cd41c36853f50597a32d511d455148d649d9eb64
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71833909"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395554"
 ---
-# <a name="composing-nested-entity-sql-queries"></a>Iç Içe Entity SQL sorguları oluşturma
+# <a name="composing-nested-entity-sql-queries"></a>İç İçe Geçmiş Entity SQL Sorguları Oluşturma
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)], zengin bir işlevsel dildir. @No__t-0 yapı taşı bir ifadedir. Geleneksel SQL 'den farklı olarak [!INCLUDE[esql](../../../../../../includes/esql-md.md)] tablosal sonuç kümesiyle sınırlı değildir: [!INCLUDE[esql](../../../../../../includes/esql-md.md)], sabit değerler, parametreler veya iç içe geçmiş ifadelerle karmaşık ifadeler oluşturmayı destekler. İfadedeki bir değer parametreli olabilir veya başka bir ifadeden oluşabilir.  
   
 ## <a name="nested-expressions"></a>İç içe geçmiş Ifadeler  
- İç içe geçmiş bir ifade, döndürdüğü türden bir değerin kabul edildiği her yerde yerleştirilebilir. Örnek:  
+ İç içe geçmiş bir ifade, döndürdüğü türden bir değerin kabul edildiği her yerde yerleştirilebilir. Örneğin:  
   
 ```sql  
 -- Returns a hierarchical collection of three elements at top-level.   
@@ -25,7 +25,7 @@ ROW(@x, {@x}, {@x, 4, 5}, {@x, 7, 8, 9})
 {{{@x}}};  
 ```  
   
- İç içe geçmiş bir sorgu, bir izdüşüm yan tümcesine yerleştirilebilir. Örnek:  
+ İç içe geçmiş bir sorgu, bir izdüşüm yan tümcesine yerleştirilebilir. Örneğin:  
   
 ```sql  
 -- Returns a collection of rows where each row contains an Address entity.  
@@ -49,7 +49,7 @@ FROM … );
  Aşağıdaki örnek, [!INCLUDE[esql](../../../../../../includes/esql-md.md)]: [nasıl yapılır: Iki sorgunun birleşimini sıralama](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896299(v=vs.100))gibi ifadeleri nasıl doğru bir şekilde iç içe geçirebileceğinizi gösterir.  
   
 ## <a name="nested-queries-in-projection"></a>Yansıtmada iç içe geçmiş sorgular  
- Project yan tümcesindeki iç içe geçmiş sorgular, sunucuda Kartezyen ürün sorgularına çevrilebilir. SLQ sunucusu dahil bazı arka uç sunucularında, bu, TempDB tablosunun çok büyük sürmesine neden olabilir ve bu da sunucu performansını olumsuz yönde etkileyebilir.  
+ Project yan tümcesindeki iç içe geçmiş sorgular, sunucuda Kartezyen ürün sorgularına çevrilebilir. SQL Server dahil bazı arka uç sunucularında, bu, TempDB tablosunun çok büyük sürmesine neden olabilir ve bu da sunucu performansını olumsuz yönde etkileyebilir.  
   
  Bu tür bir sorgunun örneği aşağıda verilmiştir:  
   
@@ -77,4 +77,4 @@ SELECT C2.FirstName, C2.LastName
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Entity SQL genel bakış](entity-sql-overview.md)
+- [Entity SQL’e Genel Bakış](entity-sql-overview.md)

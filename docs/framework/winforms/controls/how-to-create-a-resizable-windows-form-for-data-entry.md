@@ -11,32 +11,31 @@ helpviewer_keywords:
 - forms [Windows Forms], creating resizable
 - Windows Forms, resizable
 ms.assetid: babdf198-404c-485d-a914-ed370c6ecd99
-ms.openlocfilehash: 1b27c0e67aae1935c4216654d9f3ddf557719572
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: aeab1b506b9ded4c3c2ab527f07a8655a44cad2b
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65588932"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72396022"
 ---
 # <a name="how-to-create-a-resizable-windows-form-for-data-entry"></a>Nasıl yapılır: Veri Girişi İçin Yeniden Boyutlandırılabilir Windows Formu Oluşturma
-İyi bir düzen değişiklikleri kendi üst formunun boyutları için de yanıt verir. Kullanabileceğiniz <xref:System.Windows.Forms.TableLayoutPanel> yeniden boyutlandırabilir ve denetimleri tutarlı bir şekilde form denetiminin boyutlarını değiştikçe konumlandırmak için formun yerleşimini düzenlemeyi denetimi. <xref:System.Windows.Forms.TableLayoutPanel> Denetimidir de yararlıdır düzen değişiklikleri neden denetimlerinizi içeriğini değiştirir. Visual Studio ortamında bu yordamda bahsedilen işlem yapılabilir.  Ayrıca bkz: [izlenecek yol: Veri girişi için yeniden boyutlandırılabilir Windows formu oluşturma](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/991eahec(v=vs.100)).  
+İyi bir düzen, üst form boyutlarındaki değişikliklere iyi yanıt verir. Form boyutları değiştikçe, denetimlerinizi yeniden boyutlandırmak ve düzenli bir şekilde konumlandırmak üzere formunuzun yerleşimini düzenlemek için <xref:System.Windows.Forms.TableLayoutPanel> denetimini kullanabilirsiniz. @No__t-0 denetimi, denetimlerinizin içeriklerinde yapılan değişiklikler düzende değişikliklere neden olduğunda da yararlıdır. Bu yordamda ele alınan işlem, Visual Studio ortamı içinde yapılabilir.  Ayrıca bkz. [Izlenecek yol: veri girişi için yeniden boyutlandırılabilir Windows formu oluşturma](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/991eahec(v=vs.100)).  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek nasıl kullanılacağını gösterir. bir <xref:System.Windows.Forms.TableLayoutPanel> zaman kullanıcı formu boyutlandırır iyi cevap veren bir düzen oluşturmak için denetimi. Ayrıca, yerelleştirmeye iyi cevap veren bir düzen gösterir.  
+ Aşağıdaki örnek, Kullanıcı formu yeniden boyutlandırdığında iyi yanıt veren bir düzen oluşturmak için <xref:System.Windows.Forms.TableLayoutPanel> denetiminin nasıl kullanılacağını gösterir. Ayrıca, yerelleştirmeye iyi yanıt veren bir düzen gösterir.  
   
  [!code-cpp[System.Windows.Forms.TableLayoutPanel.DataEntryForm#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.TableLayoutPanel.DataEntryForm/cpp/basicdataentryform.cpp#1)]
  [!code-csharp[System.Windows.Forms.TableLayoutPanel.DataEntryForm#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.TableLayoutPanel.DataEntryForm/CS/basicdataentryform.cs#1)]
  [!code-vb[System.Windows.Forms.TableLayoutPanel.DataEntryForm#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.TableLayoutPanel.DataEntryForm/VB/basicdataentryform.vb#1)]  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
- Bu örnek gerektirir:  
+ Bu örnek şunları gerektirir:  
   
-- Sistem, System.Data System.Drawing ve System.Windows.Forms derlemelere başvuruları.  
+- System, System. Data, System. Drawing ve System. Windows. Forms derlemelerine başvurular.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Windows.Forms.FlowLayoutPanel>
 - <xref:System.Windows.Forms.TableLayoutPanel>
-- [Nasıl yapılır: Sabitleme ve TableLayoutPanel denetiminde alt denetimleri yerleştirme](how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)
-- [Nasıl yapılır: Yerelleştirmeye iyi cevap veren bir Windows Forms düzeni tasarlama](how-to-design-a-windows-forms-layout-that-responds-well-to-localization.md)
-- [Microsoft Windows kullanıcı deneyimi, kullanıcı arabirimi geliştiricileri ve tasarımcıları için resmi yönergeleri. Redmond, WA: Microsoft Press, 1999. (USBN: 0-7356-0566-1)](https://www.microsoft.com/mspress/southpacific/books/book11588.htm)
+- [Nasıl yapılır: TableLayoutPanel Denetiminde Alt Denetimleri Sabitleme ve Yerleştirme](how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)
+- [Nasıl yapılır: Yerelleştirmeye İyi Cevap Veren Bir Windows Forms Düzeni Tasarlama](how-to-design-a-windows-forms-layout-that-responds-well-to-localization.md)

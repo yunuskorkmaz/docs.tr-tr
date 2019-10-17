@@ -2,15 +2,15 @@
 title: İleti Güveliği Kullanarak İletileri Güvenli Hale Getirme
 ms.date: 03/30/2017
 ms.assetid: a17ebe67-836b-4c52-9a81-2c3d58e225ee
-ms.openlocfilehash: 9ba8923d23140bb951a4993739ec267ad6f6a4c4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 1098057042c0842161258fd081d3ee63e82b4c5f
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69911771"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395709"
 ---
 # <a name="securing-messages-using-message-security"></a>İleti Güveliği Kullanarak İletileri Güvenli Hale Getirme
-Bu bölümde kullanırken <xref:System.ServiceModel.NetMsmqBinding>WCF ileti güvenliği ele alınmaktadır.  
+Bu bölümde <xref:System.ServiceModel.NetMsmqBinding> kullanılırken WCF ileti güvenliği ele alınmaktadır.  
   
 > [!NOTE]
 > Bu konuyu okumadan önce [güvenlik kavramlarını](../../../../docs/framework/wcf/feature-details/security-concepts.md)okumanız önerilir.  
@@ -28,9 +28,9 @@ Bu bölümde kullanırken <xref:System.ServiceModel.NetMsmqBinding>WCF ileti gü
  WCF ileti güvenliği, bir sertifika veya Kerberos protokolü gibi mevcut güvenlik altyapılarıyla tümleştirilen WCF iletisine güvenlik üstbilgileri ekler.  
   
 ## <a name="message-credential-type"></a>İleti kimlik bilgisi türü  
- Hizmet ve istemci, ileti güvenliğini kullanarak birbirlerinin kimliğini doğrulamak için kimlik bilgilerini sunabilir. <xref:System.ServiceModel.NetMsmqBinding.Security%2A> Modu `Message` veya olarak`Both` ayarlayarak ileti güvenliği seçebilirsiniz (yani, hem aktarım güvenliği hem de ileti güvenliği kullanın).  
+ Hizmet ve istemci, ileti güvenliğini kullanarak birbirlerinin kimliğini doğrulamak için kimlik bilgilerini sunabilir. @No__t-0 modunu `Message` veya `Both` ' ye ayarlayarak ileti güvenliği ' ni seçebilirsiniz (yani, hem aktarım güvenliğini hem de ileti güvenliğini kullanın).  
   
- Hizmet, istemcinin kimliğini doğrulamak <xref:System.ServiceModel.ServiceSecurityContext.Current%2A> için kullanılan kimlik bilgilerini incelemek için özelliğini kullanabilir. Bu, hizmetin uygulamayı seçtiği daha fazla yetkilendirme denetimi için de kullanılabilir.  
+ Hizmet, istemcinin kimliğini doğrulamak için kullanılan kimlik bilgilerini incelemek üzere <xref:System.ServiceModel.ServiceSecurityContext.Current%2A> özelliğini kullanabilir. Bu, hizmetin uygulamayı seçtiği daha fazla yetkilendirme denetimi için de kullanılabilir.  
   
  Bu bölümde farklı kimlik bilgisi türleri ve kuyrukların nasıl kullanılacağı açıklanmaktadır.  
   
@@ -52,7 +52,7 @@ Bu bölümde kullanırken <xref:System.ServiceModel.NetMsmqBinding>WCF ileti gü
   
  Bu kimlik bilgisi türü kullanılırken hizmetin HIZMET hesabı altında çalışıyor olması gerektiğini unutmayın.  
   
- İleti kimlik bilgisi seçerken Kerberos protokolü varsayılan olarak kullanılır. Daha fazla bilgi için bkz. [Windows 2000 ' de dağıtılmış güvenlik Için Kerberos, protokol keşfetme](https://go.microsoft.com/fwlink/?LinkId=87790).  
+ İleti kimlik bilgisi seçerken Kerberos protokolü varsayılan olarak kullanılır.
   
 ### <a name="username-password"></a>Kullanıcı adı parolası  
  Bu özelliği kullanarak istemci, iletinin güvenlik üstbilgisinde bir Kullanıcı adı parolası kullanarak sunucuda kimlik doğrulaması yapabilir.  

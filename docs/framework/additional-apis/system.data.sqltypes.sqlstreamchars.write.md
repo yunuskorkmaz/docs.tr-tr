@@ -1,5 +1,5 @@
 ---
-title: SqlStreamChars.Write (Char [], Int32, Int32) yöntemi (System.Data.SqlTypes)
+title: SqlStreamChars. Write (Char [], Int32, Int32) yöntemi (System. Data. SqlTypes)
 author: stevestein
 ms.author: sstein
 ms.date: 12/20/2018
@@ -12,16 +12,16 @@ api_location:
 - System.Data.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 4084c7161eaa91d78eab32f1c14624e0032cdfcf
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9d952041122ceb3824712bd81cab7ce4789c9db8
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705915"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395582"
 ---
-# <a name="sqlstreamcharswritechar-int32-int32-method"></a>SqlStreamChars.Write (Char [], Int32, Int32) yöntemi
+# <a name="sqlstreamcharswritechar-int32-int32-method"></a>SqlStreamChars. Write (Char [], Int32, Int32) yöntemi
 
-Türetilen bir sınıfta geçersiz kılındığında, geçerli akışa bir karakter dizisi yazar ve geçerli konumu bu akışın içinde yazılan karakter sayısına göre ilerletir. Bu yöntemi içeren derlemenin SQLAccess.dll bir arkadaş ilişkisi vardır. Bu, SQL Server tarafından kullanıma yöneliktir. Diğer veritabanları için veritabanı tarafından sağlanan barındırma mekanizmasına kullanın.
+Türetilmiş bir sınıfta geçersiz kılınırsa, geçerli akışa bir karakter dizisi yazar ve yazılan karakter sayısına göre bu akış içindeki geçerli konumu ilerletir. Bu yöntemi içeren derlemenin SQLAccess. dll ile bir arkadaş ilişkisi vardır. SQL Server tarafından kullanılmak üzere tasarlanmıştır. Diğer veritabanları için, bu veritabanı tarafından sunulan barındırma mekanizmasını kullanın.
 
 ```csharp
 public abstract void Write (char[] buffer, int offset, int count);
@@ -30,10 +30,10 @@ public abstract void Write (char[] buffer, int offset, int count);
 ## <a name="parameters"></a>Parametreler
 
 `buffer`  
-Yazılacak karakter dizisi.
+Yazılacak bir Char dizisi.
 
 `offset`  
-Kaynağa göre bir uzaklık.
+Kaynağa göre bir göreli konum.
 
 `count`  
 Geçerli akışa yazılacak karakter sayısı.
@@ -41,14 +41,14 @@ Geçerli akışa yazılacak karakter sayısı.
 ## <a name="remarks"></a>Açıklamalar
 
 > [!WARNING]
-> `SqlStreamChars.Write` Yöntemi private olduğuna ve kodunuzda doğrudan kullanılmak üzere tasarlanmamıştır.
+> @No__t-0 Yöntemi özeldir ve doğrudan kodunuzda kullanılmamalıdır.
 >
-> Microsoft hiçbir koşulda, bir üretim uygulamasında bu alanı kullanımını desteklemez.
+> Microsoft, bu yöntemin herhangi bir koşulda bir üretim uygulamasında yazma kullanımını desteklemez.
 
 ## <a name="requirements"></a>Gereksinimler
 
-**Namespace:** <xref:System.Data.SqlTypes>
+**Ad alanı:** <xref:System.Data.SqlTypes>
 
-**Derleme:** System.Data (içinde System.Data.dll)
+**Bütünleştirilmiş kod:** System. Data (System. Data. dll dosyasında)
 
-**.NET framework sürümleri:** 2.0 sürümünden itibaren kullanılabilir.
+**.NET Framework sürümleri:** 2,0 sürümünden itibaren kullanılabilir.

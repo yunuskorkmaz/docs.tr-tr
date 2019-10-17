@@ -4,12 +4,12 @@ description: Dağıtım için .NET Core 'u paketleme, adlandırma ve sürüm hak
 author: tmds
 ms.date: 10/09/2019
 ms.custom: seodec18
-ms.openlocfilehash: 3c41ce8a4a9ac1a914de2535a9b2423a7ddfa2cf
-ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
+ms.openlocfilehash: 715eb944c3e7626696f64e63b874e2f77595cf46
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72250136"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72393590"
 ---
 # <a name="net-core-distribution-packaging"></a>.NET Core dağıtımı paketleme
 
@@ -72,7 +72,7 @@ Tek bir ana bilgisayar olsa da, diğer bileşenlerin çoğu sürümlü dizinlerd
 
 - (3) **SDK/\<SDK sürümü >** SDK ("araç araçları" olarak da bilinir), .NET Core kitaplıklarını ve uygulamalarını yazmak ve derlemek için kullanılan bir yönetilen araçlar kümesidir. SDK, .NET Core komut satırı arabirimi (CLı), yönetilen diller derleyicileri, MSBuild ve ilişkili derleme görevleri ile hedefleri, NuGet, yeni proje şablonları vb. içerir.
 
-- (4) **SDK/NuGetFallbackFolder** , geri yükleme işlemi sırasında, `dotnet restore` veya `dotnet build /t:Restore` ' yi çalıştırırken olduğu gıbı bir SDK tarafından kullanılan NuGet paketlerinin bir önbelleğini içerir. Bu klasör yalnızca .NET Core 3,0 ' den önce kullanılır. @No__t-0 ' dan önceden oluşturulmuş ikili varlıklar içerdiğinden kaynaktan derlenebilir.
+- (4) **SDK/NuGetFallbackFolder** , geri yükleme işlemi sırasında, `dotnet restore` veya `dotnet build` ' yi çalıştırırken olduğu gıbı bir SDK tarafından kullanılan NuGet paketlerinin bir önbelleğini içerir. Bu klasör yalnızca .NET Core 3,0 ' den önce kullanılır. @No__t-0 ' dan önceden oluşturulmuş ikili varlıklar içerdiğinden kaynaktan derlenebilir.
 
 **Paylaşılan** klasör çerçeveler içerir. Paylaşılan bir çerçeve, farklı uygulamalar tarafından kullanılabilmesi için merkezi bir konumda bir kitaplık kümesi sağlar.
 

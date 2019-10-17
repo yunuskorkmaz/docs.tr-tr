@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 89df0e9be0600b51dcc8a68c5aba3f06e86e1b53
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 25349f7c8274b818df2cd1bc5d67856e31efecc4
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71700806"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395540"
 ---
 # <a name="icordebugcodegetsize-method"></a>ICorDebugCode::GetSize Metodu
 
@@ -38,16 +38,15 @@ HRESULT GetSize (
 
 ## <a name="parameters"></a>Parametreler
 
- `pcBytes`  
- dışı Bu `ICorDebugCode` nesnesinin temsil ettiği ikili kodun bayt cinsinden boyutu için bir işaretçi.
+`pcBytes`  
+dışı Bu `ICorDebugCode` nesnesinin temsil ettiği ikili kodun bayt cinsinden boyutu için bir işaretçi.
 
 ## <a name="requirements"></a>Gereksinimler
 
- **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).
+**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).
 
- **Üst bilgi:** CorDebug. IDL, CorDebug. h
+**Üst bilgi:** CorDebug. IDL, CorDebug. h
 
- **Kitaplık:** Corguid. lib
+**Kitaplık:** Corguid. lib
 
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
- 
+**.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
