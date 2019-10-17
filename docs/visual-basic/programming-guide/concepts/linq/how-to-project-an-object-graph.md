@@ -1,19 +1,19 @@
 ---
-title: 'Nasıl yapılır: (Visual Basic) nesne grafiği yansıtma'
+title: 'Nasıl yapılır: nesne grafiğini proje (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 9451eb47-6a31-49d7-84df-73368c618422
-ms.openlocfilehash: 6403bb0aa63120b6ec82e4e94d483769f2cfe1aa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6c4a040600b26e3e2d3d031c8eb991dd9c14fbac
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62038247"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320266"
 ---
-# <a name="how-to-project-an-object-graph-visual-basic"></a><span data-ttu-id="131d4-102">Nasıl yapılır: (Visual Basic) nesne grafiği yansıtma</span><span class="sxs-lookup"><span data-stu-id="131d4-102">How to: Project an Object Graph (Visual Basic)</span></span>
-<span data-ttu-id="131d4-103">Bu konuda, proje veya doldurmak, bir nesne grafiğinin XML gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="131d4-103">This topic illustrates how to project, or populate, an object graph from XML.</span></span>  
+# <a name="how-to-project-an-object-graph-visual-basic"></a><span data-ttu-id="d9bc5-102">Nasıl yapılır: nesne grafiğini proje (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d9bc5-102">How to: Project an Object Graph (Visual Basic)</span></span>
+<span data-ttu-id="d9bc5-103">Bu konu, XML 'deki bir nesne grafiğinin nasıl proje veya doldurma yapılacağını gösterir.</span><span class="sxs-lookup"><span data-stu-id="d9bc5-103">This topic illustrates how to project, or populate, an object graph from XML.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="131d4-104">Örnek</span><span class="sxs-lookup"><span data-stu-id="131d4-104">Example</span></span>  
- <span data-ttu-id="131d4-105">Aşağıdaki kodu içeren bir nesne grafiğinin doldurur `Address`, `PurchaseOrder`, ve `PurchaseOrderItem` gelen sınıflar [örnek XML dosyası: Tipik satın alma siparişi (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md) XML belgesi.</span><span class="sxs-lookup"><span data-stu-id="131d4-105">The following code populates an object graph with the `Address`, `PurchaseOrder`, and `PurchaseOrderItem` classes from the [Sample XML File: Typical Purchase Order (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md) XML document.</span></span>  
+## <a name="example"></a><span data-ttu-id="d9bc5-104">Örnek</span><span class="sxs-lookup"><span data-stu-id="d9bc5-104">Example</span></span>  
+ <span data-ttu-id="d9bc5-105">Aşağıdaki kod, örnek XML dosyasındaki `Address`, `PurchaseOrder` ve `PurchaseOrderItem` sınıflarıyla bir nesne grafiğini doldurur [: tipik satın alma siparişi (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md) XML belgesi.</span><span class="sxs-lookup"><span data-stu-id="d9bc5-105">The following code populates an object graph with the `Address`, `PurchaseOrder`, and `PurchaseOrderItem` classes from the [Sample XML File: Typical Purchase Order (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md) XML document.</span></span>  
   
 ```vb  
 Class Address  
@@ -296,11 +296,11 @@ Sub Main()
 End Sub  
 ```  
   
- <span data-ttu-id="131d4-106">Bu örnekte, sonucunu [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgu olarak döndürülen bir <xref:System.Collections.Generic.IEnumerable%601> , `PurchaseOrderItem`.</span><span class="sxs-lookup"><span data-stu-id="131d4-106">In this example, the result of the [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query is returned as an <xref:System.Collections.Generic.IEnumerable%601> of `PurchaseOrderItem`.</span></span> <span data-ttu-id="131d4-107">Öğeleri `PurchaseOrder` sınıfı, tür <xref:System.Collections.Generic.IEnumerable%601> , `PurchaseOrderItem`.</span><span class="sxs-lookup"><span data-stu-id="131d4-107">The items in the `PurchaseOrder` class are of type <xref:System.Collections.Generic.IEnumerable%601> of `PurchaseOrderItem`.</span></span> <span data-ttu-id="131d4-108">Kod <xref:System.Linq.Enumerable.ToList%2A> genişletme yöntemi oluşturmak için bir <xref:System.Collections.Generic.List%601> sorgunun sonuçlarının bir koleksiyondan.</span><span class="sxs-lookup"><span data-stu-id="131d4-108">The code uses the <xref:System.Linq.Enumerable.ToList%2A> extension method to create a <xref:System.Collections.Generic.List%601> collection from the results of the query.</span></span>  
+ <span data-ttu-id="d9bc5-106">Bu örnekte, [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgusunun sonucu, `PurchaseOrderItem` @no__t olarak döndürülür.</span><span class="sxs-lookup"><span data-stu-id="d9bc5-106">In this example, the result of the [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query is returned as an <xref:System.Collections.Generic.IEnumerable%601> of `PurchaseOrderItem`.</span></span> <span data-ttu-id="d9bc5-107">@No__t-0 sınıfındaki öğeler <xref:System.Collections.Generic.IEnumerable%601> `PurchaseOrderItem` türündedir.</span><span class="sxs-lookup"><span data-stu-id="d9bc5-107">The items in the `PurchaseOrder` class are of type <xref:System.Collections.Generic.IEnumerable%601> of `PurchaseOrderItem`.</span></span> <span data-ttu-id="d9bc5-108">Kod, sorgunun sonuçlarından bir <xref:System.Collections.Generic.List%601> koleksiyonu oluşturmak için <xref:System.Linq.Enumerable.ToList%2A> genişletme yöntemini kullanır.</span><span class="sxs-lookup"><span data-stu-id="d9bc5-108">The code uses the <xref:System.Linq.Enumerable.ToList%2A> extension method to create a <xref:System.Collections.Generic.List%601> collection from the results of the query.</span></span>  
   
- <span data-ttu-id="131d4-109">Bu örnek aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="131d4-109">The example produces the following output:</span></span>  
+ <span data-ttu-id="d9bc5-109">Örnek aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="d9bc5-109">The example produces the following output:</span></span>  
   
-```  
+```console  
 PurchaseOrderNumber: 99503  
 OrderDate: 10/20/1999  
   
@@ -337,8 +337,8 @@ USPrice: 39.98
 ShipDate: 5/21/1999  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="131d4-110">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="131d4-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d9bc5-110">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="d9bc5-110">See also</span></span>
 
 - <xref:System.Linq.Enumerable.Select%2A>
 - <xref:System.Linq.Enumerable.ToList%2A>
-- [<span data-ttu-id="131d4-111">Projeksiyonlar ve Dönüşümler (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="131d4-111">Projections and Transformations (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+- [<span data-ttu-id="d9bc5-111">Tahminler ve dönüşümler (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d9bc5-111">Projections and Transformations (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
