@@ -5,63 +5,63 @@ helpviewer_keywords:
 - WCF [WCF], troubleshooting
 - Windows Communication Foundation [WCF], troubleshooting
 ms.assetid: a9ea7a53-f31a-46eb-806e-898e465a4992
-ms.openlocfilehash: 53e164bfdc27d99073cc893f98f332366091a753
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 86aab2b39aaa9c7d7d92f7d5738482723cf6852f
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65881291"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320189"
 ---
 # <a name="wcf-troubleshooting-quickstart"></a>WCF Sorun Giderme Hızlı Başlangıç
-Bu konuda, birkaç müşteriler içine geliştirme WCF istemcileri ve Hizmetleri çalıştırdığınız bilinen sorunlar listelenmektedir. Çalıştırmakta olduğunuz sorun bu listede değilse, hizmetiniz için izleme yapılandırma öneririz. Bu işlem bir izleme dosyası oluşturur izleme dosyası Görüntüleyici ile birlikte görüntülemek ve bu özel durumları hakkında ayrıntılı bilgi almak hizmet içinde oluşabilecek. İzlemeyi yapılandırma hakkında daha fazla bilgi için bkz: [İzlemeyi Yapılandırma](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md). İzleme dosyası Görüntüleyici hakkında daha fazla bilgi için bkz: [Hizmet izleme Görüntüleyicisi aracı (SvcTraceViewer.exe)](../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md).  
+Bu konuda, müşterilerin, WCF istemcileri ve Hizmetleri geliştirirken çalıştırdığı bazı bilinen sorunlar listelenmektedir. Çalıştırmakta olduğunuz sorun bu listede yoksa, hizmetiniz için izlemeyi yapılandırmanızı öneririz. Bu, izleme dosyası görüntüleyiciyle görüntüleyebileceğiniz bir izleme dosyası oluşturur ve hizmet içinde oluşabilecek özel durumlar hakkında ayrıntılı bilgi edinebilirsiniz. İzlemeyi yapılandırma hakkında daha fazla bilgi için bkz: [Izlemeyi yapılandırma](./diagnostics/tracing/configuring-tracing.md). İzleme dosyası Görüntüleyicisi hakkında daha fazla bilgi için bkz. [hizmet Izleme Görüntüleyicisi Aracı (SvcTraceViewer. exe)](service-trace-viewer-tool-svctraceviewer-exe.md).  
   
-1. [Bir WCF hizmetine göz atmak denediğinizde Windows 7 ve IIS yükledikten sonra aşağıdaki hata iletisini alıyorum: HTTP Hatası 404.3 – bulunamadı](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#bkmk_0)  
+1. [Windows 7 ve IIS yükledikten sonra, bir WCF hizmetine gözatmaya çalıştıklarında şu hata iletisini alıyorum: HTTP hatası 404,3 – bulunamadı](#bkmk_0)  
   
-     HTTP Hatası 404.3 – değil istediğiniz FoundThe sayfası uzantısı yapılandırması nedeniyle hizmet olamaz. Sayfa bir komut dosyası ise, bir işleyici ekleyin. Dosyanın indirilmesi gerektiğini MIME eşleme ekleyin. Ayrıntılı hata InformationModule StaticFileModule.  
+     HTTP hatası 404,3 – bulunamadı sayfası uzantı yapılandırması nedeniyle sunulamıyor. Sayfa bir komut dosyası ise, bir işleyici ekleyin. Dosya indirildiyse, bir MIME eşlemesi ekleyin. Ayrıntılı hata InformationModule StaticFileModule.  
   
-2. [İstemcim ilk isteğinden sonra bir süredir boşta kalırsa bazen bir MessageSecurityException ikinci istekte alıyorum. Ne oluyor?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q1)  
+2. [Bazen, istemciniz ilk istekten sonraki bir sırada boşta kalırsa ikinci istekte bir MessageSecurityException aldım. Ne oluyor?](#BKMK_q1)  
   
-3. [Hizmetimi yaklaşık 10 istemcileri ile etkileşim sonra yeni istemcileri Reddet başlar. Ne oluyor?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q2)  
+3. [Hizmet, yaklaşık 10 istemci etkileşim kurduktan sonra yeni istemcileri reddedecek şekilde başlatılır. Ne oluyor?](#BKMK_q2)  
   
-4. [Hizmet yapılandırma öğesinden yere WCF uygulamanın yapılandırma dosyası diğer yükleyebilir?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q3)  
+4. [Hizmet yapılandırmadan WCF uygulamasının yapılandırma dosyası dışında bir yerde yükleyebilir miyim?](#BKMK_q3)  
   
-5. [Hizmetimi ve istemci harika, ancak istemci, başka bir bilgisayarda olduğunda bunları çalıştıramıyor musunuz? Ne oluyor?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q4)  
+5. [Kullandığım hizmet ve istemci harika çalışıyor, ancak istemci başka bir bilgisayarda olduğunda bunları çalışmayacak mıyım? Ne oluyor?](#BKMK_q4)  
   
-6. [Bir FaultException miyim throw zaman\<özel durum > türü bir özel durum olduğunda, her zaman istemci üzerindeki bir genel FaultException türü ve genel tür alıyorum. Ne oluyor?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q5)  
+6. [Türün bir istisna olduğu bir FaultException @ no__t-1özel durumu >, genel tür değil, her zaman istemcide genel bir FaultException türü aldım. Ne oluyor?](#BKMK_q5)  
   
-7. [Bu tek yönlü gibi görünür ve yanıt veri içerdiğinde istek-yanıt operations yaklaşık aynı hızda döndürür. Ne oluyor?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q6)  
+7. [Yanıt bir veri içerdiğinde tek yönlü ve istek-yanıt işlemleri kabaca aynı hızda döndürülür. Ne oluyor?](#BKMK_q6)  
   
-8. [X.509 sertifikası ile Hizmetimi kullanıyorum ve bir System.Security.Cryptography.CryptographicException alıyorum. Ne oluyor?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q77)  
+8. [Kullandığım bir X. 509.440 sertifikası kullanıyorum ve bir System. Security. Cryptography. CryptographicException aldım. Ne oluyor?](#BKMK_q77)  
   
-9. [İlk parametre bir işlemin öğesinden büyük değiştirdim küçük harf çoğaltmak; artık istemcim bir özel durum oluşturur. Ne oluyor?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q88)  
+9. [Bir işlemin ilk parametresini büyük harften küçük harfe kadar değiştirdim; Artık istemcim bir özel durum oluşturuyor. Ne oluyor?](#BKMK_q88)  
   
-10. [My izleme araçlarından birini kullanıyorum ve bir EndpointNotFoundException alıyorum. Ne oluyor?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q99)  
+10. [İzleme araçlarından birini kullanıyorum ve bir EndpointNotFoundException aldım. Ne oluyor?](#BKMK_q99)  
   
-11. [WCF Web HTTP uygulama bir WCF SOAP uygulamasından çağırırken hizmet aşağıdaki hatayı döndürür: 405 Yönteme izin verilmiyor](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BK_MK99)  
+11. [WCF SOAP uygulamasından bir WCF Web HTTP uygulaması çağrılırken hizmet şu hatayı döndürür: 405 yöntemine Izin verilmiyor](#BK_MK99)  
   
- [Taban adresi nedir? Bu uç nokta adresi için nasıl ilişkilidir?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q10)  
+ [Temel adres nedir? Bir uç nokta adresiyle nasıl ilişki vardır?](#BKMK_q10)  
   
 <a name="bkmk_0"></a>   
-## <a name="after-installing-windows-7-and-iis-when-i-attempt-to-browse-to-a-wcf-service-i-get-the-following-error-message-http-error-4043--not-found"></a>Bir WCF hizmetine göz atmak denediğinizde Windows 7 ve IIS yükledikten sonra aşağıdaki hata iletisini alıyorum: HTTP Hatası 404.3 – bulunamadı  
- Tam hata iletisi şudur:  
+## <a name="after-installing-windows-7-and-iis-when-i-attempt-to-browse-to-a-wcf-service-i-get-the-following-error-message-http-error-4043--not-found"></a>Windows 7 ve IIS yükledikten sonra, bir WCF hizmetine gözatmaya çalıştıklarında şu hata iletisini alıyorum: HTTP hatası 404,3 – bulunamadı  
+ Tam hata iletisi:  
   
- HTTP Hatası 404.3 – değil istediğiniz FoundThe sayfası uzantısı yapılandırması nedeniyle hizmet olamaz. Sayfa bir komut dosyası ise, bir işleyici ekleyin. Dosyanın indirilmesi gerektiğini MIME eşleme ekleyin. Ayrıntılı hata InformationModule StaticFileModule.  
+ HTTP hatası 404,3 – bulunamadı sayfası uzantı yapılandırması nedeniyle sunulamıyor. Sayfa bir komut dosyası ise, bir işleyici ekleyin. Dosya indirildiyse, bir MIME eşlemesi ekleyin. Ayrıntılı hata InformationModule StaticFileModule.  
   
- Bu hata iletisi, Denetim Masası'ndaki "Windows Communication Foundation HTTP etkinleştirme" açıkça ayarlanmadı oluşur. Bu Git Denetim Masası'na ayarlamak için pencerenin alt sol köşede Programlar'ı tıklatın. Kapatma Windows özellikleri veya Kapat'a tıklayın. Microsoft .NET Framework 3.5.1 genişletin ve Windows Communication Foundation HTTP etkinleştirme'yi seçin.  
+ Bu hata iletisi, "Windows Communication Foundation HTTP etkinleştirmesi" açıkça Denetim Masası 'nda ayarlanmamışsa oluşur. Bunu ayarlamak için, Denetim Masası 'na gidin, pencerenin sol alt köşesindeki Programlar ' a tıklayın. Windows özelliklerini aç veya Kapat ' a tıklayın. Microsoft .NET Framework 3.5.1 ' i genişletin ve Windows Communication Foundation HTTP etkinleştirmesi ' ni seçin.  
   
 <a name="BKMK_q1"></a>   
-## <a name="sometimes-i-receive-a-messagesecurityexception-on-the-second-request-if-my-client-is-idle-for-a-while-after-the-first-request-what-is-happening"></a>İstemcim ilk isteğinden sonra bir süredir boşta kalırsa bazen bir MessageSecurityException ikinci istekte alıyorum. Ne oluyor?  
- İkinci istek, temelde iki nedenden dolayı başarısız olabilir: (1) oturum zaman aşımına uğradı veya (2 Web sunucusu hizmetini barındıran dönüştürülmeden. Bu durumda, oturum hizmeti zaman aşımına uğrayana kadar geçerlidir. Zaman hizmeti almaz istek istemciden hizmetin bağlamasında belirtilen süre içinde (<xref:System.ServiceModel.Channels.Binding.ReceiveTimeout%2A>), hizmet güvenlik oturumu sona erer. Sonraki istemci iletileri neden <xref:System.ServiceModel.Security.MessageSecurityException>. İstemci, güvenli bir oturum gelecekteki iletileri göndermek veya bir durum bilgisi olan güvenlik bağlamı belirteci kullanmak için hizmet ile yeniden oluşturmanız gerekir. Durum bilgisi olan güvenlik bağlamı belirteçler dönüştürüldüğü bir Web sunucusu varlığını sürdürmesi güvenli bir oturum de olanak sağlar. Durum bilgisi olan güvenli içerik belirteçleri güvenli bir oturumda kullanma hakkında daha fazla bilgi için bkz. [nasıl yapılır: Bir güvenlik bağlamı oluşturmak için güvenli bir oturum belirteci](../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md). Alternatif olarak, güvenli oturumlarını devre dışı bırakabilirsiniz. Kullanırken [ \<wsHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) ayarlayabileceğiniz bağlamayı `establishSecurityContext` özelliğini `false` güvenli oturumlarını devre dışı bırakmak için. Güvenli oturumlar diğer bağlantılar için devre dışı bırakmak için özel bir bağlama oluşturmanız gerekir. Özel bağlama oluşturma hakkında daha fazla bilgi için bkz: [nasıl yapılır: SecurityBindingElement kullanarak özel bağlama oluşturma](../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md). Bu seçeneklerden birini uygulamadan önce uygulamanızın güvenlik gereksinimlerini anlamanız gerekir.  
+## <a name="sometimes-i-receive-a-messagesecurityexception-on-the-second-request-if-my-client-is-idle-for-a-while-after-the-first-request-what-is-happening"></a>Bazen, istemciniz ilk istekten sonraki bir sırada boşta kalırsa ikinci istekte bir MessageSecurityException aldım. Ne oluyor?  
+ İkinci istek birincil olarak iki nedenden dolayı başarısız olabilir: (1) oturum zaman aşımına uğradı veya (2) hizmeti barındıran Web sunucusu geri dönüştürüldü. İlk durumda, oturum hizmetin zaman aşımına uğrayana kadar geçerli olur. Hizmet, hizmetin bağlamasında (<xref:System.ServiceModel.Channels.Binding.ReceiveTimeout%2A>) belirtilen süre içinde istemciden bir istek almadığında, hizmet güvenlik oturumunu sonlandırır. Sonraki istemci iletileri <xref:System.ServiceModel.Security.MessageSecurityException> ' a sonuçlanır. İstemci gelecek iletileri göndermek ya da durum bilgisi olan bir güvenlik bağlamı belirteci kullanmak için hizmetle güvenli bir oturum yeniden kurması gerekir. Durum bilgisi olan güvenlik bağlamı belirteçleri Ayrıca, güvenli bir oturumun, bir Web sunucusunun geri dönüştürülmekte olmasını sağlar. Güvenli bir oturumda durum bilgisi olan güvenli bağlam belirteçleri kullanma hakkında daha fazla bilgi için bkz. [nasıl yapılır: güvenli bir oturum Için güvenlik bağlamı belirteci oluşturma](./feature-details/how-to-create-a-security-context-token-for-a-secure-session.md). Alternatif olarak, güvenli oturumları devre dışı bırakabilirsiniz. [@No__t-1wsHttpBinding >](../configure-apps/file-schema/wcf/wshttpbinding.md) bağlamayı kullandığınızda, güvenli oturumları devre dışı bırakmak için `establishSecurityContext` özelliğini `false` olarak ayarlayabilirsiniz. Diğer bağlamalara yönelik güvenli oturumları devre dışı bırakmak için özel bir bağlama oluşturmanız gerekir. Özel bağlama oluşturma hakkında daha fazla bilgi için bkz. [nasıl yapılır: SecurityBindingElement kullanarak özel bağlama oluşturma](./feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md). Bu seçeneklerden herhangi birini uygulamadan önce, uygulamanızın güvenlik gereksinimlerini anlamanız gerekir.  
   
 <a name="BKMK_q2"></a>   
-## <a name="my-service-starts-to-reject-new-clients-after-about-10-clients-are-interacting-with-it-what-is-happening"></a>Hizmetimi yaklaşık 10 istemcileri ile etkileşim sonra yeni istemcileri Reddet başlar. Ne oluyor?  
- Varsayılan olarak yalnızca 10 eşzamanlı oturum hizmeti olabilir. Hizmet bağlamaları oturumları kullanırsanız, daha sonra yeni istemci bağlantılarını biri geçerli oturum sona kadar reddederse, bu sayıyı ulaşana kadar bu nedenle, hizmetin yeni istemci bağlantılarını kabul eder. Çeşitli yollarla daha fazla istemciyi destekleyebileceği. Hizmetinizi oturumları gerektirmiyorsa kapatamaması bağlama kullanmayın. (Daha fazla bilgi için [oturumları kullanarak](../../../docs/framework/wcf/using-sessions.md).) Değerini değiştirerek oturum sınırını artırmak için başka bir seçenektir <xref:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentSessions%2A> özelliği için durumda uygun sayısı.  
+## <a name="my-service-starts-to-reject-new-clients-after-about-10-clients-are-interacting-with-it-what-is-happening"></a>Hizmet, yaklaşık 10 istemci etkileşim kurduktan sonra yeni istemcileri reddedecek şekilde başlatılır. Ne oluyor?  
+ Varsayılan olarak, hizmetlerde yalnızca 10 eşzamanlı oturum olabilir. Bu nedenle, hizmet bağlamaları oturumlar kullanıyorsa, hizmet bu sayıya ulaşana kadar yeni istemci bağlantılarını kabul eder ve ardından geçerli oturumlardan biri sonlanana kadar yeni istemci bağlantılarını reddeder. Birkaç yolla daha fazla istemci destekleyebilirsiniz. Hizmetiniz oturum gerektirmiyorsa, oturumsuz bağlama kullanmayın. (Daha fazla bilgi için bkz. [oturumları kullanma](using-sessions.md).) Diğer bir seçenek de <xref:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentSessions%2A> özelliğinin değerini, sizin için uygun olan sayı ile değiştirerek oturum sınırını artırmaya yönelik bir seçenektir.  
   
 <a name="BKMK_q3"></a>   
-## <a name="can-i-load-my-service-configuration-from-somewhere-other-than-the-wcf-applications-configuration-file"></a>Hizmet yapılandırma öğesinden yere WCF uygulamanın yapılandırma dosyası diğer yükleyebilir?  
- Evet, ancak, özel bir oluşturmak zorunda <xref:System.ServiceModel.ServiceHost> kılan sınıf <xref:System.ServiceModel.ServiceHostBase.ApplyConfiguration%2A> yöntemi. Bu yöntem içinde (Standart yapılandırma bilgilerini de yüklemek istiyorsanız) ilk yapılandırmasını yüklemek için temel çağırabilirsiniz ancak sistemi yükleme yapılandırmasını da tamamen değiştirebilirsiniz. Uygulama yapılandırma dosyasından farklı bir yapılandırma dosyasındaki yapılandırma yüklemek istiyorsanız, gerekir kendiniz yapılandırma dosyasını ayrıştırma ve yapılandırmayı unutmayın.  
+## <a name="can-i-load-my-service-configuration-from-somewhere-other-than-the-wcf-applications-configuration-file"></a>Hizmet yapılandırmadan WCF uygulamasının yapılandırma dosyası dışında bir yerde yükleyebilir miyim?  
+ Evet, ancak, <xref:System.ServiceModel.ServiceHostBase.ApplyConfiguration%2A> yöntemini geçersiz kılan özel bir <xref:System.ServiceModel.ServiceHost> sınıfı oluşturmanız gerekir. Bu yöntemin içinde, önce yapılandırmayı yüklemek için temel çağırabilirsiniz (Standart yapılandırma bilgilerini de yüklemek istiyorsanız), ancak yapılandırma yükleme sistemini tamamen değiştirebilirsiniz. Yapılandırmayı uygulama yapılandırma dosyasından farklı bir yapılandırma dosyasından yüklemek isterseniz, yapılandırma dosyasını kendiniz ayrıştırabilmeniz ve yapılandırmayı yüklemeniz gerekir.  
   
- Aşağıdaki kod örneğinde nasıl geçersiz kılınacağını gösterir <xref:System.ServiceModel.ServiceHostBase.ApplyConfiguration%2A> yöntemi ve doğrudan bir uç noktasını yapılandırın.  
+ Aşağıdaki kod örneği, <xref:System.ServiceModel.ServiceHostBase.ApplyConfiguration%2A> yönteminin nasıl geçersiz kılınacağını ve bir uç noktanın doğrudan nasıl yapılandırılacağını gösterir.  
   
 ```csharp
 public class MyServiceHost : ServiceHost  
@@ -95,18 +95,18 @@ public class MyServiceHost : ServiceHost
 ```  
   
 <a name="BKMK_q4"></a>   
-## <a name="my-service-and-client-work-great-but-i-cant-get-them-to-work-when-the-client-is-on-another-computer-whats-happening"></a>Hizmetimi ve istemci harika, ancak istemci, başka bir bilgisayarda olduğunda bunları çalıştıramıyor musunuz? Ne oluyor?  
- Özel duruma bağlı bağlı olarak, çeşitli sorunları olabilir:  
+## <a name="my-service-and-client-work-great-but-i-cant-get-them-to-work-when-the-client-is-on-another-computer-whats-happening"></a>Kullandığım hizmet ve istemci harika çalışıyor, ancak istemci başka bir bilgisayarda olduğunda bunları çalışmayacak mıyım? Ne oluyor?  
+ Özel duruma bağlı olarak birkaç sorun olabilir:  
   
-- İstemci uç nokta adresleri değil "localhost" ve ana bilgisayar adı değiştirmeniz gerekebilir.  
+- İstemci uç noktası adreslerini "localhost" değil ana bilgisayar adıyla değiştirmeniz gerekebilir.  
   
-- Uygulama bağlantı noktasını açmanız gerekebilir. Ayrıntılar için bkz [güvenlik duvarı yönergeleri](../../../docs/framework/wcf/samples/firewall-instructions.md) gelen SDK örnekleri.  
+- Bağlantı noktasını uygulamaya açmanız gerekebilir. Ayrıntılar için bkz. SDK örneklerinden [güvenlik duvarı yönergeleri](./samples/firewall-instructions.md) .  
   
-- Diğer olası sorunları için örnekleri konusuna [Windows Communication Foundation örneklerini çalıştırma](./samples/running-the-samples.md).  
+- Olası diğer sorunlar için [Windows Communication Foundation Örnekleri çalıştıran](./samples/running-the-samples.md)örnekler konusuna bakın.  
   
-- İstemci, Windows kimlik bilgilerini kullanıyor ve özel durum bir <xref:System.ServiceModel.Security.SecurityNegotiationException>, Kerberos gibi yapılandırın.  
+- İstemciniz Windows kimlik bilgilerini kullanıyorsa ve özel durum bir <xref:System.ServiceModel.Security.SecurityNegotiationException> ise, Kerberos 'u aşağıdaki şekilde yapılandırın.  
   
-    1. Kimlik, istemcinin App.config dosyasındaki endpoint öğesine ekleyin:  
+    1. Kimlik bilgilerini istemcinin App. config dosyasındaki Endpoint öğesine ekleyin:  
   
         ```xml
         <endpoint   
@@ -122,57 +122,57 @@ public class MyServiceHost : ServiceHost
         </endpoint>  
         ```  
   
-    2. Şirket içinde barındırılan hizmeti sistem veya ağ hizmeti hesabı altında çalıştırın. Sistem hesabı altında bir komut penceresi oluşturmak için bu komutu çalıştırabilirsiniz:  
+    2. Şirket içinde barındırılan hizmeti sistem veya NetworkService hesabı altında çalıştırın. Sistem hesabı altında bir komut penceresi oluşturmak için bu komutu çalıştırabilirsiniz:  
   
         ```console
         at 12:36 /interactive "cmd.exe"  
         ```  
   
-    3. ' % S'hizmeti altında Internet Information Services (varsayılan olarak, hizmet asıl adı (SPN) hesabı kullanır, IIS), barındırma.  
+    3. Hizmeti, varsayılan olarak hizmet asıl adı (SPN) hesabını kullanan Internet Information Services (IIS) altında barındırın.  
   
-    4. Bir yeni SPN SetSPN kullanarak etki alanı ile kaydedin. Bunu yapmak için bir etki alanı yöneticisi olması gerektiğine dikkat edin.  
+    4. SetSPN kullanarak etki alanı ile yeni bir SPN kaydettirin. Bunu yapmak için, bir etki alanı yöneticisi olmanız gerektiğini unutmayın.  
   
- Kerberos protokolü hakkında daha fazla bilgi için bkz: [güvenlik kavramları wcf'de kullanılan](../../../docs/framework/wcf/feature-details/security-concepts-used-in-wcf.md) ve:  
+ Kerberos protokolü hakkında daha fazla bilgi için bkz. [WCF 'de kullanılan güvenlik kavramları](./feature-details/security-concepts-used-in-wcf.md) ve:  
   
-- [Windows Kimlik Doğrulama Hatalarını Ayıklama](../../../docs/framework/wcf/feature-details/debugging-windows-authentication-errors.md)  
+- [Windows Kimlik Doğrulama Hatalarını Ayıklama](./feature-details/debugging-windows-authentication-errors.md)  
   
-- [Kerberos hizmet asıl adları Http.sys kullanarak kaydetme](https://go.microsoft.com/fwlink/?LinkId=86943)  
+- [Http. sys kullanarak Kerberos hizmet sorumlusu adlarını kaydetme](https://go.microsoft.com/fwlink/?LinkId=86943)  
   
-- [Kerberos açıklaması](https://go.microsoft.com/fwlink/?LinkId=86946)  
+- [Açıklanan Kerberos](https://go.microsoft.com/fwlink/?LinkId=86946)  
   
 <a name="BKMK_q5"></a>   
-## <a name="when-i-throw-a-faultexceptionexception-where-the-type-is-an-exception-i-always-receive-a-general-faultexception-type-on-the-client-and-not-the-generic-type-whats-happening"></a>Bir FaultException miyim throw zaman\<özel durum > türü bir özel durum olduğunda, her zaman istemci üzerindeki bir genel FaultException türü ve genel tür alıyorum. Ne oluyor?  
- Veri türüne dönüştürün ve hata sözleşmeniz ayrıntı türü olarak olduğunu bildirir, kendi özel hata oluşturma önemle tavsiye edilir. Neden olan sistem tarafından sağlanan özel durum türlerini kullanma:  
+## <a name="when-i-throw-a-faultexceptionexception-where-the-type-is-an-exception-i-always-receive-a-general-faultexception-type-on-the-client-and-not-the-generic-type-whats-happening"></a>Türün bir özel durum olduğu bir FaultException @ no__t-0Exception > oluştururken, genel tür değil, her zaman istemcide genel bir FaultException türü aldım. Ne oluyor?  
+ Kendi özel hata veri türünü oluşturmanız ve bunu hata sözleşmenizin ayrıntı türü olarak bildirmeniz önemle tavsiye edilir. Nedeni sistem tarafından sağlanmış özel durum türlerini kullanmaktır:  
   
-- Hizmet odaklı uygulamalar güçlerini en büyük zorluklardan biri kaldıran bir türü bağımlılığı oluşturur.  
+- Hizmet odaklı uygulamaların en büyük güçlerinden birini kaldıran bir tür bağımlılığı oluşturur.  
   
-- Standart bir biçimde seri hale getirme özel durum sırasında bağımlı olamaz. Bazı — gibi <xref:System.Security.SecurityException>— tüm serileştirilebilir olmayabilir.  
+- Standart bir şekilde özel durum serileştirilme bağımlıdır. Bazıları — <xref:System.Security.SecurityException> — gibi, seri hale getirilebilir.  
   
-- İç uygulama ayrıntıları istemcilerine kullanıma sunar. Daha fazla bilgi için [belirtme ve işleme hataları sözleşme ve hizmetlerde](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
+- İstemcilere iç uygulama ayrıntılarını sunar. Daha fazla bilgi için bkz. [anlaşmalar ve hizmetlerde hataları belirtme ve işleme](specifying-and-handling-faults-in-contracts-and-services.md).  
   
- Bir uygulamada hata ayıklama yaparsanız, ancak özel durum bilgilerini seri hale getirmek ve kullanarak istemciye Döndür <xref:System.ServiceModel.Description.ServiceDebugBehavior> sınıfı.  
+ Ancak bir uygulamada hata ayıklaması yapıyorsanız, özel durum bilgilerini seri hale getirebilirsiniz ve <xref:System.ServiceModel.Description.ServiceDebugBehavior> sınıfını kullanarak istemciye döndürebilirsiniz.  
   
 <a name="BKMK_q6"></a>   
-## <a name="it-seems-like-one-way-and-request-reply-operations-return-at-roughly-the-same-speed-when-the-reply-contains-no-data-whats-happening"></a>Bu tek yönlü gibi görünür ve yanıt veri içerdiğinde istek-yanıt operations yaklaşık aynı hızda döndürür. Ne oluyor?  
- Bir işlem için bir yol olduğunu belirten yalnızca da işlem anlaşması bir giriş iletisi kabul eder ve bir çıkış iletisi döndürmeyen anlamına gelir. Giden veri kablo için yazılmış veya bir özel durum WCF'de, tüm istemci çağrılarını dönün. Hizmet bulunması veya hizmet ağdan gelen verileri kabul etmek için hazır değil durumunda engelleyin oldukları oluşturabilecek ve tek yönlü işlem aynı şekilde çalışır. Genellikle WCF, istemciye istek-yanıt daha hızlı döndüren tek yönlü çağrıları sonuçlanır; ancak giden veriler ağ üzerinden gönderme yavaşlatır herhangi bir koşul istek-yanıt işlemlerinin yanı sıra, tek yönlü işlem yavaşlatır. Daha fazla bilgi için [One-Way Hizmetleri](../../../docs/framework/wcf/feature-details/one-way-services.md) ve [WCF istemci kullanarak hizmetlere erişme](../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md).  
+## <a name="it-seems-like-one-way-and-request-reply-operations-return-at-roughly-the-same-speed-when-the-reply-contains-no-data-whats-happening"></a>Yanıt bir veri içerdiğinde tek yönlü ve istek-yanıt işlemleri kabaca aynı hızda döndürülür. Ne oluyor?  
+ Bir işlemin tek bir şekilde belirtilmesi, yalnızca işlem sözleşmesinin bir giriş iletisini kabul ettiği ve bir çıkış iletisi döndürmediği anlamına gelir. WCF 'de, giden veriler kabloya yazıldığında veya bir özel durum oluştuğunda tüm istemci etkinleştirmeleri döndürülür. Tek yönlü işlemler aynı şekilde çalışır ve hizmet, ağdaki verileri kabul etmek üzere hazırlanmamışsa, hizmet bulunamıyorsa veya engellenmiyor olabilir. Genellikle WCF 'de, bu, istemciye istek yanıtlamadan daha hızlı dönen tek yönlü çağrılara neden olur; Ancak, giden verilerin ağ üzerinden gönderilmesini yavaşlatan herhangi bir koşul, tek yönlü işlemlerin yanı sıra istek-yanıt işlemlerini yavaşlatır. Daha fazla bilgi için bkz. [tek yönlü hizmetler](./feature-details/one-way-services.md) ve [WCF Istemcisi kullanarak hizmetlere erişme](./feature-details/accessing-services-using-a-client.md).  
   
 <a name="BKMK_q77"></a>   
-## <a name="im-using-an-x509-certificate-with-my-service-and-i-get-a-systemsecuritycryptographycryptographicexception-whats-happening"></a>X.509 sertifikası ile Hizmetimi kullanıyorum ve bir System.Security.Cryptography.CryptographicException alıyorum. Ne oluyor?  
- Bu genellikle, IIS çalışan altında çalıştırma işlemi kullanıcı hesabı değiştirildikten sonra gerçekleşir. Örneğin, [!INCLUDE[wxp](../../../includes/wxp-md.md)], Aspnet_wp.exe ASPNET bir özel kullanıcı hesabına çalıştığı varsayılan kullanıcı hesabı değiştirirseniz, bu hatayı görebilirsiniz. Özel anahtarı kullanıyorsanız, bunu kullandığı işlem bu anahtarın depolandığı dosya erişim iznine sahip gerekecektir.  
+## <a name="im-using-an-x509-certificate-with-my-service-and-i-get-a-systemsecuritycryptographycryptographicexception-whats-happening"></a>Kullandığım bir X. 509.440 sertifikası kullanıyorum ve bir System. Security. Cryptography. CryptographicException aldım. Ne oluyor?  
+ Bu, genellikle IIS çalışan işleminin çalıştırıldığı Kullanıcı hesabı değiştirildikten sonra oluşur. Örneğin, [!INCLUDE[wxp](../../../includes/wxp-md.md)] ' da, Aspnet_wp. exe ' nin altında çalıştığı varsayılan kullanıcı hesabını özel bir kullanıcı hesabına değiştirirseniz, bu hatayı görebilirsiniz. Özel anahtar kullanılıyorsa, onu kullanan işlemin bu anahtarı depolayan dosyaya erişmek için gerekli izinlere sahip olması gerekir.  
   
- Bu durumda, özel anahtarı içeren dosyayı işlemin hesaba okuma erişimi ayrıcalıkları vermeniz gerekir. Örneğin, IIS çalışan işlemi Bob hesabı altında çalışıyorsa, bu özel anahtarı içeren dosyanın Bob okuma erişimi verin gerekecektir.  
+ Bu durumda, özel anahtarı içeren dosya için işlem hesabına yönelik okuma erişim ayrıcalıklarına sahip olmanız gerekir. Örneğin, IIS çalışan işlemi Bob hesabı altında çalışıyorsa, Bob 'un özel anahtarı içeren dosyaya okuma erişimi vermesi gerekir.  
   
- Belirli bir X.509 sertifikası özel anahtarı içeren dosyayı doğru kullanıcı hesabı erişimi vermek hakkında daha fazla bilgi için bkz. [nasıl yapılır: X.509 sertifikalarını WCF için erişilebilir duruma](../../../docs/framework/wcf/feature-details/how-to-make-x-509-certificates-accessible-to-wcf.md).  
+ Belirli bir X. 509.952 sertifikası için özel anahtarı içeren dosyaya doğru Kullanıcı hesabına erişim verme hakkında daha fazla bilgi için bkz. [nasıl yapılır: X. 509.440 SERTIFIKALARıNı WCF 'ye erişilebilir hale getirme](./feature-details/how-to-make-x-509-certificates-accessible-to-wcf.md).  
   
 <a name="BKMK_q88"></a>   
-## <a name="i-changed-the-first-parameter-of-an-operation-from-uppercase-to-lowercase-now-my-client-throws-an-exception-whats-happening"></a>İlk parametre bir işlemin öğesinden büyük değiştirdim küçük harf çoğaltmak; artık istemcim bir özel durum oluşturur. Ne oluyor?  
- Parametre adları işlemi imzasında değerini sözleşmenin bir parçası olan ve büyük küçük harfe duyarlıdır. Kullanım <xref:System.ServiceModel.MessageParameterAttribute?displayProperty=nameWithType> yerel parametre adı ve istemci uygulamaları için işlem açıklayan meta veriler arasında ayrım yapmak, ihtiyacınız olduğunda özniteliği.  
+## <a name="i-changed-the-first-parameter-of-an-operation-from-uppercase-to-lowercase-now-my-client-throws-an-exception-whats-happening"></a>Bir işlemin ilk parametresini büyük harften küçük harfe kadar değiştirdim; Artık istemcim bir özel durum oluşturuyor. Ne oluyor?  
+ İşlem imzasında parametre adlarının değeri sözleşmenin bir parçasıdır ve büyük/küçük harfe duyarlıdır. Yerel parametre adı ile istemci uygulamaları için işlemi açıklayan meta veriler arasında ayrım yapmanız gerektiğinde <xref:System.ServiceModel.MessageParameterAttribute?displayProperty=nameWithType> özniteliğini kullanın.  
   
 <a name="BKMK_q99"></a>   
-## <a name="im-using-one-of-my-tracing-tools-and-i-get-an-endpointnotfoundexception-whats-happening"></a>My izleme araçlarından birini kullanıyorum ve bir EndpointNotFoundException alıyorum. Ne oluyor?  
- Sistem tarafından sağlanan WCF izleme mekanizması değil bir izleme aracı kullanıyorsanız ve aldığınız bir <xref:System.ServiceModel.EndpointNotFoundException> belirten bir adres filtresi uyuşmazlığı oluştu, kullanmanız gereken <xref:System.ServiceModel.Description.ClientViaBehavior> izleme yardımcı programı iletileri yönlendirmek için sınıf ve Bu ileti hizmet adresine yönlendirmek yardımcı programı vardır. <xref:System.ServiceModel.Description.ClientViaBehavior> Sınıfı değiştirir `Via` adresleme üstbilgi listesinden ultimate alıcı, sonraki ağ adresini belirtmek için gösterilen `To` adresleme başlığı. Bunu yaparken kurmak için kullanılan uç nokta adresini ancak değiştirmeyin `To` değeri.  
+## <a name="im-using-one-of-my-tracing-tools-and-i-get-an-endpointnotfoundexception-whats-happening"></a>İzleme araçlarından birini kullanıyorum ve bir EndpointNotFoundException aldım. Ne oluyor?  
+ Sistem tarafından sağlanmış WCF izleme mekanizması olmayan bir izleme aracı kullanıyorsanız ve bir adres filtresi uyumsuzluğu olduğunu belirten bir <xref:System.ServiceModel.EndpointNotFoundException> alırsanız, iletileri izleme yardımcı programına yönlendirmek için <xref:System.ServiceModel.Description.ClientViaBehavior> sınıfını kullanmanız gerekir ve yardımcı program bu iletileri hizmet adresine yeniden yönlendirir. @No__t-0 sınıfı, sonraki ağ adresini, `To` adresleme üstbilgisiyle belirtilen son alıcıdan ayrı olarak belirtmek için `Via` adresleme üst bilgisini değiştirir. Ancak bunu yaparken, `To` değerini oluşturmak için kullanılan uç nokta adresini değiştirmeyin.  
   
- Aşağıdaki kod örneği, örnek istemci yapılandırma dosyası gösterir.  
+ Aşağıdaki kod örneği bir örnek istemci yapılandırma dosyası gösterir.  
   
 ```xml
 <endpoint   
@@ -193,11 +193,11 @@ public class MyServiceHost : ServiceHost
 ```  
   
 <a name="BKMK_q10"></a>   
-## <a name="what-is-the-base-address-how-does-it-relate-to-an-endpoint-address"></a>Taban adresi nedir? Bu uç nokta adresi için nasıl ilişkilidir?  
- Kök adresidir temel adres bir <xref:System.ServiceModel.ServiceHost> sınıfı. Varsayılan olarak eklerseniz, bir <xref:System.ServiceModel.Description.ServiceMetadataBehavior> konak yayımlar tüm uç noktaları HTTP temel adresi yanı sıra, meta veri davranışı için sağlanan tüm göreli adres alınır için Web Hizmetleri Açıklama Dili (WSDL), hizmet yapılandırmasını sınıfı Ayrıca "? wsdl". ASP.NET ve IIS ile ilgili bilgi sahibi olduğunuz, temel adres sanal dizin ile eşdeğerdir.  
+## <a name="what-is-the-base-address-how-does-it-relate-to-an-endpoint-address"></a>Temel adres nedir? Bir uç nokta adresiyle nasıl ilişki vardır?  
+ Temel adres, <xref:System.ServiceModel.ServiceHost> sınıfının kök adresidir. Varsayılan olarak, hizmet yapılandırmanıza bir <xref:System.ServiceModel.Description.ServiceMetadataBehavior> sınıfı eklerseniz, ana bilgisayar yayımladığı tüm uç noktalar için Web Hizmetleri Açıklama Dili (WSDL) HTTP temel adresinden alınır ve meta veri davranışına ve "? wsdl ". ASP.NET ve IIS hakkında bilgi sahibiyseniz, taban adresi sanal dizine eşdeğerdir.  
   
-## <a name="sharing-a-port-between-a-service-endpoint-and-a-mex-endpoint-using-the-nettcpbinding"></a>Hizmet uç noktası ve NetTcpBinding kullanarak bir mex uç arasında bir bağlantı noktası paylaşımı  
- Net.tcp://MyServer bir hizmet için temel adresini belirtirseniz: 8080/Hizmetim ve aşağıdaki uç noktaların ekleyin:  
+## <a name="sharing-a-port-between-a-service-endpoint-and-a-mex-endpoint-using-the-nettcpbinding"></a>NetTcpBinding kullanarak bir hizmet uç noktası ve bir MEX uç noktası arasında bağlantı noktası paylaşma  
+ Bir hizmetin temel adresini net. TCP:/sunucum: 8080/hizmetim olarak belirtirseniz ve aşağıdaki uç noktaları eklemek için:  
   
 ```xml  
 <services>  
@@ -208,7 +208,7 @@ public class MyServiceHost : ServiceHost
 </services>  
 ```  
   
- Ve NetTcpBinding ayarlardan biri aşağıdaki yapılandırma kod parçacığında gösterildiği gibi değiştirin:  
+ Ve NetTcpBinding ayarlarından birini aşağıdaki yapılandırma kod parçacığında gösterildiği gibi değiştirirseniz:  
   
 ```xml  
 <bindings>  
@@ -224,7 +224,7 @@ public class MyServiceHost : ServiceHost
 </bindings>  
 ```  
   
- Aşağıdaki gibi bir hata görürsünüz: İşlenmeyen özel durum: System.ServiceModel.addressalreadyınuseexception: Zaten var. bir dinleyici IP uç noktası 0.0.0.0:9000 aşağıdaki yapılandırma kod parçacığında gösterildiği gibi MEX uç noktası için farklı bir bağlantı noktası ile tam bir URL belirterek bu hataya çalışabilir üzerinde:  
+ Şu şekilde bir hata görürsünüz: Işlenmeyen özel durum: System. ServiceModel. Addressalreadınuseexception: IP bağlantı noktası 0.0.0.0:9000 üzerinde bir dinleyici zaten var Aşağıdaki yapılandırma kod parçacığında gösterildiği gibi, MEX uç noktası:  
   
 ```xml
 <services>  
@@ -236,8 +236,8 @@ public class MyServiceHost : ServiceHost
 ```  
   
 <a name="BK_MK99"></a>   
-## <a name="when-calling-a-wcf-web-http-application-from-a-wcf-soap-application-the-service-returns-the-following-error-405-method-not-allowed"></a>WCF Web HTTP uygulama bir WCF SOAP uygulamasından çağırırken hizmet aşağıdaki hatayı döndürür: 405 Yönteme izin verilmiyor  
- WCF Web HTTP uygulama çağırma (kullanan bir hizmet <xref:System.ServiceModel.WebHttpBinding> ve <xref:System.ServiceModel.Description.WebHttpBehavior>) bir WCF hizmeti şu özel durum oluşturabilir: `Unhandled Exception: System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: Uzak sunucu beklenmeyen bir yanıt döndürdü: (405) yöntemi değil izin verilir.' WCF giden üzerine yazar. Bu özel durum oluşur <xref:System.ServiceModel.OperationContext> gelen ile <xref:System.ServiceModel.OperationContext>. Bu sorunu çözmek için oluşturma bir <xref:System.ServiceModel.OperationContextScope> WCF Web HTTP hizmeti işlemi içinde. Örneğin:  
+## <a name="when-calling-a-wcf-web-http-application-from-a-wcf-soap-application-the-service-returns-the-following-error-405-method-not-allowed"></a>WCF SOAP uygulamasından bir WCF Web HTTP uygulaması çağrılırken hizmet şu hatayı döndürür: 405 yöntemine Izin verilmiyor  
+ WCF Web HTTP uygulamasını çağırma (bir WCF hizmetinden <xref:System.ServiceModel.WebHttpBinding> ve <xref:System.ServiceModel.Description.WebHttpBehavior>) kullanan bir hizmet şu özel durumu oluşturabilir: `Unhandled Exception: System.ServiceModel.FaultException`1 [System. ServiceModel. ExceptionDetail]: uzak sunucu beklenmeyen bir yanıt döndürdü: (405) yöntemi değil İzin verildi. ' Bu özel durum, WCF giden <xref:System.ServiceModel.OperationContext> ' ü gelen <xref:System.ServiceModel.OperationContext> ile üzerine yazdığından oluşur. Bu sorunu çözmek için WCF Web HTTP hizmeti işlemi içinde <xref:System.ServiceModel.OperationContextScope> oluşturun. Örneğin:  
   
 ```csharp
 public string Echo(string input)  
@@ -251,4 +251,4 @@ public string Echo(string input)
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Windows Kimlik Doğrulama Hatalarını Ayıklama](../../../docs/framework/wcf/feature-details/debugging-windows-authentication-errors.md)
+- [Windows Kimlik Doğrulama Hatalarını Ayıklama](./feature-details/debugging-windows-authentication-errors.md)

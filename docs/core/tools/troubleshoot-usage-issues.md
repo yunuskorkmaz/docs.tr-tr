@@ -3,12 +3,12 @@ title: .NET Core araç kullanımı sorunlarını giderme
 description: .NET Core araçları ve olası çözümleri çalıştırırken sık karşılaşılan sorunları öğrenin.
 author: kdollard
 ms.date: 09/23/2019
-ms.openlocfilehash: eb769550493e5a25d4380cd543a3bbec880b38e9
-ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
+ms.openlocfilehash: fc6c520ab57235c78148a6b77717cbd80a989451
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71332979"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72318296"
 ---
 # <a name="troubleshoot-net-core-tool-usage-issues"></a>.NET Core araç kullanımı sorunlarını giderme
 
@@ -19,7 +19,7 @@ Küresel bir araç veya yerel araç olabilecek bir .NET Core aracını yüklemey
 Bir .NET Core aracı çalışamazsa, büyük olasılıkla aşağıdaki sorunlardan biriyle karşılaşdınız:
 
 * Aracın yürütülebilir dosyası bulunamadı.
-* .NET Core çalışma zamanının doğru sürümü bulunamadı. 
+* .NET Core çalışma zamanının doğru sürümü bulunamadı.
 
 ### <a name="executable-file-not-found"></a>Yürütülebilir dosya bulunamadı
 
@@ -44,7 +44,7 @@ Yürütülebilir dosyanın adı, aracı nasıl çağırabileceğinizi belirler. 
 
     Genel araçlar varsayılan dizine veya belirli bir konuma yüklenebilir. Varsayılan dizinler şunlardır:
 
-    | OS          | `Path`                          |
+    | ATAYAMADı          | Yol                          |
     |-------------|-------------------------------|
     | Linux/macOS | `$HOME/.dotnet/tools`         |
     | Windows     | `%USERPROFILE%\.dotnet\tools` |
@@ -58,18 +58,18 @@ Yürütülebilir dosyanın adı, aracı nasıl çağırabileceğinizi belirler. 
   * MacOS 10,14 "Mojave" veya önceki sürümlerini kullanıyorsanız ve. *pkg*değil. *tar. gz* dosyalarını kullanarak .NET Core SDK yüklediyseniz.
   * .NET Core 3,0 SDK 'sını yüklediyseniz ve `DOTNET_ADD_GLOBAL_TOOLS_TO_PATH` ortam değişkenini `false` olarak ayarladıysanız.
   * .NET Core 2,2 SDK veya önceki sürümlerini yüklediyseniz ve `DOTNET_SKIP_FIRST_TIME_EXPERIENCE` ortam değişkenini `true` olarak ayarladıysanız.
-  
+
   Küresel araçlar hakkında daha fazla bilgi için bkz. [.NET Core genel araçlarına genel bakış](global-tools.md).
 
 * Yerel Araçlar
 
   Yerel bir araç çalıştırmaya çalışıyorsanız, geçerli dizinde veya onun üst dizinlerindeki *DotNet-Tools. JSON* adlı bir bildirim dosyası olduğunu doğrulayın. Bu dosya Ayrıca, kök klasör yerine proje klasörü hiyerarşisinde *. config* adlı bir klasör altında da bulunabilir. *DotNet-Tools. JSON* varsa, dosyayı açın ve çalıştırmaya çalıştığınız aracı denetleyin. Dosya `"isRoot": true` için bir giriş içermiyorsa, ek araç bildirim dosyaları için de dosya hiyerarşisini daha da denetleyin.
 
-    Belirtilen bir yol ile yüklenmiş bir .NET Core aracını çalıştırmaya çalışıyorsanız, aracı kullanırken bu yolu eklemeniz gerekir. Araç yolu yüklü aracının kullanılmasına bir örnek:
+  Belirtilen bir yol ile yüklenmiş bir .NET Core aracını çalıştırmaya çalışıyorsanız, aracı kullanırken bu yolu eklemeniz gerekir. Araç yolu yüklü aracının kullanılmasına bir örnek:
 
-   ```console
-   ..\<toolDirectory>\dotnet-<toolName>
-    ```
+  ```console
+  ..\<toolDirectory>\dotnet-<toolName>
+  ```
 
 ### <a name="runtime-not-found"></a>Çalışma zamanı bulunamadı
 
@@ -146,7 +146,7 @@ dotnet tool install -g --version 1.1.0-pre <toolName>
 
 .NET Core aracı olmayan düzenli bir NuGet paketi olan bir NuGet paketini yüklemeye çalışırsanız, aşağıdakine benzer bir hata görürsünüz:
 
-`NU1212: Invalid project-package combination for `<ToolName>`. DotnetToolReference project style can only contain references of the DotnetTool type.`
+> NU1212: `<ToolName>` için geçersiz proje paketi birleşimi. DotnetToolReference proje stili yalnızca DotnetTool türündeki başvuruları içerebilir.
 
 ### <a name="nuget-feed-cant-be-accessed"></a>NuGet akışına erişilemiyor
 
@@ -161,4 +161,5 @@ Araç yüklemesi için araç paketini içeren NuGet akışına erişim gerekir. 
 Hatanın yaygın bir nedeni, araç adının doğru olmaması. Bu, yanlış yazma veya araç taşınmış ya da kullanım dışı olduğu için oluşabilir. NuGet.org üzerinde Araçlar için, adın doğru olduğundan emin olmanın bir yolu, NuGet.org adresinde aracı aramak ve yükleme komutunu kopyalamaktır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
+
 * [.NET Core genel araçlarına genel bakış](global-tools.md)

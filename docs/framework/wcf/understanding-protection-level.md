@@ -8,57 +8,57 @@ helpviewer_keywords:
 - WCF, security
 - ProtectionLevel property
 ms.assetid: 0c034608-a1ac-4007-8287-b1382eaa8bf2
-ms.openlocfilehash: 4ebb93d3ed325c115dcf311c821b014532dffc11
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 896b75d3dfb5ebace9bef0c410e4a86dfb765bd8
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663937"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72321523"
 ---
 # <a name="understanding-protection-level"></a>Koruma Düzeylerini Anlama
 
-`ProtectionLevel` Özelliği bulunan birçok farklı sınıflarında gibi <xref:System.ServiceModel.ServiceContractAttribute> ve <xref:System.ServiceModel.OperationContractAttribute> sınıfları. Özellik, bir ileti bölümü (veya tam) nasıl korunduğunu denetler. Bu konuda, Windows Communication Foundation (WCF) özelliği ve nasıl çalıştığı açıklanmaktadır.
+@No__t-0 özelliği, <xref:System.ServiceModel.ServiceContractAttribute> ve <xref:System.ServiceModel.OperationContractAttribute> sınıfları gibi birçok farklı sınıfta bulunur. Özelliği, bir iletinin bölümünün (veya tamamının) nasıl korunduğunu denetler. Bu konu, Windows Communication Foundation (WCF) özelliğini ve nasıl çalıştığını açıklamaktadır.
 
-Koruma düzeyi ayarlama ile ilgili yönergeler için bkz: [nasıl yapılır: ProtectionLevel özelliğini ayarlama](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md).
+Koruma düzeyini ayarlamayla ilgili yönergeler için bkz. [nasıl yapılır: ProtectionLevel özelliğini ayarlama](how-to-set-the-protectionlevel-property.md).
 
 > [!NOTE]
-> Koruma düzeyleri yalnızca yapılandırmada yok, kod içinde ayarlayabilirsiniz.
+> Koruma düzeyleri, yapılandırmada değil yalnızca kodda ayarlanabilir.
 
 ## <a name="basics"></a>Temel bilgileri
 
-Koruma düzeyi özelliğini daha iyi anlamak için aşağıdaki temel deyimleri geçerlidir:
+Koruma düzeyi özelliğini anlamak için aşağıdaki temel deyimler geçerlidir:
 
-- Herhangi bir ileti bölümü için üç temel koruma düzeyleri vardır. (Her yerde gerçekleşir) özelliği, birine ayarlanmış <xref:System.Net.Security.ProtectionLevel> sabit listesi değerleri. Koruma artan düzende içerirler:
+- Bir iletinin herhangi bir bölümünde üç temel koruma düzeyi vardır. Özelliği (nerede olursa olsun) <xref:System.Net.Security.ProtectionLevel> sabit listesi değerlerinden birine ayarlanır. Artan koruma sırasıyla şunları içerir:
 
   - `None`.
 
-  - `Sign`. Korunan bölümün dijital olarak imzalanır. Bu, herhangi bir korumalı iletiyi bölümüyle değiştirme algılama sağlar.
+  - `Sign`. Korunan bölüm dijital olarak imzalanır. Bu, korumalı ileti bölümü ile yapılan tüm değişiklikleri algılamayı sağlar.
 
-  - `EncryptAndSign`. İleti bölümü, kapatmadan önce gizlilik emin olmak için şifrelenir.
+  - `EncryptAndSign`. İleti bölümü, imzalanmadan önce gizliliği sağlamak için şifrelenir.
 
-- Yalnızca koruma gereksinimlerini ayarlayabilirsiniz *uygulama verileri* bu özellik. Örneğin, WS-Addressing üst bilgileri altyapı verilerdir ve bu nedenle, etkilenmez `ProtectionLevel`.
+- Koruma gereksinimlerini yalnızca bu özelliğe sahip *uygulama verileri* için ayarlayabilirsiniz. Örneğin, WS-Addressing üst bilgileri altyapı verileri olduğundan, bu nedenle `ProtectionLevel` ' ı etkilemez.
 
-- Güvenlik modu ayarlandığında `Transport`, iletinin tamamı aktarım mekanizması tarafından korunur. Bu nedenle, bir iletinin farklı bölümleri için ayrı koruma düzeyini hiçbir etkisi olmaz.
+- Güvenlik modu `Transport` olarak ayarlandığında, tüm ileti taşıma mekanizması tarafından korunur. Bu nedenle, bir iletinin farklı bölümlerinin ayrı bir koruma düzeyini ayarlamanın hiçbir etkisi olmaz.
 
-- `ProtectionLevel` Geliştiricinin kurabileceği yoludur *en düşük düzey* bağlama ile uyumlu olmalıdır. Hizmet dağıtıldığında, yapılandırmada belirtilen gerçek bağlama olabilir veya en düşük düzey desteklemiyor olabilir. Örneğin, varsayılan <xref:System.ServiceModel.BasicHttpBinding> sınıfı (zaman etkinleştirilebilir rağmen) güvenlik sağlamaz. Bu nedenle, başka bir ayara sahip bir sözleşme ile kullanmaya `None` bir özel durum oluşturulmasına neden olur.
+- @No__t-0, geliştiricinin bir bağlamanın uyması gereken *En düşük düzeyi* ayarlaması için bir yoldur. Bir hizmet dağıtıldığında, yapılandırmada belirtilen gerçek bağlama en düşük düzeyi destekleyebilir veya desteklemiyor olabilir. Örneğin, varsayılan olarak <xref:System.ServiceModel.BasicHttpBinding> sınıfı güvenlik sağlamaz (etkinleştirilebilir, ancak). Bu nedenle, bunu `None` dışında bir ayar içeren bir sözleşmeyle kullanmak özel durumun oluşturulmasına neden olur.
 
-- Hizmet gerektiriyorsa en düşük `ProtectionLevel` için tüm iletileri `Sign`, (belki de bir WCF olmayan teknoloji tarafından oluşturulan) bir istemci şifrelemek ve tüm iletileri oturum (daha fazla gerekli en düşük olmayan). Bu durumda, WCF, istemci en fazla yapmış olduğundan, bir özel durum oluşturmayacaksa. Ancak, WCF uygulamaları (Hizmetleri veya istemciler) bir ileti bölümü mümkün olduğu durumlarda fazladan güvence altına almayacağını ancak en düşük düzeyi uyacaktır unutmayın. Kullanırken da unutmayın `Transport` daha ayrıntılı bir düzeyde korumak kendiliğinden alınamıyor, çünkü güvenlik modu olarak Aktarım ileti akışı aşırı güvenli.
+- Hizmet, tüm iletiler için en düşük `ProtectionLevel` ' ı `Sign` ' i gerektiriyorsa, bir istemci (Belki de WCF olmayan bir teknoloji tarafından oluşturulan) tüm iletileri şifreleyebilir ve imzalayabilirler (en düşük gerekenden daha fazla). Bu durumda, istemci en düşük boyuttan daha fazla işlem yaptığından WCF bir özel durum oluşturmaz. Ancak, WCF uygulamalarının (hizmetler veya istemciler) mümkünse bir ileti bölümünün güvenli olmadığını, ancak en düşük düzeye uyum olacağını unutmayın. Ayrıca, güvenlik modu olarak `Transport` kullanırken, aktarım, daha ayrıntılı bir düzeyde güvenli bir şekilde güvenli hale uğradığından ileti akışının aşırı güvenli olabileceğini unutmayın.
 
-- Ayarlarsanız `ProtectionLevel` açıkça ya da için `Sign` veya `EncryptAndSign`, güvenliği etkinleştirilmiş bir bağlama ardından kullanmanız gerekir ya da bir özel durum oluşturulur.
+- @No__t-0 ' ı açıkça `Sign` veya `EncryptAndSign` olarak ayarlarsanız, güvenliği etkinleştirilmiş bir bağlama kullanmanız gerekir veya bir özel durum oluşturulur.
 
-- Güvenlik sağlayan bir bağlamayı seçin ve ayarlamayın `ProtectionLevel` sözleşmesi, veriler şifrelenir ve imzalanmış tüm uygulama herhangi bir özellikte.
+- Güvenlik sağlayan bir bağlama seçerseniz ve `ProtectionLevel` özelliğini sözleşmede herhangi bir yere ayarlamayın, tüm uygulama verileri şifrelenir ve imzalanır.
 
-- Güvenlik etkin olmayan bir bağlama seçerseniz (örneğin, `BasicHttpBinding` sınıfında varsayılan olarak devre dışı güvenlik) ve `ProtectionLevel` hiçbir uygulama verileri korunur daha sonra açıkça, ayarlı değil.
+- Güvenlik etkin olmayan bir bağlama seçerseniz (örneğin, `BasicHttpBinding` sınıfı varsayılan olarak güvenlik devre dışı bırakılır) ve `ProtectionLevel` açıkça ayarlanmamışsa, uygulama verilerinden hiçbiri korunmaz.
 
-- Tüm uygulama verileri, aktarım düzeyinde güvenlik uygulayan bir bağlama kullanıyorsanız, taşıma özelliklerine göre sağlanır.
+- Aktarım düzeyinde güvenlik uygulayan bir bağlama kullanıyorsanız, tüm uygulama verileri taşımanın özelliklerine göre güvence altına alınır.
 
-- İleti düzeyi güvenlik uygulayan bir bağlama kullanırsanız, uygulama veri sözleşme ayarlamak koruma düzeylerine göre sağlanır. İletileri tüm uygulama verileri şifrelenir ve imzalı sonra bir koruma düzeyi belirtmezseniz.
+- İleti düzeyinde güvenlik uygulayan bir bağlama kullanırsanız, uygulama verileri sözleşmede ayarlanan koruma düzeylerine göre güvenlik altına alınır. Koruma düzeyi belirtmezseniz, iletilerdeki tüm uygulama verileri şifrelenir ve imzalanacaktır.
 
-- `ProtectionLevel` Farklı kapsam düzeylerinde ayarlanabilir. Yoktur, sonraki bölümde açıklanan kapsamlar ile ilişkilendirilmiş bir hiyerarşi.
+- @No__t-0 farklı kapsam düzeylerinde ayarlanabilir. Bir sonraki bölümde açıklanan, kapsam ile ilişkili bir hiyerarşi vardır.
 
-## <a name="scoping"></a>Kapsam belirleme
+## <a name="scoping"></a>Kapsamlar
 
-Ayar `ProtectionLevel` üstteki API altındaki tüm düzeyleri düzeyini ayarlar. Varsa `ProtectionLevel` hiyerarşi düzeyi yepyeni bir düzeye artık sıfırlanır daha düşük bir düzeyde, aşağıdaki tüm API'leri için farklı bir değer ayarlanır (Bununla birlikte, API'ler, yukarıda yine de etkilenecek en üst düzey tarafından). Hiyerarşi aşağıdaki gibidir. Öznitelikleri aynı düzeyde eştir.
+En üstteki API üzerinde `ProtectionLevel` ayarlandığında, altındaki tüm düzeylerin düzeyi ayarlanır. @No__t-0 ' ı daha düşük bir düzeyde farklı bir değere ayarlandıysa, hiyerarşide o düzeyin altındaki tüm API 'Ler artık yeni düzeye sıfırlanacak (ancak yukarıdaki API 'Ler, en üst düzeyden etkilenmeye devam edecektir). Hiyerarşi aşağıdaki gibidir. Aynı düzeydeki öznitelikler eşler.
 
 - <xref:System.ServiceModel.ServiceContractAttribute>
 
@@ -74,30 +74,30 @@ Ayar `ProtectionLevel` üstteki API altındaki tüm düzeyleri düzeyini ayarlar
 
 ## <a name="programming-protectionlevel"></a>ProtectionLevel programlama
 
-Programa `ProtectionLevel` hiyerarşideki herhangi bir noktada özelliği için uygun değeri öznitelik uygularken ayarlamanız yeterlidir. Örnekler için bkz [nasıl yapılır: ProtectionLevel özelliğini ayarlama](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md).
+Hiyerarşinin herhangi bir noktasında `ProtectionLevel` ' ı programlamak için, özniteliği uygularken özelliği uygun bir değere ayarlamanız yeterlidir. Örnekler için bkz. [nasıl yapılır: ProtectionLevel özelliğini ayarlama](how-to-set-the-protectionlevel-property.md).
 
 > [!NOTE]
-> Özelliği, hatalar ve ileti sözleşmeleri gerektiren bu özelliklerin nasıl çalıştığını anlamak ayarlanıyor. Daha fazla bilgi için [nasıl yapılır: ProtectionLevel özelliğini ayarlama](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md) ve [ileti anlaşmaları kullanma](../../../docs/framework/wcf/feature-details/using-message-contracts.md).
+> Hatalar ve ileti sözleşmeleri üzerinde özelliğin ayarlanması, bu özelliklerin nasıl çalıştığını anlamayı gerektirir. Daha fazla bilgi için bkz. [nasıl yapılır: ProtectionLevel özelliğini ayarlama](how-to-set-the-protectionlevel-property.md) ve [ileti sözleşmelerini kullanma](./feature-details/using-message-contracts.md).
 
-## <a name="ws-addressing-dependency"></a>WS-Addressing bağımlılık
+## <a name="ws-addressing-dependency"></a>WS-Addressing bağımlılığı
 
-Çoğu durumda, kullanarak [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) bir istemci oluşturmak için istemci ve hizmet sözleşmeleri aynı olmasını güvence altına alır. Ancak, görünüşte aynı sözleşme istemciye bir özel durum neden olabilir. Bu bağlama, WS-Addressing belirtimini desteklemiyor ve birden çok koruma düzeyi sözleşmesinde belirtilen olduğunda gerçekleşir. Örneğin, <xref:System.ServiceModel.BasicHttpBinding> sınıfı belirtimi desteklemiyor veya oluşturursanız, bağlama özel bir WS-Addressing desteklemez. `ProtectionLevel` Özelliği, farklı koruma düzeyleri tek sözleşmesindeki etkinleştirmek için WS-Addressing belirtimi dayanır. Bağlama WS-Addressing belirtimi desteklemiyorsa, tüm düzeyleri aynı koruma düzeyini ayarlanır. Sözleşmenin tüm kapsamlarda etkin bir koruma düzeyi sözleşmesinde kullanılan en güçlü koruma düzeyi için ayarlanır.
+Çoğu durumda, istemci oluşturmak için [ServiceModel meta veri yardımcı programı aracını (Svcutil. exe)](servicemodel-metadata-utility-tool-svcutil-exe.md) kullanmak, istemci ve hizmet sözleşmelerinin aynı olmasını sağlar. Ancak, benzer sözleşmeler istemcinin özel durum oluşturmasına neden olabilir. Bu, bir bağlama WS-Addressing belirtimini desteklemediğinde ve sözleşmede birden çok koruma düzeyi belirtildiğinde oluşur. Örneğin, <xref:System.ServiceModel.BasicHttpBinding> sınıfı belirtimi desteklemez ya da WS-Addressing desteklemeyen özel bir bağlama oluşturursanız. @No__t-0 özelliği, tek bir sözleşmede farklı koruma düzeylerini etkinleştirmek için WS-Addressing belirtimine dayanır. Bağlama WS-Addressing belirtimini desteklemiyorsa, tüm düzeyler aynı koruma düzeyi olarak ayarlanır. Sözleşmede tüm kapsamlar için etkili koruma düzeyi, sözleşmede kullanılan en güçlü koruma düzeyine ayarlanır.
 
-Bu ilk bakışta hata ayıklamak sabit bir sorunu neden olabilir. Birden fazla hizmeti yöntemlerini içeren bir istemci Sözleşmesi (bir arabirim) oluşturmak mümkündür. Diğer bir deyişle, aynı arabirimi birçok hizmet ile iletişim kuran istemci oluşturmak için kullanılır ve tek bir arabirim yöntemleri tüm hizmetleri içerir. Geliştirici nadir Bu senaryoda, belirli her hizmet için geçerli olan yöntemleri çağırmak için dikkatli olmalıdır. Bağlama <xref:System.ServiceModel.BasicHttpBinding> sınıfı, birden çok koruma düzeyleri olamaz desteklenir. Ancak, istemciye yanıtlama hizmet gerekli değerinden daha düşük bir koruma düzeyi ile istemciye yanıt verebilir. Bu durumda, daha yüksek bir koruma düzeyi beklediği istemci bir özel durum oluşturur.
+Bu, ilk bakışta hata ayıklamanın zor olduğu bir soruna neden olabilir. Birden fazla hizmet için yöntemler içeren bir istemci Sözleşmesi (arabirim) oluşturmak mümkündür. Diğer bir deyişle, aynı arabirim birçok hizmetle iletişim kuran bir istemci oluşturmak için kullanılır ve tek arabirim tüm hizmetler için yöntemler içerir. Geliştirici, yalnızca belirli bir hizmet için geçerli olan yöntemleri çağırmak üzere bu nadir senaryoda dikkatli olmalıdır. Bağlama <xref:System.ServiceModel.BasicHttpBinding> sınıfı ise, birden çok koruma düzeyi desteklenemez. Ancak, istemciye yanıt veren bir hizmet, gerekli olandan daha düşük bir koruma düzeyiyle istemciye yanıt verebilir. Bu durumda, istemci daha yüksek bir koruma düzeyi beklediği için bir özel durum oluşturur.
 
-Kod örneği, bu sorunu gösterir. Aşağıdaki örnek, bir hizmet ve istemci sözleşmesi gösterir. Bağlama olduğunu varsayın [ \<basicHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) öğesi. Bu nedenle, bir sözleşme üzerindeki tüm işlemler aynı koruma düzeyi var. Bu Tekdüzen koruma düzeyi arasında tüm işlemleri en fazla koruma düzeyi belirlenir.
+Bu sorunu gösteren bir kod örneği. Aşağıdaki örnek bir hizmeti ve bir istemci sözleşmesini gösterir. Bağlamanın [\<basicHttpBinding >](../configure-apps/file-schema/wcf/basichttpbinding.md) öğesi olduğunu varsayalım. Bu nedenle, bir sözleşmede tüm işlemlerin aynı koruma düzeyi vardır. Bu tek düzen koruma düzeyi, tüm işlemlerde en yüksek koruma düzeyi olarak belirlenir.
 
-Hizmet sözleşmesi şöyledir:
+Hizmet Sözleşmesi:
 
 [!code-csharp[c_ProtectionLevel#7](../../../samples/snippets/csharp/VS_Snippets_CFX/c_protectionlevel/cs/source.cs#7)]
 [!code-vb[c_ProtectionLevel#7](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_protectionlevel/vb/source.vb#7)]
 
-Aşağıdaki kod, sözleşme arabirimi istemciye gösterir. Not içeren bir `Tax` farklı bir hizmet ile kullanılmak üzere tasarlanmıştır yöntemi:
+Aşağıdaki kod, istemci sözleşmesi arabirimini gösterir. Bunun farklı bir hizmetle kullanılması amaçlanan bir `Tax` yöntemi içerdiğini unutmayın:
 
 [!code-csharp[c_ProtectionLevel#8](../../../samples/snippets/csharp/VS_Snippets_CFX/c_protectionlevel/cs/source.cs#8)]
 [!code-vb[c_ProtectionLevel#8](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_protectionlevel/vb/source.vb#8)]
 
-İstemci çağırdığında `Price` yöntemi, bir özel durum, hizmetten bir yanıt aldığında atar. İstemci belirttiğinde bu kaynaklanır bir `ProtectionLevel` üzerinde `ServiceContractAttribute`, ve bu nedenle varsayılan istemci kullanır (<xref:System.Net.Security.ProtectionLevel.EncryptAndSign>) dahil olmak üzere tüm yöntemleri için `Price` yöntemi. Ancak değerini kullanarak hizmeti döndürür <xref:System.Net.Security.ProtectionLevel.Sign> hizmet sözleşmesi ayarlamak, koruma düzeyi içeren tek bir yöntem tanımladığından düzey <xref:System.Net.Security.ProtectionLevel.Sign>. Bu durumda, istemci hizmetinden gelen yanıt doğrulanırken bir hata atar.
+İstemci `Price` yöntemini çağırdığında hizmetten bir yanıt aldığında bir özel durum oluşturur. Bu durum, istemcinin `ServiceContractAttribute` üzerinde bir `ProtectionLevel` belirtmediği ve bu nedenle istemci, `Price` yöntemi de dahil tüm yöntemler için varsayılan (<xref:System.Net.Security.ProtectionLevel.EncryptAndSign>) kullanır. Ancak hizmet sözleşmesi, koruma düzeyi <xref:System.Net.Security.ProtectionLevel.Sign> olarak ayarlanmış tek bir yöntem tanımladığından, hizmet <xref:System.Net.Security.ProtectionLevel.Sign> düzeyi kullanılarak değeri döndürür. Bu durumda, istemci hizmetten gelen yanıtı doğrularken bir hata oluşturur.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -108,7 +108,7 @@ Aşağıdaki kod, sözleşme arabirimi istemciye gösterir. Not içeren bir `Tax
 - <xref:System.ServiceModel.MessageHeaderAttribute>
 - <xref:System.ServiceModel.MessageBodyMemberAttribute>
 - <xref:System.Net.Security.ProtectionLevel>
-- [Hizmetleri Güvenli Hale Getirme](../../../docs/framework/wcf/securing-services.md)
-- [Nasıl yapılır: ProtectionLevel özelliğini ayarlama](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)
-- [Sözleşme ve Hizmetlerde Hataları Belirtme ve İşleme](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
-- [İleti Anlaşmaları Kullanma](../../../docs/framework/wcf/feature-details/using-message-contracts.md)
+- [Hizmetleri Güvenli Hale Getirme](securing-services.md)
+- [Nasıl yapılır: ProtectionLevel Özelliğini Ayarlama](how-to-set-the-protectionlevel-property.md)
+- [Sözleşme ve Hizmetlerde Hataları Belirtme ve İşleme](specifying-and-handling-faults-in-contracts-and-services.md)
+- [İleti Anlaşmaları Kullanma](./feature-details/using-message-contracts.md)

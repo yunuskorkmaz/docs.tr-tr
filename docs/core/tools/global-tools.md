@@ -4,12 +4,12 @@ description: .NET Core genel araçlarının ne olduğuna ve bunlara yönelik .NE
 author: KathleenDollard
 ms.date: 05/29/2018
 ms.custom: seodec18
-ms.openlocfilehash: 40a0aabcf523e8dac9a3ad226064bbb3c1b3ce5b
-ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
+ms.openlocfilehash: 116739f80d5157632a8e44a19cbef6ba7971d339
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71332016"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72318307"
 ---
 # <a name="net-core-global-tools-overview"></a>.NET Core genel araçlarına genel bakış
 
@@ -31,13 +31,12 @@ ms.locfileid: "71332016"
 
 ## <a name="find-a-net-core-global-tool"></a>.NET Core küresel aracı bulma
 
-Şu anda .NET Core komut satırı arabiriminde (CLı) genel bir araç arama özelliği yoktur.
+Şu anda .NET Core komut satırı arabiriminde (CLı) genel bir araç arama özelliği yoktur. Araçların nasıl bulunacağı hakkında bazı öneriler aşağıda verilmiştir:
 
-[NuGet](https://www.nuget.org)üzerinde .NET Core küresel araçları bulabilirsiniz. Ancak, NuGet henüz .NET Core küresel araçları için arama yapmanıza izin vermez.
-
-Ayrıca, blog gönderilerinde veya [natemcmaster/DotNet-Tools](https://github.com/natemcmaster/dotnet-tools) GitHub deposunda araç önerileri de bulabilirsiniz.
-
-[ASPNET/DotNetTools](https://github.com/aspnet/DotNetTools/) GitHub deposunda ASP.NET ekibi tarafından oluşturulan genel araçların kaynak kodunu da görebilirsiniz.
+* [NuGet](https://www.nuget.org)üzerinde .NET Core küresel araçları bulabilirsiniz. Ancak, NuGet henüz .NET Core küresel araçları için arama yapmanıza izin vermez.
+* Araç önerilerini blog gönderilerinde veya [natemcmaster/DotNet-Tools](https://github.com/natemcmaster/dotnet-tools) GitHub deposunda bulabilirsiniz.
+* ASP.NET ekibi tarafından oluşturulan genel araçların kaynak kodunu [ASPNET/DotNetTools](https://github.com/aspnet/DotNetTools/) GitHub deposunda görebilirsiniz.
+* [.NET Core DotNet Diagnostic küresel araçlar](../diagnostics/index.md#net-core-dotnet-diagnostic-global-tools)' da tanılama araçları hakkında bilgi edinebilirsiniz.
 
 ## <a name="check-the-author-and-statistics"></a>Yazarı ve istatistikleri denetleme
 
@@ -70,7 +69,7 @@ Tool 'dotnetsay' (version '2.0.0') was successfully installed.
 
 Genel araçlar varsayılan dizine veya belirli bir konuma yüklenebilir. Varsayılan dizinler şunlardır:
 
-| OS          | `Path`                          |
+| ATAYAMADı          | Yol                          |
 |-------------|-------------------------------|
 | Linux/macOS | `$HOME/.dotnet/tools`         |
 | Windows     | `%USERPROFILE%\.dotnet\tools` |
@@ -86,13 +85,13 @@ Bu durumda .NET Core CLI, bu konumu otomatik olarak PATH ortam değişkenine ekl
 
 Araç yüklendikten sonra, komutunu kullanarak çağırabilirsiniz. Komutun paket adı ile aynı olamayacağını unutmayın.
 
-Komut ise `dotnetsay`, şunu ile çağırabilirsiniz:
+Komut `dotnetsay` ise, şunu ile çağırın:
 
 ```console
 dotnetsay
 ```
 
-Araç yazarı, aracın `dotnet` istem bağlamında görünmesini istiyorlarsa, bu, şöyle bir şekilde bir `dotnet <command>`şekilde yazmış olabilirler, örneğin:
+Araç yazarı, aracın `dotnet` istemi bağlamında görünmesini istiyorlarsa, bunu şöyle `dotnet <command>` olarak çağırdığınız bir şekilde yazmış olabilirler:
 
 ```dotnetcli
 dotnet doc
@@ -109,10 +108,10 @@ dotnet <command> --help
 
 ## <a name="other-cli-commands"></a>Diğer CLı komutları
 
-.NET Core SDK .NET Core küresel araçlarını destekleyen diğer komutları içerir. Aşağıdaki seçeneklerden biriyle komutlardan birini kullanın: `dotnet tool`
+.NET Core SDK .NET Core küresel araçlarını destekleyen diğer komutları içerir. Aşağıdaki seçeneklerden biriyle `dotnet tool` komutlarından birini kullanın:
 
-* `--global`ya `-g` da komutun Kullanıcı genelindeki genel araçlara uygun olduğunu belirtir.
-* `--tool-path`Küresel araçlar için özel bir konum belirtir.
+* `--global` veya `-g`, komutun Kullanıcı genelindeki genel araçlara uygun olduğunu belirtir.
+* `--tool-path` küresel araçlar için özel bir konum belirtir.
 
 Genel araçlar için hangi komutların kullanılabildiğini öğrenmek için:
 

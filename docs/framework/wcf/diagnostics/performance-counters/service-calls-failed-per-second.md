@@ -2,29 +2,29 @@
 title: 'Hizmet: Saniyede Başarısız Olan Çağrı'
 ms.date: 03/30/2017
 ms.assetid: 5a2c7939-107d-4f0c-b43c-e02e079e8a9d
-ms.openlocfilehash: d87d5f06d0c9a3849ec80a3d1c7badefde7cf372
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5431144a4618b146a10dfaa3bbdaae34c519319e
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61915687"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72315790"
 ---
 # <a name="service-calls-failed-per-second"></a>Hizmet: Saniyede Başarısız Olan Çağrı
-Sayaç adı: Saniye başına başarısız olan çağrılar.  
+Sayaç adı: saniye başına başarısız çağrı.  
   
 ## <a name="description"></a>Açıklama  
- Yakalanamayan özel durumları ve bu hizmet tarafından bir saniyede alınan çağrı sayısı.  
+ İşlenmemiş özel durumlara sahip ve bu hizmet tarafından bir saniyede alınan çağrıların sayısı.  
   
- Bu sayaç performans sayacı türüdür [PERF_COUNTER_COUNTER](https://go.microsoft.com/fwlink/?LinkID=94649), değeri aşağıdaki formül kullanılarak hesaplanır.  
+ Bu sayaç, değeri aşağıdaki formül kullanılarak hesaplanmış olan [PERF_COUNTER_COUNTER](https://go.microsoft.com/fwlink/?LinkID=94649)performans sayacı türüdür.  
   
- (1 - N 0 N) / ((D 1 - D 0) / F)  
+ (N 1-N 0)/((D 1-D 0)/F)  
   
- Hata koşullarını ortaya çıktığında yönetilen kodda özel durumlar.  
+ Yönetilen kodda, hata koşulları oluştuğunda özel durumlar oluşturulur.  
   
- Hata koşullarını ortaya çıktığında yönetilen kodda özel durumlar.  
+ Yönetilen kodda, hata koşulları oluştuğunda özel durumlar oluşturulur.  
   
- Var olan her zaman bu hizmeti içinde işlenmeyen bir özel Bu sayaç artırılır.  
+ Bu hizmette işlenmeyen bir özel durum olduğunda bu sayaç artırılır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Sözleşme ve Hizmetlerde Hataları Belirtme ve İşleme](../../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
+- [Sözleşme ve Hizmetlerde Hataları Belirtme ve İşleme](../../specifying-and-handling-faults-in-contracts-and-services.md)

@@ -2,31 +2,31 @@
 title: WCF ve ASP.NET Web API
 ms.date: 03/30/2017
 ms.assetid: 08ceded3-fd9a-4467-9715-c4cbd9c7228e
-ms.openlocfilehash: d805c09bef45932ba006a213343429ae7c9303df
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 302415a67a953d157b0aee8aa126786d2d0c4e62
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61791275"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320245"
 ---
 # <a name="wcf-and-aspnet-web-api"></a>WCF ve ASP.NET Web API
-WCF hizmet odaklı uygulamalar oluşturmak için Microsoft'un programlama modelidir. Bu, geliştiricilerin platformlar arasında tümleştirin ve mevcut yatırımlarınızdan ile birlikte çalışmak güvenli, güvenilir, hizmetteki çözümleri oluşturmasına olanak sağlar. [ASP.NET Web API](https://www.asp.net/web-api) istemciler, tarayıcılar ve mobil cihazlar dahil olmak üzere geniş bir yelpazede ulaşan HTTP hizmetlerini oluşturmayı kolaylaştıran bir çerçevedir. ASP.NET Web API'si, .NET Framework üzerinde RESTful uygulamaları geliştirmek için ideal bir platformdur. Bu konuda, hangi teknoloji ihtiyaçlarınızı en iyi karşılayacak karar vermenize yardımcı olacak rehberlik sunulmaktadır.  
+WCF, Microsoft 'un hizmet odaklı uygulamalar oluşturmaya yönelik Birleşik programlama modelidir. Geliştiricilerin platformlar arasında tümleşen ve mevcut yatırımlarla birlikte çalışan güvenli, güvenilir, işlem temelli çözümler oluşturmalarına olanak sağlar. [ASP.NET Web API 'si](https://www.asp.net/web-api) , tarayıcılar ve mobil cihazlar dahil olmak üzere çok çeşitli ISTEMCILERE ulaşan HTTP Hizmetleri oluşturmayı kolaylaştıran bir çerçevedir. ASP.NET Web API 'SI, .NET Framework üzerinde yeniden uygulamalar oluşturmaya yönelik ideal bir platformdur. Bu konuda, ihtiyaçlarınıza en iyi şekilde hangi teknolojinin karşılaacağına karar vermenize yardımcı olacak bazı rehberlik sunulmaktadır.  
   
-## <a name="choosing-which-technology-to-use"></a>Kullanılacak teknolojileri seçme  
- Aşağıdaki tabloda her bir teknolojiyi önemli özelliklerini açıklar.  
+## <a name="choosing-which-technology-to-use"></a>Hangi teknolojinin kullanılacağını seçme  
+ Aşağıdaki tabloda her teknolojinin önemli özellikleri açıklanmaktadır.  
   
 |WCF|ASP.NET Web API|  
 |---------|---------------------|  
-|Birden çok aktarım protokolünü (HTTP, TCP, UDP ve özel taşımalar) destekleyen yapı hizmetleri sağlar ve bunlar arasında geçişi sağlar.|Yalnızca HTTP. HTTP için birinci sınıf programlama modeli. Çeşitli tarayıcılarda, mobil cihazlara ulaşın geniş vb. etkinleştirme erişim için daha uygundur.|  
-|Aynı mesajın birden fazla kodlamaları (metin, MTOM ve ikili) destekleyen hizmetler oluşturmaya etkinleştirir, yazın ve bunlar arasında geçişi sağlar.|Medya türleri XML, JSON vb. dahil olmak üzere çeşitli destek Web API'leri oluşturmaya olanak tanır.|  
-|WS - hizmetleri oluşturmaya destekler * standartları güvenilir Mesajlaşma işlemleri, ileti güvenliği ister.|Temel protokolünü kullanır ve HTTP, WebSockets, SSL, JSON ve XML gibi biçimlendirir. Güvenilir Mesajlaşma veya işlemleri gibi daha yüksek düzey protokoller için desteği yoktur.|  
-|İstek-yanıt, bir şekilde ve çift yönlü ileti exchange desenleri destekler.|HTTP istek/yanıt olduğunda ancak ek desenleri aracılığıyla desteklenmesi [SignalR](https://github.com/SignalR/SignalR) ve WebSockets tümleştirme.|  
-|SOAP WCF Hizmetleri istemci proxy'leri karmaşık şemaları ile Hizmetleri için bile oluşturmak için WSDL otomatik araçlar sağlayan içindeki açıklanabilir.|Bir OData API'leri tümleşik yapısal meta verileri için kod parçacıkları açıklayan otomatik olarak oluşturulan HTML Yardım sayfasından arasında değişen bir Web API'sini açıklamak için çeşitli yollar vardır.|  
-|.NET framework ile birlikte gönderilmektedir.|.NET framework ile birlikte gelir ancak açık kaynaklı ve ayrıca kullanılabilir-bant bağımsız indirirsiniz.|  
+|Birden çok aktarım protokolünü (HTTP, TCP, UDP ve özel aktarımları) destekleyen hizmetlerin oluşturulmasına olanak sağlar ve aralarında geçiş yapılmasına izin verir.|Yalnızca HTTP. HTTP için birinci sınıf programlama modeli. Çeşitli tarayıcıların, mobil cihazların erişimine açık ve geniş erişim olanağı sağlayan daha uygun.|  
+|Aynı ileti türünün birden çok kodlamasını (metin, MTOM ve Ikili) destekleyen ve aralarında geçiş yapmasına olanak tanıyan hizmetler oluşturmayı sağlar.|XML, JSON vb. dahil olmak üzere çok çeşitli medya türlerini destekleyen Web API 'Leri oluşturmaya izin vermez.|  
+|, Güvenilir mesajlaşma, Işlemler, Ileti güvenliği gibi WS-* standartları ile hizmet oluşturmayı destekler.|, HTTP, WebSockets, SSL, JSON ve XML gibi temel protokol ve biçimleri kullanır. Güvenilir Mesajlaşma veya Işlemler gibi daha yüksek düzey protokoller için destek yoktur.|  
+|Istek-yanıt, bir yol ve çift yönlü ileti değişimi düzenlerini destekler.|HTTP istek/yanıt, ancak ek desenler, [SignalR](https://github.com/SignalR/SignalR) ve WebSockets tümleştirmesi aracılığıyla desteklenebilir.|  
+|WCF SOAP Hizmetleri, karmaşık şemaları olan hizmetler için bile otomatik araçların istemci proxy 'leri oluşturmasını sağlayan WSDL 'de açıklanabilir.|Web API 'sini açıklayan ve OData tümleşik API 'Ler için, kod parçacıklarını yapılandırılmış meta verilere açıklayan otomatik oluşturulan HTML yardım sayfasından bir Web API 'si tanımlamaya yönelik çeşitli yollar vardır.|  
+|.NET Framework ile birlikte sunulur.|.NET Framework ile birlikte gelir, ancak açık kaynaklı ve ayrıca, bağımsız indirme olarak bant dışı kullanılabilir.|  
   
- WCF taşımalar çeşitli erişilebilir olan güvenilir, güvenli web hizmetleri oluşturmak için kullanın. Çok çeşitli istemcileri erişilebilir olan HTTP tabanlı hizmetler oluşturmak için ASP.NET Web API'sini kullanın. ASP.NET Web API oluşturma ve yeni REST stili hizmetler tasarlama kullanın. WCF REST stilinde Hizmetleri yazmak için bazı destek sağlar, ancak KALAN ASP.NET Web API desteği daha tamamlandı ve gelecekteki tüm REST özellik geliştirmeleri, ASP.NET Web API'de hale getirilir. Mevcut bir WCF Hizmeti varsa ve ek REST uç noktalarını kullanıma sunmak istediğiniz WCF kullanın ve <xref:System.ServiceModel.WebHttpBinding>.  
+ Çeşitli aktarımlara erişilebilen güvenilir, güvenli Web hizmetleri oluşturmak için WCF 'yi kullanın. Çok çeşitli istemcilerden erişilebilen HTTP tabanlı hizmetler oluşturmak için ASP.NET Web API 'sini kullanın. Yeni REST stili hizmetler oluşturuyorsanız ve tasarlıyorsanız ASP.NET Web API 'sini kullanın. WCF, REST stil Hizmetleri yazmak için bazı destek sağlasa da, ASP.NET Web API 'sindeki REST desteği daha tamamlanmıştır ve gelecekteki tüm REST özelliklerinin geliştirmeleri ASP.NET Web API 'sinde yapılır. Mevcut bir WCF hizmetiniz varsa ve ek REST uç noktaları sunmak istiyorsanız, WCF ve <xref:System.ServiceModel.WebHttpBinding> kullanın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Windows Communication Foundation nedir?](../../../docs/framework/wcf/whats-wcf.md)
-- [Temel Windows Communication Foundation Kavramları](../../../docs/framework/wcf/fundamental-concepts.md)
+- [Windows Communication Foundation nedir?](whats-wcf.md)
+- [Temel Windows Communication Foundation Kavramları](fundamental-concepts.md)

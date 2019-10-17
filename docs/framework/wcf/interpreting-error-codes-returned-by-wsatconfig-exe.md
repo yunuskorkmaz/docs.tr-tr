@@ -2,71 +2,71 @@
 title: wsatConfig.exe Tarafından Döndürülen Hata Kodlarını Yorumlama
 ms.date: 03/30/2017
 ms.assetid: ab65f22b-0d69-4c21-9aaf-74acef0ca102
-ms.openlocfilehash: 26e7c40cb105ad10dac3b13b73cb33bc4fa57d69
-ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
+ms.openlocfilehash: 0a65bea68f595e5e28c05a142ecdd9589f12bed5
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65959849"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72321043"
 ---
 # <a name="interpreting-error-codes-returned-by-wsatconfigexe"></a>wsatConfig.exe Tarafından Döndürülen Hata Kodlarını Yorumlama
-Bu konuda, tüm hata kodlarını WS-AtomicTransaction yapılandırma hizmet programı (wsatConfig.exe) oluşturulan ve önerilen gerçekleştirilecek eylemler listeler.  
+Bu konuda, WS-AtomicTransaction Yapılandırma yardımcı programı (wsatConfig. exe) tarafından oluşturulan tüm hata kodları ve gerçekleştirilecek önerilen eylemler listelenmektedir.  
   
 ## <a name="list-of-error-codes"></a>Hata kodlarının listesi  
   
-|Hata Kodu|Açıklama|Gerçekleştirilecek önerilen eylem|  
+|Hata Kodu|Açıklama|Önerilen eylem gerçekleştirilmelidir|  
 |----------------|-----------------|------------------------------------|  
 |0|İşlem başarılı oldu|Yok.|  
-|1.|Beklenmeyen bir hata oluştu|Microsoft ile iletişime geçin|  
-|2|Güvenlik ayarlarını almak için MSDTC bağlanmaya çalışılırken beklenmeyen bir hata oluştu.|MSDTC hizmetinin devre dışı değildir ve döndürülen özel durumda listelenen tüm sorunları gidermeye emin olun.|  
-|3|Ağ güvenlik ayarları okumak için yeterli izinlere WsatConfig.exe altında çalıştırıldığı hesabı yok.|WsatConfig.exe yönetici kullanıcı hesabı altında çalıştırın.|  
-|4|"Ağ DTC erişimi" WS-AT desteğini etkinleştirmek denemeden önce MSDTC için etkinleştirin.|"Ağ DTC erişimi" MSDTC için etkinleştirip yardımcı programını yeniden çalıştırın.|  
-|5|Girilen bağlantı noktası byl mimo platný. Değer 1 ile 65535 aralığında olmalıdır.|Düzeltin `-port:<portNum>`<br /><br /> hata iletisinde belirtildiği gibi komut satırı seçeneği.|  
-|6|Komut satırında geçersiz uç nokta sertifikası belirtildi.  Sertifika bulunamadı veya doğrulamadan geçemedi.|Düzeltme `-endpointCert` komut satırı seçeneği. Sertifika bir özel anahtara sahip, ClientAuthentication ve ServerAuthentication için kullanılmak üzere tasarlanmıştır, LocalMachine\MY sertifika deposunda yüklü ve tam güvenilir olduğundan emin olun.|  
-|7|Komut satırında geçersiz hesap sertifikası belirtildi.|Düzeltme `-accountsCerts` komut satırı seçeneği. Belirtilen sertifika yanlış belirtildi ya da işlemi bulunamadı.|  
-|8|Varsayılan zaman aşımı 1-3600 saniye aralığı dışında belirtildi.|Belirtildiği şekilde doğru varsayılan zaman aşımı değeri girin.|  
-|10|Kayıt defteri erişmeye çalışırken beklenmeyen bir hata oluştu.|Hata iletisi ve eyleme dönüştürülebilir öğeleri için hata kodunu kontrol edin|  
-|11|Kayıt defterine yazılamıyor.|Hata iletisinde listelenen kayıt anahtarını kayıt defteri erişimini WsatConfig.exe altında yürütülen hesabından destekleme kapasitesine sahip olduğundan emin olun.|  
-|12|Sertifika deposu erişmeye çalışırken beklenmeyen bir hata oluştu.|İçin uygun sistem hatası eşlemek döndürülen hata kodu kullanın.|  
-|13|Http.sys yapılandırması başarısız oldu. Yeni bir HTTPS bağlantı noktası ayırma MSDTC için oluşturulamıyor.|İçin uygun sistem hatası eşlemek döndürülen hata kodu kullanın.|  
-|14|Http.sys yapılandırması başarısız oldu. MSDTC için önceki HTTPS bağlantı noktası ayırması kaldırılamıyor.|İçin uygun sistem hatası eşlemek döndürülen hata kodu kullanın.|  
-|15|Http.sys yapılandırması başarısız oldu. Belirtilen bağlantı noktası için önceki HTTPS bağlantı noktası ayırma zaten var.|Zaten başka bir uygulama belirli bir bağlantı noktasını sahipliğini duruma getirdi. Farklı bir bağlantı noktasına değiştirin veya kaldırın ya da geçerli uygulamanın yeniden yapılandırın.|  
-|16|Http.sys yapılandırması başarısız oldu. Belirtilen sertifika, bağlantı noktasına bağlanamaz.|Hata iletisinde döndürülen hata kodu için uygun sistem hatası eşlemek için kullanın|  
-|17|Http.sys yapılandırması başarısız oldu. Önceki bağlantı noktasından SSL sertifikası bağlamayı Kaldır olamaz.|Hata iletisinde döndürülen hata kodu için uygun sistem hatası eşlemek için kullanın. Gerekirse, httpcfg.exe veya netsh.exe hatalı bağlantı noktası ayırmaları kaldırmak için kullanın.|  
-|18|Http.sys yapılandırması başarısız oldu. Belirtilen sertifika noktasına bağlanamaz, çünkü önceki bir SSL bağlaması zaten mevcut.|Zaten başka bir uygulama belirli bir bağlantı noktasını sahipliğini duruma getirdi. Farklı bir bağlantı noktasına değiştirin veya kaldırın ya da geçerli uygulamanın yeniden yapılandırın.|  
-|19|MSDTC yeniden başlatılamadı|Gerekirse MSDTC el ile yeniden başlatın. Sorun devam ederse, Microsoft ile iletişime geçin.|  
-|20|WinFX uzak makinede yüklü değil veya doğru şekilde yüklenmedi.|WinFX makineye yükleyin.|  
-|21|Uzaktan yapılandırma işlemi zaman aşımına nedeniyle başarısız oldu.|Uzak makinede WS-AT yapılandırmak için çağrı 90 saniyeden daha uzun sürer.|  
-|22|WinFX uzak makinede yüklü değil veya doğru şekilde yüklenmedi.|WinFX makineye yükleyin.|  
-|23|Uzak yapılandırması, uzak makinedeki bir özel durum nedeniyle başarısız oldu.|Eyleme dönüştürülebilir öğeleri için hata iletisine bakın|  
-|26|WsatConfig.exe için geçersiz bağımsız değişken geçirildi.|Komut satırı hataları denetleyin.|  
-|27|`-accounts` Komut satırı seçeneği geçersiz.|Düzeltme`accounts` doğru bir kullanıcı hesabı belirtmek için komut satırı seçeneği.|  
-|28|`-network` Komut satırı seçeneği geçersiz.|Düzeltme `-network` doğru "etkinleştir" belirtmek için komut satırı seçeneği veya "devre dışı bırak".|  
-|29|`-maxTimeout` Komut satırı seçeneği geçersiz.|Düzeltme `-maxTimeout` belirtildiği gibi komut satırı seçeneği.|  
-|30|`-timeout` Komut satırı seçeneği geçersiz.|Düzeltme `-timeout` belirtildiği gibi komut satırı seçeneği.|  
-|31|`-traceLevel` Komut satırı seçeneği geçersiz.|Düzeltme `-traceLevel` aşağıdakilere arasında geçerli bir değer belirtmek için komut satırı seçeneği<br /><br /> -Kapalı<br />-Hata<br />-Kritik<br />-Uyarı<br />-Bilgiler<br />-Verbose<br />-Tümü|  
-|32|`-traceActivity` Komut satırı seçeneği geçersiz.|Düzeltme `-traceActivity` "etkinleştir" veya "devre dışı bırak" belirterek komut satırı seçeneği.|  
-|33|`-traceProp` Komut satırı seçeneği geçersiz.|Düzeltme `-traceProp` "etkinleştir" veya "devre dışı bırak" belirterek komut satırı seçeneği.|  
-|34|`-tracePII` Komut satırı seçeneği geçersiz.|Düzeltme `-tracePII` "etkinleştir" veya "devre dışı bırak" belirterek komut satırı seçeneği.|  
-|37|WsatConfig.exe tam makine sertifikası belirlemek mümkün değildi. Bu, birden fazla aday olduğunda ya da hiçbiri mevcut olduğunda meydana gelir.|Bir sertifika parmak izi veya doğru şekilde yapılandırmak için tam sertifikayı belirlemek için Issuer\SubjectName çifti belirtin.|  
-|38|İşlemin veya kullanıcı güvenlik duvarı yapılandırmasını değiştirmek için yeterli izinlere sahip değil.|WsatConfig.exe yönetici kullanıcı hesabı altında çalıştırın.|  
-|39|WsatConfig.exe, güvenlik duvarı yapılandırması güncelleştirilirken bir hatayla karşılaştı.|Eyleme dönüştürülebilir öğeleri için hata iletisine bakın.|  
-|40|WsatConfig.exe MSDTC okuma erişimi vermek için sertifikanın özel anahtar dosyası değil|WsatConfig.exe yönetici kullanıcı hesabı altında çalıştırın.|  
-|41|WinFX hiçbir yüklemesi bulunamadı veya bulunan sürüm aracı yapılandırma yeteneğine sahip nedir eşleşmiyor.|WinFX doğru şekilde yüklendiğinden emin olun ve yalnızca WinFX WS-AT yapılandırmak için bu sürümü ile birlikte gelen WsatConfig.exe aracını kullanın.|  
-|42|Bağımsız değişken, komut satırında birden çok kez belirtildi.|Yalnızca her bağımsız değişken bir kez WsatConfig.exe yürütülürken belirtin.|  
-|43|WS-AT etkin değilse WsatConfig.exe WS-AT ayarları güncelleştirilemiyor.|Belirtin `-network:enable` ek komut satırı bağımsız değişken olarak.|  
-|44|Gerekli düzeltme eksik ve düzeltmeyi yüklenene kadar WS-AT yapılandırılamaz.|WinFX gerekli düzeltmeyi yükleme yönergeleri için sürüm notlarına bakın.|  
-|45|`-virtualServer` Komut satırı seçeneği geçersiz.|Düzeltme `-virtualServer` yapılandırmak, küme kaynağının ağ adı belirterek komut satırı seçeneği.|  
-|46|ETW izleme oturumunu başlatılmaya çalışılırken beklenmeyen bir hata oluştu|İçin uygun sistem hatası eşlemek döndürülen hata kodu kullanın.|  
-|47|İşlemin veya kullanıcı ETW izleme oturumunu etkinleştirmek için yeterli izinlere sahip değil.|WsatConfig.exe yönetici kullanıcı hesabı altında çalıştırın.|  
-|48|ETW izleme oturumunu başlatılmaya çalışılırken beklenmeyen bir hata oluştu.|Microsoft ile iletişime geçin.|  
-|49|Yetersiz alan nedeniyle yeni bir günlük dosyası % systemdrive % oluşturulamıyor|% SYSTEMDRIVE %, günlük dosyası için yeterli alan olduğundan emin olun.|  
-|51|ETW izleme oturumunu başlatılmaya çalışılırken beklenmeyen bir hata oluştu.|Microsoft ile iletişime geçin.|  
-|52|ETW izleme oturumunu başlatılmaya çalışılırken beklenmeyen bir hata oluştu.|Microsoft ile iletişime geçin.|  
-|53|Önceki ETW oturumu günlük dosyasının yedekleme başarısız oldu.|% SYSTEMDRIVE % için günlük dosyasını ve önceki günlük dosyasının yedeği yeterli alan (varsa) olduğundan emin olun. Önceki günlük dosyası, gerekirse el ile kaldırın.|  
-|55|ETW izleme oturumunu başlatılmaya çalışılırken beklenmeyen bir hata oluştu.|Microsoft ile iletişime geçin.|  
-|56|ETW izleme oturumunu başlatılmaya çalışılırken beklenmeyen bir hata oluştu.|Microsoft ile iletişime geçin.|  
+|1\.|Beklenmeyen hata|Microsoft 'a başvurun|  
+|2|Güvenlik ayarlarını almak için MSDTC ile iletişim kurulmaya çalışılırken beklenmeyen bir hata oluştu.|MSDTC hizmetinin devre dışı olmadığından ve döndürülen özel durumda listelenen tüm sorunları ele aldığından emin olun.|  
+|3|WsatConfig. exe ' nin çalıştırıldığı hesap, ağ güvenlik ayarlarını okumak için yeterli izinlere sahip değil.|Yönetici Kullanıcı hesabı altında WsatConfig. exe dosyasını yürütün.|  
+|4|WS-AT desteğini etkinleştirmeyi denemeden önce MSDTC için "Ağ DTC erişimi" ni etkinleştirin.|MSDTC için "Ağ DTC erişimi" ni etkinleştirin ve yardımcı programı yeniden çalıştırın.|  
+|5|Girilen bağlantı noktası aralık dışındaydı. Değer 1 ile 65535 arasında olmalıdır.|@No__t düzeltin-0<br /><br /> hata iletisinde gösterildiği gibi komut satırı seçeneği.|  
+|6|Komut satırında geçersiz bir uç nokta sertifikası belirtildi.  Sertifika bulunamadı veya doğrulama başarılı olmadı.|@No__t-0 komut satırı seçeneğini düzeltin. Sertifikanın özel anahtarı olduğundan ve hem ClientAuthentication hem de ServerAuthentication için kullanılması amaçlanan, Localmachine\certificate deposunda yüklü olduğundan ve tam güvenilir olduğundan emin olun.|  
+|7|Komut satırında geçersiz bir hesap sertifikası belirtildi.|@No__t-0 komut satırı seçeneğini düzeltin. Belirtilen sertifika yanlış belirtildi ya da bulunamadı.|  
+|8|Varsayılan zaman aşımı değeri 1 ile 3600 saniye arasında belirtildi.|Belirtilen şekilde doğru bir varsayılan zaman aşımı değeri girin.|  
+|10|Kayıt defterine erişmeye çalışırken beklenmeyen bir hata oluştu.|İşlem yapılabilir öğeler için hata iletisini ve hata kodunu denetleyin|  
+|11|Kayıt defterine yazılamıyor.|Hata iletisinde listelenen anahtarın, altında WsatConfig. exe ' nin çalıştırıldığı hesaptan kayıt defteri erişimini desteklemeye uygun olduğundan emin olun.|  
+|12|Sertifika deposuna erişmeye çalışırken beklenmeyen bir hata oluştu.|Uygun sistem hatasına eşlemek için döndürülen hata kodunu kullanın.|  
+|13|Http. sys yapılandırması başarısız oldu. MSDTC için yeni bir HTTPS bağlantı noktası ayırması oluşturulamıyor.|Uygun sistem hatasına eşlemek için döndürülen hata kodunu kullanın.|  
+|14|Http. sys yapılandırması başarısız oldu. MSDTC için önceki HTTPS bağlantı noktası ayırması kaldırılamıyor.|Uygun sistem hatasına eşlemek için döndürülen hata kodunu kullanın.|  
+|15|Http. sys yapılandırması başarısız oldu. Belirtilen bağlantı noktası için önceki bir HTTPS bağlantı noktası ayırması zaten var.|Başka bir uygulama, belirli bir bağlantı noktasının sahipliğini zaten aldı. Farklı bir bağlantı noktasına değiştirin veya geçerli uygulamayı kaldırın veya yeniden yapılandırın.|  
+|16|Http. sys yapılandırması başarısız oldu. Belirtilen sertifika, bağlantı noktasına bağlanamıyor.|Uygun sistem hatasıyla eşlemek için hata iletisinde döndürülen hata kodunu kullanın|  
+|17|Http. sys yapılandırması başarısız oldu. Önceki bağlantı noktasından SSL sertifikasının bağlantısı kesilemedi.|Hata iletisinde döndürülen hata kodunu kullanarak uygun sistem hatasına eşleyin. Gerekirse, hatalı bağlantı noktası ayırmalarını kaldırmak için Httpcfg. exe veya Netsh. exe ' yi kullanın.|  
+|18|Http. sys yapılandırması başarısız oldu. Önceki bir SSL bağlaması zaten mevcut olduğundan, belirtilen sertifika bağlantı noktasına bağlanamıyor.|Başka bir uygulama, belirli bir bağlantı noktasının sahipliğini zaten aldı. Farklı bir bağlantı noktasına değiştirin veya geçerli uygulamayı kaldırın veya yeniden yapılandırın.|  
+|19|MSDTC yeniden başlatılamadı|Gerekirse MSDTC 'yi el ile yeniden başlatın. Sorun devam ederse, Microsoft 'a başvurun.|  
+|20|WinFX, uzak makinede yüklü değil veya doğru şekilde yüklenmemiş.|Makineye WinFX 'yi yükler.|  
+|21|İşlemin zaman aşımına uğraması nedeniyle uzak yapılandırma başarısız oldu.|Uzak makinede WS-AT yapılandırma çağrısı 90 saniyeden uzun sürer.|  
+|22|WinFX, uzak makinede yüklü değil veya doğru şekilde yüklenmemiş.|Makineye WinFX 'yi yükler.|  
+|23|Uzak makinedeki bir özel durum nedeniyle uzak yapılandırma başarısız oldu.|İşlem yapılabilir öğeler için hata iletisini denetle|  
+|26|WsatConfig. exe ' ye geçersiz bir bağımsız değişken geçirildi.|Hatalar için komut satırını denetleyin.|  
+|27|@No__t-0 komut satırı seçeneği geçersizdi.|Doğru bir kullanıcı hesabını belirtmek için-`accounts` komut satırı seçeneğini düzeltin.|  
+|28|@No__t-0 komut satırı seçeneği geçersizdi.|"Etkinleştir" veya "devre dışı bırak" seçeneklerini doğru bir şekilde belirtmek için `-network` komut satırı seçeneğini düzeltin.|  
+|29|@No__t-0 komut satırı seçeneği geçersizdi.|@No__t-0 komut satırı seçeneğini belirtilen şekilde düzeltin.|  
+|30|@No__t-0 komut satırı seçeneği geçersizdi.|@No__t-0 komut satırı seçeneğini belirtilen şekilde düzeltin.|  
+|31|@No__t-0 komut satırı seçeneği geçersizdi.|@No__t-0 komut satırı seçeneğini düzeltip, her bir geçerli değer belirtin,<br /><br /> -Kapalı<br />-Hata<br />-Kritik<br />-Uyarı<br />-Bilgi<br />-Ayrıntılı<br />-Tümü|  
+|32|@No__t-0 komut satırı seçeneği geçersizdi.|"Etkinleştir" veya "devre dışı bırak" seçeneklerini belirleyerek `-traceActivity` komut satırı seçeneğini düzeltin.|  
+|33|@No__t-0 komut satırı seçeneği geçersizdi.|"Etkinleştir" veya "devre dışı bırak" seçeneklerini belirleyerek `-traceProp` komut satırı seçeneğini düzeltin.|  
+|34|@No__t-0 komut satırı seçeneği geçersizdi.|"Etkinleştir" veya "devre dışı bırak" seçeneklerini belirleyerek `-tracePII` komut satırı seçeneğini düzeltin.|  
+|37|WsatConfig. exe, tam makine sertifikasını tespit edemedi. Bu, birden fazla aday olduğunda veya hiç yoksa oluşabilir.|Yapılandırılacak sertifikayı doğru şekilde belirlemek için bir sertifika parmak izi veya Issuer\SubjectName çifti belirtin.|  
+|38|İşlem veya Kullanıcı güvenlik duvarı yapılandırmasını değiştirmek için yeterli izinlere sahip değil.|Yönetici Kullanıcı hesabı altında WsatConfig. exe dosyasını yürütün.|  
+|39|WsatConfig. exe, güvenlik duvarı yapılandırmasını güncelleştirirken bir hatayla karşılaştı.|İşlem yapılabilir öğeler için hata iletisini denetleyin.|  
+|40|WsatConfig. exe, sertifikanın özel anahtar dosyasına MSDTC okuma erişimi sunamayacak|Yönetici Kullanıcı hesabı altında WsatConfig. exe dosyasını yürütün.|  
+|41|Herhangi bir WinFX yüklemesi bulunamadı veya bulunan sürüm, aracın yapılandırma yeteneğine sahip olduğu ile eşleşmiyor.|WinFX 'in düzgün yüklendiğinden emin olun ve yalnızca, WinFX 'in bu sürümüyle birlikte gelen WsatConfig. exe aracını kullanarak WS-AT ' ı yapılandırın.|  
+|42|Komut satırında bir bağımsız değişken birden çok kez belirtildi.|WsatConfig. exe dosyasını yürütürken her bir bağımsız değişkeni yalnızca bir kez belirtin.|  
+|43|WS-AT etkinleştirilmemişse WsatConfig. exe, WS-AT ayarlarını güncelleştiremiyor.|Ek bir komut satırı bağımsız değişkeni olarak `-network:enable` belirtin.|  
+|44|Gerekli bir düzeltme eksik ve WS-AT, düzeltme yüklenene kadar yapılandırılamaz.|Gerekli düzeltmenin yüklenmesiyle ilgili yönergeler için bkz. WinFX sürüm notları.|  
+|45|@No__t-0 komut satırı seçeneği geçersizdi.|Yapılandırılacak küme kaynağının ağ adını belirterek `-virtualServer` komut satırı seçeneğini düzeltin.|  
+|46|ETW izleme oturumu başlatılmaya çalışılırken beklenmeyen bir hata oluştu|Uygun sistem hatasına eşlemek için döndürülen hata kodunu kullanın.|  
+|47|İşlem veya kullanıcı ETW izleme oturumunu etkinleştirmek için yeterli izinlere sahip değil.|Yönetici Kullanıcı hesabı altında WsatConfig. exe dosyasını yürütün.|  
+|48|ETW izleme oturumu başlatılmaya çalışılırken beklenmeyen bir hata oluştu.|Microsoft 'a başvurun.|  
+|49|% Systemdrive% üzerinde yeterli alan olmadığından yeni bir günlük dosyası oluşturulamıyor|% Systemdrive% ' 'nizin günlük dosyası için yeterli alana sahip olduğundan emin olun.|  
+|51|ETW izleme oturumu başlatılmaya çalışılırken beklenmeyen bir hata oluştu.|Microsoft 'a başvurun.|  
+|52|ETW izleme oturumu başlatılmaya çalışılırken beklenmeyen bir hata oluştu.|Microsoft 'a başvurun.|  
+|53|Önceki ETW oturum günlük dosyası yedeklemesi başarısız oldu.|% Systemdrive% ' inizin günlük dosyası ve önceki günlük dosyasının (varsa) yedeklemesi için yeterli alana sahip olduğundan emin olun. Gerekirse, önceki günlük dosyasını el ile kaldırın.|  
+|55|ETW izleme oturumu başlatılmaya çalışılırken beklenmeyen bir hata oluştu.|Microsoft 'a başvurun.|  
+|56|ETW izleme oturumu başlatılmaya çalışılırken beklenmeyen bir hata oluştu.|Microsoft 'a başvurun.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [WS-AtomicTransaction Yapılandırma Yardımcı Programı (wsatConfig.exe)](../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)
+- [WS-AtomicTransaction Yapılandırma Yardımcı Programı (wsatConfig.exe)](ws-atomictransaction-configuration-utility-wsatconfig-exe.md)
