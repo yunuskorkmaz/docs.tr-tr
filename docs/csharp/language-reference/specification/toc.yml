@@ -1,0 +1,40 @@
+- name: 'C# 6.0 Taslak Belirtimi'
+  items:
+    - name: Giriş
+      href: ../../../../_csharplang/spec/introduction.md
+    - name: Sözcük yapısı
+      href: ../../../../_csharplang/spec/lexical-structure.md
+    - name: Temel kavramlar
+      href: ../../../../_csharplang/spec/basic-concepts.md
+    - name: Türler
+      href: ../../../../_csharplang/spec/types.md
+    - name: Değişkenler
+      href: ../../../../_csharplang/spec/variables.md
+    - name: Dönüşümler
+      href: ../../../../_csharplang/spec/conversions.md
+    - name: İfadeler
+      href: ../../../../_csharplang/spec/expressions.md
+    - name: Deyimler
+      href: ../../../../_csharplang/spec/statements.md
+    - name: Ad Alanları
+      href: ../../../../_csharplang/spec/namespaces.md
+    - name: Sınıflar
+      href: ../../../../_csharplang/spec/classes.md
+    - name: Yapılar
+      href: ../../../../_csharplang/spec/structs.md
+    - name: Diziler
+      href: ../../../../_csharplang/spec/arrays.md
+    - name: Arabirimler
+      href: ../../../../_csharplang/spec/interfaces.md
+    - name: Numaralandırmalar
+      href: ../../../../_csharplang/spec/enums.md
+    - name: Temsilciler
+      href: ../../../../_csharplang/spec/delegates.md
+    - name: Özel Durumlar
+      href: ../../../../_csharplang/spec/exceptions.md
+    - name: Öznitelikler
+      href: ../../../../_csharplang/spec/attributes.md
+    - name: Güvenli olmayan kod
+      href: ../../../../_csharplang/spec/unsafe-code.md
+    - name: Belge açıklamaları
+      href: ../../../../_csharplang/spec/documentation-comments.md

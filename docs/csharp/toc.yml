@@ -1,7 +1,11 @@
 - name: 'C# Kılavuzu'
   href: index.md
 - name: Başlarken
-  href: getting-started/
+  items:
+    - name: Bu kılavuz nasıl kullanılır?
+      href: getting-started/index.md
+    - name: 'C# Diline ve.NET Framework’e Giriş'
+      href: getting-started/introduction-to-the-csharp-language-and-the-net-framework.md
 - name: Öğreticiler
   items:
     - name: Genel Bakış
@@ -63,7 +67,31 @@
     - name: Öznitelikleri Kullanma
       href: tutorials/attributes.md
 - name: 'C# Turu'
-  href: tour-of-csharp/
+  items:
+    - name: Giriş
+      href: tour-of-csharp/index.md
+    - name: Program Yapısı
+      href: tour-of-csharp/program-structure.md
+    - name: Türler ve Değişkenler
+      href: tour-of-csharp/types-and-variables.md
+    - name: İfadeler
+      href: tour-of-csharp/expressions.md
+    - name: Deyimler
+      href: tour-of-csharp/statements.md
+    - name: Sınıflar ve nesneler
+      href: tour-of-csharp/classes-and-objects.md
+    - name: Yapılar
+      href: tour-of-csharp/structs.md
+    - name: Diziler
+      href: tour-of-csharp/arrays.md
+    - name: Arabirimler
+      href: tour-of-csharp/interfaces.md
+    - name: Numaralandırmalar
+      href: tour-of-csharp/enums.md
+    - name: Temsilciler
+      href: tour-of-csharp/delegates.md
+    - name: Öznitelikler
+      href: tour-of-csharp/attributes.md
 - name: 'C# yenilikleri'
   items:
     - name: 'C# 8.0'
@@ -139,7 +167,47 @@
         - name: Temsilcileri ve Olayları Ayırt Etme
           href: distinguish-delegates-events.md
     - name: Dil ile Tümleşik Sorgu (LINQ)
-      href: linq/
+      items:
+        - name: LINQ’e Genel Bakış
+          href: linq/index.md
+        - name: Sorgu ifadesi temelleri
+          href: linq/query-expression-basics.md
+        - name: 'C# üzerinde LINQ'
+          href: linq/linq-in-csharp.md
+        - name: 'C# içinde LINQ sorguları yazma'
+          href: linq/write-linq-queries.md
+        - name: Nesneler koleksiyonunu sorgulama
+          href: linq/query-a-collection-of-objects.md
+        - name: Yöntemden sorgu döndürme
+          href: linq/return-a-query-from-a-method.md
+        - name: Bellekte sorgunun sonuçlarını depolama
+          href: linq/store-the-results-of-a-query-in-memory.md
+        - name: Sorgu sonuçlarını gruplandırma
+          href: linq/group-query-results.md
+        - name: İç içe geçmiş grup oluşturma
+          href: linq/create-a-nested-group.md
+        - name: Gruplandırma işleminde alt sorgu gerçekleştirme
+          href: linq/perform-a-subquery-on-a-grouping-operation.md
+        - name: Sonuçları bitişik anahtarlara göre gruplama
+          href: linq/group-results-by-contiguous-keys.md
+        - name: Çalışma zamanında koşul filtrelerini dinamik olarak belirtme
+          href: linq/dynamically-specify-predicate-filters-at-runtime.md
+        - name: İç birleşimler gerçekleştirme
+          href: linq/perform-inner-joins.md
+        - name: Gruplanmış birleşimler gerçekleştirme
+          href: linq/perform-grouped-joins.md
+        - name: Sol dış birleşimler gerçekleştirme
+          href: linq/perform-left-outer-joins.md
+        - name: Join yan tümcesinin sonuçlarını sıralama
+          href: linq/order-the-results-of-a-join-clause.md
+        - name: Bileşik anahtarlar kullanarak birleştirme
+          href: linq/join-by-using-composite-keys.md
+        - name: Özel birleştirme işlemleri gerçekleştirme
+          href: linq/perform-custom-join-operations.md
+        - name: Sorgu ifadelerinde boş değerler işleme
+          href: linq/handle-null-values-in-query-expressions.md
+        - name: Sorgu ifadelerinde özel durumları işleme
+          href: linq/handle-exceptions-in-query-expressions.md
     - name: Zaman uyumsuz programlama
       href: async.md
     - name: Desen Eşleştirme
@@ -189,10 +257,1556 @@
     - name: 'Desen eşleştirme, is ve as işleçleri kullanarak güvenli bir şekilde tür dönüştürme'
       href: how-to/safely-cast-using-pattern-matching-is-and-as-operators.md
 - name: .NET Compiler Platform SDK’sı (Roslyn API’leri)
-  href: roslyn-sdk/
+  items:
+    - name: .NET Compiler Platform SDK’sına (Roslyn API’leri) genel bakış
+      href: roslyn-sdk/index.md
+    - name: Derleyici API modelini anlama
+      href: roslyn-sdk/compiler-api-model.md
+    - name: Söz dizimi ile çalışma
+      href: roslyn-sdk/work-with-syntax.md
+    - name: Semantik ile çalışma
+      href: roslyn-sdk/work-with-semantics.md
+    - name: Bir çalışma alanı ile çalışma
+      href: roslyn-sdk/work-with-workspace.md
+    - name: Söz dizimi görselleştiricisi ile kod bulma
+      href: roslyn-sdk/syntax-visualizer.md
+    - name: Hızlı Başlangıçlar
+      items:
+        - name: Söz dizimi analizi
+          href: roslyn-sdk/get-started/syntax-analysis.md
+        - name: Anlam analizi
+          href: roslyn-sdk/get-started/semantic-analysis.md
+        - name: Söz Dizimi Dönüşümü
+          href: roslyn-sdk/get-started/syntax-transformation.md
+    - name: Öğreticiler
+      items:
+        - name: İlk çözümleyicinizi oluşturma ve kod düzeltmesi uygulama
+          href: roslyn-sdk/tutorials/how-to-write-csharp-analyzer-code-fix.md
 - name: 'C# Programlama Kılavuzu'
-  href: programming-guide/
+  items:
+    - name: Genel Bakış
+      href: programming-guide/index.md
+    - name: 'C# Programı İçinde'
+      items:
+        - name: 'C# Programı içinde neler var?'
+          href: programming-guide/inside-a-program/index.md
+        - name: Hello World -- İlk Programınız
+          href: programming-guide/inside-a-program/hello-world-your-first-program.md
+        - name: 'C# Programının Genel Yapısı'
+          href: programming-guide/inside-a-program/general-structure-of-a-csharp-program.md
+        - name: Tanımlayıcı adları
+          href: programming-guide/inside-a-program/identifier-names.md
+        - name: 'C# Kodlama Kuralları'
+          href: programming-guide/inside-a-program/coding-conventions.md
+    - name: Ana() ve Komut Satırı Bağımsız Değişkenleri
+      items:
+        - name: Genel Bakış
+          href: programming-guide/main-and-command-args/index.md
+        - name: Komut Satırı Bağımsız Değişkenleri
+          href: programming-guide/main-and-command-args/command-line-arguments.md
+        - name: 'Nasıl yapılır: Komut Satırı Bağımsız Değişkenlerini Görüntüleme'
+          href: programming-guide/main-and-command-args/how-to-display-command-line-arguments.md
+        - name: Ana() Dönüş Değerleri
+          href: programming-guide/main-and-command-args/main-return-values.md
+    - name: Programlama Kavramları
+      items:
+        - name: Genel Bakış
+          href: programming-guide/concepts/index.md
+        - name: Async ve await ile Zaman Uyumsuz Programlama
+          items:
+            - name: Genel Bakış
+              href: programming-guide/concepts/async/index.md
+            - name: Zaman uyumsuz görev programlama modeli
+              href: programming-guide/concepts/async/task-asynchronous-programming-model.md
+            - name: 'İzlenecek yol: Async ve await kullanarak Web''e erişme'
+              href: programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md
+            - name: 'Nasıl yapılır: Task.WhenAll Kullanarak zaman uyumsuz izlenecek yolu genişletme'
+              href: programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md
+            - name: 'Nasıl yapılır: Async ve await Kullanarak Birden Çok Web İsteğini Paralel Hale Getirme'
+              href: programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md
+            - name: Zaman Uyumsuz Dönüş Türleri
+              href: programming-guide/concepts/async/async-return-types.md
+            - name: Zaman Uyumsuz Programlarda Denetim Akışı
+              href: programming-guide/concepts/async/control-flow-in-async-programs.md
+            - name: Görevleri iptal etme ve tamamlanan görevleri işleme
+              items:
+                - name: Genel Bakış
+                  href: programming-guide/concepts/async/fine-tuning-your-async-application.md
+                - name: Zaman Uyumsuz bir Görevi veya Görev Listesini İptal Etme
+                  href: programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md
+                - name: Zaman Uyumsuz Görevleri Belirli Bir Süre Sonunda İptal Etme
+                  href: programming-guide/concepts/async/cancel-async-tasks-after-a-period-of-time.md
+                - name: Bir Görev Tamamlandıktan Sonra Geri Kalan Zaman Uyumsuz Görevleri İptal Etme
+                  href: programming-guide/concepts/async/cancel-remaining-async-tasks-after-one-is-complete.md
+                - name: Birden Çok Zaman Uyumsuz Görev Başlatma ve Görevleri Tamamlandıkça İşleme
+                  href: programming-guide/concepts/async/start-multiple-async-tasks-and-process-them-as-they-complete.md
+            - name: Zaman Uyumsuz Uygulamalarda Yeniden Girişi İşleme
+              href: programming-guide/concepts/async/handling-reentrancy-in-async-apps.md
+            - name: Dosya Erişimi için Async Kullanma
+              href: programming-guide/concepts/async/using-async-for-file-access.md
+        - name: Öznitelikler
+          items:
+            - name: Genel Bakış
+              href: programming-guide/concepts/attributes/index.md
+            - name: Özel Öznitelikler Oluşturma
+              href: programming-guide/concepts/attributes/creating-custom-attributes.md
+            - name: AttributeUsage
+              href: programming-guide/concepts/attributes/attributeusage.md
+            - name: Yansıma Kullanarak Özniteliklere Erişme
+              href: programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md
+            - name: 'Nasıl yapılır: Öznitelikleri Kullanarak C/C++ Birleşimi Oluşturma'
+              href: programming-guide/concepts/attributes/how-to-create-a-c-cpp-union-by-using-attributes.md
+            - name: Ortak Öznitelikler
+              href: programming-guide/concepts/attributes/common-attributes.md
+        - name: Arayan Bilgileri
+          href: programming-guide/concepts/caller-information.md
+        - name: Koleksiyonlar
+          href: programming-guide/concepts/collections.md
+        - name: Kovaryans ve Kontravaryans
+          items:
+            - name: Genel Bakış
+              href: programming-guide/concepts/covariance-contravariance/index.md
+            - name: Genel Arabirimlerde Varyans
+              href: programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md
+              items:
+                - name: Değişken Genel Arabirimler Oluşturma
+                  href: programming-guide/concepts/covariance-contravariance/creating-variant-generic-interfaces.md
+                - name: Genel Koleksiyonlar için Arabirimlerde Varyans Kullanma
+                  href: programming-guide/concepts/covariance-contravariance/using-variance-in-interfaces-for-generic-collections.md
+            - name: Temsilcilerde Varyans
+              href: programming-guide/concepts/covariance-contravariance/variance-in-delegates.md
+              items:
+                - name: Temsilcilerde Varyans Kullanma
+                  href: programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md
+                - name: İşlev ve Eylem Genel Temsilcileri için Varyans Kullanma
+                  href: programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md
+        - name: İfade Ağaçları
+          items:
+            - name: Genel Bakış
+              href: programming-guide/concepts/expression-trees/index.md
+            - name: 'Nasıl yapılır: İfade Ağaçlarını Yürütme'
+              href: programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md
+            - name: 'Nasıl yapılır: İfade Ağaçlarını Değiştirme'
+              href: programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md
+            - name: 'Nasıl yapılır: Dinamik Sorgular Derlemek için İfade Ağaçları Kullanma'
+              href: programming-guide/concepts/expression-trees/how-to-use-expression-trees-to-build-dynamic-queries.md
+            - name: Visual Studio’da İfade Ağacı Hatalarını Ayıklama
+              href: programming-guide/concepts/expression-trees/debugging-expression-trees-in-visual-studio.md
+            - name: DebugView Sözdizimi
+              href: programming-guide/concepts/expression-trees/debugview-syntax.md
+        - name: Yineleyiciler
+          href: programming-guide/concepts/iterators.md
+        - name: Dil ile Tümleşik Sorgu (LINQ)
+          items:
+            - name: Genel Bakış
+              href: programming-guide/concepts/linq/index.md
+            - name: 'C#''de LINQ''e Başlarken'
+              items:
+                - name: LINQ Sorgularına Giriş
+                  href: programming-guide/concepts/linq/introduction-to-linq-queries.md
+                - name: LINQ ve Genel Türler
+                  href: programming-guide/concepts/linq/linq-and-generic-types.md
+                - name: Temel LINQ Sorgu İşlemleri
+                  href: programming-guide/concepts/linq/basic-linq-query-operations.md
+                - name: LINQ ile Veri Dönüştürmeler
+                  href: programming-guide/concepts/linq/data-transformations-with-linq.md
+                - name: LINQ Sorgu İşlemlerinde Tür İlişkileri
+                  href: programming-guide/concepts/linq/type-relationships-in-linq-query-operations.md
+                - name: LINQ'te Sorgu Sözdizimi ve Yöntem Sözdizimi
+                  href: programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md
+                - name: 'LINQ''i Destekleyen C# Özellikleri'
+                  href: programming-guide/concepts/linq/features-that-support-linq.md
+                - name: 'İzlenecek yol: C#''de Sorgu Yazma (LINQ)'
+                  href: programming-guide/concepts/linq/walkthrough-writing-queries-linq.md
+            - name: Standart Sorgu İşleçlerine Genel Bakış
+              items:
+                - name: Genel Bakış
+                  href: programming-guide/concepts/linq/standard-query-operators-overview.md
+                - name: Standart Sorgu İşleçleri için Sorgu İfade Sözdizimi
+                  href: programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md
+                - name: Standart Sorgu İşleçlerinin Yürütme Yöntemine Göre Sınıflandırılması
+                  href: programming-guide/concepts/linq/classification-of-standard-query-operators-by-manner-of-execution.md
+                - name: Verileri Sıralama
+                  href: programming-guide/concepts/linq/sorting-data.md
+                - name: Ayarlama İşlemleri
+                  href: programming-guide/concepts/linq/set-operations.md
+                - name: Verileri Filtreleme
+                  href: programming-guide/concepts/linq/filtering-data.md
+                - name: Niceleyici İşlemleri
+                  href: programming-guide/concepts/linq/quantifier-operations.md
+                - name: Projeksiyon İşlemleri
+                  href: programming-guide/concepts/linq/projection-operations.md
+                - name: Veri Bölümlendirme
+                  href: programming-guide/concepts/linq/partitioning-data.md
+                - name: Birleştirme İşlemleri
+                  href: programming-guide/concepts/linq/join-operations.md
+                - name: Verileri Gruplandırma
+                  href: programming-guide/concepts/linq/grouping-data.md
+                - name: Oluşturma İşlemleri
+                  href: programming-guide/concepts/linq/generation-operations.md
+                - name: Eşitlik İşlemleri
+                  href: programming-guide/concepts/linq/equality-operations.md
+                - name: Öğe İşlemleri
+                  href: programming-guide/concepts/linq/element-operations.md
+                - name: Veri Türlerini Dönüştürme
+                  href: programming-guide/concepts/linq/converting-data-types.md
+                - name: Birleştirme İşlemleri
+                  href: programming-guide/concepts/linq/concatenation-operations.md
+                - name: Toplama İşlemleri
+                  href: programming-guide/concepts/linq/aggregation-operations.md
+            - name: Nesnelere LINQ
+              items:
+                - name: Genel Bakış
+                  href: programming-guide/concepts/linq/linq-to-objects.md
+                - name: LINQ ve Dizeler
+                  href: programming-guide/concepts/linq/linq-and-strings.md
+                - name: Nasıl yapılır makaleleri
+                  items:
+                    - name: 'Nasıl yapılır: Bir Sözcüğün Bir Dizede Kaç Kez Geçtiğini Sayma (LINQ)'
+                      href: programming-guide/concepts/linq/how-to-count-occurrences-of-a-word-in-a-string-linq.md
+                    - name: 'Nasıl yapılır: Belirli bir Sözcükler Kümesini İçeren Cümleleri Sorgulama (LINQ)'
+                      href: programming-guide/concepts/linq/how-to-query-for-sentences-that-contain-a-specified-set-of-words-linq.md
+                    - name: 'Nasıl yapılır: Bir Dizedeki Karakterleri Sorgulama (LINQ)'
+                      href: programming-guide/concepts/linq/how-to-query-for-characters-in-a-string-linq.md
+                    - name: 'Nasıl yapılır: Normal İfadelerle LINQ Sorgularını Birleştirme'
+                      href: programming-guide/concepts/linq/how-to-combine-linq-queries-with-regular-expressions.md
+                    - name: 'Nasıl yapılır: İki Liste Arasında Ayarlanmış Farkı Bulma (LINQ)'
+                      href: programming-guide/concepts/linq/how-to-find-the-set-difference-between-two-lists-linq.md
+                    - name: 'Nasıl yapılır: Herhangi bir Sözcük veya Alana Göre Metin Verilerini Sıralama veya Filtreleme (LINQ)'
+                      href: programming-guide/concepts/linq/how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md
+                    - name: 'Nasıl yapılır: Sınırlandırılmış bir Dosyanın Alanlarını Yeniden Sıralama (LINQ)'
+                      href: programming-guide/concepts/linq/how-to-reorder-the-fields-of-a-delimited-file-linq.md
+                    - name: 'Nasıl yapılır: Dize Koleksiyonlarını Birleştirme ve Karşılaştırma (LINQ)'
+                      href: programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md
+                    - name: 'Nasıl yapılır: Birden Fazla Kaynaktan Nesne Koleksiyonları Doldurma (LINQ)'
+                      href: programming-guide/concepts/linq/how-to-populate-object-collections-from-multiple-sources-linq.md
+                    - name: 'Nasıl yapılır: Gruplar Kullanarak Bir Dosyayı Birden Çok Dosyaya Bölme (LINQ)'
+                      href: programming-guide/concepts/linq/how-to-split-a-file-into-many-files-by-using-groups-linq.md
+                    - name: 'Nasıl yapılır: Farklı Dosyalardan İçerik Birleştirme (LINQ)'
+                      href: programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md
+                    - name: 'Nasıl yapılır: Bir CSV Metinde Dosyasında Sütun Değerlerini Hesaplama (LINQ)'
+                      href: programming-guide/concepts/linq/how-to-compute-column-values-in-a-csv-text-file-linq.md
+                - name: LINQ ve Yansıma
+                  href: programming-guide/concepts/linq/linq-and-reflection.md
+                - name: 'Nasıl yapılır: Bir Derlemenin Meta Verilerini Yansıma ile Sorgulama (LINQ)'
+                  href: programming-guide/concepts/linq/how-to-query-an-assembly-s-metadata-with-reflection-linq.md
+                - name: LINQ ve Dosya Dizinleri
+                  items:
+                    - name: Genel Bakış
+                      href: programming-guide/concepts/linq/linq-and-file-directories.md
+                    - name: 'Nasıl yapılır: Belirli bir Öznitelik veya Ada Sahip Dosyaları Sorgulama'
+                      href: programming-guide/concepts/linq/how-to-query-for-files-with-a-specified-attribute-or-name.md
+                    - name: 'Nasıl yapılır: Dosyaları Uzantıya Göre Gruplama (LINQ)'
+                      href: programming-guide/concepts/linq/how-to-group-files-by-extension-linq.md
+                    - name: 'Nasıl yapılır: Bir Klasör Kümesindeki Toplam Bayt Sayısını Sorgulama (LINQ)'
+                      href: programming-guide/concepts/linq/how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders-linq.md
+                    - name: 'Nasıl yapılır: İki Klasörün İçeriğini Karşılaştırma (LINQ)'
+                      href: programming-guide/concepts/linq/how-to-compare-the-contents-of-two-folders-linq.md
+                    - name: 'Nasıl yapılır: Bir Dizin Ağacındaki En Büyük Dosya veya Dosyalar için Sorgu (LINQ)'
+                      href: programming-guide/concepts/linq/how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq.md
+                    - name: 'Nasıl yapılır: Bir Dizin Ağacında Yineleyen Dosyalar için Sorgu (LINQ)'
+                      href: programming-guide/concepts/linq/how-to-query-for-duplicate-files-in-a-directory-tree-linq.md
+                    - name: 'Nasıl yapılır: Bir Klasördeki Dosyaların İçeriğini Sorgulama (LINQ)'
+                      href: programming-guide/concepts/linq/how-to-query-the-contents-of-files-in-a-folder-lin.md
+                - name: 'Nasıl yapılır: LINQ ile ArrayList Sorgulama'
+                  href: programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md
+                - name: 'Nasıl yapılır: LINQ Sorguları için Özel Yöntemler'
+                  href: programming-guide/concepts/linq/how-to-add-custom-methods-for-linq-queries.md
+            - name: LINQ - XML
+              items:
+                - name: Başlarken (LINQ to XML)
+                  items:
+                    - name: LINQ to XML’e Genel Bakış
+                      href: programming-guide/concepts/linq/linq-to-xml-overview.md
+                    - name: LINQ to XML ile DOM Karşılaştırması
+                      href: programming-guide/concepts/linq/linq-to-xml-vs-dom.md
+                    - name: LINQ to XML ile Diğer XML Teknolojileri Karşılaştırması
+                      href: programming-guide/concepts/linq/linq-to-xml-vs-other-xml-technologies.md
+                - name: Programlama Kılavuzu (LINQ to XML)
+                  items:
+                    - name: LINQ to XML Programlamaya Genel Bakış
+                      items:
+                        - name: İşlevsel ve Yordam Programlama Karşılaştırması (LINQ to XML)
+                          href: programming-guide/concepts/linq/functional-vs-procedural-programming-linq-to-xml.md
+                        - name: LINQ to XML Sınıflarına Genel Bakış
+                          href: programming-guide/concepts/linq/linq-to-xml-classes-overview.md
+                        - name: XElement Sınıfına Genel Bakış
+                          href: programming-guide/concepts/linq/xelement-class-overview.md
+                        - name: XAttribute Sınıfına Genel Bakış
+                          href: programming-guide/concepts/linq/xattribute-class-overview.md
+                        - name: XDocument Sınıfına Genel Bakış
+                          href: programming-guide/concepts/linq/xdocument-class-overview.md
+                        - name: 'Nasıl yapılır: LINQ to XML Örnekleri Derleme'
+                          href: programming-guide/concepts/linq/how-to-build-linq-to-xml-examples.md
+                    - name: XML Ağaçları
+                      items:
+                        - name: İşlevsel Oluşturma (LINQ to XML) Karşılaştırması
+                          href: programming-guide/concepts/linq/functional-construction-linq-to-xml.md
+                        - name: 'C# Dilinde XML Ağaçları Oluşturma (LINQ to XML)'
+                          href: programming-guide/concepts/linq/creating-xml-trees-linq-to-xml-2.md
+                        - name: XML Ayrıştırma
+                          items:
+                            - name: 'Nasıl yapılır: Dize Ayrıştırma'
+                              href: programming-guide/concepts/linq/how-to-parse-a-string.md
+                            - name: 'Nasıl yapılır: Dosyadan XML Yükleme'
+                              href: programming-guide/concepts/linq/how-to-load-xml-from-a-file.md
+                            - name: XML Yükleme veya Ayrıştırma Sırasında Boşluk Koruma
+                              href: programming-guide/concepts/linq/preserving-white-space-while-loading-or-parsing-xml1.md
+                            - name: 'Nasıl yapılır: Ayrıştırma Hatalarını Yakalama'
+                              href: programming-guide/concepts/linq/how-to-catch-parsing-errors.md
+                            - name: 'Nasıl yapılır: XmlReader’dan Ağaç Oluşturma'
+                              href: programming-guide/concepts/linq/how-to-create-a-tree-from-an-xmlreader.md
+                            - name: 'Nasıl yapılır: XmlReader’dan XML Parçalarının Akışını Yapma'
+                              href: programming-guide/concepts/linq/how-to-stream-xml-fragments-from-an-xmlreader.md
+                        - name: 'Nasıl yapılır: XML Ağacını XmlWriter ile Doldurma (LINQ to XML)'
+                          href: programming-guide/concepts/linq/how-to-populate-an-xml-tree-with-an-xmlwriter-linq-to-xml.md
+                        - name: 'Nasıl yapılır: XSD Kullanarak Doğrulama (LINQ to XML)'
+                          href: programming-guide/concepts/linq/how-to-validate-using-xsd-linq-to-xml.md
+                        - name: XElement ve XDocument Nesnelerinin Geçerli İçeriği
+                          href: programming-guide/concepts/linq/valid-content-of-xelement-and-xdocument-objects3.md
+                    - name: XML Ad Alanları ile Çalışma
+                      items:
+                        - name: Ad Alanlarına Genel Bakış (LINQ to XML)
+                          href: programming-guide/concepts/linq/namespaces-overview-linq-to-xml.md
+                        - name: 'Nasıl yapılır: Ad Alanları ile Belge Oluşturma (LINQ to XML)'
+                          href: programming-guide/concepts/linq/how-to-create-a-document-with-namespaces-linq-to-xml.md
+                        - name: 'Nasıl yapılır: Ad Alanı Ön Eklerini Denetleme (LINQ to XML)'
+                          href: programming-guide/concepts/linq/how-to-control-namespace-prefixes-linq-to-xml.md
+                        - name: 'C# Dilinde Varsayılan Ad Alanlarının Kapsamı'
+                          href: programming-guide/concepts/linq/scope-of-default-namespaces.md
+                        - name: 'Nasıl yapılır: Ad Alanlarında XML Üzerinde Sorgu Yazma'
+                          href: programming-guide/concepts/linq/how-to-write-queries-on-xml-in-namespaces.md
+                    - name: XML Ağaçlarını Serileştirme
+                      items:
+                        - name: Serileştirirken Boşlukları Koruma
+                          href: programming-guide/concepts/linq/preserving-white-space-while-serializing.md
+                        - name: XML Bildirimi ile Serileştirme
+                          href: programming-guide/concepts/linq/serializing-with-an-xml-declaration.md
+                        - name: 'Dosya, TextWriters ve XmlWriters Serileştirme'
+                          href: programming-guide/concepts/linq/serializing-to-files-textwriters-and-xmlwriters.md
+                        - name: XmlReader’a Serileştirme (XSLT Çağırma)
+                          href: programming-guide/concepts/linq/serializing-to-an-xmlreader-invoking-xslt.md
+                    - name: LINQ to XML Eksenleri
+                      items:
+                        - name: LINQ to XML Eksenlerine Genel Bakış
+                          href: programming-guide/concepts/linq/linq-to-xml-axes-overview.md
+                        - name: 'Nasıl yapılır: Öğe Koleksiyonu Alma (LINQ to XML)'
+                          href: programming-guide/concepts/linq/how-to-retrieve-a-collection-of-elements-linq-to-xml.md
+                        - name: 'Nasıl yapılır: Öğe Değerini Alma (LINQ to XML)'
+                          href: programming-guide/concepts/linq/how-to-retrieve-the-value-of-an-element-linq-to-xml.md
+                        - name: 'Nasıl yapılır: Öğe Adlarını Filtreleme (LINQ to XML)'
+                          href: programming-guide/concepts/linq/how-to-filter-on-element-names-linq-to-xml.md
+                        - name: 'Nasıl yapılır: Zincir Eksen Yöntem Çağrıları (LINQ to XML)'
+                          href: programming-guide/concepts/linq/how-to-chain-axis-method-calls-linq-to-xml.md
+                        - name: 'Nasıl yapılır: Tek Bir Alt Öğe Alma (LINQ to XML)'
+                          href: programming-guide/concepts/linq/how-to-retrieve-a-single-child-element-linq-to-xml.md
+                        - name: 'Nasıl yapılır: Öznitelik Koleksiyonu Alma (LINQ to XML)'
+                          href: programming-guide/concepts/linq/how-to-retrieve-a-collection-of-attributes-linq-to-xml.md
+                        - name: 'Nasıl yapılır: Tek Bir Öznitelik Alma (LINQ to XML)'
+                          href: programming-guide/concepts/linq/how-to-retrieve-a-single-attribute-linq-to-xml.md
+                        - name: 'Nasıl yapılır: Öznitelik Değerini Alma (LINQ to XML)'
+                          href: programming-guide/concepts/linq/how-to-retrieve-the-value-of-an-attribute-linq-to-xml.md
+                        - name: 'Nasıl yapılır: Öğenin Yüzeysel Değerini Alma'
+                          href: programming-guide/concepts/linq/how-to-retrieve-the-shallow-value-of-an-element.md
+                    - name: XML Ağaçlarını Sorgulama
+                      items:
+                        - name: Temel Sorgular (LINQ to XML)
+                          items:
+                            - name: 'Nasıl yapılır: Belirli Bir Özniteliğe Sahip Öğeyi Bulma'
+                              href: programming-guide/concepts/linq/how-to-find-an-element-with-a-specific-attribute.md
+                            - name: 'Nasıl yapılır: Belirli Bir Alt Öğeye Sahip Öğeyi Bulma'
+                              href: programming-guide/concepts/linq/how-to-find-an-element-with-a-specific-child-element.md
+                            - name: XDocument Sorgulama ve XElement Sorgulama Karşılaştırması
+                              href: programming-guide/concepts/linq/querying-an-xdocument-vs-querying-an-xelement.md
+                            - name: 'Nasıl yapılır: Belirli Bir Öğe Adına Sahip Alt Öğeleri Bulma'
+                              href: programming-guide/concepts/linq/how-to-find-descendants-with-a-specific-element-name.md
+                            - name: 'Nasıl yapılır: Descendants Yöntemini Kullanarak Tek Bir Alt Öğeyi Bulma'
+                              href: programming-guide/concepts/linq/how-to-find-a-single-descendant-using-the-descendants-method.md
+                            - name: 'Nasıl yapılır: Karmaşık Filtreleme ile Sorgu Yazma'
+                              href: programming-guide/concepts/linq/how-to-write-queries-with-complex-filtering.md
+                            - name: 'Nasıl yapılır: İsteğe Bağlı Öğeyi Filtreleme'
+                              href: programming-guide/concepts/linq/how-to-filter-on-an-optional-element.md
+                            - name: 'Nasıl yapılır: Ad Alanındaki Tüm Düğümleri Bulma'
+                              href: programming-guide/concepts/linq/how-to-find-all-nodes-in-a-namespace.md
+                            - name: 'Nasıl yapılır: Öğeleri Sıralama'
+                              href: programming-guide/concepts/linq/how-to-sort-elements.md
+                            - name: 'Nasıl yapılır: Birden Çok Anahtarda Öğeleri Sıralama'
+                              href: programming-guide/concepts/linq/how-to-sort-elements-on-multiple-keys.md
+                            - name: 'Nasıl yapılır: Ara Değerleri Hesaplama'
+                              href: programming-guide/concepts/linq/how-to-calculate-intermediate-values.md
+                            - name: 'Nasıl yapılır: Bağlama Göre Öğeleri Bulan Bir Sorgu Yazma'
+                              href: programming-guide/concepts/linq/how-to-write-a-query-that-finds-elements-based-on-context.md
+                            - name: 'Nasıl yapılır: Boş Sorgu Sonucu Kümelerinin Hatalarını Ayıklama'
+                              href: programming-guide/concepts/linq/how-to-debug-empty-query-results-sets.md
+                        - name: Projeksiyonlar ve Dönüşümler (LINQ to XML)
+                          items:
+                            - name: 'Nasıl yapılır: LINQ to XML Kullanarak Sözlüklerle Çalışma'
+                              href: programming-guide/concepts/linq/how-to-work-with-dictionaries-using-linq-to-xml.md
+                            - name: 'Nasıl yapılır: XML Ağacının Şeklini Dönüştürme'
+                              href: programming-guide/concepts/linq/how-to-transform-the-shape-of-an-xml-tree.md
+                            - name: 'Nasıl yapılır: Projeksiyon Türünü Denetleme'
+                              href: programming-guide/concepts/linq/how-to-control-the-type-of-a-projection.md
+                            - name: 'Nasıl yapılır: Yeni Bir Tür Yansıtma (LINQ to XML)'
+                              href: programming-guide/concepts/linq/how-to-project-a-new-type-linq-to-xml.md
+                            - name: 'Nasıl yapılır: Nesne Grafiği Yansıtma'
+                              href: programming-guide/concepts/linq/how-to-project-an-object-graph.md
+                            - name: 'Nasıl yapılır: Anonim Tip Yansıtma'
+                              href: programming-guide/concepts/linq/how-to-project-an-anonymous-type.md
+                            - name: 'Nasıl yapılır: XML’den Metin Dosyaları Oluşturma'
+                              href: programming-guide/concepts/linq/how-to-generate-text-files-from-xml.md
+                            - name: 'Nasıl yapılır: CSV Dosyalarından XML Oluşturma'
+                              href: programming-guide/concepts/linq/how-to-generate-xml-from-csv-files.md
+                        - name: Gelişmiş Sorgu Teknikleri (LINQ to XML)
+                          items:
+                            - name: 'Nasıl yapılır: İki Koleksiyonu Birleştirme (LINQ to XML)'
+                              href: programming-guide/concepts/linq/how-to-join-two-collections-linq-to-xml.md
+                            - name: 'Nasıl yapılır: Gruplandırma Kullanarak Hiyerarşi Oluşturma'
+                              href: programming-guide/concepts/linq/how-to-create-hierarchy-using-grouping.md
+                            - name: 'Nasıl yapılır: XPath Kullanarak LINQ to XML Sorgulama'
+                              href: programming-guide/concepts/linq/how-to-query-linq-to-xml-using-xpath.md
+                            - name: 'Nasıl yapılır: LINQ to XML Eksen Yöntemi Yazma'
+                              href: programming-guide/concepts/linq/how-to-write-a-linq-to-xml-axis-method.md
+                            - name: 'Nasıl yapılır: Metinden XML’e Akış Dönüşümleri Gerçekleştirme'
+                              href: programming-guide/concepts/linq/how-to-perform-streaming-transformations-of-text-to-xml.md
+                            - name: 'Nasıl yapılır: Bir Ağaçtaki Tüm Düğümleri Listeleme'
+                              href: programming-guide/concepts/linq/how-to-list-all-nodes-in-a-tree.md
+                            - name: 'Nasıl yapılır: Bir Office Open XML Belgesinden Paragrafları Alma'
+                              href: programming-guide/concepts/linq/how-to-retrieve-paragraphs-from-an-office-open-xml-document.md
+                            - name: 'Nasıl yapılır: Bir Office Open XML Belgesini Değiştirme'
+                              href: programming-guide/concepts/linq/how-to-modify-an-office-open-xml-document.md
+                            - name: 'Nasıl yapılır: Dosya Sisteminden bir XML Ağacı Doldurma'
+                              href: programming-guide/concepts/linq/how-to-populate-an-xml-tree-from-the-file-system.md
+                        - name: XPath Kullanıcıları için LINQ to XML
+                          items:
+                            - name: XPath ile LINQ to XML Karşılaştırması
+                              href: programming-guide/concepts/linq/comparison-of-xpath-and-linq-to-xml.md
+                            - name: 'Nasıl yapılır: Alt Öğe Bulma (XPath-LINQ to XML)'
+                              href: programming-guide/concepts/linq/how-to-find-a-child-element-xpath-linq-to-xml.md
+                            - name: 'Nasıl yapılır: Alt Öğe Listesini Bulma (XPath-LINQ to XML)'
+                              href: programming-guide/concepts/linq/how-to-find-a-list-of-child-elements-xpath-linq-to-xml.md
+                            - name: 'Nasıl yapılır: Kök Öğe Bulma (XPath-LINQ to XML)'
+                              href: programming-guide/concepts/linq/how-to-find-the-root-element-xpath-linq-to-xml.md
+                            - name: 'Nasıl yapılır: Alt Öğe Bulma (XPath-LINQ to XML)'
+                              href: programming-guide/concepts/linq/how-to-find-descendant-elements-xpath-linq-to-xml.md
+                            - name: 'Nasıl yapılır: Öznitelik Filtreleme (XPath-LINQ to XML)'
+                              href: programming-guide/concepts/linq/how-to-filter-on-an-attribute-xpath-linq-to-xml.md
+                            - name: 'Nasıl yapılır: İlgili Öğeleri Bulma (XPath-LINQ to XML)'
+                              href: programming-guide/concepts/linq/how-to-find-related-elements-xpath-linq-to-xml.md
+                            - name: 'Nasıl yapılır: Ad Alanındaki Öğeleri Bulma (XPath-LINQ to XML)'
+                              href: programming-guide/concepts/linq/how-to-find-elements-in-a-namespace-xpath-linq-to-xml.md
+                            - name: 'Nasıl yapılır: Önceki Eşdüzeyleri Bulma (XPath-LINQ to XML)'
+                              href: programming-guide/concepts/linq/how-to-find-preceding-siblings-xpath-linq-to-xml.md
+                            - name: 'Nasıl yapılır: Bir Alt Öğenin Alt Öğelerini Bulma (XPath-LINQ to XML)'
+                              href: programming-guide/concepts/linq/how-to-find-descendants-of-a-child-element-xpath-linq-to-xml.md
+                            - name: 'Nasıl yapılır: İki Konum Yolunun Birleşimini Bulma (XPath-LINQ to XML)'
+                              href: programming-guide/concepts/linq/how-to-find-a-union-of-two-location-paths-xpath-linq-to-xml.md
+                            - name: 'Nasıl yapılır: Eşdüzey Düğümleri Bulma (XPath-LINQ to XML)'
+                              href: programming-guide/concepts/linq/how-to-find-sibling-nodes-xpath-linq-to-xml.md
+                            - name: 'Nasıl yapılır: Üst Öğenin Özniteliğini Bulma (XPath-LINQ to XML)'
+                              href: programming-guide/concepts/linq/how-to-find-an-attribute-of-the-parent-xpath-linq-to-xml.md
+                            - name: 'Nasıl yapılır: Belirli bir Ada Sahip Eşdüzeylerin Özniteliklerini Bulma (XPath-LINQ to XML)'
+                              href: programming-guide/concepts/linq/how-to-find-attributes-of-siblings-with-a-specific-name-xpath-linq-to-xml.md
+                            - name: 'Nasıl yapılır: Belirli bir Özniteliğe Sahip Öğeleri Bulma (XPath-LINQ to XML)'
+                              href: programming-guide/concepts/linq/how-to-find-elements-with-a-specific-attribute-xpath-linq-to-xml.md
+                            - name: 'Nasıl yapılır: Konuma Göre Alt Öğeleri Bulma (XPath-LINQ to XML)'
+                              href: programming-guide/concepts/linq/how-to-find-child-elements-based-on-position-xpath-linq-to-xml.md
+                            - name: 'Nasıl yapılır: Bir Önceki Eşdüzeyi Bulma (XPath-LINQ to XML)'
+                              href: programming-guide/concepts/linq/how-to-find-the-immediate-preceding-sibling-xpath-linq-to-xml.md
+                        - name: Saf İşlevsel XML Dönüşümleri
+                          items:
+                            - name: Saf İşlevsel Dönüşümlere Giriş
+                              href: programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md
+                            - name: Kavramlar ve Terimler (İşlevsel Dönüşüm)
+                              href: programming-guide/concepts/linq/concepts-and-terminology-functional-transformation.md
+                            - name: İşlevsel Programlama ve Kesin Programlama Karşılaştırması
+                              href: programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md
+                            - name: Saf İşlevler Halinde Yeniden Düzenleme
+                              href: programming-guide/concepts/linq/refactoring-into-pure-functions.md
+                            - name: İşlev Dönüşümün Uygulanabilirliği
+                              href: programming-guide/concepts/linq/applicability-of-functional-transformation.md
+                            - name: XML İşlevsel Dönüşümü
+                              href: programming-guide/concepts/linq/functional-transformation-of-xml.md
+                            - name: 'Öğretici: Sorguları Birbirine Zincirleme'
+                              items:
+                                - name: LINQ to XML’de Ertelenmiş Yürütme ve Geç Değerlendirme
+                                  href: programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md
+                                - name: Ertelenmiş Yürütme Örneği
+                                  href: programming-guide/concepts/linq/deferred-execution-example.md
+                                - name: Sorguları Zincirleme Örneği
+                                  href: programming-guide/concepts/linq/chaining-queries-example.md
+                                - name: Ara Gerçekleştirme
+                                  href: programming-guide/concepts/linq/intermediate-materialization.md
+                                - name: Standart Sorgu İşleçlerini Birbirine Zincirleme
+                                  href: programming-guide/concepts/linq/chaining-standard-query-operators-together.md
+                            - name: 'Öğretici: Sorguları Birbirine Zincirleme'
+                              items:
+                                - name: LINQ to XML’de Ertelenmiş Yürütme ve Geç Değerlendirme
+                                  href: programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md
+                                - name: Ertelenmiş Yürütme Örneği
+                                  href: programming-guide/concepts/linq/deferred-execution-example.md
+                                - name: Sorguları Zincirleme Örneği
+                                  href: programming-guide/concepts/linq/chaining-queries-example.md
+                                - name: Ara Gerçekleştirme
+                                  href: programming-guide/concepts/linq/intermediate-materialization.md
+                                - name: Standart Sorgu İşleçlerini Birbirine Zincirleme
+                                  href: programming-guide/concepts/linq/chaining-standard-query-operators-together.md
+                            - name: 'Öğretici: WordprocessingML Belgesindeki İçeriği Düzenleme'
+                              items:
+                                - name: WordprocessingML Belgelerinin Şekli
+                                  href: programming-guide/concepts/linq/shape-of-wordprocessingml-documents.md
+                                - name: Kaynak Office Open XML Belgesi Oluşturma
+                                  href: programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md
+                                - name: Varsayılan Paragraf Stilini Bulma
+                                  href: programming-guide/concepts/linq/finding-the-default-paragraph-style.md
+                                - name: Paragrafları ve Stillerini Alma
+                                  href: programming-guide/concepts/linq/retrieving-the-paragraphs-and-their-styles.md
+                                - name: Paragrafların Metnini Alma
+                                  href: programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md
+                                - name: Genişletme Yöntemi Kullanarak Yeniden Düzenleme
+                                  href: programming-guide/concepts/linq/refactoring-using-an-extension-method.md
+                                - name: Saf İşlev Kullanarak Yeniden Düzenleme
+                                  href: programming-guide/concepts/linq/refactoring-using-a-pure-function.md
+                                - name: XML’i Farklı Şekilde Yansıtma
+                                  href: programming-guide/concepts/linq/projecting-xml-in-a-different-shape.md
+                                - name: Word Belgelerinde Metin Bulma
+                                  href: programming-guide/concepts/linq/finding-text-in-word-documents.md
+                                - name: Office Open XML WordprocessingML Belgelerinin Ayrıntıları
+                                  items:
+                                    - name: Stillerle WordprocessingML Belgesi
+                                      href: programming-guide/concepts/linq/wordprocessingml-document-with-styles.md
+                                    - name: WordprocessingML Belgesinin Stil Kısmı
+                                      href: programming-guide/concepts/linq/style-part-of-a-wordprocessingml-document.md
+                                    - name: Office Open XML Belge Kısımları Çıkaran Örnek
+                                      href: programming-guide/concepts/linq/example-that-outputs-office-open-xml-document-parts.md
+                    - name: XML Ağaçlarını Değiştirme (LINQ to XML)
+                      items:
+                        - name: Bellek içi XML Ağacı Değişikliği ve İşlevsel Oluşturma (LINQ to XML) Karşılaştırması
+                          href: programming-guide/concepts/linq/in-memory-xml-tree-modification-vs-functional-construction-linq-to-xml.md
+                        - name: 'XML Ağacına Öğe, Öznitelik ve Düğümler Ekleme'
+                          href: programming-guide/concepts/linq/adding-elements-attributes-and-nodes-to-an-xml-tree.md
+                        - name: 'XML Ağacındaki Öğe, Öznitelik ve Düğümleri Değiştirme'
+                          href: programming-guide/concepts/linq/modifying-elements-attributes-and-nodes-in-an-xml-tree.md
+                        - name: 'XML Ağacından Öğe, Öznitelik ve Düğümleri Kaldırma'
+                          href: programming-guide/concepts/linq/removing-elements-attributes-and-nodes-from-an-xml-tree.md
+                        - name: Ad-Değer Çiftleri Sağlama
+                          href: programming-guide/concepts/linq/maintaining-name-value-pairs.md
+                        - name: 'Nasıl yapılır: Tüm XML Ağacının Ad Alanını Değiştirme'
+                          href: programming-guide/concepts/linq/how-to-change-the-namespace-for-an-entire-xml-tree.md
+                    - name: Performans (LINQ to XML)
+                      items:
+                        - name: Zincirlenmiş Sorguların Performansı (LINQ to XML)
+                          href: programming-guide/concepts/linq/performance-of-chained-queries-linq-to-xml.md
+                        - name: Parçalara Ayrılmış XName ve XNamespace Nesneleri (LINQ to XML)
+                          href: programming-guide/concepts/linq/atomized-xname-and-xnamespace-objects-linq-to-xml.md
+                        - name: Parçalara Ayırma Öncesi XName Nesneleri (LINQ to XML)
+                          href: programming-guide/concepts/linq/pre-atomization-of-xname-objects-linq-to-xml.md
+                        - name: Statik Olarak Derlenmiş Sorgular (LINQ to XML)
+                          href: programming-guide/concepts/linq/statically-compiled-queries-linq-to-xml.md
+                    - name: Gelişmiş LINQ to XML Programlama
+                      items:
+                        - name: LINQ to XML Ek Açıklamaları
+                          href: programming-guide/concepts/linq/linq-to-xml-annotations.md
+                        - name: LINQ to XML Olayları
+                          href: programming-guide/concepts/linq/linq-to-xml-events.md
+                        - name: Düğümlerle Programlama
+                          href: programming-guide/concepts/linq/programming-with-nodes.md
+                        - name: Bildirim Temelli-Kesinlik Temelli Kod Hataları Karışımı (LINQ to XML)
+                          href: programming-guide/concepts/linq/mixed-declarative-code-imperative-code-bugs-linq-to-xml.md
+                        - name: 'Nasıl yapılır: Üst Bilgilere Erişimle XML Parçalarının Akışını Yapma'
+                          href: programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md
+                        - name: 'Nasıl yapılır: Büyük XML Belgelerinin Akış Dönüşümünü Gerçekleştirme'
+                          href: programming-guide/concepts/linq/how-to-perform-streaming-transform-of-large-xml-documents.md
+                        - name: 'Nasıl yapılır: Kodlanmış Belge Okuma ve Yazma'
+                          href: programming-guide/concepts/linq/how-to-read-and-write-an-encoded-document.md
+                        - name: XML Ağacı Dönüştürmek için XSLT Kullanma
+                          href: programming-guide/concepts/linq/using-xslt-to-transform-an-xml-tree.md
+                        - name: 'Nasıl yapılır: XSLT Stilindeki LINQ to XML Ağaçlarını Dönüştürmek için Ek Açıklamalar Kullanma'
+                          href: programming-guide/concepts/linq/how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style.md
+                        - name: XElement Nesneleri İçeren Nesne Grafiklerini Serileştirme
+                          items:
+                            - name: 'Nasıl yapılır: XmlSerializer Kullanarak Serileştirme'
+                              href: programming-guide/concepts/linq/how-to-serialize-using-xmlserializer.md
+                            - name: 'Nasıl yapılır: DataContractSerializer Kullanarak Serileştirme'
+                              href: programming-guide/concepts/linq/how-to-serialize-using-datacontractserializer.md
+                    - name: LINQ to XML Güvenliği
+                      href: programming-guide/concepts/linq/linq-to-xml-security.md
+                    - name: Örnek XML Belgeleri (LINQ to XML)
+                      items:
+                        - name: 'Örnek XML Dosyası: Tipik Satın Alma Siparişi (LINQ to XML)'
+                          href: programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml-1.md
+                        - name: 'Örnek XML Dosyası: Bir Ad Alanında Tipik Satın Alma Siparişi'
+                          href: programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-in-a-namespace.md
+                        - name: 'Örnek XML Dosyası: Birden Fazla Satın Alma Siparişi (LINQ to XML)'
+                          href: programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md
+                        - name: 'Örnek XML Dosyası: Bir Ad Alanında Birden Fazla Satın Alma Siparişi'
+                          href: programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-in-a-namespace.md
+                        - name: 'Örnek XML Dosyası: Test Yapılandırması (LINQ to XML)'
+                          href: programming-guide/concepts/linq/sample-xml-file-test-configuration-linq-to-xml.md
+                        - name: 'Örnek XML Dosyası: Bir Ad Alanında Test Yapılandırması'
+                          href: programming-guide/concepts/linq/sample-xml-file-test-configuration-in-a-namespace1.md
+                        - name: 'Örnek XML Dosyası: Müşteriler ve Siparişler (LINQ to XML)'
+                          href: programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md
+                        - name: 'Örnek XSD Dosyası: Müşteriler ve Siparişler'
+                          href: programming-guide/concepts/linq/sample-xsd-file-customers-and-orders1.md
+                        - name: 'Örnek XML Dosyası: Bir Ad Alanında Müşteriler ve Siparişler'
+                          href: programming-guide/concepts/linq/sample-xml-file-customers-and-orders-in-a-namespace.md
+                        - name: 'Örnek XML Dosyası: Sayısal Veriler (LINQ to XML)'
+                          href: programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md
+                        - name: 'Örnek XML Dosyası: Bir Ad Alanında Sayısal Veriler'
+                          href: programming-guide/concepts/linq/sample-xml-file-numerical-data-in-a-namespace.md
+                        - name: 'Örnek XML Dosyası: Kitaplar (LINQ to XML)'
+                          href: programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md
+                        - name: 'Örnek XML Dosyası: Birleştirilmiş Satın Alma Siparişleri'
+                          href: programming-guide/concepts/linq/sample-xml-file-consolidated-purchase-orders.md
+                - name: Başvuru (LINQ to XML)
+                  href: programming-guide/concepts/linq/reference-linq-to-xml.md
+            - name: ADO.NET'e LINQ (Portal Sayfası)
+              href: programming-guide/concepts/linq/linq-to-adonet-portal-page.md
+            - name: LINQ Sorgusu için Veri Kaynağı Etkinleştirme
+              href: programming-guide/concepts/linq/enabling-a-data-source-for-linq-querying1.md
+            - name: Visual Studio IDE ve LINQ için Araçlar Desteği
+              href: programming-guide/concepts/linq/visual-studio-ide-and-tools-support-for-linq.md
+        - name: Nesne Odaklı Programlama
+          href: programming-guide/concepts/object-oriented-programming.md
+        - name: Yansıma
+          href: programming-guide/concepts/reflection.md
+        - name: 'Serileştirme (C# )'
+          items:
+            - name: Genel Bakış
+              href: programming-guide/concepts/serialization/index.md
+            - name: 'Nasıl yapılır: Nesne Verilerini bir XML Dosyasına Yazma'
+              href: programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md
+            - name: 'Nasıl yapılır: Nesne Verilerini bir XML Dosyasından Okuma'
+              href: programming-guide/concepts/serialization/how-to-read-object-data-from-an-xml-file.md
+            - name: 'İzlenecek yol: Visual Studio’da Bir Nesneyi Kalıcı Kılma'
+              href: programming-guide/concepts/serialization/walkthrough-persisting-an-object-in-visual-studio.md
+    - name: 'Deyimler, İfadeler ve İşleçler'
+      items:
+        - name: Genel Bakış
+          href: programming-guide/statements-expressions-operators/index.md
+        - name: Deyimler
+          href: programming-guide/statements-expressions-operators/statements.md
+        - name: İfadeler
+          href: programming-guide/statements-expressions-operators/expressions.md
+        - name: İfade gövdeli üyeler
+          href: programming-guide/statements-expressions-operators/expression-bodied-members.md
+        - name: Anonim işlevler
+          items:
+            - name: Genel Bakış
+              href: programming-guide/statements-expressions-operators/anonymous-functions.md
+            - name: Lambda ifadeleri
+              href: programming-guide/statements-expressions-operators/lambda-expressions.md
+            - name: 'Nasıl yapılır: Sorguda lambda ifadeleri kullanma'
+              href: programming-guide/statements-expressions-operators/how-to-use-lambda-expressions-in-a-query.md
+        - name: Eşitlik ve eşitlik karşılaştırmaları
+          items:
+            - name: Eşitlik karşılaştırmaları
+              href: programming-guide/statements-expressions-operators/equality-comparisons.md
+            - name: 'Nasıl yapılır: Tür için değer eşitliği tanımlama'
+              href: programming-guide/statements-expressions-operators/how-to-define-value-equality-for-a-type.md
+            - name: 'Nasıl yapılır: Başvuru eşitliği testi (kimlik)'
+              href: programming-guide/statements-expressions-operators/how-to-test-for-reference-equality-identity.md
+    - name: Türler
+      items:
+        - name: Türleri tanımlama ve kullanma
+          href: programming-guide/types/index.md
+        - name: Atama ve Tür Dönüşümleri
+          href: programming-guide/types/casting-and-type-conversions.md
+        - name: Kutulama ve Kutudan Çıkarma
+          href: programming-guide/types/boxing-and-unboxing.md
+        - name: 'Nasıl yapılır: byte Dizisini int''e Dönüştürme'
+          href: programming-guide/types/how-to-convert-a-byte-array-to-an-int.md
+        - name: 'Nasıl yapılır: Bir Dizeyi Sayıya Dönüştürme'
+          href: programming-guide/types/how-to-convert-a-string-to-a-number.md
+        - name: 'Nasıl yapılır: Onaltılık Dizeler ve Sayısal Türler Arasında Dönüştürme'
+          href: programming-guide/types/how-to-convert-between-hexadecimal-strings-and-numeric-types.md
+        - name: Tür dinamiği kullanma
+          href: programming-guide/types/using-type-dynamic.md
+        - name: 'İzlenecek yol: Dinamik Nesneler Oluşturma ve Kullanma (C# and Visual Basic)'
+          href: programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md
+    - name: Sınıflar ve Yapılar
+      items:
+        - name: Genel Bakış
+          href: programming-guide/classes-and-structs/index.md
+        - name: Sınıflar
+          href: programming-guide/classes-and-structs/classes.md
+        - name: Nesneler
+          href: programming-guide/classes-and-structs/objects.md
+        - name: Yapılar
+          items:
+            - name: Genel Bakış
+              href: programming-guide/classes-and-structs/structs.md
+            - name: Yapıları Kullanma
+              href: programming-guide/classes-and-structs/using-structs.md
+        - name: Devralma
+          href: programming-guide/classes-and-structs/inheritance.md
+        - name: Çok Biçimlilik
+          items:
+            - name: Genel Bakış
+              href: programming-guide/classes-and-structs/polymorphism.md
+            - name: Geçersiz Kılma ve Yeni Anahtar Sözcüklerle Sürüm Oluşturma
+              href: programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md
+            - name: Geçersiz Kılmanın ve Yeni Anahtar Sözcüklerin Ne Zaman Kullanılacağını Bilme
+              href: programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md
+            - name: 'Nasıl yapılır: ToString Yöntemini Geçersiz Kılma'
+              href: programming-guide/classes-and-structs/how-to-override-the-tostring-method.md
+        - name: Üyeler
+          items:
+            - name: Üyelere genel bakış
+              href: programming-guide/classes-and-structs/members.md
+            - name: Soyut ve Korumalı Sınıflar ve Sınıf Üyeleri
+              href: programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md
+            - name: Statik Sınıflar ve Statik Sınıf Üyeleri
+              href: programming-guide/classes-and-structs/static-classes-and-static-class-members.md
+            - name: Erişim Değiştiricileri
+              href: programming-guide/classes-and-structs/access-modifiers.md
+            - name: Alanlar
+              href: programming-guide/classes-and-structs/fields.md
+            - name: Sabitler
+              href: programming-guide/classes-and-structs/constants.md
+            - name: 'Nasıl yapılır: Soyut Özellikleri Tanımlama'
+              href: programming-guide/classes-and-structs/how-to-define-abstract-properties.md
+            - name: 'Nasıl yapılır: C# İçinde Sabitleri Tanımlama'
+              href: programming-guide/classes-and-structs/how-to-define-constants.md
+        - name: Özellikler
+          items:
+            - name: Özelliklere genel bakış
+              href: programming-guide/classes-and-structs/properties.md
+            - name: Özellikleri Kullanma
+              href: programming-guide/classes-and-structs/using-properties.md
+            - name: Arabirim Özellikleri
+              href: programming-guide/classes-and-structs/interface-properties.md
+            - name: Erişimci Erişilebilirliğini Kısıtlama
+              href: programming-guide/classes-and-structs/restricting-accessor-accessibility.md
+            - name: 'Nasıl yapılır: Okuma Yazma Özellikleri Bildirme ve Kullanma'
+              href: programming-guide/classes-and-structs/how-to-declare-and-use-read-write-properties.md
+            - name: Otomatik Uygulanan Özellikler
+              href: programming-guide/classes-and-structs/auto-implemented-properties.md
+            - name: 'Nasıl yapılır: Otomatik Uygulanan Özelliklerle Hafif bir Sınıf Uygulama'
+              href: programming-guide/classes-and-structs/how-to-implement-a-lightweight-class-with-auto-implemented-properties.md
+        - name: Yöntemler
+          items:
+            - name: Metotlara genel bakış
+              href: programming-guide/classes-and-structs/methods.md
+            - name: Yerel işlevler
+              href: programming-guide/classes-and-structs/local-functions.md
+            - name: Ref dönüşler ve ref yerel ayarlar
+              href: programming-guide/classes-and-structs/ref-returns.md
+            - name: Parametreler
+              items:
+                - name: Parametreleri geçirme
+                  href: programming-guide/classes-and-structs/passing-parameters.md
+                - name: Değer Türü Parametrelerini Geçirme
+                  href: programming-guide/classes-and-structs/passing-value-type-parameters.md
+                - name: Başvuru Türü Parametreleri Geçirme
+                  href: programming-guide/classes-and-structs/passing-reference-type-parameters.md
+                - name: 'Nasıl yapılır: Yapı Geçirme ile Yönteme Sınıf Başvurusu Geçirme Arasındaki Farkı Bilme'
+                  href: programming-guide/classes-and-structs/how-to-know-the-difference-passing-a-struct-and-passing-a-class-to-a-method.md
+            - name: Örtülü Olarak Yazılan Yerel Değişkenler
+              href: programming-guide/classes-and-structs/implicitly-typed-local-variables.md
+            - name: 'Nasıl yapılır: Sorgu İfadesinde Türü Örtük Olarak Belirlenmiş Yerel Değişkenleri ve Dizileri Kullanma'
+              href: programming-guide/classes-and-structs/how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md
+            - name: Genişletme Yöntemleri
+              href: programming-guide/classes-and-structs/extension-methods.md
+            - name: 'Nasıl yapılır: Özel bir Genişletme Yöntemi Uygulama ve Arama'
+              href: programming-guide/classes-and-structs/how-to-implement-and-call-a-custom-extension-method.md
+            - name: 'Nasıl yapılır: Sabit Listesi için Yeni bir Yöntem Oluşturma'
+              href: programming-guide/classes-and-structs/how-to-create-a-new-method-for-an-enumeration.md
+            - name: Adlandırılmış ve İsteğe Bağlı Bağımsız Değişkenler
+              href: programming-guide/classes-and-structs/named-and-optional-arguments.md
+            - name: 'Nasıl yapılır: Office Programlamada Adlandırılmış ve İsteğe Bağlı Bağımsız Değişkenleri Kullanma'
+              href: programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md
+        - name: Oluşturucular
+          items:
+            - name: Oluşturuculara genel bakış
+              href: programming-guide/classes-and-structs/constructors.md
+            - name: Oluşturucular Kullanma
+              href: programming-guide/classes-and-structs/using-constructors.md
+            - name: Örnek Oluşturucuları
+              href: programming-guide/classes-and-structs/instance-constructors.md
+            - name: Özel Oluşturucular
+              href: programming-guide/classes-and-structs/private-constructors.md
+            - name: Statik Oluşturucular
+              href: programming-guide/classes-and-structs/static-constructors.md
+            - name: 'Nasıl yapılır: Kopya Oluşturucu Yazma'
+              href: programming-guide/classes-and-structs/how-to-write-a-copy-constructor.md
+        - name: Sonlandırıcılar
+          href: programming-guide/classes-and-structs/destructors.md
+        - name: Nesne ve Koleksiyon Başlatıcıları
+          href: programming-guide/classes-and-structs/object-and-collection-initializers.md
+        - name: 'Nasıl yapılır: Nesne Başlatıcı Kullanarak Nesneleri Başlatma'
+          href: programming-guide/classes-and-structs/how-to-initialize-objects-by-using-an-object-initializer.md
+        - name: 'Nasıl yapılır: Koleksiyon Başlatıcısı ile bir Sözlük Başlatma'
+          href: programming-guide/classes-and-structs/how-to-initialize-a-dictionary-with-a-collection-initializer.md
+        - name: İç içe Geçmiş Türler
+          href: programming-guide/classes-and-structs/nested-types.md
+        - name: Parçalı Sınıflar ve Yöntemler
+          href: programming-guide/classes-and-structs/partial-classes-and-methods.md
+        - name: Anonim Türler
+          href: programming-guide/classes-and-structs/anonymous-types.md
+        - name: 'Nasıl yapılır: Bir Sorguda Öğe Özelliklerinin Alt Kümelerini Döndürme'
+          href: programming-guide/classes-and-structs/how-to-return-subsets-of-element-properties-in-a-query.md
+    - name: Arabirimler
+      items:
+        - name: Genel Bakış
+          href: programming-guide/interfaces/index.md
+        - name: Açık Arabirim Uygulaması
+          href: programming-guide/interfaces/explicit-interface-implementation.md
+        - name: 'Nasıl yapılır: Arabirim Üyelerini Açıkça Uygulama'
+          href: programming-guide/interfaces/how-to-explicitly-implement-interface-members.md
+        - name: 'Nasıl yapılır: İki Arabirimin Üyelerini Açıkça Uygulama'
+          href: programming-guide/interfaces/how-to-explicitly-implement-members-of-two-interfaces.md
+    - name: Numaralandırma Türleri
+      href: programming-guide/enumeration-types.md
+    - name: Temsilciler
+      items:
+        - name: Genel Bakış
+          href: programming-guide/delegates/index.md
+        - name: Temsilcileri Kullanma
+          href: programming-guide/delegates/using-delegates.md
+        - name: Temsilcilerin Adlandırılmış ve Anonim Yöntemler
+          href: programming-guide/delegates/delegates-with-named-vs-anonymous-methods.md
+        - name: 'Nasıl yapılır: Temsilcileri Birleştirme (Çok Noktaya Yayın Temsilcileri)(C# Programlama Kılavuzu)'
+          href: programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md
+        - name: 'Nasıl yapılır: Temsilci Bildirme, Oluşturma ve Kullanma'
+          href: programming-guide/delegates/how-to-declare-instantiate-and-use-a-delegate.md
+    - name: Diziler
+      items:
+        - name: Genel Bakış
+          href: programming-guide/arrays/index.md
+        - name: Nesne Olarak Diziler
+          href: programming-guide/arrays/arrays-as-objects.md
+        - name: Tek Boyutlu Diziler
+          href: programming-guide/arrays/single-dimensional-arrays.md
+        - name: Çok Boyutlu Diziler
+          href: programming-guide/arrays/multidimensional-arrays.md
+        - name: Düzensiz Diziler
+          href: programming-guide/arrays/jagged-arrays.md
+        - name: Dizilerle foreach kullanma
+          href: programming-guide/arrays/using-foreach-with-arrays.md
+        - name: Dizileri Bağımsız Değişkenler Olarak Geçirme
+          href: programming-guide/arrays/passing-arrays-as-arguments.md
+        - name: Türü Örtük Olarak Belirlenmiş Diziler
+          href: programming-guide/arrays/implicitly-typed-arrays.md
+    - name: Dizeler
+      items:
+        - name: Dizeler ile programlama
+          href: programming-guide/strings/index.md
+        - name: 'Nasıl yapılır: Bir Dizenin Sayısal bir Değeri Temsil Edip Etmediğini Belirleme'
+          href: programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md
+    - name: Dizin Oluşturucular
+      items:
+        - name: Genel Bakış
+          href: programming-guide/indexers/index.md
+        - name: Dizin Oluşturucular Kullanma
+          href: programming-guide/indexers/using-indexers.md
+        - name: Arabirimlerdeki Dizin Oluşturucular
+          href: programming-guide/indexers/indexers-in-interfaces.md
+        - name: Özellikler ve Dizin Oluşturucular Arasında Karşılaştırma
+          href: programming-guide/indexers/comparison-between-properties-and-indexers.md
+    - name: Olaylar
+      items:
+        - name: Genel Bakış
+          href: programming-guide/events/index.md
+        - name: 'Nasıl yapılır: Olaylara Abone Olma ve Aboneliği Kaldırma'
+          href: programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md
+        - name: 'Nasıl yapılır: .NET Framework Yönergeleriyle Uyumlu Olayları Yayımlama'
+          href: programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md
+        - name: 'Nasıl yapılır: Türetilmiş Sınıflarda Temel Sınıf Olayları Oluşturma'
+          href: programming-guide/events/how-to-raise-base-class-events-in-derived-classes.md
+        - name: 'Nasıl yapılır: Arabirim Olaylarını Uygulama'
+          href: programming-guide/events/how-to-implement-interface-events.md
+        - name: 'Nasıl yapılır: Özel Olay Erişimcilerini Uygulama'
+          href: programming-guide/events/how-to-implement-custom-event-accessors.md
+    - name: Genel Türler
+      items:
+        - name: Genel Bakış
+          href: programming-guide/generics/index.md
+        - name: Genel Tür Parametreleri
+          href: programming-guide/generics/generic-type-parameters.md
+        - name: Tür Parametrelerindeki Kısıtlamalar
+          href: programming-guide/generics/constraints-on-type-parameters.md
+        - name: Genel Sınıflar
+          href: programming-guide/generics/generic-classes.md
+        - name: Genel Arabirimler
+          href: programming-guide/generics/generic-interfaces.md
+        - name: Genel Yöntemler
+          href: programming-guide/generics/generic-methods.md
+        - name: Genel Türler ve Diziler
+          href: programming-guide/generics/generics-and-arrays.md
+        - name: Genel Temsilciler
+          href: programming-guide/generics/generic-delegates.md
+        - name: 'C++ Şablonları ve C# Genel Türleri Arasındaki Farklar'
+          href: programming-guide/generics/differences-between-cpp-templates-and-csharp-generics.md
+        - name: Çalışma Zamanındaki Genel Türler
+          href: programming-guide/generics/generics-in-the-run-time.md
+        - name: Genel Türler ve Yansıma
+          href: programming-guide/generics/generics-and-reflection.md
+        - name: Genel Türler ve Öznitelikler
+          href: programming-guide/generics/generics-and-attributes.md
+    - name: Ad Alanları
+      items:
+        - name: Genel Bakış
+          href: programming-guide/namespaces/index.md
+        - name: Ad alanlarını kullanma
+          href: programming-guide/namespaces/using-namespaces.md
+        - name: 'Nasıl yapılır: Ad Alanımı kullanma'
+          href: programming-guide/namespaces/how-to-use-the-my-namespace.md
+    - name: Boş değer atanabilen değer türleri
+      items:
+        - name: Genel Bakış
+          href: programming-guide/nullable-types/index.md
+        - name: Boş değer atanabilen değer türlerini kullanma
+          href: programming-guide/nullable-types/using-nullable-types.md
+        - name: 'Nasıl yapılır: boş değer atanabilir değer türünü tanımlama'
+          href: programming-guide/nullable-types/how-to-identify-a-nullable-type.md
+    - name: Güvenli Olmayan Kod ve İşaretçiler
+      items:
+        - name: Genel bakış ve kısıtlamalar
+          href: programming-guide/unsafe-code-pointers/index.md
+        - name: Sabit Boyutlu Arabellekler
+          href: programming-guide/unsafe-code-pointers/fixed-size-buffers.md
+        - name: İşaretçi türleri
+          items:
+            - name: Genel Bakış
+              href: programming-guide/unsafe-code-pointers/pointer-types.md
+            - name: İşaretçi Dönüştürmeler
+              href: programming-guide/unsafe-code-pointers/pointer-conversions.md
+            - name: 'Nasıl yapılır: Bayt Dizisine Kopyalamak için İşaretçiler Kullanma'
+              href: programming-guide/unsafe-code-pointers/how-to-use-pointers-to-copy-an-array-of-bytes.md
+    - name: XML Belgeleri Yorumları
+      items:
+        - name: Genel Bakış
+          href: programming-guide/xmldoc/index.md
+        - name: Belge Açıklamaları için Önerilen Etiketler
+          href: programming-guide/xmldoc/recommended-tags-for-documentation-comments.md
+        - name: XML Dosyasını İşleme
+          href: programming-guide/xmldoc/processing-the-xml-file.md
+        - name: Belge Etiketleri için Sınırlayıcılar
+          href: programming-guide/xmldoc/delimiters-for-documentation-tags.md
+        - name: 'Nasıl yapılır: XML Belgesi Özelliklerini Kullanma'
+          href: programming-guide/xmldoc/how-to-use-the-xml-documentation-features.md
+        - name: Belge etiketi başvurusu
+          items:
+            - name: <c>
+              href: programming-guide/xmldoc/code-inline.md
+            - name: <code>
+              href: programming-guide/xmldoc/code.md
+            - name: cref Özniteliği
+              href: programming-guide/xmldoc/cref-attribute.md
+            - name: <example>
+              href: programming-guide/xmldoc/example.md
+            - name: <exception>
+              href: programming-guide/xmldoc/exception.md
+            - name: <include>
+              href: programming-guide/xmldoc/include.md
+            - name: <list>
+              href: programming-guide/xmldoc/list.md
+            - name: <para>
+              href: programming-guide/xmldoc/para.md
+            - name: <param>
+              href: programming-guide/xmldoc/param.md
+            - name: <paramref>
+              href: programming-guide/xmldoc/paramref.md
+            - name: <permission>
+              href: programming-guide/xmldoc/permission.md
+            - name: <remarks>
+              href: programming-guide/xmldoc/remarks.md
+            - name: <returns>
+              href: programming-guide/xmldoc/returns.md
+            - name: <see>
+              href: programming-guide/xmldoc/see.md
+            - name: <seealso>
+              href: programming-guide/xmldoc/seealso.md
+            - name: <summary>
+              href: programming-guide/xmldoc/summary.md
+            - name: <typeparam>
+              href: programming-guide/xmldoc/typeparam.md
+            - name: <typeparamref>
+              href: programming-guide/xmldoc/typeparamref.md
+            - name: <value>
+              href: programming-guide/xmldoc/value.md
+    - name: Özel Durumlar ve Özel Durum İşleme
+      items:
+        - name: Genel Bakış
+          href: programming-guide/exceptions/index.md
+        - name: Özel Durumlar Kullanma
+          href: programming-guide/exceptions/using-exceptions.md
+        - name: Özel Durum İşleme
+          href: programming-guide/exceptions/exception-handling.md
+        - name: Özel Durumlar Oluşturma ve Atma
+          href: programming-guide/exceptions/creating-and-throwing-exceptions.md
+        - name: Derleyicinin Ürettiği Özel Durumlar
+          href: programming-guide/exceptions/compiler-generated-exceptions.md
+        - name: 'Nasıl yapılır: try/catch Kullanarak Özel Durum İşleme'
+          href: programming-guide/exceptions/how-to-handle-an-exception-using-try-catch.md
+        - name: 'Nasıl yapılır: Finally Kullanarak Temizleme Kodu Yürütme'
+          href: programming-guide/exceptions/how-to-execute-cleanup-code-using-finally.md
+        - name: 'Nasıl yapılır: CLS Olmayan Özel Durum Değerlendirme'
+          href: programming-guide/exceptions/how-to-catch-a-non-cls-exception.md
+    - name: Dosya Sistemi ve Kayıt Defteri
+      items:
+        - name: Genel Bakış
+          href: programming-guide/file-system/index.md
+        - name: 'Nasıl yapılır: Dizin Ağacı ile Yineleme'
+          href: programming-guide/file-system/how-to-iterate-through-a-directory-tree.md
+        - name: 'Nasıl yapılır: Dosyalar, Klasörler ve Sürücüler Hakkında Bilgi Alma'
+          href: programming-guide/file-system/how-to-get-information-about-files-folders-and-drives.md
+        - name: 'Nasıl yapılır: Dosya veya Klasör Oluşturma'
+          href: programming-guide/file-system/how-to-create-a-file-or-folder.md
+        - name: 'Nasıl yapılır: Dosyaları ve Klasörleri Kopyalama, Silme ve Taşıma'
+          href: programming-guide/file-system/how-to-copy-delete-and-move-files-and-folders.md
+        - name: 'Nasıl yapılır: Dosya İşlemleri için İlerleme Durumu İletişim Kutusu Sağlama'
+          href: programming-guide/file-system/how-to-provide-a-progress-dialog-box-for-file-operations.md
+        - name: 'Nasıl yapılır: Metin Dosyasına Yazma'
+          href: programming-guide/file-system/how-to-write-to-a-text-file.md
+        - name: 'Nasıl yapılır: Metin Dosyasından Okuma'
+          href: programming-guide/file-system/how-to-read-from-a-text-file.md
+        - name: 'Nasıl yapılır: Bir Defada bir Satır Olarak bir Metin Dosyasını Okuma (Visual C#)'
+          href: programming-guide/file-system/how-to-read-a-text-file-one-line-at-a-time.md
+        - name: 'Nasıl yapılır: Kayıt Defterinde Anahtar Oluşturma (Visual C#)'
+          href: programming-guide/file-system/how-to-create-a-key-in-the-registry.md
+    - name: Birlikte Çalışabilirlik
+      items:
+        - name: .NET Birlikte Çalışabilirliği
+          href: programming-guide/interop/index.md
+        - name: Birlikte Çalışabilirliğe Genel Bakış
+          href: programming-guide/interop/interoperability-overview.md
+        - name: 'Nasıl yapılır: Visual C# Özelliklerini Kullanarak Office Birlikte Çalışma Nesnelerine Erişim'
+          href: programming-guide/interop/how-to-access-office-onterop-objects.md
+        - name: 'Nasıl yapılır: COM Birlikte Çalışma Programlamada Dizin Oluşturulmuş Özellikleri Kullanma'
+          href: programming-guide/interop/how-to-use-indexed-properties-in-com-interop-rogramming.md
+        - name: 'Nasıl yapılır: Wave Dosyasını Oynatmak için Platform Çağırma Kullanma'
+          href: programming-guide/interop/how-to-use-platform-invoke-to-play-a-wave-file.md
+        - name: 'İzlenecek yol: Office Programlama (C# ve Visual Basic)'
+          href: programming-guide/interop/walkthrough-office-programming.md
+        - name: Örnek COM Sınıfı
+          href: programming-guide/interop/example-com-class.md
 - name: Dil Başvurusu
-  href: language-reference/
+  items:
+    - name: Genel Bakış
+      href: language-reference/index.md
+    - name: Dil sürümünü yapılandırma
+      href: language-reference/configure-language-version.md
+    - name: 'C# anahtar sözcükleri'
+      items:
+        - name: Genel Bakış
+          href: language-reference/keywords/index.md
+        - name: Yerleşik türler
+          items:
+            - name: Değer Türleri
+              items:
+                - name: Değer türlerinin özellikleri
+                  href: language-reference/keywords/value-types.md
+                - name: bool
+                  href: language-reference/keywords/bool.md
+                - name: Tamsayı sayısal türler
+                  displayName: 'sbyte, byte, short, ushort, int, uint, long, ulong, integer'
+                  href: language-reference/builtin-types/integral-numeric-types.md
+                - name: Kayan nokta sayısal türleri
+                  displayName: 'float, decimal, double, rational, real'
+                  href: language-reference/builtin-types/floating-point-numeric-types.md
+                - name: char
+                  href: language-reference/keywords/char.md
+                - name: enum
+                  href: language-reference/keywords/enum.md
+                - name: struct
+                  href: language-reference/keywords/struct.md
+            - name: Başvuru Türleri
+              items:
+                - name: Başvuru türlerinin özellikleri
+                  href: language-reference/keywords/reference-types.md
+                - name: sınıf
+                  href: language-reference/keywords/class.md
+                - name: Yerleşik başvuru türleri
+                  displayName: 'object, delegate, dynamic, string'
+                  href: language-reference/builtin-types/reference-types.md
+                - name: arabirim
+                  href: language-reference/keywords/interface.md
+            - name: void
+              href: language-reference/keywords/void.md
+            - name: var
+              href: language-reference/keywords/var.md
+            - name: Yönetilmeyen türler
+              href: language-reference/builtin-types/unmanaged-types.md
+            - name: Türler için başvuru tabloları
+              items:
+                - name: Yerleşik türler tablosu
+                  href: language-reference/keywords/built-in-types-table.md
+                - name: Değer türleri tablosu
+                  href: language-reference/keywords/value-types-table.md
+                - name: Varsayılan değerler tablosu
+                  href: language-reference/keywords/default-values-table.md
+                - name: Örtük sayısal dönüştürme tablosu
+                  href: language-reference/keywords/implicit-numeric-conversions-table.md
+                - name: Açık sayısal dönüştürme tablosu
+                  href: language-reference/keywords/explicit-numeric-conversions-table.md
+                - name: Sayısal sonuçlar tablosunu biçimlendirme
+                  href: language-reference/keywords/formatting-numeric-results-table.md
+        - name: Değiştiriciler
+          items:
+            - name: Erişim Değiştiricileri
+              items:
+                - name: Hızlı başvuru
+                  href: language-reference/keywords/access-modifiers.md
+                - name: Erişilebilirlik Düzeyleri
+                  href: language-reference/keywords/accessibility-levels.md
+                - name: Erişilebilirlik Etki Alanı
+                  href: language-reference/keywords/accessibility-domain.md
+                - name: Erişilebilirlik Düzeylerinin Kullanılmasındaki Kısıtlamalar
+                  href: language-reference/keywords/restrictions-on-using-accessibility-levels.md
+                - name: internal
+                  href: language-reference/keywords/internal.md
+                - name: private
+                  href: language-reference/keywords/private.md
+                - name: protected
+                  href: language-reference/keywords/protected.md
+                - name: public
+                  href: language-reference/keywords/public.md
+                - name: protected internal
+                  href: language-reference/keywords/protected-internal.md
+                - name: private protected
+                  href: language-reference/keywords/private-protected.md
+            - name: abstract
+              href: language-reference/keywords/abstract.md
+            - name: async
+              href: language-reference/keywords/async.md
+              displayName: await
+            - name: const
+              href: language-reference/keywords/const.md
+            - name: olay
+              href: language-reference/keywords/event.md
+            - name: extern
+              href: language-reference/keywords/extern.md
+            - name: in (genel değiştirici)
+              href: language-reference/keywords/in-generic-modifier.md
+            - name: new (üye değiştiricisi)
+              href: language-reference/keywords/new-modifier.md
+            - name: out (genel değiştirici)
+              href: language-reference/keywords/out-generic-modifier.md
+            - name: override
+              href: language-reference/keywords/override.md
+            - name: readonly
+              href: language-reference/keywords/readonly.md
+            - name: korumalı
+              href: language-reference/keywords/sealed.md
+            - name: static
+              href: language-reference/keywords/static.md
+            - name: unsafe
+              href: language-reference/keywords/unsafe.md
+            - name: virtual
+              href: language-reference/keywords/virtual.md
+            - name: volatile
+              href: language-reference/keywords/volatile.md
+        - name: Deyim Anahtar Sözcükleri
+          items:
+            - name: Deyim kategorileri
+              href: language-reference/keywords/statement-keywords.md
+            - name: Seçim Deyimleri
+              items:
+                - name: if-else
+                  href: language-reference/keywords/if-else.md
+                - name: anahtarı
+                  href: language-reference/keywords/switch.md
+            - name: Yineleme Deyimleri
+              items:
+                - name: do
+                  href: language-reference/keywords/do.md
+                - name: for
+                  href: language-reference/keywords/for.md
+                - name: 'foreach, in'
+                  href: language-reference/keywords/foreach-in.md
+                - name: while
+                  href: language-reference/keywords/while.md
+            - name: Atlama Deyimleri
+              items:
+                - name: break
+                  href: language-reference/keywords/break.md
+                - name: continue
+                  href: language-reference/keywords/continue.md
+                - name: goto
+                  href: language-reference/keywords/goto.md
+                - name: return
+                  href: language-reference/keywords/return.md
+            - name: Özel Durum İşleme Deyimleri
+              items:
+                - name: throw
+                  href: language-reference/keywords/throw.md
+                - name: try-catch
+                  href: language-reference/keywords/try-catch.md
+                - name: try-finally
+                  href: language-reference/keywords/try-finally.md
+                - name: try-catch-finally
+                  href: language-reference/keywords/try-catch-finally.md
+            - name: Checked ve Unchecked
+              items:
+                - name: Genel Bakış
+                  href: language-reference/keywords/checked-and-unchecked.md
+                - name: checked
+                  href: language-reference/keywords/checked.md
+                - name: unchecked
+                  href: language-reference/keywords/unchecked.md
+            - name: fixed Deyimi
+              href: language-reference/keywords/fixed-statement.md
+            - name: lock Deyimi
+              href: language-reference/keywords/lock-statement.md
+        - name: Yöntem Parametreleri
+          items:
+            - name: Parametreleri geçirme
+              href: language-reference/keywords/method-parameters.md
+            - name: params
+              href: language-reference/keywords/params.md
+            - name: in (Parametre Değiştirici)
+              href: language-reference/keywords/in-parameter-modifier.md
+            - name: ref
+              href: language-reference/keywords/ref.md
+            - name: out (Parametre Değiştirici)
+              href: language-reference/keywords/out-parameter-modifier.md
+        - name: Ad Alanı Anahtar Sözcükleri
+          items:
+            - name: ad alanı
+              href: language-reference/keywords/namespace.md
+            - name: kullanma
+              items:
+                - name: using bağlamları
+                  href: language-reference/keywords/using.md
+                - name: using Yönergesi
+                  href: language-reference/keywords/using-directive.md
+                - name: using static Yönergesi
+                  href: language-reference/keywords/using-static.md
+                - name: using Deyimi
+                  href: language-reference/keywords/using-statement.md
+            - name: extern alias
+              href: language-reference/keywords/extern-alias.md
+        - name: Tür testi anahtar sözcükleri
+          items:
+            - name: is
+              href: language-reference/keywords/is.md
+        - name: Genel Tür Kısıtlaması Anahtar Sözcükleri
+          items:
+            - name: new kısıtlaması
+              href: language-reference/keywords/new-constraint.md
+            - name: Burada
+              href: language-reference/keywords/where-generic-type-constraint.md
+        - name: Anahtar Sözcüklere Erişim
+          items:
+            - name: taban
+              href: language-reference/keywords/base.md
+            - name: this
+              href: language-reference/keywords/this.md
+        - name: Değişmez Değer Anahtar Sözcükleri
+          items:
+            - name: 'null'
+              href: language-reference/keywords/null.md
+            - name: 'true'
+              href: language-reference/keywords/true-literal.md
+            - name: 'false'
+              href: language-reference/keywords/false-literal.md
+            - name: default
+              href: language-reference/keywords/default.md
+        - name: Bağlamsal Anahtar Sözcükler
+          items:
+            - name: Hızlı başvuru
+              href: language-reference/keywords/contextual-keywords.md
+            - name: add
+              href: language-reference/keywords/add.md
+            - name: get
+              href: language-reference/keywords/get.md
+            - name: partial (Tür)
+              href: language-reference/keywords/partial-type.md
+            - name: partial (Yöntem)
+              href: language-reference/keywords/partial-method.md
+            - name: remove
+              href: language-reference/keywords/remove.md
+            - name: set
+              href: language-reference/keywords/set.md
+            - name: when (filtre koşulu)
+              href: language-reference/keywords/when.md
+            - name: value
+              href: language-reference/keywords/value.md
+            - name: yield
+              href: language-reference/keywords/yield.md
+        - name: Sorgu Anahtar Sözcükleri
+          items:
+            - name: Hızlı başvuru
+              href: language-reference/keywords/query-keywords.md
+            - name: from tümcesi
+              href: language-reference/keywords/from-clause.md
+            - name: where tümcesi
+              href: language-reference/keywords/where-clause.md
+            - name: select tümcesi
+              href: language-reference/keywords/select-clause.md
+            - name: group tümcesi
+              href: language-reference/keywords/group-clause.md
+            - name: into
+              href: language-reference/keywords/into.md
+            - name: orderby tümcesi
+              href: language-reference/keywords/orderby-clause.md
+            - name: join tümcesi
+              href: language-reference/keywords/join-clause.md
+            - name: let tümcesi
+              href: language-reference/keywords/let-clause.md
+            - name: ascending
+              href: language-reference/keywords/ascending.md
+            - name: descending
+              href: language-reference/keywords/descending.md
+            - name: 'on'
+              href: language-reference/keywords/on.md
+            - name: eşittir
+              href: language-reference/keywords/equals.md
+            - name: by
+              href: language-reference/keywords/by.md
+            - name: içinde
+              href: language-reference/keywords/in.md
+    - name: 'C# işleçleri'
+      items:
+        - name: Genel Bakış
+          href: language-reference/operators/index.md
+        - name: Aritmetik İşleçler
+          href: language-reference/operators/arithmetic-operators.md
+          displayName: '++, --, +, -, *, /, %, +=, -=, *=, /=, %=, checked, unchecked'
+        - name: Boole mantıksal işleçleri
+          href: language-reference/operators/boolean-logical-operators.md
+          displayName: '!, &&, ||, &, |, ^, &=, |=, ^='
+        - name: Bit düzeyinde ve kaydırma işleçleri
+          href: language-reference/operators/bitwise-and-shift-operators.md
+          displayName: '~, &, |, ^, <<, >>, &=, |=, ^=, <<=, >>='
+        - name: Eşitlik İşleçleri
+          href: language-reference/operators/equality-operators.md
+          displayName: '==, !='
+        - name: Karşılaştırma işleçleri
+          href: language-reference/operators/comparison-operators.md
+          displayName: '>, <, >=, <=, greater, less'
+        - name: Üye erişimi işleçleri
+          href: language-reference/operators/member-access-operators.md
+          displayName: '., [], ?., ?[], (), indexer, null-conditional, Elvis, invocation, ^, index from end, hat, .., range'
+        - name: Tür testi ve atama işleçleri
+          href: language-reference/operators/type-testing-and-cast.md
+          displayName: 'is operator, is keyword, as operator, as keyword, typeof, (), conversion'
+        - name: Kullanıcı tanımlı dönüştürme işleçleri
+          href: language-reference/operators/user-defined-conversion-operators.md
+          displayName: 'implicit, explicit'
+        - name: İşaretçi bağlantılı işleçler
+          href: language-reference/operators/pointer-related-operators.md
+          displayName: '&, *, ->, [], +, -, ++, --, ==, !=, <, >, <=, >=, dereference, address-of, indirection'
+        - name: = işleci
+          href: language-reference/operators/assignment-operator.md
+          displayName: 'assignment, ref'
+        - name: + and += işleçleri
+          href: language-reference/operators/addition-operator.md
+          displayName: 'string concatenation, delegate combination, event subscription'
+        - name: '- and -= işleçleri'
+          href: language-reference/operators/subtraction-operator.md
+          displayName: 'delegate removal, event unsubscription'
+        - name: '?: işleci'
+          href: language-reference/operators/conditional-operator.md
+          displayName: 'conditional, ternary, ref'
+        - name: '! (null-forgiving) işleci'
+          href: language-reference/operators/null-forgiving.md
+          displayName: 'nullable reference, null-forgiveness'
+        - name: '?? and ??= işleçleri'
+          href: language-reference/operators/null-coalescing-operator.md
+          displayName: 'null-coalescing, assignment'
+        - name: => işleci
+          href: language-reference/operators/lambda-operator.md
+          displayName: lambda
+        - name: ':: işleci'
+          href: language-reference/operators/namespace-alias-qualifier.md
+          displayName: 'namespace alias qualifier, global namespace'
+        - name: await işleci
+          href: language-reference/operators/await.md
+          displayName: async
+        - name: varsayılan işleç
+          href: language-reference/operators/default.md
+          displayName: 'default value, default literal, type default'
+        - name: delegate işleci
+          href: language-reference/operators/delegate-operator.md
+          displayName: anonymous
+        - name: nameof işleci
+          href: language-reference/operators/nameof.md
+        - name: new işleci
+          href: language-reference/operators/new-operator.md
+        - name: sizeof işleci
+          href: language-reference/operators/sizeof.md
+        - name: stackalloc işleci
+          href: language-reference/operators/stackalloc.md
+        - name: true ve false işleçleri
+          href: language-reference/operators/true-false-operators.md
+        - name: İşleç aşırı yüklemesi
+          href: language-reference/operators/operator-overloading.md
+    - name: 'C# özel karakterleri'
+      items:
+        - name: Genel Bakış
+          href: language-reference/tokens/index.md
+        - name: $ -- dize ilişkilendirme
+          href: language-reference/tokens/interpolated.md
+        - name: '@-- tam tanımlayıcı'
+          href: language-reference/tokens/verbatim.md
+    - name: 'C# ön işlemci yönergeleri'
+      items:
+        - name: Genel Bakış
+          href: language-reference/preprocessor-directives/index.md
+        - name: '#if'
+          href: language-reference/preprocessor-directives/preprocessor-if.md
+        - name: '#else'
+          href: language-reference/preprocessor-directives/preprocessor-else.md
+        - name: '#elif'
+          href: language-reference/preprocessor-directives/preprocessor-elif.md
+        - name: '#endif'
+          href: language-reference/preprocessor-directives/preprocessor-endif.md
+        - name: '#define'
+          href: language-reference/preprocessor-directives/preprocessor-define.md
+        - name: '#undef'
+          href: language-reference/preprocessor-directives/preprocessor-undef.md
+        - name: '#warning'
+          href: language-reference/preprocessor-directives/preprocessor-warning.md
+        - name: '#error'
+          href: language-reference/preprocessor-directives/preprocessor-error.md
+        - name: '#line'
+          href: language-reference/preprocessor-directives/preprocessor-line.md
+        - name: '#region'
+          href: language-reference/preprocessor-directives/preprocessor-region.md
+        - name: '#endregion'
+          href: language-reference/preprocessor-directives/preprocessor-endregion.md
+        - name: '#pragma'
+          href: language-reference/preprocessor-directives/preprocessor-pragma.md
+        - name: '#pragma warning'
+          href: language-reference/preprocessor-directives/preprocessor-pragma-warning.md
+        - name: '#pragma checksum'
+          href: language-reference/preprocessor-directives/preprocessor-pragma-checksum.md
+    - name: 'C# derleyici seçenekleri'
+      items:
+        - name: Genel Bakış
+          href: language-reference/compiler-options/index.md
+        - name: csc.exe Kullanarak Komut Satırı Derleme
+          href: language-reference/compiler-options/command-line-building-with-csc-exe.md
+        - name: 'Nasıl yapılır: Visual Studio Komut Satırı için Ortam Değişkenlerini Ayarlama'
+          href: language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md
+        - name: 'Kategorilere Göre Listelenen C# Derleyici Seçenekleri'
+          href: language-reference/compiler-options/listed-by-category.md
+        - name: 'Alfabetik Listelenmiş C# Derleyici Seçenekleri'
+          href: language-reference/compiler-options/listed-alphabetically.md
+          items:
+            - name: '@'
+              href: language-reference/compiler-options/response-file-compiler-option.md
+            - name: '-addmodule'
+              href: language-reference/compiler-options/addmodule-compiler-option.md
+            - name: '-appconfig'
+              href: language-reference/compiler-options/appconfig-compiler-option.md
+            - name: '-baseaddress'
+              href: language-reference/compiler-options/baseaddress-compiler-option.md
+            - name: '-bugreport'
+              href: language-reference/compiler-options/bugreport-compiler-option.md
+            - name: '-checked'
+              href: language-reference/compiler-options/checked-compiler-option.md
+            - name: '-codepage'
+              href: language-reference/compiler-options/codepage-compiler-option.md
+            - name: '-debug'
+              href: language-reference/compiler-options/debug-compiler-option.md
+            - name: '-define'
+              href: language-reference/compiler-options/define-compiler-option.md
+            - name: '-delaysign'
+              href: language-reference/compiler-options/delaysign-compiler-option.md
+            - name: '-deterministic'
+              href: language-reference/compiler-options/deterministic-compiler-option.md
+            - name: '-doc'
+              href: language-reference/compiler-options/doc-compiler-option.md
+            - name: '-errorreport'
+              href: language-reference/compiler-options/errorreport-compiler-option.md
+            - name: '-filealign'
+              href: language-reference/compiler-options/filealign-compiler-option.md
+            - name: '-fullpaths'
+              href: language-reference/compiler-options/fullpaths-compiler-option.md
+            - name: '-help, -?'
+              href: language-reference/compiler-options/help-compiler-option.md
+            - name: '-highentropyva'
+              href: language-reference/compiler-options/highentropyva-compiler-option.md
+            - name: '-keycontainer'
+              href: language-reference/compiler-options/keycontainer-compiler-option.md
+            - name: '-keyfile'
+              href: language-reference/compiler-options/keyfile-compiler-option.md
+            - name: '-langversion'
+              href: language-reference/compiler-options/langversion-compiler-option.md
+            - name: '-lib'
+              href: language-reference/compiler-options/lib-compiler-option.md
+            - name: '-link'
+              href: language-reference/compiler-options/link-compiler-option.md
+            - name: '-linkresource'
+              href: language-reference/compiler-options/linkresource-compiler-option.md
+            - name: '-main'
+              href: language-reference/compiler-options/main-compiler-option.md
+            - name: '-moduleassemblyname'
+              href: language-reference/compiler-options/moduleassemblyname-compiler-option.md
+            - name: '-noconfig'
+              href: language-reference/compiler-options/noconfig-compiler-option.md
+            - name: '-nologo'
+              href: language-reference/compiler-options/nologo-compiler-option.md
+            - name: '-nostdlib'
+              href: language-reference/compiler-options/nostdlib-compiler-option.md
+            - name: '-nowarn'
+              href: language-reference/compiler-options/nowarn-compiler-option.md
+            - name: '-nowin32manifest'
+              href: language-reference/compiler-options/nowin32manifest-compiler-option.md
+            - name: '-optimize'
+              href: language-reference/compiler-options/optimize-compiler-option.md
+            - name: '-out'
+              href: language-reference/compiler-options/out-compiler-option.md
+            - name: '-pathmap'
+              href: language-reference/compiler-options/pathmap-compiler-option.md
+            - name: '-pdb'
+              href: language-reference/compiler-options/pdb-compiler-option.md
+            - name: '-platform'
+              href: language-reference/compiler-options/platform-compiler-option.md
+            - name: '-preferreduilang'
+              href: language-reference/compiler-options/preferreduilang-compiler-option.md
+            - name: '-publicsign'
+              href: language-reference/compiler-options/publicsign-compiler-option.md
+            - name: '-recurse'
+              href: language-reference/compiler-options/recurse-compiler-option.md
+            - name: '-reference'
+              href: language-reference/compiler-options/reference-compiler-option.md
+            - name: '-refout'
+              href: language-reference/compiler-options/refout-compiler-option.md
+            - name: '-refonly'
+              href: language-reference/compiler-options/refonly-compiler-option.md
+            - name: '-resource'
+              href: language-reference/compiler-options/resource-compiler-option.md
+            - name: '-subsystemversion'
+              href: language-reference/compiler-options/subsystemversion-compiler-option.md
+            - name: '-target'
+              href: language-reference/compiler-options/target-compiler-option.md
+              items:
+                - name: '-target:appcontainerexe'
+                  href: language-reference/compiler-options/target-appcontainerexe-compiler-option.md
+                - name: '-target:exe'
+                  href: language-reference/compiler-options/target-exe-compiler-option.md
+                - name: '-target:library'
+                  href: language-reference/compiler-options/target-library-compiler-option.md
+                - name: '-target:module'
+                  href: language-reference/compiler-options/target-module-compiler-option.md
+                - name: '-target:winexe'
+                  href: language-reference/compiler-options/target-winexe-compiler-option.md
+                - name: '-target:winmdobj'
+                  href: language-reference/compiler-options/target-winmdobj-compiler-option.md
+            - name: '-unsafe'
+              href: language-reference/compiler-options/unsafe-compiler-option.md
+            - name: '-utf8output'
+              href: language-reference/compiler-options/utf8output-compiler-option.md
+            - name: '-warn'
+              href: language-reference/compiler-options/warn-compiler-option.md
+            - name: '-warnaserror'
+              href: language-reference/compiler-options/warnaserror-compiler-option.md
+            - name: '-win32icon'
+              href: language-reference/compiler-options/win32icon-compiler-option.md
+            - name: '-win32manifest'
+              href: language-reference/compiler-options/win32manifest-compiler-option.md
+            - name: '-win32res'
+              href: language-reference/compiler-options/win32res-compiler-option.md
+    - name: 'C# derleyici hataları'
+      href: language-reference/compiler-messages/index.md
+    - name: 'C# 6.0 taslak belirtimi'
+      href: language-reference/specification/
+    - name: 'C# 7.0 - 8.0 teklifleri'
+      href: language-reference/proposals/
 - name: İzlenecek Yollar
   href: walkthroughs.md
