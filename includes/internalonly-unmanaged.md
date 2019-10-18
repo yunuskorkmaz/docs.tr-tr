@@ -1,11 +1,10 @@
 ---
-ms.openlocfilehash: ad6526311fce09e49fd42707ff568745188df221
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 349801b5c6d501566855120ce881818697fef9d4
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61703601"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72523800"
 ---
-
-> [!NOTE] 
-> <span data-ttu-id="86a8d-101">Bu API, yalnızca dahili kullanım içindir.</span><span class="sxs-lookup"><span data-stu-id="86a8d-101">This API is for internal use only.</span></span> <span data-ttu-id="86a8d-102">Geliştirici koddan kullanılmak üzere tasarlanmamıştır.</span><span class="sxs-lookup"><span data-stu-id="86a8d-102">It's not intended for use from developer code.</span></span>
+> [!NOTE]
+> <span data-ttu-id="07394-101">Bu API yalnızca iç kullanım içindir.</span><span class="sxs-lookup"><span data-stu-id="07394-101">This API is for internal use only.</span></span> <span data-ttu-id="07394-102">Geliştirici kodundan kullanılmak üzere tasarlanmamıştır.</span><span class="sxs-lookup"><span data-stu-id="07394-102">It's not intended for use from developer code.</span></span>

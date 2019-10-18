@@ -1,113 +1,115 @@
 ---
-title: 'Nasıl yapılır: (Visual Basic) dinamik sorgular derlemek için ifade ağaçları kullanma'
+title: 'Nasıl yapılır: dinamik sorgular oluşturmak için Ifade ağaçları kullanma (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 16278787-7532-4b65-98b2-7a412406c4ee
-ms.openlocfilehash: 24ce612ed2da9129cd446c6bea7d2547fc69e2bf
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 5cb4d99982deb48a47a25b52bc7f5e4c8634219c
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592166"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72524213"
 ---
-# <a name="how-to-use-expression-trees-to-build-dynamic-queries-visual-basic"></a><span data-ttu-id="76911-102">Nasıl yapılır: (Visual Basic) dinamik sorgular derlemek için ifade ağaçları kullanma</span><span class="sxs-lookup"><span data-stu-id="76911-102">How to: Use Expression Trees to Build Dynamic Queries (Visual Basic)</span></span>
-<span data-ttu-id="76911-103">LINQ içinde uygulama veri kaynaklarını hedefleyen yapılandırılmış sorguların temsil etmek için ifade ağaçları kullanılan <xref:System.Linq.IQueryable%601>.</span><span class="sxs-lookup"><span data-stu-id="76911-103">In LINQ, expression trees are used to represent structured queries that target sources of data that implement <xref:System.Linq.IQueryable%601>.</span></span> <span data-ttu-id="76911-104">Örneğin, LINQ sağlayıcı uygulayan <xref:System.Linq.IQueryable%601> ilişkisel veri deposu sorgulamak için arabirim.</span><span class="sxs-lookup"><span data-stu-id="76911-104">For example, the LINQ provider implements the <xref:System.Linq.IQueryable%601> interface for querying relational data stores.</span></span> <span data-ttu-id="76911-105">Visual Basic Derleyicisi, çalışma zamanında bir ifade ağacı oluşturan koda gibi veri kaynakları hedef sorguları derler.</span><span class="sxs-lookup"><span data-stu-id="76911-105">The Visual Basic compiler compiles queries that target such data sources into code that builds an expression tree at runtime.</span></span> <span data-ttu-id="76911-106">Sorgu sağlayıcısına geçiş ifadesi ağaç veri yapısı ve veri kaynağı için uygun bir sorgu dili küçültmesini.</span><span class="sxs-lookup"><span data-stu-id="76911-106">The query provider can then traverse the expression tree data structure and translate it into a query language appropriate for the data source.</span></span>  
-  
- <span data-ttu-id="76911-107">İfade ağaçları için de kullanılır LINQ türündeki değişkenler için atanmış olan lambda ifadeleri temsil <xref:System.Linq.Expressions.Expression%601>.</span><span class="sxs-lookup"><span data-stu-id="76911-107">Expression trees are also used in LINQ to represent lambda expressions that are assigned to variables of type <xref:System.Linq.Expressions.Expression%601>.</span></span>  
-  
- <span data-ttu-id="76911-108">Bu konuda, dinamik LINQ sorguları oluşturmak için ifade ağaçları kullanmayı açıklar.</span><span class="sxs-lookup"><span data-stu-id="76911-108">This topic describes how to use expression trees to create dynamic LINQ queries.</span></span> <span data-ttu-id="76911-109">Dinamik sorgular, bir sorgu ayrıntılarını derleme zamanında bilinen olduğunda yararlıdır.</span><span class="sxs-lookup"><span data-stu-id="76911-109">Dynamic queries are useful when the specifics of a query are not known at compile time.</span></span> <span data-ttu-id="76911-110">Örneğin, bir uygulama verilerini filtrelemek için bir veya daha fazla koşulları belirtmek son kullanıcının sağlayan bir kullanıcı arabirimi sağlayabilir.</span><span class="sxs-lookup"><span data-stu-id="76911-110">For example, an application might provide a user interface that enables the end user to specify one or more predicates to filter the data.</span></span> <span data-ttu-id="76911-111">Sorgulamak için LINQ kullanmak için bu tür bir uygulama ifade ağaçları çalışma zamanında LINQ sorgusu oluşturmak için kullanmanız gerekir.</span><span class="sxs-lookup"><span data-stu-id="76911-111">In order to use LINQ for querying, this kind of application must use expression trees to create the LINQ query at runtime.</span></span>  
-  
-## <a name="example"></a><span data-ttu-id="76911-112">Örnek</span><span class="sxs-lookup"><span data-stu-id="76911-112">Example</span></span>  
- <span data-ttu-id="76911-113">Aşağıdaki örnek bir sorgu oluşturmak için ifade ağaçları kullanma işlemi gösterilmektedir bir `IQueryable` veri kaynağını seçin ve sonra yürütün.</span><span class="sxs-lookup"><span data-stu-id="76911-113">The following example shows you how to use expression trees to construct a query against an `IQueryable` data source and then execute it.</span></span> <span data-ttu-id="76911-114">Kod, aşağıdaki sorguyu temsil etmek için bir ifade ağacı oluşturur:</span><span class="sxs-lookup"><span data-stu-id="76911-114">The code builds an expression tree to represent the following query:</span></span>  
-  
- `companies.Where(Function(company) company.ToLower() = "coho winery" OrElse company.Length > 16).OrderBy(Function(company) company)`  
-  
- <span data-ttu-id="76911-115">Fabrika yöntemleri <xref:System.Linq.Expressions> ad alanı, genel sorgu yapmak ifadeleri temsil eden bir ifade ağacı oluşturmak için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="76911-115">The factory methods in the <xref:System.Linq.Expressions> namespace are used to create expression trees that represent the expressions that make up the overall query.</span></span> <span data-ttu-id="76911-116">Standart sorgu işleci yöntemlerinin çağrıları temsil eden ifadeleri başvurmak <xref:System.Linq.Queryable> bu yöntemlerin uygulamaları.</span><span class="sxs-lookup"><span data-stu-id="76911-116">The expressions that represent calls to the standard query operator methods refer to the <xref:System.Linq.Queryable> implementations of these methods.</span></span> <span data-ttu-id="76911-117">Son bir ifade ağacı geçirilir <xref:System.Linq.IQueryProvider.CreateQuery%60%601%28System.Linq.Expressions.Expression%29> sağlayıcısı uygulaması `IQueryable` yürütülebilir bir sorgu türü oluşturmak için veri kaynağı `IQueryable`.</span><span class="sxs-lookup"><span data-stu-id="76911-117">The final expression tree is passed to the <xref:System.Linq.IQueryProvider.CreateQuery%60%601%28System.Linq.Expressions.Expression%29> implementation of the provider of the `IQueryable` data source to create an executable query of type `IQueryable`.</span></span> <span data-ttu-id="76911-118">Bu sorgu değişkeni numaralandırarak sonuçlar elde edilir.</span><span class="sxs-lookup"><span data-stu-id="76911-118">The results are obtained by enumerating that query variable.</span></span>  
-  
-```vb  
-' Add an Imports statement for System.Linq.Expressions.  
-  
-Dim companies =   
-    {"Consolidated Messenger", "Alpine Ski House", "Southridge Video", "City Power & Light",   
-     "Coho Winery", "Wide World Importers", "Graphic Design Institute", "Adventure Works",   
-     "Humongous Insurance", "Woodgrove Bank", "Margie's Travel", "Northwind Traders",   
-     "Blue Yonder Airlines", "Trey Research", "The Phone Company",   
-     "Wingtip Toys", "Lucerne Publishing", "Fourth Coffee"}  
-  
-' The IQueryable data to query.  
-Dim queryableData As IQueryable(Of String) = companies.AsQueryable()  
-  
-' Compose the expression tree that represents the parameter to the predicate.  
-Dim pe As ParameterExpression = Expression.Parameter(GetType(String), "company")  
-  
-' ***** Where(Function(company) company.ToLower() = "coho winery" OrElse company.Length > 16) *****  
-' Create an expression tree that represents the expression: company.ToLower() = "coho winery".  
-Dim left As Expression = Expression.Call(pe, GetType(String).GetMethod("ToLower", System.Type.EmptyTypes))  
-Dim right As Expression = Expression.Constant("coho winery")  
-Dim e1 As Expression = Expression.Equal(left, right)  
-  
-' Create an expression tree that represents the expression: company.Length > 16.  
-left = Expression.Property(pe, GetType(String).GetProperty("Length"))  
-right = Expression.Constant(16, GetType(Integer))  
-Dim e2 As Expression = Expression.GreaterThan(left, right)  
-  
-' Combine the expressions to create an expression tree that represents the  
-' expression: company.ToLower() = "coho winery" OrElse company.Length > 16).  
-Dim predicateBody As Expression = Expression.OrElse(e1, e2)  
-  
-' Create an expression tree that represents the expression:  
-' queryableData.Where(Function(company) company.ToLower() = "coho winery" OrElse company.Length > 16)  
-Dim whereCallExpression As MethodCallExpression = Expression.Call(   
-        GetType(Queryable),   
-        "Where",   
-        New Type() {queryableData.ElementType},   
-        queryableData.Expression,   
-        Expression.Lambda(Of Func(Of String, Boolean))(predicateBody, New ParameterExpression() {pe}))  
-' ***** End Where *****  
-  
-' ***** OrderBy(Function(company) company) *****  
-' Create an expression tree that represents the expression:  
-' whereCallExpression.OrderBy(Function(company) company)  
-Dim orderByCallExpression As MethodCallExpression = Expression.Call(   
-        GetType(Queryable),   
-        "OrderBy",   
-        New Type() {queryableData.ElementType, queryableData.ElementType},   
-        whereCallExpression,   
-        Expression.Lambda(Of Func(Of String, String))(pe, New ParameterExpression() {pe}))  
-' ***** End OrderBy *****  
-  
-' Create an executable query from the expression tree.  
-Dim results As IQueryable(Of String) = queryableData.Provider.CreateQuery(Of String)(orderByCallExpression)  
-  
-' Enumerate the results.  
-For Each company As String In results  
-    Console.WriteLine(company)  
-Next  
-  
-' This code produces the following output:  
-'  
-' Blue Yonder Airlines  
-' City Power & Light  
-' Coho Winery  
-' Consolidated Messenger  
-' Graphic Design Institute  
-' Humongous Insurance  
-' Lucerne Publishing  
-' Northwind Traders  
-' The Phone Company  
-' Wide World Importers  
-```  
-  
- <span data-ttu-id="76911-119">Bu kodu ifadeler sabit sayıda geçirilir koşulu kullanır `Queryable.Where` yöntemi.</span><span class="sxs-lookup"><span data-stu-id="76911-119">This code uses a fixed number of expressions in the predicate that is passed to the `Queryable.Where` method.</span></span> <span data-ttu-id="76911-120">Ancak, kullanıcı girişi bağlıdır değişken koşul ifadeleri sayısı birleştiren bir uygulama yazabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="76911-120">However, you can write an application that combines a variable number of predicate expressions that depends on the user input.</span></span> <span data-ttu-id="76911-121">Kullanıcı girişini bağlı olarak sorguyu adlı standart sorgu işleçleri de değişebilir.</span><span class="sxs-lookup"><span data-stu-id="76911-121">You can also vary the standard query operators that are called in the query, depending on the input from the user.</span></span>  
-  
-## <a name="compiling-the-code"></a><span data-ttu-id="76911-122">Kod Derleniyor</span><span class="sxs-lookup"><span data-stu-id="76911-122">Compiling the Code</span></span>  
-  
-- <span data-ttu-id="76911-123">Yeni bir **konsol uygulaması** proje.</span><span class="sxs-lookup"><span data-stu-id="76911-123">Create a new **Console Application** project.</span></span>  
-  
-- <span data-ttu-id="76911-124">System.Linq.Expressions ad alanı içerir.</span><span class="sxs-lookup"><span data-stu-id="76911-124">Include the System.Linq.Expressions namespace.</span></span>  
-  
-- <span data-ttu-id="76911-125">Örnek kodu kopyalayın ve yapıştırın `Main` `Sub` yordamı.</span><span class="sxs-lookup"><span data-stu-id="76911-125">Copy the code from the example and paste it into the `Main` `Sub` procedure.</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="76911-126">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="76911-126">See also</span></span>
+# <a name="how-to-use-expression-trees-to-build-dynamic-queries-visual-basic"></a><span data-ttu-id="16e62-102">Nasıl yapılır: dinamik sorgular oluşturmak için Ifade ağaçları kullanma (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="16e62-102">How to: Use Expression Trees to Build Dynamic Queries (Visual Basic)</span></span>
 
-- [<span data-ttu-id="76911-127">İfade ağaçları (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="76911-127">Expression Trees (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/expression-trees/index.md)
-- [<span data-ttu-id="76911-128">Nasıl yapılır: (Visual Basic) ifade ağaçlarını yürütme</span><span class="sxs-lookup"><span data-stu-id="76911-128">How to: Execute Expression Trees (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)
+<span data-ttu-id="16e62-103">LINQ içinde, ifade ağaçları, <xref:System.Linq.IQueryable%601> uygulayan veri kaynaklarını hedefleyen yapısal sorguları temsil etmek için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="16e62-103">In LINQ, expression trees are used to represent structured queries that target sources of data that implement <xref:System.Linq.IQueryable%601>.</span></span> <span data-ttu-id="16e62-104">Örneğin, LINQ sağlayıcısı ilişkisel veri depolarını sorgulamak için <xref:System.Linq.IQueryable%601> arabirimini uygular.</span><span class="sxs-lookup"><span data-stu-id="16e62-104">For example, the LINQ provider implements the <xref:System.Linq.IQueryable%601> interface for querying relational data stores.</span></span> <span data-ttu-id="16e62-105">Visual Basic Derleyicisi, bu tür veri kaynaklarını hedefleyen sorguları, çalışma zamanında bir ifade ağacı oluşturan koda derler.</span><span class="sxs-lookup"><span data-stu-id="16e62-105">The Visual Basic compiler compiles queries that target such data sources into code that builds an expression tree at runtime.</span></span> <span data-ttu-id="16e62-106">Sorgu sağlayıcısı daha sonra ifade ağacı veri yapısına çapraz geçiş yapabilir ve veri kaynağı için uygun bir sorgu diline çevirebilir.</span><span class="sxs-lookup"><span data-stu-id="16e62-106">The query provider can then traverse the expression tree data structure and translate it into a query language appropriate for the data source.</span></span>
+
+<span data-ttu-id="16e62-107">İfade ağaçları Ayrıca LINQ içinde <xref:System.Linq.Expressions.Expression%601> tür değişkenlerine atanan Lambda ifadelerini temsil etmek için de kullanılır.</span><span class="sxs-lookup"><span data-stu-id="16e62-107">Expression trees are also used in LINQ to represent lambda expressions that are assigned to variables of type <xref:System.Linq.Expressions.Expression%601>.</span></span>
+
+<span data-ttu-id="16e62-108">Bu konu başlığı altında, dinamik LINQ sorguları oluşturmak için ifade ağaçlarının nasıl kullanılacağı açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="16e62-108">This topic describes how to use expression trees to create dynamic LINQ queries.</span></span> <span data-ttu-id="16e62-109">Dinamik sorgular, bir sorgunun özelliklerinin derleme zamanında bilinmediği durumlarda faydalıdır.</span><span class="sxs-lookup"><span data-stu-id="16e62-109">Dynamic queries are useful when the specifics of a query are not known at compile time.</span></span> <span data-ttu-id="16e62-110">Örneğin, bir uygulama, son kullanıcının verileri filtrelemek için bir veya daha fazla koşul belirtmesini sağlayan bir kullanıcı arabirimi sağlayabilir.</span><span class="sxs-lookup"><span data-stu-id="16e62-110">For example, an application might provide a user interface that enables the end user to specify one or more predicates to filter the data.</span></span> <span data-ttu-id="16e62-111">Bu tür bir uygulamanın, sorgulama için LINQ kullanabilmesi amacıyla, çalışma zamanında LINQ sorgusu oluşturmak için ifade ağaçları kullanması gerekir.</span><span class="sxs-lookup"><span data-stu-id="16e62-111">In order to use LINQ for querying, this kind of application must use expression trees to create the LINQ query at runtime.</span></span>
+
+## <a name="example"></a><span data-ttu-id="16e62-112">Örnek</span><span class="sxs-lookup"><span data-stu-id="16e62-112">Example</span></span>
+
+<span data-ttu-id="16e62-113">Aşağıdaki örnek, `IQueryable` veri kaynağında bir sorgu oluşturmak ve sonra çalıştırmak için ifade ağaçlarının nasıl kullanılacağını gösterir.</span><span class="sxs-lookup"><span data-stu-id="16e62-113">The following example shows you how to use expression trees to construct a query against an `IQueryable` data source and then execute it.</span></span> <span data-ttu-id="16e62-114">Kod, aşağıdaki sorguyu temsil etmek için bir ifade ağacı oluşturur:</span><span class="sxs-lookup"><span data-stu-id="16e62-114">The code builds an expression tree to represent the following query:</span></span>
+
+`companies.Where(Function(company) company.ToLower() = "coho winery" OrElse company.Length > 16).OrderBy(Function(company) company)`
+
+<span data-ttu-id="16e62-115">@No__t_0 ad alanındaki Fabrika yöntemleri, genel sorguyu oluşturan ifadeleri temsil eden ifade ağaçları oluşturmak için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="16e62-115">The factory methods in the <xref:System.Linq.Expressions> namespace are used to create expression trees that represent the expressions that make up the overall query.</span></span> <span data-ttu-id="16e62-116">Standart sorgu operatörü yöntemlerine yapılan çağrıları temsil eden ifadeler, bu yöntemlerin <xref:System.Linq.Queryable> uygulamalarına başvurur.</span><span class="sxs-lookup"><span data-stu-id="16e62-116">The expressions that represent calls to the standard query operator methods refer to the <xref:System.Linq.Queryable> implementations of these methods.</span></span> <span data-ttu-id="16e62-117">Son ifade ağacı, `IQueryable` türünde yürütülebilir bir sorgu oluşturmak için `IQueryable` veri kaynağı sağlayıcısının <xref:System.Linq.IQueryProvider.CreateQuery%60%601%28System.Linq.Expressions.Expression%29> uygulamasına geçirilir.</span><span class="sxs-lookup"><span data-stu-id="16e62-117">The final expression tree is passed to the <xref:System.Linq.IQueryProvider.CreateQuery%60%601%28System.Linq.Expressions.Expression%29> implementation of the provider of the `IQueryable` data source to create an executable query of type `IQueryable`.</span></span> <span data-ttu-id="16e62-118">Sonuçlar, bu sorgu değişkeni numaralandırıldığı için alınır.</span><span class="sxs-lookup"><span data-stu-id="16e62-118">The results are obtained by enumerating that query variable.</span></span>
+
+```vb
+' Add an Imports statement for System.Linq.Expressions.
+
+Dim companies =
+    {"Consolidated Messenger", "Alpine Ski House", "Southridge Video", "City Power & Light",
+     "Coho Winery", "Wide World Importers", "Graphic Design Institute", "Adventure Works",
+     "Humongous Insurance", "Woodgrove Bank", "Margie's Travel", "Northwind Traders",
+     "Blue Yonder Airlines", "Trey Research", "The Phone Company",
+     "Wingtip Toys", "Lucerne Publishing", "Fourth Coffee"}
+
+' The IQueryable data to query.
+Dim queryableData As IQueryable(Of String) = companies.AsQueryable()
+
+' Compose the expression tree that represents the parameter to the predicate.
+Dim pe As ParameterExpression = Expression.Parameter(GetType(String), "company")
+
+' ***** Where(Function(company) company.ToLower() = "coho winery" OrElse company.Length > 16) *****
+' Create an expression tree that represents the expression: company.ToLower() = "coho winery".
+Dim left As Expression = Expression.Call(pe, GetType(String).GetMethod("ToLower", System.Type.EmptyTypes))
+Dim right As Expression = Expression.Constant("coho winery")
+Dim e1 As Expression = Expression.Equal(left, right)
+
+' Create an expression tree that represents the expression: company.Length > 16.
+left = Expression.Property(pe, GetType(String).GetProperty("Length"))
+right = Expression.Constant(16, GetType(Integer))
+Dim e2 As Expression = Expression.GreaterThan(left, right)
+
+' Combine the expressions to create an expression tree that represents the
+' expression: company.ToLower() = "coho winery" OrElse company.Length > 16).
+Dim predicateBody As Expression = Expression.OrElse(e1, e2)
+
+' Create an expression tree that represents the expression:
+' queryableData.Where(Function(company) company.ToLower() = "coho winery" OrElse company.Length > 16)
+Dim whereCallExpression As MethodCallExpression = Expression.Call(
+        GetType(Queryable),
+        "Where",
+        New Type() {queryableData.ElementType},
+        queryableData.Expression,
+        Expression.Lambda(Of Func(Of String, Boolean))(predicateBody, New ParameterExpression() {pe}))
+' ***** End Where *****
+
+' ***** OrderBy(Function(company) company) *****
+' Create an expression tree that represents the expression:
+' whereCallExpression.OrderBy(Function(company) company)
+Dim orderByCallExpression As MethodCallExpression = Expression.Call(
+        GetType(Queryable),
+        "OrderBy",
+        New Type() {queryableData.ElementType, queryableData.ElementType},
+        whereCallExpression,
+        Expression.Lambda(Of Func(Of String, String))(pe, New ParameterExpression() {pe}))
+' ***** End OrderBy *****
+
+' Create an executable query from the expression tree.
+Dim results As IQueryable(Of String) = queryableData.Provider.CreateQuery(Of String)(orderByCallExpression)
+
+' Enumerate the results.
+For Each company As String In results
+    Console.WriteLine(company)
+Next
+
+' This code produces the following output:
+'
+' Blue Yonder Airlines
+' City Power & Light
+' Coho Winery
+' Consolidated Messenger
+' Graphic Design Institute
+' Humongous Insurance
+' Lucerne Publishing
+' Northwind Traders
+' The Phone Company
+' Wide World Importers
+```
+
+<span data-ttu-id="16e62-119">Bu kod, `Queryable.Where` metoduna geçirilen koşuldaki sabit sayıda ifadeyi kullanır.</span><span class="sxs-lookup"><span data-stu-id="16e62-119">This code uses a fixed number of expressions in the predicate that is passed to the `Queryable.Where` method.</span></span> <span data-ttu-id="16e62-120">Ancak, kullanıcı girişine bağlı bir değişken sayıda koşul ifadesini birleştiren bir uygulama yazabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="16e62-120">However, you can write an application that combines a variable number of predicate expressions that depends on the user input.</span></span> <span data-ttu-id="16e62-121">Ayrıca, kullanıcının girişine bağlı olarak sorguda çağrılan standart sorgu işleçlerini da değiştirebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="16e62-121">You can also vary the standard query operators that are called in the query, depending on the input from the user.</span></span>
+
+## <a name="compiling-the-code"></a><span data-ttu-id="16e62-122">Kod Derleniyor</span><span class="sxs-lookup"><span data-stu-id="16e62-122">Compiling the Code</span></span>
+
+- <span data-ttu-id="16e62-123">Yeni bir **konsol uygulaması** projesi oluşturun.</span><span class="sxs-lookup"><span data-stu-id="16e62-123">Create a new **Console Application** project.</span></span>
+
+- <span data-ttu-id="16e62-124">System. Linq. Ifadeler ad alanını ekleyin.</span><span class="sxs-lookup"><span data-stu-id="16e62-124">Include the System.Linq.Expressions namespace.</span></span>
+
+- <span data-ttu-id="16e62-125">Kodu örnekteki kodu kopyalayın ve `Main` `Sub` yordamına yapıştırın.</span><span class="sxs-lookup"><span data-stu-id="16e62-125">Copy the code from the example and paste it into the `Main` `Sub` procedure.</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="16e62-126">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="16e62-126">See also</span></span>
+
+- [<span data-ttu-id="16e62-127">İfade ağaçları (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="16e62-127">Expression Trees (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/expression-trees/index.md)
+- [<span data-ttu-id="16e62-128">Nasıl yapılır: Ifade ağaçlarını yürütme (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="16e62-128">How to: Execute Expression Trees (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)

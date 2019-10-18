@@ -1,70 +1,72 @@
 ---
-title: 'Nasıl yapılır: Belirli bir sözcükler (LINQ) (Visual Basic) kümesini içeren cümleleri sorgulama'
+title: 'Nasıl yapılır: belirli bir sözcükler kümesini içeren cümleleri sorgulama (LINQ) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: a5ae8ced-61fe-4c10-bb8a-95630e50f603
-ms.openlocfilehash: a88171d86ad820870ee72d224415d96931066abe
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 81863706afc4f09abf114d7efbaaa02b1ee56084
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65593292"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72524138"
 ---
-# <a name="how-to-query-for-sentences-that-contain-a-specified-set-of-words-linq-visual-basic"></a><span data-ttu-id="44c8c-102">Nasıl yapılır: Belirli bir sözcükler (LINQ) (Visual Basic) kümesini içeren cümleleri sorgulama</span><span class="sxs-lookup"><span data-stu-id="44c8c-102">How to: Query for Sentences that Contain a Specified Set of Words (LINQ) (Visual Basic)</span></span>
-<span data-ttu-id="44c8c-103">Bu örnek, eşleşen her biri belirli bir sözcükler kümesini içeren bir metin dosyasındaki cümleler nasıl gösterir.</span><span class="sxs-lookup"><span data-stu-id="44c8c-103">This example shows how to find sentences in a text file that contain matches for each of a specified set of words.</span></span> <span data-ttu-id="44c8c-104">Bu örnekte, sabit kodlanmış arama terimlerini dizi olmasına karşın, dinamik olarak çalışma zamanında doldurulduğunu.</span><span class="sxs-lookup"><span data-stu-id="44c8c-104">Although the array of search terms is hard-coded in this example, it could also be populated dynamically at runtime.</span></span> <span data-ttu-id="44c8c-105">Bu örnekte, "Tarihsel olarak," sözcüklerini içeren cümleleri sorguyu döndürür "veri" ve "tümleşik."</span><span class="sxs-lookup"><span data-stu-id="44c8c-105">In this example, the query returns the sentences that contain the words "Historically," "data," and "integrated."</span></span>  
-  
-## <a name="example"></a><span data-ttu-id="44c8c-106">Örnek</span><span class="sxs-lookup"><span data-stu-id="44c8c-106">Example</span></span>  
-  
-```vb  
-Class FindSentences  
-  
-    Shared Sub Main()  
-        Dim text As String = "Historically, the world of data and the world of objects " &   
-        "have not been well integrated. Programmers work in C# or Visual Basic " &   
-        "and also in SQL or XQuery. On the one side are concepts such as classes, " &   
-        "objects, fields, inheritance, and .NET Framework APIs. On the other side " &   
-        "are tables, columns, rows, nodes, and separate languages for dealing with " &   
-        "them. Data types often require translation between the two worlds; there are " &   
-        "different standard functions. Because the object world has no notion of query, a " &   
-        "query can only be represented as a string without compile-time type checking or " &   
-        "IntelliSense support in the IDE. Transferring data from SQL tables or XML trees to " &   
-        "objects in memory is often tedious and error-prone."  
-  
-        ' Split the text block into an array of sentences.  
-        Dim sentences As String() = text.Split(New Char() {".", "?", "!"})  
-  
-        ' Define the search terms. This list could also be dynamically populated at runtime  
-        Dim wordsToMatch As String() = {"Historically", "data", "integrated"}  
-  
-        ' Find sentences that contain all the terms in the wordsToMatch array  
-        ' Note that the number of terms to match is not specified at compile time  
-        Dim sentenceQuery = From sentence In sentences   
-                            Let w = sentence.Split(New Char() {" ", ",", ".", ";", ":"},   
-                                                   StringSplitOptions.RemoveEmptyEntries)   
-                            Where w.Distinct().Intersect(wordsToMatch).Count = wordsToMatch.Count()   
-                            Select sentence  
-  
-        ' Execute the query  
-        For Each str As String In sentenceQuery  
-            Console.WriteLine(str)  
-        Next  
-  
-        ' Keep console window open in debug mode.  
-        Console.WriteLine("Press any key to exit.")  
-        Console.ReadKey()  
-    End Sub  
-  
-End Class  
-' Output:  
-' Historically, the world of data and the world of objects have not been well integrated  
-```  
-  
- <span data-ttu-id="44c8c-107">İlk metin cümleler bölme ve ardından her sözcüğün tutan bir dize dizisi cümleleri bölme sorgu çalışır.</span><span class="sxs-lookup"><span data-stu-id="44c8c-107">The query works by first splitting the text into sentences, and then splitting the sentences into an array of strings that hold each word.</span></span> <span data-ttu-id="44c8c-108">Her biri bu dizileri için <xref:System.Linq.Enumerable.Distinct%2A> yöntemi tüm yinelenen sözcükler kaldırır ve ardından sorgu gerçekleştiren bir <xref:System.Linq.Enumerable.Intersect%2A> sözcük dizisi işlemi ve `wordsToMatch` dizi.</span><span class="sxs-lookup"><span data-stu-id="44c8c-108">For each of these arrays, the <xref:System.Linq.Enumerable.Distinct%2A> method removes all duplicate words, and then the query performs an <xref:System.Linq.Enumerable.Intersect%2A> operation on the word array and the `wordsToMatch` array.</span></span> <span data-ttu-id="44c8c-109">Kesişimi sayısı sayısı ile aynı olup olmadığını `wordsToMatch` dizinin tüm sözcükleri sözcükleri bulundu ve asıl cümlenin döndürülür.</span><span class="sxs-lookup"><span data-stu-id="44c8c-109">If the count of the intersection is the same as the count of the `wordsToMatch` array, all words were found in the words and the original sentence is returned.</span></span>  
-  
- <span data-ttu-id="44c8c-110">Çağrısında <xref:System.String.Split%2A>, noktalama işaretleri, ayırıcısı olarak bunları dizeden kaldırmak için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="44c8c-110">In the call to <xref:System.String.Split%2A>, the punctuation marks are used as separators in order to remove them from the string.</span></span> <span data-ttu-id="44c8c-111">Sahip olduğunuz bir dize "Daha önce" örneği için bunu değil ise, değil eşleşir "Daha önce" içinde `wordsToMatch` dizisi.</span><span class="sxs-lookup"><span data-stu-id="44c8c-111">If you did not do this, for example you could have a string "Historically," that would not match "Historically" in the `wordsToMatch` array.</span></span> <span data-ttu-id="44c8c-112">Kaynak metni bulundu noktalama türlerine bağlı olarak ek ayırıcıları kullanmanız gerekebilir.</span><span class="sxs-lookup"><span data-stu-id="44c8c-112">You may have to use additional separators, depending on the types of punctuation found in the source text.</span></span>  
-  
-## <a name="compiling-the-code"></a><span data-ttu-id="44c8c-113">Kod Derleniyor</span><span class="sxs-lookup"><span data-stu-id="44c8c-113">Compiling the Code</span></span>  
-<span data-ttu-id="44c8c-114">VB.NET konsol uygulama projesi oluşturmak bir `Imports` System.Linq ad alanı bildirimi.</span><span class="sxs-lookup"><span data-stu-id="44c8c-114">Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.</span></span>
-  
-## <a name="see-also"></a><span data-ttu-id="44c8c-115">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="44c8c-115">See also</span></span>
+# <a name="how-to-query-for-sentences-that-contain-a-specified-set-of-words-linq-visual-basic"></a><span data-ttu-id="d1713-102">Nasıl yapılır: belirli bir sözcükler kümesini içeren cümleleri sorgulama (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d1713-102">How to: Query for Sentences that Contain a Specified Set of Words (LINQ) (Visual Basic)</span></span>
 
-- [<span data-ttu-id="44c8c-116">LINQ ve dizeler (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="44c8c-116">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+<span data-ttu-id="d1713-103">Bu örnek, belirli bir sözcük kümesinin her biri için eşleşmeler içeren bir metin dosyasında Tümcelerin nasıl bulunacağını gösterir.</span><span class="sxs-lookup"><span data-stu-id="d1713-103">This example shows how to find sentences in a text file that contain matches for each of a specified set of words.</span></span> <span data-ttu-id="d1713-104">Bu örnekte, arama terimleri dizisi sabit kodlanmış olsa da, çalışma zamanında dinamik olarak doldurulabilir.</span><span class="sxs-lookup"><span data-stu-id="d1713-104">Although the array of search terms is hard-coded in this example, it could also be populated dynamically at runtime.</span></span> <span data-ttu-id="d1713-105">Bu örnekte sorgu, "tarihsel olarak", "Data" ve "Integrated" sözcüklerini içeren cümleleri döndürür.</span><span class="sxs-lookup"><span data-stu-id="d1713-105">In this example, the query returns the sentences that contain the words "Historically," "data," and "integrated."</span></span>
+
+## <a name="example"></a><span data-ttu-id="d1713-106">Örnek</span><span class="sxs-lookup"><span data-stu-id="d1713-106">Example</span></span>
+
+```vb
+Class FindSentences
+
+    Shared Sub Main()
+        Dim text As String = "Historically, the world of data and the world of objects " &
+        "have not been well integrated. Programmers work in C# or Visual Basic " &
+        "and also in SQL or XQuery. On the one side are concepts such as classes, " &
+        "objects, fields, inheritance, and .NET Framework APIs. On the other side " &
+        "are tables, columns, rows, nodes, and separate languages for dealing with " &
+        "them. Data types often require translation between the two worlds; there are " &
+        "different standard functions. Because the object world has no notion of query, a " &
+        "query can only be represented as a string without compile-time type checking or " &
+        "IntelliSense support in the IDE. Transferring data from SQL tables or XML trees to " &
+        "objects in memory is often tedious and error-prone."
+
+        ' Split the text block into an array of sentences.
+        Dim sentences As String() = text.Split(New Char() {".", "?", "!"})
+
+        ' Define the search terms. This list could also be dynamically populated at runtime
+        Dim wordsToMatch As String() = {"Historically", "data", "integrated"}
+
+        ' Find sentences that contain all the terms in the wordsToMatch array
+        ' Note that the number of terms to match is not specified at compile time
+        Dim sentenceQuery = From sentence In sentences
+                            Let w = sentence.Split(New Char() {" ", ",", ".", ";", ":"},
+                                                   StringSplitOptions.RemoveEmptyEntries)
+                            Where w.Distinct().Intersect(wordsToMatch).Count = wordsToMatch.Count()
+                            Select sentence
+
+        ' Execute the query
+        For Each str As String In sentenceQuery
+            Console.WriteLine(str)
+        Next
+
+        ' Keep console window open in debug mode.
+        Console.WriteLine("Press any key to exit.")
+        Console.ReadKey()
+    End Sub
+
+End Class
+' Output:
+' Historically, the world of data and the world of objects have not been well integrated
+```
+
+<span data-ttu-id="d1713-107">Sorgu önce metni cümlelere bölerek ve sonra cümleleri her bir sözcüğü tutan dizeler dizisine bölerek işe yarar.</span><span class="sxs-lookup"><span data-stu-id="d1713-107">The query works by first splitting the text into sentences, and then splitting the sentences into an array of strings that hold each word.</span></span> <span data-ttu-id="d1713-108">Bu dizilerin her biri için <xref:System.Linq.Enumerable.Distinct%2A> yöntemi tüm yinelenen sözcükleri kaldırır ve sonra sorgu, Word dizisinde ve `wordsToMatch` dizisinde bir <xref:System.Linq.Enumerable.Intersect%2A> işlemi gerçekleştirir.</span><span class="sxs-lookup"><span data-stu-id="d1713-108">For each of these arrays, the <xref:System.Linq.Enumerable.Distinct%2A> method removes all duplicate words, and then the query performs an <xref:System.Linq.Enumerable.Intersect%2A> operation on the word array and the `wordsToMatch` array.</span></span> <span data-ttu-id="d1713-109">Kesişimin sayısı `wordsToMatch` dizisinin sayısıyla aynıysa, sözcüklerde tüm sözcükler bulunur ve özgün tümce döndürülür.</span><span class="sxs-lookup"><span data-stu-id="d1713-109">If the count of the intersection is the same as the count of the `wordsToMatch` array, all words were found in the words and the original sentence is returned.</span></span>
+
+<span data-ttu-id="d1713-110">@No__t_0 çağrısında noktalama işaretleri, dizeden kaldırmak için ayırıcılar olarak kullanılır.</span><span class="sxs-lookup"><span data-stu-id="d1713-110">In the call to <xref:System.String.Split%2A>, the punctuation marks are used as separators in order to remove them from the string.</span></span> <span data-ttu-id="d1713-111">Bunu yapmadıysanız, örneğin, `wordsToMatch` dizide "tarihsel" olarak eşleşmeyen "tarihsel" bir dizeye sahip olabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="d1713-111">If you did not do this, for example you could have a string "Historically," that would not match "Historically" in the `wordsToMatch` array.</span></span> <span data-ttu-id="d1713-112">Kaynak metinde bulunan noktalama türlerine bağlı olarak ek ayırıcılar kullanmanız gerekebilir.</span><span class="sxs-lookup"><span data-stu-id="d1713-112">You may have to use additional separators, depending on the types of punctuation found in the source text.</span></span>
+
+## <a name="compiling-the-code"></a><span data-ttu-id="d1713-113">Kod Derleniyor</span><span class="sxs-lookup"><span data-stu-id="d1713-113">Compiling the Code</span></span>
+
+<span data-ttu-id="d1713-114">System. Linq ad alanı için `Imports` ifadesiyle bir VB.NET konsol uygulaması projesi oluşturun.</span><span class="sxs-lookup"><span data-stu-id="d1713-114">Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="d1713-115">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="d1713-115">See also</span></span>
+
+- [<span data-ttu-id="d1713-116">LINQ ve dizeler (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d1713-116">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
