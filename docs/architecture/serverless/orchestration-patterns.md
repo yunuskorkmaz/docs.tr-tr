@@ -4,12 +4,12 @@ description: Azure dayanıklı işlevler PR
 author: cecilphillip
 ms.author: cephilli
 ms.date: 06/26/2018
-ms.openlocfilehash: 18e13c5355490ef4a019ceda459114bdb6bfd539
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 2bd81c29e727254af6c8ecf39ee4bfef1f39d009
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68676738"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522641"
 ---
 # <a name="orchestration-patterns"></a>Düzenleme desenleri
 
@@ -37,9 +37,9 @@ public static async Task<string> PlaceOrder([OrchestrationTrigger] DurableOrches
 }
 ```
 
-Yukarıdaki kod örneğinde, `CallActivityAsync` işlev veri merkezindeki bir sanal makinede belirli bir etkinliği çalıştırmaktan sorumludur. Await döndürüldüğünde ve temel alınan görev tamamlandığında, yürütme geçmiş tablosuna kaydedilir. Orchestrator işlevindeki kod, görev paralel kitaplığı ve zaman uyumsuz/await anahtar kelimeleriyle ilgili tanıdık yapıların herhangi birini kullanabilir.
+Yukarıdaki kod örneğinde, `CallActivityAsync` işlevi, veri merkezindeki bir sanal makinede belirli bir etkinliği çalıştırmaktan sorumludur. Await döndürüldüğünde ve temel alınan görev tamamlandığında, yürütme geçmiş tablosuna kaydedilir. Orchestrator işlevindeki kod, görev paralel kitaplığı ve zaman uyumsuz/await anahtar kelimeleriyle ilgili tanıdık yapıların herhangi birini kullanabilir.
 
-Aşağıdaki kod, `ProcessPayment` yöntemin neye benzebildiklerine yönelik basitleştirilmiş bir örnektir:
+Aşağıdaki kod, `ProcessPayment` yönteminin nasıl görünebileceklerini basit bir örneğidir:
 
 ```csharp
 [FunctionName("ProcessPayment")]
@@ -60,7 +60,7 @@ public static bool ProcessPayment([ActivityTrigger] DurableActivityContext conte
 
 Bazı durumlarda, iş akışları görece uzun süre süren etkinlikleri içerebilir. Medya dosyalarının yedeklenmesini blob depolamaya vurur bir işlem düşünün. Medya dosyalarının boyutuna ve miktarına bağlı olarak, bu yedekleme işleminin tamamlanması saatler sürebilir.
 
-Bu senaryoda, `DurableOrchestrationClient`çalışan bir iş akışının durumunu denetleme özelliği yararlı olur. Bir iş akışını `HttpTrigger` başlatmak için bir kullanırken `CreateCheckStatusResponse` , yöntemi bir örneği döndürmek `HttpResponseMessage`için kullanılabilir. Bu yanıt, istemcide çalışan işlemin durumunu denetlemek için kullanılabilecek bir URI sağlar.
+Bu senaryoda, `DurableOrchestrationClient` çalışan bir iş akışının durumunu denetleme özelliği yararlı olur. Bir iş akışını başlatmak için `HttpTrigger` kullanırken, `CreateCheckStatusResponse` yöntemi `HttpResponseMessage` örneğini döndürmek için kullanılabilir. Bu yanıt, istemcide çalışan işlemin durumunu denetlemek için kullanılabilecek bir URI sağlar.
 
 ```csharp
 [FunctionName("OrderWorkflow")]
@@ -105,7 +105,7 @@ Tercih edilen HTTP istemcinizi kullanarak, çalışan iş akışının durumunu 
 
 ## <a name="monitoring"></a>İzleme
 
-Azure işlevleri, basit yinelenen görevler için bir cron ifadesine göre zamanlanabilen ' ı sağlar `TimerTrigger` . Zamanlayıcı basit, kısa süreli görevler için iyi işler, ancak daha esnek zamanlamanın gerektiği senaryolar olabilir. Bu senaryo, izleme deseninin ve Dayanıklı İşlevler yardımcı olabilir.
+Azure Işlevleri, basit yinelenen görevler için bir CRON ifadesine göre zamanlanabilecek `TimerTrigger` sağlar. Zamanlayıcı basit, kısa süreli görevler için iyi işler, ancak daha esnek zamanlamanın gerektiği senaryolar olabilir. Bu senaryo, izleme deseninin ve Dayanıklı İşlevler yardımcı olabilir.
 
 Dayanıklı İşlevler, esnek zamanlama aralıklarına, ömür yönetimine ve tek bir düzenleme işlevinden birden çok izleme işleminin oluşturulmasına olanak sağlar. Bu işlevsellik için bir kullanım örneği, belirli bir eşiğin karşılandıktan sonra tamamlanan stok fiyatı değişiklikleri için izleyicileri oluşturmak olabilir.
 
@@ -149,13 +149,13 @@ public static async Task CheckStockPrice([OrchestrationTrigger] DurableOrchestra
 }
 ```
 
-`DurableOrchestrationContext``CreateTimer` yöntemi, stok fiyatı değişikliklerini denetlemek için döngünün bir sonraki çağrılma zamanlamasını ayarlar. `DurableOrchestrationContext`Ayrıca UTC 'de `CurrentUtcDateTime` geçerli tarih saat değerini almak için bir özelliğe sahiptir. Test etmek için kolayca bu özelliğin `DateTime.UtcNow` kullanılması daha iyidir.
+`DurableOrchestrationContext` `CreateTimer` yöntemi, stok fiyatı değişikliklerini denetlemek için döngünün bir sonraki çağrılma zamanlamasını ayarlar. `DurableOrchestrationContext` Ayrıca UTC 'de geçerli tarih saat değerini almak için bir `CurrentUtcDateTime` özelliğine sahiptir. Test için kolayca bir şekilde kullanıldığından, bu özelliğin `DateTime.UtcNow` yerine kullanılması daha iyidir.
 
 ## <a name="recommended-resources"></a>Önerilen Kaynaklar
 
-* [Azure Dayanıklı İşlevler](https://docs.microsoft.com/azure/azure-functions/durable-functions-overview)
-* [.NET Core ve .NET Standard birim testi](../../core/testing/index.md)
+- [Azure Dayanıklı İşlevler](https://docs.microsoft.com/azure/azure-functions/durable-functions-overview)
+- [.NET Core ve .NET Standard birim testi](../../core/testing/index.md)
 
 >[!div class="step-by-step"]
->[Önceki](durable-azure-functions.md)İleri
->[](serverless-business-scenarios.md)
+>[Önceki](durable-azure-functions.md)
+>[İleri](serverless-business-scenarios.md)

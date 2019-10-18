@@ -1,22 +1,22 @@
 ---
-title: Azure İzleyici
+title: Azure Izleyici
 description: Sisteminizin üzerinde görünürlük elde etmek için Azure Izleyici 'yi kullanma.
 ms.date: 09/23/2019
-ms.openlocfilehash: 20048792e95ef1f6e75551cdd0d3571f972f6c14
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 4d7d556f030500ea6e0f608e3bdfd16d22d9eb1d
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71214098"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72521031"
 ---
-# <a name="azure-monitor"></a>Azure İzleyici 
+# <a name="azure-monitor"></a>Azure Izleyici 
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Azure 'da bulunan bir bulut uygulaması izleme çözümünün dışında başka bir bulut sağlayıcısı yoktur. Azure Izleyici, sisteminizin durumuna ilişkin görünürlük sağlamak için tasarlanan bir araç koleksiyonu için bir şemsiye addır, uygulamanızın herhangi bir sorununa ve iyileştirmesine ilişkin öngörüler sunar. 
 
-![Azure Izleyici, bulut Yerel uygulamasının nasıl çalıştığını kavramak için araçlara yönelik bir koleksiyon. **Şekil 7-9**. ](./media/azure-monitor.png)
- Azure Izleyici, bulut Yerel uygulamasının nasıl çalıştığını kavramak için araçlara yönelik bir koleksiyon.
+bir bulutta yerel uygulamanın nasıl çalıştığını kavramak için araçlara yönelik bir koleksiyon olan ![Azure Monitor. **şekil 7-9**](./media/azure-monitor.png)
+. Azure Izleyici, bulut Yerel uygulamasının nasıl çalıştığını kavramak için araçlara yönelik bir koleksiyon.
 
 ## <a name="gathering-logs-and-metrics"></a>Günlükleri ve ölçümleri toplama
 
@@ -42,8 +42,8 @@ StormEvents
 | render piechart 
 ```
 
-![](./media/azure-monitor.png)
-**Şekil 7-10**Application Insights sorgu sonucu. Application Insights sorgusunun sonucu.
+**şekil 7-10**](./media/azure-monitor.png)
+ Application Insights sorgusunun sonucunu ![The. Application Insights sorgusunun sonucu.
 
 [Kusto sorguları denemek için bir oyun](https://dataexplorer.azure.com/clusters/help/databases/Samples) vardır. Bu, bir saat veya iki harcayabileceğiniz harika bir yerdir. [Örnek sorguları](https://docs.microsoft.com/azure/kusto/query/samples) okuma da çalıştırılabilir.
 
@@ -51,23 +51,23 @@ StormEvents
 
 Azure Izleyici 'den bilgileri yüzeye almak için kullanılabilecek çeşitli farklı Pano teknolojileri vardır. Belki de en basit, Application Insights sorguları çalıştırmak ve [verileri bir grafiğe çizmeniz](https://docs.microsoft.com/azure/azure-monitor/learn/tutorial-app-dashboards)olabilir. 
 
-![Ana Azure panosu](./media/azure-monitor.png)
-**Şekil 7-11**' de gömülü Application Insights grafiklerin bir örneği. Ana Azure panosuna katıştırılmış Application Insights grafik örneği.
+Ana Azure panosuna ekli Application Insights grafik ![An örneği ](./media/azure-monitor.png)
+**şekil 7-11**. Ana Azure panosuna katıştırılmış Application Insights grafik örneği.
 
 Bu grafikler daha sonra Pano özelliğinin kullanımıyla Azure portal uygun şekilde gömülebilir. Çeşitli veri katmanlarında ayrıntıya gidebilmekte olan kullanıcılar için Azure Izleyici verileri [Power BI](https://powerbi.microsoft.com/)kullanılabilir. Power BI, birçok farklı veri kaynağından veri toplayabilen sektör lideri, kurumsal sınıf, iş zekası aracıdır.
 
-![Dashboard](./media/azure-monitor.png)
-**Şekil 7-12**Power BI bir örnektir. Pano Power BI bir örnek.
+![An örnek Power BI Pano ](./media/azure-monitor.png)
+**şekil 7-12**. Pano Power BI bir örnek.
 
 ## <a name="alerts"></a>Uyarılar
 
 Bazen veri panoları yeterli değildir. Panoları izlemek için kimse uyanık yoksa, bir sorun giderilebilmesi veya hatta algılanmadan önce bu süre çok saat kadar sürebilir. Azure Izleyici, bu uçta bir üst düzey [Uyarı çözümü](https://docs.microsoft.com/azure/azure-monitor/platform/alerts-overview)de sağlar. Uyarılar aşağıdakiler dahil olmak üzere çok çeşitli koşullarla tetiklenebilir:
 
-* Ölçüm değerleri
-* Günlük arama sorguları
-* Etkinlik günlüğü olayları
-* Temel alınan Azure platformunun durumu
-* Web sitesi kullanılabilirliği için testler
+- Ölçüm değerleri
+- Günlük arama sorguları
+- Etkinlik günlüğü olayları
+- Temel alınan Azure platformunun durumu
+- Web sitesi kullanılabilirliği için testler
 
 Tetiklendiğinde, uyarılar çok çeşitli görevler gerçekleştirebilir. Basit tarafta, uyarılar yalnızca bir posta listesine e-posta bildirimi veya bir kişiye metin iletisi gönderebilir. Daha fazla ilgili uyarı, belirli bir uygulama için kimin çağırdığının farkında olan Pagerharcı gibi bir araçta iş akışını tetikleyebiliyor. Uyarılar, iş akışları için sınırsız olasılıklardan [Microsoft Flow](https://flow.microsoft.com/) kilit açma sırasında eylemleri tetikleyebilir.
 

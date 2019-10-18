@@ -4,12 +4,12 @@ description: Zamanlama ve olay tabanlı işlemden dosya tetikleyicilerine ve ak�
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 096dce6ef23bde5ef9c6ca65769f4dcc7e08a904
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: f7d3ec50608848b725d813ae2a9ee59ae9532ef3
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68676675"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522344"
 ---
 # <a name="serverless-design-examples"></a>Sunucusuz tasarım örnekleri
 
@@ -77,17 +77,17 @@ Bir API ağ geçidi istemciler için tek bir giriş noktası sağlar ve istekler
 
 ## <a name="recommended-resources"></a>Önerilen Kaynaklar
 
-* [Azure Event Grid](https://docs.microsoft.com/azure/event-grid/overview)
-* [Azure IoT Hub](https://docs.microsoft.com/azure/iot-hub)
-* [Dağıtılmış veri yönetimi için sorunlar ve çözümler](../microservices/architect-microservice-container-applications/distributed-data-management.md)
-* [Mikro hizmetler tasarlama: mikro hizmet sınırlarını tanımlama](https://docs.microsoft.com/azure/architecture/microservices/microservice-boundaries)
-* [Event Hubs](https://docs.microsoft.com/azure/event-hubs/event-hubs-what-is-event-hubs)
-* [Olay kaynağını belirleme kalıbı](https://docs.microsoft.com/azure/architecture/patterns/event-sourcing)
-* [Devre Kesici desenini uygulama](../microservices/implement-resilient-applications/implement-circuit-breaker-pattern.md)
-* [IoT Hub’ı](https://docs.microsoft.com/azure/iot-hub)
-* [Service Bus](https://docs.microsoft.com/azure/service-bus)
-* [Azure Cosmos DB'de destek akış değişiklik ile çalışma](https://docs.microsoft.com/azure/cosmos-db/change-feed)
+- [Azure Event Grid](https://docs.microsoft.com/azure/event-grid/overview)
+- [Azure IoT Hub](https://docs.microsoft.com/azure/iot-hub)
+- [Dağıtılmış veri yönetimi için sorunlar ve çözümler](../microservices/architect-microservice-container-applications/distributed-data-management.md)
+- [Mikro hizmetler tasarlama: mikro hizmet sınırlarını tanımlama](https://docs.microsoft.com/azure/architecture/microservices/microservice-boundaries)
+- [Event Hubs](https://docs.microsoft.com/azure/event-hubs/event-hubs-what-is-event-hubs)
+- [Olay kaynağını belirleme kalıbı](https://docs.microsoft.com/azure/architecture/patterns/event-sourcing)
+- [Devre Kesici desenini uygulama](../microservices/implement-resilient-applications/implement-circuit-breaker-pattern.md)
+- [IoT Hub](https://docs.microsoft.com/azure/iot-hub)
+- [Service Bus](https://docs.microsoft.com/azure/service-bus)
+- [Azure Cosmos DB değişiklik akışı desteğiyle çalışma](https://docs.microsoft.com/azure/cosmos-db/change-feed)
 
 >[!div class="step-by-step"]
->[Önceki](serverless-architecture-considerations.md)İleri
->[](azure-serverless-platform.md)
+>[Önceki](serverless-architecture-considerations.md)
+>[İleri](azure-serverless-platform.md)

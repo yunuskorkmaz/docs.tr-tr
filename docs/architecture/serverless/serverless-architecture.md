@@ -4,12 +4,12 @@ description: Web uygulamaları, mobil ve IoT gibi sunucusuz mimariler tarafında
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 3b22fecfdc693154dbdeb3e872e0e246e8ca41f9
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 838dcd7b41df0d8297e1ae10f9c04a8d5b83b332
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68676723"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522401"
 ---
 # <a name="serverless-architecture"></a>Sunucusuz mimari
 
@@ -27,12 +27,12 @@ Bazı projeler, sunucusuz 'e "hepsini bir" yaklaşımı alma avantajına sahip o
 
 Tam sunucusuz arka ucu, özellikle yeni veya "yeşil alan" uygulamaları oluştururken çeşitli türlerde senaryolar için idealdir. API 'lerin büyük bir yüzey alanına sahip bir uygulama, her API 'YI sunucusuz bir işlev olarak uygulamalarından yararlanabilir. Mikro hizmet mimarisini temel alan uygulamalar, tam sunucusuz arka uç olarak uygulanabilecek başka bir örnektir. Mikro hizmetler birbirleriyle çeşitli protokoller üzerinden iletişim kurar. Belirli senaryolar şunlardır:
 
-* API tabanlı SaaS ürünleri (örnek: finansal ödemeler işlemcisi).
-* İleti temelli uygulamalar (örnek: cihaz izleme çözümü).
-* Hizmetler arasındaki tümleştirmeye odaklanan uygulamalar (örnek: hava yolu kayıt uygulaması).
-* Düzenli aralıklarla çalışan süreçler (örnek: Zamanlayıcı tabanlı veritabanı temizleme).
-* Veri dönüşümüne odaklanan uygulamalar (örnek: içeri aktarma işlemi dosya yükleme tarafından tetiklendi).
-* Dönüştürme ve yükleme (ETL) süreçlerini ayıklayın.
+- API tabanlı SaaS ürünleri (örnek: finansal ödemeler işlemcisi).
+- İleti temelli uygulamalar (örnek: cihaz izleme çözümü).
+- Hizmetler arasındaki tümleştirmeye odaklanan uygulamalar (örnek: hava yolu kayıt uygulaması).
+- Düzenli aralıklarla çalışan süreçler (örnek: Zamanlayıcı tabanlı veritabanı temizleme).
+- Veri dönüşümüne odaklanan uygulamalar (örnek: içeri aktarma işlemi dosya yükleme tarafından tetiklendi).
+- Dönüştürme ve yükleme (ETL) süreçlerini ayıklayın.
 
 Bu belgede daha sonra ele alınan başka, daha belirgin kullanım durumları vardır.
 
@@ -42,7 +42,7 @@ Yaygın bir sınama, mevcut bir tek parçalı uygulamayı buluta geçirmektir. E
 
 ![Sunucusuz mimariden geçişi](./media/serverless-monolith-migration.png)
 
-Bu yaklaşım hakkında daha fazla bilgi edinmek için videoyu izleyin: [Sunucusuz Azure işlevleri sayesinde Uygulamanızı buluta taşıyın](https://channel9.msdn.com/Events/Connect/2017/E102).
+Bu yaklaşım hakkında daha fazla bilgi edinmek için videoyu izleyin: [sunucusuz Azure işlevleri ile Uygulamanızı buluta taşıyın](https://channel9.msdn.com/Events/Connect/2017/E102).
 
 ## <a name="web-apps"></a>Web uygulamaları
 
@@ -66,13 +66,13 @@ IoT, birbirine bağlı fiziksel nesneleri ifade eder. Bunlar bazen "bağlı ciha
 
 Cihazların ve bilgilerin yerleşik hacmi genellikle iletileri yönlendirmek ve işlemek için olay odaklı bir mimariyi belirler. Sunucusuz, çeşitli nedenlerle ideal bir çözümdür:
 
-* Cihazların ve verilerin hacmi arttıkça ölçeklendirmeyi izin vermez.
-* Yeni cihazları ve algılayıcıları desteklemek için yeni uç noktalar eklemeye uyum sağlar.
-* Geliştiricilerin sistemin tamamını dağıtmaya gerek kalmadan belirli bir cihaz için iş mantığını güncelleştirebilmesi için bağımsız sürüm oluşturmayı kolaylaştırır.
-* Dayanıklılık ve daha az kapalı kalma süresi.
+- Cihazların ve verilerin hacmi arttıkça ölçeklendirmeyi izin vermez.
+- Yeni cihazları ve algılayıcıları desteklemek için yeni uç noktalar eklemeye uyum sağlar.
+- Geliştiricilerin sistemin tamamını dağıtmaya gerek kalmadan belirli bir cihaz için iş mantığını güncelleştirebilmesi için bağımsız sürüm oluşturmayı kolaylaştırır.
+- Dayanıklılık ve daha az kapalı kalma süresi.
 
 IoT 'nin kullanılabilirliği, [Azure IoT Hub](https://docs.microsoft.com/azure/iot-hub)gibi IoT kaygılarıyla ilgili olarak çok sayıda sunucusuz ürüne neden oldu. Sunucusuz, cihaz kaydı, ilke zorlama, izleme ve hatta kodun *kenarda*cihazlara dağıtılması gibi görevleri otomatikleştirir. Sınır, Internet 'e bağlı ancak etkin bir parçası değil, algılayıcı ve erişim gibi cihazlara başvurur.
 
 >[!div class="step-by-step"]
->[Önceki](architecture-approaches.md)İleri
->[](serverless-architecture-considerations.md)
+>[Önceki](architecture-approaches.md)
+>[İleri](serverless-architecture-considerations.md)

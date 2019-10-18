@@ -4,12 +4,12 @@ description: Görüntü işlemeden mobil arka uçlarına ve ETL işlem hattına 
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 7024a33f8a7fccd6afa51c126454afedd87cceee
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 8a2301b3c7a5f4a1f465677f31371d5b94783692
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834295"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522391"
 ---
 # <a name="serverless-business-scenarios-and-use-cases"></a>Sunucusuz iş senaryoları ve kullanım örnekleri
 
@@ -85,17 +85,17 @@ Yönergelerin bulunduğu tam bağlantı kısa bir deposu şurada bulunabilir: [s
 
 Daha fazla bilgi için bkz. [Azure IoT Hub ping](https://azure.microsoft.com/resources/samples/iot-hub-node-ping/).
 
-## <a name="recommended-resources"></a>Önerilen kaynaklar
+## <a name="recommended-resources"></a>Önerilen Kaynaklar
 
-* [Azure Işlevleri fotoğraf mozaik Oluşturucu](https://azure.microsoft.com/resources/samples/functions-dotnet-photo-mosaic/)
-* [Azure IoT Hub ping](https://azure.microsoft.com/resources/samples/iot-hub-node-ping/)
-* [Dakikalar içinde sunucusuz .NET uygulamaları için Azure depolama](https://devblogs.microsoft.com/aspnet/azure-storage-for-serverless-net-apps-in-minutes/)
-* [Kendi uygulamanızı getir](https://github.com/JeremyLikness/bring-own-app-connect-17)
-* [CSV içeri aktarma Laboratuvarı](https://github.com/JeremyLikness/azure-fn-file-process-hol)
-* [Olay Kılavuzu tutkalla](https://github.com/JeremyLikness/Event-Grid-Glue)
-* [Xamarin. Forms istemcisiyle basit bir Azure Işlevi uygulama](https://azure.microsoft.com/resources/samples/functions-xamarin-getting-started/)
-* [Sunucusuz Azure işlevleri ile kaldırın ve geçiş yapın](https://channel9.msdn.com/Events/Connect/2017/E102)
-* [Sunucusuz URL kısaltalayıcı](https://github.com/jeremylikness/serverless-url-shortener)
+- [Azure Işlevleri fotoğraf mozaik Oluşturucu](https://azure.microsoft.com/resources/samples/functions-dotnet-photo-mosaic/)
+- [Azure IoT Hub ping](https://azure.microsoft.com/resources/samples/iot-hub-node-ping/)
+- [Dakikalar içinde sunucusuz .NET uygulamaları için Azure depolama](https://devblogs.microsoft.com/aspnet/azure-storage-for-serverless-net-apps-in-minutes/)
+- [Kendi uygulamanızı getir](https://github.com/JeremyLikness/bring-own-app-connect-17)
+- [CSV içeri aktarma Laboratuvarı](https://github.com/JeremyLikness/azure-fn-file-process-hol)
+- [Olay Kılavuzu tutkalla](https://github.com/JeremyLikness/Event-Grid-Glue)
+- [Xamarin. Forms istemcisiyle basit bir Azure Işlevi uygulama](https://azure.microsoft.com/resources/samples/functions-xamarin-getting-started/)
+- [Sunucusuz Azure işlevleri ile kaldırın ve geçiş yapın](https://channel9.msdn.com/Events/Connect/2017/E102)
+- [Sunucusuz URL kısaltalayıcı](https://github.com/jeremylikness/serverless-url-shortener)
 
 >[!div class="step-by-step"]
 >[Önceki](orchestration-patterns.md)

@@ -2,12 +2,12 @@
 title: Azure 'da veri depolama
 description: Azure için Cloud Native .NET uygulamaları tasarlama | Azure 'da veri depolama
 ms.date: 06/30/2019
-ms.openlocfilehash: 5e1182af61401990112135c2f7a3dd37508c9e72
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 6834e47e11c4941735343e3f6bfbfe4cb642e0dd
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71214107"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72521115"
 ---
 # <a name="data-storage-in-azure"></a>Azure 'da veri depolama
 
@@ -21,7 +21,7 @@ Bunun yerine, tam olarak yönetilen [bir hizmet olarak veritabanı (DBaaS)](http
 
 Daha sonra Azure 'da bulunan DBaaS seçeneklerine bakacağız. Microsoft 'un, açık kaynaklı ve NoSQL veritabanları için yönetilen destek sunan ve etkin bir üye olarak çeşitli açık kaynaklı tabanlara anahtar katkıları sağlayan, Azure 'u bir "açık platform" olarak tutma konusunda nasıl sorun olduğunu göreceksiniz.
 
-## <a name="azure-sql-database"></a>Azure SQL Database
+## <a name="azure-sql-database"></a>Azure SQL veritabanı
 
 [Azure SQL veritabanı](https://docs.microsoft.com/azure/sql-database/) , Microsoft SQL Server veritabanı altyapısını temel alan, özellikle zengin, genel amaçlı bir ilişkisel hizmet olarak veritabanı (DBaaS). Microsoft tarafından tam olarak yönetilir ve yüksek performanslı, güvenilir ve güvenli bir bulut veritabanıdır. Hizmet, SQL Server 'ın şirket içi sürümünde bulunan özelliklerin birçoğunu paylaşır. 
 
@@ -35,11 +35,11 @@ Dakikalar içinde bir SQL veritabanı sunucusu ve veritabanı sağlayabilirsiniz
 
 SQL veritabanı dağıtımı sırasında önceki şekildeki alternatifleri göz önünde bulun:
 
-- Bir [SQL veritabanı sunucusu](https://docs.microsoft.com/azure/sql-database/sql-database-servers)tarafından yönetilen kendi kaynakları kümesine sahip [tek bir veritabanı](https://docs.microsoft.com/azure/sql-database/sql-database-single-database) . Tek bir veritabanı, şirket içi SQL Server dağıtımında [Kapsanan veritabanına](https://docs.microsoft.com/sql/relational-databases/databases/contained-databases) benzerdir.
+- [Tek bir veritabanı](https://docs.microsoft.com/azure/sql-database/sql-database-single-database) , bir [SQL veritabanı sunucusu](https://docs.microsoft.com/azure/sql-database/sql-database-servers)tarafından yönetilen kendi kaynak kümesi  with. Tek bir veritabanı, şirket içi SQL Server dağıtımı  in [Kapsanan veritabanına](https://docs.microsoft.com/sql/relational-databases/databases/contained-databases) benzerdir.
 
 - Bir SQL veritabanları koleksiyonunun tek bir SQL veritabanı sunucusunu ayarlanan fiyata paylaştığı [elastik bir havuz](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-pool) . Tek veritabanları, bir grup veritabanı için fiyat performansını iyileştirmek için gerektiğinde elastik bir havuzun içine ve dışına taşınabilir.
 
-- Bir sistem ve kullanıcı veritabanlarının koleksiyonu olan [yönetilen bir örnek](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) , şirket içi SQL Server% 100 ' dan fazla uyumluluk sağlar. Bu seçenek, 35 TB 'a kadar daha büyük veritabanlarını destekler ve daha iyi yalıtım için bir [Azure sanal ağına](https://docs.microsoft.com/azure/virtual-network/virtual-networks-overview) yerleştirilir.
+- Bir sistem ve kullanıcı veritabanlarının koleksiyonu olan [yönetilen bir örnek](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) , şirket içi SQL Server %100 ' dan fazla uyumluluk sağlar. Bu seçenek, 35 TB 'a kadar daha büyük veritabanlarını destekler ve daha iyi yalıtım için bir [Azure sanal ağına](https://docs.microsoft.com/azure/virtual-network/virtual-networks-overview) yerleştirilir.
 
 Azure SQL veritabanı, Kullanıcı katılımı olmadan yükseltme, düzeltme eki uygulama ve izleme işlemlerini yürüten, tam olarak yönetilen [bir hizmet olarak platform (PaaS) veritabanı altyapısıdır](https://docs.microsoft.com/azure/sql-database/sql-database-paas) . Her zaman SQL Server veritabanı altyapısının ve düzeltme eki uygulanan işletim sisteminin en son kararlı sürümünü çalıştırır ve% 99,99 kullanılabilirliği garanti eder. Bir özellik, [etkin coğrafi çoğaltma](https://docs.microsoft.com/azure/sql-database/sql-database-active-geo-replication), aynı veya farklı bir Azure veri merkezinde okunabilir ikincil veritabanları oluşturmanızı sağlar. Hata sonrasında, ikincil veritabanına yük devretme başlatılabilir. Bu noktada, diğer ikincil öğeler yeni birincili otomatik olarak bağlanır. Aynı ya da farklı bölgelerde dört adede kadar ikincil çoğaltma desteklenir ve bu ikincil öğeler salt okuma erişim sorguları için de kullanılabilir.
 
@@ -51,9 +51,9 @@ Son olarak, yeni [Azure SQL veritabanı hiper ölçek](https://azure.microsoft.c
 
 Azure, geleneksel Microsoft SQL Server yığınına ek olarak, çeşitli popüler açık kaynaklı veritabanlarının yönetilen sürümlerine de sahiptir.
 
-## <a name="azure-database-for-mysql"></a>MySQL için Azure Veritabanı
+## <a name="azure-database-for-mysql"></a>MySQL için Azure veritabanı
 
-[](https://en.wikipedia.org/wiki/MySQL)MySQL , [Açık kaynaklı](https://en.wikipedia.org/wiki/Open-source_software)bir [ilişkisel veritabanıdır](https://en.wikipedia.org/wiki/Relational_database_management_system). Bu, [lamba yazılım yığınındaki](https://en.wikipedia.org/wiki/LAMP_(software_bundle)) bir bileşendir ve Facebook, Twitter ve YouTube dahil olmak üzere çok büyük kuruluşlar tarafından kullanılır. Community sürümü ücretsiz olarak kullanılabilir ve Enterprise Edition için bir lisans satın alma işlemi gerekir. Başlangıçta 1995 ' de oluşturulan ürün, ' de 2010 Oracle tarafından edinilen Sun Microsystems tarafından 2008 ' de satın alınmış.
+[MySQL](https://en.wikipedia.org/wiki/MySQL) bir [Açık kaynaklı](https://en.wikipedia.org/wiki/Open-source_software) [ilişkisel veritabanı](https://en.wikipedia.org/wiki/Relational_database_management_system) is. Bu, [lamba yazılım yığınındaki](https://en.wikipedia.org/wiki/LAMP_(software_bundle)) bir bileşendir ve Facebook, Twitter ve YouTube dahil olmak üzere çok büyük kuruluşlar tarafından kullanılır. Community sürümü ücretsiz olarak kullanılabilir ve Enterprise Edition için bir lisans satın alma işlemi gerekir. Başlangıçta 1995 ' de oluşturulan ürün, ' de 2010 Oracle tarafından edinilen Sun Microsystems tarafından 2008 ' de satın alınmış.
 
 [MySQL Için Azure veritabanı](https://azure.microsoft.com/services/mysql/) , açık kaynak MySQL sunucu altyapısını temel alan, tam olarak yönetilen, kurumsal özellikli bir ilişkisel veritabanı hizmetidir. MySQL Community Edition uygulaması, ek bir ücret ödemeden aşağıdaki PaaS özelliklerini içerir:
 
@@ -97,19 +97,19 @@ MariaDB için güçlü bir aşağıdakiler vardır ve birçok büyük kuruluş t
 
 - Kurumsal düzeyde güvenlik ve uyumluluk.
 
-## <a name="azure-database-for-postgresql"></a>PostgreSQL için Azure Veritabanı 
+## <a name="azure-database-for-postgresql"></a>PostgreSQL için Azure veritabanı 
 
 [PostgreSQL](https://www.postgresql.org/) , 30 yıldan fazla etkin geliştirmeyi içeren, popüler, açık kaynaklı bir ilişkisel veritabanıdır. Bu, genel amaçlı ve nesne ilişkisel veritabanı yönetim sistemidir. Lisanslama, "özgürlük" olarak kabul edilir ve ürünün herhangi bir biçimde kullanımı, değiştirilmesi ve dağıtılması ücretsizdir. Apple, Red Hat ve Fujitsu gibi birçok büyük kuruluş, PostgreSQL kullanan ürünleri derlediniz.
 
-[PostgreSQL Için Azure veritabanı](https://azure.microsoft.com/services/postgresql/) , açık kaynak Postgres veritabanı altyapısını temel alan, tam olarak yönetilen bir ilişkisel veritabanı hizmetidir. Tahmin edilebilir performans, güvenlik, yüksek kullanılabilirlik ve dinamik ölçeklenebilirlik ile görev açısından kritik iş yüklerini işleyebilir. Java, Python, Node, C C++\#ve PHP gibi çeşitli açık kaynaklı çerçeveleri ve dilleri destekler. PostgreSQL veritabanlarının bir komut satırı arabirimi veya [Azure veri geçiş hizmeti](https://azure.microsoft.com/services/database-migration/)aracılığıyla [geçirilmesini](https://datamigration.microsoft.com/scenario/postgresql-to-azurepostgresql?step=1) mümkün kılar.
+[PostgreSQL Için Azure veritabanı](https://azure.microsoft.com/services/postgresql/) , açık kaynak Postgres veritabanı altyapısını temel alan, tam olarak yönetilen bir ilişkisel veritabanı hizmetidir. Tahmin edilebilir performans, güvenlik, yüksek kullanılabilirlik ve dinamik ölçeklenebilirlik ile görev açısından kritik iş yüklerini işleyebilir. Java, Python, Node, C \# ve PHP dahil C++olmak üzere çeşitli açık kaynaklı çerçeveleri ve dilleri destekler. PostgreSQL veritabanlarının bir komut satırı arabirimi veya [Azure veri geçiş hizmeti](https://azure.microsoft.com/services/database-migration/)aracılığıyla [geçirilmesini](https://datamigration.microsoft.com/scenario/postgresql-to-azurepostgresql?step=1) mümkün kılar.
 
 Hizmet, benzersiz veritabanı desenlerinizi etkileyen [yerleşik zeka](https://docs.microsoft.com/azure/postgresql/concepts-monitoring) Içerir ve PostgreSQL veritabanınızın performansını en üst düzeye çıkarmanıza yardımcı olacak özelleştirilmiş öneriler ve öngörüler sağlar. [Gelişmiş tehdit koruması](https://docs.microsoft.com/azure/postgresql/concepts-data-access-and-security-threat-protection) , veritabanınızı saatin etrafında izler ve olası kötü amaçlı etkinlikleri algılar, böylece hemen müdahale edebilmeniz için algılama sonrasında sizi uyarır.
 
-PostgreSQL için Azure veritabanı iki dağıtım seçeneği olarak kullanılabilir: Tek sunucu ve hiper ölçek (Citus), bu kitabın yazılması sırasında önizleme için kullanılabilir
+PostgreSQL için Azure veritabanı iki dağıtım seçeneği olarak sunulmaktadır: tek sunucu ve hiper ölçek (Citus), bu kitabın yazılması sırasında önizleme için kullanılabilir
 
 - [Tek sunuculu](https://docs.microsoft.com/azure/postgresql/concepts-servers) dağıtım seçeneği, birden çok veritabanı için merkezi bir yönetim noktasıdır. Şirket içi dağıtımlar için aynı PostgreSQL sunucu altyapısı vardır. Bununla birlikte, tüm kaynakları kullanmak veya kaynakları paylaşmak için birden çok veritabanı oluşturmak üzere sunucu başına tek bir veritabanı oluşturabilirsiniz. Fiyatlandırma, çekirdek ve depolama temelinde sunucu başına yapılandırılır.
 
-- [Hyperscale (Citus) seçeneği](https://azure.microsoft.com/blog/get-high-performance-scaling-for-your-azure-database-workloads-with-hyperscale/)  [Citus veri](https://www.citusdata.com/) teknolojisi tarafından desteklenir. Tek bir veritabanını yüzlerce düğüm genelinde yatay olarak ölçeklendirerek yüksek performanslı ölçeklendirmeyi etkinleştirerek, daha hızlı performans ve ölçek sunun. Bu seçenek, altyapının bellekte daha fazla veri sığdırmasını, yüzlerce düğüm üzerinde paralel hale getirmek sorguları ve veri dizinini daha hızlı şekilde erişmesini sağlar. Hiperscale özelliği, PostgreSQL için en son yeniliklerle, sürümlerle ve araçlarla uyumludur, bu sayede mevcut PostgreSQL uzmanlığınızdan yararlanabilirsiniz.
+- [Hyperscale (Citus) seçeneği](https://azure.microsoft.com/blog/get-high-performance-scaling-for-your-azure-database-workloads-with-hyperscale/)  [Citus veri](https://www.citusdata.com/)  technology tarafından desteklenir. Tek bir veritabanını yüzlerce düğüm genelinde yatay olarak ölçeklendirerek yüksek performanslı ölçeklendirmeyi etkinleştirerek, daha hızlı performans ve ölçek sunun. Bu seçenek, altyapının bellekte daha fazla veri sığdırmasını, yüzlerce düğüm üzerinde paralel hale getirmek sorguları ve veri dizinini daha hızlı şekilde erişmesini sağlar. Hiperscale özelliği, PostgreSQL için en son yeniliklerle, sürümlerle ve araçlarla uyumludur, bu sayede mevcut PostgreSQL uzmanlığınızdan yararlanabilirsiniz.
 
 ## <a name="cosmos-db"></a>Cosmos DB
 
@@ -133,7 +133,7 @@ Cosmos DB ' deki [çoklu ana](https://docs.microsoft.com/azure/cosmos-db/how-to-
 
 - dünyanın her yerindeki% 99,999 okuma ve yazma kullanılabilirliği.
 
-- % 99 ' luk yüzdede 10 milisaniyeden kısa bir süre içinde sunulan garantili okuma ve yazma işlemleri.
+- %99 ' luk yüzdede 10 milisaniyeden kısa bir süre içinde sunulan garantili okuma ve yazma işlemleri.
 
 Dahili olarak, Cosmos DB tutarlılık düzeyi garantilerini ve mali olarak desteklenen hizmet düzeyi sözleşmelerini içeren bölgeler arasında veri çoğaltmasını işler.
 
@@ -145,7 +145,7 @@ Cosmos DB, belgeler, anahtar-değer çiftleri, geniş sütun ve grafik gösterim
 
 ![Cosmos DB sağlayıcıları](./media/cosmos-db-providers.png)
 
-**Şekil 5-14**: Cosmos DB sağlayıcıları
+**Şekil 5-14**: Cosmos DB sağlayıcılar
 
 Şekil 5-14 Cosmos DB [Tablo Depolamayı](https://azure.microsoft.com/services/storage/tables/)nasıl desteklediğine göz önünde bulun. Hem Cosmos DB hem de [Azure Tablo depolama](https://docs.microsoft.com/azure/cosmos-db/table-storage-overview) , aynı temel tablo modelini paylaşır ve aynı tablo işlemlerini çok sayıda kullanıma sunar. Ancak, [Cosmos DB tablo API'si](https://docs.microsoft.com/azure/cosmos-db/table-introduction) Azure Storage API 'sinde bulunmayan birçok Premium geliştirme sağlar. Bu özellikler Şekil 5-15 ' de maliyetli değildir.
 
@@ -155,9 +155,9 @@ Cosmos DB, belgeler, anahtar-değer çiftleri, geniş sütun ve grafik gösterim
 
 Azure Tablo depolaması için yazılmış uygulamalar, hiçbir kod değişikliği olmadan Tablo API'si kullanarak Azure Cosmos DB geçirebilir.
 
-[Brownfield] (https://en.wikipedia.org/wiki/Brownfield_(software_development) uygulama senaryolarında, geliştirme ekipleri mevcut Mongo, Gremlin veya Cassandra veritabanlarını, mevcut verilerde veya uygulama kodunda en az değişiklikle Cosmos DB geçirebilir. Tek [alan](https://en.wikipedia.org/wiki/Greenfield_project) senaryolarında, geliştirme ekipleri MongoDB, Cassandra ve Gremlin platformları için tam olarak desteklenen açık kaynak seçenekleri de dahil olmak üzere gereksinimlerini ve tercihlerini en iyi karşılayan veri modelini seçebilirler.
+[Brownfield](https://en.wikipedia.org/wiki/Brownfield_(software_development)) uygulama senaryolarında, geliştirme ekipleri mevcut Mongo, Gremlin veya Cassandra veritabanlarını, mevcut verilerde veya uygulama kodunda en az değişiklikle Cosmos DB içine geçirebilir. Tek [alan](https://en.wikipedia.org/wiki/Greenfield_project) senaryolarında, geliştirme ekipleri MongoDB, Cassandra ve Gremlin platformları için tam olarak desteklenen açık kaynak seçenekleri de dahil olmak üzere gereksinimlerini ve tercihlerini en iyi karşılayan veri modelini seçebilirler.
 
-### <a name="consistency-models"></a>Tutarlılık modeli
+### <a name="consistency-models"></a>Tutarlılık modelleri
 
 *İlişkisel ve NoSQL* bölümünde daha önce, verilerinizin bütünlüğünü ifade eden bir terim olan *veri tutarlılığı*konusunu tartıştık. Yüksek kullanılabilirlik, düşük gecikme süresi veya her ikisi için çoğaltmaya dayanan dağıtılmış veritabanları, okuma tutarlılığı, kullanılabilirliği ve gecikme süresi arasında temel bir zorunluluğunu getirir olmalıdır.
 
@@ -167,7 +167,7 @@ Azure Cosmos DB Şekil 5-16 ' de gösterilen [beş iyi tanımlanmış tutarlıl�
 
 ![Tutarlılık düzeylerini Cosmos DB](./media/cosmos-db-consistency-levels.png)
 
-**Şekil 5-16**: Tutarlılık düzeylerini Cosmos DB
+**Şekil 5-16**: tutarlılık düzeylerini Cosmos DB
 
 ### <a name="partitioning"></a>Bölümlendirme
 
@@ -179,7 +179,7 @@ Azure Cosmos DB, uygulamanızın performans ihtiyaçlarını karşılayacak şek
 
 **Şekil 5-17**: Cosmos DB varlıkların hiyerarşisi
 
-Şekil 5-17 ' de bir Azure hesabı içinde Cosmos DB veritabanı oluşturarak nasıl başladığına göz önüne alın. Bu veritabanı bir kapsayıcı kümesi için yönetim birimi olur. Kapsayıcı, seçili API sağlayıcınızı temel alan bir koleksiyon, tablo veya grafik olarak ifade edilebilir öğelerin şema belirsiz gruplandırmasıdır (önceki bölümde ele alınmıştır). Öğeler kapsayıcıya eklediğiniz ve belge, satır, düğüm veya kenar olarak temsil ettiğiniz veriler. Varsayılan olarak, bir kapsayıcıya eklediğiniz tüm öğeler açık dizin veya şema yönetimine gerek kalmadan otomatik olarak dizinlenir.
+Şekil 5-17 bir veritabanı hesabı içinde Cosmos DB veritabanı oluşturarak nasıl başladığına göz önüne alın. Bu veritabanı bir kapsayıcı kümesi için yönetim birimi olur. Kapsayıcı, seçili API sağlayıcınızı temel alan bir koleksiyon, tablo veya grafik olarak ifade edilebilir öğelerin şema belirsiz gruplandırmasıdır (önceki bölümde ele alınmıştır). Öğeler kapsayıcıya eklediğiniz ve belge, satır, düğüm veya kenar olarak temsil ettiğiniz veriler. Varsayılan olarak, bir kapsayıcıya eklediğiniz tüm öğeler açık dizin veya şema yönetimine gerek kalmadan otomatik olarak dizinlenir.
 
 Kapsayıcıyı bölümlemek için öğeler [mantıksal bölümler](https://docs.microsoft.com/azure/cosmos-db/partition-data)adlı farklı alt kümelere bölünür. Mantıksal bölümler, bir kapsayıcıdaki her öğeyle ilişkili bir bölüm anahtarının değeri temel alınarak oluşturulur. Şekil 5-18 mantıksal bir bölümdeki tüm öğelerin aynı bölüm anahtarı değerine sahip olduğunu gösterir.
 
@@ -199,7 +199,7 @@ Bulutta yerel bir uygulama için, önbelleğe alma eklemek için ortak bir konum
 
 ![Bulutta yerel bir uygulamada önbelleğe alma](./media/caching-in-a-cloud-native-app.png)
 
-**Şekil 5-19**: Bulutta yerel bir uygulamada önbelleğe alma
+**Şekil 5-19**: bulut Native bir uygulamada önbelleğe alma
 
 Ortak bir önbelleğe alma deseninin [önbelleğe alma deseninin](https://docs.microsoft.com/azure/architecture/patterns/cache-aside)olması. Gelen bir istek için, Şekil 5-19 ' de adım #1 gösterildiği gibi yanıt önbelleğini sorgulayın. Bulunursa, veriler hemen döndürülür. Veriler önbellekte yoksa ( [önbellek isabetsizliği](https://www.techopedia.com/definition/6308/cache-miss)olarak bilinir), yerel veritabanı veya aşağı akış hizmetinden (adım #2) alınır ve gelecekteki istekler için önbelleğe yazılır (adım #3) ve çağırana döndürülür. Sistem tutarlı ve doğru kalacak şekilde önbelleğe alınan verileri düzenli aralıklarla çıkarmak için dikkatli olunması gerekir.
 

@@ -4,12 +4,12 @@ description: ASP.NET Web Forms ve Blazor 'in mimarilerinin nasıl karşılaştı
 author: danroth27
 ms.author: daroth
 ms.date: 09/11/2019
-ms.openlocfilehash: 1137218e1cd99a39240592be415f734223e90b77
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 8ff733178e684666b69859bfab8b79fbad1fdff6
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71183961"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72520316"
 ---
 # <a name="architecture-comparison-of-aspnet-web-forms-and-blazor"></a>ASP.NET Web Forms ve Blazor mimari karşılaştırması
 
@@ -23,18 +23,18 @@ ASP.NET Web Forms Framework, sayfa merkezli bir mimariyi temel alır. Uygulamada
 
 Sayfalar aşağıdaki bileşenlerden oluşur:
 
-* HTML biçimlendirmesi
-* C#veya Visual Basic kodu
-* Logic ve olay işleme özelliklerini içeren bir arka plan kod sınıfı
-* Denetimler
+- HTML biçimlendirmesi
+- C#veya Visual Basic kodu
+- Logic ve olay işleme özelliklerini içeren bir arka plan kod sınıfı
+- Denetimler
 
 Denetimler, bir sayfada program aracılığıyla yerleştirilebilen ve bunlarla etkileşim içinde yer alan yeniden kullanılabilir Web Kullanıcı arabirimi birimleridir. Sayfalar, biçimlendirme, denetimler ve bazı kod içeren *. aspx* ile biten dosyalardan oluşur. Arka plan kod sınıfları, kullanılan programlama diline bağlı olarak aynı temel ada ve bir *. aspx.cs* ya da *. aspx. vb* uzantısına sahip dosyalardır. Her zaman, Web sunucusu *. aspx* dosyalarının içeriğini Yorumlar ve her değiştiğinde bunları derler. Web sunucusu zaten çalışıyor olsa bile bu yeniden derleme oluşur.
 
-Denetimler, biçimlendirme ile oluşturulup Kullanıcı denetimleri olarak teslim edilebilir. Bir kullanıcı denetimi `UserControl` sınıftan türetilir ve sayfada benzer bir yapıya sahiptir. Kullanıcı denetimleri için biçimlendirme bir *. ascx* dosyasında depolanır. Eşlik eden bir arka plan kod sınıfı, bir *. ascx.cs* veya *. ascx. vb* dosyasında bulunur. Denetimler, `WebControl` ya `CompositeControl` da temel sınıfından devralarak kodla tamamen oluşturulabilir.
+Denetimler, biçimlendirme ile oluşturulup Kullanıcı denetimleri olarak teslim edilebilir. Bir kullanıcı denetimi `UserControl` sınıfından türetilir ve sayfada benzer bir yapıya sahiptir. Kullanıcı denetimleri için biçimlendirme bir *. ascx* dosyasında depolanır. Eşlik eden bir arka plan kod sınıfı, bir *. ascx.cs* veya *. ascx. vb* dosyasında bulunur. Denetimler Ayrıca, `WebControl` veya `CompositeControl` temel sınıfından devralarak kodla tamamen oluşturulabilir.
 
 Sayfaların Ayrıca kapsamlı bir olay yaşam döngüsü vardır. Her sayfa, ASP.NET çalışma zamanı sayfanın kodunu her istek için yürütürken oluşan başlatma, yükleme, PreRender ve kaldırma olayları için olaylar oluşturur.
 
-Bir sayfadaki denetimler genellikle denetimi sunan aynı sayfaya geri dönerek, bir gizli form alanından `ViewState`bir yük ile birlikte taşır. `ViewState` Alan, oluşturuldukları sırada denetimlerin durumu hakkında bilgiler içerir ve ASP.NET çalışma zamanının sunucuya gönderilen içerikte yapılan değişiklikleri karşılaştırıp tanımlamasına olanak tanır.
+Bir sayfadaki denetimler genellikle denetimi sunan aynı sayfaya geri dönerek, ve bunlara `ViewState` adlı gizli form alanından bir yük ile birlikte yer alır. @No__t_0 alanı, oluşturuldukları sırada denetimlerin durumu hakkında bilgiler içerir ve ASP.NET çalışma zamanının sunucuya gönderilen içerikte yapılan değişiklikleri karşılaştırıp tanımlamasına olanak tanır.
 
 ## <a name="blazor"></a>Blazor
 
@@ -48,11 +48,11 @@ Kullanıcı, bileşenlerin nerede işleneceğini ve bileşenlerin kullanıcı et
 
 Blazor [bileşenleri](components.md) , yeniden KULLANILABILIR bir UI parçasını temsil eden .net sınıflarıdır. Her bileşen kendi durumunu korur ve diğer bileşenleri işlemeyi içerebilen kendi işleme mantığını belirtir. Bileşenler, bileşenin durumunu güncelleştirmek üzere belirli kullanıcı etkileşimleri için olay işleyicilerini belirtir.
 
-Bir bileşen bir olayı işlediğinde, Blazor bileşeni işler ve işlenmiş çıktıda nelerin değiştiğini izler. Bileşenler, Belge Nesne Modeli (DOM) doğrudan işlenmez. Bunun yerine, Blazor 'in değişiklikleri izleyebilmesi için, adlı `RenderTree` Dom 'ın bellek içi gösterimine işlenir. Blazor, yeni işlenmiş çıktıyı daha sonra DOM 'a verimli bir şekilde uyguladığı bir UI farkını hesaplamak için önceki çıktıyla karşılaştırır.
+Bir bileşen bir olayı işlediğinde, Blazor bileşeni işler ve işlenmiş çıktıda nelerin değiştiğini izler. Bileşenler, Belge Nesne Modeli (DOM) doğrudan işlenmez. Bunun yerine, Blazor 'in değişiklikleri izleyebilmesi için `RenderTree` adlı DOM 'ın bellek içi temsili olarak işlenir. Blazor, yeni işlenmiş çıktıyı daha sonra DOM 'a verimli bir şekilde uyguladığı bir UI farkını hesaplamak için önceki çıktıyla karşılaştırır.
 
 ![Blazor DOM etkileşimi](./media/architecture-comparison/blazor-dom-interaction.png)
 
-Bileşenler, olağan dışı bir kullanıcı arabirimi olayının dışına değiştiği takdirde, bunların işlenip işlenmeyeceğini el ile de belirtebilir. Blazor, yürütmenin `SynchronizationContext` tek bir mantıksal iş parçacığını zorlamak için bir kullanır. Bir bileşenin yaşam döngüsü yöntemleri ve Blazor tarafından oluşturulan tüm olay geri çağırmaları bunun `SynchronizationContext`üzerinde yürütülür.
+Bileşenler, olağan dışı bir kullanıcı arabirimi olayının dışına değiştiği takdirde, bunların işlenip işlenmeyeceğini el ile de belirtebilir. Blazor, yürütmenin tek bir mantıksal iş parçacığını zorlamak için `SynchronizationContext` kullanır. Bir bileşenin yaşam döngüsü yöntemleri ve Blazor tarafından oluşturulan tüm olay geri çağırmaları bu @no__t yürütülür-0.
 
 >[!div class="step-by-step"]
 >[Önceki](introduction.md)

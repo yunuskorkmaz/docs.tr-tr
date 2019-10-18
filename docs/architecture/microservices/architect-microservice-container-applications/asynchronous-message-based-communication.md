@@ -2,12 +2,12 @@
 title: Zaman uyumsuz ileti tabanlı iletişim
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | Zaman uyumsuz ileti tabanlı iletişimler mikro hizmetler mimarisinde önemli bir kavramdır, çünkü mikro hizmetleri bir diğerinden bağımsız tutmanın en iyi yolu, Ayrıca, sonunda da eşzamanlı olarak eşitlenmektir.
 ms.date: 09/20/2018
-ms.openlocfilehash: 58fe387c6bc9e1dcca519a200d3f8988f327a39c
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: c362bdaf41fee5ee20516b89b8bec12d6c0557cf
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72394569"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522750"
 ---
 # <a name="asynchronous-message-based-communication"></a>Zaman uyumsuz ileti tabanlı iletişim
 
@@ -77,7 +77,7 @@ Birden fazla mikro hizmette olay odaklı bir mimari uygulamaya yönelik bir zorl
 
 - Tam [olay](https://docs.microsoft.com/azure/architecture/patterns/event-sourcing) kaynağını belirleme düzenini kullanma.
 
-- [Giden kutusu deseninin](http://gistlabs.com/2014/05/the-outbox/)kullanımı: bir işlem veritabanı tablosu, olayı oluşturacak ve yayınlayacak bir olay Oluşturucu bileşeni için temel olacak bir ileti kuyruğu olarak.
+- [Giden kutusu deseninin](http://www.kamilgrzybek.com/design/the-outbox-pattern/)kullanımı: bir işlem veritabanı tablosu, olayı oluşturacak ve yayınlayacak bir olay Oluşturucu bileşeni için temel olacak bir ileti kuyruğu olarak.
 
 Zaman uyumsuz iletişimin kullanılması sırasında göz önünde bulundurmanız gereken ek konular Message Eşkuvvetlilik ve iletiyi yinelenenleri kaldırma. Bu konular, bu kılavuzun ilerleyen kısımlarında [mikro hizmetler (Tümleştirme olayları) arasındaki olay tabanlı Iletişimi uygulama](../multi-container-microservice-net-applications/integration-event-based-microservice-communications.md) bölümünde ele alınmıştır.
 

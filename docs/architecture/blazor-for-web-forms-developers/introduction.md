@@ -4,12 +4,12 @@ description: .NET ile tam yığın Web uygulamalarına Blazor ve yazma ile ilgil
 author: danroth27
 ms.author: daroth
 ms.date: 09/11/2019
-ms.openlocfilehash: 922e72514f0283b66de971d679fab0af436f1c75
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 66b6d57b718c19b0f271c6b3a62a9d4a22d77ae0
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71183849"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72520304"
 ---
 # <a name="an-introduction-to-blazor-for-aspnet-web-forms-developers"></a>ASP.NET Web Forms geliştiricileri için Blazor 'e giriş
 
@@ -62,25 +62,25 @@ Kendi başına bir tarayıcıda .NET kodu çalıştırma özelliği, istemci tar
 
 Blazor, Visual Studio ve Visual Studio Code harika araç desteğine sahiptir. Framework Ayrıca tam bir UI bileşen modeli içerir ve aşağıdakiler için yerleşik tesislere sahiptir:
 
-* Formlar ve doğrulama
-* Bağımlılık ekleme
-* İstemci tarafı yönlendirme
-* Düzenler
-* Tarayıcı içi hata ayıklama
-* JavaScript ile birlikte çalışma
+- Formlar ve doğrulama
+- Bağımlılık ekleme
+- İstemci tarafı yönlendirme
+- Düzenler
+- Tarayıcı içi hata ayıklama
+- JavaScript ile birlikte çalışma
 
 Blazor, ASP.NET Web Forms ile ortak bir Lota sahiptir. Her iki çerçeve de bileşen tabanlı, olay odaklı, durum bilgisi olmayan kullanıcı arabirimi programlama modelleri sunmaktadır. Ana mimari farkı, ASP.NET Web Forms yalnızca sunucuda çalışır. Blazor, tarayıcıda istemcide çalıştırılabilir. Ancak, bir ASP.NET Web Forms arka planı geliyorsa, Blazor 'de tanıdık olacak bir çok şey vardır. Blazor, istemci tarafı geliştirmeden ve net ' in açık kaynaklı, platformlar arası bir yandan da yararlanabilmeniz için bir yol arayan ASP.NET Web Forms geliştiricilerin doğal bir çözümüdür.
 
 Bu kitap, özellikle ASP.NET Web Forms geliştiricilere Blazor 'e yönelik bir giriş sağlar. Her Blazor kavramı, benzer ASP.NET Web Forms özellikleri ve yöntemleri bağlamında sunulur. Bu kitabın sonuna kadar, şunları anlayacaksınız:
 
-* Blazor uygulamaları oluşturma.
-* Blazor nasıl çalıştığı.
-* .NET Core ile Blazor nasıl ilişkili.
-* Mevcut ASP.NET Web Forms uygulamalarını uygun yerlerde Blazor 'e geçirmeye yönelik makul stratejiler.
+- Blazor uygulamaları oluşturma.
+- Blazor nasıl çalıştığı.
+- .NET Core ile Blazor nasıl ilişkili.
+- Mevcut ASP.NET Web Forms uygulamalarını uygun yerlerde Blazor 'e geçirmeye yönelik makul stratejiler.
 
 ## <a name="get-started-with-blazor"></a>Blazor kullanmaya başlama
 
-Blazor kullanmaya başlamak kolaydır. Adresine gidin <https://blazor.net> ve uygun .NET Core SDK ve Blazor proje şablonlarını yüklemek için bağlantıları izleyin. Ayrıca, Visual Studio veya Visual Studio Code Blazor araçları ayarlarını ayarlamaya yönelik yönergeler de bulacaksınız.
+Blazor kullanmaya başlamak kolaydır. @No__t_0 gidin ve uygun .NET Core SDK ve Blazor proje şablonlarını yüklemek için bağlantıları izleyin. Ayrıca, Visual Studio veya Visual Studio Code Blazor araçları ayarlarını ayarlamaya yönelik yönergeler de bulacaksınız.
 
 >[!div class="step-by-step"]
 >[Önceki](index.md)

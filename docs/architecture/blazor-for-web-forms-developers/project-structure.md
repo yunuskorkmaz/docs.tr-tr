@@ -4,12 +4,12 @@ description: ASP.NET Web Forms ve Blazor projelerinin proje yapılarının nası
 author: danroth27
 ms.author: daroth
 ms.date: 09/11/2019
-ms.openlocfilehash: f9af8f88008ef45438a9104374d766cdbf8cc9a0
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: aa9157bd8627e7a03e33872c3023f91ba3d66951
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71183821"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72520225"
 ---
 # <a name="project-structure-for-blazor-apps"></a>Blazor uygulamaları için proje yapısı
 
@@ -59,9 +59,9 @@ Bir Blazor WebAssembly uygulamasının proje dosyası biraz daha ilgili görün�
 
 Blazor WebAssembly projeleri, bir WebAssembly tabanlı .NET çalışma zamanında tarayıcıda çalıştırıldıklarından .NET Core yerine .NET Standard hedefleyin. Bir sunucu veya geliştirici makinesinde kullanabileceğiniz gibi bir Web tarayıcısına .NET yükleyemezsiniz. Sonuç olarak, proje bağımsız paket başvurularını kullanarak Blazor Framework 'e başvurur.
 
-Karşılaştırmayla, varsayılan bir ASP.NET Web Forms projesi *. csproj* dosyasında neredeyse 300 satır xml içerir ve bu, çoğu, projedeki çeşitli kod ve içerik dosyalarını açıkça listeler. .NET Core ve .NET Standard tabanlı projelerdeki birçok basitleştirmeyle, genellikle yalnızca Web SDK 'sı olarak anılan `Microsoft.NET.Sdk.Web` SDK 'ya başvurarak içeri aktarılan varsayılan hedeflerden ve özelliklerden gelir. Web SDK 'Sı, kod ve içerik dosyalarının projeye eklenmesini kolaylaştıran joker karakterler ve diğer kolaylığı içerir. Dosyaları açıkça listemeniz gerekmez. .NET Core 'u hedeflerken, Web SDK hem .NET Core hem de ASP.NET Core paylaşılan çerçevelere çerçeve başvuruları ekler. Çerçeveler **Çözüm Gezgini** penceresindeki **Bağımlılıklar** > **çerçeveleri** düğümünden görülebilir. Paylaşılan çerçeveler, .NET Core yüklenirken makinede yüklü olan derlemelerin koleksiyonlarıdır.
+Karşılaştırmayla, varsayılan bir ASP.NET Web Forms projesi *. csproj* dosyasında neredeyse 300 satır xml içerir ve bu, çoğu, projedeki çeşitli kod ve içerik dosyalarını açıkça listeler. .NET Core ve .NET Standard tabanlı projelerdeki birçok basitleştirmeyle, genellikle yalnızca Web SDK 'Sı olarak adlandırılan `Microsoft.NET.Sdk.Web` SDK 'sına başvurarak içeri aktarılan varsayılan hedeflerden ve özelliklerden gelir. Web SDK 'Sı, kod ve içerik dosyalarının projeye eklenmesini kolaylaştıran joker karakterler ve diğer kolaylığı içerir. Dosyaları açıkça listemeniz gerekmez. .NET Core 'u hedeflerken, Web SDK hem .NET Core hem de ASP.NET Core paylaşılan çerçevelere çerçeve başvuruları ekler. Çerçeveler, **Çözüm Gezgini** penceresindeki **Bağımlılıklar**  > **çerçeveler** düğümünden görülebilir. Paylaşılan çerçeveler, .NET Core yüklenirken makinede yüklü olan derlemelerin koleksiyonlarıdır.
 
-Desteklenseler de, bireysel derleme başvuruları .NET Core projelerinde daha az yaygındır. Çoğu proje bağımlılığı, NuGet paket başvuruları olarak işlenir. Yalnızca .NET Core projelerinde en üst düzey paket bağımlılıklarına başvurmanız gerekir. Geçişli bağımlılıklar otomatik olarak eklenir. ASP.NET Web Forms projelerinde yaygın olarak bulunan *Packages. config* dosyasını kullanmak yerine, paket başvuruları `<PackageReference>` öğesi kullanılarak proje dosyasına eklenir.
+Desteklenseler de, bireysel derleme başvuruları .NET Core projelerinde daha az yaygındır. Çoğu proje bağımlılığı, NuGet paket başvuruları olarak işlenir. Yalnızca .NET Core projelerinde en üst düzey paket bağımlılıklarına başvurmanız gerekir. Geçişli bağımlılıklar otomatik olarak eklenir. ASP.NET Web Forms projelerinde yaygın olarak bulunan *Packages. config* dosyasını kullanmak yerine, paket başvuruları, `<PackageReference>` öğesi kullanılarak proje dosyasına eklenir.
 
 ```xml
 <ItemGroup>
@@ -92,7 +92,7 @@ public class Program
 
 Blazor WebAssembly Apps, *program.cs*içinde bir giriş noktası da tanımlar. Kod biraz farklı görünüyor. Kod, uygulamaya aynı ana bilgisayar düzeyi hizmetleri sağlamak için uygulama ana bilgisayarı ayarlamada benzerdir. Ancak doğrudan tarayıcıda yürütüldüğü için WebAssembly uygulama ana bilgisayarı bir HTTP sunucusu ayarladı.
 
-Blazor uygulamalarının, uygulamanın `Startup` başlangıç mantığını tanımlamak için bir *Global. asax* dosyası yerine bir sınıfı vardır. `Startup` Sınıfı, uygulamayı ve uygulamaya özgü hizmetleri yapılandırmak için kullanılır. Blazor sunucu `Startup` uygulamasında sınıfı, istemci tarayıcıları ve sunucu arasında Blazor tarafından kullanılan gerçek zamanlı bağlantı için uç noktayı ayarlamak üzere kullanılır. Blazor webassembly `Startup` uygulamasında sınıfı, uygulamanın kök bileşenlerini ve bunların oluşturulması gereken yerleri tanımlar. `Startup` [Uygulama başlatma](./app-startup.md) bölümündeki sınıfına daha ayrıntılı bir bakış ekleyeceğiz.
+Blazor uygulamalarının, uygulamanın başlangıç mantığını tanımlamak için bir *Global. asax* dosyası yerine `Startup` sınıfı vardır. @No__t_0 sınıfı, uygulamayı ve uygulamaya özel hizmetleri yapılandırmak için kullanılır. Blazor sunucu uygulamasında `Startup` sınıfı, istemci tarayıcıları ve sunucu arasında Blazor tarafından kullanılan gerçek zamanlı bağlantı için uç noktayı ayarlamak üzere kullanılır. Blazor WebAssembly uygulamasında `Startup` sınıfı, uygulamanın kök bileşenlerini ve bunların oluşturulması gereken yerleri tanımlar. [Uygulama başlangıç](./app-startup.md) bölümünde `Startup` sınıfına daha ayrıntılı bir bakış ekleyeceğiz.
 
 ## <a name="static-files"></a>Statik dosyalar
 
@@ -123,7 +123,7 @@ Blazor projelerindeki çoğu dosya *. Razor* dosyalarıdır. Razor, HTML tabanl�
 
 Her Razor bileşeni dosyası, proje oluşturulduğunda bir .NET sınıfına derlenir. Oluşturulan sınıf, bileşenin durumunu, işleme mantığını, yaşam döngüsü yöntemlerini, olay işleyicilerini ve diğer mantığı yakalar. [Blazor ile yeniden kullanılabilir kullanıcı arabirimi bileşenleri oluşturma](./components.md) bölümünde bileşenleri yazma bölümüne bakacağız.
 
-*_Imports. Razor* dosyaları Razor bileşen dosyaları değildir. Bunun yerine, aynı klasörde ve alt klasörlerinde bulunan diğer *. Razor* dosyalarını içeri aktarmak Için bir Razor yönergeleri kümesi tanımlar. Örneğin, bir *_ımports. Razor* dosyası, yaygın olarak kullanılan ad alanları için `using` deyimler eklemenin geleneksel bir yoludur:
+*_Imports. Razor* dosyaları Razor bileşen dosyaları değildir. Bunun yerine, aynı klasörde ve alt klasörlerinde bulunan diğer *. Razor* dosyalarını içeri aktarmak Için bir Razor yönergeleri kümesi tanımlar. Örneğin, bir *_ımports. Razor* dosyası, yaygın olarak kullanılan ad alanları için `using` deyimleri eklemenin geleneksel bir yoludur:
 
 ```razor
 @using System.Net.Http
@@ -139,7 +139,7 @@ Her Razor bileşeni dosyası, proje oluşturulduğunda bir .NET sınıfına derl
 
 ## <a name="pages"></a>Sayfalar
 
-Blazor uygulamalarındaki Sayfalar nerede? Blazor, adreslenebilir sayfalar için ASP.NET Web Forms Apps 'teki *. aspx* dosyaları gibi ayrı bir dosya uzantısı tanımlamaz. Bunun yerine, sayfalar bileşenlere rotalar atanarak tanımlanır. Bir yol, genellikle `@page` Razor yönergesi kullanılarak atanır. Örneğin, `Counter` *Pages/Counter. Razor* dosyasında yazılan bileşen aşağıdaki rotayı tanımlar:
+Blazor uygulamalarındaki Sayfalar nerede? Blazor, adreslenebilir sayfalar için ASP.NET Web Forms Apps 'teki *. aspx* dosyaları gibi ayrı bir dosya uzantısı tanımlamaz. Bunun yerine, sayfalar bileşenlere rotalar atanarak tanımlanır. Yol, genellikle `@page` Razor yönergesi kullanılarak atanır. Örneğin, *Pages/Counter. Razor* dosyasında yazılan `Counter` bileşeni aşağıdaki rotayı tanımlar:
 
 ```razor
 @page "/counter"
@@ -159,10 +159,10 @@ ASP.NET Web Forms uygulamalarda, ortak sayfa düzeni ana sayfalar (*site. Master
 
 Blazor önyüklemek için, uygulamanın şunları yapmanız gerekir:
 
-* Kök bileşenin (*app. Razor*) nerede işleneceğini belirtin.
-* Karşılık gelen Blazor Framework betiğini ekleyin.
+- Kök bileşenin (*app. Razor*) nerede işleneceğini belirtin.
+- Karşılık gelen Blazor Framework betiğini ekleyin.
 
-Blazor sunucusu uygulamasında, kök bileşenin ana bilgisayar sayfası *_host. cshtml* dosyasında tanımlanmıştır. Bu dosya, bir bileşeni değil Razor sayfasını tanımlar. Razor Pages, bir *. aspx* sayfasına benzer şekilde sunucu adreslenebilir bir sayfa tanımlamak için Razor söz dizimi kullanın. Yöntemi `Html.RenderComponentAsync<TComponent>(RenderMode)` , kök düzeyinde bir bileşenin nerede işleneceğini tanımlamak için kullanılır. `RenderMode` Seçeneği, bileşenin oluşturulması gereken şekli gösterir. Aşağıdaki tabloda desteklenen `RenderMode` seçenekler özetlenmektedir.
+Blazor sunucusu uygulamasında, kök bileşenin ana bilgisayar sayfası *_host. cshtml* dosyasında tanımlanmıştır. Bu dosya, bir bileşeni değil Razor sayfasını tanımlar. Razor Pages, bir *. aspx* sayfasına benzer şekilde sunucu adreslenebilir bir sayfa tanımlamak için Razor söz dizimi kullanın. @No__t_0 yöntemi, kök düzeyinde bir bileşenin nerede işleneceğini tanımlamak için kullanılır. @No__t_0 seçeneği, bileşenin oluşturulması gereken şekli gösterir. Aşağıdaki tabloda desteklenen `RenderMode` seçenekleri özetlenmektedir.
 
 |Seçenek                        |Açıklama       |
 |------------------------------|------------------|
@@ -197,7 +197,7 @@ Blazor sunucusu uygulamasında, kök bileşenin ana bilgisayar sayfası *_host. 
 </html>
 ```
 
-Blazor WebAssembly uygulamasında ana bilgisayar sayfası, *Wwwroot/index.html*altında Basit BIR statik HTML dosyasıdır. `<app>` Öğesi, kök bileşenin nerede işleneceğini belirtmek için kullanılır.
+Blazor WebAssembly uygulamasında ana bilgisayar sayfası, *Wwwroot/index.html*altında Basit BIR statik HTML dosyasıdır. @No__t_0 öğesi, kök bileşenin nerede işleneceğini belirtmek için kullanılır.
 
 ```html
 <!DOCTYPE html>
@@ -218,7 +218,7 @@ Blazor WebAssembly uygulamasında ana bilgisayar sayfası, *Wwwroot/index.html*a
 </html>
 ```
 
-İşlenecek belirli bileşen, bileşenin nerede işleneceğini belirten karşılık gelen bir `Startup.Configure` CSS seçicisiyle uygulamanın yönteminde yapılandırılır.
+İşlenecek belirli bileşen, uygulamanın `Startup.Configure` yönteminde, bileşenin nerede işleneceğini belirten karşılık gelen bir CSS seçicisiyle yapılandırılır.
 
 ```csharp
 public class Startup
@@ -240,14 +240,14 @@ Bir Blazor projesi yapılandırıldığında, tüm Razor bileşeni ve kod dosyal
 
 ## <a name="run-the-app"></a>Uygulamayı çalıştırma
 
-Blazor Server uygulamasını çalıştırmak için, Visual Studio `F5` 'da tuşuna basın. Blazor uygulamaları, çalışma zamanı derlemesini desteklemez. Kod ve bileşen biçimlendirme değişikliklerinin sonuçlarını görmek için, uygulamayı yeniden derleyin ve hata ayıklayıcı ekli olarak yeniden başlatın. Hata ayıklayıcı ekli (`Ctrl+F5`) olmadan çalıştırırsanız, Visual Studio dosya değişikliklerini izler ve değişiklikler yapıldıktan sonra uygulamayı yeniden başlatır. Değişiklik yapıldığında tarayıcıyı el ile yenilemeniz gerekir.
+Blazor Server uygulamasını çalıştırmak için, Visual Studio 'da `F5` tuşuna basın. Blazor uygulamaları, çalışma zamanı derlemesini desteklemez. Kod ve bileşen biçimlendirme değişikliklerinin sonuçlarını görmek için, uygulamayı yeniden derleyin ve hata ayıklayıcı ekli olarak yeniden başlatın. Hata ayıklayıcı ekli (`Ctrl+F5`) olmadan çalıştırırsanız, Visual Studio dosya değişikliklerini izler ve değişiklikler yapıldığından uygulamayı yeniden başlatır. Değişiklik yapıldığında tarayıcıyı el ile yenilemeniz gerekir.
 
 Blazor WebAssembly uygulamasını çalıştırmak için aşağıdaki yaklaşımlardan birini seçin:
 
-* İstemci projesini doğrudan geliştirme sunucusunu kullanarak çalıştırın.
-* ASP.NET Core ile uygulamayı barındırırken sunucu projesini çalıştırın.
+- İstemci projesini doğrudan geliştirme sunucusunu kullanarak çalıştırın.
+- ASP.NET Core ile uygulamayı barındırırken sunucu projesini çalıştırın.
 
-Blazor WebAssembly Apps, Visual Studio kullanarak hata ayıklamayı desteklemez. Uygulamayı çalıştırmak için `Ctrl+F5` `F5`yerine kullanın. Bunun yerine Blazor WebAssembly uygulamalarında doğrudan tarayıcıda hata ayıklaması yapabilirsiniz. Ayrıntılar için bkz. [Blazor ASP.NET Core hata ayıklama](/aspnet/core/blazor/debug) .
+Blazor WebAssembly Apps, Visual Studio kullanarak hata ayıklamayı desteklemez. Uygulamayı çalıştırmak için `F5` yerine `Ctrl+F5` kullanın. Bunun yerine Blazor WebAssembly uygulamalarında doğrudan tarayıcıda hata ayıklaması yapabilirsiniz. Ayrıntılar için bkz. [Blazor ASP.NET Core hata ayıklama](/aspnet/core/blazor/debug) .
 
 >[!div class="step-by-step"]
 >[Önceki](hosting-models.md)

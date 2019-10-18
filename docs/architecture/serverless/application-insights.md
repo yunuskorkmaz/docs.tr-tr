@@ -4,12 +4,12 @@ description: Application Insights, geliştiricilerin Web Apps, mobil uygulamalar
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 1f5b99fba448c2c1c12139524ffdcd3708b3c956
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 7c1013ac029645a2da44aaf1c3b6ba74ca3f3dde
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68676846"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522739"
 ---
 # <a name="telemetry-with-application-insights"></a>Application Insights ile telemetri
 
@@ -19,12 +19,12 @@ ms.locfileid: "68676846"
 
 Mevcut uygulamalara Application Insights eklemek, uygulamanızın ayarlarına bir izleme anahtarı eklemek kadar kolaydır. Application Insights ile şunları yapabilirsiniz:
 
-* İşlev etkinleştirmeleri sayısı, bir işlev çalıştırmak için geçen süre ve özel durumlar gibi ölçümleri temel alarak özel grafikler ve uyarılar oluşturun
-* Sorunları ve sunucu özel durumlarını çözümleme
-* İşleme göre performans ile detaya gitme ve üçüncü taraf bağımlılıklarını çağırmak için geçen süreyi ölçme
-* İşlev uygulamalarınızı barındıran tüm sunuculardaki CPU kullanımını, belleği ve fiyatları izleyin
-* İşlev uygulamalarınız için istek sayısı ve gecikme süresi dahil olmak üzere ölçümlerin canlı bir akışını görüntüleyin
-* İşlev verileriniz üzerinde özel grafikler aramak, sorgulamak ve oluşturmak için [Analizi](https://docs.microsoft.com/azure/application-insights/app-insights-analytics) kullanın
+- İşlev etkinleştirmeleri sayısı, bir işlev çalıştırmak için geçen süre ve özel durumlar gibi ölçümleri temel alarak özel grafikler ve uyarılar oluşturun
+- Sorunları ve sunucu özel durumlarını çözümleme
+- İşleme göre performans ile detaya gitme ve üçüncü taraf bağımlılıklarını çağırmak için geçen süreyi ölçme
+- İşlev uygulamalarınızı barındıran tüm sunuculardaki CPU kullanımını, belleği ve fiyatları izleyin
+- İşlev uygulamalarınız için istek sayısı ve gecikme süresi dahil olmak üzere ölçümlerin canlı bir akışını görüntüleyin
+- İşlev verileriniz üzerinde özel grafikler aramak, sorgulamak ve oluşturmak için [Analizi](https://docs.microsoft.com/azure/application-insights/app-insights-analytics) kullanın
 
 ![Ölçüm Gezgini](./media/metrics-explorer.png)
 
@@ -58,5 +58,5 @@ Application Insights, sunucusuz uygulamalarınız hakkında ayrıntılı telemet
 Daha fazla bilgi için bkz. [Azure Işlevlerini izleme](https://docs.microsoft.com/azure/azure-functions/functions-monitoring).
 
 >[!div class="step-by-step"]
->[Önceki](azure-functions.md)İleri
->[](logic-apps.md)
+>[Önceki](azure-functions.md)
+>[İleri](logic-apps.md)

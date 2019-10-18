@@ -2,12 +2,12 @@
 title: Azure platformu dayanıklılığı
 description: Azure için Cloud Native .NET uygulamaları tasarlama | Azure ile bulut altyapısı dayanıklılığı
 ms.date: 06/30/2019
-ms.openlocfilehash: 7f148588be97fa6bf8a055f5f5bed8e23908277f
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 02d661952c860da25442b0fa9fed0d5f93abe023
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71214202"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72520766"
 ---
 # <a name="azure-platform-resiliency"></a>Azure platformu dayanıklılığı
 
@@ -68,17 +68,17 @@ Bulut ölçeklendiriliyor. Sistem yükünü artırmak/azaltmak için sistem kayn
 
 - *Platform otomatik ölçeklendirme özelliklerinin avantajlarından yararlanın.* Özel veya üçüncü taraf mekanizmalarının yerine, mümkün olduğunda yerleşik otomatik ölçeklendirme özellikleri kullanın. Mümkün olduğunda, kaynakların bir başlangıç gecikmesi olmadan kullanılabilir olduğundan emin olmak için zamanlanmış ölçekleme kurallarını kullanın, ancak kurallara uygun şekilde, isteğe bağlı olarak, talep halinde beklenmedik değişikliklerle ve bu kurallara otomatik ölçeklendirme ekleyin. Daha fazla bilgi için bkz. [Otomatik ölçeklendirme Kılavuzu](https://docs.microsoft.com/azure/architecture/best-practices/auto-scaling).
 
-- *Ölçeği artırma kararlılığı.* Son bir uygulama, iş kaybı olmadan trafikte anında ani artışları hızlı bir şekilde karşılayabilmeniz için kararlılığı en iyi şekilde ölçeklendirmektir. Daha sonra, sistem kararlı kalmasını sağlamak için ölçeği azaltın (yani gereksiz kaynakları kaldırın). Bunu yapmanın basit bir yolu, ölçeklendirme işlemleri arasında bekleme süresi, kaynak eklemek için beş dakika, örnekleri kaldırmak için en fazla 15 dakika olan seyrek erişimli süreyi ayarlamanıza yöneliktir.
+- *Genişleme kararlılığı.* Son bir uygulama, iş kaybı olmadan trafikte anında ani artışları hızlı bir şekilde karşılayabilmeniz için kararlılığı en iyi şekilde genişletmek olacaktır. Ve sonra, sistem kararlı tutmaya yönelik olarak ölçeği ölçeklendirin (gereksiz örnekleri kaldırır). Bunu yapmanın basit bir yolu, ölçeklendirme işlemleri arasında bekleme süresi, kaynak eklemek için beş dakika, örnekleri kaldırmak için en fazla 15 dakika olan seyrek erişimli süreyi ayarlamanıza yöneliktir.
 
 ## <a name="built-in-retry-in-services"></a>Hizmetlerde yerleşik yeniden deneme
 
 Daha önceki bir bölümde programlı yeniden deneme işlemleri uygulamak için en iyi uygulama önerilir. Birçok Azure hizmeti ve bunlara karşılık gelen istemci SDK 'larının yeniden deneme mekanizmalarını de dahil olduğunu aklınızda bulundurun. Aşağıdaki listede, bu kitapta tartışılan birçok Azure hizmeti için yeniden deneme özellikleri özetlenmektedir:
 
-- *Azure Cosmos DB.* İstemci API 'sindeki sınıf başarısız denemeleri otomatik olarak yeniden oluşturur. <xref:Microsoft.Azure.Documents.Client.DocumentClient> Yeniden deneme sayısı ve en fazla bekleme süresi yapılandırılabilir. İstemci API 'SI tarafından oluşturulan özel durumlar, yeniden deneme ilkesini veya geçici olmayan hataları aşan isteklerdir.
+- *Azure Cosmos DB.* İstemci API 'sindeki <xref:Microsoft.Azure.Documents.Client.DocumentClient> sınıfı başarısız girişimleri otomatik olarak yeniden oluşturur. Yeniden deneme sayısı ve en fazla bekleme süresi yapılandırılabilir. İstemci API 'SI tarafından oluşturulan özel durumlar, yeniden deneme ilkesini veya geçici olmayan hataları aşan isteklerdir.
 
 - *Azure Redis Cache.* Redsıs StackExchange istemcisi, başarısız denemelerde yeniden denemeler içeren bir bağlantı Yöneticisi sınıfı kullanır. Yeniden deneme sayısı, belirli bir yeniden deneme ilkesi ve bekleme süresi yapılandırılabilir.
 
-- *Azure Service Bus.* Service Bus istemcisi bir geri alma aralığı, yeniden deneme sayısı ve <xref:Microsoft.ServiceBus.RetryExponential.TerminationTimeBuffer>bir işlemin ne zaman sürebileceği maksimum süreyi belirten bir [retrypolicy sınıfı](xref:Microsoft.ServiceBus.RetryPolicy) kullanıma sunar. Varsayılan ilke, denemeler arasında 30 saniyelik geri alma süresi olan dokuz en fazla yeniden deneme girişimdir.
+- *Azure Service Bus.* Service Bus istemcisi bir geri alma aralığı, yeniden deneme sayısı ve <xref:Microsoft.ServiceBus.RetryExponential.TerminationTimeBuffer> bir işlemin ne zaman sürebileceği maksimum süreyi belirten bir [Retrypolicy sınıfı](xref:Microsoft.ServiceBus.RetryPolicy) kullanıma sunar. Varsayılan ilke, denemeler arasında 30 saniyelik geri alma süresi olan dokuz en fazla yeniden deneme girişimdir.
 
 - *Azure SQL veritabanı.* [Entity Framework Core](https://docs.microsoft.com/ef/core/miscellaneous/connection-resiliency) kitaplığı kullanılırken yeniden deneme desteği sağlanır.
 

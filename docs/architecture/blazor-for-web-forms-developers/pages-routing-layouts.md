@@ -4,12 +4,12 @@ description: Blazor 'de sayfa oluşturmayı, istemci tarafı yönlendirme ile ç
 author: danroth27
 ms.author: daroth
 ms.date: 09/19/2019
-ms.openlocfilehash: c31544156250a9e97ff8c0b17338f418817b21d2
-ms.sourcegitcommit: 992f80328b51b165051c42ff5330788627abe973
+ms.openlocfilehash: 693eee270a46ccb56ed5fef8fced1d4a1cf1974f
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72275824"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72520235"
 ---
 # <a name="pages-routing-and-layouts"></a>Sayfalar, yönlendirme ve düzenler
 
@@ -84,7 +84,7 @@ Bir Blazor uygulamasındaki eşdeğer sayfa şöyle görünür:
 
 ## <a name="create-pages"></a>Sayfa oluştur
 
-Blazor içinde bir sayfa oluşturmak için bir bileşen oluşturun ve bileşen için yolu belirtmek üzere `@page` Razor yönergesini ekleyin. @No__t-0 yönergesi, bu bileşene eklenecek yol şablonu olan tek bir parametre alır.
+Blazor içinde bir sayfa oluşturmak için bir bileşen oluşturun ve bileşen için yolu belirtmek üzere `@page` Razor yönergesini ekleyin. @No__t_0 yönergesi, bu bileşene eklenecek yol şablonu olan tek bir parametre alır.
 
 ```razor
 @page "/counter"
@@ -122,7 +122,7 @@ Blazor tarafından desteklenen yol kısıtlamalarının tam listesi için bkz. [
 
 ## <a name="router-component"></a>Yönlendirici bileşeni
 
-Blazor içinde yönlendirme `Router` bileşeni tarafından işlenir. @No__t-0 bileşeni genellikle uygulamanın kök bileşeninde (*app. Razor*) kullanılır.
+Blazor içinde yönlendirme `Router` bileşeni tarafından işlenir. @No__t_0 bileşen genellikle uygulamanın kök bileşeninde (*app. Razor*) kullanılır.
 
 ```razor
 <Router AppAssembly="@typeof(Program).Assembly">
@@ -137,11 +137,11 @@ Blazor içinde yönlendirme `Router` bileşeni tarafından işlenir. @No__t-0 bi
 </Router>
 ```
 
-@No__t-0 bileşeni, belirtilen `AppAssembly` ' deki ve isteğe bağlı olarak belirtilen `AdditionalAssemblies` ' de yönlendirilebilir bileşenleri bulur. Tarayıcı gezinirse, `Router` gezinmeyi durdurur ve `Found` parametresinin içeriğini ayıklanan `RouteData` ile işler, ancak bir yol adresle eşleşiyorsa, `Router` `NotFound` parametresini işler.
+@No__t_0 bileşeni, belirtilen `AppAssembly` ve isteğe bağlı olarak belirtilen `AdditionalAssemblies` yönlendirilebilir bileşenleri bulur. Tarayıcı gezinirse, `Router` gezinmeyi durdurur ve `Found` parametresinin içeriğini ayıklanan `RouteData` ile işler, ancak bir yol adresle eşleşiyorsa, `Router` `NotFound` parametresini işler.
 
-@No__t-0 bileşeni, varsa `RouteData` tarafından belirtilen eşleşen bileşeni, varsa düzeniyle işlemeyi işler. Eşleşen bileşen bir düzene sahip değilse, isteğe bağlı olarak belirtilen `DefaultLayout` kullanılır.
+@No__t_0 bileşeni, varsa, `RouteData` tarafından belirtilen eşleşen bileşeni, varsa düzenine göre işlemeyi işler. Eşleşen bileşen bir düzene sahip değilse, isteğe bağlı olarak belirtilen `DefaultLayout` kullanılır.
 
-@No__t-0 bileşeni, alt içeriğini belirtilen düzen içinde işler. Bu bölümün ilerleyen kısımlarında daha sonra mizanpajlara daha ayrıntılı bir şekilde bakacağız.
+@No__t_0 bileşeni, alt içeriğini belirtilen düzen içinde işler. Bu bölümün ilerleyen kısımlarında daha sonra mizanpajlara daha ayrıntılı bir şekilde bakacağız.
 
 ## <a name="navigation"></a>Gezinti
 
@@ -158,10 +158,10 @@ Blazor içinde yeniden yönlendirme yanıtı döndürülmesi genellikle mümkün
 
 Blazor, şu şekilde kullanılabilecek bir `NavigationManager` hizmeti sağlar:
 
-* Geçerli tarayıcı adresini al
-* Temel adresi al
-* Tüm gezinmeler tetiklemeleri
-* Adres değiştiğinde bildirim alın
+- Geçerli tarayıcı adresini al
+- Temel adresi al
+- Tüm gezinmeler tetiklemeleri
+- Adres değiştiğinde bildirim alın
 
 Farklı bir adrese gitmek için `NavigateTo` yöntemini kullanın:
 
@@ -190,7 +190,7 @@ Blazor uygulamanız bir temel yol altında dağıtılmışsa, iş özelliğine y
 
 ## <a name="page-layout"></a>Sayfa düzeni
 
-ASP.NET Web Forms sayfa düzeni ana sayfalar tarafından işlenir. Ana sayfalar, bir veya daha fazla içerik yer tutucusu içeren bir şablonu tanımlar ve bu, tek tek sayfalarla sağlanabilir. Ana sayfalar *. Master* dosyalarında tanımlanır ve `<%@ Master %>` yönergesiyle başlar. *. Master* dosyalarının içeriği *. aspx* sayfası olarak kodlanır, ancak sayfaların içerik sağlayabileceği yerleri işaretlemek için `<asp:ContentPlaceHolder>` denetimlerin eklenmesiyle birlikte.
+ASP.NET Web Forms sayfa düzeni ana sayfalar tarafından işlenir. Ana sayfalar, bir veya daha fazla içerik yer tutucusu içeren bir şablonu tanımlar ve bu, tek tek sayfalarla sağlanabilir. Ana sayfalar *. Master* dosyalarında tanımlanır ve `<%@ Master %>` yönergesi ile başlar. *. Master* dosyalarının içeriği *. aspx* sayfası olarak kodlanır, ancak sayfaların içerik sağlayabileceği yerleri işaretlemek için `<asp:ContentPlaceHolder>` denetimlerin eklenmesiyle birlikte.
 
 *Site. Master*
 

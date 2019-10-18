@@ -4,12 +4,12 @@ description: Durum yönetiminden ve kalıcı depolamadan, genişleme, günlüğe
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: ecbffbbd435b4926608e4def519fdaddddab688d
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: c856683cf6910be98661e634246cd003b93a6d76
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68676747"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522429"
 ---
 # <a name="serverless-architecture-considerations"></a>Sunucusuz mimaride dikkat edilmesi gerekenler
 
@@ -21,9 +21,9 @@ Mikro hizmetlerde olduğu gibi sunucusuz işlevler varsayılan olarak durum bilg
 
 Sunucusuz 'ın avantajlarından ödün vermeden, benimseme durumuna yönelik birkaç çözüm vardır. Daha popüler çözümlerden bazıları şunlardır:
 
-* Geçici bir veri deposu veya dağıtılmış önbellek kullanın, örneğin Redsıs
-* Durumu SQL veya CosmosDB gibi bir veritabanında depola
-* Dayanıklı işlevler gibi bir iş akışı altyapısı aracılığıyla durumu işleme
+- Geçici bir veri deposu veya dağıtılmış önbellek kullanın, örneğin Redsıs
+- Durumu SQL veya CosmosDB gibi bir veritabanında depola
+- Dayanıklı işlevler gibi bir iş akışı altyapısı aracılığıyla durumu işleme
 
 En alttaki satır, sunucusuz ile uygulamayı düşündüğünde işlem içinde herhangi bir durum yönetimine gerek duyduğuna dikkat etmeniz gerekir.
 
@@ -37,9 +37,9 @@ Birkaç özel durum ve çözüm vardır. Tek bir çözüm, işleminizi bir kez d
 
 Sunucusuz uygulamalarla ilgili olası bir sorun başlangıç zamanı. Kaynakları korumak için, birçok sunucusuz sağlayıcı "isteğe bağlı" altyapıyı oluşturur. Bir sunucusuz işlev bir süre sonra tetiklendiğinde, işlevi barındıracak kaynakların oluşturulması veya yeniden başlatılması gerekebilir. Bazı durumlarda, soğuk başlar birkaç saniyelik gecikmeler oluşmasına neden olabilir. Başlangıç süresi sağlayıcılar ve hizmet düzeyleri arasında farklılık gösterir. Uygulamanın başarısı için en aza indirmek önemliyse, başlangıç zamanına yönelik birkaç yaklaşım vardır.
 
-* Bazı sağlayıcılar, kullanıcıların altyapının "her zaman açık" olduğunu garanti eden hizmet düzeyleri için ödeme yapmasına olanak tanır.
-* Canlı tutma mekanizması uygulayın ("uyanık" durumunda tutmak için uç noktaya ping yapın).
-* Kapsayıcılı bir işlev yaklaşımı ile Kubernetes gibi Orchestration kullanın (konak zaten çalışıyor, yeni örneklerin dönmesini son derece hızlıdır).
+- Bazı sağlayıcılar, kullanıcıların altyapının "her zaman açık" olduğunu garanti eden hizmet düzeyleri için ödeme yapmasına olanak tanır.
+- Canlı tutma mekanizması uygulayın ("uyanık" durumunda tutmak için uç noktaya ping yapın).
+- Kapsayıcılı bir işlev yaklaşımı ile Kubernetes gibi Orchestration kullanın (konak zaten çalışıyor, yeni örneklerin dönmesini son derece hızlıdır).
 
 ## <a name="database-updates-and-migrations"></a>Veritabanı güncelleştirmeleri ve geçişleri
 
@@ -55,7 +55,7 @@ Değişiklik dizisi, eski kodun "olduğu gibi" çalışmaya devam etmesini sağl
 
 Sunucusuz mimarilerde bulunan veriler hakkında daha fazla bilgi için bkz. [Dağıtılmış veri yönetimi Için sorunlar ve çözümler](../microservices/architect-microservice-container-applications/distributed-data-management.md).
 
-## <a name="scaling"></a>Ölçeklendirme
+## <a name="scaling"></a>Lemeyle
 
 Sunucusuz "sunucu yok" anlamına gelen yaygın bir yanıltıcı olur. Aslında "daha az sunucu" gibi. Bir destek altyapısı, ölçeklendirmenin ne zaman geldiğini anlamak için önemlidir. Çoğu sunucusuz platform, olay yoğunluğu arttıkça altyapının ölçeklendirilmesi için bir denetim kümesi sağlar. Çeşitli seçeneklerden birini seçebilirsiniz, ancak stratejiniz işleve bağlı olarak farklılık gösterebilir. Ayrıca, işlevler genellikle ilgili bir ana bilgisayar altında çalıştırılır, böylece aynı konaktaki işlevler aynı ölçek seçeneklerine sahip olacaktır. Bu nedenle, ölçek gereksinimlerine göre hangi işlevlerin birlikte barındırıldığını düzenlemek ve stratejik hale eklemek gereklidir.
 
@@ -71,7 +71,7 @@ Sunucusuz bir mimari, diğer işlevlere bağlı olan işlevleri içerebilir. Asl
 
 ## <a name="managing-failure-and-providing-resiliency"></a>Hatayı yönetme ve dayanıklılık sağlama
 
-*Devre kesici deseninin*göz önünde bulundurulması de önemlidir: Bir hizmet, bazı nedenlerle başarısız olmaya devam ederse, bu hizmetin sürekli olarak çağırmanız önerilmez. Bunun yerine, alternatif bir hizmet çağrılır veya bağımlı hizmetin sistem durumu yeniden oluşturulana kadar bir ileti döndürülür. Sunucusuz mimarinin, hizmet dışı bağımlılıkların çözümlenmesi ve yönetilmesi için strateji hesabına sahip olması gerekir.
+*Devre kesici deseninin*göz önünde bulundurulması de önemlidir: bazı nedenlerle bir hizmet başarısız olmaya devam ederse, bu hizmetin tekrar tekrar çağırmasının önerilmez. Bunun yerine, alternatif bir hizmet çağrılır veya bağımlı hizmetin sistem durumu yeniden oluşturulana kadar bir ileti döndürülür. Sunucusuz mimarinin, hizmet dışı bağımlılıkların çözümlenmesi ve yönetilmesi için strateji hesabına sahip olması gerekir.
 
 Devre kesici düzenine devam etmek için, hizmetlerin hata toleranslı ve dayanıklı olması gerekir. Hata toleransı, uygulamanızın beklenmedik özel durumlar veya geçersiz durumlardan sonra bile çalışmaya devam etmesini sağlar. Hata toleransı genellikle kodun kendisinin bir işlevidir ve özel durumları işlemek için nasıl yazıldığı. Dayanıklılık, uygulamanın hatalardan kurtarılırken ne kadar uyumlu olduğunu ifade eder. Dayanıklılık genellikle sunucusuz platform tarafından yönetilir. Mevcut bir hata oluştuğunda platformun yeni bir sunucusuz işlev örneği alabilmesi gerekir. Her yeni örnek başarısız olduğunda, platformun yeni örnekleri dönmesini durdurmak için de yeterince akıllı olması gerekir.
 
@@ -82,5 +82,5 @@ Daha fazla bilgi için bkz. [devre kesici modelini uygulama](../microservices/im
 Sunucusuz 'ın önemli bir avantajı, uygulamanın tamamını yeniden dağıtmaya gerek kalmadan belirli bir işlevi yükseltmeme özelliğidir. Yükseltmelerin başarılı olabilmesi için işlevlerin doğru kod sürümüne yönlendirilmesi için işlevleri sürümlenmiş olmalıdır. Yeni sürümleri dağıtmaya yönelik bir strateji da önemlidir. Yaygın bir yaklaşım, "yeşil/mavi dağıtımlar" kullanmaktır. Yeşil dağıtım, geçerli işlevdir. Yeni bir "mavi" sürümü üretime dağıtılır ve test edilir. Testler başarılı olduğunda, yeni sürümün canlı olması için yeşil ve mavi sürümler takas edilir. Herhangi bir sorunla karşılaşıldığında, geri dönebilir. Sürüm oluşturma ve yeşil/mavi dağıtımları desteklemek, sürüm değişikliklerini barındırmak ve dağıtımları işlemek için sunucusuz platformla çalışmak üzere işlevleri yazmanın bir birleşimini gerektirir. Olası bir yaklaşım, [Azure sunucusuz platform](azure-functions.md#proxies) bölümünde açıklanan proxy 'leri kullanmaktır.
 
 >[!div class="step-by-step"]
->[Önceki](serverless-architecture.md)İleri
->[](serverless-design-examples.md)
+>[Önceki](serverless-architecture.md)
+>[İleri](serverless-design-examples.md)
