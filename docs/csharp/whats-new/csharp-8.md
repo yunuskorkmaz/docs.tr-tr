@@ -428,9 +428,9 @@ var lazyDog = words[^2..^0];
 Aşağıdaki örnekler, başlangıç, bitiş veya her ikisi için açık olarak biten aralıklar oluşturur:
 
 ```csharp
-var allWords = words[..]; // "The" ile başlayıp "dog" a kadar öğeleri içerir.
-var firstPhrase = words[..4]; // "The" ile başlayıp "fox" a kadar öğeleri içerir
-var lastPhrase = words[6..]; // "the", "lazy" ve "dog" öğelerini içerir
+var allWords = words[..]; // contains "The" through "dog".
+var firstPhrase = words[..4]; // contains "The" through "fox"
+var lastPhrase = words[6..]; // contains "the", "lazy" and "dog"
 ```
 
 Aralıkları, değişkenler olarak da bildirebilirsiniz:
