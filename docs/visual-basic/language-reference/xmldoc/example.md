@@ -5,15 +5,15 @@ helpviewer_keywords:
 - example XML tag
 - <example> XML tag
 ms.assetid: 90eeda1c-3fc4-427c-879c-5046d265a97c
-ms.openlocfilehash: 510b00d2220b9c65b0e2b8fa3ead70925a9f54ba
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8f28dbf19bc03cb9d91323e9fa43a7081c1990db
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61772513"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72524010"
 ---
-# <a name="example-visual-basic"></a>\<Örnek > (Visual Basic)
-Bir örnek üyesi için belirtir.  
+# <a name="example-visual-basic"></a>\<example > (Visual Basic)
+Üye için bir örnek belirtir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -23,15 +23,15 @@ Bir örnek üyesi için belirtir.
   
 ## <a name="parameters"></a>Parametreler  
  `description`  
- Kod örneği açıklaması.  
+ Kod örneğinin açıklaması.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `<example>` Etiketi bir yöntem veya diğer kitaplık üyesini kullanmaya ilişkin bir örnek belirtmenize olanak sağlar. Bu yaygın olarak kullanılmasına [ \<kod >](../../../visual-basic/language-reference/xmldoc/code.md) etiketi.  
+ @No__t_0 etiketi, bir yöntemin veya diğer kitaplık üyesinin nasıl kullanılacağına ilişkin bir örnek belirtmenize olanak tanır. Bu genellikle [\<code >](../../../visual-basic/language-reference/xmldoc/code.md) etiketinin kullanılmasını içerir.  
   
- Derleme [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) işlem belgeleri açıklamaları için bir dosya için.  
+ Belge açıklamalarını bir dosyaya işlemek için [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) ile derleyin.  
   
 ## <a name="example"></a>Örnek  
- Bu örnekte `<example>` kullanmaya yönelik bir örnek eklemek için etiketi `ID` alan.  
+ Bu örnek, `ID` alanı kullanmak için bir örnek eklemek için `<example>` etiketini kullanır.  
   
  [!code-vb[VbVbcnXmlDocComments#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#2)]  
   

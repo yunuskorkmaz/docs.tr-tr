@@ -4,44 +4,44 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - XML comments [Visual Basic], parsing [Visual Basic]
 ms.assetid: 78a15cd0-7708-4e79-85d1-c154b7a14a8c
-ms.openlocfilehash: ab05db770f312a362e26f17df684f6f4f49c0eb3
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 91583612940282b05ebbf38bd5f0a59d6af5bbcd
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586742"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72524454"
 ---
 # <a name="processing-the-xml-file-visual-basic"></a>XML Dosyasını İşleme (Visual Basic)
-Derleyici, kodunuzda belgeleri oluşturmak için etiketli her yapı için bir kimlik dizesi oluşturur. (Kodunuzu etiketleme hakkında daha fazla bilgi için bkz: [XML açıklama etiketleri](../../../visual-basic/language-reference/xmldoc/index.md).) Kimlik dizesi yapısını benzersiz olarak tanımlar. XML dosyasını işleme programları kimlik dizesi, karşılık gelen .NET Framework meta verileri/yansıma öğeyi tanımlamak için kullanabilirsiniz.  
+Derleyici, kodunuzda belge oluşturmak için etiketlenmiş her yapı için bir KIMLIK dizesi oluşturur. (Kodunuzu etiketleme hakkında daha fazla bilgi için bkz. [XML açıklama etiketleri](../../../visual-basic/language-reference/xmldoc/index.md).) KIMLIK dizesi yapıyı benzersiz bir şekilde tanımlar. XML dosyasını işleyen programlar, karşılık gelen .NET Framework meta veri/yansıma öğesini tanımlamak için KIMLIK dizesini kullanabilir.  
   
- XML dosyası kodunuzu hiyerarşik bir gösterimini değil; Düz listeyle her öğe için oluşturulan bir kimliği var.  
+ XML dosyası, kodunuzun hiyerarşik bir temsili değildir; her öğe için oluşturulmuş KIMLIĞI olan düz bir liste.  
   
- Kimlik dizeleri oluşturduğunda, derleyici aşağıdaki kurallar gözlemler:  
+ Derleyici, KIMLIK dizelerini oluşturduğunda aşağıdaki kuralları sunar:  
   
-- Hiçbir boşluk dizesinde yerleştirilir.  
+- Dizeye boşluk yerleştirilmez.  
   
-- Kimlik dizesi ilk bölümünü izleyen iki nokta ile tek bir karakter ile tanımlanmakta üye türünü tanımlar. Aşağıdaki üye türleri kullanılır.  
+- KIMLIK dizesinin ilk bölümü, tanımlanmakta olan üyenin türünü tanımlar, tek bir karakter ve iki nokta üst üste gelir. Aşağıdaki üye türleri kullanılır.  
   
 |Karakter|Açıklama|  
 |---|---|  
-|N|ad alanı<br /><br /> Belge açıklamaları için bir ad alanı ekleyemezsiniz, ancak bunları CREF başvuruları yapabileceğiniz desteklenen durumlarda.|  
-|T|Tür: `Class`, `Module`, `Interface`, `Structure`, `Enum`, `Delegate`|  
-|F|alan: `Dim`|  
-|P|Özellik: `Property` (varsayılan özellikleri dahil)|  
-|M|yöntemi: `Sub`, `Function`, `Declare`, `Operator`|  
+|N|ad alanı<br /><br /> Bir ad alanına belge açıklamaları ekleyemezsiniz, ancak bu kişilere, desteklenmiş olduğu durumlarda bu başvuruları yapabilirsiniz.|  
+|T|yazın: `Class`, `Module`, `Interface`, `Structure`, `Enum`, `Delegate`|  
+|F|Alan: `Dim`|  
+|P|Özellik: `Property` (varsayılan özellikler dahil)|  
+|M|Yöntem: `Sub`, `Function`, `Declare`, `Operator`|  
 |E|olay: `Event`|  
-|!|Hata dizesi<br /><br /> Dizenin geri kalanı, hata hakkında bilgi sağlar. Visual Basic Derleyicisi, çözümlenemeyen bağlantılar için hata bilgisi oluşturur.|  
+|!|Hata dizesi<br /><br /> Dizenin geri kalanı hata hakkında bilgi sağlar. Visual Basic Derleyicisi çözümlenemeyen bağlantılar için hata bilgileri oluşturur.|  
   
-- İkinci bölümü `String` tam nitelikli ad alanı kökünde başlangıç öğesi adıdır. Öğesi, kendi kapsayan türleri ve ad alanı adı noktalarla ayrılmış. Öğenin adını nokta içeriyorsa, sayı işaretiyle değiştirilir (#). Öğe adını doğrudan sayı işareti olduğunu kabul edilir. Örneğin, tam olarak nitelenmiş adını `String` Oluşturucusu olacak `System.String.#ctor`.  
+- @No__t_0 ikinci bölümü, ad alanının kökünden başlayarak öğenin tam nitelikli adıdır. Öğenin adı, kapsayan tür (ler) ve ad alanı noktalarla ayrılır. Öğenin adının kendisi noktalar içeriyorsa, bunlar sayı işaretiyle (#) değiştirilmiştir. Hiçbir öğenin doğrudan adında numara işareti olmadığı varsayılır. Örneğin, `String` oluşturucusunun tam adı `System.String.#ctor` olur.  
   
-- Yöntemi için bağımsız değişken varsa özellikleri ve yöntemleri, parantez içindeki bağımsız değişken listesini takip eder. Hiçbir bağımsız değişken varsa, hiçbir parantez yok. Bağımsız değişkenlerin virgülle ayrılır. Her bağımsız değişken kodlama, doğrudan bir .NET Framework imzada nasıl kodlandığını izler.  
+- Özellikler ve yöntemler için, yöntem için bağımsız değişkenler varsa, parantez içine alınmış bağımsız değişken listesi aşağıda verilmiştir. Bağımsız değişken yoksa, parantezler yok. Bağımsız değişkenler virgülle ayrılır. Her bağımsız değişkenin kodlaması, .NET Framework imzasında nasıl kodlandığını doğrudan izler.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod nasıl kimliği için bir sınıf dizeleri gösterir ve üyelerini oluşturulur.  
+ Aşağıdaki kod, bir sınıfa ve üyelerine ait KIMLIK dizelerinin nasıl oluşturulduğunu gösterir.  
   
  [!code-vb[VbVbcnXmlDocComments#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#10)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [/doc](../../../visual-basic/reference/command-line-compiler/doc.md)
-- [Nasıl yapılır: XML belgesi oluşturma](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)
+- [-doc](../../../visual-basic/reference/command-line-compiler/doc.md)
+- [Nasıl yapılır: XML Belgesi Oluşturma](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)

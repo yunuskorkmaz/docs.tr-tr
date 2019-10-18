@@ -1,42 +1,42 @@
 ---
-title: Çalışma zamanı, ileri sarma .NET Core kendi içinde uygulama dağıtımları için.
-description: DotNet hakkında bilgi edinmek kendi içinde dağıtımlar için değişiklikleri yayımlayın.
+title: .NET Core 'un kendi içindeki uygulama dağıtımları için çalışma zamanı ileri iletme.
+description: Kendi içindeki dağıtımlar için dotnet publish değişiklikler hakkında bilgi edinin.
 author: KathleenDollard
 ms.date: 05/31/2018
 ms.custom: seodec18
-ms.openlocfilehash: 9af1454ede03b277f9b1a10e1d99a997e38809ea
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6a0cdfb34973822c2f40cdb37d4038d3b7ad8e2a
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61613566"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522095"
 ---
-# <a name="self-contained-deployment-runtime-roll-forward"></a>Kendi başına dağıtım çalışma zamanı, ileri sarma
+# <a name="self-contained-deployment-runtime-roll-forward"></a>Kendi içinde dağıtım çalışma zamanını ileri sarma
 
-.NET core [kendi içinde uygulama dağıtımları](index.md) hem .NET Core kitaplıkları hem de .NET Core çalışma zamanı içerir. .NET Core 2.1 SDK (sürüm 2.1.300), kendi içinde uygulama dağıtımı başlatılıyor [yüksek düzeltme çalışma zamanı makinenizde yayımlar](https://github.com/dotnet/designs/pull/36). Varsayılan olarak, [ `dotnet publish` ](../tools/dotnet-publish.md) için kendi içinde bir dağıtım yayımlama makinede SDK'ın bir parçası olarak yüklenen en son sürümünü seçer. Bu güvenlik (ve diğer düzeltmeleri ile) çalıştırmak dağıtılan uygulamanızın tanır sırasında kullanılabilir `publish`. Uygulamanın yeni bir düzeltme eki elde etmek için yeniden yayımlanan olması gerekir. Kendi içindeki uygulamaları belirterek oluşturulduğunda `-r <RID>` üzerinde `dotnet publish` komutunu veya belirterek [çalışma zamanı tanımlayıcı (RID)](../rid-catalog.md) proje dosyasında (csproj / vbproj) veya komut satırında.
+.NET Core, [kendi içinde bulunan uygulama dağıtımları](index.md) hem .NET Core kitaplıklarını hem de .NET Core çalışma zamanını içerir. .NET Core 2,1 SDK (sürüm 2.1.300) ' den başlayarak, otomatik olarak kapsanan bir uygulama dağıtımı [makinenizde en yüksek düzeltme eki çalışma zamanını yayımlar](https://github.com/dotnet/designs/pull/36). Varsayılan olarak, kendinden bağımsız bir dağıtım için [`dotnet publish`](../tools/dotnet-publish.md) YAYıMLAMA makinesinde SDK 'nın bir parçası olarak yüklenen en son sürümü seçer. Bu, dağıtılan uygulamanızın `publish` sırasında kullanılabilir güvenlik düzeltmeleri (ve diğer düzeltmeler) ile çalışmasını sağlar. Uygulamanın yeni bir düzeltme eki edinmek için yeniden yayımlanması gerekir. Kendi içinde bulunan uygulamalar, `dotnet publish` komutunda `-r <RID>` belirterek veya proje dosyasında (csproj/vbproj) veya komut satırında [çalışma zamanı tanımlayıcısı (RID)](../rid-catalog.md) belirtilerek oluşturulur.
 
-## <a name="patch-version-roll-forward-overview"></a>Düzeltme eki sürümü Top iletme genel bakış
+## <a name="patch-version-roll-forward-overview"></a>Düzeltme Eki Sürümü ileri bakış
 
-[`restore`](../tools/dotnet-restore.md), [ `build` ](../tools/dotnet-build.md) ve [ `publish` ](../tools/dotnet-publish.md) olan `dotnet` komutları ayrı olarak çalıştırabilirsiniz. Çalışma zamanı seçimi parçasıdır `restore` işlemi değil `publish` veya `build`. Eğer `publish`, en son düzeltme eki sürümü seçilir. Eğer `publish` ile `--no-restore` bağımsız değişkeni, ardından değil alabilirsiniz istenen düzeltme eki sürümü için bir önceki `restore` ilke yayımlama yeni kendi içinde uygulama yürütülmemiş olabilir değil. Bu durumda, aşağıdakine benzer bir metinle bir derleme hatası üretilir:
+[`restore`](../tools/dotnet-restore.md), [`build`](../tools/dotnet-build.md) ve [`publish`](../tools/dotnet-publish.md) ayrı olarak çalışabilen `dotnet` komutlardır. Çalışma zamanı seçeneği, `publish` veya `build` değil `restore` işlemin bir parçasıdır. @No__t_0 çağırırsanız, en son düzeltme eki sürümü seçilir. @No__t_1 bağımsız değişkeniyle `publish` çağırırsanız, önceki bir `restore` yeni uygulama yayımlama ilkesiyle yürütülmemiş olabileceği için, istenen düzeltme eki sürümünü de alamıyoruz. Bu durumda, aşağıdakine benzer bir metin içeren bir yapı hatası oluşturulur:
 
-  "Projenin Microsoft.NETCore.App sürüm 2.0.0 kullanarak geri yüklendi ancak geçerli ayarlarla 2.0.6 sürüm yerine kullanılacak. Bu sorunu çözmek için aynı ayarları yapı gibi sonraki işlemleri ve geri yükleme için kullanılan veya yayımlama emin olun. Genellikle bu sorunu sırasında özelliği ayarlanmış RuntimeIdentifier derleme veya yayınlama ancak olmayan geri yükleme işlemi sırasında ortaya çıkabilir."
+  "Proje Microsoft. NETCore. App sürüm 2.0.0 kullanılarak geri yüklendi, ancak geçerli ayarlarla sürüm 2.0.6 kullanılacak. Bu sorunu çözmek için, geri yükleme ve derleme ya da yayımlama gibi sonraki işlemler için aynı ayarların kullanıldığından emin olun. Genellikle bu sorun, Runtimeıdentifier özelliği Build veya Publish sırasında ayarlandıysa, geri yükleme sırasında olmasa da oluşabilir. "
 
 > [!NOTE]
-> `restore` ve `build` başka bir komuta bir parçası olarak gibi örtük olarak çalıştırılabilir `publish`. Böylece doğru yapıtlar üretilen başka bir komutun parçası olarak örtülü olarak çalıştırdığınızda, bunlar ek bağlam ile sağlanır. Olduğunda, `publish` bir çalışma zamanı ile (örneğin, `dotnet publish -r linux-x64`), örtük `restore` x64 linux çalışma zamanı paketleri geri yükler. Eğer `restore` bu bağlamı olmadığından açıkça, çalışma zamanı paketlerini varsayılan olarak, geri yüklemez.
+> `restore` ve `build`, `publish` gibi başka bir komutun parçası olarak örtük olarak çalıştırılabilir. Başka bir komutun parçası olarak örtük olarak çalıştırıldığında, doğru yapıtların üretilmesi için ek bağlamla birlikte sağlanır. Bir çalışma zamanı ile `publish` (örneğin, `dotnet publish -r linux-x64`), örtük `restore` Linux-x64 çalışma zamanının paketlerini geri yükler. Açıkça `restore` çağırırsanız, bu bağlamı içermediğinden çalışma zamanı paketlerini varsayılan olarak geri yüklemez.
 
-## <a name="how-to-avoid-restore-during-publish"></a>Geri yükleme sırasında yayımlama önlemek yapma
+## <a name="how-to-avoid-restore-during-publish"></a>Yayımlama sırasında geri yükleme nasıl önlenir
 
-Çalışan `restore` parçası olarak `publish` işlemi senaryonuz için istenmeyen olabilir. Önlemek için `restore` sırasında `publish` kendi içindeki uygulamaları oluştururken, aşağıdakileri yapın:
+@No__t_1 işleminin bir parçası olarak `restore` çalıştırmak, senaryonuz için istenmeyen bir işlem olabilir. @No__t_1 sırasında, kendi içinde bulunan uygulamalar oluştururken `restore` önlemek için şunları yapın:
 
-* Ayarlama `RuntimeIdentifiers` tüm noktalı virgülle ayrılmış bir liste özelliğini [RID'ler](../rid-catalog.md) yayımlanacak.
-* Ayarlama `TargetLatestRuntimePatch` özelliğini `true`.
+- @No__t_0 özelliğini, yayımlanacak tüm [RID](../rid-catalog.md) 'lerin noktalı virgülle ayrılmış bir listesi olarak ayarlayın.
+- @No__t_0 özelliğini `true` olarak ayarlayın.
 
-## <a name="no-restore-argument-with-dotnet-publish-options"></a>Hayır-geri yükleme bağımsız değişken dotnet ile yayımlama seçenekleri
+## <a name="no-restore-argument-with-dotnet-publish-options"></a>dotnet publish seçenekleriyle geri yükleme olmayan bağımsız değişken
 
-Hem kendi içindeki uygulamaları oluşturmak istiyorsanız ve [framework bağımlı uygulamaları](index.md) aynı proje dosyasıyla ve kullanmak istediğiniz `--no-restore` bağımsız değişkeniyle `dotnet publish`, aşağıdakilerden birini seçin:
+Aynı proje dosyası ile hem kendi içinde hem de [çerçeveye bağımlı uygulamalar](index.md) oluşturmak istiyorsanız ve `dotnet publish` `--no-restore` bağımsız değişkenini kullanmak istiyorsanız aşağıdakilerden birini seçin:
 
-1. Framework bağımlı davranış tercih eder. Framework bağımlı uygulama ise varsayılan davranış budur. Uygulama kendi içinde bağımsızdır ve yüklenmemiş bir 2.1.0 kullanabilirsiniz yerel çalışma zamanının `TargetLatestRuntimePatch` için `false` proje dosyasındaki.
+1. Çerçeveye bağımlı davranışı tercih edin. Uygulama çerçeveye bağımlıysa, bu varsayılan davranıştır. Uygulama kendi kendine dahil ise ve düzeltme eki yüklenmemiş 2.1.0 yerel çalışma zamanını kullanıyorsa, `TargetLatestRuntimePatch` proje dosyasında `false` olarak ayarlayın.
 
-2. Müstakil davranışı tercih eder. Bu, uygulamanın kendi içinde ise, varsayılan davranıştır. Uygulama framework bağlıdır ve yüklü en son düzeltme eki verilirse `TargetLatestRuntimePatch` için `true` proje dosyasındaki.
+2. Kendi kendine içerilen davranışı tercih edin. Uygulama kendinden içeriyorsa, varsayılan davranıştır. Uygulama çerçeveye bağımlıdır ve en son düzeltme eki yüklenmesini gerektiriyorsa, `TargetLatestRuntimePatch` proje dosyasında `true` olarak ayarlayın.
 
-3. Açık çalışma zamanı framework sürümü ayarlayarak denetimini `RuntimeFrameworkVersion` proje dosyasındaki belirli bir düzeltme eki sürümü için.
+3. Proje dosyasındaki belirli bir düzeltme eki sürümüne `RuntimeFrameworkVersion` ayarlayarak çalışma zamanı çerçevesi sürümünün açık denetimini alın.

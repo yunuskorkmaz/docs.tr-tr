@@ -13,14 +13,14 @@ helpviewer_keywords:
 - cross-references [C#], tags
 - <seealso> C# XML tag
 ms.assetid: 8e157f3f-f220-4fcf-9010-88905b080b18
-ms.openlocfilehash: 3ddaa7efec2b4bf5ffa53971aa6f380a1be9bad8
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 430270c170f2829d9bf9b90d258c948176b9c086
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69587663"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72523332"
 ---
-# <a name="seealso-c-programming-guide"></a>\<SeeAlso > (C# Programlama Kılavuzu)
+# <a name="seealso-c-programming-guide"></a>\<seealso > (C# Programlama Kılavuzu)
 ## <a name="syntax"></a>Sözdizimi  
   
 ```xml  
@@ -28,18 +28,18 @@ ms.locfileid: "69587663"
 ```  
   
 ## <a name="parameters"></a>Parametreler  
- cref = " `member`"  
- Geçerli derleme ortamından çağrılabilen bir üyeye veya alana başvuru. Derleyici verilen kod öğesinin var olduğunu denetler ve çıkış XML dosyasında `member` öğe adına geçirir.`member` Çift tırnak işaretleri ("") içinde yer almalıdır.  
+ cref = "`member`"  
+ Geçerli derleme ortamından çağrılabilen bir üyeye veya alana başvuru. Derleyici verilen kod öğesinin var olduğunu denetler ve çıkış XML dosyasında öğe adına `member` geçirir. `member` Çift tırnak işaretleri ("") içinde yer almalıdır.  
   
- Genel bir türe [ \<](./see.md)cref başvurusu oluşturma hakkında daha fazla bilgi için bkz. >.  
+ Genel bir türe cref başvurusu oluşturma hakkında bilgi için bkz. [\<see >](./see.md).  
   
 ## <a name="remarks"></a>Açıklamalar  
- \<SeeAlso > etiketi de Ayrıca bkz. bölümünde görünmesini isteyebileceğiniz metni belirtmenize olanak tanır. Metnin içinden bir bağlantı belirtmek için [ \<> göster](./see.md) ' i kullanın.  
+ @No__t_0seealso > etiketi, Ayrıca bkz. bölümünde görünmesini isteyebileceğiniz metni belirtmenize olanak tanır. Metnin içinden bir bağlantı belirtmek için [\<see >](./see.md) kullanın.  
   
- Belge açıklamalarını bir dosyaya işlemek için [/doc](../../language-reference/compiler-options/doc-compiler-option.md) ile derleyin.  
+ Belge açıklamalarını bir dosyaya işlemek için [-doc](../../language-reference/compiler-options/doc-compiler-option.md) ile derleyin.  
   
 ## <a name="example"></a>Örnek  
- Bkz. SeeAlso > kullanımı \<örneği için bkz [ \<. Summary >](./summary.md) .  
+ @No__t_2seealso > kullanma örneği için bkz. [\<summary >](./summary.md) .  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

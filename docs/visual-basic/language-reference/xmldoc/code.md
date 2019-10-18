@@ -1,19 +1,19 @@
 ---
-title: '&lt;kod&gt; (Visual Basic)'
+title: <code> (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - code XML tag
 - <code> XML tag
 ms.assetid: 925e5342-be05-45f2-bf66-7398bbd6710e
-ms.openlocfilehash: 8a4708a7b50b0e221c1ebe7f95d4f8ff80cd1ebe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d4e887e3bbbc01e4cef5278f67b8c4afe273bf28
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54566313"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72524040"
 ---
-# <a name="ltcodegt-visual-basic"></a>&lt;kod&gt; (Visual Basic)
-Metnin birden çok kod satırlarını olduğunu gösterir.  
+# <a name="code-visual-basic"></a>\<code > (Visual Basic)
+Metnin birden çok kod satırı olduğunu gösterir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -21,19 +21,20 @@ Metnin birden çok kod satırlarını olduğunu gösterir.
 <code>content</code>  
 ```  
   
-#### <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler  
  `content`  
- Kod olarak işaretlemek için metni.  
+ Kod olarak işaretlemek için metin.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Kullanım `<code>` çok satırlı kod olarak belirtmek için etiket. Kullanım [ \<c >](../../../visual-basic/language-reference/xmldoc/c.md) gösteren metin açıklamasını içinde kod olarak işaretlenmelidir.  
+ Birden çok satırı kod olarak göstermek için `<code>` etiketini kullanın. Bir açıklama içindeki metnin kod olarak işaretlenmesi gerektiğini göstermek için [\<c >](../../../visual-basic/language-reference/xmldoc/c.md) kullanın.  
   
- Derleme [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) işlem belgeleri açıklamaları için bir dosya için.  
+ Belge açıklamalarını bir dosyaya işlemek için [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) ile derleyin.  
   
 ## <a name="example"></a>Örnek  
- Bu örnekte \<kod > kullanmak için örnek kod dahil etmek için etiket `ID` alan.  
+ Bu örnek, `ID` alanının kullanılmasına ilişkin örnek kodu eklemek için \<code > etiketini kullanır.  
   
- [!code-vb[VbVbcnXmlDocComments#2](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/code_1.vb)]  
+ [!code-vb[VbVbcnXmlDocComments#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#2)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [XML Açıklama Etiketleri](../../../visual-basic/language-reference/xmldoc/index.md)

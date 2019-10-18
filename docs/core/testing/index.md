@@ -5,12 +5,12 @@ author: ardalis
 ms.author: wiwagn
 ms.date: 08/30/2017
 ms.custom: seodec18
-ms.openlocfilehash: 835e7c0cffbcd5857c33694586b4d63511ecadb8
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 006ccf0370f8014e5021275c4d38cc50bf1c076f
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926292"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522915"
 ---
 # <a name="unit-testing-in-net-core-and-net-standard"></a>.NET Core ve .NET Standard birim testi
 
@@ -39,30 +39,30 @@ Birim testlerini yazarken altyapıya bağımlılıklar tanıtmamanızda deneyin.
 
 .NET Core birim testi projeleri için desteklenir:
 
-* [C#](../../csharp/index.md)
-* [F#](../../fsharp/index.md)
-* [Visual Basic](../../visual-basic/index.md) 
+- [C#](../../csharp/index.md)
+- [F#](../../fsharp/index.md)
+- [Visual Basic](../../visual-basic/index.md) 
 
 Şunları da seçebilirsiniz:
 
-* [xUnit](https://xunit.github.io) 
-* [NUnit](https://nunit.org)
-* ['I](https://github.com/Microsoft/testfx-docs)
+- [xUnit](https://xunit.github.io) 
+- [NUnit](https://nunit.org)
+- ['I](https://github.com/Microsoft/testfx-docs)
 
 Aşağıdaki izlenecek yollarda daha fazla bilgi edinebilirsiniz:
 
-* [ *XUnit* *C#* ve .NET Core CLIkullanarak birim testleri oluşturun.
-* [ *NUnit* *C#* ve .NET Core CLIkullanarak birim testleri oluşturun.
-* [ *MSTest* ve *C#* .NET Core CLIkullanarak birim testleri oluşturun.
-* [ *XUnit* *F#* ve .NET Core CLIkullanarak birim testleri oluşturun.
-* [ *NUnit* *F#* ve .NET Core CLIkullanarak birim testleri oluşturun.
-* [ *MSTest* ve *F#* .NET Core CLIkullanarak birim testleri oluşturun.
-* [ *XUnit* kullanarak birim testleri oluşturun ve .NET Core CLI *Visual Basic* ](unit-testing-visual-basic-with-dotnet-test.md).
-* [ *NUnit* ve .NET Core CLI *Visual Basic* ](unit-testing-visual-basic-with-nunit.md)kullanarak birim testleri oluşturun.
-* [ *MSTest* ve *Visual Basic* ](unit-testing-visual-basic-with-mstest.md)kullanarak birim testleri oluşturun .NET Core CLI.
+- [ *XUnit* *C#* ve .NET Core CLI](unit-testing-with-dotnet-test.md)kullanarak birim testleri oluşturun.
+- [ *NUnit* *C#* ve .NET Core CLI](unit-testing-with-nunit.md)kullanarak birim testleri oluşturun.
+- [ *MSTest* ve *C#* .NET Core CLI](unit-testing-with-mstest.md)kullanarak birim testleri oluşturun.
+- [ *XUnit* *F#* ve .NET Core CLI](unit-testing-fsharp-with-dotnet-test.md)kullanarak birim testleri oluşturun.
+- [ *NUnit* *F#* ve .NET Core CLI](unit-testing-fsharp-with-nunit.md)kullanarak birim testleri oluşturun.
+- [ *MSTest* ve *F#* .NET Core CLI](unit-testing-fsharp-with-mstest.md)kullanarak birim testleri oluşturun.
+- [ *XUnit* kullanarak birim testleri oluşturun ve .NET Core CLI *Visual Basic* ](unit-testing-visual-basic-with-dotnet-test.md).
+- [ *NUnit* ve .NET Core CLI *Visual Basic* ](unit-testing-visual-basic-with-nunit.md)kullanarak birim testleri oluşturun.
+- [ *MSTest* ve *Visual Basic* ](unit-testing-visual-basic-with-mstest.md)kullanarak birim testleri oluşturun .NET Core CLI.
 
 Aşağıdaki makalelerde daha fazla bilgi edinebilirsiniz:
 
-* Visual Studio Enterprise .NET Core için harika test araçları sunmaktadır. Daha fazla bilgi edinmek için [Live Unit Testing](/visualstudio/test/live-unit-testing) veya [kod kapsamına](https://github.com/Microsoft/vstest-docs/blob/master/docs/analyze.md#working-with-code-coverage) göz atın.
-* Seçmeli birim testlerini çalıştırma hakkında daha fazla bilgi için bkz. [Seçmeli birim testlerini çalıştırma](selective-unit-tests.md)veya [Testleri Visual Studio ile dahil etme ve hariç tutma](/visualstudio/test/live-unit-testing#include-and-exclude-test-projects-and-test-methods).
-* [.NET Core ve Visual Studio Ile xUnit kullanma](https://xunit.github.io/docs/getting-started-dotnet-core.html).
+- Visual Studio Enterprise .NET Core için harika test araçları sunmaktadır. Daha fazla bilgi edinmek için [Live Unit Testing](/visualstudio/test/live-unit-testing) veya [kod kapsamına](https://github.com/Microsoft/vstest-docs/blob/master/docs/analyze.md#working-with-code-coverage) göz atın.
+- Seçmeli birim testlerini çalıştırma hakkında daha fazla bilgi için bkz. [Seçmeli birim testlerini çalıştırma](selective-unit-tests.md)veya [Testleri Visual Studio ile dahil etme ve hariç tutma](/visualstudio/test/live-unit-testing#include-and-exclude-test-projects-and-test-methods).
+- [.NET Core ve Visual Studio Ile xUnit kullanma](https://xunit.github.io/docs/getting-started-dotnet-core.html).

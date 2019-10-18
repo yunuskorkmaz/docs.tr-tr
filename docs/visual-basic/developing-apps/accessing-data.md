@@ -5,54 +5,57 @@ helpviewer_keywords:
 - data [Visual Basic]
 - Visual Basic, data access
 ms.assetid: 3086ab38-3be5-4b22-9385-7d0e16b04f6a
-ms.openlocfilehash: 220d662576a5f23194dee7e23317bdbb0027546d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0f17df93fc4ef22ef45f7ceff89bfb5f1ab1c18d
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62014303"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72523961"
 ---
 # <a name="accessing-data-in-visual-basic-applications"></a>Visual Basic uygulamalarındaki verilere erişme
-Visual Basic, verilere erişen uygulamalar geliştirmede yardımcı olmak için çeşitli yeni özellikler içerir. Windows uygulamaları için veri sınır formları, öğeleri sürükleyerek oluşturulur [veri kaynakları penceresi](/visualstudio/data-tools/add-new-data-sources) forma. Öğeleri sürükleyerek verilere denetimler bağlama **veri kaynakları penceresi** varolan denetimler üzerine.  
-  
-## <a name="related-sections"></a>İlgili bölümler  
- [Visual Studio'da verilere erişme](/visualstudio/data-tools/)  
- Uygulamalarınıza veri erişim işlevini dahil etme konusunun tartışıldığı sayfalara bağlantılar sağlar.
 
- [.NET için Visual Studio veri araçları](/visualstudio/data-tools/visual-studio-data-tools-for-dotnet)  
- Visual Studio kullanarak, verilerle çalışan uygulamalar oluşturma hakkındaki sayfalara bağlantılar sağlar.  
-  
- [LINQ](../../visual-basic/programming-guide/language-features/linq/index.md)  
- Visual Basic ile LINQ'nun nasıl kullanılacağını açıklayan konulara bağlantılar sağlar.  
-  
- [LINQ to SQL](../../framework/data/adonet/sql/linq/index.md)  
- [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] hakkında bilgiler sağlar. Programlama örnekleri içerir.  
-  
- [Visual Studio'daki LINQ to SQL Araçları](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)  
- Nasıl oluşturulacağı hakkındaki konulara bağlantılar sağlar. bir [LINQ to SQL](../../framework/data/adonet/sql/linq/index.md) uygulamalarda nesne modeli.  
-  
- [N katmanlı uygulamalarda veri kümeleriyle çalışma](/visualstudio/data-tools/work-with-datasets-in-n-tier-applications)  
- Çok verili uygulamaların nasıl oluşturulacağı hakkındaki konulara bağlantılar sağlar.  
-     
- [Yeni bağlantı ekleme](/visualstudio/data-tools/add-new-connections)  
- Tasarım zamanı araçlarını ve Visual Studio kullanarak, ADO.NET bağlantı nesneleri ile uygulamanızı verilere bağlanmaya ilişkin sayfalara bağlantılar sağlar.  
+Visual Basic veriye erişen uygulamalar geliştirmeye yardımcı olacak birkaç yeni özellik içerir. Windows uygulamaları için veri bağlantılı formlar, öğeleri [veri kaynakları penceresinden](/visualstudio/data-tools/add-new-data-sources) form üzerine sürükleyerek oluşturulur. Öğeleri **veri kaynakları penceresinden** varolan denetimlere sürükleyerek verileri verilere bağlarsınız.
 
- [Visual Studio'da veri kümesi araçları](/visualstudio/data-tools/dataset-tools-in-visual-studio)  
- Veri kümeslerine nasıl veri yükleneceğini ve SQL hesap özetlerinin ve depolanan yordamların nasıl yürütüleceğini açıklayan sayfalara bağlantılar sağlar.  
-  
- [Visual Studio'da verilere denetimler bağlama](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio)  
- Windows Formatında veri sınır denetimleri aracılığıyla nasıl veri görüntülendiğini açıklayan sayfalara bağlantılar sağlar.  
-  
- [Veri kümelerindeki verileri düzenleme](/visualstudio/data-tools/edit-data-in-datasets)  
- Bir veri kümesinin veri tabloları içindeki verilerin nasıl yönetileceğini açıklayan sayfalara bağlantılar sağlar.  
-  
- [Veri kümelerindeki verileri doğrulama](/visualstudio/data-tools/validate-data-in-datasets)  
- Sütun ve satır değişiklikleri sırasında bir veri kümesine nasıl doğrulama ekleneceğini açıklayan sayfalara bağlantılar sağlar.  
-  
- [Verileri yeniden veritabanına kaydetme](/visualstudio/data-tools/save-data-back-to-the-database)  
- Bir uygulamadan veritabanına, güncelleştirilmiş verilerin nasıl gönderildiğini açıklayan sayfalara bağlantılar sağlar.  
-  
- [ADO.NET](../../framework/data/adonet/index.md)  
- .NET Framework programcısına veri erişim hizmetlerini gösteren ADO.NET sınıflarını açıklar.
+## <a name="related-sections"></a>İlgili bölümler
 
- [Office çözümlerindeki veriler](/visualstudio/vsto/data-in-office-solutions) şema tabanlı programlama, veriyi önbelleğe alma ve sunucu tarafı veri erişimi hakkında bilgiler dahil olmak üzere, Office çözümlerinde verilerin nasıl çalıştığını açıklayan sayfalara bağlantılar içerir.
+[Visual Studio 'da verilere erişme](/visualstudio/data-tools/)  
+Uygulamalarınıza veri erişim işlevini dahil etme konusunun tartışıldığı sayfalara bağlantılar sağlar.
+
+[.NET için Visual Studio veri araçları](/visualstudio/data-tools/visual-studio-data-tools-for-dotnet)  
+Visual Studio kullanarak verilerle çalışan uygulamalar oluşturma hakkındaki sayfalara bağlantılar sağlar.
+
+[LINQ](../../visual-basic/programming-guide/language-features/linq/index.md)  
+Visual Basic ile LINQ'nun nasıl kullanılacağını açıklayan konulara bağlantılar sağlar.
+
+[LINQ to SQL](../../framework/data/adonet/sql/linq/index.md)  
+[!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] hakkında bilgiler sağlar. Programlama örnekleri içerir.  
+
+[Visual Studio'daki LINQ to SQL Araçları](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)  
+Uygulamalarda [LINQ to SQL](../../framework/data/adonet/sql/linq/index.md) nesne modelinin nasıl oluşturulacağı hakkındaki konulara bağlantılar sağlar.
+
+[N katmanlı uygulamalarda veri kümeleriyle çalışma](/visualstudio/data-tools/work-with-datasets-in-n-tier-applications)  
+Çok verili uygulamaların nasıl oluşturulacağı hakkındaki konulara bağlantılar sağlar.
+
+[Yeni bağlantı ekleme](/visualstudio/data-tools/add-new-connections)  
+Visual Studio 'Yu kullanarak, uygulamanızı tasarım zamanı araçları ve ADO.NET bağlantı nesneleriyle verilere bağlama hakkındaki sayfalara bağlantılar sağlar.
+
+[Visual Studio 'da veri kümesi araçları](/visualstudio/data-tools/dataset-tools-in-visual-studio)  
+Veri kümeslerine nasıl veri yükleneceğini ve SQL hesap özetlerinin ve depolanan yordamların nasıl yürütüleceğini açıklayan sayfalara bağlantılar sağlar.  
+
+[Visual Studio'da verilere denetimler bağlama](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio)  
+Windows Formatında veri sınır denetimleri aracılığıyla nasıl veri görüntülendiğini açıklayan sayfalara bağlantılar sağlar.
+
+[Veri kümelerinde verileri düzenleme](/visualstudio/data-tools/edit-data-in-datasets)  
+Bir veri kümesinin veri tabloları içindeki verilerin nasıl yönetileceğini açıklayan sayfalara bağlantılar sağlar.  
+
+[Veri kümelerindeki verileri doğrulama](/visualstudio/data-tools/validate-data-in-datasets)  
+Sütun ve satır değişiklikleri sırasında bir veri kümesine nasıl doğrulama ekleneceğini açıklayan sayfalara bağlantılar sağlar.
+
+[Verileri yeniden veritabanına kaydetme](/visualstudio/data-tools/save-data-back-to-the-database)  
+Bir uygulamadan veritabanına, güncelleştirilmiş verilerin nasıl gönderildiğini açıklayan sayfalara bağlantılar sağlar.
+
+[ADO.NET](../../framework/data/adonet/index.md)  
+.NET Framework programcısına veri erişim hizmetlerini gösteren ADO.NET sınıflarını açıklar.
+
+[Office Çözümlerindeki Veriler](/visualstudio/vsto/data-in-office-solutions)  
+Office çözümlerinde, şema yönelimli programlama, veriyi önbelleğe alma ve sunucu tarafı veri erişimi hakkında bilgiler de dahil olmak üzere, verilerin nasıl çalıştığını açıklayan sayfalara bağlantılar içerir.

@@ -8,14 +8,14 @@ helpviewer_keywords:
 - <value> C# XML tag
 - value C# XML tag
 ms.assetid: 08dbadaf-9ab6-43d9-9493-98e43bed199a
-ms.openlocfilehash: 4d967d671b3a27698b457c80ff5a8f7031dc6bcb
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 09577d931c6b1f571cd4112c788da38bab85bf42
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69587416"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72523271"
 ---
-# <a name="value-c-programming-guide"></a>\<değer > (C# Programlama Kılavuzu)
+# <a name="value-c-programming-guide"></a>\<value > (C# Programlama Kılavuzu)
 ## <a name="syntax"></a>Sözdizimi  
   
 ```xml  
@@ -27,9 +27,9 @@ ms.locfileid: "69587416"
  Özelliği için bir açıklama.  
   
 ## <a name="remarks"></a>Açıklamalar  
- > \<Tag değeri, bir özelliğin temsil ettiği değeri açıklamanıza olanak sağlar. Visual Studio .NET geliştirme ortamında kod Sihirbazı aracılığıyla bir özellik eklediğinizde, yeni özellik için bir [ \<Özet >](./summary.md) etiketi ekleneceğini unutmayın. Daha sonra özelliğin temsil ettiği değeri \<tanımlayacak bir değer > etiketi eklemeniz gerekir.  
+ @No__t_0value > etiketi, bir özelliğin temsil ettiği değeri açıklamanıza olanak sağlar. Visual Studio .NET geliştirme ortamında kod Sihirbazı aracılığıyla bir özellik eklediğinizde, yeni özellik için bir [\<summary >](./summary.md) etiketi ekleneceğini unutmayın. Sonra özelliğin temsil ettiği değeri tanımlayan bir \<value > etiketini el ile eklemeniz gerekir.  
   
- Belge açıklamalarını bir dosyaya işlemek için [/doc](../../language-reference/compiler-options/doc-compiler-option.md) ile derleyin.  
+ Belge açıklamalarını bir dosyaya işlemek için [-doc](../../language-reference/compiler-options/doc-compiler-option.md) ile derleyin.  
   
 ## <a name="example"></a>Örnek  
  [!code-csharp[csProgGuideDocComments#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#14)]  

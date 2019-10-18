@@ -5,12 +5,12 @@ author: mlacouture
 ms.date: 01/19/2017
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 4a9c24455136fe4ccd13379d05c16d6b7cbf85de
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 403651978667c8cf531c3f87f1156f67206fb490
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117020"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522821"
 ---
 # <a name="using-microsoft-xml-serializer-generator-on-net-core"></a>.NET Core 'da Microsoft XML serileştirici üreticisini kullanma
 
@@ -18,20 +18,20 @@ Bu öğreticide, bir C# .NET Core UYGULAMASıNDA Microsoft XML serileştirici ol
 
 > [!div class="checklist"]
 >
-> * .NET Core uygulaması oluşturma
-> * Microsoft. XmlSerializer. Generator paketine başvuru ekleme
-> * Bağımlılıklar eklemek için MyApp. csproj dosyanızı düzenleme
-> * Bir sınıf ve XmlSerializer ekleme
-> * Uygulamayı derleme ve çalıştırma
+> - .NET Core uygulaması oluşturma
+> - Microsoft. XmlSerializer. Generator paketine başvuru ekleme
+> - Bağımlılıklar eklemek için MyApp. csproj dosyanızı düzenleme
+> - Bir sınıf ve XmlSerializer ekleme
+> - Uygulamayı derleme ve çalıştırma
 
-.NET Framework için [XML serileştirici Oluşturucu (SGen. exe)](../../standard/serialization/xml-serializer-generator-tool-sgen-exe.md) gibi, [Microsoft. XmlSerializer. Generator NuGet paketi](https://www.nuget.org/packages/Microsoft.XmlSerializer.Generator) .NET Core ve .NET Standard projelerine eşdeğerdir. Kullanarak <xref:System.Xml.Serialization.XmlSerializer>bu türlerin nesnelerini serileştirmek veya SERILEŞTIRMEK durumunda XML serileştirmesinin başlangıç performansını geliştirmek için bir derlemede bulunan türler için bir XML serileştirme bütünleştirilmiş kodu oluşturur.
+.NET Framework için [XML serileştirici Oluşturucu (SGen. exe)](../../standard/serialization/xml-serializer-generator-tool-sgen-exe.md) gibi, [Microsoft. XmlSerializer. Generator NuGet paketi](https://www.nuget.org/packages/Microsoft.XmlSerializer.Generator) .NET Core ve .NET Standard projelerine eşdeğerdir. @No__t_0 kullanarak bu türlerin nesnelerini serileştirmek veya seri hale getirmede XML serileştirmesinin başlangıç performansını geliştirmek için bir derlemede bulunan türler için bir XML serileştirme bütünleştirilmiş kodu oluşturur.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Prerequisites
 
-Bu öğreticiyi tamamlamak için:
+Bu öğreticiyi tamamlayabilmeniz için:
 
-* [.NET Core 2,1 SDK](https://dotnet.microsoft.com/download) veya üzeri
-* En sevdiğiniz kod düzenleyiciniz.
+- [.NET Core 2,1 SDK](https://dotnet.microsoft.com/download) veya üzeri.
+- En sevdiğiniz kod düzenleyiciniz.
 
 > [!TIP]
 > Bir kod Düzenleyicisi yüklemeniz mı gerekiyor? [Visual Studio 'yu](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)deneyin!
@@ -50,7 +50,7 @@ dotnet new console
 
 ### <a name="add-a-reference-to-the-microsoftxmlserializergenerator-package-in-the-myapp-project"></a>MyApp projesindeki Microsoft. XmlSerializer. Generator paketine bir başvuru ekleyin
 
-Başvurusunu projenize eklemek için [komutunukullanın.`dotnet add package`](../tools//dotnet-add-package.md)
+Başvuruyu projenize eklemek için [`dotnet add package`](../tools//dotnet-add-package.md) komutunu kullanın.
 
 Tür:
 
@@ -64,7 +64,7 @@ Kod düzenleyicinizi açın ve Haydi başlayın! Uygulamayı geliştirdiğimiz *
 
 Metin düzenleyicinizde *MyApp. csproj* ' yı açın.
 
-Komutu çalıştırdıktan sonra, aşağıdaki satırlar *MyApp. csproj* proje dosyanıza eklenir: [`dotnet add package`](../tools//dotnet-add-package.md)
+[@No__t_1](../tools//dotnet-add-package.md) komutunu çalıştırdıktan sonra, *MyApp. csproj* proje dosyanıza aşağıdaki satırlar eklenir:
 
  ```xml
  <ItemGroup>
@@ -93,9 +93,9 @@ public class MyClass
 }
 ```
 
-### <a name="create-an-xmlserializer-for-myclass"></a>`XmlSerializer` MyClass için oluşturma
+### <a name="create-an-xmlserializer-for-myclass"></a>MyClass için `XmlSerializer` oluşturma
 
-MyClass `XmlSerializer` için şunu oluşturmak üzere *Main* içinde aşağıdaki satırı ekleyin:
+MyClass için bir `XmlSerializer` oluşturmak için aşağıdaki satırı *Main* içine ekleyin:
 
 ```csharp
 var serializer = new System.Xml.Serialization.XmlSerializer(typeof(MyClass));
@@ -103,7 +103,7 @@ var serializer = new System.Xml.Serialization.XmlSerializer(typeof(MyClass));
 
 ### <a name="build-and-run-the-application"></a>Uygulamayı derleyin ve çalıştırın
 
-Hala *MyApp* klasöründe, uygulamayı ile [`dotnet run`](../tools/dotnet-run.md) çalıştırın ve çalışma zamanında önceden oluşturulmuş serileştiricileri otomatik olarak yükler ve kullanır.
+Hala *MyApp* klasöründe, uygulamayı [`dotnet run`](../tools/dotnet-run.md) aracılığıyla çalıştırın ve çalışma zamanında önceden oluşturulmuş serileştiriciler ' ı otomatik olarak yükler ve kullanır.
 
 Konsol pencerenize aşağıdaki komutu yazın:
 
@@ -112,24 +112,24 @@ dotnet run
 ```
 
 > [!NOTE]
-> [`dotnet run`](../tools/dotnet-run.md)Derleme [`dotnet build`](../tools/dotnet-build.md) hedeflerinin oluşturulduğundan emin olmak için çağrılar yapın ve ardından hedef uygulamayı çalıştırmak için `dotnet <assembly.dll>` çağırır.
+> [`dotnet run`](../tools/dotnet-run.md) , derleme hedeflerinin oluşturulduğundan emin olmak için [`dotnet build`](../tools/dotnet-build.md) çağırır ve sonra hedef uygulamayı çalıştırmak için `dotnet <assembly.dll>` çağırır.
 
 > [!IMPORTANT]
-> Uygulamanızı çalıştırmak için bu öğreticide gösterilen komutlar ve adımlar yalnızca geliştirme zamanı sırasında kullanılır. Uygulamanızı dağıtmaya hazırsanız, .NET Core Uygulamaları ve [`dotnet publish`](../tools/dotnet-publish.md) komutu için farklı [dağıtım stratejilerine](../deploying/index.md) göz atın.
+> Uygulamanızı çalıştırmak için bu öğreticide gösterilen komutlar ve adımlar yalnızca geliştirme zamanı sırasında kullanılır. Uygulamanızı dağıtmaya hazırsanız, .NET Core uygulamaları için farklı [dağıtım stratejilerine](../deploying/index.md) ve [`dotnet publish`](../tools/dotnet-publish.md) komutuna göz atın.
 
 Her şey başarılı olursa, çıkış klasöründe *MyApp. Xmlserileştiriciler. dll* adlı bir derleme oluşturulur.
 
-Tebrikler! Yalnızca şunları yapın:
+Mühendisi! Yalnızca şunları yapın:
 > [!div class="checklist"]
 >
-> * .NET Core uygulaması oluşturuldu.
-> * Microsoft. XmlSerializer. Generator paketine bir başvuru eklendi.
-> * Bağımlılıklar eklemek için MyApp. csproj dosyanızı düzenlendi.
-> * Bir sınıf ve XmlSerializer eklendi.
-> * Uygulamayı oluşturulup çalıştırdık.
+> - .NET Core uygulaması oluşturuldu.
+> - Microsoft. XmlSerializer. Generator paketine bir başvuru eklendi.
+> - Bağımlılıklar eklemek için MyApp. csproj dosyanızı düzenlendi.
+> - Bir sınıf ve XmlSerializer eklendi.
+> - Uygulamayı oluşturulup çalıştırdık.
 
 ## <a name="related-resources"></a>İlgili kaynaklar
 
-* [XML Serileştirmeye Giriş](../../standard/serialization/introducing-xml-serialization.md)
-* [Nasıl yapılır: XmlSerializer (C#) kullanarak serileştirme](../../csharp/programming-guide/concepts/linq/how-to-serialize-using-xmlserializer.md)
-* [Nasıl yapılır: XmlSerializer kullanarak serileştirme (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/how-to-serialize-using-xmlserializer.md)
+- [XML Serileştirmeye Giriş](../../standard/serialization/introducing-xml-serialization.md)
+- [Nasıl yapılır: XmlSerializer (C#) kullanarak serileştirme](../../csharp/programming-guide/concepts/linq/how-to-serialize-using-xmlserializer.md)
+- [Nasıl yapılır: XmlSerializer kullanarak serileştirme (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/how-to-serialize-using-xmlserializer.md)

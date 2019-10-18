@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Visual Basic COM nesnelerine başvuru'
+title: "Nasıl yapılır: Visual Basic'den COM Nesnelerine Başvuru Yapma"
 ms.date: 07/20/2015
 helpviewer_keywords:
 - COM interop [Visual Basic], referencing COM objects
@@ -8,17 +8,17 @@ helpviewer_keywords:
 - COM objects, referencing
 - interop assemblies
 ms.assetid: 9c518fb4-27d9-4112-9e6a-5a7d0210af6f
-ms.openlocfilehash: 8e502dc9a279d9271a61fd2cf7a6afb564f09125
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: ea0e1d9b0ae9f151d901c425512508ba7bc05343
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71351990"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72524361"
 ---
-# <a name="how-to-reference-com-objects-from-visual-basic"></a>Nasıl yapılır: Visual Basic COM nesnelerine başvuru
+# <a name="how-to-reference-com-objects-from-visual-basic"></a>Nasıl yapılır: Visual Basic'den COM Nesnelerine Başvuru Yapma
 Visual Basic, tür kitaplıklarının bulunduğu COM nesnelerine başvurular eklemek için COM kitaplığı için birlikte çalışma derlemesinin oluşturulması gerekir. COM nesnesinin üyelerine yapılan başvurular birlikte çalışma derlemesine yönlendirilir ve ardından gerçek COM nesnesine iletilir. COM nesnesinden gelen yanıtlar birlikte çalışma derlemesine yönlendirilir ve .NET Framework uygulamanıza iletilir.  
   
- Bir .NET derlemesine COM nesnesinin tür bilgilerini gömerek derleme kullanmadan bir COM nesnesine başvurabilirsiniz. Tür bilgilerini eklemek için, COM nesnesine başvuru için `Embed Interop Types` özelliğini `True` olarak ayarlayın. Komut satırı derleyicisini kullanarak derlerken, COM kitaplığına başvurmak için `/link` seçeneğini kullanın. Daha fazla bilgi için bkz. [/Link (Visual Basic)](../../../visual-basic/reference/command-line-compiler/link.md).  
+ Bir .NET derlemesine COM nesnesinin tür bilgilerini gömerek derleme kullanmadan bir COM nesnesine başvurabilirsiniz. Tür bilgilerini eklemek için, COM nesnesine başvuru için `Embed Interop Types` özelliğini `True` olarak ayarlayın. Komut satırı derleyicisini kullanarak derlerken, COM kitaplığına başvurmak için `/link` seçeneğini kullanın. Daha fazla bilgi için bkz. [-Link (Visual Basic)](../../../visual-basic/reference/command-line-compiler/link.md).  
   
  Visual Basic, tümleşik geliştirme ortamından (IDE) bir tür kitaplığına bir başvuru eklediğinizde otomatik olarak birlikte çalışma derlemeleri oluşturur. Komut satırından çalışırken, Tlbimp yardımcı programını kullanarak birlikte çalışma derlemelerini el ile oluşturabilirsiniz.  
   
@@ -28,7 +28,7 @@ Visual Basic, tür kitaplıklarının bulunduğu COM nesnelerine başvurular ekl
   
 2. COM nesneleri listesinden kullanmak istediğiniz bileşeni seçin.  
   
-3. Birlikte çalışma derlemesine erişimi basitleştirmek için, COM nesnesini kullanacağınız sınıfın veya modülün en üstüne bir `Imports` ifadesini ekleyin. Örneğin, aşağıdaki kod örneği, `Microsoft InkEdit Control 1.0` kitaplığında başvurulan nesneler için `INKEDLib` ad alanını içeri aktarır.  
+3. Birlikte çalışma derlemesine erişimi basitleştirmek için, COM nesnesini kullanacağınız sınıfın veya modülün üst kısmına bir `Imports` ifadesini ekleyin. Örneğin, aşağıdaki kod örneği, `Microsoft InkEdit Control 1.0` kitaplığında başvurulan nesneler için `INKEDLib` ad alanını içeri aktarır.  
   
      [!code-vb[VbVbalrInterop#40](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#40)]  
   

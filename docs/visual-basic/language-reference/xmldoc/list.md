@@ -13,15 +13,15 @@ helpviewer_keywords:
 - item XML tag
 - <term> XML tag
 ms.assetid: ec35fced-d58e-4520-a764-0691256e014b
-ms.openlocfilehash: 7d7b85867f4c701322c5e6c31f2d89ab38fad05d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5d4295d485611e75e8b6c8d8f95e079654f0cfa3
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61940887"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72524756"
 ---
-# <a name="list-visual-basic"></a>\<Liste > (Visual Basic)
-Bir listeyi veya tabloyu tanımlar.  
+# <a name="list-visual-basic"></a>\<list > (Visual Basic)
+Bir liste veya tablo tanımlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,25 +40,25 @@ Bir listeyi veya tabloyu tanımlar.
   
 ## <a name="parameters"></a>Parametreler  
  `type`  
- Liste türü. "Bullet" bir madde işaretli liste, numaralandırılmış liste veya iki sütunlu bir tablo için "Tablo" için "number" olmalıdır.  
+ Listenin türü. Bir madde işaretli liste için "madde işareti", numaralandırılmış liste için "numara" veya iki sütunlu bir tablo için "Tablo" olmalıdır.  
   
  `term`  
- Yalnızca ne zaman kullanılır `type` "Tablo" olan Açıklama etiketi tanımlanan tanımlamak için bir terim.  
+ Yalnızca `type` "Table" olduğunda kullanılır. Description etiketinde tanımlanan, tanımlanacak bir terim.  
   
  `description`  
- Zaman `type` "bullet" veya "number" `description` listesinde bir öğe olduğunda `type` "Tablo" olan `description` tanımı `term`.  
+ @No__t_0 "Bullet" veya "Number" olduğunda `description`, `type` "Tablo" olduğunda, `description` `term` tanımıdır.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `<listheader>` Blok başlığı bir tablo veya tanım listesi tanımlar. Bir tablo tanımlarken, yalnızca bir giriş sağlamanız gerekir `term` başlığı.  
+ @No__t_0 bloğu, bir tablo ya da tanım listesinin başlığını tanımlar. Tablo tanımlarken, yalnızca başlıktaki `term` için bir giriş sağlamanız gerekir.  
   
- Listedeki her bir öğe ile belirtilen bir `<item>` blok. Tanım listesi oluştururken, her ikisini de belirtmelisiniz `term` ve `description`. Ancak, bir tablo, madde işaretli liste veya numaralı liste için yalnızca bir giriş sağlamanız gerekir `description`.  
+ Listedeki her öğe `<item>` bloğuyla belirtilir. Tanım listesi oluştururken hem `term` hem de `description` belirtmeniz gerekir. Ancak, bir tablo, madde işaretli liste veya numaralandırılmış liste için yalnızca `description` bir giriş sağlamanız gerekir.  
   
- Bir listeyi veya tabloyu kadar olabilir `<item>` gerektiğinde engeller.  
+ Bir liste veya tablo gerektiği kadar çok sayıda `<item>` bloğuyla bulunabilir.  
   
- Derleme [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) işlem belgeleri açıklamaları için bir dosya için.  
+ Belge açıklamalarını bir dosyaya işlemek için [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) ile derleyin.  
   
 ## <a name="example"></a>Örnek  
- Bu örnekte `<list>` etiket açıklamalar bölümünde bir madde işaretli liste tanımlamak için.  
+ Bu örnek, açıklamalar bölümünde madde işaretli bir liste tanımlamak için `<list>` etiketini kullanır.  
   
  [!code-vb[VbVbcnXmlDocComments#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#5)]  
   

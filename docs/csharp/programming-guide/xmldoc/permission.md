@@ -9,14 +9,14 @@ helpviewer_keywords:
 - <permission> C# XML tag
 - permission C# XML tag
 ms.assetid: 769e93fe-8404-443f-bf99-577aa42b6a49
-ms.openlocfilehash: e9eb50394f01072a194d3f746577707f89ba65dd
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 454928d5dfd023639bc68f194f2f5ec9e2d7dc22
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69587888"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72523386"
 ---
-# <a name="permission-c-programming-guide"></a>\<izin > (C# Programlama Kılavuzu)
+# <a name="permission-c-programming-guide"></a>\<permission > (C# Programlama Kılavuzu)
 ## <a name="syntax"></a>Sözdizimi  
   
 ```xml  
@@ -24,18 +24,18 @@ ms.locfileid: "69587888"
 ```  
   
 ## <a name="parameters"></a>Parametreler  
- cref = " `member`"  
- Geçerli derleme ortamından çağrılabilen bir üyeye veya alana başvuru. Derleyici verilen kod öğesinin var olduğunu denetler ve çıkış XML dosyasında `member` kurallı öğe adına çevirir. *üye* çift tırnak işareti ("") içinde yer almalıdır.  
+ cref = "`member`"  
+ Geçerli derleme ortamından çağrılabilen bir üyeye veya alana başvuru. Derleyici verilen kod öğesinin var olduğunu denetler ve çıkış XML dosyasında kurallı öğe adına `member` çevirir. *üye* çift tırnak işareti ("") içinde yer almalıdır.  
   
- Genel bir türe [ \<](./see.md)cref başvurusu oluşturma hakkında daha fazla bilgi için bkz. >.  
+ Genel bir türe cref başvurusu oluşturma hakkında bilgi için bkz. [\<see >](./see.md).  
   
  `description`  
  Üyeye erişim açıklaması.  
   
 ## <a name="remarks"></a>Açıklamalar  
- \<İzin > etiketi bir üyenin erişimini belgelemenizi sağlar. Sınıfı <xref:System.Security.PermissionSet> , bir üyeye erişim belirtmenize olanak sağlar.  
+ @No__t_0permission > etiketi bir üyenin erişimini belgelemenizi sağlar. @No__t_0 sınıfı, bir üyeye erişim belirtmenize olanak tanır.  
   
- Belge açıklamalarını bir dosyaya işlemek için [/doc](../../language-reference/compiler-options/doc-compiler-option.md) ile derleyin.  
+ Belge açıklamalarını bir dosyaya işlemek için [-doc](../../language-reference/compiler-options/doc-compiler-option.md) ile derleyin.  
   
 ## <a name="example"></a>Örnek  
  [!code-csharp[csProgGuideDocComments#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#8)]  

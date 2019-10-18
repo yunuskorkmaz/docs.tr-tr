@@ -5,15 +5,15 @@ helpviewer_keywords:
 - <para> XML tag
 - para XML tag
 ms.assetid: a3a18b6c-6416-4358-94ec-37b22675fd37
-ms.openlocfilehash: 16d10b2f955a4d9a02075ee4cc40dfa2b18c3541
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: aa4e4c14717b69b9ca4595e20c768a2b91aac1e4
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61940885"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72524731"
 ---
 # <a name="para-visual-basic"></a>\<para > (Visual Basic)
-İçerik paragraf olarak biçimlendirileceğini belirtir.  
+İçeriğin bir paragraf olarak biçimlendirildiğini belirtir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -23,15 +23,15 @@ ms.locfileid: "61940885"
   
 ## <a name="parameters"></a>Parametreler  
  `content`  
- Paragraf metni.  
+ Paragrafın metni.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `<para>` Gibi olan bir etiketi içinde kullanmak için etiket [ \<Özet >](../../../visual-basic/language-reference/xmldoc/summary.md), [ \<remarks >](../../../visual-basic/language-reference/xmldoc/remarks.md), veya [ \<döndürür >](../../../visual-basic/language-reference/xmldoc/returns.md), ve metnin yapısını eklemenizi sağlar.  
+ @No__t_0 etiketi, [\<summary >](../../../visual-basic/language-reference/xmldoc/summary.md), [\<remarks >](../../../visual-basic/language-reference/xmldoc/remarks.md)veya [\<returns](../../../visual-basic/language-reference/xmldoc/returns.md)> gibi bir etiket içinde kullanım içindir ve metne yapı eklemenizi sağlar.  
   
- Derleme [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) işlem belgeleri açıklamaları için bir dosya için.  
+ Belge açıklamalarını bir dosyaya işlemek için [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) ile derleyin.  
   
 ## <a name="example"></a>Örnek  
- Bu örnekte `<para>` için Açıklamalar bölümüne ayırmak için etiket `UpdateRecord` iki paragraf yönteme.  
+ Bu örnek, `UpdateRecord` yönteminin açıklamalar bölümünü iki paragrafa bölmek için `<para>` etiketini kullanır.  
   
  [!code-vb[VbVbcnXmlDocComments#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#6)]  
   

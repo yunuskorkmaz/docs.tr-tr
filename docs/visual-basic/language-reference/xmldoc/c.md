@@ -5,15 +5,15 @@ helpviewer_keywords:
 - c XML tag
 - <c> XML tag
 ms.assetid: 36ad5d1b-11f7-4012-8932-41962ac327d1
-ms.openlocfilehash: 9be9f9e96fc1b79ea97d54c54352da63b93ef264
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4ea19ed5330dcbb8fcd84708d1546a81d909b04e
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61938599"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72523935"
 ---
 # <a name="c-visual-basic"></a>\<c > (Visual Basic)
-Metin açıklama içinde kod olduğunu gösterir.  
+Açıklama içindeki metnin kod olduğunu gösterir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -25,15 +25,15 @@ Metin açıklama içinde kod olduğunu gösterir.
   
 |Parametre|Açıklama|  
 |---|---|  
-|`text`|Kod olarak belirtmek istediğiniz metin.|  
+|`text`|Kod olarak göstermek istediğiniz metin.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `<c>` Etiket metin açıklama içinde kod olarak işaretlenmelidir göstermek için bir yol sağlar. Kullanım [ \<kod >](../../../visual-basic/language-reference/xmldoc/code.md) çok satırlı kod olarak belirtmek için.  
+ @No__t_0 etiketi, bir açıklama içindeki metnin kod olarak işaretlenmesi gerektiğini göstermek için bir yol sağlar. Birden çok satırı kod olarak göstermek için [\<code >](../../../visual-basic/language-reference/xmldoc/code.md) kullanın.  
   
- Derleme [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) işlem belgeleri açıklamaları için bir dosya için.  
+ Belge açıklamalarını bir dosyaya işlemek için [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) ile derleyin.  
   
 ## <a name="example"></a>Örnek  
- Bu örnekte `<c>` etiket belirtmek için Özet bölümünde `Counter` kodudur.  
+ Bu örnek, `Counter` kodun olduğunu göstermek için Özet bölümündeki `<c>` etiketini kullanır.  
   
  [!code-vb[VbVbcnXmlDocComments#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#1)]  
   

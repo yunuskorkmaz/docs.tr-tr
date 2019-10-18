@@ -9,14 +9,14 @@ helpviewer_keywords:
 - <returns> C# XML tag
 - returns C# XML tag
 ms.assetid: bb2d9958-62fc-47c7-9511-6311171f119f
-ms.openlocfilehash: 7d4343cf38f0ea1ae42b77cc1d0c755920c4a421
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: dce36c762879c829a68897d6e3c2ff18903318c6
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69587738"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72523340"
 ---
-# <a name="returns-c-programming-guide"></a>\<> döndürür (C# Programlama Kılavuzu)
+# <a name="returns-c-programming-guide"></a>\<returns > (C# Programlama Kılavuzu)
 ## <a name="syntax"></a>Sözdizimi  
   
 ```xml  
@@ -28,9 +28,9 @@ ms.locfileid: "69587738"
  Dönüş değerinin açıklaması.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Dönüş \<değerini açıklayaması için bir yöntem bildirimi açıklamasında, return > etiketinin kullanılması gerekir.  
+ @No__t_0returns > etiketi, dönüş değerini betimleyen bir yöntem bildiriminin açıklamasında kullanılmalıdır.  
   
- Belge açıklamalarını bir dosyaya işlemek için [/doc](../../language-reference/compiler-options/doc-compiler-option.md) ile derleyin.  
+ Belge açıklamalarını bir dosyaya işlemek için [-doc](../../language-reference/compiler-options/doc-compiler-option.md) ile derleyin.  
   
 ## <a name="example"></a>Örnek  
  [!code-csharp[csProgGuideDocComments#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#10)]  

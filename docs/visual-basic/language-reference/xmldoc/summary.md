@@ -5,15 +5,15 @@ helpviewer_keywords:
 - <summary> XML tag
 - summary XML tag
 ms.assetid: 861c847d-dd94-478a-aa23-bf4899cdc848
-ms.openlocfilehash: 0fbe07884f55b7e6f460929e54520de5f718e1af
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 25a0b307756401bed4d4c77d3668c2af53ba8b42
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61940770"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72524636"
 ---
-# <a name="summary-visual-basic"></a>\<Özet > (Visual Basic)
-Üye özetini belirtir.  
+# <a name="summary-visual-basic"></a>\<summary > (Visual Basic)
+Üyenin özetini belirtir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -23,17 +23,17 @@ ms.locfileid: "61940770"
   
 ## <a name="parameters"></a>Parametreler  
  `description`  
- Nesne bir özeti.  
+ Nesnenin Özeti.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Kullanım `<summary>` bir türü veya tür üyesi açıklamak için etiket. Kullanım [ \<remarks >](../../../visual-basic/language-reference/xmldoc/remarks.md) ek bilgiler bir tür tanımı eklemek için.  
+ Bir tür veya tür üyesini anlatmak için `<summary>` etiketini kullanın. Bir tür açıklamasına ek bilgi eklemek için [\<remarks >](../../../visual-basic/language-reference/xmldoc/remarks.md) kullanın.  
   
- Metni `<summary>` etiketi, yalnızca kaynağı olan IntelliSense içinde türü hakkında bilgi ve Nesne Tarayıcısı'nda da görüntülenir. Nesne tarayıcı hakkında daha fazla bilgi için bkz: [Structure of Code görüntüleme](/visualstudio/ide/viewing-the-structure-of-code).  
+ @No__t_0 etiketinin metni, IntelliSense 'deki türle ilgili tek bilgi kaynağıdır ve ayrıca Nesne Tarayıcısı görüntülenir. Nesne Tarayıcısı hakkında daha fazla bilgi için bkz. [kod yapısını görüntüleme](/visualstudio/ide/viewing-the-structure-of-code).  
   
- Derleme [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) işlem belgeleri açıklamaları için bir dosya için.  
+ Belge açıklamalarını bir dosyaya işlemek için [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) ile derleyin.  
   
 ## <a name="example"></a>Örnek  
- Bu örnekte `<summary>` açıklamak için etiket `ResetCounter` yöntemi ve `Counter` özelliği.  
+ Bu örnek, `ResetCounter` yöntemini ve `Counter` özelliğini anlatmak için `<summary>` etiketini kullanır.  
   
  [!code-vb[VbVbcnXmlDocComments#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#1)]  
   

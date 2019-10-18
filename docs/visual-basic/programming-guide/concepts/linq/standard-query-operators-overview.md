@@ -1,110 +1,114 @@
 ---
-title: Standart sorgu işleçlerine genel bakış (Visual Basic)
+title: Standart sorgu Işleçlerine genel bakış (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 302bd39e-2ec1-495b-94bf-37d370d6f05f
-ms.openlocfilehash: 9bfdf2163be52d9016a800d65006bbc4fbf560a3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 22ae1f89379deff0436177d792382c434348b2d4
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61908147"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72524016"
 ---
-# <a name="standard-query-operators-overview-visual-basic"></a>Standart sorgu işleçlerine genel bakış (Visual Basic)
-*Standart sorgu işleçleri* LINQ desen form yöntemlerdir. Bu yöntemlerin çoğu bir dizi türü uygulayan bir nesne olduğu dizileri üzerinde çalışması <xref:System.Collections.Generic.IEnumerable%601> arabirimi veya <xref:System.Linq.IQueryable%601> arabirimi. Standart sorgu işleçleri, filtreleme, projeksiyon, toplama, sıralama ve daha fazlası dahil olmak üzere sorgu işlevleri sağlayın.  
-  
- LINQ standart sorgu işleçlerinin, türündeki nesneler üzerinde çalışan bir iki kümesi <xref:System.Collections.Generic.IEnumerable%601> ve türündeki nesneler üzerinde çalışan diğer <xref:System.Linq.IQueryable%601>. Her bir kümesini oluşturan yöntemleri statik üyeleridir <xref:System.Linq.Enumerable> ve <xref:System.Linq.Queryable> sınıfları, sırasıyla. Olarak tanımlanan *genişletme yöntemleri* türündeki bunlar üzerinde çalışır. Başka bir deyişle, bunlar statik yöntem sözdizimi veya örnek yöntem sözdizimi kullanılarak çağrılabilir.  
-  
- Ayrıca, birçok standart sorgu işleci yöntemleri türlerine göre dışındaki çalışan <xref:System.Collections.Generic.IEnumerable%601> veya <xref:System.Linq.IQueryable%601>. <xref:System.Linq.Enumerable> Türünü tanımlayan iki yöntem her ikisi de türündeki nesneler üzerinde çalışan <xref:System.Collections.IEnumerable>. Bu yöntemler <xref:System.Linq.Enumerable.Cast%60%601%28System.Collections.IEnumerable%29> ve <xref:System.Linq.Enumerable.OfType%60%601%28System.Collections.IEnumerable%29>, let LINQ desen Sorgulanacak forceseek veya genel olmayan, bir koleksiyon etkinleştirin. Bunlar nesneleri türü kesin belirlenmiş koleksiyonu oluşturmanız gerekir. <xref:System.Linq.Queryable> Sınıfı tanımlayan iki benzer yöntem <xref:System.Linq.Queryable.Cast%60%601%28System.Linq.IQueryable%29> ve <xref:System.Linq.Queryable.OfType%60%601%28System.Linq.IQueryable%29>, türündeki nesneler üzerinde çalışan <xref:System.Linq.Queryable>.  
-  
- Standart sorgu işleçleri, bunlar bir tekil değer veya değerlerini bir dizi döndürür bağlı olarak, yürütme, zamanlama içinde farklılık gösterir. Tekil değer döndüren bu yöntemler (örneğin, <xref:System.Linq.Enumerable.Average%2A> ve <xref:System.Linq.Enumerable.Sum%2A>) hemen yürütün. Bir dizi döndüren yöntemler, sorgu yürütme ertele ve bir numaralandırma nesnesi döndürür.  
-  
- Bellek içi koleksiyonlarda genişleten bu yöntemler diğer bir deyişle, çalışan yöntemleri söz konusu olduğunda <xref:System.Collections.Generic.IEnumerable%601>, yönteme geçirilen bağımsız değişkenler döndürülen numaralandırılabilir nesne yakalar. Bu nesne numaralandırılana sorgu işleci mantığını işe ve sorgu sonuçları döndürülür.  
-  
- Buna karşılık, yöntemleri, genişleten <xref:System.Linq.IQueryable%601> herhangi bir davranış sorgulanırken kullanılmaz, ancak gerçekleştirilmesi için sorguyu temsil eden ifade ağacında oluşturun. Sorgu işleme kaynak tarafından işlendiğini <xref:System.Linq.IQueryable%601> nesne.  
-  
- Sorgu yöntemlere yapılan çağrılar, sorguları rasgele karmaşık olmasını sağlayan bir sorguda birbirine zincirlenebilir.  
-  
- Aşağıdaki kod örneği, bir dizi hakkında bilgi edinmek için standart sorgu işleçleri'nın nasıl kullanılabileceğini gösterir.  
-  
-```vb  
-Dim sentence = "the quick brown fox jumps over the lazy dog"  
-' Split the string into individual words to create a collection.  
-Dim words = sentence.Split(" "c)  
-  
-Dim query = From word In words   
-            Group word.ToUpper() By word.Length Into gr = Group   
-            Order By Length _  
-            Select Length, GroupedWords = gr  
-  
-Dim output As New System.Text.StringBuilder  
-For Each obj In query  
-    output.AppendLine(String.Format("Words of length {0}:", obj.Length))  
-    For Each word As String In obj.GroupedWords  
-        output.AppendLine(word)  
-    Next  
-Next  
-  
-'Display the output  
-MsgBox(output.ToString())  
-  
-' This code example produces the following output:  
-'  
-' Words of length 3:  
-' THE  
-' FOX  
-' THE  
-' DOG  
-' Words of length 4:  
-' OVER  
-' LAZY  
-' Words of length 5:  
-' QUICK  
-' BROWN  
-' JUMPS   
-```  
-  
-## <a name="query-expression-syntax"></a>Sorgu ifadesi söz dizimi  
- Bazı daha sık kullanılan standart sorgu işleçlerinin bir parçası olarak çağrılacak tanıyan C# ve Visual Basic dili anahtar sözcüğü sözdizimini adanmış bir *sorgu* *ifade*. Anahtar sözcükleri ve bunların karşılık gelen sözdizimleri adanmış standart sorgu işleçleri hakkında daha fazla bilgi için bkz. [standart sorgu işleçleri (Visual Basic) için sorgu ifade sözdizimi](../../../../visual-basic/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md).  
-  
-## <a name="extending-the-standard-query-operators"></a>Standart sorgu işleçlerini genişletme  
- Hedef etki alanına veya teknoloji için uygun olan oluşturma etki alanına özgü yöntemlerle standart sorgu işleçleri kümesini genişletebilirsiniz. Uzak değerlendirme, sorgu çevirisi ve en iyi duruma getirme gibi ek hizmetler sağlayan kendi uygulamaları ile standart sorgu işleçleri de değiştirebilirsiniz. Bkz: <xref:System.Linq.Enumerable.AsEnumerable%2A> örneği.  
-  
-## <a name="related-sections"></a>İlgili Bölümler  
- Aşağıdaki bağlantılar işlevselliğine bağlı olarak çeşitli standart sorgu işleçleri hakkında ek bilgiler sağlayan konulara yönlendirir.  
-  
- [Verileri Sıralama](../../../../visual-basic/programming-guide/concepts/linq/sorting-data.md)  
-  
- [Ayarlama işlemleri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/set-operations.md)  
-  
- [Filtre verileri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/filtering-data.md)  
-  
- [Niceleyici işlemleri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/quantifier-operations.md)  
-  
- [Projeksiyon işlemleri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projection-operations.md)  
-  
- [Bölümleme veri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/partitioning-data.md)  
-  
- [Birleştirme işlemleri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/join-operations.md)  
-  
- [Gruplandırma veri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/grouping-data.md)  
-  
- [Oluşturma işlemleri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/generation-operations.md)  
-  
- [Eşitlik işlemleri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/equality-operations.md)  
-  
- [Öğe işlemleri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/element-operations.md)  
-  
- [Dönüştürme veri türleri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/converting-data-types.md)  
-  
- [Birleştirme işlemleri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/concatenation-operations.md)  
-  
- [Toplama işlemleri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/aggregation-operations.md)  
-  
+# <a name="standard-query-operators-overview-visual-basic"></a>Standart sorgu Işleçlerine genel bakış (Visual Basic)
+
+*Standart sorgu IŞLEÇLERI* LINQ deseninin bulunduğu yöntemlerdir. Bu yöntemlerin çoğu diziler üzerinde çalışır, burada bir sıra, türü <xref:System.Collections.Generic.IEnumerable%601> arabirimini veya <xref:System.Linq.IQueryable%601> arabirimini uygulayan bir nesnedir. Standart sorgu işleçleri filtreleme, yansıtma, toplama, sıralama ve daha fazlasını içeren sorgu özellikleri sağlar.
+
+@No__t_0 türünde nesneler üzerinde çalışan diğeri, <xref:System.Linq.IQueryable%601> türündeki nesneler üzerinde çalışan iki LINQ standart sorgu işleci kümesi vardır. Her kümeyi oluşturan Yöntemler sırasıyla <xref:System.Linq.Enumerable> ve <xref:System.Linq.Queryable> sınıflarının statik üyeleridir. Bunlar üzerinde çalıştıkları türün *Uzantı yöntemleri* olarak tanımlanmıştır. Bu, statik yöntem sözdizimi veya örnek yöntemi sözdizimi kullanılarak çağrılabilecek anlamına gelir.
+
+Ayrıca, bazı standart sorgu işleci yöntemleri <xref:System.Collections.Generic.IEnumerable%601> veya <xref:System.Linq.IQueryable%601> temel alan türler üzerinde çalışır. @No__t_0 türü, her ikisi de <xref:System.Collections.IEnumerable> türündeki nesneler üzerinde çalışan iki yöntemi tanımlar. Bu yöntemler, <xref:System.Linq.Enumerable.Cast%60%601%28System.Collections.IEnumerable%29> ve <xref:System.Linq.Enumerable.OfType%60%601%28System.Collections.IEnumerable%29>, parametreli olmayan veya genel olmayan bir koleksiyonun LINQ düzeninde sorgulanmasını etkinleştirmenizi sağlar. Bu, nesne türü kesin belirlenmiş bir koleksiyon oluşturarak bunu yapabilirler. @No__t_0 sınıfı, <xref:System.Linq.Queryable> türünde nesneler üzerinde çalışan <xref:System.Linq.Queryable.Cast%60%601%28System.Linq.IQueryable%29> ve <xref:System.Linq.Queryable.OfType%60%601%28System.Linq.IQueryable%29> benzer iki yöntemi tanımlar.
+
+Standart sorgu işleçleri, tek bir değer veya bir dizi değer döndürmediğine bağlı olarak yürütmesinin zamanlamalarına göre farklılık gösterir. Tek bir değer döndüren Yöntemler (örneğin, <xref:System.Linq.Enumerable.Average%2A> ve <xref:System.Linq.Enumerable.Sum%2A>) hemen yürütülür. Bir dizi döndüren yöntemler sorgu yürütmesini erteler ve Numaralandırılabilir bir nesne döndürüyor.
+
+Bellek içi koleksiyonlar üzerinde çalışan yöntemler söz konusu olduğunda, diğer bir deyişle, <xref:System.Collections.Generic.IEnumerable%601> genişleten Yöntemler, döndürülen sıralanabilir nesne yöntemine geçirilen bağımsız değişkenleri yakalar. Bu nesne numaralandırıldıktan sonra, sorgu işlecinin mantığı işe alınır ve sorgu sonuçları döndürülür.
+
+Buna karşılık, <xref:System.Linq.IQueryable%601> genişleyen Yöntemler herhangi bir sorgulama davranışı uygulamaz, ancak gerçekleştirilecek sorguyu temsil eden bir ifade ağacı oluşturur. Sorgu işleme, kaynak <xref:System.Linq.IQueryable%601> nesnesi tarafından işlenir.
+
+Sorgu yöntemlerine yapılan çağrılar tek bir sorgu içinde birbirine zincirlenebilir ve bu da sorguların rastgele karmaşık olmasını sağlar.
+
+Aşağıdaki kod örneği, bir dizi hakkında bilgi edinmek için standart sorgu işleçlerinin nasıl kullanılabileceğini gösterir.
+
+```vb
+Dim sentence = "the quick brown fox jumps over the lazy dog"
+' Split the string into individual words to create a collection.
+Dim words = sentence.Split(" "c)
+
+Dim query = From word In words
+            Group word.ToUpper() By word.Length Into gr = Group
+            Order By Length _
+            Select Length, GroupedWords = gr
+
+Dim output As New System.Text.StringBuilder
+For Each obj In query
+    output.AppendLine(String.Format("Words of length {0}:", obj.Length))
+    For Each word As String In obj.GroupedWords
+        output.AppendLine(word)
+    Next
+Next
+
+'Display the output
+MsgBox(output.ToString())
+
+' This code example produces the following output:
+'
+' Words of length 3:
+' THE
+' FOX
+' THE
+' DOG
+' Words of length 4:
+' OVER
+' LAZY
+' Words of length 5:
+' QUICK
+' BROWN
+' JUMPS
+```
+
+## <a name="query-expression-syntax"></a>Sorgu Ifadesi söz dizimi
+
+Daha sık kullanılan standart sorgu işleçlerinden bazılarının, bir C# *sorgu* *ifadesinin*parçası olarak çağrılmasına olanak tanıyan adanmış ve Visual Basic Language anahtar sözcüğü sözdizimi vardır. Adanmış anahtar sözcüklere ve bunlara karşılık gelen sözdizimleri içeren standart sorgu işleçleri hakkında daha fazla bilgi için bkz. [Standart sorgu işleçleri Için sorgu Ifadesi sözdizimi (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md).
+
+## <a name="extending-the-standard-query-operators"></a>Standart sorgu Işleçlerini genişletme
+
+Hedef etki alanınız veya teknolojiniz için uygun olan alana özgü Yöntemler oluşturarak standart sorgu işleçleri kümesini daha da getirebilirsiniz. Standart sorgu işleçlerini, uzaktan değerlendirme, sorgu çevirisi ve iyileştirme gibi ek hizmetler sağlayan kendi uygulamalarınız ile de değiştirebilirsiniz. Bir örnek için bkz. <xref:System.Linq.Enumerable.AsEnumerable%2A>.
+
+## <a name="related-sections"></a>İlgili Bölümler
+
+Aşağıdaki bağlantılar, işlevleri temel alan çeşitli standart sorgu işleçleri hakkında ek bilgiler sağlayan konulara götürür.
+
+- [Verileri Sıralama](../../../../visual-basic/programming-guide/concepts/linq/sorting-data.md)
+
+- [Işlemleri ayarlama (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/set-operations.md)
+
+- [Verileri filtreleme (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/filtering-data.md)
+
+- [Nicelik belirteci Işlemleri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/quantifier-operations.md)
+
+- [Projeksiyon Işlemleri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projection-operations.md)
+
+- [Verileri bölümlendirme (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/partitioning-data.md)
+
+- [JOIN Işlemleri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/join-operations.md)
+
+- [Verileri gruplandırma (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/grouping-data.md)
+
+- [Oluşturma Işlemleri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/generation-operations.md)
+
+- [Eşitlik Işlemleri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/equality-operations.md)
+
+- [Öğe Işlemleri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/element-operations.md)
+
+- [Veri türlerini dönüştürme (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/converting-data-types.md)
+
+- [Birleştirme Işlemleri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/concatenation-operations.md)
+
+- [Toplama Işlemleri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/aggregation-operations.md)
+
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Linq.Enumerable>
 - <xref:System.Linq.Queryable>
-- [Lınq'ye giriş (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-linq.md)
-- [Standart sorgu işleçleri (Visual Basic) için sorgu ifade sözdizimi](../../../../visual-basic/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)
-- [Standart sorgu işleçlerinin yöntemine göre sınıflandırılması yürütme (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/classification-of-standard-query-operators-by-manner-of-execution.md)
+- [LINQ 'e giriş (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-linq.md)
+- [Standart sorgu Işleçleri için sorgu Ifadesi sözdizimi (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)
+- [Standart sorgu Işleçleri yürütme yöntemine göre sınıflandırma (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/classification-of-standard-query-operators-by-manner-of-execution.md)
 - [Genişletme Yöntemleri](../../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)

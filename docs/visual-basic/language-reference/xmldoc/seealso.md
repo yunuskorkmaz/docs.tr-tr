@@ -5,15 +5,15 @@ helpviewer_keywords:
 - <seealso> XML tag
 - seealso XML tag
 ms.assetid: 36050c95-1af2-4284-b9b6-1a70691ed978
-ms.openlocfilehash: 0df999ef502bf61bdfb65cb472947b93efded36e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0231ff748949874f4b477cac15d891d313b25f4f
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61940783"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72524652"
 ---
-# <a name="seealso-visual-basic"></a>\<SeeAlso > (Visual Basic)
-Ayrıca bkz. bölümünde görünen bağlantıyı belirtir.  
+# <a name="seealso-visual-basic"></a>\<seealso > (Visual Basic)
+Ayrıca bkz. bölümünde görüntülenen bir bağlantı belirtir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -23,15 +23,15 @@ Ayrıca bkz. bölümünde görünen bağlantıyı belirtir.
   
 ## <a name="parameters"></a>Parametreler  
  `member`  
- Bir üye veya geçerli derleme ortamdan çağrılacak kullanılabilir alan başvuru. Derleyici belirli kod öğesi var. başarılı olup olmadığını denetler ve `member` çıktı XML öğesi adı. `member` çift tırnak içinde yer almalıdır ("").  
+ Geçerli derleme ortamından çağrılabilen bir üyeye veya alana başvuru. Derleyici verilen kod öğesinin var olduğunu denetler ve çıkış XML dosyasında öğe adına `member` geçirir. `member` çift tırnak işaretleri ("") içinde yer almalıdır.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Kullanım `<seealso>` ayrıca bölümü görünmesini istediğiniz metni belirtmek için etiket. Kullanım [ \<bakın >](../../../visual-basic/language-reference/xmldoc/see.md) bağlantı metninde belirtmek için.  
+ Ayrıca bkz. bölümünde görünmesini istediğiniz metni belirtmek için `<seealso>` etiketini kullanın. Metnin içinden bir bağlantı belirtmek için [\<see >](../../../visual-basic/language-reference/xmldoc/see.md) kullanın.  
   
- Derleme [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) işlem belgeleri açıklamaları için bir dosya için.  
+ Belge açıklamalarını bir dosyaya işlemek için [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) ile derleyin.  
   
 ## <a name="example"></a>Örnek  
- Bu örnekte `<seealso>` içindeki `DoesRecordExist` başvurmak için bölüm açıklamalar `UpdateRecord` yöntemi.  
+ Bu örnek `UpdateRecord` yöntemine başvurmak için `DoesRecordExist` açıklamaları bölümündeki `<seealso>` etiketini kullanır.  
   
  [!code-vb[VbVbcnXmlDocComments#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#6)]  
   

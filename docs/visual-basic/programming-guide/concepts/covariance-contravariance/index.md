@@ -1,101 +1,102 @@
 ---
-title: Kovaryans ve kontravaryans (Visual Basic)
+title: Kovaryans ve değişken varyans (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 59224c46-9931-466b-8c6e-3648c3e609c6
-ms.openlocfilehash: 241b8f5864b6e9b3e1caddde25d032a24e4d0bb7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8315a272aca891820f7349d854a16375abdae900
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62022019"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72524260"
 ---
-# <a name="covariance-and-contravariance-visual-basic"></a>Kovaryans ve kontravaryans (Visual Basic)
-Kovaryans ve kontravaryans, Visual Basic'te, örtük bir başvuru dönüştürmesi dizi türleri, temsilci türleri ve genel tür bağımsız değişkenleri için etkinleştirin. Kovaryans atama uyumluluğu korur ve kontravaryans tersine çevirir.  
-  
- Aşağıdaki kod, atama uyumluluğu, Kovaryans ve kontravaryans arasındaki farkı gösterir.  
-  
-```vb  
-' Assignment compatibility.   
-Dim str As String = "test"  
-' An object of a more derived type is assigned to an object of a less derived type.   
-Dim obj As Object = str  
-  
-' Covariance.   
-Dim strings As IEnumerable(Of String) = New List(Of String)()  
-' An object that is instantiated with a more derived type argument   
-' is assigned to an object instantiated with a less derived type argument.   
-' Assignment compatibility is preserved.   
-Dim objects As IEnumerable(Of Object) = strings  
-  
-' Contravariance.             
-' Assume that there is the following method in the class:   
-' Shared Sub SetObject(ByVal o As Object)  
-' End Sub  
-Dim actObject As Action(Of Object) = AddressOf SetObject  
-  
-' An object that is instantiated with a less derived type argument   
-' is assigned to an object instantiated with a more derived type argument.   
-' Assignment compatibility is reversed.   
-Dim actString As Action(Of String) = actObject  
-```  
-  
- Kovaryans diziler için daha az türetilmiş bir tür dizisini daha türetilmiş bir türde dizi örtük olarak dönüştürülmesine olanak tanır. Ancak bu işlem tür bakımından güvenli, aşağıdaki kod örneğinde gösterildiği gibi değil.  
-  
-```vb  
-Dim array() As Object = New String(10) {}  
-' The following statement produces a run-time exception.  
-' array(0) = 10  
-```  
-  
- Kovaryans ve kontravaryans destek yöntemi gruplar için temsilci türleriyle yöntem imzalarının eşleştirilmesi için sağlar. Bu sizin için temsilciler sadece imzaları, aynı zamanda türleri (kovaryans) ya da daha fazla türetilmiş döndüren yöntemler eşleşen yöntemleri atamak için temsilci türü tarafından belirtilenden daha az türetilmiş türler (kontravaryans) sahip parametreleri kabul eder. Daha fazla bilgi için [Temsilcilerde varyans (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md) ve [kullanarak Temsilcilerde varyans (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md).  
-  
- Kovaryans ve kontravaryans yöntemi grupları için destek, aşağıdaki kod örneği gösterilmektedir.  
-  
-```vb  
-Shared Function GetObject() As Object  
-    Return Nothing  
-End Function  
-  
-Shared Sub SetObject(ByVal obj As Object)  
-End Sub  
-  
-Shared Function GetString() As String  
-    Return ""  
-End Function  
-  
-Shared Sub SetString(ByVal str As String)  
-  
-End Sub  
-  
-Shared Sub Test()  
-    ' Covariance. A delegate specifies a return type as object,  
-    ' but you can assign a method that returns a string.  
-    Dim del As Func(Of Object) = AddressOf GetString  
-  
-    ' Contravariance. A delegate specifies a parameter type as string,  
-    ' but you can assign a method that takes an object.  
-    Dim del2 As Action(Of String) = AddressOf SetObject  
-End Sub  
-```  
-  
- .NET Framework 4 veya sonraki sürümlerde, Visual Basic içinde genel arabirimlerde ve temsilcilerde Kovaryans ve kontravaryans destekler ve genel tür parametrelerinin örtük dönüştürmelerine izin verir. Daha fazla bilgi için [Variance in Generic Interfaces (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md) ve [Temsilcilerde varyans (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md).  
-  
- Aşağıdaki kod örneği, genel arabirimler için örtük bir başvuru dönüştürmesi gösterir.  
-  
-```vb  
-Dim strings As IEnumerable(Of String) = New List(Of String)  
-Dim objects As IEnumerable(Of Object) = strings  
-```  
-  
- Bir genel arabirim veya temsilci çağrılır *değişken* genel parametrelerinin birlikte değişken olarak bildirilmemişse veya değişken karşıtı. Visual Basic, kendi değişken arabirimlerde ve temsilcilerde oluşturmanızı sağlar. Daha fazla bilgi için [oluşturma değişken genel arabirimler (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/creating-variant-generic-interfaces.md) ve [Temsilcilerde varyans (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md).  
-  
-## <a name="related-topics"></a>İlgili Konular  
-  
-|Başlık|Açıklama|  
-|-----------|-----------------|  
-|[Variance in Generic Interfaces (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)|Kovaryans ve kontravaryans in generic Interfaces açıklar ve .NET Framework'teki değişken genel arabirimler bir listesini sağlar.|  
-|[Değişken genel arabirimler oluşturma (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/creating-variant-generic-interfaces.md)|Özel değişken arabirimler oluşturma işlemi gösterilmektedir.|  
-|[(Visual Basic) genel koleksiyonlar için arabirimlerde varyans kullanma](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-in-interfaces-for-generic-collections.md)|Nasıl Kovaryans ve kontravaryans desteklemek gösterir <xref:System.Collections.Generic.IEnumerable%601> ve <xref:System.IComparable%601> arabirimleri, kodu yeniden kullanmanıza yardımcı olabilir.|  
-|[Temsilcilerde varyans (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)|Kovaryans ve kontravaryans, genel ve genel olmayan temsilcileri açıklar ve .NET Framework'teki genel değişken temsilciler bir listesini sağlar.|  
-|[Temsilcilerde varyans (Visual Basic) kullanma](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md)|Temsilci türleriyle yöntem imzalarının eşleştirmek için genel olmayan temsilcilerde Kovaryans ve kontravaryans destek kullanma işlemi gösterilmektedir.|  
-|[İşlev ve eylem genel temsilcileri (Visual Basic) için varyans kullanma](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)|Nasıl Kovaryans ve kontravaryans desteklemek gösterir `Func` ve `Action` Temsilciler, kodu yeniden kullanmanıza yardımcı olabilir.|
+# <a name="covariance-and-contravariance-visual-basic"></a>Kovaryans ve değişken varyans (Visual Basic)
+
+Visual Basic, Kovaryans ve değişken Varyans, dizi türleri, temsilci türleri ve genel tür bağımsız değişkenleri için örtük başvuru dönüştürmeyi etkinleştirir. Kovaryans, atama uyumluluğunu korur ve değişken varyans onu tersine çevirir.
+
+Aşağıdaki kod, atama uyumluluğu, Kovaryans ve değişken varyans arasındaki farkı gösterir.
+
+```vb
+' Assignment compatibility.
+Dim str As String = "test"
+' An object of a more derived type is assigned to an object of a less derived type.
+Dim obj As Object = str
+
+' Covariance.
+Dim strings As IEnumerable(Of String) = New List(Of String)()
+' An object that is instantiated with a more derived type argument
+' is assigned to an object instantiated with a less derived type argument.
+' Assignment compatibility is preserved.
+Dim objects As IEnumerable(Of Object) = strings
+
+' Contravariance.
+' Assume that there is the following method in the class:
+' Shared Sub SetObject(ByVal o As Object)
+' End Sub
+Dim actObject As Action(Of Object) = AddressOf SetObject
+
+' An object that is instantiated with a less derived type argument
+' is assigned to an object instantiated with a more derived type argument.
+' Assignment compatibility is reversed.
+Dim actString As Action(Of String) = actObject
+```
+
+Diziler için Kovaryans, daha önce türetilmiş bir türün dizisinin daha az türetilmiş bir tür dizisine örtük olarak dönüştürülmesini sağlar. Ancak, aşağıdaki kod örneğinde gösterildiği gibi bu işlem tür kullanımı güvenli değildir.
+
+```vb
+Dim array() As Object = New String(10) {}
+' The following statement produces a run-time exception.
+' array(0) = 10
+```
+
+Yöntem grupları için Kovaryans ve değişken varyans desteği, temsilci türleriyle eşleşen Yöntem imzalarına izin verir. Bu, yalnızca eşleşen imzalara sahip yöntemlerin değil, aynı zamanda daha fazla türetilmiş tür (Kovaryans) döndüren veya temsilci türü tarafından belirtilenden daha az türetilmiş türler (değişken varyans) döndüren parametreleri kabul eden yöntemlere atama yapmanızı sağlar. Daha fazla bilgi için bkz. [Temsilcilerde varyans (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md) ve [temsilcilerde varyans (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md).
+
+Aşağıdaki kod örneği, yöntem grupları için Kovaryans ve değişken varyans desteğini gösterir.
+
+```vb
+Shared Function GetObject() As Object
+    Return Nothing
+End Function
+
+Shared Sub SetObject(ByVal obj As Object)
+End Sub
+
+Shared Function GetString() As String
+    Return ""
+End Function
+
+Shared Sub SetString(ByVal str As String)
+
+End Sub
+
+Shared Sub Test()
+    ' Covariance. A delegate specifies a return type as object,
+    ' but you can assign a method that returns a string.
+    Dim del As Func(Of Object) = AddressOf GetString
+
+    ' Contravariance. A delegate specifies a parameter type as string,
+    ' but you can assign a method that takes an object.
+    Dim del2 As Action(Of String) = AddressOf SetObject
+End Sub
+```
+
+.NET Framework 4 veya sonraki sürümlerde, Visual Basic Genel arabirimlerde ve temsilcilerde kovaryans ve değişken varyansı destekler ve genel tür parametrelerinin örtük dönüştürmelerine izin verir. Daha fazla bilgi için bkz. [Genel Arabirimlerde Varyans (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md) ve [temsilcilerde varyans (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md).
+
+Aşağıdaki kod örneğinde genel arabirimler için örtük başvuru dönüştürmesi gösterilmektedir.
+
+```vb
+Dim strings As IEnumerable(Of String) = New List(Of String)
+Dim objects As IEnumerable(Of Object) = strings
+```
+
+Genel bir arabirim veya temsilci, genel parametreleri birlikte değişken veya değişken karşıtı olarak bildirilirse *değişken* olarak adlandırılır. Visual Basic kendi değişken arabirimlerinizi ve temsilcilerinizi oluşturmanızı sağlar. Daha fazla bilgi için bkz. [Delesel genel arabirimler (Visual Basic) oluşturma](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/creating-variant-generic-interfaces.md) ve [temsilcilerde varyans (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md).
+
+## <a name="related-topics"></a>İlgili Konular
+
+|Başlık|Açıklama|
+|-----------|-----------------|
+|[Genel Arabirimlerde Varyans (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)|Genel arabirimlerde Kovaryans ve değişken varyansı açıklar ve .NET Framework değişken genel arabirimlerin bir listesini sağlar.|
+|[Değişken genel arabirimler oluşturma (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/creating-variant-generic-interfaces.md)|Özel değişken arabirimlerinin nasıl oluşturulacağını gösterir.|
+|[Genel Koleksiyonlar için Arabirimlerde Varyans kullanma (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-in-interfaces-for-generic-collections.md)|@No__t_0 ve <xref:System.IComparable%601> arabirimlerindeki Kovaryans ve değişken varyans desteğinin kodu yeniden kullanma konusunda nasıl yardımcı olduğunu gösterir.|
+|[Temsilcilerde varyans (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)|Genel ve genel olmayan temsilcilerde kovaryans ve değişken varyansı açıklar ve .NET Framework değişken genel temsilcilerin bir listesini sağlar.|
+|[Temsilcilerde varyans kullanma (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md)|Temsilci türleriyle Yöntem imzalarını eşleştirmek için genel olmayan temsilcilerde kovaryans ve değişken varyans desteğinin nasıl kullanılacağını gösterir.|
+|[Func ve eylem genel temsilcileri için varyans kullanma (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)|@No__t_0 ve `Action` temsilcilerinin Kovaryans ve değişken varyans desteğinin kodu yeniden kullanma konusunda nasıl yardımcı olduğunu gösterir.|

@@ -1,14 +1,14 @@
 ---
-ms.openlocfilehash: 4d67da34cf692133df95480a7f0215943337a34e
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 3d0a90a57c2b1c2759b8420e74c284668d54e9cb
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72003013"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72526781"
 ---
 ### <a name="duplicated-apis-removed-from-windows-forms"></a>Yinelenen API 'Ler Windows Forms kaldırıldı
 
-.NET Core 3,0 Preview 4 ' te başlayan <xref:System.Windows.Forms?displayProperty=fullName> ad alanında yanlışlıkla çoğaltılan bir dizi API 'Ler .NET Core 3,0 RC1 sürümünde kaldırılmıştır. 
+.NET Core 3,0 Preview 4 ' te başlayan <xref:System.Windows.Forms?displayProperty=fullName> ad alanında yanlışlıkla çoğaltılan bir dizi API 'Ler .NET Core 3,0 RC1 sürümünde kaldırılmıştır.
 
 #### <a name="change-description"></a>Açıklamayı Değiştir
 
@@ -38,7 +38,7 @@ Windows Forms
 
 - API analizi aracılığıyla algılanamaz.
 
-<!-- 
+<!--
 
 ### Affected APIs
 

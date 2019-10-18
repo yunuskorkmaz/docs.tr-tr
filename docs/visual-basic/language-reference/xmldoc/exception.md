@@ -5,15 +5,15 @@ helpviewer_keywords:
 - <exception> XML tag
 - exception XML tag
 ms.assetid: c0517549-171e-4dae-ab88-a9c1700b6eee
-ms.openlocfilehash: 4e2f441863d6a8677593a257cdb2cc841634d47c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 16ffb4f6b57dabb3650376c913a7d7608a00646d
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61940926"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72523926"
 ---
-# <a name="exception-visual-basic"></a>\<Özel Durum > (Visual Basic)
-Hangi özel durumlar atılabilir belirtir.  
+# <a name="exception-visual-basic"></a>\<exception > (Visual Basic)
+Hangi özel durumların atılamayacağını belirtir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -23,18 +23,18 @@ Hangi özel durumlar atılabilir belirtir.
   
 ## <a name="parameters"></a>Parametreler  
  `member`  
- Geçerli derleme ortamdan kullanılabilir bir özel durum başvuru. Belirtilen özel var ve çevirir derleyici denetler `member` kurallı öğesi adı ' % s'çıkış XML dosyası. `member` çift tırnak içinde yer almalıdır ("").  
+ Geçerli derleme ortamında kullanılabilir bir özel duruma başvuru. Derleyici verilen özel durumun var olduğunu denetler ve çıkış XML dosyasında kurallı öğe adına `member` çevirir. `member` çift tırnak işaretleri ("") içinde yer almalıdır.  
   
  `description`  
  Bir açıklama.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Kullanım `<exception>` hangi özel durumlar atılabilir belirtmek için etiket. Bu etiket, bir yöntem tanımına uygulanır.  
+ Hangi özel durumların atılamayacağını belirtmek için `<exception>` etiketini kullanın. Bu etiket bir yöntem tanımına uygulanır.  
   
- Derleme [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) işlem belgeleri açıklamaları için bir dosya için.  
+ Belge açıklamalarını bir dosyaya işlemek için [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) ile derleyin.  
   
 ## <a name="example"></a>Örnek  
- Bu örnekte `<exception>` açıklayan bir özel durum etiketi, `IntDivide` işlevi oluşturur.  
+ Bu örnek, `IntDivide` işlevinin oluşturabildiğini belirten bir özel durumu tanımlayan `<exception>` etiketini kullanır.  
   
  [!code-vb[VbVbcnXmlDocComments#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#3)]  
   

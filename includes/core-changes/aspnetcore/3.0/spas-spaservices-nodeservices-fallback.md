@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 1017801346e65940e4dc075ef72f7a00d7e6bcd9
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
-ms.translationtype: HT
+ms.openlocfilehash: e5355387d5cb6d9e6de89f5b85e64bc100b32ae1
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72394216"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522662"
 ---
 ### <a name="spas-spaservices-and-nodeservices-no-longer-fall-back-to-console-logger"></a>Maça 'Lar: Spaservice ve NodeServices artık konsol günlükçüsü 'e geri düşmüyor
 
@@ -16,7 +16,7 @@ ms.locfileid: "72394216"
 
 #### <a name="old-behavior"></a>Eski davranış
 
-`Microsoft.AspNetCore.SpaServices` ve `Microsoft.AspNetCore.NodeServices` günlük yapılandırılmadığı zaman otomatik olarak bir konsol günlükçüsü oluşturmak için kullanılır. 
+`Microsoft.AspNetCore.SpaServices` ve `Microsoft.AspNetCore.NodeServices` günlük yapılandırılmadığı zaman otomatik olarak bir konsol günlükçüsü oluşturmak için kullanılır.
 
 #### <a name="new-behavior"></a>Yeni davranış
 
@@ -38,7 +38,7 @@ ASP.NET Core
 
 Yok.
 
-<!-- 
+<!--
 
 #### Affected APIs
 

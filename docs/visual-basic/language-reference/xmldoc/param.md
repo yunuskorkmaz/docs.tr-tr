@@ -5,12 +5,12 @@ helpviewer_keywords:
 - param XML tag
 - <param> XML tag
 ms.assetid: 4e32e86f-f6f3-4301-b7fc-2f321fb54368
-ms.openlocfilehash: 91489ee1664da22cc8897cdf8d12b61d962d1c83
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c62eab6b1fb1ba1cc7de83c12d7205cf0bbe46fa
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664185"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72524724"
 ---
 # <a name="param-visual-basic"></a>\<param > (Visual Basic)
 Bir parametre adı ve açıklama tanımlar.  
@@ -23,24 +23,24 @@ Bir parametre adı ve açıklama tanımlar.
   
 ## <a name="parameters"></a>Parametreler  
  `name`  
- Bir yöntem parametresi adı. Adı çift tırnak içine alın ("").  
+ Bir yöntem parametresinin adı. Adı çift tırnak işareti ("") içine alın.  
   
  `description`  
- Parametre için bir açıklama.  
+ Parametresi için bir açıklama.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `<param>` Etiket kullanılmalıdır yöntemi bildirimi için açıklama parametrelerden biri yöntemi tanımlamak için.  
+ Metodun parametrelerinden birini açıklayacak bir yöntem bildirimine ilişkin açıklamada `<param>` etiketinin kullanılması gerekir.  
   
- Metni `<param>` etiketi aşağıdaki konumlarda gösterilir:  
+ @No__t_0 etiketinin metni aşağıdaki konumlarda görünür:  
   
-- IntelliSense, parametre bilgisi. Daha fazla bilgi için [IntelliSense kullanarak](/visualstudio/ide/using-intellisense).  
+- IntelliSense parametre bilgileri. Daha fazla bilgi için bkz. [IntelliSense kullanma](/visualstudio/ide/using-intellisense).  
   
-- Nesne Tarayıcısı. Daha fazla bilgi için [Structure of Code görüntüleme](/visualstudio/ide/viewing-the-structure-of-code).  
+- Nesne Tarayıcısı. Daha fazla bilgi için bkz. [kod yapısını görüntüleme](/visualstudio/ide/viewing-the-structure-of-code).  
   
- Derleme [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) işlem belgeleri açıklamaları için bir dosya için.  
+ Belge açıklamalarını bir dosyaya işlemek için [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) ile derleyin.  
   
 ## <a name="example"></a>Örnek  
- Bu örnekte `<param>` açıklamak için etiket `id` parametresi.  
+ Bu örnek, `id` parametresini anlatmak için `<param>` etiketini kullanır.  
   
  [!code-vb[VbVbcnXmlDocComments#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#6)]  
   

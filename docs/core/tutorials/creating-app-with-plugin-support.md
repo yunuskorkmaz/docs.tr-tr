@@ -3,21 +3,21 @@ title: Eklentilerle .NET Core uygulaması oluşturma
 description: Eklentileri destekleyen bir .NET Core uygulaması oluşturmayı öğrenin.
 author: jkoritzinsky
 ms.author: jekoritz
-ms.date: 01/28/2019
-ms.openlocfilehash: 54f616a7b2b20b7682963e9f5d503878bb512c90
-ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
-ms.translationtype: MT
+ms.date: 10/16/2019
+ms.openlocfilehash: 92c219817ad27fbc906ee3778d3f5372d61151ac
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72250169"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72523199"
 ---
 # <a name="create-a-net-core-application-with-plugins"></a>Eklentilerle .NET Core uygulaması oluşturma
 
-Bu öğreticide nasıl yapılacağı gösterilmektedir:
+Bu öğreticide, eklentileri yüklemek için özel bir <xref:System.Runtime.Loader.AssemblyLoadContext> nasıl oluşturacağınız gösterilmektedir. @No__t_0, eklentinin bağımlılıklarını çözümlemek için kullanılır. Öğretici, eklentinin bağımlılıklarını barındırma uygulamasından doğru şekilde yalıtır. Şunları yapmayı öğreneceksiniz:
 
 - Eklentileri desteklemek için bir proje yapısı yapın.
-- Her bir eklentiyi yüklemek için özel bir @no__t oluşturun-0.
-- Eklentilerin bağımlılıklara sahip olmasını sağlamak için `System.Runtime.Loader.AssemblyDependencyResolver` türünü kullanın.
+- Her eklentiyi yüklemek için özel bir <xref:System.Runtime.Loader.AssemblyLoadContext> oluşturun.
+- Eklentilerin bağımlılıklara sahip olmasını sağlamak için <xref:System.Runtime.Loader.AssemblyDependencyResolver?displayProperty=fullName> türünü kullanın.
 - Yalnızca derleme yapıtları kopyalanarak kolayca dağıtılabilecek olan eklentileri yazar.
 
 ## <a name="prerequisites"></a>Prerequisites
@@ -103,15 +103,15 @@ namespace AppWithPlugin
 
 Eklentilerle uygulama oluşturmanın bir sonraki adımı, eklentilerin uygulanması gereken arabirimi tanımlar. Uygulamanız ve eklentiler arasında iletişim kurmak için kullanmayı planladığınız türleri içeren bir sınıf kitaplığı almanızı öneririz. Bu bölüm, tam uygulamanızı teslim etmek zorunda kalmadan eklenti arabiriminizi bir paket olarak yayımlamanıza olanak sağlar.
 
-Projenin kök klasöründe `dotnet new classlib -o PluginBase` ' ı çalıştırın. Ayrıca, projeyi çözüm dosyasına eklemek için `dotnet sln add PluginBase/PluginBase.csproj` ' ı çalıştırın. @No__t-0 dosyasını silin ve aşağıdaki arabirim tanımıyla `ICommand.cs` adlı `PluginBase` klasöründe yeni bir dosya oluşturun:
+Projenin kök klasöründe `dotnet new classlib -o PluginBase` ' ı çalıştırın. Ayrıca, projeyi çözüm dosyasına eklemek için `dotnet sln add PluginBase/PluginBase.csproj` ' ı çalıştırın. @No__t_0 dosyasını silin ve aşağıdaki arabirim tanımıyla `ICommand.cs` adlı `PluginBase` klasörde yeni bir dosya oluşturun:
 
 [!code-csharp[the-plugin-interface](~/samples/core/extensions/AppWithPlugin/PluginBase/ICommand.cs)]
 
 Bu `ICommand` arabirimi, tüm eklentilerin uygulayamayacağı arabirimdir.
 
-@No__t-0 arabirimi tanımlandığına göre, uygulama projesi biraz daha fazla doldurulabilir. Kök klasördeki `dotnet add AppWithPlugin\AppWithPlugin.csproj reference PluginBase\PluginBase.csproj` komutuyla `AppWithPlugin` projesinden `PluginBase` projesine bir başvuru ekleyin.
+@No__t_0 arabirimi tanımlandığına göre, uygulama projesi biraz daha fazla doldurulabilir. Kök klasördeki `dotnet add AppWithPlugin\AppWithPlugin.csproj reference PluginBase\PluginBase.csproj` komutuyla `AppWithPlugin` projesinden `PluginBase` projesine bir başvuru ekleyin.
 
-@No__t-0 yorumunu, belirtilen dosya yollarından eklentileri yüklemesini etkinleştirmek için aşağıdaki kod parçacığı ile değiştirin:
+@No__t_0 açıklamasını, belirtilen dosya yollarından eklentileri yüklemesini etkinleştirmek için aşağıdaki kod parçacığı ile değiştirin:
 
 ```csharp
 string[] pluginPaths = new string[]
@@ -135,7 +135,7 @@ foreach (ICommand command in commands)
 }
 ```
 
-@No__t-0 yorumunu aşağıdaki kod parçacığıyla değiştirin:
+@No__t_0 açıklamasını aşağıdaki kod parçacığıyla değiştirin:
 
 ```csharp
 ICommand command = commands.FirstOrDefault(c => c.Name == commandName);
@@ -185,13 +185,13 @@ static IEnumerable<ICommand> CreateCommands(Assembly assembly)
 
 ## <a name="load-plugins"></a>Eklentileri yükle
 
-Artık uygulama, yüklenen eklenti derlemelerinden komutları doğru bir şekilde yükleyebilir ve örneklendirilecek, ancak hala eklenti derlemelerini yükleyemeyebilir. *Appwithplugin* klasöründe aşağıdaki içeriğe sahip *PluginLoadContext.cs* adlı bir dosya oluşturun:
+Artık uygulama yüklenen eklenti derlemelerinden komutları doğru bir şekilde yükleyebilir ve örneklendirilecek, ancak hala eklenti derlemelerini yükleyemeyebilir. *Appwithplugin* klasöründe aşağıdaki içeriğe sahip *PluginLoadContext.cs* adlı bir dosya oluşturun:
 
 [!code-csharp[loading-plugins](~/samples/core/extensions/AppWithPlugin/AppWithPlugin/PluginLoadContext.cs)]
 
-@No__t-0 türü <xref:System.Runtime.Loader.AssemblyLoadContext> ' den türetilir. @No__t-0 türü, geliştiricilerin, derleme sürümlerinin çakışmadığından emin olmak için yüklü derlemeleri farklı gruplara yalıtmalarına olanak tanıyan özel bir türdür. Ayrıca, özel bir `AssemblyLoadContext` ' dan derlemeleri yüklemek için farklı yollar seçebilir ve varsayılan davranışı geçersiz kılabilir. @No__t-0, derleme adlarını yollara çözümlemek için .NET Core 3,0 ' de tanıtılan `AssemblyDependencyResolver` türünün bir örneğini kullanır. @No__t-0 nesnesi, .NET sınıf kitaplığı yoluyla oluşturulur. @No__t-1 oluşturucusuna geçirilen sınıf kitaplığı için *. Deps. JSON* dosyasını temel alan derlemeleri ve yerel kitaplıkları göreli yollarına çözümler. Özel `AssemblyLoadContext`, eklentilerin kendi bağımlılıklarına sahip olmasını sağlar ve `AssemblyDependencyResolver` bağımlılıkları doğru şekilde yüklemeyi kolaylaştırır.
+@No__t_0 türü <xref:System.Runtime.Loader.AssemblyLoadContext> türetilir. @No__t_0 türü, geliştiricilerin, derleme sürümlerinin çakışmadığından emin olmak için yüklü derlemeleri farklı gruplara yalıtmalarına olanak tanıyan özel bir türdür. Ayrıca, özel bir `AssemblyLoadContext` ' dan derlemeleri yüklemek için farklı yollar seçebilir ve varsayılan davranışı geçersiz kılabilir. @No__t_0, derleme adlarını yollara çözümlemek için .NET Core 3,0 ' de tanıtılan `AssemblyDependencyResolver` türünün bir örneğini kullanır. @No__t_0 nesnesi, .NET sınıf kitaplığı yoluyla oluşturulur. Yol `AssemblyDependencyResolver` oluşturucusuna geçilen sınıf kitaplığı için *. Deps. JSON* dosyasını temel alan derlemeleri ve yerel kitaplıkları göreli yollarına çözümler. Özel `AssemblyLoadContext`, eklentilerin kendi bağımlılıklarına sahip olmasını sağlar ve `AssemblyDependencyResolver` bağımlılıkları doğru şekilde yüklemeyi kolaylaştırır.
 
-@No__t-0 projesinde `PluginLoadContext` türü olduğuna göre, `Program.LoadPlugin` yöntemini aşağıdaki gövdele güncelleştirin:
+Artık `AppWithPlugin` projesi `PluginLoadContext` türüne sahip olduğuna göre `Program.LoadPlugin` yöntemini aşağıdaki gövdele güncelleştirin:
 
 ```csharp
 static Assembly LoadPlugin(string relativePath)
@@ -213,11 +213,11 @@ static Assembly LoadPlugin(string relativePath)
 
 Her eklenti için farklı bir `PluginLoadContext` örneği kullanarak, Eklentiler, sorun olmadan farklı veya hatta çakışan bağımlılıklara sahip olabilir.
 
-## <a name="create-a-simple-plugin-with-no-dependencies"></a>Bağımlılıkları olmayan basit bir eklenti oluşturma
+## <a name="simple-plugin-with-no-dependencies"></a>Bağımlılıkları olmayan basit eklenti
 
 Kök klasöre geri döndüğünüzde şunları yapın:
 
-1. @No__t-0 adlı yeni bir sınıf kitaplığı projesi oluşturmak için aşağıdaki komutu çalıştırın:
+1. @No__t_0 adlı yeni bir sınıf kitaplığı projesi oluşturmak için aşağıdaki komutu çalıştırın:
     
     ```dotnetcli
     dotnet new classlib -o HelloPlugin
@@ -246,7 +246,7 @@ Kök klasöre geri döndüğünüzde şunları yapın:
 
 ```
 
-@No__t-0 etiketleri arasında, aşağıdaki öğeleri ekleyin:
+@No__t_0 etiketleri arasında, aşağıdaki öğeleri ekleyin:
 
 ```xml
 <ItemGroup>
@@ -256,23 +256,23 @@ Kök klasöre geri döndüğünüzde şunları yapın:
 </ItemGroup>
 ```
 
-@No__t-0 öğesi çok önemlidir. Bu, MSBuild 'in *Pluginbase. dll dosyasını* helloplugin çıkış dizinine kopyalamamasını söyler. Eğer *Pluginbase. dll* derlemesi çıkış dizininde mevcutsa, `PluginLoadContext` derlemeyi bulur ve *helloplugin. dll* derlemesini yüklediğinde yükler. Bu noktada `HelloPlugin.HelloCommand` türü, varsayılan yükleme bağlamına yüklenen `ICommand` arabirimine değil, `HelloPlugin` projesinin çıkış dizinindeki *Pluginbase. dll* ' den `ICommand` arabirimini uygular. Çalışma zamanı bu iki türü farklı derlemelerden farklı türler olarak gördüğü için `AppWithPlugin.Program.CreateCommands` yöntemi komutları bulamaz. Sonuç olarak, eklenti arabirimlerini içeren derlemeye başvuru için `<Private>false</Private>` meta verisi gereklidir.
+@No__t_0 öğesi önemlidir. Bu, MSBuild 'in *Pluginbase. dll dosyasını* helloplugin çıkış dizinine kopyalamamasını söyler. Eğer *Pluginbase. dll* derlemesi çıkış dizininde mevcutsa, `PluginLoadContext` derlemeyi bulur ve *helloplugin. dll* derlemesini yüklediğinde yükler. Bu noktada `HelloPlugin.HelloCommand` türü, varsayılan yükleme bağlamına yüklenen `ICommand` arabirimine değil, `HelloPlugin` projesinin çıkış dizinindeki *Pluginbase. dll* ' den `ICommand` arabirimini uygular. Çalışma zamanı bu iki türü farklı derlemelerden farklı türler olarak gördüğü için `AppWithPlugin.Program.CreateCommands` yöntemi komutları bulamaz. Sonuç olarak, eklenti arabirimlerini içeren derlemeye başvuru için `<Private>false</Private>` meta verisi gereklidir.
 
-@No__t-0 projesi tamamlandığına göre, @no__t 2 eklentisinin nerede bulunabileceğinizi bildirmek için `AppWithPlugin` projesini güncelleştirdik. @No__t-0 açıklamasıyla sonra, `pluginPaths` dizisinin bir öğesi olarak `@"HelloPlugin\bin\Debug\netcoreapp3.0\HelloPlugin.dll"` ekleyin.
+@No__t_0 proje tamamlandığına göre, `HelloPlugin` eklentisinin nerede bulunabileceğinizi bildirmek için `AppWithPlugin` projesini güncelleştirmemiz gerekir. @No__t_0 açıklamasıyla sonra, `@"HelloPlugin\bin\Debug\netcoreapp3.0\HelloPlugin.dll"` `pluginPaths` dizisinin bir öğesi olarak ekleyin.
 
-## <a name="create-a-plugin-with-library-dependencies"></a>Kitaplık bağımlılıklarıyla eklenti oluşturma
+## <a name="plugin-with-library-dependencies"></a>Kitaplık bağımlılıkları olan eklenti
 
-Neredeyse tüm eklentiler basit bir "Merhaba Dünya" öğesinden daha karmaşıktır ve birçok eklenti diğer kitaplıklara bağımlılıkları vardır. Örnekteki `JsonPlugin` ve `OldJson` eklenti projeleri, `Newtonsoft.Json` ' de NuGet paketi bağımlılıkları olan eklentilerin iki örneğini gösterir. Proje dosyaları, proje başvuruları için özel bilgilere sahip değildir ve (`pluginPaths` dizisine eklenti yolları eklendikten sonra) Eklentiler, AppWithPlugin uygulamasının yürütmesinde çalıştırılsa bile kusursuz bir şekilde çalışır. Ancak, bu projeler başvurulan derlemeleri çıkış dizinine kopyalamadıkları için, eklentilerin çalışması için kullanıcının makinesinde derlemelerin mevcut olması gerekir. Bu sorunu geçici olarak çözmek için iki yol vardır. İlk seçenek, sınıf kitaplığını yayımlamak için `dotnet publish` komutunu kullanmaktır. Alternatif olarak, eklenti için `dotnet build` çıktısını kullanmak istiyorsanız, eklentinin proje dosyasındaki `<PropertyGroup>` etiketleri arasına `<CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>` özelliğini ekleyebilirsiniz. Örnek için `XcopyablePlugin` eklenti projesine bakın.
+Neredeyse tüm eklentiler basit bir "Merhaba Dünya" öğesinden daha karmaşıktır ve birçok eklenti diğer kitaplıklara bağımlılıkları vardır. Örnekteki `JsonPlugin` ve `OldJson` eklenti projeleri, `Newtonsoft.Json` ' de NuGet paketi bağımlılıkları olan eklentilerin iki örneğini gösterir. Proje dosyaları, proje başvuruları için özel bilgilere sahip değildir ve (`pluginPaths` dizisine eklenti yolları eklendikten sonra), Eklentiler, AppWithPlugin uygulamasının yürütülmesi halinde çalıştırılsa bile kusursuz bir şekilde çalışır. Ancak, bu projeler başvurulan derlemeleri çıkış dizinine kopyalamadıkları için, eklentilerin çalışması için kullanıcının makinesinde derlemelerin mevcut olması gerekir. Bu sorunu geçici olarak çözmek için iki yol vardır. İlk seçenek, sınıf kitaplığını yayımlamak için `dotnet publish` komutunu kullanmaktır. Alternatif olarak, eklenti için `dotnet build` çıktısını kullanmak istiyorsanız, eklentinin proje dosyasındaki `<PropertyGroup>` etiketleri arasına `<CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>` özelliğini ekleyebilirsiniz. Örnek için `XcopyablePlugin` eklenti projesine bakın.
 
-## <a name="other-plugin-examples-in-the-sample"></a>Örnekteki diğer eklenti örnekleri
+## <a name="other-examples-in-the-sample"></a>Örnekteki diğer örnekler
 
 Bu öğreticinin tüm kaynak kodu [DotNet/Samples deposunda](https://github.com/dotnet/samples/tree/master/core/extensions/AppWithPlugin)bulunabilir. Tamamlanan örnek, `AssemblyDependencyResolver` davranışından oluşan diğer örnekleri içerir. Örneğin, `AssemblyDependencyResolver` nesnesi yerel kitaplıkları ve NuGet paketlerine dahil edilen yerelleştirilmiş uydu derlemelerini de çözümleyebilir. Örnek deposundaki `UVPlugin` ve `FrenchPlugin` bu senaryoları gösterir.
 
-## <a name="how-to-reference-a-plugin-interface-assembly-defined-in-a-nuget-package"></a>NuGet paketinde tanımlanan eklenti arabirimi derlemesine başvurma
+## <a name="reference-a-plugin-from-a-nuget-package"></a>NuGet paketinden bir eklentiye başvur
 
-@No__t-0 adlı NuGet paketinde tanımlanmış bir eklenti arabirimine sahip bir uygulama olduğunu varsayalım. Eklenti projenizde pakete doğru şekilde nasıl başvurdunuz? Proje başvuruları için proje dosyasındaki `ProjectReference` öğesindeki `<Private>false</Private>` meta verisinin kullanılması dll 'nin çıkışa kopyalanmasını engelledi.
+@No__t_0 adlı NuGet paketinde tanımlanmış bir eklenti arabirimine sahip bir uygulama olduğunu varsayalım. Eklenti projenizde pakete doğru şekilde nasıl başvurdunuz? Proje başvuruları için proje dosyasındaki `ProjectReference` öğesindeki `<Private>false</Private>` meta verisinin kullanılması dll 'nin çıkışa kopyalanmasını engelledi.
 
-@No__t-0 paketine doğru bir şekilde başvurmak için, proje dosyasındaki `<PackageReference>` öğesini şu şekilde değiştirmek istersiniz:
+@No__t_0 paketine doğru bir şekilde başvurmak için, proje dosyasındaki `<PackageReference>` öğesini şu şekilde değiştirmek istersiniz:
 
 ```xml
 <PackageReference Include="A.PluginBase" Version="1.0.0">

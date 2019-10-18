@@ -4,12 +4,12 @@ description: Windows Uyumluluk Paketi hakkında bilgi edinin ve mevcut .NET Fram
 author: terrajobst
 ms.date: 12/07/2018
 ms.custom: seodec18
-ms.openlocfilehash: 71e390881d4e9c7836622abeed49c0ea2e5f7526
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: adf2aaab27b5a8afcc89fceac67184d3b1974037
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202556"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72521286"
 ---
 # <a name="use-the-windows-compatibility-pack-to-port-code-to-net-core"></a>.NET Core 'a bağlantı noktası için Windows Uyumluluk paketini kullanın
 
@@ -25,23 +25,23 @@ Bu paket, API kümesini önemli ölçüde artıran ve neredeyse hiçbir değişi
 
 Aşağıdaki teknoloji alanlarından yalnızca Windows 'un yanı sıra platformlar arası API 'Ler dahil olmak üzere 20.000 API 'si sağlar:
 
-* Kod Sayfaları
-* CodeDom
-* Yapılandırma
-* Dizin Hizmetleri
-* İnizde
-* ODBC
-* İzinler
-* Bağlantı Noktaları
-* Windows Access Control listeleri (ACL)
-* Windows Communication Foundation (WCF)
-* Windows şifrelemesi
-* Windows olay günlüğü
-* Windows Yönetim Araçları (WMI)
-* Windows performans sayaçları
-* Windows Kayıt Defteri
-* Windows Çalışma Zamanı önbelleğe alma
-* Windows Hizmetleri
+- Kod Sayfaları
+- CodeDom
+- Yapılandırma
+- Dizin Hizmetleri
+- İnizde
+- ODBC
+- İzinler
+- Bağlantı Noktaları
+- Windows Access Control listeleri (ACL)
+- Windows Communication Foundation (WCF)
+- Windows şifrelemesi
+- Windows olay günlüğü
+- Windows Yönetim Araçları (WMI)
+- Windows performans sayaçları
+- Windows Kayıt Defteri
+- Windows Çalışma Zamanı önbelleğe alma
+- Windows Hizmetleri
 
 Daha fazla bilgi için bkz. [Uyumluluk paketinin belirtimi](https://github.com/dotnet/designs/blob/master/accepted/compat-pack/compat-pack.md).
 

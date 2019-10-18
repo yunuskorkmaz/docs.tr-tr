@@ -4,19 +4,19 @@ description: Linux makinelerde .NET Core uygulamaları geliştirmek, dağıtmak 
 author: leecow
 ms.author: leecow
 ms.date: 10/11/2019
-ms.openlocfilehash: bb9049059de9d8208fc92234b28acdfb3d7f0cb3
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 0e798e86fcf88a1b7a67f50c2301e10ad725fad8
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72318334"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72521493"
 ---
 # <a name="prerequisites-for-net-core-on-linux"></a>Linux üzerinde .NET Core önkoşulları
 
 Bu makalede, Linux üzerinde .NET Core uygulamaları geliştirmek için gereken bağımlılıklar gösterilmektedir. Desteklenen Linux dağıtımları/sürümleri ve aşağıdaki bağımlılıklar, Linux üzerinde .NET Core uygulamaları geliştirmenin iki yolu için geçerlidir:
 
-* [En sevdiğiniz düzenleyicinizle komut satırı](tutorials/using-with-xplat-cli.md)
-* [Visual Studio Code](https://code.visualstudio.com/)
+- [En sevdiğiniz düzenleyicinizle komut satırı](tutorials/using-with-xplat-cli.md)
+- [Visual Studio Code](https://code.visualstudio.com/)
 
 > [!NOTE]
 > .NET Core SDK paketi üretim sunucuları/ortamları için gerekli değildir. Üretim ortamlarına dağıtılan uygulamalar için yalnızca .NET Core çalışma zamanı paketi gereklidir. .NET Core çalışma zamanı, uygulamalar ile birlikte bulunan bir dağıtımın parçası olarak dağıtılır, ancak çerçeveye bağımlı dağıtılan uygulamalar için ayrı olarak dağıtılmalıdır. Çerçeveye bağımlı ve kendi kendine içerilen dağıtım türleri hakkında daha fazla bilgi için bkz. [.NET Core uygulama dağıtımı](./deploying/index.md). Ayrıca, belirli yönergeler için [kendi Içindeki Linux uygulamalarına](https://github.com/dotnet/core/blob/master/Documentation/self-contained-linux-apps.md) bakın.
@@ -34,7 +34,7 @@ Bu makalede, Linux üzerinde .NET Core uygulamaları geliştirmek için gereken 
 .NET Core 3,0, aşağıdaki Linux dağıtımları/sürümlerinde desteklenir):
 
 > [!NOTE]
-> @No__t-0 simgesi en düşük sürümü temsil eder.
+> @No__t_0 sembol en düşük sürümü temsil eder.
 
 | ATAYAMADı                             | Version               | Mimarileri    |
 | ------------------------------ | --------------------- | ---------------- |
@@ -62,7 +62,7 @@ ARM64 üzerinde .NET Core 3,0 yükleme hakkında daha fazla bilgi için bkz. [LI
 .NET Core 2,2, aşağıdaki Linux dağıtımları/sürümlerinde desteklenir:
 
 > [!NOTE]
-> @No__t-0 simgesi en düşük sürümü temsil eder.
+> @No__t_0 sembol en düşük sürümü temsil eder.
 
 | ATAYAMADı                             |  Version                |  Mimarileri   |
 | ------------------------------ | ----------------------- | ---------------- |
@@ -112,21 +112,21 @@ Aşağıdakiler örnek olarak verilmiştir. Tam sürümler ve adlar, tercih etti
 
 Ubuntu dağıtımları aşağıdaki kitaplıkların yüklü olmasını gerektirir:
 
-* liblttng-ust0
-* libcurl3 (14. x ve 16. x için)
-* libcurl4 (18. x için)
-* libssl 1.0.0
-* libkrb5-3
-* zlib1g
-* libicu52 (14. x için)
-* libicu55 (16. x için)
-* libicu57 (17. x için)
-* libicu60 (18. x için)
+- liblttng-ust0
+- libcurl3 (14. x ve 16. x için)
+- libcurl4 (18. x için)
+- libssl 1.0.0
+- libkrb5-3
+- zlib1g
+- libicu52 (14. x için)
+- libicu55 (16. x için)
+- libicu57 (17. x için)
+- libicu60 (18. x için)
 
 .NET Core 2,1 öncesi sürümler için aşağıdaki bağımlılıklar da gereklidir:
 
-* libunwind8
-* libuuid1
+- libunwind8
+- libuuid1
 
 *System. Drawing. Common* derlemesini kullanan .NET Core uygulamaları için aşağıdaki bağımlılığa de ihtiyacınız vardır:
 
@@ -139,19 +139,19 @@ Ubuntu dağıtımları aşağıdaki kitaplıkların yüklü olmasını gerektiri
 
 CentOS dağıtımları için aşağıdaki kitaplıkların yüklü olması gerekir:
 
-* lttng-ust
-* libkıvrık
-* OpenSSL-libs
-* krb5-libs
-* libıu
-* zlib
+- lttng-ust
+- libkıvrık
+- OpenSSL-libs
+- krb5-libs
+- libıu
+- zlib
 
 Fedora kullanıcıları: OpenSSL sürümünüz > = 1,1 Ise, COMPAT-openssl10 yüklemeniz gerekir.
 
 .NET Core 2,1 öncesi sürümler için aşağıdaki bağımlılıklar da gereklidir:
 
-* librüzgar
-* libuuid
+- librüzgar
+- libuuid
 
 Bağımlılıklar hakkında daha fazla bilgi için bkz. [kendi Içindeki Linux uygulamaları](https://github.com/dotnet/core/blob/master/Documentation/self-contained-linux-apps.md).
 
@@ -168,8 +168,8 @@ Bağımlılıklar hakkında daha fazla bilgi için bkz. [kendi Içindeki Linux u
 
 Linux 'ta iki yükleyici paketi seçeneği vardır:
 
-* Bir akış tabanlı Paket Yöneticisi, Ubuntu için apt-get veya CentOS/RHEL için de rivı kullanma.
-* Paketlerin kendisini, DEB veya RPM 'yi kullanma.
+- Bir akış tabanlı Paket Yöneticisi, Ubuntu için apt-get veya CentOS/RHEL için de rivı kullanma.
+- Paketlerin kendisini, DEB veya RPM 'yi kullanma.
 
 ### <a name="scripting-installs-with-the-net-core-installer-script"></a>.NET Core yükleyici betiği ile betik yüklemeleri
 
@@ -187,8 +187,8 @@ Yükleyici Bash betiği, Otomasyon senaryolarında ve yönetici olmayan yükleme
 
 Desteklenen bir Linux dağıtımında/sürümünde .NET Core yüklemesiyle ilgili sorunlar yaşıyorsanız, yüklü dağıtımlarınız/sürümleriniz için aşağıdaki konulara bakın:
 
-* [.NET Core 3,0 bilinen sorunlar](https://github.com/dotnet/core/tree/master/release-notes/3.0)
-* [.NET Core 2,2 bilinen sorunlar](https://github.com/dotnet/core/tree/master/release-notes/2.2)
-* [.NET Core 2,1 bilinen sorunlar](https://github.com/dotnet/core/tree/master/release-notes/2.1)
-* [.NET Core 1,1 bilinen sorunlar](https://github.com/dotnet/core/blob/master/release-notes/1.1)
-* [.NET Core 1,0 bilinen sorunlar](https://github.com/dotnet/core/blob/master/release-notes/1.0)
+- [.NET Core 3,0 bilinen sorunlar](https://github.com/dotnet/core/tree/master/release-notes/3.0)
+- [.NET Core 2,2 bilinen sorunlar](https://github.com/dotnet/core/tree/master/release-notes/2.2)
+- [.NET Core 2,1 bilinen sorunlar](https://github.com/dotnet/core/tree/master/release-notes/2.1)
+- [.NET Core 1,1 bilinen sorunlar](https://github.com/dotnet/core/blob/master/release-notes/1.1)
+- [.NET Core 1,0 bilinen sorunlar](https://github.com/dotnet/core/blob/master/release-notes/1.0)

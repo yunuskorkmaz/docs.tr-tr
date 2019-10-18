@@ -5,156 +5,157 @@ helpviewer_keywords:
 - XML [Visual Basic], transforming
 - LINQ to XML [Visual Basic], transforming XML
 ms.assetid: 815687f4-0bc2-4c0b-adc6-d78744aa356f
-ms.openlocfilehash: 08378775f2c30d8ebfcc4f7ceea6fc3ecb2066e5
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 347ca45c2417c1ffb9a86f3bcb51c75f3382bfad
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72003254"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72524809"
 ---
 # <a name="how-to-transform-xml-by-using-linq-visual-basic"></a>Nasıl yapılır: XML'i LINQ Kullanarak Dönüştürme (Visual Basic)
-[XML değişmez değerleri](../../../../visual-basic/language-reference/xml-literals/index.md) , BIR kaynaktan XML okumayı ve bunu yenı bir XML biçimine dönüştürmeyi kolaylaştırır. Dönüştürülecek içeriği almak veya varolan bir belgedeki içeriği yeni bir XML biçimiyle değiştirmek için LINQ sorgularından yararlanabilirsiniz.  
-  
- Bu konudaki örnek, bir XML kaynak belgesinden içeriği bir tarayıcıda görüntülenmek üzere HTML 'ye dönüştürür.  
-  
-[!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
-  
-### <a name="to-transform-an-xml-document"></a>Bir XML belgesini dönüştürmek için  
-  
-1. Visual Studio 'da, **konsol uygulaması** proje şablonunda yeni bir Visual Basic projesi oluşturun.  
-  
-2. Visual Basic kodunu değiştirmek için projede oluşturulan Module1. vb dosyasını çift tıklatın. Aşağıdaki kodu `Module1` modülünün `Sub Main` ' a ekleyin. Bu kod, kaynak XML belgesini <xref:System.Xml.Linq.XDocument> nesnesi olarak oluşturur.  
-  
-    ```vb  
-    Dim catalog =   
-      <?xml version="1.0"?>  
-        <Catalog>  
-          <Book id="bk101">  
-            <Author>Garghentini, Davide</Author>  
-            <Title>XML Developer's Guide</Title>  
-            <Price>44.95</Price>  
-            <Description>  
-              An in-depth look at creating applications  
-              with <technology>XML</technology>. For   
-              <audience>beginners</audience> or   
-              <audience>advanced</audience> developers.  
-            </Description>  
-          </Book>  
-          <Book id="bk331">  
-            <Author>Spencer, Phil</Author>  
-            <Title>Developing Applications with Visual Basic .NET</Title>  
-            <Price>45.95</Price>  
-            <Description>  
-              Get the expert insights, practical code samples,   
-              and best practices you need   
-              to advance your expertise with <technology>Visual   
-              Basic .NET</technology>.   
-              Learn how to create faster, more reliable applications  
-              based on professional,   
-              pragmatic guidance by today's top <audience>developers</audience>.  
-            </Description>  
-          </Book>  
-        </Catalog>  
-    ```  
-  
-     [Nasıl yapılır: bir dosyadan, dizeden veya AKıŞTAN XML yükleme](../../../../visual-basic/programming-guide/language-features/xml/how-to-load-xml-from-a-file-string-or-stream.md).  
-  
-3. Kaynak XML belgesini oluşturma kodundan sonra, \<Book > öğelerini nesnesinden alıp bir HTML belgesine dönüştürmek için aşağıdaki kodu ekleyin. @No__t-0Book > öğelerinin listesi, dönüştürülmüş HTML içeren <xref:System.Xml.Linq.XElement> nesnelerinin bir koleksiyonunu döndüren bir LINQ sorgusu kullanılarak oluşturulur. Kaynak belgeden yeni XML biçiminde değerleri yerleştirmek için katıştırılmış ifadeleri kullanabilirsiniz.  
-  
-     Elde edilen HTML belgesi, <xref:System.Xml.Linq.XElement.Save%2A> yöntemi kullanılarak bir dosyaya yazılır.  
-  
-    ```vb  
-    Dim htmlOutput =   
-      <html>  
-        <body>  
-          <%= From book In catalog.<Catalog>.<Book>   
-              Select <div>  
-                       <h1><%= book.<Title>.Value %></h1>  
-                       <h3><%= "By " & book.<Author>.Value %></h3>  
-                        <h3><%= "Price = " & book.<Price>.Value %></h3>  
-                        <h2>Description</h2>  
-                        <%= TransformDescription(book.<Description>(0)) %>  
-                        <hr/>  
-                      </div> %>  
-        </body>  
-      </html>  
-  
-    htmlOutput.Save("BookDescription.html")  
-    ```  
-  
-4. @No__t-0 ' dan `Module1` ' den sonra, \<Description > düğümünü belirtilen HTML biçimine dönüştürmek için yeni bir Yöntem (`Sub`) ekleyin. Bu yöntem, önceki adımda kod tarafından çağrılır ve \<Description > öğelerinin biçimini korumak için kullanılır.  
-  
-     Bu yöntem, \<Description > öğesinin alt öğelerini HTML ile değiştirir. @No__t-0 yöntemi alt öğelerin konumunu korumak için kullanılır. @No__t-0Description > öğesinin dönüştürülmüş içeriği bir HTML paragrafına (\<p >) eklenir. @No__t-0 özelliği, \<Description > öğesinin dönüştürülmüş içeriğini almak için kullanılır. Bu, alt öğelerin dönüştürülmüş içeriğe dahil edilmesini sağlar.  
-  
-     @No__t-0 ' a `Module1` ' den sonra aşağıdaki kodu ekleyin.  
-  
-    ```vb  
-    Public Function TransformDescription(ByVal desc As XElement) As XElement  
-  
-      ' Replace <technology> elements with <b>.  
-      Dim content = (From element In desc...<technology>).ToList()  
-  
-      If content.Count > 0 Then  
-        For i = 0 To content.Count - 1  
-          content(i).ReplaceWith(<b><%= content(i).Value %></b>)  
-        Next  
-      End If  
-  
-      ' Replace <audience> elements with <i>.  
-      content = (From element In desc...<audience>).ToList()  
-  
-      If content.Count > 0 Then  
-        For i = 0 To content.Count - 1  
-          content(i).ReplaceWith(<i><%= content(i).Value %></i>)  
-        Next  
-      End If  
-  
-      ' Return the updated contents of the <Description> element.  
-      Return <p><%= desc.Nodes %></p>  
-    End Function  
-    ```  
-  
-5. Değişikliklerinizi kaydedin.  
-  
-6. Kodu çalıştırmak için F5 tuşuna basın. Sonuç olarak kaydedilen belge aşağıdakine benzeyecektir:  
-  
-    ```html  
-    <?xml version="1.0"?>  
-    <html>  
-      <body>  
-        <div>  
-          <h1>XML Developer's Guide</h1>  
-          <h3>By Garghentini, Davide</h3>  
-          <h3>Price = 44.95</h3>  
-          <h2>Description</h2>  
-          <p>  
-            An in-depth look at creating applications  
-            with <b>XML</b>. For   
-            <i>beginners</i> or   
-            <i>advanced</i> developers.  
-          </p>  
-          <hr />  
-        </div>  
-        <div>  
-          <h1>Developing Applications with Visual Basic .NET</h1>  
-          <h3>By Spencer, Phil</h3>  
-          <h3>Price = 45.95</h3>  
-          <h2>Description</h2>  
-          <p>  
-            Get the expert insights, practical code   
-            samples, and best practices you need   
-            to advance your expertise with <b>Visual   
-            Basic .NET</b>. Learn how to create faster,  
-            more reliable applications based on  
-            professional, pragmatic guidance by today's   
-            top <i>developers</i>.  
-          </p>  
-          <hr />  
-        </div>  
-      </body>  
-    </html>  
-    ```  
-  
+
+[XML değişmez değerleri](../../../../visual-basic/language-reference/xml-literals/index.md) , BIR kaynaktan XML okumayı ve bunu yenı bir XML biçimine dönüştürmeyi kolaylaştırır. Dönüştürülecek içeriği almak veya varolan bir belgedeki içeriği yeni bir XML biçimiyle değiştirmek için LINQ sorgularından yararlanabilirsiniz.
+
+Bu konudaki örnek, bir XML kaynak belgesinden içeriği bir tarayıcıda görüntülenmek üzere HTML 'ye dönüştürür.
+
+[!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]
+
+### <a name="to-transform-an-xml-document"></a>Bir XML belgesini dönüştürmek için
+
+1. Visual Studio 'da, **konsol uygulaması** proje şablonunda yeni bir Visual Basic projesi oluşturun.
+
+2. Visual Basic kodunu değiştirmek için projede oluşturulan Module1. vb dosyasını çift tıklatın. Aşağıdaki kodu `Module1` modülünün `Sub Main` ' a ekleyin. Bu kod, kaynak XML belgesini <xref:System.Xml.Linq.XDocument> nesnesi olarak oluşturur.
+
+    ```vb
+    Dim catalog =
+      <?xml version="1.0"?>
+        <Catalog>
+          <Book id="bk101">
+            <Author>Garghentini, Davide</Author>
+            <Title>XML Developer's Guide</Title>
+            <Price>44.95</Price>
+            <Description>
+              An in-depth look at creating applications
+              with <technology>XML</technology>. For
+              <audience>beginners</audience> or
+              <audience>advanced</audience> developers.
+            </Description>
+          </Book>
+          <Book id="bk331">
+            <Author>Spencer, Phil</Author>
+            <Title>Developing Applications with Visual Basic .NET</Title>
+            <Price>45.95</Price>
+            <Description>
+              Get the expert insights, practical code samples,
+              and best practices you need
+              to advance your expertise with <technology>Visual
+              Basic .NET</technology>.
+              Learn how to create faster, more reliable applications
+              based on professional,
+              pragmatic guidance by today's top <audience>developers</audience>.
+            </Description>
+          </Book>
+        </Catalog>
+    ```
+
+     [Nasıl yapılır: bir dosyadan, dizeden veya AKıŞTAN XML yükleme](../../../../visual-basic/programming-guide/language-features/xml/how-to-load-xml-from-a-file-string-or-stream.md).
+
+3. Kaynak XML belgesini oluşturma kodundan sonra, \<Book > öğelerini nesnesinden alıp bir HTML belgesine dönüştürmek için aşağıdaki kodu ekleyin. @No__t_0Book > öğelerinin listesi, dönüştürülmüş HTML içeren <xref:System.Xml.Linq.XElement> nesnelerinin bir koleksiyonunu döndüren bir LINQ sorgusu kullanılarak oluşturulur. Kaynak belgeden yeni XML biçiminde değerleri yerleştirmek için katıştırılmış ifadeleri kullanabilirsiniz.
+
+     Elde edilen HTML belgesi <xref:System.Xml.Linq.XElement.Save%2A> yöntemi kullanılarak bir dosyaya yazılır.
+
+    ```vb
+    Dim htmlOutput =
+      <html>
+        <body>
+          <%= From book In catalog.<Catalog>.<Book>
+              Select <div>
+                       <h1><%= book.<Title>.Value %></h1>
+                       <h3><%= "By " & book.<Author>.Value %></h3>
+                        <h3><%= "Price = " & book.<Price>.Value %></h3>
+                        <h2>Description</h2>
+                        <%= TransformDescription(book.<Description>(0)) %>
+                        <hr/>
+                      </div> %>
+        </body>
+      </html>
+
+    htmlOutput.Save("BookDescription.html")
+    ```
+
+4. @No__t_1 `Sub Main` sonra, bir \<Description > düğümünü belirtilen HTML biçimine dönüştürmek için yeni bir Yöntem (`Sub`) ekleyin. Bu yöntem, önceki adımda kod tarafından çağrılır ve \<Description > öğelerinin biçimini korumak için kullanılır.
+
+     Bu yöntem, \<Description > öğesinin alt öğelerini HTML ile değiştirir. @No__t_0 yöntemi alt öğelerin konumunu korumak için kullanılır. @No__t_0Description > öğesinin dönüştürülmüş içeriği bir HTML paragrafı (\<p >) öğesine eklenir. @No__t_0 özelliği, \<Description > öğesinin dönüştürülmüş içeriğini almak için kullanılır. Bu, alt öğelerin dönüştürülmüş içeriğe dahil edilmesini sağlar.
+
+     @No__t_1 `Sub Main` sonra aşağıdaki kodu ekleyin.
+
+    ```vb
+    Public Function TransformDescription(ByVal desc As XElement) As XElement
+
+      ' Replace <technology> elements with <b>.
+      Dim content = (From element In desc...<technology>).ToList()
+
+      If content.Count > 0 Then
+        For i = 0 To content.Count - 1
+          content(i).ReplaceWith(<b><%= content(i).Value %></b>)
+        Next
+      End If
+
+      ' Replace <audience> elements with <i>.
+      content = (From element In desc...<audience>).ToList()
+
+      If content.Count > 0 Then
+        For i = 0 To content.Count - 1
+          content(i).ReplaceWith(<i><%= content(i).Value %></i>)
+        Next
+      End If
+
+      ' Return the updated contents of the <Description> element.
+      Return <p><%= desc.Nodes %></p>
+    End Function
+    ```
+
+5. Değişikliklerinizi kaydedin.
+
+6. Kodu çalıştırmak için F5 tuşuna basın. Sonuç olarak kaydedilen belge aşağıdakine benzeyecektir:
+
+    ```html
+    <?xml version="1.0"?>
+    <html>
+      <body>
+        <div>
+          <h1>XML Developer's Guide</h1>
+          <h3>By Garghentini, Davide</h3>
+          <h3>Price = 44.95</h3>
+          <h2>Description</h2>
+          <p>
+            An in-depth look at creating applications
+            with <b>XML</b>. For
+            <i>beginners</i> or
+            <i>advanced</i> developers.
+          </p>
+          <hr />
+        </div>
+        <div>
+          <h1>Developing Applications with Visual Basic .NET</h1>
+          <h3>By Spencer, Phil</h3>
+          <h3>Price = 45.95</h3>
+          <h2>Description</h2>
+          <p>
+            Get the expert insights, practical code
+            samples, and best practices you need
+            to advance your expertise with <b>Visual
+            Basic .NET</b>. Learn how to create faster,
+            more reliable applications based on
+            professional, pragmatic guidance by today's
+            top <i>developers</i>.
+          </p>
+          <hr />
+        </div>
+      </body>
+    </html>
+    ```
+
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [XML Değişmez Değerleri](../../../../visual-basic/language-reference/xml-literals/index.md)

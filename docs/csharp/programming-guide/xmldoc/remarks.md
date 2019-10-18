@@ -9,14 +9,14 @@ helpviewer_keywords:
 - remarks C# XML tag
 - <remarks> C# XML tag
 ms.assetid: f8641391-31f3-4735-af7a-c502a5b6a251
-ms.openlocfilehash: 822ca8feafe48402f8217c10ef37fcdb1576c27a
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 508201fed57fce93b64691de55dce45780adc13c
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69587755"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72523349"
 ---
-# <a name="remarks-c-programming-guide"></a>\<açıklamalar > (C# Programlama Kılavuzu)
+# <a name="remarks-c-programming-guide"></a>\<remarks > (C# Programlama Kılavuzu)
 ## <a name="syntax"></a>Sözdizimi  
   
 ```xml  
@@ -28,9 +28,9 @@ ms.locfileid: "69587755"
  Üyenin açıklaması.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Açıklamalar > etiketi, [ \<Özet >](./summary.md)ile belirtilen bilgileri kullanarak bir tür hakkında bilgi eklemek için kullanılır. \< Bu bilgiler Nesne Tarayıcısı penceresinde görüntülenir.  
+ @No__t_0remarks > etiketi, [\<summary >](./summary.md)ile belirtilen bilgileri kullanarak bir tür hakkında bilgi eklemek için kullanılır. Bu bilgiler Nesne Tarayıcısı penceresinde görüntülenir.  
   
- Belge açıklamalarını bir dosyaya işlemek için [/doc](../../language-reference/compiler-options/doc-compiler-option.md) ile derleyin.  
+ Belge açıklamalarını bir dosyaya işlemek için [-doc](../../language-reference/compiler-options/doc-compiler-option.md) ile derleyin.  
   
 ## <a name="example"></a>Örnek  
  [!code-csharp[csProgGuideDocComments#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#9)]  

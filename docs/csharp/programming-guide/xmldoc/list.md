@@ -13,14 +13,14 @@ helpviewer_keywords:
 - <item> C# XML tag
 - <list> C# XML tag
 ms.assetid: c9620b1b-c2e6-43f1-ab88-8ab47308ffec
-ms.openlocfilehash: aadb24c43d49acb3e71490efd156b14d9fc5f133
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 0df6653171aa0366f555c39e4644f13b2b7384f9
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69587978"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72523435"
 ---
-# <a name="list-c-programming-guide"></a>\<Liste > (C# Programlama Kılavuzu)
+# <a name="list-c-programming-guide"></a>\<list > (C# Programlama Kılavuzu)
 ## <a name="syntax"></a>Sözdizimi  
   
 ```xml  
@@ -38,19 +38,19 @@ ms.locfileid: "69587978"
   
 ## <a name="parameters"></a>Parametreler  
  `term`  
- ' De `description`tanımlanacak bir terim.  
+ @No__t_0 tanımlanacak bir terim.  
   
  `description`  
- Bir madde işareti veya numaralandırılmış listedeki bir öğe ya da bir `term`tanımı.  
+ Bir madde işareti veya numaralandırılmış listedeki bir öğe ya da bir `term` tanımı.  
   
 ## <a name="remarks"></a>Açıklamalar  
- \<Listheader > bloğu, bir tablo ya da tanım listesinin başlık satırını tanımlamak için kullanılır. Bir tablo tanımlarken, yalnızca başlıktaki terim için bir giriş sağlamanız gerekir.  
+ @No__t_0listheader > bloğu, bir tablo ya da tanım listesinin başlık satırını tanımlamak için kullanılır. Bir tablo tanımlarken, yalnızca başlıktaki terim için bir giriş sağlamanız gerekir.  
   
- Listedeki her öğe bir \<öğe > bloğuyla belirtilir. Bir tanım listesi oluştururken, hem hem `term` `description`de belirtmeniz gerekecektir. Ancak, bir tablo, madde işaretli liste veya numaralandırılmış liste için yalnızca bir giriş `description`sağlamanız gerekir.  
+ Listedeki her öğe bir \<item > bloğu ile belirtilir. Tanım listesi oluştururken hem `term` hem de `description` belirtmeniz gerekir. Ancak, bir tablo, madde işaretli liste veya numaralandırılmış liste için yalnızca `description` için bir giriş sağlamanız gerekir.  
   
- Bir liste veya tablo, gereken sayıda \<öğe > bloğuyla bulunabilir.  
+ Bir liste veya tablo, gereken sayıda > blobundan \<item sahip olabilir.  
   
- Belge açıklamalarını bir dosyaya işlemek için [/doc](../../language-reference/compiler-options/doc-compiler-option.md) ile derleyin.  
+ Belge açıklamalarını bir dosyaya işlemek için [-doc](../../language-reference/compiler-options/doc-compiler-option.md) ile derleyin.  
   
 ## <a name="example"></a>Örnek  
  [!code-csharp[csProgGuideDocComments#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#6)]  

@@ -5,15 +5,15 @@ helpviewer_keywords:
 - paramref XML tag
 - <paramref> XML tag
 ms.assetid: 8979d53b-beb1-41b7-b41e-6bbea1c17a03
-ms.openlocfilehash: 3e2bf7990343a325bbecc56f6d3754a77f1e08e2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 85171bd8deeb5f54c4560bb8b2339107bb8d8c68
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61940848"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72524714"
 ---
 # <a name="paramref-visual-basic"></a>\<paramref > (Visual Basic)
-Bir sözcük, parametre olarak biçimlendirir.  
+Bir sözcüğü parametre olarak biçimlendirir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -23,15 +23,15 @@ Bir sözcük, parametre olarak biçimlendirir.
   
 ## <a name="parameters"></a>Parametreler  
  `name`  
- Başvurmak için parametrenin adı. Adı çift tırnak içine alın ("").  
+ Başvurabileceğiniz parametrenin adı. Adı çift tırnak işareti ("") içine alın.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `<paramref>` Etiketi bir sözcüğün bir parametre olduğunu belirtmek için bir yol sağlar. XML dosyası, bu parametreyi belirgin bir şekilde biçimlendirmek için işlenebilir.  
+ @No__t_0 etiketi, bir sözcüğün bir parametre olduğunu göstermek için bir yol sağlar. XML dosyası bu parametreyi farklı bir şekilde biçimlendirmek için işlenebilir.  
   
- Derleme [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) işlem belgeleri açıklamaları için bir dosya için.  
+ Belge açıklamalarını bir dosyaya işlemek için [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) ile derleyin.  
   
 ## <a name="example"></a>Örnek  
- Bu örnekte `<paramref>` başvurmak için etiket `id` parametresi.  
+ Bu örnek, `id` parametresine başvurmak için `<paramref>` etiketini kullanır.  
   
  [!code-vb[VbVbcnXmlDocComments#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#6)]  
   

@@ -4,12 +4,12 @@ description: .NET Framework projelerine yönelik WCF Svcutil aracına benzer şe
 author: mlacouture
 ms.date: 02/22/2019
 ms.custom: seodec18
-ms.openlocfilehash: c6eb17ca6cd4ce920cd358a87d2a4a6759dc3439
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 49b0579c284af74d270cac04d302ce231dcb9357
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117253"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522836"
 ---
 # <a name="wcf-dotnet-svcutil-tool-for-net-core"></a>.NET Core için WCF DotNet-Svcutil aracı
 
@@ -22,25 +22,25 @@ Windows Communication Foundation (WCF) **DotNet-Svcutil** Aracı, bir ağ konumu
 > [!IMPORTANT]
 > Yalnızca güvenilir bir kaynaktan hizmetlere başvurmanız gerekir. Güvenilmeyen bir kaynaktan başvuruları eklemek güvenliği tehlikeye atabilir.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Prerequisites
 
 <!-- markdownlint-disable MD025 -->
 
 # <a name="dotnet-svcutil-2xtabdotnetsvcutil2x"></a>[DotNet-Svcutil 2. x](#tab/dotnetsvcutil2x)
 
-* [.NET Core 2,1 SDK](https://dotnet.microsoft.com/download) veya sonraki sürümleri
-* En sevdiğiniz kod düzenleyiciniz
+- [.NET Core 2,1 SDK](https://dotnet.microsoft.com/download) veya sonraki sürümleri
+- En sevdiğiniz kod düzenleyiciniz
 
 # <a name="dotnet-svcutil-1xtabdotnetsvcutil1x"></a>[DotNet-Svcutil 1. x](#tab/dotnetsvcutil1x)
 
-* [.NET Core 1.0.4 SDK](https://dotnet.microsoft.com/download) veya sonraki sürümleri
-* En sevdiğiniz kod düzenleyiciniz
+- [.NET Core 1.0.4 SDK](https://dotnet.microsoft.com/download) veya sonraki sürümleri
+- En sevdiğiniz kod düzenleyiciniz
 
 ---
 
 ## <a name="getting-started"></a>Başlarken
 
-Aşağıdaki örnek, bir .NET Core Web projesine Web hizmeti başvurusu eklemek ve hizmeti çağırmak için gereken adımlarda size yol gösterir. _Merhaba Svcutil_ adlı bir .NET Core Web uygulaması oluşturacak ve aşağıdaki sözleşmeyi uygulayan bir Web hizmetine başvuru ekleyeceğiz:
+Aşağıdaki örnek, bir .NET Core Web projesine Web hizmeti başvurusu eklemek ve hizmeti çağırmak için gereken adımlarda size yol gösterir. *Merhaba Svcutil* adlı bir .NET Core Web uygulaması oluşturacak ve aşağıdaki sözleşmeyi uygulayan bir Web hizmetine başvuru ekleyeceğiz:
 
 ```csharp
 [ServiceContract]
@@ -51,7 +51,7 @@ public interface ISayHello
 }
 ```
 
-Bu örnek için, Web hizmeti 'nin şu adreste barındırıldığını varsayalım:`http://contoso.com/SayHello.svc`
+Bu örnekte, Web hizmetinin şu adreste barındırıldığını varsayalım: `http://contoso.com/SayHello.svc`
 
 Bir Windows, macOS veya Linux komut penceresinde aşağıdaki adımları uygulayın:
 
@@ -62,13 +62,13 @@ Bir Windows, macOS veya Linux komut penceresinde aşağıdaki adımları uygulay
     cd HelloSvcutil
     ```
 
-2. [`dotnet new`](../tools/dotnet-new.md) Komutunu aşağıdaki gibi C# kullanarak bu dizinde yeni bir Web projesi oluşturun:
+2. Aşağıdaki şekilde C# [`dotnet new`](../tools/dotnet-new.md) komutunu kullanarak bu dizinde yeni bir Web projesi oluşturun:
 
     ```dotnetcli
     dotnet new web
     ```
 
-3. NuGet paketini bir CLI aracı olarak yükler: [ `dotnet-svcutil` ](https://nuget.org/packages/dotnet-svcutil) <!-- markdownlint-disable MD023 -->
+3. [@No__t_1 NuGet PAKETINI](https://nuget.org/packages/dotnet-svcutil) CLI aracı olarak yükler:  <!-- markdownlint-disable MD023 -->
     # <a name="dotnet-svcutil-2xtabdotnetsvcutil2x"></a>[DotNet-Svcutil 2. x](#tab/dotnetsvcutil2x)
 
     ```dotnetcli
@@ -76,7 +76,7 @@ Bir Windows, macOS veya Linux komut penceresinde aşağıdaki adımları uygulay
     ```
 
     # <a name="dotnet-svcutil-1xtabdotnetsvcutil1x"></a>[DotNet-Svcutil 1. x](#tab/dotnetsvcutil1x)
-    Düzenleyicinizde [ `dotnet-svcutil` ](https://nuget.org/packages/dotnet-svcutil) `Project` proje dosyasını açın, öğesini düzenleyin ve aşağıdaki kodu kullanarak NuGet paketini bir CLI araç başvurusu olarak ekleyin: `HelloSvcutil.csproj`
+    @No__t_0 proje dosyasını Düzenleyicinizde açın, `Project` öğesini düzenleyin ve aşağıdaki kodu kullanarak bir CLı araç başvurusu olarak [`dotnet-svcutil` NuGet paketini](https://nuget.org/packages/dotnet-svcutil) ekleyin:
 
     ```xml
     <ItemGroup>
@@ -84,7 +84,7 @@ Bir Windows, macOS veya Linux komut penceresinde aşağıdaki adımları uygulay
     </ItemGroup>
     ```
 
-    Ardından aşağıdaki [`dotnet restore`](../tools/dotnet-restore.md) komutu kullanarak _DotNet-Svcutil_ paketini şu şekilde geri yükleyin:
+    Daha sonra [`dotnet restore`](../tools/dotnet-restore.md) komutunu kullanarak _DotNet-Svcutil_ paketini aşağıdaki gibi geri yükleyin:
 
     ```dotnetcli
     dotnet restore
@@ -112,21 +112,21 @@ Oluşturulan dosya _Merhaba Svcutil/ServiceReference/Reference. cs_olarak kayded
 
 ## <a name="using-the-service-reference"></a>Hizmet başvurusunu kullanma
 
-1. Aşağıdaki gibi, [`dotnet restore`](../tools/dotnet-restore.md) komutunu kullanarak WCF paketlerini geri yükleyin:
+1. [@No__t_1](../tools/dotnet-restore.md) komutunu kullanarak WCF paketlerini aşağıdaki şekilde geri yükleyin:
 
     ```dotnetcli
     dotnet restore
     ```
 
-2. Kullanmak istediğiniz istemci sınıfının ve işlemin adını bulun. `Reference.cs`, hizmet üzerindeki işlemleri çağırmak için kullanılabilecek `System.ServiceModel.ClientBase`Yöntemler ile öğesinden devralan bir sınıf içerir. Bu örnekte, _SayHello_ hizmetinin _Hello_ işlemini çağırmak istiyorsunuz. `ServiceReference.SayHelloClient`, istemci sınıfının adıdır ve işlemi çağırmak için kullanılabilecek bir yöntemi `HelloAsync` vardır.
+2. Kullanmak istediğiniz istemci sınıfının ve işlemin adını bulun. `Reference.cs`, hizmet üzerindeki işlemleri çağırmak için kullanılabilecek yöntemler ile `System.ServiceModel.ClientBase` devralan bir sınıf içerir. Bu örnekte, _SayHello_ hizmetinin _Hello_ işlemini çağırmak istiyorsunuz. `ServiceReference.SayHelloClient`, istemci sınıfının adıdır ve işlemi çağırmak için kullanılabilecek `HelloAsync` adlı bir yöntemi vardır.
 
-3. `Startup.cs` Dosyayı Düzenleyicinizde açın ve en üstteki hizmet başvurusu ad alanı için bir using ifadesini ekleyin:
+3. @No__t_0 dosyasını Düzenleyicinizde açın ve en üstteki hizmet başvurusu ad alanı için bir using ifadesini ekleyin:
 
     ```csharp
     using ServiceReference;
     ```
 
-4. Web hizmetini çağırmak için yönteminidüzenleyin.`Configure` Bunu, istemci nesnesindeki yönteminden devralan `ClientBase` ve çağıran sınıfının bir örneğini oluşturarak yapabilirsiniz:
+4. Web hizmetini çağırmak için `Configure` yöntemini düzenleyin. Bunu, `ClientBase` devralan ve istemci nesnesinde yöntemi çağıran sınıfının bir örneğini oluşturarak yapabilirsiniz:
 
     ```csharp
     public void Configure(IApplicationBuilder app, IHostingEnvironment env)
@@ -146,7 +146,7 @@ Oluşturulan dosya _Merhaba Svcutil/ServiceReference/Reference. cs_olarak kayded
 
     ```
 
-5. [`dotnet run`](../tools/dotnet-run.md) Komutunu kullanarak uygulamayı aşağıdaki gibi çalıştırın:
+5. [@No__t_1](../tools/dotnet-run.md) komutunu kullanarak uygulamayı aşağıdaki şekilde çalıştırın:
 
     ```dotnetcli
     dotnet run
@@ -154,9 +154,9 @@ Oluşturulan dosya _Merhaba Svcutil/ServiceReference/Reference. cs_olarak kayded
 
 6. Web tarayıcınızda konsolunda listelenen URL 'ye gidin (örneğin, `http://localhost:5000`).
 
-Aşağıdaki çıktıyı görmeniz gerekir: "Merhaba DotNet-Svcutil!"
+Şu çıktıyı görmeniz gerekir: "Hello DotNet-Svcutil!"
 
-`dotnet-svcutil` Araç parametrelerinin ayrıntılı bir açıklaması için, yardım parametresini aşağıdaki gibi geçirerek aracı çağırın:
+@No__t_0 aracı parametrelerinin ayrıntılı bir açıklaması için, yardım parametresini aşağıdaki gibi geçirerek aracı çağırın:
 # <a name="dotnet-svcutil-2xtabdotnetsvcutil2x"></a>[DotNet-Svcutil 2. x](#tab/dotnetsvcutil2x)
 
 ```dotnetcli
@@ -177,8 +177,8 @@ Sorularınız veya geri bildiriminiz varsa [GitHub ' da bir sorun açın](https:
 
 ## <a name="release-notes"></a>Sürüm notları
 
-* Bilinen sorunlar da dahil olmak üzere, güncelleştirilmiş sürüm bilgileri için [sürüm notlarına](https://github.com/dotnet/wcf/blob/master/release-notes/dotnet-svcutil-notes.md) bakın.
+- Bilinen sorunlar da dahil olmak üzere, güncelleştirilmiş sürüm bilgileri için [sürüm notlarına](https://github.com/dotnet/wcf/blob/master/release-notes/dotnet-svcutil-notes.md) bakın.
 
 ## <a name="information"></a>Bilgiler
 
-* [DotNet-Svcutil NuGet paketi](https://nuget.org/packages/dotnet-svcutil)
+- [DotNet-Svcutil NuGet paketi](https://nuget.org/packages/dotnet-svcutil)

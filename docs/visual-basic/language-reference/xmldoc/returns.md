@@ -5,15 +5,15 @@ helpviewer_keywords:
 - returns XML tag
 - <returns> XML tag
 ms.assetid: a03a6469-d907-425d-882f-083187950e7e
-ms.openlocfilehash: 5a0ff0da7cf26a1cea75a5b2e4678593d9b72f54
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b220c2a9aa544413c3692485f6c1eb2b64e54389
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61940797"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72524687"
 ---
-# <a name="returns-visual-basic"></a>\<döndürür > (Visual Basic)
-Özellik veya işlev dönüş değeri belirtir.  
+# <a name="returns-visual-basic"></a>\<returns > (Visual Basic)
+Özelliğin veya işlevin dönüş değerini belirtir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -23,15 +23,15 @@ ms.locfileid: "61940797"
   
 ## <a name="parameters"></a>Parametreler  
  `description`  
- Dönüş değeri bir açıklaması.  
+ Dönüş değerinin açıklaması.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Kullanım `<returns>` dönüş değeri tanımlamak bir yöntem bildiriminde yorum etiketi.  
+ Dönüş değerini anlatmak için bir yöntem bildirimi açıklamasında `<returns>` etiketini kullanın.  
   
- Derleme [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) işlem belgeleri açıklamaları için bir dosya için.  
+ Belge açıklamalarını bir dosyaya işlemek için [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) ile derleyin.  
   
 ## <a name="example"></a>Örnek  
- Bu örnekte `<returns>` ne açıklamak için etiket `DoesRecordExist` işlevi döndürür.  
+ Bu örnek, `DoesRecordExist` işlevinin döndürdüğü şeyi açıklamak için `<returns>` etiketini kullanır.  
   
  [!code-vb[VbVbcnXmlDocComments#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#6)]  
   
