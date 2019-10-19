@@ -1,24 +1,21 @@
 ---
 title: ASP.NET Core son değişiklikler-.NET Core
 description: ASP.NET Core 'deki son değişiklikleri listeler.
-ms.date: 10/16/2019
+ms.date: 10/17/2019
 author: scottaddie
 ms.author: scaddie
-ms.openlocfilehash: 2b9ef4cd53772e30198ab2b4171f78503088ae83
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
-ms.translationtype: HT
+ms.openlocfilehash: 4a382fc94eac656605260f628f3eaa5b41bc24da
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72522881"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72579978"
 ---
-# <a name="aspnet-core-breaking-changes"></a><span data-ttu-id="4e3a2-103">ASP.NET Core son değişiklikler</span><span class="sxs-lookup"><span data-stu-id="4e3a2-103">ASP.NET Core breaking changes</span></span>
+# <a name="aspnet-core-breaking-changes"></a><span data-ttu-id="048a4-103">ASP.NET Core son değişiklikler</span><span class="sxs-lookup"><span data-stu-id="048a4-103">ASP.NET Core breaking changes</span></span>
 
-> [!IMPORTANT]
-> <span data-ttu-id="4e3a2-104">Bu makale yapım aşamasındadır.</span><span class="sxs-lookup"><span data-stu-id="4e3a2-104">This article is under construction.</span></span> <span data-ttu-id="4e3a2-105">Bu, ASP.NET Core son değişikliklerin bir listesi değildir.</span><span class="sxs-lookup"><span data-stu-id="4e3a2-105">This is not a complete list of ASP.NET Core breaking changes.</span></span> <span data-ttu-id="4e3a2-106">ASP.NET Core son değişiklikler hakkında daha fazla bilgi için GitHub 'daki DotNet/docs deposundaki tek tek [değişiklikler sorunlarını](https://github.com/dotnet/docs/issues?q=is%3Aissue+is%3Aopen+label%3Abreaking-change) inceleyebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="4e3a2-106">For more information on ASP.NET Core breaking changes, you can examine individual [breaking changes issues](https://github.com/dotnet/docs/issues?q=is%3Aissue+is%3Aopen+label%3Abreaking-change) in the dotnet/docs repository on GitHub.</span></span>
+<span data-ttu-id="048a4-104">Aşağıda ASP.NET Core sürümüne göre ASP.NET Core Son değişiklik listesi verilmiştir.</span><span class="sxs-lookup"><span data-stu-id="048a4-104">The following is a list of ASP.NET Core breaking changes by ASP.NET Core version.</span></span> <span data-ttu-id="048a4-105">ASP.NET Core .NET Core tarafından kullanılan Web uygulaması geliştirme özelliklerini sağlar.</span><span class="sxs-lookup"><span data-stu-id="048a4-105">ASP.NET Core provides the web app development features used by .NET Core.</span></span>
 
-<span data-ttu-id="4e3a2-107">Aşağıda ASP.NET Core sürümüne göre ASP.NET Core Son değişiklik listesi verilmiştir.</span><span class="sxs-lookup"><span data-stu-id="4e3a2-107">The following is a list of ASP.NET Core breaking changes by ASP.NET Core version.</span></span> <span data-ttu-id="4e3a2-108">ASP.NET Core .NET Core tarafından kullanılan Web uygulaması geliştirme özelliklerini sağlar.</span><span class="sxs-lookup"><span data-stu-id="4e3a2-108">ASP.NET Core provides the web app development features used by .NET Core.</span></span>
-
-## <a name="aspnet-core-30"></a><span data-ttu-id="4e3a2-109">ASP.NET Core 3,0</span><span class="sxs-lookup"><span data-stu-id="4e3a2-109">ASP.NET Core 3.0</span></span>
+## <a name="aspnet-core-30"></a><span data-ttu-id="048a4-106">ASP.NET Core 3,0</span><span class="sxs-lookup"><span data-stu-id="048a4-106">ASP.NET Core 3.0</span></span>
 
 [!INCLUDE[obsolete Antiforgery, CORS, Diagnostics, MVC, and Routing APIs removed](~/includes/core-changes/aspnetcore/3.0/obsolete-apis-removed.md)]
 
