@@ -1,47 +1,47 @@
 ---
-title: Başvuru dönüş değerleri (Visual Basic)
+title: Ref dönüş değerleri (Visual Basic)
 ms.date: 04/28/2017
 helpviewer_keywords:
 - variables [Visual Basic]
 - ref return values [Visual Basic]
 - ref returns [Visual Basic]
 ms.assetid: 5ef0cc69-eb3a-4a67-92a2-78585f223cb5
-ms.openlocfilehash: d0600f7d9030324160343e800c37e0f5e68bff61
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7401fdd0fa876d21a87dbe9faf9d979e6b3bdc5c
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61791813"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72581130"
 ---
-# <a name="support-for-reference-return-values-visual-basic"></a>Başvuru dönüş değerleri (Visual Basic) için destek
+# <a name="support-for-reference-return-values-visual-basic"></a>Başvuru dönüş değerleri için destek (Visual Basic)
 
-İle başlayarak C# 7.0 C# dili destekleyen *başvuru dönüş değerleri*. Başvuru dönüş değerleri anlamanın tek yolu, bir yönteme başvuru tarafından geçirilen bağımsız değişken karşıtı olmasıdır. Başvuruya göre geçirilen bağımsız değişken değiştirildiğinde değişiklikler çağrı üzerinde değişkeninin değeri yansıtılır. Başvuru dönüş değeri arayan tarafından yapılan değişiklikleri, bir yöntemi çağıran için bir başvuru dönüş değeri sağladığında, çağrılan yöntemin verilerinde yansıtılır.
+7,0 ile C# başlayarak, C# dil *Başvuru dönüş değerlerini*destekler. Başvuru dönüş değerlerini anlamanın bir yolu, bir yönteme başvuruya göre geçirilen bağımsız değişkenlerin tersidir. Başvuruya göre geçirilen bir bağımsız değişken değiştirildiğinde, değişiklikler çağıranın değişkeninin değerine yansıtılır. Bir yöntem bir çağırana bir başvuru dönüş değeri sağlıyorsa, çağıran tarafından başvuru dönüş değeri yapılan değişiklikler çağrılan metodun verilerinde yansıtılır.
 
-Visual Basic başvurusu Yazar yöntemleriyle size dönüş değerleri, ancak başvuru dönüş değerleri kullanmasına izin veriyor izin vermez. Diğer bir deyişle, başvuru dönüş değerine sahip bir yöntemi çağırabilir ve bu dönüş değerini değiştirin ve değişiklikleri başvuru dönüş değeri çağrılan yöntemin verileri yansıtılır.
+Visual Basic, başvuru dönüş değerleri olan Yöntemler yazmanıza izin vermez, ancak başvuru dönüş değerlerini kullanmanıza izin verir. Diğer bir deyişle, başvuru dönüş değeri olan bir yöntemi çağırabilir ve bu dönüş değerini değiştirebilir ve başvuru dönüş değerindeki değişiklikler çağrılan metodun verilerinde yansıtılır.
 
-## <a name="modifying-the-ref-return-value-directly"></a>Başvuru dönüş değeri doğrudan değiştirme
+## <a name="modifying-the-ref-return-value-directly"></a>Başvuru dönüş değerini doğrudan değiştirme
 
-Her zaman başarısız ve yok yöntemler için `ByRef` parametreleri, başvuru dönüş değeri doğrudan değiştirebilirsiniz. Başvuru dönüş değeri döndüren ifadeler için yeni değer atayarak bunu yapabilirsiniz. 
+Her zaman başarılı ve `ByRef` parametreye sahip olmayan yöntemler için başvuru dönüş değerini doğrudan değiştirebilirsiniz. Bunu, başvuru dönüş değeri döndüren deyimlere yeni değeri atayarak yapabilirsiniz.
 
-Aşağıdaki C# örnek tanımlayan bir `NumericValue.IncrementValue` bir iç değeri artırır ve başvuru olarak döndüren bir yöntem dönüş değeri. 
+Aşağıdaki C# örnek, bir iç değeri artıran ve başvuru dönüş değeri olarak döndüren bir `NumericValue.IncrementValue` yöntemi tanımlar.
 
 [!code-csharp[Ref-Return](../../../../../samples/snippets/visualbasic/programming-guide/language-features/procedures/ref-returns1.cs)]
 
-Başvuru dönüş değeri Visual Basic aşağıdaki örnekte çağıran tarafından değiştirilir. Unutmayın satırıyla `NumericValue.IncrementValue` yöntem çağrısı bir değer yönteme atamaz. Bunun yerine, yöntem tarafından döndürülen başvuru dönüş değeri için bir değer atar.
+Başvuru dönüş değeri daha sonra aşağıdaki Visual Basic örneğinde çağıran tarafından değiştirilir. @No__t_0 yöntemi çağrısının bulunduğu satırın yöntemine bir değer atamayacağını unutmayın. Bunun yerine, yöntemi tarafından döndürülen başvuru dönüş değerine bir değer atar.
 
 [!code-vb[Ref-Return](../../../../../samples/snippets/visualbasic/programming-guide/language-features/procedures/use-ref-returns1.vb)]
 
-## <a name="using-a-helper-method"></a>Bir yardımcı yöntemi kullanarak
+## <a name="using-a-helper-method"></a>Yardımcı yöntemi kullanma
 
-Diğer durumlarda, bir yöntem çağrısının başvuru dönüş değeri doğrudan değiştirme her zaman istenmeyebilir. Örneğin, bir dize döndüren bir arama yöntemi bir eşleşme her zaman bulamayabilir. Bu durumda, yalnızca arama başarılı olursa, başvuru dönüş değeri değiştirmek istediğiniz.
+Diğer durumlarda, doğrudan yöntem çağrısının başvuru dönüş değerini değiştirmek her zaman istenmeyebilir. Örneğin, bir dize döndüren arama yöntemi her zaman bir eşleşme bulmayabilir. Bu durumda, başvuru dönüş değerini yalnızca arama başarılı olursa değiştirmek istersiniz.
 
-Aşağıdaki C# örnekte, bu senaryo gösterilmektedir. Tanımladığı bir `Sentence` yazılmış sınıf C# içeren bir `FindNext` sonraki sözcüğe bulur, belirtilen bir alt dizesi ile başlayan bir cümle yöntemi. Bir başvuru döndürmeyi olarak değer ve bir dize döndürülür `Boolean` yönteme başvuru tarafından geçirilen değişkeni arama başarılı olup olmadığını gösterir. Başvuru dönüş değeri, çağırana döndürülen değer yalnızca okunamıyor gösterir. isterse de değiştirebilirsiniz ve bu değişiklik, dahili olarak içinde yer alan verileri yansıtılır `Sentence` sınıfı.
+Aşağıdaki C# örnekte bu senaryo gösterilmektedir. İçinde C# yazılmış bir `Sentence` sınıfını tanımlar, belirtilen bir alt dizeyle başlayan bir tümcede bulunan sonraki kelimeyi bulan bir `FindNext` yöntemi içerir. Dize bir başvuru dönüş değeri olarak döndürülür ve yöntemine başvuruya göre geçirilen bir `Boolean` değişkeni, aramanın başarılı olup olmadığını gösterir. Başvuru dönüş değeri, çağıranın yalnızca döndürülen değeri okuyamayacağını belirtir; Ayrıca, bunu değiştirebilir ve bu değişiklik `Sentence` sınıfında dahili olarak bulunan verilere yansıtılır.
 
 [!code-csharp[Ref-Return](../../../../../samples/snippets/visualbasic/getting-started/ref-returns.cs)]
 
-Başvuru doğrudan değiştirme dönüş yöntem çağrısı bir eşleşme bulmak ve cümlede ilk sözcüğün döndürmek başarısız olabilir değer bu durumda güvenilir değildir. Bu durumda, çağıranın yanlışlıkla cümlede ilk sözcüğün değiştirir. Bunu engelleyen döndüren, çağıran tarafından bir `null` (veya `Nothing` Visual Basic'te). Ancak bu durumda, değeri olan bir dize değiştirmeye `Nothing` oluşturur bir <xref:System.NullReferenceException>. Ayrıca döndüren, çağıran tarafından engellendi, <xref:System.String.Empty?displayProperty=nameWithType>, ancak bu çağrıyı değeri bir dize değişkeni tanımlamanızı gerektirir <xref:System.String.Empty?displayProperty=nameWithType>. Çağıranın bu dizeyi değiştirebilirsiniz, ancak değiştirilen dize tarafından depolanan tümcedeki sözcükleri hiçbir ilişkisi olduğundan değişiklik herhangi bir amacı, hizmet `Sentence` sınıfı.
+Bu durumda başvuru dönüş değerini doğrudan değiştirmek güvenilir değildir, çünkü Yöntem çağrısı bir eşleşme bulamamasına ve tümcedeki ilk sözcüğü döndürmeyebilir. Bu durumda, çağıran, tümcenin ilk sözcüğünü yanlışlıkla değiştirmeyecektir. Bu, çağıran tarafından bir `null` (veya Visual Basic `Nothing` döndüren) tarafından engellenebilir. Ancak bu durumda, değeri `Nothing` olan bir dizeyi değiştirme girişimi bir <xref:System.NullReferenceException> oluşturur. @No__t_0 döndüren çağıran tarafından da engellenebilir, ancak çağıranın değeri <xref:System.String.Empty?displayProperty=nameWithType> bir dize değişkeni tanımlamasına gerek vardır. Çağıran bu dizeyi değiştire, ancak değiştirilen dizenin `Sentence` sınıfı tarafından depolanan tümcedeki sözcüklerle hiçbir ilişkisi olmadığından, değişikliğin kendisi hiçbir amaca hizmet eder.
 
-Bu senaryonun işlenmesi için en iyi yolu, bir yardımcı yöntem başvuruya başvuru dönüş değeri geçirmektir. Yardımcı yöntemi, ardından yöntem çağrısının başarılı olduğunu olsaydı, değiştirmek için başvuru dönen değer olup olmadığını ve belirlemek için mantığı içerir. Aşağıdaki örnekte, olası bir uygulamasını sağlar.
+Bu senaryoyu işlemenin en iyi yolu, başvuru dönüş değerini bir yardımcı yönteme başvuruya göre geçirmektir. Yardımcı yöntemi daha sonra yöntem çağrısının başarılı olup olmadığını ve başvuru dönüş değerini değiştirmek için bir mantığı içerir. Aşağıdaki örnek olası bir uygulama sağlar.
 
 [!code-vb[Ref-Return](../../../../../samples/snippets/visualbasic/getting-started/ref-return-helper.vb#1)]
 
