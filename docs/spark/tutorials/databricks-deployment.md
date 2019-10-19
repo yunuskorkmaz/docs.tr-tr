@@ -4,12 +4,12 @@ description: Databricks 'e Apache Spark uygulamasının bir .NET uygulamasını 
 ms.date: 05/17/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 570f6bdb8eda462b815dfc7c45f6e9a3a515f0ad
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 55fa9b42e04a540deb245887d601e6cce0e6e623
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395878"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72583518"
 ---
 # <a name="deploy-a-net-for-apache-spark-application-to-databricks"></a>Databricks 'e Apache Spark uygulamasına yönelik bir .NET dağıtımı
 
@@ -19,17 +19,17 @@ Bu öğreticide şunların nasıl yapıladığını öğreneceksiniz:
 
 > [!div class="checklist"]
 >
-> - Microsoft. spark. Worker 'ı hazırla
-> - Spark .NET uygulamanızı yayımlama
-> - Uygulamanızı Databricks 'e dağıtın
-> - Uygulamanızı çalıştırma
+> * Microsoft. spark. Worker 'ı hazırla
+> * Spark .NET uygulamanızı yayımlama
+> * Uygulamanızı Databricks 'e dağıtın
+> * Uygulamanızı çalıştırma
 
 ## <a name="prerequisites"></a>Prerequisites
 
 Başlamadan önce aşağıdakileri yapın:
 
-- [Databricks CLI](https://docs.databricks.com/user-guide/dev-tools/databricks-cli.html)'yi indirin.
-- [İnstall-Worker.sh](https://github.com/dotnet/spark/blob/master/deployment/install-worker.sh) 'i yerel makinenize indirin. Bu, daha sonra Apache Spark bağımlı dosyaları için .NET 'i Spark kümenizin çalışan düğümlerine kopyalamak için kullandığınız bir yardımcı betiktir.
+* [Databricks CLI](https://docs.databricks.com/user-guide/dev-tools/databricks-cli.html)'yi indirin.
+* [İnstall-Worker.sh](https://github.com/dotnet/spark/blob/master/deployment/install-worker.sh) 'i yerel makinenize indirin. Bu, daha sonra Apache Spark bağımlı dosyaları için .NET 'i Spark kümenizin çalışan düğümlerine kopyalamak için kullandığınız bir yardımcı betiktir.
 
 ## <a name="prepare-worker-dependencies"></a>Çalışan bağımlılıklarını hazırlama
 
@@ -39,7 +39,7 @@ Başlamadan önce aşağıdakileri yapın:
 
    Örneğin, `netcoreapp2.1` kullanarak `.NET for Apache Spark v0.1.0` ' ı istiyorsanız, [Microsoft. spark. Worker. netcoreapp 2.1. Linux-x64-0.1.0. tar. gz](https://github.com/dotnet/spark/releases/download/v0.1.0/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.1.0.tar.gz)dosyasını indirirsiniz.
 
-2. @No__t-0 ve [install-Worker.sh](https://github.com/dotnet/spark/blob/master/deployment/install-worker.sh) ' i, kümenizin erişimi olan bir dağıtılmış dosya sistemine (ÖRNEĞIN, dBFS) yükleyin.
+2. Kümenizin erişimi olan bir dağıtılmış dosya sistemine (örneğin, DBFS) `Microsoft.Spark.Worker.<release>.tar.gz` ve [install-Worker.sh](https://github.com/dotnet/spark/blob/master/deployment/install-worker.sh) yükleyin.
 
 ## <a name="prepare-your-net-for-apache-spark-app"></a>Apache Spark uygulamanızı .NET 'e hazırlama
 
@@ -63,9 +63,9 @@ Başlamadan önce aşağıdakileri yapın:
 
 4. Aşağıdakileri kümenizin erişimi olan bir dağıtılmış dosya sistemine (örneğin, DBFS) yükleyin:
 
-   - `microsoft-spark-<spark_majorversion.spark_minorversion.x>-<spark_dotnet_version>.jar`: Bu jar, [Microsoft. Spark](https://www.nuget.org/packages/Microsoft.Spark/) NuGet paketinin bir parçası olarak dahil edilmiştir ve uygulamanızın derleme çıkış dizininde birlikte bulunur.
-   - `<your app>.zip`
-   - Her bir yürütücünün çalışma dizinine yerleştirilmesi için dosyalar (bağımlılık dosyaları veya her çalışan tarafından erişilebilen genel veriler gibi) veya derlemeler (Kullanıcı tanımlı işlevlerinizi veya kitaplıklarınızı içeren dll 'Ler gibi).
+   * `microsoft-spark-<spark_majorversion.spark_minorversion.x>-<spark_dotnet_version>.jar`: Bu jar, [Microsoft. Spark](https://www.nuget.org/packages/Microsoft.Spark/) NuGet paketinin bir parçası olarak dahil edilmiştir ve uygulamanızın derleme çıkış dizininde birlikte bulunur.
+   * `<your app>.zip`
+   * Her bir yürütücünün çalışma dizinine yerleştirilmesi için dosyalar (bağımlılık dosyaları veya her çalışan tarafından erişilebilen genel veriler gibi) veya derlemeler (Kullanıcı tanımlı işlevlerinizi veya kitaplıklarınızı içeren dll 'Ler gibi).
 
 ## <a name="deploy-to-databricks"></a>Databricks’e dağıtma
 
@@ -105,7 +105,7 @@ Bu adım, bir küme için yalnızca bir kere gereklidir.
 
 ## <a name="run-your-app"></a>Uygulamanızı çalıştırma
 
-@No__t-0 veya `spark-submit` ' i kullanarak işinizi Databricks 'e gönderebilirsiniz.
+İşinizi Databricks 'e göndermek için `set JAR` veya `spark-submit` kullanabilirsiniz.
 
 ### <a name="use-set-jar"></a>Set JAR kullanın
 
@@ -137,21 +137,21 @@ Bu adım, bir küme için yalnızca bir kere gereklidir.
 
 2. Bu adım yalnızca, uygulama derlemelerinizin (örneğin, bağımlılıklarıyla birlikte Kullanıcı tanımlı işlevler içeren dll 'Ler) her **Microsoft. spark. Worker**çalışma dizinine yerleştirilmesi gereken durumlarda gereklidir.
 
-   - Uygulama derlemelerinizi Databricks kümenize yükleyin
+   * Uygulama derlemelerinizi Databricks kümenize yükleyin
 
       ```bash
       cd <path-to-your-app-publish-directory>
       databricks fs cp <assembly>.dll dbfs:/apps/dependencies
       ```
 
-   - [DB-init.sh](https://github.com/dotnet/spark/blob/master/deployment/db-init.sh) ' deki uygulama bağımlılıkları bölümünü Açıklama penceresinde, uygulama bağımlılıkları yolunu işaret edin ve Databricks kümenize yükleyin.
+   * [DB-init.sh](https://github.com/dotnet/spark/blob/master/deployment/db-init.sh) ' deki uygulama bağımlılıkları bölümünü Açıklama penceresinde, uygulama bağımlılıkları yolunu işaret edin ve Databricks kümenize yükleyin.
 
       ```bash
       cd <path-to-db-init-and-install-worker>
       databricks fs cp db-init.sh dbfs:/spark-dotnet/db-init.sh
       ```
 
-   - Kümenizi yeniden başlatın.
+   * Kümenizi yeniden başlatın.
 
 3. Databricks çalışma alanınızdaki Databricks kümenize gidin. **İşler**altında işiniz ' ı seçin ve ardından işi çalıştırmak Için **Şimdi Çalıştır** ' ı seçin.
 

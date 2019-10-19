@@ -10,82 +10,86 @@ helpviewer_keywords:
 - arguments [Visual Basic], Visual Basic
 - procedures [Visual Basic], parameter lists
 ms.assetid: 5d737319-0c34-4df9-a23d-188fc840becd
-ms.openlocfilehash: e58d80896d11b4154c7197d4cdaf73a536fdd5e7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0dded7fd68256b9b9de8ebe4b48073eb40696c12
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64583556"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72582174"
 ---
 # <a name="parameter-list-visual-basic"></a>Parametre Listesi (Visual Basic)
-Bir yordam çağrıldığında bu bekliyor parametreleri belirtir. Birden çok parametre, virgüllerle ayrılır. Bir parametre için sözdizimi aşağıdadır.  
-  
-## <a name="syntax"></a>Sözdizimi  
-  
-```  
-[ <attributelist> ] [ Optional ] [{ ByVal | ByRef }] [ ParamArray ]   
-parametername[( )] [ As parametertype ] [ = defaultvalue ]  
-```  
-  
-## <a name="parts"></a>Bölümler  
- `attributelist`  
- İsteğe bağlı. Bu parametre için geçerli olan özniteliklerin listesi. İçine almalısınız [öznitelik listesi](../../../visual-basic/language-reference/statements/attribute-list.md) açılı ayraçlar içinde ("`<`"ve"`>`").  
-  
- `Optional`  
- İsteğe bağlı. Yordam çağrıldığında Bu parametre gerekli olmadığını belirtir.  
-  
- `ByVal`  
- İsteğe bağlı. Yordam olamaz değiştirin veya karşılık gelen bağımsız değişkenin çağıran koddaki temel değişken öğe yeniden atama belirtir.  
-  
- `ByRef`  
- İsteğe bağlı. Yordam aynı şekilde çağıran kod çağıran koddaki değişken öğe türüdür değiştirebilirsiniz belirtir.  
-  
- `ParamArray`  
- İsteğe bağlı. Belirtilen veri türü öğeler için isteğe bağlı bir dizi parametre listesindeki son parametre olduğunu belirtir. Bu yordama bağımsız değişkenler rastgele bir sayıdan geçirmek çağıran kod sağlar.  
-  
- `parametername`  
- Gerekli. Parametreyi temsil eden yerel değişkenin adı.  
-  
- `parametertype`  
- Gerekli if `Option Strict` olduğu `On`. Parametreyi temsil eden yerel değişken veri türü.  
-  
- `defaultvalue`  
- Gerekli `Optional` parametreleri. Parametrenin veri türü için değerlendirilen tüm sabit veya sabit ifade. Tür ise `Object`, veya bir sınıf, arabirim, dizi veya yapı, varsayılan değer yalnızca olabilir `Nothing`.  
-  
-## <a name="remarks"></a>Açıklamalar  
- Parametreleri parantez içine ve virgülle ayrılmış. Bir parametre herhangi bir veri türü ile bildirilebilir. Siz belirtmezseniz `parametertype`, varsayılan `Object`.  
-  
- Çağıran kod yordamı çağırdığında arabimini bir *bağımsız değişken* her gerekli parametre. Daha fazla bilgi için [arasındaki farklar parametreler ve bağımsız değişkenler](../../../visual-basic/programming-guide/language-features/procedures/differences-between-parameters-and-arguments.md).  
-  
- Çağıran kod her parametreye geçirmeden bağımsız değişken temel alınan bir öğe çağıran koddaki bir işaretçisidir. Bu öğe ise *nonvariable* (bir sabit, değişmez değeri, numaralandırma veya ifade), değiştirmek herhangi bir kod için mümkün değildir. Eğer öyleyse bir *değişkeni* öğesi (bir bildirilmiş bir değişken, alan, özelliği, dizi öğesi veya yapı öğesi), çağıran kodun bunu değiştirebilirsiniz. Daha fazla bilgi için [arasındaki farklar değiştirilebilir ve değiştirilemez bağımsız değişkenler](../../../visual-basic/programming-guide/language-features/procedures/differences-between-modifiable-and-nonmodifiable-arguments.md).  
-  
- Bir değişken öğesi iletilmezse `ByRef`, yordam de değiştirebilirsiniz. Daha fazla bilgi için [farklar arasında geçen bir bağımsız değişken değer ve başvuru tarafından](../../../visual-basic/programming-guide/language-features/procedures/differences-between-passing-an-argument-by-value-and-by-reference.md).  
-  
-## <a name="rules"></a>Kurallar  
-  
-- **Parantezler.** Parametre listesi belirtirseniz, parantez içine almalısınız. Hiçbir parametre varsa, boş bir liste çevreleyen parantezler kullanmaya devam edebilirsiniz. Bu öğe bir yordam olduğunu açıklığa kavuşturan tarafından kodunuzun okunabilirliği geliştirir.  
-  
-- **İsteğe bağlı parametreler.** Kullanırsanız `Optional` bir parametre değiştiricisi, sonraki tüm parametreler listesinde isteğe bağlı olmalıdır ve kullanılarak bildirilen `Optional` değiştiricisi.  
-  
-     Her isteğe bağlı parametre bildirimi sağlamalısınız `defaultvalue` yan tümcesi.  
-  
-     Daha fazla bilgi için [isteğe bağlı parametreler](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md).  
-  
-- **Parametre dizileri.** Belirtmelisiniz `ByVal` için bir `ParamArray` parametresi.  
-  
-     Her ikisini birden kullanamazsınız `Optional` ve `ParamArray` aynı parametre listesinde.  
-  
-     Daha fazla bilgi için [parametre dizileri](../../../visual-basic/programming-guide/language-features/procedures/parameter-arrays.md).  
-  
-- **Geçirme mekanizması.** Her bağımsız değişken için varsayılan mekanizmasıdır `ByVal`, yordam başka bir deyişle, temel alınan değişken öğesini değiştiremezsiniz. Öğeye bir başvuru türü ise, değiştirin veya nesneyi yeniden atama olsa bile ancak yordamı içeriği veya temel alınan bir nesnenin üyelerine değiştirebilirsiniz.  
-  
-- **Parametre adları.** Parametrenin veri türü bir dizi ise izleyin `parametername` parantez tarafından hemen. Parametre adları hakkında daha fazla bilgi için bkz. [bildirilen öğe adları](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
-  
-## <a name="example"></a>Örnek  
- Aşağıdaki örnekte gösterildiği bir `Function` iki parametre tanımlayan yordamı.  
-  
- [!code-vb[VbVbalrStatements#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#2)]  
-  
+
+Bir yordamın çağrıldığında beklediği parametreleri belirtir. Birden çok parametre virgülle ayrılır. Bir parametre için sözdizimi aşağıda verilmiştir.
+
+## <a name="syntax"></a>Sözdizimi
+
+```vb
+[ <attributelist> ] [ Optional ] [{ ByVal | ByRef }] [ ParamArray ]
+parametername[( )] [ As parametertype ] [ = defaultvalue ]
+```
+
+## <a name="parts"></a>Bölümler
+
+`attributelist`  
+İsteğe bağlı. Bu parametre için uygulanan özniteliklerin listesi. [Öznitelik listesini](../../../visual-basic/language-reference/statements/attribute-list.md) açılı ayraç içine almalısınız ("`<`" ve "`>`").
+
+`Optional`  
+İsteğe bağlı. Yordam çağrıldığında bu parametrenin gerekli değildir olduğunu belirtir.
+
+`ByVal`  
+İsteğe bağlı. Yordamın, çağıran koddaki karşılık gelen bağımsız değişkeni temel alan değişken öğesini değiştirmez veya yeniden atayacağınızı belirtir.
+
+`ByRef`  
+İsteğe bağlı. Yordamın, çağıran koddaki temeldeki değişken öğesini çağıran kodun kendisi ile aynı şekilde değiştirebileceğini belirtir.
+
+`ParamArray`  
+İsteğe bağlı. Parametre listesindeki son parametrenin, belirtilen veri türü için isteğe bağlı bir öğe dizisi olduğunu belirtir. Bu, çağıran kodun yordama rastgele sayıda bağımsız değişken geçirmelerini sağlar.
+
+`parametername`  
+Gerekli. Parametreyi temsil eden yerel değişkenin adı.
+
+`parametertype`  
+@No__t_0 `On` olması gerekir. Parametreyi temsil eden yerel değişkenin veri türü.
+
+`defaultvalue`  
+@No__t_0 parametreleri için gereklidir. Parametrenin veri türünü değerlendiren herhangi bir sabit veya sabit ifade. Tür `Object`, ya da bir sınıf, arabirim, dizi ya da yapı ise, varsayılan değer yalnızca `Nothing` olabilir.
+
+## <a name="remarks"></a>Açıklamalar
+
+Parametreler parantezler ile çevrelenmiş ve virgülle ayrılmalıdır. Bir parametre herhangi bir veri türü ile bildirilebilecek. @No__t_0 belirtmezseniz, varsayılan olarak `Object`.
+
+Çağıran kod yordamı çağırdığında, gerekli her parametreye bir *bağımsız değişken* geçirir. Daha fazla bilgi için bkz. [Parametreler ve bağımsız değişkenler arasındaki farklar](../../../visual-basic/programming-guide/language-features/procedures/differences-between-parameters-and-arguments.md).
+
+Çağıran kodun her parametreye geçtiği bağımsız değişken, çağıran koddaki temeldeki öğenin bir işaretçisidir. Bu öğe *değişken olmayan* bir değerse (bir sabit, değişmez değer, sabit listesi veya ifade), herhangi bir kodun değiştirilmesi olanaksızdır. *Değişken* bir öğe ise (belirtilen değişken, alan, özellik, dizi öğesi veya yapı öğesi), çağıran kod değiştirebilir. Daha fazla bilgi için bkz. [değiştirilebilir ve değiştirilemez bağımsız değişkenler arasındaki farklar](../../../visual-basic/programming-guide/language-features/procedures/differences-between-modifiable-and-nonmodifiable-arguments.md).
+
+Bir değişken öğesi `ByRef` geçirildiğinde yordam de değiştirebilir. Daha fazla bilgi için, [bir bağımsız değişkeni değere ve başvuruya göre geçirme arasındaki farklılıklar](../../../visual-basic/programming-guide/language-features/procedures/differences-between-passing-an-argument-by-value-and-by-reference.md)bölümüne bakın.
+
+## <a name="rules"></a>Kurallar
+
+- **Ayraçlar.** Bir parametre listesi belirtirseniz, parantez içine almanız gerekir. Parametre yoksa boş bir listeyi kapsayan ayraçları kullanmaya devam edebilirsiniz. Bunun yapılması, öğenin bir yordam olduğunu açıklığa kavuşturarak kodunuzun okunabilirliğini geliştirir.
+
+- **İsteğe bağlı parametreler.** Bir parametre üzerinde `Optional` değiştiricisini kullanırsanız, listedeki sonraki tüm parametrelerin da isteğe bağlı olması ve `Optional` değiştiricisi kullanılarak bildirilmelidir.
+
+     Her isteğe bağlı parametre bildirimi `defaultvalue` yan tümcesini sağlamalıdır.
+
+     Daha fazla bilgi için bkz. [Isteğe bağlı parametreler](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md).
+
+- **Parametre dizileri.** Bir `ParamArray` parametresi için `ByVal` belirtmeniz gerekir.
+
+     Aynı parametre listesinde hem `Optional` hem de `ParamArray` kullanamazsınız.
+
+     Daha fazla bilgi için bkz. [parametre dizileri](../../../visual-basic/programming-guide/language-features/procedures/parameter-arrays.md).
+
+- **Geçirme mekanizması.** Her bağımsız değişken için varsayılan mekanizma `ByVal`, bu da yordamın temeldeki değişken öğesini değiştiremeyeceği anlamına gelir. Ancak, öğe bir başvuru türü ise, yordam nesnenin kendisini değiştiremese veya yeniden atanmasa bile, temel nesnenin içeriğini veya üyelerini değiştirebilir.
+
+- **Parametre adları.** Parametrenin veri türü bir diziyse, ayraçları hemen `parametername` izleyin. Parametre adları hakkında daha fazla bilgi için bkz. [bildirilmemiş öğe adları](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).
+
+## <a name="example"></a>Örnek
+
+Aşağıdaki örnek, iki parametre tanımlayan bir `Function` yordamını gösterir.
+
+[!code-vb[VbVbalrStatements#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#2)]
+
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Runtime.InteropServices.DllImportAttribute>
@@ -94,5 +98,5 @@ parametername[( )] [ As parametertype ] [ = defaultvalue ]
 - [Declare Deyimi](../../../visual-basic/language-reference/statements/declare-statement.md)
 - [Structure Deyimi](../../../visual-basic/language-reference/statements/structure-statement.md)
 - [Option Strict Deyimi](../../../visual-basic/language-reference/statements/option-strict-statement.md)
-- [Öznitelikler genel bakış](../../../visual-basic/programming-guide/concepts/attributes/index.md)
+- [Özniteliklere genel bakış](../../../visual-basic/programming-guide/concepts/attributes/index.md)
 - [Nasıl yapılır: Kodda Deyimleri Bölme ve Birleştirme](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)

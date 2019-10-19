@@ -14,41 +14,41 @@ helpviewer_keywords:
 - End statement [Visual Basic]
 - execution [Visual Basic], stopping
 ms.assetid: 0e64467c-0f34-4aab-9ddd-43f8b9d55d90
-ms.openlocfilehash: 9307cf10e6125441bd49baa0e663a5a13f234005
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 66dba1df125a08b8ae05519a0c66edb6da15ceaa
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69944460"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72583419"
 ---
 # <a name="end-statement"></a>End Deyimi
 Yürütmeyi hemen sonlandırır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```vb  
 End  
 ```  
   
 ## <a name="remarks"></a>Açıklamalar  
- Tüm uygulamayı çalışmayı durdurmayı `End` zorlamak için ifadeyi bir yordamda herhangi bir yere yerleştirebilirsiniz. `End``Open` ifadesiyle açılan tüm dosyaları kapatır ve tüm uygulamanın değişkenlerini temizler. Nesneleri, nesnelerine başvuruları tutan başka hiçbir program yoksa ve kodun hiçbiri çalışmıyorsa, uygulama kapanır.  
+ Tüm uygulamayı çalışmayı durdurmayı zorlamak için `End` ifadesini bir yordamın her yerinden yerleştirebilirsiniz. `End`, `Open` ifadesiyle açılan tüm dosyaları kapatır ve tüm uygulamanın değişkenlerini temizler. Nesneleri, nesnelerine başvuruları tutan başka hiçbir program yoksa ve kodun hiçbiri çalışmıyorsa, uygulama kapanır.  
   
 > [!NOTE]
-> İfade kod yürütmeyi aniden durduruyor ve `Dispose` ya `Finalize` da metodunu ya da başka bir Visual Basic kodunu çağırmaz. `End` Diğer programlar tarafından tutulan nesne başvuruları geçersiz kılınır. Bir `End` `Finally` veya bloğu`Catch` içinde bir ifadeye karşılaşılırsa, denetim karşılık gelen bloğa geçmez. `Try`  
+> @No__t_0 ifade kodu yürütmeyi aniden durduruyor ve `Dispose` veya `Finalize` yöntemini ya da başka bir Visual Basic kodu çağırmaz. Diğer programlar tarafından tutulan nesne başvuruları geçersiz kılınır. Bir `Try` veya `Catch` bloğunda `End` ifadesiyle karşılaşılırsa, denetim karşılık gelen `Finally` bloğuna geçmez.  
   
- İfade yürütmeyi askıya alır, ancak farklı `End`olarak, derlenmiş bir çalıştırılabilir (. exe) dosyasında karşılaşılmadığı takdirde herhangi bir dosyayı kapatmaz veya hiçbir değişkeni temizlemez. `Stop`  
+ @No__t_0 deyimin yürütülmesi askıya alınır, ancak `End` aksine, derlenmiş bir çalıştırılabilir (. exe) dosyasında karşılaşılmadığı takdirde hiçbir dosyayı kapatmaz veya hiçbir değişkeni temizlemez.  
   
- Açık `End` olabilecek kaynaklara katılmadan uygulamanızı sonlandırdığından, kullanmadan önce düzgün bir şekilde kapatmayı denemeniz gerekir. Örneğin, uygulamanızda açık bir form varsa, Denetim `End` ifadeye ulaşmadan önce bunları kapatmalısınız.  
+ @No__t_0, açık olabilecek kaynaklara katılmaksızın uygulamanızı sonlandırdığından, kullanmadan önce düzgün bir şekilde kapatmayı denemeniz gerekir. Örneğin, uygulamanızda açık bir form varsa, denetim `End` bildirimine ulaşmadan önce bunları kapatmanız gerekir.  
   
- Gelişigüzel ve yalnızca `End` hemen durdurmanız gerektiğinde kullanmanız gerekir. Bir yordamı ([Return deyimleri](../../../visual-basic/language-reference/statements/return-statement.md) ve [Exit ifadesini](../../../visual-basic/language-reference/statements/exit-statement.md)) sonlandırmak için normal yollar, yordamı yalnızca düzgün bir şekilde kapatmaz, aynı zamanda çağıran koda düzgün bir şekilde kapatma fırsatı verir. Örneğin, bir konsol uygulaması yalnızca `Return` `Main` yordamdan olabilir.  
+ @No__t_0 gelişigüzel ve yalnızca hemen durdurmanız gerektiğinde kullanmanız gerekir. Bir yordamı ([Return deyimleri](../../../visual-basic/language-reference/statements/return-statement.md) ve [Exit ifadesini](../../../visual-basic/language-reference/statements/exit-statement.md)) sonlandırmak için normal yollar, yordamı yalnızca düzgün bir şekilde kapatmaz, aynı zamanda çağıran koda düzgün bir şekilde kapatma fırsatı verir. Örneğin, bir konsol uygulaması, `Main` yordamından yalnızca `Return` olabilir.  
   
 > [!IMPORTANT]
-> İfade, <xref:System.Environment.Exit%2A> <xref:System.Environment> ad alanındaki sınıfının yöntemini çağırır. <xref:System> `End` <xref:System.Environment.Exit%2A>izninizin olması `UnmanagedCode` gerekir. Aksi takdirde bir <xref:System.Security.SecurityException> hata oluşur.  
+> @No__t_0 ifade <xref:System> ad alanındaki <xref:System.Environment> sınıfının <xref:System.Environment.Exit%2A> yöntemini çağırır. <xref:System.Environment.Exit%2A> için `UnmanagedCode` izninizin olması gerekir. Bunu yapmazsanız <xref:System.Security.SecurityException> bir hata oluşur.  
   
- Sonrasında ek bir anahtar sözcük, [End \<anahtar sözcüğü > deyimin](../../../visual-basic/language-reference/statements/end-keyword-statement.md) uygun yordam veya bloğun tanımının sonuna göre ayırıcıları. Örneğin, `End Function` bir `Function` yordamın tanımını sonlandırır.  
+ Daha sonra ek bir anahtar sözcük olduğunda [End \<keyword > deyimleri](../../../visual-basic/language-reference/statements/end-keyword-statement.md) uygun yordamın veya bloğun tanımının sonuna göre ayırıcıları. Örneğin, `End Function` bir `Function` yordamının tanımını sonlandırır.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, Kullanıcı istediğinde `End` kod yürütmeyi sonlandırmak için ifadesini kullanır.  
+ Aşağıdaki örnek, Kullanıcı istediğinde kod yürütmeyi sonlandırmak için `End` ifadesini kullanır.  
   
  [!code-vb[VbVersHelp60Controls#64](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVersHelp60Controls/VB/Form1.vb#64)]  
   
@@ -59,4 +59,4 @@ End
 
 - <xref:System.Security.Permissions.SecurityPermissionFlag>
 - [Stop Deyimi](../../../visual-basic/language-reference/statements/stop-statement.md)
-- [End \<anahtar sözcüğü > ekstresi](../../../visual-basic/language-reference/statements/end-keyword-statement.md)
+- [End \<keyword > ekstresi](../../../visual-basic/language-reference/statements/end-keyword-statement.md)

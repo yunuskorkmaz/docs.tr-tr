@@ -2,12 +2,12 @@
 title: 'Nasıl yapılır: XSLT stilinde LINQ to XML ağaçlarını dönüştürmek için ek açıklamaları kullanma (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 08e91fa2-dac2-4463-9ef1-87b1ac3fa890
-ms.openlocfilehash: b950f823b65299689f4ed829138a6689f6789c18
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: b8f15c4dc6016e48619d26e7cc8717a2a3c5acd5
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395958"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72581986"
 ---
 # <a name="how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style-visual-basic"></a>Nasıl yapılır: XSLT stilinde LINQ to XML ağaçlarını dönüştürmek için ek açıklamaları kullanma (Visual Basic)
 
@@ -37,7 +37,7 @@ Ayrıntılı olarak yaklaşım aşağıdakilerden oluşur:
 
 - Özel bir kural var: yeni öğenin bir alt düğümü, bu amaçla oluşturulan bir ad alanı, farklı bir ad alanında ise (Bu örnekte, ad alanı `http://www.microsoft.com/LinqToXmlTransform/2007`), bu alt öğe yeni ağaca kopyalanmaz. Bunun yerine, ad alanı yukarıda belirtilen özel ad alanıdır ve öğenin yerel adı `ApplyTransforms` ise, Kaynak ağacındaki öğenin alt düğümleri yinelenir ve yeni ağaca kopyalanır (ek açıklamalı alt öğelerin olduğu özel durum ile). kendileri bu kurallara göre dönüştürülür).
 
-- Bu, XSL 'teki dönüşümler belirtimine benzer. Düğüm kümesi seçen sorgu, bir şablon için XPath ifadesine benzer. Ek açıklama olarak kaydedilen yeni @no__t oluşturma kodu, XSL 'deki dizi oluşturucusuna benzerdir ve `ApplyTransforms` öğesi, XSL içindeki `xsl:apply-templates` öğesine benzerdir.
+- Bu, XSL 'teki dönüşümler belirtimine benzer. Düğüm kümesi seçen sorgu, bir şablon için XPath ifadesine benzer. Ek açıklama olarak kaydedilen yeni <xref:System.Xml.Linq.XElement> oluşturma kodu, XSL 'deki dizi oluşturucusuna benzerdir ve `ApplyTransforms` öğesi, XSL içindeki `xsl:apply-templates` öğesine benzerdir.
 
 - Bu yaklaşımı almanın avantajlarından biri olan sorgular, her zaman değiştirilmemiş kaynak ağacına sorgu yazırsınız. Ağaçta yapılan değişikliklerin yazmakta olduğunuz sorguları nasıl etkilediği konusunda endişelenmeniz gerekmez.
 
@@ -85,7 +85,7 @@ End Module
 
 ## <a name="a-more-complicated-transform"></a>Daha karmaşık bir dönüşüm
 
- Aşağıdaki örnek, ağacı sorgular ve `Data` öğelerinin ortalamasını ve toplamını hesaplar ve bunları ağaca yeni öğeler olarak ekler.
+Aşağıdaki örnek, ağacı sorgular ve `Data` öğelerinin ortalamasını ve toplamını hesaplar ve bunları ağaca yeni öğeler olarak ekler.
 
 ```vb
 Imports <xmlns:xf="http://www.microsoft.com/LinqToXmlTransform/2007">
@@ -133,10 +133,10 @@ Module Module1
         Console.WriteLine("----------------")
         Console.WriteLine(newData)
     End Sub
-End Module 
+End Module
 ```
 
- Bu örnek aşağıdaki çıktıyı üretir:
+Bu örnek aşağıdaki çıktıyı üretir:
 
 ```console
 Before Transform
@@ -165,7 +165,7 @@ Küçük bir işlev olan `XForm`, özgün, açıklamalı ağaç öğesinden yeni
 İşlevin sahte kodu oldukça basittir:
 
 > İşlevi bir XElement bağımsız değişken olarak alır ve bir XElement döndürür.
-> 
+>
 > Bir öğenin XElement ek açıklaması varsa, yeni bir XElement döndürün:
 >
 > - Yeni XElement adı ek açıklama öğesinin adıdır.
@@ -338,7 +338,7 @@ Module Module1
         Console.WriteLine("----------------")
         Console.WriteLine(newRoot)
     End Sub
-End Module 
+End Module
 ```
 
 Bu örnek aşağıdaki çıktıyı üretir:

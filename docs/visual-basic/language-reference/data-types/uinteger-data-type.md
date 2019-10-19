@@ -1,5 +1,5 @@
 ---
-title: Uınteger veri türü (Visual Basic)
+title: UInteger Veri türü (Visual Basic)
 ms.date: 01/31/2018
 f1_keywords:
 - vb.uinteger
@@ -16,39 +16,39 @@ helpviewer_keywords:
 - UI literal type characters [Visual Basic]
 - data types [Visual Basic], integral
 ms.assetid: db7ddd34-4f23-46f5-84dd-8b0f83bb8729
-ms.openlocfilehash: 12447e56f89914121dcc9eda2bee0700343baf12
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1ae0cbd3a518bf863a3c57f50934837a486d2901
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64646992"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72583131"
 ---
 # <a name="uinteger-data-type"></a>UInteger veri türü
 
-Değeri 0'dan 4.294.967.295'e arasında değişen ayrı tutma işaretsiz 32-bit (4-bayt) tam sayı.  
-  
+0 ile 4.294.967.295 arasında değer değişen işaretsiz 32 bitlik (4 baytlık) tamsayıları tutar.
+
 ## <a name="remarks"></a>Açıklamalar
 
- `UInteger` Veri türünü işaretsiz en büyük değeri en verimli veri genişliği sağlar.  
-  
- Varsayılan değer olan `UInteger` 0'dır.  
-  
+@No__t_0 veri türü en etkili veri genişliğinde en büyük işaretsiz değeri sağlar.
+
+@No__t_0 varsayılan değeri 0 ' dır.
+
 ## <a name="literal-assignments"></a>Değişmez değer atamaları
 
-Bildirmek ve başlatmak bir `UInteger` değişkenini, bir ondalık sabit değeri, onaltılık bir sabit değer, sekizlik bir sabit değer atama ya da (ikili değişmez değer Visual Basic 2017'den itibaren). Tamsayı sabit değeri aralığının dışında ise `UInteger` (diğer bir deyişle, bu ise kısa <xref:System.UInt32.MinValue?displayProperty=nameWithType> veya ondan <xref:System.UInt32.MaxValue?displayProperty=nameWithType>, bir derleme hatası oluşur.
+Bir `UInteger` değişkenini bir ondalık değişmez değeri, onaltılı bir sabit değer, sekizlik bir sabit değer veya (Visual Basic 2017 ' den başlayarak) ikili bir değişmez değer atayarak bildirebilirsiniz. Tamsayı sabit değeri `UInteger` aralığının dışındaysa (yani, <xref:System.UInt32.MinValue?displayProperty=nameWithType> veya <xref:System.UInt32.MaxValue?displayProperty=nameWithType> değerinden daha küçükse, bir derleme hatası oluşur.
 
-Aşağıdaki örnekte, tamsayılar ondalık, onaltılık, gösterilen 3,000,000,000 eşit ve ikili sabit değerler atanır `UInteger` değerleri.
-  
-[!code-vb[UInteger](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#UInt)]  
+Aşağıdaki örnekte, ondalık, onaltılık ve ikili sabit değerler olarak temsil edilen 3.000.000.000 'e eşit tamsayılar `UInteger` değerlere atanır.
 
-> [!NOTE] 
-> Önek kullanın `&h` veya `&H` önek onaltılık bir sabit belirtmek için `&b` veya `&B` ikili sabit ve öneki belirtmek için `&o` veya `&O` sekizlik bir sabit belirtmek için. Ondalık değişmez değerler, önek vardır.
+[!code-vb[UInteger](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#UInt)]
 
-Visual Basic 2017'den itibaren alt çizgi karakteri de kullanabilirsiniz `_`, okunabilirliği artırmak için bir basamak ayırıcı olarak, aşağıdaki örnekte görüldüğü gibi.
+> [!NOTE]
+> Ön ek `&h` veya `&H` bir onaltılık sabit değeri, ön ek `&b` veya `&B` bir ikili sabit değer belirtmek için, önek `&o` veya `&O`, sekizlik bir sabit değeri belirtmek için kullanılır. Ondalık değişmez değerlerinin ön eki yok.
 
-[!code-vb[UInteger](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#UIntS)]  
+Visual Basic 2017 ' den başlayarak, aşağıdaki örnekte gösterildiği gibi, okunabilirliği geliştirmek için `_` alt çizgi karakterini bir rakam ayırıcısı olarak da kullanabilirsiniz.
 
-Visual Basic 15.5 ile başlayarak, alt çizgi karakteri de kullanabilirsiniz (`_`) öneki ve onaltılık, ikili veya sekizlik basamak arasında önde gelen bir ayırıcı olarak. Örneğin:
+[!code-vb[UInteger](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#UIntS)]
+
+Visual Basic 15,5 ' den başlayarak, alt çizgi karakterini (`_`) ön ek ile onaltılık, ikili veya sekizlik basamaklar arasında önde gelen bir ayırıcı olarak kullanabilirsiniz. Örneğin:
 
 ```vb
 Dim number As UInteger = &H_0F8C_0326
@@ -56,7 +56,7 @@ Dim number As UInteger = &H_0F8C_0326
 
 [!INCLUDE [supporting-underscores](../../../../includes/vb-separator-langversion.md)]
 
-Sayısal değişmez değerleri de dahil edebilirsiniz `UI` veya `ui` [türü karakteri](../../programming-guide/language-features/data-types/type-characters.md) belirtmek için `UInteger` aşağıdaki örnekte gösterildiği gibi veri türü.
+Sayısal değişmez değerler, aşağıdaki örnekte gösterildiği gibi `UInteger` veri türünü belirtmek için `UI` ya da `ui` [tür karakterini](../../programming-guide/language-features/data-types/type-characters.md) içerebilir.
 
 ```vb
 Dim number = &H_0FAC_14D7ui
@@ -64,20 +64,20 @@ Dim number = &H_0FAC_14D7ui
 
 ## <a name="programming-tips"></a>Programlama ipuçları
 
- `UInteger` Ve `Integer` veri türleri olduğundan bu en iyi performansı bir 32-bit işlemci üzerinde sağlamak daha küçük tamsayı türleri (`UShort`, `Short`, `Byte`, ve `SByte`), daha az BITS kullandıkları olsa bile daha fazla sürebilir Yükleme, depolama ve getirme.  
-  
-- **Negatif sayılar.** Çünkü `UInteger` işaretsiz bir türü, negatif bir sayıyı temsil edemez. Tek işlenenli eksi işareti kullanırsanız (`-`) yazmak için değerlendirilen bir ifade işlecinin `UInteger`, Visual Basic ifade dönüştürür `Long` ilk.  
-  
-- **CLS uyumluluğu.** `UInteger` Veri türü değil parçası [ortak dil belirtimi](https://www.ecma-international.org/publications/standards/Ecma-335.htm) (CLS), böylece onu kullanan bileşen CLS uyumlu kod kullanamıyor.
-  
-- **Birlikte çalışabilirlik değerlendirmeleri.** Örnek otomasyon ve COM nesneleri için .NET Framework için yazılmaz bileşenleriyle arabirim, gibi türleri akılda tutulması `uint` diğer ortamlarda farklı veri genişliği (16 bit) olabilir. Bir 16 bit bağımsız değişkeni böyle bir bileşene geçiriyorsanız, olarak bildirin `UShort` yerine `UInteger` Yönetilen Visual Basic kodunuzda.  
-  
-- **Genişletme.** `UInteger` Widens veri türü için `Long`, `ULong`, `Decimal`, `Single`, ve `Double`. Yani dönüştürebilirsiniz `UInteger` karşılaşmadan bu türlerden birine bir <xref:System.OverflowException?displayProperty=nameWithType> hata.  
-  
-- **Tür karakterleri.** Değişmez değer türü karakterleri ekleme `UI` sabit değerine zorlar `UInteger` veri türü. `UInteger` hiçbir tanımlayıcı türü karakteri var.  
-  
-- **Çerçeve türü.** .NET Framework içinde karşılık gelen türü <xref:System.UInt32?displayProperty=nameWithType> yapısı.  
-  
+@No__t_0 ve `Integer` veri türleri, daha küçük tamsayı türleri (`UShort`, `Short`, `Byte` ve `SByte`), daha az sayıda bit kullansa bile, yükleme için daha fazla zaman alacak şekilde 32 bitlik bir işlemcide en iyi performansı sağlar. , depola ve getir.
+
+- **Negatif sayılar.** @No__t_0 işaretsiz bir tür olduğundan, negatif bir sayıyı temsil edemez. @No__t_1 türü değerlendirilen bir ifadede birli eksi (`-`) işlecini kullanırsanız, Visual Basic ifadeyi önce `Long` dönüştürür.
+
+- **CLS uyumluluğu.** @No__t_0 veri türü [ortak dil belirtiminin](https://www.ecma-international.org/publications/standards/Ecma-335.htm) (CLS) bir parçası değildir, bu nedenle CLS uyumlu kod onu kullanan bir bileşeni tüketmez.
+
+- **Birlikte çalışma konuları.** Otomasyon veya COM nesneleri gibi .NET Framework için yazılmayan bileşenlerle arabirimleriniz varsa, `uint` gibi türlerin diğer ortamlarda farklı bir veri genişliğine (16 bit) sahip olabileceğini aklınızda bulundurun. Böyle bir bileşene 16 bitlik bir bağımsız değişken geçirirseniz, bunu yönetilen Visual Basic kodunuzda `UInteger` yerine `UShort` olarak bildirin.
+
+- **Kan.** @No__t_0 veri türü `Long`, `ULong`, `Decimal`, `Single` ve `Double` için. Bu, bir <xref:System.OverflowException?displayProperty=nameWithType> hatasıyla karşılaşmadan `UInteger` bu türlerden birine dönüştürebileceğiniz anlamına gelir.
+
+- **Tür karakterleri.** Değişmez değer türü karakterlerinin bir hazır `UI` eklenmesi, `UInteger` veri türüne zorlar. `UInteger` tanımlayıcı türü karakteri yok.
+
+- **Çerçeve türü.** .NET Framework karşılık gelen tür <xref:System.UInt32?displayProperty=nameWithType> yapısıdır.
+
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.UInt32>

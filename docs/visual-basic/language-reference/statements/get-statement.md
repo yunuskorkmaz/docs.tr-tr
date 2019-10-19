@@ -1,5 +1,5 @@
 ---
-title: Get deyimi (Visual Basic)
+title: Get açıklaması (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Get
@@ -11,19 +11,19 @@ helpviewer_keywords:
 - Get keyword [Visual Basic]
 - property procedures [Visual Basic], Get statements
 ms.assetid: 56b05cdc-bd64-4dfd-bb12-824eacec6f94
-ms.openlocfilehash: 33fa6811f952d240fb86bbdf59ca83df0afc03ad
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d76155b8ff29e4f5e9206ae8fc689fa4fcaf3b8c
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625525"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72581829"
 ---
 # <a name="get-statement"></a>Get Deyimi
-Bildiren bir `Get` özellik yordamı bir özelliğin değerini almak için kullanılır.  
+Bir özelliğin değerini almak için kullanılan bir `Get` özellik yordamı bildirir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```vb  
 [ <attributelist> ] [ accessmodifier ] Get()  
     [ statements ]  
 End Get  
@@ -33,43 +33,43 @@ End Get
   
 |Terim|Tanım|  
 |---|---|  
-|`attributelist`|İsteğe bağlı. Bkz: [öznitelik listesi](../../../visual-basic/language-reference/statements/attribute-list.md).|  
-|`accessmodifier`|İsteğe bağlı biri `Get` ve `Set` bu özellik deyimlerinde. Aşağıdakilerden biri olabilir:<br /><br /> -   [Korumalı](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [arkadaş](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [Özel](../../../visual-basic/language-reference/modifiers/private.md)<br />-   `Protected Friend`<br /><br /> Bkz: [erişim düzeyini Visual Basic'te](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|  
-|`statements`|İsteğe bağlı. Çalıştırılan bir veya daha fazla deyim `Get` özelliği yordamı çağrılır.|  
-|`End Get`|Gerekli. Tanımını sonlandırır `Get` özellik yordamı.|  
+|`attributelist`|İsteğe bağlı. Bkz. [öznitelik listesi](../../../visual-basic/language-reference/statements/attribute-list.md).|  
+|`accessmodifier`|Bu özelliğindeki `Get` ve `Set` deyimlerinin en az birinde isteğe bağlı. Aşağıdakilerden biri olabilir:<br /><br /> -   [korumalı](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [arkadaş](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [özel](../../../visual-basic/language-reference/modifiers/private.md)<br />-   `Protected Friend`<br /><br /> [Visual Basic erişim düzeylerine](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)bakın.|  
+|`statements`|İsteğe bağlı. @No__t_0 özellik yordamı çağrıldığında çalışan bir veya daha fazla deyim.|  
+|`End Get`|Gerekli. @No__t_0 özelliği yordamının tanımını sonlandırır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Her özelliği bir `Get` özellik yordamı özelliği işaretlenmediği sürece `WriteOnly`. `Get` Yordamı özelliğinin geçerli değeri döndürmek için kullanılır.  
+ Özellik `WriteOnly` olarak işaretlenmedikçe her özelliğin `Get` Özellik yordamına sahip olması gerekir. @No__t_0 yordamı, özelliğin geçerli değerini döndürmek için kullanılır.  
   
- Visual Basic otomatik olarak çağıran bir özelliğin `Get` özelliğinin değeri bir ifade istediğinde yordamı.  
+ Visual Basic bir ifade özelliğin değerini istediğinde bir özelliğin `Get` yordamını otomatik olarak çağırır.  
   
- Özellik bildirimi gövdesi yalnızca özelliğin içerebilir `Get` ve `Set` yordamları arasında [Property deyimi](../../../visual-basic/language-reference/statements/property-statement.md) ve `End Property` deyimi. Bu yordamlar dışında her şey depolanamıyor. Özellikle, bu özelliğin geçerli değerini depolanamıyor. Özellik yordamları birini içinde depolamak, bir özellik yordamı, erişemediği için bu değer özelliği dışında depolamanız gerekir. Değeri depolamak için her zamanki yaklaşımdır bir [özel](../../../visual-basic/language-reference/modifiers/private.md) bildirilen değişkenin özelliği ile aynı düzeyde. Tanımlamanız gerekir bir `Get` yordam içinde geçerli olduğu özellik.  
+ Özellik bildiriminin gövdesi, Property [ifadesiyle](../../../visual-basic/language-reference/statements/property-statement.md) `End Property` ifadesiyle yalnızca özelliğin `Get` ve `Set` yordamlarını içerebilir. Bu yordamlar dışında bir şey depolayamazsınız. Özellikle, özelliğin geçerli değerini depolayaamaz. Özellik yordamlarından birinde depolursa, diğer özellik yordamının bu değeri, özelliğin dışında depolamanız gerekir. Her zamanki yaklaşım, değeri özelliği ile aynı düzeyde belirtilen [özel](../../../visual-basic/language-reference/modifiers/private.md) bir değişkende depokullanmaktır. Bir `Get` yordamını, uygulandığı özelliğin içinde tanımlamanız gerekir.  
   
- `Get` Yordamı kullanmadığınız sürece, kapsayan özelliği erişim düzeyi için varsayılan olarak `accessmodifier` içinde `Get` deyimi.  
+ @No__t_0 yordamı, `Get` ifadesinde `accessmodifier` kullanmadığınız durumlar dışında, kendisini kapsayan özelliğin erişim düzeyi olur.  
   
 ## <a name="rules"></a>Kurallar  
   
-- **Karışık erişim düzeyleri.** Okuma-yazma özelliği tanımlıyorsanız, isteğe bağlı olarak farklı erişim düzeyi için belirtebilirsiniz `Get` veya `Set` yordamı, ancak ikisine birden değil. Bunu yaparsanız, yordam erişim düzeyi özellik erişim düzeyinden daha kısıtlayıcı olmalıdır. Örneğin, özellik bildirilirse `Friend`, bildirebilirsiniz `Get` yordamı `Private`, ama `Public`.  
+- **Karışık erişim düzeyleri.** Okuma-yazma özelliği tanımlıyorsanız, isteğe bağlı olarak `Get` ya da `Set` yordamı için farklı bir erişim düzeyi belirtebilirsiniz, ancak her ikisini birden belirtemezsiniz. Bunu yaparsanız, yordam erişim düzeyinin özelliğin erişim düzeyinden daha kısıtlayıcı olması gerekir. Örneğin, özellik `Friend` olarak bildirilirse, `Private` `Get` yordamını bildirebilirsiniz, ancak `Public`.  
   
-     Tanımlıyorsanız, bir `ReadOnly` özelliği `Get` yordamı tüm özelliği temsil eder. Farklı bir erişim düzeyini bildiremezsiniz `Get`, iki erişim düzeyi özelliği ayarlamanız gerekir.  
+     @No__t_0 özelliği tanımlıyorsanız, `Get` yordamı tüm özelliği temsil eder. Özelliği için iki erişim düzeyi ayarlayacağından, `Get` için farklı bir erişim düzeyi bildiremezsiniz.  
   
-- **Dönüş türü.** [Property deyimi](../../../visual-basic/language-reference/statements/property-statement.md) döndürdüğü değerin veri türü bildirebilirsiniz. `Get` Yordamı otomatik olarak döndürür veri türü. Herhangi bir veri türü veya bir sabit listesi, yapısı, sınıf veya arabirim adını belirtebilirsiniz.  
+- **Dönüş türü.** [Property deyimleri](../../../visual-basic/language-reference/statements/property-statement.md) , döndürdüğü değerin veri türünü bildirebilir. @No__t_0 yordam bu veri türünü otomatik olarak döndürür. Herhangi bir veri türü veya bir numaralandırma, yapı, sınıf veya arabirim adı belirtebilirsiniz.  
   
-     Varsa `Property` deyimi belirtmiyor `returntype`, yordam döndürür `Object`.  
+     @No__t_0 deyimin `returntype` belirtmezse yordam `Object` döndürür.  
   
 ## <a name="behavior"></a>Davranış  
   
-- **Bir yordam döndürüyor.** Zaman `Get` yordamı çağıran koda döndürür, özellik değeri istenen deyimi içinde yürütme devam eder.  
+- **Bir yordamdan dönme.** @No__t_0 yordamı çağıran koda döndüğünde, yürütme özelliği değeri istenen deyimin içinde devam eder.  
   
-     `Get` özellik yordamları kullanarak bir değer döndürebilir [dönüş deyimi](../../../visual-basic/language-reference/statements/return-statement.md) ya da dönüş değeri, özellik adına atayarak. Daha fazla bilgi için bkz: "Value dönüş" [Function deyimi](../../../visual-basic/language-reference/statements/function-statement.md).  
+     `Get` özellik yordamları, [return ifadesini](../../../visual-basic/language-reference/statements/return-statement.md) kullanarak ya da dönüş değerini özellik adına atayarak bir değer döndürebilir. Daha fazla bilgi için [Işlev deyimindeki](../../../visual-basic/language-reference/statements/function-statement.md)"dönüş değeri" başlığına bakın.  
   
-     `Exit Property` Ve `Return` deyimleri neden hemen bir çıkış bir özellik yordamı. Herhangi bir sayıda `Exit Property` ve `Return` deyimleri yordamda herhangi bir yerinde görünebilir ve karıştırabilir miyim `Exit Property` ve `Return` deyimleri.  
+     @No__t_0 ve `Return` deyimleri, bir özellik yordamından anında çıkış oluşmasına neden olur. Herhangi bir sayıda `Exit Property` ve `Return` deyimi yordamda herhangi bir yerde görünebilir ve `Exit Property` ve `Return` deyimlerini karıştırabilirsiniz.  
   
-- **Dönüş değeri.** Bir değer döndürmek için bir `Get` yordam, özellik adı için değer atamak veya olmasını bir [dönüş deyimi](../../../visual-basic/language-reference/statements/return-statement.md). `Return` Deyimi aynı anda atar `Get` yordamı dönüş değeri ve yordamdan çıkar.  
+- **Dönüş değeri.** Bir `Get` yordamından bir değer döndürmek için, değeri özellik adına atayabilir ya da bir [Return ifadesine](../../../visual-basic/language-reference/statements/return-statement.md)dahil edebilirsiniz. @No__t_0 deyimleri aynı anda `Get` yordam dönüş değerini atar ve yordamdan çıkar.  
   
-     Kullanırsanız `Exit Property` özellik adı için bir değer atama olmadan `Get` yordamı özelliğin veri türü için varsayılan değeri döndürür. Daha fazla bilgi için bkz: "Value dönüş" [Function deyimi](../../../visual-basic/language-reference/statements/function-statement.md).  
+     Özellik adına bir değer atamadan `Exit Property` kullanırsanız, `Get` yordamı özelliğin veri türü için varsayılan değeri döndürür. Daha fazla bilgi için [Işlev deyimindeki](../../../visual-basic/language-reference/statements/function-statement.md)"dönüş değeri" başlığına bakın.  
   
-     Aşağıdaki örnekte iki şekilde salt okunur özelliği `quoteForTheDay` özel değişkeninde tuttuğu değeri döndürebilir `quoteValue`.  
+     Aşağıdaki örnekte, salt okuma özelliğinin `quoteForTheDay` özel değişkende tutulan değeri döndürebileceği iki yol gösterilmektedir `quoteValue`.  
   
      [!code-vb[VbVbalrStatements#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#27)]  
   
@@ -78,7 +78,7 @@ End Get
      [!code-vb[VbVbalrStatements#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#29)]  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte `Get` deyimini bir özelliğinin değerini döndürür.  
+ Aşağıdaki örnek, bir özelliğin değerini döndürmek için `Get` ifadesini kullanır.  
   
  [!code-vb[VbVbalrStatements#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#30)]  
   
@@ -88,4 +88,4 @@ End Get
 - [Property Deyimi](../../../visual-basic/language-reference/statements/property-statement.md)
 - [Exit Deyimi](../../../visual-basic/language-reference/statements/exit-statement.md)
 - [Nesneler ve Sınıflar](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
-- [İzlenecek yol: Sınıfları tanımlama](../../../visual-basic/programming-guide/language-features/objects-and-classes/walkthrough-defining-classes.md)
+- [İzlenecek Yol: Sınıfları Tanımlama](../../../visual-basic/programming-guide/language-features/objects-and-classes/walkthrough-defining-classes.md)

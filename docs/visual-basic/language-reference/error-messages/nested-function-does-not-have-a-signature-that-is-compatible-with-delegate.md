@@ -7,34 +7,35 @@ f1_keywords:
 helpviewer_keywords:
 - BC36532
 ms.assetid: 493f292c-d81e-40ef-8b47-61f020571829
-ms.openlocfilehash: 912962e2ab39c4811294ccc225814b230100e12a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d65c8eab661675c955ff6562098248c04036d6e7
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592006"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72580646"
 ---
-# <a name="nested-function-does-not-have-a-signature-that-is-compatible-with-delegate-delegatename"></a>İç içe geçmiş işlev temsilcisiyle uyumlu bir imzası yok '\<delegateName'in >'
-Bir lambda ifadesi, uyumlu bir imzası olan bir temsilci atanmış durumda. Örneğin, aşağıdaki kodda, temsilci `Del` iki tamsayı parametre yok.  
-  
-```vb  
-Delegate Function Del(ByVal p As Integer, ByVal q As Integer) As Integer  
-```  
-  
- Bir bağımsız değişkenli lambda ifadesi türü olarak bildirilirse hataya neden `Del`:  
-  
-```vb  
-' Neither of these is valid.   
-' Dim lambda1 As Del = Function(n As Integer) n + 1  
-' Dim lambda2 As Del = Function(n) n + 1  
-```  
-  
- **Hata Kimliği:** BC36532  
-  
-## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
-  
-- Temsilci tanımı veya atanmış bir lambda ifadesi, imzaları uyumlu olacak şekilde ayarlayın.  
-  
+# <a name="nested-function-does-not-have-a-signature-that-is-compatible-with-delegate-delegatename"></a>İç içe yerleştirilmiş işlevin imzası ' \<delegatename > ' temsilcisiyle uyumlu değil
+
+Uyumsuz imzaya sahip bir temsilciye bir lambda ifadesi atandı. Örneğin, aşağıdaki kodda, temsilci `Del` iki tamsayı parametresine sahiptir.
+
+```vb
+Delegate Function Del(ByVal p As Integer, ByVal q As Integer) As Integer
+```
+
+Bir bağımsız değişkeni olan bir lambda ifadesi `Del` tür olarak bildirilirse hata oluşur:
+
+```vb
+' Neither of these is valid.
+' Dim lambda1 As Del = Function(n As Integer) n + 1
+' Dim lambda2 As Del = Function(n) n + 1
+```
+
+**Hata kimliği:** BC36532
+
+## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için
+
+İmzaların uyumlu olması için temsilci tanımı ya da atanan lambda ifadesini ayarlayın.
+
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Gevşek Temsilci Dönüştürme](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)

@@ -29,20 +29,20 @@ helpviewer_keywords:
 - ByVal keyword [Visual Basic], Sub statements
 - Visual Basic code, Sub procedures
 ms.assetid: e347d700-d06c-405b-b302-e9b1edb57dfc
-ms.openlocfilehash: 00e2f313e283259ea44dd6da71530bed4bff31c5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7dc0ea1f1b30f5ffb0db8917538adf440c5ef891
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64751169"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72583197"
 ---
 # <a name="sub-statement-visual-basic"></a>Sub Deyimi (Visual Basic)
 
-Adı, parametreleri ve kodu tanımlayan bildirir bir `Sub` yordamı.
+Bir `Sub` yordamını tanımlayan adı, parametreleri ve kodu bildirir.
 
 ## <a name="syntax"></a>Sözdizimi
 
-```
+```vb
 [ <attributelist> ] [ Partial ] [ accessmodifier ] [ proceduremodifiers ] [ Shared ] [ Shadows ] [ Async ]
 Sub name [ (Of typeparamlist) ] [ (parameterlist) ] [ Implements implementslist | Handles eventlist ]
     [ statements ]
@@ -55,11 +55,11 @@ End Sub
 
 - `attributelist`
 
-  İsteğe bağlı. Bkz: [öznitelik listesi](attribute-list.md).
+  İsteğe bağlı. Bkz. [öznitelik listesi](attribute-list.md).
 
 - `Partial`
 
-  İsteğe bağlı. Kısmi bir yöntemin tanımını gösterir. Bkz: [kısmi yöntemler](../../../visual-basic/programming-guide/language-features/procedures/partial-methods.md).
+  İsteğe bağlı. Kısmi bir yöntemin tanımını gösterir. Bkz. [kısmi Yöntemler](../../../visual-basic/programming-guide/language-features/procedures/partial-methods.md).
 
 - `accessmodifier`
 
@@ -77,7 +77,7 @@ End Sub
 
   - [Private Protected](../../language-reference/modifiers/private-protected.md)
 
-  Bkz: [erişim düzeyini Visual Basic'te](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).
+  [Visual Basic erişim düzeylerine](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)bakın.
 
 - `proceduremodifiers`
 
@@ -99,69 +99,69 @@ End Sub
 
 - `Shared`
 
-  İsteğe bağlı. Bkz: [paylaşılan](../modifiers/shared.md).
+  İsteğe bağlı. Bkz. [paylaşılan](../modifiers/shared.md).
 
 - `Shadows`
 
-  İsteğe bağlı. Bkz: [Shadows](../modifiers/shadows.md).
+  İsteğe bağlı. Bkz. [gölgeler](../modifiers/shadows.md).
 
 - `Async`
 
-  İsteğe bağlı. Bkz: [zaman uyumsuz](../modifiers/async.md).
+  İsteğe bağlı. Bkz. [zaman uyumsuz](../modifiers/async.md).
 
 - `name`
 
-  Gerekli. Yordamın adı. Bkz: [bildirilen öğe adları](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md). Bir sınıf için bir oluşturucu yordam oluşturmak için kümesinin adı bir `Sub` yordama `New` anahtar sözcüğü. Daha fazla bilgi için [nesne ömrü: Nesneler nasıl oluşturulur ve imha](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md).
+  Gerekli. Yordamın adı. Bkz. [tanımlanmış öğe adları](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md). Bir sınıf için bir Oluşturucu yordamı oluşturmak için, bir `Sub` yordamının adını `New` anahtar sözcüğüne ayarlayın. Daha fazla bilgi için bkz. [nesne ömrü: nesneleri oluşturma ve yok etme](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md).
 
 - `typeparamlist`
 
-  İsteğe bağlı. Genel bir yordam için tür parametreleri listesi. Bkz: [türü listesinde](type-list.md).
+  İsteğe bağlı. Genel bir yordamın tür parametrelerinin listesi. Bkz. [tür listesi](type-list.md).
 
 - `parameterlist`
 
-  İsteğe bağlı. Bu yordamı parametrelerini temsil eden yerel değişken adlarının listesi. Bkz: [parametre listesi](parameter-list.md).
+  İsteğe bağlı. Bu yordamın parametrelerini temsil eden yerel değişken adlarının listesi. Bkz. [parametre listesi](parameter-list.md).
 
 - `Implements`
 
-  İsteğe bağlı. Bu yordam bir veya daha fazla uyguladığını belirtir `Sub` yordamları, bu yordamın içeren sınıf veya yapı tarafından uygulanan bir arabirim içinde tanımlanmış her biri. Bkz: [uygulayan deyimi](implements-statement.md).
+  İsteğe bağlı. Bu yordamın, her biri bu yordamın kapsayan sınıf veya yapı tarafından uygulanan bir arabirimde tanımlanan bir veya daha fazla `Sub` yordamlarını uyguladığını gösterir. Bkz. [Implements açıklaması](implements-statement.md).
 
 - `implementslist`
 
-  Gerekli if `Implements` sağlanır. Listesi `Sub` uygulanmakta olan yordamlar.
+  @No__t_0 sağlanırsa gereklidir. Uygulanan `Sub` yordamlarının listesi.
 
   `implementedprocedure [ , implementedprocedure ... ]`
 
-  Her `implementedprocedure` aşağıdaki söz dizimini ve bölümleri vardır:
+  Her `implementedprocedure` aşağıdaki söz dizimi ve bölümlere sahiptir:
 
   `interface.definedname`
 
-  |Bölümü|Açıklama|
+  |Bölümüyle|Açıklama|
   |---|---|
-  |`interface`|Gerekli. Bu yordam tarafından uygulanan arabirimin adını sınıf veya yapı içeren.|
-  |`definedname`|Gerekli. Ad tarafından yordamı tanımlanan `interface`.|
+  |`interface`|Gerekli. Bu yordamın kapsayan sınıf veya yapı tarafından uygulanan bir arabirimin adı.|
+  |`definedname`|Gerekli. Yordamın `interface` tanımladığı ad.|
 
 - `Handles`
 
-  İsteğe bağlı. Bu yordam, bir veya daha fazla belirli olayları işleyebileceğini belirtir. Bkz: [işler](handles-clause.md).
+  İsteğe bağlı. Bu yordamın bir veya daha fazla belirli olayı işleyebileceğini belirtir. Bkz. [işleyiciler](handles-clause.md).
 
 - `eventlist`
 
-  Gerekli if `Handles` sağlanır. Bu yordamı işleme olayların listesi.
+  @No__t_0 sağlanırsa gereklidir. Bu yordamın işleyeceği olayların listesi.
 
   `eventspecifier [ , eventspecifier ... ]`
 
-  Her `eventspecifier` aşağıdaki söz dizimini ve bölümleri vardır:
+  Her `eventspecifier` aşağıdaki söz dizimi ve bölümlere sahiptir:
 
   `eventvariable.event`
 
-  |Bölümü|Açıklama|
+  |Bölümüyle|Açıklama|
   |---|---|
-  |`eventvariable`|Gerekli. Nesne değişkeni sınıfın veya olayı yükselten yapı veri türü ile bildirilmiş.|
-  |`event`|Gerekli. Bu yordamı işleme olayın adı.|
+  |`eventvariable`|Gerekli. Olayı oluşturan sınıfın veya yapının veri türüyle belirtilen nesne değişkeni.|
+  |`event`|Gerekli. Bu yordamın işleyeceği olayın adı.|
 
 - `statements`
 
-  İsteğe bağlı. Bu yordam içinde çalıştırılacak deyimler bloğunu.
+  İsteğe bağlı. Bu yordam içinde çalıştırılacak deyimler bloğu.
 
 - `End Sub`
 
@@ -169,21 +169,21 @@ End Sub
 
 ## <a name="remarks"></a>Açıklamalar
 
-Tüm yürütülebilir kod yordam içinde olmalıdır. Kullanım bir `Sub` çağrıldığı koda bir değer döndürmesi istemediğinizde yordamı. Kullanım bir `Function` yordamı, bir değer döndürmek istediğinizde.
+Tüm yürütülebilir kodların bir yordamın içinde olması gerekir. Çağırma koduna bir değer döndürmek istemediğiniz zaman `Sub` prosedürü kullanın. Bir değer döndürmek istediğinizde `Function` prosedürü kullanın.
 
 ## <a name="defining-a-sub-procedure"></a>Bir alt yordam tanımlama
 
-Tanımlayabileceğiniz bir `Sub` yordamı yalnızca Modül düzeyinde. Bir alt yordam bildirimi bağlamı, bu nedenle, bir sınıf, yapı, modül veya bir arabirim olmalıdır ve bir kaynak dosyası, bir ad alanı, bir yordam veya bir bloğu olamaz. Daha fazla bilgi için [bildirim bağlamları ve varsayılan erişim düzeyleri](declaration-contexts-and-default-access-levels.md).
+Bir `Sub` yordamını yalnızca modül düzeyinde tanımlayabilirsiniz. Bir alt yordamın bildirim bağlamı, bu nedenle bir sınıf, yapı, modül veya arabirim olmalıdır ve kaynak dosya, bir ad alanı, yordam veya bir blok olamaz. Daha fazla bilgi için bkz. [bildirim bağlamları ve varsayılan erişim düzeyleri](declaration-contexts-and-default-access-levels.md).
 
-`Sub` yordamları varsayılan genel erişim için. Erişim değiştiricileri kullanarak, kullanıcıların erişim düzeylerini ayarlayabilirsiniz.
+yordamları, genel erişim için varsayılan `Sub`. Erişim değiştiricilerini kullanarak erişim düzeylerini ayarlayabilirsiniz.
 
-Yordamı kullanıyorsa `Implements` anahtar sözcüğü, kapsayan sınıf veya yapı olmalıdır bir `Implements` deyim indisinin hemen ardından kendi `Class` veya `Structure` deyimi. `Implements` Deyimi, belirtilen her bir arabirime içermelidir `implementslist`. Ancak, bir arabirim tarafından tanımlayan adı `Sub` (içinde `definedname`) bu yordamı adıyla eşleşmesi gerekmez (içinde `name`).
+Yordam `Implements` anahtar sözcüğünü kullanıyorsa, kapsayan sınıf veya yapının, `Class` veya `Structure` deyimlerinden hemen sonraki bir `Implements` ifadesine sahip olması gerekir. @No__t_0 deyimin `implementslist` belirtilen her arabirimi içermesi gerekir. Ancak, bir arabirimin `Sub` tanımladığı adın (`definedname`) bu yordamın adıyla eşleşmesi gerekmez (`name`).
 
-## <a name="returning-from-a-sub-procedure"></a>Bir alt yordamdan döndürme
+## <a name="returning-from-a-sub-procedure"></a>Bir alt yordamdan dönme
 
-Olduğunda bir `Sub` yordamı çağıran koda döndürür, yürütme adlı deyiminden sonraki ile devam eder.
+Bir `Sub` yordamı çağıran koda döndüğünde, yürütme onu çağıran deyimden sonra ifadesiyle devam eder.
 
-Aşağıdaki örnek, geri döndürme gösterir. bir `Sub` yordamı.
+Aşağıdaki örnekte, bir `Sub` yordamından döndürülen bir dönüş gösterilmektedir.
 
 ```vb
 Sub mySub(ByVal q As String)
@@ -191,46 +191,46 @@ Sub mySub(ByVal q As String)
 End Sub
 ```
 
-`Exit Sub` Ve `Return` deyimleri neden hemen çıkılmadan bir `Sub` yordamı. Herhangi bir sayıda `Exit Sub` ve `Return` deyimleri yordamda herhangi bir yerinde görünebilir ve karıştırabilir miyim `Exit Sub` ve `Return` deyimleri.
+@No__t_0 ve `Return` deyimleri, bir `Sub` yordamından anında çıkış oluşmasına neden olur. Herhangi bir sayıda `Exit Sub` ve `Return` deyimi yordamda herhangi bir yerde görünebilir ve `Exit Sub` ve `Return` deyimlerini karıştırabilirsiniz.
 
-## <a name="calling-a-sub-procedure"></a>Bir alt yordam çağırma
+## <a name="calling-a-sub-procedure"></a>Bir alt yordamı çağırma
 
-Çağrısı bir `Sub` yordam adı bir deyimde kullanarak ve ardından bu ada sahip, bağımsız değişken listesi parantez içinde aşağıdaki yordamı. Herhangi bir bağımsız değişkeni belirtmezseniz ayraçları atlayabilirsiniz. Ancak, kodunuz her zaman parantezler eklerseniz daha okunabilir olur.
+Bir ifadede yordam adını kullanarak bir `Sub` yordamı çağırır ve ardından bu adı parantez içindeki bağımsız değişken listesiyle takip edersiniz. Parantezleri yalnızca herhangi bir bağımsız değişken belirtmezseniz atlayabilirsiniz. Ancak, her zaman parantezleri eklerseniz kodunuz daha okunabilir.
 
-A `Sub` yordam ve `Function` yordam parametreleri ve bir dizi deyim gerçekleştirin. Ancak, bir `Function` yordamı döndürür bir değer ve bir `Sub` yordamı değil. Bu nedenle, kullanamazsınız bir `Sub` yordamda bir ifade.
+@No__t_0 yordamı ve `Function` yordamı parametrelere sahip olabilir ve bir dizi deyim gerçekleştirebilir. Ancak, bir `Function` yordam bir değer döndürür ve bir `Sub` yordamı değildir. Bu nedenle, bir ifadede `Sub` yordamı kullanamazsınız.
 
-Kullanabileceğiniz `Call` çağırdığınızda anahtar sözcüğü bir `Sub` yordamı, ancak bu anahtar sözcüğü birçok kullanım için önerilmez. Daha fazla bilgi için [Call deyimi](call-statement.md).
+Bir `Sub` yordamını çağırdığınızda `Call` anahtar sözcüğünü kullanabilirsiniz, ancak bu anahtar sözcük çoğu kullanımlar için önerilmez. Daha fazla bilgi için bkz. [Call deyimleri](call-statement.md).
 
-Visual Basic, aritmetik ifadeler iç verimliliğini artırmak için bazen yeniden düzenler. Diğer yordamlar çağrı ifadeleri, bağımsız değişken listesi içeriyorsa, bu nedenle, söz konusu ifadelerden belirli bir sırada çağrılacak varsayılır olmamalıdır.
+Visual Basic bazen, iç verimliliği artırmak için aritmetik ifadeleri yeniden düzenler. Bu nedenle, bağımsız değişken listeniz diğer yordamları çağıran ifadeler içeriyorsa, bu ifadelerin belirli bir sırada çağrılacağını varsaymamalıdır.
 
 ## <a name="async-sub-procedures"></a>Zaman uyumsuz alt yordamlar
 
-Zaman uyumsuz özelliğini kullanarak, açık geri çağırmaları kullanarak veya kodunuzun birden çok işlevleri veya lambda ifadelerinde el ile bölme olmadan zaman uyumsuz işlevleri çağırabilirsiniz.
+Async özelliğini kullanarak, zaman uyumsuz işlevleri açık geri çağırmaları kullanmadan çağırabilir veya kodunuzu birden çok işlev veya lambda ifadesine el ile böedebilirsiniz.
 
-Bir yordam ile işaretlerseniz [zaman uyumsuz](../modifiers/async.md) kullanabileceğiniz değiştiricisi [Await](../../../visual-basic/language-reference/operators/await-operator.md) yordamda işleci. Ulaştığında denetlemek bir `Await` ifadesinde `Async` yordam, Denetim çağırana döner ve awaited görevi tamamlanıncaya kadar yordamı ediyor askıya alınır. Görev tamamlandığında, yürütme yordamda devam edebilir.
+Bir yordamı [zaman uyumsuz](../modifiers/async.md) değiştiriciyle işaretlerseniz, yordamda [await](../../../visual-basic/language-reference/operators/await-operator.md) işlecini kullanabilirsiniz. Denetim, `Async` yordamındaki bir `Await` ifadesine ulaştığında denetim çağırana döner ve beklenen görev tamamlanana kadar yordamdaki ilerleme durumu askıya alınır. Görev tamamlandığında, yürütme yordamda çalışmaya çalışabilir.
 
 > [!NOTE]
-> Bir `Async` yordamı döndürür henüz tam olmadığı ya da ilk beklenen nesne karşılaşıldığında çağıran ya da sonunda `Async` yordamı ulaşıldığında, hangisi daha önce gerçekleşirse.
+> Bir `Async` yordamı, henüz tamamlanmamış ilk beklenen nesne ile karşılaşıldığında ya da `Async` yordamının sonuna ulaşıldığında, hangisi önce gerçekleşirse arayan öğesine geri döner.
 
-Ayrıca işaretleyebilirsiniz bir [Function deyimi](function-statement.md) ile `Async` değiştiricisi. Bir `Async` işlevi dönüş türüne sahip <xref:System.Threading.Tasks.Task%601> veya <xref:System.Threading.Tasks.Task>. Bu konuda gösteren bir örnek daha sonra söz bir `Async` dönüş türü olan işlev <xref:System.Threading.Tasks.Task%601>.
+Ayrıca, `Async` değiştiricisiyle bir [Işlev ifadesini](function-statement.md) işaretleyebilirsiniz. @No__t_0 işlevi <xref:System.Threading.Tasks.Task%601> veya <xref:System.Threading.Tasks.Task> dönüş türüne sahip olabilir. Bu konunun ilerleyen kısımlarında yer alan örnek, <xref:System.Threading.Tasks.Task%601> dönüş türüne sahip bir `Async` işlevi gösterir.
 
-`Async` `Sub` yordamları, burada bir değer döndürülemez için olay işleyicileri, öncelikli olarak kullanılır. Bir `Async` `Sub` yordamı beklenemez ve çağıran bir `Async` `Sub` yordamı catch özel durumları olamaz, `Sub` yordam oluşturur.
+`Async` `Sub` yordamlar öncelikle bir değerin döndürülmeyeceğini olay işleyicileri için kullanılır. Bir `Async` `Sub` yordamı beklenemez ve bir `Async` `Sub` yordamının çağıranı `Sub` yordamının oluşturduğunu özel durumları yakalayamaz.
 
-Bir `Async` yordamı herhangi bildiremez [ByRef](../modifiers/byref.md) parametreleri.
+@No__t_0 yordam [ByRef](../modifiers/byref.md) parametreleri bildiremez.
 
-Hakkında daha fazla bilgi için `Async` prosedürler [Async ve Await ile zaman uyumsuz programlama](../../../visual-basic/programming-guide/concepts/async/index.md), [zaman uyumsuz programlarda akış kontrolü](../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md), ve [Async Return Types](../../../visual-basic/programming-guide/concepts/async/async-return-types.md).
+@No__t_0 yordamları hakkında daha fazla bilgi için bkz. [Async ve await Ile zaman uyumsuz programlama](../../../visual-basic/programming-guide/concepts/async/index.md), [zaman uyumsuz programlarda denetim akışı](../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md)ve [zaman uyumsuz dönüş türleri](../../../visual-basic/programming-guide/concepts/async/async-return-types.md).
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnekte `Sub` adı, parametreleri ve gövdesini kodunu tanımlamak için deyimi bir `Sub` yordamı.
+Aşağıdaki örnek, bir `Sub` yordamının gövdesini oluşturan adı, parametreleri ve kodu tanımlamak için `Sub` ifadesini kullanır.
 
 [!code-vb[VbVbalrStatements#58](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#58)]
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnekte, `DelayAsync` olduğu bir `Async` `Function` dönüş türü olan <xref:System.Threading.Tasks.Task%601>. `DelayAsync` sahip bir `Return` deyimi bir tamsayı döndürür. Bu nedenle, işlev bildirimi `DelayAsync` dönüş türüne sahip olmalıdır `Task(Of Integer)`. Dönüş türü olduğundan `Task(Of Integer)`, değerlendirmesi `Await` ifadesinde `DoSomethingAsync` aşağıdaki deyimi gösterildiği gibi bir tamsayı üretir: `Dim result As Integer = Await delayTask`.
+Aşağıdaki örnekte, `DelayAsync` dönüş türü <xref:System.Threading.Tasks.Task%601> olan bir `Async` `Function`. `DelayAsync`, bir tamsayı döndüren bir `Return` bildirimine sahiptir. Bu nedenle `DelayAsync` işlev bildirimi `Task(Of Integer)` dönüş türüne sahip olmalıdır. Dönüş türü `Task(Of Integer)` olduğu için, aşağıdaki deyimde gösterildiği gibi, `DoSomethingAsync` `Await` ifadenin değerlendirmesi bir tamsayı üretir: `Dim result As Integer = Await delayTask`.
 
-`startButton_Click` Yordamdır örneği bir `Async Sub` yordamı. Çünkü `DoSomethingAsync` olduğu bir `Async` işlevi, görev için yapılan çağrının `DoSomethingAsync` , aşağıdaki deyimi gösterildiği gibi beklenmesini gerekir: `Await DoSomethingAsync()`. `startButton_Click` `Sub` Yordamı ile tanımlanmalıdır `Async` değiştiricisi olduğundan bir `Await` ifade.
+@No__t_0 yordam bir `Async Sub` yordamının bir örneğidir. @No__t_0 bir `Async` işlevi olduğundan, aşağıdaki ifadede gösterildiği gibi, `DoSomethingAsync` çağrısı için de beklenen bir görev olmalıdır: `Await DoSomethingAsync()`. Bir `Await` ifadesi içerdiğinden `startButton_Click` `Sub` yordamının `Async` değiştiricisi ile tanımlanması gerekir.
 
 [!code-vb[csAsyncMethod#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/csasyncmethod/vb/mainwindow.xaml.vb#1)]
 
@@ -241,7 +241,7 @@ Aşağıdaki örnekte, `DelayAsync` olduğu bir `Async` `Function` dönüş tür
 - [Parametre Listesi](parameter-list.md)
 - [Dim Deyimi](dim-statement.md)
 - [Call Deyimi](call-statement.md)
-- [,](of-clause.md)
+- [Durumunu](of-clause.md)
 - [Parametre Dizileri](../../../visual-basic/programming-guide/language-features/procedures/parameter-arrays.md)
 - [Nasıl yapılır: Genel Bir Sınıf Kullanma](../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)
 - [Yordam Sorunlarını Giderme](../../../visual-basic/programming-guide/language-features/procedures/troubleshooting-procedures.md)

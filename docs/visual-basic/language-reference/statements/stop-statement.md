@@ -12,32 +12,32 @@ helpviewer_keywords:
 - processes, interrupting
 - execution [Visual Basic], stopping
 ms.assetid: c9a9fde0-d649-4662-9bef-bd0146ebc2a7
-ms.openlocfilehash: a617038ec51d98c62b6cf7e3c124c8af01305bac
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e9382ee34842fc3a3b4b23f71848bda602c99780
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69957615"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72583217"
 ---
 # <a name="stop-statement-visual-basic"></a>Stop Deyimi (Visual Basic)
 Yürütmeyi askıya alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```vb  
 Stop  
 ```  
   
 ## <a name="remarks"></a>Açıklamalar  
- Çalışmayı askıya almak `Stop` için deyimleri yordamların herhangi bir yerinde yerleştirebilirsiniz. `Stop` İfadesinin kullanılması kodda bir kesme noktası ayarlamaya benzerdir.  
+ Yürütmeyi askıya almak için `Stop` deyimlerini yordamların herhangi bir yerinde yerleştirebilirsiniz. @No__t_0 deyimin kullanılması, kodda kesme noktası ayarlamaya benzerdir.  
   
- İfade yürütmeyi askıya alır, ancak farklı `End`olarak, derlenmiş bir çalıştırılabilir (. exe) dosyasında karşılaşılmadığı takdirde herhangi bir dosyayı kapatmaz veya hiçbir değişkeni temizlemez. `Stop`  
+ @No__t_0 deyimin yürütülmesi askıya alınır, ancak `End` aksine, derlenmiş bir çalıştırılabilir (. exe) dosyasında karşılaşılmadığı takdirde hiçbir dosyayı kapatmaz veya hiçbir değişkeni temizlemez.  
   
 > [!NOTE]
-> Tümleşik geliştirme ortamı (IDE) dışında çalışan kodda deyimekarşılaşılırsa,hataayıklayıcıçağrılır.`Stop` Bu, kodun hata ayıklama veya perakende modunda derlenmesinden bağımsız olarak geçerlidir.  
+> Tümleşik geliştirme ortamı (IDE) dışında çalışan kodda `Stop` ifadesine karşılaşılırsa, hata ayıklayıcı çağrılır. Bu, kodun hata ayıklama veya perakende modunda derlenmesinden bağımsız olarak geçerlidir.  
   
 ## <a name="example"></a>Örnek  
- Bu örnek, `Stop` `For...Next` döngüsü aracılığıyla her yineleme için yürütmeyi askıya almak üzere ifadesini kullanır.  
+ Bu örnek, `For...Next` döngüsü aracılığıyla her yineleme için yürütmeyi askıya almak üzere `Stop` ifadesini kullanır.  
   
  [!code-vb[VbVbalrStatements#56](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#56)]  
   

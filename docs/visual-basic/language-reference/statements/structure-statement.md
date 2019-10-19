@@ -1,5 +1,5 @@
 ---
-title: Structure deyimi (Visual Basic)
+title: Structure ekstresi (Visual Basic)
 ms.date: 05/12/2018
 f1_keywords:
 - vb.Structure
@@ -12,19 +12,19 @@ helpviewer_keywords:
 - UDT (user-defined types)
 - types [Visual Basic], user-defined
 ms.assetid: 9bd1deea-2a89-4cdc-812c-6dcbb947c391
-ms.openlocfilehash: c6871a9bae84d0eff79876d7d9668ec5e91d3ebc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: cec04880dd7cadc627ab090a45468dbad83c8d84
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64615092"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72583206"
 ---
 # <a name="structure-statement"></a>Structure Yapısı
-Bir yapının adını bildirir ve değişkenleri, özellikleri, olayları ve yapısını oluşturan yordamların tanımını tanıtır.  
+Bir yapının adını bildirir ve yapının içerdiği değişkenlerin, özelliklerin, olayların ve yordamların tanımını tanıtır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```vb  
 [ <attributelist> ] [ accessmodifier ] [ Shadows ] [ Partial ] _  
 Structure name [ ( Of typelist ) ]  
     [ Implements interfacenames ]  
@@ -37,70 +37,70 @@ End Structure
   
 |Terim|Tanım|  
 |---|---|  
-|`attributelist`|İsteğe bağlı. Bkz: [öznitelik listesi](../../../visual-basic/language-reference/statements/attribute-list.md).|  
-|`accessmodifier`|İsteğe bağlı. Aşağıdakilerden biri olabilir:<br /><br /> -   [Genel](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [Korumalı](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [arkadaş](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [Özel](../../../visual-basic/language-reference/modifiers/private.md)<br />- [Korumalı Friend](../../language-reference/modifiers/protected-friend.md)<br/>- [Özel korumalı](../../language-reference/modifiers/private-protected.md) <br /><br /> Bkz: [erişim düzeyini Visual Basic'te](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|  
-|`Shadows`|İsteğe bağlı. Bkz: [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).|  
-|`Partial`|İsteğe bağlı. Yapının kısmi bir tanımını gösterir. Bkz: [kısmi](../../../visual-basic/language-reference/modifiers/partial.md).|  
-|`name`|Gerekli. Bu yapının adı. Bkz: [bildirilen öğe adları](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
-|`Of`|İsteğe bağlı. Genel amaçlı bir yapı olduğunu belirtir.|  
-|`typelist`|İfadesini kullanıyorsanız gereklidir [,](../../../visual-basic/language-reference/statements/of-clause.md) anahtar sözcüğü. Bu yapı için tür parametreleri listesi. Bkz: [türü listesinde](../../../visual-basic/language-reference/statements/type-list.md).|  
-|`Implements`|İsteğe bağlı. Bu yapının bir veya daha fazla arabirimin üyelerini uyguladığını belirtir. Bkz: [uygulayan deyimi](../../../visual-basic/language-reference/statements/implements-statement.md).|  
-|`interfacenames`|İfadesini kullanıyorsanız gereklidir `Implements` deyimi. Bu yapının uyguladığı arayüzlerin adları.|  
-|`datamemberdeclarations`|Gerekli. Sıfır veya daha fazla `Const`, `Dim`, `Enum`, veya `Event` bildiriyor *veri üyeleri* yapısı.|  
-|`methodmemberdeclarations`|İsteğe bağlı. Sıfır veya daha fazla bildirimlerini `Function`, `Operator`, `Property`, veya `Sub` gören, *yöntem üyeleri* yapısı.|  
-|`End Structure`|Gerekli. Sonlandırır `Structure` tanımı.|  
+|`attributelist`|İsteğe bağlı. Bkz. [öznitelik listesi](../../../visual-basic/language-reference/statements/attribute-list.md).|  
+|`accessmodifier`|İsteğe bağlı. Aşağıdakilerden biri olabilir:<br /><br /> -   [ortak](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [korumalı](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [arkadaş](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [özel](../../../visual-basic/language-reference/modifiers/private.md)<br />- [korumalı arkadaş](../../language-reference/modifiers/protected-friend.md)<br/>- [özel korumalı](../../language-reference/modifiers/private-protected.md) <br /><br /> [Visual Basic erişim düzeylerine](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)bakın.|  
+|`Shadows`|İsteğe bağlı. Bkz. [gölgeler](../../../visual-basic/language-reference/modifiers/shadows.md).|  
+|`Partial`|İsteğe bağlı. Yapının kısmi bir tanımını gösterir. [Kısmi](../../../visual-basic/language-reference/modifiers/partial.md)gör.|  
+|`name`|Gerekli. Bu yapının adı. Bkz. [tanımlanmış öğe adları](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
+|`Of`|İsteğe bağlı. Bunun genel bir yapı olduğunu belirtir.|  
+|`typelist`|[Anahtar sözcüğünü](../../../visual-basic/language-reference/statements/of-clause.md) kullanıyorsanız gereklidir. Bu yapının tür parametrelerinin listesi. Bkz. [tür listesi](../../../visual-basic/language-reference/statements/type-list.md).|  
+|`Implements`|İsteğe bağlı. Bu yapının bir veya daha fazla arabirimin üyelerini uyguladığını gösterir. Bkz. [Implements açıklaması](../../../visual-basic/language-reference/statements/implements-statement.md).|  
+|`interfacenames`|@No__t_0 ifadesini kullanıyorsanız gereklidir. Bu yapının uyguladığı arabirimlerin adları.|  
+|`datamemberdeclarations`|Gerekli. Yapının *veri üyelerini* bildiren sıfır veya daha fazla `Const`, `Dim`, `Enum` veya `Event` deyimleri.|  
+|`methodmemberdeclarations`|İsteğe bağlı. @No__t_0, `Operator`, `Property` veya `Sub` yordamlarının, yapının *Yöntem üyeleri* olarak işlev gösteren sıfır veya daha fazla bildirimi.|  
+|`End Structure`|Gerekli. @No__t_0 tanımını sonlandırır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `Structure` Deyimi özelleştirebileceğiniz bir bileşik değer türü tanımlar. A *yapısı* Visual Basic'in önceki sürümlerindeki kullanıcı tanımlı tür (UDT) genelleştirilmiş olduğundan. Daha fazla bilgi için [yapıları](../../../visual-basic/programming-guide/language-features/data-types/structures.md).  
+ @No__t_0 deyiminiz, özelleştirebileceğiniz bir bileşik değer türü tanımlar. *Yapı* , önceki Visual Basic sürümlerindeki Kullanıcı tanımlı tür (udt) genelleştirmesidir. Daha fazla bilgi için bkz. [yapılar](../../../visual-basic/programming-guide/language-features/data-types/structures.md).  
   
- Yapılar sınıflarla aynı özelliklerin çoğunu destekler. Örneğin, yapılar özelliklere ve yordamlara sahip olabilir, arabirimleri uygulayabilir ve parametreli oluşturuculara sahip. Ancak, devralma, bildirimler ve kullanım alanlardaki yapılar ve sınıflar arasında önemli farklılıklar vardır. Ayrıca, sınıflar başvuru, yapılar değer türüdür. Daha fazla bilgi için [yapılar ve sınıflar](../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md).  
+ Yapılar sınıflarla aynı özelliklerin birçoğunu destekler. Örneğin, yapıların özellikleri ve yordamları olabilir, arabirimler uygulayabilir ve parametreli oluşturuculara sahip olabilirler. Ancak, devralma, bildirimler ve kullanım gibi alanlardaki yapılar ve sınıflar arasında önemli farklılıklar vardır. Ayrıca, sınıflar başvuru türleridir ve yapılardır değer türlerdir. Daha fazla bilgi için bkz. [yapılar ve sınıflar](../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md).  
   
- Kullanabileceğiniz `Structure` yalnızca düzeyinde ad alanında veya modülde. Başka bir deyişle *bildirim içeriğinin* bir yapının kaynak dosyası, ad alanı, sınıf, yapı, modül veya arabirimi olması gerekir ve bir yordam veya blok olamayacağı için. Daha fazla bilgi için [bildirim bağlamları ve varsayılan erişim düzeyleri](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
+ Yalnızca ad alanı veya modül düzeyinde `Structure` kullanabilirsiniz. Bu, bir yapının *bildirim bağlamının* bir kaynak dosya, ad alanı, sınıf, yapı, modül veya arabirim olması ve bir yordam veya blok olamayacağı anlamına gelir. Daha fazla bilgi için bkz. [bildirim bağlamları ve varsayılan erişim düzeyleri](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
   
- Yapılar varsayılan olarak [arkadaş](../../../visual-basic/language-reference/modifiers/friend.md) erişim. Erişim değiştiricileri ile kullanıcıların erişim düzeylerini ayarlayabilirsiniz. Daha fazla bilgi için [erişim düzeyini Visual Basic'te](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
+ Varsayılan yapılar [arkadaş](../../../visual-basic/language-reference/modifiers/friend.md) erişimine sahiptir. Erişim değiştiricilerini kullanarak erişim düzeylerini ayarlayabilirsiniz. Daha fazla bilgi için bkz. [Visual Basic erişim düzeyleri](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
 ## <a name="rules"></a>Kurallar  
   
-- **İç içe geçme.** İçindeki başka bir yapı tanımlayabilirsiniz. Dış yapı adlı *içeren yapı*, ve iç yapı adında bir *iç içe geçmiş yapısı*. Ancak içeren yapı ile iç içe geçmiş bir yapının üyelerine erişemezsiniz. Bunun yerine, iç içe geçmiş yapının veri türünde bir değişken bildirmeniz gerekir.  
+- **İç içe geçme.** Bir yapıyı diğeri içinde tanımlayabilirsiniz. Dış yapıya *kapsayan yapı*denir ve iç yapıya *iç içe yapı*denir. Ancak, iç içe bir yapının üyelerine kapsayan yapı aracılığıyla erişemezsiniz. Bunun yerine, iç içe yapının veri türünün bir değişkenini bildirmeniz gerekir.  
   
-- **Üye bildirimi.** Bir yapının her üyesini bildirmeniz gerekir. Yapı üyesi olamaz [korumalı](../../../visual-basic/language-reference/modifiers/protected.md) veya `Protected Friend` hiçbir şey bir yapısından devralabileceğinden. Ancak yapının kendisi, olabilir `Protected` veya `Protected Friend`.  
+- **Üye bildirimi.** Bir yapının her üyesini bildirmeniz gerekir. Bir yapıyla hiçbir şey devraldığı için bir yapı üyesi [korunamıyor](../../../visual-basic/language-reference/modifiers/protected.md) veya `Protected Friend`. Ancak, yapının kendisi `Protected` veya `Protected Friend` olabilir.  
   
-     Sıfır veya daha çok paylaşılmayan değişkenler veya paylaşılmayan, özel olmayan olaylar yapısına bildirebilirsiniz. Bazıları paylaşılmayan olsa bile yalnızca sabitler, özellikler ve yordamlar, sahip olamaz.  
+     Bir yapıda sıfır veya daha fazla paylaşılmayan değişken ya da paylaşılmayan, özel olmayan olaylar bildirebilirsiniz. Bazıları paylaşılmamış olsa bile yalnızca sabitler, Özellikler ve yordamlar olamaz.  
   
-- **Başlatma.** Bir yapının bildiriminin bir parçası olarak herhangi bir paylaşılmayan veri üyesinin değerini başlatılamıyor. Böyle bir veri üyesini, yapıdaki parametreli bir kurucu yapısı hakkında başlatmak, veya yapının örneğini oluşturduktan sonra üyeye bir değer atayın.  
+- **Başlatılmasında.** Bir yapının paylaşılmayan veri üyesinin değerini, bildiriminin bir parçası olarak başlatılamaz. Bu tür bir veri üyesini yapıda parametreli bir Oluşturucu aracılığıyla ya da yapının bir örneğini oluşturduktan sonra üyeye bir değer atamanız gerekir.  
   
-- **Devralma.** Bir yapı dışında herhangi bir türden devralamaz <xref:System.ValueType>, öğesinden, tüm devralamaz. Özellikle, bir yapı bir başkasından devralınamaz.  
+- **Devralmayı.** Bir yapı, tüm yapıların devraldığı <xref:System.ValueType> dışındaki herhangi bir türden devralınabilir. Özellikle, bir yapı diğerinden devralınabilir.  
   
-     Kullanamazsınız [devralan deyimi](../../../visual-basic/language-reference/statements/inherits-statement.md) belirtmek için bir yapı tanımında bile <xref:System.ValueType>.  
+     @No__t_1 belirtmek için bile, bir yapı tanımında [Inherits ifadesini](../../../visual-basic/language-reference/statements/inherits-statement.md) kullanamazsınız.  
   
-- **Uygulama.** Yapısı kullanıyorsa [Implements deyimi](../../../visual-basic/language-reference/statements/implements-statement.md), belirttiğiniz her arabirim tarafından tanımlanan her üyeyi uygulamalısınız `interfacenames`.  
+- **Paylaşır.** Yapı [Implements ifadesini](../../../visual-basic/language-reference/statements/implements-statement.md)kullanıyorsa, `interfacenames` belirttiğiniz her arabirim tarafından tanımlanan her üyeyi uygulamanız gerekir.  
   
-- **Varsayılan özellik.** Bir yapı en fazla bir özellik olarak belirtebilirsiniz, *varsayılan özellik*kullanarak [varsayılan](../../../visual-basic/language-reference/modifiers/default.md) değiştiricisi. Daha fazla bilgi için [varsayılan](../../../visual-basic/language-reference/modifiers/default.md).  
+- **Varsayılan özellik.** Bir yapı [varsayılan değiştiricisini kullanarak](../../../visual-basic/language-reference/modifiers/default.md) en çok bir özelliği *varsayılan özelliği*olarak belirtebilir. Daha fazla bilgi için bkz. [Default](../../../visual-basic/language-reference/modifiers/default.md).  
   
 ## <a name="behavior"></a>Davranış  
   
-- **Erişim düzeyi.** Bir yapı içerisinde, her bir üyeyi kendi erişim düzeyiyle bildirebilirsiniz. Varsayılan olarak tüm yapı üyeleri [genel](../../../visual-basic/language-reference/modifiers/public.md) erişim. Erişim değiştiricileri ile kullanıcıların erişim düzeylerini ayarlama bile daha kısıtlı bir erişim düzeyi yapısı varsa bu otomatik olarak erişim üyelere erişimi kısıtlar.  
+- **Erişim düzeyi.** Bir yapı içinde, her üyeyi kendi erişim düzeyiyle bildirebilirsiniz. Tüm yapı üyeleri varsayılan olarak [genel](../../../visual-basic/language-reference/modifiers/public.md) erişime sahiptir. Yapının kendisine daha kısıtlı bir erişim düzeyi varsa, erişim değiştiricilerine erişim düzeylerini ayarlasanız bile bu, erişimi otomatik olarak kısıtlar.  
   
-- **Kapsam.** Kendi içeren ad alanı, sınıf, yapı veya modül kapsamdadır bir yapıdır.  
+- **Kapsam.** Bir yapı, kapsayan ad alanı, sınıf, yapı veya modül genelinde kapsamdadır.  
   
-     Her yapı üyesi kapsamını tamamıdır.  
+     Her yapı üyesinin kapsamı tüm yapısıdır.  
   
-- **Yaşam süresi.** Bir yapının kendisi bir yaşam süresi yok. Bunun yerine, bu yapının her örneğinin tüm diğer örneklerden bağımsız bir ömrü vardır.  
+- **Süre.** Bir yapının yaşam süresi yoktur. Bunun yerine, bu yapının her örneğinin diğer tüm örneklerden bağımsız bir yaşam süresi vardır.  
   
-     Bir örneği ömrünü tarafından oluşturulduğunda başlar bir [New işleci](../../../visual-basic/language-reference/operators/new-operator.md) yan tümcesi. Tutan değişken ömrü sona erdiğinde sona erer.  
+     Bir örneğin yaşam süresi, [Yeni bir işleç](../../../visual-basic/language-reference/operators/new-operator.md) yan tümcesi tarafından oluşturulduğunda başlar. Bu, kendisini tutan değişkenin ömrü sona erdiğinde sona erer.  
   
-     Bir yapı örneğinin ömrünü uzatamazsınız. Statik Yapı işlevselliğine yaklaşık bir tahmin modül tarafından sağlanır. Daha fazla bilgi için [Module deyimi](../../../visual-basic/language-reference/statements/module-statement.md).  
+     Bir yapı örneğinin ömrünü genişletemezsiniz. Statik yapı işlevselliğine yaklaşık bir modül tarafından sağlanır. Daha fazla bilgi için bkz. [module deyimleri](../../../visual-basic/language-reference/statements/module-statement.md).  
   
-     Yapı üyelerinin ömürleri nasıl ve nerede beyan edildiklerine bağlıdır bağlı olarak var. Daha fazla bilgi için "Ömür" başlığına bakın. [Class deyimi](../../../visual-basic/language-reference/statements/class-statement.md).  
+     Yapı üyelerinin yaşam sürelerinin nasıl ve nerede bildirilmesine bağlı olarak yaşam süreleri vardır. Daha fazla bilgi için bkz. [Class deyimindeki](../../../visual-basic/language-reference/statements/class-statement.md)"Lifetime".  
   
-- **Nitelik.** Bir yapı dışındaki kod, bir üyenin adını bu yapı adıyla nitelemelidir.  
+- **Yeter.** Bir yapının dışındaki kodun bir üyenin adını bu yapının adıyla nitelemeniz gerekir.  
   
-     İç içe bir yapı içinde kod programlama öğesine nitelenmemiş bir başvuru yaparsa, Visual Basic öğe için ilk olarak iç içe yapıda, sonra içeren yapısında ve benzeri en dıştaki içeren öğede arar. Daha fazla bilgi için [bildirilmiş öğelere başvurular](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).  
+     İç içe yerleştirilmiş bir yapı içindeki kod, bir programlama öğesine nitelenmemiş bir başvuru yaparsa, Visual Basic iç içe yapıdaki öğeyi, ardından kapsayan yapısını ve bu öğeyi en dıştaki içeren en dıştaki öğeyi arar. Daha fazla bilgi için bkz. [bildirilmemiş öğelere başvurular](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).  
   
-- **Bellek tüketimi.** Tüm bileşik veri türleri gibi ile güvenli bir şekilde, üyelerinin nominal depolama ayırmalarını birlikte ekleyerek bir yapının toplam bellek tüketimini hesaplanamaz. Ayrıca, siparişin bellekteki depolama sırasının bildirim ile aynı olduğunu güvenli bir şekilde varsayamazsınız. Bir yapının depolama düzenini denetlemek için ihtiyacınız varsa, uygulayabilirsiniz <xref:System.Runtime.InteropServices.StructLayoutAttribute> özniteliğini `Structure` deyimi.  
+- **Bellek tüketimi.** Tüm bileşik veri türlerinde olduğu gibi, üyelerinin nominal depolama ayırmalarını birlikte ekleyerek bir yapının toplam bellek tüketimini güvenle hesaplayabilirsiniz. Ayrıca, bellekteki depolama sırasının bildirimin sıralamayla aynı olduğunu güvenli bir şekilde varsayamaz. Bir yapının depolama yerleşimini denetetmeniz gerekiyorsa, <xref:System.Runtime.InteropServices.StructLayoutAttribute> özniteliğini `Structure` ifadesine uygulayabilirsiniz.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte `Structure` deyimi bir çalışan için ilgili veri kümesini tanımlamak için. Kullanımını gösteren `Public`, `Friend`, ve `Private` veri öğelerinin duyarlılığını yansıtmak için üyeleri. Yordam, özellik ve olay üyelerini de gösterir.  
+ Aşağıdaki örnek, bir çalışan için ilgili verilerin bir kümesini tanımlamak üzere `Structure` ifadesini kullanır. Veri öğelerinin duyarlılığını yansıtmak için `Public`, `Friend` ve `Private` üyelerinin kullanımını gösterir. Ayrıca yordamı, özelliği ve olay üyelerini gösterir.  
   
  [!code-vb[VbVbalrStatements#57](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#57)]  
   

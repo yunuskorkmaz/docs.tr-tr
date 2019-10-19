@@ -17,20 +17,20 @@ helpviewer_keywords:
 - type parameters
 - data type arguments
 ms.assetid: 0db8f65c-65af-4089-ab7f-6fcfecb60444
-ms.openlocfilehash: 880570c714292b0c11eef4e2cd4c4b410bb075f1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c0cfbb5109d5b49f995028944e735c96440c9ab2
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61784156"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72583504"
 ---
 # <a name="of-clause-visual-basic"></a>Of Tümcesi (Visual Basic)
-Tanıtır bir `Of` tanımlayan yan tümcesi bir *tür parametresi* üzerinde bir *genel* sınıfı, yapı, arabirim, temsilci veya yordam. Genel türler hakkında daha fazla bilgi için bkz: [Visual Basic'de genel türler](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md).  
+Bir *genel* sınıf, yapı, arabirim, temsilci veya yordamda bir *tür parametresi* tanımlayan bir `Of` yan tümcesi tanıtır. Genel türler hakkında bilgi için bkz. [Visual Basic genel türler](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md).  
   
-## <a name="using-the-of-keyword"></a>Kullanarak anahtar sözcüğü  
- Aşağıdaki kod örneğinde `Of` iki tür parametreleri alan sınıfının ana hattı tanımlamak için anahtar sözcüğü. Bunu *kısıtlar* `keyType` parametresiyle <xref:System.IComparable> kullanan kodu uygulayan bir tür bağımsız değişkeni sağlaması gerekir yani arabirimi <xref:System.IComparable>. Bunun gerekli olmasının böylece `add` yordam çağırabilir <xref:System.IComparable.CompareTo%2A?displayProperty=nameWithType> yöntemi. Kısıtlamaları hakkında daha fazla bilgi için bkz. [tür listesi](../../../visual-basic/language-reference/statements/type-list.md).  
+## <a name="using-the-of-keyword"></a>Anahtar sözcüğünü kullanma  
+ Aşağıdaki kod örneği, iki tür parametresi alan bir sınıfın ana hattını tanımlamak için `Of` anahtar sözcüğünü kullanır. @No__t_1 parametresini <xref:System.IComparable> arabirimi ile *kısıtlar* ; bu, tüketen kodun <xref:System.IComparable> uygulayan bir tür bağımsız değişkeni sağlaması gerektiği anlamına gelir. Bu, `add` yordamının <xref:System.IComparable.CompareTo%2A?displayProperty=nameWithType> yöntemini çağırabilmesi için gereklidir. Kısıtlamalar hakkında daha fazla bilgi için bkz. [tür listesi](../../../visual-basic/language-reference/statements/type-list.md).  
   
-```  
+```vb  
 Public Class Dictionary(Of entryType, keyType As IComparable)  
     Public Sub add(ByVal e As entryType, ByVal k As keyType)  
         Dim dk As keyType  
@@ -42,15 +42,15 @@ Public Class Dictionary(Of entryType, keyType As IComparable)
 End Class  
 ```  
   
- Önceki bir sınıf tanımı tamamlarsanız, çeşitli oluşturabilirsiniz `dictionary` bu sınıflardan. Sağladığınız için türleri `entryType` ve `keyType` sınıf giriş türünü içerir ve her bir girdi ilişkilendirir anahtar türünü belirler. Kısıtlama nedeniyle, için sağlamalısınız `keyType` uygulayan bir tür <xref:System.IComparable>.  
+ Önceki sınıf tanımını tamamlarınızda, bundan çok çeşitli `dictionary` sınıfları oluşturabilirsiniz. @No__t_0 ve `keyType` için sağladığınız türler, sınıfın ne tür bir girişi olduğunu ve her bir girdiyle ne tür bir anahtarın ilişkilendirildiğini belirlemektir. Kısıtlama nedeniyle, <xref:System.IComparable> uygulayan bir tür `keyType` sağlamanız gerekir.  
   
- Aşağıdaki kod örneği içeren bir nesne oluşturur `String` girişleri ve associates bir `Integer` her bir anahtar. `Integer` uygulayan <xref:System.IComparable> ve bu nedenle üzerinde kısıtlamasına `keyType`.  
+ Aşağıdaki kod örneği, `String` girdileri tutan ve `Integer` anahtarı her biriyle ilişkilendiren bir nesne oluşturur. `Integer` <xref:System.IComparable> uygular ve bu nedenle `keyType` kısıtlamasını karşılar.  
   
-```  
+```vb  
 Dim d As New dictionary(Of String, Integer)  
 ```  
   
- `Of` Anahtar sözcüğü bu bağlamda kullanılabilir:  
+ @No__t_0 anahtar sözcüğü şu bağlamlarda kullanılabilir:  
   
  [Class Deyimi](../../../visual-basic/language-reference/statements/class-statement.md)  
   
@@ -68,6 +68,6 @@ Dim d As New dictionary(Of String, Integer)
 
 - <xref:System.IComparable>
 - [Tür Listesi](../../../visual-basic/language-reference/statements/type-list.md)
-- [Visual Basic'de genel türler](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
-- [İçinde](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)
-- [Çıkış](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)
+- [Visual Basic genel türler](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- ['Ndaki](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)
+- [Dışı](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)

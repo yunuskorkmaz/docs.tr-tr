@@ -10,19 +10,19 @@ helpviewer_keywords:
 - run-time errors [Visual Basic], codes
 - errors [Visual Basic], simulating
 ms.assetid: 85cd5c59-5224-4f02-aaf5-fcfefab17a29
-ms.openlocfilehash: 7b926214d3be7f5f57783a8599acf1bb1042f956
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c7b2adfe7f6b6ff5e89598cb318a90c51595ff6f
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69944451"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72583374"
 ---
 # <a name="error-statement"></a>Error Deyimi
 Bir hata oluşumunun benzetimini yapar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```vb  
 Error errornumber  
 ```  
   
@@ -31,36 +31,36 @@ Error errornumber
  Gerekli. Herhangi bir geçerli hata numarası olabilir.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bildirim `Error` , geriye dönük uyumluluk için desteklenir. Yeni kodda, özellikle nesne oluştururken, çalışma zamanı hataları oluşturmak `Err` için `Raise` nesnenin metodunu kullanın.  
+ @No__t_0 deyimleri geriye dönük uyumluluk için desteklenir. Yeni kodda, özellikle nesne oluştururken, çalışma zamanı hataları oluşturmak için `Err` nesnenin `Raise` metodunu kullanın.  
   
- Tanımlanmışsa, nesne özellikleri aşağıdaki varsayılan değerlere atandıktan sonraifadehataişleyicisiniçağırır:`Error` `Err` `errornumber`  
+ @No__t_0 tanımlanmışsa, `Error` ifade, `Err` nesnesinin özelliklerine aşağıdaki varsayılan değerler atandıktan sonra hata işleyicisini çağırır:  
   
 |Özellik|Değer|  
 |--------------|-----------|  
-|`Number`|`Error` Deyimin bağımsız değişkeni olarak belirtilen değer. Herhangi bir geçerli hata numarası olabilir.|  
+|`Number`|@No__t_0 deyimin bağımsız değişkeni olarak belirtilen değer. Herhangi bir geçerli hata numarası olabilir.|  
 |`Source`|Geçerli Visual Basic projesinin adı.|  
-|`Description`|Bu dize varsa, belirtilen `Error` `Number`için işlevin dönüş değerine karşılık gelen dize ifadesi. Dize yoksa, `Description` sıfır uzunluklu bir dize ("") içerir.|  
+|`Description`|Bu dize varsa, belirtilen `Number` için `Error` işlevinin dönüş değerine karşılık gelen dize ifadesi. Dize yoksa, `Description` sıfır uzunluklu bir dize ("") içerir.|  
 |`HelpFile`|Uygun Visual Basic Yardım dosyasının tam sürücü, yol ve dosya adı.|  
-|`HelpContext`|`Number` Özelliğe karşılık gelen hata için uygun Visual Basic Yardım dosyası bağlam kimliği.|  
+|`HelpContext`|@No__t_0 özelliğine karşılık gelen hata için uygun Visual Basic Yardım dosyası bağlam KIMLIĞI.|  
 |`LastDLLError`|Sıfırlama.|  
   
- Herhangi bir hata işleyicisi yoksa veya hiçbiri etkinleştirilmemişse, `Err` nesne özelliklerinden bir hata iletisi oluşturulur ve görüntülenir.  
+ Herhangi bir hata işleyicisi yoksa veya hiçbiri etkin değilse, `Err` nesne özelliklerinden bir hata iletisi oluşturulur ve görüntülenir.  
   
 > [!NOTE]
 > Bazı Visual Basic ana bilgisayar uygulamaları nesne oluşturamaz. Sınıf ve nesne oluşturup oluşturamayacağını öğrenmek için ana bilgisayar uygulamanızın belgelerine bakın.  
   
 ## <a name="example"></a>Örnek  
- Bu örnek, `Error` 11 hata numarasını oluşturmak için ifadesini kullanır.  
+ Bu örnek, 11 hata numarasını oluşturmak için `Error` ifadesini kullanır.  
   
-```  
+```vb  
 On Error Resume Next   ' Defer error handling.  
 Error 11   ' Simulate the "Division by zero" error.  
 ```  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Uzayına** [Microsoft. VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
+ **Ad alanı:** [Microsoft. VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
   
- **Derleme** Visual Basic Çalışma Zamanı Kitaplığı (Microsoft.VisualBasic.dll içinde)  
+ **Bütünleştirilmiş kod:** Visual Basic çalışma zamanı kitaplığı (Microsoft. VisualBasic. dll içinde)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

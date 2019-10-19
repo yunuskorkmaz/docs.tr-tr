@@ -1,99 +1,100 @@
 ---
-title: Variance in Generic Interfaces (Visual Basic)
+title: Genel Arabirimlerde Varyans (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: cf4096d0-4bb3-45a9-9a6b-f01e29a60333
-ms.openlocfilehash: 93e169f658a855e3b271e3e3affeadac5d7e5032
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5e849d59148e83b76da56ed6105a31a6077a3d70
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64642392"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72583334"
 ---
-# <a name="variance-in-generic-interfaces-visual-basic"></a>Variance in Generic Interfaces (Visual Basic)
-.NET framework 4, çeşitli genel arabirimlerin mevcut sapma desteği sunmuştur. Bu arabirimleri uygulayan sınıfların örtük dönüştürme varyansı desteği sağlar. Aşağıdaki arabirimlerinden şimdi değişken şunlardır:  
-  
-- <xref:System.Collections.Generic.IEnumerable%601> (T değişkendir)  
-  
-- <xref:System.Collections.Generic.IEnumerator%601> (T değişkendir)  
-  
-- <xref:System.Linq.IQueryable%601> (T değişkendir)  
-  
-- <xref:System.Linq.IGrouping%602> (`TKey` ve `TElement` birlikte değişken olduğu)  
-  
-- <xref:System.Collections.Generic.IComparer%601> (T karşıtıdır)  
-  
-- <xref:System.Collections.Generic.IEqualityComparer%601> (T karşıtıdır)  
-  
-- <xref:System.IComparable%601> (T karşıtıdır)  
-  
- Kovaryans arabirimi genel tür parametresi tarafından tanımlanan daha fazla türetilmiş bir dönüş türüne sahip bir yöntem sağlar. Kovaryans özelliği açıklamak için bu genel arabirimler göz önünde bulundurun: `IEnumerable(Of Object)` ve `IEnumerable(Of String)`. `IEnumerable(Of String)` Arabirimi devralmaz `IEnumerable(Of Object)` arabirimi. Ancak, `String` türü devralma `Object` türü ve bazı durumlarda bu arabirimler nesnelerin birbirleriyle atamak isteyebilirsiniz. Bu aşağıdaki kod örneğinde gösterilir.  
-  
-```vb  
-Dim strings As IEnumerable(Of String) = New List(Of String)  
-Dim objects As IEnumerable(Of Object) = strings  
-```  
-  
- Önceki .NET Framework sürümlerinde, bu kod Visual Basic ile bir derleme hatasına neden olur. `Option Strict On`. Ancak artık kullanabilirsiniz `strings` yerine `objects`için önceki örnekte gösterilen şekilde <xref:System.Collections.Generic.IEnumerable%601> arabirimidir birlikte değişken.  
-  
- Kontravaryans, genel arabirimi parametre olarak belirtilenden daha az türetilmiş bağımsız değişken türleri için bir yöntem izin verir. Kontravaryans göstermek için oluşturduğunuz varsayılır bir `BaseComparer` örneklerini karşılaştırmak için sınıf `BaseClass` sınıfı. `BaseComparer` Sınıfının Implements `IEqualityComparer(Of BaseClass)` arabirimi. Çünkü <xref:System.Collections.Generic.IEqualityComparer%601> arabirimi, artık değişken karşıtı, kullanabileceğiniz `BaseComparer` devralan sınıfların örneklerini karşılaştırmak için `BaseClass` sınıfı. Bu aşağıdaki kod örneğinde gösterilir.  
-  
-```vb  
-' Simple hierarchy of classes.  
-Class BaseClass  
-End Class  
-  
-Class DerivedClass  
-    Inherits BaseClass  
-End Class  
-  
-' Comparer class.  
-Class BaseComparer  
-    Implements IEqualityComparer(Of BaseClass)  
-  
-    Public Function Equals1(ByVal x As BaseClass,  
-                            ByVal y As BaseClass) As Boolean _  
-                            Implements IEqualityComparer(Of BaseClass).Equals  
-        Return (x.Equals(y))  
-    End Function  
-  
-    Public Function GetHashCode1(ByVal obj As BaseClass) As Integer _  
-        Implements IEqualityComparer(Of BaseClass).GetHashCode  
-        Return obj.GetHashCode  
-    End Function  
-End Class  
-Sub Test()  
-    Dim baseComparer As IEqualityComparer(Of BaseClass) = New BaseComparer  
-    ' Implicit conversion of IEqualityComparer(Of BaseClass) to   
-    ' IEqualityComparer(Of DerivedClass).  
-    Dim childComparer As IEqualityComparer(Of DerivedClass) = baseComparer  
-End Sub  
-```  
-  
- Daha fazla örnek için bkz. [(Visual Basic) genel koleksiyonlar için arabirimlerde varyans kullanma](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-in-interfaces-for-generic-collections.md).  
-  
- Genel arabirimlerde varyans yalnızca başvuru türleri için desteklenir. Değer türleri varyansı desteklemez. Örneğin, `IEnumerable(Of Integer)` için örtük olarak dönüştürülemez `IEnumerable(Of Object)`, tamsayı değer türü tarafından temsil edilir.  
-  
-```vb  
-Dim integers As IEnumerable(Of Integer) = New List(Of Integer)  
-' The following statement generates a compiler error  
-' with Option Strict On, because Integer is a value type.  
-' Dim objects As IEnumerable(Of Object) = integers  
-```  
-  
- Değişken arabirimleri uygulayan sınıflar yine de sabit olduğunu unutmamak önemlidir. Örneğin, ancak <xref:System.Collections.Generic.List%601> birlikte değişken arabirimi uygulayan <xref:System.Collections.Generic.IEnumerable%601>, örtük olarak dönüştürülemez `List(Of Object)` için `List(Of String)`. Bu aşağıdaki kod örneğinde gösterilmiştir.  
-  
-```vb  
-' The following statement generates a compiler error  
-' because classes are invariant.  
-' Dim list As List(Of Object) = New List(Of String)  
-  
-' You can use the interface object instead.  
-Dim listObjects As IEnumerable(Of Object) = New List(Of String)  
-```  
-  
+# <a name="variance-in-generic-interfaces-visual-basic"></a>Genel Arabirimlerde Varyans (Visual Basic)
+
+.NET Framework 4, mevcut birçok genel arabirim için varyans desteği getirmiştir. Varyans desteği, bu arabirimleri uygulayan sınıfların örtük dönüştürülmesini mümkün. Aşağıdaki arabirimler artık değişkendir:
+
+- <xref:System.Collections.Generic.IEnumerable%601> (T birlikte değişken)
+
+- <xref:System.Collections.Generic.IEnumerator%601> (T birlikte değişken)
+
+- <xref:System.Linq.IQueryable%601> (T birlikte değişken)
+
+- <xref:System.Linq.IGrouping%602> (`TKey` ve `TElement` birlikte değişken)
+
+- <xref:System.Collections.Generic.IComparer%601> (T değişken karşıtı)
+
+- <xref:System.Collections.Generic.IEqualityComparer%601> (T değişken karşıtı)
+
+- <xref:System.IComparable%601> (T değişken karşıtı)
+
+Kovaryans, bir metodun, arabirimin genel tür parametresiyle tanımlananla daha türetilmiş bir dönüş türüne sahip olmasını sağlar. Kovaryans özelliğini göstermek için şu genel arabirimleri göz önünde bulundurun: `IEnumerable(Of Object)` ve `IEnumerable(Of String)`. @No__t_0 arabirimi `IEnumerable(Of Object)` arabirimini almıyor. Ancak `String` türü `Object` türünü devralınır ve bazı durumlarda bu arabirimlerin nesnelerini birbirlerine atamak isteyebilirsiniz. Bu, aşağıdaki kod örneğinde gösterilmiştir.
+
+```vb
+Dim strings As IEnumerable(Of String) = New List(Of String)
+Dim objects As IEnumerable(Of Object) = strings
+```
+
+.NET Framework önceki sürümlerinde bu kod, Visual Basic `Option Strict On` derleme hatasına neden olur. Ancak artık, <xref:System.Collections.Generic.IEnumerable%601> arabirimi birlikte değişken olduğundan, önceki örnekte gösterildiği gibi `objects` yerine `strings` kullanabilirsiniz.
+
+Değişken Varyans, bir metodun, arabirimin genel parametresiyle belirtilenden daha az türetilmiş bağımsız değişken türlerine sahip olmasını sağlar. Değişken varyansı göstermek için, `BaseClass` sınıfının örneklerini karşılaştırmak üzere bir `BaseComparer` sınıfı oluşturduğunuzu varsayalım. @No__t_0 sınıfı `IEqualityComparer(Of BaseClass)` arabirimini uygular. @No__t_0 arabirimi artık değişken karşıtı olduğundan, `BaseClass` sınıfını devraldığı sınıfların örneklerini karşılaştırmak için `BaseComparer` kullanabilirsiniz. Bu, aşağıdaki kod örneğinde gösterilmiştir.
+
+```vb
+' Simple hierarchy of classes.
+Class BaseClass
+End Class
+
+Class DerivedClass
+    Inherits BaseClass
+End Class
+
+' Comparer class.
+Class BaseComparer
+    Implements IEqualityComparer(Of BaseClass)
+
+    Public Function Equals1(ByVal x As BaseClass,
+                            ByVal y As BaseClass) As Boolean _
+                            Implements IEqualityComparer(Of BaseClass).Equals
+        Return (x.Equals(y))
+    End Function
+
+    Public Function GetHashCode1(ByVal obj As BaseClass) As Integer _
+        Implements IEqualityComparer(Of BaseClass).GetHashCode
+        Return obj.GetHashCode
+    End Function
+End Class
+Sub Test()
+    Dim baseComparer As IEqualityComparer(Of BaseClass) = New BaseComparer
+    ' Implicit conversion of IEqualityComparer(Of BaseClass) to
+    ' IEqualityComparer(Of DerivedClass).
+    Dim childComparer As IEqualityComparer(Of DerivedClass) = baseComparer
+End Sub
+```
+
+Daha fazla örnek için bkz. [Genel Koleksiyonlar Için Arabirimlerde Varyans kullanma (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-in-interfaces-for-generic-collections.md).
+
+Genel Arabirimlerde Varyans yalnızca başvuru türleri için desteklenir. Değer türleri varyansı desteklemez. Örneğin, tamsayılar bir değer türüyle temsil edildiği için `IEnumerable(Of Integer)` örtük olarak `IEnumerable(Of Object)` dönüştürülemez.
+
+```vb
+Dim integers As IEnumerable(Of Integer) = New List(Of Integer)
+' The following statement generates a compiler error
+' with Option Strict On, because Integer is a value type.
+' Dim objects As IEnumerable(Of Object) = integers
+```
+
+Ayrıca, VARIANT arabirimlerini uygulayan sınıfların hala sabit olduğunu unutmamak önemlidir. Örneğin, <xref:System.Collections.Generic.List%601> covaryant arabirimini <xref:System.Collections.Generic.IEnumerable%601> uygular, ancak `List(Of Object)` örtük olarak `List(Of String)` dönüştürebilirsiniz. Bu, aşağıdaki kod örneğinde gösterilmiştir.
+
+```vb
+' The following statement generates a compiler error
+' because classes are invariant.
+' Dim list As List(Of Object) = New List(Of String)
+
+' You can use the interface object instead.
+Dim listObjects As IEnumerable(Of Object) = New List(Of String)
+```
+
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [(Visual Basic) genel koleksiyonlar için arabirimlerde varyans kullanma](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-in-interfaces-for-generic-collections.md)
+- [Genel Koleksiyonlar için Arabirimlerde Varyans kullanma (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-in-interfaces-for-generic-collections.md)
 - [Değişken genel arabirimler oluşturma (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/creating-variant-generic-interfaces.md)
 - [Genel Arabirimler](../../../../standard/generics/interfaces.md)
 - [Temsilcilerde varyans (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)

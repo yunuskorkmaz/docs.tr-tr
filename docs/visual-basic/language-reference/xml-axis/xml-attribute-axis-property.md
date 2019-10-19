@@ -10,64 +10,64 @@ helpviewer_keywords:
 - XML axis [Visual Basic], attribute
 - XML [Visual Basic], accessing
 ms.assetid: 7a4777e1-0618-4de9-9510-fb9ace2bf4db
-ms.openlocfilehash: a7a93608d14bcbec316228b59467b23e9247e043
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 896081c3dc7ca9e50b4dc4bd87675e957c34b649
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62025229"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72582159"
 ---
 # <a name="xml-attribute-axis-property-visual-basic"></a>XML Özniteliği Axis Özelliği (Visual Basic)
-İçin bir öznitelik değeri erişim sağlayan bir <xref:System.Xml.Linq.XElement> nesne veya koleksiyonu içindeki ilk öğeye <xref:System.Xml.Linq.XElement> nesneleri.  
+Bir <xref:System.Xml.Linq.XElement> nesnesi veya bir <xref:System.Xml.Linq.XElement> nesneleri koleksiyonundaki ilk öğe için bir özniteliğin değerine erişim sağlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
-      object.@attribute  
--or-  
+```vb  
+object.@attribute  
+' -or-  
 object.@<attribute>  
 ```  
   
 ## <a name="parts"></a>Bölümler  
  `object`  
- Gerekli. Bir <xref:System.Xml.Linq.XElement> nesnesi veya bir koleksiyonu <xref:System.Xml.Linq.XElement> nesneleri.  
+ Gerekli. @No__t_0 nesnesi veya <xref:System.Xml.Linq.XElement> nesneleri koleksiyonu.  
   
- .@  
- Gerekli. Bir özniteliği axis özelliği başlangıcını gösterir.  
+ . @  
+ Gerekli. Öznitelik ekseni özelliğinin başlangıcını gösterir.  
   
  <  
- İsteğe bağlı. Özniteliğin adını başlangıcını gösterir, `attribute` Visual Basic'te geçerli bir tanımlayıcı değil.  
+ İsteğe bağlı. @No__t_0 Visual Basic geçerli bir tanımlayıcı olmadığında özniteliğin adının başlangıcını gösterir.  
   
  `attribute`  
- Gerekli. Biçiminde erişmeye özniteliğin adı [`prefix`:]`name`.  
+ Gerekli. [@No__t_0:] `name` biçiminde erişebileceğiniz özniteliğin adı.  
   
-|Bölümü|Açıklama|  
+|Bölümüyle|Açıklama|  
 |----------|-----------------|  
-|`prefix`|İsteğe bağlı. Özniteliği için XML ad alanı öneki. Genel XML ad alanı ile tanımlanmalıdır bir `Imports` deyimi.|  
-|`name`|Gerekli. Yerel bir öznitelik adı. Bkz: [bildirilmiş XML öğeleri ve özniteliklerinin adları](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).|  
+|`prefix`|İsteğe bağlı. Öznitelik için XML ad alanı ön eki. Bir `Imports` ifadesiyle tanımlanmış bir genel XML ad alanı olmalıdır.|  
+|`name`|Gerekli. Yerel öznitelik adı. [BELIRTILEN XML öğelerinin ve özniteliklerin adlarına](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)bakın.|  
   
  \>  
- İsteğe bağlı. Özniteliğin adını sonuna gösterir, `attribute` Visual Basic'te geçerli bir tanımlayıcı değil.  
+ İsteğe bağlı. @No__t_0 Visual Basic geçerli bir tanımlayıcı olmadığında özniteliğin adının sonunu belirtir.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Değerini içeren bir dize `attribute`. Öznitelik adı mevcut değilse `Nothing` döndürülür.  
+ @No__t_0 değerini içeren bir dize. Öznitelik adı yoksa `Nothing` döndürülür.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bir XML özniteliği axis özelliği bir özniteliğin değerini adından tarafından erişmek için kullanabileceğiniz bir <xref:System.Xml.Linq.XElement> nesne veya koleksiyonu içindeki ilk öğeyi <xref:System.Xml.Linq.XElement> nesneleri. Bir özniteliği değeri ada göre alabilirsiniz veya koyarak yeni bir ad belirterek, bir öğeye yeni bir öznitelik eklemek @ tanımlayıcı.  
+ Bir özniteliğin değerine bir <xref:System.Xml.Linq.XElement> nesnesinden veya bir <xref:System.Xml.Linq.XElement> nesneleri koleksiyonundaki ilk öğeden ada göre erişmek için bir XML öznitelik ekseni özelliği kullanabilirsiniz. Ada göre bir öznitelik değeri alabilir veya bir öğeye yeni bir öznitelik ekleyerek @ tanımlayıcısının önüne yeni bir ad belirterek ekleyebilirsiniz.  
   
- Ne zaman başvuru kullanarak bir XML özniteliği tanımlayıcı, dize olarak öznitelik değeri döndürülür ve açıkça belirtmeniz gerekmez <xref:System.Xml.Linq.XAttribute.Value%2A> özelliği.  
+ @ Tanımlayıcısını kullanarak bir XML özniteliğine başvurduğunuzda, öznitelik değeri bir dize olarak döndürülür ve <xref:System.Xml.Linq.XAttribute.Value%2A> özelliğini açık bir şekilde belirtmeniz gerekmez.  
   
- Visual Basic tanımlayıcıları için adlandırma kuralları adlandırma kuralları için XML özniteliklerini farklıdır. Geçerli bir Visual Basic tanımlayıcı bir ada sahip bir XML özniteliği erişmek için ad, açılı ayraçlar içine (\< ve >).  
+ XML öznitelikleri için adlandırma kuralları Visual Basic Tanımlayıcılarla ilgili adlandırma kurallarından farklıdır. Geçerli bir Visual Basic tanımlayıcı olmayan bir ada sahip bir XML özniteliğine erişmek için, adı açılı ayraçlar (\< ve >) içine alın.  
   
 ## <a name="xml-namespaces"></a>XML ad alanları  
- Bir özniteliği axis özelliği adı genel olarak kullanılarak bildirilen XML ad alanı öneklerini kullanabilirsiniz `Imports` deyimi. XML ad alanı öneklerini XML öğesi değişmez değerleri içinde yerel olarak bildirilen kullanamazsınız. Daha fazla bilgi için [Imports deyimi (XML Namespace)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md).  
+ Öznitelik ekseni özelliğindeki ad, `Imports` ifadesini kullanarak genel olarak belirtilen yalnızca XML ad alanı öneklerini kullanabilir. XML öğesi değişmez değerleri içinde yerel olarak belirtilen XML ad alanı öneklerini kullanamaz. Daha fazla bilgi için bkz. [Imports bildirisi (XML ad alanı)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md).  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte adlı XML öznitelik değerleri, alınacağı gösterilmektedir `type` adlı XML öğesi bir koleksiyondan `phone`.  
+ Aşağıdaki örnek, `phone` adlı bir XML öğeleri koleksiyonundan `type` adlı XML özniteliklerinin değerlerinin nasıl alınacağını gösterir.  
   
  [!code-vb[VbXMLSamples#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples5.vb#12)]  
   
- Bu kod, aşağıdaki metni görüntüler:  
+ Bu kod aşağıdaki metni görüntüler:  
   
  `<phoneTypes>`  
   
@@ -78,31 +78,31 @@ object.@<attribute>
  `</phoneTypes>`  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, hem bir XML öğesi için öznitelikleri bildirimli olarak, XML ve dinamik olarak örneğine bir öznitelik ekleyerek bir parçası olarak oluşturma işlemi gösterilmektedir bir <xref:System.Xml.Linq.XElement> nesne. `type` Özniteliği bildirimli olarak oluşturulur ve `owner` özniteliği dinamik olarak oluşturulur.  
+ Aşağıdaki örnek, bir XML öğesi için, XML 'nin bir parçası olarak ve bir <xref:System.Xml.Linq.XElement> nesnesinin örneğine bir öznitelik ekleyerek dinamik olarak nasıl öznitelik oluşturulacağını gösterir. @No__t_0 özniteliği bildirimli olarak oluşturulur ve `owner` özniteliği dinamik olarak oluşturulur.  
   
  [!code-vb[VbXMLSamples#44](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples5.vb#44)]  
   
- Bu kod, aşağıdaki metni görüntüler:  
+ Bu kod aşağıdaki metni görüntüler:  
   
 ```xml  
 <phone type="home" owner="Harris, Phyllis">206-555-0144</phone>  
 ```  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek açılı ayraç sözdizimini XML özniteliğinin değerini almak için kullanır. `number-type`, Visual Basic'te geçerli bir tanımlayıcı değil.  
+ Aşağıdaki örnek, Visual Basic ' de geçerli bir tanımlayıcı olmayan `number-type` adlı XML özniteliğinin değerini almak için açılı ayraç sözdizimini kullanır.  
   
  [!code-vb[VbXMLSamples#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples5.vb#13)]  
   
- Bu kod, aşağıdaki metni görüntüler:  
+ Bu kod aşağıdaki metni görüntüler:  
   
  `Phone type: work`  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek bildirir `ns` olarak bir XML ad alanı öneki. XML değişmez değer oluşturun ve ilk alt düğüm tam adı ile erişmek için bir ad alanı öneki kullanır "`ns:name`".  
+ Aşağıdaki örnek, `ns` bir XML ad alanı öneki olarak bildirir. Daha sonra bir XML sabit değeri oluşturmak için ad alanının önekini kullanır ve "`ns:name`" tam adına sahip ilk alt düğüme erişir.  
   
  [!code-vb[VbXMLSamples#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples6.vb#14)]  
   
- Bu kod, aşağıdaki metni görüntüler:  
+ Bu kod aşağıdaki metni görüntüler:  
   
  `Phone type: home`  
   
@@ -111,5 +111,5 @@ object.@<attribute>
 - <xref:System.Xml.Linq.XElement>
 - [XML Eksen Özellikleri](../../../visual-basic/language-reference/xml-axis/index.md)
 - [XML Değişmez Değerleri](../../../visual-basic/language-reference/xml-literals/index.md)
-- [Visual Basic'de XML oluşturma](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
+- [Visual Basic XML oluşturma](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
 - [Bildirilmiş XML Öğeleri ve Özniteliklerinin Adları](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)

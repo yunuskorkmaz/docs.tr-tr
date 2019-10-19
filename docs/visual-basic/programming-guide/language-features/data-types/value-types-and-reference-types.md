@@ -10,52 +10,52 @@ helpviewer_keywords:
 - data types [Visual Basic], value types
 - data types [Visual Basic], reference types
 ms.assetid: fc82ce15-5a40-4c5c-a1e1-a556830e7391
-ms.openlocfilehash: f25caec43b7118b7b64db1b14516b0c5ea80f4f6
-ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
+ms.openlocfilehash: 466bb5386235917705344d35c5141c8bf779218d
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67504884"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72582640"
 ---
 # <a name="value-types-and-reference-types"></a>Değer Türleri ve Başvuru Türleri
-Visual Basic'te tür iki tür vardır: başvuru türleri ve değer türleri. Başvuru türlerinin değişkenleri başvuruları kendi verilerine (nesneler) depolarken, değer türlerinin değişkenleri kendi verilerini doğrudan içerir. Başvuru türleri ile, iki değişken aynı nesneye başvurabilir; bu nedenle, bir değişken üzerinde yapılan işlemler diğer değişkenin başvurduğu nesneyi etkileyebilir. Değer türleri ile her değişkenin kendi veri kopyası vardır ve yapılan işlemlerin diğerini etkilemesi için bir değişken üzerinde değil (dışındaki durumunda [parametreleri ByRef değiştiricisi](../../../language-reference/modifiers/byref.md)).
+Visual Basic iki tür tür vardır: başvuru türleri ve değer türleri. Başvuru türlerinin değişkenleri başvuruları kendi verilerine (nesneler) depolarken, değer türlerinin değişkenleri kendi verilerini doğrudan içerir. Başvuru türleri ile, iki değişken aynı nesneye başvurabilir; bu nedenle, bir değişken üzerinde yapılan işlemler diğer değişkenin başvurduğu nesneyi etkileyebilir. Değer türleriyle, her değişken kendi verilerinin kopyasına sahiptir ve bir değişken üzerindeki işlemler diğerini etkileme ( [parametrelerde ByRef değiştirici](../../../language-reference/modifiers/byref.md)olması dışında) mümkün değildir.
   
 ## <a name="value-types"></a>Değer Türleri  
- Bir veri türü olan bir *değer türü* kendi bellek ayırma verileri tutuyorsa. Değer türleri aşağıdakileri kapsamaktadır:  
+ Veri türü, verileri kendi bellek ayırması içinde tutuyorsa bir *değer türüdür* . Değer türleri şunları içerir:  
   
 - Tüm sayısal veri türleri  
   
-- `Boolean`, `Char`, ve `Date`  
+- `Boolean`, `Char` ve `Date`  
   
-- Başvuru türleri üyelerinin olması durumunda bile tüm yapıları  
+- Üyeleri başvuru türleri olsa bile tüm yapılar  
   
-- Her zaman kendi temel türü olduğundan numaralandırmalar `SByte`, `Short`, `Integer`, `Long`, `Byte`, `UShort`, `UInteger`, veya `ULong`  
+- Numaralandırmalar, temel alınan türü her zaman `SByte`, `Short`, `Integer`, `Long`, `Byte`, `UShort`, `UInteger` veya `ULong`  
   
- Başvuru türü üyeleri içeren olsa bile her bir değer türü yapısıdır. Bu nedenle, değer türleri gibi `Char` ve `Integer` .NET Framework yapıları tarafından uygulanır.  
+ Her yapı, başvuru türü üyeleri içerse de bir değer türüdür. Bu nedenle, `Char` ve `Integer` gibi değer türleri .NET Framework yapıları tarafından uygulanır.  
   
- Ayrılmış anahtar sözcüğü, örneğin,'ı kullanarak bir değer türü bildirebilirsiniz `Decimal`. Ayrıca `New` anahtar sözcüğü, bir değer türü başlatılamadı. Tür parametreleri alan bir oluşturucu sahipse, bu özellikle yararlıdır. Bunun bir örneği <xref:System.Decimal.%23ctor%28System.Int32%2CSystem.Int32%2CSystem.Int32%2CSystem.Boolean%2CSystem.Byte%29> yeni bir derleme Oluşturucu `Decimal` sağlanan parçalarından değeri.  
+ Ayrılmış anahtar sözcüğünü kullanarak bir değer türü bildirebilirsiniz, örneğin, `Decimal`. Değer türünü başlatmak için `New` anahtar sözcüğünü de kullanabilirsiniz. Bu özellikle, türün parametreleri alan bir Oluşturucusu varsa yararlıdır. Bunun bir örneği, sağlanan bölümlerden yeni bir `Decimal` değeri oluşturan <xref:System.Decimal.%23ctor%28System.Int32%2CSystem.Int32%2CSystem.Int32%2CSystem.Boolean%2CSystem.Byte%29> oluşturucusudur.  
   
 ## <a name="reference-types"></a>Başvuru Türleri  
- A *başvuru türüne* başvuru verilerini depolar. Başvuru türleri aşağıdakileri kapsamaktadır:  
+ Bir *başvuru türü* , verilerine bir başvuru depolar. Başvuru türleri şunları içerir:  
   
 - `String`  
   
-- Tüm diziler, kendi öğeleri değer türleri olsa bile  
+- Tüm diziler, öğeleri değer türseler bile  
   
-- Sınıfı, gibi türleri <xref:System.Windows.Forms.Form>  
+- @No__t_0 gibi sınıf türleri  
   
 - Temsilciler  
   
- Bir sınıf bir *başvuru türüne*. Üyeleri, değer türleri olsa bile, her dizide bir başvuru türü olduğunu unutmayın.  
+ Sınıf bir *başvuru türüdür*. Her dizi, üyeleri değer türleri olsa bile bir başvuru türü olduğunu unutmayın.  
   
- Her bir başvuru türü temel alınan bir .NET Framework sınıfı temsil eder. bu yana kullanmalısınız [New işleci](../../../../visual-basic/language-reference/operators/new-operator.md) başlattığınızda, anahtar sözcüğü. Aşağıdaki deyim, bir dizi başlatır.  
+ Her başvuru türü temeldeki bir .NET Framework sınıfını temsil ettiğinden, onu başlattığınızda [New Operator](../../../../visual-basic/language-reference/operators/new-operator.md) anahtar sözcüğünü kullanmanız gerekir. Aşağıdaki ifade bir diziyi başlatır.  
   
-```  
+```vb  
 Dim totals() As Single = New Single(8) {}  
 ```  
   
-## <a name="elements-that-are-not-types"></a>Türleri öğeleri  
- Bunların hiçbirine olarak bildirilen bir öğe için bir veri türü belirtilemez çünkü aşağıdaki programlama öğeleri türleri olarak nitelendirmeyin:  
+## <a name="elements-that-are-not-types"></a>Türler olmayan öğeler  
+ Aşağıdaki programlama öğeleri tür olarak nitelemez, çünkü bunlardan herhangi birini tanımlanmış bir öğe için veri türü olarak belirtemezsiniz:  
   
 - Ad Alanları  
   
@@ -65,17 +65,17 @@ Dim totals() As Single = New Single(8) {}
   
 - Özellikler ve yordamlar  
   
-- Değişkenleri, sabitleri ve alanlar  
+- Değişkenler, sabitler ve alanlar  
   
-## <a name="working-with-the-object-data-type"></a>Nesne veri türü ile çalışma  
- Bir başvuru türü veya değer türü bir değişkene atayabilirsiniz `Object` veri türü. Bir `Object` değişken her zaman bir başvuru veri hiçbir zaman kendisi tutar. Ancak, bir değer türüne atarsanız bir `Object` kendi verilerini tutan gibi değişken davranır. Daha fazla bilgi için [nesne veri türü](../../../../visual-basic/language-reference/data-types/object-data-type.md).  
+## <a name="working-with-the-object-data-type"></a>Nesne veri türüyle çalışma  
+ @No__t_0 veri türü değişkenine bir başvuru türü veya değer türü atayabilirsiniz. Bir `Object` değişken her zaman veriye bir başvuru barındırır, hiçbir zaman verilerin kendisi değildir. Ancak, bir `Object` değişkenine bir değer türü atarsanız, kendi verilerini tutan gibi davranır. Daha fazla bilgi için bkz. [nesne veri türü](../../../../visual-basic/language-reference/data-types/object-data-type.md).  
   
- Olup bulabilirsiniz bir `Object` değişkeni hareket bir başvuru türü veya değer türü olarak geçirerek <xref:Microsoft.VisualBasic.Information.IsReference%2A> yönteminde <xref:Microsoft.VisualBasic.Information> sınıfının <xref:Microsoft.VisualBasic?displayProperty=nameWithType> ad alanı. <xref:Microsoft.VisualBasic.Information.IsReference%2A?displayProperty=nameWithType> döndürür `True` durumunda içeriğinin `Object` değişkeninin bir başvuru türü temsil eder.  
+ Bir `Object` değişkeninin, <xref:Microsoft.VisualBasic?displayProperty=nameWithType> ad alanının <xref:Microsoft.VisualBasic.Information> sınıfındaki <xref:Microsoft.VisualBasic.Information.IsReference%2A> yöntemine geçirerek bir başvuru türü veya değer türü olarak davranıp davranmadığını fark edebilirsiniz. `Object` değişkeninin içeriği bir başvuru türünü temsil ediyorsa <xref:Microsoft.VisualBasic.Information.IsReference%2A?displayProperty=nameWithType> `True` döndürür.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Boş Değer Atanabilen Değer Türleri](../../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)
-- [Visual Basic'de tür dönüştürmeleri](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [Visual Basic dönüşümler yazın](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
 - [Structure Deyimi](../../../../visual-basic/language-reference/statements/structure-statement.md)
 - [Veri Türlerinin Etkili Kullanımı](../../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
 - [Object Veri Türü](../../../../visual-basic/language-reference/data-types/object-data-type.md)

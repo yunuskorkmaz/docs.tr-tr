@@ -9,18 +9,18 @@ helpviewer_keywords:
 - page functions [WPF], calling
 - functions [WPF], calling
 ms.assetid: a4808397-c6d5-406a-83e0-0091f0c15ae4
-ms.openlocfilehash: e7c7c5ef98feeb4c5557295d92a8b219d9799865
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: f170977860a73d339f2d83bc43992e6e2bc4053f
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364155"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72582044"
 ---
 # <a name="how-to-call-a-page-function"></a>Nasıl yapılır: Sayfa İşlevi Çağırma
-Bu örnek, bir [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] sayfadan sayfa işlevinin nasıl çağrılacağını gösterir.  
+Bu örnek, bir [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] sayfasından bir sayfa işlevinin nasıl çağrılacağını gösterir.  
   
 ## <a name="example"></a>Örnek  
- Bir sayfaya gittiğinizde yaptığınız gibi, kullanarak bir [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)]sayfa işlevine gidebilirsiniz. Bu, aşağıdaki örnekte gösterilir.  
+ Bir sayfaya gittiğinizde olduğu gibi Tekdüzen Kaynak tanımlayıcısı (URI) kullanarak bir sayfa işlevine gidebilirsiniz. Bu, aşağıdaki örnekte gösterilir.  
   
  [!code-csharp[HOWTOPageFunctionSnippets#NavigateToAPageFunctionLikeAPageCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/HOWTOPageFunctionSnippets/CSharp/CallingPage.xaml.cs#navigatetoapagefunctionlikeapagecodebehind)]
  [!code-vb[HOWTOPageFunctionSnippets#NavigateToAPageFunctionLikeAPageCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTOPageFunctionSnippets/VisualBasic/CallingPage.xaml.vb#navigatetoapagefunctionlikeapagecodebehind)]  

@@ -4,12 +4,12 @@ description: Apache Spark ve büyük veri senaryoları hakkında bilgi edinin.
 ms.date: 10/15/2019
 ms.topic: conceptual
 ms.custom: mvc
-ms.openlocfilehash: ccf41f08df3c68a039210320f14219e6b6229a64
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 187a37897c23809d91820bd79b476e775fb5b99b
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72396238"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72583482"
 ---
 # <a name="what-is-apache-spark"></a>Apache Spark nedir?
 
@@ -69,30 +69,30 @@ Her yürütücü veya çalışan düğümü, sürücüden bir görevi alır ve b
 
 Küme Yöneticisi, hem sürücü hem de yürüticileri ile iletişim kurar:
 
-- Kaynak ayırmayı yönetme
-- Program bölümünü Yönet
-- Program yürütmeyi yönetme
+* Kaynak ayırmayı yönetme
+* Program bölümünü Yönet
+* Program yürütmeyi yönetme
 
 ## <a name="language-support"></a>Dil desteği
 
 Apache Spark aşağıdaki programlama dillerini destekler:
 
-- Scala
-- Python
-- Java
-- SQL
-- R
-- .NET
+* Scala
+* Python
+* Java
+* SQL
+* R
+* .NET
 
 ## <a name="spark-apis"></a>Spark API 'Leri
 
 Apache Spark aşağıdaki API 'Leri destekler:
 
-- [Spark Scala API 'SI](https://spark.apache.org/docs/2.2.0/api/scala/index.html)
-- [Spark Java API 'SI](https://spark.apache.org/docs/2.2.0/api/java/index.html)
-- [Spark Python API 'SI](https://spark.apache.org/docs/2.2.0/api/python/index.html)
-- [Spark R API 'SI](https://spark.apache.org/docs/2.2.0/api/R/index.html)
-- [Spark SQL](https://spark.apache.org/docs/latest/api/sql/index.html), yerleşik işlevler
+* [Spark Scala API 'SI](https://spark.apache.org/docs/2.2.0/api/scala/index.html)
+* [Spark Java API 'SI](https://spark.apache.org/docs/2.2.0/api/java/index.html)
+* [Spark Python API 'SI](https://spark.apache.org/docs/2.2.0/api/python/index.html)
+* [Spark R API 'SI](https://spark.apache.org/docs/2.2.0/api/R/index.html)
+* [Spark SQL](https://spark.apache.org/docs/latest/api/sql/index.html), yerleşik işlevler
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

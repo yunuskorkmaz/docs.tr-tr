@@ -7,32 +7,33 @@ f1_keywords:
 helpviewer_keywords:
 - BC30506
 ms.assetid: 5b66f6a8-f050-4e03-a57f-a64e85f80cb5
-ms.openlocfilehash: 04c94d3d32660d1a186a9bb377c49a53e1451be6
-ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
+ms.openlocfilehash: 191415408f607d0ff768e50c41fa9b3c4405a688
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68512739"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72582820"
 ---
 # <a name="handles-clause-requires-a-withevents-variable-defined-in-the-containing-type-or-one-of-its-base-types"></a>Handles tümcesi, içeren türde veya temel türlerinden birinde tanımlanan bir WithEvents değişkeni gerektirir.
-`Handles` Yan tümcesine bir `WithEvents` değişken sağlamadınız. Yordam bildiriminin sonundaki `WithEvents` anahtar sözcüğü, anahtar sözcüğü kullanılarak belirtilen bir nesne değişkeni tarafından oluşturulan olayları işlemesini sağlar. `Handles`
-  
- **Hata KIMLIĞI:** BC30506
+
+@No__t_1 yan tümcesinde bir `WithEvents` değişkeni sağlamadınız. Yordam bildiriminin sonundaki `Handles` anahtar sözcüğü, `WithEvents` anahtar sözcüğü kullanılarak belirtilen bir nesne değişkeni tarafından oluşturulan olayları işlemesini sağlar.
+
+**Hata kimliği:** BC30506
 
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için
-  
-- Gerekli `WithEvents` değişkeni sağlayın.
-  
+
+Gerekli `WithEvents` değişkenini sağlayın.
+
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnekte, <xref:System.Timers.Timer?displayProperty=nameWithType> örnek tanımında [WithEvents](../modifiers/withevents.md) anahtar sözcüğü kullanılmadığından `BC30506` Visual Basic derleyici hatası oluşturuyor.
+Aşağıdaki örnekte, <xref:System.Timers.Timer?displayProperty=nameWithType> örneğinin tanımında [WithEvents](../modifiers/withevents.md) anahtar sözcüğünün kullanılmadığından Visual Basic derleyici hatası `BC30506` oluşturur.
 
 ```vb
 Imports System.Timers
 
 Module Module1
     Private _timer1 As New Timer() With {.Interval = 1000, .Enabled = True}
-    
+
     Sub Main()
         Console.WriteLine("Press any key to start the timer...")
         Console.ReadKey()
@@ -46,7 +47,7 @@ Module Module1
 End Module
 ```
 
-Aşağıdaki örnek, `_timer1` değişkeni `WithEvents` anahtar sözcüğüyle tanımlandığından başarıyla derlenir:
+@No__t_0 değişkeni `WithEvents` anahtar sözcüğüyle tanımlandığından aşağıdaki örnek başarıyla derlenir:
 
 ```vb
 Imports System.Timers

@@ -7,34 +7,37 @@ helpviewer_keywords:
 - Unicode, file encoding
 - file encoding
 ms.assetid: ea2c5f5f-bbb1-4150-9928-b9951fa6bc57
-ms.openlocfilehash: c22e8046a8b88890f25bc6b671825eb6d68ec6b8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d73226c58d39c970ec02c32a2c188f2747a7d87e
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61960192"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72583472"
 ---
 # <a name="file-encodings-visual-basic"></a>Dosya Kodlamaları (Visual Basic)
-Dosya kodlamaları olarak da bilinen karakter kodlamalarını temsil etmek nasıl belirtin ne zaman karakter metin işleme. Unicode genellikle tercih edilir olsa da bir kodlama başka hangi dil karakterlerini açısından olabilir veya işleyemez, tercih edilebilir.  
-  
- Dosyalara yazma veya okuma, hatalı dosya kodlamaları eşleşen özel durumlar veya hatalı sonuçlar neden olabilir.  
-  
-## <a name="types-of-encodings"></a>Tür kodlamayı  
- Unicode dosyalarıyla çalışırken tercih edilen kodlamada değil. Unicode modern teknik simgeleri ve yayımlama içinde kullanılan özel karakterler dahil olmak üzere bilgi işlem, içinde kullanılan tüm karakterleri temsil etmek için 16-bit kod değerleri kullanan bir dünya çapında karakter kodlama standardıdır.  
-  
- Belirli bir dil veya coğrafi bölge içinde kullanılan karakterleri temsil etmek için 8-bit kod değerleri veya 8-bit değerleri birleşimlerini kullanan Windows ANSI karakter kümesi gibi geleneksel karakter kümesi, önceki karakter kodlama standartları oluşmuştur.  
-  
-## <a name="encoding-class"></a>Kodlama sınıfı  
- <xref:System.Text.Encoding> Sınıfı, karakter kodlamasını temsil eder. Bu tablo, kullanılabilir Kodlamalar türünü listeler ve her açıklar.  
-  
-|Ad|Açıklama|
-|---|---|    
-|<xref:System.Text.ASCIIEncoding>|ASCII karakter kodlama Unicode karakterini temsil eder.|  
-|<xref:System.Text.UnicodeEncoding>|UTF-16 kodlamasını Unicode karakterini temsil eder.|  
-|<xref:System.Text.UTF32Encoding>|UTF-32 kodlama Unicode karakterini temsil eder.|  
-|<xref:System.Text.UTF7Encoding>|UTF-7 kodlaması Unicode karakterini temsil eder.|  
-|<xref:System.Text.UTF8Encoding>|UTF-8 kodlamalı Unicode karakterini temsil eder.|  
-  
+
+Karakter kodlamaları olarak da bilinen dosya kodlamaları, metin işleme sırasında karakterlerin nasıl temsil edileceğini belirtir. Tek bir kodlama, bir veya işleyemeyen dil karakterleri açısından başka bir şekilde tercih edilebilir, ancak UNICODE genellikle tercih edilir.
+
+Dosyadan okuma veya yazma yaparken, dosya kodlamaları yanlış şekilde eşleştirilirken özel durumlar veya hatalı sonuçlar oluşabilir.
+
+## <a name="types-of-encodings"></a>Kodlamalar türleri
+
+Unicode, dosyalarla çalışırken tercih edilen kodlanıyor. Unicode, yayımlamak için kullanılan teknik semboller ve özel karakterler de dahil olmak üzere modern bilgi işlem 'da kullanılan tüm karakterleri temsil etmek için 16 bit kod değerlerini kullanan dünya çapındaki bir karakter kodlama standardıdır.
+
+Önceki karakter kodlama standartları, 8 bit kod değerleri kullanan Windows ANSI karakter kümesi veya belirli bir dilde veya coğrafi bölgede kullanılan karakterleri göstermek için 8 bit değer bileşimleri gibi geleneksel karakter kümelerinden oluşur.
+
+## <a name="encoding-class"></a>Kodlama sınıfı
+
+@No__t_0 sınıfı bir karakter kodlamasını temsil eder. Bu tabloda, kullanılabilir kodlamalar türü listelenmekte ve her biri açıklanmaktadır.
+
+|Name|Açıklama|
+|---|---|
+|<xref:System.Text.ASCIIEncoding>|Unicode karakterlerinin ASCII karakter kodlamasını temsil eder.|
+|<xref:System.Text.UnicodeEncoding>|Unicode karakterlerinin UTF-16 kodlamasını temsil eder.|
+|<xref:System.Text.UTF32Encoding>|Unicode karakterlerinin UTF-32 kodlamasını temsil eder.|
+|<xref:System.Text.UTF7Encoding>|Unicode karakterlerinin UTF-7 kodlamasını temsil eder.|
+|<xref:System.Text.UTF8Encoding>|Unicode karakterlerinin UTF-8 kodlamasını temsil eder.|
+
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Dosyalardan Okuma](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)

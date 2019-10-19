@@ -9,67 +9,67 @@ helpviewer_keywords:
 - literals [Visual Basic], coercing data type
 - declarations [Visual Basic], data types
 ms.assetid: 057206d2-3a5b-40b9-b3af-57446f9b52fa
-ms.openlocfilehash: 50e36aa13439bafcca27a7153a8c5d6043f03975
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9db7fa3f36021a39fafe6cf3da5af7070f0b5b0d
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61906977"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72582971"
 ---
 # <a name="constant-and-literal-data-types-visual-basic"></a>Sabit ve Değişmez Değerli Veri Türleri (Visual Basic)
-Bir sabit değer kendisi yerine bir değişkenin değerini veya 3 sayı veya dize "Hello" gibi bir ifadenin sonucu olarak ifade bir değerdir. Bir değişmez değerin yerini alır ve bu değer bir değişken değerini değiştirebilir, programın boyunca saklar anlamlı bir ad bir sabittir.  
+Değişmez değer, değişkenin değeri veya "Hello" dizesi gibi bir ifadenin sonucu yerine kendisini ifade eden bir değerdir. Sabit, bir sabit değerin yerini alan anlamlı bir addır ve değer değişebilir bir değişkenin aksine, bu değeri program genelinde tutar.  
   
- Zaman [Option Infer](../../../../visual-basic/language-reference/statements/option-infer-statement.md) olduğu `Off` ve [Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md) olduğu `On`, tüm sabit bir türle açıkça bildirmelidir. Aşağıdaki örnekte, veri türü `MyByte` açıkça veri türü olarak bildirilmiş `Byte`:  
+ [Option Infer](../../../../visual-basic/language-reference/statements/option-infer-statement.md) `Off` ve [Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md) `On`, bir veri türü ile tüm sabitleri açıkça bildirmeniz gerekir. Aşağıdaki örnekte `MyByte` veri türü açıkça veri türü olarak `Byte` olarak bildirilmiştir:  
   
  [!code-vb[VbVbalrConstants#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConstants/VB/Class1.vb#1)]  
   
- Zaman `Option Infer` olduğu `On` veya `Option Strict` olduğu `Off`, bir veri türüyle belirtmeden bir sabit bildirebilirsiniz bir `As` yan tümcesi. Derleyici sabiti ifadesinin türünden türünü belirler. Varsayılan olarak sayısal tamsayı sabit değeri saçıldığı `Integer` veri türü. Kayan noktalı sayılar için varsayılan veri türü `Double`ve anahtar sözcükler `True` ve `False` belirtin bir `Boolean` sabit.  
+ @No__t_0 `On` veya `Option Strict` `Off` olduğunda, bir `As` yan tümcesiyle veri türü belirtmeden bir sabit bildirebilirsiniz. Derleyici, ifadenin türünden sabit türünü belirler. Sayısal tamsayı sabit değeri, `Integer` veri türüne varsayılan olarak ayarlanır. Kayan nokta numaraları için varsayılan veri türü `Double` ve anahtar sözcükler `True` ve `False` bir `Boolean` sabiti belirler.  
   
-## <a name="literals-and-type-coercion"></a>Değişmez değerler ve tür zorlama  
- Bazı durumlarda, belirli bir tür için bir sabit değer zorlamak isteyebilirsiniz; Örneğin, özellikle büyük tamsayı değişmez değer türünde bir değişkene atarken `Decimal`. Aşağıdaki örnek, bir hata oluşturur:  
+## <a name="literals-and-type-coercion"></a>Değişmez değerler ve tür zorlaması  
+ Bazı durumlarda, bir sabit değeri belirli bir veri türüne zorlamak isteyebilirsiniz; Örneğin, `Decimal` türünde bir değişkene özellikle büyük bir integral sabit değeri atarken. Aşağıdaki örnek bir hata üretir:  
   
-```  
+```vb  
 Dim myDecimal as Decimal  
 myDecimal = 100000000000000000000   ' This causes a compiler error.  
 ```  
   
- Değişmez değerin gösterimi hata sonuçları. `Decimal` Veri türü tutabilir değeri bu büyük ancak değişmez değer olarak örtük olarak temsil edilen bir `Long`, hangi olamaz.  
+ Hata, sabit değerinin gösteriminden kaynaklanmaktadır. @No__t_0 veri türü bu büyüklükte bir değer tutabilir, ancak değişmez değer örtük olarak bir `Long` olarak temsil edilir; bu, olamaz.  
   
- İki yolla belirli veri türü için bir sabit değer coerce: bir tür kendisine karakterinin ya da karakterini içinde yerleştirme. Türü bir karakteri veya karakterleri kapsayan gerekir hemen önünde ve/veya boşluk olmaması veya herhangi bir türde karakter değişmez değeri izleyin.  
+ Bir sabit değeri, belirli bir veri türüne iki şekilde dönüştürebilirsiniz: buna bir tür karakteri ekleyerek veya kapsayan karakterlerin içine yerleştirerek. Bir tür karakteri veya kapsayan karakterler, hiçbir türden boşluk veya karakter olmadan hemen önce ve/veya sabit değer içermelidir.  
   
- Önceki örnekte iş yapmak için ekleyebilir `D` karakter olarak temsil edilen neden değişmez değer türü bir `Decimal`:  
+ Önceki örneğin çalışmasını sağlamak için, `D` tür karakterini literal ekleyebilirsiniz, bu da `Decimal` olarak temsil edilmesine neden olur:  
   
  [!code-vb[VbVbalrConstants#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConstants/VB/Class1.vb#2)]  
   
- Aşağıdaki örnek, türü, kapsayan karakter doğru kullanımını gösterir:  
+ Aşağıdaki örnek, tür karakterlerinin ve kapsayan karakterlerin doğru kullanımını gösterir:  
   
  [!code-vb[VbVbalrConstants#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConstants/VB/Class1.vb#3)]  
   
- Aşağıdaki tabloda gösterilen kapsayan karakterleri ve karakter türü Visual Basic'te kullanılabilir.  
+ Aşağıdaki tabloda, Visual Basic ' de bulunan karakterlerin ve tür karakterlerinin gösterildiği gösterilmektedir.  
   
-|Veri türü|Kapsayan karakter|Eklenen türü karakteri|  
+|Veri türü|Kapsayan karakter|Eklenen tür karakteri|  
 |---|---|---|  
-|`Boolean`|(hiçbiri)|(hiçbiri)|  
-|`Byte`|(hiçbiri)|(hiçbiri)|  
+|`Boolean`|seçim|seçim|  
+|`Byte`|seçim|seçim|  
 |`Char`|"|C|  
-|`Date`|#|(hiçbiri)|  
-|`Decimal`|(hiçbiri)|D veya @|  
-|`Double`|(hiçbiri)|R veya #|  
-|`Integer`|(hiçbiri)|%|  
-|`Long`|(hiçbiri)|M veya &|  
-|`Short`|(hiçbiri)|S|  
-|`Single`|(hiçbiri)|F veya!|  
-|`String`|"|(hiçbiri)|  
+|`Date`|#|seçim|  
+|`Decimal`|seçim|D veya @|  
+|`Double`|seçim|R veya #|  
+|`Integer`|seçim|I veya%|  
+|`Long`|seçim|L veya &|  
+|`Short`|seçim|S|  
+|`Single`|seçim|F veya!|  
+|`String`|"|seçim|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Kullanıcı Tanımlı Sabitler](../../../../visual-basic/programming-guide/language-features/constants-enums/user-defined-constants.md)
-- [Nasıl yapılır: Bir sabit bildirme](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-a-constant.md)
+- [Nasıl yapılır: Bir Sabit Bildirme](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-a-constant.md)
 - [Sabitlere Genel Bakış](../../../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)
 - [Option Strict Deyimi](../../../../visual-basic/language-reference/statements/option-strict-statement.md)
 - [Option Explicit Deyimi](../../../../visual-basic/language-reference/statements/option-explicit-statement.md)
 - [Sabit Listelerine Genel Bakış](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)
-- [Nasıl yapılır: Bir numaralandırma bildirme](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)
+- [Nasıl yapılır: numaralandırma bildirme](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)
 - [Sabit Listeleri ve Ad Niteliği](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)
 - [Veri Türleri](../../../../visual-basic/language-reference/data-types/index.md)
 - [Sabitler ve Sabit Listeleri](../../../../visual-basic/language-reference/constants-and-enumerations.md)

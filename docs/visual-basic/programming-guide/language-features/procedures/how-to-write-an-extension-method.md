@@ -6,12 +6,12 @@ helpviewer_keywords:
 - writing extension methods [Visual Basic]
 - extension methods [Visual Basic]
 ms.assetid: fb2739cc-958d-4ef4-a38b-214a74c93413
-ms.openlocfilehash: d01596d50db8ba1078e8ac82caa951418645c977
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 4671728330614f0f3da23fd90f5e635ddcf46578
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72004607"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72581151"
 ---
 # <a name="how-to-write-an-extension-method-visual-basic"></a>Nasıl yapılır: Uzantı Metodu Yazma (Visual Basic)
 
@@ -32,8 +32,8 @@ Uzantı yöntemleri varolan bir sınıfa Yöntemler eklemenizi sağlar. Genişle
     ```vb
     <Extension()>
     ```
- 
-   @No__t-0 özniteliğinin, bir Visual Basic [modülünde](../../../language-reference/statements/module-statement.md)yalnızca bir yönteme (bir `Sub` veya `Function` yordam) uygulanabileceğini unutmayın. Bunu bir `Class` veya `Structure` ' deki bir yönteme uygularsanız, Visual Basic Derleyicisi Hata [BC36551](../../../misc/bc36551.md)oluşturuyor, "uzantı yöntemleri yalnızca modüllerde tanımlanabilir."
+
+    @No__t_0 özniteliğinin bir Visual Basic [modülünde](../../../language-reference/statements/module-statement.md)yalnızca bir yönteme (bir `Sub` veya `Function` yordamına) uygulanabileceğini unutmayın. Bunu bir `Class` veya `Structure` ' deki bir yönteme uygularsanız, Visual Basic Derleyicisi Hata [BC36551](../../../misc/bc36551.md)oluşturuyor, "uzantı yöntemleri yalnızca modüllerde tanımlanabilir."
 
 4. Yöntemi sıradan bir şekilde bildirin, ancak ilk parametre türü genişletmek istediğiniz veri türü olmalıdır.
 
@@ -46,8 +46,8 @@ Uzantı yöntemleri varolan bir sınıfa Yöntemler eklemenizi sağlar. Genişle
 
 ## <a name="example"></a>Örnek
 
- Aşağıdaki örnek, `StringExtensions` modülünde bir genişletme yöntemi bildirir. İkinci bir modül olan `Module1`, `StringExtensions` içeri aktarır ve yöntemini çağırır. Uzantı yöntemi çağrıldığında kapsam içinde olmalıdır. @No__t-0 uzantı metodu, <xref:System.String> sınıfını, dize örneğini görüntüleyen ve ardından parametre olarak gönderilen bir noktalama sembolleri dizesi olan bir yöntemle genişletir.
-  
+Aşağıdaki örnek, `StringExtensions` modülünde bir genişletme yöntemi bildirir. İkinci bir modül olan `Module1`, `StringExtensions` içeri aktarır ve yöntemini çağırır. Uzantı yöntemi çağrıldığında kapsam içinde olmalıdır. Genişletme yöntemi `PrintAndPunctuate` <xref:System.String> sınıfını bir parametre olarak gönderilen bir noktalama sembolleri dizesi tarafından izlenen bir yöntem ile genişletir.
+
 ```vb
 ' Declarations will typically be in a separate module.
 Imports System.Runtime.CompilerServices
@@ -68,23 +68,23 @@ End Module
 Imports ConsoleApplication2.StringExtensions
 
 Module Module1
-  
+
     Sub Main()
         Dim example = "Hello"
         example.PrintAndPunctuate("?")
         example.PrintAndPunctuate("!!!!")
     End Sub
-    
+
 End Module
 ```
-  
- Yöntemin iki parametre ile tanımlandığından ve yalnızca bir ile çağırdığına dikkat edin. Yöntem tanımındaki `aString` olan ilk parametre, yöntemi çağıran `String` örneği olan `example` ' e bağlanır. Örneğin çıktısı aşağıdaki gibidir:
-  
- ```console
- Hello?
- Hello!!!!
- ```
-  
+
+Yöntemin iki parametre ile tanımlandığından ve yalnızca bir ile çağırdığına dikkat edin. Yöntem tanımındaki `aString` olan ilk parametre, yöntemi çağıran `String` örneği olan `example` ' e bağlanır. Örneğin çıktısı aşağıdaki gibidir:
+
+```console
+Hello?
+Hello!!!!
+```
+
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Runtime.CompilerServices.ExtensionAttribute>

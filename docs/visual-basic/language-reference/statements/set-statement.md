@@ -10,19 +10,19 @@ helpviewer_keywords:
 - write-only properties
 - properties [Visual Basic], write-only
 ms.assetid: 9ecc27b4-df84-420d-9075-db25455fb3cd
-ms.openlocfilehash: fb51dfbae4d9c4ef205e67ac15c5027e62a9a938
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: cb0dc76d110f3e6a3ea3e74cc0bfb5a669b35396
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64663190"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72583232"
 ---
 # <a name="set-statement-visual-basic"></a>Set Deyimi (Visual Basic)
-Bildiren bir `Set` bir özelliğe değer atamak için kullanılan özellik yordamı.  
+Bir özelliğe değer atamak için kullanılan bir `Set` özellik yordamı bildirir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```vb  
 [ <attributelist> ] [ accessmodifier ] Set (ByVal value [ As datatype ])  
     [ statements ]  
 End Set  
@@ -30,10 +30,10 @@ End Set
   
 ## <a name="parts"></a>Bölümler  
  `attributelist`  
- İsteğe bağlı. Bkz: [öznitelik listesi](../../../visual-basic/language-reference/statements/attribute-list.md).  
+ İsteğe bağlı. Bkz. [öznitelik listesi](../../../visual-basic/language-reference/statements/attribute-list.md).  
   
  `accessmodifier`  
- İsteğe bağlı biri `Get` ve `Set` bu özellik deyimlerinde. Aşağıdakilerden biri olabilir:  
+ Bu özelliğindeki `Get` ve `Set` deyimlerinin en az birinde isteğe bağlı. Aşağıdakilerden biri olabilir:  
   
 - [Protected](../../../visual-basic/language-reference/modifiers/protected.md)  
   
@@ -43,47 +43,47 @@ End Set
   
 - `Protected Friend`  
   
- Bkz: [erişim düzeyini Visual Basic'te](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
+ [Visual Basic erişim düzeylerine](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)bakın.  
   
  `value`  
- Gerekli. Özelliğin yeni değeri içeren bir parametre.  
+ Gerekli. Özelliği için yeni değeri içeren parametre.  
   
  `datatype`  
- Gerekli if `Option Strict` olduğu `On`. Veri türü `value` parametresi. Belirtilen veri türü özelliğinin veri türü ile aynı olmalıdır nerede bu `Set` deyimi bildirilir.  
+ @No__t_0 `On` olması gerekir. @No__t_0 parametresinin veri türü. Belirtilen veri türü, bu `Set` deyimin bildirildiği özelliğin veri türüyle aynı olmalıdır.  
   
  `statements`  
- İsteğe bağlı. Çalıştırılan bir veya daha fazla deyim `Set` özelliği yordamı çağrılır.  
+ İsteğe bağlı. @No__t_0 özellik yordamı çağrıldığında çalışan bir veya daha fazla deyim.  
   
  `End Set`  
- Gerekli. Tanımını sonlandırır `Set` özellik yordamı.  
+ Gerekli. @No__t_0 özelliği yordamının tanımını sonlandırır.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Her özelliği bir `Set` özellik yordamı özelliği işaretlenmediği sürece `ReadOnly`. `Set` Yordamı, özelliğin değerini ayarlamak için kullanılır.  
+ Özellik `ReadOnly` olarak işaretlenmedikçe her özelliğin `Set` Özellik yordamına sahip olması gerekir. @No__t_0 yordamı, özelliğinin değerini ayarlamak için kullanılır.  
   
- Visual Basic otomatik olarak çağıran bir özelliğin `Set` atama deyiminin özelliğinde depolanacak bir değer sağladığında yordamı.  
+ Bir atama ekstresi özellikte depolanacak bir değer sağlıyorsa, Visual Basic bir özelliğin `Set` yordamını otomatik olarak çağırır.  
   
- Visual Basic için bir parametre geçirir `Set` yordam sırasında özelliği atamaları. İçin bir parametre belirtmezseniz `Set`, tümleşik geliştirme ortamı (IDE) adlı bir örtük parametresini kullanan `value`. Özelliğe atanacak değer parametresi içerir. Genellikle bu değer özel bir yerel değişkene depolayın ve döndürün. her `Get` yordamı çağrılır.  
+ Visual Basic, özellik atamaları sırasında `Set` yordama bir parametre geçirir. @No__t_0 için bir parametre belirtmezseniz, tümleşik geliştirme ortamı (IDE) `value` adlı örtük bir parametre kullanır. Parametresi, özelliğine atanacak değeri tutar. Genellikle bu değeri özel bir yerel değişkende depolar ve `Get` yordamı her çağrıldığında döndürün.  
   
- Özellik bildirimi gövdesi yalnızca özelliğin içerebilir `Get` ve `Set` yordamları arasında [Property deyimi](../../../visual-basic/language-reference/statements/property-statement.md) ve `End Property` deyimi. Bu yordamlar dışında her şey depolanamıyor. Özellikle, bu özelliğin geçerli değerini depolanamıyor. Özellik yordamları birini içinde depolamak, bir özellik yordamı, erişemediği için bu değer özelliği dışında depolamanız gerekir. Değeri depolamak için her zamanki yaklaşımdır bir [özel](../../../visual-basic/language-reference/modifiers/private.md) bildirilen değişkenin özelliği ile aynı düzeyde. Tanımlamanız gerekir bir `Set` yordam içinde geçerli olduğu özellik.  
+ Özellik bildiriminin gövdesi, Property [ifadesiyle](../../../visual-basic/language-reference/statements/property-statement.md) `End Property` ifadesiyle yalnızca özelliğin `Get` ve `Set` yordamlarını içerebilir. Bu yordamlar dışında bir şey depolayamazsınız. Özellikle, özelliğin geçerli değerini depolayaamaz. Özellik yordamlarından birinde depolursa, diğer özellik yordamının bu değeri, özelliğin dışında depolamanız gerekir. Her zamanki yaklaşım, değeri özelliği ile aynı düzeyde belirtilen [özel](../../../visual-basic/language-reference/modifiers/private.md) bir değişkende depokullanmaktır. Bir `Set` yordamını, uygulandığı özelliğin içinde tanımlamanız gerekir.  
   
- `Set` Yordamı kullanmadığınız sürece, kapsayan özelliği erişim düzeyi için varsayılan olarak `accessmodifier` içinde `Set` deyimi.  
+ @No__t_0 yordamı, `Set` ifadesinde `accessmodifier` kullanmadığınız durumlar dışında, kendisini kapsayan özelliğin erişim düzeyi olur.  
   
 ## <a name="rules"></a>Kurallar  
   
-- **Karışık erişim düzeyleri.** Okuma-yazma özelliği tanımlıyorsanız, isteğe bağlı olarak farklı erişim düzeyi için belirtebilirsiniz `Get` veya `Set` yordamı, ancak ikisine birden değil. Bunu yaparsanız, yordam erişim düzeyi özellik erişim düzeyinden daha kısıtlayıcı olmalıdır. Örneğin, özellik bildirilirse `Friend`, bildirebilirsiniz `Set` yordamı `Private`, ama `Public`.  
+- **Karışık erişim düzeyleri.** Okuma-yazma özelliği tanımlıyorsanız, isteğe bağlı olarak `Get` ya da `Set` yordamı için farklı bir erişim düzeyi belirtebilirsiniz, ancak her ikisini birden belirtemezsiniz. Bunu yaparsanız, yordam erişim düzeyinin özelliğin erişim düzeyinden daha kısıtlayıcı olması gerekir. Örneğin, özellik `Friend` olarak bildirilirse, `Private` `Set` yordamını bildirebilirsiniz, ancak `Public`.  
   
-     Tanımlıyorsanız, bir `WriteOnly` özelliği `Set` yordamı tüm özelliği temsil eder. Farklı bir erişim düzeyini bildiremezsiniz `Set`, iki erişim düzeyi özelliği ayarlamanız gerekir.  
+     @No__t_0 özelliği tanımlıyorsanız, `Set` yordamı tüm özelliği temsil eder. Özelliği için iki erişim düzeyi ayarlayacağından, `Set` için farklı bir erişim düzeyi bildiremezsiniz.  
   
 ## <a name="behavior"></a>Davranış  
   
-- **Bir özellik yordamı döndürüyor.** Zaman `Set` yordamı çağıran koda döndürür, sağlanan depolanacak değer deyimi yürütme devam eder.  
+- **Bir özellik yordamından döndürülüyor.** @No__t_0 yordamı çağıran koda döndüğünde, yürütme, depolanacak değeri sağlayan deyimden sonra devam eder.  
   
-     `Set` özellik yordamları kullanarak döndürebilir [dönüş deyimi](../../../visual-basic/language-reference/statements/return-statement.md) veya [çıkış bildirimi](../../../visual-basic/language-reference/statements/exit-statement.md).  
+     `Set` özellik yordamları, [Return](../../../visual-basic/language-reference/statements/return-statement.md) veya [Exit deyimlerini](../../../visual-basic/language-reference/statements/exit-statement.md)kullanarak dönebilir.  
   
-     `Exit Property` Ve `Return` deyimleri neden hemen bir çıkış bir özellik yordamı. Herhangi bir sayıda `Exit Property` ve `Return` deyimleri yordamda herhangi bir yerinde görünebilir ve karıştırabilir miyim `Exit Property` ve `Return` deyimleri.  
+     @No__t_0 ve `Return` deyimleri, bir özellik yordamından anında çıkış oluşmasına neden olur. Herhangi bir sayıda `Exit Property` ve `Return` deyimi yordamda herhangi bir yerde görünebilir ve `Exit Property` ve `Return` deyimlerini karıştırabilirsiniz.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte `Set` bir özelliğin değerini ayarlamak için ifade.  
+ Aşağıdaki örnek, bir özelliğin değerini ayarlamak için `Set` ifadesini kullanır.  
   
  [!code-vb[VbVbalrStatements#55](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#55)]  
   

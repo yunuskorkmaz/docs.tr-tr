@@ -28,20 +28,20 @@ helpviewer_keywords:
 - End keyword [Visual Basic], Function statements
 - Handles keyword [Visual Basic], Function statements
 ms.assetid: a4497077-0f46-4ede-a27f-9e8670df52b9
-ms.openlocfilehash: 3a6184164fdc6f2517caf45f7b5e1455c9299666
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 046a3a7d50d15cd3e59205998554a4c330d4552c
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64754726"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72581844"
 ---
 # <a name="function-statement-visual-basic"></a>Function Deyimi (Visual Basic)
 
-Adı, parametreleri ve kodu tanımlayan bildirir bir `Function` yordamı.
+Bir `Function` yordamını tanımlayan adı, parametreleri ve kodu bildirir.
 
 ## <a name="syntax"></a>Sözdizimi
 
-```
+```vb
 [ <attributelist> ] [ accessmodifier ] [ proceduremodifiers ] [ Shared ] [ Shadows ] [ Async | Iterator ]
 Function name [ (Of typeparamlist) ] [ (parameterlist) ] [ As returntype ] [ Implements implementslist | Handles eventlist ]
     [ statements ]
@@ -54,7 +54,7 @@ End Function
 
 - `attributelist`
 
-  İsteğe bağlı. Bkz: [öznitelik listesi](attribute-list.md).
+  İsteğe bağlı. Bkz. [öznitelik listesi](attribute-list.md).
 
 - `accessmodifier`
 
@@ -72,7 +72,7 @@ End Function
 
   - [Private Protected](../../language-reference/modifiers/private-protected.md)
 
-  Bkz: [erişim düzeyini Visual Basic'te](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).
+  [Visual Basic erişim düzeylerine](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)bakın.
 
 - `proceduremodifiers`
 
@@ -94,77 +94,77 @@ End Function
 
 - `Shared`
 
-  İsteğe bağlı. Bkz: [paylaşılan](../../../visual-basic/language-reference/modifiers/shared.md).
+  İsteğe bağlı. Bkz. [paylaşılan](../../../visual-basic/language-reference/modifiers/shared.md).
 
 - `Shadows`
 
-  İsteğe bağlı. Bkz: [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).
+  İsteğe bağlı. Bkz. [gölgeler](../../../visual-basic/language-reference/modifiers/shadows.md).
 
 - `Async`
 
-  İsteğe bağlı. Bkz: [zaman uyumsuz](../../../visual-basic/language-reference/modifiers/async.md).
+  İsteğe bağlı. Bkz. [zaman uyumsuz](../../../visual-basic/language-reference/modifiers/async.md).
 
 - `Iterator`
 
-  İsteğe bağlı. Bkz: [yineleyici](../../../visual-basic/language-reference/modifiers/iterator.md).
+  İsteğe bağlı. Bkz. [Yineleyici](../../../visual-basic/language-reference/modifiers/iterator.md).
 
 - `name`
 
-  Gerekli. Yordamın adı. Bkz: [bildirilen öğe adları](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).
+  Gerekli. Yordamın adı. Bkz. [tanımlanmış öğe adları](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).
 
 - `typeparamlist`
 
-  İsteğe bağlı. Genel bir yordam için tür parametreleri listesi. Bkz: [türü listesinde](type-list.md).
+  İsteğe bağlı. Genel bir yordamın tür parametrelerinin listesi. Bkz. [tür listesi](type-list.md).
 
 - `parameterlist`
 
-  İsteğe bağlı. Bu yordamı parametrelerini temsil eden yerel değişken adlarının listesi. Bkz: [parametre listesi](parameter-list.md).
+  İsteğe bağlı. Bu yordamın parametrelerini temsil eden yerel değişken adlarının listesi. Bkz. [parametre listesi](parameter-list.md).
 
 - `returntype`
 
-  Gerekli if `Option Strict` olduğu `On`. Bu yordam tarafından döndürülen değerin veri türü.
+  @No__t_0 `On` olması gerekir. Bu yordamın döndürdüğü değerin veri türü.
 
 - `Implements`
 
-  İsteğe bağlı. Bu yordam bir veya daha fazla uyguladığını belirtir `Function` yordamları, bu yordamın içeren sınıf veya yapı tarafından uygulanan bir arabirim içinde tanımlanmış her biri. Bkz: [uygulayan deyimi](implements-statement.md).
+  İsteğe bağlı. Bu yordamın, her biri bu yordamın kapsayan sınıf veya yapı tarafından uygulanan bir arabirimde tanımlanan bir veya daha fazla `Function` yordamlarını uyguladığını gösterir. Bkz. [Implements açıklaması](implements-statement.md).
 
 - `implementslist`
 
-  Gerekli if `Implements` sağlanır. Listesi `Function` uygulanmakta olan yordamlar.
+  @No__t_0 sağlanırsa gereklidir. Uygulanan `Function` yordamlarının listesi.
 
   `implementedprocedure [ , implementedprocedure ... ]`
 
-  Her `implementedprocedure` aşağıdaki söz dizimini ve bölümleri vardır:
+  Her `implementedprocedure` aşağıdaki söz dizimi ve bölümlere sahiptir:
 
   `interface.definedname`
 
-  |Bölümü|Açıklama|
+  |Bölümüyle|Açıklama|
   |---|---|
-  |`interface`|Gerekli. Bu yordam tarafından uygulanan arabirimin adını sınıf veya yapı içeren.|
-  |`definedname`|Gerekli. Ad tarafından yordamı tanımlanan `interface`.|
+  |`interface`|Gerekli. Bu yordamın kapsayan sınıf veya yapı tarafından uygulanan bir arabirimin adı.|
+  |`definedname`|Gerekli. Yordamın `interface` tanımladığı ad.|
 
 - `Handles`
 
-  İsteğe bağlı. Bu yordam, bir veya daha fazla belirli olayları işleyebileceğini belirtir. Bkz: [işler](handles-clause.md).
+  İsteğe bağlı. Bu yordamın bir veya daha fazla belirli olayı işleyebileceğini belirtir. Bkz. [işleyiciler](handles-clause.md).
 
 - `eventlist`
 
-  Gerekli if `Handles` sağlanır. Bu yordamı işleme olayların listesi.
+  @No__t_0 sağlanırsa gereklidir. Bu yordamın işleyeceği olayların listesi.
 
   `eventspecifier [ , eventspecifier ... ]`
 
-  Her `eventspecifier` aşağıdaki söz dizimini ve bölümleri vardır:
+  Her `eventspecifier` aşağıdaki söz dizimi ve bölümlere sahiptir:
 
   `eventvariable.event`
 
-  |Bölümü|Açıklama|
+  |Bölümüyle|Açıklama|
   |---|---|
-  |`eventvariable`|Gerekli. Nesne değişkeni sınıfın veya olayı yükselten yapı veri türü ile bildirilmiş.|
-  |`event`|Gerekli. Bu yordamı işleme olayın adı.|
+  |`eventvariable`|Gerekli. Olayı oluşturan sınıfın veya yapının veri türüyle belirtilen nesne değişkeni.|
+  |`event`|Gerekli. Bu yordamın işleyeceği olayın adı.|
 
 - `statements`
 
-  İsteğe bağlı. Bu yordamda yürütülecek deyimler bloğunu.
+  İsteğe bağlı. Bu yordamda yürütülecek deyim bloğu.
 
 - `End Function`
 
@@ -172,95 +172,95 @@ End Function
 
 ## <a name="remarks"></a>Açıklamalar
 
-Tüm yürütülebilir kod yordam içinde olmalıdır. Her yordamı sırayla bir sınıf, yapı veya içeren sınıf, yapı veya modül Belirtilen modül içinde bildirilir.
+Tüm yürütülebilir kodların bir yordamın içinde olması gerekir. Her yordam, sırasıyla bir sınıf, yapı veya kapsayan sınıf, yapı veya modül olarak başvurulan bir modül içinde bildirilmiştir.
 
-Çağrıldığı koda bir değer döndürmek için kullanmak bir `Function` yordamı; Aksi durumda, bir `Sub` yordamı.
+Çağırma koduna bir değer döndürmek için `Function` yordamı kullanın; Aksi takdirde, `Sub` prosedürü kullanın.
 
-## <a name="defining-a-function"></a>Bir işlevi tanımlama
+## <a name="defining-a-function"></a>Işlev tanımlama
 
-Tanımlayabileceğiniz bir `Function` yordamı yalnızca Modül düzeyinde. Bu nedenle, bir işlev bildirimi bağlamı bir sınıf, yapı, modül veya bir arabirim olmalıdır ve bir kaynak dosyası, bir ad alanı, bir yordam veya bir bloğu olamaz. Daha fazla bilgi için [bildirim bağlamları ve varsayılan erişim düzeyleri](declaration-contexts-and-default-access-levels.md).
+Bir `Function` yordamını yalnızca modül düzeyinde tanımlayabilirsiniz. Bu nedenle, bir işlev için bildirim bağlamı bir sınıf, yapı, modül veya arabirim olmalıdır ve kaynak dosya, bir ad alanı, yordam veya bir blok olamaz. Daha fazla bilgi için bkz. [bildirim bağlamları ve varsayılan erişim düzeyleri](declaration-contexts-and-default-access-levels.md).
 
-`Function` yordamları varsayılan genel erişim için. Erişim değiştiricileri ile kullanıcıların erişim düzeylerini ayarlayabilirsiniz.
+yordamları, genel erişim için varsayılan `Function`. Erişim değiştiricilerini kullanarak erişim düzeylerini ayarlayabilirsiniz.
 
-A `Function` yordamı yordamın döndürdüğü değerin veri türü bildirebilirsiniz. Herhangi bir veri türü veya bir sabit listesi, bir yapı, bir sınıf veya arabirim adını belirtebilirsiniz. Belirtmezseniz `returntype` parametresi yordamın döndürdüğü `Object`.
+@No__t_0 yordam, yordamın döndürdüğü değerin veri türünü bildirebilirler. Herhangi bir veri türü veya bir numaralandırma, bir yapı, sınıf veya arabirim adı belirtebilirsiniz. @No__t_0 parametresini belirtmezseniz, yordam `Object` döndürür.
 
-Bu yordamı kullanıyorsa `Implements` anahtar sözcüğü, içeren sınıfı veya yapısına sahip olması gerekir bir `Implements` deyim indisinin hemen ardından kendi `Class` veya `Structure` deyimi. `Implements` Deyimi, belirtilen her bir arabirime içermelidir `implementslist`. Ancak, bir arabirim tarafından tanımlayan adı `Function` (içinde `definedname`) bu yordamı adıyla eşleşmesi gerekmez (içinde `name`).
+Bu yordam `Implements` anahtar sözcüğünü kullanıyorsa, kapsayan sınıf veya yapının, `Class` veya `Structure` bildirisini hemen izleyen bir `Implements` ifadesine de sahip olması gerekir. @No__t_0 deyimin `implementslist` belirtilen her arabirimi içermesi gerekir. Ancak, bir arabirimin `Function` tanımladığı adın (`definedname`) bu yordamın adıyla eşleşmesi gerekmez (`name`).
 
 > [!NOTE]
-> Lambda ifadeleri, işlev ifadeleri satır içi tanımlamak için kullanabilirsiniz. Daha fazla bilgi için [işlev ifadesi](../../../visual-basic/language-reference/operators/function-expression.md) ve [Lambda ifadeleri](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).
+> İşlev ifadelerini satır içi olarak tanımlamak için lambda ifadeleri kullanabilirsiniz. Daha fazla bilgi için bkz. [Işlev ifadesi](../../../visual-basic/language-reference/operators/function-expression.md) ve [lambda ifadeleri](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).
 
-## <a name="returning-from-a-function"></a>Bir işlevden döndürme
+## <a name="returning-from-a-function"></a>Bir Işlevden dönme
 
-Zaman `Function` yordamı çağıran koda döndürür, yordamı çağıran deyim izleyen deyime ile yürütme devam eder.
+@No__t_0 yordamı çağıran koda döndüğünde, yürütme yordamı çağıran deyimden sonraki deyimle devam eder.
 
-Bir işlevden bir değer döndürmek için işlev adını değerini atayın veya olmasını bir `Return` deyimi.
+Bir işlevden bir değer döndürmek için, değeri işlev adına atayabilir veya bir `Return` ifadesine dahil edebilirsiniz.
 
-`Return` Deyimi aynı anda dönüş değeri atar ve aşağıdaki örnekte gösterildiği gibi işlev çıkar.
+@No__t_0 deyimin döndürdüğü değeri aynı anda atar ve aşağıdaki örnekte gösterildiği gibi işlevden çıkar.
 
 [!code-vb[VbVbalrStatements#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#24)]
 
-Aşağıdaki örnek, işlev adını dönüş değeri atar `myFunction` ve ardından `Exit Function` döndürülecek deyimi.
+Aşağıdaki örnek, `myFunction` işlev adına döndürülen değeri atar ve sonra geri dönmek için `Exit Function` ifadesini kullanır.
 
 [!code-vb[VbVbalrStatements#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#23)]
 
-`Exit Function` Ve `Return` deyimleri neden hemen çıkılmadan bir `Function` yordamı. Herhangi bir sayıda `Exit Function` ve `Return` deyimleri yordamda herhangi bir yerinde görünebilir ve karıştırabilir miyim `Exit Function` ve `Return` deyimleri.
+@No__t_0 ve `Return` deyimleri, bir `Function` yordamından anında çıkış oluşmasına neden olur. Herhangi bir sayıda `Exit Function` ve `Return` deyimi yordamda herhangi bir yerde görünebilir ve `Exit Function` ve `Return` deyimlerini karıştırabilirsiniz.
 
-Kullanırsanız `Exit Function` değerine atama olmadan `name`, belirtilen veri türü için varsayılan değer yordamın döndürdüğü `returntype`. Varsa `returntype` , yordam döndürür belirtilmemiş `Nothing`, varsayılan değeri olduğu `Object`.
+@No__t_1 bir değer atamadan `Exit Function` kullanırsanız yordam, `returntype` belirtilen veri türü için varsayılan değeri döndürür. @No__t_0 belirtilmemişse, yordam, `Object` için varsayılan değer olan `Nothing` döndürür.
 
 ## <a name="calling-a-function"></a>İşlev Çağırma
 
-Çağrısı bir `Function` yordamı kullanarak bir ifadede, parantez içindeki bağımsız değişken listesi tarafından izlenen yordam adı. Yalnızca, herhangi bir bağımsız değişken olmayan Eğer ayraçları atlayabilirsiniz. Ancak, kodunuz her zaman parantezler eklerseniz daha okunabilir olur.
+Yordam adını, ardından parantez içindeki bağımsız değişken listesini kullanarak bir ifadede bir `Function` yordamını çağırabilirsiniz. Parantezleri yalnızca herhangi bir bağımsız değişken belirtmezseniz atlayabilirsiniz. Ancak, her zaman parantezleri eklerseniz kodunuz daha okunabilir.
 
-Çağrısı bir `Function` kitaplık çağrısı aynı şekilde işlev gibi yordamı `Sqrt`, `Cos`, veya `ChrW`.
+Bir `Function` yordamını, `Sqrt`, `Cos` veya `ChrW` gibi herhangi bir kitaplık işlevini çağırdığınız şekilde çağırabilirsiniz.
 
-Kullanarak bir işlevi çağırabilir `Call` anahtar sözcüğü. Bu durumda, dönüş değeri yok sayılır. Kullanım `Call` anahtar sözcüğü, çoğu durumda önerilmez. Daha fazla bilgi için [Call deyimi](call-statement.md).
+Ayrıca, `Call` anahtar sözcüğünü kullanarak bir işlevi çağırabilirsiniz. Bu durumda, dönüş değeri yok sayılır. Çoğu durumda `Call` anahtar sözcüğünün kullanılması önerilmez. Daha fazla bilgi için bkz. [Call deyimleri](call-statement.md).
 
-Visual Basic, aritmetik ifadeler iç verimliliğini artırmak için bazen yeniden düzenler. Bu nedenle, kullanmamalısınız bir `Function` işlevi aynı ifadede değişkenlerin değeri değiştiğinde bir aritmetik ifade yordamda.
+Visual Basic bazen, iç verimliliği artırmak için aritmetik ifadeleri yeniden düzenler. Bu nedenle, işlev aynı ifadedeki değişkenlerin değerini değiştirdiğinde bir aritmetik ifadede `Function` yordamı kullanmamalısınız.
 
-## <a name="async-functions"></a>Zaman uyumsuz işlevleri
+## <a name="async-functions"></a>Zaman uyumsuz Işlevler
 
-*Zaman uyumsuz* özellik açık geri çağırmaları kullanarak veya kodunuzun birden çok işlevleri veya lambda ifadelerinde el ile bölme olmadan zaman uyumsuz işlevleri çağıran olanak tanır.
+*Async* özelliği, açık geri çağırmaları kullanmadan veya kodunuzu birden çok işlev veya lambda ifadesine el ile bölmeden zaman uyumsuz işlevleri çağırabilmeniz için izin verir.
 
-Bir işlev ile işaretlerseniz [zaman uyumsuz](../../../visual-basic/language-reference/modifiers/async.md) kullanabileceğiniz değiştiricisi [Await](../../../visual-basic/language-reference/operators/await-operator.md) işlevindeki işleci. Ulaştığında denetlemek bir `Await` ifadesinde `Async` işlevi, Denetim çağırana döner ve awaited görevi tamamlanıncaya kadar işlevi ediyor askıya alınır. Görev tamamlandığında, işlevi yürütme sürdürebilirsiniz.
+Bir işlevi [zaman uyumsuz](../../../visual-basic/language-reference/modifiers/async.md) değiştiriciyle işaretlerseniz, işlevindeki [await](../../../visual-basic/language-reference/operators/await-operator.md) işlecini kullanabilirsiniz. Denetim, `Async` işlevindeki bir `Await` ifadesine ulaştığında, Denetim çağırana döner ve beklenen görev tamamlanana kadar işlevdeki ilerleme durumu askıya alınır. Görev tamamlandığında, yürütme işlevinde çalışmaya çalışabilir.
 
 > [!NOTE]
-> Bir `Async` yordam ya da henüz tamamlanmadı ilk beklenen nesne karşılaştığında çağırana döndürür veya sonuna alır `Async` yordamı, hangisi daha önce gerçekleşirse.
+> Bir `Async` yordam, henüz tamamlanmamış olan ilk beklemiş nesneyle karşılaştığında arayan öğesine geri döner veya `Async` yordamının sonuna, hangisi önce gerçekleştiğine gelir.
 
-Bir `Async` işlevi dönüş türüne sahip <xref:System.Threading.Tasks.Task%601> veya <xref:System.Threading.Tasks.Task>. Örneği bir `Async` dönüş türü olan işlev <xref:System.Threading.Tasks.Task%601> aşağıda verilmiştir.
+@No__t_0 işlevi <xref:System.Threading.Tasks.Task%601> veya <xref:System.Threading.Tasks.Task> dönüş türüne sahip olabilir. Aşağıda <xref:System.Threading.Tasks.Task%601> dönüş türüne sahip `Async` işleve bir örnek verilmiştir.
 
-Bir `Async` işlevi herhangi bildiremez [ByRef](../../../visual-basic/language-reference/modifiers/byref.md) parametreleri.
+Bir `Async` işlevi herhangi bir [ByRef](../../../visual-basic/language-reference/modifiers/byref.md) parametresi bildiremeyebilir.
 
-A [Sub deyimi](sub-statement.md) ile işaretlenebilir `Async` değiştiricisi. Burada bir değer döndürülemez bu olay işleyicileri için temel olarak kullanılır. Bir `Async` `Sub` yordamı beklenemez ve çağıran bir `Async` `Sub` yordamı tarafından oluşturulan özel durumları yakalamak olamaz `Sub` yordamı.
+Bir [alt ifade](sub-statement.md) `Async` değiştiricisi ile de işaretlenebilir. Bu, öncelikle bir değer döndürülmediğinde olay işleyicileri için kullanılır. Bir `Async` `Sub` yordamı beklelenemez ve `Async` `Sub` yordamının çağıranı `Sub` yordamı tarafından oluşturulan özel durumları yakalayamaz.
 
-Hakkında daha fazla bilgi için `Async` işlevleri, [Async ve Await ile zaman uyumsuz programlama](../../../visual-basic/programming-guide/concepts/async/index.md), [zaman uyumsuz programlarda akış kontrolü](../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md), ve [Async Return Types](../../../visual-basic/programming-guide/concepts/async/async-return-types.md).
+@No__t_0 işlevleri hakkında daha fazla bilgi için bkz. [Async ve await Ile zaman uyumsuz programlama](../../../visual-basic/programming-guide/concepts/async/index.md), [zaman uyumsuz programlarda denetim akışı](../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md)ve [zaman uyumsuz dönüş türleri](../../../visual-basic/programming-guide/concepts/async/async-return-types.md).
 
-## <a name="iterator-functions"></a>Yineleyici işlevleri
+## <a name="iterator-functions"></a>Yineleyici Işlevleri
 
-Bir *yineleyici* işlevi bir liste veya dizi gibi bir koleksiyon üzerinde özel yineleme gerçekleştirir. Bir yineleyici işlevi kullanır [Yield](yield-statement.md) her öğeyi bir defada döndürmek için deyimi. Olduğunda bir [Yield](yield-statement.md) deyimine ulaşıldığında, kodun geçerli konumu anımsanacak. Yürütme, yineleyici işlevinin bir sonraki zamana o konumdan başlatılır.
+*Yineleyici* işlevi, bir koleksiyon üzerinde liste veya dizi gibi özel bir yineleme gerçekleştirir. Yineleyici işlevi, her öğeyi birer birer döndürmek için [yield](yield-statement.md) ifadesini kullanır. Bir [yield](yield-statement.md) ifadesine ulaşıldığında, koddaki geçerli konum hatırlanır. Bu konumdan, Yineleyici işlevinin bir sonraki çağrılışında yürütme yeniden başlatılır.
 
-Bir yineleyici kullanarak istemci koddan çağırmak bir [her biri için... Sonraki](for-each-next-statement.md) deyimi.
+Her biri Için bir kullanarak istemci kodundan bir yineleyici çağırın [... Sonraki](for-each-next-statement.md) ifade.
 
-Bir yineleyici işlevinin dönüş türü olabilir <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.IEnumerator>, veya <xref:System.Collections.Generic.IEnumerator%601>.
+Yineleyici işlevinin dönüş türü <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.IEnumerator> veya <xref:System.Collections.Generic.IEnumerator%601> olabilir.
 
-Daha fazla bilgi için [yineleyiciler](../../programming-guide/concepts/iterators.md).
+Daha fazla bilgi için bkz. [yineleyiciler](../../programming-guide/concepts/iterators.md).
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnekte `Function` adı, parametreleri ve gövdesini kod bildirmek için deyimi bir `Function` yordamı. `ParamArray` Değiştirici, değişken sayıda bağımsız değişken kabul etmek işlevi etkinleştirir.
+Aşağıdaki örnek, bir `Function` yordamının gövdesini oluşturan adı, parametreleri ve kodu bildirmek için `Function` bildirimini kullanır. @No__t_0 değiştiricisi, işlevin değişken sayıda bağımsız değişken kabul etmesine olanak sağlar.
 
 [!code-vb[VbVbalrStatements#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#25)]
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, önceki örnekte bildirilen bir işlevi çağırır.
+Aşağıdaki örnek, önceki örnekte belirtilen işlevi çağırır.
 
 [!code-vb[VbVbalrStatements#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#26)]
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnekte, `DelayAsync` olduğu bir `Async` `Function` dönüş türü olan <xref:System.Threading.Tasks.Task%601>. `DelayAsync` sahip bir `Return` deyimi bir tamsayı döndürür. Bu nedenle işlevi bildirimi `DelayAsync` dönüş türüne sahip olması `Task(Of Integer)`. Dönüş türü olduğundan `Task(Of Integer)`, değerlendirmesi `Await` ifadesinde `DoSomethingAsync` bir tamsayı üretir. Bu bu deyimi gösterilmektedir: `Dim result As Integer = Await delayTask`.
+Aşağıdaki örnekte, `DelayAsync` dönüş türü <xref:System.Threading.Tasks.Task%601> olan bir `Async` `Function`. `DelayAsync`, bir tamsayı döndüren bir `Return` bildirimine sahiptir. Bu nedenle `DelayAsync` işlev bildiriminin `Task(Of Integer)` dönüş türü olması gerekir. Dönüş türü `Task(Of Integer)` olduğundan, `DoSomethingAsync` `Await` ifadesinin değerlendirmesi bir tamsayı oluşturur. Bu bildirimde gösterilmiştir: `Dim result As Integer = Await delayTask`.
 
-`startButton_Click` Yordamdır örneği bir `Async Sub` yordamı. Çünkü `DoSomethingAsync` olduğu bir `Async` işlevi, görev için yapılan çağrının `DoSomethingAsync` aşağıdaki deyimi gösterildiği gibi beklenmesini gerekir: `Await DoSomethingAsync()`. `startButton_Click` `Sub` Yordamı ile tanımlanmalıdır `Async` değiştiricisi olduğundan bir `Await` ifade.
+@No__t_0 yordam bir `Async Sub` yordamının bir örneğidir. @No__t_0 bir `Async` işlevi olduğundan, aşağıdaki ifadede gösterildiği gibi, `DoSomethingAsync` çağrısı için de beklenen bir görev olmalıdır: `Await DoSomethingAsync()`. Bir `Await` ifadesi içerdiğinden `startButton_Click` `Sub` yordamının `Async` değiştiricisi ile tanımlanması gerekir.
 
 [!code-vb[csAsyncMethod#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/csasyncmethod/vb/mainwindow.xaml.vb#1)]
 
@@ -271,7 +271,7 @@ Aşağıdaki örnekte, `DelayAsync` olduğu bir `Async` `Function` dönüş tür
 - [Parametre Listesi](parameter-list.md)
 - [Dim Deyimi](dim-statement.md)
 - [Call Deyimi](call-statement.md)
-- [,](of-clause.md)
+- [Durumunu](of-clause.md)
 - [Parametre Dizileri](../../../visual-basic/programming-guide/language-features/procedures/parameter-arrays.md)
 - [Nasıl yapılır: Genel Bir Sınıf Kullanma](../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)
 - [Yordam Sorunlarını Giderme](../../../visual-basic/programming-guide/language-features/procedures/troubleshooting-procedures.md)

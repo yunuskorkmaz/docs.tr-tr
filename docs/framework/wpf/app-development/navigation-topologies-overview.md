@@ -9,18 +9,18 @@ helpviewer_keywords:
 - navigation topologies [WPF]
 - dynamically-generated topology
 ms.assetid: 5d5ee837-629a-4933-869a-186dc22ac43d
-ms.openlocfilehash: b62432d64393f4fb749af2e25c42e2e0161de219
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 5d9b09085ed8057f53cae9f9177682b01e698f6d
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69950743"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72580715"
 ---
 # <a name="navigation-topologies-overview"></a>Gezinti Topolojilerine Genel Bakış
-<a name="introduction"></a>Bu genel bakış, içindeki [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]gezinti topolojilerine bir giriş sağlar. Örneklerle birlikte üç ortak gezinti topolojisi daha sonra ele alınmıştır.  
+<a name="introduction"></a>Bu genel bakışta [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] içindeki gezinti topolojilerine giriş sağlanır. Örneklerle birlikte üç ortak gezinti topolojisi daha sonra ele alınmıştır.  
   
 > [!NOTE]
-> Bu konuyu okumadan önce, sayfa işlevlerini [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] kullanarak yapılandırılmış gezinme kavramıyla ilgili bilgi sahibi olmanız gerekir. Bu konuların her ikisi hakkında daha fazla bilgi için bkz. [yapılandırılmış gezintiye genel bakış](structured-navigation-overview.md).  
+> Bu konuyu okumadan önce, sayfa işlevlerini kullanarak [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] yapılandırılmış gezinme kavramıyla ilgili bilgi sahibi olmanız gerekir. Bu konuların her ikisi hakkında daha fazla bilgi için bkz. [yapılandırılmış gezintiye genel bakış](structured-navigation-overview.md).  
   
  Bu konu aşağıdaki bölümleri içermektedir:  
   
@@ -36,7 +36,7 @@ ms.locfileid: "69950743"
   
 <a name="Navigation_Topologies"></a>   
 ## <a name="navigation-topologies"></a>Gezinti topolojileri  
- ' [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]De, gezinti tipik olarak, tıklandığı zaman diğer sayfalara<xref:System.Windows.Documents.Hyperlink>açılan köprüler () ile<xref:System.Windows.Controls.Page>sayfalardan () oluşur. Gezilebilir sayfalar tarafından [!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)] tanımlanır (bkz. [WPF 'de paket URI 'leri](pack-uris-in-wpf.md)). Sayfaları, köprüleri ve [!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)]bunları gösteren aşağıdaki basit örneği göz önünde bulundurun:  
+ @No__t_0, gezinti tipik olarak, tıklandığı zaman diğer sayfalara gitmek için köprüler (<xref:System.Windows.Documents.Hyperlink>) ile sayfalardan (<xref:System.Windows.Controls.Page>) oluşur. ' Ye gidildiği sayfalar Tekdüzen Kaynak tanımlayıcıları (URI 'Ler) tarafından tanımlanır (bkz. [WPF 'de paket URI 'leri](pack-uris-in-wpf.md)). Sayfaları, köprüleri ve Tekdüzen Kaynak tanımlayıcılarını (URI) gösteren aşağıdaki basit örneği göz önünde bulundurun:  
   
  [!code-xaml[NavigationTopologiesOverviewSnippets#Page1](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationTopologiesOverviewSnippets/CS/Page1.xaml#page1)]  
   
@@ -44,7 +44,7 @@ ms.locfileid: "69950743"
   
  Bu sayfalar, yapısı sayfalar arasında nasıl gezindiğinize göre belirlenen bir *gezinti topolojisi* içinde düzenlenir. Bu özel gezinti topolojisi basit senaryolarda uygundur, ancak bazıları yalnızca bir uygulama çalışırken tanımlanabilseler de, daha karmaşık topolojiler gerektirebilir.  
   
- Bu konuda üç genel gezinti topolojisi ele alınmaktadır: *Sabit doğrusal*, *sabit hiyerarşik*ve *dinamik olarak üretilen*. Her gezinti topolojisi aşağıdaki şekilde gösterilenle [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] benzer bir örnekle gösterilmiştir:  
+ Bu konuda üç genel gezinti topolojisi ele alınmaktadır: *Sabit doğrusal*, *sabit hiyerarşik*ve *dinamik olarak üretilen*. Her gezinti topolojisi, aşağıdaki şekilde gösterildiği gibi bir [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] olan bir örnekle gösterilmiştir:  
   
  ![Veri öğeleri ve gezinti düğmeleri içeren görev sayfaları.](./media/navigation-topologies-overview/navigation-topology-data-items.png)  
   
@@ -66,7 +66,7 @@ ms.locfileid: "69950743"
   
  Sabit bir doğrusal topoloji üzerinde gezinmek için tipik davranışlar şunları içerir:  
   
-- Çağıran sayfadan, Sihirbazı başlatan ve ilk sihirbaz sayfasına gezinen bir başlatıcı sayfasına gitme. Çağıran bir sayfa ilk sihirbaz [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]sayfasını doğrudan <xref:System.Windows.Navigation.PageFunction%601>çağırabileceğinizden, başlatıcı sayfası (-less) gerekli değildir. Ancak, bir başlatıcı sayfası kullanılması, özellikle başlatma karmaşık ise, sihirbaz başlatmasını kolaylaştırabilir.  
+- Çağıran sayfadan, Sihirbazı başlatan ve ilk sihirbaz sayfasına gezinen bir başlatıcı sayfasına gitme. Çağıran bir sayfa ilk sihirbaz sayfasını doğrudan çağırabileceğinizden, bir başlatıcı sayfası ([!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]-Less <xref:System.Windows.Navigation.PageFunction%601>) gerekli değildir. Ancak, bir başlatıcı sayfası kullanılması, özellikle başlatma karmaşık ise, sihirbaz başlatmasını kolaylaştırabilir.  
   
 - Kullanıcılar, geri ve Ileri düğmelerini (veya köprüleri) kullanarak sayfalar arasında gezinebilirsiniz.  
   
@@ -94,7 +94,7 @@ ms.locfileid: "69950743"
   
  Sabit hiyerarşik bir yapıdaki sayfaların çalışma zamanında gezinmesine rağmen, Kullanıcı deneyimi sabit bir doğrusal topoloji için Kullanıcı deneyimiyle aynıdır:  
   
-- Çağıran sayfadan, Sihirbazı başlatan ve ilk sihirbaz sayfasına gezinen bir başlatıcı sayfasına gitme. Çağıran bir sayfa ilk sihirbaz [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]sayfasını doğrudan <xref:System.Windows.Navigation.PageFunction%601>çağırabileceğinizden, başlatıcı sayfası (-less) gerekli değildir. Ancak, bir başlatıcı sayfası kullanılması, özellikle başlatma karmaşık ise, sihirbaz başlatmasını kolaylaştırabilir.  
+- Çağıran sayfadan, Sihirbazı başlatan ve ilk sihirbaz sayfasına gezinen bir başlatıcı sayfasına gitme. Çağıran bir sayfa ilk sihirbaz sayfasını doğrudan çağırabileceğinizden, bir başlatıcı sayfası ([!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]-Less <xref:System.Windows.Navigation.PageFunction%601>) gerekli değildir. Ancak, bir başlatıcı sayfası kullanılması, özellikle başlatma karmaşık ise, sihirbaz başlatmasını kolaylaştırabilir.  
   
 - Kullanıcılar, geri ve Ileri düğmelerini (veya köprüleri) kullanarak sayfalar arasında gezinebilirsiniz.  
   
@@ -124,7 +124,7 @@ ms.locfileid: "69950743"
   
  Gezinti sırası, dinamik olarak oluşturulan bir topoloji olarak bilinir. Diğer gezinti topolojilerinde olduğu gibi, Kullanıcı deneyimi, önceki topolojilerle aynı olur:  
   
-- Çağıran sayfadan, Sihirbazı başlatan ve ilk sihirbaz sayfasına gezinen bir başlatıcı sayfasına gitme. Çağıran bir sayfa ilk sihirbaz [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]sayfasını doğrudan <xref:System.Windows.Navigation.PageFunction%601>çağırabileceğinizden, başlatıcı sayfası (-less) gerekli değildir. Ancak, bir başlatıcı sayfası kullanılması, özellikle başlatma karmaşık ise, sihirbaz başlatmasını kolaylaştırabilir.  
+- Çağıran sayfadan, Sihirbazı başlatan ve ilk sihirbaz sayfasına gezinen bir başlatıcı sayfasına gitme. Çağıran bir sayfa ilk sihirbaz sayfasını doğrudan çağırabileceğinizden, bir başlatıcı sayfası ([!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]-Less <xref:System.Windows.Navigation.PageFunction%601>) gerekli değildir. Ancak, bir başlatıcı sayfası kullanılması, özellikle başlatma karmaşık ise, sihirbaz başlatmasını kolaylaştırabilir.  
   
 - Kullanıcılar, geri ve Ileri düğmelerini (veya köprüleri) kullanarak sayfalar arasında gezinebilirsiniz.  
   

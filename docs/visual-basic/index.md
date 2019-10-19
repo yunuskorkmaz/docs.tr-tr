@@ -4,54 +4,54 @@ ms.date: 03/28/2018
 helpviewer_keywords:
 - programming, Visual Basic
 - Visual Basic
-ms.openlocfilehash: 13b887d6d01d3dc0f2018539a5893b261a3f5de3
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: d874788830ad15325ad93858e48c16cce20056cb
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65590394"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72581953"
 ---
 # <a name="visual-basic-guide"></a>Visual Basic Kılavuzu
 
-Visual Basic üretken tür kullanımı uyumlu ve nesne yönelimli uygulamalar oluşturmak için tasarlanmıştır. Visual Basic, geliştiricilerin Windows, Web ve mobil cihazları hedeflemesini sağlar. Microsoft .NET Framework, güvenlik ve dil çalışabilirliğinden Visual Basic avantaj olarak yazılan programlar hedefleyen tüm dillerde olduğu gibi.  
-  
-Bu oluşturma Visual Basic'in .NET Framework tabanlı uygulamalar oluşturmak için hızlı ve kolay bir yol vererek geleneğini devam eder.  
+Visual Basic, tür kullanımı uyumlu ve nesne odaklı uygulamalar oluşturmak için tasarlanmıştır. Visual Basic, geliştiricilerin Windows, Web ve mobil cihazları hedeflemesini sağlar. Microsoft .NET çerçevesini hedefleyen tüm dillerde olduğu gibi, güvenlik ve dil birlikte çalışabilirliğine Visual Basic bir avantaj olarak yazılmış programlar.
 
-Visual Basic zaten yoksa, ücretsiz bir Visual Basic içeren Visual Studio sürümünü indirebilirsiniz [Visual Studio](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) site.
+Bu nesil Visual Basic, .NET Framework tabanlı uygulamalar oluşturmak için hızlı ve kolay bir yol sağlamak üzere gelenek devam etmektedir.
 
-## <a name="in-this-section"></a>Bu Bölümde  
+Zaten Visual Basic yoksa, Visual Studio 'nun [Visual](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) studio sitesinden Visual Basic içeren ücretsiz bir sürümünü indirebilirsiniz.
 
-[Çalışmaya başlama](../visual-basic/getting-started/index.md)\
-Yeni olanı ve çeşitli ürün sürümlerinde kullanılabilir listeleyerek çalışmaya başlamak yardımcı olur.  
-   
-[Programlama Kavramları](../visual-basic/programming-guide/concepts/index.md)\
-Visual Basic programcıları için en faydalı dil kavramlarını sunar.
+## <a name="in-this-section"></a>Bu Bölümde
 
-[Program yapısı ve kod kuralları](../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)\
-Visual Basic adlandırma kuralları gibi kod ve Visual Basic içindeki sınırlamalar açıklamalarda temel yapısı ve kod kuralları hakkında belgeleri içerir.  
-  
-[Visual Basic dil özellikleri](../visual-basic/programming-guide/language-features/index.md)\
-Tanıtacak ve Visual Basic'te, LINQ ve XML değişmez değerleri dahil olmak üzere önemli özellikleri ele konulara bağlantılar sağlar.  
-   
-[Visual Basic başvurusu](../visual-basic/reference/index.md)\
-Visual Basic dili ve derleyici bilgileri içerir.  
+- [Başlarken](../visual-basic/getting-started/index.md)  
+  , Nelerin yeni olduğunu ve ürünün çeşitli sürümlerinde nelerin kullanılabildiğini listeleyerek çalışmaya başlamanıza yardımcı olur.
 
-[Visual Basic ile uygulama geliştirme](../visual-basic/developing-apps/index.md)\
-Güvenlik, özel durum işleme ve .NET Framework sınıf kitaplığı kullanma gibi Visual Basic'te, geliştirmenin çeşitli yönlerini açıklar.
+- [Programlama Kavramları](../visual-basic/programming-guide/concepts/index.md)  
+  Programcılar Visual Basic için en faydalı olan dil kavramlarını gösterir.
 
-[COM birlikte çalışma](../visual-basic/programming-guide/com-interop/index.md)\
-Oluşturma ve Visual Basic ile Bileşen Nesne Modeli (COM) nesnelerini kullanma ile ilgili birlikte çalışabilirlik sorunları açıklar.  
-  
-[Örnekleri](../visual-basic/sample-applications.md)\
-Örnekler hakkında bilgi içerir.  
-  
-[İzlenecek yollar](../visual-basic/walkthroughs.md)\
-Yaygın senaryolar için adım adım yönergeler için bağlantılar sağlar.  
-  
-## <a name="related-sections"></a>İlgili Bölümler  
+- [Program Yapısı ve Kod Kuralları](../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)  
+  Adlandırma kuralları, kod açıklamaları ve Visual Basic içindeki sınırlamalar gibi Visual Basic temel yapı ve kod kuralları hakkında belgeler içerir.
 
-[Visual Studio ile geliştirmeye başlayın](/visualstudio/ide/get-started-developing-with-visual-studio)\
-Yardımcı olacak konulara bağlantılar Visual Studio temelleri hakkında bilgi sağlar.  
-  
-[.NET API tarayıcısı](../../api/index.md)\
-Sınıfları, arabirimleri ve Microsoft .NET Framework SDK içinde bulunan değer türleri kitaplığına giriş sağlar.
+- [Visual Basic dil özellikleri](../visual-basic/programming-guide/language-features/index.md)  
+  LINQ ve XML değişmez değerleri de dahil olmak üzere Visual Basic önemli özelliklerini tanıtan ve tartışan konuların bağlantılarını sağlar.
+
+- [Visual Basic Başvurusu](../visual-basic/reference/index.md)  
+  Visual Basic dilini ve derleyici bilgilerini içerir.
+
+- [Visual Basic ile uygulama geliştirme](../visual-basic/developing-apps/index.md)  
+  Güvenlik, özel durum işleme ve .NET Framework sınıf kitaplığını kullanma gibi Visual Basic geliştirmenin çeşitli yönlerini açıklar.
+
+- [COM Birlikte Çalışma](../visual-basic/programming-guide/com-interop/index.md)  
+  Visual Basic ile bileşen nesne modeli (COM) nesneleri oluşturma ve kullanma ile ilişkili birlikte çalışabilirlik sorunlarını açıklar.
+
+- [Örnekler](../visual-basic/sample-applications.md)  
+  Örnekler hakkında bilgi içerir.
+
+- [İzlenecek yollar](../visual-basic/walkthroughs.md)  
+  Yaygın senaryolar için adım adım yönergelere bağlantılar sağlar.
+
+## <a name="related-sections"></a>İlgili Bölümler
+
+- [Visual Studio ile Geliştirmeye Başlama](/visualstudio/ide/get-started-developing-with-visual-studio)  
+  Visual Studio 'nun temelleri hakkında bilgi edinmenize yardımcı olacak konulara bağlantılar sağlar.
+
+- [.NET API tarayıcısı](../../api/index.md)  
+  Microsoft .NET Framework SDK 'sına dahil edilen sınıfların, arabirimlerin ve değer türlerinin kitaplığına giriş sağlar.

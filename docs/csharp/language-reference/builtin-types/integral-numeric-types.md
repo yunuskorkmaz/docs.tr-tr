@@ -1,7 +1,7 @@
 ---
-title: Tamsayı sayısal türleri - C# başvurusu
-description: Aralık, depolama boyutu ve kullandığı her tamsayı sayısal türleri için öğrenin.
-ms.date: 06/25/2019
+title: Integral sayısal türleri- C# başvuru
+description: İntegral sayısal türlerin her biri için aralığı, depolama boyutunu ve kullanımları öğrenin.
+ms.date: 10/18/2019
 f1_keywords:
 - byte
 - byte_CSharpKeyword
@@ -32,46 +32,52 @@ helpviewer_keywords:
 - uint keyword [C#]
 - long keyword [C#]
 - ulong keyword [C#]
-ms.openlocfilehash: dfb1298abaff0cfe8eae7536f94511a30012a4a9
-ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
+ms.openlocfilehash: 3d4f3164d67a000123417619f3be6be455d5ab87
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68236083"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72579189"
 ---
-# <a name="integral-numeric-types--c-reference"></a>Tamsayı sayısal türleri (C# Başvurusu)
+# <a name="integral-numeric-types--c-reference"></a>Integral sayısal türleri (C# başvuru)
 
-**Tamsayı sayısal türleri** bir alt kümesidir **basit türler** ve ile başlatılabilir [ *değişmez değerleri*](#integral-literals). Tüm tamsayı türleri de değer türleridir. Tüm tamsayı sayısal türleri desteği [aritmetik](../operators/arithmetic-operators.md), [bit düzeyinde mantıksal](../operators/bitwise-and-shift-operators.md), [karşılaştırma ve eşitlik](../operators/equality-operators.md) işleçleri.
+**İntegral sayısal türleri** **basit türlerin** bir alt kümesidir ve [*değişmez değerler*](#integer-literals)ile başlatılabilir. Tüm integral türleri de değer türlerdir. Tüm integral sayısal türler [Aritmetik](../operators/arithmetic-operators.md), [bit düzeyinde mantıksal](../operators/bitwise-and-shift-operators.md), [karşılaştırma](../operators/comparison-operators.md)ve [eşitlik](../operators/equality-operators.md) işleçlerini destekler.
 
-## <a name="characteristics-of-the-integral-types"></a>İntegral türündeki özellikleri
+## <a name="characteristics-of-the-integral-types"></a>İntegral türlerinin özellikleri
 
-C#Aşağıdaki önceden tanımlanmış tamsayı türlerini destekler:
+C#aşağıdaki önceden tanımlanmış integral türlerini destekler:
 
-|C#anahtar yazın|Aralık|Boyut|.NET türü|
+|C#tür/anahtar sözcük|Aralık|Boyut|.NET türü|
 |----------|-----------|----------|-------------|
-|`sbyte`|-128 ila 127 arasında|İşaretli 8 bit tam sayı|<xref:System.SByte?displayProperty=nameWithType>|
-|`byte`|0 ile 255 arasında|İmzalanmamış 8 bit tam sayı|<xref:System.Byte?displayProperty=nameWithType>|
-|`short`|-32.768 için 32.767|İşaretli 16 bit tam sayı|<xref:System.Int16?displayProperty=nameWithType>|
-|`ushort`|0 ile 65.535 arasındaki|16 bit işaretsiz tamsayı|<xref:System.UInt16?displayProperty=nameWithType>|
-|`int`|-2.147.483.648 için 2.147.483.647|İşaretli 32 bit tam sayı|<xref:System.Int32?displayProperty=nameWithType>|
-|`uint`|0 için 4.294.967.295'e|32-bit işaretsiz tamsayı|<xref:System.UInt32?displayProperty=nameWithType>|
-|`long`|-9,223,372,036,854,775,808 için 9.223.372.036.854.775.807|İşaretli 64 bit tam sayı|<xref:System.Int64?displayProperty=nameWithType>|
-|`ulong`|0 için 18,446,744,073,709,551,615|64-bit işaretsiz tamsayı|<xref:System.UInt64?displayProperty=nameWithType>|
+|`sbyte`|-128-127|İmzalanan 8 bit tamsayı|<xref:System.SByte?displayProperty=nameWithType>|
+|`byte`|0-255|İşaretsiz 8 bit tamsayı|<xref:System.Byte?displayProperty=nameWithType>|
+|`short`|-32.768-32.767|İmzalanan 16 bit tamsayı|<xref:System.Int16?displayProperty=nameWithType>|
+|`ushort`|0-65.535|İşaretsiz 16 bit tamsayı|<xref:System.UInt16?displayProperty=nameWithType>|
+|`int`|-2.147.483.648-2.147.483.647|İmzalanan 32 bit tamsayı|<xref:System.Int32?displayProperty=nameWithType>|
+|`uint`|0-4.294.967.295|İşaretsiz 32 bit tamsayı|<xref:System.UInt32?displayProperty=nameWithType>|
+|`long`|-9223372036854775808-9.223.372.036.854.775.807|İmzalanan 64 bit tamsayı|<xref:System.Int64?displayProperty=nameWithType>|
+|`ulong`|0-18446744073709551615|İşaretsiz 64 bit tamsayı|<xref:System.UInt64?displayProperty=nameWithType>|
 
-Önceki tabloda her C# en soldaki sütun türü anahtar kelimedir karşılık gelen .NET türü için bir diğer ad. Birbirinin yerine kullanılabilir. Örneğin, aşağıdaki bildirimleri aynı türde değişkenleri bildirin:
+Yukarıdaki tabloda, en soldaki sütundan C# her tür anahtar sözcüğü karşılık gelen .NET türü için bir diğer addır. Bunlar arasında değiştirilebilir. Örneğin, aşağıdaki bildirimler aynı türdeki değişkenleri bildirir:
 
 ```csharp
 int a = 123;
 System.Int32 b = 123;
 ```
 
-Her bir integral türünün varsayılan değeri sıfırdır `0`. Her bir integral türü olan `MinValue` ve `MaxValue` minimum ve maksimum değerin türü sağlayan sabitler.
+Her integral türünün varsayılan değeri sıfırdır `0`. İntegral türlerinin her biri, bu türün en düşük ve en büyük değerini sağlayan `MinValue` ve `MaxValue` sabitlerini içerir.
 
-Kullanım <xref:System.Numerics.BigInteger?displayProperty=nameWithType> yapısı hiçbir üst işaretli bir tam sayı veya alt sınırlarını temsil etmek için.
+Büyük veya alt sınır olmadan işaretli bir tamsayıyı temsil etmek için <xref:System.Numerics.BigInteger?displayProperty=nameWithType> yapısını kullanın.
 
-## <a name="integral-literals"></a>Tamsayı sabit değerleri
+## <a name="integer-literals"></a>Tamsayı sabit değerleri
 
-Tamsayı sabit değerleri olarak belirtilebilir *ondalık sabit değerleri*, *onaltılık değişmez değerler*, veya *ikili sabit dizeler*. Her bir örneği aşağıda gösterilmiştir:
+Tamsayı sabit değerleri
+
+- *Decimal*: herhangi bir ön ek olmadan
+- *onaltılı*: `0x` veya `0X` ön eki ile
+- *ikili*: `0b` veya `0B` önekiyle ( C# 7,0 ve üzeri sürümlerde mevcuttur)
+
+Aşağıdaki kod, her birine bir örnek gösterir:
 
 ```csharp
 var decimalLiteral = 42;
@@ -79,50 +85,53 @@ var hexLiteral = 0x2A;
 var binaryLiteral = 0b_0010_1010;
 ```
 
-Ondalık sabit değerleri herhangi bir önek gerektirmez. `x` Veya `X` önek belirten bir *onaltılık değişmez değeri*. `b` Veya `B` önek belirten bir *ikili değişmez değer*. Bildirimi `binaryLiteral` kullanımını gösteren `_` olarak bir *basamak ayıracı*. Basamak ayırıcı, tüm sayısal değişmez değerleri ile kullanılabilir. İkili sabit değerler ve basamak ayıracı `_` başlayarak desteklenir C# 7.0.
+Yukarıdaki örnek ayrıca, 7,0 ile C# başlayarak desteklenen bir *rakam ayırıcısı*olarak `_` kullanımını da gösterir. Rakam ayırıcısını her türlü sayısal sabit değer ile kullanabilirsiniz.
 
-### <a name="literal-suffixes"></a>Değişmez değer soneki
+Bir tamsayı sabit değerinin türü, soneki tarafından aşağıdaki şekilde belirlenir:
 
-`l` Veya `L` sonekini belirtir, tam sayı sabiti olmalıdır `long` türü. `ul` Veya `UL` sonekini belirtir `ulong` türü. Varsa `L` soneki 9.223.372.036.854.775.807 büyük bir sabit değer ınternationalized (en büyük değerini `long`), değeri dönüştürülür `ulong` türü. Bir tamsayı sabit değeri tarafından temsil edilen değeri aşarsa <xref:System.UInt64.MaxValue?displayProperty=nameWithType>, bir derleyici hatası [CS1021](../../misc/cs1021.md) gerçekleşir. 
+- Değişmez değer için bir sonek yoksa, türü, değerinin gösterilebileceği aşağıdaki türlerin birincsahiptir: `int`, `uint`, `long`, `ulong`.
+- Sabit değer `U` veya `u` ile sondiçeriyorsa, türü, değeri gösterilebileceği aşağıdaki türlerin birincsahiptir: `uint`, `ulong`.
+- Sabit değer `L` veya `l` ile sondiçeriyorsa, türü, değeri gösterilebileceği aşağıdaki türlerin birincsahiptir: `long`, `ulong`.
 
-> [!NOTE]
-> Küçük harf "l" sonek olarak kullanabilirsiniz. Ancak, bu bir derleyici uyarısı oluşturur çünkü "m" harfinin basamağı "1" ile kolaylıkla karıştırılır "M" daha anlaşılır olması için kullanın.
+  > [!NOTE]
+  > Küçük harf `l` bir sonek olarak kullanabilirsiniz. Ancak, harf `l` `1` basamak ile karıştırıabileceğinden bu bir derleyici uyarısı oluşturur. Açıklık için `L` kullanın.
 
-### <a name="type-of-an-integral-literal"></a>Bir integral sabit değerinin türü
+- Sabit değer `UL`, `Ul`, `uL`, `ul`, `LU`, `Lu`, `lU` veya `lu` tarafından düzeltildiğinde, türü `ulong` olur.
 
-Bir tamsayı sabit değeri sonek türünü ilk değerini gösterilebilir aşağıdaki türlerde ise:
+Bir tamsayı değişmez değeri ile temsil edilen değer <xref:System.UInt64.MaxValue?displayProperty=nameWithType> aşarsa, bir derleyici hatası [CS1021](../../misc/cs1021.md) oluşur.
 
-1. `int`
-1. `uint`
-1. `long`
-1. `ulong`
-
-Bir integral sabit değer atama ya da bir tür dönüştürme kullanarak varsayılandan daha küçük bir aralık türüyle dönüştürebilirsiniz:
+Bir tamsayı değişmez değeri tarafından temsil edilen değer, örtük olarak, sabit değer türü tarafından belirlenen değerden daha küçük bir aralığa dönüştürülebilir. Bu, değer hedef türünün aralığı dahilinde olduğunda mümkündür:
 
 ```csharp
-byte byteVariable = 42; // type is byte
-var signedByte = (sbyte)42; // type is sbyte.
+byte a = 17;
+byte b = 300;   // CS0031: Constant value '300' cannot be converted to a 'byte'
 ```
 
-Bir integral sabit hazır değeri üzerinden ataması, bir tür dönüştürme veya son ekini kullanarak varsayılan değerinden daha büyük bir aralıkla türüne dönüştürebilirsiniz:
+Yukarıdaki örnekte gösterildiği gibi, değişmez değerin değeri hedef türü Aralık içinde değilse, bir derleyici hatası [CS0031](../../misc/cs0031.md) oluşur.
+
+Ayrıca, bir tamsayı değişmez değeri ile temsil edilen değeri, değişmez değerin belirlenen türü dışında bir türe dönüştürmek için bir cast kullanabilirsiniz:
 
 ```csharp
-var unsignedLong = 42UL;
-var longVariable = 42L;
-ulong anotherUnsignedLong = 42;
-var anotherLong = (long)42;
+var signedByte = (sbyte)42;
+var longVariable = (long)42;
 ```
 
 ## <a name="conversions"></a>Dönüşümler
 
-Örtük bir dönüştürme (adlı bir *dönüştürme genişletme*) hedef türüne kaynak türündeki tüm değerleri depolayabileceği herhangi iki tamsayı türleri arasında. Örneğin, örtük bir dönüştürme yoktur `int` için `long` çünkü aralığını `int` değerleri olan uygun bir alt kümesini `long`. Bir küçük işeritsiz tamsayı türünü daha büyük bir işaretli tamsayı türüne örtük dönüşümlere vardır. Herhangi bir kayan nokta türü için herhangi bir tamsayı türü arasında'örtük bir dönüştürme yoktur.  Herhangi işaretli integral türünden herhangi bir işaretsiz tamsayı türü için örtük dönüştürme vardır.
+Hedef türün kaynak türünün tüm değerlerini depolayabileceği iki integral tür arasında örtük bir dönüştürme ( *genişleyen dönüştürme*denir) vardır. Örneğin, `int` değerlerinin aralığı `long` uygun bir alt kümesi olduğundan, `int` `long` ' den örtük bir dönüştürme vardır. Daha küçük bir işaretsiz integral türünden daha büyük bir işaretli integral türüne örtük dönüştürmeler vardır. Ayrıca herhangi bir integral türünden herhangi bir kayan nokta türüne örtük bir dönüştürme de vardır.  Herhangi bir imzalı integral türünden hiçbir işaretsiz integral türüne örtülü dönüşüm yoktur.
 
-Örtük bir dönüştürme kaynak türden hedef türe tanımlı değil, bir tamsayı türü başka bir integral türe dönüştürmek için açık bir tür dönüştürme kullanmanız gerekir. Bu adlı bir *daraltma dönüştürmesi*. Dönüştürme veri kaybıyla sonuçlanabildiğinden açık durumda gereklidir.
+Örtük bir dönüştürme, kaynak türünden hedef türüne tanımlanmadığında, bir integral türünü başka bir integral türüne dönüştürmek için açık bir atama kullanmanız gerekir. Bu, *daraltma dönüştürmesi*olarak adlandırılır. Dönüştürme işlemi veri kaybına neden olabileceğinden açık durum gereklidir.
+
+## <a name="c-language-specification"></a>C# dili belirtimi
+
+Daha fazla bilgi için, [ C# dil belirtiminin](~/_csharplang/spec/introduction.md)aşağıdaki bölümlerine bakın:
+
+- [Integral türleri](~/_csharplang/spec/types.md#integral-types)
+- [Tamsayı sabit değerleri](~/_csharplang/spec/lexical-structure.md#integer-literals)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C#dil belirtimi - tam sayı türleri](~/_csharplang/spec/types.md#integral-types)
-- [C#başvuru](../index.md)
+- [C#başvurunun](../index.md)
 - [Kayan nokta türleri](floating-point-numeric-types.md)
 - [Varsayılan değerler tablosu](../keywords/default-values-table.md)
 - [Sayısal sonuçlar tablosunu biçimlendirme](../keywords/formatting-numeric-results-table.md)

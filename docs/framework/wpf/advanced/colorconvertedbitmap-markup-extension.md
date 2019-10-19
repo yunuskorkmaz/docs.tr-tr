@@ -5,15 +5,15 @@ helpviewer_keywords:
 - XAML [WPF], ColorConvertedBitmap markup extension
 - ColorConvertedBitmap markup extension [WPF]
 ms.assetid: 18321c18-c898-4470-93fa-a702b47770c1
-ms.openlocfilehash: e8a36a1b8592146eb2474805638cdc3697adb0c4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7d14ddc6276b9dd7baee12e267e8af1250bc11ab
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62010663"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72582778"
 ---
 # <a name="colorconvertedbitmap-markup-extension"></a>ColorConvertedBitmap Biçimlendirme Uzantısı
-Katıştırılmış bir profili olmayan bir bit eşlem kaynağını belirtmek için bir yol sağlar. Renk bağlamları / tarafından belirtilen profilleri [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)], görüntü kaynağı olarak [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)].  
+Gömülü profili olmayan bir bit eşlem kaynağı belirtmek için bir yol sağlar. Renk bağlamları/profilleri, görüntü kaynağı URI 'SI olduğu gibi URI tarafından belirtilir.  
   
 ## <a name="xaml-attribute-usage"></a>XAML Öznitelik Kullanımı  
   
@@ -25,16 +25,16 @@ Katıştırılmış bir profili olmayan bir bit eşlem kaynağını belirtmek i�
   
 |||  
 |-|-|  
-|`imageSource`|[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] Kullanıp bit eşlemin.|  
-|`sourceIIC`|[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] Kaynak profili yapılandırması.|  
-|`destinationIIC`|[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] Hedef profili yapılandırma|  
+|`imageSource`|Profili oluşturulmuş olmayan bit eşlemin URI 'SI.|  
+|`sourceIIC`|Kaynak profili yapılandırmasının URI 'SI.|  
+|`destinationIIC`|Hedef profil yapılandırmasının URI 'SI|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu işaretleme uzantısı gibi bir dizi görüntü kaynağı özellik değerleri doldurmak için hedeflenen <xref:System.Windows.Media.Imaging.BitmapImage.UriSource%2A>.  
+ Bu biçimlendirme uzantısı, <xref:System.Windows.Media.Imaging.BitmapImage.UriSource%2A> gibi ilgili bir görüntü kaynağı özelliği değerlerini doldurmaya yöneliktir.  
   
- Öznitelik sözdizimi, bu işaretleme uzantısı ile kullanılan en yaygın sözdizimidir. `ColorConvertedBitmap` (veya `ColorConvertedBitmapExtension`) özellik öğesi sözdizimine kullanılamaz çünkü değerleri yalnızca değerleri dize ilk oluşturucu üzerinde ayarlanabilir uzantı tanımlayıcısı şu.  
+ Öznitelik sözdizimi, bu işaretleme uzantısı ile kullanılan en yaygın sözdizimidir. `ColorConvertedBitmap` (veya `ColorConvertedBitmapExtension`) özellik öğesi sözdiziminde kullanılamaz, çünkü değerler yalnızca ilk oluşturucuda, uzantı tanımlayıcısından sonraki dize olan değer olarak ayarlanabilir.  
   
- `ColorConvertedBitmap` bir işaretleme uzantısıdır. Biçimlendirme uzantıları, genellikle öznitelik değerlerinin değişmez değerler veya işleyici isimleri dışına çıkma gereksinimi olduğunda ve bu gereksinim, belirli türler veya özellikler üzerine tür dönüştürücülerini koymaktan daha genel olduğunda uygulanır. İçindeki tüm biçimlendirme uzantıları [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] kullanmak {ve} kuralına göre kendi öznitelik sözdizimi içinde karakterler bir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] işlemcisinin bir işaretleme uzantısı özniteliği işlemesi gerekir. Daha fazla bilgi için [biçimlendirme uzantıları ve WPF XAML](markup-extensions-and-wpf-xaml.md).  
+ `ColorConvertedBitmap`, biçimlendirme uzantısıdır. Biçimlendirme uzantıları, genellikle öznitelik değerlerinin değişmez değerler veya işleyici isimleri dışına çıkma gereksinimi olduğunda ve bu gereksinim, belirli türler veya özellikler üzerine tür dönüştürücülerini koymaktan daha genel olduğunda uygulanır. @No__t_0 tüm biçimlendirme uzantıları öznitelik sözdiziminde {ve} karakterlerini kullanır. Bu, bir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] işlemcisinin, bir biçimlendirme uzantısının özniteliği işlemesi gerektiğini tanıdığı bir kuraldır. Daha fazla bilgi için bkz. [Biçimlendirme uzantıları ve WPF XAML](markup-extensions-and-wpf-xaml.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

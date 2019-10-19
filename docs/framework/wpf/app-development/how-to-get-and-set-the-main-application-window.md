@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Ana Uygulama Penceresini Alma ve Ayarlama'
+title: 'Nasıl yapılır: Ana uygulama penceresini alma ve ayarlama'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,29 +10,29 @@ helpviewer_keywords:
 - windows objects [WPF], getting
 - getting windows objects [WPF]
 ms.assetid: ec902bc4-4a59-46f5-8ec1-963b46789356
-ms.openlocfilehash: ea8333aa82f1159afb438215940ee1e7c2605e96
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5894761c4b6258cbf90d369a722ffc5abca51885
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61947803"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72582553"
 ---
-# <a name="how-to-get-and-set-the-main-application-window"></a>Nasıl yapılır: Ana Uygulama Penceresini Alma ve Ayarlama
-Bu örnek nasıl alınacağını ve ana uygulama penceresini gösterir.  
+# <a name="how-to-get-and-set-the-main-application-window"></a>Nasıl yapılır: Ana uygulama penceresini alma ve ayarlama
+Bu örnek, ana uygulama penceresinin nasıl alınacağını ve ayarlanacağını gösterir.  
   
 ## <a name="example"></a>Örnek  
- İlk <xref:System.Windows.Window> uygulama tarafından otomatik olarak belirlenir Windows Presentation Foundation (WPF) içinde örneği <xref:System.Windows.Application> ana uygulama penceresini olarak. İlk <xref:System.Windows.Window> olması başlangıç olarak belirtilen pencere örneklenmiş olacak büyük olasılıkla olmasını [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] (bkz <xref:System.Windows.Application.StartupUri%2A>).  
+ Bir Windows Presentation Foundation (WPF) uygulaması içinde oluşturulan ilk <xref:System.Windows.Window>, ana uygulama penceresi olarak <xref:System.Windows.Application> tarafından otomatik olarak ayarlanır. Örnek olarak oluşturulacak ilk <xref:System.Windows.Window>, büyük olasılıkla başlangıç Tekdüzen Kaynak tanımlayıcısı (URI) olarak belirtilen pencere olacaktır (bkz. <xref:System.Windows.Application.StartupUri%2A>).  
   
- İlk <xref:System.Windows.Window> da kod kullanılarak oluşturulabilir. Bir örnek, aşağıdaki gibi uygulama başlatma sırasında bir penceresi açıyor:  
+ İlk <xref:System.Windows.Window> kod kullanılarak da oluşturulabilir. Bir örnek, uygulamanın başlatılması sırasında aşağıdaki gibi bir pencere açıyor:  
   
  [!code-csharp[HOWTOWindowManagementSnippets#FirstWindowUsingCodeCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/HOWTOWindowManagementSnippets/CSharp/App.xaml.cs#firstwindowusingcodecodebehind)]
  [!code-vb[HOWTOWindowManagementSnippets#FirstWindowUsingCodeCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTOWindowManagementSnippets/visualbasic/application.xaml.vb#firstwindowusingcodecodebehind)]  
   
- Bazı durumlarda, ilk örneği <xref:System.Windows.Window> gerçekten ana uygulama penceresini örn giriş ekranıdır. Bu durumda, biçimlendirme, aşağıdaki gibi kullanarak ana uygulama penceresini belirtebilirsiniz:  
+ Bazı durumlarda, ilk oluşturulan <xref:System.Windows.Window> aslında ana uygulama penceresi (örn. bir giriş ekranı) değildir. Bu durumda, aşağıdaki gibi, biçimlendirme kullanarak ana uygulama penceresini belirtebilirsiniz:  
   
  [!code-xaml[ApplicationMainWindowSnippets#SetApplicationMainWindowXAML](~/samples/snippets/xaml/VS_Snippets_Wpf/ApplicationMainWindowSnippets/XAML/App.xaml#setapplicationmainwindowxaml)]  
   
- Ana pencereyi otomatik olarak veya el ile belirtildiğini ana pencereden alabilirsiniz <xref:System.Windows.Application.MainWindow%2A> aşağıdaki kod, aşağıdaki gibi kullanarak:  
+ Ana pencerenin otomatik olarak mı yoksa el ile mi belirtilmediğini aşağıda olduğu gibi aşağıdaki kodu kullanarak <xref:System.Windows.Application.MainWindow%2A> ana pencereyi alabilirsiniz:  
   
  [!code-csharp[ApplicationMainWindowSnippets#GetApplicationMainWindowCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/ApplicationMainWindowSnippets/CSharp/App.xaml.cs#getapplicationmainwindowcode)]
  [!code-vb[ApplicationMainWindowSnippets#GetApplicationMainWindowCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationMainWindowSnippets/visualbasic/application.xaml.vb#getapplicationmainwindowcode)]

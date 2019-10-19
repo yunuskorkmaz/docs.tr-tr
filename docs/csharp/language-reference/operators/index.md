@@ -9,12 +9,12 @@ helpviewer_keywords:
 - operator associativity [C#]
 - expressions [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 766da517d247361f747591c3758e8610927866a9
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 7d69528804cf0cee1302fd62fa2301e06076897a
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71116098"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72579199"
 ---
 # <a name="c-operators-c-reference"></a>C#İşleçler (C# başvuru)
 
@@ -42,13 +42,13 @@ Aşağıdaki tabloda en düşük önceliğe C# göre başlayan işleçler listel
 
 | İşleçler | Kategori veya ad |
 | --------- | ---------------- |
-| [x. y](member-access-operators.md#member-access-operator-), [x?. y](member-access-operators.md#null-conditional-operators--and-), [x? [ y]](member-access-operators.md#null-conditional-operators--and-), [f (x)](member-access-operators.md#invocation-operator-), [a&#91;i&#93;](member-access-operators.md#indexer-operator-), [x + +](arithmetic-operators.md#increment-operator-), [x--](arithmetic-operators.md#decrement-operator---), [New](new-operator.md), [typeof](type-testing-and-cast.md#typeof-operator), [Checked](../keywords/checked.md), [denetimsiz](../keywords/unchecked.md), [Default](default.md), [NameOf](nameof.md), [Delegate](delegate-operator.md), [sizeof](sizeof.md), [stackalloc](stackalloc.md), [x-> y](pointer-related-operators.md#pointer-member-access-operator--) | Birincil |
-| [+ x](arithmetic-operators.md#unary-plus-and-minus-operators), [-x](arithmetic-operators.md#unary-plus-and-minus-operators), [ \!x](boolean-logical-operators.md#logical-negation-operator-), [~ x](bitwise-and-shift-operators.md#bitwise-complement-operator-), [+ + x](arithmetic-operators.md#increment-operator-), [--x](arithmetic-operators.md#decrement-operator---), [^ x](member-access-operators.md#index-from-end-operator-), [(T) x](type-testing-and-cast.md#cast-operator-), [await](await.md), [& x](pointer-related-operators.md#address-of-operator-), [* x](pointer-related-operators.md#pointer-indirection-operator-), [true ve false](true-false-operators.md) | Li |
+| [x. y](member-access-operators.md#member-access-operator-), [x?. y](member-access-operators.md#null-conditional-operators--and-), [x? [ y]](member-access-operators.md#null-conditional-operators--and-), [f (x)](member-access-operators.md#invocation-operator-), [a&#91;i&#93;](member-access-operators.md#indexer-operator-), [x + +](arithmetic-operators.md#increment-operator-), [x--](arithmetic-operators.md#decrement-operator---), [New](new-operator.md), [typeof](type-testing-and-cast.md#typeof-operator), [Checked](../keywords/checked.md), [denetimsiz](../keywords/unchecked.md), [Default](default.md), [NameOf](nameof.md), [Delegate](delegate-operator.md), [sizeof](sizeof.md), [stackalloc](stackalloc.md), [x-> y](pointer-related-operators.md#pointer-member-access-operator--) | Birinc |
+| [+ x](arithmetic-operators.md#unary-plus-and-minus-operators), [-x](arithmetic-operators.md#unary-plus-and-minus-operators), [\!x](boolean-logical-operators.md#logical-negation-operator-), [~ x](bitwise-and-shift-operators.md#bitwise-complement-operator-), [+ + x](arithmetic-operators.md#increment-operator-), [--x](arithmetic-operators.md#decrement-operator---), [^ x](member-access-operators.md#index-from-end-operator-), [(t) x](type-testing-and-cast.md#cast-operator-), [await](await.md), [& x](pointer-related-operators.md#address-of-operator-), [* x](pointer-related-operators.md#pointer-indirection-operator-), [true ve false](true-false-operators.md) | Li |
 | [x.. Iz](member-access-operators.md#range-operator-) | Aralık |
 | [x * y](arithmetic-operators.md#multiplication-operator-), [x/y](arithmetic-operators.md#division-operator-), [x% y](arithmetic-operators.md#remainder-operator-) | Çarpma|
 | [x + y](arithmetic-operators.md#addition-operator-), [x – y](arithmetic-operators.md#subtraction-operator--) | Msal |
-| [ x\< y ,\< ](bitwise-and-shift-operators.md#left-shift-operator-) [x > > y](bitwise-and-shift-operators.md#right-shift-operator-) | Shift |
-| [x\< y](comparison-operators.md#less-than-operator-), [x > y](comparison-operators.md#greater-than-operator-), [x \<= y](comparison-operators.md#less-than-or-equal-operator-), [x > = y](comparison-operators.md#greater-than-or-equal-operator-), [,](type-testing-and-cast.md#is-operator), [şöyle](type-testing-and-cast.md#as-operator) | İlişkisel ve tür-test |
+| [x \< \< y](bitwise-and-shift-operators.md#left-shift-operator-), [x > > y](bitwise-and-shift-operators.md#right-shift-operator-) | Karakter |
+| [x \< y](comparison-operators.md#less-than-operator-), [x > y](comparison-operators.md#greater-than-operator-), [x \< = y](comparison-operators.md#less-than-or-equal-operator-), [x > = y](comparison-operators.md#greater-than-or-equal-operator-), [,](type-testing-and-cast.md#is-operator) [as](type-testing-and-cast.md#as-operator) | İlişkisel ve tür-test |
 | [x = = y](equality-operators.md#equality-operator-), [x! = y](equality-operators.md#inequality-operator-) | Eşitlik |
 | `x & y` | [Boolean MANTıKSAL ve](boolean-logical-operators.md#logical-and-operator-) veya [BIT düzeyinde mantıksal ve](bitwise-and-shift-operators.md#logical-and-operator-) |
 | `x ^ y` | [Boole MANTıKSAL XOR](boolean-logical-operators.md#logical-exclusive-or-operator-) veya [BIT düzeyinde mantıksal XOR](bitwise-and-shift-operators.md#logical-exclusive-or-operator-) |
@@ -57,14 +57,14 @@ Aşağıdaki tabloda en düşük önceliğe C# göre başlayan işleçler listel
 | [x &#124; &#124; y](boolean-logical-operators.md#conditional-logical-or-operator-) | Koşullu VEYA |
 | [x?? Iz](null-coalescing-operator.md) | Null birleşim işleci |
 | [,? t: f](conditional-operator.md) | Koşullu işleç |
-| [x = y](assignment-operator.md), [x + = y](arithmetic-operators.md#compound-assignment), [x-= y](arithmetic-operators.md#compound-assignment), [x * = y](arithmetic-operators.md#compound-assignment), x [/= y](arithmetic-operators.md#compound-assignment), [x% = y](arithmetic-operators.md#compound-assignment), x [& = y](boolean-logical-operators.md#compound-assignment), [x &#124;= y](boolean-logical-operators.md#compound-assignment), [x ^ =](boolean-logical-operators.md#compound-assignment)y, [x < < = y](bitwise-and-shift-operators.md#compound-assignment), [x > > = y](bitwise-and-shift-operators.md#compound-assignment), [x?? = y](null-coalescing-operator.md),[=>](lambda-operator.md) | Atama ve lambda bildirimi |
+| [x = y](assignment-operator.md), [x + = y](arithmetic-operators.md#compound-assignment), [x-= y](arithmetic-operators.md#compound-assignment), [x * = y](arithmetic-operators.md#compound-assignment), x [/= y](arithmetic-operators.md#compound-assignment), [x% = y](arithmetic-operators.md#compound-assignment), x [& = y](boolean-logical-operators.md#compound-assignment), [x &#124;= y](boolean-logical-operators.md#compound-assignment), [x ^ =](boolean-logical-operators.md#compound-assignment)y, [x < < = y](bitwise-and-shift-operators.md#compound-assignment), [x > > = y](bitwise-and-shift-operators.md#compound-assignment), [x?? = y](null-coalescing-operator.md), [4](lambda-operator.md) | Atama ve lambda bildirimi |
 
 ## <a name="operator-associativity"></a>Operatör ilişkilendirilebilirliği
 
 İşleçler aynı önceliğe sahip olduğunda, işleçlerin ilişkilendirilebilirliği, işlemlerin gerçekleştirilme sırasını belirler:
 
-- *Sola ilişkilendirilebilir* işleçler, soldan sağa doğru sırayla değerlendirilir. [Atama işleçleri](assignment-operator.md) ve [ `??`null birleşim işleci ](null-coalescing-operator.md)dışında, tüm ikili işleçler sola ilişkilendirilebilir. Örneğin, `a + b - c` olarak `(a + b) - c`değerlendirilir.
-- *Sağdan ilişkilendirilebilir* işleçler, sağdan sola sırayla değerlendirilir. Atama işleçleri, null birleşim işleci `??`ve [koşullu işleç `?:` ](conditional-operator.md) , doğru ilişkilendirilebilir. Örneğin, `x = y = z` olarak `x = (y = z)`değerlendirilir.
+- *Sola ilişkilendirilebilir* işleçler, soldan sağa doğru sırayla değerlendirilir. [Atama işleçleri](assignment-operator.md) ve [null birleşim işleçleri](null-coalescing-operator.md)hariç, tüm ikili işleçler sola ilişkilendirilebilir. Örneğin, `a + b - c` `(a + b) - c` olarak değerlendirilir.
+- *Sağdan ilişkilendirilebilir* işleçler, sağdan sola sırayla değerlendirilir. Atama işleçleri, null birleşim işleçleri ve [koşullu işleç `?:`](conditional-operator.md) , doğru ilişkilendirilebilir. Örneğin, `x = y = z` `x = (y = z)` olarak değerlendirilir.
 
 İşleç ilişkilendirilebilirliği tarafından uygulanan değerlendirmenin sırasını değiştirmek için ayraçları kullanın:
 
@@ -85,7 +85,7 @@ Operatör önceliği ve ilişkilendirilebilirliği ile ilgisiz, bir ifadede işl
 |`a / b + c * d`|a, b,/, c, d, *, +|
 |`a / (b + c) * d`|a, b, c, +,/, d, *|
 
-Genellikle, tüm işleç işlenenleri değerlendirilir. Bazı işleçler, işlenenleri koşullu olarak değerlendirir. Diğer bir deyişle, bu tür bir işlecin ilk işleneninin değeri, (veya hangi) diğer işlenenleri değerlendirileceğini tanımlar. Bu işleçler Koşullu mantıksal [and`&&`()](boolean-logical-operators.md#conditional-logical-and-operator-) ve [or`||`()](boolean-logical-operators.md#conditional-logical-or-operator-) işleçleridir, null [birleşim işleci `??` ](null-coalescing-operator.md), [null koşullu işleçler ve `?[]` `?.` ](member-access-operators.md#null-conditional-operators--and-)ve [koşullu işleç `?:` ](conditional-operator.md). Daha fazla ayrıntı için her işlecin açıklamasına bakın.
+Genellikle, tüm işleç işlenenleri değerlendirilir. Bazı işleçler, işlenenleri koşullu olarak değerlendirir. Diğer bir deyişle, bu tür bir işlecin ilk işleneninin değeri, (veya hangi) diğer işlenenleri değerlendirileceğini tanımlar. Bu işleçler, Koşullu mantıksal [ve (`&&`)](boolean-logical-operators.md#conditional-logical-and-operator-) ve [ya da (`||`)](boolean-logical-operators.md#conditional-logical-or-operator-) işleçleridir, [null birleşim işleçleri `??` ve `??=`](null-coalescing-operator.md), [null koşullu işleçler `?.` ve `?[]`](member-access-operators.md#null-conditional-operators--and-)ve [ koşullu işleç 1](conditional-operator.md). Daha fazla ayrıntı için her işlecin açıklamasına bakın.
 
 ## <a name="c-language-specification"></a>C# dili belirtimi
 

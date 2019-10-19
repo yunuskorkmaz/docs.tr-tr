@@ -17,25 +17,25 @@ helpviewer_keywords:
 - application development [WPF], files
 - application management [WPF]
 ms.assetid: 7ad2943b-3961-41d3-8fc6-1582d43f5d99
-ms.openlocfilehash: 57eae5067a72777db2c19331029b6df679a9fdce
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2bf815a5b34726b8316eea53786811abec00f5bb
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69956189"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72581721"
 ---
 # <a name="wpf-application-resource-content-and-data-files"></a>WPF Uygulama Kaynağı, İçerik ve Veri Dosyaları
-[!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)]uygulamalar genellikle [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], görüntü, video ve ses gibi yürütülebilir olmayan verileri içeren dosyalara bağımlıdır. Windows Presentation Foundation (WPF), uygulama veri dosyaları olarak adlandırılan bu tür veri dosyalarını yapılandırmaya, tanımlamaya ve kullanmaya yönelik özel destek sunar. Bu destek, aşağıdakiler de dahil olmak üzere belirli bir uygulama veri dosyası türü kümesinin etrafında döner:  
+[!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] uygulamalar genellikle [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], görüntüler, video ve ses gibi yürütülebilir olmayan verileri içeren dosyalara bağlıdır. Windows Presentation Foundation (WPF), uygulama veri dosyaları olarak adlandırılan bu tür veri dosyalarını yapılandırmaya, tanımlamaya ve kullanmaya yönelik özel destek sunar. Bu destek, aşağıdakiler de dahil olmak üzere belirli bir uygulama veri dosyası türü kümesinin etrafında döner:  
   
-- **Kaynak dosyaları**: Çalıştırılabilir veya kitaplık [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] bütünleştirilmiş koduna derlenen veri dosyaları.  
+- **Kaynak dosyaları**: bir çalıştırılabilir veya kitaplık [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] derlemesine derlenen veri dosyaları.  
   
-- **Içerik dosyaları**: Yürütülebilir [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] bir derlemeyle açık ilişkisi olan tek başına veri dosyaları.  
+- **Içerik dosyaları**: çalıştırılabilir [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] bütünleştirilmiş kodu ile açık ilişkiye sahip bağımsız veri dosyaları.  
   
-- **Kaynak dosyalarının sitesi**: Yürütülebilir [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] bir derlemeyle ilişkisi olmayan tek başına veri dosyaları.  
+- **Kaynak dosyalarının sitesi**: çalıştırılabilir [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] derlemesi ile ilişkisi olmayan tek başına veri dosyaları.  
   
- Bu üç tür Dosya arasında yapılması gereken önemli bir ayrım, kaynak dosyalarının ve içerik dosyalarının derleme zamanında bilinmesinin bir örneğidir; bir derlemenin açık bilgisi vardır. Ancak, kaynak dosyalarının sitesi için bir derlemenin hiç bir bilgisi veya bir paket [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] başvurusu aracılığıyla örtük bilgi sahibi olmayabilir; ikincisi ise başvurulan kaynak dosyanın gerçekten mevcut sitesinin var olduğunu garanti etmez.  
+ Bu üç tür Dosya arasında yapılması gereken önemli bir ayrım, kaynak dosyalarının ve içerik dosyalarının derleme zamanında bilinmesinin bir örneğidir; bir derlemenin açık bilgisi vardır. Ancak, kaynak dosyalarının sitesi için bir derlemenin hiç bilgisi olmayabilir veya bir paket tekdüzen kaynak tanımlayıcısı (URI) başvurusu aracılığıyla örtülü bilgi alabilir; İkinci durumda, başvurulan kaynak dosya sitesinin gerçekten var olduğu garanti yoktur.  
   
- Uygulama veri dosyalarına başvurmak için Windows Presentation Foundation (WPF), [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] [WPF 'de paket URI 'lerinde](pack-uris-in-wpf.md)ayrıntılı olarak açıklanan paket düzenini kullanır.  
+ Windows Presentation Foundation (WPF), uygulama veri dosyalarına başvurmak için, paket tekdüzen kaynak tanımlayıcısı (URI) şemasını kullanır ve bu, [WPF 'de paket URI 'lerinde](pack-uris-in-wpf.md)ayrıntılı olarak açıklanmıştır.  
   
  Bu konuda, uygulama veri dosyalarının nasıl yapılandırılacağı ve kullanılacağı açıklanmaktadır.  
 
@@ -55,7 +55,7 @@ ms.locfileid: "69956189"
 > Bu bölümde açıklanan kaynak dosyaları, [xaml kaynaklarında](../advanced/xaml-resources.md) açıklanan kaynak dosyalarından farklıdır ve [uygulama kaynaklarını yönetme (.net)](/visualstudio/ide/managing-application-resources-dotnet)bölümünde açıklanan katıştırılmış veya bağlı kaynaklardan farklıdır.  
   
 ### <a name="configuring-resource-files"></a>Kaynak dosyalarını yapılandırma  
- ' [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]De, bir kaynak dosyası, bir Microsoft Build Engine (MSBuild) projesinde `Resource` öğe olarak bulunan bir dosyadır.  
+ @No__t_0, kaynak dosyası bir Microsoft Build Engine (MSBuild) projesinde `Resource` öğesi olarak bulunan bir dosyadır.  
   
 ```xml  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ... >  
@@ -68,21 +68,21 @@ ms.locfileid: "69956189"
 ```  
   
 > [!NOTE]
-> ' [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]De, bir projeye dosya ekleyerek ve öğesini `Build Action` olarak `Resource`ayarlayarak bir kaynak dosyası oluşturursunuz.  
+> @No__t_0, bir projeye dosya ekleyerek ve `Build Action` `Resource` olarak ayarlayarak bir kaynak dosyası oluşturursunuz.  
   
  Proje yapılandırıldığında, MSBuild kaynağı derlemeye derler.  
   
 ### <a name="using-resource-files"></a>Kaynak dosyalarını kullanma  
- Bir kaynak dosyasını yüklemek için, istenen kaynak dosyasını tanımlayan <xref:System.Windows.Application.GetResourceStream%2A> bir paketi [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] geçirerek <xref:System.Windows.Application> sınıfının yöntemini çağırabilirsiniz. <xref:System.Windows.Application.GetResourceStream%2A>kaynak dosyasını <xref:System.Windows.Resources.StreamResourceInfo> bir <xref:System.IO.Stream> olarak kullanıma sunan ve içerik türünü açıklayan bir nesne döndürür.  
+ Bir kaynak dosyasını yüklemek için, istenen kaynak dosyasını tanımlayan bir paket URI 'sini geçirerek <xref:System.Windows.Application> sınıfının <xref:System.Windows.Application.GetResourceStream%2A> yöntemini çağırabilirsiniz. <xref:System.Windows.Application.GetResourceStream%2A>, kaynak dosyasını <xref:System.IO.Stream> olarak sunan ve içerik türünü açıklayan bir <xref:System.Windows.Resources.StreamResourceInfo> nesnesi döndürür.  
   
- Örnek olarak, <xref:System.Windows.Application.GetResourceStream%2A> aşağıdaki kod, bir <xref:System.Windows.Controls.Page> kaynak dosyasını yüklemek ve bir <xref:System.Windows.Controls.Frame> (`pageFrame`) içeriği olarak ayarlamak için nasıl kullanılacağını gösterir:  
+ Örnek olarak, aşağıdaki kod, bir <xref:System.Windows.Controls.Page> kaynak dosyasını yüklemek ve bir <xref:System.Windows.Controls.Frame> (`pageFrame`) içeriği olarak ayarlamak için <xref:System.Windows.Application.GetResourceStream%2A> nasıl kullanacağınızı gösterir:  
   
  [!code-csharp[WPFAssemblyResourcesSnippets#LoadAPageResourceFileManuallyCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/ApplicationGetResourceStreamSnippetWindow.xaml.cs#loadapageresourcefilemanuallycode)]
  [!code-vb[WPFAssemblyResourcesSnippets#LoadAPageResourceFileManuallyCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/VisualBasic/ResourcesSample/ApplicationGetResourceStreamSnippetWindow.xaml.vb#loadapageresourcefilemanuallycode)]  
   
- Çağırma <xref:System.Windows.Application.GetResourceStream%2A> sırasında<xref:System.IO.Stream>öğesine erişiminizi sağlar. bunu, ile ayarladığınız özelliğin türüne dönüştürmek için ek iş yapmanız gerekir. Bunun yerine, bir kaynak [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] dosyasını doğrudan kod kullanarak bir türün özelliğine <xref:System.IO.Stream> yükleyerek, öğesini açmayı ve dönüştürmeyi de sağlayabilirsiniz.  
+ @No__t_0 çağırırken <xref:System.IO.Stream> erişim sağlar. bunu, ile ayarladığınız özelliğin türüne dönüştürmek için ek iş yapmanız gerekir. Bunun yerine, bir kaynak dosyasını doğrudan kod kullanarak bir tür özelliğine yükleyerek <xref:System.IO.Stream> açıp dönüştürmeye [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] sağlayabilirsiniz.  
   
- Aşağıdaki örnek, kod kullanarak <xref:System.Windows.Controls.Page> doğrudan bir <xref:System.Windows.Controls.Frame> (`pageFrame`) ' a nasıl yükleneceğini gösterir.  
+ Aşağıdaki örnek, kod kullanarak bir <xref:System.Windows.Controls.Page> doğrudan bir <xref:System.Windows.Controls.Frame> (`pageFrame`) nasıl yükleneceğini gösterir.  
   
  [!code-csharp[WPFAssemblyResourcesSnippets#LoadPageResourceFileFromCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/ApplicationGetResourceStreamSnippetWindow.xaml.cs#loadpageresourcefilefromcode)]
  [!code-vb[WPFAssemblyResourcesSnippets#LoadPageResourceFileFromCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/VisualBasic/ResourcesSample/ApplicationGetResourceStreamSnippetWindow.xaml.vb#loadpageresourcefilefromcode)]  
@@ -92,11 +92,11 @@ ms.locfileid: "69956189"
  [!code-xaml[WPFAssemblyResourcesSnippets#LoadPageResourceFileFromXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/ApplicationGetResourceStreamSnippetWindow.xaml#loadpageresourcefilefromxaml)]  
   
 ### <a name="application-code-files-as-resource-files"></a>Kaynak dosyaları olarak uygulama kodu dosyaları  
- Windows, sayfalar, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Flow belgeleri ve kaynak sözlükleri dahil olmak üzere [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)]paket kullanılarak özel bir uygulama kodu dosyaları kümesine başvurulabilir. Örneğin, <xref:System.Windows.Application.StartupUri%2A?displayProperty=nameWithType> özelliğini, bir uygulama başlatıldığında yüklemek istediğiniz pencere veya [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] sayfaya başvuruda bulunan bir paketle ayarlayabilirsiniz.  
+ Windows, sayfalar, Flow belgeleri ve kaynak sözlükleri dahil olmak üzere paket URI 'Leri kullanılarak özel bir [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulama kodu dosyası kümesine başvurulabilir. Örneğin, <xref:System.Windows.Application.StartupUri%2A?displayProperty=nameWithType> özelliğini, bir uygulama başlatıldığında yüklemek istediğiniz pencere veya sayfaya başvuruda bulunan bir paket URI 'SI ile ayarlayabilirsiniz.  
   
  [!code-xaml[WPFAssemblyResourcesSnippets#SetApplicationStartupURI](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/App.xaml#setapplicationstartupuri)]  
   
- Bir xaml dosyası bir MSBuild projesine `Page` öğe olarak dahil edildiğinde bunu yapabilirsiniz.  
+ Bu işlemi, bir XAML dosyası `Page` öğesi olarak MSBuild projesine dahil edildiğinde yapabilirsiniz.  
   
 ```xml  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ... >  
@@ -109,12 +109,12 @@ ms.locfileid: "69956189"
 ```  
   
 > [!NOTE]
-> ' [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)]De, bir projeye yeni <xref:System.Windows.Window>, <xref:System.Windows.Navigation.NavigationWindow> <xref:System.Windows.Controls.Page> <xref:System.Windows.ResourceDictionary> `Build Action` ,,`Page`, veya ekler, biçimlendirme dosyası için varsayılan olarak olur. <xref:System.Windows.Documents.FlowDocument>  
+> @No__t_0, bir projeye yeni bir <xref:System.Windows.Window>, <xref:System.Windows.Navigation.NavigationWindow>, <xref:System.Windows.Controls.Page>, <xref:System.Windows.Documents.FlowDocument> veya <xref:System.Windows.ResourceDictionary> eklersiniz, biçimlendirme dosyasının `Build Action` varsayılan olarak `Page` olur.  
   
- Öğeler içeren `Page` bir proje derlendiğinde [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] , öğeler ikili biçime dönüştürülür ve ilişkili derlemeye derlenir. Sonuç olarak, bu dosyalar tipik kaynak dosyalarla aynı şekilde kullanılabilir.  
+ @No__t_0 öğeler içeren bir proje derlendiğinde, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] öğeleri ikili biçime dönüştürülür ve ilişkili derlemeye derlenir. Sonuç olarak, bu dosyalar tipik kaynak dosyalarla aynı şekilde kullanılabilir.  
   
 > [!NOTE]
-> Bir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] dosya bir `Resource` öğe olarak yapılandırıldıysa ve arka plan kod dosyasına sahip değilse, RAW [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] , ham [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]dosyanın ikili sürümü yerine bir derlemeye derlenir.  
+> Bir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] dosyası `Resource` öğesi olarak yapılandırılmışsa ve arka plan kod dosyası içermiyorsa, ham [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ham [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ikili sürümü yerine bir derlemeye derlenir.  
   
 <a name="Content_Files"></a>   
 ## <a name="content-files"></a>İçerik dosyaları  
@@ -123,7 +123,7 @@ ms.locfileid: "69956189"
  Uygulamanız, kendisini kullanan derlemeyi yeniden derlemeden güncelleştirebilmek istediğiniz belirli bir uygulama veri dosyaları kümesi gerektirdiğinde içerik dosyalarını kullanmanız gerekir.  
   
 ### <a name="configuring-content-files"></a>Içerik dosyalarını yapılandırma  
- Bir projeye içerik dosyası eklemek için, bir uygulama veri dosyası bir `Content` öğe olarak dahil olmalıdır. Ayrıca, bir içerik dosyası doğrudan derlemeye derlenmediği için, içerik dosyasının oluşturulan derlemeye göreli bir konuma kopyalanacağını belirtmek `CopyToOutputDirectory` için MSBuild meta verileri öğesini ayarlamanız gerekir. Bir proje oluşturulduğunda kaynağın yapı çıkış klasörüne kopyalanmasını isterseniz, `CopyToOutputDirectory` meta veri öğesini `Always` değeri ile ayarlarsınız. Aksi takdirde, yalnızca kaynağın en yeni sürümünün, `PreserveNewest` değeri kullanılarak derleme çıkış klasörüne kopyalandığından emin olabilirsiniz.  
+ Bir projeye içerik dosyası eklemek için, bir uygulama veri dosyası `Content` öğesi olarak eklenmelidir. Ayrıca, bir içerik dosyası doğrudan derlemeye derlenmediğinden, içerik dosyasının oluşturulan derlemeye göre bir konuma kopyalanacağını belirtmek için MSBuild `CopyToOutputDirectory` meta veri öğesini ayarlamanız gerekir. Bir proje oluşturulduğunda kaynağın yapı çıkış klasörüne kopyalanmasını isterseniz, `CopyToOutputDirectory` meta veri öğesini `Always` değeri ile ayarlarsınız. Aksi takdirde, `PreserveNewest` değerini kullanarak yalnızca kaynağın en yeni sürümünün derleme çıkış klasörüne kopyalandığından emin olabilirsiniz.  
   
  Aşağıda, yalnızca kaynağın yeni bir sürümü projeye eklendiğinde derleme çıkış klasörüne kopyalanmış bir içerik dosyası olarak yapılandırılmış bir dosya gösterilmektedir.  
   
@@ -140,29 +140,29 @@ ms.locfileid: "69956189"
 ```  
   
 > [!NOTE]
-> ' [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)]De, bir projeye bir dosya ekleyerek ve `Copy always` `Content` `Copy if newer` `PreserveNewest` `Build Action` `Copy to Output Directory` öğesini olarak ayarlayarak ve (ile aynı) ve (ile aynı) olarak ayarlayarak bir içerik dosyası oluşturursunuz. `Always`  
+> @No__t_0, bir projeye dosya ekleyerek ve `Build Action` `Content` olarak ayarlayarak içerik dosyası oluşturur ve `Copy to Output Directory` `Copy always` (`Always` ile aynı) ve `Copy if newer` (`PreserveNewest` ile aynı) olarak ayarlanır.  
   
- Proje yapılandırıldığında, bir <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> öznitelik her içerik dosyası için derlemenin meta verilerine derlenir.  
+ Proje yapılandırıldığında, her içerik dosyası için derlemenin meta verilerine bir <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> özniteliği derlenir.  
   
  `[assembly: AssemblyAssociatedContentFile("ContentFile.xaml")]`  
   
- Öğesinin değeri, <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> projedeki konumuna göre içerik dosyasının yolunu belirtir. Örneğin, bir proje alt klasöründe bir içerik dosyası bulunuyorsa, ek yol bilgileri bu <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> değere dahil olur.  
+ @No__t_0 değeri, projedeki konumuna göre içerik dosyasının yolunu gösterir. Örneğin, bir proje alt klasöründe bir içerik dosyası bulunuyorsa, ek yol bilgileri <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> değerine dahil olur.  
   
  `[assembly: AssemblyAssociatedContentFile("Resources/ContentFile.xaml")]`  
   
- <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> Değer aynı zamanda yapı çıkış klasöründeki içerik dosyası yolunun değeridir.  
+ @No__t_0 değeri aynı zamanda yapı çıkış klasöründeki içerik dosyası yolunun değeridir.  
   
 ### <a name="using-content-files"></a>Içerik dosyalarını kullanma  
- Bir içerik dosyasını yüklemek için, istenen içerik dosyasını tanımlayan <xref:System.Windows.Application.GetContentStream%2A> bir paket [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] geçirerek <xref:System.Windows.Application> sınıfının yöntemini çağırabilirsiniz. <xref:System.Windows.Application.GetContentStream%2A>içerik dosyasını <xref:System.Windows.Resources.StreamResourceInfo> bir <xref:System.IO.Stream> olarak kullanıma sunan ve içerik türünü açıklayan bir nesne döndürür.  
+ Bir içerik dosyasını yüklemek için, istenen içerik dosyasını tanımlayan bir paket URI 'sini geçirerek <xref:System.Windows.Application> sınıfının <xref:System.Windows.Application.GetContentStream%2A> yöntemini çağırabilirsiniz. <xref:System.Windows.Application.GetContentStream%2A>, içerik dosyasını <xref:System.IO.Stream> olarak sunan ve içerik türünü açıklayan bir <xref:System.Windows.Resources.StreamResourceInfo> nesnesi döndürür.  
   
- Örnek olarak, <xref:System.Windows.Application.GetContentStream%2A> aşağıdaki kod, bir <xref:System.Windows.Controls.Page> içerik dosyasını yüklemek ve bir <xref:System.Windows.Controls.Frame> (`pageFrame`) içeriği olarak ayarlamak için kullanımını gösterir.  
+ Örnek olarak, aşağıdaki kod, <xref:System.Windows.Controls.Page> bir içerik dosyası yüklemek ve bir <xref:System.Windows.Controls.Frame> (`pageFrame`) içeriği olarak ayarlamak için <xref:System.Windows.Application.GetContentStream%2A> nasıl kullanacağınızı gösterir.  
   
  [!code-csharp[WPFAssemblyResourcesSnippets#LoadAPageContentFileManuallyCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/ApplicationGetContentStreamSnippetWindow.xaml.cs#loadapagecontentfilemanuallycode)]
  [!code-vb[WPFAssemblyResourcesSnippets#LoadAPageContentFileManuallyCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/VisualBasic/ResourcesSample/ApplicationGetContentStreamSnippetWindow.xaml.vb#loadapagecontentfilemanuallycode)]  
   
- Çağırma <xref:System.Windows.Application.GetContentStream%2A> sırasında<xref:System.IO.Stream>öğesine erişiminizi sağlar. bunu, ile ayarladığınız özelliğin türüne dönüştürmek için ek iş yapmanız gerekir. Bunun yerine, bir kaynak [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] dosyasını doğrudan kod kullanarak bir türün özelliğine <xref:System.IO.Stream> yükleyerek, öğesini açmayı ve dönüştürmeyi de sağlayabilirsiniz.  
+ @No__t_0 çağırırken <xref:System.IO.Stream> erişim sağlar. bunu, ile ayarladığınız özelliğin türüne dönüştürmek için ek iş yapmanız gerekir. Bunun yerine, bir kaynak dosyasını doğrudan kod kullanarak bir tür özelliğine yükleyerek <xref:System.IO.Stream> açıp dönüştürmeye [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] sağlayabilirsiniz.  
   
- Aşağıdaki örnek, kod kullanarak <xref:System.Windows.Controls.Page> doğrudan bir <xref:System.Windows.Controls.Frame> (`pageFrame`) ' a nasıl yükleneceğini gösterir.  
+ Aşağıdaki örnek, kod kullanarak bir <xref:System.Windows.Controls.Page> doğrudan bir <xref:System.Windows.Controls.Frame> (`pageFrame`) nasıl yükleneceğini gösterir.  
   
  [!code-csharp[WPFAssemblyResourcesSnippets#LoadPageContentFileFromCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/ApplicationGetContentStreamSnippetWindow.xaml.cs#loadpagecontentfilefromcode)]
  [!code-vb[WPFAssemblyResourcesSnippets#LoadPageContentFileFromCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/VisualBasic/ResourcesSample/ApplicationGetContentStreamSnippetWindow.xaml.vb#loadpagecontentfilefromcode)]  
@@ -173,7 +173,7 @@ ms.locfileid: "69956189"
   
 <a name="Site_of_Origin_Files"></a>   
 ## <a name="site-of-origin-files"></a>Kaynak dosyalarının sitesi  
- Kaynak dosyaları, <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute>tarafından tanımlandığı gibi, birlikte dağıtılabilecek Derlemelerle açık bir ilişkiye sahiptir. Ancak, aşağıdakiler de dahil olmak üzere bir derleme ve uygulama veri dosyası arasında örtük veya mevcut olmayan bir ilişki oluşturmak isteyebileceğiniz durumlar vardır:  
+ Kaynak dosyaları, <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> tarafından tanımlandığı şekilde, birlikte dağıtılabilecek Derlemelerle açık bir ilişkiye sahiptir. Ancak, aşağıdakiler de dahil olmak üzere bir derleme ve uygulama veri dosyası arasında örtük veya mevcut olmayan bir ilişki oluşturmak isteyebileceğiniz durumlar vardır:  
   
 - Derleme zamanında bir dosya yok.  
   
@@ -183,21 +183,21 @@ ms.locfileid: "69956189"
   
 - Uygulamanız, ses ve video gibi büyük veri dosyalarını kullanır ve yalnızca tercih ettikleri takdirde kullanıcıların bunları indirmesini istersiniz.  
   
- Bu dosya türlerini, File:///ve http://şemaları gibi geleneksel [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] şemaları kullanarak yüklemek mümkündür.  
+ Bu dosya türlerini, file:///ve http://şemaları gibi geleneksel URI düzenlerini kullanarak yüklemek mümkündür.  
   
  [!code-xaml[WPFAssemblyResourcesSnippets#AbsolutePackUriFileHttpReferenceXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/AbsolutePackUriPage.xaml#absolutepackurifilehttpreferencexaml)]  
   
- Ancak, file:///ve http://şemaları uygulamanızın tam güvene sahip olmasını gerektirir. Uygulamanız [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)] Internet 'ten veya intranetten başlatıldıysa ve yalnızca bu konumlardan başlatılan uygulamalar için izin verilen izin kümesini isterse, gevşek dosyalar yalnızca uygulamanın kaynak sitesinden yüklenebilir ( başlatma konumu). Bu tür dosyalar, *kaynak dosyalarının sitesi* olarak bilinir.  
+ Ancak, file:///ve http://şemaları uygulamanızın tam güvene sahip olmasını gerektirir. Uygulamanız Internet 'ten veya intranetten başlatılan bir [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)] ve yalnızca bu konumlardan başlatılan uygulamalar için izin verilen izin kümesini isterse, gevşek dosyalar yalnızca uygulamanın kaynak sitesinden yüklenebilir (başlatma konum). Bu tür dosyalar, *kaynak dosyalarının sitesi* olarak bilinir.  
   
  Kaynak dosyalarının sitesi kısmi güven uygulamaları için tek seçenektir, ancak kısmi güven uygulamalarıyla sınırlı değildir. Tam güven uygulamalarının, derleme zamanında hakkında bilgi sahibi olmadıkları uygulama verileri dosyalarını yüklemesi gerekebilir; tam güven uygulamaları file:///kullanabilir, ancak uygulama veri dosyalarının uygulama bütünleştirilmiş kodu ile aynı klasöre veya bir alt klasörüne yüklenebileceği olasıdır. Bu durumda, file:///kullanımı, dosyanın tam yolunu kullanmanızı gerektirdiğinden, kaynak başvuru sitesinin file:///kullanmaktan daha kolaydır.  
   
 > [!NOTE]
-> Kaynak dosyalarının sitesi, içerik dosyaları olduğu sırada bir [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)] istemci makinesinde önbelleğe alınmaz. Sonuç olarak, bunlar yalnızca özellikle istendiğinde indirilir. Bir [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)] uygulamada büyük medya dosyaları varsa, bunları kaynak dosyaları sitesi olarak yapılandırmak, ilk uygulama başlatma işlemi çok daha hızlıdır ve dosyalar yalnızca isteğe bağlı olarak indirilir.  
+> Kaynak dosyalarının sitesi, istemci makinesindeki bir [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)] önbelleğe alınmaz, ancak içerik dosyaları vardır. Sonuç olarak, bunlar yalnızca özellikle istendiğinde indirilir. Bir [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)] uygulamasının büyük medya dosyaları varsa, bunları kaynak dosyaları sitesi olarak yapılandırmak, ilk uygulama başlatma işlemi çok daha hızlıdır ve dosyalar yalnızca isteğe bağlı olarak indirilir.  
   
 ### <a name="configuring-site-of-origin-files"></a>Kaynak dosyalarının sitesini yapılandırma  
- Kaynak dosyaları sitenizin derleme sırasında var olmayan veya bilinmeyen olması halinde, gerekli dosyaların çalışma zamanında kullanılabilir olmasını sağlamak için geleneksel dağıtım mekanizmalarını kullanmanız gerekir; `XCopy` Örneğin, komut satırı programını ya da [!INCLUDE[TLA#tla_wininstall](../../../../includes/tlasharptla-wininstall-md.md)].  
+ Kaynak dosyaları siteniz derleme sırasında mevcut değilse veya bilinmiyorsa, gerekli dosyaların `XCopy` komut satırı programını veya [!INCLUDE[TLA#tla_wininstall](../../../../includes/tlasharptla-wininstall-md.md)] kullanma dahil olmak üzere çalışma zamanında kullanılabilir olmasını sağlamak için geleneksel dağıtım mekanizmalarını kullanmanız gerekir.  
   
- Derleme zamanında, kaynak sitesinde bulunmasını istediğiniz dosyaları öğrenseniz, ancak yine de açık bir bağımlılığı önlemek istiyorsanız, bu dosyaları öğe olarak `None` bir MSBuild projesine ekleyebilirsiniz. İçerik dosyalarında olduğu gibi, kaynak dosya sitesinin, `CopyToOutputDirectory` `Always` değer veya `PreserveNewest` değer belirterek oluşturulan derlemeye göreli bir konuma kopyalandığını belirtmek için MSBuild özniteliğini ayarlamanız gerekir.  
+ Derleme zamanında, kaynak sitesinde bulunmasını istediğiniz dosyaları öğrenseniz, ancak yine de açık bir bağımlılığı önlemek istiyorsanız, bu dosyaları bir MSBuild projesine `None` öğesi olarak ekleyebilirsiniz. İçerik dosyalarında olduğu gibi, kaynak dosya sitesinin, `Always` değerini veya `PreserveNewest` değerini belirterek oluşturulan derlemeye göreli bir konuma kopyalandığını belirtmek için MSBuild `CopyToOutputDirectory` özniteliğini ayarlamanız gerekir.  
   
 ```xml  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ... >  
@@ -210,21 +210,21 @@ ms.locfileid: "69956189"
 ```  
   
 > [!NOTE]
-> ' [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)]De, bir projeye dosya ekleyerek ve öğesini `Build Action` olarak `None`ayarlayarak kaynak dosyanın bir sitesini oluşturun.  
+> @No__t_0, bir projeye dosya ekleyerek ve `Build Action` `None` olarak ayarlayarak kaynak dosyanın bir sitesini oluşturun.  
   
  Proje yapılandırıldığında, MSBuild belirtilen dosyaları yapı çıkış klasörüne kopyalar.  
   
 ### <a name="using-site-of-origin-files"></a>Kaynak dosyalarının sitesini kullanma  
- Kaynak dosyasının bir sitesini yüklemek için, kaynak dosyanın istenen sitesini tanımlayan <xref:System.Windows.Application.GetRemoteStream%2A> bir paket [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] geçirerek <xref:System.Windows.Application> sınıfının yöntemini çağırabilirsiniz. <xref:System.Windows.Application.GetRemoteStream%2A>kaynak dosyanın <xref:System.Windows.Resources.StreamResourceInfo> sitesini bir <xref:System.IO.Stream> olarak kullanıma sunan ve içerik türünü açıklayan bir nesne döndürür.  
+ Kaynak dosyasının bir sitesini yüklemek için, <xref:System.Windows.Application> sınıfının <xref:System.Windows.Application.GetRemoteStream%2A> yöntemini çağırıp, istenen kaynak dosyası sitesini tanımlayan bir paket URI 'SI geçirilerek. <xref:System.Windows.Application.GetRemoteStream%2A>, kaynak dosyasının sitesini bir <xref:System.IO.Stream> olarak kullanıma sunan ve içerik türünü açıklayan bir <xref:System.Windows.Resources.StreamResourceInfo> nesnesi döndürür.  
   
- Örnek olarak, aşağıdaki kod <xref:System.Windows.Application.GetRemoteStream%2A> , kaynak dosyanın bir <xref:System.Windows.Controls.Page> sitesini yüklemek ve bir <xref:System.Windows.Controls.Frame> (`pageFrame`) içeriği olarak ayarlamak için kullanımını gösterir.  
+ Örnek olarak, aşağıdaki kod, kaynak dosyanın <xref:System.Windows.Controls.Page> bir sitesini yüklemek ve bir <xref:System.Windows.Controls.Frame> (`pageFrame`) içeriği olarak ayarlamak için <xref:System.Windows.Application.GetRemoteStream%2A> nasıl kullanacağınızı gösterir.  
   
  [!code-csharp[WPFAssemblyResourcesSnippets#LoadAPageSOOFileManuallyCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/SOOPage.xaml.cs#loadapagesoofilemanuallycode)]
  [!code-vb[WPFAssemblyResourcesSnippets#LoadAPageSOOFileManuallyCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/VisualBasic/ResourcesSample/SOOPage.xaml.vb#loadapagesoofilemanuallycode)]  
   
- Çağırma <xref:System.Windows.Application.GetRemoteStream%2A> sırasında<xref:System.IO.Stream>öğesine erişiminizi sağlar. bunu, ile ayarladığınız özelliğin türüne dönüştürmek için ek iş yapmanız gerekir. Bunun yerine, bir kaynak [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] dosyasını doğrudan kod kullanarak bir türün özelliğine <xref:System.IO.Stream> yükleyerek, öğesini açmayı ve dönüştürmeyi de sağlayabilirsiniz.  
+ @No__t_0 çağırırken <xref:System.IO.Stream> erişim sağlar. bunu, ile ayarladığınız özelliğin türüne dönüştürmek için ek iş yapmanız gerekir. Bunun yerine, bir kaynak dosyasını doğrudan kod kullanarak bir tür özelliğine yükleyerek <xref:System.IO.Stream> açıp dönüştürmeye [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] sağlayabilirsiniz.  
   
- Aşağıdaki örnek, kod kullanarak <xref:System.Windows.Controls.Page> doğrudan bir <xref:System.Windows.Controls.Frame> (`pageFrame`) ' a nasıl yükleneceğini gösterir.  
+ Aşağıdaki örnek, kod kullanarak bir <xref:System.Windows.Controls.Page> doğrudan bir <xref:System.Windows.Controls.Frame> (`pageFrame`) nasıl yükleneceğini gösterir.  
   
  [!code-csharp[WPFAssemblyResourcesSnippets#LoadPageSOOFileFromCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/SOOPage.xaml.cs#loadpagesoofilefromcode)]
  [!code-vb[WPFAssemblyResourcesSnippets#LoadPageSOOFileFromCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/VisualBasic/ResourcesSample/SOOPage.xaml.vb#loadpagesoofilefromcode)]  

@@ -20,19 +20,19 @@ helpviewer_keywords:
 - loops, exiting
 - Loop keyword [Visual Basic], Do...Loop statement
 ms.assetid: 892f9096-b3e2-4aee-834d-83bc4e2c379d
-ms.openlocfilehash: 75a2129a9f332024831d97021e381f1b3d4fa048
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: eff5239e07ca27f40ece5af68f46c491be91cf09
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69942992"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72583437"
 ---
 # <a name="doloop-statement-visual-basic"></a>Do...Loop Deyimi (Visual Basic)
-Bir `Boolean` koşul olduğunda `True` veya koşul haline `True`gelene kadar bir deyim bloğunu yineler.  
+Bir `Boolean` koşulu `True` veya koşul `True` hale gelinceye kadar bir deyim bloğunu yineler.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```vb  
 Do { While | Until } condition  
     [ statements ]  
     [ Continue Do ]  
@@ -40,7 +40,7 @@ Do { While | Until } condition
     [ Exit Do ]  
     [ statements ]  
 Loop  
--or-  
+' -or-  
 Do  
     [ statements ]  
     [ Continue Do ]  
@@ -54,55 +54,55 @@ Loop { While | Until } condition
   
 |Terim|Tanım|  
 |---|---|  
-|`Do`|Gerekli. `Do` Döngünün tanımını başlatır.|  
-|`While`|Kullanılmadıysa `Until` gereklidir. Loop olana kadar `condition` `False`tekrarlayın.|  
-|`Until`|Kullanılmadıysa `While` gereklidir. Loop olana kadar `condition` `True`tekrarlayın.|  
-|`condition`|İsteğe bağlı. `Boolean`ifadesini. İse, Visual Basic olduğu gibi `False`davranır. `Nothing` `condition`|  
-|`statements`|İsteğe bağlı. , Veya Until gibi `condition` `True`yinelenen bir veya daha fazla deyim.|  
-|`Continue Do`|İsteğe bağlı. Denetimi `Do` döngünün bir sonraki yinelemesine aktarır.|  
-|`Exit Do`|İsteğe bağlı. Denetimi `Do` döngünün dışına aktarır.|  
-|`Loop`|Gerekli. `Do` Döngünün tanımını sonlandırır.|  
+|`Do`|Gerekli. @No__t_0 döngüsünün tanımını başlatır.|  
+|`While`|@No__t_0 kullanılmadığı müddetçe gereklidir. @No__t_0 `False` kadar döngüyü tekrarlayın.|  
+|`Until`|@No__t_0 kullanılmadığı müddetçe gereklidir. @No__t_0 `True` kadar döngüyü tekrarlayın.|  
+|`condition`|İsteğe bağlı. `Boolean` ifadesi. @No__t_0 `Nothing`, Visual Basic `False` olarak değerlendirir.|  
+|`statements`|İsteğe bağlı. @No__t_0, veya Until olarak yinelenen bir veya daha fazla deyim `True`.|  
+|`Continue Do`|İsteğe bağlı. Denetimi `Do` döngüsünün bir sonraki yinelemesine aktarır.|  
+|`Exit Do`|İsteğe bağlı. @No__t_0 döngüsünün dışına denetimini aktarır.|  
+|`Loop`|Gerekli. @No__t_0 döngüsünün tanımını sonlandırır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bir deyim `Do...Loop` kümesini sınırsız sayıda yinelemek istediğinizde, bir koşul karşılanana kadar bir yapı kullanın. Deyimlerini bir dizi defa yinelemek istiyorsanız, [için... Sonraki Ifade](../../../visual-basic/language-reference/statements/for-next-statement.md) genellikle daha iyi bir seçimdir.  
+ Bir deyim kümesini sınırsız sayıda tekrarlamak istediğinizde, bir koşul karşılanana kadar `Do...Loop` yapısını kullanın. Deyimlerini bir dizi defa yinelemek istiyorsanız, [için... Sonraki Ifade](../../../visual-basic/language-reference/statements/for-next-statement.md) genellikle daha iyi bir seçimdir.  
   
- Ya da `While` öğesini belirtmek `condition`için `Until` veya ikisini de kullanabilirsiniz.  
+ Yalnızca `condition` belirtmek için `While` ya da `Until` kullanabilirsiniz.  
   
- Döngünün başlangıcında veya `condition` sonunda yalnızca bir kez test edebilirsiniz. Döngünün başlangıcında test `condition` ederseniz ( `Do` bildiriminde), döngü bir kez çalışmayabilir. Döngünün sonunda test ederseniz ( `Loop` bildiriminde), döngü her zaman en az bir kez çalışır.  
+ @No__t_0 döngünün başlangıcında veya sonunda yalnızca bir kez test edebilirsiniz. Döngünün başlangıcında `condition` test ederseniz (`Do` bildiriminde), döngü bir kez çalışmayabilir. Döngünün sonunda test ederseniz (`Loop` bildiriminde), döngü her zaman en az bir kez çalışır.  
   
- Koşul genellikle iki değerin karşılaştırılmasının sonucunu verir, ancak [Boolean veri türü](../../../visual-basic/language-reference/data-types/boolean-data-type.md) değeri (`True` veya `False`) olarak değerlendirilen herhangi bir ifade olabilir. Buna dönüştürülmüş `Boolean`sayısal türler gibi diğer veri türlerinin değerleri de dahildir.  
+ Koşul genellikle iki değerin karşılaştırılmasının sonucunu verir, ancak [Boolean veri türü](../../../visual-basic/language-reference/data-types/boolean-data-type.md) değeri (`True` veya `False`) değerlendirilen herhangi bir ifade olabilir. Bu, `Boolean` dönüştürülen sayısal türler gibi diğer veri türlerinin değerlerini içerir.  
   
- Bir döngüyü diğerinin `Do` içine yerleştirerek döngüleri iç içe geçirebilirsiniz. Ayrıca, farklı türlerde denetim yapılarını birbirleriyle iç içe geçirebilirsiniz. Daha fazla bilgi için bkz. [Iç Içe denetim yapıları](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md).  
+ Bir döngüyü diğerinin içine yerleştirerek `Do` döngüleri iç içe geçirebilirsiniz. Ayrıca, farklı türlerde denetim yapılarını birbirleriyle iç içe geçirebilirsiniz. Daha fazla bilgi için bkz. [Iç Içe denetim yapıları](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md).  
   
 > [!NOTE]
-> `Do...Loop` Yapı, çok daha fazla esneklik sağlar... [ End while ifadesinin sonu](../../../visual-basic/language-reference/statements/while-end-while-statement.md) , ne zaman veya ilk kez `condition` `True`geldiğini `True` sonlandırırken döngüyü sonlandırmaya karar vermenize olanak sağlar. Ayrıca döngünün başlangıcında veya sonunda test `condition` etmenizi sağlar.  
+> @No__t_0 yapısı, çok daha fazla esneklik sağlar... [ End while Ifadesinin](../../../visual-basic/language-reference/statements/while-end-while-statement.md) `condition` `True` durdurulduğunda veya ilk `True` hale geldiği zaman döngünün sonlandırılmayacağına karar vermenize olanak sağlar. Ayrıca, döngünün başlangıcında veya sonunda `condition` test etmenizi sağlar.  
   
 ## <a name="exit-do"></a>Çık  
- [Exit Do](../../../visual-basic/language-reference/statements/exit-statement.md) deyimleri, bir çıkışı için alternatif bir `Do…Loop`yol sağlayabilir. `Exit Do`denetimi, `Loop` ifadesiyle takip eden deyime hemen aktarır.  
+ [Exit Do](../../../visual-basic/language-reference/statements/exit-statement.md) deyimleri `Do…Loop` çıkmak için alternatif bir yol sağlayabilir. `Exit Do` denetimi, `Loop` bildirisini izleyen deyime hemen aktarır.  
   
- `Exit Do`Genellikle, örneğin bir `If...Then...Else` yapıda, bazı koşullar hesaplandıktan sonra kullanılır. Hatalı bir değer veya sonlandırma isteği gibi yineleme işleminin devam etmesi için gereksiz veya imkansız hale getiren bir koşul tespit ederseniz bir döngüden çıkmak isteyebilirsiniz. Tek kullanımı `Exit Do` , sonsuz bir *döngüye*neden olabilecek bir durum için test etmek, büyük veya hatta sonsuz bir sayı çalışabilen bir döngüdür. Döngüyü atlamak için `Exit Do` ' i kullanabilirsiniz.  
+ `Exit Do`, örneğin bir `If...Then...Else` yapısında bir koşul hesaplandıktan sonra kullanılır. Hatalı bir değer veya sonlandırma isteği gibi yineleme işleminin devam etmesi için gereksiz veya imkansız hale getiren bir koşul tespit ederseniz bir döngüden çıkmak isteyebilirsiniz. @No__t_0 kullanımı, sonsuz bir *döngüye*neden olabilecek, büyük veya hatta sonsuz bir sayı çalışabilen bir döngü olan bir koşulu test etmekle yöneliktir. Döngüyü atlamak için `Exit Do` kullanabilirsiniz.  
   
- Herhangi bir yerde herhangi bir `Exit Do` `Do…Loop`sayıda deyim ekleyebilirsiniz.  
+ Herhangi bir sayıda `Exit Do` deyimini `Do…Loop` herhangi bir yere ekleyebilirsiniz.  
   
- İç içe `Do` döngüler içinde kullanıldığında, `Exit Do` denetimi en içteki döngünün dışına ve sonraki yüksek iç içe geçme düzeyine aktarır.  
+ İç içe geçmiş `Do` döngüleri içinde kullanıldığında, `Exit Do` denetimi en içteki döngüden ve sonraki daha yüksek iç içe geçme düzeyine aktarır.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte, döngü içindeki deyimler, `index` değişken 10 ' dan büyük olana kadar çalışmaya devam eder. `Until` Yan tümce döngünün sonunda bulunur.  
+ Aşağıdaki örnekte, döngü içindeki deyimler `index` değişkeni 10 ' dan büyük olana kadar çalışmaya devam eder. @No__t_0 yan tümcesi döngünün sonunda bulunur.  
   
  [!code-vb[VbVbalrStatements#131](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class10.vb#131)]  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, bir `While` `Until` yan tümce yerine bir yan tümce kullanır ve `condition` son yerine döngüsünün başlangıcında test edilir.  
+ Aşağıdaki örnek, bir `Until` yan tümcesi yerine bir `While` yan tümcesi kullanır ve `condition` son yerine döngünün başlangıcında test edilir.  
   
  [!code-vb[VbVbalrStatements#132](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class10.vb#132)]  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte, `index` değişken 100 `condition` ' den büyükse döngüyü sonlandırır. Ancak, döngüdeki `Exit Do` ifade,dizindeğişkeni10'danbüyükolduğundadeyimindöngüyü`If` durdurmasına neden olur.  
+ Aşağıdaki örnekte, `index` değişkeni 100 ' den büyük olduğunda `condition` döngüyü sonlandırır. Ancak, döngüdeki `If` ifade, dizin değişkeni 10 ' dan büyük olduğunda `Exit Do` deyimin döngüyü durdurmasına neden olur.  
   
  [!code-vb[VbVbalrStatements#133](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class10.vb#133)]  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek bir metin dosyasındaki tüm satırları okur. Yöntemi dosyayı açar ve karakterleri okuyan bir <xref:System.IO.StreamReader> döndürür. <xref:System.IO.File.OpenText%2A> Koşulunda, öğesinin`StreamReader` yöntemi ek karakter olup olmadığını belirler. <xref:System.IO.StreamReader.Peek%2A> `Do...Loop`  
+ Aşağıdaki örnek bir metin dosyasındaki tüm satırları okur. @No__t_0 yöntemi dosyayı açar ve karakterleri okuyan bir <xref:System.IO.StreamReader> döndürür. @No__t_0 koşulunda, `StreamReader` <xref:System.IO.StreamReader.Peek%2A> yöntemi herhangi bir ek karakter olup olmadığını belirler.  
   
  [!code-vb[VbVbalrStatements#134](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class10.vb#134)]  
   

@@ -7,50 +7,50 @@ f1_keywords:
 helpviewer_keywords:
 - Handles keyword [Visual Basic]
 ms.assetid: 1b051c0e-f499-42f6-acb5-6f4f27824b40
-ms.openlocfilehash: 50a449ea8a5131c878cf703f44695cd2e2304444
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ae05e77515e4e2b50cdf5f9a1908375fa311c3a3
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61638044"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72581806"
 ---
 # <a name="handles-clause-visual-basic"></a>Handles Tümcesi (Visual Basic)
-Bir yordamın belirtilmiş bir olayı işlediğini bildirir.  
+Bir yordamın belirtilen bir olayı işlediğini bildirir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```vb  
 proceduredeclaration Handles eventlist  
 ```  
   
 ## <a name="parts"></a>Bölümler  
  `proceduredeclaration`  
- `Sub` Olayı işleyecek yordam için yordam bildirimi.  
+ Olayı işleyecek yordamın `Sub` yordam bildirimi.  
   
  `eventlist`  
- Olayları listesi `proceduredeclaration` işlemek için virgülle ayrılmış. Olayları için geçerli sınıfın ya da temel sınıf veya kullanılarak bildirilen bir nesne oluşturulması `WithEvents` anahtar sözcüğü.  
+ İşlenecek `proceduredeclaration`, virgülle ayırarak olayların listesi. Olaylar, geçerli sınıfın temel sınıfı veya `WithEvents` anahtar sözcüğü kullanılarak belirtilen bir nesne tarafından oluşturulmalıdır.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Kullanım `Handles` sonunda bir nesne değişkeni tarafından başlatılan olayları işlemek için neden bir yordam bildirimi, anahtar sözcüğü kullanılarak bildirilen `WithEvents` anahtar sözcüğü. `Handles` Anahtar sözcüğü de türetilen bir sınıfta bir temel sınıf olayları işlemek için kullanılabilir.  
+ Bir yordam bildiriminin sonundaki `Handles` anahtar sözcüğünü kullanarak, `WithEvents` anahtar sözcüğü kullanılarak belirtilen bir nesne değişkeni tarafından oluşturulan olayların işlemesine neden olur. @No__t_0 anahtar sözcüğü, bir temel sınıftan olayları işlemek için türetilmiş bir sınıfta de kullanılabilir.  
   
- `Handles` Anahtar sözcüğü ve `AddHandler` iki deyimi belirli bir yordam belirli olayları işleme, ancak bazı farklılıklar vardır belirtmenize olanak tanır. Kullanım `Handles` , belirli bir olay işleme belirtmek için bir yordam tanımlarken anahtar sözcüğü. `AddHandler` Deyimi olayları yordamları çalışma zamanında bağlanır. Daha fazla bilgi için [AddHandler deyimi](../../../visual-basic/language-reference/statements/addhandler-statement.md).  
+ @No__t_0 anahtar sözcüğü ve `AddHandler` deyimin her ikisi de belirli olayları işleyen belirli yordamları belirtmenizi sağlar, ancak farklar vardır. Belirli bir olayı işlediğini belirtmek için bir yordam tanımlarken `Handles` anahtar sözcüğünü kullanın. @No__t_0 ifade, çalışma zamanında yordamları olaylara bağlar. Daha fazla bilgi için bkz. [AddHandler bildirisi](../../../visual-basic/language-reference/statements/addhandler-statement.md).  
   
- Özel olaylar için uygulama olay çağırır `AddHandler` yordamı bir olay işleyicisi eklediğinde erişimcisi. Özel olaylar hakkında daha fazla bilgi için bkz. [Event deyimi](../../../visual-basic/language-reference/statements/event-statement.md).  
+ Özel olaylar için uygulama, yordamı bir olay işleyicisi olarak eklediğinde olayın `AddHandler` erişimcisini çağırır. Özel olaylar hakkında daha fazla bilgi için bkz. [Event deyimi](../../../visual-basic/language-reference/statements/event-statement.md).  
   
 ## <a name="example"></a>Örnek  
  [!code-vb[VbVbalrEvents#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#2)]  
   
- Aşağıdaki örnek, türetilmiş bir sınıf nasıl kullanabileceğinizi gösterir. `Handles` deyimi bir temel sınıftan bir olayı işlemek için.  
+ Aşağıdaki örnek, bir türetilen sınıfın bir temel sınıftan bir olayı işlemek için `Handles` deyiminizi nasıl kullanabileceğinizi gösterir.  
   
  [!code-vb[VbVbalrEvents#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#3)]  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek iki düğme olay işleyicilerini içeren bir **WPF uygulaması** proje.  
+ Aşağıdaki örnek, bir **WPF uygulama** projesi için iki düğme olay işleyicisi içerir.  
   
  [!code-vb[VbVbalrEvents#41](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/class3.vb#41)]  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek önceki örneğe eşdeğerdir. `eventlist` İçinde `Handles` yan tümcesi, iki düğme için olayları içerir.  
+ Aşağıdaki örnek, önceki örneğe eşdeğerdir. @No__t_1 yan tümcesindeki `eventlist` her iki düğme için de olayları içerir.  
   
  [!code-vb[VbVbalrEvents#42](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/class3.vb#42)]  
   

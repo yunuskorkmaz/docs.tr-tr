@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: (Visual Basic) bir yapıyı bildirme'
+title: 'Nasıl yapılır: Bir Yapıyı Bildirme (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - declarations [Visual Basic], structures
@@ -7,38 +7,38 @@ helpviewer_keywords:
 - statements [Visual Basic], structure
 - structures [Visual Basic], declaring
 ms.assetid: d5e98381-eb81-47d4-af83-48cc534a2572
-ms.openlocfilehash: a52daddaa8701ccca9bd9b5b4a48535a6ffa19ed
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c3090b5b8e53e5a5a990ae11c91464797bde9803
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61906717"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72582301"
 ---
-# <a name="how-to-declare-a-structure-visual-basic"></a>Nasıl yapılır: (Visual Basic) bir yapıyı bildirme
-Yapı bildirimi ile başlayan [Structure deyimi](../../../../visual-basic/language-reference/statements/structure-statement.md), ve ile sona `End Structure` deyimi. Bu iki deyimden arasında en az bir bildirmelisiniz *öğesi*. Öğeleri herhangi bir veri türünde olabilir, ancak en az bir paylaşılmayan bir değişken veya paylaşılmayan, özel olmayan bir olay olması gerekir.  
+# <a name="how-to-declare-a-structure-visual-basic"></a>Nasıl yapılır: Bir Yapıyı Bildirme (Visual Basic)
+Yapı [ifadesiyle](../../../../visual-basic/language-reference/statements/structure-statement.md)bir yapı bildirimi başlar ve `End Structure` ifadesiyle sonlandırın. Bu iki deyim arasında en az bir *öğe*bildirmeniz gerekir. Öğeleri herhangi bir veri türünde olabilir, ancak en az bir veya paylaşılmayan olmayan bir değişken ya da paylaşılmayan olmayan bir olay olmalıdır.  
   
- Yapı öğeleri yapısı bildiriminde başlatılamıyor. Bir yapı türünde olması için bir değişken bildirdiğinizde, değerler öğelerine değişken üzerinden erişerek atayın.  
+ Yapı bildiriminde yapı öğelerinden hiçbirini başlatamıyor. Bir yapı türünde olması için bir değişken bildirdiğinizde, değişkenine değerleri değişken aracılığıyla erişerek atayabilirsiniz.  
   
- Yapılar ve sınıflar arasındaki farklar için bkz [yapılar ve sınıflar](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md).  
+ Yapılar ve sınıflar arasındaki farklılıklarla ilgili bir tartışma için bkz. [yapılar ve sınıflar](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md).  
   
- Tanıtım amacıyla, bir çalışanın adı, dahili telefon numarası ve maaş izlemek istediğiniz bir durum düşünün. Bir yapı, tek bir değişkende bunu yapmanızı sağlar.  
+ Tanıtım amacıyla, bir çalışanın adını, telefon uzantısını ve maaşını izlemek istediğiniz bir durum düşünün. Bir yapı bunu tek bir değişkende yapmanıza olanak sağlar.  
   
 ### <a name="to-declare-a-structure"></a>Bir yapıyı bildirmek için  
   
-1. Başlangıç ve bitiş ifadeleri yapısının oluşturun.  
+1. Yapı için başlangıç ve bitiş deyimlerini oluşturun.  
   
-     Yapısı kullanarak bir erişim düzeyini belirleyebileceğiniz [genel](../../../../visual-basic/language-reference/modifiers/public.md), [korumalı](../../../../visual-basic/language-reference/modifiers/protected.md), [arkadaş](../../../../visual-basic/language-reference/modifiers/friend.md), veya [özel](../../../../visual-basic/language-reference/modifiers/private.md) anahtar sözcük veya izin, Varsayılan olarak `Public`.  
+     [Ortak](../../../../visual-basic/language-reference/modifiers/public.md), [korumalı](../../../../visual-basic/language-reference/modifiers/protected.md), [arkadaş](../../../../visual-basic/language-reference/modifiers/friend.md)veya [özel](../../../../visual-basic/language-reference/modifiers/private.md) anahtar sözcüğünü kullanarak bir yapının erişim düzeyini belirtebilir veya bunun `Public` varsayılana izin verebilirsiniz.  
   
-    ```  
+    ```vb  
     Private Structure employee  
     End Structure  
     ```  
   
-2. Öğeleri yapısı gövdesi ekleyin.  
+2. Yapının gövdesine öğe ekleyin.  
   
-     Bir yapı en az bir öğe içermelidir. Her öğe bildirmek ve bunun için bir erişim düzeyi belirtmeniz gerekir. Kullanırsanız [Dim deyimi](../../../../visual-basic/language-reference/statements/dim-statement.md) erişilebilirlik herhangi bir anahtar, varsayılan olarak `Public`.  
+     Bir yapının en az bir öğesi olmalıdır. Her öğeyi bildirmeniz ve bunun için bir erişim düzeyi belirtmeniz gerekir. [Dim ifadesini](../../../../visual-basic/language-reference/statements/dim-statement.md) herhangi bir anahtar sözcük olmadan kullanırsanız, erişilebilirlik varsayılan olarak `Public` olur.  
   
-    ```  
+    ```vb  
     Private Structure employee  
         Public givenName As String  
         Public familyName As String  
@@ -51,9 +51,9 @@ Yapı bildirimi ile başlayan [Structure deyimi](../../../../visual-basic/langua
     End Structure  
     ```  
   
-     `salary` Önceki örnekte alandır `Private`, hatta içeren sınıftan yapısı dışında erişilemez durumda anlamına gelir. Ancak, `giveRaise` oluşan bir yordamdır `Public`, bu nedenle, gelen yapısı çağrılabilir. Benzer şekilde, yükseltebilirsiniz `salaryReviewTime` olaydan yapısı dışında.  
+     Yukarıdaki örnekteki `salary` alanı `Private`, bu, kapsayan sınıftan bile yapının dışında erişilemeyen anlamına gelir. Ancak, `giveRaise` yordamı `Public`, bu nedenle yapının dışından çağrılabilir. Benzer şekilde, `salaryReviewTime` olayını yapının dışından da yükseltebilirsiniz.  
   
-     Değişkenleri yanı sıra `Sub` yordamları ve olayları, sabitleri, ayrıca tanımlayabilirsiniz `Function` yordamlar ve bir yapı özellikleri. En fazla bir özellik olarak belirlediğiniz *varsayılan özellik*, sağlanan en az bir bağımsız değişken alır. Bir olayla işleyebilir bir [paylaşılan](../../../../visual-basic/language-reference/modifiers/shared.md) `Sub` yordamı. Daha fazla bilgi için [nasıl yapılır: Bildirme ve Visual Basic'te bir varsayılan özellik çağırma](../../../../visual-basic/programming-guide/language-features/procedures/how-to-declare-and-call-a-default-property.md).  
+     Değişkenlere, `Sub` yordamlarına ve olaylara ek olarak, bir yapıda sabitler, `Function` yordamlar ve özellikler de tanımlayabilirsiniz. En az bir bağımsız değişken alması şartıyla, en az bir özelliği *varsayılan özellik*olarak belirleyebilirsiniz. Bir olayı, [paylaşılan](../../../../visual-basic/language-reference/modifiers/shared.md) bir `Sub` yordamıyla işleyebilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: Visual Basic ' de varsayılan bir özellik bildirme ve çağırma](../../../../visual-basic/programming-guide/language-features/procedures/how-to-declare-and-call-a-default-property.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

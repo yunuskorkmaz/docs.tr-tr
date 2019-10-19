@@ -1,47 +1,47 @@
 ---
-title: Paragrafları ve stillerini (Visual Basic) alma
+title: Paragrafları ve stillerini alma (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: d9ed2238-d38e-4ad4-b88b-db7859df9bde
-ms.openlocfilehash: 3c6554c44c95db13aada0d9edf96cc2df595c6d1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4bc20556fb668db2db3e6bcfa42e96cc0d963b93
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61787042"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72582146"
 ---
-# <a name="retrieving-the-paragraphs-and-their-styles-visual-basic"></a>Paragrafları ve stillerini (Visual Basic) alma
-Bu örnekte biz WordprocessingML belgeden paragraf düğümleri alan bir sorgu yazın. Ayrıca, her bir paragraf stilini tanımlar.  
+# <a name="retrieving-the-paragraphs-and-their-styles-visual-basic"></a>Paragrafları ve stillerini alma (Visual Basic)
+Bu örnekte, bir WordprocessingML belgesinden paragraf düğümlerini alan bir sorgu yazdık. Ayrıca her bir paragrafın stilini belirler.  
   
- Bu sorgu önceki örnekte, sorguda geliştirir [(Visual Basic) varsayılan paragraf stilini bulma](../../../../visual-basic/programming-guide/concepts/linq/finding-the-default-paragraph-style.md), stilleri listesinden varsayılan stilini alır. Bu bilgiler, böylece sorgu açıkça ayarlanmış bir stil sahip değil paragraflar stilini gereklidir. Stilleri aracılığıyla ayarlanır `w:pPr` öğesi; bir paragraf bu öğe içermiyorsa varsayılan stili ile biçimlendirilir.  
+ Bu sorgu, stil listesinden varsayılan stili alan [varsayılan paragraf stilini (Visual Basic) bularak](../../../../visual-basic/programming-guide/concepts/linq/finding-the-default-paragraph-style.md), önceki örnekteki sorgu üzerinde oluşturulur. Bu bilgiler, sorgunun açıkça ayarlanmış bir stile sahip olmayan paragrafların stilini belirleyebilmesi için gereklidir. Paragraf stilleri `w:pPr` öğesi ile ayarlanır; bir paragraf bu öğeyi içermiyorsa, varsayılan stille biçimlendirilir.  
   
- Bu konuda bazı parçalar sorgunun önemini açıklar ve ardından sorguyu eksiksiz, çalışan bir örnek bir parçası olarak gösterir.  
+ Bu konuda, sorgunun bazı parçalarının önemi açıklanmakta ve sorgu tam, çalışan bir örnek kapsamında gösteriliyor.  
   
 ## <a name="example"></a>Örnek  
- Bir belge ve stillerini tüm paragraflarda almaya yönelik sorgu kaynağı aşağıdaki gibidir:  
+ Belgedeki tüm paragrafları ve bunların stillerini almak için sorgunun kaynağı aşağıdaki gibidir:  
   
 ```vb  
 xDoc.Root.<w:body>...<w:p>  
 ```  
   
- Bu ifade, önceki örnekte, sorgunun kaynak benzerdir [(Visual Basic) varsayılan paragraf stilini bulma](../../../../visual-basic/programming-guide/concepts/linq/finding-the-default-paragraph-style.md). İkisi arasındaki temel fark, kullanmasıdır <xref:System.Xml.Linq.XContainer.Descendants%2A> eksen yerine <xref:System.Xml.Linq.XContainer.Elements%2A> ekseni. Sorgu kullanan <xref:System.Xml.Linq.XContainer.Descendants%2A> eksen paragrafları belgeleri, bölüm olduğundan gövde öğesinin doğrudan alt olmaz; bunun yerine, paragraf iki düzeyi aşağı hiyerarşide olacaktır. Kullanarak <xref:System.Xml.Linq.XContainer.Descendants%2A> eksen, kod çalışır belgenin bölüm olup olmadığını kullanır.  
+ Bu ifade, önceki örnekteki sorgunun kaynağına benzer, [varsayılan paragraf stilini (Visual Basic) buluyor](../../../../visual-basic/programming-guide/concepts/linq/finding-the-default-paragraph-style.md). Temel fark, <xref:System.Xml.Linq.XContainer.Elements%2A> ekseni yerine <xref:System.Xml.Linq.XContainer.Descendants%2A> eksenini kullanmadır. Sorgu, bölüm içeren belgelerde,, gövde öğesinin doğrudan alt öğeleri olmayacak şekilde <xref:System.Xml.Linq.XContainer.Descendants%2A> eksenini kullanır; Bunun yerine, paragraflar hiyerarşide iki düzey olur. @No__t_0 eksenini kullanarak, kod belgenin bölüm kullanıp kullanmadığını belirtir.  
   
 ## <a name="example"></a>Örnek  
- Sorgu kullanan bir `Let` stil düğümü içeren öğe belirlemek için yan tümcesi. Hiçbir öğe yoksa, ardından `styleNode` ayarlanır `Nothing`:  
+ Sorgu, stil düğümünü içeren öğeyi belirlemede bir `Let` yan tümcesi kullanır. Öğe yoksa `styleNode` `Nothing` olarak ayarlanır:  
   
 ```vb  
 Let styleNode As XElement = para.<w:pPr>.<w:pStyle>.FirstOrDefault()  
 ```  
   
- `Let` Yan tümcesinin ilk kullanır <xref:System.Xml.Linq.XContainer.Elements%2A> adlı tüm öğeleri bulmak için eksen `pPr`, ardından kullanır <xref:System.Xml.Linq.Extensions.Elements%2A> adlı tüm alt öğeleri bulmak için genişletme yöntemi `pStyle`ve son olarak kullanan <xref:System.Linq.Enumerable.FirstOrDefault%2A> standart sorgu koleksiyon için bir singleton dönüştürmek için işleci. Koleksiyon boşsa, `styleNode` ayarlanır `Nothing`. Aramak için kullanışlı bir deyim budur `pStyle` alt düğümü. Unutmayın `pPr` alt düğüm mevcut değil, kod yok ya da; özel durum ile başarısız oluyor bunun yerine, `styleNode` ayarlanır `Nothing`, istenen davranışı olduğu `Let` yan tümcesi.  
+ @No__t_0 yan tümcesi ilk olarak `pPr` adlı tüm öğeleri bulmak için <xref:System.Xml.Linq.XContainer.Elements%2A> eksenini kullanır, sonra `pStyle` adlı tüm alt öğeleri bulmak için <xref:System.Xml.Linq.Extensions.Elements%2A> genişletme yöntemini kullanır ve son olarak, koleksiyonu tek bir olarak dönüştürmek için <xref:System.Linq.Enumerable.FirstOrDefault%2A> standart sorgu işlecini kullanır. Koleksiyon boşsa, `styleNode` `Nothing` olarak ayarlanır. Bu, `pStyle` alt düğümünü aramak için kullanışlı bir deyimdir. @No__t_0 alt düğümü yoksa, bir özel durum oluşturarak kodun, veya başarısız olduğunu unutmayın; Bunun yerine, bu `Let` yan tümcesinin istenen davranışı olan `styleNode` `Nothing` olarak ayarlanır.  
   
- Anonim bir türün bir koleksiyon iki üyeli sorgu projeleri `StyleName` ve `ParagraphNode`.  
+ Sorgu, `StyleName` ve `ParagraphNode` iki üyeli anonim bir tür koleksiyonunu projeler.  
   
 ## <a name="example"></a>Örnek  
- Bu örnekte, paragraf düğümleri WordprocessingML belge alınırken WordprocessingML belgesinin işler. Ayrıca, her bir paragraf stilini tanımlar. Bu örnek, önceki örneklerde üzerinde Bu öğreticide oluşturur. Yeni sorgu aşağıdaki kod açıklamalarda çağrılır.  
+ Bu örnek, WordprocessingML belgesinden paragraf düğümlerini alarak bir WordprocessingML belgesini işler. Ayrıca her bir paragrafın stilini belirler. Bu örnekte, bu öğreticideki önceki örneklerde derleme yapılır. Yeni sorgu, aşağıdaki koddaki açıklamalarda çağrılır.  
   
- Bu örnekte için kaynak belge oluşturma için yönergeler bulabilirsiniz [kaynak Office Open XML belgesi (Visual Basic) oluşturulmasını](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
+ Kaynak [Office Open XML belgesi (Visual Basic) oluşturma](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)bölümünde bu örnek için kaynak belge oluşturma yönergelerini bulabilirsiniz.  
   
- Bu örnekte WindowsBase derlemede bulunan sınıfları kullanır. Türleri kullanan <xref:System.IO.Packaging?displayProperty=nameWithType> ad alanı.  
+ Bu örnek, WindowsBase derlemesinde bulunan sınıfları kullanır. @No__t_0 ad alanındaki türleri kullanır.  
   
 ```vb  
 Imports <xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">  
@@ -111,9 +111,9 @@ Module Module1
 End Module  
 ```  
   
- Bu örnek aşağıdaki belgede açıklanan uygulandığında çıktıyı üretir [kaynak Office Open XML belgesi (Visual Basic) oluşturulmasını](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
+ Bu örnek, [kaynak Office Open XML belgesi (Visual Basic) oluşturma](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)bölümünde açıklanan belgeye uygulandığında aşağıdaki çıktıyı üretir.  
   
-```  
+```console  
 StyleName:Heading1  
 StyleName:Normal  
 StyleName:Normal  
@@ -132,8 +132,8 @@ StyleName:Code
 ```  
   
 ## <a name="next-steps"></a>Sonraki Adımlar  
- Bir sonraki konu başlığında [(Visual Basic) paragrafların metnini alma](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md), paragraf metnini almak için bir sorgu oluşturacaksınız.  
+ Bir sonraki konu başlığında, [paragrafların metnini (Visual Basic) alırken](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md), paragrafların metnini almak için bir sorgu oluşturacaksınız.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Öğretici: (Visual Basic) WordprocessingML belgesindeki içeriği düzenleme](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [Öğretici: WordprocessingML belgesindeki Içeriği düzenleme (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)

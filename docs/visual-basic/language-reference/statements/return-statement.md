@@ -9,40 +9,40 @@ helpviewer_keywords:
 - Return statement [Visual Basic]
 - expressions [Visual Basic], returning control to
 ms.assetid: ac86e7f0-5a67-42c3-9834-0e0381efa3ec
-ms.openlocfilehash: af49ea95d7f9d01072190ac3ccf6ba2f1041347e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: edaaf09f5a984344f7e89c9da988c529774934e9
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69957668"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72583265"
 ---
 # <a name="return-statement-visual-basic"></a>Return Deyimi (Visual Basic)
-`Function`, ,,`Sub`Veya yordamıçağıran`Operator` koda denetim döndürür. `Get` `Set`  
+@No__t_0, `Sub`, `Get`, `Set` veya `Operator` yordamı çağıran koda denetim döndürür.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```vb  
 Return  
--or-  
+' -or-  
 Return expression  
 ```  
   
 ## <a name="part"></a>Bölümüyle  
  `expression`  
- `Function` ,`Get`Veya yordamında`Operator` gereklidir. Çağırma koduna döndürülecek değeri temsil eden ifade.  
+ @No__t_0, `Get` veya `Operator` yordamında gereklidir. Çağırma koduna döndürülecek değeri temsil eden ifade.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `Sub` Veya yordamında`Set` , ifade`Return` bir veyaifadesiyle`Exit Property` eşdeğerdir ve`expression`sağlanmamalıdır. `Exit Sub`  
+ Bir `Sub` veya `Set` yordamında `Return`, bir `Exit Sub` veya `Exit Property` ifadesiyle eşdeğerdir ve `expression` sağlanmamalıdır.  
   
- Bir `Function`, `Get`veya yordamında`Operator` ,`expression`ifadesinin içermesi gerekir ve`expression` yordamın dönüş türüne dönüştürülebilir bir veri türü olarak değerlendirilmelidir. `Return` Bir `Function` veya `Get` yordamında, dönüş değeri olarak kullanılacak yordam adına bir ifade atama ve sonra bir `Exit Function` veya `Exit Property` deyimini yürütme alternatifine de sahipsiniz. Bir `Operator` yordamda, kullanmanız `Return expression`gerekir.  
+ @No__t_0, `Get` veya `Operator` yordamında, `Return` deyimin `expression` içermesi gerekir ve `expression` yordamın dönüş türüne dönüştürülebilir bir veri türü olarak değerlendirilmelidir. Bir `Function` veya `Get` yordamında, dönüş değeri olarak kullanılacak yordam adına bir ifade atama ve sonra bir `Exit Function` ya da `Exit Property` deyimi yürütme alternatifi de vardır. @No__t_0 yordamında `Return expression` kullanmanız gerekir.  
   
- Aynı yordamda uygun olan sayıda `Return` deyim dahil edebilirsiniz.  
+ Aynı yordamda uygun olan çok sayıda `Return` deyimi ekleyebilirsiniz.  
   
 > [!NOTE]
-> `Finally` Bir bloktaki kod, bir `Try` veya `Return` `Catch` bloğundaki deyimden sonra çalışır, ancak bu `Return` deyimden önce çalıştırılır. Bir `Return` ifade bir `Finally` bloğa dahil edilemez.  
+> Bir `Finally` bloğundaki kod, bir `Try` `Return` deyimden sonra çalışır, ancak bu `Return` deyimin yürütmeden önce `Catch` bloğunda. Bir `Return` deyimleri, bir `Finally` bloğuna dahil edilemez.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, yordamı başka `Return` bir şey yapmak zorunda olmadığında çağıran koda dönmek için birkaç kez ifade kullanır.  
+ Aşağıdaki örnek, yordamı başka bir şey yapmak zorunda olmadığında çağırma koduna geri dönmek için `Return` ifadesini birkaç kez kullanır.  
   
  [!code-vb[VbVbalrStatements#53](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#53)]  
   

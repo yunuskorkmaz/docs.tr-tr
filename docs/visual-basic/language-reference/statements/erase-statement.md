@@ -7,33 +7,33 @@ helpviewer_keywords:
 - Erase keyword [Visual Basic]
 - Erase statement [Visual Basic]
 ms.assetid: 7a8133d7-b750-4d74-8b66-ba1dd9778d4b
-ms.openlocfilehash: bf3eb6476dc1485faeddab475f29e508175d3378
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7dec2a859f664ee8dcbb305082ec33aeacbaccb4
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61638200"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72583396"
 ---
 # <a name="erase-statement-visual-basic"></a>Erase Deyimi (Visual Basic)
-Dizi değişkenlerini serbest bırakmak ve öğeleri için kullanılan bellek ayırması için kullanılır.  
+Dizi değişkenlerini serbest bırakmak ve öğeleri için kullanılan belleği serbest bırakmak için kullanılır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```vb  
 Erase arraylist  
 ```  
   
 ## <a name="parts"></a>Bölümler  
  `arraylist`  
- Gerekli. Silinecek şekilde dizi değişkenleri listesi. Birden fazla değişken virgülle ayrılır.  
+ Gerekli. Silinecek dizi değişkenlerinin listesi. Birden çok değişken virgülle ayrılır.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `Erase` Deyimi yalnızca yordamı düzeyinde görünebilir. Başka bir deyişle, bir yordam içinde ancak sınıf veya modül düzeyinde diziler serbest bırakabilirsiniz.  
+ @No__t_0 deyimleri yalnızca yordam düzeyinde görünebilir. Bu, bir yordam içinde dizileri serbest bırakabilir, ancak sınıf veya modül düzeyinde değil.  
   
- `Erase` Deyimi, atama için `Nothing` her dizi değişkeni için.  
+ @No__t_0 deyimin her dizi değişkenine `Nothing` atamaya eşdeğerdir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte `Erase` dizilerinin temizleyin ve kendi bellek boş deyim (1000 ve 100 depolama öğeleri sırasıyla). `ReDim` İfadesi üç boyutlu diziye yeni bir dizi örneği atar.  
+ Aşağıdaki örnek, iki diziyi temizlemek ve bellek (1000 ve 100 depolama öğelerini sırasıyla) boşaltmak için `Erase` ifadesini kullanır. @No__t_0 deyimleri, üç boyutlu diziye yeni bir dizi örneği atar.  
   
  [!code-vb[VbVbalrStatements#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#19)]  
   

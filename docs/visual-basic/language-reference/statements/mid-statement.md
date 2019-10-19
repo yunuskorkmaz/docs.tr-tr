@@ -10,19 +10,19 @@ helpviewer_keywords:
 - Mid statement [Visual Basic]
 - strings [Visual Basic], replacing
 ms.assetid: 2b82d7a8-9646-4cb0-bec5-80abc98297bf
-ms.openlocfilehash: 212ce1f06a01c39acbce43d8d069dae3526b1b4d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ea22af2eb896542bfc329e087101608e08c45107
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963545"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72581484"
 ---
 # <a name="mid-statement"></a>Mid Deyimi
-Bir `String` değişkende belirtilen sayıda karakteri, başka bir dizeden karakterlerle değiştirir.  
+Bir `String` değişkeninde belirtilen sayıda karakteri başka bir dizeden karakterlerle değiştirir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```vb  
 Mid( _  
    ByRef Target As String, _  
    ByVal Start As Integer, _  
@@ -32,42 +32,42 @@ Mid( _
   
 ## <a name="parts"></a>Bölümler  
  `Target`  
- Gerekli. `String` Değiştirilecek değişkenin adı.  
+ Gerekli. Değiştirilecek `String` değişkeninin adı.  
   
  `Start`  
- Gerekli. `Integer`ifadesini. Metnin yerini değiştirme `Target` işleminin başladığı karakter konumu. `Start`tek tabanlı bir dizin kullanır.  
+ Gerekli. `Integer` ifadesi. Metnin değiştirme işleminin başladığı `Target` karakter konumu. `Start`, tek tabanlı bir dizin kullanır.  
   
  `Length`  
- İsteğe bağlı. `Integer`ifadesini. Değiştirilecek karakter sayısı. Atlanırsa, tümü `String` kullanılır.  
+ İsteğe bağlı. `Integer` ifadesi. Değiştirilecek karakter sayısı. Atlanırsa, tüm `String` kullanılır.  
   
  `StringExpression`  
- Gerekli. `String`bölümünün yerini alan ifade `Target`.  
+ Gerekli. `Target` kısmını değiştiren `String` ifadesi.  
   
 ## <a name="exceptions"></a>Özel Durumlar  
   
 |Özel durum türü|Koşul|  
 |--------------------|---------------|  
-|<xref:System.ArgumentException>|`Start`< = 0 veya `Length` < 0.|  
+|<xref:System.ArgumentException>|`Start` < = 0 veya `Length` < 0.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Değiştirilmekte olan karakter sayısı her zaman içindeki `Target`karakter sayısından daha küçüktür veya eşittir.  
+ Değişen karakterlerin sayısı her zaman `Target` karakter sayısından küçüktür veya eşittir.  
   
- Visual Basic bir <xref:Microsoft.VisualBasic.Strings.Mid%2A> işleve `Mid` ve ifadeye sahiptir. Bu öğeler her ikisi de bir dizedeki belirtilen sayıda karakter üzerinde çalışır, ancak `Mid` işlev, `Mid` ifadenin karakterleri değiştirdiği sırada karakterleri döndürür. Daha fazla bilgi için bkz. <xref:Microsoft.VisualBasic.Strings.Mid%2A>.  
+ Visual Basic bir <xref:Microsoft.VisualBasic.Strings.Mid%2A> işlevi ve bir `Mid` deyimidir. Bu öğelerin her ikisi de bir dizedeki belirtilen sayıda karakter üzerinde çalışır, ancak `Mid` işlevi karakterleri, `Mid` ifadesinin yerini değiştirdiği halde döndürür. Daha fazla bilgi için bkz. <xref:Microsoft.VisualBasic.Strings.Mid%2A>.  
   
 > [!NOTE]
-> Visual Basic `MidB` önceki sürümleri, bir alt dizeyi karakterler yerine bayt olarak değiştirir. Esas olarak çift baytlı karakter kümesi (DBCS) uygulamalarında dize dönüştürmek için kullanılır. Tüm Visual Basic dizeleri Unicode ve `MidB` artık desteklenmiyor.  
+> Önceki Visual Basic sürümlerindeki `MidB` deyimleri karakter yerine bayt cinsinden bir alt dizenin yerini alır. Esas olarak çift baytlı karakter kümesi (DBCS) uygulamalarında dize dönüştürmek için kullanılır. Tüm Visual Basic dizeleri Unicode ve `MidB` artık desteklenmiyor.  
   
 ## <a name="example"></a>Örnek  
- Bu örnek, `Mid` bir dize değişkeninde belirtilen sayıda karakteri başka bir dizeden karakterler ile değiştirmek için ifadesini kullanır.  
+ Bu örnek, bir dize değişkeninde belirtilen sayıda karakteri başka bir dizeden karakterler ile değiştirmek için `Mid` ifadesini kullanır.  
   
  [!code-vb[VbVbalrStrings#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#5)]  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Uzayına** [Microsoft. VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
+ **Ad alanı:** [Microsoft. VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
   
  **Modül:** `Strings`  
   
- **Derleme** Visual Basic Çalışma Zamanı Kitaplığı (Microsoft.VisualBasic.dll içinde)  
+ **Bütünleştirilmiş kod:** Visual Basic çalışma zamanı kitaplığı (Microsoft. VisualBasic. dll içinde)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

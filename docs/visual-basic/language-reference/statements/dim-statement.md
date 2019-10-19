@@ -29,20 +29,20 @@ helpviewer_keywords:
 - Dim statement [Visual Basic], syntax
 - variables [Visual Basic], member and local
 ms.assetid: fae3eca1-f0b2-4400-994b-7aa58a848448
-ms.openlocfilehash: 5a16060efc45cc0642aa6612d02644e252cd53d9
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5663935db5fc7ad03d18ff94fae2be9a569290ac
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64751801"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72583428"
 ---
 # <a name="dim-statement-visual-basic"></a>Dim Deyimi (Visual Basic)
 
-Bildirir ve değişkenleri bir veya daha fazla depolama alanı ayırır.
+Bir veya daha fazla değişken için depolama alanı bildirir ve ayırır.
 
 ## <a name="syntax"></a>Sözdizimi
 
-```
+```vb
 [ <attributelist> ] [ accessmodifier ] [[ Shared ] [ Shadows ] | [ Static ]] [ ReadOnly ]
 Dim [ WithEvents ] variablelist
 ```
@@ -51,7 +51,7 @@ Dim [ WithEvents ] variablelist
 
 - `attributelist`
 
-  İsteğe bağlı. Bkz: [öznitelik listesi](../../../visual-basic/language-reference/statements/attribute-list.md).
+  İsteğe bağlı. Bkz. [öznitelik listesi](../../../visual-basic/language-reference/statements/attribute-list.md).
 
 - `accessmodifier`
 
@@ -69,77 +69,77 @@ Dim [ WithEvents ] variablelist
 
   - [Private Protected](../../language-reference/modifiers/private-protected.md)
 
-  Bkz: [erişim düzeyini Visual Basic'te](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).
+  [Visual Basic erişim düzeylerine](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)bakın.
 
 - `Shared`
 
-  İsteğe bağlı. Bkz: [paylaşılan](../../../visual-basic/language-reference/modifiers/shared.md).
+  İsteğe bağlı. Bkz. [paylaşılan](../../../visual-basic/language-reference/modifiers/shared.md).
 
 - `Shadows`
 
-  İsteğe bağlı. Bkz: [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).
+  İsteğe bağlı. Bkz. [gölgeler](../../../visual-basic/language-reference/modifiers/shadows.md).
 
 - `Static`
 
-  İsteğe bağlı. Bkz: [statik](../../../visual-basic/language-reference/modifiers/static.md).
+  İsteğe bağlı. Bkz. [statik](../../../visual-basic/language-reference/modifiers/static.md).
 
 - `ReadOnly`
 
-  İsteğe bağlı. Bkz: [salt okunur](../../../visual-basic/language-reference/modifiers/readonly.md).
+  İsteğe bağlı. Bkz. [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md).
 
 - `WithEvents`
 
-İsteğe bağlı. Bunlar, olayları tetikleyebilen bir sınıf örneklerine bakın nesne değişkenleri belirtir. Bkz: [WithEvents](../../../visual-basic/language-reference/modifiers/withevents.md).
+İsteğe bağlı. Bunların, olayları yükseltebileceği bir sınıfın örneklerine başvuran nesne değişkenleri olduğunu belirtir. Bkz. [WithEvents](../../../visual-basic/language-reference/modifiers/withevents.md).
 
 - `variablelist`
 
-  Gerekli. Bu deyiminde bildirilen değişkenlerin listesi.
+  Gerekli. Bu bildirimde bildirildiği değişkenlerin listesi.
 
   `variable [ , variable ... ]`
 
-  Her `variable` aşağıdaki söz dizimini ve bölümleri vardır:
+  Her `variable` aşağıdaki söz dizimi ve bölümlere sahiptir:
 
-  `variablename [ ( [ boundslist ] ) ] [ As [ New ] datatype [ With`{`[ .propertyname = propinitializer [ , ... ] ] } ] ] [ = initializer ]`
+  `variablename [ ( [ boundslist ] ) ] [ As [ New ] datatype [ With` {`[ .propertyname = propinitializer [ , ... ] ] } ] ] [ = initializer ]`
 
-  |Bölümü|Açıklama|
+  |Bölümüyle|Açıklama|
   |---|---|
-  |`variablename`|Gerekli. Değişkenin adı. Bkz: [bildirilen öğe adları](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|
-  |`boundslist`|İsteğe bağlı. Her boyut bir dizi değişkeni sınırlarının listesi.|
-  |`New`|İsteğe bağlı. Sınıfının yeni bir örneğini oluşturur, `Dim` deyimi çalıştırır.|
-  |`datatype`|İsteğe bağlı. Değişken veri türü.|
-  |`With`|İsteğe bağlı. Nesne başlatıcı listesi tanıtır.|
-  |`propertyname`|İsteğe bağlı. Bir sınıf özelliği adı örneği hale getiriyoruz.|
-  |`propinitializer`|Sonra gerekli `propertyname` =. Değerlendirilir ve özellik adına atanan ifade.|
-  |`initializer`|İsteğe bağlı ise `New` belirtilmedi. Değerlendirilir ve oluşturulduğu sırada değişkene atanan ifade.|
+  |`variablename`|Gerekli. Değişkenin adı. Bkz. [tanımlanmış öğe adları](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|
+  |`boundslist`|İsteğe bağlı. Bir dizi değişkeninin her boyutunun sınırları listesi.|
+  |`New`|İsteğe bağlı. @No__t_0 deyimleri çalıştırıldığında, sınıfının yeni bir örneğini oluşturur.|
+  |`datatype`|İsteğe bağlı. Değişkenin veri türü.|
+  |`With`|İsteğe bağlı. Nesne Başlatıcısı listesini tanıtır.|
+  |`propertyname`|İsteğe bağlı. Örneği yaptığınız sınıftaki bir özelliğin adı.|
+  |`propinitializer`|@No__t_0 = sonra gerekli. Değerlendirilen ve özellik adına atanan ifade.|
+  |`initializer`|@No__t_0 belirtilmemişse isteğe bağlıdır. Değerlendirilen ve değişken oluşturulduğunda değişkene atanan ifade.|
 
 ## <a name="remarks"></a>Açıklamalar
 
-Visual Basic Derleyicisi kullanan `Dim` değişkenin veri türü ve hangi kod değişkenine erişebileceği gibi diğer bilgileri belirlemek için deyimi. Aşağıdaki örnek, tutacak bir değişken bildirir. bir `Integer` değeri.
+Visual Basic derleyici, değişkenin veri türünü ve hangi kodun değişkene erişebileceği gibi diğer bilgileri belirlemek için `Dim` ifadesini kullanır. Aşağıdaki örnek bir `Integer` değerini tutacak bir değişken bildirir.
 
 ```vb
 Dim numberOfStudents As Integer
 ```
 
-Herhangi bir veri türü veya bir sabit listesi, yapısı, sınıf veya arabirim adını belirtebilirsiniz.
+Herhangi bir veri türü veya bir numaralandırma, yapı, sınıf veya arabirim adı belirtebilirsiniz.
 
 ```vb
 Dim finished As Boolean
 Dim monitorBox As System.Windows.Forms.Form
 ```
 
-Bir başvuru türü için kullandığınız `New` sınıfının yeni bir örneğini oluşturmak veya bu yapı için anahtar sözcüğü veri türü tarafından belirtilir. Kullanırsanız `New`, bir başlatıcı ifadesinin kullanmayın. Bunun yerine, değişken oluşturmakta olduğunuz sınıf oluşturucusuna gerekli iseler bağımsız değişken sağlayın.
+Bir başvuru türü için, veri türü tarafından belirtilen sınıf veya yapının yeni bir örneğini oluşturmak üzere `New` anahtar sözcüğünü kullanırsınız. @No__t_0 kullanıyorsanız, başlatıcı ifadesi kullanmayın. Bunun yerine, varsa bağımsız değişkenleri değişkeni oluşturduğunuz sınıfın oluşturucusuna sağlarsınız.
 
 ```vb
 Dim bottomLabel As New System.Windows.Forms.Label
 ```
 
-Yordamı, blok, sınıf, yapı veya modül bir değişkende bildirebilirsiniz. İçinde bir değişken bir kaynak dosyası, ad alanı veya arabirimi bildiremezsiniz. Daha fazla bilgi için [bildirim bağlamları ve varsayılan erişim düzeyleri](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).
+Bir yordam, blok, sınıf, yapı veya modülde bir değişken bildirebilirsiniz. Bir kaynak dosyasında, ad alanında veya arabirimde bir değişken bildiremezsiniz. Daha fazla bilgi için bkz. [bildirim bağlamları ve varsayılan erişim düzeyleri](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).
 
-Dışında herhangi bir yordam Modül düzeyinde bildirilmiş bir değişken bir *üye değişkeni* veya *alan*. Üye değişkenleri kendi sınıf, yapı veya modül boyunca kapsamına dahildir. Yordam düzeyinde bildirilen bir değişken bir *yerel değişken*. Yerel değişkenler yalnızca kendi yordam veya blok içinde kapsamına dahildir.
+Modül düzeyinde belirtilen bir değişken, herhangi bir yordam dışında, bir *üye değişkeni* veya *alanıdır*. Üye değişkenleri, sınıfları, yapısı veya modülleri genelinde kapsamdadır. Yordam düzeyinde belirtilen bir değişken *yerel bir değişkendir*. Yerel değişkenler yalnızca kendi yordamı veya blokları içinde kapsamdadır.
 
-Aşağıdaki erişim değiştiriciler yordam dışında değişkenler bildirmek için kullanılır: `Public`, `Protected`, `Friend`, `Protected Friend`, ve `Private`. Daha fazla bilgi için [erişim düzeyini Visual Basic'te](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).
+Aşağıdaki erişim değiştiricileri, değişkenleri bir yordam dışında bildirmek için kullanılır: `Public`, `Protected`, `Friend`, `Protected Friend` ve `Private`. Daha fazla bilgi için bkz. [Visual Basic erişim düzeyleri](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).
 
-`Dim` Anahtar sözcüğü, isteğe bağlıdır ve aşağıdaki değiştiriciler belirtirseniz, genellikle atlanmış: `Public`, `Protected`, `Friend`, `Protected Friend`, `Private`, `Shared`, `Shadows`, `Static`, `ReadOnly`, veya `WithEvents`.
+@No__t_0 anahtar sözcüğü isteğe bağlıdır ve aşağıdaki değiştiricilerin herhangi birini belirtirseniz genellikle atlanır: `Public`, `Protected`, `Friend`, `Protected Friend`, `Private`, `Shared`, `Shadows`, `Static`, `ReadOnly` veya 0.
 
 ```vb
 Public maximumAllowed As Double
@@ -148,18 +148,18 @@ Private salary As Decimal
 Static runningTotal As Integer
 ```
 
-Varsa `Option Explicit` olduğunu (varsayılan), derleyici bir bildirimi kullandığınız her değişken için gerektirir. Daha fazla bilgi için [Option Explicit deyimi](../../../visual-basic/language-reference/statements/option-explicit-statement.md).
+@No__t_0 açık ise (varsayılan), derleyici kullandığınız her değişken için bir bildirim gerektirir. Daha fazla bilgi için bkz. [Option Explicit deyimdir](../../../visual-basic/language-reference/statements/option-explicit-statement.md).
 
 ## <a name="specifying-an-initial-value"></a>Bir başlangıç değeri belirtme
 
-Oluşturulduğunda bir değişkene bir değer atayabilirsiniz. Bir değer türü için kullandığınız bir *Başlatıcı* değişkene atanmış bir ifade sağlamanız için. Derleme zamanında hesaplanabilen bir sabit ifade değerlendirilmelidir.
+Bir değişkene, oluşturulduğunda bir değer atayabilirsiniz. Değer türü için, değişkene atanacak bir ifade sağlamak üzere bir *Başlatıcı* kullanırsınız. İfade, derleme zamanında hesaplanabilecek bir sabit olarak değerlendirilmelidir.
 
 ```vb
 Dim quantity As Integer = 10
 Dim message As String = "Just started"
 ```
 
-Bir başlatıcı belirtilirse ve bir veri türü belirtilmedi bir `As` yan tümcesi *anlam çıkarma* veri türü başlatıcıdan çıkarmak için kullanılır. Aşağıdaki örnekte, her ikisi de `num1` ve `num2` tamsayı olarak kesin olarak belirlenmiştir. İkinci bildiriminde tür çıkarımını 3 değeri türünden çıkarır.
+Bir başlatıcı belirtilmişse ve bir `As` yan tümcesinde veri türü belirtilmemişse, veri türünü başlatıcıdan çıkarsmak için *tür çıkarımı* kullanılır. Aşağıdaki örnekte, hem `num1` hem de `num2` türü kesin olarak tam sayı olarak türdedir. İkinci bildirimde, tür çıkarımı tür 3 ' ten yazın.
 
 ```vb
 ' Use explicit typing.
@@ -169,30 +169,30 @@ Dim num1 As Integer = 3
 Dim num2 = 3
 ```
 
-Tür çıkarımı yordam düzeyinde uygulanır. Bir yordamda bir sınıf, yapı, modül veya arabirimi dışından uygulanmaz. Tür çıkarımı hakkında daha fazla bilgi için bkz: [Option Infer deyimi](../../../visual-basic/language-reference/statements/option-infer-statement.md) ve [yerel tür çıkarımı](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).
+Tür çıkarımı yordam düzeyinde uygulanır. Bir sınıf, yapı, modül veya arabirimdeki bir yordamın dışında uygulanmaz. Tür çıkarımı hakkında daha fazla bilgi için bkz. [Option Infer deyimleri](../../../visual-basic/language-reference/statements/option-infer-statement.md) ve [Yerel tür çıkarımı](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).
 
-Bir veri türü veya Başlatıcı belirtilmediğinde neler olduğu hakkında daha fazla bilgi için bkz: [varsayılan veri türleri ve değerleri](../../../visual-basic/language-reference/statements/dim-statement.md#default) bu konuda.
+Veri türü veya Başlatıcı belirtilmediğinde ne olacağı hakkında daha fazla bilgi için bu konunun ilerleyen kısımlarında yer alarak [varsayılan veri türleri ve değerleri](../../../visual-basic/language-reference/statements/dim-statement.md#default) bölümüne bakın.
 
-Kullanabileceğiniz bir *nesne Başlatıcı* adlandırılmış ve anonim türlerin örneklerini bildirmek için. Aşağıdaki kod örneği oluşturur. bir `Student` sınıfı ve özellikleri başlatmak için bir nesne Başlatıcı kullanır.
+Adlandırılmış ve anonim türlerin örneklerini bildirmek için bir *nesne Başlatıcısı* kullanabilirsiniz. Aşağıdaki kod `Student` sınıfının bir örneğini oluşturur ve özellikleri başlatmak için bir nesne Başlatıcısı kullanır.
 
 ```vb
 Dim student1 As New Student With {.First = "Michael",
                                   .Last = "Tucker"}
 ```
 
-Nesne başlatıcıları hakkında daha fazla bilgi için bkz: [nasıl yapılır: Bir nesne Başlatıcı kullanarak nesne bildirme](../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-declare-an-object-by-using-an-object-initializer.md), [nesne başlatıcıları: Adlandırılmış ve anonim türler](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md), ve [anonim türler](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).
+Nesne başlatıcıları hakkında daha fazla bilgi için bkz. [nasıl yapılır: nesne Başlatıcısı](../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-declare-an-object-by-using-an-object-initializer.md), [nesne başlatıcıları: adlandırılmış ve anonim türler](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)ve [anonim türler](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)kullanarak nesne bildirme.
 
-## <a name="declaring-multiple-variables"></a>Birden fazla değişken bildirme
+## <a name="declaring-multiple-variables"></a>Birden çok değişken bildirme
 
-Parantezler ile her biri için ve her dizi adı aşağıdaki değişken adını belirten bir bildirim deyiminde, çeşitli değişkenleri bildirebilirsiniz. Birden fazla değişken virgülle ayrılır.
+Tek bir bildirim ifadesinde, her biri için değişken adını belirterek ve her dizi adını parantez ile izleyerek birkaç değişken bildirebilirsiniz. Birden çok değişken virgülle ayrılır.
 
 ```vb
 Dim lastTime, nextTime, allTimes() As Date
 ```
 
-Bir sahip birden fazla değişken bildirirseniz `As` yan tümcesi, o grubu değişkenlerin bir başlatıcı sağlayamıyor.
+Bir `As` yan tümcesiyle birden fazla değişken bildirirseniz, bu değişken grubu için bir başlatıcı sağlayamazsınız.
 
-Ayrı bir kullanarak farklı veri türleri için farklı değişkenleri belirtebilirsiniz `As` bildirdiğiniz her bir değişken yan tümcesi. Her bir değişken ilk belirtilen veri türü alan `As` yan tümcesi karşılaştı sonra kendi `variablename` bölümü.
+Farklı değişkenler için, bildirdiğiniz her değişken için ayrı bir `As` yan tümcesi kullanarak farklı veri türleri belirtebilirsiniz. Her değişken, `variablename` bölümünün ardından karşılaşılan ilk `As` yan tümcesinde belirtilen veri türünü alır.
 
 ```vb
 Dim a, b, c As Single, x, y As Double, i As Integer
@@ -201,26 +201,26 @@ Dim a, b, c As Single, x, y As Double, i As Integer
 
 ## <a name="arrays"></a>Diziler
 
-Tutacak bir değişken bildirmek bir *dizi*, birden çok değer tutabilir. Bir değişken bir dizi tutan belirtmek için izleyin, `variablename` parantez olmadan hemen. Diziler hakkında daha fazla bilgi için bkz. [diziler](../../../visual-basic/programming-guide/language-features/arrays/index.md).
+Birden çok değer içerebilen bir *diziyi*tutacak bir değişken bildirebilirsiniz. Bir değişkenin bir diziyi bulundurduğunu belirtmek için, parantez ile hemen `variablename` izleyin. Diziler hakkında daha fazla bilgi için bkz. [diziler](../../../visual-basic/programming-guide/language-features/arrays/index.md).
 
-Alt ve bir dizinin her boyutunun üst sınırını belirtebilirsiniz. Bunu yapmak için dahil bir `boundslist` parantez içinde. Her boyut için `boundslist` üst sınırı ve isteğe bağlı alt sınırını belirtir. Olup olmadığını belirtin alt sınırı her zaman sıfırdır. Her dizin aracılığıyla üst sınır değeri sıfırdan farklılık gösterebilir.
+Bir dizinin her boyutunun alt ve üst sınırını belirtebilirsiniz. Bunu yapmak için, parantez içine bir `boundslist` ekleyin. Her boyut için `boundslist` üst sınırı ve isteğe bağlı olarak alt sınırı belirtir. Alt sınır, sizin belirtmeksizin her zaman sıfırdır. Her dizin, üst sınır değeri ile sıfırdan farklılık gösterebilir.
 
-Aşağıdaki iki deyimi eşdeğerdir. Her deyim 21 dizisi bildirir `Integer` öğeleri. Dizi eriştiğinizde, dizin 0 ile 20 arasında değişebilir.
+Aşağıdaki iki deyim eşdeğerdir. Her bir ifade 21 `Integer` öğelerinden oluşan bir dizi bildirir. Diziye eriştiğinizde, dizin 0 ile 20 arasında farklılık gösterebilir.
 
 ```vb
 Dim totals(20) As Integer
 Dim totals(0 To 20) As Integer
 ```
 
-Aşağıdaki deyim türünde iki boyutlu bir dizi bildirir `Double`. Dizi 6 sütunlar (5 + 1) her biri 4 satır (3 + 1) sahiptir. Bir üst sınır boyutun uzunluğu dizini için olası en yüksek değere temsil ettiğini unutmayın. Boyutun uzunluğu üst sınırı artı bir taneyi ' dir.
+Aşağıdaki ifade `Double` türünde iki boyutlu bir dizi bildirir. Dizide 4 satır (3 + 1) 6 sütun (5 + 1) bulunur. Üst sınır, boyutun uzunluğunu değil, dizin için mümkün olan en yüksek değeri temsil ettiğini unutmayın. Boyutun uzunluğu üst sınır artı bir değer.
 
 ```vb
 Dim matrix2(3, 5) As Double
 ```
 
-Bir dizi 1 ila 32 boyutlara sahip olabilir.
+Bir dizi 1 ile 32 arasında boyutlara sahip olabilir.
 
-Tüm sınırların bir dizi bildirimi boş bırakabilirsiniz. Bunu yaparsanız, belirttiğiniz boyutların sayısı dizi sahiptir, ancak başlatılmamış. Değerine sahip `Nothing` en az başlatmak kadar bazı alt öğeleri. `Dim` Deyimi tüm boyutlar veya hiç boyut sınırları belirtin.
+Bir dizi bildiriminde tüm sınırların boş kalmasını sağlayabilirsiniz. Bunu yaparsanız dizi, belirttiğiniz boyut sayısına sahiptir ancak başlatılmamış olur. Öğelerinin en az bir kısmını başlatana kadar bir `Nothing` değeri vardır. @No__t_0 deyimin tüm boyutlar veya hiçbir boyut için sınır belirtmesi gerekir.
 
 ```vb
 ' Declare an array with blank array bounds.
@@ -229,97 +229,97 @@ Dim messages() As String
 ReDim messages(4)
 ```
 
-Dizi boyut birden fazla varsa, virgül boyut sayısını göstermek için parantez içermelidir.
+Dizide birden fazla boyut varsa, boyut sayısını göstermek için parantez arasına virgül eklemeniz gerekir.
 
 ```vb
 Dim oneDimension(), twoDimensions(,), threeDimensions(,,) As Byte
 ```
 
-Bildirebilirsiniz bir *sıfır uzunluklu dizi* göre -1 olarak dizi boyutlarından birini bildirme. Sıfır uzunluğunda diziyi tutan değişken değeri yok `Nothing`. Sıfır uzunlukta diziler bazı ortak dil çalışma zamanı işlevleri tarafından gereklidir. Böyle bir dizi erişmeye çalışırsanız bir çalışma zamanı özel durumu oluşur. Daha fazla bilgi için [diziler](../../../visual-basic/programming-guide/language-features/arrays/index.md).
+Dizinin boyutlarından birini-1 olarak bildirerek *sıfır uzunluklu bir dizi* bildirebilirsiniz. Sıfır uzunluklu bir diziyi tutan bir değişken `Nothing` değerine sahip değil. Belirli ortak dil çalışma zamanı işlevleri için sıfır uzunluklu diziler gereklidir. Böyle bir diziye erişmeyi denerseniz, bir çalışma zamanı özel durumu oluşur. Daha fazla bilgi için bkz. [diziler](../../../visual-basic/programming-guide/language-features/arrays/index.md).
 
-Dizi değişmez değeri kullanarak dizi değerlerini başlatabilirsiniz. Bunu yapmak için Küme ayraçları başlatma değerlerle çevreleyen (`{}`).
+Bir dizinin değerlerini bir dizi değişmez değeri kullanarak başlatabilirsiniz. Bunu yapmak için, başlatma değerlerini küme ayraçları (`{}`) ile çevreleyin.
 
 ```vb
 Dim longArray() As Long = {0, 1, 2, 3}
 ```
 
-Çok boyutlu diziler için başlatma ayrı her boyut için dış boyutundaki köşeli ayraçlar içine alınır. Öğeler satır ağırlıklı sırada belirtilir.
+Çok boyutlu diziler için, her ayrı boyut için başlatma, dış boyuttaki küme ayraçları içine alınır. Öğeler satır birincil sırada belirtilmiştir.
 
 ```vb
 Dim twoDimensions(,) As Integer = {{0, 1, 2}, {10, 11, 12}}
 ```
 
-Dizi değişmez değerleri hakkında daha fazla bilgi için bkz: [diziler](../../../visual-basic/programming-guide/language-features/arrays/index.md).
+Dizi değişmez değerleri hakkında daha fazla bilgi için bkz. [diziler](../../../visual-basic/programming-guide/language-features/arrays/index.md).
 
-## <a name="default"></a> Varsayılan veri türleri ve değerleri
+## <a name="default"></a>Varsayılan veri türleri ve değerleri
 
-Aşağıdaki tabloda çeşitli birleşimlerini başlatıcısında ve veri türünü belirtmenin sonuçlarını açıklar bir `Dim` deyimi.
+Aşağıdaki tabloda, bir `Dim` bildiriminde veri türünü ve başlatıcıyı belirtmenin çeşitli birleşimlerinin sonuçları açıklanmaktadır.
 
-|Belirtilen veri türü?|Belirtilen başlatıcı?|Örnek|Sonuç|
+|Veri türü belirtildi mi?|Başlatıcı belirtildi mi?|Örnek|Sonuç|
 |---|---|---|---|
-|Hayır|Hayır|`Dim qty`|Varsa [Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md) olan kapalı (varsayılan), değişkeni ayarlanır `Nothing`.<br /><br /> Varsa `Option Strict` açıktır, bir derleme zamanı hatası oluşur.|
-|Hayır|Evet|`Dim qty = 5`|Varsa [Option Infer](../../../visual-basic/language-reference/statements/option-infer-statement.md) değişken alır veri öğesinin başlatıcısını yazın (varsayılan), olan. Bkz: [yerel tür çıkarımı](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).<br /><br /> Varsa `Option Infer` kapalıdır ve `Option Strict` kapalıysa, değişken veri türünü alan `Object`.<br /><br /> Varsa `Option Infer` kapalıdır ve `Option Strict` açıktır, bir derleme zamanı hatası oluşur.|
-|Evet|Hayır|`Dim qty As Integer`|Değişken veri türü için varsayılan değer için başlatılır. Bu bölümdeki tabloya bakın.|
-|Evet|Evet|`Dim qty  As Integer = 5`|Başlatıcı veri türü belirtilen veri türüne dönüştürülebilir değil, bir derleme zamanı hatası oluşur.|
+|Hayır|Hayır|`Dim qty`|[Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md) kapalıysa (varsayılan), değişken `Nothing` olarak ayarlanır.<br /><br /> @No__t_0 açık ise, bir derleme zamanı hatası oluşur.|
+|Hayır|Evet|`Dim qty = 5`|[Seçenek çıkarımı](../../../visual-basic/language-reference/statements/option-infer-statement.md) açık ise (varsayılan), değişkeni başlatıcının veri türünü alır. Bkz. [Yerel tür çıkarımı](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).<br /><br /> @No__t_0 kapalıysa ve `Option Strict` kapalıysa, değişken `Object` veri türünü alır.<br /><br /> @No__t_0 kapalıysa ve `Option Strict` açık ise, bir derleme zamanı hatası oluşur.|
+|Evet|Hayır|`Dim qty As Integer`|Değişken, veri türü için varsayılan değer olarak başlatılır. Bu bölümün ilerleyen kısımlarında tabloya bakın.|
+|Evet|Evet|`Dim qty  As Integer = 5`|Başlatıcının veri türü belirtilen veri türüne dönüştürülebilir değilse, bir derleme zamanı hatası oluşur.|
 
-Bir veri türü belirtin, ancak bir başlatıcı belirtmezseniz, Visual Basic veri türü için varsayılan değer değişkenine başlatır. Aşağıdaki tabloda, varsayılan başlatma değerleri gösterir.
+Bir veri türü belirtirseniz ancak Başlatıcı belirtmezseniz, Visual Basic değişkeni, veri türü için varsayılan değer olarak başlatır. Aşağıdaki tabloda varsayılan başlatma değerleri gösterilmektedir.
 
 |Veri türü|Varsayılan değer|
 |---|---|
-|Tüm sayısal türlerin (dahil olmak üzere `Byte` ve `SByte`)|0|
+|Tüm sayısal türler (`Byte` ve `SByte` dahil)|0|
 |`Char`|İkili 0|
-|Tüm başvuru türleri (dahil olmak üzere `Object`, `String`ve tüm Diziler)|`Nothing`|
+|Tüm başvuru türleri (`Object`, `String` ve tüm diziler dahil)|`Nothing`|
 |`Boolean`|`False`|
-|`Date`|12: 00'da, 1 yılının 1 Ocak (01/01/0001 12:00:00 AM)|
+|`Date`|1 yılın 1 Ocak 12:00 (01/01/0001 12:00:00)|
 
-Bir yapının her öğe ayrı bir değişken gibi başlatılır. Bir dizinin uzunluğu bildirmek, ancak öğeleri başlatmayın, her öğe ayrı bir değişken gibi başlatılır.
+Bir yapının her öğesi ayrı bir değişken gibi başlatılır. Bir dizinin uzunluğunu bildirir ancak öğelerini başlatmayın, her öğe ayrı bir değişken gibi başlatılır.
 
 ## <a name="static-local-variable-lifetime"></a>Statik yerel değişken ömrü
 
-A `Static` yerel değişken bu bildirilen yordamın daha uzun bir ömrü vardır. Değişkenin ömrü sınırları yordamı burada bildirilir ve olmasına bağlıdır `Shared`.
+@No__t_0 yerel bir değişken, bildirildiği yordamın süresinden daha uzun bir süre içinde. Değişkenin yaşam süresinin sınırları yordamın bildirildiği yere ve `Shared` olup olmadığına bağlıdır.
 
-|Yordam bildirimi|Değişken başlatılmamış|Değişkeni mevcut durdurur.|
+|Yordam bildirimi|Değişken başlatıldı|Değişken var olanı durduruyor|
 |---|---|---|
-|Bir modülde|İlk kez yordamı çağrılır|Programınızı yürütme durduğunda|
-|Bir sınıf veya yapı yordamdır `Shared`|İlk kez yordamı belirli bir örneğine veya sınıf veya yapının kendisi üzerinde çağrılır|Programınızı yürütme durduğunda|
-|Bir sınıf veya yapı yordamı değil `Shared`|İlk kez yordamı belirli bir örneği üzerinde çağrılır|Çöp toplama (GC) örneği yayınlandığında|
+|Bir modülde|Yordamın ilk çağrılışında|Programınız yürütmeyi durduruyor|
+|Bir sınıf veya yapıda, yordam `Shared`|Yordamın, belirli bir örnek veya sınıf ya da yapının kendisindeki ilk kez çağrılması|Programınız yürütmeyi durduruyor|
+|Bir sınıf veya yapıda, yordam `Shared` değildir|Yordamın belirli bir örnek üzerinde ilk çağrılışında|Örnek, atık toplama (GC) için bırakıldığında|
 
 ## <a name="attributes-and-modifiers"></a>Öznitelikler ve değiştiriciler
 
-Öznitelikleri yalnızca değişkenlere, yerel değişkenler için uygulayabilirsiniz. Bir öznitelik bilgileri derlemenin meta verilerini, geçici depolama gibi yerel değişkenleri için anlamlı değil katkıda bulunur.
+Öznitelikleri, yerel değişkenlere değil yalnızca üye değişkenlerine uygulayabilirsiniz. Bir öznitelik, bilgileri derlemenin meta verilerine katkıda bulunur ve bu, yerel değişkenler gibi geçici depolama için anlamlı değildir.
 
-Modül düzeyinde kullanamazsınız `Static` değiştiricisi üye değişkenleri bildirmek için. Yordam düzeyinde kullanamazsınız `Shared`, `Shadows`, `ReadOnly`, `WithEvents`, ya da herhangi bir erişim değiştiricilerine yerel değişkenler bildirmek için.
+Modül düzeyinde, üye değişkenlerini bildirmek için `Static` değiştiricisini kullanamazsınız. Yordam düzeyinde, yerel değişkenleri bildirmek için `Shared`, `Shadows`, `ReadOnly`, `WithEvents` veya herhangi bir erişim değiştiricilerini kullanamazsınız.
 
-Hangi kod sağlayarak bir değişkenine erişebileceği belirtebileceğiniz bir `accessmodifier`. Özel erişim için üye değişkenleri (dışında herhangi bir yordam) varsayılan sınıf ve modül ve yapı üyesi değişkenleri varsayılan genel erişim için. Erişim değiştiricileri ile kullanıcıların erişim düzeylerini ayarlayabilirsiniz. Erişim değiştiricileri (içinde bir yordam) yerel değişkenler kullanamazsınız.
+Bir `accessmodifier` sağlayarak hangi kodun bir değişkene erişebileceğini belirtebilirsiniz. Sınıf ve modül üye değişkenleri (herhangi bir yordam dışında), varsayılan olarak özel erişim ve yapı üye değişkenlerini genel erişime varsayılan olarak sağlar. Erişim değiştiricilerini kullanarak erişim düzeylerini ayarlayabilirsiniz. Yerel değişkenlerde erişim değiştiricilerini kullanamazsınız (bir yordam içinde).
 
-Belirtebileceğiniz `WithEvents` yalnızca değişkenlere, yordam içindeki yerel değişkenlere göre değil. Belirtirseniz `WithEvents`, değişkenin veri türü, belirli bir sınıf türü olmamalıdır `Object`. Bir dizi bildiremezsiniz `WithEvents`. Olaylar hakkında daha fazla bilgi için bkz. [olayları](../../../visual-basic/programming-guide/language-features/events/index.md).
+Yalnızca üye değişkenlerinde `WithEvents`, bir yordamın içindeki yerel değişkenlerde değil, ' ı belirtebilirsiniz. @No__t_0 belirtirseniz, değişkenin veri türü, `Object` değil, belirli bir sınıf türü olmalıdır. @No__t_0 bir dizi bildiremezsiniz. Olaylar hakkında daha fazla bilgi için bkz. [Olaylar](../../../visual-basic/programming-guide/language-features/events/index.md).
 
 > [!NOTE]
-> Kod bir sınıf dışında yapısını veya modülünü bir üye değişkeninin adı bu sınıf, yapı veya modül adıyla nitelemeniz gerekir. Bir yordam veya blok Bu yordam veya blok içinde herhangi bir yerel değişkenlere başvuruda bulunamaz dışındaki kod.
+> Bir sınıf, yapı veya modülün dışındaki kodun, bir üye değişkeninin adını bu sınıf, yapı veya modülün adı ile nitelemeniz gerekir. Bir yordamın veya bloğun dışındaki kod, bu yordam veya blok içindeki herhangi bir yerel değişkene başvuramaz.
 
 ## <a name="releasing-managed-resources"></a>Yönetilen kaynakları serbest bırakma
 
-Ek kodlamaya bulunmanıza gerek kalmadan, .NET Framework atık toplayıcı yönetilen kaynakları siler. Bununla birlikte, çöp toplayıcının beklemek yerine bir yönetilen kaynak elden zorlayabilirsiniz.
+.NET Framework atık toplayıcı, sizin bölüminizdeki ek kodlama yapmadan yönetilen kaynakları ortadan kaldırır. Ancak, atık toplayıcıyı beklemek yerine, yönetilen bir kaynağın elden çıkarılmasını zorlayabilirsiniz.
 
-Bir sınıf, özellikle değerli ve nadir bir kaynak (örneğin, bir veritabanı bağlantısı veya dosya tanıtıcısı) üzerine tutuyorsa artık kullanımda olmayan bir sınıf örneğini temizlemek için bir sonraki atık koleksiyonuna kadar beklemek istemeyebilirsiniz. Bir sınıf uygulayabilir <xref:System.IDisposable> çöp toplama önce kaynakları serbest bırakmak için bir yol sağlamak üzere arabirimi. Arabirimi uygulayan bir sınıfı gösterir bir `Dispose` değerli kaynakları hemen serbest bırakılması zorlamak için çağrılabilen bir yöntem.
+Bir sınıf özellikle değerli ve nadir kaynağına (veritabanı bağlantısı veya dosya tanıtıcısı gibi) sahip olursa, artık kullanımda olmayan bir sınıf örneğini temizleyebilmek için sonraki atık toplamaya kadar beklemek istemeyebilirsiniz. Bir sınıf, bir atık toplama işleminden önce kaynakları serbest bırakmak için <xref:System.IDisposable> arabirimini uygulayabilir. Bu arabirimi uygulayan bir sınıf, değerli kaynakların hemen yayınlanmasını zorlamak için çağrılabilecek bir `Dispose` yöntemi sunar.
 
-`Using` Deyimi bir kaynağı alma, bir dizi deyimleri yürütme ve ardından kaynak disposing işlemini otomatikleştirir. Ancak, kaynak uygulamalıdır <xref:System.IDisposable> arabirimi. Daha fazla bilgi için [Using deyimi](../../../visual-basic/language-reference/statements/using-statement.md).
+@No__t_0 deyimi, kaynak alma, bir deyim kümesi yürütme ve sonra kaynağı atma sürecini otomatikleştirir. Ancak, kaynağın <xref:System.IDisposable> arabirimini uygulaması gerekir. Daha fazla bilgi için bkz. [using deyimleri](../../../visual-basic/language-reference/statements/using-statement.md).
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örneği kullanarak değişkenler bildirilmektedir `Dim` çeşitli seçeneklerle deyimi.
+Aşağıdaki örnek, çeşitli seçeneklerle `Dim` ifadesini kullanarak değişkenleri bildirir.
 
 [!code-vb[VbVbalrStatements#141](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class11.vb#141)]
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, 1 ile 30 arasında asal sayıları listeler. Yerel değişkenler kapsamını, kod açıklamaları açıklanmıştır.
+Aşağıdaki örnekte 1 ile 30 arasında asal sayılar listelenmektedir. Yerel değişkenlerin kapsamı kod açıklamalarında açıklanmıştır.
 
 [!code-vb[VbVbalrStatements#142](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class11.vb#142)]
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnekte, `speedValue` sınıf düzeyinde bildirilen değişkenin. `Private` Anahtar sözcüğü bir değişken bildirmek için kullanılır. Değişken, herhangi bir yordam tarafından erişilebilen `Car` sınıfı.
+Aşağıdaki örnekte `speedValue` değişkeni sınıf düzeyinde bildirilmiştir. @No__t_0 anahtar sözcüğü değişkeni bildirmek için kullanılır. Değişkenine `Car` sınıfındaki herhangi bir yordam tarafından erişilebilir.
 
 [!code-vb[VbVbalrStatements#144](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class11.vb#144)]
 
@@ -335,8 +335,8 @@ Aşağıdaki örnekte, `speedValue` sınıf düzeyinde bildirilen değişkenin. 
 - [Derleme Sayfası, Proje Tasarımcısı (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)
 - [Değişken Bildirimi](../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
 - [Diziler](../../../visual-basic/programming-guide/language-features/arrays/index.md)
-- [Nesne başlatıcıları: Adlandırılmış ve anonim türler](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
+- [Nesne Başlatıcıları: Adlandırılmış ve Anonim Tipler](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
 - [Anonim Tipler](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
-- [Nesne başlatıcıları: Adlandırılmış ve anonim türler](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
-- [Nasıl yapılır: Bir nesne Başlatıcı kullanarak nesne bildirme](../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-declare-an-object-by-using-an-object-initializer.md)
+- [Nesne Başlatıcıları: Adlandırılmış ve Anonim Tipler](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
+- [Nasıl yapılır: Nesne Başlatıcısı Kullanarak Nesne Bildirme](../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-declare-an-object-by-using-an-object-initializer.md)
 - [Yerel Çıkarım](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)

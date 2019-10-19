@@ -16,39 +16,39 @@ helpviewer_keywords:
 - ULong data type
 - UL literal type characters [Visual Basic]
 ms.assetid: 017e0702-774e-44ae-bedc-786b424ca84e
-ms.openlocfilehash: 7f8a19e2e4395e43aa99b6ff63536fbbbc26cb2a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 19a75f056436b858a22588d7ac5f37df5dd326f2
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64646962"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72583121"
 ---
 # <a name="ulong-data-type-visual-basic"></a>ULong veri türü (Visual Basic)
 
-Değeri 0'dan 18,446,744,073,709,551,615 arasında değişen işaretsiz 64-bit (8 bayt) tamsayıları tutar (1.84 kereden fazla 10 ^ 19).  
-  
+0 ila 18446744073709551615 (1,84 ' den fazla 10 ^ 19 ' den fazla) değeri değişen işaretsiz 64 bitlik (8 baytlık) tamsayıları barındırır.
+
 ## <a name="remarks"></a>Açıklamalar
 
-Kullanım `ULong` veri türü için çok büyük ikili veri içermesini `UInteger`, veya en büyük olası işaretsiz tamsayı değerleri.  
-  
-Varsayılan değer olan `ULong` 0'dır.
+@No__t_1 için çok büyük olan ikili verileri veya en büyük olası işaretsiz tamsayı değerlerini içeren `ULong` veri türünü kullanın.
+
+@No__t_0 varsayılan değeri 0 ' dır.
 
 ## <a name="literal-assignments"></a>Değişmez değer atamaları
 
-Bildirmek ve başlatmak bir `ULong` değişkenini, bir ondalık sabit değeri, onaltılık bir sabit değer, sekizlik bir sabit değer atama ya da (ikili değişmez değer Visual Basic 2017'den itibaren). Tamsayı sabit değeri aralığının dışında ise `ULong` (diğer bir deyişle, bu ise kısa <xref:System.UInt64.MinValue?displayProperty=nameWithType> veya ondan <xref:System.UInt64.MaxValue?displayProperty=nameWithType>, bir derleme hatası oluşur.
+Bir `ULong` değişkenini bir ondalık değişmez değeri, onaltılı bir sabit değer, sekizlik bir sabit değer veya (Visual Basic 2017 ' den başlayarak) ikili bir değişmez değer atayarak bildirebilirsiniz. Tamsayı sabit değeri `ULong` aralığının dışındaysa (yani, <xref:System.UInt64.MinValue?displayProperty=nameWithType> veya <xref:System.UInt64.MaxValue?displayProperty=nameWithType> değerinden daha küçükse, bir derleme hatası oluşur.
 
-Aşağıdaki örnekte, tamsayılar ondalık, onaltılık, gösterilen 7,934,076,125 eşit ve ikili sabit değerler atanır `ULong` değerleri.
-  
+Aşağıdaki örnekte, ondalık, onaltılık ve ikili sabit değerler olarak temsil edilen 7.934.076.125 'e eşit tamsayılar `ULong` değerlere atanır.
+
 [!code-vb[ULong](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#ULong)]
 
-> [!NOTE] 
-> Önek kullanın `&h` veya `&H` önek onaltılık bir sabit belirtmek için `&b` veya `&B` ikili sabit ve öneki belirtmek için `&o` veya `&O` sekizlik bir sabit belirtmek için. Ondalık değişmez değerler, önek vardır.
+> [!NOTE]
+> Ön ek `&h` veya `&H` bir onaltılık sabit değeri, ön ek `&b` veya `&B` bir ikili sabit değer belirtmek için, önek `&o` veya `&O`, sekizlik bir sabit değeri belirtmek için kullanılır. Ondalık değişmez değerlerinin ön eki yok.
 
-Visual Basic 2017'den itibaren alt çizgi karakteri de kullanabilirsiniz `_`, okunabilirliği artırmak için bir basamak ayırıcı olarak, aşağıdaki örnekte görüldüğü gibi.
+Visual Basic 2017 ' den başlayarak, aşağıdaki örnekte gösterildiği gibi, okunabilirliği geliştirmek için `_` alt çizgi karakterini bir rakam ayırıcısı olarak da kullanabilirsiniz.
 
 [!code-vb[ULong](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#LongS)]
 
-Visual Basic 15.5 ile başlayarak, alt çizgi karakteri de kullanabilirsiniz (`_`) öneki ve onaltılık, ikili veya sekizlik basamak arasında önde gelen bir ayırıcı olarak. Örneğin:
+Visual Basic 15,5 ' den başlayarak, alt çizgi karakterini (`_`) ön ek ile onaltılık, ikili veya sekizlik basamaklar arasında önde gelen bir ayırıcı olarak kullanabilirsiniz. Örneğin:
 
 ```vb
 Dim number As ULong = &H_F9AC_0326_1489_D68C
@@ -56,28 +56,28 @@ Dim number As ULong = &H_F9AC_0326_1489_D68C
 
 [!INCLUDE [supporting-underscores](../../../../includes/vb-separator-langversion.md)]
 
-Sayısal değişmez değerleri de dahil edebilirsiniz `UL` veya `ul` [türü karakteri](../../programming-guide/language-features/data-types/type-characters.md) belirtmek için `ULong` aşağıdaki örnekte gösterildiği gibi veri türü.
+Sayısal değişmez değerler, aşağıdaki örnekte gösterildiği gibi `ULong` veri türünü belirtmek için `UL` ya da `ul` [tür karakterini](../../programming-guide/language-features/data-types/type-characters.md) içerebilir.
 
 ```vb
 Dim number = &H_00_00_0A_96_2F_AC_14_D7ul
 ```
 
 ## <a name="programming-tips"></a>Programlama ipuçları
-  
-- **Negatif sayılar.** Çünkü `ULong` işaretsiz bir türü, negatif bir sayıyı temsil edemez. Tek işlenenli eksi işareti kullanırsanız (`-`) yazmak için değerlendirilen bir ifade işlecinin `ULong`, Visual Basic ifade dönüştürür `Decimal` ilk.  
-  
-- **CLS uyumluluğu.** `ULong` Veri türü değil parçası [ortak dil belirtimi](https://www.ecma-international.org/publications/standards/Ecma-335.htm) (CLS), böylece onu kullanan bileşen CLS uyumlu kod kullanamıyor.  
-  
-- **Birlikte çalışabilirlik değerlendirmeleri.** Örnek otomasyon ve COM nesneleri için .NET Framework için yazılmaz bileşenleriyle arabirim, gibi türleri akılda tutulması `ulong` diğer ortamlarda farklı veri genişliği (32 bit) olabilir. Bir 32-bit bağımsız değişkeni böyle bir bileşene geçiriyorsanız, olarak bildirin `UInteger` yerine `ULong` Yönetilen Visual Basic kodunuzda.  
-  
-     Ayrıca, Windows 95, Windows 98, Windows ME veya Windows 2000 Otomasyon 64-bit tamsayıya desteklemez. Bir Visual Basic geçirilemez `ULong` bir Otomasyon bileşen bu platformlardaki bağımsız değişkeni.  
-  
-- **Genişletme.** `ULong` Widens veri türü için `Decimal`, `Single`, ve `Double`. Yani dönüştürebilirsiniz `ULong` karşılaşmadan bu türlerden birine bir <xref:System.OverflowException?displayProperty=nameWithType> hata.  
-  
-- **Tür karakterleri.** Değişmez değer türü karakterleri ekleme `UL` sabit değerine zorlar `ULong` veri türü. `ULong` hiçbir tanımlayıcı türü karakteri var.
-  
-- **Çerçeve türü.** .NET Framework içinde karşılık gelen türü <xref:System.UInt64?displayProperty=nameWithType> yapısı.  
-  
+
+- **Negatif sayılar.** @No__t_0 işaretsiz bir tür olduğundan, negatif bir sayıyı temsil edemez. @No__t_1 türü değerlendirilen bir ifadede birli eksi (`-`) işlecini kullanırsanız, Visual Basic ifadeyi önce `Decimal` dönüştürür.
+
+- **CLS uyumluluğu.** @No__t_0 veri türü [ortak dil belirtiminin](https://www.ecma-international.org/publications/standards/Ecma-335.htm) (CLS) bir parçası değildir, bu nedenle CLS uyumlu kod onu kullanan bir bileşeni tüketmez.
+
+- **Birlikte çalışma konuları.** Otomasyon veya COM nesneleri gibi .NET Framework için yazılmayan bileşenlerle arabirimleriniz varsa, `ulong` gibi türlerin diğer ortamlarda farklı bir veri genişliğine (32 bit) sahip olabileceğini aklınızda bulundurun. Böyle bir bileşene 32 bitlik bir bağımsız değişken geçirıyorsanız, bunu yönetilen Visual Basic kodunuzda `ULong` yerine `UInteger` olarak bildirin.
+
+  Ayrıca, Otomasyon Windows 95, Windows 98, Windows ME veya Windows 2000 üzerinde 64 bit tamsayıları desteklemez. Bu platformlarda bir Otomasyon bileşenine Visual Basic `ULong` bağımsız değişkeni geçiremezsiniz.
+
+- **Kan.** @No__t_0 veri türü `Decimal`, `Single` ve `Double` için. Bu, bir <xref:System.OverflowException?displayProperty=nameWithType> hatasıyla karşılaşmadan `ULong` bu türlerden birine dönüştürebileceğiniz anlamına gelir.
+
+- **Tür karakterleri.** Değişmez değer türü karakterlerinin bir hazır `UL` eklenmesi, `ULong` veri türüne zorlar. `ULong` tanımlayıcı türü karakteri yok.
+
+- **Çerçeve türü.** .NET Framework karşılık gelen tür <xref:System.UInt64?displayProperty=nameWithType> yapısıdır.
+
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.UInt64>
