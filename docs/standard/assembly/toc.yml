@@ -17,6 +17,8 @@
       href: file-format.md
     - name: 'Nasıl yapılır: .NET Core’da bütünleştirilmiş kodu kaldırabilme özelliğini kullanma ve hatalarını ayıklama'
       href: unloadability.md
+    - name: Başvuru derlemeleri
+      href: reference-assemblies.md
     - name: Derleme yüklerini çözme
       href: resolve-loads.md
     - name: Derlemeler ile programlama
