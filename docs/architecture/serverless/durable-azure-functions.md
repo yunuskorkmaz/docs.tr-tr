@@ -4,12 +4,12 @@ description: Sürekli Azure işlevleri, koddaki durum bilgisi olan iş akışlar
 author: cecilphillip
 ms.author: cephilli
 ms.date: 06/26/2018
-ms.openlocfilehash: f7ee74926d6658042120113b49dc763383881423
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 2c0ad086640409ac187c3aa882add4d6b39b6ff9
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68676774"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522853"
 ---
 # <a name="durable-azure-functions"></a>Dayanıklı Azure işlevleri
 
@@ -27,7 +27,7 @@ Dayanıklı İşlevler durum bilgisi olan iş akışları, iki iç bileşene ayr
 
 Düzenlemeler, Azure Işlevlerinde tetiklenen işlemlerin diğer stilleriyle karşılaştırıldığında benzersizdir. Dayanıklı İşlevler, saat veya hatta tamamlanması gereken işlevlerin yürütülmesini sağlar. Bu tür davranışlar, çalışan bir düzenleme durumunun denetlenmesi, preemptively sonlanması veya dış olayların bildirimlerini gönderebilme gereksinimiyle birlikte gelir.
 
-Bu tür durumlarda dayanıklı işlevler uzantısı, genişletilmiş işlevlerle etkileşime `DurableOrchestrationClient` girebilmeniz için sınıfını sağlar. `OrchestrationClientAttribute` Bağlamayı kullanarak Orchestration istemcisine erişebilirsiniz. Genellikle, bu özniteliği `HttpTrigger` veya `ServiceBusTrigger`gibi başka bir tetikleyici türüyle dahil edersiniz. Kaynak işlev tetiklendikten sonra, düzenleme istemcisi bir Orchestrator işlevi başlatmak için kullanılabilir.
+Bu tür durumlarda Dayanıklı İşlevler uzantısı, genişletilmiş işlevlerle etkileşime girebilmeniz için `DurableOrchestrationClient` sınıfını sağlar. @No__t_0 bağlamasını kullanarak Orchestration istemcisine erişebilirsiniz. Genellikle, bu özniteliği bir `HttpTrigger` veya `ServiceBusTrigger` gibi başka bir tetikleyici türüyle dahil edersiniz. Kaynak işlev tetiklendikten sonra, düzenleme istemcisi bir Orchestrator işlevi başlatmak için kullanılabilir.
 
 ```csharp
 [FunctionName("KickOff")]
@@ -47,7 +47,7 @@ public static async Task<HttpResponseMessage> Run(
 
 Azure Işlevleri 'nde, bir Orchestrator işlevi olarak işlev gören OrchestrationTriggerAttribute ile bir işleve açıklama ekleme. Durum bilgisi olan iş akışınızı oluşturan çeşitli etkinlikleri yönetmekten sorumludur.
 
-Orchestrator işlevleri, OrchestrationTriggerAttribute dışındaki bağlamaları kullanamaz. Bu öznitelik, yalnızca DurableOrchestrationContext parametre türüyle kullanılabilir. İşlev imzasında girişlerin serisini kaldırma desteklenmediğinden başka giriş kullanılamaz. Orchestration istemcisi tarafından sağlanmış girdileri almak için getınput\<T\> yöntemi kullanılmalıdır.
+Orchestrator işlevleri, OrchestrationTriggerAttribute dışındaki bağlamaları kullanamaz. Bu öznitelik, yalnızca DurableOrchestrationContext parametre türüyle kullanılabilir. İşlev imzasında girişlerin serisini kaldırma desteklenmediğinden başka giriş kullanılamaz. Orchestration istemcisi tarafından sağlanmış girdileri almak için Getınput \<T \> yöntemi kullanılmalıdır.
 
 Ayrıca, düzenleme işlevlerinin dönüş türleri void, Task veya JSON serileştirilebilir değeri olmalıdır.
 
@@ -69,19 +69,19 @@ public static async Task<string> PlaceOrder([OrchestrationTrigger] DurableOrches
 }
 ```
 
-Bir Orchestration 'un birden fazla örneği aynı anda başlatılabilir ve çalıştırılabilir. Metodu üzerinde çağırmak, Orchestration 'un yeni bir örneğini başlatır.`DurableOrchestrationClient` `StartNewAsync` Yöntemi, düzenleme başladığında `Task<string>` tamamlayan bir döndürür. Düzenleme 30 saniye içinde `TimeoutException` başlatılmamışsa, türünde bir özel durum oluşur.
+Bir Orchestration 'un birden fazla örneği aynı anda başlatılabilir ve çalıştırılabilir. @No__t_1 `StartNewAsync` yönteminin çağrılması, Orchestration 'un yeni bir örneğini başlatır. Yöntemi, düzenleme başladığında tamamlayan bir `Task<string>` döndürür. Düzenleme işlemi 30 saniye içinde başlatılmamışsa `TimeoutException` türünde bir özel durum oluşur.
 
-`Task<string>` Tamamlandı`StartNewAsync` , Orchestration örneğinin benzersiz kimliğini içermelidir. Bu örnek KIMLIĞI, belirli bir düzenleme üzerindeki işlemleri çağırmak için kullanılabilir. Düzenleme durumu veya gönderilen olay bildirimleri için sorgulanabilir.
+@No__t_1 tamamlanan `Task<string>`, Orchestration örneğinin benzersiz KIMLIĞINI içermelidir. Bu örnek KIMLIĞI, belirli bir düzenleme üzerindeki işlemleri çağırmak için kullanılabilir. Düzenleme durumu veya gönderilen olay bildirimleri için sorgulanabilir.
 
 ### <a name="the-activity-functions"></a>Etkinlik işlevleri
 
 Etkinlik işlevleri, iş akışını oluşturmak için bir Orchestration işlevi içinde birlikte oluşturulan ayrık işlemlerdir. İşte en çok gerçek iş gerçekleşir. İş mantığını, uzun süre çalışan süreçlerini ve bulmaca parçalarını daha büyük bir çözüme göre temsil ederler.
 
-, `ActivityTriggerAttribute` Türünde`DurableActivityContext`bir işlev parametresine açıklama eklemek için kullanılır. Ek açıklamanın kullanılması, işlevin etkinlik işlevi olarak kullanılması amaçlanan çalışma zamanına bildirir. Etkinlik işlevlerine giriş değerleri, `GetInput<T>` `DurableActivityContext` parametresinin yöntemi kullanılarak alınır.
+@No__t_0, `DurableActivityContext` türünde bir işlev parametresine açıklama eklemek için kullanılır. Ek açıklamanın kullanılması, işlevin etkinlik işlevi olarak kullanılması amaçlanan çalışma zamanına bildirir. Etkinlik işlevlerine giriş değerleri, `DurableActivityContext` parametresinin `GetInput<T>` yöntemi kullanılarak alınır.
 
 Düzenleme işlevlerine benzer şekilde, etkinlik işlevlerinin dönüş türleri void, Task veya JSON serileştirilebilir bir değer olmalıdır.
 
-Etkinlik işlevleri içinde oluşturulan işlenmemiş özel durumlar, çağıran Orchestrator işlevine gönderilir ve olarak `TaskFailedException`sunulur. Bu noktada, hata yakalanıp Orchestrator oturumu açabilir ve etkinlik yeniden denenebilir.
+Etkinlik işlevleri içinde oluşturulan işlenmemiş özel durumlar, çağıran Orchestrator işlevine gönderilir ve bir `TaskFailedException` olarak sunulur. Bu noktada, hata yakalanıp Orchestrator oturumu açabilir ve etkinlik yeniden denenebilir.
 
 ```csharp
 [FunctionName("CheckAndReserveInventory")]
@@ -96,10 +96,10 @@ public static bool CheckAndReserveInventory([ActivityTrigger] DurableActivityCon
 
 ## <a name="recommended-resources"></a>Önerilen Kaynaklar
 
-* [Dayanıklı İşlevler](https://docs.microsoft.com/azure/azure-functions/durable-functions-overview)
-* [Dayanıklı İşlevler bağlamaları](https://docs.microsoft.com/azure/azure-functions/durable-functions-bindings)
-* [Dayanıklı İşlevler örnekleri yönetme](https://docs.microsoft.com/azure/azure-functions/durable-functions-instance-management)
+- [Dayanıklı İşlevler](https://docs.microsoft.com/azure/azure-functions/durable-functions-overview)
+- [Dayanıklı İşlevler bağlamaları](https://docs.microsoft.com/azure/azure-functions/durable-functions-bindings)
+- [Dayanıklı İşlevler örnekleri yönetme](https://docs.microsoft.com/azure/azure-functions/durable-functions-instance-management)
 
 >[!div class="step-by-step"]
->[Önceki](event-grid.md)İleri
->[](orchestration-patterns.md)
+>[Önceki](event-grid.md)
+>[İleri](orchestration-patterns.md)

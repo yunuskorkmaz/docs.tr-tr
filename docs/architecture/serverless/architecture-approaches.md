@@ -4,12 +4,12 @@ description: N katmanlı mimarilerin sunucusuz 'e kadar bulut tabanlı kurumsal 
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: ee529abd1f6955d4f542464dd9a2380dd663571f
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 74de96bef48f16ced4adf82855a740aa0afcdf1d
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68676870"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522904"
 ---
 # <a name="architecture-approaches"></a>Mimari yaklaşımları
 
@@ -33,13 +33,13 @@ Tek tek yaklaşımın çeşitli avantajları vardır. Tek bir kod temelini çekm
 
 Ne yazık ki, tek bir model ölçeklendirmeye göre daha fazla eğilimi gösterir. Tek tek yaklaşımın önemli dezavantajları şunlardır:
 
-* Aynı kod tabanında paralel çalışmayı zorlaştırıyor.
-* Tüm değişiklikler, ne kadar önemsiz olsun, tüm uygulamanın yeni bir sürümünü dağıtmanız gerekir.
-* Yeniden düzenleme büyük olasılıkla uygulamanın tamamını etkiler.
-* Genellikle ölçeklendirmeye yönelik tek çözüm, tek başına birden çok, yoğun kaynak yoğunluklu kopya oluşturmaktır.
-* Sistemler Genişlemeden veya diğer sistemler alındığından, tümleştirme zor olabilir.
-* Tek bir tam yapılandırma gereksiniminden dolayı test edilmesi zor olabilir.
-* Kod yeniden kullanımı zor ve genellikle diğer uygulamalar kendi kod kopyalarına sahip olur.
+- Aynı kod tabanında paralel çalışmayı zorlaştırıyor.
+- Tüm değişiklikler, ne kadar önemsiz olsun, tüm uygulamanın yeni bir sürümünü dağıtmanız gerekir.
+- Yeniden düzenleme büyük olasılıkla uygulamanın tamamını etkiler.
+- Genellikle ölçeklendirmeye yönelik tek çözüm, tek başına birden çok, yoğun kaynak yoğunluklu kopya oluşturmaktır.
+- Sistemler Genişlemeden veya diğer sistemler alındığından, tümleştirme zor olabilir.
+- Tek bir tam yapılandırma gereksiniminden dolayı test edilmesi zor olabilir.
+- Kod yeniden kullanımı zor ve genellikle diğer uygulamalar kendi kod kopyalarına sahip olur.
 
 Birçok işletme, tek bir uygulamayı geçirme fırsatı olarak buluta bakar ve aynı zamanda bunları daha kullanılabilir desenlere yeniden düzenleyin. Ayrı ayrı uygulamaları ve bileşenleri, bunların korunmasını, dağıtılmasını ve ayrı olarak ölçeklendirilmesine olanak tanımak için yaygın olarak kullanılır.
 
@@ -47,9 +47,9 @@ Birçok işletme, tek bir uygulamayı geçirme fırsatı olarak buluta bakar ve 
 
 N katmanlı uygulama bölümü uygulama mantığını belirli katmanlara dönüştürür. En yaygın katmanlar şunlardır:
 
-* Kullanıcı arabirimi
-* İş mantığı
-* Veri erişimi
+- Kullanıcı arabirimi
+- İş mantığı
+- Veri erişimi
 
 Diğer katmanlar, ara yazılım, toplu işlem ve API içerebilir. Katmanların mantıklı olduğunu unutmamak önemlidir. Yalıtılmış olarak geliştirilse de, hepsi aynı hedef platforma dağıtılabilir.
 
@@ -57,9 +57,9 @@ Diğer katmanlar, ara yazılım, toplu işlem ve API içerebilir. Katmanların m
 
 N katmanlı yaklaşımda aşağıdakiler de dahil olmak üzere birkaç avantaj vardır:
 
-* Yeniden düzenleme bir katmana yalıtılmış.
-* Takımlar bağımsız olarak ayrı katmanları oluşturabilir, test edebilir, dağıtabilir ve koruyabilir.
-* Katmanlar dışarı değiştirilebilir, örneğin veri katmanı, Kullanıcı arabirimi katmanında değişiklik gerektirmeden birden çok veritabanına erişebilir.
+- Yeniden düzenleme bir katmana yalıtılmış.
+- Takımlar bağımsız olarak ayrı katmanları oluşturabilir, test edebilir, dağıtabilir ve koruyabilir.
+- Katmanlar dışarı değiştirilebilir, örneğin veri katmanı, Kullanıcı arabirimi katmanında değişiklik gerektirmeden birden çok veritabanına erişebilir.
 
 Sunucusuz, bir veya daha fazla katmanı uygulamak için kullanılabilir.
 
@@ -67,13 +67,13 @@ Sunucusuz, bir veya daha fazla katmanı uygulamak için kullanılabilir.
 
 **[Mikro hizmet](https://docs.microsoft.com/azure/architecture/guide/architecture-styles/microservices)** mimarileri, aşağıdakiler dahil olmak üzere ortak özellikler içerir:
 
-* Uygulamalar çeşitli küçük hizmetlerden oluşur.
-* Her hizmet kendi sürecinde çalışır.
-* Hizmetler, iş etki alanları etrafında hizalanır.
-* Hizmetler, genellikle aktarım olarak HTTP kullanarak basit API 'Ler üzerinden iletişim kurar.
-* Hizmetler bağımsız olarak dağıtılabilir ve yükseltilebilir.
-* Hizmetler tek bir veri deposuna bağımlı değil.
-* Sistem, sorun göz önünde bulundurularak tasarlanmıştır ve bazı hizmetler başarısız olduğunda bile uygulama çalışmaya devam edebilir.
+- Uygulamalar çeşitli küçük hizmetlerden oluşur.
+- Her hizmet kendi sürecinde çalışır.
+- Hizmetler, iş etki alanları etrafında hizalanır.
+- Hizmetler, genellikle aktarım olarak HTTP kullanarak basit API 'Ler üzerinden iletişim kurar.
+- Hizmetler bağımsız olarak dağıtılabilir ve yükseltilebilir.
+- Hizmetler tek bir veri deposuna bağımlı değil.
+- Sistem, sorun göz önünde bulundurularak tasarlanmıştır ve bazı hizmetler başarısız olduğunda bile uygulama çalışmaya devam edebilir.
 
 Mikro hizmetlerin diğer mimari yaklaşımlar için birbirini dışlamalı olması gerekmez. Örneğin, N katmanlı bir mimaride, orta katman için mikro hizmetler kullanılabilir. Mikro Hizmetleri, IIS konaklarındaki sanal dizinlerden kapsayıcılara çok çeşitli yollarla uygulamak da mümkündür. Mikro hizmetlerin özellikleri, özellikle sunucusuz uygulamalar için idealdir.
 
@@ -81,21 +81,21 @@ Mikro hizmetlerin diğer mimari yaklaşımlar için birbirini dışlamalı olmas
 
 Mikro hizmet mimarilerinin uzmanları şunlardır:
 
-* Yeniden düzenleme, genellikle tek bir hizmet olarak yalıtılır.
-* Hizmetler birbirinden bağımsız olarak yükseltilebilir.
-* Dayanıklılık ve esneklik, bireysel hizmet taleplerine ayarlanabilir.
-* Geliştirme, farklı ekipler ve platformlar arasında paralel olarak gerçekleşebilir.
-* Yalıtılmış hizmetler için kapsamlı testler yazmak daha kolay.
+- Yeniden düzenleme, genellikle tek bir hizmet olarak yalıtılır.
+- Hizmetler birbirinden bağımsız olarak yükseltilebilir.
+- Dayanıklılık ve esneklik, bireysel hizmet taleplerine ayarlanabilir.
+- Geliştirme, farklı ekipler ve platformlar arasında paralel olarak gerçekleşebilir.
+- Yalıtılmış hizmetler için kapsamlı testler yazmak daha kolay.
 
 Mikro hizmetler aşağıdakiler dahil olmak üzere kendi güçlüklarıyla birlikte gelir:
 
-* Hangi hizmetlerin kullanılabilir olduğunu ve bunların nasıl çağrılacağını belirleme.
-* Hizmet yaşam döngüsünü yönetme.
-* Hizmetlerin genel uygulamada nasıl bir araya uyduğunu anlama.
-* Farklı hizmetler genelinde yapılan çağrıların tam sistem testi.
+- Hangi hizmetlerin kullanılabilir olduğunu ve bunların nasıl çağrılacağını belirleme.
+- Hizmet yaşam döngüsünü yönetme.
+- Hizmetlerin genel uygulamada nasıl bir araya uyduğunu anlama.
+- Farklı hizmetler genelinde yapılan çağrıların tam sistem testi.
 
 Son olarak, daha sonra ele alınan sunucusuz avantajlarına dokunma dahil olmak üzere tüm bu zorlukları ele alan çözümler vardır.
 
 >[!div class="step-by-step"]
->[Önceki](index.md)İleri
->[](architecture-deployment-approaches.md)
+>[Önceki](index.md)
+>[İleri](architecture-deployment-approaches.md)

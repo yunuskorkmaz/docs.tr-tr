@@ -2,12 +2,12 @@
 title: API ağ geçidi düzenine ve doğrudan istemciden mikro hizmete iletişime karşı
 description: API Gateway deseninin ve doğrudan istemciden mikro hizmet iletişiminin farklılıklarını ve kullanımlarını anlayın.
 ms.date: 01/07/2019
-ms.openlocfilehash: d895ae50e50ade2f8285117491733d5c9814b732
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 6b42650b2dbce093f12fe02b1605c95076dc8592
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834446"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522953"
 ---
 # <a name="the-api-gateway-pattern-versus-the-direct-client-to-microservice-communication"></a>API ağ geçidi düzenine ve doğrudan istemciden mikro hizmete iletişime karşı
 
@@ -17,7 +17,7 @@ Mikro hizmetler mimarisinde, her mikro hizmet hassas uç noktalar kümesi (genel
 
 Olası bir yaklaşım doğrudan istemciden mikro hizmet iletişim mimarisini kullanmaktır. Bu yaklaşımda, bir istemci uygulaması, Şekil 4-12 ' de gösterildiği gibi, mikro hizmetlerden bazılarına doğrudan istek yapabilir.
 
-![İstemciden mikro hizmet iletişim mimarisini gösteren diyagram.](./media/direct-client-to-microservice-communication-versus-the-API-Gateway-pattern/direct-client-to-microservice-communication.png)
+![İstemciden mikro hizmet iletişim mimarisini gösteren diyagram.](./media/direct-client-to-microservice-communication.png)
 
 **Şekil 4-12**. Doğrudan istemciden mikro hizmete iletişim mimarisi kullanma
 
@@ -105,12 +105,12 @@ Daha fazla bilgi için bkz. [ağ geçidi toplama stili](https://docs.microsoft.c
 
 **Çapraz kesme sorunları veya ağ geçidi boşaltma.** Her bir API ağ geçidi ürünü tarafından sunulan özelliklere bağlı olarak, her bir mikro hizmetten bağımsız olarak tek bir katmanda çapraz kesme sorunlarını birleştirerek her bir mikro hizmetin uygulanmasını kolaylaştıran ağ geçidine işlevsellik devreolursunuz. Bu özellikle, aşağıdaki işlev gibi her iç mikro hizmette düzgün şekilde uygulanması karmaşık olabilecek özelleştirilmiş özellikler için kullanışlıdır:
 
-- Kimlik doğrulama ve yetkilendirme
+- Kimlik doğrulaması ve yetkilendirme
 - Hizmet bulma tümleştirmesi
-- Yanıt önbelleğe alma
+- Yanıtları Önbelleğe Alma
 - Yeniden deneme ilkeleri, devre kesici ve QoS
 - Hız sınırlandırma ve kısıtlama
-- Yük dengeleme
+- Yük Dengeleme
 - Günlüğe kaydetme, izleme, bağıntı
 - Üstbilgiler, sorgu dizeleri ve talep dönüştürme
 - IP beyaz listesi
@@ -170,22 +170,22 @@ Ayrıca, Pazar sunumu API ağ geçitleri özelliklerinde, Apiayıklanan, Kong, M
 
 ## <a name="additional-resources"></a>Ek kaynaklar
 
-- **Chris Richardson. Model: ön uç @no__t için API ağ geçidi/arka ucu**-1
+- **Chris Richardson. Model: ön uç  \ için API ağ geçidi/arka uç**
   <https://microservices.io/patterns/apigateway.html>
 
-- **API Gateway deseninin** \
+- **API ağ geçidi deseninin**  \
   <https://docs.microsoft.com/azure/architecture/microservices/gateway>
 
-- **Toplama ve oluşturma deseninin** \
+- **Toplama ve oluşturma deseninin**  \
   <https://microservices.io/patterns/data/api-composition.html>
 
-- **Azure API Management** \
+- **Azure API Management**  \
   <https://azure.microsoft.com/services/api-management/>
 
-- **UDI Dahan. Hizmet odaklı bileşim** \
+- **UDI Dahan. Hizmet odaklı bileşim**  \
   <http://udidahan.com/2014/07/30/service-oriented-composition-with-video/>
 
-- **Clemens Valar. GIT 2016 ' de mesajlaşma ve mikro hizmetler (video)**  \
+- **Clemens Valar. GOTO 2016 (video) adresindeki mesajlaşma ve mikro hizmetler**  \
   <https://www.youtube.com/watch?v=rXi5CLjIQ9k>
 
 - **Bir Nutshell Içinde API ağ geçidi** (ASP.NET Core API Gateway öğreticisi serisi) \

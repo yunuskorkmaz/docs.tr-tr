@@ -4,12 +4,12 @@ description: Azure işlevleri, olay odaklı anında ölçeklendirme kodu sağlam
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 4febcc01eebf3efce3fc1eb42e19c2ec6c0baa52
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 5e8187b3752a0f0d0bcf8e15f2ce440dc5a64e45
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68676807"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522871"
 ---
 # <a name="azure-functions"></a>Azure İşlevleri
 
@@ -60,9 +60,9 @@ Daha fazla bilgi için bkz. [App Service planları](https://docs.microsoft.com/a
 
 İşlev uygulamaları oluşturabileceğiniz üç yaygın yol vardır.
 
-* Portalda betik işlevleri.
-* Azure komut satırı arabirimi 'ni (CLı) kullanarak gerekli kaynakları oluşturun.
-* En sevdiğiniz IDE 'yi kullanarak işlevleri yerel olarak derleyin ve Azure 'da yayımlayın.
+- Portalda betik işlevleri.
+- Azure komut satırı arabirimi 'ni (CLı) kullanarak gerekli kaynakları oluşturun.
+- En sevdiğiniz IDE 'yi kullanarak işlevleri yerel olarak derleyin ve Azure 'da yayımlayın.
 
 Portalda betikleştirilmiş bir işlev oluşturma hakkında daha fazla bilgi için, [Azure Portal ilk işlevinizi oluşturma](https://docs.microsoft.com/azure/azure-functions/functions-create-first-azure-function)bölümüne bakın.
 
@@ -76,16 +76,16 @@ Visual Studio 'dan bir işlev oluşturmak için bkz. [Visual Studio kullanarak i
 
 Bazı ortak Tetikleyiciler şunları içerir:
 
-* BLOB depolama: bir dosya veya klasör bir depolama alanında karşıya yüklenirken veya değiştirildiğinde işlevinizi çağırın.
-* HTTP: işlevinizi REST API gibi çağırın.
-* Queue: bir kuyrukta öğeler mevcutsa işlevinizi çağırın.
-* Süreölçer: işlevinizi düzenli bir temposunda çağırma.
+- BLOB depolama: bir dosya veya klasör bir depolama alanında karşıya yüklenirken veya değiştirildiğinde işlevinizi çağırın.
+- HTTP: işlevinizi REST API gibi çağırın.
+- Queue: bir kuyrukta öğeler mevcutsa işlevinizi çağırın.
+- Süreölçer: işlevinizi düzenli bir temposunda çağırma.
 
 Bağlama örnekleri şunları içerir:
 
-* CosmosDB: dosyaları yüklemek veya kaydetmek için kolayca veritabanına bağlanın.
-* Tablo Depolama: işlev uygulamanızdan anahtar/değer depolama ile çalışma.
-* Kuyruk depolama: bir kuyruktan kolayca öğe alın veya yeni öğeleri kuyruğa yerleştirin.
+- CosmosDB: dosyaları yüklemek veya kaydetmek için kolayca veritabanına bağlanın.
+- Tablo Depolama: işlev uygulamanızdan anahtar/değer depolama ile çalışma.
+- Kuyruk depolama: bir kuyruktan kolayca öğe alın veya yeni öğeleri kuyruğa yerleştirin.
 
 Aşağıdaki örnek *Functions. JSON* dosyası bir tetikleyiciyi ve bağlamayı tanımlar:
 
@@ -111,7 +111,7 @@ Aşağıdaki örnek *Functions. JSON* dosyası bir tetikleyiciyi ve bağlamayı 
 }
 ```
 
-Bu örnekte, işlev, `images` kapsayıcıda blob depolamaya yapılan bir değişiklik tarafından tetiklenir. Dosya ile ilgili bilgiler geçirilir, bu nedenle tetikleyici de bir bağlama işlevi görür. Adlı `images`bir kuyruğa bilgi koymak için başka bir bağlama var.
+Bu örnekte, işlevi `images` kapsayıcısındaki blob depolamada yapılan bir değişiklik tarafından tetiklenir. Dosya ile ilgili bilgiler geçirilir, bu nedenle tetikleyici de bir bağlama işlevi görür. @No__t_0 adlı bir kuyruğa bilgi koymak için başka bir bağlama var.
 
 İşlevin C# betiği şöyledir:
 
@@ -127,21 +127,21 @@ public static string Run(Stream myBlob, string name, TraceWriter log)
 
 Tetikleyiciler ve bağlamaların tam listesi için bkz. [Azure işlevleri Tetikleyicileri ve bağlamaları kavramları](https://docs.microsoft.com/azure/azure-functions/functions-triggers-bindings).
 
-## <a name="proxies"></a>Proxy'ler
+## <a name="proxies"></a>Kullanıldığı
 
 Proxy 'ler, uygulamanız için yeniden yönlendirme işlevi sağlar. Proxy 'ler bir uç noktayı kullanıma sunar ve bu uç noktayı başka bir kaynakla eşler. Proxy 'ler ile şunları yapabilirsiniz:
 
-* Gelen isteği başka bir uç noktaya yeniden yönlendir.
-* Gelen isteği geçirilmeden önce değiştirin.
-* Bir yanıtı değiştirin veya bir yanıt verin.
+- Gelen isteği başka bir uç noktaya yeniden yönlendir.
+- Gelen isteği geçirilmeden önce değiştirin.
+- Bir yanıtı değiştirin veya bir yanıt verin.
 
 Proxy 'ler gibi senaryolar için kullanılır:
 
-* URL 'YI basitleştirecek, kısaltaştırın veya değiştirmeyi kolaylaştırın.
-* Birden fazla arka uç hizmetine tutarlı bir API öneki sağlama.
-* Geliştirmekte olan bir uç noktaya yanıt verme.
-* İyi bilinen bir uç noktaya statik yanıt sağlama.
-* Arka uç taşındığında veya geçirildiğinde bir API uç noktasının tutarlı tutulması.
+- URL 'YI basitleştirecek, kısaltaştırın veya değiştirmeyi kolaylaştırın.
+- Birden fazla arka uç hizmetine tutarlı bir API öneki sağlama.
+- Geliştirmekte olan bir uç noktaya yanıt verme.
+- İyi bilinen bir uç noktaya statik yanıt sağlama.
+- Arka uç taşındığında veya geçirildiğinde bir API uç noktasının tutarlı tutulması.
 
 Proxy 'ler JSON tanımları olarak depolanır. Aşağıda bir örnek verilmiştir:
 
@@ -169,16 +169,16 @@ Proxy 'ler JSON tanımları olarak depolanır. Aşağıda bir örnek verilmişti
 }
 ```
 
-Proxy `Domain Redirect` , kısaltılmış bir yol alır ve daha uzun işlev kaynağıyla eşlenir. Dönüştürme şöyle görünür:
+@No__t_0 proxy, kısaltılmış bir yol alır ve daha uzun işlev kaynağıyla eşlenir. Dönüştürme şöyle görünür:
 
 `https://--shorturl--/123` -> `https://--longurl--.azurewebsites.net/api/UrlRedirect/123`
 
-Proxy, kök URL 'sine (`https://--shorturl--/`) gönderilen her şeyi alır ve belge sitesine yönlendirir. `Root`
+@No__t_0 proxy, kök URL 'ye gönderilen her şeyi alır (`https://--shorturl--/`) ve belge sitesine yönlendirir.
 
-[Azure 'da proxy 'leri kullanma örneği gösterilmektedir: Sunucusuz Azure Işlevleri](https://channel9.msdn.com/events/Connect/2017/E102)sayesinde Uygulamanızı buluta taşıyın. Gerçek zamanlı olarak, yerel SQL Server üzerinde çalışan bir ASP.NET Core uygulaması Azure bulutuna geçirilir. Proxy 'ler, işlevleri kullanmak üzere geleneksel bir Web API projesini yeniden düzenleme konusunda yardımcı olmak için kullanılır.
+Azure 'da ara sunucu kullanımıyla ilgili bir örnek gösterilir [: sunucusuz Azure işlevleri ile Uygulamanızı buluta taşıyın](https://channel9.msdn.com/events/Connect/2017/E102). Gerçek zamanlı olarak, yerel SQL Server üzerinde çalışan bir ASP.NET Core uygulaması Azure bulutuna geçirilir. Proxy 'ler, işlevleri kullanmak üzere geleneksel bir Web API projesini yeniden düzenleme konusunda yardımcı olmak için kullanılır.
 
 Proxy 'Ler hakkında daha fazla bilgi için bkz. [Azure işlev proxy'leri Ile çalışma](https://docs.microsoft.com/azure/azure-functions/functions-proxies).
 
 >[!div class="step-by-step"]
->[Önceki](azure-serverless-platform.md)İleri
->[](application-insights.md)
+>[Önceki](azure-serverless-platform.md)
+>[İleri](application-insights.md)
