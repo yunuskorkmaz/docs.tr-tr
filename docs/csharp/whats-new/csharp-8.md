@@ -429,13 +429,13 @@ Console.WriteLine($"The last word is {words[^1]}");
 // writes "dog"
 ```
 
-Aşağıdaki kod, "hızlı", "kahverengi" ve "Fox" sözcüklerinin bulunduğu bir alt Aralık oluşturur. @No__t_1 üzerinden `words[1]` içerir. Öğe `words[4]` Aralık içinde değil.
+Aşağıdaki kod, "quick", "brown" ve "fox" sözcüklerinin bulunduğu bir alt aralık oluşturur. @No__t_1 üzerinden `words[1]` içerir. `words[4]` öğesi aralık içinde değildir.
 
 ```csharp
 var quickBrownFox = words[1..4];
 ```
 
-Aşağıdaki kod, "Lazy" ve "köpek" ile bir alt Aralık oluşturur. @No__t_0 ve `words[^1]` içerir. @No__t_0 bitiş dizini dahil değil:
+Aşağıdaki kod, "lazy" ve "dog" sözcüklerini içeren bir alt aralık oluşturur. `words[^2]` ile `words[^1]` aralığını içerir. `words[^0]` bitiş dizini dahil değildir:
 
 ```csharp
 var lazyDog = words[^2..^0];
