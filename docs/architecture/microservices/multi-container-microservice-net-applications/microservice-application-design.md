@@ -2,12 +2,12 @@
 title: Mikro hizmet odaklı bir uygulama tasarlama
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | Mikro hizmet odaklı bir uygulamanın avantajlarını ve altlarını anlayın ve bu sayede bilinçli bir karar alabilirsiniz.
 ms.date: 10/02/2018
-ms.openlocfilehash: dc3c8ccd95505cb828383f499b9bf950e7c12a30
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 1c2fe341c62111e915df35aab818b8a980004834
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71039823"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72772055"
 ---
 # <a name="designing-a-microservice-oriented-application"></a>Mikro hizmet odaklı bir uygulama tasarlama
 
@@ -59,13 +59,13 @@ Mikro hizmetler birbiriyle bağımsız kapsayıcı olarak geliştirilir ve dağ�
 
 Her mikro hizmet kendi veritabanına sahiptir ve bunun diğer mikro hizmetlerden tamamen ayırt edilebilir olmasını sağlar. Gerektiğinde, farklı mikro hizmetlerden veritabanları arasındaki tutarlılık, Komut ve Sorgu Sorumluluklarının Ayrılığı (CQRS) ' de işlendiği gibi uygulama düzeyi tümleştirme olayları (mantıksal bir olay veri yolu aracılığıyla) kullanılarak elde edilir. Bu nedenle, iş kısıtlamaları birden çok mikro hizmet ve ilgili veritabanları arasında son tutarlılığı benimsemelidir.
 
-### <a name="eshoponcontainers-a-reference-application-for-net-core-and-microservices-deployed-using-containers"></a>eShopOnContainers: Kapsayıcılar kullanılarak dağıtılan .NET Core ve mikro hizmetler için bir başvuru uygulaması
+### <a name="eshoponcontainers-a-reference-application-for-net-core-and-microservices-deployed-using-containers"></a>eShopOnContainers: kapsayıcılar kullanılarak dağıtılan .NET Core ve mikro hizmetler için başvuru uygulaması
 
 Bildiğiniz bir kuramsal iş etki alanı hakkında düşünmek yerine mimari ve teknolojilere odaklanabilmeniz için, bir katalog sunan basitleştirilmiş bir e-ticaret (e-alışveriş) uygulaması olan iyi bilinen bir iş etki alanı seçtik. ürünlerin, müşterilerden gelen siparişleri alır, stoku doğrular ve diğer iş işlevlerini gerçekleştirir. Bu kapsayıcı tabanlı uygulama kaynak kodu [Eshoponcontainers](https://aka.ms/MicroservicesArchitecture) GitHub deposunda mevcuttur.
 
 Uygulama, birkaç API ağ geçidine sahip tüm gerekli sunucu tarafı işlemleri için arka uç mikro hizmetleri ve kapsayıcıları ile birlikte çeşitli mağaza Kullanıcı arabirimi ön uçları (bir Web uygulaması ve yerel mobil uygulama) dahil olmak üzere birden çok alt sistemi içerir. birleştirilmiş giriş, iç mikro hizmetlere işaret eder. Şekil 6-1, başvuru uygulamasının mimarisini gösterir.
 
-![Mobil ve SPA istemcileri, mikro hizmetlerle iletişim kuran tek API Gateway uç noktaları ile iletişim kurar. Geleneksel Web istemcileri, mikro hizmetlere iletişim kuran MVC mikro hizmeti ile iletişim kurar](./media/image1.png)
+![Mobil ve SPA istemcileri, mikro hizmetlerle iletişim kuran tek API Gateway uç noktaları ile iletişim kurar. Geleneksel Web istemcileri, mikro hizmetlerle iletişim kuran MVC mikro hizmeti ile iletişim kurar](./media/image1.png)
 
 **Şekil 6-1**. Geliştirme ortamı için eShopOnContainers başvuru uygulama mimarisi
 
@@ -89,7 +89,7 @@ Bu nedenle, mikro hizmetler (ve bu uygulamadaki veritabanları için de) dağıt
 
 ### <a name="additional-resources"></a>Ek kaynaklar
 
-- **eShopOnContainers GitHub deposu. Başvuru uygulaması için kaynak kodu** \
+- **Eshoponcontainers GitHub deposu. Başvuru uygulaması  \ kaynak kodu**
   <https://aka.ms/eShopOnContainers/>
 
 ## <a name="benefits-of-a-microservice-based-solution"></a>Mikro hizmet tabanlı bir çözümün avantajları
@@ -146,7 +146,7 @@ Dış mimari, bu kılavuzun mimari bölümünde açıklanan ilkeleri izleyerek b
 
 Örneğin, *Eshoponcontainers* örneğimizde Katalog, sepet ve Kullanıcı profili mikro hizmetleri basittir (temelde, CRUD alt sistemleri). Bu nedenle, iç mimarisi ve tasarımı basittir. Ancak, sıralama mikro hizmeti gibi daha karmaşık olan ve çok sayıda etki alanı karmaşıklığıyla sürekli değişen iş kurallarını temsil eden diğer mikro hizmetlerinize sahip olabilirsiniz. Bunlar gibi durumlarda, *Eshoponcontainers* sıralama mikro hizmetinde yaptığımız gibi, belirli bir mikro hizmet için etki alanı odaklı TASARıM (DDD) yaklaşımlarıyla tanımlananlara benzer şekilde daha gelişmiş desenler uygulamak isteyebilirsiniz. (Bu DDD desenlerinin ilerleyen bölümlerinde, *Eshoponcontainers* sıralama mikro hizmeti 'nin uygulanmasını anlatan daha sonra gözden geçiğiz.)
 
-Mikro hizmet başına farklı bir teknolojinin başka bir nedeni de her mikro hizmetin doğası olabilir. Örneğin, F\#gibi işlevsel bir programlama dilinin kullanılması daha iyi olabilir, C\#gibi daha fazla nesne odaklı programlama dili yerine AI ve makine öğrenimi etki alanlarını hedefliyorsanız R gibi bir dil de kullanabilirsiniz.
+Mikro hizmet başına farklı bir teknolojinin başka bir nedeni de her mikro hizmetin doğası olabilir. Örneğin, C \# gibi daha fazla nesne odaklı programlama dili yerine AI ve makine öğrenimi etki alanlarını hedefliyorsanız, F \# gibi işlevsel programlama dilinin kullanılması daha iyi olabilir.
 
 En alttaki satır, her mikro hizmetin farklı tasarım düzenlerine göre farklı bir iç mimariye sahip olmasını sağlayabilir. Tüm mikro hizmetler, gelişmiş DDD desenleri kullanılarak uygulanmamalıdır çünkü bu, bunlar üzerinde aşırı mühendislik uygulanırlar. Benzer şekilde, sürekli değişen iş mantığı olan karmaşık mikro hizmetler, CRUD bileşenleri olarak uygulanmamalıdır ya da düşük kaliteli kodla bitemez.
 
@@ -160,13 +160,13 @@ Yazılım mimarları ve geliştiriciler tarafından kullanılan birçok mimari d
 
 - [Etki alanı odaklı tasarım N katmanlı](https://devblogs.microsoft.com/cesardelatorre/published-first-alpha-version-of-domain-oriented-n-layered-architecture-v2-0/).
 
-- [Mimariyi temizle](https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html) ( [Eshoponweb](https://aka.ms/WebAppArchitecture)ile birlikte kullanıldığında)
+- [Temizleme mimarisi](https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html) ( [Eshoponweb](https://aka.ms/WebAppArchitecture)ile kullanıldığı gibi)
 
 - [Komut ve sorgu sorumluluklarının ayrılığı](https://martinfowler.com/bliki/CQRS.html) (CQRS).
 
-- [Olay odaklı mimari](https://en.wikipedia.org/wiki/Event-driven_architecture) (EDA).
+- [Olay odaklı mimari](https://en.wikipedia.org/wiki/Event-driven_architecture) (Eda).
 
-Ayrıca, ASP.NET Core Web API 'leri, NancyFx, ASP.NET Core SignalR (.NET Core 2 ile kullanılabilir), F\#, Node. js, Python, Java, C++, golang gibi birçok teknoloji ve dil ile mikro hizmetler de oluşturabilirsiniz.
+Ayrıca, ASP.NET Core Web API 'Leri, NancyFx, ASP.NET Core SignalR (.NET Core 2 ile kullanılabilir), F \#, Node. js, Python, Java, C++, golang gibi birçok teknoloji ve dil ile mikro hizmetler de oluşturabilirsiniz.
 
 Önemli nokta, belirli bir mimari deseninin veya stilin olmaması ya da herhangi bir teknolojinin tüm durumlar için doğru olması. Şekil 6-3, farklı mikro hizmetlerde kullanılabilecek bazı yaklaşımları ve teknolojileri (belirli bir sırada olmasa da) gösterir.
 
@@ -183,5 +183,5 @@ Ayrıca, ASP.NET Core Web API 'leri, NancyFx, ASP.NET Core SignalR (.NET Core 2 
 Her belirli durum için gümüş bir madde işareti veya sağ mimari model yoktur. "Tümünü kural için bir mimari deseninin" olması gerekmez. Her mikro hizmetin önceliklerine bağlı olarak, aşağıdaki bölümlerde açıklandığı gibi her biri için farklı bir yaklaşım seçmeniz gerekir.
 
 >[!div class="step-by-step"]
->[Önceki](index.md)İleri
->[](data-driven-crud-microservice.md)
+>[Önceki](index.md)
+>[İleri](data-driven-crud-microservice.md)

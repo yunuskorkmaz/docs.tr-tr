@@ -3,22 +3,22 @@ title: Prototipsiz iletiler-WCF geliştiricileri için gRPC
 description: Daha fazla bilgi için bkz. IDL ve içinde C#oluşturulan prototip.
 author: markrendle
 ms.date: 09/09/2019
-ms.openlocfilehash: f6bb67fe3bc37fcb49c0e69b7960a00d584307b8
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 1fdbedaadb33ac3eb99ca360018beb36ac7a8d78
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71184206"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771627"
 ---
-# <a name="protobuf-messages"></a>Prototip iletileri
+# <a name="protobuf-messages"></a>Protobuf iletileri
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-Bu bölümde, `.proto` dosyalardaki prototip iletilerin nasıl bildirildiği, alan numaralarının ve türlerin temel kavramları açıklanmakta ve C# `protoc` derleyici tarafından oluşturulan koda bakar. Bölümün geri kalanı, farklı veri türlerinin prototipte nasıl temsil edildiği konusunda daha ayrıntılı bilgi sağlayacaktır.
+Bu bölümde, `.proto` dosyalarında prototip iletilerinin nasıl bildirildiği, alan numaralarının ve türlerin temel kavramları açıklanmaktadır ve `protoc` derleyicisi tarafından oluşturulan C# koda bakar. Bölümün geri kalanı, farklı veri türlerinin prototipte nasıl temsil edildiği konusunda daha ayrıntılı bilgi sağlayacaktır.
 
 ## <a name="declaring-a-message"></a>İleti bildirme
 
-WCF 'de, hisse `Stock` senedi Market Ticari uygulaması için bir sınıf aşağıdaki örnekte olduğu gibi tanımlanabilir:
+WCF 'de, hisse senedi Pazar ticareti uygulaması için bir `Stock` sınıfı aşağıdaki örnekte olduğu gibi tanımlanabilir:
 
 ```csharp
 namespace TraderSys
@@ -38,7 +38,7 @@ namespace TraderSys
 }
 ```
 
-Protoarabelleğe denk sınıfı uygulamak için, `.proto` dosyada bildirilmelidir. `protoc` Derleyici daha sonra yapı sürecinin bir parçası olarak .NET sınıfını oluşturur.
+Protoarabelleğe denk sınıfı uygulamak için, `.proto` dosyasında bildirilmelidir. @No__t_0 derleyici daha sonra yapı sürecinin bir parçası olarak .NET sınıfını oluşturur.
 
 ```protobuf
 syntax "proto3";
@@ -49,17 +49,17 @@ message Stock {
 
     int32 id = 1;
     string symbol = 2;
-    string displayName = 3;
-    int32 marketId = 4;
+    string display_name = 3;
+    int32 market_id = 4;
 
 }  
 ```
 
 İlk satır, kullanılmakta olan sözdizimi sürümünü bildirir. Dilin sürüm 3 2016 ' de yayımlanmıştır ve gRPC Hizmetleri için önerilen sürümdür.
 
-Satır, oluşturulan C# türler için kullanılacak ad alanını belirtir. `option csharp_namespace` Bu seçenek, `.proto` dosya diğer diller için derlendiğinde yok sayılır. Prototip dosyalarının birkaç dilde dile özgü seçenekleri içermesi yaygındır.
+@No__t_0 satırı, oluşturulan C# türler için kullanılacak ad alanını belirtir. @No__t_0 dosyası diğer diller için derlendiğinde Bu seçenek yok sayılır. Prototip dosyalarının birkaç dilde dile özgü seçenekleri içermesi yaygındır.
 
-`Stock` İleti tanımı, her biri türü, adı ve alan numarası olan dört alanı belirtir.
+@No__t_0 ileti tanımı, her biri türü, adı ve alan numarası olan dört alanı belirtir.
 
 ## <a name="field-numbers"></a>Alan numaraları
 
@@ -72,11 +72,11 @@ Alan numaraları, prototipin önemli bir parçasıdır. Bunlar, ikili kodlu veri
 Tür bildirimleri, [sonraki bölümde](protobuf-data-types.md)daha ayrıntılı bir şekilde ele alınan Prototiparabelleği yerel skaler veri türlerini kullanıyor. Bu bölümün geri kalanı, prototipin yerleşik türlerini kapsayacak ve bunların ortak .NET türleriyle ilişkisini göstermeyecektir.
 
 > [!NOTE]
-> Prototip yerel olarak bir `decimal` tür desteklemez, bu nedenle bunun yerine Double kullanılır. Tam ondalık duyarlık gerektiren uygulamalar için, bu bölümün sonraki bölümünde yer [alan Ondalıklar bölümüne](protobuf-data-types.md#decimals) bakın.
+> Prototip `decimal` bir türü yerel olarak desteklemez, bu nedenle bunun yerine Double kullanılır. Tam ondalık duyarlık gerektiren uygulamalar için, bu bölümün sonraki bölümünde yer [alan Ondalıklar bölümüne](protobuf-data-types.md#decimals) bakın.
 
 ## <a name="the-generated-code"></a>Oluşturulan kod
 
-Uygulamanızı yapılandırdığınızda, Prototipsiz iletilerinizin her biri için sınıflar oluşturur ve yerel türlerini C# türlerle eşleştireşlenir. Oluşturulan `Stock` tür aşağıdaki imzaya sahip olacaktır:
+Uygulamanızı yapılandırdığınızda, Prototipsiz iletilerinizin her biri için sınıflar oluşturur ve yerel türlerini C# türlerle eşleştireşlenir. Oluşturulan `Stock` türü aşağıdaki imzaya sahip olacaktır:
 
 ```csharp
 public class Stock
@@ -92,7 +92,7 @@ Oluşturulan gerçek kod bundan çok daha karmaşıktır, çünkü her bir sın�
 
 ### <a name="property-names"></a>Özellik adları
 
-Prototip derleyicinin, `PascalCase` `.proto` dosyada olsa da `camelCase` özellik adlarına uygulandığını unutmayın. Diğer platformlar için kod oluşturmanın `camelCase` , kuralları için beklenen durumu üretmeleri için ileti tanımında kullanılması en iyisidir.
+Prototip derleyicinin, `.proto` dosyasında `snake_case` olsa da özellik adlarına `PascalCase` uygulandığını unutmayın. [Prototipli Stil Kılavuzu](https://developers.google.com/protocol-buffers/docs/style) , diğer platformlar için kod oluşturmanın, kuralları için beklenen durumu üretmeleri için ileti tanımlarınızda `snake_case` kullanılmasını önerir.
 
 >[!div class="step-by-step"]
 >[Önceki](protocol-buffers.md)

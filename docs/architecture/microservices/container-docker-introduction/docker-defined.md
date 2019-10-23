@@ -2,12 +2,12 @@
 title: Docker nedir?
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | Docker nedir?
 ms.date: 08/31/2018
-ms.openlocfilehash: 7f7844f51e96914c1432332d9b641ea65bf48f07
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 6fb08157a78bfaee48e0bf919fc5942eadf0f287
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70296189"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771354"
 ---
 # <a name="what-is-docker"></a>Docker nedir?
 
@@ -81,5 +81,5 @@ Bir görüntüyü, işletim sisteminin zaten yüklü olduğu bir "bilgisayara" y
 Benzer şekilde, bir kapsayıcıyı görüntü sabit diski yüklü "bilgisayar" olarak düşünebilirsiniz. Kapsayıcı, tıpkı bir bilgisayar gibi, açık veya kapalı olabilir.
 
 >[!div class="step-by-step"]
->[Önceki](index.md)İleri
->[](docker-terminology.md)
+>[Önceki](index.md)
+>[İleri](docker-terminology.md)

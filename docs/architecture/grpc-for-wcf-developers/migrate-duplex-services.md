@@ -3,14 +3,14 @@ title: WCF geliştiricileri için WCF çift yönlü hizmetlerini gRPC-gRPC 'ye g
 description: Çeşitli WCF çift yönlü hizmetini gRPC akış Hizmetleri 'ne geçirmeyi öğrenin.
 author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 525dc3006c45f773242ab08b112dba72087a2e3f
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 1c3f87b035cea367188e8357f4755c7b6786ab77
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834514"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72770389"
 ---
-# <a name="migrate-wcf-duplex-services-to-grpc"></a>WCF çift yönlü hizmetlerini gRPC 'ye geçirme
+# <a name="migrate-wcf-duplex-services-to-grpc"></a>WCF çift yönlü hizmetlerini gRPC'ye geçirme
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
@@ -79,14 +79,14 @@ message SubscribeRequest {
 
 message StockTickerUpdate {
   string symbol = 1;
-  int32 priceCents = 2;
+  int32 price_cents = 2;
   google.protobuf.Timestamp time = 3;
 }
 ```
 
 ### <a name="implement-the-simplestockticker"></a>SimpleStockTicker uygulama
 
-@No__t-1 Sınıf kitaplığındaki üç sınıfı hedef çözümde yeni bir .NET Standard sınıf kitaplığına kopyalayarak, WCF projesinden sahte `StockPriceSubscriber` ' yı yeniden kullanın. En iyi uygulamaları daha iyi izlemek için, örnek oluşturmak için bir `Factory` türü ekleyin ve `IStockPriceSubscriberFactory` ' i ASP.NET Core bağımlılık ekleme hizmetleri ile kaydedin.
+@No__t_1 sınıf kitaplığından üç sınıfı hedef çözümde yeni bir .NET Standard sınıf kitaplığına kopyalayarak, WCF projesinden sahte `StockPriceSubscriber` kullanın. En iyi uygulamaları daha iyi izlemek için, örnek oluşturmak üzere bir `Factory` türü ekleyin ve `IStockPriceSubscriberFactory` ASP.NET Core bağımlılık ekleme hizmetleri ile kaydedin.
 
 #### <a name="the-factory-implementation"></a>Fabrika uygulama
 
@@ -166,19 +166,19 @@ public class StockTickerService : Protos.SimpleStockTicker.SimpleStockTickerBase
 }
 ```
 
-Gördüğünüz gibi, `.proto` dosyasındaki bildirim, "döndürülen" bir `StockTickerUpdate` ileti akışını "döndüren", aslında bir Vanilla `Task` döndürüyor. Akışı oluşturma işi oluşturulan kod ve gRPC çalışma zamanı kitaplıkları tarafından işlenir ve bu, `IServerStreamWriter<StockTickerUpdate>` yanıt akışı kullanıma sunar.
+Gördüğünüz gibi, `.proto` dosyasındaki bildirim "döndürülen" yöntemini bir `StockTickerUpdate` iletilerinin akışını söyetse de, aslında bir Vanilla `Task` döndürüyor. Akışı oluşturma işi oluşturulan kod ve gRPC çalışma zamanı kitaplıkları tarafından işlenir ve bu `IServerStreamWriter<StockTickerUpdate>` yanıt akışını kullanıma sunar.
 
 Bağlantı açıkken, hizmet sınıfı örneğinin etkin tutulduğu bir WCF çift yönlü hizmeti 'nin aksine, gRPC hizmeti, hizmeti canlı tutmak için döndürülen görevi kullanır. Bağlantı kapatılana kadar görevin tamamlanmamış olması gerekir.
 
-Hizmet, `ServerCallContext` ' den `CancellationToken` kullanarak istemcinin bağlantıyı kapattığını söyleyebilir. @No__t-0 olan basit bir statik yöntem, belirteç iptal edildiğinde tamamlanmış bir görevi oluşturmak için kullanılır.
+Hizmet, `ServerCallContext` `CancellationToken` kullanarak istemcinin bağlantıyı kapattığını söyleyebilir. Basit bir statik yöntem `AwaitCancellation`, belirteç iptal edildiğinde tamamlanan bir görev oluşturmak için kullanılır.
 
-@No__t-0 yönteminde, bir `StockPriceSubscriber` alın ve yanıt akışına yazan bir olay işleyicisi ekleyin. Sonra, `subscriber` ' ı hemen elden bırakmadan önce, kapalı akışa veri yazmaya çalışmasını engellemek için bağlantının kapatılmasını bekleyin.
+@No__t_0 yönteminde, bir `StockPriceSubscriber` alın ve yanıt akışına yazan bir olay işleyicisi ekleyin. Daha sonra, `subscriber`, kapatılan akışa veri yazmaya çalışmasını engellemek için hemen elden bırakmadan önce bağlantının kapatılmasını bekleyin.
 
-@No__t-0 yönteminde, akışa ileti yazılırken oluşabilecek hataları işlemek için bir `try` @ no__t-2 @ no__t-3 bloğu vardır. Bu, ağ üzerinden yapılan kalıcı bağlantılarda önemli bir konudur. Bu, kasıtlı olarak veya bir yerde bir hata nedeniyle herhangi bir milisaniyeye ayrılabilir.
+@No__t_0 yönteminde, akışa ileti yazılırken oluşabilecek hataları işlemek için bir `try` / `catch` bloğu vardır. Bu, ağ üzerinden yapılan kalıcı bağlantılarda önemli bir konudur. Bu, kasıtlı olarak veya bir yerde bir hata nedeniyle herhangi bir milisaniyeye ayrılabilir.
 
 ### <a name="using-the-stocktickerservice-from-a-client-application"></a>Bir istemci uygulamasından StockTickerService kullanma
 
-@No__t-0 dosyasından paylaşılabilir bir istemci sınıfı kitaplığı oluşturmak için önceki bölümdeki adımları izleyin. Örnekte, istemcisinin nasıl kullanılacağını gösteren bir .NET Core 3,0 konsol uygulaması vardır.
+@No__t_0 dosyasından bir paylaşılabilir istemci sınıfı kitaplığı oluşturmak için önceki bölümdeki adımları izleyin. Örnekte, istemcisinin nasıl kullanılacağını gösteren bir .NET Core 3,0 konsol uygulaması vardır.
 
 #### <a name="example-programcs"></a>Örnek Program.cs
 
@@ -209,16 +209,16 @@ class Program
 
 Bu durumda, oluşturulan istemcideki `Subscribe` yöntemi zaman uyumsuz değildir. Akış oluşturulur ve hemen kullanılabilir çünkü `MoveNext` yöntemi zaman uyumsuzdur ve ilk çağrılışında bağlantı etkin olana kadar tamamlanmaz.
 
-Akış zaman uyumsuz bir `DisplayAsync` yöntemine geçirilir; uygulama daha sonra kullanıcının bir tuşa basmasını bekler, sonra `DisplayAsync` metodunu iptal eder ve çıkmadan önce görevin tamamlanmasını bekler.
+Akış zaman uyumsuz bir `DisplayAsync` metoduna geçirilir; uygulama daha sonra kullanıcının bir tuşa basmasını bekler, sonra `DisplayAsync` yöntemini iptal eder ve çıkmadan önce görevin tamamlanmasını bekler.
 
 > [!NOTE]
-> Bu kod, `Main` C# yöntemi çıktığında akışı ve kanalı atmak için yeni 8 "using bildirimi" sözdizimini kullanıyor. Küçük bir değişiklik, ancak girintili ve boş satırları azaltan bir çok iyi.
+> Bu kod, `Main` yöntemi çıktığında C# akışı ve kanalı atmak için yeni 8 "using bildirimi" sözdizimini kullanıyor. Küçük bir değişiklik, ancak girintili ve boş satırları azaltan bir çok iyi.
 
 #### <a name="consume-the-stream"></a>Akışı tüketme
 
-WCF, sunucunun doğrudan istemcide Yöntem çağırmasını sağlamak için geri çağırma arabirimlerini kullandı. gRPC akışları farklı şekilde çalışır. İstemci, döndürülen akışın üzerinde yinelenir ve bir `IEnumerable` döndüren yerel bir yöntemden döndürüldüğünden olduğu gibi iletileri işler.
+WCF, sunucunun doğrudan istemcide Yöntem çağırmasını sağlamak için geri çağırma arabirimlerini kullandı. gRPC akışları farklı şekilde çalışır. İstemci, bir `IEnumerable` döndüren yerel bir yöntemden döndürüldüğünden olduğu gibi döndürülen akışın üzerinde dolaşır ve iletileri işler.
 
-@No__t-0 türü bir `IEnumerator<T>` gibi çalışır: daha fazla veri ve en son değeri döndüren bir `Current` özelliği olan sürece true döndürecek bir `MoveNext` yöntemi vardır. Tek fark, `MoveNext` yönteminin yalnızca bir `bool` yerine bir `Task<bool>` döndürdüğünden oluşur. @No__t-0 genişletme yöntemi, akışı yeni `await foreach` sözdizimiyle C# kullanılabilecek standart bir 8 `IAsyncEnumerable` ' de sarmalar.
+@No__t_0 türü bir `IEnumerator<T>` gibi çalışır: daha fazla veri ve en son değeri döndüren bir `Current` özelliği olan sürece true döndürecek bir `MoveNext` yöntemi vardır. Tek fark, `MoveNext` yönteminin yalnızca bir `bool` yerine `Task<bool>` döndürdüğünden oluşur. @No__t_0 uzantısı yöntemi, akışı yeni `await foreach` sözdizimiyle kullanılabilecek standart C# bir 8 `IAsyncEnumerable` kaydırır.
 
 ```csharp
 static async Task DisplayAsync(IAsyncStreamReader<StockTickerUpdate> stream, CancellationToken token)
@@ -242,18 +242,18 @@ static async Task DisplayAsync(IAsyncStreamReader<StockTickerUpdate> stream, Can
 ```
 
 > [!TIP]
-> Bu bölümün sonundaki [istemci kitaplıklarında](client-libraries.md#iobservable) bulunan bölümü, reaktif programlama düzenlerini kullanan geliştiriciler için `IAsyncStreamReader<T>` ' i bir `IObservable<T>` ' ye kaydırmak üzere bir genişletme yöntemi ve sınıfları ekleme bölümüne bakar.
+> Bu bölümün sonundaki [istemci kitaplıklarında](client-libraries.md#iobservable) bulunan bölüm, bir uzantı yöntemi ve sınıfların nasıl ekleneceğini, bir `IObservable<T>` `IAsyncStreamReader<T>`, reaktif programlama düzenlerini kullanan geliştiriciler için bir.
 
-Ayrıca, ağ hatası olasılığı nedeniyle özel durumların yanı sıra, kodun döngüyü bölmek için bir <xref:System.Threading.CancellationToken> kullandığından kaçınılmaz <xref:System.OperationCanceledException> olduğundan emin olun. @No__t-0 türü, `StatusCode` dahil olmak üzere gRPC çalışma zamanı hataları hakkında çok sayıda yararlı bilgi içerir. Daha fazla bilgi için, bkz. [Bölüm 4 ' te *hata işleme* ](error-handling.md).
+Ayrıca, ağ hatası olasılığı nedeniyle özel durumların yanı sıra, kod döngüyü bölmek için bir <xref:System.Threading.CancellationToken> kullandığından, kaçınılmaz <xref:System.OperationCanceledException>. @No__t_0 türü, gRPC çalışma zamanı hataları hakkında, `StatusCode` dahil olmak üzere çok yararlı bilgiler içerir. Daha fazla bilgi için, bkz. [Bölüm 4 ' te *hata işleme* ](error-handling.md).
 
 ## <a name="bidirectional-streaming"></a>Çift yönlü akış
 
 WCF tam çift yönlü hizmeti, her iki yönde de zaman uyumsuz ve gerçek zamanlı mesajlaşma sağlar. Sunucu akışı örneğinde, istemci bir istek başlatır ve ardından bir güncelleştirme akışı alır. Bu hizmetin daha iyi bir sürümü, yeni bir aboneliği durdurup oluşturmak zorunda kalmadan, istemcinin listeden hisse senedi eklemesine ve kaldırmasına izin verir. Bu işlev [FullStockTicker örnek çözümünde](https://github.com/dotnet-architecture/grpc-for-wcf-developers/tree/master/FullStockTickerSample/wcf/FullStockTicker)uygulandı.
 
-@No__t-0 arabirimi üç yöntem sağlar:
+@No__t_0 arabirimi üç yöntem sağlar:
 
 - `Subscribe` bağlantıyı başlatır.
-- `AddSymbol`, izlemek için bir hisse senedi simgesi ekler.
+- `AddSymbol` izlemek için bir hisse senedi simgesi ekler.
 - `RemoveSymbol` izlenen listeden bir sembol kaldırır.
 
 ```csharp
@@ -273,9 +273,9 @@ public interface IFullStockTickerService
 
 Geri çağırma arabirimi aynı kalır.
 
-Şu anda bir istemciden sunucuya ve diğeri sunucudan istemciye olan iki veri akışı olduğundan, bu düzenin gRPC 'de uygulanması daha basit bir işlemdir. Ekleme ve kaldırma işlemi uygulamak için birden çok yöntem kullanılması mümkün değildir, ancak [Bölüm 3](protobuf-any-oneof.md)' te kapsanan `Any` tür veya `oneof` anahtar sözcüğü kullanılarak tek bir akışa birden fazla ileti türü geçirilebilir.
+Şu anda bir istemciden sunucuya ve diğeri sunucudan istemciye olan iki veri akışı olduğundan, bu düzenin gRPC 'de uygulanması daha basit bir işlemdir. Ekleme ve kaldırma işlemini uygulamak için birden çok yöntem kullanılması mümkün değildir, ancak [Bölüm 3](protobuf-any-oneof.md)' te kapsanan `Any` türü veya `oneof` anahtar sözcüğü kullanılarak tek bir akışta birden fazla ileti türü geçirilebilir.
 
-Kabul edilebilir bir tür kümesi olduğunda, `oneof` ' ı daha iyi bir yoldur. Bir `AddSymbolRequest` veya `RemoveSymbolRequest` tutabilecek `ActionMessage` kullanın.
+Kabul edilebilir olan belirli türde bir durum için `oneof` daha iyi bir yoldur. Bir `AddSymbolRequest` ya da `RemoveSymbolRequest` tutabilecek bir `ActionMessage` kullanın.
 
 ```protobuf
 message ActionMessage {
@@ -294,7 +294,7 @@ message RemoveSymbolRequest {
 }
 ```
 
-@No__t-0 iletilerinin akışını alan, iki yönlü bir akış hizmeti bildirin.
+@No__t_0 iletilerinin akışını alan, iki yönlü bir akış hizmeti bildirin.
 
 ```protobuf
 service FullStockTicker {
@@ -302,7 +302,7 @@ service FullStockTicker {
 }
 ```
 
-Bu hizmetin uygulanması, `Subscribe` yönteminin ilk parametresi dışında, `Add` ve `Remove` isteklerini işlemek için kullanılabilen bir `IAsyncStreamReader<ActionMessage>` olduğunda, önceki örneğe benzer.
+Bu hizmetin uygulanması, `Subscribe` yönteminin ilk parametresi dışında, `Add` ve `Remove` isteklerini işlemek için kullanılabilen bir `IAsyncStreamReader<ActionMessage>`, önceki örneğe benzer.
 
 ```csharp
 public override async Task Subscribe(IAsyncStreamReader<ActionMessage> requestStream, IServerStreamWriter<StockTickerUpdate> responseStream, ServerCallContext context)
@@ -348,7 +348,7 @@ private static Task AwaitCancellation(CancellationToken token)
 }
 ```
 
-GRPC 'nin oluşturduğu `ActionMessage` sınıfı, `Add` ve `Remove` özelliklerinden yalnızca birinin ayarlanamadığına ve `null` ' ün ne tür bir ileti kullanıldığını bulmanın geçerli bir yoludur, ancak daha iyi bir yoldur. Kod oluşturma Ayrıca, aşağıdaki gibi görünen `ActionMessage` sınıfında `enum ActionOneOfCase` olarak oluşturulur:
+GRPC 'nin oluşturduğu `ActionMessage` sınıfı, `Add` ve `Remove` özelliklerinden yalnızca birinin ayarlanamadığına ve hangi `null` bir tür ileti kullanıldığını bulmanın geçerli bir yolu olduğunu garanti etmektedir. , ancak daha iyi bir yoldur. Kod oluşturma Ayrıca, aşağıdaki gibi görünen `ActionMessage` sınıfında bir `enum ActionOneOfCase` oluşturmuştur:
 
 ```csharp
 public enum ActionOneofCase {
@@ -358,7 +358,7 @@ public enum ActionOneofCase {
 }
 ```
 
-@No__t-1 nesnesindeki `ActionCase` özelliği, hangi alanın ayarlandığını belirleyen bir `switch` ifadesiyle birlikte kullanılabilir.
+@No__t_1 nesnesindeki `ActionCase` özellik, hangi alanın ayarlandığını belirleyebilmek için bir `switch` ifadesiyle birlikte kullanılabilir.
 
 ```csharp
 private async Task HandleActions(IAsyncStreamReader<ActionMessage> requestStream, IFullStockPriceSubscriber subscriber, CancellationToken token)
@@ -385,7 +385,7 @@ private async Task HandleActions(IAsyncStreamReader<ActionMessage> requestStream
 ```
 
 > [!TIP]
-> @No__t-0 ifadesinde, bilinmeyen bir @no__t 2 değeriyle karşılaşılırsa uyarı kaydeden bir `default` durumu vardır. Bu, bir istemcinin daha fazla eylem ekleyen `.proto` dosyasının daha yeni bir sürümünü kullandığını gösteren yararlı olabilir. Bunun nedeni, `switch` kullanmanın bilinen alanlar üzerinde `null` ' i sınamadan daha iyi bir nedenidir.
+> @No__t_0 deyimin, bilinmeyen bir `ActionOneOfCase` değeriyle karşılaşılırsa uyarı kaydeden bir `default` durumu vardır. Bu, bir istemcinin daha fazla eylem ekleyen `.proto` dosyasının daha yeni bir sürümünü kullandığını gösteren yararlı olabilir. Bunun nedeni, `switch` kullanmanın bilinen alanlar üzerinde `null` test ediden daha iyi olmasının bir nedenidir.
 
 ### <a name="use-the-fullstocktickerservice-from-a-client-application"></a>Bir istemci uygulamasından FullStockTickerService kullanma
 
@@ -413,9 +413,9 @@ public class MainWindowViewModel : IAsyncDisposable, INotifyPropertyChanged
     }
 ```
 
-@No__t-0 yöntemi tarafından döndürülen nesne artık gRPC kitaplığı türünün bir örneğidir `AsyncDuplexStreamingCall<TRequest, TResponse>`, bu da sunucuya istek göndermek için bir `RequestStream` ve yanıtları işlemek için bir `ResponseStream` sağlar.
+@No__t_0 yöntemi tarafından döndürülen nesne artık gRPC kitaplık türü `AsyncDuplexStreamingCall<TRequest, TResponse>` bir örneğidir. Bu, sunucuya istek göndermek için bir `RequestStream` ve yanıtları işlemeye yönelik bir `ResponseStream` sağlar.
 
-İstek akışı, sembolleri eklemek ve kaldırmak için bazı WPF `ICommand` yöntemlerinden kullanılır. Her işlem için `ActionMessage` nesnesi üzerinde ilgili alanı ayarlayın:
+İstek akışı, bazı WPF `ICommand` yöntemlerinden sembolleri eklemek ve kaldırmak için kullanılır. Her işlem için `ActionMessage` nesnesi üzerinde ilgili alanı ayarlayın:
 
 ```csharp
 private async Task Add()
@@ -434,9 +434,9 @@ public async Task Remove(PriceViewModel priceViewModel)
 ```
 
 > [!IMPORTANT]
-> @No__t-0 alanının değeri bir ileti üzerinde ayarlandığında, daha önce ayarlanmış olan tüm alanları otomatik olarak temizler.
+> Bir ileti üzerinde `oneof` alan değerinin ayarlanması, daha önce ayarlanmış olan tüm alanları otomatik olarak temizler.
 
-Yanıt akışı `async` yönteminde işlenir ve döndürdüğü `Task`, pencere kapatıldığında atılmaktadır.
+Yanıt akışı `async` bir yöntemde işlenir ve döndürdüğü `Task` pencere kapatıldığında atılmaktadır.
 
 ```csharp
 private async Task HandleResponsesAsync(CancellationToken token)
@@ -465,7 +465,7 @@ private async Task HandleResponsesAsync(CancellationToken token)
 
 ### <a name="client-clean-up"></a>İstemci Temizleme
 
-Pencere kapatıldığında ve `MainWindowViewModel` bırakıldığında (`MainWindow` ' nin `Closed` olayından), `AsyncDuplexStreamingCall` nesnesini düzgün bir şekilde elden çıkardığınızdan önerilir. Özellikle, sunucuda akışı düzgün bir şekilde kapatmak için, `RequestStream` üzerindeki `CompleteAsync` yöntemi çağrılmalıdır. Aşağıdaki örnek, örnek görünüm modelinden `DisposeAsync` yöntemini gösterir:
+Pencere kapatıldığında ve `MainWindowViewModel` atıldığı zaman (`MainWindow` `Closed` olayından), `AsyncDuplexStreamingCall` nesnesini düzgün bir şekilde elden çıkardığınızdan önerilir. Özellikle, sunucu üzerindeki akışı düzgün bir şekilde kapatmak için `RequestStream` `CompleteAsync` yöntemi çağrılmalıdır. Aşağıdaki örnek, örnek görünüm modelinden `DisposeAsync` yöntemini gösterir:
 
 ```csharp
 public ValueTask DisposeAsync()

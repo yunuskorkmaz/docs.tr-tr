@@ -2,12 +2,12 @@
 title: Tek yapılı uygulamalar
 description: Tek parçalı uygulamalar kapsayıca yönelik temel kavramları anlayın.
 ms.date: 02/15/2019
-ms.openlocfilehash: 1d4b54017e431bd9775bf2aee8c88f56e0489367
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 8664153ee2e9d1d253164e43ac13105f6dbf476c
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72394706"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771042"
 ---
 # <a name="monolithic-applications"></a>Tek yapılı uygulamalar
 
@@ -49,7 +49,7 @@ Birden çok sanal makineyi Docker konakları olarak dağıtabilir ve sanal makin
 
 Ana bilgisayarların dağıtımını geleneksel dağıtım teknikleri aracılığıyla yönetebilirsiniz.
 
-@No__t-0 ve `docker-compose up` gibi komutları kullanarak Docker kapsayıcılarını komut satırından yönetebilir ve ayrıca sürekli teslim (CD) işlem hatlarında otomatikleştirebilir ve örneğin Azure DevOps Services ' den Docker konaklarına dağıtabilirsiniz.
+@No__t_0 ve `docker-compose up` gibi komutları kullanarak Docker kapsayıcılarını komut satırından yönetebilirsiniz ve ayrıca, bu dosyayı sürekli teslim (CD) işlem hatları içinde otomatikleştirebilir ve örneğin Azure DevOps Services, Docker konaklarına dağıtabilirsiniz.
 
 ## <a name="monolithic-application-deployed-as-a-container"></a>Kapsayıcı olarak dağıtılan tek parçalı uygulama
 
@@ -61,7 +61,7 @@ Kapsayıcılar doğal olarak sabit olduğundan, Tasarım gereği, bir güncelle�
 
 Tek parçalı uygulamalar Docker 'tan faydalanabilir, ancak avantajların yalnızca ipuçlarına dokunuyoruz. Kapsayıcıları yönetmenin büyük avantajları, her bir kapsayıcı örneğinin çeşitli örneklerini ve yaşam döngüsünü yöneten kapsayıcı düzenleyicilerinin dağıtımıyla gelir. Tek parçalı uygulamayı, ölçeklendirilebilir, geliştirilmiş ve dağıtılan alt sistemlere bölmek, mikro hizmetler bölgesine giriş noktanşa noktasıdır.
 
-Tek parçalı uygulamalar kapsayıcıyla "kaldırma ve kaydırma" hakkında bilgi edinmek için, bu ek Microsoft kılavuzunu, [Azure bulut ve Windows kapsayıcılarıyla modernleştirin var olan .NET uygulamalarını](../../modernize-with-azure-containers/index.md)okuyun. Ayrıca, <https://aka.ms/LiftAndShiftWithContainersEbook> ' den PDF olarak indirebilirsiniz.
+Tek parçalı uygulamalar kapsayıcıyla "kaldırma ve kaydırma" hakkında bilgi edinmek için, [Azure bulut ve Windows kapsayıcıları ile bu ek Microsoft kılavuzunu, modernleştirin var olan .NET uygulamalarını](../../modernize-with-azure-containers/index.md)okuyun. Ayrıca, <https://aka.ms/LiftAndShiftWithContainersEbook> PDF olarak da indirebilirsiniz.
 
 ## <a name="publish-a-single-docker-container-app-to-azure-app-service"></a>Azure App Service için tek bir Docker kapsayıcı uygulaması yayımlama
 

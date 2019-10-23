@@ -3,12 +3,12 @@ title: WCF geliştiricileri için Kubernetes-gRPC
 description: Bir Kubernetes kümesinde ASP.NET Core gRPC hizmetlerini çalıştırma.
 author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 3af1b92ade106cf2338816ec69e6b13312681339
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 8a04e59bb23b802af6907a369e2c278f64f3fa9d
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71184409"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72770505"
 ---
 # <a name="kubernetes"></a>Kubernetes
 
@@ -24,11 +24,11 @@ Kubernetes aşağıdaki işlevleri içerir:
 - Giriş seçili Hizmetleri **dışarıdan kullanıma sunar** ve genellikle bu hizmetlerin örneklerinde yük dengelemesi sağlar.
 - **Kaynak yönetimi** , kapsayıcılara depolama gibi dış kaynakları ekler.
 
-Bu bölümde, bir ASP.NET Core gRPC hizmetinin ve hizmeti bir Kubernetes kümesine tüketen bir Web sitesinin nasıl dağıtılacağı ayrıntılandıralınacaktır. Kullanılan örnek uygulama, GitHub 'daki [Rendlilabs/GRPC-for-WCF-Developers](https://github.com/dotnet-architecture/grpc-for-wcf-developers/tree/master/KubernetesSample) deposunda bulunur,
+Bu bölümde, bir ASP.NET Core gRPC hizmetinin ve hizmeti bir Kubernetes kümesine tüketen bir Web sitesinin nasıl dağıtılacağı ayrıntılandıralınacaktır. Kullanılan örnek uygulama, GitHub 'daki [DotNet-Architecture/GRPC-for-WCF-Developers](https://github.com/dotnet-architecture/grpc-for-wcf-developers/tree/master/KubernetesSample) deposunda bulunur,
 
 ## <a name="kubernetes-terminology"></a>Kubernetes terminolojisi
 
-Kubernetes *istenen durum yapılandırmasını*KULLANıR: API, *pods*, *dağıtımlar* ve *Hizmetler*gibi nesneleri ve *Denetim düzlemi* , istenen durumu tüm düğümlerde uygulamayı dikkate alır.bir *kümede*. Bir Kubernetes kümesi, programlı bir şekilde `kubectl` veya komut satırı aracı kullanılarak iletilebileceği *Kubernetes API*'sini çalıştıran bir *ana* düğüme sahiptir. `kubectl`komut satırı bağımsız değişkenleri kullanarak nesne oluşturabilir ve yönetebilir, ancak Kubernetes nesneleri için bildirim verilerini içeren YAML dosyalarıyla en iyi şekilde çalışabilir.
+Kubernetes *istenen durum yapılandırmasını*KULLANıR: API, *pods*, *dağıtımlar* ve *Hizmetler*gibi nesneleri ve *Denetim düzlemi* , istenen durumu tüm düğümlerde uygulamayı dikkate alır.bir *kümede*. Bir Kubernetes kümesi, programlı olarak veya `kubectl` komut satırı aracı kullanılarak iletilebileceği *KUBERNETES API*'sini çalıştıran bir *ana* düğüme sahiptir. `kubectl`, komut satırı bağımsız değişkenleri kullanarak nesneleri oluşturabilir ve yönetebilir, ancak Kubernetes nesneleri için bildirim verilerini içeren YAML dosyalarıyla en iyi şekilde çalışabilir.
 
 ### <a name="kubernetes-yaml-files"></a>Kubernetes YAML dosyaları
 
@@ -41,9 +41,9 @@ metadata:
   # Object properties
 ```
 
-`apiVersion` Özelliği, dosyanın hangi sürümü (ve hangi API) hedeflenmiştir belirtmek için kullanılır. `kind` Özelliği, YAML 'nin gösterdiği nesne türünü belirtir. `metadata` Özelliği `name`, ,veya`labels`gibi nesne özelliklerini içerir. `namespace`
+@No__t_0 özelliği, dosyanın hangi sürümü (ve hangi API) hedeflenmiştir belirtmek için kullanılır. @No__t_0 özelliği, YAML 'nin gösterdiği nesne türünü belirtir. @No__t_0 özelliği, `name`, `namespace` veya `labels` gibi nesne özelliklerini içerir.
 
-Çoğu Kubernetes YAML dosyalarında, nesneyi oluşturmak için `spec` gereken kaynakları ve yapılandırmayı açıklayan bir bölüm de olur.
+Çoğu Kubernetes YAML dosyalarında, nesneyi oluşturmak için gereken kaynakları ve yapılandırmayı açıklayan bir `spec` bölümü de olur.
 
 ### <a name="pods"></a>Pod
 
@@ -81,23 +81,23 @@ Client Version: version.Info{Major:"1", Minor:"14", GitVersion:"v1.14.6", GitCom
 Server Version: version.Info{Major:"1", Minor:"14", GitVersion:"v1.14.6", GitCommit:"96fac5cd13a5dc064f7d9f4f23030a6aeface6cc", GitTreeState:"clean", BuildDate:"2019-08-19T11:05:16Z", GoVersion:"go1.12.9", Compiler:"gc", Platform:"linux/amd64"}
 ```
 
-Bu örnekte, hem `kubectl` CLI hem de Kubernetes sunucusu 1.14.6 sürümünü çalıştırıyor. Her sürümünün `kubectl` , sunucunun önceki ve sonraki sürümünü desteklemesi gerekir, bu nedenle `kubectl` 1,14, sunucu sürümleri 1,13 ve 1,15 ile birlikte çalışmalıdır.
+Bu örnekte, hem `kubectl` CLı hem de Kubernetes sunucusu 1.14.6 sürümünü çalıştırıyor. Her bir `kubectl` sürümünün sunucunun önceki ve sonraki sürümünü desteklemesi gerekir, bu nedenle `kubectl` 1,14 sunucu sürümleri 1,13 ve 1,15 ile çalışmalıdır.
 
 ## <a name="run-services-on-kubernetes"></a>Kubernetes üzerinde hizmetleri çalıştırma
 
-Örnek uygulamanın üç YAML `kube` dosyası içeren bir dizini vardır. Dosya özel bir `stocks`ad alanı bildirir. `namespace.yml` Dosya, GRPC uygulaması için dağıtımı ve hizmeti bildirir `stockweb.yml` ve dosya, GRPC hizmetini tüketen ASP.NET Core 3,0 MVC web uygulaması için dağıtım ve hizmeti bildirir. `stockdata.yml`
+Örnek uygulamanın üç YAML dosyası içeren bir `kube` dizini vardır. @No__t_0 dosyası, `stocks` özel bir ad alanı bildirir. @No__t_0 dosyası, gRPC uygulaması için dağıtımı ve hizmeti bildirir ve `stockweb.yml` dosyası, gRPC hizmetini kullanan bir ASP.NET Core 3,0 MVC web uygulaması için dağıtımı ve hizmeti bildirir.
 
-Bir `YAML` dosyayı ile birlikte `kubectl`kullanmak için `apply -f` komutunu kullanın.
+@No__t_1 bir `YAML` dosyası kullanmak için `apply -f` komutunu kullanın.
 
 ```console
 kubectl apply -f object.yml
 ```
 
-`apply` Komut, YAML dosyasının geçerliliğini denetler ve API 'den alınan hataları görüntüler, ancak bu işlem biraz zaman alabilir çünkü dosyada belirtilen tüm nesneler oluşturuluncaya kadar beklemez. Kümeden nesne oluşturmayı denetlemek için ilgili nesne türleriyle komutunukullanın.`kubectl get`
+@No__t_0 komutu, YAML dosyasının geçerliliğini denetler ve API 'den alınan tüm hataları görüntüler, ancak bu işlem biraz zaman alabilir çünkü dosyada belirtilen tüm nesneler oluşturuluncaya kadar beklemez. Kümedeki nesne oluşturmayı denetlemek için ilgili nesne türleriyle birlikte `kubectl get` komutunu kullanın.
 
 ### <a name="the-namespace-declaration"></a>Ad alanı bildirimi
 
-Ad alanı bildirimi basittir ve yalnızca bir `name`atamasını gerektirir.
+Ad alanı bildirimi basittir ve yalnızca bir `name` atanmasını gerektirir.
 
 ```yaml
 apiVersion: v1
@@ -106,7 +106,7 @@ metadata:
   name: stocks
 ```
 
-Dosyayı uygulamak ve ad alanının başarıyla oluşturulduğunu denetlemek için kullanın `kubectl`. `namespace.yml`
+@No__t_1 dosyasını uygulamak ve ad alanının başarıyla oluşturulduğunu denetlemek için `kubectl` kullanın.
 
 ```console
 > kubectl apply -f namespace.yml
@@ -119,11 +119,11 @@ stocks            Active   2m53s
 
 ### <a name="the-stockdata-application"></a>StockData uygulaması
 
-`stockdata.yml` Dosya iki nesne bildirir: bir dağıtım ve bir hizmet.
+@No__t_0 dosyası iki nesne bildirir: bir dağıtım ve bir hizmet.
 
 #### <a name="the-stockdata-deployment"></a>StockData dağıtımı
 
-Dağıtım bölümü, gereken çoğaltma `spec` sayısı ve dağıtım tarafından oluşturulup yönetilecek Pod nesneleri için bir `template` dağıtımı için için ' i sağlar. Dağıtım nesnelerinin, ana Kubernetes API 'si yerine ' `apiVersion`de belirtildiği gibi `apps` API ile yönetildiğini unutmayın.
+Dağıtım bölümü, gereken kopyaların sayısı ve dağıtım tarafından oluşturulup yönetilecek Pod nesnelerinin bir `template` dahil olmak üzere dağıtımın kendisi için `spec` sağlar. Dağıtım nesnelerinin, ana Kubernetes API 'SI yerine `apiVersion` belirtilen `apps` API 'siyle yönetildiğini unutmayın.
 
 ```yaml
 apiVersion: apps/v1
@@ -153,19 +153,19 @@ spec:
         - containerPort: 80
 ```
 
-`spec.selector` Özelliği, çalışan pods 'yi dağıtıma eşleştirmek için kullanılır. Pod 'un `metadata.labels` özelliği `matchLabels` özelliği ile eşleşmelidir, ya da API çağrısı başarısız olur.
+@No__t_0 özelliği, çalışan pods 'yi dağıtıma eşleştirmek için kullanılır. Pod 'un `metadata.labels` özelliği `matchLabels` özelliğiyle eşleşmelidir veya API çağrısı başarısız olur.
 
-`template.spec` Bölüm, kapsayıcıyı çalıştırılacak şekilde bildirir. Docker Desktop tarafından sağlandıkları gibi yerel bir Kubernetes kümesiyle çalışırken, bir sürüm etiketi olduğu sürece yerel olarak oluşturulan görüntüleri belirtebilirsiniz.
+@No__t_0 bölümü kapsayıcıyı çalıştırılacak şekilde bildirir. Docker Desktop tarafından sağlandıkları gibi yerel bir Kubernetes kümesiyle çalışırken, bir sürüm etiketi olduğu sürece yerel olarak oluşturulan görüntüleri belirtebilirsiniz.
 
 > [!IMPORTANT]
-> Varsayılan olarak, Kubernetes her zaman yeni bir görüntü çekmeyi ve çekmeye çalışır. Görüntüyü bilinen depolarından hiçbirinde bulamazsa Pod oluşturma işlemi başarısız olur. Yerel görüntülerle çalışmak için öğesini `imagePullPolicy` olarak `Never`ayarlayın.
+> Varsayılan olarak, Kubernetes her zaman yeni bir görüntü çekmeyi ve çekmeye çalışır. Görüntüyü bilinen depolarından hiçbirinde bulamazsa Pod oluşturma işlemi başarısız olur. Yerel görüntülerle çalışmak için `imagePullPolicy` `Never` olarak ayarlayın.
 
-`ports` Özelliği, pod üzerinde hangi kapsayıcı bağlantı noktalarının yayımlanacağını belirtir.  `stockservice` Görüntü, hizmeti standart http bağlantı noktasında çalıştırır, bu nedenle bağlantı noktası 80 yayımlandı.
+@No__t_0 özelliği, pod üzerinde hangi kapsayıcı bağlantı noktalarının yayımlanacağını belirtir.  @No__t_0 görüntüsü, hizmeti standart HTTP bağlantı noktasında çalıştırır, bu nedenle bağlantı noktası 80 yayımlandı.
 
-`resources` Bölüm, Pod içinde çalışan kapsayıcıya kaynak sınırları uygular. Bu, tek bir pod 'ın bir düğümdeki tüm kullanılabilir CPU veya bellek tüketmesini önlediği için iyi bir uygulamadır.
+@No__t_0 bölümü, Pod içinde çalışan kapsayıcıya kaynak sınırları uygular. Bu, tek bir pod 'ın bir düğümdeki tüm kullanılabilir CPU veya bellek tüketmesini önlediği için iyi bir uygulamadır.
 
 > [!NOTE]
-> ASP.NET Core 3,0, en iyi duruma getirilmiştir ve kaynak sınırlı kapsayıcılarda çalışacak şekilde ayarlanmıştır ve `dotnet/core/aspnet` Docker görüntüsü bir ortam değişkenini ayarlayarak `dotnet` çalışma zamanına bir kapsayıcı içinde olduğunu bildirir.
+> ASP.NET Core 3,0, en iyi duruma getirildi ve kaynak sınırlı kapsayıcılarda çalışacak şekilde ayarlanmıştır ve `dotnet/core/aspnet` Docker görüntüsü bir ortam değişkenini ayarlayarak `dotnet` çalışma zamanına bir kapsayıcıda olduğunu söyler.
 
 #### <a name="the-stockdata-service"></a>StockData hizmeti
 
@@ -184,11 +184,11 @@ spec:
     run: stockdata
 ```
 
-Service spec, bu durumda `selector` , bir etiketle `run: stockdata`birlikte `Pods`pods 'yi ararken, çalışmayı eşleştirmek için özelliğini kullanır. Eşleşen FID `port` 'ler üzerinde belirtilen, adlandırılmış hizmet tarafından yayımlanır. `stocks` Ad alanında çalışan diğer yığınların adresi olarak kullanarak `http://stockdata` bu hizmette http 'ye erişimi olabilir. Diğer ad alanlarında çalışan pods `http://stockdata.stocks` ana bilgisayar adını kullanabilir. [Ağ ilkelerini](https://kubernetes.io/docs/concepts/services-networking/network-policies/)kullanarak, siteler arası hizmet erişimini denetleyebilirsiniz.
+Service spec, çalışan `Pods` eşleştirmek için `selector` özelliğini kullanır, bu durumda bir etiket `run: stockdata` olan pods 'yi arıyor. Eşleşen FID 'ler üzerinde belirtilen `port`, adlandırılmış hizmet tarafından yayımlanır. @No__t_0 ad alanında çalışan diğer pods 'Ler, bu hizmette bulunan HTTP 'ye adres olarak `http://stockdata` kullanarak erişebilir. Diğer ad alanlarında çalışan pods `http://stockdata.stocks` ana bilgisayar adını kullanabilir. [Ağ ilkelerini](https://kubernetes.io/docs/concepts/services-networking/network-policies/)kullanarak, siteler arası hizmet erişimini denetleyebilirsiniz.
 
 #### <a name="deploy-the-stockdata-application"></a>StockData uygulamasını dağıtma
 
-Dosyayı uygulamak ve dağıtım ve hizmetin oluşturulduğunu denetlemek için kullanın `kubectl`. `stockdata.yml`
+@No__t_1 dosyasını uygulamak ve dağıtım ve hizmetin oluşturulduğunu denetlemek için `kubectl` kullanın.
 
 ```console
 > kubectl apply -f .\stockdata.yml
@@ -206,7 +206,7 @@ stockdata   ClusterIP   10.97.132.103   <none>        80/TCP    33s
 
 ### <a name="the-stockweb-application"></a>StockWeb uygulaması
 
-`stockweb.yml` Dosya, MVC uygulaması için dağıtımı ve hizmeti bildirir.
+@No__t_0 dosyası, MVC uygulaması için dağıtımı ve hizmeti bildirir.
 
 ```yaml
 apiVersion: apps/v1
@@ -257,11 +257,11 @@ spec:
 
 #### <a name="environment-variables"></a>Ortam değişkenleri
 
-Dağıtım nesnesinin `stockweb:1.0.0` bölümü, görüntüleri çalıştıran kapsayıcıda ayarlanacak ortam değişkenlerini belirtir. `env`
+Dağıtım nesnesinin `env` bölümü, `stockweb:1.0.0` görüntülerini çalıştıran kapsayıcıda ayarlanacak ortam değişkenlerini belirtir.
 
-Ortam değişkeni, EnvironmentVariables yapılandırma `StockData:Address` sağlayıcısı için teşekkürler yapılandırma ayarıyla eşlenir. **`StockData__Address`** Bu ayar, adlar arasında ayrı bölümlere iki alt çizgi kullanır. Adres, aynı Kubernetes `stockdata` ad alanında çalışan hizmetin hizmet adını kullanır.
+**@No__t_1** ortam değişkeni, EnvironmentVariables yapılandırma sağlayıcısı için teşekkürler `StockData:Address` yapılandırma ayarıyla eşlenir. Bu ayar, adlar arasında ayrı bölümlere iki alt çizgi kullanır. Adres, aynı Kubernetes ad alanında çalışan `stockdata` hizmetinin hizmet adını kullanır.
 
-Ortam **`DOTNET_SYSTEM_NET_HTTP_SOCKETSHTTPHANDLER_HTTP2UNENCRYPTEDSUPPORT`** değişkeni, için <xref:System.Net.Http.HttpClient>şifrelenmemiş <xref:System.AppContext> http/2 bağlantılarına izin veren bir anahtar ayarlar. Bu ortam değişkeni, burada gösterildiği gibi, kodda anahtarı ayarlamanın eşdeğeridir.
+**@No__t_1** ortam değişkeni <xref:System.Net.Http.HttpClient> IÇIN şifrelenmemiş HTTP/2 bağlantılarına izin veren bir <xref:System.AppContext> anahtarı ayarlar. Bu ortam değişkeni, burada gösterildiği gibi, kodda anahtarı ayarlamanın eşdeğeridir.
 
 ```csharp
 AppContext.SetSwitch("System.Net.Http.SocketsHttpHandler.Http2UnencryptedSupport", true);
@@ -271,17 +271,17 @@ Anahtar için bir ortam değişkeni kullanmak, ayarın uygulamanın çalıştı�
 
 #### <a name="service-types"></a>Hizmet türleri
 
-Web uygulamasını küme dışından erişilebilir hale getirmek için, `type: NodePort` özelliği kullanılır. Bu özellik türü, Kubernetes 'in hizmette bağlantı noktası 80 ' i kümenin dış ağ yuvaları üzerinde rastgele bir bağlantı noktasına yayımlamasına neden olur. Atanan bağlantı noktası `kubectl get service` komutu kullanılarak bulunabilir.
+Web uygulamasını küme dışından erişilebilir hale getirmek için `type: NodePort` özelliği kullanılır. Bu özellik türü, Kubernetes 'in hizmette bağlantı noktası 80 ' i kümenin dış ağ yuvaları üzerinde rastgele bir bağlantı noktasına yayımlamasına neden olur. Atanan bağlantı noktası `kubectl get service` komutu kullanılarak bulunabilir.
 
-Hizmet, küme dışından erişilememelidir, bu nedenle varsayılan `ClusterIP`türünü kullandı. `stockdata`
+@No__t_0 hizmetine küme dışından erişilememelidir, bu nedenle varsayılan tür olan `ClusterIP` kullanılır.
 
-Üretim sistemleri, ortak uygulamaları dış tüketicilere sunmak için büyük olasılıkla tümleşik bir yük dengeleyici kullanır. Bu şekilde sunulan hizmetler `LoadBalancer` türü kullanmalıdır.
+Üretim sistemleri, ortak uygulamaları dış tüketicilere sunmak için büyük olasılıkla tümleşik bir yük dengeleyici kullanır. Bu şekilde sunulan hizmetler `LoadBalancer` türünü kullanmalıdır.
 
 Hizmet türleri hakkında daha fazla bilgi için bkz. [Kubernetes yayımlama hizmetleri](https://kubernetes.io/docs/concepts/services-networking/service/#publishing-services-service-types) belgeleri.
 
 #### <a name="deploy-the-stockweb-application"></a>StockWeb uygulamasını dağıtma
 
-Dosyayı uygulamak ve dağıtım ve hizmetin oluşturulduğunu denetlemek için kullanın `kubectl`. `stockweb.yml`
+@No__t_1 dosyasını uygulamak ve dağıtım ve hizmetin oluşturulduğunu denetlemek için `kubectl` kullanın.
 
 ```console
 > kubectl apply -f .\stockweb.yml
@@ -297,7 +297,7 @@ NAME       TYPE       CLUSTER-IP     EXTERNAL-IP   PORT(S)        AGE
 stockweb   NodePort   10.106.141.5   <none>        80:32564/TCP   13s
 ```
 
-`get service` Komutun çıktısı, http bağlantı noktasının dış ağdaki bağlantı noktasında `32564` yayımlandığını gösterir; Docker Desktop için bu, localhost olur. Uygulamasına göz atarak `http://localhost:32564`uygulamaya erişebilirsiniz.
+@No__t_0 komutunun çıktısı, HTTP bağlantı noktasının dış ağdaki `32564` bağlantı noktasına yayımlandığını gösterir; Docker Desktop için bu, localhost olur. Uygulamaya `http://localhost:32564` göz atarak uygulamaya erişebilirsiniz.
 
 ### <a name="testing-the-application"></a>Uygulamayı test etme
 
@@ -305,11 +305,11 @@ StockWeb uygulaması, basit bir istek-yanıt hizmetinden alınan NASDAQ hisse se
 
 ![StockWeb ekran görüntüsü](media/kubernetes/stockweb-screenshot.png)
 
-`stockdata` Hizmetin çoğaltma sayısı artdıysa, **sunucu** değerinin satırdan satıra değiştirilmesini bekleyebilir, ancak aslında tüm 100 kayıtları her zaman aynı örnekten döndürülür. Sayfayı birkaç saniyede bir kez yenilerseniz, sunucu KIMLIĞI aynı kalır. Bu neden gerçekleşir? Burada çalmak için iki etken vardır.
+@No__t_0 hizmetinin çoğaltmalarının sayısı artdıysa, **sunucu** değerinin satırdan satıra değiştirilmesini bekleyebilir, ancak aslında tüm 100 kayıtları aynı örnekten döndürülür. Sayfayı birkaç saniyede bir kez yenilerseniz, sunucu KIMLIĞI aynı kalır. Bunun nedeni nedir? Burada çalmak için iki etken vardır.
 
 İlk olarak, Kubernetes hizmeti bulma sistemi varsayılan olarak "hepsini bir kez deneme" yük dengelemeyi kullanır. DNS sunucusu ilk kez sorgulandığında, hizmet için ilk eşleşen IP adresini döndürür. Sonraki sefer, listedeki bir sonraki IP adresi ve bu şekilde, sonuna kadar, başlangıç noktasına geri döngü.
 
-İkincisi, `HttpClient` StockWeb uygulamasının GRPC istemcisi için kullanılan, [httpclientfactory ASP.NET Core](../microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests.md)tarafından oluşturulup yönetilir ve bu istemcinin tek bir örneği, sayfaya yapılan her çağrı için kullanılır. İstemci yalnızca bir DNS araması yapar, bu nedenle tüm istekler aynı IP adresine yönlendirilir. Ayrıca, performans nedeniyle önbelleğe alınan birden çok istek, önbelleğe alınan DNS girişinin süresi dolana veya işleyici örneği bazı nedenlerle atılana kadar aynı IP *adresini kullanacaktır.* `HttpClientHandler`
+İkincisi, StockWeb uygulamasının gRPC istemcisi için kullanılan `HttpClient`, [HttpClientFactory ASP.NET Core](../microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests.md)tarafından oluşturulup yönetilir ve bu istemcinin tek bir örneği, sayfaya yapılan her çağrı için kullanılır. İstemci yalnızca bir DNS araması yapar, bu nedenle tüm istekler aynı IP adresine yönlendirilir. Ayrıca, `HttpClientHandler` performans nedenleriyle önbelleğe alındığından, önbelleğe alınan DNS girişinin süresi dolana veya işleyici örneği bazı nedenlerle atılana kadar, hızlı bir şekilde art arda birden çok istek aynı IP *adresini kullanacaktır.*
 
 Bu, varsayılan olarak bir gRPC hizmetine yapılan isteklerin kümedeki hizmetin tüm örneklerine dengelenmediği anlamına gelir. Farklı tüketiciler farklı örnekler kullanacaktır, ancak isteklerin iyi bir şekilde dağıtılmasını ve kaynakların dengeli kullanımını garanti etmez.
 

@@ -2,12 +2,12 @@
 title: Docker Tabanlı Uygulamalar için Geliştirme İşlemi
 description: Docker tabanlı uygulamalar geliştirmeye yönelik seçeneklere yönelik yüksek düzeyde bir genel bakış alın. Çoklu platform desteği (Windows, Mac ve Linux) için Windows, Mac için Visual Studio veya Visual Studio Code için istediğiniz Visual Studio 'Yu kullanma.
 ms.date: 09/27/2018
-ms.openlocfilehash: a32b27f3d98ed7ebf63b637ec0c979c22ee8e1e8
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 6299d67299948dce1081a211b350e657b2c1b951
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70296136"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72770133"
 ---
 # <a name="development-process-for-docker-based-applications"></a>Docker tabanlı uygulamalar için geliştirme süreci
 
@@ -19,7 +19,7 @@ ms.locfileid: "70296136"
 
 Tam ve güçlü bir IDE veya hafif ve çevik bir düzenleyiciyi tercih etmeksizin, Microsoft, Docker uygulamaları geliştirmek için kullanabileceğiniz araçlara sahiptir.
 
-**Visual Studio (Windows için).** Visual Studio ile Docker tabanlı uygulamalar geliştirirken, zaten yerleşik olan Docker Araçları ile birlikte sunulan Visual Studio 2017 sürüm 15,7 veya üstünü kullanmanız önerilir. Docker Araçları, uygulamalarınızı doğrudan hedef Docker ortamında geliştirmenize, çalıştırmanıza ve doğrulamanıza olanak sağlar. F5 tuşuna basarak uygulamanızı (tek bir kapsayıcı veya birden çok kapsayıcı) doğrudan bir Docker konağına kaydedebilir ve hata ayıklamanızı sağlar veya kapsayıcıyı yeniden oluşturmak zorunda kalmadan uygulamanızı düzenlemek ve yenilemek için CTRL + F5 ' e basabilirsiniz. Bu, Docker tabanlı uygulamalar için en güçlü geliştirme seçimdir.
+**Visual Studio (Windows için).** Visual Studio ile Docker tabanlı uygulamalar geliştirirken, zaten yerleşik olan Docker Araçları ile birlikte sunulan Visual Studio 2017 sürüm 15,7 veya sonraki bir sürümünü kullanmanız önerilir. Docker Araçları, uygulamalarınızı doğrudan hedef Docker ortamında geliştirmenize, çalıştırmanıza ve doğrulamanıza olanak sağlar. F5 tuşuna basarak uygulamanızı (tek bir kapsayıcı veya birden çok kapsayıcı) doğrudan bir Docker konağına kaydedebilir ve hata ayıklamanızı sağlar veya kapsayıcıyı yeniden oluşturmak zorunda kalmadan uygulamanızı düzenlemek ve yenilemek için CTRL + F5 ' e basabilirsiniz. Bu, Docker tabanlı uygulamalar için en güçlü geliştirme seçimdir.
 
 **Mac için Visual Studio.** Bu, macOS 'ta çalışan Xamarin Studio bir IDE, ve m2017 ' den beri Docker destekler. Bu, güçlü bir IDE kullanmak isteyen Mac makinelerde çalışan geliştiriciler için tercih edilen seçim olmalıdır.
 
@@ -35,16 +35,16 @@ Tam ve güçlü bir IDE veya hafif ve çevik bir düzenleyiciyi tercih etmeksizi
 - **Visual Studio Code**. Resmi site. \
   <https://code.visualstudio.com/download>
 
-- **Windows Community Edition için Docker Desktop (CE)**  \
+- **Windows Community Edition Için Docker Desktop (CE)**  \
   [https://hub.docker.com/editions/community/docker-ce-desktop-windows](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
-  
-- **Mac Community Edition için Docker Desktop (CE)**  \
+
+- **Mac Community Edition Için Docker Desktop (CE)**  \
   [https://hub.docker.com/editions/community/docker-ce-desktop-mac](https://hub.docker.com/editions/community/docker-ce-desktop-mac)
 
 ## <a name="net-languages-and-frameworks-for-docker-containers"></a>Docker kapsayıcıları için .NET dilleri ve çerçeveleri
 
-Bu kılavuzun önceki bölümlerinde belirtildiği gibi, Docker Kapsayıcılı .NET uygulamaları geliştirirken .NET Framework, .NET Core veya açık kaynaklı mono projesi kullanabilirsiniz. Hangi .NET Framework 'ün kullanımda\#olduğuna bağlı\#olarak, Linux veya Windows kapsayıcılarını hedeflemek için C, F veya Visual Basic ile geliştirebilirsiniz. Daha ayrıntılı about.NET dil için bkz. [.NET dil stratejisi](https://devblogs.microsoft.com/dotnet/the-net-language-strategy/)blog gönderisi.
+Bu kılavuzun önceki bölümlerinde belirtildiği gibi, Docker Kapsayıcılı .NET uygulamaları geliştirirken .NET Framework, .NET Core veya açık kaynaklı mono projesi kullanabilirsiniz. Hangi .NET Framework 'ün kullanımda olduğuna bağlı olarak, Linux veya Windows kapsayıcılarını hedeflemek için C \#, F \# veya Visual Basic geliştirebilirsiniz. Daha ayrıntılı about.NET dil için bkz. [.NET dil stratejisi](https://devblogs.microsoft.com/dotnet/the-net-language-strategy/)blog gönderisi.
 
 >[!div class="step-by-step"]
->[Önceki](../architect-microservice-container-applications/scalable-available-multi-container-microservice-applications.md)İleri
->[](docker-app-development-workflow.md)
+>[Önceki](../architect-microservice-container-applications/scalable-available-multi-container-microservice-applications.md)
+>[İleri](docker-app-development-workflow.md)

@@ -3,12 +3,12 @@ title: WCF bağlamaları ve aktarımları-WCF geliştiricileri için gRPC
 description: Farklı WCF bağlamalarının ve aktarımların gRPC ile nasıl karşılaştırılacağını öğrenin.
 author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 50bac73ee68d7156fc5fed55dfffb3ba7f2de924
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: f1866fe379dd307ede8128b43cf8f70c8b4caf69
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71184059"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771605"
 ---
 # <a name="wcf-bindings-and-transports"></a>WCF bağlamaları ve aktarımları
 
@@ -22,13 +22,11 @@ WCF 'nin NetTCP bağlaması kalıcı bağlantılar, küçük mesajlar ve iki yö
 
 ## <a name="http"></a>HTTP
 
-WCF BasicHttpBinding genellikle metin tabanlıdır, hatta SOAP biçimi olarak SOAP kullanarak ve modern ağa bağlı uygulamaların standartları tarafından çok yavaştır. Yalnızca, platformlar arası birlikte çalışabilirlik veya internet altyapısı üzerinden bağlantı sağlamak için kullanılır. GRPC 'nin eşdeğeri; HTTP/2 ' de iletiler için ikili Protohat Tel biçimi ile temel alınan aktarım katmanı olarak HTTP/2 kullandığından, tüm modern programlama dilleri ile tam platformlar arası birlikte çalışabilirlik olanağı sunabilir ve çerçeveleri.
+WCF BasicHttpBinding genellikle metin tabanlıdır, hatta SOAP biçimi olarak SOAP kullanarak ve NetTCP bağlamasıyla karşılaştırıldığında yavaştır. Genellikle platformlar arası birlikte çalışabilirlik veya internet altyapısı üzerinden bağlantı sağlamak için kullanılır. GRPC 'nin eşdeğeri; HTTP/2 ' de iletiler için ikili Protohat Tel biçimi ile temel alınan aktarım katmanı olarak HTTP/2 kullandığından, tüm modern programlama dilleri ile tam platformlar arası birlikte çalışabilirlik olanağı sunabilir ve çerçeveleri.
 
 ## <a name="named-pipes"></a>Adlandırılmış Kanallar
 
-WCF, aynı fiziksel makinedeki süreçler arasındaki iletişim için adlandırılmış bir kanallar bağlaması sağladı. Adlandırılmış kanallar ASP.NET Core gRPC 'nin ilk sürümü tarafından desteklenmez.
-
-Windows dışında, adlandırılmış kanallar tarafından sunulan işlevsellik bunun yerine genellikle UNIX etki alanı yuvaları tarafından sağlanır. Bu yuvalar `/var/run/docker.sock`, sistem ve sunucu olarak hangi GRPC ile çalışabileceği gibi, dosya sistemi adresleriyle temsil edilen normal TCP benzeri yuvalardır. Windows üzerinde adlandırılmış kanallar stili işlevini kullanmanız gerekiyorsa, Windows 10 ve Windows Server 'da bir sonraki güncelleştirme olan 2019 S4 içinde, etki alanı yuvalarını Windows içinde tam olarak desteklenen bir yerel özellik olarak ekler. Bu nedenle, Windows 'un bu ve sonraki sürümlerinde (veya Linux 'ta) çalışan gRPC Hizmetleri, adlandırılmış kanallar yerine etki alanı yuvaları kullanabilir. Ancak ekibiniz en son Windows sürümüne güncelleştiregerekmiyorsa, localhost TCP yuvalarını kullanmanız gerekir. Yerel TCP yuvalarını kullanmayla ilgili güvenlik sorunları, istemci ve sunucu arasında sertifika kimlik doğrulamasının kullanılmasıyla ele alınabilir.
+WCF, aynı fiziksel makinedeki süreçler arasındaki iletişim için adlandırılmış bir kanallar bağlaması sağladı. Adlandırılmış kanallar ASP.NET Core gRPC 'nin ilk sürümü tarafından desteklenmez. Adlandırılmış Kanallar (ve UNIX etki alanı yuvaları) için istemci ve sunucu desteği eklemek gelecekteki bir sürüm için hedeftir.
 
 ## <a name="msmq"></a>MSMQ
 
@@ -36,7 +34,7 @@ MSMQ, özel bir Windows ileti kuyruğu. WCF 'nin MSMQ 'ya bağlanması, gelecekt
 
 ## <a name="webhttpbinding"></a>WebHttpBinding
 
-`WebGet` Ve`WebInvoke` öznitelikleri ile WebHttpBinding (WCF REST olarak da bilinir), bu, bundan daha az ortak olduğu zaman JSON 'ı tek seferde konuşabilme API 'leri geliştirmenize olanak sağlar. Bu nedenle, WCF REST ile oluşturulmuş bir yenilenmiş API 'niz varsa, gRPC 'ye dönüştürmek yerine eşdeğer işlevselliği sağlayacak şekilde onu düzenli bir ASP.NET Core MVC web API uygulamasına geçirmeyi düşünün.
+@No__t_0 ve `WebInvoke` öznitelikleriyle birlikte, WebHttpBinding (WCF ReST olarak da bilinir), bu, bundan daha az ortak olduğu zaman, JSON 'ı tek seferde konuşabilme API 'Leri geliştirmenize olanak sağlar. Bu nedenle, WCF REST ile oluşturulmuş bir yenilenmiş API 'niz varsa, gRPC 'ye dönüştürmek yerine eşdeğer işlevselliği sağlayacak şekilde onu düzenli bir ASP.NET Core MVC web API uygulamasına geçirmeyi düşünün.
 
 >[!div class="step-by-step"]
 >[Önceki](wcf-endpoints-grpc-methods.md)

@@ -3,12 +3,12 @@ title: Service Mesh iletişim altyapısı
 description: Hizmet ağı teknolojilerinin bulut Yerel mikro hizmet iletişimini nasıl kolaylaştırması hakkında bilgi edinin
 author: robvet
 ms.date: 09/10/2019
-ms.openlocfilehash: 884b3bf9afd80144a36d3328af916f1c1f12bf4f
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: a9192bf9f5827d05b2453c796c72e11782f9f911
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71214341"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771026"
 ---
 # <a name="service-mesh-communication-infrastructure"></a>Service Mesh iletişim altyapısı
 
@@ -26,9 +26,9 @@ Bir hizmet ağı 'nın anahtar bileşeni bir ara sunucu. Bulutta yerel bir uygul
 
 **Şekil 4-23**. Yan otomobil ile hizmet ağı
 
-Önceki şekilde, iletilerin her mikro hizmet ile birlikte çalışan bir ara sunucu tarafından nasıl yakalandığını unutmayın. Her proxy, mikro hizmete özel trafik kurallarıyla yapılandırılabilir. İletileri anlamıştır ve bunları hizmetlerinize ve dış dünyaya yönlendirebilir. 
+Önceki şekilde, iletilerin her mikro hizmet ile birlikte çalışan bir ara sunucu tarafından nasıl yakalandığını unutmayın. Her proxy, mikro hizmete özel trafik kurallarıyla yapılandırılabilir. İletileri anlamıştır ve bunları hizmetlerinize ve dış dünyaya yönlendirebilir.
 
-Hizmet ağı, hizmetten hizmete iletişimin yönetilmesine birlikte hizmet bulma ve yük dengeleme için destek sağlar. 
+Hizmet ağı, hizmetten hizmete iletişimin yönetilmesine birlikte hizmet bulma ve yük dengeleme için destek sağlar.
 
 Bir hizmet ağı yapılandırıldıktan sonra oldukça işlevseldir. Ağ hizmeti bulma uç noktasından karşılık gelen bir örnek havuzu alır. Belirli bir hizmet örneğine bir istek gönderir ve sonucun gecikme süresini ve yanıt türünü kaydetme. Son istekler için gözlemlenen gecikme süresi dahil olmak üzere, farklı faktörlere bağlı olarak hızlı bir yanıt döndürmesinin en olası örneğini seçer.
 
@@ -38,7 +38,7 @@ Bölüm 6 ' da, mimarisi ve kullanılabilir açık kaynaklı uygulamalarla ilgil
 
 ## <a name="summary"></a>Özet
 
-Bu bölümde, bulutta yerel iletişim desenleri tartışıyoruz. Ön uç istemcilerinin arka uç mikro hizmetleriyle nasıl iletişim kurduğunu inceleyerek başladık. Bu şekilde, API Gateway platformları ve gerçek zamanlı iletişim hakkında konuşuyoruz. Daha sonra mikro hizmetlerin diğer arka uç hizmetleriyle nasıl iletişim kuracağını inceledik. Hem zaman uyumlu HTTP iletişimini hem de hizmetler genelinde zaman uyumsuz mesajlaşmayı inceledik. Bulutta yerel dünyada yakında sunulacak bir teknoloji olan gRPC 'yi kapsadık. Son olarak, hizmet ağı ile mikro hizmet iletişimini kolaylaştırmaya yönelik yeni ve hızlı bir şekilde gelişen bir teknoloji tanıtıldık. 
+Bu bölümde, bulutta yerel iletişim desenleri tartışıyoruz. Ön uç istemcilerinin arka uç mikro hizmetleriyle nasıl iletişim kurduğunu inceleyerek başladık. Bu şekilde, API Gateway platformları ve gerçek zamanlı iletişim hakkında konuşuyoruz. Daha sonra mikro hizmetlerin diğer arka uç hizmetleriyle nasıl iletişim kuracağını inceledik. Hem zaman uyumlu HTTP iletişimini hem de hizmetler genelinde zaman uyumsuz mesajlaşmayı inceledik. Bulutta yerel dünyada yakında sunulacak bir teknoloji olan gRPC 'yi kapsadık. Son olarak, hizmet ağı ile mikro hizmet iletişimini kolaylaştırmaya yönelik yeni ve hızlı bir şekilde gelişen bir teknoloji tanıtıldık.
 
 Bulutta yerel sistemlerde iletişimin sağlanmasına yardımcı olabilecek, yönetilen Azure hizmetlerinde özel bir vurgu yapıldı:
 
@@ -52,25 +52,25 @@ Bulutta yerel sistemlerde iletişimin sağlanmasına yardımcı olabilecek, yön
 
 Daha sonra bulut Yerel sistemlerdeki dağıtılmış verilere ve sunmakta olduğu avantajlara ve güçlüklere geçeceğiz.
 
-### <a name="references"></a>Referanslar 
+### <a name="references"></a>Referanslar
 
-- [.NET Mikro Hizmetleri: Kapsayıcılı .NET uygulamaları için mimari](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook)
-  
+- [.NET mikro hizmetleri: Kapsayıcılı .NET uygulamaları için mimari](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook)
+
 - [Mikro hizmetler için Interservice Iletişimi tasarlama](https://docs.microsoft.com/azure/architecture/microservices/design/interservice-communication)
 
 - [Gerçek zamanlı işlevselliği eklemek için tam olarak yönetilen bir hizmet olan Azure SignalR hizmeti](https://azure.microsoft.com/blog/azure-signalr-service-a-fully-managed-service-to-add-real-time-functionality/)
-  
+
 - [Azure API ağ geçidi giriş denetleyicisi](https://azure.github.io/application-gateway-kubernetes-ingress/)
-  
+
 - [Azure Kubernetes Service (AKS) içindeki giriş hakkında](https://vincentlauzon.com/2018/10/10/about-ingress-in-azure-kubernetes-service-aks/)
- 
+
 - [Pratik gRPC](https://www.worldcat.org/title/practical-grpc/oclc/1042342319)
 
 - [gRPC belgeleri](https://grpc.io/docs/guides/)
 
-- [WCF geliştiricileri Için GRPC](https://bing.com) [Bu, gRPC defteri işaretle]
-  
-- [GRPC hizmetlerini HTTP API 'Leri ile karşılaştırma](https://docs.microsoft.com/en-us/aspnet/core/grpc/comparison?view=aspnetcore-3.0)
+- [WCF geliştiricileri Için GRPC](https://bing.com) [Mark GRPC book]
+
+- [GRPC hizmetlerini HTTP API 'Leri ile karşılaştırma](https://docs.microsoft.com/aspnet/core/grpc/comparison?view=aspnetcore-3.0)
 
 >[!div class="step-by-step"]
 >[Önceki](rest-grpc.md)

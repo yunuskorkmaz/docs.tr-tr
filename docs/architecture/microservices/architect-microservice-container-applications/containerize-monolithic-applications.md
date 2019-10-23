@@ -2,12 +2,12 @@
 title: Tek Yapılı Uygulamaları Kapsayıcıya Alma
 description: Tek parçalı uygulamaların kapsayıcılarından yararlanın, mikro hizmetler mimarisinin tüm avantajlarını almamakla birlikte, hemen teslim edilebilir önemli dağıtım avantajları vardır.
 ms.date: 09/20/2018
-ms.openlocfilehash: 9e457fba56c8fdf946618fca10285f4c0a343af4
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 5b38ba1c2954f4fd4064723b1316afbf09d25bf2
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70295544"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771472"
 ---
 # <a name="containerizing-monolithic-applications"></a>Tek Yapılı Uygulamaları Kapsayıcıya Alma
 
@@ -23,7 +23,7 @@ Bu modeli yönetmek için, uygulamayı temsil etmek üzere tek bir kapsayıcı d
 
 Uygulamanın büyümesi durumunda bu yaklaşımın aşağı kısmı, ölçeklendirilmesi gerekir. Uygulamanın tamamı ölçeklenebiliyorsanız, aslında bir sorun değildir. Ancak çoğu durumda, uygulamanın yalnızca birkaç bölümü ölçeklendirmeyi gerektiren sıkıştırma noktalarından, diğer bileşenler daha az kullanılır.
 
-Örneğin, tipik bir e-ticaret uygulamasında, büyük olasılıkla ürün bilgileri alt sistemini ölçeklendirmeniz gerekir, çünkü pek çok müşteri satın alma işleminden farklı ürünlere gözatacağından. Daha fazla müşteri, kendi sepetini ödeme işlem hattını kullanmından kullanıyor. Daha az müşteri, yorum ekler veya satın alma geçmişini görüntüler. Böylece içerik ve pazarlama kampanyalarını yönetmesi gereken yalnızca birkaç çalışanın olması gerekebilir. Tek parçalı tasarımı ölçeklendirirseniz, bu farklı görevlere yönelik tüm kodlar birden çok kez dağıtılır ve aynı şekilde ölçeklendirilir.
+Örneğin, tipik bir e-ticaret uygulamasında, büyük olasılıkla ürün bilgileri alt sistemini ölçeklendirmeniz gerekir, çünkü pek çok müşteri satın alma işleminden farklı ürünlere gözatacağından. Daha fazla müşteri, kendi sepetini ödeme işlem hattını kullanmından kullanıyor. Daha az müşteri, yorum ekler veya satın alma geçmişini görüntüler. Ve yalnızca içerik ve pazarlama kampanyalarını yönetmesi gereken birkaç çalışandan da olabilirsiniz. Tek parçalı tasarımı ölçeklendirirseniz, bu farklı görevlere yönelik tüm kodlar birden çok kez dağıtılır ve aynı şekilde ölçeklendirilir.
 
 Uygulama yatay tekrarlarının ölçeklendirilmesi, uygulamanın farklı bölgelerini bölmek ve benzer iş kavramlarını veya verileri bölümlemek için birden çok yol vardır. Ancak, tüm bileşenlerin ölçeklendirilmesi sorununa ek olarak, tek bir bileşendeki değişiklikler tüm uygulamanın tam yeniden test edilmesini ve tüm örneklerin tam yeniden dağıtılması gerektirir.
 
@@ -33,7 +33,7 @@ Altyapı açısından, her sunucu aynı ana bilgisayar içinde birçok uygulama 
 
 ![Bir konak, her biri ayrı bir kapsayıcıda olmak üzere çeşitli tek parçalı uygulamalar çalıştırabilir.](./media/image2.png)
 
-**Şekil 4-2**. Tek parçalı yaklaşım: Her uygulama bir kapsayıcı olarak çalışan birden çok uygulama çalıştıran konak
+**Şekil 4-2**. Tek parçalı yaklaşım: bir kapsayıcı olarak çalışan birden çok uygulamayı çalıştıran konak
 
 Microsoft Azure tek parçalı uygulamalar, her örnek için adanmış VM 'Ler kullanılarak dağıtılabilir. Ayrıca, [Azure sanal makine ölçek kümelerini](https://azure.microsoft.com/documentation/services/virtual-machine-scale-sets/)kullanarak VM 'leri kolayca ölçeklendirebilirsiniz. [Azure App Service](https://azure.microsoft.com/services/app-service/) , tek parçalı uygulamalar çalıştırabilir ve VM 'leri yönetmeniz gerekmeden örnekleri kolayca ölçeklendirebilir. 2016 ' den itibaren, Azure App Services, her Docker kapsayıcısının tek bir örneğini çalıştırabilir ve dağıtımı basitleştirecek.
 
@@ -43,13 +43,13 @@ Soru-cevap ortamında veya sınırlı bir üretim ortamında, Şekil 4-3 ' de g�
 
 **Şekil 4-3**. Tek bir kapsayıcı uygulamasını ölçeklendirerek birden çok ana bilgisayar örneği
 
-Çeşitli konaklara dağıtım, geleneksel dağıtım teknikleri ile yönetilebilir. Docker konakları el ile veya elle `docker run` `docker-compose` gerçekleştirilen komutlarla veya sürekli teslim (CD) işlem hatları gibi Otomasyon aracılığıyla yönetilebilir.
+Çeşitli konaklara dağıtım, geleneksel dağıtım teknikleri ile yönetilebilir. Docker konakları, el ile yapılan `docker run` veya `docker-compose` gibi komutlarla veya sürekli teslim (CD) işlem hatları gibi Otomasyon aracılığıyla yönetilebilir.
 
 ## <a name="deploying-a-monolithic-application-as-a-container"></a>Tek parçalı uygulamayı kapsayıcı olarak dağıtma
 
 Tek parçalı uygulama dağıtımlarını yönetmek için kapsayıcıları kullanmanın avantajları vardır. Kapsayıcı örneklerinin ölçeklendirilmesi, ek VM 'Leri dağıtmaktan çok daha hızlı ve daha kolaydır. Sanal Makine Ölçek Kümeleri kullanıyor olsanız da VM 'Lerin başlaması zaman alır. Kapsayıcılar yerine geleneksel uygulama örnekleri olarak dağıtıldığında, uygulamanın yapılandırması VM 'nin bir parçası olarak yönetilir ve bu ideal değildir.
 
-Docker görüntüsü olarak güncelleştirmelerin dağıtımı, çok daha hızlı ve daha verimlidir. Docker görüntüleri genellikle Saniyeler içinde başlar ve piyasaya çıkarma hızlanır. Docker görüntü örneğini aşağı doğru artırma, bir `docker stop` komutu vermek kadar kolay ve genellikle bir saniyeden daha az tamamlanır.
+Docker görüntüsü olarak güncelleştirmelerin dağıtımı, çok daha hızlı ve daha verimlidir. Docker görüntüleri genellikle Saniyeler içinde başlar ve piyasaya çıkarma hızlanır. Bir Docker görüntü örneğini aşağı doğru artırma, `docker stop` bir komut vermek kadar kolaydır ve genellikle bir saniyeden daha az tamamlanır.
 
 Kapsayıcılar tasarıma göre sabit olduğundan, bozulan VM 'Ler hakkında endişelenmeniz gerekmez. Buna karşılık, bir VM için güncelleştirme betikleri, diskte kalan belirli bir yapılandırma veya dosya için hesap almayı unutabilirler.
 
@@ -70,5 +70,5 @@ Visual Studio 2017 ve üzeri sürümlerde kapsayıcı desteği, Şekil 4-4 ' de 
 Şekil 4-4 ' de de gösterildiği gibi, yayımlama akışı bir görüntüyü kapsayıcı kayıt defteri aracılığıyla iter. Bu, Azure Container Registry (Azure 'daki dağıtımlarınıza bir kayıt defteri yakın ve Azure Active Directory gruplar ve hesaplar ile güvenliği sağlanmış) veya Docker Hub veya şirket içi kayıt defteri gibi başka bir Docker kayıt defteri olabilir.
 
 >[!div class="step-by-step"]
->[Önceki](index.md)İleri
->[](docker-application-state-data.md)
+>[Önceki](index.md)
+>[İleri](docker-application-state-data.md)

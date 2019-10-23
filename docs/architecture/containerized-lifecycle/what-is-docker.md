@@ -2,12 +2,12 @@
 title: Docker nedir?
 description: Docker 'ın anlaşılmasından biraz daha ayrıntılı bir şekilde yararlandığınızda, size yardımcı olabilecek basit bir benzerleme vurguladı.
 ms.date: 02/15/2019
-ms.openlocfilehash: 7747c4985af27be0a073fad2f22622f697f4ce27
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 7fd3c599afda2d59e0d56756bd61495f2d0370a0
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70295612"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72770714"
 ---
 # <a name="what-is-docker"></a>Docker nedir?
 
@@ -35,7 +35,7 @@ Bu kapsayıcıların görüntüleri oluşturulur ve yalnızca aynı şekilde ça
 
 Şekil 1-3, VM 'Ler ve Docker Kapsayıcıları arasında bir karşılaştırma gösterir.
 
-![VM 'Ler için, aşağıdan yukarıya ana bilgisayar sunucusunda üç temel katman vardır: altyapı, ana bilgisayar Işletim sistemi ve hiper yönetici ve her VM 'nin kendi işletim sistemi ve tüm gerekli kitaplıklar vardır. Diğer taraftan, Docker Için, ana bilgisayar sunucusu yalnızca altyapı ve işletim sistemi ve en üstünde kapsayıcı motoru bulunur ve bu da kapsayıcıyı yalıtılmış ancak temel işletim sistemi hizmetlerini paylaşıyor.](./media/image3.png)
+![VM 'Ler için, aşağıdan yukarıya ana bilgisayar sunucusunda üç temel katman vardır: altyapı, ana bilgisayar Işletim sistemi ve hiper yönetici ve her VM 'nin kendi işletim sistemi ve tüm gerekli kitaplıklar vardır. Diğer taraftan, Docker Için, konak sunucusu yalnızca altyapı ve işletim sistemi ve en üstünde, kapsayıcı altyapısı, kapsayıcının yalıtılmış ancak temel işletim sistemi hizmetlerini paylaşan kapsayıcı motoru vardır.](./media/image3.png)
 
 **Şekil 1-3**. Geleneksel sanal makinelerin Docker kapsayıcılarına karşılaştırması
 
@@ -78,5 +78,5 @@ Bir görüntüyü, işletim sisteminin zaten yüklü olduğu bir "bilgisayara" y
 Benzer şekilde, bir kapsayıcıyı görüntü sabit diski yüklü "bilgisayar" olarak düşünebilirsiniz. Kapsayıcı, tıpkı bir bilgisayar gibi, açık veya kapalı olabilir.
 
 >[!div class="step-by-step"]
->[Önceki](index.md)İleri
->[](docker-terminology.md)
+>[Önceki](index.md)
+>[İleri](docker-terminology.md)

@@ -2,12 +2,12 @@
 title: Basit bir veri temelli CRUD mikro hizmeti oluşturma
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | Bir mikro Hizmetler uygulaması bağlamında basit bir CRUD (veri odaklı) mikro hizmeti oluşturmayı anlayın.
 ms.date: 01/07/2019
-ms.openlocfilehash: 74d9022ffa70ade6ae6e7d405403524dfbc2145a
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: db179d9d7d5be5b03f8409b823ee87e71e1c7135
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71039909"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771201"
 ---
 # <a name="creating-a-simple-data-driven-crud-microservice"></a>Basit bir veri temelli CRUD mikro hizmeti oluşturma
 
@@ -96,9 +96,9 @@ public class CatalogContext : DbContext
 }
 ```
 
-Ek `DbContext` uygulamalarına sahip olabilirsiniz. Örneğin, örnek katalog. API mikro hizmetinde, veritabanına ilk kez erişmeye çalıştığında örnek verileri `DbContext` otomatik `CatalogContextSeed` olarak dolduran ikinci bir adlandırılmış ad vardır. Bu yöntem, tanıtım verileri ve otomatikleştirilmiş test senaryoları için yararlıdır.
+Ek `DbContext` uygulamalarına sahip olabilirsiniz. Örneğin, örnek katalog. API mikro hizmetinde, veritabanına erişmeye çalıştığında örnek verileri otomatik olarak dolduran `CatalogContextSeed` adlı ikinci bir `DbContext` vardır. Bu yöntem, tanıtım verileri ve otomatikleştirilmiş test senaryoları için yararlıdır.
 
-İçinde, nesne/veritabanı varlık `OnModelCreating` eşlemelerini ve diğer [EF genişletilebilirlik noktalarını](https://devblogs.microsoft.com/dotnet/implementing-seeding-custom-conventions-and-interceptors-in-ef-core-1-0/)özelleştirmek için yöntemini kullanırsınız. `DbContext`
+@No__t_0 içinde, nesne/veritabanı varlık eşlemelerini ve diğer [EF genişletilebilirlik noktalarını](https://devblogs.microsoft.com/dotnet/implementing-seeding-custom-conventions-and-interceptors-in-ef-core-1-0/)özelleştirmek için `OnModelCreating` yöntemini kullanırsınız.
 
 ##### <a name="querying-data-from-web-api-controllers"></a>Web API denetleyicilerinden verileri sorgulama
 
@@ -118,7 +118,7 @@ public class CatalogController : ControllerBase
         ICatalogIntegrationEventService catalogIntegrationEventService)
     {
         _catalogContext = context ?? throw new ArgumentNullException(nameof(context));
-        _catalogIntegrationEventService = catalogIntegrationEventService 
+        _catalogIntegrationEventService = catalogIntegrationEventService
             ?? throw new ArgumentNullException(nameof(catalogIntegrationEventService));
 
         _settings = settings.Value;
@@ -168,9 +168,9 @@ _context.SaveChanges();
 
 ASP.NET Core, bağımlılık ekleme (dı) kutusunu kutudan çıkar. Tercih ettiğiniz IOC kapsayıcısını ASP.NET Core altyapısına takabilirsiniz, ancak isterseniz, üçüncü taraf bir denetim (IOC) kapsayıcısı ayarlamanız gerekmez. Bu durumda, gerekli EF DBContext veya ek depoları denetleyici Oluşturucusu aracılığıyla doğrudan ekleyebileceðiniz anlamına gelir.
 
-`CatalogController` Sınıfının Yukarıdaki örnekte, `CatalogController()` Oluşturucu aracılığıyla ve diğer nesneler `CatalogContext` türünde bir nesne ekleme.
+@No__t_0 sınıfının Yukarıdaki örnekte, `CatalogController()` Oluşturucusu aracılığıyla `CatalogContext` türünde bir nesne ve diğer nesneler ekleme.
 
-Web API projesinde ayarlanmakta olan önemli bir yapılandırma, hizmetin IOC kapsayıcısına DbContext sınıfı kaydolmalıdır. Bu şekilde `Startup` , aşağıdaki örnekte gösterildiği gibi `ConfigureServices()` yöntemi içindeki `services.AddDbContext<DbContext>()` yöntemini çağırarak sınıfında.
+Web API projesinde ayarlanmakta olan önemli bir yapılandırma, hizmetin IOC kapsayıcısına DbContext sınıfı kaydolmalıdır. Genellikle, aşağıdaki örnekte gösterildiği gibi `ConfigureServices()` yönteminin içindeki `services.AddDbContext<DbContext>()` yöntemini çağırarak `Startup` sınıfında bunu yapabilirsiniz:
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
@@ -205,10 +205,10 @@ public void ConfigureServices(IServiceCollection services)
 
 ### <a name="additional-resources"></a>Ek kaynaklar
 
-- **Verileri sorgulama** \
+- **Veri sorgulama**  \
   [https://docs.microsoft.com/ef/core/querying/index](/ef/core/querying/index)
 
-- **Verileri kaydetme** \
+- **Veri kaydetme**  \
   [https://docs.microsoft.com/ef/core/saving/index](/ef/core/saving/index)
 
 ## <a name="the-db-connection-string-and-environment-variables-used-by-docker-containers"></a>Docker kapsayıcıları tarafından kullanılan DB bağlantı dizesi ve ortam değişkenleri
@@ -248,7 +248,7 @@ catalog.api:
 
 Çözüm düzeyindeki Docker-Compose. yıml dosyaları, proje veya mikro hizmet düzeyindeki yapılandırma dosyalarından yalnızca daha esnek değildir, ancak değerleri ayarlanan değerlerle Docker-Compose dosyalarında belirtilen ortam değişkenlerini geçersiz kılarsınız, daha da güvenli hale geldi. Azure DevOps Services Docker dağıtım görevleri gibi dağıtım araçlarınız.
 
-Son olarak, bir önceki kod örneğinde ConfigureServices yönteminde gösterildiği gibi,\["ConnectionString"\]yapılandırmasını kullanarak kodunuzda bu değeri alabilirsiniz.
+Son olarak, bir önceki kod örneğinde ConfigureServices yönteminde gösterildiği gibi, yapılandırma \[ "ConnectionString" \] kullanarak bu değeri kodunuzda alabilirsiniz.
 
 Ancak, üretim ortamları için bağlantı dizeleri gibi gizli dizileri nasıl depolayabileceğiniz konusunda ek yöntemleri incelemek isteyebilirsiniz. Uygulama gizli dizilerini yönetmenin harika bir yolu [Azure Key Vault](https://azure.microsoft.com/services/key-vault/)kullanmaktır.
 
@@ -289,13 +289,13 @@ Bu sürüm oluşturma mekanizması basittir ve isteği uygun uç noktaya yönlen
 
 ### <a name="additional-resources"></a>Ek kaynaklar
 
-- **Scott Hanselman. ASP.NET Core daha fazla Web API sürümü oluşturma kolaylaştırıldı** \
+- **Scott Hanselman. ASP.NET Core yeniden oluşturulmuş Web API 'SI sürümü kullanımı kolay**  \
   <https://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx>
 
-- **Yeniden bir Web API 'sinin sürümü oluşturma** \
+- **Yeniden bir Web API 'Sinin sürümü oluşturma**  \
   <https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api>
 
-- **Roy Fielding. Sürüm oluşturma, hiper medya ve REST** \
+- **Roy Fielding. Sürüm oluşturma, hiper medya ve REST**  \
   <https://www.infoq.com/articles/roy-fielding-on-versioning>
 
 ## <a name="generating-swagger-description-metadata-from-your-aspnet-core-web-api"></a>ASP.NET Core Web API 'nizden Swagger açıklaması meta verileri oluşturuluyor
@@ -328,7 +328,7 @@ Swagger 'nin meta verileri, API 'Leri kullanmayı ve bunlara bağlanmayı anlama
 
 *Swagger-UI*temel ALıNARAK işlevsel API Yardım sayfaları biçiminde ASP.NET Core REST API uygulamaları için Swagger meta veri üretimini otomatik hale getirmek için çeşitli seçenekler vardır.
 
-Büyük olasılıkla [eshoponcontainers](https://github.com/dotnet-architecture/eShopOnContainers) 'da kullanılmakta olan [swashbuckle](https://github.com/domaindrivendev/Swashbuckle.AspNetCore) , bu kılavuzda bazı ayrıntılarla ele alacağız, ancak aynı zamanda TypeScript ve C\# API istemcileri oluşturabilen [nswag](https://github.com/RSuter/NSwag)kullanma seçeneği C\# denetleyicileri, Swagger veya openapı belirtiminden ve hatta denetleyicileri içeren. dll dosyasını tarayarak, [NSwagStudio](https://github.com/RSuter/NSwag/wiki/NSwagStudio)kullanarak.
+En iyi şekilde [Eshoponcontainers](https://github.com/dotnet-architecture/eShopOnContainers) 'Da kullanılan [swashbuckle](https://github.com/domaindrivendev/Swashbuckle.AspNetCore) , bu kılavuzda bazı ayrıntılarla birlikte ele alacağız, ancak aynı zamanda TYPESCRIPT ve C \# API Istemcileri oluşturabilen [nswag](https://github.com/RSuter/NSwag)kullanma seçeneği de mevcuttur. C \# denetleyicileri, Swagger veya Openapı belirtiminden ve hatta denetleyicileri içeren. dll dosyasını tarayarak, [NSwagStudio](https://github.com/RSuter/NSwag/wiki/NSwagStudio)kullanarak.
 
 ### <a name="how-to-automate-api-swagger-metadata-generation-with-the-swashbuckle-nuget-package"></a>Swashbuckle NuGet paketi ile API Swagger meta veri üretimini otomatikleştirme
 
@@ -399,13 +399,13 @@ Bu işlem tamamlandıktan sonra, aşağıdaki gibi URL 'Leri kullanarak uygulama
   http://<your-root-url>/swagger/
 ```
 
-Daha önce, gibi `http://<your-root-url>/swagger`bir URL Için swashbuckle tarafından oluşturulan oluşturulan kullanıcı arabirimini gördünüz. Şekil 6-9 ' de, herhangi bir API yöntemini nasıl test kullanabileceğinizi da görebilirsiniz.
+Daha önce `http://<your-root-url>/swagger` gibi bir URL için swashbuckle tarafından oluşturulan oluşturulan kullanıcı arabirimini gördünüz. Şekil 6-9 ' de, herhangi bir API yöntemini nasıl test kullanabileceğinizi da görebilirsiniz.
 
 ![Swagger Kullanıcı arabirimi API 'SI ayrıntısı yanıtın bir örneğini gösterir ve geliştirici keşfi için harika olan gerçek API 'yi yürütmek için kullanılabilir.](./media/image10.png)
 
 **Şekil 6-9**. Sashbuckle Kullanıcı arabirimi Katalog/öğe API yöntemini test etme
 
-Şekil 6-10, `http://<your-root-url>/swagger/v1/swagger.json` [Postman](https://www.getpostman.com/)kullanarak istek yaptığınızda eshoponcontainers mikro hizmetinden oluşturulan Swagger JSON meta verilerini gösterir (araçların altında kullanıldığı Özellikler).
+Şekil 6-10, [Postman](https://www.getpostman.com/)kullanarak `http://<your-root-url>/swagger/v1/swagger.json` Istediğinizde, eShopOnContainers mikro hizmetinden oluşturulan Swagger JSON meta verilerini (Bu araçların altında kullanıldığı) gösterir.
 
 ![Swagger JSON meta verilerini gösteren örnek Postman Kullanıcı arabirimi](./media/image11.png)
 
@@ -415,15 +415,15 @@ Bu basit bir işlemdir. Otomatik olarak oluşturulduğu için, API 'nize daha fa
 
 ### <a name="additional-resources"></a>Ek kaynaklar
 
-- **Swagger kullanarak ASP.NET Web API Yardım sayfaları** \
+- **Swagger  \ kullanarak Web API 'Si yardım sayfaları ASP.net**
   [https://docs.microsoft.com/aspnet/core/tutorials/web-api-help-pages-using-swagger](/aspnet/core/tutorials/web-api-help-pages-using-swagger)
 
-- **Swashbuckle ve ASP.NET Core kullanmaya başlayın** \
+- **Swashbuckle ve ASP.NET Core  \ ile çalışmaya** başlayın
   [https://docs.microsoft.com/aspnet/core/tutorials/getting-started-with-swashbuckle](/aspnet/core/tutorials/getting-started-with-swashbuckle)
 
-- **NSwag ve ASP.NET Core kullanmaya başlayın** \
+- **NSwag ve ASP.NET Core ile çalışmaya başlama**  \
   [https://docs.microsoft.com/aspnet/core/tutorials/getting-started-with-nswag](/aspnet/core/tutorials/getting-started-with-nswag)
 
 > [!div class="step-by-step"]
-> [Önceki](microservice-application-design.md)İleri
-> [](multi-container-applications-docker-compose.md)
+> [Önceki](microservice-application-design.md)
+> [İleri](multi-container-applications-docker-compose.md)

@@ -2,12 +2,12 @@
 title: Docker uygulamaları için geliştirme iş akışı
 description: Docker tabanlı uygulamalar geliştirmeye yönelik iş akışının ayrıntılarını anlayın. Adım adım ilerleyin ve Dockerfiles 'ı iyileştirmek ve Visual Studio 'Yu kullanırken kullanılabilecek Basitleştirilmiş iş akışıyla sona erdirmek için bazı ayrıntılara ulaşın.
 ms.date: 01/07/2019
-ms.openlocfilehash: f7c7252edc82400e2af4b96a75ed040e11df392f
-ms.sourcegitcommit: 10db6551ea3c971470cf5d2cc21ba1cbcefe5c55
+ms.openlocfilehash: cd599753a5e89504f11226e89837df7665bca641
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/08/2019
-ms.locfileid: "72031877"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771495"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Docker uygulamaları için geliştirme iş akışı
 
@@ -23,7 +23,7 @@ Her kapsayıcı (bir Docker görüntüsünün örneği) aşağıdaki bileşenler
 
 ## <a name="workflow-for-developing-docker-container-based-applications"></a>Docker kapsayıcı tabanlı uygulamalar geliştirmek için iş akışı
 
-Bu bölüm, Docker kapsayıcı tabanlı uygulamalar için *iç döngü* geliştirme iş akışını açıklar. İç döngü iş akışı, daha geniş bir DevOps iş akışını düşünmediği anlamına gelir. Bu, üretim dağıtımına kadar dahil olabilir ve yalnızca geliştirici bilgisayarında yapılan geliştirme işlerine odaklanmaktadır. Bu adımlar yalnızca bir kez yapıldığından, ortamı ayarlamaya yönelik ilk adımlar dahil değildir.
+Bu bölüm, Docker kapsayıcı tabanlı uygulamalar için *iç döngü* geliştirme iş akışını açıklar. İç döngü iş akışı, üretim dağıtımına dahil olabilen daha geniş DevOps iş akışını düşünülmediği anlamına gelir ve yalnızca geliştiricinin bilgisayarında yapılan geliştirme işlerine odaklanır. Bu adımlar yalnızca bir kez yapıldığından, ortamı ayarlamaya yönelik ilk adımlar dahil değildir.
 
 Bir uygulama, kendi hizmetlerinizin yanı sıra ek kitaplıklarınızdan oluşur (bağımlılıklar). Şekil 5-1 ' de gösterildiği gibi, bir Docker uygulaması oluştururken genellikle gereken temel adımlar aşağıda verilmiştir.
 
@@ -61,7 +61,7 @@ Uygulamanızda Docker 'ı etkinleştirmeden ve Docker 'da dağıtıp test etmede
 
 ### <a name="additional-resources"></a>Ek kaynaklar
 
-- **Docker CE for Windows @no__t ile çalışmaya başlama**-1
+- **Docker CE for Windows  \ kullanmaya başlama**
   <https://docs.docker.com/docker-for-windows/>
 
 - **Visual Studio 2017** \
@@ -93,7 +93,7 @@ Benzer bir şekilde, Visual Studio, **> kapsayıcı Orchestrator desteği**seçe
 
 ### <a name="using-an-existing-official-net-docker-image"></a>Mevcut bir resmi .NET Docker görüntüsünü kullanma
 
-Genellikle, [Docker Hub](https://hub.docker.com/) kayıt defteri gibi resmi bir depodan aldığınız temel görüntünün en üstünde Kapsayıcınız için özel bir görüntü oluşturursunuz. Visual Studio 'da Docker desteğini etkinleştirdiğinizde bu durum kesin olarak ne olur? Dockerfile, var olan bir @no__t 0 görüntüsünü kullanır.
+Genellikle, [Docker Hub](https://hub.docker.com/) kayıt defteri gibi resmi bir depodan aldığınız temel görüntünün en üstünde Kapsayıcınız için özel bir görüntü oluşturursunuz. Visual Studio 'da Docker desteğini etkinleştirdiğinizde bu durum kesin olarak ne olur? Dockerfile, var olan bir `aspnetcore` görüntüsünü kullanır.
 
 Daha önce seçtiğiniz çerçeveye ve işletim sistemine bağlı olarak, hangi Docker görüntülerini ve depolarınızı kullanacağınızı anlatılmıştır. Örneğin, ASP.NET Core (Linux veya Windows) kullanmak istiyorsanız kullanılacak görüntü `mcr.microsoft.com/dotnet/core/aspnet:2.2` ' dır. Bu nedenle, yalnızca Kapsayıcınız için kullanacağınız temel Docker görüntüsünü belirtmeniz yeterlidir. Bunu, Dockerfile 'a `FROM mcr.microsoft.com/dotnet/core/aspnet:2.2` ekleyerek yapabilirsiniz. Bu, Visual Studio tarafından otomatik olarak gerçekleştirilir, ancak sürümü güncelleştirirseniz, bu değeri güncelleştirmeniz gerekir.
 
@@ -112,7 +112,7 @@ ENTRYPOINT ["dotnet", " MySingleContainerWebApp.dll "]
 
 Bu durumda, görüntü, resmi ASP.NET Core Docker görüntüsünün 2,2 sürümünü temel alır (Linux ve Windows için çoklu mimari). Bu ayar `FROM mcr.microsoft.com/dotnet/core/aspnet:2.2` ' dır. (Bu temel görüntü hakkında daha fazla bilgi için bkz. [.NET Core Docker Image](https://hub.docker.com/_/microsoft-dotnet-core/) sayfası.) Dockerfile 'da, çalışma zamanında kullanacağınız TCP bağlantı noktasını dinlemek için Docker 'a (Bu durumda, "kullanıma hazır ayarıyla yapılandırıldığı şekilde, bağlantı noktası 80) da sahip olmanız gerekir.
 
-Kullanmakta olduğunuz dile ve çerçeveye bağlı olarak Dockerfile içinde ek yapılandırma ayarları belirtebilirsiniz. Örneğin, `["dotnet", "MySingleContainerWebApp.dll"]` olan GIRIŞ noktası satırı, Docker 'ın bir .NET Core uygulaması çalıştırmasını söyler. .NET uygulamasını derlemek ve çalıştırmak için SDK ve .NET Core CLI (DotNet CLı) kullanıyorsanız, bu ayar farklı olur. Alt çizgi, GIRIŞ noktası çizgisi ve diğer ayarların, uygulamanız için seçtiğiniz dile ve platforma bağlı olarak farklı olacaktır.
+Kullanmakta olduğunuz dile ve çerçeveye bağlı olarak Dockerfile içinde ek yapılandırma ayarları belirtebilirsiniz. Örneğin, `["dotnet", "MySingleContainerWebApp.dll"]` GIRIŞ noktası satırı, Docker 'ın bir .NET Core uygulaması çalıştırmasını söyler. .NET uygulamasını derlemek ve çalıştırmak için SDK ve .NET Core CLI (DotNet CLı) kullanıyorsanız, bu ayar farklı olur. Alt çizgi, GIRIŞ noktası çizgisi ve diğer ayarların, uygulamanız için seçtiğiniz dile ve platforma bağlı olarak farklı olacaktır.
 
 ### <a name="additional-resources"></a>Ek kaynaklar
 
@@ -268,7 +268,7 @@ Ancak, `dotnet restore` yalnızca klasörde tek bir proje veya çözüm dosyası
 
    - `!eShopOnContainers-ServicesAndWebApps.sln`, yalnızca bu çözüm dosyasını içerecek şekilde.
 
-2. @No__t-0 bağımsız değişkenini `dotnet restore` ' e ekleyin, böylece Docker-Compose projesini de yoksayar ve yalnızca eShopOnContainers-ServicesAndWebApps çözümü için paketleri geri yükler.
+2. @No__t_1 `/ignoreprojectextensions:.dcproj` bağımsız değişkenini dahil edin, böylece Docker-Compose projesini de yoksayar ve yalnızca eShopOnContainers-ServicesAndWebApps çözümü için paketleri geri yükler.
 
 Son iyileştirme için, satır 23 ' ün aynı zamanda uygulama oluşturup 20 ' den sonra da bir zaman alan komutla birlikte geldiğinden emin olmak yeterlidir.
 
@@ -425,7 +425,7 @@ Visual Studio 'daki çözümünüze Orchestrator desteği ekledikten sonra, Şek
 
 **Şekil 5-8**. Visual Studio 2017 Çözüm Gezgini eklenen **Docker-Compose** ağacı düğümü
 
-@No__t-0 komutunu kullanarak tek bir Docker-Compose. yıml dosyası ile çok kapsayıcılı bir uygulama dağıtabilirsiniz. Ancak, Visual Studio bu grubun bir grubunu ekleyerek ortama (geliştirme veya üretim) ve yürütme türüne (yayın veya hata ayıklama) bağlı olarak değerleri geçersiz kılabilirsiniz. Bu özellik sonraki bölümlerde açıklanacaktır.
+@No__t_0 komutunu kullanarak, tek bir Docker-Compose. yıml dosyası ile çok kapsayıcılı bir uygulama dağıtabilirsiniz. Ancak, Visual Studio bu grubun bir grubunu ekleyerek ortama (geliştirme veya üretim) ve yürütme türüne (yayın veya hata ayıklama) bağlı olarak değerleri geçersiz kılabilirsiniz. Bu özellik sonraki bölümlerde açıklanacaktır.
 
 ![5-kapsayıcıları veya oluşturulmuş uygulamayı çalıştırma](./media/image12.png)
 
