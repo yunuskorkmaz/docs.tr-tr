@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Visual C# compiler, errors
 - errors [C#]
 ms.assetid: 57262ab1-6c50-4f9c-81ad-9fba48477416
-ms.openlocfilehash: 3714223209a3298706960625ea383e42dc2b2154
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: af1ec49e6c7eb94c4e324b947e8ead8149d0a997
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69607176"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771870"
 ---
 # <a name="c-compiler-errors"></a>C# Derleyici Hataları
 
@@ -34,5 +34,5 @@ Bazı C# derleyici hatalarının hatanın neden oluşturulduğunu ve bazı durum
 - [C# Derleyici Seçenekleri](../compiler-options/index.md)
 - [Ne yazık ki bu C# hatayla ilgili bilgiler yok](../../misc/sorry-we-don-t-have-specifics-on-this-csharp-error.md)
 - [Derleme Sayfası, Proje Tasarımcısı (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp)
-- [/warn (C# derleyici seçenekleri)](../compiler-options/warn-compiler-option.md)
-- [/nowarn (C# derleyici seçenekleri)](../compiler-options/nowarn-compiler-option.md)
+- [-warn (C# derleyici seçenekleri)](../compiler-options/warn-compiler-option.md)
+- [-nowarn (C# derleyici seçenekleri)](../compiler-options/nowarn-compiler-option.md)

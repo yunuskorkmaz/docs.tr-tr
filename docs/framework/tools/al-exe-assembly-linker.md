@@ -9,19 +9,19 @@ helpviewer_keywords:
 ms.assetid: b5382965-0053-47cf-b92f-862860275a01
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3e46934d9156bf3adebc010fb99ade10a1a35e09
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 746abee0861b32900e757f030ab6165f297b83ed
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72523812"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774221"
 ---
 # <a name="alexe-assembly-linker"></a>Al.exe (Derleme Bağlayıcı)
 
 Assembly Linker, modül veya kaynak dosyalar olan bir veya daha fazla dosyadan, derleme bildirimi içeren bir dosya oluşturur. Modül, derleme bildirimi içermeyen bir ara dil (IL) dosyasıdır.
 
 > [!NOTE]
-> Visual Studio 2008 ile başlayarak, hem C# hem de Visual Basic derleyicileri derlemeye otomatik olarak bir Win32 bildirimi katıştırır. Daha fazla bilgi için bkz. [/win32manifestC# (derleyici seçenekleri)](../../csharp/language-reference/compiler-options/win32manifest-compiler-option.md).
+> Visual Studio 2008 ile başlayarak, hem C# hem de Visual Basic derleyicileri derlemeye otomatik olarak bir Win32 bildirimi katıştırır. Daha fazla bilgi için bkz. [-win32manifestC# (derleyici seçenekleri)](../../csharp/language-reference/compiler-options/win32manifest-compiler-option.md).
 
 Bu araç, Visual Studio ile birlikte otomatik olarak yüklenir. Aracı çalıştırmak için, Visual Studio için Geliştirici Komut İstemi (veya Windows 7 ' de Visual Studio komut Istemi) kullanın. Daha fazla bilgi için bkz. [komut istemleri](developer-command-prompt-for-vs.md).
 

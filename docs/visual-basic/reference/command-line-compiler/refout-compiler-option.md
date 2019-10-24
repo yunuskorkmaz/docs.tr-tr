@@ -7,12 +7,12 @@ helpviewer_keywords:
 - refout compiler option [Visual Basic]
 - /refout compiler option [Visual Basic]
 - -refout compiler option [Visual Basic]
-ms.openlocfilehash: c11d83ff37da41faa3dc6b66a87e2c52c5f6c7ac
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 552e611f222bfcc3ce12520ecdb891fd7b8b21de
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582867"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72775555"
 ---
 # <a name="-refout-visual-basic"></a>-refout (Visual Basic)
 
@@ -35,9 +35,7 @@ Başvuru derlemesinin yolu ve dosya adı. Genellikle birincil derlemenin alt kla
 
 Visual Basic, sürüm 15,3 ' den başlayarak `-refout` anahtarını destekler.
 
-Başvuru derlemeleri yalnızca meta veri içeren derlemelerdir, ancak uygulama kodu yoktur. Anonim türler hariç her şey için tür ve üye bilgilerini içerirler. Yöntem gövdeleri tek bir `throw null` ifadesiyle değiştirilmiştir. @No__t_0 yöntemi gövdelerini kullanmanın nedeni (gövdeden farklı olarak), PEVerify 'ın çalıştırılabilmesi ve geçebilmesi (Bu nedenle meta verilerin tamamlanmasının doğrulanması).
-
-Başvuru derlemeleri derleme düzeyi [ReferenceAssembly](xref:System.Runtime.CompilerServices.ReferenceAssemblyAttribute) özniteliği içerir. Bu öznitelik kaynakta belirtilebilir (derleyicinin onu birleştirmesini gerektirmez). Bu öznitelik nedeniyle, çalışma zamanları yürütme için başvuru derlemelerini yüklemeyi reddeder (ancak yine de yalnızca bir yansıma bağlamına yüklenebilirler). Derlemeler üzerinde yansıtan araçların başvuru derlemelerini yalnızca yansıma olarak yüklediklerinden emin olunması gerekir; Aksi takdirde, çalışma zamanı bir <xref:System.BadImageFormatException> oluşturur.
+Başvuru derlemeleri, kitaplığın ortak API yüzeyini göstermek için gereken en düşük meta veri miktarını içeren özel bir derleme türüdür. Derleme araçlarındaki bir derlemeye başvururken önemli olan tüm Üyeler için bildirimler içerirler, ancak API sözleşmeleri üzerinde herhangi bir observable etkisi olmayan özel üyelerin tüm üye uygulamalarını ve bildirimlerini hariç tutar. Daha fazla bilgi için bkz. .NET kılavuzundaki [başvuru derlemeleri](../../../standard/assembly/reference-assemblies.md) .
 
 @No__t_0 ve [`-refonly`](refonly-compiler-option.md) seçenekleri birbirini dışlıyor.
 

@@ -1,7 +1,7 @@
 ---
 title: Kayan nokta sayısal türleri- C# başvuru
 description: Yerleşik C# kayan nokta türlerine genel bakış
-ms.date: 10/18/2019
+ms.date: 10/22/2019
 f1_keywords:
 - float
 - float_CSharpKeyword
@@ -18,12 +18,12 @@ helpviewer_keywords:
 - floating-point numbers [C#], float keyword
 - double data type [C#]
 - decimal keyword [C#]
-ms.openlocfilehash: fa6cbb869d90113414cc6f8ffe231386c3596b1d
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 4d71f7eea3f574e483dc4250f5c87e1ffd551f2f
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72579376"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771899"
 ---
 # <a name="floating-point-numeric-types-c-reference"></a>Kayan nokta sayısal türleri (C# başvuru)
 
@@ -105,13 +105,7 @@ Console.WriteLine(m);  // output: 1500000
 
 ## <a name="conversions"></a>Dönüşümler
 
-@No__t_3 değerler `double` uygun bir alt kümesi olduğundan ve `float` ile `double` arasında bir duyarlık kaybı olmadığından, `float` 'den `double` örtük bir dönüştürme ( *genişleyen dönüştürme*denir) vardır.
-
-Örtük bir dönüştürme, kaynak türünden hedef türüne tanımlanmamışsa, bir kayan nokta türünü başka bir kayan nokta türüne dönüştürmek için açık bir atama kullanmanız gerekir. Bu, *daraltma dönüştürmesi*olarak adlandırılır. Dönüştürme işlemi veri kaybına neden olabileceğinden açık durum gereklidir. @No__t_1 türü `float` ya da `double` göre daha fazla duyarlığa sahip olduğundan, diğer kayan nokta türleri ve `decimal` türü arasında örtük dönüşüm yoktur.
-
-Örtük Sayısal dönüştürmeler hakkında daha fazla bilgi için bkz. [örtük sayısal dönüştürmeler tablosu](../keywords/implicit-numeric-conversions-table.md).
-
-Açık sayısal dönüştürmeler hakkında daha fazla bilgi için bkz. [Açık Sayısal Dönüşümler Tablosu](../keywords/explicit-numeric-conversions-table.md).
+Kayan nokta sayısal türleri arasında yalnızca bir örtük dönüşüm vardır: `float` 'den `double`. Ancak, herhangi bir kayan nokta türünü [açık atama](../operators/type-testing-and-cast.md#cast-operator-)ile başka bir kayan nokta türüne dönüştürebilirsiniz. Daha fazla bilgi için bkz. [yerleşik sayısal dönüştürmeler](numeric-conversions.md).
 
 ## <a name="c-language-specification"></a>C# dili belirtimi
 
@@ -124,10 +118,9 @@ Daha fazla bilgi için, [ C# dil belirtiminin](~/_csharplang/spec/introduction.m
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [C#başvurunun](../index.md)
-- [Integral türleri](integral-numeric-types.md)
 - [Yerleşik türler tablosu](../keywords/built-in-types-table.md)
-- [.NET Sayısal Değerleri](../../../standard/numerics.md)
-- [Tür Değiştirme ve Tür Dönüştürmeler](../../programming-guide/types/casting-and-type-conversions.md)
-- <xref:System.Numerics.Complex?displayProperty=nameWithType>
+- [Integral türleri](integral-numeric-types.md)
 - [Sayısal sonuçlar tablosunu biçimlendirme](../keywords/formatting-numeric-results-table.md)
 - [Standart sayısal biçim dizeleri](../../../standard/base-types/standard-numeric-format-strings.md)
+- [.NET Sayısal Değerleri](../../../standard/numerics.md)
+- <xref:System.Numerics.Complex?displayProperty=nameWithType>

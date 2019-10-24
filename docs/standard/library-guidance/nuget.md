@@ -4,12 +4,12 @@ description: .NET kitaplıkları için NuGet ile paketleme için en iyi yöntem 
 author: jamesnk
 ms.author: mairaw
 ms.date: 01/15/2019
-ms.openlocfilehash: 9cf30fa41af2d31e416bae1d75d8880ece7dde3e
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 9288bf440692302c3a0b1954236540af6363f367
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70895204"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72775307"
 ---
 # <a name="nuget"></a>NuGet
 
@@ -21,7 +21,7 @@ NuGet, .NET ekosistemi için bir paket yöneticisidir ve geliştiricilerin .NET 
 
 Bir NuGet paketi (`*.nupkg`), .NET derlemelerini ve ilişkili meta verileri içeren bir zip dosyasıdır.
 
-Bir NuGet paketi oluşturmanın iki ana yolu vardır. Daha yeni ve önerilen yol, bir SDK stili projeden (içeriği ile `<Project Sdk="Microsoft.NET.Sdk">`başlayan proje dosyası) bir paket oluşturmaktır. Derlemeler ve hedefler pakete otomatik olarak eklenir ve geri kalan meta veriler, paket adı ve sürüm numarası gibi MSBuild dosyasına eklenir. Komutuyla derlemek, [`dotnet pack`](../../core/tools/dotnet-pack.md) derlemeler yerine bir `*.nupkg` dosya çıkışı verir.
+Bir NuGet paketi oluşturmanın iki ana yolu vardır. Daha yeni ve önerilen yol, bir SDK stili projeden paket oluşturmaktır (içeriği `<Project Sdk="Microsoft.NET.Sdk">` ile başlayan proje dosyası). Derlemeler ve hedefler pakete otomatik olarak eklenir ve geri kalan meta veriler, paket adı ve sürüm numarası gibi MSBuild dosyasına eklenir. [@No__t_1](../../core/tools/dotnet-pack.md) komutuyla derlemek, derlemeler yerine bir `*.nupkg` dosyası çıkışı verir.
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -34,7 +34,7 @@ Bir NuGet paketi oluşturmanın iki ana yolu vardır. Daha yeni ve önerilen yol
 </Project>
 ```
 
-NuGet paketi oluşturmanın daha eski yolu bir `*.nuspec` dosya `nuget.exe` ve komut satırı aracıdır. Bir nuspec dosyası harika denetim sağlar ancak son NuGet paketine hangi derlemeleri ve hedefleri dahil edileceğini dikkatle belirtmeniz gerekir. Bir hata yapmak veya birisinin değişiklik yaparken nuspec 'i güncelleştirmeyi unutmaları çok kolay. Bir nuspec 'in avantajı, henüz bir SDK stili proje dosyasını desteklemeyen çerçeveler için NuGet paketleri oluşturmayı kullanabilir.
+NuGet paketi oluşturmanın daha eski yolu, bir `*.nuspec` dosyası ve `nuget.exe` komut satırı aracıdır. Bir nuspec dosyası harika denetim sağlar ancak son NuGet paketine hangi derlemeleri ve hedefleri dahil edileceğini dikkatle belirtmeniz gerekir. Bir hata yapmak veya birisinin değişiklik yaparken nuspec 'i güncelleştirmeyi unutmaları çok kolay. Bir nuspec 'in avantajı, henüz bir SDK stili proje dosyasını desteklemeyen çerçeveler için NuGet paketleri oluşturmayı kullanabilir.
 
 **✔️** NuGet paketini oluşturmak için SDK stili bir proje dosyası kullanmayı düşünün.
 
@@ -50,13 +50,13 @@ Bir NuGet paketi birçok [meta veri özelliğini](/nuget/reference/nuspec)destek
 | ---------------------------------- | ------------------------ | ------------ |
 | `PackageId`                        | `id`                       | Paket tanımlayıcısı. Tanımlayıcıdan bir önek, [ölçütlere](/nuget/reference/id-prefix-reservation)uyuyorsa ayrılabilir. |
 | `PackageVersion`                   | `version`                  | NuGet paket sürümü. Daha fazla bilgi için bkz. [NuGet paket sürümü](./versioning.md#nuget-package-version).             |
-| `Title`                            | `title`                    | Paketin insan dostu bir başlığı. Varsayılan olarak `PackageId`olur.             |
+| `Title`                            | `title`                    | Paketin insan dostu bir başlığı. Varsayılan olarak `PackageId`.             |
 | `Description`                      | `description`              | Kullanıcı arabiriminde görüntülenmekte olan paketin uzun açıklaması.             |
 | `Authors`                          | `authors`                  | Nuget.org üzerindeki profil adlarıyla eşleşen paket yazarları için virgülle ayrılmış bir liste.             |
 | `PackageTags`                      | `tags`                     | Paketi tanımlayan etiketlerin ve anahtar sözcüklerin boşlukla ayrılmış bir listesi. Etiketler, paketler aranırken kullanılır.             |
 | `PackageIconUrl`                   | `iconUrl`                  | Paket için simge olarak kullanılacak bir görüntünün URL 'SI. URL HTTPS olmalıdır ve görüntü 64x64 olmalı ve saydam bir arka plana sahip olmalıdır.             |
 | `PackageProjectUrl`                | `projectUrl`               | Proje giriş sayfası veya Kaynak deposu için bir URL.             |
-| `PackageLicenseExpression`         | `license`                  | Proje lisansının [Spdx tanımlayıcısı](https://spdx.org/licenses/). Yalnızca OSı ve FSF onaylı lisanslar bir tanımlayıcı kullanabilir. Diğer lisansların kullanması `PackageLicenseFile`gerekir. [ `license` Meta veriler](/nuget/reference/nuspec#license)hakkında daha fazla bilgi edinin. |
+| `PackageLicenseExpression`         | `license`                  | Proje lisansının [Spdx tanımlayıcısı](https://spdx.org/licenses/). Yalnızca OSı ve FSF onaylı lisanslar bir tanımlayıcı kullanabilir. Diğer lisanslar `PackageLicenseFile` kullanmalıdır. [@No__t_1 meta verileri](/nuget/reference/nuspec#license)hakkında daha fazla bilgi edinin. |
 
 > [!IMPORTANT]
 > Lisansı olmayan bir proje, özel bir [telif hakkı](https://choosealicense.com/no-permission/)için varsayılan olarak, diğer kişilerin kullanması mümkün değildir.
@@ -71,7 +71,7 @@ Bir NuGet paketi birçok [meta veri özelliğini](/nuget/reference/nuspec)destek
 
 **✔️** derlemelerinize ve NuGet paketinize kaynak denetimi meta verileri eklemek Için [kaynak bağlantısı](./sourcelink.md) kurmayı düşünün.
 
-> Kaynak bağlantısı, NuGet `RepositoryUrl` paketinin `RepositoryType` otomatik olarak ve meta verilerini ekler. Kaynak bağlantısı, paketin oluşturulduğu tam kaynak kodu hakkında bilgi de ekler. Örneğin, bir git deposundan oluşturulan bir pakette, işlem karması meta veriler olarak eklenir.
+> Kaynak bağlantısı, NuGet paketine `RepositoryUrl` ve `RepositoryType` meta verileri otomatik olarak ekler. Kaynak bağlantısı, paketin oluşturulduğu tam kaynak kodu hakkında bilgi de ekler. Örneğin, bir git deposundan oluşturulan bir pakette, işlem karması meta veriler olarak eklenir.
 
 ## <a name="pre-release-packages"></a>Yayın öncesi paketler
 
@@ -92,16 +92,16 @@ Sürüm sonekine sahip NuGet paketleri [yayın öncesi](/nuget/create-packages/p
 
 ## <a name="symbol-packages"></a>Sembol paketleri
 
-Sembol dosyaları (`*.pdb`) derlemelerle birlikte .NET derleyicisi tarafından oluşturulur. Sembol dosyaları, yürütme konumlarını özgün kaynak koduna eşler, böylece bir hata ayıklayıcı kullanarak çalışırken kaynak kodu adım adım ilerleyebilir. NuGet, .NET derlemeleri içeren ana paketin yanı sıra sembol dosyalarını içeren [ayrı bir sembol paketi`*.snupkg`() oluşturmayı](/nuget/create-packages/symbol-packages-snupkg) destekler. Sembol paketlerinin fikri, bir sembol sunucusunda barındırıldığından ve yalnızca isteğe bağlı Visual Studio gibi bir araç tarafından indirilir.
+Sembol dosyaları (`*.pdb`) derlemelerle birlikte .NET derleyicisi tarafından üretilir. Sembol dosyaları, yürütme konumlarını özgün kaynak koduna eşler, böylece bir hata ayıklayıcı kullanarak çalışırken kaynak kodu adım adım ilerleyebilir. NuGet, .NET derlemeleri içeren ana paketin yanı sıra sembol dosyalarını içeren [ayrı bir sembol paketi (`*.snupkg`) oluşturmayı](/nuget/create-packages/symbol-packages-snupkg) destekler. Sembol paketlerinin fikri, bir sembol sunucusunda barındırıldığından ve yalnızca isteğe bağlı Visual Studio gibi bir araç tarafından indirilir.
 
-NuGet.org kendi [sembolleri sunucu deposunu](/nuget/create-packages/symbol-packages-snupkg#nugetorg-symbol-server)barındırır. Geliştiriciler, `https://symbols.nuget.org/download/symbols` [Visual Studio 'daki sembol kaynaklarına](/visualstudio/debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger)ekleyerek NuGet.org symbol sunucusunda yayınlanan sembolleri kullanabilir.
+NuGet.org kendi [sembolleri sunucu deposunu](/nuget/create-packages/symbol-packages-snupkg#nugetorg-symbol-server)barındırır. Geliştiriciler, [Visual Studio 'daki sembol kaynaklarına](/visualstudio/debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger)`https://symbols.nuget.org/download/symbols` ekleyerek NuGet.org symbol sunucusunda yayınlanan sembolleri kullanabilir.
 
 > [!IMPORTANT]
 > NuGet.org symbol sunucusu yalnızca SDK stili projeler tarafından oluşturulan yeni [Taşınabilir sembol dosyalarını](https://github.com/dotnet/core/blob/master/Documentation/diagnostics/portable_pdb.md) (`*.pdb`) destekler.
 >
-> .NET kitaplığı 'nda hata ayıklarken NuGet.org symbol sunucusunu kullanmak için, geliştiriciler Visual Studio 2017 15,9 veya sonraki bir sürüme sahip olmalıdır.
+> .NET kitaplığı 'nda hata ayıklarken NuGet.org symbol sunucusunu kullanmak için, geliştiriciler Visual Studio 2017 sürüm 15,9 veya üzeri bir sürüme sahip olmalıdır.
 
-Sembol paketi oluşturmanın bir alternatifi, sembol dosyalarını ana NuGet paketine katıştırmaya yönelik bir alternatiftir. Ana NuGet paketi daha büyük olacaktır, ancak katıştırılmış sembol dosyaları, geliştiricilerin NuGet.org symbol sunucusunu yapılandırmasına gerek duymayacağı anlamına gelir. NuGet paketinizi bir SDK stili proje kullanarak oluşturuyorsanız, `AllowedOutputExtensionsInPackageBuildOutputFolder` özelliği ayarlayarak sembol dosyalarını ekleyebilirsiniz:
+Sembol paketi oluşturmanın bir alternatifi, sembol dosyalarını ana NuGet paketine katıştırmaya yönelik bir alternatiftir. Ana NuGet paketi daha büyük olacaktır, ancak katıştırılmış sembol dosyaları, geliştiricilerin NuGet.org symbol sunucusunu yapılandırmasına gerek duymayacağı anlamına gelir. NuGet paketinizi bir SDK stili proje kullanarak oluşturuyorsanız, `AllowedOutputExtensionsInPackageBuildOutputFolder` özelliğini ayarlayarak sembol dosyalarını ekleyebilirsiniz:
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -112,14 +112,14 @@ Sembol paketi oluşturmanın bir alternatifi, sembol dosyalarını ana NuGet pak
 </Project>
 ```
 
-Sembol dosyalarını gömmenin dezavantajı, SDK stilindeki projeler kullanılarak derlenen .NET kitaplıkları için paket boyutunu% 30 oranında artırdı. Paket boyutu bir sorun oluşturacaksa, sembolleri bir sembol paketinde yayımlamanız gerekir.
+Sembol dosyalarını gömmenin dezavantajı, SDK stilindeki projeler kullanılarak derlenen .NET kitaplıkları için paket boyutunu %30 oranında artırdı. Paket boyutu bir sorun oluşturacaksa, sembolleri bir sembol paketinde yayımlamanız gerekir.
 
 **✔️** sembolleri bir sembol paketi olarak yayımlamayı düşünün (`*.snupkg`) NuGet.org
 
-> Sembol paketleri (`*.snupkg`), geliştiricilere ana paket boyutunu kaldırmadan ve geri yükleme performansını etkilemeden, NuGet paketinin hatalarını ayıklamayı istemeyen iyi bir hata ayıklama deneyimi sağlar.
+> Sembol paketleri (`*.snupkg`), geliştiricilere ana paket boyutunu ayıklamadan ve NuGet paketinde hata ayıklamaya yönelik geri yükleme performansını etkilemeden iyi bir istek üzerine hata ayıklama deneyimi sağlar.
 >
 > Desteklenmediği uyarısıyla, kullanıcıların sembol dosyalarını almak için IDE (tek seferlik kurulum olarak) içinde NuGet sembol sunucusunu bulması ve yapılandırması gerekebilecek bir işlem olabilir. Visual Studio 2019 sürüm 16,1 varsayılan sembol sunucuları listesine NuGet. org 'ın sembol sunucusunu ekledi.
 
 >[!div class="step-by-step"]
->[Önceki](strong-naming.md)İleri
->[](dependencies.md)
+>[Önceki](strong-naming.md)
+>[İleri](dependencies.md)

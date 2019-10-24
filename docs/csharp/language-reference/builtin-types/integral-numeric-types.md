@@ -1,7 +1,7 @@
 ---
 title: Integral sayısal türleri- C# başvuru
 description: İntegral sayısal türlerin her biri için aralığı, depolama boyutunu ve kullanımları öğrenin.
-ms.date: 10/18/2019
+ms.date: 10/22/2019
 f1_keywords:
 - byte
 - byte_CSharpKeyword
@@ -32,12 +32,12 @@ helpviewer_keywords:
 - uint keyword [C#]
 - long keyword [C#]
 - ulong keyword [C#]
-ms.openlocfilehash: 3d4f3164d67a000123417619f3be6be455d5ab87
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: c255711e4b165fdca27d50c6bd0f2debfe15ae25
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72579189"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72773861"
 ---
 # <a name="integral-numeric-types--c-reference"></a>Integral sayısal türleri (C# başvuru)
 
@@ -100,7 +100,7 @@ Bir tamsayı sabit değerinin türü, soneki tarafından aşağıdaki şekilde b
 
 Bir tamsayı değişmez değeri ile temsil edilen değer <xref:System.UInt64.MaxValue?displayProperty=nameWithType> aşarsa, bir derleyici hatası [CS1021](../../misc/cs1021.md) oluşur.
 
-Bir tamsayı değişmez değeri tarafından temsil edilen değer, örtük olarak, sabit değer türü tarafından belirlenen değerden daha küçük bir aralığa dönüştürülebilir. Bu, değer hedef türünün aralığı dahilinde olduğunda mümkündür:
+Bir tamsayı sabit değerinin belirlenen türü `int` ve değer hedef türünün aralığı içindeyse, değişmez değer tarafından temsil edilen değer örtük olarak `sbyte`, `byte`, `short`, `ushort` dönüştürülebilir , `uint` veya `ulong`:
 
 ```csharp
 byte a = 17;
@@ -118,9 +118,7 @@ var longVariable = (long)42;
 
 ## <a name="conversions"></a>Dönüşümler
 
-Hedef türün kaynak türünün tüm değerlerini depolayabileceği iki integral tür arasında örtük bir dönüştürme ( *genişleyen dönüştürme*denir) vardır. Örneğin, `int` değerlerinin aralığı `long` uygun bir alt kümesi olduğundan, `int` `long` ' den örtük bir dönüştürme vardır. Daha küçük bir işaretsiz integral türünden daha büyük bir işaretli integral türüne örtük dönüştürmeler vardır. Ayrıca herhangi bir integral türünden herhangi bir kayan nokta türüne örtük bir dönüştürme de vardır.  Herhangi bir imzalı integral türünden hiçbir işaretsiz integral türüne örtülü dönüşüm yoktur.
-
-Örtük bir dönüştürme, kaynak türünden hedef türüne tanımlanmadığında, bir integral türünü başka bir integral türüne dönüştürmek için açık bir atama kullanmanız gerekir. Bu, *daraltma dönüştürmesi*olarak adlandırılır. Dönüştürme işlemi veri kaybına neden olabileceğinden açık durum gereklidir.
+Herhangi bir integral sayısal türü diğer tüm integral sayısal türlerine dönüştürebilirsiniz. Hedef türü kaynak türünün tüm değerlerini depolayabiliyorsanız, dönüştürme örtük olur. Aksi takdirde, açık bir dönüştürme çağırmak için [`()` cast işlecini](../operators/type-testing-and-cast.md#cast-operator-) kullanmanız gerekir. Daha fazla bilgi için bkz. [yerleşik sayısal dönüştürmeler](numeric-conversions.md).
 
 ## <a name="c-language-specification"></a>C# dili belirtimi
 
@@ -132,8 +130,7 @@ Daha fazla bilgi için, [ C# dil belirtiminin](~/_csharplang/spec/introduction.m
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [C#başvurunun](../index.md)
-- [Kayan nokta türleri](floating-point-numeric-types.md)
-- [Varsayılan değerler tablosu](../keywords/default-values-table.md)
-- [Sayısal sonuçlar tablosunu biçimlendirme](../keywords/formatting-numeric-results-table.md)
 - [Yerleşik türler tablosu](../keywords/built-in-types-table.md)
+- [Kayan nokta türleri](floating-point-numeric-types.md)
+- [Sayısal sonuçlar tablosunu biçimlendirme](../keywords/formatting-numeric-results-table.md)
 - [.NET Sayısal Değerleri](../../../standard/numerics.md)

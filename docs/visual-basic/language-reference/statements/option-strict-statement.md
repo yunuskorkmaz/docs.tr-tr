@@ -11,12 +11,12 @@ helpviewer_keywords:
 - late binding [Visual Basic]
 - implicit conversions [Visual Basic]
 ms.assetid: 5883e0c1-a920-4274-8e46-b0ff047eaee5
-ms.openlocfilehash: afe2181e031a651767e6a6eec0397300b03fce50
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 8b7dfcfa394ed2c45adec9661ee1ea5823435223
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582564"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72775437"
 ---
 # <a name="option-strict-statement"></a>Option Strict Deyimi
 Örtük veri türü dönüştürmelerini yalnızca genişletme dönüştürmelerine kısıtlar, geç bağlamaya izin vermez ve bir `Object` türüyle sonuçlanan örtülü yazmaya izin vermez.  
@@ -104,7 +104,7 @@ Option Strict { On | Off }
 ## <a name="when-an-option-strict-statement-is-not-present"></a>Option Strict bir Ifade yoksa  
  Kaynak kodu `Option Strict` bir ifade içermiyorsa, derleme sayfasındaki **katı** ayarı, [proje Tasarımcısı (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) kullanılır. **Derleme sayfasında** , hata oluşturan koşullar üzerinde ek denetim sağlayan ayarlar bulunur.  
   
- Komut satırı derleyicisini kullanıyorsanız, `Option Strict` bir ayar belirtmek için [/OptionStrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md) derleyici seçeneğini kullanabilirsiniz.  
+ Komut satırı derleyicisini kullanıyorsanız, `Option Strict` bir ayar belirtmek için [-OptionStrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md) derleyici seçeneğini kullanabilirsiniz.  
   
 ### <a name="to-set-option-strict-in-the-ide"></a>IDE 'de Option Strict ayarlamak için  
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
@@ -132,7 +132,7 @@ Option Strict { On | Off }
  Bu iletişim kutusunda `Option Strict` ayarlamak için, **Araçlar** menüsünde **Seçenekler**' e tıklayın. **Seçenekler** iletişim kutusunda, **Projeler ve çözümler**' i genişletin ve ardından **vb Varsayılanları**' na tıklayın. **Vb Varsayılanları** içindeki ilk varsayılan ayar `Off`.  
   
 ### <a name="to-set-option-strict-on-the-command-line"></a>Komut satırında Strict seçeneğini ayarlamak için  
- **Vbc** komutuna [/OptionStrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md) derleyici seçeneğini ekleyin.  
+ **Vbc** komutuna [-OptionStrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md) derleyici seçeneğini ekleyin.  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örneklerde, dönüştürmeleri daraltma örtük tür dönüştürmelerinden kaynaklanan derleme zamanı hataları gösterilmektedir. Bu hata kategorisi, **derleme sayfasındaki** **örtük dönüştürme** koşuluna karşılık gelir.  
@@ -162,5 +162,5 @@ Option Strict { On | Off }
 - [XML'de Katıştırılmış İfadeler](../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)
 - [Gevşek Temsilci Dönüştürme](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)
 - [Office Çözümlerinde Geç Bağlama](/visualstudio/vsto/late-binding-in-office-solutions)
-- [/optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)
+- [-optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)
 - [Visual Basic Varsayılanları, Projeler, Seçenekler İletişim Kutusu](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)

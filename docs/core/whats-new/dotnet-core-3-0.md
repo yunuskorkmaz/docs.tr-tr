@@ -7,18 +7,18 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 09/22/2019
-ms.openlocfilehash: c10023cf8cee358db41a3b90a9a0a1020c5462eb
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 758c8fd30fbd2e5ce8ace997005b91d6872a06d1
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395441"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72773891"
 ---
 # <a name="whats-new-in-net-core-30"></a>​.NET Core 3.0’daki yenilikler
 
 Bu makalede .NET Core 3,0 ' deki yenilikler açıklanır. En büyük geliştirmelerden biri, Windows Masaüstü uygulamaları için destek içerir (yalnızca Windows). .NET Core 3,0 SDK bileşeni Windows Masaüstü 'Nü kullanarak Windows Forms ve Windows Presentation Foundation (WPF) uygulamalarınızın bağlantı noktası oluşturabilirsiniz. Temiz olması için, Windows Masaüstü bileşeni yalnızca Windows 'da desteklenir ve Windows 'a dahildir. Daha fazla bilgi için bu makalenin devamındaki [Windows Masaüstü](#windows-desktop) bölümüne bakın.
 
-.NET Core 3,0, 8,0 için C# destek ekler. [Visual Studio 2019 16,3](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019), [Mac için Visual Studio 8,3](/visualstudio/mac/install-preview)veya  **C# uzantıya**sahip [Visual Studio Code](https://code.visualstudio.com/) kullanmanız kesinlikle önerilir.
+.NET Core 3,0, 8,0 için C# destek ekler. [Visual Studio 2019 sürüm 16,3](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) veya daha yeni bir sürümünü, [Mac için Visual Studio 8,3](/visualstudio/mac/install-preview) veya daha yenisini veya en son  **C# uzantıya**sahip [Visual Studio Code](https://code.visualstudio.com/) kullanmanız kesinlikle önerilir.
 
 Şimdi Windows, macOS veya Linux 'ta [.NET Core 3,0 'Yi indirin ve](https://aka.ms/netcore3download) kullanmaya başlayın.
 
@@ -91,14 +91,14 @@ Daha fazla bilgi için bkz. [.NET platformu bağımlı iç](https://github.com/d
 
 .NET Core artık [çerçeveye bağlı yürütülebilir dosyaları](../deploying/index.md#framework-dependent-executables-fde) varsayılan olarak oluşturur. Bu davranış, .NET Core 'un küresel olarak yüklenen bir sürümünü kullanan uygulamalar için yenidir. Daha önce yalnızca [kendi kendine kapsanan dağıtımlar](../deploying/index.md#self-contained-deployments-scd) yürütülebilir bir dosya üretecektir.
 
-@No__t-0 veya `dotnet publish` sırasında, kullanmakta olduğunuz SDK ortamı ve platformuyla eşleşen bir yürütülebilir dosya oluşturulur. Bu yürütülebilir dosyalarla aynı şeyleri, diğer yerel yürütülebilir dosyaları gibi bekleyebilir, örneğin:
+@No__t_0 veya `dotnet publish` sırasında, kullanmakta olduğunuz SDK ortamı ve platformuyla eşleşen bir yürütülebilir dosya oluşturulur. Bu yürütülebilir dosyalarla aynı şeyleri, diğer yerel yürütülebilir dosyaları gibi bekleyebilir, örneğin:
 
 - Yürütülebilir dosyaya çift tıklayabilirsiniz.
 - Uygulamayı Windows üzerinde `myapp.exe` ve Linux ve macOS üzerinde `./myapp` gibi bir komut isteminden doğrudan başlatabilirsiniz.
 
 ## <a name="single-file-executables"></a>Tek dosya yürütülebilir dosyaları
 
-@No__t-0 komutu, uygulamanızı platforma özgü tek dosya yürütülebilir dosyasına paketlemeyi destekler. Yürütülebilir dosya kendiliğinden ayıklanıyor ve uygulamanızı çalıştırmak için gerekli tüm bağımlılıkları (yerel dahil) içerir. Uygulama ilk kez çalıştırıldığında uygulama adı ve derleme tanımlayıcısı temelinde bir dizine çıkarılır. Uygulama yeniden çalıştırıldığında başlatma daha hızlıdır. Yeni bir sürüm kullanılmadığı takdirde uygulamanın kendisi ikinci kez ayıklanmasına gerek yoktur.
+@No__t_0 komutu, uygulamanızı platforma özgü tek dosya yürütülebilir dosyasına paketlemeyi destekler. Yürütülebilir dosya kendiliğinden ayıklanıyor ve uygulamanızı çalıştırmak için gerekli tüm bağımlılıkları (yerel dahil) içerir. Uygulama ilk kez çalıştırıldığında uygulama adı ve derleme tanımlayıcısı temelinde bir dizine çıkarılır. Uygulama yeniden çalıştırıldığında başlatma daha hızlıdır. Yeni bir sürüm kullanılmadığı takdirde uygulamanın kendisi ikinci kez ayıklanmasına gerek yoktur.
 
 Tek dosya yürütülebiliri yayımlamak için, projenizdeki `PublishSingleFile` ' ı veya komut satırında `dotnet publish` komutu ile ayarlayın:
 
@@ -137,7 +137,7 @@ Bu aracı etkinleştirmek için projenize `<PublishTrimmed>` ayarını ekleyin v
 dotnet publish -r <rid> -c Release
 ```
 
-Örnek olarak, yayımlanan temel "Merhaba Dünya" yeni konsol projesi şablonu, yayımlandığında 70 MB ile çarpılır. @No__t-0 ' ı kullanarak, bu boyut yaklaşık 30 MB 'ye indirilir.
+Örnek olarak, yayımlanan temel "Merhaba Dünya" yeni konsol projesi şablonu, yayımlandığında 70 MB ile çarpılır. @No__t_0 kullanarak, bu boyut yaklaşık 30 MB 'ye indirilir.
 
 Yansıma veya ilgili dinamik özellikleri kullanan uygulamaların veya çerçevelerin (ASP.NET Core ve WPF dahil) genellikle kırpıldığına göre kesilmesini göz önünde bulundurmanız önemlidir. Bu ayırıcı, bağlayıcının bu dinamik davranış hakkında bilgi sahibi olmadığı ve yansıma için hangi çerçeve türlerinin gerekli olduğunu belirleyemediği için oluşur. Il bağlayıcı aracı, bu senaryonun farkında olacak şekilde yapılandırılabilir.
 
@@ -199,7 +199,7 @@ ReadyToRun derleyicisi Şu anda çapraz hedefleme 'yi desteklememektedir. Belirl
 
 ## <a name="build-copies-dependencies"></a>Derleme kopyaları bağımlılıkları
 
-@No__t-0 komutu artık, uygulamanızın NuGet bağımlılıklarını NuGet önbelleğinden yapı çıkış klasörüne kopyalar. Daha önce bağımlılıklar yalnızca `dotnet publish` ' ın parçası olarak kopyalandı.
+@No__t_0 komutu artık, NuGet önbelleğinden uygulamanızın NuGet bağımlılıklarını yapı çıkış klasörüne kopyalar. Daha önce bağımlılıklar yalnızca `dotnet publish` ' ın parçası olarak kopyalandı.
 
 Bağlama ve Razor sayfası yayımlama gibi bazı işlemler, yayımlamayı gerektirecek şekilde devam eder.
 
@@ -239,7 +239,7 @@ En yüksek düzeltme eki sürümüne ilet. Bu, ikincil sürüm iletmeyi devre d�
 İstenen alt sürüm mevcut olsa bile en yüksek düzeyde alt sürüme ilet. Bileşen barındırma senaryolarına yöneliktir.
 - **Latestana**\
 İstenen ana mevcut olsa bile, en yüksek büyük ve en yüksek düzeyde alt sürüme ilet. Bileşen barındırma senaryolarına yöneliktir.
-- @No__t **devre dışı bırak**-1
+- @No__t_1 **devre dışı bırak**
 İleri alma. Yalnızca belirtilen sürüme bağlayın. Bu ilke, en son düzeltme eklerine iletme özelliğini devre dışı bıraktığından genel kullanım için önerilmez. Bu değer yalnızca test için önerilir.
 
 **Devre dışı bırak** ayarının yanı sıra, tüm ayarlar kullanılabilir en yüksek düzeltme eki sürümünü kullanacaktır.
@@ -283,9 +283,9 @@ Visual Studio 2019 ' de bulunan [Windows uygulama paketleme projesi](https://doc
 
 ## <a name="winforms-high-dpi"></a>WinForms yüksek DPı
 
-.NET Core Windows Forms uygulamaları, <xref:System.Windows.Forms.Application.SetHighDpiMode(System.Windows.Forms.HighDpiMode)?displayProperty=nameWithType> ile yüksek DPı modunu ayarlayabilir. @No__t-0 yöntemi, ayar diğer yollarla `Application.Run` ' den önce `App.Manifest` veya P/Invoke gibi bir şekilde ayarlanmamışsa, karşılık gelen yüksek DPı modunu ayarlar.
+.NET Core Windows Forms uygulamaları, <xref:System.Windows.Forms.Application.SetHighDpiMode(System.Windows.Forms.HighDpiMode)?displayProperty=nameWithType> ile yüksek DPı modunu ayarlayabilir. @No__t_0 yöntemi `Application.Run` önce `App.Manifest` veya P/Invoke gibi başka yollarla ayarlanmamışsa, karşılık gelen yüksek DPı modunu ayarlar.
 
-@No__t-1 numaralandırmasında gösterildiği gibi olası `highDpiMode` değerleri şunlardır:
+@No__t_1 numaralandırmasında gösterildiği gibi olası `highDpiMode` değerleri şunlardır:
 
 - `DpiUnaware`
 - `SystemAware`
@@ -297,7 +297,7 @@ Yüksek DPı modları hakkında daha fazla bilgi için bkz. [Windows 'Da yüksek
 
 ## <a name="ranges-and-indices"></a>Aralıklar ve dizinler
 
-Yeni <xref:System.Index?displayProperty=nameWithType> türü dizin oluşturmak için kullanılabilir. Baştan veya `^` işleci (C#) önekiyle biten bir `int` ' dan bir tane oluşturabilirsiniz:
+Yeni <xref:System.Index?displayProperty=nameWithType> türü dizin oluşturmak için kullanılabilir. Baştan itibaren sayı olan bir `int` veya sonuna kadar olan önek `^` işleci (C#) ile bir tane oluşturabilirsiniz:
 
 ```csharp
 Index i1 = 3;  // number 3 from beginning
@@ -316,9 +316,9 @@ Daha fazla bilgi için [aralıklar ve dizinler öğreticisine](../../csharp/tuto
 
 ## <a name="async-streams"></a>Zaman uyumsuz akışlar
 
-@No__t-0 türü, <xref:System.Collections.Generic.IEnumerable%601> ' in yeni bir zaman uyumsuz sürümüdür. Dil, öğelerinin @no__t 1 ' den fazla @no__t ve öğeleri oluşturmak için `yield return` ' i kullanmanıza olanak sağlar.
+@No__t_0 türü, <xref:System.Collections.Generic.IEnumerable%601> yeni bir zaman uyumsuz sürümüdür. Dil, öğelerini tüketmek için `IAsyncEnumerable<T>` `await foreach` ve öğeleri oluşturmak için `yield return` kullanmayı sağlar.
 
-Aşağıdaki örnek, zaman uyumsuz akışların hem üretimini hem de tüketimini gösterir. @No__t-0 deyimleri zaman uyumsuz olur ve çağıranlar için zaman uyumsuz akış üretmek için `yield return` ' i kullanır. Bu model (`yield return` kullanılarak), zaman uyumsuz akışlar üretmek için önerilen modeldir.
+Aşağıdaki örnek, zaman uyumsuz akışların hem üretimini hem de tüketimini gösterir. @No__t_0 deyimleri zaman uyumsuz ve kendisi çağıranlar için zaman uyumsuz akış üretmek için `yield return` kullanır. Bu model (`yield return` kullanılarak), zaman uyumsuz akışlar üretmek için önerilen modeldir.
 
 ```csharp
 async IAsyncEnumerable<int> GetBigResultsAsync()
@@ -330,7 +330,7 @@ async IAsyncEnumerable<int> GetBigResultsAsync()
 }
 ```
 
-@No__t-0 ' ı kullanabilmenin yanı sıra, zaman uyumsuz yineleyiciler da oluşturabilirsiniz, örneğin, içinde hem `await` hem de `yield` ' ü kullanabileceğiniz bir `IAsyncEnumerable/IAsyncEnumerator` döndüren Yineleyici. Atılmalıdır nesneler için, `Stream` ve `Timer` gibi çeşitli BCL türlerini uygulayan `IAsyncDisposable` ' ı kullanabilirsiniz.
+@No__t_0 Ayrıca, zaman uyumsuz yineleyiciler oluşturabilirsiniz, örneğin, hem `await` hem de `yield` `IAsyncEnumerable/IAsyncEnumerator` döndüren bir yineleyici. Atılmalıdır nesneler için, `Stream` ve `Timer` gibi çeşitli BCL türlerini uygulayan `IAsyncDisposable` ' ı kullanabilirsiniz.
 
 Daha fazla bilgi için bkz. [zaman uyumsuz akışlar öğreticisi](../../csharp/tutorials/generate-consume-asynchronous-stream.md).
 
@@ -346,11 +346,11 @@ Ayrıştırma ve biçimlendirme düzeltmeleri şunları içerir:
 
 Yeni <xref:System.Math?displayProperty=nameWithType> API 'Leri şunlardır:
 
-- <xref:System.Math.BitIncrement(System.Double)> ve <xref:System.Math.BitDecrement(System.Double)> @ no__t-2
-@No__t-0 ve `nextDown` IEEE işlemlerine karşılık gelir. Bunlar, girdiden daha büyük veya daha az (sırasıyla) karşılaştıran en küçük kayan nokta numarasını döndürür. Örneğin, `Math.BitIncrement(0.0)` `double.Epsilon` döndürür.
+- <xref:System.Math.BitIncrement(System.Double)> ve <xref:System.Math.BitDecrement(System.Double)> \
+@No__t_0 ve `nextDown` IEEE işlemlerine karşılık gelir. Bunlar, girdiden daha büyük veya daha az (sırasıyla) karşılaştıran en küçük kayan nokta numarasını döndürür. Örneğin, `Math.BitIncrement(0.0)` `double.Epsilon` döndürür.
 
-- <xref:System.Math.MaxMagnitude(System.Double,System.Double)> ve <xref:System.Math.MinMagnitude(System.Double,System.Double)> @ no__t-2
-@No__t-0 ve `minNumMag` IEEE işlemlerine karşılık gelir, iki girişin büyüklüğüne göre daha büyük veya daha az (sırasıyla) değeri döndürür. Örneğin, `Math.MaxMagnitude(2.0, -3.0)` `-3.0` döndürür.
+- <xref:System.Math.MaxMagnitude(System.Double,System.Double)> ve <xref:System.Math.MinMagnitude(System.Double,System.Double)> \
+@No__t_0 ve `minNumMag` IEEE işlemlerine karşılık gelir, iki girişin (sırasıyla) büyüklüğüne eşit veya daha küçük olan değeri döndürür. Örneğin, `Math.MaxMagnitude(2.0, -3.0)` `-3.0` döndürür.
 
 - <xref:System.Math.ILogB(System.Double)>\
 Tamsayı değer döndüren `logB` IEEE işlemine karşılık gelir, giriş parametresinin tam sayı taban-2 günlüğünü döndürür. Bu yöntem `floor(log2(x))` ile aynı şekilde aynıdır, ancak en az yuvarlama hatasıyla yapılır.
@@ -359,13 +359,13 @@ Tamsayı değer döndüren `logB` IEEE işlemine karşılık gelir, giriş param
 Tamsayı değer alan `scaleB` IEEE işlemine karşılık gelir, etkin bir `x * pow(2, n)` döndürür, ancak en az yuvarlama hatasıyla yapılır.
 
 - <xref:System.Math.Log2(System.Double)>\
-@No__t-0 IEEE işlemine karşılık gelen, Base-2 logaritmasını döndürür. Yuvarlama hatasını en aza indirir.
+@No__t_0 IEEE işlemine karşılık gelen, Base-2 logaritmasını döndürür. Yuvarlama hatasını en aza indirir.
 
 - <xref:System.Math.FusedMultiplyAdd(System.Double,System.Double,System.Double)>\
-@No__t-0 IEEE işlemine karşılık gelen bir fkullandınız çarpma eklemesi gerçekleştirir. Yani, tek bir işlem olarak @no__t, böylece yuvarlama hatasını en aza indirir. Örneğin, `1e308` döndüren `FusedMultiplyAdd(1e308, 2.0, -1e308)` olabilir. Normal `(1e308 * 2.0) - 1e308` `double.PositiveInfinity` döndürür.
+@No__t_0 IEEE işlemine karşılık gelir, bir fkullanılan çarpma eklemesi gerçekleştirir. Yani, tek bir işlem olarak `(x * y) + z`, böylece yuvarlama hatasını en aza indirir. Örneğin, `1e308` döndüren `FusedMultiplyAdd(1e308, 2.0, -1e308)` olabilir. Normal `(1e308 * 2.0) - 1e308` `double.PositiveInfinity` döndürür.
 
 - <xref:System.Math.CopySign(System.Double,System.Double)>\
-@No__t-0 IEEE işlemine karşılık gelir, `x` değerini döndürür, ancak `y` işareti ile.
+@No__t_0 IEEE işlemine karşılık gelen `x` değerini, ancak `y` işaretini döndürür.
 
 ## <a name="fast-built-in-json-support"></a>Hızlı yerleşik JSON desteği
 
@@ -375,7 +375,7 @@ Yeni yerleşik JSON desteği yüksek performanslı, düşük tahsisdir ve `Span<
 
 ### <a name="utf8jsonreader"></a>Utf8JsonReader
 
-<xref:System.Text.Json.Utf8JsonReader?displayProperty=nameWithType>, UTF-8 kodlu JSON metin için yüksek performanslı, düşük bir ayırma, salt iletme okuyucuudur ve bir `ReadOnlySpan<byte>` ' den okur. @No__t-0, özel Çözümleyicileri ve seri hale getiriciler oluşturmak için kullanılabilen, temel, alt düzey bir tür. Yeni `Utf8JsonReader` kullanılarak JSON yükünün okunması, **JSON.net**'den okuyucu kullanmaktan daha hızlıdır. JSON belirteçlerini (UTF-16) dizeleri olarak oluşturmanız gerekene kadar ayırmaz.
+<xref:System.Text.Json.Utf8JsonReader?displayProperty=nameWithType>, UTF-8 kodlu JSON metin için yüksek performanslı, düşük bir ayırma, salt iletme okuyucuudur ve bir `ReadOnlySpan<byte>` ' den okur. @No__t_0, özel Çözümleyicileri ve seri hale getiriciler oluşturmak için kullanılabilen, temel bir alt düzey türüdür. Yeni `Utf8JsonReader` kullanılarak JSON yükünün okunması, **JSON.net**'den okuyucu kullanmaktan daha hızlıdır. JSON belirteçlerini (UTF-16) dizeleri olarak oluşturmanız gerekene kadar ayırmaz.
 
 Visual Studio Code tarafından oluşturulan [**Launch. JSON**](https://github.com/dotnet/samples/blob/master/snippets/core/whats-new/whats-new-in-30/cs/launch.json) dosyası aracılığıyla okuma örneği aşağıda verilmiştir:
 
@@ -385,11 +385,11 @@ Visual Studio Code tarafından oluşturulan [**Launch. JSON**](https://github.co
 
 ### <a name="utf8jsonwriter"></a>Utf8JsonWriter
 
-<xref:System.Text.Json.Utf8JsonWriter?displayProperty=nameWithType>, `String`, `Int32` ve `DateTime` gibi ortak .NET türlerinden UTF-8 kodlu JSON metni yazmak için yüksek performanslı, önbelleğe alınmamış ve salt ileri bir yol sağlar. Okuyucu gibi, yazıcı ise özel serileştiriciler oluşturmak için kullanılabilen temel bir alt düzey tür olur. Yeni @no__t kullanarak JSON yükünün yazılması, **JSON.net** adresinden gelen yazıcıyı kullanmaktan daha hızlı% 30-80 daha hızlıdır ve ayırmaz.
+<xref:System.Text.Json.Utf8JsonWriter?displayProperty=nameWithType>, `String`, `Int32` ve `DateTime` gibi ortak .NET türlerinden UTF-8 kodlu JSON metni yazmak için yüksek performanslı, önbelleğe alınmamış ve salt ileri bir yol sağlar. Okuyucu gibi, yazıcı ise özel serileştiriciler oluşturmak için kullanılabilen temel bir alt düzey tür olur. Yeni `Utf8JsonWriter` kullanarak JSON yükünün yazılması, **JSON.net** adresinden yazıcı kullanmaktan daha hızlı% 30-80 daha hızlıdır ve ayrılmaz.
 
 ### <a name="jsondocument"></a>JsonDocument
 
-<xref:System.Text.Json.JsonDocument?displayProperty=nameWithType> `Utf8JsonReader` ' in üzerine kurulmuştur. @No__t-0, JSON verilerini ayrıştırabilme ve rasgele erişimi ve numaralandırmayı desteklemek için sorgulanabilen salt okunurdur bir Belge Nesne Modeli (DOM) oluşturma olanağı sağlar. Verileri oluşturan JSON öğelerine, `RootElement` adlı bir özellik olarak `JsonDocument` tarafından kullanıma sunulan <xref:System.Text.Json.JsonElement> türü aracılığıyla erişilebilir. @No__t-0, JSON metnini ortak .NET türlerine dönüştürmek için API 'lerle birlikte JSON dizisini ve nesne numaralandırıcıları içerir. Tipik bir JSON yükünün ayrıştırılması ve `JsonDocument` ' ı kullanarak tüm üyelerine erişmek, makul ölçüde boyutlandırılabilir veriler için çok az ayırmalarla (yani, < 1 MB) 2- **3x daha hızlıdır** .
+<xref:System.Text.Json.JsonDocument?displayProperty=nameWithType> `Utf8JsonReader` ' in üzerine kurulmuştur. @No__t_0, JSON verilerini ayrıştırabilme ve rasgele erişimi ve numaralandırmayı desteklemek için sorgulanabilen salt okunurdur bir Belge Nesne Modeli (DOM) oluşturma olanağı sağlar. Verileri oluşturan JSON öğelerine, `RootElement` adlı bir özellik olarak `JsonDocument` tarafından kullanıma sunulan <xref:System.Text.Json.JsonElement> türü aracılığıyla erişilebilir. @No__t_0, JSON metnini ortak .NET türlerine dönüştürmek için API 'lerle birlikte JSON dizisini ve nesne numaralandırıcıları içerir. Tipik bir JSON yükünün ayrıştırılması ve `JsonDocument` ' ı kullanarak tüm üyelerine erişmek, makul ölçüde boyutlandırılabilir veriler için çok az ayırmalarla (yani, < 1 MB) 2- **3x daha hızlıdır** .
 
 Başlangıç noktası olarak kullanılabilecek `JsonDocument` ve `JsonElement` ' in örnek kullanımı aşağıda verilmiştir:
 
@@ -425,7 +425,7 @@ Windows, düz C API 'Leri, COM ve WinRT biçiminde zengin bir yerel API sunar. .
 
 ## <a name="http2-support"></a>HTTP/2 desteği
 
-@No__t-0 türü HTTP/2 protokolünü destekler. HTTP/2 etkinse HTTP protokol sürümü TLS/ALPN aracılığıyla görüşülür ve sunucunun bunu kullanabilmesi durumunda HTTP/2 kullanılır.
+@No__t_0 türü HTTP/2 protokolünü destekler. HTTP/2 etkinse HTTP protokol sürümü TLS/ALPN aracılığıyla görüşülür ve sunucunun bunu kullanabilmesi durumunda HTTP/2 kullanılır.
 
 Varsayılan protokol HTTP/1.1 olarak kalır, ancak HTTP/2 iki farklı şekilde etkinleştirilebilir. İlk olarak http istek iletisini HTTP/2 kullanacak şekilde ayarlayabilirsiniz:
 
@@ -435,7 +435,7 @@ Varsayılan protokol HTTP/1.1 olarak kalır, ancak HTTP/2 iki farklı şekilde e
 
 [!CODE-csharp[Http2Client](~/samples/snippets/core/whats-new/whats-new-in-30/cs/http.cs#Client)]
 
-Uygulama geliştirirken birçok kez şifrelenmemiş bağlantı kullanmak istersiniz. Hedef uç noktanın HTTP/2 kullanacağınızı biliyorsanız, HTTP/2 için şifrelenmemiş bağlantıları açabilirsiniz. @No__t-0 ortam değişkenini `1` ' e ayarlayarak veya uygulama bağlamında etkinleştirerek etkinleştirebilirsiniz:
+Uygulama geliştirirken birçok kez şifrelenmemiş bağlantı kullanmak istersiniz. Hedef uç noktanın HTTP/2 kullanacağınızı biliyorsanız, HTTP/2 için şifrelenmemiş bağlantıları açabilirsiniz. @No__t_0 ortam değişkenini `1` ya da uygulama bağlamında etkinleştirerek etkinleştirebilirsiniz:
 
 [!CODE-csharp[Http2Context](~/samples/snippets/core/whats-new/whats-new-in-30/cs/http.cs#AppContext)]
 
@@ -500,7 +500,7 @@ Linux 'ta seri bağlantı noktası için sınırlı destek hakkında daha fazla 
 
 ## <a name="docker-and-cgroup-memory-limits"></a>Docker ve cgroup bellek sınırları
 
-Docker ile Linux üzerinde .NET Core 3,0 çalıştırmak, cgroup bellek limitleriyle daha iyi çalışır. @No__t-0 gibi bellek limitleriyle Docker kapsayıcısını çalıştırmak, .NET Core 'un davranış şeklini değiştirir.
+Docker ile Linux üzerinde .NET Core 3,0 çalıştırmak, cgroup bellek limitleriyle daha iyi çalışır. @No__t_0 gibi bellek limitleriyle Docker kapsayıcısını çalıştırmak, .NET Core 'un davranış şeklini değiştirir.
 
 - Varsayılan atık toplayıcı (GC) yığın boyutu: kapsayıcıda bellek sınırının en fazla 20 MB veya %75 ' si.
 - Açık Boyut, mutlak bir sayı veya cgroup sınırının yüzdesi olarak ayarlanabilir.
