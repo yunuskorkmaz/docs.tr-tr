@@ -8,41 +8,41 @@ f1_keywords:
 helpviewer_keywords:
 - bool keyword [C#]
 ms.assetid: 551cfe35-2632-4343-af49-33ad12da08e2
-ms.openlocfilehash: 3e4e83b52cd6b275e68039693c774f6490f2b88f
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 880e8c0b733afbf5c09f543e06a5a4a858d2b456
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69606051"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771855"
 ---
 # <a name="bool-c-reference"></a>bool (C# Başvurusu)
 
-Anahtar sözcüğü öğesinin <xref:System.Boolean?displayProperty=nameWithType>diğer adıdır. `bool` Boole değerlerini depolamak için değişkenleri bildirmek üzere kullanılır: [true](true-literal.md) ve [false](false-literal.md).
+@No__t_0 anahtar sözcüğü <xref:System.Boolean?displayProperty=nameWithType> diğer adıdır. Boole değerlerini depolamak için değişkenleri bildirmek üzere kullanılır: [true](true-literal.md) ve [false](false-literal.md).
 
 > [!NOTE]
-> Üç değerli mantığı desteklemeniz gerekiyorsa, örneğin, üç değerli bir Boolean türünü destekleyen veritabanlarıyla çalışırken türünükullanın.`bool?` İşlenenler için, önceden tanımlanmış `&` ve `|` işleçleri üç değerli mantığı destekler. `bool?` Daha fazla bilgi için, [Boole mantıksal işleçler](../operators/boolean-logical-operators.md) makalesinin [Nullable Boolean mantıksal işleçler](../operators/boolean-logical-operators.md#nullable-boolean-logical-operators) bölümüne bakın.
+> Üç değerli mantığı desteklemeniz gerekiyorsa (örneğin, üç değerli bir Boole türünü destekleyen veritabanlarıyla çalışırken) `bool?` türünü kullanın. @No__t_0 işlenenleri için, önceden tanımlanmış `&` ve `|` işleçleri üç değerli mantığı destekler. Daha fazla bilgi için, [Boole mantıksal işleçler](../operators/boolean-logical-operators.md) makalesinin [Nullable Boolean mantıksal işleçler](../operators/boolean-logical-operators.md#nullable-boolean-logical-operators) bölümüne bakın.
 
 ## <a name="literals"></a>Sabit değerler
 
-Bir `bool` değişkene Boole değeri atayabilirsiniz. Ayrıca, bir `bool` `bool` değişkenine değerlendirilen bir ifade atayabilirsiniz.
+Bir `bool` değişkenine Boole değeri atayabilirsiniz. Ayrıca, bir `bool` değişkenine `bool` değerlendirilen bir ifade da atayabilirsiniz.
 
 [!code-csharp[csrefKeywordsTypes#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/keywordsTypes.cs#1)]
 
-`bool` Bir`false`değişkenin varsayılan değeri. `bool?` Bir`null`değişkenin varsayılan değeri.
+Bir `bool` değişkeninin varsayılan değeri `false`. Bir `bool?` değişkeninin varsayılan değeri `null`.
 
 ## <a name="conversions"></a>Dönüşümler
 
-' C++De, türünde `bool` bir değer türünde `int`bir değere dönüştürülebilir; diğer bir deyişle, `false` sıfıra eşdeğerdir ve `true` sıfır dışında değerlere eşdeğerdir. İçinde C#, `bool` türü ve diğer türler arasında dönüştürme yoktur. Örneğin, aşağıdaki `if` ifade içinde C#geçersizdir:
+' C++De, `bool` türünde bir değer `int` türünde bir değere dönüştürülebilir. diğer bir deyişle, `false` sıfır ile eşdeğerdir ve `true` sıfır dışında bir değere eşdeğerdir. ' C#De, `bool` türü ve diğer türler arasında dönüştürme yok. Örneğin, aşağıdaki `if` ifade içinde C#geçersizdir:
 
 [!code-csharp[csrefKeywordsTypes#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/keywordsTypes.cs#2)]
 
-Türün `int`bir değişkenini test etmek için, bunu aşağıdaki gibi sıfır gibi bir değerle açıkça karşılaştırmanız gerekir:
+@No__t_0 türünde bir değişkeni test etmek için, bunu aşağıdaki gibi, sıfır gibi bir değerle açıkça karşılaştırmanız gerekir:
 
 [!code-csharp[csrefKeywordsTypes#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/keywordsTypes.cs#3)]
 
 ## <a name="example"></a>Örnek
 
-Bu örnekte, klavyeden bir karakter girersiniz ve program giriş karakterinin bir harf olup olmadığını denetler. Bir harf ise, küçük harf veya büyük harf olup olmadığını denetler. Bu denetimler, <xref:System.Char.IsLetter%2A> herikisi<xref:System.Char.IsLower%2A>de türüdöndürenveilegerçekleştirilir:`bool`
+Bu örnekte, klavyeden bir karakter girersiniz ve program giriş karakterinin bir harf olup olmadığını denetler. Bir harf ise, küçük harf veya büyük harf olup olmadığını denetler. Bu denetimler, her ikisi de `bool` türünü döndüren <xref:System.Char.IsLetter%2A> ve <xref:System.Char.IsLower%2A> ile gerçekleştirilir:
 
 [!code-csharp[csrefKeywordsTypes#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/keywordsTypes.cs#4)]
 
@@ -57,5 +57,3 @@ Bu örnekte, klavyeden bir karakter girersiniz ve program giriş karakterinin bi
 - [C# Anahtar Sözcükleri](./index.md)
 - [Integral türleri](../builtin-types/integral-numeric-types.md)
 - [Yerleşik Türler Tablosu](./built-in-types-table.md)
-- [Örtük Sayısal Dönüştürmeler Tablosu](./implicit-numeric-conversions-table.md)
-- [Açık Sayısal Dönüştürmeler Tablosu](./explicit-numeric-conversions-table.md)

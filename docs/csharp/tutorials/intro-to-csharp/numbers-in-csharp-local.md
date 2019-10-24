@@ -3,14 +3,14 @@ title: C# C#
 description: Sayısal C# türleri, özelliklerini ve yöntemlerini inceleyerek bilgi edinin.
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: 731824fefcf4966a885c53be8f71e77140541383
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: e9d8b09bde6e87edf9f483c0c296dbb256343f58
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834093"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774020"
 ---
-# <a name="manipulate-integral-and-floating-point-numbers-in-c"></a>C @ no__t-0 içindeki integral ve kayan nokta numaralarını işleme
+# <a name="manipulate-integral-and-floating-point-numbers-in-c"></a>C \# integral ve kayan nokta numaralarını işleme
 
 Bu öğretici, size etkileşimli olarak C# sayısal türler öğretir. Küçük miktarlarda kod yazacaksınız, daha sonra bu kodu derleyip çalıştıracaksınız. Öğreticide, içindeki C#sayıları ve matematik işlemlerini keşfettiği bir dizi ders bulunur. Bu dersler, C# dilin temellerini öğretir.
 
@@ -18,9 +18,9 @@ Bu öğreticide, geliştirme için kullanabileceğiniz bir makineniz olması bek
 
 ## <a name="explore-integer-math"></a>Tamsayı matematiğini keşfet
 
-Sayı adlı bir dizin oluşturun *-hızlı başlangıç*. Geçerli dizini yapın ve `dotnet new console -n NumbersInCSharp -o .` olarak çalıştırın.
+Sayı adlı bir dizin oluşturun *-hızlı başlangıç*. Geçerli dizini yapıp `dotnet new console -n NumbersInCSharp -o .` çalıştırın.
 
-*Program.cs* 'i en sevdiğiniz düzenleyicide açın ve `Console.WriteLine("Hello World!");` satırını aşağıdaki kodla değiştirin:
+En sevdiğiniz düzenleyicide *program.cs* açın ve satır `Console.WriteLine("Hello World!");` aşağıdaki kodla değiştirin:
 
 ```csharp
 int a = 18;
@@ -29,15 +29,15 @@ int c = a + b;
 Console.WriteLine(c);
 ```
 
-Komut pencerenizde `dotnet run` yazarak bu kodu çalıştırın.
+Komut pencerenize `dotnet run` yazarak bu kodu çalıştırın.
 
-Yalnızca tamsayılarla temel matematik işlemlerinden birini gördünüz. @No__t-0 türü bir **tamsayıyı**, sıfır, pozitif veya negatif bir tam sayıyı temsil eder. Ek için `+` sembolünü kullanırsınız. Tamsayılar için diğer yaygın matematik işlemleri şunlardır:
+Yalnızca tamsayılarla temel matematik işlemlerinden birini gördünüz. @No__t_0 türü bir **tamsayıyı**, sıfır, pozitif veya negatif bir tam sayıyı temsil eder. Ek için `+` sembolünü kullanırsınız. Tamsayılar için diğer yaygın matematik işlemleri şunlardır:
 
 - çıkarma için `-`
 - Çarpma için `*`
 - Bölüm için `/`
 
-Bu farklı işlemleri inceleyerek başlayın. @No__t-0 değerini yazan satırdan sonra bu satırları ekleyin:
+Bu farklı işlemleri inceleyerek başlayın. @No__t_0 değerini yazan satırdan sonra bu satırları ekleyin:
 
 ```csharp
 c = a - b;
@@ -48,15 +48,15 @@ c = a / b;
 Console.WriteLine(c);
 ```
 
-Komut pencerenizde `dotnet run` yazarak bu kodu çalıştırın.
+Komut pencerenize `dotnet run` yazarak bu kodu çalıştırın.
 
-İsterseniz aynı satırda birden çok matematik işlemi gerçekleştirerek da deneyebilirsiniz. Örneğin, @no__t deneyin-0. Değişkenlerin ve sabit sayıların karıştırılmasına izin verilir.
+İsterseniz aynı satırda birden çok matematik işlemi gerçekleştirerek da deneyebilirsiniz. Örneğin `c = a + b - 12 * 17;` deneyin. Değişkenlerin ve sabit sayıların karıştırılmasına izin verilir.
 
 > [!TIP]
 > Keşfederken C# (veya herhangi bir programlama dilini), kod yazarken hata oluşturursunuz. **Derleyici** bu hataları bulacak ve size rapor eder. Çıktı hata iletileri içerdiğinde, nelerin düzeltileceğini görmek için örnek koda ve penceredeki koda yakından bakın.
 > Bu alıştırma, C# kod yapısını öğrenmenize yardımcı olur.
 
-İlk adımı tamamladınız. Sonraki bölüme başlamadan önce geçerli kodu ayrı bir yönteme taşıyalim. Bu, yeni bir örnekle çalışmaya başlamasını kolaylaştırır. @No__t-0 yönteminizi `WorkingWithIntegers` olarak yeniden adlandırın ve `WorkingWithIntegers` ' i çağıran yeni bir `Main` yöntemi yazın. Bitirdiğinizde, kodunuzun şöyle görünmesi gerekir:
+İlk adımı tamamladınız. Sonraki bölüme başlamadan önce geçerli kodu ayrı bir yönteme taşıyalim. Bu, yeni bir örnekle çalışmaya başlamasını kolaylaştırır. @No__t_0 yönteminizi `WorkingWithIntegers` olarak yeniden adlandırın ve `WorkingWithIntegers` çağıran yeni bir `Main` yöntemi yazın. Bitirdiğinizde, kodunuzun şöyle görünmesi gerekir:
 
 ```csharp
 using System;
@@ -89,17 +89,17 @@ namespace NumbersInCSharp
 
 ## <a name="explore-order-of-operations"></a>İşlem sırasını keşfet
 
-@No__t-0 ' a yapılan çağrıyı açıklama olarak yapın. Bu bölümde çalışırken çıktının daha az karışık hale gelir:
+@No__t_0 çağrısını açıklama. Bu bölümde çalışırken çıktının daha az karışık hale gelir:
 
 ```csharp
 //WorkingWithIntegers();
 ```
 
-@No__t-0 ' de C#bir **yorum** başlatır. Açıklamalar, kaynak kodunuzda tutmak istediğiniz tüm metinlerdir, ancak kod olarak yürütülmez. Derleyici açıklamalardan herhangi bir yürütülebilir kod oluşturmaz.
+@No__t_0 içinde C#bir **yorum** başlatır. Açıklamalar, kaynak kodunuzda tutmak istediğiniz tüm metinlerdir, ancak kod olarak yürütülmez. Derleyici açıklamalardan herhangi bir yürütülebilir kod oluşturmaz.
 
 C# Dil, matematiksel olarak öğrendiğiniz kurallarla tutarlı kurallara sahip farklı matematik işlemlerinin önceliğini tanımlar.
 Çarpma ve bölme, toplama ve çıkarma konusunda önceliklidir.
-@No__t-0 yöntemine aşağıdaki kodu ekleyerek ve `dotnet run` ' i yürüterek bunu keşfedebilirsiniz:
+@No__t_0 yöntemine aşağıdaki kodu ekleyerek ve `dotnet run` yürüterek bunu keşfedebilirsiniz:
 
 ```csharp
 int a = 5;
@@ -118,7 +118,7 @@ d = (a + b) * c;
 Console.WriteLine(d);
 ```
 
-Birçok farklı işlemi birleştirerek daha fazlasını keşfedebilirsiniz. @No__t-0 yönteminizin en altında aşağıdaki satırlara benzer bir şey ekleyin. @No__t-0 ' yı yeniden deneyin.
+Birçok farklı işlemi birleştirerek daha fazlasını keşfedebilirsiniz. @No__t_0 yönteminizin en altında aşağıdaki satırlara benzer bir şey ekleyin. Yeniden `dotnet run` deneyin.
 
 ```csharp
 d = (a + b) - 6 * c + (12 * 4) / 3 + 12;
@@ -137,9 +137,9 @@ int h = (e + f) / g;
 Console.WriteLine(h);
 ```
 
-Sonuçları görmek için `dotnet run` yazın.
+Sonuçları görmek için yeniden `dotnet run` yazın.
 
-' In üzerine geçmeden önce, bu bölümde yazdığınız tüm kodu alıp yeni bir yönteme koyabilirsiniz. Yeni metot `OrderPrecedence` ' a çağırın.
+' In üzerine geçmeden önce, bu bölümde yazdığınız tüm kodu alıp yeni bir yönteme koyabilirsiniz. Yeni yöntemin `OrderPrecedence` çağırın.
 Şöyle bir işlem yapmanız gerekir:
 
 ```csharp
@@ -198,7 +198,7 @@ namespace NumbersInCSharp
 ## <a name="explore-integer-precision-and-limits"></a>Tamsayı hassasiyetini ve limitleri keşfet
 
 Bu son örnek, bu tamsayı bölümünün sonucu ne olduğunu gösterdi.
-@No__t-2 karakteri olan **Modül** işlecini kullanarak **kalanı** alabilirsiniz. @No__t-0 yönteminde aşağıdaki kodu deneyin:
+@No__t_2 karakteri olan **Modül** işlecini kullanarak **kalanı** alabilirsiniz. @No__t_0 yönteminde aşağıdaki kodu deneyin:
 
 ```csharp
 int a = 7;
@@ -225,17 +225,17 @@ int what = max + 3;
 Console.WriteLine($"An example of overflow: {what}");
 ```
 
-Yanıtın en düşük (negatif) tamsayıya çok yakın olduğuna dikkat edin. @No__t-0 ' dır.
+Yanıtın en düşük (negatif) tamsayıya çok yakın olduğuna dikkat edin. @No__t_0 aynıdır.
 Toplama işlemi, tamsayılar için izin verilen değerleri **taşırdı** .
 Bir taşma, olası en büyük tamsayı değerinden en küçüğe "kaydırdığı için, yanıt çok büyük negatif bir sayıdır.
 
-@No__t-0 türü gereksinimlerinizi karşılamıyorsa, farklı sınırlara ve duyarlığa sahip başka sayısal türler vardır. Bundan sonra bu ileri keşfedelim.
+@No__t_0 türü gereksinimlerinizi karşılamıyorsa kullanabileceğiniz farklı sınırlara ve duyarlığa sahip başka sayısal türler vardır. Bundan sonra bu ileri keşfedelim.
 
-Bir kez daha, bu bölümde yazdığınız kodu ayrı bir yönteme taşıyalim. Bunu, `TestLimits` olarak adlandırın.
+Bir kez daha, bu bölümde yazdığınız kodu ayrı bir yönteme taşıyalim. @No__t_0 adlandırın.
 
 ## <a name="work-with-the-double-type"></a>Double türüyle çalışma
 
-@No__t-0 sayısal türü bir çift duyarlıklı kayan noktalı sayıyı temsil eder. Bu terimler sizin için yeni olabilir. **Kayan noktalı** sayı, çok büyük veya küçük olabilecek tamsayı olmayan sayıları temsil etmek için kullanışlıdır. **Çift duyarlıklı** , bu sayıların **tek duyarlığa**göre daha fazla duyarlık kullanılarak depolandığı anlamına gelir. Modern bilgisayarlarda, tek duyarlık sayılarıyla çift duyarlık kullanmak daha yaygındır.
+@No__t_0 sayısal türü bir çift duyarlıklı kayan noktalı sayıyı temsil eder. Bu terimler sizin için yeni olabilir. **Kayan noktalı** sayı, çok büyük veya küçük olabilecek tamsayı olmayan sayıları temsil etmek için kullanışlıdır. **Çift duyarlıklı** , bu sayıların **tek duyarlığa**göre daha fazla duyarlık kullanılarak depolandığı anlamına gelir. Modern bilgisayarlarda, tek duyarlık sayılarıyla çift duyarlık kullanmak daha yaygındır.
 Keşfedelim. Aşağıdaki kodu ekleyin ve sonucu görüntüleyin:
 
 ```csharp
@@ -264,7 +264,7 @@ double min = double.MinValue;
 Console.WriteLine($"The range of double is {min} to {max}");
 ```
 
-Bu değerler bilimsel gösterimde yazdırılır. @No__t-0 ' ın solundaki sayı mantisinin ' dir. Sağdaki sayı, 10 ' un üssü olarak üs değeri olan sayıdır.
+Bu değerler bilimsel gösterimde yazdırılır. @No__t_0 solundaki sayı mantisinin ' dir. Sağdaki sayı, 10 ' un üssü olarak üs değeri olan sayıdır.
 
 Matematiği gibi ondalık sayılar gibi, içindeki Double C# değerleri de yuvarlama hataları içerebilir. Şu kodu deneyin:
 
@@ -273,17 +273,17 @@ double third = 1.0 / 3.0;
 Console.WriteLine(third);
 ```
 
-@No__t-0 tekrarın tam olarak `1/3` ile aynı olmadığını bilirsiniz.
+Yinelenen `0.3` `1/3` tam olarak aynı olmadığını bilirsiniz.
 
 ***Sına***
 
-@No__t-0 türünü kullanarak büyük sayılar, küçük sayılar, çarpma ve bölme ile diğer hesaplamaları deneyin. Daha karmaşık hesaplamalar deneyin.
+@No__t_0 türünü kullanarak büyük sayılar, küçük sayılar, çarpma ve bölme ile diğer hesaplamaları deneyin. Daha karmaşık hesaplamalar deneyin.
 
-Zorluğa bir süre harcadıktan sonra yazdığınız kodu alın ve yeni bir yönteme yerleştirin. Yeni yöntemin `WorkWithDoubles` olarak adlandırın.
+Zorluğa bir süre harcadıktan sonra yazdığınız kodu alın ve yeni bir yönteme yerleştirin. Yeni yöntemin `WorkWithDoubles` adı.
 
 ## <a name="work-with-fixed-point-types"></a>Sabit nokta türleriyle çalışma
 
-Temel sayısal türleri C#: tamsayılar ve Double değerleri ile gördünüz.  Öğreneceğinizi bir başka tür vardır: `decimal` türü. @No__t-0 türü daha küçük bir aralığa sahip ancak `double` ' den daha büyük duyarlığa sahiptir. **Sabit nokta** terimi, ondalık noktanın (veya ikili noktanın) taşınmayacağı anlamına gelir. Şimdi bir göz atalım:
+Temel sayısal türleri C#: tamsayılar ve Double değerleri ile gördünüz.  Öğreneceğinizi bir başka tür vardır: `decimal` türü. @No__t_0 türü daha küçük bir aralığa sahiptir, ancak `double` daha fazla duyarlığa sahiptir. **Sabit nokta** terimi, ondalık noktanın (veya ikili noktanın) taşınmayacağı anlamına gelir. Şimdi bir göz atalım:
 
 ```csharp
 decimal min = decimal.MinValue;
@@ -320,8 +320,6 @@ Farklı sayısal türleri gördüğünüze göre, yarıçapı 2,50 santimetre ol
 
 Aşağıdaki konularda, içindeki C# numaralar hakkında daha fazla bilgi edinebilirsiniz:
 
-- [Integral türleri](../../language-reference/builtin-types/integral-numeric-types.md)
-- [Kayan nokta türleri tablosu](../../language-reference/builtin-types/floating-point-numeric-types.md)
-- [Yerleşik türler tablosu](../../language-reference/keywords/built-in-types-table.md)
-- [Örtük Sayısal dönüştürmeler tablosu](../../language-reference/keywords/implicit-numeric-conversions-table.md)
-- [Açık Sayısal Dönüşümler Tablosu](../../language-reference/keywords/explicit-numeric-conversions-table.md)
+- [Integral sayısal türleri](../../language-reference/builtin-types/integral-numeric-types.md)
+- [Kayan nokta sayısal türleri](../../language-reference/builtin-types/floating-point-numeric-types.md)
+- [Yerleşik sayısal dönüşümler](../../language-reference/builtin-types/numeric-conversions.md)

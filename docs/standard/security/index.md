@@ -11,38 +11,32 @@ helpviewer_keywords:
 ms.assetid: 9a9621d7-8883-4a4f-a874-65e8e09e20a6
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0e60f463d5a691cb84a30c169e471aa905b2db17
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0c3c7eb20bb3368205dab4c7e03b6b80d09a2121
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61860561"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72775271"
 ---
 # <a name="security-in-net"></a>.NET içinde güvenlik
-Ortak dil çalışma zamanı ve .NET birçok yararlı sınıfları ve sistem yöneticileri için kod erişebilmesi için izinleri özelleştirmek kolayca güvenli kod yazma ve geliştiricilerin Hizmetleri korunan kaynakları sağlayın. Ayrıca, çalışma zamanı ve .NET yararlı sınıfları ve şifreleme ve rol tabanlı güvenlik kullanımını kolaylaştıran hizmetler sağlar.  
-  
-## <a name="in-this-section"></a>Bu Bölümde  
 
- [Temel Güvenlik Kavramları](../../../docs/standard/security/key-security-concepts.md)  
- Bir genel bakış ortak dil çalışma zamanı güvenlik özellikleri sağlar. Bu bölümde geliştiriciler ve sistem yöneticileri ilgilendirir.  
-  
- [Rol Tabanlı Güvenlik](../../../docs/standard/security/role-based-security.md)  
- Rol tabanlı güvenlik, kodunuzda etkileşim açıklar. Bu bölümde geliştiricileri ilgilendirir.  
-  
- [Şifreleme Modeli](../../../docs/standard/security/cryptography-model.md)  
- .NET tarafından sağlanan şifreleme hizmetlerine genel bakış sağlar. Bu bölümde geliştiricileri ilgilendirir.  
-  
- [Güvenli Kodlama Yönergeleri](../../../docs/standard/security/secure-coding-guidelines.md)  
- Güvenilir .NET uygulamaları oluşturmak için en iyi uygulamalardan bazılarını açıklar. Bu bölümde geliştiricileri ilgilendirir.  
-  
- [Yönetilmeyen Kod İçin Güvenli Kodlama Yönergeleri](../../../docs/framework/security/secure-coding-guidelines-for-unmanaged-code.md)  
- Bazı en iyi uygulamaları ve güvenlikle ilgili noktalar, yönetilmeyen kod çağırırken açıklar.  
-  
- [Windows Identity Foundation](../../../docs/framework/security/index.md)  
- Uygulamalarınızda beyana dayalı kimlik nasıl uygulayacağınıza dair açıklar.  
+Ortak dil çalışma zamanı ve .NET, geliştiricilerin güvenli kodu kolayca yazmasını ve sistem yöneticilerinin, korunan kaynaklara erişebilmesi için koda verilen izinleri özelleştirmesini sağlayan birçok yararlı sınıf ve hizmeti sağlar. Ayrıca, çalışma zamanı ve .NET, şifreleme ve rol tabanlı güvenlik kullanımını kolaylaştıran yararlı sınıflar ve hizmetler sağlar.
 
-[Güvenlik değişiklikleri](../../../docs/framework/security/security-changes.md) .NET Framework güvenlik sistemini önemli değişiklikler açıklanmaktadır.
+## <a name="in-this-section"></a>Bu bölümde
 
-## <a name="related-sections"></a>İlgili Bölümler  
- [Geliştirme Kılavuzu](../../../docs/framework/development-guide.md)  
- Dinamik programlama, birlikte çalışabilirlik, genişletilebilirlik, bellek yönetimi ve iş parçacığı oluşturma hakkında uygulama ve bilgilerinizi oluşturma, yapılandırma, hatasını ayıklama, güvenliğini sağlama ve dağıtma gibi, uygulama geliştirmesine yönelik tüm temel teknoloji alanları ve görevleri için kılavuz sağlar.
+- [Temel Güvenlik Kavramları](key-security-concepts.md)  
+Ortak dil çalışma zamanı güvenlik özelliklerine genel bir bakış sağlar. Bu bölüm, geliştiricilere ve sistem yöneticilerine yönelik bir ilgi alanıdır.
+
+- [Rol Tabanlı Güvenlik](role-based-security.md)  
+Kodunuzda rol tabanlı güvenlikle nasıl etkileşim kuracağınızı açıklar. Bu bölüm, geliştiricilere ilgi çekici.
+
+- [Şifreleme Modeli](cryptography-model.md)  
+.NET tarafından sağlanan şifreleme hizmetlerine genel bir bakış sağlar. Bu bölüm, geliştiricilere ilgi çekici.
+
+- [Güvenli Kodlama Yönergeleri](secure-coding-guidelines.md)  
+Güvenilir .NET uygulamaları oluşturmak için en iyi uygulamalardan bazılarını açıklar. Bu bölüm, geliştiricilere ilgi çekici.
+
+## <a name="related-sections"></a>İlgili bölümler
+
+[Geliştirme Kılavuzu](../../framework/development-guide.md)  
+Dinamik programlama, birlikte çalışabilirlik, genişletilebilirlik, bellek yönetimi ve iş parçacığı oluşturma hakkında uygulama ve bilgilerinizi oluşturma, yapılandırma, hatasını ayıklama, güvenliğini sağlama ve dağıtma gibi, uygulama geliştirmesine yönelik tüm temel teknoloji alanları ve görevleri için kılavuz sağlar.

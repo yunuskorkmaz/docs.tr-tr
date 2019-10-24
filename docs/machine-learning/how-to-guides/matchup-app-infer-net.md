@@ -3,12 +3,12 @@ title: Infer.NET ve dayalı programlamasında bir oyun eşleştirme listesi uygu
 description: Basitleştirilmiş bir Trueskıll sürümüne göre bir oyun eşleme listesi uygulaması oluşturmak için dayalı Programming with Infer.NET ile nasıl kullanacağınızı öğrenin.
 ms.date: 05/06/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: f6f91aecfe7fdeffb7e8913309046c7942ecbab7
-ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.openlocfilehash: 69515c7b3518c35bf84335c453408b1466f93f34
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71957206"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774540"
 ---
 # <a name="create-a-game-match-up-list-app-with-infernet-and-probabilistic-programming"></a>Infer.NET ve dayalı programlamasında bir oyun eşleştirme listesi uygulaması oluşturma
 
@@ -33,7 +33,7 @@ dotnet new console -o myApp
 cd myApp
 ```
 
-@No__t-0 komutu `console` türünde bir `new` uygulaması oluşturur. @No__t-0 parametresi, uygulamanızın depolandığı `myApp` adlı bir dizin oluşturur ve gerekli dosyalarla doldurur. @No__t-0 komutu sizi yeni oluşturulan uygulama dizinine koyar.
+@No__t_0 komutu `console` türünde bir `new` uygulaması oluşturur. @No__t_0 parametresi, uygulamanızın depolandığı `myApp` adlı bir dizin oluşturur ve gerekli dosyalarla doldurur. @No__t_0 komutu sizi yeni oluşturulan uygulama dizinine koyar.
 
 ## <a name="install-infernet-package"></a>Infer.NET paketi 'ni yükler
 
@@ -45,7 +45,7 @@ dotnet add package Microsoft.ML.Probabilistic.Compiler
 
 ## <a name="design-your-model"></a>Modelinizi tasarlama
 
-Örnek örnek, ofiste oynatılan tablo tenis veya ipsbol eşleşmelerini kullanır. Her eşleşmenin katılımcıları ve sonuçları vardır.  Player 'ın yeteneklerini bu verilerden çıkarsmak istiyorsunuz. Her oyuncunun normal olarak dağıtılmış bir beceri yeteneklerine sahip olduğunu ve verilen eşleşme performansının bu yeteneğin gürültülü bir sürümüdür olduğunu varsayalım. Veriler, kazananın performansından daha büyük olacak şekilde kazanan performansı kısıtlar. Bu, popüler [Trueskıll](https://www.microsoft.com/en-us/research/project/trueskill-ranking-system/) modelinin, takımları, çizmeler ve diğer uzantıları da destekleyen basitleştirilmiş bir sürümüdür. Bu modelin [Gelişmiş bir sürümü](https://www.microsoft.com/en-us/research/publication/trueskill-2-improved-bayesian-skill-rating-system/) , war 'ın en iyi satan oyun başlıklarında bir eşleme yapmak için kullanılır.
+Örnek örnek, ofiste oynatılan tablo tenis veya ipsbol eşleşmelerini kullanır. Her eşleşmenin katılımcıları ve sonuçları vardır.  Player 'ın yeteneklerini bu verilerden çıkarsmak istiyorsunuz. Her oyuncunun normal olarak dağıtılmış bir beceri yeteneklerine sahip olduğunu ve verilen eşleşme performansının bu yeteneğin gürültülü bir sürümüdür olduğunu varsayalım. Veriler, kazananın performansından daha büyük olacak şekilde kazanan performansı kısıtlar. Bu, popüler [Trueskıll](https://www.microsoft.com/research/project/trueskill-ranking-system/) modelinin, takımları, çizmeler ve diğer uzantıları da destekleyen basitleştirilmiş bir sürümüdür. Bu modelin [Gelişmiş bir sürümü](https://www.microsoft.com/research/publication/trueskill-2-improved-bayesian-skill-rating-system/) , war 'ın en iyi satan oyun başlıklarında bir eşleme yapmak için kullanılır.
 
 Çıkarılan oynatıcı yeteneklerini, varyanslarıyla birlikte listeleyerek yetenekler etrafında belirsizlik ölçüsünün ölçülebilinecek şekilde listeetmeniz gerekir.
 
@@ -64,7 +64,7 @@ Oyun |Masının | Loser dili
 
 ## <a name="write-some-code"></a>Kod yazın
 
-Modeli tasarladıktan sonra, Infer.NET modelleme API 'sini kullanarak bunu bir dayalı programı olarak ifade etmek zaman alabilir. En sevdiğiniz metin düzenleyicisinde `Program.cs` ' ını açın ve tüm içeriğini aşağıdaki kodla değiştirin:
+Modeli tasarladıktan sonra, Infer.NET modelleme API 'sini kullanarak bunu bir dayalı programı olarak ifade etmek zaman alabilir. En sevdiğiniz metin düzenleyicisinde `Program.cs` açın ve tüm içeriğini aşağıdaki kodla değiştirin:
 
 ```csharp
 namespace myApp

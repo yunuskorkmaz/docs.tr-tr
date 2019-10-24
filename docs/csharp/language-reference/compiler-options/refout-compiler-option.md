@@ -7,16 +7,16 @@ helpviewer_keywords:
 - refout compiler option [C#]
 - /refout compiler option [C#]
 - -refout compiler option [C#]
-ms.openlocfilehash: 97cbf540527d0449387b71bb1d97df95b6a4aba4
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: f48316a1e6f657e3bd0190d269dfe0e875a833d9
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69602508"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771755"
 ---
 # <a name="-refout-c-compiler-options"></a>-refout (C# derleyici seçenekleri)
 
-**-Refout** seçeneği, başvuru derlemesinin çıkış olması gereken bir dosya yolunu belirtir. Bu, yayma `metadataPeStream` API 'sine çevrilir. Bu seçenek, MSBuild 'in [ProduceReferenceAssembly](/visualstudio/msbuild/common-msbuild-project-properties) Project özelliğine karşılık gelir.
+**-Refout** seçeneği, başvuru derlemesinin çıkış olması gereken bir dosya yolunu belirtir. Bu, yayma API 'sindeki `metadataPeStream` çevirir. Bu seçenek, MSBuild 'in [ProduceReferenceAssembly](/visualstudio/msbuild/common-msbuild-project-properties) Project özelliğine karşılık gelir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -26,23 +26,13 @@ ms.locfileid: "69602508"
 
 ## <a name="arguments"></a>Arguments
 
- `filepath`Başvuru derlemesinin FilePath 'i. Genellikle birincil derlemenin ile eşleşmelidir. Önerilen kural (MSBuild tarafından kullanılır), başvuru derlemesini birincil derlemeye göre bir "ref/" alt klasörüne yerleştirmelidir.
+ başvuru derlemesi için FilePath `filepath`. Genellikle birincil derlemenin ile eşleşmelidir. Önerilen kural (MSBuild tarafından kullanılır), başvuru derlemesini birincil derlemeye göre bir "ref/" alt klasörüne yerleştirmelidir.
 
 ## <a name="remarks"></a>Açıklamalar
 
-Yalnızca meta veri derlemelerinde kendi yöntem gövdeleri tek `throw null` bir gövdele değiştirilmiştir, ancak anonim türler hariç tüm üyeleri dahil edin. Gövdeler kullanmanın `throw null` nedeni (gövdeden farklı olarak), Peverify 'ın çalıştırılabilmesi ve geçmesi (Bu nedenle meta verilerin tamamlanmasının doğrulanması).
+Başvuru derlemeleri, kitaplığın ortak API yüzeyini göstermek için gereken en düşük meta veri miktarını içeren özel bir derleme türüdür. Derleme araçlarındaki bir derlemeye başvururken önemli olan tüm Üyeler için bildirimler içerirler, ancak API sözleşmeleri üzerinde herhangi bir observable etkisi olmayan özel üyelerin tüm üye uygulamalarını ve bildirimlerini hariç tutar. Daha fazla bilgi için bkz. .NET kılavuzundaki [başvuru derlemeleri](../../../standard/assembly/reference-assemblies.md) .
 
-Başvuru derlemeleri bir derleme düzeyi `ReferenceAssembly` özniteliği içerir. Bu öznitelik kaynakta belirtilebilir (derleyicinin onu birleştirmesini gerektirmez). Bu öznitelik nedeniyle, çalışma zamanları yürütme için başvuru derlemelerini yüklemeyi reddeder (ancak yine de yalnızca yansıma modunda yüklenebilirler). Derlemeleri yansıtan araçların başvuru derlemelerini yalnızca yansıma olarak yüklediklerinden emin olunması gerekir, aksi takdirde çalışma zamanından bir türde hatası alırlar.
-
-Başvuru derlemeleri meta verileri (özel Üyeler) yalnızca meta veri derlemelerinden daha da kaldırır:
-
-- Bir başvuru derlemesinin yalnızca API yüzeyinde ihtiyacı olan başvurular vardır. Gerçek derlemenin belirli uygulamalarla ilgili ek başvuruları olabilir. Örneğin, için `class C { private void M() { dynamic d = 1; ... } }` başvuru derlemesi için `dynamic`gereken herhangi bir türe başvurmuyor.
-- Özel işlev-Üyeler (Yöntemler, Özellikler ve olaylar) kaldırma işleminin derleme observably etkisi olmadığı durumlarda kaldırılır. <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> Öznitelik yoksa, iç işlev üyeleri için aynı işlemi yapın.
-- Ancak tüm türler (özel veya iç içe türler dahil) başvuru Derlemeleriyle tutulur. Tüm öznitelikler (hatta iç olmasalar bile) tutulur.
-- Tüm sanal yöntemler tutulur. Açık arabirim uygulamaları tutulur. Açıkça uygulanan özellikler ve olaylar, erişimcileri sanal olduğundan (ve bu nedenle saklanır) tutulur.
-- Bir yapının tüm alanları tutulur. (Bu,-C#-7,1 geliştirme sonrası için bir adaydır)
-
-`-refout` [Ve`-refonly`](refonly-compiler-option.md) seçenekleri birbirini dışlıyor.
+@No__t_0 ve [`-refonly`](refonly-compiler-option.md) seçenekleri birbirini dışlıyor.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

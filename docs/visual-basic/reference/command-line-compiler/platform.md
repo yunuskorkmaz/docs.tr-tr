@@ -6,12 +6,12 @@ helpviewer_keywords:
 - /platform compiler option [Visual Basic]
 - -platform compiler option [Visual Basic]
 ms.assetid: f9bc61e6-e854-4ae1-87b9-d6244de23fd1
-ms.openlocfilehash: 21526484b8423f9b366da64307bc44f8fb061fe9
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 741c36473d80b2581718d969a7037f6c81ff4bf5
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72005299"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72775596"
 ---
 # <a name="-platform-visual-basic"></a>-Platform (Visual Basic)
 Ortak dil çalışma zamanının (CLR) hangi platform sürümünün çıkış dosyasını çalıştırabileceği belirtir.  
@@ -44,7 +44,7 @@ Ortak dil çalışma zamanının (CLR) hangi platform sürümünün çıkış do
   
 - Tanıtıcılar için `Integer` yerine <xref:System.IntPtr> kullanan yanlış platform çağrıları veya COM bildirimleri.  
   
-- @No__t-0 `Integer` ' e atama.  
+- @No__t_1 <xref:System.IntPtr> atama.  
   
 - Tüm platformlarda mevcut olmayan bileşenlerle platform Invoke veya COM birlikte çalışma kullanma.  
   
@@ -56,13 +56,13 @@ Ortak dil çalışma zamanının (CLR) hangi platform sürümünün çıkış do
   
  64 bitlik bir Windows işletim sisteminde:  
   
-- @No__t-0 ile derlenen derlemeler, WOW64 altında çalışan 32 bitlik CLR üzerinde yürütülür.  
+- @No__t_0 ile derlenen derlemeler, WOW64 altında çalışan 32 bitlik CLR üzerinde yürütülür.  
   
-- @No__t-0 ile derlenen çalıştırılabilir dosyalar 64 bitlik CLR üzerinde yürütülür.  
+- @No__t_0 ile derlenen çalıştırılabilir dosyalar 64 bitlik CLR üzerinde yürütülür.  
   
-- @No__t-0 ile derlenen bir DLL, yüklendiği işlemle aynı CLR üzerinde yürütülür.  
+- @No__t_0 ile derlenen bir DLL, yüklendiği işlemle aynı CLR üzerinde yürütülür.  
   
-- @No__t-0 ile derlenen çalıştırılabilir dosyalar 32 bitlik CLR üzerinde yürütülür.  
+- @No__t_0 ile derlenen çalıştırılabilir dosyalar 32 bitlik CLR üzerinde yürütülür.  
   
  Windows 'un 64 bitlik bir sürümünde çalışacak bir uygulama geliştirme hakkında daha fazla bilgi için bkz. [64-bit uygulamalar](../../../framework/64-bit-apps.md).  
   
@@ -83,6 +83,6 @@ vbc -platform:x86 myFile.vb
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [/target (Visual Basic)](target.md)
+- [-target (Visual Basic)](target.md)
 - [Visual Basic komut satırı derleyicisi](index.md)
 - [Örnek Derleme Komut Satırları](sample-compilation-command-lines.md)

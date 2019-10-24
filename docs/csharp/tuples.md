@@ -3,12 +3,12 @@ title: Demet türleri- C# kılavuz
 description: İçinde adlandırılmamış ve adlandırılmış demet türleri hakkında bilgi edininC#
 ms.date: 05/15/2018
 ms.assetid: ee8bf7c3-aa3e-4c9e-a5c6-e05cc6138baa
-ms.openlocfilehash: 7e5df8c20dbbddbe84a56883a6d2a027f32d8ff7
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 3c8d4acfe231be63e1d70d467cbb72ecfa4f767d
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72319750"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774054"
 ---
 # <a name="c-tuple-types"></a>C#demet türleri
 
@@ -24,11 +24,11 @@ Bu makalede, C# 7,0 ve sonraki sürümlerde tanımlama gruplarını ve bunları 
 
 Yeni demet desteği ekleme nedenlerinden başlayalım. Yöntemler tek bir nesne döndürür. Tanımlama grupları bu tek nesnede birden çok değeri daha kolay paketlemenize olanak tanır.
 
-.NET Framework zaten genel `Tuple` sınıfları var. Ancak, bu sınıfların iki önemli sınırlaması vardı. Biri için, `Tuple` sınıfları özellikleri `Item1`, `Item2` vb. olarak adlandırılır. Bu adlar hiçbir anlam bilgisi içermez. Bu @no__t kullanımı-0 türleri, özelliklerin her birinin anlamını karşılayarak iletişim kurmasına izin vermez. Yeni dil özellikleri, bir tanımlama grubu içindeki öğeler için anlamsal anlamlı adlar bildirme ve kullanma imkanı sağlar.
+.NET Framework zaten genel `Tuple` sınıfları var. Ancak, bu sınıfların iki önemli sınırlaması vardı. Biri için, `Tuple` sınıfları özellikleri `Item1`, `Item2` vb. olarak adlandırılır. Bu adlar hiçbir anlam bilgisi içermez. Bu `Tuple` türlerinin kullanılması, özelliklerin her birinin anlamını karşılayarak iletişim kurmasına imkan vermez. Yeni dil özellikleri, bir tanımlama grubu içindeki öğeler için anlamsal anlamlı adlar bildirme ve kullanma imkanı sağlar.
 
-@No__t-0 sınıfları, başvuru türleri olduklarından daha fazla performans sorunlarına neden olur. @No__t-0 türlerinden birini kullanmak nesneleri ayırmayı gösterir. Etkin yollarda birçok küçük nesne ayırmak uygulamanızın performansı üzerinde ölçülebilir bir etkiye sahip olabilir. Bu nedenle, tanımlama birimleri için dil desteği yeni `ValueTuple` yapılarını kullanır.
+@No__t_0 sınıfları, başvuru türleri olduklarından daha fazla performans sorunlarına neden olur. @No__t_0 türlerinden birini kullanmak nesneleri ayırmayı gösterir. Etkin yollarda birçok küçük nesne ayırmak uygulamanızın performansı üzerinde ölçülebilir bir etkiye sahip olabilir. Bu nedenle, tanımlama birimleri için dil desteği yeni `ValueTuple` yapılarını kullanır.
 
-Bu eksiklikleri önlemek için, birden çok öğeyi yürütmek üzere `class` veya `struct` oluşturabilirsiniz. Ne yazık ki, sizin için daha fazla çalışma ve tasarım amacınızı gizler. @No__t-0 veya `class` yapmak, hem veri hem de davranışla bir tür tanımlamanız gerektiğini gösterir. Birçok kez yalnızca birden çok değeri tek bir nesnede depolamak istiyorsunuz.
+Bu eksiklikleri önlemek için, birden çok öğeyi yürütmek üzere `class` veya `struct` oluşturabilirsiniz. Ne yazık ki, sizin için daha fazla çalışma ve tasarım amacınızı gizler. @No__t_0 veya `class` yapmak, hem veri hem de davranışla bir tür tanımlamanız gerektiğini gösterir. Birçok kez yalnızca birden çok değeri tek bir nesnede depolamak istiyorsunuz.
 
 Dil özellikleri ve `ValueTuple` genel yapıları, bu demet türlerine herhangi bir davranış (Yöntem) ekleyemeyeceği kuralını zorlar.
 Tüm `ValueTuple` türleri *değişebilir yapılar*. Her üye alanı bir ortak alandır. Böylece çok hafif hale gelir. Bununla birlikte, bu, her ne kadar önemli olduğu durumlarda başlıkların kullanılması gerektiği anlamına gelir.
@@ -37,7 +37,7 @@ Tanımlama grupları, `class` ve `struct` türlerinden daha basit ve daha esnek 
 
 ## <a name="named-and-unnamed-tuples"></a>Adlandırılmış ve adlandırılmamış diziler
 
-@No__t-0 yapısı, var olan `Tuple` türlerinde tanımlanan özelliklere benzer şekilde, `Item1`, `Item2`, `Item3` vb. adlı alanlara sahiptir.
+@No__t_0 yapısı, var olan `Tuple` türlerinde tanımlanan özelliklere benzer şekilde `Item1`, `Item2`, `Item3`, vb. adlı alanlara sahiptir.
 Bu adlar, *adlandırılmamış tanımlama grupları*için kullanabileceğiniz tek adlardır. Bir tanımlama grubu için alternatif alan adı sağlamadığınızda, adlandırılmamış bir tanımlama grubu oluşturdunuz:
 
 [!code-csharp[UnnamedTuple](../../samples/snippets/csharp/tuples/program.cs#01_UnNamedTuple "Unnamed tuple")]
@@ -71,13 +71,13 @@ Açık bir ad verilirse, bu, yansıtılan herhangi bir adın önüne geçer. Ör
 
 [!code-csharp[ExplicitNamedTuple](../../samples/snippets/csharp/tuples/program.cs#ProjectionExample_Explicit "Explicitly named tuple")]
 
-Açık bir adın sağlanmadığı herhangi bir alan için, geçerli bir örtük ad yansıtıldır. Açıkça veya örtük olarak anlamsal adlar sağlama gereksinimi yoktur. Aşağıdaki başlatıcıda, değeri "her şeye yanıt" olan değer olan `42` ve `stringContent` ' @no__t alan adlarına sahiptir:
+Açık bir adın sağlanmadığı herhangi bir alan için, geçerli bir örtük ad yansıtıldır. Açıkça veya örtük olarak anlamsal adlar sağlama gereksinimi yoktur. Aşağıdaki başlatıcıda, değeri "her şeye yanıt" olan, değeri `42` ve `stringContent` olan `Item1` alan adlarına sahiptir:
 
 [!code-csharp[MixedTuple](../../samples/snippets/csharp/tuples/program.cs#MixedTuple "mixed tuple")]
 
 Aday alan adlarının demet alanı üzerinde yansıtılmamaları gereken iki koşul vardır:
 
-1. Aday adı, ayrılmış bir tanımlama grubu adı olduğunda. Örnek `Item3`, `ToString` ' i içerir. veya `Rest`.
+1. Aday adı, ayrılmış bir tanımlama grubu adı olduğunda. Örnekler arasında `Item3`, `ToString` veya `Rest` sayılabilir.
 1. Aday adı, başka bir demet alan adının bir yinelemesi olduğunda açık veya kapalı olur.
 
 Bu koşullar belirsizlik kullanmaktan kaçının. Bu adlar, bir tanımlama grubu içindeki bir alanın alan adları olarak kullanıldıklarında belirsizliğe neden olur. Bu koşullardan hiçbiri derleme zamanı hatalarına neden olur. Bunun yerine, yansıtılan adlara sahip öğeler kendileri için öngörülen semantik adlara sahip değildir.  Aşağıdaki örneklerde bu koşullar gösterilmektedir:
@@ -120,8 +120,8 @@ Aşağıdaki örneklerde kullanılan değişkenleri göz önünde bulundurun:
 
 [!code-csharp[VariableCreation](../../samples/snippets/csharp/tuples/program.cs#03_VariableCreation "Variable creation")]
 
-@No__t-0 ve `anonymous` ' in ilk iki değişkeni öğeler için belirtilen semantik adlara sahip değil. Alan adları `Item1` ve `Item2` ' dir.
-@No__t-0 ve `differentName` ' ı son iki değişken, öğeler için verilen semantik adlara sahip. Bu iki başlık, öğeler için farklı adlara sahiptir.
+İlk iki değişken, `unnamed` ve `anonymous` öğeler için belirtilen semantik adlara sahip değildir. Alan adları `Item1` ve `Item2` ' dir.
+Son iki değişken, `named` ve `differentName` öğeler için verilen semantik adlara sahiptir. Bu iki başlık, öğeler için farklı adlara sahiptir.
 
 Bu başlıkların dördü, aynı sayıda öğeye sahiptir (' kardinalite ' olarak adlandırılır) ve bu öğelerin türleri aynıdır. Bu nedenle, bu atamaların hepsi çalışır:
 
@@ -165,7 +165,7 @@ Visual Studio 'nun yeniden düzenleme desteği, çekirdek istatistik işlevlerin
 
 [!code-csharp[TupleMethodVersion](../../samples/snippets/csharp/tuples/statistics.cs#08_TupleMethodVersion "After extracting utility method")]
  
-Dil, el ile birkaç hızlı düzenleme yapmak istiyorsanız kullanabileceğiniz birkaç seçenek sağlar. İlk olarak, `var` bildirimini kullanarak `ComputeSumAndSumOfSquares` yöntem çağrısından kayıt düzeni sonucunu başlatabilirsiniz. @No__t-0 yönteminde de üç farklı değişken oluşturabilirsiniz. Son sürüm aşağıdaki kodda gösterilmiştir:
+Dil, el ile birkaç hızlı düzenleme yapmak istiyorsanız kullanabileceğiniz birkaç seçenek sağlar. İlk olarak, `var` bildirimini kullanarak `ComputeSumAndSumOfSquares` yöntem çağrısından kayıt düzeni sonucunu başlatabilirsiniz. @No__t_0 yöntemi içinde üç ayrı değişken de oluşturabilirsiniz. Son sürüm aşağıdaki kodda gösterilmiştir:
 
 [!code-csharp[CleanedTupleVersion](../../samples/snippets/csharp/tuples/statistics.cs#09_CleanedTupleVersion "After final cleanup")]
 
@@ -260,11 +260,11 @@ Deyapý yöntemi, `FirstName` ve `LastName` özelliklerini temsil eden `Person` 
 [!code-csharp[Deconstruct Type](../../samples/snippets/csharp/tuples/program.cs#12A_DeconstructType "Deconstruct a class type")]
 
 Yazmayan türler için bile, oluşturmayı etkinleştirebilirsiniz.
-@No__t-0 yöntemi, bir nesnenin erişilebilir veri üyelerini paketten kaldırtan bir genişletme yöntemi olabilir. Aşağıdaki örnekte, `Person` türünden türetilen `Student` türü ve `FirstName`, `LastName` ve `GPA` ' i temsil eden üç değişkene @no__t 2 ' yi oluşturan bir genişletme yöntemi gösterilmektedir:
+@No__t_0 yöntemi, bir nesnenin erişilebilir veri üyelerini paketten uygulayan bir genişletme yöntemi olabilir. Aşağıdaki örnekte, `Person` türünden türetilmiş bir `Student` türü ve `FirstName`, `LastName` ve `GPA` temsil eden üç değişkene `Student` oluşturan bir genişletme yöntemi gösterilmektedir:
 
 [!code-csharp[ExtensionDeconstructMethod](../../samples/snippets/csharp/tuples/person.cs#13_ExtensionDeconstructMethod "Type with a deconstruct extension method")]
 
-@No__t-0 nesnesi artık iki adet erişilebilir `Deconstruct` yönteme sahiptir: `Student` türleri için belirtilen genişletme yöntemi ve `Person` türünün üyesi. Her ikisi de kapsamdadır ve bir `Student` ' ı iki değişkene veya üçüne ayırmayı sağlar.
+@No__t_0 nesnesi artık iki adet erişilebilir `Deconstruct` yöntemine sahiptir: `Student` türleri için belirtilen genişletme yöntemi ve `Person` türü üyesi. Her ikisi de kapsamdadır ve bir `Student` ' ı iki değişkene veya üçüne ayırmayı sağlar.
 Üç değişkene bir öğrenci atarsanız, ilk ad, soyadı ve GPA döndürülür. İki değişkene bir öğrenci atarsanız, yalnızca ad ve soyadı döndürülür.
 
 [!code-csharp[Deconstruct extension method](../../samples/snippets/csharp/tuples/program.cs#13A_DeconstructExtension "Deconstruct a class type using an extension method")]
@@ -281,7 +281,7 @@ if (("Althea", "Goodwin") == p)
     Console.WriteLine(p);
 ```
 
-@No__t-0 yöntemi, `Person` nesnesini iki dize içeren bir tanımlama grubu @no__t dönüştürebilir, ancak eşitlik testleri bağlamında geçerli değildir.
+@No__t_0 yöntemi, `Person` nesne `p` iki dize içeren bir kayıt türüne dönüştürebilir, ancak eşitlik testleri bağlamında geçerli değildir.
 
 ## <a name="tuples-as-out-parameters"></a>Out parametreleri olarak tanımlama grubu
 

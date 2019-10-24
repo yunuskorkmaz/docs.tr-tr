@@ -5,12 +5,12 @@ author: luisquintanilla
 ms.author: luquinta
 ms.date: 06/21/2019
 ms.custom: mvc, how-to
-ms.openlocfilehash: b0d45ab7807bf84b98c58e85580d5aa04d0c5f7d
-ms.sourcegitcommit: 1e72e2990220b3635cebc39586828af9deb72d8c
+ms.openlocfilehash: a1034d294012b8df5ec778fc40602fe52223961d
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71306320"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774565"
 ---
 # <a name="how-to-install-mlnet-model-builder"></a>ML.NET model Oluşturucusu nasıl yüklenir
 
@@ -21,7 +21,7 @@ ms.locfileid: "71306320"
 
 ## <a name="pre-requisites"></a>Ön koşullar
 
-- Visual Studio 2017 15.9.12 veya üzeri/Visual Studio 2019
+- Visual Studio 2017 sürüm 15.9.12 veya üzeri/Visual Studio 2019
 - .NET Core 2,1 veya üzeri SDK
 
 ## <a name="limitations"></a>Sınırlamalar
@@ -33,7 +33,7 @@ ms.locfileid: "71306320"
 
 ## <a name="install"></a>Yükleme
 
-ML.NET model Oluşturucusu Visual Studio Market aracılığıyla veya Visual Studio içinden yüklenebilir. 
+ML.NET model Oluşturucusu Visual Studio Market aracılığıyla veya Visual Studio içinden yüklenebilir.
 
 ### <a name="visual-studio-marketplace"></a>Visual Studio Market
 
@@ -42,7 +42,7 @@ ML.NET model Oluşturucusu Visual Studio Market aracılığıyla veya Visual Stu
 
 ### <a name="visual-studio-2017"></a>Visual Studio 2017
 
-1. Menü çubuğunda **Araçlar** > **Uzantılar ve güncelleştirmeler** ' i seçin.
+1. Menü çubuğunda **araçlar**  > **Uzantılar ve güncelleştirmeler** ' i seçin.
 
     ![VS2017 Open Extensions Manager iletişim kutusu](./media/install-model-builder/vs2017-open-extensions-manager.png)
 
@@ -55,7 +55,7 @@ ML.NET model Oluşturucusu Visual Studio Market aracılığıyla veya Visual Stu
 
 ### <a name="visual-studio-2019"></a>Visual Studio 2019
 
-1. Menü çubuğunda **Uzantılar** > **Yönet uzantıları** ' nı seçin.
+1. Menü çubuğunda **Uzantılar** ' ı seçin  > **Uzantıları Yönet**
 
     ![VS2019 Open Extensions Manager iletişim kutusu](./media/install-model-builder/vs2019-open-extensions-manager.png)
 
@@ -70,7 +70,7 @@ ML.NET model Oluşturucusu Visual Studio Market aracılığıyla veya Visual Stu
 
 ### <a name="visual-studio-2017"></a>Visual Studio 2017
 
-1. Menü çubuğunda **Araçlar** > **Uzantılar ve güncelleştirmeler** ' i seçin.
+1. Menü çubuğunda **araçlar**  > **Uzantılar ve güncelleştirmeler** ' i seçin.
 
     ![VS2017 Uzantıları Yönet iletişim kutusunu aç](./media/install-model-builder/vs2017-open-extensions-manager.png)
 
@@ -83,7 +83,7 @@ ML.NET model Oluşturucusu Visual Studio Market aracılığıyla veya Visual Stu
 
 ### <a name="visual-studio-2019"></a>Visual Studio 2019
 
-1. Menü çubuğunda **Uzantılar** > **Yönet uzantıları** ' nı seçin.
+1. Menü çubuğunda **Uzantılar** ' ı seçin  > **Uzantıları Yönet**
 
     ![VS2019 Uzantıları Yönet iletişim kutusunu aç](./media/install-model-builder/vs2019-open-extensions-manager.png)
 

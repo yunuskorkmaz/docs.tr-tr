@@ -6,12 +6,12 @@ helpviewer_keywords:
 - expressions [C#]
 - C# language, expressions
 ms.assetid: c7d8feb0-0e58-4f94-8bf6-4d070550a832
-ms.openlocfilehash: 1a0e94f40a9dc861b32e6a1c12935faadda9921b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2db08bd89b5e0fc612599f83cb02178aef5ee5fb
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69921801"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774177"
 ---
 # <a name="expressions-c-programming-guide"></a>İfadeler (C# Programlama Kılavuzu)
 
@@ -27,13 +27,13 @@ System.Convert.ToInt32("35");
   
 ## <a name="expression-values"></a>İfade değerleri
 
- İfadelerin çoğunda, örneğin deyimlerde veya yöntem parametrelerinde kullanıldığında, ifadenin bazı değerler değerlendirmesi beklenir. X ve y tamsayılardır ise, ifade `x + y` sayısal bir değer olarak değerlendirilir. İfade `new MyClass()` , bir `MyClass` sınıfın yeni bir örneğine başvuru olarak değerlendirilir. İfade `myClass.ToString()` , yöntemin dönüş türü olduğundan bir dize olarak değerlendirilir. Ancak, bir ad alanı adı bir ifade olarak sınıflandırılabilse de, bir değer olarak değerlendirilmez ve bu nedenle hiçbir ifadenin nihai sonucu olmaz. Bir ad alanı adını yöntem parametresine geçiremez veya yeni bir ifadede kullanamaz veya bir değişkene atayabilirsiniz. Daha büyük bir ifadede yalnızca alt ifade olarak kullanabilirsiniz. Aynı şekilde türler ( <xref:System.Type?displayProperty=nameWithType> nesnelerden farklı olarak), Yöntem grubu adları (belirli yöntemlerden farklı olarak) ve olay [ekleme](../../language-reference/keywords/add.md) ve [kaldırma](../../language-reference/keywords/remove.md) erişimcileri için de geçerlidir.  
+ İfadelerin çoğunda, örneğin deyimlerde veya yöntem parametrelerinde kullanıldığında, ifadenin bazı değerler değerlendirmesi beklenir. X ve y tamsayılar ise, ifade `x + y` sayısal bir değer olarak değerlendirilir. İfade `new MyClass()`, bir `MyClass` sınıfının yeni bir örneğine başvuru olarak değerlendirilir. İfade `myClass.ToString()`, yöntemin dönüş türü olduğundan bir dize olarak değerlendirilir. Ancak, bir ad alanı adı bir ifade olarak sınıflandırılabilse de, bir değer olarak değerlendirilmez ve bu nedenle hiçbir ifadenin nihai sonucu olmaz. Bir ad alanı adını yöntem parametresine geçiremez veya yeni bir ifadede kullanamaz veya bir değişkene atayabilirsiniz. Daha büyük bir ifadede yalnızca alt ifade olarak kullanabilirsiniz. Aynı şekilde türler (<xref:System.Type?displayProperty=nameWithType> nesnelerden farklı olarak), Yöntem grubu adları (belirli metotlardan farklı olarak) ve olay [ekleme](../../language-reference/keywords/add.md) ve [kaldırma](../../language-reference/keywords/remove.md) erişimcileri için de geçerlidir.  
   
- Her değerin ilişkili bir türü vardır. Örneğin, x ve y öğelerinin her ikisi de türünde `int`değişkensiyse, ifadenin `x + y` değeri de olarak `int`yazılır. Değer farklı türde bir değişkene atanırsa veya x ve y farklı türse, tür dönüştürme kuralları uygulanır. Bu dönüşümlerin nasıl çalıştığı hakkında daha fazla bilgi için bkz. [atama ve tür dönüştürmeleri](../types/casting-and-type-conversions.md).  
+ Her değerin ilişkili bir türü vardır. Örneğin, x ve y `int` tür değişkenleridir, `x + y` ifade değeri de `int` olarak yazılır. Değer farklı türde bir değişkene atanırsa veya x ve y farklı türse, tür dönüştürme kuralları uygulanır. Bu dönüşümlerin nasıl çalıştığı hakkında daha fazla bilgi için bkz. [atama ve tür dönüştürmeleri](../types/casting-and-type-conversions.md).  
   
 ## <a name="overflows"></a>Taştığında
 
- Değer değerin türünün en büyük değerinden daha büyükse sayısal ifadeler taşmaya neden olabilir. Daha fazla bilgi için bkz. [Checked ve unchecked](../../language-reference/keywords/checked-and-unchecked.md) ve [explicit Sayısal Dönüşümler Tablosu](../../language-reference/keywords/explicit-numeric-conversions-table.md).  
+ Değer değerin türünün en büyük değerinden daha büyükse sayısal ifadeler taşmaya neden olabilir. Daha fazla bilgi için, bkz. [Checked ve unchecked](../../language-reference/keywords/checked-and-unchecked.md) ve [yerleşik sayısal](../../language-reference/builtin-types/numeric-conversions.md) dönüşümler makalesindeki [Açık sayısal dönüştürmeler](../../language-reference/builtin-types/numeric-conversions.md#explicit-numeric-conversions) bölümü.
   
 ## <a name="operator-precedence-and-associativity"></a>İşleç önceliği ve ilişkilendirilebilirlik
 
@@ -43,19 +43,19 @@ System.Convert.ToInt32("35");
   
 ## <a name="literals-and-simple-names"></a>Değişmez değerler ve basit adlar
 
- İki basit ifade türü değişmez değer ve basit adlardır. Sabit değer, adı olmayan bir sabit değerdir. Örneğin, aşağıdaki kod örneğinde, her ikisi `5` `"Hello World"` de değişmez değerlerdir:  
+ İki basit ifade türü değişmez değer ve basit adlardır. Sabit değer, adı olmayan bir sabit değerdir. Örneğin, aşağıdaki kod örneğinde, hem `5` hem de `"Hello World"` değişmez değerlerdir:  
   
  [!code-csharp[csProgGuideStatements#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#2)]  
   
  Değişmez değerler hakkında daha fazla bilgi için bkz. [türler](../../language-reference/keywords/types.md).  
   
- Yukarıdaki örnekte, `i` ve `s` yerel değişkenleri tanımlayan basit adlardır. Bu değişkenler bir ifadede kullanıldığında, değişken adı, şu anda, değişkenin bellekteki konumunda depolanan değeri değerlendirir. Bu, aşağıdaki örnekte gösterilmiştir:  
+ Yukarıdaki örnekte, hem `i` hem de `s` yerel değişkenleri tanımlayan basit adlardır. Bu değişkenler bir ifadede kullanıldığında, değişken adı, şu anda, değişkenin bellekteki konumunda depolanan değeri değerlendirir. Bu, aşağıdaki örnekte gösterilmiştir:  
   
  [!code-csharp[csProgGuideStatements#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#3)]
 
 ## <a name="invocation-expressions"></a>Çağırma ifadeleri
 
- Aşağıdaki kod örneğinde, çağrısı `DoWork` bir çağırma deyimidir.  
+ Aşağıdaki kod örneğinde, `DoWork` çağrısı bir çağırma deyimidir.  
   
 ```csharp
 DoWork();  
@@ -90,7 +90,7 @@ Daha fazla bilgi için, [ C# dil belirtiminin](~/_csharplang/spec/introduction.m
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [C# Programlama Kılavuzu](../index.md)
-- [İşleçler](../../language-reference/operators/index.md)
+- [işleçler](../../language-reference/operators/index.md)
 - [Yöntemler](../classes-and-structs/methods.md)
 - [Temsilciler](../delegates/index.md)
 - [Türler](../types/index.md)
