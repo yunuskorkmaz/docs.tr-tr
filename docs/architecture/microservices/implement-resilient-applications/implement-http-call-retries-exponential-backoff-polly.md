@@ -2,12 +2,12 @@
 title: Polly üstel geri alma ile HTTP çağrı yeniden denemelerini uygulama
 description: Polly ve HttpClientFactory ile HTTP başarısızlıklarını nasıl ele alabileceğinizi öğrenin.
 ms.date: 01/07/2019
-ms.openlocfilehash: 82b3b0d37815e2f16ed3be1b1e7de37019b08ee8
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 9988f70513959c099c771fcc0221bba7e2e70200
+ms.sourcegitcommit: 9bd1c09128e012b6e34bdcbdf3576379f58f3137
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72318406"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798821"
 ---
 # <a name="implement-http-call-retries-with-exponential-backoff-with-httpclientfactory-and-polly-policies"></a>HttpClientFactory ve Polly ilkeleriyle üstel geri alma ile HTTP çağrı yeniden denemeleri uygulayın
 
@@ -21,7 +21,7 @@ Aşağıdaki adımlarda, önceki bölümde açıklanan HttpClientFactory ile tü
 
 **ASP.NET Core 2,2 paketlerine başvurun**
 
-`HttpClientFactory`, .NET Core 2,1 ' den bu yana kullanılabilir ancak projenizde NuGet 'den en son ASP.NET Core 2,2 paketlerini kullanmanızı öneririz. Genellikle `AspNetCore` metapackage ve Extension Package-1 @no__t gerekir.
+`HttpClientFactory`, .NET Core 2,1 ' den bu yana kullanılabilir ancak projenizde NuGet 'den en son ASP.NET Core 2,2 paketlerini kullanmanızı öneririz. Genellikle `AspNetCore` metapackage ve uzantı paketi `Microsoft.Extensions.Http.Polly` gerekir.
 
 **Başlangıçta, bir istemciyi Polly 'nin yeniden deneme ilkesiyle yapılandırma**
 
@@ -53,17 +53,20 @@ Polly, yeniden deneme sayısı, üstel geri alma yapılandırması ve hatayı g�
 
 ## <a name="add-a-jitter-strategy-to-the-retry-policy"></a>Yeniden deneme ilkesine bir değişim stratejisi ekleyin
 
-Düzenli bir yeniden deneme ilkesi, sisteminizi yüksek eşzamanlılık ve ölçeklenebilirlik durumlarında ve yüksek çekişme kapsamında etkileyebilir. Kısmi kesintiler söz konusu olduğunda birçok istemciden gelen benzer yeniden denemelerin büyük bir bölümünü aşmak için, yeniden deneme algoritmasına/ilkeye bir değişim stratejisi eklemek iyi bir çözümdür. Bu, üstel geri alma 'ya rastgele açıklık ekleyerek uçtan uca sistemin genel performansını iyileştirebilir. Bu, sorunlar ortaya çıktığında ani artışları yayar. Bir düz Polly İlkesi kullandığınızda, değişim uygulamak için kod aşağıdaki örneğe benzer olabilir:
+Düzenli bir yeniden deneme ilkesi, sisteminizi yüksek eşzamanlılık ve ölçeklenebilirlik durumlarında ve yüksek çekişme kapsamında etkileyebilir. Kısmi kesintiler söz konusu olduğunda birçok istemciden gelen benzer yeniden denemelerin büyük bir bölümünü aşmak için, yeniden deneme algoritmasına/ilkeye bir değişim stratejisi eklemek iyi bir çözümdür. Bu, üstel geri alma 'ya rastgele açıklık ekleyerek uçtan uca sistemin genel performansını iyileştirebilir. Bu, sorunlar ortaya çıktığında ani artışları yayar. İlke aşağıdaki örneğe göre gösterilmiştir:
 
 ```csharp
 Random jitterer = new Random(); 
-Policy
-  .Handle<HttpResponseException>() // etc
-  .WaitAndRetry(5,    // exponential back-off plus some jitter
-      retryAttempt => TimeSpan.FromSeconds(Math.Pow(2, retryAttempt))  
-                    + TimeSpan.FromMilliseconds(jitterer.Next(0, 100)) 
-  );
+var retryWithJitterPolicy = HttpPolicyExtensions
+    .HandleTransientHttpError()
+    .OrResult(msg => msg.StatusCode == System.Net.HttpStatusCode.NotFound)
+    .WaitAndRetryAsync(6,    // exponential back-off plus some jitter
+        retryAttempt => TimeSpan.FromSeconds(Math.Pow(2, retryAttempt))  
+                      + TimeSpan.FromMilliseconds(jitterer.Next(0, 100)) 
+    );
 ```
+
+Polly, proje Web sitesi aracılığıyla üretime hazırlı değişim algoritmaları sağlar.
 
 ## <a name="additional-resources"></a>Ek kaynaklar
 
@@ -75,6 +78,9 @@ Policy
 
 - **Polly (.NET esnekliği ve geçici hata işleme kitaplığı)**  
   <https://github.com/App-vNext/Polly>
+
+- **Polly: değişim ile yeniden dene**  
+  <https://github.com/App-vNext/Polly/wiki/Retry-with-jitter>
 
 - **Marc Brooker. Değişim: rastgele bir işlem yaparak daha Iyi hale getirme**  
   <https://brooker.co.za/blog/2015/03/21/backoff.html>
