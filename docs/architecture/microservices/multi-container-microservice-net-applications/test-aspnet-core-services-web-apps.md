@@ -1,15 +1,15 @@
 ---
-title: ASP.NET Core Hizmetleri ve Web uygulamalarını test etme
+title: ASP.NET Core hizmetlerini ve web uygulamalarını test etme
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | Kapsayıcılarda ASP.NET Core Hizmetleri ve Web uygulamalarını test etmek için bir mimari bulun.
 ms.date: 10/02/2018
-ms.openlocfilehash: 042f7a6171a88025d3d4a8e37c4deceb416e5711
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: 278d12b8215195351673a41149db5af6fcecddfb
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291275"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72772024"
 ---
-# <a name="testing-aspnet-core-services-and-web-apps"></a>ASP.NET Core Hizmetleri ve Web uygulamalarını test etme
+# <a name="testing-aspnet-core-services-and-web-apps"></a>ASP.NET Core hizmetlerini ve web uygulamalarını test etme
 
 Denetleyiciler, tüm ASP.NET Core API Service ve ASP.NET MVC web uygulamalarının merkezi bir parçasıdır. Bu nedenle, uygulamanız için amaçlanan gibi davrandıklarından emin olmanız gerekir. Otomatikleştirilmiş testler size bu güvenilirliği sağlayabilir ve üretime ulaşmadan önce hataları tespit edebilir.
 
@@ -31,7 +31,7 @@ Denetleyici eylemlerinizi birim testi yaparken, yalnızca davranışlarını oda
 
 Birim testleri xUnit.net, MSTest, moq veya NUnit gibi test çerçeveleri temelinde uygulanır. EShopOnContainers örnek uygulaması için xUnit kullandık.
 
-Bir Web API denetleyicisi için bir birim testi yazdığınızda, test, mümkün olduğunca hızlı çalışacak şekilde C @ no__t-0 içindeki New anahtar sözcüğünü kullanarak doğrudan denetleyici sınıfını örnekleyebilirsiniz. Aşağıdaki örnek, [xUnit](https://xunit.github.io/) 'i test çerçevesi olarak kullanırken nasıl yapılacağını gösterir.
+Bir Web API denetleyicisi için bir birim testi yazdığınızda, test, mümkün olduğunca hızlı çalışacak şekilde, C \# içindeki New anahtar sözcüğünü kullanarak doğrudan denetleyici sınıfını örnekleyebilirsiniz. Aşağıdaki örnek, [xUnit](https://xunit.github.io/) 'i test çerçevesi olarak kullanırken nasıl yapılacağını gösterir.
 
 ```csharp
 [Fact]
@@ -138,7 +138,7 @@ Başvuru uygulaması (eShopOnContainers) testleri yakın zamanda yeniden yapıla
 
 2. **Mikro hizmet işlevsel/tümleştirme testleri**, her bir mikro hizmetin altyapısını içeren, ancak diğerlerinden yalıtılmış ve **{mikro ServiceName} içinde yer alan test çalışmaları. FunctionalTests** projeleri.
 
-3. Birkaç mikro hizmet sunan test çalışmaları ile mikro hizmet tümleştirmesine odaklanarak **uygulama işlev/tümleştirme testleri**. Bu testler Project **Application. FunctionalTests**içinde bulunur.
+3. Birkaç mikro hizmet sunan test çalışmaları ile mikro hizmet tümleştirmesine odaklanarak **uygulama işlevsel/tümleştirme sınamaları**. Bu testler Project **Application. FunctionalTests**içinde bulunur.
 
 4. Her mikro hizmet için yanıt sürelerine odaklanarak **Yük testleri**. Bu sınamalar proje **LoadTest** ' de bulunur ve Visual Studio 2017 Enterprise Edition gerekir.
 

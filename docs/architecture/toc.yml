@@ -5,6 +5,8 @@
   items:
     - name: ASP.NET Core ve Microsoft Azure ile modern web uygulamaları tasarlama
       href: modern-web-apps-azure/
+    - name: WCF Geliştiricileri için ASP.NET Core gRPC
+      href: grpc-for-wcf-developers/
     - name: Azure bulutu ve Windows Kapsayıcıları ile mevcut .NET uygulamalarını modernleştirme
       href: modernize-with-azure-containers/
     - name: Microsoft platformu ve araçları ile Kapsayıcı Docker uygulaması yaşam döngüsü
@@ -20,5 +22,3 @@
       href: cloud-native/
     - name: ASP.NET Web Forms Geliştiricileri için Blazor
       href: blazor-for-web-forms-developers/
-    - name: WCF Geliştiricileri için ASP.NET Core gRPC
-      href: grpc-for-wcf-developers/

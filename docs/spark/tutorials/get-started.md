@@ -4,12 +4,12 @@ description: Windows 'da .NET Core kullanarak Apache Spark uygulaması için .NE
 ms.date: 06/27/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: c4dbce74d0d8c0a682250a8021d983ef2990971f
-ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
+ms.openlocfilehash: 19efc8412d834d73069c61e1cc1ccd9e5eb8593b
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72250320"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774371"
 ---
 # <a name="tutorial-get-started-with-net-for-apache-spark"></a>Öğretici: Apache Spark için .NET ile çalışmaya başlama
 
@@ -44,22 +44,22 @@ Başlamadan önce, komut satırınızdan `dotnet`, `java`, `mvn`, `spark-shell` 
     * Yüklemeyi doğrulamak için `java -version` PowerShell komutunu kullanın.
 
 4. [Apache Maven 3.6.0 +](https://maven.apache.org/download.cgi)'yi yükler.
-    * [Apache Maven 3.6.0](http://mirror.metrocast.net/apache/maven/maven-3/3.6.0/binaries/apache-maven-3.6.0-bin.zip)indirin.
-    * Yerel bir dizine ayıklayın. Örneğin, `c:\bin\apache-maven-3.6.0\`.
-    * [Yol ortam değişkeninizin](https://www.java.com/en/download/help/path.xml)Apache Maven 'i ekleyin. @No__t-0 ' a ayıkladıysanız, yolunuza `c:\bin\apache-maven-3.6.0\bin` eklersiniz.
+    * [Apache Maven 3.6.2](http://mirror.metrocast.net/apache/maven/maven-3/3.6.2/binaries/apache-maven-3.6.2-bin.zip)indirin.
+    * Yerel bir dizine ayıklayın. Örneğin, `c:\bin\apache-maven-3.6.2\`.
+    * [Yol ortam değişkeninizin](https://www.java.com/en/download/help/path.xml)Apache Maven 'i ekleyin. @No__t_0 çıkardıysanız, yolunuza `c:\bin\apache-maven-3.6.2\bin` eklersiniz.
     * Yüklemeyi doğrulamak için `mvn -version` PowerShell komutunu kullanın.
 
 5. [Apache Spark 2.3 +](https://spark.apache.org/downloads.html)' yı yükler. Apache Spark 2,4 + desteklenmez.
     * [Apache Spark 2.3 +](https://spark.apache.org/downloads.html) indirin ve [7-zip](https://www.7-zip.org/) veya [WinZip](https://www.winzip.com/)gibi bir araç kullanarak yerel bir klasöre ayıklayın. Örneğin, `c:\bin\spark-2.3.2-bin-hadoop2.7\` ' a ayıklayabilirsiniz.
-    * [Path ortam değişkeninizin](https://www.java.com/en/download/help/path.xml)Apache Spark ekleyin. @No__t-0 ' a ayıkladıysanız, yolunuza `c:\bin\spark-2.3.2-bin-hadoop2.7\bin` eklersiniz.
-    * @No__t-1 adlı [Yeni bir ortam değişkeni](https://www.java.com/en/download/help/path.xml) ekleyin. @No__t-0 ' a ayıkladıysanız, **değişken değeri**için `C:\bin\spark-2.3.2-bin-hadoop2.7\` kullanın.
+    * [Path ortam değişkeninizin](https://www.java.com/en/download/help/path.xml)Apache Spark ekleyin. @No__t_0 çıkardıysanız, yolunuza `c:\bin\spark-2.3.2-bin-hadoop2.7\bin` eklersiniz.
+    * @No__t_1 adlı [Yeni bir ortam değişkeni](https://www.java.com/en/download/help/path.xml) ekleyin. @No__t_0 çıkardıysanız, **değişken değeri**için `C:\bin\spark-2.3.2-bin-hadoop2.7\` kullanın.
     * Komut satırınızdan `spark-shell` çalıştırabildiğinizi doğrulayın.
 
 6. [Winutils](https://github.com/steveloughran/winutils)'i ayarlayın.
     * Winutils **. exe** Ikili dosyasını [winutils deposundan](https://github.com/steveloughran/winutils)indirin. Spark dağıtımının derlenmiş olduğu Hadoop sürümünü seçin. Örneğin, **Spark 2.3.2**için **Hadoop-2.7.1** kullanırsınız. Hadoop sürümü, Spark install klasörünüzün adının sonunda açıklanmalıdır.
     * **Winutils. exe** ikilisini istediğiniz bir dizine kaydedin. Örneğin, `c:\hadoop\bin`.
-    * @No__t-0 ' yı `bin` olmadan **winutils. exe** ile dizini yansıtacak şekilde ayarlayın. Örneğin, `c:\hadoop`.
-    * PATH ortam değişkenini, `%HADOOP_HOME%\bin` içerecek şekilde ayarlayın.
+    * @No__t_0, `bin` olmadan **winutils. exe** ile dizini yansıtacak şekilde ayarlayın. Örneğin, `c:\hadoop`.
+    * PATH ortam değişkenini `%HADOOP_HOME%\bin` içerecek şekilde ayarlayın.
 
 Bir sonraki bölüme geçmeden önce komut satırınızdan `dotnet`, `java`, `mvn`, `spark-shell` ' ü çalıştırıp çalıştırabileceğinizi iki kez denetleyin.
 
@@ -67,7 +67,7 @@ Bir sonraki bölüme geçmeden önce komut satırınızdan `dotnet`, `java`, `mv
 
 1. [Microsoft. spark. Worker](https://github.com/dotnet/spark/releases) sürümünü, Apache Spark GitHub yayınları sayfasından yerel makinenize indirin. Örneğin, `c:\bin\Microsoft.Spark.Worker\` yoluna indirebilirsiniz.
 
-2. @No__t-1 adlı [Yeni bir ortam değişkeni](https://www.java.com/en/download/help/path.xml) oluşturun ve bunu **Microsoft. spark. Worker**' i indirdiğiniz ve ayıkladığınız dizine ayarlayın. Örneğin, `c:\bin\Microsoft.Spark.Worker`.
+2. @No__t_1 adlı [Yeni bir ortam değişkeni](https://www.java.com/en/download/help/path.xml) oluşturun ve bunu **Microsoft. spark. Worker**' i indirdiğiniz ve ayıkladığınız dizine ayarlayın. Örneğin, `c:\bin\Microsoft.Spark.Worker`.
 
 ## <a name="clone-the-net-for-apache-spark-github-repo"></a>Apache Spark GitHub deposunun .NET kopyasını kopyalama
 
