@@ -5,12 +5,12 @@ ms.date: 09/11/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to
-ms.openlocfilehash: 42f8d51f2547cd6f3240a05420b2da10b7cf52e3
-ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
+ms.openlocfilehash: b85d77900c5d9227ecc6fe81b8a8d68171dd9ef5
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72179389"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774514"
 ---
 # <a name="deploy-a-model-in-an-aspnet-core-web-api"></a>ASP.NET Core Web API 'sinde model dağıtma
 
@@ -19,15 +19,15 @@ Bir ASP.NET Core Web API 'SI kullanarak Web 'de önceden eğitilen ML.NET makine
 > [!NOTE]
 > `PredictionEnginePool` hizmet uzantısı Şu anda önizleme aşamasındadır.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Prerequisites
 
-- [Visual Studio 2017 15,6 veya üzeri](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) ".NET Core platformlar arası geliştirme" iş yükü yüklendi.
+- [Visual Studio 2017 sürüm 15,6 veya üzeri](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) ".NET Core platformlar arası geliştirme" iş yükü yüklendi.
 - PowerShell.
 - Önceden eğitilen model. Kendi modelinizi derlemek için [ML.NET yaklaşım Analizi öğreticisini](../tutorials/sentiment-analysis.md) kullanın veya bu [önceden eğitilen yaklaşım Analizi Machine Learning modelini](https://github.com/dotnet/samples/blob/master/machine-learning/models/sentimentanalysis/sentiment_model.zip) indirin
 
 ## <a name="create-aspnet-core-web-api-project"></a>ASP.NET Core Web API projesi oluştur
 
-1. Visual Studio 2017'yi açın. Menü çubuğundan **dosya > yeni > projesi** öğesini seçin. Yeni proje iletişim kutusunda, **Visual C#**  düğümünü ve ardından **Web** düğümünü seçin. **ASP.NET Core Web uygulaması** proje şablonunu seçin. **Ad** metin kutusuna "SentimentAnalysisWebAPI" yazın ve **Tamam** düğmesini seçin.
+1. Visual Studio 2017 ' i açın. Menü çubuğundan **dosya > yeni > projesi** öğesini seçin. Yeni proje iletişim kutusunda, **Visual C#**  düğümünü ve ardından **Web** düğümünü seçin. **ASP.NET Core Web uygulaması** proje şablonunu seçin. **Ad** metin kutusuna "SentimentAnalysisWebAPI" yazın ve **Tamam** düğmesini seçin.
 
 1. Farklı türlerde ASP.NET Core projeler görüntüleyen pencerede, **API** ' yi seçin ve **Tamam** düğmesini seçin.
 
@@ -62,9 +62,9 @@ Giriş verileriniz ve tahminlerinizi için bazı sınıflar oluşturmanız gerek
     ```csharp
     using Microsoft.ML.Data;
     ```
-    
+
     Mevcut sınıf tanımını kaldırın ve aşağıdaki kodu **SentimentData.cs** dosyasına ekleyin:
-    
+
     ```csharp
     public class SentimentData
     {
@@ -83,9 +83,9 @@ Giriş verileriniz ve tahminlerinizi için bazı sınıflar oluşturmanız gerek
     ```csharp
     using Microsoft.ML.Data;
     ```
-    
+
     Mevcut sınıf tanımını kaldırın ve aşağıdaki kodu *SentimentPrediction.cs* dosyasına ekleyin:
-    
+
     ```csharp
     public class SentimentPrediction : SentimentData
     {
@@ -99,11 +99,11 @@ Giriş verileriniz ve tahminlerinizi için bazı sınıflar oluşturmanız gerek
     }
     ```
 
-    `SentimentPrediction` `SentimentData` ' den devralır. Bu, `SentimentText` özelliğindeki özgün verileri, model tarafından oluşturulan çıkışın yanında görmeyi kolaylaştırır. 
+    `SentimentPrediction` `SentimentData` ' den devralır. Bu, `SentimentText` özelliğindeki özgün verileri, model tarafından oluşturulan çıkışın yanında görmeyi kolaylaştırır.
 
 ## <a name="register-predictionenginepool-for-use-in-the-application"></a>Uygulamada kullanmak için PredictionEnginePool Kaydet
 
-Tek bir tahmin yapmak için bir [@no__t](xref:Microsoft.ML.PredictionEngine%602)oluşturmanız gerekir. [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) , iş parçacığı açısından güvenli değildir. Ayrıca, uygulamanızın içinde gerek duyduğu her yerde bir örneği oluşturmanız gerekir. Uygulamanız büyüdükçe, bu işlem yönetilebilir hale gelebilir. Daha iyi performans ve iş parçacığı güvenliği için, uygulamanız genelinde kullanılmak üzere bir [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) nesnesi oluşturan bağımlılık ekleme ve `PredictionEnginePool` hizmeti birleşimini kullanın.
+Tek bir tahmin yapmak için bir [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)oluşturmanız gerekir. [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) , iş parçacığı açısından güvenli değildir. Ayrıca, uygulamanızın içinde gerek duyduğu her yerde bir örneği oluşturmanız gerekir. Uygulamanız büyüdükçe, bu işlem yönetilebilir hale gelebilir. Daha iyi performans ve iş parçacığı güvenliği için, uygulamanız genelinde kullanılmak üzere bir [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) nesnesi oluşturan bağımlılık ekleme ve `PredictionEnginePool` hizmeti birleşimini kullanın.
 
 [ASP.NET Core ' de bağımlılık ekleme](https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-2.1)hakkında daha fazla bilgi edinmek istiyorsanız aşağıdaki bağlantıda daha fazla bilgi sağlanmaktadır.
 
@@ -130,22 +130,22 @@ Tek bir tahmin yapmak için bir [@no__t](xref:Microsoft.ML.PredictionEngine%602)
     }
     ```
 
-Yüksek düzeyde, bu kod, uygulama tarafından el ile yapmak yerine, daha sonra kullanmak üzere nesne ve hizmetleri otomatik olarak başlatır. 
+Yüksek düzeyde, bu kod, uygulama tarafından el ile yapmak yerine, daha sonra kullanmak üzere nesne ve hizmetleri otomatik olarak başlatır.
 
-Makine öğrenimi modelleri statik değildir. Yeni eğitim verileri kullanılabilir hale geldiğinde, model geri çekme ve yeniden dağıtılır. Bir modelin en son sürümünü uygulamanıza almanın bir yolu, uygulamanın tamamını yeniden dağıtmaktan biridir. Ancak bu, uygulama kapalı kalma süresini tanıtır. @No__t-0 hizmeti, uygulamanızı kapatmak zorunda kalmadan güncelleştirilmiş bir modeli yeniden yüklemek için bir mekanizma sağlar. 
+Makine öğrenimi modelleri statik değildir. Yeni eğitim verileri kullanılabilir hale geldiğinde, model geri çekme ve yeniden dağıtılır. Bir modelin en son sürümünü uygulamanıza almanın bir yolu, uygulamanın tamamını yeniden dağıtmaktan biridir. Ancak bu, uygulama kapalı kalma süresini tanıtır. @No__t_0 hizmeti, uygulamanızı kapatmak zorunda kalmadan güncelleştirilmiş bir modeli yeniden yükleme mekanizması sağlar.
 
-@No__t-0 parametresini `true` olarak ayarlayın ve `PredictionEnginePool`, dosya sistemi değişiklik bildirimlerini dinleyen ve dosyada değişiklik olduğunda olay başlatan bir [`FileSystemWatcher`](xref:System.IO.FileSystemWatcher) başlatır. Bu, modeli otomatik olarak yeniden yüklemek için `PredictionEnginePool` ' a sorar.
+@No__t_0 parametresini `true` olarak ayarlayın ve `PredictionEnginePool` dosya sistemi değişiklik bildirimlerini dinleyen ve dosyada değişiklik olduğunda olay başlatan bir [`FileSystemWatcher`](xref:System.IO.FileSystemWatcher) başlatır. Bu, modeli otomatik olarak yeniden yüklemek için `PredictionEnginePool` ' a sorar.
 
-Model `modelName` parametresiyle tanımlanır, böylece değişiklik yapıldığında uygulama başına birden fazla model yeniden yüklenebilir. 
+Model `modelName` parametresiyle tanımlanır, böylece değişiklik yapıldığında uygulama başına birden fazla model yeniden yüklenebilir.
 
 > [!TIP]
 > Alternatif olarak, uzaktan depolanan modellerle çalışırken `FromUri` yöntemini kullanabilirsiniz. Dosya değiştirilen olayları izlemek yerine `FromUri`, uzak konumu değişiklikler için yoklar. Yoklama aralığı varsayılan olarak 5 dakikadır. Uygulama gereksinimlerine bağlı olarak yoklama aralığını artırabilir veya azaltabilirsiniz. Aşağıdaki kod örneğinde, `PredictionEnginePool` her dakikada belirtilen URI 'de depolanan modeli yoklar.
->    
+>
 >```csharp
 >builder.Services.AddPredictionEnginePool<SentimentData, SentimentPrediction>()
 >   .FromUri(
->       modelName: "SentimentAnalysisModel", 
->       uri:"https://github.com/dotnet/samples/raw/master/machine-learning/models/sentimentanalysis/sentiment_model.zip", 
+>       modelName: "SentimentAnalysisModel",
+>       uri:"https://github.com/dotnet/samples/raw/master/machine-learning/models/sentimentanalysis/sentiment_model.zip",
 >       period: TimeSpan.FromMinutes(1));
 >```
 
@@ -165,7 +165,7 @@ Gelen HTTP isteklerinizi işlemek için bir denetleyici oluşturun.
     ```
 
     Mevcut sınıf tanımını kaldırın ve aşağıdaki kodu *PredictController.cs* dosyasına ekleyin:
-    
+
     ```csharp
     public class PredictController : ControllerBase
     {
@@ -207,13 +207,13 @@ Her şey ayarlandıktan sonra, uygulamayı test etmek zaman alabilir.
     ```
 
     Başarılı olursa, çıkış aşağıdaki metne benzer görünmelidir:
-    
+
     ```powershell
     Negative
     ```
 
-Tebrikler! ASP.NET Core bir Web API 'SI kullanarak internet üzerinden tahmin etmek için modelinize başarıyla hizmet sundu.
+Mühendisi! ASP.NET Core bir Web API 'SI kullanarak internet üzerinden tahmin etmek için modelinize başarıyla hizmet sundu.
 
 ## <a name="next-steps"></a>Sonraki Adımlar
 
-- [Azure’a Dağıtma](/aspnet/core/tutorials/publish-to-azure-webapp-using-vs#deploy-the-app-to-azure)
+- [Azure’a dağıtma](/aspnet/core/tutorials/publish-to-azure-webapp-using-vs#deploy-the-app-to-azure)

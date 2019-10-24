@@ -5,12 +5,12 @@ f1_keywords:
 - NETSDK1045
 ms.custom: updateeachvsrelease
 ms.date: 09/20/2019
-ms.openlocfilehash: b1557e6910cb6d0b6d7e2b3ce2aec97d3715fec7
-ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
+ms.openlocfilehash: 6885f6c853efb0dcb2cb64b83f07e12b1dc2e3cf
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/28/2019
-ms.locfileid: "71591665"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771948"
 ---
 # <a name="prerequisites-for-net-core-on-windows"></a>Windows üzerinde .NET Core önkoşulları
 
@@ -44,14 +44,14 @@ Aşağıdaki makalelerde sürüm başına .NET Core tarafından desteklenen işl
 > [!NOTE]
 > **Windows 8.1 ve önceki sürümler veya Windows Server 2012 R2 ve önceki sürümleri için:**
 >
-> Windows yüklemenizin güncel olduğundan ve Windows Update aracılığıyla yüklenebilen [KB2999226](https://support.microsoft.com/help/2999226/update-for-universal-c-runtime-in-windows)içerdiğinden emin olun. Bu güncelleştirme yüklü değilse, bir .NET Core uygulaması başlattığınızda aşağıdakine benzer bir hata görürsünüz:`The program can't start because api-ms-win-crt-runtime-l1-1-0.dll is missing from your computer. Try reinstalling the program to fix this problem.`
+> Windows yüklemenizin güncel olduğundan ve Windows Update aracılığıyla yüklenebilen [KB2999226](https://support.microsoft.com/help/2999226/update-for-universal-c-runtime-in-windows)içerdiğinden emin olun. Bu güncelleştirme yüklü değilse, bir .NET Core uygulaması başlattığınızda aşağıdakine benzer bir hata görürsünüz: `The program can't start because api-ms-win-crt-runtime-l1-1-0.dll is missing from your computer. Try reinstalling the program to fix this problem.`
 >
 > **Windows 7 veya Windows Server 2008 R2 için:**
 >
 > KB2999226 ' ye ek olarak, [KB2533623](https://support.microsoft.com/help/2533623/microsoft-security-advisory-insecure-library-loading-could-allow-remot) ' ın de yüklü olduğundan emin olun. Bu güncelleştirme yüklü değilse, bir .NET Core uygulaması başlattığınızda aşağıdakine benzer bir hata görürsünüz: `The library hostfxr.dll was found, but loading it from C:\<path_to_app>\hostfxr.dll failed`.
 
 ## <a name="prerequisites-to-develop-net-core-apps-with-visual-studio"></a>Visual Studio ile .NET Core uygulamaları geliştirmeye yönelik önkoşullar
-    
+
 .NET Core SDK kullanarak .NET Core uygulamaları geliştirmek için herhangi bir düzenleyici kullanabilirsiniz, ancak Visual Studio 2017 ve üzeri sürümleri, Windows üzerinde .NET Core uygulamaları için tümleşik bir geliştirme ortamı sağlar.
 
 <a name="vs-mapping"></a>
@@ -63,11 +63,11 @@ Her .NET Core sürümünde en düşük Visual Studio sürümü gerekir. Visual S
 
 Aşağıdaki tabloda her SDK için en düşük sürüm listelenmektedir:
 
-| .NET Core SDK sürümü | Visual Studio sürümü                      |
+| .NET Core SDK sürümü | Visual Studio sürüm                      |
 | --------------------- | ------------------------------------------ |
-| 3,0                   | Visual Studio 2019 sürüm 16,3 veya üzeri. |
-| 2.2                   | Visual Studio 2017 sürüm 15,9 veya üzeri. |
-| 2.1                   | Visual Studio 2017 sürüm 15,7 veya üzeri. |
+| 3.0                   | Visual Studio 2019 sürüm 16,3 veya üzeri. |
+| 2,2                   | Visual Studio 2017 sürüm 15,9 veya üzeri. |
+| 2,1                   | Visual Studio 2017 sürüm 15,7 veya üzeri. |
 | 'in                   | Visual Studio 2017 sürüm 15,0 veya üzeri. |
 
 <!-- markdownlint-disable MD025 -->
@@ -86,7 +86,7 @@ Aşağıdaki görüntüde, Visual Studio Kullanıcı arabiriminde seçilen **.NE
 
 ![".NET Core platformlar arası geliştirme" iş yükü seçiliyken Visual Studio 2019 yüklemesinin ekran görüntüsü](./media/windows-prerequisites/vs-2019-workloads.jpg)
 
-Visual Studio 2019 16,3, bu iş yüklerinden herhangi biri yüklendikten sonra varsayılan olarak .NET Core 3,0 SDK kullanır.
+Visual Studio 2019 sürüm 16,3, bu iş yüklerinden herhangi biri yüklendikten sonra varsayılan olarak .NET Core 3,0 SDK kullanır.
 
 Mevcut projelerinizin en son .NET Core çalışma zamanını kullanmasını istiyorsanız, aşağıdaki yönergeleri kullanarak var olan tüm .NET Core projelerini .NET Core 3,0 ' e yeniden hedefleyin:
 
@@ -111,7 +111,7 @@ Visual Studio 'Yu .NET Core 3,0 SDK ile yapılandırdıktan sonra, aşağıdaki 
 ![".NET Core platformlar arası geliştirme" iş yükü seçiliyken Visual Studio 2017 yüklemesinin ekran görüntüsü](./media/windows-prerequisites/vs-2017-workloads.jpg)
 
 **.NET Core platformlar arası geliştirme** araç takımı yüklendikten sonra, Visual Studio genellikle .NET Core SDK önceki bir sürümünü yüklüyor.
-Örneğin, Visual Studio 2017 15,9, iş yükü yüklendikten sonra varsayılan olarak .NET Core 2,1 SDK kullanır.
+Örneğin, Visual Studio 2017 sürüm 15,9, iş yükü yüklendikten sonra varsayılan olarak .NET Core 2,1 SDK kullanır.
 
 Visual Studio 'Yu .NET Core 2,2 SDK kullanacak şekilde güncelleştirmek için:
 

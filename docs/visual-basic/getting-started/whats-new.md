@@ -8,12 +8,12 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-ms.openlocfilehash: 64f8d536212cd379337ad437c1e15ae356890ddb
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: f5630f7947125dd5eb8a5b58e79add1aec4c689b
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72581972"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774912"
 ---
 # <a name="whats-new-for-visual-basic"></a>Visual Basic yenilikler
 
@@ -21,45 +21,45 @@ Bu konu, dilin en son sürümlerindeki yeni ve geliştirilmiş özelliklerin ayr
 
 ## <a name="current-version"></a>Güncel sürüm
 
-Visual Basic 16,0/Visual Studio 2019 sürüm 16,0  
+Visual Basic 16,0/Visual Studio 2019 sürüm 16,0 \
 Yeni özellikler için bkz. [Visual Basic 16,0](#visual-basic-160).
 
 ## <a name="previous-versions"></a>Önceki sürümler
 
-Visual Basic 15,8/Visual Studio 2017 sürüm 15,8  
+Visual Basic 15,8/Visual Studio 2017 sürüm 15,8 \
 Yeni özellikler için bkz. [Visual Basic 15,8](#visual-basic-158).
 
-Visual Basic 15,5/Visual Studio 2017 sürüm 15,5  
+Visual Basic 15,5/Visual Studio 2017 sürüm 15,5 \
 Yeni özellikler için bkz. [Visual Basic 15,5](#visual-basic-155).
 
-Visual Basic 15,3/Visual Studio 2017 sürüm 15,3  
+Visual Basic 15,3/Visual Studio 2017 sürüm 15,3 \
 Yeni özellikler için bkz. [Visual Basic 15,3](#visual-basic-153).
 
-Visual Basic 2017/Visual Studio 2017  
+Visual Basic 2017/Visual Studio 2017 \
 Yeni özellikler için bkz. [Visual Basic 2017](#visual-basic-2017).
 
-Visual Basic/Visual Studio 2015  
+Visual Basic/Visual Studio 2015 \
 Yeni özellikler için bkz. [Visual Basic 14](#visual-basic-14).
 
-Visual Basic/Visual Studio 2013  
+Visual Basic/Visual Studio 2013 \
 .NET Compiler Platform teknoloji önizlemeleri ("Roslyn")
 
-Visual Basic/Visual Studio 2012  
+Visual Basic/Visual Studio 2012 \
 `Async` ve `await` anahtar sözcükleri, yineleyiciler, çağıran bilgi öznitelikleri
 
-Visual Basic, Visual Studio 2010  
+Visual Basic, Visual Studio 2010 \
 Otomatik uygulanan özellikler, koleksiyon başlatıcıları, örtük satır devamlılığı, dinamik, genel ortak/Contra varyansı, genel ad alanı erişimi
 
-Visual Basic/Visual Studio 2008  
+Visual Basic/Visual Studio 2008 \
 Dil ile tümleşik sorgu (LINQ), XML değişmez değerleri, yerel tür çıkarımı, nesne başlatıcıları, anonim türler, uzantı yöntemleri, yerel `var` tür çıkarımı, lambda ifadeleri, `if` işleci, kısmi Yöntemler, null yapılabilir değer türleri
 
-Visual Basic/Visual Studio 2005  
+Visual Basic/Visual Studio 2005 \
 @No__t_0 türü ve yardımcı türleri (uygulama, bilgisayar, dosya sistemi ve ağa erişim)
 
-Visual Basic/Visual Studio .NET 2003  
+Visual Basic/Visual Studio .NET 2003 \
 Bit kaydırma işleçleri, döngü değişkeni bildirimi
 
-Visual Basic/Visual Studio .NET 2002  
+Visual Basic/Visual Studio .NET 2002 \
 Visual Basic .NET ilk sürümü
 
 ## <a name="visual-basic-160"></a>Visual Basic 16,0
@@ -108,7 +108,6 @@ Dim b1 As Byte = CByte(Int(d))                 ' Result: 173
 Dim s1 AS Short = CShort(Math.Truncate(s))     ' Result: 173
 Dim i2 As Integer = CInt(Math.Ceiling(d))      ' Result: 174
 Dim i3 As Integer = CInt(Math.Round(s))        ' Result: 174
-
 ```
 
 Bu, kayan nokta değerlerini yuvarlar değil, bu fazlağa göz atar.
@@ -237,7 +236,7 @@ Tarih sabit değerlerini YYYY-AA-GG biçiminde (`#2015-03-17 16:10 PM#`) kullana
 
 **ReadOnly arabirim özellikleri**
 
-Salt okunur Arabirim özelliklerini bir ReadWrite özelliğini kullanarak uygulayabilirsiniz.  Arabirim minimum işlevselliği garanti eder ve bir uygulama sınıfının ayarlanmasının izin vermesini durdurmaz.
+Salt okunur Arabirim özelliklerini bir ReadWrite özelliğini kullanarak uygulayabilirsiniz. Arabirim minimum işlevselliği garanti eder ve bir uygulama sınıfının ayarlanmasının izin vermesini durdurmaz.
 
 [TypeOf \<expr > IsNot \<type >](../../visual-basic/language-reference/operators/typeof-operator.md)
 

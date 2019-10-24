@@ -1,33 +1,33 @@
 ---
-title: .NET core ek CLI araçları
-description: Genel Bakış destekleyen ve .NET Core işlevselliğini genişleten ek araçlar yükleyebilirsiniz.
+title: .NET Core ek CLı araçları
+description: .NET Core işlevselliğini desteklemek ve genişletmek için yükleyebileceğiniz ek araçlara genel bakış.
 author: mlacouture
 ms.date: 11/27/2018
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 75c74c16367bacf66fa2fb56d7666a07f7274aff
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: c885d6f6b0417a80dd6e26afe9572766738c5b4b
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65631966"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771962"
 ---
-# <a name="net-core-additional-tools-overview"></a>.NET core ek araçlar genel bakış
+# <a name="net-core-additional-tools-overview"></a>.NET Core ek araçlara genel bakış
 
-Bu bölümde destekler ve ek olarak .NET Core işlevselliğini genişleten araçları listesini derler [.NET Core komut satırı arabirimi (CLI)](../tools/index.md) araçları.
+Bu bölüm .NET Core [komut satırı arabirimi (CLI)](../tools/index.md) araçlarına ek olarak .NET Core işlevselliğini destekleyen ve genişleten araçların listesini derler.
 
-## <a name="wcf-web-service-reference-toolwcf-web-service-reference-guidemd"></a>[WCF Web Service Reference aracı](wcf-web-service-reference-guide.md)
+## <a name="wcf-web-service-reference-toolwcf-web-service-reference-guidemd"></a>[WCF Web hizmeti başvuru aracı](wcf-web-service-reference-guide.md)
 
-Kendi etkinliğinde içinde yapılan bir Visual Studio bağlı hizmet sağlayıcısı (Windows Communication Foundation) WCF Web servisi başvurusu olduğu [Visual Studio 2017 sürüm 15.5](/visualstudio/releasenotes/vs2017-relnotes-v15.5#WCFTools). Bu araç, bir ağ konumu üzerinde mevcut çözümde bir web hizmetinden veya bir WSDL dosyasından meta verilerini alır ve web hizmet işlemlerini erişmek için kullanabileceğiniz yöntemleri ile WCF proxy sınıfı tanımlayan .NET Core ile uyumlu bir kaynak dosyası oluşturur.
+WCF (Windows Communication Foundation) Web hizmeti başvurusu, {1 & gt; [Visual studio 2017 sürüm 15,5](/visualstudio/releasenotes/vs2017-relnotes-v15.5#WCFTools)' de yaptığı, Visual Studio bağlı bir hizmet sağlayıcıdır. Bu araç, geçerli çözümdeki bir Web hizmetinden, bir ağ konumunda veya bir WSDL dosyasından meta verileri alır ve .NET Core ile uyumlu bir kaynak dosyası oluşturur ve Web hizmeti işlemlerine erişmek için kullanabileceğiniz yöntemlerle bir WCF proxy sınıfı tanımlar.
 
-## <a name="wcf-dotnet-svcutil-tooldotnet-svcutil-guidemd"></a>[WCF dotnet svcutil aracı](dotnet-svcutil-guide.md)
+## <a name="wcf-dotnet-svcutil-tooldotnet-svcutil-guidemd"></a>[WCF DotNet-Svcutil aracı](dotnet-svcutil-guide.md)
 
-WCF (Windows Communication Foundation) dotnet svcutil aracı, bir ağ konumu üzerinde bir web hizmetinden veya bir WSDL dosyasından meta verilerini alır ve bir WCF proxy sınıf yöntemleriyle tanımlama, .NET Core ile uyumlu bir kaynak dosyası oluşturur bir .NET Core CLI araçtır web hizmeti işlemleri erişmek için kullanabileceğiniz.
-**Dotnet svcutil** araçtır için alternatif bir seçenek [ **WCF Web Service Reference** ](wcf-web-service-reference-guide.md) Visual Studio bağlı hizmet sağlayıcısı hangi ilk sevk edilen Visual Studio ile 2017 v15.5. **Dotnet svcutil** aracı bir .NET Core CLI aracı, Linux, macOS ve Windows üzerinde kullanılabilir çapraz platform.
+WCF (Windows Communication Foundation) DotNet-Svcutil Aracı, bir ağ konumundaki veya bir WSDL dosyasındaki bir Web hizmetinden meta verileri alan ve .NET Core ile uyumlu bir kaynak dosyası oluşturan ve yöntemlerle WCF proxy sınıfı tanımlayan bir .NET Core CLI aracıdır Web hizmeti işlemlerine erişmek için kullanabilirsiniz.
+**DotNet-Svcutil** Aracı, Ilk olarak visual Studio 2017 sürüm 15,5 ile birlikte sunulan [**WCF Web hizmeti başvurusu**](wcf-web-service-reference-guide.md) Visual Studio bağlı hizmet sağlayıcısına alternatif bir seçenektir. .NET Core CLI aracı olarak **DotNet-Svcutil** Aracı, Linux, MacOS ve Windows üzerinde platformlar arası kullanılabilir.
 
-## <a name="wcf-dotnet-svcutilxmlserializer-tooldotnet-svcutilxmlserializer-guidemd"></a>[WCF dotnet svcutil.xmlserializer aracı](dotnet-svcutil.xmlserializer-guide.md)
+## <a name="wcf-dotnet-svcutilxmlserializer-tooldotnet-svcutilxmlserializer-guidemd"></a>[WCF DotNet-Svcutil. XmlSerializer aracı](dotnet-svcutil.xmlserializer-guide.md)
 
-.NET Framework üzerinde svcutil Aracı'nı kullanarak bir serileştirme bütünleştirilmiş kodu önceden de oluşturabilirsiniz. Dotnet svcutil.xmlserializer NuGet paketi üzerinde .NET Core benzer bir işlevsellik sağlar. Önceden oluşturur C# WCF sözleşmesi tarafından kullanılır ve bu seri hale getirilemiyor tarafından türleri istemci uygulamasındaki için serileştirme kodu <xref:System.Xml.Serialization.XmlSerializer>. Bu seri hale getirme veya bu türden nesneler seri durumdan çıkarılırken zaman XML serileştirme başlangıç performansını artırır.
+.NET Framework, Svcutil aracını kullanarak bir serileştirme derlemesini önceden oluşturabilirsiniz. DotNet-Svcutil. XmlSerializer NuGet paketi .NET Core 'da benzer işlevsellik sağlar. WCF hizmet sözleşmesi tarafından C# kullanılan ve <xref:System.Xml.Serialization.XmlSerializer> tarafından seri hale getirilebilen istemci uygulamasındaki türler için serileştirme kodu önceden oluşturulur. Bu, bu türlerin nesneleri serileştirilirken veya seri durumdan çıkarılırken XML serileştirmesinin başlangıç performansını geliştirir.
 
 ## <a name="xml-serializer-generatorxml-serializer-generatormd"></a>[XML Serileştirici Oluşturucusu](xml-serializer-generator.md)
 
-Gibi [Xml seri hale getirici oluşturucunun (sgen.exe)](../../standard/serialization/xml-serializer-generator-tool-sgen-exe.md) .NET Framework için [Microsoft.XmlSerializer.Generator NuGet paketini](https://www.nuget.org/packages/Microsoft.XmlSerializer.Generator) .NET Core ve .NET standart kitaplıkları çözümüdür. Bir XML serileştirme derleme türleri serileştirmek veya seri durumundan kullanarak bu tür nesneler XML serileştirme başlangıç performansını artırmak için bir derlemede yer alan oluşturur <xref:System.Xml.Serialization.XmlSerializer>.
+.NET Framework için [XML serileştirici Oluşturucu (SGen. exe)](../../standard/serialization/xml-serializer-generator-tool-sgen-exe.md) gibi, [Microsoft. XmlSerializer. Generator NuGet paketi](https://www.nuget.org/packages/Microsoft.XmlSerializer.Generator) .NET Core ve .NET Standard kitaplıkları çözümüdür. @No__t_0 kullanarak bu türlerin nesnelerini serileştirmek veya seri hale getirmede XML serileştirmesinin başlangıç performansını geliştirmek için bir derlemede bulunan türler için bir XML serileştirme bütünleştirilmiş kodu oluşturur.

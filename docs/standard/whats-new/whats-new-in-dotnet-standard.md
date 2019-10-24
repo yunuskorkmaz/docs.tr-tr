@@ -6,12 +6,12 @@ ms.date: 04/12/2018
 ms.technology: dotnet-standard
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 476b6047fe9872f13f2f0298fb331eb7d888a73d
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: f69dfe77e5d485c4c7ffcbf2b98657eab87d452d
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117854"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72775229"
 ---
 # <a name="whats-new-in-the-net-standard"></a>.NET Standard’daki Yenilikler
 
@@ -39,19 +39,19 @@ ms.locfileid: "71117854"
 
 Sürüm 1,6 ' den .NET Standard, API 'lerin karşılaştırarak küçük bir alt kümesini içerir. Dışlananlar arasında, .NET Framework veya Xamarin içinde yaygın olarak kullanılan birçok API. Bu, geliştiricilerin birden çok .NET uygulamasını hedefleyen uygulamalar ve kitaplıklar geliştirdiklerinde tanıdık API 'Ler için uygun değişiklikleri bulmasını gerektirdiğinden geliştirmeyi karmaşıklaştırır. 2,0 .NET Standard, Standard 'ın önceki sürümü olan .NET Standard 1,6 ' de bulunandan daha fazla 20.000 ' den fazla API ekleyerek bu sınırlamaya yöneliktir. 2,0 .NET Standard eklenen API 'lerin bir listesi için, bkz. [.NET Standard 2,0 vs 1,6](https://raw.githubusercontent.com/dotnet/standard/master/docs/versions/netstandard2.0_diff.md).
 
-.NET Standard 2,0 ' deki <xref:System> ad alanına yapılan eklemelerin bazıları şunlardır:
+.NET Standard 2,0 ' de <xref:System> ad alanına yapılan eklemelerin bazıları şunlardır:
 
-- <xref:System.AppDomain> Sınıfı için destek.
-- <xref:System.Array> Sınıfında ek üyelerden diziler ile çalışmaya yönelik daha iyi destek.
-- <xref:System.Attribute> Sınıfında ek üyelerin öznitelikleriyle çalışma için daha iyi destek.
-- Daha iyi takvim desteği ve değerler için <xref:System.DateTime> ek biçimlendirme seçenekleri.
+- @No__t_0 sınıfı için destek.
+- @No__t_0 sınıfında ek üyelerden diziler ile çalışmaya yönelik daha iyi destek.
+- @No__t_0 sınıfında ek üyelerin öznitelikleriyle çalışma için daha iyi destek.
+- @No__t_0 değerler için daha iyi takvim desteği ve ek biçimlendirme seçenekleri.
 - Ek <xref:System.Decimal> yuvarlama işlevselliği.
-- <xref:System.Environment> Sınıfında ek işlevsellik.
-- <xref:System.GC> Sınıfından çöp toplayıcı üzerinde Gelişmiş denetim.
-- <xref:System.String> Sınıfında dize karşılaştırma, numaralandırma ve normalleştirme için geliştirilmiş destek.
-- <xref:System.TimeZoneInfo.AdjustmentRule> Ve<xref:System.TimeZoneInfo.TransitionTime> sınıflarında gün ışığından yararlanma ayarlamaları ve geçiş süreleri için destek.
-- <xref:System.Type> Sınıfında önemli ölçüde gelişmiş işlevsellik.
-- <xref:System.Runtime.Serialization.SerializationInfo> Ve<xref:System.Runtime.Serialization.StreamingContext> parametrelerine sahip bir özel durum Oluşturucusu ekleyerek özel durum nesnelerinin serisini kaldırma için daha iyi destek.
+- @No__t_0 sınıfında ek işlevsellik.
+- @No__t_0 sınıfı aracılığıyla çöp toplayıcı üzerinde Gelişmiş denetim.
+- @No__t_0 sınıfında dize karşılaştırma, numaralandırma ve normalleştirme için geliştirilmiş destek.
+- @No__t_0 ve <xref:System.TimeZoneInfo.TransitionTime> sınıflarında gün ışığından yararlanma ayarlamaları ve geçiş süreleri için destek.
+- @No__t_0 sınıfında önemli ölçüde gelişmiş işlevsellik.
+- @No__t_0 ve <xref:System.Runtime.Serialization.StreamingContext> parametrelere sahip bir özel durum Oluşturucusu ekleyerek özel durum nesnelerinin serisini kaldırma için daha iyi destek.
 
 ### <a name="support-for-net-framework-libraries"></a>.NET Framework kitaplıkları için destek
 

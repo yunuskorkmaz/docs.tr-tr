@@ -1,54 +1,48 @@
 ---
 title: Char anahtar sözcüğü C# başvurusu
 ms.custom: seodec18
-ms.date: 07/20/2015
+ms.date: 10/22/2019
 f1_keywords:
 - char
 - char_CSharpKeyword
 helpviewer_keywords:
 - char data type [C#]
 ms.assetid: b51cf4fb-124c-4067-af48-afbac122b228
-ms.openlocfilehash: 63f8871926e8c279678c59a2256bef46b2ff514e
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 1b9f8d1bb205a6cbfe521830a11bd8878ccde991
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71698781"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771796"
 ---
-# <a name="char-c-reference"></a>char (C# Başvurusu)
+# <a name="char-c-reference"></a>Char (C# başvuru)
 
-@No__t-0 anahtar sözcüğü, .NET Framework bir Unicode karakteri temsil etmek için kullandığı <xref:System.Char?displayProperty=nameWithType> yapısının bir örneğini bildirmek için kullanılır. @No__t-0 nesnesinin değeri 16 bit sayısal (sıra sayısı) değeridir.
-
- Unicode karakterler, dünyanın her yerindeki yazılı dillerin çoğunu temsil etmek için kullanılır.
+@No__t_0 Type anahtar sözcüğü, bir Unicode UTF-16 karakteri temsil eden .NET <xref:System.Char?displayProperty=nameWithType> yapı türü için bir diğer addır:
 
 |Tür|Aralık|Boyut|.NET türü|
 |----------|-----------|----------|-------------------------|
-|`char`|U + 0000-U + FFFF|Unicode 16 bit karakter|<xref:System.Char?displayProperty=nameWithType>|
+|`char`|U + 0000-U + FFFF|16 bit|<xref:System.Char?displayProperty=nameWithType>|
 
 ## <a name="literals"></a>Sabit değerler
 
-@No__t-0 türündeki sabitler, karakter sabit değerleri, onaltılık kaçış dizisi veya Unicode temsili olarak yazılabilir. İntegral karakter kodlarını da çevirebilirsiniz. Aşağıdaki örnekte, `char` dizisinin dört öğesi, `X` karakteriyle birlikte başlatılır:
+@No__t_0 türünün sabitleri, karakter sabit değerleri, onaltılık kaçış dizisi veya Unicode temsili olarak yazılabilir. Ayrıca, bir integral karakter kodunu karşılık gelen `char` değerine de çevirebilirsiniz. Aşağıdaki örnekte, `char` dizisinin dört öğesi aynı karakterle `X` başlatılır:
 
 [!code-csharp[csrefKeywordsTypes#19](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/keywordsTypes.cs#19)]
 
 ## <a name="conversions"></a>Dönüşümler
 
-@No__t-0 örtük olarak [ushort](../builtin-types/integral-numeric-types.md), [int](../builtin-types/integral-numeric-types.md), [uint](../builtin-types/integral-numeric-types.md), [Double](../builtin-types/floating-point-numeric-types.md)veya [Decimal](../builtin-types/floating-point-numeric-types.md)'a dönüştürülebilir. Ancak, diğer türlerden `char` türüne örtük dönüştürmeler yoktur.
+@No__t_0 türü örtük olarak şu [integral](../builtin-types/integral-numeric-types.md) türlerine dönüştürülebilir: `ushort`, `int`, `uint`, `long` ve `ulong`. Ayrıca yerleşik [kayan nokta](../builtin-types/floating-point-numeric-types.md) sayısal türlerine örtülü olarak dönüştürülebilir: `float`, `double` ve `decimal`. @No__t_0, `byte` ve `short` integral türlerine açıkça dönüştürülebilir.
 
-@No__t-0 türü `char` değerleriyle çalışmak için birkaç statik yöntem sağlar.
+Diğer türlerden `char` türüne örtük dönüştürme yok. Ancak, herhangi bir [integral](../builtin-types/integral-numeric-types.md) veya [kayan nokta](../builtin-types/floating-point-numeric-types.md) sayısal türü `char` açıkça dönüştürülebilir.
 
-## <a name="c-language-specification"></a>C# dili belirtimi  
+## <a name="c-language-specification"></a>C# dili belirtimi
 
-Daha fazla bilgi için bkz. [ C# dil belirtiminde](../language-specification/index.md) [Integral türleri](~/_csharplang/spec/types.md#integral-types) . Dil belirtimi, C# sözdizimi ve kullanımı için kesin bir kaynaktır.
+Daha fazla bilgi için, [ C# dil belirtiminin](~/_csharplang/spec/introduction.md) [Integral türler](~/_csharplang/spec/types.md#integral-types) bölümüne bakın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- <xref:System.Char>
-- [C#Başvurunun](../index.md)
-- [C# Programlama Kılavuzu](../../programming-guide/index.md)
-- [C# Anahtar Sözcükleri](./index.md)
-- [Integral türleri](../builtin-types/integral-numeric-types.md)
-- [Yerleşik Türler Tablosu](./built-in-types-table.md)
-- [Örtük Sayısal Dönüştürmeler Tablosu](./implicit-numeric-conversions-table.md)
-- [Açık Sayısal Dönüştürmeler Tablosu](./explicit-numeric-conversions-table.md)
+- [C#başvurunun](../index.md)
+- [C# anahtar sözcükleri](./index.md)
+- [Yerleşik türler tablosu](./built-in-types-table.md)
 - [Dizeler](../../programming-guide/strings/index.md)
+- <xref:System.Char?displayProperty=nameWithType>

@@ -17,15 +17,15 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], about security model
 - security model [WPF], operating system
 ms.assetid: 2a39a054-3e2a-4659-bcb7-8bcea490ba31
-ms.openlocfilehash: 44f98a6d7bf8358baf3b123b2d3b1d13009098a6
-ms.sourcegitcommit: 77e33b682db39955e331b8e8eda4ef1925a24e78
+ms.openlocfilehash: 925250a2284a47d0f9caf93158e2e23d9283aef3
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70133757"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774740"
 ---
 # <a name="wpf-security-strategy---platform-security"></a>WPF Güvenlik Stratejisi - Platform Güvenliği
-Windows Presentation Foundation (WPF), çeşitli güvenlik hizmetleri sağladığından, işletim sistemini, CLR 'yi ve Internet Explorer 'ı içeren temel platformun güvenlik özelliklerinden de yararlanır. Bu katmanlar, aşağıdaki şekilde [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] gösterildiği gibi, herhangi bir hata noktasını önlemeye yönelik güçlü, derinlemesine bir güvenlik modeli sağlamak için birleştirilir:  
+Windows Presentation Foundation (WPF), çeşitli güvenlik hizmetleri sağladığından, işletim sistemini, CLR 'yi ve Internet Explorer 'ı içeren temel platformun güvenlik özelliklerinden de yararlanır. Bu katmanlar, aşağıdaki şekilde gösterildiği gibi, herhangi bir hata noktasını önlemeye yönelik güçlü, derinlemesine bir güvenlik modeli [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] sağlamak üzere birleştirilir:  
   
  ![WPF güvenlik modelini gösteren diyagram.](./media/wpf-security-strategy-platform-security/windows-presentation-foundation-security.png)  
   
@@ -37,23 +37,23 @@ Windows çekirdeği, WPF ile oluşturulmuş olanlar da dahil olmak üzere tüm W
   
 <a name="Microsoft_Windows_XP_Service_Pack_2__SP2_"></a>   
 ### <a name="microsoft-windows-xp-service-pack-2-sp2"></a>Microsoft Windows XP Service Pack 2 (SP2)  
- Genel İnceleme ve Windows 'un güçlendirilemesinin yanı sıra, bu konuda tartışacak üç temel özellik [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)] vardır:  
+ Genel İnceleme ve Windows 'un güçlendirilemesinin yanı sıra, bu konuda tartışıyoruz [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)] üç temel özellik vardır:  
   
 - /GS derlemesi  
   
 - [!INCLUDE[TLA#tla_win_update](../../../includes/tlasharptla-win-update-md.md)].  
   
 #### <a name="gs-compilation"></a>/GS derlemesi  
- [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)]arabellek taşmalarını azaltmaya yardımcı olmak için, CLR gibi tüm [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] bağımlılıklarla birlikte birçok çekirdek sistem kitaplığını yeniden derleyerek koruma sağlar. Bu, C/C++ komut satırı derleyicisi ile/GS parametresi kullanılarak elde edilir. Arabellek taşmalarının açıkça kaçınılması gerekse de,/GS derlemesi, bu, yanlışlıkla veya kötü amaçlı olarak oluşturulan olası güvenlik açıklarına karşı derinlemesine savunma sağlayan bir örnek sağlar.  
+ [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)], arabellek taşmalarını azaltmaya yardımcı olmak için CLR gibi tüm [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] bağımlılıklarıyla birlikte birçok çekirdek sistem kitaplığını yeniden derleyerek koruma sağlar. Bu, C/C++ komut satırı derleyicisi ile/GS parametresi kullanılarak elde edilir. Arabellek taşmalarının açıkça kaçınılması gerekse de,/GS derlemesi, bu, yanlışlıkla veya kötü amaçlı olarak oluşturulan olası güvenlik açıklarına karşı derinlemesine savunma sağlayan bir örnek sağlar.  
   
  Geçmişte, arabellek aşımları birçok yüksek etki güvenliği güvenlik açığından oluşur. Bir saldırgan, bir arabelleğin sınırlarını aşan kötü amaçlı kod eklenmesine izin veren bir kod güvenlik açığından yararlanıyorsa bir arabellek taşması oluşur. Bu daha sonra, saldırganın kodunun yürütülmesine neden olmak için bir işlevin dönüş adresinin üzerine yazarak kodun yürütüldüğü işlemi bir saldırganın almasına izin verir. Sonuç, ele geçirilen işlemle aynı ayrıcalıklarla rastgele kod yürüten kötü amaçlı koddur.  
   
- Yüksek düzeyde,/GS derleyici bayrağı, yerel dize arabelleklerine sahip bir işlevin dönüş adresini korumak için özel bir güvenlik tanımlama bilgisinin ekleme tarafından bazı olası arabellek taşmalarına karşı koruma sağlar. Bir işlev döndüğünde, güvenlik tanımlama bilgisi önceki değeriyle karşılaştırılır. Değer değiştirildiyse, bir arabellek taşması oluşmuş olabilir ve işlem bir hata durumuyla durdurulur. İşlem durdurulduğunda kötü amaçlı olabilecek kodun yürütülmesi önlenir. Daha fazla bilgi için bkz. [/GS (arabellek güvenlik denetimi)](/cpp/build/reference/gs-buffer-security-check) .  
+ Yüksek düzeyde,-GS derleyici bayrağı, yerel dize arabelleklerine sahip bir işlevin dönüş adresini korumak için özel bir güvenlik tanımlama bilgisinin ekleme tarafından bazı olası arabellek taşmalarına karşı koruma sağlar. Bir işlev döndüğünde, güvenlik tanımlama bilgisi önceki değeriyle karşılaştırılır. Değer değiştirildiyse, bir arabellek taşması oluşmuş olabilir ve işlem bir hata durumuyla durdurulur. İşlem durdurulduğunda kötü amaçlı olabilecek kodun yürütülmesi önlenir. Daha fazla ayrıntı için bkz. [-GS (arabellek güvenlik denetimi)](/cpp/build/reference/gs-buffer-security-check) .  
   
- [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)], [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] uygulamalara başka bir savunma katmanı eklemek için/GS bayrağıyla derlenir.  
+ [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)], [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] uygulamalarına yönelik başka bir savunma katmanı eklemek için/GS bayrağıyla derlenir.  
   
 #### <a name="microsoft-windows-update-enhancements"></a>Microsoft Windows Update geliştirmeleri  
- [!INCLUDE[TLA#tla_win_update](../../../includes/tlasharptla-win-update-md.md)], güncelleştirmeleri indirme ve [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)] yükleme işlemini basitleştirmek için ' de geliştirilmiştir. Bu değişiklikler, özellikle güvenlik güncelleştirmeleriyle [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] ilgili olarak, sistemlerinin güncel olduğundan emin olmaya yardımcı olarak müşteriler için güvenliği önemli ölçüde geliştirir.  
+ [!INCLUDE[TLA#tla_win_update](../../../includes/tlasharptla-win-update-md.md)], güncelleştirmeleri indirme ve yükleme işlemini basitleştirmek için [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)] de geliştirilmiştir. Bu değişiklikler, sistemlerinin güncel olduğundan ve özellikle güvenlik güncelleştirmeleriyle ilgili olduğundan emin olmaya yardımcı olarak [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] müşterileri için güvenliği önemli ölçüde geliştirir.  
   
 <a name="Windows_Vista"></a>   
 ### <a name="windows-vista"></a>Windows Vista  
@@ -75,9 +75,9 @@ Windows Vista 'daki WPF kullanıcıları, "en az ayrıcalıklı kullanıcı eri�
   
 <a name="Limited_Rights_Process_for_Browser_Hosted_Applications"></a>   
 ### <a name="limited-rights-process-for-browser-hosted-applications"></a>Tarayıcıda barındırılan uygulamalar için sınırlı haklar süreci  
- Tarayıcıda barındırılan [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] uygulamalar Internet bölgesi korumalı alanı içinde yürütülür. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]Microsoft Internet Explorer ile tümleştirme, bu korumayı ek destek ile genişletir.  
+ Tarayıcıda barındırılan [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] uygulamalar Internet bölgesi korumalı alanı içinde yürütülür. Microsoft Internet Explorer ile [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] tümleştirme, bu korumayı ek destek ile genişletir.  
   
- Internet [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../includes/tlasharptla-winfxwebappsharpplural-md.md)] bölgesi izin kümesi tarafından genellikle korumalı olduğundan, bu ayrıcalıkların kaldırılması uyumluluk perspektifinden zarar [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../includes/tlasharptla-winfxwebappsharpplural-md.md)] vermez. Bunun yerine, ek bir derinlemesine savunma katmanı oluşturulur; korumalı bir uygulama diğer katmanlardan yararlanabilebiliyor ve süreci hijak, işlem hala yalnızca sınırlı ayrıcalıklara sahip olur.  
+ @No__t_0, Internet bölgesi izin kümesi tarafından genellikle korumalı olduğundan, bu ayrıcalıkların kaldırılması bir uyumluluk perspektifinden [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../includes/tlasharptla-winfxwebappsharpplural-md.md)] zarar vermez. Bunun yerine, ek bir derinlemesine savunma katmanı oluşturulur; korumalı bir uygulama diğer katmanlardan yararlanabilebiliyor ve süreci hijak, işlem hala yalnızca sınırlı ayrıcalıklara sahip olur.  
   
  Bkz. [en az ayrıcalıklı kullanıcı hesabı kullanma](https://docs.microsoft.com/previous-versions/tn-archive/cc700846%28v=technet.10%29).  
   
@@ -101,13 +101,13 @@ Windows Vista 'daki WPF kullanıcıları, "en az ayrıcalıklı kullanıcı eri�
   
  Güvenilen kod kabul edilmediği takdirde, doğrulama kurallarına uymayan yönetilen kodun yürütülmesine izin verilmez.  
   
- Doğrulanabilir kod avantajı, .NET Framework derlemelerin neden [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] olduğunu önemli bir nedendir. Doğrulanabilir kodun kullanıldığı ölçüde, olası güvenlik açıklarını kötüye bir şekilde düşürme olasılığı büyük ölçüde azalır.  
+ Doğrulanabilir kodun avantajı, .NET Framework [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] neden derlemelerin önemli bir nedenidir. Doğrulanabilir kodun kullanıldığı ölçüde, olası güvenlik açıklarını kötüye bir şekilde düşürme olasılığı büyük ölçüde azalır.  
   
 <a name="Code_Access_Security"></a>   
 ### <a name="code-access-security"></a>Kod Erişimi Güvenliği  
- Bir istemci makinesi, yönetilen bir uygulamanın, dosya sistemi, kayıt defteri, yazdırma hizmetleri, Kullanıcı arabirimi, yansıma ve ortam değişkenleri dahil olmak üzere erişebileceği çok çeşitli kaynaklar sunar. Yönetilen bir uygulama, bir istemci makinedeki herhangi bir kaynağa erişebilmeye başlamadan önce, .NET Framework iznine sahip olmalıdır. CAS 'deki bir izin, <xref:System.Security.CodeAccessPermission>öğesinin bir alt sınıfıdır; CAS, yönetilen uygulamaların erişebileceği her kaynak için bir alt sınıf uygular.  
+ Bir istemci makinesi, yönetilen bir uygulamanın, dosya sistemi, kayıt defteri, yazdırma hizmetleri, Kullanıcı arabirimi, yansıma ve ortam değişkenleri dahil olmak üzere erişebileceği çok çeşitli kaynaklar sunar. Yönetilen bir uygulama, bir istemci makinedeki herhangi bir kaynağa erişebilmeye başlamadan önce, .NET Framework iznine sahip olmalıdır. CA 'larda izin, <xref:System.Security.CodeAccessPermission> bir alt sınıfıdır; CAS, yönetilen uygulamaların erişebileceği her kaynak için bir alt sınıf uygular.  
   
- Yönetilen bir uygulamanın,, yürütülmeye başladığı zaman CA 'LAR tarafından verilen izinler kümesi, izin kümesi olarak bilinir ve uygulama tarafından sağlanan kanıt tarafından belirlenir. Uygulamalar [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] için, belirtilen kanıt, uygulamaların başlatıldığı konum veya bölgedir. CAS aşağıdaki bölgeleri tanımlar:  
+ Yönetilen bir uygulamanın,, yürütülmeye başladığı zaman CA 'LAR tarafından verilen izinler kümesi, izin kümesi olarak bilinir ve uygulama tarafından sağlanan kanıt tarafından belirlenir. @No__t_0 uygulamalar için, belirtilen kanıt, uygulamaların başlatıldığı konum veya bölgedir. CAS aşağıdaki bölgeleri tanımlar:  
   
 - **Bilgisayarım**. İstemci makineden başlatılan uygulamalar (tamamen güvenilir).  
   
@@ -133,14 +133,14 @@ Windows Vista 'daki WPF kullanıcıları, "en az ayrıcalıklı kullanıcı eri�
   
  ![CAS izin kümelerini gösteren diyagram.](./media/wpf-security-strategy-platform-security/code-access-security-permissions-relationship.png)  
   
- Internet bölgesi güvenlik sanal alanının kısıtlamaları, bir XBAP 'nin bir sistem kitaplığından içeri aktardığı tüm koda eşit olarak uygulanır (dahil [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]). Bu, kodun her bitini de [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]kilitli olarak sağlar. Ne yazık ki, yürütebilmek için, bir XBAP 'nin Internet bölgesi güvenlik korumalı alanı tarafından etkinleştirilenden daha fazla izin gerektiren işlevselliği yürütmesi gerekir.  
+ Internet bölgesi güvenlik sanal alanının kısıtlamaları, bir XBAP 'nin [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] dahil bir sistem kitaplığından içeri aktardığı herhangi bir koda eşit olarak uygulanır. Bu, kodun her bitini de [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)], hatta, hatta bir şekilde kilitlenmesini sağlar. Ne yazık ki, yürütebilmek için, bir XBAP 'nin Internet bölgesi güvenlik korumalı alanı tarafından etkinleştirilenden daha fazla izin gerektiren işlevselliği yürütmesi gerekir.  
   
  Aşağıdaki sayfayı içeren bir XBAP uygulaması düşünün:  
   
  [!code-csharp[WPFPlatformSecuritySnippets#Permission](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFPlatformSecuritySnippets/CSharp/Page1.xaml.cs#permission)]
  [!code-vb[WPFPlatformSecuritySnippets#Permission](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFPlatformSecuritySnippets/VisualBasic/Page1.xaml.vb#permission)]  
   
- Bu XBAP 'yi yürütmek için, temel [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] alınan kodun çağıran XBAP tarafından kullanılabilir olandan daha fazla işlevsellik yürütmesi gerekir, örneğin:  
+ Bu XBAP 'yi yürütmek için, temeldeki [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] kodun, çağıran XBAP tarafından kullanılabilir olandan daha fazla işlevsellik yürütmesi gerekir, örneğin:  
   
 - İşleme için pencere tutamacı (HWND) oluşturma  
   
@@ -150,36 +150,36 @@ Windows Vista 'daki WPF kullanıcıları, "en az ayrıcalıklı kullanıcı eri�
   
  Bir güvenlik noktasından, korumalı uygulamadan bu işlemlerden herhangi birine doğrudan erişim verilmesi çok zararlı olabilir.  
   
- Neyse ki [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] , bu işlemlerin korumalı bir uygulama adına yükseltilmiş ayrıcalıklarla yürütülmesine izin vererek bu duruma karşı koruma sağlar. Tüm [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] işlemler, XBAP 'nin uygulama etki alanının sınırlı Internet bölgesi güvenlik izinlerine (diğer sistem kitaplıklarında olduğu gibi) [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] karşı denetlenirken, olası tüm izinleri içeren bir izin kümesi verilir.
+ Neyse ki, bu işlemlerin korumalı bir uygulama adına yükseltilmiş ayrıcalıklarla yürütülmesine izin vererek bu duruma [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]. Tüm [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] işlemler, XBAP 'nin uygulama etki alanının sınırlı Internet bölgesi güvenlik izinlerine göre denetlenirken, [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] (diğer sistem kitaplıklarında olduğu gibi) tüm olası izinleri içeren bir izin kümesi verilir.
   
- Bunun yapılması, [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] Bu ayrıcalıkların konak uygulama etki alanının Internet bölgesi izin kümesi tarafından yönetilmesini engelleyen yükseltilmiş ayrıcalıklar almasını gerektirir.  
+ Bu, [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)], bu ayrıcalıkların konak uygulama etki alanının Internet bölgesi izin kümesi tarafından yönetilmesini engellerken yükseltilmiş ayrıcalıklar almasını gerektirir.  
   
- [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]Bunu, bir iznin **onaylama** yöntemini kullanarak yapar. Aşağıdaki kod bunun nasıl gerçekleştiğini gösterir.  
+ [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)], bunu bir iznin **onaylama** yöntemini kullanarak yapar. Aşağıdaki kod bunun nasıl gerçekleştiğini gösterir.  
   
  [!code-csharp[WPFPlatformSecuritySnippets#Permission](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFPlatformSecuritySnippets/CSharp/Page1.xaml.cs#permission)]
  [!code-vb[WPFPlatformSecuritySnippets#Permission](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFPlatformSecuritySnippets/VisualBasic/Page1.xaml.vb#permission)]  
   
- Bu onay aslında, XBAP 'nin Internet bölgesi izinleriyle [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] sınırlandırılmalarını gerektiren sınırsız izinleri önler.  
+ Onay **aslında [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]** için gereken sınırsız IZINLERI, XBAP 'nin Internet bölgesi izinleriyle kısıtlanmasını engeller.  
   
- Bir platform perspektifinden doğru onay [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] kullanmaktan sorumludur; bir **onaylama** yanlış kullanımı, kötü amaçlı kodun ayrıcalıkların yükseltilmesini sağlar. Sonuç olarak, yalnızca gerektiğinde onay çağrısı yapmak ve korumalı alan kısıtlamalarının bozulmadan kalmasını sağlamak önemlidir. Örneğin, korumalı kodun rastgele dosyaları açmasına izin verilmez, ancak yazı tiplerini kullanmasına izin verilir. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]korumalı uygulamaların, **onayı**çağırarak yazı tipi işlevselliğini kullanmasına ve [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] bu yazı tiplerini korumalı uygulama adına içerdiği bilinen dosyaları okumasına olanak sağlar.  
+ Bir platform perspektifinden [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] **, doğru onay** kullanmaktan sorumludur; Hatalı bir **onaylama** kullanımı, kötü amaçlı kodun ayrıcalıkların yükseltilmesini sağlayabilir. Sonuç olarak, **yalnızca gerektiğinde onay çağrısı yapmak** ve korumalı alan kısıtlamalarının bozulmadan kalmasını sağlamak önemlidir. Örneğin, korumalı kodun rastgele dosyaları açmasına izin verilmez, ancak yazı tiplerini kullanmasına izin verilir. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] **, korumalı**uygulamaların onay çağrısı yaparak yazı tipi işlevselliğini kullanmasını ve bu yazı tiplerini korumalı uygulama adına içerdiği bilinen dosyaları okumasına [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] için sağlar.  
   
 <a name="ClickOnce_Deployment"></a>   
 ### <a name="clickonce-deployment"></a>ClickOnce dağıtımı  
- ClickOnce, .NET Framework ile birlikte sunulan kapsamlı bir dağıtım teknolojisidir ve ile [!INCLUDE[TLA#tla_visualstu](../../../includes/tlasharptla-visualstu-md.md)] tümleştirilir (ayrıntılı bilgi için bkz. [ClickOnce Security and Deployment](/visualstudio/deployment/clickonce-security-and-deployment) ). Tek [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] başına uygulamalar ClickOnce kullanılarak dağıtılabilir, ancak tarayıcıda barındırılan uygulamalar ClickOnce ile dağıtılmalıdır.  
+ ClickOnce, .NET Framework ile birlikte sunulan kapsamlı bir dağıtım teknolojisidir ve [!INCLUDE[TLA#tla_visualstu](../../../includes/tlasharptla-visualstu-md.md)] tümleştirilir (ayrıntılı bilgi için bkz. [ClickOnce Security and Deployment](/visualstudio/deployment/clickonce-security-and-deployment) ). Tek başına [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] uygulamalar ClickOnce kullanılarak dağıtılabilir, ancak tarayıcıda barındırılan uygulamalar ClickOnce ile dağıtılmalıdır.  
   
  ClickOnce kullanılarak dağıtılan uygulamalara, kod erişim güvenliği (CAS) üzerinden ek bir güvenlik katmanı verilir; Temelde, ClickOnce tarafından dağıtılan uygulamalar gereksinim duydukları izinleri ister. Yalnızca uygulamanın dağıtıldığı bölge için izin kümesini aşmazsa, bu izinlere izin verilir. İzin kümesini, başlatma bölgesinin izin kümesi tarafından sağlananlardan daha az olsalar bile yalnızca gerekli olanlarla azaltarak, uygulamanın erişimi olan kaynak sayısı en az bir değer olacak şekilde azaltılır. Sonuç olarak, uygulama ele geçirilmiş ise, istemci makinesine zarar verme olasılığı azalır.  
   
 <a name="Security_Critical_Methodology"></a>   
 ### <a name="security-critical-methodology"></a>Güvenlik açısından kritik metodolojisi  
- XBAP [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] uygulamaları için Internet bölgesi korumalı alanını etkinleştirmek üzere izinleri kullanan kod, mümkün olan en yüksek güvenlik denetim ve denetim derecesine sahip olmalıdır. Bu gereksinimi kolaylaştırmak için .NET Framework, ayrıcalıkları destekleyen kodu yönetmek için yeni destek sağlar. CLR, ayrıcalıkları destekleyen kodu tanımlamanızı ve ile <xref:System.Security.SecurityCriticalAttribute>işaretlemenizi sağlar; <xref:System.Security.SecurityCriticalAttribute> işaretli olmayan herhangi bir kod bu metodolojisi kullanılarak *saydam* hale gelir. Buna karşılık, ile <xref:System.Security.SecurityCriticalAttribute> işaretlenmemiş yönetilen kodun ayrıcalık yükseltme işlemi engellenir.  
+ XBAP uygulamaları için Internet bölgesi korumalı alanını etkinleştirmek üzere izinleri kullanan [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] kodu, en yüksek düzeyde güvenlik denetimi ve denetimi için tutulmalıdır. Bu gereksinimi kolaylaştırmak için .NET Framework, ayrıcalıkları destekleyen kodu yönetmek için yeni destek sağlar. CLR, ayrıcalıkları yükseltir ve <xref:System.Security.SecurityCriticalAttribute> ile işaretleyecek kodu tanımlamanızı sağlar. <xref:System.Security.SecurityCriticalAttribute> ile işaretlenmemiş herhangi bir kod bu metodolojide *saydam* hale gelir. Buna karşılık, <xref:System.Security.SecurityCriticalAttribute> işaretli olmayan yönetilen kodun ayrıcalık yükseltme işlemi engellenir.  
   
- Güvenlik açısından kritik metodolojisi, ayrıcalıkları bir [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] *güvenlik açısından kritik çekirdeğe*yükseltir ve kalanı saydam olacak şekilde sağlar. Güvenlik açısından kritik kodu yalıtmak, [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] mühendislik ekibinin, yukarıdaki güvenlik açısından kritik çekirdekte ve standart güvenlik uygulamalarının ötesinde ek bir güvenlik Analizi ve kaynak denetimi odağa izin vermez (bkz. [WPF güvenlik stratejisi-güvenlik Mühendislik](wpf-security-strategy-security-engineering.md)).  
+ Güvenlik açısından kritik metodolojisi, ayrıcalıkları bir *güvenlik açısından kritik çekirdeğe*yükseltir ve geri kalan saydam olan [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] kodu kuruluşunun sağlar. Güvenlik açısından kritik kodu yalıtmak, [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] mühendislik ekibinin yukarıdaki güvenlik açısından kritik çekirdekte ve standart güvenlik uygulamalarının ötesinde ek bir güvenlik Analizi ve kaynak denetimi odağa izin vermez (bkz. [WPF güvenlik stratejisi-güvenlik Mühendislik](wpf-security-strategy-security-engineering.md)).  
   
- .NET Framework, geliştiricilerin (aptca) ile <xref:System.Security.AllowPartiallyTrustedCallersAttribute> işaretlenmiş ve kullanıcının genel derleme önbelleği 'ne (GAC) dağıtılan yönetilen derlemeler yazmasına izin vererek, güvenilen kodun XBAP Internet bölgesi sanal alanını genişletmesine izin verdiğini unutmayın. Derlemeyi APTCA ile işaretlemek, Internet 'ten gelen kötü amaçlı kod dahil olmak üzere herhangi bir kodun bu derlemeyi çağırmasını olanaklı olduğundan, yüksek oranda duyarlı bir güvenlik işlemidir. Bu işlem sırasında çok dikkatli ve en iyi uygulamalar kullanılmalıdır ve kullanıcıların yüklenebilmesi için bu yazılıma güvenmeyi seçmesi gerekir.  
+ .NET Framework, geliştiricilerin <xref:System.Security.AllowPartiallyTrustedCallersAttribute> (APTCA) ile işaretlenmiş ve kullanıcının genel derleme önbelleği 'ne (GAC) dağıtılan yönetilen derlemeler yazmasına izin vererek, güvenilen kodun XBAP Internet bölgesi sanal alanını genişlemesine izin verdiğini unutmayın. Derlemeyi APTCA ile işaretlemek, Internet 'ten gelen kötü amaçlı kod dahil olmak üzere herhangi bir kodun bu derlemeyi çağırmasını olanaklı olduğundan, yüksek oranda duyarlı bir güvenlik işlemidir. Bu işlem sırasında çok dikkatli ve en iyi uygulamalar kullanılmalıdır ve kullanıcıların yüklenebilmesi için bu yazılıma güvenmeyi seçmesi gerekir.  
   
 <a name="Microsoft_Internet_Explorer_Security"></a>   
 ## <a name="microsoft-internet-explorer-security"></a>Microsoft Internet Explorer güvenliği  
- Güvenlik sorunlarını azaltmaya ve güvenlik yapılandırmasını basitleştirmeye karşı, Microsoft Internet Explorer 6 (SP2), kullanıcılarının [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../includes/tlasharptla-winfxwebappsharpplural-md.md)]güvenliğini artıran güvenlik geliştirmelerinden oluşan çeşitli özellikler içerir. Bu özelliklerin bu özellikleri, kullanıcıların gözatma deneyimi üzerinde daha fazla denetime izin vermeyi dener.  
+ Güvenlik sorunlarını azalttıktan ve güvenlik yapılandırmasını basitleştirerek, Microsoft Internet Explorer 6 (SP2) [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../includes/tlasharptla-winfxwebappsharpplural-md.md)] kullanıcıları için güvenliği geliştiren çeşitli özellikler içerir. Bu özelliklerin bu özellikleri, kullanıcıların gözatma deneyimi üzerinde daha fazla denetime izin vermeyi dener.  
   
  IE6 SP2 'den önce, kullanıcılar aşağıdakilerden birine tabi olabilir:  
   
@@ -189,19 +189,19 @@ Windows Vista 'daki WPF kullanıcıları, "en az ayrıcalıklı kullanıcı eri�
   
 - Bazı web sitelerinde çok sayıda güvenlik iletişim kutusu.  
   
- Bazı durumlarda, güvenilir olmayan Web siteleri, Kullanıcı bunu iptal etmiş olsa bile yüklemeyi [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] yanıltma veya bir Microsoft ActiveX yükleme iletişim kutusunu yeniden göstererek kullanıcıları aldatmaya çalışır. Bu teknikleri kullanarak, casus yazılım uygulamalarının yüklenmesiyle sonuçlanan kötü kararlar almaya çok sayıda kullanıcı daha karmaşık bir şekilde ele alınmış olabilir.  
+ Bazı durumlarda, güvenilir olmayan Web siteleri, Kullanıcı tarafından iptal edilmiş olsa bile yükleme [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] veya bir Microsoft ActiveX yükleme iletişim kutusunu sürekli olarak görüntüleyerek kullanıcıları aldatmaya çalışır. Bu teknikleri kullanarak, casus yazılım uygulamalarının yüklenmesiyle sonuçlanan kötü kararlar almaya çok sayıda kullanıcı daha karmaşık bir şekilde ele alınmış olabilir.  
   
  IE6 SP2, bu tür sorunları hafifletmek için Kullanıcı başlatma kavramını kapsayan çeşitli özellikler içerir. IE6 SP2, bir Kullanıcı *başlatma*olarak bilinen bir eylemden önce bir bağlantı veya sayfa öğesine tıkladığını algılar ve bir sayfada betik tarafından bunun yerine benzer bir eylem olduğu gibi davranır. Örnek olarak, ıE6 SP2 bir kullanıcının açılır pencere oluşturmadan önce bir düğmeye tıkladığını algılayan bir **açılır pencere engelleyicisi** içerir. Bu, ıE6 SP2'NIN çoğu zararsız açılır pencerelere izin vermesini sağlar, ancak kullanıcıların veya istediği açılan pencereleri önler. Engellenen açılır pencereler, kullanıcının engellemeyi el ile geçersiz kılmasını ve açılır pencereyi görüntülemesini sağlayan yeni **bilgi çubuğu**altında yakalanmalıdır.  
   
- Aynı Kullanıcı başlatma mantığı Ayrıca, güvenlik**kaydetme** komut istemlerini **Aç**/' a uygulanır. Daha önce yüklenmiş bir denetimden bir yükseltmeyi temsil etmediği takdirde, ActiveX yükleme iletişim kutuları her zaman bilgi çubuğu altına kaydedilir. Bu ölçümler kullanıcılara daha güvenli, daha denetimli bir kullanıcı deneyimi sağlamak için birleşerek, istenmeyen veya kötü amaçlı yazılım yüklemeleri için bunları tacler eden sitelere karşı koruma sağlar.  
+ Aynı Kullanıcı başlatma mantığı Ayrıca **açmak** / güvenlik istemlerini**Kaydet** ' e de uygulanır. Daha önce yüklenmiş bir denetimden bir yükseltmeyi temsil etmediği takdirde, ActiveX yükleme iletişim kutuları her zaman bilgi çubuğu altına kaydedilir. Bu ölçümler kullanıcılara daha güvenli, daha denetimli bir kullanıcı deneyimi sağlamak için birleşerek, istenmeyen veya kötü amaçlı yazılım yüklemeleri için bunları tacler eden sitelere karşı koruma sağlar.  
   
- Bu özellikler, IE6 SP2 kullanan müşterileri, uygulamaların indirilmesine ve yüklenmesine [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] izin veren Web sitelerine gözatmaya da karşı korur. Bunun nedeni, bu, ıE6 SP2'NIN, bu sürümü oluşturmak [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]için kullanılan teknolojiden bağımsız olarak kötü amaçlı veya bağımsız uygulamalar yükleyebilme olasılığını azaltan daha iyi bir kullanıcı deneyimi sunmasıdır. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)], uygulamalarını Internet üzerinden indirmeyi kolaylaştırmak için ClickOnce kullanarak bu korumaların sonuna ekler. Internet bölgesi güvenlik korumalı alanı içinde yürütülebildiğinden,sorunsuzbirşekildebaşlatılabilir.[!INCLUDE[TLA#tla_winfxwebapp#plural](../../../includes/tlasharptla-winfxwebappsharpplural-md.md)] Öte yandan, tek başına [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] uygulamalar yürütmek için tam güven gerektirir. Bu uygulamalar için, ClickOnce, uygulamanın ek güvenlik gereksinimlerinin kullanımını bildirmek üzere başlatma işlemi sırasında bir güvenlik iletişim kutusu görüntüler. Ancak, bu kullanıcı tarafından başlatılmış olması gerekir ve Kullanıcı tarafından başlatılan mantığa göre yönetilir ve iptal edilebilir.  
+ Bu özellikler ayrıca, ıE6 SP2 kullanan müşterileri, [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] uygulamaları indirip yüklemelerine izin veren Web sitelerine gözatmaya karşı korur. Bunun nedeni, en çok, bu,, [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] de dahil olmak üzere hangi teknolojinin kullanıldığı bağımsız olarak, kullanıcıların kötü amaçlı veya en yüksek uygulamaları yükleyebilme olasılığını azaltan daha iyi bir kullanıcı deneyimi sunmasıdır. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)], uygulamalarını Internet üzerinden indirmeyi kolaylaştırmak için ClickOnce kullanarak bu korumaların sonuna ekler. @No__t_0 Internet bölgesi güvenlik korumalı alanı içinde yürütülebildiğinden, sorunsuz bir şekilde başlatılabilir. Öte yandan, tek başına [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] uygulamalar yürütmek için tam güven gerektirir. Bu uygulamalar için, ClickOnce, uygulamanın ek güvenlik gereksinimlerinin kullanımını bildirmek üzere başlatma işlemi sırasında bir güvenlik iletişim kutusu görüntüler. Ancak, bu kullanıcı tarafından başlatılmış olması gerekir ve Kullanıcı tarafından başlatılan mantığa göre yönetilir ve iptal edilebilir.  
   
  Internet Explorer 7, güvenlik çabalarının bir parçası olarak ıE6 SP2'NIN güvenlik yeteneklerini içerir ve genişletir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Kod erişim güvenliği](../misc/code-access-security.md)
-- [Güvenlik](security-wpf.md)
+- [Security](security-wpf.md)
 - [WPF Kısmi Güven Güvenliği](wpf-partial-trust-security.md)
 - [WPF Güvenlik Stratejisi - Güvenlik Mühendisliği](wpf-security-strategy-security-engineering.md)

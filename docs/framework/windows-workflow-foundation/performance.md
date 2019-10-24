@@ -3,20 +3,20 @@ title: Windows Workflow Foundation 4 Performansı
 ms.date: 03/30/2017
 ms.assetid: 67d2b3e8-3777-49f8-9084-abbb33b5a766
 ms.openlocfilehash: c656d1e23c7314cfd7b772faef842296d03e4af1
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2019
+ms.lasthandoff: 10/22/2019
 ms.locfileid: "70989578"
 ---
 # <a name="windows-workflow-foundation-4-performance"></a>Windows Workflow Foundation 4 Performansı
 
- Microsoft [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] , ağır yatırımlarla Windows Workflow Foundation (WF) büyük bir düzeltmesini içerir.  Bu yeni düzeltme, 3,0 ve [!INCLUDE[wf1](../../../includes/wf1-md.md)] [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)].NET Framework bir parçası olarak sevk edilen önceki sürümlerinden önemli tasarım değişiklikleri sunmaktadır. Performansı ve kullanılabilirliği önemli ölçüde artırmak için programlama modeli, çalışma zamanı ve araç 'nın çekirdeğinizden yeniden tasarlanmıştır. Bu konu, bu düzeltmelerin önemli performans özelliklerini gösterir ve bunları önceki sürüme göre karşılaştırır.
+ Microsoft [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)], performansta ağır yatırımlarla Windows Workflow Foundation (WF) büyük bir düzeltmesini içerir.  Bu yeni düzeltme, .NET Framework 3,0 ve [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] bir parçası olarak gönderilen [!INCLUDE[wf1](../../../includes/wf1-md.md)] önceki sürümlerinden önemli tasarım değişiklikleri sunmaktadır. Performansı ve kullanılabilirliği önemli ölçüde artırmak için programlama modeli, çalışma zamanı ve araç 'nın çekirdeğinizden yeniden tasarlanmıştır. Bu konu, bu düzeltmelerin önemli performans özelliklerini gösterir ve bunları önceki sürüme göre karşılaştırır.
 
  Bireysel iş akışı bileşeni performansı, WF3 ve WF4 arasındaki büyüklük üzerinden artmıştır.  Bu, el kodlu Windows Communication Foundation (WCF) Hizmetleri ve WCF iş akışı hizmetleri arasındaki boşluğu çok küçük olarak bırakır.  WF4 ' de iş akışı gecikmesi önemli ölçüde azaltılmıştır.  Kalıcılık performansı 2,5-3,0 faktörüyle artmıştır.  İş akışı izlemenin sistem durumu izlemenin önemli ölçüde daha az yükü vardır.  Bunlar, uygulamalarınızda WF4 'e geçiş yapmak veya benimsemek için etkileyici nedenlerdir.
 
 ## <a name="terminology"></a>Terminoloji
- [!INCLUDE[wf1](../../../includes/wf1-md.md)] İçinde[!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] tanıtılan sürümü, bu konunun geri kalanı için WF4 olarak adlandırılır.  [!INCLUDE[wf1](../../../includes/wf1-md.md)], .NET 3,0 ' de kullanıma sunulmuştur ve SP1 aracılığıyla [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] birkaç küçük düzeltmelere sahipti. Bu konunun geri kalanı için Workflow Foundation sürümüWF3olarakadlandırılacaktır.[!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] WF3, WF4 ile [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] yan yana gönderilir. WF3 yapıtları WF4 'e geçirme hakkında daha fazla bilgi için bkz.: [Windows Workflow Foundation 4 geçiş kılavuzu](https://go.microsoft.com/fwlink/?LinkID=153313)
+ @No__t_1 tanıtılan [!INCLUDE[wf1](../../../includes/wf1-md.md)] sürümü bu konunun geri kalanı için WF4 olarak adlandırılır.  [!INCLUDE[wf1](../../../includes/wf1-md.md)] .NET 3,0 ' de kullanıma sunulmuştur ve [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] SP1 aracılığıyla bazı küçük düzeltmelerinizi içeriyordu. Workflow Foundation 'ın [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] sürümü bu konunun geri kalanı için WF3 olarak adlandırılacaktır. WF3, WF4 ile yan yana [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] gönderilir. WF3 yapıtları WF4 'e geçirme hakkında daha fazla bilgi için bkz. [Windows Workflow Foundation 4 geçiş kılavuzu](https://go.microsoft.com/fwlink/?LinkID=153313)
 
  Windows Communication Foundation (WCF), Microsoft 'un hizmet odaklı uygulamalar oluşturmaya yönelik Birleşik programlama modelidir. İlk olarak, WF3 ile birlikte .NET 3,0 'nin bir parçası olarak sunulmuştur ve artık .NET Framework temel bileşenlerinden biridir.
 
@@ -29,32 +29,32 @@ ms.locfileid: "70989578"
  WF4 dikkatle tasarlanmıştı ve aşağıdaki bölümlerde açıklanan yüksek performans ve ölçeklenebilirlik ile uygulandı.
 
 ### <a name="wf-runtime"></a>WF çalışma zamanı
- [!INCLUDE[wf1](../../../includes/wf1-md.md)] Çalışma zamanının çekirdeği, bir iş akışındaki etkinliklerin yürütülmesini yönlendiren zaman uyumsuz bir Zamanlayıcı olur. Etkinlikler için performansı tahmin edilebilir bir yürütme ortamı sağlar. Ortamda yürütme, devamlılık, tamamlama, iptal etme, özel durumlar ve öngörülebilir bir iş parçacığı modeli için iyi tanımlanmış bir sözleşme vardır.
+ @No__t_0 çalışma zamanının çekirdeği, bir iş akışındaki etkinliklerin yürütülmesini yönlendiren zaman uyumsuz bir Zamanlayıcı olur. Etkinlikler için performansı tahmin edilebilir bir yürütme ortamı sağlar. Ortamda yürütme, devamlılık, tamamlama, iptal etme, özel durumlar ve öngörülebilir bir iş parçacığı modeli için iyi tanımlanmış bir sözleşme vardır.
 
  WF3 ile karşılaştırıldığında, WF4 çalışma zamanının daha verimli bir Zamanlayıcı vardır. Toplu iş öğelerini yürütmek için çok verimli olan WCF için kullanılan aynı g/ç iş parçacığı havuzundan yararlanır. İç iş öğesi Zamanlayıcı kuyruğu, yaygın kullanım desenlerinin çoğunda en iyi duruma getirilmiştir. WF4 çalışma zamanı, yürütme durumlarını minimum eşitleme ve olay işleme mantığı ile çok hafif bir şekilde yönetir, WF3, durum geçişleri için karmaşık eşitleme gerçekleştirmek üzere ağır olay kaydına ve çağrıya bağlıdır.
 
 ### <a name="data-storage-and-flow"></a>Veri depolama ve akış
- WF3 ' de, bir etkinlikle ilişkili veriler, tür <xref:System.Windows.DependencyProperty>tarafından uygulanan bağımlılık özellikleri aracılığıyla modellenir. Bağımlılık özelliği deseninin Windows Presentation Foundation (WPF) tanıtılmıştı. Genel olarak, bu model kolay veri bağlamayı ve diğer kullanıcı arabirimi özelliklerini desteklemek için çok esnektir. Ancak, model, özelliklerin iş akışı tanımında statik alanlar olarak tanımlanmasını gerektirir. Çalışma zamanı [!INCLUDE[wf1](../../../includes/wf1-md.md)] , özellik değerlerini ayarlarken veya aldığında, yoğun olarak ağırlıklı arama mantığını içerir.
+ WF3 ' de, bir etkinlikle ilişkili veriler <xref:System.Windows.DependencyProperty> türü tarafından uygulanan bağımlılık özellikleri aracılığıyla modellenir. Bağımlılık özelliği deseninin Windows Presentation Foundation (WPF) tanıtılmıştı. Genel olarak, bu model kolay veri bağlamayı ve diğer kullanıcı arabirimi özelliklerini desteklemek için çok esnektir. Ancak, model, özelliklerin iş akışı tanımında statik alanlar olarak tanımlanmasını gerektirir. @No__t_0 Runtime Özellik değerlerini ayarlarken veya aldığında, yoğun olarak ağırlıklı arama mantığını içerir.
 
  WF4, verilerin bir iş akışında işlenme biçimini büyük ölçüde geliştirmek için net veri kapsamı mantığı kullanır. İki farklı kavram kullanılarak etkinlik sınırları genelinde akan verilerden bir etkinlikte depolanan verileri ayırır: değişkenler ve bağımsız değişkenler. Değişkenler ve "ın/out/Inout" bağımsız değişkenleri için açık bir hiyerarşik kapsam kullanarak, etkinliklere yönelik veri kullanımı karmaşıklığı önemli ölçüde azalır ve verilerin yaşam süresi de otomatik olarak kapsamlandırılır. Etkinliklerin bağımsız değişkenleri tarafından tanımlanan iyi tanımlanmış bir imzası vardır. Yalnızca bir etkinliği inceleyerek, hangi verilerin almak istediğinizi ve yürütme sonucu olarak hangi verilerin üretileceği belirlenir.
 
  Bir iş akışı oluşturulduğunda WF3 etkinliklerde başlatılmıştı. WF 4 etkinliklerinde yalnızca ilgili etkinlikler çalıştırıldığında başlatılır. Bu, yeni bir iş akışı örneği oluşturulduğunda Initialize/Uninitialize işlemleri yapılmadan daha basit bir etkinlik yaşam döngüsünü sağlar ve bu nedenle daha fazla verimlilik elde edilir
 
 ### <a name="control-flow"></a>Denetim Akışı
- Herhangi bir programlama dilinde olduğu gibi, [!INCLUDE[wf1](../../../includes/wf1-md.md)] sıralama, döngü, dallandırma ve diğer desenlere yönelik bir dizi denetim akışı etkinliği sunarak iş akışı tanımlarının denetim akışları için destek sağlar. WF3 ' de, aynı etkinliğin yeniden yürütülmesi gerektiğinde, yeni <xref:System.Workflow.ComponentModel.ActivityExecutionContext> bir oluşturulur ve etkinlik, temel alınarak <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>ağır bir serileştirme ve seri durumdan çıkarma mantığı aracılığıyla klonlanır. Genellikle yinelemeli denetim akışlarının performansı, bir dizi etkinliği yürütmeden çok daha yavaştır.
+ Her türlü programlama dilinde olduğu gibi [!INCLUDE[wf1](../../../includes/wf1-md.md)], sıralama, döngü, dallandırma ve diğer desenlere yönelik bir dizi denetim akışı sunarak iş akışı tanımlarının denetim akışları için destek sağlar. WF3 ' de, aynı etkinliğin yeniden yürütülmesi gerektiğinde yeni bir <xref:System.Workflow.ComponentModel.ActivityExecutionContext> oluşturulur ve etkinlik <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> göre ağır bir serileştirme ve seri durumdan çıkarma mantığı aracılığıyla kopyalanır. Genellikle yinelemeli denetim akışlarının performansı, bir dizi etkinliği yürütmeden çok daha yavaştır.
 
  WF4 bu oldukça farklı bir şekilde işler. Etkinlik şablonunu alır, yeni bir ActivityInstance nesnesi oluşturur ve Zamanlayıcı kuyruğuna ekler. Bu bütün işlem yalnızca açık nesne oluşturma içerir ve çok hafif.
 
 ### <a name="asynchronous-programming"></a>Zaman Uyumsuz Programlama
- Uygulamalar genellikle g/ç veya dağıtılmış bilgi işlem işlemleri gibi uzun süre çalışan engelleme işlemleri için zaman uyumsuz programlama ile daha iyi performans ve ölçeklenebilirlik sahibi olur. WF4, <xref:System.Activities.AsyncCodeActivity> <xref:System.Activities.AsyncCodeActivity%601>temel etkinlik türleri aracılığıyla zaman uyumsuz destek sağlar. Çalışma zamanı zaman uyumsuz etkinlikleri yerel olarak anlamıştır ve bu nedenle, zaman uyumsuz çalışma devam ederken örneği kalıcı olmayan bir bölgeye otomatik olarak yerleştirebilir. Özel Etkinlikler, iş akışı Zamanlayıcı iş parçacığını tutmadan zaman uyumsuz çalışma gerçekleştirmek ve paralel çalışabilecek etkinlikleri engellemek için bu türlerden türetilebilir.
+ Uygulamalar genellikle g/ç veya dağıtılmış bilgi işlem işlemleri gibi uzun süre çalışan engelleme işlemleri için zaman uyumsuz programlama ile daha iyi performans ve ölçeklenebilirlik sahibi olur. WF4, <xref:System.Activities.AsyncCodeActivity> <xref:System.Activities.AsyncCodeActivity%601> temel etkinlik türleri aracılığıyla zaman uyumsuz destek sağlar. Çalışma zamanı zaman uyumsuz etkinlikleri yerel olarak anlamıştır ve bu nedenle, zaman uyumsuz çalışma devam ederken örneği kalıcı olmayan bir bölgeye otomatik olarak yerleştirebilir. Özel Etkinlikler, iş akışı Zamanlayıcı iş parçacığını tutmadan zaman uyumsuz çalışma gerçekleştirmek ve paralel çalışabilecek etkinlikleri engellemek için bu türlerden türetilebilir.
 
 ### <a name="messaging"></a>İleti
- Başlangıçta WF3, dış olaylar veya Web Hizmetleri etkinleştirmeleri aracılığıyla çok sınırlı mesajlaşma desteğine sahipti. .NET 3,5 ' de, iş akışları WCF istemcileri olarak uygulanabilir veya <xref:System.Workflow.Activities.SendActivity> ve <xref:System.Workflow.Activities.ReceiveActivity>ile WCF hizmeti olarak kullanıma sunulabilir. WF4 ' de, iş akışı tabanlı mesajlaşma programlama kavramı, WCF mesajlaşma mantığının WF ile sıkı bir şekilde tümleştirilmesine daha da güçleşti.
+ Başlangıçta WF3, dış olaylar veya Web Hizmetleri etkinleştirmeleri aracılığıyla çok sınırlı mesajlaşma desteğine sahipti. .NET 3,5 ' de, iş akışları WCF istemcileri olarak uygulanabilir veya <xref:System.Workflow.Activities.SendActivity> ve <xref:System.Workflow.Activities.ReceiveActivity> aracılığıyla WCF Hizmetleri olarak kullanıma sunulabilir. WF4 ' de, iş akışı tabanlı mesajlaşma programlama kavramı, WCF mesajlaşma mantığının WF ile sıkı bir şekilde tümleştirilmesine daha da güçleşti.
 
- .NET 4 ' te WCF 'de sunulan Birleşik ileti işleme işlem hattı, WF4 Services 'ın WF3 'den önemli ölçüde daha iyi performans ve ölçeklenebilirlik sağlanmasına yardımcı olur. WF4, karmaşık Ileti değişim düzenlerini (MEPs) modelleyebilir daha zengin mesajlaşma programlama desteği de sağlar. Geliştiriciler, serileştirme maliyetlerini ödemeksizin daha iyi performans elde etmek için kolayca programlama veya türsüz hizmet sözleşmeleri elde etmek üzere türü belirlenmiş hizmet sözleşmelerini kullanabilir. WF4 içindeki <xref:System.ServiceModel.Activities.SendMessageChannelCache> sınıfı aracılığıyla istemci tarafı kanal önbelleğe alma desteği, geliştiricilerin en düşük çabayla hızlı uygulamalar oluşturmasına yardımcı olur. Daha fazla bilgi için bkz. [gönderme etkinlikleri Için önbellek paylaşımı düzeylerini değiştirme](../wcf/feature-details/changing-the-cache-sharing-levels-for-send-activities.md).
+ .NET 4 ' te WCF 'de sunulan Birleşik ileti işleme işlem hattı, WF4 Services 'ın WF3 'den önemli ölçüde daha iyi performans ve ölçeklenebilirlik sağlanmasına yardımcı olur. WF4, karmaşık Ileti değişim düzenlerini (MEPs) modelleyebilir daha zengin mesajlaşma programlama desteği de sağlar. Geliştiriciler, serileştirme maliyetlerini ödemeksizin daha iyi performans elde etmek için kolayca programlama veya türsüz hizmet sözleşmeleri elde etmek üzere türü belirlenmiş hizmet sözleşmelerini kullanabilir. WF4 ' deki <xref:System.ServiceModel.Activities.SendMessageChannelCache> sınıfı aracılığıyla istemci tarafı kanal önbelleğe alma desteği, geliştiricilerin en düşük çabayla hızlı uygulamalar oluşturmasına yardımcı olur. Daha fazla bilgi için bkz. [gönderme etkinlikleri Için önbellek paylaşımı düzeylerini değiştirme](../wcf/feature-details/changing-the-cache-sharing-levels-for-send-activities.md).
 
 ### <a name="declarative-programming"></a>Bildirim temelli programlama
- WF4, iş süreçlerini ve hizmetlerini modellemek için temiz ve basit bir bildirim temelli programlama çerçevesi sağlar. Programlama modeli, kod olmadan, iş akışı yazmayı büyük ölçüde basitleştirecek şekilde etkinliklerin tam bildirime dayalı olarak birleşimini destekler. ' [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]De, XAML tabanlı bildirim temelli programlama çerçevesi, hem WPF hem de WF 'yi desteklemek için tek derleme System. xaml. dll ' ye birleştirilmiştir.
+ WF4, iş süreçlerini ve hizmetlerini modellemek için temiz ve basit bir bildirim temelli programlama çerçevesi sağlar. Programlama modeli, kod olmadan, iş akışı yazmayı büyük ölçüde basitleştirecek şekilde etkinliklerin tam bildirime dayalı olarak birleşimini destekler. @No__t_0, XAML tabanlı bildirim temelli programlama çerçevesi, hem WPF hem de WF 'yi desteklemek için tek derleme System. xaml. dll ' ye birleştirilmiştir.
 
  WF4 ' de, XAML gerçekten bildirime dayalı bir deneyim sağlar ve iş akışının tamamının tanımının, .NET kullanılarak oluşturulan etkinliklere ve türlere başvuran XML biçimlendirmesinde tanımlanmasını sağlar. Bu, WF3 ' de özel arka plan kod mantığı olmadan XOML biçimiyle yapılması zordur. .NET 4 ' teki yeni XAML yığını, iş akışı yapıtlarını serileştirmek/seri durumdan çıkarmak ve bildirim temelli programlamayı daha çekici ve düz hale getirir.
 
@@ -62,15 +62,15 @@ ms.locfileid: "70989578"
  WF4 için tam bildirime dayalı programlama desteği, büyük iş akışları için tasarım süresi performansına yönelik daha yüksek gereksinimleri açıkça uygular. WF4 ' deki Iş akışı Tasarımcısı, büyük iş akışları için WF3 için çok daha fazla ölçeklenebilirlik içerir. UI Sanallaştırması desteğiyle, tasarımcı büyük bir 1000 etkinlik iş akışını birkaç saniye içinde kolayca yükleyebilir, ancak WF3 Designer ile birkaç yüz etkinliğin iş akışını yüklemek neredeyse olanaksızdır.
 
 ## <a name="component-level-performance-comparisons"></a>Bileşen düzeyinde performans karşılaştırmaları
- Bu bölüm, WF3 ve WF4 iş akışlarında bağımsız etkinlikler arasındaki doğrudan karşılaştırmalar hakkında veri içerir.  Kalıcılık gibi önemli alanların performans üzerinde, bireysel etkinlik bileşenlerinden daha fazla etkisi vardır.  Bileşenler artık el ile kodlanmış düzenleme mantığına kıyasla yeterince hızlı olduğundan, WF4 içindeki tek tek bileşenlerin performans iyileştirmeleri önemlidir.  Bir sonraki bölümde ele alınan bir örnek: "Hizmet bileşim senaryosu."
+ Bu bölüm, WF3 ve WF4 iş akışlarında bağımsız etkinlikler arasındaki doğrudan karşılaştırmalar hakkında veri içerir.  Kalıcılık gibi önemli alanların performans üzerinde, bireysel etkinlik bileşenlerinden daha fazla etkisi vardır.  Bileşenler artık el ile kodlanmış düzenleme mantığına kıyasla yeterince hızlı olduğundan, WF4 içindeki tek tek bileşenlerin performans iyileştirmeleri önemlidir.  Bir sonraki bölümde ele alınan bir örnek: "hizmet oluşturma senaryosu".
 
 ### <a name="environment-setup"></a>Ortam kurulumu
  ![İş akışı performans ölçümü için ortam kurulumu](./media/performance/performance-test-environment.gif)
 
- Yukarıdaki şekil, bileşen düzeyinde performans ölçümü için kullanılan makine yapılandırmasını gösterir. Tek bir sunucu ve 1 GB/sn 'lik Ethernet ağ arabirimine bağlanmış beş istemci. Kolay ölçümler için sunucu, Windows Server 2008 x86 çalıştıran bir çift proc/dört çekirdekli sunucunun tek bir çekirdeğini kullanacak şekilde yapılandırılmıştır. Sistem CPU kullanımı yaklaşık% 100 ' de korunur.
+ Yukarıdaki şekil, bileşen düzeyinde performans ölçümü için kullanılan makine yapılandırmasını gösterir. Tek bir sunucu ve 1 GB/sn 'lik Ethernet ağ arabirimine bağlanmış beş istemci. Kolay ölçümler için sunucu, Windows Server 2008 x86 çalıştıran bir çift proc/dört çekirdekli sunucunun tek bir çekirdeğini kullanacak şekilde yapılandırılmıştır. Sistem CPU kullanımı yaklaşık %100 ' de korunur.
 
 ### <a name="test-details"></a>Test ayrıntıları
- WF3 <xref:System.Workflow.Activities.CodeActivity> , büyük olasılıkla bir WF3 iş akışında kullanılabilen en basit etkinliktir.  Etkinlik, iş akışı Programlayıcısının özel kod koyabileceğiniz arka plan kod içinde bir yöntemi çağırır.  WF4 ' de, aynı işlevselliği sağlayan, WF3 <xref:System.Workflow.Activities.CodeActivity> 'ye doğrudan analog yoktur.  WF4 içinde WF3 <xref:System.Workflow.Activities.CodeActivity>ile ilişkili <xref:System.Activities.CodeActivity> olmayan bir temel sınıf olduğunu unutmayın.  İş akışı yazarlarının özel etkinlikler oluşturması ve yalnızca XAML iş akışları oluşturması önerilir.  Aşağıdaki sınamalarda, çağrılan `Comment` bir etkinlik WF4 iş akışlarında boş <xref:System.Workflow.Activities.CodeActivity> bir yerde kullanılır.  `Comment` Etkinlikteki kod şu şekildedir:
+ WF3 <xref:System.Workflow.Activities.CodeActivity>, büyük olasılıkla bir WF3 iş akışında kullanılabilen en basit etkinliktir.  Etkinlik, iş akışı Programlayıcısının özel kod koyabileceğiniz arka plan kod içinde bir yöntemi çağırır.  WF4 ' de, aynı işlevselliği sağlayan WF3 <xref:System.Workflow.Activities.CodeActivity> doğrudan analog yoktur.  WF4 içinde WF3 <xref:System.Workflow.Activities.CodeActivity> ilgili olmayan <xref:System.Activities.CodeActivity> bir temel sınıf olduğunu unutmayın.  İş akışı yazarlarının özel etkinlikler oluşturması ve yalnızca XAML iş akışları oluşturması önerilir.  Aşağıdaki sınamalarda, `Comment` adlı bir etkinlik WF4 iş akışlarında boş bir <xref:System.Workflow.Activities.CodeActivity> yerine kullanılır.  @No__t_0 etkinliğinde kod aşağıdaki gibidir:
 
 ```csharp
 [ContentProperty("Body")]
@@ -98,13 +98,13 @@ ms.locfileid: "70989578"
  Bu test, alt etkinlikleri olmayan bir sıra iş akışı kullanır.
 
 ### <a name="single-activity"></a>Tek etkinlik
- İş akışı, bir alt etkinlik içeren bir sıra iş akışıdır.  Etkinlik, WF3 durumunda <xref:System.Workflow.Activities.CodeActivity> kod bulunmayan `Comment` ve WF4 durumunda bir etkinliğin bulunduğu bir etkinliktir.
+ İş akışı, bir alt etkinlik içeren bir sıra iş akışıdır.  Etkinlik, WF3 durumunda kod bulunmayan ve WF4 durumunda bir `Comment` etkinliği olan bir <xref:System.Workflow.Activities.CodeActivity>.
 
 ### <a name="while-with-1000-iterations"></a>1000 yinelemeyle birlikte
- Sıralı iş akışı, döngüde <xref:System.Activities.Statements.While> hiçbir iş gerçekleştirmediğinden bir alt etkinliği olan bir etkinlik içeriyor.
+ Sıralı iş akışı, döngüde herhangi bir iş gerçekleştirmediğinden bir alt etkinliği olan bir <xref:System.Activities.Statements.While> etkinlik içeriyor.
 
 ### <a name="replicator-compared-to-parallelforeach"></a>Çoğaltıcı ParallelForEach ile karşılaştırılır
- <xref:System.Workflow.Activities.ReplicatorActivity>WF3 ' de sıralı ve paralel yürütme modları vardır.  Sıralı modda, etkinliğin performansı ile <xref:System.Workflow.Activities.WhileActivity>benzerdir.  , <xref:System.Workflow.Activities.ReplicatorActivity> Paralel yürütme için en yararlı seçenektir.  Bunun için WF4 analog bu <xref:System.Activities.Statements.ParallelForEach%601> etkinliktir.
+ WF3 içinde <xref:System.Workflow.Activities.ReplicatorActivity> sıralı ve paralel yürütme modlarına sahiptir.  Sıralı modda, etkinliğin performansı <xref:System.Workflow.Activities.WhileActivity> benzerdir.  @No__t_0, paralel yürütme için en yararlı seçenektir.  Bunun için WF4 analog, <xref:System.Activities.Statements.ParallelForEach%601> etkinliğidir.
 
  Aşağıdaki diyagramda, bu test için kullanılan iş akışları gösterilmektedir. WF3 iş akışı solda ve WF4 iş akışı sağda.
 
@@ -114,10 +114,10 @@ ms.locfileid: "70989578"
  Bu test, birkaç etkinliğin sırayla yürütülme etkisini göstermek için tasarlanmıştır.  Dizide beş etkinlik vardır.
 
 ### <a name="transaction-scope"></a>İşlem kapsamı
- İşlem kapsamı testi, her yineleme için yeni bir iş akışı örneğinin oluşturulmatığından farklı testlerden farklılık gösterir.  Bunun yerine, iş akışı, hiçbir iş gerektirmeyen tek bir etkinlik <xref:System.Activities.Statements.TransactionScope> içeren bir while döngüsü ile yapılandırılır.  While döngüsü aracılığıyla 50 yinelemeden oluşan her çalıştırma tek bir işlem olarak sayılır.
+ İşlem kapsamı testi, her yineleme için yeni bir iş akışı örneğinin oluşturulmatığından farklı testlerden farklılık gösterir.  Bunun yerine, iş akışı, hiçbir iş gerektirmeyen tek bir etkinlik içeren <xref:System.Activities.Statements.TransactionScope> bir etkinlik içeren bir while döngüsü ile yapılandırılır.  While döngüsü aracılığıyla 50 yinelemeden oluşan her çalıştırma tek bir işlem olarak sayılır.
 
 ### <a name="compensation"></a>Dengeleme
- WF3 iş akışında adlı `WorkScope`tek bir dengeleme etkinliği vardır.  Etkinlik yalnızca <xref:System.Workflow.ComponentModel.ICompensatableActivity> arabirimini uygular:
+ WF3 iş akışında `WorkScope` adlı tek bir dengeleme etkinliği vardır.  Etkinlik yalnızca <xref:System.Workflow.ComponentModel.ICompensatableActivity> arabirimini uygular:
 
 ```csharp
 class WorkScope :
@@ -138,7 +138,7 @@ class WorkScope :
     }
 ```
 
- Hata işleyicisi `WorkScope` etkinliği hedefliyor. WF4 iş akışı eşit uyarlaması.  <xref:System.Activities.Statements.CompensableActivity> , Bir gövdeye ve bir dengeleme işleyicisine sahiptir.  Sıranın yanında açık bir telafi vardır.  Gövde etkinliği ve dengeleme işleyicisi etkinliği hem boş uygulamalardır:
+ Hata işleyicisi `WorkScope` etkinliğini hedefliyor. WF4 iş akışı eşit uyarlaması.  Bir <xref:System.Activities.Statements.CompensableActivity> gövdeye ve bir dengeleme işleyicisine sahiptir.  Sıranın yanında açık bir telafi vardır.  Gövde etkinliği ve dengeleme işleyicisi etkinliği hem boş uygulamalardır:
 
 ```csharp
 public sealed class CompensableActivityEmptyCompensation : CodeActivity
@@ -171,25 +171,25 @@ Aşağıdaki diyagramda temel Dengeleme iş akışı gösterilmektedir. WF3 iş 
 
  ![WF3 ve WF4 performans testi verilerini karşılaştıran sütun grafiği](./media/performance/performance-test-chart.gif)
 
- Tüm testler, işlem kapsamı testinin özel durumu ile saniye başına iş akışlarında ölçülür.  Yukarıda görünebildiğinden, [!INCLUDE[wf1](../../../includes/wf1-md.md)] çalışma zamanı performansı Pano genelinde geliştirilmiştir, özellikle de while döngüsü gibi aynı etkinliğin birden çok yürütmesi gerektiren alanlardır.
+ Tüm testler, işlem kapsamı testinin özel durumu ile saniye başına iş akışlarında ölçülür.  Yukarıda görünebildiğinden, [!INCLUDE[wf1](../../../includes/wf1-md.md)] çalışma zamanı performansı Pano genelinde, özellikle de while döngüsü gibi aynı etkinliğin birden çok yürütmesi gerektiren alanlarda geliştirilmiştir.
 
 ## <a name="service-composition-scenario"></a>Hizmet bileşim senaryosu
- Önceki bölümde gösterildiği gibi, "bileşen düzeyinde performans karşılaştırmaları", WF3 ve WF4 arasındaki ek yükün önemli bir azalmasıyla karşılaşıldı.  WCF iş akışı hizmetleri artık el ile kodlanmış WCF hizmetlerinin performansını neredeyse eşleştirebilir ancak [!INCLUDE[wf1](../../../includes/wf1-md.md)] çalışma zamanının tüm avantajlarına sahip olmaya devam edebilir.  Bu test senaryosu, bir WCF hizmetini WF4 içindeki bir WCF iş akışı hizmetiyle karşılaştırır.
+ Önceki bölümde gösterildiği gibi, "bileşen düzeyinde performans karşılaştırmaları", WF3 ve WF4 arasındaki ek yükün önemli bir azalmasıyla karşılaşıldı.  WCF iş akışı hizmetleri artık el ile kodlanmış WCF hizmetlerinin performansını neredeyse eşleştirebilir, ancak [!INCLUDE[wf1](../../../includes/wf1-md.md)] çalışma zamanının tüm avantajlarına sahip olmaya devam edebilir.  Bu test senaryosu, bir WCF hizmetini WF4 içindeki bir WCF iş akışı hizmetiyle karşılaştırır.
 
 ### <a name="online-store-service"></a>Çevrimiçi mağaza hizmeti
  Windows Workflow Foundation güçlerinden biri, birkaç hizmeti kullanarak işlem oluşturma olanağıdır.  Bu örnek için, sipariş satın almak üzere iki hizmet çağrısı düzenleyen bir çevrimiçi mağaza hizmeti vardır.  İlk adım, siparişi doğrulama hizmeti kullanarak sıralamayı doğrulamaktır.  İkinci adım siparişi bir ambar hizmeti kullanarak dolduramadık.
 
- İki arka uç hizmeti, hizmet ve ambar hizmetini doğrulayan sipariş, her iki test için de aynı kalır.  Değişen bölüm, düzenleme işlemini gerçekleştiren çevrimiçi mağaza hizmetidir.  Tek bir durumda, hizmet bir WCF hizmeti olarak el ile kodlanır.  Diğer bir durumda, hizmet WF4 içinde bir WCF iş akışı hizmeti olarak yazılır. [!INCLUDE[wf1](../../../includes/wf1-md.md)]Bu test için izleme ve kalıcılık gibi belirli özellikler kapalıdır.
+ İki arka uç hizmeti, hizmet ve ambar hizmetini doğrulayan sipariş, her iki test için de aynı kalır.  Değişen bölüm, düzenleme işlemini gerçekleştiren çevrimiçi mağaza hizmetidir.  Tek bir durumda, hizmet bir WCF hizmeti olarak el ile kodlanır.  Diğer bir durumda, hizmet WF4 içinde bir WCF iş akışı hizmeti olarak yazılır. Bu test için izleme ve kalıcılık gibi [!INCLUDE[wf1](../../../includes/wf1-md.md)] özel özellikler kapalıdır.
 
 ### <a name="environment"></a>Ortam
 ![Performans ölçümü için ortam kurulumu](./media/performance/performance-test-environment.gif)
 
- İstemci istekleri, birden fazla bilgisayardan HTTP aracılığıyla çevrimiçi mağaza hizmetine yapılır.  Tek bir bilgisayar, üç hizmeti de barındırır.  Çevrimiçi mağaza hizmeti ve arka uç hizmetleri arasındaki aktarım katmanı TCP veya HTTP 'dir.  İşlem/saniye ölçümü, çevrimiçi mağaza hizmetine yapılan tamamlanan `PurchaseOrder` çağrıların sayısını temel alır.  Kanal havuzu oluşturma, WF4 içinde sunulan yeni bir özelliktir.  Bu test kanalı havuzsının WCF bölümünde, çevrimiçi depolama hizmetinde basit bir havuzlama tekniğinden oluşan, el kodlu bir uygulama kullanıldığından, bu test kanalı havuzunun WCF bölümünde değil.
+ İstemci istekleri, birden fazla bilgisayardan HTTP aracılığıyla çevrimiçi mağaza hizmetine yapılır.  Tek bir bilgisayar, üç hizmeti de barındırır.  Çevrimiçi mağaza hizmeti ve arka uç hizmetleri arasındaki aktarım katmanı TCP veya HTTP 'dir.  İşlem/saniye ölçümü, çevrimiçi mağaza hizmetine yapılan tamamlanan `PurchaseOrder` çağrılarının sayısını temel alır.  Kanal havuzu oluşturma, WF4 içinde sunulan yeni bir özelliktir.  Bu test kanalı havuzsının WCF bölümünde, çevrimiçi depolama hizmetinde basit bir havuzlama tekniğinden oluşan, el kodlu bir uygulama kullanıldığından, bu test kanalı havuzunun WCF bölümünde değil.
 
 ### <a name="performance"></a>Performans
 ![Çevrimiçi mağaza Hizmeti performansını gösteren sütun grafiği](./media/performance/online-store-performance-graph.gif)
 
- Kanal havuzu oluşturma olmadan arka uç TCP hizmetleri 'ne bağlanma [!INCLUDE[wf1](../../../includes/wf1-md.md)] , hizmet verimlilik üzerinde% 17,2 etkiye sahiptir.  Kanal havuzu oluşturma ile ceza% 23,8 ' dır.  HTTP için etki çok daha küçüktür: Havuz oluşturma ve% 8,1% 4,3.  Kanal havuzunun HTTP kullanırken çok az avantaj sağladığını aklınızda bulundurmamak da önemlidir.
+ Kanal havuzu oluşturma olmadan arka uç TCP hizmetleri 'ne bağlantı kurma [!INCLUDE[wf1](../../../includes/wf1-md.md)] hizmeti, verimlilik üzerinde% 17,2 etkiye sahiptir.  Kanal havuzu oluşturma ile ceza% 23,8 ' dır.  HTTP için etki çok daha küçüktür: havuz olmadan% 4,3, Havuzlama ile% 8,1.  Kanal havuzunun HTTP kullanırken çok az avantaj sağladığını aklınızda bulundurmamak da önemlidir.
 
  WF4 çalışma zamanından, bu testte el kodlu bir WCF hizmetiyle karşılaştırıldığında ek yük olsa da, en kötü durum senaryosu kabul edilebilir.  Bu testteki iki arka uç hizmeti çok az çalışır.  Gerçek uçtan uca bir senaryoda, bu hizmetler veritabanı çağrıları gibi daha pahalı işlemler gerçekleştirmeye ve aktarım katmanının performans etkisini daha az önemli hale getirir.  Bu, WF4 ' de kullanılabilen özelliklerin avantajları, Workflow Foundation 'ın Orchestration hizmetleri oluşturmak için uygun bir seçim olmasını sağlar.
 
@@ -209,7 +209,7 @@ Aşağıdaki diyagramda temel Dengeleme iş akışı gösterilmektedir. WF3 iş 
 
  ![WF4 bağıntı kapsamı iş akışı](./media/performance/wf4-correlationscope-workflow.gif)
 
- <xref:System.ServiceModel.Activities.Receive> Etkinlik, iş akışı örneğini oluşturur.  Alınan iletiye geçirilen bir değer, yanıt iletisinde yankılanır.  Yanıtınızı izleyen bir sıra, iş akışının geri kalanını içerir.  Yukarıdaki örnekte yalnızca bir açıklama etkinliği gösterilir.  Açıklama etkinliklerinin sayısı, iş akışı karmaşıklığının benzetimini yapmak için değiştirilir.  Açıklama etkinliği, hiçbir iş gerçekleştirmeyen bir WF3 <xref:System.Workflow.Activities.CodeActivity> eşdeğerdir. Açıklama etkinliği hakkında daha fazla bilgi için, bu makalenin önceki kısımlarında bulunan "bileşen düzeyi performans karşılaştırması" bölümüne bakın.
+ @No__t_0 etkinliği iş akışı örneğini oluşturur.  Alınan iletiye geçirilen bir değer, yanıt iletisinde yankılanır.  Yanıtınızı izleyen bir sıra, iş akışının geri kalanını içerir.  Yukarıdaki örnekte yalnızca bir açıklama etkinliği gösterilir.  Açıklama etkinliklerinin sayısı, iş akışı karmaşıklığının benzetimini yapmak için değiştirilir.  Açıklama etkinliği, hiçbir iş gerçekleştirmeyen bir WF3 <xref:System.Workflow.Activities.CodeActivity> eşdeğerdir. Açıklama etkinliği hakkında daha fazla bilgi için, bu makalenin önceki kısımlarında bulunan "bileşen düzeyi performans karşılaştırması" bölümüne bakın.
 
 ##### <a name="test-results"></a>Test Sonuçları
 
@@ -217,7 +217,7 @@ Aşağıdaki diyagramda temel Dengeleme iş akışı gösterilmektedir. WF3 iş 
 
  ![WF3 ve WF4 kullanarak WCF iş akışı hizmetleri için soğuk ve ısınma gecikmesini gösteren sütun grafiği](./media/performance/latency-results-graph.gif)
 
- Önceki grafikte, soğuk, belirtilen iş akışı için mevcut <xref:System.ServiceModel.WorkflowServiceHost> olmayan bir durum anlamına gelir.  Diğer bir deyişle, soğuk gecikme süresi, iş akışının ilk kez kullanıldığı, XOML veya XAML 'in derlenmesi gerektiğinde olur.  Isınma gecikmesi, iş akışı türü zaten derlenmişse yeni bir iş akışı örneği oluşturmak için zaman.  İş akışının karmaşıklığı WF4 büyük/küçük bir süre içinde çok az farklılık yapar ancak WF3 durumunda doğrusal bir ilerleme içerir.
+ Önceki grafikte, soğuk, belirtilen iş akışı için mevcut bir <xref:System.ServiceModel.WorkflowServiceHost> olmadığı durum anlamına gelir.  Diğer bir deyişle, soğuk gecikme süresi, iş akışının ilk kez kullanıldığı, XOML veya XAML 'in derlenmesi gerektiğinde olur.  Isınma gecikmesi, iş akışı türü zaten derlenmişse yeni bir iş akışı örneği oluşturmak için zaman.  İş akışının karmaşıklığı WF4 büyük/küçük bir süre içinde çok az farklılık yapar ancak WF3 durumunda doğrusal bir ilerleme içerir.
 
 #### <a name="correlation-throughput"></a>Bağıntı Işleme
  WF4, içerik tabanlı yeni bir bağıntı özelliği sunar.  WF3 yalnızca bağlam tabanlı bağıntı sağladı.  Bağlam tabanlı bağıntı yalnızca belirli WCF kanal bağlamaları üzerinden yapılabilir.  Bu bağlamalar kullanılırken iş akışı kimliği ileti üstbilgisine eklenir.  WF3 çalışma zamanı bir iş akışını yalnızca kimliğine göre tanımlayabilir.  İçerik tabanlı bağıntı sayesinde, iş akışı yazarı, bir hesap numarası veya müşteri kimliği gibi ilgili veri parçalarından bir bağıntı anahtarı oluşturabilir.
@@ -233,7 +233,7 @@ Aşağıdaki diyagramda temel Dengeleme iş akışı gösterilmektedir. WF3 iş 
  Önceki iş akışı, [Kalıcılık](#persistence) bölümünde kullanılan bir bölümdür. Kalıcı olmayan bağıntı testleri için, çalışma zamanında yüklü bir kalıcılık sağlayıcısı yoktur. Bağıntı iki yerde gerçekleşir: CreateOrder ve CompleteOrder.
 
 #### <a name="test-results"></a>Test Sonuçları
-![Bağıntı işleme](./media/performance/correlation-throughput-graph.gif "Bağıntı üretilen iş grafiği")
+![Bağıntı Işleme](./media/performance/correlation-throughput-graph.gif "Bağıntı üretilen iş grafiği")
 
  Bu grafik, içerik tabanlı korelasyonda kullanılan anahtarların sayısı arttıkça performansın azalışını gösterir.  TCP ve HTTP arasındaki eğrilerde benzerlik, bu protokollerle ilişkili ek yükü gösterir.
 
@@ -248,7 +248,7 @@ Aşağıdaki diyagramda temel Dengeleme iş akışı gösterilmektedir. WF3 iş 
  Bir iş akışının karmaşıklığı yalnızca etkinlik sayısıyla ölçülemez.  Bileşik etkinlikler birçok alt içerebilir ve bu alt öğeler bileşik etkinlik de olabilir.  İç içe geçme seviyelerinin sayısı arttıkça, şu anda yürütme durumunda olabilecek etkinlik sayısı ve durum içinde olabilecek değişkenlerin sayısı vardır.  Bu test, karmaşık iş akışlarını yürütürken WF3 ile WF4 arasındaki aktarım hızını karşılaştırır.
 
 ### <a name="test-setup"></a>Test kurulumu
- Bu sınamalar, Windows Server 2008 x64 çalıştıran 4 GB RAM 'e sahip Intel Xeon X5355 @ 2,66 GHz 4 yönlü bir bilgisayar üzerinde yürütüldü.  Sınama kodu,% 100 CPU kullanımına ulaşmak için çekirdek başına bir iş parçacığı ile tek bir işlemde çalışır.
+ Bu sınamalar, Windows Server 2008 x64 çalıştıran 4 GB RAM 'e sahip Intel Xeon X5355 @ 2,66 GHz 4 yönlü bir bilgisayar üzerinde yürütüldü.  Sınama kodu, %100 CPU kullanımına ulaşmak için çekirdek başına bir iş parçacığı ile tek bir işlemde çalışır.
 
  Bu test için oluşturulan iş akışlarının iki ana değişkeni vardır: her bir dizideki derinlik ve etkinlik sayısı.  Her derinlik düzeyi paralel bir etkinlik, while döngüsü, kararlar, atamalar ve diziler içerir.  Aşağıda bulunan WF4 Tasarımcısı ' nda, üst düzey akış grafiği de görüntülenir.  Her akış çizelgesi etkinliği ana akış çizelgesine benzer.  Bu iş akışını yaparken bir Fractal 'in düşünmek faydalı olabilir. Bu, derinliğin testin parametreleriyle sınırlı olduğu yerdir.
 
@@ -272,7 +272,7 @@ Aşağıdaki diyagramda temel Dengeleme iş akışı gösterilmektedir. WF3 iş 
 
  ![WF3 iş akışının akış çizelgesi parçacığı](./media/performance/wf3-workflow-snippet.gif)
 
- Büyük bir durumda iç içe geçme alıştırması yapmak için, bu testin parçası olan başka bir iş akışı 100 iç içe geçmiş dizileri kullanır.  En içteki dizide tek `Comment` bir veya <xref:System.Workflow.Activities.CodeActivity>olur.
+ Büyük bir durumda iç içe geçme alıştırması yapmak için, bu testin parçası olan başka bir iş akışı 100 iç içe geçmiş dizileri kullanır.  En içteki dizide tek bir `Comment` veya <xref:System.Workflow.Activities.CodeActivity>.
 
  ![İç içe geçmiş sıranın akış çizelgesi](./media/performance/nested-sequence-workflow.gif)
 
@@ -293,20 +293,20 @@ Aşağıdaki diyagramda temel Dengeleme iş akışı gösterilmektedir. WF3 iş 
 
  ![Hem WF3 hem de WF4 için karmaşık iş akışı](./media/performance/complex-workflow-wf3-wf4.gif)
 
- Yukarıda gösterilen WF3 iş akışında boş <xref:System.Workflow.Activities.CodeActivity> etkinlikler kullanılır.  Yukarıdaki WF4 iş akışı etkinlikleri `Comment` kullanır.  `Comment` Etkinlik, bu makalenin önceki kısımlarında yer alarak bileşen düzeyi performans karşılaştırmaları bölümünde açıklanmıştı.
+ Yukarıda gösterilen WF3 iş akışında boş <xref:System.Workflow.Activities.CodeActivity> etkinlikleri kullanılır.  Yukarıdaki WF4 iş akışı `Comment` etkinlikleri kullanır.  @No__t_0 etkinliği, bu makalenin önceki kısımlarında yer alarak bileşen düzeyi performans karşılaştırmaları bölümünde açıklanmıştı.
 
  ![WF3 ve WF4 iş akışları için karmaşık iş akışı bellek kullanımını gösteren sütun grafiği](./media/performance/complex-memory-usage-wf3-wf4.gif)
 
- Bu grafikte dikkat edilecek açık eğilimler, iç içe geçme, hem WF3 hem de WF4 ' de bellek kullanımı üzerinde görece küçük bir etkiye sahiptir.  En önemli bellek etkisi, belirli bir iş akışındaki etkinlik sayısından gelir.  Sıra 1000, karmaşık Derinlik 5 sıra 5 ve karmaşık Derinlik 7 sıra 1 varyasyonlarından veriler verildiğinde, etkinlik sayısı binlerce ' a girdiğinde, bellek kullanımı artışının daha belirgin hale gelir.  Çok büyük bir durumda (Derinlik 7 sıra 1) ~ 29K etkinliği olan WF4, WF3 ' den yaklaşık% 79 daha az bellek kullanıyor.
+ Bu grafikte dikkat edilecek açık eğilimler, iç içe geçme, hem WF3 hem de WF4 ' de bellek kullanımı üzerinde görece küçük bir etkiye sahiptir.  En önemli bellek etkisi, belirli bir iş akışındaki etkinlik sayısından gelir.  Sıra 1000, karmaşık Derinlik 5 sıra 5 ve karmaşık Derinlik 7 sıra 1 varyasyonlarından veriler verildiğinde, etkinlik sayısı binlerce ' a girdiğinde, bellek kullanımı artışının daha belirgin hale gelir.  Çok büyük bir durumda (Derinlik 7 sıra 1) ~ 29K etkinliği olan WF4, WF3 ' den yaklaşık %79 daha az bellek kullanıyor.
 
 ### <a name="multiple-workflow-definitions-test"></a>Birden çok Iş akışı tanımı testi
- WF3 ve WF4 ' de iş akışlarını barındırmak için kullanılabilir seçenekler nedeniyle, iş akışı tanımı başına bellek ölçme, iki farklı teste bölünmüştür.  Testler, belirli bir iş akışının ınstanmiş ve her tanım için yalnızca bir kez yürütüldüğü iş akışı karmaşıklığı testinin farklı bir şekilde çalıştırılır.  Bunun nedeni, iş akışı tanımının ve ana bilgisayarının, AppDomain 'in ömrü boyunca bellekte kalması nedeniyle oluşur.  Belirli bir iş akışı örneği çalıştırılarak kullanılan bellek çöp toplama sırasında temizlenmelidir.  WF4 için geçiş kılavuzu, barındırma seçenekleri hakkında daha ayrıntılı bilgiler içerir. Daha fazla bilgi için bkz [. WF geçişi tanıtım rehberi: İş akışı](https://go.microsoft.com/fwlink/?LinkID=153313)barındırma.
+ WF3 ve WF4 ' de iş akışlarını barındırmak için kullanılabilir seçenekler nedeniyle, iş akışı tanımı başına bellek ölçme, iki farklı teste bölünmüştür.  Testler, belirli bir iş akışının ınstanmiş ve her tanım için yalnızca bir kez yürütüldüğü iş akışı karmaşıklığı testinin farklı bir şekilde çalıştırılır.  Bunun nedeni, iş akışı tanımının ve ana bilgisayarının, AppDomain 'in ömrü boyunca bellekte kalması nedeniyle oluşur.  Belirli bir iş akışı örneği çalıştırılarak kullanılan bellek çöp toplama sırasında temizlenmelidir.  WF4 için geçiş kılavuzu, barındırma seçenekleri hakkında daha ayrıntılı bilgiler içerir. Daha fazla bilgi için bkz. [WF geçişi kılavuz kitabı: Iş akışı barındırma](https://go.microsoft.com/fwlink/?LinkID=153313).
 
- Bir iş akışı tanımı testi için birçok iş akışı tanımı oluşturmak çeşitli yollarla yapılabilir.  Örneğin, biri ad dışında özdeş olan 1000 iş akışı kümesi oluşturmak ve bu iş akışlarının her birini ayrı dosyalara kaydetmek için kod oluşturmayı kullanabilir.  Bu yaklaşım, konsolu tarafından barındırılan test için alınmıştır.  WF3 <xref:System.Workflow.Runtime.WorkflowRuntime> içinde sınıf, iş akışı tanımlarını çalıştırmak için kullanılmıştır.  WF4, tek bir <xref:System.Activities.WorkflowApplication> iş akışı örneği oluşturmak için ya da bir yöntem <xref:System.Activities.WorkflowInvoker> çağrısı gibi etkinliği çalıştırmak için doğrudan kullanabilirsiniz.  <xref:System.Activities.WorkflowApplication>, tek bir iş akışı örneğinin bir ana bilgisayarı ve bu testte kullanılan bu <xref:System.Workflow.Runtime.WorkflowRuntime> şekilde daha yakın özellik eşliği olur.
+ Bir iş akışı tanımı testi için birçok iş akışı tanımı oluşturmak çeşitli yollarla yapılabilir.  Örneğin, biri ad dışında özdeş olan 1000 iş akışı kümesi oluşturmak ve bu iş akışlarının her birini ayrı dosyalara kaydetmek için kod oluşturmayı kullanabilir.  Bu yaklaşım, konsolu tarafından barındırılan test için alınmıştır.  WF3 ' de, iş akışı tanımlarını çalıştırmak için <xref:System.Workflow.Runtime.WorkflowRuntime> sınıfı kullanılmıştır.  WF4, tek bir iş akışı örneği oluşturmak için <xref:System.Activities.WorkflowApplication> kullanabilir ya da etkinliği bir yöntem çağrısı gibi çalıştırmak için doğrudan <xref:System.Activities.WorkflowInvoker> kullanabilir.  <xref:System.Activities.WorkflowApplication>, tek bir iş akışı örneğinin bir ana bilgisayarı ve bu testte kullanılan bu şekilde daha yakın özellik eşliği <xref:System.Workflow.Runtime.WorkflowRuntime>.
 
- IIS 'de iş akışlarını barındırırken, tüm xamlx veya xoml <xref:System.Web.Hosting.VirtualPathProvider> dosyalarını oluşturmak yerine yeni <xref:System.ServiceModel.WorkflowServiceHost> bir oluşturmak için kullanmak mümkündür.  , <xref:System.Web.Hosting.VirtualPathProvider> Gelen isteği işler ve bir veritabanından yüklenebilen veya bu durumda anında oluşturulan bir "sanal dosya" ile yanıt verir.  Bu nedenle 1000 fiziksel dosya oluşturmak gereksizdir.
+ IIS 'de iş akışlarını barındırırken, tüm XAMLX veya XOML dosyalarını oluşturmak yerine yeni bir <xref:System.ServiceModel.WorkflowServiceHost> oluşturmak için bir <xref:System.Web.Hosting.VirtualPathProvider> kullanmak mümkündür.  @No__t_0 gelen isteği işler ve bir veritabanından yüklenebilen veya bu durumda, anında oluşturulan bir "sanal dosya" ile yanıt verir.  Bu nedenle 1000 fiziksel dosya oluşturmak gereksizdir.
 
- Konsol testinde kullanılan iş akışı tanımları, tek bir etkinlik içeren basit sıralı iş akışlarıdır.  Tek etkinlik WF3 Case ve WF4 <xref:System.Workflow.Activities.CodeActivity> Case için bir `Comment` etkinlik için boştu.  IIS ile barındırılan Case, bir ileti almaya başlayan ve yanıt gönderme sırasında biten iş akışlarını kullandı:
+ Konsol testinde kullanılan iş akışı tanımları, tek bir etkinlik içeren basit sıralı iş akışlarıdır.  Tek etkinlik WF3 Case için boş bir <xref:System.Workflow.Activities.CodeActivity> ve WF4 durumu için `Comment` bir etkinlik idi.  IIS ile barındırılan Case, bir ileti almaya başlayan ve yanıt gönderme sırasında biten iş akışlarını kullandı:
 
 Aşağıdaki görüntüde ReceiveActivity ile bir WF3 iş akışı ve istek/yanıt düzenine sahip bir WF4 iş akışı gösterilmektedir:
 
@@ -319,7 +319,7 @@ Aşağıdaki görüntüde ReceiveActivity ile bir WF3 iş akışı ve istek/yan�
 |Konsol uygulaması barındırılan Iş akışları|18 MB|9 MB|
 |IIS barındırılan Iş akışı hizmetleri|446 MB|364 MB|
 
- IIS 'de barındırılan iş akışı tanımları, ayrıntılı WCF hizmet yapıtları <xref:System.ServiceModel.WorkflowServiceHost>ve konakla ilişkili ileti işleme mantığı nedeniyle daha fazla bellek tüketir.
+ IIS 'de barındırılan iş akışı tanımları <xref:System.ServiceModel.WorkflowServiceHost>, ayrıntılı WCF hizmet yapıtları ve konakla ilişkili ileti işleme mantığı nedeniyle daha fazla bellek tüketir.
 
  WF3 içinde konsol barındırma için iş akışları XOML yerine kodda uygulandı.  WF4 içinde varsayılan değer XAML kullanmaktır.  XAML, derleme içinde gömülü bir kaynak olarak depolanır ve iş akışı uygulamasını sağlamak için çalışma zamanı sırasında derlenir.  Bu işlemle ilişkili bazı ek yük vardır.  WF3 ve WF4 arasında bir dengeli karşılaştırma yapmak için XAML yerine kodlanmış iş akışları kullanılmıştır.  WF4 iş akışlarından birine bir örnek aşağıda gösterilmiştir:
 
@@ -348,7 +348,7 @@ public class Workflow1 : Activity
 }
 ```
 
- Bellek tüketimini etkileyebilecek birçok başka etken de vardır. Tüm yönetilen programlar için aynı öneri hala geçerlidir.  IIS 'de barındırılan ortamlarda, <xref:System.ServiceModel.WorkflowServiceHost> bir iş akışı tanımı için oluşturulan nesne, uygulama havuzu geri dönüştürülmeden önce bellekte kalır.  Uzantı yazılırken bunun aklınızda tutulması gerekir.  Ayrıca, "genel" değişkenlerin (tüm iş akışı kapsamındaki değişkenler) ve mümkün olan yerlerde değişkenlerin kapsamını sınırlandırmamak en iyisidir.
+ Bellek tüketimini etkileyebilecek birçok başka etken de vardır. Tüm yönetilen programlar için aynı öneri hala geçerlidir.  IIS 'de barındırılan ortamlarda, bir iş akışı tanımı için oluşturulan <xref:System.ServiceModel.WorkflowServiceHost> nesnesi, uygulama havuzu geri dönüştürülmeden önce bellekte kalır.  Uzantı yazılırken bunun aklınızda tutulması gerekir.  Ayrıca, "genel" değişkenlerin (tüm iş akışı kapsamındaki değişkenler) ve mümkün olan yerlerde değişkenlerin kapsamını sınırlandırmamak en iyisidir.
 
 ## <a name="workflow-runtime-services"></a>İş akışı çalışma zamanı Hizmetleri
 
@@ -365,32 +365,32 @@ public class Workflow1 : Activity
 
  ![WF3 'de kalıcı ve WF4 sağ tarafta Kalıcılık iş akışı](./media/performance/persist-workflow-wf3-wf4.gif)
 
- İki iş akışının ikisi de alınan bir ileti tarafından oluşturulur.  İlk yanıtı gönderdikten sonra iş akışı kalıcıdır.  WF3 durumunda, kalıcılığı başlatmak için boş <xref:System.Workflow.ComponentModel.TransactionScopeActivity> bir değer kullanılır.  Aynı etkinlik, "kapanmak üzere devam ediyor" olarak işaretleyerek WF3 içinde elde edilebilir.  İkinci, bağıntılı bir ileti iş akışını tamamlar.  İş akışları kalıcı, ancak yüklenmemiş.
+ İki iş akışının ikisi de alınan bir ileti tarafından oluşturulur.  İlk yanıtı gönderdikten sonra iş akışı kalıcıdır.  WF3 durumda, kalıcılığı başlatmak için boş bir <xref:System.Workflow.ComponentModel.TransactionScopeActivity> kullanılır.  Aynı etkinlik, "kapanmak üzere devam ediyor" olarak işaretleyerek WF3 içinde elde edilebilir.  İkinci, bağıntılı bir ileti iş akışını tamamlar.  İş akışları kalıcı, ancak yüklenmemiş.
 
 ### <a name="test-results"></a>Test Sonuçları
  ![Verimlilik kalıcılığını gösteren sütun grafiği](./media/performance/throughput-persistence-graph.gif)
 
- İstemci ve orta katman arasındaki aktarım HTTP olduğunda, WF4 ' de Kalıcılık 2,6 sürelerin bir geliştirmesini gösterir.  TCP taşıması bu faktörü 3,0 kez artırır.  Her durumda, orta katmandaki CPU kullanımı% 98 veya daha yüksektir.  WF4 aktarım hızı, daha hızlı iş akışı çalışma zamanının nedenidir.  Serileştirilmiş örnek boyutu her iki durum için de düşüktür ve bu durumda ana katkıda bulunan bir öğe değildir.
+ İstemci ve orta katman arasındaki aktarım HTTP olduğunda, WF4 ' de Kalıcılık 2,6 sürelerin bir geliştirmesini gösterir.  TCP taşıması bu faktörü 3,0 kez artırır.  Her durumda, orta katmandaki CPU kullanımı %98 veya daha yüksektir.  WF4 aktarım hızı, daha hızlı iş akışı çalışma zamanının nedenidir.  Serileştirilmiş örnek boyutu her iki durum için de düşüktür ve bu durumda ana katkıda bulunan bir öğe değildir.
 
- Bu testteki WF3 ve WF4 iş akışlarının her ikisi de kalıcılığın ne zaman gerçekleşmesi gerektiğini açıkça belirtmek için bir etkinlik kullanır.  Bu, iş akışını kaldırmadan kalıcı hale getirme avantajına sahiptir.  WF3 ' de, <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToUnload%2A> özelliği kullanılarak kalıcı hale getirilmesi olasıdır, ancak bu, iş akışı örneğini bellekten kaldırır.  WF3 kullanan bir geliştirici, bir iş akışının belirli noktalarda devam ettiğinden emin olmak istiyorsa, iş akışı tanımını değiştirmeleri veya iş akışı örneğini kaldırma ve yeniden yükleme maliyetini ödemelidir.  WF4 ' deki yeni bir özellik, kaldırma olmadan kalıcı hale getirme olanağı <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToPersist%2A>sağlar:.  Bu özellik, iş akışı örneğinin boşta durumunda kalıcı olmasını sağlar, ancak <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToUnload%2A> eşik karşılanmadığında veya yürütme sürdürülene kadar bellekte kalır.
+ Bu testteki WF3 ve WF4 iş akışlarının her ikisi de kalıcılığın ne zaman gerçekleşmesi gerektiğini açıkça belirtmek için bir etkinlik kullanır.  Bu, iş akışını kaldırmadan kalıcı hale getirme avantajına sahiptir.  WF3 ' de, <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToUnload%2A> özelliğini kullanarak kalıcı hale getirmek de mümkündür, ancak bu, iş akışı örneğini bellekten kaldırır.  WF3 kullanan bir geliştirici, bir iş akışının belirli noktalarda devam ettiğinden emin olmak istiyorsa, iş akışı tanımını değiştirmeleri veya iş akışı örneğini kaldırma ve yeniden yükleme maliyetini ödemelidir.  WF4 ' deki yeni bir özellik, ' ın kaldırılması olmadan kalıcı hale gelmesini olanaklı kılar: <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToPersist%2A>.  Bu özellik iş akışı örneğinin Boştayken kalıcı hale getirilebilmesi için <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToUnload%2A> eşiği karşılanana veya yürütme sürdürülene kadar bellekte kalır.
 
  WF4 SQL kalıcılık sağlayıcısı 'nın veritabanı katmanında daha fazla iş gerçekleştireceğini unutmayın.  SQL veritabanı performans sorunlarına yol açabilir, bu sayede CPU ve disk kullanımını izlemek önemlidir.  Performans testi iş akışı uygulamaları sırasında SQL veritabanından aşağıdaki performans sayaçlarını eklediğinizden emin olun:
 
-- FizikselDisk\\okuma zamanı
+- Fiziksel\\ disk okuma zamanı
 
-- FizikselDisk\\zamanı
+- Fiziksel disk \\% disk zamanı
 
-- FizikselDisk\\yazma zamanı
+- Fiziksel\\ disk yazma zamanı
 
-- Fiziksel\\disk% ort. Disk kuyruğu uzunluğu
+- Fiziksel disk \\% ort. disk kuyruğu uzunluğu
 
-- Fiziksel Disk\Ortalama Disk okuma sırası uzunluğu
+- PhysicalDisk\Avg. disk okuma sırası uzunluğu
 
-- Fiziksel Disk\Ortalama Disk yazma sırası uzunluğu
+- PhysicalDisk\Avg. disk yazma sırası uzunluğu
 
 - Physicaldisk\geçerli disk kuyruğu uzunluğu
 
-- İşlemci bilgileri\\% işlemci zamanı
+- İşlemci bilgileri \\% Işlemci zamanı
 
 - SQLServer: Latches\ortalama mandal bekleme süresi (MS)
 
@@ -430,10 +430,10 @@ public class Workflow1 : Activity
 
  ![İş akışı izleme maliyetlerini gösteren sütun grafiği](./media/performance/workflow-tracking-costs.gif)
 
- Sistem durumu izleme performansı kabaca% 3 oranında etkiler.  Temel profilin maliyeti% 8 ' dir.
+ Sistem durumu izleme performansı kabaca %3 oranında etkiler.  Temel profilin maliyeti %8 ' dir.
 
 ## <a name="interop"></a>Interop
- WF4 neredeyse tamamen yeniden yazın [!INCLUDE[wf1](../../../includes/wf1-md.md)] ve bu nedenle WF3 iş akışları ve etkinlikler doğrudan WF4 ile uyumlu değildir.  Erken Windows Workflow Foundation benimseyen birçok müşteri, şirket içi veya üçüncü taraf iş akışı tanımlarına ve WF3 için özel etkinliklere sahip olacaktır.  WF4 'e geçişi kolaylaştırmak için bir yol, bir WF4 iş akışı içinden WF3 etkinliklerini yürütebilen birlikte çalışma etkinliğini kullanmaktır.  <xref:System.Activities.Statements.Interop> Etkinliğin yalnızca gerektiğinde kullanılması önerilir. WF4 ' ye geçme hakkında daha fazla bilgi için [WF4 geçiş kılavuzunu](https://go.microsoft.com/fwlink/?LinkID=153313)inceleyin.
+ WF4 [!INCLUDE[wf1](../../../includes/wf1-md.md)] neredeyse tamamen yeniden yazın ve bu nedenle WF3 iş akışları ve etkinlikler doğrudan WF4 ile uyumlu değildir.  Erken Windows Workflow Foundation benimseyen birçok müşteri, şirket içi veya üçüncü taraf iş akışı tanımlarına ve WF3 için özel etkinliklere sahip olacaktır.  WF4 'e geçişi kolaylaştırmak için bir yol, bir WF4 iş akışı içinden WF3 etkinliklerini yürütebilen birlikte çalışma etkinliğini kullanmaktır.  @No__t_0 etkinliğinin yalnızca gerektiğinde kullanılması önerilir. WF4 ' ye geçme hakkında daha fazla bilgi için [WF4 geçiş kılavuzunu](https://go.microsoft.com/fwlink/?LinkID=153313)inceleyin.
 
 ### <a name="environment-setup"></a>Ortam kurulumu
  ![İş akışı performans testi için ortam kurulumu](./media/performance/performance-test-environment.gif)
@@ -444,11 +444,11 @@ Aşağıdaki tabloda, çeşitli yapılandırmalarda bir dizide beş etkinlik iç
 
 |Test|Aktarım hızı (iş akışı/sn)|
 |----------|-----------------------------------|
-|WF3 çalışma zamanında WF3 sırası|1,576|
-|WF4 çalışma zamanında Interop kullanarak WF3 sırası|2,745|
-|WF4 sırası|153,582|
+|WF3 çalışma zamanında WF3 sırası|1\.576|
+|WF4 çalışma zamanında Interop kullanarak WF3 sırası|2\.745|
+|WF4 sırası|153.582|
 
  Düz WF3 ile birlikte çalışabilirliğine yönelik bir önemli performans artışı vardır.  Ancak, WF4 etkinlikleriyle karşılaştırıldığında artış göz ardı edilir.
 
 ## <a name="summary"></a>Özet
- WF4 için performans açısından ağır yatırımlar, birçok önemli alanda ödenmiştir.  Tek bir iş akışı bileşeni performansı, WF4 ' de bir daha yalın [!INCLUDE[wf1](../../../includes/wf1-md.md)] çalışma zamanı nedeniyle WF3 ile karşılaştırıldığında yüzlerce kat daha hızlı olur.  Gecikme süreleri de önemli ölçüde daha iyidir.  Bu, WCF düzenleme hizmetleri 'nin el [!INCLUDE[wf1](../../../includes/wf1-md.md)] ile kodlanması yerine kullanmanın performans cezası, kullanmanın [!INCLUDE[wf1](../../../includes/wf1-md.md)]sağladığı avantajların çok küçük olduğu anlamına gelir.  Kalıcılık performansı 2,5-3,0 faktörüyle artmıştır.  İş akışı izlemenin sistem durumu izleme işlemi artık çok az yüke sahip.  WF3 ' den WF4 ' ye geçmeyi düşünürken kapsamlı bir geçiş kılavuzu kümesi vardır.  Tüm bu WF4 karmaşık uygulamaları yazmak için etkileyici bir seçenek almalıdır.
+ WF4 için performans açısından ağır yatırımlar, birçok önemli alanda ödenmiştir.  Tek bir iş akışı bileşeni performansı, WF4 ' de yüzlerce kat daha hızlı bir şekilde WF3, daha yalın [!INCLUDE[wf1](../../../includes/wf1-md.md)] çalışma zamanı nedeniyle ile karşılaştırılır.  Gecikme süreleri de önemli ölçüde daha iyidir.  Bu, [!INCLUDE[wf1](../../../includes/wf1-md.md)] kullanmanın sağladığı avantajları göz önünde bulundurarak [!INCLUDE[wf1](../../../includes/wf1-md.md)] kullanmanın performans cezası anlamına gelir.  Kalıcılık performansı 2,5-3,0 faktörüyle artmıştır.  İş akışı izlemenin sistem durumu izleme işlemi artık çok az yüke sahip.  WF3 ' den WF4 ' ye geçmeyi düşünürken kapsamlı bir geçiş kılavuzu kümesi vardır.  Tüm bu WF4 karmaşık uygulamaları yazmak için etkileyici bir seçenek almalıdır.
