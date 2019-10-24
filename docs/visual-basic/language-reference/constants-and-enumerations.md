@@ -6,76 +6,76 @@ helpviewer_keywords:
 - constants [Visual Basic]
 - constants [Visual Basic], list of
 ms.assetid: 309c0ad5-83e4-4f96-99ea-83cd95107417
-ms.openlocfilehash: e51d2d5c34a501368ed77d6ceef73b57c6bd79be
-ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
+ms.openlocfilehash: ec314f78cf4c22c39d1ce41a7623bb4891f6ecd0
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65469506"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774864"
 ---
 # <a name="constants-and-enumerations-visual-basic"></a>Sabitler ve Numaralandırmalar (Visual Basic)
-Visual Basic önceden tanımlı sabitler ve numaralandırmalar geliştiriciler için sunar. Sabitler, bir uygulamanın yürütülmesini sabit kalması değerlerini depolar. Numaralandırmalar ilgili sabitlerinin kümeleri ile birlikte çalışır ve adları ile sabit değerleri ilişkilendirmek için kullanışlı bir yol sağlar.  
+Visual Basic, geliştiriciler için bir dizi önceden tanımlanmış sabitler ve numaralandırmalar sağlar. Sabitler, bir uygulamanın yürütülmesi boyunca sabit kalan değerleri depolar. Numaralandırmalar ilgili sabitler kümesiyle çalışmanın kolay bir yolunu sağlar ve sabit değerleri adlarla ilişkilendirir.  
   
 ## <a name="constants"></a>Sabitler  
   
 ### <a name="conditional-compilation-constants"></a>Koşullu derleme sabitleri  
- Koşullu derleme için kullanılabilen önceden tanımlanmış sabitleri aşağıdaki tabloda listelenmektedir.  
+ Aşağıdaki tabloda koşullu derleme için kullanılabilen önceden tanımlanmış sabitler listelenmektedir.  
   
 |**Sabit**|**Açıklama**|  
 |---|---|  
-|`CONFIG`|Geçerli ayarına karşılık gelen bir dize **etkin çözüm yapılandırması** kutusunda **Configuration Manager**.|  
-|`DEBUG`|A `Boolean` ayarlanabilir değer **proje özellikleri** iletişim kutusu. Varsayılan olarak, bir proje için hata ayıklama yapılandırmasını tanımlar `DEBUG`. Zaman `DEBUG` tanımlanan <xref:System.Diagnostics.Debug> sınıfı yöntemleri oluşturmak için çıkış **çıkış** penceresi. Bu tanımlı değil, <xref:System.Diagnostics.Debug> sınıfı yöntemleri derlenmemiş ve hata ayıklama çıktı oluşturulur.|  
-|`TARGET`|Proje veya komut satırı ayarına ilişkin çıktı türünü temsil eden bir dize **/target** seçeneği. Olası değerleri `TARGET` şunlardır:<br /><br /> -bir Windows uygulaması için "winexe".<br />-bir konsol uygulaması için "exe".<br />-bir sınıf kitaplığı için "library".<br />-bir modül için "modülünü".<br />- **/Target** seçeneği, Visual Studio tümleşik geliştirme ortamında ayarlanmış olması. Daha fazla bilgi için [/target (Visual Basic)](../../visual-basic/reference/command-line-compiler/target.md).|  
-|`TRACE`|A `Boolean` ayarlanabilir değer **proje özellikleri** iletişim kutusu. Varsayılan olarak, bir proje için tüm yapılandırmaları tanımlar `TRACE`. Zaman `TRACE` tanımlanan <xref:System.Diagnostics.Trace> sınıfı yöntemleri oluşturmak için çıkış **çıkış** penceresi. Bu tanımlı değil, <xref:System.Diagnostics.Trace> sınıfı yöntemleri derlenmemiş ve Hayır `Trace` çıkış üretilir.|  
-|`VBC_VER`|İçinde Visual Basic sürümünü temsil eden bir sayı *ana*. *küçük* biçimi.|  
+|`CONFIG`|**Configuration Manager** **etkin çözüm yapılandırma** kutusunun geçerli ayarına karşılık gelen bir dize.|  
+|`DEBUG`|**Proje özellikleri** iletişim kutusunda ayarlankullanılabilecek bir `Boolean` değeri. Varsayılan olarak, bir proje için hata ayıklama yapılandırması `DEBUG`tanımlar. `DEBUG` tanımlandığında, <xref:System.Diagnostics.Debug> sınıf yöntemleri **Çıkış** penceresinde çıkış oluşturur. Tanımlanmadığı zaman, <xref:System.Diagnostics.Debug> sınıf yöntemleri derlenmez ve hata ayıklama çıkışı oluşturulmaz.|  
+|`TARGET`|Proje için çıkış türünü temsil eden bir dize veya komut satırı **/target** seçeneğinin ayarı. `TARGET` olası değerleri şunlardır:<br /><br /> -bir Windows uygulaması için "winexe".<br />-konsol uygulaması için-"exe".<br />-bir sınıf kitaplığı için "Library".<br />-bir modül için "Module".<br />- **/Target** seçeneği Visual Studio tümleşik geliştirme ortamında ayarlanabilir. Daha fazla bilgi için bkz. [-target (Visual Basic)](../../visual-basic/reference/command-line-compiler/target.md).|  
+|`TRACE`|**Proje özellikleri** iletişim kutusunda ayarlankullanılabilecek bir `Boolean` değeri. Varsayılan olarak, bir proje için tüm yapılandırmaların `TRACE`tanımlar. `TRACE` tanımlandığında, <xref:System.Diagnostics.Trace> sınıf yöntemleri **Çıkış** penceresinde çıkış oluşturur. Tanımlı olmadığında <xref:System.Diagnostics.Trace> sınıf yöntemleri derlenmez ve hiçbir `Trace` çıkışı oluşturulmaz.|  
+|`VBC_VER`|Visual Basic sürümünü *büyük*olarak temsil eden bir sayı. *küçük* biçim.|  
   
-### <a name="print-and-display-constants"></a>Yazdırma ve görüntü sabitleri  
- Yazdırma arama ve görüntüleme işlevleri, gerçek değerleri yerine kodunuzun içinde aşağıdaki sabitler kullanabilirsiniz.  
+### <a name="print-and-display-constants"></a>Yazdırma ve görüntüleme sabitleri  
+ Yazdırma ve görüntüleme işlevlerini çağırdığınızda kodunuzda gerçek değerleri yerine aşağıdaki sabitleri kullanabilirsiniz.  
   
 |**Sabit**|**Açıklama**|  
 |---|---|  
-|`vbCrLf`|Satır başı/satır besleme karakter birleşimi.|  
+|`vbCrLf`|Satır başı/linefeed karakter birleşimi.|  
 |`vbCr`|Satır başı karakteri.|  
-|`vbLf`|Satır besleme karakteri.|  
+|`vbLf`|Linefeed karakteri.|  
 |`vbNewLine`|Yeni satır karakteri.|  
-|`vbNullChar`|Null karakteri.|  
-|`vbNullString`|Aynı sıfır uzunlukta bir dize (""); Dış yordam çağırmak için kullanılır.|  
-|`vbObjectError`|Hata numarası. Kullanıcı tanımlı hata numaralarını, bu değerden büyük olmalıdır. Örneğin:<br /><br /> `Err.Raise(Number) = vbObjectError + 1000`|  
+|`vbNullChar`|Null karakter.|  
+|`vbNullString`|Sıfır uzunluklu dize ("") ile aynı değil; Dış yordamları çağırmak için kullanılır.|  
+|`vbObjectError`|Hata numarası. Kullanıcı tanımlı hata numaraları bu değerden büyük olmalıdır. Örneğin:<br /><br /> `Err.Raise(Number) = vbObjectError + 1000`|  
 |`vbTab`|Sekme karakteri.|  
-|`vbBack`|BACKSPACE karakter.|  
-|`vbFormFeed`|Microsoft Windows içinde kullanılmaz.|  
-|`vbVerticalTab`|Microsoft Windows olmayan yararlıdır.|  
+|`vbBack`|Geri al karakteri.|  
+|`vbFormFeed`|Microsoft Windows 'da kullanılmaz.|  
+|`vbVerticalTab`|Microsoft Windows 'da yararlı değildir.|  
   
 ## <a name="enumerations"></a>Numaralandırmalar  
- Aşağıdaki tabloda, listeler ve Visual Basic tarafından sağlanan numaralandırmaları açıklar.  
+ Aşağıdaki tabloda Visual Basic tarafından sunulan numaralandırmalar listelenmektedir ve açıklanmaktadır.  
   
 |Sabit Listesi|Açıklama|  
 |---|---|  
-|<xref:Microsoft.VisualBasic.AppWinStyle>|Başlatılan program için çağrılırken kullanılacak pencere stilini gösterir <xref:Microsoft.VisualBasic.Interaction.Shell%2A> işlevi.|  
-|<xref:Microsoft.VisualBasic.AudioPlayMode>|Ses yöntemleri çağrılırken sesleri çalmak nasıl gösterir.|  
-|<xref:Microsoft.VisualBasic.ApplicationServices.BuiltInRole>|Çağrılırken denetlemek için rol türünü gösterir <xref:Microsoft.VisualBasic.ApplicationServices.User.IsInRole%2A> yöntemi.|  
-|<xref:Microsoft.VisualBasic.CallType>|Yordam çağrıldığında çağrılan türünü gösteren <xref:Microsoft.VisualBasic.Interaction.CallByName%2A> işlevi.|  
-|<xref:Microsoft.VisualBasic.CompareMethod>|Karşılaştırma işlevleri çağırırken dizeleri karşılaştırmak nasıl gösterir.|  
-|<xref:Microsoft.VisualBasic.DateFormat>|Tarihlerin nasıl görüntüleneceğini gösterir çağrılırken <xref:Microsoft.VisualBasic.Strings.FormatDateTime%2A> işlevi.|  
-|<xref:Microsoft.VisualBasic.DateInterval>|Belirlemek ve tarih aralıklarını tarihle ilgili işlevler çağırırken biçimlendirmek nasıl gösterir.|  
-|<xref:Microsoft.VisualBasic.FileIO.DeleteDirectoryOption>|Silinecek bir dizine dosyaları veya dizinleri içerdiğinde ne yapılması gerektiğini belirtir.|  
-|<xref:Microsoft.VisualBasic.DueDate>|Ödemelerin ne zaman gösterir finansal yöntemleri çağrılırken.|  
-|<xref:Microsoft.VisualBasic.FileIO.FieldType>|Sabit genişlikte metin alanları ayrılmış olup olmadığını veya gösterir.|  
-|<xref:Microsoft.VisualBasic.FileAttribute>|Dosya erişimi işlevleri çağrılırken kullanılacak dosya öznitelikleri gösterir.|  
-|<xref:Microsoft.VisualBasic.FirstDayOfWeek>|Tarih ile ilgili işlevler ararken kullanmak için haftanın ilk gününü belirtir.|  
-|<xref:Microsoft.VisualBasic.FirstWeekOfYear>|Tarih ile ilgili işlevler çağırırken kullanmak için yılın ilk haftası gösterir.|  
-|<xref:Microsoft.VisualBasic.MsgBoxResult>|Tarafından döndürülen bir ileti kutusunda hangi düğmeye basıldığını belirtir <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> işlevi.|  
-|<xref:Microsoft.VisualBasic.MsgBoxStyle>|Görüntülenecek düğmeleri çağırırken gösterir <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> işlevi.|  
-|<xref:Microsoft.VisualBasic.OpenAccess>|Dosya erişimi işlevlerini çağırırken bir dosyayı açmaya nasıl gösterir.|  
-|<xref:Microsoft.VisualBasic.OpenMode>|Dosya erişimi işlevlerini çağırırken bir dosyayı açmaya nasıl gösterir.|  
-|<xref:Microsoft.VisualBasic.OpenShare>|Dosya erişimi işlevlerini çağırırken bir dosyayı açmaya nasıl gösterir.|  
-|<xref:Microsoft.VisualBasic.FileIO.RecycleOption>|Bir dosya kalıcı olarak silinmiş veya Geri Dönüşüm Kutusu'na yerleştirilen belirtir.|  
-|<xref:Microsoft.VisualBasic.FileIO.SearchOption>|Tüm arama belirtir ya da yalnızca en üst düzey dizinleri.|  
-|<xref:Microsoft.VisualBasic.TriState>|Belirten bir `Boolean` değer veya varsayılan sayı biçimlendirme işlevlerini çağırırken olup kullanılmalıdır.|  
-|<xref:Microsoft.VisualBasic.FileIO.UICancelOption>|Neler olması gerektiğini belirtir. kullanıcı tıklarsa Bitti **iptal** bir işlem sırasında.|  
-|<xref:Microsoft.VisualBasic.FileIO.UIOption>|İlerleme iletişim kutusu, kopyalama, silme veya dosyaları veya dizinleri taşıma gösterilip gösterilmeyeceğini belirtir.|  
-|<xref:Microsoft.VisualBasic.VariantType>|Tarafından döndürülen bir değişken nesne türünü gösteren <xref:Microsoft.VisualBasic.Information.VarType%2A> işlevi.|  
-|<xref:Microsoft.VisualBasic.VbStrConv>|Çağrılırken gerçekleştirmek için dönüştürme türünü belirten <xref:Microsoft.VisualBasic.Strings.StrConv%2A> işlevi.|  
+|<xref:Microsoft.VisualBasic.AppWinStyle>|<xref:Microsoft.VisualBasic.Interaction.Shell%2A> işlevi çağrılırken çağrılan program için kullanılacak pencere stilini gösterir.|  
+|<xref:Microsoft.VisualBasic.AudioPlayMode>|Ses yöntemleri çağrılırken seslerin nasıl çalındığını gösterir.|  
+|<xref:Microsoft.VisualBasic.ApplicationServices.BuiltInRole>|<xref:Microsoft.VisualBasic.ApplicationServices.User.IsInRole%2A> yöntemi çağrılırken denetlenecek rolün türünü gösterir.|  
+|<xref:Microsoft.VisualBasic.CallType>|<xref:Microsoft.VisualBasic.Interaction.CallByName%2A> işlevi çağrılırken çağrılan yordamın türünü gösterir.|  
+|<xref:Microsoft.VisualBasic.CompareMethod>|Karşılaştırma işlevleri çağrılırken dizelerin nasıl karşılaştırılacağını gösterir.|  
+|<xref:Microsoft.VisualBasic.DateFormat>|<xref:Microsoft.VisualBasic.Strings.FormatDateTime%2A> işlevi çağrılırken tarihlerin nasıl görüntüleneceğini gösterir.|  
+|<xref:Microsoft.VisualBasic.DateInterval>|Tarih ile ilgili işlevleri çağırırken tarih aralıklarını belirleme ve biçimlendirme işlemlerinin nasıl yapılacağını gösterir.|  
+|<xref:Microsoft.VisualBasic.FileIO.DeleteDirectoryOption>|Silinecek bir dizin dosya veya dizin içerdiğinde ne yapılması gerektiğini belirtir.|  
+|<xref:Microsoft.VisualBasic.DueDate>|Mali Yöntemler çağrılırken ödemelerin ne zaman beklediğini gösterir.|  
+|<xref:Microsoft.VisualBasic.FileIO.FieldType>|Metin alanlarının sınırlanmış mi yoksa sabit mi olduğunu gösterir.|  
+|<xref:Microsoft.VisualBasic.FileAttribute>|Dosya erişim işlevleri çağrılırken kullanılacak dosya özniteliklerini gösterir.|  
+|<xref:Microsoft.VisualBasic.FirstDayOfWeek>|Tarih ile ilgili işlevler çağrılırken kullanılacak haftanın ilk gününü gösterir.|  
+|<xref:Microsoft.VisualBasic.FirstWeekOfYear>|Tarih ile ilgili işlevler çağrılırken kullanılacak yılın ilk haftasını gösterir.|  
+|<xref:Microsoft.VisualBasic.MsgBoxResult>|<xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> işlevi tarafından döndürülen bir ileti kutusunda hangi düğmeye basıldığını gösterir.|  
+|<xref:Microsoft.VisualBasic.MsgBoxStyle>|<xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> işlevi çağrılırken hangi düğmelerin görüntüleneceğini gösterir.|  
+|<xref:Microsoft.VisualBasic.OpenAccess>|Dosya erişimi işlevlerini çağırırken bir dosyanın nasıl açılacağını gösterir.|  
+|<xref:Microsoft.VisualBasic.OpenMode>|Dosya erişimi işlevlerini çağırırken bir dosyanın nasıl açılacağını gösterir.|  
+|<xref:Microsoft.VisualBasic.OpenShare>|Dosya erişimi işlevlerini çağırırken bir dosyanın nasıl açılacağını gösterir.|  
+|<xref:Microsoft.VisualBasic.FileIO.RecycleOption>|Bir dosyanın kalıcı olarak silinip silinmeyeceğini veya geri dönüşüm kutusu 'na yerleştirilip yerleştirilmeyeceğini belirtir.|  
+|<xref:Microsoft.VisualBasic.FileIO.SearchOption>|Tüm veya en üst düzey dizinlerin aranıp aranmayacağını belirtir.|  
+|<xref:Microsoft.VisualBasic.TriState>|`Boolean` bir değeri veya sayı biçimlendirme işlevleri çağrılırken varsayılan değerin kullanılıp kullanılmayacağını belirtir.|  
+|<xref:Microsoft.VisualBasic.FileIO.UICancelOption>|Kullanıcı bir işlem sırasında **iptal** ' i tıklarsa ne yapılması gerektiğini belirtir.|  
+|<xref:Microsoft.VisualBasic.FileIO.UIOption>|Dosya veya dizinleri kopyalarken, silerken veya taşırken ilerleme durumu iletişim kutusunun gösterilip gösterilmeyeceğini belirtir.|  
+|<xref:Microsoft.VisualBasic.VariantType>|<xref:Microsoft.VisualBasic.Information.VarType%2A> işlevi tarafından döndürülen bir değişken nesnesinin türünü gösterir.|  
+|<xref:Microsoft.VisualBasic.VbStrConv>|<xref:Microsoft.VisualBasic.Strings.StrConv%2A> işlevi çağrılırken gerçekleştirilecek dönüştürme türünü gösterir.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

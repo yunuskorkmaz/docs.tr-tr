@@ -11,12 +11,12 @@ helpviewer_keywords:
 - declaring variables [Visual Basic], inferred
 - inferred variable declaration
 ms.assetid: 4ad3e6e9-8f5b-4209-a248-de22ef6e4652
-ms.openlocfilehash: 52da5d059369f8f5a85c23d1ed5ade97523a0e78
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 4dcca0f0ed9989577ded27bab7cf3b16f3036964
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582626"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72775455"
 ---
 # <a name="option-infer-statement"></a>Option Infer Deyimi
 
@@ -62,7 +62,7 @@ Daha fazla bilgi için bkz. [Yerel tür çıkarımı](../../../visual-basic/prog
 
 ## <a name="when-an-option-infer-statement-is-not-present"></a>Bir Option Infer deyimleri mevcut olmadığında
 
-Kaynak kodu `Option Infer` bir ifade içermiyorsa, derleme sayfasındaki **seçenek çıkarımı** ayarı, [proje Tasarımcısı (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) kullanılır. Komut satırı derleyicisi kullanılırsa, [/OptionInfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md) derleyici seçeneği kullanılır.
+Kaynak kodu `Option Infer` bir ifade içermiyorsa, derleme sayfasındaki **seçenek çıkarımı** ayarı, [proje Tasarımcısı (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) kullanılır. Komut satırı derleyicisi kullanılırsa [-OptionInfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md) derleyici seçeneği kullanılır.
 
 #### <a name="to-set-option-infer-in-the-ide"></a>IDE 'de seçenek çıkarımı ayarlamak için
 
@@ -76,7 +76,7 @@ Yeni bir proje oluşturduğunuzda, **Derle** sekmesindeki **seçenek** çıkar a
 
 #### <a name="to-set-option-infer-on-the-command-line"></a>Komut satırında bir seçenek çıkarımı ayarlamak için
 
-**Vbc** komutuna [/OptionInfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md) derleyici seçeneğini ekleyin.
+**Vbc** komutuna [-OptionInfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md) derleyici seçeneğini ekleyin.
 
 ## <a name="default-data-types-and-values"></a>Varsayılan veri türleri ve değerleri
 
@@ -109,5 +109,5 @@ Aşağıdaki örnek, bir değişken `Object` olarak tanımlandığında çalış
 - [Option Explicit Deyimi](../../../visual-basic/language-reference/statements/option-explicit-statement.md)
 - [Option Strict Deyimi](../../../visual-basic/language-reference/statements/option-strict-statement.md)
 - [Visual Basic Varsayılanları, Projeler, Seçenekler İletişim Kutusu](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)
-- [/optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)
+- [-optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)
 - [Kutulama ve Kutudan Çıkarma](../../../csharp/programming-guide/types/boxing-and-unboxing.md)

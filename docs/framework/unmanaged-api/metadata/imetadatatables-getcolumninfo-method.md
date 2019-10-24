@@ -1,6 +1,6 @@
 ---
 title: IMetaDataTables::GetColumnInfo Yöntemi
-ms.date: 03/30/2017
+ms.date: 10/10/2019
 api_name:
 - IMetaDataTables.GetColumnInfo
 api_location:
@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c0755cb2a91d61725338562cb1fe249a9cfacc38
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: dd67d9faafedf4fb92c69618d4464ebb2ce47dcc
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781510"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774252"
 ---
 # <a name="imetadatatablesgetcolumninfo-method"></a>IMetaDataTables::GetColumnInfo Yöntemi
-Belirtilen tabloda belirtilen sütuna ilişkin verileri alır.  
+Belirtilen tabloda belirtilen sütunla ilgili verileri alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,33 +40,61 @@ HRESULT GetColumnInfo (
 );  
 ```  
   
-## <a name="parameters"></a>Parametreler  
+## <a name="parameters"></a>Parametreler
+=======
+
  `ixTbl`  
- [in] İstediğiniz tabloyu dizini.  
+ 'ndaki İstenen tablonun dizini.  
   
  `ixCol`  
- [in] İstenen sütun dizini.  
+ 'ndaki İstenen sütunun dizini.  
   
  `poCol`  
- [out] Satırdaki sütun uzaklığı için bir işaretçi.  
+ dışı Satırdaki sütunun uzaklığa yönelik bir işaretçi.  
   
  `pcbCol`  
- [out] Sütunun bayt cinsinden boyutu için bir işaretçi.  
+ dışı Sütunun bayt cinsinden boyutu için bir işaretçi.  
   
  `pType`  
- [out] Sütundaki değerleri türü bir işaretçi.  
+ dışı Sütundaki değerlerin türüne yönelik bir işaretçi.  
   
  `ppName`  
- [out] Sütun adı için bir işaretçi işaretçisi.  
-  
+ dışı Sütun adı işaretçisinin işaretçisi.  
+ 
+## <a name="remarks"></a>Açıklamalar
+
+Döndürülen sütun türü bir değer aralığı içinde yer alıyorsa:
+
+| pType                    | Açıklama   | Yardımcı işlevi                   |
+|--------------------------|---------------|-----------------------------------|
+| `0`..`iRidMax`<br>(0.. 63)   | Rid           | **Isrbıtype türü**<br>**IsRidOrToken** |
+| `iCodedToken`..`iCodedTokenMax`<br>(64.. 95) | Kodlanmış belirteç | **IsCodedTokenType** <br>**IsRidOrToken** |
+| `iSHORT` (96)            | Int16         | **IsFixedType**                   |
+| `iUSHORT` (97)           | UInt16        | **IsFixedType**                   |
+| `iLONG` (98)             | Int32         | **IsFixedType**                   |
+| `iULONG` (99)            | UInt32        | **IsFixedType**                   |
+| `iBYTE` (100)            | Bayt          | **IsFixedType**                   |
+| `iSTRING` (101)          | Dize        | **IsHeapType**                    |
+| `iGUID` (102)            | Guid          | **IsHeapType**                    |
+| `iBLOB` (103)            | Bun          | **IsHeapType**                    |
+
+*Yığında* depolanan değerler (yani, `IsHeapType == true`) kullanılarak okunabilir:
+
+- `iSTRING`: **IMetaDataTables. GetString**
+- `iGUID`: **IMetaDataTables. GetGUID**
+- `iBLOB`: **IMetaDataTables. GetBlob**
+
+> [!IMPORTANT]
+> Yukarıdaki tabloda tanımlanan sabitleri kullanmak için *Cor. h* üstbilgi dosyası tarafından sunulan yönerge `#define _DEFINE_META_DATA_META_CONSTANTS` ekleyin.
+
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** COR.h  
+ **Üst bilgi:** Cor. h  
   
- **Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan  
+ **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

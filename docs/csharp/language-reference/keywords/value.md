@@ -1,5 +1,5 @@
 ---
-title: değer bağlamsal anahtar sözcüğü - C# başvurusu
+title: value bağlamsal anahtar sözcüğü C# -başvuru
 ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - value keyword [C#]
 ms.assetid: c99d6468-687f-4a46-89b4-a95e1b00bf6d
-ms.openlocfilehash: cfd370df771998057fd421a0917b3e2fcd96d9f8
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 34b192d17bd96b6b893c9f14f0d4a77274a32f78
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633031"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771749"
 ---
 # <a name="value-c-reference"></a>value (C# Başvurusu)
 
-Bağlamsal anahtar sözcüğü `value` sıradan özellik bildiriminde kümesi erişimcisi kullanılır. Yöntemi giriş parametresi benzerdir. Word `value` istemci kodu özelliğe atanacak çalışıyor değeri başvuruyor. Aşağıdaki örnekte, `MyDerivedClass` adlı bir özelliğe sahiptir `Name` kullanan `value` yedekleme alanına yeni bir dize atamak için parametre `name`. Bakış açısıyla, istemci kodu, işlem bir basit atama yazılır.
+Bağlamsal anahtar sözcük `value`, [özellik](../../programming-guide/classes-and-structs/properties.md) ve [dizin oluşturucu](../../programming-guide/indexers/index.md) bildirimlerinde `set` erişimcisinde kullanılır. Yöntemin giriş parametresine benzerdir. Sözcük `value`, istemci kodunun özelliğe veya dizin oluşturucusuna atamaya çalışan değere başvurur. Aşağıdaki örnekte `MyDerivedClass`, `name`yedekleme alanına yeni bir dize atamak için `value` parametresini kullanan `Name` adlı bir özelliğe sahiptir. İstemci kodunun bakış noktasından, işlem basit atama olarak yazılır.
 
 [!code-csharp[csrefKeywordsModifiers#26](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#26)]
 
-Kullanımıyla ilgili daha fazla bilgi için `value`, bkz: [özellikleri](../../programming-guide/classes-and-structs/properties.md).
+Daha fazla bilgi için bkz. [Özellikler](../../programming-guide/classes-and-structs/properties.md) ve [Indexeres](../../programming-guide/indexers/index.md) makaleleri.
 
 ## <a name="c-language-specification"></a>C# dili belirtimi
 
@@ -28,6 +28,6 @@ Kullanımıyla ilgili daha fazla bilgi için `value`, bkz: [özellikleri](../../
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# başvurusu](../index.md)
+- [C#Başvurunun](../index.md)
 - [C# Programlama Kılavuzu](../../programming-guide/index.md)
 - [C# Anahtar Sözcükleri](index.md)

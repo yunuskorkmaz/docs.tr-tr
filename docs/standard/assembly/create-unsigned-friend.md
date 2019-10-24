@@ -1,18 +1,18 @@
 ---
-title: 'Nasıl yapılır: İmzasız arkadaş derlemeleri oluşturma'
+title: 'Nasıl yapılır: imzasız arkadaş derlemeleri oluşturma'
 ms.date: 08/19/2019
 ms.assetid: 78cbc4f0-b021-4141-a4ff-eb4edbd814ca
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 9d5699f772dba994b10408d15422faa3c5931f45
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: d8fdc3061067d85498dc5bbed7bf324f99169a36
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991692"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774342"
 ---
-# <a name="how-to-create-unsigned-friend-assemblies"></a>Nasıl yapılır: İmzasız arkadaş derlemeleri oluşturma
+# <a name="how-to-create-unsigned-friend-assemblies"></a>Nasıl yapılır: imzasız arkadaş derlemeleri oluşturma
 
 Bu örnekte, friend derlemelerinin imzasız Derlemelerle nasıl kullanılacağı gösterilmektedir.
 
@@ -20,7 +20,7 @@ Bu örnekte, friend derlemelerinin imzasız Derlemelerle nasıl kullanılacağı
 
 1. Bir komut istemi açın.
 
-2. Aşağıdaki kodu C# içeren *friend_unsigned_A* adlı bir veya Visual Basic dosya oluşturun. Kod, *friend_unsigned_B* bir <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> Friend derlemesi olarak bildirmek için özniteliğini kullanır.
+2. Aşağıdaki kodu C# içeren *friend_unsigned_A* adlı bir veya Visual Basic dosya oluşturun. Kod, *friend_unsigned_B* bir Friend derlemesi olarak bildirmek için <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> özniteliğini kullanır.
 
    ```csharp
    // friend_unsigned_A.cs
@@ -84,7 +84,7 @@ Bu örnekte, friend derlemelerinin imzasız Derlemelerle nasıl kullanılacağı
    vbc -target:library friend_unsigned_A.vb
    ```
 
-4. Aşağıdaki kodu C# içeren *friend_unsigned_B* adlı bir veya Visual Basic dosya oluşturun. *Friend_unsigned_A* , bir Friend derlemesi olarak *friend_unsigned_B* belirttiğinden, *friend_unsigned_B* içindeki kod, friend_unsigned_A 'deki `internal` (C#) veya `Friend` (Visual Basic) türlerine veya üyelerine erişebilir.
+4. Aşağıdaki kodu C# içeren *friend_unsigned_B* adlı bir veya Visual Basic dosya oluşturun. *Friend_unsigned_A* , bir Friend derlemesi olarak *Friend_unsigned_B* belirttiğinden, *friend_unsigned_B* içindeki kod `internal` (C#) veya`Friend`(Visual Basic) türlerine ve *friend_unsigned_A*' den üyelere erişebilir.
 
    ```csharp
    // friend_unsigned_B.cs
@@ -136,21 +136,21 @@ Bu örnekte, friend derlemelerinin imzasız Derlemelerle nasıl kullanılacağı
    vbc -r:friend_unsigned_A.dll friend_unsigned_B.vb
    ```
 
-   Derleyici tarafından oluşturulan derlemenin adı, <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> özniteliğe geçirilen arkadaş derleme adıyla eşleşmelidir. `/out` Derleyici seçeneğini kullanarak çıkış derlemesinin adını ( *. exe* veya *. dll*) açıkça belirtmeniz gerekir. Daha fazla bilgi için bkz. [/OutC# (derleyici seçenekleri)](../../csharp/language-reference/compiler-options/out-compiler-option.md) veya [-Out (Visual Basic)](../../visual-basic/reference/command-line-compiler/out.md)..
+   Derleyici tarafından oluşturulan derlemenin adı, <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> özniteliğine geçirilen arkadaş derleme adı ile aynı olmalıdır. `-out` derleyici seçeneğini kullanarak çıkış derlemesinin ( *. exe* veya *. dll*) adını açıkça belirtmeniz gerekir. Daha fazla bilgi için bkz. [-OutC# (derleyici seçenekleri)](../../csharp/language-reference/compiler-options/out-compiler-option.md) veya [-Out (Visual Basic)](../../visual-basic/reference/command-line-compiler/out.md)..
 
 6. *Friend_unsigned_B. exe* dosyasını çalıştırın.
 
-   Program iki dize çıktısı verir: **Class1. test** ve **Class2. test**.
+   Program iki dizeyi çıktı: **Class1. test** ve **Class2. test**.
 
 ## <a name="net-security"></a>.NET güvenliği
 
-<xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> Özniteliği<xref:System.Security.Permissions.StrongNameIdentityPermission> ve sınıfı arasında benzerlikler vardır. Temel fark <xref:System.Security.Permissions.StrongNameIdentityPermission> , kodun belirli bir bölümünü çalıştırmak için güvenlik izinleri talep edebilir, <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> ancak `internal` öznitelik veya `Friend` (Visual Basic) türlerinin görünürlüğünü ve üyelerini denetler.
+@No__t_0 özniteliği ve <xref:System.Security.Permissions.StrongNameIdentityPermission> sınıfı arasında benzerlikler vardır. Temel fark, <xref:System.Security.Permissions.StrongNameIdentityPermission> kodun belirli bir bölümünü çalıştırmak için güvenlik izinleri talep edebilir, ancak <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> öznitelik `internal` veya `Friend` (Visual Basic) türlerinin ve üyelerinin görünürlüğünü denetler.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>
 - [.NET’te bütünleştirilmiş kodlar](index.md)
 - [Arkadaş derlemeleri](friend.md)
-- [Nasıl yapılır: İmzalı arkadaş derlemeleri oluşturma](create-signed-friend.md)
+- [Nasıl yapılır: imzalı arkadaş derlemeleri oluşturma](create-signed-friend.md)
 - [C#Programlama Kılavuzu](../../csharp/programming-guide/index.md)
 - [Programlama kavramları (Visual Basic)](../../visual-basic/programming-guide/concepts/index.md)

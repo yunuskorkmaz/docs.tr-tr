@@ -3,12 +3,12 @@ title: C# Kılavuz turu C#
 description: Yeni C#misiniz? Dilin temel bilgilerini öğrenin.
 ms.date: 04/05/2019
 ms.custom: seoapril2019
-ms.openlocfilehash: eaaa5a259f0776a2749ed899d0406aee041a8442
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: b497ff05b29ce349fe2be3f8b9bc1a8697d6b30b
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105658"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774071"
 ---
 # <a name="a-tour-of-the-c-language"></a>C# Dilin turu
 
@@ -16,47 +16,47 @@ C#("bkz. diyez") basit, modern, nesne odaklı ve tür açısından güvenli bir 
 
 C#, nesne odaklı bir dildir, ancak C# daha fazla ***bileşen odaklı*** programlama desteğini içerir. Modern yazılım tasarımı giderek, yazılım bileşenlerini, kendi kendine içerilen ve kendi kendine açıklayan işlev paketleri biçiminde kullanır. Bu bileşenlere anahtar, özellikler, Yöntemler ve olaylar içeren bir programlama modeli sunduklarında; Bunlar, bileşen hakkında bildirime dayalı bilgiler sağlayan özniteliklere sahiptir; ve kendi belgelerini içerirler. C#, yazılım bileşenlerinin oluşturulması ve kullanılması için çok doğal bir C# dil sunarak, bu kavramları doğrudan desteklemek için dil yapıları sağlar.
 
-Birçok C# Özellik sağlam ve dayanıklı uygulamaların yapımasına yardımcı olur: ***Çöp toplama*** , erişilemeyen kullanılmayan nesneler tarafından kullanılan belleği otomatik olarak geri kazanır; ***özel durum işleme*** , hata algılama ve kurtarmaya yönelik yapılandırılmış ve genişletilebilir bir yaklaşım sağlar; dilin ***tür kullanımı uyumlu*** tasarımı, başlatılmamış değişkenlerden okumayı, sınırları ötesinde dizileri dizin haline getirmek veya Denetlenmemiş tür yayınları gerçekleştirmeyi olanaksız hale getirir.
+Birçok C# Özellik sağlam ve dayanıklı uygulamalar oluşturmaya yardımcı olur: ***çöp toplama*** , erişilemeyen kullanılmayan nesneler tarafından kullanılan belleği otomatik olarak geri kazanır; ***özel durum işleme*** , hata algılama ve kurtarmaya yönelik yapılandırılmış ve genişletilebilir bir yaklaşım sağlar; dilin ***tür kullanımı uyumlu*** tasarımı, başlatılmamış değişkenlerden okumayı, sınırları ötesinde dizileri dizin haline getirmek veya Denetlenmemiş tür yayınları gerçekleştirmeyi olanaksız hale getirir.
 
-C#Birleşik bir ***tür sistemine***sahiptir. `int` Ve `object` C# gibitemeltürlerdahilolmaküzeretümtürler,tekbirköktüründendevralınır.`double` Bu nedenle, tüm türler ortak işlemler kümesini paylaşır ve herhangi bir türdeki değerler tutarlı bir şekilde depolanabilir, taşınır ve çalıştırılabilir. Ayrıca, C# hem Kullanıcı tanımlı başvuru türlerini hem de değer türlerini destekler, bu da nesnelerin dinamik ayrılmasına ve basit yapıların satır içi depolamamasına olanak tanır.
+C#Birleşik bir ***tür sistemine***sahiptir. `int`C# ve`double`gibi temel türler dahil olmak üzere tüm türler tek bir kök `object`türünden devralınır. Bu nedenle, tüm türler ortak işlemler kümesini paylaşır ve herhangi bir türdeki değerler tutarlı bir şekilde depolanabilir, taşınır ve çalıştırılabilir. Ayrıca, C# hem Kullanıcı tanımlı başvuru türlerini hem de değer türlerini destekler, bu da nesnelerin dinamik ayrılmasına ve basit yapıların satır içi depolamamasına olanak tanır.
 
-Programlar ve kitaplıkların zaman içinde zaman içinde gelişebilmesini sağlamak için, tasarımına daha fazla vurgu konulmuştur. C# C# Birçok programlama dili bu sorunla ilgileniyor ve sonuç olarak, bu dillerde yazılmış programlar, bağımlı kitaplıkların daha yeni sürümleri tanıtıldığında gerekenden çok daha fazla. C#Sürüm oluşturma konuları tarafından doğrudan etkilenen tasarımın yönleri, ayrı `virtual` ve `override` değiştiriciler, yöntem aşırı yükleme çözümlemesi kuralları ve açık arabirim üye bildirimleri için destek içerir.
+Programlar ve kitaplıkların zaman içinde zaman içinde gelişebilmesini sağlamak için, tasarımına daha fazla vurgu konulmuştur. C# C# Birçok programlama dili bu sorunla ilgileniyor ve sonuç olarak, bu dillerde yazılmış programlar, bağımlı kitaplıkların daha yeni sürümleri tanıtıldığında gerekenden çok daha fazla. C#Sürüm oluşturma konuları tarafından doğrudan etkilenen tasarımın yönleri, ayrı`virtual`ve`override`değiştiricileri, yöntem aşırı yükleme çözümlemesi kurallarını ve açık arabirim üye bildirimleri için desteği içerir.
 
 ## <a name="hello-world"></a>Merhaba dünya
 
 "Hello, World" programı, genellikle bir programlama dilini tanıtmak için kullanılır. Burada yer C#verilmiştir:
 
-[!code-csharp[Hello World](../../../samples/snippets/csharp/tour/hello/Program.cs#L1-L8)]
+[!code-csharp[Hello World](~/samples/snippets/csharp/tour/hello/Program.cs)]
 
-C#Kaynak dosyalar genellikle dosya uzantısına `.cs`sahiptir. "Hello, World" programının dosyada `hello.cs`depolandığını varsayarak, program komut satırı kullanılarak derlenir:
+C#Kaynak dosyalar genellikle`.cs`dosya uzantısına sahiptir. "Hello, World" programının *Hello.cs*dosyasında depolandığını varsayarsak, program komut satırı kullanılarak derlenmiş olabilir:
 
 ```console
 csc hello.cs
 ```
 
-Hello. exe adlı bir yürütülebilir derleme üreten. Bu uygulama tarafından oluşturulan çıktı şu şekilde çalışır:
+*Hello. exe*adlı bir yürütülebilir derleme üreten. Bu uygulama tarafından oluşturulan çıktı şu şekilde çalışır:
 
 ```console
 Hello, World
 ```
 
 > [!IMPORTANT]
-> `csc` Komutu tam Framework için derlenir ve tüm platformlarda kullanılamayabilir.
+> `csc` komutu tam Framework için derlenir ve tüm platformlarda bulunmayabilir.
 
-"Hello, World" programı, `using` `System` ad alanına başvuran bir yönergeyle başlar. Ad alanları, programları ve kitaplıkları düzenlemek C# için hiyerarşik bir yol sağlar. Ad alanları türler ve diğer ad alanlarını içerir — örneğin, `System` ad alanı programda başvurulan `Console` sınıf gibi bir dizi tür içerir ve `IO` ve `Collections`gibi diğer ad alanları vardır. Verilen `using` bir ad alanına başvuruda bulunan bir yönerge, bu ad alanının üyesi olan türlerin nitelenmemiş kullanımını mümkün değildir. Yönergesi nedeniyle program, için `System.Console.WriteLine`toplu olarak kullanabilir `Console.WriteLine`. `using`
+"Hello, World" programı, `System` ad alanına başvuran bir `using` yönergesi ile başlar. Ad alanları, programları ve kitaplıkları düzenlemek C# için hiyerarşik bir yol sağlar. Ad alanları türler ve diğer ad alanlarını içerir — örneğin, `System` ad alanı, programda başvurulan `Console` sınıfı ve `IO` ve `Collections`gibi birçok farklı ad alanı gibi bir dizi tür içerir. Verilen bir ad alanına başvuran `using` yönergesi, bu ad alanının üyesi olan türlerin nitelenmemiş kullanımını mümkün değildir. `using` yönergesi nedeniyle, program `System.Console.WriteLine`için toplu `Console.WriteLine` kullanabilir.
 
-"Hello, World" programı tarafından belirtilen `Main` sınıftekbirüyeyesahiptir,yöntemiadlı.`Hello` `Main` Yöntemi statik değiştiriciyle birlikte bildirilmiştir. Örnek yöntemleri, anahtar sözcüğünü `this`kullanarak belirli bir kapsayan nesne örneğine başvurabilir, ancak statik yöntemler belirli bir nesneye başvuru olmadan çalışır. Kurala göre, adlı `Main` statik bir yöntem, bir programın giriş noktası olarak görev yapar.
+"Hello, World" programı tarafından tanımlanan `Hello` sınıfı tek bir üyeye sahiptir ve `Main`adlı yöntem. `Main` yöntemi statik değiştiriciyle birlikte bildirilmiştir. Örnek yöntemleri, anahtar sözcük `this`kullanarak belirli bir kapsayan nesne örneğine başvurabilir, statik yöntemler belirli bir nesneye başvuru olmadan çalışır. Kurala göre, `Main` adlı statik bir yöntem, bir programın giriş noktası olarak işlev görür.
 
-Programın çıktısı, `WriteLine` `System` ad alanındaki `Console` sınıfının yöntemi tarafından üretilir. Bu sınıf, varsayılan olarak derleyicinin otomatik olarak başvurduğu standart sınıf kitaplıkları tarafından sağlanır.
+Programın çıktısı, `System` ad alanındaki `Console` sınıfının `WriteLine` yöntemi tarafından üretilir. Bu sınıf, varsayılan olarak derleyicinin otomatik olarak başvurduğu standart sınıf kitaplıkları tarafından sağlanır.
 
-Hakkında C#daha fazla bilgi edinmek için çok daha fazla şey vardır.  Aşağıdaki konular, C# dilin öğelerine bir genel bakış sağlar. Bu genel bakışlar, dilin tüm öğeleriyle ilgili temel bilgileri sağlar ve bu C# dilin öğelerine daha ayrıntılı bilgi edinmek için gereken bilgileri verir:
+Hakkında C#daha fazla bilgi edinmek için çok daha fazla şey vardır. Aşağıdaki konular, C# dilin öğelerine bir genel bakış sağlar. Bu genel bakışlar, dilin tüm öğeleriyle ilgili temel bilgileri sağlar ve bu C# dilin öğelerine daha ayrıntılı bilgi edinmek için gereken bilgileri verir:
 
 - [Program Yapısı](program-structure.md)
   - C# Dilde temel kurumsal kavramları öğrenin: ***Programlar***, ***ad alanları***, ***türler***, ***Üyeler***ve ***derlemeler***.
 - [Türler ve Değişkenler](types-and-variables.md)
   - Dildeki değer ***türleri***, ***başvuru türleri***ve değişkenler hakkında bilgi edinin. C#
 - [İfadeler](expressions.md)
-  - ***İfadeler*** , ***işlenenler*** ve işleçlerdenoluşturulur. İfadeler bir değer üretir.
+  - ***İfadeler*** , ***işlenenler*** ve ***işleçlerden***oluşturulur. İfadeler bir değer üretir.
 - [Deyimler](statements.md)
   - Bir programın eylemlerini ifade etmek için ***deyimlerini*** kullanırsınız.
 - [Sınıflar ve nesneler](classes-and-objects.md)
