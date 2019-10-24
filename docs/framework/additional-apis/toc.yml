@@ -55,6 +55,10 @@
           items:
             - name: m_ConnectionList Alanı
               href: m_connectionlist.md
+        - name: ConnectStream Sınıfı
+          items:
+            - name: Bağlantı Özelliği
+              href: system.net.connectstream.connection.md
         - name: CoreResponseData Sınıfı
           href: coreresponsedata.md
           items:
@@ -70,12 +74,26 @@
               href: httpwebrequest__coreresponse.md
             - name: _HttpResponse Alanı
               href: _httpresponse.md
+        - name: PooledStream Sınıfı
+          items:
+            - name: NetworkStream Özelliği
+              href: system.net.pooledstream.networkstream.md
         - name: ServicePoint Sınıfı
           items:
             - name: m_ConnectionGroupList Alanı
               href: m_connectiongrouplist.md
             - name: s_ServicePointTable Alanı
               href: s_servicepointtable.md
+        - name: TlsStream Sınıfı
+          items:
+            - name: m_Worker Alanı
+              href: system.net.tlsstream.m_worker.md
+    - name: System.Net.Security
+      items:
+        - name: SslState Sınıfı
+          items:
+            - name: SslProtocol Özelliği
+              href: system.net.security.sslstate.sslprotocol.md
     - name: System.Windows.Diagnostics
       items:
         - name: VisualDiagnostics Sınıfı
