@@ -6,12 +6,14 @@ metadata:
   title: .NET uygulama mimarisi Kılavuzu
   meta.description: 'Learn about recommended practices for architecting, designing and building .NET software.'
   ms.topic: landing-page
-  ms.date: 06/12/2019
+  ms.date: 10/22/2019
 abstract:
   description: Ücretsiz uygulama mimarisi kılavuzumuzu kullanarak üretime Ready .NET uygulamaları oluşturmayı öğrenin.
 sections:
   - title: Yayımlanmış e-kitaplar
     items:
+      - html: <ul><li><p><a href="grpc-for-wcf-developers/index">WCF geliştiricileri için ASP.NET Core gRPC</a></p>
+      - html: '<p>Bu kılavuzda, her bir kavram WCF ''nin eşdeğer özellikleriyle ilişkilendirilmesi ve var olan bir WCF uygulamasının gRPC ''ye geçirilmesi için yönergeler sunan gRPC ''nin ne olduğu açıklanmaktadır.</p></li></ul>'
       - html: <ul><li><p><a href="containerized-lifecycle/index">Microsoft platformu ve araçları ile Kapsayıcılı Docker uygulaması yaşam döngüsü</a></p>
       - html: '<p>Bu kılavuz, Visual Studio ve Microsoft Azure kullanarak Kapsayıcılı Docker uygulamaları geliştirmek, doğrulamak ve dağıtmak için kullanacağınız önerilen uçtan uca yaşam döngüsü işlemlerine giriş niteliğindedir.</p></li></ul>'
       - html: <ul><li><p><a href="modernize-with-azure-containers/index">Azure bulut ve Windows kapsayıcıları ile mevcut .NET uygulamalarını modernleştirin</a></p>
@@ -22,11 +24,9 @@ sections:
       - html: '<p>Bu kılavuz, mikro hizmet tabanlı uygulamalar geliştirmeye ve kapsayıcıları kullanarak bunları yönetmeye yönelik bir giriş niteliğindedir. .NET Core ve Docker Kapsayıcıları kullanılarak mimari tasarımı ve uygulama yaklaşımlarını ele alır.</p></li></ul>'
       - html: '<ul><li><p><a href="serverless/index">Sunucusuz uygulamalar: Mimari, desenler ve Azure''u uygulama</a></p>'
       - html: '<p>Bu, Azure kullanarak örnekleri olan sunucusuz uygulamalar oluşturmaya yönelik bir kılavuzdur. Çeşitli mimari ve tasarım yaklaşımları, sunucusuz ile gelen avantajlar ve güçlükler ele alınmaktadır ve sunucusuz uygulamalar için senaryolar ve kullanım örnekleri sunar.</p></li></ul>'
-  - title: Önizleme e-kitapları
+  - title: E-kitapların önizlemesini görüntüleme
     items:
       - html: <ul><li><p><a href="cloud-native/index">Azure için bulutta yerel .NET uygulamaları tasarlama</a></p>
       - html: '<p>Bu kılavuz, bulutun yerel olarak ne olduğunu tanımlar, bulutta yerel ilkeler kullanılarak oluşturulan örnek bir uygulama tanıtır ve bulut Yerel uygulamalarının çoğunda ortak olan konuları ele alır.</p></li></ul>'
       - html: <ul><li><p><a href="blazor-for-web-forms-developers/index">ASP.NET Web Forms geliştiricileri için Blazor</a></p>
       - html: <p>ASP.NET Web Forms geliştiricileri için Blazor 'e giriş. Basit ve tanıdık bir şekilde Blazor ve .NET Core kullanarak .NET ile tam yığın Web uygulamaları oluşturmayı öğrenin.</p></li></ul>
-      - html: <ul><li><p><a href="grpc-for-wcf-developers/index">WCF geliştiricileri için ASP.NET Core gRPC</a></p>
-      - html: '<p>Bu kılavuzda, her bir kavram WCF ''nin eşdeğer özellikleriyle ilişkilendirilmesi ve var olan bir WCF uygulamasının gRPC ''ye geçirilmesi için yönergeler sunan gRPC ''nin ne olduğu açıklanmaktadır.</p></li></ul>'
