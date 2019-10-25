@@ -10,15 +10,15 @@ helpviewer_keywords:
 - OpenType font technology [WPF]
 ms.assetid: 4061a9d1-fe8b-4921-9e17-18ec7d2e3ea2
 ms.openlocfilehash: da8f3e592e47c9482d4395b81627c1582e2354f7
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/07/2019
+ms.lasthandoff: 10/22/2019
 ms.locfileid: "72005243"
 ---
 # <a name="opentype-font-features"></a>OpenType Yazı Tipi Özellikleri
 
-Bu konu, [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] ' daki OpenType yazı tipi teknolojisinin bazı temel özelliklerine genel bakış sağlar.  
+Bu konu, [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]OpenType yazı tipi teknolojisinin bazı temel özelliklerine genel bakış sağlar.  
   
 <a name="overview"></a>   
 ## <a name="opentype-font-format"></a>OpenType yazı tipi biçimi  
@@ -59,11 +59,11 @@ Bu konu, [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient
  Çeşitler, üst simgeler ve alt simgeler gibi farklı tipografik stilleri işlemek için kullanılır.  
   
 ### <a name="superscripts-and-subscripts"></a>Üst simgeler ve alt simgeler  
- @No__t-0 özelliği, OpenType yazı tipi için üst simge ve alt simge değerlerini ayarlamanıza olanak sağlar.  
+ <xref:System.Windows.Documents.Typography.Variants%2A> özelliği, OpenType yazı tipi için üst simge ve alt simge değerlerini ayarlamanıza olanak sağlar.  
   
  Aşağıdaki metin Palatino Linotype yazı tipi için üst simgeler görüntüler.  
   
- OpenType(./media/opentype-font-features/opentype-superscripts.gif "üst simgeler kullanılarak") ![OpenType üst simgeler metin kullanan metin]  
+ ![OpenType üst simgelerin kullanıldığı metin](./media/opentype-font-features/opentype-superscripts.gif "OpenType üst simgelerin kullanıldığı metin")  
   
  Aşağıdaki biçimlendirme örneğinde, <xref:System.Windows.Documents.Typography> nesnesinin özellikleri kullanılarak Palatino Linotype yazı tipi için üst simgelerin nasıl tanımlanacağı gösterilmektedir.  
   
@@ -71,7 +71,7 @@ Bu konu, [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient
   
  Aşağıdaki metin Palatino Linotype yazı tipi için alt simgeler görüntüler.  
   
- (./media/opentype-font-features/opentype-subscripts.gif "OpenType alt simgeleri kullanılarak") ![OpenType alt simgeler metin kullanan metin]  
+ ![OpenType alt simgeleri kullanan metin](./media/opentype-font-features/opentype-subscripts.gif "OpenType alt simgeleri kullanan metin")  
   
  Aşağıdaki biçimlendirme örneğinde, <xref:System.Windows.Documents.Typography> nesnesinin özellikleri kullanılarak Palatino Linotype yazı tipi için alt simgelerin nasıl tanımlanacağı gösterilmektedir.  
   
@@ -80,7 +80,7 @@ Bu konu, [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient
 ### <a name="decorative-uses-of-superscripts-and-subscripts"></a>Üst simgelerin ve alt simgelerin dekoratif kullanımları  
  Ayrıca, karışık büyük/küçük harf metin etkileri oluşturmak için üst simgeler ve alt simgeler de kullanabilirsiniz. Aşağıdaki metin Palatino Linotype yazı tipi için üst simge ve alt simge metnini görüntüler. Büyük harflerin etkilenmediğini unutmayın.  
   
- OpenType üst simgeler ve alt simgeler kullanılarak ![OpenType alt simgeleri ve]alt simgeler(./media/opentype-font-features/opentype-superscripts-subscripts.gif "metni") kullanan metin  
+ ![OpenType üst ve alt simgeler kullanan metin](./media/opentype-font-features/opentype-superscripts-subscripts.gif "OpenType üst ve alt simgeler kullanan metin")  
 
  Aşağıdaki biçimlendirme örneğinde, <xref:System.Windows.Documents.Typography> nesnesinin özellikleri kullanılarak bir yazı tipi için üst simgelerin ve alt simgelerin nasıl tanımlanacağı gösterilmektedir.  
   
@@ -92,7 +92,7 @@ Bu konu, [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient
   
  Aşağıdaki metin Pescadero yazı tipi için standart büyük harfleri, ardından "SmallCaps" ve "AllSmallCaps" olarak stillendirilmiş harfleri görüntüler. Bu durumda, üç sözcük için de aynı yazı tipi boyutu kullanılır.  
   
- OpenType büyük harfler(./media/opentype-font-features/opentype-capitals.gif "kullanılarak") ![OpenType büyük harf metin kullanan metin]  
+ ![OpenType büyük harflerin kullanıldığı metin](./media/opentype-font-features/opentype-capitals.gif "OpenType büyük harflerin kullanıldığı metin")  
   
  Aşağıdaki biçimlendirme örneğinde, <xref:System.Windows.Documents.Typography> nesnesinin özellikleri kullanılarak Pescadero yazı tipi için büyük harflerin nasıl tanımlanacağı gösterilmektedir. "SmallCaps" biçimi kullanıldığında, önde gelen büyük harf yok sayılır.  
   
@@ -101,7 +101,7 @@ Bu konu, [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient
 ### <a name="titling-capitals"></a>Başlık büyük harfleri  
  Başlık büyük harfleri ağırlığa göre daha hafif ve orantısız ve normal büyük harfler daha zarif bir görünüm sağlamak için tasarlanmıştır. Başlık harfleri genellikle daha büyük yazı tipi boyutlarında başlık olarak kullanılır. Aşağıdaki metin Pescadero yazı tipi için normal ve başlık büyük harfler görüntüler. İkinci satırdaki metnin daha dar olan genişliğini fark edin.  
   
- OpenType başlık büyük harfleri(./media/opentype-font-features/opentype-titling-capitals.gif "kullanarak") ![OpenType başlık büyük harf metni kullanan metin]  
+ ![OpenType başlık büyük harflerin kullanıldığı metin](./media/opentype-font-features/opentype-titling-capitals.gif "OpenType başlık büyük harflerin kullanıldığı metin")  
   
  Aşağıdaki biçimlendirme örneği, <xref:System.Windows.Documents.Typography> nesnesinin özelliklerini kullanarak Pescadero yazı tipi için başlık yazılanın nasıl tanımlanacağını gösterir.  
   
@@ -110,7 +110,7 @@ Bu konu, [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient
 ### <a name="capital-spacing"></a>Sermaye aralığı  
  Sermaye aralığı, metinde tüm büyük harfleri kullanırken daha fazla boşluk sağlamanıza olanak tanıyan bir özelliktir. Büyük harfler genellikle küçük harflerle Blend için tasarlanmıştır. Büyük harf ve küçük harf arasında çekici görünen aralıklar, tüm büyük harfler kullanıldığında çok sıkı görünebilir. Aşağıdaki metin Pescadero yazı tipi için normal ve büyük harf aralıklarını görüntüler.  
   
- OpenType(./media/opentype-font-features/opentype-capital-spacing.gif "sermaye boşluğu kullanılarak") ![OpenType büyük harf aralığı metnini kullanan metin]  
+ ![OpenType büyük aralıklarını kullanan metin](./media/opentype-font-features/opentype-capital-spacing.gif "OpenType büyük aralıklarını kullanan metin")  
  
  Aşağıdaki biçimlendirme örneği, <xref:System.Windows.Documents.Typography> nesnesinin özelliklerini kullanarak Pescadero yazı tipi için sermaye aralıklarının nasıl tanımlanacağını gösterir.  
   
@@ -130,7 +130,7 @@ Bu konu, [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient
   
  Aşağıdaki metin Pericles yazı tipi için standart ligatür glifleri görüntüler.  
   
- OpenType standart(./media/opentype-font-features/opentype-standard-ligatures.gif "ligatür kullanılarak") ![OpenType standart ligatür metin kullanan metin]  
+ ![OpenType standart ligatür kullanan metin](./media/opentype-font-features/opentype-standard-ligatures.gif "OpenType standart ligatür kullanan metin")  
   
  Aşağıdaki biçimlendirme örneği, <xref:System.Windows.Documents.Typography> nesnesinin özelliklerini kullanarak Pericles yazı tipi için standart ligatür karakterlerinin nasıl tanımlanacağını gösterir.  
   
@@ -138,19 +138,19 @@ Bu konu, [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient
   
  Aşağıdaki metin Pericles yazı tipi için isteğe bağlı ligatür glifleri görüntüler.  
   
- OpenType kısıtlı(./media/opentype-font-features/opentype-discretionary-ligatures.gif "ligatür kullanılarak") ![OpenType isteğe bağlı ligatür metin kullanan metin]  
+ ![OpenType isteğe bağlı ligatür kullanan metin](./media/opentype-font-features/opentype-discretionary-ligatures.gif "OpenType isteğe bağlı ligatür kullanan metin")  
   
  Aşağıdaki biçimlendirme örneğinde, <xref:System.Windows.Documents.Typography> nesnesinin özellikleri kullanılarak Pericles yazı tipi için isteğe bağlı ligatür karakterlerinin nasıl tanımlanacağı gösterilmektedir.  
   
  [!code-xaml[OpenTypeFontSamples#5](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#5)]  
   
- Varsayılan olarak [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] ' daki OpenType yazı tipleri standart ligatürleri etkinleştirir. Örneğin, Palatino Linotype yazı tipini kullanırsanız standart ligatür "Fi", "FF" ve "fl" Birleşik karakter karakteri olarak görünür. Her standart ligatür için karakter çiftinin birbirlerine dokunduğuna dikkat edin.  
+ Varsayılan olarak [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] OpenType yazı tipleri standart ligatürleri etkinleştirir. Örneğin, Palatino Linotype yazı tipini kullanırsanız standart ligatür "Fi", "FF" ve "fl" Birleşik karakter karakteri olarak görünür. Her standart ligatür için karakter çiftinin birbirlerine dokunduğuna dikkat edin.  
   
- (./media/opentype-font-features/opentype-standard-ligatures-palatino.gif "Palatino Linotype ile") OpenType ![standart ligatür kullanılarak Palatino]Linotype metin ile OpenType standart ligatürleri kullanan metin    
+ ![Palatino Linotype ile OpenType standart ligatür kullanan metin](./media/opentype-font-features/opentype-standard-ligatures-palatino.gif "Palatino Linotype ile OpenType standart ligatür kullanan metin")    
    
  Ancak standart ligatür özelliklerini devre dışı bırakarak "FF" gibi standart bir ligatür, Birleşik bir karakter karakteri yerine iki ayrı karakter olarak görüntülenir.  
   
- Devre dışı olan ![OpenType standart ligatür metin kullanan metin]devre(./media/opentype-font-features/disabled-opentype-standard-ligatures.gif "dışı OpenType standart ligatür")  
+ ![Devre dışı OpenType standart ligatür kullanan metin](./media/opentype-font-features/disabled-opentype-standard-ligatures.gif "Devre dışı OpenType standart ligatür kullanan metin")  
     
  Aşağıdaki biçimlendirme örneği, <xref:System.Windows.Documents.Typography> nesnesinin özelliklerini kullanarak Palatino Linotype yazı tipi için standart ligatür karakterlerinin nasıl devre dışı bırakılacağını gösterir.  
   
@@ -160,11 +160,11 @@ Bu konu, [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient
 ## <a name="swashes"></a>Lemeler  
  Süslemeler, kaligrafi ile sık kullanılan süslemeler ile ilişkili olan dekoratif karakterlerdir. Aşağıdaki metin Pescadero yazı tipi için standart ve dalgalı glifleri görüntüler.  
   
- (./media/opentype-font-features/opentype-standard-swash-glyphs.gif "OpenType standart ve dalgalı Glifler kullanılarak") ![OpenType standart ve dalgalı karakterler metnini kullanan metin]  
+ ![OpenType standart ve dalgalı glifleri kullanan metin](./media/opentype-font-features/opentype-standard-swash-glyphs.gif "OpenType standart ve dalgalı glifleri kullanan metin")  
 
  Dalgalı karakterler genellikle olay duyuruları gibi kısa tümceciklere dekoratif öğeler olarak kullanılır. Aşağıdaki metin, olayın adının büyük harflerini vurgulamak için süslemeler kullanır.  
   
- (./media/opentype-font-features/opentype-swashes.gif "OpenType süslemeler kullanılarak") ![OpenType dalgalı karakterlerinin metni kullanma]  
+ ![OpenType dalgalı karakterlerinin kullanıldığı metin](./media/opentype-font-features/opentype-swashes.gif "OpenType dalgalı karakterlerinin kullanıldığı metin")  
   
  Aşağıdaki biçimlendirme örneği, <xref:System.Windows.Documents.Typography> nesnesinin özellikleri kullanılarak bir yazı tipi için süslemeleri nasıl tanımlayacağınızı gösterir.  
   
@@ -173,7 +173,7 @@ Bu konu, [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient
 ### <a name="contextual-swashes"></a>Bağlamsal süslemeler  
  Dalgalı karakterlerin belirli birleşimleri, bitişik harfler üzerinde çakışan ligatür gibi etkileyici bir görünüme neden olabilir. Bağlamsal dalgalı bir değer kullanmak daha iyi bir görünüm üreten bir alternatif dalgalı karakter kullanmanıza olanak sağlar. Aşağıdaki metin, bağlamsal bir süs uygulandıktan önceki ve sonraki aynı kelimeyi gösterir.  
   
- OpenType bağlamsal(./media/opentype-font-features/opentype-contextual-swashes.gif "süslemeler kullanılarak") ![OpenType bağlamsal süslemeler metnini kullanan metin]  
+ ![OpenType bağlamsal dalgalı karakterlerinin kullanıldığı metin](./media/opentype-font-features/opentype-contextual-swashes.gif "OpenType bağlamsal dalgalı karakterlerinin kullanıldığı metin")  
   
  Aşağıdaki biçimlendirme örneği, <xref:System.Windows.Documents.Typography> nesnesinin özelliklerini kullanarak Pescadero yazı tipi için bağlamsal bir süs nasıl tanımlanacağını gösterir.  
   
@@ -183,11 +183,11 @@ Bu konu, [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient
 ## <a name="alternates"></a>Bağlamsal  
  Alternatifler, standart bir karakter yerine kullanılabilecek karakterlerdir. Aşağıdaki örneklerde kullanılan Pericles yazı tipi gibi OpenType yazı tipleri, metin için farklı görünümler oluşturmak üzere kullanabileceğiniz alternatif glifler içerebilir. Aşağıdaki metin Pericles yazı tipi için standart glifleri görüntüler.  
   
- OpenType standart glifleri(./media/opentype-font-features/opentype-standard-glyphs.gif "kullanarak") ![OpenType standart glifleri metin kullanan metin]  
+ ![OpenType standart karakterlerinin kullanıldığı metin](./media/opentype-font-features/opentype-standard-glyphs.gif "OpenType standart karakterlerinin kullanıldığı metin")  
 
  Pericles OpenType yazı tipi, standart glif kümesine stil alternatifleri sağlayan ek glifler içerir. Aşağıdaki metin, biçimsel alternatif glifleri görüntüler.  
   
- (./media/opentype-font-features/opentype-stylistic-alternate-glyphs.gif "OpenType biçimsel alternatif glifler kullanılarak") ![OpenType biçimsel diğer glif metinlerini kullanan metin]  
+ ![OpenType biçimsel alternatif glifleri kullanan metin](./media/opentype-font-features/opentype-stylistic-alternate-glyphs.gif "OpenType biçimsel alternatif glifleri kullanan metin")  
   
  Aşağıdaki biçimlendirme örneği, <xref:System.Windows.Documents.Typography> nesnesinin özelliklerini kullanarak Pericles yazı tipi için biçimsel alternatif karakterlerin nasıl tanımlanacağını gösterir.  
   
@@ -195,7 +195,7 @@ Bu konu, [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient
   
  Aşağıdaki metin Pericles yazı tipi için diğer biçimsel diğer glifleri görüntüler.  
   
- Pericles yazı(./media/opentype-font-features/opentype-stylistic-alternate-glyphs-pericles.gif "tipi Için OpenType biçimsel") alternatif glifleri kullanarak ![Pericles yazı tipi metni için OpenType biçimsel alternatif glifleri kullanan metin]
+ ![Pericles yazı tipi için OpenType biçimsel alternatif glifleri kullanan metin](./media/opentype-font-features/opentype-stylistic-alternate-glyphs-pericles.gif "Pericles yazı tipi için OpenType biçimsel alternatif glifleri kullanan metin")
 
  Aşağıdaki biçimlendirme örneği, bu diğer biçimsel diğer karakterlerin nasıl tanımlanacağını göstermektedir.  
   
@@ -204,7 +204,7 @@ Bu konu, [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient
 ### <a name="random-contextual-alternates"></a>Rastgele bağlamsal alternatifler  
  Rastgele bağlamsal alternatifler, tek bir karakter için birden çok yedek karakter sağlar. Betik türü yazı tipleriyle uygulandığında, bu özellik, görünümde hafif farklılıklar bulunan rastgele seçilmiş karakterlerin bir kümesini kullanarak el yazısını taklit edebilir. Aşağıdaki metin Lindsey yazı tipi için rastgele bağlamsal alternatifleri kullanır. "A" harfinin görünümde biraz farklılık gösterdiğinden emin olun  
   
- OpenType rastgele bağlamsal alternatifleri kullanan ![metin], OpenType rastgele bağlamsal(./media/opentype-font-features/opentype-random-contextual-alternates.gif "alternatifleri kullanarak") metin  
+ ![OpenType rastgele bağlamsal alternatifleri kullanan metin](./media/opentype-font-features/opentype-random-contextual-alternates.gif "OpenType rastgele bağlamsal alternatifleri kullanan metin")  
   
  Aşağıdaki biçimlendirme örneği, <xref:System.Windows.Documents.Typography> nesnesinin özelliklerini kullanarak Lindsey yazı tipi için rastgele bağlamsal alternatiflerini nasıl tanımlayacağınızı gösterir.  
   
@@ -213,7 +213,7 @@ Bu konu, [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient
 ### <a name="historical-forms"></a>Geçmiş formları  
  Geçmiş formları geçmişte ortak olan tipografik kurallardır. Aşağıdaki metin Palatino Linotype yazı tipi için bir karakter geçmiş biçimi kullanarak "Boston, Massachusetts" ifadesini görüntüler.  
   
- OpenType(./media/opentype-font-features/opentype-historical-forms.gif "Geçmiş formlarını kullanarak") ![OpenType geçmiş formları metnini kullanan metin]  
+ ![OpenType geçmiş formlarını kullanan metin](./media/opentype-font-features/opentype-historical-forms.gif "OpenType geçmiş formlarını kullanan metin")  
    
  Aşağıdaki biçimlendirme örneğinde, <xref:System.Windows.Documents.Typography> nesnesinin özellikleri kullanılarak Palatino Linotype yazı tipi için geçmiş formlarının nasıl tanımlanacağı gösterilmektedir.  
   
@@ -228,7 +228,7 @@ Bu konu, [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient
   
  Aşağıdaki metin Palatino Linotype yazı tipi için kesir stillerini görüntüler.  
   
- OpenType eğik çizgili ve(./media/opentype-font-features/opentype-slashed-stacked-fractions.gif "yığılmış") kesirler kullanarak ![OpenType eğik çizgili ve yığılmış kesirler metin kullanan metin]  
+ ![OpenType eğik çizgili ve yığılmış kesirler kullanan metin](./media/opentype-font-features/opentype-slashed-stacked-fractions.gif "OpenType eğik çizgili ve yığılmış kesirler kullanan metin")  
    
  Aşağıdaki biçimlendirme örneğinde, <xref:System.Windows.Documents.Typography> nesnesinin özellikleri kullanılarak Palatino Linotype yazı tipi için kesir stillerinin nasıl tanımlanacağı gösterilmektedir.  
   
@@ -237,11 +237,11 @@ Bu konu, [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient
 ### <a name="old-style-numerals"></a>Eski stil rakamları  
  OpenType yazı tipleri eski bir stil rakamı biçimini destekler. Bu biçim, artık standart olmayan stillerdeki rakamları görüntülemek için yararlıdır. Aşağıdaki metin Palatino Linotype yazı tipi için standart ve eski stil sayısal biçimlerinde bir 18 yüzyıl tarihi görüntüler.  
   
- OpenType eski stil rakamlarını kullanan ![metin]metin olan(./media/opentype-font-features/opentype-old-style-numerals.gif "OpenType eski stil rakamları")  
+ ![OpenType eski stil rakamlarını kullanan metin](./media/opentype-font-features/opentype-old-style-numerals.gif "OpenType eski stil rakamlarını kullanan metin")  
     
  Aşağıdaki metin Palatino Linotype yazı tipi için standart rakamları ve ardından eski stil rakamlarını görüntüler.  
   
- ![OpenType eski stil rakamındaki metin],(./media/opentype-font-features/opentype-old-style-numeral-sets.gif "OpenType eski stil rakamı kümelerini kullanarak metin") belirler  
+ ![OpenType eski stil sayısal kümelerini kullanan metin](./media/opentype-font-features/opentype-old-style-numeral-sets.gif "OpenType eski stil sayısal kümelerini kullanan metin")  
   
  Aşağıdaki biçimlendirme örneği, <xref:System.Windows.Documents.Typography> nesnesinin özelliklerini kullanarak Palatino Linotype yazı tipi için eski stil rakamlarını nasıl tanımlayacağınızı gösterir.  
   
@@ -252,7 +252,7 @@ Bu konu, [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient
   
  Aşağıdaki metin, Miramonte yazı tipini kullanarak ilk sütunda iki orantılı rakamları görüntüler. "5" ve "1" rakamları arasındaki genişlik farkını dikkate alın. İkinci sütunda, tablolu şekil özelliği kullanılarak ayarlanan genişlikler ile aynı iki sayısal değer gösterilir.  
   
- OpenType orantılı(./media/opentype-font-features/opentype-proportional-tabular-figures.gif "ve tablolu rakamları kullanarak") ![OpenType orantılı & Tablolu şekil metni kullanan metin]  
+ ![OpenType orantılı & Tablolu rakamları kullanan metin](./media/opentype-font-features/opentype-proportional-tabular-figures.gif "OpenType orantılı ve tablo rakamlarını kullanan metin")  
     
  Aşağıdaki biçimlendirme örneği, <xref:System.Windows.Documents.Typography> nesnesinin özelliklerini kullanarak Miramonte yazı tipi için orantılı ve tablo rakamlarını nasıl tanımlayacağınızı gösterir.  
   
@@ -263,7 +263,7 @@ Bu konu, [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient
   
  Aşağıdaki metin, Miramonte yazı tipini kullanarak örnek bir sıra tanımlayıcısı görüntüler. İlk satır standart rakamları kullanır. İkinci satır, büyük harfli "O" harfle daha iyi bir kontrast sağlamak için eğik çizgili sıfır rakamları kullandı.  
   
- OpenType eğik çizgili sıfır(./media/opentype-font-features/opentype-slashed-zero-numerals.gif "rakamlarını kullanarak") ![OpenType eğik çizgili sıfır rakamları metin kullanan metin]  
+ ![OpenType eğik çizgili sıfır rakamlarını kullanan metin](./media/opentype-font-features/opentype-slashed-zero-numerals.gif "OpenType eğik çizgili sıfır rakamlarını kullanan metin")  
     
  Aşağıdaki biçimlendirme örneği, <xref:System.Windows.Documents.Typography> nesnesinin özelliklerini kullanarak Miramonte yazı tipi için eğik çizgili sıfır rakamları nasıl tanımlayacağınızı gösterir.  
   
@@ -271,11 +271,11 @@ Bu konu, [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient
   
 <a name="typography_class"></a>   
 ## <a name="typography-class"></a>Tipografi sınıfı  
- @No__t-0 nesnesi, OpenType yazı tipinin desteklediği özellikler kümesini kullanıma sunar. Biçimlendirme içinde <xref:System.Windows.Documents.Typography> ' ın özelliklerini ayarlayarak OpenType özelliklerinden faydalanan belgeleri kolayca yazabilirsiniz.  
+ <xref:System.Windows.Documents.Typography> nesnesi, OpenType yazı tipinin desteklediği özellikler kümesini kullanıma sunar. Biçimlendirme içinde <xref:System.Windows.Documents.Typography> ' ın özelliklerini ayarlayarak OpenType özelliklerinden faydalanan belgeleri kolayca yazabilirsiniz.  
   
  Aşağıdaki metin Pescadero yazı tipi için standart büyük harfleri, ardından "SmallCaps" ve "AllSmallCaps" olarak stillendirilmiş harfleri görüntüler. Bu durumda, üç sözcük için de aynı yazı tipi boyutu kullanılır.  
   
- OpenType büyük harfler(./media/opentype-font-features/opentype-capitals.gif "kullanılarak") ![OpenType büyük harf metin kullanan metin]  
+ ![OpenType büyük harflerin kullanıldığı metin](./media/opentype-font-features/opentype-capitals.gif "OpenType büyük harflerin kullanıldığı metin")  
     
  Aşağıdaki biçimlendirme örneğinde, <xref:System.Windows.Documents.Typography> nesnesinin özellikleri kullanılarak Pescadero yazı tipi için büyük harflerin nasıl tanımlanacağı gösterilmektedir. "SmallCaps" biçimi kullanıldığında, önde gelen büyük harf yok sayılır.  
   
@@ -300,7 +300,7 @@ Bu konu, [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient
 |<xref:System.Windows.Documents.Typography.ContextualSwashes%2A>|Sayısal değer-bayt|0|  
 |<xref:System.Windows.Documents.Typography.DiscretionaryLigatures%2A>|<xref:System.Boolean>|`false`|  
 |<xref:System.Windows.Documents.Typography.EastAsianExpertForms%2A>|<xref:System.Boolean>|`false`|  
-|<xref:System.Windows.Documents.Typography.EastAsianLanguage%2A>|<xref:System.Windows.FontEastAsianLanguage.HojoKanji> &#124; <xref:System.Windows.FontEastAsianLanguage.Jis04> &#124; <xref:System.Windows.FontEastAsianLanguage.Jis78> &#124; <xref:System.Windows.FontEastAsianLanguage.Jis83> &#124; <xref:System.Windows.FontEastAsianLanguage.Jis90> &#124; 0 &#124; 2 &#124; 4 &#124; 6 &#124; 8|<xref:System.Windows.FontEastAsianLanguage.Normal?displayProperty=nameWithType>|  
+|<xref:System.Windows.Documents.Typography.EastAsianLanguage%2A>|<xref:System.Windows.FontEastAsianLanguage.HojoKanji> &#124;<xref:System.Windows.FontEastAsianLanguage.Jis04>&#124;<xref:System.Windows.FontEastAsianLanguage.Jis78>&#124;<xref:System.Windows.FontEastAsianLanguage.Jis83>&#124;<xref:System.Windows.FontEastAsianLanguage.Jis90>&#124;<xref:System.Windows.FontEastAsianLanguage.NlcKanji>&#124;<xref:System.Windows.FontEastAsianLanguage.Normal>&#124;<xref:System.Windows.FontEastAsianLanguage.Simplified>&#124;<xref:System.Windows.FontEastAsianLanguage.Traditional>&#124;<xref:System.Windows.FontEastAsianLanguage.TraditionalNames>|<xref:System.Windows.FontEastAsianLanguage.Normal?displayProperty=nameWithType>|  
 |<xref:System.Windows.Documents.Typography.EastAsianWidths%2A>|<xref:System.Windows.FontEastAsianWidths.Full> &#124; <xref:System.Windows.FontEastAsianWidths.Half> &#124; <xref:System.Windows.FontEastAsianWidths.Normal> &#124; <xref:System.Windows.FontEastAsianWidths.Proportional> &#124; <xref:System.Windows.FontEastAsianWidths.Quarter> &#124; 0|<xref:System.Windows.FontEastAsianWidths.Normal?displayProperty=nameWithType>|  
 |<xref:System.Windows.Documents.Typography.Fraction%2A>|<xref:System.Windows.FontFraction.Normal> &#124; <xref:System.Windows.FontFraction.Slashed> &#124; <xref:System.Windows.FontFraction.Stacked>|<xref:System.Windows.FontFraction.Normal?displayProperty=nameWithType>|  
 |<xref:System.Windows.Documents.Typography.HistoricalForms%2A>|<xref:System.Boolean>|`false`|  
