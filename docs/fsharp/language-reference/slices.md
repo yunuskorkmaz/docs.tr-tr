@@ -2,16 +2,16 @@
 title: Dilimler (F#)
 description: Mevcut F# veri türleri için dilimleri kullanma ve diğer veri türleri için kendi dilimlerinizi tanımlama hakkında bilgi edinin.
 ms.date: 01/22/2019
-ms.openlocfilehash: 3067982c2b4249312c7e9365bbfb994be840911d
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: cbff1b055ea99ef708f9db191be49275e630ee90
+ms.sourcegitcommit: 9bd1c09128e012b6e34bdcbdf3576379f58f3137
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627137"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798911"
 ---
 # <a name="slices"></a>Dilimler
 
-' F#De, bir dilim veri türünün bir alt kümesidir. Veri türünün bir dilimini alabilmesi için, veri türü kapsam içinde olan bir `GetSlice` Yöntem ya da bir [tür uzantısı](type-extensions.md) içinde tanımlanmalıdır. Bu makalede, mevcut F# türlerden dilimlerin nasıl alınacağını ve kendinizinkini nasıl tanımlayabileceğiniz açıklanır.
+' F#De, bir dilim veri türünün bir alt kümesidir. Veri türünün bir dilimini alabilmesi için, veri türü bir `GetSlice` yöntemi ya da kapsam içinde olan bir [tür uzantısı](type-extensions.md) içinde tanımlanmalıdır. Bu makalede, mevcut F# türlerden dilimlerin nasıl alınacağını ve kendinizinkini nasıl tanımlayabileceğiniz açıklanır.
 
 Dilimler, [Dizin oluşturuculardan](./members/indexed-properties.md)benzerdir, ancak temel alınan veri yapısından tek bir değer vermek yerine birden çok tane oluşur.
 
@@ -89,7 +89,7 @@ let twoByTwo = A.[0..1,0..1]
 printfn "%A" twoByTwo
 ```
 
-F# Çekirdek kitaplık 3B diziler için tanımlamaz `GetSlice`. Daha fazla boyut için bu veya diğer dizileri dilimlemek isterseniz, `GetSlice` üyeyi kendiniz tanımlamanız gerekir.
+Çekirdek F# kitaplık, 3B diziler için`GetSlice`tanımlamaz. Daha fazla boyut için bu veya diğer dizileri dilimlemek istiyorsanız `GetSlice` üyesini kendiniz tanımlamanız gerekir.
 
 ## <a name="defining-slices-for-other-data-structures"></a>Diğer veri yapıları için dilimleri tanımlama
 
@@ -101,7 +101,7 @@ F# Çekirdek kitaplık 3B diziler için tanımlamaz `GetSlice`. Daha fazla boyut
 open System
 
 type ArraySegment<'TItem> with
-    member segment.GetSlice(?start, ?finish) =
+    member segment.GetSlice(start, finish) =
         let start = defaultArg start 0
         let finish = defaultArg finish segment.Count
         ArraySegment(segment.Array, segment.Offset + start, finish - start)
@@ -112,7 +112,7 @@ let slice = arr.[2..5] //[ 3; 4; 5]
 
 ### <a name="use-inlining-to-avoid-boxing-if-it-is-necessary"></a>Gerekirse kutulamayı önlemek için satır içi kullanın
 
-Aslında bir struct olan bir tür için dilim tanımlıyorsanız, `inline` `GetSlice` üye yapmanızı öneririz. F# Derleyici, Dilimleme sonucu olarak herhangi bir yığın ayırmasını önleyerek isteğe bağlı bağımsız değişkenleri en iyi duruma getirir. Bu, yığın üzerinde ayrılabilen gibi Dilimleme yapıları <xref:System.Span%601> için kritik öneme sahiptir.
+Aslında bir struct olan bir tür için dilim tanımlıyorsanız `GetSlice` üyesini `inline` öneririz. F# Derleyici, Dilimleme sonucu olarak herhangi bir yığın ayırmasını önleyerek isteğe bağlı bağımsız değişkenleri en iyi duruma getirir. Bu, yığında ayrılabilen <xref:System.Span%601> gibi Dilimleme yapıları için kritik öneme sahiptir.
 
 ```fsharp
 open System

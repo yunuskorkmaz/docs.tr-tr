@@ -9,20 +9,20 @@ helpviewer_keywords:
 - Panel control [WPF]
 - custom Panel elements [WPF]
 ms.assetid: e0df4f1e-8c07-4e86-89a3-e22acfffdc2a
-ms.openlocfilehash: d4fc9d76ada9f27bd52619280b323691af9382c2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 31edc75114c5dad613e5b65e7d8b051e2c3713af
+ms.sourcegitcommit: 9bd1c09128e012b6e34bdcbdf3576379f58f3137
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61910968"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72799138"
 ---
 # <a name="how-to-create-a-custom-panel-element"></a>Nasıl yapılır: Özel Panel Öğesi Oluşturma
 ## <a name="example"></a>Örnek  
- Bu örnekte, varsayılan düzen davranışını geçersiz kılmak gösterilmektedir <xref:System.Windows.Controls.Panel> öğesi öğesinden türetilen özel düzen öğelerini oluşturup <xref:System.Windows.Controls.Panel>.  
+ Bu örnek, <xref:System.Windows.Controls.Panel> öğesinin varsayılan düzen davranışının nasıl geçersiz kılınacağını ve <xref:System.Windows.Controls.Panel>türetilen özel düzen öğelerinin nasıl oluşturulacağını gösterir.  
   
- Örnek, basit bir özel tanımlar <xref:System.Windows.Controls.Panel> adlı öğesi `PlotPanel`, alt öğeleri göre iki sabit kodlanmış x ve y-koordinatlarına yerleştirir. Bu örnekte, `x` ve `y` hem ayarlamak `50`; bu nedenle, tüm alt öğeleri x ve y yerde konumlandırılır eksenleri.  
+ Örnek, alt öğeleri iki sabit kodlanmış x ve y koordinatlarına göre konumlandırır `PlotPanel`adlı basit bir özel <xref:System.Windows.Controls.Panel> öğesi tanımlar. Bu örnekte, `x` ve `y` her ikisi de `50`olarak ayarlanmıştır; Bu nedenle, tüm alt öğeler x ve y eksenlerinde bu konumda konumlandırılır.  
   
- Özel uygulamak için <xref:System.Windows.Controls.Panel> davranışları örnekte <xref:System.Windows.FrameworkElement.MeasureOverride%2A> ve <xref:System.Windows.FrameworkElement.ArrangeOverride%2A> yöntemleri. Her yöntem döndürür <xref:System.Windows.Size> alt öğeleri konumlandırmak ve işlemek gerekli olan veriler.  
+ Özel <xref:System.Windows.Controls.Panel> davranışları uygulamak için, örnek <xref:System.Windows.FrameworkElement.MeasureOverride%2A> ve <xref:System.Windows.FrameworkElement.ArrangeOverride%2A> yöntemlerini kullanır. Her yöntem alt öğeleri konumlandırmak ve işlemek için gereken <xref:System.Windows.Size> verileri döndürür.  
   
  [!code-cpp[PlotPanel#1](~/samples/snippets/cpp/VS_Snippets_Wpf/PlotPanel/CPP/PlotPanel.cpp#1)]
  [!code-csharp[PlotPanel#1](~/samples/snippets/csharp/VS_Snippets_Wpf/PlotPanel/CSharp/PlotPanel.cs#1)]
@@ -32,4 +32,3 @@ ms.locfileid: "61910968"
 
 - <xref:System.Windows.Controls.Panel>
 - [Panellere Genel Bakış](panels-overview.md)
-- [Özel içerik kaydırma paneli örneği oluşturma](https://go.microsoft.com/fwlink/?LinkID=159979)

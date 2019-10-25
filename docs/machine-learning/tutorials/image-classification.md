@@ -6,12 +6,12 @@ ms.topic: tutorial
 ms.custom: mvc, title-hack-0612
 author: natke
 ms.author: nakersha
-ms.openlocfilehash: 8ae966330ca85722c72c92e26363d99c7d9de3e7
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 399e9ce3288d53049e968688736f5b953d7e5b80
+ms.sourcegitcommit: 9bd1c09128e012b6e34bdcbdf3576379f58f3137
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71698644"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72799082"
 ---
 # <a name="tutorial-generate-an-mlnet-image-classification-model-from-a-pre-trained-tensorflow-model"></a>Öğretici: önceden eğitilen bir TensorFlow modelinden ML.NET görüntü sınıflandırma modeli oluşturma
 
@@ -39,13 +39,13 @@ Bu öğretici için, görüntüleri 3 kategoriye göre sınıflandıran bir ML.N
 
 ## <a name="prerequisites"></a>Prerequisites
 
-* [Visual Studio 2017 15,6 veya üzeri](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) ".NET Core platformlar arası geliştirme" iş yükü yüklendi.
+* [Visual Studio 2017 sürüm 15,6 veya üzeri](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) ".NET Core platformlar arası geliştirme" iş yükü yüklendi.
 
 * Microsoft.ML 1.3.1 NuGet paketi
 * Microsoft. ML. ımageanalytics 1.3.1 NuGet paketi
 * Microsoft. ML. TensorFlow 1.3.1 NuGet paketi
 
-* [Öğretici varlıkları dizini. ZIP dosyası](https://download.microsoft.com/download/0/E/5/0E5E0136-21CE-4C66-AC18-9917DED8A4AD/image-classifier-assets.zip)
+* [Öğretici varlıkları dizini. ZIP dosyası](https://github.com/dotnet/samples/blob/master/machine-learning/tutorials/TransferLearningTF/image-classifier-assets.zip)
 
 * [InceptionV1 Machine Learning modeli](https://storage.googleapis.com/download.tensorflow.org/models/inception5h.zip)
 
@@ -67,16 +67,18 @@ Görüntü sınıflandırması, görüntüleri otomatik olarak kategoriler halin
 
  Aşağıdaki görüntülerde olduğu gibi, bir resmin (n) yiyecek, oyunı veya gereç olduğunu belirleme:
 
-![pizza Image @ no__t-1 @ no__t-2teddy ayı Image @ no__t-3 @ no__t-4toaster Image @ no__t-5
+![pizza Image](./media/image-classification/220px-Pepperoni_pizza.jpg)
+![oyuncak ayı görüntü](./media/image-classification/119px-Nalle_-_a_small_brown_teddy_bear.jpg)
+![Toaster Image](./media/image-classification/193px-Broodrooster.jpg)
 
 >[!Note]
 > Önceki görüntüler Wikimedia Commons ' a aittir ve aşağıdaki gibi verilmiştir:
 >
-> * "220px-Pepperoni_pizza. jpg" genel etki alanı, https://commons.wikimedia.org/w/index.php?curid=79505,
-> * [Jonık](https://commons.wikimedia.org/wiki/User:Jonik) -Self-Photo, CC BY-SA 2,0 https://commons.wikimedia.org/w/index.php?curid=48166 ile "119px-Nalle_-_a_small_brown_teddy_bear. jpg".
+> * "220px-Pepperoni_pizza. jpg" genel etki alanı, https://commons.wikimedia.org/w/index.php?curid=79505 ,
+> * [Jonık](https://commons.wikimedia.org/wiki/User:Jonik) -Self-Photo, CC BY-SA 2,0 https://commons.wikimedia.org/w/index.php?curid=48166 tarafından "119px-Nalle_-_a_small_brown_teddy_bear. jpg".
 > * "193px-Broodrooster. jpg"- [k. Minderhoud](https://nl.wikipedia.org/wiki/Gebruiker:Michiel1972) -kendi ÇALıŞMASı, CC BY-SA 3,0, https://commons.wikimedia.org/w/index.php?curid=27403
 
-@No__t-0, görüntüleri bin kategoride sınıflandırmakta, ancak bu öğreticide, görüntüleri daha küçük bir kategori kümesinde ve yalnızca bu kategorilerden sınıflandırmanız gerekir. @No__t-1 ' in `transfer` kısmını girin. @No__t-0 ' ın, görüntüleri tanıma ve sınıflandırma özelliğini özel görüntü sınıflandırıcınızın yeni sınırlı kategorilerine aktarabilirsiniz.
+`Inception model` görüntüleri bin kategoride sınıflandırıp, ancak bu öğreticide, görüntüleri daha küçük bir kategori kümesinde ve yalnızca bu kategorilerden sınıflandırmanız gerekir. `transfer learning``transfer` bölümünü girin. `Inception model`, resimleri tanıma ve sınıflandırıp özel görüntü sınıflandırıcınızın yeni sınırlı kategorilerine aktarabilirsiniz.
 
 * Yemek
 * Cağı
@@ -84,9 +86,9 @@ Görüntü sınıflandırması, görüntüleri otomatik olarak kategoriler halin
 
 Bu öğretici, `ImageNet` veri kümesi üzerinde eğitilen popüler bir görüntü tanıma modeli olan TensorFlow [Inception modeli](https://storage.googleapis.com/download.tensorflow.org/models/inception5h.zip) derin öğrenme modelini kullanır. TensorFlow modeli, tüm görüntüleri "şemsiye", "Jersey" ve "Dishronı" gibi binlik bir sınıfa göre sınıflandırır.
 
-@No__t-0, binlerce farklı görüntüde önceden eğitildiğinden, dahili olarak görüntü tanımlama için gereken [görüntü özelliklerini](https://en.wikipedia.org/wiki/Feature_(computer_vision)) içerir. En az sınıfa sahip yeni bir modeli eğitebilmeniz için modelde bu iç görüntü özelliklerinden yararlanabilirsiniz.
+`Inception model`, binlerce farklı görüntüde önceden eğitildiğinden, dahili olarak görüntü tanımlama için gereken [görüntü özelliklerini](https://en.wikipedia.org/wiki/Feature_(computer_vision)) içerir. En az sınıfa sahip yeni bir modeli eğitebilmeniz için modelde bu iç görüntü özelliklerinden yararlanabilirsiniz.
 
-Aşağıdaki diyagramda gösterildiği gibi, .NET Core veya .NET Framework uygulamalarında ML.NET NuGet paketlerine bir başvuru eklersiniz. ML.NET ' nin altında, var olan eğitilen bir `TensorFlow` model dosyasını yükleyen kodu yazmanıza olanak tanıyan yerel `TensorFlow` kitaplığına ekler ve başvurur.
+Aşağıdaki diyagramda gösterildiği gibi, .NET Core veya .NET Framework uygulamalarında ML.NET NuGet paketlerine bir başvuru eklersiniz. ML.NET dahil olmak üzere, var olan eğitilen bir `TensorFlow` modeli dosyasını yükleyen kodu yazmanıza izin veren yerel `TensorFlow` kitaplığına başvurur.
 
 ![TensorFlow Transform ML.NET yay diyagramı](./media/image-classification/tensorflow-mlnet.png)
 
@@ -100,7 +102,7 @@ Bu eğitimci tarafından uygulanan algoritma, görüntü verilerinde çalışan 
 
 ### <a name="data"></a>Veri
 
-İki veri kaynağı vardır: `.tsv` dosyası ve görüntü dosyaları.  @No__t-0 dosyası iki sütun içerir: Birincisi, `ImagePath` olarak tanımlanır ve ikinci tane görüntüye karşılık gelen `Label` ' dir. Aşağıdaki örnek dosya bir başlık satırına sahip değildir ve şuna benzer:
+İki veri kaynağı vardır: `.tsv` dosyası ve görüntü dosyaları.  `tags.tsv` dosyası iki sütun içerir: Birincisi, `ImagePath` olarak tanımlanır ve ikinci tane görüntüye karşılık gelen `Label`. Aşağıdaki örnek dosya bir başlık satırına sahip değildir ve şuna benzer:
 
 <!-- markdownlint-disable MD010 -->
 ```tsv
@@ -135,13 +137,13 @@ Eğitim ve test görüntüleri, bir ZIP dosyasında indirileceği varlıklar kla
 
 ### <a name="download-assets"></a>Varlıkları indir
 
-1. [Proje Varlıkları Dizin ZIP dosyasını](https://download.microsoft.com/download/0/E/5/0E5E0136-21CE-4C66-AC18-9917DED8A4AD/image-classifier-assets.zip)indirin ve sıkıştırmayı açın.
+1. [Proje Varlıkları Dizin ZIP dosyasını](https://github.com/dotnet/samples/blob/master/machine-learning/tutorials/TransferLearningTF/image-classifier-assets.zip)indirin ve sıkıştırmayı açın.
 
-1. @No__t-0 dizinini *Transferlearningtf* proje dizininize kopyalayın. Bu dizin ve alt dizinleri, bu öğretici için gerekli olan veri ve destek dosyalarını (bir sonraki adımda indirecek ve ekleyeceğiniz bir model hariç) içerir.
+1. `assets` dizinini *Transferlearningtf* proje dizininize kopyalayın. Bu dizin ve alt dizinleri, bu öğretici için gerekli olan veri ve destek dosyalarını (bir sonraki adımda indirecek ve ekleyeceğiniz bir model hariç) içerir.
 
 1. [Inception modelini](https://storage.googleapis.com/download.tensorflow.org/models/inception5h.zip)indirin ve sıkıştırmayı açın.
 
-1. @No__t-0 dizininin içeriğini, *Transferlearningtf* Project `assets/inputs-train/inception` dizinine kopyalayın. Bu dizin, aşağıdaki görüntüde gösterildiği gibi, bu öğretici için gereken modeli ve ek destek dosyalarını içerir:
+1. `inception5h` dizininin içeriğini, *Transferlearningtf* Project `assets/inputs-train/inception` dizininize kopyalamanız yeterlidir. Bu dizin, aşağıdaki görüntüde gösterildiği gibi, bu öğretici için gereken modeli ve ek destek dosyalarını içerir:
 
    ![Dizin içeriğini geçersiz kılma](./media/image-classification/inception-files.png)
 
@@ -153,7 +155,7 @@ Eğitim ve test görüntüleri, bir ZIP dosyasında indirileceği varlıklar kla
 
     [!code-csharp[AddUsings](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#AddUsings)]
 
-1. Varlık yollarını belirtmek için, aşağıdaki kodu `Main` yönteminin üstüne doğru satıra ekleyin:
+1. Varlık yollarını belirtmek için, `Main` yönteminin hemen üstüne aşağıdaki kodu ekleyin:
 
     [!code-csharp[DeclareGlobalVariables](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#DeclareGlobalVariables)]
 
@@ -161,12 +163,12 @@ Eğitim ve test görüntüleri, bir ZIP dosyasında indirileceği varlıklar kla
 
     [!code-csharp[DeclareImageData](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#DeclareImageData)]
 
-    `ImageData`, giriş resmi veri sınıfıdır ve aşağıdaki <xref:System.String> alanlarına sahiptir:
+    `ImageData`, giriş resmi veri sınıfıdır ve aşağıdaki <xref:System.String> alanlara sahiptir:
 
-    * `ImagePath`, resim dosyası adını içerir.
-    * `Label`, resim etiketi için bir değer içerir.
+    * `ImagePath` resim dosyası adını içerir.
+    * `Label` resim etiketi için bir değer içerir.
 
-1. @No__t için projenize yeni bir sınıf ekleyin-0:
+1. `ImagePrediction`için projenize yeni bir sınıf ekleyin:
 
     [!code-csharp[DeclareImagePrediction](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#DeclareImagePrediction)]
 
@@ -175,15 +177,15 @@ Eğitim ve test görüntüleri, bir ZIP dosyasında indirileceği varlıklar kla
     * `Score`, belirli bir görüntü sınıflandırması için güvenirlik yüzdesini içerir.
     * `PredictedLabelValue`, tahmin edilen görüntü sınıflandırma etiketi için bir değer içerir.
 
-    `ImagePrediction`, model eğitilen bir tahmin için kullanılan sınıftır. Görüntü yolu için `string` (`ImagePath`) vardır. @No__t-0, modeli yeniden kullanmak ve geliştirmek için kullanılır. @No__t-0, tahmin ve değerlendirme sırasında kullanılır. Değerlendirme için eğitim verileri olan bir giriş, tahmin edilen değerler ve model kullanılır.
+    `ImagePrediction`, model eğitilen bir tahmin için kullanılan sınıftır. Görüntü yolu için bir `string` (`ImagePath`) vardır. `Label` modeli yeniden kullanmak ve geliştirmek için kullanılır. `PredictedLabelValue`, tahmin ve değerlendirme sırasında kullanılır. Değerlendirme için eğitim verileri olan bir giriş, tahmin edilen değerler ve model kullanılır.
 
 ### <a name="initialize-variables-in-main"></a>Değişkenleri ana olarak Başlat
 
-1. @No__t-0 değişkenini yeni bir `MLContext` örneğiyle başlatın.  @No__t-0 satırını `Main` yönteminde aşağıdaki kodla değiştirin:
+1. `mlContext` değişkenini yeni bir `MLContext`örneğiyle başlatın.  @No__t_0 satırını `Main` yönteminde aşağıdaki kodla değiştirin:
 
     [!code-csharp[CreateMLContext](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#CreateMLContext)]
 
-    [Mlcontext sınıfı](xref:Microsoft.ML.MLContext) tüm ml.NET işlemleri için bir başlangıç noktasıdır ve @no__t başlatılıyor-1, model oluşturma iş akışı nesneleri genelinde paylaşılabilen yeni bir ml.net ortamı oluşturur. Bu, kavramsal olarak, Entity Framework `DBContext` ' a benzer.
+    [Mlcontext sınıfı](xref:Microsoft.ML.MLContext) tüm ml.NET işlemleri için bir başlangıç noktasıdır ve `mlContext` başlatmak, model oluşturma iş akışı nesneleri genelinde paylaşılabilen yeni bir ml.net ortamı oluşturur. Bu, kavramsal olarak, Entity Framework `DBContext` ' a benzer.
 
 ### <a name="create-a-struct-for-inception-model-parameters"></a>Inception model parametreleri için bir struct oluşturun
 
@@ -204,7 +206,7 @@ Görüntü verilerini ve ilgili tahminleri birden çok kez görüntüleyenden so
     }
     ```
 
-1. @No__t-0 yönteminin gövdesini doldur:
+1. `DisplayResults` yönteminin gövdesini doldur:
 
     [!code-csharp[DisplayPredictions](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#DisplayPredictions)]
 
@@ -219,11 +221,11 @@ Görüntü verilerini ve ilgili tahminleri birden çok kez görüntüleyenden so
     }
     ```
 
-1. @No__t-0 yönteminin gövdesini doldur:
+1. `ReadFromTsv` yönteminin gövdesini doldur:
 
     [!code-csharp[ReadFromTsv](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#ReadFromTsv)]
 
-    Kod, `ImagePath` özelliği için görüntü dosyası adına dosya yolunu eklemek ve onu ve `Label` ' i bir @no__t 3 nesnesine yüklemek için `tags.tsv` dosyası aracılığıyla ayrıştırır.
+    Kod, `ImagePath` özelliğinin görüntü dosyası adına dosya yolunu eklemek ve onu ve `Label` bir `ImageData` nesnesine yüklemek için `tags.tsv` dosyası aracılığıyla ayrıştırır.
 
 ### <a name="create-a-method-to-make-a-prediction"></a>Tahmin yapmak için bir yöntem oluşturma
 
@@ -236,15 +238,15 @@ Görüntü verilerini ve ilgili tahminleri birden çok kez görüntüleyenden so
     }
     ```
 
-1. Tek `ImagePath` için tam yolu ve resim dosyası adını içeren `ImageData` nesnesi oluşturun. Aşağıdaki kodu `ClassifySingleImage()` yöntemine sonraki satırlar olarak ekleyin:
+1. Tek `ImagePath`tam yolunu ve resim dosyası adını içeren bir `ImageData` nesnesi oluşturun. Aşağıdaki kodu `ClassifySingleImage()` yönteminin sonraki satırları olarak ekleyin:
 
     [!code-csharp[LoadImageData](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#LoadImageData)]
 
-1. @No__t-0 yönteminde sonraki satır olarak aşağıdaki kodu ekleyerek tek bir tahmin yapın:
+1. Aşağıdaki kodu `ClassifySingleImage` yöntemine bir sonraki satır olarak ekleyerek tek bir tahmin yapın:
 
     [!code-csharp[PredictSingle](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#PredictSingle)]
 
-    Tahmin sağlamak için, [tahmin ()](xref:Microsoft.ML.PredictionEngine%602.Predict%2A) yöntemini kullanın. [PredictionEngine](xref:Microsoft.ML.PredictionEngine%602) , tek bir veri örneğinde tahmin gerçekleştirmenize olanak tanıyan, KULLANıŞLı bir API 'dir. [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) , iş parçacığı açısından güvenli değildir. Tek iş parçacıklı veya prototip ortamlarında kullanılması kabul edilebilir. Üretim ortamlarında geliştirilmiş performans ve iş parçacığı güvenliği için, uygulamanızda kullanılmak üzere [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) nesnesi oluşturan `PredictionEnginePool` hizmetini kullanın. [ASP.NET Core Web API 'sinde `PredictionEnginePool` ' i nasıl kullanacağınızı](https://docs.microsoft.com/en-us/dotnet/machine-learning/how-to-guides/serve-model-web-api-ml-net#register-predictionenginepool-for-use-in-the-application) öğrenmek için bu kılavuza bakın
+    Tahmin sağlamak için, [tahmin ()](xref:Microsoft.ML.PredictionEngine%602.Predict%2A) yöntemini kullanın. [PredictionEngine](xref:Microsoft.ML.PredictionEngine%602) , tek bir veri örneğinde tahmin gerçekleştirmenize olanak tanıyan, KULLANıŞLı bir API 'dir. [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) , iş parçacığı açısından güvenli değildir. Tek iş parçacıklı veya prototip ortamlarında kullanılması kabul edilebilir. Üretim ortamlarında geliştirilmiş performans ve iş parçacığı güvenliği için, uygulamanızda kullanılmak üzere [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) nesnesi oluşturan `PredictionEnginePool` hizmetini kullanın. [ASP.NET Core Web API 'sindeki `PredictionEnginePool` kullanma](../how-to-guides/serve-model-web-api-ml-net.md#register-predictionenginepool-for-use-in-the-application)hakkında bu kılavuza bakın.
 
     > [!NOTE]
     > `PredictionEnginePool` hizmet uzantısı Şu anda önizleme aşamasındadır.
@@ -261,7 +263,7 @@ Bir ML.NET model işlem hattı, bir tahmin zinciri zinciridir. İşlem hattı ol
 
     Bu yöntem, öğreticinin kalbidir. Model için bir işlem hattı oluşturur ve ML.NET modelini oluşturmak için işlem hattını trafelar. Ayrıca, modeli daha önce görülmeyen test verilerine karşı değerlendirir.
 
-    Aşağıdaki kodu kullanarak, `InceptionSettings` yapısı ve `DisplayResults()` yönteminden hemen önce `GenerateModel()` yöntemini oluşturun:
+    Aşağıdaki kodu kullanarak, `InceptionSettings` yapısı ve `DisplayResults()` yönteminden hemen önce olmak üzere `GenerateModel()` yöntemini oluşturun:
 
     ```csharp
     public static ITransformer GenerateModel(MLContext mlContext)
@@ -280,9 +282,9 @@ Bir ML.NET model işlem hattı, bir tahmin zinciri zinciridir. İşlem hattı ol
 
     [!code-csharp[ScoreTensorFlowModel](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#ScoreTensorFlowModel)]
 
-    İşlem hattındaki bu aşamada, TensorFlow modeli belleğe yüklenir ve ardından, Masorflow model ağı aracılığıyla piksel değerleri vektörü işlenir. Ayrıntılı bir öğrenme modeline giriş uygulama ve modeli kullanarak bir çıktı oluşturma, **Puanlama**olarak adlandırılır. Model tamamen kullanılırken, Puanlama bir çıkarım veya tahmin yapar. 
+    İşlem hattındaki bu aşamada, TensorFlow modeli belleğe yüklenir ve ardından, Masorflow model ağı aracılığıyla piksel değerleri vektörü işlenir. Ayrıntılı bir öğrenme modeline giriş uygulama ve modeli kullanarak bir çıktı oluşturma, **Puanlama**olarak adlandırılır. Model tamamen kullanılırken, Puanlama bir çıkarım veya tahmin yapar.
 
-    Bu durumda, çıkarım yapan katman olan son katman dışındaki tüm TensorFlow modelini kullanırsınız. Penultimate katmanının çıktısı `softmax_2_preactivation` olarak etiketlenir. Bu katmanın çıktısı, orijinal giriş görüntülerini niteleyen özelliklerin bir vektörüdür.
+    Bu durumda, çıkarım yapan katman olan son katman dışındaki tüm TensorFlow modelini kullanırsınız. Penultimate katmanının çıkışı `softmax_2_preactivation`etiketlidir. Bu katmanın çıktısı, orijinal giriş görüntülerini niteleyen özelliklerin bir vektörüdür.
 
     TensorFlow modeli tarafından oluşturulan bu özellik vektörü, bir ML.NET eğitim algoritmasına giriş olarak kullanılacaktır.
 
@@ -290,7 +292,7 @@ Bir ML.NET model işlem hattı, bir tahmin zinciri zinciridir. İşlem hattı ol
 
     [!code-csharp[MapValueToKey](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#MapValueToKey)]
 
-    Sonraki eklenen ml.net eğitmen, etiketlerin rastgele dizeler yerine `key` biçiminde olmasını gerektirir. Anahtar, bir dize değerine bire bir eşleme içeren bir sayıdır.
+    Sonraki eklenen ml.net eğitmen, etiketlerinin rastgele dizeler yerine `key` biçimde olmasını gerektirir. Anahtar, bir dize değerine bire bir eşleme içeren bir sayıdır.
 
 1. ML.NET eğitim algoritmasını ekleyin:
 
@@ -312,23 +314,23 @@ Bir ML.NET model işlem hattı, bir tahmin zinciri zinciridir. İşlem hattı ol
 
     [!code-csharp[TrainModel](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#TrainModel)]
 
-    @No__t-0 yöntemi, eğitim veri kümesini işlem hattına uygulayarak modelinizi adım adım sağlar.
+    `Fit()` yöntemi, eğitim veri kümesini işlem hattına uygulayarak modelinizi ister.
 
 ## <a name="evaluate-the-accuracy-of-the-model"></a>Modelin doğruluğunu değerlendirin
 
-1. @No__t-0 yönteminin bir sonraki satırına aşağıdaki kodu ekleyerek test verilerini yükleyin ve dönüştürün:
+1. Aşağıdaki kodu `GenerateModel` yönteminin bir sonraki satırına ekleyerek test verilerini yükleyin ve dönüştürün:
 
     [!code-csharp[LoadAndTransformTestData](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#LoadAndTransformTestData "Load and transform test data")]
 
-    Modeli değerlendirmek için kullanabileceğiniz birkaç örnek görüntü vardır. Eğitim verileri gibi, bunların model tarafından dönüştürülebilmeleri için `IDataView` ' a yüklenmesi gerekir.
-   
+    Modeli değerlendirmek için kullanabileceğiniz birkaç örnek görüntü vardır. Eğitim verileri gibi, bunların model tarafından dönüştürülebilmeleri için bir `IDataView`yüklenmesi gerekir.
+
 1. Modeli değerlendirmek için `GenerateModel()` yöntemine aşağıdaki kodu ekleyin:
 
     [!code-csharp[Evaluate](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#Evaluate)]
 
     Tahmin kümesinden sonra, [değerlendir ()](xref:Microsoft.ML.RecommendationCatalog.Evaluate%2A) yöntemi:
 
-    * Model değerlendirir (tahmin edilen değerleri `labels`) test veri kümesiyle karşılaştırır.
+    * Model değerlendirir (tahmin edilen değerleri `labels`test veri kümesiyle karşılaştırır).
     * Model performans ölçümlerini döndürür.
 
 1. Model doğruluk ölçümlerini görüntüleme
@@ -348,11 +350,11 @@ Bir ML.NET model işlem hattı, bir tahmin zinciri zinciridir. İşlem hattı ol
 
 ## <a name="run-the-application"></a>Uygulamayı çalıştırın!
 
-1. MLContext sınıfının oluşturulmasından sonra `Main` yönteminde `GenerateModel` ' a çağrı ekleyin:
+1. MLContext sınıfının oluşturulmasından sonra `Main` yönteminde `GenerateModel` çağrısı ekleyin:
 
     [!code-csharp[CallGenerateModel](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#CallGenerateModel)]
 
-1. @No__t-0 yöntemine `Main` yönteminde sonraki kod satırı olarak çağrı ekleyin:
+1. `ClassifySingleImage()` yöntemine çağrıyı, `Main` yönteminde sonraki kod satırı olarak ekleyin:
 
     [!code-csharp[CallClassifySingleImage](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#CallClassifySingleImage)]
 
@@ -378,7 +380,7 @@ Bir ML.NET model işlem hattı, bir tahmin zinciri zinciridir. İşlem hattı ol
     Press any key to close this window . . .
     ```
 
-Mühendisi! Artık ML.NET ' deki bir `TensorFlow` modeline aktarma öğrenimini uygulayarak görüntü sınıflandırması için bir makine öğrenimi modeli oluşturdunuz.
+Mühendisi! Artık ML.NET ' deki bir `TensorFlow` modeline aktarım öğrenimi uygulayarak görüntü sınıflandırması için bir makine öğrenimi modeli oluşturdunuz.
 
 Bu öğreticinin kaynak kodunu [DotNet/Samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/TransferLearningTF) deposunda bulabilirsiniz.
 

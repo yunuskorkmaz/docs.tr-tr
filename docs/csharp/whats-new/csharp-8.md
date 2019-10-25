@@ -2,12 +2,12 @@
 title: C# 8,0 C# kılavuzundaki yenilikler
 description: 8,0 ' de C# bulunan yeni özelliklere genel bakış alın.
 ms.date: 09/20/2019
-ms.openlocfilehash: 12e41a3bca981d04f7b29970eba1f737254f2b58
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 335ae37b20f752f4181a4d1828cb2a1f02c0fa9e
+ms.sourcegitcommit: 9bd1c09128e012b6e34bdcbdf3576379f58f3137
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72579144"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798927"
 ---
 # <a name="whats-new-in-c-80"></a>C# 8,0 sürümündeki yenilikler
 
@@ -28,7 +28,7 @@ C#8,0 aşağıdaki özellikleri ve geliştirmeleri C# dile ekler:
 - [Dizinler ve aralıklar](#indices-and-ranges)
 - [Null birleştirme ataması](#null-coalescing-assignment)
 - [Yönetilmeyen oluşturulmuş türler](#unmanaged-constructed-types)
-- [iç içe ifadelerde stackalloc](#stackalloc-in-nested-expressions)
+- [İç içe ifadelerde stackalloc](#stackalloc-in-nested-expressions)
 - [Ara değerli tam dizelerin geliştirilmesi](#enhancement-of-interpolated-verbatim-strings)
 
 Bu makalenin geri kalanında bu özellikler kısaca açıklanmaktadır. Ayrıntılı makalelerin nerede kullanılabildiği, bu öğreticiler ve genel bakışların bağlantıları sağlanmıştır. Ortamınızdaki bu özellikleri, `dotnet try` genel aracını kullanarak inceleyebilirsiniz:
@@ -73,7 +73,9 @@ Derleyici, savunma kopyası oluşturması gerektiğinde sizi uyarır.  @No__t_0 
 public readonly double Distance => Math.Sqrt(X * X + Y * Y);
 ```
 
-Salt okuma özelliğinde `readonly` değiştiricinin gerekli olduğuna dikkat edin. Derleyici `get` erişimcilerinin durumu değiştirmediğini varsaymaz; `readonly` açıkça bildirmeniz gerekir. Derleyici `readonly` üyelerinin durumu değiştirmediğinden kuralı zorlar. @No__t_0 değiştiricisini kaldırmadığınız müddetçe aşağıdaki yöntem derlenmeyecektir:
+Salt okuma özelliğinde `readonly` değiştiricinin gerekli olduğuna dikkat edin. Derleyici `get` erişimcilerinin durumu değiştirmediğini varsaymaz; `readonly` açıkça bildirmeniz gerekir. Otomatik uygulanan özellikler bir özel durumdur; derleyici otomatik uygulanan tüm alıcıları ReadOnly olarak değerlendirir, bu nedenle `readonly` değiştiricisini `X` ve `Y` özelliklerine eklemeniz gerekmez.
+
+Derleyici `readonly` üyelerinin durumu değiştirmediğinden kuralı zorlar. @No__t_0 değiştiricisini kaldırmadığınız müddetçe aşağıdaki yöntem derlenmeyecektir:
 
 ```csharp
 public readonly void Translate(int xOffset, int yOffset)
@@ -137,7 +139,7 @@ Burada birkaç sözdizimi geliştirmesi vardır:
 
 - Değişken `switch` anahtar sözcüğünden önce gelir. Farklı sıra, switch ifadesinin Switch deyiminin ayırt edilmesini görsel açıdan kolaylaştırır.
 - @No__t_0 ve `:` öğeleri `=>` ile değiştirilmiştir. Daha kısa ve sezgisel.
-- @No__t_0 durum, `_` bir atma ile değiştirilmiştir.
+- `default` durum, `_` bir atma ile değiştirilmiştir.
 - Gövdeler deyimlerdir, deyimler değildir.
 
 Klasik `switch` ifadesini kullanarak denk kodla kontrast:
@@ -362,10 +364,10 @@ Null yapılabilir başvuru türleri atanmamış veya null olarak başlatılmamı
 8,0 ile C# başlayarak akışları zaman uyumsuz olarak oluşturabilir ve kullanabilirsiniz. Zaman uyumsuz akış döndüren bir yöntem üç özelliğe sahiptir:
 
 1. @No__t_0 değiştiricisiyle birlikte bildirilmiştir.
-1. Bir <xref:System.Collections.Generic.IAsyncEnumerable%601> döndürür.
+1. Bir <xref:System.Collections.Generic.IAsyncEnumerable%601>döndürür.
 1. Yöntemi, zaman uyumsuz akıştaki birbirini izleyen öğeleri döndürmek için `yield return` deyimlerini içerir.
 
-Zaman uyumsuz bir akışın kullanılması, akışın öğelerini Numaralandırdığınızda `foreach` anahtar sözcüğünden önce `await` anahtar sözcüğünü eklemenizi gerektirir. @No__t_0 anahtar sözcüğünü eklemek, zaman uyumsuz akışı, `async` değiştiricisiyle belirtilecek ve bir `async` yöntemi için izin verilen bir tür döndürecek şekilde numaralandırır. Genellikle bu, <xref:System.Threading.Tasks.Task> veya <xref:System.Threading.Tasks.Task%601> döndürme anlamına gelir. Ayrıca, bir <xref:System.Threading.Tasks.ValueTask> veya <xref:System.Threading.Tasks.ValueTask%601> olabilir. Bir yöntem, bir zaman uyumsuz akış tüketebilir ve üretebilir, bu da bir <xref:System.Collections.Generic.IAsyncEnumerable%601> dönecektir. Aşağıdaki kod, 0 ile 19 arasında bir sıra üretir, her bir sayı üretilmeden 100 ms bekler:
+Zaman uyumsuz bir akışın kullanılması, akışın öğelerini Numaralandırdığınızda `foreach` anahtar sözcüğünden önce `await` anahtar sözcüğünü eklemenizi gerektirir. @No__t_0 anahtar sözcüğünü eklemek, zaman uyumsuz akışı, `async` değiştiricisiyle belirtilecek ve bir `async` yöntemi için izin verilen bir tür döndürecek şekilde numaralandırır. Genellikle bu, <xref:System.Threading.Tasks.Task> veya <xref:System.Threading.Tasks.Task%601>döndürme anlamına gelir. Ayrıca, bir <xref:System.Threading.Tasks.ValueTask> veya <xref:System.Threading.Tasks.ValueTask%601>olabilir. Bir yöntem, bir zaman uyumsuz akış tüketebilir ve üretebilir, bu da bir <xref:System.Collections.Generic.IAsyncEnumerable%601>dönecektir. Aşağıdaki kod, 0 ile 19 arasında bir sıra üretir, her bir sayı üretilmeden 100 ms bekler:
 
 ```csharp
 public static async System.Collections.Generic.IAsyncEnumerable<int> GenerateSequence()
@@ -400,7 +402,7 @@ Bu dil desteği iki yeni türe ve iki yeni işleçlere dayanır:
 - <xref:System.Range?displayProperty=nameWithType> bir dizinin alt aralığını temsil eder.
 - Aralık işleci `..`, bir aralığın işlenenleri olarak başlangıcını ve sonunu belirtir.
 
-Dizin kurallarıyla başlayalım. Dizi `sequence` değerlendirin. @No__t_0 Dizin `sequence[0]` ile aynıdır. @No__t_0 Dizin `sequence[sequence.Length]` ile aynıdır. @No__t_0, `sequence[sequence.Length]` olduğu gibi bir özel durum oluşturur. Herhangi bir sayı `n` için Dizin `^n` `sequence.Length - n` ile aynıdır.
+Dizin kurallarıyla başlayalım. Dizi `sequence` değerlendirin. `0` Dizin `sequence[0]`ile aynıdır. `^0` Dizin `sequence[sequence.Length]`ile aynıdır. `sequence[^0]`, `sequence[sequence.Length]` olduğu gibi bir özel durum oluşturur. Herhangi bir sayı `n`için Dizin `^n` `sequence.Length - n`ile aynıdır.
 
 Aralık, bir aralığın *başlangıcını* ve *sonunu* belirtir. Aralığın başlangıcı dahil, ancak aralığın sonu dışlamalı, ancak *Başlangıç* aralığa dahil değildir ancak *bitiş* aralığa eklenmez. Aralık `[0..^0]`, tüm aralığı temsil eden `[0..sequence.Length]` aralığını temsil eder.
 
@@ -429,13 +431,13 @@ Console.WriteLine($"The last word is {words[^1]}");
 // writes "dog"
 ```
 
-Aşağıdaki kod, "quick", "brown" ve "fox" sözcüklerinin bulunduğu bir alt aralık oluşturur. @No__t_1 üzerinden `words[1]` içerir. `words[4]` öğesi aralık içinde değildir.
+Aşağıdaki kod, "hızlı", "kahverengi" ve "Fox" sözcüklerinin bulunduğu bir alt Aralık oluşturur. `words[3]`üzerinden `words[1]` içerir. Öğe `words[4]` Aralık içinde değil.
 
 ```csharp
 var quickBrownFox = words[1..4];
 ```
 
-Aşağıdaki kod, "lazy" ve "dog" sözcüklerini içeren bir alt aralık oluşturur. `words[^2]` ile `words[^1]` aralığını içerir. `words[^0]` bitiş dizini dahil değildir:
+Aşağıdaki kod, "Lazy" ve "köpek" ile bir alt Aralık oluşturur. `words[^2]` ve `words[^1]`içerir. `words[^0]` bitiş dizini dahil değil:
 
 ```csharp
 var lazyDog = words[^2..^0];
@@ -461,7 +463,7 @@ Aralık daha sonra `[` ve `]` karakterleri içinde kullanılabilir:
 var text = words[phrase];
 ```
 
-Yalnızca dizin ve aralıkları destekleyen diziler değil. Ayrıca, dizin ve aralıkları [dize](../language-reference/builtin-types/reference-types.md#the-string-type), <xref:System.Span%601> veya <xref:System.ReadOnlySpan%601> ile de kullanabilirsiniz. Daha fazla bilgi için bkz. [Dizinler ve aralıklar için destek türü](../tutorials/ranges-indexes.md#type-support-for-indices-and-ranges).
+Yalnızca dizin ve aralıkları destekleyen diziler değil. Ayrıca, dizin ve aralıkları [dize](../language-reference/builtin-types/reference-types.md#the-string-type), <xref:System.Span%601>veya <xref:System.ReadOnlySpan%601>ile de kullanabilirsiniz. Daha fazla bilgi için bkz. [Dizinler ve aralıklar için destek türü](../tutorials/ranges-indexes.md#type-support-for-indices-and-ranges).
 
 Dizinler ve [aralıklar](../tutorials/ranges-indexes.md)hakkında öğreticide dizinler ve aralıklar hakkında daha fazla bilgi bulabilirsiniz.
 
@@ -512,7 +514,7 @@ Daha fazla bilgi için bkz. [yönetilmeyen türler](../language-reference/builti
 
 ## <a name="stackalloc-in-nested-expressions"></a>iç içe ifadelerde stackalloc
 
-8,0 ile C# başlayarak, bir [stackalloc](../language-reference/operators/stackalloc.md) ifadesinin sonucu <xref:System.Span%601?displayProperty=nameWithType> veya <xref:System.ReadOnlySpan%601?displayProperty=nameWithType> türünde ise, diğer ifadelerde `stackalloc` ifadesini kullanabilirsiniz:
+8,0 ile C# başlayarak, bir [stackalloc](../language-reference/operators/stackalloc.md) ifadesinin sonucu<xref:System.Span%601?displayProperty=nameWithType>veya<xref:System.ReadOnlySpan%601?displayProperty=nameWithType>türünde ise, diğer ifadelerde`stackalloc`ifadesini kullanabilirsiniz:
 
 ```csharp
 Span<int> numbers = stackalloc[] { 1, 2, 3, 4, 5, 6 };

@@ -1,27 +1,27 @@
 ---
-title: Güncelleştirilmiş .NET Core olay deseni
-description: Nasıl .NET Core olay deseni esneklik ile geriye dönük uyumluluk sağlar ve nasıl güvenli bir olay işleme ile zaman uyumsuz aboneleri uygulanacağını öğrenin.
+title: Güncelleştirilmiş .NET Core olay deseninin
+description: .NET Core olay deseninin geriye dönük uyumlulukla esnekliği nasıl sağladığını ve zaman uyumsuz aboneler ile güvenli olay işlemenin nasıl uygulanacağını öğrenin.
 ms.date: 06/20/2016
 ms.assetid: 9aa627c3-3222-4094-9ca8-7e88e1071e06
-ms.openlocfilehash: 158295215932f54c75afdf1e96d48453434129fe
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 85fa4fd111a9eab01c1d32949d9fcc5f6300e33c
+ms.sourcegitcommit: 9bd1c09128e012b6e34bdcbdf3576379f58f3137
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64751778"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798886"
 ---
-# <a name="the-updated-net-core-event-pattern"></a>Güncelleştirilmiş .NET Core olay deseni
+# <a name="the-updated-net-core-event-pattern"></a>Güncelleştirilmiş .NET Core olay deseninin
 
-[Önceki](event-pattern.md)
+[Öncekini](event-pattern.md)
 
-Önceki makalede en yaygın olay desenleri açıklanmıştır. .NET core daha gevşek bir düzeni vardır. Bu sürümde `EventHandler<TEventArgs>` tanımı artık kısıtlaması vardır, `TEventArgs` bir sınıf nesnesinden türetilmesi gerekir `System.EventArgs`.
+Önceki makalede en sık kullanılan olay desenleri ele alınmıştır. .NET Core daha gevşek bir düzene sahiptir. Bu sürümde `EventHandler<TEventArgs>` tanımı artık `TEventArgs` `System.EventArgs`türetilmiş bir sınıf olması gereken kısıtlamaya sahip değildir.
 
-Bu, sizin için daha fazla esneklik sunan ve geriye dönük uyumludur. Esnekliği başlayalım. ' % S'sınıfı System.EventArgs bir yöntem sunar: `MemberwiseClone()`, nesnenin sığ bir kopya oluşturur.
-Yöntemi herhangi bir sınıftan türetilen için işlevselliği uygulamak için yansıma kullanması gerektiğini `EventArgs`. Bu işlevsellik belirli bir türetilmiş sınıfta oluşturmak daha kolay olur. Etkili bir şekilde System.EventArgs türetme tasarımlarınızı sınırlar, ancak herhangi bir ek yararı sağlamaz bir kısıtlaması olduğu anlamına gelir.
-Aslında, tanımlarını değiştirebilirsiniz `FileFoundArgs` ve `SearchDirectoryArgs` oldukları türetilmesi değil böylece `EventArgs`.
-Program tamamen aynı çalışır.
+Bu, sizin için esnekliği artırır ve geriye dönük olarak uyumludur. Esneklik ile başlayalım. System. EventArgs sınıfı bir yöntemi tanıtır: nesnenin basit bir kopyasını oluşturan `MemberwiseClone()`.
+Bu yöntemin, `EventArgs`türetilmiş herhangi bir sınıf için işlevselliğini uygulamak üzere yansıma kullanması gerekir. Bu işlevsellik, belirli bir türetilmiş sınıfta oluşturmak daha kolaydır. Bu, System. EventArgs 'dan Türetmenin tasarımlarınızı sınırlayan bir kısıtlamadır, ancak başka bir avantaj sunmaz.
+Aslında, `EventArgs`türetmemesi için `FileFoundArgs` ve `SearchDirectoryArgs` tanımlarını değiştirebilirsiniz.
+Program tamamen aynı şekilde çalışır.
 
-Ayrıca değişebilir `SearchDirectoryArgs` bir daha fazla değişiklik yaparsanız, bir yapı için:
+Ayrıca, daha fazla değişiklik yaparsanız `SearchDirectoryArgs` bir struct olarak değiştirebilirsiniz:
 
 ```csharp
 internal struct SearchDirectoryArgs
@@ -39,21 +39,21 @@ internal struct SearchDirectoryArgs
 }
 ```
 
-Ek değişiklik parametresiz bir oluşturucu tüm alanları başlatır Oluşturucusu girmeden önce çağırmaktır. Ayrıca, kurallarına olmadan C# özellikleri, atanmış önce erişildiği rapor.
+Ek değişiklik, tüm alanları Başlatan oluşturucuyu girmeden önce parametresiz oluşturucuyu çağırmaktır. Bu ek olmadan, kuralları C# atanmadan önce özelliklere erişilmekte olduğunu raporlayabilir.
 
-Değil değiştirmelisiniz `FileFoundArgs` yapı (değer türü) için sınıfından (başvuru türü). Olay bağımsız değişkenleri başvuruya göre iletilir iptal işlemek için bir protokol gerektiren olmasıdır. Aynı değişikliği yaptıysanız, dosya arama sınıfı hiçbir zaman herhangi bir olay aboneler tarafından yapılan değişiklikler mümkün. Her abone için yeni bir kopyasını yapısı kullanılacaktır ve bu kopyayı dosya arama nesne tarafından görülen olandan farklı bir kopyasını olacaktır.
+Bir sınıftan (başvuru türü) `FileFoundArgs` bir struct (değer türü) olarak değiştirmemelisiniz. Bunun nedeni, Cancel işleme Protokolü olay bağımsız değişkenlerinin başvuruya göre geçirilmesini gerektirir. Aynı değişikliği yaptıysanız, dosya arama sınıfı hiçbir türlü olay abonesinin yaptığı değişiklikleri hiçbir şekilde gözlemlemez. Her abone için yapının yeni bir kopyası kullanılır ve bu kopya dosya arama nesnesi tarafından görülenden farklı bir kopya olacaktır.
 
-Ardından, bu değişiklik nasıl geriye dönük olarak uyumlu olabilir düşünelim.
-Kısıtlamanın kaldırılması, mevcut kodlar etkilemez. Var olan herhangi bir olay bağımsız değişken türü hala türetilen `System.EventArgs`.
-Geriye dönük uyumluluk neden bunlar çalışmaya devam edecek öğesinden türetilen önemli nedenlerinden biri olan `System.EventArgs`. Var olan bir etkinlik abonelerinden Klasik desenin takip bir olaya abone olur.
+Daha sonra, bu değişikliğin geriye dönük olarak nasıl uyumlu olduğunu ele alalım.
+Kısıtlamanın kaldırılması var olan herhangi bir kodu etkilemez. Mevcut herhangi bir olay bağımsız değişken türü `System.EventArgs`türetmeye devam eder.
+Geriye dönük uyumluluk, `System.EventArgs`türetmeye devam edebilecekleri önemli bir nedendir. Var olan tüm olay aboneleri, klasik kalıbı izleyen bir olaya abone olur.
 
-Benzer mantığı, tüm izleme olay bağımsız değişkeni oluşturulan türü artık değil sahip herhangi bir varolan tüm aboneler çıkabilirsiniz. Öğesinden türetilen değil yeni olay türleri `System.EventArgs` Bu kod tabanlarında sonu olur.
+Benzer mantığın ardından, artık oluşturulan herhangi bir olay bağımsız değişken türü herhangi bir mevcut kod tabanı içinde abone olamaz. `System.EventArgs` türetmeyen yeni olay türleri, bu kod temellerini bozmaz.
 
-## <a name="events-with-async-subscribers"></a>Zaman uyumsuz abonelere olayları
+## <a name="events-with-async-subscribers"></a>Zaman uyumsuz aboneler içeren olaylar
 
-Bilgi edinmek için bir son deseni aşağıdakiler: Zaman uyumsuz kodu çağıran etkinlik abonelerinden doğru şekilde yazmak nasıl. Sınama üzerinde makalesinde açıklanan [async ve await](async.md). Zaman uyumsuz yöntemlerin dönüş türü void olabilir, ancak kesinlikle önerilmez. Olay abonesi kodunuz bir zaman uyumsuz yöntemini çağırdığında oluşturmak için seçim yok ancak sahip bir `async void` yöntemi. Olay işleyicisinin imzası gerektiriyor.
+Bilgi edinmek için bir son örüntüsünün olması gerekir: zaman uyumsuz kod çağıran olay abonelerini doğru şekilde yazma. Bu zorluk, [zaman uyumsuz ve await](async.md)makalesinde açıklanmaktadır. Zaman uyumsuz metotlar void dönüş türüne sahip olabilir, ancak bu kesinlikle önerilmez. Olay abone kodunuz zaman uyumsuz bir yöntem çağırdığında, hiçbir seçeneğiniz yoktur ancak bir `async void` yöntemi oluşturabilirsiniz. Olay işleyicisi imzası gereklidir.
 
-Kpı'lere bu kılavuz mutabakat sağlamak gerekir. Güvenli bir şekilde, oluşturmalısınız `async void` yöntemi. Desen uygulamak için gereken temel aşağıda verilmiştir:
+Bu rakip kılavuzun mutabakatını yapmanız gerekir. Bir şekilde, güvenli bir `async void` yöntemi oluşturmanız gerekir. Uygulamanız gereken düzenin temelleri aşağıda verilmiştir:
 
 ```csharp
 worker.StartWorking += async (sender, eventArgs) =>
@@ -71,12 +71,12 @@ worker.StartWorking += async (sender, eventArgs) =>
 };
 ```
 
-İlk olarak, işleyiciyi zaman uyumsuz bir işleyici işaretlenmiş olduğuna dikkat edin. Kendine atanan temsilci türüne bir olay işleyicisi, void dönüş türüne sahip. Bu işleyici içinde gösterilen desenini izler ve zaman uyumsuz işleyici bağlamı dışında oluşturulması tüm özel durumlara izin vermeyecek anlamına gelir. Bir task döndürmüyor olduğundan, hata, hatalı durumuna girerek bildirebileceği görev yok. Zaman uyumsuz yöntem olduğundan, yöntemi yalnızca özel durumu atılamıyor. (Yöntemi çağrılırken, olduğundan yürütme devam etti `async`.) Fiili çalışma zamanı davranışı farklı farklı ortamlar için tanımlanır. İş parçacığı sonlandırabilir, program sonlandırabilir veya program belirsiz bir durumda bırakabilir. Bu iyi bir sonuç yok.
+İlk olarak, işleyicinin zaman uyumsuz işleyici olarak işaretlendiğinden emin olun. Bir olay işleyicisi temsilci türüne atanmakta olduğundan, void dönüş türüne sahip olur. Bu, işleyicide gösterilen kalıbı izlemeniz ve tüm özel durumların zaman uyumsuz işleyicinin içeriğinden çıkmasına izin vermeniz gerektiği anlamına gelir. Bir görev döndürmediğinden, hatayı hatalı duruma girerek bildiremeyen bir görev yoktur. Yöntemi zaman uyumsuz olduğundan, yöntem özel durumu oluşturmamalıdır. (Çağırma yöntemi `async`olduğundan yürütmeye devam etti.) Gerçek çalışma zamanı davranışı farklı ortamlar için farklı şekilde tanımlanır. İş parçacığını veya iş parçacığına sahip olan işlemi sonlandırabilir veya işlemi belirsiz bir durumda bırakabilir. Tüm bu olası sonuçlar yüksek oranda istenmeyen bir süreçlerdir.
 
-İşte bu nedenle kendi try bloğunda bekleme ifadesinin zaman uyumsuz görev için uzun olmamalıdır. Hatalı bir görev neden olmaz, hata oturum açabilirsiniz. Uygulamanızın içinden kurtaramazsınız bir hata olması durumunda, hızlı ve düzgün bir şekilde program çıkabilirsiniz
+Bu nedenle, kendi TRY bloğinizdeki zaman uyumsuz görev için Await ifadesini sarmalısınız. Hatalı bir göreve neden olursa, hatayı günlüğe kaydedebilirsiniz. Uygulamanızın kurtaramayacağı bir hata ise programdan hızlı ve sorunsuz bir şekilde çıkabilirsiniz
 
-Önemli güncelleştirmeler .NET olay deseni olanlardır. Birlikte çalıştığınız kitaplıklar daha önceki sürümlerinde, birçok örneği görürsünüz. Ancak, en son desenleri de nelerdir anlamanız gerekir.
+Bunlar, .NET olay deseninin önemli güncelleştirmeleridir. Üzerinde çalıştığınız kitaplıklarda daha önceki sürümlere ait birçok örnek görürsünüz. Ancak, en son desenlerin de ne olduğunu anlamanız gerekir.
 
-Bu serideki sonraki makalede kullanma arasında ayırt etmenize yardımcı olur. `delegates` ve `events` tasarımlarınızı içinde. Benzer kavramları olduklarını ve bu makalede programlar için en iyi karar vermenize yardımcı olur.
+Bu serinin sonraki makalesi tasarımlarınızın `delegates` ve `events` kullanımını ayırt etmenize yardımcı olur. Bunlar benzer kavramlardır ve bu makale programlarınıza en iyi kararı vermenize yardımcı olur.
 
 [Next](distinguish-delegates-events.md)

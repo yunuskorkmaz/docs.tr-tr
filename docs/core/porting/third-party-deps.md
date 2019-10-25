@@ -2,28 +2,40 @@
 title: .NET Core 'a bağlantı noktası kodu bağımlılıklarını çözümleyin
 description: Projenizin .NET Framework .NET Core 'a bağlantı noktası olması için dış bağımlılıkları çözümlemeyi öğrenin.
 author: cartermp
-ms.date: 12/07/2018
+ms.date: 10/22/2019
 ms.custom: seodec18
-ms.openlocfilehash: 36d1c1d2090a0fb9e6f48fe519d15897579df2d5
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 5fa5a20e9a2b5427401835a0c1c6e1845d86c3ef
+ms.sourcegitcommit: 9bd1c09128e012b6e34bdcbdf3576379f58f3137
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72521477"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798787"
 ---
 # <a name="analyze-your-dependencies-to-port-code-to-net-core"></a>.NET Core 'a bağlantı noktası kodu için bağımlılıklarınızı çözümleyin
 
-Kodunuzun .NET Core veya .NET Standard bağlantı noktası olması için bağımlılıklarınızı anlamanız gerekir. Dış bağımlılıklar, projenizde başvurduğunuz, ancak derlemeniz gereken [NuGet paketlerdir](#analyze-referenced-nuget-packages-in-your-projects) veya [DLL 'lardır](#analyze-dependencies-that-arent-nuget-packages) . Her bağımlılığı değerlendirin ve .NET Core ile uyumlu olmayan bir yedek plan geliştirin. Bir bağımlılığın .NET Core ile uyumlu olup olmadığını belirleme hakkında daha fazla bilgiyi burada bulabilirsiniz.
+Kodunuzun .NET Core veya .NET Standard bağlantı noktası olması için bağımlılıklarınızı anlamanız gerekir. Dış bağımlılıklar, projenizde başvurduğunuz, ancak sizin oluşturmayan NuGet paketlerdir veya `.dll`s.
 
-## <a name="analyze-referenced-nuget-packages-in-your-projects"></a>Projelerinizde başvurulan NuGet paketlerini çözümleyin
+## <a name="migrate-your-nuget-packages-to-packagereference"></a>NuGet paketlerinizi `PackageReference` 'e geçirin
 
-Projenizde NuGet paketlerine başvursanız, .NET Core ile uyumlu olup olmadığını doğrulamanız gerekir.
-Bunu yapmanın iki yolu vardır:
+.NET Core, paket bağımlılıklarını belirtmek için [Packagereference](/nuget/consume-packages/package-references-in-project-files) kullanır. Kuruluşunuzda paketlerinizi belirtmek için [Packages. config](/nuget/reference/packages-config) kullanıyorsanız, `packages.config` .NET Core 'da desteklenmediğinden `PackageReference` biçimine dönüştürmeniz gerekir.
 
-- [NuGet Paket Gezgini uygulamasını kullanma](#analyze-nuget-packages-using-nuget-package-explorer)
-- [Nuget.org sitesini kullanma](#analyze-nuget-packages-using-nugetorg)
+Nasıl geçiş yapılacağını öğrenmek için, [Packages. config 'Ten PackageReference 'A geçiş](/nuget/reference/migrate-packages-config-to-package-reference) konusuna bakın.
 
-Paketler çözümlendikten sonra, .NET Core ile uyumlu olmadıkları ve yalnızca hedef .NET Framework, [.NET Framework uyumluluk modunun](#net-framework-compatibility-mode) taşıma süreciyle ilgili olup olmadığını kontrol edebilirsiniz.
+## <a name="upgrade-your-nuget-packages"></a>NuGet paketlerinizi yükseltin
+
+Projenizi `PackageReference` biçimine geçirdikten sonra, paketlerinizin .NET Core ile uyumlu olup olmadığını doğrulamanız gerekir.
+
+İlk olarak, paketlerinizi kullanabileceğiniz en son sürüme yükseltin. Bu, Visual Studio 'daki NuGet Paket Yöneticisi Kullanıcı arabirimi ile yapılabilir. Paket bağımlılıklarınızın daha yeni sürümleri zaten .NET Core ile uyumlu olabilir.
+
+## <a name="analyze-your-package-dependencies"></a>Paket bağımlılıklarınızı çözümleyin
+
+Dönüştürülen ve yükseltilen paket bağımlılıklarınızın .NET Core 'da çalıştığını henüz doğrulamadıysanız, bunu elde etmeniz için birkaç yol vardır:
+
+### <a name="analyze-nuget-packages-using-nugetorg"></a>Nuget.org kullanarak NuGet paketlerini çözümleme
+
+Her bir paketin [NuGet.org](https://www.nuget.org/) üzerinde desteklediği hedef çerçeve takma adlarını (tfms), paket sayfasının **Bağımlılıklar** bölümünde görebilirsiniz.
+
+Siteyi kullanmak uyumluluğu doğrulamak için daha kolay bir yöntem olsa da, tüm paketler için sitede **Bağımlılıklar** bilgisi yok.
 
 ### <a name="analyze-nuget-packages-using-nuget-package-explorer"></a>NuGet paket gezginini kullanarak NuGet paketlerini çözümleme
 
@@ -37,27 +49,7 @@ NuGet paket klasörlerini incelemeyi en kolay yolu, [NuGet Paket Gezgini](https:
 4. Arama sonuçlarından paket adı ' nı seçin ve **Aç**' a tıklayın.
 5. Sağ taraftaki *LIB* klasörünü genişletin ve klasör adlarına bakın.
 
-Aşağıdaki adlardan birini içeren bir klasör arayın:
-
-```
-netstandard1.0
-netstandard1.1
-netstandard1.2
-netstandard1.3
-netstandard1.4
-netstandard1.5
-netstandard1.6
-netstandard2.0
-netcoreapp1.0
-netcoreapp1.1
-netcoreapp2.0
-netcoreapp2.1
-netcoreapp2.2
-portable-net45-win8
-portable-win8-wpa8
-portable-net451-win81
-portable-net45-win8-wpa8-wpa81
-```
+Şu desenleri kullanarak adlara sahip bir klasör arayın: `netstandardX.Y` veya `netcoreappX.Y`.
 
 Bu değerler, .NET Core ile uyumlu [.NET Standard](../../standard/net-standard.md), .NET Core ve geleneksel taşınabilir sınıf KITAPLıĞı (PCL) profillerinin sürümleriyle eşlenen [hedef çerçeve takma adları (tfms)](../../standard/frameworks.md) .
 
@@ -65,15 +57,9 @@ Bu değerler, .NET Core ile uyumlu [.NET Standard](../../standard/net-standard.m
 > Bir paketin desteklediği TFMs 'e baktığınızda, `netcoreapp*`, uyumlu iken yalnızca .NET Core projeleri için olduğunu ve .NET Standard projelerine yönelik olduğunu unutmayın.
 > Yalnızca `netcoreapp*` ve `netstandard*` hedefleyen bir kitaplık yalnızca diğer .NET Core uygulamaları tarafından tüketilebilir.
 
-### <a name="analyze-nuget-packages-using-nugetorg"></a>Nuget.org kullanarak NuGet paketlerini çözümleme
+## <a name="net-framework-compatibility-mode"></a>Uyumluluk modu .NET Framework
 
-Alternatif olarak, paket sayfasındaki **Bağımlılıklar** bölümünde her bir paketin [NuGet.org](https://www.nuget.org/) üzerinde desteklediği tfms 'yi görebilirsiniz.
-
-Siteyi kullanmak uyumluluğu doğrulamak için daha kolay bir yöntem olsa da, tüm paketler için sitede **Bağımlılıklar** bilgisi yok.
-
-### <a name="net-framework-compatibility-mode"></a>Uyumluluk modu .NET Framework
-
-NuGet paketlerini analiz ettikten sonra, çoğu NuGet paketi olduğu için yalnızca .NET Framework hedeflemesini sağlayabilirsiniz.
+NuGet paketlerini analiz ettikten sonra yalnızca .NET Framework hedeflemesini sağlayabilirsiniz.
 
 .NET Standard 2,0 ' den başlayarak .NET Framework uyumluluk modu sunuldu. Bu uyumluluk modu, .NET Standard ve .NET Core projelerinin .NET Framework kitaplıklarına başvurmasına olanak tanır. .NET Framework kütüphaneleri, kitaplığın Windows Presentation Foundation (WPF) API 'Leri kullanması gibi tüm projeler için çalışmaz, ancak birçok taşıma senaryosunun engellemesini kaldırabilir.
 
@@ -92,12 +78,6 @@ Proje dosyasını düzenleyerek uyarıyı bastırmak için, uyarıyı bastırmak
 ```
 
 Visual Studio 'da derleyici uyarılarını gösterme hakkında daha fazla bilgi için bkz. [NuGet paketleri uyarılarını gizleme](/visualstudio/ide/how-to-suppress-compiler-warnings#suppress-warnings-for-nuget-packages).
-
-## <a name="port-your-packages-to-packagereference"></a>Paketlerinizin `PackageReference` için bağlantı noktası
-
-.NET Core, paket bağımlılıklarını belirtmek için [Packagereference](/nuget/consume-packages/package-references-in-project-files) kullanır. Paketlerinizi belirtmek için [Packages. config](/nuget/reference/packages-config) kullanıyorsanız, `PackageReference` ' ye dönüştürmeniz gerekir.
-
-[Packages. config biçiminden PackageReference 'A geçiş](/nuget/reference/migrate-packages-config-to-package-reference)sırasında daha fazla bilgi edinebilirsiniz.
 
 ## <a name="what-to-do-when-your-nuget-package-dependency-doesnt-run-on-net-core"></a>NuGet paket bağımlılığının .NET Core üzerinde çalıştırılmadıkça yapmanız gerekenler
 

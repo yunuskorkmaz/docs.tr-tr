@@ -1,32 +1,32 @@
 ---
 title: F# kodlama kuralları
-description: Genel yönergeler ve deyimleri yazılırken öğrenin F# kod.
-ms.date: 05/14/2018
-ms.openlocfilehash: c8df654cbb94fff1ef7ffb909655439398f30bf5
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+description: Kod yazarken F# genel kılavuzları ve deyimleri öğrenin.
+ms.date: 10/22/2019
+ms.openlocfilehash: 6700f64aa61308cbfc0b7a38724d69a281a088db
+ms.sourcegitcommit: 9bd1c09128e012b6e34bdcbdf3576379f58f3137
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67402374"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72799106"
 ---
 # <a name="f-coding-conventions"></a>F# kodlama kuralları
 
-Aşağıdaki kurallar ile büyük çalışma deneyiminden şeklide F# çıkabilirsiniz. [Beş iyi prensipleri F# kod](index.md#five-principles-of-good-f-code) önerilerin temelidir. İlişkili oldukları [ F# bileşen tasarım yönergeleri](component-design-guidelines.md), ancak için geçerli olan F# kod, kütüphane gibi değil yalnızca bileşenleri.
+Aşağıdaki kurallar, büyük F# kod tabanlarında çalışma deneyiminden alınmıştır. [Beş iyi F# kod ilkeleri](index.md#five-principles-of-good-f-code) her bir önerinin temelidir. Bunlar [ F# bileşen tasarım yönergeleriyle](component-design-guidelines.md)ilgilidir, ancak yalnızca kitaplıklar gibi bileşenler değil tüm F# kodlar için geçerlidir.
 
-## <a name="organizing-code"></a>Kod düzenleme
+## <a name="organizing-code"></a>Kodu düzenleme
 
-F#kod düzenlemek için iki temel yol özellikleri: modüller ve ad alanları. Bunlar, benzer, ancak kıyasla aşağıdaki farklılıklar vardır:
+F#kodu düzenlemenin iki birincil yolunu sunar: modüller ve ad alanları. Bunlar benzerdir, ancak aşağıdaki farklılıklara sahiptir:
 
-* Ad alanları, .NET ad alanları derlenir. Modüller, statik sınıflar derlenir.
-* Ad alanları, her zaman en üst düzey olur. Modüller, üst düzey ve diğer modüller içinde iç içe olabilir.
-* Ad alanları, birden çok dosya yayılabilir. Modüller olamaz.
-* Modüller düzenlenmiş ile `[<RequireQualifiedAccess>]` ve `[<AutoOpen>]`.
+* Ad alanları .NET ad alanları olarak derlenir. Modüller statik sınıflar olarak derlenir.
+* Ad alanları her zaman en üst düzeydir. Modüller en üst düzey ve diğer modüller içinde iç içe olabilir.
+* Ad alanları birden çok dosyaya yayılabilir. Modüller.
+* Modüller `[<RequireQualifiedAccess>]` ve `[<AutoOpen>]`ile donatılmış olabilir.
 
-Aşağıdaki yönergeler, kodunuzu düzenleme şeklinizdir için bunları kullanın yardımcı olur.
+Aşağıdaki yönergeler kodunuzu düzenlemek için bunları kullanmanıza yardımcı olur.
 
-### <a name="prefer-namespaces-at-the-top-level"></a>Ad alanları en üst düzeyde tercih et
+### <a name="prefer-namespaces-at-the-top-level"></a>En üst düzeyde ad alanlarını tercih et
 
-Genel olarak kullanılabilir herhangi bir kod için ad alanları en üst düzeyde modüllerine tercihe bağlı. .NET ad alanları derlenmiş olduğundan, hiçbir sorun C# ' tan tüketilebilir.
+Genel kullanım düzeylerine sahip herhangi bir kod için, ad alanları en üst düzeydeki modüllerle tercihe göre yapılır. .NET ad alanları olarak derlendiğinden, bunlar sorun olmadan tüketilebilir C# .
 
 ```fsharp
 // Good!
@@ -36,7 +36,7 @@ type MyClass() =
     ...
 ```
 
-Üst düzey bir modül kullanarak görüntülenmeyebilir yalnızca çağrıldığında farklı F#, ancak C# Tüketiciler, Arayanların surprised nitelemek sağlayarak `MyClass` ile `MyCode` modülü.
+En üst düzey bir modülün kullanılması yalnızca öğesinden F#çağrıldığında farklı görünmeyebilir, ancak Tüketicileriniz için C# ,`MyClass``MyCode`modülle nitelendirmek için arayanlar olabilir.
 
 ```fsharp
 // Bad!
@@ -46,11 +46,11 @@ type MyClass() =
     ...
 ```
 
-### <a name="carefully-apply-autoopen"></a>Dikkatli bir şekilde uygulama `[<AutoOpen>]`
+### <a name="carefully-apply-autoopen"></a>`[<AutoOpen>]` dikkatle uygulayın
 
-`[<AutoOpen>]` Yapısı arayanlara kullanılabilir kapsamını pollute ve burada bir şey geldiği için yanıt "Sihirli". Bu genellikle iyi bir şey değildir. Bu kuralın istisnası F# çekirdek kitaplığının kendisi (ancak bu durum ayrıca biraz tartışmalı).
+`[<AutoOpen>]` yapısı, çağıranlar için kullanılabilir olan kapsamı ve bir şeyin geldiği yanıtın "Magic" olduğunu pollute. Bu genellikle iyi bir şeydir. Bu kural için bir özel durum, F# temel kitaplığın kendisidir (Bu olgu aynı zamanda bir bit controversıal).
 
-Ancak, düzenlemek için ayrı olarak bu genel API istediğiniz genel API için yardımcı işlevini varsa bir kullanışlı olur.
+Ancak, bu genel API 'den ayrı olarak düzenlemek istediğiniz ortak API için yardımcı işlevselliğe sahipseniz kolaylık vardır.
 
 ```fsharp
 module MyAPI =
@@ -66,15 +66,15 @@ module MyAPI =
         helper1 x y z
 ```
 
-Bu işlem, bir yardımcı her çağırdığında tam olarak nitelemek zorunda kalmadan indrebilirsiniz ayrı uygulama ayrıntılarından bir işlevin Genel API sağlar.
+Bu, her çağırdığınızda bir yardımcıyı tam olarak nitelendirmek zorunda kalmadan, bir işlevin ortak API 'sinden uygulama ayrıntılarını düzgün bir şekilde ayırmanızı sağlar.
 
-Ayrıca, uzantı yöntemleri ve ifade oluşturucular ad alanı düzeyinde gösterme düzgünce ile ifade edilebilen `[<AutoOpen>]`.
+Ek olarak, ad alanı düzeyinde uzantı yöntemlerinin ve ifade oluşturucuların kullanıma sunulması, `[<AutoOpen>]`ile ifade edilebilir.
 
-### <a name="use-requirequalifiedaccess-whenever-names-could-conflict-or-you-feel-it-helps-with-readability"></a>Kullanım `[<RequireQualifiedAccess>]` her adları çakışıyor ya da düşündüğünüzü ile okunabilirliği yardımcı olur
+### <a name="use-requirequalifiedaccess-whenever-names-could-conflict-or-you-feel-it-helps-with-readability"></a>Adlar her çakışıyorsa `[<RequireQualifiedAccess>]` kullanın veya okunabilirlik ile yardımcı olduğunu düşünüyorsanız
 
-Ekleme `[<RequireQualifiedAccess>]` özniteliği bir modül için modülü açılamadı ve erişimi nitelenmiş modülünün öğelere başvurular açık gerektiğini gösterir. Örneğin, `Microsoft.FSharp.Collections.List` modülü, bu öznitelik içeriyor.
+`[<RequireQualifiedAccess>]` özniteliğini bir modüle eklemek, modülün açılamayabilir ve modülün öğelerine yapılan başvuruların açık nitelikli erişim gerektirdiğini gösterir. Örneğin, `Microsoft.FSharp.Collections.List` modülü bu özniteliğe sahiptir.
 
-İşlevleri ve değerleri modüldeki diğer modüllerin adlarla çakışma olasılığı adlara sahip olduğunda bu kullanışlıdır. Koşullu erişim gerektiren bir kitaplığı geliştirilebilirlik ve uzun vadede sürdürülebilirliğini önemli ölçüde artırabilirsiniz.
+Bu, modüldeki işlevlerin ve değerlerin diğer modüllerdeki adlarla çakışabilecek adlara sahip olduğu durumlarda faydalıdır. Tam erişim gerektirmek, bir kitaplığın uzun süreli bakım ve gelişmesini büyük ölçüde artırabilir.
 
 ```fsharp
 [<RequireQualifiedAccess>]
@@ -89,13 +89,13 @@ let parsed = StringTokenization.parse s // Must qualify to use 'parse'
 
 ### <a name="sort-open-statements-topologically"></a>Sıralama `open` deyimleri topologically
 
-İçinde F#, bildirimleri önemli olan konuya, dahil olmak üzere sırasını `open` deyimleri. Bu C#, burada etkisini `using` ve `using static` Bu deyimler bir dosyada sıralamasını bağımsızdır.
+İçinde F#, `open`deyimleriyle birlikte bildirimlerin önemli sırası. Bu,`using`C#ve`using static`efektinin bir dosyadaki deyimlerin sıralarından bağımsız olduğu şekilde farklı olur.
 
-İçinde F#, bir kapsama açılır öğe zaten mevcut bir diğer gölge. Yani bu yeniden sıralama `open` deyimleri kod anlamını alter. Sonuç olarak, tüm sıralama her rastgele `open` deyimleri (örneğin, alfasayısal olarak) genellikle önerilmez, bekleyebileceğiniz farklı bir davranış oluşturmak ekleyin.
+' F#De, bir kapsamda açılan öğeler, diğerlerinin zaten mevcut olduğu öğeleri gölgelendirebilir. Bu, yeniden sıralama `open` deyimlerinin kodun anlamını değiştirebilecek anlamına gelir. Sonuç olarak, tüm `open` deyimlerinin (örneğin, alfasayısal) herhangi bir rastgele sıralanması genellikle önerilmez, en uzun zaman beklemeniz gerekebilecek farklı davranışlar oluşturabilirsiniz.
 
-Bunun yerine, bunları sıralama öneririz [topologically](https://en.wikipedia.org/wiki/Topological_sorting); diğer bir deyişle, sipariş, `open` sırayı deyimlerinde _katmanları_ sisteminizi tanımlanır. Alfasayısal içindeki farklı topolojik katmanları sıralama yapmak da düşünülebilir.
+Bunun yerine, [topologically](https://en.wikipedia.org/wiki/Topological_sorting); diğer bir deyişle, `open` deyimlerinizi sisteminizin _katmanlarının_ tanımlandığı sırada sıralayın. Farklı topolojik katmanlarda Alfasayısal sıralama yapmak de göz önünde bulundurulmayabilir.
 
-Örneğin, işte topolojik sıralama için F# derleyici hizmeti ortak API dosyası:
+Örnek olarak, F# derleyici HIZMETI ortak API dosyası için topik sıralama aşağıda verilmiştir:
 
 ```fsharp
 namespace Microsoft.FSharp.Compiler.SourceCodeServices
@@ -141,11 +141,11 @@ open Internal.Utilities
 open Internal.Utilities.Collections
 ```
 
-Satır sonu alfasayısal olarak tüketmesi sıralanan her bir katman ile topolojik katmanları ayıran unutmayın. Bu düzgün bir şekilde kod değerleri gölgeleme olmadan yanlışlıkla düzenler.
+Bir satır sonu, her katmana daha sonra alfasayısal olarak sıralanmakta olan topik katmanları ayırır. Bu, yanlışlıkla gölgeleme değerleri olmadan kodu düzgün bir şekilde düzenler.
 
-## <a name="use-classes-to-contain-values-that-have-side-effects"></a>Yan etkisi olan değerler içermesini sınıflarını kullanma
+## <a name="use-classes-to-contain-values-that-have-side-effects"></a>Yan etkileri olan değerleri içermesi için sınıfları kullanma
 
-Değer başlatma gibi bir bağlam için bir veritabanı veya başka bir uzak kaynağa örnekleme yan etkileri zaman olabilir birçok kez vardır. Modül içindeki gibi şeyler başlatıp sonraki işlevleri kullanmak için daha cazip bir:
+Bir değerin başlatılması, bir veritabanı veya başka bir uzak kaynak için bir bağlamı örneklendirirken birçok zaman olabilir. Bu tür şeyleri bir modülde başlatmak ve sonraki işlevlerde kullanmak önemlidir:
 
 ```fsharp
 // This is bad!
@@ -160,15 +160,15 @@ module MyApi =
     let function2 arg = doSutffWith dep1 dep2 dep3 arg
 ```
 
-Sık kötü bir fikir birkaç nedeni budur:
+Bu, birkaç nedenden dolayı çoğunlukla kötü bir fikir olabilir:
 
-Uygulama yapılandırması tabanının ilk olarak, şekilde gönderildiğinde `dep1` ve `dep2`. Bu, büyük kod tabanlarında elde etmek zordur.
+İlk olarak, uygulama yapılandırması `dep1` ve `dep2`kod tabanına gönderilir. Daha büyük kod tabanlarında bakım yapmak zordur.
 
-İkinci, statik olarak başlatılmış veri bileşeniniz kendisini birden çok iş parçacığı kullanacaksanız, iş parçacığı güvenli olmayan bir değer içermemelidir. Bu açıkça tarafından ihlal `dep3`.
+İkinci olarak, bileşen birden çok iş parçacığı kullanıyorsa, statik olarak başlatılan veriler iş parçacığı güvenli olmayan değerler içermemelidir. Bu, `dep3`tarafından açıkça ihlal edilir.
 
-Son olarak, modül başlatma tüm derleme birimi için bir statik oluşturucuya derler. Let bağlı değer başlatma bu modüldeki herhangi bir hata oluşması halinde olarak bildirimleri bir `TypeInitializationException` , ardından önbelleğe alınma tüm uygulama ömrü boyunca. Bu tanı koymak güç olabilir. Genellikle bir iç özel durum hakkında neden girişiminde bulunabilirsiniz yoktur ancak ardından yoksa, hiçbir belirten kök nedeni nedir yok.
+Son olarak, modül başlatması tüm derleme birimi için statik bir oluşturucuya derlenir. Bu modülde izin-bağlanan değer başlatma bölümünde herhangi bir hata oluşursa, uygulamanın kullanım ömrü boyunca önbelleğe alınmış bir `TypeInitializationException` olarak bildirim oluşturulur. Bunu tanılamak zor olabilir. Genellikle bunun nedenini deneyebilmeniz için bir iç özel durum vardır, ancak yoksa, kök nedenin ne olduğunu söylemez.
 
-Bunun yerine, bağımlılıkları tutmak için yalnızca basit bir sınıfı kullanın:
+Bunun yerine, bağımlılıkları tutmak için basit bir sınıf kullanmanız yeterlidir:
 
 ```fsharp
 type MyParametricApi(dep1, dep2, dep3) =
@@ -176,20 +176,20 @@ type MyParametricApi(dep1, dep2, dep3) =
     member __.Function2 arg2 = doStuffWith dep1 dep2 dep3 arg2
 ```
 
-Bu aşağıdakileri sağlar:
+Bu, şunları sunar:
 
-1. API dışında herhangi bir bağımlı durumu İletiliyor.
-2. Yapılandırma, artık API dışında yapılabilir.
-3. Bağımlı değerleri için başlatma hataları olarak bildirim olasılığı olmayan bir `TypeInitializationException`.
-4. API, artık test etmek daha kolay olur.
+1. Herhangi bir bağımlı durumu API 'nin dışında iletme.
+2. Yapılandırma artık API dışında yapılabilir.
+3. Bağımlı değerler için başlatma hatalarının büyük olasılıkla `TypeInitializationException`olarak bildirimine izin verilmez.
+4. API artık test etmek daha kolay.
 
-## <a name="error-management"></a>Hata Yönetimi
+## <a name="error-management"></a>Hata yönetimi
 
-Hata Yönetimi sistemlerinde büyük olan karmaşık ve incelikli bir çaba ve sistemlerinizi sağlamak madde işaretleri de yapılandıran ve hataya dayanıklı hiçbir silver vardır. Aşağıdaki yönergeler bu zor alanı gezinme kılavuzluk sunmalıdır.
+Büyük sistemlerde hata yönetimi karmaşık ve anormal bir Endeavor ve sistemlerinizin hataya dayanıklı ve iyi davranmasını sağlamaya yönelik gümüş bir madde işareti yoktur. Aşağıdaki kılavuzlar, bu zor alanda gezinmek için rehberlik sunmalıdır.
 
-### <a name="represent-error-cases-and-illegal-state-in-types-intrinsic-to-your-domain"></a>Hata durumları ve etki alanınızı iç türleri geçersiz durumda temsil eder
+### <a name="represent-error-cases-and-illegal-state-in-types-intrinsic-to-your-domain"></a>Etki alanınız için iç türlerde hata durumlarını ve geçersiz durumu temsil eder
 
-İle [ayırt edici birleşimler](../language-reference/discriminated-unions.md), F# hatalı program durumunu temsil eden tür sisteminizdeki olanağı sağlar. Örneğin:
+[Ayrılmış birleşimler](../language-reference/discriminated-unions.md)sayesinde, F# tür sisteminizde hatalı program durumunu temsil etme olanağı sunar. Örneğin:
 
 ```fsharp
 type MoneyWithdrawalResult =
@@ -199,7 +199,7 @@ type MoneyWithdrawalResult =
     | UndisclosedFailure
 ```
 
-Bu durumda, bir banka hesaptan para geri alınmasının başarısız olabilir ve bilinen üç yolu vardır. Her bir hata durumu yazıyla gösterilir ve bu nedenle ile güvenli bir şekilde programın tamamında alınabilir.
+Bu durumda, bir banka hesabından paranın bir şekilde çizmesinin başarısız olması için üç bilinen yol vardır. Her bir hata durumu, türünde temsil edilir ve bu nedenle program genelinde güvenle ele alınabilir.
 
 ```fsharp
 let handleWithdrawal amount =
@@ -211,35 +211,35 @@ let handleWithdrawal amount =
     | UndisclosedFailure -> printfn "Failed: unknown"
 ```
 
-Bu sorun genel olarak, farklı şekilde modelleyebilir, yapabilirsiniz **başarısız** etki alanınızda sonra hata işleme kodunu artık sorun, gereken işlem ile ek olarak normal program akışı olarak kabul edilir. Yalnızca normal program akışı bir parçasıdır ve dikkate alınmaz **olağanüstü**. Bu iki adet birincil avantaj vardır:
+Genel olarak, etki alanındaki bir şeyin **başarısız olmasına** yönelik farklı yollar modelleyebilir, daha sonra hata işleme kodu artık normal program akışına ek olarak uğraşmanız gereken bir şey olarak değerlendirilmez. Yalnızca normal program akışının bir parçasıdır ve **olağanüstü**olarak kabul edilmez. Bunun başlıca iki avantajı vardır:
 
-1. Etki alanınızı zamanla değiştikçe korumak daha kolaydır.
-2. Hata durumları birim testine daha kolaydır.
+1. Etki alanınız zaman içinde değiştikçe bakım daha kolay olur.
+2. Hata durumlarının birim testi daha kolay.
 
-### <a name="use-exceptions-when-errors-cannot-be-represented-with-types"></a>Hata türleri ile gösterilemez durumlarda özel durumları kullanın
+### <a name="use-exceptions-when-errors-cannot-be-represented-with-types"></a>Hatalar türlerle gösterilemeyeceği durumlarda özel durumlar kullanın
 
-Bir sorun etki alanındaki tüm hataları temsil edilebilir. Bu türde hataları *olağanüstü* yapısı, bu nedenle yükseltmek ve özel durumları yakalama olanağı F#.
+Hatalar bir sorun etki alanında gösterilemez. Bu tür hataların doğası gereği *, bu* nedenle özel durumları ' de F#tetikleyebilme ve yakalayabilme özelliği vardır.
 
-İlk olarak, okumanızı önerilir [özel tasarım yönergeleri](../../standard/design-guidelines/exceptions.md). Bu da geçerli olan F#.
+İlk olarak, [özel durum tasarım kılavuzunu](../../standard/design-guidelines/exceptions.md)okumanız önerilir. Bunlar için F#de geçerlidir.
 
-Ana bulunan yapıları F# özel durumlarını oluşturma amacıyla aşağıdaki tercih sırasına göre değerlendirilmesi için:
+Özel durumları oluşturma amaçları için F# ' de kullanılabilen ana yapılar, aşağıdaki tercih sırasına göre düşünülmelidir:
 
 | İşlev | Sözdizimi | Amaç |
 |----------|--------|---------|
-| `nullArg` | `nullArg "argumentName"` | Oluşturur bir `System.ArgumentNullException` ile belirtilen bağımsız değişken adı. |
-| `invalidArg` | `invalidArg "argumentName" "message"` | Oluşturur bir `System.ArgumentException` belirtilen bağımsız değişken adı ve ileti. |
-| `invalidOp` | `invalidOp "message"` | Oluşturur bir `System.InvalidOperationException` belirtilen ileti. |
-|`raise`| `raise (ExceptionType("message"))` | Özel durumları atma için genel amaçlı mekanizması. |
-| `failwith` | `failwith "message"` | Oluşturur bir `System.Exception` belirtilen ileti. |
-| `failwithf` | `failwithf "format string" argForFormatString` | Oluşturur bir `System.Exception` Biçim dizesinden veya girdilerinden tarafından belirlenen bir ileti ile. |
+| `nullArg` | `nullArg "argumentName"` | Belirtilen bağımsız değişken adıyla bir `System.ArgumentNullException` oluşturur. |
+| `invalidArg` | `invalidArg "argumentName" "message"` | Belirtilen bağımsız değişken adı ve iletisiyle bir `System.ArgumentException` oluşturur. |
+| `invalidOp` | `invalidOp "message"` | Belirtilen iletiyle bir `System.InvalidOperationException` oluşturur. |
+|`raise`| `raise (ExceptionType("message"))` | Özel durum oluşturmak için genel amaçlı mekanizma. |
+| `failwith` | `failwith "message"` | Belirtilen iletiyle bir `System.Exception` oluşturur. |
+| `failwithf` | `failwithf "format string" argForFormatString` | Biçim dizesi ve girişleri tarafından belirlenen iletiyle bir `System.Exception` oluşturur. |
 
-Kullanım `nullArg`, `invalidArg` ve `invalidOp` durum için bir mekanizma olarak `ArgumentNullException`, `ArgumentException` ve `InvalidOperationException` uygun olduğunda.
+`nullArg`, `invalidArg` ve `invalidOp` uygun olduğunda `ArgumentNullException`, `ArgumentException` ve `InvalidOperationException` throw mekanizması olarak kullanın.
 
-`failwith` Ve `failwithf` işlevleri, genellikle bunlar temel çünkü kaçınılmalıdır `Exception` türü, bir özel durum. Olarak başına [özel tasarım yönergeleri](../../standard/design-guidelines/exceptions.md), mümkün olduğunda daha belirli özel durumları yükseltmek istediğiniz.
+`failwith` ve `failwithf` işlevleri, belirli bir özel durum değil, temel `Exception` türünü yükselttiğinden genellikle kaçınılmalıdır. [Özel durum tasarım yönergelerine](../../standard/design-guidelines/exceptions.md)göre,, ' yi kullanırken daha özel özel durumlar da yapmak istersiniz.
 
-### <a name="using-exception-handling-syntax"></a>Özel durum işleme sözdizimini kullanarak
+### <a name="using-exception-handling-syntax"></a>Özel durum işleme söz dizimini kullanma
 
-F#özel durum desenleri aracılığıyla destekler `try...with` söz dizimi:
+F#`try...with`söz dizimi aracılığıyla özel durum desenlerini destekler:
 
 ```fsharp
 try
@@ -249,25 +249,25 @@ with
 | :? System.Security.SecurityException as e -> // Do something with it here
 ```
 
-Bir özel durum desen eşleştirme ile karşılaşıldığında gerçekleştirmek için işlevleri karşılaştırma kodu temiz tutmak istiyorsanız biraz zor olabilir. Bu durumu çözmek için bir tür kullanmaktır [Etkin desenler](../language-reference/active-patterns.md) grubu işlev bir özel bir hata durumuyla çevreleyen yöntemi olarak. Örneğin, bir özel durum oluşturduğunda, özel durum meta verilerde değerli bilgiler kapsayan bir API kullanan. Yakalanan özel durumun etkin desen içinde gövdesinde yararlı bir değer çözülme ve döndürme değeri bazı durumlarda yararlı olabilir.
+Bir özel durumun açık olması için işlevselliği karşılaştırma, kod temizlemeyi sağlamak istiyorsanız biraz karmaşık olabilir. Bunu işlemenin bir yolu, [etkin desenleri](../language-reference/active-patterns.md) bir özel durum ile bir hata durumu çevreleyen işlevselliği gruplandırmak için bir yol olarak kullanmaktır. Örneğin, bir özel durum oluşturduğunda, önemli bilgileri özel durum meta verilerinde kapsayan bir API kullanıyor olabilirsiniz. Etkin düzenin içindeki yakalanan özel durum gövdesinde yararlı bir değeri sarmalama ve bu değeri döndürme bazı durumlarda yararlı olabilir.
 
-### <a name="do-not-use-monadic-error-handling-to-replace-exceptions"></a>Birli hata özel durum değiştirmek için işleme kullanmayın
+### <a name="do-not-use-monadic-error-handling-to-replace-exceptions"></a>Özel durumları değiştirmek için monadıc hata işleme kullanmayın
 
-Özel durumlar, biraz taboo işlevsel programlama olarak görülür. Aslında, sessiz değil işlevsel dikkate alınması gereken güvenli olacak şekilde özel durumları saflığa, ihlal ediyor. Ancak, bu kodu çalıştırdığı gerekir ve bu çalışma zamanı hataları oluşabilir gerçeklik yok sayar. Genel olarak, bilgilerin çoğunu saf ne sürprizlerden en aza indirmek için toplam varsayımına kod yazın.
+Özel durumlar fonksiyonel programlamada biraz Taboo olarak görülür. Aslında özel durumlar ihlal ediyor, bu nedenle bunları çok işlevli olarak düşünmek güvenlidir. Ancak, bu durum kodun çalışması gereken gerçekliği yoksayar ve çalışma zamanı hataları oluşabilir. Genel olarak, önemli sürprleri en aza indirmek için çoğu şeyin saf veya toplam olmadığı varsayımına göre kod yazın.
 
-Aşağıdaki çekirdek güçlü/yönlerini özel durumlar, ilgi düzeyi ve bir bütün olarak site .NET çalışma zamanı ve diller arası ekosistemi ile ilgili göz önünde bulundurmanız önemlidir:
+.NET çalışma zamanı ve çapraz dil ekosisteminde bir bütün olarak ilgi ve uygunluk açısından, özel durumların önem derecesine/yönlerini göz önünde bulundurmanız önemlidir.
 
-1. Soruna hata ayıklanırken çok yararlı olan ayrıntılı tanılama bilgileri içerirler.
-2. Bunlar, çalışma zamanı ve diğer .NET dilleri tarafından anlaşılır.
-3. Bunlar giden yolu dışında bir kod ile karşılaştırıldığında önemli Demirbaş azaltabilir *önlemek* bir geçici olarak kendi semantiği bazı alt kümesi uygulayarak özel durumlar.
+1. Bu kişiler, bir sorun ayıklanırken çok yararlı olan ayrıntılı tanılama bilgilerini içerirler.
+2. Çalışma zamanı ve diğer .NET dilleri tarafından iyi anlaşılabilirler.
+3. Bu kişiler, semantiğinin bazı alt kümelerini geçici olarak uygulayarak özel durumların *önüne* geçen kodla karşılaştırıldığında önemli ortak bir şekilde azalabilir.
 
-Bu üçüncü noktasını, kritik öneme sahiptir. Ölçeklenebilmesi kolay karmaşık işlemlerinde, özel durumlar kullanma başarısız yapıları şöyle uğraşmanızı neden olabilir:
+Bu üçüncü nokta kritiktir. Önemsiz olmayan karmaşık işlemler için, özel durumları kullanmayan durumlar, şunun gibi yapılarla ilgileniyor:
 
 ```fsharp
 Result<Result<MyType, string>, string list>
 ```
 
-Hangi kolayca kırılgan kod hatalarını "yazılı stringly" desen gibi neden olabilir:
+Bu, "stringly-yazılan" hatalarda model eşleştirme gibi kırılmamış koda kolayca yol açabilir:
 
 ```fsharp
 let result = doStuff()
@@ -279,7 +279,7 @@ match result with
     else ... // Who knows?
 ```
 
-Ayrıca, gizliliğinizi korumayı taahhüt eder "daha Hoş görünmesi" türü döndüren "Basit" işlevi için herhangi bir özel swallow cazip olabilir:
+Ayrıca, "Nicer" türü döndüren bir "basit" işlevi için istenen özel duruma izin verebilir.
 
 ```fsharp
 // This is bad!
@@ -288,7 +288,7 @@ let tryReadAllText (path : string) =
     with _ -> None
 ```
 
-Ne yazık ki `tryReadAllText` çok sayıda dosya sisteminde oluşabilir şeyler dayalı çok sayıda özel durumlar oluşturabilecek ve bu kodu gerçekten yanlış ortamınızda neler hakkında bilgi hemen atar. Ardından bu kod bir sonuç türü değiştirirseniz, "yazılı stringly" hata iletisini geri ayrıştırma için duyuyoruz:
+Ne yazık ki `tryReadAllText`, bir dosya sisteminde gerçekleşebilecek nesnelerin sayısız temelinde çok sayıda özel durum oluşturabilir ve bu kod, ortamınızda gerçekten yanlış duruma gelmiş olabilecek bilgilerin hiçbirini atar. Bu kodu bir sonuç türüyle değiştirirseniz, "stringly-Typed" hata iletisi ayrıştırma ' ya geri dönebilirsiniz:
 
 ```fsharp
 // This is bad!
@@ -304,9 +304,9 @@ match r with
     else ...
 ```
 
-Ve özel durum nesnesi içinde `Error` Oluşturucusu yalnızca zorlar sizin için doğru çağrı sitesinde yerine işlev özel durum türüne sahip. Etkili bir şekilde bunu bir API'yi çağıran çalışılabilecek öğesinin unfun işaretli özel durum oluşturur.
+Ayrıca, özel durum nesnesinin kendisini `Error` oluşturucuya yerleştirmek yalnızca, işlev yerine çağrı sitesindeki özel durum türüyle doğru şekilde uğraşmaya zorlar. Bunu etkin hale getirmek, bir API çağıranı olarak ele alınması için önemli ölçüde eğlenceli olmayan, denetlenen özel durumlar oluşturur.
 
-Yukarıdaki örneklerde iyi bir alternatif yakalamaktır *belirli* özel durumlar ve o özel durumu bağlamında anlamlı bir değer döndürür. Değiştirirseniz `tryReadAllText` aşağıdaki gibi işlev `None` daha fazla anlamı vardır:
+Yukarıdaki örneklere iyi bir alternatif, *belirli* özel durumları yakalamak ve bu özel durumun bağlamına anlamlı bir değer döndürmemelidir. `tryReadAllText` işlevini aşağıdaki şekilde değiştirirseniz, `None` daha fazla anlamı vardır:
 
 ```fsharp
 let tryReadAllTextIfPresent (path : string) =
@@ -314,21 +314,21 @@ let tryReadAllTextIfPresent (path : string) =
     with :? FileNotFoundException -> None
 ```
 
-Bir dosya bulunamadı ve bu anlamı atamak için bir dönüş catch tümünü olarak çalışması için yerine, bu işlev artık düzgün şekilde çalışması işler. Bu dönüş değeri, bağlamsal bilgileri atılıyor veya bu noktada kod içinde ilgili olmayabilir bir servis talebi uğraşmanız çağıranlar zorlama sırasında bu hata çalışmasına eşleyebilirsiniz.
+Catch-all olarak çalışmak yerine, bu işlev artık bir dosya bulunamadığı ve bu anlamı bir return öğesine atayan durumu doğru şekilde işleymeyecektir. Bu dönüş değeri bu hata durumuyla eşleşirken, herhangi bir bağlamsal bilgileri atmakla veya çağıranların koddaki bu noktada ilgisi olmayan bir servis talebiyle uğraşmak üzere zorlanmamalıdır.
 
-Gibi türleri `Result<'Success, 'Error>` nerede bunlar iç içe değil, temel işlemleri için uygun olan ve F# zamanı temsil eden bir şey olabilir ya da iade için isteğe bağlı türler mükemmel *bir şey* veya *hiçbirşey*. Bunlar özel durumlar yerine değil ve bir özel durum değiştirmek için kullanılmamalıdır. Bunun yerine, bunlar bozacağından adresi belirli yönlerini özel durum ve hata yönetimi ilkesi için hedeflenen şekilde uygulanmalıdır.
+`Result<'Success, 'Error>` gibi türler, iç içe olmadıkları temel işlemler için uygundur ve F# isteğe bağlı türler *bir şeyi* veya *hiç*birini döndürene zaman dönebileceği göstermek için idealdir. Özel durumların yerini almaz, ancak özel durumları değiştirme girişiminde kullanılmamalıdır. Bunun yerine, özel durum ve hata yönetimi ilkesinin hedeflenen yollarla belirli yönlerini karşılamak için bozacağından uygulanmalıdır.
 
-## <a name="partial-application-and-point-free-programming"></a>Kısmi uygulama ve programlama noktası-ücretsiz
+## <a name="partial-application-and-point-free-programming"></a>Kısmi uygulama ve noktadan ücretsiz programlama
 
-F#Kısmi uygulama ve bu nedenle, program için çeşitli yollar noktası içermeyen bir stilde destekler. Bu modül veya bir şeyin uygulama içinde kodun yeniden yararlı olabilir, ancak genellikle genel olarak kullanıma sunmak için bir şey değildir. Genel olarak, noktası ücretsiz programlama içinde ve kendisinin bir virtue değil ve bilişsel ciddi bir engel stilde sarmalanmış şekilde olmayan kişiler için ekleyebilirsiniz.
+F#kısmi uygulamayı destekler ve bu nedenle, noktadan farklı stilde programlama için çeşitli yollar sunar. Bu, bir modül içindeki kod yeniden kullanımı veya bir şeyin uygulanması için yararlı olabilir, ancak genel olarak kullanıma sunulmayan bir şey değildir. Genel olarak, ücretsiz programlama, ve içinde bir virtuale değildir ve stilde sarmalanmış olmayan kişiler için önemli bir bilişsel engel ekleyebilir.
 
-### <a name="do-not-use-partial-application-and-currying-in-public-apis"></a>Kısmi uygulama ve genel API'ler currying kullanmayın
+### <a name="do-not-use-partial-application-and-currying-in-public-apis"></a>Kısmi uygulama kullanmayın ve ortak API 'lerde currying kullanın
 
-Az özel durumla ortak API'lerde kısmi uygulama kullanımını Tüketiciler için kafa karıştırıcı olabilir. Genellikle, `let`-bağlı değerleri F# kodu **değerleri**değil **işlev değerleri**. Değerleri ve işlev değerleri birlikte karıştırma sonuçlanabilir bilişsel ek yükü, olayın lisanslarınıza kod satırlarını az sayıda kaydedilirken gibi özellikle işleçleri ile birleştirildiğinde `>>` işlevleri oluşturmak için.
+Küçük bir özel durumla, genel API 'lerde kısmi uygulama kullanımı, tüketiciler için kafa karıştırıcı olabilir. Genellikle, F# koddaki `let`bağlantılı değerler, **işlev değerleri**değil, **değerlerdir**. Değer ve işlev değerlerini bir araya getirmek, özellikle de işlevler oluşturmak için `>>` gibi işleçlerle birleştirildiğinde, çok sayıda bilişsel ek yük için Exchange 'de küçük miktarda kod satırı kaydedilmesine neden olabilir.
 
-### <a name="consider-the-tooling-implications-for-point-free-programming"></a>Programlama noktası ücretsiz araçları etkilerini göz önünde bulundurun
+### <a name="consider-the-tooling-implications-for-point-free-programming"></a>Noktadan noktaya ücretsiz programlama için araç etkilerini göz önünde bulundurun
 
-Curried işlevleri kendi bir bağımsız değişken etiket değil. Bu etkileri araçlarına sahiptir. Aşağıdaki iki işlevi göz önünde bulundurun:
+Curried işlevleri bağımsız değişkenlerini etiketetmez. Bu, etkilerini olumsuz etkiler. Aşağıdaki iki işlevi göz önünde bulundurun:
 
 ```fsharp
 let func name age =
@@ -338,7 +338,7 @@ let funcWithApplication =
     printfn "My name is %s and I am %d years old!"
 ```
 
-Her ikisi de geçerli işlevleri olan ancak `funcWithApplication` curried bir işlevdir. Bir düzenleyicide türleri üzerine geldiğinizde, şunu görürsünüz:
+Her ikisi de geçerli işlevlerdir, ancak `funcWithApplication` curried bir işlevdir. Bir düzenleyicide türlerin üzerine geldiğinizde şunu görürsünüz:
 
 ```fsharp
 val func : name:string -> age:int -> unit
@@ -346,17 +346,17 @@ val func : name:string -> age:int -> unit
 val funcWithApplication : (string -> int -> unit)
 ```
 
-Çağıran sitede, Visual Studio gibi bir araç ipuçlarında, anlamlı bilgiler ne vermeyiz `string` ve `int` giriş türleri gerçekten temsil eder.
+Çağrı sitesinde, Visual Studio gibi araç ipuçları, `string` ve `int` giriş türlerinin gerçekten temsil ettiği anlamlı bilgiler vermeyecektir.
 
-Kod noktası ücretsiz gibi karşılaşırsanız `funcWithApplication` , genel olarak kullanılabilir, bu araçları çekme yukarı bağımsız değişkenleri için anlamlı adlar devam bir tam η genişletme için yapmanız gerekenleri önerilir.
+Herkese açık şekilde tüketilebilir `funcWithApplication` gibi nokta içermeyen bir kodla karşılaşırsanız, araç, bağımsız değişkenlerin anlamlı adlarını görebilmesi için tam bir η genişletmesi yapmanız önerilir.
 
-Ayrıca, kod noktası sorunsuz hata ayıklama, imkansız değilse zor olabilir. Hata ayıklama araçları kullanan adlarına bağlı değerleri (örneğin, `let` bağlamaları) yürütme aracılığıyla Ara değerleri midway inceleyebilmeniz. Kodunuzu incelemek için hiçbir değer olduğunda, hata ayıklamak için hiçbir şey yoktur. Gelecekte, hata ayıklama araçları evrim Geçiren kullanıp bu değerler daha önce yürütülen yollarına dayalı, ancak üzerinde kaynak yatırımlarınızın karşılığını hedge iyi bir fikir değil *olası* işlevleri hata ayıklama.
+Ayrıca, hata ayıklama noktası ücretsiz kod, mümkün değilse zor olabilir. Hata ayıklama araçları, adlara bağlı değerleri kullanır (örneğin, `let` bağlamaları) ve böylece ara değerleri, yürütme aracılığıyla bir şekilde inceleyebilirsiniz. Kodunuzun incelenecek bir değeri olmadığında hata ayıklamanın bir şey yoktur. Gelecekte, hata ayıklama araçları, daha önce yürütülen yollara göre bu değerleri sentezleştirmek üzere gelişiyor, ancak sonuçlarınızı *olası* hata ayıklama işlevselliğine göre eklemek iyi bir fikir değildir.
 
-### <a name="consider-partial-application-as-a-technique-to-reduce-internal-boilerplate"></a>Kısmi uygulama yöntemi olarak iç karmaşıklığın azaltılmasına göz önünde bulundurun.
+### <a name="consider-partial-application-as-a-technique-to-reduce-internal-boilerplate"></a>İç ortak uygulamayı azaltmak için kısmi uygulamayı bir teknik olarak düşünün
 
-Önceki bir noktaya aksine, ortak bir uygulama ya da daha ayrıntılı bir API içyüzü içinde azaltmak için harika bir araç kısmi uygulamasıdır. Birim testi Demirbaş genellikle uğraşmanız bir sorun olduğu, daha karmaşık bir API uygulaması için yararlı olabilir. Örneğin, bu tür bir Framework'te dış bağımlılık yapmadan nasıl yapabileceğinizle aşağıdaki kodun gösterdiği en sahte hangi çerçeveleri, verin ve API bespoke ilgili öğrenmek zorunda.
+Önceki noktanın aksine kısmi uygulama, bir uygulamanın içindeki demirbaş veya bir API 'nin daha derin iç içe geçmiş olması için harika bir araçtır. Daha karmaşık API 'lerin uygulanması yararlı olabilir; burada ortak, genellikle ilgileniyor bir sorun. Örneğin, aşağıdaki kod, en fazla bir çerçeve için bir dış bağımlılık almadan ve ilgili bir beste API öğrenmeye gerek kalmadan size en fazla ne kadar çok şey sağladığını nasıl gerçekleştirebileceğinizi göstermektedir.
 
-Örneğin, aşağıdaki çözümü topografi göz önünde bulundurun:
+Örneğin, aşağıdaki çözüm topografisini göz önünde bulundurun:
 
 ```
 MySolution.sln
@@ -365,7 +365,7 @@ MySolution.sln
 |_/API.fsproj
 ```
 
-`ImplementationLogic.fsproj` kod kullanıma sunma gibi:
+`ImplementationLogic.fsproj`, şu gibi bir kod açığa çıkabilir:
 
 ```fsharp
 module Transactions =
@@ -378,7 +378,7 @@ type Transactor(ctx, currentBalance) =
         ...
 ```
 
-Birim testi `Transactions.doTransaction` içinde `ImplementationLogic.Tests.fsproj` kolaydır:
+`ImplementationLogic.Tests.fsproj` birim testi `Transactions.doTransaction` kolaydır:
 
 ```fsharp
 namespace TransactionsTestingUtil
@@ -389,7 +389,7 @@ module TransactionsTestable =
     let getTestableTransactionRoutine mockContext = Transactions.doTransaction mockContext
 ```
 
-Kısmen uygulama `doTransaction` işlevi tüm Birim testlerinizin her zaman sahte bir bağlam oluşturmak zorunda kalmadan çağırın ile sahte bir bağlam nesnesi sağlar:
+Bir sahte işlem bağlam nesnesiyle `doTransaction` kısmen uygulamak, her seferinde bir moclenmiş bağlam oluşturulmasına gerek kalmadan, işlevi tüm birim testlerinizde çağırmanıza olanak sağlar:
 
 ```fsharp
 namespace TransactionTests
@@ -413,43 +413,43 @@ let ``Test withdrawal transaction with 0.0 for balance``() =
     Assert.Equal(expected, actual)
 ```
 
-Bu teknik tüm kod temelinizde yapılan Evrensel uygulanmamalıdır ancak karmaşık iç Ayrıntılar ve birim testi bu iç işlevleri için Demirbaş azaltmak için iyi bir yoludur.
+Bu teknik, tüm kod tabanınıza evrensel olarak uygulanmamalıdır, ancak karmaşık iç yapılar ve bu iç yapıları için ortak bir yoldur.
 
 ## <a name="access-control"></a>Erişim denetimi
 
-F#için birden çok seçenek vardır [erişim denetimi](../language-reference/access-control.md), .NET çalışma zamanı'nda kullanılabilir öğesinden devralınan. Bunlar yalnızca türleri için kullanılabilir değildir - bunları işlevleri için de kullanabilirsiniz.
+F#, .NET çalışma zamanında kullanılabilir olan öğeden devralınan [erişim denetimi](../language-reference/access-control.md)için birden çok seçeneğe sahiptir. Bunlar yalnızca türler için kullanılamaz. bunları işlevler için de kullanabilirsiniz.
 
-* Tercih ettiğiniz olmayan`public` türler ve üyeler kadar genel olarak kullanılabilir olması gerekir. Bu, hangi tüketicilerin birkaç için de azaltır.
-* Tüm yardımcı işlevini tutun `private`.
-* Kullanımını göz önünde bulundurun `[<AutoOpen>]` çok sayıda vermediğinde yardımcı işlevleri, özel bir modül.
+* `public` olmayan türleri ve üyeleri, herkese açık bir şekilde tüketilene kadar tercih edin. Bu Ayrıca, hangi tüketicilerin için de en aza indirir.
+* Tüm yardımcı işlevleri `private`tutmak için çaba harcar.
+* Çok sayıda hale gelirse, yardım işlevlerinin özel modülünde `[<AutoOpen>]` kullanımını göz önünde bulundurun.
 
 ## <a name="type-inference-and-generics"></a>Tür çıkarımı ve genel türler
 
-Tür çıkarımı, çok sayıda standart yazmasını kaydedebilirsiniz. Ve de otomatik Genelleştirme F# derleyici bulunmanıza neredeyse hiçbir ekstra çaba daha genel kod yazmanıza yardımcı olabilir. Ancak, bu özellikler Evrensel iyi değildir.
+Tür çıkarımı, çok sayıda demirbaş yazmanız için sizi kaydedebilir. Ve derleyicide otomatik Genelleştirme F# , sizin bölümlük üzerinde neredeyse hiç fazla çaba olmadan daha fazla genel kod yazmanıza yardımcı olabilir. Ancak, bu özellikler evrensel olarak iyi değildir.
 
-* Bağımsız değişken adları açık türlerinde ortak API'ler ile etiketleme göz önünde bulundurun ve bunun için tür çıkarımı güvenmeyin.
+* Bağımsız değişken adlarını ortak API 'lerde açık türlerle etiketlemeyi düşünün ve bunun için tür çıkarımı kullanmayın.
 
-    Bunun nedeni olan **,** derleyici API'nizi şeklini denetiminde olması gerekir. Derleyici, türlerin çıkarımını yapma en iyi bir iş yapabilirse kullanır iç türleri değişip değişmediğini API değişikliğiniz şeklini olması mümkündür. Bu, istediğiniz olabilir, ancak neredeyse kesindir aşağı akış tüketicilere çalışılabilecek olacak bir API değişiklik neden. Bunun yerine, açıkça genel API'nizi şeklini denetlemek, en son değişikliklerin denetleyebilirsiniz. DDD bağlamında, bu, bir bozulma önleyici katman düşünülebilir.
+    Bunun nedeni, derleyicinin değil, API 'nizin şeklinin denetiminde **olması gerekir.** Derleyici, sizin için türler üzerinde ince bir iş yapabilse de, bağımlı olduğu iç işlem tür türleri değiştiyse API 'nizin şeklinin değiştirilmesi mümkündür. Bu, istediğiniz gibi olabilir, ancak aşağı akış tüketicilerinin daha sonra uğraşmak zorunda olacağı bir API değişikliğine neredeyse tamamen neden olur. Bunun yerine, ortak API 'nizin şeklini açıkça kontrol ediyorsanız, bu son değişiklikleri denetleyebilirsiniz. DDD terimlerinde, bu, bozulma önleyici bir katman olarak düşünülebilir.
 
-* Genel, bağımsız değişkenleri için anlamlı bir ad vermeyi düşünün.
+* Genel bağımsız değişkenlerinize anlamlı bir ad vermeyi düşünün.
 
-    Belirli bir etki alanına özgü değildir gerçekten genel kod yazıyorsanız sürece, anlamlı bir ad, çalışmakta olduğunuz etki alanı anlama diğer programcılar yardımcı olabilir. Örneğin, adlı bir tür parametresi `'Document` bir belge ile etkileşim kurmanın bağlamında veritabanı NET genel belge türü işlev veya birlikte çalıştığınız üyesi tarafından kabul edilebilen kolaylaştırır.
+    Belirli bir etki alanına özgü olmayan gerçekten genel kod yazmadığınız takdirde anlamlı bir ad, diğer programcıların çalıştıkları etki alanını anlamasına yardımcı olabilir. Örneğin, bir belge veritabanıyla etkileşim bağlamında `'Document` adlı bir tür parametresi, genel belge türlerinin, çalıştığınız işlev veya üye tarafından kabul edilebilir olmasını sağlar.
 
-* Genel tür parametreleri ile PascalCase adlandırma göz önünde bulundurun.
+* Genel tür parametrelerini PascalCase ile adlandırmayı düşünün.
 
-    Bu, .NET, şeyler PascalCase yerine snake_case veya camelCase kullanmanız önerilir Bunu yapmak için genel yoludur.
+    Bu, .NET ' te şeyler yapmanın genel yoludur, bu nedenle snake_case veya camelCase yerine PascalCase kullanmanız önerilir.
 
-Son olarak, otomatik Genelleştirme her zaman bir boon yeni olan kişiler değil F# veya büyük bir kod temelinde. Genel olarak bileşenleri kullanarak bilişsel yükü yoktur. Ayrıca, varsa, otomatik olarak genelleştirilmiş işlevleri farklı giriş türleri (sağlar, bu nedenle kullanılacak yönelikse tek başına) ile kullanılmaz sonra bunlara zamandaki o noktada genel olan gerçek hiçbir avantajı yoktur. Her zaman yazdığınız kodu gerçekten genel yüklenmesini Kurum için avantaj sağlayacaktır olmadığını göz önünde bulundurun.
+Son olarak, otomatik Genelleştirme her zaman için F# yeni olan veya büyük bir kod temeli olan kişiler için bir Boon değildir. Genel olan bileşenleri kullanırken bilişsel ek yükü vardır. Ayrıca, otomatik olarak Genelleştirilmiş işlevler farklı giriş türleriyle kullanılmazsa (Bu şekilde kullanılması amaçlanıyorsa tek başına izin ver), bu noktada bu noktada genel olan gerçek bir avantaj yoktur. Yazmakta olduğunuz kodun gerçekten genel olmasının yararlı olacağını her zaman göz önünde bulundurun.
 
 ## <a name="performance"></a>Performans
 
-F#belirli sınıfları (özellikle bu ilgili eşzamanlılık ve paralellik) hataları önlemek izin veren varsayılan olarak, sabit değerlerdir. Ancak, bazı durumlarda, yürütme zamanı bellek ayırmaları ve en iyi (veya hatta makul) verimlilik elde etmek için bir yayılma iş en iyi durumu yerinde Mutasyon kullanarak uygulanabilir. Bu katılımı temeli ile de mümkündür F# ile `mutable` anahtar sözcüğü.
+F#değerler, bazı hata sınıflarından kaçınmanıza izin veren (özellikle eşzamanlılık ve paralellik olanlar) varsayılan olarak sabittir. Bununla birlikte, belirli durumlarda, yürütme süresi veya bellek ayırmaları için en iyi (veya hatta makul) verimlilik elde etmek üzere bir iş yayılımı en iyi duruma geçen durum ile uygulanabilir. Bu,`mutable`anahtar sözcüğüyle birlikte F# kabul etme esasına göre yapılabilir.
 
-Ancak, kullanım `mutable` içinde F# at odds with işlevsel saflığa düşünüyor. Bu beklentileri saflığa için gelen ayarlarsanız ince [başvuru saydamlık](https://en.wikipedia.org/wiki/Referential_transparency). Başvuru saydamlık - saflığa değil - yazarken son hedefi olduğu F# işlevleri. Bu performans kritik kod için Mutasyon tabanlı bir uygulama üzerinde işlevsel bir arabirim yazmanıza olanak sağlar.
+Bununla birlikte, ' de `mutable` F# kullanımı, işlev takiresinin gürültü 'de olabilir. Bu, önemli olan beklentileri [bilgi saydamlığına](https://en.wikipedia.org/wiki/Referential_transparency)ayarlarsanız bu kadar iyidir. Bilgi saydamlığı-önemli değildir; işlevler yazılırken F# son hedeftir. Bu, performans açısından kritik kod için bir mutasyon tabanlı uygulama üzerinde işlevsel bir arabirim yazmanızı sağlar.
 
-### <a name="wrap-mutable-code-in-immutable-interfaces"></a>Sabit arabirimler değişebilir kod Kaydır
+### <a name="wrap-mutable-code-in-immutable-interfaces"></a>Değişmez arabirimlerde kesilebilir kodu sarın
 
-Bir hedef olarak başvuru saydamlığı olan performans açısından kritik işlevler değişebilir underbelly kullanıma sunmuyor kod yazmak için önemlidir. Örneğin, aşağıdaki uygulayan kod `Array.contains` işlevi F# çekirdek kitaplığı:
+Amaç olarak bilgi saydamlığı ile, performans açısından kritik işlevlerin değişebilir işlevlerini açığa çıkaran bir kod yazmak çok önemlidir. Örneğin, aşağıdaki kod F# çekirdek kitaplığındaki `Array.contains` işlevini uygular:
 
 ```fsharp
 [<CompiledName("Contains")>]
@@ -463,11 +463,11 @@ let inline contains value (array:'T[]) =
     state
 ```
 
-Bu fonksiyonu çağıran birden çok kez temel alınan dizi değişmez ya da hangi herhangi bir kesilebilir durumu sürdürmenizi gerektirir. Her neredeyse içindeki kod satırı Mutasyon kullansa bile referentially saydam.
+Bu işlevi birden çok kez çağırmak, temel alınan diziyi değiştirmez veya onu tükettiği herhangi bir kesilebilir durumu korumanıza gerek duyar. Neredeyse her bir kod satırı mutation kullandığından bile, bu değer saydam bir şekilde görünür.
 
-### <a name="consider-encapsulating-mutable-data-in-classes"></a>Değişebilir veri sınıflarında Kapsüllenen göz önünde bulundurun
+### <a name="consider-encapsulating-mutable-data-in-classes"></a>Sınıflarda kesilebilir verileri kapsüllemek için kullanın
 
-Önceki örnekte, değişebilir veri kullanan işlemleri kapsüllemek için tek bir işlev kullanılır. Bu her zaman daha karmaşık veri kümeleri için yeterli değil. Aşağıdaki adımlardan birini işlevleri göz önünde bulundurun:
+Önceki örnekte, değiştirilebilir verileri kullanarak işlemleri kapsüllemek için tek bir işlev kullanılmıştır. Bu, daha karmaşık veri kümeleri için her zaman yeterli değildir. Aşağıdaki işlev kümelerini göz önünde bulundurun:
 
 ```fsharp
 open System.Collections.Generic
@@ -486,7 +486,7 @@ let closureTableContains (key, value) (t: Dictionary<_, HashSet<_>>) =
     | (false, _) -> false
 ```
 
-Bu kod, yüksek performanslı olmakla birlikte çağıranlar sorumlu olduğunuz Mutasyon tabanlı veri yapısını gösterir. Değiştirebileceğiniz temel alınan üye ile bir sınıf içinde sarmalanabilir:
+Bu kod performanyadır, ancak çağıranların korunmasından sorumlu olduğu mutasyon tabanlı veri yapısını kullanıma sunar. Bu, değiştireyebilecek temel üye olmadan bir sınıfın içine sarmalanabilir:
 
 ```fsharp
 open System.Collections.Generic
@@ -509,11 +509,11 @@ type Closure1Table() =
         | (false, _) -> false
 ```
 
-`Closure1Table` temel alınan veri yapısı korumak için çağıranlar Zorlanmıyor böylece temel alınan Mutasyon tabanlı veri yapısı kapsüller. Sınıfları, veri ve ayrıntıları arayanlara sokmadan Mutasyon tabanlı yordamlarını kapsüllemek için güçlü bir yoludur.
+`Closure1Table` temel alınan mutasyon tabanlı veri yapısını kapsüller, böylece çağıranlar temel alınan veri yapısını sürdürmek üzere zorlar. Sınıflar, çağıranların ayrıntılarını açığa çıkarmadan tabanlı verileri ve yordamları kapsüllemek için güçlü bir yoldur.
 
-### <a name="prefer-let-mutable-to-reference-cells"></a>Tercih ettiğiniz `let mutable` başvuru hücreleri
+### <a name="prefer-let-mutable-to-reference-cells"></a>Hücrelere başvurmak için `let mutable` tercih et
 
-Başvuru hücreleri başvuru değeri yerine bir değeri temsil eden bir yoludur. Performans açısından kritik kod için kullanılabilir olsa da, genellikle önerilmez. Aşağıdaki örnek göz önünde bulundurun:
+Başvuru hücreleri değerin kendisi yerine bir değere başvuruyu temsil etmenin bir yoludur. Performans açısından kritik kod için kullanılabilmesine rağmen, genellikle önerilmez. Aşağıdaki örneği göz önünde bulundurun:
 
 ```fsharp
 let kernels =
@@ -527,7 +527,7 @@ let kernels =
     !acc |> Seq.toList
 ```
 
-Bir başvuru hücresi kullanımı artık "başvuru ve temel alınan verileri yeniden başvurmak zorunda olan tüm sonraki kod pollutes". Bunun yerine, göz önünde bulundurun `let mutable`:
+Başvuru hücresinin kullanımı artık "pollutes", temel alınan verilere başvuru yapmak ve yeniden başvuru yapmak zorunda olan tüm izleyen koddur. Bunun yerine `let mutable`göz önünde bulundurun:
 
 ```fsharp
 let kernels =
@@ -541,49 +541,49 @@ let kernels =
     acc |> Seq.toList
 ```
 
-Diğer tüm kod lambda ifadesi ortasında Mutasyon yanı sıra tek noktası dokunduğu `acc` normal kullanım için farklı bir şekilde bunu yapabilirsiniz `let`-bağlı sabit değer. Bu zaman içinde kolaylaştırır.
+Lambda ifadesinin ortasında yer alan tek bir noktadan sonra, `acc` dokunduğu diğer tüm kodlar, normal `let`bağlantılı sabit değerin kullanılmasına göre değil, bunu yapabilir. Bu, zaman içinde değişiklik yapmayı kolaylaştırır.
 
 ## <a name="object-programming"></a>Nesne programlama
 
-F#nesneleri ve nesne yönelimli kavramları (Paylaşımlarınızda) için tam destek sunar. Birçok Paylaşımlarınızda kavramları güçlü ve kullanışlı olsa da, bunların hepsi kullanmak idealdir. Aşağıdaki listeler, yüksek bir düzeyde Paylaşımlarınızda özelliklerinin kategorileri hakkında rehberlik sunar.
+F#nesneler ve nesne yönelimli (OO) kavramları için tam desteğe sahiptir. Birçok OO kavramı güçlü ve yararlı olsa da, bunların hepsi kullanım için idealdir. Aşağıdaki listeler, en yüksek düzeyde, OO özelliklerinin kategorileri üzerinde rehberlik sunar.
 
-**Çoğu durumda bu özellikleri kullanmaya göz önünde bulundurun:**
+**Bu özellikleri birçok durumda kullanmayı göz önünde bulundurun:**
 
-* Noktalı gösterim (`x.Length`)
+* Nokta gösterimi (`x.Length`)
 * Örnek üyeleri
-* Örtük Oluşturucu
+* Örtük oluşturucular
 * Statik üyeler
 * Dizin Oluşturucu gösterimi (`arr.[x]`)
-* Adlandırılmış ve isteğe bağlı bağımsız değişkenler
-* Arabirimleri ve arabirim uygulamaları
+* Adlandırılmış ve Isteğe bağlı bağımsız değişkenler
+* Arabirimler ve arabirim uygulamaları
 
-**Bu özellikler için ilk ulaşmak yoktur, ancak bir sorunu çözmek uygun olmaları durumunda dikkatli uygulayabilirsiniz:**
+**Önce bu özelliklere ulaşmayın, ancak bir sorunu çözmek için uygun olmaları durumunda bozacağından uygulayın:**
 
-* Yöntemi aşırı yüklemesi
-* Değişebilir veri kapsüllenmiş
-* Türlerinde işleçleri
-* Otomatik özellikleri
-* Uygulama `IDisposable` ve `IEnumerable`
+* Yöntem aşırı yüklemesi
+* Encapsulated kesilebilir veriler
+* Türlerde işleçler
+* Otomatik Özellikler
+* `IDisposable` ve `IEnumerable` uygulama
 * Tür uzantıları
 * Olaylar
 * Yapılar
 * Temsilciler
 * Numaralandırmalar
 
-**Genellikle bunları kullanmadığınız sürece bu özellikler kaçının:**
+**Bunları kullanmanız gerekmedikçe bu özelliklerden genellikle kaçının:**
 
 * Devralma tabanlı tür hiyerarşileri ve uygulama devralma
 * Null değerler ve `Unchecked.defaultof<_>`
 
-### <a name="prefer-composition-over-inheritance"></a>Devralma bileşim tercih et
+### <a name="prefer-composition-over-inheritance"></a>Devralma üzerine oluşturmayı tercih et
 
-[Devralma üzerinden bileşim](https://en.wikipedia.org/wiki/Composition_over_inheritance) değindiği deyim bu kadar iyidir F# kod uyması için. Temel olmayan bir taban sınıfı ve gerekir işlevselliğine sahip olmak için o temel sınıftan devralınan çağrı yapanların zorlamak emin ilkesidir.
+[Devralmayla Ilgili birleşim](https://en.wikipedia.org/wiki/Composition_over_inheritance) , iyi F# kodun bağlı olduğu uzun süreli bir deyimdir. Temel prensibi, temel bir sınıfı kullanıma sunmamalıdır ve arayanların işlevselliği almak için bu temel sınıftan devralmasını zorlamaktır.
 
-### <a name="use-object-expressions-to-implement-interfaces-if-you-dont-need-a-class"></a>Bir sınıf gerekmiyorsa arayüzleri uygulamak için Nesne ifadeleri kullanma
+### <a name="use-object-expressions-to-implement-interfaces-if-you-dont-need-a-class"></a>Sınıf gerekmiyorsa arabirim uygulamak için nesne ifadelerini kullanın
 
-[Nesne ifadeleri](../language-reference/object-expressions.md) halindeyken arayüzleri uygulamak izin uygulanan arabirimin bir değere bir sınıf içinde bunu gerek kalmadan bağlama. Bu kullanışlı, özellikle de, _yalnızca_ arabirim uygular ve gerek tam bir sınıf olması gerekir.
+[Nesne ifadeleri](../language-reference/object-expressions.md) , bir sınıfın içinde olması gerekmeden uygulanan arabirimi bir değere bağlayarak, anında arabirim uygulamanıza olanak tanır. Bu, özellikle de _yalnızca_ arabirimini uygulamanız gerekiyorsa ve tam sınıfa gerek duygerekmiyorsa kullanışlı bir yöntemdir.
 
-Örneğin, içinde çalışan kod işte [Ionide](http://ionide.io/) sahip olmayan bir sembol eklediyseniz, bir kod düzeltme eylemi sağlamak için bir `open` deyimi için:
+Örneğin, için `open` deyiminiz olmayan bir sembol eklediyseniz bir kod düzelme eylemi sağlamak üzere [ıonıde](http://ionide.io/) 'de çalıştırılan kod aşağıda verilmiştir:
 
 ```fsharp
     let private createProvider () =
@@ -607,11 +607,11 @@ F#nesneleri ve nesne yönelimli kavramları (Paylaşımlarınızda) için tam de
         }
 ```
 
-Bir sınıf için gerek olmadığından Visual Studio kod API'SİYLE etkileşim kurulurken nesne ifadeleri bu ideal bir araçlardır. Ayrıca birim testi, geçici bir şekilde test yordamları bir arabirimi kullanıma saplama istediğinizde için değerli.
+Visual Studio Code API ile etkileşim kurarken bir sınıfa gerek olmadığından, nesne Ifadeleri bunun için ideal bir araçtır. Ayrıca, test yordamlarına sahip bir arabirimi geçici olarak bir şekilde sağlamak istediğinizde birim testi için de değerlidir.
 
-## <a name="type-abbreviations"></a>Tür Kısaltmaları
+## <a name="consider-type-abbreviations-to-shorten-signatures"></a>İmzaları kısaltmak için kısaltmalar türlerini göz önünde bulundurun
 
-[Tür kısaltmaları](../language-reference/type-abbreviations.md) işlev imzası veya daha karmaşık bir tür gibi başka bir tür için bir etiket atamak için kullanışlı bir yoludur. Örneğin, şu diğer ne olan hesaplamayı tanımlamak gerekli bir etiketi atar [CNTK](https://docs.microsoft.com/cognitive-toolkit/), kapsamlı bir kitaplık öğrenme:
+[Tür kısaltmaları](../language-reference/type-abbreviations.md) , bir etiketi bir işlev imzası veya daha karmaşık bir tür gibi başka bir türe atamak için kullanışlı bir yoldur. Örneğin, aşağıdaki diğer ad, derin bir öğrenme kitaplığı olan [Cntk](https://docs.microsoft.com/cognitive-toolkit/)ile bir hesaplama tanımlamak için gereken bir etiketi atar:
 
 ```fsharp
 open CNTK
@@ -620,30 +620,46 @@ open CNTK
 type Computation = DeviceDescriptor -> Variable -> Function
 ```
 
-`Computation` Yumuşatma olduğu imzayla eşleşen herhangi bir işlev belirtmek için kullanışlı bir yol adıdır. Tür kısaltmaları şöyle kullanarak uygun olan ve daha Sözün kodunu sağlar.
+`Computation` adı, diğer bir deyişle, daha sonra gelen imzayla eşleşen herhangi bir işlevi göstermek için uygun bir yoldur. Bu gibi tür kısaltmalarının kullanılması kullanışlıdır ve daha fazla kısa kodu sağlar.
 
-### <a name="avoid-using-type-abbreviations-to-represent-your-domain"></a>Tür kısaltmaları etki alanınızı temsil etmek için kullanmaktan kaçının
+### <a name="avoid-using-type-abbreviations-to-represent-your-domain"></a>Etki alanınızı temsil etmek için tür kısaltmalarının kullanmaktan kaçının
 
-Tür kısaltmaları işlevi imzalar için bir ad vermek için kullanışlı olsa da, bunlar diğer türleri kısaltma kafa karıştırıcı olabilir. Bu kısaltma göz önünde bulundurun:
+Tür kısaltmaları işlev imzalara bir ad vermek için uygun olsa da, abbreviating diğer türler olduğunda kafa karıştırıcı olabilir. Bu kısaltmayı göz önünde bulundurun:
 
 ```fsharp
 // Does not actually abstract integers.
 type BufferSize = int
 ```
 
-Bu, birden çok yolla kafa karıştırıcı olabilir:
+Bu, birden çok şekilde kafa karıştırıcı olabilir:
 
-* `BufferSize` bir Özet değil; bir tamsayı yalnızca başka bir addır.
-* Varsa `BufferSize` sunulan genel bir API'de, kolayca daha fazlasını auto'yu anlaşılabilir `int`. Genel olarak, etki alanı türleri onlara birden çok özniteliklere sahip ve gibi ilkel türleri `int`. Bu kısaltma bu varsayımı ihlal ediyor.
-* Büyük küçük harfleri `BufferSize` (PascalCase), bu tür daha fazla veri bulunduran anlamına gelir.
-* Bu diğer adı, adlandırılmış bir bağımsız değişken bir işleve sağlamaya göre artan netlik sunmaz.
-* Kısaltması derlenmiş IL bildirilmez; bir tamsayı olduğu ve bu diğer adı, bir derleme zamanı yapıdır.
+* `BufferSize` bir soyutlama değil; tamsayı için yalnızca başka bir addır.
+* `BufferSize` ortak bir API 'de sunulmazda, çok daha fazla `int`büyük bir şekilde yanlış yorumlanabilmektedir. Genellikle, etki alanı türlerinin kendileri için birden çok özniteliği vardır ve `int`gibi temel türler değildir. Bu kısaltma Bu varsayımını ihlal ediyor.
+* `BufferSize` büyük küçük harf (PascalCase), bu türün daha fazla veri bulundurduğunu gösterir.
+* Bu diğer ad, bir işleve adlandırılmış bir bağımsız değişken sağlamaya kıyasla daha fazla açıklık sunmaz.
+* Kısaltma derlenmiş Il 'de bildirim içermez; yalnızca bir tamsayıdır ve bu diğer ad derleme zamanı yapısıdır.
 
 ```fsharp
 module Networking =
     ...
-    let send data (bufferSize: int) =
-        ...
+    let send data (bufferSize: int) = ...
 ```
 
-Özet olarak, tür kısaltmaları ile durumu olduklarından emin olan **değil** kısaltma türleri üzerinden soyutlamalar. Önceki örnekte, `BufferSize` tıpkı bir `int` ek veri yok ya da herhangi bir avantaj yanı sıra ne tür sisteminden ile kapsar altında `int` zaten sahip.
+Özet olarak, tür kısaltmalarıyla birlikte, abbreviating oldukları türler üzerinde soyutlamalar **değildir** . Önceki örnekte `BufferSize`, hiçbir ek veri olmadan veya `int` zaten sahip olduğu gibi tür sisteminden herhangi bir avantajdan yalnızca bir `int`.
+
+Bir etki alanını temsil etmek için tür kısaltmalarının kullanılmasına alternatif bir yaklaşım, tek büyük harf ayrılmış birleşimler kullanmaktır. Önceki örnek aşağıdaki gibi modellenebilir:
+
+```fsharp
+type BufferSize = BufferSize of int
+```
+
+`BufferSize` ve temel aldığı değer bakımından çalışan bir kod yazarsanız, herhangi bir rastgele tamsayı geçirmek yerine bir tane oluşturmanız gerekir:
+
+```fsharp
+module Networking =
+    ...
+    let send data (BufferSize size) =
+    ...
+```
+
+Bu, çağıran işlevi çağırmak için bir değeri sarmadan önce bir `BufferSize` türü oluşturmasının gerektiğinden, yanlışlıkla rastgele bir tamsayıyı `send` işlevine geçirme olasılığını azaltır.

@@ -2,12 +2,12 @@
 title: Windows Communication Foundation Örnekleri için Bir Kerelik Kurulum Prosedürü
 ms.date: 03/30/2017
 ms.assetid: a5848ffd-3eb5-432d-812e-bd948ccb6bca
-ms.openlocfilehash: 4fe77455c26393455c66c24c74691a335ad8cb1b
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 7c07f39ebff0caf97a9561f08826a0c95ac81140
+ms.sourcegitcommit: 9bd1c09128e012b6e34bdcbdf3576379f58f3137
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70039176"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72799020"
 ---
 # <a name="one-time-setup-procedure-for-the-windows-communication-foundation-samples"></a>Windows Communication Foundation Örnekleri için Bir Kerelik Kurulum Prosedürü
 
@@ -16,13 +16,13 @@ Windows Communication Foundation (WCF) örneklerinin çoğu Internet Information
 **Servicemodelsamples** sanal DIZINI, IIS tarafından barındırılan bir hizmeti kullanan tüm örnekleri oluşturmak ve çalıştırmak için kullanılır. Bu, örnekleri çalıştırmak için gereken tek sanal dizindir. Örnek oluşturmak, bu sanal dizinde önceden dağıtılan tüm hizmetleri değiştirecek; Bu sanal dizinde yalnızca en son oluşturulan örnek dağıtılır ve kullanılabilir.
 
 > [!NOTE]
-> Tüm komutları bir yerel yönetici hesabı altında çalıştırmalısınız. Windows 7, [!INCLUDE[windowsver](../../../../includes/windowsver-md.md)]veya Windows Server 2008 R2 kullanıyorsanız, komut istemi ' ni yükseltilmiş ayrıcalıklarla da çalıştırmalısınız. Bunu yapmak için, komut istemi simgesine sağ tıklayın ve ardından **yönetici olarak çalıştır**' a tıklayın. Bu konudaki tüm komutların, uygun yol ayarlarına sahip bir komut isteminde çalıştırılması gerekir.  Bunu sağlamanın en kolay yolu Visual Studio komut Istemi ' ni kullanmaktır. Bu istemi açmak için **Başlat**' a tıklayın, **tüm programlar**' ı seçin, **Visual Studio 2010**' ye kaydırın, **Visual Studio Araçları**' i seçin, **Visual Studio komut istemi (2010)** öğesini sağ tıklatın ve ardından **yönetici olarak Çalıştır ' ı tıklatın** . Visual Studio Express sürümlerinden biri yüklüyse, bu komut istemi kullanılamaz ve sistem yoluna "C:\Windows\Microsoft.Net\Framework\v4.0" eklemeniz gerekir.
+> Tüm komutları bir yerel yönetici hesabı altında çalıştırmalısınız. Windows 7, [!INCLUDE[windowsver](../../../../includes/windowsver-md.md)]veya Windows Server 2008 R2 kullanıyorsanız, komut istemi ' ni yükseltilmiş ayrıcalıklarla da çalıştırmanız gerekir. Bunu yapmak için, komut istemi simgesine sağ tıklayın ve ardından **yönetici olarak çalıştır**' a tıklayın. Bu konudaki tüm komutların, uygun yol ayarlarına sahip bir komut isteminde çalıştırılması gerekir.  Bunu sağlamanın en kolay yolu Visual Studio komut Istemi ' ni kullanmaktır. Bu istemi açmak için **Başlat**' a tıklayın, **tüm programlar**' ı seçin, **Visual Studio 2010**' ye kaydırın, **Visual Studio Araçları**' i seçin, **Visual Studio komut istemi (2010)** öğesini sağ tıklatın ve ardından **yönetici olarak Çalıştır ' ı tıklatın** . Visual Studio Express sürümlerinden biri yüklüyse, bu komut istemi kullanılamaz ve sistem yoluna "C:\Windows\Microsoft.Net\Framework\v4.0" eklemeniz gerekir.
 
 ### <a name="one-time-setup-procedure-for-wcf-samples"></a>WCF örnekleri için bir kerelik Kurulum yordamı
 
 1. ASP.NET ayarlandığından emin olun. ASP.NET ayarlama hakkında daha fazla bilgi için bkz. [Internet Information Service barındırma yönergeleri](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md).
 
-2. [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] ' Nin yüklü olduğundan emin olun. V 4.0 (veya üzeri) için şu dizinde arama yapın: **\Windows\microsoft.NET\Framework**
+2. [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] yüklü olduğundan emin olun. V 4.0 (veya üzeri) için şu dizinde arama yapın: **\Windows\microsoft.NET\Framework**
 
 3. Visual Studio 2012 yüklü değilse ve işletim sisteminiz Windows Server 2008 SP2 veya üstü değilse, [düzeltme 251798](https://go.microsoft.com/fwlink/?LinkId=184693)' i yükleme.
 
@@ -37,15 +37,15 @@ Windows Communication Foundation (WCF) örneklerinin çoğu Internet Information
     ```
 
     > [!WARNING]
-    > Komutu `aspnet_regiis –i –enable` çalıştırmak varsayılan uygulama havuzunun kullanımını kullanarak [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)], aynı bilgisayardaki diğer uygulamalar için uyumsuzluk sorunları oluşturabilecek hale getirir.
+    > Komutu `aspnet_regiis –i –enable` çalıştırmak, varsayılan uygulama havuzunun, aynı bilgisayardaki diğer uygulamalar için uyumsuzluk sorunları oluşturabilecek [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)]kullanarak çalıştırılmasını sağlayacak.
 
 5. Örnekler tarafından kullanılan bağlantı noktalarını etkinleştirmeye yönelik [güvenlik duvarı yönergelerini](../../../../docs/framework/wcf/samples/firewall-instructions.md) izleyin.
 
-6. Aşağıdaki varsayılan dizini denetle: \<InstallDrive >: **\Wf_wcf_samples**. Örnekler daha önce yüklenmişse, bu varsayılan dizindir.
+6. Şu varsayılan dizini denetle: \<InstallDrive >: **\Wf_wcf_samples**. Örnekler daha önce yüklenmişse, bu varsayılan dizindir.
 
-7. Örnekler yüklü değilse, bunları [Visual C# ](https://go.microsoft.com/fwlink/?LinkId=190939) veya [Visual Basic](https://go.microsoft.com/fwlink/?LinkID=193373)için örnek indirme konumundan yükleyin.
+7. Örnekler yüklü değilse, örnekleri için [C#](https://go.microsoft.com/fwlink/?LinkId=190939)örnek indirme konumundan yükleyin.
 
-8. Örnekleri yükledikten sonra şuraya gidin: \<InstallDrive >: **\Wf_wcf_samples\wcf\setup\\**
+8. Örnekleri yükledikten sonra şu adrese gidin: \<InstallDrive >: **\Wf_wcf_samples\wcf\setup\\**
 
 9. **Setupvroot. bat** toplu iş dosyasını çalıştırın. Aşağıdaki adımlar gerçekleştirilir:
 
@@ -63,9 +63,9 @@ Windows Communication Foundation (WCF) örneklerinin çoğu Internet Information
     > [!NOTE]
     > Bu adım tamamlanmazsa, derleme sırasında IIS 'de barındırılan tüm örnekler başarısız olur. İzinleri doğru şekilde ayarlamış olduğunuzdan emin olun veya hem SDK komut istemi 'ni hem de Visual Studio komut Istemi 'ni (2012) yönetici olarak çalıştırın.
 
-11. Bilgisayarda C:\logs dizini oluşturun; bazı örnekler bekleniyor olabilir. Uygun hesabın bu klasöre verilen yazma erişimi olduğundan emin olun. Windows 7, [!INCLUDE[wv](../../../../includes/wv-md.md)]ve Windows Server 2008 R2 için bu hesap, **ağ hizmetidir**. İçin [!INCLUDE[lserver](../../../../includes/lserver-md.md)], bu hesap NT Authority\Network Service ' dir. [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Ve[!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]için, bu hesap ASPNET ' dir.
+11. Bilgisayarda C:\logs dizini oluşturun; bazı örnekler bekleniyor olabilir. Uygun hesabın bu klasöre verilen yazma erişimi olduğundan emin olun. Windows 7, [!INCLUDE[wv](../../../../includes/wv-md.md)]ve Windows Server 2008 R2 için bu hesap, **ağ hizmetidir**. [!INCLUDE[lserver](../../../../includes/lserver-md.md)]için, hesap NT Authority\Network Service ' dir. [!INCLUDE[wxp](../../../../includes/wxp-md.md)] ve [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]için, hesap ASPNET ' dir.
 
-12. Setupcerttool. bat dosyasını çalıştırın. Bu dosya \<InstallPath > \wf_wcf_samples\wcf\setup\ klasöründe bulunur.  Bu betik aşağıdaki görevleri gerçekleştirir:
+12. Setupcerttool. bat dosyasını çalıştırın. Bu dosya \<InstallPath > \WF_WCF_Samples\WCF\Setup\ klasöründe bulunur.  Bu betik aşağıdaki görevleri gerçekleştirir:
 
     - FindPrivateKey aracını oluşturun.
 

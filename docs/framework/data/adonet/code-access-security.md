@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 93e099eb-daa1-4f1e-b031-c1e10a996f88
-ms.openlocfilehash: 6340bc3fb2291601ba2a9812e0a438839f0718bc
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 41a0885f828e45e1216805533a977fc3d5eaf5cb
+ms.sourcegitcommit: 9bd1c09128e012b6e34bdcbdf3576379f58f3137
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70971814"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798897"
 ---
 # <a name="code-access-security-and-adonet"></a>Kod Erişimi Güvenliği ve ADO.NET
 .NET Framework, her ikisi de ortak dil çalışma zamanı (CLR) tarafından sağlanan ortak bir altyapı kullanılarak uygulanan, rol tabanlı güvenlik ve kod erişim güvenliği (CAS) sağlar. Yönetilmeyen kod dünyasında, çoğu uygulama kullanıcı veya sorumlu izinleriyle yürütülür. Sonuç olarak, kötü amaçlı veya hata doldurulmuş yazılımlar yükseltilmiş ayrıcalıklara sahip bir kullanıcı tarafından çalıştırıldığında bilgisayar sistemleri zarar görmüş ve özel veri güvenliği tehlikeye girebilir.  
@@ -27,16 +27,16 @@ ms.locfileid: "70971814"
   
  Üç tür kod erişim izni vardır:  
   
-- `Code access permissions`<xref:System.Security.CodeAccessPermission> sınıfından türet. Dosyalar ve ortam değişkenleri gibi korumalı kaynaklara erişmek ve yönetilmeyen koda erişim gibi korumalı işlemleri gerçekleştirmek için izinler gereklidir.  
+- <xref:System.Security.CodeAccessPermission> sınıfından türet `Code access permissions`. Dosyalar ve ortam değişkenleri gibi korumalı kaynaklara erişmek ve yönetilmeyen koda erişim gibi korumalı işlemleri gerçekleştirmek için izinler gereklidir.  
   
-- `Identity permissions`bir derlemeyi tanımlayan özellikleri temsil eder. Bir derlemeye, dijital imza veya kodun kaynaklandığı gibi öğeleri içerebilen kanıt temelinde izin verilir. Kimlik izinleri Ayrıca <xref:System.Security.CodeAccessPermission> temel sınıftan türetilir.  
+- `Identity permissions` bir derlemeyi tanımlayan özellikleri temsil eder. Bir derlemeye, dijital imza veya kodun kaynaklandığı gibi öğeleri içerebilen kanıt temelinde izin verilir. Kimlik izinleri Ayrıca <xref:System.Security.CodeAccessPermission> temel sınıfından türetilir.  
   
-- `Role-based security permissions`bir sorumlunun belirtilen bir kimliğe sahip olup olmadığını veya belirtilen bir rolün üyesi olduğunu temel alır. <xref:System.Security.Permissions.PrincipalPermission> Sınıfı, etkin sorumlu için hem bildirime dayalı hem de zorunlu izin denetimlerine izin verir.  
+- `Role-based security permissions`, bir sorumlunun belirtilen bir kimliğe sahip olup olmadığını veya belirtilen bir rolün üyesi olduğunu temel alır. <xref:System.Security.Permissions.PrincipalPermission> sınıfı, etkin sorumluya karşı hem bildirime dayalı hem de zorunlu izin denetimlerine izin verir.  
   
  Kodun bir kaynağa erişmek veya bir işlemi gerçekleştirmek için yetkilendirilip yetkilendirilmediğini anlamak için, çalışma zamanının güvenlik sistemi, çağrı yığınında gezilir ve her çağıranın verilen izinlerini talep edilen izinlerle karşılaştırır. Çağrı yığınındaki herhangi bir çağıran, istenen izne sahip değilse, bir <xref:System.Security.SecurityException> oluşturulur ve erişim reddedilir.  
   
 ### <a name="requesting-permissions"></a>Izin isteme  
- İzin isteme amacı, uygulamanızın çalışması için hangi izinleri gerektirdiğini ve yalnızca gerçekten ihtiyaç duyduğu izinleri aldığından emin olmak içindir. Örneğin, uygulamanızın yerel diske veri yazması gerekiyorsa, bunu gerektirir <xref:System.Security.Permissions.FileIOPermission>. Bu izin verilmemişse, uygulama diske yazmaya çalıştığında başarısız olur. Ancak, uygulama istediğinde `FileIOPermission` ve bu izin verilmemişse, uygulama özel durumu bilinemeyebilir üzerinde oluşturur ve yüklemez.  
+ İzin isteme amacı, uygulamanızın çalışması için hangi izinleri gerektirdiğini ve yalnızca gerçekten ihtiyaç duyduğu izinleri aldığından emin olmak içindir. Örneğin, uygulamanızın yerel diske veri yazması gerekiyorsa, <xref:System.Security.Permissions.FileIOPermission>gerekir. Bu izin verilmemişse, uygulama diske yazmaya çalıştığında başarısız olur. Ancak, uygulama `FileIOPermission` istediğinde ve bu izin verilmemişse, uygulama özel durumu bilinemeyebilir üzerinde oluşturur ve yüklemez.  
   
  Uygulamanın yalnızca diskten verileri okuması gereken bir senaryoda, hiçbir bir yazma izni verilmeyeceğinden emin olabilirsiniz. Bir hata veya kötü amaçlı saldırı durumunda kodunuz, üzerinde çalıştığı verilere zarar veremeyeceğinden. Daha fazla bilgi için bkz. [Izinleri isteme](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/yd267cce(v=vs.100)).  
   
@@ -58,27 +58,27 @@ ms.locfileid: "70971814"
  Bir derlemeyi tanımlayıcı adlandırma bir uygulamaya veya bileşene, başka yazılımın açıkça kendisine başvurabileceği benzersiz bir kimlik verir. Sağlam adlandırma koruyucuları derlemeleri, barındırma kodu içeren bir derleme tarafından sızdırılmakta. Güçlü adlandırma, bir bileşenin farklı sürümleri arasında sürüm tutarlılığını de sağlar. Genel derleme önbelleği 'ne (GAC) dağıtılacak tanımlayıcı ad derlemelerini yapmanız gerekir. Daha fazla bilgi için bkz. [güçlü adlandırılmış derlemeler oluşturma ve kullanma](../../../standard/assembly/create-use-strong-named.md).  
   
 ## <a name="partial-trust-in-adonet-20"></a>ADO.NET 2,0 ' de kısmi güven  
- ADO.NET 2,0 ' de .NET Framework Veri Sağlayıcısı SQL Server, Veri Sağlayıcısı için .NET Framework OLE DB, ODBC için .NET Framework veri sağlayıcısı ve Oracle için .NET Framework veri sağlayıcısı kısmen güvenilen ortamlarda çalıştırılabilir. .NET Framework önceki sürümlerinde, yalnızca <xref:System.Data.SqlClient> tam güvenle güvenilen uygulamalardan daha az desteklenmelidir.  
+ ADO.NET 2,0 ' de .NET Framework Veri Sağlayıcısı SQL Server, Veri Sağlayıcısı için .NET Framework OLE DB, ODBC için .NET Framework veri sağlayıcısı ve Oracle için .NET Framework veri sağlayıcısı kısmen güvenilen ortamlarda çalıştırılabilir. .NET Framework önceki sürümlerinde, yalnızca <xref:System.Data.SqlClient> tam güvenle güvenilen uygulamalardan daha az desteklendi.  
   
- En azından, SQL Server sağlayıcısı kullanan kısmen güvenilen bir uygulamanın yürütme ve <xref:System.Data.SqlClient.SqlClientPermission> izinleri olmalıdır.  
+ En azından, SQL Server sağlayıcısı kullanan kısmen güvenilen bir uygulamanın yürütme ve <xref:System.Data.SqlClient.SqlClientPermission> izinlerinin olması gerekir.  
   
 ### <a name="permission-attribute-properties-for-partial-trust"></a>Kısmi güven için izin özniteliği özellikleri  
- Kısmi güven senaryolarında, SQL Server için .NET Framework veri sağlayıcısı <xref:System.Data.SqlClient.SqlClientPermissionAttribute> kullanılabilir özellikleri daha fazla kısıtlamak üzere üyelerini kullanabilirsiniz.  
+ Kısmi güven senaryolarında, SQL Server için .NET Framework Veri Sağlayıcısı sağlanan özellikleri daha fazla kısıtlamak üzere <xref:System.Data.SqlClient.SqlClientPermissionAttribute> üyelerini kullanabilirsiniz.  
   
- Aşağıdaki tabloda kullanılabilen <xref:System.Data.SqlClient.SqlClientPermissionAttribute> Özellikler ve bunların açıklamaları listelenmektedir:  
+ Aşağıdaki tabloda kullanılabilir <xref:System.Data.SqlClient.SqlClientPermissionAttribute> özellikleri ve bunların açıklamaları listelenmektedir:  
   
 |İzin özniteliği özelliği|Açıklama|  
 |-----------------------------------|-----------------|  
-|`Action`|Bir güvenlik eylemini alır veya ayarlar. Devralındığı <xref:System.Security.Permissions.SecurityAttribute>yer.|  
-|`AllowBlankPassword`|Bir bağlantı dizesinde boş parola kullanımını etkinleştirilir veya devre dışı bırakır. Geçerli değerler `true` (Boş parolaların kullanımını etkinleştirmek için) ve `false` (Boş parolaların kullanımını devre dışı bırakmak için). Devralındığı <xref:System.Data.Common.DBDataPermissionAttribute>yer.|  
-|`ConnectionString`|İzin verilen bir bağlantı dizesini tanımlar. Birden çok bağlantı dizesi tanımlanabilir. **Not:**  Bağlantı dizeniz için bir kullanıcı KIMLIĞI veya parola eklemeyin. Bu sürümde, .NET Framework yapılandırma aracını kullanarak bağlantı dizesi kısıtlamalarını değiştiremezsiniz. <br /><br /> Devralındığı <xref:System.Data.Common.DBDataPermissionAttribute>yer.|  
-|`KeyRestrictions`|İzin verilen veya izin verilmeyen bağlantı dizesi parametrelerini tanımlar. Bağlantı dizesi parametreleri  *\<parametre adı > =* biçiminde tanımlanır. Birden çok parametre belirtilebilir, noktalı virgül (;)) ile ayrılır. **Not:**  Belirtmezseniz `KeyRestrictions`, ancak özelliğini veya `KeyRestrictionBehavior` `AllowOnly`olarakayarlarsanız, ekbağlantıdizesiparametrelerineizinverilmez`PreventUsage`. Devralındığı <xref:System.Data.Common.DBDataPermissionAttribute>yer.|  
-|`KeyRestrictionBehavior`|Bağlantı dizesi parametrelerini yalnızca izin verilen (`AllowOnly`) ek parametreler olarak tanımlar veya izin verilmeyen ek parametreleri tanımlar (`PreventUsage`). `AllowOnly`varsayılandır. Devralındığı <xref:System.Data.Common.DBDataPermissionAttribute>yer.|  
-|`TypeID`|Türetilmiş bir sınıfta uygulandığında, bu öznitelik için benzersiz bir tanımlayıcı alır. Devralındığı <xref:System.Attribute>yer.|  
-|`Unrestricted`|Kaynak üzerinde Kısıtlanmamış iznin bildirilip bildirilmemiş olduğunu gösterir. Devralındığı <xref:System.Security.Permissions.SecurityAttribute>yer.|  
+|`Action`|Bir güvenlik eylemini alır veya ayarlar. <xref:System.Security.Permissions.SecurityAttribute>devralındı.|  
+|`AllowBlankPassword`|Bir bağlantı dizesinde boş parola kullanımını etkinleştirilir veya devre dışı bırakır. Geçerli değerler `true` (Boş parolaların kullanımını etkinleştirmek için) ve `false` (Boş parolaların kullanımını devre dışı bırakmak için). <xref:System.Data.Common.DBDataPermissionAttribute>devralındı.|  
+|`ConnectionString`|İzin verilen bir bağlantı dizesini tanımlar. Birden çok bağlantı dizesi tanımlanabilir. **Note:**  Bağlantı dizeniz için bir kullanıcı KIMLIĞI veya parola eklemeyin. Bu sürümde, .NET Framework yapılandırma aracını kullanarak bağlantı dizesi kısıtlamalarını değiştiremezsiniz. <br /><br /> <xref:System.Data.Common.DBDataPermissionAttribute>devralındı.|  
+|`KeyRestrictions`|İzin verilen veya izin verilmeyen bağlantı dizesi parametrelerini tanımlar. Bağlantı dizesi parametreleri *\<parametre adı > =* biçiminde tanımlanır. Birden çok parametre belirtilebilir, noktalı virgül (;)) ile ayrılır. **Note:**  `KeyRestrictions`belirtmezseniz, ancak `KeyRestrictionBehavior` özelliğini `AllowOnly` veya `PreventUsage`olarak ayarlarsanız, ek bağlantı dizesi parametrelerine izin verilmez. <xref:System.Data.Common.DBDataPermissionAttribute>devralındı.|  
+|`KeyRestrictionBehavior`|Bağlantı dizesi parametrelerini yalnızca izin verilen ek parametreler (`AllowOnly`) olarak tanımlar veya izin verilmeyen ek parametreleri tanımlar (`PreventUsage`). `AllowOnly` varsayılandır. <xref:System.Data.Common.DBDataPermissionAttribute>devralındı.|  
+|`TypeID`|Türetilmiş bir sınıfta uygulandığında, bu öznitelik için benzersiz bir tanımlayıcı alır. <xref:System.Attribute>devralındı.|  
+|`Unrestricted`|Kaynak üzerinde Kısıtlanmamış iznin bildirilip bildirilmemiş olduğunu gösterir. <xref:System.Security.Permissions.SecurityAttribute>devralındı.|  
   
 #### <a name="connectionstring-syntax"></a>ConnectionString sözdizimi  
- Aşağıdaki örnek, yalnızca belirli bir bağlantı dizesinin `connectionStrings` kullanılmasına izin vermek için bir yapılandırma dosyası öğesinin nasıl kullanılacağını gösterir. Yapılandırma dosyalarından bağlantı dizelerini depolama ve alma hakkında daha fazla bilgi için bkz. [bağlantı dizeleri](connection-strings.md) .  
+ Aşağıdaki örnek, yalnızca belirli bir bağlantı dizesinin kullanılmasına izin vermek için bir yapılandırma dosyasının `connectionStrings` öğesinin nasıl kullanılacağını gösterir. Yapılandırma dosyalarından bağlantı dizelerini depolama ve alma hakkında daha fazla bilgi için bkz. [bağlantı dizeleri](connection-strings.md) .  
   
 ```xml  
 <connectionStrings>  
@@ -102,7 +102,7 @@ ms.locfileid: "70971814"
 ```  
   
 #### <a name="keyrestrictionbehavior-with-preventusage-syntax"></a>PreventUsage sözdizimi ile KeyRestrictionBehavior  
- Aşağıdaki örnek `User Id`, `Password` ve `Persist Security Info`hariç tüm diğer bağlantı parametrelerini sağlar ve aynı bağlantı dizesini sağlar.  
+ Aşağıdaki örnek, aynı bağlantı dizesini sağlar ve `User Id`, `Password` ve `Persist Security Info`dışındaki diğer tüm bağlantı parametrelerine izin verir.  
   
 ```xml  
 <connectionStrings>  
@@ -115,7 +115,7 @@ ms.locfileid: "70971814"
 ```  
   
 #### <a name="keyrestrictionbehavior-with-allowonly-syntax"></a>AllowOnly söz dizimi ile KeyRestrictionBehavior  
- `Initial Catalog`Aşağıdaki örnek `Connection Timeout` ,`Encrypt`,, ve`Packet Size` parametreleri de içeren iki bağlantı dizesini mümkün bir şekilde sunar. Diğer tüm bağlantı dizesi parametreleri kısıtlıdır.  
+ Aşağıdaki örnek, `Initial Catalog`, `Connection Timeout`, `Encrypt`ve `Packet Size` parametreleri de içeren iki bağlantı dizesini mümkün bir şekilde sunar. Diğer tüm bağlantı dizesi parametreleri kısıtlıdır.  
   
 ```xml  
 <connectionStrings>  
@@ -136,7 +136,7 @@ ms.locfileid: "70971814"
 ```  
   
 ### <a name="enabling-partial-trust-with-a-custom-permission-set"></a>Özel bir Izin kümesiyle kısmi güven etkinleştiriliyor  
- Belirli bir bölge için <xref:System.Data.SqlClient> izin kullanımını etkinleştirmek üzere bir sistem yöneticisinin özel bir izin kümesi oluşturması ve belirli bir bölge için izin kümesi olarak ayarlaması gerekir. Gibi varsayılan izin kümeleri `LocalIntranet`değiştirilemez. <xref:System.Data.SqlClient> Örneğin, ' `LocalIntranet`a <xref:System.Security.Policy.Zone> sahip olan koda ilişkin izinleri eklemek için, bir sistem yöneticisi için izin kümesini kopyalayabilir, "CustomLocalIntranet" olarak <xref:System.Data.SqlClient> yeniden adlandırabilir, izinleri ekleyebilir, içeri aktarabilirsiniz `LocalIntranet` [Caspol. exe (kod erişimi güvenlik ilkesi aracı)](../../tools/caspol-exe-code-access-security-policy-tool.md)kullanarak CustomLocalIntranet izin kümesi ve izin kümesini `LocalIntranet_Zone` CustomLocalIntranet olarak ayarlayın.  
+ Belirli bir bölge için <xref:System.Data.SqlClient> izinlerinin kullanımını etkinleştirmek üzere bir sistem yöneticisinin özel bir izin kümesi oluşturması ve belirli bir bölge için izin kümesi olarak ayarlaması gerekir. `LocalIntranet`gibi varsayılan izin kümeleri değiştirilemez. Örneğin, `LocalIntranet`<xref:System.Security.Policy.Zone> olan kod için <xref:System.Data.SqlClient> izinleri eklemek üzere bir sistem yöneticisi `LocalIntranet`için izin kümesini kopyalayabilir, "CustomLocalIntranet" olarak yeniden adlandırabilir, <xref:System.Data.SqlClient> izinlerini ekleyebilir, CustomLocalIntranet 'i içeri aktarabilir [Caspol. exe (kod erişimi güvenlik Ilkesi aracı)](../../tools/caspol-exe-code-access-security-policy-tool.md)kullanarak izin kümesi ve `LocalIntranet_Zone` Izin kümesini CustomLocalIntranet olarak ayarlayın.  
   
 ### <a name="sample-permission-set"></a>Örnek Izin kümesi  
  Aşağıda kısmen güvenilen bir senaryoda SQL Server için .NET Framework Veri Sağlayıcısı bir örnek izin kümesi verilmiştir. Özel izin kümeleri oluşturma hakkında bilgi için bkz. [Caspol. exe kullanarak Izin kümelerini yapılandırma](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/4ybs46y6(v=vs.100)).  
@@ -160,15 +160,15 @@ AllowBlankPassword="False">
 ```  
   
 ## <a name="verifying-adonet-code-access-using-security-permissions"></a>Güvenlik Izinleri kullanarak ADO.NET kodu erişiminin doğrulanması  
- Kısmi güven senaryolarında, bir <xref:System.Data.SqlClient.SqlClientPermissionAttribute>belirterek kodunuzda belırlı yöntemler için CAS ayrıcalıklarına ihtiyacınız olabilir. Bu ayrıcalığa, kısıtlı güvenlik ilkesi etkin bir şekilde izin verilmiyorsa, kodunuz çalıştırılmadan önce bir özel durum oluşturulur. Güvenlik ilkesi hakkında daha fazla bilgi için bkz. [Güvenlik Ilkesi yönetimi](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c1k0eed6(v=vs.100)) ve [Güvenlik Ilkesi en iyi uygulamaları](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sa4se9bc(v=vs.100)).  
+ Kısmi güven senaryolarında, bir <xref:System.Data.SqlClient.SqlClientPermissionAttribute>belirterek kodunuzda belirli yöntemler için CAS ayrıcalıklarına ihtiyacınız olabilir. Bu ayrıcalığa, kısıtlı güvenlik ilkesi etkin bir şekilde izin verilmiyorsa, kodunuz çalıştırılmadan önce bir özel durum oluşturulur. Güvenlik ilkesi hakkında daha fazla bilgi için bkz. [Güvenlik Ilkesi yönetimi](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c1k0eed6(v=vs.100)) ve [Güvenlik Ilkesi en iyi uygulamaları](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sa4se9bc(v=vs.100)).  
   
 ### <a name="example"></a>Örnek  
- Aşağıdaki örnek, belirli bir bağlantı dizesi gerektiren kodun nasıl yazılacağını gösterir. Bir sistem yöneticisinin gerçek dünyada CAS <xref:System.Data.SqlClient>ilkesi kullanarak uygulayabileceği sınırsız izinleri reddetme benzetimi yapar.  
+ Aşağıdaki örnek, belirli bir bağlantı dizesi gerektiren kodun nasıl yazılacağını gösterir. <xref:System.Data.SqlClient>, bir sistem yöneticisinin gerçek dünyada CAS ilkesi kullanarak uygulayabileceği, sınırsız izinleri reddetme benzetimini yapar.  
   
 > [!IMPORTANT]
 > ADO.NET için CAS izinleri tasarlarken, doğru model en kısıtlayıcı büyük/küçük harf (hiçbir izin olmadan) ile başlamalı ve ardından kodun gerçekleştirmesi gereken belirli bir görev için gereken belirli izinleri eklemektir. Aynı bağlantı dizesini ifade etmenin pek çok yolu olduğundan, tüm izinlerle başlayan ve ardından belirli bir izni reddeden ters bir model, güvenli değildir. Örneğin, tüm izinlerle başlayıp "Server = someserver" bağlantı dizesinin kullanımını reddetmeye çalışırsanız, "Server = someserver. mycompany. com" dizesinin yine de izin verilmesi gerekir. Her zaman, hiç izin vermeyerek başlayarak, izin kümesinde delik olma olasılığını azaltmış olursunuz.  
   
- Aşağıdaki kod, uygun CA `SqlClient` izinlerinin yerinde olmadığı durumlarda bir <xref:System.Security.SecurityException> oluşturan güvenlik talebini nasıl gerçekleştireceğini gösterir. <xref:System.Security.SecurityException> Çıktı, konsol penceresinde görüntülenir.  
+ Aşağıdaki kod, uygun CAS izinlerinin yerinde olmadığı bir <xref:System.Security.SecurityException> oluşturan güvenlik talebini `SqlClient` nasıl gerçekleştireceğini gösterir. <xref:System.Security.SecurityException> çıktısı konsol penceresinde görüntülenir.  
   
  [!code-csharp[DataWorks SqlClient.CAS#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlClient.CAS/CS/source.cs#1)]
  [!code-vb[DataWorks SqlClient.CAS#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlClient.CAS/VB/source.vb#1)]  
@@ -192,7 +192,7 @@ Failed, as expected: Request failed.
 ## <a name="interoperability-with-unmanaged-code"></a>Yönetilmeyen kodla birlikte çalışabilirlik  
  CLR dışında çalışan koda yönetilmeyen kod denir. Bu nedenle, CA 'LAR gibi güvenlik mekanizmaları yönetilmeyen koda uygulanamaz. COM bileşenleri, ActiveX arabirimleri ve Windows API işlevleri, yönetilmeyen koda örnektir. Yönetilmeyen kod yürütürken, genel uygulama güvenliğini tehlikeye atmanız için özel güvenlik konuları geçerlidir. Daha fazla bilgi için bkz. [yönetilmeyen kodla birlikte çalışma](../../interop/index.md).  
   
- .NET Framework, COM birlikte çalışabilirliğine erişim sağlayarak mevcut COM bileşenlerine geriye dönük uyumluluğu da destekler. Com bileşenlerini, ilgili COM türlerini içe aktarmak için COM birlikte çalışma araçlarını kullanarak bir .NET Framework uygulamasına ekleyebilirsiniz. İçeri aktarıldıktan sonra COM türleri kullanıma hazırlardır. COM birlikte çalışması Ayrıca COM istemcilerinin, derleme meta verilerini bir tür kitaplığına vererek ve yönetilen bileşeni bir COM bileşeni olarak kaydederek yönetilen koda erişmesini sağlar. Daha fazla bilgi için bkz. [GELIŞMIŞ com birlikte çalışabilirliği](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx).  
+ .NET Framework, COM birlikte çalışabilirliğine erişim sağlayarak mevcut COM bileşenlerine geriye dönük uyumluluğu da destekler. Com bileşenlerini, ilgili COM türlerini içe aktarmak için COM birlikte çalışma araçlarını kullanarak bir .NET Framework uygulamasına ekleyebilirsiniz. İçeri aktarıldıktan sonra COM türleri kullanıma hazırlardır. COM birlikte çalışması Ayrıca COM istemcilerinin, derleme meta verilerini bir tür kitaplığına vererek ve yönetilen bileşeni bir COM bileşeni olarak kaydederek yönetilen koda erişmesini sağlar. Daha fazla bilgi için bkz. [GELIŞMIŞ com birlikte çalışabilirliği](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100)).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
