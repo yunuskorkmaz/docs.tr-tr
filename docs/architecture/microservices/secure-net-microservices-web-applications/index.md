@@ -4,12 +4,12 @@ description: .NET mikro hizmetleri ve Web uygulamalarında güvenlik-ASP.NET Cor
 author: mjrousos
 ms.author: wiwagn
 ms.date: 10/19/2018
-ms.openlocfilehash: 0894465858e3503e2eddb5299b404f7ba95fdd6a
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: f405b4199e8239e86c4799a649c3d87811d99828
+ms.sourcegitcommit: 9bd1c09128e012b6e34bdcbdf3576379f58f3137
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70296477"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798847"
 ---
 # <a name="make-secure-net-microservices-and-web-applications"></a>Güvenli .NET mikro hizmetleri ve Web uygulamaları oluşturun
 
@@ -27,13 +27,13 @@ Mikro hizmet senaryolarında, kimlik doğrulaması genellikle merkezi olarak iş
 
 Hizmetlere doğrudan erişilemiyorsa, kullanıcıların kimliğini doğrulamak için Azure Active Directory gibi bir kimlik doğrulama hizmeti veya güvenlik belirteci hizmeti (STS) görevi gören ayrılmış bir kimlik doğrulama mikro hizmeti kullanılabilir. Güven kararları, güvenlik belirteçleri veya tanımlama bilgileriyle hizmetler arasında paylaşılır. (Bu belirteçler, gerekirse [tanımlama bilgisi paylaşımı](/aspnet/core/security/cookie-sharing)uygulayarak ASP.NET Core uygulamalar arasında paylaşılabilir.) Bu model Şekil 9-2 ' de gösterilmiştir.
 
-![Mikro hizmetlere doğrudan erişildiğinde, kimlik doğrulaması ve yetkilendirme içeren güven, mikro hizmetler arasında paylaşılan, adanmış bir mikro hizmet tarafından verilen bir güvenlik belirteci tarafından işlenir.](./media/image2.png)
+![Mikro hizmetlere doğrudan erişildiğinde, kimlik doğrulaması ve yetkilendirme içeren güven, mikro hizmetler arasında paylaşılan bir özel mikro hizmet tarafından verilen bir güvenlik belirteci tarafından işlenir.](./media/image2.png)
 
 **Şekil 9-2**. Kimlik mikro hizmetine göre kimlik doğrulaması; güven, bir yetkilendirme belirteci kullanılarak paylaşılır
 
 ### <a name="authenticate-with-aspnet-core-identity"></a>ASP.NET Core kimliğiyle kimlik doğrulama
 
-Bir uygulamanın kullanıcılarını tanımlamak için ASP.NET Core birincil mekanizması [ASP.NET Core kimlik](/aspnet/core/security/authentication/identity) üyelik sistemidir. ASP.NET Core kimlik, geliştirici tarafından yapılandırılan bir veri deposundaki kullanıcı bilgilerini (oturum açma bilgileri, roller ve talepler dahil) depolar. Genellikle ASP.NET Core Identity veri deposu, `Microsoft.AspNetCore.Identity.EntityFrameworkCore` pakette belirtilen bir Entity Framework deposudur. Ancak, Azure Tablo depolama, CosmosDB veya diğer konumlarda kimlik bilgilerini depolamak için özel mağazalar veya diğer üçüncü taraf paketleri kullanılabilir.
+Bir uygulamanın kullanıcılarını tanımlamak için ASP.NET Core birincil mekanizması [ASP.NET Core kimlik](/aspnet/core/security/authentication/identity) üyelik sistemidir. ASP.NET Core kimlik, geliştirici tarafından yapılandırılan bir veri deposundaki kullanıcı bilgilerini (oturum açma bilgileri, roller ve talepler dahil) depolar. Genellikle, ASP.NET Core Identity veri deposu `Microsoft.AspNetCore.Identity.EntityFrameworkCore` paketinde sunulan bir Entity Framework deposudur. Ancak, Azure Tablo depolama, CosmosDB veya diğer konumlarda kimlik bilgilerini depolamak için özel mağazalar veya diğer üçüncü taraf paketleri kullanılabilir.
 
 Aşağıdaki kod, bireysel kullanıcı hesabı kimlik doğrulaması seçili olan ASP.NET Core Web uygulaması proje şablonundan alınmıştır. Başlangıç. ConfigureServices yönteminde EntityFramework. Core kullanılarak ASP.NET Core kimliğin nasıl yapılandırılacağını gösterir.
 
@@ -45,13 +45,13 @@ services.AddDbContext<ApplicationDbContext>(options =>
         .AddDefaultTokenProviders();
 ```
 
-ASP.NET Core kimlik yapılandırıldıktan sonra, uygulamayı çağırarak etkinleştirin. Hizmetin `Startup.Configure` yönteminde useıdentity.
+ASP.NET Core kimlik yapılandırıldıktan sonra, uygulamayı çağırarak etkinleştirin. Hizmetin `Startup.Configure` yönteminde Useıdentity.
 
 ASP.NET Core kimlik kullanmak çeşitli senaryolara izin vermez:
 
 - UserManager türünü (userManager. CreateAsync) kullanarak yeni kullanıcı bilgileri oluşturun.
 
-- SignInManager türünü kullanarak kullanıcıların kimliğini doğrulayın. Doğrudan oturum açmak `signInManager.SignInAsync` için veya `signInManager.PasswordSignInAsync` kullanıcının parolasının doğru olduğunu doğrulamak için ' yi kullanabilir ve sonra da ' de oturum açabilirsiniz.
+- SignInManager türünü kullanarak kullanıcıların kimliğini doğrulayın. Doğrudan oturum açmak için `signInManager.SignInAsync` kullanabilir veya kullanıcının parolasının doğru olduğunu doğrulamak için `signInManager.PasswordSignInAsync` ve sonra da oturum açın.
 
 - Bir tarayıcıdan gelen isteklerin, oturum açan kullanıcının kimlik ve taleplerini içermesi için bir tanımlama bilgisinde depolanan (ASP.NET Core Identity ara yazılımı tarafından okunan) bilgileri temel alan bir kullanıcıyı tanımlama.
 
@@ -67,16 +67,16 @@ Dış kimlik doğrulamasını kullanmak için uygulamanızın HTTP istek işleme
 
 Popüler dış kimlik doğrulama sağlayıcıları ve bunlarla ilişkili NuGet paketleri aşağıdaki tabloda gösterilmiştir:
 
-| **Sağlayıcı**  | **Paket**                                          |
+| **Sağlayıcısını**  | **Paket**                                          |
 | ------------- | ---------------------------------------------------- |
-| **Microsoft** | **Microsoft. AspNetCore. Authentication. MicrosoftAccount** |
+| **MICROSOFT** | **Microsoft. AspNetCore. Authentication. MicrosoftAccount** |
 | **Google**    | **Microsoft. AspNetCore. Authentication. Google**           |
 | **'A**  | **Microsoft. AspNetCore. Authentication. Facebook**         |
 | **Twitter**   | **Microsoft. AspNetCore. Authentication. Twitter**          |
 
-Her durumda, ara yazılım ' `app.Use{ExternalProvider}Authentication` de `Startup.Configure`olduğu gibi bir kayıt yöntemine çağrı ile kaydedilir. Bu kayıt yöntemleri, sağlayıcının gerektirdiği şekilde uygulama KIMLIĞI ve gizli bilgiler (örneğin, bir parola) içeren bir seçenek nesnesi alır. Dış kimlik doğrulama sağlayıcıları, kullanıcıya hangi uygulamanın kimlik erişimi istediğini bildirmek için uygulamanın kaydolmasını ( [ASP.NET Core belgelerde](/aspnet/core/security/authentication/social/)açıklandığı gibi) gerektirir.
+Her durumda, ara yazılım `Startup.Configure``app.Use{ExternalProvider}Authentication` benzer bir kayıt yöntemi çağrısıyla kaydedilir. Bu kayıt yöntemleri, sağlayıcının gerektirdiği şekilde uygulama KIMLIĞI ve gizli bilgiler (örneğin, bir parola) içeren bir seçenek nesnesi alır. Dış kimlik doğrulama sağlayıcıları, kullanıcıya hangi uygulamanın kimlik erişimi istediğini bildirmek için uygulamanın kaydolmasını ( [ASP.NET Core belgelerde](/aspnet/core/security/authentication/social/)açıklandığı gibi) gerektirir.
 
-Ara yazılım `Startup.Configure`uygulamasına kaydedildikten sonra, kullanıcılardan herhangi bir denetleyici eyleminden oturum açmasını isteyebilirsiniz. Bunu yapmak için kimlik doğrulama sağlayıcısının adını `AuthenticationProperties` ve yeniden yönlendirme URL 'sini içeren bir nesne oluşturursunuz. Daha sonra `AuthenticationProperties` nesneyi geçiren bir sınama yanıtı döndürün. Aşağıdaki kod buna bir örnek gösterir.
+Ara yazılım `Startup.Configure`bir kez kaydolduktan sonra, kullanıcılardan herhangi bir denetleyici eyleminden oturum açmasını isteyebilirsiniz. Bunu yapmak için kimlik doğrulama sağlayıcısının adını ve yeniden yönlendirme URL 'sini içeren bir `AuthenticationProperties` nesnesi oluşturun. Daha sonra `AuthenticationProperties` nesnesini geçiren bir sınama yanıtı döndürün. Aşağıdaki kod buna bir örnek gösterir.
 
 ```csharp
 var properties = _signInManager.ConfigureExternalAuthenticationProperties(provider,
@@ -137,7 +137,7 @@ ASP.NET Core kimliği (veya kimlik Plus dış kimlik doğrulama sağlayıcılar�
 
 ### <a name="authenticate-with-an-openid-connect-or-oauth-20-identity-provider"></a>OpenID Connect veya OAuth 2,0 kimlik sağlayıcısı ile kimlik doğrulama
 
-Kullanıcı bilgileri Azure Active Directory veya OpenID Connect ya da OAuth 2,0 ' ı destekleyen başka bir kimlik çözümünde depolanıyorsa, OpenID Connect kullanarak kimlik doğrulamak için **Microsoft. AspNetCore. Authentication. Openıdconnect** paketini kullanabilirsiniz akışıyla. Örneğin, eShopOnContainers 'daki Identity. API mikro hizmeti kimlik doğrulaması için, bir ASP.NET Core Web uygulaması aşağıdaki Basitleştirilmiş örnekte `Startup.cs`gösterildiği gibi bu paketteki ara yazılımı kullanabilir:
+Kullanıcı bilgileri Azure Active Directory veya OpenID Connect ya da OAuth 2,0 ' ı destekleyen başka bir kimlik çözümünde depolanıyorsa, OpenID Connect kullanarak kimlik doğrulamak için **Microsoft. AspNetCore. Authentication. Openıdconnect** paketini kullanabilirsiniz akışıyla. Örneğin, eShopOnContainers 'daki Identity. API mikro hizmeti için kimlik doğrulaması yapmak üzere, bir ASP.NET Core Web uygulaması, aşağıdaki Basitleştirilmiş örnekte gösterildiği gibi bu paketteki ara yazılımı kullanabilir `Startup.cs`:
 
 ```csharp
 // Startup.cs
@@ -211,7 +211,7 @@ Dış kimlik sağlayıcısı kullanmak yerine yerel ASP.NET Core Identity kullan
 
    - [ASP.NET Core kimliği](https://identityserver4.readthedocs.io/en/latest/quickstarts/0_overview.html) veya alternatif gibi Kullanıcı bilgileri için depolama mekanizması.
 
-Identityserver4 için kullanılacak istemcileri ve kaynakları belirttiğinizde, bellek içi istemci veya kaynak depoları alan <xref:System.Collections.Generic.IEnumerable%601> yöntemlere uygun türde bir koleksiyon geçirebilirsiniz. Ya da daha karmaşık senaryolar için, bağımlılık ekleme yoluyla istemci veya kaynak sağlayıcısı türleri sağlayabilirsiniz.
+Identityserver4 için kullanılacak istemcileri ve kaynakları belirttiğinizde, uygun türdeki bir <xref:System.Collections.Generic.IEnumerable%601> koleksiyonunu bellek içi istemci veya kaynak depoları alan yöntemlere geçirebilirsiniz. Ya da daha karmaşık senaryolar için, bağımlılık ekleme yoluyla istemci veya kaynak sağlayıcısı türleri sağlayabilirsiniz.
 
 Identityserver4 için, bellek içi kaynakları ve özel bir ılientstore türü tarafından sunulan istemcileri kullanmak için örnek bir yapılandırma aşağıdaki örnekteki gibi görünebilir:
 
@@ -264,42 +264,39 @@ public void ConfigureServices(IServiceCollection services)
 
 Bu kullanımdaki parametreler şunlardır:
 
-- `Audience`gelen belirtecin veya belirtecin erişim izni verdiği kaynağın alıcısını temsil eder. Bu parametrede belirtilen değer, belirteçteki parametreyle eşleşmezse, belirteç reddedilir.
+- `Audience`, gelen belirtecin veya belirtecin erişim izni verdiği kaynağın alıcısını temsil eder. Bu parametrede belirtilen değer, belirteçteki parametreyle eşleşmezse, belirteç reddedilir.
 
-- `Authority`, belirteç veren kimlik doğrulama sunucusunun adresidir. JWT taşıyıcı kimlik doğrulama ara yazılımı, belirtecin imzasını doğrulamak için kullanılabilecek ortak anahtarı almak için bu URI 'yi kullanır. Ara yazılım, belirteçteki `iss` parametrenin bu URI ile eşleştiğini de onaylar.
+- `Authority`, belirteç veren kimlik doğrulama sunucusunun adresidir. JWT taşıyıcı kimlik doğrulama ara yazılımı, belirtecin imzasını doğrulamak için kullanılabilecek ortak anahtarı almak için bu URI 'yi kullanır. Ara yazılım, belirteçteki `iss` parametresinin bu URI ile eşleştiğini de onaylar.
 
-Başka bir parametre `RequireHttpsMetadata`, test amaçları için yararlıdır; bu parametreyi yanlış olarak ayarlarsanız, sertifikalarınızın olmadığı ortamlarda test edebilirsiniz. Gerçek dünyada dağıtımlarda, JWT taşıyıcı belirteçlerinin her zaman yalnızca HTTPS üzerinden geçirilmesi gerekir.
+`RequireHttpsMetadata`başka bir parametre, test amaçları için yararlıdır; Bu parametreyi yanlış olarak ayarlarsanız, sertifikalarınızın olmadığı ortamlarda test edebilirsiniz. Gerçek dünyada dağıtımlarda, JWT taşıyıcı belirteçlerinin her zaman yalnızca HTTPS üzerinden geçirilmesi gerekir.
 
-Bu ara yazılım söz konusu olduğunda, JWT belirteçleri yetkilendirme başlıklarından otomatik olarak ayıklanır. Daha sonra bunlar seri durumdan silinir, onaylanır ( `Audience` ve `Authority` parametrelerdeki değerler kullanılarak) ve daha sonra MVC eylemleri veya Yetkilendirme filtreleri tarafından başvurulmak üzere Kullanıcı bilgileri olarak depolanır.
+Bu ara yazılım söz konusu olduğunda, JWT belirteçleri yetkilendirme başlıklarından otomatik olarak ayıklanır. Daha sonra bunlar seri durumdan silinir, onaylanır (`Audience` ve `Authority` parametrelerdeki değerler kullanılarak) ve daha sonra MVC eylemleri veya Yetkilendirme filtreleri tarafından başvurulmak üzere Kullanıcı bilgileri olarak depolanır.
 
-JWT taşıyıcı kimlik doğrulama ara yazılımı, yetkili kullanılamıyorsa bir belirteci doğrulamak için yerel bir sertifika kullanma gibi daha gelişmiş senaryoları da destekleyebilir. Bu senaryo için, `TokenValidationParameters` `JwtBearerOptions` nesnesinde bir nesne belirtebilirsiniz.
+JWT taşıyıcı kimlik doğrulama ara yazılımı, yetkili kullanılamıyorsa bir belirteci doğrulamak için yerel bir sertifika kullanma gibi daha gelişmiş senaryoları da destekleyebilir. Bu senaryo için, `JwtBearerOptions` nesnesinde bir `TokenValidationParameters` nesnesi belirtebilirsiniz.
 
 ## <a name="additional-resources"></a>Ek kaynaklar
 
 - **Uygulamalar arasında tanımlama bilgilerini paylaşma** \
   [https://docs.microsoft.com/aspnet/core/security/cookie-sharing](/aspnet/core/security/cookie-sharing)
 
-- **Kimliğe giriş** \
+- **Kimlik \ giriş**
   [https://docs.microsoft.com/aspnet/core/security/authentication/identity](/aspnet/core/security/authentication/identity)
 
-- **Rick Anderson. SMS ile iki öğeli kimlik doğrulama** \
+- **Rick Anderson. SMS \ ile iki öğeli kimlik doğrulama**
   [https://docs.microsoft.com/aspnet/core/security/authentication/2fa](/aspnet/core/security/authentication/2fa)
 
 - **Facebook, Google ve diğer dış sağlayıcıları kullanarak kimlik doğrulamasını etkinleştirme** \
   [https://docs.microsoft.com/aspnet/core/security/authentication/social/](/aspnet/core/security/authentication/social/)
 
-- **Michell Anıas. OAuth 2 ' ye giriş** \
+- **Michell Anıas. OAuth 2 \ giriş**
   <https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2>
 
 - **Aspnet. Security. OAuth. Providers** (ASP.net OAuth sağlayıcıları için GitHub deposu) \
   <https://github.com/aspnet-contrib/AspNet.Security.OAuth.Providers/tree/dev/src>
 
-- **Danny Strock. Azure AD 'yi bir ASP.NET Core Web uygulamasıyla tümleştirme** \
-  <https://azure.microsoft.com/resources/samples/active-directory-dotnet-webapp-openidconnect-aspnetcore/>
-
 - **Identityserver4. Resmi belgeler** \
   <https://identityserver4.readthedocs.io/en/latest/>
 
 >[!div class="step-by-step"]
->[Önceki](../implement-resilient-applications/monitor-app-health.md)İleri
->[](authorization-net-microservices-web-applications.md)
+>[Önceki](../implement-resilient-applications/monitor-app-health.md)
+>[İleri](authorization-net-microservices-web-applications.md)
