@@ -6,20 +6,20 @@ helpviewer_keywords:
 - XML processing [C#]
 - XML [C#], processing
 ms.assetid: 60c71193-9dac-4cd3-98c5-100bd0edcc42
-ms.openlocfilehash: bb713fbc5ddd3737cb629c5c09c25ff2980c73dc
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: b2b19a2b2c46df5b78b6ebba48955cae55d32121
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72523382"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72846929"
 ---
 # <a name="processing-the-xml-file-c-programming-guide"></a>XML Dosyasını İşleme (C# Programlama Kılavuzu)
 
 Derleyici, kodunuzda belge oluşturmak için etiketlenmiş her yapı için bir KIMLIK dizesi oluşturur. (Kodunuzu etiketleme hakkında daha fazla bilgi için bkz. [belge açıklamaları Için önerilen Etiketler](./recommended-tags-for-documentation-comments.md).) KIMLIK dizesi yapıyı benzersiz bir şekilde tanımlar. XML dosyasını işleyen programlar, belgelerin uygulandığı karşılık gelen .NET Framework meta veri/yansıma öğesini tanımlamak için KIMLIK dizesini kullanabilir.
 
- XML dosyası, kodunuzun hiyerarşik bir temsili değildir; her öğe için oluşturulmuş KIMLIĞI olan düz bir liste.
+XML dosyası, kodunuzun hiyerarşik bir temsili değildir; her öğe için oluşturulmuş KIMLIĞI olan düz bir liste.
 
- Derleyici, KIMLIK dizelerini oluşturduğunda aşağıdaki kuralları sunar:
+Derleyici, KIMLIK dizelerini oluşturduğunda aşağıdaki kuralları sunar:
 
 - Dizede boşluk yok.
 
@@ -41,11 +41,11 @@ Derleyici, kodunuzda belge oluşturmak için etiketlenmiş her yapı için bir K
 
   - Temel türler. Normal türler (ELEMENT_TYPE_CLASS veya ELEMENT_TYPE_VALUETYPE), türün tam nitelikli adı olarak gösterilir.
 
-  - İç türler (örneğin, ELEMENT_TYPE_I4, ELEMENT_TYPE_OBJECT, ELEMENT_TYPE_STRING, ELEMENT_TYPE_TYPEDBYREF. ve ELEMENT_TYPE_VOID) karşılık gelen tam türün tam adı olarak gösterilir. Örneğin, System. Int32 veya System. TypedReference.
+  - İç türler (örneğin, ELEMENT_TYPE_I4, ELEMENT_TYPE_OBJECT, ELEMENT_TYPE_STRING, ELEMENT_TYPE_TYPEDBYREF ve ELEMENT_TYPE_VOID) karşılık gelen tam türün tam adı olarak gösterilir. Örneğin, System. Int32 veya System. TypedReference.
 
-  - ELEMENT_TYPE_PTR, değiştirilen türden sonra bir ' \* ' olarak temsil edilir.
+  - ELEMENT_TYPE_PTR, değiştirilen türden sonra bir '\*' olarak temsil edilir.
 
-  - ELEMENT_TYPE_BYREF, değiştirilen türden sonra bir ' \@ ' olarak temsil edilir.
+  - ELEMENT_TYPE_BYREF, değiştirilen türden sonra bir '\@' olarak temsil edilir.
 
   - ELEMENT_TYPE_PINNED, değiştirilen türden sonra bir ' ^ ' olarak temsil edilir. C# Derleyici bunu hiçbir şekilde oluşturmaz.
 
@@ -57,9 +57,9 @@ Derleyici, kodunuzda belge oluşturmak için etiketlenmiş her yapı için bir K
 
   - ELEMENT_TYPE_GENERICARRAY, dizinin öğe türü takip eden "[?]" olarak temsil edilir. C# Derleyici bunu hiçbir şekilde oluşturmaz.
 
-  - ELEMENT_TYPE_ARRAY, virgül sayısının derece-1 olduğu ve bilinen her boyutun alt sınırları ve boyutunun ondalık olarak temsil edildiği [küçük*harfe*göre: `size`, küçük*harfe*göre: `size`] olarak gösterilir. Daha düşük bir sınır veya boyut belirtilmemişse, bu yalnızca atlanır. Belirli bir boyutun alt sınırı ve boyutu atlanırsa, ': ' de atlanır. Örneğin, alt sınır olarak 1 olan 2 boyutlu bir dizi ve belirtilmemiş boyutlar [1:, 1:].
+  - ELEMENT_TYPE_ARRAY, virgül sayısının derece-1 olduğu ve bilinen her boyutun alt sınırları ve boyutunun ondalık olarak temsil edildiği [küçük*harfe*göre:`size`, küçük*harfe*göre:`size`] olarak gösterilir. Daha düşük bir sınır veya boyut belirtilmemişse, bu yalnızca atlanır. Belirli bir boyutun alt sınırı ve boyutu atlanırsa, ': ' de atlanır. Örneğin, alt sınır olarak 1 olan 2 boyutlu bir dizi ve belirtilmemiş boyutlar [1:, 1:].
 
-  - ELEMENT_TYPE_FNPTR, dönüş türü olan ve *imza* yöntemin bağımsız değişkenlerinin olduğu "= FUNC: `type` (*Signature*) `type`" olarak temsil edilir. Bağımsız değişken yoksa, parantezler atlanır. C# Derleyici bunu hiçbir şekilde oluşturmaz.
+  - ELEMENT_TYPE_FNPTR, dönüş türü olan ve *imza* yöntemin bağımsız değişkenlerinin olduğu "= FUNC:`type`(*Signature*) `type`" olarak temsil edilir. Bağımsız değişken yoksa, parantezler atlanır. C# Derleyici bunu hiçbir şekilde oluşturmaz.
 
     Aşağıdaki imza bileşenleri, aşırı yüklenmiş yöntemlerin farklılaştırmaları hiçbir şekilde kullanıldıklarından temsil edilmez:
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - GAC (global assembly cache), publisher policy assembly
 - global assembly cache, publisher policy assembly
 ms.assetid: 8046bc5d-2fa9-4277-8a5e-6dcc96c281d9
-ms.openlocfilehash: 5484dfeb8cf5292fb43393bb39b9878114119d29
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 608918828bf72369a1bd48e2391e2423078e9df0
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991190"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72846830"
 ---
 # <a name="how-to-create-a-publisher-policy"></a>Nasıl yapılır: Yayımcı İlkesi Oluşturma
 
@@ -26,7 +26,7 @@ Yayımcı ilkesi oluşturma ile ilgili üç adım vardır:
 
 3. Yayımcı ilke derlemesini genel bütünleştirilmiş kod önbelleğine ekleyin.
 
-Yayımcı ilkesi şeması, [derleme sürümlerini yeniden yönlendirme](redirect-assembly-versions.md)bölümünde açıklanmıştır. Aşağıdaki örnek, bir sürümünü `myAssembly` diğerine yönlendiren bir yayımcı ilkesi dosyası gösterir.
+Yayımcı ilkesi şeması, [derleme sürümlerini yeniden yönlendirme](redirect-assembly-versions.md)bölümünde açıklanmıştır. Aşağıdaki örnek, `myAssembly` bir sürümünü diğerine yönlendiren bir yayımcı ilkesi dosyası gösterir.
 
 ```xml
 <configuration>
@@ -55,7 +55,7 @@ Yayımcı ilke derlemesini oluşturmak için [derleme Bağlayıcısı (al. exe)]
 
 Komut istemine aşağıdaki komutu yazın:
 
-**Al/Link:** *publisherPolicyFile* **/Out:** *Publisherpolicyassemblyfile* **/keyfile:** *keyPairFile* **/Platform:** *ProcessorArchitecture*
+**Al/Link:** *publisherPolicyFile* **/Out:** *publisherpolicyassemblyfile* **/keyfile:** *keyPairFile* **/Platform:** *ProcessorArchitecture*
 
 Bu komutta:
 
@@ -63,7 +63,7 @@ Bu komutta:
 
 - *Publisherpolicyassemblyfile* bağımsız değişkeni, bu komutun sonucu olan yayımcı ilkesi derlemesinin adıdır. Derleme dosyası adı şu biçimde olmalıdır:
 
-  **ilkesinin.** *Majornumber* **.** *minorNumber* **.** *ana AssemblyName* **. dll**
+  **ilkesinin.** *Majornumber* **.** *minorNumber* **.** *MainAssemblyName* **. dll**
 
 - *KeyPairFile* bağımsız değişkeni, anahtar çiftini içeren dosyanın adıdır. Derleme ve Yayımcı ilke derlemesini aynı anahtar çiftiyle imzalamanız gerekir.
 
@@ -72,13 +72,13 @@ Bu komutta:
   > [!NOTE]
   > Belirli bir işlemci mimarisini hedefleme özelliği .NET Framework 2,0 ' den başlayarak kullanılabilir.
 
-Belirli bir işlemci mimarisini hedefleme özelliği .NET Framework 2.0 ile başlayarak kullanılabilir. aşağıdaki komut, adlı `policy.1.0.myAssembly` `pub.config`bir yayımcı ilke dosyasından çağrılan bir yayımcı ilkesi derlemesi oluşturur, öğesine güçlü bir ad atar. derleme, `sgKey.snk` dosyadaki anahtar çiftini kullanarak ve derlemenin x86 işlemci mimarisini hedeflediğini belirtir.
+Belirli bir işlemci mimarisini hedefleme özelliği .NET Framework 2,0 ' den başlayarak kullanılabilir. Aşağıdaki komut `pub.config`adlı bir yayımcı ilke dosyasından `policy.1.0.myAssembly` adlı bir yayımcı ilke derlemesi oluşturur, `sgKey.snk` dosyasında anahtar çiftini kullanarak derlemeye tanımlayıcı bir ad atar ve derlemenin x86 işlemcisini hedeflediğini belirtir mimarisini.
 
 ```
 al /link:pub.config /out:policy.1.0.myAssembly.dll /keyfile:sgKey.snk /platform:x86
 ```
 
-Yayımcı ilke derlemesinin, uygulandığı derlemenin işlemci mimarisiyle eşleşmesi gerekir. Bu nedenle, derlemenizin bir <xref:System.Reflection.AssemblyName.ProcessorArchitecture%2A> <xref:System.Reflection.ProcessorArchitecture.MSIL>değeri varsa, bu derleme için yayımcı ilke derlemesinin ile `/platform:anycpu`oluşturulması gerekir. İşlemciye özgü her derleme için ayrı bir yayımcı ilke derlemesi sağlamalısınız.
+Yayımcı ilke derlemesinin, uygulandığı derlemenin işlemci mimarisiyle eşleşmesi gerekir. Bu nedenle, derlemenizin <xref:System.Reflection.ProcessorArchitecture.MSIL>bir <xref:System.Reflection.AssemblyName.ProcessorArchitecture%2A> değeri varsa, bu derleme için yayımcı ilke derlemesinin `/platform:anycpu`ile oluşturulması gerekir. İşlemciye özgü her derleme için ayrı bir yayımcı ilke derlemesi sağlamalısınız.
 
 Bu kuralın bir sonucu, bir derlemenin işlemci mimarisini değiştirmek için, sürüm numarasının büyük veya küçük bileşenini değiştirmeniz, böylece doğru işlemci mimarisine sahip yeni bir yayımcı ilke derlemesi sağlayabilmeniz gerekir. Derlemelerinizin farklı bir işlemci mimarisi varsa, eski yayımcı ilkesi derlemesi derlemenizi kullanamaz.
 
@@ -92,9 +92,9 @@ Yayımcı ilke derlemesini genel bütünleştirilmiş kod önbelleğine eklemek 
 
 Komut istemine aşağıdaki komutu yazın:
 
-**Gacutil /i** *publisherPolicyAssemblyFile*
+**Gacutil/I**  *publisherpolicyassemblyfile*
 
-Aşağıdaki komut, genel `policy.1.0.myAssembly.dll` derleme önbelleğine ekler.
+Aşağıdaki komut, genel derleme önbelleğine `policy.1.0.myAssembly.dll` ekler.
 
 ```
 gacutil /i policy.1.0.myAssembly.dll

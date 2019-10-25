@@ -1,18 +1,17 @@
 ---
-ms.openlocfilehash: 47aa67096f8dcd250521d9c34dde97cb2eb368d7
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: 4254cceab0048341b32fe5babf53b5ea3e5a52d6
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67803469"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "72846993"
 ---
-### <a name="workflow-xoml-definition-and-sqltrackingservice-cache-keys-changed-from-md5-to-sha256"></a>İş akışı XOML tanımını ve SqlTrackingService önbellek anahtarları için SHA256 MD5 değiştirildi
+### <a name="workflow-xoml-definition-and-sqltrackingservice-cache-keys-changed-from-md5-to-sha256"></a>İş akışı XOML tanımı ve SqlTrackingService önbellek anahtarları MD5 'den SHA256 'e değişti
 
 |   |   |
 |---|---|
-|Ayrıntılar|İş akışı çalışma zamanı'nda iş akışı tanımı XOML içinde tanımlanan bir önbellekte tutar. SqlTrackingService dizeleri tarafından Anahtarlanan bir önbellek da tutar. Bu Önbelleklerin sağlama toplamı karma değeri içeren değerleri tarafından Anahtarlanan. .NET Framework 4.7.2 ve önceki sürümleri, bu sağlama toplamı karma FIPS etkin sistemlerinde sorunları nedeniyle MD5 algoritma kullanılır. .NET Framework 4.8 ile başlayarak, kullanılan algoritması SHA256 olan. Değerleri iş akışı çalışma zamanı ve SqlTrackingService başlatıldığında her seferinde yeniden hesaplanır çünkü bu değişiklik ile bir uyumluluk sorunu olmamalıdır. Ancak, gerekirse geri eski karma algoritması kullanımına geri dönmek kanıtlayabilecekleri quirks sağladık.|
-|Öneri|Bu değişiklik iş akışı çalıştırılırken bir sorun sunarsa, aşağıdakilerden birini veya her ikisi de ayarını deneyin <code>AppContext</code> anahtarlar:<ul><li>&quot;Switch.System.Workflow.Runtime.UseLegacyHashForWorkflowDefinitionDispenserCacheKey&quot; true.</li><li>&quot;Switch.System.Workflow.Runtime.UseLegacyHashForSqlTrackingCacheKey&quot; to true.</li></ul>Kod:<pre><code class="lang-csharp">System.AppContext.SetSwitch(&quot;Switch.System.Workflow.Runtime.UseLegacyHashForWorkflowDefinitionDispenserCacheKey&quot;, true);&#13;&#10;System.AppContext.SetSwitch(&quot;Switch.System.Workflow.Runtime.UseLegacyHashForSqlTrackingCacheKey&quot;, true);&#13;&#10;</code></pre>Veya yapılandırma dosyasında (Bu oluşturan uygulamanın yapılandırma dosyasında olması gereken <xref:System.Workflow.Runtime.WorkflowRuntime> nesnesi):<pre><code class="lang-xml">&lt;configuration&gt;&#13;&#10;&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.Workflow.Runtime.UseLegacyHashForWorkflowDefinitionDispenserCacheKey=true&quot; /&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.Workflow.Runtime.UseLegacyHashForSqlTrackingCacheKeytrue&quot; /&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;&lt;/configuration&gt;&#13;&#10;</code></pre>|
+|Ayrıntılar|' Deki Iş akışı çalışma zamanı, XOML içinde tanımlanan iş akışı tanımlarının bir önbelleğini tutar. SqlTrackingService, dizeler tarafından girilen bir önbelleği de tutar. Bu önbellekler, sağlama toplamı karma değeri içeren değerlere göre anahtarlanır. .NET Framework 4.7.2 ve önceki sürümlerde, bu sağlama toplamı karma, FIPS özellikli sistemlerde sorunlara neden olan MD5 algoritmasını kullandı. 4,8 .NET Framework başlayarak kullanılan algoritma SHA256. Bu değişiklik ile bir uyumluluk sorunu olmaması gerekir, çünkü Iş akışı çalışma zamanı ve SqlTrackingService her başlatıldığında değerler yeniden hesaplanır. Bununla birlikte, müşterilerin, gerekirse eski karma algoritmanın kullanımına geri dönüşmesini sağlayan bir olağandışı şekilde sunuyoruz.|
+|Öneri|Bu değişiklik iş akışlarını yürütürken bir sorun yaparsa <code>AppContext</code> anahtarlarından birini veya her ikisini ayarlamayı deneyin:<ul><li>Switch. System. Workflow. Runtime. UseLegacyHashForWorkflowDefinitionDispenserCacheKey&quot; true olarak &quot;.</li><li>Switch. System. Workflow. Runtime. UseLegacyHashForSqlTrackingCacheKey&quot; true olarak &quot;.</li></ul>Kod:<pre><code class="lang-csharp">System.AppContext.SetSwitch(&quot;Switch.System.Workflow.Runtime.UseLegacyHashForWorkflowDefinitionDispenserCacheKey&quot;, true);&#13;&#10;System.AppContext.SetSwitch(&quot;Switch.System.Workflow.Runtime.UseLegacyHashForSqlTrackingCacheKey&quot;, true);&#13;&#10;</code></pre>Yapılandırma dosyasında (bunun <xref:System.Workflow.Runtime.WorkflowRuntime> nesnesi oluşturan uygulamanın yapılandırma dosyasında olması gerekir):<pre><code class="lang-xml">&lt;configuration&gt;&#13;&#10;&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.Workflow.Runtime.UseLegacyHashForWorkflowDefinitionDispenserCacheKey=true&quot; /&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.Workflow.Runtime.UseLegacyHashForSqlTrackingCacheKeytrue&quot; /&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;&lt;/configuration&gt;&#13;&#10;</code></pre>|
 |Kapsam|İkincil|
-|Sürüm|4.8|
+|Version|4,8|
 |Tür|Yeniden Hedefleme|
-

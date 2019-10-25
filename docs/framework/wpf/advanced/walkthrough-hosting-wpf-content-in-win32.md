@@ -1,26 +1,26 @@
 ---
-title: 'İzlenecek yol: WPF İçeriğini Win32 içinde Barındırma'
+title: "İzlenecek yol: Win32'de WPF Barındırma"
 ms.date: 03/30/2017
 dev_langs:
 - cpp
 helpviewer_keywords:
 - hosting WPF content in Win32 window [WPF]
 ms.assetid: 38ce284a-4303-46dd-b699-c9365b22a7dc
-ms.openlocfilehash: 3433819761c19b616a7c9c19fe52e250b0f028dc
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 5bc6e6d805d74bcf01044a16d94d6b3fc0ccf881
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929185"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72846847"
 ---
-# <a name="walkthrough-hosting-wpf-content-in-win32"></a>İzlenecek yol: WPF İçeriğini Win32 içinde Barındırma
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]uygulamalar oluşturmak için zengin bir ortam sağlar. Ancak, kod içinde [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] önemli bir yatırımınız olduğunda, özgün kodunuzu yeniden yazmak yerine uygulamanıza işlevsellik eklemek [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] daha etkili olabilir. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)][!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bir[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] pencerede içerik barındırmak için basit bir mekanizma sağlar.  
+# <a name="walkthrough-hosting-wpf-content-in-win32"></a>İzlenecek yol: Win32'de WPF Barındırma
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], uygulamalar oluşturmak için zengin bir ortam sağlar. Ancak [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] kodda önemli bir yatırımınız varsa, özgün kodunuzu yeniden yazmak yerine uygulamanıza [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] işlevselliği eklemek daha etkili olabilir. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], bir [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] penceresinde [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içeriği barındırmak için kolay bir mekanizma sağlar.  
   
- Bu öğreticide, bir [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] pencerede içerik barındıran [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [bir Win32 pencere örneğinde WPF içeriği barındıran](https://go.microsoft.com/fwlink/?LinkID=160004)örnek bir uygulamanın nasıl yazılacağı açıklanmaktadır. Bu örneği, herhangi bir [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] pencereyi barındırmak için genişletebilirsiniz. Yönetilen ve yönetilmeyen kodu karıştırmayı içerdiğinden, uygulama/Clide C++yazılır.  
+ Bu öğreticide, bir [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] penceresinde [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içeriği barındıran [bir Win32 pencere ÖRNEĞINDE WPF Içeriği barındıran](https://go.microsoft.com/fwlink/?LinkID=160004)örnek bir uygulamanın nasıl yazılacağı açıklanmaktadır. Bu örneği, herhangi bir [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] penceresini barındırmak için genişletebilirsiniz. Yönetilen ve yönetilmeyen kodu karıştırmayı içerdiğinden, uygulama/Clide C++yazılır.  
 
 <a name="requirements"></a>   
 ## <a name="requirements"></a>Gereksinimler  
- Bu öğreticide, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] hem hem de programlama ile ilgili temel bir benzerlik varsayılmaktadır. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Programlamaya temel bir giriş için [bkz. Başlarken](../getting-started/index.md). [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] Programlamaya giriş için, özellikle Charles Petzold tarafından yapılan belirli bir *programlama* penceresinde, konudaki çok sayıda kitaplardan birine başvurmanız gerekir.  
+ Bu öğreticide [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ve [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] programlamaya yönelik temel bir benzerlik vardır. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] programlamaya temel bir giriş için [bkz. Başlarken](../getting-started/index.md). [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] programlamaya giriş için, özellikle Charles Petzold tarafından yapılan belirli bir *programlama* penceresinde, konudaki çok sayıda kitaplardan birine başvurmanız gerekir.  
   
  Bu öğreticiye eşlik eden örnek, C++/CLI ' da uygulandığından, bu öğreticide, Windows API 'sinin programlanması ve yönetilen kod programlamasını anlamak için kullanımı hakkında C++ bilgiler verilir. /CLI ile C++benzerlik yararlı ancak gerekli değildir.  
   
@@ -29,40 +29,40 @@ ms.locfileid: "70929185"
   
 <a name="basic_procedure"></a>   
 ## <a name="the-basic-procedure"></a>Temel yordam  
- Bu bölümde, içeriği bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] pencerede barındırmak için kullandığınız temel yordam özetlenmektedir. Kalan bölümlerde her adımın ayrıntıları açıklanmaktadır.  
+ Bu bölümde, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içeriğini [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] bir pencerede barındırmak için kullandığınız temel yordam özetlenmektedir. Kalan bölümlerde her adımın ayrıntıları açıklanmaktadır.  
   
- İçeriği bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] pencerede barındırmak için anahtar <xref:System.Windows.Interop.HwndSource> sınıfı olur. Bu sınıf, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içeriği bir [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] pencerede sarmalanmış ve bu da bir alt pencere olarak uygulamanıza [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] dahil olmasını sağlar. Aşağıdaki yaklaşım, [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] ve [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] öğesini tek bir uygulamada birleştirir.  
+ [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] bir pencere üzerinde [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içerik barındırmak için anahtar <xref:System.Windows.Interop.HwndSource> sınıftır. Bu sınıf, bir [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] penceresinde [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içeriğini sarmalanmış ve bunun bir alt pencere olarak [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] eklenmesine izin verir. Aşağıdaki yaklaşım [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] ve [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] tek bir uygulamada birleştirir.  
   
-1. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] İçeriğinizi yönetilen bir sınıf olarak uygulayın.  
+1. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içeriğinizi yönetilen bir sınıf olarak uygulayın.  
   
-2. /Cliile C++bir Windows uygulaması uygulayın. Var olan bir uygulama ve yönetilmeyen C++ kod ile başlıyorsanız, genellikle proje ayarlarınızı `/clr` derleyici bayrağını içerecek şekilde değiştirerek yönetilen kodu çağırmak için bunu etkinleştirebilirsiniz.  
+2. /Cliile C++bir Windows uygulaması uygulayın. Var olan bir uygulama ve yönetilmeyen C++ kod ile başlıyorsanız, genellikle proje ayarlarınızı`/clr`derleyici bayrağını içerecek şekilde değiştirerek yönetilen kodu çağırmak için bunu etkinleştirebilirsiniz.  
   
 3. İş parçacığı modelini tek iş parçacıklı Apartment (STA) olarak ayarlayın.  
   
 4. [WM_CREATE](/windows/desktop/winmsg/wm-create)bildirimini pencere yordamınıza işleyin ve şunları yapın:  
   
-    1. Üst pencereyle `parent` parametresi <xref:System.Windows.Interop.HwndSource> olarak yeni bir nesne oluşturun.  
+    1. Üst pencereyle `parent` parametresi olarak yeni bir <xref:System.Windows.Interop.HwndSource> nesnesi oluşturun.  
   
-    2. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] İçerik sınıfınızın bir örneğini oluşturun.  
+    2. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içerik sınıfınızın bir örneğini oluşturun.  
   
-    3. <xref:System.Windows.Interop.HwndSource.RootVisual%2A> Özelliğine içeriknesnesine[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bir başvuru atayın. <xref:System.Windows.Interop.HwndSource>  
+    3. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Content nesnesine bir başvuruyu <xref:System.Windows.Interop.HwndSource><xref:System.Windows.Interop.HwndSource.RootVisual%2A> özelliğine atayın.  
   
-    4. İçerik için HWND 'yi alın. <xref:System.Windows.Interop.HwndSource> Nesnesinin özelliği, pencere tanıtıcısını (hwnd) içerir. <xref:System.Windows.Interop.HwndSource.Handle%2A> Uygulamanızın yönetilmeyen bölümünde kullanabileceğiniz bir hwnd almak için bir HWND 'ye atayın `Handle.ToPointer()` .  
+    4. İçerik için HWND 'yi alın. <xref:System.Windows.Interop.HwndSource> nesnesinin <xref:System.Windows.Interop.HwndSource.Handle%2A> özelliği pencere tanıtıcısını (HWND) içerir. Uygulamanızın yönetilmeyen bölümünde kullanabileceğiniz bir HWND almak için `Handle.ToPointer()` HWND 'ye atayın.  
   
-5. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] İçeriğiniz için bir başvuru tutmak üzere statik alan içeren bir yönetilen sınıf uygulayın. Bu sınıf, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] kodunuzun içeriğine yönelik bir başvuru almanızı sağlar.  
+5. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içeriğiniz için bir başvuru tutmak üzere statik alan içeren bir yönetilen sınıf uygulayın. Bu sınıf, [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] kodunuzda [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içeriğine yönelik bir başvuru almanızı sağlar.  
   
-6. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] İçeriği statik alana atayın.  
+6. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içeriğini statik alana atayın.  
   
-7. Bir veya daha fazla [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] olaya bir işleyici ekleyerek içerikten bildirim alın.  
+7. Bir veya daha fazla [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] olayına işleyici ekleyerek [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içeriğinden bildirim alın.  
   
-8. Özellikleri ayarlamak için statik alanda depoladığınız başvuruyu kullanarak içerikleiletişimkurunvebuşekildedevamedin.[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]  
+8. Özellikleri ayarlamak için statik alanda depoladığınız başvuruyu kullanarak [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içeriğiyle iletişim kurun ve bu şekilde devam edin.  
   
 > [!NOTE]
-> İçeriğinizi uygulamak için de [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]kullanabilirsiniz. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Bununla birlikte, bir dinamik bağlantı kitaplığı (dll) olarak ayrı olarak derlemek ve [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] uygulamanızdan dll 'ye başvurmanız gerekir. Yordamın geri kalanı yukarıda ana hatlarıyla benzerdir.
+> [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içeriğinizi uygulamak için [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] de kullanabilirsiniz. Ancak, bu dosyayı dinamik bağlantı kitaplığı (DLL) olarak ayrı olarak derleyip [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] uygulamanızdan DLL 'ye başvurmanız gerekecektir. Yordamın geri kalanı yukarıda ana hatlarıyla benzerdir.
 
 <a name="implementing_the_application"></a>
 ## <a name="implementing-the-host-application"></a>Konak uygulamasını uygulama
- Bu bölümde, basit [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] bir uygulamada içeriğin nasıl barındırılacağını açıklanmaktadır. İçerik, bir yönetilen sınıf olarak C++/CLI ' da uygulanır. Çoğu bölümde, basit [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bir programlama olur. İçerik uygulamasının temel yönleri [WPF Içeriğini uygulama](#implementing_the_wpf_page)bölümünde ele alınmıştır.
+ Bu bölümde, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içeriğin temel bir [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] uygulamasında nasıl barındırılacağını açıklanmaktadır. İçerik, bir yönetilen sınıf olarak C++/CLI ' da uygulanır. Çoğu bölümde, programlama [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] basittir. İçerik uygulamasının temel yönleri [WPF Içeriğini uygulama](#implementing_the_wpf_page)bölümünde ele alınmıştır.
 
 - [Temel uygulama](#the_basic_application)
 
@@ -78,13 +78,13 @@ ms.locfileid: "70929185"
 
 1. Visual Studio 2005 ' i açın ve **Dosya** menüsünden **Yeni proje** ' yi seçin.
 
-2. [!INCLUDE[TLA2#tla_visualcpp](../../../../includes/tla2sharptla-visualcpp-md.md)] Proje türleri listesinden **Win32** öğesini seçin. Varsayılan diliniz yoksa C++, bu proje türlerini **diğer diller**altında bulacaksınız.
+2. Görsel C++ proje türleri listesinden Win32 öğesini seçin. Varsayılan diliniz yoksa C++, bu proje türlerini **diğer diller**altında bulacaksınız.
 
 3. Bir **Win32 Proje** şablonu seçin, projeye bir ad atayın ve **Win32 uygulama sihirbazını**başlatmak için **Tamam** ' a tıklayın.
 
 4. Sihirbazın varsayılan ayarlarını kabul edin ve projeyi başlatmak için **son** ' a tıklayın.
 
- Şablon, aşağıdakiler dahil olmak [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] üzere temel bir uygulama oluşturur:
+ Şablon, aşağıdakiler dahil olmak üzere temel bir [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] uygulaması oluşturur:
 
 - Uygulama için bir giriş noktası.
 
@@ -92,7 +92,7 @@ ms.locfileid: "70929185"
 
 - **Dosya** ve **Yardım** başlıkları içeren bir menü. **Dosya** menüsünde, uygulamayı kapatan bir **Çıkış** öğesi vardır. **Yardım** menüsünde basit bir iletişim kutusu başlatan **hakkında** bir öğe bulunur.
 
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] İçeriği barındırmak için kod yazmaya başlamadan önce, temel şablonda iki değişiklik yapmanız gerekir.
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içeriğini barındırmak için kod yazmaya başlamadan önce, temel şablonda iki değişiklik yapmanız gerekir.
 
  Birincisi, projeyi yönetilen kod olarak derlemek olur. Varsayılan olarak, proje yönetilmeyen kod olarak derlenir. Ancak, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] yönetilen kodda uygulandığından, projenin buna göre derlenmesi gerekir.
 
@@ -107,66 +107,66 @@ ms.locfileid: "70929185"
 > [!NOTE]
 > Bu derleyici bayrağı uygulamanızda yönetilen kod kullanmanıza izin verir, ancak yönetilmeyen kodunuz daha önce olduğu gibi derlenmeye devam eder.
 
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]tek iş parçacıklı Apartment (STA) iş parçacığı modelini kullanır. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] İçerik kodu ile düzgün bir şekilde çalışabilmek için, giriş noktasına bir öznitelik uygulayarak uygulamanın iş parçacığı modelini STA olarak ayarlamanız gerekir.
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] tek iş parçacıklı Apartment (STA) iş parçacığı modelini kullanır. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içerik kodu ile düzgün şekilde çalışabilmek için, giriş noktasına bir öznitelik uygulayarak uygulamanın iş parçacığı modelini STA olarak ayarlamanız gerekir.
 
  [!code-cpp[Win32HostingWPFPage#WinMain](~/samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/Win32HostingWPFPage.cpp#winmain)]
 
 <a name="hosting_the_wpf_page"></a>
 ### <a name="hosting-the-wpf-content"></a>WPF Içeriğini barındırma
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] İçerik, basit bir adres girişi uygulamasıdır. Kullanıcı adı, adres <xref:System.Windows.Controls.TextBox> vb. almak için çeşitli denetimlerden oluşur. Ayrıca, **Tamam** ve <xref:System.Windows.Controls.Button> **iptal**' de iki denetim vardır. Kullanıcı **Tamam**' ı tıklattığında, düğmenin <xref:System.Windows.Controls.Primitives.ButtonBase.Click> olay işleyicisi <xref:System.Windows.Controls.TextBox> denetimlerden verileri toplar, bunları karşılık gelen özelliklere atar ve özel bir olay `OnButtonClicked`oluşturur. Kullanıcı **iptal**' i tıklattığında işleyici yalnızca yükseltilir `OnButtonClicked`. İçin `OnButtonClicked` olay bağımsız değişkeni nesnesi, hangi düğmenin tıklandığını gösteren bir Boole alanı içerir.
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içerik basit bir adres girişi uygulamasıdır. Kullanıcı adı, adres vb. almak için birkaç <xref:System.Windows.Controls.TextBox> denetimden oluşur. Ayrıca iki <xref:System.Windows.Controls.Button> denetimi vardır, **Tamam** ve **iptal et**. Kullanıcı **Tamam**' ı tıklattığında, düğmenin <xref:System.Windows.Controls.Primitives.ButtonBase.Click> olay işleyicisi verileri <xref:System.Windows.Controls.TextBox> denetimlerinden toplar, bunu ilgili özelliklere atar ve bir özel olay `OnButtonClicked`oluşturur. Kullanıcı **iptal**' i tıklattığında, işleyici `OnButtonClicked`yükseltilir. `OnButtonClicked` için olay bağımsız değişkeni nesnesi, hangi düğmenin tıklandığını gösteren bir Boole alanı içerir.
 
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] İçeriği barındıracak kod, ana bilgisayar penceresinde [WM_CREATE](/windows/desktop/winmsg/wm-create) bildirimi için bir işleyicide uygulanır.
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içeriğini barındıracak kod, ana bilgisayar penceresinde [WM_CREATE](/windows/desktop/winmsg/wm-create) bildirimi için bir işleyicide uygulanır.
 
  [!code-cpp[Win32HostingWPFPage#WMCreate](~/samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/Win32HostingWPFPage.cpp#wmcreate)]
 
- Yöntemi `GetHwnd` , boyut ve konum bilgilerini ve üst pencere tanıtıcısını alır ve barındırılan [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içeriğin pencere tanıtıcısını döndürür.
+ `GetHwnd` yöntemi, boyut ve konum bilgilerini ve üst pencere tanıtıcısını alır ve barındırılan [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içeriğinin pencere tanıtıcısını döndürür.
 
 > [!NOTE]
-> Ad`System::Windows::Interop` alanı için bir `#using` yönerge kullanamazsınız. Bunun yapılması, <xref:System.Windows.Interop.MSG> bu ad alanındaki yapı ve Winuser. h içinde belirtilen MSG yapısı arasında bir ad çakışması oluşturur. Bunun yerine, bu ad alanının içeriğine erişmek için tam nitelikli adlar kullanmanız gerekir.
+> `System::Windows::Interop` ad alanı için `#using` yönergesi kullanamazsınız. Bunun yapılması, bu ad alanındaki <xref:System.Windows.Interop.MSG> yapısı ve Winuser. h içinde belirtilen MSG yapısı arasında bir ad çakışması oluşturur. Bunun yerine, bu ad alanının içeriğine erişmek için tam nitelikli adlar kullanmanız gerekir.
 
  [!code-cpp[Win32HostingWPFPage#GetHwnd](~/samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/Win32HostingWPFPage.cpp#gethwnd)]
 
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] İçeriği doğrudan uygulama pencerenizde barındıryükleyemezsiniz. Bunun yerine, önce <xref:System.Windows.Interop.HwndSource> [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içeriği kaydırmak için bir nesne oluşturun. Bu nesne temelde bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içeriği barındırmak için tasarlanan bir penceredir. Uygulamayı, uygulamanızın <xref:System.Windows.Interop.HwndSource> bir parçası olan bir [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] pencerenin alt öğesi olarak oluşturarak ana pencerede barındırabilirsiniz. Oluşturucu <xref:System.Windows.Interop.HwndSource> parametreleri, bir [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] alt pencere oluştururken CreateWindow 'a geçirdiğiniz bilgilerin çoğunu içerir.
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içeriğini doğrudan uygulama pencerenizde barındıryükleyemezsiniz. Bunun yerine, önce [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içeriğini kaydırmak için bir <xref:System.Windows.Interop.HwndSource> nesnesi oluşturursunuz. Bu nesne, temel olarak [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bir içerik barındırmak için tasarlanan bir penceredir. <xref:System.Windows.Interop.HwndSource> nesnesini, uygulamanızın bir parçası olan bir [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] penceresinin alt öğesi olarak oluşturarak ana pencerede barındırabilirsiniz. <xref:System.Windows.Interop.HwndSource> Oluşturucu parametreleri, bir [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] alt pencere oluştururken CreateWindow 'a geçirdiğiniz bilgilerin çoğunu içerir.
 
- Bir sonraki adımda [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içerik nesnesinin bir örneğini oluşturun. Bu durumda [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] , içerik,/clikullanılarak `WPFPage` C++ayrı bir sınıf olarak uygulanır. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Ayrıca[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]içeriğini de uygulayabilirsiniz. Ancak bunu yapmak için ayrı bir proje ayarlamanız ve [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içeriği bir dll olarak oluşturmanız gerekir. Projenize bu DLL 'ye bir başvuru ekleyebilir ve bu başvuruyu [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içerik örneği oluşturmak için kullanabilirsiniz.
+ Daha sonra [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içerik nesnesinin bir örneğini oluşturun. Bu durumda, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içeriği, `WPFPage`/Clikullanarak C++ayrı bir sınıf olarak uygulanır. Ayrıca, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)][!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içeriğini de uygulayabilirsiniz. Ancak bunu yapmak için, ayrı bir proje ayarlamanız ve [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içeriğini DLL olarak oluşturmanız gerekir. Projenize bu DLL 'ye bir başvuru ekleyebilir ve bu başvuruyu, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içeriğin bir örneğini oluşturmak için kullanabilirsiniz.
 
- İçeriğine bir başvuru [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] atayarak<xref:System.Windows.Interop.HwndSource.RootVisual%2A> ,<xref:System.Windows.Interop.HwndSource>içeriği alt pencerenizde görüntüleyin.
+ <xref:System.Windows.Interop.HwndSource><xref:System.Windows.Interop.HwndSource.RootVisual%2A> özelliğine [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içeriğine bir başvuru atayarak alt pencerenizde [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içeriği görüntülenir.
 
- Sonraki kod satırı, `WPFButtonClicked` [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içerik `OnButtonClicked` olayına bir olay işleyicisi ekler. Bu işleyici Kullanıcı **Tamam** veya **iptal** düğmesine tıkladığında çağrılır. Bu olay işleyicisi hakkında daha fazla bilgi için bkz. [communicating_with_the_WPF Content](#communicating_with_the_page) .
+ Sonraki kod satırı, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içerik `OnButtonClicked` olayına bir olay işleyicisi `WPFButtonClicked`ekler. Bu işleyici Kullanıcı **Tamam** veya **iptal** düğmesine tıkladığında çağrılır. Bu olay işleyicisi hakkında daha fazla bilgi için bkz. [communicating_with_the_WPF Content](#communicating_with_the_page) .
 
- Gösterilen kodun son satırı, <xref:System.Windows.Interop.HwndSource> nesnesiyle ilişkili pencere tanıtıcısını (hwnd) döndürür. Bu tanıtıcıyı kodınızdan [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] , barındırılan pencereye ileti göndermek için kullanabilirsiniz, ancak örnek bunu yapmaz. <xref:System.Windows.Interop.HwndSource> Nesnesi bir iletiyi her aldığında bir olay oluşturur. İletileri işlemek için, bir ileti işleyicisi <xref:System.Windows.Interop.HwndSource.AddHook%2A> iliştirmek ve sonra bu işleyicide iletileri işlemek üzere yöntemini çağırın.
+ Gösterilen kodun son satırı, <xref:System.Windows.Interop.HwndSource> nesnesiyle ilişkili pencere tanıtıcısını (HWND) döndürür. Bu tanıtıcıyı, [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] kodınızdan, örnek bunu yapmaz ancak barındırılan pencereye ileti göndermek için kullanabilirsiniz. <xref:System.Windows.Interop.HwndSource> nesnesi her ileti aldığında bir olay oluşturur. İletileri işlemek için, bir ileti işleyicisi iliştirmek ve sonra bu işleyicide iletileri işlemek üzere <xref:System.Windows.Interop.HwndSource.AddHook%2A> yöntemini çağırın.
 
 <a name="holding_a_reference"></a>
 ### <a name="holding-a-reference-to-the-wpf-content"></a>WPF Içeriğine başvuru tutma
- Birçok uygulama için, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içerikle daha sonra iletişim kurmak isteyeceksiniz. Örneğin, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içerik özelliklerini değiştirmek veya belki de <xref:System.Windows.Interop.HwndSource> nesne farklı [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içerik barındırmak isteyebilirsiniz. Bunu yapmak için, <xref:System.Windows.Interop.HwndSource> nesne [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] veya içeriğe bir başvuru gerekir. Nesne ve ilişkili [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içeriği, pencere tanıtıcısını yok edinceye kadar bellekte kalır. <xref:System.Windows.Interop.HwndSource> Ancak, <xref:System.Windows.Interop.HwndSource> nesnesine atadığınız değişken, pencere yordamından döndükten hemen sonra kapsam dışına çıkar. [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] Uygulamalarda bu sorunu işlemenin normal yöntemi, statik veya genel bir değişken kullanmaktır. Ne yazık ki, bu tür değişkenlere yönetilen bir nesne atayamazsınız. <xref:System.Windows.Interop.HwndSource> Nesneyle ilişkili pencere tanıtıcısını genel veya statik bir değişkene atayabilir, ancak bu, söz konusu tikan nesnenin kendisi için erişim sağlamaz.
+ Birçok uygulama için [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içeriğiyle daha sonra iletişim kurmak isteyeceksiniz. Örneğin, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içerik özelliklerini değiştirmek veya belki de <xref:System.Windows.Interop.HwndSource> nesnesi [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içeriği farklı bir şekilde barındırmak isteyebilirsiniz. Bunu yapmak için <xref:System.Windows.Interop.HwndSource> nesnesine veya [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içeriğine yönelik bir başvuruya ihtiyacınız vardır. <xref:System.Windows.Interop.HwndSource> nesnesi ve onunla ilişkili [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içeriği pencere tanıtıcısını yok edinceye kadar bellekte kalır. Ancak, <xref:System.Windows.Interop.HwndSource> nesnesine atadığınız değişken, pencere yordamından döndükten hemen sonra kapsam dışına çıkar. [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] uygulamalarda bu sorunu işlemenin normal yöntemi, statik veya genel bir değişken kullanmaktır. Ne yazık ki, bu tür değişkenlere yönetilen bir nesne atayamazsınız. <xref:System.Windows.Interop.HwndSource> nesnesi ile ilişkili pencere tanıtıcısını genel veya statik bir değişkene atayabilirsiniz, ancak bu, söz konusu tikan nesnenin kendisi için erişim sağlamaz.
 
- Bu soruna en basit çözüm, erişmeniz gereken herhangi bir yönetilen nesne için başvuruları tutmak üzere statik alanlar kümesi içeren bir yönetilen sınıf uygulamaktır. Örnek, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içerik başvurusunu `WPFPageHost` tutmak için sınıfını ve daha sonra Kullanıcı tarafından değiştirilebilecek bir dizi özelliğin başlangıç değerlerini kullanır. Bu, üst bilgide tanımlanmıştır.
+ Bu soruna en basit çözüm, erişmeniz gereken herhangi bir yönetilen nesne için başvuruları tutmak üzere statik alanlar kümesi içeren bir yönetilen sınıf uygulamaktır. Örnek, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içeriğine bir başvuru tutmak için `WPFPageHost` sınıfını ve daha sonra Kullanıcı tarafından değiştirilebilecek bir dizi özelliğin başlangıç değerlerini kullanır. Bu, üst bilgide tanımlanmıştır.
 
  [!code-cpp[Win32HostingWPFPage#WPFPageHost](~/samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/Win32HostingWPFPage.h#wpfpagehost)]
 
- `GetHwnd` İşlevin ikinci bölümü, daha sonra kullanılmak üzere bu alanlara değerler atar, ancak `myPage` hala kapsamdadır.
+ `GetHwnd` işlevinin ikinci bölümü, `myPage` hala kapsam içinde olduğu sürece daha sonra kullanılmak üzere bu alanlara değerler atar.
 
 <a name="communicating_with_the_page"></a>
 ### <a name="communicating-with-the-wpf-content"></a>WPF Içeriğiyle iletişim kurma
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] İçerikle iki tür iletişim vardır. Kullanıcı **Tamam** veya **iptal** düğmelerine tıkladığında [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulama içerikten bilgi alır. Uygulamanın arka plan rengi veya [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] varsayılan yazı tipi boyutu gibi çeşitli [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içerik özelliklerini değiştirmesine izin veren bir de vardır.
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içeriğine sahip iki tür iletişim vardır. Uygulama, Kullanıcı **Tamam** veya **iptal** düğmesine tıkladığında [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içerikten bilgileri alır. Uygulamanın arka plan rengi veya varsayılan yazı tipi boyutu gibi çeşitli [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içerik özelliklerini değiştirmesine izin veren bir [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] de vardır.
 
- Yukarıda belirtildiği gibi, Kullanıcı herhangi bir düğmeye [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] tıkladığında içerik bir `OnButtonClicked` olay oluşturur. Uygulama bu bildirimleri almak için bu olaya bir işleyici ekler. **Tamam** düğmesine tıklandığı işleyici, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içerikten Kullanıcı bilgilerini alır ve Statik denetimler kümesi içinde görüntüler.
+ Yukarıda belirtildiği gibi, Kullanıcı her iki düğmeye tıkladığında [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içerik `OnButtonClicked` bir olay oluşturur. Uygulama bu bildirimleri almak için bu olaya bir işleyici ekler. **Tamam** düğmesine tıklandığı işleyici, kullanıcı bilgilerini [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içeriğinden alır ve Statik denetimler kümesi içinde görüntüler.
 
  [!code-cpp[Win32HostingWPFPage#WPFButtonClicked](~/samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/Win32HostingWPFPage.cpp#wpfbuttonclicked)]
 
- İşleyici, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] `MyPageEventArgs`içerikten özel bir olay bağımsız değişkeni nesnesi alır. Nesnenin `IsOK` özelliği **Tamam** düğmesine tıklandıysa `true` ve `false` **iptal** düğmesi tıklandıysa olarak ayarlanır.
+ İşleyici, `MyPageEventArgs`[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içerikten özel bir olay bağımsız değişkeni nesnesi alır. Nesnenin `IsOK` özelliği **Tamam** düğmesine Tıklandıysa ve **iptal** düğmesine tıklandıysa `false` `true` olarak ayarlanır.
 
- **Tamam** düğmesine tıklandığı işleyici kapsayıcı sınıfından [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içeriğe bir başvuru alır. Daha sonra, ilişkili [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içerik özellikleri tarafından tutulan Kullanıcı bilgilerini toplar ve ana pencerede bilgileri göstermek için statik denetimleri kullanır. İçerik verileri yönetilen bir dize biçiminde olduğundan, bir [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] denetim tarafından kullanılmak üzere sıralanmalıdır. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] **İptal** düğmesine tıklandığında, işleyici verileri statik denetimlerden temizler.
+ **Tamam** düğmesine tıklandığı işleyici, kapsayıcı sınıfından [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içeriğine bir başvuru alır. Daha sonra, ilişkili [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içerik özellikleri tarafından tutulan Kullanıcı bilgilerini toplar ve ana pencerede bilgileri göstermek için statik denetimleri kullanır. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içerik verileri yönetilen bir dize biçiminde olduğundan, bir [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] denetimi tarafından kullanılmak üzere sıralanmalıdır. **İptal** düğmesine tıklandığında, işleyici verileri statik denetimlerden temizler.
 
- Uygulama [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] , kullanıcının [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içeriğin arka plan rengini ve yazı tipiyle ilgili birkaç özelliği değiştirmesine izin veren radyo düğmeleri kümesi sağlar. Aşağıdaki örnek, uygulamanın pencere yordamından (WndProc) ve arka plan rengi dahil farklı iletilerde çeşitli özellikleri ayarlayan ileti işlemenin bir alıntısıdır. Diğerleri benzerdir ve gösterilmemiştir. Ayrıntılar ve bağlam için tüm örneğe bakın.
+ Uygulama [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], kullanıcının [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içeriğin arka plan rengini ve yazı tipiyle ilgili birkaç özelliği değiştirmesine izin veren radyo düğmeleri kümesi sağlar. Aşağıdaki örnek, uygulamanın pencere yordamından (WndProc) ve arka plan rengi dahil farklı iletilerde çeşitli özellikleri ayarlayan ileti işlemenin bir alıntısıdır. Diğerleri benzerdir ve gösterilmemiştir. Ayrıntılar ve bağlam için tüm örneğe bakın.
 
  [!code-cpp[Win32HostingWPFPage#WMCommandToBG](~/samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/Win32HostingWPFPage.cpp#wmcommandtobg)]
 
- Arka plan rengini ayarlamak için, ( [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] `hostedPage`) `WPFPageHost` içeriğine bir başvuru alın ve arka plan rengi özelliğini uygun renge ayarlayın. Örnek üç renk seçeneği kullanır: orijinal renk, açık yeşil veya hafif Salmon. Özgün arka plan rengi, `WPFPageHost` sınıfında statik bir alan olarak depolanır. Diğerini ayarlamak için yeni <xref:System.Windows.Media.SolidColorBrush> bir nesne oluşturur ve oluşturucuyu <xref:System.Windows.Media.Colors> nesnesinden statik renkler değeri geçirin.
+ Arka plan rengini ayarlamak için `WPFPageHost` [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içeriğine (`hostedPage`) bir başvuru alın ve arka plan rengi özelliğini uygun renge ayarlayın. Örnek üç renk seçeneği kullanır: orijinal renk, açık yeşil veya hafif Salmon. Özgün arka plan rengi, `WPFPageHost` sınıfında statik bir alan olarak depolanır. Diğerini ayarlamak için yeni bir <xref:System.Windows.Media.SolidColorBrush> nesnesi oluşturur ve oluşturucuyu <xref:System.Windows.Media.Colors> nesnesinden statik renkler değeri geçirin.
 
 <a name="implementing_the_wpf_page"></a>
 ## <a name="implementing-the-wpf-page"></a>WPF sayfasını uygulama
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] İçeriği gerçek uygulamayla ilgili herhangi bir bilgi olmadan barındırabilirsiniz ve kullanabilirsiniz. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] İçerik ayrı bir dll 'de paketlenmişse, herhangi bir ortak dil çalışma zamanı (CLR) dilinde oluşturulmuş olabilir. Örnekte kullanılan C++/CLI uygulamasına ilişkin kısa bir anlatım aşağıda verilmiştir. Bu bölüm aşağıdaki alt bölümleri içerir.
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içeriğini, gerçek uygulamayla ilgili herhangi bir bilgi olmadan barındırabilirsiniz ve kullanabilirsiniz. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içerik ayrı bir DLL 'de paketlenmişse, herhangi bir ortak dil çalışma zamanı (CLR) dilinde oluşturulmuş olabilir. Örnekte kullanılan C++/CLI uygulamasına ilişkin kısa bir anlatım aşağıda verilmiştir. Bu bölüm aşağıdaki alt bölümleri içerir.
 
 - [Düzen](#page_layout)
 
@@ -176,19 +176,19 @@ ms.locfileid: "70929185"
 
 <a name="page_layout"></a>
 ### <a name="layout"></a>Düzen
- İçerikteki öğeler, ilişkili<xref:System.Windows.Controls.Label> denetimlerle birlikte beş <xref:System.Windows.Controls.TextBox> denetimden oluşur: [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Ad, adres, şehir, eyalet ve posta. Ayrıca, **Tamam** ve <xref:System.Windows.Controls.Button> **iptal et** olmak üzere iki denetim vardır
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içeriğindeki [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] öğeleri, ilişkili <xref:System.Windows.Controls.Label> denetimleriyle birlikte beş <xref:System.Windows.Controls.TextBox> denetimden oluşur: ad, adres, şehir, eyalet ve zip. Ayrıca iki <xref:System.Windows.Controls.Button> denetimi mevcuttur, **Tamam** ve **iptal et**
 
- İçerik, `WPFPage` sınıfında uygulanır. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Düzen bir <xref:System.Windows.Controls.Grid> düzen öğesiyle işlenir. Sınıfı öğesinden <xref:System.Windows.Controls.Grid>devralır, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bu, içerik kök öğesi etkin bir şekilde oluşturur.
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içerik `WPFPage` sınıfında uygulanır. Düzen bir <xref:System.Windows.Controls.Grid> düzeni öğesiyle işlenir. Sınıfı <xref:System.Windows.Controls.Grid>devralır, bu, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içerik kök öğesi etkin hale getirir.
 
- İçerik Oluşturucu gerekli genişliği ve yüksekliği alır ve <xref:System.Windows.Controls.Grid> uygun şekilde boyutları. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Daha sonra temel düzeni tanımlar <xref:System.Windows.Controls.ColumnDefinition> ve <xref:System.Windows.Controls.RowDefinition> nesneler kümesi oluşturup nesneleri sırasıyla <xref:System.Windows.Controls.Grid> nesne tabanına <xref:System.Windows.Controls.Grid.ColumnDefinitions%2A> ve <xref:System.Windows.Controls.Grid.RowDefinitions%2A> koleksiyonlara ekler. Bu, hücrelerin içeriğine göre belirlenen boyutları içeren beş satırlık ve yedi sütundan oluşan bir kılavuz tanımlar.
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içerik Oluşturucu gereken genişlik ve yüksekliği alır ve <xref:System.Windows.Controls.Grid> uygun şekilde boyutlandırır. Daha sonra, <xref:System.Windows.Controls.ColumnDefinition> ve <xref:System.Windows.Controls.RowDefinition> nesneleri kümesi oluşturup bunları sırasıyla <xref:System.Windows.Controls.Grid> nesne taban <xref:System.Windows.Controls.Grid.ColumnDefinitions%2A> ve <xref:System.Windows.Controls.Grid.RowDefinitions%2A> koleksiyonlara ekleyerek temel düzeni tanımlar. Bu, hücrelerin içeriğine göre belirlenen boyutları içeren beş satırlık ve yedi sütundan oluşan bir kılavuz tanımlar.
 
  [!code-cpp[Win32HostingWPFPage#WPFPageCtorToGridDef](~/samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/WPFPage.cpp#wpfpagectortogriddef)]
 
- Sonra, Oluşturucu [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] öğelerini <xref:System.Windows.Controls.Grid>öğesine ekler. İlk öğe, kılavuzun ilk satırına ortalanmış bir <xref:System.Windows.Controls.Label> denetim olan başlık metindir.
+ Sonra, Oluşturucu [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] öğelerini <xref:System.Windows.Controls.Grid>ekler. İlk öğe, kılavuzun ilk satırına ortalanmış <xref:System.Windows.Controls.Label> bir denetim olan başlık metindir.
 
  [!code-cpp[Win32HostingWPFPage#WPFPageCtorTitle](~/samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/WPFPage.cpp#wpfpagectortitle)]
 
- Sonraki satır, ad <xref:System.Windows.Controls.Label> denetimini ve ilişkili <xref:System.Windows.Controls.TextBox> denetimini içerir. Her etiket/metin kutusu çifti için aynı kod kullanıldığından, bir dizi özel yönteme yerleştirilir ve beş etiket/metin kutusu çifti için kullanılır. Yöntemler uygun denetimi oluşturur ve denetimleri uygun hücreye yerleştirmek için <xref:System.Windows.Controls.Grid> static <xref:System.Windows.Controls.Grid.SetColumn%2A> ve <xref:System.Windows.Controls.Grid.SetRow%2A> Methods sınıfını çağırır. Denetim oluşturulduktan sonra örnek, denetimi kılavuza eklemek <xref:System.Windows.Controls.UIElementCollection.Add%2A> <xref:System.Windows.Controls.Grid> için öğesinin <xref:System.Windows.Controls.Panel.Children%2A> özelliği üzerinde yöntemini çağırır. Kalan etiketi/TextBox çiftlerini eklemek için kod benzerdir. Ayrıntılar için örnek koda bakın.
+ Sonraki satır, ad <xref:System.Windows.Controls.Label> denetimini ve ilişkili <xref:System.Windows.Controls.TextBox> denetimini içerir. Her etiket/metin kutusu çifti için aynı kod kullanıldığından, bir dizi özel yönteme yerleştirilir ve beş etiket/metin kutusu çifti için kullanılır. Yöntemler uygun denetimi oluşturur ve <xref:System.Windows.Controls.Grid> sınıfı statik <xref:System.Windows.Controls.Grid.SetColumn%2A> ve <xref:System.Windows.Controls.Grid.SetRow%2A> yöntemlerini çağırıp denetimleri uygun hücreye yerleştirir. Denetim oluşturulduktan sonra örnek, denetimi kılavuza eklemek için <xref:System.Windows.Controls.Grid> <xref:System.Windows.Controls.Panel.Children%2A> özelliğindeki <xref:System.Windows.Controls.UIElementCollection.Add%2A> yöntemini çağırır. Kalan etiketi/TextBox çiftlerini eklemek için kod benzerdir. Ayrıntılar için örnek koda bakın.
 
  [!code-cpp[Win32HostingWPFPage#WPFPageCtorName](~/samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/WPFPage.cpp#wpfpagectorname)]
 
@@ -202,19 +202,19 @@ ms.locfileid: "70929185"
 
 <a name="returning_data_to_window"></a>
 ### <a name="returning-the-data-to-the-host-window"></a>Veriler konak penceresine döndürülüyor
- Düğmeye tıklandığında, <xref:System.Windows.Controls.Primitives.ButtonBase.Click> olayı tetiklenir. Ana bilgisayar penceresi yalnızca bu olaylara işleyicileri iliştirebilir ve doğrudan <xref:System.Windows.Controls.TextBox> denetimlerden verileri alabilir. Örnek biraz daha az bir doğrudan yaklaşım kullanır. İçeriği içinde işler <xref:System.Windows.Controls.Primitives.ButtonBase.Click> ve sonra [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içeriğe bildirimde bulunan özel bir olay `OnButtonClicked`oluşturur. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Bu, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içeriğin konağa bildirmeden önce bazı parametre doğrulaması yapmasına olanak sağlar. İşleyici, <xref:System.Windows.Controls.TextBox> denetimlerden metni alır ve ana bilgisayarın bilgileri alabileceği ortak özelliklere atar.
+ Her iki düğmeye tıklandığında <xref:System.Windows.Controls.Primitives.ButtonBase.Click> olayı tetiklenir. Konak penceresi yalnızca işleyicileri bu olaylara ekleyebilir ve doğrudan <xref:System.Windows.Controls.TextBox> denetimlerinden verileri alabilir. Örnek biraz daha az bir doğrudan yaklaşım kullanır. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içerik içindeki <xref:System.Windows.Controls.Primitives.ButtonBase.Click> işler ve sonra [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içeriğine bildirimde bulunan özel bir olay `OnButtonClicked`oluşturur. Bu, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içeriğinin konağa bildirmeden önce bazı parametre doğrulaması yapmasına olanak sağlar. İşleyici, <xref:System.Windows.Controls.TextBox> denetimlerinden metni alır ve bunu konağın bilgileri alabileceği ortak özelliklere atar.
 
  , WPFPage. h içindeki olay bildirimi:
 
  [!code-cpp[Win32HostingWPFPage#WPFPageEventDecl](~/samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/WPFPage.h#wpfpageeventdecl)]
 
- WPFPage. cpp içindeki olayişleyicisi:<xref:System.Windows.Controls.Primitives.ButtonBase.Click>
+ WPFPage. cpp içinde <xref:System.Windows.Controls.Primitives.ButtonBase.Click> olay işleyicisi:
 
  [!code-cpp[Win32HostingWPFPage#WPFPageButtonClicked](~/samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/WPFPage.cpp#wpfpagebuttonclicked)]
 
 <a name="set_page_properties"></a>
 ### <a name="setting-the-wpf-properties"></a>WPF özelliklerini ayarlama
- Ana bilgisayar, kullanıcının çeşitli [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içerik özelliklerini değiştirmesine izin verir. [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] Taraftan, özelliklerin değiştirilmesinin bir önemi vardır. Tüm denetimlerin yazı tiplerini [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] denetleyen tek bir genel özellik olmadığından, içerik sınıfındaki uygulama biraz daha karmaşıktır. Bunun yerine, her denetim için uygun özellik, Properties ' set erişimcileri içinde değiştirilir. Aşağıdaki örnek, `DefaultFontFamily` özelliği için kodu gösterir. Özelliği ayarlamak, çeşitli denetimlerin <xref:System.Windows.Controls.Control.FontFamily%2A> özelliklerini ayarlayan özel bir yöntemi çağırır.
+ [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] ana bilgisayarı, kullanıcının çeşitli [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içerik özelliklerini değiştirmesine olanak tanır. [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] taraftan, özellikleri değiştirmenin bir önemi vardır. Tüm denetimlerin yazı tiplerini denetleyen tek bir genel özellik olmadığından, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içerik sınıfındaki uygulama biraz daha karmaşıktır. Bunun yerine, her denetim için uygun özellik, Properties ' set erişimcileri içinde değiştirilir. Aşağıdaki örnek `DefaultFontFamily` özelliği için kodu gösterir. Özelliği ayarlamak, çeşitli denetimlerin <xref:System.Windows.Controls.Control.FontFamily%2A> özelliklerini ayarlayan özel bir yöntemi çağırır.
 
  WPFPage. h öğesinden:
 

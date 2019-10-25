@@ -2,12 +2,12 @@
 title: Boş değer atanabilir başvuru türleri
 description: Bu makalede, 8,0 ' C# ye eklenen null yapılabilir başvuru türlerine genel bir bakış sunulmaktadır. Yeni ve mevcut projeler için özelliği, null başvuru özel durumlarına karşı nasıl güvenlik sağladığını öğreneceksiniz.
 ms.date: 02/19/2019
-ms.openlocfilehash: a108c73064b40171a58df0796d4a0b75eddebbff
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 2c2148b3ae50ce6c00e523390ea02686d9106b8b
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72319063"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72846754"
 ---
 # <a name="nullable-reference-types"></a>Boş değer atanabilir başvuru türleri
 
@@ -25,7 +25,7 @@ Bu yeni özellik, tasarım amacını değişken bildiriminden belirlenemediği �
 - **Başvuru null**olabilir. Bir başvuru türü null olarak başlatıldığında veya daha sonra null değeri atandığında hiçbir uyarı verilmez.
 - **Başvurunun null olmadığı varsayılır**. Başvuru türleri başvurulduğunu derleyici hiçbir uyarı vermez. (Null olabilen başvurular sayesinde, null olabilen bir değişkene başvuru yaptığınızda Derleyici uyarıları yayınlar).
 
-Null yapılabilir başvuru türleri eklenmesiyle, amacınızı daha net bir şekilde bildirebilirsiniz. @No__t-0 değeri, bir değişkenin bir değere başvurmadığından emin olmanın doğru yoludur. Bu özelliği, tüm `null` değerlerini kodınızdan kaldırmak için kullanmayın. Bunun yerine, amacınızı derleyiciye ve kodunuzu okuyan diğer geliştiricilere bildirmeniz gerekir. Amacınızı bildirerek, derleyici bu amaca tutarsız bir kod yazdığınızda size bildirir.
+Null yapılabilir başvuru türleri eklenmesiyle, amacınızı daha net bir şekilde bildirebilirsiniz. `null` değeri, bir değişkenin bir değere başvurmadığından emin olmanın doğru yoludur. Bu özelliği, tüm `null` değerlerini kodınızdan kaldırmak için kullanmayın. Bunun yerine, amacınızı derleyiciye ve kodunuzu okuyan diğer geliştiricilere bildirmeniz gerekir. Amacınızı bildirerek, derleyici bu amaca tutarsız bir kod yazdığınızda size bildirir.
 
 Null **yapılabilir bir başvuru türü** , [null yapılabilir değer türleriyle](programming-guide/nullable-types/index.md)aynı söz dizimi kullanılarak belirtilmiştir: değişkenin türüne bir `?` eklenir. Örneğin, aşağıdaki değişken bildirimi null olabilen bir dize değişkenini temsil eder, `name`:
 
@@ -33,7 +33,7 @@ Null **yapılabilir bir başvuru türü** , [null yapılabilir değer türleriyl
 string? name;
 ```
 
-@No__t-0 ' ın eklenmemiş olduğu herhangi bir değişken, **null olamayan bir başvuru türüdür**. Bu özellik, bu özelliği etkinleştirdiğinizde var olan koddaki tüm başvuru türü değişkenlerini içerir.
+`?` tür adına eklenmemiş olan herhangi bir değişken **null yapılamayan bir başvuru türüdür**. Bu özellik, bu özelliği etkinleştirdiğinizde var olan koddaki tüm başvuru türü değişkenlerini içerir.
 
 Derleyici, null olabilen bir başvurunun boş olmayan olarak bilinmesinin bilinmediğini anlamak için statik analizi kullanır. Null olduğunda, null olabilen bir başvuruya başvuru yaptığınızda derleyici sizi uyarır. Bir değişken adından sonra, `!` [null-forverme işlecini](language-reference/operators/null-forgiving.md) kullanarak bu davranışı geçersiz kılabilirsiniz. Örneğin, `name` değişkeni null olmadığını, ancak derleyici bir uyarı verir, derleyicinin analizini geçersiz kılmak için aşağıdaki kodu yazabilirsiniz:
 
@@ -46,7 +46,7 @@ name!.Length;
 Herhangi bir başvuru türü, uyarıların ne zaman oluşturulacağını açıklayan dört adet *null*değer içerebilir:
 
 - Null *atanabilir olmayan*: null bu türdeki değişkenlere atanamaz. Bu tür değişkenlerin, başvuru yapılmadan önce null olarak işaretli olması gerekmez.
-- *Nullable*: null, bu türdeki değişkenlere atanabilir. @No__t-0 ' i denetlemeden bu tür değişkenlerin başvurusunun kaldırılması bir uyarıya neden olur.
+- *Nullable*: null, bu türdeki değişkenlere atanabilir. Bu türdeki değişkenlerin başvurusunun kaldırılması, önce `null` denetlenmeksizin bir uyarıya neden olur.
 - *Zorunluluvou*: bu,C# 8,0 öncesi durumundadır. Bu tür değişkenlere başvuru yapılmadan başvuru yapılabilir veya atanabilir.
 - *Bilinmiyor*: Bu, genellikle kısıtlamaların, türün *null yapılabilir* veya *null değer*atanabilir olması gerektiğini bildirmeyecek tür parametreleri içindir.
 
@@ -63,7 +63,7 @@ Null yapılabilir bağlamlar, derleyicinin başvuru türü değişkenlerini nas�
 - `warnings`: Nullable ek açıklama bağlamı **devre dışı**. Null yapılabilir uyarı bağlamı **etkin**.
   - Bir başvuru türü değişkenleri, zorunluluvou. Tüm null değer alabilirlik uyarıları etkin.
 - `annotations`: null yapılabilir ek açıklama bağlamı **etkindir**. Null yapılabilir uyarı bağlamı **devre dışı**.
-  - Bir başvuru türü değişkenleri, zorunluluvou. Tüm null değer alabilirlik uyarıları devre dışı bırakıldı.
+  - Bir başvuru türü değişkenleri, örneğin dizesi null değer atanamaz. Tüm null değer alabilirlik uyarıları devre dışı bırakıldı.
 - `disable`: Nullable ek açıklama bağlamı **devre dışı**. Null yapılabilir uyarı bağlamı **devre dışı**.
   - Başvuru türündeki değişkenler, daha önceki sürümlerinde olduğu gibi, zorunluluvou 'lardır C#. Tüm null değer alabilirlik uyarıları devre dışı bırakıldı.
 
