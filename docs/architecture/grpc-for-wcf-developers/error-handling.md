@@ -1,20 +1,18 @@
 ---
 title: WCF geliştiricileri için gRPC hata işleme
-description: YAZILACAK
+description: YAZıLACAK
 author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 3535a00aad49f532eb5f5f778116454a12bfd639
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 2ef1a0b38d9b63af7244c6e0428c9adbcb1d6527
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71184458"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72846666"
 ---
 # <a name="error-handling"></a>Hata işleme
 
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
-
-WCF, `FaultException<T>` SOAP `FaultContract` hata standardını destekleme dahil, ayrıntılı hata bilgileri sağlamak için ve kullanır.
+WCF, SOAP hata standardını destekleme dahil, ayrıntılı hata bilgileri sağlamak için `FaultException<T>` ve `FaultContract` kullanır.
 
 Ne yazık ki, gRPC 'nin geçerli sürümünde WCF 'de bulunan gelişmiş algoritmaların mümkündür yok ve yalnızca basit durum kodlarına ve meta verilere göre sınırlı yerleşik hata işleme sahip. Aşağıdaki tabloda, en sık kullanılan durum kodlarına yönelik hızlı bir kılavuz verilmiştir:
 
@@ -30,7 +28,7 @@ Ne yazık ki, gRPC 'nin geçerli sürümünde WCF 'de bulunan gelişmiş algorit
 
 ## <a name="raising-errors-in-aspnet-core-grpc"></a>ASP.NET Core gRPC 'de hataları oluşturma
 
-ASP.NET Core GRPC hizmeti, istemci tarafından aynı işlemle yapılmış gibi yakalanarak `RpcException`bir hata yanıtı gönderebilir. Bir durum kodu ve açıklaması içermesi ve isteğe bağlı olarak meta verileri ve daha uzun bir özel durum iletisi içermesi gerekir.`RpcException` Meta veriler, nesnelerin WCF hataları için ek verileri nasıl `FaultContract` taşıyabiliriz benzer şekilde destekleyici verileri göndermek için kullanılabilir.
+ASP.NET Core gRPC hizmeti, aynı işlem içinde olduğu gibi istemci tarafından yakalanarak bir `RpcException`oluşturarak hata yanıtı gönderebilir. `RpcException` bir durum kodu ve açıklaması içermeli ve isteğe bağlı olarak meta verileri ve daha uzun bir özel durum iletisi içerebilir. Meta veriler, `FaultContract` nesnelerinin WCF hataları için ek verileri nasıl taşıyabiliriz benzer şekilde destekleyici verileri göndermek için kullanılabilir.
 
 ```csharp
 public async Task<GetPortfolioResponse> GetPortfolio(GetPortfolioRequest request, ServerCallContext context)
@@ -49,7 +47,7 @@ public async Task<GetPortfolioResponse> GetPortfolio(GetPortfolioRequest request
 
 ## <a name="catching-errors-in-grpc-clients"></a>GRPC istemcilerinde yakalama hataları
 
-WCF istemcilerinin hataları yakalayabileceğini <xref:System.ServiceModel.FaultException%601> tıpkı bir GRPC istemcisi hataları işlemek için bir `RpcException` yakalayabilirler. Genel bir tür `catch` C# olmadığından farklı bloklar halinde farklı hata türlerini yakalayamaz, ancak farklı durum kodları için aşağıdakiler gösterildiği gibi ayrı blokları bildirmek üzere özel durum filtreleri özelliği kullanabilirsiniz `RpcException` örneğinde
+WCF istemcilerinin <xref:System.ServiceModel.FaultException%601> hataları yakalayabileceğini tıpkı, bir gRPC istemcisi hataları işlemek için bir `RpcException` yakalayabilir. `RpcException` genel bir tür olmadığından farklı bloklerdeki farklı hata türlerini yakalayamaz, ancak aşağıdaki örnekte gösterildiği gibi farklı durum C#kodları için ayrı`catch`blokları bildirmek üzere *özel durum filtreleri* özelliğini kullanabilirsiniz:
 
 ```csharp
 try

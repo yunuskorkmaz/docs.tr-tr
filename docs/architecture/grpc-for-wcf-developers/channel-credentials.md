@@ -3,16 +3,14 @@ title: Kanal kimlik bilgileri-WCF geliştiricileri için gRPC
 description: ASP.NET Core 3,0 ' de gRPC kanal kimlik bilgilerini uygulama ve kullanma.
 author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 61305ee47a2c09a0b2a0fd866beb9b7c102ffeaa
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 61141dc4143f36f9ac511c3369c3fde668c9d703
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71184584"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72846707"
 ---
 # <a name="channel-credentials"></a>Kanal kimlik bilgileri
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Adından da anlaşılacağı gibi kanal kimlik bilgileri, temeldeki gRPC kanalına eklenir. Kanal kimlik bilgileri standart biçimi istemci sertifikası kimlik doğrulamasını kullanır, burada istemci, bağlantı kurulurken bir TLS sertifikası sağlar ve herhangi bir çağrının yapılmasına izin vermeden önce sunucu tarafından doğrulanır.
 
@@ -28,7 +26,7 @@ Sertifika kimlik doğrulamasını hem ana bilgisayar düzeyinde (örneğin, Kest
 
 ### <a name="configuring-certificate-validation-on-kestrel"></a>Kestrel 'de sertifika doğrulamasını yapılandırma
 
-Kestrel (ASP.NET Core HTTP sunucusu) bir istemci sertifikası gerektirecek şekilde yapılandırabilir ve isteğe bağlı olarak, gelen bağlantıları kabul etmeden önce sağlanan sertifikanın bazı doğrulanmasını gerçekleştirebilir. Bu yapılandırma, içindeki `CreateWebHostBuilder` `Startup`yerine, `Program` sınıfının yönteminde yapılır.
+Kestrel (ASP.NET Core HTTP sunucusu) bir istemci sertifikası gerektirecek şekilde yapılandırabilir ve isteğe bağlı olarak, gelen bağlantıları kabul etmeden önce sağlanan sertifikanın bazı doğrulanmasını gerçekleştirebilir. Bu yapılandırma, `Startup`yerine `Program` sınıfının `CreateWebHostBuilder` yönteminde yapılır.
 
 ```csharp
 public static IHostBuilder CreateHostBuilder(string[] args) =>
@@ -51,13 +49,13 @@ public static IHostBuilder CreateHostBuilder(string[] args) =>
 
 ```
 
-Ayar `ClientCertificateMode.RequireCertificate` , Kestrel istemci sertifikası sağlamayan tüm bağlantı isteklerini hemen reddetmesine neden olur, ancak sertifika doğrulanmaz. Geri çağırma eklemek, Kestrel 'in istemci sertifikasını (Bu durumda sunucu sertifikasıyla aynı *sertifika yetkilisi* tarafından verildiğini güvence altına almak), bağlantının oluşturulduğu noktada, ASP.NET Core `ClientCertificateValidation` işlem hattı bağlı.
+`ClientCertificateMode.RequireCertificate` ayar, Kestrel istemci sertifikası sağlamayan tüm bağlantı isteklerini hemen reddetmesine neden olur, ancak sertifika doğrulanmaz. `ClientCertificateValidation` geri çağrısının eklenmesi, Kestrel işlem hattından önce istemcinin istemci sertifikasını (Bu durumda sunucu sertifikasıyla aynı *sertifika yetkilisi* tarafından verildiğini doğrulayarak) doğrulamasına olanak sağlar ASP.NET Core. bağlı.
 
 ### <a name="adding-aspnet-core-certificate-authentication"></a>ASP.NET Core sertifikası kimlik doğrulaması ekleme
 
 Sertifika kimlik doğrulaması [Microsoft. AspNetCore. Authentication. Certificate](https://www.nuget.org/packages/Microsoft.AspNetCore.Authentication.Certificate) NuGet paketi tarafından sağlanır.
 
-`ConfigureServices` Yöntemine sertifika kimlik doğrulama hizmetini ekleyin ve `Configure` yöntemdeki ASP.NET Core işlem hattına kimlik doğrulaması ve yetkilendirme ekleyin.
+`ConfigureServices` yöntemine sertifika kimlik doğrulama hizmetini ekleyin ve `Configure` yönteminde ASP.NET Core işlem hattına kimlik doğrulaması ve yetkilendirme ekleyin.
 
 ```csharp
 public class Startup
@@ -98,7 +96,7 @@ public class Startup
 
 ## <a name="providing-channel-credentials-in-the-client-application"></a>İstemci uygulamasında kanal kimlik bilgilerini sağlama
 
-Paketiyle, sertifikalar, bağlantı için `GrpcChannel` kullanılan bir <xref:System.Net.Http.HttpClient> örnek üzerinde yapılandırılır. `Grpc.Net.Client`
+`Grpc.Net.Client` paketiyle, sertifikalar, bağlantı için kullanılan `GrpcChannel` için sağlanmış bir <xref:System.Net.Http.HttpClient> örneğinde yapılandırılır.
 
 ```csharp
 class Program
@@ -129,7 +127,7 @@ class Program
 
 Kestrel sunucusuna sertifika değişiklikleri uygulayarak ve ASP.NET Core içindeki JWT taşıyıcı ara yazılımını kullanarak sunucunuzu hem sertifika hem de belirteç kimlik doğrulamasını kullanacak şekilde yapılandırabilirsiniz.
 
-İstemcide hem channelcredentials hem de callcredentials sağlamak için, çağrı kimlik bilgilerini `ChannelCredentials.Create` uygulamak için yöntemini kullanın. Sertifika kimlik doğrulamasının hala <xref:System.Net.Http.HttpClient> örnek kullanılarak uygulanması gerekir: `SslCredentials` oluşturucuya herhangi bir bağımsız değişken geçirirseniz, iç istemci kodu bir özel durum oluşturur. Parametresi, paketiyleuyumluluğu`Grpc.Core` sürdürmek için yalnızca `Grpc.Net.Client` paketin `Create` yöntemine dahil edilmiştir. `SslCredentials`
+İstemcide hem ChannelCredentials hem de CallCredentials sağlamak için, çağrı kimlik bilgilerini uygulamak üzere `ChannelCredentials.Create` metodunu kullanın. Sertifika kimlik doğrulamasının hala <xref:System.Net.Http.HttpClient> örneği kullanılarak uygulanması gerekir: `SslCredentials` oluşturucusuna herhangi bir bağımsız değişken geçirirseniz, iç istemci kodu bir özel durum oluşturur. `SslCredentials` parametresi, `Grpc.Core` paketiyle uyumluluğu sürdürmek için yalnızca `Grpc.Net.Client` paketinin `Create` yöntemine dahil edilmiştir.
 
 ```csharp
 var handler = new HttpClientHandler();
@@ -154,7 +152,7 @@ var grpc = new Portfolios.PortfoliosClient(channel);
 ```
 
 > [!TIP]
-> Belirteç kimlik bilgilerini kanalda `ChannelCredentials.Create` yapılan her çağrıya geçirmek için kullanışlı bir yol olarak sertifika kimlik doğrulaması olmadan bir istemci için yöntemini kullanabilirsiniz.
+> Kanalda yapılan her çağrıya belirteç kimlik bilgilerini geçirmek için kullanışlı bir yol olarak sertifika kimlik doğrulaması olmadan istemci için `ChannelCredentials.Create` yöntemini kullanabilirsiniz.
 
 [FullStockTicker örnek gRPC uygulamasının sertifika kimlik doğrulaması eklenmiş](https://github.com/dotnet-architecture/grpc-for-wcf-developers/tree/master/FullStockTickerSample/grpc/FullStockTickerAuth/FullStockTicker) bir sürümü GitHub üzerinde.
 

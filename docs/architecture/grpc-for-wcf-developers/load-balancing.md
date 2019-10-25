@@ -3,16 +3,14 @@ title: WCF geliştiricileri için Yük Dengeleme gRPC-gRPC
 description: GRPC hizmetleriyle çalışmak için bir yük dengeleyici seçme.
 author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 5d4a9be9b8f4e511a72af6b68d8a005604fd984d
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 18965b9c4765ac693c6ba36ad3ea9848ce858a5c
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71184395"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72846620"
 ---
 # <a name="load-balancing-grpc"></a>GRPC yük dengelemesi
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Bir gRPC uygulamasının tipik bir dağıtımı, hizmetin bir dizi özdeş örneğini içerir, bu da esnekliği ve yatay ölçeklenebilirlik sağlar. Tüm kullanılabilir kaynakların tam kullanımını sağlamak için bu örneklerde dağıtılmış gelen istek yükünü dengeleyin. Bu yük dengelemeyi istemcide görünmez hale getirmek için, istemcilerden gelen istekleri işlemek ve arka uç örneklerine yönlendirmek için bir proxy yük dengeleyici sunucusu kullanılması yaygındır.
 

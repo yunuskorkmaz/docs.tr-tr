@@ -3,16 +3,14 @@ title: Prototipsiz iletiler-WCF geliştiricileri için gRPC
 description: Daha fazla bilgi için bkz. IDL ve içinde C#oluşturulan prototip.
 author: markrendle
 ms.date: 09/09/2019
-ms.openlocfilehash: 1fdbedaadb33ac3eb99ca360018beb36ac7a8d78
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 9943478698acfbb54b3e1dd0e6a856d11b9266c3
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72771627"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72846337"
 ---
 # <a name="protobuf-messages"></a>Protobuf iletileri
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Bu bölümde, `.proto` dosyalarında prototip iletilerinin nasıl bildirildiği, alan numaralarının ve türlerin temel kavramları açıklanmaktadır ve `protoc` derleyicisi tarafından oluşturulan C# koda bakar. Bölümün geri kalanı, farklı veri türlerinin prototipte nasıl temsil edildiği konusunda daha ayrıntılı bilgi sağlayacaktır.
 
@@ -38,7 +36,7 @@ namespace TraderSys
 }
 ```
 
-Protoarabelleğe denk sınıfı uygulamak için, `.proto` dosyasında bildirilmelidir. @No__t_0 derleyici daha sonra yapı sürecinin bir parçası olarak .NET sınıfını oluşturur.
+Protoarabelleğe denk sınıfı uygulamak için, `.proto` dosyasında bildirilmelidir. `protoc` derleyici daha sonra yapı sürecinin bir parçası olarak .NET sınıfını oluşturur.
 
 ```protobuf
 syntax "proto3";
@@ -57,9 +55,9 @@ message Stock {
 
 İlk satır, kullanılmakta olan sözdizimi sürümünü bildirir. Dilin sürüm 3 2016 ' de yayımlanmıştır ve gRPC Hizmetleri için önerilen sürümdür.
 
-@No__t_0 satırı, oluşturulan C# türler için kullanılacak ad alanını belirtir. @No__t_0 dosyası diğer diller için derlendiğinde Bu seçenek yok sayılır. Prototip dosyalarının birkaç dilde dile özgü seçenekleri içermesi yaygındır.
+`option csharp_namespace` satırı, oluşturulan C# türler için kullanılacak ad alanını belirtir. `.proto` dosyası diğer diller için derlendiğinde Bu seçenek yok sayılır. Prototip dosyalarının birkaç dilde dile özgü seçenekleri içermesi yaygındır.
 
-@No__t_0 ileti tanımı, her biri türü, adı ve alan numarası olan dört alanı belirtir.
+`Stock` ileti tanımı, her biri türü, adı ve alan numarası olan dört alanı belirtir.
 
 ## <a name="field-numbers"></a>Alan numaraları
 

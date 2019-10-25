@@ -3,12 +3,12 @@ title: Bulutta Yerel'i tanımlama
 description: Bulutta yerel sistemler için yatak odası sağlayan temel sütunlar hakkında bilgi edinin
 author: robvet
 ms.date: 08/20/2019
-ms.openlocfilehash: c99a99ec2cd7a8c4263ae3321d5a836bc40da087
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: aec199aee52a4ab3202c3ec0ceb769fecd168cfe
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72315939"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72846736"
 ---
 # <a name="defining-cloud-native"></a>Cloud Native 'i tanımlama
 
@@ -95,7 +95,7 @@ Kitapta, [on Iki öğeli uygulamanın ötesinde](https://content.pivotal.io/blo
 
 |    |  Yeni faktör | Açıklama  |
 | :-------- | :-------- | :-------- |
-| 13 | Önce API | Her şeyi bir hizmet yapın. Kodunuzun bir ön uç istemci tarafından tüketildiğini varsayın. ağ geçidi veya başka bir hizmet. |
+| 13 | Önce API | Her şeyi bir hizmet yapın. Kodunuzun bir ön uç istemci, ağ geçidi veya başka bir hizmet tarafından tüketildiğini varsayalım. |
 | 14 | Telemetri | Bir iş istasyonunda, uygulamanız ve davranışı hakkında ayrıntılı görünürlük vardır. Bulutta yok. Tasarımınızın izleme, etki alanına özgü ve sağlık/sistem verileri koleksiyonunu içerdiğinden emin olun. |
 | 15 | Kimlik doğrulama/yetkilendirme  | Baştan itibaren kimlik uygulayın. Genel bulutlarda bulunan [RBAC (rol tabanlı erişim denetimi)](https://docs.microsoft.com/azure/role-based-access-control/overview) özelliklerini göz önünde bulundurun.  |
 

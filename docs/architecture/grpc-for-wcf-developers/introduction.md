@@ -3,16 +3,14 @@ title: WCF geliştiricileri için giriş-gRPC
 description: Giriş
 author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 2782f28e8a99fa7c0bde69f757d14e96e91f5cd4
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 9eb12d5060ddf4f345ebe095738c98238c6caab7
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71184423"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72846633"
 ---
 # <a name="introduction"></a>Giriş
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Makinelerin birbirleriyle iletişim kurmasına yardımcı olmak, dijital Age 'in birincil ön mesleklerden biridir. Özellikle, geçerli altyapının birlikte çalışabilirlik taleplerini karşılayacak olan en iyi uzaktan iletişim mekanizmasını tespit etmek için devam eden bir çaba vardır. Imagine de olduğu gibi, bu mekanizma talep veya altyapı geliştikçe değişir.
 

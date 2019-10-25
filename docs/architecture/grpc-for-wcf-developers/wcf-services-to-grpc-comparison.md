@@ -3,16 +3,14 @@ title: WCF geliştiricileri için WCF 'yi gRPC-gRPC ile karşılaştırma
 description: Dağıtılmış uygulamalar oluşturmak için WCF ve gRPC çerçeveleri karşılaştırması.
 author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: c763048d09e7ed5ca0a3d5240f6b3cf5262f897c
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 5ab1380d4ded52abff08c35c430adf2f3ed7c58b
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71184045"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72846065"
 ---
 # <a name="comparing-wcf-to-grpc"></a>WCF 'yi gRPC ile karşılaştırma
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Önceki bölümde, prototipte iyi bir bakış ve gRPC 'nin iletileri işleme biçimi verilmelidir. WCF 'den gRPC 'ye yönelik ayrıntılı bir dönüştürme aracılığıyla çalışmadan önce, WCF 'de Şu anda kullanılabilir olan özellik aralığının gRPC 'de nasıl işlendiğini ve gRPC eşdeğeri olmadığı durumlarda kullanabileceğiniz geçici çözümleri öğrenmek önemlidir. Özellikle, bu bölümde aşağıdaki konular ele alınacaktır:
 
@@ -21,11 +19,11 @@ ms.locfileid: "71184045"
 - RPC türleri
 - Meta Veriler
 - Hata işleme
-- WS-\* protokoller
+- WS-\* protokolleri
 
 ## <a name="grpc-example"></a>gRPC örneği
 
-Visual Studio 2019 ' den veya komut satırından yeni bir ASP.NET Core 3,0 gRPC projesi oluşturduğunuzda, "Merhaba Dünya" gRPC eşdeğeri sizin için oluşturulur. Hizmeti ve iletilerini tanımlayan `greeter.proto` bir dosya ve hizmet uygulamasını içeren bir `GreeterService.cs` dosya içerir.
+Visual Studio 2019 ' den veya komut satırından yeni bir ASP.NET Core 3,0 gRPC projesi oluşturduğunuzda, "Merhaba Dünya" gRPC eşdeğeri sizin için oluşturulur. Hizmeti ve iletilerini tanımlayan bir `greeter.proto` dosyasından ve hizmetin uygulanmasıyla bir `GreeterService.cs` dosyası oluşur.
 
 ```protobuf
 syntax = "proto3";

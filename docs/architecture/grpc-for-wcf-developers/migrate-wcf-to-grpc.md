@@ -3,16 +3,14 @@ title: WCF geliştiricileri için bir WCF çözümünü gRPC-gRPC 'ye geçirme
 description: Farklı türlerde WCF hizmetini gRPC 'de eşdeğerine geçirme.
 author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 77bcb1412803b371778943763308c3010ed35aac
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 65c30b777d9981cb3291b846f698f2a69b4498fc
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72770110"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72846597"
 ---
 # <a name="migrate-a-wcf-solution-to-grpc"></a>WCF çözümünü gRPC'ye geçirme
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Bu bölümde, ASP.NET Core 3,0 gRPC projeleriyle nasıl çalışılacağı ve farklı türlerde WCF hizmetinin gRPC eşdeğerine geçirilmesi gösterilmektedir:
 

@@ -3,16 +3,14 @@ title: GRPC uygulamalarında güvenlik-WCF geliştiricileri için gRPC
 description: GRPC 'de çağrı ve kanal kimlik doğrulamasına ve yetkilendirmeye genel bakış.
 author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 5f3d32817ccb5d9f278d256c0ee135f0e2a17cf2
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: d0b7ff5bef755c5eeb9b3c419dcda1cb75ac4031
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71184143"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72846237"
 ---
-# <a name="security-in-grpc-applications"></a>GRPC uygulamalarında güvenlik
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
+# <a name="security-in-grpc-applications"></a>gRPC uygulamalarında güvenlik
 
 Herhangi bir gerçek Dünya senaryosunda, uygulamaların ve hizmetlerin güvenliğini sağlamak önemlidir. Güvenlik üç temel alanı ele alır: ağ trafiğini, kötü aktörler tarafından kesilmesini engelleyecek şekilde şifreleme; kimlik ve güven sağlamak için istemcilerin ve sunucuların kimliğini doğrulama; ve istemcilere erişimi denetlemek ve kimlik tabanlı izinleri uygulamak için istemcileri yetkilendirin.
 
@@ -23,7 +21,7 @@ Bu bölümde, ASP.NET Core için gRPC 'de kimlik doğrulama ve yetkilendirme ola
 
 ## <a name="wcf-authentication-and-authorization"></a>WCF kimlik doğrulaması ve yetkilendirme
 
-WCF 'de, kimlik doğrulama ve yetkilendirme, kullanılan aktarımlara ve bağlamalara bağlı olarak farklı şekillerde işlenmekte. WCF, çeşitli WS-\* Security standartları ve IIS veya Windows sistemleri arasında NetTcp hizmetlerinde çalışan http Hizmetleri için Windows kimlik doğrulaması 'nı destekliyordu.
+WCF 'de, kimlik doğrulama ve yetkilendirme, kullanılan aktarımlara ve bağlamalara bağlı olarak farklı şekillerde işlenmekte. WCF, çeşitli WS-\* güvenlik standartları ve IIS veya Windows sistemleri arasında NetTCP hizmetlerinde çalışan HTTP Hizmetleri için Windows kimlik doğrulaması 'nı destekliyordu.
 
 ## <a name="grpc-authentication-and-authorization"></a>gRPC kimlik doğrulaması ve yetkilendirme
 

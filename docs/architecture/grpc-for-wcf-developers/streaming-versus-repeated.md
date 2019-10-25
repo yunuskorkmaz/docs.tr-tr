@@ -3,28 +3,26 @@ title: gRPC akış Hizmetleri ve yinelenen alanlar-WCF geliştiricileri için gR
 description: GRPC ile veri koleksiyonlarını geçirme yöntemi olarak yinelenen alanları akış Hizmetleri ile karşılaştırma.
 author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 7dc3c8f5bf2efc304da7d50661ba47db500e67a0
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: e48fe4882139e029dbf5b52451a2e68cb4316677
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71184073"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72846081"
 ---
 # <a name="grpc-streaming-services-versus-repeated-fields"></a>gRPC akış Hizmetleri ve yinelenen alanlara karşı
 
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
-
-gRPC Hizmetleri, veri kümelerini veya nesne listelerini döndürmenin iki yolunu sağlar. Protokol arabellekleri ileti belirtimi, başka bir `repeated` iletideki ileti türlerini veya ileti dizilerini bildirmek için anahtar sözcüğünü kullanır. GRPC hizmeti belirtimi, birden fazla `stream` iletinin gönderildiği ve tek tek işlenebileceği uzun süre çalışan kalıcı bir bağlantı bildirmek için anahtar sözcüğünü kullanır. `stream` Özelliği, bildirimler veya günlük iletileri gibi uzun süre çalışan zamana bağlı veriler için de kullanılabilir, ancak bu bölüm, tek bir veri kümesi döndürmek için kullanımını göz önünde bulunduracaktır.
+gRPC Hizmetleri, veri kümelerini veya nesne listelerini döndürmenin iki yolunu sağlar. Protokol arabellekleri ileti belirtimi, başka bir iletideki ileti türlerini veya ileti dizilerini bildirmek için `repeated` anahtar sözcüğünü kullanır. GRPC hizmeti belirtimi, birden fazla iletinin gönderildiği ve tek tek işlenebileceği uzun süre çalışan kalıcı bir bağlantı bildirmek için `stream` anahtar sözcüğünü kullanır. `stream` özelliği, bildirimler veya günlük iletileri gibi uzun süre çalışan zamana bağlı veriler için de kullanılabilir, ancak bu bölüm, tek bir veri kümesi döndürmek için kullanımını göz önünde bulunduracaktır.
 
 Kullanmanız gereken, veri kümesinin genel boyutu, istemci veya sunucu ucunda veri kümesini oluşturmak için geçen süre ve veri kümesinin tüketicisi ilk öğe kullanılabilir duruma geldiğinde bu işlemi yapmaya başlayıp başlamadığı gibi çeşitli faktörlere bağlıdır. ya da tüm yararlı bir işlem yapmak için veri kümesinin tamamını gerektirir.
 
-## <a name="when-to-use-repeated-fields"></a>Alanlar ne zaman `repeated` kullanılır?
+## <a name="when-to-use-repeated-fields"></a>`repeated` alanları ne zaman kullanılır?
 
-Boyut açısından kısıtlanmış olan ve kısa bir süre içinde tek bir şekilde oluşturulabilecek tüm veri kümeleri için — bir saniye altında, normal bir prototipte ileti içinde bir `repeated` alan kullanmanız gerekir. Örneğin, bir e-ticaret sisteminde, bir sipariş içindeki öğelerin listesini oluşturmak büyük olasılıkla hızlıdır ve liste çok büyük olmaz. Bir `repeated` alan içeren tek bir iletinin döndürülmesi, ' ın kullanılmasından daha hızlı bir şekilde bir `stream` sıralama düzeni ve daha az ağ yükü doğurur.
+Boyut açısından kısıtlanmış olan ve kısa bir süre içinde tek bir şekilde oluşturulabilecek tüm veri kümeleri için — bir saniyenin altında, normal bir prototipleme iletisinde `repeated` alanı kullanmanız gerekir. Örneğin, bir e-ticaret sisteminde, bir sipariş içindeki öğelerin listesini oluşturmak büyük olasılıkla hızlıdır ve liste çok büyük olmaz. `repeated` alanla tek bir ileti döndürülmesi, `stream` kullanmaktan daha hızlı bir sıralama düzeni ve daha az ağ yükü doğurur.
 
-İstemci, işleme başlamadan önce tüm verilere ihtiyaç duyuyorsa ve veri kümesi bellekte oluşturmaya yetecek kadar küçükse, sunucudaki bellekte veri kümesinin gerçek oluşturulması daha yavaş olsa `repeated` bile bir alan kullanmayı düşünün.
+İstemci, işleme başlamadan önce tüm verilere ihtiyaç duyuyorsa ve veri kümesi bellekte oluşturmaya yetecek kadar küçükse, sunucudaki bellekte veri kümesinin gerçek oluşturma işlemi daha yavaş olsa bile bir `repeated` alanı kullanmayı düşünün.
 
-## <a name="when-to-use-stream-methods"></a>Yöntemler ne zaman `stream` kullanılır?
+## <a name="when-to-use-stream-methods"></a>`stream` yöntemlerinin ne zaman kullanılacağı
 
 İleti nesnelerinin potansiyel olarak çok büyük olduğu veri kümeleri, akış istekleri veya yanıtları kullanılarak en iyi şekilde aktarılır. Bellekte büyük bir nesne oluşturmak, ağa yazmak ve sonra kaynakları boşaltmak daha etkilidir. Bu yaklaşım, hizmetinizin ölçeklenebilirliğini geliştirir.
 

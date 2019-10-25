@@ -3,18 +3,16 @@ title: Prototip için ayrılmış alanlar-WCF geliştiricileri için gRPC
 description: Sürümler arası uyumluluk için ayrılmış alanlar hakkında bilgi edinin.
 author: markrendle
 ms.date: 09/09/2019
-ms.openlocfilehash: d4d40ca12d41ec37e0baebf10de9d0690e4297cc
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 34697371299bdc5d9a58c0696c1ce7d19816ca87
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71184178"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72846324"
 ---
-# <a name="protobuf-reserved-fields"></a>Protoarabelleğe ayrılan alanlar
+# <a name="protobuf-reserved-fields"></a>Protobuf ayrılmış alanları
 
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
-
-Prototipin geri uyumluluk garantisi, her zaman aynı veri öğesini temsil eden alan numaralarına dayanır. Bir alan, hizmetin yeni bir sürümündeki iletiden kaldırılırsa, bu alan numarası asla yeniden kullanılmamalıdır. Bu, `reserved` anahtar sözcüğü kullanılarak zorlanabilir. `displayName` Ve`marketId`alanlarıdaha önce tanımlanan iletidenkaldırılmışsa,alannumaralarınınaşağıdakiörnekteolduğugibiayrılmasıgerekir.`Stock`
+Prototipin geri uyumluluk garantisi, her zaman aynı veri öğesini temsil eden alan numaralarına dayanır. Bir alan, hizmetin yeni bir sürümündeki iletiden kaldırılırsa, bu alan numarası asla yeniden kullanılmamalıdır. Bu, `reserved` anahtar sözcüğü kullanılarak zorlanabilir. `displayName` ve `marketId` alanlar daha önce tanımlanan `Stock` iletiden kaldırılmışsa, alan numaralarının aşağıdaki örnekte olduğu gibi ayrılması gerekir.
 
 ```protobuf
 syntax "proto3";
@@ -28,7 +26,7 @@ message Stock {
 }
 ```
 
-Anahtar `reserved` sözcüğü, gelecekte eklenebilen alanlar için bir yer tutucu olarak da kullanılabilir. Bitişik alan numaraları `to` anahtar sözcüğünü kullanarak bir Aralık olarak ifade edilebilir.
+`reserved` anahtar sözcüğü, gelecekte eklenebilen alanlar için yer tutucu olarak da kullanılabilir. Ardışık alan numaraları `to` anahtar sözcüğünü kullanarak bir Aralık olarak ifade edilebilir.
 
 ```protobuf
 syntax "proto3";

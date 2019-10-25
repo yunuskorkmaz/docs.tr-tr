@@ -3,16 +3,14 @@ title: WCF geliştiricileri için GRPC neden önerilir
 description: GRPC 'nin neden modern mimarilere ve platformlara geçiş yapmak isteyen WCF geliştiricileri için iyi bir uyum olduğuna ilişkin bir tartışma.
 author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 7e80936eb36bbba92958c349b5f1c0cb389d6b8d
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: f96e9a059dc9f12a13c9eb5bb7184ee75d602458
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71184038"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72846076"
 ---
-# <a name="why-grpc-is-recommended-for-wcf-developers"></a>WCF geliştiricileri için neden gRPC önerilir?
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
+# <a name="why-grpc-is-recommended-for-wcf-developers"></a>WCF geliştiricilerine neden gRPC önerilir?
 
 GRPC 'nin diline ve tekniklerine ek olarak, gRPC 'nin .NET Core 'a geçiş yapmak isteyen WCF geliştiricilerine yönelik doğru çözüm olmasının yanı sıra, kullanılabilir alternatifler vardır.
 

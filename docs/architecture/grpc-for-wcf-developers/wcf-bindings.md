@@ -3,16 +3,14 @@ title: WCF bağlamaları ve aktarımları-WCF geliştiricileri için gRPC
 description: Farklı WCF bağlamalarının ve aktarımların gRPC ile nasıl karşılaştırılacağını öğrenin.
 author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: f1866fe379dd307ede8128b43cf8f70c8b4caf69
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 34321395ddd7059ac7e3c268e313a03251662911
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72771605"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72846050"
 ---
 # <a name="wcf-bindings-and-transports"></a>WCF bağlamaları ve aktarımları
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 WCF, farklı ağ protokolleri, hat biçimleri ve diğer uygulama ayrıntılarını belirten birçok farklı yerleşik *bağlamaları* vardır. gRPC, tek bir ağ protokolüne ve tek bir hat biçimine sahiptir (Teknik olarak Tel biçimlendirme özelleştirilebilir ancak bu kitabın kapsamına göre daha fazla *olabilir* ). GRPC 'nin çoğu durumda en iyi çözümü sunduğunu keşfedersiniz. Aşağıda, en ilgili WCF bağlamaları ve gRPC 'deki eşdeğer değerleriyle nasıl Karşılaştırıldığı hakkında kısa bir tartışma verilmiştir.
 
@@ -34,7 +32,7 @@ MSMQ, özel bir Windows ileti kuyruğu. WCF 'nin MSMQ 'ya bağlanması, gelecekt
 
 ## <a name="webhttpbinding"></a>WebHttpBinding
 
-@No__t_0 ve `WebInvoke` öznitelikleriyle birlikte, WebHttpBinding (WCF ReST olarak da bilinir), bu, bundan daha az ortak olduğu zaman, JSON 'ı tek seferde konuşabilme API 'Leri geliştirmenize olanak sağlar. Bu nedenle, WCF REST ile oluşturulmuş bir yenilenmiş API 'niz varsa, gRPC 'ye dönüştürmek yerine eşdeğer işlevselliği sağlayacak şekilde onu düzenli bir ASP.NET Core MVC web API uygulamasına geçirmeyi düşünün.
+`WebGet` ve `WebInvoke` öznitelikleriyle birlikte, WebHttpBinding (WCF ReST olarak da bilinir), bu, bundan daha az ortak olduğu zaman, JSON 'ı tek seferde konuşabilme API 'Leri geliştirmenize olanak sağlar. Bu nedenle, WCF REST ile oluşturulmuş bir yenilenmiş API 'niz varsa, gRPC 'ye dönüştürmek yerine eşdeğer işlevselliği sağlayacak şekilde onu düzenli bir ASP.NET Core MVC web API uygulamasına geçirmeyi düşünün.
 
 >[!div class="step-by-step"]
 >[Önceki](wcf-endpoints-grpc-methods.md)

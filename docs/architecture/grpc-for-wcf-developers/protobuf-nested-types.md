@@ -3,16 +3,14 @@ title: Prototipsiz iç içe türler-WCF geliştiricileri için gRPC
 description: Prototip ve gRPC 'de iç içe geçmiş ileti türleri hakkında bilgi edinin ve bunların içinde C#nasıl oluşturulduğunu öğrenin.
 author: markrendle
 ms.date: 09/09/2019
-ms.openlocfilehash: 39bc52b37cc9e57cfe0ed5a5118c348de5f014d8
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: ec9fc522619230c1201bfef1e8128f7356936212
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71184192"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72846312"
 ---
-# <a name="protobuf-nested-types"></a>Prototipsiz iç içe türler
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
+# <a name="protobuf-nested-types"></a>Protobuf iç içe türleri
 
 Benzer C# şekilde, diğer sınıfların içindeki sınıfları bildirmenize olanak tanır, protoarabellek ileti tanımlarını diğer iletiler içinde iç içe almanıza olanak sağlar. Aşağıdaki örnek, iç içe geçmiş ileti türlerinin nasıl oluşturulacağını gösterir:
 
@@ -25,7 +23,7 @@ message Outer {
 }
 ```
 
-Oluşturulan C# kodda, `Inner` tür `HelloRequest` sınıf içinde iç içe statik `Types` bir sınıfta bildirilecektir:
+Oluşturulan C# kodda,`Inner`türü`HelloRequest`sınıfı içindeki iç içe statik`Types`sınıfında bildirilecektir:
 
 ```csharp
 var inner = new Outer.Types.Inner { Text = "Hello" };

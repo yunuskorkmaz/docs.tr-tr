@@ -3,24 +3,22 @@ title: Değişken türleri için bir veya daha fazla alan için alanların proto
 description: İletilerle Ilgili değişken nesne türlerini temsil etmek için any türlerini ve oneof anahtar sözcüğünü nasıl kullanacağınızı öğrenin.
 author: markrendle
 ms.date: 09/09/2019
-ms.openlocfilehash: 9e730e96bfdb25ef6e07ee10967921408c6f2e84
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 10f55288eb4a6aa603228da5b4850317d6bde614
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71184283"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72846387"
 ---
 # <a name="protobuf-any-and-oneof-fields-for-variant-types"></a>Değişken türleri için bir veya daha fazla alanın prototipini oluşturma
 
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
+WCF 'de dinamik özellik türlerini (`object`türündeki Özellikler) işlemek karmaşıktır. Serileştiriciler belirtilmelidir, [KnownType](xref:System.Runtime.Serialization.KnownTypeAttribute) öznitelikleri sağlanmalı ve bu şekilde devam etmelidir.
 
-WCF 'de dinamik özellik türlerini (türündeki `object`Özellikler) işlemek karmaşıktır. Serileştiriciler belirtilmelidir, [KnownType](xref:System.Runtime.Serialization.KnownTypeAttribute) öznitelikleri sağlanmalı ve bu şekilde devam etmelidir.
+Prototip, birden fazla türden olabilecek değerlerle ilgilenmede iki basit seçenek sağlar. `Any` türü bilinen Prototipsiz ileti türlerini temsil edebilir, ancak `oneof` anahtar sözcüğü belirli bir ileti içinde yalnızca bir alan aralığı ayarlayabilmesinin izin verdiği.
 
-Prototip, birden fazla türden olabilecek değerlerle ilgilenmede iki basit seçenek sağlar. Tür bilinen prototipsiz ileti türlerini temsil edebilir, `oneof` ancak anahtar sözcüğü belirli bir ileti içinde bir alan aralığının yalnızca bir tane ayarlanabilir olmasını belirtmenize izin verir. `Any`
+## <a name="any"></a>Kaydedilmemiş
 
-## <a name="any"></a>Any
-
-`Any`, prototipteki "iyi bilinen türlerden" biridir: desteklenen tüm dillerdeki uygulamalarla birlikte yararlı ve yeniden kullanılabilir ileti türleri koleksiyonu. `Any` Türü kullanmak için `google/protobuf/any.proto` tanımı içeri aktarmanız gerekir.
+`Any`, prototipteki "iyi bilinen türlerden" biridir: desteklenen tüm dillerdeki uygulamalarla birlikte yararlı ve yeniden kullanılabilir ileti türleri koleksiyonu. `Any` türünü kullanmak için `google/protobuf/any.proto` tanımını içeri aktarmanız gerekir.
 
 ```protobuf
 syntax "proto3"
@@ -41,7 +39,7 @@ message ChangeNotification {
 }
 ```
 
-C# Kodunda, `Any` sınıfı alanı ayarlamaya, iletiyi ayıklamanıza ve türü denetlemeye yönelik yöntemler sağlar.
+C# Kodda,`Any`sınıfı alanı ayarlamaya, iletiyi ayıklamanıza ve türü denetlemeye yönelik yöntemler sağlar.
 
 ```csharp
 public void FormatChangeNotification(ChangeNotification change)
@@ -61,11 +59,11 @@ public void FormatChangeNotification(ChangeNotification change)
 }
 ```
 
-Oluşturulan her türdeki `Any` statikalan,alantürleriniçözmekiçinprotoarabelleğiiçyansıma`Descriptor` kodu tarafından kullanılır. Aynı zamanda bir `TryUnpack<T>` yöntemi de vardır, ancak bu, başarısız olduğunda `T` bile başlatılmamış bir örneğini oluşturur, bu sayede `Is` yöntemi yukarıda gösterildiği gibi kullanmak daha iyidir.
+Oluşturulan her türdeki `Descriptor` statik alanı, `Any` alanı türlerini çözümlemek için prototipte iç yansıma kodu tarafından kullanılır. Ayrıca bir `TryUnpack<T>` yöntemi vardır ancak bu, başarısız olsa bile başlatılmamış bir `T` örneğini oluşturur, bu nedenle `Is` yönteminin yukarıda gösterildiği gibi kullanılması daha iyidir.
 
 ## <a name="oneof"></a>Oneof
 
-Oneof alanları bir dil özelliğidir: `oneof` anahtar sözcüğü, ileti sınıfını oluşturduğunda derleyici tarafından işlenir. İletiyi belirtmek için kullanmak `oneof` şöyle görünebilir: `ChangeNotification`
+Oneof alanları bir dil özelliğidir: `oneof` anahtar sözcüğü, ileti sınıfını oluşturduğunda derleyici tarafından işlenir. `ChangeNotification` iletisini belirtmek için `oneof` kullanmak şöyle görünebilir:
 
 ```protobuf
 message Stock {
@@ -85,9 +83,9 @@ message ChangeNotification {
 }
 ```
 
-`oneof` Küme içindeki alanlar, genel ileti bildiriminde benzersiz alan numaralarına sahip olmalıdır.
+`oneof` kümesi içindeki alanlar, genel ileti bildiriminde benzersiz alan numaralarına sahip olmalıdır.
 
-Kullandığınızda `oneof`, oluşturulan C# kod, alanların hangisinin ayarlandığını belirten bir sabit listesi içerir. Hangi alanın ayarlandığını bulmak için sabit listesini test edebilirsiniz. Ayarlı olmayan alanlar, özel `null` durum oluşturmak yerine varsayılan değer döndürür.
+`oneof`kullandığınızda, oluşturulan C# kod, alanların hangisinin ayarlandığını belirten bir sabit listesi içerir. Hangi alanın ayarlandığını bulmak için sabit listesini test edebilirsiniz. Ayarlı olmayan alanlar, bir özel durum oluşturmak yerine `null` veya varsayılan değer döndürür.
 
 ```csharp
 public void FormatChangeNotification(ChangeNotification change)
@@ -108,7 +106,7 @@ public void FormatChangeNotification(ChangeNotification change)
 }
 ```
 
-Bir `oneof` kümesinin parçası olan herhangi bir alanın ayarlanması, belirlenen diğer alanları otomatik olarak temizler. `repeated` İle`oneof`kullanamazsınız. Bunun yerine, bu sınırlamaya geçici bir çözüm için yinelenen alan veya `oneof` küme ile iç içe geçmiş bir ileti oluşturabilirsiniz.
+Bir `oneof` kümesinin parçası olan herhangi bir alanı ayarlamak, küme içindeki diğer alanları otomatik olarak temizler. `oneof``repeated` kullanamazsınız. Bunun yerine, bu sınırlamaya geçici bir çözüm olarak, yinelenen alanla veya `oneof` ayarlanmış olarak iç içe geçmiş bir ileti oluşturabilirsiniz.
 
 >[!div class="step-by-step"]
 >[Önceki](protobuf-reserved.md)

@@ -3,22 +3,20 @@ title: WCF geliştiricileri için şifreleme ve ağ güvenliği-gRPC
 description: GRPC 'de ağ güvenliğine ve şifrelemeye ilişkin bazı notlar
 author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 8a115b59337003669b4e5436edffe239489ca79e
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 67ee1ffaf00ea0cc6b771ede9f49b6a691af0968
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71184465"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72846673"
 ---
 # <a name="encryption-and-network-security"></a>Şifreleme ve ağ güvenliği
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 WCF 'nin ağ güvenlik modeli, tek tek iletileri şifrelemek için WS-Security belirtimini kullanarak HTTPS veya TLS üzerinden TLS veya ileti düzeyinde güvenlik kullanarak aktarım düzeyi güvenlik dahil olmak üzere kapsamlı ve karmaşıktır.
 
 gRPC, normal TLS sertifikaları kullanılarak güvenliği sağlanabilen, temel alınan HTTP/2 protokolüne güvenli ağ bırakır.
 
-Web tarayıcıları, HTTP/2 için TLS bağlantılarını, ancak dahil olmak üzere çoğu programlı istemciyi insist. `HttpClient`Net, şifrelenmemiş bağlantılar üzerinden HTTP/2 kullanabilir. `HttpClient`Varsayılan olarak *şifreleme gerektirir,* ancak bunu <xref:System.AppContext> anahtar kullanarak geçersiz kılabilirsiniz.
+Web tarayıcıları, HTTP/2 için TLS bağlantılarını, ancak dahil olmak üzere çoğu programlı istemciyi insist. NET `HttpClient`, şifrelenmemiş bağlantılar üzerinden HTTP/2 kullanabilir. `HttpClient` *varsayılan* olarak şifreleme gerektirir, ancak bunu bir <xref:System.AppContext> anahtarı kullanarak geçersiz kılabilirsiniz.
 
 ```csharp
 AppContext.SetSwitch("System.Net.Http.SocketsHttpHandler.Http2UnencryptedSupport", true);

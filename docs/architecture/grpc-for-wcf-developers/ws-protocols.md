@@ -3,24 +3,22 @@ title: WS-* Protocols-WCF geliştiricileri için gRPC
 description: WCF tarafından desteklenen WS-* protokollerini ve gRPC ile kullanılabilen alternatifleri gözden geçirme
 author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: cd9af401fc46297fc0c67f5b3e5d6b34177d6a87
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 4e7b80df182fb69cc51e14738e59ad87efaf5dd2
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71184031"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72846036"
 ---
-# <a name="ws--protocols"></a>WS-\* protokoller
+# <a name="ws--protocols"></a>WS-\* protokolleri
 
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
-
-Windows Communication Foundation (WCF) ile çalışmanın gerçek avantajlarından biri, var olan _WS-\*_  standart protokollerin çoğunu destekliyordu. Bu bölüm, GRPC 'nin aynı WS-\* Protocols ' i nasıl yönettiğini kısaca kapsar ve alternatif olmadığında hangi seçeneklerin kullanılabildiğini tartışır.
+Windows Communication Foundation (WCF) ile çalışmanın gerçek avantajlarından biri, var olan _WS-\*_ standart protokollerinin çoğunu destekliyordu. Bu bölüm, gRPC 'nin aynı WS-\* protokollerini nasıl yönettiğini kısaca kapsar ve alternatif olmadığında hangi seçeneklerin kullanılabilir olduğunu tartışır.
 
 ## <a name="metadata-exchange---ws-policy-ws-discovery-and-so-on"></a>Meta veri değişimi-WS-Policy, WS-Discovery, vb.
 
 SOAP Hizmetleri, veri biçimleri, işlemler veya iletişim seçenekleri gibi bilgilerle Web Hizmetleri Açıklama Dili (WSDL) şema belgelerini kullanıma sunar. Bu şema, istemci kodunu oluşturmak için kullanılabilir.
 
-GRPC, sunucular ve istemciler aynı `.proto` dosyalardan oluşturulduğunda en iyi şekilde çalışır, ancak sunucu yansıması isteğe bağlı uzantısı, çalışan bir sunucudan dinamik bilgileri açığa çıkarmak için bir yol sağlar. Daha fazla bilgi için bkz. [GRPC. Reflection](https://nuget.org/packages/Grpc.Reflection) NuGet paketi ve [GRPC C# sunucusu yansıma](https://github.com/grpc/grpc/blob/master/doc/csharp/server_reflection.md) makalesi.
+gRPC, sunucular ve istemciler aynı `.proto` dosyalarından oluşturulduğunda en iyi şekilde çalışır, ancak sunucu yansıması isteğe bağlı uzantısı, çalışan bir sunucudan dinamik bilgileri açığa çıkarmak için bir yol sağlar. Daha fazla bilgi için bkz. [GRPC. Reflection](https://nuget.org/packages/Grpc.Reflection) NuGet paketi ve [GRPC C# sunucusu yansıma](https://github.com/grpc/grpc/blob/master/doc/csharp/server_reflection.md) makalesi.
 
 WS-Discovery protokolü, yerel bir ağdaki hizmetleri bulmak için kullanılır. gRPC Hizmetleri genellikle DNS veya Tüketil veya ZooKeeper gibi bir hizmet kayıt defteri kullanılarak bulunur.
 

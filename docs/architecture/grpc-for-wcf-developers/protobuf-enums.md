@@ -3,20 +3,18 @@ title: Prototipsiz numaralandırmalar-WCF geliştiricileri için gRPC
 description: Prototipte numaralandırmalar bildirme ve kullanma hakkında bilgi edinin.
 author: markrendle
 ms.date: 09/09/2019
-ms.openlocfilehash: 37fd55e4cbc3c1e1e96e32875ddb3dcae0ca8355
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: f18196f54caba824d7101782a88cf3bf699560d5
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72771643"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72846348"
 ---
 # <a name="protobuf-enumerations"></a>Protobuf sabit listeleri
 
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
-
 Prototip, bir `oneof` alanının türünü belirlemekte bir numaralandırma kullanılan önceki bölümde görüldüğü gibi numaralandırma türlerini destekler. Kendi numaralandırma türlerinizi tanımlayabilir ve Protoda bunları sabit listesi türleri için C# derler. Prototip farklı dillerde kullanılabilir olduğundan, numaralandırmalar için adlandırma kuralları C# kurallardan farklıdır. Ancak, kod üreticisi zekice ' dir ve adları geleneksel C# harfe dönüştürür. Alan adının Pascal-case eşdeğerini, numaralandırma adıyla başlıyorsa, kaldırılır.
 
-Örneğin, bu Prototiplik numaralandırmada alanlara ön ek olarak `ACCOUNT_STATUS`, bu, Pascal büyük/küçük harf adı: `AccountStatus` ile eşdeğerdir.
+Örneğin, bu Prototiplik numaralandırmada alanlara ön ek olarak `ACCOUNT_STATUS`, bu, Pascal büyük/küçük harf adı: `AccountStatus`ile eşdeğerdir.
 
 ```protobuf
 enum AccountStatus {
@@ -41,7 +39,7 @@ public enum AccountStatus
 }
 ```
 
-Prototip numaralandırma tanımlarının ilk alanları olarak sıfır sabiti **olmalıdır** . ' De C#olduğu gibi, aynı değere sahip birden fazla alan bildirebilirsiniz, ancak enum içindeki `allow_alias` seçeneğini kullanarak bu seçeneği açıkça etkinleştirmeniz gerekir:
+Prototip numaralandırma tanımlarının ilk alanları olarak sıfır sabiti **olmalıdır** . ' De C#olduğu gibi, aynı değere sahip birden fazla alan bildirebilirsiniz, ancak enum içindeki`allow_alias`seçeneğini kullanarak bu seçeneği açıkça etkinleştirmeniz gerekir:
 
 ```protobuf
 enum AccountStatus {
@@ -73,7 +71,7 @@ message Product {
 }
 ```
 
-@No__t_0 `Region.NorthAmerica | Region.SouthAmerica` olarak ayarlarsanız, `3` tamsayı değer olarak serileştirilir. Bir istemci veya sunucu değeri seri durumdan çıkarmaya çalıştığında, `3` için enum tanımında bir eşleşme bulamaz ve sonuç `Region.None` olur.
+`product.AvailableIn` `Region.NorthAmerica | Region.SouthAmerica`olarak ayarlarsanız, `3`tamsayı değer olarak serileştirilir. Bir istemci veya sunucu değeri seri durumdan çıkarmaya çalıştığında, `3` için enum tanımında bir eşleşme bulamaz ve sonuç `Region.None` olur.
 
 Prototipte birden çok Enum değeri ile çalışmanın en iyi yolu, sabit listesi türünde bir `repeated` alanı kullanmaktır.
 

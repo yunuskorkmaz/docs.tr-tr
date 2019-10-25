@@ -3,18 +3,16 @@ title: WCF geliştiricileri için gRPC, sözlüklere yönelik prototip haritalar
 description: Prototiplerinin göstermek için nasıl kullanılacağını anlayın. NET ' in Sözlük türleri.
 author: markrendle
 ms.date: 09/09/2019
-ms.openlocfilehash: f6a71fb7940145571a94eaf5c8bae9dfc91a30db
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: aef6b0f378e7a63f362ec42642cae15b32d49a08
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71184213"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72846331"
 ---
-# <a name="protobuf-maps-for-dictionaries"></a>Sözlükler için prototip haritaları
+# <a name="protobuf-maps-for-dictionaries"></a>Protobuf sözlük eşlemeleri
 
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
-
-İletilerde adlandırılmış değerlerin rastgele koleksiyonlarını temsil etmek önemlidir. .NET ' te genellikle Sözlük türleri kullanılarak işlenir. Prototip, .net <xref:System.Collections.Generic.IDictionary%602> türünün `map<key_type, value_type>` eşdeğeridir. Bu bölümde, prototip `map` içinde nasıl bildirildiği ve üretilen kodun nasıl kullanılacağı gösterilmektedir.
+İletilerde adlandırılmış değerlerin rastgele koleksiyonlarını temsil etmek önemlidir. .NET ' te genellikle Sözlük türleri kullanılarak işlenir. Prototip, .NET <xref:System.Collections.Generic.IDictionary%602> türünün eşdeğeridir `map<key_type, value_type>` türüdür. Bu bölümde, prototipte bir `map` bildirme ve oluşturulan kodun nasıl kullanılacağı gösterilmektedir.
 
 ```protobuf
 message StockPrices {
@@ -22,9 +20,9 @@ message StockPrices {
 }
 ```
 
-Oluşturulan kodda, `map` alanları da dahil olmak üzere `Google.Protobuf.Collections.MapField<TKey, TValue>` <xref:System.Collections.Generic.IDictionary%602>standart .NET koleksiyonu arabirimlerini uygulayan sınıfını kullanır.
+Oluşturulan kodda `map` alanları, <xref:System.Collections.Generic.IDictionary%602>dahil olmak üzere standart .NET koleksiyonu arabirimlerini uygulayan `Google.Protobuf.Collections.MapField<TKey, TValue>` sınıfını kullanır.
 
-Harita alanları bir ileti tanımında doğrudan yinelenemez, ancak bir harita içeren iç içe geçmiş bir ileti oluşturabilir ve aşağıdaki örnekte olduğu gibi `repeated` ileti türü üzerinde kullanabilirsiniz:
+Harita alanları bir ileti tanımında doğrudan yinelenemez, ancak bir harita içeren iç içe geçmiş bir ileti oluşturabilir ve aşağıdaki örnekte olduğu gibi ileti türünde `repeated` kullanabilirsiniz:
 
 ```protobuf
 message Order {
@@ -37,7 +35,7 @@ message Order {
 
 ## <a name="using-mapfield-properties-in-code"></a>Koddaki MapField özelliklerini kullanma
 
-Alanlardan oluşturulan özellikler salt okunurdur ve hiçbir şekilde olmayacaktır `null`. `MapField` `map` Bir Map özelliği ayarlamak için, her türlü `Add(IDictionary<TKey,TValue> values)` .net sözlüğünden değerleri `MapField` kopyalamak üzere Empty özelliğindeki yöntemi kullanın.
+`map` alanlarından oluşturulan `MapField` özellikleri salt okunurdur ve hiçbir şekilde `null`olmayacaktır. Bir Map özelliği ayarlamak için, her türlü .NET sözlüğünden değerleri kopyalamak üzere boş `MapField` özelliğindeki `Add(IDictionary<TKey,TValue> values)` yöntemini kullanın.
 
 ```csharp
 public Order CreateOrder(Dictionary<string, string> attributes)

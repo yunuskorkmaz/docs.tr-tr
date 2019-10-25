@@ -3,16 +3,14 @@ title: WCF geliştiricileri için Docker-gRPC
 description: ASP.NET Core gRPC uygulamaları için Docker görüntüleri oluşturma
 author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 2ed3e823c83d8f11fb7290ba6c343b4b47e68e0b
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: cc369da9494ade532187dfc8d19a94a3a037ebab
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72770545"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72846678"
 ---
 # <a name="docker"></a>Docker
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Bu bölümde, ASP.NET Core gRPC uygulamalarına yönelik Docker görüntülerinin oluşturulması, Docker, Kubernetes veya diğer kapsayıcı ortamlarında çalıştırılmaya hazır olarak ele alınacaktır. ASP.NET Core MVC web uygulamasıyla kullanılan örnek uygulama ve gRPC hizmeti, GitHub 'daki [DotNet-Architecture/GRPC-for-WCF-Developers](https://github.com/dotnet-architecture/grpc-for-wcf-developers/tree/master/KubernetesSample) deposunda bulunur.
 
@@ -22,7 +20,7 @@ Microsoft, .NET Core uygulamaları oluşturmaya ve çalıştırmaya yönelik bir
 
 | Görüntü | Açıklama |
 | ----- | ----------- |
-| [mcr.microsoft.com/dotnet/core/sdk](https://hub.docker.com/_/microsoft-dotnet-core-sdk/) | @No__t_0 ile uygulama oluşturma. Üretimde kullanılmamalıdır. |
+| [mcr.microsoft.com/dotnet/core/sdk](https://hub.docker.com/_/microsoft-dotnet-core-sdk/) | `docker build`ile uygulama oluşturma. Üretimde kullanılmamalıdır. |
 | [mcr.microsoft.com/dotnet/core/aspnet](https://hub.docker.com/_/microsoft-dotnet-core-aspnet/) | Çalışma zamanı ve ASP.NET Core bağımlılıklarını içerir. Üretim için. |
 
 Her görüntü için, etiketlere göre ayırt edilen farklı Linux dağıtımlarını temel alan dört çeşit vardır.
@@ -75,23 +73,23 @@ Dockerfile iki bölümden oluşur: ilki, uygulamayı derlemek ve yayımlamak iç
 | Adım | Açıklama |
 | ---- | ----------- |
 | `FROM ...` | Temel görüntüyü bildirir ve `builder` diğer adı atar (açıklama için sonraki bölüme bakın). |
-| `WORKDIR /src` | @No__t_0 dizinini oluşturur ve geçerli çalışma dizini olarak ayarlar. |
+| `WORKDIR /src` | `/src` dizinini oluşturur ve geçerli çalışma dizini olarak ayarlar. |
 | `COPY . .` | Konaktaki geçerli dizinin altındaki her şeyi görüntüdeki geçerli dizine kopyalar. |
 | `RUN dotnet restore` | Tüm harici paketleri (ASP.NET Core 3,0 Framework SDK ile önceden yüklenmiş) geri yükler. |
-| `RUN dotnet publish ...` | Bir yayın derlemesi oluşturur ve yayımlar. @No__t_0 bayrağının gerekli olmadığını unutmayın. |
+| `RUN dotnet publish ...` | Bir yayın derlemesi oluşturur ve yayımlar. `--runtime` bayrağının gerekli olmadığını unutmayın. |
 
 ### <a name="the-runtime-image-steps"></a>Çalışma zamanı görüntüsü adımları
 
 | Adım | Açıklama |
 | ---- | ----------- |
 | `FROM ...` | Yeni bir temel görüntü bildirir. |
-| `WORKDIR /app` | @No__t_0 dizinini oluşturur ve geçerli çalışma dizini olarak ayarlar. |
+| `WORKDIR /app` | `/app` dizinini oluşturur ve geçerli çalışma dizini olarak ayarlar. |
 | `COPY --from=builder ...` | Yayımlanan uygulamayı önceki görüntüden kopyalar, ilk `FROM` satırından `builder` diğer adını kullanarak. |
 | `ENTRYPOINT [ ... ]` | Kapsayıcı başladığında çalıştırılacak komutu ayarlar. Çalışma zamanı görüntüsündeki `dotnet` komutu yalnızca DLL dosyalarını çalıştırabilir. |
 
 ### <a name="https-in-docker"></a>Docker 'da HTTPS
 
-Microsoft 'un Docker için temel görüntüleri, bu bağlantı noktasında HTTPS olmadan çalışacağı anlamına gelen `ASPNETCORE_URLS` ortam değişkenini `http://+:80` olarak ayarladı. HTTPS 'yi özel bir sertifikayla kullanıyorsanız ( [önceki bölümde](self-hosted.md)açıklandığı gibi), Dockerfile 'ın **çalışma zamanı görüntüsü oluşturma bölümünde** ortam değişkenini ayarlayarak bunu geçersiz kılmanız gerekir.
+Microsoft 'un Docker için temel görüntüleri, bu bağlantı noktasında HTTPS olmadan çalışacağı anlamına gelen `ASPNETCORE_URLS` ortam değişkenini `http://+:80`olarak ayarladı. HTTPS 'yi özel bir sertifikayla kullanıyorsanız ( [önceki bölümde](self-hosted.md)açıklandığı gibi), Dockerfile 'ın **çalışma zamanı görüntüsü oluşturma bölümünde** ortam değişkenini ayarlayarak bunu geçersiz kılmanız gerekir.
 
 ```dockerfile
 # Runtime image creation
@@ -102,7 +100,7 @@ ENV ASPNETCORE_URLS=https://+:443
 
 ### <a name="the-dockerignore-file"></a>. Dockerıgnore dosyası
 
-Kaynak denetiminden belirli dosyaları ve dizinleri hariç tutulan dosyaları `.gitignore` benzer şekilde, `.dockerignore` dosyası, derleme sırasında dosya ve dizinlerin görüntüye kopyalanmasını hariç tutmak için kullanılabilir. Bu, yalnızca kopyalama zamandan tasarruf etmez, ancak BILGISAYARıNıZDAKI `obj` Directory 'nin görüntüye kopyalanmasından kaynaklanan bazı karmaşık hatalardan da kaçınabilir. @No__t_2 dosyanıza `bin` ve `obj` için en az girdi eklemeniz gerekir.
+Kaynak denetiminden belirli dosyaları ve dizinleri hariç tutulan dosyaları `.gitignore` benzer şekilde, `.dockerignore` dosyası, derleme sırasında dosya ve dizinlerin görüntüye kopyalanmasını hariç tutmak için kullanılabilir. Bu, yalnızca kopyalama zamandan tasarruf etmez, ancak BILGISAYARıNıZDAKI `obj` Directory 'nin görüntüye kopyalanmasından kaynaklanan bazı karmaşık hatalardan da kaçınabilir. `.dockerignore` dosyanıza `bin` ve `obj` için en az girdi eklemeniz gerekir.
 
 ```console
 bin/
@@ -117,9 +115,9 @@ Tek bir uygulama ve bu nedenle tek bir Dockerfile içeren bir çözüm için, Do
 docker build --tag stockdata .
 ```
 
-@No__t_0 bayrağını (`-t` kısaltabilen), belirtilen gerçek etiket *dahil olmak üzere* görüntünün tam adını belirtir. Sonundaki `.`, yapı çalıştırılacağı *bağlamı* belirtir; Dockerfile içindeki `COPY` komutları için geçerli çalışma dizini.
+`--tag` bayrağını (`-t`kısaltabilen), belirtilen gerçek etiket *dahil olmak üzere* görüntünün tam adını belirtir. Sonundaki `.`, yapı çalıştırılacağı *bağlamı* belirtir; Dockerfile içindeki `COPY` komutları için geçerli çalışma dizini.
 
-Tek bir çözümde birden çok uygulamanız varsa, her bir uygulama için Dockerfile dosyasını, `.csproj` dosyasının yanına, kendi klasöründe tutabilirsiniz, `docker build` ancak çözümün ve tüm projeler görüntüye kopyalanır. @No__t_0 (veya `-f`) bayrağını kullanarak geçerli dizinin altına bir Dockerfile belirtebilirsiniz.
+Tek bir çözümde birden çok uygulamanız varsa, her bir uygulama için Dockerfile dosyasını, `.csproj` dosyasının yanına, kendi klasöründe tutabilirsiniz, `docker build` ancak çözümün ve tüm projeler görüntüye kopyalanır. `--file` (veya `-f`) bayrağını kullanarak geçerli dizinin altına bir Dockerfile belirtebilirsiniz.
 
 ```console
 docker build --tag stockdata --file src/StockData/Dockerfile .
@@ -133,7 +131,7 @@ Görüntüyü yerel Docker örneğiniz içinde çalıştırmak için `docker run
 docker run -ti -p 5000:80 stockdata
 ```
 
-@No__t_0 bayrağı geçerli terminalinizi kapsayıcının terminaline bağlar ve etkileşimli modda çalışır. @No__t_0, kapsayıcıda bağlantı noktası 80 ' i localhost ağ arabirimindeki bağlantı noktası 80 ' e yayınlar.
+`-ti` bayrağı geçerli terminalinizi kapsayıcının terminaline bağlar ve etkileşimli modda çalışır. `-p 5000:80`, kapsayıcıda bağlantı noktası 80 ' i localhost ağ arabirimindeki bağlantı noktası 80 ' e yayınlar.
 
 ## <a name="push-the-image-to-a-registry"></a>Görüntüyü bir kayıt defterine gönderme
 

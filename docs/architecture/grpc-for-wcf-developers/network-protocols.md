@@ -3,16 +3,14 @@ title: Ağ protokolleri-WCF geliştiricileri için gRPC
 description: GRPC ağ protokollerine genel bakış.
 author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: a176d3e84f5f454f746273c9cc7e7afe7c7f9d8a
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: cf99b2608d576765856c992679b93b6f21e796cf
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71184290"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72846391"
 ---
 # <a name="network-protocols"></a>Ağ protokolleri
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 WCF 'den farklı olarak, gRPC, ağı için bir taban olarak HTTP/2 kullanır. Bu, WCF ve SOAP üzerinde yalnızca HTTP/1.1 üzerinde çalışan önemli avantajlar sağlar. GRPC 'yi kullanmak isteyen geliştiriciler için, HTTP/2 için başka bir seçenek olmadığından, HTTP/2 ' yi daha ayrıntılı bir şekilde incelemek ve gRPC 'yi kullanmaya yönelik ek avantajları belirlemek için ideal bir süre görünür.
 

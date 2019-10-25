@@ -3,16 +3,14 @@ title: Arama kimlik bilgileri-WCF geliştiricileri için gRPC
 description: ASP.NET Core 3,0 ' de gRPC çağrı kimlik bilgilerini uygulama ve kullanma.
 author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 483f540a0ed3849883c07cc70f0e3d45a6b121ad
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 5f29d69ec37fe60bcd7ca01391001ea9eb71e7e4
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71184598"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72846684"
 ---
 # <a name="call-credentials"></a>Çağrı kimlik bilgileri
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Çağrı kimlik bilgileri her istekle birlikte meta verilerde geçirilen bazı belirteç türlerini temel alır.
 
@@ -60,7 +58,7 @@ public void ConfigureServices(IServiceCollection services)
 }
 ```
 
-Özelliği `IssuerSigningKey` , imzalı belirteçleri doğrulamak için `Microsoft.IdentityModels.Tokens.SecurityKey` gerekli olan şifreleme verileriyle bir uygulamasının uygulanmasını gerektirir. Bu belirtecin Azure Keykasası gibi bir *gizli dizi sunucusunda* güvenli bir şekilde depolanması gerekir.
+`IssuerSigningKey` özelliği, imzalanmış belirteçleri doğrulamak için gereken şifreleme verileriyle `Microsoft.IdentityModels.Tokens.SecurityKey` uygulanmasını gerektirir. Bu belirtecin Azure Keykasası gibi bir *gizli dizi sunucusunda* güvenli bir şekilde depolanması gerekir.
 
 Ardından, sisteme erişimi denetleyen yetkilendirme hizmetini ekleyin.
 
@@ -79,7 +77,7 @@ Ardından, sisteme erişimi denetleyen yetkilendirme hizmetini ekleyin.
 > [!TIP]
 > Kimlik doğrulama ve yetkilendirme iki ayrı adımdan farklıdır. Kimlik doğrulaması, kullanıcının kimliğini belirlemede kullanılır. Yetkilendirme, kullanıcının sistemin çeşitli bölümlerine erişmesine izin verilip verilmeyeceğini belirler.
 
-Şimdi kimlik doğrulama ve yetkilendirme ara yazılımını `Configure` yöntemdeki ASP.NET Core işlem hattına ekleyin.
+Şimdi kimlik doğrulama ve yetkilendirme ara yazılımını `Configure` yönteminde ASP.NET Core işlem hattına ekleyin.
 
 ```csharp
 public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -102,7 +100,7 @@ public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
 }
 ```
 
-Son olarak, `[Authorize]` özniteliğini güvenli hale getirilmesi için herhangi bir hizmete veya yönteme uygulayın ve izinleri doğrulamak `User` için temel `HttpContext` alınan özelliğini kullanın.
+Son olarak, `[Authorize]` özniteliğini güvenli hale getirilmesi için herhangi bir hizmete veya yönteme uygulayın ve izinleri doğrulamak için temel alınan `HttpContext` `User` özelliğini kullanın.
 
 ```csharp
 [Authorize]
