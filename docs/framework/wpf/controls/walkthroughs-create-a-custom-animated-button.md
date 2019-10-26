@@ -6,36 +6,30 @@ helpviewer_keywords:
 - buttons [WPF]
 - animation [WPF], buttons [WPF]
 ms.assetid: e9532c72-460f-4898-9332-613fa21d746a
-ms.openlocfilehash: 3c601641a0eb1024722b4f449f0ab23e54fe93dd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bf75677ee6a6a607a8779edf5af5e63f5c92b230
+ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62024475"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72920168"
 ---
 # <a name="walkthroughs-create-a-custom-animated-button"></a>İzlenecek yollar: Özel Animasyonlu Düğme Oluşturma
-Adından da anlaşılacağı gibi Windows Presentation Foundation (WPF) müşteriler için sunum deneyimlerini zenginleştirmek idealdir. Bu izlenecek yollar (animasyonları dahil) bir düğme davranışını ve görünümünü özelleştirmek nasıl gösterir. Bu özelleştirme bitti bu özel düğme kolayca herhangi bir düğmeye uygulamanızda uygulayabilirsiniz böylece stil ve şablon kullanarak. Aşağıdaki çizimde özelleştirilmiş bir düğme, oluşturacağınız gösterilir.  
-  
- ![Oluşturacağınız özelleştirilmiş bir düğme](./media/custom-button-blend-intro.jpg "custom_button_blend_Intro")  
-  
- Düğmenin görünümünü oluşturan vektör grafik, kullanılarak oluşturulan [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]. [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] HTML için daha güçlü ve Genişletilebilir dışında benzerdir. [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] Microsoft Visual Studio veya not defteri kullanılarak el ile yazılan veya Microsoft Expression Blend gibi bir görsel tasarım aracını kullanabilirsiniz. Expression Blend çalıştığı temel oluşturarak [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] kodu her iki yöntem de aynı grafik oluşturur.  
-  
-## <a name="in-this-section"></a>Bu Bölümde  
- [Microsoft Expression Blend Kullanarak Düğme Oluşturma](walkthrough-create-a-button-by-using-microsoft-expression-blend.md)  
- Expression Blend tasarımcı özelliklerini kullanarak düğmeleri ile özel davranışlar oluşturma işlemini gösterir.  
-  
- [XAML Kullanarak bir Düğme Oluşturma](walkthrough-create-a-button-by-using-xaml.md)  
- Düğmeleri kullanarak ile özel davranışlar oluşturma işlemini gösterir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ve Visual Studio.  
-  
-## <a name="related-sections"></a>İlgili Bölümler  
- [Stil ve Şablon Oluşturma](styling-and-templating.md)  
- Nasıl stilleri ve şablonları görünümünü ve davranışını denetim belirlemek için kullanılabileceğini açıklar.  
-  
- [Animasyona Genel bakış](../graphics-multimedia/animation-overview.md)  
- Nasıl nesneleri kullanarak animasyonu oluşturulabilen açıklar [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] animasyon ve zamanlama sistemi.  
-  
- [Düz Renkler ve Gradyanlar ile Boyamaya Genel Bakış](../graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)  
- Düz renkler, doğrusal gradyanlar ve radyal gradyanlar ile Boyama fırça nesneleri kullanılacağını açıklar.  
-  
- [Bit Eşlem Etkilerine Genel Bakış](../graphics-multimedia/bitmap-effects-overview.md)  
- Tarafından desteklenen bir bit eşlem efektleri açıklar [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] ve bunların nasıl uygulanacağını açıklar.
+Adından da anlaşılacağı gibi, Windows Presentation Foundation (WPF) müşteriler için zengin sunum deneyimleri oluşturmak için harika. Bu izlenecek yollar, bir düğmenin (animasyonlar dahil) görünümünü ve davranışını nasıl özelleştireceğinizi gösterir. Bu özelleştirme, bu özel düğmeyi uygulamanızdaki düğmelere kolayca uygulayabilmeniz için stil ve şablon kullanılarak yapılır. Aşağıdaki çizimde, oluşturacağınız özelleştirilmiş düğme gösterilmektedir.
+
+ ![Oluşturacağınız özelleştirilmiş düğme](./media/custom-button-blend-intro.jpg "custom_button_blend_Intro")
+
+ Düğmenin görünümünü oluşturan vektör grafikleri [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]kullanılarak oluşturulur. [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], HTML ile benzerdir, ancak daha güçlü ve Genişletilebilir olur. [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], Visual Studio veya Notepad kullanılarak elle yazılabilir veya Visual Studio için Blend gibi bir görsel tasarım aracı kullanabilirsiniz. Blend, temeldeki XAML kodu oluşturarak, her iki yöntem de aynı grafikleri oluşturacaktır.
+
+## <a name="in-this-section"></a>Bu Bölümde
+ [Microsoft Expression Blend kullanarak düğme oluşturma](walkthrough-create-a-button-by-using-microsoft-expression-blend.md) Ifade Blend 'nin tasarımcı özelliklerini kullanarak özel davranışla nasıl düğme oluşturacağınızı gösterir.
+
+ [XAML kullanarak bir düğme oluşturma](walkthrough-create-a-button-by-using-xaml.md) [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ve Visual Studio kullanarak özel davranışla düğme oluşturmayı gösterir.
+
+## <a name="related-sections"></a>İlgili Bölümler
+ [Stil ve şablon](styling-and-templating.md) oluşturma Stillerin ve şablonlarının denetimlerin görünümünü ve davranışını belirlemede nasıl kullanılabileceğini açıklar.
+
+ [Animasyona genel bakış](../graphics-multimedia/animation-overview.md) Nesnelerin, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] animasyon ve zamanlama sistemi kullanılarak nasıl canlandırılabileceğinizi açıklar.
+
+ [Düz renkler ve gradyanlar Ile boyama genel bakış](../graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md) Düz renkler, doğrusal degradeler ve radyal gradyanlar ile boyamak için fırça nesnelerinin nasıl kullanılacağını açıklar.
+
+ [Bit eşlem efektlerine genel bakış](../graphics-multimedia/bitmap-effects-overview.md) [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] tarafından desteklenen bit eşlem efektlerini açıklar ve bunların nasıl uygulanacağını açıklar.

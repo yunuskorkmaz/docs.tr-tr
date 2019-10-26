@@ -6,19 +6,19 @@ helpviewer_keywords:
 - converting [WPF], shape to button
 - Expression Blend [WPF Designer]
 ms.assetid: ff5037c2-bba7-4cae-8abb-6475b686c48e
-ms.openlocfilehash: 497cd520731d9a0c96ed2b7cb35fa9f53ba25245
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 10342d97abc2e3c158f93171f5fe5cd560f9b7e4
+ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053470"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72920264"
 ---
 # <a name="walkthrough-create-a-button-by-using-microsoft-expression-blend"></a>İzlenecek yol: Microsoft Expression Blend Kullanarak Düğme Oluşturma
 
-Bu izlenecek yol, Microsoft Expression Blend kullanarak özelleştirilmiş bir [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] düğme oluşturma sürecinde size kılavuzluk eden bir adım.
+Bu izlenecek yol, Microsoft Expression Blend kullanarak [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] özelleştirilmiş bir düğme oluşturma sürecinde size kılavuzluk eden bir adım.
 
 > [!IMPORTANT]
-> Microsoft Expression Blend, daha sonra [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] yürütülebilir programı oluşturmak için derlenerek oluşturulur. Doğrudan ile [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] çalışmayı tercih ediyorsanız, Blend yerine Visual Studio [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] ile aynı uygulamayı oluşturan başka bir anlatım de vardır. Daha fazla bilgi için bkz. [XAML kullanarak düğme oluşturma](walkthrough-create-a-button-by-using-xaml.md) .
+> Microsoft Expression Blend, yürütülebilir programı oluşturmak için derlenen [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] oluşturarak işe yarar. Doğrudan XAML ile çalışmayı tercih ediyorsanız, Blend yerine Visual Studio ile aynı uygulamayı oluşturan başka bir anlatım de vardır. Daha fazla bilgi için bkz. [XAML kullanarak düğme oluşturma](walkthrough-create-a-button-by-using-xaml.md) .
 
 Aşağıdaki çizimde, oluşturacağınız özelleştirilmiş düğme gösterilmektedir.
 
@@ -40,11 +40,11 @@ Bu izlenecek yolun ilk bölümünde özel düğmesine özel bir görünüm oluş
 
 5. Projeyi `CustomButton` adlandırın ve **Tamam**' a basın.
 
-Bu noktada boş [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] bir projeniz vardır. F5 tuşuna basarak uygulamayı çalıştırabilirsiniz. Tahmin edebileceğiniz gibi, uygulama yalnızca boş bir pencereden oluşur. Ardından, yuvarlatılmış bir dikdörtgen oluşturur ve bunu bir düğmeye dönüştürürsünüz.
+Bu noktada boş bir [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] projesi vardır. F5 tuşuna basarak uygulamayı çalıştırabilirsiniz. Tahmin edebileceğiniz gibi, uygulama yalnızca boş bir pencereden oluşur. Ardından, yuvarlatılmış bir dikdörtgen oluşturur ve bunu bir düğmeye dönüştürürsünüz.
 
 ### <a name="to-convert-a-rectangle-to-a-button"></a>Bir dikdörtgeni düğmeye dönüştürmek için
 
-1. **Pencere arka plan özelliğini siyah olarak ayarlayın:** Pencereyi seçin, **Özellikler sekmesine**tıklayın ve <xref:System.Windows.Controls.Control.Background%2A> özelliğini olarak `Black`ayarlayın.
+1. **Pencere arka plan özelliğini siyah olarak ayarlayın:** Pencereyi seçin, **Özellikler sekmesine**tıklayın ve <xref:System.Windows.Controls.Control.Background%2A> özelliğini `Black`olarak ayarlayın.
 
     ![Bir düğmenin arka planını siyaha ayarlama](./media/custom-button-blend-changebackground.png)
 
@@ -52,7 +52,7 @@ Bu noktada boş [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md
 
     ![Dikdörtgen çizme](./media/custom-button-blend-drawrect.png)
 
-3. **Dikdörtgenin köşelerini yuvarlama:** Dikdörtgenin denetim noktalarını sürükleyin ya da <xref:System.Windows.Shapes.Rectangle.RadiusX%2A> ve <xref:System.Windows.Shapes.Rectangle.RadiusY%2A> özelliklerini doğrudan ayarlayın. <xref:System.Windows.Shapes.Rectangle.RadiusX%2A> Ve<xref:System.Windows.Shapes.Rectangle.RadiusY%2A> değerlerini 20 olarak ayarlayın.
+3. **Dikdörtgenin köşelerini yuvarlama:** Dikdörtgenin denetim noktalarını sürükleyin ya da <xref:System.Windows.Shapes.Rectangle.RadiusX%2A> ve <xref:System.Windows.Shapes.Rectangle.RadiusY%2A> özelliklerini doğrudan ayarlayın. <xref:System.Windows.Shapes.Rectangle.RadiusX%2A> ve <xref:System.Windows.Shapes.Rectangle.RadiusY%2A> değerlerini 20 olarak ayarlayın.
 
     ![Dikdörtgenin köşelerini bir yuvarlak yapma](./media/custom-button-blend-roundcorners.png)
 
@@ -76,19 +76,19 @@ Artık bir düğmeye değiştirilmiş bir dikdörtgenine sahipsiniz. Bu bölümd
 
     ![Bir şablonu düzenleme](./media/custom-button-blend-edittemplate.jpg)
 
-    Şablon düzenleyicisinde, düğmenin artık <xref:System.Windows.Shapes.Rectangle> <xref:System.Windows.Controls.ContentPresenter>ve ' a ayrıldığına dikkat edin. , <xref:System.Windows.Controls.ContentPresenter> Düğme içinde içerik sunmak için kullanılır (örneğin, "düğme" dizesi). Hem dikdörtgen <xref:System.Windows.Controls.ContentPresenter> hem de içinde <xref:System.Windows.Controls.Grid>düzenlenir.
+    Şablon düzenleyicisinde, düğmenin artık <xref:System.Windows.Shapes.Rectangle> ve <xref:System.Windows.Controls.ContentPresenter>ayrıldığına dikkat edin. <xref:System.Windows.Controls.ContentPresenter>, düğme içinde içerik sunmak için kullanılır (örneğin, "düğme" dizesi). Dikdörtgen ve <xref:System.Windows.Controls.ContentPresenter> her ikisi de bir <xref:System.Windows.Controls.Grid>içinde düzenlenir.
 
     ![Dikdörtgen sunumundaki bileşenler](./media/custom-button-blend-templatepanel.png)
 
-2. **Şablon bileşenlerinin adlarını değiştirin:** Şablon envanterinde dikdörtgeni sağ tıklatın, "[Rectangle]" <xref:System.Windows.Shapes.Rectangle> adlı adı "outerRectangle" olarak değiştirin ve "[ContentPresenter]" öğesini "myContentPresenter" olarak değiştirin.
+2. **Şablon bileşenlerinin adlarını değiştirin:** Şablon envanterinde dikdörtgeni sağ tıklatın, <xref:System.Windows.Shapes.Rectangle> adı "[Rectangle]" iken "outerRectangle" olarak değiştirin ve "[ContentPresenter]" öğesini "myContentPresenter" olarak değiştirin.
 
     ![Bir şablonun bileşenini yeniden adlandırma](./media/custom-button-blend-renamecomponents.png)
 
-3. **Dikdörtgeni, içinde boş olacak şekilde değiştirin (halka gibi):** **OuterRectangle** öğesini seçin ve <xref:System.Windows.Shapes.Shape.Fill%2A> "saydam" ve <xref:System.Windows.Shapes.Shape.StrokeThickness%2A> 5 olarak ayarlayın.
+3. **Dikdörtgeni, içinde boş olacak şekilde değiştirin (halka gibi):** **OuterRectangle** ' ı seçin ve <xref:System.Windows.Shapes.Shape.Fill%2A> "saydam" olarak ayarlayın ve 5 ' e <xref:System.Windows.Shapes.Shape.StrokeThickness%2A>.
 
     ![Bir dikdörtgeni boş yapma](./media/custom-button-blend-changerectproperties.png)
 
-    Ardından, <xref:System.Windows.Shapes.Shape.Stroke%2A> şablonu şablonun hangi renge olacağını belirleyin. Bunu yapmak için, **vuruş**' ın yanındaki küçük beyaz kutusuna tıklayın, **CustomExpression**' ı seçin ve Iletişim kutusuna "{TemplateBinding background}" yazın.
+    Ardından <xref:System.Windows.Shapes.Shape.Stroke%2A> şablonun hangi renge olacağını belirleyin. Bunu yapmak için, **vuruş**' ın yanındaki küçük beyaz kutusuna tıklayın, **CustomExpression**' ı seçin ve Iletişim kutusuna "{TemplateBinding background}" yazın.
 
     ![Şablonun rengini kullanımı nasıl ayarlanır](./media/custom-button-blend-templatestroke.png)
 
@@ -106,7 +106,7 @@ Artık bir düğmeye değiştirilmiş bir dikdörtgenine sahipsiniz. Bu bölümd
 
     ![Bir düğmeyi başka bir düğmenin üstüne taşıma](./media/custom-button-blend-innerrectangle2.png)
 
-6. **Innerrectangle 'ın görünümünü değiştirme:** <xref:System.Windows.Shapes.Rectangle.RadiusX%2A>, Vedeğerlerini<xref:System.Windows.Shapes.Shape.StrokeThickness%2A>20olarakayarlayın. <xref:System.Windows.Shapes.Rectangle.RadiusY%2A> Ayrıca, <xref:System.Windows.Shapes.Shape.Fill%2A> "{TemplateBinding background}" özel ifadesini kullanarak şablonun arka planına ayarlayın ve "saydam" olarak ayarlayın <xref:System.Windows.Shapes.Shape.Stroke%2A> . <xref:System.Windows.Shapes.Shape.Fill%2A> <xref:System.Windows.Shapes.Shape.Stroke%2A> **Innerrectangle** 'ın ayarlarının, **outerRectangle**için olanların tersi olduğuna dikkat edin.
+6. **Innerrectangle 'ın görünümünü değiştirme:** <xref:System.Windows.Shapes.Rectangle.RadiusX%2A>, <xref:System.Windows.Shapes.Rectangle.RadiusY%2A>ve <xref:System.Windows.Shapes.Shape.StrokeThickness%2A> değerlerini 20 olarak ayarlayın. Ayrıca, "{TemplateBinding background}" özel ifadesini kullanarak şablonun arka planına <xref:System.Windows.Shapes.Shape.Fill%2A> ayarlayın ve <xref:System.Windows.Shapes.Shape.Stroke%2A> "transparent" olarak ayarlayın. **Innerrectangle** 'ın <xref:System.Windows.Shapes.Shape.Fill%2A> ve <xref:System.Windows.Shapes.Shape.Stroke%2A> ayarlarının, **outerRectangle**için olanların tersi olduğuna dikkat edin.
 
     ![Dikdörtgenin görünümünü değiştirme](./media/custom-button-blend-glassrectangleproperties1.png)
 
@@ -114,29 +114,29 @@ Artık bir düğmeye değiştirilmiş bir dikdörtgenine sahipsiniz. Bu bölümd
 
 8. **Gerekirse Yeniden Konumlandır glassCube:** **GlassCube** , tüm düğmeyi kaplamasını sağlayacak şekilde zaten yerleştirilmediğinden konuma sürükleyin.
 
-9. **GlassCube kıyasla biraz farklı bir şekil verin:** **GlassCube**özelliklerini değiştirin. <xref:System.Windows.Shapes.Rectangle.RadiusX%2A> Ve<xref:System.Windows.Shapes.Rectangle.RadiusY%2A> özelliklerini 10 ve ile2arasındadeğiştirerekbaşlayın.<xref:System.Windows.Shapes.Shape.StrokeThickness%2A>
+9. **GlassCube kıyasla biraz farklı bir şekil verin:** **GlassCube**özelliklerini değiştirin. <xref:System.Windows.Shapes.Rectangle.RadiusX%2A> ve <xref:System.Windows.Shapes.Rectangle.RadiusY%2A> özelliklerini 10 ' a ve <xref:System.Windows.Shapes.Shape.StrokeThickness%2A> 2 ' ye değiştirerek baştan başlayın.
 
     ![GlassCube için görünüm ayarları](./media/custom-button-blend-glasscubeappearance.gif)
 
-10. **Cam gibi glassCube görünmesini sağlama:** % 75 <xref:System.Windows.Shapes.Shape.Fill%2A> opak bir doğrusal gradyan kullanarak bir glassy olarak ayarlayın, beyaz renkli ve yaklaşık olarak eşit aralıklı aralıklarla saydam bir şekilde görünür. Gradyan duraklarının şu şekilde ayarlanması için:
+10. **Cam gibi glassCube görünmesini sağlama:** <xref:System.Windows.Shapes.Shape.Fill%2A> %75 opak olan doğrusal bir gradyan kullanarak bir glassy olarak ayarlayın, beyaz renkli ve yaklaşık 6 ' dan fazla aralıklı aralıklarla saydam bir şekilde görünür. Gradyan duraklarının şu şekilde ayarlanması için:
 
-    - Gradyan durdurma 1: Alfa değeri% 75 olan beyaz
+    - Gradyan durağı 1: alfa değeri %75 olan beyaz
 
-    - Gradyan durağı 2: Geçirgen
+    - Gradyan durağı 2: saydam
 
-    - Gradyan durağı 3: Alfa değeri% 75 olan beyaz
+    - Gradyan durağı 3: alfa değeri %75 olan beyaz
 
-    - Gradyan durdurma 4: Geçirgen
+    - Gradyan durdurma 4: saydam
 
-    - Gradyan durdurma 5: Alfa değeri% 75 olan beyaz
+    - Gradyan durdur 5: alfa değeri %75 olan beyaz
 
-    - Gradyan durağı 6: Geçirgen
+    - Gradyan durdur 6: saydam
 
     Bu, "dalgalı" cam görünümü oluşturur.
 
     ![Cam gibi görünen bir dikdörtgen](./media/custom-button-blend-glassrectangleproperties2.png)
 
-11. **Cam katmanını gizleyin:** Glassy katmanının nasıl göründüğünü görmediğiniz için, **Özellikler panelinin** **Görünüm bölmesine** gidin ve opaklığı gizlemek için% 0 olarak ayarlayın. Bölümlerde, cam katmanını göstermek ve işlemek için özellik Tetikleyicileri ve olayları kullanacağız.
+11. **Cam katmanını gizleyin:** Glassy katmanının nasıl göründüğünü görmediğiniz için, **Özellikler panelinin** **Görünüm bölmesine** gidin ve opaklığı gizlemek için %0 olarak ayarlayın. Bölümlerde, cam katmanını göstermek ve işlemek için özellik Tetikleyicileri ve olayları kullanacağız.
 
     ![Cam dikdörtgeni gizleme](./media/custom-button-glassrectangleproperties3.gif)
 
@@ -148,44 +148,44 @@ Bu noktada, kendi şablonunu düzenleyerek düğmenin sunumunu özelleştirdiniz
 
 1. **Yeni bir özellik tetikleyicisi oluşturun:** **GlassCube** seçiliyken, **Tetikleyiciler** panelinde **+ özelliği** ' ne tıklayın (sonraki adımdan sonra gelen şekle bakın). Bu, varsayılan özellik tetikleyicisine sahip bir özellik tetikleyicisi oluşturur.
 
-2. **Tetikleyici tarafından kullanılan özelliğin üzerinde ısmouseyapın:** Özelliğini olarak <xref:System.Windows.UIElement.IsMouseOver%2A>değiştirin. Bu özellik tetikleyicisi <xref:System.Windows.UIElement.IsMouseOver%2A> `true` özelliği olduğunda (Kullanıcı fareyle düğmesine işaret ediyorsa) özelliği tetiklemeyi etkinleştirir.
+2. **Tetikleyici tarafından kullanılan özelliğin üzerinde ısmouseyapın:** Özelliği <xref:System.Windows.UIElement.IsMouseOver%2A>olarak değiştirin. Bu, <xref:System.Windows.UIElement.IsMouseOver%2A> özelliği `true` olduğunda (Kullanıcı fareyle düğmesine işaret ediyorsa) özellik tetikleyicisinin etkinleştirmesini sağlar.
 
     ![Bir özellik üzerinde tetikleyici ayarlama](./media/custom-button-blend-ismousedoverpropertytrigger.png)
 
-3. **IsMouseOver, glassCube için% 100 oranında opaklık tetikler:** **Tetikleyici kaydının açık** olduğuna dikkat edin (önceki şekle bakın). Bu, kayıt sırasında **glassCube** özellik değerlerinde yaptığınız tüm değişikliklerin, <xref:System.Windows.UIElement.IsMouseOver%2A> `true`olduğunda meydana gelen bir eylem olacağı anlamına gelir. Kayıt sırasında, <xref:System.Windows.UIElement.Opacity%2A> **glassCube** öğesini% 100 olarak değiştirin.
+3. **IsMouseOver, glassCube için %100 oranında opaklık tetikler:** **Tetikleyici kaydının açık** olduğuna dikkat edin (önceki şekle bakın). Bu, **glassCube** öğesinin özellik değerlerinde yaptığınız tüm değişikliklerin, <xref:System.Windows.UIElement.IsMouseOver%2A> `true`olduğunda meydana gelen bir eylem olacağı anlamına gelir. Kayıt sırasında **glassCube** <xref:System.Windows.UIElement.Opacity%2A> %100 olarak değiştirin.
 
     ![Bir düğmenin opaklığını ayarlama](./media/custom-button-blend-ismousedoverpropertytrigger2.gif)
 
-    Şimdi ilk özellik tetikleyicinizi oluşturdunuz. Düzenleyicinin **Tetikleyiciler panelinin** % 100 olarak değiştirildiğini kaydettiğine <xref:System.Windows.UIElement.Opacity%2A> dikkat edin.
+    Şimdi ilk özellik tetikleyicinizi oluşturdunuz. Düzenleyicinin **Tetikleyiciler panelinin** <xref:System.Windows.UIElement.Opacity%2A> %100 olarak değiştirildiğini kaydettiğine dikkat edin.
 
     !["Tetikleyiciler" paneli](./media/custom-button-blend-propertytriggerinfo.png)
 
     F5 tuşuna basarak uygulamayı çalıştırın ve fare işaretçisini düğmenin üzerine getirin ve düğme dışına taşıyın. Düğme üzerindeyken cam katmanın göründüğünü görmeniz gerekir ve işaretçi ayrıldığında kaybolur.
 
-4. **Imouseover Tetikleyicileri vuruş değeri değişikliği:** <xref:System.Windows.UIElement.IsMouseOver%2A> Tetikleyici ile bazı diğer eylemleri ilişkilendirelim. Kayıt devam ederken, seçiminizi **glassCube** 'den **outerRectangle**'e geçirin. Sonra **outerRectangle** öğesini <xref:System.Windows.Shapes.Shape.Stroke%2A> "{DynamicResource {x:static SystemColors. highlightbrühkey}}" özel ifadesine ayarlayın. Bu, <xref:System.Windows.Shapes.Shape.Stroke%2A> öğesini düğmeler tarafından kullanılan tipik vurgu rengine ayarlar. Düğmenin üzerine fare uyguladığınızda etkisini görmek için F5 tuşuna basın.
+4. **Imouseover Tetikleyicileri vuruş değeri değişikliği:** <xref:System.Windows.UIElement.IsMouseOver%2A> tetikleyicisiyle bazı diğer eylemleri ilişkilendirelim. Kayıt devam ederken, seçiminizi **glassCube** 'den **outerRectangle**'e geçirin. Sonra **outerRectangle** 'in <xref:System.Windows.Shapes.Shape.Stroke%2A> "{DynamicResource {X:static SystemColors. Highlightbrühkey}}" özel ifadesi olarak ayarlayın. Bu, <xref:System.Windows.Shapes.Shape.Stroke%2A> düğmeler tarafından kullanılan tipik vurgu rengine ayarlar. Düğmenin üzerine fare uyguladığınızda etkisini görmek için F5 tuşuna basın.
 
     ![Vurgu rengine vuruş ayarlama](./media/custom-button-blend-ismousedoverpropertytrigger3.png)
 
-5. **Imouseover, bulanık metin tetikler:** Daha sonra <xref:System.Windows.UIElement.IsMouseOver%2A> Özellik tetikleyicisiyle bir daha fazla eylem ilişkilendirelim. Cam üzerinde göründüğünde düğme içeriğinin biraz bulanık görünmesini sağlayın. Bunu yapmak için <xref:System.Windows.Controls.ContentPresenter> (**myContentPresenter**) için <xref:System.Windows.Media.Effects.BitmapEffect> bir bulanıklaştırma uygulayabiliriz.
+5. **Imouseover, bulanık metin tetikler:** <xref:System.Windows.UIElement.IsMouseOver%2A> Özellik tetikleyicisiyle bir daha fazla eylem ilişkilendirelim. Cam üzerinde göründüğünde düğme içeriğinin biraz bulanık görünmesini sağlayın. Bunu yapmak için, <xref:System.Windows.Controls.ContentPresenter> (**myContentPresenter**) <xref:System.Windows.Media.Effects.BitmapEffect> bir bulanıklaştırma uygulayabiliriz.
 
     ![Bir düğmenin içeriğini bulanıklaştırma](./media/custom-button-blend-propertytriggerwithbitmapeffect.png)
 
     > [!NOTE]
-    > Arama<xref:System.Windows.Media.Effects.BitmapEffect>yapmadan önce **Özellikler panelini** geri döndürmek için, **arama kutusundan**metni temizleyin.
+    > <xref:System.Windows.Media.Effects.BitmapEffect>arama yapmadan önce **Özellikler panelini** geri döndürmek Için, **arama kutusundan**metni temizleyin.
 
-    Bu noktada, fare işaretçisinin düğme alanına girdiğinde ve ayrıldığında vurgulama davranışı oluşturmak için birkaç ilişkili eylem içeren bir özellik tetikleyicisi kullandık. Bir düğme için başka bir normal davranış, odağa sahip olduğunda (tıklandıktan sonra olduğu gibi) vurgulanmalıdır. <xref:System.Windows.UIElement.IsFocused%2A> Özelliği için başka bir özellik tetikleyicisi ekleyerek bu davranışı ekleyebiliriz.
+    Bu noktada, fare işaretçisinin düğme alanına girdiğinde ve ayrıldığında vurgulama davranışı oluşturmak için birkaç ilişkili eylem içeren bir özellik tetikleyicisi kullandık. Bir düğme için başka bir normal davranış, odağa sahip olduğunda (tıklandıktan sonra olduğu gibi) vurgulanmalıdır. <xref:System.Windows.UIElement.IsFocused%2A> özelliği için başka bir özellik tetikleyicisi ekleyerek bu davranışı ekleyebiliriz.
 
-6. **Isodaklanmış için özellik tetikleyicisi oluştur:** İçin <xref:System.Windows.UIElement.IsMouseOver%2A> aynı yordamın kullanıldığı (Bu bölümün ilk adımına bakın), <xref:System.Windows.UIElement.IsFocused%2A> özelliği için başka bir özellik tetikleyicisi oluşturun. **Kayıt tetikleme**sırasında, tetikleyicisine aşağıdaki eylemleri ekleyin:
+6. **Isodaklanmış için özellik tetikleyicisi oluştur:** <xref:System.Windows.UIElement.IsMouseOver%2A> için aynı yordamı kullanma (Bu bölümün ilk adımına bakın), <xref:System.Windows.UIElement.IsFocused%2A> özelliği için başka bir özellik tetikleyicisi oluşturun. **Kayıt tetikleme**sırasında, tetikleyicisine aşağıdaki eylemleri ekleyin:
 
-    - **glassCube** % 100 <xref:System.Windows.UIElement.Opacity%2A> ' ü alır.
+    - **glassCube** %100 <xref:System.Windows.UIElement.Opacity%2A> alır.
 
-    - **outerRectangle** "{ <xref:System.Windows.Shapes.Shape.Stroke%2A> DynamicResource {x:static SystemColors. highlightbrühkey}}" özel ifade değerini alır.
+    - **outerRectangle** , "{DynamicResource {X:static SystemColors. Highlightbrühkey}}" öğesinin <xref:System.Windows.Shapes.Shape.Stroke%2A> özel ifade değerini alır.
 
-Bu izlenecek yolun son adımında, düğmeye animasyon ekleyeceğiz. Bu animasyonlar, olaylar tarafından özellikle, <xref:System.Windows.UIElement.MouseEnter> ve <xref:System.Windows.Controls.Primitives.ButtonBase.Click> olayları tarafından tetiklenecektir.
+Bu izlenecek yolun son adımında, düğmeye animasyon ekleyeceğiz. Bu animasyonlar, Olaylar (özellikle <xref:System.Windows.UIElement.MouseEnter> ve <xref:System.Windows.Controls.Primitives.ButtonBase.Click> olayları tarafından tetiklenir.
 
 ### <a name="to-use-event-triggers-and-animations-to-add-interactivity"></a>Etkileşimli eklenecek olay tetikleyicilerini ve animasyonlarını kullanmak için
 
-1. **Bir MouseEnter olay tetikleyicisi oluşturun:** Yeni bir olay tetikleyicisi ekleyin ve tetikleyicide kullanılacak olay olarak öğesini seçin <xref:System.Windows.UIElement.MouseEnter> .
+1. **Bir MouseEnter olay tetikleyicisi oluşturun:** Yeni bir olay tetikleyicisi ekleyin ve tetikleyicide kullanılacak olay olarak <xref:System.Windows.UIElement.MouseEnter> seçin.
 
      ![MouseEnter olay tetikleyicisi oluşturma](./media/custom-button-blend-mouseovereventtrigger.png)
 
@@ -204,15 +204,15 @@ Bu izlenecek yolun son adımında, düğmeye animasyon ekleyeceğiz. Bu animasyo
 
     ![Ana kare oluşturma](./media/custom-button-blend-mouseovereventtrigger4.png)
 
-4. **Bu ana karede glassCube Küçült:** İkinci ana kare seçili olarak, **glassCube** boyutunu **Boyut dönüşümünü**kullanarak tam boyutunun% 90 ' una küçültün.
+4. **Bu ana karede glassCube Küçült:** İkinci ana kare seçili olarak, **glassCube** boyutunu **Boyut dönüşümünü**kullanarak tam boyutunun %90 ' una küçültün.
 
     ![Bir düğmenin boyutunu küçültme](./media/custom-button-blend-sizetransform.png)
 
-    Uygulamayı çalıştırmak için F5'e basın. Fare işaretçisini düğmenin üzerine taşıyın. Cam katmanın düğmenin üstünde küçültüdiğine dikkat edin.
+    Uygulamayı çalıştırmak için F5 tuşuna basın. Fare işaretçisini düğmenin üzerine taşıyın. Cam katmanın düğmenin üstünde küçültüdiğine dikkat edin.
 
 5. **Başka bir olay tetikleyicisi oluşturun ve onunla farklı bir animasyon ilişkilendirin:** Daha sonra bir animasyon ekleyelim. Önceki olay tetikleyicisi animasyonunu oluşturmak için kullandığınız işlemin benzer bir yordamını kullanın:
 
-    1. <xref:System.Windows.Controls.Primitives.ButtonBase.Click> Olayını kullanarak yeni bir olay tetikleyicisi oluşturun.
+    1. <xref:System.Windows.Controls.Primitives.ButtonBase.Click> olayını kullanarak yeni bir olay tetikleyicisi oluşturun.
 
     2. Yeni bir zaman çizelgesini <xref:System.Windows.Controls.Primitives.ButtonBase.Click> olayla ilişkilendirin.
 
@@ -224,7 +224,7 @@ Bu izlenecek yolun son adımında, düğmeye animasyon ekleyeceğiz. Bu animasyo
 
         ![Döndürme dönüşümü oluşturma](./media/custom-button-blend-rotatetransform.gif)
 
-    5. Uygulamayı çalıştırmak için F5'e basın. Düğmesine tıklayın. Cam katmanın etrafında dönerek göründüğünü unutmayın.
+    5. Uygulamayı çalıştırmak için F5 tuşuna basın. Düğmesine tıklayın. Cam katmanın etrafında dönerek göründüğünü unutmayın.
 
 ## <a name="conclusion"></a>Sonuç
 
@@ -234,9 +234,9 @@ Bu izlenecek yolun son adımında, düğmeye animasyon ekleyeceğiz. Bu animasyo
 
 ![Aynı şablonu kullanan birden çok düğme](./media/custom-button-blend-createmultiplebuttons.png)
 
-Uygulamayı çalıştırmak için F5'e basın. Düğmelere tıklayın ve bunların tümünün aynı davranış şeklini görürsünüz.
+Uygulamayı çalıştırmak için F5 tuşuna basın. Düğmelere tıklayın ve bunların tümünün aynı davranış şeklini görürsünüz.
 
-Şablonu <xref:System.Windows.Shapes.Shape.Fill%2A> özelleştirirken, **ınnerrectangle** özelliğini ve **outerRectangle** özelliğinişablonarkaplanına({TemplateBindingbackground})ayarlamış<xref:System.Windows.Shapes.Shape.Stroke%2A> olursunuz. Bu nedenle, ayrı düğmelerin arka plan rengini ayarladığınızda, bu ilgili özellikler için ayarladığınız arka plan kullanılacaktır. Arka planları şimdi değiştirmeyi deneyin. Aşağıdaki şekilde farklı degradeler kullanılır. Bu nedenle, bir şablon düğme gibi denetimlerin genel özelleştirmesi için yararlı olsa da, şablonlara sahip denetimler, birbirleriyle farklı görünecek şekilde değiştirilebilir.
+Şablonu özelleştirirken, **ınnerrectangle** 'ın **<xref:System.Windows.Shapes.Shape.Fill%2A> özelliğini ve <xref:System.Windows.Shapes.Shape.Stroke%2A> özelliği şablon** arka planına ({TemplateBinding background}) ayarlandığını unutmayın. Bu nedenle, ayrı düğmelerin arka plan rengini ayarladığınızda, bu ilgili özellikler için ayarladığınız arka plan kullanılacaktır. Arka planları şimdi değiştirmeyi deneyin. Aşağıdaki şekilde farklı degradeler kullanılır. Bu nedenle, bir şablon düğme gibi denetimlerin genel özelleştirmesi için yararlı olsa da, şablonlara sahip denetimler, birbirleriyle farklı görünecek şekilde değiştirilebilir.
 
 ![Aynı şablona sahip düğmeler](./media/custom-button-blend-blendconclusion.jpg "custom_button_blend_BlendConclusion")
 

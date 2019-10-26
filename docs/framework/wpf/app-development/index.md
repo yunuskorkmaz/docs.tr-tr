@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WPF [WPF], about application development
 - application development [WPF], about
 ms.assetid: 2996ce5e-81e9-49ae-881b-952db3dd1b7e
-ms.openlocfilehash: 405a8d3c8b922d0f74e522e85ea3096d989c478e
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 85218bd4b6e900bd4508a5c90132419a07846f2c
+ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582498"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72920209"
 ---
 # <a name="application-development"></a>Uygulama Geliştirme
 <a name="introduction"></a>Windows Presentation Foundation (WPF), aşağıdaki uygulama türlerini geliştirmek için kullanılabilen bir sunum çerçevesidir:  
@@ -46,7 +46,7 @@ ms.locfileid: "72582498"
   
 - Windows 'ı tek başına uygulamalarda yönetme.  
   
-- Gezinti pencereleri ve çerçevelerle [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] ve tek başına uygulamalarda gezinmeyi izleme.  
+- Gezinti pencereleri ve çerçevelerle [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]ve tek başına uygulamalarda gezinmeyi izleme.  
   
  Bu yetenekler, *uygulama tanımı*kullanarak uygulamalarınıza ekleyeceğiniz <xref:System.Windows.Application> sınıfı tarafından uygulanır.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "72582498"
   
 <a name="Windows_and_Dialog_Boxes"></a>   
 ## <a name="windows-and-dialog-boxes"></a>Pencereler ve Iletişim kutuları  
- Kullanıcılar Windows aracılığıyla [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] tek başına uygulamalarla etkileşime geçer. Bir pencerenin amacı, uygulama içeriğini barındırmak ve genellikle kullanıcıların içerikle etkileşime geçmesini sağlayan uygulama işlevlerini kullanıma sunmasıdır. @No__t_0, Windows şunları destekleyen <xref:System.Windows.Window> sınıfıyla kapsüllenir:  
+ Kullanıcılar Windows aracılığıyla [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] tek başına uygulamalarla etkileşime geçer. Bir pencerenin amacı, uygulama içeriğini barındırmak ve genellikle kullanıcıların içerikle etkileşime geçmesini sağlayan uygulama işlevlerini kullanıma sunmasıdır. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], Windows şunları destekleyen <xref:System.Windows.Window> sınıfıyla kapsüllenir:  
   
 - Windows oluşturuluyor ve gösteriliyor.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "72582498"
   
  <xref:System.Windows.Window>, iletişim kutusu olarak bilinen özel bir pencere türü oluşturma yeteneğini destekler. Hem kalıcı hem de kalıcı olmayan iletişim kutusu türleri oluşturulabilir.  
   
- Kolaylık sağlaması ve uygulamalar arasında tutarlı bir kullanıcı deneyimi sağlamak için, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] ortak Windows iletişim kutularından üçünü kullanıma sunar: <xref:Microsoft.Win32.OpenFileDialog>, <xref:Microsoft.Win32.SaveFileDialog> ve <xref:System.Windows.Controls.PrintDialog>.  
+ Kolaylık sağlaması ve uygulamalar arasında tutarlı bir kullanıcı deneyimi sağlamak için, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] ortak Windows iletişim kutularından üçünü kullanıma sunar: <xref:Microsoft.Win32.OpenFileDialog>, <xref:Microsoft.Win32.SaveFileDialog>ve <xref:System.Windows.Controls.PrintDialog>.  
   
  İleti kutusu, kullanıcılara önemli metin bilgileri göstermek ve basit Evet/Hayır/Tamam/Iptal soruları sormak için özel bir iletişim kutusu türüdür. İleti kutularını oluşturmak ve göstermek için <xref:System.Windows.MessageBox> sınıfını kullanın.  
   
@@ -94,7 +94,7 @@ ms.locfileid: "72582498"
   
  Gezintiyi kolaylaştırmak için [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aşağıdakileri uygular:  
   
-- <xref:System.Windows.Navigation.NavigationService>, <xref:System.Windows.Controls.Frame>, <xref:System.Windows.Navigation.NavigationWindow> ve [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] tarafından uygulama içi gezintiyi desteklemek için kullanılan gezinti isteklerini işlemeye yönelik paylaşılan gezinti motoru.  
+- <xref:System.Windows.Navigation.NavigationService>, <xref:System.Windows.Controls.Frame>, <xref:System.Windows.Navigation.NavigationWindow>ve [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] tarafından uygulama içi gezintiyi desteklemek için kullanılan gezinti isteklerini işlemeye yönelik paylaşılan gezinti motoru.  
   
 - Gezinmeyi başlatmak için gezinti yöntemleri.  
   
@@ -112,7 +112,7 @@ ms.locfileid: "72582498"
   
 <a name="Build_and_Deploy"></a>   
 ## <a name="build-and-deploy"></a>Yapılandırma ve Dağıtma  
- Basit [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulamalar komut satırı derleyicileri kullanılarak bir komut isteminden oluşturulabilir, ancak [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], geliştirme ve oluşturma sürecini basitleştirerek ek destek sağlamak için [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] ile tümleşir. Daha fazla bilgi için bkz. [WPF uygulaması oluşturma](building-a-wpf-application-wpf.md).  
+ Basit [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulamalar komut satırı derleyicileri kullanılarak bir komut isteminden oluşturulabilir, ancak [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] geliştirme ve oluşturma sürecini basitleştirerek ek destek sağlamak için Visual Studio ile tümleşir. Daha fazla bilgi için bkz. [WPF uygulaması oluşturma](building-a-wpf-application-wpf.md).  
   
  Oluşturduğunuz uygulamanın türüne bağlı olarak, aralarından seçim yapabileceğiniz bir veya daha fazla dağıtım seçeneği vardır. Daha fazla bilgi için bkz. [WPF uygulaması dağıtma](deploying-a-wpf-application-wpf.md).  
   
@@ -124,7 +124,7 @@ ms.locfileid: "72582498"
 |[Uygulama Yönetimine Genel Bakış](application-management-overview.md)|Uygulama yaşam süresi, Windows, uygulama kaynakları ve gezinmeyi yönetme dahil <xref:System.Windows.Application> sınıfına genel bir bakış sağlar.|  
 |[WPF’de Windows](windows-in-wpf-applications.md)|Uygulamanızda, <xref:System.Windows.Window> sınıfı ve iletişim kutularının kullanımı dahil olmak üzere yönetme hakkında ayrıntılı bilgi sağlar.|  
 |[Gezintiye Genel Bakış](navigation-overview.md)|Uygulamanızın sayfaları arasında gezinmeyi yönetmeye ilişkin bir genel bakış sağlar.|  
-|[Barındırma](hosting-wpf-applications.md)|@No__t_0 genel bir bakış sağlar.|  
+|[Barındırma](hosting-wpf-applications.md)|[!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]genel bir bakış sağlar.|  
 |[Derleme ve Dağıtma](building-and-deploying-wpf-applications.md)|WPF uygulamanızı derleyip dağıtmayı açıklar.|  
 |[Visual Studio’da WPF’ye Giriş](../getting-started/introduction-to-wpf-in-vs.md)|WPF 'nin ana özelliklerini açıklar.|  
 |[İzlenecek Yol: İlk WPF masaüstü uygulamam](../getting-started/walkthrough-my-first-wpf-desktop-application.md)|Sayfa gezintisi, düzen, denetimler, görüntüler, stiller ve bağlamayı kullanarak bir WPF uygulamasının nasıl oluşturulduğunu gösteren bir izlenecek yol.|

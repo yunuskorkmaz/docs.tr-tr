@@ -14,18 +14,24 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF]
 - WPF [WPF]
 ms.assetid: f667bd15-2134-41e9-b4af-5ced6fafab5d
-ms.openlocfilehash: 35a936cbc34bf10219099090e1af8c145d7fb23d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 69cdae86a295793c8da6b7f663b22846ae2c32b2
+ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61764549"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72919363"
 ---
 # <a name="windows-presentation-foundation"></a>Windows Presentation Foundation
-Visual Studio'da Windows Presentation Foundation (WPF), satır iş kolu Windows Masaüstü uygulamaları oluşturmak için birleştirilmiş programlama modeli geliştiricilere sağlar.  
-  
- [Windows Presentation Foundation ile Masaüstü uygulamaları oluşturun](/visualstudio/designers/create-modern-desktop-applications-with-windows-presentation-foundation)  
 
- [Visual Studio ve Visual Studio İçin Blend Uygulamalarında XAML Tasarlama](/visualstudio/designers/designing-xaml-in-visual-studio)  
-  
- [Get Visual Studio](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)
+Windows Presentation Foundation (WPF), geliştiricilere Windows üzerinde iş kolu masaüstü uygulamaları oluşturmak için birleştirilmiş bir programlama modeli sağlar.
+
+- [WPF'ye Giriş](introduction-to-wpf.md)
+- [Başlarken](getting-started/index.md)
+- [Uygulama Geliştirme](app-development/index.md)
+- [Gelişmiş](advanced/index.md)
+- [Denetimler](controls/index.md)
+- [Veri](data/index.md)
+- [Grafikler ve Multimedya](graphics-multimedia/index.md)
+- [Security](security-wpf.md)
+- [WPF Örnekleri](wpf-samples.md)
+- [Sınıf Kitaplığı](class-library-wpf.md)

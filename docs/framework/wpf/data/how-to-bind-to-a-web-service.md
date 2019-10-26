@@ -9,41 +9,41 @@ helpviewer_keywords:
 - Web service binding [WPF]
 - data binding [WPF], Web service
 ms.assetid: 77e2d373-69ba-4cbd-b6f5-2c83c38fc98b
-ms.openlocfilehash: 2c3bc1f2142f07aba3df2da6c46117d3907443a5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 72638101b73e6b43fa225885b2e1f27d87b22826
+ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61954290"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72920139"
 ---
 # <a name="how-to-bind-to-a-web-service"></a>Nasıl yapılır: Web Hizmetine Bağlama
-Bu örnekte, Web hizmeti yöntem çağrıları tarafından döndürülen nesnelere bağlama gösterilmektedir.  
+Bu örnek, Web hizmeti yöntem çağrıları tarafından döndürülen nesnelere nasıl bağlanılacağını gösterir.  
   
 ## <a name="example"></a>Örnek  
- Bu örnekte [MSDN/TechNet yayımlama sistemi(MTPS) içerik hizmeti](https://go.microsoft.com/fwlink/?LinkId=95677) belirtilen bir belge tarafından desteklenen dillerin listesini almak için.  
+ Bu örnek, belirtilen bir belge tarafından desteklenen dillerin listesini almak için [MSDN/TechNet yayımlama sistemi (MTPS) Içerik hizmetini](https://go.microsoft.com/fwlink/?LinkId=95677) kullanır.  
   
- Bir Web hizmeti çağırmadan önce buna bir başvuru oluşturmanız gerekir. MTPS hizmeti kullanarak bir Web başvurusu [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)], aşağıdaki adımları izleyin:  
+ Bir Web hizmetini çağırmak için bir başvuru oluşturmanız gerekir. Visual Studio kullanarak MTPS hizmetine bir Web başvurusu oluşturmak için aşağıdaki adımları izleyin:  
   
-1. İçerisinde projenizi açın [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)].  
+1. Projenizi Visual Studio 'da açın.  
   
-2. Gelen **proje** menüsünde tıklatın **Web başvurusu Ekle'yi**.  
+2. **Proje** menüsünden **Web başvurusu Ekle**' ye tıklayın.  
   
-3. İletişim kutusunda ayarlanan **URL** için [ http://services.msdn.microsoft.com/contentservices/contentservice.asmx?wsdl ](https://services.msdn.microsoft.com/contentservices/contentservice.asmx?wsdl).  
+3. İletişim kutusunda **URL 'yi** [http://services.msdn.microsoft.com/contentservices/contentservice.asmx?wsdl](https://services.msdn.microsoft.com/contentservices/contentservice.asmx?wsdl)olarak ayarlayın.  
   
-4. Tuşuna **Git** ardından **Başvurusu Ekle**.  
+4. **Git** ' e ve ardından **Başvuru Ekle**' ye basın.  
   
- Ardından, Web hizmeti yöntemi çağırmanızı ve <xref:System.Windows.FrameworkElement.DataContext%2A> uygun denetim ya da penceresine döndürülen nesne. **GetContent** MTPS hizmetinin yöntemi, bir başvuru alır **getContentRequest** nesne. Bu nedenle, aşağıdaki örnekte, ilk olarak istek nesnesini ayarlar:  
+ Ardından, Web hizmeti yöntemini çağırır ve uygun denetimin veya pencerenin <xref:System.Windows.FrameworkElement.DataContext%2A> döndürülen nesneye ayarlarsınız. MTPS hizmetinin **GetContent** yöntemi **getContentRequest** nesnesine bir başvuru alır. Bu nedenle, aşağıdaki örnek önce bir istek nesnesi ayarlar:  
   
  [!code-csharp[BindToWebService#Namespace](~/samples/snippets/csharp/VS_Snippets_Wpf/BindToWebService/CSharp/Window1.xaml.cs#namespace)]
  [!code-vb[BindToWebService#Namespace](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BindToWebService/VisualBasic/Window1.xaml.vb#namespace)]  
 [!code-csharp[BindToWebService#WebServiceCall](~/samples/snippets/csharp/VS_Snippets_Wpf/BindToWebService/CSharp/Window1.xaml.cs#webservicecall)]
 [!code-vb[BindToWebService#WebServiceCall](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BindToWebService/VisualBasic/Window1.xaml.vb#webservicecall)]  
   
- Sonra <xref:System.Windows.FrameworkElement.DataContext%2A> , oluşturabilir nesnenin özelliklerini bağlar, ayarlanmadı <xref:System.Windows.FrameworkElement.DataContext%2A> ayarlanmış. Bu örnekte, <xref:System.Windows.FrameworkElement.DataContext%2A> ayarlanır **getContentResponse** tarafından döndürülen nesne **GetContent** yöntemi. Aşağıdaki örnekte, <xref:System.Windows.Controls.ItemsControl> bağlar ve görüntüler **yerel** değerlerini **availableVersionsAndLocales** , **getContentResponse**.  
+ <xref:System.Windows.FrameworkElement.DataContext%2A> ayarlandıktan sonra, <xref:System.Windows.FrameworkElement.DataContext%2A> ayarlandığı nesnenin özelliklerine bağlar oluşturabilirsiniz... Bu örnekte <xref:System.Windows.FrameworkElement.DataContext%2A>, **GetContent** metodu tarafından döndürülen **getContentResponse** nesnesine ayarlanır. Aşağıdaki örnekte <xref:System.Windows.Controls.ItemsControl> ' a bağlanır ve **getContentResponse**' un **availableversionsandlocale** değerlerini görüntüler.  
   
  [!code-xaml[BindToWebService#Binding](~/samples/snippets/csharp/VS_Snippets_Wpf/BindToWebService/CSharp/Window1.xaml#binding)]  
   
- Yapısı hakkında bilgi için **getContentResponse**, bkz: [içerik hizmeti belgeleri](https://services.msdn.microsoft.com/ContentServices/ContentService.asmx).  
+ **GetContentResponse**yapısı hakkında daha fazla bilgi için bkz. [içerik hizmeti belgeleri](https://services.msdn.microsoft.com/ContentServices/ContentService.asmx).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

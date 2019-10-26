@@ -5,49 +5,49 @@ helpviewer_keywords:
 - walkthroughs [WPF]
 - WPF walkthroughs [WPF]
 ms.assetid: c29bde96-0389-4aff-a9fb-cd678f66b7f7
-ms.openlocfilehash: 1ec147d4ec7b59a7ac8e01680266cbd24b644985
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 34cd7e96442a570a3951e6303d2ac90ce5da6239
+ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62010364"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72920403"
 ---
 # <a name="wpf-walkthroughs"></a>WPF İzlenecek Yollar
-İzlenecek yollar, yaygın senaryolar için adım adım yönergeler sağlar. Bu ürün veya belirli bir özellik alanı öğrenmeye başlayın için iyi bir yer sağlar.  
-  
- Bu konu, Windows Presentation Foundation (WPF) izlenecek yollar için bağlantılar içerir.  
-  
-## <a name="wpf-designer-walkthroughs"></a>WPF Tasarımcısı izlenecek yolları  
-  
-|Başlık|Açıklama|  
-|-----------|-----------------|  
-|[İzlenecek yol: WPF Tasarımcısı ile Basit WPF uygulaması oluşturma](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb546972(v=vs.100))|Basit WPF uygulaması derlemeyi gösterir [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].|  
-|[İzlenecek yol: Dinamik bir düzen oluşturuluyor](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb514519(v=vs.100))|Kullanarak dinamik bir düzen oluşturma işlemi bir <xref:System.Windows.Controls.Grid> panel denetimi.|  
-|[İzlenecek yol: WPF Tasarımcısı kullanarak yeniden boyutlandırılabilir bir uygulama oluşturma](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb546954(v=vs.100))|Çalışma zamanında kullanıcı tarafından yeniden boyutlandırılabilir pencere düzenlerini oluşturma işlemini gösterir.|  
-|[İzlenecek yol: WPF Tasarımcısı kullanarak veri bağlama oluşturma](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/dd434207(v=vs.100))|Nasıl kullanılacağını gösteren [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)] veri bir denetime bağlama veri bağlamaları oluşturmak için.|  
-|[İzlenecek yol: Veri Tasarımcısı'nda bağlamak için bir Designınstance kullanma](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/dd490796(v=vs.100))|Nasıl kullanılacağını gösteren [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)] veri bağlamaları tasarım zamanında çalışma zamanında atanan bir veri bağlamı için oluşturulacak.|  
-  
-## <a name="wpf-walkthroughs"></a>WPF İzlenecek Yollar  
-  
-|Başlık|Açıklama|  
-|-----------|-----------------|  
-|[İzlenecek yol: İlk WPF Masaüstü Uygulamam](walkthrough-my-first-wpf-desktop-application.md)|Birçok ortak WPF denetimleri, Düzen ve veri bağlama gibi özelliklerini kullanarak bir WPF uygulaması oluşturmayı gösterir.|  
-|[XAML Kullanarak bir Düğme Oluşturma](../controls/walkthrough-create-a-button-by-using-xaml.md)|Bir animasyonlu düğme oluşturma işlemi gösterilmektedir.|  
-|[Microsoft Expression Blend Kullanarak Düğme Oluşturma](../controls/walkthrough-create-a-button-by-using-microsoft-expression-blend.md)|Microsoft Expression Blend kullanarak özelleştirilmiş bir düğme oluşturma işlemi gösterilmektedir.|  
-|[İzlenecek yol: DataGrid denetimindeki SQL Server veritabanından veri görüntüleme](../controls/walkthrough-display-data-from-a-sql-server-database-in-a-datagrid-control.md)|Bir SQL Server veritabanından veri almak ve bu verileri görüntülemek nasıl gösterir bir <xref:System.Windows.Controls.DataGrid> denetimi.|  
-  
-## <a name="migration-and-interoperability-in-wpf"></a>Geçiş ve WPF birlikte çalışabilirlik  
-  
-|Başlık|Açıklama|  
-|-----------|-----------------|  
-|[İzlenecek yol: WPF'de Windows Forms denetimini barındırma](../advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md)|Bir Windows Forms barındırmak nasıl gösterir <xref:System.Windows.Forms.MaskedTextBox?displayProperty=nameWithType> WPF uygulamasında denetimi.|  
-|[İzlenecek yol: WPF'de Windows Forms bileşik denetimini barındırma](../advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)|Windows Forms veri girişi bileşik denetimini barındırmak nasıl gösterir bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulama.|  
-|[İzlenecek yol: WPF bileşik denetimini Windows Forms içinde barındırma](../advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)|WPF veri girişi bileşik denetimini Windows Forms uygulamasında barındırmak nasıl gösterir.|  
-|[İzlenecek yol: Düzenleme Windows Forms denetimlerini düzenleme](../advanced/walkthrough-arranging-windows-forms-controls-in-wpf.md)|Windows Forms denetimlerinde karma uygulamayı düzenlemek için WPF düzen özelliklerini nasıl yapılacağı açıklanır.|  
-|[İzlenecek yol: Karma uygulamalarda veriye bağlama](../advanced/walkthrough-binding-to-data-in-hybrid-applications.md)|Veri bağlama hem Windows Forms ve WPF denetimleri içeren karma uygulamalarda nasıl yapılacağı açıklanır.|  
-  
-## <a name="related-sections"></a>İlgili Bölümler  
-  
-|Başlık|Açıklama|  
-|-----------|-----------------|  
-|[Visual Studio izlenecek yollar](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/szatc41e(v=vs.100))|Visual Studio'da programlama tüm alanlar için ilgili izlenecek yollar listesini verir.|
+İzlenecek yollar, yaygın senaryolar için adım adım yönergeler sağlar. Bu, ürün veya belirli bir özellik alanı hakkında öğrenmeye başlamak için iyi bir yer sağlar.
+
+ Bu konu, Windows Presentation Foundation (WPF) talimatlara bağlantılar içerir.
+
+## <a name="wpf-designer-walkthroughs"></a>WPF Tasarımcısı Izlenecek yollar
+
+|Başlık|Açıklama|
+|-----------|-----------------|
+|[İzlenecek yol: WPF Tasarımcısı ile basit bir WPF uygulaması oluşturma](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb546972(v=vs.100))|[!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)]basit bir WPF uygulamasının nasıl oluşturulacağını gösterir.|
+|[İzlenecek yol: Dinamik düzen oluşturma](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb514519(v=vs.100))|<xref:System.Windows.Controls.Grid> panel denetimi kullanarak dinamik düzen oluşturmayı gösterir.|
+|[İzlenecek yol: WPF tasarımcısını kullanarak yeniden boyutlandırılabilir bir uygulama oluşturma](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb546954(v=vs.100))|Çalışma zamanında Kullanıcı tarafından yeniden boyutlandırılabilir pencere düzenleri oluşturmayı gösterir.|
+|[İzlenecek yol: WPF Tasarımcısı kullanarak veri bağlama oluşturma](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/dd434207(v=vs.100))|Bir denetime veri bağlayan veri bağlamaları oluşturmak için [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)] nasıl kullanacağınızı gösterir.|
+|[İzlenecek yol: tasarımcıda verilere bağlamak için bir DesignInstance kullanma](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/dd490796(v=vs.100))|Çalışma zamanında atanan bir veri bağlamı için tasarım zamanında veri bağlamaları oluşturmak üzere [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)] nasıl kullanacağınızı gösterir.|
+
+## <a name="wpf-walkthroughs"></a>WPF İzlenecek Yollar
+
+|Başlık|Açıklama|
+|-----------|-----------------|
+|[İzlenecek Yol: İlk WPF masaüstü uygulamam](walkthrough-my-first-wpf-desktop-application.md)|WPF 'in denetimler, düzen ve veri bağlama gibi yaygın birçok özelliğini kullanarak bir WPF uygulaması oluşturmayı gösterir.|
+|[XAML Kullanarak bir Düğme Oluşturma](../controls/walkthrough-create-a-button-by-using-xaml.md)|Animasyonlu bir düğmenin nasıl oluşturulacağını gösterir.|
+|[Microsoft Expression Blend Kullanarak Düğme Oluşturma](../controls/walkthrough-create-a-button-by-using-microsoft-expression-blend.md)|Microsoft Expression Blend kullanarak özelleştirilmiş bir düğme oluşturma sürecini gösterir.|
+|[İzlenecek yol: DataGrid Denetimindeki SQL Server Veritabanından Veri Görüntüleme](../controls/walkthrough-display-data-from-a-sql-server-database-in-a-datagrid-control.md)|SQL Server veritabanından verilerin nasıl alınacağını ve bu verilerin bir <xref:System.Windows.Controls.DataGrid> denetiminde nasıl görüntüleneceğini gösterir.|
+
+## <a name="migration-and-interoperability-in-wpf"></a>WPF 'de geçiş ve birlikte çalışabilirlik
+
+|Başlık|Açıklama|
+|-----------|-----------------|
+|[İzlenecek yol: WPF'de Windows Forms Denetimini Barındırma](../advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md)|WPF uygulamasında bir Windows Forms <xref:System.Windows.Forms.MaskedTextBox?displayProperty=nameWithType> denetiminin nasıl barındırılacağını gösterir.|
+|[İzlenecek yol: WPF'de Windows Forms Bileşik Denetimini Barındırma](../advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamasında bir Windows Forms veri girişi bileşik denetiminin nasıl barındırılacağını gösterir.|
+|[İzlenecek yol: WPF Bileşik Denetimini Windows Forms İçinde Barındırma](../advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)|Windows Forms uygulamasında WPF veri girişi bileşik denetiminin nasıl barındırılacağını gösterir.|
+|[İzlenecek yol: WPF'de Windows Forms Denetimlerini Düzenleme](../advanced/walkthrough-arranging-windows-forms-controls-in-wpf.md)|Karma uygulamada Windows Forms denetimleri düzenlemek için WPF düzen özelliklerinin nasıl kullanılacağını gösterir.|
+|[İzlenecek yol: Karma Uygulamalarda Veriye Bağlama](../advanced/walkthrough-binding-to-data-in-hybrid-applications.md)|Hem Windows Forms hem de WPF denetimlerini içeren karma uygulamalarda veri bağlamayı nasıl kullanacağınızı gösterir.|
+
+## <a name="related-sections"></a>İlgili Bölümler
+
+|Başlık|Açıklama|
+|-----------|-----------------|
+|[Visual Studio Izlenecek yolları](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/szatc41e(v=vs.100))|Visual Studio 'da programlamanın tüm alanlarında ilgili izlenecek yolların listesini verir.|

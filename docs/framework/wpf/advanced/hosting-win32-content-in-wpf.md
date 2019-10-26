@@ -6,24 +6,24 @@ helpviewer_keywords:
 - Win32 code [WPF], WPF interoperation
 - interoperability [WPF], Win32
 ms.assetid: 3cc8644a-34f3-4082-9ddc-77623e4df2d8
-ms.openlocfilehash: b598b55c72096daac2487e4c52584abf9735f257
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 3b6e30a612c87880121c227c85c4bd6a7ef31f40
+ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991467"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72920242"
 ---
 # <a name="hosting-win32-content-in-wpf"></a>WPF'de Win32 İçeriği Barındırma
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Prerequisites
 
 Bkz. [WPF ve Win32 birlikte](wpf-and-win32-interoperation.md)çalışma.
 
 ## <a name="a-walkthrough-of-win32-inside-windows-presentation-framework-hwndhost"></a>Windows Presentation Framework Içinde Win32 bir adım adım (HwndHost)
 
-Uygulamalar içindeki [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içeriği yeniden kullanmak için, <xref:System.Windows.Interop.HwndHost>HWND NDS 'nin içerik gibi [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] görünmesini sağlayan bir denetim olan kullanın. Benzer <xref:System.Windows.Interop.HwndSource> <xref:System.Windows.Interop.HwndHost> `BuildWindowCore` `DestroyWindowCore` şekilde,<xref:System.Windows.Interop.HwndHost> kullanımı basittir: türet [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ve uygulama ve yöntemlerle türetilmiş sınıfınızı oluşturun ve <xref:System.Windows.Interop.HwndHost> Uygulamanızı.
+[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamalar içinde [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] içeriği yeniden kullanmak için, HWND NDS 'nin [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içerik gibi görünmesini sağlayan bir denetim olan <xref:System.Windows.Interop.HwndHost>kullanın. <xref:System.Windows.Interop.HwndSource>gibi, <xref:System.Windows.Interop.HwndHost> kullanımı basittir: <xref:System.Windows.Interop.HwndHost> türetebilir ve `BuildWindowCore` ve `DestroyWindowCore` yöntemleri uygulayıp <xref:System.Windows.Interop.HwndHost> türetilmiş sınıfınızın örneğini oluşturup [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamanızın içine yerleştirin.
 
-Mantığınızın [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] zaten bir denetim olarak paketlenmesi durumunda `BuildWindowCore` uygulamanız, öğesine yapılan `CreateWindow`çağrıdan çok daha fazla. Örneğin, içinde [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] C++bir LISTBOX denetimi oluşturmak için:
+[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] mantığınızın zaten bir denetim olarak paketlenmesi durumunda `BuildWindowCore` uygulamanız `CreateWindow`çağrıdan çok daha fazla. Örneğin, içinde C++BIR [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] LISTBOX denetimi oluşturmak için:
 
 ```cpp
 virtual HandleRef BuildWindowCore(HandleRef hwndParent) override {
@@ -46,25 +46,25 @@ virtual void DestroyWindowCore(HandleRef hwnd) override {
 }
 ```
 
-Ancak kodun yalnızca [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] kendi kendine dahil olmadığı varsayın. Bu durumda, bir [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] iletişim kutusu oluşturabilir ve içeriğini daha büyük [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bir uygulamaya katabilirsiniz. Örnek bunu [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] ve C++' de bunu farklı bir dilde veya komut satırında yapmak mümkün olsa da gösterir.
+Ancak [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] kodun kendi kendine dahil olmadığı varsayın. Bu durumda, bir [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] iletişim kutusu oluşturabilir ve içeriğini daha büyük bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamasına ekleyebilirsiniz. Örnek, bunu Visual Studio 'da ve C++farklı bir dilde veya komut satırında yapmak mümkün olsa da gösterir.
 
 Bir C++ DLL projesine derlenmiş basit bir iletişim kutusuyla başlayın.
 
-Daha sonra, iletişim kutusunu daha büyük [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamaya tanıtın:
+Daha sonra, iletişim kutusunu daha büyük [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamasına tanıtın:
 
-- DLL 'yi yönetilen (`/clr`) olarak derle
+- DLL 'yi yönetilen olarak derle (`/clr`)
 
 - İletişim kutusunu Denetim haline getirin
 
-- Türetilmiş sınıfını <xref:System.Windows.Interop.HwndHost> `BuildWindowCore` ve yöntemlerinitanımlayın`DestroyWindowCore`
+- `BuildWindowCore` ve `DestroyWindowCore` yöntemleriyle birlikte <xref:System.Windows.Interop.HwndHost> türetilen sınıfını tanımlayın
 
-- İletişim `TranslateAccelerator` anahtarlarını işlemek için geçersiz kılma yöntemi
+- İletişim anahtarlarını işlemek için `TranslateAccelerator` yöntemi geçersiz kıl
 
-- Sekmeyi `TabInto` desteklemek için geçersiz kılma yöntemi
+- Sekmeyi desteklemek için `TabInto` yöntemi geçersiz kıl
 
-- Anımsatıcıları `OnMnemonic` desteklemek için yöntemi geçersiz kıl
+- Anımsatıcıları desteklemek için `OnMnemonic` yöntemi geçersiz kıl
 
-- Alt sınıfı oluştur ve sağ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] öğenin altına koy <xref:System.Windows.Interop.HwndHost>
+- <xref:System.Windows.Interop.HwndHost> alt sınıfını oluşturun ve sağ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] öğesinin altına yerleştirin
 
 ### <a name="turn-the-dialog-into-a-control"></a>Iletişim kutusunu Denetim haline getirin
 
@@ -81,7 +81,7 @@ STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSM
 STYLE DS_SETFONT | WS_CHILD | WS_BORDER | DS_CONTROL
 ```
 
-Bu eylem, kendisini bağımsız bir denetime tam olarak paketlemez; Yine de çağırmanız `IsDialogMessage()` [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] gerekir, ancak bazı iletileri işleyebilir, ancak Denetim değişikliği bu denetimleri başka bir HWND içinde yerleştirmenin basit bir yolunu sağlar.
+Bu eylem, kendisini bağımsız bir denetime tam olarak paketlemez; bazı iletileri işlemek [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] için yine de `IsDialogMessage()` çağırmanız gerekir, ancak Denetim değişikliği bu denetimleri başka bir HWND içinde yerleştirmenin basit bir yolunu sağlar.
 
 ## <a name="subclass-hwndhost"></a>HwndHost alt sınıfı
 
@@ -98,7 +98,7 @@ namespace ManagedCpp
     using namespace System::Runtime::InteropServices;
 ```
 
-Ardından türetilmiş bir sınıfı <xref:System.Windows.Interop.HwndHost> oluşturun ve `BuildWindowCore` ve `DestroyWindowCore` yöntemlerini geçersiz kılın:
+Ardından <xref:System.Windows.Interop.HwndHost> türetilmiş bir sınıf oluşturun ve `BuildWindowCore` ve `DestroyWindowCore` yöntemleri geçersiz kılın:
 
 ```cpp
 public ref class MyHwndHost : public HwndHost, IKeyboardInputSink {
@@ -120,7 +120,7 @@ public ref class MyHwndHost : public HwndHost, IKeyboardInputSink {
         }
 ```
 
-Burada, `CreateDialog` gerçekten bir denetim olan iletişim kutusunu oluşturmak için kullanırsınız. Bu, dll içinde çağrılan ilk metotlardan biri olduğundan, daha sonra [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] `InitializeGlobals()`kullanacağınız bir işlevi çağırarak bazı standart başlatma da yapmanız gerekir:
+Burada, gerçekten bir denetim olan iletişim kutusunu oluşturmak için `CreateDialog` kullanırsınız. Bu, DLL içinde çağrılan ilk metotlardan biri olduğundan, daha sonra `InitializeGlobals()`olarak adlandırılan bir işlevi çağırarak bazı standart [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] başlatma işlemi de yapmalısınız:
 
 ```cpp
 bool initialized = false;
@@ -140,7 +140,7 @@ bool initialized = false;
 
 ### <a name="override-translateaccelerator-method-to-handle-dialog-keys"></a>Iletişim anahtarlarını Işlemek için TranslateAccelerator metodunu geçersiz kılın
 
-Bu örneği şu anda çalıştırdıysanız, görüntülenen bir iletişim kutusu denetimi alırsınız, ancak iletişim kutusunu işlevsel bir iletişim kutusu yapan tüm klavye işlemlerini yoksayar. Artık `TranslateAccelerator` uygulamayı (' den `IKeyboardInputSink`gelen bir arabirimi <xref:System.Windows.Interop.HwndHost> ) geçersiz kılmanız gerekir. Bu yöntem, uygulama WM_KEYDOWN ve WM_SYSKEYDOWN aldığında çağırılır.
+Bu örneği şu anda çalıştırdıysanız, görüntülenen bir iletişim kutusu denetimi alırsınız, ancak iletişim kutusunu işlevsel bir iletişim kutusu yapan tüm klavye işlemlerini yoksayar. Artık `TranslateAccelerator` uygulamasını geçersiz kılmanız gerekir (`IKeyboardInputSink`<xref:System.Windows.Interop.HwndHost> uygulayan bir arabirim). Bu yöntem, uygulama WM_KEYDOWN ve WM_SYSKEYDOWN aldığında çağırılır.
 
 ```cpp
 #undef TranslateAccelerator
@@ -193,15 +193,15 @@ Bu örneği şu anda çalıştırdıysanız, görüntülenen bir iletişim kutus
         }
 ```
 
-Bu, tek bir parçadaki çok büyük bir kod olduğundan, daha ayrıntılı açıklamaları kullanabilir. İlk olarak, ve C++ C++ makroları kullanan kod; zaten Winuser. h içinde tanımlanan adlı `TranslateAccelerator`bir makronun zaten bulunduğunu bilmeniz gerekir:
+Bu, tek bir parçadaki çok büyük bir kod olduğundan, daha ayrıntılı açıklamaları kullanabilir. İlk olarak, ve C++ C++ makroları kullanan kod; Winuser. h içinde tanımlanan`TranslateAccelerator`adlı bir makronun zaten bulunduğunu bilmeniz gerekir:
 
 ```cpp
 #define TranslateAccelerator  TranslateAcceleratorW
 ```
 
-Bu nedenle, bir yöntemi `TranslateAccelerator` `TranslateAcceleratorW` değil bir yöntem tanımlamadığınızdan emin olun.
+Bu nedenle, bir `TranslateAcceleratorW` yöntemi değil `TranslateAccelerator` yöntemi tanımladığınızdan emin olun.
 
-Benzer şekilde, hem yönetilmeyen Winuser. h msg hem de yönetilen `Microsoft::Win32::MSG` yapı mevcuttur. `::` İşlecini kullanarak C++ iki arasındaki ilişkiyi ayırt edebilirsiniz.
+Benzer şekilde, hem yönetilmeyen Winuser. h MSG hem de yönetilen `Microsoft::Win32::MSG` yapısı vardır. C++`::`işlecini kullanarak ikisi arasındaki ilişkiyi ortadan kaldırabilirsiniz.
 
 ```cpp
 virtual bool TranslateAccelerator(System::Windows::Interop::MSG% msg,
@@ -231,7 +231,7 @@ Both MSGs have the same data, but sometimes it is easier to work with the unmana
 }
 ```
 
-Öğesine `TranslateAccelerator`geri dönün. Temel prensibi, mümkün olduğunca çok [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] iş `IsDialogMessage` yapmak için işlevi çağırıldır, ancak `IsDialogMessage` iletişim kutusunun dışında bir şeye erişemez. İletişim kutusunda bir kullanıcı sekmesi olarak sekme, iletişim kutusundaki son denetimden sonra çalıştırıldığında, öğesini çağırarak [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] `IKeyboardInputSite::OnNoMoreStops`odağı bölümüne ayarlamanız gerekir.
+`TranslateAccelerator`geri dönün. Temel prensibi, mümkün olduğunca fazla iş yapmak için `IsDialogMessage` [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] işlevi çağırıldır, ancak `IsDialogMessage` iletişim kutusunun dışında bir şeye erişemez. İletişim kutusunda bir kullanıcı sekmesi olarak sekme, iletişim kutusundaki son denetimden sonra çalıştırıldığında, `IKeyboardInputSite::OnNoMoreStops`çağırarak odağı [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bölümüne ayarlamanız gerekir.
 
 ```cpp
 // Win32's IsDialogMessage() will handle most of the tabbing, but doesn't know
@@ -253,7 +253,7 @@ if (m.message == WM_KEYDOWN && m.wParam == VK_TAB) {
 }
 ```
 
-Son olarak, `IsDialogMessage`çağırın. Ancak bir `TranslateAccelerator` yöntemin sorumluluklarıyla, tuş vuruşu işlenip işlemeyeceğinizi söylemiş [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] olabilirsiniz. Bunu yapmadıysanız, giriş olayı uygulamanın geri kalanı aracılığıyla tünel ve balon oluşturabilir. Burada, klavye messange işleme ve içindeki giriş mimarisinin doğasını bir olağandışı şekilde [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]kullanıma sunacaksınız. Ne yazık `IsDialogMessage` ki, belirli bir tuş vuruşunu işleymeksizin hiçbir şekilde döndürmez. Daha da kötüsü, bu `DispatchMessage()` , işleyememesi gereken tuş vuruşlarına çağrı görür!  Bu nedenle, bunu tersine mühendislik `IsDialogMessage`yapmanız ve yalnızca işleyeceğimizi bildiğiniz anahtarlar için çağırmanız gerekir:
+Son olarak, `IsDialogMessage`çağırın. Ancak, bir `TranslateAccelerator` yönteminin sorumluluklarıyla, tuş vuruşunu işlemiş olup olmadığını [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] söylemiş olursunuz. Bunu yapmadıysanız, giriş olayı uygulamanın geri kalanı aracılığıyla tünel ve balon oluşturabilir. Burada, bir klavye messange işleme ve [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]giriş mimarisinin doğasını ortaya çıkaracaksınız. Ne yazık ki, `IsDialogMessage` belirli bir tuş vuruşunu işleymeksizin hiçbir şekilde döndürmez. Daha da kötüleşse de, işlem yapılmamalıdır `DispatchMessage()`.  Bu nedenle, `IsDialogMessage`tersine mühendislik yapmanız ve yalnızca işleyeceği anahtarlar için çağırmanız gerekir:
 
 ```cpp
 // Only call IsDialogMessage for keys it will do something with.
@@ -278,7 +278,7 @@ if (msg.message == WM_SYSKEYDOWN || msg.message == WM_KEYDOWN) {
 
 ### <a name="override-tabinto-method-to-support-tabbing"></a>Sekmeyi desteklemek için TabInto metodunu geçersiz kılın
 
-Artık uyguladığınıza `TranslateAccelerator`göre, bir Kullanıcı, iletişim kutusunun içinde sekme ve üzerini daha büyük [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bir uygulamada sekmeye dönüştürebilirsiniz. Ancak bir Kullanıcı iletişim kutusuna geri sekme kullanamaz. Bunu çözümlemek için geçersiz kılabilirsiniz `TabInto`:
+`TranslateAccelerator`uyguladığınıza göre, bir Kullanıcı, iletişim kutusunun içinde sekme ve daha fazla [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamasına sekme ekleyebilir. Ancak bir Kullanıcı iletişim kutusuna geri sekme kullanamaz. Bunu çözümlemek için `TabInto`geçersiz kılabilirsiniz:
 
 ```cpp
 public:
@@ -295,11 +295,11 @@ public:
     }
 ```
 
-`TraversalRequest` Parametresi sekme eyleminin sekme veya kaydırma sekmesi olduğunu söyler.
+`TraversalRequest` parametresi, sekme eyleminin sekme veya kaydırma sekmesi olduğunu söyler.
 
 ### <a name="override-onmnemonic-method-to-support-mnemonics"></a>Anımsatıcıları desteklemek için Onanımsatıcı metodunu geçersiz kılın
 
-Klavye işleme neredeyse tamamlanmıştır, ancak bir şey eksik, ancak anımsatıcıları çalışmaz. Bir kullanıcı alt-F tuşlarına basarsa, odak "Ilk ad:" düzenleme kutusuna atmaz. Bu nedenle, `OnMnemonic` yöntemini geçersiz kılarsınız:
+Klavye işleme neredeyse tamamlanmıştır, ancak bir şey eksik, ancak anımsatıcıları çalışmaz. Bir kullanıcı alt-F tuşlarına basarsa, odak "Ilk ad:" düzenleme kutusuna atmaz. Bu nedenle `OnMnemonic` yöntemi geçersiz kılınır:
 
 ```cpp
 virtual bool OnMnemonic(System::Windows::Interop::MSG% msg, ModifierKeys modifiers) override {
@@ -329,11 +329,11 @@ virtual bool OnMnemonic(System::Windows::Interop::MSG% msg, ModifierKeys modifie
 };
 ```
 
-Neden burada çağırmayın `IsDialogMessage` ?  Yukarıdaki ile aynı sorun var, ancak kodunuzun tuş vuruşu yapıp gerçekleştirmediğini [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] `IsDialogMessage` kodlayabilmeniz gerekir. İkinci bir sorun da vardır, çünkü `IsDialogMessage` odaklanmış HWND iletişim kutusunun içinde değilse, anımsatıcı işlemeyi reddeder.
+Neden `IsDialogMessage` çağırmayın?  Yukarıdaki ile aynı sorun var, kodunuzun tuş vuruşu yapıp gerçekleştirmediğini [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] kodu bilgilendirebilmeniz gerekir ve `IsDialogMessage` bunu yapamaz. Ayrıca, odaklanmış HWND iletişim kutusunun içinde değilse, `IsDialogMessage` bir ikinci sorun da vardır.
 
 ### <a name="instantiate-the-hwndhost-derived-class"></a>HwndHost türetilen sınıfının örneğini oluşturma
 
-Son olarak, artık tüm anahtar ve sekme desteği hazır olduğuna göre, uygulamanızı <xref:System.Windows.Interop.HwndHost> daha büyük [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bir uygulamaya yerleştirebilirsiniz. Ana uygulama dilinde [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]yazılmışsa, doğru yere yerleştirmenin en kolay yolu, koymak <xref:System.Windows.Interop.HwndHost>istediğiniz yerde boş <xref:System.Windows.Controls.Border> bir öğe bırakmamadır. Burada adlı bir <xref:System.Windows.Controls.Border> ad `insertHwndHostHere`oluşturursunuz:
+Son olarak, artık tüm anahtar ve sekme desteği hazır olduğuna göre <xref:System.Windows.Interop.HwndHost> daha büyük [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamasına koyabilirsiniz. Ana uygulama [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]yazılmışsa, doğru yere koymanın en kolay yolu, <xref:System.Windows.Interop.HwndHost>koymak istediğiniz boş bir <xref:System.Windows.Controls.Border> öğesi bırakmamadır. Burada `insertHwndHostHere`adlı bir <xref:System.Windows.Controls.Border> oluşturursunuz:
 
 ```xaml
 <Window x:Class="WPFApplication1.Window1"
@@ -350,7 +350,7 @@ Son olarak, artık tüm anahtar ve sekme desteği hazır olduğuna göre, uygula
 </Window>
 ```
 
-Bu durumda, <xref:System.Windows.Interop.HwndHost> ' nin örneğini oluşturmak ve <xref:System.Windows.Controls.Border>öğesine bağlamak için kod dizisinde iyi bir yer bulabilirsiniz. Bu örnekte, <xref:System.Windows.Window> türetilmiş sınıf için oluşturucuyu içine koyacaksınız:
+Bu durumda, <xref:System.Windows.Interop.HwndHost> örneklendirilecek ve <xref:System.Windows.Controls.Border>bağlamak için kod dizisinde iyi bir yer bulabilirsiniz. Bu örnekte, <xref:System.Windows.Window> türetilmiş sınıfına ait oluşturucuyu içine koyacaksınız:
 
 ```csharp
 public partial class Window1 : Window {

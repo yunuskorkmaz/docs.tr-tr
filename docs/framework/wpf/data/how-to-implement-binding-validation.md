@@ -1,42 +1,48 @@
 ---
 title: 'Nasıl yapılır: Bağlama Doğrulaması Uygulama'
 ms.date: 03/30/2017
+dev_langs:
+- csharp
+- vb
 helpviewer_keywords:
 - validation of binding [WPF]
 - data binding [WPF], validation of binding
 - binding [WPF], validation of
 ms.assetid: eb98b33d-9866-49ae-b981-bc5ff20d607a
-ms.openlocfilehash: 3950df8b6f4b48a035c6ebf37d8d65c18cb82e1e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7a1a8df78a785066992472c7de37f958ae3467f1
+ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62010338"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72920162"
 ---
 # <a name="how-to-implement-binding-validation"></a>Nasıl yapılır: Bağlama Doğrulaması Uygulama
-Bu örnek nasıl kullanılacağını gösterir. bir <xref:System.Windows.Controls.Validation.ErrorTemplate%2A> ve geçersiz bir değer girildiğinde, kullanıcıyı bilgilendirmek üzere görsel geri bildirim sağlamak için bir stil tetikleyicisi dayalı bir özel doğrulama kuralı.  
+
+Bu örnek, bir <xref:System.Windows.Controls.Validation.ErrorTemplate%2A> ve stil tetikleyicisinin bir özel doğrulama kuralına göre geçersiz bir değer girildiğinde kullanıcıya bilgilendirmek için görsel geribildirim sağlamak üzere nasıl kullanılacağını gösterir.
+
+## <a name="example"></a>Örnek
+
+Aşağıdaki örnekteki <xref:System.Windows.Controls.TextBox> metin içeriği, `ods`adlı bir bağlama kaynak nesnesinin `Age` özelliğine (int türünde) bağlanır. Bağlama, Kullanıcı sayısal olmayan karakterler veya 130 21 ' den daha küçük bir değer girerse `AgeRangeRule` adlı bir doğrulama kuralı kullanmak üzere ayarlanır; Bu durumda, metin kutusunun yanında kırmızı bir ünlem işareti görünür ve hata iletisi  Kullanıcı fareyi metin kutusunun üzerine taşıdıkça.
+
+[!code-xaml[BindValidation#2](~/samples/snippets/csharp/VS_Snippets_Wpf/BindValidation/CSharp/Window1.xaml#2)]
+
+Aşağıdaki örnek, <xref:System.Windows.Controls.ValidationRule> devralan `AgeRangeRule`uygulamasını gösterir ve <xref:System.Windows.Controls.ValidationRule.Validate%2A> yöntemini geçersiz kılar. `Int32.Parse` yöntemi, geçersiz karakter içermediğinden emin olmak için değer üzerinde çağrılır. <xref:System.Windows.Controls.ValidationRule.Validate%2A> yöntemi, değerin ayrıştırma sırasında yakalanıp yakalanmadığını ve yaş değerinin alt ve üst sınırların dışında olup olmadığına bağlı olarak değerin geçerli olup olmadığını belirten bir <xref:System.Windows.Controls.ValidationResult> döndürür.
+
+[!code-csharp[BindValidation#3](~/samples/snippets/csharp/VS_Snippets_Wpf/BindValidation/CSharp/AgeRangeRule.cs#3)]
+[!code-vb[BindValidation#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BindValidation/VisualBasic/AgeRangeRule.vb#3)]
+
+Aşağıdaki örnek, kullanıcıya doğrulama hatası bildirmek için kırmızı bir ünlem işareti oluşturan özel <xref:System.Windows.Controls.ControlTemplate> `validationTemplate` gösterir. Denetim şablonları, bir denetimin görünümünü yeniden tanımlamak için kullanılır.
+
+[!code-xaml[BindValidation#4](~/samples/snippets/csharp/VS_Snippets_Wpf/BindValidation/CSharp/Window1.xaml#4)]
+
+Aşağıdaki örnekte gösterildiği gibi, hata iletisini gösteren <xref:System.Windows.Controls.ToolTip> `textBoxInError`adlı stil kullanılarak oluşturulur. <xref:System.Windows.Controls.Validation.HasError%2A> değeri `true`, tetikleyici geçerli <xref:System.Windows.Controls.TextBox> araç ipucunu ilk doğrulama hatasına ayarlar. <xref:System.Windows.Data.Binding.RelativeSource%2A>, geçerli öğeye başvuran <xref:System.Windows.Data.RelativeSourceMode.Self>olarak ayarlanır.
+
+[!code-xaml[BindValidation#5](~/samples/snippets/csharp/VS_Snippets_Wpf/BindValidation/CSharp/Window1.xaml#5)]
+
+Tüm örnek için bkz. [bağlama doğrulama örneği](https://github.com/Microsoft/WPF-Samples/tree/master/Data%20Binding/BindValidation).
   
-## <a name="example"></a>Örnek  
- Metin içeriği <xref:System.Windows.Controls.TextBox> aşağıdaki örnekte bağlı `Age` özelliği (int türü) adlı bir bağlama kaynağı nesnesinin `ods`. Adlı bir doğrulama kuralı kullanılacak bağlama ayarlayın `AgeRangeRule` kullanıcı sayısal olmayan karakterler veya 21'den küçük veya 130'dan büyük bir değer girerse metin kutusunun yanındaki kırmızı bir ünlem işareti görünür ve Microsoft hata iletisiyle bir araç ipucu görünür n kullanıcı, metin kutusunun üzerine fare taşır.  
-  
- [!code-xaml[BindValidation#2](~/samples/snippets/csharp/VS_Snippets_Wpf/BindValidation/CSharp/Window1.xaml#2)]  
-  
- Aşağıdaki örnek uygulamasını gösterir `AgeRangeRule`, işlevinden devralan <xref:System.Windows.Controls.ValidationRule> ve geçersiz kılmaları <xref:System.Windows.Controls.ValidationRule.Validate%2A> yöntemi. Int32.Parse() yöntem, değeri geçersiz karakterler içermediğinden emin olmak için çağrılır. <xref:System.Windows.Controls.ValidationRule.Validate%2A> Yöntemi döndürür bir <xref:System.Windows.Controls.ValidationResult> Ayrıştırma sırasında bir özel durum olup yakalanır ve yaş değeri alt ve üst sınırları dışında olup temel değerin geçerli olup olmadığını gösterir.  
-  
- [!code-csharp[BindValidation#3](~/samples/snippets/csharp/VS_Snippets_Wpf/BindValidation/CSharp/AgeRangeRule.cs#3)]  
-  
- Aşağıdaki örnek, özel gösterir <xref:System.Windows.Controls.ControlTemplate> `validationTemplate` bir doğrulama hatası kullanıcıya bildirmek için kırmızı bir ünlem işareti oluşturur. Denetim şablonları, bir denetimin görünümünü yeniden tanımlamak için kullanılır.  
-  
- [!code-xaml[BindValidation#4](~/samples/snippets/csharp/VS_Snippets_Wpf/BindValidation/CSharp/Window1.xaml#4)]  
-  
- Aşağıdaki örnekte gösterildiği gibi <xref:System.Windows.Controls.ToolTip> gösteren hata iletisi adlı stili kullanılarak oluşturulan `textBoxInError`. Varsa değerini <xref:System.Windows.Controls.Validation.HasError%2A> olduğu `true`, tetikleyici araç ipucu geçerli ayarlar <xref:System.Windows.Controls.TextBox> için ilk doğrulama hatası. <xref:System.Windows.Data.Binding.RelativeSource%2A> Ayarlanır <xref:System.Windows.Data.RelativeSourceMode.Self>, geçerli öğeye başvurma.  
-  
- [!code-xaml[BindValidation#5](~/samples/snippets/csharp/VS_Snippets_Wpf/BindValidation/CSharp/Window1.xaml#5)]  
-  
- Tam bir örnek için bkz. [bağlama doğrulaması örnek](https://go.microsoft.com/fwlink/?LinkID=159972).  
-  
- Özel bir sağlamazsanız unutmayın <xref:System.Windows.Controls.Validation.ErrorTemplate%2A> bir doğrulama hatası olmadığında kullanıcıya görsel geribildirim sağlamak için varsayılan hata şablon görüntülenir. "Veri doğrulama" bölümüne bakın [Data Binding Overview](data-binding-overview.md) daha fazla bilgi için. Ayrıca, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bağlama kaynak özelliği güncelleştirme sırasında oluşturulan özel durumları yakalayan bir yerleşik doğrulama kuralları sağlar. Daha fazla bilgi için bkz. <xref:System.Windows.Controls.ExceptionValidationRule>.  
-  
+Özel bir <xref:System.Windows.Controls.Validation.ErrorTemplate%2A> sağlamazsanız, doğrulama hatası olduğunda kullanıcıya görsel geri bildirim sağlamak için varsayılan hata şablonunun göründüğünü unutmayın. Daha fazla bilgi için [veri bağlamaya genel bakış](data-binding-overview.md) bölümüne bakın. Ayrıca, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bağlama kaynağı özelliğinin güncelleştirilmesi sırasında oluşturulan özel durumları yakalayan yerleşik bir doğrulama kuralı sağlar. Daha fazla bilgi için bkz. <xref:System.Windows.Controls.ExceptionValidationRule>.
+
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Veri Bağlamaya Genel Bakış](data-binding-overview.md)

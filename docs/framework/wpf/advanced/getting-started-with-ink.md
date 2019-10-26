@@ -1,5 +1,5 @@
 ---
-title: Bir InkCanvas Visual Studio'da WPF uygulaması oluşturma
+title: Visual Studio 'da WPF uygulamasında bir InkCanvas oluşturma
 ms.date: 08/15/2018
 dev_langs:
 - csharp
@@ -9,50 +9,50 @@ helpviewer_keywords:
 - XAML [WPF], procedural code in lieu of
 - InkCanvas (WPF)
 ms.assetid: 760332dd-594a-475d-865b-01659db8cab7
-ms.openlocfilehash: d633111c5abc572b0fc27c1a5b32050681504073
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ebbf25037921e7802b2bfcb6ffa562d16a849ffa
+ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64753012"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72920245"
 ---
-# <a name="get-started-with-ink-in-wpf"></a>WPF mürekkep ile çalışmaya başlama
+# <a name="get-started-with-ink-in-wpf"></a>WPF 'de mürekkeple çalışmaya başlama
 
-Windows Presentation Foundation (WPF), dijital mürekkep uygulamanıza eklemenizi kolaylaştırır bir mürekkep özelliği vardır.
+Windows Presentation Foundation (WPF), uygulamanıza dijital mürekkep eklemenizi kolaylaştıran bir mürekkep özelliğine sahiptir.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Prerequisites
 
-Aşağıdaki örnekleri kullanmak için önce yükleme [Microsoft Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019). Ayrıca temel WPF uygulamaları yazmak nasıl yardımcı olur. WPF ile çalışmaya başlama konusunda yardım için bkz. [izlenecek yol: İlk WPF Masaüstü Uygulamam](../getting-started/walkthrough-my-first-wpf-desktop-application.md).
+Aşağıdaki örnekleri kullanmak için, önce [Visual Studio 'yu](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)yüklemeniz gerekir. Ayrıca, temel WPF uygulamalarının nasıl yazılacağını öğrenmenize de yardımcı olur. WPF kullanmaya başlarken yardım için bkz. [Izlenecek yol: Ilk WPF Masaüstü](../getting-started/walkthrough-my-first-wpf-desktop-application.md)Uygulamam.
 
-## <a name="quick-start"></a>Hızlı Başlangıç
+## <a name="quick-start"></a>hızlı başlangıç
 
-Bu bölümde Mürekkep toplayan Basit WPF uygulaması yazmanıza yardımcı olur.
+Bu bölüm, mürekkep toplayan basit bir WPF uygulaması yazmanıza yardımcı olur.
 
-### <a name="got-ink"></a>Mürekkep var mı?
+### <a name="got-ink"></a>Mürekkep mi var?
 
-Mürekkep destekleyen bir WPF uygulaması oluşturmak için:
+Mürekkebi destekleyen bir WPF uygulaması oluşturmak için:
 
 1. Visual Studio'yu açın.
 
-2. Yeni bir **WPF uygulaması**.
+2. Yeni bir **WPF uygulaması**oluşturun.
 
-   İçinde **yeni proje** iletişim kutusunda Genişlet **yüklü** > **Visual C#** veya **Visual Basic**  >   **Windows Masaüstü** kategorisi. Ardından, **WPF uygulaması (.NET Framework)** uygulaması şablonu. Bir ad girin ve ardından **Tamam**.
+   **Yeni proje** iletişim kutusunda, **yüklü** > **Visual C#**  veya **Visual Basic** > **Windows Masaüstü** kategorisini genişletin. Ardından, **WPF uygulaması (.NET Framework)** uygulama şablonunu seçin. Bir ad girin ve **Tamam**' ı seçin.
 
-   Visual Studio projesi oluşturur ve *MainWindow.xaml* Tasarımcısı'nda açılır.
+   Visual Studio projeyi oluşturur ve *MainWindow. xaml* tasarımcıda açılır.
 
-3. Tür `<InkCanvas/>` arasında `<Grid>` etiketler.
+3. `<Grid>` etiketleri arasına `<InkCanvas/>` yazın.
 
-   ![InkCanvas etiketi ile XAML Tasarımcısı](./media/getting-started-with-ink/inkcanvas-xaml.png)
+   ![InkCanvas etiketiyle XAML Tasarımcısı](./media/getting-started-with-ink/inkcanvas-xaml.png)
 
-4. Tuşuna **F5** uygulamanızda hata ayıklayıcıyı başlatmak için.
+4. Uygulamanızı hata ayıklayıcıda başlatmak için **F5** tuşuna basın.
 
-5. Ekran kalemi veya fare kullanarak yazma **Merhaba Dünya** penceresinde.
+5. Ekran kalemi veya fare kullanarak pencerede **Merhaba Dünya** yazın.
 
-Bir "hello world" uygulaması yalnızca 12 tuş mürekkep denk yazdığınız!
+Bir "Hello World" uygulamasının mürekkep eşdeğerini yalnızca 12 tuş vuruşu ile yazmış oldunuz!
 
-### <a name="spice-up-your-app"></a>Uygulamanızı renklendirin
+### <a name="spice-up-your-app"></a>Uygulamanızı artırma
 
-Bazı WPF özelliklerinden ele alalım. Her şey açılış ve kapanış arasında Değiştir \<penceresi > aşağıdaki işaretlemeyle etiketler:
+WPF 'nin bazı özelliklerinden faydalanalım. Açma ve kapatma \<pencere > etiketleri arasındaki her şeyi aşağıdaki biçimlendirme ile değiştirin:
 
 ```xaml
 <Page>
@@ -68,45 +68,45 @@ Bazı WPF özelliklerinden ele alalım. Her şey açılış ve kapanış arasın
 </Page>
 ```
 
-Bu XAML arka plan gradyan fırçası Mürekkep yüzeyiniz oluşturur.
+Bu XAML, mürekkep yüzeyiniz üzerinde bir gradyan fırçası arka planı oluşturur.
 
-![WPF uygulaması yüzeyini mürekkep üzerinde Gradyan renklerini](./media/getting-started-with-ink/gradient-colors.png)
+![WPF uygulamasında mürekkep yüzeyinde gradyan renkler](./media/getting-started-with-ink/gradient-colors.png)
 
-### <a name="add-some-code-behind-the-xaml"></a>XAML arkasındaki kod ekleyin
+### <a name="add-some-code-behind-the-xaml"></a>XAML 'nin arkasında kod ekleme
 
-XAML kullanıcı arabirimi tasarlamak çok kolay hale karşın, olayları işlemek üzere kod eklemek herhangi bir gerçek yaşam uygulaması gerekir. Yanıtta bir sağ tıklama fare tarafından mürekkep yakınlaştırır basit bir örnek aşağıda verilmiştir.
+XAML Kullanıcı arabirimini tasarlamayı çok kolay hale getirir, ancak herhangi bir gerçek dünya uygulamasının olayları işlemek için kod eklemesi gerekir. Bir farede sağ tıklaa yanıt olarak mürekkebe yakınlaşarak bir basit örnek aşağıda verilmiştir.
 
-1. Ayarlama `MouseRightButtonUp` , XAML işleyicisinde:
+1. XAML 'de `MouseRightButtonUp` işleyicisini ayarlayın:
 
    [!code-xaml[DigitalInkTopics#3](~/samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml#3)]
 
-1. İçinde **Çözüm Gezgini**MainWindow.XAML'yi genişletin ve (MainWindow.xaml.cs veya MainWindow.xaml.vb) arka plan kod dosyasını açın. Aşağıdaki olay işleyicisini ekleyin:
+1. **Çözüm Gezgini**, MainWindow. xaml ' i genişletin ve arka plan kod dosyasını (MainWindow.xaml.cs veya MainWindow. xaml. vb) açın. Aşağıdaki olay işleyici kodunu ekleyin:
 
    [!code-csharp[DigitalInkTopics#4](~/samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml.cs#4)]
    [!code-vb[DigitalInkTopics#4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DigitalInkTopics/VisualBasic/Window2.xaml.vb#4)]
 
-1. Uygulamayı çalıştırın. Bazı mürekkep ekleyebilir ve ardından fareyle sağ tıklayın ya da tuşuna basın ve basılı eşdeğer bir ekran kalemi ile gerçekleştirin.
+1. Uygulamayı çalıştırın. Biraz mürekkep ekleyin ve fareyle sağ tıklayın veya ekran kalemiyle bir basma ve bekletme eşdeğeri gerçekleştirin.
 
-   Farenin sağ düğmesiyle tıklatın her zaman görünümü yakınlaştırır.
+   Ekran, sağ fare düğmesine her tıkladığınızda yakınlaştırılır.
 
-### <a name="use-procedural-code-instead-of-xaml"></a>XAML yerine yordam kodu kullanın
+### <a name="use-procedural-code-instead-of-xaml"></a>XAML yerine yordamsal kodu kullanın
 
-Yordam kodundan tüm WPF özelliklerine erişebilirsiniz. Tüm XAML kullanmayan WPF için bir "Hello mürekkep World" uygulaması oluşturmak için aşağıdaki adımları izleyin.
+Yordamsal koddan tüm WPF özelliklerine erişebilirsiniz. Her türlü XAML kullanmayan WPF için "Merhaba mürekkep dünyası" uygulaması oluşturmak için bu adımları izleyin.
 
-1. Visual Studio'da yeni bir konsol uygulama projesi oluşturun.
+1. Visual Studio 'da yeni bir konsol uygulama projesi oluşturun.
 
-   İçinde **yeni proje** iletişim kutusunda Genişlet **yüklü** > **Visual C#** veya **Visual Basic**  >   **Windows Masaüstü** kategorisi. Ardından, **konsol uygulaması (.NET Framework)** uygulaması şablonu. Bir ad girin ve ardından **Tamam**.
+   **Yeni proje** iletişim kutusunda, **yüklü** > **Visual C#**  veya **Visual Basic** > **Windows Masaüstü** kategorisini genişletin. Ardından **konsol uygulaması (.NET Framework)** uygulama şablonunu seçin. Bir ad girin ve **Tamam**' ı seçin.
 
-1. Program.cs veya Program.vb dosyaya aşağıdaki kodu yapıştırın:
+1. Aşağıdaki kodu Program.cs veya program. vb dosyasına yapıştırın:
 
    [!code-csharp[InkCanvasConsoleApp#1](~/samples/snippets/csharp/VS_Snippets_Wpf/InkCanvasConsoleApp/CSharp/Program.cs#1)]
    [!code-vb[InkCanvasConsoleApp#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InkCanvasConsoleApp/VisualBasic/Module1.vb#1)]
 
-1. Sağ tıklayarak PresentationCore PresentationFramework ve WindowsBase derlemelere başvurular ekleyin **başvuruları** içinde **Çözüm Gezgini** seçip **BaşvuruEkle**.
+1. **Çözüm Gezgini** **Başvurular** ' a sağ tıklayıp **Başvuru Ekle**' yi seçerek PresentationCore, PresentationFramework ve WindowsBase derlemelerine başvurular ekleyin.
 
-   ![Başvuru Yöneticisi PresentationCore ve PresentationFramework gösteriliyor](./media/getting-started-with-ink/reference-manager-presentationcore-presentationframework.png)
+   ![PresentationCore ve PresentationFramework gösteren başvuru Yöneticisi](./media/getting-started-with-ink/reference-manager-presentationcore-presentationframework.png)
 
-1. Tuşlarına basarak uygulamayı derleyin **F5**.
+1. **F5**tuşuna basarak uygulamayı oluşturun.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
