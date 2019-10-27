@@ -4,137 +4,187 @@ description: HDInsight için bir .NET Apache Spark uygulamasının nasıl dağı
 ms.date: 05/17/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 2e8da5497035a83fde75bf91a7d21437d510b480
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 2cb91032e0ce1d320b266772e8f9f1431df4a298
+ms.sourcegitcommit: 9b2ef64c4fc10a4a10f28a223d60d17d7d249ee8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117970"
+ms.lasthandoff: 10/26/2019
+ms.locfileid: "72960970"
 ---
-# <a name="deploy-a-net-for-apache-spark-application-to-azure-hdinsight"></a><span data-ttu-id="79e99-103">Azure HDInsight 'a bir .NET Apache Spark uygulaması dağıtma</span><span class="sxs-lookup"><span data-stu-id="79e99-103">Deploy a .NET for Apache Spark application to Azure HDInsight</span></span>
+# <a name="tutorial-deploy-a-net-for-apache-spark-application-to-azure-hdinsight"></a><span data-ttu-id="46c4c-103">Öğretici: Azure HDInsight 'a Apache Spark uygulaması için .NET dağıtma</span><span class="sxs-lookup"><span data-stu-id="46c4c-103">Tutorial: Deploy a .NET for Apache Spark application to Azure HDInsight</span></span>
 
-<span data-ttu-id="79e99-104">Bu öğreticide, Azure HDInsight 'a Apache Spark uygulamasına yönelik bir .NET dağıtımı öğretilir.</span><span class="sxs-lookup"><span data-stu-id="79e99-104">This tutorial teaches how to deploy a .NET for Apache Spark application to Azure HDInsight.</span></span>
+<span data-ttu-id="46c4c-104">Bu öğreticide, Azure HDInsight kümesi aracılığıyla Apache Spark için .NET uygulamanızı buluta nasıl dağıtacağınız öğretilir.</span><span class="sxs-lookup"><span data-stu-id="46c4c-104">This tutorial teaches you how to deploy your .NET for Apache Spark app to the cloud through an Azure HDInsight cluster.</span></span> <span data-ttu-id="46c4c-105">HDInsight 'ta Spark kümeleri Azure depolama ve Azure Data Lake Storage uyumlu olduğundan, HDInsight, Azure 'da Spark kümesi oluşturmayı ve yapılandırmayı kolaylaştırır.</span><span class="sxs-lookup"><span data-stu-id="46c4c-105">HDInsight makes it easier to create and configure a Spark cluster in Azure since Spark clusters in HDInsight are compatible with Azure Storage and Azure Data Lake Storage.</span></span> 
 
-<span data-ttu-id="79e99-105">Bu öğreticide şunların nasıl yapıladığını öğreneceksiniz:</span><span class="sxs-lookup"><span data-stu-id="79e99-105">In this tutorial, you learn how to:</span></span>
+<span data-ttu-id="46c4c-106">Bu öğreticide şunların nasıl yapıladığını öğreneceksiniz:</span><span class="sxs-lookup"><span data-stu-id="46c4c-106">In this tutorial, you learn how to:</span></span>
 
 > [!div class="checklist"]
 >
-> * <span data-ttu-id="79e99-106">Microsoft. spark. Worker 'ı hazırla</span><span class="sxs-lookup"><span data-stu-id="79e99-106">Prepare Microsoft.Spark.Worker</span></span>
-> * <span data-ttu-id="79e99-107">Spark .NET uygulamanızı yayımlama</span><span class="sxs-lookup"><span data-stu-id="79e99-107">Publish your Spark .NET app</span></span>
-> * <span data-ttu-id="79e99-108">Uygulamanızı Azure HDInsight 'a dağıtma</span><span class="sxs-lookup"><span data-stu-id="79e99-108">Deploy your app to Azure HDInsight</span></span>
-> * <span data-ttu-id="79e99-109">Uygulamanızı çalıştırma</span><span class="sxs-lookup"><span data-stu-id="79e99-109">Run your app</span></span>
+> * <span data-ttu-id="46c4c-107">Azure Depolama Gezgini kullanarak depolama hesaplarınıza erişin.</span><span class="sxs-lookup"><span data-stu-id="46c4c-107">Access your storage accounts using Azure Storage Explorer.</span></span>
+> * <span data-ttu-id="46c4c-108">Azure HDInsight kümesi oluşturma.</span><span class="sxs-lookup"><span data-stu-id="46c4c-108">Create an Azure HDInsight cluster.</span></span>
+> * <span data-ttu-id="46c4c-109">Apache Spark için .NET uygulamanızı yayımlayın.</span><span class="sxs-lookup"><span data-stu-id="46c4c-109">Publish your .NET for Apache Spark app.</span></span>
+> * <span data-ttu-id="46c4c-110">HDInsight betik eylemi oluşturun ve çalıştırın.</span><span class="sxs-lookup"><span data-stu-id="46c4c-110">Create and run an HDInsight script action.</span></span>
+> * <span data-ttu-id="46c4c-111">HDInsight kümesinde Apache Spark uygulaması için bir .NET çalıştırın.</span><span class="sxs-lookup"><span data-stu-id="46c4c-111">Run a .NET for Apache Spark app on an HDInsight cluster.</span></span>
 
-## <a name="prerequisites"></a><span data-ttu-id="79e99-110">Önkoşullar</span><span class="sxs-lookup"><span data-stu-id="79e99-110">Prerequisites</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="46c4c-112">Prerequisites</span><span class="sxs-lookup"><span data-stu-id="46c4c-112">Prerequisites</span></span>
 
-<span data-ttu-id="79e99-111">Başlamadan önce aşağıdakileri yapın:</span><span class="sxs-lookup"><span data-stu-id="79e99-111">Before you start, do the following:</span></span>
+<span data-ttu-id="46c4c-113">Başlamadan önce, aşağıdaki görevleri yapın:</span><span class="sxs-lookup"><span data-stu-id="46c4c-113">Before you start, do the following tasks:</span></span>
 
-* <span data-ttu-id="79e99-112">[Azure Depolama Gezgini](https://azure.microsoft.com/features/storage-explorer/)indirin.</span><span class="sxs-lookup"><span data-stu-id="79e99-112">Download [Azure Storage Explorer](https://azure.microsoft.com/features/storage-explorer/).</span></span>
-* <span data-ttu-id="79e99-113">[İnstall-Worker.sh](https://github.com/dotnet/spark/blob/master/deployment/install-worker.sh) 'i yerel makinenize indirin.</span><span class="sxs-lookup"><span data-stu-id="79e99-113">Download [install-worker.sh](https://github.com/dotnet/spark/blob/master/deployment/install-worker.sh) to your local machine.</span></span> <span data-ttu-id="79e99-114">Bu, daha sonra Apache Spark bağımlı dosyaları için .NET 'i Spark kümenizin çalışan düğümlerine kopyalamak için kullandığınız bir yardımcı betiktir.</span><span class="sxs-lookup"><span data-stu-id="79e99-114">This is a helper script that you use later to copy .NET for Apache Spark dependent files into your Spark cluster's worker nodes.</span></span>
+* <span data-ttu-id="46c4c-114">Azure aboneliğiniz yoksa [ücretsiz bir hesap](https://azure.microsoft.com/free/)oluşturun.</span><span class="sxs-lookup"><span data-stu-id="46c4c-114">If you don't have an Azure subscription, create a [free account](https://azure.microsoft.com/free/).</span></span>
+* <span data-ttu-id="46c4c-115">[Azure Portal](https://portal.azure.com/)oturum açın.</span><span class="sxs-lookup"><span data-stu-id="46c4c-115">Sign in to the [Azure portal](https://portal.azure.com/).</span></span>
+* <span data-ttu-id="46c4c-116">[Windows](https://go.microsoft.com/fwlink/?LinkId=708343&clcid=0x409), [Linux](https://go.microsoft.com/fwlink/?LinkId=722418&clcid=0x409)veya [MacOS](https://go.microsoft.com/fwlink/?LinkId=708342&clcid=0x409) bilgisayarınıza Azure Depolama Gezgini ' yi yükler.</span><span class="sxs-lookup"><span data-stu-id="46c4c-116">Install Azure Storage Explorer on your [Windows](https://go.microsoft.com/fwlink/?LinkId=708343&clcid=0x409), [Linux](https://go.microsoft.com/fwlink/?LinkId=722418&clcid=0x409), or [MacOS](https://go.microsoft.com/fwlink/?LinkId=708342&clcid=0x409) computer.</span></span>
+* <span data-ttu-id="46c4c-117">[Apache Spark için .net ' i doldurun-10 dakikalık öğreticide kullanmaya başlayın](https://dotnet.microsoft.com/learn/data/spark-tutorial/intro) .</span><span class="sxs-lookup"><span data-stu-id="46c4c-117">Complete the [.NET for Apache Spark - Get Started in 10-Minutes](https://dotnet.microsoft.com/learn/data/spark-tutorial/intro) tutorial.</span></span>
 
-## <a name="prepare-worker-dependencies"></a><span data-ttu-id="79e99-115">Çalışan bağımlılıklarını hazırlama</span><span class="sxs-lookup"><span data-stu-id="79e99-115">Prepare worker dependencies</span></span>
+## <a name="access-your-storage-accounts"></a><span data-ttu-id="46c4c-118">Depolama hesaplarınıza erişin</span><span class="sxs-lookup"><span data-stu-id="46c4c-118">Access your storage accounts</span></span>
 
-<span data-ttu-id="79e99-116">**Microsoft. spark. Worker** , Spark kümenizin ayrı çalışan düğümlerinde bulunan bir arka uç bileşenidir.</span><span class="sxs-lookup"><span data-stu-id="79e99-116">**Microsoft.Spark.Worker** is a backend component that lives on the individual worker nodes of your Spark cluster.</span></span> <span data-ttu-id="79e99-117">Bir C# UDF (Kullanıcı tanımlı işlev) yürütmek istediğinizde Spark 'ıN, UDF 'yi yürütmek IÇIN .NET CLR 'yi nasıl başlatacağınızı anlaması gerekir.</span><span class="sxs-lookup"><span data-stu-id="79e99-117">When you want to execute a C# UDF (user-defined function), Spark needs to understand how to launch the .NET CLR to execute the UDF.</span></span> <span data-ttu-id="79e99-118">**Microsoft. spark. Worker** , bu Işlevi etkinleştiren Spark için bir sınıf koleksiyonu sağlar.</span><span class="sxs-lookup"><span data-stu-id="79e99-118">**Microsoft.Spark.Worker** provides a collection of classes to Spark that enable this functionality.</span></span>
+1. <span data-ttu-id="46c4c-119">Azure Depolama Gezgini açın.</span><span class="sxs-lookup"><span data-stu-id="46c4c-119">Open Azure Storage Explorer.</span></span>
 
-1. <span data-ttu-id="79e99-119">Kümenize dağıtılacak bir [Microsoft. spark. Worker](https://github.com/dotnet/spark/releases) Linux netcoreapp sürümü seçin.</span><span class="sxs-lookup"><span data-stu-id="79e99-119">Select a [Microsoft.Spark.Worker](https://github.com/dotnet/spark/releases) Linux netcoreapp release to be deployed on your cluster.</span></span>
+2. <span data-ttu-id="46c4c-120">Sol menüden **Hesap Ekle** ' yi seçin ve Azure hesabınızda oturum açın.</span><span class="sxs-lookup"><span data-stu-id="46c4c-120">Select **Add Account** on the left menu, and sign in to your Azure account.</span></span>
 
-   <span data-ttu-id="79e99-120">Örneğin, kullanmak `.NET for Apache Spark v0.1.0` `netcoreapp2.1`istiyorsanız [Microsoft. spark. Worker. netcoreapp 2.1. Linux-x64-0.1.0. tar. gz](https://github.com/dotnet/spark/releases/download/v0.1.0/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.1.0.tar.gz)dosyasını indirirsiniz.</span><span class="sxs-lookup"><span data-stu-id="79e99-120">For example, if you want `.NET for Apache Spark v0.1.0` using `netcoreapp2.1`, you'd download [Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.1.0.tar.gz](https://github.com/dotnet/spark/releases/download/v0.1.0/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.1.0.tar.gz).</span></span>
+    ![Depolama Gezgini Azure hesabında oturum açın](./media/hdinsight-deployment/signin-azure-storage-explorer.png)
 
-2. <span data-ttu-id="79e99-121">Kümenizin `Microsoft.Spark.Worker.<release>.tar.gz` erişimi olan bir dağıtılmış dosya sistemine (örn., Ida, IDB, ADLS) yükleyin ve [install-Worker.sh](https://github.com/dotnet/spark/blob/master/deployment/install-worker.sh) .</span><span class="sxs-lookup"><span data-stu-id="79e99-121">Upload `Microsoft.Spark.Worker.<release>.tar.gz` and [install-worker.sh](https://github.com/dotnet/spark/blob/master/deployment/install-worker.sh) to a distributed file system (e.g., HDFS, WASB, ADLS) that your cluster has access to.</span></span>
+   <span data-ttu-id="46c4c-122">Oturum açtıktan sonra, sahip olduğunuz tüm depolama hesaplarını ve depolama hesaplarınıza yüklediğiniz kaynakları görmeniz gerekir.</span><span class="sxs-lookup"><span data-stu-id="46c4c-122">After you sign in, you should see all storage accounts you have and any resources you have uploaded to your storage accounts.</span></span>
 
-## <a name="prepare-your-net-for-apache-spark-app"></a><span data-ttu-id="79e99-122">Apache Spark uygulamanızı .NET 'e hazırlama</span><span class="sxs-lookup"><span data-stu-id="79e99-122">Prepare your .NET for Apache Spark app</span></span>
+## <a name="create-an-hdinsight-cluster"></a><span data-ttu-id="46c4c-123">HDInsight kümesi oluşturma</span><span class="sxs-lookup"><span data-stu-id="46c4c-123">Create an HDInsight cluster</span></span>
 
-1. <span data-ttu-id="79e99-123">Uygulamanızı derlemek için [Başlarken](get-started.md) öğreticisini izleyin.</span><span class="sxs-lookup"><span data-stu-id="79e99-123">Follow the [Get Started](get-started.md) tutorial to build your app.</span></span>
+> [!IMPORTANT]  
+> <span data-ttu-id="46c4c-124">HDInsight kümelerinin faturalandırılması, kullanmadığınız olsalar dahi, dakikada eşit olarak dağıtılır.</span><span class="sxs-lookup"><span data-stu-id="46c4c-124">Billing for HDInsight clusters is prorated per minute, even if you're not using them.</span></span> <span data-ttu-id="46c4c-125">Kullanmayı bitirdikten sonra kümenizi sildiğinizden emin olun.</span><span class="sxs-lookup"><span data-stu-id="46c4c-125">Be sure to delete your cluster after you have finished using it.</span></span> <span data-ttu-id="46c4c-126">Daha fazla bilgi için Bu öğreticinin [Temizleme kaynakları](#clean-up-resources) bölümüne bakın.</span><span class="sxs-lookup"><span data-stu-id="46c4c-126">For more information, see the [Clean up resources](#clean-up-resources) section of this tutorial.</span></span>
 
-2. <span data-ttu-id="79e99-124">Spark .NET uygulamanızı kendi kendine dahil olarak yayımlayın.</span><span class="sxs-lookup"><span data-stu-id="79e99-124">Publish your Spark .NET app as self-contained.</span></span>
+1. <span data-ttu-id="46c4c-127">[Azure Portal](https://portal.azure.com)ziyaret edin.</span><span class="sxs-lookup"><span data-stu-id="46c4c-127">Visit the [Azure portal](https://portal.azure.com).</span></span>
 
-   <span data-ttu-id="79e99-125">Linux üzerinde aşağıdaki komutu çalıştırabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="79e99-125">You can run the following command on Linux.</span></span>
+2. <span data-ttu-id="46c4c-128">**+ Kaynak oluştur**' u seçin.</span><span class="sxs-lookup"><span data-stu-id="46c4c-128">Select **+ Create a resource**.</span></span> <span data-ttu-id="46c4c-129">Ardından **analiz** kategorisinden **HDInsight** ' ı seçin.</span><span class="sxs-lookup"><span data-stu-id="46c4c-129">Then, select **HDInsight** from the **Analytics** category.</span></span>
 
-   ```dotnetcli
-   dotnet publish -c Release -f netcoreapp2.1 -r ubuntu.16.04-x64
+    ![Azure portal HDInsight kaynağı oluşturma](./media/hdinsight-deployment/create-hdinsight-resource.png)
+
+3. <span data-ttu-id="46c4c-131">**Temel bilgiler**bölümünde aşağıdaki değerleri sağlayın:</span><span class="sxs-lookup"><span data-stu-id="46c4c-131">Under **Basics**, provide the following values:</span></span>
+
+    |<span data-ttu-id="46c4c-132">Özellik</span><span class="sxs-lookup"><span data-stu-id="46c4c-132">Property</span></span>  |<span data-ttu-id="46c4c-133">Açıklama</span><span class="sxs-lookup"><span data-stu-id="46c4c-133">Description</span></span>  |
+    |---------|---------|
+    |<span data-ttu-id="46c4c-134">Aboneliğiniz</span><span class="sxs-lookup"><span data-stu-id="46c4c-134">Subscription</span></span>  | <span data-ttu-id="46c4c-135">Açılan listeden, etkin Azure aboneliklerinizden birini seçin.</span><span class="sxs-lookup"><span data-stu-id="46c4c-135">From the drop-down, choose one of your active Azure subscriptions.</span></span> |
+    |<span data-ttu-id="46c4c-136">Kaynak grubu</span><span class="sxs-lookup"><span data-stu-id="46c4c-136">Resource group</span></span> | <span data-ttu-id="46c4c-137">Yeni bir kaynak grubu oluşturmak mı yoksa mevcut bir kaynak grubu mı kullanmak istediğinizi belirtin.</span><span class="sxs-lookup"><span data-stu-id="46c4c-137">Specify whether you want to create a new resource group or use an existing one.</span></span> <span data-ttu-id="46c4c-138">Kaynak grubu, bir Azure çözümü için ilgili kaynakları tutan bir kapsayıcıdır.</span><span class="sxs-lookup"><span data-stu-id="46c4c-138">A resource group is a container that holds related resources for an Azure solution.</span></span> |
+    |<span data-ttu-id="46c4c-139">Küme adı</span><span class="sxs-lookup"><span data-stu-id="46c4c-139">Cluster name</span></span> | <span data-ttu-id="46c4c-140">HDInsight Spark kümenize bir ad verin.</span><span class="sxs-lookup"><span data-stu-id="46c4c-140">Give a name to your HDInsight Spark cluster.</span></span>|
+    |<span data-ttu-id="46c4c-141">Konum</span><span class="sxs-lookup"><span data-stu-id="46c4c-141">Location</span></span>   | <span data-ttu-id="46c4c-142">Kaynak grubu için bir konum seçin.</span><span class="sxs-lookup"><span data-stu-id="46c4c-142">Select a location for the resource group.</span></span> <span data-ttu-id="46c4c-143">Şablon, kümeyi oluşturmak için bu konumu ve varsayılan küme depolama alanını kullanır.</span><span class="sxs-lookup"><span data-stu-id="46c4c-143">The template uses this location for creating the cluster as well as for the default cluster storage.</span></span> |
+    |<span data-ttu-id="46c4c-144">Küme türü</span><span class="sxs-lookup"><span data-stu-id="46c4c-144">Cluster type</span></span>| <span data-ttu-id="46c4c-145">Küme türü olarak **Spark** ' ı seçin.</span><span class="sxs-lookup"><span data-stu-id="46c4c-145">Select **Spark** as the cluster type.</span></span>|
+    |<span data-ttu-id="46c4c-146">Küme sürümü</span><span class="sxs-lookup"><span data-stu-id="46c4c-146">Cluster version</span></span>|<span data-ttu-id="46c4c-147">Bu alan, küme türü seçildikten sonra varsayılan sürüm ile oto doldurulur.</span><span class="sxs-lookup"><span data-stu-id="46c4c-147">This field will autopopulate with the default version once the cluster type has been selected.</span></span> <span data-ttu-id="46c4c-148">Spark 'ın 2,3 veya 2,4 sürümünü seçin.</span><span class="sxs-lookup"><span data-stu-id="46c4c-148">Select a 2.3 or 2.4 version of Spark.</span></span>|
+    |<span data-ttu-id="46c4c-149">Küme oturum açma Kullanıcı adı</span><span class="sxs-lookup"><span data-stu-id="46c4c-149">Cluster login username</span></span>| <span data-ttu-id="46c4c-150">Küme oturum açma Kullanıcı adı ' nı girin.</span><span class="sxs-lookup"><span data-stu-id="46c4c-150">Enter the cluster login username.</span></span>  <span data-ttu-id="46c4c-151">Varsayılan ad *admin*' dir.</span><span class="sxs-lookup"><span data-stu-id="46c4c-151">The default name is *admin*.</span></span> |
+    |<span data-ttu-id="46c4c-152">Küme oturum açma parolası</span><span class="sxs-lookup"><span data-stu-id="46c4c-152">Cluster login password</span></span>| <span data-ttu-id="46c4c-153">Herhangi bir oturum açma parolası girin.</span><span class="sxs-lookup"><span data-stu-id="46c4c-153">Enter any login password.</span></span> |
+    |<span data-ttu-id="46c4c-154">Secure Shell (SSH) Kullanıcı adı</span><span class="sxs-lookup"><span data-stu-id="46c4c-154">Secure Shell (SSH) username</span></span>| <span data-ttu-id="46c4c-155">SSH kullanıcı adını girin.</span><span class="sxs-lookup"><span data-stu-id="46c4c-155">Enter the SSH username.</span></span> <span data-ttu-id="46c4c-156">Varsayılan olarak, bu hesap *küme oturum açma Kullanıcı adı* hesabıyla aynı parolayı paylaşır.</span><span class="sxs-lookup"><span data-stu-id="46c4c-156">By default, this account shares the same password as the *Cluster Login username* account.</span></span> |
+
+4. <span data-ttu-id="46c4c-157">Ileri ' yi seçin: **depolama sayfasına devam** etmek Için **> Depolama >** .</span><span class="sxs-lookup"><span data-stu-id="46c4c-157">Select **Next: Storage >>** to continue to the **Storage** page.</span></span> <span data-ttu-id="46c4c-158">**Depolama**bölümünde aşağıdaki değerleri sağlayın:</span><span class="sxs-lookup"><span data-stu-id="46c4c-158">Under **Storage**, provide the following values:</span></span>
+
+    |<span data-ttu-id="46c4c-159">Özellik</span><span class="sxs-lookup"><span data-stu-id="46c4c-159">Property</span></span>  |<span data-ttu-id="46c4c-160">Açıklama</span><span class="sxs-lookup"><span data-stu-id="46c4c-160">Description</span></span>  |
+    |---------|---------|
+    |<span data-ttu-id="46c4c-161">Birincil depolama türü</span><span class="sxs-lookup"><span data-stu-id="46c4c-161">Primary storage type</span></span>|<span data-ttu-id="46c4c-162">Varsayılan **Azure Storage**değerini kullanın.</span><span class="sxs-lookup"><span data-stu-id="46c4c-162">Use the default value **Azure Storage**.</span></span>|
+    |<span data-ttu-id="46c4c-163">Seçim yöntemi</span><span class="sxs-lookup"><span data-stu-id="46c4c-163">Selection method</span></span>|<span data-ttu-id="46c4c-164">Varsayılan değer **listesinden Seç ' i**kullanın.</span><span class="sxs-lookup"><span data-stu-id="46c4c-164">Use the default value **Select from list**.</span></span>|
+    |<span data-ttu-id="46c4c-165">Birincil depolama hesabı</span><span class="sxs-lookup"><span data-stu-id="46c4c-165">Primary storage account</span></span>|<span data-ttu-id="46c4c-166">Aboneliğinizi ve bu abonelik içindeki etkin depolama hesaplarınızdan birini seçin.</span><span class="sxs-lookup"><span data-stu-id="46c4c-166">Choose your subscription and one of your active storage accounts within that subscription.</span></span>|
+    |<span data-ttu-id="46c4c-167">Kapsayıcı</span><span class="sxs-lookup"><span data-stu-id="46c4c-167">Container</span></span>|<span data-ttu-id="46c4c-168">Bu kapsayıcı, depolama hesabınızda, kümenizin uygulamanızı bulutta çalıştırmak için dosya aradığı belirli bir blob kapsayıcısıdır.</span><span class="sxs-lookup"><span data-stu-id="46c4c-168">This container is the specific blob container in your storage account where your cluster looks for files to run your app in the cloud.</span></span> <span data-ttu-id="46c4c-169">Kullanılabilir herhangi bir ad verebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="46c4c-169">You can give it any available name.</span></span>|
+
+5. <span data-ttu-id="46c4c-170">**Gözden geçir + oluştur**altında **Oluştur**' u seçin.</span><span class="sxs-lookup"><span data-stu-id="46c4c-170">Under **Review + create**, select **Create**.</span></span> <span data-ttu-id="46c4c-171">Kümenin oluşturulması yaklaşık 20 dakika sürer.</span><span class="sxs-lookup"><span data-stu-id="46c4c-171">It takes about 20 minutes to create the cluster.</span></span> <span data-ttu-id="46c4c-172">Sonraki adıma devam edebilmeniz için önce kümenin oluşturulması gerekir.</span><span class="sxs-lookup"><span data-stu-id="46c4c-172">The cluster must be created before you can continue to the next step.</span></span>
+
+## <a name="publish-your-app"></a><span data-ttu-id="46c4c-173">Uygulamanızı yayınlama</span><span class="sxs-lookup"><span data-stu-id="46c4c-173">Publish your app</span></span>
+
+<span data-ttu-id="46c4c-174">Daha sonra, [Apache Spark için .net](https://dotnet.microsoft.com/learn/data/spark-tutorial/intro) sürümünde oluşturulan *mySparkApp* 'yi yayımlarsınız ve bu, Spark kümesine uygulamanızı çalıştırmak için gereken tüm dosyalara erişim sağlayan 10 dakikalık öğreticide çalışmaya başlayın.</span><span class="sxs-lookup"><span data-stu-id="46c4c-174">Next, you publish the *mySparkApp* created in the [.NET for Apache Spark - Get Started in 10-Minutes](https://dotnet.microsoft.com/learn/data/spark-tutorial/intro) tutorial, which gives your Spark cluster access to all the files it needs to run your app.</span></span> 
+
+1. <span data-ttu-id="46c4c-175">*MySparkApp*yayımlamak için aşağıdaki komutları çalıştırın:</span><span class="sxs-lookup"><span data-stu-id="46c4c-175">Run the following commands to publish the *mySparkApp*:</span></span>
+
+   <span data-ttu-id="46c4c-176">**Windows 'da:**</span><span class="sxs-lookup"><span data-stu-id="46c4c-176">**On Windows:**</span></span>
+
+   ```console
+   cd mySparkApp
+   dotnet publish -c Release -f netcoreapp3.0 -r ubuntu.16.04-x6
    ```
 
-3. <span data-ttu-id="79e99-126">Yayımlanan `<your app>.zip` dosyalar için üretin.</span><span class="sxs-lookup"><span data-stu-id="79e99-126">Produce `<your app>.zip` for the published files.</span></span>
-
-   <span data-ttu-id="79e99-127">Kullanarak `zip`Linux üzerinde aşağıdaki komutu çalıştırabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="79e99-127">You can run the following command on Linux using `zip`.</span></span>
+   <span data-ttu-id="46c4c-177">**Linux 'ta:**</span><span class="sxs-lookup"><span data-stu-id="46c4c-177">**On Linux:**</span></span>
 
    ```bash
-   zip -r <your app>.zip .
+   cd mySparkApp
+   foo@bar:~/path/to/app$ dotnet publish -c Release -f netcoreapp3.0 -r ubuntu.16.04-x64
    ```
 
-4. <span data-ttu-id="79e99-128">Aşağıdakileri kümenizin erişimi olan bir dağıtılmış dosya sistemine (örn., IBir, ıDB, ADLS) yükleyin:</span><span class="sxs-lookup"><span data-stu-id="79e99-128">Upload the following to a distributed file system (e.g., HDFS, WASB, ADLS) that your cluster has access to:</span></span>
+2. <span data-ttu-id="46c4c-178">Bunları HDInsight kümenize kolayca yükleyebilmeniz için, yayımlanmış uygulama dosyalarınızı Zip halinde aşağıdaki görevleri yapın.</span><span class="sxs-lookup"><span data-stu-id="46c4c-178">Do the following tasks to zip your published app files so that you can easily upload them to your HDInsight cluster.</span></span>
 
-   * <span data-ttu-id="79e99-129">`microsoft-spark-<spark_majorversion.spark_minorversion.x>-<spark_dotnet_version>.jar`: Bu jar, [Microsoft. Spark](https://www.nuget.org/packages/Microsoft.Spark/) NuGet paketinin bir parçası olarak dahil edilmiştir ve uygulamanızın derleme çıkış dizininde birlikte bulunur.</span><span class="sxs-lookup"><span data-stu-id="79e99-129">`microsoft-spark-<spark_majorversion.spark_minorversion.x>-<spark_dotnet_version>.jar`: This jar is included as part of the [Microsoft.Spark](https://www.nuget.org/packages/Microsoft.Spark/) NuGet package and is colocated in your app's build output directory.</span></span>
-   * `<your app>.zip`
-   * <span data-ttu-id="79e99-130">Dosyalar (bağımlılık dosyaları veya her çalışan tarafından erişilebilen genel veriler) veya derlemeler (Kullanıcı tanımlı işlevlerinizi ya da `app` bağlı olduğunuz kitaplıkları içeren dll 'ler gibi) her bir yürütücünün çalışma dizinine yerleştirilecek.</span><span class="sxs-lookup"><span data-stu-id="79e99-130">Files (like dependency files or common data accessible to every worker) or Assemblies (like DLLs that contain your user-defined functions or libraries that your `app` depends on) to be placed in the working directory of each executor.</span></span>
+   <span data-ttu-id="46c4c-179">**Windows 'da:**</span><span class="sxs-lookup"><span data-stu-id="46c4c-179">**On Windows:**</span></span>
 
-## <a name="deploy-to-azure-hdinsight-spark"></a><span data-ttu-id="79e99-131">Azure HDInsight Spark dağıtma</span><span class="sxs-lookup"><span data-stu-id="79e99-131">Deploy to Azure HDInsight Spark</span></span>
+   <span data-ttu-id="46c4c-180">*MySparkApp/bin/Release/netcoreapp 3.0/Ubuntu. 16.04-x64*dizinine gidin.</span><span class="sxs-lookup"><span data-stu-id="46c4c-180">Navigate to *mySparkApp/bin/Release/netcoreapp3.0/ubuntu.16.04-x64*.</span></span> <span data-ttu-id="46c4c-181">Ardından, **Yayımla** klasörüne sağ tıklayıp **> Sıkıştırılmış (daraltılmış) klasöre gönder**' i seçin.</span><span class="sxs-lookup"><span data-stu-id="46c4c-181">Then, right-click on **Publish** folder and select **Send to > Compressed (zipped) folder**.</span></span> <span data-ttu-id="46c4c-182">Yeni klasörü **Publish. zip**olarak adlandırın.</span><span class="sxs-lookup"><span data-stu-id="46c4c-182">Name the new folder **publish.zip**.</span></span>
 
-<span data-ttu-id="79e99-132">[Azure HDInsight Spark](https://docs.microsoft.com/azure/hdinsight/spark/apache-spark-overview) , bulutta bulunan ve kullanıcıların Azure 'da Spark kümeleri başlatma ve yapılandırmalarına olanak tanıyan Apache Spark Microsoft uygulamasıdır.</span><span class="sxs-lookup"><span data-stu-id="79e99-132">[Azure HDInsight Spark](https://docs.microsoft.com/azure/hdinsight/spark/apache-spark-overview) is the Microsoft implementation of Apache Spark in the cloud that allows users to launch and configure Spark clusters in Azure.</span></span> <span data-ttu-id="79e99-133">[Azure depolama](https://azure.microsoft.com/services/storage/) veya [Azure Data Lake Storage](https://docs.microsoft.com/azure/hdinsight/hdinsight-hadoop-use-data-lake-storage-gen2)depolanan verilerinizi işlemek için HDInsight Spark kümelerini kullanabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="79e99-133">You can use HDInsight Spark clusters to process your data stored in [Azure Storage](https://azure.microsoft.com/services/storage/) or [Azure Data Lake Storage](https://docs.microsoft.com/azure/hdinsight/hdinsight-hadoop-use-data-lake-storage-gen2).</span></span>
-
-> [!NOTE]
-> <span data-ttu-id="79e99-134">Azure HDInsight Spark Linux tabanlıdır.</span><span class="sxs-lookup"><span data-stu-id="79e99-134">Azure HDInsight Spark is Linux-based.</span></span> <span data-ttu-id="79e99-135">Uygulamanızı Azure HDInsight Spark dağıtmaya ilgileniyorsanız, uygulamanızın .NET Standard uyumlu olduğundan ve uygulamanızı derlemek için [.NET Core derleyicisini](https://dotnet.microsoft.com/download) kullandığınızdan emin olun.</span><span class="sxs-lookup"><span data-stu-id="79e99-135">If you are interested in deploying your app to Azure HDInsight Spark, make sure your app is .NET Standard compatible and that you use the [.NET Core compiler](https://dotnet.microsoft.com/download) to compile your app.</span></span>
-
-### <a name="deploy-microsoftsparkworker"></a><span data-ttu-id="79e99-136">Microsoft. spark. Worker 'ı dağıtma</span><span class="sxs-lookup"><span data-stu-id="79e99-136">Deploy Microsoft.Spark.Worker</span></span>
-
-<span data-ttu-id="79e99-137">Bu adım kümeniz için yalnızca bir kere gereklidir.</span><span class="sxs-lookup"><span data-stu-id="79e99-137">This step is only required once for your cluster.</span></span>
-
-<span data-ttu-id="79e99-138">`install-worker.sh` [HDInsight betik eylemlerini](https://docs.microsoft.com/azure/hdinsight/hdinsight-hadoop-customize-cluster-linux)kullanarak kümede çalıştırın.</span><span class="sxs-lookup"><span data-stu-id="79e99-138">Run `install-worker.sh` on the cluster using [HDInsight Script Actions](https://docs.microsoft.com/azure/hdinsight/hdinsight-hadoop-customize-cluster-linux).</span></span>
-
-|<span data-ttu-id="79e99-139">Ayar</span><span class="sxs-lookup"><span data-stu-id="79e99-139">Setting</span></span>|<span data-ttu-id="79e99-140">Değer</span><span class="sxs-lookup"><span data-stu-id="79e99-140">Value</span></span>|
-|-------|-----|
-|<span data-ttu-id="79e99-141">Betik türü</span><span class="sxs-lookup"><span data-stu-id="79e99-141">Script type</span></span>|<span data-ttu-id="79e99-142">Özel</span><span class="sxs-lookup"><span data-stu-id="79e99-142">Custom</span></span>|
-|<span data-ttu-id="79e99-143">Ad</span><span class="sxs-lookup"><span data-stu-id="79e99-143">Name</span></span>|<span data-ttu-id="79e99-144">Microsoft. spark. Worker 'ı yükler</span><span class="sxs-lookup"><span data-stu-id="79e99-144">Install Microsoft.Spark.Worker</span></span>|
-|<span data-ttu-id="79e99-145">Bash betiği URI 'SI</span><span class="sxs-lookup"><span data-stu-id="79e99-145">Bash script URI</span></span>|<span data-ttu-id="79e99-146">Karşıya yüklediğiniz `install-worker.sh`URI.</span><span class="sxs-lookup"><span data-stu-id="79e99-146">The URI to which you uploaded `install-worker.sh`.</span></span> <span data-ttu-id="79e99-147">Örneğin, `abfss://<your-file-system-name>@<your-storage-account-name>.dfs.core.windows.net/<some dir>/install-worker.sh`</span><span class="sxs-lookup"><span data-stu-id="79e99-147">For example, `abfss://<your-file-system-name>@<your-storage-account-name>.dfs.core.windows.net/<some dir>/install-worker.sh`</span></span>|
-|<span data-ttu-id="79e99-148">Düğüm türleri</span><span class="sxs-lookup"><span data-stu-id="79e99-148">Node type(s)</span></span>|<span data-ttu-id="79e99-149">Indan</span><span class="sxs-lookup"><span data-stu-id="79e99-149">Worker</span></span>|
-|<span data-ttu-id="79e99-150">Parametreler</span><span class="sxs-lookup"><span data-stu-id="79e99-150">Parameters</span></span>|<span data-ttu-id="79e99-151">`install-worker.sh`Parametreleri.</span><span class="sxs-lookup"><span data-stu-id="79e99-151">Parameters to `install-worker.sh`.</span></span> <span data-ttu-id="79e99-152">Örneğin, Azure Data Lake Gen 2 ' `install-worker.sh` ye karşıya yüklenmişse, bu durumda `azure abfss://<your-file-system-name>@<your-storage-account-name>.dfs.core.windows.net/<some dir>/Microsoft.Spark.Worker.<release>.tar.gz /usr/local/bin`olur.</span><span class="sxs-lookup"><span data-stu-id="79e99-152">For example, if you uploaded `install-worker.sh` to Azure Data Lake Gen 2 then it would be `azure abfss://<your-file-system-name>@<your-storage-account-name>.dfs.core.windows.net/<some dir>/Microsoft.Spark.Worker.<release>.tar.gz /usr/local/bin`.</span></span>|
-
-![Betik eylemi resmi](./media/hdinsight-deployment/deployment-hdi-action-script.png)
-
-## <a name="run-your-app"></a><span data-ttu-id="79e99-154">Uygulamanızı çalıştırma</span><span class="sxs-lookup"><span data-stu-id="79e99-154">Run your app</span></span>
-
-<span data-ttu-id="79e99-155">İşinizi, veya Apache Livy kullanarak `spark-submit` Azure HDInsight 'a gönderebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="79e99-155">You can submit your job to Azure HDInsight using `spark-submit` or Apache Livy.</span></span>
-
-### <a name="use-spark-submit"></a><span data-ttu-id="79e99-156">Spark-gönder kullan</span><span class="sxs-lookup"><span data-stu-id="79e99-156">Use spark-submit</span></span>
-
-<span data-ttu-id="79e99-157">Azure HDInsight 'a Apache Spark işleri için .NET göndermek için [Spark-gönder](https://spark.apache.org/docs/latest/submitting-applications.html) komutunu kullanabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="79e99-157">You can use the [spark-submit](https://spark.apache.org/docs/latest/submitting-applications.html) command to submit .NET for Apache Spark jobs to Azure HDInsight.</span></span>
- 
-1. <span data-ttu-id="79e99-158">`ssh`kümenizdeki baş düğümlerden birine ekleyin.</span><span class="sxs-lookup"><span data-stu-id="79e99-158">`ssh` into one of the head nodes in your cluster.</span></span>
-
-1. <span data-ttu-id="79e99-159">Şunu `spark-submit`Çalıştır:</span><span class="sxs-lookup"><span data-stu-id="79e99-159">Run `spark-submit`:</span></span>
+   <span data-ttu-id="46c4c-183">**Linux 'ta aşağıdaki komutu çalıştırın:**</span><span class="sxs-lookup"><span data-stu-id="46c4c-183">**On Linux, run the following command:**</span></span>
 
    ```bash
-   spark-submit \
+   zip -r publish.zip
+   ```
+
+## <a name="upload-files-to-azure"></a><span data-ttu-id="46c4c-184">Azure 'a dosya yükleme</span><span class="sxs-lookup"><span data-stu-id="46c4c-184">Upload files to Azure</span></span>
+
+<span data-ttu-id="46c4c-185">Ardından, aşağıdaki beş dosyayı kümenizin depolaması için seçtiğiniz blob kapsayıcısına yüklemek için Azure Depolama Gezgini kullanırsınız:</span><span class="sxs-lookup"><span data-stu-id="46c4c-185">Next, you use the Azure Storage Explorer to upload the following five files to the blob container you chose for your cluster's storage:</span></span> 
+
+* <span data-ttu-id="46c4c-186">Microsoft. spark. Worker</span><span class="sxs-lookup"><span data-stu-id="46c4c-186">Microsoft.Spark.Worker</span></span>
+* <span data-ttu-id="46c4c-187">install-worker.sh</span><span class="sxs-lookup"><span data-stu-id="46c4c-187">install-worker.sh</span></span>
+* <span data-ttu-id="46c4c-188">Yayımla. zip</span><span class="sxs-lookup"><span data-stu-id="46c4c-188">publish.zip</span></span>
+* <span data-ttu-id="46c4c-189">Microsoft-Spark-2.3. x-0.3.0. jar</span><span class="sxs-lookup"><span data-stu-id="46c4c-189">microsoft-spark-2.3.x-0.3.0.jar</span></span>
+* <span data-ttu-id="46c4c-190">Input. txt.</span><span class="sxs-lookup"><span data-stu-id="46c4c-190">input.txt.</span></span>
+
+1. <span data-ttu-id="46c4c-191">Azure Depolama Gezgini açın ve sol menüden depolama hesabınıza gidin.</span><span class="sxs-lookup"><span data-stu-id="46c4c-191">Open Azure Storage Explorer and navigate to your storage account from the left menu.</span></span> <span data-ttu-id="46c4c-192">Depolama hesabınızdaki **BLOB kapsayıcıları** altındaki kümeniz için blob kapsayıcısının ayrıntılarına gidin.</span><span class="sxs-lookup"><span data-stu-id="46c4c-192">Drill down to the blob container for your cluster under **Blob Containers** in your storage account.</span></span>
+
+2. <span data-ttu-id="46c4c-193">*Microsoft. spark. Worker* , yazdığınız kullanıcı tanımlı Işlevler (UDF 'ler) gibi uygulamanızı Apache Spark yürütmenize yardımcı olur.</span><span class="sxs-lookup"><span data-stu-id="46c4c-193">*Microsoft.Spark.Worker* helps Apache Spark execute your app, such as any user-defined functions (UDFs) you may have written.</span></span> <span data-ttu-id="46c4c-194">[Microsoft. spark. Worker](https://github.com/dotnet/spark/releases/download/v0.3.0/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.3.0.tar.gz)öğesini indirin.</span><span class="sxs-lookup"><span data-stu-id="46c4c-194">Download [Microsoft.Spark.Worker](https://github.com/dotnet/spark/releases/download/v0.3.0/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.3.0.tar.gz).</span></span> <span data-ttu-id="46c4c-195">Ardından, çalışanı karşıya yüklemek için Azure Depolama Gezgini **karşıya yükle** ' yi seçin.</span><span class="sxs-lookup"><span data-stu-id="46c4c-195">Then, select **Upload** in Azure Storage Explorer to upload the worker.</span></span>
+
+   ![Dosyaları Azure Depolama Gezgini karşıya yükleme](./media/hdinsight-deployment/upload-files-to-storage.png)
+
+3. <span data-ttu-id="46c4c-197">*İnstall-Worker.sh* , Apache Spark bağımlı dosyaları için .net ' i kümenizin düğümlerine kopyalamanızı sağlayan bir betiktir.</span><span class="sxs-lookup"><span data-stu-id="46c4c-197">The *install-worker.sh* is a script that lets you copy .NET for Apache Spark dependent files into the nodes of your cluster.</span></span> 
+
+   <span data-ttu-id="46c4c-198">Yerel bilgisayarınızı **install-Worker.sh** adlı yeni bir dosya oluşturun ve GitHub 'da bulunan [install-Worker.sh içeriğini](https://raw.githubusercontent.com/dotnet/spark/master/deployment/install-worker.sh) yapıştırın.</span><span class="sxs-lookup"><span data-stu-id="46c4c-198">Create a new file named **install-worker.sh** your local computer, and paste the [install-worker.sh contents](https://raw.githubusercontent.com/dotnet/spark/master/deployment/install-worker.sh) located on GitHub.</span></span> <span data-ttu-id="46c4c-199">Sonra, blob kapsayıcınıza *install-Worker.sh* yükleyin.</span><span class="sxs-lookup"><span data-stu-id="46c4c-199">Then, upload *install-worker.sh* to your blob container.</span></span>
+
+4. <span data-ttu-id="46c4c-200">Kümenizin, uygulamanızın yayımlanan dosyalarını içeren Publish. zip dosyasına ihtiyacı vardır.</span><span class="sxs-lookup"><span data-stu-id="46c4c-200">Your cluster needs the publish.zip file that contains your app's published files.</span></span> <span data-ttu-id="46c4c-201">Yayınlanan klasörünüze gidin, **mySparkApp/bin/Release/netcoreapp 3.0/Ubuntu. 16.04-x64**ve **Publish. zip**dosyasını bulun.</span><span class="sxs-lookup"><span data-stu-id="46c4c-201">Navigate to your published folder, **mySparkApp/bin/Release/netcoreapp3.0/ubuntu.16.04-x64**, and locate **publish.zip**.</span></span> <span data-ttu-id="46c4c-202">Sonra *Publish. zip* ' i blob kapsayıcınıza yükleyin.</span><span class="sxs-lookup"><span data-stu-id="46c4c-202">Then upload *publish.zip* to your blob container.</span></span>
+
+5. <span data-ttu-id="46c4c-203">Kümeniz, bir jar dosyasına paketlenmiş uygulama koduna ihtiyaç duyuyor.</span><span class="sxs-lookup"><span data-stu-id="46c4c-203">Your cluster needs the application code that was packaged into a jar file.</span></span> <span data-ttu-id="46c4c-204">Yayınlanan klasörünüze gidin, **mySparkApp/bin/Release/netcoreapp 3.0/Ubuntu. 16.04-x64**ve **Microsoft-Spark-2.3. x-0.3.0. jar**konumunu bulun.</span><span class="sxs-lookup"><span data-stu-id="46c4c-204">Navigate to your published folder, **mySparkApp/bin/Release/netcoreapp3.0/ubuntu.16.04-x64**, and locate **microsoft-spark-2.3.x-0.3.0.jar**.</span></span> <span data-ttu-id="46c4c-205">Ardından, JAR dosyasını blob kapsayıcınıza yükleyin.</span><span class="sxs-lookup"><span data-stu-id="46c4c-205">Then, upload the jar file to your blob container.</span></span>
+
+   <span data-ttu-id="46c4c-206">Birden çok. jar dosyası olabilir (örneğin, 2.3. x ve 2,4. x Spark sürümü için).</span><span class="sxs-lookup"><span data-stu-id="46c4c-206">There may be multiple .jar files (for versions 2.3.x and 2.4.x of Spark).</span></span> <span data-ttu-id="46c4c-207">Küme oluşturma sırasında seçtiğiniz Spark sürümü ile eşleşen. jar dosyasını seçmeniz gerekir.</span><span class="sxs-lookup"><span data-stu-id="46c4c-207">You need to choose the .jar file that matches the version of Spark you chose during cluster creation.</span></span> <span data-ttu-id="46c4c-208">Örneğin, küme oluşturma sırasında Spark 2.3.2 ' yı seçtiyseniz *Microsoft-Spark-2.3. x-0.3.0. jar* öğesini seçin.</span><span class="sxs-lookup"><span data-stu-id="46c4c-208">For example, choose *microsoft-spark-2.3.x-0.3.0.jar* if you chose Spark 2.3.2 during cluster creation.</span></span>
+
+6. <span data-ttu-id="46c4c-209">Kümenizin uygulamanıza giriş yapması gerekiyor.</span><span class="sxs-lookup"><span data-stu-id="46c4c-209">Your cluster needs the input to your app.</span></span> <span data-ttu-id="46c4c-210">**MySparkApp** dizininize gidin ve **input. txt dosyasını**bulun.</span><span class="sxs-lookup"><span data-stu-id="46c4c-210">Navigate to your **mySparkApp** directory and locate **input.txt**.</span></span> <span data-ttu-id="46c4c-211">Giriş dosyanızı blob kabınızda **Kullanıcı/sshuser** dizinine yükleyin.</span><span class="sxs-lookup"><span data-stu-id="46c4c-211">Upload your input file to the **user/sshuser** directory in your blob container.</span></span> <span data-ttu-id="46c4c-212">SSH aracılığıyla kümenize bağlanırsınız ve bu klasör, kümenizin girişi için bakacağı yerdir.</span><span class="sxs-lookup"><span data-stu-id="46c4c-212">You will be connecting to your cluster through ssh, and this folder is where your cluster looks for its input.</span></span> <span data-ttu-id="46c4c-213">*Input. txt* dosyası, belirli bir dizine yüklenen tek dosyadır.</span><span class="sxs-lookup"><span data-stu-id="46c4c-213">The *input.txt* file is the only file uploaded to a specific directory.</span></span>
+
+## <a name="run-the-hdinsight-script-action"></a><span data-ttu-id="46c4c-214">HDInsight betiği eylemini Çalıştır</span><span class="sxs-lookup"><span data-stu-id="46c4c-214">Run the HDInsight script action</span></span>
+
+<span data-ttu-id="46c4c-215">Kümeniz çalışır olduktan sonra dosyalarınızı Azure 'a yükledikten sonra kümede **install-Worker.sh** betiğini çalıştırırsınız.</span><span class="sxs-lookup"><span data-stu-id="46c4c-215">Once your cluster is running and you've uploaded your files to Azure, you run the **install-worker.sh** script on the cluster.</span></span> 
+
+1. <span data-ttu-id="46c4c-216">Azure portal HDInsight Spark kümenize gidin ve **betik eylemleri**' ni seçin.</span><span class="sxs-lookup"><span data-stu-id="46c4c-216">Navigate to your HDInsight Spark cluster in Azure portal, and then select **Script actions**.</span></span>
+
+2. <span data-ttu-id="46c4c-217">**+ Yeni Gönder** ' i seçin ve aşağıdaki değerleri sağlayın:</span><span class="sxs-lookup"><span data-stu-id="46c4c-217">Select **+ Submit new** and provide the following values:</span></span>
+
+   |<span data-ttu-id="46c4c-218">Özellik</span><span class="sxs-lookup"><span data-stu-id="46c4c-218">Property</span></span>  |<span data-ttu-id="46c4c-219">Açıklama</span><span class="sxs-lookup"><span data-stu-id="46c4c-219">Description</span></span>  |
+   |---------|---------|
+   | <span data-ttu-id="46c4c-220">Betik türü</span><span class="sxs-lookup"><span data-stu-id="46c4c-220">Script type</span></span> |<span data-ttu-id="46c4c-221">Özel</span><span class="sxs-lookup"><span data-stu-id="46c4c-221">Custom</span></span>|
+   | <span data-ttu-id="46c4c-222">Name</span><span class="sxs-lookup"><span data-stu-id="46c4c-222">Name</span></span> | <span data-ttu-id="46c4c-223">Çalışanı yükler</span><span class="sxs-lookup"><span data-stu-id="46c4c-223">Install Worker</span></span>|
+   | <span data-ttu-id="46c4c-224">Bash betiği URI 'SI</span><span class="sxs-lookup"><span data-stu-id="46c4c-224">Bash script URI</span></span> |https://mystorageaccount.blob.core.windows.net/mycontainer/install-worker.sh </br> <span data-ttu-id="46c4c-225">Bu URI 'yi onaylamak için Azure Depolama Gezgini 'de install-worker.sh öğesine sağ tıklayın ve Özellikler ' i seçin.</span><span class="sxs-lookup"><span data-stu-id="46c4c-225">To confirm this URI, right-click on install-worker.sh in Azure Storage Explorer and select Properties.</span></span> |
+   | <span data-ttu-id="46c4c-226">Düğüm türleri</span><span class="sxs-lookup"><span data-stu-id="46c4c-226">Node type(s)</span></span>| <span data-ttu-id="46c4c-227">Indan</span><span class="sxs-lookup"><span data-stu-id="46c4c-227">Worker</span></span>|
+   | <span data-ttu-id="46c4c-228">Parametreler</span><span class="sxs-lookup"><span data-stu-id="46c4c-228">Parameters</span></span> | <span data-ttu-id="46c4c-229">mavisi</span><span class="sxs-lookup"><span data-stu-id="46c4c-229">azure</span></span> </br> wasbs://mycontainer@myStorageAccount.blob.core.windows.net/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.6.0.tar.gz </br> <span data-ttu-id="46c4c-230">/usr/local/bin</span><span class="sxs-lookup"><span data-stu-id="46c4c-230">/usr/local/bin</span></span> 
+
+3. <span data-ttu-id="46c4c-231">Komut dosyanızı göndermek için **Oluştur** ' u seçin.</span><span class="sxs-lookup"><span data-stu-id="46c4c-231">Select **Create** to submit your script.</span></span>
+
+## <a name="run-your-app"></a><span data-ttu-id="46c4c-232">Uygulamanızı çalıştırma</span><span class="sxs-lookup"><span data-stu-id="46c4c-232">Run your app</span></span>
+
+1. <span data-ttu-id="46c4c-233">Azure portal HDInsight Spark kümenize gidin ve ardından **SSH + küme oturumu aç**' ı seçin.</span><span class="sxs-lookup"><span data-stu-id="46c4c-233">Navigate to your HDInsight Spark cluster in Azure portal, and then select **SSH + Cluster login**.</span></span>
+
+2. <span data-ttu-id="46c4c-234">SSH oturum açma bilgilerini kopyalayın ve oturumu bir terminale yapıştırın.</span><span class="sxs-lookup"><span data-stu-id="46c4c-234">Copy the ssh login information and paste the login into a terminal.</span></span> <span data-ttu-id="46c4c-235">Küme oluşturma sırasında ayarladığınız parolayı kullanarak kümenizde oturum açın.</span><span class="sxs-lookup"><span data-stu-id="46c4c-235">Sign in to your cluster using the password you set during cluster creation.</span></span> <span data-ttu-id="46c4c-236">Sizi Ubuntu ve Spark 'a yönlendiren iletiler görmeniz gerekir.</span><span class="sxs-lookup"><span data-stu-id="46c4c-236">You should see messages welcoming you to Ubuntu and Spark.</span></span>
+
+3. <span data-ttu-id="46c4c-237">Uygulamanızı HDInsight kümenizde çalıştırmak için **Spark-gönder** komutunu kullanın.</span><span class="sxs-lookup"><span data-stu-id="46c4c-237">Use the **spark-submit** command to run your app on your HDInsight cluster.</span></span> <span data-ttu-id="46c4c-238">Örnek betikteki **myContainer** ve **mystorageaccount** ' ın blob Kapsayıcınızın ve depolama hesabınızın gerçek adlarıyla değiştirilmesini unutmayın.</span><span class="sxs-lookup"><span data-stu-id="46c4c-238">Remember to replace **mycontainer** and **mystorageaccount** in the example script with the actual names of your blob container and storage account.</span></span>
+
+   ```bash
+   $SPARK_HOME/bin/spark-submit \
    --master yarn \
-   --class org.apache.spark.deploy.dotnet.DotnetRunner \
-   --files <comma-separated list of assemblies that contain UDF definitions, if any> \
-   abfss://<your-file-system-name>@<your-storage-account-name>.dfs.core.windows.net/<some dir>/microsoft-spark-<spark_majorversion.spark_minorversion.x>-<spark_dotnet_version>.jar \
-   abfss://<your-file-system-name>@<your-storage-account-name>.dfs.core.windows.net/<some dir>/<your app>.zip <your app> <app arg 1> <app arg 2> ... <app arg n>
+   --class org.apache.spark.deploy.DotnetRunner \
+   wasbs://mycontainer@mystorageaccount.blob.core.windows.net/microsoft-spark-2.3.x-0.6.0.jar \
+   wasbs://mycontainer@mystorageaccount.blob.core.windows.net/publish.zip mySparkApp
    ```
 
-### <a name="use-apache-livy"></a><span data-ttu-id="79e99-160">Apache Livy kullanın</span><span class="sxs-lookup"><span data-stu-id="79e99-160">Use Apache Livy</span></span>
+   <span data-ttu-id="46c4c-239">Uygulamanız çalıştığında, Başlarken yerel çalıştırmasından konsola yazılan aynı sözcük sayısı tablosunu görürsünüz.</span><span class="sxs-lookup"><span data-stu-id="46c4c-239">When your app runs, you see the same word count table from the getting started local run written to the console.</span></span> <span data-ttu-id="46c4c-240">Tebrikler, ilk .NET Apache Spark uygulamanızı bulutta çalıştırdık!</span><span class="sxs-lookup"><span data-stu-id="46c4c-240">Congratulations, you've run your first .NET for Apache Spark application in the cloud!</span></span>
 
-<span data-ttu-id="79e99-161">Apache Spark işlerini bir Azure HDInsight Spark kümesine göndermek için Apache Spark REST API [Apache Livy](https://livy.incubator.apache.org/)'ı kullanabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="79e99-161">You can use [Apache Livy](https://livy.incubator.apache.org/), the Apache Spark REST API, to submit .NET for Apache Spark jobs to an Azure HDInsight Spark cluster.</span></span> <span data-ttu-id="79e99-162">Daha fazla bilgi için bkz. [Apache Livy Ile uzak işler](https://docs.microsoft.com/azure/hdinsight/spark/apache-spark-livy-rest-interface).</span><span class="sxs-lookup"><span data-stu-id="79e99-162">For more information, see [Remote jobs with Apache Livy](https://docs.microsoft.com/azure/hdinsight/spark/apache-spark-livy-rest-interface).</span></span>
+## <a name="clean-up-resources"></a><span data-ttu-id="46c4c-241">Kaynakları Temizleme</span><span class="sxs-lookup"><span data-stu-id="46c4c-241">Clean up resources</span></span>
 
-<span data-ttu-id="79e99-163">Linux 'ta aşağıdaki komutu kullanarak `curl`çalıştırabilirsiniz:</span><span class="sxs-lookup"><span data-stu-id="79e99-163">You can run the following command on Linux using `curl`:</span></span>
+<span data-ttu-id="46c4c-242">HDInsight, verileri Azure Storage 'a kaydeder, bu sayede bir kümeyi kullanımda olmadığında güvenle silebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="46c4c-242">HDInsight saves your data in Azure Storage, so you can safely delete a cluster when it is not in use.</span></span> <span data-ttu-id="46c4c-243">Ayrıca, kullanımda olmadığı halde bir HDInsight kümesi için de ücretlendirilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="46c4c-243">You are also charged for an HDInsight cluster, even when it is not in use.</span></span> <span data-ttu-id="46c4c-244">Kümenin ücretleri depolama ücretinden çok daha fazla olduğundan, kullanımda olmadıkları zaman kümeleri silmek ekonomik bir anlam sağlar.</span><span class="sxs-lookup"><span data-stu-id="46c4c-244">Since the charges for the cluster are many times more than the charges for storage, it makes economic sense to delete clusters when they are not in use.</span></span>
 
-```bash
-curl -k -v -X POST "https://<your spark cluster>.azurehdinsight.net/livy/batches" \
--u "<hdinsight username>:<hdinsight password>" \
--H "Content-Type: application/json" \
--H "X-Requested-By: <hdinsight username>" \
--d @- << EOF
-{
-    "file":"abfss://<your-file-system-name>@<your-storage-account-name>.dfs.core.windows.net/<some dir>/microsoft-spark-<spark_majorversion.spark_minorversion.x>-<spark_dotnet_version>.jar",
-    "className":"org.apache.spark.deploy.dotnet.DotnetRunner",
-    "files":["abfss://<your-file-system-name>@<your-storage-account-name>.dfs.core.windows.net/<some dir>/<udf assembly>", "abfss://<your-file-system-name>@<your-storage-account-name>.dfs.core.windows.net/<some dir>/<file>"],
-    "args":["abfss://<your-file-system-name>@<your-storage-account-name>.dfs.core.windows.net/<some dir>/<your app>.zip","<your app>","<app arg 1>","<app arg 2>,"...","<app arg n>"]
-}
-EOF
-```
+<span data-ttu-id="46c4c-245">Kaynak grubu adını da seçerek kaynak grubu sayfasını açabilir ve **kaynak grubunu sil**' i seçebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="46c4c-245">You can also select the resource group name to open the resource group page, and then select **Delete resource group**.</span></span> <span data-ttu-id="46c4c-246">Kaynak grubunu silerek, hem HDInsight Spark kümesini hem de varsayılan depolama hesabını silersiniz.</span><span class="sxs-lookup"><span data-stu-id="46c4c-246">By deleting the resource group, you delete both the HDInsight Spark cluster, and the default storage account.</span></span>
 
-## <a name="next-steps"></a><span data-ttu-id="79e99-164">Sonraki adımlar</span><span class="sxs-lookup"><span data-stu-id="79e99-164">Next steps</span></span>
+## <a name="next-steps"></a><span data-ttu-id="46c4c-247">Sonraki adımlar</span><span class="sxs-lookup"><span data-stu-id="46c4c-247">Next steps</span></span>
 
-<span data-ttu-id="79e99-165">Bu öğreticide, .NET Apache Spark uygulamanızı Azure HDInsight 'a dağıttınız.</span><span class="sxs-lookup"><span data-stu-id="79e99-165">In this tutorial, you deployed your .NET for Apache Spark application to Azure HDInsight.</span></span> <span data-ttu-id="79e99-166">HDInsight hakkında daha fazla bilgi edinmek için Azure HDInsight belgelerine geçin.</span><span class="sxs-lookup"><span data-stu-id="79e99-166">To learn more about HDInsight, continue to the Azure HDInsight Documentation.</span></span>
+<span data-ttu-id="46c4c-248">Bu öğreticide, .NET Apache Spark uygulamanızı Azure HDInsight 'a dağıttınız.</span><span class="sxs-lookup"><span data-stu-id="46c4c-248">In this tutorial, you deployed your .NET for Apache Spark application to Azure HDInsight.</span></span> <span data-ttu-id="46c4c-249">HDInsight hakkında daha fazla bilgi edinmek için Azure HDInsight belgelerine geçin.</span><span class="sxs-lookup"><span data-stu-id="46c4c-249">To learn more about HDInsight, continue to the Azure HDInsight Documentation.</span></span>
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="79e99-167">Azure HDInsight belgeleri</span><span class="sxs-lookup"><span data-stu-id="79e99-167">Azure HDInsight Documentation</span></span>](https://docs.microsoft.com/azure/hdinsight/)
+> [<span data-ttu-id="46c4c-250">Azure HDInsight belgeleri</span><span class="sxs-lookup"><span data-stu-id="46c4c-250">Azure HDInsight Documentation</span></span>](https://docs.microsoft.com/azure/hdinsight/)
