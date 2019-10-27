@@ -184,8 +184,6 @@
           href: deploying-wcf-applications-with-clickonce.md
     - name: Yönetim ve Tanılama
       href: diagnostics/
-    - name: Sistem Gereksinimleri
-      href: wcf-system-requirements.md
     - name: WCF Tarafından Gerektirilen İşletim Sistemi Kaynakları
       href: operating-system-resources-required-by-wcf.md
     - name: Kurulum Sorunlarını Giderme
