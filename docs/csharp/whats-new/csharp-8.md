@@ -2,12 +2,12 @@
 title: C# 8,0 C# kılavuzundaki yenilikler
 description: 8,0 ' de C# bulunan yeni özelliklere genel bakış alın.
 ms.date: 09/20/2019
-ms.openlocfilehash: 335ae37b20f752f4181a4d1828cb2a1f02c0fa9e
-ms.sourcegitcommit: 9bd1c09128e012b6e34bdcbdf3576379f58f3137
+ms.openlocfilehash: e6a2357f4405b4eb31b12a1e3faa6896a31c21a1
+ms.sourcegitcommit: 9b2ef64c4fc10a4a10f28a223d60d17d7d249ee8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72798927"
+ms.lasthandoff: 10/26/2019
+ms.locfileid: "72960826"
 ---
 # <a name="whats-new-in-c-80"></a>C# 8,0 sürümündeki yenilikler
 
@@ -40,7 +40,7 @@ Bu makalenin geri kalanında bu özellikler kısaca açıklanmaktadır. Ayrınt�
 
 ## <a name="readonly-members"></a>Salt okunur Üyeler
 
-@No__t_0 değiştiricisini bir yapının herhangi bir üyesine uygulayabilirsiniz. Üyenin durumu değiştirmediğini belirtir. @No__t_0 değiştiricisinin `struct` bildirimine uygulanmasıyla daha ayrıntılı bir hale gelir.  Aşağıdaki kesilebilir yapıyı göz önünde bulundurun:
+`readonly` değiştiricisini bir yapının üyelerine uygulayabilirsiniz. Üyenin durumu değiştirmediğini belirtir. `readonly` değiştiricisinin `struct` bildirimine uygulanmasıyla daha ayrıntılı bir hale gelir.  Aşağıdaki kesilebilir yapıyı göz önünde bulundurun:
 
 ```csharp
 public struct Point
@@ -54,28 +54,28 @@ public struct Point
 }
 ```
 
-Çoğu yapı gibi `ToString()` yöntemi durumu değiştirmez. @No__t_1 bildirimine `readonly` değiştiricisini ekleyerek bunu belirtebilirsiniz:
+Çoğu yapı gibi `ToString()` yöntemi durumunu değiştirmez. `ToString()`bildirimine `readonly` değiştiricisini ekleyerek bunu belirtebilirsiniz:
 
 ```csharp
 public readonly override string ToString() =>
     $"({X}, {Y}) is {Distance} from the origin";
 ```
 
-Yukarıdaki değişiklik bir derleyici uyarısı oluşturur, çünkü `ToString` `Distance` özelliğine eriştiğinde `readonly` işaretlenmez:
+Önceki değişiklik bir derleyici uyarısı oluşturur, çünkü `ToString`, `readonly`işaretlenmemiş `Distance` özelliğine erişir:
 
 ```console
 warning CS8656: Call to non-readonly member 'Point.Distance.get' from a 'readonly' member results in an implicit copy of 'this'
 ```
 
-Derleyici, savunma kopyası oluşturması gerektiğinde sizi uyarır.  @No__t_0 özelliği durumu değiştirmez, bu nedenle `readonly` değiştiricisini bildirime ekleyerek bu uyarıyı çözebilirsiniz:
+Derleyici, savunma kopyası oluşturması gerektiğinde sizi uyarır.  `Distance` özelliği durumu değiştirmez, bu nedenle `readonly` değiştiricisini bildirime ekleyerek bu uyarıyı çözebilirsiniz:
 
 ```csharp
 public readonly double Distance => Math.Sqrt(X * X + Y * Y);
 ```
 
-Salt okuma özelliğinde `readonly` değiştiricinin gerekli olduğuna dikkat edin. Derleyici `get` erişimcilerinin durumu değiştirmediğini varsaymaz; `readonly` açıkça bildirmeniz gerekir. Otomatik uygulanan özellikler bir özel durumdur; derleyici otomatik uygulanan tüm alıcıları ReadOnly olarak değerlendirir, bu nedenle `readonly` değiştiricisini `X` ve `Y` özelliklerine eklemeniz gerekmez.
+`readonly` değiştiricinin salt okunurdur özelliğinde gerekli olduğuna dikkat edin. Derleyici `get` erişimcilerinin durumu değiştirmediğini varsaymaz; `readonly` açıkça bildirmeniz gerekir. Otomatik uygulanan özellikler bir özel durumdur; derleyici otomatik uygulanan tüm alıcıları ReadOnly olarak değerlendirir, bu nedenle `X` ve `Y` özelliklerine `readonly` değiştiricisini eklemeniz gerekmez.
 
-Derleyici `readonly` üyelerinin durumu değiştirmediğinden kuralı zorlar. @No__t_0 değiştiricisini kaldırmadığınız müddetçe aşağıdaki yöntem derlenmeyecektir:
+Derleyici, `readonly` üyelerin durumu değiştirmiyor kuralını zorlar. `readonly` değiştiricisini kaldırmadığınız takdirde aşağıdaki yöntem derlenmez:
 
 ```csharp
 public readonly void Translate(int xOffset, int yOffset)
@@ -85,7 +85,7 @@ public readonly void Translate(int xOffset, int yOffset)
 }
 ```
 
-Bu özellik, tasarım amacınızı derleyicinin uygulamayı zorunlu kılabilir ve bu amaca göre iyileştirmeler yapabilmesini sağlar.
+Bu özellik, tasarım amacınızı derleyicinin uygulamayı zorunlu kılabilir ve bu amaca göre iyileştirmeler yapabilmesini sağlar. [`readonly`](../language-reference/keywords/readonly.md#readonly-member-examples)dil başvurusu makalesindeki salt okunur Üyeler hakkında daha fazla bilgi edinebilirsiniz.
 
 ## <a name="default-interface-methods"></a>Varsayılan arabirim metotları
 
@@ -138,7 +138,7 @@ public static RGBColor FromRainbow(Rainbow colorBand) =>
 Burada birkaç sözdizimi geliştirmesi vardır:
 
 - Değişken `switch` anahtar sözcüğünden önce gelir. Farklı sıra, switch ifadesinin Switch deyiminin ayırt edilmesini görsel açıdan kolaylaştırır.
-- @No__t_0 ve `:` öğeleri `=>` ile değiştirilmiştir. Daha kısa ve sezgisel.
+- `case` ve `:` öğeleri `=>`ile değiştirilmiştir. Daha kısa ve sezgisel.
 - `default` durum, `_` bir atma ile değiştirilmiştir.
 - Gövdeler deyimlerdir, deyimler değildir.
 
@@ -171,7 +171,7 @@ public static RGBColor FromRainbowClassic(Rainbow colorBand)
 
 ### <a name="property-patterns"></a>Özellik desenleri
 
-**Özellik deseninin** incelenen nesnenin özellikleriyle eşleştirmenize olanak sağlar. Alıcının adresine göre satış vergisini hesaplamak zorunda olan bir eCommerce sitesini düşünün. Bu hesaplama `Address` sınıfının temel sorumluluğu değildir. Büyük olasılıkla, adres biçimi değişikliklerinden daha fazla sıklıkta değişecektir. Satış vergisinin miktarı, adresin `State` özelliğine bağlıdır. Aşağıdaki yöntem, adresten ve fiyattan satış vergisini hesaplamak için özellik modelini kullanır:
+**Özellik deseninin** incelenen nesnenin özellikleriyle eşleştirmenize olanak sağlar. Alıcının adresine göre satış vergisini hesaplamak zorunda olan bir eCommerce sitesini düşünün. Bu hesaplama, bir `Address` sınıfının temel sorumluluğu değildir. Büyük olasılıkla, adres biçimi değişikliklerinden daha fazla sıklıkta değişecektir. Satış vergisinin miktarı, adresin `State` özelliğine bağlıdır. Aşağıdaki yöntem, adresten ve fiyattan satış vergisini hesaplamak için özellik modelini kullanır:
 
 ```csharp
 public static decimal ComputeSalesTax(Address location, decimal salePrice) =>
@@ -209,7 +209,7 @@ public static string RockPaperScissors(string first, string second)
 
 ### <a name="positional-patterns"></a>Konumsal desenler
 
-Bazı türler, özelliklerini ayrı değişkenlere oluşturan `Deconstruct` yöntemini içerir. @No__t_0 yöntemi erişilebilir olduğunda, nesnenin özelliklerini incelemek ve bu özellikleri bir desen için kullanmak üzere **konumsal desenleri** kullanabilirsiniz.  @No__t_2 ve `Y` için ayrık değişkenler oluşturmak üzere bir `Deconstruct` yöntemi içeren aşağıdaki `Point` sınıfını göz önünde bulundurun:
+Bazı türler, özelliklerini ayrı değişkenlere oluşturan `Deconstruct` yöntemini içerir. `Deconstruct` yöntemi erişilebilir olduğunda, nesnenin özelliklerini incelemek ve bu özellikleri bir desen için kullanmak üzere **konumsal desenleri** kullanabilirsiniz.  `X` ve `Y`için ayrık değişkenler oluşturmak üzere bir `Deconstruct` yöntemi içeren aşağıdaki `Point` sınıfını göz önünde bulundurun:
 
 ```csharp
 public class Point
@@ -254,7 +254,7 @@ static Quadrant GetQuadrant(Point point) => point switch
 };
 ```
 
-Önceki anahtardaki atma deseninin `x` veya `y` olduğu zaman eşleşir, ancak her ikisi birden değildir. Switch ifadesinin bir değer üretmesi veya bir özel durum oluşturması gerekir. Durumlardan hiçbiri eşleşmezse, switch ifadesi bir özel durum oluşturur. Anahtar ifadenizde olası tüm durumları kapsamıyordıysanız, derleyici sizin için bir uyarı oluşturur.
+Önceki anahtardaki atma deseninin `x` veya `y` olduğu zaman eşleşir, ancak her ikisi birden değildir. Switch ifadesinin bir değer üretmesi veya bir özel durum oluşturması gerekir. Durumlardan hiçbiri eşleşmezse, switch ifadesi bir özel durum oluşturur. Anahtar ifadenizde olası tüm durumları kapsamıyorsanız, derleyici sizin için bir uyarı oluşturur.
 
 Bu [Gelişmiş öğreticide, model eşleştirme](../tutorials/pattern-matching.md)tekniklerini inceleyebilirsiniz.
 
@@ -285,7 +285,7 @@ static int WriteLinesToFile(IEnumerable<string> lines)
 }
 ```
 
-Yukarıdaki örnekte, yöntemi için kapanış ayracı ne zaman ulaşıldığında dosya atıldı. @No__t_0 bildirildiği kapsamın sonu. Yukarıdaki kod, klasik [using ifadesini](../language-reference/keywords/using-statement.md)kullanan aşağıdaki koda eşdeğerdir:
+Yukarıdaki örnekte, yöntemi için kapanış ayracı ne zaman ulaşıldığında dosya atıldı. `file` bildirildiği kapsamın sonu. Yukarıdaki kod, klasik [using ifadesini](../language-reference/keywords/using-statement.md)kullanan aşağıdaki koda eşdeğerdir:
 
 ```csharp
 static int WriteLinesToFile(IEnumerable<string> lines)
@@ -313,7 +313,7 @@ static int WriteLinesToFile(IEnumerable<string> lines)
 
 Yukarıdaki örnekte, `using` ifadesiyle ilişkilendirilen kapanış ayracı erişildiğinde dosya atıldı.
 
-Her iki durumda da derleyici `Dispose()` ' a çağrı üretir. @No__t_0 deyimindeki ifade atılabilir değilse derleyici bir hata oluşturur.
+Her iki durumda da derleyici `Dispose()` ' a çağrı üretir. `using` deyimindeki ifade atılabilir değilse derleyici bir hata oluşturur.
 
 ## <a name="static-local-functions"></a>Statik yerel işlevler
 
@@ -347,13 +347,13 @@ int M()
 
 ## <a name="disposable-ref-structs"></a>Atılabilir ref yapıları
 
-@No__t_1 değiştiricisiyle bildirildiği `struct` hiçbir arabirim uygulayamaz, bu nedenle <xref:System.IDisposable> uygulayamaz. Bu nedenle, bir `ref struct` elden çıkarılbilmesini sağlamak için, erişilebilir bir `void Dispose()` yöntemine sahip olmalıdır. Bu, `readonly ref struct` bildirimleri için de geçerlidir.
+`ref` değiştiricisiyle bildirildiği `struct` hiçbir arabirim uygulayamaz, bu nedenle <xref:System.IDisposable>uygulayamaz. Bu nedenle, bir `ref struct` elden çıkarılbilmesini sağlamak için, erişilebilir bir `void Dispose()` yöntemine sahip olmalıdır. Bu özellik `readonly ref struct` bildirimleri için de geçerlidir.
 
 ## <a name="nullable-reference-types"></a>Boş değer atanabilir başvuru türleri
 
 Null olabilen bir ek açıklama bağlamında, başvuru türündeki herhangi bir değişken **null yapılamayan bir başvuru türü**olarak kabul edilir. Bir değişkenin null olabileceğini belirtmek istiyorsanız, değişkeni null olabilen bir **başvuru türü**olarak bildirmek için tür adını `?` ile eklemeniz gerekir.
 
-Null yapılamayan başvuru türleri için derleyici, yerel değişkenlerin bildirildiği sırada null olmayan bir değere başlatıldığından emin olmak için akış analizini kullanır. Alanlar oluşturma sırasında başlatılmalıdır. Değişken, kullanılabilir oluşturuculardan herhangi birine veya bir başlatıcı tarafından ayarlanmamışsa, derleyici bir uyarı oluşturur. Ayrıca, null olamayan başvuru türlerine null olabilecek bir değer atanamaz.
+Null yapılamayan başvuru türleri için derleyici, yerel değişkenlerin bildirildiği sırada null olmayan bir değere başlatıldığından emin olmak için akış analizini kullanır. Alanlar oluşturma sırasında başlatılmalıdır. Derleyici, değişken kullanılabilir oluşturuculardan herhangi birine veya bir başlatıcı tarafından ayarlanmamışsa bir uyarı oluşturur. Ayrıca, null olamayan başvuru türlerine null olabilecek bir değer atanamaz.
 
 Null yapılabilir başvuru türleri atanmamış veya null olarak başlatılmamış olduğundan emin olmak için denetlenmez. Ancak, derleyici, null olabilen bir başvuru türü değişkeninin erişilebilir olması veya null yapılamayan bir başvuruya atanmadan önce null olarak denetlendiğinden emin olmak için akış analizini kullanır.
 
@@ -363,11 +363,11 @@ Null yapılabilir başvuru türleri atanmamış veya null olarak başlatılmamı
 
 8,0 ile C# başlayarak akışları zaman uyumsuz olarak oluşturabilir ve kullanabilirsiniz. Zaman uyumsuz akış döndüren bir yöntem üç özelliğe sahiptir:
 
-1. @No__t_0 değiştiricisiyle birlikte bildirilmiştir.
+1. `async` değiştiricisiyle birlikte bildirilmiştir.
 1. Bir <xref:System.Collections.Generic.IAsyncEnumerable%601>döndürür.
 1. Yöntemi, zaman uyumsuz akıştaki birbirini izleyen öğeleri döndürmek için `yield return` deyimlerini içerir.
 
-Zaman uyumsuz bir akışın kullanılması, akışın öğelerini Numaralandırdığınızda `foreach` anahtar sözcüğünden önce `await` anahtar sözcüğünü eklemenizi gerektirir. @No__t_0 anahtar sözcüğünü eklemek, zaman uyumsuz akışı, `async` değiştiricisiyle belirtilecek ve bir `async` yöntemi için izin verilen bir tür döndürecek şekilde numaralandırır. Genellikle bu, <xref:System.Threading.Tasks.Task> veya <xref:System.Threading.Tasks.Task%601>döndürme anlamına gelir. Ayrıca, bir <xref:System.Threading.Tasks.ValueTask> veya <xref:System.Threading.Tasks.ValueTask%601>olabilir. Bir yöntem, bir zaman uyumsuz akış tüketebilir ve üretebilir, bu da bir <xref:System.Collections.Generic.IAsyncEnumerable%601>dönecektir. Aşağıdaki kod, 0 ile 19 arasında bir sıra üretir, her bir sayı üretilmeden 100 ms bekler:
+Zaman uyumsuz bir akışın kullanılması, akışın öğelerini Numaralandırdığınızda `foreach` anahtar sözcüğünden önce `await` anahtar sözcüğünü eklemenizi gerektirir. `await` anahtar sözcüğünü eklemek, zaman uyumsuz akışı, `async` değiştiricisiyle belirtilecek ve bir `async` yöntemi için izin verilen bir tür döndürecek şekilde numaralandırır. Genellikle bu, <xref:System.Threading.Tasks.Task> veya <xref:System.Threading.Tasks.Task%601>döndürme anlamına gelir. Ayrıca, bir <xref:System.Threading.Tasks.ValueTask> veya <xref:System.Threading.Tasks.ValueTask%601>olabilir. Bir yöntem, bir zaman uyumsuz akış tüketebilir ve üretebilir, bu da bir <xref:System.Collections.Generic.IAsyncEnumerable%601>dönecektir. Aşağıdaki kod, 0 ile 19 arasında bir sıra üretir, her bir sayı üretilmeden 100 ms bekler:
 
 ```csharp
 public static async System.Collections.Generic.IAsyncEnumerable<int> GenerateSequence()
@@ -380,7 +380,7 @@ public static async System.Collections.Generic.IAsyncEnumerable<int> GenerateSeq
 }
 ```
 
-@No__t_0 ifadesini kullanarak sırayı numaralandırabilirsiniz:
+`await foreach` ifadesini kullanarak sırayı numaralandırabilirsiniz:
 
 ```csharp
 await foreach (var number in GenerateSequence())
@@ -404,7 +404,7 @@ Bu dil desteği iki yeni türe ve iki yeni işleçlere dayanır:
 
 Dizin kurallarıyla başlayalım. Dizi `sequence` değerlendirin. `0` Dizin `sequence[0]`ile aynıdır. `^0` Dizin `sequence[sequence.Length]`ile aynıdır. `sequence[^0]`, `sequence[sequence.Length]` olduğu gibi bir özel durum oluşturur. Herhangi bir sayı `n`için Dizin `^n` `sequence.Length - n`ile aynıdır.
 
-Aralık, bir aralığın *başlangıcını* ve *sonunu* belirtir. Aralığın başlangıcı dahil, ancak aralığın sonu dışlamalı, ancak *Başlangıç* aralığa dahil değildir ancak *bitiş* aralığa eklenmez. Aralık `[0..^0]`, tüm aralığı temsil eden `[0..sequence.Length]` aralığını temsil eder.
+Aralık, bir aralığın *başlangıcını* ve *sonunu* belirtir. Aralığın başlangıcı dahil, ancak aralığın sonu dışlamalı, ancak *Başlangıç* aralığa dahil değildir ancak *uç* aralığa dahil değildir. Aralık `[0..^0]`, tüm aralığı temsil eden `[0..sequence.Length]` aralığını temsil eder.
 
 Birkaç örneğe bakalım. Başlangıç ve bitişten dizin ile açıklana ek olarak, aşağıdaki diziyi göz önünde bulundurun:
 
@@ -437,7 +437,7 @@ Aşağıdaki kod, "hızlı", "kahverengi" ve "Fox" sözcüklerinin bulunduğu bi
 var quickBrownFox = words[1..4];
 ```
 
-Aşağıdaki kod, "Lazy" ve "köpek" ile bir alt Aralık oluşturur. `words[^2]` ve `words[^1]`içerir. `words[^0]` bitiş dizini dahil değil:
+Aşağıdaki kod, "Lazy" ve "köpek" ile bir alt Aralık oluşturur. `words[^2]` ve `words[^1]`içerir. Son dizin `words[^0]` dahil değildir:
 
 ```csharp
 var lazyDog = words[^2..^0];
@@ -524,4 +524,4 @@ Console.WriteLine(ind);  // output: 1
 
 ## <a name="enhancement-of-interpolated-verbatim-strings"></a>Ara değerli tam dizelerin geliştirilmesi
 
-@No__t_0 ve `@` belirteçlerinin sırası, her [ikisi de olabilir](../language-reference/tokens/interpolated.md) : hem `$@"..."` hem de `@$"..."` geçerli bir ara değerli dizelerdir. Önceki C# sürümlerde `$` belirtecinin `@` belirtecinden önce görünmesi gerekir.
+`$` ve `@` belirteçlerinin sırası, her [ikisi de olabilir](../language-reference/tokens/interpolated.md) : hem `$@"..."` hem de `@$"..."` geçerli bir ara değerli dizelerdir. Önceki C# sürümlerde `$` belirtecinin `@` belirtecinden önce görünmesi gerekir.

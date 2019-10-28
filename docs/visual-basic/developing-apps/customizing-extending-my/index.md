@@ -6,45 +6,41 @@ helpviewer_keywords:
 - My namespace
 - My namespace [Visual Basic], extending
 ms.assetid: 06ca80b9-1192-4eb5-8537-8ef5edfb9be0
-ms.openlocfilehash: d7fca92f541ffeca7a6e8267260d3b665271e90a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 97933a9d014a54d5b6e333090cddccace99fcc3c
+ms.sourcegitcommit: 9b2ef64c4fc10a4a10f28a223d60d17d7d249ee8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62014200"
+ms.lasthandoff: 10/26/2019
+ms.locfileid: "72960939"
 ---
 # <a name="customizing-projects-and-extending-my-with-visual-basic"></a>Visual Basic ile Projeleri Özelleştirme ve My Özelliklerini Genişletme
-Ek sağlamak için proje şablonları özelleştirebilirsiniz `My` nesneleri. Bu, nesneleri bulup diğer geliştiriciler için kolaylaştırır.  
-  
-## <a name="in-this-section"></a>Bu Bölümde  
- [Genişletme Visual Basic'te My Namespace](../../../visual-basic/developing-apps/customizing-extending-my/extending-the-my-namespace.md)  
- Özel üye eklemeyi açıklar ve değerler `My` Visual Basic'de ad alanı.  
-  
- [My Uzantılarını Paketleme ve Dağıtma](../../../visual-basic/developing-apps/customizing-extending-my/packaging-and-deploying-custom-my-extensions.md)  
- Özel yayımlama açıklanır `My` Visual Studio şablonları kullanarak ad alanı uzantıları.  
-  
- [Visual Basic Uygulama Modelini Genişletme](../../../visual-basic/developing-apps/customizing-extending-my/extending-the-visual-basic-application-model.md)  
- Uygulama modeli için kendi uzantılarınızı üyelerini geçersiz kılarak belirtin açıklar <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> sınıfı.  
-  
- [My Özelliklerinde Hangi Nesnelerin Kullanılabilir Olduğunu Özelleştirme](../../../visual-basic/developing-apps/customizing-extending-my/customizing-which-objects-are-available-in-my.md)  
- Hangi denetlemek nasıl açıklar `My` nesneleri projenizin ayarlayarak etkin \_MYTYPE koşullu derleme sabiti.  
-  
-## <a name="related-sections"></a>İlgili Bölümler  
- [My Özelliğiyle Geliştirme](../../../visual-basic/developing-apps/development-with-my/index.md)  
- Açıklayan `My` nesneleri, varsayılan olarak, farklı proje türlerinde kullanılabilir.  
-  
- [Visual Basic Uygulama Modeline Genel Bakış](../../../visual-basic/developing-apps/development-with-my/overview-of-the-visual-basic-application-model.md)  
- Windows Forms uygulamalarının davranışını denetlemek için Visual Basic'ın modeli açıklar.  
-  
- [My Özellikleri Proje Türüne Nasıl Bağımlıdır](../../../visual-basic/developing-apps/development-with-my/how-my-depends-on-project-type.md)  
- Açıklayan `My` nesneleri, varsayılan olarak, farklı proje türlerinde kullanılabilir.  
-  
- [Koşullu Derleme](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)  
- Koşullu derleme derleyici derleme ve diğer bölümleri hariç tutmak için kodun belirli bölümleri seçin için nasıl kullandığını açıklar.  
-  
- <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>  
- Açıklar `My` ilgili geçerli uygulamaya özellikleri, yöntemleri ve olayları sağlayan nesne.  
-  
+
+Proje şablonlarını, ek `My` nesneleri sağlamak için özelleştirebilirsiniz. Bu, diğer geliştiricilerin nesnelerinizi bulmasını ve kullanmasını kolaylaştırır.
+
+## <a name="in-this-section"></a>Bu bölümde
+
+- [Visual Basic ad alanını genişletme](extending-the-my-namespace.md)  
+ Visual Basic `My` ad alanına özel üye ve değerlerin nasıl ekleneceğini açıklar.
+- [My Uzantılarını Paketleme ve Dağıtma](packaging-and-deploying-custom-my-extensions.md)  
+ Visual Studio şablonları kullanarak özel `My` ad alanı uzantılarının nasıl yayımlanacağını açıklar.
+- [Visual Basic Uygulama Modelini Genişletme](extending-the-visual-basic-application-model.md)  
+ <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> sınıfının üyelerini geçersiz kılarak uygulama modeli için kendi uzantılarınızın nasıl belirtileceğini açıklar.
+- [My Özelliklerinde Hangi Nesnelerin Kullanılabilir Olduğunu Özelleştirme](customizing-which-objects-are-available-in-my.md)  
+ Projenizin \_MYTYPE koşullu derleme sabiti ayarlanarak hangi `My` nesnelerinin etkinleştirildiğini nasıl denetleyebileceğinizi açıklar.
+
+## <a name="related-sections"></a>İlgili bölümler
+
+- [My Özelliğiyle Geliştirme](../development-with-my/index.md)  
+ Varsayılan olarak farklı proje türlerinde hangi `My` nesnelerinin kullanılabildiğini açıklar.
+- [Visual Basic Uygulama Modeline Genel Bakış](../development-with-my/overview-of-the-visual-basic-application-model.md)  
+ Windows Forms uygulamalarının davranışını denetlemek için Visual Basic modelini açıklar.
+- [My Özellikleri Proje Türüne Nasıl Bağımlıdır](../development-with-my/how-my-depends-on-project-type.md)  
+ Varsayılan olarak farklı proje türlerinde hangi `My` nesnelerinin kullanılabildiğini açıklar.
+- [Koşullu Derleme](../../programming-guide/program-structure/conditional-compilation.md)  
+ Derleyicinin diğer bölümleri derlemek ve hariç tutmak için kodun belirli bölümlerini seçmek üzere koşullu derlemeyi nasıl kullandığını açıklar.
+- <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>  
+ Geçerli uygulamayla ilgili özellikler, Yöntemler ve olaylar sağlayan `My` nesnesini açıklar.
+
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Basic ile uygulama geliştirme](../../../visual-basic/developing-apps/index.md)
+- [Visual Basic ile uygulama geliştirme](../index.md)
