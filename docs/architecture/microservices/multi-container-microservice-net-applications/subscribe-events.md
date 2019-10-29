@@ -2,20 +2,20 @@
 title: Olaylara abone olma
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | Tümleştirme olaylarına yayımlama ve aboneliğin ayrıntılarını anlayın.
 ms.date: 10/02/2018
-ms.openlocfilehash: ac9715c7c282be845e1e47516d06945c31f70209
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 208b0f27aa1e6ceb6686e9e846b6e31d9f1c74df
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71039776"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73035645"
 ---
 # <a name="subscribing-to-events"></a>Olaylara abone olma
 
 Olay veri yolunu kullanmanın ilk adımı, mikro hizmetlerin almak istedikleri olaylara abone olmadır. Bu, alıcının mikro hizmetlerinde yapılmalıdır.
 
-Aşağıdaki basit kod, hizmet başlatıldığında (yani, `Startup` sınıfında), ihtiyaç duyacağı olaylara abone olmak için her bir alıcı mikro hizmetinin ne yapması gerektiğini gösterir. Bu durumda, `basket.api` mikro hizmet 'e `ProductPriceChangedIntegrationEvent` abone olmalıdır ve `OrderStartedIntegrationEvent` iletileri.
+Aşağıdaki basit kod, hizmet başlatıldığında (yani `Startup` sınıfında), ihtiyaç duyacağı olaylara abone olmak için her bir alıcı mikro hizmetinin ne kadar uygulanması gerektiğini gösterir. Bu durumda `basket.api` mikro hizmeti `ProductPriceChangedIntegrationEvent` ve `OrderStartedIntegrationEvent` iletilerine abone olmalıdır.
 
-Örneğin, `ProductPriceChangedIntegrationEvent` olaya abone olurken, sepet mikro hizmetini ürün fiyatındaki herhangi bir değişikliği fark ettiğini ve bu ürün kullanıcının sepetinde olduğunda değişikliği hakkında kullanıcıyı uyarmasını sağlar.
+Örneğin, `ProductPriceChangedIntegrationEvent` olayına abone olurken, sepet mikro hizmeti, ürün fiyatındaki herhangi bir değişikliği algılar ve bu ürünün kullanıcının sepetinde olması durumunda kullanıcıyı bu değişiklik hakkında uyarmasını sağlar.
 
 ```csharp
 var eventBus = app.ApplicationServices.GetRequiredService<IEventBus>();
@@ -87,7 +87,7 @@ public async Task<IActionResult> UpdateProduct([FromBody]CatalogItem product)
 
 Bu durumda, kaynak mikro hizmet basit bir CRUD mikro hizmet olduğundan, bu kod bir Web API denetleyicisine doğrudan yerleştirilir.
 
-Daha gelişmiş mikro hizmetlerde, CQRS yaklaşımları kullanırken olduğu gibi, `CommandHandler` `Handle()` yöntemi içinde sınıfında uygulanabilir.
+Daha gelişmiş mikro hizmetlerde, CQRS yaklaşımları kullanırken olduğu gibi, `Handle()` yöntemi içinde `CommandHandler` sınıfında uygulanabilir.
 
 ### <a name="designing-atomicity-and-resiliency-when-publishing-to-the-event-bus"></a>Olay veri yoluna yayımlarken kararlılık ve dayanıklılık tasarlama
 
@@ -97,7 +97,7 @@ Temel olarak, mikro hizmetleri, ölçeklenebilir ve yüksek oranda kullanılabil
 
 Mikro hizmet tabanlı mimarilerde kullanılabilirlik ve tolerans ' i seçmeniz gerekir ve güçlü tutarlılığı vurgulamalısınız. Bu nedenle, çoğu modern mikro hizmet tabanlı uygulamalarda, Windows Dağıtılmış İşlem Düzenleyicisi (DTC) tabanlı [Dağıtılmış işlemler](https://docs.microsoft.com/previous-versions/windows/desktop/ms681205(v=vs.85)) uyguladığınızda yaptığınız gibi genellikle mesajlaşma 'da dağıtılmış işlemleri kullanmak istemezsiniz. [MSMQ](https://msdn.microsoft.com/library/windows/desktop/ms711472(v=vs.85).aspx)ile.
 
-İlk soruna ve bu örneğe geri dönelim. Veritabanı güncelleştirildikten sonra hizmet çöktüğünde (Bu durumda, \_bağlamdaki kod satırından hemen sonra). SaveChangesAsync ()), ancak tümleştirme olayı yayımlanmadan önce genel sistem tutarsız hale gelebilir. Bu, ilgilendiğiniz belirli iş işlemine bağlı olarak iş açısından kritik olabilir.
+İlk soruna ve bu örneğe geri dönelim. Veritabanı güncelleştirildikten sonra hizmet çöktüğünde (Bu durumda, \_bağlamıyla kod satırından hemen sonra). SaveChangesAsync ()), ancak tümleştirme olayı yayımlanmadan önce genel sistem tutarsız hale gelebilir. Bu, ilgilendiğiniz belirli iş işlemine bağlı olarak iş açısından kritik olabilir.
 
 Mimari bölümünde daha önce bahsedildiği gibi, bu sorunla ilgilenirken çeşitli yaklaşımlara sahip olabilirsiniz:
 
@@ -105,9 +105,9 @@ Mimari bölümünde daha önce bahsedildiği gibi, bu sorunla ilgilenirken çeş
 
 - [İşlem günlüğü madenciliği](https://www.scoop.it/t/sql-server-transaction-log-mining)kullanılıyor.
 
-- [Giden kutusu deseninin](http://gistlabs.com/2014/05/the-outbox/)kullanımı. Bu, tümleştirme olaylarını depolamak için (yerel işlemi genişletme) bir işlem tablosudur.
+- [Giden kutusu deseninin](https://www.kamilgrzybek.com/design/the-outbox-pattern/)kullanımı. Bu, tümleştirme olaylarını depolamak için (yerel işlemi genişletme) bir işlem tablosudur.
 
-Bu senaryo için tam olay kaynağını belirleme (ES) deseni en iyi yaklaşımlardan biri değilse kullanmaktır *en* iyi. Bununla birlikte, birçok uygulama senaryosunda, bir tam ES sistemi uygulamaımayabilir. ES, geçerli durum verilerini depolamak yerine yalnızca işlem veritabanınızda bulunan etki alanı olaylarını depolayan anlamına gelir. Yalnızca etki alanı olaylarının depolanması, sisteminizin geçmişini ve geçmişteki bir zamanda sisteminizin durumunu tespit etmek gibi harika avantajlar elde edebilir. Ancak, bir tam ES sisteminin uygulanması sisteminizin çoğunu yeniden mimararak birçok karmaşıklığın ve gereksinimin tanıtılmasının yapılmasını gerektirir. Örneğin, Event [Store](https://eventstore.org/)veya Azure Cosmos DB, MongoDB, Cassandra, couşdb veya ırvendb gibi belge yönelimli bir veritabanı için özel olarak oluşturulan bir veritabanını kullanmak isteyebilirsiniz. Daha önce olay kaynağını öğrenmediğiniz müddetçe, bu soruna yönelik harika bir yaklaşım, ancak en kolay çözüm değildir.
+Bu senaryoda, en iyi *durumda değilse,* tam olay kaynağını BELIRLEME (es) deseninin kullanılması en iyi yaklaşımlardan biridir. Bununla birlikte, birçok uygulama senaryosunda, bir tam ES sistemi uygulamaımayabilir. ES, geçerli durum verilerini depolamak yerine yalnızca işlem veritabanınızda bulunan etki alanı olaylarını depolayan anlamına gelir. Yalnızca etki alanı olaylarının depolanması, sisteminizin geçmişini ve geçmişteki bir zamanda sisteminizin durumunu tespit etmek gibi harika avantajlar elde edebilir. Ancak, bir tam ES sisteminin uygulanması sisteminizin çoğunu yeniden mimararak birçok karmaşıklığın ve gereksinimin tanıtılmasının yapılmasını gerektirir. Örneğin, Event [Store](https://eventstore.org/)veya Azure Cosmos DB, MongoDB, Cassandra, couşdb veya ırvendb gibi belge yönelimli bir veritabanı için özel olarak oluşturulan bir veritabanını kullanmak isteyebilirsiniz. Daha önce olay kaynağını öğrenmediğiniz müddetçe, bu soruna yönelik harika bir yaklaşım, ancak en kolay çözüm değildir.
 
 İşlem günlüğü madenciliği ilk başta kullanma seçeneği çok saydam görünüyor. Ancak, bu yaklaşımı kullanmak için mikro hizmetin SQL Server işlem günlüğü gibi RDBMS işlem günlüğü ile bağlanmış olması gerekir. Bu muhtemelen istenmez. Diğer bir sakıncası, işlem günlüğünde kayıtlı olan alt düzey güncelleştirmelerin, üst düzey tümleştirme olaylarınız ile aynı düzeyde olmaması olabilir. Bu durumda, bu işlem günlüğü işlemlerinin tersine mühendislik işlemi zor olabilir.
 
@@ -147,7 +147,7 @@ Olayları yayımlama adımlarını uygularken şu seçeneklere sahip olursunuz:
 
 İkinci yaklaşım hakkında: olay günlüğü tablosunu kuyruk olarak kullanın ve iletileri yayımlamak için her zaman bir çalışan mikro hizmetini kullanın. Bu durumda, işlem Şekil 6-23 ' de gösterilenle benzer. Bu, ek bir mikro hizmet gösterir ve olaylar yayımlandığında tablo tek kaynaktır.
 
-![Atomicity 'i işlemeye yönelik başka bir yaklaşım: Olay günlüğü tablosuna yayımlayın ve sonra başka bir mikro hizmet (arka plan çalışanı) olayını yayımlayın.](./media/image24.png)
+![Atomicity 'i işlemeye yönelik başka bir yaklaşım: bir olay günlüğü tablosunda yayımlayın ve sonra başka bir mikro hizmet (arka plan çalışanı) olayını yayımlayın.](./media/image24.png)
 
 **Şekil 6-23**. Bir çalışan mikro hizmeti ile olay veri yoluna olay yayımlarken Atomicity
 
@@ -322,19 +322,19 @@ Aralıklı ağ arızalarının meydana gelmesi durumunda iletiler yinelenebilir 
 
 ### <a name="additional-resources"></a>Ek kaynaklar
 
-- **NServiceBus (belirli yazılımlar) kullanılarak forlenmiş eShopOnContainers** \
+- **NServiceBus (belirli yazılımlar) kullanarak Forlenmiş eShopOnContainers** \
     <https://go.particular.net/eShopOnContainers>
 
 - **Olay odaklı mesajlaşma** \
-    [http://soapatterns.org/design\_patterns/event\_driven\_messaging](http://soapatterns.org/design_patterns/event_driven_messaging)
+    <https://patterns.arcitura.com/soa-patterns/design_patterns/event_driven_messaging>
 
-- **Jimmy Bogard. Esnekliği doğru yeniden düzenleme: Kupın değerlendirmesi** \
+- **Jimmy Bogard. Esnekliği 'e yeniden düzenleme: kup \ değerlendirilirken**
     <https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/>
 
-- **Yayımla-abone ol kanalı** \
+- **Yayımla-abone ol kanal** \
     <https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html>
 
-- **Sınırlanmış bağlamlar arasında iletişim kurma** \
+- **Sınırlanmış bağlamlar arasında iletişim** \
     <https://docs.microsoft.com/previous-versions/msp-n-p/jj591572(v=pandp.10)>
 
 - **Nihai tutarlılık** \
@@ -346,10 +346,10 @@ Aralıklı ağ arızalarının meydana gelmesi durumunda iletiler yinelenebilir 
 - **Chris Richardson. Toplamaları kullanarak Işlem mikro hizmetleri geliştirme, olay kaynağını belirleme ve CQRS-2. Bölüm** \
     <https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-2-richardson>
 
-- **Chris Richardson. Olay kaynağını belirleme kalıbı** \
+- **Chris Richardson. Olay** kaynağını belirleme deseninin \
     <https://microservices.io/patterns/data/event-sourcing.html>
 
-- **Olay kaynağını belirleme** \
+- **Olay** kaynağını belirleme \ giriş
     <https://docs.microsoft.com/previous-versions/msp-n-p/jj591559(v=pandp.10)>
 
 - **Olay deposu veritabanı**. Resmi site. \
@@ -358,7 +358,7 @@ Aralıklı ağ arızalarının meydana gelmesi durumunda iletiler yinelenebilir 
 - **Patrick Nmmensen. Mikro hizmetler için olay odaklı Veri Yönetimi** \
     <https://dzone.com/articles/event-driven-data-management-for-microservices-1>
 
-- **Üst sınır** \
+- Üst **sınır** \
     [https://en.wikipedia.org/wiki/CAP\_theorem](https://en.wikipedia.org/wiki/CAP_theorem)
 
 - **SıNıR nedir?** \
@@ -367,18 +367,18 @@ Aralıklı ağ arızalarının meydana gelmesi durumunda iletiler yinelenebilir 
 - **Veri tutarlılığı öncü** \
     <https://docs.microsoft.com/previous-versions/msp-n-p/dn589800(v=pandp.10)>
 
-- **Rick sallama. CAP 'ler: Bulut ve Internet ile neden "her şey farklıdır"**  \
+- **Rick sallama. CAP 'ler: bulut ve Internet \ "her şey farklı"**
     <https://blogs.msdn.microsoft.com/rickatmicrosoft/2013/01/03/the-cap-theorem-why-everything-is-different-with-the-cloud-and-internet/>
 
-- **Eric Brewer. BÜYÜK on Iki yıl sonra: "Kurallar" nasıl değişmiştir** \
+- **Eric Brewer. BÜYÜK on Iki yıl sonra: "kurallar" nasıl değiştirildi** \
     <https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed>
 
-- **Azure Service Bus. Aracılı mesajlaşma: Yinelenen algılama**  \
+- **Azure Service Bus. Aracılı mesajlaşma: yinelenen algılama**  \
     <https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25>
 
-- **Güvenilirlik Kılavuzu** (Oybbitmq belgeleri) \
+- **Güvenilirlik Kılavuzu** (kbbitmq belgeleri) \
     [https://www.rabbitmq.com/reliability.html\#consumer](https://www.rabbitmq.com/reliability.html#consumer)
 
 > [!div class="step-by-step"]
-> [Önceki](rabbitmq-event-bus-development-test-environment.md)İleri
-> [](test-aspnet-core-services-web-apps.md)
+> [Önceki](rabbitmq-event-bus-development-test-environment.md)
+> [İleri](test-aspnet-core-services-web-apps.md)
