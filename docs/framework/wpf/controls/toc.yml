@@ -497,7 +497,7 @@
         - name: 'İzlenecek yollar: Özel Animasyonlu Düğme Oluşturma'
           href: walkthroughs-create-a-custom-animated-button.md
           items:
-            - name: Microsoft Expression Blend Kullanarak Düğme Oluşturma
+            - name: Blend Kullanarak Düğme Oluşturma
               href: walkthrough-create-a-button-by-using-microsoft-expression-blend.md
             - name: XAML Kullanarak bir Düğme Oluşturma
               href: walkthrough-create-a-button-by-using-xaml.md
