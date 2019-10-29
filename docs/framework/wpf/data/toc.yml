@@ -1,87 +1,119 @@
-- name: Veri
+- name: Veri bağlama belgeleri
   href: index.md
+- name: Genel Bakış
+  href: ../../../desktop-wpf/data/data-binding-overview.md?toc=/dotnet/framework/wpf/data/toc.json&bc=/dotnet/framework/wpf/data/breadcrumb/toc.json
+- name: Bağlama kaynakları
+  href: binding-sources-overview.md
+- name: Veri şablonu oluşturma
+  href: data-templating-overview.md
+- name: Bağlama bildirimleri
+  href: binding-declarations-overview.md
+- name: Nasıl yapılır
   items:
-    - name: Veri Bağlama
-      href: data-binding-wpf.md
+    - name: Veri bağlama ile ilgili nasıl yapılır konu başlıkları
+      href: data-binding-how-to-topics.md
+    - name: Basit bir bağlama oluşturma
+      href: how-to-create-a-simple-binding.md
+    - name: Bağlama kaynağını belirtme
+      href: how-to-specify-the-binding-source.md
+    - name: XAML'de bağlama için verileri kullanılabilir yapma
+      href: how-to-make-data-available-for-binding-in-xaml.md
+    - name: TextBox metni kaynağı güncelleştirdiğinde denetleme
+      href: how-to-control-when-the-textbox-text-updates-the-source.md
+    - name: Bağlama yönünü belirtme
+      href: how-to-specify-the-direction-of-the-binding.md
+    - name: Koleksiyona bağlama ve seçime göre bilgi görüntüleme
+      href: how-to-bind-to-a-collection-and-display-information-based-on-selection.md
+    - name: Numaralandırmaya bağlama
+      href: how-to-bind-to-an-enumeration.md
+    - name: İki denetimin özelliklerini bağlama
+      href: how-to-bind-the-properties-of-two-controls.md
+    - name: Bağlama doğrulaması uygulama
+      href: how-to-implement-binding-validation.md
+    - name: Özel nesneler üzerinde doğrulama mantığı uygulama
+      href: how-to-implement-validation-logic-on-custom-objects.md
+    - name: Bağımlı hedef özelliğinden bağlama nesnesi alma
+      href: how-to-get-the-binding-object-from-a-bound-target-property.md
+    - name: CompositeCollection Uygulama
+      href: how-to-implement-a-compositecollection.md
+    - name: Bağlı verileri dönüştürme
+      href: how-to-convert-bound-data.md
+    - name: Kodda bağlama oluşturma
+      href: how-to-create-a-binding-in-code.md
+    - name: Veri koleksiyonunun varsayılan görünümünü alma
+      href: how-to-get-the-default-view-of-a-data-collection.md
+    - name: Veri CollectionView içindeki nesneler aracılığıyla gezinme
+      href: how-to-navigate-through-the-objects-in-a-data-collectionview.md
+    - name: Görünümdeki verileri filtreleme
+      href: how-to-filter-data-in-a-view.md
+    - name: Görünümdeki verileri sıralama
+      href: how-to-sort-data-in-a-view.md
+    - name: XAML'de bir görüntü kullanarak verileri sıralama ve gruplandırma
+      href: how-to-sort-and-group-data-using-a-view-in-xaml.md
+    - name: Hiyerarşik veriler ile ana-ayrıntı desenini kullanma
+      href: how-to-use-the-master-detail-pattern-with-hierarchical-data.md
+    - name: Hiyerarşik XML verileri ile ana-ayrıntı desenini kullanma
+      href: how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md
+    - name: Bağımlı öğeler listesine göre değer üretme
+      href: how-to-produce-a-value-based-on-a-list-of-bound-items.md
+    - name: Özellik değişikliği bildirimi uygulama
+      href: how-to-implement-property-change-notification.md
+    - name: ObservableCollection oluşturma ve bağlama
+      href: how-to-create-and-bind-to-an-observablecollection.md
+    - name: PriorityBinding Uygulama
+      href: how-to-implement-prioritybinding.md
+    - name: XMLDataProvider ve XPath sorgularını kullanarak XML verilerine bağlama
+      href: how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md
+    - name: Sorgu sonuçlarına bağlama
+      href: how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md
+    - name: LINQ Sorgusunun sonuçlarına bağlama
+      href: how-to-bind-to-the-results-of-a-linq-query.md
+    - name: XML ad alanlarını kullanarak veri bağlama
+      href: how-to-use-xml-namespaces-in-data-binding.md
+    - name: ADO.NET veri kaynağına bağlama
+      href: how-to-bind-to-an-ado-net-data-source.md
+    - name: Yönteme bağlama
+      href: how-to-bind-to-a-method.md
+    - name: Bağlama güncelleştirmeleri bildirimini ayarlama
+      href: how-to-set-up-notification-of-binding-updates.md
+    - name: Bağlamaları temizleme
+      href: how-to-clear-bindings.md
+    - name: DataTemplate ile oluşturulan öğeleri bulma
+      href: how-to-find-datatemplate-generated-elements.md
+    - name: Web hizmetine bağlama
+      href: how-to-bind-to-a-web-service.md
+- name: LINQ to XML ile veri bağlama
+  items:
+    - name: Genel Bakış
+      href: wpf-data-binding-with-linq-to-xml-overview.md
+    - name: LINQ to XML dinamik özellikleri
       items:
-        - name: Veri Bağlamaya Genel Bakış
-          href: data-binding-overview.md
-        - name: Kaynakların Bağlanmasına Genel Bakış
-          href: binding-sources-overview.md
-        - name: Veri Şablonu Oluşturmaya Genel Bakış
-          href: data-templating-overview.md
-        - name: Bağlama Bildirimlerine Genel Bakış
-          href: binding-declarations-overview.md
-        - name: Nasıl Yapılır Konuları
-          href: data-binding-how-to-topics.md
+        - name: Genel Bakış
+          displayName: LINQ to XML dynamic properties
+          href: linq-to-xml-dynamic-properties.md
+        - name: XAttribute dinamik özellikleri
           items:
-            - name: Basit bir Bağlama Oluşturma
-              href: how-to-create-a-simple-binding.md
-            - name: Bağlama Kaynağı Belirtme
-              href: how-to-specify-the-binding-source.md
-            - name: XAML'de Bağlama için Veriyi Kullanılabilir Yapma
-              href: how-to-make-data-available-for-binding-in-xaml.md
-            - name: TextBox Metni Kaynağı Güncelleştirdiğinde Denetleme
-              href: how-to-control-when-the-textbox-text-updates-the-source.md
-            - name: Bağlama Yönünü Belirtme
-              href: how-to-specify-the-direction-of-the-binding.md
-            - name: Koleksiyona Bağlama ve Seçime Göre Bilgi Görüntüleme
-              href: how-to-bind-to-a-collection-and-display-information-based-on-selection.md
-            - name: Sabit Listesine Bağlama
-              href: how-to-bind-to-an-enumeration.md
-            - name: İki Denetimin Özelliklerini Bağlama
-              href: how-to-bind-the-properties-of-two-controls.md
-            - name: Bağlama Doğrulaması Uygulama
-              href: how-to-implement-binding-validation.md
-            - name: Özel Nesneler Üzerinde Doğrulama Mantığı Uygulama
-              href: how-to-implement-validation-logic-on-custom-objects.md
-            - name: Bağımlı Hedef Özelliğinden Bağlama Nesnesi Alma
-              href: how-to-get-the-binding-object-from-a-bound-target-property.md
-            - name: CompositeCollection Uygulama
-              href: how-to-implement-a-compositecollection.md
-            - name: Bağımlı Veri Dönüştürme
-              href: how-to-convert-bound-data.md
-            - name: Kod İçinde Bağlama Oluşturma
-              href: how-to-create-a-binding-in-code.md
-            - name: Veri Koleksiyonunun Varsayılan Görünümünü Alma
-              href: how-to-get-the-default-view-of-a-data-collection.md
-            - name: Veri CollectionView İçindeki Nesneler Aracılığıyla Gezinme
-              href: how-to-navigate-through-the-objects-in-a-data-collectionview.md
-            - name: Görünümde Veri Filtreleme
-              href: how-to-filter-data-in-a-view.md
-            - name: Görünümde Verileri Sıralama
-              href: how-to-sort-data-in-a-view.md
-            - name: XAML İçerisinde bir Görüntü Kullanarak Verileri Sıralama ve Gruplama
-              href: how-to-sort-and-group-data-using-a-view-in-xaml.md
-            - name: Hiyerarşik Veriler ile Ana Öğe-Ayrıntı Desenini Kullanma
-              href: how-to-use-the-master-detail-pattern-with-hierarchical-data.md
-            - name: Hiyerarşik XML Verileri ile Ana Öğe-Ayrıntı Desenini Kullanma
-              href: how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md
-            - name: Bağımlı Öğeler Listesine Göre Değer Üretme
-              href: how-to-produce-a-value-based-on-a-list-of-bound-items.md
-            - name: Özellik Değişikliği Bildirimi Uygulama
-              href: how-to-implement-property-change-notification.md
-            - name: ObservableCollection Oluşturma ve Bağlama
-              href: how-to-create-and-bind-to-an-observablecollection.md
-            - name: PriorityBinding Uygulama
-              href: how-to-implement-prioritybinding.md
-            - name: XMLDataProvider ve XPath Sorgularını Kullanarak XML Verilerine Bağlama
-              href: how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md
-            - name: 'XML Sorgu Sonuçları için XDocument, XElement veya LINQ''ya Bağlama'
-              href: how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md
-            - name: XML Ad Alanlarını Kullanarak Veri Bağlama
-              href: how-to-use-xml-namespaces-in-data-binding.md
-            - name: ADO.NET Veri Kaynağına Bağlama
-              href: how-to-bind-to-an-ado-net-data-source.md
-            - name: Bir Yönteme Bağlama
-              href: how-to-bind-to-a-method.md
-            - name: Bağlama Güncelleştirmeleri Bildirimini Ayarlama
-              href: how-to-set-up-notification-of-binding-updates.md
-            - name: Bağlamaları Temizleme
-              href: how-to-clear-bindings.md
-            - name: DataTemplate ile Oluşturulan Öğeleri Bulma
-              href: how-to-find-datatemplate-generated-elements.md
-            - name: Web Hizmetine Bağlama
-              href: how-to-bind-to-a-web-service.md
-            - name: LINQ Sorgusunun Sonuçlarına Bağlama
-              href: how-to-bind-to-the-results-of-a-linq-query.md
+            - name: Değer
+              href: value-xattribute-dynamic-property.md
+        - name: XElement dinamik özellikleri
+          items:
+            - name: Öznitelik
+              href: attribute-xelement-dynamic-property.md
+            - name: Öğe
+              href: element-xelement-dynamic-property.md
+            - name: Öğeler
+              href: elements-xelement-dynamic-property.md
+            - name: Alt Öğeler
+              href: descendants-xelement-dynamic-property.md
+            - name: Değer
+              href: value-xelement-dynamic-property.md
+            - name: Xml
+              href: xml-xelement-dynamic-property.md
+        - name: Örnek
+          items:
+            - name: LINQ to XML veri bağlama örneği
+              href: linq-to-xml-data-binding-sample.md
+            - name: L2DBForm.xaml kaynak kodu
+              href: l2dbform-xaml-source-code.md
+            - name: L2DBForm.xaml.cs kaynak kodu
+              href: l2dbform-xaml-cs-source-code.md
