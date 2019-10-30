@@ -1,5 +1,5 @@
 ---
-title: Özellik yordamları (Visual Basic)
+title: Özellik Yordamları (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Set statement [Visual Basic], Property procedures
@@ -13,107 +13,121 @@ helpviewer_keywords:
 - property procedures
 - Get statement [Visual Basic], property procedures
 ms.assetid: 46a98379-e1a2-45dd-a48c-b51213f5ab07
-ms.openlocfilehash: f3b57ae45815fbd91cad17cddbed4d01037eb92f
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 118c9e776813f303ed921946f4cf6f1236ac02e3
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72002091"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040968"
 ---
-# <a name="property-procedures-visual-basic"></a><span data-ttu-id="77a35-102">Özellik yordamları (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="77a35-102">Property Procedures (Visual Basic)</span></span>
-<span data-ttu-id="77a35-103">Özellik yordamı bir modül, sınıf veya yapıda özel bir özelliği düzenleyen Visual Basic deyimlerinin bir dizisidir.</span><span class="sxs-lookup"><span data-stu-id="77a35-103">A property procedure is a series of Visual Basic statements that manipulate a custom property on a module, class, or structure.</span></span> <span data-ttu-id="77a35-104">Özellik yordamları, *özellik erişimcileri*olarak da bilinir.</span><span class="sxs-lookup"><span data-stu-id="77a35-104">Property procedures are also known as *property accessors*.</span></span>  
-  
- <span data-ttu-id="77a35-105">Visual Basic aşağıdaki özellik yordamları için sağlar:</span><span class="sxs-lookup"><span data-stu-id="77a35-105">Visual Basic provides for the following property procedures:</span></span>  
-  
-- <span data-ttu-id="77a35-106">@No__t-0 yordamı bir özelliğin değerini döndürür.</span><span class="sxs-lookup"><span data-stu-id="77a35-106">A `Get` procedure returns the value of a property.</span></span> <span data-ttu-id="77a35-107">Bir ifadede özelliğe eriştiğinizde çağrılır.</span><span class="sxs-lookup"><span data-stu-id="77a35-107">It is called when you access the property in an expression.</span></span>  
-  
-- <span data-ttu-id="77a35-108">@No__t-0 yordamı, bir özelliği bir nesne başvurusu dahil olmak üzere bir değere ayarlar.</span><span class="sxs-lookup"><span data-stu-id="77a35-108">A `Set` procedure sets a property to a value, including an object reference.</span></span> <span data-ttu-id="77a35-109">Özelliğe bir değer atadığınızda çağrılır.</span><span class="sxs-lookup"><span data-stu-id="77a35-109">It is called when you assign a value to the property.</span></span>  
-  
- <span data-ttu-id="77a35-110">Genellikle özellik yordamlarını `Get` ve `Set` deyimlerini kullanarak çiftler halinde tanımlarsınız, ancak özellik salt okunurdur ([Get deyimi](../../../../visual-basic/language-reference/statements/get-statement.md)) veya salt yazılır ([küme deyimi](../../../../visual-basic/language-reference/statements/set-statement.md)) ise tek başına yordamı tanımlayabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="77a35-110">You usually define property procedures in pairs, using the `Get` and `Set` statements, but you can define either procedure alone if the property is read-only ([Get Statement](../../../../visual-basic/language-reference/statements/get-statement.md)) or write-only ([Set Statement](../../../../visual-basic/language-reference/statements/set-statement.md)).</span></span>  
-  
- <span data-ttu-id="77a35-111">Otomatik uygulanan bir özellik kullanırken `Get` ve `Set` yordamını atlayabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="77a35-111">You can omit the `Get` and `Set` procedure when using an auto-implemented property.</span></span> <span data-ttu-id="77a35-112">Daha fazla bilgi için bkz. [Otomatik uygulanan özellikler](./auto-implemented-properties.md).</span><span class="sxs-lookup"><span data-stu-id="77a35-112">For more information, see [Auto-Implemented Properties](./auto-implemented-properties.md).</span></span>  
-  
- <span data-ttu-id="77a35-113">Sınıflar, yapılar ve modüllerde özellikler tanımlayabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="77a35-113">You can define properties in classes, structures, and modules.</span></span> <span data-ttu-id="77a35-114">Özellikler, varsayılan olarak `Public` ' dır. Bu, uygulamanızın, özelliğin kapsayıcısına erişebilen her yerden çağırabileceği anlamına gelir.</span><span class="sxs-lookup"><span data-stu-id="77a35-114">Properties are `Public` by default, which means you can call them from anywhere in your application that can access the property's container.</span></span>  
-  
- <span data-ttu-id="77a35-115">Özelliklerin ve değişkenlerin karşılaştırması için [Visual Basic Özellikler ve değişkenler arasındaki farklılıklar](./differences-between-properties-and-variables.md)bölümüne bakın.</span><span class="sxs-lookup"><span data-stu-id="77a35-115">For a comparison of properties and variables, see [Differences Between Properties and Variables in Visual Basic](./differences-between-properties-and-variables.md).</span></span>  
-  
-## <a name="declaration-syntax"></a><span data-ttu-id="77a35-116">Bildirim söz dizimi</span><span class="sxs-lookup"><span data-stu-id="77a35-116">Declaration Syntax</span></span>  
- <span data-ttu-id="77a35-117">Özelliğin kendisi, [özellik bildiriminde](../../../../visual-basic/language-reference/statements/property-statement.md) ve `End Property` ifadesinde yer alan bir kod bloğu tarafından tanımlanır.</span><span class="sxs-lookup"><span data-stu-id="77a35-117">A property itself is defined by a block of code enclosed within the [Property Statement](../../../../visual-basic/language-reference/statements/property-statement.md) and the `End Property` statement.</span></span> <span data-ttu-id="77a35-118">Bu bloğun içinde her özellik yordamı bir bildirim bildirimi (`Get` veya `Set`) ve eşleşen `End` bildirimi içinde iç bir blok olarak görünür.</span><span class="sxs-lookup"><span data-stu-id="77a35-118">Inside this block, each property procedure appears as an internal block enclosed within a declaration statement (`Get` or `Set`) and the matching `End` declaration.</span></span>  
-  
- <span data-ttu-id="77a35-119">Bir özelliği ve yordamlarını bildirmek için sözdizimi aşağıdaki gibidir:</span><span class="sxs-lookup"><span data-stu-id="77a35-119">The syntax for declaring a property and its procedures is as follows:</span></span>  
-  
-```vb  
-[Default] [Modifiers] Property PropertyName[(ParameterList)] [As DataType]  
-    [AccessLevel] Get  
-        ' Statements of the Get procedure.  
-        ' The following statement returns an expression as the property's value.  
-        Return Expression  
-    End Get  
-    [AccessLevel] Set[(ByVal NewValue As DataType)]  
-        ' Statements of the Set procedure.  
-        ' The following statement assigns newvalue as the property's value.  
-        LValue = NewValue  
-    End Set  
-End Property  
-- or -  
-[Default] [Modifiers] Property PropertyName [(ParameterList)] [As DataType]  
-```  
-  
- <span data-ttu-id="77a35-120">@No__t-0, aşırı yükleme, geçersiz kılma, paylaşma ve gölgeleme ile ilgili erişim düzeyini ve bilgileri belirtebilir, özelliğin salt okunurdur mi yoksa salt yazılır mı olduğunu belirtir.</span><span class="sxs-lookup"><span data-stu-id="77a35-120">The `Modifiers` can specify access level and information regarding overloading, overriding, sharing, and shadowing, as well as whether the property is read-only or write-only.</span></span> <span data-ttu-id="77a35-121">@No__t-1 veya `Set` yordamındaki `AccessLevel`, özelliğin kendisi için belirtilen erişim düzeyinden daha kısıtlayıcı olan herhangi bir düzey olabilir.</span><span class="sxs-lookup"><span data-stu-id="77a35-121">The `AccessLevel` on the `Get` or `Set` procedure can be any level that is more restrictive than the access level specified for the property itself.</span></span> <span data-ttu-id="77a35-122">Daha fazla bilgi için bkz. [özellik açıklaması](../../../../visual-basic/language-reference/statements/property-statement.md).</span><span class="sxs-lookup"><span data-stu-id="77a35-122">For more information, see [Property Statement](../../../../visual-basic/language-reference/statements/property-statement.md).</span></span>  
-  
-### <a name="data-type"></a><span data-ttu-id="77a35-123">Veri Türü</span><span class="sxs-lookup"><span data-stu-id="77a35-123">Data Type</span></span>  
- <span data-ttu-id="77a35-124">Özelliğin veri türü ve asıl erişim düzeyi, özellik yordamlarında değil, `Property` ifadesinde tanımlanır.</span><span class="sxs-lookup"><span data-stu-id="77a35-124">A property's data type and principal access level are defined in the `Property` statement, not in the property procedures.</span></span> <span data-ttu-id="77a35-125">Bir özellik yalnızca bir veri türüne sahip olabilir.</span><span class="sxs-lookup"><span data-stu-id="77a35-125">A property can have only one data type.</span></span> <span data-ttu-id="77a35-126">Örneğin, bir `Decimal` değeri depolamak için bir özellik tanımlayamazsınız, ancak bir `Double` değeri alabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="77a35-126">For example, you cannot define a property to store a `Decimal` value but retrieve a `Double` value.</span></span>  
-  
-### <a name="access-level"></a><span data-ttu-id="77a35-127">Erişim düzeyi</span><span class="sxs-lookup"><span data-stu-id="77a35-127">Access Level</span></span>  
- <span data-ttu-id="77a35-128">Ancak, bir özellik için bir asıl erişim düzeyi tanımlayabilir ve özellik yordamlarından birinde erişim düzeyini daha da kısıtlayabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="77a35-128">However, you can define a principal access level for a property and further restrict the access level in one of its property procedures.</span></span> <span data-ttu-id="77a35-129">Örneğin, bir `Public` özelliği tanımlayabilir ve sonra bir `Private Set` yordamı tanımlayabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="77a35-129">For example, you can define a `Public` property and then define a `Private Set` procedure.</span></span> <span data-ttu-id="77a35-130">@No__t-0 yordamı-1 @no__t kalır.</span><span class="sxs-lookup"><span data-stu-id="77a35-130">The `Get` procedure remains `Public`.</span></span> <span data-ttu-id="77a35-131">Erişim düzeyini bir özelliğin yordamlarından yalnızca birinde değiştirebilirsiniz ve yalnızca asıl erişim düzeyinden daha kısıtlayıcı hale getirebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="77a35-131">You can change the access level in only one of a property's procedures, and you can only make it more restrictive than the principal access level.</span></span> <span data-ttu-id="77a35-132">Daha fazla bilgi için bkz. [nasıl yapılır: karışık erişim düzeylerine sahip bir özellik bildirme](./how-to-declare-a-property-with-mixed-access-levels.md).</span><span class="sxs-lookup"><span data-stu-id="77a35-132">For more information, see [How to: Declare a Property with Mixed Access Levels](./how-to-declare-a-property-with-mixed-access-levels.md).</span></span>  
-  
-## <a name="parameter-declaration"></a><span data-ttu-id="77a35-133">Parametre bildirimi</span><span class="sxs-lookup"><span data-stu-id="77a35-133">Parameter Declaration</span></span>  
- <span data-ttu-id="77a35-134">Geçiş mekanizmasının `ByVal` olması dışında, her bir parametreyi [alt yordamlar](./sub-procedures.md)için yaptığınız gibi bildirirsiniz.</span><span class="sxs-lookup"><span data-stu-id="77a35-134">You declare each parameter the same way you do for [Sub Procedures](./sub-procedures.md), except that the passing mechanism must be `ByVal`.</span></span>  
-  
- <span data-ttu-id="77a35-135">Parametre listesindeki her bir parametre için sözdizimi aşağıdaki gibidir:</span><span class="sxs-lookup"><span data-stu-id="77a35-135">The syntax for each parameter in the parameter list is as follows:</span></span>  
-  
- `[Optional] ByVal [ParamArray] parametername As datatype`  
-  
- <span data-ttu-id="77a35-136">Parametre isteğe bağlı ise, bildiriminin bir parçası olarak bir varsayılan değer de belirtmeniz gerekir.</span><span class="sxs-lookup"><span data-stu-id="77a35-136">If the parameter is optional, you must also supply a default value as part of its declaration.</span></span> <span data-ttu-id="77a35-137">Varsayılan bir değer belirtmek için sözdizimi aşağıdaki gibidir:</span><span class="sxs-lookup"><span data-stu-id="77a35-137">The syntax for specifying a default value is as follows:</span></span>  
-  
- `Optional ByVal parametername As datatype = defaultvalue`  
-  
-## <a name="property-value"></a><span data-ttu-id="77a35-138">Özellik değeri</span><span class="sxs-lookup"><span data-stu-id="77a35-138">Property Value</span></span>  
- <span data-ttu-id="77a35-139">@No__t-0 yordamında, dönüş değeri, özelliğin değeri olarak çağırma ifadesine sağlanır.</span><span class="sxs-lookup"><span data-stu-id="77a35-139">In a `Get` procedure, the return value is supplied to the calling expression as the value of the property.</span></span>  
-  
- <span data-ttu-id="77a35-140">@No__t-0 yordamında, yeni özellik değeri `Set` ifadesinin parametresine geçirilir.</span><span class="sxs-lookup"><span data-stu-id="77a35-140">In a `Set` procedure, the new property value is passed to the parameter of the `Set` statement.</span></span> <span data-ttu-id="77a35-141">Açıkça bir parametre bildirirseniz, özelliği ile aynı veri türüyle bildirmeniz gerekir.</span><span class="sxs-lookup"><span data-stu-id="77a35-141">If you explicitly declare a parameter, you must declare it with the same data type as the property.</span></span> <span data-ttu-id="77a35-142">Bir parametre bildirmezsiniz, derleyici, özelliğe atanacak yeni değeri göstermek için, `Value` örtük parametresini kullanır.</span><span class="sxs-lookup"><span data-stu-id="77a35-142">If you do not declare a parameter, the compiler uses the implicit parameter `Value` to represent the new value to be assigned to the property.</span></span>  
-  
-## <a name="calling-syntax"></a><span data-ttu-id="77a35-143">Çağırma sözdizimi</span><span class="sxs-lookup"><span data-stu-id="77a35-143">Calling Syntax</span></span>  
- <span data-ttu-id="77a35-144">Özelliğe başvuru yaparak bir özellik yordamını örtük olarak çağırılır.</span><span class="sxs-lookup"><span data-stu-id="77a35-144">You invoke a property procedure implicitly by making reference to the property.</span></span> <span data-ttu-id="77a35-145">Özelliği, isteğe bağlı olmayan tüm bağımsız değişkenlerin değerlerini sağlamanız ve bağımsız değişken listesini parantez içine almanız gerekir, ancak, özelliğin adını bir değişkenin adını kullandığınız şekilde kullanırsınız.</span><span class="sxs-lookup"><span data-stu-id="77a35-145">You use the name of the property the same way you would use the name of a variable, except that you must provide values for all arguments that are not optional, and you must enclose the argument list in parentheses.</span></span> <span data-ttu-id="77a35-146">Herhangi bir bağımsız değişken sağlanmazsa, isteğe bağlı olarak ayraçları atlayabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="77a35-146">If no arguments are supplied, you can optionally omit the parentheses.</span></span>  
-  
- <span data-ttu-id="77a35-147">@No__t-0 yordamına örtük çağrının sözdizimi aşağıdaki gibidir:</span><span class="sxs-lookup"><span data-stu-id="77a35-147">The syntax for an implicit call to a `Set` procedure is as follows:</span></span>  
-  
- `propertyname[(argumentlist)] = expression`  
-  
- <span data-ttu-id="77a35-148">@No__t-0 yordamına örtük çağrının sözdizimi aşağıdaki gibidir:</span><span class="sxs-lookup"><span data-stu-id="77a35-148">The syntax for an implicit call to a `Get` procedure is as follows:</span></span>  
-  
- `lvalue = propertyname[(argumentlist)]`  
-  
- `Do While (propertyname[(argumentlist)] > expression)`  
-  
-### <a name="illustration-of-declaration-and-call"></a><span data-ttu-id="77a35-149">Bildirim ve çağrı gösterimi</span><span class="sxs-lookup"><span data-stu-id="77a35-149">Illustration of Declaration and Call</span></span>  
- <span data-ttu-id="77a35-150">Aşağıdaki özellik, tam adı iki anayent adı, ad ve soyadı olarak depolar.</span><span class="sxs-lookup"><span data-stu-id="77a35-150">The following property stores a full name as two constituent names, the first name and the last name.</span></span> <span data-ttu-id="77a35-151">Çağıran kod `fullName` ' ı okuduğunda, `Get` yordamı iki anayent adını birleştirir ve tam adı döndürür.</span><span class="sxs-lookup"><span data-stu-id="77a35-151">When the calling code reads `fullName`, the `Get` procedure combines the two constituent names and returns the full name.</span></span> <span data-ttu-id="77a35-152">Çağıran kod yeni bir tam ad atarken, `Set` yordamı onu iki anayada bölmek için çalışır.</span><span class="sxs-lookup"><span data-stu-id="77a35-152">When the calling code assigns a new full name, the `Set` procedure attempts to break it into two constituent names.</span></span> <span data-ttu-id="77a35-153">Bir boşluk bulamazsa, ilk ad olarak tümünü depolar.</span><span class="sxs-lookup"><span data-stu-id="77a35-153">If it does not find a space, it stores it all as the first name.</span></span>  
-  
- [!code-vb[VbVbcnProcedures#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#8)]  
-  
- <span data-ttu-id="77a35-154">Aşağıdaki örnek `fullName` ' ın özellik yordamlarına yapılan tipik çağrıları gösterir.</span><span class="sxs-lookup"><span data-stu-id="77a35-154">The following example shows typical calls to the property procedures of `fullName`.</span></span>  
-  
- [!code-vb[VbVbcnProcedures#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#9)]  
-  
-## <a name="see-also"></a><span data-ttu-id="77a35-155">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="77a35-155">See also</span></span>
+# <a name="property-procedures-visual-basic"></a><span data-ttu-id="75cf7-102">Özellik Yordamları (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="75cf7-102">Property Procedures (Visual Basic)</span></span>
 
-- [<span data-ttu-id="77a35-156">Yordamların</span><span class="sxs-lookup"><span data-stu-id="77a35-156">Procedures</span></span>](./index.md)
-- [<span data-ttu-id="77a35-157">İşlev yordamları</span><span class="sxs-lookup"><span data-stu-id="77a35-157">Function Procedures</span></span>](./function-procedures.md)
-- [<span data-ttu-id="77a35-158">İşleç yordamları</span><span class="sxs-lookup"><span data-stu-id="77a35-158">Operator Procedures</span></span>](./operator-procedures.md)
-- [<span data-ttu-id="77a35-159">Yordam parametreleri ve bağımsız değişkenleri</span><span class="sxs-lookup"><span data-stu-id="77a35-159">Procedure Parameters and Arguments</span></span>](./procedure-parameters-and-arguments.md)
-- [<span data-ttu-id="77a35-160">Visual Basic Özellikler ve değişkenler arasındaki farklar</span><span class="sxs-lookup"><span data-stu-id="77a35-160">Differences Between Properties and Variables in Visual Basic</span></span>](./differences-between-properties-and-variables.md)
-- [<span data-ttu-id="77a35-161">Nasıl yapılır: Özellik oluşturma</span><span class="sxs-lookup"><span data-stu-id="77a35-161">How to: Create a Property</span></span>](./how-to-create-a-property.md)
-- [<span data-ttu-id="77a35-162">Nasıl yapılır: bir özellik yordamı çağırma</span><span class="sxs-lookup"><span data-stu-id="77a35-162">How to: Call a Property Procedure</span></span>](./how-to-call-a-property-procedure.md)
-- [<span data-ttu-id="77a35-163">Nasıl yapılır: Visual Basic varsayılan bir özellik bildirme ve çağırma</span><span class="sxs-lookup"><span data-stu-id="77a35-163">How to: Declare and Call a Default Property in Visual Basic</span></span>](./how-to-declare-and-call-a-default-property.md)
-- [<span data-ttu-id="77a35-164">Nasıl yapılır: bir özelliğe değer koyma</span><span class="sxs-lookup"><span data-stu-id="77a35-164">How to: Put a Value in a Property</span></span>](./how-to-put-a-value-in-a-property.md)
-- [<span data-ttu-id="77a35-165">Nasıl yapılır: bir özellikten değer alma</span><span class="sxs-lookup"><span data-stu-id="77a35-165">How to: Get a Value from a Property</span></span>](./how-to-get-a-value-from-a-property.md)
+<span data-ttu-id="75cf7-103">Özellik yordamı bir modül, sınıf veya yapıda özel bir özelliği düzenleyen Visual Basic deyimlerinin bir dizisidir.</span><span class="sxs-lookup"><span data-stu-id="75cf7-103">A property procedure is a series of Visual Basic statements that manipulate a custom property on a module, class, or structure.</span></span> <span data-ttu-id="75cf7-104">Özellik yordamları, *özellik erişimcileri*olarak da bilinir.</span><span class="sxs-lookup"><span data-stu-id="75cf7-104">Property procedures are also known as *property accessors*.</span></span>
+
+<span data-ttu-id="75cf7-105">Visual Basic aşağıdaki özellik yordamları için sağlar:</span><span class="sxs-lookup"><span data-stu-id="75cf7-105">Visual Basic provides for the following property procedures:</span></span>
+
+- <span data-ttu-id="75cf7-106">`Get` yordam bir özelliğin değerini döndürür.</span><span class="sxs-lookup"><span data-stu-id="75cf7-106">A `Get` procedure returns the value of a property.</span></span> <span data-ttu-id="75cf7-107">Bir ifadede özelliğe eriştiğinizde çağrılır.</span><span class="sxs-lookup"><span data-stu-id="75cf7-107">It is called when you access the property in an expression.</span></span>
+- <span data-ttu-id="75cf7-108">`Set` yordam bir özelliği bir nesne başvurusu dahil olmak üzere bir değere ayarlar.</span><span class="sxs-lookup"><span data-stu-id="75cf7-108">A `Set` procedure sets a property to a value, including an object reference.</span></span> <span data-ttu-id="75cf7-109">Özelliğe bir değer atadığınızda çağrılır.</span><span class="sxs-lookup"><span data-stu-id="75cf7-109">It is called when you assign a value to the property.</span></span>
+
+<span data-ttu-id="75cf7-110">Genellikle özellik yordamlarını `Get` ve `Set` deyimlerini kullanarak çiftler halinde tanımlarsınız, ancak özellik salt okunurdur ([Get deyimi](../../../../visual-basic/language-reference/statements/get-statement.md)) veya salt yazılır ([küme deyimi](../../../../visual-basic/language-reference/statements/set-statement.md)) ise tek başına yordamı tanımlayabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="75cf7-110">You usually define property procedures in pairs, using the `Get` and `Set` statements, but you can define either procedure alone if the property is read-only ([Get Statement](../../../../visual-basic/language-reference/statements/get-statement.md)) or write-only ([Set Statement](../../../../visual-basic/language-reference/statements/set-statement.md)).</span></span>
+
+<span data-ttu-id="75cf7-111">Otomatik uygulanan bir özellik kullanırken `Get` ve `Set` yordamını atlayabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="75cf7-111">You can omit the `Get` and `Set` procedure when using an auto-implemented property.</span></span> <span data-ttu-id="75cf7-112">Daha fazla bilgi için bkz. [Otomatik uygulanan özellikler](./auto-implemented-properties.md).</span><span class="sxs-lookup"><span data-stu-id="75cf7-112">For more information, see [Auto-Implemented Properties](./auto-implemented-properties.md).</span></span>
+
+<span data-ttu-id="75cf7-113">Sınıflar, yapılar ve modüllerde özellikler tanımlayabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="75cf7-113">You can define properties in classes, structures, and modules.</span></span> <span data-ttu-id="75cf7-114">Özellikler, varsayılan olarak `Public` ' dır. Bu, uygulamanızın, özelliğin kapsayıcısına erişebilen her yerden çağırabileceği anlamına gelir.</span><span class="sxs-lookup"><span data-stu-id="75cf7-114">Properties are `Public` by default, which means you can call them from anywhere in your application that can access the property's container.</span></span>
+
+<span data-ttu-id="75cf7-115">Özelliklerin ve değişkenlerin karşılaştırması için [Visual Basic Özellikler ve değişkenler arasındaki farklılıklar](differences-between-properties-and-variables.md)bölümüne bakın.</span><span class="sxs-lookup"><span data-stu-id="75cf7-115">For a comparison of properties and variables, see [Differences Between Properties and Variables in Visual Basic](differences-between-properties-and-variables.md).</span></span>
+
+## <a name="declaration-syntax"></a><span data-ttu-id="75cf7-116">Bildirim söz dizimi</span><span class="sxs-lookup"><span data-stu-id="75cf7-116">Declaration syntax</span></span>
+
+<span data-ttu-id="75cf7-117">Özelliğin kendisi, [özellik bildiriminde](../../../../visual-basic/language-reference/statements/property-statement.md) ve `End Property` ifadesinde yer alan bir kod bloğu tarafından tanımlanır.</span><span class="sxs-lookup"><span data-stu-id="75cf7-117">A property itself is defined by a block of code enclosed within the [Property Statement](../../../../visual-basic/language-reference/statements/property-statement.md) and the `End Property` statement.</span></span> <span data-ttu-id="75cf7-118">Bu bloğun içinde her özellik yordamı bir bildirim bildirimi (`Get` veya `Set`) ve eşleşen `End` bildirimi içinde iç bir blok olarak görünür.</span><span class="sxs-lookup"><span data-stu-id="75cf7-118">Inside this block, each property procedure appears as an internal block enclosed within a declaration statement (`Get` or `Set`) and the matching `End` declaration.</span></span>
+
+<span data-ttu-id="75cf7-119">Bir özelliği ve yordamlarını bildirmek için sözdizimi aşağıdaki gibidir:</span><span class="sxs-lookup"><span data-stu-id="75cf7-119">The syntax for declaring a property and its procedures is as follows:</span></span>
+
+```vb
+[Default] [Modifiers] Property PropertyName[(ParameterList)] [As DataType]
+    [AccessLevel] Get
+        ' Statements of the Get procedure.
+        ' The following statement returns an expression as the property's value.
+        Return Expression
+    End Get
+    [AccessLevel] Set[(ByVal NewValue As DataType)]
+        ' Statements of the Set procedure.
+        ' The following statement assigns newvalue as the property's value.
+        LValue = NewValue
+    End Set
+End Property
+' - or -
+[Default] [Modifiers] Property PropertyName [(ParameterList)] [As DataType]
+```
+
+<span data-ttu-id="75cf7-120">`Modifiers`, aşırı yükleme, geçersiz kılma, paylaşma ve gölgeleme ile ilgili erişim düzeyini ve bilgileri belirtebilir, özelliğin salt okunurdur mi yoksa salt yazılır mı olduğunu belirtir.</span><span class="sxs-lookup"><span data-stu-id="75cf7-120">The `Modifiers` can specify access level and information regarding overloading, overriding, sharing, and shadowing, as well as whether the property is read-only or write-only.</span></span> <span data-ttu-id="75cf7-121">`Get` veya `Set` yordamındaki `AccessLevel`, özelliğin kendisi için belirtilen erişim düzeyinden daha kısıtlayıcı olan herhangi bir düzey olabilir.</span><span class="sxs-lookup"><span data-stu-id="75cf7-121">The `AccessLevel` on the `Get` or `Set` procedure can be any level that is more restrictive than the access level specified for the property itself.</span></span> <span data-ttu-id="75cf7-122">Daha fazla bilgi için bkz. [özellik açıklaması](../../../../visual-basic/language-reference/statements/property-statement.md).</span><span class="sxs-lookup"><span data-stu-id="75cf7-122">For more information, see [Property Statement](../../../../visual-basic/language-reference/statements/property-statement.md).</span></span>
+
+### <a name="data-type"></a><span data-ttu-id="75cf7-123">Veri Türü</span><span class="sxs-lookup"><span data-stu-id="75cf7-123">Data Type</span></span>
+
+<span data-ttu-id="75cf7-124">Özelliğin veri türü ve asıl erişim düzeyi, özellik yordamlarında değil, `Property` ifadesinde tanımlanır.</span><span class="sxs-lookup"><span data-stu-id="75cf7-124">A property's data type and principal access level are defined in the `Property` statement, not in the property procedures.</span></span> <span data-ttu-id="75cf7-125">Bir özellik yalnızca bir veri türüne sahip olabilir.</span><span class="sxs-lookup"><span data-stu-id="75cf7-125">A property can have only one data type.</span></span> <span data-ttu-id="75cf7-126">Örneğin, bir `Decimal` değeri depolamak için bir özellik tanımlayamazsınız, ancak bir `Double` değeri alabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="75cf7-126">For example, you cannot define a property to store a `Decimal` value but retrieve a `Double` value.</span></span>
+
+### <a name="access-level"></a><span data-ttu-id="75cf7-127">Erişim düzeyi</span><span class="sxs-lookup"><span data-stu-id="75cf7-127">Access Level</span></span>
+
+<span data-ttu-id="75cf7-128">Ancak, bir özellik için bir asıl erişim düzeyi tanımlayabilir ve özellik yordamlarından birinde erişim düzeyini daha da kısıtlayabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="75cf7-128">However, you can define a principal access level for a property and further restrict the access level in one of its property procedures.</span></span> <span data-ttu-id="75cf7-129">Örneğin, bir `Public` özelliği tanımlayabilir ve sonra bir `Private Set` yordamı tanımlayabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="75cf7-129">For example, you can define a `Public` property and then define a `Private Set` procedure.</span></span> <span data-ttu-id="75cf7-130">`Get` yordam `Public`kalır.</span><span class="sxs-lookup"><span data-stu-id="75cf7-130">The `Get` procedure remains `Public`.</span></span> <span data-ttu-id="75cf7-131">Erişim düzeyini bir özelliğin yordamlarından yalnızca birinde değiştirebilirsiniz ve yalnızca asıl erişim düzeyinden daha kısıtlayıcı hale getirebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="75cf7-131">You can change the access level in only one of a property's procedures, and you can only make it more restrictive than the principal access level.</span></span> <span data-ttu-id="75cf7-132">Daha fazla bilgi için bkz. [nasıl yapılır: karışık erişim düzeylerine sahip bir özellik bildirme](how-to-declare-a-property-with-mixed-access-levels.md).</span><span class="sxs-lookup"><span data-stu-id="75cf7-132">For more information, see [How to: Declare a Property with Mixed Access Levels](how-to-declare-a-property-with-mixed-access-levels.md).</span></span>
+
+## <a name="parameter-declaration"></a><span data-ttu-id="75cf7-133">Parametre bildirimi</span><span class="sxs-lookup"><span data-stu-id="75cf7-133">Parameter declaration</span></span>
+
+<span data-ttu-id="75cf7-134">Geçiş mekanizmasının `ByVal` olması dışında, her bir parametreyi [alt yordamlar](sub-procedures.md)için yaptığınız gibi bildirirsiniz.</span><span class="sxs-lookup"><span data-stu-id="75cf7-134">You declare each parameter the same way you do for [Sub Procedures](sub-procedures.md), except that the passing mechanism must be `ByVal`.</span></span>
+
+<span data-ttu-id="75cf7-135">Parametre listesindeki her bir parametre için sözdizimi aşağıdaki gibidir:</span><span class="sxs-lookup"><span data-stu-id="75cf7-135">The syntax for each parameter in the parameter list is as follows:</span></span>
+
+```vb
+[Optional] ByVal [ParamArray] parametername As datatype
+```
+
+<span data-ttu-id="75cf7-136">Parametre isteğe bağlı ise, bildiriminin bir parçası olarak bir varsayılan değer de belirtmeniz gerekir.</span><span class="sxs-lookup"><span data-stu-id="75cf7-136">If the parameter is optional, you must also supply a default value as part of its declaration.</span></span> <span data-ttu-id="75cf7-137">Varsayılan bir değer belirtmek için sözdizimi aşağıdaki gibidir:</span><span class="sxs-lookup"><span data-stu-id="75cf7-137">The syntax for specifying a default value is as follows:</span></span>
+
+```vb
+Optional ByVal parametername As datatype = defaultvalue
+```
+
+## <a name="property-value"></a><span data-ttu-id="75cf7-138">Özellik değeri</span><span class="sxs-lookup"><span data-stu-id="75cf7-138">Property value</span></span>
+
+<span data-ttu-id="75cf7-139">`Get` yordamında, dönüş değeri, özelliğin değeri olarak çağırma ifadesine sağlanır.</span><span class="sxs-lookup"><span data-stu-id="75cf7-139">In a `Get` procedure, the return value is supplied to the calling expression as the value of the property.</span></span>
+
+<span data-ttu-id="75cf7-140">`Set` yordamında, yeni özellik değeri `Set` deyimin parametresine geçirilir.</span><span class="sxs-lookup"><span data-stu-id="75cf7-140">In a `Set` procedure, the new property value is passed to the parameter of the `Set` statement.</span></span> <span data-ttu-id="75cf7-141">Açıkça bir parametre bildirirseniz, özelliği ile aynı veri türüyle bildirmeniz gerekir.</span><span class="sxs-lookup"><span data-stu-id="75cf7-141">If you explicitly declare a parameter, you must declare it with the same data type as the property.</span></span> <span data-ttu-id="75cf7-142">Bir parametre bildirmezsiniz, derleyici, özelliğe atanacak yeni değeri göstermek için, `Value` örtük parametresini kullanır.</span><span class="sxs-lookup"><span data-stu-id="75cf7-142">If you do not declare a parameter, the compiler uses the implicit parameter `Value` to represent the new value to be assigned to the property.</span></span>
+
+## <a name="calling-syntax"></a><span data-ttu-id="75cf7-143">Çağırma sözdizimi</span><span class="sxs-lookup"><span data-stu-id="75cf7-143">Calling syntax</span></span>
+
+<span data-ttu-id="75cf7-144">Özelliğe başvuru yaparak bir özellik yordamını örtük olarak çağırılır.</span><span class="sxs-lookup"><span data-stu-id="75cf7-144">You invoke a property procedure implicitly by making reference to the property.</span></span> <span data-ttu-id="75cf7-145">Özelliği, isteğe bağlı olmayan tüm bağımsız değişkenlerin değerlerini sağlamanız ve bağımsız değişken listesini parantez içine almanız gerekir, ancak, özelliğin adını bir değişkenin adını kullandığınız şekilde kullanırsınız.</span><span class="sxs-lookup"><span data-stu-id="75cf7-145">You use the name of the property the same way you would use the name of a variable, except that you must provide values for all arguments that are not optional, and you must enclose the argument list in parentheses.</span></span> <span data-ttu-id="75cf7-146">Herhangi bir bağımsız değişken sağlanmazsa, isteğe bağlı olarak ayraçları atlayabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="75cf7-146">If no arguments are supplied, you can optionally omit the parentheses.</span></span>
+
+<span data-ttu-id="75cf7-147">Bir `Set` yordamına örtük çağrının sözdizimi aşağıdaki gibidir:</span><span class="sxs-lookup"><span data-stu-id="75cf7-147">The syntax for an implicit call to a `Set` procedure is as follows:</span></span>
+
+```vb
+propertyname[(argumentlist)] = expression
+```
+
+<span data-ttu-id="75cf7-148">Bir `Get` yordamına örtük çağrının sözdizimi aşağıdaki gibidir:</span><span class="sxs-lookup"><span data-stu-id="75cf7-148">The syntax for an implicit call to a `Get` procedure is as follows:</span></span>
+
+```vb
+lvalue = propertyname[(argumentlist)]
+Do While (propertyname[(argumentlist)] > expression)
+```
+
+### <a name="illustration-of-declaration-and-call"></a><span data-ttu-id="75cf7-149">Bildirim ve çağrı gösterimi</span><span class="sxs-lookup"><span data-stu-id="75cf7-149">Illustration of declaration and call</span></span>
+
+<span data-ttu-id="75cf7-150">Aşağıdaki özellik, tam adı iki anayent adı, ad ve soyadı olarak depolar.</span><span class="sxs-lookup"><span data-stu-id="75cf7-150">The following property stores a full name as two constituent names, the first name and the last name.</span></span> <span data-ttu-id="75cf7-151">Çağıran kod `fullName` ' ı okuduğunda, `Get` yordamı iki anayent adını birleştirir ve tam adı döndürür.</span><span class="sxs-lookup"><span data-stu-id="75cf7-151">When the calling code reads `fullName`, the `Get` procedure combines the two constituent names and returns the full name.</span></span> <span data-ttu-id="75cf7-152">Çağıran kod yeni bir tam ad atarken, `Set` yordamı onu iki anayada bölmek için çalışır.</span><span class="sxs-lookup"><span data-stu-id="75cf7-152">When the calling code assigns a new full name, the `Set` procedure attempts to break it into two constituent names.</span></span> <span data-ttu-id="75cf7-153">Bir boşluk bulamazsa, ilk ad olarak tümünü depolar.</span><span class="sxs-lookup"><span data-stu-id="75cf7-153">If it does not find a space, it stores it all as the first name.</span></span>
+
+[!code-vb[VbVbcnProcedures#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#8)]
+
+<span data-ttu-id="75cf7-154">Aşağıdaki örnek, `fullName`Özellik yordamlarına yapılan tipik çağrıları gösterir:</span><span class="sxs-lookup"><span data-stu-id="75cf7-154">The following example shows typical calls to the property procedures of `fullName`:</span></span>
+
+[!code-vb[VbVbcnProcedures#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#9)]
+
+## <a name="see-also"></a><span data-ttu-id="75cf7-155">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="75cf7-155">See also</span></span>
+
+- [<span data-ttu-id="75cf7-156">Yordamlar</span><span class="sxs-lookup"><span data-stu-id="75cf7-156">Procedures</span></span>](index.md)
+- [<span data-ttu-id="75cf7-157">İşlev Yordamları</span><span class="sxs-lookup"><span data-stu-id="75cf7-157">Function Procedures</span></span>](function-procedures.md)
+- [<span data-ttu-id="75cf7-158">İşleç Yordamları</span><span class="sxs-lookup"><span data-stu-id="75cf7-158">Operator Procedures</span></span>](operator-procedures.md)
+- [<span data-ttu-id="75cf7-159">Yordam Parametreleri ve Bağımsız Değişkenleri</span><span class="sxs-lookup"><span data-stu-id="75cf7-159">Procedure Parameters and Arguments</span></span>](procedure-parameters-and-arguments.md)
+- [<span data-ttu-id="75cf7-160">Visual Basic Özellikler ve değişkenler arasındaki farklar</span><span class="sxs-lookup"><span data-stu-id="75cf7-160">Differences Between Properties and Variables in Visual Basic</span></span>](differences-between-properties-and-variables.md)
+- [<span data-ttu-id="75cf7-161">Nasıl yapılır: Özellik Oluşturma</span><span class="sxs-lookup"><span data-stu-id="75cf7-161">How to: Create a Property</span></span>](how-to-create-a-property.md)
+- [<span data-ttu-id="75cf7-162">Nasıl yapılır: Bir Özellik Yordamı Çağırma</span><span class="sxs-lookup"><span data-stu-id="75cf7-162">How to: Call a Property Procedure</span></span>](how-to-call-a-property-procedure.md)
+- [<span data-ttu-id="75cf7-163">Nasıl yapılır: Visual Basic varsayılan bir özellik bildirme ve çağırma</span><span class="sxs-lookup"><span data-stu-id="75cf7-163">How to: Declare and Call a Default Property in Visual Basic</span></span>](how-to-declare-and-call-a-default-property.md)
+- [<span data-ttu-id="75cf7-164">Nasıl yapılır: Bir Özelliğe Değer Ekleme</span><span class="sxs-lookup"><span data-stu-id="75cf7-164">How to: Put a Value in a Property</span></span>](how-to-put-a-value-in-a-property.md)
+- [<span data-ttu-id="75cf7-165">Nasıl yapılır: Bir Özellikten Değer Alma</span><span class="sxs-lookup"><span data-stu-id="75cf7-165">How to: Get a Value from a Property</span></span>](how-to-get-a-value-from-a-property.md)
