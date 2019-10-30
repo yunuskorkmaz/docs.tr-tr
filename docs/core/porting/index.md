@@ -4,12 +4,12 @@ description: Bir .NET Framework projesi .NET Core 'a taşıma konusunda yararlı
 author: cartermp
 ms.date: 10/22/2019
 ms.custom: seodec18
-ms.openlocfilehash: 0684be25cee6ae3f778e7134b4c3a29ac87caf25
-ms.sourcegitcommit: 9bd1c09128e012b6e34bdcbdf3576379f58f3137
+ms.openlocfilehash: 89f00e5c6ce7f3cea7a3135c9b2856c54a70da40
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72798800"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73038526"
 ---
 # <a name="overview-of-the-porting-process-from-net-framework-to-net-core"></a>.NET Framework 'den .NET Core 'a taşıma işlemine genel bakış
 
@@ -46,7 +46,7 @@ Projenizi .NET Core 'a taşıma sırasında aşağıdaki işlemi kullanmanızı 
 
    .NET Core 'a geçiş yapmak, kod tabanınızda önemli bir değişiklik olduğundan, test etmeniz, kodunuzun bağlantı noktası oluşturduğunuz gibi testler çalıştırabilmeniz için, testlerinizi almak kesinlikle önerilir. MSTest, xUnit ve NUnit tüm .NET Core üzerinde çalışır.
 
-Ayrıca, bir işlemde [DotNet TRY-Convert](https://github.com/dotnet/try-convert) aracı Ile .NET Core proje dosyası biçiminde daha küçük çözümler veya ayrı projeler için bağlantı kurmayı deneyebilirsiniz. `dotnet try-convert` tüm projeleriniz için çalışmayı garanti etmez ve bağımlılarınızın bağlı olduğunu bulabileceğiniz davranışta hafif değişikliklere neden olabilir. Otomatikleştirilmiş olabilecek temel şeyleri otomatikleştiren bir _Başlangıç noktası_ olarak kullanılmalıdır. Projenin geçirilmesi için garantili bir çözüm değildir.
+Ayrıca, bir işlemde [DotNet TRY-Convert](https://github.com/dotnet/try-convert) aracı Ile .NET Core proje dosyası biçiminde daha küçük çözümler veya ayrı projeler için bağlantı kurmayı deneyebilirsiniz. `dotnet try-convert` tüm projeleriniz için çalışması garanti edilmez ve bağımlılarınızın bağlı olduğunu fark ettiğiniz davranıştaki değişikliklere neden olabilir. Otomatikleştirilmiş olabilecek temel şeyleri otomatikleştiren bir _Başlangıç noktası_ olarak kullanılmalıdır. Projenin geçirilmesi için garantili bir çözüm değildir.
 
 >[!div class="step-by-step"]
 >[Next](net-framework-tech-unavailable.md)

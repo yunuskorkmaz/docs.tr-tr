@@ -2,15 +2,16 @@
 title: Öğesinde dize ilişkilendirmeC#
 description: Dize ilişkilendirimiyle içindeki C# bir sonuç dizesinde biçimlendirilen ifade sonuçlarının nasıl ekleneceğini öğrenin.
 author: pkulikov
+ms.technology: csharp-fundamentals
 ms.date: 09/02/2019
-ms.openlocfilehash: d3a3a08d5911b5323aa61c571f05318d10380339
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: b901ae661ebd4af625d9f3c999b0eb50dda1990d
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252923"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039205"
 ---
-# <a name="string-interpolation-in-c"></a>C 'de dize ilişkilendirme\#
+# <a name="string-interpolation-in-c"></a>C\# 'da dize ilişkilendirme
 
 Bu öğretici, bir sonuç dizesinde ifade sonuçlarını biçimlendirmek ve dahil etmek için [dize ilişkilendirmeyi](../language-reference/tokens/interpolated.md) nasıl kullanacağınızı gösterir. Örneklerde temel C# kavramlar ve .net tür biçimlendirmesi hakkında bilgi sahibi olduğunuz varsayılır. Dize ilişkilendirme veya .NET tür biçimlendirmesi için yeni bir adım kullanıyorsanız, önce [etkileşimli dize ilişkilendirme öğreticisine](exploration/interpolated-strings.yml) göz atın. .NET 'teki biçimlendirme türleri hakkında daha fazla bilgi için bkz. [.net konusundaki biçimlendirme türleri](../../standard/base-types/formatting-types.md) .
 
@@ -20,7 +21,7 @@ Bu öğretici, bir sonuç dizesinde ifade sonuçlarını biçimlendirmek ve dahi
 
 [Dize ilişkilendirme](../language-reference/tokens/interpolated.md) özelliği, [Bileşik biçimlendirme](../../standard/base-types/composite-formatting.md) özelliğinin üzerine kurulmuştur ve biçimlendirilmiş ifade sonuçlarının bir sonuç dizesinde yer almasını sağlayan daha okunabilir ve uygun bir sözdizimi sağlar.
 
-Bir dize sabit değerini, enterpolasyonlu bir dize olarak tanımlamak için, `$` simgeyi simgesiyle önüne ekleyin. Enterpolasyonlu bir C# dizede değer döndüren herhangi bir geçerli ifadeyi gömebilirsiniz. Aşağıdaki örnekte, bir ifade değerlendirildiği anda, sonucu bir dizeye dönüştürülür ve sonuç dizesine dahil edilir:
+Bir dize sabit değerini, enterpolasyonlu bir dize olarak tanımlamak için `$` simgesiyle önüne ekleyin. Enterpolasyonlu bir C# dizede değer döndüren herhangi bir geçerli ifadeyi gömebilirsiniz. Aşağıdaki örnekte, bir ifade değerlendirildiği anda, sonucu bir dizeye dönüştürülür ve sonuç dizesine dahil edilir:
 
 [!code-csharp-interactive[string interpolation example](~/samples/snippets/csharp/tutorials/string-interpolation/Program.cs#1)]
 
@@ -30,7 +31,7 @@ Bir dize sabit değerini, enterpolasyonlu bir dize olarak tanımlamak için, `$`
 {<interpolationExpression>}
 ```
 
-Enterpolasyonlu dizeler, [dize bileşik biçimlendirme](../../standard/base-types/composite-formatting.md) özelliğinin tüm yeteneklerini destekler. Bu, <xref:System.String.Format%2A?displayProperty=nameWithType> yöntemin kullanımına daha okunabilir bir alternatif sağlar.
+Enterpolasyonlu dizeler, [dize bileşik biçimlendirme](../../standard/base-types/composite-formatting.md) özelliğinin tüm yeteneklerini destekler. Bu, <xref:System.String.Format%2A?displayProperty=nameWithType> yönteminin kullanımına daha okunabilir bir alternatif sağlar.
 
 ## <a name="how-to-specify-a-format-string-for-an-interpolation-expression"></a>İlişkilendirme ifadesi için biçim dizesi belirtme
 
@@ -74,7 +75,7 @@ Daha fazla bilgi için [Bileşik biçimlendirme](../../standard/base-types/compo
 
 Enterpolasyonlu dizeler, normal dize değişmez değerlerinde kullanılabilen tüm kaçış dizilerini destekler. Daha fazla bilgi için bkz. [dize kaçış dizileri](../programming-guide/strings/index.md#string-escape-sequences).
 
-Kaçış dizilerini [bire bir yorumlamak](../language-reference/tokens/verbatim.md) için, tam bir dize sabiti kullanın. Ara değerli bir dize, `$` karakteriyle ve ardından `@` karakteri ile başlar. 8,0 ' C# den başlayarak, `$` ve `@` belirteçlerinidilediğiniz`$@"..."` sırada kullanabilirsiniz: her ikisi de geçerlibiraradeğerlidizeler.`@$"..."`
+Kaçış dizilerini [bire bir yorumlamak](../language-reference/tokens/verbatim.md) için, tam bir dize sabiti kullanın. Enterpolasyonlu bir dize `$` karakteriyle başlar ve ardından `@` karakteri gelir. 8,0 ile C# başlayarak,`$`ve`@`belirteçlerini dilediğiniz sırada kullanabilirsiniz: her iki `$@"..."`ve`@$"..."`geçerli bir ara değerli dizelerdir.
 
 Bir küme ayracı eklemek için, "{" veya "}", bir sonuç dizesinde, "{{" veya "}}" iki küme ayracı kullanın. Daha fazla bilgi için [Bileşik biçimlendirme](../../standard/base-types/composite-formatting.md) konusunun [kaçış ayraçları](../../standard/base-types/composite-formatting.md#escaping-braces) bölümüne bakın.
 
@@ -90,15 +91,15 @@ Aşağıdaki örnek, bir sonuç dizesinde küme ayracın nasıl ekleneceğini ve
 
 ## <a name="how-to-create-a-culture-specific-result-string-with-string-interpolation"></a>Dize ilişkilendirme ile kültüre özgü sonuç dizesi oluşturma
 
-Varsayılan olarak, bir enterpolasyonlu dize, tüm biçimlendirme işlemleri <xref:System.Globalization.CultureInfo.CurrentCulture?displayProperty=nameWithType> için özelliği tarafından tanımlanan geçerli kültürü kullanır. Bir <xref:System.FormattableString?displayProperty=nameWithType> örneğe enterpolasyonlu bir dizenin örtük dönüşümünü kullanın ve kültüre <xref:System.FormattableString.ToString(System.IFormatProvider)> özgü bir sonuç dizesi oluşturmak için metodunu çağırın. Aşağıdaki örnek bunun nasıl yapılacağını göstermektedir:
+Varsayılan olarak, bir enterpolasyonlu dize, tüm biçimlendirme işlemleri için <xref:System.Globalization.CultureInfo.CurrentCulture?displayProperty=nameWithType> özelliği tarafından tanımlanan geçerli kültürü kullanır. Bir <xref:System.FormattableString?displayProperty=nameWithType> örneğine enterpolasyonlu bir dizenin örtük dönüşümünü kullanın ve kültüre özgü bir sonuç dizesi oluşturmak için <xref:System.FormattableString.ToString(System.IFormatProvider)> metodunu çağırın. Aşağıdaki örnek bunun nasıl yapılacağını göstermektedir:
 
 [!code-csharp-interactive[specify different cultures](~/samples/snippets/csharp/tutorials/string-interpolation/Program.cs#6)]
 
-Örnekte gösterildiği gibi, çeşitli kültürler için birden <xref:System.FormattableString> çok sonuç dizesi oluşturmak üzere bir örnek kullanabilirsiniz.
+Örnekte gösterildiği gibi, çeşitli kültürler için birden çok sonuç dizesi oluşturmak üzere bir <xref:System.FormattableString> örneğini kullanabilirsiniz.
 
 ## <a name="how-to-create-a-result-string-using-the-invariant-culture"></a>Sabit kültür kullanarak sonuç dizesi oluşturma
 
-<xref:System.FormattableString.ToString(System.IFormatProvider)?displayProperty=nameWithType> Yöntemi ile birlikte, ile ilişkili bir dizeyi için <xref:System.Globalization.CultureInfo.InvariantCulture>bir <xref:System.FormattableString.Invariant%2A?displayProperty=nameWithType> sonuç dizesine çözümlemek üzere statik yöntemini kullanabilirsiniz. Aşağıdaki örnek bunun nasıl yapılacağını göstermektedir:
+<xref:System.FormattableString.ToString(System.IFormatProvider)?displayProperty=nameWithType> yöntemiyle birlikte, <xref:System.Globalization.CultureInfo.InvariantCulture>için bir sonuç dizesine bir ara değerli dizeyi çözümlemek üzere statik <xref:System.FormattableString.Invariant%2A?displayProperty=nameWithType> yöntemini kullanabilirsiniz. Aşağıdaki örnek bunun nasıl yapılacağını göstermektedir:
 
 [!code-csharp-interactive[format with invariant culture](~/samples/snippets/csharp/tutorials/string-interpolation/Program.cs#7)]
 

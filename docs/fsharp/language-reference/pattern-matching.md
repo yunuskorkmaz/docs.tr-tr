@@ -1,13 +1,13 @@
 ---
 title: Desen Eşleştirme
 description: Verileri mantıksal yapılara göre karşılaştırmak, F# verileri yapısal parçalar halinde çıkarmak veya verilerden bilgi ayıklamak için desenlerin ' de nasıl kullanıldığını öğrenin.
-ms.date: 05/16/2016
-ms.openlocfilehash: 0e14fa00103742bbf5f054f8c04a7669ed767e63
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.date: 10/27/2019
+ms.openlocfilehash: 1acb795cbe5581898ae5e1439098f906a8a16b93
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216804"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73041005"
 ---
 # <a name="pattern-matching"></a>Desen Eşleştirme
 
@@ -15,9 +15,9 @@ Desenler, giriş verilerini dönüştürmek için kurallardır. Bu F# diller, ve
 
 ## <a name="remarks"></a>Açıklamalar
 
-Desenler, `match` ifadesi gibi birçok dil yapılarında kullanılır. `let` Bağlamalar, lambda ifadeleri ve `try...with` ifadeyle ilişkili özel durum işleyicilerde işlevler için bağımsız değişkenleri işlerken kullanılırlar. Daha fazla bilgi için bkz. [Match ifadeleri](match-expressions.md), [Let bağlamaları](./functions/let-bindings.md), [lambda ifadeleri: Anahtar sözcüğü](./functions/lambda-expressions-the-fun-keyword.md) ve[özeldurumlar: `fun` `try...with` İfade.](./exception-handling/the-try-with-expression.md)
+Desenler, `match` ifadesi gibi birçok dil yapılarında kullanılır. `let` bağlamaları, lambda ifadeleri ve `try...with` ifadesiyle ilişkili özel durum işleyicilerde işlevler için bağımsız değişkenleri işlerken kullanılırlar. Daha fazla bilgi için bkz. [Match ifadeleri](match-expressions.md), [Let bağlamaları](./functions/let-bindings.md), [lambda ifadeleri: `fun` anahtar sözcüğü](./functions/lambda-expressions-the-fun-keyword.md)ve [özel durumlar: `try...with` ifadesi](./exception-handling/the-try-with-expression.md).
 
-Örneğin, `match` ifadesinde, *Düzen* kanal sembolünü izleyen şeydir.
+Örneğin, `match` ifadesinde, *Düzen* kanal sembolünü takip eder.
 
 ```fsharp
 match expression with
@@ -25,16 +25,16 @@ match expression with
 ...
 ```
 
-Her bir model girişi bir şekilde dönüştürmek için bir kural işlevi görür. `match` İfadesinde, her bir model, giriş verilerinin örüntüle uyumlu olup olmadığını görmek için sırasıyla incelenir. Bir eşleşme bulunursa sonuç ifadesi yürütülür. Bir eşleşme bulunmazsa, sonraki model kuralı test edilir. *Koşul* bölümü [eşleşme ifadeleriyle](match-expressions.md)açıklandığında isteğe bağlı.
+Her bir model girişi bir şekilde dönüştürmek için bir kural işlevi görür. `match` ifadesinde her bir model, giriş verilerinin örüntüle uyumlu olup olmadığını görmek için sırasıyla incelenir. Bir eşleşme bulunursa sonuç ifadesi yürütülür. Bir eşleşme bulunmazsa, sonraki model kuralı test edilir. *Koşul* bölümü [eşleşme ifadeleriyle](match-expressions.md)açıklandığında isteğe bağlı.
 
 Desteklenen desenler aşağıdaki tabloda gösterilmiştir. Çalışma zamanında, giriş, tabloda listelenen sırada aşağıdaki desenlerden her birine karşı test edilir ve desenler yinelemeli olarak, kodunuzda göründükleri gibi ve her satırdaki desenler için soldan sağa uygulanır.
 
-|Ad|Açıklama|Örnek|
+|Name|Açıklama|Örnek|
 |----|-----------|-------|
 |Sabit model|Herhangi bir sayısal, karakter veya dize sabiti, bir numaralandırma sabiti veya tanımlanmış değişmez değer tanımlayıcısı|`1.0`, `"test"`, `30`, `Color.Red`|
 |Tanımlayıcı stili|Ayrılmış birleşimin, özel durum etiketinin veya etkin bir model durumunun Case değeri|`Some(x)`<br /><br />`Failure(msg)`|
 |Değişken model|*Tanımlayıcısını*|`a`|
-|`as`kalıp|*tanımlayıcı* olarak *model*|`(a, b) as tuple1`|
+|`as` deseninin|*tanımlayıcı* olarak *model*|`(a, b) as tuple1`|
 |VEYA desenli|*pattern1* &#124; *pattern2*|<code>([h] &#124; [h; _])</code>|
 |VE model|*pattern1* &amp; *pattern2*|`(a, b) & (_, "test")`|
 |Dezavantajla|*tanımlayıcı* :: *list-Identifier*|`h :: t`|
@@ -42,15 +42,15 @@ Desteklenen desenler aşağıdaki tabloda gösterilmiştir. Çalışma zamanınd
 |Dizi düzeni|[&#124; *pattern_1*;..; *pattern_n* &#124;]|<code>[&#124; a; b; c &#124;]</code>|
 |Parantez içine alınmış desenler|( *model* )|`( a )`|
 |Tanımlama grubu düzeni|( *pattern_1*,..., *pattern_n* )|`( a, b )`|
-|Kayıt stili|{ *Identifier1* = *pattern_1*;...; *identifier_n*  =  *pattern_n* }|`{ Name = name; }`|
-|Joker karakter stili|\_|`_`|
+|Kayıt stili|{ *ıdentifier1* = *pattern_1*;...; *identifier_n* = *pattern_n* }|`{ Name = name; }`|
+|Joker karakter stili|_|`_`|
 |Tür ek açıklaması ile birlikte desenler|*model* : *tür*|`a : int`|
-|Test modelini yazın|:? *tür* [ *tanımlayıcı* olarak]|`:? System.DateTime as dt`|
+|Test modelini yazın|:? *tür* [as *Identifier* ]|`:? System.DateTime as dt`|
 |Null desenli|null|`null`|
 
 ## <a name="constant-patterns"></a>Sabit desenler
 
-Sabit desenler sayısal, karakter ve dize değişmez değerleri, numaralandırma sabitleridir (numaralandırma türü adı dahil). Yalnızca `match` sabit desenleri olan bir ifade, diğer dillerdeki Case ifadesiyle karşılaştırılabilir. Giriş değişmez değerle karşılaştırılır ve Değerler eşitse, model eşleşir. Sabit değerin türü, girişin türüyle uyumlu olmalıdır.
+Sabit desenler sayısal, karakter ve dize değişmez değerleri, numaralandırma sabitleridir (numaralandırma türü adı dahil). Yalnızca sabit desenleri olan bir `match` ifadesi, diğer dillerdeki Case ifadesiyle karşılaştırılabilir. Giriş değişmez değerle karşılaştırılır ve Değerler eşitse, model eşleşir. Sabit değerin türü, girişin türüyle uyumlu olmalıdır.
 
 Aşağıdaki örnek, değişmez değer desenlerinin kullanımını gösterir ve ayrıca bir değişken deseni ve ya da deseni kullanır.
 
@@ -66,11 +66,11 @@ Desenler, geçerli bir tanımlayıcı oluşturan karakterlerden oluşan bir dize
 
 Ayırt edici bileşim desenleri basit adlandırılmış durumlar olabilir veya bir değer ya da birden çok değer içeren bir tanımlama grubu olabilir. Bir değer varsa, değer için bir tanımlayıcı belirtmeniz gerekir. Bir tanımlama grubu söz konusu olduğunda, bir veya daha fazla adlandırılmış UNION alanı için, kayıt düzeninin her öğesi için tanımlayıcı veya bir alan adı olan bir tanımlayıcı içeren bir tanımlama grubu düzeni sağlamanız gerekir. Örnekler için bu bölümdeki kod örneklerine bakın.
 
-Türü, `Some` iki durum ve `None`içeren ayrılmış bir birleşimdir. `option` Bir Case (`Some`) bir değere sahiptir, ancak diğeri (`None`) yalnızca adlandırılmış bir durumdur. Bu nedenle `Some` , `Some` servis talebiyle ilişkili değer için bir değişkene sahip olması gerekir, ancak `None` kendisi tarafından görünmelidir. Aşağıdaki kodda değişkenine `var1` , `Some` servis talebiyle eşleştirerek elde edilen değer verilir.
+`option` türü, iki durum, `Some` ve `None`olan ayırt edici bir birleşimdir. Bir durumda (`Some`) bir değer vardır, ancak diğeri (`None`) yalnızca adlandırılmış bir durumdur. Bu nedenle, `Some` `Some` durumuyla ilişkili değer için bir değişkene sahip olması gerekir, ancak `None` kendi kendine gelmelidir. Aşağıdaki kodda `var1` değişkenine, `Some` durumu ile eşleştirilirken elde edilen değer verilir.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4803.fs)]
 
-Aşağıdaki örnekte, `PersonName` ayırt edici bileşim, olası ad biçimlerini temsil eden dizelerin ve karakterlerin bir karışımını içerir. Ayırt edici birleşimin durumları, `FirstOnly` `LastOnly`ve `FirstLast`' dir.
+Aşağıdaki örnekte, `PersonName` ayırt edici birleşim, olası ad biçimlerini temsil eden dizelerin ve karakterlerin bir karışımını içerir. Ayırt edici birleşimin durumları `FirstOnly`, `LastOnly`ve `FirstLast`.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4804.fs)]
 
@@ -91,7 +91,7 @@ let matchShape shape =
     | Circle(r) -> printfn "Circle with radius %f" r
 ```
 
-Adlandırılmış alanın kullanımı isteğe bağlıdır, bu nedenle önceki örnekte, her ikisi de `Circle(r)` `Circle(radius = r)` aynı etkiye sahiptir.
+Adlandırılmış alanın kullanımı isteğe bağlıdır, bu nedenle önceki örnekte hem `Circle(r)` hem de `Circle(radius = r)` aynı etkiye sahiptir.
 
 Birden çok alan belirttiğinizde, noktalı virgül kullanın (;) ayırıcı olarak.
 
@@ -103,11 +103,11 @@ match shape with
 
 Etkin desenler, daha karmaşık özel desen eşleştirmeyi tanımlamanızı sağlar. Etkin desenler hakkında daha fazla bilgi için bkz. [Etkin desenler](active-patterns.md).
 
-Tanımlayıcının özel durum olduğu durum, özel durum işleyicileri bağlamında model eşleştirme içinde kullanılır. Özel durum işlemede model eşleştirme hakkında daha fazla bilgi için [bkz. özel durumlar: `try...with` İfade.](./exception-handling/the-try-with-expression.md)
+Tanımlayıcının özel durum olduğu durum, özel durum işleyicileri bağlamında model eşleştirme içinde kullanılır. Özel durum işlemede model eşleştirme hakkında daha fazla bilgi için bkz. [özel durumlar: `try...with` ifadesi](./exception-handling/the-try-with-expression.md).
 
 ## <a name="variable-patterns"></a>Değişken desenleri
 
-Değişken stili, bir değişken adıyla eşleştirildiği değeri atar ve bu daha sonra `->` simgenin sağ tarafındaki yürütme ifadesinde kullanıma sunulmuştur. Bir değişken deseni her türlü girişle eşleşir, ancak değişken desenleri genellikle diğer desenlerde görünür, bu nedenle, değişkenlere ve dizilere gibi daha karmaşık yapıların bağımsız değişkenlere çıkarılması mümkün olur.
+Değişken stili, eşlenen değeri bir değişken adıyla atar ve bu daha sonra `->` simgenin sağında yürütme ifadesinde kullanılabilir. Bir değişken deseni her türlü girişle eşleşir, ancak değişken desenleri genellikle diğer desenlerde görünür, bu nedenle, değişkenlere ve dizilere gibi daha karmaşık yapıların bağımsız değişkenlere çıkarılması mümkün olur.
 
 Aşağıdaki örnek, bir demet deseninin içindeki değişken bir düzeni gösterir.
 
@@ -115,9 +115,9 @@ Aşağıdaki örnek, bir demet deseninin içindeki değişken bir düzeni göste
 
 ## <a name="as-pattern"></a>as model
 
-Bu model, kendisine eklenmiş bir `as` yan tümcesine sahip bir modeldir. `as` Yan tümcesi, eşleşen değeri bir `match` ifadenin yürütme ifadesinde kullanılabilecek bir ada bağlar veya bu düzenin bir `let` bağlamada kullanıldığı durumda, ad yerel kapsama bir bağlama olarak eklenir. `as`
+`as` deseninin eklendiği bir `as` yan tümcesi olan bir örüntü. `as` yan tümcesi, eşleşen değeri bir `match` ifadesinin yürütme ifadesinde kullanılabilecek bir ada bağlar veya bu düzenin bir `let` bağlamasında kullanıldığı durumda, ad yerel kapsama bir bağlama olarak eklenir.
 
-Aşağıdaki örnek bir `as` model kullanır.
+Aşağıdaki örnek bir `as` modelini kullanır.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4806.fs)]
 
@@ -133,7 +133,7 @@ Aşağıdaki örnek, veya modelini gösterir.
 
 VE deseni, girişin iki desenle eşleşmesini gerektirir. VE deseninin her iki tarafının türleri uyumlu olmalıdır.
 
-Aşağıdaki örnek `detectZeroTuple` , bu konunun ilerleyen kısımlarında yer aldığı, `var2` ancak her ikisi de `var1` ve düzeni kullanılarak değer olarak elde edilen [demet düzeni](https://msdn.microsoft.com/library/#tuple) bölümünde gösteriliyor.
+Aşağıdaki örnek, bu konunun ilerleyen kısımlarında yer [kayıt düzeni](https://msdn.microsoft.com/library/#tuple) bölümünde gösterilen `detectZeroTuple` gibidir, ancak burada `var1` ve `var2` her IKISI de ve düzeni kullanılarak değerler olarak alınır.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4808.fs)]
 
@@ -177,7 +177,7 @@ Kayıt stili, alanların değerlerini ayıklamak için kayıt oluşturmak için 
 
 ## <a name="wildcard-pattern"></a>Joker karakter stili
 
-Joker karakter stili, alt çizgi (`_`) karakteriyle temsil edilir ve tıpkı değişken düzeniyle benzer şekilde, girişin bir değişkene atanması yerine atılmasının dışında herhangi bir girişle eşleşir. Joker karakter deseni genellikle diğer desenlerin içinde, `->` simgenin sağındaki ifadede gerekli olmayan değerler için yer tutucu olarak kullanılır. Joker karakter deseni, eşleşmeyen herhangi bir girişi eşleştirmek için bir desen listesinin sonunda da sık kullanılır. Bu konudaki çok sayıda kod örneğinde joker karakter deseninin gösterildiği gösterilmektedir. Bir örnek için yukarıdaki koda bakın.
+Joker karakter stili, alt çizgi (`_`) karakteriyle temsil edilir ve tıpkı değişken düzeniyle benzer şekilde, girişin bir değişkene atanması yerine atılmasının dışında herhangi bir girişle eşleşir. Joker karakter deseni, genellikle `->` simgenin sağında yer alan ifadede gerekli olmayan değerler için yer tutucu olarak diğer desenlerin içinde kullanılır. Joker karakter deseni, eşleşmeyen herhangi bir girişi eşleştirmek için bir desen listesinin sonunda da sık kullanılır. Bu konudaki çok sayıda kod örneğinde joker karakter deseninin gösterildiği gösterilmektedir. Bir örnek için yukarıdaki koda bakın.
 
 ## <a name="patterns-that-have-type-annotations"></a>Tür ek açıklamalarına sahip desenler
 
@@ -193,9 +193,23 @@ Aşağıdaki örnek, tür testi modelini gösterir.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4816.fs)]
 
+Yalnızca bir tanımlayıcının belirli bir türetilmiş türde olup olmadığını kontrol ediyorsanız, aşağıdaki örnekte gösterildiği gibi, deseninin `as identifier` bir bölümüne gerek kalmaz:
+
+```fsharp
+type A() = class end
+type B() = inherit A()
+type C() = inherit A()
+
+let m (a: A) =
+    match a with
+    | :? B -> printfn "It's a B"
+    | :? C -> printfn "It's a C"
+    | _ -> ()
+```
+
 ## <a name="null-pattern"></a>Null desenli
 
-Null değer, null değere izin veren türlerle çalışırken görünebilen null değeriyle eşleşir. .NET Framework kodla birlikte çalışırken genellikle null desenler kullanılır. Örneğin, bir .NET API 'nin dönüş değeri bir `match` ifadenin girdisi olabilir. Program akışını, dönüş değerinin null ve ayrıca döndürülen değerin diğer özelliklerine göre kontrol edebilirsiniz. Null değerlerin programınızın geri kalanına yayılmasını engellemek için null kalıbı kullanabilirsiniz.
+Null değer, null değere izin veren türlerle çalışırken görünebilen null değeriyle eşleşir. .NET Framework kodla birlikte çalışırken genellikle null desenler kullanılır. Örneğin, bir .NET API 'nin dönüş değeri bir `match` ifadesi girişi olabilir. Program akışını, dönüş değerinin null ve ayrıca döndürülen değerin diğer özelliklerine göre kontrol edebilirsiniz. Null değerlerin programınızın geri kalanına yayılmasını engellemek için null kalıbı kullanabilirsiniz.
 
 Aşağıdaki örnek, null ve değişken düzenlerini kullanır.
 

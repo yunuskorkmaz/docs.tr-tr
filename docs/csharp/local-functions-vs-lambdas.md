@@ -1,35 +1,36 @@
 ---
-title: Lambda ifadeleri ve yerel işlevler
-description: Yerel işlevler lambda ifadeleri daha iyi bir seçim neden olabiliyor öğrenin.
+title: Yerel işlevler ve lambda ifadeleri karşılaştırması
+description: Yerel işlevlerin neden lambda ifadelerinden daha iyi bir seçim olabileceğini öğrenin.
 ms.date: 06/27/2016
+ms.technology: csharp-advanced-concepts
 ms.assetid: 368d1752-3659-489a-97b4-f15d87e49ae3
-ms.openlocfilehash: 7577950314f8c57fba635db8b2bcd69e8d427dc3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a644b6868a37b3d6231a514dc37030cae062785a
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61659780"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73038807"
 ---
-# <a name="local-functions-compared-to-lambda-expressions"></a>Lambda ifadeleri karşılaştırma yerel işlevler
+# <a name="local-functions-compared-to-lambda-expressions"></a>Yerel işlevler lambda ifadeleriyle karşılaştırılır
 
-İlk bakışta [yerel işlevler](programming-guide/classes-and-structs/local-functions.md) ve [lambda ifadeleri](./programming-guide/statements-expressions-operators/lambda-expressions.md) çok benzer. Çoğu durumda, lambda ifadeleri ve yerel işlevleri kullanma arasında seçim, stil ve kişisel tercihinize bir konudur. Ancak, birini veya diğerini farkında olmanız gereken kullanabileceğiniz gerçek farklar vardır.
+İlk bakışta, [yerel işlevler](programming-guide/classes-and-structs/local-functions.md) ve [lambda ifadeleri](./programming-guide/statements-expressions-operators/lambda-expressions.md) çok benzerdir. Birçok durumda, lambda ifadeleri ve yerel işlevler kullanma arasında seçim stili ve kişisel tercihlerden bağımsız olur. Ancak, dikkat etmeniz gereken bir veya diğerini kullanabileceğiniz gerçek farklılıklar vardır.
 
-Yerel işlev ve lambda ifadesi uygulamaları Faktöriyel algoritmasının arasındaki farklar inceleyelim. İlk yerel bir işlevi kullanarak sürüm:
+Bu, yerel işlev ve çarpınımı algoritmasının lambda ifadesi uygulamaları arasındaki farkları inceleyelim. Yerel bir işlev kullanan ilk sürüm:
 
 [!code-csharp[LocalFunctionFactorial](../../samples/snippets/csharp/new-in-7/MathUtilities.cs#37_LocalFunctionFactorial "Recursive factorial using local function")]
 
-Bu uygulamayı lambda ifadelerini kullanan bir sürüm ile karşılaştırın.
+Bu uygulamayı lambda ifadeleri kullanan bir sürümle karşıtlık:
 
 [!code-csharp[26_LambdaFactorial](../../samples/snippets/csharp/new-in-7/MathUtilities.cs#38_LambdaFactorial "Recursive factorial using lambda expressions")]
 
-Yerel işlevler adlarına sahip. Lambda ifadeleri olan değişkenlere eklendiklerinde anonim yöntemler olan `Func` veya `Action` türleri. Yerel bir işlev bildirdiğinizde, bağımsız değişken türleri ve dönüş türü, işlev bildirimi parçasıdır. Lambda gövdesi bir parçası olmak yerine ifade, bağımsız değişken türleri ve dönüş türü, lambda ifadesinin değişken türü bildirimi parçasıdır. Bu iki fark NET kod oluşturulmasına neden olabilir.
+Yerel işlevlerin adları vardır. Lambda ifadeleri `Func` veya `Action` türler olan değişkenlere atanan anonim yöntemlerdir. Yerel bir işlev bildirdiğinizde, bağımsız değişken türleri ve dönüş türü, işlev bildiriminin bir parçasıdır. Lambda ifadesinin gövdesi bir parçası olmak yerine, bağımsız değişken türleri ve dönüş türü, lambda ifadesinin değişken türü bildiriminin bir parçasıdır. Bu iki fark kodun daha net bir şekilde oluşmasına neden olabilir.
 
-Yerel İşlevler, lambda ifadeleri daha kesin atama için farklı kuralları vardır. Yerel işlev bildirimi kapsam içinde olduğu herhangi bir kod konumdan başvurulabilir. Bir temsilci değişkenine bir lambda ifadesi bu erişileceği (veya lambda ifadesi başvuran temsilci adlı önce.) atanmalıdır Lambda ifadesi kullanarak sürüm bildirmeli ve lambda ifadesi başlatmak, bildirim `nthFactorial` kendisini tanımlayan önce. Bunu yapmazsanız sonuçlanıyor başvuran bir derleme zamanı hatası `nthFactorial` atayarak önce.
-Bu farklılıklar, yinelemeli algoritmalar yerel işlevler kullanarak oluşturmak daha kolay anlamına gelir. Bildirme ve kendi kendini çağıran yerel bir fonksiyon tanımlayın. Lambda ifadeleri gerekir bildirilmiş ve aynı lambda ifadesi başvuran bir gövde yeniden atanan kullanılabilmesi için öncelikle bir varsayılan değer atanır.
+Yerel işlevler, lambda ifadelerinden kesin atama için farklı kurallara sahiptir. Bir yerel işlev bildirimine, kapsamdaki herhangi bir kod konumundan başvurulabilir. Bir lambda ifadesi, erişilebilmesi için bir temsilci değişkenine atanmalıdır (veya lambda ifadesine başvuran temsilci aracılığıyla çağrılabilir.) Lambda ifadesini kullanan sürümün lambda ifadesini bildirmelidir ve başlatması gerektiğini, `nthFactorial` tanımlamadan önce dikkat edin. Bu nedenle, atamadan önce `nthFactorial` başvurmak için derleme zamanı hatasına neden olur.
+Bu farklılıklar özyinelemeli algoritmaların yerel işlevler kullanılarak oluşturulması daha kolay hale gelir. Kendisini çağıran bir yerel işlev tanımlayabilir ve tanımlayabilirsiniz. Lambda ifadeleri, aynı lambda ifadesine başvuran bir gövdeye yeniden atanabilmeleri için bildirilmelidir ve varsayılan bir değer atanmalıdır.
 
-Belirli atama onayına kuralları, yerel bir işlev veya lambda ifadesi tarafından yakalanan tüm değişkenleri de etkiler. Hem yerel işlevler hem de lambda ifadesi kuralları isteğe bağlı yerel işlev veya lambda ifadesi bir temsilciye dönüştürüldüğünde yakalanan tüm değişkenlere kesinlikle noktada atanır. Lambda ifadeleri, bildirildikleri temsilcileri dönüştürülür farktır. Yerel işlevler yalnızca temsilci olarak kullanıldığında temsilciler dönüştürülür. Yerel bir işlevi bildirmek ve gibi bir yöntem çağırarak yalnızca başvuru, bir temsilciye dönüştürülmez. Bu kural, kapsayan kapsamı uygun bir konumda yerel bir işlevi bildirmek sağlar. Yerel işlevler üst yönteminin sonunda tüm dönüş deyimleri sonra bildirmek için yaygındır.
+Belirli atama kuralları, yerel işlev veya lambda ifadesi tarafından yakalanan tüm değişkenleri de etkiler. Yerel işlev veya lambda ifadesi bir temsilciye dönüştürüldüğünde, her iki yerel işlev ve lambda ifadesi kuralı, yakalanan değişkenlerin herhangi bir noktaya kesinlikle atandığını talep edilir. Fark, lambda ifadelerinin bildirildiği zaman temsilcilere dönüştürülmesidir. Yerel işlevler yalnızca temsilci olarak kullanıldığında temsilcilere dönüştürülür. Yerel bir işlev bildirirseniz ve yalnızca bir yöntem gibi çağırarak buna başvurmanız durumunda, bir temsilciye dönüştürülmez. Bu kural, kapsayan kapsamındaki herhangi bir uygun konumda yerel bir işlev bildirmenize olanak sağlar. Herhangi bir dönüş deyiminden sonra, üst yöntemin sonunda yerel işlevleri bildirmek yaygın bir yöntemdir.
 
-Üçüncü olarak, derleyici kesinlikle kapsayan kapsam içinde yakalanan değişkenlere atamak yerel işlevler sağlayan statik analiz gerçekleştirebilirsiniz. Bu örneği göz önünde bulundurun:
+Üçüncü olarak derleyici, yerel işlevlerin kapsayan kapsamda kesin olarak yakalanan değişkenleri atamasını sağlayan statik analiz gerçekleştirebilir. Şu örneği göz önünde bulundurun:
 
 ```csharp
 int M()
@@ -42,26 +43,26 @@ int M()
 }
 ```
 
-Derleyici, belirleyebilirsiniz `LocalFunction` kesinlikle atar `y` çağrıldığında. Çünkü `LocalFunction` önce çağrılır `return` deyimi `y` kesinlikle atanmıştır `return` deyimi.
+Derleyici, çağrıldığında `LocalFunction` kesinlikle `y` atayıp atamayacağını tespit edebilir. `LocalFunction` `return` deyimden önce çağrıldığından `y`, `return` bildiriminde kesin olarak atanır.
 
-Örnek analysis sağlayan analiz dördüncü fark sağlar.
-Kullanımları bağlı olarak, her zaman lambda ifadeleri için gerekli olan yığın ayırmaları yerel işlevler önleyebilirsiniz. Yerel bir işlev hiçbir zaman bir temsilciye dönüştürülmüş ve diğer lambdalar veya temsilciye dönüştürülmüş yerel işlevler tarafından yakalanan yerel işlev tarafından yakalanan değişkenler hiçbiri, derleyicinin yığın ayırmaları önleyebilirsiniz. 
+Örnek analizine izin veren analiz, dördüncü farkı mümkün kıdır.
+Yerel işlevler, kullanım amaçlarına bağlı olarak, lambda ifadeleri için her zaman gerekli olan yığın ayırmalara engel olabilir. Yerel bir işlev hiçbir şekilde temsilciye dönüştürülürse ve yerel işlev tarafından yakalanan değişkenlerden hiçbiri, başka Lambdalar veya temsilcilere dönüştürülen yerel işlevler tarafından yakalanmazsa, derleyici yığın ayırmalara engel olabilir. 
 
 Bu zaman uyumsuz örneği göz önünde bulundurun:
 
 [!code-csharp[TaskLambdaExample](../../samples/snippets/csharp/new-in-7/AsyncWork.cs#36_TaskLambdaExample "Task returning method with lambda expression")]
 
-Bu bir lambda ifadesi için kapatma içeren `address`, `index` ve `name` değişkenleri. Yerel işlevler söz konusu olduğunda, kapanış uygulayan nesnenin olabilir bir `struct` türü. Bu yapı türü, yerel bir işlev başvurusu tarafından geçirilir. Bu fark, uygulama üzerinde bir ayırma kaydeder.
+Bu lambda ifadesinin kapanışı `address`, `index` ve `name` değişkenlerini içerir. Yerel işlevler söz konusu olduğunda, kapanışı uygulayan nesne `struct` bir tür olabilir. Bu yapı türü yerel işleve başvuruya göre geçirilir. Uygulamadaki bu fark bir ayırmaya kaydedilir.
 
-Lambda ifadeleri için gerekli örnek oluşturma, zaman açısından kritik kod yolları bir performans faktör olabilecek ek bellek ayırmaları anlamına gelir.
-Yerel işlevler bu yüküne tabi değildir. Yukarıdaki örnekte, 2, lambda ifadesi sürümden daha az ayırmaları yerel işlevler sürümüyle vardır.
+Lambda ifadeleri için gereken örnek oluşturma, zaman açısından kritik kod yollarındaki bir performans faktörü olabilecek fazladan bellek ayırmaları anlamına gelir.
+Yerel işlevler bu ek yüke neden olmaz. Yukarıdaki örnekte, yerel işlevlerin sürümünde lambda ifadesi sürümünden daha az sayıda ayırma bulunur.
 
 > [!NOTE]
-> Bu yöntem yerel işlev denk bir sınıf Kapatılmak üzere de kullanır. Bir yerel işlevin kabini olarak uygulanıp bir `class` veya `struct` bir uygulama ayrıntısı olduğunu. Yerel bir işlev kullanabilir bir `struct` bir lambda her zaman kullanır ancak bir `class`.
+> Bu yöntemin yerel işlev eşdeğeri, kapanış için bir sınıf de kullanır. Yerel işleve yönelik kapanışın `class` olarak uygulanıp uygulanmadığı veya bir `struct` uygulama ayrıntısı olup olmadığı. Bir lambda, her zaman bir `class`kullanacak şekilde, yerel bir işlev `struct` kullanabilir.
 
 [!code-csharp[TaskLocalFunctionExample](../../samples/snippets/csharp/new-in-7/AsyncWork.cs#TaskExample "Task returning method with local function")]
 
-Bu örnekte gösterilmiştir değil son avantajlarından biri yerel işlevler kullanarak yineleyiciler uygulanabilir `yield return` değerler üretmek için söz dizimi. `yield return` Deyimi lambda ifadelerine izin verilmez.
+Bu örnekte gösterilmeyen bir son avantaj, yerel işlevlerin yineleyiciler olarak uygulanabilmesinin yanı sıra bir değer dizisi oluşturmak için `yield return` sözdizimini kullanmaktır. Lambda ifadelerinde `yield return` ifadeye izin verilmez.
 
-Yerel işlevler lambda ifadeleri için yedekli olarak görünebilir, ancak bunlar gerçekten farklı amaçlara hizmet eder ve sahip farklı kullanır.
-Yalnızca başka bir yöntem bağlamından çağrılan bir işlev yazmak istediğiniz zaman yerel işlevler çalışması için daha verimlidir.
+Yerel işlevler Lambda ifadelerinde gereksiz gibi görünse de, bu işlemler aslında farklı amaçlara hizmet eder ve farklı kullanımlar sağlar.
+Yalnızca başka bir yöntemin bağlamından çağrılan bir işlev yazmak istediğinizde yerel işlevler bu durum için daha etkilidir.

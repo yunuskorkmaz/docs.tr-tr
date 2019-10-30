@@ -1,5 +1,5 @@
 ---
-title: '- ve-= operators - C# başvurusu'
+title: '- ve-= işleçleri- C# başvuru'
 ms.custom: seodec18
 ms.date: 05/27/2019
 f1_keywords:
@@ -13,44 +13,44 @@ helpviewer_keywords:
 - event unsubscription [C#]
 - -= operator [C#]
 ms.assetid: 4de7a4fa-c69d-48e6-aff1-3130af970b2d
-ms.openlocfilehash: 80603107beb708e76a2c7446f300d71ede411570
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: cf642fcac7233d27f2ed9052829c145038e93419
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67609852"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73038880"
 ---
-# <a name="--and---operators-c-reference"></a>- ve-= işleçleri (C# Başvurusu)
+# <a name="--and---operators-c-reference"></a>-ve-= işleçleri (C# başvuru)
 
-`-` İşleci yerleşik sayısal türler tarafından desteklenir ve [temsilci](../keywords/delegate.md) türleri.
+`-` ve `-=` işleçleri, yerleşik [integral](../builtin-types/integral-numeric-types.md) ve [kayan nokta](../builtin-types/floating-point-numeric-types.md) sayısal türleri ve [temsilci](../builtin-types/reference-types.md#the-delegate-type) türleri tarafından desteklenir.
 
-Aritmetik hakkında bilgi için `-` işleci bkz [birli artı ve eksi işleçleri](arithmetic-operators.md#unary-plus-and-minus-operators) ve [çıkarma işleci -](arithmetic-operators.md#subtraction-operator--) bölümlerini [aritmetikişleçler](arithmetic-operators.md) makalesi.
+Aritmetik `-` işleci hakkında daha fazla bilgi için, [Aritmetik işleçler](arithmetic-operators.md) makalesinin [birli Plus ve eksi işleçleri](arithmetic-operators.md#unary-plus-and-minus-operators) ve [çıkarma işleci](arithmetic-operators.md#subtraction-operator--) bölümlerine bakın.
 
 ## <a name="delegate-removal"></a>Temsilci kaldırma
 
-Aynı işlenenleri için [temsilci](../keywords/delegate.md) türü `-` işleci aşağıdaki gibi hesaplanır bir temsilci örneği döndürür:
+Aynı [temsilci](../builtin-types/reference-types.md#the-delegate-type) türünün işlenenleri için `-` işleci aşağıdaki şekilde hesaplanan bir temsilci örneği döndürür:
 
-- Her iki işlenen de null olmayan ve çağırma listesi sağ işlenenin çağırma listenin sol işlenenin uygun bitişik alt liste ise, işlemin sonucunu, sağ işlenen 's kaldırarak alınan yeni çağırma listesidir Sol işlenenin çağırma listeden girdileri. Sol işlenen 's listesinde birden çok bitişik alt listelerin atamada sağ işlenen 's listesiyle eşleşen yalnızca en sağdaki eşleşen alt liste kaldırılır. Kaldırma işlemi boş bir liste sonuçlanırsa sonucudur `null`.
+- Her iki işlenen de null değilse ve sağ işlenenin çağırma listesi, sol işlenenin çağırma listesinin uygun bir bitişik alt listesi ise, işlemin sonucu sağ işlenen tarafından alınan yeni bir çağırma listesidir. sol işlenenin çağırma listesinden girişler. Sağ işlenenin listesi sol işlenenin listesindeki birden çok bitişik alt listeyle eşleşiyorsa, yalnızca en sağdaki eşleme alt listesi kaldırılır. Kaldırma işlemi boş bir liste ile sonuçlanırsa sonuç `null`.
 
   [!code-csharp-interactive[delegate removal](~/samples/csharp/language-reference/operators/SubtractionOperator.cs#DelegateRemoval)]
 
-- Sağ işlenen çağırma listesi çağırma listenin sol işlenenin uygun bitişik alt liste değilse, işlemin sonucunu sol işlenen ' dir. Örneğin, çok noktaya yayın temsilci bir parçası olmayan bir temsilci kaldırma hiçbir şey yapmaz ve değişmeden çok noktaya yayın Temsilcide sonuçlanır.
+- Sağ işlenenin çağırma listesi, sol işlenenin çağırma listesinin uygun bir bitişik alt listesi değilse, işlemin sonucu sol işlenenin bir sonucudur. Örneğin, çok noktaya yayın temsilcisinin parçası olmayan bir temsilciyi kaldırmak, hiçbir şey yapmaz ve değişmeyen çok noktaya yayın temsilcisine neden olur.
 
   [!code-csharp-interactive[delegate removal with no effect](~/samples/csharp/language-reference/operators/SubtractionOperator.cs#DelegateRemovalNoChange)]
 
-  Yukarıdaki örnekte, temsilci sırasında temizleme temsilci örneklerini karşılaştırılır de gösterir. Örneğin, özdeş bir değerlendirmesinden gelen üretilen Temsilciler [lambda ifadeleri](../../programming-guide/statements-expressions-operators/lambda-expressions.md) eşit değildir. Temsilci eşitlik hakkında daha fazla bilgi için bkz: [temsilci eşitlik işleçleri](~/_csharplang/spec/expressions.md#delegate-equality-operators) bölümünü [ C# dil belirtimi](../language-specification/index.md).
+  Yukarıdaki örnek ayrıca temsilci kaldırma temsilci örneklerinin karşılaştırıldığı gösterilmektedir. Örneğin, aynı [lambda ifadelerinin](../../programming-guide/statements-expressions-operators/lambda-expressions.md) değerlendirmesinden üretilen temsilciler eşit değildir. Temsilci eşitliği hakkında daha fazla bilgi için, [ C# dil belirtiminin](~/_csharplang/spec/introduction.md), [eşitlik işleçleri temsilcisi](~/_csharplang/spec/expressions.md#delegate-equality-operators) bölümüne bakın.
 
-- Sol işlenen `null`, işlem sonucu `null`. Sağ işlenen `null`, sol işlenen işleminin sonucudur.
+- Sol işlenen `null`, işlemin sonucu `null`. Sağ işlenen `null`, işlemin sonucu sol işlenenin bir sonucudur.
 
   [!code-csharp-interactive[delegate removal and null](~/samples/csharp/language-reference/operators/SubtractionOperator.cs#DelegateRemovalAndNull)]
 
-Temsilciler birleştirmek için kullanın [ `+` işleci](addition-operator.md#delegate-combination).
+Temsilcileri birleştirmek için [`+` işlecini](addition-operator.md#delegate-combination)kullanın.
 
-Temsilci türleri hakkında daha fazla bilgi için bkz: [Temsilciler](../../programming-guide/delegates/index.md).
+Temsilci türleri hakkında daha fazla bilgi için bkz. [Temsilciler](../../programming-guide/delegates/index.md).
 
 ## <a name="subtraction-assignment-operator--"></a>Çıkarma atama işleci-=
 
-Bir ifade kullanarak `-=` işleci gibi
+Gibi `-=` işlecini kullanan bir ifade
 
 ```csharp
 x -= y
@@ -62,27 +62,26 @@ eşdeğerdir
 x = x - y
 ```
 
-dışında `x` yalnızca bir kez değerlendirilir.
-  
-Aşağıdaki örnek, kullanımını gösterir. `-=` işleci:
+`x` yalnızca bir kez değerlendirilir.
+
+Aşağıdaki örnek `-=` işlecinin kullanımını gösterir:
 
 [!code-csharp-interactive[-= examples](~/samples/csharp/language-reference/operators/SubtractionOperator.cs#SubtractAndAssign)]
 
-Ayrıca `-=` abonelikten çıkma kaldırmak için bir olay işleyicisi yöntemi belirtmek için işleci bir [olay](../keywords/event.md). Daha fazla bilgi için [nasıl yapılır: abone olma ve aboneliği olaylardan](../../programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md).
+Bir [olaydan](../keywords/event.md)abonelik kaldırdığınızda kaldırılacak olay işleyicisi yöntemini belirtmek için `-=` işlecini de kullanabilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: olaylara abone olma ve aboneliği kaldırma](../../programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md).
 
-## <a name="operator-overloadability"></a>İşleç overloadability
+## <a name="operator-overloadability"></a>Operatör overloadability
 
-Kullanıcı tanımlı bir tür için [aşırı](operator-overloading.md) `-` işleci. Bir ikili olduğunda `-` işleci aşırı yüklenmiş, `-=` işleci örtük olarak aşırı yüklenmiş, ayrıca. Kullanıcı tanımlı bir türe açıkça aşırı yüklenemez `-=` işleci.
+Kullanıcı tanımlı bir tür `-` işlecini [aşırı](operator-overloading.md) yükleyebilir. İkili `-` işleci aşırı yüklendiğinde, `-=` işleci de örtük olarak aşırı yüklenmiştir. Kullanıcı tanımlı bir tür `-=` işlecini açıkça aşırı yükleyemez.
 
 ## <a name="c-language-specification"></a>C# dili belirtimi
 
-Daha fazla bilgi için [birli eksi işleci](~/_csharplang/spec/expressions.md#unary-minus-operator) ve [çıkarma işleci](~/_csharplang/spec/expressions.md#subtraction-operator) bölümlerini [ C# dil belirtimi](~/_csharplang/spec/introduction.md).
+Daha fazla bilgi için, [ C# dil belirtiminin](~/_csharplang/spec/introduction.md) [birli eksi işleci](~/_csharplang/spec/expressions.md#unary-minus-operator) ve [çıkarma işleci](~/_csharplang/spec/expressions.md#subtraction-operator) bölümlerine bakın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C#başvuru](../index.md)
+- [C#başvurunun](../index.md)
 - [C# işleçleri](index.md)
-- [Temsilciler](../../programming-guide/delegates/index.md)
 - [Olaylar](../../programming-guide/events/index.md)
 - [Aritmetik işleçler](arithmetic-operators.md)
-- [+ ve += işleçleri](addition-operator.md)
+- [+ ve + = işleçleri](addition-operator.md)

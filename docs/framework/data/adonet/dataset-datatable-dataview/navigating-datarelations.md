@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e5e673f4-9b44-45ae-aaea-c504d1cc5d3e
-ms.openlocfilehash: 412f133c7cf23642ba92d54272287cb708dddc92
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 73523297454be37716acedad13498954ef9a89a0
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70784355"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040341"
 ---
 # <a name="navigating-datarelations"></a>DataRelations İçinde Gezinme
-' A <xref:System.Data.DataRelation> ait birincil işlevlerden biri, bir <xref:System.Data.DataSet>' ın içinde diğerine gezinmesine <xref:System.Data.DataTable> izin verdir. Bu, ilgili bir **DataTable**nesnesinden tek bir <xref:System.Data.DataRow> **DataRow** verildiğinde ilgili tüm nesneleri bir **DataTable** içinde almanıza olanak sağlar. Örneğin, bir müşteri tablosu ve sipariş tablosu arasında bir **DataRelation** oluşturduktan sonra, **GetChildRows**kullanarak belirli bir müşteri satırı için tüm sipariş satırlarını alabilirsiniz.  
+Bir <xref:System.Data.DataRelation> birincil işlevlerinden biri, bir <xref:System.Data.DataTable> <xref:System.Data.DataSet>içinde diğerine gezinmesine izin verdir. Bu, ilgili bir **DataTable**nesnesinden tek bir **DataRow** verildiğinde ilgili tüm <xref:System.Data.DataRow> nesnelerini bir **DataTable** içinde almanıza olanak sağlar. Örneğin, bir müşteri tablosu ve sipariş tablosu arasında bir **DataRelation** oluşturduktan sonra, **GetChildRows**kullanarak belirli bir müşteri satırı için tüm sipariş satırlarını alabilirsiniz.  
   
  Aşağıdaki kod örneği, bir **veri kümesinin** **Customers** tablosu ve **Orders** tablosu arasında bir **DataRelation** oluşturur ve her müşteri için tüm siparişleri döndürür.  
   
@@ -24,11 +24,11 @@ ms.locfileid: "70784355"
   
  Genişletilmiş örnek, **OrderDetails** ve **Products** tablolarından değerleri de döndürür. **Siparişler** tablosu, her müşteri siparişi, hangi ürünlerin ve miktarların sıralandığı hakkında bilgi edinmek için **OrderDetails** **tablosu ile ilgilidir** . **OrderDetails** tablosu yalnızca sıralı bir ürünün **ProductID** 'Sini içerdiğinden, **OrderDetails** , **ProductName**'i döndürmek için **ProductID** kullanan **ürünlerle** ilgilidir. Bu ilişkide, **Ürünler** tablosu üst ve **sipariş ayrıntıları** tablosu alt öğesidir. Sonuç olarak, **OrderDetails** tablosu üzerinden yineleme yaparken, ilgili **ProductName** değerini almak için **GetParentRow** çağırılır.  
   
- **Müşteriler** ve **siparişler** tabloları Için **DataRelation** oluşturulduğunda, **createkısıtlamalar** bayrağı için hiçbir değer belirtildiğine dikkat edin (varsayılan değer **true**'dur). Bu, **Orders** tablosundaki tüm satırların, ana **müşteriler** tablosunda bulunan bir **CustomerID** değeri olduğunu varsayar. **Siparişler** tablosunda **müşteriler** tablosunda bulunmayan bir <xref:System.Data.ForeignKeyConstraint> **CustomerID** varsa, bir özel durumun oluşturulmasına neden olur.  
+ **Müşteriler** ve **siparişler** tabloları Için **DataRelation** oluşturulduğunda, **createkısıtlamalar** bayrağı için hiçbir değer belirtildiğine dikkat edin (varsayılan değer **true**'dur). Bu, **Orders** tablosundaki tüm satırların, ana **müşteriler** tablosunda bulunan bir **CustomerID** değeri olduğunu varsayar. **Siparişler** tablosunda **müşteriler** tablosunda bulunmayan bir **CustomerID** varsa, <xref:System.Data.ForeignKeyConstraint> bir özel durumun oluşturulmasına neden olur.  
   
  Alt sütun üst sütunun içermediği değerleri içeriyorsa, **DataRelation**'ı eklerken **createkısıtlamalar** bayrağını **false** olarak ayarlayın. Örnekte, **Orders** tablosu ve **OrderDetails** tablosu arasındaki **DataRelation** için **createkısıtlamalar** bayrağı **false** olarak ayarlanır. Bu, uygulamanın **OrderDetails** tablosundan tüm kayıtları ve bir çalışma zamanı özel durumu oluşturmadan **siparişler** tablosundan yalnızca bir kayıt alt kümesini döndürmesini sağlar. Genişletilmiş örnek, çıktıyı aşağıdaki biçimde oluşturur.  
   
-```  
+```output  
 Customer ID: NORTS  
   Order ID: 10517  
         Order Date: 4/24/1997 12:00:00 AM  

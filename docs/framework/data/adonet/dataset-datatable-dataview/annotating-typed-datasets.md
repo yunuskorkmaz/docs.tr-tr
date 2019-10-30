@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f82aaa62-321e-4c8a-b51b-9d1114700170
-ms.openlocfilehash: 351175b96d354a264a9280018ce21de8870beda2
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: df6da84dfc120e3f6c3cb0e46729ca2cecc9fe3a
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70784796"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040395"
 ---
 # <a name="annotating-typed-datasets"></a>Türü Belirtilmiş DataSets için Yorum Ekleme
-Ek açıklamalar, temeldeki şemayı değiştirmeden, yazdığınız <xref:System.Data.DataSet> öğelerin adlarını değiştirmenize olanak sağlar. Temel şemadaki öğelerin adlarını değiştirmek, yazılan veri **kümesinin** veri kaynağında mevcut olmayan nesnelere başvurmasına ve veri kaynağında var olan nesnelere yönelik bir başvuruyu kaybetmesine neden olur.  
+Ek açıklamalar, temeldeki şemayı değiştirmeden, yazılan <xref:System.Data.DataSet> öğelerin adlarını değiştirmenize olanak sağlar. Temel şemadaki öğelerin adlarını değiştirmek, yazılan veri **kümesinin** veri kaynağında mevcut olmayan nesnelere başvurmasına ve veri kaynağında var olan nesnelere yönelik bir başvuruyu kaybetmesine neden olur.  
   
- Ek açıklamaları kullanarak, yazılan **veri** kümenizdeki nesnelerin adlarını daha anlamlı adlarla özelleştirebilir, böylece kod daha okunabilir ve yazılan **Veri kümeniz** istemcilerin kullanması için daha kolay olur, temel şemayı bozulmadan bırakır. Örneğin, **Northwind** veritabanının **Customers** tablosu için aşağıdaki şema öğesi, **CustomersRow** ve <xref:System.Data.DataRowCollection> adlandırılmış **müşterilerin**bir **DataRow** nesne adı ile sonuçlanır.  
+ Ek açıklamaları kullanarak, yazılan **veri** kümenizdeki nesnelerin adlarını daha anlamlı adlarla özelleştirebilir, böylece kod daha okunabilir ve yazılan **Veri kümeniz** istemcilerin kullanması için daha kolay olur, temel şemayı bozulmadan bırakır. Örneğin, **Northwind** veritabanının **Customers** tablosu için aşağıdaki şema öğesi, **CustomersRow** **DataRow** nesne adı ve **müşteriler**adlı bir <xref:System.Data.DataRowCollection> ile sonuçlanır.  
   
 ```xml  
 <xs:element name="Customers">  
@@ -55,7 +55,7 @@ Ek açıklamalar, temeldeki şemayı değiştirmeden, yazdığınız <xref:Syste
   
 |nullValue değeri|Açıklama|  
 |---------------------|-----------------|  
-|*Değiştirme değeri*|Döndürülecek bir değer belirtin. Döndürülen değerin öğe türüyle eşleşmesi gerekir. Örneğin, null tamsayı `nullValue="0"` alanları için 0 döndürmek üzere kullanın.|  
+|*Değiştirme değeri*|Döndürülecek bir değer belirtin. Döndürülen değerin öğe türüyle eşleşmesi gerekir. Örneğin, null tamsayı alanları için 0 döndürmek için `nullValue="0"` kullanın.|  
 |**_throw**|Bir özel durum oluşturur. Bu varsayılandır.|  
 |**_Null**|Bir temel tür ile karşılaşılırsa, null bir başvuru döndürün veya bir özel durum oluşturun.|  
 |**_boş**|Dizeler için, **String. Empty**döndürün, aksi halde boş bir oluşturucudan oluşturulan nesneyi döndürün. İlkel bir tür ile karşılaşılırsa bir özel durum oluşturun.|  
@@ -66,7 +66,7 @@ Ek açıklamalar, temeldeki şemayı değiştirmeden, yazdığınız <xref:Syste
 |---------------------------|-------------|----------------|  
 |**DataRow**|TableNameDataTable|typedPlural|  
 |**DataTable** Yöntem|NewTableNameRow<br /><br /> AddTableNameRow<br /><br /> DeleteTableNameRow|typedName|  
-|**DataRowCollection**|TableName|typedPlural|  
+|**DataRowCollection**|tableName|typedPlural|  
 |**Nesnesinin**|TableNameRow|typedName|  
 |**DataColumn**|DataTable. ColumnNameColumn<br /><br /> DataRow. ColumnName|typedName|  
 |**Özelliði**|ÖzellikAdı|typedName|  
@@ -74,9 +74,9 @@ Ek açıklamalar, temeldeki şemayı değiştirmeden, yazdığınız <xref:Syste
 |**Üst öğe** Erişimci|TableNameRow|typedParent|  
 |**Veri kümesi** Olayları|TableNameRowChangeEvent<br /><br /> TableNameRowChangeEventHandler|typedName|  
   
- Türü belirtilmiş **veri kümesi** ek açıklamalarını kullanmak Için XML şeması tanım DILI (xsd) şemanıza aşağıdaki **xmlns** başvurusunu eklemeniz gerekir. Veritabanı tablolarından bir xsd oluşturmak için bkz <xref:System.Data.DataSet.WriteXmlSchema%2A> . [Visual Studio 'da veri kümeleri ile çalışma](/visualstudio/data-tools/dataset-tools-in-visual-studio).  
+ Türü belirtilmiş **veri kümesi** ek açıklamalarını kullanmak Için XML şeması tanım DILI (xsd) şemanıza aşağıdaki **xmlns** başvurusunu eklemeniz gerekir. Veritabanı tablolarından bir xsd oluşturmak için bkz. <xref:System.Data.DataSet.WriteXmlSchema%2A> veya [Visual Studio 'Da veri kümeleri Ile çalışma](/visualstudio/data-tools/dataset-tools-in-visual-studio).  
   
-```  
+```xml  
 xmlns:codegen="urn:schemas-microsoft-com:xml-msprop"  
 ```  
   
@@ -134,7 +134,7 @@ codegen:typedParent="Customer" codegen:typedChildren="GetOrders">
 </xs:schema>  
 ```  
   
- Aşağıdaki kod örneği, örnek şemadan oluşturulan kesin türü belirtilmiş bir **veri kümesini** kullanır. Bir tane, <xref:System.Data.SqlClient.SqlDataAdapter> **müşteriler** tablosunu doldurmak için bir tane kullanır <xref:System.Data.SqlClient.SqlDataAdapter> ve **Orders** tablosunu doldurmak için bir diğeri. Türü kesin belirlenmiş **veri kümesi** , **DataRelation**'ı tanımlar.  
+ Aşağıdaki kod örneği, örnek şemadan oluşturulan kesin türü belirtilmiş bir **veri kümesini** kullanır. **Müşteriler** tablosunu doldurmak için bir <xref:System.Data.SqlClient.SqlDataAdapter> kullanır ve **siparişler** tablosunu doldurmak için başka bir <xref:System.Data.SqlClient.SqlDataAdapter>. Türü kesin belirlenmiş **veri kümesi** , **DataRelation**'ı tanımlar.  
   
 ```vb  
 ' Assumes a valid SqlConnection object named connection.  

@@ -3,14 +3,14 @@ title: C# Kılavuz geçmişi C#
 description: Dil en eski sürümlerinde ne şekilde görünür ve bu tarihten sonra nasıl gelişmiştir?
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: bce61d7a1838753f6cc2397440208e0c02b8194a
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 11463f7d47c5fb5b71bd16d73039b22e4a6ca43e
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72002700"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039644"
 ---
-# <a name="the-history-of-c"></a>C @ no__t-0 geçmişi
+# <a name="the-history-of-c"></a>C\# geçmişi
 
 Bu makalede, C# dilin her bir ana sürümünün geçmişi sağlanmaktadır. C# Takım yenilik yapın ve yeni özellikler eklemeye devam etmektedir. Gelecek sürümler için kabul edilen özellikler dahil olmak üzere ayrıntılı dil özelliği durumu GitHub 'daki [DotNet/Roslyn deposunda](https://github.com/dotnet/roslyn/blob/master/docs/Language%20Feature%20Status.md) bulunabilir.
 
@@ -48,7 +48,7 @@ C#sürüm 1,0, bugün ile karşılaştırıldığında özelliklerden çıkarıl
 
 ## <a name="c-version-12"></a>C#sürüm 1,2
 
-C#sürüm 1,2, Visual Studio .NET 2003 ile birlikte gönderilir. Dilde birkaç küçük geliştirmeler vardı. Çoğu önemli, bu sürüm ile başlayarak, @no__t 3 @no__t @no__t 2 ' ye uygulanan bir `foreach` döngüsünde oluşturulan kod, bir-1 @no__t olarak adlandırılır.
+C#sürüm 1,2, Visual Studio .NET 2003 ile birlikte gönderilir. Dilde birkaç küçük geliştirmeler vardı. Çoğu önemli, bu <xref:System.Collections.IEnumerator> <xref:System.IDisposable>uygulandığında <xref:System.Collections.IEnumerator> <xref:System.IDisposable.Dispose%2A> olarak adlandırılan `foreach` döngüsünde oluşturulan kod, bu sürüm ile başdır.
 
 ## <a name="c-version-20"></a>C#sürüm 2,0
 
@@ -70,7 +70,7 @@ Diğer C# 2,0 özellikleri mevcut özelliklere özellikler eklemiştir:
 
 C# Genel bir nesne YÖNELIMLI (OO) dil olarak başlamışsa, sürüm 2,0, C# bir acelendeki olarak değiştirilmiştir. Bunların altındaysa, önemli geliştirici sorun noktalarından sonra gitirler. Ve bunları önemli bir şekilde yaptıktan sonra.
 
-Genel türler ile türler ve Yöntemler, tür güvenliğini korurken rastgele bir tür üzerinde çalışabilir. Örneğin, <xref:System.Collections.Generic.List%601> olması, `List<string>` ' i veya `List<int>` ' ye sahip olmanızı ve bu dizelerde veya tamsayılarla tür kullanımı uyumlu işlemleri gerçekleştirmenize karşın bu dizeler üzerinde işlem yapmanızı sağlar. Generics 'in kullanılması, her işlem için `ArrayList` veya `Object` ' den türetilen @no__t oluştur-0 ' dan daha iyidir.
+Genel türler ile türler ve Yöntemler, tür güvenliğini korurken rastgele bir tür üzerinde çalışabilir. Örneğin, bir <xref:System.Collections.Generic.List%601> olması, `List<string>` veya `List<int>` sahip olmanızı ve bu dizelerde veya tamsayılarla tür kullanımı güvenli işlemler gerçekleştirmenizi sağlar. Genel türleri kullanmak, her işlem için `Object` `ArrayList` veya kümeden türetilen `ListInt` oluşturma işleminden daha iyidir.
 
 C#sürüm 2,0, yineleyiciler tarafından getirildi. Yineleyiciler succinctly koymak için `List` (veya diğer sıralanabilir türler) içindeki tüm öğeleri `foreach` döngüsüyle incelemenizi sağlar. Dilin birinci sınıf parçası olarak yineleyiciler olması, dilin okunabilirliğini ve kişilerin kod hakkında neden olma yeteneğini önemli ölçüde geliştirmiştir.
 
@@ -132,7 +132,7 @@ Ancak `async` ve `await` Bu yayının gerçek yıldızlardır. Bu özellikler 20
 
 ## <a name="c-version-60"></a>C#sürüm 6,0
 
-3,0 ve 5,0 sürümleriyle, C# nesne yönelimli bir dile önemli yeni özellikler ekledik. Visual Studio 2013 ile yayınlanan sürüm 6,0 ile, baskın bir çıkarıcı Özellik yapmaktan sonra daha üretken bir şekilde programlama yapan C# daha küçük birçok özellik yayımlayacaktır. Bunlardan bazıları şunlardır:
+3,0 ve 5,0 sürümleriyle, C# nesne yönelimli bir dile önemli yeni özellikler ekledik. Visual Studio 2015 ile yayınlanan sürüm 6,0 ' de, baskın bir Killer özelliği yapmaktan sonra, daha üretken bir şekilde programlama yapan C# daha küçük birçok özelliği serbest bırakacaktır. Bunlardan bazıları şunlardır:
 
 - [Statik içeri aktarmalar](./csharp-6.md#using-static)
 - [Özel durum filtreleri](./csharp-6.md#exception-filters)

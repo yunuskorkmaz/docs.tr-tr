@@ -5,42 +5,42 @@ helpviewer_keywords:
 - UI Automation, control patterns for clients
 - control patterns, UI Automation clients
 ms.assetid: 571561d8-5f49-43a9-a054-87735194e013
-ms.openlocfilehash: 320833bf147fa16889cd188c7c729cd4dc028843
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: e1d87920f64242379d1931a424aa38b676dc5ef5
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71042518"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039456"
 ---
 # <a name="ui-automation-control-patterns-for-clients"></a>İstemciler İçin UI Otomasyon Denetim Düzenleri
 > [!NOTE]
-> Bu belge, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] <xref:System.Windows.Automation> ad alanında tanımlanan yönetilen sınıfları kullanmak isteyen .NET Framework geliştiricilere yöneliktir. Hakkında [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]en son bilgiler için bkz [. Windows Otomasyonu API 'si: UI Otomasyonu](https://go.microsoft.com/fwlink/?LinkID=156746).  
+> Bu belge, <xref:System.Windows.Automation> ad alanında tanımlanan yönetilen [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] sınıflarını kullanmak isteyen .NET Framework geliştiricilere yöneliktir. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]hakkında en son bilgiler için bkz. [Windows Otomasyonu API: UI Otomasyonu](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
- Bu genel bakış, UI Otomasyonu istemcilerinin denetim desenlerini tanıtır. UI Otomasyon istemcisinin, [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)]ile ilgili bilgilere erişmek için denetim desenlerini nasıl kullanabileceği hakkında bilgi içerir.  
+ Bu genel bakış, UI Otomasyonu istemcilerinin denetim desenlerini tanıtır. UI Otomasyon istemcisinin [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)]hakkındaki bilgilere erişmek için denetim düzenlerini nasıl kullanabileceği hakkında bilgi içerir.  
   
- Denetim desenleri denetim türünden veya denetimin görünümünün bağımsız olarak bir denetimin işlevini kategorilere ayırma ve kullanıma sunma için bir yol sağlar. UI Otomasyonu istemcileri, hangi denetim <xref:System.Windows.Automation.AutomationElement> desenlerinin desteklendiğini ve denetimin davranışından emin olduğunu tespit etmek için bir öğesini inceleyebilir.  
+ Denetim desenleri denetim türünden veya denetimin görünümünün bağımsız olarak bir denetimin işlevini kategorilere ayırma ve kullanıma sunma için bir yol sağlar. UI Otomasyonu istemcileri, hangi denetim desenlerinin desteklendiğini ve denetimin davranışından emin olduğunu tespit etmek için bir <xref:System.Windows.Automation.AutomationElement> inceleyebilir.  
   
  Denetim desenlerinin tüm listesi için bkz. [UI Otomasyonu Denetim desenlerine genel bakış](ui-automation-control-patterns-overview.md).  
   
 <a name="uiautomation_getting_control_patterns"></a>   
 ## <a name="getting-control-patterns"></a>Denetim desenleri alma  
- İstemciler, ya <xref:System.Windows.Automation.AutomationElement> <xref:System.Windows.Automation.AutomationElement.GetCachedPattern%2A?displayProperty=nameWithType> da<xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A?displayProperty=nameWithType>çağırarak bir denetim modelini alır.  
+ İstemciler, <xref:System.Windows.Automation.AutomationElement.GetCachedPattern%2A?displayProperty=nameWithType> veya <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A?displayProperty=nameWithType>çağırarak <xref:System.Windows.Automation.AutomationElement> bir denetim modelini alır.  
   
- <xref:System.Windows.Automation.AutomationElement.GetSupportedPatterns%2A> İstemciler, `IsPatternAvailable` <xref:System.Windows.Automation.AutomationElement.IsTextPatternAvailableProperty>üzerinde birdesenveyadesengrubunundesteklenipdesteklenmediğinianlamakiçinyönteminiveyabağımsızbirözelliği(örneğin,)kullanabilir.<xref:System.Windows.Automation.AutomationElement> Ancak, desteklenen özellikleri kontrol etmek ve daha az işlem arası çağrıya neden olduğundan denetim modelini almak `null` yerine, bir başvuru için denetim modelini ve test almayı denemek daha etkilidir.  
+ İstemciler, <xref:System.Windows.Automation.AutomationElement>bir desen veya bir desen grubunun desteklenip desteklenmediğini anlamak için <xref:System.Windows.Automation.AutomationElement.GetSupportedPatterns%2A> yöntemini veya bağımsız bir `IsPatternAvailable` özelliğini (örneğin, <xref:System.Windows.Automation.AutomationElement.IsTextPatternAvailableProperty>) kullanabilir. Ancak, desteklenen özellikleri kontrol etmek ve daha az işlem arası çağrıya neden olduğundan denetim modelini almak yerine `null` başvuru için denetim modelini ve testini almak daha verimlidir.  
   
- Aşağıdaki örnek, <xref:System.Windows.Automation.TextPattern> <xref:System.Windows.Automation.AutomationElement>öğesinden bir denetim deseninin nasıl alınacağını gösterir.  
+ Aşağıdaki örnek, bir <xref:System.Windows.Automation.AutomationElement><xref:System.Windows.Automation.TextPattern> denetim deseninin nasıl alınacağını gösterir.  
   
  [!code-csharp[UIATextPattern_snip#1037](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIATextPattern_snip/CSharp/SearchWindow.cs#1037)]  
   
 <a name="uiautomation_properties_on_control_patterns"></a>   
 ## <a name="retrieving-properties-on-control-patterns"></a>Denetim desenlerinde özellikleri alma  
- İstemciler, <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A?displayProperty=nameWithType> veya <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A?displayProperty=nameWithType> öğesini çağırarak ve uygun bir türe döndürülen nesneyi kaldırarak denetim desenlerindeki özellik değerlerini alabilir. Özellikler hakkında [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] daha fazla bilgi için bkz. [istemciler için UI Otomasyon özellikleri](ui-automation-properties-for-clients.md).  
+ İstemciler, <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A?displayProperty=nameWithType> ya da <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A?displayProperty=nameWithType> çağırarak ve uygun bir türe döndürülen nesneyi vurarak denetim desenlerindeki özellik değerlerini alabilir. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] özellikleri hakkında daha fazla bilgi için bkz. [istemciler Için UI Otomasyon özellikleri](ui-automation-properties-for-clients.md).  
   
- `GetPropertyValue` Yöntemlerin yanı sıra, bir düzendeki [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] özelliklere erişmek için ortak dil çalışma zamanı (CLR) erişimcileri aracılığıyla özellik değerleri alınabilir.  
+ `GetPropertyValue` yöntemlerine ek olarak, bir düzende [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] özelliklerine erişmek için ortak dil çalışma zamanı (CLR) erişimcileri aracılığıyla özellik değerleri alınabilir.  
   
 <a name="uiautomation_with_variable_patterns"></a>   
 ## <a name="controls-with-variable-patterns"></a>Değişken desenleri olan denetimler  
- Bazı denetim türleri, durumlarına veya denetimin kullanılmakta olmasına bağlı olarak farklı desenleri destekler. Değişken desenleri olan denetim örnekleri, liste görünümleridir (küçük resimler, Kutucuklar, simgeler, liste, Ayrıntılar), [!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)] grafikler (pasta, çizgi, çubuk, formül içeren hücre değeri), [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)]belge alanı (normal, Web düzeni, ana hat, yazdırma düzeni, yazdırma Önizleme) ve [!INCLUDE[TLA#tla_wmp](../../../includes/tlasharptla-wmp-md.md)] kaplamalar.  
+ Bazı denetim türleri, durumlarına veya denetimin kullanılmakta olmasına bağlı olarak farklı desenleri destekler. Değişken desenleri olan denetim örnekleri, liste görünümleridir (küçük resimler, Kutucuklar, simgeler, liste, Ayrıntılar), [!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)] grafikler (pasta, çizgi, çubuk, formül içeren hücre değeri), [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)]belge alanı (normal, Web düzeni, ana hat, yazdırma düzeni, Baskı Önizleme) ve Microsoft Windows Media Player kaplamaları.  
   
  Özel denetim türlerini uygulayan denetimler, işlevlerini temsil etmek için gereken herhangi bir denetim deseni kümesine sahip olabilir.  
   

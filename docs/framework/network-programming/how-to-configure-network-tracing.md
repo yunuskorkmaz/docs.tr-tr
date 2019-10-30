@@ -11,100 +11,100 @@ helpviewer_keywords:
 - application configuration files, network tracing
 - sockets, trace output
 ms.assetid: 5ef9fe4b-8d3d-490e-9259-1d014b2181af
-ms.openlocfilehash: 98854fa0dff8d4cfb1d67d5864751ab01a21150b
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: 06132509860b16d1e22cfdf7e3226c968d16b7cf
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920306"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040650"
 ---
 # <a name="how-to-configure-network-tracing"></a>Nasıl yapılır: ağ izlemeyi yapılandırma
 
 Uygulama veya bilgisayar yapılandırma dosyası, ağ izlemelerinin biçimini ve içeriğini belirleyen ayarları içerir. Bu yordamı gerçekleştirmeden önce izlemenin etkin olduğundan emin olun. Daha fazla bilgi için bkz. [ağ Izlemeyi etkinleştirme](enabling-network-tracing.md).
 
-Bilgisayar yapılandırma dosyası Machine. config,%windir%\Microsoft.NET\Framework klasöründe depolanır. Bilgisayarda yüklü .NET Framework her sürümü için%windir%\Microsoft.NET\Framework altındaki klasörlerde ayrı bir Machine. config dosyası vardır, örneğin:
+Bilgisayar yapılandırma dosyası *Machine. config*, *%windir%\Microsoft.NET\Framework* klasöründe depolanır. Bilgisayarda yüklü .NET Framework her sürümü için *%windir%\Microsoft.NET\Framework* altındaki klasörlerde ayrı bir *Machine. config* dosyası vardır, örneğin:
 
-- C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Config\machine.config
-- C:\WINDOWS\Microsoft.NET\Framework64\v4.0.30319\Config\machine.config
-  
-Bu ayarlar, bilgisayarın yapılandırma dosyasında öncelikli olan uygulamanın bilgisayar yapılandırma dosyasında da yapılabilir.  
-  
-## <a name="configure-network-tracing"></a>Ağ izlemeyi yapılandırma  
-  
-Ağ izlemeyi yapılandırmak için, uygun yapılandırma dosyasına aşağıdaki satırları ekleyin. Bu ayarların değerleri ve seçenekleri aşağıdaki tablolarda açıklanmıştır.  
-  
-```xml  
-<configuration>  
-  <system.diagnostics>  
-    <sources>  
-      <source name="System.Net" tracemode="includehex" maxdatasize="1024">  
-        <listeners>  
-          <add name="System.Net"/>  
-        </listeners>  
-      </source>  
-      <source name="System.Net.Cache">  
-        <listeners>  
-          <add name="System.Net"/>  
-        </listeners>  
-      </source>  
-      <source name="System.Net.Http">  
-        <listeners>  
-          <add name="System.Net"/>  
-        </listeners>  
-      </source>  
-      <source name="System.Net.Sockets">  
-        <listeners>  
-          <add name="System.Net"/>  
-        </listeners>  
-      </source>  
-      <source name="System.Net.WebSockets">  
-        <listeners>  
-          <add name="System.Net"/>  
-        </listeners>  
-      </source>  
-   </sources> 
+- *C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Config\machine.config*
+- *C:\WINDOWS\Microsoft.NET\Framework64\v4.0.30319\Config\machine.config*
+
+Bu ayarlar, bilgisayarın yapılandırma dosyasında öncelikli olan uygulamanın bilgisayar yapılandırma dosyasında da yapılabilir.
+
+## <a name="configure-network-tracing"></a>Ağ izlemeyi yapılandırma
+
+Ağ izlemeyi yapılandırmak için, uygun yapılandırma dosyasına aşağıdaki satırları ekleyin. Bu ayarların değerleri ve seçenekleri aşağıdaki tablolarda açıklanmıştır.
+
+```xml
+<configuration>
+  <system.diagnostics>
+    <sources>
+      <source name="System.Net" tracemode="includehex" maxdatasize="1024">
+        <listeners>
+          <add name="System.Net"/>
+        </listeners>
+      </source>
+      <source name="System.Net.Cache">
+        <listeners>
+          <add name="System.Net"/>
+        </listeners>
+      </source>
+      <source name="System.Net.Http">
+        <listeners>
+          <add name="System.Net"/>
+        </listeners>
+      </source>
+      <source name="System.Net.Sockets">
+        <listeners>
+          <add name="System.Net"/>
+        </listeners>
+      </source>
+      <source name="System.Net.WebSockets">
+        <listeners>
+          <add name="System.Net"/>
+        </listeners>
+      </source>
+   </sources>
     <switches>
       <add name="System.Net" value="Verbose"/>
-      <add name="System.Net.Cache" value="Verbose"/>  
-      <add name="System.Net.Http" value="Verbose"/>  
-      <add name="System.Net.Sockets" value="Verbose"/>  
-      <add name="System.Net.WebSockets" value="Verbose"/>  
-    </switches>  
-    <sharedListeners>  
-      <add name="System.Net"  
-        type="System.Diagnostics.TextWriterTraceListener"  
+      <add name="System.Net.Cache" value="Verbose"/>
+      <add name="System.Net.Http" value="Verbose"/>
+      <add name="System.Net.Sockets" value="Verbose"/>
+      <add name="System.Net.WebSockets" value="Verbose"/>
+    </switches>
+    <sharedListeners>
+      <add name="System.Net"
+        type="System.Diagnostics.TextWriterTraceListener"
         initializeData="network.log"
-        traceOutputOptions="ProcessId, DateTime" 
-      />  
-    </sharedListeners>  
-    <trace autoflush="true"/>  
-  </system.diagnostics>  
-</configuration>  
-```  
+        traceOutputOptions="ProcessId, DateTime"
+      />
+    </sharedListeners>
+    <trace autoflush="true"/>
+  </system.diagnostics>
+</configuration>
+```
 
 ### <a name="trace-output-from-methods"></a>Metotlardan izleme çıktısı
 
 `<switches>` bloğuna bir ad eklediğinizde, izleme çıktısı, ad ile ilgili bazı yöntemlerin bilgilerini içerir. Aşağıdaki tabloda çıkış açıklanmaktadır:
-  
-|Name|Çıkış kaynağı|  
-|----------|-----------------|  
-|`System.Net.Sockets`|<xref:System.Net.Sockets.Socket>, <xref:System.Net.Sockets.TcpListener>, <xref:System.Net.Sockets.TcpClient>ve <xref:System.Net.Dns> sınıflarının bazı genel yöntemleri.|  
-|`System.Net`|<xref:System.Net.HttpWebRequest>, <xref:System.Net.HttpWebResponse>, <xref:System.Net.FtpWebRequest>ve <xref:System.Net.FtpWebResponse> sınıflarının bazı genel yöntemleri ve SSL hata ayıklama bilgileri (geçersiz sertifikalar, eksik verenler listesi ve istemci sertifikası hataları).|  
-|`System.Net.HttpListener`|<xref:System.Net.HttpListener>, <xref:System.Net.HttpListenerRequest>ve <xref:System.Net.HttpListenerResponse> sınıflarının bazı genel yöntemleri.|  
-|`System.Net.Cache`|`System.Net.Cache`içindeki bazı özel ve iç Yöntemler.|  
-|`System.Net.Http`|<xref:System.Net.Http.HttpClient>, <xref:System.Net.Http.DelegatingHandler>, <xref:System.Net.Http.HttpClientHandler>, <xref:System.Net.Http.HttpMessageHandler>, <xref:System.Net.Http.MessageProcessingHandler>ve <xref:System.Net.Http.WebRequestHandler> sınıflarının bazı genel yöntemleri.|  
-|`System.Net.WebSockets.WebSocket`|<xref:System.Net.WebSockets.ClientWebSocket> ve <xref:System.Net.WebSockets.WebSocket> sınıflarının bazı genel yöntemleri.|  
+
+|Name|Çıkış kaynağı|
+|----------|-----------------|
+|`System.Net.Sockets`|<xref:System.Net.Sockets.Socket>, <xref:System.Net.Sockets.TcpListener>, <xref:System.Net.Sockets.TcpClient>ve <xref:System.Net.Dns> sınıflarının bazı genel yöntemleri.|
+|`System.Net`|<xref:System.Net.HttpWebRequest>, <xref:System.Net.HttpWebResponse>, <xref:System.Net.FtpWebRequest>ve <xref:System.Net.FtpWebResponse> sınıflarının bazı genel yöntemleri ve SSL hata ayıklama bilgileri (geçersiz sertifikalar, eksik verenler listesi ve istemci sertifikası hataları).|
+|`System.Net.HttpListener`|<xref:System.Net.HttpListener>, <xref:System.Net.HttpListenerRequest>ve <xref:System.Net.HttpListenerResponse> sınıflarının bazı genel yöntemleri.|
+|`System.Net.Cache`|`System.Net.Cache`içindeki bazı özel ve iç Yöntemler.|
+|`System.Net.Http`|<xref:System.Net.Http.HttpClient>, <xref:System.Net.Http.DelegatingHandler>, <xref:System.Net.Http.HttpClientHandler>, <xref:System.Net.Http.HttpMessageHandler>, <xref:System.Net.Http.MessageProcessingHandler>ve <xref:System.Net.Http.WebRequestHandler> sınıflarının bazı genel yöntemleri.|
+|`System.Net.WebSockets.WebSocket`|<xref:System.Net.WebSockets.ClientWebSocket> ve <xref:System.Net.WebSockets.WebSocket> sınıflarının bazı genel yöntemleri.|
 
 ### <a name="trace-output-attributes"></a>İzleme çıkış öznitelikleri
 
 Aşağıdaki tabloda listelenen öznitelikler izleme çıkışını yapılandırır:
-  
-|Öznitelik adı|Öznitelik değeri|  
-|--------------------|---------------------|  
+
+|Öznitelik adı|Öznitelik değeri|
+|--------------------|---------------------|
 |`value`|Gerekli <xref:System.String> özniteliği. Çıkışın ayrıntı düzeyini ayarlar. Meşru değerler `Critical`, `Error`, `Verbose`, `Warning`ve `Information`.<br /><br />Bu öznitelik, **Switches** öğesinin **Add** öğesinde ayarlanmalıdır. **Kaynak** öğede bu öznitelik ayarlandıysa bir özel durum oluşturulur.<br/><br/>Örnek: `<add name="System.Net" value="Verbose"/>`|
 |`maxdatasize`|İsteğe bağlı <xref:System.Int32> özniteliği. Her satır izlemesinde yer alan ağ verilerinin en fazla bayt sayısını ayarlar. Varsayılan değer 1024 ' dir.<br /><br />Bu öznitelik, **kaynak** öğesinde ayarlanmalıdır. **Anahtarlar** öğesi altındaki bir öğe üzerinde bu öznitelik ayarlandıysa, bir özel durum oluşturulur.<br/><br/>Örnek: `<source name="System.Net" tracemode="includehex" maxdatasize="1024">`|
 |`tracemode`|İsteğe bağlı <xref:System.String> özniteliği. Protokol izlemelerini onaltılık ve metin biçiminde göstermek için `includehex` olarak ayarlayın. Yalnızca metni göstermek için `protocolonly` olarak ayarlayın. Varsayılan değer `includehex` şeklindedir.<br /><br />Bu öznitelik, **kaynak** öğesinde ayarlanmalıdır. **Anahtarlar** öğesi altındaki bir öğe üzerinde bu öznitelik ayarlandıysa, bir özel durum oluşturulur.<br/><br/>Örnek: `<source name="System.Net" tracemode="includehex" maxdatasize="1024">`|
-  
+
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Ağ İzlemeyi Yorumlama](interpreting-network-tracing.md)

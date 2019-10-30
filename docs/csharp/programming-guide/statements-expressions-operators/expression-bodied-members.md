@@ -1,5 +1,5 @@
 ---
-title: İfade gövdeli üyeler - C# Programlama Kılavuzu
+title: İfade-Bodied Üyeler- C# Programlama Kılavuzu
 ms.custom: seodec18
 ms.date: 02/06/2019
 helpviewer_keywords:
@@ -7,92 +7,92 @@ helpviewer_keywords:
 - C# language, expresion-bodied members
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d7c282157639a6a60270ce8dbebbc91dd0e0a3f3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b336834dcc021b986d79f09d2a9440de0b102f78
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61709997"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039757"
 ---
-# <a name="expression-bodied-members-c-programming-guide"></a>İfade gövdeli üyeler (C# programlama Kılavuzu)
+# <a name="expression-bodied-members-c-programming-guide"></a>İfade-Bodied Üyeler (C# Programlama Kılavuzu)
 
-İfade gövdesi tanımları çok kısa, okunabilir bir form uygulamasında bir üyenin sağlamanıza izin veren. Mantığı herhangi bir yöntemi veya özelliği gibi desteklenen bir üyesi için tek bir ifadeye oluşur. her bir deyim gövdesi tanımına kullanabilirsiniz. Bir ifade gövdesi tanımına genel sözdizimi aşağıdaki gibidir:
+İfade gövdesi tanımları, üyenin uygulamasını çok kısa, okunabilir bir biçimde sağlamanıza olanak tanır. Bir yöntem veya özellik gibi desteklenen herhangi bir üyenin mantığı tek bir ifadeden oluşuyorsa, bir ifade gövdesi tanımı kullanabilirsiniz. Bir ifade gövdesi tanımında aşağıdaki genel sözdizimi vardır:
 
 ```csharp
 member => expression;
 ```
 
-Burada *ifade* geçerli bir ifadedir.
+Burada *ifadesi* geçerli bir ifadedir.
 
-Yöntem ve salt okunur özellikler için ifade gövdesi tanımları için destek sunulmuştur C# 6 ve içinde genişletilmiş C# 7.0. İfade gövdesi tanımları, aşağıdaki tabloda listelenen tür üyeleri birlikte kullanılabilir:
+6 ' C# da Yöntemler ve salt okunurdur özellikler için ifade gövdesi tanımları desteği sunuldu ve 7,0 ' de C# genişletildi. İfade gövdesi tanımları, aşağıdaki tabloda listelenen tür üyeleri ile birlikte kullanılabilir:
 
-|Üye  |Sürümünden desteklenen... |
+|Üye  |İtibariyle destekleniyor... |
 |---------|---------|
-|[Yöntemi](#methods)  |C# 6 |
-|[Salt okunur özelliği](#read-only-properties)   |C# 6  |
-|[Özelliği](#properties)  |C# 7.0 |
-|[Oluşturucusu](#constructors)   |C# 7.0 |
+|[Yöntemidir](#methods)  |C# 6 |
+|[Salt okunurdur özelliği](#read-only-properties)   |C# 6  |
+|[Özelliði](#properties)  |C# 7.0 |
+|[Constructor](#constructors)   |C# 7.0 |
 |[Sonlandırıcı](#finalizers)     |C# 7.0 |
-|[Dizin Oluşturucu](#indexers)       |C# 7.0 |
+|[Dizinleyic](#indexers)       |C# 7.0 |
 
 ## <a name="methods"></a>Yöntemler
 
-Bir ifade gövdeli yöntem türü yöntemin dönüş türü ile eşleşen bir değer döndüren tek bir ifade ya da, döndüren yöntemler oluşur `void`, olan bazı işlemi gerçekleştirir. Örneğin, bu geçersiz kılma türleri <xref:System.Object.ToString%2A> yöntemi genellikle geçerli nesnenin dize gösterimini döndürür, tek bir ifade içerir.
+İfade-Bodied yöntemi, türü yöntemin dönüş türüyle eşleşen bir değer döndüren tek bir ifadeden oluşur veya `void`döndüren yöntemler için bazı işlemleri gerçekleştirir. Örneğin, <xref:System.Object.ToString%2A> yöntemini geçersiz kılan türler, genellikle geçerli nesnenin dize gösterimini döndüren tek bir ifade içerir.
 
-Aşağıdaki örnekte tanımlayan bir `Person` kılan sınıf <xref:System.Object.ToString%2A> yöntemi bir deyim gövdesi tanımına sahip. Ayrıca tanımlar bir `DisplayName` adını konsolda görüntüler yöntemi. Unutmayın `return` anahtar sözcüğü kullanılan değil `ToString` ifade gövdesi tanımı.
+Aşağıdaki örnek, bir ifade gövdesi tanımıyla <xref:System.Object.ToString%2A> yöntemini geçersiz kılan bir `Person` sınıfını tanımlar. Ayrıca, konsola bir ad görüntüleyen bir `DisplayName` yöntemi tanımlar. `return` anahtar sözcüğünün `ToString` ifadesi gövde tanımında kullanılmadığını unutmayın.
 
 [!code-csharp[expression-bodied-methods](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-methods.cs)]  
 
-Daha fazla bilgi için [yöntemler (C# programlama Kılavuzu)](../classes-and-structs/methods.md).
+Daha fazla bilgi için bkz. [YöntemlerC# (Programlama Kılavuzu)](../classes-and-structs/methods.md).
 
-## <a name="read-only-properties"></a>Salt okunur özellikler
+## <a name="read-only-properties"></a>Salt okunurdur özellikleri
 
-İle başlayarak C# 6, salt okunur özelliği uygulamak için ifade gövdesi tanımına kullanabilirsiniz. Bunu yapmak için aşağıdaki sözdizimini kullanın:
+C# 6 ' dan itibaren, salt okunurdur bir özellik uygulamak için ifade gövdesi tanımı kullanabilirsiniz. Bunu yapmak için aşağıdaki sözdizimini kullanın:
 
 ```csharp
 PropertyType PropertyName => expression;
 ```
 
-Aşağıdaki örnekte tanımlayan bir `Location` sınıfının salt okunur `Name` özel değerini döndüren bir ifade gövdesi tanımını olarak gerçekleştirilen özellik `locationName` alan:
+Aşağıdaki örnek, salt okunurdur `Name` özelliği özel `locationName` alanının değerini döndüren bir ifade gövdesi tanımı olarak uygulanan bir `Location` sınıfını tanımlar:
 
 [!code-csharp[expression-bodied-read-only-property](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-readonly.cs#1)]  
 
-Özellikleri hakkında daha fazla bilgi için bkz. [özellikleri (C# Programlama Kılavuzu)](../classes-and-structs/properties.md).
+Özellikler hakkında daha fazla bilgi için bkz. [ÖzelliklerC# (Programlama Kılavuzu)](../classes-and-structs/properties.md).
 
 ## <a name="properties"></a>Özellikler
 
-İle başlayarak C# 7.0 özelliği uygulamak için ifade gövdesi tanımları kullanabilirsiniz `get` ve `set` erişimcileri. Aşağıdaki örnek bunu nasıl yapacağınız gösterilmiştir:
+7,0 ' C# den başlayarak, özellik`get`ve`set`erişimcileri uygulamak için ifade gövdesi tanımlarını kullanabilirsiniz. Aşağıdaki örnek bunun nasıl yapılacağını göstermektedir:
 
 [!code-csharp[expression-bodied-property-get-set](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-ctor.cs#1)]
 
-Özellikleri hakkında daha fazla bilgi için bkz. [özellikleri (C# Programlama Kılavuzu)](../classes-and-structs/properties.md).
+Özellikler hakkında daha fazla bilgi için bkz. [ÖzelliklerC# (Programlama Kılavuzu)](../classes-and-structs/properties.md).
 
 ## <a name="constructors"></a>Oluşturucular
 
-Bir oluşturucu için bir ifade gövdesi tanımına, genellikle tek bir atama ifadesi veya Oluşturucunun bağımsız değişkenleri işleme veya örnek durumu başlatan bir yöntem çağrısı oluşur.
+Bir oluşturucunun ifade gövdesi tanımı genellikle tek bir atama ifadesi veya oluşturucunun bağımsız değişkenlerini işleyen veya örnek durumunu Başlatan bir yöntem çağrısından oluşur.
 
-Aşağıdaki örnekte tanımlayan bir `Location` sınıfı, Oluşturucusu olan tek bir dize parametresi adlı *adı*. Bağımsız değişkeni için ifade gövdesi tanımına atar `Name` özelliği.
+Aşağıdaki örnek, oluşturucusunun *adı*adlı tek bir dize parametresine sahip bir `Location` sınıfını tanımlar. İfade gövdesi tanımı, bağımsız değişkeni `Name` özelliğine atar.
 
 [!code-csharp[expression-bodied-constructor](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-ctor.cs#1)]  
 
-Daha fazla bilgi için [oluşturucular (C# programlama Kılavuzu)](../classes-and-structs/constructors.md).
+Daha fazla bilgi için bkz. [oluşturucularC# (Programlama Kılavuzu)](../classes-and-structs/constructors.md).
 
 ## <a name="finalizers"></a>Sonlandırıcılar
 
-Bir sonlandırıcı için ifade gövdesi tanımına, genellikle, yönetilmeyen kaynakları serbest deyimleri gibi temizleme ifadeleri içerir.
+Sonlandırıcı için bir ifade gövdesi tanımı tipik olarak, yönetilmeyen kaynakları serbest bırakma deyimleri gibi temizleme deyimlerini içerir.
 
-Aşağıdaki örnek, sonlandırıcı adı belirtmek için bir ifade gövdesi tanımı kullanan bir sonlandırıcı tanımlar.
+Aşağıdaki örnek, sonlandırıcının çağrıldığını göstermek için bir ifade gövde tanımı kullanan sonlandırıcıyı tanımlar.
 
 [!code-csharp[expression-bodied-finalizer](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-destructor.cs#1)]  
 
-Daha fazla bilgi için [sonlandırıcılar (C# programlama Kılavuzu)](../classes-and-structs/destructors.md).
+Daha fazla bilgi için bkz. [sonlandırıcılarC# (Programlama Kılavuzu)](../classes-and-structs/destructors.md).
 
 ## <a name="indexers"></a>Dizin Oluşturucular
 
-Özellikleri gibi bir oluşturucunun get ve set erişimcileri değer döndüren tek bir deyimde get erişimcisinin oluşur veya set erişimcisi basit atama gerçekleştirir ifade gövdesi tanımlarını oluşur.
+Özellikler ile benzer şekilde, `get` erişimci bir değer döndüren tek bir ifadeden oluşuyorsa veya `set` erişimcisi basit bir atama gerçekleştirdiğinden, Dizin Oluşturucu `get` ve `set` erişimcileri ifade gövdesi tanımlarından oluşur.
 
-Aşağıdaki örnek adlı bir sınıf tanımlar `Sports` bir iç içeren <xref:System.String> Spor sayısını adlarını içeren bir dizi. İfade gövdesi tanımlarla hem oluşturucunun get ve set erişimcileri uygulanır.
+Aşağıdaki örnek, bir dizi spor adını içeren bir iç <xref:System.String> dizisi içeren `Sports` adlı bir sınıfı tanımlar. Dizin Oluşturucu `get` ve `set` erişimcileri, ifade gövdesi tanımları olarak uygulanır.
 
 [!code-csharp[expression-bodied-indexer](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-indexers.cs#1)]
 
-Daha fazla bilgi için [dizin oluşturucular (C# programlama Kılavuzu)](../indexers/index.md).
+Daha fazla bilgi için bkz. [DizinC# oluşturucular (Programlama Kılavuzu)](../indexers/index.md).

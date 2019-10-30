@@ -15,20 +15,20 @@ helpviewer_keywords:
 - inequality operator [C#]
 - not equals operator [C#]
 - '!= operator [C#]'
-ms.openlocfilehash: 4a30068293bef3adb9f58cc7f61e7e24e144f31b
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 11d2161004af5199d9e501f8ab1e3c0382e6bfe7
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395133"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039032"
 ---
 # <a name="equality-operators-c-reference"></a>Eşitlik işleçleri (C# başvuru)
 
-[@No__t-1 (eşitlik)](#equality-operator-) ve [`!=` (eşitsizlik)](#inequality-operator-) işleçleri işlenenlerinin eşit olup olmadığını denetler.
+[`==` (eşitlik)](#equality-operator-) ve [`!=` (eşitsizlik)](#inequality-operator-) işleçleri işlenenlerinin eşit olup olmadığını denetler.
 
 ## <a name="equality-operator-"></a>Eşitlik işleci = =
 
-@No__t-0 eşitlik işleci, işlenenleri eşitse `true` döndürür `false` Aksi halde.
+`==` eşitlik işleci, işlenenleri eşitse `true` döndürür `false` Aksi takdirde.
 
 ### <a name="value-types-equality"></a>Değer türleri eşitlik
 
@@ -37,11 +37,11 @@ ms.locfileid: "72395133"
 [!code-csharp-interactive[value types equality](~/samples/csharp/language-reference/operators/EqualityOperators.cs#ValueTypesEquality)]
 
 > [!NOTE]
-> @No__t-0, [`<`, `>`, `<=` ve `>=`](comparison-operators.md) işleçleri için, işlenenlerin herhangi biri bir sayı değilse (<xref:System.Double.NaN?displayProperty=nameWithType> veya <xref:System.Single.NaN?displayProperty=nameWithType>), işlemin sonucu `false` olur. Diğer bir deyişle, `NaN` değeri, `NaN` dahil diğer `double` (veya `float`) bir değere eşit, bundan küçüktür veya eşit değildir. Daha fazla bilgi ve örnek için <xref:System.Double.NaN?displayProperty=nameWithType> veya <xref:System.Single.NaN?displayProperty=nameWithType> başvuru makalesine bakın.
+> `==`, [`<`, `>`, `<=`ve `>=`](comparison-operators.md) işleçleri için, işlenenlerin herhangi biri bir sayı değilse (<xref:System.Double.NaN?displayProperty=nameWithType> veya <xref:System.Single.NaN?displayProperty=nameWithType>), işlemin sonucu `false`olur. Diğer bir deyişle, `NaN` değeri, `NaN` dahil diğer `double` (veya `float`) bir değere eşit, bundan küçüktür veya eşit değildir. Daha fazla bilgi ve örnek için <xref:System.Double.NaN?displayProperty=nameWithType> veya <xref:System.Single.NaN?displayProperty=nameWithType> başvuru makalesine bakın.
 
 Temeldeki integral türünün karşılık gelen değerleri eşitse aynı [sabit listesi](../keywords/enum.md) türünün iki işleneni eşittir.
 
-Kullanıcı tanımlı [Yapı](../keywords/struct.md) türleri varsayılan olarak `==` işlecini desteklemez. @No__t-0 işlecini desteklemek için Kullanıcı tanımlı bir yapının onu [tekrar yüklemesi](#operator-overloadability) gerekir.
+Kullanıcı tanımlı [Yapı](../keywords/struct.md) türleri varsayılan olarak `==` işlecini desteklemez. `==` işlecini desteklemek için Kullanıcı tanımlı bir yapının onu [tekrar yüklemesi](operator-overloading.md) gerekir.
 
 7,3 ile C# başlayarak, `==` ve `!=` işleçleri C# [diziler](../../tuples.md)tarafından desteklenir. Daha fazla bilgi için [ C# demet türleri](../../tuples.md) makalesinin [eşitlik ve diziler](../../tuples.md#equality-and-tuples) bölümüne bakın.
 
@@ -55,7 +55,7 @@ Varsayılan olarak, iki başvuru türü işlenen aynı nesneye başvurduklarınd
 
 ### <a name="string-equality"></a>Dize eşitlik
 
-İki [dize](../keywords/string.md) işleneni, her ikisi de `null` olduğunda veya her iki dize örneği de aynı uzunluktadır ve her bir karakter konumunda aynı karakterlere sahip olduğunda eşittir:
+İki [dize](../builtin-types/reference-types.md#the-string-type) işleneni, her ikisi de `null` olduğunda veya her iki dize örneği de aynı uzunluktadır ve her bir karakter konumunda aynı karakterlere sahip olduğunda eşittir:
 
 [!code-csharp-interactive[string equality](~/samples/csharp/language-reference/operators/EqualityOperators.cs#StringEquality)]
 
@@ -75,7 +75,7 @@ Anlamsal olarak özdeş [lambda ifadeleri](../../programming-guide/statements-ex
 
 ## <a name="inequality-operator-"></a>Eşitsizlik işleci! =
 
-@No__t-0, işlenenleri eşit değilse, `false` değilse, eşitsizlik işleci `true` döndürür. [Yerleşik türlerin](../keywords/built-in-types-table.md)işlenenleri için `x != y` ifadesi, `!(x == y)` ifadesiyle aynı sonucu üretir. Tür eşitliği hakkında daha fazla bilgi için [eşitlik işleci](#equality-operator-) bölümüne bakın.
+Eşitsizlik işleci `!=`, işlenenleri eşit değilse `true` döndürür `false` Aksi takdirde. [Yerleşik türlerin](../keywords/built-in-types-table.md)işlenenleri için `x != y` ifadesi, `!(x == y)` ifadesiyle aynı sonucu üretir. Tür eşitliği hakkında daha fazla bilgi için [eşitlik işleci](#equality-operator-) bölümüne bakın.
 
 Aşağıdaki örnek `!=` işlecinin kullanımını gösterir:
 

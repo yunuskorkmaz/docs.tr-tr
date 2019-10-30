@@ -2,19 +2,20 @@
 title: İçindeki varsayılan arabirim yöntemlerini kullanarak arabirimleri güvenli bir şekilde GüncelleştirC#
 description: Bu gelişmiş öğreticide, var olan arabirim tanımlarına, bu arabirimi uygulayan tüm sınıfları ve yapıları bozmadan nasıl güvenli bir şekilde yeni yetenekler ekleyebileceğiniz açıklanır.
 ms.date: 05/06/2019
+ms.technlogy: csharp-advanced-concepts
 ms.custom: mvc
-ms.openlocfilehash: 71fce2594dbf5ef3175a6b9bdf4e6edba754bb84
-ms.sourcegitcommit: 992f80328b51b165051c42ff5330788627abe973
+ms.openlocfilehash: b9194b769a3ba6d2906d6177c2363d6093b85188
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72276003"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039245"
 ---
 # <a name="tutorial-update-interfaces-with-default-interface-methods-in-c-80"></a>Öğretici: 8,0 içinde C# varsayılan arabirim yöntemleriyle arabirimleri güncelleştirme
 
 .NET Core C# 3,0 ' de 8,0 ' den başlayarak, bir arabirimin üyesini bildirdiğinizde bir uygulama tanımlayabilirsiniz. En yaygın senaryo, önceden yayınlanan ve kullanılmayan istemciler tarafından kullanılan bir arabirime güvenli bir şekilde üye eklemektir.
 
-Bu öğreticide şunların nasıl yapıldığını öğreneceksiniz:
+Bu öğreticide, aşağıdakileri nasıl yapacağınızı öğreneceksiniz:
 
 > [!div class="checklist"]
 >
@@ -22,7 +23,7 @@ Bu öğreticide şunların nasıl yapıldığını öğreneceksiniz:
 > * Daha fazla esneklik sağlamak için parametreli uygulamalar oluşturun.
 > * Bir geçersiz kılma biçiminde daha belirli bir uygulama sağlamak için uygulayıcıları etkinleştirin.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Prerequisites
 
 Makinenizi, C# 8,0 derleyicisi dahil .NET Core çalıştıracak şekilde ayarlamanız gerekir. 8,0 C# derleyicisi, [Visual Studio 2019 sürüm 16,3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) veya [.NET Core 3,0 SDK](https://dotnet.microsoft.com/download)ile başlayarak kullanılabilir.
 
@@ -38,7 +39,7 @@ Sıralamayı temsil eden ikinci bir arabirim tanımlarlar:
 
 Bu arabirimlerde, takım kullanıcılarına müşterilerine daha iyi bir deneyim oluşturmak için bir kitaplık oluşturabilir. Bu kişilerin hedefi, mevcut müşterilerle daha derin bir ilişki oluşturmak ve yeni müşterilerle ilişkilerini geliştirmektir.
 
-Şimdi, bir sonraki sürüm için kitaplığı yükseltmeniz zaman atalım. İstenen özelliklerden biri, çok sayıda siparişi olan müşteriler için bağlılık programı indirimi sunar. Bu yeni bağlılık programı indirimi, bir müşteri sipariş yaptığında uygulanır. Belirli indirim, her müşterinin bir özelliğidir. @No__t-0 ' ın her uygulanması, bağlılık programı indirimi için farklı kurallar ayarlayabilir. 
+Şimdi, bir sonraki sürüm için kitaplığı yükseltmeniz zaman atalım. İstenen özelliklerden biri, çok sayıda siparişi olan müşteriler için bağlılık programı indirimi sunar. Bu yeni bağlılık programı indirimi, bir müşteri sipariş yaptığında uygulanır. Belirli indirim, her müşterinin bir özelliğidir. `ICustomer` her bir uygulama, bağlılık programı indirimi için farklı kurallar ayarlayabilir. 
 
 Bu işlevi eklemenin en doğal yolu, `ICustomer` arabirimini tüm bağlılık programı indirimine uygulanacak bir yöntemle geliştirmektir. Bu tasarım önerisi, deneyimli geliştiriciler arasında sorun oluşmasına neden oldu: "arabirimler yayımlandıklarında sabittir! Bu bir son değişiklik! " C#8,0, arabirimleri yükseltmek için *varsayılan arabirim uygulamalarını* ekler. Kitaplık yazarları arabirime yeni üyeler ekleyebilir ve bu üyeler için varsayılan bir uygulama sağlar.
 
@@ -48,7 +49,7 @@ Varsayılan arabirim uygulamaları, geliştiricilerin bu uygulamayı geçersiz k
 
 Takım, en olası varsayılan uygulamada anlaşmıştır: müşteriler için bağlılık programı indirimi.
 
-Yükseltme, iki özellik ayarlama işlevini sağlamalıdır: indirimle uygun olması gereken siparişlerin sayısı ve indirimin yüzdesi. Bu, varsayılan arabirim yöntemlerine yönelik kusursuz bir senaryo sağlar. @No__t-0 arabirimine bir yöntem ekleyebilirsiniz ve en olası uygulamayı sağlayabilirsiniz. Tüm mevcut ve tüm yeni uygulamalar varsayılan uygulamayı kullanabilir veya kendi özelliklerini sağlayabilir.
+Yükseltme, iki özellik ayarlama işlevini sağlamalıdır: indirimle uygun olması gereken siparişlerin sayısı ve indirimin yüzdesi. Bu, varsayılan arabirim yöntemlerine yönelik kusursuz bir senaryo sağlar. `ICustomer` arabirimine bir yöntem ekleyebilir ve en olası uygulamayı sağlayabilirsiniz. Tüm mevcut ve tüm yeni uygulamalar varsayılan uygulamayı kullanabilir veya kendi özelliklerini sağlayabilir.
 
 Önce, uygulamaya yeni yöntemi ekleyin:
 
@@ -62,7 +63,7 @@ Testin aşağıdaki kısmına dikkat edin:
 
 [!code-csharp[TestDefaultImplementation](~/samples/csharp/tutorials/default-interface-members-versions/finished/customer-relationship/Program.cs?name=SnippetHighlightCast)]
 
-@No__t-0 ' dan `ICustomer` ' e dönüştürme gereklidir. @No__t-0 sınıfının `ComputeLoyaltyDiscount` için bir uygulama sağlaması gerekmez; Bu, `ICustomer` arabirimi tarafından sunulur. Ancak `SampleCustomer` sınıfı, arabirimlerinden üyeleri almıyor. Bu kural değiştirilmedi. Arabirimde bildirildiği ve uygulanan herhangi bir yöntemi çağırmak için, bu örnekte, değişken arabirimin türü, `ICustomer` olmalıdır.
+Bu `SampleCustomer` `ICustomer` olarak dönüştürme gereklidir. `SampleCustomer` sınıfın `ComputeLoyaltyDiscount`için bir uygulama sağlaması gerekmez; Bu, `ICustomer` arabirimi tarafından sunulur. Ancak `SampleCustomer` sınıfı, arabirimlerinden üyeleri almıyor. Bu kural değiştirilmedi. Arabirimde bildirildiği ve uygulanan herhangi bir yöntemi çağırmak için, bu örnekte, değişken arabirimin türü, `ICustomer` olmalıdır.
 
 ## <a name="provide-parameterization"></a>Parametreleştirme sağlama
 

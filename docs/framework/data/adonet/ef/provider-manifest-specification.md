@@ -2,12 +2,12 @@
 title: Sağlayıcı Bildirimi Belirtimi
 ms.date: 03/30/2017
 ms.assetid: bb450b47-8951-4f99-9350-26f05a4d4e46
-ms.openlocfilehash: cc58bbc82f3930f087b5da0c64afb4f9f03e905b
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: bef4868ccc52d287baaceca32c4943723be7531f
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70854495"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040489"
 ---
 # <a name="provider-manifest-specification"></a>Sağlayıcı Bildirimi Belirtimi
 Bu bölümde, bir veri deposu sağlayıcısının veri deposundaki türleri ve işlevleri nasıl destekleyebileceği açıklanmaktadır.  
@@ -32,7 +32,7 @@ Bu bölümde, bir veri deposu sağlayıcısının veri deposundaki türleri ve i
 |Sorun|Özel Durum|  
 |-----------|---------------|  
 |Sağlayıcı, DbProviderServices 'de GetProviderManifest 'i desteklemiyor.|ProviderIncompatibleException|  
-|Eksik sağlayıcı bildirimi: sağlayıcı, sağlayıcı `null` bildirimini almaya çalışırken döndürüyor.|ProviderIncompatibleException|  
+|Eksik sağlayıcı bildirimi: sağlayıcı, sağlayıcı bildirimini almaya çalışırken `null` döndürüyor.|ProviderIncompatibleException|  
 |Geçersiz sağlayıcı bildirimi: sağlayıcı, sağlayıcı bildirimini almaya çalışırken geçersiz XML döndürüyor.|ProviderIncompatibleException|  
   
 ## <a name="scenarios"></a>Senaryolar  
@@ -54,19 +54,19 @@ Bu bölümde, bir veri deposu sağlayıcısının veri deposundaki türleri ve i
   
  İki bölümden oluşan bir XML dosyası yazarsınız:  
   
-- EDM koşullarında ifade edilen ve her iki yön için eşlemeyi tanımlayan sağlayıcı türlerinin listesi: EDM-sağlayıcı ve sağlayıcıdan EDM.  
+- EDM koşullarında ifade edilen ve her iki yön için eşlemeyi tanımlayan sağlayıcı türlerinin listesi: EDM-sağlayıcıya ve sağlayıcıdan EDM.  
   
 - Sağlayıcı tarafından desteklenen ve parametre ve dönüş türlerinin EDM koşullarında ifade edildiği işlevlerin listesi.  
   
 ## <a name="provider-manifest-discoverability"></a>Sağlayıcı bildirimi bulunabilirliği  
  Bildirim, varlık hizmetlerindeki (örneğin, araçlar veya sorgu) çeşitli bileşen türleri tarafından dolaylı olarak kullanılır, ancak veri deposu meta veri yükleyicisinin kullanımı aracılığıyla meta veriler tarafından daha doğrudan yararlanılabilir.  
   
- ![dfb3d02b&#45;7a8c&#45;4d51&#45;AC5A&#45;a73d8aa145e6](./media/dfb3d02b-7a8c-4d51-ac5a-a73d8aa145e6.gif "dfb3d02b-7a8c-4d51-AC5A-a73d8aa145e6")  
+ ![dfb3d02b&#45;7a8c&#45;4d51&#45;AC5A&#45;a73d8aa145e6](./media/dfb3d02b-7a8c-4d51-ac5a-a73d8aa145e6.gif "dfb3d02b-7a8c-4d51-ac5a-a73d8aa145e6")  
   
  Ancak, belirli bir sağlayıcı aynı deponun farklı mağazalarını veya farklı sürümlerini destekleyebilir. Bu nedenle, bir sağlayıcı desteklenen her veri deposu için farklı bir bildirim rapormalıdır.  
   
 ### <a name="provider-manifest-token"></a>Sağlayıcı bildirim belirteci  
- Bir veri deposu bağlantısı açıldığında sağlayıcı, doğru bildirimi döndürecek bilgileri sorgulayabilir. Bu, bağlantı bilgilerinin kullanılamadığı veya depoya bağlanamamasının mümkün olmadığı çevrimdışı senaryolarda mümkün olmayabilir. . Ssdl dosyasındaki `ProviderManifestToken` `Schema` öğesinin özniteliğini kullanarak bildirimi belirler. Bu öznitelik için gerekli biçim yok; sağlayıcı, depoya bir bağlantı açmadan bir bildirimi tanımlamak için gereken en düşük bilgileri seçer.  
+ Bir veri deposu bağlantısı açıldığında sağlayıcı, doğru bildirimi döndürecek bilgileri sorgulayabilir. Bu, bağlantı bilgilerinin kullanılamadığı veya depoya bağlanamamasının mümkün olmadığı çevrimdışı senaryolarda mümkün olmayabilir. . Ssdl dosyasındaki `Schema` öğesinin `ProviderManifestToken` özniteliğini kullanarak bildirimi belirler. Bu öznitelik için gerekli biçim yok; sağlayıcı, depoya bir bağlantı açmadan bir bildirimi tanımlamak için gereken en düşük bilgileri seçer.  
   
  Örneğin:  
   
@@ -75,15 +75,15 @@ Bu bölümde, bir veri deposu sağlayıcısının veri deposundaki türleri ve i
 ```  
   
 ## <a name="provider-manifest-programming-model"></a>Sağlayıcı bildirimi programlama modeli  
- Sağlayıcılar öğesinden <xref:System.Data.Common.DbXmlEnabledProviderManifest>türetilir, bu da kendilerine bildirimleri bildirimli olarak belirtmelerini sağlar. Aşağıdaki çizimde bir sağlayıcının sınıf hiyerarşisi gösterilmektedir:  
+ Sağlayıcılar <xref:System.Data.Common.DbXmlEnabledProviderManifest>türetilir. Bu, kendilerine bildirimleri bildirimli olarak belirlemesine olanak tanır. Aşağıdaki çizimde bir sağlayıcının sınıf hiyerarşisi gösterilmektedir:  
   
- ![Hiçbiri](./media/d541eba3-2ee6-4cd1-88f5-89d0b2582a6c.gif "d541eba3-2ee6-4cd1-88f5-89d0b2582a6c")  
+ ![Seçim](./media/d541eba3-2ee6-4cd1-88f5-89d0b2582a6c.gif "d541eba3-2ee6-4cd1-88f5-89d0b2582a6c")  
   
 ### <a name="discoverability-api"></a>Keşfedilebilirlik API 'SI  
  Sağlayıcı bildirimi, bir veri deposu bağlantısı veya sağlayıcı bildirim belirteci kullanılarak mağaza meta veri yükleyicisi (StoreItemCollection) tarafından yüklenir.  
   
 #### <a name="using-a-data-store-connection"></a>Veri deposu bağlantısı kullanma  
- Veri deposu bağlantısı kullanılabilir olduğunda, ' i döndüren <xref:System.Data.Common.DbProviderServices.GetProviderManifestToken%2A?displayProperty=nameWithType> <xref:System.Data.Common.DbProviderServices.GetProviderManifest%2A> <xref:System.Data.Common.DbProviderManifest>yöntemine geçirilen belirteci döndürmek için çağırın. Bu yöntem, sağlayıcının uygulamasını `GetDbProviderManifestToken`devreder.  
+ Veri deposu bağlantısı kullanılabilir olduğunda, <xref:System.Data.Common.DbProviderManifest>döndüren <xref:System.Data.Common.DbProviderServices.GetProviderManifest%2A> yöntemine geçirilen belirteci döndürmek için <xref:System.Data.Common.DbProviderServices.GetProviderManifestToken%2A?displayProperty=nameWithType> çağırın. Bu yöntem, sağlayıcının `GetDbProviderManifestToken`uygulamasına temsilci seçer.  
   
 ```csharp
 public string GetProviderManifestToken(DbConnection connection);  
@@ -93,7 +93,7 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
 #### <a name="using-a-provider-manifest-token"></a>Sağlayıcı bildirim belirteci kullanma  
  Çevrimdışı senaryo için, belirteç SSDL gösteriminden çekilir. SSDL, bir ProviderManifestToken belirtmenize olanak tanır (daha fazla bilgi için bkz. [şema öğesi (ssdl)](/ef/ef6/modeling/designer/advanced/edmx/ssdl-spec#schema-element-ssdl) ). Örneğin, bir bağlantı açılamadığı için SSDL, bildirimle ilgili bilgileri belirten bir sağlayıcı bildirim belirtecine sahiptir.  
   
-```  
+```csharp  
 public DbProviderManifest GetProviderManifest(string manifestToken);  
 ```  
   
@@ -250,7 +250,7 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
   
 |Öznitelik adı|Veri Türü|Gerekli|Varsayılan Değer|Açıklama|  
 |--------------------|---------------|--------------|-------------------|-----------------|  
-|Ad|Dize|Evet|yok|Sağlayıcıya özgü veri türü adı|  
+|Name|Dize|Evet|yok|Sağlayıcıya özgü veri türü adı|  
 |PrimitiveTypeKind|PrimitiveTypeKind|Evet|yok|EDM türü adı|  
   
 ###### <a name="function-node"></a>İşlev düğümü  
@@ -258,11 +258,11 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
   
 |Öznitelik adı|Veri Türü|Gerekli|Varsayılan Değer|Açıklama|  
 |--------------------|---------------|--------------|-------------------|-----------------|  
-|Ad|Dize|Evet|yok|İşlevin tanımlayıcısı/adı|  
+|Name|Dize|Evet|yok|İşlevin tanımlayıcısı/adı|  
 |'Indaki|Dize|Hayır|Kağıt|İşlevin EDM dönüş türü|  
 |Toplama|Boole değeri|Hayır|False|İşlev bir toplama işlevse doğru|  
 |Yerleik|Boole değeri|Hayır|Doğru|İşlev veri deposunda yerleşik ise doğru|  
-|StoreFunctionName|Dize|Hayır|\<Ad >|Veri deposundaki işlev adı.  İşlev adlarının yeniden yönlendirme düzeyine izin verir.|  
+|StoreFunctionName|Dize|Hayır|\<adı >|Veri deposundaki işlev adı.  İşlev adlarının yeniden yönlendirme düzeyine izin verir.|  
 |NiladicFunction|Boole değeri|Hayır|False|İşlev parametre gerektirmiyorsa ve parametre olmadan çağrılırsa doğru|  
 |ParameterType<br /><br /> İçeriyor|Parametersemantik|Hayır|Allowwimplicit<br /><br /> Dönüştürme|Sorgu işlem hattının parametre türü değiştirme ile nasıl ele alınacağını seçme:<br /><br /> - ExactMatchOnly<br />-Allowimplicitpromosyonu<br />-AllowImplicitConversion|  
   
@@ -272,7 +272,7 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
   
 |Öznitelik adı|Veri Türü|Gerekli|Varsayılan Değer|Açıklama|  
 |--------------------|---------------|--------------|-------------------|-----------------|  
-|Ad|Dize|Evet|yok|Parametrenin tanımlayıcı/adı.|  
+|Name|Dize|Evet|yok|Parametrenin tanımlayıcı/adı.|  
 |Tür|Dize|Evet|yok|Parametrenin EDM türü.|  
 |Mod|Parametre<br /><br /> Yön|Evet|yok|Parametrenin yönü:<br /><br /> -ın<br />-Out<br />-InOut|  
   

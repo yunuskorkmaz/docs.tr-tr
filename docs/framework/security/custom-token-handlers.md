@@ -3,21 +3,21 @@ title: Özel Belirteç İşleyicileri
 ms.date: 03/30/2017
 ms.assetid: 5062669f-8bfc-420a-a25d-d8ab992ab10e
 author: BrucePerlerMS
-ms.openlocfilehash: f7d611bf396f028ff23a39cd529825f99fec300a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ccf794b4c229bbc9b40ae7ec2fd649825122cecf
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650428"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040553"
 ---
 # <a name="custom-token-handlers"></a>Özel Belirteç İşleyicileri
-Bu konu, belirteç işleyicileri WIF ve belirteçleri işlemek için nasıl kullanılacağını açıklar. Özel belirteç işleyicileri için varsayılan olarak WIF desteklenmeyen belirteç türleri oluşturmak gerekli konu da kapsar.  
+Bu konuda, WıF 'deki belirteç işleyicileri ve belirteçleri işlemek için nasıl kullanıldıkları açıklanmaktadır. Bu konuda, WıF içinde varsayılan olarak desteklenmeyen belirteç türleri için özel belirteç işleyicileri oluşturmak için gerekli olan özellikler de ele alınmaktadır.  
   
-## <a name="introduction-to-token-handlers-in-wif"></a>WIF belirteç işleyicileri giriş  
- Güvenlik belirteci işleyicileri oluşturma, okuma, yazma ve belirteçleri için bir bağlı olan taraf (RP) uygulaması veya bir güvenlik belirteci hizmeti (STS) doğrulamak için WIF kullanır. Belirteç işleyicileri için özel bir belirteci işleyicisi WIF ardışık düzeni içine eklemek veya mevcut bir belirteci işleyicisi belirteçleri yönetme biçimini özelleştirmek için genişletilebilirlik noktalarıdır. WIF, değiştirilen veya tamamen gerektiği gibi işlevlerini değiştirmek için geçersiz kılınan dokuz yerleşik güvenlik belirteci işleyicileri sağlar.  
+## <a name="introduction-to-token-handlers-in-wif"></a>WıF içindeki belirteç Işleyicilerine giriş  
+ WıF, bir bağlı olan taraf (RP) uygulaması veya bir güvenlik belirteci hizmeti (STS) için belirteçleri oluşturmak, okumak, yazmak ve doğrulamak üzere güvenlik belirteci işleyicilerini kullanır. Belirteç işleyicileri, WıF ardışık düzeninde özel bir belirteç işleyicisi eklemenize veya var olan bir belirteç işleyicisinin belirteçleri yönetme şeklini özelleştirmenize yönelik genişletilebilirlik noktalarıdır. WıF, işlevselliği gerektiği şekilde değiştirmek için değiştirilebilen ve tamamen geçersiz kılınabilen dokuz yerleşik güvenlik belirteci işleyicisi sağlar.  
   
-## <a name="built-in-security-token-handlers-in-wif"></a>WIF yerleşik güvenlik belirteci işleyicileri  
- WIF 4.5 soyut temel sınıfından türetilir dokuz güvenlik belirteci işleyici sınıflarını içerir <xref:System.IdentityModel.Tokens.SecurityTokenHandler>:  
+## <a name="built-in-security-token-handlers-in-wif"></a>WıF 'de yerleşik güvenlik belirteci Işleyicileri  
+ WıF 4,5, soyut temel sınıftan türetilen dokuz güvenlik belirteci işleyici sınıfı içerir <xref:System.IdentityModel.Tokens.SecurityTokenHandler>:  
   
 - <xref:System.IdentityModel.Tokens.EncryptedSecurityTokenHandler>  
   
@@ -37,14 +37,14 @@ Bu konu, belirteç işleyicileri WIF ve belirteçleri işlemek için nasıl kull
   
 - <xref:System.IdentityModel.Tokens.X509SecurityTokenHandler>  
   
-## <a name="adding-a-custom-token-handler"></a>Özel bir belirteci işleyicisi ekleme  
- Basit Web belirteçleri (SWT) ve JSON Web belirteçleri (JWT) gibi bazı belirteç türleri tarafından WIF sağlanan yerleşik belirteç işleyicileri yok. Bu belirteç türleri ve yerleşik bir işleyici olmayan diğer kişilerin, özel bir belirteci işleyicisi oluşturmak için aşağıdaki adımları gerçekleştirmek gerekir.  
+## <a name="adding-a-custom-token-handler"></a>Özel belirteç Işleyicisi ekleme  
+ Basit Web belirteçleri (SWT) ve JSON Web belirteçleri (JWT) gibi bazı belirteç türlerinde, WıF tarafından sunulan yerleşik belirteç işleyicileri yoktur. Bu belirteç türleri ve yerleşik işleyicisi olmayan diğerleri için, bir özel belirteç işleyicisi oluşturmak için aşağıdaki adımları gerçekleştirmeniz gerekir.  
   
-#### <a name="adding-a-custom-token-handler"></a>Özel bir belirteci işleyicisi ekleme  
+#### <a name="adding-a-custom-token-handler"></a>Özel belirteç işleyicisi ekleme  
   
-1. Öğesinden türetilen yeni bir sınıf oluşturun <xref:System.IdentityModel.Tokens.SecurityTokenHandler>.  
+1. <xref:System.IdentityModel.Tokens.SecurityTokenHandler>türetilen yeni bir sınıf oluşturun.  
   
-2. Aşağıdaki yöntemleri geçersiz kılın ve kendi uygulamanız sağlayın:  
+2. Aşağıdaki yöntemleri geçersiz kılın ve kendi uygulamanızı sağlayın:  
   
     - <xref:System.IdentityModel.Tokens.SecurityTokenHandler.CanReadToken%2A>  
   
@@ -58,7 +58,7 @@ Bu konu, belirteç işleyicileri WIF ve belirteçleri işlemek için nasıl kull
   
     - <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A>  
   
-3. Yeni özel belirteci işleyici içinde bir başvuru ekleyin *Web.config* veya *App.config* içinde dosya  **\<system.identityModel >** , bölüm WIF için geçerlidir. Örneğin, aşağıdaki yapılandırma biçimlendirme adlı yeni bir belirteci işleyicisi belirtir **MyCustomTokenHandler** , bulunduğu **CustomToken** ad alanı.  
+3. *Web. config* veya *app. config* dosyasındaki yeni özel belirteç işleyicisine, WIF için geçerli olan **\<System. IdentityModel >** bölümü içinde bir başvuru ekleyin. Örneğin, aşağıdaki yapılandırma biçimlendirmesi **CustomToken** ad alanında bulunan **MyCustomTokenHandler** adlı yeni bir belirteç işleyicisini belirtir.  
   
     ```xml  
     <system.identityModel>  
@@ -70,13 +70,13 @@ Bu konu, belirteç işleyicileri WIF ve belirteçleri işlemek için nasıl kull
     </system.identityModel>  
     ```  
   
-     Yerleşik bir belirteci işleyicisi zaten olan bir belirteç türü işlemek için kendi belirteci işleyicisi sağlıyorsanız eklemeniz gerektiğini unutmayın. bir  **\<kaldırma >** öğesi varsayılan işleyici bırakıp özel işleyicinizi kullanın. Örneğin, aşağıdaki yapılandırmayı varsayılan değiştirir <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler> özel belirteci işleyicisi ile:  
+     Zaten yerleşik bir belirteç işleyicisine sahip olan bir belirteç türünü işlemek için kendi belirteç işleyicinizi sağlıyorsanız, varsayılan işleyiciyi bırakmak ve bunun yerine özel işleyicinizi kullanmak için bir **\<** öğesi eklemeniz gerektiğini unutmayın. Örneğin, aşağıdaki yapılandırma varsayılan <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler> özel belirteç işleyicisiyle değiştirir:  
   
     ```xml  
     <system.identityModel>  
         <identityConfiguration saveBootstrapContext="true">  
             <securityTokenHandlers>  
-                <remove type="System.IdentityModel.Tokens.SamlSecurityTokenHandler, System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=abcdefg123456789">  
+                <remove type="System.IdentityModel.Tokens.SamlSecurityTokenHandler, System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=abcdefg123456789" />  
                 <add type="CustomToken.MyCustomTokenHandler, CustomToken" />  
             </securityTokenHandlers>  
         </identityConfiguration>  

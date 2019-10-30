@@ -2,13 +2,14 @@
 title: Temel türler- C# kılavuz
 description: Tüm C# programlarda çekirdek türleri (Numerics, dizeler ve nesne) hakkında bilgi edinin
 ms.date: 10/10/2016
+ms.technology: csharp-fundamentals
 ms.assetid: 95c686ba-ae4f-440e-8e94-0dbd6e04d11f
-ms.openlocfilehash: b65e6ba61bd8886223403f869aa301703f89e8ba
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: f984321ab01fc4b5ddd92a20b178748de50246da
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834244"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73037663"
 ---
 # <a name="types-variables-and-values"></a>Türler, değişkenler ve değerler
 
@@ -61,11 +62,11 @@ Kendi özel türlerinizi oluşturmak için [struct](language-reference/keywords/
   
 ## <a name="generic-types"></a>Genel türler
 
-Bir tür, istemci kodunun türün bir örneğini oluşturduğunda sağladığı gerçek tür ( *somut tür*) için yer tutucu olarak görev yapan bir veya daha fazla *tür parametresiyle* bildirilemez. Bu tür türler *Genel türler*olarak adlandırılır. Örneğin, <xref:System.Collections.Generic.List%601> .NET Framework türü, kuralına göre bir tür parametresine *sahiptir.* Türün bir örneğini oluşturduğunuzda, listenin içereceği nesnelerin türünü (örneğin, dize) belirtirsiniz:  
+Bir tür, istemci kodunun türün bir örneğini oluşturduğunda sağladığı gerçek tür ( *somut tür*) için yer tutucu olarak görev yapan bir veya daha fazla *tür parametresiyle* bildirilemez. Bu tür türler *Genel türler*olarak adlandırılır. Örneğin .NET Framework tür <xref:System.Collections.Generic.List%601>, kuralına göre bir tür parametresine sahiptir ve *t*adı verilir. Türün bir örneğini oluşturduğunuzda, listenin içereceği nesnelerin türünü (örneğin, dize) belirtirsiniz:  
   
 [!code-csharp[Generic types](../../samples/snippets/csharp/concepts/basic-types/generic-type.cs)]
   
-Tür parametresinin kullanımı, her öğeyi [nesneye](language-reference/keywords/object.md)dönüştürmek zorunda kalmadan her türlü öğe türünü tutmak için aynı sınıfı yeniden kullanmayı mümkün kılar. Derleyici, koleksiyon öğelerinin belirli türünü bildiğinden ve derleme zamanında bir hata tetikleyebildiğinden, genel koleksiyon sınıfları *kesin türü belirtilmiş koleksiyonlar* olarak adlandırılır ve örneğin, bu durumda `strings` nesnesine bir tamsayı eklemeye çalışırsanız önceki örnek. Daha fazla bilgi için bkz. [Genel türler](programming-guide/generics/index.md).
+Tür parametresinin kullanımı, her öğeyi [nesneye](language-reference/keywords/object.md)dönüştürmek zorunda kalmadan her türlü öğe türünü tutmak için aynı sınıfı yeniden kullanmayı mümkün kılar. Derleyici, koleksiyon öğelerinin belirli türünü bildiğinden ve derleme zamanında bir hata tetikleyebildiğinden, genel koleksiyon sınıfları *kesin türü belirtilmiş koleksiyonlar* olarak adlandırılır. `strings` Örneğin, önceki örnek. Daha fazla bilgi için bkz. [Genel türler](programming-guide/generics/index.md).
 
 ## <a name="implicit-types-anonymous-types-and-tuple-types"></a>Örtülü türler, anonim türler ve demet türleri
 
@@ -79,7 +80,7 @@ Bir yöntemden birden fazla değer döndürmek, yaygın bir yöntemdir. Tek bir 
 
 .NET Framework sistem hakkında iki temel noktayı anlamak önemlidir:  
   
-- Devralma ilkesini destekler. Türler, *temel türler*olarak adlandırılan diğer türlerden türetilebilir. Türetilmiş tür, yöntemleri, özellikleri ve temel türün diğer üyelerini devralır (bazı kısıtlamalarla). Temel tür başka bir türden türetebilir, bu durumda türetilmiş tür, devralma hiyerarşisindeki her iki temel türün üyelerini devralır. @No__t-0 (C# anahtar sözcük: `int`) gibi yerleşik sayısal türler dahil olmak üzere tüm türler, sonunda <xref:System.Object> olan tek bir temel türden türetilir (C# anahtar sözcük: `object`). Bu Birleşik tür hiyerarşisine [ortak tür sistemi](../standard/common-type-system.md) (Cts) denir. ' De C#devralma hakkında daha fazla bilgi için bkz. [Devralma](programming-guide/classes-and-structs/inheritance.md).  
+- Devralma ilkesini destekler. Türler, *temel türler*olarak adlandırılan diğer türlerden türetilebilir. Türetilmiş tür, yöntemleri, özellikleri ve temel türün diğer üyelerini devralır (bazı kısıtlamalarla). Temel tür başka bir türden türetebilir, bu durumda türetilmiş tür, devralma hiyerarşisindeki her iki temel türün üyelerini devralır. <xref:System.Int32> (C# anahtar sözcük:`int`) gibi yerleşik sayısal türler dahil olmak üzere tüm türler, sonunda<xref:System.Object>(C# anahtar sözcük:`object`) olan tek bir temel türden türetilir. Bu Birleşik tür hiyerarşisine [ortak tür sistemi](../standard/common-type-system.md) (Cts) denir. ' De C#devralma hakkında daha fazla bilgi için bkz. [Devralma](programming-guide/classes-and-structs/inheritance.md).  
   
 - CTS içindeki her tür, bir *değer türü* veya bir *başvuru türü*olarak tanımlanır. Bu, .NET Framework sınıf kitaplığındaki tüm özel türleri ve ayrıca kendi Kullanıcı tanımlı türlerinizi içerir. [Struct](language-reference/keywords/struct.md) anahtar sözcüğünü kullanarak tanımladığınız türler değer türleridir; Tüm yerleşik sayısal türler **yapılar**' dur. Değer türleri hakkında daha fazla bilgi için bkz. [yapılar](structs.md). [Sınıf](language-reference/keywords/class.md) anahtar sözcüğünü kullanarak tanımladığınız türler başvuru türleridir. Başvuru türleri hakkında daha fazla bilgi için bkz. [sınıflar](classes.md). Başvuru türleri ve değer türlerinde farklı derleme zamanı kuralları ve farklı çalışma zamanı davranışları vardır.
 

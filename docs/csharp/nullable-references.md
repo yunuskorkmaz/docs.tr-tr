@@ -1,13 +1,14 @@
 ---
 title: Boş değer atanabilir başvuru türleri
 description: Bu makalede, 8,0 ' C# ye eklenen null yapılabilir başvuru türlerine genel bir bakış sunulmaktadır. Yeni ve mevcut projeler için özelliği, null başvuru özel durumlarına karşı nasıl güvenlik sağladığını öğreneceksiniz.
+ms.technology: csharp-null-safety
 ms.date: 02/19/2019
-ms.openlocfilehash: 2c2148b3ae50ce6c00e523390ea02686d9106b8b
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: e20ea6efa389ba1aa0d8432a408c0b2a06a61c30
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72846754"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039776"
 ---
 # <a name="nullable-reference-types"></a>Boş değer atanabilir başvuru türleri
 
@@ -66,6 +67,12 @@ Null yapılabilir bağlamlar, derleyicinin başvuru türü değişkenlerini nas�
   - Bir başvuru türü değişkenleri, örneğin dizesi null değer atanamaz. Tüm null değer alabilirlik uyarıları devre dışı bırakıldı.
 - `disable`: Nullable ek açıklama bağlamı **devre dışı**. Null yapılabilir uyarı bağlamı **devre dışı**.
   - Başvuru türündeki değişkenler, daha önceki sürümlerinde olduğu gibi, zorunluluvou 'lardır C#. Tüm null değer alabilirlik uyarıları devre dışı bırakıldı.
+
+**Örnek**:
+
+```xml
+<Nullable>enable</Nullable>
+```
 
 Ayrıca, aynı bağlamlarını projenizde her yerde ayarlamak için yönergeleri de kullanabilirsiniz:
 

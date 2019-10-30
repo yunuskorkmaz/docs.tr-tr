@@ -11,16 +11,16 @@ helpviewer_keywords:
 ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: abfa42be4b8c759da3fb34a2204058143e39689c
-ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.openlocfilehash: fd2558d854986d3dc541a9adf3c15abd553ce2ea
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71956664"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039563"
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>Nasıl yapılır: hangi .NET Framework sürümlerinin yüklendiğini belirleme
 
-Kullanıcılar bilgisayarlarına .NET Framework birden çok sürümünü [yükleyebilir](https://docs.microsoft.com/dotnet/framework/install) ve çalıştırabilir. Uygulamanızı geliştirirken veya dağıtırken, kullanıcının bilgisayarında hangi .NET Framework sürümlerinin yüklü olduğunu bilmeniz gerekebilir.
+Kullanıcılar bilgisayarlarına .NET Framework birden çok sürümünü [yükleyebilir](../install/index.md) ve çalıştırabilir. Uygulamanızı geliştirirken veya dağıtırken, kullanıcının bilgisayarında hangi .NET Framework sürümlerinin yüklü olduğunu bilmeniz gerekebilir.
 
 .NET Framework, sürümü ayrı olan iki ana bileşenden oluşur:
 
@@ -34,7 +34,7 @@ Kullanıcılar bilgisayarlarına .NET Framework birden çok sürümünü [yükle
 > .NET Framework sürümü ile CLR sürümü arasında bir fark vardır:
 >
 > - .NET Framework sürümü, .NET Framework sınıf kitaplığını oluşturan derlemeler kümesini temel alır. Örneğin, .NET Framework sürümler 4,5, 4.6.1 ve 4.7.2 ' i içerir.
->- CLR sürümü .NET Framework uygulamalarının çalıştırıldığı çalışma zamanına dayalıdır. Tek bir CLR sürümü genellikle birden çok .NET Framework sürümü destekler. Örneğin, CLR sürüm 4.0.30319. *xxxxx* , 42000 .NET Framework sürümlerini destekler; burada *xxxxx* , ' den küçük ve CLR sürüm 4.0.30319.42000 .NET Framework 4,6 ' den başlayarak .NET Framework sürümlerini destekler.
+> - CLR sürümü .NET Framework uygulamalarının çalıştırıldığı çalışma zamanına dayalıdır. Tek bir CLR sürümü genellikle birden çok .NET Framework sürümü destekler. Örneğin, CLR sürüm 4.0.30319. *xxxxx* , 42000 .NET Framework sürümlerini destekler; burada *xxxxx* , ' den küçük ve CLR sürüm 4.0.30319.42000 .NET Framework 4,6 ' den başlayarak .NET Framework sürümlerini destekler.
 >
 > Sürümler hakkında daha fazla bilgi için bkz. [.NET Framework sürümler ve bağımlılıklar](versions-and-dependencies.md).
 
@@ -72,7 +72,7 @@ Bir bilgisayarda yüklü olan CLR sürümlerinin bir listesini almak için bir a
 
 3. **Yayın**ADLı bir DWORD girişini denetleyin. Varsa, .NET Framework 4,5 veya sonraki sürümlerin yüklü olması gerekir. Değeri, .NET Framework belirli bir sürümüne karşılık gelen bir sürüm anahtarıdır. Aşağıdaki şekilde, örneğin, **Sürüm** girişinin değeri *378389*' dir. Bu, .NET Framework 4,5 ' in sürüm anahtarıdır.
 
-     (./media/clr-installdir.png ".NET Framework 4,5 için .NET Framework 4,5 kayıt defteri girdisi") ![kayıt defteri girişi]
+     ![.NET Framework 4,5 için kayıt defteri girişi](./media/clr-installdir.png ".NET Framework 4,5 için kayıt defteri girişi")
 
 Aşağıdaki tabloda, .NET Framework 4,5 ve üzeri sürümler için tek tek işletim sistemlerindeki **Sürüm** DWORD değeri listelenmektedir.
 
@@ -91,7 +91,7 @@ Aşağıdaki tabloda, .NET Framework 4,5 ve üzeri sürümler için tek tek işl
 |.NET Framework 4,7|Windows 10 Creators Update üzerinde: 460798<br />Diğer tüm Windows işletim sistemlerinde (diğer Windows 10 işletim sistemleri dahil): 460805|
 |.NET Framework 4.7.1|Windows 10 Fall Creators Update ve Windows Server, sürüm 1709:461308<br/>Diğer tüm Windows işletim sistemlerinde (diğer Windows 10 işletim sistemleri dahil): 461310|
 |.NET Framework 4.7.2|Windows 10 Nisan 2018 güncelleştirmesi ve Windows Server, sürüm 1803:461808<br/>Windows 10 Nisan 2018 güncelleştirmesi ve Windows Server, sürüm 1803 dışındaki tüm Windows işletim sistemlerinde: 461814|
-|.NET Framework 4,8|Windows 10 Mayıs 2019 güncelleştirmesi: 528040<br/>Tüm diğer Windows işletim sistemlerinde (diğer Windows 10 işletim sistemleri dahil): 528049|
+|.NET Framework 4,8|Windows 10 Mayıs 2019 güncelleştirmesi ve Windows 10 Kasım 2019 güncelleştirmesi: 528040<br/>Diğer tüm Windows işletim sistemlerinde (diğer Windows 10 işletim sistemleri dahil): 528049|
 
 Bu değerleri şu şekilde kullanabilirsiniz:
 
@@ -128,7 +128,7 @@ Bu örnek sürüm denetimi için önerilen yöntemi izler:
 
 - **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full** alt anahtarının **yayın** girişinin değerini denetlemek için PowerShell komutlarını kullanın.
 
-Aşağıdaki örnekler, .NET Framework 4.6.2 veya sonraki bir sürümün yüklenip yüklenmediğini anlamak için **yayın** girişinin değerini denetler. Bu kod, yüklenmişse `True` döndürür ve aksi takdirde `False`.
+Aşağıdaki örnekler, .NET Framework 4.6.2 veya sonraki bir sürümün yüklenip yüklenmediğini anlamak için **yayın** girişinin değerini denetler. Bu kod, yüklenmişse `True` döndürür ve yoksa `False`.
 
 ```PowerShell
 (Get-ItemProperty "HKLM:SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full").Release -ge 394802
@@ -178,7 +178,7 @@ Aşağıdaki örnek, yüklü .NET Framework 1&#8211;4 sürümünü bulur:
 
 Clr [Sürüm aracı 'nı (Clrver. exe)](../tools/clrver-exe-clr-version-tool.md) kullanarak bir bılgısayarda hangi CLR sürümlerinin yüklü olduğunu belirleme:
 
-- [Visual Studio için Geliştirici Komut İstemi](https://docs.microsoft.com/dotnet/framework/tools/developer-command-prompt-for-vs)`clrver` girin.
+- [Visual Studio için Geliştirici Komut İstemi](../tools/developer-command-prompt-for-vs.md)`clrver`girin.
 
     Örnek çıktı:
 
@@ -195,21 +195,21 @@ Clr [Sürüm aracı 'nı (Clrver. exe)](../tools/clrver-exe-clr-version-tool.md)
 > [!IMPORTANT]
 > .NET Framework 4,5 ve sonraki sürümlerinde, CLR sürümünü algılamak için <xref:System.Environment.Version%2A?displayProperty=nameWithType> özelliğini kullanmayın. Bunun yerine, kayıt defterini, [kodla .NET Framework sürümler 4,5 ve sonraki kısımlarında](#net_d)açıklandığı gibi sorgulayın.
 
-1. @No__t-1 nesnesini almak için <xref:System.Environment.Version?displayProperty=nameWithType> özelliğini sorgulayın.
+1. <xref:System.Version> nesnesini almak için <xref:System.Environment.Version?displayProperty=nameWithType> özelliğini sorgulayın.
 
     Döndürülen `System.Version` nesnesi şu anda kodu yürüten çalışma zamanının sürümünü tanımlar. Derleme sürümlerini veya çalışma zamanının bilgisayarda yüklü olabilecek diğer sürümlerini döndürmez.
 
     .NET Framework sürümleri 4, 4,5, 4.5.1 ve 4.5.2 için, döndürülen <xref:System.Version> nesnesinin dize temsili 4.0.30319 biçimindedir. *xxxxx*, *xxxxx* 42000 ' den küçük. .NET Framework 4,6 ve sonraki sürümlerinde, 4.0.30319.42000 biçiminde olur.
 
-2. @No__t-0 nesnesine sahip olduktan sonra, bunu aşağıdaki gibi sorgulayın:
+2. `Version` nesnesine sahip olduktan sonra aşağıdaki gibi sorgulayın:
 
    - Ana yayın tanımlayıcısı için (örneğin, sürüm 4,0 için *4* ) <xref:System.Version.Major%2A?displayProperty=nameWithType> özelliğini kullanın.
 
    - Küçük yayın tanımlayıcısı için (örneğin, sürüm 4,0 için *0* ) <xref:System.Version.Minor%2A?displayProperty=nameWithType> özelliğini kullanın.
 
-   - Tüm sürüm dizesi için (örneğin, *4.0.30319.18010*) <xref:System.Version.ToString%2A?displayProperty=nameWithType> metodunu kullanın. Bu yöntem, kodu yürüten çalışma zamanının sürümünü yansıtan tek bir değer döndürür. Bu, bilgisayarda yüklü olabilecek derleme sürümlerini veya diğer çalışma zamanı sürümlerini döndürmez.
+   - Tüm sürüm dizesi için (örneğin, *4.0.30319.18010*) <xref:System.Version.ToString%2A?displayProperty=nameWithType> yöntemini kullanın. Bu yöntem, kodu yürüten çalışma zamanının sürümünü yansıtan tek bir değer döndürür. Bu, bilgisayarda yüklü olabilecek derleme sürümlerini veya diğer çalışma zamanı sürümlerini döndürmez.
 
-Aşağıdaki örnek, CLR sürüm bilgilerini almak için <xref:System.Environment.Version%2A?displayProperty=nameWithType> özelliğini kullanır:
+Aşağıdaki örnek CLR sürüm bilgilerini almak için <xref:System.Environment.Version%2A?displayProperty=nameWithType> özelliğini kullanır:
 
 [!code-csharp[ListVersions](../../../samples/snippets/csharp/framework/migration-guide/versions-installed2.cs)]
 [!code-vb[ListVersions](../../../samples/snippets/visualbasic/framework/migration-guide/versions-installed2.vb)]

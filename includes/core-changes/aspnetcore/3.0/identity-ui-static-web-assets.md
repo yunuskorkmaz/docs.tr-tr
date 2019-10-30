@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 8d7942ef6c36c01a9ae7ae2a9739f26dfcda5813
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: c5e4b5619394f99a419fe48aee190ad741ea8c0d
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72394139"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73041665"
 ---
 ### <a name="identity-ui-uses-static-web-assets-feature"></a>Kimlik: UI statik Web varlıkları özelliğini kullanır
 
@@ -23,11 +23,11 @@ Statik Web varlıkları özelliğini benimseme kimlik UI 'sinin sonucu olarak:
 
 #### <a name="old-behavior"></a>Eski davranış
 
-Kimlik Kullanıcı arabirimi için varsayılan UI çerçevesi **önyükleme 3**idi. UI çerçevesi, `Startup.ConfigureServices` ' deki `AddIdentityUI` yöntem çağrısına bir parametre kullanılarak yapılandırılabilir.
+Kimlik Kullanıcı arabirimi için varsayılan UI çerçevesi **önyükleme 3**idi. UI çerçevesi, `Startup.ConfigureServices``AddDefaultUI` yöntemi çağrısına bir parametre kullanılarak yapılandırılabilir.
 
 #### <a name="new-behavior"></a>Yeni davranış
 
-Kimlik Kullanıcı arabirimi için varsayılan UI çerçevesi **önyükleme 4**' dir. Kullanıcı arabirimi çerçevesinin, `AddIdentityUI` Yöntem çağrısında değil, proje dosyanızda yapılandırılması gerekir.
+Kimlik Kullanıcı arabirimi için varsayılan UI çerçevesi **önyükleme 4**' dir. Kullanıcı arabirimi çerçevesi, `AddDefaultUI` yöntemi çağrısı yerine proje dosyanızda yapılandırılmalıdır.
 
 #### <a name="reason-for-change"></a>Değişiklik nedeni
 
@@ -47,12 +47,12 @@ ASP.NET Core
 
 #### <a name="affected-apis"></a>Etkilenen API’ler
 
-<xref:Microsoft.AspNetCore.Identity.IdentityBuilderUIExtensions.AddDefaultUI(Microsoft.AspNetCore.Identity.IdentityBuilder)?displayProperty=nameWithType>
+<xref:Microsoft.AspNetCore.Identity.IdentityBuilderUIExtensions.AddDefaultUI(Microsoft.AspNetCore.Identity.IdentityBuilder,Microsoft.AspNetCore.Identity.UI.UIFramework)?displayProperty=nameWithType>
 
 <!-- 
 
 #### Affected APIs
 
-`M:Microsoft.AspNetCore.Identity.IdentityBuilderUIExtensions.AddDefaultUI(Microsoft.AspNetCore.Identity.IdentityBuilder)`
+`M:Microsoft.AspNetCore.Identity.IdentityBuilderUIExtensions.AddDefaultUI(Microsoft.AspNetCore.Identity.IdentityBuilder,Microsoft.AspNetCore.Identity.UI.UIFramework)`
 
 -->

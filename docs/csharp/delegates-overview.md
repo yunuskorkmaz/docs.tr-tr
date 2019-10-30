@@ -1,47 +1,48 @@
 ---
 title: Temsilcilere Giriş
-description: Temel kavramları tanıtır ve temsilciler için dil tasarım hedefleri ele alınmaktadır genel bakış bölümüne temsilciler hakkında bilgi edinin.
+description: Bu genel bakış konusunun, temel kavramları tanıtan ve temsilciler için dil tasarımı hedeflerini tartışarak Temsilciler hakkında bilgi edinin.
 ms.date: 06/20/2016
+ms.technology: csharp-fundamentals
 ms.assetid: 59b61d77-84e5-457b-8da5-fb5f24ca6ed6
-ms.openlocfilehash: 43cdf9345f0bae9d5c4d0e6a31d80bc269c37fec
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: deff297ccce6cd14a7cd21c49638a9c6030a9996
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65879026"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73037410"
 ---
 # <a name="introduction-to-delegates"></a>Temsilcilere Giriş
 
-Temsilciler sağlayan bir *geç bağlama* .NET mekanizması. Geç bağlama burada çağıran uygulayan algoritma parçası en az bir yöntemi de sağlayan bir algoritma oluşturmak anlamına gelir.
+Temsilciler, .NET ' te bir *geç bağlama* mekanizması sağlar. Geç bağlama, çağıranın, algoritmanın bir kısmını uygulayan en az bir yöntem sağladığı bir algoritma oluşturduğunuz anlamına gelir.
 
-Örneğin, bir yıldız astronomi uygulamada listesini sıralama göz önünde bulundurun.
-Bu yıldız dünya ya da büyüklük yıldız ya da kendi algılanan parlaklık kendi uzaklık olarak sıralamak tercih edebilirsiniz.
+Örneğin, bir astronomi uygulamasındaki yıldızın bir listesini sıralamayı düşünün.
+Bu yıldızları Dünya uzaklığına veya yıldızın büyüklüğüne göre ya da algılanan parlaklığını göre sıralamayı tercih edebilirsiniz.
 
-Bu durumlarda, Sort() yöntemi temelde aynı şeyi yapar: bazı karşılaştırma üzerine dayalı listesindeki öğeleri düzenler. İki yıldız karşılaştıran kod her sıralama sıralamalarının için farklıdır.
+Tüm bu durumlarda, Sort () yöntemi temelde aynı şeyi yapar: listedeki öğeleri, bazı karşılaştırmaya göre düzenler. İki yıldızı karşılaştıran kod, sıralama sıralarında her biri için farklıdır.
 
-Bu çözüm türlerini yazılımda bir yarım yüzyıl için kullanılır.
-C# Birinci sınıf dil desteği ve tür güvenliği kavramı çevresinde dil temsilci kavramı sağlar.
+Bu tür çözümler yazılımda yarı bir yüzyıl için kullanılmıştır.
+C# Dil temsilcisi kavramı ilk sınıf dil desteğini sağlar ve kavram etrafında güvenlik yazın.
 
-Bu seride anlatıldığı gibi C# algoritmalar için bu tür kullanımı uyumlu ve dilinden yararlanır ve derleyicinin sağlamak türleri eşleştirmek için bağımsız değişkenler ve dönüş türleri gibi kodları.
+Bu serinin ilerleyen kısımlarında göreceğiniz gibi, bu gibi algoritmalar C# için yazdığınız kod tür güvenlidir ve türlerin bağımsız değişkenlerle ve dönüş türleriyle eşleşmesini sağlamak için dilin ve derleyicinin yararlanır.
 
-## <a name="language-design-goals-for-delegates"></a>Temsilciler için dil tasarım hedefleri
+## <a name="language-design-goals-for-delegates"></a>Temsilciler için dil tasarımı hedefleri
 
-Dil tasarımcıları sonunda temsilciler dönüştü özelliği için çeşitli hedefleri numaralandırılır.
+Dil tasarımcıları, son olarak temsilci haline gelen özellik için birkaç amaç numaralandırmış.
 
-Takım tüm geç bağlama algoritmaları için kullanılabilecek bir ortak dil yapısı istiyordu. Bir kavram ve aynı bu kavramı arasında birçok farklı yazılım sorunlarını kullanmak geliştiricilerin sağlar.
+Ekip, herhangi bir geç bağlama algoritması için kullanılabilecek ortak bir dil yapısı istedi. Bu, geliştiricilerin tek bir kavram öğrenmesine ve aynı kavramı birçok farklı yazılım sorunu üzerinde kullanmasına olanak sağlar.
 
-İkinci olarak, hem tek ve çok noktaya yayın yöntem çağrıları desteklemek takım istiyordu. (Birden çok yöntem çağrılarını birlikte zincire temsilciler çok noktaya yayın temsilcileri içindir. Örnekler göreceksiniz [bu serideki sonraki](delegate-class.md).) 
+İkincisi, takım hem tek hem çok noktaya yayın yöntemi çağrılarını desteklemek istedi. (Çok noktaya yayın temsilcileri, birden çok yöntem çağrısı zincirlenen temsilcidir. [Bu serinin ilerleyen kısımlarında](delegate-class.md)örnekleri görürsünüz.) 
 
-Takım istediği geliştiriciler tümünden beklediğiniz aynı tür güvenliği desteklemek için temsilciler C# oluşturur. 
+Ekip, geliştiricilerin tüm C# yapılar için beklediği tür güvenliğini desteklemek için temsilciler istedi. 
 
-Son olarak, takım temsilcileri ya da geç herhangi bir bağlama algoritma çok yararlı olduğu bir olay deseni belirli bir düzeni olduğunu tanınır. Temsilciler için kod temeli için .NET olay deseni sağlayabilir takım sağlamaktı.
+Son olarak, takım bir olay deseninin temsilcilerin veya herhangi bir geç bağlama algoritmasının çok faydalı olduğu belirli bir model olduğunu kabul eder. Ekip, temsilcilerle ilgili kodun .NET olay deseninin temelini sağlayabildiğinden emin olmak istedi.
 
-Tüm iş sonucu temsilci ve olay desteği olan C# ve .NET. Bu bölümdeki diğer makaleleri dil özellikleri, kitaplık desteği ve temsilciler ile çalışırken, kullanılan ortak deyimleri ele alınacaktır.
+Bu çalışmanın sonucu, C# ve .net sürümündeki temsilci ve olay desteiydi. Bu bölümdeki diğer makaleler dil özelliklerini, kitaplık desteğini ve temsilcilerle çalışırken kullanılan yaygın deyimleri kapsar.
 
-Hakkında bilgi edineceksiniz `delegate` anahtar sözcüğü ve hangi kod oluşturur. Özellikleri hakkında bilgi edineceksiniz `System.Delegate` sınıfı ve bu özelliklerden nasıl kullanılır. Tür güvenli temsilci oluşturmak nasıl ve temsilciler aracılığıyla çağrılan yöntemlerden oluşturulacağını öğreneceksiniz. Lambda ifadeleri kullanarak, temsilciler ve olaylar ile çalışma konusunda da öğreneceksiniz. Burada temsilciler biri yapı taşlarını LINQ için haline görürsünüz. Temsilciler .NET olay deseni için temel şeklini ve nasıl farklı olduğunu öğreneceksiniz.
+`delegate` anahtar sözcüğünü ve ürettiği kodu öğrenirsiniz. `System.Delegate` sınıftaki özellikler ve bu özelliklerin nasıl kullanıldığı hakkında bilgi edineceksiniz. Tür güvenli temsilciler oluşturmayı ve temsilciler aracılığıyla çağrılabilecek Yöntemler oluşturmayı öğreneceksiniz. Ayrıca lambda ifadeleri kullanarak temsilcilerle ve olaylarla nasıl çalışacağınızı öğreneceksiniz. Temsilcilerin LINQ için yapı taşlarından birine nerede geldiğini görürsünüz. Temsilcilerin .NET olay deseninin temelini ve bunların nasıl farklı olduğunu öğrenirsiniz.
 
-Genel olarak, temsilciler .NET programlama ve framework API'ları ile çalışma bütünleyici şeklini görürsünüz.
+Genel olarak, temsilcilerin .NET 'teki programlama kapsamında nasıl bir parçası olduğunu ve Framework API 'Leriyle çalıştığını göreceksiniz.
 
-Haydi başlayalım.
+Haydi başlayın.
 
 [Next](delegate-class.md)

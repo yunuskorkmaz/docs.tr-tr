@@ -7,12 +7,12 @@ helpviewer_keywords:
 - GAC (global assembly cache), publisher policy assembly
 - global assembly cache, publisher policy assembly
 ms.assetid: 8046bc5d-2fa9-4277-8a5e-6dcc96c281d9
-ms.openlocfilehash: 608918828bf72369a1bd48e2391e2423078e9df0
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: 346671d4febd5f3999f1f4fbf2fe4b7e475ae5fa
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72846830"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040186"
 ---
 # <a name="how-to-create-a-publisher-policy"></a>Nasıl yapılır: Yayımcı İlkesi Oluşturma
 
@@ -55,26 +55,28 @@ Yayımcı ilke derlemesini oluşturmak için [derleme Bağlayıcısı (al. exe)]
 
 Komut istemine aşağıdaki komutu yazın:
 
-**Al/Link:** *publisherPolicyFile* **/Out:** *publisherpolicyassemblyfile* **/keyfile:** *keyPairFile* **/Platform:** *ProcessorArchitecture*
+```console
+al /link:publisherPolicyFile /out:publisherPolicyAssemblyFile /keyfile:keyPairFile /platform:processorArchitecture
+```
 
 Bu komutta:
 
-- *PublisherPolicyFile* bağımsız değişkeni, yayımcı ilkesi dosyasının adıdır.
+- `publisherPolicyFile` bağımsız değişkeni yayımcı ilkesi dosyasının adıdır.
 
-- *Publisherpolicyassemblyfile* bağımsız değişkeni, bu komutun sonucu olan yayımcı ilkesi derlemesinin adıdır. Derleme dosyası adı şu biçimde olmalıdır:
+- `publisherPolicyAssemblyFile` bağımsız değişkeni, bu komutun sonucu olan yayımcı ilkesi derlemesinin adıdır. Derleme dosyası adı şu biçimde olmalıdır:
 
-  **ilkesinin.** *Majornumber* **.** *minorNumber* **.** *MainAssemblyName* **. dll**
+  ' Policy. majorNumber. minorNumber. mainAssemblyName. dll '
 
-- *KeyPairFile* bağımsız değişkeni, anahtar çiftini içeren dosyanın adıdır. Derleme ve Yayımcı ilke derlemesini aynı anahtar çiftiyle imzalamanız gerekir.
+- `keyPairFile` bağımsız değişkeni, anahtar çiftini içeren dosyanın adıdır. Derleme ve Yayımcı ilke derlemesini aynı anahtar çiftiyle imzalamanız gerekir.
 
-- *ProcessorArchitecture* bağımsız değişkeni, işlemciye özgü bir derleme tarafından hedeflenen platformu tanımlar.
+- `processorArchitecture` bağımsız değişkeni, işlemciye özgü bir derleme tarafından hedeflenen platformu tanımlar.
 
   > [!NOTE]
   > Belirli bir işlemci mimarisini hedefleme özelliği .NET Framework 2,0 ' den başlayarak kullanılabilir.
 
 Belirli bir işlemci mimarisini hedefleme özelliği .NET Framework 2,0 ' den başlayarak kullanılabilir. Aşağıdaki komut `pub.config`adlı bir yayımcı ilke dosyasından `policy.1.0.myAssembly` adlı bir yayımcı ilke derlemesi oluşturur, `sgKey.snk` dosyasında anahtar çiftini kullanarak derlemeye tanımlayıcı bir ad atar ve derlemenin x86 işlemcisini hedeflediğini belirtir mimarisini.
 
-```
+```console
 al /link:pub.config /out:policy.1.0.myAssembly.dll /keyfile:sgKey.snk /platform:x86
 ```
 
@@ -92,11 +94,13 @@ Yayımcı ilke derlemesini genel bütünleştirilmiş kod önbelleğine eklemek 
 
 Komut istemine aşağıdaki komutu yazın:
 
-**Gacutil/I**  *publisherpolicyassemblyfile*
+```console
+gacutil /i publisherPolicyAssemblyFile
+```
 
 Aşağıdaki komut, genel derleme önbelleğine `policy.1.0.myAssembly.dll` ekler.
 
-```
+```console
 gacutil /i policy.1.0.myAssembly.dll
 ```
 

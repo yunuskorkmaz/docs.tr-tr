@@ -29,16 +29,16 @@ helpviewer_keywords:
 - ^ operator [C#]
 - bitwise logical OR operator [C#]
 - '| operator [C#]'
-ms.openlocfilehash: 0a251e8d04f31a736ee6acbf4b8e913cfb8ca6df
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 9336ff57722e575d3ecfdb3db2b99bf7bbb6b433
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72771716"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039110"
 ---
 # <a name="bitwise-and-shift-operators-c-reference"></a>Bit düzeyinde ve kaydırma işleçleriC# (başvuru)
 
-Aşağıdaki işleçler, [integral türlerinin](../builtin-types/integral-numeric-types.md)işlenenleri ile bit düzeyinde veya SHIFT işlemleri gerçekleştirir:
+Aşağıdaki işleçler [integral sayısal türlerin](../builtin-types/integral-numeric-types.md) veya [char](../keywords/char.md) türünün işlenenleri ile bit düzeyinde veya SHIFT işlemleri gerçekleştirir:
 
 - Birli [`~` (bit düzeyinde tamamlama)](#bitwise-complement-operator-) işleci
 - İkili [`<<` (sol SHIFT)](#left-shift-operator-) ve [`>>` (Sağ Shift)](#right-shift-operator-) kaydırma işleçleri
@@ -46,13 +46,13 @@ Aşağıdaki işleçler, [integral türlerinin](../builtin-types/integral-numeri
 
 Bu işleçler `int`, `uint`, `long` ve `ulong` türleri için tanımlanmıştır. Her iki işlenen de diğer integral türlerindiğinde (`sbyte`, `byte`, `short`, `ushort` veya `char`), değerleri bir işlemin sonuç türü olan `int` türüne dönüştürülür. İşlenenler farklı integral türlerindiğinde, değerleri, en yakın integral türüne dönüştürülür. Daha fazla bilgi için, [ C# dil belirtiminin](~/_csharplang/spec/introduction.md) [sayısal yükseltmeler](~/_csharplang/spec/expressions.md#numeric-promotions) bölümüne bakın.
 
-@No__t_0, `|` ve `^` işleçleri Ayrıca `bool` türünün işlenenleri için de tanımlanmıştır. Daha fazla bilgi için bkz. [Boolean mantıksal işleçler](boolean-logical-operators.md).
+`&`, `|`ve `^` işleçleri Ayrıca `bool` türünün işlenenleri için de tanımlanmıştır. Daha fazla bilgi için bkz. [Boolean mantıksal işleçler](boolean-logical-operators.md).
 
 Bit düzeyinde ve kaydırma işlemleri hiçbir şekilde taşmaya neden olmaz ve [denetlenen ve işaretlenmeyen](../keywords/checked-and-unchecked.md) bağlamlarda aynı sonuçları üretir.
 
 ## <a name="bitwise-complement-operator-"></a>Bit düzeyinde tamamlama işleci ~
 
-@No__t_0 işleci, her biti ters çevirerek işleneni bir bit düzeyinde tamamlayıcı üretir:
+`~` işleci, her biti ters çevirerek işleneni bir bit düzeyinde tamamlayıcı üretir:
 
 [!code-csharp-interactive[bitwise NOT](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#BitwiseComplement)]
 
@@ -60,7 +60,7 @@ Sonlandırıcıları bildirmek için `~` sembolünü de kullanabilirsiniz. Daha 
 
 ## <a name="left-shift-operator-"></a>Sola kaydırma işleci \< \<
 
-@No__t_0 işleci sol taraftaki işlenenini sağ işleneni tarafından tanımlanan bit sayısına göre sola kaydırır.
+`<<` işleci sol taraftaki işlenenini sağ işleneni tarafından tanımlanan bit sayısına göre sola kaydırır.
 
 Aşağıdaki örnekte gösterildiği gibi, sol SHIFT işlemi, sonuç türü aralığının dışındaki yüksek sıralı bitleri atar ve düşük sıralı boş bit konumlarını sıfıra ayarlar:
 
@@ -70,11 +70,11 @@ SHIFT işleçleri yalnızca `int`, `uint`, `long` ve `ulong` türleri için tan�
 
 [!code-csharp-interactive[left shift with promotion](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#LeftShiftPromoted)]
 
-@No__t_0 işlecinin sağ işleneninin kaydırma sayısını tanımladığı hakkında daha fazla bilgi için [SHIFT Operators bölümünün kaydırma sayısına](#shift-count-of-the-shift-operators) bakın.
+`<<` işlecinin sağ işleneninin kaydırma sayısını tanımladığı hakkında daha fazla bilgi için [SHIFT Operators bölümünün kaydırma sayısına](#shift-count-of-the-shift-operators) bakın.
 
 ## <a name="right-shift-operator-"></a>Sağa kaydırma işleci > >
 
-@No__t_0 işleci, sol işlenenin sağ işleneni tarafından tanımlanan bit sayısına göre sağa kayar.
+`>>` işleci, sol işlenenin sağ işleneni tarafından tanımlanan bit sayısına göre sağa kayar.
 
 Aşağıdaki örnekte gösterildiği gibi, doğru kaydırma işlemi düşük sıralı bitleri atar:
 
@@ -82,39 +82,39 @@ Aşağıdaki örnekte gösterildiği gibi, doğru kaydırma işlemi düşük sı
 
 Yüksek sıralı boş bit konumları, sol taraftaki işlenenin türüne göre aşağıdaki gibi ayarlanır:
 
-- Sol işlenen [int](../builtin-types/integral-numeric-types.md) veya [Long](../builtin-types/integral-numeric-types.md)türünde ise, sağ SHIFT işleci bir *Aritmetik* kaydırma gerçekleştirir: sol işlenenin en önemli bit (işaret biti) değeri, yüksek sıralı boş bit konumlarına yayılır. Diğer bir deyişle, sol işlenen negatif olmayan ve negatifse bir tane olarak ayarlandıysa, yüksek sıralı boş bit konumları sıfır olarak ayarlanır.
+- Sol işlenen `int` veya `long`türünde ise, sağ SHIFT işleci bir *Aritmetik* kaydırma gerçekleştirir: sol işlenenin en önemli bit (işaret biti) değeri, yüksek sıralı boş bit konumlarına yayılır. Diğer bir deyişle, sol işlenen negatif olmayan ve negatifse bir tane olarak ayarlandıysa, yüksek sıralı boş bit konumları sıfır olarak ayarlanır.
 
   [!code-csharp-interactive[arithmetic right shift](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#ArithmeticRightShift)]
 
-- Sol işlenen [uint](../builtin-types/integral-numeric-types.md) veya [ulong](../builtin-types/integral-numeric-types.md)türünde ise, sağ SHIFT işleci bir *mantıksal* kaydırma gerçekleştirir: yüksek sıralı boş bit konumları her zaman sıfır olarak ayarlanır.
+- Sol işlenen `uint` veya `ulong`türünde ise, sağ SHIFT işleci bir *mantıksal* kaydırma gerçekleştirir: yüksek sıralı boş bit konumları her zaman sıfır olarak ayarlanır.
 
   [!code-csharp-interactive[logical right shift](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#LogicalRightShift)]
 
-@No__t_0 işlecinin sağ işleneninin kaydırma sayısını tanımladığı hakkında daha fazla bilgi için [SHIFT Operators bölümünün kaydırma sayısına](#shift-count-of-the-shift-operators) bakın.
+`>>` işlecinin sağ işleneninin kaydırma sayısını tanımladığı hakkında daha fazla bilgi için [SHIFT Operators bölümünün kaydırma sayısına](#shift-count-of-the-shift-operators) bakın.
 
 ## <a name="logical-and-operator-"></a>Mantıksal AND işleci &amp;
 
-@No__t_0 işleci, işlenenlerinin bit düzeyinde mantıksal ve işlecini hesaplar:
+`&` işleci, işlenenlerinin bit düzeyinde mantıksal ve işlecini hesaplar:
 
 [!code-csharp-interactive[bitwise AND](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#BitwiseAnd)]
 
-@No__t_0 türünün işlenenleri için `&` işleci, işlenenlerinin [MANTıKSAL ve](boolean-logical-operators.md#logical-and-operator-) işlecini hesaplar. Birli `&` işleci [Adres işleçtir](pointer-related-operators.md#address-of-operator-).
+`bool` işlenenleri için `&` işleci, işlenenlerinin [MANTıKSAL ve](boolean-logical-operators.md#logical-and-operator-) işlecini hesaplar. Birli `&` işleci [Adres işleçtir](pointer-related-operators.md#address-of-operator-).
 
 ## <a name="logical-exclusive-or-operator-"></a>Mantıksal dışlamalı OR işleci ^
 
-@No__t_0 işleci, işlenenlerinin bit düzeyinde mantıksal XOR değeri olarak da bilinen bit düzeyinde mantıksal dışlamalı veya bir şekilde hesaplar:
+`^` işleci, işlenenlerinin bit düzeyinde mantıksal XOR değeri olarak da bilinen bit düzeyinde mantıksal dışlamalı veya bir şekilde hesaplar:
 
 [!code-csharp-interactive[bitwise XOR](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#BitwiseXor)]
 
-@No__t_0 türünün işlenenleri için `^` işleci, işlenenlerinin [dışlamalı veya](boolean-logical-operators.md#logical-exclusive-or-operator-) işlenenleri hesaplar.
+`bool` işlenenleri için `^` işleci, işlenenlerinin [mantıksal dışlamalı veya](boolean-logical-operators.md#logical-exclusive-or-operator-) bir listesini hesaplar.
 
 ## <a name="logical-or-operator-"></a>Mantıksal OR işleci |
 
-@No__t_0 işleci, işlenenlerinin bit düzeyinde mantıksal veya işlecini hesaplar:
+`|` işleci, işlenenlerinin bit düzeyinde mantıksal veya işlecini hesaplar:
 
 [!code-csharp-interactive[bitwise OR](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#BitwiseOr)]
 
-@No__t_0 türünün işlenenleri için `|` işleci, işlenenlerinin [MANTıKSAL veya](boolean-logical-operators.md#logical-or-operator-) işlecini hesaplar.
+`bool` işlenenleri için `|` işleci, işlenenlerinin [MANTıKSAL veya](boolean-logical-operators.md#logical-or-operator-) işlecini hesaplar.
 
 ## <a name="compound-assignment"></a>Bileşik atama
 
@@ -154,17 +154,17 @@ Aşağıdaki liste, en yüksek öncelikten en düşüğe başlayarak bit düzeyi
 
 [!code-csharp-interactive[operator precedence](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#Precedence)]
 
-Öncelik düzeyine göre sıralanan C# işleçlerin tüm listesi için bkz [ C# . işleçler](index.md).
+Öncelik düzeyine göre sıralanan C# işleçlerin tüm listesi için, [ C# işleçler](index.md) makalesinin [operatör önceliği](index.md#operator-precedence) bölümüne bakın.
 
 ## <a name="shift-count-of-the-shift-operators"></a>Kaydırma işleçlerinin kaydırma sayısı
 
-@No__t_0 ve `>>` kaydırma işleçleri için, sağ işlenen türü [int](../builtin-types/integral-numeric-types.md) olmalıdır veya `int` [önceden tanımlanmış örtük sayısal dönüştürmeye](../builtin-types/numeric-conversions.md#implicit-numeric-conversions) sahip bir tür olmalıdır.
+`<<` ve `>>`kaydırma işleçleri için sağ işlenen türü, `int`için [önceden tanımlanmış bir örtülü sayısal dönüştürmeye](../builtin-types/numeric-conversions.md#implicit-numeric-conversions) sahip `int` veya bir tür olmalıdır.
 
-@No__t_0 ve `x >> count` ifadelerinde, gerçek kaydırma sayısı `x` türüne aşağıdaki gibi bağlıdır:
+`x << count` ve `x >> count` ifadelerinde, gerçek kaydırma sayısı `x` türüne aşağıdaki gibi bağlıdır:
 
-- @No__t_0 türü [int](../builtin-types/integral-numeric-types.md) veya [uint](../builtin-types/integral-numeric-types.md)ise, kaydırma sayısı sağ işlenenin düşük sıralı *beş* biti tarafından tanımlanır. Diğer bir deyişle, kaydırma sayısı `count & 0x1F` (veya `count & 0b_1_1111`) olarak hesaplanır.
+- `x` türü `int` veya `uint`ise, kaydırma sayısı sağ işlenenin düşük sıralı *beş* biti tarafından tanımlanır. Diğer bir deyişle, kaydırma sayısı `count & 0x1F` (veya `count & 0b_1_1111`) olarak hesaplanır.
 
-- @No__t_0 türü [Long](../builtin-types/integral-numeric-types.md) veya [ulong](../builtin-types/integral-numeric-types.md)ise, kaydırma sayısı sağ taraftaki işlenenin alt-sırası *altı* biti tarafından tanımlanır. Diğer bir deyişle, kaydırma sayısı `count & 0x3F` (veya `count & 0b_11_1111`) olarak hesaplanır.
+- `x` türü `long` veya `ulong`ise, kaydırma sayısı sağ işlenenin alt-sırası *altı* bitsiyle tanımlanır. Diğer bir deyişle, kaydırma sayısı `count & 0x3F` (veya `count & 0b_11_1111`) olarak hesaplanır.
 
 Aşağıdaki örnekte bu davranış gösterilmektedir:
 
@@ -172,13 +172,13 @@ Aşağıdaki örnekte bu davranış gösterilmektedir:
 
 ## <a name="enumeration-logical-operators"></a>Sabit listesi mantıksal işleçleri
 
-@No__t_0, `&`, `|` ve `^` işleçleri her bir [numaralandırma](../keywords/enum.md) türü için de tanımlanmıştır. Aynı numaralandırma türünün işlenenleri için, temel alınan integral türünün karşılık gelen değerlerinde bir mantıksal işlem gerçekleştirilir. Örneğin, herhangi bir `x` ve `y` bir numaralandırma türü `T` temel alınan bir tür `U` için, `x & y` ifadesi `(T)((U)x & (U)y)` ifadesiyle aynı sonucu üretir.
+`~`, `&`, `|`ve `^` işleçleri her bir [numaralandırma](../keywords/enum.md) türü tarafından da desteklenir. Aynı numaralandırma türünün işlenenleri için, temel alınan integral türünün karşılık gelen değerlerinde bir mantıksal işlem gerçekleştirilir. Örneğin, herhangi bir `x` ve `y` bir numaralandırma türü `T` temel alınan bir tür `U` için, `x & y` ifadesi `(T)((U)x & (U)y)` ifadesiyle aynı sonucu üretir.
 
 Genellikle, [Flags](xref:System.FlagsAttribute) özniteliğiyle tanımlanan bir numaralandırma türü ile bit düzeyinde mantıksal işleçler kullanırsınız. Daha fazla bilgi için [Listeleme türleri](../../programming-guide/enumeration-types.md) makalesinin [numaralandırma türleri bit bayrakları](../../programming-guide/enumeration-types.md#enumeration-types-as-bit-flags) bölümüne bakın.
 
 ## <a name="operator-overloadability"></a>Operatör overloadability
 
-Kullanıcı tanımlı bir tür `~`, `<<`, `>>`, `&`, `|` ve `^` işleçlerini [aşırı](operator-overloading.md) yükleyebilir. İkili işleç aşırı yüklendiğinde, karşılık gelen bileşik atama işleci de örtük olarak aşırı yüklenmiştir. Kullanıcı tanımlı bir tür, bileşik atama işlecini açıkça aşırı yükleyemez.
+Kullanıcı tanımlı bir tür `~`, `<<`, `>>`, `&`, `|`ve `^` işleçlerini [aşırı](operator-overloading.md) yükleyebilir. İkili işleç aşırı yüklendiğinde, karşılık gelen bileşik atama işleci de örtük olarak aşırı yüklenmiştir. Kullanıcı tanımlı bir tür, bileşik atama işlecini açıkça aşırı yükleyemez.
 
 Kullanıcı tanımlı bir tür `T` `<<` veya `>>` işlecini aşırı yükletir, sol taraftaki işlenenin türü `T` olmalı ve sağ işlenen türü `int` olmalıdır.
 

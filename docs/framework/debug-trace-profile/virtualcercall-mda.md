@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 1eb18c7a-f5e0-443f-80fb-67bfbb047da2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 561655f1d3de6efcac79c89907602cbf51bd3ff8
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 8784d6980d3edb1bbdd7b39a81e7e33bfec81242
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052230"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039609"
 ---
 # <a name="virtualcercall-mda"></a>virtualCERCall MDA
-`virtualCERCall` Yönetilen hata ayıklama Yardımcısı (MDA), kısıtlı bir yürütme bölgesi (cer) çağrı grafı içindeki bir çağrı sitesinin bir sanal hedefe (yani, son olmayan bir sanal metoda sanal çağrı veya bir çağrı arayüz. Ortak dil çalışma zamanı (CLR), bu çağrıların yalnızca ara dil ve meta veri analizinden hedef yöntemini tahmin edemez. Sonuç olarak, CER grafiğinin bir parçası olarak çağrı ağacı hazırlanamaz ve bu alt ağaçta iş parçacığı iptal etme işlemini otomatik olarak engellenemez. Bu mda, çağrı hedefini hesaplamak için gereken ek bilgiler çalışma zamanında bilindiğinde, bir cer 'nin <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A> yönteme açık çağrılar kullanılarak genişletilmesi gerekebileceği durumları uyarır.  
+`virtualCERCall` yönetilen hata ayıklama Yardımcısı (MDA), kısıtlı yürütme bölgesi (CER) çağrı grafı içindeki bir çağrı sitesinin sanal bir hedefe, yani son olmayan bir sanal yönteme veya bir arabirim kullanarak bir çağrıya işaret ettiği bir uyarı olarak etkinleştirilir. Ortak dil çalışma zamanı (CLR), bu çağrıların yalnızca ara dil ve meta veri analizinden hedef yöntemini tahmin edemez. Sonuç olarak, CER grafiğinin bir parçası olarak çağrı ağacı hazırlanamaz ve bu alt ağaçta iş parçacığı iptal etme işlemini otomatik olarak engellenemez. Bu MDA, çağrı hedefini hesaplamak için gereken ek bilgiler çalışma zamanında bilindiğinde, bir CER 'nin <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A> yöntemine açık çağrılar kullanılarak genişletilmesi gerekebileceği durumları uyarır.  
   
 ## <a name="symptoms"></a>Belirtiler  
  Bir iş parçacığı iptal edildiğinde veya bir uygulama etki alanı kaldırıldığında çalıştırmayan CERs.  
@@ -28,7 +28,7 @@ ms.locfileid: "71052230"
  Bir CER, otomatik olarak hazırlanamadığından sanal bir yönteme yönelik bir çağrı içerir.  
   
 ## <a name="resolution"></a>Çözüm  
- Sanal <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A> Yöntem için çağrı.  
+ Sanal yöntem için <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A> çağırın.  
   
 ## <a name="effect-on-the-runtime"></a>Çalışma zamanında etki  
  Bu MDA, CLR üzerinde hiçbir etkisi yoktur.  
@@ -51,7 +51,7 @@ declaringType name="VirtualCERCall+MyClass"
 ```xml  
 <mdaConfig>  
   <assistants>  
-    < VirtualCERCall />  
+    <VirtualCERCall />  
   </assistants>  
 </mdaConfig>  
 ```  

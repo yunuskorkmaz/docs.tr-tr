@@ -2,15 +2,16 @@
 title: Veri türlerini genişletmek için model eşleştirme özelliklerini kullanma
 description: Bu gelişmiş öğreticide, ayrı olarak oluşturulan verileri ve algoritmaları kullanarak işlevsellik oluşturmak için model eşleştirme tekniklerini nasıl kullanabileceğiniz gösterilmektedir.
 ms.date: 03/13/2019
+ms-technology: csharp-whats-new
 ms.custom: mvc
-ms.openlocfilehash: 036a6bcda04771eb8cf3699af8756e83bb144389
-ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
+ms.openlocfilehash: ca7ae63a038fce0b2569e7a4bd1805765bc23d44
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71332359"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039202"
 ---
-# <a name="tutorial-using-pattern-matching-features-to-extend-data-types"></a>Öğretici: Veri türlerini genişletmek için model eşleştirme özelliklerini kullanma
+# <a name="tutorial-using-pattern-matching-features-to-extend-data-types"></a>Öğretici: veri türlerini genişletmek için model eşleştirme özelliklerini kullanma
 
 C#7 temel desenler eşleşen özellikler sunmuştur. Bu özellikler yeni ifadelerle ve C# desenlerle 8 ' de genişletilir. Başka kitaplıklarda olabilecek türleri genişletmekle birlikte davranan işlevselliği yazabilirsiniz. Desenler için başka bir kullanım, uygulamanızın genişletilmekte olan türün temel bir özelliği olmayan bir işlev oluşturmasını gerektirir.
 
@@ -22,7 +23,7 @@ Bu öğreticide, aşağıdakileri nasıl yapacağınızı öğreneceksiniz:
 > - Türleri ve özellik değerlerini temel alan davranışı uygulamak için kalıp eşleştirme ifadelerini kullanın.
 > - Tüm algoritmalar oluşturmak için model eşleştirmeyi diğer tekniklerle birleştirin.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Prerequisites
 
 Makinenizi, C# 8,0 derleyicisi dahil .NET Core çalıştıracak şekilde ayarlamanız gerekir. 8 C# derleyicisi, [Visual Studio 2019 sürüm 16,3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) veya [.NET Core 3,0 SDK](https://dotnet.microsoft.com/download)ile başlayarak kullanılabilir.
 
@@ -42,7 +43,7 @@ Bu kısa açıklamadan, bu sistemi modellemek için bir nesne hiyerarşisinde h�
 
 [!code-csharp[ExternalSystems](~/samples/csharp/tutorials/patterns/start/toll-calculator/ExternalSystems.cs)]
 
-Başlangıç kodunu [DotNet/Samples](https://github.com/dotnet/samples/tree/master/csharp/tutorials/patterns/start) GitHub deposundan indirebilirsiniz. Araç sınıflarının farklı sistemlerden olduğunu ve farklı ad alanlarında olduğunu görebilirsiniz. Ortak bir temel sınıf yoktur, diğeri `System.Object` yararlanılabilir olabilir.
+Başlangıç kodunu [DotNet/Samples](https://github.com/dotnet/samples/tree/master/csharp/tutorials/patterns/start) GitHub deposundan indirebilirsiniz. Araç sınıflarının farklı sistemlerden olduğunu ve farklı ad alanlarında olduğunu görebilirsiniz. `System.Object` dışındaki ortak bir temel sınıf yararlanılabilir olabilir.
 
 ## <a name="pattern-matching-designs"></a>Desen eşleştirme tasarımları
 
@@ -57,12 +58,12 @@ Verilerin *şekli* ve bu verilerdeki *işlemler* birlikte açıklanmadığında,
 
 En temel ücretli hesaplama yalnızca araç türüne bağlıdır:
 
-- A `Car` $2,00 ' dir.
-- A `Taxi` $3,50 ' dir.
-- A `Bus` $5,00 ' dir.
-- A `DeliveryTruck` $10,00
+- `Car` $2,00 ' dir.
+- `Taxi` $3,50 ' dir.
+- `Bus` $5,00 ' dir.
+- `DeliveryTruck` $10,00
 
-Ücretli miktarı almak `TollCalculator` için yeni bir sınıf oluşturun ve araç türünde kalıp eşleştirmeyi uygulayın. Aşağıdaki kod, `TollCalculator`öğesinin ilk uygulamasını gösterir.
+Yeni bir `TollCalculator` sınıfı oluşturun ve ücretli miktarı almak için araç türünde kalıp eşleştirmeyi uygulayın. Aşağıdaki kod `TollCalculator`ilk uygulamasını gösterir.
 
 ```csharp
 using System;
@@ -88,9 +89,9 @@ namespace toll_calculator
 }
 ```
 
-Yukarıdaki kod, **tür modelini**test eden bir **switch ifadesi** ( [`switch`](../language-reference/keywords/switch.md) deyimiyle aynı değil) kullanır. Bir **switch ifadesi** , önceki kodda, sonra `vehicle` `switch` anahtar sözcüğü gelen değişkenle başlar. Ardından, küme ayraçları içindeki tüm **anahtar kolları** gelir. İfade, diğer işlevselliklerindeki `switch` deyimini çevreleyen söz dizimini yapar. `switch` `case` Anahtar sözcüğü atlanır ve her bir ARM 'nin sonucu bir ifadedir. Son iki kolonun yeni bir dil özelliği gösterir. Durum `{ }` , önceki bir ARM ile eşleşmeyen null olmayan herhangi bir nesneyle eşleşir. Bu ARM, bu yönteme geçirilen hatalı türleri yakalar.  Durum `{ }` , her bir araç türü için durumları izlemelidir. Sıra tersine çevrilirse, `{ }` büyük/küçük harf durumuna geçer. Son olarak, `null` model bu yönteme `null` ne zaman geçtiğini algılar. Diğer `null` tür desenleri doğru türdeki yalnızca null olmayan bir nesneyle eşleştiğinden, düzen en son olabilir.
+Yukarıdaki kod, **tür modelini**test eden bir **switch ifadesi** (bir [`switch`](../language-reference/keywords/switch.md) ifadesiyle aynı değildir) kullanır. Bir **switch ifadesi** , önceki kodda `vehicle` ve ardından `switch` anahtar sözcüğü ile başlar. Ardından, küme ayraçları içindeki tüm **anahtar kolları** gelir. `switch` ifadesi, `switch` deyimini çevreleyen söz dizimi için diğer işlevselliklerindeki yapar. `case` anahtar sözcüğü atlanır ve her bir ARM 'nin sonucu bir ifadedir. Son iki kolonun yeni bir dil özelliği gösterir. `{ }` Case, önceki bir ARM ile eşleşmeyen null olmayan tüm nesneler ile eşleşir. Bu ARM, bu yönteme geçirilen hatalı türleri yakalar.  `{ }` durum, her bir araç türü için durumları izlemelidir. Sıra tersine çevrilirse, `{ }` durumu öncelik kazanır. Son olarak, `null` deseninin bu yönteme bir `null` geçtiğini algılar. Diğer tür desenleri doğru türdeki yalnızca null olmayan bir nesneyle eşleştiğinden `null` deseni son olabilir.
 
-Bu kodu aşağıdaki kodu `Program.cs`kullanarak test edebilirsiniz:
+`Program.cs`' de aşağıdaki kodu kullanarak bu kodu test edebilirsiniz:
 
 ```csharp
 using System;
@@ -139,7 +140,7 @@ namespace toll_calculator
 
 Bu kod, başlatıcı projesine dahil edilmiştir, ancak açıklama eklenir. Açıklamaları kaldırın ve ne yazdığınızı test edebilirsiniz.
 
-Desenlerin kodun ve verilerin ayrı olduğu algoritmalar oluşturmanıza nasıl yardımcı olduğunu görmeyi başlıyoruz. `switch` İfade, türü sınar ve sonuçlara göre farklı değerler üretir. Bu yalnızca başlangıç amaçlıdır.
+Desenlerin kodun ve verilerin ayrı olduğu algoritmalar oluşturmanıza nasıl yardımcı olduğunu görmeyi başlıyoruz. `switch` ifade, türü sınar ve sonuçlara göre farklı değerler üretir. Bu yalnızca başlangıç amaçlıdır.
 
 ## <a name="add-occupancy-pricing"></a>İskan fiyatlandırması Ekle
 
@@ -148,10 +149,10 @@ Desenlerin kodun ve verilerin ayrı olduğu algoritmalar oluşturmanıza nasıl 
 - Otomobiller ve Tax, hiçbir Pasca, ek $0,50 ödeyebilir.
 - Otomobiller ve Tax, iki pasa, $0,50 indirimi alır.
 - Üç veya daha fazla Pascal ile otomobiller ve Tax, $1,00 indirimi alır.
-- % 50 ' den küçük veri yolları, fazladan $2,00 oranında ödeyin.
-- % 90 ' den fazla tam veri yolları $1,00 indirimi elde edin.
+- %50 ' den küçük veri yolları, fazladan $2,00 oranında ödeyin.
+- %90 ' den fazla tam veri yolları $1,00 indirimi elde edin.
 
-Bu kurallar, aynı anahtar ifadesinde **özellik düzeniyle** kullanılarak uygulanabilir. Özellik deseninin türü belirlendikten sonra nesnenin özellikleri incelenir. Bir `Car` için tek durum dört farklı durumda genişler:
+Bu kurallar, aynı anahtar ifadesinde **özellik düzeniyle** kullanılarak uygulanabilir. Özellik deseninin türü belirlendikten sonra nesnenin özellikleri incelenir. `Car` için tek durum dört farklı durumda genişler:
 
 ```csharp
 vehicle switch
@@ -165,7 +166,7 @@ vehicle switch
 };
 ```
 
-İlk üç durum türü bir `Car`olarak test edin, sonra `Passengers` özelliğin değerini kontrol edin. Her ikisi de eşleşiyorsa, bu ifade değerlendirilir ve döndürülür.
+İlk üç durum türü `Car`olarak test edin ve sonra `Passengers` özelliğinin değerini denetleyin. Her ikisi de eşleşiyorsa, bu ifade değerlendirilir ve döndürülür.
 
 Ayrıca, taxiçin de benzer bir şekilde durum da genişletebilirsiniz:
 
@@ -183,7 +184,7 @@ vehicle switch
 };
 ```
 
-Önceki örnekte `when` yan tümce son durumda atlandı.
+Yukarıdaki örnekte, son durumda `when` yan tümcesi atlandı.
 
 Ardından, aşağıdaki örnekte gösterildiği gibi, veri yolları için durumları genişleterek sahiplik kurallarını uygulayın:
 
@@ -218,7 +219,7 @@ vehicle switch
 };
 ```
 
-Yukarıdaki kod, anahtar ARM `when` 'nin yan tümcesini gösterir. Bir özellikte eşitlik `when` dışındaki koşulları test etmek için yan tümcesini kullanın. İşiniz bittiğinde aşağıdakine benzer bir yönteme sahip olacaksınız:
+Yukarıdaki kod, anahtar ARM 'nin `when` yan tümcesini gösterir. Bir özellikte eşitlik dışındaki koşulları test etmek için `when` yan tümcesini kullanırsınız. İşiniz bittiğinde aşağıdakine benzer bir yönteme sahip olacaksınız:
 
 ```csharp
 vehicle switch
@@ -246,9 +247,9 @@ vehicle switch
 };
 ```
 
-Bu anahtar kolları çoğu **özyinelemeli desenlere**örnektir. Örneğin, `Car { Passengers: 1}` bir özellik deseninin içinde sabit bir model gösterir.
+Bu anahtar kolları çoğu **özyinelemeli desenlere**örnektir. Örneğin `Car { Passengers: 1}`, bir özellik deseninin içinde sabit bir model gösterir.
 
-İç içe geçmiş anahtarlar kullanarak bu kodu daha az tekrarlı hale getirebilirsiniz. `Car` Ve`Taxi` her ikisi de önceki örneklerde dört farklı kollu bir sahiptir. Her iki durumda da, bir özellik düzeninde akışlara bir tür stili oluşturabilirsiniz. Bu teknik aşağıdaki kodda gösterilmiştir:
+İç içe geçmiş anahtarlar kullanarak bu kodu daha az tekrarlı hale getirebilirsiniz. `Car` ve `Taxi` her ikisi de önceki örneklerde dört farklı kollu bir sahiptir. Her iki durumda da, bir özellik düzeninde akışlara bir tür stili oluşturabilirsiniz. Bu teknik aşağıdaki kodda gösterilmiştir:
 
 ```csharp
 public decimal CalculateToll(object vehicle) =>
@@ -283,11 +284,11 @@ public decimal CalculateToll(object vehicle) =>
     };
 ```
 
-Önceki örnekte, özyinelemeli bir ifade kullanmak, özellik değerini test eden alt kolları `Taxi` içeren `Car` ve kolları yinelediğiniz anlamına gelir. Bu özellikler, `Bus` ve `DeliveryTruck` kolları için kullanılmaz, çünkü bu Koller özellik için aralıkları test etmez, ayrık değerler değildir.
+Önceki örnekte, özyinelemeli bir ifade kullanılması, özellik değerini test eden alt kolları içeren `Car` ve `Taxi` kolları yinelemediğiniz anlamına gelir. Bu özellikler, `Bus` ve `DeliveryTruck` kolları için kullanılmaz, çünkü bu Koller özellik için aralıkları test ettiğinden ayrık değerler değildir.
 
 ## <a name="add-peak-pricing"></a>Tepe fiyatlandırması Ekle
 
-Son özellik için, ücretli yetkili zamana duyarlı tepe fiyatlandırması eklemek istemektedir. Sabah ve akşam aceleniz saatlerinde, Tolls iki katına çıkar. Bu kural yalnızca bir yönde trafiği etkiler: sabah şehrine gelen ve akşam aceleniz Hour 'daki çıkış. İş gününde diğer saatlerde, Tolls% 50 oranında artar. Geç gece ve erken sabah, Tolls% 25 oranında azaltılır. Hafta sonu sırasında, zamandan bağımsız olarak normal fiyat olur.
+Son özellik için, ücretli yetkili zamana duyarlı tepe fiyatlandırması eklemek istemektedir. Sabah ve akşam aceleniz saatlerinde, Tolls iki katına çıkar. Bu kural yalnızca bir yönde trafiği etkiler: sabah şehrine gelen ve akşam aceleniz Hour 'daki çıkış. İş gününde diğer saatlerde, Tolls %50 oranında artar. Geç gece ve erken sabah, Tolls %25 oranında azaltılır. Hafta sonu sırasında, zamandan bağımsız olarak normal fiyat olur.
 
 Bu özellik için model eşleştirmeyi kullanacaksınız, ancak diğer tekniklerle tümleştirilecek. Tüm yön, hafta günü ve saat birleşimleri için hesap oluşturacak tek bir kalıp eşleştirme ifadesi oluşturabilirsiniz. Sonuç karmaşık bir ifade olacaktır. Okunması zor olabilir. Bu, doğruluğu garanti etmelerini zorlaştırır. Bunun yerine, öz 'in tüm bu durumları açıkladığı bir dizi değer oluşturmak için bu yöntemleri birleştirin. Ardından, ücretli bir çarpanı hesaplamak için model eşleştirmeyi kullanın. Kayıt düzeni üç farklı koşul içerir:
 
@@ -297,7 +298,7 @@ Bu özellik için model eşleştirmeyi kullanacaksınız, ancak diğer teknikler
 
 Aşağıdaki tabloda, giriş değerleri ve en yüksek fiyatlandırma çarpanı birleşimleri gösterilmektedir:
 
-| Gün        | Time         | Direction | Premium |
+| Gün        | Zaman         | Yön | Premium |
 | ---------- | ------------ | --------- |--------:|
 | HAFTANINGÜNÜ    | sabah aceleniz | Gelen   | x 2,00  |
 | HAFTANINGÜNÜ    | sabah aceleniz | Giden  | x 1,00  |
@@ -318,7 +319,7 @@ Aşağıdaki tabloda, giriş değerleri ve en yüksek fiyatlandırma çarpanı b
 
 Üç değişkenin 16 farklı birleşimi vardır. Bazı koşulları birleştirerek son anahtar ifadesini basitleştirirsiniz.
 
-Tolls 'yi toplayan sistem, ücretli olarak toplanan <xref:System.DateTime> zaman için bir yapı kullanır. Yukarıdaki tablodan değişkenleri oluşturan üye yöntemleri oluşturun. Aşağıdaki işlev bir bir <xref:System.DateTime> hafta sonu veya haftanın gününü temsil edip etmediğini ifade etmek için bir model eşleştirme anahtar ifadesi kullanır:
+Tolls 'yi toplayan sistem, ücretli bir süre için <xref:System.DateTime> yapısını kullanır. Yukarıdaki tablodan değişkenleri oluşturan üye yöntemleri oluşturun. Aşağıdaki işlev bir <xref:System.DateTime> hafta sonu veya haftanın gününü temsil edip etmediğini ifade etmek için bir model eşleştirme anahtar ifadesi kullanır:
 
 ```csharp
 private static bool IsWeekDay(DateTime timeOfToll) =>
@@ -342,9 +343,9 @@ Sonra, zaman bloklara zaman kategorize etmek için benzer bir işlev ekleyin:
 
 [!code-csharp[GetTimeBand](~/samples/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#GetTimeBand)]
 
-Önceki yöntem, model eşleştirme kullanmaz. Tanıdık sayıda `if` deyimleri kullanarak daha anlaşılır. Her zaman aralığını ayrı bir `enum` değere dönüştürmek için bir özel ekleyin.
+Önceki yöntem, model eşleştirme kullanmaz. `if` deyimleri tanıdık bir basamakla daha net. Her zaman aralığını ayrı bir değere dönüştürmek için özel bir `enum` eklersiniz.
 
-Bu yöntemleri oluşturduktan sonra, fiyatlandırma Premium 'u hesaplamak için `switch` **demet düzenine** sahip başka bir ifadeyi kullanabilirsiniz. Tüm 16 kollu bir `switch` ifade oluşturabilirsiniz:
+Bu yöntemleri oluşturduktan sonra, fiyatlandırma Premium 'u hesaplamak için **tanımlama grubu düzeniyle** başka bir `switch` ifadesini kullanabilirsiniz. Tüm 16 kollu bir `switch` ifadesi oluşturabilirsiniz:
 
 [!code-csharp[FullTuplePattern](~/samples/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#TuplePatternOne)]
 
@@ -377,7 +378,7 @@ public decimal PeakTimePremium(DateTime timeOfToll, bool inbound) =>
     };
 ```
 
-Son olarak, normal fiyatı ödeyerek iki aceleniz saatlik saati kaldırabilirsiniz. Bu kolları kaldırdıktan sonra, son anahtar ARM içindeki `false` ' ı bir at`_`() ile değiştirebilirsiniz. Aşağıdaki tamamlanmış yönteme sahip olacaksınız:
+Son olarak, normal fiyatı ödeyerek iki aceleniz saatlik saati kaldırabilirsiniz. Bu kolları kaldırdıktan sonra, `false` son anahtar ARM içindeki bir atma (`_`) ile değiştirebilirsiniz. Aşağıdaki tamamlanmış yönteme sahip olacaksınız:
 
 [!code-csharp[SimplifiedTuplePattern](../../../samples/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#FinalTuplePattern)]
 

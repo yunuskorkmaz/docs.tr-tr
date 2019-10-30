@@ -1,17 +1,18 @@
 ---
 title: API 'Leri, null beklentilerini tanımlamak için özniteliklerle yükseltin
 description: Bu makalede, bağımsız değişkenlerin null durumunu ve API 'lerden dönüş değerlerini açıklayan açıklayıcı öznitelikler ekleme işlemleri ve teknikleri açıklanmaktadır
+ms.technology: csharp-null-safety
 ms.date: 07/31/2019
-ms.openlocfilehash: c51ec81f77bb1d31168848d8d51e68a08965d42c
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 102598843b091ea25e6456aeedcccf43f056250d
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72319068"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039375"
 ---
 # <a name="update-libraries-to-use-nullable-reference-types-and-communicate-nullable-rules-to-callers"></a>Kitaplıkları null yapılabilir başvuru türleri kullanacak şekilde güncelleştirme ve arayanlara null olabilecek kuralları iletişim kurma
 
-[Null yapılabilir başvuru türlerinin](nullable-references.md) eklenmesi, her değişken için `null` değerine izin verilip verilmeyeceğini veya beklenmediğini bildirebilmeniz anlamına gelir. Bu, kod yazarken harika bir deneyim sağlar. Null atanabilir olmayan bir değişken `null` olarak ayarlanmayabilir, uyarılar alırsınız. Nullable bir değişken, başvuru yapılmadan önce null olarak işaretli değilse uyarılar alırsınız. Kitaplıklarınızın güncelleştirilmesi zaman alabilir, ancak ödeme bu duruma göre yapılır. @No__t-1 değerine izin verildiğinde veya yasaklanmış *olduğunda* derleyiciye sağladığınız daha fazla bılgı, API 'nizin Kullanıcı tarafından daha iyi uyarıları alır. Tanıdık bir örnekle başlayalım. Kitaplığınızın bir kaynak dizesini almak için aşağıdaki API 'ye sahip olduğunu düşünün:
+[Null yapılabilir başvuru türlerinin](nullable-references.md) eklenmesi, her değişken için `null` değerine izin verilip verilmeyeceğini veya beklenmediğini bildirebilmeniz anlamına gelir. Bu, kod yazarken harika bir deneyim sağlar. Null atanabilir olmayan bir değişken `null` olarak ayarlanmayabilir, uyarılar alırsınız. Nullable bir değişken, başvuru yapılmadan önce null olarak işaretli değilse uyarılar alırsınız. Kitaplıklarınızın güncelleştirilmesi zaman alabilir, ancak ödeme bu duruma göre yapılır. `null` değere izin verildiğinde ya da yasaklanmış *olduğunda* derleyiciye daha fazla bilgi SAĞLARSANıZ, API 'nizin kullanıcıları daha iyi uyarıları alır. Tanıdık bir örnekle başlayalım. Kitaplığınızın bir kaynak dizesini almak için aşağıdaki API 'ye sahip olduğunu düşünün:
 
 ```csharp
 bool TryGetMessage(string key, out string message)
@@ -21,9 +22,9 @@ Yukarıdaki örnekte, .NET 'teki tanıdık `Try*` deseninin ardından yer verilm
 
 - Çağıranlar, `key` için bağımsız değişken olarak `null` iletmemelidir.
 - Çağıranlar, değeri `null` olan bir değişkeni `message` için bağımsız değişken olarak geçirebilir.
-- @No__t-0 yöntemi `true` döndürürse `message` değeri null olmaz. Dönüş değeri `false,` ise `message` (ve null durumunun) değeri null olur.
+- `TryGetMessage` yöntemi `true`döndürürse `message` değeri null değildir. Dönüş değeri `false,` ise `message` (ve null durumunun) değeri null olur.
 
-@No__t-0 kuralı, değişken türü ile tamamen ifade edilebilir: `key` null atanamaz bir başvuru türü olmalıdır. @No__t-0 parametresi daha karmaşıktır. Bağımsız değişken olarak `null` ' ı sağlar, ancak başarıyı, `out` bağımsız değişkeninin null olmadığını garanti eder. Bu senaryolar için beklentileri betimleyen daha zengin bir sözlük gerekir.
+`key` kuralı, değişken türü ile tamamen ifade edilebilir: `key` null yapılamayan bir başvuru türü olmalıdır. `message` parametresi daha karmaşıktır. Bağımsız değişken olarak `null` ' ı sağlar, ancak başarıyı, `out` bağımsız değişkeninin null olmadığını garanti eder. Bu senaryolar için beklentileri betimleyen daha zengin bir sözlük gerekir.
 
 Boş değer atanabilir başvurular için kitaplığınızın güncelleştirilmesi, bazı değişkenlerde ve tür adlarında Sprink `?` ' dan fazla olmalıdır. Yukarıdaki örnek, API 'lerinizi incelemeniz ve her giriş bağımsız değişkeni için beklentilerinizi göz önünde bulundurmanız gerektiğini gösterir. Dönüş değeri için garantiler ve yöntemin döndürdüğü `out` ya da `ref` bağımsız değişkenlerini göz önünde bulundurun. Sonra bu kuralları derleyiciye iletmeyin ve bu kurallar tarafından çağıranlar olmadığında Derleyici uyarılar sağlar.
 
@@ -41,7 +42,7 @@ Bu iş zaman alır. Diğer gereksinimleri ve teslim edilebilirleri dengelarken, 
 Bu ilk stratejiyi izleyerek şunları yapın:
 
 1. *Csproj* dosyalarınıza `<Nullable>enable</Nullable>` öğesini ekleyerek projenin tamamına ait null yapılabilir türleri etkinleştirin. 
-1. @No__t-0 pragma öğesini projenizdeki her kaynak dosyaya ekleyin. 
+1. `#nullable disable` pragma öğesini projenizdeki her kaynak dosyaya ekleyin. 
 1. Her dosya üzerinde çalışırken, pragmayı kaldırın ve tüm uyarıları çözün.
 
 Bu ilk stratejide, her dosyaya pragma eklemek için daha fazla yukarı iş vardır. Avantajı, projeye eklenen her yeni kod dosyasının null yapılabilir olmasını sağlar. Herhangi bir yeni iş, null yapılabilir. yalnızca var olan kodun güncellenmesi gerekiyor.
@@ -50,7 +51,7 @@ Bu ilk stratejide, her dosyaya pragma eklemek için daha fazla yukarı iş vard�
 
 Bu ikinci stratejiyi izleyerek şunları yapın:
 
-1. @No__t-0 pragma ' i null yapılabilir yapmak istediğiniz dosyaya ekleyin.
+1. `#nullable enable` pragma 'ı, null yapılabilir yapmak istediğiniz dosyaya ekleyin.
 1. Tüm uyarıları çözün.
 1. Tüm kitaplığı null yapılabilir olarak farkında olana kadar bu ilk iki adıma devam edin.
 1. *Csproj* dosyalarınıza `<Nullable>enable</Nullable>` öğesini ekleyerek projenin tamamına ait null yapılabilir türleri etkinleştirin. 
@@ -78,9 +79,9 @@ Ancak, genel kitaplıklar veya büyük Kullanıcı temellerine sahip kitaplıkla
 
 ## <a name="attributes-extend-type-annotations"></a>Öznitelikler tür ek açıklamalarını Genişlet
 
-Değişkenlerin null durumu hakkında ek bilgileri ifade etmek için çeşitli öznitelikler eklenmiştir. 8 ' den önce C# yazdığınız tüm kod null yapılabilir başvuru türleri olarak *null zorunluluvou*idi. Yani herhangi bir başvuru türü değişkeni null olabilir, ancak null denetimleri gerekli değildir. Kodunuz *Nullable olarak farkında*olduktan sonra bu kurallar değişir. Başvuru türleri asla @no__t 0 değeri olmamalıdır ve başvuru yapılmadan önce, null yapılabilir başvuru türlerinin `null` ' den önce denetlenmesi gerekir.
+Değişkenlerin null durumu hakkında ek bilgileri ifade etmek için çeşitli öznitelikler eklenmiştir. 8 ' den önce C# yazdığınız tüm kod null yapılabilir başvuru türleri olarak *null zorunluluvou*idi. Yani herhangi bir başvuru türü değişkeni null olabilir, ancak null denetimleri gerekli değildir. Kodunuz *Nullable olarak farkında*olduktan sonra bu kurallar değişir. Başvuru türleri asla `null` değer olmamalı ve null yapılabilir başvuru türleri başvurulmadan önce `null` karşı denetlenmelidir.
 
-@No__t-0 API senaryosuyla gördüğünüz gibi, API 'lerinizin kuralları büyük olasılıkla daha karmaşıktır. API 'lerinizin birçoğu, değişkenlerin @no__t için daha karmaşık kurallara sahiptir veya-0 olamaz. Bu durumlarda, bu kuralları ifade etmek için aşağıdaki özniteliklerden birini kullanacaksınız:
+API 'nizin kuralları `TryGetValue` API senaryosuyla gördüğünüz gibi büyük olasılıkla daha karmaşıktır. Birçok API 'niz, değişkenlerin `null`veya ne zaman oluşturulabileceğine ilişkin daha karmaşık kurallara sahiptir. Bu durumlarda, bu kuralları ifade etmek için aşağıdaki özniteliklerden birini kullanacaksınız:
 
 - [AllowNull](xref:System.Diagnostics.CodeAnalysis.AllowNullAttribute): null yapılamayan bir giriş bağımsız değişkeni null olabilir.
 - [Disallownull](xref:System.Diagnostics.CodeAnalysis.DisallowNullAttribute): null olabilen bir giriş bağımsız değişkeni hiçbir şekilde null olmamalıdır.
@@ -119,16 +120,16 @@ public string ScreenName
 private string screenName = GenerateRandomScreenName();
 ```
 
-Bu makalede ele alınan bu ve diğer özniteliklerin kullanılması için <xref:System.Diagnostics.CodeAnalysis> için `using` yönergesi eklemeniz gerekebilir. Özniteliği, `set` erişimcisine değil, özelliğe uygulanır. @No__t-0 özniteliği *ön koşulları*belirtir ve yalnızca girişler için geçerlidir. @No__t-0 erişimcisinin dönüş değeri var, ancak giriş bağımsız değişkeni yok. Bu nedenle `AllowNull` özniteliği yalnızca `set` erişimcisi için geçerlidir.
+Bu makalede ele alınan bu ve diğer özniteliklerin kullanılması için <xref:System.Diagnostics.CodeAnalysis> için `using` yönergesi eklemeniz gerekebilir. Özniteliği, `set` erişimcisine değil, özelliğe uygulanır. `AllowNull` özniteliği *ön koşulları*belirtir ve yalnızca girişler için geçerlidir. `get` erişimcisinin dönüş değeri var, ancak giriş bağımsız değişkeni yok. Bu nedenle `AllowNull` özniteliği yalnızca `set` erişimcisi için geçerlidir.
 
 Yukarıdaki örnekte, bir bağımsız değişkende `AllowNull` özniteliği eklenirken ne aranacağı gösterilmektedir:
 
 1. Bu değişken için genel sözleşme `null` olmamalı, bu nedenle null atanamaz bir başvuru türü istiyorsunuz.
 1. Giriş değişkeninin en yaygın kullanım olmasa da `null` olması senaryoları vardır.
 
-Çoğu kez bu özniteliğe özellikler veya `in`, `out` ve `ref` bağımsız değişkenleri gerekecektir. @No__t-0 özniteliği, genellikle null olmayan bir değişken olduğunda en iyi seçenektir, ancak önkoşul olarak `null` ' e izin vermeniz gerekir.
+Çoğu kez bu özniteliğe özellikler veya `in`, `out` ve `ref` bağımsız değişkenleri gerekecektir. `AllowNull` özniteliği, genellikle null olmayan bir değişken olduğunda en iyi seçenektir, ancak önkoşul olarak `null` izin vermeniz gerekir.
 
-@No__t-0 kullanma senaryolarıyla karşıtlık: Bu özniteliği, null yapılabilir bir türdeki bir giriş değişkeninin `null` olmaması gerektiğini belirtmek için kullanırsınız. @No__t-0 ' ın varsayılan değer olduğu ancak istemciler yalnızca null olmayan bir değere ayarlayabileceği bir özellik düşünün. Aşağıdaki kodu göz önünde bulundurun:
+`DisallowNull`kullanmaya yönelik senaryolar ile karşıtlık: Bu özniteliği, null yapılabilir bir türdeki bir giriş değişkeninin `null`olmaması gerektiğini belirtmek için kullanırsınız. `null` varsayılan değer olduğu ancak istemciler yalnızca null olmayan bir değere ayarlayabileceği bir özelliği düşünün. Aşağıdaki kodu göz önünde bulundurun:
 
 ```csharp
 public string ReviewComment
@@ -139,7 +140,7 @@ public string ReviewComment
 string _comment;
 ```
 
-Yukarıdaki kod, tasarımınızı `ReviewComment` `null` olabilir, ancak `null` ' ye ayarlayabilmenin en iyi yoludur. Bu kod null yapılabilir olduğunda, bu kavramı @no__t kullanarak çağıranlara daha net bir şekilde ifade edebilirsiniz:
+Yukarıdaki kod, tasarımınızı `ReviewComment` `null` olabilir, ancak `null` ' ye ayarlayabilmenin en iyi yoludur. Bu kod null yapılabilir olduğunda, bu kavramı <xref:System.Diagnostics.CodeAnalysis.DisallowNullAttribute?displayProperty=nameWithType>kullanarak çağıranlara daha net bir şekilde ifade edebilirsiniz:
 
 ```csharp
 [DisallowNull] 
@@ -151,14 +152,14 @@ public string? ReviewComment
 string? _comment;
 ```
 
-Null yapılabilir bir bağlamda, `ReviewComment` `get` erişimcisi `null` varsayılan değerini döndürebilir. Derleyici, erişim öncesinde denetlenmesi gerektiğini uyarır. Ayrıca, arayanlara `null` gibi görünse de çağıranlar tarafından açıkça `null` olarak ayarlanmamalıdır. @No__t-0 özniteliği Ayrıca bir *ön koşul*belirtir, `get` erişimcisini etkilemez. Aşağıdaki özellikleri gözlemlerseniz `DisallowNull` özniteliğini kullanmayı seçmeniz gerekir:
+Null yapılabilir bir bağlamda, `ReviewComment` `get` erişimcisi `null` varsayılan değerini döndürebilir. Derleyici, erişim öncesinde denetlenmesi gerektiğini uyarır. Ayrıca, arayanlara `null` gibi görünse de çağıranlar tarafından açıkça `null` olarak ayarlanmamalıdır. `DisallowNull` özniteliği bir *ön koşul*de belirtir, `get` erişimcisini etkilemez. Aşağıdaki özellikleri gözlemlerseniz `DisallowNull` özniteliğini kullanmayı seçmeniz gerekir:
 
 1. Değişken, genellikle ilk örneği oluşturulduğunda çekirdek senaryolarında `null` olabilir.
 1. Değişken açıkça `null` olarak ayarlanmamalıdır.
 
 Bu durumlar, başlangıçta *null yükümlülüğü*oluşturulan kodda ortaktır. Nesne özelliklerinin iki ayrı başlatma işlemi olarak ayarlanmış olması olabilir. Bazı özelliklerin bazı zaman uyumsuz çalışma tamamlandıktan sonra ayarlanmış olması olabilir.
 
-@No__t-0 ve `DisallowNull` öznitelikleri, değişkenler üzerindeki önkoşulların Bu değişkenlerde null yapılabilir açıklamalarıyla eşleşmeyebilir belirtmenize olanak tanır. Bunlar, API 'nizin özellikleri hakkında daha ayrıntılı bilgi sağlar. Bu ek bilgiler, arayanların API 'nizi doğru şekilde kullanmasına yardımcı olur. Aşağıdaki öznitelikleri kullanarak önkoşulları belirtdüğünü unutmayın:
+`AllowNull` ve `DisallowNull` öznitelikleri, değişkenlerde önkoşulların Bu değişkenlerde boş değer atanabilir açıklamalarıyla eşleşmeyebilir belirtmenize olanak tanır. Bunlar, API 'nizin özellikleri hakkında daha ayrıntılı bilgi sağlar. Bu ek bilgiler, arayanların API 'nizi doğru şekilde kullanmasına yardımcı olur. Aşağıdaki öznitelikleri kullanarak önkoşulları belirtdüğünü unutmayın:
 
 - [AllowNull](xref:System.Diagnostics.CodeAnalysis.AllowNullAttribute): null yapılamayan bir giriş bağımsız değişkeni null olabilir.
 - [Disallownull](xref:System.Diagnostics.CodeAnalysis.DisallowNullAttribute): null olabilen bir giriş bağımsız değişkeni hiçbir şekilde null olmamalıdır.
@@ -171,7 +172,7 @@ Aşağıdaki imzaya sahip bir yönteminiz olduğunu varsayalım:
 public Customer FindCustomer(string lastName, string firstName)
 ```
 
-Aranan ad bulunamadığı zaman 0 @no__t döndürmek için bunun gibi bir yöntem yazmış oldunuz. @No__t-0 açıkça kaydın bulunamadığını gösterir. Bu örnekte, büyük olasılıkla `Customer` ' dan `Customer?` ' e kadar dönüş türünü değiştirirsiniz. Dönüş değerinin null yapılabilir bir başvuru türü olarak bildirilmesi, bu API 'nin amacını açıkça belirtir. 
+Aranan ad bulunamadığı zaman `null` döndürmek için bunun gibi bir yöntem yazmış oldunuz. `null`, kaydın bulunamadığını açıkça gösterir. Bu örnekte, büyük olasılıkla `Customer` ' dan `Customer?` ' e kadar dönüş türünü değiştirirsiniz. Dönüş değerinin null yapılabilir bir başvuru türü olarak bildirilmesi, bu API 'nin amacını açıkça belirtir. 
 
 [Genel tanımlar ve null değer verilebilme](#generic-definitions-and-nullability) kapsamında, tekniği genel yöntemlerle çalışmayan nedenler için. Benzer bir kalıbı izleyen genel bir yönteminiz olabilir:
 
@@ -179,7 +180,7 @@ Aranan ad bulunamadığı zaman 0 @no__t döndürmek için bunun gibi bir yönte
 public T Find<T>(IEnumerable<T> sequence, Func<T, bool> match)
 ```
 
-Dönüş değerinin `T?` olduğunu belirtemezsiniz. Aranan öğe bulunamadığında Yöntem `null` döndürür. @No__t-0 dönüş türünü bildirebileceğinizden, yöntemin döndürdüğü `MaybeNull` ek açıklamasını eklersiniz:
+Dönüş değerinin `T?` olduğunu belirtemezsiniz. Aranan öğe bulunamadığında Yöntem `null` döndürür. `T?` bir dönüş türü bildiremiyoruz, bu ek açıklamayı Yöntem döndürecek şekilde `MaybeNull` ekleyin:
 
 ```csharp
 [return: MaybeNull]
@@ -203,13 +204,13 @@ EnsureCapacity<string>(ref messages, 10);
 EnsureCapacity<string>(messages, 50);
 ```
 
-Null başvuru türlerini etkinleştirdikten sonra, önceki kodun uyarı olmadan derlendiğinden emin olmak istersiniz. Yöntem döndüğünde, `storage` bağımsız değişkeninin null olmaması garanti edilir. Ancak, null başvurusuyla `EnsureCapacity` çağırmak kabul edilebilir. @No__t-0 ' ı null yapılabilir bir başvuru türü yapabilir ve parametre bildirimine `NotNull` koşulu ekleyebilirsiniz:
+Null başvuru türlerini etkinleştirdikten sonra, önceki kodun uyarı olmadan derlendiğinden emin olmak istersiniz. Yöntem döndüğünde, `storage` bağımsız değişkeninin null olmaması garanti edilir. Ancak, null başvurusuyla `EnsureCapacity` çağırmak kabul edilebilir. `storage` null yapılabilir bir başvuru türü yapabilirsiniz ve `NotNull` koşul sonrası parametre bildirimine ekleyebilirsiniz:
 
 ```csharp
 public void EnsureCapacity<T>([NotNull]ref T[]? storage, int size)
 ```
 
-Yukarıdaki kod, mevcut sözleşmeyi çok açık bir şekilde ifade eder: çağıranlar `null` değeri ile bir değişken geçirebilir, ancak dönüş değeri hiçbir şekilde null olmamalıdır. @No__t-0 özniteliği, `null` ' ü bir bağımsız değişken olarak geçirilebilecek `ref` ve `out` bağımsız değişkenleri için en yararlı seçenektir, ancak yöntemin döndürdüğü bağımsız değişkenin null olmaması garanti edilir.
+Yukarıdaki kod, mevcut sözleşmeyi çok açık bir şekilde ifade eder: çağıranlar `null` değeri ile bir değişken geçirebilir, ancak dönüş değeri hiçbir şekilde null olmamalıdır. `NotNull` özniteliği, `null` bağımsız değişken olarak geçirilebilecek `ref` ve `out` bağımsız değişkenleri için en yararlı seçenektir, ancak yöntemin döndürdüğü bağımsız değişkenin null olmaması garanti edilir.
 
 Aşağıdaki öznitelikleri kullanarak koşulsuz Sonkoşulları belirtirsiniz:
 
@@ -218,7 +219,7 @@ Aşağıdaki öznitelikleri kullanarak koşulsuz Sonkoşulları belirtirsiniz:
 
 ## <a name="specify-conditional-post-conditions-notnullwhen-maybenullwhen-and-notnullifnotnull"></a>Koşullu koşulları belirtin: `NotNullWhen`, `MaybeNullWhen` ve `NotNullIfNotNull`
 
-@No__t-0 yöntemine <xref:System.String.IsNullOrEmpty(System.String)?DisplayProperty=nameWithType> ' i öğrenindik. Bu yöntem, bağımsız değişken null veya boş bir dize olduğunda `true` döndürür. Bu bir null denetim biçimidir: çağıranların null olması gerekmez; Yöntem `false` döndürürse bağımsız değişkeni denetleyin. Bu null yapılabilir bir yöntemi gibi bir yöntem oluşturmak için bağımsız değişkenini null yapılabilir bir türe ayarlarsınız ve `NotNullWhen` özniteliğini eklersiniz:
+Büyük olasılıkla `string` yöntemi <xref:System.String.IsNullOrEmpty(System.String)?DisplayProperty=nameWithType>hakkında bilgi sahibisiniz. Bu yöntem, bağımsız değişken null veya boş bir dize olduğunda `true` döndürür. Bu bir null denetim biçimidir: çağıranların null olması gerekmez; Yöntem `false` döndürürse bağımsız değişkeni denetleyin. Bu null yapılabilir bir yöntemi gibi bir yöntem oluşturmak için bağımsız değişkenini null yapılabilir bir türe ayarlarsınız ve `NotNullWhen` özniteliğini eklersiniz:
 
 ```csharp
 bool IsNullOrEmpty([NotNullWhen(false)]string? value);
@@ -235,9 +236,9 @@ if (!(string.IsNullOrEmpty(userInput))
 // null check needed on userInput here.
 ```
 
-@No__t-0 yöntemine .NET Core 3,0 için yukarıda gösterildiği gibi açıklama eklenir. Kod tabanınızda, null değerler için nesnelerin durumunu kontrol eden benzer yöntemlere sahip olabilirsiniz. Derleyici özel null denetim yöntemlerini tanımaz ve ek açıklamaları kendiniz eklemeniz gerekir. Özniteliğini eklediğinizde, derleyicinin statik analizi, sınanan değişkenin null olarak işaretli olduğunu bilir.
+<xref:System.String.IsNullOrEmpty(System.String)?DisplayProperty=nameWithType> yöntemine .NET Core 3,0 için yukarıda gösterildiği gibi açıklama eklenir. Kod tabanınızda, null değerler için nesnelerin durumunu kontrol eden benzer yöntemlere sahip olabilirsiniz. Derleyici özel null denetim yöntemlerini tanımaz ve ek açıklamaları kendiniz eklemeniz gerekir. Özniteliğini eklediğinizde, derleyicinin statik analizi, sınanan değişkenin null olarak işaretli olduğunu bilir.
 
-Bu öznitelikler için başka bir kullanım `Try*` ' dır. @No__t-0 ve `out` değişkenleri için Sonkoşulları, dönüş değeri üzerinden iletilir. Daha önce gösterilen bu yöntemi göz önünde bulundurun:
+Bu öznitelikler için başka bir kullanım `Try*` ' dır. `ref` ve `out` değişkenlerine yönelik Sonkoşulları, dönüş değeri üzerinden iletilir. Daha önce gösterilen bu yöntemi göz önünde bulundurun:
 
 ```csharp
 bool TryGetMessage(string key, out string message)
@@ -245,7 +246,7 @@ bool TryGetMessage(string key, out string message)
 
 Yukarıdaki yöntem tipik bir .NET deyimidir OM: return değeri, `message` ' ın bulunan değere ayarlandığını veya bir ileti bulunamazsa varsayılan değere ayarlandığını gösterir. Yöntem `true` döndürürse, `message` değeri null değil; Aksi takdirde, yöntem `message` ' yi null olarak ayarlar.
 
-@No__t-0 özniteliğini kullanarak bu deyimden iletişim kurabilirsiniz. Null yapılabilir başvuru türleri için imzayı güncelleştirdiğinizde `message` `string?` yapın ve bir öznitelik ekleyin:
+`NotNullWhen` özniteliğini kullanarak bu deyimden iletişim kurabilirsiniz. Null yapılabilir başvuru türleri için imzayı güncelleştirdiğinizde `message` `string?` yapın ve bir öznitelik ekleyin:
 
 ```csharp
 bool TryGetMessage(string key, [NotNullWhen(true)] out string? message)
@@ -259,7 +260,7 @@ Ayrıca ihtiyacınız olabilecek bir son öznitelik vardır. Bazen bir dönüş 
 string GetTopLevelDomainFromFullUrl(string url);
 ```
 
-@No__t-0 bağımsız değişkeni null değilse, çıkış `null` değildir. Null yapılabilir başvurular etkinleştirildikten sonra, bu imza doğru şekilde çalışarak API 'niz hiçbir şekilde null girişi kabul etmez. Ancak, giriş null ise, dönüş değeri de null olabilir. Bu nedenle, imzayı aşağıdaki kodla değiştirebilirsiniz:
+`url` bağımsız değişkeni null değilse, çıktı `null`olmaz. Null yapılabilir başvurular etkinleştirildikten sonra, bu imza doğru şekilde çalışarak API 'niz hiçbir şekilde null girişi kabul etmez. Ancak, giriş null ise, dönüş değeri de null olabilir. Bu nedenle, imzayı aşağıdaki kodla değiştirebilirsiniz:
 
 ```csharp
 string? GetTopLevelDomainFromFullUrl(string? url);
@@ -282,11 +283,11 @@ Dönüş değeri ve bağımsız değişkenine her ikisi de `?` `null` olduğunu 
 
 ## <a name="generic-definitions-and-nullability"></a>Genel tanımlar ve null değer alabilirlik
 
-Genel türlerin ve genel yöntemlerin null durumuna doğru bir şekilde iletişim kurmak için özel bakım yapılması gerekir. Bu, null olabilen bir değer türünün ve null olabilen bir başvuru türünün temelde farklı olduğu gerçekten farklıdır. @No__t-0 `Nullable<int>` ' in eşanlamlısıdır; ancak `string?`, derleyici tarafından eklenen bir özniteliğe sahip `string` ' dir. Sonuç olarak, `T` ' in `class` mi yoksa `struct` mi olduğunu bilmeksizin, derleyicinin `T?` için doğru kod üretmesidir. 
+Genel türlerin ve genel yöntemlerin null durumuna doğru bir şekilde iletişim kurmak için özel bakım yapılması gerekir. Bu, null olabilen bir değer türünün ve null olabilen bir başvuru türünün temelde farklı olduğu gerçekten farklıdır. `int?`, `Nullable<int>`için bir eş anladır, ancak derleyici tarafından eklenen bir özniteliğe sahip `string?` `string`. Sonuç olarak, `T` ' in `class` mi yoksa `struct` mi olduğunu bilmeksizin, derleyicinin `T?` için doğru kod üretmesidir. 
 
 Bu, kapalı bir genel türün tür bağımsız değişkeni olarak null yapılabilir bir tür (değer türü veya başvuru türü) kullanmayacağınız anlamına gelmez. Hem `List<string?>` hem de `List<int?>` `List<T>` ' nin geçerli örneklemelerinden oluşur. 
 
-Ne anlama geliyor, bir genel sınıfta veya yöntem bildiriminde kısıtlama olmadan `T?` kullanmayacağınız anlamına gelir. Örneğin <xref:System.Linq.Enumerable.FirstOrDefault%60%601(System.Collections.Generic.IEnumerable%7B%60%600%7D)?displayProperty=nameWithType> `T?` döndürecek şekilde değiştirilmez. @No__t-0 veya `class` kısıtlaması ekleyerek bu sınırlamayı aşabilirsiniz. Bu kısıtlamalardan biri ile derleyici, `T` ve `T?` için nasıl kod üretireceğini bilir.
+Ne anlama geliyor, bir genel sınıfta veya yöntem bildiriminde kısıtlama olmadan `T?` kullanmayacağınız anlamına gelir. Örneğin, <xref:System.Linq.Enumerable.FirstOrDefault%60%601(System.Collections.Generic.IEnumerable%7B%60%600%7D)?displayProperty=nameWithType> `T?`döndürecek şekilde değiştirilmez. `struct` veya `class` kısıtlamasını ekleyerek bu sınırlamayı aşabilirsiniz. Bu kısıtlamalardan biri ile derleyici, `T` ve `T?` için nasıl kod üretireceğini bilir.
 
 Genel tür bağımsız değişkeni için kullanılan türleri null yapılamayan türler olacak şekilde kısıtlamak isteyebilirsiniz. Bunu, bu tür bağımsız değişkenine `notnull` kısıtlamasını ekleyerek yapabilirsiniz. Bu kısıtlama uygulandığında tür bağımsız değişkeni null yapılabilir bir tür olmamalıdır.
 

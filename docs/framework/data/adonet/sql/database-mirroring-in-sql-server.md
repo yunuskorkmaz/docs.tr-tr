@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 89befaff-bb46-4290-8382-e67cdb0e3de9
-ms.openlocfilehash: 81e8bd5ba9274c84ffe18f617978b61238ebeff2
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: b18c67f5573d375fe0872d76d69a1f0aafa7e7f6
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70782435"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040433"
 ---
 # <a name="database-mirroring-in-sql-server"></a>SQL Server’da Veritabanı Yansıtması
-SQL Server veritabanı yansıtma, bir SQL Server veritabanının kopyasını veya yansıtmasını bekleyen bir sunucuda tutmanıza olanak sağlar. Yansıtma, verilerin iki ayrı kopyasının her zaman olmasını sağlar ve yüksek kullanılabilirlik ve tamamen veri artıklığı sağlar. SQL Server için .NET Veri Sağlayıcısı, veritabanı yansıtma için örtülü destek sağlar; böylece Geliştirici, bir SQL Server veritabanı için yapılandırıldıktan sonra herhangi bir eylemde bulunan veya herhangi bir kod yazmanıza gerek kalmaz. Ayrıca <xref:System.Data.SqlClient.SqlConnection> , nesnesi, <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>içinde bir yük devretme ortağı sunucusunun adı sağlamaya izin veren bir açık bağlantı modunu destekler.  
+SQL Server veritabanı yansıtma, bir SQL Server veritabanının kopyasını veya yansıtmasını bekleyen bir sunucuda tutmanıza olanak sağlar. Yansıtma, verilerin iki ayrı kopyasının her zaman olmasını sağlar ve yüksek kullanılabilirlik ve tamamen veri artıklığı sağlar. SQL Server için .NET Veri Sağlayıcısı, veritabanı yansıtma için örtülü destek sağlar; böylece Geliştirici, bir SQL Server veritabanı için yapılandırıldıktan sonra herhangi bir eylemde bulunan veya herhangi bir kod yazmanıza gerek kalmaz. Ayrıca, <xref:System.Data.SqlClient.SqlConnection> nesnesi, <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>bir yük devretme ortağı sunucusunun adı sağlamaya izin veren bir açık bağlantı modunu destekler.  
   
- Yansıtma için yapılandırılmış bir veritabanını hedefleyen bir <xref:System.Data.SqlClient.SqlConnection> nesne için aşağıdaki Basitleştirilmiş olay dizisi oluşur:  
+ Yansıtma için yapılandırılmış bir veritabanını hedefleyen bir <xref:System.Data.SqlClient.SqlConnection> nesnesi için aşağıdaki Basitleştirilmiş olay dizisi oluşur:  
   
 1. İstemci uygulaması başarıyla asıl veritabanına bağlanır ve sunucu daha sonra istemci üzerinde önbelleğe alınmış olan ortak sunucunun adını geri gönderir.  
   
@@ -26,19 +26,19 @@ SQL Server veritabanı yansıtma, bir SQL Server veritabanının kopyasını vey
 ## <a name="specifying-the-failover-partner-in-the-connection-string"></a>Bağlantı dizesinde yük devretme ortağını belirtme  
  Bağlantı dizesinde bir yük devretme iş ortağı sunucusunun adını sağlarsanız, istemci uygulaması ilk kez bağlanırken asıl veritabanı kullanılamadığında, istemci, yük devretme ortağıyla birlikte bir bağlantı kurmayı dener.  
   
-```  
+```csharp
 ";Failover Partner=PartnerServerName"  
 ```  
   
- Yük devretme ortağı sunucusunun adını atlarsanız ve istemci uygulaması ilk kez bağlandığında asıl veritabanı kullanılabilir değilse, bir <xref:System.Data.SqlClient.SqlException> oluşturulur.  
+ Yük devretme ortağı sunucusunun adını atlarsanız ve istemci uygulaması ilk kez bağlandığında asıl veritabanı kullanılamazsa <xref:System.Data.SqlClient.SqlException> tetiklenir.  
   
- Bir <xref:System.Data.SqlClient.SqlConnection> başarıyla açıldığında, yük devretme ortağı adı sunucu tarafından döndürülür ve bağlantı dizesinde sağlanan tüm değerlerin yerini alır.  
+ <xref:System.Data.SqlClient.SqlConnection> başarılı bir şekilde açıldığında, yük devretme ortağı adı sunucu tarafından döndürülür ve bağlantı dizesinde sağlanan tüm değerlerin yerini alır.  
   
 > [!NOTE]
-> Veritabanı yansıtma senaryoları için bağlantı dizesinde başlangıç kataloğunu veya veritabanı adını açıkça belirtmeniz gerekir. İstemci, açıkça belirtilen bir başlangıç kataloğu veya veritabanına sahip olmayan bir bağlantıda yük devretme bilgileri alırsa, yük devretme bilgileri önbelleğe alınmaz ve asıl sunucu başarısız olursa uygulama yük devretmeye çalışmaz. Bir bağlantı dizesinde yük devretme ortağı için bir değer varsa, ancak ilk katalog veya veritabanı için değer yoksa bir `InvalidArgumentException` oluşturulur.  
+> Veritabanı yansıtma senaryoları için bağlantı dizesinde başlangıç kataloğunu veya veritabanı adını açıkça belirtmeniz gerekir. İstemci, açıkça belirtilen bir başlangıç kataloğu veya veritabanına sahip olmayan bir bağlantıda yük devretme bilgileri alırsa, yük devretme bilgileri önbelleğe alınmaz ve asıl sunucu başarısız olursa uygulama yük devretmeye çalışmaz. Bir bağlantı dizesinde yük devretme ortağı için bir değer varsa, ancak ilk katalog veya veritabanı için değer yoksa `InvalidArgumentException` tetiklenir.  
   
 ## <a name="retrieving-the-current-server-name"></a>Geçerli sunucu adı alınıyor  
- Yük devretme durumunda, geçerli bağlantının gerçekten bağlı olduğu sunucu adını bir <xref:System.Data.SqlClient.SqlConnection.DataSource%2A> <xref:System.Data.SqlClient.SqlConnection> nesnenin özelliğini kullanarak alabilirsiniz. Aşağıdaki kod parçası, bağlantı değişkeninin açık <xref:System.Data.SqlClient.SqlConnection>bir başvuru olduğunu varsayarak, etkin sunucunun adını alır.  
+ Yük devretme durumunda, geçerli bağlantının gerçekten bağlı olduğu sunucu adını bir <xref:System.Data.SqlClient.SqlConnection> nesnesinin <xref:System.Data.SqlClient.SqlConnection.DataSource%2A> özelliğini kullanarak alabilirsiniz. Aşağıdaki kod parçası, bağlantı değişkeninin açık bir <xref:System.Data.SqlClient.SqlConnection>başvurduğu varsayılarak, etkin sunucunun adını alır.  
   
  Bir yük devretme olayı gerçekleştiğinde ve bağlantı yansıtma sunucusuna dönüştürüldüğünde, **DataSource** özelliği yansıtma adını yansıtacak şekilde güncelleştirilir.  
   
@@ -51,7 +51,7 @@ string activeServer = connection.DataSource;
 ```  
   
 ## <a name="sqlclient-mirroring-behavior"></a>SqlClient yansıtma davranışı  
- İstemci her zaman geçerli asıl sunucuya bağlanmayı dener. Başarısız olursa, yük devretme ortağını dener. Yansıtma veritabanı zaten ortak sunucusunda sorumlu rolüne geçdiyse, bağlantı başarılı olur ve yeni asıl yansıtma eşlemesi istemciye gönderilir ve çağırmanın <xref:System.AppDomain>ömrü boyunca önbelleğe alınır. Kalıcı depolamada depolanmaz ve farklı bir **AppDomain** veya işlemdeki sonraki bağlantılarda kullanılamaz. Ancak, aynı **AppDomain**içindeki sonraki bağlantılar için de kullanılabilir. Aynı ya da farklı bir bilgisayar üzerinde çalışan başka bir **AppDomain** veya işlemin her zaman bağlantı havuzu olduğunu ve bu bağlantıların sıfırlanmadığını unutmayın. Bu durumda, birincil veritabanı kapalıysa, her işlem veya **AppDomain** bir kez başarısız olur ve havuz otomatik olarak temizlenir.  
+ İstemci her zaman geçerli asıl sunucuya bağlanmayı dener. Başarısız olursa, yük devretme ortağını dener. Yansıtma veritabanı zaten ortak sunucusunda sorumlu rolüne geçdiyse, bağlantı başarılı olur ve yeni asıl yansıtma eşlemesi istemciye gönderilir ve çağrı <xref:System.AppDomain>ömrü boyunca önbelleğe alınır. Kalıcı depolamada depolanmaz ve farklı bir **AppDomain** veya işlemdeki sonraki bağlantılarda kullanılamaz. Ancak, aynı **AppDomain**içindeki sonraki bağlantılar için de kullanılabilir. Aynı ya da farklı bir bilgisayar üzerinde çalışan başka bir **AppDomain** veya işlemin her zaman bağlantı havuzu olduğunu ve bu bağlantıların sıfırlanmadığını unutmayın. Bu durumda, birincil veritabanı kapalıysa, her işlem veya **AppDomain** bir kez başarısız olur ve havuz otomatik olarak temizlenir.  
   
 > [!NOTE]
 > Sunucuda yansıtma desteği, veritabanı başına temelinde yapılandırılır. Veri işleme işlemleri sorumlu/yansıtma kümesine dahil olmayan diğer veritabanlarına karşı yürütülürse, çok parçalı adlar kullanarak veya geçerli veritabanını değiştirerek, diğer veritabanlarında yapılan değişiklikler hata durumunda yayılmaz. Yansıtılmış olmayan bir veritabanında veri değiştirildiğinde hiçbir hata oluşturulmaz. Geliştirici, bu işlemlerin olası etkisini değerlendirmelidir.  

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 624814e40c361c30e251a9388f1444734a276c0a
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 0783c6ab80f3a07bd7b7e5a005444218c17e85fb
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72315877"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73035453"
 ---
 # <a name="contributing"></a>Bulunan
 
@@ -48,7 +48,7 @@ Ayrıca, topluluk katkılarına hoş geldiniz mevcut sorunlarından da seçim ya
 
 Ayrıca, ilginizi çekdikleriniz üzerinde çalışmak için [Açık sorunlar](https://github.com/dotnet/docs/issues) listemize ve Volunteer göz atabilirsiniz. Katkı için açık olan sorunları [etiketleyerek, for-for-grabs](https://github.com/dotnet/docs/labels/up-for-grabs) etiketini kullanırız. 
 
-**2. Adım:** @No__t-1, `dotnet/samples` veya `dotnet/dotnet-api-docs` depoları gerektiği gibi çatalla ve yaptığınız değişiklikler için bir dal oluşturun.
+**2. Adım:** `dotnet/docs`, `dotnet/samples` veya `dotnet/dotnet-api-docs` depoları çatalla ve yaptığınız değişiklikler için bir dal oluşturun.
 
 Küçük değişiklikler için GitHub 'ın Web arabirimini kullanabilirsiniz. Değiştirmek istediğiniz dosyada **Bu projenin çatalınızda dosyayı Düzenle** ' ye tıklamanız yeterlidir. Değişiklikleri gönderdiğinizde GitHub yeni dalı sizin için oluşturur.
 
@@ -79,7 +79,7 @@ docs
 
 **4. Adım:** Dalınızdan bir çekme Isteği (PR) `dotnet/docs/master`, `dotnet/dotnet-api-docs/master` veya `dotnet/samples/master` ' e gönderir.
 
-PR 'nizin *her zaman* ana dalı hedeflemesi gerekir. Canlı dalı hedefleyen bir PR 'yi *asla* açmanız gerekir.
+PR 'niz *her zaman* deponun varsayılan dalını hedeflemelidir (bir yayın dalı üzerinde çalışmadığınız müddetçe). DotNet/docs için ana dal varsayılan daldır. Yerelleştirilmiş depolar için, dinamik dal varsayılan bir. DotNet/docs üzerinde canlı dalı hedefleyen bir PR 'yi *asla* açmanız gerekir.
 
 Her bir çekme isteği genellikle tek seferde bir sorunu ele almalıdır. PR bir veya daha fazla dosyayı değiştirebilir. Farklı dosyalarda birden çok düzeltmeyi adreslendirirken ayrı PR 'ler tercih edilir.
 
@@ -140,14 +140,14 @@ Etkileşimli C# deneyim, örneklerle nasıl çalışadığımızda değişiklik 
 
 Aşağıdaki listede, .NET belgelerine katkıda bulunmak için göz önünde bulundurmanız gereken bazı temel kurallar gösterilmektedir:
 
-- Büyük çekme istekleri konusunda **sürmeyin** . Bunun yerine bir sorun oluşturup bir tartışma başlatın, böylece büyük bir süre yatırmadan önce bir yönü kabul edebilirsiniz.
+- Büyük çekme istekleri konusunda **sürmeyin** . Bunun yerine bir sorun oluşturup bir tartışma başlatın, böylece büyük bir süre yatırmadan önce bir yönü kabul edebilirsiniz. Toplu değişiklikler için çalışmayı daha küçük PR 'ler (en fazla 100 dosya) olarak bölün.
 - [Stil kılavuzunu](./styleguide/template.md) ve [ses ve ton](./styleguide/voice-tone.md) **kılavuzlarını okuyun.**
 - [Şablon](./styleguide/template.md) dosyasını, çalışmanızın başlangıç noktası **olarak kullanın.**
 - Makaleler üzerinde çalışmadan önce çatalınızda ayrı bir **dal oluşturun.**
 - [GitHub Flow iş akışını](https://guides.github.com/introduction/flow/) **izleyin.**
 - **Web günlüğü** ve Tweet (veya herhangi bir) katkılarınız hakkında sık sık!
 
-> Not: bazı konuların Şu anda burada belirtilen tüm yönergeleri ve [Stil kılavuzunu](./styleguide/template.md) takip ettiğini fark edebilirsiniz. Site genelinde tutarlılık elde etmek için çalışıyoruz. O belirli hedef için izlemekte olduğumuz [Açık sorunlar](https://github.com/dotnet/docs/issues?q=is%3Aissue+is%3Aopen+label%3Aguidelines-adherence) listesini kontrol edin.
+> Not: bazı konuların Şu anda burada belirtilen tüm yönergeleri ve [Stil kılavuzunu](./styleguide/template.md) takip ettiğini fark edebilirsiniz. Site genelinde tutarlılık elde etmek için çalışıyoruz.
 
 ## <a name="contributor-license-agreement"></a>Katkıda bulunan lisans sözleşmesi
 

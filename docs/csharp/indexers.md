@@ -1,29 +1,30 @@
 ---
 title: Dizin Oluşturucular
-description: Hakkında bilgi edinin C# dizin oluşturucular ve nasıl uyguladıkları dizin oluşturulmuş başvurulan bir veya daha fazla bağımsız değişken kullanarak özellikleri olan özellikleri.
+description: Dizin oluşturucular C# ve bunların, bir veya daha fazla bağımsız değişken kullanılarak başvurulan özellikler olan dizinli özellikleri nasıl uygulayabileceği hakkında bilgi edinin.
 ms.date: 06/20/2016
+ms.technology: csharp-fundamentals
 ms.assetid: 0e9496da-e766-45a9-b92b-91820d4a350e
-ms.openlocfilehash: a13163cb6bd835dfdd16c83c905c134eb8a86e7d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 86e646b341cf098d8621f095d4bfc9ea2191940d
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61672035"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039113"
 ---
 # <a name="indexers"></a>Dizin Oluşturucular
 
-*Dizin oluşturucular* özelliklerine benzer. Dizin oluşturucular birçok yolla aynı dil özellikleri oluşturmak [özellikleri](properties.md). Etkinleştir Dizinleyicileri *dizine* özellikleri: bir veya daha fazla bağımsız değişken kullanarak başvurulan özellikleri. Bu bağımsız değişkenlerden bazı değerler koleksiyonu içinde bir dizin sağlar.
+*Dizin oluşturucular* özelliklere benzerdir. Birçok şekilde, Dizin oluşturucular [Özellikler](properties.md)ile aynı dil özelliklerinde yapı oluşturur. Dizin oluşturucular *dizinli* özellikleri etkinleştirir: bir veya daha fazla bağımsız değişken kullanılarak başvurulan Özellikler. Bu bağımsız değişkenler, bazı değer toplamasına bir dizin sağlar.
 
 ## <a name="indexer-syntax"></a>Dizin Oluşturucu sözdizimi
 
-Bir dizin oluşturucu, bir değişken adı ve köşeli ayraçlar erişin. Dizin oluşturucu bağımsız değişkenleri köşeli ayraçlar içine yerleştirdiğiniz:
+Bir dizin oluşturucuya bir değişken adı ve köşeli ayraçlar aracılığıyla erişirsiniz. Dizin Oluşturucu bağımsız değişkenlerini köşeli ayraç içine yerleştirebilirsiniz:
 
 ```csharp
 var item = someObject["key"];
 someObject["AnotherKey"] = item;
 ```
 
-Dizin oluşturucular kullanarak bildirdiğiniz `this` özellik adı ve bağımsız değişkenler köşeli ayraç içinde bildirme as anahtar sözcüğü. Bu bildirim önceki paragrafta gösterilen kullanım eşleşmesi:
+Özellik adı olarak `this` anahtar sözcüğünü kullanarak Dizin oluşturucular bildirir ve bağımsız değişkenleri köşeli ayraç içinde bildirir. Bu bildirim, önceki paragrafta gösterilen kullanımla eşleşir:
 
 ```csharp
 public int this[string key]
@@ -33,25 +34,25 @@ public int this[string key]
 }
 ```
 
-Bu ilk örnekte, dizin oluşturucular ve özellikler için söz dizimi arasındaki ilişkiyi görebilirsiniz. Çoğu dizin oluşturucular için söz dizimi kuralın aracılığıyla bu benzerleme taşır. Dizin Oluşturucular, herhangi bir geçerli erişim değiştiricileri olabilir (Genel, korumalı korumalı iç, korumalı, dahili, özel veya özel). Bunlar, korumalı, virtual veya abstract olabilir. Özellikleriyle yönteminde olduğu gibi get için farklı erişim değiştiricileri belirtmeniz ve set erişimcileri bir dizin oluşturucu.
-(Set erişimcisine atlama tarafından) salt okunur dizin oluşturucuları veya salt yazılır dizin oluşturucular (get erişimcisine gt;(yok)) de belirtebilirsiniz.
+Bu ilk örnekte, Özellikler ve Dizin oluşturucular için sözdizimi arasındaki ilişkiyi görebilirsiniz. Bu benzerleme vurguladı, Dizin oluşturucular için sözdizimi kurallarının çoğunu taşır. Dizin oluşturucular geçerli erişim değiştiricilerine sahip olabilir (genel, korunan dahili, korunan, iç, özel veya özel korumalı). Mühürlü, sanal veya soyut olabilir. Özelliklerde olduğu gibi, bir dizin oluşturucuda get ve set erişimcileri için farklı erişim değiştiricileri belirtebilirsiniz.
+Salt yazılır Dizin oluşturucular da (set erişimcisini atlayarak) veya salt yazılır Dizin oluşturucular (Get erişimcisini atlayarak) belirtebilirsiniz.
 
-Hemen dizin oluşturucular özelliklere ile çalışmaktan şunların her şeyi uygulayabilirsiniz. Bu kuralın tek özel durum *otomatik uygulanan Özellikler*. Derleyici, her zaman doğru depolama dizin oluşturucu için oluşturulamıyor.
+Özelliklerle birlikte çalışarak, dizin oluşturucularının bulunduğu neredeyse her şeyi uygulayabilirsiniz. Bu kuralın tek istisnası *Otomatik uygulanan özelliklerdir*. Derleyici, Dizin Oluşturucu için her zaman doğru depolama alanı oluşturamıyor.
 
-Öğelerin kümesi bir öğeye başvuru için bağımsız değişken varlığını dizin oluşturucular özelliklerinden ayırır. Her dizin oluşturucu benzersiz için bağımsız değişken listeleri sürece bir tür üzerinde birden çok dizin oluşturucu tanımlayabilir. Bir veya daha fazla dizin oluşturucular sınıf tanımında burada kullanabileceğinize farklı senaryolar araştıralım. 
+Bir öğe kümesindeki bir öğeye başvuruda bulunmak için bağımsız değişkenlerin varlığı, dizin oluşturucularının özelliklerini ayırır. Her bir dizin oluşturucunun bağımsız değişken listeleri benzersiz olduğu sürece, bir tür üzerinde birden çok Dizin Oluşturucu tanımlayabilirsiniz. Bir sınıf tanımında bir veya daha fazla Dizin Oluşturucu kullanabileceğiniz farklı senaryolar araştıralım. 
 
 ## <a name="scenarios"></a>Senaryolar
 
-Tanımlayın *dizin oluşturucular* API'SİYLE burada tanımlarsınız bağımsız değişkenler bu koleksiyon için bazı koleksiyon modellediğinde, türü. Dizin oluşturucular olabilir veya .NET core framework parçası olan doğrudan koleksiyon türlerine eşleşmeyebilir. Türünüzün bir koleksiyon modelleme yanı sıra diğer sorumlulukları olabilir.
-Dizin oluşturucular bu soyutlama değerlerini nasıl depolanan veya hesaplanan iç ayrıntılarını sokmadan, türün Özet eşleşen API'si sağlar.
+API 'sinin, bu koleksiyonun bağımsız değişkenlerini tanımladığınız bazı koleksiyonları modellediğinde, bu *Dizin* oluşturucuyu yazmanız gerekir. Dizin oluşturucular, .NET Core Framework 'ün parçası olan koleksiyon türleri ile doğrudan eşleşmeyebilir veya eşleşmeyebilir. Bir koleksiyonun modellenmesi ek olarak, türü başka sorumluluklara sahip olabilir.
+Dizin oluşturucular, bu soyutlamalarda değerlerinin nasıl depolandığını veya hesaplanmadığını belirten iç ayrıntıları açığa çıkarmadan, türün soyutlamada eşleşen API 'yi sağlamanıza olanak tanır.
 
-Şimdi kullanmaya yönelik yaygın senaryolardan bazıları yol *dizin oluşturucular*. Erişebildiğiniz [örnek klasörüne dizin oluşturucular için](https://github.com/dotnet/samples/tree/master/csharp/indexers). Yükleme yönergeleri için bkz: [örnekler ve öğreticiler](../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+*Dizin oluşturucular*kullanmanın bazı yaygın senaryolarından bazılarını inceleyelim. [Dizin oluşturucular için örnek klasöre](https://github.com/dotnet/samples/tree/master/csharp/indexers)erişebilirsiniz. İndirme yönergeleri için bkz. [örnekler ve öğreticiler](../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
-### <a name="arrays-and-vectors"></a>Diziler ve vektörleri
+### <a name="arrays-and-vectors"></a>Diziler ve vektörler
 
-Türünüzün bir dizi veya bir vektör modellediğinde dizin oluşturucular oluşturmak için en sık karşılaşılan senaryolardan biridir. Model verileri sıralı bir listesi için bir dizin oluşturucu oluşturabilirsiniz. 
+Dizin oluşturucular oluşturmak için en yaygın senaryolardan biri, türü bir diziyi veya bir vektörü modellediğinde olur. Sıralı bir veri listesini modellemek için bir Dizin Oluşturucu oluşturabilirsiniz. 
 
-Kendi dizin oluşturucu oluşturma avantajı, depolama ihtiyaçlarınıza uyacak şekilde bu koleksiyon için tanımlayabileceğiniz olmasıdır. Burada türünüzü tek seferde belleğe yüklemek için çok büyük geçmiş veri modelleri bir senaryo düşünün. Yükleme ve kaldırma kullanımını temel alarak koleksiyon bölümlerini gerekir. Bu davranışı aşağıdaki örneğe modeller. Kaç tane veri noktalarının mevcut üzerinde rapor. Verilerin isteğe bağlı olarak bölümlerde tutacak sayfaları oluşturur. Tarafından daha yeni istekler gerekeceğinden sayfaları için yer açmak için bellek sayfaları kaldırır.
+Kendi dizin oluşturucuyu oluşturmanın avantajı, bu koleksiyonun depolama alanını gereksinimlerinize uyacak şekilde tanımlayabilmeniz. Aynı anda belleğe yüklenecek çok büyük geçmiş verileri modelleyen bir senaryoyu düşünün. Kullanım temelinde koleksiyonun bölümlerini yüklemeniz ve kaldırmanız gerekir. Aşağıdaki örnek, bu davranışı modelleyen bir örnektir. Bu, kaç veri noktasının var olduğunu bildirir. İsteğe bağlı verilerin bölümlerini tutacak sayfalar oluşturur. Daha yeni istekler için gereken sayfalar için yer açmak üzere sayfaları bellekten kaldırır.
 
 ```csharp
 public class DataSamples
@@ -172,11 +173,11 @@ public class DataSamples
 }
 ```
 
-Bu tasarım deyim herhangi bir tür koleksiyonun modellemek için izleyebileceğiniz bulunduğu veri kümesinin tamamını bir bellek içi koleksiyona yüklemeyecek için iyi nedenler vardır. Dikkat `Page` ortak arabiriminin bir parçası değil özel, iç içe geçmiş bir sınıfı. Bu ayrıntılar, bu sınıfın tüm kullanıcılardan gizlenir.
+Tüm veri kümesinin bellek içi bir koleksiyona yüklenmesinin iyi nedenleri olduğu durumlarda, herhangi bir koleksiyon sıralamasını modellemek için bu tasarım deyimlerini takip edebilirsiniz. `Page` sınıfının, ortak arabirimin parçası olmayan özel bir iç içe sınıf olduğunu unutmayın. Bu ayrıntılar, bu sınıfın tüm kullanıcılarından gizlenir.
 
-### <a name="dictionaries"></a>sözlükler
+### <a name="dictionaries"></a>sözlüğü
 
-Bir sözlüğün veya bir map model gerektiğinde başka bir yaygın senaryodur. Bu senaryo genellikle metin anahtarları anahtarını temel alan değerleri türünüz depolar andır. Bu örnek komut satırı bağımsız değişkenleri eşleyen sözlük oluşturur [lambda ifadeleri](delegates-overview.md) bu seçenekleri yönetin. Aşağıdaki örnek, iki sınıf gösterir: bir `ArgsActions` eşleyen bir komut satırı seçeneğini sınıfı bir `Action` temsilcisi ve bir `ArgsProcessor` kullanan `ArgsActions` her yürütülecek `Action` seçeneği karşılaştığında.
+Diğer bir yaygın senaryo, bir sözlüğü veya eşlemeyi modellemenize gerek duyduğunuzda olur. Bu senaryo, yazdığınız değerleri anahtar temelinde, genellikle metin anahtarlarına göre depoladığında olur. Bu örnek, komut satırı bağımsız değişkenlerini bu seçenekleri yöneten [lambda ifadelerine](delegates-overview.md) eşleyen bir sözlük oluşturur. Aşağıdaki örnekte iki sınıf gösterilmektedir: bir komut satırı seçeneğini bir `Action` temsilcisine eşleyen `ArgsActions` sınıfı ve bu seçenekle karşılaştığında her `Action` yürütmek için `ArgsActions` kullanan bir `ArgsProcessor`.
 
 ```csharp
 public class ArgsProcessor
@@ -218,15 +219,15 @@ public class ArgsActions
 }
 ```
 
-Bu örnekte, `ArgsAction` koleksiyon temel toplulukta yakından eşlenir.
-`get` Belirli bir seçenek yapılandırılıp yapılandırılmadığını belirler. Bu nedenle, döndürürse, `Action` bu seçenek ile ilişkilendirilmiş. Değilse, döndürürse, bir `Action` hiçbir şey yapmaz. Genel erişimci içermemesi bir `set` erişimcisi. Bunun yerine, seçeneklerini ayarlama için genel bir yöntem kullanılarak tasarım.
+Bu örnekte `ArgsAction` koleksiyonu, temel alınan koleksiyona yakından eşlenir.
+`get`, verilen bir seçeneğin yapılandırılıp yapılandırılmadığını belirler. Bu durumda, bu seçenekle ilişkili `Action` döndürür. Aksi takdirde, hiçbir şey olmayan bir `Action` döndürür. Ortak erişimci bir `set` erişimcisi içermez. Bunun yerine, seçenekleri ayarlamak için genel bir yöntem kullanan tasarım.
 
-### <a name="multi-dimensional-maps"></a>Çok boyutlu eşlemeleri
+### <a name="multi-dimensional-maps"></a>Çok boyutlu haritalar
 
-Birden çok bağımsız değişkenler kullanan dizin oluşturucular oluşturabilir. Ayrıca, bu bağımsız değişkenler aynı türde olacak şekilde kısıtlanır değil. İki örneklere göz atalım.   
+Birden çok bağımsız değişken kullanan Dizin oluşturucular oluşturabilirsiniz. Ayrıca, bu bağımsız değişkenler aynı türde olacak şekilde kısıtlanmaz. İki örneğe bakalım.   
 
-İlk örnek için Mandelbrot değerleri üreten bir sınıfı gösterir. Matematik arkasında kümesi hakkında daha fazla bilgi için okuma [bu makalede](https://en.wikipedia.org/wiki/Mandelbrot_set). Dizin Oluşturucu iki çiftten X, bir noktayı tanımlamak için kullanır. Y düzlemleriyle.
-Bir nokta kümesinde olmadığı belirlenir kadar get erişimcisine yineleme sayısını hesaplar. En fazla yineleme ulaşıldığında, kümede noktasıdır ve sınıfın maxIterations değeri döndürülür. (Mandelbrot kümesi için popüler bilgisayar tarafından oluşturulan görüntüleri bir nokta kümesi dışında olduğunu belirlemek gerekli olan yineleme sayısı için renk tanımlar.
+İlk örnek, bir Mandeli kümesi için değerler üreten bir sınıfı gösterir. Küme arkasında matematik hakkında daha fazla bilgi için [Bu makaleyi](https://en.wikipedia.org/wiki/Mandelbrot_set)okuyun. Dizin Oluşturucu X, Y düzleinde bir noktayı tanımlamak için iki Double Double kullanır.
+Get erişimcisi, bir noktanın küme içinde olmadığı belirlenene kadar yineleme sayısını hesaplar. En fazla yineleme ulaşılırsa, nokta ayarlanmıştır ve sınıfın Maxyinelemelerde değeri döndürülür. (Bilgisayar tarafından üretilen görüntüler Mandeli kümesi için populartı kümesi, bir noktanın kümenin dışında olduğunu belirlemek için gereken yineleme sayısı için renkleri tanımlar.
 
 ```csharp
 public class Mandelbrot
@@ -260,10 +261,10 @@ public class Mandelbrot
 }
 ```
 
-Değerlerinde Mandelbrot tanımlar her (x, y) için gerçek sayı değerlerini koordine edin.
-Bu değerleri sonsuz sayıda içerebilen bir sözlüğü tanımlar. Bu nedenle, hiçbir depolama kümesi arkasında yoktur. Bunun yerine, kodu çağırdığında bu sınıfın her bir noktası değerini hesaplar `get` erişimcisi. Temel alınan depolama alanı kullanılan yoktur.
+Mandelbrot kümesi, gerçek sayı değerleri için her (x, y) koordinatının değerlerini tanımlar.
+Bu, sonsuz sayıda değer içerebilen bir sözlük tanımlar. Bu nedenle, küme arkasında depolama yok. Bunun yerine, kod `get` erişimcisini çağırdığında, bu sınıf her bir noktanın değerini hesaplar. Kullanılan temeldeki depolama alanı yok.
 
-Dizin oluşturucular için burada dizin oluşturucuyu farklı türlerde birden çok bağımsız değişkeni alır, bir son kullanımını inceleyelim. Geçmiş sıcaklık verileri yöneten bir program göz önünde bulundurun. Bu dizin oluşturucu ayarlayın veya bu konumda için yüksek ve düşük Sıcaklıkların almak için bir şehir ve bir tarih kullanır:
+Dizin oluşturucunun, farklı türlerde birden çok bağımsız değişken aldığı dizin oluşturucularının bir son kullanımını inceleyelim. Geçmiş sıcaklık verilerini yöneten bir programı düşünün. Bu Dizin Oluşturucu, bu konum için yüksek ve düşük sıcaklıkları ayarlamak veya almak üzere bir şehir ve bir tarih kullanır:
 
 ```csharp
 using DateMeasurements = 
@@ -309,21 +310,21 @@ public class HistoricalWeatherData
 }
 ```
 
-Bu örnek, iki farklı bağımsız değişken hava durumu verilerine eşleyen bir dizin oluşturur: Bir şehrin (tarafından temsil edilen bir `string`) ve bir tarihi (tarafından temsil edilen bir `DateTime`). İki iç depolama kullanan `Dictionary` sınıflar için iki boyutlu sözlüğünü temsil eder. Genel API, temel alınan depolama artık temsil eder. Bunun yerine, dizin oluşturucular dil özelliklerinin temel alınan depolama farklı çekirdek koleksiyon türleri kullanmalısınız olsa bile, soyutlamayı temsil eder bir ortak arabirim oluşturmanıza olanak sağlar.
+Bu örnek, hava durumu verilerini iki farklı bağımsız değişkenle eşleyen bir dizin oluşturucu oluşturur: bir şehir (bir `string`tarafından temsil edilir) ve Tarih (bir `DateTime`tarafından temsil edilir). İç depolama iki boyutlu sözlüğü temsil etmek için iki `Dictionary` sınıfı kullanır. Ortak API artık temeldeki depolamayı temsil etmektedir. Bunun yerine, dizin oluşturucularının dil özellikleri, temeldeki depolamanın farklı çekirdek koleksiyon türlerini kullanması gerekir ancak, soyutlamasını temsil eden bir ortak arabirim oluşturmanıza olanak sağlar.
 
-Bazı geliştiriciler için tanınmayan bu kod, iki bölümü vardır. Bu iki `using` ifadeleri:
+Bu kodun, bazı geliştiricilere alışkın olabilecek iki bölümü vardır. Bu iki `using` deyimi:
 
 ```csharp
 using DateMeasurements = System.Collections.Generic.Dictionary<System.DateTime, IndexersSamples.Common.Measurements>;
 using CityDataMeasurements = System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<System.DateTime, IndexersSamples.Common.Measurements>>;
 ```
 
-oluşturma bir *diğer* için oluşturulmuş bir genel türü. Bu ifadeler, daha sonra daha açıklayıcı kullanmak için kodu sağlar `DateMeasurements` ve `CityDateMeasurements` adları yerine genel oluşumu `Dictionary<DateTime, Measurements>` ve `Dictionary<string, Dictionary<DateTime, Measurements> >`. Tento konstruktor je sağ tarafında tam olarak nitelenmiş tür adlarını kullanarak gerektiren `=` oturum.
+oluşturulan genel tür için bir *diğer ad* oluşturun. Bu deyimler daha sonra kodu daha sonra `Dictionary<DateTime, Measurements>` ve `Dictionary<string, Dictionary<DateTime, Measurements> >`genel yapımı yerine daha açıklayıcı `DateMeasurements` ve `CityDateMeasurements` adlarını kullanacak şekilde etkinleştirir. Bu yapı, `=` işaretinin sağ tarafında tam nitelikli tür adlarının kullanılmasını gerektirir.
 
-İkinci yöntem zaman bölümlerini herhangi Şerit göstermektir `DateTime` kullanılan nesne koleksiyonlara dizin. .NET framework yalnızca tarih türü içermez.
-Geliştiricilerin `DateTime` yazın, ancak kullanmak `Date` herhangi emin olmak için özellik `DateTime` o gün nesneden eşit.
+İkinci yöntem, koleksiyonlara dizin eklemek için kullanılan herhangi bir `DateTime` nesnesinin zaman kısımlarını bir kez çıkaramadır. .NET Framework yalnızca tarih türü içermez.
+Geliştiriciler `DateTime` türünü kullanır, ancak bu gündeki herhangi bir `DateTime` nesnesinin eşit olduğundan emin olmak için `Date` özelliğini kullanın.
 
-## <a name="summing-up"></a>Özetle
+## <a name="summing-up"></a>Toplam
 
-Sınıfınızdaki bu özellik tek bir değer değil, ancak bunun yerine her bir öğe tarafından bağımsız değişken kümesinin burada tanımlanan değerleri koleksiyonunu temsil ettiği bir özellik benzeri öğesine sahip herhangi bir zamanda, dizin oluşturucular oluşturmanız gerekir. Bu bağımsız değişkenlerden hangi öğe koleksiyonda başvurulan benzersiz şekilde tanımlayabilir.
-Dizin oluşturucular genişletmek kavramını [özellikleri](properties.md), sınıf dışında bir veri öğesi gibi ancak tarafındaki bir yöntemi gibi bir üye olduğu kabul edilir. Dizin oluşturucular bir öğe kümesini temsil eden bir özelliği tek bir öğeyi bulmak bağımsız değişkenler izin verir.
+Sınıfınıza, bu özelliğin tek bir değer değil, her tekil öğenin bir dizi bağımsız değişken tarafından tanımlandığı bir değer koleksiyonu olmak üzere her zaman bir özellik benzeri öğe oluşturmanız gerekir. Bu bağımsız değişkenler koleksiyondaki hangi öğeye başvurulduğunu benzersiz şekilde tanımlayabilir.
+Dizin oluşturucular, bir üyenin sınıfın dışından bir veri öğesi gibi davranılabileceği, ancak içindeki bir yöntem gibi ele alındığı [Özellikler](properties.md)kavramını genişletir. Dizin oluşturucular, bağımsız değişkenlerin bir öğe kümesini temsil eden özellikte tek bir öğe bulmasına izin verir.

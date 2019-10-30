@@ -1,13 +1,14 @@
 ---
 title: Özellikler
 description: Doğrulama, C# hesaplanan değerler, geç değerlendirme ve özellik değiştirilen bildirimler için özellikler içeren özellikler hakkında bilgi edinin.
+ms.technology: csharp-fundamentals
 ms.date: 04/25/2018
-ms.openlocfilehash: 6638ae74516d7546882c8a380eed9b03ff3d18e9
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: bda8a4f58f71b57248296dd4ba9f9bf4cbed40d4
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69587410"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039755"
 ---
 # <a name="properties"></a>Özellikler
 
@@ -22,13 +23,13 @@ Ancak, alanların aksine özellikler, bir özelliğe erişildiğinde veya atand�
 
 [!code-csharp[Person class with public fields](../../samples/snippets/csharp/properties/Person.cs#1)]
 
-Bir özellik tanımı, bu özelliğin değerini `get` alan `set` ve atayan bir ve erişimcisi için bildirimleri içerir:
+Bir özellik tanımı, bu özelliğin değerini alan ve atayan bir `get` ve `set` erişimcisi için bildirimleri içerir:
 
 [!code-csharp[Person class with public properties](../../samples/snippets/csharp/properties/Person.cs#2)]
 
-Yukarıda gösterilen sözdizimi *Auto özelliği* sözdizimidir. Derleyici, özelliği yedekleyen alan için depolama konumu oluşturur. Derleyici Ayrıca `get` ve `set` erişimcilerinin gövdesini de uygular.
+Yukarıda gösterilen sözdizimi *Auto özelliği* sözdizimidir. Derleyici, özelliği yedekleyen alan için depolama konumu oluşturur. Derleyici Ayrıca `get` ve `set` erişimcileri gövdesini de uygular.
 
-Bazen bir özelliği, türü için varsayılan değer dışında bir değere başlatmalısınız.  C#özelliği için kapanış ayracından sonra bir değer ayarlayarak bunu yapmanızı mümkün. `FirstName` Özelliğin başlangıç değerini, `null`yerine boş dize olacak şekilde tercih edebilirsiniz. Aşağıda gösterildiği gibi belirtmeniz gerekir:
+Bazen bir özelliği, türü için varsayılan değer dışında bir değere başlatmalısınız.  C#özelliği için kapanış ayracından sonra bir değer ayarlayarak bunu yapmanızı mümkün. `FirstName` özelliği için başlangıç değerini `null`yerine boş dize olacak şekilde tercih edebilirsiniz. Aşağıda gösterildiği gibi belirtmeniz gerekir:
 
 [!code-csharp[Person class with properties and initializer](../../samples/snippets/csharp/properties/Person.cs#3)]
 
@@ -44,21 +45,21 @@ Bir özellik uygulamasının tek bir ifade olması halinde, alıcı veya ayarlay
 
 Bu basitleştirilmiş söz dizimi, bu makale boyunca geçerli olan yerlerde kullanılacaktır.
 
-Yukarıda gösterilen özellik tanımı bir okuma-yazma özelliğidir. Set erişimcisindeki `value` anahtar sözcüğe dikkat edin. Erişimcinin her zaman adlı `value`tek bir parametresi vardır. `set` Erişimcinin, özelliğin türüne dönüştürülebilir bir değer döndürmesi gerekir (`string` Bu örnekte). `get`
+Yukarıda gösterilen özellik tanımı bir okuma-yazma özelliğidir. Anahtar kelimesinin set erişimcisinde `value` dikkat edin. `set` erişimcisinin her zaman `value`adlı tek bir parametresi vardır. `get` erişimcisi, özelliğin türüne dönüştürülebilir bir değer döndürmelidir (Bu örnekte`string`).
 
 Söz dizimi temel bilgileri. Çeşitli farklı tasarım deyimlerini destekleyen birçok farklı çeşitliliğe sahiptir. İnceleyelim ve her biri için sözdizimi seçeneklerini öğrenelim.
 
 ## <a name="scenarios"></a>Senaryolar
 
-Yukarıdaki örneklerde, özellik tanımının en basit durumlardan biri gösterildi: doğrulama içermeyen bir okuma-yazma özelliği. `get` Ve`set` Erişimcilerde istediğiniz kodu yazarak birçok farklı senaryo oluşturabilirsiniz.
+Yukarıdaki örneklerde, özellik tanımının en basit durumlardan biri gösterildi: doğrulama içermeyen bir okuma-yazma özelliği. `get` ve `set` erişimcilerine istediğiniz kodu yazarak birçok farklı senaryo oluşturabilirsiniz.
 
 ### <a name="validation"></a>Doğrulama
 
-Bir özellik tarafından temsil edilen değerlerin `set` her zaman geçerli olduğundan emin olmak için erişimciye kod yazabilirsiniz. Örneğin, `Person` sınıf için bir kural, adın boş veya boşluk olamaz. Şöyle yazın:
+Bir özellik tarafından temsil edilen değerlerin her zaman geçerli olduğundan emin olmak için `set` erişimcisine kod yazabilirsiniz. Örneğin, `Person` sınıfı için bir kural, adın boş veya boşluk olamaz. Şöyle yazın:
 
 [!code-csharp[Validating property setters](../../samples/snippets/csharp/properties/Person.cs#6)]
 
-Önceki örnek, Özellik ayarlayıcısı doğrulamasının bir parçası olarak`throw` bir ifade kullanılarak basitleştirilebilir:
+Yukarıdaki örnek, Özellik ayarlayıcısı doğrulamasının parçası olarak bir`throw` ifadesi kullanılarak basitleştirilebilir:
 
 [!code-csharp[Validating property setters](../../samples/snippets/csharp/properties/Person.cs#7)]
 
@@ -75,17 +76,17 @@ Bu söz dizimini, senaryonuza gereken her şeye genişletebilirsiniz. Farklı ö
 ### <a name="read-only"></a>Salt okunurdur
 
 Bu noktaya kadar, gördüğünüze olan tüm özellik tanımlarının ortak erişimcilere sahip okuma/yazma özellikleri vardır. Bu, özellikler için tek geçerli erişilebilirlik değildir.
-Salt okunurdur özellikler oluşturabilir veya set ve Get erişimcilerine farklı erişilebilirlik sağlayabilirsiniz. `Person` Sınıfınızın yalnızca `FirstName` özelliğin değerini bu sınıftaki diğer yöntemlerle değiştirmesini öneririz. Bunun yerine set accessor `private` erişilebilirliği verebilirsiniz: `public`
+Salt okunurdur özellikler oluşturabilir veya set ve Get erişimcilerine farklı erişilebilirlik sağlayabilirsiniz. `Person` sınıfınızın yalnızca, bu sınıftaki diğer yöntemlerden `FirstName` özelliğinin değerini değiştirmeyi etkinleştirdiğini varsayalım. Set erişimcisine `public`yerine erişilebilirlik `private` verebilirsiniz:
 
 [!code-csharp[Using a private setter for a publicly readonly property](../../samples/snippets/csharp/properties/Person.cs#8)]
 
-Artık, `FirstName` özelliğe herhangi bir koddan erişilebilir, ancak yalnızca `Person` sınıftaki diğer koddan atanabilir.
+Artık, `FirstName` özelliğine herhangi bir koddan erişilebilir, ancak yalnızca `Person` sınıfındaki diğer koddan atanabilir.
 
-Küme veya Get erişimcilerine herhangi bir kısıtlayıcı erişim değiştiricisi ekleyebilirsiniz. Bireysel erişimciye yerleştirdiğiniz herhangi bir erişim değiştiricisi, özellik tanımındaki erişim değiştiricisinden daha sınırlı olmalıdır. `FirstName` , Özelliğiolduğu`private`,ancakset erişimcisi olduğu için geçerlidir. `public` `private` Bir`public` erişimcisi olan bir özellik bildiremezsiniz. Özellik bildirimleri de,,, `protected`veya `internal` `private`de `protected internal`olarak bildirilemez.
+Küme veya Get erişimcilerine herhangi bir kısıtlayıcı erişim değiştiricisi ekleyebilirsiniz. Bireysel erişimciye yerleştirdiğiniz herhangi bir erişim değiştiricisi, özellik tanımındaki erişim değiştiricisinden daha sınırlı olmalıdır. `FirstName` özelliği `public`olduğundan, küme erişimcisi `private`olduğundan, yukarıdaki geçerlidir. Bir `public` erişimcisi ile `private` özelliği bildiremezsiniz. Özellik bildirimleri de `protected`, `internal`, `protected internal`veya hatta `private`olarak da yapılandırılabilir.
 
-`get` Erişimciye daha kısıtlayıcı değiştirici yerleştirmek de geçerlidir. Örneğin, bir `public` özelliğine sahip olabilirsiniz, ancak `get` erişimciyi olarak `private`kısıtlayabilirsiniz. Bu senaryo uygulamada nadiren yapılır.
+Ayrıca, `get` erişimcisine daha kısıtlayıcı değiştirici yerleştirmek de geçerlidir. Örneğin, bir `public` özelliğine sahip olabilirsiniz, ancak `get` erişimcisini `private`olarak kısıtlayabilirsiniz. Bu senaryo uygulamada nadiren yapılır.
 
-Ayrıca, bir özellik üzerinde yapılan değişiklikleri yalnızca bir oluşturucuda veya özellik başlatıcısında ayarlanabilmesi için kısıtlayabilirsiniz. `Person` Sınıfı şu şekilde değiştirebilirsiniz:
+Ayrıca, bir özellik üzerinde yapılan değişiklikleri yalnızca bir oluşturucuda veya özellik başlatıcısında ayarlanabilmesi için kısıtlayabilirsiniz. `Person` sınıfını şu şekilde değiştirebilirsiniz:
 
 [!code-csharp[A readonly auto implemented property](../../samples/snippets/csharp/properties/Person.cs#9)]
 
@@ -100,13 +101,13 @@ public class Measurements
 
 ### <a name="computed-properties"></a>Hesaplanan özellikler
 
-Bir özelliğin yalnızca bir üye alanının değerini döndürmesi gerekmez. Hesaplanan bir değer döndüren özellikler oluşturabilirsiniz. İlk ve soyadlarını `Person` birleştirerek hesaplanan tam adı döndürmek için nesneyi genişletelim:
+Bir özelliğin yalnızca bir üye alanının değerini döndürmesi gerekmez. Hesaplanan bir değer döndüren özellikler oluşturabilirsiniz. İlk ve soyadlarını birleştirerek hesaplanan tam adı döndürmek için `Person` nesnesini genişletelim:
 
 [!code-csharp[A computed property](../../samples/snippets/csharp/properties/Person.cs#10)]
 
 Yukarıdaki örnek, tam ad için biçimlendirilen dizeyi oluşturmak üzere [dize ilişkilendirme](./language-reference/tokens/interpolated.md) özelliğini kullanır.
 
-Ayrıca, hesaplanan `FullName` özelliği oluşturmak için daha kısa bir yol sağlayan *Expression-Bodied üyesini*de kullanabilirsiniz:
+Ayrıca, hesaplanan `FullName` özelliğini oluşturmak için daha kısa bir yol sağlayan *Expression-Bodied üyesini*de kullanabilirsiniz:
 
 [!code-csharp[A computed property using an expression bodied member](../../samples/snippets/csharp/properties/Person.cs#11)]
 
@@ -114,21 +115,21 @@ Ayrıca, hesaplanan `FullName` özelliği oluşturmak için daha kısa bir yol s
 
 ### <a name="cached-evaluated-properties"></a>Önbelleğe alınan değerlendirilen Özellikler
 
-Hesaplanan bir özellik kavramını depolama ile karıştırabilir ve *önbelleğe alınmış bir değerlendirilen Özellik*oluşturabilirsiniz.  Örneğin, `FullName` özelliği yalnızca ilk kez erişildiği zaman dize biçimlendirmesi olacak şekilde güncelleştirebilirsiniz:
+Hesaplanan bir özellik kavramını depolama ile karıştırabilir ve *önbelleğe alınmış bir değerlendirilen Özellik*oluşturabilirsiniz.  Örneğin, `FullName` özelliğini, dize biçimlendirmesi yalnızca ilk kez erişildiğinde olacak şekilde güncelleştirebilirsiniz:
 
 [!code-csharp[Caching the value of a computed property](../../samples/snippets/csharp/properties/Person.cs#12)]
 
-Yukarıdaki kod bir hata içeriyor. Kod, `FirstName` ya `LastName` da özelliğinin değerini güncelleştiriyorsa, önceden değerlendirilen `fullName` alan geçersiz olur. `FirstName` Ve özelliğininerişimcilerialanınıyeniden`set`hesaplanacak şekildedeğiştirirsiniz:`LastName` `fullName`
+Yukarıdaki kod bir hata içeriyor. Kod `FirstName` ya da `LastName` özelliğinin değerini güncelleştiriyorsa, önceden değerlendirilen `fullName` alanı geçersizdir. `fullName` alanı yeniden hesaplanabilmesi için `FirstName` ve `LastName` özelliğinin `set` erişimcileri değiştirirsiniz:
 
 [!code-csharp[Invalidating the cache correctly](../../samples/snippets/csharp/properties/Person.cs#13)]
 
-Bu son sürüm, `FullName` özelliği yalnızca gerektiğinde değerlendirir.
+Bu son sürüm `FullName` özelliğini yalnızca gerektiğinde değerlendirir.
 Daha önce hesaplanan sürüm geçerliyse, kullanılır. Başka bir durum değişikliği önceden hesaplanan sürümü geçersiz kılar, yeniden hesaplanır. Bu sınıfı kullanan geliştiricilerin uygulamanın ayrıntılarını bilmeleri gerekmez. Bu iç değişikliklerden hiçbiri kişi nesnesinin kullanımını etkilemez. Bu, bir nesnenin veri üyelerini açığa çıkarmak için özellikleri kullanmanın temel nedenidir.
 
 ### <a name="attaching-attributes-to-auto-implemented-properties"></a>Öznitelikleri otomatik uygulanan özelliklere iliştirme
 
-7,3 ile C# başlayarak, alan öznitelikleri otomatik uygulanan özelliklerde derleyicinin ürettiği yedekleme alanına iliştirilebilir. Örneğin, benzersiz bir tamsayı `Person` `Id` özelliği ekleyen sınıfa bir düzeltme düşünün.
-`Id` Özelliği otomatik uygulanan bir özellik kullanarak yazarsınız, ancak tasarımınız `Id` özelliği kalıcı hale getirmeyi çağırmaz. , <xref:System.NonSerializedAttribute> Yalnızca alanlara eklenebilir, ancak özelliklere eklenebilir. Aşağıdaki örnekte gösterildiği gibi <xref:System.NonSerializedAttribute> , özniteliğinde `field:` tanımlayıcısını kullanarak `Id` özelliği için yedekleme alanına ekleyebilirsiniz:
+7,3 ile C# başlayarak, alan öznitelikleri otomatik uygulanan özelliklerde derleyicinin ürettiği yedekleme alanına iliştirilebilir. Örneğin, benzersiz bir tamsayı `Id` özelliği ekleyen `Person` sınıfına bir düzeltme düşünün.
+Otomatik uygulanan bir özellik kullanarak`Id` özelliğini yazarsınız, ancak tasarımınız `Id` özelliğini kalıcı hale getirmeyi çağırmıyor. <xref:System.NonSerializedAttribute>, yalnızca alanlara eklenebilir, ancak özelliklere eklenebilir. Aşağıdaki örnekte gösterildiği gibi, özniteliğinde `field:` belirticisini kullanarak `Id` özelliğinin yedekleme alanına <xref:System.NonSerializedAttribute> ekleyebilirsiniz:
 
 [!code-csharp[Attaching attributes to a backing field](../../samples/snippets/csharp/properties/Person.cs#14)]
 
@@ -136,14 +137,14 @@ Bu teknik, otomatik uygulanan özelliğindeki yedekleme alanına eklediğiniz t�
 
 ### <a name="implementing-inotifypropertychanged"></a>INotifyPropertyChanged uygulama
 
-Özellik erişimcisine kod yazmanız gereken son senaryo, veri bağlama istemcilerine bir değerin değiştiğini bildirmek için <xref:System.ComponentModel.INotifyPropertyChanged> kullanılan arabirimi desteklemedir. Bir özelliğin değeri değiştiğinde, nesne değişikliği belirtmek için <xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged?displayProperty=nameWithType> olayı harekete geçirir. Veri bağlama kitaplıkları, sırasıyla, bu değişikliğe göre görüntüleme öğelerini güncelleştirir. Aşağıdaki kod, bu kişi sınıfının `INotifyPropertyChanged` `FirstName` özelliği için nasıl uygulanacağını gösterir.
+Bir özellik erişimcisine kod yazmanız gereken son senaryo, veri bağlama istemcilerine bir değerin değiştiğini bildirmek için kullanılan <xref:System.ComponentModel.INotifyPropertyChanged> arabirimini desteklemelidir. Bir özelliğin değeri değiştiğinde, nesne değişikliği belirtmek için <xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged?displayProperty=nameWithType> olayını oluşturur. Veri bağlama kitaplıkları, sırasıyla, bu değişikliğe göre görüntüleme öğelerini güncelleştirir. Aşağıdaki kod, bu kişi sınıfının `FirstName` özelliği için `INotifyPropertyChanged` nasıl uygulanacağını gösterir.
 
 [!code-csharp[invalidating the cache correctly](../../samples/snippets/csharp/properties/Person.cs#15)]
 
-İşleci null koşullu işleç olarak adlandırılır. `?.` İşlecin sağ tarafını değerlendirmeden önce null başvurusunu denetler. Nihai sonuç, `PropertyChanged` olay üzerinde abone olmadığında, olayı yürütmek için kodun yürütülmeyeceğini unutmayın. Bu durumda bu onay `NullReferenceException` olmadan bir oluşturur. Daha fazla bilgi için bkz. [`events`](events-overview.md). Bu örnek ayrıca Özellik adı sembolünden metin gösterimine dönüştürmek için New `nameof` işlecini de kullanır.
-Kullanmak `nameof` , özelliğin adını yanlış yazmış olduğunuz hataları azaltabilir.
+`?.` işlecine *null Conditional işleci*denir. İşlecin sağ tarafını değerlendirmeden önce null başvurusunu denetler. Nihai sonuç, `PropertyChanged` olayına abone olmadığında, olayı yükseltmek için kodun yürütülmeyeceğini unutmayın. Bu durumda bu denetim olmadan bir `NullReferenceException` oluşturur. Daha fazla bilgi için bkz. [`events`](events-overview.md). Bu örnek ayrıca, özellik adı sembolünden metin gösterimine dönüştürmek için yeni `nameof` işlecini kullanır.
+`nameof` kullanmak özelliğin adını yanlış yazmış olduğunuz hataları azaltabilir.
 
-Bu durumda, <xref:System.ComponentModel.INotifyPropertyChanged> uygulamanız gereken senaryoları desteklemek için Erişimcilerde kod yazabileceğiniz bir örnek örneğidir.
+Yeniden <xref:System.ComponentModel.INotifyPropertyChanged> uygulamak, gereken senaryoları desteklemek için Erişimcilerde kod yazabileceğiniz bir durum örneğidir.
 
 ## <a name="summing-up"></a>Toplam
 

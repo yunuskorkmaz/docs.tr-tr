@@ -1,5 +1,5 @@
 ---
-title: Karakterleri kırpma ve. NET'te dizelerden kaldırma
+title: .NET 'teki Dizelerdeki karakterleri kırpma ve kaldırma
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -17,75 +17,81 @@ helpviewer_keywords:
 ms.assetid: ab248dab-70d4-4413-81c6-542d153fd195
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1d13d4e115caa636e5d760b65bc98e195490f911
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c694a6792168f37e1f134cf965658e8a058e240a
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61965171"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73037869"
 ---
-# <a name="trimming-and-removing-characters-from-strings-in-net"></a>Karakterleri kırpma ve. NET'te dizelerden kaldırma
-Kelimeler bir cümle ayrıştırma ise, word'ün her iki ucunda boşluk (boşluk olarak da bilinir) sahip sözcük çıkabilir. Bu durumda, kırpma metotlarından birini kullanabilirsiniz **System.String** dizedeki belirtilen herhangi bir sayıda boşluk veya diğer karakterler kaldırmak için sınıf. Aşağıdaki tabloda kullanılabilir kesim yöntemleri açıklar.  
+# <a name="trimming-and-removing-characters-from-strings-in-net"></a>.NET 'teki Dizelerdeki karakterleri kırpma ve kaldırma
+Bir tümceyi tek tek sözcüklere ayrıştırdıysanız, sözcüğün her iki ucunda da boşluk olan (boşluk da denir) sözcüklerden oluşan sözcüklerle karşılaşabilirsiniz. Bu durumda, dizedeki belirli bir konumdan herhangi bir sayıda boşluğu veya diğer karakteri kaldırmak için **System. String** sınıfındaki trim yöntemlerinden birini kullanabilirsiniz. Aşağıdaki tabloda kullanılabilir kırpma yöntemleri açıklanmaktadır.  
   
 |Yöntem adı|Bir yönetim grubuna bağlanmak veya bağlı bir yönetim grubunun özelliklerini düzenlemek için Yönetim çalışma alanında|  
 |-----------------|---------|  
-|<xref:System.String.Trim%2A?displayProperty=nameWithType>|Boşluk veya bir dizenin sonunda ve başındaki karakter dizisi içinde belirtilen karakterleri kaldırır.|  
-|<xref:System.String.TrimEnd%2A?displayProperty=nameWithType>|Bir dizenin sonuna karakterler dizisi belirtilen karakterleri kaldırır.|  
-|<xref:System.String.TrimStart%2A?displayProperty=nameWithType>|Bir dize başından itibaren karakter belirtilen karakterleri kaldırır.|  
-|<xref:System.String.Remove%2A?displayProperty=nameWithType>|Bir dizedeki bir belirtilen dizine belirtilen sayıda karakteri kaldırır.|  
+|<xref:System.String.Trim%2A?displayProperty=nameWithType>|Bir dizenin başındaki ve sonundaki karakter dizisinde belirtilen boşluk veya karakterleri kaldırır.|  
+|<xref:System.String.TrimEnd%2A?displayProperty=nameWithType>|Bir dizenin sonundaki karakter dizisinde belirtilen karakterleri kaldırır.|  
+|<xref:System.String.TrimStart%2A?displayProperty=nameWithType>|Bir karakter dizisinde belirtilen karakterleri dizenin başından kaldırır.|  
+|<xref:System.String.Remove%2A?displayProperty=nameWithType>|Bir dizedeki belirtilen dizin konumundan belirtilen sayıda karakteri kaldırır.|  
   
-## <a name="trim"></a>Kırpma  
- Kullanarak boşluk her iki ucunda da bir dize kolayca kaldırabilirsiniz <xref:System.String.Trim%2A?displayProperty=nameWithType> yöntemi, aşağıdaki örnekte gösterildiği gibi.  
+## <a name="trim"></a>Kırpma
+
+ Aşağıdaki örnekte gösterildiği gibi, <xref:System.String.Trim%2A?displayProperty=nameWithType> yöntemini kullanarak, bir dizenin her iki ucunda da kolayca beyaz boşluk çıkarabilirsiniz.  
   
  [!code-cpp[Conceptual.String.BasicOps#17](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.string.basicops/cpp/trimming.cpp#17)]
  [!code-csharp[Conceptual.String.BasicOps#17](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.basicops/cs/trimming.cs#17)]
  [!code-vb[Conceptual.String.BasicOps#17](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.basicops/vb/trimming.vb#17)]  
   
- Ayrıca, bir karakter dizisinden bir dizenin sonunda ve başındaki belirttiğiniz karakter kaldırabilirsiniz. Aşağıdaki örnek, boşluk karakteri, nokta ve yıldız kaldırır.  
+ Bir dizenin başındaki ve sonundaki bir karakter dizisinde belirttiğiniz karakterleri de kaldırabilirsiniz. Aşağıdaki örnek boşluk karakterlerini, dönemleri ve yıldız işaretlerini kaldırır.  
   
  [!code-csharp[Conceptual.String.BasicOps#22](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.basicops/cs/trim2.cs#22)]
  [!code-vb[Conceptual.String.BasicOps#22](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.basicops/vb/trim2.vb#22)]  
   
-## <a name="trimend"></a>TrimEnd  
- **String.TrimEnd** yöntemi yeni bir dize nesnesi oluşturma, bir dizenin sonundan karakterleri kaldırır. Bir karakter dizisini kaldırılacak karakter belirtmek için bu yönteme geçirilir. Karakter dizisinde öğelerin sırasını kesme işlemi etkilemez. Trim dizide belirtilmemiş bir karakter bulunduğunda durur.  
+## <a name="trimend"></a>TrimEnd
+
+ **String. TrimEnd** yöntemi bir dizenin sonundaki karakterleri kaldırır ve yeni bir dize nesnesi oluşturur. Kaldırılacak karakterleri belirtmek için bu yönteme bir karakter dizisi geçirilir. Karakter dizisindeki öğelerin sırası, kırpma işlemini etkilemez. Dizide belirtilen bir karakter bulunduğunda kırpma durdu.  
   
- Aşağıdaki örnek, bir dize kullanarak, son harf kaldırır **TrimEnd** yöntemi. Bu örnekte, konumunu `'r'` karakter ve `'W'` karakteri ters dizideki karakterlerin sırası önemli değildir göstermek için. Bu kod, son sözcüğü kaldırır fark `MyString` artı ilk parçası.  
+ Aşağıdaki örnek, **TrimEnd** yöntemini kullanarak bir dizenin son harflerini kaldırır. Bu örnekte, dizideki karakterlerin sırasının ne olduğunu göstermek için `'r'` karakterinin ve `'W'` karakterin konumu tersine çevrilir. Bu kodun `MyString` son sözcüğünü ve ilk öğesinin bir kısmını kaldırdığına dikkat edin.  
   
  [!code-cpp[Conceptual.String.BasicOps#18](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.string.basicops/cpp/trimming.cpp#18)]
  [!code-csharp[Conceptual.String.BasicOps#18](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.basicops/cs/trimming.cs#18)]
  [!code-vb[Conceptual.String.BasicOps#18](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.basicops/vb/trimming.vb#18)]  
   
- Bu kod görüntüler `He` konsola.  
+ Bu kod konsola `He` görüntüler.  
   
- Aşağıdaki örneği kullanarak bir dize olan son sözcüğü kaldırır **TrimEnd** yöntemi. Bu kodda virgül sözcüğünü izleyen `Hello` ve virgül içerecek şekilde kırpmanıza karakter dizisinde belirtilmediğinden, kırpma virgülle biter.  
+ Aşağıdaki örnek, **TrimEnd** yöntemini kullanarak bir dizenin son sözcüğünü kaldırır. Bu kodda, bir virgül `Hello` kelimedir ve bu sayı kırpılacak karakter dizisinde, kırpma, virgülden sona erer.  
   
  [!code-cpp[Conceptual.String.BasicOps#19](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.string.basicops/cpp/trimming.cpp#19)]
  [!code-csharp[Conceptual.String.BasicOps#19](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.basicops/cs/trimming.cs#19)]
  [!code-vb[Conceptual.String.BasicOps#19](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.basicops/vb/trimming.vb#19)]  
   
- Bu kod görüntüler `Hello,` konsola.  
+ Bu kod konsola `Hello,` görüntüler.  
   
-## <a name="trimstart"></a>TrimStart  
- **String.TrimStart** yöntemi benzer **String.TrimEnd** yöntemi dışında olan mevcut bir dize nesnesi başından itibaren karakter kaldırarak yeni bir dize oluşturur. Karakter dizisi geçirilir **TrimStart** kaldırılacak karakter belirtmek için yöntemi. Olduğu gibi **TrimEnd** yöntemi, karakter dizideki öğelerin sırasını kesme işlemi etkilemez. Trim dizide belirtilmemiş bir karakter bulunduğunda durur.  
+## <a name="trimstart"></a>TrimStart
+
+ **String. Kırosstart** yöntemi **String. TrimEnd** yöntemine benzer, ancak karakterleri varolan bir dize nesnesinin başından kaldırarak yeni bir dize oluşturur. Kaldırılacak karakterleri belirtmek için, bir karakter dizisi **kırılımı başlangıç** yöntemine geçirilir. **TrimEnd** yönteminde olduğu gibi, karakter dizisindeki öğelerin sırası trim işlemini etkilemez. Dizide belirtilen bir karakter bulunduğunda kırpma durdu.  
   
- Aşağıdaki örnek bir dizenin ilk sözcük kaldırır. Bu örnekte, konumunu `'l'` karakter ve `'H'` karakteri ters dizideki karakterlerin sırası önemli değildir göstermek için.  
+ Aşağıdaki örnek bir dizenin ilk sözcüğünü kaldırır. Bu örnekte, dizideki karakterlerin sırasının ne olduğunu göstermek için `'l'` karakterinin ve `'H'` karakterin konumu tersine çevrilir.  
   
  [!code-cpp[Conceptual.String.BasicOps#20](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.string.basicops/cpp/trimming.cpp#20)]
  [!code-csharp[Conceptual.String.BasicOps#20](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.basicops/cs/trimming.cs#20)]
  [!code-vb[Conceptual.String.BasicOps#20](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.basicops/vb/trimming.vb#20)]  
   
- Bu kod görüntüler `World!` konsola.  
+ Bu kod konsola `World!` görüntüler.  
   
-## <a name="remove"></a>Kaldır  
- <xref:System.String.Remove%2A?displayProperty=nameWithType> Yöntemi, belirtilen sayıda varolan bir dizeyi, belirtilen konumda başlayan karakteri kaldırır. Bu yöntem, sıfır tabanlı dizin varsayar.  
+## <a name="remove"></a>Kaldır 
+
+ <xref:System.String.Remove%2A?displayProperty=nameWithType> yöntemi, varolan bir dizedeki belirli bir konumda başlayan belirtilen sayıda karakteri kaldırır. Bu yöntem sıfır tabanlı bir dizini varsayar.  
   
- Aşağıdaki örnek, dizenin bir sıfır tabanlı dizini beş konumunda başlayan bir dizedeki on karakterlerini kaldırır.  
+ Aşağıdaki örnek, dizenin sıfır tabanlı dizininin beş konumunda başlayan bir dizeden on karakteri kaldırır.  
   
  [!code-cpp[Conceptual.String.BasicOps#21](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.string.basicops/cpp/trimming.cpp#21)]
  [!code-csharp[Conceptual.String.BasicOps#21](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.basicops/cs/trimming.cs#21)]
  [!code-vb[Conceptual.String.BasicOps#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.basicops/vb/trimming.vb#21)]  
   
- Ayrıca belirtilen karakter veya alt dizenin bir dizeden çağırarak kaldırabilirsiniz <xref:System.String.Replace%28System.String%2CSystem.String%29?displayProperty=nameWithType> yöntemi ve boş bir dize belirtme (<xref:System.String.Empty?displayProperty=nameWithType>) yerine. Aşağıdaki örnek, bir dizedeki tüm virgül kaldırır.  
+## <a name="replace"></a>değiştirin
+
+ Ayrıca, <xref:System.String.Replace%28System.String%2CSystem.String%29?displayProperty=nameWithType> yöntemini çağırarak ve değiştirme olarak boş bir dize (<xref:System.String.Empty?displayProperty=nameWithType>) belirterek, bir dizeden belirtilen bir karakteri veya alt dizeyi kaldırabilirsiniz. Aşağıdaki örnek bir dizeden tüm virgülleri kaldırır.  
   
  [!code-csharp[Conceptual.String.BasicOps#23](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.basicops/cs/replace1.cs#23)]
  [!code-vb[Conceptual.String.BasicOps#23](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.basicops/vb/replace1.vb#23)]  

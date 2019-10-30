@@ -1,28 +1,29 @@
 ---
-title: Kesin tür belirtilmiş temsilciler
-description: Özel türler temsilciler gerektiren bir özellik oluştururken bildirmek için genel temsilci türleriyle kullanmayı öğrenin.
+title: Kesin Tür Belirtilmiş Temsilciler
+description: Temsilci gerektiren bir özellik oluştururken özel türler bildirmek için genel temsilci türlerini nasıl kullanacağınızı öğrenin.
 ms.date: 06/20/2016
+ms.technology: csharp-fundamentals
 ms.assetid: 564a683d-352b-4e57-8bac-b466529daf6b
-ms.openlocfilehash: 2e4cc1c7bfa0aaa90f3aaefa0da64c5486a9d10f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: efdbef39d0e6bf2f07cde2c9621cec173e921752
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61646666"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73037356"
 ---
-# <a name="strongly-typed-delegates"></a>Kesin tür belirtilmiş temsilciler
+# <a name="strongly-typed-delegates"></a>Kesin Tür Belirtilmiş Temsilciler
 
-[Önceki](delegate-class.md)
+[Öncekini](delegate-class.md)
 
-Önceki makalede türleri kullanarak belirli bir temsilci oluşturmak, gördüğünüz `delegate` anahtar sözcüğü. 
+Önceki makalede, `delegate` anahtar sözcüğünü kullanarak belirli temsilci türleri oluşturduğunuz gördünüz. 
 
-Soyut temsilci sınıfı gevşek eşleştirme ve çağırma için altyapı sağlar. Somut temsilci türleri benimsemenin ve tür güvenliği için bir temsilci nesnesini çağırma listesine eklenen yöntemleri için zorlama göre çok daha kullanışlı olur. Kullanırken `delegate` anahtar sözcüğü ve bir somut bir temsilci türü tanımlamak, derleyici bu yöntemleri oluşturur.
+Soyut temsilci sınıfı, gevşek bağlantısı ve çağırma için altyapıyı sağlar. Somut temsilci türleri, bir temsilci nesnesi için çağırma listesine eklenen yöntemler için tür güvenliğini benimseme ve zorlama açısından çok daha yararlı hale gelir. `delegate` anahtar sözcüğünü kullandığınızda ve somut bir temsilci türü tanımladığınızda, derleyici bu yöntemleri oluşturur.
 
-Uygulamada, bu farklı yöntem imzası ihtiyaç duyduğunuzda, yeni temsilci türlerini oluşturmak için yol açar. Bir süre sonra bu iş sıkıcı. Her yeni özellik, yeni temsilci türleri gerektirir.
+Uygulamada, bu, farklı bir yöntem imzasına ihtiyacınız olduğunda yeni temsilci türleri oluşturulmasına neden olur. Bu iş bir süre sonra sıkıcı olabilir. Her yeni özellik yeni temsilci türleri gerektirir.
 
-Ne bu gerekli değildir. .NET Core framework temsilci türleri olduğunda yeniden kullanabileceğiniz çeşitli türleri içerir. Bunlar [genel](programming-guide/generics/index.md) yeni yöntem bildirimleri gerektiğinde özelleştirmeleri bildirebilirsiniz şekilde tanımlar. 
+Ktam, bu gerekli değildir. .NET Core Framework, temsilci türlerine ihtiyacınız olduğunda yeniden kullanabileceğiniz çeşitli türler içerir. Bunlar, yeni yöntem bildirimlerine ihtiyacınız olduğunda özelleştirmeler bildirebilmeniz için [genel](programming-guide/generics/index.md) tanımlardır. 
 
-Bu türlerinin ilki <xref:System.Action> türü ve çeşitli kullanımları tercih edilebilir:
+Bu türlerin ilki <xref:System.Action> türüdür ve çeşitli çeşitlerdir:
 
 ```csharp
 public delegate void Action();
@@ -31,14 +32,14 @@ public delegate void Action<in T1, in T2>(T1 arg1, T2 arg2);
 // Other variations removed for brevity.
 ```
 
-`in` Makalede Kovaryans genel tür bağımsız değişkeni değiştiricisi alınmıştır.
+Genel tür bağımsız değişkeninde `in` değiştirici, Kovaryans hakkındaki makalede ele alınmıştır.
 
-Çeşidi vardır `Action` gibi en fazla 16 bağımsız değişkenleri içeren bir temsilci <xref:System.Action%6016>.
-Bu tanımları temsilci değişkenin her biri için farklı genel bağımsız değişkenleri kullanmak önemlidir: Bu, en yüksek esnekliği sağlar. Yöntem bağımsız değişkenleri olmaması, ancak olabilir, aynı türde.
+<xref:System.Action%6016>gibi 16 ' ya kadar bağımsız değişken içeren `Action` temsilcisinin çeşitlemeleri vardır.
+Bu tanımların her bir temsilci bağımsız değişkeni için farklı genel bağımsız değişkenler kullanması önemlidir: Bu, size en fazla esneklik sağlar. Yöntem bağımsız değişkenlerinin aynı olması gerekir, ancak aynı türde olabilir.
 
-Birini `Action` türleri için dönüş türü void olan herhangi bir temsilci türü.
+Void dönüş türüne sahip herhangi bir temsilci türü için `Action` türlerinden birini kullanın.
 
-Framework, dönüş değerleri temsilci türleri için kullanabileceğiniz çeşitli genel temsilci türleriyle de içerir:
+Framework Ayrıca değer döndüren temsilci türleri için kullanabileceğiniz çeşitli genel temsilci türleri içerir:
 
 ```csharp
 public delegate TResult Func<out TResult>();
@@ -47,34 +48,34 @@ public delegate TResult Func<in T1, in T2, out TResult>(T1 arg1, T2 arg2);
 // Other variations removed for brevity
 ```
 
-`out` Sonucu genel tür bağımsız değişkeni değiştiricisi Kovaryans makalede ele alınmaktadır.
+Sonuç genel tür bağımsız değişkeninde `out` değiştirici, Kovaryans hakkındaki makalede ele alınmıştır.
 
-Çeşidi vardır `Func` gibi en fazla 16 giriş bağımsız değişkeni ile temsilci <xref:System.Func%6017>.
-Sonuç türü her zaman son tür parametresinde tüm olan `Func` bildirimleri, kural tarafından.
+<xref:System.Func%6017>gibi 16 ' ya kadar giriş bağımsız değişkeni olan `Func` temsilcisinin çeşitlemeleri vardır.
+Sonucun türü her zaman kuralına göre tüm `Func` bildirimlerinde son tür parametresidir.
 
-Birini `Func` türleri için bir değer döndüren bir temsilci türü.
+Bir değer döndüren herhangi bir temsilci türü için `Func` türlerinden birini kullanın.
 
-Var. Ayrıca özelleştirilmiş <xref:System.Predicate%601> 
-bir test üzerinde tek bir değer döndüren bir temsilci için şunu yazın:
+Ayrıca özelleştirilmiş bir <xref:System.Predicate%601> 
+tek bir değer üzerinde bir test döndüren temsilcinin türü:
 
 ```csharp
 public delegate bool Predicate<in T>(T obj);
 ```
 
-Sizin için değiştiğini görebilirsiniz `Predicate` türü, yapısal olarak eşdeğer `Func` türü mevcut örneğin:
+Herhangi bir `Predicate` türü için yapısal olarak eşdeğer `Func` türünün var olduğunu fark edebilirsiniz:
 
 ```csharp
 Func<string, bool> TestForString;
 Predicate<string> AnotherTestForString;
 ```
 
-Bu iki tür eşdeğerdir düşünebilirsiniz. Değiller.
-Bu iki değişken birbirinin yerine kullanılamaz. Bir değişken, bir tür diğer türden atanamaz. C# Tür sistemi yapısı tanımlanmış türlerinin adlarını kullanır.
+Bu iki tür denk olduğunu düşünebilirsiniz. Bunlar değildir.
+Bu iki değişken birbirlerinin yerine kullanılamaz. Bir tür değişkenine diğer tür atanamaz. C# Tür sistemi, yapıyı değil, tanımlı türlerin adlarını kullanır.
 
-.NET Core kitaplığı'nda tanımları herhangi bir yeni özellik için yeni bir temsilci türü tanımlayan gerekmez anlamına Bu temsilci türü temsilciler gerektiren oluşturun. Bu genel tanımları tüm temsilci türleri çoğu durumlarda ihtiyacınız sağlamanız gerekir. Yalnızca gerekli tür parametreleri ile şu türlerden birinde örneği oluşturabilir. Genel hale getirilebilir algoritmaları söz konusu olduğunda, bu temsilcileri genel türleri olarak kullanılabilir. 
+.NET Core kitaplığındaki tüm bu temsilci türü tanımları, oluşturduğunuz ve temsilci gerektiren yeni bir özellik için yeni bir temsilci türü tanımlamanız gerekmeyen anlamına gelir. Bu genel tanımlar çoğu durumda ihtiyacınız olan tüm temsilci türlerini sağlamalıdır. Gerekli tür parametreleriyle bu türlerden birini basitçe örnekleyebilirsiniz. Genel hale getirilebilir algoritmalar söz konusu olduğunda, bu Temsilciler genel türler olarak kullanılabilir. 
 
-Bu zamandan tasarruf edin ve temsilciler ile çalışmak için oluşturmanız gereken yeni türleri sayısını en aza indirin.
+Bu süre zamandan tasarruf etmelidir ve temsilcilerle çalışmak için oluşturmanız gereken yeni tür sayısını en aza indirir.
 
-Sonraki makalede, temsilciler uygulamada çalışmaya yönelik birçok ortak deseni görürsünüz.
+Sonraki makalede, uygulama ortamında temsilcilerle çalışmaya yönelik birkaç ortak desen görürsünüz.
 
 [Next](delegates-patterns.md)

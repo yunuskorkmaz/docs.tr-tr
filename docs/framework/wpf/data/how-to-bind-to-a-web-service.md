@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Web service binding [WPF]
 - data binding [WPF], Web service
 ms.assetid: 77e2d373-69ba-4cbd-b6f5-2c83c38fc98b
-ms.openlocfilehash: 72638101b73e6b43fa225885b2e1f27d87b22826
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: d752f4815de16daa466302881116e80aceec6edf
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920139"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040903"
 ---
 # <a name="how-to-bind-to-a-web-service"></a>Nasıl yapılır: Web Hizmetine Bağlama
 Bu örnek, Web hizmeti yöntem çağrıları tarafından döndürülen nesnelere nasıl bağlanılacağını gösterir.  
@@ -32,18 +32,18 @@ Bu örnek, Web hizmeti yöntem çağrıları tarafından döndürülen nesnelere
   
 4. **Git** ' e ve ardından **Başvuru Ekle**' ye basın.  
   
- Ardından, Web hizmeti yöntemini çağırır ve uygun denetimin veya pencerenin <xref:System.Windows.FrameworkElement.DataContext%2A> döndürülen nesneye ayarlarsınız. MTPS hizmetinin **GetContent** yöntemi **getContentRequest** nesnesine bir başvuru alır. Bu nedenle, aşağıdaki örnek önce bir istek nesnesi ayarlar:  
+ Ardından, Web hizmeti yöntemini çağırır ve uygun denetimin veya pencerenin <xref:System.Windows.FrameworkElement.DataContext%2A> döndürülen nesneye ayarlarsınız. MTPS hizmetinin `GetContent` yöntemi `getContentRequest` nesnesine bir başvuru alır. Bu nedenle, aşağıdaki örnek önce bir istek nesnesi ayarlar:  
   
  [!code-csharp[BindToWebService#Namespace](~/samples/snippets/csharp/VS_Snippets_Wpf/BindToWebService/CSharp/Window1.xaml.cs#namespace)]
  [!code-vb[BindToWebService#Namespace](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BindToWebService/VisualBasic/Window1.xaml.vb#namespace)]  
 [!code-csharp[BindToWebService#WebServiceCall](~/samples/snippets/csharp/VS_Snippets_Wpf/BindToWebService/CSharp/Window1.xaml.cs#webservicecall)]
 [!code-vb[BindToWebService#WebServiceCall](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BindToWebService/VisualBasic/Window1.xaml.vb#webservicecall)]  
   
- <xref:System.Windows.FrameworkElement.DataContext%2A> ayarlandıktan sonra, <xref:System.Windows.FrameworkElement.DataContext%2A> ayarlandığı nesnenin özelliklerine bağlar oluşturabilirsiniz... Bu örnekte <xref:System.Windows.FrameworkElement.DataContext%2A>, **GetContent** metodu tarafından döndürülen **getContentResponse** nesnesine ayarlanır. Aşağıdaki örnekte <xref:System.Windows.Controls.ItemsControl> ' a bağlanır ve **getContentResponse**' un **availableversionsandlocale** değerlerini görüntüler.  
+ <xref:System.Windows.FrameworkElement.DataContext%2A> ayarlandıktan sonra, <xref:System.Windows.FrameworkElement.DataContext%2A> ayarlandığı nesnenin özelliklerine bağlar oluşturabilirsiniz... Bu örnekte <xref:System.Windows.FrameworkElement.DataContext%2A>, `GetContent` yöntemi tarafından döndürülen `getContentResponse` nesnesine ayarlanır. Aşağıdaki örnekte <xref:System.Windows.Controls.ItemsControl> ' a bağlanır ve `getContentResponse``availableVersionsAndLocales` `locale` değerlerini görüntüler.  
   
  [!code-xaml[BindToWebService#Binding](~/samples/snippets/csharp/VS_Snippets_Wpf/BindToWebService/CSharp/Window1.xaml#binding)]  
   
- **GetContentResponse**yapısı hakkında daha fazla bilgi için bkz. [içerik hizmeti belgeleri](https://services.msdn.microsoft.com/ContentServices/ContentService.asmx).  
+ `getContentResponse`yapısı hakkında daha fazla bilgi için bkz. [Içerik hizmeti belgeleri](https://services.msdn.microsoft.com/ContentServices/ContentService.asmx).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -2,13 +2,14 @@
 title: Dizinler ve aralıklar kullanarak veri aralıklarını keşfet
 description: Bu gelişmiş öğreticide, sıralı bir veri kümesinin dilimlerini incelemek üzere dizinler ve aralıklar kullanarak verileri araştırmanızı öğretilir.
 ms.date: 09/20/2019
+ms.technology: csharp-fundamentals
 ms.custom: mvc
-ms.openlocfilehash: 1be144560d2b20bafc66cd68de0735e6dc7f0124
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: bbf3f257db9079c4f69f25c9ea08e7711b5ea04b
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71699932"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039669"
 ---
 # <a name="indices-and-ranges"></a>Dizinler ve aralıklar
 
@@ -20,18 +21,18 @@ Bu öğreticide, aşağıdakileri nasıl yapacağınızı öğreneceksiniz:
 >
 > - Bir dizideki aralıklar için söz dizimini kullanın.
 > - Her bir sıranın başlangıcı ve bitişi için tasarım kararlarını anlayın.
-> - @No__t-0 ve <xref:System.Range> türleri için senaryolar öğrenin.
+> - <xref:System.Index> ve <xref:System.Range> türleri için senaryolar öğrenin.
 
 ## <a name="language-support-for-indices-and-ranges"></a>Dizinler ve aralıklar için dil desteği
 
 Bu dil desteği iki yeni türe ve iki yeni işleçlere dayanır:
 
 - <xref:System.Index?displayProperty=nameWithType> bir dizinin bir dizinini temsil eder.
-- Bir dizinin bir sıranın sonuna göreli olduğunu belirten-0 @no__t bitiş işlecinden dizin.
+- Bitiş işlecinden Dizin `^`, bir dizinin bir dizinin sonuna göre olduğunu belirtir.
 - <xref:System.Range?displayProperty=nameWithType> bir dizinin alt aralığını temsil eder.
 - Aralık işleci `..`, bir aralığın işlenenleri olarak başlangıcını ve sonunu belirtir.
 
-Dizin kurallarıyla başlayalım. Bir dizi @no__t düşünün-0. @No__t-0 dizini, `sequence[0]` ile aynıdır. @No__t-0 dizini, `sequence[sequence.Length]` ile aynıdır. @No__t-0 ' ın, `sequence[sequence.Length]` olduğu gibi bir özel durum oluşturmadığını unutmayın. @No__t-0 olan herhangi bir sayı için, `^n` dizini `sequence[sequence.Length - n]` ile aynıdır.
+Dizin kurallarıyla başlayalım. Dizi `sequence` değerlendirin. `0` Dizin `sequence[0]`ile aynıdır. `^0` Dizin `sequence[sequence.Length]`ile aynıdır. `sequence[^0]`, `sequence[sequence.Length]` olduğu gibi bir özel durum oluşturur. Herhangi bir sayı `n`için Dizin `^n` `sequence[sequence.Length - n]`ile aynıdır.
 
 ```csharp
 string[] words = new string[]
@@ -53,13 +54,13 @@ Son kelimeyi `^1` diziniyle alabilirsiniz. Başlatmanın altına aşağıdaki ko
 
 [!code-csharp[LastIndex](~/samples/csharp/tutorials/RangesIndexes/IndicesAndRanges.cs#IndicesAndRanges_LastIndex)]
 
-Aralık, bir aralığın *başlangıcını* ve *sonunu* belirtir. Aralıklar dışlamalı, yani *bitiş* aralığa dahil değildir. @No__t-0 aralığı tüm aralığı temsil eder, tıpkı `[0..sequence.Length]` tüm aralığı temsil eder. 
+Aralık, bir aralığın *başlangıcını* ve *sonunu* belirtir. Aralıklar dışlamalı, yani *bitiş* aralığa dahil değildir. Aralık `[0..^0]`, tüm aralığı temsil eden `[0..sequence.Length]` aralığını temsil eder. 
 
-Aşağıdaki kod, "hızlı", "kahverengi" ve "Fox" sözcüklerinin bulunduğu bir alt Aralık oluşturur. @No__t-0 ile `words[3]` arasında içerir. @No__t-0 öğesi Aralık içinde değil. Aşağıdaki kodu aynı yönteme ekleyin. Etkileşimli pencerenin alt kısmına kopyalayıp yapıştırın.
+Aşağıdaki kod, "hızlı", "kahverengi" ve "Fox" sözcüklerinin bulunduğu bir alt Aralık oluşturur. `words[3]`üzerinden `words[1]` içerir. Öğe `words[4]` Aralık içinde değil. Aşağıdaki kodu aynı yönteme ekleyin. Etkileşimli pencerenin alt kısmına kopyalayıp yapıştırın.
 
 [!code-csharp[Range](~/samples/csharp/tutorials/RangesIndexes/IndicesAndRanges.cs#IndicesAndRanges_Range)]
 
-Aşağıdaki kod, "Lazy" ve "köpek" ile bir alt Aralık oluşturur. @No__t-0 ve `words[^1]` ' i içerir. @No__t-0 bitiş dizini dahil değildir. Aşağıdaki kodu da ekleyin:
+Aşağıdaki kod, "Lazy" ve "köpek" ile bir alt Aralık oluşturur. `words[^2]` ve `words[^1]`içerir. Son dizin `words[^0]` dahil değildir. Aşağıdaki kodu da ekleyin:
 
 [!code-csharp[LastRange](~/samples/csharp/tutorials/RangesIndexes/IndicesAndRanges.cs#IndicesAndRanges_LastRange)]
 
@@ -71,21 +72,21 @@ Ayrıca, aralıkları veya dizinleri değişken olarak da bildirebilirsiniz. De�
 
 [!code-csharp[IndexRangeTypes](~/samples/csharp/tutorials/RangesIndexes/IndicesAndRanges.cs#IndicesAndRanges_RangeIndexTypes)]
 
-Aşağıdaki örnekte, bu seçimlerin pek çok nedeni gösterilmektedir. Farklı birleşimler denemek için `x`, `y` ve `z` ' yi değiştirin. Denemeler yaparken `x` ' ı `y` ' den küçük olan değerleri kullanın ve geçerli birleşimler için `y` ' den az @no__t. Aşağıdaki kodu yeni bir yöntemine ekleyin. Farklı birleşimler deneyin:
+Aşağıdaki örnekte, bu seçimlerin pek çok nedeni gösterilmektedir. Farklı birleşimler denemek için `x`, `y`ve `z` değiştirin. Denemeler yaparken, `x` `y`' den küçük olan değerleri kullanın ve `y` geçerli birleşimler için `z` küçüktür. Aşağıdaki kodu yeni bir yöntemine ekleyin. Farklı birleşimler deneyin:
 
 [!code-csharp[SemanticsExamples](~/samples/csharp/tutorials/RangesIndexes/IndicesAndRanges.cs#IndicesAndRanges_Semantics)]
 
 ## <a name="type-support-for-indices-and-ranges"></a>Dizinler ve aralıklar için tür desteği
 
-Bir tür, <xref:System.Index> veya <xref:System.Range> parametresiyle bir [Dizin Oluşturucu](../programming-guide/indexers/index.md) sağlıyorsa, sırasıyla dizinleri veya aralıkları açıkça destekler.
+Bir tür bir <xref:System.Index> veya <xref:System.Range> parametresi olan bir [Dizin Oluşturucu](../programming-guide/indexers/index.md) sağlıyorsa, sırasıyla dizinleri veya aralıkları açıkça destekler.
 
-Bir tür, erişilebilir bir alıcı ve `int` dönüş türüyle `Length` veya `Count` adlı bir **özellik varsa oluşturulabilir** . Dizinleri veya aralıkları açıkça desteklemeyen bir sayılabilir türü, bunlar için örtülü bir destek sağlayabilir. Daha fazla bilgi için, [özellik teklifi notunun](~/_csharplang/proposals/csharp-8.0/ranges.md) [örtük Dizin desteği](~/_csharplang/proposals/csharp-8.0/ranges.md#implicit-index-support) ve [örtük Aralık desteği](~/_csharplang/proposals/csharp-8.0/ranges.md#implicit-range-support) bölümlerine bakın.
+Bir tür, erişilebilir bir alıcı ve `int`dönüş türü `Length` veya `Count` adlı bir **özelliğe sahipse bir** tür oluşturulabilir. Dizinleri veya aralıkları açıkça desteklemeyen bir sayılabilir türü, bunlar için örtülü bir destek sağlayabilir. Daha fazla bilgi için, [özellik teklifi notunun](~/_csharplang/proposals/csharp-8.0/ranges.md) [örtük Dizin desteği](~/_csharplang/proposals/csharp-8.0/ranges.md#implicit-index-support) ve [örtük Aralık desteği](~/_csharplang/proposals/csharp-8.0/ranges.md#implicit-range-support) bölümlerine bakın.
 
-Örneğin, aşağıdaki .NET türleri hem dizinleri hem de aralıkları destekler: <xref:System.Array>, <xref:System.String>, <xref:System.Span%601> ve <xref:System.ReadOnlySpan%601>. @No__t-0 dizinleri destekler ancak aralıkları desteklemez.
+Örneğin, aşağıdaki .NET türleri hem dizinleri hem de aralıkları destekler: <xref:System.Array>, <xref:System.String>, <xref:System.Span%601>ve <xref:System.ReadOnlySpan%601>. <xref:System.Collections.Generic.List%601> dizinleri destekler ancak aralıkları desteklemez.
 
 ## <a name="scenarios-for-indices-and-ranges"></a>Dizinler ve aralıklar için senaryolar
 
-Genellikle tüm bir sıranın alt aralığında bazı analizler gerçekleştirmek istediğinizde aralıklar ve dizinler kullanırsınız. Yeni söz dizimi, tam olarak hangi alt aralığın ilgili olduğunu okumaktan daha net. @No__t-0 yerel işlevi, bağımsız değişkeni olarak bir <xref:System.Range> alır. Bu yöntem daha sonra Min, Max ve Average hesaplama yaparken yalnızca o aralığı numaralandırır. Projenizde aşağıdaki kodu deneyin:
+Genellikle tüm bir sıranın alt aralığında bazı analizler gerçekleştirmek istediğinizde aralıklar ve dizinler kullanırsınız. Yeni söz dizimi, tam olarak hangi alt aralığın ilgili olduğunu okumaktan daha net. Yerel işlev `MovingAverage` bağımsız değişkeni olarak bir <xref:System.Range> alır. Bu yöntem daha sonra Min, Max ve Average hesaplama yaparken yalnızca o aralığı numaralandırır. Projenizde aşağıdaki kodu deneyin:
 
 [!code-csharp[MovingAverages](~/samples/csharp/tutorials/RangesIndexes/IndicesAndRanges.cs#IndicesAndRanges_MovingAverage)]
 

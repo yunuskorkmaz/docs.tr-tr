@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e380edac-da67-4276-80a5-b64decae4947
-ms.openlocfilehash: a8cca707f8fa82e97e988fcbe015b55e35b93499
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: ddb53c9224d56803c3528d79c5ccdf5534b9ab03
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70794685"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039812"
 ---
 # <a name="optimistic-concurrency"></a>İyimser Eşzamanlılık
-Çok kullanıcılı bir ortamda, veritabanındaki verileri güncelleştirmek için iki model vardır: iyimser eşzamanlılık ve Kötümser eşzamanlılık. <xref:System.Data.DataSet> Nesnesi, verileri uzaktan kullanma ve verilerle etkileşim kurma gibi uzun süre çalışan etkinlikler için iyimser eşzamanlılık kullanımını teşvik etmek üzere tasarlanmıştır.  
+Çok kullanıcılı bir ortamda, veritabanındaki verileri güncelleştirmek için iki model vardır: iyimser eşzamanlılık ve Kötümser eşzamanlılık. <xref:System.Data.DataSet> nesnesi, verilerin uzaktan iletişimini ve verilerle etkileşimde bulunmak gibi uzun süreli etkinlikler için iyimser eşzamanlılık kullanımını teşvik etmek üzere tasarlanmıştır.  
   
  Kötümser eşzamanlılık, diğer kullanıcıların verileri geçerli kullanıcıyı etkileyecek şekilde değiştirmesini engellemek için veri kaynağındaki satırları kilitlemeyi içerir. Bir kötümser modelde, bir Kullanıcı bir kilidin uygulanmasına neden olan bir eylem gerçekleştirdiğinde, diğer kullanıcılar kilit sahibi tarafından serbest gelinceye kadar kilit ile çakışacak eylemler gerçekleştiremez. Bu model öncelikle veriler için ağır çekişme olduğu ortamlarda kullanılır. böylece, kilitleri olan verileri koruma maliyetinin eşzamanlılık çakışmalarının oluşması durumunda işlem geri alma maliyetinden daha az olması sağlanır.  
   
@@ -37,8 +37,8 @@ ms.locfileid: "70794685"
 |Sütun adı|Özgün değer|Geçerli değer|Veritabanındaki değer|  
 |-----------------|--------------------|-------------------|-----------------------|  
 |CustId|101|101|101|  
-|LastName|Uludağ|Uludağ|Uludağ|  
-|FirstName|Bob|Bob|Bob|  
+|Soyadı|Uludağ|Uludağ|Uludağ|  
+|firstName|Olduğundan|Olduğundan|Olduğundan|  
   
  Kullanıcı2, 1:01:00 ' da aynı satırı okur.  
   
@@ -47,8 +47,8 @@ ms.locfileid: "70794685"
 |Sütun adı|Özgün değer|Geçerli değer|Veritabanındaki değer|  
 |-----------------|--------------------|-------------------|-----------------------|  
 |CustId|101|101|101|  
-|LastName|Uludağ|Uludağ|Uludağ|  
-|FirstName|Bob|Can|Bob|  
+|Soyadı|Uludağ|Uludağ|Uludağ|  
+|firstName|Olduğundan|Can|Olduğundan|  
   
  Güncelleştirme sırasında veritabanındaki değerler, kullanıcı2 'nin özgün değerleriyle eşleştiği için güncelleştirme başarılı olur.  
   
@@ -57,8 +57,8 @@ ms.locfileid: "70794685"
 |Sütun adı|Özgün değer|Geçerli değer|Veritabanındaki değer|  
 |-----------------|--------------------|-------------------|-----------------------|  
 |CustId|101|101|101|  
-|LastName|Uludağ|Uludağ|Uludağ|  
-|FirstName|Bob|James|Can|  
+|Soyadı|Uludağ|Uludağ|Uludağ|  
+|firstName|Olduğundan|James|Can|  
   
  Bu noktada, veritabanındaki değer ("Robert") artık Kullanıcı1 'in beklediği orijinal değerle ("emre") eşleşmediği için Kullanıcı1 bir iyimser eşzamanlılık ihlaline rastlandı. Eşzamanlılık ihlali, güncelleştirmenin başarısız olduğunu bilmenizi sağlar. Artık kararların, Kullanıcı1 tarafından sağlanan değişikliklerle ilgili olarak belirtilen değişikliklerin üzerine yazılıp yazılmayacağı veya Kullanıcı1 tarafından yapılan değişiklikleri iptal edilip edilmeyeceğini yazmanız gerekir.  
   
@@ -67,13 +67,13 @@ ms.locfileid: "70794685"
   
  İyimser eşzamanlılık ihlalinin test edilmesine yönelik başka bir teknik de, bir satırdaki tüm özgün sütun değerlerinin veritabanında bulunan olanlarla aynı olduğunu doğrulamadır. Örneğin, aşağıdaki sorguyu göz önünde bulundurun:  
   
-```  
+```sql
 SELECT Col1, Col2, Col3 FROM Table1  
 ```  
   
  **Table1**içinde bir satırı güncelleştirirken iyimser eşzamanlılık ihlalini sınamak IÇIN aşağıdaki güncelleştirme ifadesini verirsiniz:  
   
-```  
+```sql
 UPDATE Table1 Set Col1 = @NewCol1Value,  
               Set Col2 = @NewCol2Value,  
               Set Col3 = @NewCol3Value  
@@ -88,7 +88,7 @@ WHERE Col1 = @OldCol1Value AND
   
  Veri kaynağınızdaki bir sütun null değerlere izin veriyorsa, yerel tablonuzda ve veri kaynağında eşleşen bir null başvurusu denetlemek için WHERE yan tümcesini genişletmeniz gerekebilir. Örneğin, aşağıdaki UPDATE bildiriminde, yerel satırdaki null başvurusunun, veri kaynağında null başvurusuyla hala eşleştiğini veya yerel satırdaki değerin hala veri kaynağındaki değerle eşleştiğini doğrular.  
   
-```  
+```sql
 UPDATE Table1 Set Col1 = @NewVal1  
   WHERE (@OldVal1 IS NULL AND Col1 IS NULL) OR Col1 = @OldVal1  
 ```  
@@ -96,7 +96,7 @@ UPDATE Table1 Set Col1 = @NewVal1
  İyimser eşzamanlılık modeli kullanırken daha az kısıtlayıcı ölçütler uygulamayı da tercih edebilirsiniz. Örneğin, WHERE yan tümcesindeki birincil anahtar sütunlarının kullanılması, diğer sütunların son sorgudan bu yana güncelleştirilip güncelleştirilmediğini ne olursa olsun verilerin üzerine yazılmasına neden olur. Yalnızca belirli sütunlara bir WHERE yan tümcesi uygulayabilirsiniz ve belirli alanlar son sorgulandıktan sonra güncellenmemişse verilerin üzerine yazılmasına neden olur.  
   
 ### <a name="the-dataadapterrowupdated-event"></a>DataAdapter. RowUpdated olayı  
- <xref:System.Data.Common.DataAdapter> Nesnenin **RowUpdated** olayı, daha önce açıklanan tekniklerle birlikte kullanılarak iyimser eşzamanlılık ihlallerinin uygulamanıza yönelik bildirim sağlar. **RowUpdated** , bir **veri kümesinden** **değiştirilen** bir satırı güncelleştirme denemesinden sonra oluşur. Bu, bir özel durum oluştuğunda işleme, özel hata bilgileri ekleme, yeniden deneme mantığı ekleme vb. gibi özel işleme kodu eklemenizi sağlar. Nesnesi, bir tablodaki değiştirilmiş bir satır için belirli bir Update komutundan etkilenen satır sayısını içeren bir recordsamısson özelliği döndürür. <xref:System.Data.Common.RowUpdatedEventArgs> Güncelleştirme komutunu iyimser eşzamanlılık için test edecek şekilde ayarlayarak, **Recordsaetkilenmeyen** özelliği, bir sonuç olarak bir iyimser eşzamanlılık ihlali meydana geldiğinde 0 değerini döndürür, çünkü hiçbir kayıt güncelleştirilmemiş. Bu durumda, bir özel durum oluşturulur. **RowUpdated** olayı, bu oluşumu idare etmenizi ve **UpdateStatus. SkipCurrentRow**gibi uygun bir **RowUpdatedEventArgs. Status** değeri ayarlayarak özel durumu önlemenize olanak sağlar. **RowUpdated** olayı hakkında daha fazla bilgi için bkz. [DataAdapter olaylarını işleme](handling-dataadapter-events.md).  
+ <xref:System.Data.Common.DataAdapter> nesnesinin **RowUpdated** olayı, daha önce açıklanan tekniklerle birlikte kullanılarak iyimser eşzamanlılık ihlallerinin uygulamanıza yönelik bildirim sağlar. **RowUpdated** , bir **veri kümesinden** **değiştirilen** bir satırı güncelleştirme denemesinden sonra oluşur. Bu, bir özel durum oluştuğunda işleme, özel hata bilgileri ekleme, yeniden deneme mantığı ekleme vb. gibi özel işleme kodu eklemenizi sağlar. <xref:System.Data.Common.RowUpdatedEventArgs> nesnesi, bir tablodaki değiştirilmiş bir satır için belirli bir Update komutundan etkilenen satır sayısını içeren bir **Recordsamısson** özelliği döndürür. Güncelleştirme komutunu iyimser eşzamanlılık için test edecek şekilde ayarlayarak, **Recordsaetkilenmeyen** özelliği, bir sonuç olarak bir iyimser eşzamanlılık ihlali meydana geldiğinde 0 değerini döndürür, çünkü hiçbir kayıt güncelleştirilmemiş. Bu durumda, bir özel durum oluşturulur. **RowUpdated** olayı, bu oluşumu idare etmenizi ve **UpdateStatus. SkipCurrentRow**gibi uygun bir **RowUpdatedEventArgs. Status** değeri ayarlayarak özel durumu önlemenize olanak sağlar. **RowUpdated** olayı hakkında daha fazla bilgi için bkz. [DataAdapter olaylarını işleme](handling-dataadapter-events.md).  
   
  İsteğe bağlı olarak, **Güncelleştir**' i çağırmadan önce **DataAdapter. devam updateıse** 'yi **true**olarak ayarlayabilir ve **güncelleştirme** tamamlandığında belirli bir satırın **RowError** özelliğinde depolanan hata bilgilerine yanıt verebilirsiniz. Daha fazla bilgi için bkz. [satır hata bilgileri](./dataset-datatable-dataview/row-error-information.md).  
   

@@ -2,20 +2,20 @@
 title: XML Şema Kısıtlamaları ve İlişkileri
 ms.date: 03/30/2017
 ms.assetid: 165bc2bc-60a1-40e0-9b89-7c68ef979079
-ms.openlocfilehash: 76af1c2e9d85d18a68b8c0a947dfba3b3291326c
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 47b1a3e81cfbc4eb58531b1633dd29becbe497a2
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70784190"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040040"
 ---
 # <a name="xml-schema-constraints-and-relationships"></a>XML Şema Kısıtlamaları ve İlişkileri
-Bir XML şeması tanım dili (XSD) şemasında, kısıtlamalar (benzersiz, anahtar ve keyref kısıtlamaları) ve ilişkileri ( **msdata: Relationship** ek açıklaması kullanılarak) belirtebilirsiniz. Bu konuda bir XML şemasında belirtilen kısıtlamaların ve ilişkilerin, <xref:System.Data.DataSet>oluşturmak için nasıl yorumlanacağı açıklanmaktadır.  
+Bir XML şeması tanım dili (XSD) şemasında, kısıtlamalar (benzersiz, anahtar ve keyref kısıtlamaları) ve ilişkileri ( **msdata: Relationship** ek açıklaması kullanılarak) belirtebilirsiniz. Bu konu, bir XML şemasında belirtilen kısıtlamaların ve ilişkilerin <xref:System.Data.DataSet>oluşturmak için nasıl yorumlandığını açıklamaktadır.  
   
  Genel olarak, bir XML şemasında, **veri kümesinde**yalnızca ilişkiler oluşturmak istiyorsanız **msdata: Relationship** ek açıklamasını belirtirsiniz. Daha fazla bilgi için bkz. [xml şemasından (xsd) veri kümesi Ilişkileri oluşturma](generating-dataset-relations-from-xml-schema-xsd.md). **Veri kümesinde**kısıtlamalar oluşturmak istiyorsanız kısıtlamalar (Unique, Key ve keyref) belirtirsiniz. Anahtar ve keyref kısıtlamalarının, bu konunun ilerleyen kısımlarında açıklandığı gibi ilişkiler oluşturmak için de kullanıldığını unutmayın.  
   
 ## <a name="generating-a-relationship-from-key-and-keyref-constraints"></a>Anahtar ve keyref kısıtlamalarından bir Ilişki oluşturma  
- **Msdata: ilişki** ek açıklamasını belirtmek yerıne, XML Şeması eşleme işlemi sırasında yalnızca kısıtlamaları değil, **veri kümesindeki**ilişkiyi değil, anahtar ve keyref kısıtlamalarını belirtebilirsiniz. Ancak, **keyref** öğesinde belirtirseniz `msdata:ConstraintOnly="true"` , **veri kümesi** yalnızca kısıtlamaları içerir ve ilişkiyi içermez.  
+ **Msdata: ilişki** ek açıklamasını belirtmek yerıne, XML Şeması eşleme işlemi sırasında yalnızca kısıtlamaları değil, **veri kümesindeki**ilişkiyi değil, anahtar ve keyref kısıtlamalarını belirtebilirsiniz. Ancak, **keyref** öğesinde `msdata:ConstraintOnly="true"` belirtirseniz, **veri kümesi** yalnızca kısıtlamaları dahil eder ve ilişkiyi içermez.  
   
  Aşağıdaki örnek, iç içe olmayan **Order** ve **OrderDetail** öğelerini içeren bir XML şemasını gösterir. Şema ayrıca Key ve keyref kısıtlamalarını da belirtir.  
   
@@ -61,7 +61,7 @@ Bir XML şeması tanım dili (XSD) şemasında, kısıtlamalar (benzersiz, anaht
   
  XML Şeması eşleme işlemi sırasında oluşturulan **veri kümesi** **Order** ve **OrderDetail** tablolarını içerir. Ayrıca, **veri kümesi** ilişkiler ve kısıtlamalar içerir. Aşağıdaki örnek bu ilişkileri ve kısıtlamaları gösterir. Şemanın **msdata: ilişki** ek açıklamasını belirtmediğini unutmayın. Bunun yerine, anahtar ve keyref kısıtlamaları ilişkiyi oluşturmak için kullanılır.  
   
-```  
+```text
 ....ConstraintName: OrderNumberKey  
 ....Type: UniqueConstraint  
 ....Table: Order  
@@ -131,14 +131,14 @@ Bir XML şeması tanım dili (XSD) şemasında, kısıtlamalar (benzersiz, anaht
   
  XML Şeması eşleme işleminden kaynaklanan **veri kümesi** iki tablo içerir:  
   
-```  
+```text  
 Order(OrderNumber, EmpNumber, Order_Id)  
 OrderDetail(OrderNumber, ItemNumber, Order_Id)  
 ```  
   
  **Veri kümesi** aynı zamanda iki ilişkiyi de içerir (bir diğeri **msdata: ilişki** ek açıklamasına ve diğeri anahtar ve keyref kısıtlamalarına bağlı olarak) ve çeşitli kısıtlamalara sahiptir. Aşağıdaki örnekte ilişkiler ve kısıtlamalar gösterilmektedir.  
   
-```  
+```text
 ..RelationName: Order_OrderDetail  
 ..ParentTable: Order  
 ..ParentColumns: Order_Id  

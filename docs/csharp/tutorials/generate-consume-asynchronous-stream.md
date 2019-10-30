@@ -2,13 +2,14 @@
 title: Zaman uyumsuz akışlar oluşturma ve kullanma
 description: Bu gelişmiş öğreticide, zaman uyumsuz akışlarının oluşturulması ve kullanılması, zaman uyumsuz olarak oluşturulabilecek veri dizileri ile çalışmak için daha doğal bir yol sağlar.
 ms.date: 02/10/2019
+ms.technology: csharp-async
 ms.custom: mvc
-ms.openlocfilehash: 6c013d1b589367b77c6f77f88334317a6f3bc657
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 412e5de5d9d73846fe2af36e3def383364389c75
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72579213"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039219"
 ---
 # <a name="tutorial-generate-and-consume-async-streams-using-c-80-and-net-core-30"></a>Öğretici: 8,0 ve .NET Core 3,0 kullanarak C# zaman uyumsuz akışlar oluşturma ve kullanma
 
@@ -54,11 +55,11 @@ Başlangıç uygulamasını çalıştırdığınızda, bu uygulamanın nasıl ç
 
 ## <a name="examine-the-implementation"></a>Uygulamayı İnceleme
 
-Uygulama, önceki bölümde ele alınan davranışı neden gözlemlediğinizi ortaya çıkarır. @No__t_0 için kodu inceleyin:
+Uygulama, önceki bölümde ele alınan davranışı neden gözlemlediğinizi ortaya çıkarır. `runPagedQueryAsync`için kodu inceleyin:
 
 [!code-csharp[RunPagedQueryStarter](~/samples/csharp/tutorials/AsyncStreams/start/IssuePRreport/IssuePRreport/Program.cs#RunPagedQuery)]
 
-Yukarıdaki kodun disk belleği algoritmasına ve zaman uyumsuz yapısına odaklanalım. (GitHub GraphQL API 'SI ile ilgili ayrıntılar için [GitHub graphql belgelerine](https://developer.github.com/v4/guides/) başvurabilirsiniz.) @No__t_1 yöntemi en sonuncudan en eskiye doğru olan sorunları numaralandırır. Sayfa başına 25 sorun ister ve önceki sayfaya devam etmek için yanıtın `pageInfo` yapısını inceler. Bu, çok sayfalı yanıtlar için GraphQL 'in standart disk belleği desteğini izler. Yanıt, bir `hasPreviousPages` değeri ve önceki sayfayı istemek için kullanılan bir `startCursor` değeri içeren bir `pageInfo` nesnesi içerir. Sorunlar `nodes` dizidir. @No__t_0 yöntemi, tüm sayfalardaki sonuçları içeren bir diziye bu düğümleri ekler.
+Yukarıdaki kodun disk belleği algoritmasına ve zaman uyumsuz yapısına odaklanalım. (GitHub GraphQL API 'SI ile ilgili ayrıntılar için [GitHub graphql belgelerine](https://developer.github.com/v4/guides/) başvurabilirsiniz.) `runPagedQueryAsync` yöntemi en sonuncudan en eskiye doğru olan sorunları numaralandırır. Sayfa başına 25 sorun ister ve önceki sayfaya devam etmek için yanıtın `pageInfo` yapısını inceler. Bu, çok sayfalı yanıtlar için GraphQL 'in standart disk belleği desteğini izler. Yanıt, bir `hasPreviousPages` değeri ve önceki sayfayı istemek için kullanılan bir `startCursor` değeri içeren bir `pageInfo` nesnesi içerir. Sorunlar `nodes` dizidir. `runPagedQueryAsync` yöntemi, tüm sayfalardaki sonuçları içeren bir diziye bu düğümleri ekler.
 
 Bir sonuç sayfasını aldıktan ve geri yükledikten sonra, `runPagedQueryAsync` ilerlemeyi raporlar ve iptal olup olmadığını denetler. İptal isteniyorsa, `runPagedQueryAsync` bir <xref:System.OperationCanceledException> oluşturur.
 
@@ -101,7 +102,7 @@ Bu üç arabirim çoğu C# geliştiricilere tanıdık gelmelidir. Zaman uyumlu o
 - <xref:System.Collections.Generic.IEnumerator%601?displayProperty=nameWithType>
 - <xref:System.IDisposable?displayProperty=nameWithType>
 
-Alışkın olabilecek bir tür <xref:System.Threading.Tasks.ValueTask?displayProperty=nameWithType>. @No__t_0 yapısı, <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> sınıfına benzer bir API sağlar. `ValueTask`, performans nedenleriyle bu arabirimlerde kullanılır.
+Alışkın olabilecek bir tür <xref:System.Threading.Tasks.ValueTask?displayProperty=nameWithType>. `ValueTask` yapısı, <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> sınıfına benzer bir API sağlar. `ValueTask`, performans nedenleriyle bu arabirimlerde kullanılır.
 
 ## <a name="convert-to-async-streams"></a>Zaman uyumsuz akışlara Dönüştür
 
@@ -135,7 +136,7 @@ Tamamlanan öğreticinin kodunu [CSharp/öğreticiler/AsyncStreams](https://gith
 
 ## <a name="run-the-finished-application"></a>Tamamlanmış uygulamayı çalıştırma
 
-Uygulamayı yeniden çalıştırın. Davranışını, başlangıç uygulamasının davranışıyla kontrast. Sonuçların ilk sayfası, kullanılabilir duruma geldiğinde numaralandırılır. Her yeni sayfa istendiği ve alındığı için bir observable durakladıkça, sonraki sayfanın sonuçları hızla numaralandırılır. @No__t_0  /  `catch` bloğu iptali işlemek için gerekli değildir: çağıran, koleksiyonu listemeyi durdurabilir. Zaman uyumsuz akış, her sayfa indirildiğinden sonuçlar oluşturduğundan, ilerleme durumu açıkça raporlanır. Döndürülen her bir sorunun durumu `await foreach` döngüsüne sorunsuz bir şekilde dahildir. İlerlemeyi izlemek için bir geri çağırma nesnesine gerek yoktur.
+Uygulamayı yeniden çalıştırın. Davranışını, başlangıç uygulamasının davranışıyla kontrast. Sonuçların ilk sayfası, kullanılabilir duruma geldiğinde numaralandırılır. Her yeni sayfa istendiği ve alındığı için bir observable durakladıkça, sonraki sayfanın sonuçları hızla numaralandırılır. `try` / `catch` bloğu iptali işlemek için gerekli değildir: çağıran, koleksiyonu listemeyi durdurabilir. Zaman uyumsuz akış, her sayfa indirildiğinden sonuçlar oluşturduğundan, ilerleme durumu açıkça raporlanır. Döndürülen her bir sorunun durumu `await foreach` döngüsüne sorunsuz bir şekilde dahildir. İlerlemeyi izlemek için bir geri çağırma nesnesine gerek yoktur.
 
 Kodu inceleyerek, bellek kullanımıyla iyileştirmeleri görebilirsiniz. Artık tüm sonuçları numaralandırılmadan önce depolamak için bir koleksiyon ayırmanız gerekmez. Çağıran, sonuçların nasıl kullanıldığını ve bir depolama koleksiyonu gerekip gerekmediğini belirleyebilir.
 

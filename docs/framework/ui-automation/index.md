@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - UI Automation
 ms.assetid: e7ec856e-41ee-47b1-9d57-b75a3dad088c
-ms.openlocfilehash: 667f0ded506305f3d7eb1ac5c43d3f65aab2cca9
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: cdcffef1699efb03258de0f29a51bebd2fc15461
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71043044"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039476"
 ---
 # <a name="accessibility"></a>Erişilebilirlik
 > [!NOTE]
-> Bu belge, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] <xref:System.Windows.Automation> ad alanında tanımlanan yönetilen sınıfları kullanmak isteyen .NET Framework geliştiricilere yöneliktir. Hakkında [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]en son bilgiler için bkz [. Windows Otomasyonu API 'si: UI Otomasyonu](https://go.microsoft.com/fwlink/?LinkID=156746).  
+> Bu belge, <xref:System.Windows.Automation> ad alanında tanımlanan yönetilen [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] sınıflarını kullanmak isteyen .NET Framework geliştiricilere yöneliktir. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]hakkında en son bilgiler için bkz. [Windows Otomasyonu API: UI Otomasyonu](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
- [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)], için [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)]yeni erişilebilirlik çerçevesidir. İle ilgili [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)]bilgilere programlı erişim sağlayarak yardımcı teknoloji ürünlerinin ve otomatikleştirilmiş test çerçevelerinin ihtiyaçlarını ele alınmaktadır. Ayrıca, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] denetim ve uygulama geliştiricilerinin ürünlerini erişilebilir hale getirir.  
+ [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)], Microsoft Windows için yeni erişilebilirlik çerçevesidir. [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)]hakkındaki bilgilere programlı erişim sağlayarak yardımcı teknoloji ürünlerinin ve otomatikleştirilmiş test çerçevelerinin ihtiyaçlarını ele alınmaktadır. Ayrıca, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] denetim ve uygulama geliştiricilerinin ürünlerini erişilebilir hale getirmenizi sağlar.  
   
- Bu belgede, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] yönetilen kod için API açıklanmaktadır. İçindeki [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] C++için programlama hakkında bilgi için bkz. [Win32 uygulamaları için UI Otomasyonu](/windows/desktop/winauto/windows-automation-api-portal).  
+ Bu belgede, yönetilen kod için [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] API açıklanmaktadır. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] C++için programlama hakkında daha fazla bilgi için bkz. [Win32 uygulamaları için UI Otomasyonu](/windows/desktop/winauto/windows-automation-api-portal).  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [En İyi Erişilebilirlik Uygulamaları](accessibility-best-practices.md)  

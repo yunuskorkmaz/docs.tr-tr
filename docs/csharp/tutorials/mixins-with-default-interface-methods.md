@@ -1,13 +1,14 @@
 ---
 title: Varsayılan arabirim yöntemlerini kullanarak Mixin türleri oluşturma
 description: Varsayılan arabirim üyelerini kullanarak, uygulamaları uygulayıcılar için isteğe bağlı varsayılan uygulamalarla genişletebilirsiniz.
+ms.technology: csharp-advanced-concepts
 ms.date: 10/04/2019
-ms.openlocfilehash: 4dee97226420139d9cd09ad75d7c8caf4967273d
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 798413f0071159893de39f3e190a9b2693571bb7
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72321626"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039268"
 ---
 # <a name="tutorial-mix-in-functionality-when-creating-classes-using-interfaces-with-default-interface-methods"></a>Öğretici: varsayılan arabirim yöntemleriyle arabirimler kullanarak sınıf oluştururken karıştırma işlevi
 
@@ -94,11 +95,11 @@ Yeni bir ışık türü olan `LEDLight`, doğrudan Zamanlayıcı işlevini ve BL
 
 [!code-csharp[Override the blink function](~/samples/csharp/tutorials/mixins-with-interfaces/LEDLight.cs?name=SnippetLEDLight)]
 
-@No__t-0, doğrudan yanıp sönme ve Zamanlayıcı işlevlerini destekleyebilir:
+Bir `ExtraFancyLight` doğrudan yanıp sönme ve Zamanlayıcı işlevlerini destekleyebilir:
 
 [!code-csharp[Override the blink and timer function](~/samples/csharp/tutorials/mixins-with-interfaces/ExtraFancyLight.cs?name=SnippetExtraFancyLight)]
 
-Daha önce oluşturduğunuz @no__t 0 ' ın yanıp sönmesi desteklenmez. Bu nedenle, `IBlinkingLight` ' ı desteklenen arabirimlerin listesine eklemeyin.
+Daha önce oluşturduğunuz `HalogenLight` yanıp sönmesini desteklemez. Bu nedenle, `IBlinkingLight` ' ı desteklenen arabirimlerin listesine eklemeyin.
 
 ## <a name="detect-the-light-types-using-pattern-matching"></a>Model eşleştirmeyi kullanarak ışık türlerini Algıla
 
@@ -106,13 +107,13 @@ Daha sonra bazı test kodu yazalım. Desteklediği arabirimleri inceleyerek ış
 
 [!code-csharp[Test a light's capabilities](~/samples/csharp/tutorials/mixins-with-interfaces/Program.cs?name=SnippetTestLightFunctions)]
 
-@No__t-0 yönteminizin aşağıdaki kodu sırayla her ışık türünü oluşturur ve bu ışığı sınar:
+`Main` yönteminizin aşağıdaki kodu, her ışık türünü sırayla oluşturur ve bu ışığı sınar:
 
 [!code-csharp[Test a light's capabilities](~/samples/csharp/tutorials/mixins-with-interfaces/Program.cs?name=SnippetMainMethod)]
 
 ## <a name="how-the-compiler-determines-best-implementation"></a>Derleyicinin en iyi uygulamayı nasıl belirlediği
 
-Bu senaryo, herhangi bir uygulama olmadan temel bir arabirim gösterir. @No__t-0 arabirimine bir yöntem eklemek yeni karmaşıklıkları tanıtır. Varsayılan arabirim yöntemlerini yöneten dil kuralları, birden fazla türetilmiş arabirimi uygulayan somut sınıflarda etkiyi en aza indirir. Bunun nasıl kullanıldığını göstermek için yeni bir yöntemi olan özgün arabirimi geliştirelim. Her gösterge ışığı, güç durumunu numaralandırılmış bir değer olarak rapor edebilir:
+Bu senaryo, herhangi bir uygulama olmadan temel bir arabirim gösterir. `ILight` arabirimine bir yöntemi eklemek yeni karmaşıklıkları tanıtır. Varsayılan arabirim yöntemlerini yöneten dil kuralları, birden fazla türetilmiş arabirimi uygulayan somut sınıflarda etkiyi en aza indirir. Bunun nasıl kullanıldığını göstermek için yeni bir yöntemi olan özgün arabirimi geliştirelim. Her gösterge ışığı, güç durumunu numaralandırılmış bir değer olarak rapor edebilir:
 
 [!code-csharp[Enumeration for power status](~/samples/csharp/tutorials/mixins-with-interfaces/ILight.cs?name=SnippetPowerStatus)]
 
@@ -120,7 +121,7 @@ Varsayılan uygulama AC gücünü varsayar:
 
 [!code-csharp[Report a default power status](~/samples/csharp/tutorials/mixins-with-interfaces/ILight.cs?name=SnippetILightInterface)]
 
-Bu değişiklikler, `ExtraFancyLight` `ILight` arabirimi ve hem türetilmiş arabirimler `ITimerLight` hem de @no__t 3 ' ü desteklese bile düzgün şekilde derlenir. @No__t-0 arabiriminde belirtilen yalnızca bir "en yakın" uygulama vardır. Bir geçersiz kılma belirten herhangi bir sınıf "en yakın" uygulama haline gelir. Diğer türetilmiş arabirimlerin üyelerini içeren önceki sınıflarda örnekleri gördünüz.
+Bu değişiklikler, `ExtraFancyLight` `ILight` arabirimi ve hem türetilmiş arabirimler, `ITimerLight` ve `IBlinkingLight`için destek bildirse de düzgün şekilde derlenir. `ILight` arabiriminde belirtilen yalnızca bir "en yakın" uygulama vardır. Bir geçersiz kılma belirten herhangi bir sınıf "en yakın" uygulama haline gelir. Diğer türetilmiş arabirimlerin üyelerini içeren önceki sınıflarda örnekleri gördünüz.
 
 Birden çok türetilmiş arabirimde aynı yöntemi geçersiz kılmaktan kaçının. Bunun yapılması, bir sınıf hem türetilmiş arabirimleri her uygularsa belirsiz bir yöntem çağrısı oluşturur. Derleyici bir hata verecek şekilde tek bir daha iyi yöntem seçemiyor. Örneğin, hem `IBlinkingLight` hem de `ITimerLight` `PowerStatus` ' i geçersiz kılmayı uyguladıysanız, `OverheadLight` ' in daha belirli bir geçersiz kılma sağlaması gerekir. Aksi halde, derleyici iki türetilmiş arabirimde uygulamalar arasında seçim yapamıyor. Bu durum genellikle, arabirim tanımlarını küçük tutarak tek bir özelliğe odaklanarak önleyebilirsiniz. Bu senaryoda, bir ışığın her özelliği kendi arayüzüdür; birden çok arabirim yalnızca sınıflar tarafından devralınır.
 

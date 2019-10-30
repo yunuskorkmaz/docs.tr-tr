@@ -10,113 +10,115 @@ helpviewer_keywords:
 - reserved words, Visual Basic keywords
 - Visual Basic, keywords
 ms.assetid: b5a65ef0-c408-4836-afb6-e6828c0771ca
-ms.openlocfilehash: 61dc57b2e44e7b98fbce85e81491c76736c7ad78
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 66eb6984bb6bb93dc7015a9da8c3099637bc2722
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69959961"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039394"
 ---
 # <a name="keywords-visual-basic"></a>Anahtar Sözcükler (Visual Basic)
-Aşağıdaki tablolarda tüm Visual Basic dil anahtar sözcükleri listelenmektedir.  
-  
-## <a name="reserved-keywords"></a>Ayrılmış anahtar sözcükler  
- Aşağıdaki anahtar sözcükler *ayrılmıştır*. Bu, bunları değişkenler veya yordamlar gibi programlama öğeleri için adlar olarak kullanamayabileceğiniz anlamına gelir. Bu kısıtlamayı, adı köşeli ayraç (`[]`) içine alarak atlayabilirsiniz. Daha fazla bilgi için, [belirtilen öğe adlarında](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)"kaçan adlar" başlığına bakın.  
+
+Aşağıdaki tablolarda tüm Visual Basic dil anahtar sözcükleri listelenmektedir.
+
+## <a name="reserved-keywords"></a>Ayrılmış anahtar sözcükler
+
+Aşağıdaki anahtar sözcükler *ayrılmıştır*. Bu, bunları değişkenler veya yordamlar gibi programlama öğeleri için adlar olarak kullanamayabileceğiniz anlamına gelir. Bu kısıtlamayı, adı köşeli parantez içine alarak atlayabilirsiniz (`[]`). Daha fazla bilgi için, [belirtilen öğe adlarında](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)"kaçan adlar" başlığına bakın.
+
+> [!NOTE]
+> Kodunuzun okunmasını zorlaştırabileceğinden, kaçış adları kullanmanızı önermiyoruz ve bulmanın zor olduğu hafif hatalara neden olabilir.
+
+|||||
+|---|---|---|---|
+|[AddHandler](../statements/addhandler-statement.md)|[AddressOf](../operators/addressof-operator.md)|[Ek](../statements/alias-clause.md)|['](../operators/and-operator.md)|  
+|[AndAlso](../operators/andalso-operator.md)|[Gerektiği](../statements/as-clause.md)|[Boolean](../data-types/boolean-data-type.md)|[ByRef](../modifiers/byref.md)|  
+|[Bayt](../data-types/byte-data-type.md)|[ByVal](../modifiers/byval.md)|[Çaðýrmak](../statements/call-statement.md)|[Harflerini](../statements/select-case-statement.md)|  
+|[Yakalaya](../statements/try-catch-finally-statement.md)|[CBool](../functions/type-conversion-functions.md)|[CByte](../functions/type-conversion-functions.md)|[CChar](../functions/type-conversion-functions.md)|  
+|[CDate](../functions/type-conversion-functions.md)|[CDbl](../functions/type-conversion-functions.md)|[CDec](../functions/type-conversion-functions.md)|[Char](../data-types/char-data-type.md)|  
+|[CInt](../functions/type-conversion-functions.md)|[Sınıf kısıtlaması](../statements/type-list.md)|[Class Deyimi](../statements/class-statement.md)|[CLng](../functions/type-conversion-functions.md)|  
+|[Değişkenlerinde CObj](../functions/type-conversion-functions.md)|[Sabit](../statements/const-statement.md)|[Continue](../statements/continue-statement.md)|[CSByte](../functions/type-conversion-functions.md)|  
+|[CShort](../functions/type-conversion-functions.md)|[CSng](../functions/type-conversion-functions.md)|[CStr](../functions/type-conversion-functions.md)|[CType](../functions/type-conversion-functions.md)|  
+|[CUInt](../functions/type-conversion-functions.md)|[Külda](../functions/type-conversion-functions.md)|[CUShort](../functions/type-conversion-functions.md)|[Güncel](../data-types/date-data-type.md)|  
+|[Kategori](../data-types/decimal-data-type.md)|[Bildirileceğini](../statements/declare-statement.md)|[Default](../modifiers/default.md)|[Ğini](../statements/delegate-statement.md)|  
+|[Boyutu](../statements/dim-statement.md)|[DirectCast](../operators/directcast-operator.md)|[Gösterme](../statements/do-loop-statement.md)|[Çift](../data-types/double-data-type.md)|  
+|[Saniyede](../statements/for-each-next-statement.md)|[Değilse](../statements/else-statement.md)|[ElseIf](../statements/if-then-else-statement.md)|[End Deyimi](../statements/end-statement.md)|  
+|[End \<anahtar sözcüğü >](../statements/end-keyword-statement.md)|`EndIf`|[Yardımının](../statements/enum-statement.md)|[Silme](../statements/erase-statement.md)|  
+|[Hata:](../statements/on-error-statement.md)|[Event](../statements/event-statement.md)|[Çıkış](../statements/exit-statement.md)|[Yanlýþ](../data-types/boolean-data-type.md)|  
+|[Son olarak](../statements/try-catch-finally-statement.md)|[İçin (Için... İleri](../statements/for-next-statement.md)|[Her biri için... İleri](../statements/for-each-next-statement.md)|[Friend](../modifiers/friend.md)|  
+|[Çalışmayacaktır](../statements/function-statement.md)|[Al](../statements/get-statement.md)|[GetType](../operators/gettype-operator.md)|[GetXMLNamespace](../operators/getxmlnamespace-operator.md)|  
+|[Genel](../../../visual-basic/programming-guide/program-structure/namespaces.md)|`GoSub`|[Git](../statements/goto-statement.md)|[İşlendiğini](../statements/handles-clause.md)|  
+|[If](../statements/if-then-else-statement.md)|[If ()](../operators/if-operator.md)|[Uygular](../statements/implements-clause.md)|[Implements Deyimi](../statements/implements-statement.md)|  
+|[İçeri aktarmalar (.NET ad alanı ve türü)](../statements/imports-statement-net-namespace-and-type.md)|[İçeri aktarmalar (XML ad alanı)](../statements/imports-statement-xml-namespace.md)|['Ndaki](../statements/in-clause.md)|[In (Genel Değiştirici)](../modifiers/in-generic-modifier.md)|  
+|[Alıp](../statements/inherits-statement.md)|[Gir](../data-types/integer-data-type.md)|[Arayüz](../statements/interface-statement.md)|[Eklenir](../operators/is-operator.md)|  
+|[IsNot](../operators/isnot-operator.md)|[Atalım](../queries/let-clause.md)|[LIB](../statements/declare-statement.md)|[Like](../operators/like-operator.md)|  
+|[Kalacağını](../data-types/long-data-type.md)|[Gerçekleştirmek](../statements/do-loop-statement.md)|[Yapa](../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)|[Alma](../operators/mod-operator.md)|  
+|[Module](../modifiers/module-keyword.md)|[Module Deyimi](../statements/module-statement.md)|[MustInherit](../modifiers/mustinherit.md)|[MustOverride](../modifiers/mustoverride.md)|  
+|[MyBase](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)|[Sınıfım](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)|[Uzayına](../statements/namespace-statement.md)|[Narrowing](../modifiers/narrowing.md)|  
+|[Yeni kısıtlama](../statements/type-list.md)|[New İşleci](../operators/new-operator.md)|[Next](../statements/for-next-statement.md)|[İleri (devamında)](../statements/resume-statement.md)|  
+|[Başlatılmadı](../operators/not-operator.md)|[Nothing](../nothing.md)|[NotInheritable](../modifiers/notinheritable.md)|[NotOverridable](../modifiers/notoverridable.md)|  
+|[Nesne](../data-types/object-data-type.md)|[Durumunu](../statements/of-clause.md)|[Dayanır](../../../visual-basic/misc/on.md)|[İşlecinde](../statements/operator-statement.md)|  
+|[Seçeneği](../statements/option-keyword-statement.md)|[Optional](../modifiers/optional.md)|[Veya](../operators/or-operator.md)|[OrElse](../operators/orelse-operator.md)|  
+|[Out (Genel Değiştirici)](../modifiers/out-generic-modifier.md)|[Overloads](../modifiers/overloads.md)|[Overridable](../modifiers/overridable.md)|[Overrides](../modifiers/overrides.md)|  
+|[ParamArray](../modifiers/paramarray.md)|[Partial](../modifiers/partial.md)|[Private](../modifiers/private.md)|[Özelliði](../statements/property-statement.md)|  
+|[Protected](../modifiers/protected.md)|[Public](../modifiers/public.md)|[RaiseEvent](../statements/raiseevent-statement.md)|[ReadOnly](../modifiers/readonly.md)|  
+|[ReDim](../statements/redim-statement.md)|[MI](../statements/rem-statement.md)|[RemoveHandler](../statements/removehandler-statement.md)|[Resume](../statements/resume-statement.md)|  
+|[Döndürülmesini](../statements/return-statement.md)|[SByte](../data-types/sbyte-data-type.md)|[Seçin](../statements/select-case-statement.md)|[Kurmak](../statements/set-statement.md)|  
+|[Shadows](../modifiers/shadows.md)|[Shared](../modifiers/shared.md)|[Kısadır](../data-types/short-data-type.md)|[Sunuculu](../data-types/single-data-type.md)|  
+|[Static](../modifiers/static.md)|[Step](../statements/for-next-statement.md)|[Stop](../statements/stop-statement.md)|[Dize](../data-types/string-data-type.md)|  
+|[Yapı kısıtlaması](../statements/type-list.md)|[Structure Deyimi](../statements/structure-statement.md)|[Alt](../statements/sub-statement.md)|[SyncLock](../statements/synclock-statement.md)|  
+|[Ni](../statements/then-statement.md)|[Throw](../statements/throw-statement.md)|[Hedef](../statements/for-next-statement.md)|[Değeri](../data-types/boolean-data-type.md)|  
+|[Almaya](../statements/try-catch-finally-statement.md)|[TryCast](../operators/trycast-operator.md)|[TypeOf... Eklenir](../operators/typeof-operator.md)|[UInteger](../data-types/uinteger-data-type.md)|  
+|['Tur](../data-types/ulong-data-type.md)|[UShort](../data-types/ushort-data-type.md)|[Kullanarak](../statements/using-statement.md)|`Variant`|  
+|`Wend`|[Oluşturulurken](../statements/try-catch-finally-statement.md)|[While](../statements/while-end-while-statement.md)|[Widening](../modifiers/widening.md)|  
+|[Kullanılarak](../statements/with-end-with-statement.md)|[WithEvents](../modifiers/withevents.md)|[WriteOnly](../modifiers/writeonly.md)|[XOR](../operators/xor-operator.md)|  
+|[#Const](../directives/const-directive.md)|[#Else](../directives/if-then-else-directives.md)|[#ElseIf](../directives/if-then-else-directives.md)|[#End](../directives/if-then-else-directives.md)|  
+|[#If](../directives/if-then-else-directives.md)|[=](../operators/assignment-operator.md)|[&](../operators/concatenation-operator.md)|[&=](../operators/and-assignment-operator.md)|  
+|[*](../operators/multiplication-operator.md)|[*=](../operators/multiplication-assignment-operator.md)|[/](../operators/floating-point-division-operator.md)|[/=](../operators/floating-point-division-assignment-operator.md)|  
+|[\\](../operators/integer-division-operator.md)|[\\=](../operators/integer-division-assignment-operator.md)|[^](../operators/exponentiation-operator.md)|[^=](../operators/exponentiation-assignment-operator.md)|  
+|[+](../operators/addition-operator.md)|[+=](../operators/addition-assignment-operator.md)|[-](../operators/subtraction-operator.md)|[-=](../operators/subtraction-assignment-operator.md)|  
+|[>> İşleci](../operators/right-shift-operator.md)|[>>= İşleci](../operators/right-shift-assignment-operator.md)|[<<](../operators/left-shift-operator.md)|[<\<=](../operators/left-shift-assignment-operator.md)|  
   
 > [!NOTE]
-> Kodunuzun okunmasını zorlaştırabileceğinden, kaçış adları kullanmanızı önermiyoruz ve bulmanın zor olduğu hafif hatalara neden olabilir.  
-  
-|||||  
-|---|---|---|---|  
-|[AddHandler](../../../visual-basic/language-reference/statements/addhandler-statement.md)|[AddressOf](../../../visual-basic/language-reference/operators/addressof-operator.md)|[Diğer ad](../../../visual-basic/language-reference/statements/alias-clause.md)|['](../../../visual-basic/language-reference/operators/and-operator.md)|  
-|[AndAlso](../../../visual-basic/language-reference/operators/andalso-operator.md)|[Gerektiği](../../../visual-basic/language-reference/statements/as-clause.md)|[Boole değeri](../../../visual-basic/language-reference/data-types/boolean-data-type.md)|[ByRef](../../../visual-basic/language-reference/modifiers/byref.md)|  
-|[Bayt](../../../visual-basic/language-reference/data-types/byte-data-type.md)|[ByVal](../../../visual-basic/language-reference/modifiers/byval.md)|[Çağrı](../../../visual-basic/language-reference/statements/call-statement.md)|[Harflerini](../../../visual-basic/language-reference/statements/select-case-statement.md)|  
-|[Yakalaya](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)|[CBool](../../../visual-basic/language-reference/functions/type-conversion-functions.md)|[CByte](../../../visual-basic/language-reference/functions/type-conversion-functions.md)|[CChar](../../../visual-basic/language-reference/functions/type-conversion-functions.md)|  
-|[CDate](../../../visual-basic/language-reference/functions/type-conversion-functions.md)|[CDbl](../../../visual-basic/language-reference/functions/type-conversion-functions.md)|[CDec](../../../visual-basic/language-reference/functions/type-conversion-functions.md)|[Char](../../../visual-basic/language-reference/data-types/char-data-type.md)|  
-|[CInt](../../../visual-basic/language-reference/functions/type-conversion-functions.md)|[Sınıf kısıtlaması](../../../visual-basic/language-reference/statements/type-list.md)|[Class Deyimi](../../../visual-basic/language-reference/statements/class-statement.md)|[CLng](../../../visual-basic/language-reference/functions/type-conversion-functions.md)|  
-|[Değişkenlerinde CObj](../../../visual-basic/language-reference/functions/type-conversion-functions.md)|[Sabit](../../../visual-basic/language-reference/statements/const-statement.md)|[Continue](../../../visual-basic/language-reference/statements/continue-statement.md)|[CSByte](../../../visual-basic/language-reference/functions/type-conversion-functions.md)|  
-|[CShort](../../../visual-basic/language-reference/functions/type-conversion-functions.md)|[CSng](../../../visual-basic/language-reference/functions/type-conversion-functions.md)|[CStr](../../../visual-basic/language-reference/functions/type-conversion-functions.md)|[CType](../../../visual-basic/language-reference/functions/type-conversion-functions.md)|  
-|[CUInt](../../../visual-basic/language-reference/functions/type-conversion-functions.md)|[Külda](../../../visual-basic/language-reference/functions/type-conversion-functions.md)|[CUShort](../../../visual-basic/language-reference/functions/type-conversion-functions.md)|[Tarih](../../../visual-basic/language-reference/data-types/date-data-type.md)|  
-|[Kategori](../../../visual-basic/language-reference/data-types/decimal-data-type.md)|[Bildirileceğini](../../../visual-basic/language-reference/statements/declare-statement.md)|[Default](../../../visual-basic/language-reference/modifiers/default.md)|[Temsilci](../../../visual-basic/language-reference/statements/delegate-statement.md)|  
-|[Boyutu](../../../visual-basic/language-reference/statements/dim-statement.md)|[DirectCast](../../../visual-basic/language-reference/operators/directcast-operator.md)|[Gösterme](../../../visual-basic/language-reference/statements/do-loop-statement.md)|[Çift](../../../visual-basic/language-reference/data-types/double-data-type.md)|  
-|[Saniyede](../../../visual-basic/language-reference/statements/for-each-next-statement.md)|[Değilse](../../../visual-basic/language-reference/statements/else-statement.md)|[ElseIf](../../../visual-basic/language-reference/statements/if-then-else-statement.md)|[End Deyimi](../../../visual-basic/language-reference/statements/end-statement.md)|  
-|[End \<anahtar sözcüğü >](../../../visual-basic/language-reference/statements/end-keyword-statement.md)|`EndIf`|[Yardımının](../../../visual-basic/language-reference/statements/enum-statement.md)|[Silme](../../../visual-basic/language-reference/statements/erase-statement.md)|  
-|[Hata:](../../../visual-basic/language-reference/statements/on-error-statement.md)|[Event](../../../visual-basic/language-reference/statements/event-statement.md)|[Çıkış](../../../visual-basic/language-reference/statements/exit-statement.md)|[Yanlýþ](../../../visual-basic/language-reference/data-types/boolean-data-type.md)|  
-|[Son olarak](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)|[İçin (Için... İleri](../../../visual-basic/language-reference/statements/for-next-statement.md)|[Her biri için... İleri](../../../visual-basic/language-reference/statements/for-each-next-statement.md)|[Friend](../../../visual-basic/language-reference/modifiers/friend.md)|  
-|[Çalışmayacaktır](../../../visual-basic/language-reference/statements/function-statement.md)|[Al](../../../visual-basic/language-reference/statements/get-statement.md)|[GetType](../../../visual-basic/language-reference/operators/gettype-operator.md)|[GetXMLNamespace](../../../visual-basic/language-reference/operators/getxmlnamespace-operator.md)|  
-|[Genel](../../../visual-basic/programming-guide/program-structure/namespaces.md)|`GoSub`|[Git](../../../visual-basic/language-reference/statements/goto-statement.md)|[İşlendiğini](../../../visual-basic/language-reference/statements/handles-clause.md)|  
-|[If](../../../visual-basic/language-reference/statements/if-then-else-statement.md)|[If ()](../../../visual-basic/language-reference/operators/if-operator.md)|[Uygular](../../../visual-basic/language-reference/statements/implements-clause.md)|[Implements Deyimi](../../../visual-basic/language-reference/statements/implements-statement.md)|  
-|[İçeri aktarmalar (.NET ad alanı ve türü)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)|[İçeri aktarmalar (XML ad alanı)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md)|['Ndaki](../../../visual-basic/language-reference/statements/in-clause.md)|[In (Genel Değiştirici)](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)|  
-|[Alıp](../../../visual-basic/language-reference/statements/inherits-statement.md)|[Gir](../../../visual-basic/language-reference/data-types/integer-data-type.md)|[Arabirimi](../../../visual-basic/language-reference/statements/interface-statement.md)|[Eklenir](../../../visual-basic/language-reference/operators/is-operator.md)|  
-|[IsNot](../../../visual-basic/language-reference/operators/isnot-operator.md)|[Atalım](../../../visual-basic/language-reference/queries/let-clause.md)|[LIB](../../../visual-basic/language-reference/statements/declare-statement.md)|[Like](../../../visual-basic/language-reference/operators/like-operator.md)|  
-|[Kalacağını](../../../visual-basic/language-reference/data-types/long-data-type.md)|[döngü](../../../visual-basic/language-reference/statements/do-loop-statement.md)|[Yapa](../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)|[Alma](../../../visual-basic/language-reference/operators/mod-operator.md)|  
-|[Module](../../../visual-basic/language-reference/modifiers/module-keyword.md)|[Module Deyimi](../../../visual-basic/language-reference/statements/module-statement.md)|[MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)|[MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md)|  
-|[MyBase](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)|[Sınıfım](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)|[Namespace](../../../visual-basic/language-reference/statements/namespace-statement.md)|[Narrowing](../../../visual-basic/language-reference/modifiers/narrowing.md)|  
-|[Yeni kısıtlama](../../../visual-basic/language-reference/statements/type-list.md)|[New İşleci](../../../visual-basic/language-reference/operators/new-operator.md)|[Next](../../../visual-basic/language-reference/statements/for-next-statement.md)|[İleri (devamında)](../../../visual-basic/language-reference/statements/resume-statement.md)|  
-|[Başlatılmadı](../../../visual-basic/language-reference/operators/not-operator.md)|[Nothing](../../../visual-basic/language-reference/nothing.md)|[NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md)|[NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)|  
-|[Nesne](../../../visual-basic/language-reference/data-types/object-data-type.md)|[Durumunu](../../../visual-basic/language-reference/statements/of-clause.md)|[Dayanır](../../../visual-basic/misc/on.md)|[İşleci](../../../visual-basic/language-reference/statements/operator-statement.md)|  
-|[Seçeneği](../../../visual-basic/language-reference/statements/option-keyword-statement.md)|[Optional](../../../visual-basic/language-reference/modifiers/optional.md)|[veya](../../../visual-basic/language-reference/operators/or-operator.md)|[OrElse](../../../visual-basic/language-reference/operators/orelse-operator.md)|  
-|[Out (Genel Değiştirici)](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)|[Overloads](../../../visual-basic/language-reference/modifiers/overloads.md)|[Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)|[Overrides](../../../visual-basic/language-reference/modifiers/overrides.md)|  
-|[ParamArray](../../../visual-basic/language-reference/modifiers/paramarray.md)|[Partial](../../../visual-basic/language-reference/modifiers/partial.md)|[Private](../../../visual-basic/language-reference/modifiers/private.md)|[Özelliði](../../../visual-basic/language-reference/statements/property-statement.md)|  
-|[Protected](../../../visual-basic/language-reference/modifiers/protected.md)|[Public](../../../visual-basic/language-reference/modifiers/public.md)|[RaiseEvent](../../../visual-basic/language-reference/statements/raiseevent-statement.md)|[ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)|  
-|[ReDim](../../../visual-basic/language-reference/statements/redim-statement.md)|[MI](../../../visual-basic/language-reference/statements/rem-statement.md)|[RemoveHandler](../../../visual-basic/language-reference/statements/removehandler-statement.md)|[Resume](../../../visual-basic/language-reference/statements/resume-statement.md)|  
-|[Döndürülmesini](../../../visual-basic/language-reference/statements/return-statement.md)|[SByte](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)|[Seçin](../../../visual-basic/language-reference/statements/select-case-statement.md)|[Kurmak](../../../visual-basic/language-reference/statements/set-statement.md)|  
-|[Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)|[Shared](../../../visual-basic/language-reference/modifiers/shared.md)|[Kısadır](../../../visual-basic/language-reference/data-types/short-data-type.md)|[Sunuculu](../../../visual-basic/language-reference/data-types/single-data-type.md)|  
-|[Static](../../../visual-basic/language-reference/modifiers/static.md)|[Step](../../../visual-basic/language-reference/statements/for-next-statement.md)|[Stop](../../../visual-basic/language-reference/statements/stop-statement.md)|[Dize](../../../visual-basic/language-reference/data-types/string-data-type.md)|  
-|[Yapı kısıtlaması](../../../visual-basic/language-reference/statements/type-list.md)|[Structure Deyimi](../../../visual-basic/language-reference/statements/structure-statement.md)|[Alt](../../../visual-basic/language-reference/statements/sub-statement.md)|[SyncLock](../../../visual-basic/language-reference/statements/synclock-statement.md)|  
-|[Ni](../../../visual-basic/language-reference/statements/then-statement.md)|[Throw](../../../visual-basic/language-reference/statements/throw-statement.md)|[To](../../../visual-basic/language-reference/statements/for-next-statement.md)|[Değeri](../../../visual-basic/language-reference/data-types/boolean-data-type.md)|  
-|[Almaya](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)|[TryCast](../../../visual-basic/language-reference/operators/trycast-operator.md)|[TypeOf... Eklenir](../../../visual-basic/language-reference/operators/typeof-operator.md)|[UInteger](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)|  
-|['Tur](../../../visual-basic/language-reference/data-types/ulong-data-type.md)|[UShort](../../../visual-basic/language-reference/data-types/ushort-data-type.md)|[Kullanarak](../../../visual-basic/language-reference/statements/using-statement.md)|`Variant`|  
-|`Wend`|[Oluşturulurken](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)|[While](../../../visual-basic/language-reference/statements/while-end-while-statement.md)|[Widening](../../../visual-basic/language-reference/modifiers/widening.md)|  
-|[Kullanılarak](../../../visual-basic/language-reference/statements/with-end-with-statement.md)|[WithEvents](../../../visual-basic/language-reference/modifiers/withevents.md)|[WriteOnly](../../../visual-basic/language-reference/modifiers/writeonly.md)|[XOR](../../../visual-basic/language-reference/operators/xor-operator.md)|  
-|[#Const](../../../visual-basic/language-reference/directives/const-directive.md)|[#Else](../../../visual-basic/language-reference/directives/if-then-else-directives.md)|[#ElseIf](../../../visual-basic/language-reference/directives/if-then-else-directives.md)|[#End](../../../visual-basic/language-reference/directives/if-then-else-directives.md)|  
-|[#If](../../../visual-basic/language-reference/directives/if-then-else-directives.md)|[=](../../../visual-basic/language-reference/operators/assignment-operator.md)|[&](../../../visual-basic/language-reference/operators/concatenation-operator.md)|[&=](../../../visual-basic/language-reference/operators/and-assignment-operator.md)|  
-|[*](../../../visual-basic/language-reference/operators/multiplication-operator.md)|[*=](../../../visual-basic/language-reference/operators/multiplication-assignment-operator.md)|[/](../../../visual-basic/language-reference/operators/floating-point-division-operator.md)|[/=](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)|  
-|[\\](../../../visual-basic/language-reference/operators/integer-division-operator.md)|[\\=](../../../visual-basic/language-reference/operators/integer-division-assignment-operator.md)|[^](../../../visual-basic/language-reference/operators/exponentiation-operator.md)|[^=](../../../visual-basic/language-reference/operators/exponentiation-assignment-operator.md)|  
-|[+](../../../visual-basic/language-reference/operators/addition-operator.md)|[+=](../../../visual-basic/language-reference/operators/addition-assignment-operator.md)|[-](../../../visual-basic/language-reference/operators/subtraction-operator.md)|[-=](../../../visual-basic/language-reference/operators/subtraction-assignment-operator.md)|  
-|[>> İşleci](../../../visual-basic/language-reference/operators/right-shift-operator.md)|[>>= İşleci](../../../visual-basic/language-reference/operators/right-shift-assignment-operator.md)|[<<](../../../visual-basic/language-reference/operators/left-shift-operator.md)|[<\<=](../../../visual-basic/language-reference/operators/left-shift-assignment-operator.md)|  
-  
-> [!NOTE]
-> `EndIf`,, ve, `Wend` artık Visual Basic kullanılmadığından,, ve ayrılmış anahtar sözcükler olarak tutulur. `GoSub` `Variant` `Let` Anahtar sözcüğünün anlamı değişmiştir. `Let`Artık LINQ sorgularında kullanılıyor. Daha fazla bilgi için bkz. [Let yan tümcesi](../../../visual-basic/language-reference/queries/let-clause.md).  
+> `EndIf`, `GoSub`, `Variant`ve `Wend` ayrılmış anahtar sözcükler olarak saklanır, ancak bunlar artık Visual Basic kullanılmıyor. `Let` anahtar sözcüğünün anlamı değişmiştir. `Let` artık LINQ sorgularında kullanılıyor. Daha fazla bilgi için bkz. [Let yan tümcesi](../queries/let-clause.md).  
   
 ## <a name="unreserved-keywords"></a>Ayrılmamış anahtar sözcükler  
  Aşağıdaki anahtar sözcükler ayrılmamıştır, bu, programlama öğelerinizin adları olarak kullanabileceğiniz anlamına gelir. Ancak, bu, kodunuzun okunmasını zorlaştırabildiğinden ve bulmanın zor olduğu hafif hatalara yol açabildiğinden bunun yapılması önerilmez.  
   
 |||||  
 |---|---|---|---|  
-|[Birleşik](../../../visual-basic/language-reference/queries/aggregate-clause.md)|[Ansi](../../../visual-basic/language-reference/modifiers/ansi.md)|[Assembly](../../../visual-basic/language-reference/modifiers/assembly.md)|[Async](../../../visual-basic/language-reference/modifiers/async.md)|  
-|[Auto](../../../visual-basic/language-reference/modifiers/auto.md)|[Await](../../../visual-basic/language-reference/operators/await-operator.md)|[İkili](../../../visual-basic/language-reference/statements/option-compare-statement.md)|[Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md)|  
-|[Özel](../../../visual-basic/language-reference/statements/event-statement.md)|[Ayrı](../../../visual-basic/language-reference/queries/distinct-clause.md)|[Eşittir](../../../visual-basic/language-reference/queries/equals-clause.md)|[Anlaşılır](../../../visual-basic/language-reference/statements/option-explicit-statement.md)|  
-|[From](../../../visual-basic/language-reference/queries/from-clause.md)|[Gruplandırma ölçütü](../../../visual-basic/language-reference/queries/group-by-clause.md)|[Gruba ekleme](../../../visual-basic/language-reference/queries/group-join-clause.md)|[Birleştirin](../../../visual-basic/language-reference/statements/into-clause.md)|  
-|[IsFalse](../../../visual-basic/language-reference/operators/isfalse-operator.md)|[IsTrue](../../../visual-basic/language-reference/operators/istrue-operator.md)|[Iterator](../../../visual-basic/language-reference/modifiers/iterator.md)|[Birleştirme](../../../visual-basic/language-reference/queries/join-clause.md)|  
-|[Key](../../../visual-basic/language-reference/modifiers/key.md)|[Orta](../../../visual-basic/language-reference/statements/mid-statement.md)|[Dışına](../../../visual-basic/misc/off.md)|[Sıralama ölçütü](../../../visual-basic/language-reference/queries/order-by-clause.md)|  
-|[Koruyup](../../../visual-basic/language-reference/statements/redim-statement.md)|[Skip](../../../visual-basic/language-reference/queries/skip-clause.md)|[Atla](../../../visual-basic/language-reference/queries/skip-while-clause.md)|[Sert](../../../visual-basic/language-reference/statements/option-strict-statement.md)|  
-|[Almanız](../../../visual-basic/language-reference/queries/take-clause.md)|[Alma sırasında](../../../visual-basic/language-reference/queries/take-while-clause.md)|[Metin](../../../visual-basic/language-reference/statements/option-compare-statement.md)|[Unicode](../../../visual-basic/language-reference/modifiers/unicode.md)|  
-|[Until](../../../visual-basic/language-reference/statements/do-loop-statement.md)|[Olmadığı](../../../visual-basic/language-reference/queries/where-clause.md)|[yield](../../../visual-basic/language-reference/statements/yield-statement.md)|[#ExternalSource](../../../visual-basic/language-reference/directives/externalsource-directive.md)|  
-|[#Region](../../../visual-basic/language-reference/directives/region-directive.md)||||  
+|[Birleşik](../queries/aggregate-clause.md)|[Ansi](../modifiers/ansi.md)|[Assembly](../modifiers/assembly.md)|[Async](../modifiers/async.md)|  
+|[Auto](../modifiers/auto.md)|[Await](../operators/await-operator.md)|[Ý](../statements/option-compare-statement.md)|[Compare](../statements/option-compare-statement.md)|  
+|[Özel](../statements/event-statement.md)|[Ayrı](../queries/distinct-clause.md)|[Eşittir](../queries/equals-clause.md)|[Anlaşılır](../statements/option-explicit-statement.md)|  
+|[Kaynak](../queries/from-clause.md)|[Gruplandırma ölçütü](../queries/group-by-clause.md)|[Gruba ekleme](../queries/group-join-clause.md)|[Birleştirin](../statements/into-clause.md)|  
+|[IsFalse](../operators/isfalse-operator.md)|[IsTrue](../operators/istrue-operator.md)|[Iterator](../modifiers/iterator.md)|[Birleştirme](../queries/join-clause.md)|  
+|[Key](../modifiers/key.md)|[Orta](../statements/mid-statement.md)|[Dışına](../../../visual-basic/misc/off.md)|[Sıralama ölçütü](../queries/order-by-clause.md)|  
+|[Koruyup](../statements/redim-statement.md)|[Skip](../queries/skip-clause.md)|[Atla](../queries/skip-while-clause.md)|[Sert](../statements/option-strict-statement.md)|  
+|[Almanız](../queries/take-clause.md)|[Alma sırasında](../queries/take-while-clause.md)|[Metin](../statements/option-compare-statement.md)|[Unicode](../modifiers/unicode.md)|  
+|[Until](../statements/do-loop-statement.md)|[Olmadığı](../queries/where-clause.md)|[Yield](../statements/yield-statement.md)|[#ExternalSource](../directives/externalsource-directive.md)|  
+|[#Region](../directives/region-directive.md)||||  
   
 ## <a name="related-topics"></a>İlgili Konular  
   
 |Başlık|Açıklama|  
 |-----------|-----------------|  
-|[Dizi Özeti](../../../visual-basic/language-reference/keywords/arrays-summary.md)|Dizileri oluşturmak, tanımlamak ve kullanmak için kullanılan dil öğelerini listeler.|  
-|[Koleksiyon Nesnesi Özeti](../../../visual-basic/language-reference/keywords/collection-object-summary.md)|Koleksiyonlar için kullanılan dil öğelerini listeler.|  
-|[Denetim Akışı Özeti](../../../visual-basic/language-reference/keywords/control-flow-summary.md)|Yordam akışını döngü ve denetleme için kullanılan deyimleri listeler.|  
-|[Dönüştürme Özeti](../../../visual-basic/language-reference/keywords/conversion-summary.md)|Sayıları, tarihleri, zamanları ve dizeleri dönüştürmek için kullanılan işlevleri listeler.|  
-|[Veri Türleri Özeti](../../../visual-basic/language-reference/keywords/data-types-summary.md)|Veri türlerini listeler. Ayrıca, veri türleri arasında dönüştürme yapmak ve veri türlerini doğrulamak için kullanılan işlevleri listeler.|  
-|[Tarihler ve Saatlere İlişkin Özet](../../../visual-basic/language-reference/keywords/dates-and-times-summary.md)|Tarihler ve saatler için kullanılan dil öğelerini listeler.|  
-|[Bildirimler ve Sabitlere İlişkin Özet](../../../visual-basic/language-reference/keywords/declarations-and-constants-summary.md)|Değişkenleri, sabitleri, sınıfları, modülleri ve diğer programlama öğelerini bildirmek için kullanılan deyimleri listeler. Ayrıca, nesne bilgilerini almak, olayları işlemek ve devralmayı uygulamak için kullanılan dil öğelerini listeler.|  
-|[Dizinler ve Dosyalar Özeti](../../../visual-basic/language-reference/keywords/directories-and-files-summary.md)|Dosya sistemini denetlemek ve dosyaları işlemek için kullanılan işlevleri listeler.|  
-|[Hatalara İlişkin Özet](../../../visual-basic/language-reference/keywords/errors-summary.md)|Çalışma zamanı hata değerlerini yakalamak ve döndürmek için kullanılan dil öğelerini listeler.|  
-|[Mali Özet](../../../visual-basic/language-reference/keywords/financial-summary.md)|Finansal hesaplamalar gerçekleştirmek için kullanılan işlevleri listeler.|  
-|[Giriş ve Çıkış Özeti](../../../visual-basic/language-reference/keywords/input-and-output-summary.md)|Dosyaları okumak ve dosyalara yazmak, dosyaları yönetmek ve çıktıyı yazdırmak için kullanılan işlevleri listeler.|  
-|[Bilgi ve Etkileşim Özeti](../../../visual-basic/language-reference/keywords/information-and-interaction-summary.md)|Diğer programları çalıştırmak, komut satırı bağımsız değişkenleri almak, COM nesnelerini işlemek, renk bilgilerini almak ve denetim iletişim kutularını kullanmak için kullanılan işlevleri listeler.|  
-|[Matematik Özeti](../../../visual-basic/language-reference/keywords/math-summary.md)|Trigonometrik ve diğer matematiksel hesaplamalar gerçekleştirmek için kullanılan işlevleri listeler.|  
-|[Başvurum](../../../visual-basic/language-reference/keywords/my-reference.md)|İçinde `My`yer alan nesneleri, uygulamanın üzerinde çalıştığı bilgisayarın sık kullanılan yöntemlerine, özelliklerine ve olaylarına erişim sağlayan bir özellik olan geçerli uygulama, uygulamanın kaynakları, uygulamanın ayarlar ve bu şekilde devam eder.|  
-|[İşleçlere İlişkin Özet](../../../visual-basic/language-reference/keywords/operators-summary.md)|Atama ve karşılaştırma ifadelerini ve diğer işleçleri listeler.|  
-|[Kayıt Defteri Özeti](../../../visual-basic/language-reference/keywords/registry-summary.md)|Program ayarlarını okumak, kaydetmek ve silmek için kullanılan işlevleri listeler.|  
-|[Dize Düzenleme Özeti](../../../visual-basic/language-reference/keywords/string-manipulation-summary.md)|Dizeleri işlemek için kullanılan işlevleri listeler.|  
+|[Dizi Özeti](arrays-summary.md)|Dizileri oluşturmak, tanımlamak ve kullanmak için kullanılan dil öğelerini listeler.|  
+|[Koleksiyon Nesnesi Özeti](collection-object-summary.md)|Koleksiyonlar için kullanılan dil öğelerini listeler.|  
+|[Denetim Akışı Özeti](control-flow-summary.md)|Yordam akışını döngü ve denetleme için kullanılan deyimleri listeler.|  
+|[Dönüştürme Özeti](conversion-summary.md)|Sayıları, tarihleri, zamanları ve dizeleri dönüştürmek için kullanılan işlevleri listeler.|  
+|[Veri Türleri Özeti](data-types-summary.md)|Veri türlerini listeler. Ayrıca, veri türleri arasında dönüştürme yapmak ve veri türlerini doğrulamak için kullanılan işlevleri listeler.|  
+|[Tarihler ve Saatlere İlişkin Özet](dates-and-times-summary.md)|Tarihler ve saatler için kullanılan dil öğelerini listeler.|  
+|[Bildirimler ve Sabitlere İlişkin Özet](declarations-and-constants-summary.md)|Değişkenleri, sabitleri, sınıfları, modülleri ve diğer programlama öğelerini bildirmek için kullanılan deyimleri listeler. Ayrıca, nesne bilgilerini almak, olayları işlemek ve devralmayı uygulamak için kullanılan dil öğelerini listeler.|  
+|[Dizinler ve Dosyalar Özeti](directories-and-files-summary.md)|Dosya sistemini denetlemek ve dosyaları işlemek için kullanılan işlevleri listeler.|  
+|[Hatalara İlişkin Özet](errors-summary.md)|Çalışma zamanı hata değerlerini yakalamak ve döndürmek için kullanılan dil öğelerini listeler.|  
+|[Mali Özet](financial-summary.md)|Finansal hesaplamalar gerçekleştirmek için kullanılan işlevleri listeler.|  
+|[Giriş ve Çıkış Özeti](input-and-output-summary.md)|Dosyaları okumak ve dosyalara yazmak, dosyaları yönetmek ve çıktıyı yazdırmak için kullanılan işlevleri listeler.|  
+|[Bilgi ve Etkileşim Özeti](information-and-interaction-summary.md)|Diğer programları çalıştırmak, komut satırı bağımsız değişkenleri almak, COM nesnelerini işlemek, renk bilgilerini almak ve denetim iletişim kutularını kullanmak için kullanılan işlevleri listeler.|  
+|[Matematik Özeti](math-summary.md)|Trigonometrik ve diğer matematiksel hesaplamalar gerçekleştirmek için kullanılan işlevleri listeler.|  
+|[Başvurum](my-reference.md)|`My`yer alan nesneleri listeler, uygulamanın üzerinde çalıştığı bilgisayarın, geçerli uygulamanın, uygulamanın kaynakları, uygulamanın kaynakları, uygulama ayarları, uygulama ayarları, vb.|  
+|[İşleçlere İlişkin Özet](operators-summary.md)|Atama ve karşılaştırma ifadelerini ve diğer işleçleri listeler.|  
+|[Kayıt Defteri Özeti](registry-summary.md)|Program ayarlarını okumak, kaydetmek ve silmek için kullanılan işlevleri listeler.|  
+|[Dize Düzenleme Özeti](string-manipulation-summary.md)|Dizeleri işlemek için kullanılan işlevleri listeler.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Basic Çalışma Süresi Kitaplık Üyeleri](../../../visual-basic/language-reference/runtime-library-members.md)
+- [Visual Basic Çalışma Süresi Kitaplık Üyeleri](../runtime-library-members.md)

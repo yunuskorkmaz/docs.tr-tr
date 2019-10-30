@@ -6,58 +6,62 @@ helpviewer_keywords:
 - GDI+
 - graphics [Windows Forms], GDI+
 ms.assetid: a98a76ab-e455-49c9-891c-0491ac932f2c
-ms.openlocfilehash: 73d1759aec3abe2e3e9c371f949cf051930d103c
-ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
+ms.openlocfilehash: db47a63bc11961faf852215e954dda62c594bbe5
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67506134"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73035608"
 ---
 # <a name="about-gdi-managed-code"></a>GDI+ Yönetilen Kodu Hakkında
-GDI +'da iki boyutlu bir vektör grafikleri ve görüntüleme tipografi sunan Windows işletim sisteminin bölümüdür. GDI +'da (önceki Windows sürümleriyle grafik cihaz arabirimi dahil) GDI yeni özellikler ekleyerek ve var olan özellikleri iyileştirme artırır.  
+
+GDI+, Windows işletim sisteminin iki boyutlu vektör grafikleri, görüntüleme ve tipografi sağlayan kısmıdır. GDI+, yeni özellikler eklenerek ve mevcut özellikleri iyileştirerek GDI 'da (Windows 'un önceki sürümlerinde bulunan Grafik Cihaz Arabirimi) geliştirilir.
+
+GDI+ yönetilen sınıf arabirimi (bir sarmalayıcılar kümesi), XML Web Hizmetleri ve diğer uygulamalar oluşturmaya, dağıtmaya ve çalıştırmaya yönelik bir ortam olan .NET Framework bir parçasıdır.
+
+Bu bölüm, yönetilen kod kullanan programcılar için GDI+ API 'SI hakkında bilgi sağlar.
+
+## <a name="in-this-section"></a>Bu bölümde
+
+- [Çizgiler, Eğriler ve Şekiller](lines-curves-and-shapes.md)  
+ Vektör grafiklerini açıklar.
+
+- [Görüntüler, Bit Eşlemler ve Meta Dosyaları](images-bitmaps-and-metafiles.md)  
+ Kullanılabilir görüntülerin türünü ve bunlarla çalışmayı açıklar.
+
+- [Koordinat Sistemleri ve Dönüştürmeler](coordinate-systems-and-transformations.md)  
+ GDI+ ile grafiklerin nasıl dönüştürüleceğini açıklar.
+
+## <a name="reference"></a>Başvuru
+
+- <xref:System.Drawing.Graphics?displayProperty=nameWithType>  
+ Bu sınıfı açıklar ve tüm üyelerine bağlantıları vardır.
+
+- <xref:System.Drawing.Image?displayProperty=nameWithType>  
+ Bu sınıfı açıklar ve tüm üyelerine bağlantıları vardır.
+
+- <xref:System.Drawing.Bitmap?displayProperty=nameWithType>  
+ Bu sınıfı açıklar ve tüm üyelerine bağlantıları vardır.
   
- GDI + yönetilen sınıf arabirimi (sarmalayıcılar kümesi) oluşturmak, dağıtmak ve XML Web Hizmetleri ve diğer uygulamaları çalıştırmak için bir ortam .NET Framework'ün bir parçasıdır.  
-  
- Bu bölüm, yönetilen kod kullanarak programcıları için GDI + ' API'si hakkında bilgi sağlar.  
-  
-## <a name="in-this-section"></a>Bu Bölümde  
- [Çizgiler, Eğriler ve Şekiller](lines-curves-and-shapes.md)  
- Vektör grafikleri açıklanır.  
-  
- [Görüntüler, Bit Eşlemler ve Meta Dosyaları](images-bitmaps-and-metafiles.md)  
- Kullanılabilir görüntüleri türünü ve bunlarla çalışmak nasıl ele alır.  
-  
- [Koordinat Sistemleri ve Dönüştürmeler](coordinate-systems-and-transformations.md)  
- GDI + Grafik dönüştürme anlatılmaktadır.  
-  
-## <a name="reference"></a>Başvuru  
- <xref:System.Drawing.Graphics?displayProperty=nameWithType>  
- Bu sınıf açıklar ve tüm üyeleri için bağlantılar içerir.  
-  
- <xref:System.Drawing.Image?displayProperty=nameWithType>  
- Bu sınıf açıklar ve tüm üyeleri için bağlantılar içerir.  
-  
- <xref:System.Drawing.Bitmap?displayProperty=nameWithType>,  
- Bu sınıf açıklar ve tüm üyeleri için bağlantılar içerir.  
-  
- <xref:System.Drawing.Imaging.Metafile?displayProperty=nameWithType>,  
- Bu sınıf açıklar ve tüm üyeleri için bağlantılar içerir.  
-  
- <xref:System.Drawing.Font?displayProperty=nameWithType>,  
- Bu sınıf açıklar ve tüm üyeleri için bağlantılar içerir.  
-  
- <xref:System.Drawing.Brush?displayProperty=nameWithType>,  
- Bu sınıf açıklar ve tüm üyeleri için bağlantılar içerir.  
-  
- <xref:System.Drawing.Color?displayProperty=nameWithType>,  
- Bu sınıf açıklar ve tüm üyeleri için bağlantılar içerir.  
-  
- <xref:System.Drawing.Drawing2D.Matrix?displayProperty=nameWithType>  
- Bu sınıf açıklar ve tüm üyeleri için bağlantılar içerir.  
-  
- <xref:System.Windows.Forms.TextRenderer?displayProperty=nameWithType>  
- Bu sınıf açıklar ve tüm üyeleri için bağlantılar içerir.  
-  
-## <a name="related-sections"></a>İlgili Bölümler  
- [Yönetilen grafik sınıflarını kullanma](using-managed-graphics-classes.md).  
- Nasıl kullanılacağını gösteren konulara bağlantılar içerir `Graphics` programlama arabirimi.
+- <xref:System.Drawing.Imaging.Metafile?displayProperty=nameWithType>  
+ Bu sınıfı açıklar ve tüm üyelerine bağlantıları vardır.
+
+- <xref:System.Drawing.Font?displayProperty=nameWithType>  
+ Bu sınıfı açıklar ve tüm üyelerine bağlantıları vardır.
+
+- <xref:System.Drawing.Brush?displayProperty=nameWithType>  
+ Bu sınıfı açıklar ve tüm üyelerine bağlantıları vardır.
+
+- <xref:System.Drawing.Color?displayProperty=nameWithType>  
+ Bu sınıfı açıklar ve tüm üyelerine bağlantıları vardır.
+
+- <xref:System.Drawing.Drawing2D.Matrix?displayProperty=nameWithType>  
+ Bu sınıfı açıklar ve tüm üyelerine bağlantıları vardır.
+
+- <xref:System.Windows.Forms.TextRenderer?displayProperty=nameWithType>  
+ Bu sınıfı açıklar ve tüm üyelerine bağlantıları vardır.
+
+## <a name="related-sections"></a>İlgili bölümler
+
+[Yönetilen grafik sınıflarını kullanma](using-managed-graphics-classes.md)\
+`Graphics` programlama arabiriminin nasıl kullanılacağını gösteren konuların bağlantılarını içerir.

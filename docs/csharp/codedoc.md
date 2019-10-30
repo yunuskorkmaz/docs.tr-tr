@@ -2,13 +2,14 @@
 title: Kodunuzu XML açıklamalarıyla belgeleme
 description: Kodunuzu XML belge açıklamalarıyla belgeleme ve derleme zamanında bir XML belge dosyası oluşturma hakkında bilgi edinin.
 ms.date: 02/14/2017
+ms.technology: csharp-fundamentals
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
-ms.openlocfilehash: 048546407dbf94f274dd8c9c39e83c103efd75e1
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: a9142b36586de4d08dec6c4b72bfd1725b4830ac
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72521163"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73037662"
 ---
 # <a name="documenting-your-code-with-xml-comments"></a>Kodunuzu XML açıklamalarıyla belgeleme
 
@@ -55,30 +56,30 @@ Daha önce bahsedilen XML belge etiketleri bunu elde etmek için kullanılabilir
 
 ## <a name="summary"></a>\<summary>
 
-@No__t_0 etiketi, bir tür veya üye hakkında kısa bilgiler ekler.
-@No__t_0 sınıf tanımına ve ilk `Add` yöntemine ekleyerek kullanımını göstereceğim. Kodunuzu geri kalanına uygulamayı ücretsiz olarak hissetmekten çekinmeyin.
+`<summary>` etiketi, bir tür veya üye hakkında kısa bilgiler ekler.
+`Math` sınıf tanımına ve ilk `Add` yöntemine ekleyerek kullanımını göstereceğim. Kodunuzu geri kalanına uygulamayı ücretsiz olarak hissetmekten çekinmeyin.
 
 [!code-csharp[Summary Tag](../../samples/snippets/csharp/concepts/codedoc/summary-tag.cs)]
 
-@No__t_0 etiketi çok önemlidir ve içeriği, IntelliSense 'de veya bir API başvuru belgesinde bulunan içerik veya üye bilgilerinin birincil kaynağı olduğundan, bunu dahil etmenizi öneririz.
+`<summary>` etiketi çok önemlidir ve içeriği, IntelliSense 'de veya bir API başvuru belgesinde bulunan içerik veya üye bilgilerinin birincil kaynağı olduğundan, bunu dahil etmenizi öneririz.
 
 ## <a name="remarks"></a>\<remarks >
 
-@No__t_0 etiketi, `<summary>` etiketinin sağladığı türler veya Üyeler hakkındaki bilgileri tamamlar. Bu örnekte, bunu yalnızca sınıfına eklersiniz.
+`<remarks>` etiketi, `<summary>` etiketinin sağladığı türler veya Üyeler hakkındaki bilgileri tamamlar. Bu örnekte, bunu yalnızca sınıfına eklersiniz.
 
 [!code-csharp[Remarks Tag](../../samples/snippets/csharp/concepts/codedoc/remarks-tag.cs)]
 
 ## <a name="returns"></a>\<returns>
 
-@No__t_0 etiketi bir yöntem bildiriminin dönüş değerini açıklar.
+`<returns>` etiketi bir yöntem bildiriminin dönüş değerini açıklar.
 Daha önce olduğu gibi, aşağıdaki örnek ilk `Add` yönteminde `<returns>` etiketini gösterir. Diğer yöntemlerle aynı şekilde yapabilirsiniz.
 
 [!code-csharp[Returns Tag](../../samples/snippets/csharp/concepts/codedoc/returns-tag.cs)]
 
 ## <a name="value"></a>\<value>
 
-@No__t_0 etiketi, özellikler için kullanmanız dışında `<returns>` etiketine benzerdir.
-@No__t_0 kitaplığınızın `PI` adında bir statik özelliği olduğunu varsayarsak, bu etiketi nasıl kullanacağınızı aşağıda bulabilirsiniz:
+`<value>` etiketi, özellikler için kullanmanız dışında `<returns>` etiketine benzerdir.
+`Math` kitaplığınızın `PI`adında bir statik özelliği olduğunu varsayarsak, bu etiketi nasıl kullanacağınızı aşağıda bulabilirsiniz:
 
 [!code-csharp[Value Tag](../../samples/snippets/csharp/concepts/codedoc/value-tag.cs)]
 
@@ -89,7 +90,7 @@ Bu, alt `<code>` etiketinin kullanılmasını içerir.
 
 [!code-csharp[Example Tag](../../samples/snippets/csharp/concepts/codedoc/example-tag.cs)]
 
-@No__t_0 etiketi, daha uzun örnekler için satır sonlarını ve girintiyi korur.
+`code` etiketi, daha uzun örnekler için satır sonlarını ve girintiyi korur.
 
 ## <a name="para"></a>\<para >
 
@@ -101,37 +102,37 @@ Sınıf tanımınız için `<remarks>` etiketinin içeriğini biçimlendirebilir
 ## <a name="c"></a>\<c >
 
 Biçimlendirme konusunda hala, metnin bir kısmını kod olarak işaretlemek için `<c>` etiketini kullanırsınız.
-@No__t_0 etiketi, ancak satır içi gibi. Bir etiketin içeriğinin bir parçası olarak hızlı bir kod örneği göstermek istediğinizde yararlı olur.
-@No__t_0 sınıfının belgelerini güncelleştirelim.
+`<code>` etiketi, ancak satır içi gibi. Bir etiketin içeriğinin bir parçası olarak hızlı bir kod örneği göstermek istediğinizde yararlı olur.
+`Math` sınıfının belgelerini güncelleştirelim.
 
 [!code-csharp[C Tag](../../samples/snippets/csharp/concepts/codedoc/c-tag.cs)]
 
 ## <a name="exception"></a>\<exception >
 
-@No__t_0 etiketini kullanarak, geliştiricilerinizin bir yöntemin belirli özel durumları oluşturduğunu bilmesini sağlayabilirsiniz.
-@No__t_0 kitaplığınıza baktığınızda, her iki `Add` yönteminin da belirli bir koşul karşılanırsa bir özel durum oluşturmasını sağlayabilirsiniz. Öyle değildir, ancak `b` parametresi sıfır ise tamsayı `Divide` yöntemi de oluşturulur. Şimdi bu yönteme özel durum belgeleri ekleyin.
+`<exception>` etiketini kullanarak, geliştiricilerinizin bir yöntemin belirli özel durumları oluşturduğunu bilmesini sağlayabilirsiniz.
+`Math` kitaplığınıza baktığınızda, her iki `Add` yönteminin da belirli bir koşul karşılanırsa bir özel durum oluşturmasını sağlayabilirsiniz. Öyle değildir, ancak `b` parametresi sıfır ise tamsayı `Divide` yöntemi de oluşturulur. Şimdi bu yönteme özel durum belgeleri ekleyin.
 
 [!code-csharp[Exception Tag](../../samples/snippets/csharp/concepts/codedoc/exception-tag.cs)]
 
-@No__t_0 özniteliği geçerli derleme ortamında kullanılabilir bir özel duruma bir başvuruyu temsil eder.
+`cref` özniteliği geçerli derleme ortamında kullanılabilir bir özel duruma bir başvuruyu temsil eder.
 Bu, projede veya başvurulan bir derlemede tanımlanmış herhangi bir tür olabilir. Değeri çözülemezse, derleyici bir uyarı verebilir.
 
 ## <a name="see"></a>\<see >
 
-@No__t_0 etiketi, başka bir kod öğesi için bir belge sayfasına tıklatılabilir bir bağlantı oluşturmanıza olanak sağlar. Sonraki örnekte, iki `Add` yöntemi arasında tıklatılabilir bir bağlantı oluşturacağız.
+`<see>` etiketi, başka bir kod öğesi için bir belge sayfasına tıklatılabilir bir bağlantı oluşturmanıza olanak sağlar. Sonraki örnekte, iki `Add` yöntemi arasında tıklatılabilir bir bağlantı oluşturacağız.
 
 [!code-csharp[See Tag](../../samples/snippets/csharp/concepts/codedoc/see-tag.cs)]
 
-@No__t_0, geçerli derleme ortamında kullanılabilir olan bir türe veya üyesine başvuruyu temsil eden **gerekli** bir özniteliktir.
+`cref`, geçerli derleme ortamında kullanılabilir olan bir türe veya üyesine başvuruyu temsil eden **gerekli** bir özniteliktir.
 Bu, projede veya başvurulan bir derlemede tanımlanmış herhangi bir tür olabilir.
 
 ## <a name="seealso"></a>\<seealso >
 
-@No__t_0 etiketini `<see>` etiketiyle aynı şekilde kullanırsınız. Tek fark, içeriğinin genellikle bir "Ayrıca bkz." bölümüne yerleştirilme nedendir. Burada, tamsayı parametrelerini kabul eden sınıftaki diğer yöntemlere başvurmak için tamsayı `Add` yöntemine bir `seealso` etiketi ekleyeceğiz:
+`<seealso>` etiketini `<see>` etiketiyle aynı şekilde kullanırsınız. Tek fark, içeriğinin genellikle bir "Ayrıca bkz." bölümüne yerleştirilme nedendir. Burada, tamsayı parametrelerini kabul eden sınıftaki diğer yöntemlere başvurmak için tamsayı `Add` yöntemine bir `seealso` etiketi ekleyeceğiz:
 
 [!code-csharp[Seealso Tag](../../samples/snippets/csharp/concepts/codedoc/seealso-tag.cs)]
 
-@No__t_0 özniteliği, geçerli derleme ortamında kullanılabilir olan bir türe veya üyesine başvuruyu temsil eder.
+`cref` özniteliği, geçerli derleme ortamında kullanılabilir olan bir türe veya üyesine başvuruyu temsil eder.
 Bu, projede veya başvurulan bir derlemede tanımlanmış herhangi bir tür olabilir.
 
 ## <a name="param"></a>\<param>
@@ -142,20 +143,20 @@ Metodun parametrelerini anlatmak için `<param>` etiketini kullanın. Double `Ad
 
 ## <a name="typeparam"></a>\<typeparam >
 
-@No__t_0 etiketini `<param>` etiketi gibi kullanırsınız, ancak genel tür veya yöntem bildirimlerinde genel bir parametreyi betimleyelim.
+`<typeparam>` etiketini `<param>` etiketi gibi kullanırsınız, ancak genel tür veya yöntem bildirimlerinde genel bir parametreyi betimleyelim.
 Bir miktarın diğerinden daha büyük olup olmadığını denetlemek için `Math` sınıfınıza hızlı genel bir yöntem ekleyin.
 
 [!code-csharp[Typeparam Tag](../../samples/snippets/csharp/concepts/codedoc/typeparam-tag.cs)]
 
 ## <a name="paramref"></a>\<paramref >
 
-Bazen, bir yöntemin `<summary>` bir etiketle ne olduğunu açıklayan ortasında olabilirsiniz ve bir parametreye başvuru yapmak isteyebilirsiniz. @No__t_0 etiketi yalnızca bunun için harika. Double tabanlı `Add` yönteminizin özetini güncelleştirelim. @No__t_0 etiketi gibi, **gerekli** `name` özniteliğinde parametre adı belirtilir.
+Bazen, bir yöntemin `<summary>` bir etiketle ne olduğunu açıklayan ortasında olabilirsiniz ve bir parametreye başvuru yapmak isteyebilirsiniz. `<paramref>` etiketi yalnızca bunun için harika. Double tabanlı `Add` yönteminizin özetini güncelleştirelim. `<param>` etiketi gibi, **gerekli** `name` özniteliğinde parametre adı belirtilir.
 
 [!code-csharp[Paramref Tag](../../samples/snippets/csharp/concepts/codedoc/paramref-tag.cs)]
 
 ## <a name="typeparamref"></a>\<typeparamref >
 
-@No__t_0 etiketini `<paramref>` etiketi gibi kullanırsınız, ancak genel tür veya yöntem bildirimlerinde genel bir parametreyi betimleyelim.
+`<typeparamref>` etiketini `<paramref>` etiketi gibi kullanırsınız, ancak genel tür veya yöntem bildirimlerinde genel bir parametreyi betimleyelim.
 Daha önce oluşturduğunuz genel yöntemi kullanabilirsiniz.
 
 [!code-csharp[Typeparamref Tag](../../samples/snippets/csharp/concepts/codedoc/typeparamref-tag.cs)]
@@ -163,11 +164,11 @@ Daha önce oluşturduğunuz genel yöntemi kullanabilirsiniz.
 ## <a name="list"></a>\<list >
 
 Belge bilgilerini sıralı liste, sırasız liste veya tablo olarak biçimlendirmek için `<list>` etiketini kullanırsınız.
-@No__t_0 kitaplığınızın desteklediği her matematik işleminin sıralanmamış bir listesini oluşturun.
+`Math` kitaplığınızın desteklediği her matematik işleminin sıralanmamış bir listesini oluşturun.
 
 [!code-csharp[List Tag](../../samples/snippets/csharp/concepts/codedoc/list-tag.cs)]
 
-@No__t_0 özniteliğini sırasıyla `number` veya `table` olarak değiştirerek sıralı bir liste veya tablo yapabilirsiniz.
+`type` özniteliğini sırasıyla `number` veya `table`olarak değiştirerek sıralı bir liste veya tablo yapabilirsiniz.
 
 ### <a name="putting-it-all-together"></a>Tümünü bir araya getirme
 
@@ -181,7 +182,7 @@ Bu konuda size yardımcı olabilecek bir XML etiketi vardı:
 
 ## <a name="include"></a>\<include >
 
-@No__t_0 etiketi, belge açıklamalarını doğrudan kaynak kodu dosyanıza yerleştirmeyi tersine, kaynak kodunuzda türleri ve üyeleri tanımlayan ayrı bir XML dosyasındaki açıklamalara başvurmanıza olanak sağlar.
+`<include>` etiketi, belge açıklamalarını doğrudan kaynak kodu dosyanıza yerleştirmeyi tersine, kaynak kodunuzda türleri ve üyeleri tanımlayan ayrı bir XML dosyasındaki açıklamalara başvurmanıza olanak sağlar.
 
 Artık tüm XML etiketlerinizi `docs.xml` adlı ayrı bir XML dosyasına taşıyacağız. Dosyayı istediğiniz şekilde adlandırabilirsiniz.
 
@@ -194,13 +195,13 @@ XML yorumlarınıza artık ayrı bir dosyada sahip olduğunuza göre, kodunuzun 
 
 Bu durumda: kodunuz okunabilir hale getirilir ve belge bilgisi kaybedilmiyor.
 
-@No__t_0 öznitelik, belgeleri içeren XML dosyasının adını temsil eder.
+`file` öznitelik, belgeleri içeren XML dosyasının adını temsil eder.
 
-@No__t_0 öznitelik, belirtilen `file` mevcut `tag name` bir [XPath](../standard/data/xml/xpath-queries-and-namespaces.md) sorgusunu temsil eder.
+`path` öznitelik, belirtilen `file`mevcut `tag name` bir [XPath](../standard/data/xml/xpath-queries-and-namespaces.md) sorgusunu temsil eder.
 
-@No__t_0 özniteliği, etiketteki açıklamaların önündeki ad belirticisini temsil eder.
+`name` özniteliği, etiketteki açıklamaların önündeki ad belirticisini temsil eder.
 
-@No__t_1 yerine kullanılabilecek `id` özniteliği, yorumların önündeki etiketin KIMLIĞINI temsil eder.
+`name` yerine kullanılabilecek `id` özniteliği, yorumların önündeki etiketin KIMLIĞINI temsil eder.
 
 ### <a name="user-defined-tags"></a>Kullanıcı tanımlı Etiketler
 

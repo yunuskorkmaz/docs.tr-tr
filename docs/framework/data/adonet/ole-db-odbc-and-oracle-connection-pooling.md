@@ -2,12 +2,12 @@
 title: OLE DB, ODBC ve Oracle Bağlantı Havuzu
 ms.date: 03/30/2017
 ms.assetid: 2bd83b1e-3ea9-43c4-bade-d9cdb9bbbb04
-ms.openlocfilehash: b83b53550964b3149f3bc711eaf119e749d1834b
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 4b801032e67d1c4c51fed8556ff1fea05c214aff
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70794699"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039839"
 ---
 # <a name="ole-db-odbc-and-oracle-connection-pooling"></a>OLE DB, ODBC ve Oracle Bağlantı Havuzu
 Havuzlama bağlantıları, uygulamanızın performansını ve ölçeklenebilirliğini önemli ölçüde geliştirebilir. Bu bölümde, OLE DB, ODBC ve Oracle .NET Framework veri sağlayıcıları için bağlantı havuzu ele alınmaktadır.  
@@ -15,7 +15,7 @@ Havuzlama bağlantıları, uygulamanızın performansını ve ölçeklenebilirli
 ## <a name="connection-pooling-for-oledb"></a>OleDb için bağlantı havuzu oluşturma  
  OLE DB için .NET Framework Veri Sağlayıcısı, OLE DB oturum havuzu kullanarak bağlantıları otomatik olarak havuza. Bağlantı dizesi bağımsız değişkenleri, havuz dahil OLE DB hizmetlerini etkinleştirmek veya devre dışı bırakmak için kullanılabilir. Örneğin, aşağıdaki bağlantı dizesi OLE DB oturum kuyruğunu ve otomatik işlem kaydı 'nı devre dışı bırakır.  
   
-```  
+```csharp
 Provider=SQLOLEDB;OLE DB Services=-4;Data Source=localhost;Integrated Security=SSPI;  
 ```  
   
@@ -39,7 +39,7 @@ Provider=SQLOLEDB;OLE DB Services=-4;Data Source=localhost;Integrated Security=S
 ### <a name="connection-addition"></a>Bağlantı ekleme  
  Her benzersiz bağlantı dizesi için bir bağlantı havuzu oluşturulur. Bir havuz oluşturulduğunda, en düşük havuz boyutu gereksiniminin karşılanması için birden fazla bağlantı nesnesi oluşturulur ve havuza eklenir. Bağlantı, en fazla havuz boyutuna kadar gerektiği şekilde havuza eklenir.  
   
- Bir <xref:System.Data.OracleClient.OracleConnection> nesne istendiğinde, kullanılabilir bir bağlantı varsa havuzdan alınır. Kullanılabilir olması için bağlantının Şu anda kullanılmamış olması, eşleşen bir işlem bağlamına sahip olması veya hiçbir işlem içeriğiyle ilişkili olmaması ve sunucuya geçerli bir bağlantısı olması gerekir.  
+ Bir <xref:System.Data.OracleClient.OracleConnection> nesnesi istendiğinde, kullanılabilir bir bağlantı varsa havuzdan alınır. Kullanılabilir olması için bağlantının Şu anda kullanılmamış olması, eşleşen bir işlem bağlamına sahip olması veya hiçbir işlem içeriğiyle ilişkili olmaması ve sunucuya geçerli bir bağlantısı olması gerekir.  
   
  En büyük havuz boyutuna ulaşılmışsa ve kullanılabilir bir bağlantı yoksa, istek sıraya alınır. Bağlantı havuzlayıcı, havuza geri yayımlandıklarında bağlantıları yeniden bulmaya yönelik bu istekleri karşılar. Bağlantılar, kapalı veya atılmış olmaları durumunda havuza geri yayımlanır.  
   
@@ -48,7 +48,7 @@ Provider=SQLOLEDB;OLE DB Services=-4;Data Source=localhost;Integrated Security=S
   
  Kaybolan bir sunucuya bağlantı varsa, bağlantı havuzlayıcı bağlantıyı algılamadıysa ve geçersiz olarak işaretlediği takdirde bu bağlantı havuzdan çizilebilirler. Bu gerçekleştiğinde, bir özel durum oluşturulur. Bununla birlikte, yine de havuzdan yeniden dağıtım yapmak için bağlantıyı kapatmanız gerekir.  
   
- Sınıfınızın `Close` `Finalize` yönteminde bir, veya ya `Connection`da başka `DataReader`bir yönetilen nesneyi çağırmayın `Dispose` . Sonlandırıcıda yalnızca, sınıfınızın doğrudan sahip olduğu yönetilmeyen kaynakları serbest bırakın. Sınıfınız hiçbir yönetilmeyen kaynağa sahip değilse, sınıf tanımınıza bir `Finalize` Yöntem eklemeyin. Daha fazla bilgi için bkz. [çöp toplama](../../../standard/garbage-collection/index.md).  
+ Sınıfınızın `Finalize` yönteminde bir `Connection`, `DataReader`veya başka bir yönetilen nesne üzerinde `Close` veya `Dispose` çağırmayın. Sonlandırıcıda yalnızca, sınıfınızın doğrudan sahip olduğu yönetilmeyen kaynakları serbest bırakın. Sınıfınız hiçbir yönetilmeyen kaynağa sahip değilse, sınıf tanımınızda `Finalize` yöntemi eklemeyin. Daha fazla bilgi için bkz. [çöp toplama](../../../standard/garbage-collection/index.md).  
   
 ### <a name="transaction-support"></a>İşlem Desteği  
  Bağlantılar havuzdan çizilir ve işlem bağlamına göre atanır. İstekte bulunan iş parçacığının ve atanan bağlantının bağlamı eşleşmelidir. Bu nedenle, her bağlantı havuzu kendileriyle ilişkili hiçbir işlem bağlamı olmadan bağlantılara ve her birinin belirli bir işlem bağlamına sahip bağlantıları içeren *N* alt bölümüne bölünmüştür.  
@@ -56,17 +56,17 @@ Provider=SQLOLEDB;OLE DB Services=-4;Data Source=localhost;Integrated Security=S
  Bir bağlantı kapatıldığında, havuza ve işlem bağlamına göre uygun alt bölüme geri gönderilir. Bu nedenle, dağıtılmış bir işlem hala beklense de bir hata oluşturmadan bağlantıyı kapatabilirsiniz. Bu, dağıtılmış işlemi daha sonra yürütmeniz veya iptal etmenizi sağlar.  
   
 ### <a name="controlling-connection-pooling-with-connection-string-keywords"></a>Bağlantı havuzu bağlantı dizesi anahtar sözcükleriyle denetleniyor  
- <xref:System.Data.OracleClient.OracleConnection> Nesnesinin özelliği, bağlantı havuzu mantığının davranışını ayarlamak için kullanılabilen bağlantı dizesi anahtar/değer çiftlerini destekler. <xref:System.Data.OracleClient.OracleConnection.ConnectionString%2A>  
+ <xref:System.Data.OracleClient.OracleConnection> nesnesinin <xref:System.Data.OracleClient.OracleConnection.ConnectionString%2A> özelliği, bağlantı havuzu mantığının davranışını ayarlamak için kullanılabilen bağlantı dizesi anahtar/değer çiftlerini destekler.  
   
- Aşağıdaki tabloda, bağlantı havuzu <xref:System.Data.OracleClient.OracleConnection.ConnectionString%2A> davranışlarını ayarlamak için kullanabileceğiniz değerler açıklanmaktadır.  
+ Aşağıdaki tabloda, bağlantı havuzu davranışlarını ayarlamak için kullanabileceğiniz <xref:System.Data.OracleClient.OracleConnection.ConnectionString%2A> değerleri açıklanmaktadır.  
   
-|Ad|Varsayılan|Açıklama|  
+|Name|Varsayılan|Açıklama|  
 |----------|-------------|-----------------|  
-|`Connection Lifetime`|0|Havuza bir bağlantı döndürüldüğünde, oluşturma süresi geçerli zamandan karşılaştırılır ve bu zaman aralığı (saniye cinsinden) tarafından `Connection Lifetime`belirtilen değeri aşarsa bağlantı yok edilir. Bu, çalışan bir sunucu ve daha önce çevrimiçi hale getirilen bir sunucu arasında yük dengelemeyi zorlamak için kümelenmiş yapılandırmalarda yararlıdır.<br /><br /> Sıfır (0) değeri, havuza alınan bağlantıların en uzun zaman aşımı süresine sahip olmasına neden olur.|  
-|`Enlist`|değeri|Ne `true`zaman, bir işlem bağlamı varsa, havuzlayıcı oluşturma iş parçacığının geçerli işlem bağlamındaki bağlantıyı otomatik olarak listeler.|  
+|`Connection Lifetime`|0|Havuza bir bağlantı döndürüldüğünde, oluşturma süresi geçerli zamandan karşılaştırılır ve bu zaman aralığı (saniye cinsinden) `Connection Lifetime`tarafından belirtilen değeri aşarsa bağlantı yok edilir. Bu, çalışan bir sunucu ve daha önce çevrimiçi hale getirilen bir sunucu arasında yük dengelemeyi zorlamak için kümelenmiş yapılandırmalarda yararlıdır.<br /><br /> Sıfır (0) değeri, havuza alınan bağlantıların en uzun zaman aşımı süresine sahip olmasına neden olur.|  
+|`Enlist`|değeri|`true`, havuzlayıcı bir işlem bağlamı varsa oluşturma iş parçacığının geçerli işlem bağlamındaki bağlantıyı otomatik olarak listeler.|  
 |`Max Pool Size`|100|Havuzda izin verilen en fazla bağlantı sayısı.|  
 |`Min Pool Size`|0|Havuzda tutulan en az bağlantı sayısı.|  
-|`Pooling`|değeri|Ne `true`zaman, bağlantı uygun havuzdan çizilir veya gerekirse, uygun havuza oluşturulur ve eklenir.|  
+|`Pooling`|değeri|`true`, bağlantı uygun havuzdan çizilir veya gerekirse uygun havuza oluşturulur ve eklenir.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

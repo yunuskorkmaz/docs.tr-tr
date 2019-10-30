@@ -10,16 +10,16 @@ helpviewer_keywords:
 - '?: operator [C#]'
 - conditional operator (?:) [C#]
 ms.assetid: e83a17f1-7500-48ba-8bee-2fbc4c847af4
-ms.openlocfilehash: 923591634599a6bbac74d43b105f4e46b492fa1a
-ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
+ms.openlocfilehash: 7397c5b2b2278f487a98b029b00924d3151913db
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68796470"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73036301"
 ---
 # <a name="-operator-c-reference"></a>?: işleç (C# başvuru)
 
-Genellikle Üçlü koşullu `?:`işleç olarak bilinen koşullu operatör, bir Boole ifadesi değerlendirir ve Boolean ifadesinin değerlendirilip `true` değerlendirilmediğine bağlı olarak iki ifadeden birini değerlendirme sonucunu döndürür. veya `false`. 7,2 ile C# başlayarak, [koşullu başvuru ifadesi](#conditional-ref-expression) iki ifadeden birinin sonucuna başvuruyu döndürür.
+Üçlü işleç olarak da bilinen koşullu operatör `?:`, Boolean ifadesinin `true` veya `false`olarak değerlendirildiğine bağlı olarak bir Boole ifadesi değerlendirir ve iki ifadeden birinin sonucunu döndürür. 7,2 ile C# başlayarak, [koşullu başvuru ifadesi](#conditional-ref-expression) iki ifadeden birinin sonucuna başvuruyu döndürür.
 
 Koşullu işlecin sözdizimi şöyledir:
 
@@ -27,9 +27,9 @@ Koşullu işlecin sözdizimi şöyledir:
 condition ? consequent : alternative
 ```
 
-`condition` İfade `true` veya olarak`false`değerlendirilmelidir. , `condition` Olarak `true`değerlendirilirse ,`consequent` ifade değerlendirilir ve sonucu işlemin sonucu olur. , `condition` Olarak `false`değerlendirilirse ,`alternative` ifade değerlendirilir ve sonucu işlemin sonucu olur. Yalnızca `consequent` veya`alternative` değerlendirilir.
+`condition` ifadesi `true` veya `false`olarak değerlendirilmelidir. `condition` `true`değerlendirilirse, `consequent` ifadesi değerlendirilir ve sonucu işlemin sonucu olur. `condition` `false`değerlendirilirse, `alternative` ifadesi değerlendirilir ve sonucu işlemin sonucu olur. Yalnızca `consequent` veya `alternative` değerlendirilir.
 
-`consequent` Ve`alternative` türü aynı olmalıdır veya bir türden diğerine örtük bir dönüştürme olmalıdır.
+`consequent` ve `alternative` türü aynı olmalıdır veya bir türden diğerine örtük bir dönüştürme olmalıdır.
 
 Koşullu operatör doğru ilişkilendirilebilir, diğer bir deyişle, formun bir ifadesi
 
@@ -56,7 +56,7 @@ Aşağıdaki örnek, koşullu işlecin kullanımını gösterir:
 
 ## <a name="conditional-ref-expression"></a>Koşullu başvuru ifadesi
 
-7,2 ' C# den başlayarak, iki ifadeden birinin sonucuna başvuruyu döndürmek için koşullu başvuru ifadesini kullanabilirsiniz. Bu başvuruyu bir [ref yerel](../keywords/ref.md#ref-locals) veya [ref ReadOnly yerel](../keywords/ref.md#ref-readonly-locals) değişkenine atayabilir veya bir [Başvuru dönüş değeri](../keywords/ref.md#reference-return-values) ya da bir [ `ref` yöntem parametresi](../keywords/ref.md#passing-an-argument-by-reference)olarak kullanabilirsiniz.
+7,2 ' C# den başlayarak, iki ifadeden birinin sonucuna başvuruyu döndürmek için koşullu başvuru ifadesini kullanabilirsiniz. Bu başvuruyu bir [ref yerel](../keywords/ref.md#ref-locals) veya [ref ReadOnly yerel](../keywords/ref.md#ref-readonly-locals) değişkenine atayabilir veya bir [Başvuru dönüş değeri](../keywords/ref.md#reference-return-values) veya [`ref` yöntemi parametresi](../keywords/ref.md#passing-an-argument-by-reference)olarak kullanabilirsiniz.
 
 Koşullu başvuru ifadesi için sözdizimi aşağıdaki gibidir:
 
@@ -64,35 +64,35 @@ Koşullu başvuru ifadesi için sözdizimi aşağıdaki gibidir:
 condition ? ref consequent : ref alternative
 ```
 
-Özgün Koşul operatörü gibi, koşullu başvuru ifadesi iki ifadeden yalnızca birini değerlendirir: ya `consequent` `alternative`da.
+Özgün koşullu operatör gibi, koşullu başvuru ifadesi iki ifadeden yalnızca birini değerlendirir: `consequent` ya da `alternative`.
 
-Koşullu başvuru ifadesi söz konusu olduğunda, `consequent` ve `alternative` türü aynı olmalıdır.
+Koşullu başvuru ifadesi durumunda `consequent` ve `alternative` türü aynı olmalıdır.
 
 Aşağıdaki örnek, koşullu başvuru ifadesinin kullanımını gösterir:
 
 [!code-csharp-interactive[conditional ref](~/samples/csharp/language-reference/operators/ConditionalOperator.cs#ConditionalRef)]
 
-Daha fazla bilgi için bkz. [özellik teklifi Note](~/_csharplang/proposals/csharp-7.2/conditional-ref.md).
+## <a name="conditional-operator-and-an-ifelse-statement"></a>Koşullu işleç ve bir `if..else` ekstresi
 
-## <a name="conditional-operator-and-an-ifelse-statement"></a>Koşullu işleç ve bir `if..else` ifade
-
-[İf-else](../keywords/if-else.md) ifadesinin üzerinde koşullu işlecin kullanılması, bir değeri hesaplamak için koşullu olarak bir değer hesaplamanız gerektiğinde daha kısa kod oluşmasına neden olacaktır. Aşağıdaki örnek, bir tamsayıyı negatif veya negatif olmayan olarak sınıflandırmanın iki yolunu göstermektedir:
+[İf-else](../keywords/if-else.md) ifadesinin yerine koşullu işlecin kullanılması, bir değeri hesaplamak için koşullu olarak bir değer hesaplamanız gerektiğinde daha kısa kod oluşmasına neden olacaktır. Aşağıdaki örnek, bir tamsayıyı negatif veya negatif olmayan olarak sınıflandırmanın iki yolunu göstermektedir:
 
 [!code-csharp[conditional and if-else](~/samples/csharp/language-reference/operators/ConditionalOperator.cs#CompareWithIf)]
 
 ## <a name="operator-overloadability"></a>Operatör overloadability
 
-Koşullu işleç aşırı yüklenemez.
+Kullanıcı tanımlı bir tür, koşullu işleci aşırı yükleyemez.
 
 ## <a name="c-language-specification"></a>C# dili belirtimi
 
 Daha fazla bilgi için, [ C# dil belirtiminin](~/_csharplang/spec/introduction.md) [koşullu işleç](~/_csharplang/spec/expressions.md#conditional-operator) bölümüne bakın.
+
+Koşullu başvuru ifadesi hakkında daha fazla bilgi için bkz. [özellik teklifi Note](~/_csharplang/proposals/csharp-7.2/conditional-ref.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [C#başvurunun](../index.md)
 - [C# işleçleri](index.md)
 - [if-else beyanı](../keywords/if-else.md)
-- [?. ve ?[] işleçleri](member-access-operators.md#null-conditional-operators--and-)
-- [?? işlecinde](null-coalescing-operator.md)
+- [?. '? [] işleçleri](member-access-operators.md#null-conditional-operators--and-)
+- [?? ve?? = işleçleri](null-coalescing-operator.md)
 - [ref anahtar sözcüğü](../keywords/ref.md)

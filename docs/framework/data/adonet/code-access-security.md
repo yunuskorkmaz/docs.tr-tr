@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 93e099eb-daa1-4f1e-b031-c1e10a996f88
-ms.openlocfilehash: 41a0885f828e45e1216805533a977fc3d5eaf5cb
-ms.sourcegitcommit: 9bd1c09128e012b6e34bdcbdf3576379f58f3137
+ms.openlocfilehash: e83c10d6d7b66723d8347f98c1f7b118d7a2f963
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72798897"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040160"
 ---
 # <a name="code-access-security-and-adonet"></a>Kod Erişimi Güvenliği ve ADO.NET
 .NET Framework, her ikisi de ortak dil çalışma zamanı (CLR) tarafından sağlanan ortak bir altyapı kullanılarak uygulanan, rol tabanlı güvenlik ve kod erişim güvenliği (CAS) sağlar. Yönetilmeyen kod dünyasında, çoğu uygulama kullanıcı veya sorumlu izinleriyle yürütülür. Sonuç olarak, kötü amaçlı veya hata doldurulmuş yazılımlar yükseltilmiş ayrıcalıklara sahip bir kullanıcı tarafından çalıştırıldığında bilgisayar sistemleri zarar görmüş ve özel veri güvenliği tehlikeye girebilir.  
@@ -175,7 +175,7 @@ AllowBlankPassword="False">
   
  Bu çıktıyı konsol penceresinde görmeniz gerekir:  
   
-```  
+```output  
 Failed, as expected: <IPermission class="System.Data.SqlClient.  
 SqlClientPermission, System.Data, Version=2.0.0.0,   
   Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1"  

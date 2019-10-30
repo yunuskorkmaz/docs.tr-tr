@@ -2,13 +2,14 @@
 title: Güvenli ve verimli C# kod yazma
 description: C# Dilde en son geliştirmeler, daha önce güvenli olmayan kodla ilişkili olan doğrulanabilir güvenli kod yazmanızı sağlar.
 ms.date: 10/23/2018
+ms.technology: csharp-advanced-concepts
 ms.custom: mvc
-ms.openlocfilehash: 89a0bcf28c3c398865082e120ca9c16fe2c00651
-ms.sourcegitcommit: 9b2ef64c4fc10a4a10f28a223d60d17d7d249ee8
+ms.openlocfilehash: 3dc3213cf24f4cdd8f0f1b7752263b4a609b2fa2
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "72960836"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039635"
 ---
 # <a name="write-safe-and-efficient-c-code"></a>Güvenli ve verimli C# kod yazma
 
@@ -229,7 +230,7 @@ Bunun yerine, uzaklık hesaplaması değişmez yapıyı kullanıyorsa `ReadonlyP
 
 Null yapılabilir bir değer türünü `in` bağımsız değişken olarak geçirmemelisiniz. <xref:System.Nullable%601> türü salt okunurdur struct olarak bildirilmemiş. Bu, derleyicinin parametre bildiriminde `in` değiştiricisini kullanarak bir yönteme geçirilen herhangi bir Nullable değer türü bağımsız değişkeni için savunma kopyaları oluşturması gerektiği anlamına gelir.
 
-GitHub 'daki [örnek depolarımızda](https://github.com/dotnet/samples/tree/master/csharp/safe-efficient-code/benchmark) [benchmark.net](https://www.nuget.org/packages/BenchmarkDotNet/) kullanarak performans farklarını gösteren bir örnek program görebilirsiniz. Değere ve başvuruya göre değişmez bir struct geçirilerek başvuruya göre kesilebilir bir yapının geçirilmesini karşılaştırır. Değişmez yapının kullanımı ve başvuruya göre Pass en hızlı.
+GitHub 'daki [örnek depolarımızda](https://github.com/dotnet/samples/tree/master/csharp/safe-efficient-code/benchmark) , [benchmarkdotnet](https://www.nuget.org/packages/BenchmarkDotNet/) kullanarak performans farklarını gösteren bir örnek program görebilirsiniz. Değere ve başvuruya göre değişmez bir struct geçirilerek başvuruya göre kesilebilir bir yapının geçirilmesini karşılaştırır. Değişmez yapının kullanımı ve başvuruya göre Pass en hızlı.
 
 ## <a name="use-ref-struct-types-to-work-with-blocks-or-memory-on-a-single-stack-frame"></a>Tek bir yığın çerçevesinde bloklarla veya bellekle çalışmak için `ref struct` türlerini kullanın
 

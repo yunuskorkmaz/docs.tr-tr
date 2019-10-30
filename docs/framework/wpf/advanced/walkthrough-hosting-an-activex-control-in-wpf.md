@@ -8,15 +8,15 @@ helpviewer_keywords:
 - ActiveX controls [WPF interoperability]
 - hosting ActiveX controls [WPF]
 ms.assetid: 1931d292-0dd1-434f-963c-dcda7638d75a
-ms.openlocfilehash: 395081640815f00ce4ae8e83f25b37de567adc01
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: 959bc7942eaae91c0a7a72124f6ab1ab92a3553f
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920193"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040834"
 ---
 # <a name="walkthrough-hosting-an-activex-control-in-wpf"></a>İzlenecek yol: WPF'te ActiveX Denetimi Barındırma
-Tarayıcılarla geliştirilmiş etkileşimi etkinleştirmek için [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]tabanlı uygulamanızda Microsoft ActiveX denetimlerini kullanabilirsiniz. Bu izlenecek yol, [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)] bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sayfasında denetim olarak nasıl barındırabileceğinizi gösterir.
+Tarayıcılarla geliştirilmiş etkileşimi etkinleştirmek için [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]tabanlı uygulamanızda Microsoft ActiveX denetimlerini kullanabilirsiniz. Bu izlenecek yol, Microsoft Windows Media Player bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sayfasında denetim olarak nasıl barındırabileceğinizi gösterir.
 
  Bu izlenecek yolda gösterilen görevler şunlardır:
 
@@ -31,7 +31,7 @@ Tarayıcılarla geliştirilmiş etkileşimi etkinleştirmek için [!INCLUDE[TLA2
 ## <a name="prerequisites"></a>Prerequisites
  Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vardır:
 
-- [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)], Visual Studio 'Nun yüklü olduğu bilgisayarda yüklüdür.
+- Microsoft Windows Media Player, Visual Studio 'Nun yüklü olduğu bilgisayarda yüklüdür.
 
 - Visual Studio 2010.
 

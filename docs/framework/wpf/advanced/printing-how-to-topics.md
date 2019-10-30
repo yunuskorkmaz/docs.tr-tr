@@ -5,19 +5,19 @@ helpviewer_keywords:
 - printing [WPF]
 - print system management [WPF]
 ms.assetid: 5f3d391a-4afd-49ee-ad99-ceb737c0c8a8
-ms.openlocfilehash: db40213bd6e20468706afda8a11d76e5a5a3c4e0
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 9ca812948926f80d9f8ec5b8cead4538d09fa7a1
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70254261"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73035622"
 ---
 # <a name="printing-how-to-topics"></a>Yazdırma ile İlgili Nasıl Yapılır Konuları
-Bu bölümdeki konularda, ' de bulunan [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] yazdırma ve yazdırma sistemi Yönetimi özelliklerinin yanı sıra yeni XML Kağıt Belirtimi (XPS) yazdırma yolu 'nın nasıl kullanılacağı gösterilmektedir.  
+Bu bölümdeki konularda, yeni XML Kağıt Belirtimi (XPS) yazdırma yolunun yanı sıra [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] bulunan yazdırma ve yazdırma sistem yönetimi özelliklerinin nasıl kullanılacağı gösterilmektedir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Yazdır İletişim Kutusu Çağırma](how-to-invoke-a-print-dialog.md)  
- Bir [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] yazdırma iletişim kutusu nesnesi bildirmek ve bir Windows Presentation Foundation (WPF) uygulaması içinden iletişim kutusunu çağırmak için kod kullanmak üzere xaml işaretlemesi için yönergeler.  
+ Bir Microsoft Windows yazdırma iletişim kutusu nesnesi bildirmek ve bir Windows Presentation Foundation (WPF) uygulaması içinden iletişim kutusunu çağırmak için kod kullanmak üzere XAML işaretlemesi için yönergeler.  
   
  [Yazıcı Kopyalama](how-to-clone-a-printer.md)  
  Mevcut bir yazdırma kuyruğu ile tam olarak aynı özelliklerle ikinci bir yazdırma sırasının nasıl yükleneceğine ilişkin yönergeler.  
@@ -35,7 +35,7 @@ Bu bölümdeki konularda, ' de bulunan [!INCLUDE[TLA#tla_winclient](../../../../
  Çalışma zamanı yazdırma sistem nesnesinin özelliklerine ve türlerine nasıl keşfedilecek hakkında yönergeler.  
   
  [Program Aracılığıyla XPS Dosyalarını Yazdırma](how-to-programmatically-print-xps-files.md)  
- XML Kağıt Belirtimi (XPS) dosyalarını için [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]gerek olmadan hızlı yazdırma yönergeleri.  
+ XML Kağıt Belirtimi (XPS) dosyalarının [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]gerekmeden hızlı bir şekilde yazdırılması için yönergeler.  
   
  [Uzaktan Yazıcıların Durumunu Araştırma](how-to-remotely-survey-the-status-of-printers.md)  
  Yazıcı, kağıt sıkışması veya başka bir sorunla karşılaşanlar bulmaya yönelik bir yardımcı program oluşturmaya yönelik yönergeler.  

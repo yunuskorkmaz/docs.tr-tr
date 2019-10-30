@@ -2,24 +2,24 @@
 title: Mimari ve Tasarım
 ms.date: 03/30/2017
 ms.assetid: bd738d39-00e2-4bab-b387-90aac1a014bd
-ms.openlocfilehash: 50fc643fecf4b188123c556d754b3cbfa529e5e9
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 35fbc39db23a2b08ab926e122d2f1eb1806a369b
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251713"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040017"
 ---
 # <a name="architecture-and-design"></a>Mimari ve Tasarım
 
 [Örnek sağlayıcıdaki](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0) SQL oluşturma modülü, komut ağacını temsil eden ifade ağacında bir ziyaretçi olarak uygulanır. Oluşturma, ifade ağacının tek bir geçişinde yapılır.
 
-Ağacın düğümleri aşağıdan yukarıya işlenir. İlk olarak, bir ara yapı üretilir: Her ikisi de ısıntefragment uygulayan Sqlselectdeyimin veya SqlBuilder. Ardından, dize SQL deyimleri Bu yapıdan üretilir. Ara yapının iki nedeni vardır:
+Ağacın düğümleri aşağıdan yukarıya işlenir. İlk olarak, bir ara yapı oluşturulur: Sqlselectdeyimin veya SqlBuilder, her ikisi de ısqlfragment. Ardından, dize SQL deyimleri Bu yapıdan üretilir. Ara yapının iki nedeni vardır:
 
 - Mantıksal olarak, bir SQL SELECT deyimleri sıra dışında doldurulur. FROM yan tümcesine katılan düğümler WHERE, GROUP BY ve ORDER BY yan tümcesinde yer alan düğümlerden önce ziyaret edilir.
 
 - Diğer adları yeniden adlandırmak için, yeniden adlandırma sırasında çarpışmalardan kaçınmak için kullanılan tüm diğer adları tanımlamalısınız. SqlBuilder 'daki yeniden adlandırma seçimlerini ertelemek için, yeniden adlandırma aday olan sütunları temsil etmek üzere sembol nesneleri kullanın.
 
-![Diyagram](./media/de1ca705-4f7c-4d2d-ace5-afefc6d3cefa.gif "de1ca705-4f7c-4d2d-ace5-afefc6d3cefa")
+![Çizimindeki](./media/de1ca705-4f7c-4d2d-ace5-afefc6d3cefa.gif "de1ca705-4f7c-4d2d-ace5-afefc6d3cefa")
 
 İlk aşamada, ifade ağacını ziyaret ederken ifadeler Sqlselectdeyimlerine gruplanır, birleştirmeler düzleştirilir ve birleştirme diğer adları düzleştirilir. Bu geçiş sırasında, sembol nesneleri yeniden adlandırılabilir sütunları veya girdi diğer adlarını temsil eder.
 
@@ -57,7 +57,7 @@ internal sealed class SqlBuilder : ISqlFragment {
 
 #### <a name="sqlselectstatement"></a>Sqlselectdeyimin
 
-Sqlselectdeyim, "SELECT..." şeklinin kurallı bir SQL SELECT ifadesini temsil eder. KAYNAK.. WHERE... GRUPLANDIRMA ÖLÇÜTÜ... SIRALAMA ÖLÇÜTÜ ".
+Sqlselectdeyim, "SELECT..." şeklinin kurallı bir SQL SELECT ifadesini temsil eder. Kaynak.. WHERE... GRUPLANDıRMA ÖLÇÜTÜ... SıRALAMA ÖLÇÜTÜ ".
 
 Her SQL yan tümcesi bir StringBuilder tarafından temsil edilir. Ayrıca, DISTINCT 'in belirtildiğinden ve deyimin en üst olup olmadığını izler. Deyimi en üstte değilse, deyimin bir TOP yan tümcesi da yoksa ORDER BY yan tümcesi atlanır.
 
@@ -221,7 +221,7 @@ Her yeni bir Sqlselectdeyimi başlatıldığında ve geçerli bir giriş girişe
 
 ### <a name="join-flattening"></a>Düzleştirme ile Birleştir
 
-Isparentajoın özelliği, belirli bir birleştirmenin düzleştirilerek bulunup bulunmadığını belirlemenize yardımcı olur. Özellikle, isparentajoın yalnızca bir `true` birleşimin sol alt öğesi için ve bir birleşime anında giriş olan her DbScanExpression için geri döner ve bu durumda alt düğüm, üst öğenin daha sonra kullanacağı sqlselectdeyimin aynısını yeniden kullanır. Daha fazla bilgi için bkz. "Ifadeleri JOIN".
+Isparentajoın özelliği, belirli bir birleştirmenin düzleştirilerek bulunup bulunmadığını belirlemenize yardımcı olur. Özellikle, Isparentajoın yalnızca bir birleşimin sol alt öğesi için `true` ve bir birleşime anında giriş olan her DbScanExpression için döndürür ve bu durumda alt düğüm, üst öğenin daha sonra kullanacağı Sqlselectdeyimi yeniden kullanır. Daha fazla bilgi için bkz. "Ifadeleri JOIN".
 
 ### <a name="input-alias-redirecting"></a>Giriş diğer adı yönlendirme
 
@@ -229,13 +229,13 @@ Giriş diğer adı, sembol tablosu ile gerçekleştirilir.
 
 Giriş diğer adının yeniden yönlendirildiğini açıklamak için, [komut ağaçları-En Iyi UYGULAMALARDAN SQL oluşturma](generating-sql-from-command-trees-best-practices.md)bölümündeki ilk örneğe bakın.  "A", projeksiyonda "b" öğesine yönlendirilmek için gerekir.
 
-Bir sqlselectdeyimnesnesi oluşturulduğunda, düğümün girişi olan uzantısı Sqlselectdeyimin from özelliğine konur. Bir sembol (\<symbol_b >), bu kapsamı temsil eden "as" + \<symbol_b > from yan tümcesine eklendiği şekilde giriş bağlama adı ("b") temel alınarak oluşturulur.  Sembol, FromExtents özelliğine de eklenir.
+Bir sqlselectdeyimnesnesi oluşturulduğunda, düğümün girişi olan uzantısı Sqlselectdeyimin from özelliğine konur. Bir sembol (\<symbol_b >), bu kapsamı temsil eden "AS" + \<symbol_b > from yan tümcesine eklendiği şekilde giriş bağlama adına ("b") göre oluşturulur.  Sembol, FromExtents özelliğine de eklenir.
 
-Sembol, giriş bağlama adını kendisine bağlamak için sembol tablosuna da eklenir ("b", \<symbol_b >).
+Sembol, giriş bağlama adını kendisine bağlamak için sembol tablosuna de eklenir ("b", \<symbol_b >).
 
-Sonraki bir düğüm bu Sqlselectdeyimsini yeniden kullanıyorsa, giriş bağlama adını bu simgeye bağlamak için sembol tablosuna bir giriş ekler. Örneğimizde, "a" giriş bağlama adına sahip DbProjectExpression, sqlselectdeyimin yeniden kullanır ve tabloya ("a", \< symbol_b >) ekler.
+Sonraki bir düğüm bu Sqlselectdeyimsini yeniden kullanıyorsa, giriş bağlama adını bu simgeye bağlamak için sembol tablosuna bir giriş ekler. Örneğimizde, "a" giriş bağlama adına sahip DbProjectExpression, Sqlselectdeyimin yeniden kullanır ve tabloya ("a", \< symbol_b >) ekler.
 
-İfadeler, Sqlselectdeyimi yeniden kullanan düğümün giriş bağlama adına başvuru yaparken, bu başvuru sembol tablosu doğru yeniden yönlendirilen simgeye kullanılarak çözümlenir. "A. x" öğesinden "a", "a", "a" DbVariableReferenceExpression, symbol_b > symbol simgesine \<çözümlenir.
+İfadeler, Sqlselectdeyimi yeniden kullanan düğümün giriş bağlama adına başvuru yaparken, bu başvuru sembol tablosu doğru yeniden yönlendirilen simgeye kullanılarak çözümlenir. "A. x" öğesinden "a", "a", "a" DbVariableReferenceExpression, \<symbol_b > simgesine çözümlenir.
 
 ### <a name="join-alias-flattening"></a>Diğer ad düzleştirmeyi Birleştir
 
@@ -243,7 +243,7 @@ DbPropertyExpression başlıklı bölümde açıklandığı gibi bir DbPropertyE
 
 ### <a name="column-name-and-extent-alias-renaming"></a>Sütun adı ve uzantı diğer adı yeniden adlandırma
 
-Sütun adı ve uzantı diğer adı yeniden adlandırma sorunu, SQL oluşturmanın Ikinci aşaması başlıklı bölümde açıklanan oluşturmanın ikinci aşamasında yalnızca diğer adlarla değiştirilen semboller kullanılarak ele alınır: String komutu oluşturuluyor.
+Sütun adı ve uzantı diğer adı yeniden adlandırma sorunu, SQL üretimi oluşturma: String komutunu oluşturma başlıklı bölümde açıklanan oluşturmanın ikinci aşamasında yalnızca diğer adlarla birlikte bulunan diğer adları kullanan semboller kullanılarak ele alınır.
 
 ## <a name="first-phase-of-the-sql-generation-visiting-the-expression-tree"></a>SQL oluşturma 'nın ilk aşaması: Ifade ağacını ziyaret etme
 
@@ -255,11 +255,11 @@ Bu bölümde, farklı ifade düğüm kategorilerini ziyaret eden ilkeler ve beli
 
 Aşağıdaki ifade türleri, JOIN olmayan düğümleri destekler:
 
-- DbDistinctExpression
+- Dbdıstıntexpression
 
 - DbFilterExpression
 
-- DbGroupByExpression
+- Fazla
 
 - DbLimitExpression
 
@@ -345,7 +345,7 @@ Set Operations DbUnionAllExpression, DbExceptExpression ve DbIntersectExpression
 <leftSqlSelectStatement> <setOp> <rightSqlSelectStatement>
 ```
 
-Burada \<leftsqlselectdeyim > ve \<rightsqlselectdeyim > her bir girişin her birini ziyaret edilerek elde edilen sqlselectdeyimlerdir \<ve setop > karşılık gelen işlemdir (örneğin, UNION ALL).
+\<Leftsqlselectdeyim > ve \<Rightsqlselectdeyim > her bir girişin her birini ziyaret edilerek elde edilen sqlselectdeyimlerdir ve \<setOp > karşılık gelen işlemdir (örneğin, UNıON ALL).
 
 ### <a name="dbscanexpression"></a>DbScanExpression
 
@@ -367,7 +367,7 @@ Bir DbPropertyExpression ziyaret edildiğinde JOIN diğer adının düzleştiril
 
 - Bir sembol döndürülürse, ziyaret yöntemi bu örneğe sahip bir SqlBuilder yöntemini ve sütun adı olarak özellik adını döndürür.
 
-### <a name="dbnewinstanceexpression"></a>DbNewInstanceExpression
+### <a name="dbnewinstanceexpression"></a>DbNewInstanceExpression oluşturamıyor
 
 DbProjectExpression 'ın Projection özelliği olarak kullanıldığında, DbNewInstanceExpression oluşturamıyor, yansıtılan sütunları temsil eden bağımsız değişkenlerin virgülle ayrılmış bir listesini oluşturur.
 
@@ -375,9 +375,9 @@ DbNewInstanceExpression oluşturamıyor bir koleksiyon dönüş türüne sahip o
 
 - DbNewInstanceExpression oluşturamıyor tek bağımsız değişken olarak DbElementExpression varsa, aşağıdaki gibi çevrilir:
 
-    ```
-    NewInstance(Element(X)) =>  SELECT TOP 1 …FROM X
-    ```
+```sql
+NewInstance(Element(X)) =>  SELECT TOP 1 …FROM X
+```
 
 DbNewInstanceExpression oluşturamıyor bağımsız değişken yoksa (boş bir tabloyu temsil ediyorsa), DbNewInstanceExpression oluşturamıyor öğesine çevrilir:
 
@@ -407,11 +407,11 @@ Kullanıcı tanımlı işlevler NamespaceName. fonksiyonadı öğesine çevrilir
 
 DbElementExpression 'ı ziyaret eden yöntem yalnızca bir skaler alt sorguyu temsil etmek için kullanıldığında DbElementExpression 'ı ziyaret etmek için çağrılır. Bu nedenle, DbElementExpression, tamamen bir Sqlselectdeyim halinde çeviri yapar ve çevresine köşeli ayraç ekler.
 
-### <a name="dbquantifierexpression"></a>DbQuantifierExpression
+### <a name="dbquantifierexpression"></a>Dbnicelik Erexpression
 
 İfade türüne (any veya tümü) bağlı olarak, Dbnicelik Erexpression şöyle çevrilir:
 
-```
+```sql
 Any(input, x) => Exists(Filter(input,x))
 All(input, x) => Not Exists(Filter(input, not(x))
 ```
@@ -420,7 +420,7 @@ All(input, x) => Not Exists(Filter(input, not(x))
 
 Bazı durumlarda, DbNotExpression 'ın giriş ifadesiyle çevirisini daraltmak mümkündür. Örneğin:
 
-```
+```sql
 Not(IsNull(a)) =>  "a IS NOT NULL"
 Not(All(input, x) => Not (Not Exists(Filter(input, not(x))) => Exists(Filter(input, not(x))
 ```
@@ -431,7 +431,7 @@ Not(All(input, x) => Not (Not Exists(Filter(input, not(x))) => Exists(Filter(inp
 
 DbIsEmptyExpression şu şekilde çevrilir:
 
-```
+```sql
 IsEmpty(input) = Not Exists(input)
 ```
 
@@ -443,7 +443,7 @@ Uzantı diğer adının yeniden adlandırılması, Sqlselectdeyimnesnesi bir diz
 
 Bir dizeye sembol nesnesi yazılırken sütun yeniden adlandırması oluşur. İlk aşamadaki AddDefaultColumns, belirli bir sütun sembolünün yeniden adlandırılması gerektiğini tespit etti. İkinci aşamada yalnızca yeniden adlandırma işlemi, üretilen adın AllColumnNames içinde kullanılan adla çakışmamasını sağlamak için oluşur
 
-Hem diğer adlar hem de sütunlar için benzersiz adlar oluşturmak üzere, existing_name \<> _N kullanın; burada n henüz kullanılmamış olan en küçük diğer addır. Tüm diğer adların genel listesi, basamaklı yeniden adlandırmaları gereksinimini artırır.
+Her ikisi de diğer adlar ve sütunlar için benzersiz adlar oluşturmak üzere \<existing_name > _N kullanın; burada n henüz kullanılmamış olan en küçük diğer addır. Tüm diğer adların genel listesi, basamaklı yeniden adlandırmaları gereksinimini artırır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

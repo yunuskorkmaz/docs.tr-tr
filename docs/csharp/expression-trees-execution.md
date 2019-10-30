@@ -1,34 +1,35 @@
 ---
-title: İfade ağaçlarını yürütme
-description: Yürütülebilir Ara dil (IL) talimatları dönüştürerek ifade ağaçlarını yürütme hakkında bilgi edinin.
+title: Ifade ağaçları yürütülüyor
+description: Onları yürütülebilir ara dil (IL) yönergelerine dönüştürerek, ifade ağaçları yürütme hakkında bilgi edinin.
 ms.date: 06/20/2016
+ms.technology: csharp-advanced-concepts
 ms.assetid: 109e0ac5-2a9c-48b4-ac68-9b6219cdbccf
-ms.openlocfilehash: f6dca5a3965924e8eb6e1c04fe7ffc3c78c7df93
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9af4b346962cb743daddf774e8b3c1f8fa722ae4
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61664564"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73037109"
 ---
-# <a name="executing-expression-trees"></a>İfade ağaçlarını yürütme
+# <a name="executing-expression-trees"></a>Ifade ağaçları yürütülüyor
 
-[Önceki--İfade ağaçlarını destekleyen çerçeve türleri](expression-classes.md)
+[Ifade ağaçlarını destekleyen önceki Framework türleri](expression-classes.md)
 
-Bir *ifade ağacı* bazı kod temsil eden bir veri yapısıdır.
-Derlenmiş ve yürütülebilir kodu değil. Bir ifade ağacı tarafından temsil edilen .NET kodu çalıştırmak istiyorsanız, bunu yürütülebilir IL yönergelerinden dönüştürmeniz gerekir.
+*İfade ağacı* , bazı kodları temsil eden bir veri yapısıdır.
+Derlenmez ve çalıştırılabilir kod değildir. Bir ifade ağacı tarafından temsil edilen .NET kodunu yürütmek istiyorsanız, onu yürütülebilir Il yönergelerine dönüştürmeniz gerekir.
 
-## <a name="lambda-expressions-to-functions"></a>Lambda ifadeleri işlevleri
+## <a name="lambda-expressions-to-functions"></a>IŞLEVLERE lambda Ifadeleri
 
-Tüm LambdaExpression veya yürütülebilir IL LambdaExpression türetilmiş herhangi bir tür dönüştürme yapabilirsiniz. Diğer ifade türleri, doğrudan koda dönüştürülemez. Bu kısıtlama, uygulamada çok az etkisi yoktur. Lambda ifadeleri, yalnızca yürütülebilir Ara dil (IL) dönüştürerek yürütmek istediğiniz ifadeleri türleridir. (Doğrudan çalıştırmak bunun ne anlama düşündüğünüz bir `ConstantExpression`. Bu faydalı bir şey anlamına gelir?) Olan herhangi bir ifade ağacı bir `LambdaExpression`, veya türetilmiş bir tür `LambdaExpression` için IL dönüştürülebilir.
-İfade türü `Expression<TDelegate>` .NET Core kitaplıklarında yalnızca somut bir örnektir. Bu, tüm temsilci türüyle eşleyen bir ifade temsil etmek için kullanılır. Bu tür bir temsilci türüne eşlediğinden, .NET ifade inceleyin ve lambda ifadesinin imzayla eşleşen uygun bir temsilci için IL oluşturur. 
+Herhangi bir Lambdavexpression veya Lambdavexpression 'dan türetilmiş herhangi bir tür çalıştırılabilir Il 'ye dönüştürebilirsiniz. Diğer ifade türleri doğrudan koda dönüştürülemez. Bu kısıtlama pratikte çok daha etkilidir. Lambda ifadeleri, yürütülebilir ara dile (IL) dönüştürerek yürütmek istediğiniz tek ifade türleridir. (Bir `ConstantExpression`doğrudan yürütmek için ne anlama geldiğini düşünün. Herhangi bir şey yararlı mı?) `LambdaExpression`olan herhangi bir ifade ağacı veya `LambdaExpression` türetilmiş bir tür Il 'ye dönüştürülebilir.
+`Expression<TDelegate>` ifade türü, .NET Core kitaplıklarında tek somut örnektir. Herhangi bir temsilci türüyle eşleşen bir ifadeyi temsil etmek için kullanılır. Bu tür bir temsilci türüne eşlendiğinden, .NET ifadeyi inceleyebilir ve lambda ifadesinin imzasıyla eşleşen uygun bir temsilci için Il oluşturabilir. 
 
-Çoğu durumda, bu ifade, karşılık gelen temsilci arasında basit bir eşleme oluşturur. Örneğin, tarafından temsil edilen bir ifade ağacı `Expression<Func<int>>` türden bir temsilciye dönüştürülmüş `Func<int>`. Herhangi bir dönüş türü ve bağımsız değişken listesi ile bir lambda ifadesi için yürütülebilir kodu bu lambda ifadesi tarafından temsil edilen hedef türü bir temsilci türü vardır.
+Çoğu durumda bu, bir ifade ve onun karşılık gelen temsilcisi arasında basit bir eşleme oluşturur. Örneğin, `Expression<Func<int>>` tarafından temsil edilen bir ifade ağacı `Func<int>`türünün bir temsilcisine dönüştürülür. Herhangi bir dönüş türü ve bağımsız değişken listesi olan bir lambda ifadesinde, bu lambda ifadesi tarafından temsil edilen çalıştırılabilir kodun hedef türü olan bir temsilci türü vardır.
 
-`LambdaExpression` Türünü içeren `Compile` ve `CompileToMethod` yürütülebilir kodu bir ifade ağacı dönüştürmek için kullanacağınız üyeleri. `Compile` Yöntemi, bir temsilci oluşturur. `CompileToMethod` Yöntemi güncelleştirmeleri bir `MethodBuilder` derlenen Çıkışta ifade ağacı temsil eden IL nesne. Unutmayın `CompileToMethod` yalnızca tam masaüstü Framework, .NET Core de kullanılabilir.
+`LambdaExpression` türü, bir ifade ağacını çalıştırılabilir koda dönüştürmek için kullanacağınız `Compile` ve `CompileToMethod` üyelerini içerir. `Compile` yöntemi bir temsilci oluşturur. `CompileToMethod` yöntemi, ifade ağacının derlenmiş çıkışını temsil eden Il ile bir `MethodBuilder` nesnesini günceller. `CompileToMethod`, .NET Core 'da değil, yalnızca tam masaüstü çerçevesinde kullanılabilir olduğunu unutmayın.
 
-İsteğe bağlı olarak, sağlayabilirsiniz bir `DebugInfoGenerator` oluşturulan temsilci nesne için hata ayıklama bilgisi sembol alırsınız. İfade ağacı bir temsilci nesnesine dönüştürmek ve oluşturulan temsilci tam hata ayıklama bilgilerini sağlar.
+İsteğe bağlı olarak, oluşturulan temsilci nesnesi için simge hata ayıklama bilgilerini alacak bir `DebugInfoGenerator` de sağlayabilirsiniz. Bu, ifade ağacını bir temsilci nesnesine dönüştürmenize ve oluşturulan temsilciyle ilgili tam hata ayıklama bilgilerine sahip etmenize olanak sağlar.
 
-Bir ifade aşağıdaki kodu kullanarak bir temsilciye dönüştürmeniz:
+Aşağıdaki kodu kullanarak bir ifadeyi temsilciye dönüştürürsünüz:
 
 ```csharp
 Expression<Func<int>> add = () => 1 + 2;
@@ -37,25 +38,25 @@ var answer = func(); // Invoke Delegate
 Console.WriteLine(answer);
 ```
 
-Bu ifade türünde temsilci türüne dayalı olduğunu dikkat edin. Temsilci nesne türü kesin belirlenmiş bir şekilde kullanmak istiyorsanız, dönüş türü ve bağımsız değişken listesi bilmeniz gerekir. `LambdaExpression.Compile()` Yöntemi döndürür `Delegate` türü. Bağımsız değişken listesini kontrol edin veya dönüş türü herhangi bir derleme zamanı aracı için doğru temsilci türüne dönüştürme gerekecektir.
+Temsilci türünün ifade türüne göre olduğuna dikkat edin. Temsilci nesnesini kesin olarak belirlenmiş bir şekilde kullanmak istiyorsanız, dönüş türünü ve bağımsız değişken listesini bilmeniz gerekir. `LambdaExpression.Compile()` yöntemi `Delegate` türünü döndürür. Herhangi bir derleme zamanı aracının bağımsız değişken listesini veya dönüş türünü denetlemesini sağlamak için onu doğru temsilci türüne atamalısınız.
 
-## <a name="execution-and-lifetimes"></a>Yürütme ve yaşam süresi yok
+## <a name="execution-and-lifetimes"></a>Yürütme ve yaşam süreleri
 
-Temsilci çağrıldığında, oluşturulan harekete geçirerek siz kodu yürütürken `LambdaExpression.Compile()`. Bunu yeri görebilirsiniz `add.Compile()` temsilci döndürür. Çağırarak bu temsilci çağırma `func()` kodu yürütür.
+Kodu, `LambdaExpression.Compile()`çağrıldığında oluşturulan temsilciyi çağırarak yürütün. Bunu, `add.Compile()` bir temsilci döndürdüğü yerde görebilirsiniz. Bu temsilciyi çağırmak `func()` çağırarak kodu yürütür.
 
-Bu temsilci kodda bir ifade ağacı temsil eder. Bu temsilci tanıtıcısını korumak ve daha sonra çağırma. İfade ağacı her zaman temsil ettiği kod yürütmek istediğiniz derleme gerek yoktur. (İfade ağaçları sabittir ve daha sonra aynı ifade ağacı derleme, aynı kodu yürüten bir temsilci oluşturur unutmayın.)
+Bu temsilci, ifade ağacındaki kodu temsil eder. Bu temsilciye yönelik tanıtıcıyı koruyabilir ve daha sonra çağırabilirsiniz. Temsil ettiği kodu yürütmek istediğiniz her seferinde ifade ağacını derlemeniz gerekmez. (İfade ağaçlarının sabit olduğunu unutmayın ve aynı ifade ağacını daha sonra derlemek aynı kodu çalıştıran bir temsilci oluşturur.)
 
-Ben gereksiz derleme çağrıları önleyerek performansı artırmak için daha karmaşık bir önbelleğe alma mekanizmasını oluşturulmaya çalışılırken karşı dikkat. Bunlar aynı algoritmayı temsil ediyorsa belirlemek için iki rastgele ifade ağaçları karşılaştırma ayrıca zaman yürütmek için alabilir. İşlem süresi, ek çağrıları kaydederken, büyük olasılıkla bulabilirsiniz `LambdaExpression.Compile()` birden fazla ifade ağaçları neden aynı yürütülebilir kodu tanımlayan iki farklı kod yürütme zamanına göre tüketilir.
+Gereksiz derleme çağrılarını önleyerek performansı artırmak için daha gelişmiş bir önbelleğe alma mekanizması oluşturmaya çalışırken dikkatli olunacaktır. İki rastgele ifade ağacının karşılaştırılması, aynı algoritmanın aynı algoritmayı temsil ettiğini tespit etmek için zaman alıcı olarak da kullanılır. Büyük olasılıkla, `LambdaExpression.Compile()` ek çağrılarından kaçınmaktan kaynaklanan işlem zamanının, aynı çalıştırılabilir kodun sonucu olan iki farklı ifade ağacının sonucunu belirleyen kod yürütme sırasında tüketildiğinden daha fazla olacağını fark edeceksiniz.
 
 ## <a name="caveats"></a>Uyarılar
 
-Bir lambda ifadesi, bir temsilci derleme ve bu temsilciyi çağrılırken bir ifade ağacı ile gerçekleştirebileceğiniz en basit işlemler biridir. Ancak, basit işlemle bile bu farkında olması gereken uyarılar vardır. 
+Bir lambda ifadesini bir temsilciye derlemek ve bu temsilciyi çağırmak, bir ifade ağacı ile gerçekleştirebileceğiniz en basit işlemlerden biridir. Ancak, bu basit işlemle birlikte, bilmeniz gereken uyarılar da vardır. 
 
-Lambda ifadeleri, ifade başvurulmayan yerel değişkenlerin üzerine kapanışlar oluşturun. Temsilci bir parçası olan tüm değişkenler çağırdığınız konumda kullanılabilir olduğunu garanti gerekir `Compile`, ve sonuç olarak oluşan temsilci yürüttüğünüzde.
+Lambda Ifadeleri, ifadede başvurulan herhangi bir yerel değişken üzerinde kapanışları oluşturur. Temsilcinin parçası olacak tüm değişkenlerin `Compile`çağırdığınız konumda kullanılabilir olduğunu ve elde edilen temsilciyi yürüttüğünüzde emin olmanız gerekir.
 
-Genel olarak, derleyici bu doğru olduğundan emin olmanızı sağlar. Ancak, ifadeniz uygulayan bir değişkenine erişiyorsa `IDisposable`, ifade ağacına tarafından hala açık tutulduğu sürece kodunuzun nesnesini atmak mümkündür.
+Genel olarak, derleyici bunun doğru olduğundan emin olur. Ancak, ifadeniz `IDisposable`uygulayan bir değişkene eriştiğinde, kodunuzun nesneyi hala ifade ağacı tarafından tutulurken atma olasılığı vardır.
 
-Örneğin, bu kod düzgün, çünkü çalışır `int` uygulamıyor `IDisposable`:
+Örneğin, `int` `IDisposable`uygulamadığından, bu kod düzgün çalışıyor:
 
 ```csharp
 private static Func<int, int> CreateBoundFunc()
@@ -67,10 +68,10 @@ private static Func<int, int> CreateBoundFunc()
 }
 ```
 
-Temsilci bir başvuru yerel değişkene yakalandı `constant`.
-İşlev tarafından döndürülen daha sonra istediğiniz zaman bu değişken erişilir `CreateBoundFunc` yürütür.
+Temsilci `constant`yerel değişkenine bir başvuru yakalamıştır.
+Bu değişkene, daha sonra `CreateBoundFunc` tarafından döndürülen işlev çalıştırıldığında her zaman erişilir.
 
-Ancak, bu (Bunun yerine contrived) uygulayan sınıf göz önünde bulundurun `IDisposable`:
+Ancak, `IDisposable`uygulayan (Bunun yerine contrived) sınıfını göz önünde bulundurun:
 
 ```csharp
 public class Resource : IDisposable
@@ -93,7 +94,7 @@ public class Resource : IDisposable
 }
 ```
 
-Bir ifadede aşağıda gösterildiği gibi kullanırsanız, elde edecekleriniz bir `ObjectDisposedException` tarafından başvurulan kodu yürüttüğünüzde `Resource.Argument` özelliği:
+Bunu aşağıda gösterildiği gibi bir ifadede kullanırsanız, `Resource.Argument` özelliği tarafından başvurulan kodu yürüttüğünüzde `ObjectDisposedException` alırsınız:
 
 ```csharp
 private static Func<int, int> CreateBoundResource()
@@ -107,20 +108,20 @@ private static Func<int, int> CreateBoundResource()
 }
 ```
 
-Bu yöntemin döndürdüğü temsilci üzerinden kapattı `constant` , atıldı nesnesidir. (Olarak bildirildiğinden, atılmış olan bir `using` deyimi.) 
+Bu yöntemden döndürülen temsilci, atılmış olan `constant` nesnesi üzerinde kapandı. (Bir `using` bildiriminde bildirildiği için atılmış.) 
 
-Bu yöntemin döndürdüğü temsilci yürüttüğünüzde, şimdi gerekir bir `ObjectDisposedException` yürütme noktasında oluşturulur.
+Artık bu yöntemden döndürülen temsilciyi yürüttüğünüzde, yürütme noktasında bir `ObjectDisposedException` oluşturulur.
 
-Bir derleme zamanı yapısı temsil eden bir çalışma zamanı hatası için ilginç görünüyor, ancak bu ifade ağaçları ile çalıştığımız biz geçilmesidir dünya.
+Derleme zamanı yapısını temsil eden bir çalışma zamanı hatası olması garip görünür, ancak bu, ifade ağaçları ile çalışırken girdiğimiz dünya.
 
-Bunu önlemek için genel rehberlik sunmak zor, bu nedenle bu sorunun permütasyon çok fazla vardır. İfadeleri tanımlarken yerel değişkenlere erişme hakkında dikkatli olun ve durumunda geçerli nesneye erişme hakkında dikkatli olun (tarafından temsil edilen `this`) ne zaman bir ifade ağacı oluşturma döndürülen bir genel API tarafından.
+Bu sorunun birçok permütasyon vardır. bu nedenle, bunu önlemek için genel rehberlik sunmak zordur. İfadeleri tanımlarken yerel değişkenlere erişmede dikkatli olun ve genel bir API tarafından döndürülebilecek bir ifade ağacı oluştururken geçerli nesnedeki duruma (`this`göre gösterilen) erişme konusunda dikkatli olun.
 
-İfadeniz kodda yöntemleri veya özellikleri diğer derlemelerdeki başvurabilir. Bu derleme ne zaman ifade tanımlanır ve ne zaman derlenir ve sonuç olarak oluşan temsilci zaman çağrılır erişilebilir olması gerekir. İle karşılanması bir `ReferencedAssemblyNotFoundException` durumlarda burada da mevcut değil.
+Deyiminizdeki kod, diğer derlemelerdeki yöntemlere veya özelliklere başvurabilir. İfade tanımlandığında ve derlendikten sonra ve elde edilen temsilci çağrıldığında bu derlemeye erişilebilir olması gerekir. Mevcut olmadığı durumlarda `ReferencedAssemblyNotFoundException` karşılanır.
 
 ## <a name="summary"></a>Özet
 
-Lambda ifadeleri temsil eden ifade ağaçları yürütebilirsiniz temsilci oluşturmak için derlenebilir. Bu, bir ifade ağacı tarafından temsil edilen kod yürütmek için bir mekanizma sağlar.
+Lambda ifadelerini temsil eden ifade ağaçları, yürütebilmeniz için bir temsilci oluşturmak üzere derlenebilir. Bu, bir ifade ağacı tarafından temsil edilen kodu yürütmek için bir mekanizma sağlar.
 
-İfade ağacı, oluşturduğunuz belirli yapısı için yürütmek kodu temsil eder. İfade oluşturduğunuz ortamı, derleme ve kod yürütme ortamı eşleşmesi şartıyla, her şeyin beklendiği gibi çalışır. Gerçekleşen değil, hatalar, öngörülebilir ve ilk ifade ağaçları kullanma herhangi bir kod testlerinizde yakalanır.
+Ifade ağacı, oluşturduğunuz herhangi bir yapı için yürütülecek kodu temsil eder. Kodu derlemek ve yürütmek istediğiniz ortam, ifadeyi oluşturduğunuz ortamla eşleşiyorsa, her şey beklendiği gibi çalışmaktadır. Bu durum gerçekleşmezse, hatalar çok öngörülebilir olur ve ifade ağaçları kullanılarak herhangi bir kodun ilk testlerinizde yakalanacaktır.
 
-[Sonraki--İfade yorumlama](expression-trees-interpreting.md)
+[Sonraki--Ifadeleri yorumlama](expression-trees-interpreting.md)

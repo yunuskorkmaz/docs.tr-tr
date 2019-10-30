@@ -32,47 +32,47 @@ helpviewer_keywords:
 - hat operator [C#]
 - .. operator [C#]
 - range operator [C#]
-ms.openlocfilehash: 45af31d10d77f4c63b27b34595b97fdd11ef95a1
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: ba2a8cd4995b9baab2071d3fb3c7980e45565692
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71116132"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039007"
 ---
 # <a name="member-access-operators-c-reference"></a>Üye erişim işleçleri (C# başvuru)
 
 Bir tür üyesine eriştiğinizde aşağıdaki işleçleri kullanabilirsiniz:
 
-- (üye erişimi): bir ad alanının veya türün üyesine erişmek için [ `.` ](#member-access-operator-)
-- [(dizi öğesi veya Dizin Oluşturucu erişimi): bir dizi öğesine veya bir tür dizin oluşturucusuna erişmek için `[]` ](#indexer-operator-)
-- [ve (nullkoşulluişleçler):yalnızcabirişlenennulldeğilseüyeveyaöğeerişimişlemigerçekleştirmek`?[]`için `?.` ](#null-conditional-operators--and-)
-- (çağırma): erişilen bir yöntemi çağırmak veya bir temsilciyi çağırmak için [ `()` ](#invocation-operator-)
-- (uçtan dizin): öğe konumunun bir sıranın sonundan olduğunu göstermek için [ `^` ](#index-from-end-operator-)
-- (Aralık): dizi öğeleri aralığını almak için kullanabileceğiniz bir dizin aralığı belirtmek için [ `..` ](#range-operator-)
+- [`.` (üye erişimi)](#member-access-operator-): bir ad alanının veya türün üyesine erişmek için
+- [`[]` (dizi öğesi veya Dizin Oluşturucu erişimi)](#indexer-operator-): bir dizi öğesine veya bir tür dizin oluşturucusuna erişmek için
+- [`?.` ve `?[]` (null-koşullu işleçler)](#null-conditional-operators--and-): yalnızca bir işlenen null değilse bir üye veya öğe erişim işlemi gerçekleştirmek için
+- [`()` (çağırma)](#invocation-operator-): erişilen bir yöntemi çağırmak veya bir temsilciyi çağırmak için
+- [`^` (uçtan dizin)](#index-from-end-operator-): öğe konumunun bir sıranın sonundan olduğunu göstermek için
+- [`..` (Aralık)](#range-operator-): dizi öğeleri aralığını almak için kullanabileceğiniz bir dizin aralığı belirtmek için
 
 ## <a name="member-access-operator-"></a>Üye erişim işleci.
 
-Aşağıdaki örneklerde gösterildiği `.` gibi, belirteci, bir ad uzayı veya bir tür üyesine erişmek için kullanabilirsiniz:
+Aşağıdaki örneklerde gösterildiği gibi, bir ad alanı veya tür üyesine erişmek için `.` belirtecini kullanın:
 
-- Aşağıdaki `.` [bir yönerge`using` ](../keywords/using-directive.md) örneğinde gösterildiği gibi, bir ad alanı içinde iç içe geçmiş bir ad alanına erişmek için kullanın:
+- Bir [`using` yönergesinin](../keywords/using-directive.md) aşağıdaki örneğinde gösterildiği gibi, bir ad alanı içinde iç içe geçmiş bir ad alanına erişmek için `.` kullanın:
 
   [!code-csharp[nested namespaces](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#NestedNamespace)]
 
-- Aşağıdaki `.` kodun gösterdiği gibi, bir ad alanı içindeki bir türe erişmek üzere *nitelenmiş bir ad* oluşturmak için kullanın:
+- Aşağıdaki kodun gösterdiği gibi, bir ad alanı içindeki bir türe erişmek üzere *nitelenmiş bir ad* oluşturmak için `.` kullanın:
 
   [!code-csharp[qualified name](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#QualifiedName)]
 
-  Nitelenmiş adların kullanımını isteğe bağlı yapmak için bir [ `using` yönergesi](../keywords/using-directive.md) kullanın.
+  Nitelenmiş adların kullanımını isteğe bağlı yapmak için bir [`using` yönergesi](../keywords/using-directive.md) kullanın.
 
-- Aşağıdaki `.` kodda gösterildiği gibi, [tür üyelerine](../../programming-guide/classes-and-structs/index.md#members), statik ve statik olmayan erişim için kullanın:
+- Aşağıdaki kodda gösterildiği gibi, [tür üyelerine](../../programming-guide/classes-and-structs/index.md#members), statik ve statik olmayan erişim için `.` kullanın:
 
   [!code-csharp-interactive[type members](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#TypeMemberAccess)]
 
-Ayrıca, bir `.` [genişletme yöntemine](../../programming-guide/classes-and-structs/extension-methods.md)erişmek için kullanabilirsiniz.
+[Uzantı yöntemine](../../programming-guide/classes-and-structs/extension-methods.md)erişmek için `.` de kullanabilirsiniz.
 
 ## <a name="indexer-operator-"></a>Indexer işleci []
 
-Köşeli parantezler `[]`, genellikle Array, Indexer veya pointer öğesi erişimi için kullanılır.
+Köşeli ayraçlar `[]`, genellikle Array, Indexer veya pointer öğesi erişimi için kullanılır.
 
 ### <a name="array-access"></a>Dizi erişimi
 
@@ -80,7 +80,7 @@ Aşağıdaki örnek, dizi öğelerine nasıl erişileceğini göstermektedir:
 
 [!code-csharp-interactive[array access](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#Arrays)]
 
-Bir dizi dizini, bir dizi karşılık gelen boyutun sınırları dışındaysa, bir <xref:System.IndexOutOfRangeException> oluşturulur.
+Bir dizi dizini, bir dizi karşılık gelen boyutun sınırları dışındaysa bir <xref:System.IndexOutOfRangeException> oluşturulur.
 
 Yukarıdaki örnekte gösterildiği gibi, bir dizi türü bildirdiğinizde veya bir dizi örneği örneklediğinizde köşeli parantezleri de kullanabilirsiniz.
 
@@ -88,11 +88,11 @@ Diziler hakkında daha fazla bilgi için bkz. [diziler](../../programming-guide/
 
 ### <a name="indexer-access"></a>Dizin Oluşturucu erişimi
 
-Aşağıdaki örnek, Dizin Oluşturucu <xref:System.Collections.Generic.Dictionary%602> erişimini göstermek için .NET türünü kullanır:
+Aşağıdaki örnek, Dizin Oluşturucu erişimini göstermek için .NET <xref:System.Collections.Generic.Dictionary%602> türünü kullanır:
 
 [!code-csharp-interactive[indexer access](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#Indexers)]
 
-Dizin oluşturucular, Kullanıcı tanımlı bir türün örneklerinin, dizi dizini oluşturma gibi benzer şekilde dizinlemesini sağlar. Tamsayı olması gereken dizi dizinlerinin aksine, Dizin Oluşturucu bağımsız değişkenleri herhangi bir türde olacak şekilde bildirilmelidir.
+Dizin oluşturucular, Kullanıcı tanımlı bir türün örneklerinin, dizi dizini oluşturma gibi benzer şekilde dizinlemesini sağlar. Tamsayı olması gereken dizi dizinlerinin aksine, Dizin Oluşturucu parametreleri herhangi bir türde olacak şekilde bildirilmelidir.
 
 Dizin oluşturucular hakkında daha fazla bilgi için bkz. [Dizin oluşturucular](../../programming-guide/indexers/index.md).
 
@@ -109,9 +109,9 @@ void TraceMethod() {}
 
 ## <a name="null-conditional-operators--and-"></a>Null koşullu işleçler?. '? []
 
-C# 6 ve sonraki sürümlerde kullanılabilir, null koşullu bir operatör, yalnızca o işlenen null olmayan `?.`bir değer olarak değerlendiriliyorsa `?[]`, bir üye erişimi, veya öğe erişimi, öğesini işleneninde uygular. İşlenen olarak `null`değerlendirilirse, işleci uygulamanın sonucu olur `null`. Null koşullu üye erişim işleci `?.` ELVIS işleci olarak da bilinir.
+C# 6 ve sonrasında kullanılabilir, null koşullu bir operatör, yalnızca bu işlenen null olmayan bir değer olarak değerlendiriliyorsa, bir üye erişimi,`?.`veya öğe erişimi,`?[]`işlemi uygular. İşlenen `null`değerlendirilirse, işleci uygulamanın sonucu `null`. Null koşullu üye erişim işleci `?.` ELVIS işleci olarak da bilinir.
 
-Null koşullu işleçler kısa devre dışı. Diğer bir deyişle, bir koşullu üye veya öğe erişim işlemleri zincirindeki bir işlem dönerse `null`, zincir geri kalanı yürütülmez. `B` Aşağıdaki örnekte, `A` olarak `null` değerlendirilirse ve`C`değerlendirmesi `A` durumundahesaplanmaz:`null` `B`
+Null koşullu işleçler kısa devre dışı. Diğer bir deyişle, bir koşullu üye veya öğe erişim işlemleri zincirindeki bir işlem `null`döndürürse, zincirin geri kalanı yürütülmez. Aşağıdaki örnekte, `A` `null` değerlendirilirse `B` değerlendirilmez ve `A` veya `B` `null`olarak değerlendirilirse `C` değerlendirilmez:
 
 ```csharp
 A?.B?.Do(C);
@@ -122,11 +122,11 @@ Aşağıdaki örnek, `?.` ve `?[]` işleçlerinin kullanımını gösterir:
 
 [!code-csharp-interactive[null-conditional operators](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#NullConditional)]
 
-Yukarıdaki örnek, [null birleşim işlecinin](null-coalescing-operator.md)kullanımını da gösterir. Null-koşullu işlemin `null`sonucu olarak değerlendirmek için alternatif bir ifade sağlamak üzere null birleşim işlecini kullanabilirsiniz.
+Yukarıdaki örnek ayrıca null [birleşim işlecini `??`](null-coalescing-operator.md) , null koşullu bir işlemin sonucu `null`sonucunu değerlendirmek üzere alternatif bir ifade belirtmek için kullanır.
 
 ### <a name="thread-safe-delegate-invocation"></a>İş parçacığı açısından güvenli temsilci çağırma
 
-Bir temsilcinin null olup olmadığını denetlemek ve iş parçacığı güvenli bir şekilde (örneğin, [bir olay](../../../standard/events/how-to-raise-and-consume-events.md)yükselttiğinizde) aşağıdaki kodun gösterdiği gibi, bir temsilciyi çağırmak için işlecinikullanın:`?.`
+Bir temsilcinin null olup olmadığını denetlemek ve iş parçacığı güvenli bir şekilde (örneğin, [bir olay](../../../standard/events/how-to-raise-and-consume-events.md)yükselttiğinizde) aşağıdaki kodun gösterdiği gibi, bir temsilciyi çağırmak için `?.` işlecini kullanın:
 
 ```csharp
 PropertyChanged?.Invoke(…)
@@ -144,13 +144,13 @@ if (handler != null)
 
 ## <a name="invocation-operator-"></a>Çağırma işleci ()
 
-Bir [yöntemi](../../programming-guide/classes-and-structs/methods.md) çağırmak `()`veya bir [temsilciyi](../../programming-guide/delegates/index.md)çağırmak için parantezleri kullanın.
+Bir [yöntemi](../../programming-guide/classes-and-structs/methods.md) çağırmak veya bir [temsilciyi](../../programming-guide/delegates/index.md)çağırmak için parantez, `()`kullanın.
 
 Aşağıdaki örnek, bağımsız değişkenler içeren veya olmayan bir yöntemin nasıl çağrılacağını gösterir ve bir temsilciyi çağırır:
 
 [!code-csharp-interactive[invocation with ()](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#Invocation)]
 
-[`new`](new-operator.md) İşleci ile bir [Oluşturucu](../../programming-guide/classes-and-structs/constructors.md) çağırdığınızda parantezleri de kullanabilirsiniz.
+Ayrıca, [`new`](new-operator.md) işleçle bir [Oluşturucu](../../programming-guide/classes-and-structs/constructors.md) çağırdığınızda parantezleri de kullanabilirsiniz.
 
 ### <a name="other-usages-of-"></a>() Diğer kullanımları
 
@@ -160,27 +160,27 @@ Açık tür dönüştürmeleri gerçekleştiren [atama ifadeleri](type-testing-a
 
 ## <a name="index-from-end-operator-"></a>Bitiş işlecinden Dizin ^
 
-C# 8,0 ve sonraki sürümlerde `^` kullanılabilen işleç, öğe konumunun bir dizinin sonundan olduğunu gösterir. Bir uzunluk `length`sırası için, `^n` bir dizi başlangıcının sonuna `length - n` kadar olan öğesine işaret eder. Örneğin, `^1` bir sıranın son öğesine işaret eder ve `^length` dizinin ilk öğesine işaret eder.
+C# 8,0 ve sonraki sürümlerde kullanılabilen`^`işleci, öğe konumunun sıranın sonundan itibaren olduğunu gösterir. `length`bir dizi Uzunluk için, `^n` bir sıranın başından itibaren `length - n` olan öğeye işaret eder. Örneğin `^1`, sıranın son öğesine işaret eder ve `^length` bir dizinin ilk öğesine işaret eder.
 
 [!code-csharp[index from end](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#IndexFromEnd)]
 
-Yukarıdaki örnekte gösterildiği gibi, ifadesi `^e` <xref:System.Index?displayProperty=nameWithType> türüdür. İfadesinde `^e` `int` ,`e` sonucu örtük olarak dönüştürülebilir olmalıdır.
+Yukarıdaki örnekte gösterildiği gibi ifade `^e` <xref:System.Index?displayProperty=nameWithType> türüdür. İfade `^e`, `e` sonucu `int`örtülü olarak dönüştürülebilir olmalıdır.
 
-Ayrıca bir dizin aralığı oluşturmak `^` için işlecini [Range işleciyle](#range-operator-) de kullanabilirsiniz. Daha fazla bilgi için bkz. [Dizinler ve aralıklar](../../tutorials/ranges-indexes.md).
+Ayrıca, dizin aralığı oluşturmak için `^` işlecini [Aralık işleciyle](#range-operator-) de kullanabilirsiniz. Daha fazla bilgi için bkz. [Dizinler ve aralıklar](../../tutorials/ranges-indexes.md).
 
 ## <a name="range-operator-"></a>Aralık işleci..
 
-C# 8,0 ve sonraki sürümlerde `..` kullanılabilen işleç, işlenen olarak bir dizin aralığının başlangıcını ve sonunu belirtir. Sol işlenen bir aralığın *kapsamlı* bir başlangıcı olur. Sağ işlenen bir aralığın *dışlamalı* bir sonu. Her iki işlenen de, aşağıdaki örnekte gösterildiği gibi, bir sıranın başından veya sonundan bir dizin olabilir:
+C# 8,0 ve sonraki sürümlerde kullanılabilen`..`işleci, işlenen bir dizin aralığının başlangıcını ve sonunu belirtir. Sol işlenen bir aralığın *kapsamlı* bir başlangıcı olur. Sağ işlenen bir aralığın *dışlamalı* bir sonu. Her iki işlenen de, aşağıdaki örnekte gösterildiği gibi, bir sıranın başından veya sonundan bir dizin olabilir:
 
 [!code-csharp[range examples](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#Ranges)]
 
-Yukarıdaki örnekte gösterildiği gibi, ifadesi `a..b` <xref:System.Range?displayProperty=nameWithType> türüdür. İfadesinde `a..b`, `a` `int` ve sonuçları`b` örtülü olarak veya<xref:System.Index>olarak dönüştürülebilir olmalıdır.
+Yukarıdaki örnekte gösterildiği gibi ifade `a..b` <xref:System.Range?displayProperty=nameWithType> türüdür. İfade `a..b`, `a` ve `b` sonuçları `int` veya <xref:System.Index>örtülü olarak dönüştürülebilir olmalıdır.
 
-Açık uçlu bir Aralık almak için `..` işlecin işlenenlerinden herhangi birini atlayabilirsiniz:
+Açık uçlu bir Aralık almak için `..` işlecinin herhangi bir işlenenini atlayabilirsiniz:
 
-- `a..`eşdeğerdir`a..^0`
-- `..b`eşdeğerdir`0..b`
-- `..`eşdeğerdir`0..^0`
+- `a..` `a..^0` eşdeğerdir
+- `..b` `0..b` eşdeğerdir
+- `..` `0..^0` eşdeğerdir
 
 [!code-csharp[ranges with omitted operands](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#RangesOptional)]
 
@@ -188,7 +188,7 @@ Daha fazla bilgi için bkz. [Dizinler ve aralıklar](../../tutorials/ranges-inde
 
 ## <a name="operator-overloadability"></a>Operatör overloadability
 
-,,, Ve`..` işleçleri aşırı yüklenemez. `^` `()` `.` İşleci `[]` , aşırı yüklenebilir olmayan bir işleç olarak kabul edilir. Kullanıcı tanımlı türlerle Dizin oluşturmayı desteklemek için [Dizin oluşturucular](../../programming-guide/indexers/index.md) kullanın.
+`.`, `()`, `^`ve `..` işleçleri aşırı yüklenemez. `[]` işleci de aşırı yüklenebilir olmayan bir operatör olarak değerlendirilir. Kullanıcı tanımlı türlerle Dizin oluşturmayı desteklemek için [Dizin oluşturucular](../../programming-guide/indexers/index.md) kullanın.
 
 ## <a name="c-language-specification"></a>C# dili belirtimi
 
@@ -198,6 +198,8 @@ Daha fazla bilgi için, [ C# dil belirtiminin](~/_csharplang/spec/introduction.m
 - [Öğe erişimi](~/_csharplang/spec/expressions.md#element-access)
 - [Null-koşullu işleç](~/_csharplang/spec/expressions.md#null-conditional-operator)
 - [Çağırma ifadeleri](~/_csharplang/spec/expressions.md#invocation-expressions)
+
+Dizinler ve aralıklar hakkında daha fazla bilgi için bkz. [özellik teklifi Note](~/_csharplang/proposals/csharp-8.0/ranges.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

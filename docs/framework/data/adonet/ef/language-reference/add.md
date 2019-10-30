@@ -2,19 +2,19 @@
 title: + (Ekle)
 ms.date: 03/30/2017
 ms.assetid: 51769b02-a8f7-4177-9e99-bbd10e77092c
-ms.openlocfilehash: 8c9a6b2c8168e4677c37cfdb0b401a93ee0040cf
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 62bb4782f135309eed8efa7e182fd8b75f92e126
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251364"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040299"
 ---
 # <a name="-add"></a>+ (Ekle)
 İki sayı ekler.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```csharp  
 expression + expression  
 ```  
   
@@ -31,7 +31,7 @@ expression + expression
 ## <a name="example"></a>Örnek  
  Aşağıdaki Entity SQL sorgusu iki sayı eklemek için + aritmetik işlecini kullanır. Sorgu AdventureWorks Sales modelini temel alır. Bu sorguyu derlemek ve çalıştırmak için aşağıdaki adımları izleyin:  
   
-1. [Aşağıdaki adımları uygulayın: StructuralType sonuçları](../how-to-execute-a-query-that-returns-structuraltype-results.md)döndüren bir sorgu yürütün.  
+1. [Nasıl yapılır: StructuralType sonuçları döndüren bir sorgu yürütme](../how-to-execute-a-query-that-returns-structuraltype-results.md)bölümündeki yordamı izleyin.  
   
 2. Aşağıdaki sorguyu `ExecuteStructuralTypeQuery` yöntemine bir bağımsız değişken olarak geçirin:  
   

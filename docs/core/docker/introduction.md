@@ -3,12 +3,12 @@ title: Docker 'a giriş
 description: Bu makalede bir .NET Core uygulaması bağlamında Docker 'a bir giriş ve genel bakış sunulmaktadır.
 ms.date: 03/20/2019
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 3f40d2723feb5a31066115ae11cafba11981f1b4
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: af1213eefb013f8911a865e7e2e318a8beadc9a5
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72523004"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73038459"
 ---
 # <a name="introduction-to-net-and-docker"></a>.NET ve Docker’a Giriş
 
@@ -40,7 +40,7 @@ Microsoft Container Registry (MCR), Microsoft tarafından sunulan kapsayıcı g�
 
 ### <a name="dockerfile"></a>Dockerfile
 
-**Dockerfile** , bir görüntü oluşturan bir yönergeler kümesini tanımlayan bir dosyadır. **Dockerfile** dosyasındaki her yönerge görüntüde bir katman oluşturur. Çoğu bölümde, görüntüyü yeniden oluşturduğunuzda yalnızca değiştirilen katmanlar yeniden oluşturulur. **Dockerfile** , başkalarına dağıtılabilir ve yeni bir görüntüyü oluşturduğunuz şekilde oluşturmak için yeniden oluşturulmasına olanak sağlar. Bu, görüntüyü oluşturma *yönergelerini* dağıtmanıza izin verdiğinden, görüntünüzü dağıtmanın ana yolu bir kayıt defterine yayımlamaktır.
+**Dockerfile** , bir görüntü oluşturan bir yönergeler kümesini tanımlayan bir dosyadır. **Dockerfile** dosyasındaki her yönerge görüntüde bir katman oluşturur. Çoğu bölümde, görüntüyü yeniden oluşturduğunuzda yalnızca değiştirilen katmanlar yeniden oluşturulur. **Dockerfile** , başkalarına dağıtılabilir ve yeni bir görüntüyü oluşturduğunuz şekilde yeniden oluşturulmasına olanak sağlar. Bu, görüntüyü oluşturma *yönergelerini* dağıtmanıza izin verdiğinden, görüntünüzü dağıtmanın ana yolu bir kayıt defterine yayımlamaktır.
 
 ## <a name="net-core-images"></a>.NET Core görüntüleri
 

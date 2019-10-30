@@ -8,360 +8,360 @@ helpviewer_keywords:
 - Storyboards [WPF], animations
 - animations [WPF], overview
 ms.assetid: bd9ce563-725d-4385-87c9-d7ee38cf79ea
-ms.openlocfilehash: 5c776942bced836437fdcb8aaf30faef48e3aaff
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 870fc1d1f02dca7d4488a27385fcfeaec8098ced
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780153"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039181"
 ---
 # <a name="animation-overview"></a>Animasyona Genel bakış
 
 <a name="introduction"></a>
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] güçlü bir etkileyici kullanıcı arabirimleri ve çekici belgeler oluşturmanıza olanak sağlayan grafikleri ve düzeni özellikler kümesi sağlar. Animasyon etkileyici kullanıcı arabirimi daha muhteşem ve kullanışlı hale getirebilirsiniz. Animasyonlu bir uygulama veya yalnızca bir arka plan rengi animasyon tarafından <xref:System.Windows.Media.Transform>, etkileyici ekran geçişleri oluşturabilir ya da yararlı görsel ipuçlarını sağlama.
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] etkileyici kullanıcı arabirimleri ve çarpıcı belgeler oluşturmanıza olanak sağlayan güçlü bir grafik ve düzen özellikleri kümesi sağlar. Animasyon etkileyici bir kullanıcı arabirimini daha da etkileyici ve kullanılabilir hale getirebilirsiniz. Yalnızca bir arka plan rengi canlandırarak veya animasyonlu <xref:System.Windows.Media.Transform>uygulayarak, çarpıcı ekran geçişleri oluşturabilir veya yararlı görsel ipuçları sağlayabilirsiniz.
 
-Bu genel bakışta tanıtır [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] animasyon ve zamanlama sistemi. Animasyonu üzerinde odaklanır [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] görsel Taslaklar kullanarak nesneleri.
+Bu genel bakış, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] animasyon ve zamanlama sistemine bir giriş sağlar. Film şeritleri kullanarak [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] nesnelerinin animasyonuna odaklanır.
 
 <a name="introducinganimations"></a>
 
-## <a name="introducing-animations"></a>Animasyonlar Tanıtımı
+## <a name="introducing-animations"></a>Animasyonları tanıtma
 
-Animasyon hızla görüntüleri, son her biraz farklı bir dizi dönüşüm tarafından oluşturulan bir görünümü olur. Beyin, görüntü grubunun değişen tek bir Sahne algılar. Filmde, her saniye birçok fotoğraflar veya çerçeveleri kayıt Kameralar'ı kullanarak bu izlenimi oluşturulur. Çerçeve kayıttan projektörüne tarafından İzleyici hareketli resim görür.
+Animasyon, her biri son verilerden biraz farklı olan bir dizi görüntüden hızlıca geçiş yaparak oluşturulan bir yanıdır. Bey, görüntü grubunu tek bir değişen sahne olarak beyin. Bu yanışta, her saniye çok sayıda fotoğraf veya kare kaydeden kameralar kullanılarak oluşturulur. Çerçeveler bir projektör tarafından geri yürütüldüğünde, hedef kitle bir hareketli resim görür.
 
-Bir bilgisayarda animasyonu da benzerdir. Örneğin, çizim görünümü dışında bir dikdörtgen yavaşça kılan bir program gibi çalışabilir.
+Bir bilgisayardaki animasyon benzerdir. Örneğin, görünümün dışına çıkan bir dikdörtgen çizimi oluşturan bir program aşağıdaki gibi çalışabilir.
 
-- Zamanlayıcı bir program oluşturur.
+- Program bir zamanlayıcı oluşturur.
 
-- Program, Zamanlayıcının ne kadar süre geçtiğini görmek için belirlenen aralıklarla denetler.
+- Program, ne kadar süre geçtiğini görmek için zamanlayıcıyı ayarlanan aralıklarda denetler.
 
-- Zamanlayıcı, program denetler her zaman geçerli ne kadar zaman geçti bağlı olarak dikdörtgen opaklık değerini hesaplar.
+- Program zamanlayıcıyı her denetlediğinde, dikdörtgenin ne kadar süre geçtiğini temel alarak geçerli opaklık değerini hesaplar.
 
-- Program dikdörtgen yeni değerle güncelleştirir ve onu yeniden çizer.
+- Daha sonra program, dikdörtgeni yeni değerle güncelleştirir ve yeniden çizer.
 
-Öncesinde [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] geliştiriciler gerekiyordu oluşturup kendi zamanlama sistemleri yönetmek veya özel kitaplıkları kullanın. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] yönetilen kod kullanıma sunulan bir etkin zamanlama sistemi içerir ve [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] ve derin bir şekilde tümleşmiş içine [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] framework. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] animasyon denetimleri ve diğer grafik nesneleri kolaylaştırır.
+[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]önce, Microsoft Windows geliştiricilerinin kendi zamanlama sistemlerini oluşturması ve yönetmesi veya özel özel kitaplıklar kullanması gerekiyordu. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], yönetilen kod ve [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] aracılığıyla sunulan ve [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] çerçevesiyle daha ayrıntılı bir şekilde tümleştirilmiş etkin bir zamanlama sistemi içerir. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] animasyon denetimleri ve diğer grafik nesnelerinin animasyonunu kolaylaştırır.
 
-[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zamanlama sistemi yönetme ve ekran verimli bir şekilde yeniden Sahne Arkası tüm işini gerçekleştirir. Bu, söz konusu efektler elde mekanizması yerine oluşturmak istediğiniz efektleri odaklanmak etkinleştirdiğiniz zamanlama sınıflar sağlar. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Ayrıca animasyon temel sınıflarını sınıflarınızı devraldığı kendi animasyon oluşturmak için özelleştirilmiş animasyonları üretmek için kolaylaştırır. Bu özel animasyonlar birçok animasyon sınıfları performans avantajlarını elde edin.
+[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], bir zamanlama sistemini yönetmek ve ekranı verimli bir şekilde yeniden çizmek için tüm arka planda çalışmayı işler. Bu etkileri sağlamak yerine, oluşturmak istediğiniz etkilere odaklanmanız için zamanlama sınıfları sağlar. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Ayrıca, Özel animasyonlar oluşturmak için sınıflarınızın devraldığı animasyon temel sınıflarını açığa çıkararak kendi animasyonlarınızı oluşturmayı kolaylaştırır. Bu özel animasyonlar, standart animasyon sınıflarının birçok performans avantajı elde edebilir.
 
 <a name="thewpftimingsystem"></a>
 
-## <a name="wpf-property-animation-system"></a>WPF özellik animasyon sistemi
+## <a name="wpf-property-animation-system"></a>WPF özelliği animasyon sistemi
 
-Zamanlama sistemiyle ilgili birkaç önemli kavram anlarsanız [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] animasyonları kullanımı daha kolay olabilir. En önemli bulunduğu [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], kendilerine özgü özelliklere animasyon uygulayarak nesnelere animasyon ekleme. Örneğin, çerçeve öğesini yapmak için animasyon, <xref:System.Windows.FrameworkElement.Width%2A> ve <xref:System.Windows.FrameworkElement.Height%2A> özellikleri. Soldurma görünümünden bir nesne için animasyon ekleme, <xref:System.Windows.UIElement.Opacity%2A> özelliği.
+Zamanlama sistemiyle ilgili birkaç önemli kavramı anladıysanız [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] animasyonların kullanımı daha kolay olabilir. En önemlileri, tek tek özelliklerine animasyon uygulayarak nesnelerin animasyonunu [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Örneğin, bir çerçeve öğesini büyütmek için, <xref:System.Windows.FrameworkElement.Width%2A> ve <xref:System.Windows.FrameworkElement.Height%2A> özelliklerine animasyon uygularsınız. Bir nesneyi görünümden soluklaştırmak için, <xref:System.Windows.UIElement.Opacity%2A> özelliğine animasyon uygularsınız.
 
-Bir özellik animasyon özelliklerini kullanabilmek aşağıdaki üç gereksinimleri karşılaması gerekir:
+Bir özelliğin animasyon özelliklerine sahip olması için, aşağıdaki üç gereksinimi karşılaması gerekir:
 
 - Bağımlılık özelliği olmalıdır.
 
-- Devralınan bir sınıfa ait olmalıdır <xref:System.Windows.DependencyObject> ve uygulayan <xref:System.Windows.Media.Animation.IAnimatable> arabirimi.
+- <xref:System.Windows.DependencyObject> devralan bir sınıfa ait olmalıdır ve <xref:System.Windows.Media.Animation.IAnimatable> arabirimini uygular.
 
-- Kullanılabilir uyumlu bir animasyon türü olmalıdır. (Varsa [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bir sağlamaz kendi oluşturabilirsiniz. Bkz: [özel animasyonlara genel bakış](custom-animations-overview.md).)
+- Kullanılabilir uyumlu bir animasyon türü olmalıdır. ([!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bir tane sağlamıyorsa, kendi kendinizinkini oluşturabilirsiniz. Bkz. [Özel animasyonlara genel bakış](custom-animations-overview.md).)
 
-[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sahip çok sayıda nesne içeren <xref:System.Windows.Media.Animation.IAnimatable> özellikleri. Gibi denetimler <xref:System.Windows.Controls.Button> ve <xref:System.Windows.Controls.TabControl>hem de <xref:System.Windows.Controls.Panel> ve <xref:System.Windows.Shapes.Shape> nesneleri devralmanız <xref:System.Windows.DependencyObject>. Bunların özelliklerinin çoğu bağımlılık özelliklerdir.
+[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], <xref:System.Windows.Media.Animation.IAnimatable> özellikleri olan çok sayıda nesne içeriyor. <xref:System.Windows.Controls.Button> ve <xref:System.Windows.Controls.TabControl>gibi denetimler ve ayrıca <xref:System.Windows.Controls.Panel> ve <xref:System.Windows.Shapes.Shape> nesneler <xref:System.Windows.DependencyObject>devralınır. Özelliklerinin çoğu bağımlılık özellikleridir.
 
-Animasyonları neredeyse her yerden, denetim şablonları ve stilleri de içeren kullanabilirsiniz. Animasyon, görsel olması gerekmez; Bunlar bu bölümde açıklanan ölçütleri karşıladığı durumlarda kullanıcı arabiriminin bir parçası olmayan nesneler animasyon uygulayabilirsiniz.
+Animasyonları, stiller ve denetim şablonlarına dahil neredeyse her yerde kullanabilirsiniz. Animasyonların görsel olması gerekmez; Bu bölümde açıklanan ölçütlere uyduklarında, Kullanıcı arabiriminin parçası olmayan nesnelere animasyon uygulayabilirsiniz.
 
 <a name="storyboardwalkthrough"></a>
 
-## <a name="example-make-an-element-fade-in-and-out-of-view"></a>Örnek: Bir öğe Fade görünümü içine ve dışına olun
+## <a name="example-make-an-element-fade-in-and-out-of-view"></a>Örnek: bir öğeyi Soluklaştırın ve görünümün dışında yapma
 
-Bu örnek nasıl kullanılacağını gösterir. bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bir bağımlılık özelliğinin değeri canlandırmak için animasyon. Kullandığı bir <xref:System.Windows.Media.Animation.DoubleAnimation>, bir türü oluşturan bir animasyon <xref:System.Double> animasyon uygulamak için değerleri <xref:System.Windows.UIElement.Opacity%2A> özelliği bir <xref:System.Windows.Shapes.Rectangle>. Sonuç olarak, <xref:System.Windows.Shapes.Rectangle> görünümü içine ve dışına kaybolur.
+Bu örnek, bir bağımlılık özelliğinin değerine animasyon eklemek için [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] animasyonun nasıl kullanılacağını gösterir. Bir <xref:System.Windows.Shapes.Rectangle><xref:System.Windows.UIElement.Opacity%2A> özelliğine animasyon uygulamak için <xref:System.Double> değerleri üreten bir animasyon türü olan <xref:System.Windows.Media.Animation.DoubleAnimation>kullanır. Sonuç olarak, <xref:System.Windows.Shapes.Rectangle> görünümden çıkar ve görünümden çıkar.
 
-Örneğin ilk bölümünü oluşturur bir <xref:System.Windows.Shapes.Rectangle> öğesi. Bir animasyon oluşturmak ve dikdörtgenin uygulama adımları Göster <xref:System.Windows.UIElement.Opacity%2A> özelliği.
+Örneğin ilk bölümü bir <xref:System.Windows.Shapes.Rectangle> öğesi oluşturur. Aşağıdaki adımlar bir animasyon oluşturmayı ve dikdörtgenin <xref:System.Windows.UIElement.Opacity%2A> özelliğine nasıl uygulanacağını gösterir.
 
-Aşağıdakileri nasıl oluşturulacağını gösterir. bir <xref:System.Windows.Shapes.Rectangle> öğesinde bir <xref:System.Windows.Controls.StackPanel> XAML içinde.
+Aşağıda, XAML 'de <xref:System.Windows.Controls.StackPanel> bir <xref:System.Windows.Shapes.Rectangle> öğesinin nasıl oluşturulacağı gösterilmektedir.
 
 [!code-xaml[animation_ovws2#RectangleOpacityFadeExampleXaml_1](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/Window1.xaml#rectangleopacityfadeexamplexaml_1)]
 
-Aşağıdakileri nasıl oluşturulacağını gösterir. bir <xref:System.Windows.Shapes.Rectangle> öğesinde bir <xref:System.Windows.Controls.StackPanel> kod.
+Aşağıda, koddaki bir <xref:System.Windows.Controls.StackPanel> <xref:System.Windows.Shapes.Rectangle> öğesinin nasıl oluşturulacağı gösterilmektedir.
 
 [!code-csharp[animation_ovws2#RectangleOpacityFadeExampleCode_1](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/Class1.cs#rectangleopacityfadeexamplecode_1)]
 [!code-vb[animation_ovws2#RectangleOpacityFadeExampleCode_1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/animation_ovws2/VisualBasic/Class1.vb#rectangleopacityfadeexamplecode_1)]
 
 <a name="opacity_animation_step1"></a>
 
-### <a name="part-1-create-a-doubleanimation"></a>Bölüm 1: DoubleAnimation oluşturma
+### <a name="part-1-create-a-doubleanimation"></a>1\. kısım: DoubleAnimation oluşturma
 
-Öğenin içine ve dışına görünümü Soldurma yapmanın bir yolu olan animasyon uygulamak için kendi <xref:System.Windows.UIElement.Opacity%2A> özelliği. Çünkü <xref:System.Windows.UIElement.Opacity%2A> özelliği türüdür <xref:System.Double>, ihtiyacınız double değerleri üreten bir animasyonu. A <xref:System.Windows.Media.Animation.DoubleAnimation> bir animasyonun. A <xref:System.Windows.Media.Animation.DoubleAnimation> iki double değerleri arasında bir geçiş oluşturur. Başlangıç değerini belirtmek için ayarlamanız, <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> özelliği. Bitiş değerini belirtmek için ayarlamanız, <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> özelliği.
+Bir öğeyi soluklaştırın ve görünümün dışında yapmanın bir yolu <xref:System.Windows.UIElement.Opacity%2A> özelliğine animasyon kullanmaktır. <xref:System.Windows.UIElement.Opacity%2A> özelliği <xref:System.Double>türünde olduğundan, çift değerler üreten bir animasyonunuz olmalıdır. <xref:System.Windows.Media.Animation.DoubleAnimation> bir animasyondur. <xref:System.Windows.Media.Animation.DoubleAnimation> iki Double değeri arasında bir geçiş oluşturur. Başlangıç değerini belirtmek için, <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> özelliğini ayarlarsınız. Bitiş değerini belirtmek için, <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> özelliğini ayarlarsınız.
 
-1. Bir opaklık değerini `1.0` nesneyi tamamen opak ve bir opaklık değerini getirir `0.0` tamamen görünmez hale getirir. Animasyon geçişi yapmaya `1.0` için `0.0` ayarladığınız kendi <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> özelliğini `1.0` ve kendi <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> özelliğini `0.0`. Aşağıdakileri nasıl oluşturulacağını gösterir. bir <xref:System.Windows.Media.Animation.DoubleAnimation> XAML içinde.
+1. `1.0` opaklık değeri nesneyi tamamen opak hale getirir ve `0.0` opaklık değeri tamamen görünmez hale gelir. `1.0` 'den `0.0` animasyon geçişi yapmak için <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> özelliğini `1.0` ve <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> özelliğini `0.0`olarak ayarlarsınız. Aşağıda, XAML 'de <xref:System.Windows.Media.Animation.DoubleAnimation> oluşturma gösterilmektedir.
 
     [!code-xaml[animation_ovws2#RectangleOpacityFadeExampleXaml_2](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/Window1.xaml#rectangleopacityfadeexamplexaml_2)]
 
-    Aşağıdakileri nasıl oluşturulacağını gösterir. bir <xref:System.Windows.Media.Animation.DoubleAnimation> kod.
+    Aşağıda, kodda <xref:System.Windows.Media.Animation.DoubleAnimation> oluşturma gösterilmektedir.
 
     [!code-csharp[animation_ovws2#RectangleOpacityFadeExampleCode_2](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/Class1.cs#rectangleopacityfadeexamplecode_2)]
     [!code-vb[animation_ovws2#RectangleOpacityFadeExampleCode_2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/animation_ovws2/VisualBasic/Class1.vb#rectangleopacityfadeexamplecode_2)]
 
-2. Ardından, belirtmelisiniz bir <xref:System.Windows.Media.Animation.Timeline.Duration%2A>. <xref:System.Windows.Media.Animation.Timeline.Duration%2A> Bir animasyon başlangıç değerine hedef değerine gidin ne kadar sürer belirtir. Aşağıdakileri nasıl ayarlanacağını gösterir <xref:System.Windows.Media.Animation.Timeline.Duration%2A> XAML içinde beş saniye.
+2. Daha sonra, bir <xref:System.Windows.Media.Animation.Timeline.Duration%2A>belirtmeniz gerekir. Bir animasyonun <xref:System.Windows.Media.Animation.Timeline.Duration%2A> başlangıç değerinden hedef değerine ne kadar süreceğine ilişkin süreyi belirtir. Aşağıda, XAML 'de <xref:System.Windows.Media.Animation.Timeline.Duration%2A> beş saniyeye ayarlama gösterilmiştir.
 
     [!code-xaml[animation_ovws2#RectangleOpacityFadeExampleXaml_3](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/Window1.xaml#rectangleopacityfadeexamplexaml_3)]
 
-    Aşağıdakileri nasıl ayarlanacağını gösterir <xref:System.Windows.Media.Animation.Timeline.Duration%2A> kodda beş saniye.
+    Aşağıda, <xref:System.Windows.Media.Animation.Timeline.Duration%2A> kodda beş saniyeye nasıl ayarlanacağı gösterilmiştir.
 
     [!code-csharp[animation_ovws2#RectangleOpacityFadeExampleCode_3](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/Class1.cs#rectangleopacityfadeexamplecode_3)]
     [!code-vb[animation_ovws2#RectangleOpacityFadeExampleCode_3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/animation_ovws2/VisualBasic/Class1.vb#rectangleopacityfadeexamplecode_3)]
 
-3. Önceki kod, gelen geçiş animasyon gösterdi `1.0` için `0.0`, tamamen opak görünümden tamamen görünmez soluklaştırılacak hedef öğenin neden olur. Kaybolduktan sonra tekrar görüntüye Soldurma öğesi sağlamak için ayarlayın <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A> animasyona özelliği `true`. Animasyon belirsiz bir süre boyunca yineleme yapmak için ayarlanmış kendi <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A> özelliğini <xref:System.Windows.Media.Animation.RepeatBehavior.Forever%2A>. Aşağıdakileri nasıl ayarlanacağını gösterir <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A> ve <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A> XAML özellikleri.
+3. Önceki kod, `1.0` ile `0.0`arasında geçiş yapan bir animasyon gösterdi. Bu, hedef öğenin tamamen opak ve tamamen görünmez olarak zayıflamasına neden olur. Öğe geçtikten sonra öğeyi görünüme geri dönerek getirmek için animasyonun <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A> özelliğini `true`olarak ayarlayın. Animasyonun süresiz olarak tekrarlanması için <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A> özelliğini <xref:System.Windows.Media.Animation.RepeatBehavior.Forever%2A>olarak ayarlayın. Aşağıda, XAML 'de <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A> ve <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A> özelliklerinin nasıl ayarlanacağı gösterilmektedir.
 
     [!code-xaml[animation_ovws2#RectangleOpacityFadeExampleXaml_4](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/Window1.xaml#rectangleopacityfadeexamplexaml_4)]
 
-    Aşağıdakileri nasıl ayarlanacağını gösterir <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A> ve <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A> kod özellikleri.
+    Aşağıda, koddaki <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A> ve <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A> özelliklerinin nasıl ayarlanacağı gösterilmektedir.
 
     [!code-csharp[animation_ovws2#RectangleOpacityFadeExampleCode_4](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/Class1.cs#rectangleopacityfadeexamplecode_4)]
     [!code-vb[animation_ovws2#RectangleOpacityFadeExampleCode_4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/animation_ovws2/VisualBasic/Class1.vb#rectangleopacityfadeexamplecode_4)]
 
 <a name="opacity_animation_step2"></a>
 
-### <a name="part-2-create-a-storyboard"></a>Bölüm 2: Bir film şeridi oluşturun
+### <a name="part-2-create-a-storyboard"></a>2\. Bölüm: görsel taslak oluşturma
 
-Bir nesneye animasyon uygulamak için oluşturduğunuz bir <xref:System.Windows.Media.Animation.Storyboard> ve <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> ve <xref:System.Windows.Media.Animation.Storyboard.TargetProperty> nesneyi belirlemek üzere özellikler ve animasyon uygulamak için özellik bağlı.
+Bir nesneye animasyon uygulamak için bir <xref:System.Windows.Media.Animation.Storyboard> oluşturup <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> ve <xref:System.Windows.Media.Animation.Storyboard.TargetProperty> iliştirilmiş özellikleri kullanarak canlandırılacak nesne ve özelliği belirtin.
 
-1. Oluşturma <xref:System.Windows.Media.Animation.Storyboard> ve animasyonu alt öğe olarak ekleyin. Aşağıdakileri nasıl oluşturulacağını gösterir <xref:System.Windows.Media.Animation.Storyboard> XAML içinde.
+1. <xref:System.Windows.Media.Animation.Storyboard> oluşturun ve animasyonu alt öğesi olarak ekleyin. Aşağıda, <xref:System.Windows.Media.Animation.Storyboard> XAML 'de nasıl oluşturacağınız gösterilmektedir.
 
     [!code-xaml[animation_ovws2#RectangleOpacityFadeExampleXaml_5](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/Window1.xaml#rectangleopacityfadeexamplexaml_5)]
 
-    Oluşturulacak <xref:System.Windows.Media.Animation.Storyboard> kodda bildirmek bir <xref:System.Windows.Media.Animation.Storyboard> sınıf düzeyinde değişken.
+    Kodda <xref:System.Windows.Media.Animation.Storyboard> oluşturmak için sınıf düzeyinde bir <xref:System.Windows.Media.Animation.Storyboard> değişkeni bildirin.
 
     [!code-csharp[animation_ovws2#RectangleOpacityFadeExampleCode_100](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/MainWindow.xaml.cs#rectangleopacityfadeexamplecode_100)]
     [!code-vb[animation_ovws2#RectangleOpacityFadeExampleCode_100](~/samples/snippets/visualbasic/VS_Snippets_Wpf/animation_ovws2/VisualBasic/MainWindow.xaml.vb#rectangleopacityfadeexamplecode_100)]
 
-    Ardından başlatmak <xref:System.Windows.Media.Animation.Storyboard> ve animasyonu alt öğe olarak ekleyin.
+    Sonra <xref:System.Windows.Media.Animation.Storyboard> başlatın ve animasyonu alt öğesi olarak ekleyin.
 
     [!code-csharp[animation_ovws2#RectangleOpacityFadeExampleCode_101](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/MainWindow.xaml.cs#rectangleopacityfadeexamplecode_101)]
     [!code-vb[animation_ovws2#RectangleOpacityFadeExampleCode_101](~/samples/snippets/visualbasic/VS_Snippets_Wpf/animation_ovws2/VisualBasic/MainWindow.xaml.vb#rectangleopacityfadeexamplecode_101)]
 
-2. <xref:System.Windows.Media.Animation.Storyboard> Animasyon uygulamak nereye bilmesi gerekir. Kullanım <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A?displayProperty=nameWithType> ekli özellik animasyon uygulamak için nesne belirtmek için. Aşağıdaki hedef adını ayarlama işlemi gösterilmektedir <xref:System.Windows.Media.Animation.DoubleAnimation> için `MyRectangle` XAML içinde.
+2. <xref:System.Windows.Media.Animation.Storyboard> animasyonun nereye uygulanacağını bilmelidir. Canlandırılacak nesneyi belirtmek için <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A?displayProperty=nameWithType> ekli özelliğini kullanın. Aşağıda, <xref:System.Windows.Media.Animation.DoubleAnimation> hedef adının XAML içinde `MyRectangle` olarak nasıl ayarlanacağı gösterilmiştir.
 
     [!code-xaml[animation_ovws2#RectangleOpacityFadeExampleXaml_6](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/Window1.xaml#rectangleopacityfadeexamplexaml_6)]
 
-    Aşağıdaki hedef adını ayarlama işlemi gösterilmektedir <xref:System.Windows.Media.Animation.DoubleAnimation> için `MyRectangle` kod.
+    Aşağıda, <xref:System.Windows.Media.Animation.DoubleAnimation> hedef adının koddaki `MyRectangle` olarak nasıl ayarlanacağı gösterilmiştir.
 
     [!code-csharp[animation_ovws2#RectangleOpacityFadeExampleCode_102](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/MainWindow.xaml.cs#rectangleopacityfadeexamplecode_102)]
     [!code-vb[animation_ovws2#RectangleOpacityFadeExampleCode_102](~/samples/snippets/visualbasic/VS_Snippets_Wpf/animation_ovws2/VisualBasic/MainWindow.xaml.vb#rectangleopacityfadeexamplecode_102)]
 
-3. Kullanım <xref:System.Windows.Media.Animation.Storyboard.TargetProperty> ekli özellik oynatmak özelliği belirtmek için. Aşağıdaki animasyon nasıl yapılandırıldığını gösterir. hedef <xref:System.Windows.UIElement.Opacity%2A> özelliği <xref:System.Windows.Shapes.Rectangle> XAML içinde.
+3. Canlandırılacak özelliği belirtmek için <xref:System.Windows.Media.Animation.Storyboard.TargetProperty> ekli özelliğini kullanın. Aşağıda, animasyonun XAML içindeki <xref:System.Windows.Shapes.Rectangle> <xref:System.Windows.UIElement.Opacity%2A> özelliğini hedeflemek için nasıl yapılandırıldığı gösterilmiştir.
 
     [!code-xaml[animation_ovws2#RectangleOpacityFadeExampleXaml_7](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/Window1.xaml#rectangleopacityfadeexamplexaml_7)]
 
-    Aşağıdaki animasyon nasıl yapılandırıldığını gösterir. hedef <xref:System.Windows.UIElement.Opacity%2A> özelliği <xref:System.Windows.Shapes.Rectangle> kod.
+    Aşağıda, animasyonun, koddaki <xref:System.Windows.Shapes.Rectangle> <xref:System.Windows.UIElement.Opacity%2A> özelliğini hedeflemek için nasıl yapılandırıldığı gösterilmiştir.
 
     [!code-csharp[animation_ovws2#RectangleOpacityFadeExampleCode_103](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/MainWindow.xaml.cs#rectangleopacityfadeexamplecode_103)]
     [!code-vb[animation_ovws2#RectangleOpacityFadeExampleCode_103](~/samples/snippets/visualbasic/VS_Snippets_Wpf/animation_ovws2/VisualBasic/MainWindow.xaml.vb#rectangleopacityfadeexamplecode_103)]
 
-Hakkında daha fazla bilgi için <xref:System.Windows.Media.Animation.Storyboard.TargetProperty> söz dizimi ve ek örnekler için bkz: [görsel taslaklara genel bakış](storyboards-overview.md).
+<xref:System.Windows.Media.Animation.Storyboard.TargetProperty> sözdizimi hakkında daha fazla bilgi edinmek ve ek örnekler için bkz. [Görsel Taslaklara Genel Bakış](storyboards-overview.md).
 
 <a name="opacity_animation_step3"></a>
 
-### <a name="part-3-xaml-associate-the-storyboard-with-a-trigger"></a>Bölüm 3 (XAML): Film şeridini bir tetikleyici ile ilişkilendirme
+### <a name="part-3-xaml-associate-the-storyboard-with-a-trigger"></a>Bölüm 3 (XAML): görsel taslağı bir tetikleyici ile Ilişkilendirme
 
-Başlatmak ve uygulamak için en kolay yolu bir <xref:System.Windows.Media.Animation.Storyboard> içinde [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] bir olay tetikleyicisi kullanmaktır. Bu bölüm nasıl ilişkilendirildiğini gösterir <xref:System.Windows.Media.Animation.Storyboard> XAML içinde bir tetikleyici ile.
+[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] <xref:System.Windows.Media.Animation.Storyboard> uygulama ve başlatmanın en kolay yolu bir olay tetikleyicisi kullanmaktır. Bu bölümde, <xref:System.Windows.Media.Animation.Storyboard> XAML 'deki bir tetikleyiciyle nasıl ilişkilendireceğiniz gösterilmektedir.
 
-1. Oluşturma bir <xref:System.Windows.Media.Animation.BeginStoryboard> nesne ve film şeridiniz ilişkilendirin. A <xref:System.Windows.Media.Animation.BeginStoryboard> bir tür <xref:System.Windows.TriggerAction> uygulayan ve başlatan bir <xref:System.Windows.Media.Animation.Storyboard>.
+1. <xref:System.Windows.Media.Animation.BeginStoryboard> nesnesi oluşturun ve görsel taslağınızı onunla ilişkilendirin. <xref:System.Windows.Media.Animation.BeginStoryboard>, bir <xref:System.Windows.Media.Animation.Storyboard>uygulayan ve Başlatan bir <xref:System.Windows.TriggerAction> türüdür.
 
     [!code-xaml[animation_ovws_snippet#RectangleOpacityFadeExampleInline_3](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws_snippet/CS/RectangleOpacityFadeExample.xaml#rectangleopacityfadeexampleinline_3)]
 
-2. Oluşturma bir <xref:System.Windows.EventTrigger> ve ekleme <xref:System.Windows.Media.Animation.BeginStoryboard> için kendi <xref:System.Windows.EventTrigger.Actions%2A> koleksiyonu. Ayarlama <xref:System.Windows.EventTrigger.RoutedEvent%2A> özelliği <xref:System.Windows.EventTrigger> başlatmak istediğiniz yönlendirilmiş olay <xref:System.Windows.Media.Animation.Storyboard>. (Yönlendirilmiş olaylar hakkında daha fazla bilgi için bkz. [yönlendirilmiş olaylara genel bakış](../advanced/routed-events-overview.md).)
+2. Bir <xref:System.Windows.EventTrigger> oluşturun ve <xref:System.Windows.Media.Animation.BeginStoryboard> <xref:System.Windows.EventTrigger.Actions%2A> koleksiyonuna ekleyin. <xref:System.Windows.EventTrigger> <xref:System.Windows.EventTrigger.RoutedEvent%2A> özelliğini <xref:System.Windows.Media.Animation.Storyboard>başlatmak istediğiniz yönlendirilmiş olay olarak ayarlayın. (Yönlendirilmiş olaylar hakkında daha fazla bilgi için bkz. [yönlendirilmiş olaylara genel bakış](../advanced/routed-events-overview.md).)
 
     [!code-xaml[animation_ovws_snippet#RectangleOpacityFadeExampleInline_2](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws_snippet/CS/RectangleOpacityFadeExample.xaml#rectangleopacityfadeexampleinline_2)]
 
-3. Ekleme <xref:System.Windows.EventTrigger> için <xref:System.Windows.FrameworkElement.Triggers%2A> dikdörtgenin koleksiyonu.
+3. <xref:System.Windows.EventTrigger> dikdörtgenin <xref:System.Windows.FrameworkElement.Triggers%2A> koleksiyonuna ekleyin.
 
     [!code-xaml[animation_ovws_snippet#RectangleOpacityFadeExampleInline_1](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws_snippet/CS/RectangleOpacityFadeExample.xaml#rectangleopacityfadeexampleinline_1)]
 
 <a name="opacity_animation_step3code"></a>
 
-### <a name="part-3-code-associate-the-storyboard-with-an-event-handler"></a>(Kod) 3. Bölüm: Film şeridini bir olay işleyicisi ile ilişkilendirme
+### <a name="part-3-code-associate-the-storyboard-with-an-event-handler"></a>Bölüm 3 (kod): görsel taslağı bir olay Işleyicisiyle Ilişkilendirme
 
-Başlatmak ve uygulamak için en kolay yolu bir <xref:System.Windows.Media.Animation.Storyboard> kodda bir olay işleyicisi kullanmaktır. Bu bölüm nasıl ilişkilendirildiğini gösterir <xref:System.Windows.Media.Animation.Storyboard> olay işleyicisinde kodu ile.
+Kodda <xref:System.Windows.Media.Animation.Storyboard> uygulama ve başlatmanın en kolay yolu bir olay işleyicisi kullanmaktır. Bu bölümde, <xref:System.Windows.Media.Animation.Storyboard> koddaki olay işleyicisiyle nasıl ilişkilendireceğiniz gösterilmektedir.
 
-1. Kaydolun <xref:System.Windows.FrameworkElement.Loaded> dikdörtgenin olay.
+1. Dikdörtgenin <xref:System.Windows.FrameworkElement.Loaded> olayına kaydolun.
 
     [!code-csharp[animation_ovws2#RectangleOpacityFadeExampleCode_104](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/MainWindow.xaml.cs#rectangleopacityfadeexamplecode_104)]
     [!code-vb[animation_ovws2#RectangleOpacityFadeExampleCode_104](~/samples/snippets/visualbasic/VS_Snippets_Wpf/animation_ovws2/VisualBasic/MainWindow.xaml.vb#rectangleopacityfadeexamplecode_104)]
 
-2. Olay işleyicisi bildirin. Olay işleyicisinde kullanın <xref:System.Windows.Media.Animation.Storyboard.Begin%2A> film şeridi uygulamak için yöntemi.
+2. Olay işleyicisini bildirin. Olay işleyicisinde, film şeridini uygulamak için <xref:System.Windows.Media.Animation.Storyboard.Begin%2A> yöntemini kullanın.
 
     [!code-csharp[animation_ovws2#RectangleOpacityFadeExampleCode_105](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/MainWindow.xaml.cs#rectangleopacityfadeexamplecode_105)]
     [!code-vb[animation_ovws2#RectangleOpacityFadeExampleCode_105](~/samples/snippets/visualbasic/VS_Snippets_Wpf/animation_ovws2/VisualBasic/MainWindow.xaml.vb#rectangleopacityfadeexamplecode_105)]
 
 ### <a name="complete-example"></a>Tam Örnek
 
-XAML görünümünde içine ve dışına belirerek bir dikdörtgen oluşturulacağını gösterir.
+Aşağıda, XAML 'de görünümü aşağı ve dışına çıkan bir dikdörtgenin nasıl oluşturulacağı gösterilmektedir.
 
 [!code-xaml[animation_ovws2#RectangleOpacityFadeExampleXaml](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/MainWindow.xaml#rectangleopacityfadeexamplexaml)]
 
-Aşağıdaki kod görünümünde içine ve dışına belirerek bir dikdörtgen oluşturulacağını gösterir.
+Aşağıda, kodda görünüm ve görünümün dışında bir dikdörtgen oluşturma gösterilmektedir.
 
 [!code-csharp[animation_ovws2#RectangleOpacityFadeExampleCode](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/MainWindow.xaml.cs#rectangleopacityfadeexamplecode)]
 [!code-vb[animation_ovws2#RectangleOpacityFadeExampleCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/animation_ovws2/VisualBasic/MainWindow.xaml.vb#rectangleopacityfadeexamplecode)]
 
 <a name="animationtypes"></a>
 
-## <a name="animation-types"></a>Animasyon türü
+## <a name="animation-types"></a>Animasyon türleri
 
-Özellik değerlerini animasyonlar oluşturması nedeniyle farklı animasyon türlerinin farklı özellik türleri için mevcut. Alan özelliği oynatmak bir <xref:System.Double>, gibi <xref:System.Windows.FrameworkElement.Width%2A> bir öğe özelliğini kullanın üreten bir animasyon <xref:System.Double> değerleri. Alan özelliği oynatmak bir <xref:System.Windows.Point>, üreten bir animasyon kullanın <xref:System.Windows.Point> değerleri ve benzeri. Farklı özellik türleri sayısı nedeniyle, birçok animasyon sınıfları vardır <xref:System.Windows.Media.Animation> ad alanı. Neyse ki, bunları ayırt kolaylaştırır katı bir adlandırma kuralı izleyin:
+Animasyonlar özellik değerleri oluşturduğundan farklı özellik türleri için farklı animasyon türleri mevcuttur. Bir öğenin <xref:System.Windows.FrameworkElement.Width%2A> özelliği gibi <xref:System.Double>alan bir özelliğe animasyon uygulamak için <xref:System.Double> değerler üreten bir animasyon kullanın. <xref:System.Windows.Point>alan bir özelliğe animasyon uygulamak için <xref:System.Windows.Point> değerleri üreten bir animasyon kullanın ve bu şekilde devam edin. Farklı özellik türlerinin sayısı nedeniyle <xref:System.Windows.Media.Animation> ad alanında birkaç animasyon sınıfı vardır. Neyse ki, aralarında ayrım yapmayı kolaylaştıran bir katı adlandırma kuralına uyar:
 
-- \<*Tür*> animasyon
+- \<*türü*> animasyonu
 
-  Bir "From/To/By" veya "temel" animasyon olarak bilinir, bunlar arasında bir başlangıç ve bitiş değeri ya da bir uzaklık değeri ekleyerek başlangıç değerine animasyon ekleme.
+  "From/to/by" veya "temel" animasyon olarak bilinen, bu, başlangıç ve hedef değerleri arasında veya başlangıç değerine bir de bir konum değeri eklenerek canlandırılır.
 
-  - Başlangıç değeri belirtmek için animasyonun başlangıç özelliğini ayarlayın.
+  - Başlangıç değerini belirtmek için animasyonun from özelliğini ayarlayın.
 
-  - Bitiş değeri belirtmek için animasyonun To özelliğini ayarlayın.
+  - Bir bitiş değeri belirtmek için animasyonun To özelliğini ayarlayın.
 
-  - Bir uzaklık değeri belirtmek için animasyonun By özelliğini ayarlayın.
+  - Bir fark değeri belirtmek için animasyonun by özelliğini ayarlayın.
 
-  Kullanmak için en basit olduğundan bu genel bakışta örneklerde bu animasyonları kullanın. FROM/için/göre animasyonlarına u animasyonlarına genel bakış, ayrıntılı açıklanmıştır.
+  Bu genel bakışta örnekler bu animasyonları kullanır, çünkü bu en basit kullanım kolayıdır. From/To/By animasyonları, From/To/By animasyonlara genel bakış bölümünde ayrıntılı olarak açıklanmıştır.
 
-- \<*Tür*> AnimationUsingKeyFrames
+- \<> AnimationUsingKeyFrames *türü*
 
-  Anahtar çerçeve animasyon hedef değerleri herhangi bir sayıda belirtin ve hatta kendi ilişkilendirme yöntemini kontrol gelen/için/göre animasyonlarına daha güçlü özellikler. Bazı türleri yalnızca ana kare animasyonları ile animasyon uygulanabilir. Anahtar çerçeve animasyonları ayrıntılı olarak açıklanmıştır [anahtar-çerçeve animasyonlara genel bakış](key-frame-animations-overview.md).
+  Anahtar çerçeve animasyonları, herhangi bir sayıda hedef değer belirtebileceğiniz ve hatta enterpolasyon yöntemini denetleyebildiğinden, From/To/By animasyonlarından daha güçlüdür. Bazı türler yalnızca anahtar çerçeve animasyonlarına animasyon eklenebilir. Anahtar çerçeve animasyonları, [anahtar çerçeve animasyonlarında genel bakış](key-frame-animations-overview.md)bölümünde ayrıntılı olarak açıklanmıştır.
 
-- \<*Tür*> AnimationUsingPath
+- \<*türü*> AnimationUsingPath
 
-  Yol animasyonları geometrik yol animasyonlu değerler üretmek için kullanmanızı sağlar.
+  Yol animasyonları, animasyon değerlerini oluşturmak için geometrik yol kullanmanıza olanak sağlar.
 
-- \<*Tür*> AnimationBase
+- \<*türü*> AnimationBase
 
-  Soyut sınıf, uygularken canlandırır, bir \< *türü*> değeri. Bu sınıf için temel sınıf olarak hizmet veren \< *türü*> animasyon ve \< *türü*> AnimationUsingKeyFrames sınıflar. Yalnızca kendi özel animasyon oluşturmak istiyorsanız doğrudan bu sınıfları ile uğraşmak zorunda. Aksi durumda, bir \< *türü*> animasyon veya ana kare\<*türü*> animasyon.
+  Özet sınıf, uygulamayı uyguladığınızda \<*tür*> değerini hareketlendirir. Bu sınıf, \<*türü*> animasyon ve \<*türü*> AnimationUsingKeyFrames sınıfları için temel sınıf olarak hizmet verir. Yalnızca kendi özel animasyonlarınızı oluşturmak istiyorsanız bu sınıflarla doğrudan uğraşmanız gerekir. Aksi takdirde, bir \<*türü*> animasyon veya anahtar kare\<> animasyon *yazın*.
 
-Çoğu durumda, kullanmak istediğiniz \< *türü*> gibi animasyon sınıfları <xref:System.Windows.Media.Animation.DoubleAnimation> ve <xref:System.Windows.Media.Animation.ColorAnimation>.
+Çoğu durumda, <xref:System.Windows.Media.Animation.DoubleAnimation> ve <xref:System.Windows.Media.Animation.ColorAnimation>gibi \<*türü*> animasyon sınıflarını kullanmak isteyeceksiniz.
 
-Aşağıdaki tabloda, birkaç ortak animasyon türü ve ile kullanıldıklarından bazı özellikleri gösterir.
+Aşağıdaki tabloda birkaç ortak animasyon türü ve bunların kullanıldıkları bazı özellikler gösterilmektedir.
 
-|Özellik türü|Karşılık gelen (From/To/By) temel animasyon|Karşılık gelen anahtar çerçeve animasyonu|Karşılık gelen yol animasyonu|Kullanım örneği|
+|Özellik türü|Karşılık gelen temel (From/To/By) animasyonu|Karşılık gelen anahtar çerçeve animasyonu|Karşılık gelen yol animasyonu|Kullanım örneği|
 |-------------------|----------------------------------------------------|---------------------------------------|----------------------------------|-------------------|
-|<xref:System.Windows.Media.Color>|<xref:System.Windows.Media.Animation.ColorAnimation>|<xref:System.Windows.Media.Animation.ColorAnimationUsingKeyFrames>|None|Animasyon <xref:System.Windows.Media.SolidColorBrush.Color%2A> , bir <xref:System.Windows.Media.SolidColorBrush> veya <xref:System.Windows.Media.GradientStop>.|
-|<xref:System.Double>|<xref:System.Windows.Media.Animation.DoubleAnimation>|<xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>|<xref:System.Windows.Media.Animation.DoubleAnimationUsingPath>|Animasyon <xref:System.Windows.FrameworkElement.Width%2A> , bir <xref:System.Windows.Controls.DockPanel> veya <xref:System.Windows.FrameworkElement.Height%2A> , bir <xref:System.Windows.Controls.Button>.|
-|<xref:System.Windows.Point>|<xref:System.Windows.Media.Animation.PointAnimation>|<xref:System.Windows.Media.Animation.PointAnimationUsingKeyFrames>|<xref:System.Windows.Media.Animation.PointAnimationUsingPath>|Animasyon <xref:System.Windows.Media.EllipseGeometry.Center%2A> birini konumlandırmak bir <xref:System.Windows.Media.EllipseGeometry>.|
-|<xref:System.String>|Yok.|<xref:System.Windows.Media.Animation.StringAnimationUsingKeyFrames>|Yok.|Animasyon <xref:System.Windows.Controls.TextBlock.Text%2A> , bir <xref:System.Windows.Controls.TextBlock> veya <xref:System.Windows.Controls.ContentControl.Content%2A> , bir <xref:System.Windows.Controls.Button>.|
+|<xref:System.Windows.Media.Color>|<xref:System.Windows.Media.Animation.ColorAnimation>|<xref:System.Windows.Media.Animation.ColorAnimationUsingKeyFrames>|Yok.|Bir <xref:System.Windows.Media.SolidColorBrush> veya <xref:System.Windows.Media.GradientStop><xref:System.Windows.Media.SolidColorBrush.Color%2A> canlandırın.|
+|<xref:System.Double>|<xref:System.Windows.Media.Animation.DoubleAnimation>|<xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>|<xref:System.Windows.Media.Animation.DoubleAnimationUsingPath>|Bir <xref:System.Windows.Controls.DockPanel> <xref:System.Windows.FrameworkElement.Width%2A> veya <xref:System.Windows.Controls.Button><xref:System.Windows.FrameworkElement.Height%2A> canlandırın.|
+|<xref:System.Windows.Point>|<xref:System.Windows.Media.Animation.PointAnimation>|<xref:System.Windows.Media.Animation.PointAnimationUsingKeyFrames>|<xref:System.Windows.Media.Animation.PointAnimationUsingPath>|Bir <xref:System.Windows.Media.EllipseGeometry><xref:System.Windows.Media.EllipseGeometry.Center%2A> konumuna animasyon ekleyin.|
+|<xref:System.String>|Yok.|<xref:System.Windows.Media.Animation.StringAnimationUsingKeyFrames>|Yok.|Bir <xref:System.Windows.Controls.TextBlock> <xref:System.Windows.Controls.TextBlock.Text%2A> veya <xref:System.Windows.Controls.Button><xref:System.Windows.Controls.ContentControl.Content%2A> canlandırın.|
 
 <a name="animationsaretimelines"></a>
 
-### <a name="animations-are-timelines"></a>Animasyon zaman çizelgeleri olan
+### <a name="animations-are-timelines"></a>Animasyonlar zaman çizelgelerinizi
 
-Tüm animasyon türleri devralınacak <xref:System.Windows.Media.Animation.Timeline> sınıfı; bu nedenle, tüm animasyon zaman çizelgelerini, özelleştirilmiş türleridir. A <xref:System.Windows.Media.Animation.Timeline> zaman bir parçasını tanımlar. Belirtebileceğiniz *zamanlama davranışları* zaman çizelgesinin: kendi <xref:System.Windows.Media.Animation.Timeline.Duration%2A>, kaç kez olduğu için yinelenen ve hatta zaman ne kadar hızlı ilerler.
+Tüm animasyon türleri <xref:System.Windows.Media.Animation.Timeline> sınıfından devralınır; Bu nedenle, tüm animasyonlar zaman çizelgelerinin özelleşmiş türleridir. Bir zaman kesimini tanımlar <xref:System.Windows.Media.Animation.Timeline>. Bir zaman çizelgesinin *zamanlama davranışlarını* belirtebilirsiniz: <xref:System.Windows.Media.Animation.Timeline.Duration%2A>, kaç kez tekrarlandığını ve hatta ne kadar hızlı zaman ilerledikçe.
 
-Bir animasyon olduğundan bir <xref:System.Windows.Media.Animation.Timeline>, ayrıca zaman kesimini temsil eder. Animasyon zaman, belirtilen segmente ilerledikçe de çıkış değerleri hesaplar. (veya <xref:System.Windows.Media.Animation.Timeline.Duration%2A>). Animasyon veya "çalar", ilişkili olduğu özelliğini güncelleştirir.
+Animasyon bir <xref:System.Windows.Media.Animation.Timeline>olduğundan, bir zaman kesimini de temsil eder. Ayrıca, bir animasyon, belirtilen zaman segmentinden (veya <xref:System.Windows.Media.Animation.Timeline.Duration%2A>) ilerledikçe çıkış değerlerini de hesaplar. Animasyon ilerledikçe veya "oynatılır", ilişkili olduğu özelliği günceller.
 
-Üç sık kullanılan zamanlama özellikleri <xref:System.Windows.Media.Animation.Timeline.Duration%2A>, <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A>, ve <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A>.
+Sık kullanılan üç zamanlama özelliği <xref:System.Windows.Media.Animation.Timeline.Duration%2A>, <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A>ve <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A>.
 
 #### <a name="the-duration-property"></a>Duration özelliği
 
-Daha önce belirtildiği gibi bir zaman çizelgesi zaman kesimini temsil eder. Bu kesimin uzunluğu tarafından belirlenir <xref:System.Windows.Media.Animation.Timeline.Duration%2A> genellikle kullanılarak belirtilen zaman çizelgesinin bir <xref:System.Windows.Duration.TimeSpan%2A> değeri. Zaman Çizelgesi süresinin sonuna ulaştığında, bir yineleme tamamlandı.
+Daha önce belirtildiği gibi, bir zaman çizelgesi bir zaman kesimini temsil eder. Bu segmentin uzunluğu, genellikle bir <xref:System.Windows.Duration.TimeSpan%2A> değeri kullanılarak belirtilen zaman çizelgesinin <xref:System.Windows.Media.Animation.Timeline.Duration%2A> belirlenir. Bir zaman çizelgesi süresinin sonuna ulaştığında bir yinelemeyi tamamlamıştır.
 
-Bir animasyon kullanır, <xref:System.Windows.Media.Animation.Timeline.Duration%2A> özelliğinin geçerli değeri belirlemek için. Belirtmezseniz, bir <xref:System.Windows.Media.Animation.Timeline.Duration%2A> değeri isteğe bağlı olarak, animasyon için varsayılan olan 1 saniye kullanır.
+Bir animasyon, geçerli değerini öğrenmek için <xref:System.Windows.Media.Animation.Timeline.Duration%2A> özelliğini kullanır. Bir animasyon için <xref:System.Windows.Media.Animation.Timeline.Duration%2A> değeri belirtmezseniz, varsayılan değer olan 1 saniye kullanır.
 
-Aşağıdaki sözdizimi basitleştirilmiş bir sürümünü gösterir [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] öznitelik sözdizimi <xref:System.Windows.Media.Animation.Timeline.Duration%2A> özelliği.
+Aşağıdaki sözdizimi, <xref:System.Windows.Media.Animation.Timeline.Duration%2A> özelliği için [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] öznitelik sözdiziminin basitleştirilmiş bir sürümünü gösterir.
 
-*Saat* `:` *dakika* `:` *saniye*
+*saat* `:` *dakika* `:` *saniye*
 
-Aşağıdaki tabloda çeşitli gösterilmektedir <xref:System.Windows.Duration> ayarları ve sonuçta elde edilen değerleri.
+Aşağıdaki tabloda bazı <xref:System.Windows.Duration> ayarları ve sonuçta elde edilen değerler gösterilmektedir.
 
 |Ayar|Sonuç değeri|
 |-------------|---------------------|
-|0:0:5.5|5.5 saniye.|
-|0:30:5.5|30 dakika ve 5.5 saniye.|
-|1:30:5.5|1 saat, 30 dakika, ve 5.5 saniye.|
+|0:0: 5,5|5,5 saniye.|
+|0:30:5,5|30 dakika ve 5,5 saniye.|
+|1:30:5,5|1 saat, 30 dakika ve 5,5 saniye.|
 
-Belirtmek için tek yönlü bir <xref:System.Windows.Duration> kodda kullanmaktır <xref:System.TimeSpan.FromSeconds%2A> yöntemi oluşturmak için bir <xref:System.TimeSpan>, ardından yeni bir bildirmek <xref:System.Windows.Duration> kullanan yapı <xref:System.TimeSpan>.
+Kodda <xref:System.Windows.Duration> belirtmenin bir yolu, bir <xref:System.TimeSpan>oluşturmak için <xref:System.TimeSpan.FromSeconds%2A> metodunu kullanmak ve ardından bu <xref:System.TimeSpan>kullanarak yeni bir <xref:System.Windows.Duration> yapısı bildirmektir.
 
-Hakkında daha fazla bilgi için <xref:System.Windows.Duration> değerleri ve tam [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] sözdizimine bakın <xref:System.Windows.Duration> yapısı.
+<xref:System.Windows.Duration> değerleri ve tüm [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] sözdizimi hakkında daha fazla bilgi için <xref:System.Windows.Duration> yapısına bakın.
 
 #### <a name="autoreverse"></a>AutoReverse
 
-<xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A> Özelliği, zaman çizelgesinin sonuna ulaştıktan sonra geriye dönük çalıp olup olmadığını belirtir, <xref:System.Windows.Media.Animation.Timeline.Duration%2A>. Bu animasyon özelliğini ayarlarsanız `true`, sonuna ulaştıktan sonra animasyon tersine çevirir. kendi <xref:System.Windows.Media.Animation.Timeline.Duration%2A>başlangıç değerine geri bitiş değerinden oynar. Varsayılan olarak, bu özellik, `false`.
+<xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A> özelliği, bir zaman çizelgesinin <xref:System.Windows.Media.Animation.Timeline.Duration%2A>sonuna ulaştıktan sonra geri yürütülüp yürütülmeyeceğini belirtir. Bu animasyon özelliğini `true`olarak ayarlarsanız, bir animasyon onun <xref:System.Windows.Media.Animation.Timeline.Duration%2A>sonuna ulaştıktan sonra ters döner ve onun bitiş değerinden başlangıç değerine doğru oynamaya başlar. Varsayılan olarak, bu özellik `false`.
 
 #### <a name="repeatbehavior"></a>RepeatBehavior
 
-<xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A> Özelliği, bir zaman çizelgesinin kaç kez belirtir. Varsayılan olarak, bir yineleme sayısı zaman çizelgelerine sahip `1.0`, bunlar oynayacağı anlamına gelir, zaman ve tüm tekrarlamayın.
+<xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A> özelliği, bir zaman çizelgesinin kaç kez oynatılacağını belirtir. Varsayılan olarak, zaman çizelgeleri `1.0`yineleme sayısına sahiptir, bu, bir kez oynadıkları ve hiç yinelenmediği anlamına gelir.
 
-Bu özellikler ve diğerleri hakkında daha fazla bilgi için bkz: [Zamanlama Davranışlarına Genel Bakış](timing-behaviors-overview.md).
+Bu özellikler ve diğerleri hakkında daha fazla bilgi için bkz. [Zamanlama Davranışlarına Genel Bakış](timing-behaviors-overview.md).
 
 <a name="applyanimationstoproperty"></a>
 
 ## <a name="applying-an-animation-to-a-property"></a>Bir özelliğe animasyon uygulama
 
-Önceki bölümlerde animasyon ve zamanlama özelliklerini farklı türleri açıklanmaktadır. Bu bölümde, animasyon uygulamak istediğiniz özelliğe animasyon uygulamak gösterilmektedir. <xref:System.Windows.Media.Animation.Storyboard> nesnelerin özelliklerine animasyon uygulamak için bir yol sağlar. A <xref:System.Windows.Media.Animation.Storyboard> olduğu bir *kapsayıcı zaman çizelgesi* içerdiği animasyon için hedefleme bilgileri sağlar.
+Önceki bölümlerde farklı animasyon türleri ve bunların zamanlama özellikleri açıklanır. Bu bölüm, animasyonunu hareketlendirmek istediğiniz özelliğe nasıl uygulayacağınızı gösterir. <xref:System.Windows.Media.Animation.Storyboard> nesneler, özelliklere animasyon uygulamak için bir yol sağlar. <xref:System.Windows.Media.Animation.Storyboard>, içerdiği animasyonlar için hedefleme bilgilerini sağlayan bir *kapsayıcı zaman çizelgesi* ' dir.
 
-### <a name="targeting-objects-and-properties"></a>Nesnelerle ve özelliklerle hedefleme
+### <a name="targeting-objects-and-properties"></a>Nesneleri ve özellikleri hedefleme
 
-<xref:System.Windows.Media.Animation.Storyboard> Sağlar sınıfını <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> ve <xref:System.Windows.Media.Animation.Storyboard.TargetProperty> iliştirilmiş özellikler. Bir animasyon üzerindeki bu özelliklerini ayarlayarak, animasyonun ne animasyon uygulamak söyleyin. Ancak, bir nesneyi bir animasyon hedefleyebilir önce nesne genellikle bir ad verilmelidir.
+<xref:System.Windows.Media.Animation.Storyboard> sınıfı, <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> ve <xref:System.Windows.Media.Animation.Storyboard.TargetProperty> ekli özellikleri sağlar. Bu özellikleri bir animasyon üzerinde ayarlayarak, animasyona nelerin hareketlendirileceğini söylemiş olursunuz. Ancak, bir animasyon bir nesneyi hedeflebilmeniz için, nesneye genellikle bir ad verilmelidir.
 
-Bir ad atamak bir <xref:System.Windows.FrameworkElement> bir ad atamaktan farklı bir <xref:System.Windows.Freezable> nesne. Çoğu denetimler ve panolar framework öğeler; Ancak, Fırçalar, Dönüşüm ve geometriler gibi tamamen grafik nesnelerin çoğu freezable nesnelerine uygulanır. Bir tür olup olmadığından emin değilseniz, bir <xref:System.Windows.FrameworkElement> veya <xref:System.Windows.Freezable>, başvurmak **devralma hiyerarşisi** başvuru belgesini bölümü.
+Bir <xref:System.Windows.FrameworkElement> ad atamak <xref:System.Windows.Freezable> nesnesine bir ad atamaya göre farklılık gösterir. Çoğu denetim ve panel çerçeve öğeleridir; Ancak, fırçalar, dönüşümler ve geometriler gibi çoğu tamamen grafik nesnesi Freezable nesnelerdir. Bir türün <xref:System.Windows.FrameworkElement> veya <xref:System.Windows.Freezable>olup olmadığından emin değilseniz, başvuru belgelerinin **devralma hiyerarşisi** bölümüne bakın.
 
-- Yapmak için bir <xref:System.Windows.FrameworkElement> bir animasyon hedef, ayarlayarak adlandırırsınız kendi <xref:System.Windows.FrameworkElement.Name%2A> özelliği. Kod içinde de kullanmalısınız <xref:System.Windows.FrameworkElement.RegisterName%2A> öğe adı ait olduğu için sayfa ile kaydetmek için yöntemi.
+- Bir animasyon hedefi <xref:System.Windows.FrameworkElement> yapmak için, <xref:System.Windows.FrameworkElement.Name%2A> özelliğini ayarlayarak buna bir ad verirsiniz. Kod içinde, öğe adını ait olduğu sayfayla birlikte kaydetmek için <xref:System.Windows.FrameworkElement.RegisterName%2A> yöntemini de kullanmanız gerekir.
 
-- Yapmak için bir <xref:System.Windows.Freezable> içinde bir animasyon hedefi nesnesi [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], kullandığınız [x: Name yönergesi](../../xaml-services/x-name-directive.md) bir ad atamak için. Kod içinde yalnızca kullandığınız <xref:System.Windows.FrameworkElement.RegisterName%2A> nesneyi ait olduğu için sayfa ile kaydetmek için yöntemi.
+- <xref:System.Windows.Freezable> nesnesini [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]animasyon hedefi yapmak için, [X:Name yönergesini](../../xaml-services/x-name-directive.md) bir ad atamak için kullanırsınız. Kodda, nesne ait olduğu sayfaya kaydetmek için <xref:System.Windows.FrameworkElement.RegisterName%2A> yöntemini kullanırsınız.
 
-Aşağıdaki bölümlerde bir öğedeki adlandırma örneği sağlamak [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ve kod. Adlandırma ve hedefleme hakkında daha ayrıntılı bilgi için bkz. [görsel taslaklara genel bakış](storyboards-overview.md).
+Aşağıdaki bölümler, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ve koddaki bir öğe adlandırmayla ilgili bir örnek sağlar. Adlandırma ve hedefleme hakkında daha ayrıntılı bilgi için bkz. görsel taslaklara [genel bakış](storyboards-overview.md).
 
-### <a name="applying-and-starting-storyboards"></a>Uygulama ve görsel Taslaklar başlatılıyor
+### <a name="applying-and-starting-storyboards"></a>Film şeritleri uygulanıyor ve başlatılıyor
 
-İçinde bir film şeridi başlatmak için [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], onunla ilişkilendirmek bir <xref:System.Windows.EventTrigger>. Bir <xref:System.Windows.EventTrigger> belirtilen bir olay meydana geldiğinde hangi eylemleri açıklayan bir nesnedir. Bu eylemlerden biri olabilir bir <xref:System.Windows.Media.Animation.BeginStoryboard> film şeridiniz başlatmak için kullanacağınız eylem. Uygulamanız için belirli bir olaya nasıl yanıt verdiğini belirlemek etkinleştirmek için olay tetikleyicilerini olay işleyicilerine kavram olarak benzerdir. Olay işleyicileri, olay tetikleyicilerini tam olarak açıklanan olabilir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]; başka bir kod gereklidir.
+[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]bir film şeridini başlatmak için, bunu bir <xref:System.Windows.EventTrigger>ilişkilendirirsiniz. <xref:System.Windows.EventTrigger>, belirtilen bir olay gerçekleştiğinde gerçekleştirilecek eylemleri açıklayan bir nesnedir. Bu eylemlerden biri, görsel taslağınızı başlatmak için kullandığınız <xref:System.Windows.Media.Animation.BeginStoryboard> eylem olabilir. Olay Tetikleyicileri, uygulamanızın belirli bir olaya nasıl yanıt vereceğini belirtmenizi sağladığından olay işleyicileri kavramıyla benzerdir. Olay işleyicilerinin aksine, olay tetikleyicileri [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]içinde tam olarak açıklanabilir. başka kod gerekmez.
 
-Başlamak için bir <xref:System.Windows.Media.Animation.Storyboard> kodda kullanabileceğiniz bir <xref:System.Windows.EventTrigger> veya <xref:System.Windows.Media.Animation.Storyboard.Begin%2A> yöntemi <xref:System.Windows.Media.Animation.Storyboard> sınıfı.
+Kodda bir <xref:System.Windows.Media.Animation.Storyboard> başlatmak için bir <xref:System.Windows.EventTrigger> kullanabilir veya <xref:System.Windows.Media.Animation.Storyboard> sınıfının <xref:System.Windows.Media.Animation.Storyboard.Begin%2A> yöntemini kullanabilirsiniz.
 
 <a name="controllingstoryboards"></a>
 
-## <a name="interactively-control-a-storyboard"></a>Etkileşimli bir görsel taslak denetimi
+## <a name="interactively-control-a-storyboard"></a>Görsel Taslağı etkileşimli olarak denetleme
 
-Önceki örnekte gösterilen nasıl başlatılacağı bir <xref:System.Windows.Media.Animation.Storyboard> bir olay gerçekleştiğinde. Ayrıca etkileşimli bir şekilde denetleyebilirsiniz bir <xref:System.Windows.Media.Animation.Storyboard> başladıktan sonra: duraklatma, sürdürme, durdurabilir, dolgu süresinin ilerleyin, arama ve Kaldır <xref:System.Windows.Media.Animation.Storyboard>. Daha fazla bilgi ve etkileşimli olarak denetleme gösteren bir örnek için bir <xref:System.Windows.Media.Animation.Storyboard>, bkz: [görsel taslaklara genel bakış](storyboards-overview.md).
+Önceki örnekte, bir olay gerçekleştiğinde <xref:System.Windows.Media.Animation.Storyboard> nasıl başlatılacağı gösterildi. <xref:System.Windows.Media.Animation.Storyboard> başladıktan sonra etkileşimli bir şekilde denetleyebilirsiniz: Bu işlemi duraklatabilir, sürdürebilir, durdurabilir, Fill dönemine ilerletebilirsiniz, arayabilir ve <xref:System.Windows.Media.Animation.Storyboard>kaldırabilirsiniz. Daha fazla bilgi ve bir <xref:System.Windows.Media.Animation.Storyboard>etkileşimli olarak nasıl kontrol edilecek bir örnek için bkz. görsel taslaklara [genel bakış](storyboards-overview.md).
 
 <a name="fillbehaviorsection"></a>
 
-## <a name="what-happens-after-an-animation-ends"></a>Bir animasyonu bittikten sonra ne olur?
+## <a name="what-happens-after-an-animation-ends"></a>Bir animasyon bittikten sonra ne olur?
 
-<xref:System.Windows.Media.Animation.FillBehavior> Özelliği, sona erdiğinde zaman çizelgesi nasıl davranacağını belirtir. Varsayılan olarak, bir zaman çizelgesi başlatılır <xref:System.Windows.Media.Animation.ClockState.Filling> sona erdiğinde. Olan bir animasyon <xref:System.Windows.Media.Animation.ClockState.Filling> son çıktı değerini korur.
+<xref:System.Windows.Media.Animation.FillBehavior> özelliği, zaman çizelgesinin sona erdiğinde nasıl davranacağını belirtir. Varsayılan olarak, bir zaman çizelgesi sona erdiğinde <xref:System.Windows.Media.Animation.ClockState.Filling> başlar. <xref:System.Windows.Media.Animation.ClockState.Filling> bir animasyon, son çıkış değerini barındırır.
 
-<xref:System.Windows.Media.Animation.DoubleAnimation> Önceki örnekte, çünkü bitmez, <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A> özelliği <xref:System.Windows.Media.Animation.RepeatBehavior.Forever%2A>. Aşağıdaki örnek, benzer bir animasyon kullanarak bir dikdörtgen canlandırır. Önceki örnekte, farklı <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A> ve <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A> varsayılan değerlerinde animasyon özellikleri değişmeden kalır. Bu nedenle, animasyon, 1. 0 olarak beş saniye içinde ilerler ve durur.
+Önceki örnekteki <xref:System.Windows.Media.Animation.DoubleAnimation> bitmediği için <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A> özelliği <xref:System.Windows.Media.Animation.RepeatBehavior.Forever%2A>olarak ayarlanmıştır. Aşağıdaki örnek, benzer bir animasyon kullanarak bir dikdörtgeni hareketlendirir. Önceki örneğin aksine, bu animasyonun <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A> ve <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A> özellikleri varsayılan değerlerinde bırakılır. Bu nedenle, animasyon beş saniye boyunca 1 ile 0 arasında ilerlerler ve sonra duraklar.
 
 [!code-xaml[animation_ovws_snippet#FillBehaviorExampleRectangleInline](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws_snippet/CS/FillBehaviorExample.xaml#fillbehaviorexamplerectangleinline)]
 
 [!code-csharp[animation_ovws_procedural_snip#FillBehaviorExampleRectangleInline](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws_procedural_snip/CSharp/FillBehaviorExample.cs#fillbehaviorexamplerectangleinline)]
 [!code-vb[animation_ovws_procedural_snip#FillBehaviorExampleRectangleInline](~/samples/snippets/visualbasic/VS_Snippets_Wpf/animation_ovws_procedural_snip/visualbasic/fillbehaviorexample.vb#fillbehaviorexamplerectangleinline)]
 
-Çünkü, <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> olan kendi varsayılan değerinden değiştirilmedi <xref:System.Windows.Media.Animation.FillBehavior.HoldEnd>, sona erdiğinde animasyonun son değeri, 0, tutar. Bu nedenle, <xref:System.Windows.UIElement.Opacity%2A> dikdörtgen inene 0 animasyon sonra sona erer. Ayarlarsanız <xref:System.Windows.UIElement.Opacity%2A> animasyon hala etkileyen çünkü başka bir değerle dikdörtgen, kodunuzu hiçbir etkisi görünüyor <xref:System.Windows.UIElement.Opacity%2A> özelliği.
+<xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A>, <xref:System.Windows.Media.Animation.FillBehavior.HoldEnd>varsayılan değerinden değişmediğinden, animasyon son değerini, 0, sona erdiğinde tutar. Bu nedenle, dikdörtgenin <xref:System.Windows.UIElement.Opacity%2A>, animasyon bittikten sonra 0 ' da kalır. Dikdörtgenin <xref:System.Windows.UIElement.Opacity%2A> başka bir değere ayarlarsanız, animasyon hala <xref:System.Windows.UIElement.Opacity%2A> özelliğini etkilediği için kodunuzun hiçbir etkisi olmaz.
 
-Kodda bir animasyonlu özelliğin denetimi yeniden elde etmek için tek bir yolu <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> yöntemi için null belirtin <xref:System.Windows.Media.Animation.AnimationTimeline> parametresi. Daha fazla bilgi ve örnek için bkz. [bir özellik sonra animasyon film şeridi ile ayarlayın](how-to-set-a-property-after-animating-it-with-a-storyboard.md).
+Kodda animasyonlu bir özelliğin denetimini yeniden kazanmak için bir yol <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> yöntemi kullanmaktır ve <xref:System.Windows.Media.Animation.AnimationTimeline> parametresi için null değerini belirtmelidir. Daha fazla bilgi ve bir örnek için bkz. [Görsel Taslakla animasyon uygulandıktan sonra özelliği ayarlama](how-to-set-a-property-after-animating-it-with-a-storyboard.md).
 
-Olsa da bir özellik değerini not bir <xref:System.Windows.Media.Animation.ClockState.Active> veya <xref:System.Windows.Media.Animation.ClockState.Filling> animasyon görünür herhangi bir etkisi yoktur, özellik değeri değiştirin. Daha fazla bilgi için [animasyon ve zamanlama sistemine genel bakış](animation-and-timing-system-overview.md).
+Bir <xref:System.Windows.Media.Animation.ClockState.Active> veya <xref:System.Windows.Media.Animation.ClockState.Filling> animasyonuna sahip bir özellik değeri ayarlamanın hiçbir etkisi olmamasına rağmen, özellik değeri değişir. Daha fazla bilgi için bkz. [animasyon ve zamanlama sistemine genel bakış](animation-and-timing-system-overview.md).
 
 <a name="databindingAndAnimatingAnimationsSection"></a>
 
-## <a name="data-binding-and-animating-animations"></a>Veri bağlama ve animasyonları animasyon ekleme
+## <a name="data-binding-and-animating-animations"></a>Veri bağlama ve animasyonları hareketlendirme
 
-Animasyon özelliklerinin çoğu bağlı veya animasyon veri olabilir; Örneğin, animasyon uygulayabilirsiniz <xref:System.Windows.Media.Animation.Timeline.Duration%2A> özelliği bir <xref:System.Windows.Media.Animation.DoubleAnimation>. Ancak, zamanlama sistemi çalışma biçimi nedeniyle ilişkili veya hareketli animasyonların gibi diğer veri davranmayabilir veri bağlı veya animasyon nesneleri. Davranışlarını anlamak için bu özelliğe animasyon uygulamak ne demek anlamanıza yardımcı olur.
+Animasyon özelliklerinin çoğu veri veya animasyonlu olabilir; Örneğin, bir <xref:System.Windows.Media.Animation.DoubleAnimation><xref:System.Windows.Media.Animation.Timeline.Duration%2A> özelliğine animasyon uygulayabilirsiniz. Ancak, zamanlama sisteminin çalışma biçimi nedeniyle, veri bağlantılı veya animasyonlu animasyonlar diğer veri bağlantılı veya animasyonlu nesneler gibi davranmaz. Davranışlarını anlamak için bir özelliği bir animasyon uygulamak için ne anlama geldiğini anlamanıza yardımcı olur.
 
-Animasyon ekleme konusu gösterildi önceki bölümdeki örnek başvurmak <xref:System.Windows.UIElement.Opacity%2A> bir dikdörtgen. Önceki örnekteki dikdörtgenin yüklendiğinde olay tetikleyicisi geçerli <xref:System.Windows.Media.Animation.Storyboard>. Zamanlama sistemi bir kopyasını oluşturur <xref:System.Windows.Media.Animation.Storyboard> ve animasyonunun. Bu kopyalar dondurulmuş (salt okunur yapılır) ve <xref:System.Windows.Media.Animation.Clock> nesneleri bunlardan oluşturulur. Bu saatler, hedeflenen özellikleri, gerçek iş yapın.
+Bir dikdörtgenin <xref:System.Windows.UIElement.Opacity%2A> animasyonunu gösteren önceki bölümde yer alan örneğe bakın. Önceki örnekteki dikdörtgen yüklendiğinde, olay tetikleyicisi <xref:System.Windows.Media.Animation.Storyboard>uygular. Zamanlama sistemi, <xref:System.Windows.Media.Animation.Storyboard> ve animasyonunun bir kopyasını oluşturur. Bu kopyalar dondurulur (salt okunurdur) ve <xref:System.Windows.Media.Animation.Clock> nesneler bunlardan oluşturulur. Bu saatler, hedeflenen özellikleri hareketlendirmek için gerçek çalışmalara sahiptir.
 
-Zamanlama sistemi için bir saat oluşturur <xref:System.Windows.Media.Animation.DoubleAnimation> ve nesnesi ve tarafından belirtilen özellik için geçerli <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> ve <xref:System.Windows.Media.Animation.Storyboard.TargetProperty> , <xref:System.Windows.Media.Animation.DoubleAnimation>. Bu durumda, zamanlama sistemi saati geçerli <xref:System.Windows.UIElement.Opacity%2A> "MyRectangle" adlı nesne özelliği
+Zamanlama sistemi <xref:System.Windows.Media.Animation.DoubleAnimation> için bir saat oluşturur ve <xref:System.Windows.Media.Animation.DoubleAnimation><xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> ve <xref:System.Windows.Media.Animation.Storyboard.TargetProperty> tarafından belirtilen nesne ve özelliğe uygular. Bu durumda, zamanlama sistemi, "MyRectangle" adlı nesnenin <xref:System.Windows.UIElement.Opacity%2A> özelliğine saati uygular.
 
-Bir saat için de oluşturulsa <xref:System.Windows.Media.Animation.Storyboard>, saat, herhangi bir özelliğe uygulanmaz. Kendi alt saati, oluşturulduğu saati amacı denetlemektir <xref:System.Windows.Media.Animation.DoubleAnimation>.
+<xref:System.Windows.Media.Animation.Storyboard>için saat de oluşturulsa da, saat herhangi bir özelliğe uygulanmaz. Amacı, <xref:System.Windows.Media.Animation.DoubleAnimation>için oluşturulan saatin alt saatini denetsağlamaktır.
 
-Bir animasyon veri bağlama veya animasyon değişiklikleri yansıtacak şekilde kendi saati üretilmelidir. Saatleri sizin için otomatik olarak yeniden oluşturulmaz. Animasyonun değişiklikleri yansıtacak sağlamak için görsel taslak kullanarak yeniden bir <xref:System.Windows.Media.Animation.BeginStoryboard> veya <xref:System.Windows.Media.Animation.Storyboard.Begin%2A> yöntemi. Bu yöntemlerden birini kullandığınızda, animasyonun yeniden başlatır. Kod içinde kullanabileceğiniz <xref:System.Windows.Media.Animation.Storyboard.Seek%2A> back önceki konumuna film şeridi kaydırmak için yöntemi.
+Bir animasyonun veri bağlamayı veya animasyon değişikliklerini yansıtması için, saatinin yeniden oluşturulması gerekir. Saatler sizin için otomatik olarak yeniden oluşturulmaz. Bir animasyonun değişiklikleri yansıtması için, film şeridini bir <xref:System.Windows.Media.Animation.BeginStoryboard> veya <xref:System.Windows.Media.Animation.Storyboard.Begin%2A> yöntemi kullanarak yeniden uygulayın. Bu yöntemlerden birini kullandığınızda animasyon yeniden başlatılır. Kod içinde, görsel taslağı önceki konumuna geri kaydırmak için <xref:System.Windows.Media.Animation.Storyboard.Seek%2A> yöntemini kullanabilirsiniz.
 
-Örnek veri bağlama için bkz: [anahtar eğrisi animasyon örneği](https://go.microsoft.com/fwlink/?LinkID=160011). Animasyon ve zamanlama sistemi nasıl çalıştığı hakkında daha fazla bilgi için bkz. [animasyon ve zamanlama sistemine genel bakış](animation-and-timing-system-overview.md).
+Veri bağlantılı animasyon örneği için bkz. [Anahtar eğri animasyon örneği](https://go.microsoft.com/fwlink/?LinkID=160011). Animasyon ve zamanlama sisteminin nasıl çalıştığı hakkında daha fazla bilgi için bkz. [animasyon ve zamanlama sistemine genel bakış](animation-and-timing-system-overview.md).
 
 <a name="otherWaysToAnimateSection"></a>
 
-## <a name="other-ways-to-animate"></a>Diğer yolları animasyon ekleme
+## <a name="other-ways-to-animate"></a>Animasyon almanın diğer yolları
 
-Bu genel bakışta örneklerde görsel Taslaklar kullanarak animasyon ekleme işlemini göstermektedir. Kod kullandığınızda, diğer çeşitli yollarla animasyon uygulayabilirsiniz. Daha fazla bilgi için [özellik Animasyon Tekniklerine Genel Bakış](property-animation-techniques-overview.md).
+Bu genel bakışdaki örneklerde film şeritleri kullanılarak nasıl animasyon ekleneceği gösterilmektedir. Kodu kullandığınızda, birkaç farklı yolla animasyon uygulayabilirsiniz. Daha fazla bilgi için bkz. [animasyon tekniklerine genel bakış](property-animation-techniques-overview.md).
 
 <a name="animation_samples"></a>
 
 ## <a name="animation-samples"></a>Animasyon örnekleri
 
-Aşağıdaki örnekleri uygulamalarınıza animasyon ekleme başlamanıza yardımcı olabilir.
+Aşağıdaki örnekler uygulamalarınıza animasyon eklemeye başlamanıza yardımcı olabilir.
 
-- [Gelen, için ve göre animasyon hedef değerleri örneği](https://go.microsoft.com/fwlink/?LinkID=159988)
+- [From, to ve By animasyon hedefi değerleri örneği](https://go.microsoft.com/fwlink/?LinkID=159988)
 
-  Farklı From/To/By ayarları gösterir.
+  Farklı From/To/By ayarlarını gösterir.
 
-- [Animasyon zamanlama davranışı örneği](https://go.microsoft.com/fwlink/?LinkID=159970)
+- [Animasyon Zamanlama davranışı örneği](https://go.microsoft.com/fwlink/?LinkID=159970)
 
-  Bir animasyon zamanlama davranışını denetleyebileceğiniz farklı yollarını gösterir. Bu örnek ayrıca gösterir nasıl verilere animasyon hedef değeri bağlayın.
+  Animasyonun zamanlama davranışını denetleyebilmeniz için farklı yollar gösterir. Bu örnek ayrıca bir animasyonun hedef değerini veri bağlama şeklini gösterir.
 
 <a name="related_topics"></a>
 
@@ -369,21 +369,21 @@ Aşağıdaki örnekleri uygulamalarınıza animasyon ekleme başlamanıza yardı
 
 |Başlık|Açıklama|
 |-----------|-----------------|
-|[Animasyon ve Zamanlama Sistemine Genel Bakış](animation-and-timing-system-overview.md)|Zamanlama sistemi nasıl kullandığını açıklar <xref:System.Windows.Media.Animation.Timeline> ve <xref:System.Windows.Media.Animation.Clock> animasyonlar oluşturmanıza olanak sağlayan sınıflar.|
-|[Animasyon İpuçları ve Püf Noktaları](animation-tips-and-tricks.md)|Animasyonlarla performans gibi sorunları çözmek için yararlı ipuçları listeler.|
-|[Özel Animasyonlara Genel Bakış](custom-animations-overview.md)|Anahtar çerçeveler, animasyon sınıfları veya çerçeve başına geri çağırmaları animasyon sistemini genişletmek açıklar.|
-|[Gelen/İçin/Göre Animasyonlarına Genel Bakış](from-to-by-animations-overview.md)|İki değer geçişleri bir animasyon oluşturmayı açıklar.|
-|[Anahtar-Çerçeve Animasyonlara Genel Bakış](key-frame-animations-overview.md)|Bir animasyon ilişkilendirme yöntemi denetleme olanağı dahil olmak üzere birden çok hedef değerle oluşturmayı açıklar.|
-|[Hızlandırma İşlevleri](easing-functions.md)|Matematik formülleri geçirmek gibi gerçekçi davranışını almak için animasyon uygulamak açıklanmaktadır.|
-|[Yol Animasyonlarına Genel Bakış](path-animations-overview.md)|Taşıma veya karmaşık bir yolda nesneyi döndürme işlemini açıklamaktadır.|
-|[Özellik Animasyon Tekniklerine Genel Bakış](property-animation-techniques-overview.md)|Görsel Taslaklar kullanarak özellik animasyonları, yerel animasyonları, saatler ve başına-çerçeve animasyonlara açıklar.|
-|[Görsel Taslaklara Genel Bakış](storyboards-overview.md)|Görsel Taslaklar ile birden çok zaman çizelgesi karmaşık animasyon oluşturmak için nasıl kullanılacağını açıklar.|
-|[Zamanlama Davranışlarına Genel Bakış](timing-behaviors-overview.md)|Açıklar <xref:System.Windows.Media.Animation.Timeline> türler ve Özellikler içinde animasyon kullanılır.|
-|[Zamanlama Olaylarına Genel Bakış](timing-events-overview.md)|Kullanılabilir olaylarını açıklar <xref:System.Windows.Media.Animation.Timeline> ve <xref:System.Windows.Media.Animation.Clock> nesneleri gibi zaman çizelgesi noktalarında kod yürütmek başlamak, duraklatma, sürdürme, atlayın veya durdurmak.|
-|[Nasıl Yapılır Konuları](animation-and-timing-how-to-topics.md)|Animasyonları ve zaman çizelgeleri uygulamanızda kullanmak için kod örneği içerir.|
-|[Saatler ile İlgili Nasıl Yapılır Konuları](clocks-how-to-topics.md)|Kullanmak için kod örnekleri içeren <xref:System.Windows.Media.Animation.Clock> uygulamanızdaki bir nesne.|
-|[Anahtar Çerçeve ile İlgili Nasıl Yapılır Konuları](key-frame-animation-how-to-topics.md)|Anahtar-çerçeve animasyonlara uygulamanızda kullanmak için kod örneği içerir.|
-|[Yol Animasyonu ile İlgili Nasıl Yapılır Konuları](path-animation-how-to-topics.md)|Yol animasyonları uygulamanızdaki kullanma için kod örnekleri içerir.|
+|[Animasyon ve Zamanlama Sistemine Genel Bakış](animation-and-timing-system-overview.md)|Zamanlama sisteminin <xref:System.Windows.Media.Animation.Timeline> ve <xref:System.Windows.Media.Animation.Clock> sınıflarını nasıl kullandığını açıklar. Bu, animasyonlar oluşturmanıza olanak tanır.|
+|[Animasyon İpuçları ve Püf Noktaları](animation-tips-and-tricks.md)|Performans gibi animasyonlarla ilgili sorunları çözmek için faydalı ipuçları listeler.|
+|[Özel Animasyonlara Genel Bakış](custom-animations-overview.md)|Animasyon sisteminin anahtar çerçeveler, animasyon sınıfları veya kare başına geri çağırmalar ile nasıl genişletileceğini açıklar.|
+|[Gelen/İçin/Göre Animasyonlarına Genel Bakış](from-to-by-animations-overview.md)|İki değer arasında geçiş yapan bir animasyonun nasıl oluşturulacağını açıklar.|
+|[Anahtar-Çerçeve Animasyonlara Genel Bakış](key-frame-animations-overview.md)|Enterpolasyon yöntemini denetleme özelliği de dahil olmak üzere birden çok hedef değeri olan bir animasyonun nasıl oluşturulacağını açıklar.|
+|[Hızlandırma İşlevleri](easing-functions.md)|Sıçramalar gibi gerçekçi davranışları almak için animasyonlarınızın matematiksel formüllerin nasıl uygulanacağını açıklar.|
+|[Yol Animasyonlarına Genel Bakış](path-animations-overview.md)|Bir nesnenin karmaşık bir yol üzerinde nasıl taşınacağını veya döndürüleceğini açıklar.|
+|[Özellik Animasyon Tekniklerine Genel Bakış](property-animation-techniques-overview.md)|Görsel taslak, yerel animasyon, saat ve çerçeve başına animasyonları kullanarak özellik animasyonlarını açıklar.|
+|[Görsel Taslaklara Genel Bakış](storyboards-overview.md)|Karmaşık animasyonlar oluşturmak için birden çok zaman çizelgesi ile film şeritlerinin nasıl kullanılacağını açıklar.|
+|[Zamanlama Davranışlarına Genel Bakış](timing-behaviors-overview.md)|Animasyonlarda kullanılan <xref:System.Windows.Media.Animation.Timeline> türlerini ve özelliklerini açıklar.|
+|[Zamanlama Olaylarına Genel Bakış](timing-events-overview.md)|<xref:System.Windows.Media.Animation.Timeline> için kullanılabilir olayları ve zaman çizelgesinde, başlatma, duraklatma, devam etmeyi, atla veya Durdur gibi bir noktada kod yürütmeye yönelik <xref:System.Windows.Media.Animation.Clock> nesneleri açıklar.|
+|[Nasıl Yapılır Konuları](animation-and-timing-how-to-topics.md)|Uygulamanızda animasyon ve zaman çizelgelerini kullanmaya yönelik kod örnekleri içerir.|
+|[Saatler ile İlgili Nasıl Yapılır Konuları](clocks-how-to-topics.md)|Uygulamanızda <xref:System.Windows.Media.Animation.Clock> nesnesini kullanmaya yönelik kod örnekleri içerir.|
+|[Anahtar Çerçeve ile İlgili Nasıl Yapılır Konuları](key-frame-animation-how-to-topics.md)|Uygulamanızda anahtar çerçeve animasyonlarını kullanmaya yönelik kod örnekleri içerir.|
+|[Yol Animasyonu ile İlgili Nasıl Yapılır Konuları](path-animation-how-to-topics.md)|Uygulamanızdaki yol animasyonlarını kullanmaya yönelik kod örnekleri içerir.|
 
 <a name="reference"></a>
 

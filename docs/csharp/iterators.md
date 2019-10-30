@@ -2,13 +2,14 @@
 title: Yineleyiciler
 description: Yerleşik C# yineleyiciler kullanmayı ve kendi özel Yineleyici yöntemlerinizi oluşturmayı öğrenin.
 ms.date: 06/20/2016
+ms.technology: csharp-advanced-concepts
 ms.assetid: 5cf36f45-f91a-4fca-a0b7-87f233e108e9
-ms.openlocfilehash: c378ceb651eed7e7a3d8c738bd4b2b3cf7de2a0f
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 1933ecf83e9fa234f9b88c815d8ab527997c97f2
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72773884"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73036412"
 ---
 # <a name="iterators"></a>Yineleyiciler
 
@@ -36,7 +37,7 @@ foreach (var item in collection)
 }
 ```
 
-Hepsi bu kadar çok. Bir koleksiyonun tüm içeriğini yinelemek için `foreach` deyimleri yeterlidir. @No__t_0 deyimleri de Magic değildir, ancak. Bir koleksiyonu yinelemek için gereken kodu oluşturmak üzere .NET Core kitaplığı 'nda tanımlanan iki genel arabirimi kullanır: `IEnumerable<T>` ve `IEnumerator<T>`. Bu mekanizma aşağıda daha ayrıntılı olarak açıklanmıştır.
+Hepsi bu kadar çok. Bir koleksiyonun tüm içeriğini yinelemek için `foreach` deyimleri yeterlidir. `foreach` deyimleri de Magic değildir, ancak. Bir koleksiyonu yinelemek için gereken kodu oluşturmak üzere .NET Core kitaplığı 'nda tanımlanan iki genel arabirimi kullanır: `IEnumerable<T>` ve `IEnumerator<T>`. Bu mekanizma aşağıda daha ayrıntılı olarak açıklanmıştır.
 
 Bu arabirimlerin her ikisi de genel olmayan ortaklarınıza sahiptir: `IEnumerable` ve `IEnumerator`. [Genel](programming-guide/generics/index.md) sürümler modern kod için tercih edilir.
 
@@ -141,7 +142,7 @@ public IEnumerable<int> GetSingleDigitNumbers()
 }
 ```
 
-Bazen doğru yanıt, bir yineleyici yöntemini iki farklı yönteme bölmek olur. @No__t_0 ve `yield return` kullanan bir ikincisi. Boole bağımsız değişkenine göre boş bir koleksiyon veya ilk 5 tek sayı döndürmek isteyebileceğiniz bir durum düşünün. Bu iki yöntem olarak yazabilirsiniz:
+Bazen doğru yanıt, bir yineleyici yöntemini iki farklı yönteme bölmek olur. `return`ve `yield return`kullanan bir ikincisi. Boole bağımsız değişkenine göre boş bir koleksiyon veya ilk 5 tek sayı döndürmek isteyebileceğiniz bir durum düşünün. Bu iki yöntem olarak yazabilirsiniz:
 
 ```csharp
 public IEnumerable<int> GetSingleDigitOddNumbers(bool getCollection)
@@ -166,9 +167,9 @@ private IEnumerable<int> IteratorMethod()
 
 Yukarıdaki yöntemlere bakın. İlki, boş bir koleksiyon ya da ikinci yöntem tarafından oluşturulan Yineleyici döndürmek için standart `return` ifadesini kullanır. İkinci yöntem, istenen diziyi oluşturmak için `yield return` ifadesini kullanır.
 
-## <a name="deeper-dive-into-foreach"></a>@No__t_0 daha derin inceleyin
+## <a name="deeper-dive-into-foreach"></a>`foreach` daha derin inceleyin
 
-@No__t_0 deyimi, bir koleksiyonun tüm öğelerinde yinelemek için `IEnumerable<T>` ve `IEnumerator<T>` arabirimlerini kullanan standart bir deyim halinde genişletilir. Ayrıca, geliştiricilerin kaynakları düzgün bir şekilde yönetmediğinden yaptığı hataları da en aza indirir.
+`foreach` deyimi, bir koleksiyonun tüm öğelerinde yinelemek için `IEnumerable<T>` ve `IEnumerator<T>` arabirimlerini kullanan standart bir deyim halinde genişletilir. Ayrıca, geliştiricilerin kaynakları düzgün bir şekilde yönetmediğinden yaptığı hataları da en aza indirir.
 
 Derleyici, ilk örnekte gösterilen `foreach` döngüsünü bu yapı ile benzer bir şekilde çevirir:
 
@@ -232,7 +233,7 @@ finally
 }
 ```
 
-@No__t_0 türünden `IDisposable` örtük bir dönüştürme varsa ve `enumerator` null yapılamayan bir değer türü ise, `finally` yan tümcesi şu şekilde genişletilir:
+`enumerator` türünden `IDisposable`örtük bir dönüştürme varsa ve `enumerator` null yapılamayan bir değer türü ise, `finally` yan tümcesi şu şekilde genişletilir:
 
 ```csharp
 finally
@@ -241,4 +242,4 @@ finally
 }
 ```
 
-Ktam, tüm bu ayrıntıları anımsamanız gerekmez. @No__t_0 deyimleri sizin için tüm bu nusları işler. Derleyici bu yapıların herhangi biri için doğru kodu oluşturacaktır.
+Ktam, tüm bu ayrıntıları anımsamanız gerekmez. `foreach` deyimleri sizin için tüm bu nusları işler. Derleyici bu yapıların herhangi biri için doğru kodu oluşturacaktır.

@@ -2,13 +2,14 @@
 title: Demet türleri- C# kılavuz
 description: İçinde adlandırılmamış ve adlandırılmış demet türleri hakkında bilgi edininC#
 ms.date: 05/15/2018
+ms.technology: csharp-fundamentals
 ms.assetid: ee8bf7c3-aa3e-4c9e-a5c6-e05cc6138baa
-ms.openlocfilehash: 3c8d4acfe231be63e1d70d467cbb72ecfa4f767d
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: f551a1df4a31c3311119a0327e02fbc6096ce0a0
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774054"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039719"
 ---
 # <a name="c-tuple-types"></a>C#demet türleri
 
@@ -26,9 +27,9 @@ Yeni demet desteği ekleme nedenlerinden başlayalım. Yöntemler tek bir nesne 
 
 .NET Framework zaten genel `Tuple` sınıfları var. Ancak, bu sınıfların iki önemli sınırlaması vardı. Biri için, `Tuple` sınıfları özellikleri `Item1`, `Item2` vb. olarak adlandırılır. Bu adlar hiçbir anlam bilgisi içermez. Bu `Tuple` türlerinin kullanılması, özelliklerin her birinin anlamını karşılayarak iletişim kurmasına imkan vermez. Yeni dil özellikleri, bir tanımlama grubu içindeki öğeler için anlamsal anlamlı adlar bildirme ve kullanma imkanı sağlar.
 
-@No__t_0 sınıfları, başvuru türleri olduklarından daha fazla performans sorunlarına neden olur. @No__t_0 türlerinden birini kullanmak nesneleri ayırmayı gösterir. Etkin yollarda birçok küçük nesne ayırmak uygulamanızın performansı üzerinde ölçülebilir bir etkiye sahip olabilir. Bu nedenle, tanımlama birimleri için dil desteği yeni `ValueTuple` yapılarını kullanır.
+`Tuple` sınıfları, başvuru türleri olduklarından daha fazla performans sorunlarına neden olur. `Tuple` türlerinden birini kullanmak nesneleri ayırmayı gösterir. Etkin yollarda birçok küçük nesne ayırmak uygulamanızın performansı üzerinde ölçülebilir bir etkiye sahip olabilir. Bu nedenle, tanımlama birimleri için dil desteği yeni `ValueTuple` yapılarını kullanır.
 
-Bu eksiklikleri önlemek için, birden çok öğeyi yürütmek üzere `class` veya `struct` oluşturabilirsiniz. Ne yazık ki, sizin için daha fazla çalışma ve tasarım amacınızı gizler. @No__t_0 veya `class` yapmak, hem veri hem de davranışla bir tür tanımlamanız gerektiğini gösterir. Birçok kez yalnızca birden çok değeri tek bir nesnede depolamak istiyorsunuz.
+Bu eksiklikleri önlemek için, birden çok öğeyi yürütmek üzere `class` veya `struct` oluşturabilirsiniz. Ne yazık ki, sizin için daha fazla çalışma ve tasarım amacınızı gizler. `struct` veya `class` yapmak, hem veri hem de davranışla bir tür tanımlamanız gerektiğini gösterir. Birçok kez yalnızca birden çok değeri tek bir nesnede depolamak istiyorsunuz.
 
 Dil özellikleri ve `ValueTuple` genel yapıları, bu demet türlerine herhangi bir davranış (Yöntem) ekleyemeyeceği kuralını zorlar.
 Tüm `ValueTuple` türleri *değişebilir yapılar*. Her üye alanı bir ortak alandır. Böylece çok hafif hale gelir. Bununla birlikte, bu, her ne kadar önemli olduğu durumlarda başlıkların kullanılması gerektiği anlamına gelir.
@@ -37,7 +38,7 @@ Tanımlama grupları, `class` ve `struct` türlerinden daha basit ve daha esnek 
 
 ## <a name="named-and-unnamed-tuples"></a>Adlandırılmış ve adlandırılmamış diziler
 
-@No__t_0 yapısı, var olan `Tuple` türlerinde tanımlanan özelliklere benzer şekilde `Item1`, `Item2`, `Item3`, vb. adlı alanlara sahiptir.
+`ValueTuple` yapısı, var olan `Tuple` türlerinde tanımlanan özelliklere benzer şekilde `Item1`, `Item2`, `Item3`, vb. adlı alanlara sahiptir.
 Bu adlar, *adlandırılmamış tanımlama grupları*için kullanabileceğiniz tek adlardır. Bir tanımlama grubu için alternatif alan adı sağlamadığınızda, adlandırılmamış bir tanımlama grubu oluşturdunuz:
 
 [!code-csharp[UnnamedTuple](../../samples/snippets/csharp/tuples/program.cs#01_UnNamedTuple "Unnamed tuple")]
@@ -165,7 +166,7 @@ Visual Studio 'nun yeniden düzenleme desteği, çekirdek istatistik işlevlerin
 
 [!code-csharp[TupleMethodVersion](../../samples/snippets/csharp/tuples/statistics.cs#08_TupleMethodVersion "After extracting utility method")]
  
-Dil, el ile birkaç hızlı düzenleme yapmak istiyorsanız kullanabileceğiniz birkaç seçenek sağlar. İlk olarak, `var` bildirimini kullanarak `ComputeSumAndSumOfSquares` yöntem çağrısından kayıt düzeni sonucunu başlatabilirsiniz. @No__t_0 yöntemi içinde üç ayrı değişken de oluşturabilirsiniz. Son sürüm aşağıdaki kodda gösterilmiştir:
+Dil, el ile birkaç hızlı düzenleme yapmak istiyorsanız kullanabileceğiniz birkaç seçenek sağlar. İlk olarak, `var` bildirimini kullanarak `ComputeSumAndSumOfSquares` yöntem çağrısından kayıt düzeni sonucunu başlatabilirsiniz. `ComputeSumAndSumOfSquares` yöntemi içinde üç ayrı değişken de oluşturabilirsiniz. Son sürüm aşağıdaki kodda gösterilmiştir:
 
 [!code-csharp[CleanedTupleVersion](../../samples/snippets/csharp/tuples/statistics.cs#09_CleanedTupleVersion "After final cleanup")]
 
@@ -260,11 +261,11 @@ Deyapý yöntemi, `FirstName` ve `LastName` özelliklerini temsil eden `Person` 
 [!code-csharp[Deconstruct Type](../../samples/snippets/csharp/tuples/program.cs#12A_DeconstructType "Deconstruct a class type")]
 
 Yazmayan türler için bile, oluşturmayı etkinleştirebilirsiniz.
-@No__t_0 yöntemi, bir nesnenin erişilebilir veri üyelerini paketten uygulayan bir genişletme yöntemi olabilir. Aşağıdaki örnekte, `Person` türünden türetilmiş bir `Student` türü ve `FirstName`, `LastName` ve `GPA` temsil eden üç değişkene `Student` oluşturan bir genişletme yöntemi gösterilmektedir:
+`Deconstruct` yöntemi, bir nesnenin erişilebilir veri üyelerini paketten uygulayan bir genişletme yöntemi olabilir. Aşağıdaki örnekte, `Person` türünden türetilmiş bir `Student` türü ve `FirstName`, `LastName` ve `GPA` temsil eden üç değişkene `Student` oluşturan bir genişletme yöntemi gösterilmektedir:
 
 [!code-csharp[ExtensionDeconstructMethod](../../samples/snippets/csharp/tuples/person.cs#13_ExtensionDeconstructMethod "Type with a deconstruct extension method")]
 
-@No__t_0 nesnesi artık iki adet erişilebilir `Deconstruct` yöntemine sahiptir: `Student` türleri için belirtilen genişletme yöntemi ve `Person` türü üyesi. Her ikisi de kapsamdadır ve bir `Student` ' ı iki değişkene veya üçüne ayırmayı sağlar.
+`Student` nesnesi artık iki adet erişilebilir `Deconstruct` yöntemine sahiptir: `Student` türleri için belirtilen genişletme yöntemi ve `Person` türü üyesi. Her ikisi de kapsamdadır ve bir `Student` ' ı iki değişkene veya üçüne ayırmayı sağlar.
 Üç değişkene bir öğrenci atarsanız, ilk ad, soyadı ve GPA döndürülür. İki değişkene bir öğrenci atarsanız, yalnızca ad ve soyadı döndürülür.
 
 [!code-csharp[Deconstruct extension method](../../samples/snippets/csharp/tuples/program.cs#13A_DeconstructExtension "Deconstruct a class type using an extension method")]
@@ -281,7 +282,7 @@ if (("Althea", "Goodwin") == p)
     Console.WriteLine(p);
 ```
 
-@No__t_0 yöntemi, `Person` nesne `p` iki dize içeren bir kayıt türüne dönüştürebilir, ancak eşitlik testleri bağlamında geçerli değildir.
+`Deconstruct` yöntemi, `Person` nesne `p` iki dize içeren bir kayıt türüne dönüştürebilir, ancak eşitlik testleri bağlamında geçerli değildir.
 
 ## <a name="tuples-as-out-parameters"></a>Out parametreleri olarak tanımlama grubu
 

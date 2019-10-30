@@ -2,13 +2,14 @@
 title: Ifade ağaçları çevriliyor
 description: Bu ifade ağacının değiştirilmiş bir kopyasını oluştururken bir ifade ağacındaki her bir düğümü ziyaret etmeyi öğrenin.
 ms.date: 06/20/2016
+ms.technology: csharp-advanced-concepts
 ms.assetid: b453c591-acc6-4e08-8175-97e5bc65958e
-ms.openlocfilehash: a12c4d7fe9f65d6e9598259de1504b6f9987f38e
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 5c55ef2141e63462c91f84efab09828fafbff142
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70925833"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73036617"
 ---
 # <a name="translating-expression-trees"></a>Ifade ağaçları çevriliyor
 
@@ -23,7 +24,7 @@ Bir ifade ağacını çevirmek için oluşturduğunuz kod, bir ağaçtaki tüm d
 Bu işlemi, bir ifade ağacını ziyaret ederek ve değişiklik düğümleri içeren yeni bir ağaç oluşturarak görelim. Bu örnekte, her sabiti on kat daha büyük olan bir sabit ile değiştirin.
 Aksi takdirde, ifade ağacını bozulmadan bırakıyoruz. Sabitin değerini okumak ve yeni bir sabitle değiştirmek yerine, sabit düğümü çarpma işlemini gerçekleştiren yeni bir düğümle değiştirerek bu değişikliği yapacağız.
 
-Burada, sabit bir düğüm bulduktan sonra, alt öğeleri orijinal sabitine ve sabitine `10`sahip yeni bir çarpma düğümü oluşturursunuz:
+Burada, sabit bir düğüm bulduktan sonra, alt öğeleri orijinal sabit olan ve sabit `10`yeni bir çarpma düğümü oluşturursunuz:
 
 ```csharp
 private static Expression ReplaceNodes(Expression original)
@@ -153,7 +154,7 @@ Computed sum: 10
 
 Çıktıyı izleyin ve yukarıdaki kodda izleyin. Kodun her bir düğümü nasıl ziyaret edebilmeli ve toplam ağaçta gezinilerek toplamı nasıl hesapladığını ve toplamı bulabileceksiniz.
 
-Şimdi, tarafından `sum1`verilen ifadeyle farklı bir çalıştırmaya bakalım:
+Şimdi, `sum1`tarafından verilen ifadeyle farklı bir çalıştırmaya bakalım:
 
 ```csharp
 Expression<Func<int> sum1 = () => 1 + (2 + (3 + 4));

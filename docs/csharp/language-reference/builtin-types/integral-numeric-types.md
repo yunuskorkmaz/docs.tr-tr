@@ -32,12 +32,12 @@ helpviewer_keywords:
 - uint keyword [C#]
 - long keyword [C#]
 - ulong keyword [C#]
-ms.openlocfilehash: c255711e4b165fdca27d50c6bd0f2debfe15ae25
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 058e75c81c18f0ec73140f6fc13a91f4e0012a61
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72773861"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73036368"
 ---
 # <a name="integral-numeric-types--c-reference"></a>Integral sayısal türleri (C# başvuru)
 
@@ -100,7 +100,7 @@ Bir tamsayı sabit değerinin türü, soneki tarafından aşağıdaki şekilde b
 
 Bir tamsayı değişmez değeri ile temsil edilen değer <xref:System.UInt64.MaxValue?displayProperty=nameWithType> aşarsa, bir derleyici hatası [CS1021](../../misc/cs1021.md) oluşur.
 
-Bir tamsayı sabit değerinin belirlenen türü `int` ve değer hedef türünün aralığı içindeyse, değişmez değer tarafından temsil edilen değer örtük olarak `sbyte`, `byte`, `short`, `ushort` dönüştürülebilir , `uint` veya `ulong`:
+Bir tamsayı değişmez değerinin belirlenen türü `int` ise ve değişmez değer tarafından temsil edilen değer hedef türün aralığı içindeyse, değer örtük olarak `sbyte`, `byte`, `short`, `ushort`dönüştürülebilir , `uint`veya `ulong`:
 
 ```csharp
 byte a = 17;

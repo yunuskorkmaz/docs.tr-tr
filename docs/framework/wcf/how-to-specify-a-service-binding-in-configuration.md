@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 885037f7-1c2b-4d7a-90d9-06b89be172f2
-ms.openlocfilehash: b9790d3fb5fc20b3d2c6ce776070274ef0403732
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: ef41514a57d08d66fcba2dbaeb8c8d88cdcf3875
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72319870"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040716"
 ---
 # <a name="how-to-specify-a-service-binding-in-configuration"></a>Nasıl yapılır: Yapılandırmada Hizmet Bağlama Belirtme
 Bu örnekte, temel bir Hesaplayıcı hizmeti için bir `ICalculator` sözleşmesi tanımlanmıştır, hizmet `CalculatorService` sınıfına uygulanır ve sonra uç noktası, hizmetin <xref:System.ServiceModel.BasicHttpBinding> ' yi kullandığı belirtilir. Bu hizmeti yapılandırma yerine kod kullanarak yapılandırma hakkında açıklama için bkz. [nasıl yapılır: kod Içinde hizmet bağlaması belirtme](how-to-specify-a-service-binding-in-code.md).  
@@ -36,7 +36,7 @@ Bu örnekte, temel bir Hesaplayıcı hizmeti için bir `ICalculator` sözleşmes
     > [!NOTE]
     > Hizmet uygulamasının içinde adres veya bağlama bilgisi belirtilmemiş. Ayrıca, bu bilgileri yapılandırma dosyasından getirmek için kodun yazılması gerekmez.  
   
-3. @No__t-1 kullanan `CalculatorService` için bir uç nokta yapılandırmak üzere Web. config dosyası oluşturun.  
+3. <xref:System.ServiceModel.WSHttpBinding>kullanan `CalculatorService` için bir uç nokta yapılandırmak üzere Web. config dosyası oluşturun.  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
@@ -44,19 +44,20 @@ Bu örnekte, temel bir Hesaplayıcı hizmeti için bir `ICalculator` sözleşmes
       <system.serviceModel>  
         <services>  
           <service name=" CalculatorService" >  
+            
+            <!-- Leave the address blank to be populated by default -->
+            <!-- from the hosting environment,in this case IIS, so -->
+            <!-- the address will just be that of the IIS Virtual -->
+            <!-- Directory. -->
+
+            <!-- Specify the binding configuration name for that -->
+            <!-- binding type. This is optional but useful if you -->
+            <!-- want to modify the properties of the binding. -->
+            <!-- The bindingConfiguration name Binding1 is defined -->
+            <!-- below in the bindings element. -->
             <endpoint   
-            <!-- Leave the address blank to be populated by default -->  
-            <!-- from the hosting environment,in this case IIS, so -->  
-            <!-- the address will just be that of the IIS Virtual -->  
-            <!-- Directory. -->  
                 address=""   
-            <!-- Specify the binding type -->  
                 binding="wsHttpBinding"  
-            <!-- Specify the binding configuration name for that -->  
-            <!-- binding type. This is optional but useful if you -->  
-            <!-- want to modify the properties of the binding. -->  
-            <!-- The bindingConfiguration name Binding1 is defined -->  
-            <!-- below in the bindings element. -->  
                 bindingConfiguration="Binding1"  
                 contract="ICalculator" />  
           </service>  
@@ -81,7 +82,7 @@ Bu örnekte, temel bir Hesaplayıcı hizmeti için bir `ICalculator` sözleşmes
   
 ## <a name="to-modify-the-default-values-of-the-binding-properties"></a>Bağlama özelliklerinin varsayılan değerlerini değiştirmek için  
   
-1. @No__t-0 ' ın varsayılan özellik değerlerinden birini değiştirmek için, [\<wsHttpBinding >](../configure-apps/file-schema/wcf/wshttpbinding.md) öğesi içinde yeni bir bağlama yapılandırma adı oluşturun-`<binding name="Binding1">`) ve bu Binding öğesindeki bağlamanın özniteliklerinin yeni değerlerini ayarlayın. Örneğin, varsayılan açık ve kapalı zaman aşımı değerlerini 1 dakikalık ila 2 dakikaya değiştirmek için yapılandırma dosyasına aşağıdakini ekleyin.  
+1. <xref:System.ServiceModel.WSHttpBinding>varsayılan özellik değerlerinden birini değiştirmek için, [\<wshttpbinding >](../configure-apps/file-schema/wcf/wshttpbinding.md) öğesi içinde yeni bir bağlama yapılandırma `<binding name="Binding1">` adı oluşturun ve bu bağlama öğesindeki bağlamanın özniteliklerinin yeni değerlerini ayarlayın. Örneğin, varsayılan açık ve kapalı zaman aşımı değerlerini 1 dakikalık ila 2 dakikaya değiştirmek için yapılandırma dosyasına aşağıdakini ekleyin.  
   
     ```xml  
     <wsHttpBinding>  

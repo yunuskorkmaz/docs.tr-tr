@@ -11,19 +11,19 @@ helpviewer_keywords:
 - namespace [C#]
 - global keyword [C#]
 ms.assetid: 698b5a73-85cf-4e0e-9e8e-6496887f8527
-ms.openlocfilehash: 2aceb51747708b12fb3059b097b72206c78a9d5d
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 97ed24b050f79cf44ffd1c03c213ffcf91758260
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68971240"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73038986"
 ---
 # <a name="-operator-c-reference"></a>:: işleci (C# başvuru)
 
-Ad alanı diğer adı niteleyicisi `::` kullanarak, diğer ad alanının üyelerine erişin. İki tanımlayıcı arasındaki `::` niteleyiciyi kullanırsınız. Sol tanımlayıcı aşağıdaki diğer adların herhangi biri olabilir:
+Ad alanı diğer adı niteleyicisi `::`, diğer ad alanının bir üyesine erişmek için kullanın. `::` niteleyicisi yalnızca iki tanımlayıcı arasında kullanılabilir. Sol tanımlayıcı aşağıdaki diğer adların herhangi biri olabilir:
 
-- [Using diğer adı yönergesi](../keywords/using-directive.md)ile oluşturulmuş bir ad alanı diğer adı:
-  
+- Bir [using diğer adı yönergesi](../keywords/using-directive.md)ile oluşturulmuş bir ad alanı diğer adı:
+
   ```csharp
   using forwinforms = System.Drawing;
   using forwpf = System.Windows;
@@ -35,9 +35,9 @@ Ad alanı diğer adı niteleyicisi `::` kullanarak, diğer ad alanının üyeler
   ```
 
 - [Extern diğer adı](../keywords/extern-alias.md).
-- Genel ad alanı diğer adı olan diğerad.`global` Genel ad alanı, adlandırılmış bir ad alanı içinde bildirilmeyen ad alanlarını ve türleri içeren ad alanıdır. `::` Niteleyici ile kullanıldığında `global` , Kullanıcı tanımlı `global` ad alanı diğer adı olsa bile diğer ad her zaman genel ad alanına başvurur.
-  
-  Aşağıdaki örnek, genel ad `global` alanının bir üyesi olan .net <xref:System> ad alanına erişmek için diğer adı kullanır. Diğer ad olmadan, `MyCompany.MyProduct` ad alanının üyesi olan `System` Kullanıcı tanımlı ad alanına erişilir: `global`
+- Genel ad alanı diğer adı olan `global` diğer adı. Genel ad alanı, adlandırılmış bir ad alanı içinde bildirilmeyen ad alanlarını ve türleri içeren ad alanıdır. `::` niteleyicisi ile kullanıldığında, Kullanıcı tanımlı `global` ad alanı diğer adı olsa da, `global` diğer adı her zaman genel ad alanına başvurur.
+
+  Aşağıdaki örnek, genel ad alanının bir üyesi olan .NET <xref:System> ad alanına erişmek için `global` diğer adını kullanır. `global` diğer adı olmadan, `MyCompany.MyProduct` ad alanının üyesi olan Kullanıcı tanımlı `System` ad alanına erişilir:
 
   ```csharp
   namespace MyCompany.MyProduct.System
@@ -46,18 +46,18 @@ Ad alanı diğer adı niteleyicisi `::` kullanarak, diğer ad alanının üyeler
       {
           static void Main() => global::System.Console.WriteLine("Using global alias");
       }
-  
+
       class Console
       {
           string Suggestion => "Consider renaming this class";
       }
   }
   ```
-  
-  > [!NOTE]
-  > Anahtar sözcüğü, yalnızca `::` niteleyicinin sol tanımlayıcısı olduğunda genel ad alanı diğer adıdır. `global`
 
-Diğer ad alanının üyelerine erişmek için [üye `.` erişim işlecini](member-access-operators.md#member-access-operator-) de kullanabilirsiniz. `.` Ancak işleç Ayrıca bir türdeki üyelere erişmek için de kullanılır. `::` Niteleyici, aynı ada sahip bir tür veya ad alanı olsa bile sol tanımlayıcının her zaman bir ad alanı diğer adına başvurmasını sağlar.
+  > [!NOTE]
+  > `global` anahtar sözcüğü, yalnızca `::` niteleyicisi sol tarafınında olan genel ad alanı diğer adıdır.
+
+Ayrıca, diğer ad alanının bir üyesine erişmek için [üye erişimi `.` işlecini](member-access-operators.md#member-access-operator-) de kullanabilirsiniz. Ancak, `.` işleci bir tür üyesine erişmek için de kullanılır. `::` niteleyicisi, aynı ada sahip bir tür veya ad alanı olsa da, sol taraftaki tanımlayıcının her zaman bir ad alanı diğer adına başvurmasını sağlar.
 
 ## <a name="c-language-specification"></a>C# dili belirtimi
 

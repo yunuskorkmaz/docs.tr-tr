@@ -961,10 +961,10 @@
           href: language-reference/error-messages/bad-file-name-or-number.md
         - name: Hatalı kayıt uzunluğu
           href: language-reference/error-messages/bad-record-length.md
-        - name: 'Bu çağrı beklenmediğinden, çağrı tamamlanmadan geçerli yöntemin çalıştırılması devam eder'
-          href: language-reference/error-messages/because-this-call-is-not-awaited-the-current-method-continues-to-run.md
-        - name: 'Anonim türün bir alanı başka bir alanı başlatmak için kullanıldığından; anonim tür, ifade ağacına dönüştürülemiyor.'
-          href: language-reference/error-messages/cannot-convert-anonymous-type-to-expression-tree.md
+        - name: 'Bu çağrı beklenmediği için, çağrı tamamlanmadan önce geçerli yöntemin yürütülmesine devam ediliyor'
+          href: language-reference/error-messages/bc42358.md
+        - name: Anonim türün bir özelliği başka bir özelliği başlatmak için kullanıldığından tür ifade ağacına dönüştürülemiyor
+          href: language-reference/error-messages/bc36548.md
         - name: ActiveX Bileşeni oluşturulamıyor
           href: language-reference/error-messages/cannot-create-activex-component.md
         - name: 'Temel sınıfı ''System.MarshalByRefObject'' olan ''<name>'' sınıfında bulunan değer türündeki ''<name>'' alanının bir üyesi olduğundan, ''<classname>'' öğesine başvurulamaz'

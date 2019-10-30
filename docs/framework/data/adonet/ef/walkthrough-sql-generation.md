@@ -1,15 +1,15 @@
 ---
-title: 'İzlenecek yol: SQL Üretimi'
+title: 'İzlenecek yol: SQL üretimi'
 ms.date: 03/30/2017
 ms.assetid: 16c38aaa-9927-4f3c-ab0f-81636cce57a3
-ms.openlocfilehash: 09b5a3c2dea5cd0483d617ee8064b41dc19c3374
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 2684acd39ae9651407023e8b5c73f02eadb97547
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70248283"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040509"
 ---
-# <a name="walkthrough-sql-generation"></a>İzlenecek yol: SQL Üretimi
+# <a name="walkthrough-sql-generation"></a>İzlenecek yol: SQL üretimi
 
 Bu konuda, [örnek SAĞLAYıCıDA](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0)SQL oluşturma işleminin nasıl gerçekleştiği gösterilmektedir. Aşağıdaki Entity SQL sorgusu, örnek sağlayıcıda bulunan modeli kullanır:
 
@@ -24,7 +24,7 @@ INNER JOIN (SELECT OD.ProductId, OD.Order.ShipCountry as ShipCountry
 
 Sorgu, sağlayıcıya geçirilen aşağıdaki çıkış komut ağacını üretir:
 
-```
+```output
 DbQueryCommandTree
 |_Parameters
 |_Query : Collection{Record['C1'=Edm.Int32, 'ProductID'=Edm.Int32, 'ProductName'=Edm.String, 'CategoryName'=Edm.String, 'ShipCountry'=Edm.String, 'ProductID1'=Edm.Int32]}
@@ -110,11 +110,11 @@ LEFT OUTER JOIN [dbo].[InternationalOrders] AS [Extent5] ON [Extent4].[OrderID] 
 
 Aşağıdaki şekilde, ziyaretçinin başlangıçtaki boş durumu gösterilmektedir.  Bu konuda, yalnızca izlenecek yol açıklamasında ilgili özellikler gösterilir.
 
-![Diyagram](./media/430180f5-4fb9-4bc3-8589-d566512d9703.gif "430180f5-4fb9-4bc3-8589-d566512d9703")
+![Çizimindeki](./media/430180f5-4fb9-4bc3-8589-d566512d9703.gif "430180f5-4fb9-4bc3-8589-d566512d9703")
 
 Proje düğümü ziyaret edildiğinde, VisitInputExpression kendi girdisi üzerinden çağrılır (Join4), bu, Join4 'ın VisitJoinExpression yöntemi tarafından nasıl ziyaret edildiğini tetikler. Bu en üstteki bir JOIN olduğundan, ıparentajoın yanlış döndürür ve SELECT deyimin yığınına yeni bir Sqlselectdeyimin (SelectStatement0) oluşturulup gönderilir. Ayrıca, sembol tablosuna yeni bir kapsam (scope0) girilir. Birleşimin ilk (sol) girişi ziyaret edildiğinde, ıparentajoın yığınına ' true ' gönderildi. Join4 'in sol girişi olan Join1 'den önce, ziyaretçi durumu, sonraki şekilde gösterildiği gibidir.
 
-![Diyagram](./media/406d4f5f-6166-44ea-8e74-c5001d5d5d79.gif "406d4f5f-6166-44EA-8e74-c5001d5d5d79")
+![Çizimindeki](./media/406d4f5f-6166-44ea-8e74-c5001d5d5d79.gif "406d4f5f-6166-44ea-8e74-c5001d5d5d79")
 
 Join4 üzerinden bir JOIN yöntemi çağrıldığında, ısparentajoın değeri true 'dur, bu nedenle geçerli SELECT ifadesini yeniden kullanır SelectStatement0. Yeni bir kapsam girilmiştir (kapsam1). Sol alt öğesini ziyaret etmeden önce, Extent1, Isparentajoın yığınına başka bir doğru gönderilir.
 
@@ -122,27 +122,27 @@ Extent1 ziyaret edildiğinde, ısparentajoın doğru döndürdüğünden, "[dbo]
 
 Join1 öğesinin doğru girişinden önce, SelectStatement0 From yan tümcesine "LEFT OUTER JOIN" eklenir. Doğru giriş bir tarama ifadesi olduğundan, ısparentajoın yığınına doğru yeniden gönderilir. Sonraki şekilde gösterildiği gibi doğru girişi ziyaret etmeden önce durum.
 
-![Diyagram](./media/ca62c31b-7ff6-4836-b209-e16166304fdc.gif "ca62c31b-7ff6-4836-B209-e16166304fdc")
+![Çizimindeki](./media/ca62c31b-7ff6-4836-b209-e16166304fdc.gif "ca62c31b-7ff6-4836-b209-e16166304fdc")
 
 Doğru giriş, sol girişle aynı şekilde işlenir. Doğru girişi ziyaret ettikten sonra durum, sonraki şekilde gösterilmiştir.
 
-![Diyagram](./media/cd2afa99-7256-4c63-aaa9-c2d13f18a3d8.gif "cd2afa99-7256-4c63-aaa9-c2d13f18a3d8")
+![Çizimindeki](./media/cd2afa99-7256-4c63-aaa9-c2d13f18a3d8.gif "cd2afa99-7256-4c63-aaa9-c2d13f18a3d8")
 
-Next "false", ıparentajoın yığınına ve JOIN koşulu var (Extent1) üzerinden gönderilir. CategoryID = = var (Extent2). CategoryID işlenir. Sembol tablosunda bir arama yapıldıktan sonra var \<(Extent1), symbol_Extent1 > olarak çözümlenir. Örnek, var olan (Extent1) işleminin bir sonucu olarak basit bir simgeye çözümlendiğini. CategoryID, symbol1 > olan \<bir SqlBuilder. " CategoryID "döndürülür. Benzer şekilde, karşılaştırmanın diğer tarafı işlenir ve JOIN koşulunu ziyaret eden sonuç SelectStatement1 FROM yan tümcesine eklenir ve "false" değeri Isparentajoın yığınından alınır.
+Next "false", ıparentajoın yığınına ve JOIN koşulu var (Extent1) üzerinden gönderilir. CategoryID = = var (Extent2). CategoryID işlenir. Sembol tablosunda bir arama sonrasında var (Extent1) \<symbol_Extent1 > olarak çözümlenir. Örnek, var olan (Extent1) işleminin bir sonucu olarak basit bir simgeye çözümlendiğini. CategoryID, \<symbol1 > olan bir SqlBuilder. " CategoryID "döndürülür. Benzer şekilde, karşılaştırmanın diğer tarafı işlenir ve JOIN koşulunu ziyaret eden sonuç SelectStatement1 FROM yan tümcesine eklenir ve "false" değeri Isparentajoın yığınından alınır.
 
 Bununla birlikte, Join1 tamamen işlenir ve bir kapsam sembol tablosundan alınır.
 
-Denetim, Join1 'in üst öğesi olan Join4 işleme döner. Alt öğe SELECT ifadesini yeniden kullandığından, Join1 kapsamları tek bir JOIN simgesiyle \<joinSymbol_Join1 > ile değiştirilmiştir. Ayrıca, Join1 ile \<joinSymbol_Join1 > ilişkilendirmek için sembol tablosuna yeni bir giriş eklenir.
+Denetim, Join1 'in üst öğesi olan Join4 işleme döner. Alt öğe SELECT ifadesini yeniden kullandığından, Join1 kapsamları \<joinSymbol_Join1 > tek bir JOIN simgesiyle değiştirilmiştir. Ayrıca, Join1 \<joinSymbol_Join1 > ilişkilendirmek için sembol tablosuna yeni bir giriş eklenir.
 
 İşlenecek sonraki düğüm, Join3 'in ikinci alt öğesidir. Doğru bir alt öğe olduğundan, ısparentajoın yığınına "false" gönderilir. Bu noktadaki ziyaretçi durumu bir sonraki şekilde gösterilmiştir.
 
-![Diyagram](./media/1ec61ed3-fcdd-4649-9089-24385be7e423.gif "1ec61ed3-fcdd-4649-9089-24385be7e423")
+![Çizimindeki](./media/1ec61ed3-fcdd-4649-9089-24385be7e423.gif "1ec61ed3-fcdd-4649-9089-24385be7e423")
 
-Join3 için Isparentajoın yanlış döndürür ve yeni bir Sqlselectdeyimin (SelectStatement1) başlaması ve yığın üzerine itilmesi gerekir. İşleme önceki birleşimlerle yaptığı için devam eder, yığına yeni bir kapsam gönderilir ve alt öğeler işlenir. Sol alt öğe bir kapsam (Extent3) ve sağ alt öğe de yeni bir Sqlselectdeyimin başlaması gereken bir birleşimdir (Join2): SelectStatement2. Join2 üzerindeki alt öğeler de modellerdir ve SelectStatement2 içinde toplanır.
+Join3 için Isparentajoın yanlış döndürür ve yeni bir Sqlselectdeyimin (SelectStatement1) başlaması ve yığın üzerine itilmesi gerekir. İşleme önceki birleşimlerle yaptığı için devam eder, yığına yeni bir kapsam gönderilir ve alt öğeler işlenir. Sol alt öğe bir kapsam (Extent3) ve sağ alt öğe de yeni bir Sqlselectdeyimin başlaması gereken bir JOIN (Join2). Join2 üzerindeki alt öğeler de modellerdir ve SelectStatement2 içinde toplanır.
 
 Join2 sonrasında ziyaretçi durumu, ancak işlem sonrası (ProcessJoinInputResult) yapıldıktan sonra bir sonraki şekilde gösterilir:
 
-![Diyagram](./media/7510346f-8b09-4c99-b411-40af239c3c4d.gif "7510346f-8B09-4c99-b411-40af239c3c4d")
+![Çizimindeki](./media/7510346f-8b09-4c99-b411-40af239c3c4d.gif "7510346f-8B09-4c99-b411-40af239c3c4d")
 
 Önceki şekilde SelectStatement2, yığın dışına ayrıldığından, ancak henüz üst öğe tarafından işlenmediği için serbest bir kayan olarak gösterilir. Bunun üst öğenin bölümüne eklenmesi gerekir, ancak SELECT yan tümcesi olmadan tam bir SQL deyimi değildir. Bu nedenle, bu noktada varsayılan sütunlar (girişleri tarafından üretilen tüm sütunlar), select listesine AddDefaultColumns yöntemine göre eklenir. AddDefaultColumns, FromExtents içindeki sembolleri yineler ve her sembol için kapsamda getirilen tüm sütunları ekler. Basit bir sembol için, eklenecek tüm özellikleri almak için sembol türüne bakar. Ayrıca, AllColumnNames sözlüğünü sütun adlarıyla doldurur. Tamamlanan SelectStatement2, SelectStatement1 FROM yan tümcesine eklenir.
 
@@ -150,17 +150,17 @@ Daha sonra, Join2 temsil etmek için yeni bir JOIN simgesi oluşturulur, iç iç
 
 Sonraki şekilde DbPropertyExpression "var (Join2) öncesindeki ziyaretçinin durumu gösterilmektedir. Extent4. OrderID "işlenir.
 
-"Var (Join2) öğesini düşünün. Extent4. OrderID "ziyaret edilir. Birincisi, örnek özelliği "var (Join2). Extent4 ", başka bir DbPropertyExpression olan ve önce" var (Join2) "örneğini ziyaret eden bir kez ziyaret edildi. Sembol tablosundaki en üstteki kapsamda, "Join2", joinSymbol_join2 > olarak \<çözümlenir. DbPropertyExpression işleme "var (Join2) için ziyaret yöntemi içinde. Extent4 "örnek ziyaret edildiğinde ve düzleştirme gerektiğinde bir JOIN sembolünün döndürülmediğine dikkat edin.
+"Var (Join2) öğesini düşünün. Extent4. OrderID "ziyaret edilir. Birincisi, örnek özelliği "var (Join2). Extent4 ", başka bir DbPropertyExpression olan ve önce" var (Join2) "örneğini ziyaret eden bir kez ziyaret edildi. Sembol tablosundaki en üstteki kapsamda, "Join2" \<joinSymbol_join2 > olarak çözümlenir. DbPropertyExpression işleme "var (Join2) için ziyaret yöntemi içinde. Extent4 "örnek ziyaret edildiğinde ve düzleştirme gerektiğinde bir JOIN sembolünün döndürülmediğine dikkat edin.
 
-İç içe bir JOIN olduğundan, JOIN sembolünün NameToExtent sözlüğünde "Extent4" özelliğini arar, bunu \<symbol_Extent4 > çözün ve yeni bir SymbolPair döndürür (\<joinSymbol_join2 >, \<symbol_Extent4 >). "Var (Join2) örneğinin işlenmesinden bir sembol çifti döndürüldüğünden. Extent4. OrderID "," OrderID "özelliği, temsil ettiği kapsamın sütunlarının bir listesini içeren, bu\<sembol çiftinin (symbol_Extent4 >) ColumnPart öğesinden çözümlenir. So, "var (Join2). Extent4. OrderID, { \<joinSymbol_Join2 >, ".", \<symbol_OrderID >} olarak çözümlendi.
+İç içe bir JOIN olduğundan, JOIN sembolünün NameToExtent sözlüğünde "Extent4" özelliğini arar, bu özelliği \<symbol_Extent4 > olarak çözümleyebilir ve yeni bir SymbolPair (\<joinSymbol_join2 >, \<symbol_Extent4 >) döndürüyor. "Var (Join2) örneğinin işlenmesinden bir sembol çifti döndürüldüğünden. Extent4. OrderID "," OrderID "özelliği, temsil ettiği kapsamın sütunlarının bir listesini içeren, bu sembol çiftinin (\<symbol_Extent4 >) ColumnPart öğesinden çözümlenir. So, "var (Join2). Extent4. OrderID, {\<joinSymbol_Join2 >, ".", \<symbol_OrderID >} olarak çözümlendi.
 
 Join4 'in JOIN koşulu benzer şekilde işlenir. Denetim, en üstteki proje işlenen VisitInputExpression yöntemine döner. Döndürülen SelectStatement0 'in FromExtents ' ye bakarak, giriş bir JOIN olarak tanımlanır ve özgün uzantıları kaldırır ve yalnızca JOIN simgesiyle yeni bir uzantı ile değiştirir. Sembol tablosu da güncellenir ve projenin projeksiyon bölümü işlenir. Özelliklerin çözümlenmesi ve JOIN kapsamlarının düzleştirilmesi daha önce açıklanmıştır.
 
-![Diyagram](./media/9456d6a9-ea2e-40ae-accc-a10e18e28b81.gif "9456d6a9-ea2e-40AE-ACCC-a10e18e28b81")
+![Çizimindeki](./media/9456d6a9-ea2e-40ae-accc-a10e18e28b81.gif "9456d6a9-ea2e-40AE-ACCC-a10e18e28b81")
 
 Son olarak, aşağıdaki Sqlselectdeyimin oluşturulması gerekir:
 
-```
+```sql
 SELECT:
   "1", " AS ", "[C1]",
   <symbol_Extent1>, ".", "[ProductID]", " AS ", "[ProductID]",
@@ -198,7 +198,7 @@ FROM: "[dbo].[Orders]", " AS ", <symbol_Extent4>,
 
 İkinci aşama semboller için gerçek adlar üretir ve yalnızca "OrderID" adlı sütunları temsil eden simgelere odaklanıyoruz, bu durumda bir çakışma çözümlenmesi gerekir. Bunlar Sqlselectdeyimde vurgulanır. Şekilde kullanılan son eklerin yalnızca bunların farklı örnekler olduğunu vurgulayıp, bu aşamada son adlarının (yani özgün adların farklı biçimde) henüz atanmadığını unutmayın.
 
-Yeniden adlandırılması \<gereken ilk sembol symbol_OrderID >. Yeni adı "OrderID1" olarak atanır, 1 "OrderID" için son kullanılan sonek olarak işaretlenir ve sembol yeniden adlandırmadan önce işaretlenir. Sonra, \<symbol_OrderID_2 > ilk kullanımı bulunur. Bu, bir sonraki kullanılabilir son eki ("OrderID2") kullanacak şekilde yeniden adlandırılamayan olarak işaretlenir ve daha sonra bir dahaki sefer kullanıldığında yeniden adlandırılamayan olarak işaretlenir. Bu, symbol_OrderID_3 > \<için yapılır.
+Yeniden adlandırılması gereken ilk sembol \<symbol_OrderID >. Yeni adı "OrderID1" olarak atanır, 1 "OrderID" için son kullanılan sonek olarak işaretlenir ve sembol yeniden adlandırmadan önce işaretlenir. Sonra, \<symbol_OrderID_2 > ilk kullanımı bulunur. Bu, bir sonraki kullanılabilir son eki ("OrderID2") kullanacak şekilde yeniden adlandırılamayan olarak işaretlenir ve daha sonra bir dahaki sefer kullanıldığında yeniden adlandırılamayan olarak işaretlenir. Bu, \<symbol_OrderID_3 > için yapılır.
 
 İkinci aşamanın sonunda, son SQL açıklaması oluşturulur.
 

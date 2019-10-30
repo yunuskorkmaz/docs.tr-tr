@@ -30,6 +30,8 @@
         - name: Film önerme (matrisi çarpanlarına ayırma)
           href: tutorials/movie-recommendation.md
         - name: Görüntü Sınıflandırması (öğrenme aktarımı)
+          href: tutorials/image-classification-api-transfer-learning.md
+        - name: Görüntüleri sınıflandırma (model oluşturma)
           href: tutorials/image-classification.md
         - name: Ürün Satış Analizi (anomali algılama)
           href: tutorials/sales-anomaly-detection.md
@@ -93,6 +95,8 @@
               href: how-to-guides/serve-model-web-api-ml-net.md
     - name: Araçlar
       items:
+        - name: Model Oluşturucu’ya veri yükleme
+          href: how-to-guides/load-data-model-builder.md
         - name: Model Oluşturucu’yu yükleme
           href: how-to-guides/install-model-builder.md
         - name: CLI’yı yükleme

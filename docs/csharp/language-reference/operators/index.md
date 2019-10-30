@@ -9,12 +9,12 @@ helpviewer_keywords:
 - operator associativity [C#]
 - expressions [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 7d69528804cf0cee1302fd62fa2301e06076897a
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 78233b9a18f4369ebb086f2016af3f945b6a654a
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72579199"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039010"
 ---
 # <a name="c-operators-c-reference"></a>C#İşleçler (C# başvuru)
 
@@ -57,7 +57,7 @@ Aşağıdaki tabloda en düşük önceliğe C# göre başlayan işleçler listel
 | [x &#124; &#124; y](boolean-logical-operators.md#conditional-logical-or-operator-) | Koşullu VEYA |
 | [x?? Iz](null-coalescing-operator.md) | Null birleşim işleci |
 | [,? t: f](conditional-operator.md) | Koşullu işleç |
-| [x = y](assignment-operator.md), [x + = y](arithmetic-operators.md#compound-assignment), [x-= y](arithmetic-operators.md#compound-assignment), [x * = y](arithmetic-operators.md#compound-assignment), x [/= y](arithmetic-operators.md#compound-assignment), [x% = y](arithmetic-operators.md#compound-assignment), x [& = y](boolean-logical-operators.md#compound-assignment), [x &#124;= y](boolean-logical-operators.md#compound-assignment), [x ^ =](boolean-logical-operators.md#compound-assignment)y, [x < < = y](bitwise-and-shift-operators.md#compound-assignment), [x > > = y](bitwise-and-shift-operators.md#compound-assignment), [x?? = y](null-coalescing-operator.md), [4](lambda-operator.md) | Atama ve lambda bildirimi |
+| [x = y](assignment-operator.md), [x + = y](arithmetic-operators.md#compound-assignment), [x-= y](arithmetic-operators.md#compound-assignment), [x * = y](arithmetic-operators.md#compound-assignment), x [/= y](arithmetic-operators.md#compound-assignment), [x% = y](arithmetic-operators.md#compound-assignment), x [& = y](boolean-logical-operators.md#compound-assignment), [x &#124;= y](boolean-logical-operators.md#compound-assignment), [x ^ =](boolean-logical-operators.md#compound-assignment)y, [x < < = y](bitwise-and-shift-operators.md#compound-assignment), [x > > = y](bitwise-and-shift-operators.md#compound-assignment), [x?? = y](null-coalescing-operator.md), [=>](lambda-operator.md) | Atama ve lambda bildirimi |
 
 ## <a name="operator-associativity"></a>Operatör ilişkilendirilebilirliği
 
@@ -85,7 +85,7 @@ Operatör önceliği ve ilişkilendirilebilirliği ile ilgisiz, bir ifadede işl
 |`a / b + c * d`|a, b,/, c, d, *, +|
 |`a / (b + c) * d`|a, b, c, +,/, d, *|
 
-Genellikle, tüm işleç işlenenleri değerlendirilir. Bazı işleçler, işlenenleri koşullu olarak değerlendirir. Diğer bir deyişle, bu tür bir işlecin ilk işleneninin değeri, (veya hangi) diğer işlenenleri değerlendirileceğini tanımlar. Bu işleçler, Koşullu mantıksal [ve (`&&`)](boolean-logical-operators.md#conditional-logical-and-operator-) ve [ya da (`||`)](boolean-logical-operators.md#conditional-logical-or-operator-) işleçleridir, [null birleşim işleçleri `??` ve `??=`](null-coalescing-operator.md), [null koşullu işleçler `?.` ve `?[]`](member-access-operators.md#null-conditional-operators--and-)ve [ koşullu işleç 1](conditional-operator.md). Daha fazla ayrıntı için her işlecin açıklamasına bakın.
+Genellikle, tüm işleç işlenenleri değerlendirilir. Ancak, bazı işleçler işlenenleri koşullu olarak değerlendirir. Diğer bir deyişle, bu tür bir işlecin en sol işleneninin değeri, (veya hangi) diğer işlenenleri değerlendirileceğini tanımlar. Bu işleçler, Koşullu mantıksal [ve (`&&`)](boolean-logical-operators.md#conditional-logical-and-operator-) ve [ya da (`||`)](boolean-logical-operators.md#conditional-logical-or-operator-) işleçleridir, [null birleşim işleçleri `??` ve `??=`](null-coalescing-operator.md), [null koşullu işleçler `?.` ve `?[]`](member-access-operators.md#null-conditional-operators--and-)ve [ koşullu işleç `?:`](conditional-operator.md). Daha fazla bilgi için her işlecin açıklamasına bakın.
 
 ## <a name="c-language-specification"></a>C# dili belirtimi
 

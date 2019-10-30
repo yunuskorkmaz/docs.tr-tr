@@ -2,12 +2,12 @@
 title: İç İçe Geçmiş Öğeler için Belirtilen İlişkileri Eşleme
 ms.date: 03/30/2017
 ms.assetid: 24a2d3e5-4af7-4f9a-ab7a-fe6684c9e4fe
-ms.openlocfilehash: e8cdf73b6277abdaab1256ca87e615a5e25e7336
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 138fbbc3ccaa90096a15fa87544e5c29f66beb08
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70786092"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040056"
 ---
 # <a name="map-relations-specified-for-nested-elements"></a>İç İçe Geçmiş Öğeler için Belirtilen İlişkileri Eşleme
 Şemada, şemadaki iki öğe arasındaki eşlemeyi açıkça belirtmek için bir **msdata: ilişki** ek açıklaması bulunabilir. **Msdata: Relationship** içinde belirtilen iki öğe şemada iç içe bulunabilir, ancak olması gerekmez. Eşleme işlemi, iki sütun arasında birincil anahtar/yabancı anahtar ilişkisi oluşturmak için şemadaki **msdata: Relationship** kullanır.  
@@ -52,18 +52,18 @@ ms.locfileid: "70786092"
 </xs:schema>  
 ```  
   
- XML Şeması eşleme işlemi içinde <xref:System.Data.DataSet>aşağıdakileri oluşturur:  
+ XML Şeması eşleme işlemi <xref:System.Data.DataSet>aşağıdakileri oluşturur:  
   
 - Bir **Order** ve **OrderDetail** tablosu.  
   
-    ```  
+    ```text  
     Order(OrderNumber, EmpNumber)  
     OrderDetail(OrderNo, ItemNo)  
     ```  
   
 - **Order** ve **OrderDetail** tabloları arasındaki ilişki. **Order** ve **OrderDetail** öğeleri şemada iç içe yerleştirilmiş olduğundan, bu ilişkinin **iç içe geçmiş** özelliği **true** olarak ayarlanır.  
   
-    ```  
+    ```text  
     ParentTable: Order  
     ParentColumns: OrderNumber   
     ChildTable: OrderDetail  

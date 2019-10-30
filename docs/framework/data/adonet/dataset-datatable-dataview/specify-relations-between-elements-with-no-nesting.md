@@ -2,12 +2,12 @@
 title: İç İçe Yerleştirme İçermeyen Öğeler Arasındaki İlişkileri Belirtme
 ms.date: 03/30/2017
 ms.assetid: e31325da-7691-4d33-acf4-99fccca67006
-ms.openlocfilehash: d6cd6f04a9fdeafe7c419b40023af6c71d553ac7
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 3aa9976ccde426eeda1d869164409c5235a629fe
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70784283"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040046"
 ---
 # <a name="specify-relations-between-elements-with-no-nesting"></a>İç İçe Yerleştirme İçermeyen Öğeler Arasındaki İlişkileri Belirtme
 Öğeler iç içe olmadığında dolaylı ilişkiler oluşturulmaz. Ancak, **msdata: Relationship** ek açıklaması kullanılarak iç içe olmayan öğeler arasındaki ilişkileri açıkça belirtebilirsiniz.  
@@ -53,9 +53,9 @@ ms.locfileid: "70784283"
 </xs:schema>  
 ```  
   
- XML şeması tanım dili (xsd) şema eşleme işlemi, bir <xref:System.Data.DataSet> **Order** ve **OrderDetail** tabloları ve aşağıda gösterildiği gibi bu iki tablo arasında belirtilen bir ilişki oluşturur.  
+ XML şeması tanım dili (XSD) şema eşleme işlemi, **Order** ve **OrderDetail** tabloları ve aşağıda gösterildiği gibi bu iki tablo arasında belirtilen bir ilişki içeren bir <xref:System.Data.DataSet> oluşturur.  
   
-```  
+```text  
 RelationName: OrdOrderDetailRelation  
 ParentTable: Order  
 ParentColumns: OrderNumber   

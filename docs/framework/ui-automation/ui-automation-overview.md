@@ -6,25 +6,25 @@ helpviewer_keywords:
 - user interface, see UI
 - accessibility, UI automation
 ms.assetid: 65847654-9994-4a9e-b36d-2dd5d998770b
-ms.openlocfilehash: 4a88cf077c061746f9bc9f4aa0122d2f09b6fbd7
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 6e5501b152c4662f1456786ba51fd3f25923b34c
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71042272"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040540"
 ---
 # <a name="ui-automation-overview"></a>UI Otomasyonuna Genel Bakış
 > [!NOTE]
-> Bu belge, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] <xref:System.Windows.Automation> ad alanında tanımlanan yönetilen sınıfları kullanmak isteyen .NET Framework geliştiricilere yöneliktir. Hakkında [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]en son bilgiler için bkz [. Windows Otomasyonu API 'si: UI Otomasyonu](https://go.microsoft.com/fwlink/?LinkID=156746).  
+> Bu belge, <xref:System.Windows.Automation> ad alanında tanımlanan yönetilen [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] sınıflarını kullanmak isteyen .NET Framework geliştiricilere yöneliktir. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]hakkında en son bilgiler için bkz. [Windows Otomasyonu API: UI Otomasyonu](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
- [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)][!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)], tarafından desteklenen [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]tüm işletim sistemlerinde kullanılabilen yeni erişilebilirlik çerçevesidir.  
+ [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)], [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]destekleyen tüm işletim sistemlerinde bulunan Microsoft Windows için yeni erişilebilirlik çerçevesidir.  
   
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], Masaüstü üzerindeki birçok [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] öğeye programlı erişim sağlar ve ekran okuyucular gibi yardımcı teknoloji ürünlerinin, son [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] kullanıcılar [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] hakkında bilgi sağlamasına ve tarafından şu şekilde değişiklik yapmasına olanak tanır Standart giriş. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]Ayrıca otomatik test betiklerinin ile [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]etkileşime geçmesini sağlar.  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], masaüstündeki en [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] öğelere programlı erişim sağlar ve ekran okuyucular gibi yardımcı teknoloji ürünlerinin son kullanıcılara [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] hakkında bilgi sağlamasına ve [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] standart dışında bir şekilde işlemesini sağlamaya olanak tanır girişinin. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Ayrıca otomatik test betiklerinin [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]etkileşime geçmesini sağlar.  
   
 > [!NOTE]
-> [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]farklı **Çalıştır** komutu aracılığıyla farklı kullanıcılar tarafından başlatılan süreçler arasındaki iletişimi etkinleştirmez.  
+> [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] farklı kullanıcılar tarafından başlatılan işler arasındaki iletişimi farklı **Çalıştır** komutuyla etkinleştirmez.  
   
- UI Otomasyonu istemci uygulamaları birden çok çerçeve üzerinde çalışabilecekleri güvenlerle yazılabilir. Çekirdek [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , çerçeveler üzerinde çeşitli [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]parçalar içeren herhangi bir farklılık vardır. Örneğin `Content` , [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] bir [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] düğmenin özelliği, `Caption` bir [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] düğmenin özelliği ve `ALT` HTML görüntüsünün özelliği, görünümdeki tek bir özelliğe <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.Name%2A>eşlenir.  
+ UI Otomasyonu istemci uygulamaları birden çok çerçeve üzerinde çalışabilecekleri güvenlerle yazılabilir. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] çekirdek, çerçeveler içindeki çeşitli [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]parçalara ayıran her türlü farkı maskeler. Örneğin, bir [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] düğmesinin `Content` özelliği, bir [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] düğmesinin `Caption` özelliği ve bir HTML görüntüsünün `ALT` özelliği <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.Name%2A>görünümünde [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tek bir özelliğe eşlenir.  
   
 UI Otomasyonu, .NET Framework çalıştıran desteklenen Windows işletim sistemlerinde tam işlevsellik sağlar (.NET Core 3,0 ile başlayan [.NET Framework sistem gereksinimlerini](../get-started/system-requirements.md) veya .NET Core sürümlerini inceleyin.  
   
@@ -36,12 +36,12 @@ UI Otomasyonu, .NET Framework çalıştıran desteklenen Windows işletim sistem
   
 |Bileşen|Açıklama|  
 |---------------|-----------------|  
-|Sağlayıcı API 'SI (UIAutomationProvider. dll ve UIAutomationTypes. dll)|UI Otomasyon sağlayıcıları, öğeler hakkında [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] bilgi sağlayan ve programlı girişe yanıt veren nesneler tarafından uygulanan bir arabirim tanımları kümesi.|  
-|İstemci API 'SI (UIAutomationClient. dll ve UIAutomationTypes. dll)|Yönetilen kod için UI Otomasyonu istemci uygulamalarının, [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] ve denetimlerine giriş göndermek için ve hakkında bilgi almasını sağlayan türler kümesi.|  
-|UIAutomationCore. dll|Sağlayıcılar ve istemciler arasındaki iletişimi işleyen temel [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] alınan kod (bazen çekirdek olarak adlandırılır).|  
-|UIAutomationClientSideProviders. dll|Standart eski denetimler için UI Otomasyon sağlayıcıları kümesi. ([!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] denetimleri için [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]yerel destek vardır.) Bu destek, istemci uygulamaları için otomatik olarak kullanılabilir.|  
+|Sağlayıcı API 'SI (UIAutomationProvider. dll ve UIAutomationTypes. dll)|UI Otomasyon sağlayıcıları tarafından uygulanan, [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] öğeleri hakkında bilgi sağlayan ve programlı girişe yanıt veren nesneleri içeren bir arabirim tanımları kümesi.|  
+|İstemci API 'SI (UIAutomationClient. dll ve UIAutomationTypes. dll)|Kullanıcı Arabirimi Otomasyonu istemci uygulamalarının [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] hakkında bilgi almasını ve denetimlere giriş göndermesini sağlayan yönetilen kod türleri kümesi.|  
+|UIAutomationCore. dll|Sağlayıcılar ve istemciler arasındaki iletişimi işleyen temel alınan kod (bazen [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] çekirdek olarak adlandırılır).|  
+|UIAutomationClientSideProviders. dll|Standart eski denetimler için UI Otomasyon sağlayıcıları kümesi. ([!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] denetimlerinin [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]için yerel desteği vardır.) Bu destek, istemci uygulamaları için otomatik olarak kullanılabilir.|  
   
- Yazılım geliştiricinin perspektifinden, kullanmanın [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]iki yolu vardır: özel denetimler (sağlayıcı API 'sini kullanarak) için destek oluşturmak ve [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] öğelerle iletişim kurmak için [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] çekirdeği kullanan uygulamalar oluşturmak (kullanarak istemci API 'SI). Odağunuza bağlı olarak, belgenin farklı bölümlerine başvurmalısınız. Kavramlar hakkında daha fazla bilgi edinebilir ve aşağıdaki bölümlerde pratik nasıl yapılır bilgisi elde edebilirsiniz.  
+ Yazılım geliştiricisi açısından, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]kullanmanın iki yolu vardır: özel denetimler (sağlayıcı API 'sini kullanarak) için destek oluşturmak ve [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] öğeleriyle iletişim kurmak için [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] çekirdeğini kullanan uygulamalar oluşturmak (istemci API 'sini kullanarak). Odağunuza bağlı olarak, belgenin farklı bölümlerine başvurmalısınız. Kavramlar hakkında daha fazla bilgi edinebilir ve aşağıdaki bölümlerde pratik nasıl yapılır bilgisi elde edebilirsiniz.  
   
 |Bölüm|İlgili konular|Hedef Kitle|  
 |-------------|--------------------|--------------|  
@@ -52,27 +52,27 @@ UI Otomasyonu, .NET Framework çalıştıran desteklenen Windows işletim sistem
 |[UI Otomasyonu Metin Deseni](ui-automation-text-pattern.md)|Metin denetim düzeninin sağlayıcılar tarafından nasıl uygulanması gerektiği ve istemciler için hangi işlevlerin kullanılabildiği hakkında bilgiler.|Tüm.|  
 |[UI Otomasyonu Denetim Türleri](ui-automation-control-types.md)|Farklı denetim türleri tarafından desteklenen özellikler ve Denetim desenleri hakkında bilgiler.|Tüm.|  
   
- Aşağıdaki tabloda ad alanları [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , bunları içeren dll 'ler ve bunları kullanan izleyiciler listelenmektedir.  
+ Aşağıdaki tabloda [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ad alanları, bunları içeren dll 'Ler ve bunları kullanan izleyiciler listelenmektedir.  
   
 |Ad Alanı|Başvurulan DLL 'Ler|Hedef Kitle|  
 |---------------|---------------------|--------------|  
-|<xref:System.Windows.Automation>|Uıautomationclientuiautomationtypes|UI Otomasyonu istemci geliştiricileri; nesneleri bulmak <xref:System.Windows.Automation.AutomationElement> , [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] olaylara kaydolmak ve denetim desenleriyle [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] çalışmak için kullanılır.|  
-|<xref:System.Windows.Automation.Provider>|Uıautomationprovideruıautomationtypes|Dışındaki [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)]çerçeveler için UI Otomasyon sağlayıcılarının geliştiricileri.|  
-|<xref:System.Windows.Automation.Text>|Uıautomationclientuiautomationtypes|Dışındaki [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)]çerçeveler için UI Otomasyon sağlayıcılarının geliştiricileri, TextModel denetim düzenini uygulamak için kullanılır.|  
-|<xref:System.Windows.Automation.Peers>|PresentationFramework|İçin [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)]UI Otomasyon sağlayıcılarının geliştiricileri.|  
+|<xref:System.Windows.Automation>|Uıautomationclientuiautomationtypes|UI Otomasyonu istemci geliştiricileri; <xref:System.Windows.Automation.AutomationElement> nesneleri bulmak, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] olaylara kaydolmak ve [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] denetim desenleriyle çalışmak için kullanılır.|  
+|<xref:System.Windows.Automation.Provider>|Uıautomationprovideruıautomationtypes|[!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)]dışındaki çerçeveler için UI Otomasyon sağlayıcılarının geliştiricileri.|  
+|<xref:System.Windows.Automation.Text>|Uıautomationclientuiautomationtypes|[!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)]dışındaki çerçeveler için UI Otomasyon sağlayıcılarının geliştiricileri TextModel denetim düzenini uygulamak için kullanılır.|  
+|<xref:System.Windows.Automation.Peers>|PresentationFramework|[!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)]için UI Otomasyon sağlayıcılarının geliştiricileri.|  
   
 <a name="UI_Automation_Model"></a>   
 ## <a name="ui-automation-model"></a>UI Otomasyon modeli  
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]' nin her parçasını, [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] istemci uygulamalarının bir <xref:System.Windows.Automation.AutomationElement>olarak gösterir. Öğeler, kök öğe olarak masaüstüne sahip bir ağaç yapısında bulunur. İstemciler ağacın Ham görünümünü denetim görünümü veya içerik görünümü olarak filtreleyebilir. Uygulamalar, özel görünümler de oluşturabilir.  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] her parçayı istemci uygulamalarına <xref:System.Windows.Automation.AutomationElement>olarak sunar. Öğeler, kök öğe olarak masaüstüne sahip bir ağaç yapısında bulunur. İstemciler ağacın Ham görünümünü denetim görünümü veya içerik görünümü olarak filtreleyebilir. Uygulamalar, özel görünümler de oluşturabilir.  
   
- <xref:System.Windows.Automation.AutomationElement>nesneler, [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] temsil ettikleri öğelerin ortak özelliklerini açığa çıkarır. Bu özelliklerden biri, temel görünümünü ve işlevselliğini tek tanınabilir bir varlık olarak tanımlayan denetim türüdür: Örneğin, bir düğme veya onay kutusu.  
+ <xref:System.Windows.Automation.AutomationElement> nesneler, temsil ettikleri [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] öğelerin ortak özelliklerini kullanıma sunar. Bu özelliklerden biri, temel görünümünü ve işlevselliğini tek tanınabilir bir varlık olarak tanımlayan denetim türüdür: Örneğin, bir düğme veya onay kutusu.  
   
  Ayrıca, öğeler denetim türlerine özgü özellikler sağlayan denetim düzenlerini kullanıma sunar. Denetim desenleri, istemcilerin öğe hakkında daha fazla bilgi almasını ve giriş sağlamasını sağlayan yöntemleri de kullanıma sunar.  
   
 > [!NOTE]
 > Denetim türleri ve Denetim desenleri arasında bire bir yazışmalar vardır. Bir denetim deseni birden çok denetim türü tarafından desteklenebilir ve bir denetim, her biri davranışının farklı yönlerini sunan birden fazla denetim desenini destekleyebilir. Örneğin, bir Birleşik giriş kutusunda en az iki denetim deseni vardır: genişletme ve daraltma yeteneğini temsil eden bir diğeri ise seçim mekanizmasını temsil eder. Ayrıntılar için bkz. [UI Otomasyonu Denetim türleri](ui-automation-control-types.md).  
   
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]Ayrıca olaylar aracılığıyla istemci uygulamalarına bilgiler sağlar. Aksine [!INCLUDE[TLA2#tla_winevents](../../../includes/tla2sharptla-winevents-md.md)] ,[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] olaylar bir yayın mekanizmasına bağlı değildir. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]istemciler belirli olay bildirimlerini kaydeder ve belirli [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] özellikleri ve denetim deseninin bilgilerini olay işleyicilerine geçirilmesini isteyebilir. Ayrıca, bir [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] olay, onu oluşturan öğesine bir başvuru içerir. Sağlayıcılar, herhangi bir istemcinin dinleme yapıp yapmayacağı temelinde olayları seçmeli olarak yükselterek performansı iyileştirebilir.  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Ayrıca olaylar aracılığıyla istemci uygulamalarına bilgiler sağlar. [!INCLUDE[TLA2#tla_winevents](../../../includes/tla2sharptla-winevents-md.md)]farklı olarak, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] olaylar bir yayın mekanizmasına bağlı değildir. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] istemcileri belirli olay bildirimlerini kaydeder ve belirli [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] özellikleri ve denetim deseninin bilgilerini olay işleyicilerine geçirilmesini isteyebilir. Ayrıca, bir [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] olayı, onu oluşturan öğeye bir başvuru içerir. Sağlayıcılar, herhangi bir istemcinin dinleme yapıp yapmayacağı temelinde olayları seçmeli olarak yükselterek performansı iyileştirebilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

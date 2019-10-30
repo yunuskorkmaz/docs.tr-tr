@@ -2,12 +2,12 @@
 title: SQL Server’da Kimlik Doğrulaması
 ms.date: 05/22/2018
 ms.assetid: 646ddbf5-dd4e-4285-8e4a-f565f666c5cc
-ms.openlocfilehash: 49835ebf8ebe4d5bd200ed771477edc8af580b7d
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 09f7825fd6b4f852b24142ea297c078bd8a1e221
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70794286"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040263"
 ---
 # <a name="authentication-in-sql-server"></a>SQL Server’da Kimlik Doğrulaması
 SQL Server, Windows kimlik doğrulama modu ve karma mod olmak üzere iki kimlik doğrulama modunu destekler.  
@@ -19,10 +19,10 @@ SQL Server, Windows kimlik doğrulama modu ve karma mod olmak üzere iki kimlik 
 > [!IMPORTANT]
 > Mümkün olan yerlerde Windows kimlik doğrulaması kullanmanızı öneririz. Windows kimlik doğrulaması, SQL Server kullanıcıların kimliğini doğrulamak için bir dizi şifrelenmiş ileti kullanır. SQL Server oturumlar kullanıldığında, SQL Server oturum açma adları ve şifreli parolalar ağ üzerinden geçirilir ve bu da daha az güvenli hale gelir.  
   
- Windows kimlik doğrulaması ile kullanıcılar zaten Windows 'da oturum açar ve SQL Server için ayrı olarak oturum açmanız gerekmez. Aşağıda `SqlConnection.ConnectionString` , kullanıcıların bir Kullanıcı adı veya parola sağlaması gerekmeden Windows kimlik doğrulaması belirtilir.  
+ Windows kimlik doğrulaması ile kullanıcılar zaten Windows 'da oturum açar ve SQL Server için ayrı olarak oturum açmanız gerekmez. Aşağıdaki `SqlConnection.ConnectionString`, kullanıcıların Kullanıcı adı veya parola sağlamasına gerek kalmadan Windows kimlik doğrulamasını belirtir.  
   
-```  
-"Server=MSSQL1;Database=AdventureWorks;Integrated Security=true;  
+```csharp  
+"Server=MSSQL1;Database=AdventureWorks;Integrated Security=true;"
 ```  
   
 > [!NOTE]
@@ -64,12 +64,12 @@ SQL Server, Windows kimlik doğrulama modu ve karma mod olmak üzere iki kimlik 
  Karma mod kimlik doğrulaması kullanmanız gerekiyorsa, SQL Server depolanan SQL Server oturum açma bilgileri oluşturmanız gerekir. Daha sonra çalışma zamanında SQL Server Kullanıcı adı ve parola sağlamalısınız.  
   
 > [!IMPORTANT]
-> SQL Server, ("Sistem Yöneticisi" `sa` kısaltması) adlı SQL Server bir oturum açma ile yüklenir. `sa` Oturum açmak için güçlü bir parola atayın ve uygulamanızdaki `sa` oturum açma bilgilerini kullanmayın. Oturum açma, tüm sunucuda `sysadmin` yönetici kimlik bilgilerini geri alınamaz olan sabit sunucu rolüyle eşlenir. `sa` Bir saldırgan sistem yöneticisi olarak erişim kazanırsa olası hasara yönelik bir sınır yoktur. Windows `BUILTIN\Administrators` grubunun (yerel yönetici grubu) tüm üyeleri, varsayılan olarak `sysadmin` rolün üyeleridir, ancak bu rolden kaldırılabilir.  
+> SQL Server, `sa` ("Sistem Yöneticisi" kısaltması) adlı SQL Server bir oturum açma ile yüklenir. `sa` oturum açma için güçlü bir parola atayın ve uygulamanızda `sa` oturum açma kullanmayın. `sa` oturum açma, tüm sunucuda yönetici kimlik bilgilerini geri alınamaz olan `sysadmin` sabit sunucu rolüne eşlenir. Bir saldırgan sistem yöneticisi olarak erişim kazanırsa olası hasara yönelik bir sınır yoktur. Windows `BUILTIN\Administrators` grubunun tüm üyeleri (yerel yönetici grubu) varsayılan olarak `sysadmin` rolünün üyeleridir, ancak bu rolden kaldırılabilir.  
   
- SQL Server, [!INCLUDE[winxpsvr](../../../../../includes/winxpsvr-md.md)] veya sonraki sürümlerde çalışırken SQL Server oturum açma işlemleri için Windows parola ilkesi mekanizmaları sağlar. Parola karmaşıklığı ilkeleri, olası parola sayısını artırarak deneme yanılma saldırılarını ortadan kaldırır. SQL Server, ' de [!INCLUDE[winxpsvr](../../../../../includes/winxpsvr-md.md)] kullanılan karmaşıklık ve süre sonu ilkelerini SQL Server içinde kullanılan parolalara uygulayabilir.  
+ SQL Server, [!INCLUDE[winxpsvr](../../../../../includes/winxpsvr-md.md)] veya sonraki sürümlerde çalışırken SQL Server oturum açma işlemleri için Windows parola ilkesi mekanizmaları sağlar. Parola karmaşıklığı ilkeleri, olası parola sayısını artırarak deneme yanılma saldırılarını ortadan kaldırır. SQL Server, SQL Server içinde kullanılan parolalara [!INCLUDE[winxpsvr](../../../../../includes/winxpsvr-md.md)] için kullanılan karmaşıklık ve süre sonu ilkelerini uygulayabilir.  
   
 > [!IMPORTANT]
-> Bağlantı dizelerini Kullanıcı girişinden bitiştirme, bağlantı dizesi ekleme saldırısına karşı savunmasız bırakabilir. Çalışma zamanında sözdizimsel olarak geçerli bağlantı dizeleri oluşturmak için öğesini kullanın. <xref:System.Data.SqlClient.SqlConnectionStringBuilder> Daha fazla bilgi için bkz. [bağlantı dizesi oluşturucuları](../connection-string-builders.md).  
+> Bağlantı dizelerini Kullanıcı girişinden bitiştirme, bağlantı dizesi ekleme saldırısına karşı savunmasız bırakabilir. Çalışma zamanında sözdizimsel olarak geçerli bağlantı dizeleri oluşturmak için <xref:System.Data.SqlClient.SqlConnectionStringBuilder> kullanın. Daha fazla bilgi için bkz. [bağlantı dizesi oluşturucuları](../connection-string-builders.md).  
   
 ## <a name="external-resources"></a>Dış Kaynaklar  
  Daha fazla bilgi için aşağıdaki kaynaklara bakın.  

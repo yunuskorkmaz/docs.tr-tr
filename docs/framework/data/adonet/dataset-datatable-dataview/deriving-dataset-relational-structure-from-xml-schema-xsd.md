@@ -2,19 +2,19 @@
 title: XML Şemasından (XSD) DataSet İlişkisel Yapısını Türetme
 ms.date: 03/30/2017
 ms.assetid: 8f6cd04d-6197-4bc4-9096-8c51c7e4acae
-ms.openlocfilehash: d15aa02b41b9a34b00298aeb32d2e3998de8feba
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: ef77030b4e847f91fea074b68e223ac622539048
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70786337"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040097"
 ---
 # <a name="deriving-dataset-relational-structure-from-xml-schema-xsd"></a>XML Şemasından (XSD) DataSet İlişkisel Yapısını Türetme
-Bu bölüm bir XML şeması tanım dili (xsd) şema belgesinden `DataSet` bir öğesinin ilişkisel şemasının nasıl oluşturulduğunu gösteren bir genel bakış sağlar. Genel olarak, bir şema `complexType` öğesinin her alt öğesi için `DataSet`içinde bir tablo oluşturulur. Tablo yapısı, karmaşık türün tanımına göre belirlenir. Tablolar, `DataSet` şemadaki en üst düzey öğelerde oluşturulur. Ancak, bir `complexType` tablo, `complexType` öğe başka `complexType` bir öğenin içinde iç içe olduğunda yalnızca üst düzey öğe için oluşturulur, bu durumda `DataSet`iç içe `complexType` öğe içinde bir `DataTable` ile eşlenir.  
+Bu bölüm, bir `DataSet` ilişkisel şemasının bir XML şeması tanım dili (XSD) şema belgesinden nasıl oluşturulduğunu gösteren bir genel bakış sağlar. Genel olarak, bir şema öğesinin her bir `complexType` alt öğesi için `DataSet`bir tablo oluşturulur. Tablo yapısı, karmaşık türün tanımına göre belirlenir. Tablolar, şemadaki üst düzey öğeler için `DataSet` oluşturulur. Ancak, bir tablo yalnızca bir üst düzey `complexType` `complexType` `complexType` öğesi için oluşturulur. Bu durumda, iç içe yerleştirilmiş `complexType` öğesi `DataTable` içindeki bir `DataSet`eşlenir.  
   
- XSD hakkında daha fazla bilgi için bkz. World Wide Web Konsorsiyumu (W3C) [XML Şeması bölümü 0: Öncü öneri](https://www.w3.org/TR/xmlschema-0/) [, XML şeması Bölüm 1: Yapılar önerisi](https://www.w3.org/TR/xmlschema-1/) [ve XML şeması Bölüm 2: Veri türleri](https://www.w3.org/TR/xmlschema-2/)önerisi.  
+ XSD hakkında daha fazla bilgi için, bkz. World Wide Web Konsorsiyumu (W3C) [XML Şeması bölümü 0: öncü öneri](https://www.w3.org/TR/xmlschema-0/), [XML şeması Bölüm 1: yapılar önerisi](https://www.w3.org/TR/xmlschema-1/)ve [XML şeması Bölüm 2: veri türleri önerisi](https://www.w3.org/TR/xmlschema-2/).  
   
- Aşağıdaki örnek, bir **veri kümesi** öğesi olan `customers` `MyDataSet` öğesinin alt öğesi olan bir XML şemasını gösterir.  
+ Aşağıdaki örnek, `customers` bir **veri kümesi** öğesi olan `MyDataSet` öğesinin alt öğesi olduğu bir XML şemasını gösterir.  
   
 ```xml  
 <xs:schema id="SomeID"   
@@ -43,16 +43,16 @@ Bu bölüm bir XML şeması tanım dili (xsd) şema belgesinden `DataSet` bir ö
   
  Önceki örnekte, öğesi `customers` karmaşık bir tür öğesidir. Bu nedenle, karmaşık tür tanımı ayrıştırılır ve eşleme işlemi aşağıdaki tabloyu oluşturur.  
   
-```  
-Customers (CustomerID , CompanyName, Phone)  
+```text  
+Customers (CustomerID, CompanyName, Phone)  
 ```  
   
  Tablodaki her sütunun veri türü, karşılık gelen öğenin veya özniteliğin XML şema türünden türetilir.  
   
 > [!NOTE]
-> Öğesi `customers` **tamsayı**gibi basit bir XML şeması veri türünde ise hiçbir tablo oluşturulmaz. Tablolar yalnızca karmaşık türler olan en üst düzey öğeler için oluşturulur.  
+> Öğe `customers` **tamsayı**gibi basıt bir XML şeması veri türü ise hiçbir tablo oluşturulmaz. Tablolar yalnızca karmaşık türler olan en üst düzey öğeler için oluşturulur.  
   
- Aşağıdaki XML şemasında, **şema** öğesi iki öğe alt `InStateCustomers` öğesine sahiptir ve. `OutOfStateCustomers`  
+ Aşağıdaki XML şemasında, **şema** öğesinde iki öğe alt öğesi vardır `InStateCustomers` ve `OutOfStateCustomers`.  
   
 ```xml  
 <xs:schema id="SomeID"   
@@ -75,26 +75,26 @@ Customers (CustomerID , CompanyName, Phone)
  </xs:schema>  
 ```  
   
- `InStateCustomers` Hem`customerType`hem de altöğelerikarmaşıktür`OutOfStateCustomers` öğeleridir (). Bu nedenle, eşleme işlemi içinde `DataSet`aşağıdaki iki özdeş tabloyu üretir.  
+ Hem `InStateCustomers` hem de `OutOfStateCustomers` alt öğeleri karmaşık tür öğeleridir (`customerType`). Bu nedenle, eşleme işlemi `DataSet`aşağıdaki iki özdeş tabloyu üretir.  
   
-```  
-InStateCustomers (CustomerID , CompanyName, Phone)  
-OutOfStateCustomers (CustomerID , CompanyName, Phone)  
+```text  
+InStateCustomers (CustomerID, CompanyName, Phone)  
+OutOfStateCustomers (CustomerID, CompanyName, Phone)  
 ```  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [XML Şeması (XSD) Kısıtlamalarını DataSet Kısıtlamaları ile Eşleme](mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
- Bir `DataSet`içinde benzersiz ve yabancı anahtar kısıtlamaları oluşturmak Için kullanılan xml şema öğelerini açıklar.  
+ Bir `DataSet`benzersiz ve yabancı anahtar kısıtlamaları oluşturmak için kullanılan XML şema öğelerini açıklar.  
   
  [XML Şemasından (XSD) DataSet İlişkileri Oluşturma](generating-dataset-relations-from-xml-schema-xsd.md)  
- İçindeki tablo sütunları arasında ilişki oluşturmak için kullanılan XML şema öğelerini açıklar `DataSet`.  
+ Bir `DataSet`tablo sütunları arasında ilişki oluşturmak için kullanılan XML şema öğelerini açıklar.  
   
  [XML Şema Kısıtlamaları ve İlişkileri](xml-schema-constraints-and-relationships.md)  
- Bir `DataSet`içinde kısıtlamalar oluşturmak için XML şema öğeleri kullanıldığında ilişkilerin örtük olarak nasıl oluşturulduğunu açıklar.  
+ Bir `DataSet`kısıtlamalar oluşturmak için XML şema öğeleri kullanıldığında ilişkilerin örtük olarak nasıl oluşturulduğunu açıklar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [DataSet içinde XML kullanma](using-xml-in-a-dataset.md)  
- Bir `DataSet` as XML verilerinde ilişkisel yapının ve verilerin nasıl yükleneceğini ve kalıcı yapılacağını açıklar.  
+ Bir `DataSet` ilişkisel yapının ve verilerin XML verileri olarak nasıl yükleneceğini ve kalıcı yapılacağını açıklar.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

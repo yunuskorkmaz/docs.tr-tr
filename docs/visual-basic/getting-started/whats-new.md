@@ -8,12 +8,12 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-ms.openlocfilehash: f5630f7947125dd5eb8a5b58e79add1aec4c689b
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: a1db44259ccfe0fe8fb6e2849fb60fe52475b3ce
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774912"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73041054"
 ---
 # <a name="whats-new-for-visual-basic"></a>Visual Basic yenilikler
 
@@ -54,7 +54,7 @@ Visual Basic/Visual Studio 2008 \
 Dil ile tümleşik sorgu (LINQ), XML değişmez değerleri, yerel tür çıkarımı, nesne başlatıcıları, anonim türler, uzantı yöntemleri, yerel `var` tür çıkarımı, lambda ifadeleri, `if` işleci, kısmi Yöntemler, null yapılabilir değer türleri
 
 Visual Basic/Visual Studio 2005 \
-@No__t_0 türü ve yardımcı türleri (uygulama, bilgisayar, dosya sistemi ve ağa erişim)
+`My` türü ve yardımcı türleri (uygulama, bilgisayar, dosya sistemi ve ağa erişim)
 
 Visual Basic/Visual Studio .NET 2003 \
 Bit kaydırma işleçleri, döngü değişkeni bildirimi
@@ -176,7 +176,7 @@ Daha sonra yöntemi çağırabilir ve döndürülen kayıt grubunu aşağıdaki 
 
 **İkili sabit değerler ve basamak ayırıcıları**
 
-@No__t_0 veya `&b` önekini kullanarak bir ikili sabit değeri tanımlayabilirsiniz. Ayrıca, okunabilirliği iyileştirmek için `_` alt çizgi karakterini bir rakam ayırıcısı olarak kullanabilirsiniz. Aşağıdaki örnek her iki özelliği de bir `Byte` değeri atamak ve bunu bir Decimal, onaltılı ve ikili sayı olarak göstermek için kullanır.
+`&B` veya `&b`önekini kullanarak bir ikili sabit değeri tanımlayabilirsiniz. Ayrıca, okunabilirliği iyileştirmek için `_`alt çizgi karakterini bir rakam ayırıcısı olarak kullanabilirsiniz. Aşağıdaki örnek her iki özelliği de bir `Byte` değeri atamak ve bunu bir Decimal, onaltılı ve ikili sayı olarak göstermek için kullanır.
 
 [!code-vb[Binary](../../../samples/snippets/visualbasic/getting-started/bin-example.vb#1)]
 
@@ -206,7 +206,7 @@ Daha fazla bilgi için bkz. [Başvuru dönüş değerleri](../programming-guide/
 
 ## <a name="visual-basic-14"></a>Visual Basic 14
 
-[NameOf](../../csharp/language-reference/operators/nameof.md)
+[NameOf](../language-reference/operators/nameof.md)
 
 Bir hata iletisinde kullanılmak üzere bir tür veya üyenin Nitelenmemiş dize adını bir dizeyi sabit kodlamadan alabilirsiniz.  Bu, yeniden düzenleme sırasında kodunuzun doğru kalmasını sağlar.  Bu özellik ayrıca Model-View-Controller MVC bağlantıları ve tetikleme özelliği değiştirilen olaylarını aramak için de kullanışlıdır.
 
@@ -260,7 +260,7 @@ Sınıfların ve yapıların yanı sıra, kısmi modüller ve arabirimler bildir
 
 [Geçersiz kılmalar tanımları örtük aşırı yüklemelerdir](../../visual-basic/language-reference/modifiers/overrides.md)
 
-@No__t_0 değiştiricisini bir tanıma eklerseniz, derleyici ortak durumlarda daha az kod yazabileceğiniz şekilde `Overloads` dolaylı olarak ekler.
+`Overrides` değiştiricisini bir tanıma eklerseniz, derleyici ortak durumlarda daha az kod yazabileceğiniz şekilde `Overloads` dolaylı olarak ekler.
 
 **Öznitelikler bağımsız değişkenlerinde CObj 'a izin verilir**
 

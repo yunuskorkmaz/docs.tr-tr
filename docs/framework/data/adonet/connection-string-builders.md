@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8434b608-c4d3-43d3-8ae3-6d8c6b726759
-ms.openlocfilehash: afafe5d1eaddaef3b9f0069908b365e40ea4ed29
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: e1f8d636e793b2d8b984fe1aa0b823fa58a4981d
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70785689"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040174"
 ---
 # <a name="connection-string-builders"></a>Bağlantı Dizesi Oluşturucular
-Önceki ADO.NET sürümlerinde, birleştirilmiş dize değerleriyle bağlantı dizeleri derleme zamanı denetimi gerçekleşmediğinden, çalışma zamanında yanlış bir anahtar sözcük oluşturulur <xref:System.ArgumentException>. .NET Framework veri sağlayıcılarının her biri, el ile yapıldıysa geçerli bağlantı dizeleri oluşturmak için bağlantı dizesi anahtar sözcükleri için farklı sözdizimi destekliyordu. Bu sorunu gidermek için, ADO.NET 2,0 her bir .NET Framework veri sağlayıcısı için yeni bağlantı dizesi oluşturucuları sunmuştur. Her veri sağlayıcısı, öğesinden <xref:System.Data.Common.DbConnectionStringBuilder>devralan türü kesin belirlenmiş bir bağlantı dizesi Oluşturucu sınıfı içerir. Aşağıdaki tabloda .NET Framework veri sağlayıcıları ve ilişkili bağlantı dizesi Oluşturucu sınıfları listelenmektedir.  
+Önceki ADO.NET sürümlerinde, birleştirilmiş dize değerleriyle bağlantı dizeleri derleme zamanı denetimi gerçekleşmediğinden, çalışma zamanında yanlış bir anahtar sözcük <xref:System.ArgumentException>oluşturdu. .NET Framework veri sağlayıcılarının her biri, el ile yapıldıysa geçerli bağlantı dizeleri oluşturmak için bağlantı dizesi anahtar sözcükleri için farklı sözdizimi destekliyordu. Bu sorunu gidermek için, ADO.NET 2,0 her bir .NET Framework veri sağlayıcısı için yeni bağlantı dizesi oluşturucuları sunmuştur. Her veri sağlayıcısı, <xref:System.Data.Common.DbConnectionStringBuilder>devralan türü kesin belirlenmiş bir bağlantı dizesi Oluşturucu sınıfı içerir. Aşağıdaki tabloda .NET Framework veri sağlayıcıları ve ilişkili bağlantı dizesi Oluşturucu sınıfları listelenmektedir.  
   
 |Sağlayıcı|ConnectionStringBuilder sınıfı|  
 |--------------|-----------------------------------|  
@@ -27,7 +27,7 @@ ms.locfileid: "70785689"
   
  Bağlantı dizesi Oluşturucu sınıfları, tahmin etmeyi ortadan kaldırmak ve söz dizimi hatalarına ve güvenlik açıklarına karşı korumak için tasarlanmıştır. Her veri sağlayıcısı tarafından izin verilen bilinen anahtar/değer çiftlerine karşılık gelen yöntemleri ve özellikleri sağlarlar. Her sınıf, sabit bir eş anlamlı koleksiyonu saklar ve bir eş anlamadan ilgili iyi bilinen anahtar adına çevirebilir. Geçerli anahtar/değer çiftleri için denetimler gerçekleştirilir ve geçersiz bir çift özel durum oluşturur. Buna ek olarak, eklenen değerler güvenli bir şekilde işlenir.  
   
- Aşağıdaki örnek, <xref:System.Data.SqlClient.SqlConnectionStringBuilder> `Initial Catalog` ayarı için ek bir ek değerin nasıl işlediğini gösterir.  
+ Aşağıdaki örnek, <xref:System.Data.SqlClient.SqlConnectionStringBuilder> `Initial Catalog` ayarı için ilave bir ek değeri nasıl işleyeceğini gösterir.  
   
 ```vb  
 Dim builder As New System.Data.SqlClient.SqlConnectionStringBuilder  
@@ -46,9 +46,9 @@ builder["Initial Catalog"] = "AdventureWorks;NewValue=Bad";
 Console.WriteLine(builder.ConnectionString);  
 ```  
   
- Çıktı, bunu, bağlantı <xref:System.Data.SqlClient.SqlConnectionStringBuilder> dizesine yeni bir anahtar/değer çifti olarak eklemek yerine, ek değeri çift tırnak işareti içinde kaçış yoluyla doğru bir şekilde işlendiğini gösterir.  
+ Çıktı, bu değeri yeni bir anahtar/değer çifti olarak bağlantı dizesine eklemek yerine, ek değerin çift tırnak işareti içine kaçarak doğru <xref:System.Data.SqlClient.SqlConnectionStringBuilder> bir şekilde işlendiğini gösterir.  
   
-```  
+```output  
 data source=(local);Integrated Security=True;  
 initial catalog="AdventureWorks;NewValue=Bad"  
 ```  
@@ -56,13 +56,13 @@ initial catalog="AdventureWorks;NewValue=Bad"
 ## <a name="building-connection-strings-from-configuration-files"></a>Yapılandırma dosyalarından bağlantı dizeleri oluşturma  
  Bir bağlantı dizesinin belirli öğeleri önceden biliniyorsa, bir yapılandırma dosyasında depolanabilir ve tamamen bir bağlantı dizesi oluşturmak için çalışma zamanında elde edilebilir. Örneğin, veritabanının adı önceden biliniyor olabilir, ancak sunucunun adı değildir. Ya da bir kullanıcının, bağlantı dizesine diğer değerleri ekleyebilmeden çalışma zamanında bir ad ve parola vermesini isteyebilirsiniz.  
   
- Bir bağlantı dizesi oluşturucusunun aşırı yüklenmiş oluşturucularından biri, bir <xref:System.String> bağımsız değişken olarak alır. Bu, daha sonra Kullanıcı girişinden tamamlanabilir kısmi bir bağlantı dizesi sağlamanıza olanak sağlar. Kısmi bağlantı dizesi bir yapılandırma dosyasında depolanabilir ve çalışma zamanında elde edilebilir.  
+ Bir bağlantı dizesi oluşturucusunun aşırı yüklenmiş oluşturucularından biri, bir <xref:System.String> bağımsız değişken olarak alır. Bu, daha sonra Kullanıcı girişinden tamamlanabilir bir kısmi bağlantı dizesi sağlamanıza olanak sağlar. Kısmi bağlantı dizesi bir yapılandırma dosyasında depolanabilir ve çalışma zamanında elde edilebilir.  
   
 > [!NOTE]
-> Ad alanı, Web uygulamaları <xref:System.Web.Configuration.WebConfigurationManager> <xref:System.Configuration.ConfigurationManager> için ve Windows uygulamaları için kullanan yapılandırma dosyalarına programlı erişim sağlar. <xref:System.Configuration> Bağlantı dizeleri ve yapılandırma dosyalarıyla çalışma hakkında daha fazla bilgi için bkz. [bağlantı dizeleri ve yapılandırma dosyaları](connection-strings-and-configuration-files.md).  
+> <xref:System.Configuration> ad alanı, Web uygulamaları için <xref:System.Web.Configuration.WebConfigurationManager> ve Windows uygulamaları için <xref:System.Configuration.ConfigurationManager> kullanan yapılandırma dosyalarına programlı erişim sağlar. Bağlantı dizeleri ve yapılandırma dosyalarıyla çalışma hakkında daha fazla bilgi için bkz. [bağlantı dizeleri ve yapılandırma dosyaları](connection-strings-and-configuration-files.md).  
   
 ### <a name="example"></a>Örnek  
- Bu örnek, bir yapılandırma dosyasından kısmi bağlantı dizesinin alınması <xref:System.Data.SqlClient.SqlConnectionStringBuilder.DataSource%2A>ve öğesinin <xref:System.Data.SqlClient.SqlConnectionStringBuilder>, <xref:System.Data.SqlClient.SqlConnectionStringBuilder.UserID%2A>ve <xref:System.Data.SqlClient.SqlConnectionStringBuilder.Password%2A> özelliklerini ayarlayarak tamamlanışını gösterir. Yapılandırma dosyası aşağıdaki gibi tanımlanır.  
+ Bu örnekte, bir yapılandırma dosyasından kısmi bağlantı dizesinin alınması ve <xref:System.Data.SqlClient.SqlConnectionStringBuilder><xref:System.Data.SqlClient.SqlConnectionStringBuilder.DataSource%2A>, <xref:System.Data.SqlClient.SqlConnectionStringBuilder.UserID%2A>ve <xref:System.Data.SqlClient.SqlConnectionStringBuilder.Password%2A> özellikleri ayarlanarak tamamlanarak tamamlanması gösterilmektedir. Yapılandırma dosyası aşağıdaki gibi tanımlanır.  
   
 ```xml  
 <connectionStrings>  
@@ -74,7 +74,7 @@ initial catalog="AdventureWorks;NewValue=Bad"
 ```  
   
 > [!NOTE]
-> Kodun çalışması için projenizdeki öğesine `System.Configuration.dll` bir başvuru ayarlamanız gerekir.  
+> Kodun çalışması için projenizdeki `System.Configuration.dll` bir başvuru ayarlamanız gerekir.  
   
  [!code-csharp[DataWorks SqlConnectionStringBuilder.UserNamePwd#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlConnectionStringBuilder.UserNamePwd/CS/source.cs#1)]
  [!code-vb[DataWorks SqlConnectionStringBuilder.UserNamePwd#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlConnectionStringBuilder.UserNamePwd/VB/source.vb#1)]  

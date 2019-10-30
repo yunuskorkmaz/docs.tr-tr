@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], about security model
 - security model [WPF], operating system
 ms.assetid: 2a39a054-3e2a-4659-bcb7-8bcea490ba31
-ms.openlocfilehash: fdeb40f1e092f8c7e96e9d59e1b07673201fbe9d
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: 7559c7ec9aef8f95336d53e62ca9bf5861a9b22f
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920382"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040718"
 ---
 # <a name="wpf-security-strategy---platform-security"></a>WPF Güvenlik Stratejisi - Platform Güvenliği
 Windows Presentation Foundation (WPF), çeşitli güvenlik hizmetleri sağladığından, işletim sistemini, CLR 'yi ve Internet Explorer 'ı içeren temel platformun güvenlik özelliklerinden de yararlanır. Bu katmanlar, aşağıdaki şekilde gösterildiği gibi, herhangi bir hata noktasını önlemeye yönelik güçlü, derinlemesine bir güvenlik modeli [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] sağlamak üzere birleştirilir:  
@@ -31,17 +31,15 @@ Windows Presentation Foundation (WPF), çeşitli güvenlik hizmetleri sağladı�
   
  Bu konunun geri kalanında, [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] özellikle ilgili olan bu katmanların her birinde bulunan özellikler ele alınmaktadır.  
 
-<a name="Operating_System_Security"></a>   
 ## <a name="operating-system-security"></a>İşletim sistemi güvenliği  
 Windows çekirdeği, WPF ile oluşturulmuş olanlar da dahil olmak üzere tüm Windows uygulamaları için güvenlik temelini oluşturan çeşitli güvenlik özellikleri sağlar. Bu konu, WPF için önemli olan bu güvenlik özelliklerinin kapsamını ele almaktadır ve WPF 'in bunlarla nasıl tümleştirilebildiğinden daha ayrıntılı savunma sağlar.  
   
-<a name="Microsoft_Windows_XP_Service_Pack_2__SP2_"></a>   
 ### <a name="microsoft-windows-xp-service-pack-2-sp2"></a>Microsoft Windows XP Service Pack 2 (SP2)  
  Genel İnceleme ve Windows 'un güçlendirilemesinin yanı sıra, bu konuda tartışıyoruz [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)] üç temel özellik vardır:  
   
 - /GS derlemesi  
   
-- [!INCLUDE[TLA#tla_win_update](../../../includes/tlasharptla-win-update-md.md)].  
+- Microsoft Windows Update.  
   
 #### <a name="gs-compilation"></a>/GS derlemesi  
  [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)], arabellek taşmalarını azaltmaya yardımcı olmak için CLR gibi tüm [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] bağımlılıklarıyla birlikte birçok çekirdek sistem kitaplığını yeniden derleyerek koruma sağlar. Bu, C/C++ komut satırı derleyicisi ile/GS parametresi kullanılarak elde edilir. Arabellek taşmalarının açıkça kaçınılması gerekse de,/GS derlemesi, bu, yanlışlıkla veya kötü amaçlı olarak oluşturulan olası güvenlik açıklarına karşı derinlemesine savunma sağlayan bir örnek sağlar.  
@@ -52,10 +50,6 @@ Windows çekirdeği, WPF ile oluşturulmuş olanlar da dahil olmak üzere tüm W
   
  [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)], [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] uygulamalarına yönelik başka bir savunma katmanı eklemek için/GS bayrağıyla derlenir.  
   
-#### <a name="microsoft-windows-update-enhancements"></a>Microsoft Windows Update geliştirmeleri  
- [!INCLUDE[TLA#tla_win_update](../../../includes/tlasharptla-win-update-md.md)], güncelleştirmeleri indirme ve yükleme işlemini basitleştirmek için [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)] de geliştirilmiştir. Bu değişiklikler, sistemlerinin güncel olduğundan ve özellikle güvenlik güncelleştirmeleriyle ilgili olduğundan emin olmaya yardımcı olarak [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] müşterileri için güvenliği önemli ölçüde geliştirir.  
-  
-<a name="Windows_Vista"></a>   
 ### <a name="windows-vista"></a>Windows Vista  
 Windows Vista 'daki WPF kullanıcıları, "en az ayrıcalıklı kullanıcı erişimi", kod bütünlüğü denetimleri ve ayrıcalık yalıtımı gibi işletim sisteminin ek güvenlik geliştirmelerinden faydalanır.  
   
@@ -72,8 +66,7 @@ Windows Vista 'daki WPF kullanıcıları, "en az ayrıcalıklı kullanıcı eri�
   
 #### <a name="code-integrity-checks"></a>Kod bütünlüğü denetimleri  
  Windows Vista, kötü amaçlı kodun sistem dosyalarına veya yükleme/çalışma zamanında çekirdeğe eklenmesini önlemeye yardımcı olmak için daha derin kod bütünlüğü denetimleri içerir. Bu, sistem dosya korumasının ötesine geçer.  
-  
-<a name="Limited_Rights_Process_for_Browser_Hosted_Applications"></a>   
+   
 ### <a name="limited-rights-process-for-browser-hosted-applications"></a>Tarayıcıda barındırılan uygulamalar için sınırlı haklar süreci  
  Tarayıcıda barındırılan [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] uygulamalar Internet bölgesi korumalı alanı içinde yürütülür. Microsoft Internet Explorer ile [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] tümleştirme, bu korumayı ek destek ile genişletir.  
   
@@ -81,11 +74,9 @@ Windows Vista 'daki WPF kullanıcıları, "en az ayrıcalıklı kullanıcı eri�
   
  Bkz. [en az ayrıcalıklı kullanıcı hesabı kullanma](https://docs.microsoft.com/previous-versions/tn-archive/cc700846%28v=technet.10%29).  
   
-<a name="Common_Language_Runtime_Security"></a>   
 ## <a name="common-language-runtime-security"></a>Ortak dil çalışma zamanı güvenliği  
  Ortak dil çalışma zamanı (CLR), doğrulama ve doğrulama, kod erişim güvenliği (CAS) ve güvenlik açısından kritik metodolojisini içeren bir dizi anahtar güvenlik avantajı sunar.  
-  
-<a name="Validation_and_Verification"></a>   
+    
 ### <a name="validation-and-verification"></a>Doğrulama ve doğrulama  
  Bütünleştirilmiş kod yalıtımı ve bütünlüğü sağlamak için, CLR doğrulama işlemini kullanır. CLR doğrulaması, derlemenin dışına işaret eden adresler için taşınabilir yürütülebilir (PE) dosya biçimi doğrulayarak derlemelerin yalıtılmasını sağlar. CLR doğrulaması ayrıca bir derleme içine katıştırılmış meta verilerin bütünlüğünü doğrular.  
   
@@ -103,7 +94,6 @@ Windows Vista 'daki WPF kullanıcıları, "en az ayrıcalıklı kullanıcı eri�
   
  Doğrulanabilir kodun avantajı, .NET Framework [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] neden derlemelerin önemli bir nedenidir. Doğrulanabilir kodun kullanıldığı ölçüde, olası güvenlik açıklarını kötüye bir şekilde düşürme olasılığı büyük ölçüde azalır.  
   
-<a name="Code_Access_Security"></a>   
 ### <a name="code-access-security"></a>Kod Erişimi Güvenliği  
  Bir istemci makinesi, yönetilen bir uygulamanın, dosya sistemi, kayıt defteri, yazdırma hizmetleri, Kullanıcı arabirimi, yansıma ve ortam değişkenleri dahil olmak üzere erişebileceği çok çeşitli kaynaklar sunar. Yönetilen bir uygulama, bir istemci makinedeki herhangi bir kaynağa erişebilmeye başlamadan önce, .NET Framework iznine sahip olmalıdır. CA 'larda izin, <xref:System.Security.CodeAccessPermission> bir alt sınıfıdır; CAS, yönetilen uygulamaların erişebileceği her kaynak için bir alt sınıf uygular.  
   
@@ -163,13 +153,11 @@ Windows Vista 'daki WPF kullanıcıları, "en az ayrıcalıklı kullanıcı eri�
   
  Bir platform perspektifinden [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] **, doğru onay** kullanmaktan sorumludur; Hatalı bir **onaylama** kullanımı, kötü amaçlı kodun ayrıcalıkların yükseltilmesini sağlayabilir. Sonuç olarak, **yalnızca gerektiğinde onay çağrısı yapmak** ve korumalı alan kısıtlamalarının bozulmadan kalmasını sağlamak önemlidir. Örneğin, korumalı kodun rastgele dosyaları açmasına izin verilmez, ancak yazı tiplerini kullanmasına izin verilir. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] **, korumalı**uygulamaların onay çağrısı yaparak yazı tipi işlevselliğini kullanmasını ve bu yazı tiplerini korumalı uygulama adına içerdiği bilinen dosyaları okumasına [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] için sağlar.  
   
-<a name="ClickOnce_Deployment"></a>   
 ### <a name="clickonce-deployment"></a>ClickOnce dağıtımı  
  ClickOnce, .NET Framework ile birlikte sunulan kapsamlı bir dağıtım teknolojisidir ve Visual Studio ile tümleştirilir (ayrıntılı bilgi için bkz. [ClickOnce Security and Deployment](/visualstudio/deployment/clickonce-security-and-deployment) ). Tek başına [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] uygulamalar ClickOnce kullanılarak dağıtılabilir, ancak tarayıcıda barındırılan uygulamalar ClickOnce ile dağıtılmalıdır.  
   
  ClickOnce kullanılarak dağıtılan uygulamalara, kod erişim güvenliği (CAS) üzerinden ek bir güvenlik katmanı verilir; Temelde, ClickOnce tarafından dağıtılan uygulamalar gereksinim duydukları izinleri ister. Yalnızca uygulamanın dağıtıldığı bölge için izin kümesini aşmazsa, bu izinlere izin verilir. İzin kümesini, başlatma bölgesinin izin kümesi tarafından sağlananlardan daha az olsalar bile yalnızca gerekli olanlarla azaltarak, uygulamanın erişimi olan kaynak sayısı en az bir değer olacak şekilde azaltılır. Sonuç olarak, uygulama ele geçirilmiş ise, istemci makinesine zarar verme olasılığı azalır.  
   
-<a name="Security_Critical_Methodology"></a>   
 ### <a name="security-critical-methodology"></a>Güvenlik açısından kritik metodolojisi  
  XBAP uygulamaları için Internet bölgesi korumalı alanını etkinleştirmek üzere izinleri kullanan [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] kodu, en yüksek düzeyde güvenlik denetimi ve denetimi için tutulmalıdır. Bu gereksinimi kolaylaştırmak için .NET Framework, ayrıcalıkları destekleyen kodu yönetmek için yeni destek sağlar. CLR, ayrıcalıkları yükseltir ve <xref:System.Security.SecurityCriticalAttribute> ile işaretleyecek kodu tanımlamanızı sağlar. <xref:System.Security.SecurityCriticalAttribute> ile işaretlenmemiş herhangi bir kod bu metodolojide *saydam* hale gelir. Buna karşılık, <xref:System.Security.SecurityCriticalAttribute> işaretli olmayan yönetilen kodun ayrıcalık yükseltme işlemi engellenir.  
   
@@ -177,7 +165,6 @@ Windows Vista 'daki WPF kullanıcıları, "en az ayrıcalıklı kullanıcı eri�
   
  .NET Framework, geliştiricilerin <xref:System.Security.AllowPartiallyTrustedCallersAttribute> (APTCA) ile işaretlenmiş ve kullanıcının genel derleme önbelleği 'ne (GAC) dağıtılan yönetilen derlemeler yazmasına izin vererek, güvenilen kodun XBAP Internet bölgesi sanal alanını genişlemesine izin verdiğini unutmayın. Derlemeyi APTCA ile işaretlemek, Internet 'ten gelen kötü amaçlı kod dahil olmak üzere herhangi bir kodun bu derlemeyi çağırmasını olanaklı olduğundan, yüksek oranda duyarlı bir güvenlik işlemidir. Bu işlem sırasında çok dikkatli ve en iyi uygulamalar kullanılmalıdır ve kullanıcıların yüklenebilmesi için bu yazılıma güvenmeyi seçmesi gerekir.  
   
-<a name="Microsoft_Internet_Explorer_Security"></a>   
 ## <a name="microsoft-internet-explorer-security"></a>Microsoft Internet Explorer güvenliği  
  Güvenlik sorunlarını azalttıktan ve güvenlik yapılandırmasını basitleştirerek, Microsoft Internet Explorer 6 (SP2) [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../includes/tlasharptla-winfxwebappsharpplural-md.md)]kullanıcıları için güvenliği geliştiren çeşitli özellikler içerir. Bu özelliklerin bu özellikleri, kullanıcıların gözatma deneyimi üzerinde daha fazla denetime izin vermeyi dener.  
   

@@ -2,12 +2,12 @@
 title: Komut Ağaçlarından SQL Oluşturma - En İyi Yöntemler
 ms.date: 03/30/2017
 ms.assetid: 71ef6a24-4c4f-4254-af3a-ffc0d855b0a8
-ms.openlocfilehash: 9859c7df941ae6681c991001e0d1e5a50c7ffc60
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 869722b91550855a184a74e706271c3e2d417b84
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70855009"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039994"
 ---
 # <a name="generating-sql-from-command-trees---best-practices"></a>Komut Ağaçlarından SQL Oluşturma - En İyi Yöntemler
 
@@ -31,7 +31,7 @@ Bir SQL SELECT ifadesine sorgu komut ağacının olası bir çevirisi, her iliş
 
 Örnek olarak, aşağıdaki sorgu komut ağacını göz önünde bulundurun
 
-```
+```csharp
 Project (
 a.x,
    a = Filter(
@@ -68,7 +68,7 @@ Birden çok düğümü tek bir SQL SELECT deyimi içinde birleştiren bir durum,
 
 Sol sırt birleşimleri (başka bir birleşimin sol alt öğesi olarak görünen birleşimler), tek bir SQL SELECT ifadesinde daha kolay bir şekilde düzleştirilir. Örneğin, aşağıdaki sorgu komut ağacını göz önünde bulundurun:
 
-```
+```csharp
 InnerJoin(
    a = LeftOuterJoin(
    b = Extent("TableA")
@@ -90,7 +90,7 @@ INNER JOIN TableC as d ON b.y = d.z
 
 Ancak, sol olmayan sırtı birleştirmeleri kolayca düzleştirilmez ve bunları düzleştirmeniz gerekmez. Örneğin, aşağıdaki sorgu komut ağacındaki birleşimler:
 
-```
+```csharp
 InnerJoin(
    a = Extent("TableA")
    b = LeftOuterJoin(
@@ -121,7 +121,7 @@ Bu türlerin her birinde, bir giriş koleksiyonu tanımlayan bir veya daha fazla
 
 Birden fazla ilişkisel ifade düğümünü tek bir SQL SELECT deyimine toplayarak ve ilişkisel bir ifadenin parçası olan bir ifadeyi değerlendirirken (örneğin, bir DbProjectExpression 'ın Projection özelliğinin bir parçası olarak), kullandığı bağlama değişkeni birden çok ifade bağlaması tek bir ölçüde yönlendirilmek zorunda olacağından, girişin diğer adıyla aynı değildir.  Bu soruna yeniden adlandırma adı verilir.
 
-Bu konudaki ilk örneği göz önünde bulundurun. Naïve çevirisini yapar ve projeksiyonu bir. x (DbPropertyExpression (a, x)) çeviriyorsa, bağlama değişkeni ile eşleşmesi için girişin "a `a.x` " olarak başka bir ad alanı olduğu için ' a çevirmek doğru olur.  Ancak, hem düğümleri tek bir SQL SELECT deyimi içinde toplayarak, girişin "b" ile başka bir ad alanı olduğu için aynı `b.x`DbPropertyExpression ' a çevirmeniz gerekir.
+Bu konudaki ilk örneği göz önünde bulundurun. Naïve çevirisini yapar ve projeksiyonu bir. x (DbPropertyExpression (a, x)) çeviriyorsa, bu girişin bağlama değişkeniyle eşleşmesi için "a" olarak başka bir ad girdiğimiz için `a.x` çevirmek doğru olur.  Ancak, hem düğümleri tek bir SQL SELECT deyimi içinde toplayarak, girişin "b" ile başka bir ad alanı olduğu için aynı DbPropertyExpression 'ı `b.x`çevirmeniz gerekir.
 
 ## <a name="join-alias-flattening"></a>Diğer ad düzleştirmeyi Birleştir
 
@@ -137,7 +137,7 @@ Ayrıca, birleştirmeleri düzleştirme sırasında, katılım tabloları (veya 
 
 ## <a name="avoid-select-"></a>SELECT * kullanmaktan kaçının
 
-Temel tablolardan seçim `SELECT *` yapmak için kullanmayın. Bir Entity Framework uygulamasındaki depolama modeli yalnızca veritabanı tablosundaki sütunların bir alt kümesini içerebilir. Bu durumda, `SELECT *` yanlış sonuç verebilir. Bunun yerine, katılan ifadelerin sonuç türünden sütun adlarını kullanarak tüm katılan sütunları belirtmeniz gerekir.
+Temel tablolardan seçmek için `SELECT *` kullanmayın. Bir Entity Framework uygulamasındaki depolama modeli yalnızca veritabanı tablosundaki sütunların bir alt kümesini içerebilir. Bu durumda `SELECT *` yanlış bir sonuç üretebilir. Bunun yerine, katılan ifadelerin sonuç türünden sütun adlarını kullanarak tüm katılan sütunları belirtmeniz gerekir.
 
 ## <a name="reuse-of-expressions"></a>Ifadelerin yeniden kullanılması
 
@@ -145,7 +145,7 @@ Temel tablolardan seçim `SELECT *` yapmak için kullanmayın. Bir Entity Framew
 
 ## <a name="mapping-primitive-types"></a>Temel türleri eşleme
 
-Kavramsal (EDM) türlerini sağlayıcı türlerine eşlerken, tüm olası değerlerin sığması için en geniş türe (Int32) eşleme yapmanız gerekir. Ayrıca, blob türleri gibi çok sayıda işlem için kullanılamayan türlere eşlemektan kaçının (örneğin, `ntext` SQL Server).
+Kavramsal (EDM) türlerini sağlayıcı türlerine eşlerken, tüm olası değerlerin sığması için en geniş türe (Int32) eşleme yapmanız gerekir. Ayrıca, BLOB türleri gibi birçok işlem için kullanılamayan türlere eşlemektan kaçının (örneğin, SQL Server `ntext`).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

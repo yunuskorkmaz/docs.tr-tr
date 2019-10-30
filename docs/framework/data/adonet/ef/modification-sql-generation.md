@@ -2,12 +2,12 @@
 title: Değişiklik SQL Oluşturma
 ms.date: 03/30/2017
 ms.assetid: 2188a39d-46ed-4a8b-906a-c9f15e6fefd1
-ms.openlocfilehash: 94b6c3c97e8255db2dc4d72bae6c6c12905d9710
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: b6c1b71effba17d33c035d0f1df386bf56d405b5
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70854297"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039893"
 ---
 # <a name="modification-sql-generation"></a>Değişiklik SQL Oluşturma
 
@@ -29,7 +29,7 @@ DbModificationCommandTree bir değiştirme DML işleminin (bir INSERT, Update ve
 
 DbModificationCommandTree ve Entity Framework tarafından üretilen uygulamaları her zaman tek bir satır işlemini temsil eder. Bu bölümde, .NET Framework sürüm 3,5 ' de kısıtlamaları olan bu türler açıklanmaktadır.
 
-![Diyagram](./media/558ba7b3-dd19-48d0-b91e-30a76415bf5f.gif "558ba7b3-dd19-48d0-b91e-30a76415bf5f")
+![Çizimindeki](./media/558ba7b3-dd19-48d0-b91e-30a76415bf5f.gif "558ba7b3-dd19-48d0-b91e-30a76415bf5f")
 
 DbModificationCommandTree, değişiklik işlemi için hedef kümesini temsil eden bir Target özelliğine sahiptir. Giriş kümesini tanımlayan hedefin Expression özelliği her zaman DbScanExpression ' dır.  Bir DbScanExpression bir tabloyu veya görünümü temsil edebilir ya da hedefin "sorgu tanımlaması" meta veri özelliği null değilse bir sorgu ile tanımlanmış bir veri kümesini temsil edebilir.
 
@@ -62,9 +62,7 @@ Döndürülen değer, girilen veya güncellenen satıra göre döndürülecek so
 
 Settümceleri ekleme veya güncelleştirme işlemini tanımlayan INSERT veya Update set yan tümceleri listesini belirtir.
 
-```
-The elements of the list are specified as type DbModificationClause, which specifies a single clause in an insert or update modification operation. DbSetClause inherits from DbModificationClause and specifies the clause in a modification operation that sets the value of a property. Beginning in version 3.5 of the .NET Framework, all elements in SetClauses are of type SetClause.
-```
+Liste öğeleri, ekleme veya güncelleştirme değiştirme işleminde tek bir yan tümce belirten DbModificationClause türü olarak belirtilir. DbSetClause, DbModificationClause öğesinden devralır ve bir özelliğin değerini ayarlayan bir değiştirme işleminde yan tümceyi belirtir. .NET Framework sürüm 3,5 ' den başlayarak, SetClause 'daki tüm öğeler SetClause türündedir.
 
 Özelliği, güncellenmesi gereken özelliği belirtir. Bir DbVariableReferenceExpression üzerinde her zaman bir DbPropertyExpression, buna karşılık gelen DbModificationCommandTree hedefine yönelik bir başvuruyu temsil eder.
 
@@ -116,7 +114,7 @@ Oluşturma işlemi her zaman giriş tablosunu temsil ettiğinden, kuşak bir di�
 
 Örnek sağlayıcıda verilen bir DbInsertCommandTree için, oluşturulan INSERT komutu aşağıdaki iki ekleme şablonundan birini izler.
 
-İlk şablonda, Setyan tümceleri listesindeki değerleri verilen ekleme işlemini gerçekleştirmeye yönelik bir komut ve döndürülen özellik null değilse, ekli satır için döndürülen özellikte belirtilen özellikleri döndürecek bir SELECT deyimidir. Bir satır eklenirse,\@ "@ROWCOUNT > 0" koşul öğesi doğru. "KeyMemberI = keyValueI &#124; scope_identity ()" koşul öğesi, "keyMemberI = scope_identity ()" şeklini, ancak keyMemberI 'nin bir kimliğe ekli en son kimlik değerini döndürdüğü "keymemberi = ()" şeklini alır ( Depo oluşturuldu) sütunu.
+İlk şablonda, Setyan tümceleri listesindeki değerleri verilen ekleme işlemini gerçekleştirmeye yönelik bir komut ve döndürülen özellik null değilse, ekli satır için döndürülen özellikte belirtilen özellikleri döndürecek bir SELECT deyimidir. Bir satır eklenirse, "\@@ROWCOUNT > 0" koşul öğesi doğru. "KeyMemberI = keyValueI &#124; scope_identity ()" koşul öğesi, "keyMemberI = scope_identity ()" şeklini, ancak keyMemberI 'nin bir kimliğe ekli en son kimlik değerini döndürdüğü "keymemberi = ()" şeklini alır ( Depo oluşturuldu) sütunu.
 
 ```sql
 -- first insert Template
@@ -160,7 +158,7 @@ using (NorthwindEntities northwindContext = new NorthwindEntities()) {
 
 Bu kod, sağlayıcıya geçirilen aşağıdaki komut ağacını üretir:
 
-```
+```output
 DbInsertCommandTree
 |_Parameters
 |_Target : 'target'
@@ -212,7 +210,7 @@ WHERE <predicate>
  WHERE @@ROWCOUNT > 0 AND keyMember0 = keyValue0 AND .. keyMemberI =  keyValueI | scope_identity()  .. AND  keyMemberN = keyValueN]
 ```
 
-Set yan tümcesi, yalnızca set yan tümceleri belirtilmemişse,@i sahte set yan tümcesine ("= 0") sahiptir. Bu, tüm mağaza hesaplanmış sütunlarının yeniden hesaplanmasını sağlamaktır.
+Set yan tümcesi, yalnızca set yan tümceleri belirtilmemişse, sahte set yan tümcesine ("@i = 0") sahiptir. Bu, tüm mağaza hesaplanmış sütunlarının yeniden hesaplanmasını sağlamaktır.
 
 Yalnızca döndüren özelliği null değilse, return özelliğinde belirtilen özellikleri döndürmek için bir SELECT ifadesinin oluşturulması gerekir.
 
@@ -230,7 +228,7 @@ using (NorthwindEntities northwindContext = new NorthwindEntities()) {
 
 Bu Kullanıcı kodu, sağlayıcıya geçirilen aşağıdaki komut ağacını üretir:
 
-```
+```output
 DbUpdateCommandTree
 |_Parameters
 |_Target : 'target'
@@ -281,7 +279,7 @@ using (NorthwindEntities northwindContext = new NorthwindEntities()) {
 
 Bu Kullanıcı kodu, sağlayıcıya geçirilen aşağıdaki komut ağacını üretir.
 
-```
+```output
 DbDeleteCommandTree
 |_Parameters
 |_Target : 'target'

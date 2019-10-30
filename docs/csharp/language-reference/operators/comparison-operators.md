@@ -1,6 +1,6 @@
 ---
-title: Karşılaştırma işleçleri - C# başvurusu
-description: Hakkında bilgi edinin C# sayısal değerlerin sırasını denetlemek için kullanabileceğiniz bir Karşılaştırma işleçleri.
+title: Karşılaştırma işleçleri- C# başvuru
+description: Sayısal değerlerin C# sırasını denetlemek için kullanabileceğiniz karşılaştırma işleçleri hakkında bilgi edinin.
 ms.date: 04/25/2019
 author: pkulikov
 f1_keywords:
@@ -19,61 +19,61 @@ helpviewer_keywords:
 - <= operator [C#]
 - greater than or equal to operator [C#]
 - '>= operator [C#]'
-ms.openlocfilehash: d3e9bf1356218f223f959b423dfc048972b075d3
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: bb28e2adba896ae85b189858283376fbe3250dce
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67661512"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039064"
 ---
-# <a name="comparison-operators-c-reference"></a>Karşılaştırma işleçleri (C# Başvurusu)
+# <a name="comparison-operators-c-reference"></a>Karşılaştırma işleçleri (C# başvuru)
 
-[ `<` (Küçüktür)](#less-than-operator-), [ `>` (büyüktür)](#greater-than-operator-), [ `<=` (küçüktür veya eşittir)](#less-than-or-equal-operator-), ve [ `>=` () büyüktür veya eşittir)](#greater-than-or-equal-operator-) karşılaştırması, işlenenleri Karşılaştırma işleçleri olarak ilişkisel'da bilinir. Tüm bu işleçleri destekler [integral](../builtin-types/integral-numeric-types.md) ve [kayan nokta](../builtin-types/floating-point-numeric-types.md) sayısal türler.
+İlişkisel olarak da bilinen [`<` (küçüktür)](#less-than-operator-), [`>` (büyüktür)](#greater-than-operator-), [`<=` (küçüktür veya eşittir](#less-than-or-equal-operator-)) ve [`>=` (büyüktür veya eşittir)](#greater-than-or-equal-operator-) karşılaştırması. Bu işleçler tüm [integral](../builtin-types/integral-numeric-types.md) ve [kayan nokta](../builtin-types/floating-point-numeric-types.md) sayısal türleri tarafından desteklenir.
 
 > [!NOTE]
-> İçin `==`, `<`, `>`, `<=`, ve `>=` herhangi işlenenden değilse, birkaç işleçleri (<xref:System.Double.NaN?displayProperty=nameWithType> veya <xref:System.Single.NaN?displayProperty=nameWithType>), işlem sonucu `false`. Bu anlamına `NaN` değerdir ne büyük, küçük ya da diğer eşit `double` (veya `float`) dahil olmak üzere, değer `NaN`. Daha fazla bilgi ve örnekler için bkz. <xref:System.Double.NaN?displayProperty=nameWithType> veya <xref:System.Single.NaN?displayProperty=nameWithType> başvurusu makalesinde.
+> `==`, `<`, `>`, `<=`ve `>=` işleçleri için, işlenenlerin herhangi biri bir sayı değilse (<xref:System.Double.NaN?displayProperty=nameWithType> veya <xref:System.Single.NaN?displayProperty=nameWithType>), işlemin sonucu `false`olur. Diğer bir deyişle, `NaN` değeri, `NaN` dahil diğer `double` (veya `float`) bir değere eşit, bundan küçüktür veya eşit değildir. Daha fazla bilgi ve örnek için <xref:System.Double.NaN?displayProperty=nameWithType> veya <xref:System.Single.NaN?displayProperty=nameWithType> başvuru makalesine bakın.
 
-Numaralandırma türleri, Karşılaştırma işleçleri de destekler. Aynı işlenenleri için [enum](../keywords/enum.md) türü, temel alınan integral türünün karşılık gelen değerleri karşılaştırılır.
+Numaralandırma türleri de karşılaştırma işleçlerini destekler. Aynı [sabit listesi](../keywords/enum.md) türünün işlenenleri için, temeldeki integral türünün karşılık gelen değerleri karşılaştırılır.
 
-[ `==` Ve `!=` işleçleri](equality-operators.md) işlenenlerini eşit olup olmadığını denetleyin.
+[`==` ve `!=` işleçleri](equality-operators.md) işlenenlerinin eşit olup olmadığını denetler.
 
 ## <a name="less-than-operator-"></a>Küçüktür işleci \<
 
-`<` İşleci döndürür `true` sol işleneni, sağ işlenen altındaysa `false` Aksi takdirde:
+`<` işleci, sol işlenenin sağ işleneninden daha küçükse `true` döndürür `false` Aksi takdirde:
 
 [!code-csharp-interactive[less than example](~/samples/csharp/language-reference/operators/ComparisonOperators.cs#Less)]
 
 ## <a name="greater-than-operator-"></a>Büyüktür işleci >
 
-`>` İşleci döndürür `true` sol işleneni, sağ işlenen büyükse `false` Aksi takdirde:
+`>` işleci, sol işleneni sağ işleneninden büyükse `true` döndürür `false` Aksi takdirde:
 
 [!code-csharp-interactive[greater than example](~/samples/csharp/language-reference/operators/ComparisonOperators.cs#Greater)]
 
 ## <a name="less-than-or-equal-operator-"></a>Küçüktür veya eşittir işleci \<=
 
-`<=` İşleci döndürür `true` sol işleneni, sağ işlenen küçük veya ona eşit olup olmadığını `false` Aksi takdirde:
+`<=` işleci, sol işlenenin sağ işleneninden küçük veya ona eşit olması durumunda `true` döndürür `false` Aksi takdirde:
 
 [!code-csharp-interactive[less than or equal example](~/samples/csharp/language-reference/operators/ComparisonOperators.cs#LessOrEqual)]
 
 ## <a name="greater-than-or-equal-operator-"></a>Büyüktür veya eşittir işleci > =
 
-`>=` İşleci döndürür `true` sol işlenenin değerinden büyük veya eşittir, sağ işlenen ise `false` Aksi takdirde:
+`>=` işleci, sol işlenenin sağ işleneninden büyük veya ona eşit olması durumunda `true` döndürür `false` Aksi takdirde:
 
 [!code-csharp-interactive[greater than or equal example](~/samples/csharp/language-reference/operators/ComparisonOperators.cs#GreaterOrEqual)]
 
-## <a name="operator-overloadability"></a>İşleç overloadability
+## <a name="operator-overloadability"></a>Operatör overloadability
 
-Kullanıcı tanımlı bir tür için [aşırı](operator-overloading.md) `<`, `>`, `<=`, ve `>=` işleçleri.
+Kullanıcı tanımlı bir tür `<`, `>`, `<=`ve `>=` işleçlerini [aşırı](operator-overloading.md) yükleyebilir.
 
-Bir tür birini aşırı `<` veya `>` operatörleri onu gerekir aşırı yükleme hem de `<` ve `>`. Bir tür birini aşırı `<=` veya `>=` operatörleri onu gerekir aşırı yükleme hem de `<=` ve `>=`.
+Bir tür `<` veya `>` işleçlerinden birini aşırı yüklerinde, hem `<` hem de `>`aşırı yüklemesi gerekir. Bir tür `<=` veya `>=` işleçlerinden birini aşırı yüklerinde, hem `<=` hem de `>=`aşırı yüklemesi gerekir.
 
 ## <a name="c-language-specification"></a>C# dili belirtimi
 
-Daha fazla bilgi için [ilişkisel ve tür testi işleçleri](~/_csharplang/spec/expressions.md#relational-and-type-testing-operators) bölümünü [ C# dil belirtimi](~/_csharplang/spec/introduction.md).
+Daha fazla bilgi için, [ C# dil belirtiminin](~/_csharplang/spec/introduction.md) [ilişkisel ve tür-test işleçleri](~/_csharplang/spec/expressions.md#relational-and-type-testing-operators) bölümüne bakın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C#başvuru](../index.md)
+- [C#başvurunun](../index.md)
 - [C# işleçleri](index.md)
 - <xref:System.IComparable%601?displayProperty=nameWithType>
 - [Eşitlik işleçleri](equality-operators.md)

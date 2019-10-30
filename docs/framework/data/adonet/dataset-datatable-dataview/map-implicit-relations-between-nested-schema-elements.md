@@ -2,21 +2,21 @@
 title: İç İçe Geçmiş Şema Öğeleri Arasında Örtük İlişkileri Eşleme
 ms.date: 03/30/2017
 ms.assetid: 6b25002a-352e-4d9b-bae3-15129458a355
-ms.openlocfilehash: f4b1b9e45f0cda976719b991c336463e0af05f12
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 25fc2c427727273038f7b4267376d6ba6446b811
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70784443"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040384"
 ---
 # <a name="map-implicit-relations-between-nested-schema-elements"></a>İç İçe Geçmiş Şema Öğeleri Arasında Örtük İlişkileri Eşleme
-Bir XML şeması tanım dili (XSD) şeması, bir diğeri içinde iç içe geçmiş karmaşık türlere sahip olabilir. Bu durumda, eşleme işlemi varsayılan eşlemeyi uygular ve içinde <xref:System.Data.DataSet>aşağıdakileri oluşturur:  
+Bir XML şeması tanım dili (XSD) şeması, bir diğeri içinde iç içe geçmiş karmaşık türlere sahip olabilir. Bu durumda, eşleme işlemi varsayılan eşlemeyi uygular ve <xref:System.Data.DataSet>aşağıdakileri oluşturur:  
   
 - Karmaşık türlerin her biri için bir tablo (üst ve alt).  
   
 - Üst öğede benzersiz bir kısıtlama yoksa, TableName *_ID*adlı tablo tanımı başına bir ek birincil anahtar sütunu, *TableName* , üst tablonun adıdır.  
   
-- Birincil anahtar olarak ek sütunu tanımlayan üst tabloda birincil anahtar kısıtlaması ( **IsPrimaryKey** özelliği **true**olarak ayarlanarak). Kısıtlama, 1, 2\# , \# 3 vb. olduğu kısıtlamadır. Örneğin, ilk kısıtlamanın varsayılan adı Constraint1 ' dir.  
+- Birincil anahtar olarak ek sütunu tanımlayan üst tabloda birincil anahtar kısıtlaması ( **IsPrimaryKey** özelliği **true**olarak ayarlanarak). Kısıtlama, \# 1, 2, 3, vb.\# olarak adlandırılır. Örneğin, ilk kısıtlamanın varsayılan adı Constraint1 ' dir.  
   
 - Üst tablonun birincil anahtarına başvuran yabancı anahtar olarak ek sütunu tanımlayan alt tablodaki yabancı anahtar kısıtlaması. Kısıtlama *ParentTable_ChildTable* olarak adlandırılır; burada *ParentTable* üst tablonun adı ve *ChildTable* ise alt tablonun adıdır.  
   
@@ -58,14 +58,14 @@ Bir XML şeması tanım dili (XSD) şeması, bir diğeri içinde iç içe geçmi
   
 - Bir **Order** ve **OrderDetail** tablosu.  
   
-    ```  
+    ```text  
     Order(OrderNumber, EmpNumber, Order_Id)  
     OrderDetail(OrderNo, ItemNo, Order_Id)  
     ```  
   
 - **Order** tablosundaki benzersiz bir kısıtlama. **IsPrimaryKey** özelliğinin **true**olarak ayarlandığını unutmayın.  
   
-    ```  
+    ```text  
     ConstraintName: Constraint1  
     Type: UniqueConstraint  
     Table: Order  
@@ -75,7 +75,7 @@ Bir XML şeması tanım dili (XSD) şeması, bir diğeri içinde iç içe geçmi
   
 - **OrderDetail** tablosundaki yabancı anahtar kısıtlaması.  
   
-    ```  
+    ```text  
     ConstraintName: Order_OrderDetail  
     Type: ForeignKeyConstraint  
     Table: OrderDetail  
@@ -86,7 +86,7 @@ Bir XML şeması tanım dili (XSD) şeması, bir diğeri içinde iç içe geçmi
   
 - **Order** ve **OrderDetail** tabloları arasındaki ilişki. **Order** ve **OrderDetail** öğeleri şemada iç içe yerleştirilmiş olduğundan, bu ilişkinin **iç içe geçmiş** özelliği **true** olarak ayarlanır.  
   
-    ```  
+    ```text  
     ParentTable: Order  
     ParentColumns: Order_Id   
     ChildTable: OrderDetail  

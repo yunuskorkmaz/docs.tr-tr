@@ -14,76 +14,82 @@ helpviewer_keywords:
 - Private access modifier
 - declared elements [Visual Basic], access level
 ms.assetid: 6e06c1ab-fd78-47f0-83a8-1152780b5e1a
-ms.openlocfilehash: d8f2f16d2fb15f2e840f13f177d3fea83fda315e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d1548f7850c68bc3c5422cf9d8d3d30eaa4aa8f3
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61828106"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73035881"
 ---
 # <a name="access-levels-in-visual-basic"></a>Visual Basic'de Erişim Düzeyleri
-*Erişim düzeyi* bildirilen bir öğenin erişim olanağı kapsamını, başka bir deyişle, hangi kod dosyayı okuma veya yazma izni yoktur. Bu, yalnızca öğenin kendisinin nasıl bildirdiğiniz tarafından aynı zamanda öğenin kapsayıcı erişim düzeyine göre belirlenir. Bir kapsayıcı öğe erişemiyor kod herhangi birini kendi içerilen öğelerin erişemez, bile olarak bildirilen `Public`. Örneğin, bir `Public` değişkeninde bir `Private` yapısı erişilebilir değil, ancak yapı içeren bir sınıf içinde o sınıf dışında.  
-  
-## <a name="public"></a>Ortak  
- [Genel](../../../../visual-basic/language-reference/modifiers/public.md) bildirim deyimindeki bir anahtar sözcük belirtir öğesi aynı projede herhangi bir kod projesi başvuran diğer projeler ve projeden oluşturulan herhangi bir derleme erişilebilir. Aşağıdaki kod, bir örneği gösterilmektedir. `Public` bildirimi.  
-  
-```vb  
-Public Class classForEverybody  
-```  
-  
- Kullanabileceğiniz `Public` yalnızca düzeyinde modülü, arabirim veya ad alanı. Başka bir deyişle, bir kaynak dosya veya ad alanı veya arabirimi, modül, sınıf veya yapı içinde ancak bir yordamda düzeyde bir genel öğesi bildirebilirsiniz.  
-  
-## <a name="protected"></a>Korumalı  
- [Korumalı](../../../../visual-basic/language-reference/modifiers/protected.md) anahtar sözcüğü bir bildirim deyiminde öğesi yalnızca aynı sınıf içinde veya bu sınıftan türetilen bir sınıftan erişilebilir olduğunu belirtir. Aşağıdaki kod, bir örneği gösterilmektedir. `Protected` bildirimi.  
-  
-```vb  
-Protected Class classForMyHeirs  
-```  
-  
- Kullanabileceğiniz `Protected` yalnızca sınıf düzeyinde ve yalnızca bildirdiğinizde sınıfının bir üyesi. Başka bir deyişle, bir sınıf, ancak düzeyinde bir kaynak dosya veya ad alanı veya arabirimi, modül, yapı veya yordam içinde korumalı bir öğe bildirebilirsiniz.  
-  
-## <a name="friend"></a>Arkadaş  
- [Arkadaş](../../../../visual-basic/language-reference/modifiers/friend.md) bildirim deyimindeki bir anahtar sözcük belirtir öğesi değil, ancak aynı bütünleştirilmiş kod içinde erişilebilir olduğunu derleme dışından. Aşağıdaki kod, bir örneği gösterilmektedir. `Friend` bildirimi.  
-  
-```vb  
-Friend stringForThisProject As String  
-```  
-  
- Kullanabileceğiniz `Friend` yalnızca düzeyinde modülü, arabirim veya ad alanı. Başka bir deyişle, bir arkadaş öğesi bir kaynak dosya veya ad alanı veya arabirimi, modül, sınıf veya yapı içinde ancak bir yordamda düzeyinde bildirebilirsiniz.  
-  
-## <a name="protected-friend"></a>Korumalı Friend  
- [Protected Friend](../../../language-reference/modifiers/protected-friend.md) anahtar sözcüğü birleşimi bildirim deyiminde belirtir öğesi veya türetilmiş sınıf içinden erişilebilir aynı derleme veya her ikisini de. Aşağıdaki kod, bir örneği gösterilmektedir. `Protected Friend` bildirimi.  
-  
-```vb  
-Protected Friend stringForProjectAndHeirs As String  
-```  
-  
- Kullanabileceğiniz `Protected Friend` yalnızca sınıf düzeyinde ve yalnızca bildirdiğinizde sınıfının bir üyesi. Başka bir deyişle, bir sınıf, ancak düzeyinde bir kaynak dosya veya ad alanı veya arabirimi, modül, yapı veya yordam içinde bir korumalı friend öğesi bildirebilirsiniz.  
-  
-## <a name="private"></a>Özel  
- [Özel](../../../../visual-basic/language-reference/modifiers/private.md) anahtar sözcüğü bir bildirim deyiminde öğesi yalnızca aynı modül, sınıf veya yapı içinde erişilebilir olduğunu belirtir. Aşağıdaki kod, bir örneği gösterilmektedir. `Private` bildirimi.  
-  
-```vb  
-Private numberForMeOnly As Integer  
-```  
-  
- Kullanabileceğiniz `Private` yalnızca Modül düzeyinde. Başka bir deyişle, bir modül, sınıf veya yapı içinde ancak bir kaynak dosya veya ad alanı, bir arabirim içinde veya bir yordamda düzeyinde özel bir öğeyi bildirebilirsiniz.  
-  
- Modül düzeyinde `Dim` deyimi herhangi bir erişim düzeyi anahtar olmadan, bir `Private` bildirimi. Ancak, kullanmak isteyebilirsiniz `Private` kodunuzu okumak ve yorumlamak kolay hale getirmek için anahtar sözcüğü.  
 
-## <a name="private-protected"></a>Özel korumalı
+Tanımlı bir öğenin *erişim düzeyi* buna erişim yeteneğinin, diğer bir deyişle, hangi kodun bu dosyayı okuma veya yazma iznine sahip olduğu bir şeydir. Bu, yalnızca öğenin kendisini nasıl tanımlayacağınızın yanı sıra öğenin kapsayıcısının erişim düzeyiyle de belirlenir. Kapsayan bir öğeye erişememiş kod, `Public`olarak bildirilenler bile içerilen öğelerinden hiçbirine erişemez. Örneğin, bir `Private` yapısındaki `Public` değişkenine, yapıyı içeren sınıfın içinden, ancak bu sınıfın dışından erişilebilir.
 
-[Protected Private](../../../language-reference/modifiers/private-protected.md) anahtar sözcüğü birleşimi bildirim deyiminde öğesi yalnızca aynı sınıf içinde yanı sıra aynı bütünleştirilmiş kod içeren sınıf bulunan türetilmiş sınıflardan erişilebilir olduğunu belirtir. `Private Protected` Erişim değiştiricisi, Visual Basic 15.5 ile'den başlayarak desteklenir.
+## <a name="public"></a>Ortak
 
-Aşağıdaki örnekte gösterildiği bir `Private Protected` bildirimi:
+Bildirim deyimindeki [Public](../../../language-reference/modifiers/public.md) anahtar sözcüğü, öğeye aynı projede herhangi bir yerde, projeye başvuran diğer projelerden ve projeden oluşturulan herhangi bir derlemeden erişilebileceğini belirtir. Aşağıdaki kod bir örnek `Public` bildirimi gösterir:
+
+```vb
+Public Class ClassForEverybody
+```
+
+`Public` yalnızca modül, arabirim veya ad alanı düzeyinde kullanabilirsiniz. Bu, bir genel öğeyi bir kaynak dosya veya ad alanı düzeyinde ya da bir arabirim, modül, sınıf ya da yapı içinde veya bir yordamda değil, bir şekilde bildirebilmeniz anlamına gelir.
+  
+## <a name="protected"></a>Korumalı
+
+Bildirim deyimindeki [Protected](../../../language-reference/modifiers/protected.md) anahtar sözcüğü, öğesinin yalnızca aynı sınıftan veya bu sınıftan türetilmiş bir sınıftan erişilebilir olduğunu belirtir. Aşağıdaki kod bir örnek `Protected` bildirimi gösterir:
+
+```vb
+Protected Class ClassForMyHeirs
+```
+
+`Protected` yalnızca sınıf düzeyinde ve yalnızca bir sınıfın bir üyesini bildirdiğinizde kullanabilirsiniz. Bu, bir kaynak dosya veya ad alanı düzeyinde ya da bir arabirim, modül, yapı veya yordamın içinde değil, bir sınıfta korunan bir öğe bildirebilmeniz anlamına gelir.
+
+## <a name="friend"></a>Arkadaş
+
+Bildirim deyimindeki [Friend](../../../language-reference/modifiers/friend.md) anahtar sözcüğü, öğesine aynı derleme içinden erişilemeyeceğini, ancak derlemenin dışından erişilebileceğini belirtir. Aşağıdaki kod bir örnek `Friend` bildirimi gösterir:
+
+```vb
+Friend stringForThisProject As String
+```
+
+`Friend` yalnızca modül, arabirim veya ad alanı düzeyinde kullanabilirsiniz. Bu, bir kaynak dosya veya ad alanı düzeyinde ya da bir arabirim, modül, sınıf ya da yapının içinde veya bir yordamda değil, bir arkadaş öğesi bildirebilmeniz anlamına gelir.
+
+## <a name="protected-friend"></a>Protected Friend
+
+Bildirim deyimindeki [Protected Friend](../../../language-reference/modifiers/protected-friend.md) anahtar sözcüğü birleşimi, öğesine türetilmiş sınıflardan veya aynı derlemenin içinden ya da her ikisinin de erişilebileceğini belirtir. Aşağıdaki kod bir örnek `Protected Friend` bildirimi gösterir:
+
+```vb
+Protected Friend stringForProjectAndHeirs As String
+```
+
+`Protected Friend` yalnızca sınıf düzeyinde ve yalnızca bir sınıfın bir üyesini bildirdiğinizde kullanabilirsiniz. Bu, bir kaynak dosya veya ad alanı düzeyinde ya da bir arabirim, modül, yapı veya yordamın içinde değil, bir sınıfta korunan bir arkadaş öğesi bildirebilmeniz anlamına gelir.
+
+## <a name="private"></a>Özel
+
+Bildirim deyimindeki [Private](../../../language-reference/modifiers/private.md) anahtar sözcüğü, öğeye yalnızca aynı modül, sınıf veya yapı içinden erişilebileceğini belirtir. Aşağıdaki kod bir örnek `Private` bildirimi gösterir:
+
+```vb
+Private _numberForMeOnly As Integer
+```
+
+Yalnızca modül düzeyinde `Private` kullanabilirsiniz. Bu, bir özel öğeyi bir modül, sınıf veya yapı içinde, bir kaynak dosya veya ad alanı düzeyinde, bir arabirim içinde veya bir yordamda bildirebilmeniz anlamına gelir.
+
+Modül düzeyinde, erişim düzeyi anahtar sözcükleri olmayan `Dim` deyimleri `Private` bildirimine eşdeğerdir. Ancak, kodunuzun okunmasını ve yorumlanması daha kolay hale getirmek için `Private` anahtar sözcüğünü kullanmak isteyebilirsiniz.
+
+## <a name="private-protected"></a>Private Protected
+
+Bildirim deyimindeki [özel korumalı](../../../language-reference/modifiers/private-protected.md) anahtar sözcük birleşimi, öğesinin yalnızca aynı sınıftan erişilebilir ve aynı derlemede bulunan türetilmiş sınıflardan ve kapsayan sınıfla erişilebilir olduğunu belirtir. `Private Protected` erişim değiştiricisi Visual Basic 15,5 ' den başlayarak desteklenir.
+
+Aşağıdaki örnek bir `Private Protected` bildirimi gösterir:
 
 ```vb
 Private Protected internalValue As Integer
 ```
 
-Bildirebilirsiniz bir `Private Protected` öğe yalnızca bir sınıf içinde. Bir arabirim ya da yapısı bildiremezsiniz ya da bir kaynak dosya veya ad alanı, bir arabirim veya bir yapı içinde veya bir yordamda düzeyinde bildirebilirsiniz.
+Yalnızca bir sınıfın içinde bir `Private Protected` öğesi bildirebilirsiniz. Bunu bir arabirim veya yapı içinde bildiremezsiniz veya bir arabirim ya da bir yapı içinde ya da bir yordamda bir kaynak dosya veya ad alanı düzeyinde bildiremezsiniz.
 
-`Private Protected` Erişim değiştiricisi, Visual Basic 15.5 ve sonraki sürümlerinde desteklenir. Bunu kullanmak için Visual Basic proje (*.vbproj) dosyanıza aşağıdaki öğeyi ekleyin. Sisteminizde sürece Visual Basic 15.5 veya üzeri yüklü olduğu, en son sürümü Visual Basic derleyicisi tarafından desteklenen dil özellikleri yararlanmanızı sağlar:
+`Private Protected` erişim değiştiricisi Visual Basic 15,5 ve üzeri tarafından desteklenir. Bunu kullanmak için, Visual Basic projesi ( *\*. vbproj*) dosyanıza aşağıdaki öğeyi ekleyin. Visual Basic 15,5 veya üzeri bir sürümü sisteminize yüklendiği sürece, Visual Basic derleyicinin en son sürümü tarafından desteklenen tüm dil özelliklerinden yararlanmanızı sağlar:
 
 ```xml
 <PropertyGroup>
@@ -91,7 +97,7 @@ Bildirebilirsiniz bir `Private Protected` öğe yalnızca bir sınıf içinde. B
 </PropertyGroup>
 ```
 
-Kullanılacak `Private Protected` erişim değiştiricisi, Visual Basic (*.vbproj) proje dosyanıza şu öğeyi ekleyin:
+`Private Protected` erişim değiştiricisini kullanmak için, aşağıdaki öğeyi Visual Basic projesi ( *\*. vbproj*) dosyanıza eklemeniz gerekir:
 
 ```xml
 <PropertyGroup>
@@ -99,30 +105,30 @@ Kullanılacak `Private Protected` erişim değiştiricisi, Visual Basic (*.vbpro
 </PropertyGroup>
 ```
 
-Daha fazla bilgi için [Visual Basic dil sürümü ayarını](../../../language-reference/configure-language-version.md).
+Daha fazla bilgi için bkz. [Visual Basic dil sürümünü ayarlama](../../../language-reference/configure-language-version.md).
 
-## <a name="access-modifiers"></a>Erişim Değiştiricileri  
+## <a name="access-modifiers"></a>Erişim Değiştiricileri
 
-Erişim düzeyini sağlayacaklarını anahtar sözcükleri adlı *erişim değiştiricilerine*. Aşağıdaki tabloda, erişim değiştiricileri karşılaştırır.  
-  
-|Erişim değiştiricisi|Verilen erişim düzeyi|Öğeleri bu erişim düzeyiyle bildirebilirsiniz.|Bu değiştirici, içinde kullanabileceğiniz bildirimi bağlamı|  
-|---------------------|--------------------------|-----------------------------------------------------|----------------------------------------------------------------|  
-|`Public`|Sınırsız:<br /><br /> Genel öğesinin herhangi bir kod erişimi|Arabirimler<br /><br /> Modüller<br /><br /> Sınıflar<br /><br /> Yapılar<br /><br /> Yapı üyeleri<br /><br /> Yordamlar<br /><br /> Özellikler<br /><br /> Üye değişkenleri<br /><br /> Sabitler<br /><br /> Numaralandırmalar<br /><br /> Olaylar<br /><br /> Dış bildirimler<br /><br /> Temsilciler|Kaynak dosyası<br /><br /> Ad Alanı<br /><br /> Arabirim<br /><br /> Modül<br /><br /> örneği<br /><br /> Yapı|  
-|`Protected`|Derivational:<br /><br /> Korumalı bir öğe veya bu türden türetilmiş bir sınıf öğesi erişip bildirir sınıfında kod|Arabirimler<br /><br /> Sınıflar<br /><br /> Yapılar<br /><br /> Yordamlar<br /><br /> Özellikler<br /><br /> Üye değişkenleri<br /><br /> Sabitler<br /><br /> Numaralandırmalar<br /><br /> Olaylar<br /><br /> Dış bildirimler<br /><br /> Temsilciler|örneği|  
-|`Friend`|Derleme:<br /><br /> Arkadaş öğesi erişebileceğini bildiren derlemede kod|Arabirimler<br /><br /> Modüller<br /><br /> Sınıflar<br /><br /> Yapılar<br /><br /> Yapı üyeleri<br /><br /> Yordamlar<br /><br /> Özellikler<br /><br /> Üye değişkenleri<br /><br /> Sabitler<br /><br /> Numaralandırmalar<br /><br /> Olaylar<br /><br /> Dış bildirimler<br /><br /> Temsilciler|Kaynak dosyası<br /><br /> Ad Alanı<br /><br /> Arabirim<br /><br /> Modül<br /><br /> örneği<br /><br /> Yapı|  
-|`Protected``Friend`|Birleşim, `Protected` ve `Friend`:<br /><br /> Aynı sınıf ya da korumalı friend öğesi olarak ya da öğenin sınıfından türetilen herhangi bir sınıf içinde aynı bütünleştirilmiş kod, buna erişebilir|Arabirimler<br /><br /> Sınıflar<br /><br /> Yapılar<br /><br /> Yordamlar<br /><br /> Özellikler<br /><br /> Üye değişkenleri<br /><br /> Sabitler<br /><br /> Numaralandırmalar<br /><br /> Olaylar<br /><br /> Dış bildirimler<br /><br /> Temsilciler|örneği|  
-|`Private`|Bildirim içeriği:<br /><br /> Kod içinde kapsanan türleri dahil olmak üzere özel bir öğe, öğe erişip bildiren türü kodu|Arabirimler<br /><br /> Sınıflar<br /><br /> Yapılar<br /><br /> Yapı üyeleri<br /><br /> Yordamlar<br /><br /> Özellikler<br /><br /> Üye değişkenleri<br /><br /> Sabitler<br /><br /> Numaralandırmalar<br /><br /> Olaylar<br /><br /> Dış bildirimler<br /><br /> Temsilciler|Modül<br /><br /> örneği<br /><br /> Yapı|
-|`Private Protected`|Özel bir korumalı öğe bildirir bir sınıftaki kod veya bas sınıf olarak aynı derlemede bulunan türetilmiş bir sınıf içinde kod.|Arabirimler<br /><br /> Sınıflar<br /><br /> Yapılar<br /><br /> Yordamlar<br /><br /> Özellikler<br /><br /> Üye değişkenleri<br /><br /> Sabitler<br /><br /> Numaralandırmalar<br /><br /> Olaylar<br /><br /> Dış bildirimler<br /><br /> Temsilciler|örneği|
-  
+Erişim düzeyi belirten anahtar sözcüklere *erişim değiştiricileri*denir. Aşağıdaki tabloda erişim değiştiricileri karşılaştırılmaktadır:
+
+|Erişim değiştiricisi|Erişim düzeyi verildi|Bu erişim düzeyiyle bildirebileceğiniz öğeler|Bu değiştiriciyi kullanabileceğiniz bildirim bağlamı|
+|---------------------|--------------------------|-----------------------------------------------------|----------------------------------------------------------------|
+|`Public`|Edin<br /><br /> Ortak bir öğeyi görebileceğiniz herhangi bir kod, buna erişebilir|Arabirimler<br /><br /> Modüller<br /><br /> Sınıflar<br /><br /> Yapılar<br /><br /> Yapı üyeleri<br /><br /> Yordamlar<br /><br /> Özellikler<br /><br /> Üye değişkenleri<br /><br /> Sabitler<br /><br /> Numaralandırmalar<br /><br /> Olaylar<br /><br /> Dış bildirimler<br /><br /> Temsilciler|Kaynak dosya<br /><br /> Ad Alanı<br /><br /> Arabirim<br /><br /> Modül<br /><br /> örneği<br /><br /> Yapı|
+|`Protected`|Türetme:<br /><br /> Bir korumalı öğeyi veya ondan türetilmiş bir sınıfı bildiren sınıftaki kod öğeye erişebilir|Arabirimler<br /><br /> Sınıflar<br /><br /> Yapılar<br /><br /> Yordamlar<br /><br /> Özellikler<br /><br /> Üye değişkenleri<br /><br /> Sabitler<br /><br /> Numaralandırmalar<br /><br /> Olaylar<br /><br /> Dış bildirimler<br /><br /> Temsilciler|örneği|
+|`Friend`|Derleme:<br /><br /> Bir Friend öğesini bildiren derlemede bulunan kod, buna erişebilir|Arabirimler<br /><br /> Modüller<br /><br /> Sınıflar<br /><br /> Yapılar<br /><br /> Yapı üyeleri<br /><br /> Yordamlar<br /><br /> Özellikler<br /><br /> Üye değişkenleri<br /><br /> Sabitler<br /><br /> Numaralandırmalar<br /><br /> Olaylar<br /><br /> Dış bildirimler<br /><br /> Temsilciler|Kaynak dosya<br /><br /> Ad Alanı<br /><br /> Arabirim<br /><br /> Modül<br /><br /> örneği<br /><br /> Yapı|
+|`Protected``Friend`|`Protected` ve `Friend`birleşimi:<br /><br /> Aynı sınıftaki veya korunan arkadaş öğesiyle aynı derlemede bulunan veya öğenin sınıfından türetilmiş herhangi bir sınıfın içindeki kod, buna erişebilir|Arabirimler<br /><br /> Sınıflar<br /><br /> Yapılar<br /><br /> Yordamlar<br /><br /> Özellikler<br /><br /> Üye değişkenleri<br /><br /> Sabitler<br /><br /> Numaralandırmalar<br /><br /> Olaylar<br /><br /> Dış bildirimler<br /><br /> Temsilciler|örneği|
+|`Private`|Bildirim bağlamı:<br /><br /> İçerilen türler içindeki kod dahil olmak üzere özel bir öğeyi bildiren türdeki kod öğeye erişebilir|Arabirimler<br /><br /> Sınıflar<br /><br /> Yapılar<br /><br /> Yapı üyeleri<br /><br /> Yordamlar<br /><br /> Özellikler<br /><br /> Üye değişkenleri<br /><br /> Sabitler<br /><br /> Numaralandırmalar<br /><br /> Olaylar<br /><br /> Dış bildirimler<br /><br /> Temsilciler|Modül<br /><br /> örneği<br /><br /> Yapı|
+|`Private Protected`|Sınıf içindeki özel korumalı öğeyi bildiren kod veya aynı derlemede bulunan türetilmiş bir sınıftaki kodu, bas sınıfıyla aynı derlemede bulabilirsiniz.|Arabirimler<br /><br /> Sınıflar<br /><br /> Yapılar<br /><br /> Yordamlar<br /><br /> Özellikler<br /><br /> Üye değişkenleri<br /><br /> Sabitler<br /><br /> Numaralandırmalar<br /><br /> Olaylar<br /><br /> Dış bildirimler<br /><br /> Temsilciler|örneği|
+
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Dim Deyimi](../../../../visual-basic/language-reference/statements/dim-statement.md)
-- [Static](../../../../visual-basic/language-reference/modifiers/static.md)
-- [Bildirilen Öğe Adları](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
-- [Bildirilmiş Öğelere Başvurular](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
-- [Bildirilen Öğe Özellikleri](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)
-- [Visual Basic'de ömür](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
-- [Visual Basic'de kapsam](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
-- [Nasıl yapılır: Bir değişkenin kullanılabilirliğini denetleme](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-availability-of-a-variable.md)
-- [Değişkenler](../../../../visual-basic/programming-guide/language-features/variables/index.md)
-- [Değişken Bildirimi](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
+- [Dim Deyimi](../../../language-reference/statements/dim-statement.md)
+- [Static](../../../language-reference/modifiers/static.md)
+- [Bildirilen Öğe Adları](declared-element-names.md)
+- [Bildirilmiş Öğelere Başvurular](references-to-declared-elements.md)
+- [Bildirilen Öğe Özellikleri](declared-element-characteristics.md)
+- [Visual Basic ömrü](lifetime.md)
+- [Visual Basic kapsam](scope.md)
+- [Nasıl yapılır: Bir Değişkenin Kullanılabilirliğini Denetleme](how-to-control-the-availability-of-a-variable.md)
+- [Değişkenler](../variables/index.md)
+- [Değişken Bildirimi](../variables/variable-declaration.md)
