@@ -4,12 +4,12 @@ description: Blazor ile yeniden kullanılabilir kullanıcı arabirimi bileşenle
 author: danroth27
 ms.author: daroth
 ms.date: 09/18/2019
-ms.openlocfilehash: ab9697bcb12ec17528415b3ad4d850803f472b36
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 79919b183a4eb759f0b27c97500ee71c9378770b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72520334"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73088099"
 ---
 # <a name="build-reusable-ui-components-with-blazor"></a>Blazor ile yeniden kullanılabilir kullanıcı arabirimi bileşenleri oluşturun
 
@@ -28,7 +28,7 @@ Blazor, *Bileşenler*aracılığıyla UI kapsüllemeyi de destekler. Bileşen:
 
 Razor, HTML ve C#temel alan hafif bir işaretleme şablon dilidir. Razor sayesinde, bileşen işleme mantığınızı tanımlamak için biçimlendirme C# ve kod arasında sorunsuzca geçiş yapabilirsiniz. *. Razor* dosyası derlendiğinde, işleme mantığı .net sınıfında yapılandırılmış bir şekilde yakalanır. Derlenen sınıfın adı *. Razor* dosya adından alınır. Ad alanı, proje ve klasör yolu için varsayılan ad alanından alınır veya `@namespace` yönergesini kullanarak ad alanını açıkça belirtebilirsiniz (aşağıdaki Razor yönergelerinden daha fazlası).
 
-Bir bileşenin işleme mantığı, kullanılarak C#dinamik mantık eklenen normal HTML işaretlemesi kullanılarak yazılır. @No__t_0 karakteri öğesine C#geçiş yapmak için kullanılır. Razor genellikle HTML 'ye geri döndüğünüzde gelime konusunda akıllı bir değer sağlar. Örneğin, aşağıdaki bileşen geçerli saat ile bir `<p>` etiketi işler:
+Bir bileşenin işleme mantığı, kullanılarak C#dinamik mantık eklenen normal HTML işaretlemesi kullanılarak yazılır. `@` karakteri öğesine C#geçiş yapmak için kullanılır. Razor genellikle HTML 'ye geri döndüğünüzde gelime konusunda akıllı bir değer sağlar. Örneğin, aşağıdaki bileşen geçerli saat ile bir `<p>` etiketi işler:
 
 ```razor
 <p>@DateTime.Now</p>
@@ -218,7 +218,7 @@ public partial class Counter : System.Web.UI.UserControl
 }
 ```
 
-Blazor ' de, DOM UI olayları için işleyicileri doğrudan `@on{event}` ' ın yönerge özniteliklerini kullanarak kaydedebilirsiniz. @No__t_0 yer tutucusu, olayın adını temsil eder. Örneğin, aşağıdaki gibi düğme tıklamalarını dinleyeseçebilirsiniz:
+Blazor ' de, DOM UI olayları için işleyicileri doğrudan `@on{event}` ' ın yönerge özniteliklerini kullanarak kaydedebilirsiniz. `{event}` yer tutucusu, olayın adını temsil eder. Örneğin, aşağıdaki gibi düğme tıklamalarını dinleyeseçebilirsiniz:
 
 ```razor
 <button @onclick="OnClick">Click me!</button>
@@ -237,7 +237,7 @@ Olay işleyicileri, olay hakkında daha fazla bilgi sağlamak için isteğe bağ
 <button @onclick="OnClick">Click me!</button>
 
 @code {
-    void OnClick(MouseEventArgs e) 
+    void OnClick(MouseEventArgs e)
     {
         Console.WriteLine($"Mouse clicked at {e.ScreenX}, {e.ScreenY}.");
     }
@@ -259,7 +259,7 @@ Olay işleyicileri, zaman uyumlu veya zaman uyumsuz olarak çalıştırılabilir
 <button @onclick="OnClick">Click me!</button>
 
 @code {
-    async Task OnClick() 
+    async Task OnClick()
     {
         var result = await Http.GetAsync("api/values");
     }
@@ -283,7 +283,7 @@ Bir olay işlendikten sonra bileşen, bileşen durumu değişikliklerini hesaba 
     }
 }
 
-@code 
+@code
 {
     bool showMessage = false;
     string message;
@@ -343,9 +343,9 @@ Bileşenler, parametrelerine veri bağlamayı da destekleyebilir. Veri bağlama 
 *PasswordBox. Razor*
 
 ```razor
-Password: <input 
-    value="@Password" 
-    @oninput="OnPasswordChanged" 
+Password: <input
+    value="@Password"
+    @oninput="OnPasswordChanged"
     type="@(showPassword ? "text" : "password")" />
 
 <label><input type="checkbox" @bind="showPassword" />Show password</label>
@@ -431,13 +431,13 @@ public partial class Counter : System.Web.UI.UserControl
 }
 ```
 
-Blazor bileşenlerinde de iyi tanımlanmış bir yaşam döngüsü vardır. Bileşenin yaşam döngüsü, bileşen durumunu başlatmak ve Gelişmiş bileşen davranışları uygulamak için kullanılabilir. 
+Blazor bileşenlerinde de iyi tanımlanmış bir yaşam döngüsü vardır. Bileşenin yaşam döngüsü, bileşen durumunu başlatmak ve Gelişmiş bileşen davranışları uygulamak için kullanılabilir.
 
 Tüm Blazor bileşen yaşam döngüsü yöntemlerinin hem zaman uyumlu hem de zaman uyumsuz sürümleri vardır. Bileşen işleme zaman uyumludur. Zaman uyumsuz mantığı bileşen işlemenin bir parçası olarak çalıştıramazsınız. Tüm zaman uyumsuz mantığın bir `async` yaşam döngüsü yönteminin parçası olarak yürütülmesi gerekir.
 
 ### <a name="oninitialized"></a>OnInitialized
 
-@No__t_0 ve `OnInitializedAsync` yöntemleri, bileşeni başlatmak için kullanılır. Bir bileşen genellikle ilk işlendikten sonra başlatılır. Bir bileşen başlatıldıktan sonra, en sonunda atılmadan önce birden çok kez oluşturulabilir. @No__t_0 yöntemi, ASP.NET Web Forms sayfaları ve denetimlerinde `Page_Load` olayına benzerdir.
+`OnInitialized` ve `OnInitializedAsync` yöntemleri, bileşeni başlatmak için kullanılır. Bir bileşen genellikle ilk işlendikten sonra başlatılır. Bir bileşen başlatıldıktan sonra, en sonunda atılmadan önce birden çok kez oluşturulabilir. `OnInitialized` yöntemi, ASP.NET Web Forms sayfaları ve denetimlerinde `Page_Load` olayına benzerdir.
 
 ```csharp
 protected override void OnInitialized() { ... }
@@ -446,7 +446,7 @@ protected override async Task OnInitializedAsync() { await ... }
 
 ### <a name="onparametersset"></a>OnParametersSet
 
-@No__t_0 ve `OnParametersSetAsync` yöntemleri, bir bileşen üst öğeden parametreleri aldığında ve değer özelliklerine atandığında çağrılır. Bu yöntemler bileşen başlatıldıktan sonra ve *bileşen her işlendiğinde*yürütülür.
+`OnParametersSet` ve `OnParametersSetAsync` yöntemleri, bir bileşen üst öğeden parametreleri aldığında ve değer özelliklerine atandığında çağrılır. Bu yöntemler bileşen başlatıldıktan sonra ve *bileşen her işlendiğinde*yürütülür.
 
 ```csharp
 protected override void OnParametersSet() { ... }
@@ -455,7 +455,7 @@ protected override async Task OnParametersSetAsync() { await ... }
 
 ### <a name="onafterrender"></a>OnAfterRender
 
-@No__t_0 ve `OnAfterRenderAsync` yöntemleri bir bileşen işlemeyi tamamladıktan sonra çağrılır. Öğe ve bileşen başvuruları bu noktada doldurulur (aşağıdaki kavramlarda daha fazla). Bu noktada tarayıcıyla etkileşim etkinleştirilir. DOM ve JavaScript yürütme etkileşimleri güvenle yapılabilir. 
+`OnAfterRender` ve `OnAfterRenderAsync` yöntemleri bir bileşen işlemeyi tamamladıktan sonra çağrılır. Öğe ve bileşen başvuruları bu noktada doldurulur (aşağıdaki kavramlarda daha fazla). Bu noktada tarayıcıyla etkileşim etkinleştirilir. DOM ve JavaScript yürütme etkileşimleri güvenle yapılabilir.
 
 ```csharp
 protected override void OnAfterRender(bool firstRender)
@@ -476,7 +476,7 @@ protected override async Task OnAfterRenderAsync(bool firstRender)
 
 `OnAfterRender` ve `OnAfterRenderAsync` *, sunucuda prerendering çağrıldığında çağrılmaz*.
 
-@No__t_0 parametresi, bileşen ilk kez işlendiğinde `true`; Aksi takdirde, değeri `false`.
+`firstRender` parametresi, bileşen ilk kez işlendiğinde `true`; Aksi takdirde, değeri `false`.
 
 ### <a name="idisposable"></a>IDisposable
 
@@ -525,9 +525,9 @@ Blazor bileşenleri, bir öğeye başvuruları yakalayabilir. ASP.NET Web Forms 
 
 ## <a name="templated-components"></a>Şablonlu bileşenler
 
-ASP.NET Web Forms içinde *şablonlu denetimler*oluşturabilirsiniz. Şablonlu denetimler, geliştiricinin bir kapsayıcı denetimini işlemek için kullanılan HTML 'nin bir bölümünü belirtmesini sağlar. Şablonlu sunucu denetimleri oluşturma mekanizması karmaşıktır, ancak kullanıcı tarafından özelleştirilebilir bir şekilde veri işlemeye yönelik güçlü senaryolar sağlar. Şablonlu denetimlerin örnekleri `Repeater` ve `DataList` ' i içerir. 
+ASP.NET Web Forms içinde *şablonlu denetimler*oluşturabilirsiniz. Şablonlu denetimler, geliştiricinin bir kapsayıcı denetimini işlemek için kullanılan HTML 'nin bir bölümünü belirtmesini sağlar. Şablonlu sunucu denetimleri oluşturma mekanizması karmaşıktır, ancak kullanıcı tarafından özelleştirilebilir bir şekilde veri işlemeye yönelik güçlü senaryolar sağlar. Şablonlu denetimlerin örnekleri `Repeater` ve `DataList` ' i içerir.
 
-Blazor bileşenleri, `RenderFragment` veya `RenderFragment<T>` türündeki bileşen parametreleri tanımlayarak de şablonlanır. @No__t_0, daha sonra bileşen tarafından işlenebilen bir Razor biçimlendirme öbeğini temsil eder. @No__t_0, işleme parçası işlendiğinde belirtilebilen bir parametre alan Razor biçimlendirme öbektir.
+Blazor bileşenleri, `RenderFragment` veya `RenderFragment<T>` türündeki bileşen parametreleri tanımlayarak de şablonlanır. `RenderFragment`, daha sonra bileşen tarafından işlenebilen bir Razor biçimlendirme öbeğini temsil eder. `RenderFragment<T>`, işleme parçası işlendiğinde belirtilebilen bir parametre alan Razor biçimlendirme öbektir.
 
 ### <a name="child-content"></a>Alt içerik
 
@@ -626,7 +626,7 @@ Bir Blazor bileşeni genellikle tek bir *. Razor* dosyasında yazılır. Ancak, 
 *Counter.razor.cs*
 
 ```csharp
-public class CounterBase : ComponentBase 
+public class CounterBase : ComponentBase
 {
     protected int currentCount = 0;
 

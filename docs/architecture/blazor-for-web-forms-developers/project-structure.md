@@ -4,12 +4,12 @@ description: ASP.NET Web Forms ve Blazor projelerinin proje yapılarının nası
 author: danroth27
 ms.author: daroth
 ms.date: 09/11/2019
-ms.openlocfilehash: aa9157bd8627e7a03e33872c3023f91ba3d66951
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 2c383e86ff22f5a3460476998992b66e9417cc11
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72520225"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73087861"
 ---
 # <a name="project-structure-for-blazor-apps"></a>Blazor uygulamaları için proje yapısı
 
@@ -92,7 +92,7 @@ public class Program
 
 Blazor WebAssembly Apps, *program.cs*içinde bir giriş noktası da tanımlar. Kod biraz farklı görünüyor. Kod, uygulamaya aynı ana bilgisayar düzeyi hizmetleri sağlamak için uygulama ana bilgisayarı ayarlamada benzerdir. Ancak doğrudan tarayıcıda yürütüldüğü için WebAssembly uygulama ana bilgisayarı bir HTTP sunucusu ayarladı.
 
-Blazor uygulamalarının, uygulamanın başlangıç mantığını tanımlamak için bir *Global. asax* dosyası yerine `Startup` sınıfı vardır. @No__t_0 sınıfı, uygulamayı ve uygulamaya özel hizmetleri yapılandırmak için kullanılır. Blazor sunucu uygulamasında `Startup` sınıfı, istemci tarayıcıları ve sunucu arasında Blazor tarafından kullanılan gerçek zamanlı bağlantı için uç noktayı ayarlamak üzere kullanılır. Blazor WebAssembly uygulamasında `Startup` sınıfı, uygulamanın kök bileşenlerini ve bunların oluşturulması gereken yerleri tanımlar. [Uygulama başlangıç](./app-startup.md) bölümünde `Startup` sınıfına daha ayrıntılı bir bakış ekleyeceğiz.
+Blazor uygulamalarının, uygulamanın başlangıç mantığını tanımlamak için bir *Global. asax* dosyası yerine `Startup` sınıfı vardır. `Startup` sınıfı, uygulamayı ve uygulamaya özel hizmetleri yapılandırmak için kullanılır. Blazor sunucu uygulamasında `Startup` sınıfı, istemci tarayıcıları ve sunucu arasında Blazor tarafından kullanılan gerçek zamanlı bağlantı için uç noktayı ayarlamak üzere kullanılır. Blazor WebAssembly uygulamasında `Startup` sınıfı, uygulamanın kök bileşenlerini ve bunların oluşturulması gereken yerleri tanımlar. [Uygulama başlangıç](./app-startup.md) bölümünde `Startup` sınıfına daha ayrıntılı bir bakış ekleyeceğiz.
 
 ## <a name="static-files"></a>Statik dosyalar
 
@@ -145,7 +145,7 @@ Blazor uygulamalarındaki Sayfalar nerede? Blazor, adreslenebilir sayfalar için
 @page "/counter"
 ```
 
-Blazor ' de yönlendirme, sunucuda değil, istemci tarafında işlenir. Kullanıcı tarayıcıda gezinirken, Blazor gezinmeyi karşılar ve ardından bileşeni eşleşen yol ile işler. 
+Blazor ' de yönlendirme, sunucuda değil, istemci tarafında işlenir. Kullanıcı tarayıcıda gezinirken, Blazor gezinmeyi karşılar ve ardından bileşeni eşleşen yol ile işler.
 
 Bileşen yolları şu anda bileşenin dosya konumu tarafından, *. aspx* sayfalarıyla oldukları gibi çıkarsanamıyor. Bu özellik gelecekte eklenebilir. Her yol, bileşen üzerinde açık olarak belirtilmelidir. Bir *Sayfalar* klasöründe yönlendirilebilir bileşenlerin depolanması özel bir anlamı yoktur ve yalnızca bir kuraldır.
 
@@ -162,7 +162,7 @@ Blazor önyüklemek için, uygulamanın şunları yapmanız gerekir:
 - Kök bileşenin (*app. Razor*) nerede işleneceğini belirtin.
 - Karşılık gelen Blazor Framework betiğini ekleyin.
 
-Blazor sunucusu uygulamasında, kök bileşenin ana bilgisayar sayfası *_host. cshtml* dosyasında tanımlanmıştır. Bu dosya, bir bileşeni değil Razor sayfasını tanımlar. Razor Pages, bir *. aspx* sayfasına benzer şekilde sunucu adreslenebilir bir sayfa tanımlamak için Razor söz dizimi kullanın. @No__t_0 yöntemi, kök düzeyinde bir bileşenin nerede işleneceğini tanımlamak için kullanılır. @No__t_0 seçeneği, bileşenin oluşturulması gereken şekli gösterir. Aşağıdaki tabloda desteklenen `RenderMode` seçenekleri özetlenmektedir.
+Blazor sunucusu uygulamasında, kök bileşenin ana bilgisayar sayfası *_host. cshtml* dosyasında tanımlanmıştır. Bu dosya, bir bileşeni değil Razor sayfasını tanımlar. Razor Pages, bir *. aspx* sayfasına benzer şekilde sunucu adreslenebilir bir sayfa tanımlamak için Razor söz dizimi kullanın. `Html.RenderComponentAsync<TComponent>(RenderMode)` yöntemi, kök düzeyinde bir bileşenin nerede işleneceğini tanımlamak için kullanılır. `RenderMode` seçeneği, bileşenin oluşturulması gereken şekli gösterir. Aşağıdaki tabloda desteklenen `RenderMode` seçenekleri özetlenmektedir.
 
 |Seçenek                        |Açıklama       |
 |------------------------------|------------------|
@@ -197,7 +197,7 @@ Blazor sunucusu uygulamasında, kök bileşenin ana bilgisayar sayfası *_host. 
 </html>
 ```
 
-Blazor WebAssembly uygulamasında ana bilgisayar sayfası, *Wwwroot/index.html*altında Basit BIR statik HTML dosyasıdır. @No__t_0 öğesi, kök bileşenin nerede işleneceğini belirtmek için kullanılır.
+Blazor WebAssembly uygulamasında ana bilgisayar sayfası, *Wwwroot/index.html*altında Basit BIR statik HTML dosyasıdır. `<app>` öğesi, kök bileşenin nerede işleneceğini belirtmek için kullanılır.
 
 ```html
 <!DOCTYPE html>

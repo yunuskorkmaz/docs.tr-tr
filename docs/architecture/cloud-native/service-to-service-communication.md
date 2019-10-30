@@ -3,12 +3,12 @@ title: Hizmetten hizmete iletişim
 description: Arka uç bulutu yerel mikro hizmetlerinin diğer arka uç mikro hizmetleriyle nasıl iletişim kuracağını öğrenin.
 author: robvet
 ms.date: 09/09/2019
-ms.openlocfilehash: 0917ae8bf38b117619cec63411ea8f4f084ae6f2
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 6a7e72491cb56d925e684b94109b1aaa98e24df3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72315861"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73094628"
 ---
 # <a name="service-to-service-communication"></a>Hizmetten hizmete iletişim
 
@@ -50,7 +50,7 @@ Başka bir mikro hizmete tek bir doğrudan HTTP çağrısı yapan seyrek erişim
 
 **Şekil 4-9**. HTTP sorgularını zincirleme
 
-Önceki görüntüde gösterilen tasarımda riski tamamen hayal edebilirsiniz. @No__t-03 adımı başarısız olursa ne olur? Veya adım \#8 başarısız oluyor? Nasıl kurtarılır? Temel alınan hizmet meşgul olduğundan \#6 ' i yavaşsa ne olur? Nasıl devam edersiniz? Tümü doğru çalışıyor olsa bile, her adımın gecikme süresinin toplamı olan bu çağrının tabi olacağı gecikmeyi düşünün.
+Önceki görüntüde gösterilen tasarımda riski tamamen hayal edebilirsiniz. Adım \#3 başarısız olursa ne olur? Veya adım \#8 başarısız oluyor? Nasıl kurtarılır? Temel alınan hizmet meşgul olduğundan \#6 ' i yavaşsa ne olur? Nasıl devam edersiniz? Tümü doğru çalışıyor olsa bile, her adımın gecikme süresinin toplamı olan bu çağrının tabi olacağı gecikmeyi düşünün.
 
 Önceki görüntüde geçen büyük ölçüde, hizmetlerin en iyi modellenmedi. Bu, takımın tasarımını yeniden ziyaret behoove.
 
@@ -60,13 +60,13 @@ Mikro hizmet bağlantısını kaldırmaya yönelik popüler bir seçenek [gerçe
 
 ### <a name="service-aggregator-pattern"></a>Hizmet toplayıcı stili
 
-Mikro hizmetten mikro hizmet bağlantısını ortadan kaldırmaya yönelik başka bir seçenek de Şekil 4-10 ' de mor renkte gösterilen bir [toplayıcı mikro hizmetidir](https://devblogs.microsoft.com/cesardelatorre/designing-and-implementing-api-gateways-with-ocelot-in-a-microservices-and-container-based-architecture/). 
+Mikro hizmetten mikro hizmet bağlantısını ortadan kaldırmaya yönelik başka bir seçenek de Şekil 4-10 ' de mor renkte gösterilen bir [toplayıcı mikro hizmetidir](https://devblogs.microsoft.com/cesardelatorre/designing-and-implementing-api-gateways-with-ocelot-in-a-microservices-and-container-based-architecture/).
 
 ![Toplayıcı hizmeti](./media/aggregator-service.png)
 
 **Şekil 4-10**. Toplayıcı mikro hizmeti
 
-Bu model, birden fazla arka uç mikro hizmetine çağrı yapan ve mantığını özel bir mikro hizmet halinde sunan bir işlemi yalıtır.  Önceki şekildeki mor kullanıma alma toplayıcısı mikro hizmeti, kullanıma alma işlemi için iş akışını düzenler. Sıralı bir düzende birkaç arka uç mikro hizmet çağrısı içerir. İş akışındaki veriler toplanır ve çağırana döndürülür. Doğrudan HTTP çağrıları uyguladığından toplayıcı mikro hizmeti, arka uç mikro hizmetleri arasındaki doğrudan bağımlılıkları azaltır. 
+Bu model, birden fazla arka uç mikro hizmetine çağrı yapan ve mantığını özel bir mikro hizmet halinde sunan bir işlemi yalıtır.  Önceki şekildeki mor kullanıma alma toplayıcısı mikro hizmeti, kullanıma alma işlemi için iş akışını düzenler. Sıralı bir düzende birkaç arka uç mikro hizmet çağrısı içerir. İş akışındaki veriler toplanır ve çağırana döndürülür. Doğrudan HTTP çağrıları uyguladığından toplayıcı mikro hizmeti, arka uç mikro hizmetleri arasındaki doğrudan bağımlılıkları azaltır.
 
 ### <a name="requestreply-pattern"></a>İstek/yanıt kalıbı
 
@@ -80,7 +80,7 @@ Burada ileti üreticisi, benzersiz bir bağıntı KIMLIĞI içeren sorgu tabanl�
 
 ## <a name="commands"></a>Komutlar
 
-Başka bir iletişim etkileşimi türü bir *komuttur*. Bir mikro hizmetin bir eylemi gerçekleştirmesi için başka bir mikro hizmet gerekebilir. Sipariş mikro hizmeti, onaylanmış bir sipariş için bir sevkiyat oluşturmak üzere, gönderim mikro hizmeti 'ne ihtiyaç duyuyor olabilir. Şekil 4-12 ' de, üretici olarak adlandırılan bir mikro hizmet, başka bir mikro hizmet olan tüketiciye bir ileti gönderir ve bunu bir şey yapması için iletir. 
+Başka bir iletişim etkileşimi türü bir *komuttur*. Bir mikro hizmetin bir eylemi gerçekleştirmesi için başka bir mikro hizmet gerekebilir. Sipariş mikro hizmeti, onaylanmış bir sipariş için bir sevkiyat oluşturmak üzere, gönderim mikro hizmeti 'ne ihtiyaç duyuyor olabilir. Şekil 4-12 ' de, üretici olarak adlandırılan bir mikro hizmet, başka bir mikro hizmet olan tüketiciye bir ileti gönderir ve bunu bir şey yapması için iletir.
 
 ![Kuyrukla komut etkileşimi](./media/command-interaction-with-queue.png)
 
@@ -88,7 +88,7 @@ Başka bir iletişim etkileşimi türü bir *komuttur*. Bir mikro hizmetin bir e
 
 Çoğu zaman, üretici bir yanıt gerektirmez ve iletiyi *başlatamaz ve unutabilirler* . Bir yanıt gerekiyorsa, tüketici başka bir kanalda üretici 'ya ayrı bir ileti gönderir. Bir komut iletisi en iyi şekilde bir ileti kuyruğu ile zaman uyumsuz olarak gönderilir. bir hafif ileti Aracısı tarafından desteklenir. Önceki diyagramda, bir sıranın her iki hizmeti nasıl ayırdığına ve bunların nasıl ayrılmış olduğuna ilişkin bir sıra.
 
-İleti kuyruğu, bir üreticinin ve tüketicinin ileti iletgeçen bir ara yapısıdır. Kuyruklar, zaman uyumsuz, noktadan noktaya mesajlaşma düzenlerini uygular. Üretici bir komutun doğru bir şekilde gönderilmesi ve yönlendirilmesi gereken yerleri bilir. Sıra, bir iletinin, kanaldan okuyan tüketici örneklerinden tam olarak bir ileti ile işlenmesini güvence altına alır. Bu senaryoda, üretici veya tüketici hizmeti diğerini etkilemeden ölçeği değiştirebilir. Ayrıca, teknolojiler her bir tarafta farklı olabilir, yani bir [Golang](https://golang.org) mikro hizmeti çağıran bir Java mikro hizmeti olabilir. 
+İleti kuyruğu, bir üreticinin ve tüketicinin ileti iletgeçen bir ara yapısıdır. Kuyruklar, zaman uyumsuz, noktadan noktaya mesajlaşma düzenlerini uygular. Üretici bir komutun doğru bir şekilde gönderilmesi ve yönlendirilmesi gereken yerleri bilir. Sıra, bir iletinin, kanaldan okuyan tüketici örneklerinden tam olarak bir ileti ile işlenmesini güvence altına alır. Bu senaryoda, üretici veya tüketici hizmeti diğerini etkilemeden ölçeği değiştirebilir. Ayrıca, teknolojiler her bir tarafta farklı olabilir, yani bir [Golang](https://golang.org) mikro hizmeti çağıran bir Java mikro hizmeti olabilir.
 
 Bölüm 1 ' de, *yedekleme hizmetleri*hakkında konuşuyoruz. Yedekleme Hizmetleri, bulutta yerel sistemlerin bağımlı olduğu yardımcı kaynaklardır. İleti kuyrukları Hizmetleri yedekliyor. Azure bulutu, bulutta yerel sistemlerinizin komut iletilerini uygulamak için tüketebileceği iki tür ileti kuyruğu destekler: Azure depolama kuyrukları ve Azure Service Bus kuyrukları.
 
@@ -116,7 +116,7 @@ Bu, hizmetle ilgili sınırlamalar vardır:
 
 Önceki şekilde, depolama sıralarının iletilerini temel alınan Azure depolama hesabında nasıl depolamalarını aklınızda bir yere göz önüne alın.
 
-Geliştiriciler için Microsoft, depolama kuyruğu işleme için birkaç istemci ve sunucu tarafı kitaplığı sağlar. .NET, Java, JavaScript, Ruby, Python ve go dahil çoğu büyük platform desteklenir. Geliştiriciler hiçbir şekilde doğrudan bu kitaplıklarla iletişim kurmamalıdır. Bunun yapılması, mikro hizmet kodunuzu Azure depolama Kuyruk hizmeti sıkı bir şekilde daha sıkı bir şekilde ister. API 'nin uygulama ayrıntılarını tahmin etmek daha iyi bir uygulamadır. Genel işlemleri sunan ve somut kitaplığı kapsülleyen bir intermediation katmanını veya ara API 'yi tanıtın. Bu gevşek bağlantısı, ana hat Hizmeti kodunda değişiklik yapmak zorunda kalmadan bir sıraya alma hizmetini başka bir sıraya takabilmenizi sağlar. 
+Geliştiriciler için Microsoft, depolama kuyruğu işleme için birkaç istemci ve sunucu tarafı kitaplığı sağlar. .NET, Java, JavaScript, Ruby, Python ve go dahil çoğu büyük platform desteklenir. Geliştiriciler hiçbir şekilde doğrudan bu kitaplıklarla iletişim kurmamalıdır. Bunun yapılması, mikro hizmet kodunuzu Azure depolama Kuyruk hizmeti sıkı bir şekilde daha sıkı bir şekilde ister. API 'nin uygulama ayrıntılarını tahmin etmek daha iyi bir uygulamadır. Genel işlemleri sunan ve somut kitaplığı kapsülleyen bir intermediation katmanını veya ara API 'yi tanıtın. Bu gevşek bağlantısı, ana hat Hizmeti kodunda değişiklik yapmak zorunda kalmadan bir sıraya alma hizmetini başka bir sıraya takabilmenizi sağlar.
 
 Azure depolama kuyrukları, bulutta yerel uygulamalarınızda komut mesajlaşmasını uygulamak için ekonomik bir seçenektir. Özellikle bir sıra boyutu 80 GB 'ı aşacağından veya basit bir özellik kümesi kabul edilebilir. Yalnızca iletilerin depolanması için ödeme yaparsınız; Sabit saatlik ücret yoktur.
 
@@ -146,9 +146,9 @@ Ancak bazı önemli uyarılar vardır: Service Bus kuyruk boyutu 80 GB ile sın�
 
 ## <a name="events"></a>Olaylar
 
-Message Queuing, bir üreticinin zaman uyumsuz olarak bir tüketici ileti gönderebildiği iletişim uygulamak için etkili bir yoldur. Ancak, aynı iletiyle *birçok farklı tüketici* ilgilendiğinde ne olur? Her tüketiciye yönelik adanmış bir ileti kuyruğu iyi ölçeklendirilmez ve yönetimi zor hale gelir. 
+Message Queuing, bir üreticinin zaman uyumsuz olarak bir tüketici ileti gönderebildiği iletişim uygulamak için etkili bir yoldur. Ancak, aynı iletiyle *birçok farklı tüketici* ilgilendiğinde ne olur? Her tüketiciye yönelik adanmış bir ileti kuyruğu iyi ölçeklendirilmez ve yönetimi zor hale gelir.
 
-Bu senaryoyu ele almak için, üçüncü ileti etkileşim türüne ( *olay*) geçeceğiz. Bir mikro hizmet, bir eylemin oluştuğunu duyurur. Diğer mikro hizmetler, ilgileniyorsa eyleme veya olaya tepki verir. 
+Bu senaryoyu ele almak için, üçüncü ileti etkileşim türüne ( *olay*) geçeceğiz. Bir mikro hizmet, bir eylemin oluştuğunu duyurur. Diğer mikro hizmetler, ilgileniyorsa eyleme veya olaya tepki verir.
 
 Olay iki adımlı bir işlemdir. Bir mikro hizmet, belirli bir durum değişikliği için ileti aracısına bir olay yayımlar ve bunu başka bir ilgilenen mikro hizmet tarafından kullanılabilir hale getirir. İleti aracısıdır olayına abone olunarak ilgilendiğimiz mikro hizmet bildirilir. [Olay tabanlı iletişim](https://docs.microsoft.com/dotnet/standard/microservices-architecture/multi-container-microservice-net-applications/integration-event-based-microservice-communications)uygulamak için [Yayımla/abone ol](https://docs.microsoft.com/azure/architecture/patterns/publisher-subscriber) ' a gidin.
 
@@ -226,7 +226,7 @@ Event Hubs, her tüketicinin ileti akışının yalnızca belirli bir alt kümes
 
 **Şekil 4-19**. Olay Hub 'ı bölümlendirme
 
-Aynı kaynaktan okumak yerine, her tüketici grubu ileti akışının bir alt kümesi veya bölümü üzerinde okur. 
+Aynı kaynaktan okumak yerine, her tüketici grubu ileti akışının bir alt kümesi veya bölümü üzerinde okur.
 
 Çok sayıda olayı akışı gereken bulutta yerel uygulamalar için, Azure Olay Hub 'ı sağlam ve uygun maliyetli bir çözüm olabilir.
 

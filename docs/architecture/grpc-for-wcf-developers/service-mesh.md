@@ -3,12 +3,12 @@ title: Hizmet kafesleri-WCF geliştiricileri için gRPC
 description: Bir Kubernetes kümesinde gRPC hizmetlerine istekleri yönlendirmek ve dengelemek için bir hizmet ağı kullanma.
 author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 18c12af787f32988bbf17b1561d4ba1fb4deaf41
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: 6bdfa57ba47ba0105092d1c140705599b7023c78
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72846044"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73090181"
 ---
 # <a name="service-meshes"></a>Hizmet kafesleri
 
@@ -42,9 +42,9 @@ Hizmet kafesleri yalnızca bir küme içindeki trafiğe uygulanır. Dış istemc
 
 Şu anda Kubernetes: ICD, Linkerd ve Tüketil Connect ile kullanılabilecek üç genel amaçlı hizmet kafesi uygulaması vardır. Tüm üç istek yönlendirme/proxy sağlama, trafik şifreleme, esnekliği, konaktan konağa kimlik doğrulaması ve trafik denetimi sağlar.
 
-Hizmet kafesi seçme, birden fazla etkene bağlıdır: 
+Hizmet kafesi seçme, birden fazla etkene bağlıdır:
 
-- Kuruluşun maliyetler, uyumluluk, ücretli destek planları vb. için özel gereksinimleri. 
+- Kuruluşun maliyetler, uyumluluk, ücretli destek planları vb. için özel gereksinimleri.
 - Kümenin doğası, boyutu, dağıtılan hizmet sayısı ve küme ağı içindeki trafik hacmi.
 - Ağı dağıtma ve yönetme kolaylığı ve hizmetlerle kullanma.
 

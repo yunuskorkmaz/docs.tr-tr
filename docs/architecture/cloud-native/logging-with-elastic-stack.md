@@ -2,18 +2,19 @@
 title: Elastik Yığın ile günlüğe kaydetme
 description: Elastik yığın, Logstash ve kibana kullanarak günlüğe kaydetme
 ms.date: 09/23/2019
-ms.openlocfilehash: 62115edc3f64d87d2c3e84a7b5319ce42cbe729b
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 989834925bc08541bf484e1a4567a56ac324872f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72315793"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73087063"
 ---
-# <a name="logging-with-elastic-stack"></a>Elastik Yığın ile günlüğe kaydetme 
+# <a name="logging-with-elastic-stack"></a>Elastik Yığın ile günlüğe kaydetme
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-Birçok iyi Merkezi günlük aracı vardır ve daha pahalı seçeneklere karşı ücretsiz, açık kaynaklı araçlar ve maliyet bakımından farklılık gösterir. Birçok durumda, ücretsiz araçlar ücretli tekliflerle veya daha iyi bir seçenektir. Bu tür bir araç, üç açık kaynaklı bileşen birleşimidir: elastik arama, Logstash ve kibana. Toplu olarak bu araçlar elastik yığın veya ELK yığını olarak bilinir.
+Birçok iyi Merkezi günlük aracı vardır ve daha pahalı seçeneklere karşı ücretsiz, açık kaynaklı araçlar ve maliyet bakımından farklılık gösterir. Birçok durumda, ücretsiz araçlar ücretli tekliflerle veya daha iyi bir seçenektir. Bu tür bir araç, üç açık kaynaklı bileşen birleşimidir: elastik arama, Logstash ve kibana.
+Toplu olarak bu araçlar elastik yığın veya ELK yığını olarak bilinir.
 
 ## <a name="what-are-the-advantages-of-elastic-stack"></a>Esnek yığının avantajları nelerdir?
 
@@ -21,19 +22,19 @@ Elastik yığın, düşük maliyetli, ölçeklenebilir, bulut kullanımı kolay 
 
 ## <a name="logstash"></a>Logstash
 
-İlk bileşen [Logstash](https://www.elastic.co/products/logstash)' dir. Bu araç, çok çeşitli farklı kaynaklardan günlük bilgilerini toplamak için kullanılır. Örneğin Logstash, günlükleri diskten okuyabilir ve ayrıca [Serilog](https://serilog.net/)gibi günlük kitaplıklarından iletiler alabilir. Logstash, geldikçe günlüklerde bazı temel filtreleme ve genişleme işlemlerini gerçekleştirebilir. Örneğin, günlükleriniz IP adresleri içeriyorsa, Logstash coğrafi arama yapmak ve bu ileti için bir ülke veya hatta kaynak şehir almak üzere yapılandırılabilir. 
+İlk bileşen [Logstash](https://www.elastic.co/products/logstash)' dir. Bu araç, çok çeşitli farklı kaynaklardan günlük bilgilerini toplamak için kullanılır. Örneğin Logstash, günlükleri diskten okuyabilir ve ayrıca [Serilog](https://serilog.net/)gibi günlük kitaplıklarından iletiler alabilir. Logstash, geldikçe günlüklerde bazı temel filtreleme ve genişleme işlemlerini gerçekleştirebilir. Örneğin, günlükleriniz IP adresleri içeriyorsa, Logstash coğrafi arama yapmak ve bu ileti için bir ülke veya hatta kaynak şehir almak üzere yapılandırılabilir.
 
 Serilog, parametreli günlüğe kaydetmeye olanak sağlayan .NET dilleri için bir günlüğe kaydetme kitaplığıdır. Alanları katıştıran bir metin günlüğü iletisi oluşturmak yerine Parametreler ayrı tutulur. Bu, daha akıllı filtreleme ve arama sağlar. Şekil 7-2 ' de Logstash yazmak için örnek bir Serilog yapılandırması görüntülenir.
 
 ```csharp
-var log = new LoggerConfiguration()   
+var log = new LoggerConfiguration()
          .WriteTo.Http("http://localhost:8080")
          .CreateLogger();
 ```
 
 **Şekil 7-2** HTTP üzerinden logstash 'e doğrudan günlük bilgilerini yazmak için Serilog config
 
-Logstash, Şekil 7-3 ' de gösterilen şekilde bir yapılandırma kullanır. 
+Logstash, Şekil 7-3 ' de gösterilen şekilde bir yapılandırma kullanır.
 
 ```
 input {
@@ -59,11 +60,11 @@ Günlükler Logstash tarafından toplandıktan sonra, bunları yerleştirmek iç
 
 ## <a name="elastic-search"></a>Elastik arama
 
-Elastik arama, geldikçe günlükleri dizinlebilecekleri güçlü bir arama altyapısıdır. Günlüklere hızlı şekilde çalışan sorgular yapar. Elastik arama çok büyük miktarlarda günlüğü işleyebilir ve olağanüstü durumlarda birçok düğüm arasında ölçeklendirilebilir. 
+Elastik arama, geldikçe günlükleri dizinlebilecekleri güçlü bir arama altyapısıdır. Günlüklere hızlı şekilde çalışan sorgular yapar. Elastik arama çok büyük miktarlarda günlüğü işleyebilir ve olağanüstü durumlarda birçok düğüm arasında ölçeklendirilebilir.
 
 Parametreleri içermesi için üretilmiş olan veya parametreleri Logstash işleme aracılığıyla bölüşdüğü olan günlük iletileri, bu bilgileri koruyan şekilde doğrudan sorgulanabilir.
 
-@No__t-0 tarafından ziyaret edilen ilk 10 sayfayı arayan sorgu Şekil 7-4 ' de görünür.
+`jill@example.com`tarafından ziyaret edilen ilk 10 sayfayı arayan sorgu Şekil 7-4 ' de görünür.
 
 ```
 "query": {
@@ -85,11 +86,11 @@ Parametreleri içermesi için üretilmiş olan veya parametreleri Logstash işle
 
 ## <a name="visualizing-information-with-kibana-web-dashboards"></a>Kibana Web panolarıyla bilgi görselleştiriliyor
 
-Yığının son bileşeni kibana. Bu araç, bir Web panosunda etkileşimli görselleştirmeler sağlamak için kullanılır. Panolar, teknik olmayan kullanıcılar tarafından da oluşturulabilir. Elaun Search dizininde yerleşik olan çoğu veri, kibana panolarına dahil edilebilir. Bireysel kullanıcılar farklı Pano isteklerine sahip olabilir ve kibana Bu özelleştirmeyi kullanıcıya özgü panolara izin vererek sağlar. 
+Yığının son bileşeni kibana. Bu araç, bir Web panosunda etkileşimli görselleştirmeler sağlamak için kullanılır. Panolar, teknik olmayan kullanıcılar tarafından da oluşturulabilir. Elaun Search dizininde yerleşik olan çoğu veri, kibana panolarına dahil edilebilir. Bireysel kullanıcılar farklı Pano isteklerine sahip olabilir ve kibana Bu özelleştirmeyi kullanıcıya özgü panolara izin vererek sağlar.
 
 ## <a name="installing-elastic-stack-on-azure"></a>Azure 'da elastik yığın yükleme
 
-Esnek yığın, çeşitli yollarla Azure 'a yüklenebilir. Her zaman olduğu gibi, [sanal makineler sağlamak ve doğrudan elastik yığın yüklemek](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-elasticsearch)mümkündür. Bu seçenek, deneyimli bazı kullanıcılar tarafından, en yüksek özelleştirme derecesini sağladığından tercih edilir. Bir hizmet olarak altyapıya dağıtım, bu yolu alan bir hizmet olarak altyapı ile ilişkili tüm görevlerin sahipliğini alma ve düzeltme ekleriyle güncel tutmaya yönelik önemli yönetim yükü sunar. 
+Esnek yığın, çeşitli yollarla Azure 'a yüklenebilir. Her zaman olduğu gibi, [sanal makineler sağlamak ve doğrudan elastik yığın yüklemek](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-elasticsearch)mümkündür. Bu seçenek, deneyimli bazı kullanıcılar tarafından, en yüksek özelleştirme derecesini sağladığından tercih edilir. Bir hizmet olarak altyapıya dağıtım, bu yolu alan bir hizmet olarak altyapı ile ilişkili tüm görevlerin sahipliğini alma ve düzeltme ekleriyle güncel tutmaya yönelik önemli yönetim yükü sunar.
 
 Daha az ek yük olan bir seçenek, elastik yığının zaten yapılandırıldığı birçok Docker kapsayıcılarından birini kullanmaktır. Bu kapsayıcılar, var olan bir Kubernetes kümesine bırakılabilir ve uygulama kodu ile birlikte çalıştırılabilir. [Sebp/elk](https://elk-docker.readthedocs.io/) kapsayıcısı iyi belgelenmiş ve test edilmiş bir elastik yığın kapsayıcısıdır.
 

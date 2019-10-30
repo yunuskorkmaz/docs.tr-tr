@@ -2,12 +2,12 @@
 title: Sistem durumu izleme
 description: Sistem durumu izlemeyi uygulamayla bir yolu bulun.
 ms.date: 01/07/2019
-ms.openlocfilehash: 3b81537ca8e0c5cc7ce15ab64ab3235b699dc7a9
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 2d43efa7b6cfb855a033ee4d766c64c2472ceb36
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71040049"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73094077"
 ---
 # <a name="health-monitoring"></a>Sistem durumu izleme
 
@@ -44,11 +44,11 @@ public void ConfigureServices(IServiceCollection services)
 }
 ```
 
-Önceki kodda, `services.AddHealthChecks()` yöntemi "sağlıklı" olarak **200** durum kodunu döndüren temel bir http denetimini yapılandırır.  Ayrıca, `AddCheck()` genişletme yöntemi ilgili SQL veritabanının sistem `SqlConnectionHealthCheck` durumunu denetleyen bir özel yapılandırır.
+Önceki kodda `services.AddHealthChecks()` yöntemi, "sağlıklı" ile **200** durum kodunu döndüren temel bir http denetimini yapılandırır.  Ayrıca, `AddCheck()` uzantısı yöntemi, ilgili SQL veritabanının sistem durumunu denetleyen özel bir `SqlConnectionHealthCheck` yapılandırır.
 
-Yöntemi `AddCheck()` , belirtilen bir ada ve türe `IHealthCheck`uygulamayla yeni bir sistem durumu denetimi ekler. AddCheck metodunu kullanarak birden çok sistem durumu denetimi ekleyebilirsiniz, bu nedenle bir mikro hizmet, tüm denetimleri sağlıklı olana kadar "sağlıklı" bir durum sağlamaz.
+`AddCheck()` yöntemi, belirtilen bir ad ve `IHealthCheck`türünde uygulamayla yeni bir sistem durumu denetimi ekler. AddCheck metodunu kullanarak birden çok sistem durumu denetimi ekleyebilirsiniz, bu nedenle bir mikro hizmet, tüm denetimleri sağlıklı olana kadar "sağlıklı" bir durum sağlamaz.
 
-`SqlConnectionHealthCheck`, bir bağlantı dizesini Oluşturucu parametresi `IHealthCheck`olarak alan ve SQL veritabanı bağlantısının başarılı olup olmadığını denetlemek için basit bir sorgu yürüten, uygulayan özel bir sınıftır. Sorgu başarıyla `HealthCheckResult.Healthy()` yürütülürse ve başarısız olduğunda gerçek özel durum `FailureStatus` ile bir ile, döner.
+`SqlConnectionHealthCheck`, bir bağlantı dizesini Oluşturucu parametresi olarak alan ve SQL veritabanı bağlantısının başarılı olup olmadığını kontrol etmek için basit bir sorgu yürüten `IHealthCheck`uygulayan özel bir sınıftır. Sorgu başarıyla yürütülürse ve başarısız olduğunda gerçek özel duruma sahip bir `FailureStatus` `HealthCheckResult.Healthy()` döndürür.
 
 ```csharp
 // Sample SQL Connection Health Check
@@ -98,7 +98,7 @@ public class SqlConnectionHealthCheck : IHealthCheck
 }
 ```
 
-Önceki kodda, `Select 1` veritabanının durumunu denetlemek için kullanılan sorgu olduğunu unutmayın. Mikro hizmetlerinizin kullanılabilirliğini izlemek için, Kubernetes gibi düzenleyiciler ve Service Fabric mikro hizmetleri test etmek üzere istek göndererek düzenli aralıklarla durum denetimleri gerçekleştirir. Bu işlemlerin hızlı olması için veritabanı sorgularınızın etkili tutulması ve kaynakların daha yüksek kullanımına neden olması önemlidir.
+Önceki kodda `Select 1` veritabanının durumunu denetlemek için kullanılan sorgu olduğunu unutmayın. Mikro hizmetlerinizin kullanılabilirliğini izlemek için, Kubernetes gibi düzenleyiciler ve Service Fabric mikro hizmetleri test etmek üzere istek göndererek düzenli aralıklarla durum denetimleri gerçekleştirir. Bu işlemlerin hızlı olması için veritabanı sorgularınızın etkili tutulması ve kaynakların daha yüksek kullanımına neden olması önemlidir.
 
 Son olarak, "/HC" URL yoluna yanıt veren bir ara yazılım oluşturun:
 
@@ -110,18 +110,18 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env)
     //…
     app.UseHealthChecks("/hc");
     //…
-} 
+}
 ```
 
 Uç nokta `<yourmicroservice>/hc` çağrıldığında, başlangıç sınıfındaki `AddHealthChecks()` yönteminde yapılandırılan tüm sistem durumu denetimlerini çalıştırır ve sonucu gösterir.
 
 ### <a name="healthchecks-implementation-in-eshoponcontainers"></a>EShopOnContainers 'da Healthdenetimlerin uygulanması
 
-EShopOnContainers 'daki mikro hizmetler, görevini gerçekleştirmek için birden çok hizmete bağımlıdır. Örneğin, `Catalog.API` eshoponcontainers 'daki mikro hizmet Azure Blob depolama, SQL Server ve kbbitmq gibi birçok hizmete bağımlıdır. Bu nedenle, `AddCheck()` yöntemi kullanılarak birçok sistem durumu denetimi eklenmiştir. Her bağımlı hizmet için, ilgili sistem `IHealthCheck` durumunu tanımlayan özel bir uygulamanın eklenmesi gerekir.
+EShopOnContainers 'daki mikro hizmetler, görevini gerçekleştirmek için birden çok hizmete bağımlıdır. Örneğin, eShopOnContainers 'dan `Catalog.API` mikro hizmeti, Azure Blob depolama, SQL Server ve Kbbitmq gibi birçok hizmete bağlıdır. Bu nedenle, `AddCheck()` yöntemi kullanılarak birçok sistem durumu denetimi eklenmiştir. Her bağımlı hizmet için, ilgili sistem durumunu tanımlayan özel bir `IHealthCheck` uygulamasının eklenmesi gerekir.
 
 Açık kaynaklı proje [Aspnetcore. Diagnostics. healthcheck](https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks) , .net Core 2,2 üzerinde oluşturulan bu kurumsal hizmetlerden her biri için özel sistem durumu denetimi uygulamaları sağlayarak bu sorunu çözer. Her bir sistem durumu denetimi, projeye kolaylıkla eklenebilen tek bir NuGet paketi olarak kullanılabilir. eShopOnContainers bunları, tüm mikro hizmetlerinde kapsamlı olarak kullanır.
 
-Örneğin, `Catalog.API` mikro hizmette aşağıdaki NuGet paketleri eklendi:
+Örneğin, `Catalog.API` mikro hizmetinde aşağıdaki NuGet paketleri eklendi:
 
 ![AspNetCore. Diagnostics. Healthdenetimlerinin NuGet paketlerine başvurduğu katalog. API projesinin Çözüm Gezgini görünümü](./media/image6.png)
 
@@ -195,11 +195,11 @@ Bu makalede açıklandığı şekilde sistem durumu denetimleri yapılandırdı�
 
 **Şekil 8-8**. Bir tarayıcıdan tek bir hizmetin sistem durumunu denetleme
 
-Bu testte, `Catalog.API` mikro hizmetin (bağlantı noktası 5101 üzerinde çalışan) sağlıklı olduğunu, http durum 200 ' i ve JSON 'da durum bilgilerini döndüren görebilirsiniz. Hizmet Ayrıca, SQL Server veritabanı bağımlılığının ve Kbbitmq 'in sistem durumunu kontrol etti, bu nedenle sistem durumu denetimi kendisini sağlıklı olarak raporladı.
+Bu testte, `Catalog.API` mikro hizmetinin (5101 bağlantı noktasında çalışan) sağlıklı olduğunu, HTTP durum 200 ve durum bilgilerini JSON 'da döndürdüğünü görebilirsiniz. Hizmet Ayrıca, SQL Server veritabanı bağımlılığının ve Kbbitmq 'in sistem durumunu kontrol etti, bu nedenle sistem durumu denetimi kendisini sağlıklı olarak raporladı.
 
 ## <a name="use-watchdogs"></a>Watchdogs kullanma
 
-İzleme, hizmetler genelinde sistem durumunu ve yüklemeyi izleyebilecek ve daha önce tanıtılan `HealthChecks` kitaplıkla sorgulama yaparak mikro hizmetlerle ilgili durumu rapor eden ayrı bir hizmettir. Bu, tek bir hizmetin görünümüne göre algılanamayan hataları önlemeye yardımcı olabilir. Watchdogs Ayrıca, Kullanıcı etkileşimi olmadan bilinen koşullar için düzeltme eylemleri gerçekleştirebilen kodu barındırmak için iyi bir yerdir.
+İzleme, hizmetler genelinde sistem durumunu izleyebilecek ve daha önce tanıtılan `HealthChecks` kitaplığıyla sorgulama yaparak mikro hizmetlerle ilgili sistem durumunu rapor eden ayrı bir hizmettir. Bu, tek bir hizmetin görünümüne göre algılanamayan hataları önlemeye yardımcı olabilir. Watchdogs Ayrıca, Kullanıcı etkileşimi olmadan bilinen koşullar için düzeltme eylemleri gerçekleştirebilen kodu barındırmak için iyi bir yerdir.
 
 EShopOnContainers örneği, Şekil 8-9 ' de gösterildiği gibi, örnek sistem durumu denetimi raporlarını görüntüleyen bir Web sayfası içerir. Bu, yalnızca mikro hizmetlerin ve eShopOnContainers 'daki Web uygulamalarının durumunu gösterdiği için, sahip olduğunuz en basit izleme budur. Genellikle bir izleme uygun olmayan durumları algıladığında de Eylemler gerçekleştirir.
 
@@ -273,15 +273,15 @@ Son olarak, tüm olay akışlarını depoluyorsanız, verileri görselleştirmek
 
 ## <a name="additional-resources"></a>Ek kaynaklar
 
-- **ASP.NET Core için Healthdenetimleri ve Healthdenetimleri Kullanıcı arabirimi** \
+- **ASP.NET Core \ Için healthdenetimleri ve healthdenetimleri Kullanıcı arabirimi**
   <https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks>
 
-- **Service Fabric sistem durumu izlemeye giriş** \
+- **Service Fabric sistem durumu Izlemeye giriş** \
   [https://docs.microsoft.com/azure/service-fabric/service-fabric-health-introduction](/azure/service-fabric/service-fabric-health-introduction)
 
 - **Azure Izleyici**  
   <https://azure.microsoft.com/services/monitor/>
 
 >[!div class="step-by-step"]
->[Önceki](implement-circuit-breaker-pattern.md)İleri
->[](../secure-net-microservices-web-applications/index.md)
+>[Önceki](implement-circuit-breaker-pattern.md)
+>[İleri](../secure-net-microservices-web-applications/index.md)

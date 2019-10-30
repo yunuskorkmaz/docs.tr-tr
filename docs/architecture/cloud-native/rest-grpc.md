@@ -3,12 +3,12 @@ title: REST ve gRPC
 description: Bkz. The The The The The The The The the Cloud-Native Applications ve HTTP REST 'den farklı
 author: robvet
 ms.date: 09/08/2019
-ms.openlocfilehash: fed8e7d86a8ddc268f1264728d9631a561c1b310
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: ba15bb1c5ee7c2cd48d75867512539190c80b0e5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291324"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73094538"
 ---
 # <a name="rest-and-grpc"></a>REST ve gRPC
 
@@ -28,9 +28,9 @@ gRPC, hafif ve yüksek performanslı bir modern RPC çerçevesidir. Aktarım Pro
 - Akış, HTTP/2 ' de yerleşik olarak bulunur ve isteklerin ve yanıtların zaman uyumsuz olarak büyük veri kümeleri akışını sağlayabilir.
 - GRPC ve HTTP/2 birleştirme performansı önemli ölçüde artar. [Windows Communication Foundation (WCF)](https://docs.microsoft.com/dotnet/framework/wcf/whats-wcf) Pari 'de, gprc performansı, [NetTcp bağlamalarının](https://docs.microsoft.com/dotnet/api/system.servicemodel.nettcpbinding?view=netframework-4.8)hızını ve verimliliğini karşılar ve bu performansı aşmaktadır. Ancak, NetTCP 'nin aksine gRPC, C# veya vb.NET gibi Microsoft dilleri ile sınırlı değildir.
 
-gRPC, Java, C#, golang ve NodeJS dahil olmak üzere en popüler platformlar arasında desteklenir. 
+gRPC, Java, C#, golang ve NodeJS dahil olmak üzere en popüler platformlar arasında desteklenir.
 
-## <a name="protocol-buffers"></a>Protokol arabellekleri
+## <a name="protocol-buffers"></a>Protokol Arabellekleri
 
 gRPC, veri göndermek ve almak için [protokol arabellekleri](https://developers.google.com/protocol-buffers/docs/overview) veya prototip iletiler adlı başka bir açık kaynaklı teknolojinin ayraçlarını alır. [WCF veri sözleşmesine](https://docs.microsoft.com/dotnet/framework/wcf/feature-details/using-data-contracts)benzer şekilde, prototipleme sistemler için yapılandırılmış verileri okuma ve yazma olarak serileştirir. XML veya JSON gibi insan tarafından okunabilen biçimlerin yükünü azaltır.
 
@@ -44,7 +44,7 @@ Microsoft .NET Core Framework 3,0, gRPC için araç ve yerel destek içerir. Şe
 
 **Şekil 4-20**. Visual Studio 2019 ' de gRPC desteği
 
-.NET Core 3,0, gRPC 'yi, uç nokta yönlendirme, yerleşik IOC desteği ve günlüğe kaydetme dahil olmak üzere kendi çerçevesiyle sorunsuzca tümleştirir. Açık kaynaklı Kestrel Web sunucusu HTTP/2 bağlantılarını tam olarak destekler. 
+.NET Core 3,0, gRPC 'yi, uç nokta yönlendirme, yerleşik IOC desteği ve günlüğe kaydetme dahil olmak üzere kendi çerçevesiyle sorunsuzca tümleştirir. Açık kaynaklı Kestrel Web sunucusu HTTP/2 bağlantılarını tam olarak destekler.
 
 Şekil 4-21, Visual Studio 2019 ' de bir gRPC hizmetinin yapısını gösterir. Klasör yapısının proto dosyaları ve hizmet kodu için klasörleri nasıl içerdiğini göz önünde bulundurur.
 
@@ -69,7 +69,7 @@ Bu kitabın yazıldığı sırada tarayıcıların çoğu, gRPC için sınırlı
 
 Önceki şekilde, ön uç trafiğinin HTTP ile nasıl çağrılacağını, mikro hizmet ile mikro hizmetin de gRPC 'yi kullanması durumunda göz önüne alın.
 
-İleriye yönelik olarak, gRPC, bulutta yerel sistemler için geri kalanı önemli bir rol oynayabilir. Performans avantajları ve geliştirme kolaylığının geçmesi çok iyidir. Ancak, herhangi bir hata yapmayın, DIĞERLERI uzun bir süre içinde devam edecektir. Bu, genel kullanıma açık API 'Ler ve geriye dönük uyumluluk nedenleriyle hala daha fazla. 
+İleriye yönelik olarak, gRPC, bulutta yerel sistemler için geri kalanı önemli bir rol oynayabilir. Performans avantajları ve geliştirme kolaylığının geçmesi çok iyidir. Ancak, herhangi bir hata yapmayın, DIĞERLERI uzun bir süre içinde devam edecektir. Bu, genel kullanıma açık API 'Ler ve geriye dönük uyumluluk nedenleriyle hala daha fazla.
 
 >[!div class="step-by-step"]
 >[Önceki](service-to-service-communication.md)

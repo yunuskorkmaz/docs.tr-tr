@@ -2,12 +2,12 @@
 title: Cloud Native DevOps
 description: Azure için Cloud Native .NET uygulamaları tasarlama | Cloud Native DevOps
 ms.date: 06/30/2019
-ms.openlocfilehash: 84d37d14af8a68a51088568ded05ceef2e5e11fb
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 2b3dd47eeeb69d63f5ae39705abb9d1d51295645
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72393723"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73087546"
 ---
 # <a name="cloud-native-devops"></a>Cloud Native DevOps
 
@@ -25,7 +25,7 @@ Bu aşamada, yazılımı hızlı bir şekilde kullanıma sunabilmeniz oldukça i
 
 Daha hızlı ve iş için değer sunmaya yönelik daha güvenilir yayınları etkinleştiren desenler ve uygulamalar, her topluca DevOps olarak bilinir. Tüm yazılım geliştirme yaşam döngüsünün, uygulamayı sunmak ve çalıştırmak için bir uygulama belirtmekten oluşan çok çeşitli fikirler içerirler.
 
-DevOps, mikro hizmetlerden önce ortaya çıktı ve büyük olasılıkla daha küçük bir hareket haline gelir, ancak üretim aşamasındaki çok sayıda uygulama daha kolay hale getirmek ve çalıştırmak için DevOps 'a daha fazla uyum sağlamaktır. 
+DevOps, mikro hizmetlerden önce ortaya çıktı ve büyük olasılıkla daha küçük bir hareket haline gelir, ancak üretim aşamasındaki çok sayıda uygulama daha kolay hale getirmek ve çalıştırmak için DevOps 'a daha fazla uyum sağlamaktır.
 
 ![Şekil 11-0 arama eğilimleri, mikro hizmetlerdeki büyümenin, DevOps oldukça iyi bir fikir olana kadar başlamadığını gösterir.](./media/microservices-vs-devops.png)
 
@@ -41,7 +41,7 @@ Azure DevOps, beş ana bileşene ayrılmıştır:
 
 ![Şekil 11-1 Azure DevOps 'ın beş ana alanı](./media/devops-components.png)
 
-**Azure boards** -kullanıcıların kendileri için en iyi şekilde çalışan iş akışlarını seçmesini sağlayan bir sorun ve iş öğesi izleme aracı sağlar. Bu, geliştirmede SCRUM ve Kanban stillerini desteklemeye yönelik bir dizi önceden yapılandırılmış şablon içerir. 
+**Azure boards** -kullanıcıların kendileri için en iyi şekilde çalışan iş akışlarını seçmesini sağlayan bir sorun ve iş öğesi izleme aracı sağlar. Bu, geliştirmede SCRUM ve Kanban stillerini desteklemeye yönelik bir dizi önceden yapılandırılmış şablon içerir.
 
 Venerable Team Foundation Sürüm Denetimi (TFVC) ve sektör ile sık kullanılan git 'i destekleyen **Azure Repos** kaynak kodu yönetimi. Çekme istekleri, değişiklikler yapıldıktan sonra tartışarak sosyal kodlamayı etkinleştirmek için bir yol sağlar.
 
@@ -78,9 +78,9 @@ Azure DevOps projesi içindeki mikro hizmetler için kod bölmek biraz daha zor 
 
 Mikro hizmetlerin arkasındaki önemli fikirlerden biri, hizmetlerin yığılıyor ve birbirinden ayrılması gerekir. Hizmetin sınırlarına karar vermek için etki alanı odaklı tasarım kullanırken hizmetler işlem sınırları olarak davranır. Veritabanı güncelleştirmeleri birden çok hizmete yayılmamalıdır. İlgili verilerin bu koleksiyonu, sınırlanmış bir bağlam olarak adlandırılır.  Bu fikir, mikro hizmet verilerinin, hizmetlerin geri kalanından ayrı ve otonom bir veritabanına yalıtımına göre yansıtılmıştır. Bu fikri, kaynak koda kadar tüm şekilde taşımak için harika bir fikir sunar.
 
-Ancak, bu yaklaşım sorunları olmadan değildir. Bizim için daha fazla ölçülü geliştirme sorunlarından biri bağımlılıkları yönetiyor. Ortalama `node_modules` dizinini oluşturan dosya sayısını göz önünde bulundurun. @No__t-0 gibi bir şeyin yeni yüklemesi, binlerce paket ile karşılaştırabileceği için büyük olasılıkla. Bu bağımlılıkların nasıl yönetileceği sorusu zor bir olaydır. 
+Ancak, bu yaklaşım sorunları olmadan değildir. Bizim için daha fazla ölçülü geliştirme sorunlarından biri bağımlılıkları yönetiyor. Ortalama `node_modules` dizinini oluşturan dosya sayısını göz önünde bulundurun. `create-react-app` benzer bir şekilde yeni bir yüklemesi, binlerce pakete sahip olma olasılığı yüksektir. Bu bağımlılıkların nasıl yönetileceği sorusu zor bir olaydır.
 
-Bir bağımlılık güncelleştirilirse, aşağı akış paketleri de bu bağımlılığı güncelleştirmelidir. Ne yazık ki, `node_modules` dizini, her biri tek bir paketin birden çok sürümü ile sona erirken, her biri farklı bir temposunda sürümü sürümlü diğer bir paketin bağımlılığı olan her bir bir paketin bağımlılığı olan. Bir uygulama dağıtıldığında, hangi bağımlılık sürümü kullanılmalıdır? Şu anda üretimde olan sürüm mi? Şu anda beta sürümünde olan, ancak müşterinin üretime yaptığı zamana göre üretimde olma olasılığı yüksektir mi? Yalnızca mikro hizmetler kullanılarak çözümlenmeyen zor sorunlar.
+Bir bağımlılık güncelleştirilirse, aşağı akış paketleri de bu bağımlılığı güncelleştirmelidir. Ne yazık ki, bu sayede, `node_modules` Dizin, her biri tek bir paketin birden çok sürümü ile sona erirken, her biri farklı bir temposunda sürümü sürümlü diğer bir paketin bağımlılığı olan her biri tek bir paketin birden fazla sürümüyle sonlanır. Bir uygulama dağıtıldığında, hangi bağımlılık sürümü kullanılmalıdır? Şu anda üretimde olan sürüm mi? Şu anda beta sürümünde olan, ancak müşterinin üretime yaptığı zamana göre üretimde olma olasılığı yüksektir mi? Yalnızca mikro hizmetler kullanılarak çözümlenmeyen zor sorunlar.
 
 Çok çeşitli projeler tarafından bağımlı olan kitaplıklar vardır. Mikro hizmetleri her bir depodaki bir biriyle ayırarak iç bağımlılıklar, Azure Artifacts iç depo kullanılarak en iyi şekilde çözülebilir. Kitaplıklar için derlemeler, en son sürümlerini iç tüketim için Azure Artifacts içine gönderir. Yeni güncellenen paketlere bağımlılığı almak için aşağı akış projesi yine de el ile güncellenmelidir.
 
@@ -166,7 +166,7 @@ Derleme ve teslim sürecini otomatikleştirmeye önem derecesi, bulutta yerel uy
 
 Azure DevOps, sürekli tümleştirme ve dağıtımı her zamankinden daha kolay hale getirmek için bir araç kümesi sağlar. Bu araçlar Azure Pipelines altında bulunur. Birincisi, YAML tabanlı derleme tanımlarını bir ölçekte çalıştırmaya yönelik bir araç olan Azure Derlemeleriyle yapılır. Kullanıcılar kendi derleme makinelerini getirebilir (derleme için çok dikkatli bir kurulum ortamı gerektiriyorsa) veya Azure 'da barındırılan sanal makinelerin sürekli yenilenmiş havuzundan bir makine kullanabilirsiniz. Bu barındırılan derleme aracıları, yalnızca .NET geliştirmesi değil, Java 'dan Python 'a kadar her şey için çok çeşitli geliştirme araçlarıyla önceden yüklenmiş olarak gelir.
 
-DevOps, her derleme için özelleştirilebilen çok sayıda kullanıma hazır derleme tanımları içerir. Yapı tanımları `azure-pipelines.yml` adlı bir dosyada tanımlanır ve kaynak kodla birlikte sürümlendiribilecekleri şekilde depoya iade edilir. Bu, değişiklikler yalnızca o dala iade edilebilir olduğundan, bir dalda derleme ardışık düzeninde değişiklik yapmayı çok daha kolay hale getirir. Şekil 11-8 ' de, tam çerçeve üzerinde ASP.NET Web uygulaması oluşturmak için 0 @no__t bir örnek gösterilmektedir.
+DevOps, her derleme için özelleştirilebilen çok sayıda kullanıma hazır derleme tanımları içerir. Yapı tanımları `azure-pipelines.yml` adlı bir dosyada tanımlanır ve kaynak kodla birlikte sürümlendiribilecekleri şekilde depoya iade edilir. Bu, değişiklikler yalnızca o dala iade edilebilir olduğundan, bir dalda derleme ardışık düzeninde değişiklik yapmayı çok daha kolay hale getirir. Şekil 11-8 ' de, tam çerçeve üzerinde ASP.NET Web uygulaması oluşturmak için bir örnek `azure-pipelines.yml` gösterilmektedir.
 
 ```yml
 name: $(rev:r)
@@ -195,7 +195,7 @@ steps:
   displayName: 'NuGet restore'
   inputs:
     restoreSolution: '$(solution)'
-    
+
 - task: VSBuild@1
   displayName: 'Build solution'
   inputs:

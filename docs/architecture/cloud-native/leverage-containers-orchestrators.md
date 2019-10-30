@@ -2,12 +2,12 @@
 title: Kapsayıcılardan ve düzenleyicilerden yararlanma
 description: Azure 'da Docker kapsayıcılarını ve Kubernetes düzenleyicilerinden yararlanın
 ms.date: 06/30/2019
-ms.openlocfilehash: 62aaa68b2ada0725f33df62e97f1ca3216b91ccf
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 7b136ed2760ea471f42ff82d20298ff8714c6dee
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72315884"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73087229"
 ---
 # <a name="leveraging-containers-and-orchestrators"></a>Kapsayıcılardan ve düzenleyicilerden yararlanma
 
@@ -53,8 +53,8 @@ Diğer özellikler, kapsayıcılar kaynak denetimine denetlenebilecekleri basit 
 
 Kapsayıcılar sabittir. Bir kapsayıcının tanımına sahip olduktan sonra, bu kapsayıcıyı yeniden oluşturabilirsiniz ve tam olarak aynı şekilde çalışır. Bu, bu şekilde bileşen tabanlı tasarıma yönelik olarak kullanılabilirlik sağlar. Bir uygulamanın bazı bölümleri başkaları kadar sık değişmemekle karşılaşmıyorsanız, en sık değiştiren parçaları yalnızca dağıtırken uygulamanın tamamını yeniden dağıtmanız gerekir mi? Bir uygulamanın farklı özellikleri ve çapraz kesme sorunları ayrı birimlere ayrılabilir. Şekil 3-2, tek parçalı bir uygulamanın belirli özellikler veya işlevler için kapsayıcılardan ve mikro hizmetlerden nasıl yararlanabileceğiz gösterir. Uygulamanın kendisindeki diğer işlevsellik de Kapsayıcılı hale getirilir.
 
-arka uçta mikro hizmetleri kullanmak için tek parçalı bir uygulamayı @no__t. ](./media/breaking-up-monolith-with-backend-microservices.png)
-**şekil 3-2**. Arka uçta mikro hizmetleri kullanmak için tek parçalı bir uygulamayı bölmek.
+arka uçta mikro hizmetleri kullanmak için tek parçalı bir uygulamayı bölmek ![. **şekil 3-2**](./media/breaking-up-monolith-with-backend-microservices.png)
+. Arka uçta mikro hizmetleri kullanmak için tek parçalı bir uygulamayı bölmek.
 
 Ayrı kapsayıcılar kullanılarak oluşturulan bulutta yerel uygulamalar, bir uygulamanın gerektirdiği kadar çok veya büyük bir şekilde dağıtılması özelliğinden yararlanır. Her hizmet için uygun kaynakları olan düğümlerde tek tek hizmetler barındırılabilir. Her hizmetin çalıştığı ortam sabittir, geliştirme, test ve üretim arasında paylaşılabilir ve kolayca sürümlenebilir. Uygulamanın farklı alanlarında, tek başına derleme zamanı bağımlılıkları değil, hizmetler arasında doğrudan çağrı veya ileti olarak gerçekleştirilir. Uygulamanın geri kalanında değişiklik gerektirmeden bu özellik veya beceri için en mantıklı bir teknoloji sunan teknolojiyi seçebilir.
 
@@ -62,8 +62,8 @@ Ayrı kapsayıcılar kullanılarak oluşturulan bulutta yerel uygulamalar, bir u
 
 Kapsayıcılarda oluşturulan hizmetler, Kubernetes gibi Orchestration araçları tarafından sunulan ölçeklendirme avantajlarından yararlanabilir. Tasarım kapsayıcıları tarafından yalnızca kendileri hakkında bilgi sahibi. Birlikte çalışması gereken birden çok kapsayıcıyla çalışmaya başladıktan sonra, bunları daha yüksek bir düzeyde düzenlemek biraz zaman alabilir. Çok sayıda kapsayıcıyı ve ağ yapılandırması gibi paylaşılan bağımlılıklarını organize etmek, düzenleme araçlarının günü kaydetmek için nereden geldiği yerdir! Kubernetes, Kapsayıcılı uygulamaların dağıtımını, ölçeklendirilmesini ve yönetimini otomatikleştirmek için tasarlanan bir kapsayıcı düzenleme platformudur. Kapsayıcı gruplarının üstünde bir soyutlama katmanı oluşturur ve bunları *Pod*olarak düzenler. *Düğüm*olarak adlandırılan çalışan makinelerdeki pods çalıştırılır. Tüm düzenlenmiş Grup, *küme*olarak adlandırılır. Şekil 3-3, bir Kubernetes kümesinin farklı bileşenlerini gösterir.
 
-![Kubernetes küme bileşenleri. ](./media/kubernetes-cluster-components.png)
-**şekil 3-3**. Kubernetes kümesi bileşenleri.
+Kubernetes küme bileşenlerini ![. **şekil 3-3**](./media/kubernetes-cluster-components.png)
+. Kubernetes kümesi bileşenleri.
 
 Kubernetes, talepleri karşılamak için kümeleri ölçeklendirmeye yönelik yerleşik destek içerir. Kapsayıcılı mikro hizmetlerle birleştirilmiş bu, bulutta yerel uygulamalar sağlar ve gerektiğinde ek kaynaklarla isteğe bağlı ani artışlar hızla ve verimli bir şekilde yanıtlayabilir.
 
@@ -117,7 +117,7 @@ Ve daha sonra kapsayıcılardan ve düzenleyicilerinden çok sayıda uygulama av
 
 ## <a name="when-should-you-avoid-using-containers-and-orchestrators"></a>Kapsayıcıları ve düzenlemeleri kullanmaktan ne zaman kaçınmalısınız?
 
-Uygulamanızı, on Iki öğeli uygulama prensipini takip etmek veya derlemenize izin vermenizdir, büyük olasılıkla kapsayıcılardan ve düzenleyicilerinden Kaçınmaktan daha iyi bir şekilde başlayacaksınız. Bu gibi durumlarda, belirli işlevsellik parçalarını ayrı kapsayıcılara veya hatta sunucusuz işlevlere taşıyabilmeniz için bir VM tabanlı barındırma platformu veya belki de büyük olasılıkla bir karma sistemle ilerlemek en iyi hale gelebilir. 
+Uygulamanızı, on Iki öğeli uygulama prensipini takip etmek veya derlemenize izin vermenizdir, büyük olasılıkla kapsayıcılardan ve düzenleyicilerinden Kaçınmaktan daha iyi bir şekilde başlayacaksınız. Bu gibi durumlarda, belirli işlevsellik parçalarını ayrı kapsayıcılara veya hatta sunucusuz işlevlere taşıyabilmeniz için bir VM tabanlı barındırma platformu veya belki de büyük olasılıkla bir karma sistemle ilerlemek en iyi hale gelebilir.
 
 ## <a name="development-resources"></a>Geliştirme kaynakları
 

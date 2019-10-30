@@ -4,16 +4,16 @@ description: Sunucusuz mimari Kılavuzu. Kurumsal uygulamalarınız için (hizme
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: af930ba3d704e9bbf22f03ad6a4a547c5fbff4d3
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 9dea7dbccb5c9e125f792e6a7287a7dd2fad26f1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72522848"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73093541"
 ---
 # <a name="serverless-apps-architecture-patterns-and-azure-implementation"></a>Sunucusuz uygulamalar: mimari, desenler ve Azure uygulaması
 
-![Sunucusuz uygulamalar eKitap kapağını gösteren ekran görüntüsü.](./media/index/serverless-apps-cover.jpg)
+![Sunucusuz uygulamalar e-kitap kapağını gösteren ekran görüntüsü.](./media/index/serverless-apps-cover.jpg)
 
 > INDIRME şu adreste bulunabilir: <https://aka.ms/serverless-ebook>
 
@@ -43,17 +43,17 @@ Diğer tüm işaretler ve amblemler kendi sahiplerinin mülkiyetindedir.
 
 Geliştirici
 
-> **[Jeremy Liksizlik](https://twitter.com/jeremylikness)** , SR. Cloud Developer Advo, tepesinde, Microsoft Corp.
+> **[Jeremy Liksizlik](https://twitter.com/jeremylikness)** , üst düzey bulut Danışmanı, Microsoft Corp.
 
 Mcý
 
-> **[CECIL Phillip](https://twitter.com/cecilphillip)** , bulut GELIŞTIRICI Danışmanı II, tepesinde, Microsoft Corp.
+> **[Cecil Phillip](https://twitter.com/cecilphillip)** , üst düzey bulut Danışmanı, Microsoft Corp.
 
 Edit
 
-> **[Bill Wagner](https://twitter.com/billwagner)** , kıdemli içerik GELIŞTIRICI, tepesinde, Microsoft Corp.
+> **[Bill Wagner](https://twitter.com/billwagner)** , üst düzey içerik geliştiricisi, Microsoft Corp.
 
-> **[Maira Wenzel](https://twitter.com/mairacw)** , kıdemli içerik GELIŞTIRICISI, tepesinde, Microsoft Corp.
+> **[Maira Wenzel](https://twitter.com/mairacw)** , kıdemli içerik geliştiricisi, Microsoft Corp.
 
 Katılımcılar ve gözden geçirenler:
 

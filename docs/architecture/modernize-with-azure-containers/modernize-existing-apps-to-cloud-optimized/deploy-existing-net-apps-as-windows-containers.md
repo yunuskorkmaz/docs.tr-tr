@@ -2,12 +2,12 @@
 title: Varolan .NET uygulamalarını Windows kapsayıcıları olarak dağıtma
 description: Azure bulut ve Windows kapsayıcıları ile mevcut .NET uygulamalarını modernleştirin | Mevcut .NET uygulamalarını Windows kapsayıcıları olarak dağıtma
 ms.date: 04/29/2018
-ms.openlocfilehash: 997b32e51272be2126bd824de1f8f026d77ca203
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 28568ca363bfc8100f78b100f8a7f0242c4f04c9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72318632"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73089553"
 ---
 # <a name="deploy-existing-net-apps-as-windows-containers"></a>Varolan .NET uygulamalarını Windows kapsayıcıları olarak dağıtma
 
@@ -154,11 +154,11 @@ Azure 'daki ve aynı anda PaaS (hizmet olarak platform) düzeyinde konumlandır�
 
 - **Azure App Service**
 - **Azure Kubernetes hizmeti (AKS ve ACS)**
-- **Azure Batch** 
+- **Azure Batch**
 
 Daha sonra Azure Container Registry, Azure 'da barındırılan ve özel kapsayıcı görüntülerinizi kaydederken ve dağıttığınızda önceki tüm ürünlerden kullanabileceğiniz yüksek düzeyde ölçeklenebilir bir kapsayıcı kayıt defteridir.
 
-Bunlara ek olarak, kapsayıcılarınızdaki Azure SQL veritabanı, Azure Redsıs Cache, Azure Cosmos DB vb. gibi diğer yönetilen Hizmetleri de kullanabilirsiniz. Ayrıca, Azure Marketi 'nde Azure Market 'te de kullanabileceğiniz Cloud Foundry ve OpenShift gibi üçüncü taraf çözümler/platformlar mevcuttur. 
+Bunlara ek olarak, kapsayıcılarınızdaki Azure SQL veritabanı, Azure Redsıs Cache, Azure Cosmos DB vb. gibi diğer yönetilen Hizmetleri de kullanabilirsiniz. Ayrıca, Azure Marketi 'nde Azure Market 'te de kullanabileceğiniz Cloud Foundry ve OpenShift gibi üçüncü taraf çözümler/platformlar mevcuttur.
 
 Sonraki bölümlerde, Microsoft 'un bu Azure ürünlerinin ve çözümlerinin her birinin ne zaman kullanılacağı konusunda, özellikle Windows kapsayıcıları hedeflenirken bu önerileri inceleyebilirsiniz.
 

@@ -2,20 +2,20 @@
 title: Kapsayıcı uygulamaları için Microsoft platformu ve araçlarına giriş
 description: Microsoft 'un Docker uygulamalarının yaşam döngüsünü desteklemeye yönelik tekliflerini öğrenin.
 ms.date: 02/15/2019
-ms.openlocfilehash: 6907528a5d7ff354a312e7575531b9c608cb479f
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 1829ce1051f091065f543a6cadcf5d179a284834
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70295872"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73094463"
 ---
 # <a name="introduction-to-the-microsoft-platform-andtools-for-containerized-apps"></a>Kapsayıcılı uygulamalar için Microsoft platformu ve araçlarına giriş
 
-*Minin Geliştirme, BT işlemleri ve üretim yönetiüzü kapsayan uyarlanabilir, kurumsal düzeyde, kapsayıcılı bir uygulama yaşam döngüsü oluşturun.*
+*Vizyon: geliştirme, BT işlemleri ve üretim yönetiminden yayılan uyarlanabilir tablo, kurumsal düzeyde, kapsayıcılı bir uygulama yaşam döngüsü oluşturun.*
 
 Şekil 3-1, birden fazla ekip tarafından sunulan iş türüne göre sınıflandırılan Docker uygulamalarının yaşam döngüsünde ana pillerini gösterir (uygulama geliştirme, DevOps altyapı işlemleri ve BT yönetimi ve işlemler). Genellikle, kuruluşta, her alandan sorumlu olan "kişi" profilleri farklıdır. Bu nedenle becerileri.
 
-![Microsoft araçları. Geliştirme ve tasarım iş yükü için: Windows için Docker Engine, VS ve VS Code, .NET Core, Azure Kubernetes hizmeti. Yapı/test/teslim iş yükü için: Azure DevOps, Team Foundation Server, Docker CLı, Azure Kubernetes hizmeti. Çalıştırma/Izleme/yönetme iş yükü için: Azure Izleyici, Azure portalı Azure Kubernetes Hizmetleri, Service Fabric, diğer düzenleyiciler.](./media/image1.png)
+![Microsoft araçları. Geliştirme/tasarım iş yükü: Windows için Docker Engine, VS ve VS Code, .NET Core, Azure Kubernetes hizmeti. Derleme/test/teslim iş yükü için: Azure DevOps, Team Foundation Server, Docker CLı, Azure Kubernetes hizmeti. Çalıştırma/Izleme/yönetme iş yükü: Azure Izleyici, Azure portalı Azure Kubernetes Hizmetleri, Service Fabric, diğer düzenleyiciler.](./media/image1.png)
 
 **Şekil 3-1.** Microsoft platformu ve araçları ile Kapsayıcılı Docker uygulamalarına yönelik yaşam döngüsünde ana sütunlar
 
@@ -41,18 +41,18 @@ Kapsayıcılı Docker uygulamalarına yönelik Microsoft platformu ve araçları
 
 - **Yönetim ve izleme** Üretim uygulamalarını ve hizmetlerini çeşitli yollarla yönetebilir ve izleyebilir ve her iki perspektifi birleştirilmiş bir deneyimde tümleştirirler.
 
-  - **Azure Portal açık kaynaklı**düzenleyiciler kullanıyorsanız Azure Kubernetes hizmeti (aks), Service Fabric ve diğer düzenleyiciler, Docker ortamlarınızı ayarlamanıza ve bakımını yapmanıza yardımcı olur.  Azure Service Fabric kullanıyorsanız, Service Fabric Explorer aracı kümenizi görselleştirmenize ve yapılandırmanıza olanak tanır.
+  - **Azure portal** açık kaynaklı düzenleyiciler kullanıyorsanız, Azure Kubernetes hizmeti (aks), Service Fabric ve diğer düzenleyiciler, Docker ortamlarınızı ayarlamanıza ve bakımını yapmanıza yardımcı olur. Azure Service Fabric kullanıyorsanız, Service Fabric Explorer aracı kümenizi görselleştirmenize ve yapılandırmanıza olanak tanır.
 
-  - **Docker Araçları** tanıdık araçları kullanarak kapsayıcı uygulamalarınızı yönetebilirsiniz. Kapsayıcı iş yüklerini buluta taşımak için mevcut Docker yönetim uygulamalarınızı değiştirmeniz gerekmez. Zaten bildiğiniz uygulama yönetimi araçlarını kullanın ve seçtiğiniz Orchestrator için Standart API uç noktaları aracılığıyla bağlanın. Docker Datacenter veya hatta CLı Docker Araçları gibi Docker uygulamalarınızı yönetmek için diğer üçüncü taraf araçları da kullanabilirsiniz. 
+  - **Docker Araçları** , tanıdık araçları kullanarak kapsayıcı uygulamalarınızı yönetebilir . Kapsayıcı iş yüklerini buluta taşımak için mevcut Docker yönetim uygulamalarınızı değiştirmeniz gerekmez. Zaten bildiğiniz uygulama yönetimi araçlarını kullanın ve seçtiğiniz Orchestrator için Standart API uç noktaları aracılığıyla bağlanın. Docker Datacenter veya hatta CLı Docker Araçları gibi Docker uygulamalarınızı yönetmek için diğer üçüncü taraf araçları da kullanabilirsiniz.
 
     Linux komutlarına alışkın olsanız bile, bu Linux alt sistemi özelliği üzerinde çalışan bir Linux alt sistemi komut satırı ve Products (Docker, Kubernetes...) istemcileri ile Microsoft Windows ve PowerShell 'i kullanarak kapsayıcı uygulamalarınızı yönetebilirsiniz. Bu kitabın devamındaki en sevdiğiniz Microsoft Windows işletim sistemini kullanarak Linux alt sistemi altında bu araçları kullanma hakkında daha fazla bilgi edineceksiniz.
 
-  - **Açık kaynaklı araçlar** , aks düzenleme motoru için Standart API uç noktalarını kullanıma sunduğundan, en popüler araçlar aks ile uyumludur ve çoğu durumda, Görselleştiriciler, izleme, komut satırı araçları dahil olmak üzere kutudan çıkar ve hatta gelecekteki araçlar kullanılabilir hale gelir.
+  - **Açık kaynaklı araçlar** , aks, düzenleme ALTYAPıSıNıN Standart API uç noktalarını kullanıma sunduğundan, en popüler araçlar aks ile uyumludur ve çoğu durumda, Görselleştiriciler, izleme, komut satırı araçları dahil olmak üzere kutudan çıkar. ve hatta gelecekteki araçlar kullanılabilir hale gelir.
 
   - **Azure izleyici** , Azure 'un üretim ortamınızın her açısını izlemeye yönelik çözümüdür. Uygulamadan sistem tarafından oluşturulan günlük verilerini alabilmeniz için SDK 'sını hizmetlerinize ayarlayarak üretim Docker uygulamalarını izleyebilirsiniz.
 
 Bu nedenle, Microsoft uçtan uca Kapsayıcılı Docker uygulaması yaşam döngüsü için tam bir temel sunar. Ancak, *isteğe bağlı olarak mevcut araçları ve süreçlerini seçip tümleştirmenize olanak tanıyan bir ürün ve teknoloji koleksiyonudur*. Becerinin derinlemesine bir yaklaşımla birlikte, Microsoft 'un Kapsayıcılı Docker uygulama geliştirme için güçlü bir konuma yerleştirilme esnekliği.
 
 >[!div class="step-by-step"]
->[Önceki](../Docker-application-lifecycle/containers-foundation-for-devops-collaboration.md)İleri
->[](../design-develop-containerized-apps/index.md)
+>[Önceki](../Docker-application-lifecycle/containers-foundation-for-devops-collaboration.md)
+>[İleri](../design-develop-containerized-apps/index.md)

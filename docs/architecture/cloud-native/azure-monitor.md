@@ -2,20 +2,20 @@
 title: Azure Izleyici
 description: Sisteminizin üzerinde görünürlük elde etmek için Azure Izleyici 'yi kullanma.
 ms.date: 09/23/2019
-ms.openlocfilehash: 4d7d556f030500ea6e0f608e3bdfd16d22d9eb1d
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: fa7b4e103f4d1245710f88319271a9e8b7a24b04
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72521031"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73087689"
 ---
-# <a name="azure-monitor"></a>Azure Izleyici 
+# <a name="azure-monitor"></a>Azure Izleyici
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-Azure 'da bulunan bir bulut uygulaması izleme çözümünün dışında başka bir bulut sağlayıcısı yoktur. Azure Izleyici, sisteminizin durumuna ilişkin görünürlük sağlamak için tasarlanan bir araç koleksiyonu için bir şemsiye addır, uygulamanızın herhangi bir sorununa ve iyileştirmesine ilişkin öngörüler sunar. 
+Azure 'da bulunan bir bulut uygulaması izleme çözümünün dışında başka bir bulut sağlayıcısı yoktur. Azure Izleyici, sisteminizin durumuna ilişkin görünürlük sağlamak için tasarlanan bir araç koleksiyonu için bir şemsiye addır, uygulamanızın herhangi bir sorununa ve iyileştirmesine ilişkin öngörüler sunar.
 
-bir bulutta yerel uygulamanın nasıl çalıştığını kavramak için araçlara yönelik bir koleksiyon olan ![Azure Monitor. **şekil 7-9**](./media/azure-monitor.png)
+Azure Izleyici ![, bulut Yerel uygulamasının nasıl çalıştığını kavramak için bir araçlar. **şekil 7-9**](./media/azure-monitor.png)
 . Azure Izleyici, bulut Yerel uygulamasının nasıl çalıştığını kavramak için araçlara yönelik bir koleksiyon.
 
 ## <a name="gathering-logs-and-metrics"></a>Günlükleri ve ölçümleri toplama
@@ -35,29 +35,29 @@ Yapay zeka veya Machine Learning olmadan modern uygulama tamamlanmaz. Bu uçta, 
 Application Insights, kayıtları bulmak, özetlemek ve hatta grafikleri çizmek için kullanılabilecek kusto adlı güçlü bir sorgu dili sağlar. Örneğin, bu sorgu, 2007 Kasım ayının tüm kayıtlarını bulur, bunları durumlarına göre gruplayın ve bir pasta grafiği olarak ilk 10 ' u çizmez.
 
 ```
-StormEvents 
+StormEvents
 | where StartTime >= datetime(2007-11-01) and StartTime < datetime(2007-12-01)
 | summarize count() by State
 | top 10 by count_
-| render piechart 
+| render piechart
 ```
 
 **şekil 7-10**](./media/azure-monitor.png)
- Application Insights sorgusunun sonucunu ![The. Application Insights sorgusunun sonucu.
+Application Insights sorgusunun sonucunu ![. Application Insights sorgusunun sonucu.
 
 [Kusto sorguları denemek için bir oyun](https://dataexplorer.azure.com/clusters/help/databases/Samples) vardır. Bu, bir saat veya iki harcayabileceğiniz harika bir yerdir. [Örnek sorguları](https://docs.microsoft.com/azure/kusto/query/samples) okuma da çalıştırılabilir.
 
 ## <a name="dashboards"></a>Panolar
 
-Azure Izleyici 'den bilgileri yüzeye almak için kullanılabilecek çeşitli farklı Pano teknolojileri vardır. Belki de en basit, Application Insights sorguları çalıştırmak ve [verileri bir grafiğe çizmeniz](https://docs.microsoft.com/azure/azure-monitor/learn/tutorial-app-dashboards)olabilir. 
+Azure Izleyici 'den bilgileri yüzeye almak için kullanılabilecek çeşitli farklı Pano teknolojileri vardır. Belki de en basit, Application Insights sorguları çalıştırmak ve [verileri bir grafiğe çizmeniz](https://docs.microsoft.com/azure/azure-monitor/learn/tutorial-app-dashboards)olabilir.
 
-Ana Azure panosuna ekli Application Insights grafik ![An örneği ](./media/azure-monitor.png)
+Ana Azure panosuna katıştırılmış Application Insights grafiklere örnek ![](./media/azure-monitor.png)
 **şekil 7-11**. Ana Azure panosuna katıştırılmış Application Insights grafik örneği.
 
 Bu grafikler daha sonra Pano özelliğinin kullanımıyla Azure portal uygun şekilde gömülebilir. Çeşitli veri katmanlarında ayrıntıya gidebilmekte olan kullanıcılar için Azure Izleyici verileri [Power BI](https://powerbi.microsoft.com/)kullanılabilir. Power BI, birçok farklı veri kaynağından veri toplayabilen sektör lideri, kurumsal sınıf, iş zekası aracıdır.
 
-![An örnek Power BI Pano ](./media/azure-monitor.png)
-**şekil 7-12**. Pano Power BI bir örnek.
+**şekil 7-12**](./media/azure-monitor.png)
+bir örnek Power BI Pano ![. Pano Power BI bir örnek.
 
 ## <a name="alerts"></a>Uyarılar
 
@@ -71,9 +71,9 @@ Bazen veri panoları yeterli değildir. Panoları izlemek için kimse uyanık yo
 
 Tetiklendiğinde, uyarılar çok çeşitli görevler gerçekleştirebilir. Basit tarafta, uyarılar yalnızca bir posta listesine e-posta bildirimi veya bir kişiye metin iletisi gönderebilir. Daha fazla ilgili uyarı, belirli bir uygulama için kimin çağırdığının farkında olan Pagerharcı gibi bir araçta iş akışını tetikleyebiliyor. Uyarılar, iş akışları için sınırsız olasılıklardan [Microsoft Flow](https://flow.microsoft.com/) kilit açma sırasında eylemleri tetikleyebilir.
 
-Uyarıların yaygın nedenleri tanımlandıkları için uyarılar, uyarıların genel nedenleri ve bunları çözmek için gereken adımlar hakkında ayrıntılarla iyileştirilen şekilde geliştirilebilir. Yüksek derecede çok büyük ölçekli Cloud Native Application dağıtımları, hatalı düğümleri bir ölçek kümesinden kaldırma veya otomatik ölçeklendirme etkinliğini tetikleme gibi eylemleri gerçekleştiren kendi kendini onaran görevleri başlatabilir. Son olarak, sistem kendisini bir sonraki sabah işe ulaşana kadar bir süre önce veya en az bir şekilde ayarlayacağından, bir canlı site sorununu çözmek için, daha önce 2. 
+Uyarıların yaygın nedenleri tanımlandıkları için uyarılar, uyarıların genel nedenleri ve bunları çözmek için gereken adımlar hakkında ayrıntılarla iyileştirilen şekilde geliştirilebilir. Yüksek derecede çok büyük ölçekli Cloud Native Application dağıtımları, hatalı düğümleri bir ölçek kümesinden kaldırma veya otomatik ölçeklendirme etkinliğini tetikleme gibi eylemleri gerçekleştiren kendi kendini onaran görevleri başlatabilir. Son olarak, sistem kendisini bir sonraki sabah işe ulaşana kadar bir süre önce veya en az bir şekilde ayarlayacağından, bir canlı site sorununu çözmek için, daha önce 2.
 
-Azure Izleyici, dağıtılan uygulamaların normal işletim parametrelerini anlamak için makine öğrenimini otomatik olarak kullanır. Bu, BT 'nin normal parametrelerinin dışında çalışan hizmetleri algılamasını sağlar. Örneğin, sitedeki tipik iş günü trafiği dakikada 10.000 istek olabilir. Daha sonra, belirli bir hafta boyunca istek sayısı, dakikada yüksek olağandışı 20.000 istek üzerine gelir. [Akıllı algılama](https://docs.microsoft.com/azure/azure-monitor/app/proactive-diagnostics) , norm karşı bu sapmayı fark eder ve bir uyarı tetikler. Aynı zamanda, trafik yükü beklendiğinde hatalı pozitif sonuçlar tetiklemeden kaçınmak için eğilim analizi yeterince akıllı olur.  
+Azure Izleyici, dağıtılan uygulamaların normal işletim parametrelerini anlamak için makine öğrenimini otomatik olarak kullanır. Bu, BT 'nin normal parametrelerinin dışında çalışan hizmetleri algılamasını sağlar. Örneğin, sitedeki tipik iş günü trafiği dakikada 10.000 istek olabilir. Daha sonra, belirli bir hafta boyunca istek sayısı, dakikada yüksek olağandışı 20.000 istek üzerine gelir. [Akıllı algılama](https://docs.microsoft.com/azure/azure-monitor/app/proactive-diagnostics) , norm karşı bu sapmayı fark eder ve bir uyarı tetikler. Aynı zamanda, trafik yükü beklendiğinde hatalı pozitif sonuçlar tetiklemeden kaçınmak için eğilim analizi yeterince akıllı olur.
 
 >[!div class="step-by-step"]
 >[Önceki](monitoring-azure-kubernetes.md)

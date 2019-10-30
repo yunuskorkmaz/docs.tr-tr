@@ -2,12 +2,12 @@
 title: Docker terimleri
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | Docker terminolojisi
 ms.date: 01/07/2019
-ms.openlocfilehash: a5f78ea0e848ef14f6b37e2d97d7546df20096c2
-ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
+ms.openlocfilehash: 2735188c508a7bbb0101946429faec122b13a17b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72179415"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73090047"
 ---
 # <a name="docker-terminology"></a>Docker terimleri
 
@@ -17,7 +17,7 @@ Bu bölümde, Docker 'a daha ayrıntılı bir şekilde yararlanmak için bilmeni
 
 **Dockerfile**: Docker görüntüsünün nasıl oluşturulacağı hakkında yönergeler içeren bir metin dosyası. Bir toplu iş betiği gibi, ilk satırda temel görüntünün başlaması ve ardından gerekli programları yüklemek, dosyaları kopyalamak ve daha sonra gereken çalışma ortamına ulaşana kadar yönergeleri takip etmeniz gerekir.
 
-**Yapı**: Dockerfile tarafından belirtilen bilgileri ve bağlamı temel alan bir kapsayıcı görüntüsü oluşturma eylemi ve görüntünün oluşturulduğu klasördeki ek dosyalar. Docker **Docker Build** komutuyla görüntüleri oluşturabilirsiniz. 
+**Yapı**: Dockerfile tarafından belirtilen bilgileri ve bağlamı temel alan bir kapsayıcı görüntüsü oluşturma eylemi ve görüntünün oluşturulduğu klasördeki ek dosyalar. Docker **Docker Build** komutuyla görüntüleri oluşturabilirsiniz.
 
 **Kapsayıcı**: Docker görüntüsünün bir örneği. Kapsayıcı, tek bir uygulama, işlem veya hizmetin yürütülmesini temsil eder. Docker görüntüsü, yürütme ortamı ve standart bir yönerge kümesi içeriğinden oluşur. Bir hizmeti ölçeklendirirken, aynı görüntüden bir kapsayıcının birden çok örneğini oluşturursunuz. Ya da bir toplu iş, her örneğe farklı parametreler geçirerek aynı görüntüden birden fazla kapsayıcı oluşturabilir.
 
@@ -47,7 +47,7 @@ Bu bölümde, Docker 'a daha ayrıntılı bir şekilde yararlanmak için bilmeni
 
 **Küme**: tek bir sanal Docker ana bilgisayarı gibi kullanıma sunulan Docker konaklarının bir koleksiyonu, uygulamanın birden fazla hizmetin kümedeki birden fazla örneğine yayılabilmesini sağlamak için, bu, uygulamanın birden çok hizmet örneğine ölçeklenebilmesini sağlar. Docker kümeleri, Kubernetes, Azure Service Fabric, Docker Sısınma ve Mesosphere DC/OS ile oluşturulabilir.
 
-**Orchestrator**: kümelerin ve Docker konaklarının yönetimini kolaylaştıran bir araç. Düzenleyiciler, bir komut satırı arabirimi (CLı) veya grafik kullanıcı arabirimi aracılığıyla görüntülerini, kapsayıcıları ve konaklarını yönetmenizi sağlar. Kapsayıcı ağ, yapılandırma, Yük Dengeleme, hizmet bulma, yüksek kullanılabilirlik, Docker ana bilgisayar yapılandırması ve daha fazlasını yönetebilirsiniz. Bir Orchestrator, bir düğüm koleksiyonunda çalıştırma, dağıtma, ölçekleme ve düzeltme yüklerini çalıştırmaktan sorumludur. Genellikle, Orchestrator ürünleri, piyasadaki diğer tekliflerin yanı sıra Kubernetes ve Azure Service Fabric gibi küme altyapısı sağlayan ürünlerdir. 
+**Orchestrator**: kümelerin ve Docker konaklarının yönetimini kolaylaştıran bir araç. Düzenleyiciler, bir komut satırı arabirimi (CLı) veya grafik kullanıcı arabirimi aracılığıyla görüntülerini, kapsayıcıları ve konaklarını yönetmenizi sağlar. Kapsayıcı ağ, yapılandırma, Yük Dengeleme, hizmet bulma, yüksek kullanılabilirlik, Docker ana bilgisayar yapılandırması ve daha fazlasını yönetebilirsiniz. Bir Orchestrator, bir düğüm koleksiyonunda çalıştırma, dağıtma, ölçekleme ve düzeltme yüklerini çalıştırmaktan sorumludur. Genellikle, Orchestrator ürünleri, piyasadaki diğer tekliflerin yanı sıra Kubernetes ve Azure Service Fabric gibi küme altyapısı sağlayan ürünlerdir.
 
 >[!div class="step-by-step"]
 >[Önceki](docker-defined.md)

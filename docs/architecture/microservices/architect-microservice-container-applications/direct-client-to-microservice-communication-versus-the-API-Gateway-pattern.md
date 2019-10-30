@@ -2,12 +2,12 @@
 title: API ağ geçidi düzenine ve doğrudan istemciden mikro hizmete iletişime karşı
 description: API Gateway deseninin ve doğrudan istemciden mikro hizmet iletişiminin farklılıklarını ve kullanımlarını anlayın.
 ms.date: 01/07/2019
-ms.openlocfilehash: 6b42650b2dbce093f12fe02b1605c95076dc8592
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 47e9a383c1fcb6c9fec38cb376b60a4ab839077d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72522953"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73090128"
 ---
 # <a name="the-api-gateway-pattern-versus-the-direct-client-to-microservice-communication"></a>API ağ geçidi düzenine ve doğrudan istemciden mikro hizmete iletişime karşı
 
@@ -132,7 +132,7 @@ Her uygulamaya bağlı olarak API ağ geçitleri ürünleri tarafından sunulan 
 
 **Şekil 4-14**. API ağ geçidiniz için Azure API Management kullanma
 
-Azure API Management, API ağ geçidinizi ve günlük, güvenlik, ölçüm vb. gibi yönetim gereksinimlerinizi çözer. Bu durumda, Azure API Management gibi bir ürün kullanırken, bu tür API ağ geçitleri "THINNER" C# olduğundan, bir API ağ geçidine sahip olabilirsiniz. tek parçalı bileşen. 
+Azure API Management, API ağ geçidinizi ve günlük, güvenlik, ölçüm vb. gibi yönetim gereksinimlerinizi çözer. Bu durumda, Azure API Management gibi bir ürün kullanırken, bu tür API ağ geçitleri "THINNER" C# olduğundan, bir API ağ geçidine sahip olabilirsiniz. tek parçalı bileşen.
 
 API Gateway ürünleri, genellikle iç mikro hizmetlerden API 'Leri filtreleyebileceğiniz ve bu tek katmandaki yayımlanmış API 'lere yetkilendirme yapan giriş iletişimi için ters bir ara sunucu gibi davranır.
 

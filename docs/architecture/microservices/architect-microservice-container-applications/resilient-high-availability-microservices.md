@@ -1,15 +1,15 @@
 ---
-title: Mikro hizmetlerde dayanıklılık ve yüksek kullanılabilirlik
+title: Mikro hizmetlerde esneklik ve yüksek kullanılabilirlik
 description: Mikro hizmetlerin, geçici ağ ve bağımlılıklar hatalarıyla birlikte kullanılması için tasarlanmaları gerekir, bu da yüksek kullanılabilirlik elde etmek için dayanıklı olmalıdır.
 ms.date: 09/20/2018
-ms.openlocfilehash: 6c110b0fe7a80842f12779494e5b0bdd29c5fb64
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 1c0f75a8c68d1f84ba24c550e854edc5372cf7f6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834347"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73094222"
 ---
-# <a name="resiliency-and-high-availability-in-microservices"></a>Mikro hizmetlerde dayanıklılık ve yüksek kullanılabilirlik
+# <a name="resiliency-and-high-availability-in-microservices"></a>Mikro hizmetlerde esneklik ve yüksek kullanılabilirlik
 
 Beklenmedik hatalarla ilgilenirken, özellikle dağıtılmış bir sistemde çözülecek en zor sorunlardan biridir. Geliştiricilerin yazacağı kodun büyük bölümü özel durumları işlemeye ve bu da en fazla saatin test edilirken harcanmasını içerir. Sorun, hataların işlenmesi için kodun yazılmasından daha karmaşıktır. Mikro hizmetin çalıştığı makine başarısız olduğunda ne olur? Bu mikro hizmet başarısızlığını (kendi kendine yönelik bir sorun) algılamanıza gerek kalmaz, ancak mikro hizmetinizi yeniden başlatmak için de bir işlem yapmanız gerekir.
 
@@ -31,8 +31,8 @@ Bu kılavuzun [ASP.NET Core Hizmetleri bölümünde sistem durumu denetimleri uy
 
 Ayrıca [GitHub](https://github.com/Xabaril/BeatPulse) 'da ve bir [NuGet paketi](https://www.nuget.org/packages/BeatPulse/)olarak kullanılabilir olan uygun olmayan bir açık kaynaklı kitaplık kullanma seçeneğiniz de vardır. Bu kitaplık Ayrıca sistem durumu denetimleri de yapar ve bu da iki tür denetimi işler:
 
-- **Lida**: mikro hizmetin etkin olup olmadığını denetler, diğer bir deyişle, istekleri kabul edip yanıtlayabilir. 
-- **Hazırlık**: mikro hizmetin bağımlılıklarının (veritabanı, kuyruk hizmetleri vb.) kendi kendine hazır olup olmadığını denetler, bu nedenle mikro hizmet, ne olması gerektiğini yapabilir. 
+- **Lida**: mikro hizmetin etkin olup olmadığını denetler, diğer bir deyişle, istekleri kabul edip yanıtlayabilir.
+- **Hazırlık**: mikro hizmetin bağımlılıklarının (veritabanı, kuyruk hizmetleri vb.) kendi kendine hazır olup olmadığını denetler, bu nedenle mikro hizmet, ne olması gerektiğini yapabilir.
 
 ### <a name="using-diagnostics-and-logs-event-streams"></a>Tanılama ve günlük olay akışlarını kullanma
 
@@ -56,7 +56,7 @@ Farklı düzenleyiciler benzer şekilde değişebilir, ancak her biri tarafında
 
 ## <a name="additional-resources"></a>Ek kaynaklar
 
-- **On Iki öğeli App. XI. Günlükler: günlükleri olay akışları olarak Işle** \
+- **On Iki öğeli App. XI. Günlükler: günlükleri olay akışları olarak değerlendir** \
   <https://12factor.net/logs>
 
 - **Microsoft tanılama EventFlow kitaplığı** GitHub deposu. \
@@ -68,7 +68,7 @@ Farklı düzenleyiciler benzer şekilde değişebilir, ancak her biri tarafında
 - **Windows bilgisayarlarını Azure izleyici hizmetine bağlama** \
   <https://docs.microsoft.com/azure/azure-monitor/platform/agent-windows>
 
-- **Ne demek Istediğinizi günlüğe kaydetme: anlam günlüğü uygulama bloğunu** \
+- **Ne anlama geldiğini günlüğe kaydetme: anlamsal günlük uygulama bloğunu kullanma** \
   <https://docs.microsoft.com/previous-versions/msp-n-p/dn440729(v=pandp.60)>
 
 - **Splunk** Resmi site. \

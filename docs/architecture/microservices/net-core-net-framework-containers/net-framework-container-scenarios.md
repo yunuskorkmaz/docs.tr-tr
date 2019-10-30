@@ -2,12 +2,12 @@
 title: Docker kapsayıcıları için ne zaman .NET Framework seçilmelidir?
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | Docker kapsayıcıları için .NET Framework seçme
 ms.date: 01/07/2019
-ms.openlocfilehash: 575af1bc1966a25a01acdcfe106870ad1b7c477d
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 8316d17aae09ddbd70bd80af4f06d8cb029f2752
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71039648"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73093758"
 ---
 # <a name="when-to-choose-net-framework-for-docker-containers"></a>Docker kapsayıcıları için ne zaman .NET Framework seçilmelidir?
 
@@ -27,7 +27,7 @@ Ayrıca, Windows [Uyumluluk Paketi](../../../core/porting/windows-compat-pack.md
 
 Bununla birlikte, 2,0 ve .NET Core 2,1 ' den .NET Standard bu yana bu olağanüstü ilerlemeyi bile, bazı NuGet paketlerinin Windows 'un çalışması ve .NET Core 'u desteklememe gibi durumlar olabilir. Bu paketler uygulamanız için önemliyse, Windows kapsayıcılarında .NET Framework kullanmanız gerekir.
 
-## <a name="using-net-technologies-not-available-for-net-core"></a>.NET Core için kullanılamayan .NET teknolojilerini kullanma 
+## <a name="using-net-technologies-not-available-for-net-core"></a>.NET Core için kullanılamayan .NET teknolojilerini kullanma
 
 Bazı .NET Framework teknolojileri .NET Core 'un geçerli sürümünde (Bu yazma itibariyle sürüm 2,2) kullanılamaz. Bazıları, daha sonraki .NET Core sürümlerinde (.NET Core 2. x) kullanılabilir, ancak diğerleri ise .NET Core tarafından hedeflenen yeni uygulama desenleri için uygulanmazlar ve hiçbir şekilde kullanılamayabilir.
 
@@ -57,11 +57,11 @@ Bu sırada, Azure 'daki herhangi bir platform veya hizmet, istemci API 'SI ile .
 - **.NET Framework 'den .NET Core 'a taşıma**  
   [https://docs.microsoft.com/dotnet/core/porting/index](../../../core/porting/index.md)
 
-- **Docker kılavuzunda .NET Core**[https://docs.microsoft.com/dotnet/core/docker/introduction](../../../core/docker/introduction.md)
+- **Docker kılavuzundaki .NET Core** [https://docs.microsoft.com/dotnet/core/docker/introduction](../../../core/docker/introduction.md)
 
 - **.NET bileşenlerine genel bakış**  
   [https://docs.microsoft.com/dotnet/standard/components](../../../standard/components.md)
 
 >[!div class="step-by-step"]
->[Önceki](net-core-container-scenarios.md)İleri
->[](container-framework-choice-factors.md)
+>[Önceki](net-core-container-scenarios.md)
+>[İleri](container-framework-choice-factors.md)

@@ -4,17 +4,17 @@ description: ASP.NET Core ve Azure ile modern web uygulamalarını mimarın MVC 
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 4e4ab71cc542767460e92be1510ccc5c5e0e7ce0
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: 9bc97efdda44ca4dfa4a583c32e9e55c9502d975
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70374078"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73089689"
 ---
 # <a name="test-aspnet-core-mvc-apps"></a>MVC uygulamalarını test ASP.NET Core
 
 > *"Ürününüzün birim testini beğenmezseniz, büyük olasılıkla müşterileriniz test etmek zorunda kalmaz."*
- > \_Deðeri
+ > \_-anonim-
 
 Herhangi bir karmaşıklığın yazılımı, değişikliklere yanıt olarak beklenmedik yollarla başarısız olabilir. Bu nedenle, en önemsiz (veya en az kritik) uygulamalar için değişiklik yaptıktan sonra test edilmesi gerekir. El ile test etme, yazılımın test edilmesine yönelik en yavaş ve en ucuz yoldur. Ne yazık ki, uygulamalar test edilebilir olacak şekilde tasarlanmamışsa, kullanılabilir tek yol olabilir. [Bölüm 4](architectural-principles.md) ' te bulunan mimari ilkeleri takip eden bir şekilde yazılan uygulamalar Unit test edilmelidir ve ASP.NET Core uygulamalar otomatik tümleştirme ve işlevsel testi de destekler.
 
@@ -40,7 +40,7 @@ Tümleştirme testleri, sistemin bazı bileşenlerinin birlikte düzgün çalı�
 
 > "Bir sistemin geliştirilmesi birçok kez bir evin oluşturulmasına sahiptir. Bu benzerleme vurguladı oldukça doğru olmasa da, birim ve işlev testleri arasındaki farkı anlamak amacıyla onu genişletebiliriz. Birim testi, evin yapım sitesini ziyaret eden bir yapı denetçisine benzerdir. BT, temel, çerçevelendirme, elektrik, sıhhi tesisat gibi çeşitli iç sistemlere odaklanılmıştır. Evin bölümlerinin doğru ve güvenli şekilde çalışmasını sağlar (testler) ve derleme kodunu karşılayın. Bu senaryodaki işlevsel testler, aynı yapı sitesini ziyaret eden Homeowner 'a benzerdir. İç sistemlerin uygun şekilde davrandığını varsayar, derleme denetçisi görevini gerçekleştiriyor. Homeowner, bu evinizde ne kadar canlı hale görüneceğine odaklanılmıştır. Evin nasıl göründüğü, çeşitli odaların rahat bir boyut olduğu konusunda endişe duymaktadır, evin aile ihtiyaçlarına uyum sağlaması, Windows 'un sabah güneyi yakalamak için iyi bir nokta halinde. Homeowner, evinizde işlevsel testler gerçekleştiriyor. Kullanıcının perspektifi vardır. Yapı denetçisi, evinizde birim testlerini gerçekleştiriyor. Oluşturucunun perspektifi vardır. "
 
-Kaynaktaki [Birim testi ve Işlev testlerine karşı](https://www.softwaretestingtricks.com/2007/01/unit-testing-versus-functional-tests.html)
+Kaynak: [birim testi ve Işlev testlerine karşı](https://www.softwaretestingtricks.com/2007/01/unit-testing-versus-functional-tests.html)
 
 "Geliştirici olarak" geliştirici olarak söyliyoruz, iki şekilde başarısız oldu: bir şeyi yanlış oluşturacağız veya yanlış bir şey oluşturacağız. " Birim testleri, şeyi doğru bir şekilde oluşturduğunuzu güvence altına alarak, işlevsel sınamalar, doğru şeyi oluşturduğunuzdan emin olmanızı sağlamaktır.
 
@@ -90,9 +90,9 @@ Her testin ne yaptığını belirten adlarla, testlerinizi tutarlı bir biçimde
 
 Bu yaklaşımın bir çeşitlemesi, her bir test sınıfı adını "olmalıdır" ile sonlandırır ve zaman hali hafifçe değiştirir:
 
-- `CatalogControllerGetImage`Çağırmalıdır`.``ImageServiceWithId`
+- `CatalogControllerGetImage` **çağrısı**`.``ImageServiceWithId`
 
-- `CatalogControllerGetImage`**Günlüğe kaydedilecek**`.``WarningGivenImageMissingException`
+- `CatalogControllerGetImage` **`.`** **günlük**`WarningGivenImageMissingException`
 
 Bazı takımlar ikinci adlandırma yaklaşımını daha net, ancak biraz daha ayrıntılı bir şekilde bulur. Herhangi bir durumda, test davranışına Öngörüler sağlayan bir adlandırma kuralı kullanmayı deneyin, böylece bir veya daha fazla testin başarısız olması durumunda, bazı durumlarda kendi adlarından belirgin olur. Bu teklif, test sonuçlarında gördüğünüz zaman hiçbir değer olmadığı için, ControllerTests. test1 gibi testlerin bir şekilde adlandırılmasını önleyin.
 
@@ -121,7 +121,7 @@ public IActionResult GetImage(int id)
 }
 ```
 
-Bu yöntemin birim testi, doğrudan bağımlılığı `System.IO.File`tarafından zor hale getirilir ve dosya sisteminden okumak için kullanılır. Beklendiği gibi çalıştığından emin olmak için bu davranışı test edebilirsiniz, ancak bunu gerçek dosyalarla yapmak bir tümleştirme testi olur. Bu yöntemin yolunu birim testi yapamıyoruz. Bu, kısa bir süre içinde bunu nasıl yapacağım hakkında bilgi edineceksiniz.
+Birim testi bu yöntemin, dosya sisteminden okumak için kullandığı `System.IO.File`doğrudan bağımlılığı tarafından güçleşir. Beklendiği gibi çalıştığından emin olmak için bu davranışı test edebilirsiniz, ancak bunu gerçek dosyalarla yapmak bir tümleştirme testi olur. Bu yöntemin yolunu birim testi yapamıyoruz. Bu, kısa bir süre içinde bunu nasıl yapacağım hakkında bilgi edineceksiniz.
 
 Dosya sistemi davranışını doğrudan birim testi yapamıyoruz ve yolu sınayamıyoruz, ne test etmek istiyorsunuz? Ayrıca, birim testi yapmak için yeniden düzenleme yapıldıktan sonra, bazı test çalışmalarını ve hata işleme gibi eksik davranışları bulabilirsiniz. Bir dosya bulunamadığında Yöntem ne yapar? Ne yapmalıyım? Bu örnekte, yeniden düzenlenmiş yöntemi şöyle görünür:
 
@@ -143,9 +143,9 @@ public IActionResult GetImage(int id)
 }
 ```
 
-Günlükçü \_ ve\_ımageservice, her ikisi de bağımlılıklar olarak eklenir. Artık eylem yöntemine geçirilen aynı kimliğin \_ımageservice 'e geçtiğini ve elde edilen baytların FileResult 'nin bir parçası olarak döndürüldüğünü test edebilirsiniz. Ayrıca, hata günlüğü 'nün beklenen şekilde olduğunu ve görüntü eksikse bir NotFound sonucunun döndürüldüğünü, bunun önemli uygulama davranışı olduğunu (yani, bir sorunu tanılamak için geliştiricinin eklediği geçici bir kod değil) kabul edebilirsiniz. Gerçek dosya mantığı ayrı bir uygulama hizmetine taşındı ve eksik bir dosya olması durumunda uygulamaya özel bir özel durum döndürecek şekilde geliştirilmiştir. Bu uygulamayı bir tümleştirme testi kullanarak bağımsız olarak test edebilirsiniz.
+\_günlükçüsü ve \_ımageservice, her ikisi de bağımlılıklar olarak eklenir. Artık eylem yöntemine geçirilen aynı kimliğin \_ımageservice 'e geçtiğini ve sonuçta elde edilen baytların FileResult 'nin bir parçası olarak döndürüldüğünü test edebilirsiniz. Ayrıca, hata günlüğü 'nün beklenen şekilde olduğunu ve görüntü eksikse bir NotFound sonucunun döndürüldüğünü, bunun önemli uygulama davranışı olduğunu (yani, bir sorunu tanılamak için geliştiricinin eklediği geçici bir kod değil) kabul edebilirsiniz. Gerçek dosya mantığı ayrı bir uygulama hizmetine taşındı ve eksik bir dosya olması durumunda uygulamaya özel bir özel durum döndürecek şekilde geliştirilmiştir. Bu uygulamayı bir tümleştirme testi kullanarak bağımsız olarak test edebilirsiniz.
 
-Çoğu durumda, denetleyicilerinizde genel özel durum işleyicilerini kullanmak isteyeceksiniz. bu nedenle, içindeki mantık miktarı minimum ve büyük olasılıkla birim testi olmamalıdır. İşlev testlerini ve `TestServer` aşağıda açıklanan sınıfı kullanarak, denetleyici eylemlerinin çoğunu test etmeniz gerekir.
+Çoğu durumda, denetleyicilerinizde genel özel durum işleyicilerini kullanmak isteyeceksiniz. bu nedenle, içindeki mantık miktarı minimum ve büyük olasılıkla birim testi olmamalıdır. İşlev testlerini ve aşağıda açıklanan `TestServer` sınıfını kullanarak, denetleyici eylemlerinin büyük bir kısmını test etmeniz gerekir.
 
 ## <a name="integration-testing-aspnet-core-apps"></a>Tümleştirme testi ASP.NET Core uygulamalar
 
@@ -153,9 +153,9 @@ ASP.NET Core uygulamalarınızın çoğu tümleştirme testi, altyapı projenizd
 
 ## <a name="functional-testing-aspnet-core-apps"></a>Uygulamalar ASP.NET Core işlevsel test
 
-ASP.NET Core uygulamalar için, `TestServer` sınıf işlevsel testleri yazma konusunda oldukça kolay hale getirir. Bir `TestServer` `WebApplicationFactory` kullanarak doğrudan (uygulamanız için yaptığınız gibi) veya türü (2,1 sürümünden itibaren kullanılabilir) ile yapılandırabilirsiniz. `WebHostBuilder` Test ana bilgisayarınızı üretim konağınız için mümkün olduğunca yakından eşleştirmeye çalışmalısınız, bu sayede testleriniz, uygulamanın üretimde ne yapacaklarına benzer davranışlar sağlar. `WebApplicationFactory` Sınıf, görünümler gibi statik kaynağı bulmak için ASP.NET Core tarafından kullanılan TestServer 'ın contentroot 'yi yapılandırmaya yardımcı olur.
+ASP.NET Core uygulamalar için `TestServer` sınıfı, işlevsel testleri yazma konusunda oldukça kolay hale getirir. Bir `TestServer` doğrudan (uygulamanız için yaptığınız gibi) veya `WebApplicationFactory` türüyle (2,1 sürümünden itibaren kullanılabilir) `WebHostBuilder` kullanarak yapılandırabilirsiniz. Test ana bilgisayarınızı üretim konağınız için mümkün olduğunca yakından eşleştirmeye çalışmalısınız, bu sayede testleriniz, uygulamanın üretimde ne yapacaklarına benzer davranışlar sağlar. `WebApplicationFactory` sınıfı, TestServer 'ın, görünümler gibi statik kaynağı bulmak için ASP.NET Core tarafından kullanılan ContentRoot 'yi yapılandırmak için yararlıdır.
 
-Web uygulamanızın başlangıç sınıfı olduğu ıssfixture\<webapplicationfactory\<tentry > > uygulayan bir test sınıfı oluşturarak basit işlevsel testler oluşturabilirsiniz. Bu şekilde, test armatürü, fabrika 'nin CreateClient metodunu kullanarak bir istemci oluşturabilir:
+Issfixture\<WebApplicationFactory\<TEntry > > uygulayan bir test sınıfı oluşturarak (TEntry Web uygulamanızın başlangıç sınıfı olduğunda) basit işlevsel testler oluşturabilirsiniz. Bu şekilde, test armatürü, fabrika 'nin CreateClient metodunu kullanarak bir istemci oluşturabilir:
 
 ```cs
 public class BasicWebTests : IClassFixture<WebApplicationFactory<Startup>>
@@ -171,7 +171,7 @@ public class BasicWebTests : IClassFixture<WebApplicationFactory<Startup>>
 }
 ```
 
-Genellikle, her bir test çalıştırılmadan önce sitenizin bazı ek yapılandırmalarını gerçekleştirmek isteyeceksiniz; Örneğin, uygulamayı bellek içi veri deposu kullanacak şekilde yapılandırma ve ardından uygulamayı test verileriyle sağlama. Bunu yapmak için, webapplicationfactory\<tentry > kendi alt sınıfını oluşturmanız ve configurewebhost metodunu geçersiz kılmanız gerekir. Aşağıdaki örnek eShopOnWeb FunctionalTests projesinden ve ana Web uygulamasındaki testlerin bir parçası olarak kullanılır.
+Genellikle, her bir test çalıştırılmadan önce sitenizin bazı ek yapılandırmalarını gerçekleştirmek isteyeceksiniz; Örneğin, uygulamayı bellek içi veri deposu kullanacak şekilde yapılandırma ve ardından uygulamayı test verileriyle sağlama. Bunu yapmak için, WebApplicationFactory\<TEntry > kendi alt sınıfını oluşturmanız ve ConfigureWebHost metodunu geçersiz kılmanız gerekir. Aşağıdaki örnek eShopOnWeb FunctionalTests projesinden ve ana Web uygulamasındaki testlerin bir parçası olarak kullanılır.
 
 ```cs
 using Microsoft.AspNetCore.Hosting;
@@ -198,7 +198,7 @@ namespace Microsoft.eShopWeb.FunctionalTests.Web.Controllers
                     .AddEntityFrameworkInMemoryDatabase()
                     .BuildServiceProvider();
 
-                // Add a database context (ApplicationDbContext) using an in-memory 
+                // Add a database context (ApplicationDbContext) using an in-memory
                 // database for testing.
                 services.AddDbContext<CatalogContext>(options =>
                 {
@@ -293,5 +293,5 @@ Bu fonksiyonel test, bir bütün ara yazılım, filtre, cilt, vb. dahil olmak ü
 >   <https://docs.microsoft.com/ef/core/miscellaneous/testing/>
 
 >[!div class="step-by-step"]
->[Önceki](work-with-data-in-asp-net-core-apps.md)İleri
->[](development-process-for-azure.md)
+>[Önceki](work-with-data-in-asp-net-core-apps.md)
+>[İleri](development-process-for-azure.md)

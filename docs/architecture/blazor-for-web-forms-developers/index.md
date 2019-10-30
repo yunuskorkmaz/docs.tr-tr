@@ -4,20 +4,20 @@ description: Basit ve tanıdık bir şekilde Blazor ve .NET Core kullanarak .NET
 author: danroth27
 ms.author: daroth
 ms.date: 09/11/2019
-ms.openlocfilehash: 936f85d4fda9c5396a6586810735877488226157
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 394d11038b59f4cbe9e9955df43b6198eb5daaf8
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71696925"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73088123"
 ---
 # <a name="blazor-for-aspnet-web-forms-developers"></a>ASP.NET Web Forms Geliştiricileri için Blazor
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-![Sunucusuz uygulamalar eKitap kapağını gösteren ekran görüntüsü.](./media/index/blazor-for-web-forms-developers-cover.png)
+![Sunucusuz uygulamalar e-kitap kapağını gösteren ekran görüntüsü.](./media/index/blazor-for-web-forms-developers-cover.png)
 
-> Şu adresten INDIRILEBILIR: <https://aka.ms/blazor-ebook>
+> INDIRME şu adreste bulunabilir: <https://aka.ms/blazor-ebook>
 
 YAYıMLAYAN
 
@@ -37,7 +37,7 @@ Bu kitap, "olduğu gibi" verilmiştir ve yazarın görünümlerini ve opnons 'yi
 
 Burada gösterilen bazı örnekler yalnızca gösterim amaçlıdır ve hayal ürünüdür. Hiçbir gerçek ilişkilendirme veya bağlantı amaçlanmaz veya çıkarsanmamalıdır.
 
-Microsoft ve "ticari markalar" Web sayfasında <https://www.microsoft.com> konumunda listelenen ticari markalar, Microsoft şirketler grubunun ticari markalarıdır.
+Microsoft ve "ticari markalar" Web sayfasındaki <https://www.microsoft.com> listelenen ticari markalar, Microsoft şirketler grubunun ticari markalarıdır.
 
 Mac ve macOS, Apple Inc. ' in ticari markalarıdır.
 
@@ -75,7 +75,7 @@ Bu kitap, kapsamlı bir geçiş kılavuzu değil, Blazor 'e giriş niteliğinded
 
 ### <a name="additional-resources"></a>Ek kaynaklar
 
-Resmi Blazor giriş sayfasını ve belgeleri <https://blazor.net> ' da bulabilirsiniz.
+Resmi Blazor giriş sayfasını ve <https://blazor.net>' de belgelerini bulabilirsiniz.
 
 ## <a name="send-your-feedback"></a>Geri bildiriminizi gönderin
 

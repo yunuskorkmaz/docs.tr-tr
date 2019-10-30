@@ -3,12 +3,12 @@ title: Bulutta Yerel'i tanımlama
 description: Bulutta yerel sistemler için yatak odası sağlayan temel sütunlar hakkında bilgi edinin
 author: robvet
 ms.date: 08/20/2019
-ms.openlocfilehash: aec199aee52a4ab3202c3ec0ceb769fecd168cfe
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: 27191a67b2964ac2e1636a4d7dc55d5314b78439
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72846736"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73087540"
 ---
 # <a name="defining-cloud-native"></a>Cloud Native 'i tanımlama
 
@@ -18,7 +18,7 @@ Yaptığımız şeyi ve iş arkadaşlarınızın 10. kısmını durdurun. "Cloud
 
 Cloud Native, önemli iş sistemlerini oluşturma hakkında düşündüğünüzden daha fazla değişiklik yaptığımız bir yöntemdir.
 
-Bulutta yerel sistemler, hızlı değişim, büyük ölçek ve esnekliği için tasarlanmıştır. 
+Bulutta yerel sistemler, hızlı değişim, büyük ölçek ve esnekliği için tasarlanmıştır.
 
 Bulut Yerel Bilgi Işlem altyapısı resmi bir [tanım](https://github.com/cncf/foundation/blob/master/charter.md)sağlar:
 
@@ -28,14 +28,14 @@ Bulut Yerel Bilgi Işlem altyapısı resmi bir [tanım](https://github.com/cncf/
 
 Uygulamalar daha fazla ve daha fazla yoğun Kullanıcı tarafından daha fazla karmaşık hale gelmiştir. Kullanıcılar hızlı yanıt verme, yenilikçi özellikler ve sıfır kapalı kalma süresi bekler. Performans sorunları, yinelenen hatalar ve hızlı taşınmama artık kabul edilemez. Bunlar kolayca rakibe taşıyacağız.
 
-Cloud Native, *hız* ve *çeviklik*hakkında çok daha fazla. İş sistemleri, iş yeteneklerini stratejik dönüşümlerle etkinleştirmeye, iş hızını hızlandırmanıza ve büyümeye kadar gelişmesini sağlar. Hemen pazara yönelik fikirler almak zorunludur. 
+Cloud Native, *hız* ve *çeviklik*hakkında çok daha fazla. İş sistemleri, iş yeteneklerini stratejik dönüşümlerle etkinleştirmeye, iş hızını hızlandırmanıza ve büyümeye kadar gelişmesini sağlar. Hemen pazara yönelik fikirler almak zorunludur.
 
 Bu teknikleri uygulayan bazı şirketler aşağıda verilmiştir. Elde ettikleri hız, çeviklik ve ölçeklenebilirlik hakkında düşünün.
 
-| Şirketlerin | Deneyimleri | 
+| Şirketlerin | Deneyimleri |
 | :-------- | :-------- |
 | [Netflix](https://www.infoq.com/news/2013/06/netflix/) | Üretimde 600 ' dür ve hizmet vardır. Günde yüz kez dağıtır. |
-| [Uber](https://eng.uber.com/micro-deploy/) | Üretimde 1000 + hizmet bulunur. Her hafta birkaç bin derleme dağıtır. | 
+| [Uber](https://eng.uber.com/micro-deploy/) | Üretimde 1000 + hizmet bulunur. Her hafta birkaç bin derleme dağıtır. |
 | [WeChat](https://www.cs.columbia.edu/~ruigu/papers/socc18-final100.pdf) | Üretimde 300 ' den fazla hizmet vardır. Günde neredeyse 1.000 değişiklik yapar. |
 
 Gördüğünüz gibi, Netflix, Uber ve WeChat yüzlerce bağımsız mikro hizmetten oluşan sistemleri kullanıma sunar. Bu mimari stili, pazar koşullarına hızlı yanıt vermesini sağlar. Canlı, karmaşık bir uygulamanın küçük alanlarında anında güncelleştirebilir ve bu alanların gerektiği şekilde ölçeklendirilmesini sağlayabilirsiniz.
@@ -132,6 +132,7 @@ Hizmetinize kimin eriştiğini ve sahip oldukları izinleri nasıl tanımlayacak
 Kimlik, ayrıntı Bölüm 8, *kimlik*kapsamında ele alınmıştır.
 
 ## <a name="microservices"></a>Mikro hizmetler
+
 Modern uygulamalar oluşturmak için popüler bir mimari stili olan bulut Yerel sistemleri, mikro hizmetler 'i ördir.
 
 Paylaşılan bir yapı aracılığıyla etkileşen, bir dağıtılmış küçük ve bağımsız hizmetler olarak oluşturulan mikro hizmetler aşağıdaki özellikleri paylaşır:
@@ -160,7 +161,7 @@ Mikro hizmetlerin "bir kod temeli, bir uygulama" ilkesini, daha önce bölümün
 
 Mikro hizmetler çeviklik sağlar.
 
-Bu bölümde daha önce, mikro hizmetler ile tek bir şekilde oluşturulmuş bir eticaret uygulamasını karşılaştırdık. Örnekte, bazı açık avantajlar gördük: 
+Bu bölümde daha önce, mikro hizmetler ile tek bir şekilde oluşturulmuş bir eticaret uygulamasını karşılaştırdık. Örnekte, bazı açık avantajlar gördük:
 
 - Her mikro hizmetin bir özerk yaşam döngüsü vardır ve bu, bağımsız olarak geliştirebilir ve sık sık dağıtabilir. Yeni bir özellik veya güncelleştirme dağıtmak için üç ayda bir sürüm beklemeniz gerekmez. Karmaşık bir uygulamanın küçük bir alanını, tüm sistemi kesintiye uğratmadan daha az riske sahip bir şekilde güncelleştirebilirsiniz.
 
@@ -174,9 +175,9 @@ Mikro hizmetler, herhangi bir modern geliştirme platformunda oluşturulabilir.
 
 Microsoft .NET Core platformu harika bir seçimdir. Ücretsiz ve açık kaynak olmak üzere, mikro hizmet geliştirmeyi basitleştirmek için birçok yerleşik özelliği vardır. .NET Core platformlar arası bir platformdur. Uygulamalar Windows, macOS ve Linux 'un birçok özellikleri üzerinde oluşturulabilir ve çalıştırılabilir.
 
-.NET Core yüksek performans düzeyine sahiptir ve Node. js ve diğer rekabet platformları karşılaştırmayla iyi bir şekilde puanlanır. Interest, [Techempower](https://www.techempower.com/) birçok Web uygulaması platformu ve çerçevesinde çok sayıda [performans karşılaştırmalı olarak kıyaslamalarından](https://www.techempower.com/benchmarks/#section=data-r17&hw=ph&test=plaintext) oluşur. .NET Core, Node. js ve diğer rekabet platformları üzerinde en iyi 10 ' un üzerinde puanlanır. 
+.NET Core yüksek performans düzeyine sahiptir ve Node. js ve diğer rekabet platformları karşılaştırmayla iyi bir şekilde puanlanır. Interest, [Techempower](https://www.techempower.com/) birçok Web uygulaması platformu ve çerçevesinde çok sayıda [performans karşılaştırmalı olarak kıyaslamalarından](https://www.techempower.com/benchmarks/#section=data-r17&hw=ph&test=plaintext) oluşur. .NET Core, Node. js ve diğer rekabet platformları üzerinde en iyi 10 ' un üzerinde puanlanır.
 
-.NET Core, GitHub 'da Microsoft ve .NET Community tarafından korunur. 
+.NET Core, GitHub 'da Microsoft ve .NET Community tarafından korunur.
 
 ## <a name="containers"></a>Kapsayıcılar
 
@@ -188,11 +189,11 @@ Gerektiğinde, görüntüyü çalışan bir kapsayıcı örneğine dönüştür�
 
 Şekil 1-5, her biri kendi kapsayıcısında tek bir konakta çalışan üç farklı mikro hizmeti gösterir.
 
-![Kapsayıcı ana bilgisayarında çalışan birden çok kapsayıcı](./media/hosting-mulitple-containers.png)  
+![Kapsayıcı ana bilgisayarında çalışan birden çok kapsayıcı](./media/hosting-mulitple-containers.png)
 
 **Şekil 1-5**. Kapsayıcı ana bilgisayarında çalışan birden çok kapsayıcı
 
-Her kapsayıcının kendi bağımlılık ve çalışma zamanı kümesini nasıl koruduğu ve bu farklılık fark edebilirsiniz. Burada, ürün mikro hizmetinin aynı konakta çalışan farklı sürümlerini görüyoruz. Her kapsayıcı, temel ana bilgisayar işletim sisteminin, belleğin ve işlemcinin bir dilimini paylaşır, ancak bir diğerinden yalıtılır. 
+Her kapsayıcının kendi bağımlılık ve çalışma zamanı kümesini nasıl koruduğu ve bu farklılık fark edebilirsiniz. Burada, ürün mikro hizmetinin aynı konakta çalışan farklı sürümlerini görüyoruz. Her kapsayıcı, temel ana bilgisayar işletim sisteminin, belleğin ve işlemcinin bir dilimini paylaşır, ancak bir diğerinden yalıtılır.
 
 Kapsayıcı modelinin, [on Iki öğeli uygulamadan](https://12factor.net/)"bağımlılıklar" ilkesini ne kadar iyi kapsayıyacağını göz önünde ayırın.
 
@@ -204,7 +205,7 @@ Kapsayıcılar hem Linux hem de Windows iş yüklerini destekler. Azure bulutu h
 
 ### <a name="why-containers"></a>Neden kapsayıcılar?
 
-Kapsayıcılar, ortamlar genelinde taşınabilirlik ve tutarlılık sağlar. Her şeyi tek bir pakette kapsülleyerek mikro hizmeti ve onun bağımlılıklarını temeldeki altyapıdan *yalıtabilirsiniz* . 
+Kapsayıcılar, ortamlar genelinde taşınabilirlik ve tutarlılık sağlar. Her şeyi tek bir pakette kapsülleyerek mikro hizmeti ve onun bağımlılıklarını temeldeki altyapıdan *yalıtabilirsiniz* .
 
 Aynı kapsayıcıyı Docker Runtime altyapısına sahip herhangi bir ortamda dağıtabilirsiniz. Kapsayıcılı iş yükleri, her ortamı çerçeveler, yazılım kitaplıkları ve çalışma zamanı altyapılarıyla önceden yapılandırma masrafına de ortadan kaldırır.
 
@@ -212,7 +213,7 @@ Temel işletim sistemi ve konak kaynaklarını paylaşarak, kapsayıcıların ta
 
 ### <a name="container-orchestration"></a>Kapsayıcı düzenlemesi
 
-Docker görüntüleri oluşturma ve kapsayıcıları çalıştırma gibi araçlar da bunları yönetmek için araçlara ihtiyacınız vardır. Kapsayıcı yönetimi, kapsayıcı Orchestrator adlı özel bir yazılım programıyla yapılır. Ölçek üzerinde çalışırken, kapsayıcı düzenlemesi gereklidir. 
+Docker görüntüleri oluşturma ve kapsayıcıları çalıştırma gibi araçlar da bunları yönetmek için araçlara ihtiyacınız vardır. Kapsayıcı yönetimi, kapsayıcı Orchestrator adlı özel bir yazılım programıyla yapılır. Ölçek üzerinde çalışırken, kapsayıcı düzenlemesi gereklidir.
 
 Şekil 1-6 kapsayıcı düzenleyicilerinin sağladığı yönetim görevlerini gösterir.
 
@@ -239,7 +240,7 @@ Düzenleyen 'in elden atılan ve eşzamanlılık ilkelerini, daha önce bölüm�
 
 > *Faktör \#8 "hizmetlerin çok sayıda küçük özdeş işleme (kopya) arasında ölçeğini, en güçlü makinede bulunan tek bir büyük örneği ölçeklendirmenin aksine belirtir."*
 
-Birçok kapsayıcı grubu mevcut olsa da, [Kubernetes](https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/) , bulutta yerel dünya için de standart hale geldi. Kapsayıcılı iş yüklerini yönetmek için taşınabilir, genişletilebilir ve açık kaynaklı bir platformdur. 
+Birçok kapsayıcı grubu mevcut olsa da, [Kubernetes](https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/) , bulutta yerel dünya için de standart hale geldi. Kapsayıcılı iş yüklerini yönetmek için taşınabilir, genişletilebilir ve açık kaynaklı bir platformdur.
 
 Kendi Kubernetes örneğinizi barındırabilmeniz, ancak kaynaklarını sağlamaktan ve yönetmekten siz sorumlusunuz ve bu karmaşık olabilir. Azure bulut özellikleri, Azure [Kubernetes hizmeti (AKS)](https://azure.microsoft.com/services/kubernetes-service/)ile yönetilen bir hizmet olarak Kubernetes. Yönetilen bir hizmet, özelliklerini yüklemenize ve sürdürmenize gerek kalmadan özelliklerinden tamamen yararlanmanızı sağlar.
 
@@ -287,7 +288,7 @@ IAC ile platform sağlamayı ve uygulama dağıtımını otomatikleştirin. Asl�
 
 ### <a name="automating-infrastructure"></a>Altyapıyı otomatikleştirme
 
-[Azure Resource Manager](https://azure.microsoft.com/documentation/articles/resource-group-overview/), teraform ve [Azure CLI](https://docs.microsoft.com/cli/azure/)gibi araçlar, ihtiyacınız olan bulut altyapısını bildirimli olarak betiğe olanak sağlar. Kaynak adları, konumlar, kapasiteler ve gizlilikler parametreleştirilenir ve dinamik. Betik sürümlenmiş ve projenizin yapıtı olarak kaynak denetimine iade edildi. Sistem ortamlarında QA, hazırlık ve üretim gibi tutarlı ve yinelenebilir bir altyapı sağlamak için betiği çağırılır. 
+[Azure Resource Manager](https://azure.microsoft.com/documentation/articles/resource-group-overview/), teraform ve [Azure CLI](https://docs.microsoft.com/cli/azure/)gibi araçlar, ihtiyacınız olan bulut altyapısını bildirimli olarak betiğe olanak sağlar. Kaynak adları, konumlar, kapasiteler ve gizlilikler parametreleştirilenir ve dinamik. Betik sürümlenmiş ve projenizin yapıtı olarak kaynak denetimine iade edildi. Sistem ortamlarında QA, hazırlık ve üretim gibi tutarlı ve yinelenebilir bir altyapı sağlamak için betiği çağırılır.
 
 IAC, ıdempotent ' dir. Bu, yan etkileri olmadan aynı betiği çalıştırabilmeniz anlamına gelir. Ekibin bir değişiklik yapması gerekiyorsa betiği düzenleyip yeniden çalıştırır. Yalnızca güncelleştirilmiş kaynaklar etkilenir.
 
@@ -299,7 +300,7 @@ Daha önce bahsedilen [on Iki öğeli uygulama](https://12factor.net/), tamamlan
 
 > *Faktör \#5* , "her sürümün derleme, yayın ve çalıştırma aşamaları genelinde katı ayrımı zorunlu kılacak olduğunu belirtir. Her birinin benzersiz bir KIMLIKLE etiketlenmesi ve geri alma özelliğini desteklemesi gerekir. "
 
-Modern CI/CD sistemleri bu ilkeyi karşılamanın sağlanmasına yardımcı olur. Bunlar ayrı dağıtım adımları sağlar ve kullanıcılar için hazır olan tutarlı ve kalite kodu sağlanmasına yardımcı olur. 
+Modern CI/CD sistemleri bu ilkeyi karşılamanın sağlanmasına yardımcı olur. Bunlar ayrı dağıtım adımları sağlar ve kullanıcılar için hazır olan tutarlı ve kalite kodu sağlanmasına yardımcı olur.
 
 Şekil 1-8, dağıtım işlemi genelinde ayrımı gösterir.
 
@@ -307,17 +308,17 @@ Modern CI/CD sistemleri bu ilkeyi karşılamanın sağlanmasına yardımcı olur
 
 **Şekil 1-8**. CI/CD ardışık düzeninde dağıtım adımları
 
-Önceki şekilde, görevlerin ayrılmasındaki özel bir dikkat ödeyin. 
+Önceki şekilde, görevlerin ayrılmasındaki özel bir dikkat ödeyin.
 
-Geliştirici geliştirme ortamlarında bir özellik oluşturur, kod, çalıştırma ve hata ayıklama "iç döngüsü" olarak adlandırılır. İşlem tamamlandığında, bu kod GitHub, Azure DevOps veya BitBucket gibi bir kod deposuna *gönderilir* . 
+Geliştirici geliştirme ortamlarında bir özellik oluşturur, kod, çalıştırma ve hata ayıklama "iç döngüsü" olarak adlandırılır. İşlem tamamlandığında, bu kod GitHub, Azure DevOps veya BitBucket gibi bir kod deposuna *gönderilir* .
 
-Gönderim, kodu ikili yapıtlara dönüştüren bir derleme aşamasını tetikler. İş bir [sürekli tümleştirme (CI)](https://martinfowler.com/articles/continuousIntegration.html) işlem hattı ile uygulanır. Uygulamayı otomatik olarak oluşturur, sınar ve paketler. 
+Gönderim, kodu ikili yapıtlara dönüştüren bir derleme aşamasını tetikler. İş bir [sürekli tümleştirme (CI)](https://martinfowler.com/articles/continuousIntegration.html) işlem hattı ile uygulanır. Uygulamayı otomatik olarak oluşturur, sınar ve paketler.
 
 Yayın aşaması ikili yapıtı seçer, dış uygulama ve ortam yapılandırma bilgilerini uygular ve sabit bir yayın oluşturur. Yayın belirtilen bir ortama dağıtılır. İş, [sürekli teslim (CD)](https://martinfowler.com/bliki/ContinuousDelivery.html) işlem hattı ile uygulanır. Her sürüm tanımlanabilir olmalıdır. "Bu dağıtım, uygulamanın Release 2.1.1 çalıştırıyor" diyebilirsiniz.
 
-Son olarak, yayınlanan özellik hedef yürütme ortamında çalıştırılır. Yayınlar, herhangi bir değişikliğin yeni bir yayın oluşturması gereken anlamına gelir. 
+Son olarak, yayınlanan özellik hedef yürütme ortamında çalıştırılır. Yayınlar, herhangi bir değişikliğin yeni bir yayın oluşturması gereken anlamına gelir.
 
-Bu uygulamalar uygulandığında kuruluşlar yazılımın nasıl sevk ettikleri konusunda önemli ölçüde gelişmiştir. Çoğu üç aylık sürümlerden isteğe bağlı güncelleştirmelere taşınmıştır. Amaç, düzeltilmesi daha ucuz olan sorunları geliştirme döngüsünün başlarında yakalar. Tümleştirmeler arasındaki süre arttıkça, daha pahalı olan sorunlar çözülmekte hale gelir.  Tümleştirme sürecinde tutarlılık sayesinde takımlar, kod değişikliklerini daha sık işleyebilir, daha iyi işbirliği ve yazılım kalitesine göre önde olur.  
+Bu uygulamalar uygulandığında kuruluşlar yazılımın nasıl sevk ettikleri konusunda önemli ölçüde gelişmiştir. Çoğu üç aylık sürümlerden isteğe bağlı güncelleştirmelere taşınmıştır. Amaç, düzeltilmesi daha ucuz olan sorunları geliştirme döngüsünün başlarında yakalar. Tümleştirmeler arasındaki süre arttıkça, daha pahalı olan sorunlar çözülmekte hale gelir.  Tümleştirme sürecinde tutarlılık sayesinde takımlar, kod değişikliklerini daha sık işleyebilir, daha iyi işbirliği ve yazılım kalitesine göre önde olur.
 
 ### <a name="azure-pipelines"></a>Azure Pipelines
 

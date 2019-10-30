@@ -2,12 +2,12 @@
 title: Etki alanı olayları. Tasarım ve uygulama
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | Toplamalar arasında iletişim kurmak için önemli bir kavram olan etki alanı olaylarının derinlemesine bir görünümünü alın.
 ms.date: 10/08/2018
-ms.openlocfilehash: 4fe0c1fa04bbecb64783e070838ab796de4f90d6
-ms.sourcegitcommit: 10db6551ea3c971470cf5d2cc21ba1cbcefe5c55
+ms.openlocfilehash: eea72633d3460f51821e8a939b14acff2f17965c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/08/2019
-ms.locfileid: "72031845"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73093964"
 ---
 # <a name="domain-events-design-and-implementation"></a>Etki alanı olayları: tasarım ve uygulama
 
@@ -86,7 +86,7 @@ Olay işleyicileri genellikle uygulama katmanında bulunur çünkü, mikro hizme
 
 Etki alanı başına açık sayıda işleyicinin olması, mevcut kodu etkilemeden gereken sayıda etki alanı kuralı eklemenize olanak sağlar. Örneğin, aşağıdaki iş kuralının uygulanması çok sayıda olay işleyicisi (ya da yalnızca bir tane) eklemek kadar kolay olabilir:
 
-> Mağazadaki bir müşteri tarafından satın alınan toplam miktar, herhangi bir sayıda sipariş için $6.000 değerini aşarsa, her yeni siparişe% 10 kapalı indirimi uygular ve gelecekteki siparişler için bu indirimle ilgili bir e-posta ile müşteriyi bilgilendirir.
+> Mağazadaki bir müşteri tarafından satın alınan toplam miktar, herhangi bir sayıda sipariş için $6.000 değerini aşarsa, her yeni siparişe %10 kapalı indirimi uygular ve gelecekteki siparişler için bu indirimle ilgili bir e-posta ile müşteriyi bilgilendirir.
 
 ## <a name="implement-domain-events"></a>Etki alanı olaylarını uygulama
 
@@ -145,9 +145,9 @@ Ertelenmiş yaklaşım eShopOnContainers 'ın kullandığı şeydir. İlk olarak
 ```csharp
 public abstract class Entity
 {
-     //... 
+     //...
      private List<INotification> _domainEvents;
-     public List<INotification> DomainEvents => _domainEvents; 
+     public List<INotification> DomainEvents => _domainEvents;
 
      public void AddDomainEvent(INotification eventItem)
      {
@@ -194,7 +194,7 @@ public class OrderingContext : DbContext, IUnitOfWork
         // handlers that are using the same DbContext with Scope lifetime
         // B) Right AFTER committing data (EF SaveChanges) into the DB. This makes
         // multiple transactions. You will need to handle eventual consistency and
-        // compensatory actions in case of failures.        
+        // compensatory actions in case of failures.
         await _mediator.DispatchDomainEventsAsync(this);
 
         // After this line runs, all the changes (from the Command Handler and Domain
@@ -208,7 +208,7 @@ Bu kodla, varlık olaylarını ilgili olay işleyicileriyle birlikte ileolursunu
 
 Genel sonuç olarak, bir etki alanı olayının (bellekte bir listeye basit bir ekleme) bir olay işleyicisine gönderdikten sonra bir etki alanı olayının dağıtımını ayırmıştır. Ayrıca, kullanmakta olduğunuz Dispatcher türüne bağlı olarak olayları zaman uyumlu veya zaman uyumsuz olarak dağıtabilirsiniz.
 
-İşlem sınırlarının burada önemli bir şekilde oynatılmakta olduğunu unutmayın. İş biriminiz ve işlem, birden fazla toplama yayılabildiği zaman (EF Core ve ilişkisel bir veritabanı kullanırken olduğu gibi), bu da iyi çalışabilir. Ancak işlem toplamalara yayılamaz, örneğin Azure CosmosDB gibi bir NoSQL veritabanı kullanırken, tutarlılığı sağlamak için ek adımlar uygulamanız gerekir. Bu, kalıcılık Ignorance 'in evrensel olmadığı başka bir nedendir; Bu, kullandığınız depolama sistemine bağlıdır. 
+İşlem sınırlarının burada önemli bir şekilde oynatılmakta olduğunu unutmayın. İş biriminiz ve işlem, birden fazla toplama yayılabildiği zaman (EF Core ve ilişkisel bir veritabanı kullanırken olduğu gibi), bu da iyi çalışabilir. Ancak işlem toplamalara yayılamaz, örneğin Azure CosmosDB gibi bir NoSQL veritabanı kullanırken, tutarlılığı sağlamak için ek adımlar uygulamanız gerekir. Bu, kalıcılık Ignorance 'in evrensel olmadığı başka bir nedendir; Bu, kullandığınız depolama sistemine bağlıdır.
 
 ### <a name="single-transaction-across-aggregates-versus-eventual-consistency-across-aggregates"></a>Toplamalar genelinde tek bir işlem, toplamalar arasında nihai tutarlılığa karşı
 
@@ -218,13 +218,13 @@ Toplamalar genelinde tek bir işlem yapılıp yapılmayacağını ve bu toplamal
 
 Vaughn versuz, aşağıdaki etkili toplama tasarımında şunu söylemiştir [. Bölüm II: toplamalar birlikte çalışır hale getirme](https://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf):
 
-> Bu nedenle, bir toplama örneğinde bir komutun yürütülmesi için bir veya daha fazla toplamada ek iş kurallarının yürütülmesi gerekiyorsa, son tutarlılığı kullanın \[... \] bir DDD modelinde nihai tutarlılığı desteklemeye yönelik pratik bir yoldur. Toplama yöntemi bir veya daha fazla zaman uyumsuz aboneye teslim edilen zaman bir etki alanı olayını yayımlar.
+> Bu nedenle, bir toplama örneğinde bir komutun yürütülmesi için bir veya daha fazla toplamada ek iş kurallarının yürütülmesi gerekiyorsa, nihai tutarlılık \[...\] bir DDD modelinde nihai tutarlılığı desteklemeye yönelik pratik bir yöntem vardır. Toplama yöntemi bir veya daha fazla zaman uyumsuz aboneye teslim edilen zaman bir etki alanı olayını yayımlar.
 
 Bu kalationale, birçok toplama veya varlığı kapsayan işlemler yerine hassas işlemleri benimseme tabanlıdır. İkinci durumda, veritabanı kilitlerinin sayısının yüksek ölçeklenebilirlik gereksinimlerine sahip büyük ölçekli uygulamalarda önemli olacağı fikir. Yüksek düzeyde ölçeklenebilir uygulamaların birden çok toplama arasında anlık işlem tutarlılığı olmaması, nihai tutarlılık kavramını kabul etmenize yardımcı olur. Atomik değişiklikler genellikle işletme tarafından gerekli değildir ve belirli işlemler için atomik işlemler gerekip gerekmediğini söylemek için etki alanı uzmanlarının sorumluluğunda olması gerekir. Bir işlemin her zaman birden çok toplama arasında atomik bir işleme ihtiyacı varsa, toplamanız büyük veya doğru şekilde tasarlanmamalıdır.
 
 Ancak, Jimmy Bogard gibi diğer geliştiriciler ve mimarlar, tek bir işlemi birkaç toplama arasında dağıtmayı, ancak yalnızca bu ek toplamalar aynı orijinal komutun yan etkileri ile ilgili olduğunda geçerlidir. Örneğin, [daha Iyi bir etki alanı olayları](https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/)düzeninde Bogard şöyle diyor:
 
-> Genellikle, bir etki alanı olayının yan etkilerinin aynı mantıksal işlem içinde gerçekleşmesini istiyorum, ancak \[... \] etki alanı olayını yükseltmeden hemen önce, olaylarımızı işlemeden ileridir.
+> Genellikle, bir etki alanı olayının yan etkilerinin aynı mantıksal işlem içinde gerçekleşmesini istiyorum, ancak etki alanı olayını oluşturma kapsamı için aynı kapsamda olması gerekmez \[..\]. işleminizi işlemeden hemen önce, olaylarımızı ilgili işleyiciler.
 
 İlk işlemi gerçekleştirmeden *önce* etki alanı olaylarını dağıtırsanız, bu olayların yan etkilerinin aynı işleme dahil edilmesini istiyor olabilirsiniz. Örneğin, EF DbContext SaveChanges yöntemi başarısız olursa işlem, ilgili etki alanı olay işleyicileri tarafından uygulanan herhangi bir yan efekt işleminin sonucu da dahil olmak üzere tüm değişiklikleri geri alınacaktır. Bunun nedeni, DbContext yaşam kapsamının varsayılan olarak "kapsamlıdır" olarak tanımlanmış olmasından kaynaklanır. Bu nedenle, DbContext nesnesi aynı kapsam veya nesne grafiğinde oluşturulan birden çok depo nesnesi arasında paylaşılır. Bu saatle çakışan Web API 'SI veya MVC uygulamaları geliştirirken HttpRequest kapsamıyla birlikte.
 
@@ -303,7 +303,7 @@ public class ValidateOrAddBuyerAggregateWhenOrderStartedDomainEventHandler
 
     public async Task Handle(OrderStartedDomainEvent orderStartedEvent)
     {
-        var cardTypeId = (orderStartedEvent.CardTypeId != 0) ? orderStartedEvent.CardTypeId : 1;        
+        var cardTypeId = (orderStartedEvent.CardTypeId != 0) ? orderStartedEvent.CardTypeId : 1;
         var userGuid = _identityService.GetUserIdentity();
         var buyer = await _buyerRepository.FindAsync(userGuid);
         bool buyerOriginallyExisted = (buyer == null) ? false : true;
@@ -321,7 +321,7 @@ public class ValidateOrAddBuyerAggregateWhenOrderStartedDomainEventHandler
                                        orderStartedEvent.CardExpiration,
                                        orderStartedEvent.Order.Id);
 
-        var buyerUpdated = buyerOriginallyExisted ? _buyerRepository.Update(buyer) 
+        var buyerUpdated = buyerOriginallyExisted ? _buyerRepository.Update(buyer)
                                                                       : _buyerRepository.Add(buyer);
 
         await _buyerRepository.UnitOfWork
@@ -353,7 +353,7 @@ Belirtildiği gibi, etki alanınız içindeki değişikliklerin yan etkilerini a
 - **Jimmy Bogard. Daha iyi bir etki alanı olayları deseninin** \
   <https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/>
 
-- **Vaughn versuz. Etkili toplu tasarım bölümü II: toplamalar @no__t birlikte çalışır hale getirme**-1
+- **Vaughn versuz. Geçerli toplu tasarım bölümü II: toplamalar birlikte çalışır hale getirme** \
   [https://dddcommunity.org/wp-content/uploads/files/pdf\_articles/Vernon\_2011\_2.pdf](https://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf)
 
 - **Jimmy Bogard. Etki alanınızı güçlendirerek: etki alanı olayları** \
@@ -365,16 +365,16 @@ Belirtildiği gibi, etki alanınız içindeki değişikliklerin yan etkilerini a
 - **UDI Dahan. Tam kapsüllenmiş etki alanı modelleri oluşturma** \
   <http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/>
 
-- **UDI Dahan. Etki alanı olayları – 2 @no__t al**-1
+- **UDI Dahan. Etki alanı etkinlikleri – 2 \ alın**
   <http://udidahan.com/2008/08/25/domain-events-take-2/>
 
-- **UDI Dahan. Etki alanı olayları-Sal@no__t**-1
+- **UDI Dahan. Etki alanı olayları-sallanmayı** \
   <http://udidahan.com/2009/06/14/domain-events-salvation/>
 
 - **Jan kroni. Etki alanı olaylarını yayımlamayın, döndürün!** \
   <https://blog.jayway.com/2013/06/20/dont-publish-domain-events-return-them/>
 
-- **Cesar de La Torre. Etki alanı olayları ile ve mikro hizmet mimarilerinde @no__t tümleştirme olayları**-1
+- **Cesar de La Torre. Etki alanı olayları ve mikro hizmet mimarilerinde tümleştirme olayları karşılaştırması** \
   <https://devblogs.microsoft.com/cesardelatorre/domain-events-vs-integration-events-in-domain-driven-design-and-microservices-architectures/>
 
 >[!div class="step-by-step"]

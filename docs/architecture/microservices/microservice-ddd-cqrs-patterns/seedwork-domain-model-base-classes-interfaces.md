@@ -2,12 +2,12 @@
 title: Seedwork (etki alanı modeliniz için yeniden kullanılabilir kök sınıflar ve arabirimler)
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | DDD tabanlı bir etki alanı modeline yönelik uygulamayı başlatmak için başlangıç noktası olarak seedwork kavramını kullanın.
 ms.date: 10/08/2018
-ms.openlocfilehash: a49f9e0b40ea306a846d9fb472bac388eedbfe02
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 87cbc5ce96b66a9ac3e1c2bfc8c863d1b20714db
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "70296812"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73093796"
 ---
 # <a name="seedwork-reusable-base-classes-and-interfaces-for-your-domain-model"></a>Seedwork (etki alanı modeliniz için yeniden kullanılabilir kök sınıflar ve arabirimler)
 
@@ -30,9 +30,9 @@ Aşağıdaki kod, varlık KIMLIĞI, [eşitlik işleçleri](../../../csharp/langu
 public abstract class Entity
 {
     int? _requestedHashCode;
-    int _Id;    
+    int _Id;
     private List<INotification> _domainEvents;
-    public virtual int Id 
+    public virtual int Id
     {
         get
         {
@@ -44,7 +44,7 @@ public abstract class Entity
         }
     }
 
-    public List<INotification> DomainEvents => _domainEvents;        
+    public List<INotification> DomainEvents => _domainEvents;
     public void AddDomainEvent(INotification eventItem)
     {
         _domainEvents = _domainEvents ?? new List<INotification>();
@@ -141,5 +141,5 @@ public interface IRepository<T> where T : IAggregateRoot
   <https://www.martinfowler.com/eaaCatalog/separatedInterface.html>
 
 >[!div class="step-by-step"]
->[Önceki](net-core-microservice-domain-model.md)İleri
->[](implement-value-objects.md)
+>[Önceki](net-core-microservice-domain-model.md)
+>[İleri](implement-value-objects.md)

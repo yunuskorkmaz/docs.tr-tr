@@ -3,12 +3,12 @@ title: Bulutta yerel uygulamalara giriş
 description: Bulutta yerel bilgi işlem hakkında bilgi edinin
 author: robvet
 ms.date: 08/26/2019
-ms.openlocfilehash: a99e4b5599efee8b171c48a5b17e75b9e6cd63ca
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 1d3679c7f1ab940d7ab3e194c200483b63276883
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71182855"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73087235"
 ---
 # <a name="introduction-to-cloud-native-applications"></a>Bulutta yerel uygulamalara giriş
 
@@ -18,7 +18,7 @@ Diğer bir gün, ofiste "bir sonraki büyük şey" üzerinde çalışıyor.
 
 Cellphone halkaları. Bu, size, yeni işler hakkında günde iki kez çağrı yapan kolay bir çalışmadır.
 
-Ancak bu süre farklıdır: Başlangıç, hisse senedi ve çok sayıda komik.
+Ancak bu süre farklıdır: başlangıç, hisse senedi ve çok sayıda komik.
 
 Bulut ve son teknoloji teknolojisinin bahsetme, sizi kenar altına iter.
 
@@ -34,11 +34,11 @@ Son 15 yıldan yönergeleri izlerseniz, büyük olasılıkla Şekil 1,1 ' de gö
 
 Tüm etki alanı mantığınızı içeren büyük bir çekirdek uygulama oluşturursunuz. Kimlik, katalog, sıralama ve daha fazlasını içeren modüller içerir. Çekirdek uygulama büyük bir ilişkisel veritabanıyla iletişim kurar. Çekirdek, işlevselliği bir HTML arabirimi aracılığıyla kullanıma sunar.
 
-Tebrikler!  Yalnızca bir tek parçalı uygulama oluşturdunuz.
+Mühendisi!  Yalnızca bir tek parçalı uygulama oluşturdunuz.
 
 Hepsi kötü değildir. Tek tek avantajlar, bazı farklı avantajlar sunmaktadır. Örneğin, bunlar basittir...
 
-- derleme 
+- derleme
 - test
 - Dağıtımı
 - Giderilmesine
@@ -76,7 +76,7 @@ Kısa bir süre içinde, Cloud Native, yazılım sektörde bir gidiş eğilimi h
 
 Sektörünü çalıştıran sürekli hype aksine, Cloud native "*for-Real*" dır. Bulut Yerel bilgi işlem altyapısı 'nı (cncf), bulutta yerel bilgi işlem, teknoloji ve bulut yığınları genelinde bir arada bulundurmamıza yardımcı olan 300 ana kurumdan oluşan bir [konsorsiyunuzu](https://www.cncf.io/) düşünün. En etkili açık kaynaklı gruplardan biri olarak, GitHub 'da en hızlı büyüyen açık kaynaklı projelerin birçoğunu barındırır. [Kubernetes](https://kubernetes.io/), [Prometheus](https://prometheus.io/), [Held](https://helm.sh/), [Envoy](https://www.envoyproxy.io/)ve [GRPC](https://grpc.io/)gibi projeleri içerirler.
 
-CNCF, açık kaynaklı ve satıcıya özgü bir ekosistemi bir arada bulunan. Bundan sonra, teknolojiden bağımsız olarak bulut Yerel ilkeleri, desenleri ve en iyi uygulamaları sunuyoruz. Aynı zamanda, bulutta yerel sistemler oluşturmak için Microsoft Azure bulutu 'nda bulunan hizmetleri ve altyapıyı tartıştık. 
+CNCF, açık kaynaklı ve satıcıya özgü bir ekosistemi bir arada bulunan. Bundan sonra, teknolojiden bağımsız olarak bulut Yerel ilkeleri, desenleri ve en iyi uygulamaları sunuyoruz. Aynı zamanda, bulutta yerel sistemler oluşturmak için Microsoft Azure bulutu 'nda bulunan hizmetleri ve altyapıyı tartıştık.
 
 Bu nedenle, yerel olarak bulut Native nedir? Geri dönerek bu yeni dünyayı araştırmanıza yardımcı olun.
 

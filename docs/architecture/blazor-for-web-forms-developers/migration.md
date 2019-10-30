@@ -4,12 +4,12 @@ description: Mevcut bir ASP.NET Web Forms uygulamasını Blazor 'e geçirmeye na
 author: twsouthwick
 ms.author: tasou
 ms.date: 09/19/2019
-ms.openlocfilehash: 78742fc0d998a70c6e3992041d1fa62f2fe53f39
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 1680c3ccd496029cbdefc38119cf89bae0a777a7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72520276"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73087918"
 ---
 # <a name="migrate-from-aspnet-web-forms-to-blazor"></a>ASP.NET Web Forms 'den Blazor 'ye geçiş
 
@@ -72,7 +72,7 @@ Blazor tabanlı eShop projesinde, yüklü olan paketleri görebilirsiniz. Daha �
 </packages>
 ```
 
-@No__t_0 öğesi tüm gerekli bağımlılıkları içerir. İhtiyaç duyduğunuz bu paketlerin hangisinin dahil edileceğini belirlemek zordur. Bazı `<package>` öğeleri, gereken bağımlılıkların ihtiyaçlarını karşılamak için yalnızca listelenmiştir.
+`<packages>` öğesi tüm gerekli bağımlılıkları içerir. İhtiyaç duyduğunuz bu paketlerin hangisinin dahil edileceğini belirlemek zordur. Bazı `<package>` öğeleri, gereken bağımlılıkların ihtiyaçlarını karşılamak için yalnızca listelenmiştir.
 
 Blazor projesi, proje dosyasındaki bir `<ItemGroup>` öğesi içinde gerekli olan bağımlılıkları listeler:
 
@@ -252,7 +252,7 @@ Uygulama başlatma hakkında daha fazla bilgi için bkz. [uygulama başlatma](ap
 
 ## <a name="migrate-http-modules-and-handlers-to-middleware"></a>HTTP modüllerini ve işleyicileri ara yazılıma geçirme
 
-Http modülleri ve işleyicileri, HTTP isteği ardışık düzenini denetlemek için Web Forms içindeki yaygın desenlerdir. @No__t_0 veya `IHttpHandler` uygulayan sınıflar kaydedilebilir ve gelen istekleri işleyebilir. Web Forms, *Web. config* dosyasındaki modülleri ve işleyicileri yapılandırır. Web Forms Ayrıca uygulama yaşam döngüsü olay işlemeye bağlıdır. ASP.NET Core bunun yerine ara yazılım kullanır. Middlewares, `Startup` sınıfının `Configure` metoduna kaydedilir. Ara yazılım yürütme sırası, kayıt sırasına göre belirlenir.
+Http modülleri ve işleyicileri, HTTP isteği ardışık düzenini denetlemek için Web Forms içindeki yaygın desenlerdir. `IHttpModule` veya `IHttpHandler` uygulayan sınıflar kaydedilebilir ve gelen istekleri işleyebilir. Web Forms, *Web. config* dosyasındaki modülleri ve işleyicileri yapılandırır. Web Forms Ayrıca uygulama yaşam döngüsü olay işlemeye bağlıdır. ASP.NET Core bunun yerine ara yazılım kullanır. Middlewares, `Startup` sınıfının `Configure` metoduna kaydedilir. Ara yazılım yürütme sırası, kayıt sırasına göre belirlenir.
 
 [Başlangıç Işlemini etkinleştir](#enable-startup-process) bölümünde, `Application_BeginRequest` yöntemi olarak Web Forms bir yaşam döngüsü olayı tetiklendi. Bu olay ASP.NET Core ' de kullanılamaz. Bu davranışı gerçekleştirmenin bir yolu, ara yazılımı *Startup.cs* File örneğinde görüldüğü gibi uygulamaktır. Bu ara yazılım aynı mantığı yapar ve denetimi, ara yazılım ardışık düzeninde bir sonraki işleyiciye aktarır.
 
@@ -260,7 +260,7 @@ Modül ve işleyicileri geçirme hakkında daha fazla bilgi için bkz. [http iş
 
 ## <a name="migrate-static-files"></a>Statik dosyaları geçirme
 
-Statik dosyalara (örneğin, HTML, CSS, resim ve JavaScript) sahip olmak için dosyalar, ara yazılım tarafından sunulmalıdır. @No__t_0 yöntemi çağrılması, Web kök yolundan statik dosya sunma imkanı sunar. Varsayılan Web kök dizini *Wwwroot*, ancak özelleştirilebilir. EShop 'ın `Startup` sınıfının `Configure` yöntemine dahil edilmiştir:
+Statik dosyalara (örneğin, HTML, CSS, resim ve JavaScript) sahip olmak için dosyalar, ara yazılım tarafından sunulmalıdır. `UseStaticFiles` yöntemi çağrılması, Web kök yolundan statik dosya sunma imkanı sunar. Varsayılan Web kök dizini *Wwwroot*, ancak özelleştirilebilir. EShop 'ın `Startup` sınıfının `Configure` yöntemine dahil edilmiştir:
 
 ```csharp
 public void Configure(IApplicationBuilder app)
@@ -520,7 +520,7 @@ Blazor ' e dönüştürüldüğünde, Web Forms sayfası aşağıdaki koda çevi
 }
 ```
 
-Kodun ve biçimlendirmenin aynı dosyada olduğuna dikkat edin. Gerekli hizmetlere `@inject` özniteliğiyle erişilebilir hale getirilir. @No__t_0 yönergesine göre, bu sayfaya `Catalog/Details/{id}` rotasında erişilebilir. Yolun `{id}` yer tutucunun değeri bir tamsayı ile kısıtlanıyor. [Yönlendirme](pages-routing-layouts.md) bölümünde açıklandığı gibi, Web Forms aksine bir Razor bileşeni, kendi yolunu ve dahil edilen tüm parametreleri açıkça belirtir. Birçok Web Forms denetimi Blazor içinde tam karşılıklarıyla eşleşmeyebilir. Genellikle aynı amacı sunan eşdeğer bir HTML kod parçacığı vardır. Örneğin, `<asp:Label />` denetimi bir HTML `<label>` öğesi ile değiştirilebilir.
+Kodun ve biçimlendirmenin aynı dosyada olduğuna dikkat edin. Gerekli hizmetlere `@inject` özniteliğiyle erişilebilir hale getirilir. `@page` yönergesine göre, bu sayfaya `Catalog/Details/{id}` rotasında erişilebilir. Yolun `{id}` yer tutucunun değeri bir tamsayı ile kısıtlanıyor. [Yönlendirme](pages-routing-layouts.md) bölümünde açıklandığı gibi, Web Forms aksine bir Razor bileşeni, kendi yolunu ve dahil edilen tüm parametreleri açıkça belirtir. Birçok Web Forms denetimi Blazor içinde tam karşılıklarıyla eşleşmeyebilir. Genellikle aynı amacı sunan eşdeğer bir HTML kod parçacığı vardır. Örneğin, `<asp:Label />` denetimi bir HTML `<label>` öğesi ile değiştirilebilir.
 
 ### <a name="model-validation-in-blazor"></a>Blazor 'de model doğrulaması
 
@@ -552,12 +552,12 @@ Blazor ' de, eşdeğer biçimlendirme bir *Create. Razor* dosyasında verilmişt
             <ValidationMessage For="(() => _item.Name)" />
         </div>
     </div>
-    
+
     ...
 </EditForm>
 ```
 
-@No__t_0 bağlamı doğrulama desteğini içerir ve girişin etrafında sarmalanabilir. Veri ek açıklamaları, doğrulama eklemenin yaygın bir yoludur. Bu tür doğrulama desteği `DataAnnotationsValidator` bileşeni aracılığıyla eklenebilir. Bu mekanizma hakkında daha fazla bilgi için bkz. [ASP.NET Core Blazor Forms and Validation](/aspnet/core/blazor/forms-validation).
+`EditForm` bağlamı doğrulama desteğini içerir ve girişin etrafında sarmalanabilir. Veri ek açıklamaları, doğrulama eklemenin yaygın bir yoludur. Bu tür doğrulama desteği `DataAnnotationsValidator` bileşeni aracılığıyla eklenebilir. Bu mekanizma hakkında daha fazla bilgi için bkz. [ASP.NET Core Blazor Forms and Validation](/aspnet/core/blazor/forms-validation).
 
 ## <a name="migrate-built-in-web-forms-controls"></a>Yerleşik Web Forms denetimlerini geçirme
 
@@ -614,7 +614,7 @@ public class Startup
 }
 ```
 
-Varsayılan olarak, ortam değişkenleri, JSON dosyaları (*appSettings. JSON* ve *appSettings. { Environment}. JSON*) ve komut satırı seçenekleri yapılandırma nesnesinde geçerli yapılandırma kaynakları olarak kaydedilir. Yapılandırma kaynaklarına `Configuration[key]` aracılığıyla erişilebilir. Daha gelişmiş bir teknik, yapılandırma verilerini nesnelere bağlamak için seçenekler örüntüsünün kullanılmasını sağlar. Yapılandırma ve seçenekler düzeniyle ilgili daha fazla bilgi için sırasıyla ASP.NET Core [ASP.NET Core](/aspnet/core/fundamentals/configuration/) ve [Seçenekler](/aspnet/core/fundamentals/configuration/options)düzeninde yapılandırma konusuna bakın.
+Varsayılan olarak, ortam değişkenleri, JSON dosyaları (*appSettings. JSON* ve *appSettings. { Environment}. JSON*) ve komut satırı seçenekleri yapılandırma nesnesinde geçerli yapılandırma kaynakları olarak kaydedilir. Yapılandırma kaynaklarına `Configuration[key]`aracılığıyla erişilebilir. Daha gelişmiş bir teknik, yapılandırma verilerini nesnelere bağlamak için seçenekler örüntüsünün kullanılmasını sağlar. Yapılandırma ve seçenekler düzeniyle ilgili daha fazla bilgi için sırasıyla ASP.NET Core [ASP.NET Core](/aspnet/core/fundamentals/configuration/) ve [Seçenekler](/aspnet/core/fundamentals/configuration/options)düzeninde yapılandırma konusuna bakın.
 
 ## <a name="migrate-data-access"></a>Veri erişimini geçirme
 
@@ -642,7 +642,7 @@ Blazor .NET Core üzerinde oluşturulduğundan, .NET Core üzerinde destek sağl
 
 ASP.NET Core, ASP.NET 'in yeniden oluşturulmuş bir sürümüdür ve başlangıçta belirgin bir şekilde görünmeyebilir bazı değişiklikler içerir. Ana değişiklikler şunlardır:
 
-- @No__t_0, `Thread.CurrentPrincipal` veya diğer statik erişimciler olmadığı anlamına gelen hiçbir eşitleme bağlamı yok
+- `HttpContext.Current`, `Thread.CurrentPrincipal`veya diğer statik erişimciler olmadığı anlamına gelen hiçbir eşitleme bağlamı yok
 - Gölge kopyalama yok
 - İstek kuyruğu yok
 

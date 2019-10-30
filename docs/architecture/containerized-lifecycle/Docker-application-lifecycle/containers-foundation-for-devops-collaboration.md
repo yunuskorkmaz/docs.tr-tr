@@ -2,12 +2,12 @@
 title: DevOps işbirliğinin temeli olarak kapsayıcılar
 description: DevOps 'u kolaylaştırmak için kapsayıcıların anahtar rolünü anlayın.
 ms.date: 02/15/2019
-ms.openlocfilehash: 16cccef0545f0da14128e31dc8f7ad78369cf23a
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 8258f4331212d92376d64fef318adcdff492f61f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72394806"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73094494"
 ---
 # <a name="containers-as-the-foundation-for-devops-collaboration"></a>DevOps işbirliğinin temeli olarak kapsayıcılar
 
@@ -51,7 +51,7 @@ Bu sorunlar DevOps araçlarını kullanırken yeni talepler oluşturur, bu neden
 
 - Microsoft Azure kapsayıcılar için açık kaynaklı araçları/platformları nasıl kullanabiliriz?
 
-Tüm bu soruları yanıtlayabiliyorsanız, uygulamalarınızı (mevcut veya yeni uygulamalar) Docker kapsayıcılarına taşımaya daha iyi hazırlanacağız. 
+Tüm bu soruları yanıtlayabiliyorsanız, uygulamalarınızı (mevcut veya yeni uygulamalar) Docker kapsayıcılarına taşımaya daha iyi hazırlanacağız.
 
 ## <a name="introduction-to-a-generic-end-to-end-docker-application-life-cycle-workflow"></a>Genel uçtan uca Docker uygulaması yaşam döngüsü iş akışına giriş
 

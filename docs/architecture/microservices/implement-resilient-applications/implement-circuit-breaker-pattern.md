@@ -2,20 +2,20 @@
 title: Devre kesici modelini uygulama
 description: Devre kesici düzeninin http yeniden denemeleri için tamamlayıcı bir sistem olarak nasıl uygulanacağını öğrenin.
 ms.date: 10/16/2018
-ms.openlocfilehash: eec14273cb9480df51d6e5865106ccfc045845c4
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: a1a24094ae98d8c767ccf692fe8ded6e28d47854
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71181934"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73094112"
 ---
 # <a name="implement-the-circuit-breaker-pattern"></a>Devre Kesici desenini uygulama
 
 Daha önce belirtildiği gibi, uzak bir hizmete veya kaynağa bağlanmayı denediğinizde gerçekleşebileceği gibi, kurtarmak için değişken bir süre sürebilecek hataları işlemeniz gerekir. Bu tür bir hatanın yönetilmesi, bir uygulamanın kararlılığını ve dayanıklılığını iyileştirebilirler.
 
-Dağıtılmış bir ortamda, uzak kaynak ve hizmetlere yapılan çağrılar, yavaş ağ bağlantıları ve zaman aşımları gibi geçici hatalar nedeniyle veya kaynaklar yavaş yanıt veriyorsa veya geçici olarak devre dışı bırakılırsa başarısız olabilir. Bu hatalar genellikle kısa bir süre sonra kendilerini düzeltir ve güçlü bir bulut uygulaması, "yeniden deneme biçimi" gibi bir strateji kullanılarak bunları işleyecek şekilde hazırlanmalıdır. 
+Dağıtılmış bir ortamda, uzak kaynak ve hizmetlere yapılan çağrılar, yavaş ağ bağlantıları ve zaman aşımları gibi geçici hatalar nedeniyle veya kaynaklar yavaş yanıt veriyorsa veya geçici olarak devre dışı bırakılırsa başarısız olabilir. Bu hatalar genellikle kısa bir süre sonra kendilerini düzeltir ve güçlü bir bulut uygulaması, "yeniden deneme biçimi" gibi bir strateji kullanılarak bunları işleyecek şekilde hazırlanmalıdır.
 
-Ancak, hataların düzeltilmesi çok daha uzun sürebilecek beklenmeyen olaylardan kaynaklanan durumlar da olabilir. Bu hatalar, bir hizmetin tamamen başarısızlığına yönelik kısmi bir bağlantı kaybından önem düzeyi olarak değişebilir. Bu durumlarda, bir uygulamanın başarılı olması olası olmayan bir işlemi sürekli olarak yeniden denemesi için bu durum daha az olabilir. 
+Ancak, hataların düzeltilmesi çok daha uzun sürebilecek beklenmeyen olaylardan kaynaklanan durumlar da olabilir. Bu hatalar, bir hizmetin tamamen başarısızlığına yönelik kısmi bir bağlantı kaybından önem düzeyi olarak değişebilir. Bu durumlarda, bir uygulamanın başarılı olması olası olmayan bir işlemi sürekli olarak yeniden denemesi için bu durum daha az olabilir.
 
 Bunun yerine, işlemin başarısız olduğunu kabul etmek ve hatayı uygun şekilde işlemek için uygulamanın kodlanmış olması gerekir.
 
@@ -42,9 +42,9 @@ services.AddHttpClient<IBasketService, BasketService>()
         .AddPolicyHandler(GetCircuitBreakerPolicy());
 ```
 
-Yöntemi, kullanacağınız `HttpClient` nesnelere ilke ekler. `AddPolicyHandler()` Bu durumda, devre kesici için bir Polly ilkesi ekliyor.
+`AddPolicyHandler()` yöntemi, kullanacağınız `HttpClient` nesnelerine ilke ekler. Bu durumda, devre kesici için bir Polly ilkesi ekliyor.
 
-Daha modüler bir yaklaşıma sahip olmak için, devre kesici ilkesi, aşağıdaki kodda gösterildiği gibi, `GetCircuitBreakerPolicy()`adlı ayrı bir yöntemde tanımlanmıştır:
+Daha modüler bir yaklaşıma sahip olmak için, devre kesici Ilkesi aşağıdaki kodda gösterildiği gibi `GetCircuitBreakerPolicy()`adlı ayrı bir yöntemde tanımlanmıştır:
 
 ```csharp
 static IAsyncPolicy<HttpResponseMessage> GetCircuitBreakerPolicy()
@@ -57,11 +57,11 @@ static IAsyncPolicy<HttpResponseMessage> GetCircuitBreakerPolicy()
 
 Yukarıdaki kod örneğinde, devre kesici ilkesi, http istekleri yeniden denendiğinde beş ardışık hata olduğunda devre dışı bırakıldığında veya açılacak şekilde yapılandırılır. Bu durumda, devre 30 saniye boyunca kesilir: Bu dönemde, çağrılar aslında yerleştirilmektense devre kesici tarafından hemen başarısız olur.  İlke, [ilgili özel durumları ve http durum kodlarını](/aspnet/core/fundamentals/http-requests#handle-transient-faults) hata olarak otomatik olarak yorumlar.  
 
-Devre kesiciler, HTTP çağrısını gerçekleştiren istemci uygulama veya hizmetten farklı bir ortamda dağıtılan belirli bir kaynakta bir geri dönüş altyapısına yeniden yönlendirmek için de kullanılmalıdır. Bu şekilde, veri merkezinde yalnızca arka uç mikro hizmetlerinizi etkileyen ancak istemci uygulamalarınıza yönelik bir kesinti varsa, istemci uygulamalar geri dönüş hizmetlerine yeniden yönlendirebilir. Polly, bu [Yük devretme ilkesi](https://github.com/App-vNext/Polly/wiki/Polly-Roadmap#failover-policy) senaryosuna otomatik hale getirmek için yeni bir ilke planlıyor. 
+Devre kesiciler, HTTP çağrısını gerçekleştiren istemci uygulama veya hizmetten farklı bir ortamda dağıtılan belirli bir kaynakta bir geri dönüş altyapısına yeniden yönlendirmek için de kullanılmalıdır. Bu şekilde, veri merkezinde yalnızca arka uç mikro hizmetlerinizi etkileyen ancak istemci uygulamalarınıza yönelik bir kesinti varsa, istemci uygulamalar geri dönüş hizmetlerine yeniden yönlendirebilir. Polly, bu [Yük devretme ilkesi](https://github.com/App-vNext/Polly/wiki/Polly-Roadmap#failover-policy) senaryosuna otomatik hale getirmek için yeni bir ilke planlıyor.
 
-Bu özelliklerin tümü, Azure tarafından sizin için otomatik olarak yönetilmek yerine, konum saydamlığı ile, yük devretmeyi .NET kodu içinden yönettiğiniz durumlar içindir. 
+Bu özelliklerin tümü, Azure tarafından sizin için otomatik olarak yönetilmek yerine, konum saydamlığı ile, yük devretmeyi .NET kodu içinden yönettiğiniz durumlar içindir.
 
-Bir kullanım noktasından, HttpClient kullanılırken, önceki bölümlerde gösterildiği gibi, bu kod, HttpClientFactory ile HttpClient kullanırken olduğu gibi, burada yeni bir şey eklemeniz gerekmez. 
+Bir kullanım noktasından, HttpClient kullanılırken, önceki bölümlerde gösterildiği gibi, bu kod, HttpClientFactory ile HttpClient kullanırken olduğu gibi, burada yeni bir şey eklemeniz gerekmez.
 
 ## <a name="test-http-retries-and-circuit-breakers-in-eshoponcontainers"></a>EShopOnContainers 'da http yeniden denemelerini ve devre kesicileri sınama
 
@@ -69,7 +69,7 @@ Bir Docker konağında eShopOnContainers çözümünü her başlattığınızda,
 
 Ayrıca, uygulama buluta dağıtıldığında başlangıçta bu tür bir hata görebilirsiniz. Bu durumda, düzenleyiciler küme düğümleri genelinde kapsayıcı sayısı dengelemesinde, kapsayıcıları bir düğümden veya VM 'den diğerine (yani yeni örnekler başlayarak) taşıyor olabilir.
 
-' EShopOnContainers ' yöntemi, tüm kapsayıcıları başlatırken bu sorunları çözirken daha önce gösterilen yeniden deneme modelini kullanmaktır. 
+' EShopOnContainers ' yöntemi, tüm kapsayıcıları başlatırken bu sorunları çözirken daha önce gösterilen yeniden deneme modelini kullanmaktır.
 
 ### <a name="test-the-circuit-breaker-in-eshoponcontainers"></a>EShopOnContainers içinde devre kesiciyi test etme
 
@@ -90,9 +90,9 @@ Diğer bir seçenek de **sepet** mikro hizmetinde uygulanan özel ara yazılım 
 
 Örneğin, uygulama çalışmaya başladıktan sonra herhangi bir tarayıcıda aşağıdaki URI 'yi kullanarak bir istek yaparak ara yazılımı etkinleştirebilirsiniz. Sıralama mikro hizmeti 'nin 5103 numaralı bağlantı noktasını kullandığını unutmayın.
 
-`http://localhost:5103/failing?enable` 
+`http://localhost:5103/failing?enable`
 
-Ardından, Şekil 8-5 ' de gösterildiği gibi, `http://localhost:5103/failing`URI 'yi kullanarak durumu kontrol edebilirsiniz.
+Ardından, Şekil 8-5 ' de gösterildiği gibi, URI `http://localhost:5103/failing`kullanarak durumu kontrol edebilirsiniz.
 
 ![Başarısız olan ara yazılım simülasyonu durumunun kontrol edilirken oluşan tarayıcı görünümü](./media/image4.png)
 
@@ -100,7 +100,7 @@ Ardından, Şekil 8-5 ' de gösterildiği gibi, `http://localhost:5103/failing`U
 
 Bu noktada sepet mikro hizmeti, çağırma her çağırdığınızda durum kodu 500 ile yanıt verir.
 
-Ara yazılım çalışmaya başladıktan sonra MVC web uygulamasından bir sıra yapmayı deneyebilirsiniz. İstekler başarısız olduğundan, devre açılır. 
+Ara yazılım çalışmaya başladıktan sonra MVC web uygulamasından bir sıra yapmayı deneyebilirsiniz. İstekler başarısız olduğundan, devre açılır.
 
 Aşağıdaki örnekte, MVC web uygulamasının bir siparişi yerleştirmek için mantığdaki bir catch bloğuna sahip olduğunu görebilirsiniz.  Kod bir açık devre özel durumu yakalarsa, kullanıcıya beklemesini isteyen kolay bir ileti gösterir.
 
@@ -138,13 +138,13 @@ public class CartController : Controller
 
 **Şekil 8-6**. Devre kesici Kullanıcı arabirimine hata döndürüyor
 
-Devre için ne zaman açılacağı/kesilecek farklı Logic uygulayabilirsiniz. Ya da bir geri dönüş veri merkezi veya yedek bir arka uç sistemi varsa, farklı bir arka uç mikro hizmetine karşı HTTP isteği de deneyebilirsiniz. 
+Devre için ne zaman açılacağı/kesilecek farklı Logic uygulayabilirsiniz. Ya da bir geri dönüş veri merkezi veya yedek bir arka uç sistemi varsa, farklı bir arka uç mikro hizmetine karşı HTTP isteği de deneyebilirsiniz.
 
-Son olarak, için `CircuitBreakerPolicy` `Isolate` başka bir olasılık (açık ve ayrı tutmaya zorlar devre dışı) ve `Reset` (yeniden kapatılan). Bunlar, ilke üzerinde doğrudan ayırma ve sıfırlama sağlayan bir yardımcı program HTTP uç noktası oluşturmak için kullanılabilir.  Bu tür bir HTTP uç noktası Ayrıca, bir aşağı akış sistemini geçici olarak yalıtmak için üretimde uygun şekilde, örneğin, yükseltmek istediğiniz zaman kullanılabilir. Ya da bir aşağı akış sisteminin hatalı olması şüpheli bir aşağı akış sistemini korumak için devreyi el ile gezti.
+Son olarak, `CircuitBreakerPolicy` başka bir olasılık `Isolate` (açık ve ayrı tutmaya zorlar devre dışı bırakmak) ve `Reset` (yeniden kapatan) kullanmaktır. Bunlar, ilke üzerinde doğrudan ayırma ve sıfırlama sağlayan bir yardımcı program HTTP uç noktası oluşturmak için kullanılabilir.  Bu tür bir HTTP uç noktası Ayrıca, bir aşağı akış sistemini geçici olarak yalıtmak için üretimde uygun şekilde, örneğin, yükseltmek istediğiniz zaman kullanılabilir. Ya da bir aşağı akış sisteminin hatalı olması şüpheli bir aşağı akış sistemini korumak için devreyi el ile gezti.
 
 ## <a name="additional-resources"></a>Ek kaynaklar
 
-- **Devre kesici stili**\
+- **Devre kesici deseninin**\
   [https://docs.microsoft.com/azure/architecture/patterns/circuit-breaker](/azure/architecture/patterns/circuit-breaker)
 
 >[!div class="step-by-step"]

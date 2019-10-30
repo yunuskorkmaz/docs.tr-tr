@@ -2,12 +2,12 @@
 title: EShopOnContainers başvuru uygulamasına giriş
 description: ASP.NET Core ve Azure için eShopOnContainers bulutu yerel mikro hizmetleri başvuru uygulamasına giriş.
 ms.date: 06/30/2019
-ms.openlocfilehash: 20f9175ada2e5439be363781a2b187c10ba86d37
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 0d55f248acbc34bcc76d38987d7e1d537cf6065a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71182862"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73087252"
 ---
 # <a name="introducing-eshoponcontainers-reference-app"></a>EShopOnContainers başvuru uygulamasına giriş
 
@@ -32,16 +32,16 @@ Uygulamanın Özellikler ve gereksinimlerinin bir gözden geçirimiyle başlayal
 - Sepetten öğe düzenleme veya kaldırma
 - İptal
 - Hesap kaydetme
-- Oturum aç
-- Oturumu kapat
+- Oturum Aç
+- Oturumu Kapat
 - Siparişleri gözden geçirme
 
 Uygulamanın aşağıdaki işlevsel olmayan gereksinimleri de vardır:
 
-- Yüksek oranda kullanılabilir olması gerekir ve artan trafiği karşılamak için otomatik olarak ölçeklendirilmesi gerekir (ve trafik alt taraflarından sonra ölçeği yeniden ölçeklendirmelidir). 
-- Karşılaştığı sorunları gidermeye yardımcı olmak için sistem durumu ve tanılama günlüklerinin kullanımı kolay bir şekilde izlenmesini sağlamalıdır. 
-- Sürekli tümleştirme ve dağıtım (CI/CD) desteği de dahil olmak üzere çevik bir geliştirme sürecini desteklemelidir. 
-- İki Web ön ucu (geleneksel ve tek sayfalı uygulama) ek olarak, uygulamanın farklı türlerde işletim sistemleri çalıştıran mobil istemci uygulamalarını da desteklemesi gerekir. 
+- Yüksek oranda kullanılabilir olması gerekir ve artan trafiği karşılamak için otomatik olarak ölçeklendirilmesi gerekir (ve trafik alt taraflarından sonra ölçeği yeniden ölçeklendirmelidir).
+- Karşılaştığı sorunları gidermeye yardımcı olmak için sistem durumu ve tanılama günlüklerinin kullanımı kolay bir şekilde izlenmesini sağlamalıdır.
+- Sürekli tümleştirme ve dağıtım (CI/CD) desteği de dahil olmak üzere çevik bir geliştirme sürecini desteklemelidir.
+- İki Web ön ucu (geleneksel ve tek sayfalı uygulama) ek olarak, uygulamanın farklı türlerde işletim sistemleri çalıştıran mobil istemci uygulamalarını da desteklemesi gerekir.
 - Platformlar arası barındırma ve platformlar arası geliştirmeyi desteklemelidir.
 
 ![eShopOnContainers başvuru uygulaması geliştirme mimarisi.](./media/eshoponcontainers-development-architecture.png)
@@ -70,7 +70,7 @@ Kod, farklı mikro hizmetleri desteklemek üzere düzenlenmiştir ve her mikro h
 
 ## <a name="understanding-microservices"></a>Mikro hizmetleri anlama
 
-Bu kitap, Azure teknolojisi kullanılarak oluşturulan bulutta yerel uygulamalara odaklanır. Mikro hizmetler en iyi uygulamaları ve mikro hizmet tabanlı uygulamaların nasıl mimari hakkında daha fazla bilgi edinmek için, yardımcı kitabı, [.net mikro Hizmetleri ' ni okuyun: Kapsayıcılı .NET uygulamaları](https://dotnet.microsoft.com/learn/aspnet/microservices-architecture)için mimari. Kitap çevrimiçi, PDF veya eReader biçimlerinde kullanılabilir.
+Bu kitap, Azure teknolojisi kullanılarak oluşturulan bulutta yerel uygulamalara odaklanır. Mikro hizmetler en iyi uygulamaları ve mikro hizmet tabanlı uygulamaların nasıl mimarinin nasıl kullanılacağı hakkında daha fazla bilgi edinmek için yardımcı kitabı, [.net mikro hizmetleri: Kapsayıcılı .NET uygulamalarına yönelik mimariyi](https://dotnet.microsoft.com/learn/aspnet/microservices-architecture)okuyun. Kitap çevrimiçi, PDF veya eReader biçimlerinde kullanılabilir.
 
 >[!div class="step-by-step"]
 >[Önceki](candidate-apps.md)

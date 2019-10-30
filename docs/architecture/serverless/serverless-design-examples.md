@@ -4,12 +4,12 @@ description: Zamanlama ve olay tabanlı işlemden dosya tetikleyicilerine ve ak�
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: f7d3ec50608848b725d813ae2a9ee59ae9532ef3
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: b4e8fda0c1423c881c0807602e11f7c49ff7cfe4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72522344"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73093551"
 ---
 # <a name="serverless-design-examples"></a>Sunucusuz tasarım örnekleri
 

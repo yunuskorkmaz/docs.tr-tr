@@ -2,18 +2,18 @@
 title: Sunucusuz işlevlerden yararlanma
 description: Bulutta yerel uygulamalarda sunucusuz ve Azure Işlevlerini kullanma
 ms.date: 06/30/2019
-ms.openlocfilehash: c79f611b83f63079634fb2bac037c99f851f18ab
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 77ddef0eb8844ea1b55cd2fc5ec8aa12593c8631
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72578920"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73087115"
 ---
 # <a name="leveraging-serverless-functions"></a>Sunucusuz işlevlerden yararlanma
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-Bulut yeteneklerini kullanarak tam makineleri ve işletim sistemlerini yönetme yelpazesi içinde sunucusuz, yalnızca sizin sorumlu olduğunuz tek şey kodunuzun olduğu ve yalnızca kodunuzun çalıştırıldığı zaman ödeyin. Azure Işlevleri, uygulamalarınızda sunucusuz yetenekler oluşturmak için bir yol sağlar. 
+Bulut yeteneklerini kullanarak tam makineleri ve işletim sistemlerini yönetme yelpazesi içinde sunucusuz, yalnızca sizin sorumlu olduğunuz tek şey kodunuzun olduğu ve yalnızca kodunuzun çalıştırıldığı zaman ödeyin. Azure Işlevleri, uygulamalarınızda sunucusuz yetenekler oluşturmak için bir yol sağlar.
 
 ## <a name="what-is-serverless"></a>Sunucusuz nedir?
 
@@ -47,7 +47,7 @@ Birçok uygulama, iş akışlarının bir parçası olarak uzun süredir çalı�
 
 Sunucusuz bilgi işlem, Kullanıcı arabirimini engellememe görevleri için en iyi seçenektir. Bu, Web uygulamalarını veya Web API 'Lerini doğrudan barındırmak için ideal olmadıkları anlamına gelir. Bunun ana nedeni sunucusuz çözümlerin talep üzerine sağlandığını ve ölçeklendirilmesine yöneliktir. Bir işlevin yeni bir örneği gerektiğinde, *soğuk başlangıç*olarak bahsedildiğinde, sağlanması zaman alır. Bu süre genellikle birkaç saniyedir, ancak çeşitli faktörlere bağlı olarak daha uzun sürebilir. Tek bir örnek genellikle sonsuza kadar (örneğin, düzenli olarak bir istek yaparak) etkin bir şekilde tutulabilir, ancak her zaman ölçeği, her birinin ölçeklendirilmesi gerekiyorsa soğuk başlatma sorunu kalır.
 
-![Cold, sıcak başlangıç ](./media/cold-start-warm-start.png)
+![soğuk ve sıcak başlangıç](./media/cold-start-warm-start.png)
 **şekil 3-10**. Soğuk başlatma ve sıcak başlangıç.
 
 Soğuk tamamen başlamasını gerekmiyorsa, bir [Tüketim planından adanmış plana](https://azure.microsoft.com/blog/understanding-serverless-cold-start/)geçiş yapabilirsiniz. Premium planıyla [bir veya daha fazla önceden çarpımış örnek de yapılandırabilirsiniz](https://docs.microsoft.com/azure/azure-functions/functions-premium-plan#pre-warmed-instances) , bu nedenle başka bir örnek eklemeniz gerektiğinde, zaten çalışır durumda ve gönderilmeye hazırız olur. Bu seçenekler sunucusuz bilgi işlem ile ilişkili önemli kaygılardan birini hafifletmeye yönelik olabilir.

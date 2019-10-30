@@ -4,12 +4,12 @@ description: .NET ile tam yığın Web uygulamalarına Blazor ve yazma ile ilgil
 author: danroth27
 ms.author: daroth
 ms.date: 09/11/2019
-ms.openlocfilehash: 66b6d57b718c19b0f271c6b3a62a9d4a22d77ae0
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 6c045cd9c4378bd19f97dd722db054c969491d0b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72520304"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73087931"
 ---
 # <a name="an-introduction-to-blazor-for-aspnet-web-forms-developers"></a>ASP.NET Web Forms geliştiricileri için Blazor 'e giriş
 
@@ -21,7 +21,7 @@ Microsoft, yıllar boyunca Web geliştirme eğilimlerini ele almak için yeni AS
 
 Yazma sırasında, neredeyse yarısı milyon Web geliştiricisi her ay ASP.NET Web Forms kullanır. ASP.NET Web Forms Framework, belge, örnek, kitap ve blog gönderilerinin bir yılda bir süre önce yararlı ve alakalı olmaya devam eder. Birçok .NET Web geliştiricisi için "ASP.NET", .NET ilk amacı olduğu için "ASP.NET Web Forms" ile hala eşanlamlı olur. ASP.NET ve diğer yeni .NET Web çerçeveleri ile karşılaştırıldığında Web Forms uzmanlarının ve dezavantajlarından bağımsız değişkenler, Rage. ASP.NET Web Forms, Web uygulamaları oluşturmak için popüler bir çatı olmaya devam etmektedir.
 
-Bu nedenle, yazılım geliştirmenin yeniliklerini yavaşlatmıyor. Tüm yazılım geliştiricilerinin yeni teknolojiler ve eğilimleri tamamen sürdürmelerine gerek kalmaz. Özellikle de iki eğilim göz önünde bulundurulmayı düşünülüyor: 
+Bu nedenle, yazılım geliştirmenin yeniliklerini yavaşlatmıyor. Tüm yazılım geliştiricilerinin yeni teknolojiler ve eğilimleri tamamen sürdürmelerine gerek kalmaz. Özellikle de iki eğilim göz önünde bulundurulmayı düşünülüyor:
 
 1. Açık kaynaklı ve platformlar arası kaydırma
 2. Uygulama mantığının istemciye kaydırılması
@@ -80,7 +80,7 @@ Bu kitap, özellikle ASP.NET Web Forms geliştiricilere Blazor 'e yönelik bir g
 
 ## <a name="get-started-with-blazor"></a>Blazor kullanmaya başlama
 
-Blazor kullanmaya başlamak kolaydır. @No__t_0 gidin ve uygun .NET Core SDK ve Blazor proje şablonlarını yüklemek için bağlantıları izleyin. Ayrıca, Visual Studio veya Visual Studio Code Blazor araçları ayarlarını ayarlamaya yönelik yönergeler de bulacaksınız.
+Blazor kullanmaya başlamak kolaydır. <https://blazor.net> gidin ve uygun .NET Core SDK ve Blazor proje şablonlarını yüklemek için bağlantıları izleyin. Ayrıca, Visual Studio veya Visual Studio Code Blazor araçları ayarlarını ayarlamaya yönelik yönergeler de bulacaksınız.
 
 >[!div class="step-by-step"]
 >[Önceki](index.md)

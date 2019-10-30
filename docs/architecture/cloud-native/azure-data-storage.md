@@ -2,12 +2,12 @@
 title: Azure 'da veri depolama
 description: Azure için Cloud Native .NET uygulamaları tasarlama | Azure 'da veri depolama
 ms.date: 06/30/2019
-ms.openlocfilehash: 6834e47e11c4941735343e3f6bfbfe4cb642e0dd
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 1a86cecf005c6dbdfda5cf4cacfafaad4711c076
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72521115"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73087763"
 ---
 # <a name="data-storage-in-azure"></a>Azure 'da veri depolama
 
@@ -15,7 +15,7 @@ ms.locfileid: "72521115"
 
 Bu kitapta gördüğümüz gibi, bulut uygulamaların tasarlanmasının, dağıtıldığı ve yönetilme şeklini değiştiriyor. Buluta taşırken, verilerinizi nasıl taşıyacağınız önemli bir sorudır. Neyse ki Azure bulutu birçok seçenek sunar.
 
-Yalnızca bir Azure sanal makinesini temin etmeniz ve istediğiniz veritabanını yükleyebilirsiniz. Bu, [hizmet olarak altyapı (IaaS)](https://www.techopedia.com/definition/141/infrastructure-as-a-service-iaas)olarak bilinir. Bu yaklaşım, şirket içi bir veritabanının buluta taşınmasını basitleştirir, ancak sanal makineyi ve veritabanını yönetme yükünü size geçirir.  
+Yalnızca bir Azure sanal makinesini temin etmeniz ve istediğiniz veritabanını yükleyebilirsiniz. Bu, [hizmet olarak altyapı (IaaS)](https://www.techopedia.com/definition/141/infrastructure-as-a-service-iaas)olarak bilinir. Bu yaklaşım, şirket içi bir veritabanının buluta taşınmasını basitleştirir, ancak sanal makineyi ve veritabanını yönetme yükünü size geçirir.
 
 Bunun yerine, tam olarak yönetilen [bir hizmet olarak veritabanı (DBaaS)](https://www.stratoscale.com/blog/dbaas/what-is-database-as-a-service/) daha iyi bir seçenektir. Barındırma, bakım ve lisanslama Microsoft tarafından yönetilirken birçok yerleşik özelliği alırsınız. Azure, her biri belirli avantajları içeren farklı, tam olarak yönetilen veri depolama seçenekleri türlerine sahiptir. Hepsi, tam zamanında kapasiteyi ve kullandıkça öde modelini destekler.
 
@@ -23,7 +23,7 @@ Daha sonra Azure 'da bulunan DBaaS seçeneklerine bakacağız. Microsoft 'un, a�
 
 ## <a name="azure-sql-database"></a>Azure SQL veritabanı
 
-[Azure SQL veritabanı](https://docs.microsoft.com/azure/sql-database/) , Microsoft SQL Server veritabanı altyapısını temel alan, özellikle zengin, genel amaçlı bir ilişkisel hizmet olarak veritabanı (DBaaS). Microsoft tarafından tam olarak yönetilir ve yüksek performanslı, güvenilir ve güvenli bir bulut veritabanıdır. Hizmet, SQL Server 'ın şirket içi sürümünde bulunan özelliklerin birçoğunu paylaşır. 
+[Azure SQL veritabanı](https://docs.microsoft.com/azure/sql-database/) , Microsoft SQL Server veritabanı altyapısını temel alan, özellikle zengin, genel amaçlı bir ilişkisel hizmet olarak veritabanı (DBaaS). Microsoft tarafından tam olarak yönetilir ve yüksek performanslı, güvenilir ve güvenli bir bulut veritabanıdır. Hizmet, SQL Server 'ın şirket içi sürümünde bulunan özelliklerin birçoğunu paylaşır.
 
 Dakikalar içinde bir SQL veritabanı sunucusu ve veritabanı sağlayabilirsiniz. Uygulamanız için talepler, bir veya daha fazla müşteriden milyonlarca kullanıcıya büyüdükçe, Azure SQL veritabanı en az kapalı kalma süresiyle birlikte hareket halindeyken ölçeği ölçeklendirir. CPU gücü, bellek, GÇ işleme ve veritabanlarınıza ayrılan depolama dahil olmak üzere kaynakları dinamik olarak ekleyebilir veya kaldırabilirsiniz.
 
@@ -47,7 +47,7 @@ Azure SQL veritabanı, performansı en üst düzeye çıkarmanıza ve işlem mal
 
 [Azure SQL veritabanı sunucusuz](https://docs.microsoft.com/azure/sql-database/sql-database-serverless) (Bu kitabın yazılması sırasında önizleme için kullanılabilir), iş yükü talebine göre otomatik olarak ölçeklenen tek veritabanlarına yönelik bir işlem katmandır ve saniye başına kullanılan işlem miktarına göre faturalandırılır. Sunucusuz işlem katmanı Ayrıca, etkin olmayan dönemler sırasında veritabanlarını otomatik olarak duraklatarak yalnızca depolama ücretleri faturalandırılır. Etkinlik geri döndüğünde otomatik olarak devam eder.
 
-Son olarak, yeni [Azure SQL veritabanı hiper ölçek](https://azure.microsoft.com/services/sql-database/) fiyatlandırma katmanı vardır. Bu, yüksek düzeyde ölçeklenebilir bir depolama mimarisine sahiptir ve veritabanınızın gerektiği şekilde büyümesini sağlar ve depolama kaynaklarının önceden sağlanması gereksinimini ortadan kaldırır. İşlem ve depolama kaynaklarını bağımsız olarak ölçeklendirebilirsiniz, her iş yükü için performansı iyileştirme esnekliği sağlayabilirsiniz. Azure SQL veritabanı hiper ölçek, 100 TB 'a kadar depolama özellikli [OLTP](https://en.wikipedia.org/wiki/Online_transaction_processing) işleme ve yüksek performanslı analitik iş yükleri için iyileştirilmiştir.  Okuma yoğunluklu iş yükleri sayesinde hiper ölçek, okuma iş yüklerinin yükünü kaldırma için gerektiğinde ek okuma çoğaltmaları sağlayarak hızlı genişleme sağlar. 
+Son olarak, yeni [Azure SQL veritabanı hiper ölçek](https://azure.microsoft.com/services/sql-database/) fiyatlandırma katmanı vardır. Bu, yüksek düzeyde ölçeklenebilir bir depolama mimarisine sahiptir ve veritabanınızın gerektiği şekilde büyümesini sağlar ve depolama kaynaklarının önceden sağlanması gereksinimini ortadan kaldırır. İşlem ve depolama kaynaklarını bağımsız olarak ölçeklendirebilirsiniz, her iş yükü için performansı iyileştirme esnekliği sağlayabilirsiniz. Azure SQL veritabanı hiper ölçek, 100 TB 'a kadar depolama özellikli [OLTP](https://en.wikipedia.org/wiki/Online_transaction_processing) işleme ve yüksek performanslı analitik iş yükleri için iyileştirilmiştir.  Okuma yoğunluklu iş yükleri sayesinde hiper ölçek, okuma iş yüklerinin yükünü kaldırma için gerektiğinde ek okuma çoğaltmaları sağlayarak hızlı genişleme sağlar.
 
 Azure, geleneksel Microsoft SQL Server yığınına ek olarak, çeşitli popüler açık kaynaklı veritabanlarının yönetilen sürümlerine de sahiptir.
 
@@ -59,7 +59,7 @@ Azure, geleneksel Microsoft SQL Server yığınına ek olarak, çeşitli popüle
 
 - Yerleşik [yüksek kullanılabilirlik](https://docs.microsoft.com/azure/mysql/concepts-high-availability).
 
-- Kapsamlı [Kullandıkça Öde fiyatlandırması](https://docs.microsoft.com/azure/mysql/concepts-pricing-tiers)kullanılarak öngörülebilir performans. 
+- Kapsamlı [Kullandıkça Öde fiyatlandırması](https://docs.microsoft.com/azure/mysql/concepts-pricing-tiers)kullanılarak öngörülebilir performans.
 
 - Saniyeler içinde gereken şekilde [ölçeklendirin](https://docs.microsoft.com/azure/mysql/concepts-high-availability) .
 
@@ -69,7 +69,7 @@ Azure, geleneksel Microsoft SQL Server yığınına ek olarak, çeşitli popüle
 
 - Kurumsal düzeyde güvenlik ve uyumluluk.
 
-Bu yerleşik PaaS özellikleri, veri merkezlerinde yüzlerce "tackatik" (stratejik) veritabanlarına sahip olan, ancak düzeltme eki uygulama, yedekleme, güvenlik ve performans izleme işlemleri gerçekleştirmek için kaynaklara sahip olmayan kuruluşlar için önemlidir. 
+Bu yerleşik PaaS özellikleri, veri merkezlerinde yüzlerce "tackatik" (stratejik) veritabanlarına sahip olan, ancak düzeltme eki uygulama, yedekleme, güvenlik ve performans izleme işlemleri gerçekleştirmek için kaynaklara sahip olmayan kuruluşlar için önemlidir.
 
 Ayrıca, [Azure veri geçiş hizmeti](https://azure.microsoft.com/services/database-migration/) , verileri birden çok veritabanı kaynağından Azure veri platformlarına en az kapalı kalma süresiyle geçirebilir. Hizmet, değerlendirme raporları oluşturur ve bir geçiş gerçekleştirmek için gereken değişiklikler boyunca hem küçük hem de büyük olmak üzere size rehberlik sağlayan öneriler sağlar.
 
@@ -87,8 +87,8 @@ MariaDB için güçlü bir aşağıdakiler vardır ve birçok büyük kuruluş t
 
 - Yerleşik [yüksek kullanılabilirlik](https://docs.microsoft.com/azure/mariadb/concepts-high-availability).
 
-- Kapsamlı [Kullandıkça Öde fiyatlandırması](https://docs.microsoft.com/azure/mariadb/concepts-pricing-tiers)kullanılarak öngörülebilir performans. 
- 
+- Kapsamlı [Kullandıkça Öde fiyatlandırması](https://docs.microsoft.com/azure/mariadb/concepts-pricing-tiers)kullanılarak öngörülebilir performans.
+
 - Saniyeler içinde gerektiği şekilde [ölçeklendirin](https://docs.microsoft.com/azure/mariadb/concepts-high-availability) .
 
 - REST ve hareket halindeyken hassas verilerin güvenli koruması.
@@ -97,7 +97,7 @@ MariaDB için güçlü bir aşağıdakiler vardır ve birçok büyük kuruluş t
 
 - Kurumsal düzeyde güvenlik ve uyumluluk.
 
-## <a name="azure-database-for-postgresql"></a>PostgreSQL için Azure veritabanı 
+## <a name="azure-database-for-postgresql"></a>PostgreSQL için Azure veritabanı
 
 [PostgreSQL](https://www.postgresql.org/) , 30 yıldan fazla etkin geliştirmeyi içeren, popüler, açık kaynaklı bir ilişkisel veritabanıdır. Bu, genel amaçlı ve nesne ilişkisel veritabanı yönetim sistemidir. Lisanslama, "özgürlük" olarak kabul edilir ve ürünün herhangi bir biçimde kullanımı, değiştirilmesi ve dağıtılması ücretsizdir. Apple, Red Hat ve Fujitsu gibi birçok büyük kuruluş, PostgreSQL kullanan ürünleri derlediniz.
 
@@ -163,7 +163,7 @@ Azure Tablo depolaması için yazılmış uygulamalar, hiçbir kod değişikliğ
 
 Çoğu dağıtılmış veritabanı, geliştiricilerin iki tutarlılık modeli arasından seçim yapmasına imkan tanır: [güçlü tutarlılık](https://en.wikipedia.org/wiki/Strong_consistency) ve [nihai tutarlılık](https://en.wikipedia.org/wiki/Eventual_consistency). *Güçlü tutarlılık* , veri programlamasına yönelik altın standarttır. Sistemin bir güncelleştirmenin tüm veritabanı kopyalarında çoğaltılmasını bekleyen gecikme süresi olması beklense bile, bir sorgu sonucunun her zaman en güncel verileri döndürmesini güvence altına alır. Diğer taraftan, son *tutarlılık* için yapılandırılmış bir sistem, veriler en güncel kopya olmasa bile hemen verileri döndürür. Bu seçenek daha yüksek kullanılabilirlik, daha fazla ölçek ve daha fazla performans sunar.
 
-Azure Cosmos DB Şekil 5-16 ' de gösterilen [beş iyi tanımlanmış tutarlılık modeli](https://docs.microsoft.com/azure/cosmos-db/consistency-levels) yelpazesi sunar. Bu seçenekler, uygulamanızın ihtiyaçlarına bağlı olarak kullanılabilirlik ve performans açısından kesin seçimler ve ayrıntılı bir denge yapmanızı sağlar. Bu modeller iyi tanımlanmış, sezgisel ve hizmet düzeyi sözleşmeleri (SLA 'Lar) tarafından desteklenir. 
+Azure Cosmos DB Şekil 5-16 ' de gösterilen [beş iyi tanımlanmış tutarlılık modeli](https://docs.microsoft.com/azure/cosmos-db/consistency-levels) yelpazesi sunar. Bu seçenekler, uygulamanızın ihtiyaçlarına bağlı olarak kullanılabilirlik ve performans açısından kesin seçimler ve ayrıntılı bir denge yapmanızı sağlar. Bu modeller iyi tanımlanmış, sezgisel ve hizmet düzeyi sözleşmeleri (SLA 'Lar) tarafından desteklenir.
 
 ![Tutarlılık düzeylerini Cosmos DB](./media/cosmos-db-consistency-levels.png)
 
@@ -171,7 +171,7 @@ Azure Cosmos DB Şekil 5-16 ' de gösterilen [beş iyi tanımlanmış tutarlıl�
 
 ### <a name="partitioning"></a>Bölümlendirme
 
-Azure Cosmos DB, uygulamanızın performans ihtiyaçlarını karşılayacak şekilde veritabanını ölçeklendirmek için otomatik [bölümlendirme](https://docs.microsoft.com/azure/cosmos-db/partitioning-overview) kullanır. 
+Azure Cosmos DB, uygulamanızın performans ihtiyaçlarını karşılayacak şekilde veritabanını ölçeklendirmek için otomatik [bölümlendirme](https://docs.microsoft.com/azure/cosmos-db/partitioning-overview) kullanır.
 
 Şekil 5-17 ' de gösterilen [veritabanları, kapsayıcılar ve öğeler](https://docs.microsoft.com/azure/cosmos-db/databases-containers-items)oluşturarak verileri Cosmos DB verileri yönetebilirsiniz.
 
@@ -193,7 +193,7 @@ Dahili olarak, Cosmos DB kapsayıcının ölçeklenebilirlik ve performans ihtiy
 
 ## <a name="azure-redis-cache"></a>Azure Redis Cache
 
-Performansı ve ölçeklenebilirliği artırmak için önbelleğe almanın avantajları iyi anlaşılmıştır. 
+Performansı ve ölçeklenebilirliği artırmak için önbelleğe almanın avantajları iyi anlaşılmıştır.
 
 Bulutta yerel bir uygulama için, önbelleğe alma eklemek için ortak bir konum API ağ geçidinin içindedir. Ağ Geçidi, tüm gelen istekler için ön uç işlevi görür. Önbelleğe alma 'yı ekleyerek, önbelleğe alınmış verileri döndürerek ve yerel bir veritabanına veya aşağı akış hizmetine gidiş dönüşleri önleyerek performansı ve yanıt hızını artırabilirsiniz. Şekil 5-19, bulutta yerel bir uygulama için bir önbelleğe alma mimarisi gösterir.
 

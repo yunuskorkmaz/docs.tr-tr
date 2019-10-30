@@ -2,12 +2,12 @@
 title: Bulutta yerel veri desenleri
 description: Azure için Cloud Native .NET uygulamaları tasarlama | Bulutta yerel veri desenleri
 ms.date: 06/30/2019
-ms.openlocfilehash: 8fc5a09dca61e6644fdcaa692ff1a21f40ebf179
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 0d251f3046fcd3f3a2f5d856a123a35d3f7ecff2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71183415"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73087697"
 ---
 # <a name="cloud-native-data-patterns"></a>Bulutta yerel veri desenleri
 
@@ -127,15 +127,15 @@ NoSQL veritabanları dağıtılır ve genellikle emtia sunucularında ölçeklen
 
 Bu, ACID işlemlerinin desteklenmediği dağıtılmış veri sistemlerinin bir özelliği olan, [nihai tutarlılık](https://www.cloudcomputingpatterns.org/eventual_consistency/)bilinmektedir. Bu, bir veri öğesi güncelleştirmesi ve bu güncelleştirmenin her bir çoğaltma düğümüne yayılması için geçen süre arasında kısa bir gecikmeden oluşur. Birleşik Devletler bir NoSQL veritabanında bir ürün öğesini güncelleştirirseniz, ancak aynı zamanda Avrupa 'daki bir çoğaltma düğümünden aynı veri öğesini sorgulayıp, Avrupa düğümü ürün değişikliği ile güncellenene kadar önceki ürün bilgilerini alabilirsiniz. Bu denge, güçlü tutarlılık vererek, bir sorgu sonucu döndürmeden önce tüm çoğaltma düğümlerinin güncelleştirilmesini beklerken, büyük ölçekli ölçek ve trafik hacminin yanı sıra eski verileri sunma [olasılığından](https://en.wikipedia.org/wiki/Strong_consistency)de daha fazla bir şekilde destek alabilirsiniz.
 
-NoSQL veritabanları aşağıdaki dört modele göre kategorize edilebilir: 
+NoSQL veritabanları aşağıdaki dört modele göre kategorize edilebilir:
 
-- *Belge Mağazası* (MongoDB, Couşdb, Couşbase): veriler (ve buna karşılık gelen meta veriler), veritabanının içindeki Normalleştirilmemiş JSON tabanlı belgelerde ilişki dışı olarak depolanır.
+- *Belge deposu* (MongoDB, Couşdb, Couşbase): veriler (ve karşılık gelen meta veriler), veritabanının içindeki, kapsamdaki JSON tabanlı belgelerde ilişki dışı olarak depolanır.
 
-- *Anahtar/değer deposu* (Redin, Riak, memönbelleğe alınmış): veriler, Kullanıcı verilerinin bir değeriyle eşlenen benzersiz bir erişim anahtarına karşı gerçekleştirilen sistem işlemleri ile basit anahtar-değer çiftlerine depolanır.
+- *Anahtar/değer deposu* (Redg, Riak, memönbelleğe alınmış): veriler, Kullanıcı verileri değeriyle eşlenen benzersiz bir erişim anahtarına karşı gerçekleştirilen sistem işlemlerine sahip basit anahtar-değer çiftlerine depolanır.
 
-- *Geniş sütunlu depo* (HBase, Cassandra): ilgili veriler, genellikle birden çok tabloya birlikte katılması gerekmeden tek bir sütun içinde iç içe geçmiş anahtar/değer çiftleri kümesi olarak bir sütunlu biçimde depolanır.
+- *Geniş sütun deposu* (HBase, Cassandra): ilgili veriler, genellikle birden çok tabloya birlikte katılması gerekmeden tek bir sütun içinde iç içe geçmiş anahtar/değer çiftleri kümesi olarak bir sütunlu biçimde depolanır.
 
-- *Grafik depoları* (NEO4J, Titan): veriler, düğümler arasındaki ilişkiyi belirten kenarlarla birlikte bir düğüm içinde bir grafik gösterimi olarak depolanır.
+- *Grafik depoları* (NEO4J, Titan): veriler, düğümler arasındaki ilişkiyi belirten kenarlarla birlikte bir düğüm içindeki bir grafik gösterimi olarak depolanır.
 
 NoSQL veritabanları, özellikle de veriler görece basit olduğunda büyük ölçekli verilerle uğraşmak için iyileştirilebilir. Şu durumlarda bir NoSQL veritabanı göz önünde bulundurun:
 

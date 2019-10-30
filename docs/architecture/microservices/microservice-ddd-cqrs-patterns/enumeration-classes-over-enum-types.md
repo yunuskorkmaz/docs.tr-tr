@@ -2,16 +2,16 @@
 title: Sabit listesi türleri yerine Sabit Listesi sınıfları kullanma
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | İkinci öğesinin bazı sınırlamalarını çözmenin bir yolu olarak, numaralandırmalar yerine numaralandırma sınıflarını nasıl kullanabileceğinizi ortadan kaldırabilirsiniz.
 ms.date: 10/08/2018
-ms.openlocfilehash: 575757b6022a9e7468c0ffc5d576dd16de3018f5
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 255bccab0e1fe71e00c0d0b47c8af05f80cb760b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71039938"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73093871"
 ---
 # <a name="use-enumeration-classes-instead-of-enum-types"></a>Sabit listesi türleri yerine numaralandırma sınıfları kullanın
 
-[Numaralandırmalar](../../../csharp/language-reference/keywords/enum.md) (veya Short için *enum Types* ), bir integral türünün çevresindeki bir ince dil sarmalayıcısıdır. Kapalı bir değer kümesinden bir değeri depolarken, kullanımlarını sınırlamak isteyebilirsiniz. Boyutlara göre sınıflandırma (küçük, orta, büyük) iyi bir örnektir. Denetim akışı veya daha güçlü soyutlamalar için Numaralandırmaların kullanılması [kod kokusu](https://deviq.com/code-smells/)olabilir. Bu kullanım türü, numaralandırmanın değerlerini denetleyen birçok denetim akışı deyimi ile fragla kodu doğurur.
+[Numaralandırmalar](../../../csharp/language-reference/keywords/enum.md) (veya Short için *sabit listesi türleri* ), bir integral türü etrafında ince bir dil sarmalayıcısıdır. Kapalı bir değer kümesinden bir değeri depolarken, kullanımlarını sınırlamak isteyebilirsiniz. Boyutlara göre sınıflandırma (küçük, orta, büyük) iyi bir örnektir. Denetim akışı veya daha güçlü soyutlamalar için Numaralandırmaların kullanılması [kod kokusu](https://deviq.com/code-smells/)olabilir. Bu kullanım türü, numaralandırmanın değerlerini denetleyen birçok denetim akışı deyimi ile fragla kodu doğurur.
 
 Bunun yerine, nesne yönelimli bir dilin tüm zengin özelliklerini etkinleştiren numaralandırma sınıfları oluşturabilirsiniz.
 
@@ -28,28 +28,28 @@ public abstract class Enumeration : IComparable
 
     public int Id { get; private set; }
 
-    protected Enumeration(int id, string name) 
+    protected Enumeration(int id, string name)
     {
-        Id = id; 
-        Name = name; 
+        Id = id;
+        Name = name;
     }
 
     public override string ToString() => Name;
 
     public static IEnumerable<T> GetAll<T>() where T : Enumeration
     {
-        var fields = typeof(T).GetFields(BindingFlags.Public | 
-                                         BindingFlags.Static | 
-                                         BindingFlags.DeclaredOnly); 
+        var fields = typeof(T).GetFields(BindingFlags.Public |
+                                         BindingFlags.Static |
+                                         BindingFlags.DeclaredOnly);
 
         return fields.Select(f => f.GetValue(null)).Cast<T>();
     }
 
-    public override bool Equals(object obj) 
+    public override bool Equals(object obj)
     {
-        var otherValue = obj as Enumeration; 
+        var otherValue = obj as Enumeration;
 
-        if (otherValue == null) 
+        if (otherValue == null)
             return false;
 
         var typeMatches = GetType().Equals(obj.GetType());
@@ -58,13 +58,13 @@ public abstract class Enumeration : IComparable
         return typeMatches && valueMatches;
     }
 
-    public int CompareTo(object other) => Id.CompareTo(((Enumeration)other).Id); 
+    public int CompareTo(object other) => Id.CompareTo(((Enumeration)other).Id);
 
-    // Other utility methods ... 
+    // Other utility methods ...
 }
 ```
 
-Bu sınıfı, aşağıdaki `CardType` `Enumeration` gibi herhangi bir varlık veya değer nesnesinde bir tür olarak kullanabilirsiniz: Sınıfı:
+Bu sınıfı, aşağıdaki `CardType` gibi, herhangi bir varlık veya değer nesnesinde bir tür olarak kullanabilirsiniz: `Enumeration` Sınıfı:
 
 ```csharp
 public class CardType : Enumeration
@@ -85,13 +85,13 @@ public class CardType : Enumeration
 - **Sabit listesinin Evil olması — güncelleştirme** \
   <https://www.planetgeek.ch/2009/07/01/enums-are-evil/>
 
-- **Daniel Hardman. Numaralandırmaların nasıl dağılacağı ve nasıl bulunduğu** \
+- **Daniel Hardman. Numaralandırmaların nasıl dağılacağı ve nasıl** edinileceği \
   <https://codecraft.co/2012/10/29/how-enums-spread-disease-and-how-to-cure-it/>
 
 - **Jimmy Bogard. Numaralandırma sınıfları** \
   <https://lostechies.com/jimmybogard/2008/08/12/enumeration-classes/>
 
-- **Steve Smith. İçindeki sabit listesi alternatifleriC#**  \
+- **Steve Smith. \ sabit listesi C# alternatifleri**
   <https://ardalis.com/enum-alternatives-in-c>
 
 - **Enumeration.cs.** EShopOnContainers içindeki temel numaralandırma sınıfı \
@@ -104,5 +104,5 @@ public class CardType : Enumeration
   <https://www.nuget.org/packages/Ardalis.SmartEnum/>
 
 >[!div class="step-by-step"]
->[Önceki](implement-value-objects.md)İleri
->[](domain-model-layer-validations.md)
+>[Önceki](implement-value-objects.md)
+>[İleri](domain-model-layer-validations.md)

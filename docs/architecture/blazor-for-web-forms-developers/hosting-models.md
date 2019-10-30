@@ -4,12 +4,12 @@ description: Blazor uygulamasını, WebAssembly veya sunucu üzerindeki tarayıc
 author: danroth27
 ms.author: daroth
 ms.date: 09/11/2019
-ms.openlocfilehash: 82628976bcb1f1cee3089aa25488396af44d0f1a
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 5bf55fa686691acc25508d3d9a6dfaf8aca321ca
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72520301"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73088052"
 ---
 # <a name="blazor-app-hosting-models"></a>Blazor uygulama barındırma modelleri
 
@@ -18,13 +18,13 @@ ms.locfileid: "72520301"
 Blazor Apps, tıpkı ASP.NET Web Forms Apps gibi IIS 'de barındırılabilir. Blazor uygulamaları, aşağıdaki yollarla da barındırılabilir:
 
 - WebAssembly üzerinde tarayıcıda istemci tarafı.
-- ASP.NET Core uygulamasında sunucu tarafı. 
+- ASP.NET Core uygulamasında sunucu tarafı.
 
 ## <a name="blazor-webassembly-apps"></a>Blazor WebAssembly uygulamaları
 
-Blazor WebAssembly Apps, bir WebAssembly tabanlı .NET çalışma zamanı üzerinde doğrudan tarayıcıda yürütülür. Blazor WebAssembly Apps işlevini, angular veya tepki verme gibi ön uç JavaScript çerçeveleri için benzer bir şekilde çalışır. Ancak, yazdığınız C#JavaScript yazmak yerine. .NET çalışma zamanı, uygulama derlemesi ve gerekli bağımlılıklarla birlikte uygulamayla birlikte indirilir. Tarayıcı eklentileri veya uzantıları gerekli değildir. 
+Blazor WebAssembly Apps, bir WebAssembly tabanlı .NET çalışma zamanı üzerinde doğrudan tarayıcıda yürütülür. Blazor WebAssembly Apps işlevini, angular veya tepki verme gibi ön uç JavaScript çerçeveleri için benzer bir şekilde çalışır. Ancak, yazdığınız C#JavaScript yazmak yerine. .NET çalışma zamanı, uygulama derlemesi ve gerekli bağımlılıklarla birlikte uygulamayla birlikte indirilir. Tarayıcı eklentileri veya uzantıları gerekli değildir.
 
-İndirilen derlemeler, diğer herhangi bir .NET uygulamasında kullanacağınız gibi normal .NET derlemelerdir. Çalışma zamanı .NET Standard desteklediğinden, mevcut .NET Standard kitaplıklarını Blazor WebAssembly uygulamanızla birlikte kullanabilirsiniz. Ancak, bu derlemeler hala tarayıcı güvenlik korumalı alanında yürütülür. Bazı işlevler, dosya sistemine erişmeye veya rastgele ağ bağlantılarını açmaya çalışan bir <xref:System.PlatformNotSupportedException> oluşturabilir. 
+İndirilen derlemeler, diğer herhangi bir .NET uygulamasında kullanacağınız gibi normal .NET derlemelerdir. Çalışma zamanı .NET Standard desteklediğinden, mevcut .NET Standard kitaplıklarını Blazor WebAssembly uygulamanızla birlikte kullanabilirsiniz. Ancak, bu derlemeler hala tarayıcı güvenlik korumalı alanında yürütülür. Bazı işlevler, dosya sistemine erişmeye veya rastgele ağ bağlantılarını açmaya çalışan bir <xref:System.PlatformNotSupportedException> oluşturabilir.
 
 Uygulama yüklendiğinde, .NET çalışma zamanı başlatılır ve uygulama derlemesine işaret edilir. Uygulama başlangıç mantığı çalışır ve kök bileşenleri işlenir. Blazor, Kullanıcı arabirimi güncelleştirmelerini, bileşenlerin işlenen çıktısına göre hesaplar. DOM güncelleştirmeleri uygulanır.
 
@@ -42,7 +42,7 @@ Blazor sunucu uygulamalarında, bileşenler tarayıcıda istemci tarafı yerine 
 
 ![Blazor Server](media/hosting-models/blazor-server.png)
 
-ASP.NET AJAX ve <xref:System.Web.UI.UpdatePanel> denetimini kullandıysanız Blazor Server barındırma modeli tanıdık gelebilir. @No__t_0 denetim, sayfadaki olayları tetiklemeye yönelik kısmi sayfa güncelleştirmelerini uygulamayı işler. Tetiklendiğinde, `UpdatePanel` kısmi bir güncelleştirme ister ve sonra sayfayı yenilemeye gerek kalmadan uygulamayı uygular. Kullanıcı arabiriminin durumu `ViewState` kullanılarak yönetilir. Blazor sunucu uygulamaları, uygulamanın istemciyle etkin bir bağlantı gerektirdiğinden biraz farklıdır. Ayrıca, tüm Kullanıcı arabirimi durumu sunucuda tutulur. Bu farklılıklardan ayrı olarak, iki model kavramsal olarak benzerdir.
+ASP.NET AJAX ve <xref:System.Web.UI.UpdatePanel> denetimini kullandıysanız Blazor Server barındırma modeli tanıdık gelebilir. `UpdatePanel` denetim, sayfadaki olayları tetiklemeye yönelik kısmi sayfa güncelleştirmelerini uygulamayı işler. Tetiklendiğinde, `UpdatePanel` kısmi bir güncelleştirme ister ve sonra sayfayı yenilemeye gerek kalmadan uygulamayı uygular. Kullanıcı arabiriminin durumu `ViewState` kullanılarak yönetilir. Blazor sunucu uygulamaları, uygulamanın istemciyle etkin bir bağlantı gerektirdiğinden biraz farklıdır. Ayrıca, tüm Kullanıcı arabirimi durumu sunucuda tutulur. Bu farklılıklardan ayrı olarak, iki model kavramsal olarak benzerdir.
 
 ## <a name="how-to-choose-the-right-blazor-hosting-model"></a>Doğru Blazor barındırma modelini seçme
 

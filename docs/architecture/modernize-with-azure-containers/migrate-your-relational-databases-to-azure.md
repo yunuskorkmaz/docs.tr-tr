@@ -2,16 +2,16 @@
 title: İlişkisel veritabanlarınızı Azure 'a geçirin
 description: Azure bulut ve Windows kapsayıcıları Ile mevcut .NET uygulamalarını modernleştirin | ilişkisel veritabanlarınızı Azure 'a geçirin
 ms.date: 04/28/2018
-ms.openlocfilehash: b2153e65a12706b97fae11c5f23846c83bcd6642
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: efd1548c3f74fc27450f4949d71a1c4d61907ba5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70374103"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73093623"
 ---
 # <a name="migrate-your-relational-databases-to-azure"></a>İlişkisel veritabanlarınızı Azure 'a geçirin
 
-Minin Azure, en kapsamlı veritabanı geçişini sunmaktadır.
+Vizyon: Azure en kapsamlı veritabanı geçişini sunmaktadır.
 
 Azure 'da, veritabanı sunucularınızı doğrudan IaaS VM 'lerine (saf kaldırma ve kaydırma) geçirebilir veya ek avantajlar için Azure SQL veritabanı 'na geçiş yapabilirsiniz. Azure SQL veritabanı, yönetilen örnek ve hizmet olarak tam veritabanı (DBaaS) seçeneği sunar. Şekil 3-1, Azure 'da kullanılabilen birden çok ilişkisel veritabanı geçiş yolunu gösterir.
 
@@ -21,7 +21,7 @@ Azure 'da, veritabanı sunucularınızı doğrudan IaaS VM 'lerine (saf kaldırm
 
 ## <a name="when-to-migrate-to-azure-sql-database-managed-instance"></a>Azure SQL veritabanı yönetilen örneği 'ne geçiş
 
-Çoğu durumda, Azure SQL veritabanı yönetilen örneği, verilerinizi Azure 'a geçirdiğinizde göz önünde bulundurmanız gereken en iyi seçenektir. SQL Server veritabanlarını geçiriyorsanız ve uygulamanızı yeniden mimarın veya veri ya da veri erişim kodunuzda değişiklikler yapmanız gerekmeyeceği hakkında neredeyse% 100 güvence altına almanız gerekiyorsa, Azure SQL veritabanı 'nın yönetilen örnek özelliğini seçin.
+Çoğu durumda, Azure SQL veritabanı yönetilen örneği, verilerinizi Azure 'a geçirdiğinizde göz önünde bulundurmanız gereken en iyi seçenektir. SQL Server veritabanlarını geçiriyorsanız ve uygulamanızı yeniden mimarın veya veri ya da veri erişim kodunuzda değişiklikler yapmanız gerekmeyeceği hakkında neredeyse %100 güvence altına almanız gerekiyorsa, Azure SQL veritabanı 'nın yönetilen örnek özelliğini seçin.
 
 Örnek düzeyi işlevselliği SQL Server ek gereksinimleriniz veya standart bir Azure SQL veritabanında (tek veritabanı modeli) sunulan özelliklerin ötesinde yalıtım gereksinimleri varsa, Azure SQL veritabanı yönetilen örneği en iyi seçenektir. Bu son, en PaaS yönelimli seçenektir, ancak geleneksel bir SQL Server ile aynı özellikleri sunmaz. Geçiş, uçumlar gösterebilir.
 
@@ -47,7 +47,7 @@ Azure SQL veritabanı 'nda yönetilen örnek aşağıdaki özelliklere sahiptir:
 
   - Yerel yedekleme ve geri yükleme ve günlük aktarma
 
-Bu yetenekler sayesinde, mevcut uygulama veritabanlarını Azure SQL veritabanı 'na geçirdiğinizde, yönetilen örnek modeli SQL Server PaaS avantajlarından neredeyse% 100 ' ı sunar. Yönetilen örnek, Uygulama tasarımınızı değiştirmeden örnek düzeyi özellikleri kullanmaya devam ettiğiniz bir SQL Server ortamıdır.
+Bu yetenekler sayesinde, mevcut uygulama veritabanlarını Azure SQL veritabanı 'na geçirdiğinizde, yönetilen örnek modeli SQL Server PaaS avantajlarından neredeyse %100 ' ı sunar. Yönetilen örnek, Uygulama tasarımınızı değiştirmeden örnek düzeyi özellikleri kullanmaya devam ettiğiniz bir SQL Server ortamıdır.
 
 Yönetilen örnek büyük olasılıkla SQL Server kullanmakta olan ve bulutta ağ güvenliğine esneklik gerektiren kuruluşlara en iyi şekilde uyum sağlar. SQL veritabanlarınız için özel bir sanal ağ olması gibidir.
 
@@ -90,7 +90,7 @@ Geçiş seçeneklerinizin biri, Oracle, IBM DB2, MySQL, PostgreSQL veya SQL Serv
 
 Hala SQL Server normal bir VM olarak geçirmeniz gereken birkaç durum olabilir. SQL Server Reporting Services kullanmanız gerekiyorsa örnek bir senaryo. Çoğu durumda, Azure SQL veritabanı yönetilen örneği, şirket içi SQL Server 'dan geçiş yapmak için ihtiyacınız olan her şeyi sağlayabilse de SQL Server VM geçiş yapmak için son çare olmalıdır.
 
-## <a name="use-azure-database-migration-service-to-migrate-your-relational-databases-to-azure"></a>Azure veritabanı geçiş hizmeti 'ni kullanarak ilişkisel veritabanlarınızı Azure 'a geçirin 
+## <a name="use-azure-database-migration-service-to-migrate-your-relational-databases-to-azure"></a>Azure veritabanı geçiş hizmeti 'ni kullanarak ilişkisel veritabanlarınızı Azure 'a geçirin
 
 Azure veritabanı geçiş hizmeti 'ni, hedef veritabanınızın Azure SQL veritabanı, Azure SQL veritabanı yönetilen örneği veya bir Azure VM üzerinde SQL Server gibi SQL Server, Oracle ve MySQL gibi ilişkisel veritabanlarını Azure 'a geçirmek için kullanabilirsiniz.
 
@@ -104,7 +104,7 @@ Azure veritabanı geçiş hizmeti 'ni kullanarak veritabanlarının nasıl geçi
 
 ## <a name="additional-resources"></a>Ek kaynaklar
 
-- **Bir bulut SQL Server seçeneği belirleyin: Azure SQL veritabanı (PaaS) veya Azure VM 'de SQL Server (IaaS)**
+- **Bulut SQL Server seçeneği seçin: Azure SQL veritabanı (PaaS) veya Azure VM 'de SQL Server (IaaS)**
 
     <https://docs.microsoft.com/azure/sql-database/sql-database-paas-vs-sql-server-iaas>
 
@@ -112,11 +112,11 @@ Azure veritabanı geçiş hizmeti 'ni kullanarak veritabanlarının nasıl geçi
 
     <https://channel9.msdn.com/Events/Build/2017/P4008>
 
-- **SQL veritabanı bulutta SQL Server veritabanını geçirme**
+- **Bulutta SQL veritabanı 'na SQL Server veritabanı geçişi**
 
     <https://docs.microsoft.com/azure/sql-database/sql-database-cloud-migrate>
 
-- **Azure SQL Veritabanı**
+- **Azure SQL veritabanı**
 
     <https://azure.microsoft.com/services/sql-database/?v=16.50>
 
@@ -125,5 +125,5 @@ Azure veritabanı geçiş hizmeti 'ni kullanarak veritabanlarının nasıl geçi
     <https://azure.microsoft.com/services/virtual-machines/sql-server/>
 
 > [!div class="step-by-step"]
-> [Önceki](lift-and-shift-existing-apps-azure-iaas.md)İleri
-> [](modernize-existing-apps-to-cloud-optimized/index.md) <!-- Next Chapter -->
+> [Önceki](lift-and-shift-existing-apps-azure-iaas.md)
+> [İleri](modernize-existing-apps-to-cloud-optimized/index.md) <!-- Next Chapter -->

@@ -2,12 +2,12 @@
 title: Kod olarak altyapı
 description: Azure için Cloud Native .NET uygulamaları tasarlama | Kod olarak altyapı
 ms.date: 06/30/2019
-ms.openlocfilehash: e395db28bdeff785251b91ed643f9920873d26e8
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 3957da68ac28774f899f49fb181a29c2435902f8
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71183016"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73087243"
 ---
 # <a name="infrastructure-as-code"></a>Kod olarak altyapı
 
@@ -37,7 +37,7 @@ Azure Resource Manager şablonlar, Azure 'da çeşitli kaynakları tanımlamaya 
 **Şekil 11-10** -Kaynak Yöneticisi şablonun şeması
 
 Bu şablon içinde, bir depolama kapsayıcısını kaynaklar bölümünde şöyle tanımlayabilir:
- 
+
 ```json
 "resources": [
     {
@@ -66,7 +66,7 @@ Kaynak Yöneticisi şablonlar, çeşitli yollarla çalıştırılabilir. Belki d
 
 Kaynak Yöneticisi şablonlarının algılanan bir dezavantajı, Azure bulutuna özgü olduklarından emin olmalarıdır. Birden fazla buluttan kaynak içeren uygulamalar oluşturmak olağan dışı bir durumlardır, ancak işin yansımalı çalışma süresine dayanmasına neden olduğu durumlarda, birden fazla bulutu destekleme maliyeti çok uzun olabilir. Her bulut genelinde kullanılabilecek bir şablon oluşturma dili varsa, geliştirici becerilerinin çok daha taşınabilir olmasını da sağlar.
 
-Yalnızca bunu yapan çeşitli teknolojiler vardır! Bu alandaki en çok sayıda teklif [Terrayform](https://www.terraform.io/)olarak bilinir. Terminform, Azure, Google Cloud Platform, AWS ve AliCloud gibi her büyük bulut oynatıcıyı destekler ve ayrıca Heroku ve DigitalOcean gibi düzinelerce küçük oyuncuları da destekler. Şablon tanımlama dili olarak JSON kullanmak yerine, biraz daha terse YAML kullanır. 
+Yalnızca bunu yapan çeşitli teknolojiler vardır! Bu alandaki en çok sayıda teklif [Terrayform](https://www.terraform.io/)olarak bilinir. Terminform, Azure, Google Cloud Platform, AWS ve AliCloud gibi her büyük bulut oynatıcıyı destekler ve ayrıca Heroku ve DigitalOcean gibi düzinelerce küçük oyuncuları da destekler. Şablon tanımlama dili olarak JSON kullanmak yerine, biraz daha terse YAML kullanır.
 
 Şekil 11-12 ' de, önceki Kaynak Yöneticisi şablonuyla aynı olan bir örnek Teraform dosyası (Şekil 11-11) gösterilmektedir:
 

@@ -2,16 +2,16 @@
 title: Mevcut .NET uygulamalarını Azure IaaS 'ye yükseltme ve kaydırma (bulut altyapısına hazırlanın)
 description: Azure bulut ve Windows kapsayıcıları Ile mevcut .NET uygulamalarını modernleştirin.
 ms.date: 04/28/2018
-ms.openlocfilehash: ae181784e7de5f66b34d2dc38c6e9ec2e004a0c3
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: c7638a034dbb27baea1b097bdb66175bfb5a71f2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373980"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73089629"
 ---
 # <a name="lift-and-shift-existing-net-apps-to-azure-iaas-cloud-infrastructure-ready"></a>Mevcut .NET uygulamalarını Azure IaaS 'ye yükseltme ve kaydırma (bulut altyapısına hazırlanın)
 
-> Minin İlk adım olarak, şirket içi yatırımınızın yanı sıra donanım ve ağ bakımının toplam maliyetini azaltmak için, mevcut uygulamalarınızı bulutta yeniden barındırmanız yeterlidir.
+> Vizyon: ilk adım olarak, şirket içi yatırımınızdan ve donanım ve ağ bakımının toplam maliyetinizi azaltmak için, mevcut uygulamalarınızı bulutta yeniden barındırmanız yeterlidir.
 
 Mevcut uygulamalarınızı Azure hizmet olarak altyapı (IaaS) platformuna geçirme işlemine geçmeden önce, Azure 'Da IaaS 'ye doğrudan geçiş *yapmak istediğiniz nedenleri analiz etmeniz önemlidir* . Bu modernon vade düzeyindeki senaryo temelde, geçerli şirket içi altyapınızı kullanmaya devam etmek yerine buluttaki VM 'Leri kullanmaya başlamadır.
 
@@ -35,11 +35,11 @@ Ayrıca, uygulamaların bulutta zaten çalışmakta olduğu durumlarda (IaaS 'de
 
 ## <a name="when-to-migrate-to-iaas-instead-of-to-paas"></a>PaaS yerine IaaS 'e geçiş yapma
 
-Sonraki bölümlerde, genellikle PaaS platformları ve hizmetlerine bağlı olan buluta Iyileştirilmiş uygulamalar ele alınmaktadır. Bu uygulamalar, buluta geçiş işleminden en iyi avantajları sağlar. 
+Sonraki bölümlerde, genellikle PaaS platformları ve hizmetlerine bağlı olan buluta Iyileştirilmiş uygulamalar ele alınmaktadır. Bu uygulamalar, buluta geçiş işleminden en iyi avantajları sağlar.
 
-Amacınız var olan uygulamaları buluta taşımak için ilk olarak, Azure App Service içinde çalışması gereken önemli değişiklikleri gerektirmeyen mevcut uygulamaları belirlersiniz. Bu uygulamalar, buluta En Iyi duruma getirilmiş ilk aday olmalıdır. 
+Amacınız var olan uygulamaları buluta taşımak için ilk olarak, Azure App Service içinde çalışması gereken önemli değişiklikleri gerektirmeyen mevcut uygulamaları belirlersiniz. Bu uygulamalar, buluta En Iyi duruma getirilmiş ilk aday olmalıdır.
 
-Daha sonra, Azure Kubernetes hizmeti gibi App Service veya düzenleyicilerle Windows kapsayıcılarına ve PaaS 'ye geçemeyen uygulamalar için, bunları basit düz VM 'lere (IaaS) geçirin. 
+Daha sonra, Azure Kubernetes hizmeti gibi App Service veya düzenleyicilerle Windows kapsayıcılarına ve PaaS 'ye geçemeyen uygulamalar için, bunları basit düz VM 'lere (IaaS) geçirin.
 
 Ancak, VM 'Lerin yapılandırılması, güvenliğinin sağlanması ve sürdürülmesi, Azure 'da PaaS hizmetlerini kullanmaya kıyasla çok daha fazla zaman ve BT uzmanlığı gerektirdiğini unutmayın. Azure sanal makinelerini düşünüyorsanız, VM ortamınızı düzeltme eki uygulamak, güncelleştirmek ve yönetmek için gereken devam eden bakım çabalarını göz önünde bulundurduğunuzdan emin olun. Azure sanal makineleri IaaS 'dir.
 
@@ -106,5 +106,5 @@ Site Recovery Ayrıca, kısmen şirket içinde ve kısmen Azure 'da olan karma o
     <https://docs.microsoft.com/azure/site-recovery/site-recovery-migrate-aws-to-azure>
 
 >[!div class="step-by-step"]
->[Önceki](index.md)İleri
->[](migrate-your-relational-databases-to-azure.md) <!-- Next Chapter -->
+>[Önceki](index.md)
+>[İleri](migrate-your-relational-databases-to-azure.md) <!-- Next Chapter -->

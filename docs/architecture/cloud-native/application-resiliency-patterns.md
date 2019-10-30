@@ -2,18 +2,18 @@
 title: Uygulama dayanıklılığı desenleri
 description: Azure için Cloud Native .NET uygulamaları tasarlama | Uygulama dayanıklılığı desenleri
 ms.date: 06/30/2019
-ms.openlocfilehash: 67ae20f14a67f3a96d6c74cad727afe680ff3178
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 13811efaa88e0bd2824add1c8712b78b18d46375
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72315949"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73087757"
 ---
 # <a name="application-resiliency-patterns"></a>Uygulama dayanıklılığı desenleri
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-İlk savunma hattı, yazılım etkin uygulama dayanıklılığı ' dır. 
+İlk savunma hattı, yazılım etkin uygulama dayanıklılığı ' dır.
 
 Kendi dayanıklılık çatısını yazarken önemli ölçüde yatırım yapabilirsiniz, ancak bu tür ürünler zaten var. Örneğin, [Polly](http://www.thepollyproject.org/) , geliştiricilerin dayanıklılık ilkelerini akıcı ve iş parçacığı açısından güvenli bir şekilde ifade etmesine olanak tanıyan kapsamlı bir .net esnekliği ve geçici hata işleme kitaplığıdır. Tam .NET Framework veya .NET Core ile oluşturulmuş uygulamaları Polly hedefler. Şekil 6-2, Polly kitaplığından kullanılabilen dayanıklılık ilkelerini (diğer bir deyişle, işlevselliği) gösterir. Bu ilkeler ayrı ayrı uygulanabilir veya birlikte birleştirilebilir.
 

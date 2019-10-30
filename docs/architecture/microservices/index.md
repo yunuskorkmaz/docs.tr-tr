@@ -2,29 +2,29 @@
 title: .NET mikro hizmetleri. Kapsayıcılı .NET Uygulamaları Mimarisi
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | Mikro hizmetler modüler ve bağımsız olarak dağıtılabilir hizmetlerdir. Docker Kapsayıcıları (Linux ve Windows için), bir hizmet ve bağımlılıklarını tek bir birim halinde paketleyerek dağıtım ve test etmeyi basitleştirir. Bu, daha sonra yalıtılmış bir ortamda çalıştırılır.
 ms.date: 01/07/2019
-ms.openlocfilehash: dcfff8b06dc77b47e6586ea82c82acc30a5cf3df
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 7fa4935fe56ca873a5311812637964083e34170e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70848869"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73089906"
 ---
-# <a name="net-microservices-architecture-for-containerized-net-applications"></a>.NET Mikro Hizmetleri: Kapsayıcılı .NET Uygulamaları Mimarisi
+# <a name="net-microservices-architecture-for-containerized-net-applications"></a>.NET mikro hizmetleri: Kapsayıcılı .NET uygulamaları için mimari
 
 ![Kitap kapağı](./media/cover-small.png)
 
 **Sürüm v 2.2** -ASP.NET Core 2,2 ' ye güncelleştirildi
 
-Bu kılavuz, mikro hizmet tabanlı uygulamalar geliştirmeye ve kapsayıcıları kullanarak bunları yönetmeye yönelik bir giriş niteliğindedir. .NET Core ve Docker Kapsayıcıları kullanılarak mimari tasarımı ve uygulama yaklaşımlarını ele alır. 
+Bu kılavuz, mikro hizmet tabanlı uygulamalar geliştirmeye ve kapsayıcıları kullanarak bunları yönetmeye yönelik bir giriş niteliğindedir. .NET Core ve Docker Kapsayıcıları kullanılarak mimari tasarımı ve uygulama yaklaşımlarını ele alır.
 
 Daha kolay çalışmaya başlamak için kılavuz, keşfedebileceğiniz bir başvuru Kapsayıcılı ve mikro hizmet tabanlı uygulamaya odaklanır. Başvuru uygulaması [Eshoponcontainers](https://github.com/dotnet-architecture/eShopOnContainers) GitHub deposunda mevcuttur.
 
 ## <a name="action-links"></a>Eylem bağlantıları
 
-- Bu e-tap 'ı tercih ettiğiniz biçimde indirin: | [PDF](https://aka.ms/microservicesebook) mobi[EPUB](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook-epub) [](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook-mobi)  |  |  |
+- Bu e-kitabı tercih ettiğiniz biçime indirin (Yalnızca Ingilizce sürüm): | [PDF](https://aka.ms/microservicesebook) | [mobi](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook-mobi) | [EPUB](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook-epub) |
 
 - [GitHub 'daki başvuru uygulaması Eshoponcontainers 'ı](https://github.com/dotnet-architecture/eShopOnContainers) kopyalama/çatal
- 
+
 - [Kanal 9 ' da tanıtım videosunu](https://aka.ms/microservices-video) izleyin
 
 - [Mikro hizmet mimarisini](https://aka.ms/MicroservicesArchitecture) hemen öğrenin
@@ -41,13 +41,13 @@ Ayrıca, [mikro hizmetler](https://martinfowler.com/articles/microservices.html)
 
 Bu kılavuz, mikro hizmet tabanlı uygulamalar geliştirmeye ve kapsayıcıları kullanarak bunları yönetmeye yönelik bir giriş niteliğindedir. .NET Core ve Docker Kapsayıcıları kullanılarak mimari tasarımı ve uygulama yaklaşımlarını ele alır. Kapsayıcılar ve mikro hizmetlerle çalışmaya başlamanızı kolaylaştırmak için, rehber, keşfedebileceğiniz bir başvuru Kapsayıcılı ve mikro hizmet tabanlı uygulamaya odaklanır. Örnek uygulama [Eshoponcontainers](https://github.com/dotnet-architecture/eShopOnContainers) GitHub deposunda mevcuttur.
 
-Bu kılavuzda, temel olarak iki teknoloji üzerinde odaklanılmış bir geliştirme ortamı düzeyinde geliştirme ve mimari yönergeler sunulmaktadır: Docker ve .NET Core. Amaç, üretim ortamınızın altyapısına (bulut veya şirket içi) odaklanmadan uygulama tasarımınız hakkında düşünce yaparken bu kılavuzu okuduğunuzdan emin olur. Daha sonra, üretime yönelik uygulamalar oluşturduğunuzda altyapınızla ilgili kararlar alırsınız. Bu nedenle, bu kılavuzun altyapı belirsiz ve daha fazla geliştirme ortamı merkezli olması amaçlanmıştır.
+Bu kılavuzda, temel olarak iki teknolojiyi içeren bir geliştirme ortamı düzeyinde temel geliştirme ve mimari yönergeler sunulmaktadır: Docker ve .NET Core. Amaç, üretim ortamınızın altyapısına (bulut veya şirket içi) odaklanmadan uygulama tasarımınız hakkında düşünce yaparken bu kılavuzu okuduğunuzdan emin olur. Daha sonra, üretime yönelik uygulamalar oluşturduğunuzda altyapınızla ilgili kararlar alırsınız. Bu nedenle, bu kılavuzun altyapı belirsiz ve daha fazla geliştirme ortamı merkezli olması amaçlanmıştır.
 
 Bu kılavuzu araştırdık aldıktan sonra, bir sonraki adımınız Microsoft Azure üzerinde üretime Ready mikro hizmetler hakkında bilgi almak için olacaktır.
 
-## <a name="version"></a>Sürüm
+## <a name="version"></a>Version
 
-Bu kılavuz, **.NET Core 2,2** sürümünün yanı sıra teknolojilerin "Wave" ile ilgili birçok ek güncelleştirmeyi (yani,) kapsayacak şekilde değiştirilmiştir. Azure ve diğer 3. taraf teknolojileri) .NET Core 2,2 ile zaman içinde coinciding. Kitap sürümü de **2,2**sürümüne güncelleştirilmiştir. 
+Bu kılavuz, **.NET Core 2,2** sürümünün yanı sıra teknolojilerin "Wave" ile ilgili birçok ek güncelleştirmeyi (yani,) kapsayacak şekilde değiştirilmiştir. Azure ve diğer 3. taraf teknolojileri) .NET Core 2,2 ile zaman içinde coinciding. Kitap sürümü de **2,2**sürümüne güncelleştirilmiştir.
 
 ## <a name="what-this-guide-does-not-cover"></a>Bu kılavuzun kapsamayan
 
@@ -72,7 +72,7 @@ Kılavuzun ikinci bölümü, [Docker tabanlı uygulamalar Için geliştirme sür
 
 ## <a name="related-microservice-and-container-based-reference-application-eshoponcontainers"></a>İlgili mikro hizmet ve kapsayıcı tabanlı başvuru uygulaması: eShopOnContainers
 
-EShopOnContainers uygulaması, Docker Kapsayıcıları kullanılarak dağıtılacak şekilde tasarlanan .NET Core ve mikro hizmetlere yönelik açık kaynaklı bir başvuru uygulamasıdır. Uygulama, birkaç e-mağaza Kullanıcı arabirimi ön uçları (bir Web MVC uygulaması, Web SPA ve yerel bir mobil uygulama) dahil olmak üzere birden çok alt sistemi içerir. Ayrıca, tüm gerekli sunucu tarafı işlemler için arka uç mikro hizmetleri ve kapsayıcıları da içerir. 
+EShopOnContainers uygulaması, Docker Kapsayıcıları kullanılarak dağıtılacak şekilde tasarlanan .NET Core ve mikro hizmetlere yönelik açık kaynaklı bir başvuru uygulamasıdır. Uygulama, birkaç e-mağaza Kullanıcı arabirimi ön uçları (bir Web MVC uygulaması, Web SPA ve yerel bir mobil uygulama) dahil olmak üzere birden çok alt sistemi içerir. Ayrıca, tüm gerekli sunucu tarafı işlemler için arka uç mikro hizmetleri ve kapsayıcıları da içerir.
 
 Uygulamanın amacı, mimari desenleri göstersağlamaktır. Gerçek dünyada uygulamaları başlatmak için ÜRETIME yönelik olarak **hazırlanmayan BIR şablon değildir** . Aslında, yeni ilginç teknolojileri göründükleri gibi test etmek için de kullanıldığından, uygulama kalıcı bir beta durumundadır.
 
@@ -82,7 +82,7 @@ Uygulamanın amacı, mimari desenleri göstersağlamaktır. Gerçek dünyada uyg
 
 [dotnet-architecture-ebooks-feedback@service.microsoft.com](mailto:dotnet-architecture-ebooks-feedback@service.microsoft.com)
 
-## <a name="credits"></a>Jenerik
+## <a name="credits"></a>iler
 
 Ortak Yazarlar:
 
@@ -148,11 +148,11 @@ Katılımcılar ve gözden geçirenler:
 >
 > **Miguel Veloso**, SR. danışman, zorlu zorluk
 
-## <a name="copyright"></a>Yaptırımlar
+## <a name="copyright"></a>yaptırımlar
 
-INDIRME:<https://aka.ms/microservicesebook>
+INDIRME şu adreste bulunabilir: <https://aka.ms/microservicesebook>
 
-YAYIMLAYAN
+YAYıMLAYAN
 
 Microsoft Geliştirici bölümü, .NET ve Visual Studio ürün ekipleri
 
@@ -170,11 +170,11 @@ Bu kitap, "olduğu gibi" verilmiştir ve yazarın görünümlerini ve opnons 'yi
 
 Burada gösterilen bazı örnekler yalnızca gösterim amaçlıdır ve hayal ürünüdür. Hiçbir gerçek ilişkilendirme veya bağlantı amaçlanmaz veya çıkarsanmamalıdır.
 
-Microsoft ve "ticari markalar" <https://www.microsoft.com> Web sayfasında listelenen ticari markalar, Microsoft şirketler grubunun ticari markalarıdır.
+Microsoft ve "ticari markalar" Web sayfasındaki <https://www.microsoft.com> listelenen ticari markalar, Microsoft şirketler grubunun ticari markalarıdır.
 
 Mac ve macOS, Apple Inc. ' in ticari markalarıdır.
 
-Docker balina logosu, Docker, Inc 'nin tescilli ticari markasıdır. İzin tarafından kullanılır.
+Docker balina logosu,, izin tarafından kullanılan Docker, Inc. ' in tescilli ticari markasıdır.
 
 Diğer tüm işaretler ve amblemler kendi sahiplerinin mülkiyetindedir.
 
