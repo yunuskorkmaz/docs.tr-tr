@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8c6d2089-4dbb-4715-b9e9-2a4491c8c9ce
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d438123dcefb901098954845596c210e5b76cea6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a0b70078dee88b270d8361aa9bddcb7d80df1db1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67764107"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129464"
 ---
 # <a name="icordebugmodule2setjmcstatus-method"></a>ICorDebugModule2::SetJMCStatus Yöntemi
-Tüm sınıfların tüm yöntemleri yalnızca benim kodum (JMC) durumunu bu Icordebugmodule2 hariç belirtilen değere ayarlar `pTokens` dizisi karşı değer olarak ayarlar.  
+Bu ICorDebugModule2 içindeki tüm sınıfların tüm yöntemlerinin Yalnızca kendi kodum (JMC) durumunu, `pTokens` dizisinde, zıt değere göre ayarladıkları durumlar dışında, belirtilen değere ayarlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,26 +37,26 @@ HRESULT SetJMCStatus (
   
 ## <a name="parameters"></a>Parametreler  
  `bIsJustMycode`  
- [in] Kümesine `true` kod hata ayıklaması; tersi durumda ise, kümesine `false`.  
+ 'ndaki Kodun ayıklanamayacağını `true` olarak ayarlayın; Aksi takdirde, `false`olarak ayarlayın.  
   
  `cTokens`  
- [in] Boyutu `pTokens` dizisi.  
+ 'ndaki `pTokens` dizisinin boyutu.  
   
  `pTokens`  
- [in] Bir dizi `mdToken` değerler, her biri JMC durumunu kümesine sahip olan bir yönteme başvuran!`bIsJustMycode`.  
+ 'ndaki Her biri JMC durumunun olarak ayarlandığı bir yönteme başvuran `mdToken` değerleri dizisi!`bIsJustMycode`.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Belirtilen her yöntemin JMC durumunu `pTokens` dizi tersini için ayarlanmış `bIsJustMycode` değeri. Bu modüldeki tüm diğer yöntemler durumunu ayarlamak `bIsJustMycode` değeri.  
+ `pTokens` dizisinde belirtilen her yöntemin JMC durumu `bIsJustMycode` değerinin tersi olarak ayarlanır. Bu modüldeki diğer tüm yöntemlerin durumu `bIsJustMycode` değerine ayarlanır.  
   
- `SetJMCStatus` Yöntemi bu modüldeki tüm önceki JMC ayarları siler.  
+ `SetJMCStatus` yöntemi Bu modüldeki önceki tüm JMC ayarlarını siler.  
   
- `SetJMCStatus` Yöntemi, tüm işlevler başarıyla belirlenmişse bir S_OK HRESULT döndürür. CORDBG_E_FUNCTION_NOT_DEBUGGABLE bazı işlevler, HRESULT işaretlenir döndürür `true` hata ayıklanabilir değildir.  
+ Tüm işlevler başarıyla ayarlandıysa `SetJMCStatus` yöntemi bir S_OK HRESULT döndürür. `true` işaretlenen bazı işlevler hata ayıklanabilir değilse, bir CORDBG_E_FUNCTION_NOT_DEBUGGABLE HRESULT döndürür.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

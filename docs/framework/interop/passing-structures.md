@@ -7,17 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - platform invoke, calling unmanaged functions
 ms.assetid: 9b92ac73-32b7-4e1b-862e-6d8d950cf169
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: eef52827bfe36977c9c4c844f4f431e7404adc97
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 8fde48f0697d986c5fc7f6d7059b6b45a6af1488
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71051674"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124973"
 ---
 # <a name="passing-structures"></a>Yapıları Geçirme
-Birçok yönetilmeyen işlev, işlevine parametre olarak, yapıların üyelerini (Visual Basic içinde Kullanıcı tanımlı türler) veya yönetilen kodda tanımlanan sınıfların üyelerini geçirmenize bekler. Platform Invoke kullanılarak yönetilmeyen koda yapıları veya sınıfları geçirirken, özgün düzeni ve hizalamayı korumak için ek bilgiler sağlamalısınız. Bu konuda, biçimli <xref:System.Runtime.InteropServices.StructLayoutAttribute> türleri tanımlamak için kullandığınız özniteliği tanıtılmıştır. Yönetilen yapılar ve sınıflar için, **LayoutKind** numaralandırması tarafından sağlanan birkaç öngörülebilir düzen davranışı arasından seçim yapabilirsiniz.  
+Birçok yönetilmeyen işlev, işlevine parametre olarak, yapıların üyelerini (Visual Basic içinde Kullanıcı tanımlı türler) veya yönetilen kodda tanımlanan sınıfların üyelerini geçirmenize bekler. Platform Invoke kullanılarak yönetilmeyen koda yapıları veya sınıfları geçirirken, özgün düzeni ve hizalamayı korumak için ek bilgiler sağlamalısınız. Bu konuda, biçimli türleri tanımlamak için kullandığınız <xref:System.Runtime.InteropServices.StructLayoutAttribute> özniteliği tanıtılmaktadır. Yönetilen yapılar ve sınıflar için, **LayoutKind** numaralandırması tarafından sağlanan birkaç öngörülebilir düzen davranışı arasından seçim yapabilirsiniz.  
   
  Bu konu başlığı altında sunulan kavramlara, yapı ve sınıf türleri arasındaki önemli bir fark vardır. Yapılar değer türlerdir ve sınıflardır başvuru türleridir — sınıflar her zaman en az bir bellek yöneltme düzeyi (bir değere işaretçi) sağlar. Yönetilmeyen işlevler, aşağıdaki tablonun ilk sütunundaki imzalarda gösterildiği gibi genellikle dolaylı olarak talep ettiği için bu farklılık önemlidir. Kalan sütunlardaki yönetilen yapı ve sınıf bildirimleri, bildirimindeki yöneltme düzeyini ayarlayabileceğiniz dereceyi gösterir. Bildirimler hem Visual Basic hem de görsel C#için sağlanır.  
   
@@ -25,7 +23,7 @@ Birçok yönetilmeyen işlev, işlevine parametre olarak, yapıların üyelerini
 |-------------------------|---------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|  
 |`DoWork(MyType x);`<br /><br /> Sıfır yöneltme düzeyini talep edin.|`DoWork(ByVal x As MyType)` <br /> `DoWork(MyType x)`<br /><br /> Sıfır yöneltme düzeyleri ekler.|Zaten tek bir yöneltme düzeyi olduğundan mümkün değil.|  
 |`DoWork(MyType* x);`<br /><br /> Tek düzey yöneltme taleplerini ister.|`DoWork(ByRef x As MyType)` <br /> `DoWork(ref MyType x)`<br /><br /> Tek bir yöneltme düzeyi ekler.|`DoWork(ByVal x As MyType)` <br /> `DoWork(MyType x)`<br /><br /> Sıfır yöneltme düzeyleri ekler.|  
-|`DoWork(MyType** x);`<br /><br /> İki yöneltme düzeyi talep edin.|**ByRef** **ByRef** `ref` veya`ref` kullanılamıyor olduğundan mümkün değil.|`DoWork(ByRef x As MyType)` <br /> `DoWork(ref MyType x)`<br /><br /> Tek bir yöneltme düzeyi ekler.|  
+|`DoWork(MyType** x);`<br /><br /> İki yöneltme düzeyi talep edin.|**ByRef** **byref** veya `ref` `ref` kullanılamadığından mümkün değildir.|`DoWork(ByRef x As MyType)` <br /> `DoWork(ref MyType x)`<br /><br /> Tek bir yöneltme düzeyi ekler.|  
   
  Tablo, platform çağırma bildirimleri için aşağıdaki yönergeleri açıklar:  
   
@@ -36,7 +34,7 @@ Birçok yönetilmeyen işlev, işlevine parametre olarak, yapıların üyelerini
 - Yönetilmeyen işlev iki yöneltme düzeyi talep edildiğinde başvuruya göre geçirilen bir sınıf kullanın.  
   
 ## <a name="declaring-and-passing-structures"></a>Yapıları bildirme ve geçirme  
- Aşağıdaki örnek, yönetilen kodda `Point` ve `Rect` yapıların nasıl tanımlanacağını gösterir ve türleri parametre olarak User32. dll dosyasındaki **ptinrect** işlevine iletir. **Pınrect** aşağıdaki yönetilmeyen imzaya sahiptir:  
+ Aşağıdaki örnek, Yönetilen koddaki `Point` ve `Rect` yapıların nasıl tanımlanacağını gösterir ve türleri parametre olarak User32. dll dosyasındaki **Ptinrect** işlevine iletir. **Pınrect** aşağıdaki yönetilmeyen imzaya sahiptir:  
   
 ```cpp
 BOOL PtInRect(const RECT *lprc, POINT pt);  
@@ -90,7 +88,7 @@ internal static class NativeMethods
 ```  
   
 ## <a name="declaring-and-passing-classes"></a>Sınıfları bildirme ve geçirme  
- Sınıf, sabit bir üye düzenine sahip olduğu sürece, bir sınıfın üyelerini yönetilmeyen DLL işlevine geçirebilirsiniz. Aşağıdaki örnek, sıralı sırada tanımlanan `MySystemTime` sınıfın üyelerinin User32. dll dosyasındaki **GetSystemTime** 'a nasıl geçirileceğini gösterir. **GetSystemTime** , şu yönetilmeyen imzaya sahiptir:  
+ Sınıf, sabit bir üye düzenine sahip olduğu sürece, bir sınıfın üyelerini yönetilmeyen DLL işlevine geçirebilirsiniz. Aşağıdaki örnek, sıralı sırada tanımlanan `MySystemTime` sınıfının üyelerinin, User32. dll dosyasındaki **GetSystemTime** 'a nasıl geçirileceğini gösterir. **GetSystemTime** , şu yönetilmeyen imzaya sahiptir:  
   
 ```cpp
 void GetSystemTime(SYSTEMTIME* SystemTime);  

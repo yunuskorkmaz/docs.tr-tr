@@ -2,14 +2,12 @@
 title: ICorDebugMemoryBuffer Arabirimi
 ms.date: 03/30/2017
 ms.assetid: 85dc2d65-3657-4b93-9f23-9feaa95d37ff
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 77fa6b1a8c7a559b9d88c0173e389ec11a75ec8b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 9e43f9a2297eb56755c7a6bba73e994441cbfeaa
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69914781"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127972"
 ---
 # <a name="icordebugmemorybuffer-interface"></a>ICorDebugMemoryBuffer Arabirimi
 Bellek içi arabelleği temsil eder.  
@@ -27,11 +25,11 @@ Bellek içi arabelleği temsil eder.
 > Bu arabirim yalnızca .NET Native kullanılabilir. Bu arabirimi .NET Native dışında ICorDebug senaryolarında uygularsanız, ortak dil çalışma zamanı bu arabirimi yoksayar.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi** CorDebug. IDL, CorDebug. h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı** Corguid. lib  
+ **Kitaplık:** Corguid. lib  
   
  **.NET Framework sürümleri:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

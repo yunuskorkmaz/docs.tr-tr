@@ -14,14 +14,12 @@ helpviewer_keywords:
 - Delete function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a1bf9bd5d93d1affee649588138456269411d280
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 6b8f287be831702dd31a8335f9b2f6447bcee540
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798675"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127661"
 ---
 # <a name="delete-function"></a>Delete işlevi
 
@@ -48,7 +46,7 @@ HRESULT Delete (
 'ndaki [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) örneğine yönelik bir işaretçi.
 
 `wszName`\
-'ndaki Silinecek özelliğin adı. `wszName`geçerli `LPCWSTR`bir işaretçi olmalıdır.
+'ndaki Silinecek özelliğin adı. `wszName` geçerli bir `LPCWSTR`işaretçisi olmalıdır.
 
 ## <a name="return-value"></a>Dönüş değeri
 
@@ -72,9 +70,9 @@ Bu işlev, [IWbemClassObject::D Sil](/windows/desktop/api/wbemcli/nf-wbemcli-iwb
 
 ## <a name="requirements"></a>Gereksinimler
 
-**Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).
+**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).
 
-**Üst bilgi** WMINet_Utils. IDL
+**Üst bilgi:** WMINet_Utils. IDL
 
 **.NET Framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 

@@ -2,14 +2,12 @@
 title: 'Icordebugmergedassemblyrecord:: GetPublicKeyToken yöntemi'
 ms.date: 03/30/2017
 ms.assetid: 72020b72-9611-4bc3-b1e7-5a16b023bfa3
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 626aa53740839df0b47a876b3e82814a63ffd82d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 95ed1303b33b328d1f14ecea6cc318e14991cd54
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69936862"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129781"
 ---
 # <a name="icordebugmergedassemblyrecordgetpublickeytoken-method"></a>Icordebugmergedassemblyrecord:: GetPublicKeyToken yöntemi
 Derlemenin ortak anahtar belirtecini alır.  
@@ -26,10 +24,10 @@ HRESULT GetPublicKeyToken(
   
 ## <a name="parameters"></a>Parametreler  
  `cbPublicKeyToken`  
- 'ndaki `pbPublicKeyToken` Dizideki en fazla bayt sayısı.  
+ 'ndaki `pbPublicKeyToken` dizisindeki en fazla bayt sayısı.  
   
  `pcbPublicKeyToken`  
- dışı `pbPublicKeyToken` Diziye yazılan gerçek bayt sayısına yönelik bir işaretçi.  
+ dışı `pbPublicKeyToken` dizisine yazılan gerçek bayt sayısına yönelik bir işaretçi.  
   
  `pbPublicKeyToken`  
  dışı Derlemenin ortak anahtar belirtecini içeren bir bayt dizisine yönelik bir işaretçi.  
@@ -41,11 +39,11 @@ HRESULT GetPublicKeyToken(
 > Bu yöntem yalnızca .NET Native kullanılabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi** CorDebug. IDL, CorDebug. h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı** Corguid. lib  
+ **Kitaplık:** Corguid. lib  
   
  **.NET Framework sürümleri:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: bfb2cd39-3e0b-4d51-ba0c-f009755c1456
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f7b340a73aa9eaebca9c0d78563ae298557039b8
-ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
+ms.openlocfilehash: b6fd3682290c9752125aed7b9663c6704ade25de
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274187"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132328"
 ---
 # <a name="cor_heapinfo-structure"></a>COR_HEAPINFO Yapısı
 Çöp toplama yığını hakkında, numaralandırılabilir olup olmadığı dahil genel bilgiler sağlar.  
@@ -42,23 +40,23 @@ typedef struct _COR_HEAPINFO {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`areGCStructuresValid`|`true`çöp toplama yapıları geçerliyse ve yığın Numaralandırılabilir. Aksi takdirde `false`,.|  
+|`areGCStructuresValid`|çöp toplama yapıları geçerliyse ve yığın numaralandırılabilir ise `true`; Aksi takdirde, `false`.|  
 |`pointerSize`|Hedef mimarideki işaretçilerin bayt cinsinden boyutu.|  
 |`numHeaps`|İşlemdeki mantıksal çöp toplama yığınlarını sayısı.|  
-|`concurrent`|`TRUE`eş zamanlı (arka plan) çöp toplama etkinse; Aksi takdirde `FALSE`,.|  
+|`concurrent`|eş zamanlı (arka plan) çöp toplama etkinse `TRUE`; Aksi takdirde, `FALSE`.|  
 |`gcType`|Çöp toplayıcısının bir iş istasyonunda veya sunucuda çalışıp çalışmadığını belirten, [Cordebugggctype](cordebuggctype-enumeration.md) numaralandırmasının bir üyesi.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `COR_HEAPINFO` [ICorDebugProcess5:: GetGCHeapInformation](icordebugprocess5-getgcheapinformation-method.md) yöntemi çağırarak yapının bir örneği döndürülür.  
+ `COR_HEAPINFO` yapısının bir örneği, [ICorDebugProcess5:: GetGCHeapInformation](icordebugprocess5-getgcheapinformation-method.md) yöntemi çağırarak döndürülür.  
   
- Çöp toplama yığınında nesneleri numaralandırmadan önce, yığının sıralanabilir bir durumda olduğundan emin `areGCStructuresValid` olmak için alanı her zaman denetlemeniz gerekir. Daha fazla bilgi için bkz. [ICorDebugProcess5:: GetGCHeapInformation](icordebugprocess5-getgcheapinformation-method.md) yöntemi.  
+ Çöp toplama yığınında nesneleri numaralandırmadan önce, yığının sıralanabilir bir durumda olduğundan emin olmak için `areGCStructuresValid` alanı her zaman denetlemeniz gerekir. Daha fazla bilgi için bkz. [ICorDebugProcess5:: GetGCHeapInformation](icordebugprocess5-getgcheapinformation-method.md) yöntemi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üst bilgi** CorDebug. IDL, CorDebug. h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı** Corguid. lib  
+ **Kitaplık:** Corguid. lib  
   
  **.NET Framework sürümleri:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   

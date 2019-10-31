@@ -1,5 +1,5 @@
 ---
-title: . NET'te dizeleri doldurma
+title: .NET 'teki dizeleri doldurma
 ms.date: 03/15/2018
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,37 +13,35 @@ helpviewer_keywords:
 - PadLeft method
 - padding strings
 ms.assetid: 84a9f142-3244-4c90-ba02-21af9bbaff71
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3f58e1c3a9e42f48ecc219a2db1649051f9ca20b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2cf114296005456f354d286aa2804fa8a95160dc
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61811546"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127618"
 ---
-# <a name="padding-strings-in-net"></a>. NET'te dizeleri doldurma
+# <a name="padding-strings-in-net"></a>.NET 'teki dizeleri doldurma
 
-Aşağıdakilerden birini kullanın <xref:System.String> baştaki veya sondaki karakterler belirtilen toplam uzunluğu sıfır özgün bir dize içeren yeni bir dize oluşturmak için yöntemleri. Doldurma karakteri boşluk veya belirtilen bir karakter olabilir. Sonuç dizesi sağa veya sola hizalanmış gibi görünür. Orijinal dizenin uzunluğu, zaten istenen toplam uzunluğundan büyük veya eşit ise, doldurma yöntemleri değişmeden orijinal dizeyi döndürür; Daha fazla bilgi için **döndürür** bölümlerde iki aşırı yüklemelerinden birini <xref:System.String.PadLeft%2A?displayProperty=nameWithType> ve <xref:System.String.PadRight%2A?displayProperty=nameWithType> yöntemleri.
+Belirtilen toplam uzunluğa baştaki veya sondaki karakterlerle doldurulan bir özgün dizeden oluşan yeni bir dize oluşturmak için aşağıdaki <xref:System.String> yöntemlerinden birini kullanın. Doldurma karakteri bir boşluk veya belirtilen karakter olabilir. Elde edilen dize, sağa hizalı veya sola hizalı olarak görünür. Özgün dizenin uzunluğu, istenen toplam uzunluğa zaten eşitse veya daha büyükse, doldurma yöntemleri özgün dizeyi değiştirilmemiş şekilde döndürür; daha fazla bilgi için, <xref:System.String.PadLeft%2A?displayProperty=nameWithType> ve <xref:System.String.PadRight%2A?displayProperty=nameWithType> yöntemlerinin iki aşırı yüklemesinin **geri dönüş** bölümlerine bakın.
   
 |Yöntem adı|Bir yönetim grubuna bağlanmak veya bağlı bir yönetim grubunun özelliklerini düzenlemek için Yönetim çalışma alanında|  
 |-----------------|---------|  
-|<xref:System.String.PadLeft%2A?displayProperty=nameWithType>|Bir dize için belirtilen bir toplam uzunluğu baştaki ile sıfır ekleyerek doldurur.|  
-|<xref:System.String.PadRight%2A?displayProperty=nameWithType>|Bir dize sondaki karakterler belirtilen toplam uzunluğu olan sıfır ekleyerek doldurur.|  
+|<xref:System.String.PadLeft%2A?displayProperty=nameWithType>|Baştaki karakterlerle belirtilen toplam uzunluğa sahip bir dizeyi defterler.|  
+|<xref:System.String.PadRight%2A?displayProperty=nameWithType>|Sondaki karakterlerle bir dizeyi belirtilen toplam uzunluğa göre defterler.|  
   
-## <a name="padleft"></a>padLeft  
- <xref:System.String.PadLeft%2A?displayProperty=nameWithType> Yöntemi, özgün dizeye belirtilen toplam uzunluğu elde etmek için yeterli sayıda önde gelen paneli karakter birleştirerek yeni bir dize oluşturur. <xref:System.String.PadLeft%28System.Int32%29?displayProperty=nameWithType> Boşluk doldurma karakteri kullanmaktadır ve <xref:System.String.PadLeft%28System.Int32%2CSystem.Char%29?displayProperty=nameWithType> yöntemi kendi doldurma karakteri belirtmenize imkan tanır.  
+## <a name="padleft"></a>Asma sol  
+ <xref:System.String.PadLeft%2A?displayProperty=nameWithType> yöntemi, belirtilen toplam uzunluğu elde etmek için, bir özgün dizeye yeterince önde gelen doldurma karakteri birleştirerek yeni bir dize oluşturur. <xref:System.String.PadLeft%28System.Int32%29?displayProperty=nameWithType> yöntemi, doldurma karakteri olarak boşluk kullanır ve <xref:System.String.PadLeft%28System.Int32%2CSystem.Char%29?displayProperty=nameWithType> yöntemi kendi doldurma karakterinizi belirtmenizi sağlar.  
   
- Aşağıdaki kod örneğinde <xref:System.String.PadLeft%2A> yirmi karakterden uzun yeni bir dize oluşturmak için yöntemi. Örnek görüntüler "`--------Hello World!`" konsola.  
+ Aşağıdaki kod örneği, yirmi karakter uzunluğunda yeni bir dize oluşturmak için <xref:System.String.PadLeft%2A> yöntemini kullanır. Örnek, konsola "`--------Hello World!`" görüntüler.  
   
  [!code-cpp[Conceptual.String.BasicOps#3](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.string.basicops/cpp/padding.cpp#3)]
  [!code-csharp[Conceptual.String.BasicOps#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.basicops/cs/padding.cs#3)]
  [!code-vb[Conceptual.String.BasicOps#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.basicops/vb/padding.vb#3)]  
   
-## <a name="padright"></a>PadRight  
- <xref:System.String.PadRight%2A?displayProperty=nameWithType> Yöntemi, özgün dizeye belirtilen toplam uzunluğu elde etmek için yeterli sonunda paneli karakterler birleştirerek yeni bir dize oluşturur. <xref:System.String.PadRight%28System.Int32%29?displayProperty=nameWithType> Boşluk doldurma karakteri kullanmaktadır ve <xref:System.String.PadRight%28System.Int32%2CSystem.Char%29?displayProperty=nameWithType> yöntemi kendi doldurma karakteri belirtmenize imkan tanır.  
+## <a name="padright"></a>Asma sağ  
+ <xref:System.String.PadRight%2A?displayProperty=nameWithType> yöntemi, belirtilen toplam uzunluğu elde etmek için bir özgün dizeye yeterli sayıda izleyen doldurma karakteri birleştirerek yeni bir dize oluşturur. <xref:System.String.PadRight%28System.Int32%29?displayProperty=nameWithType> yöntemi, doldurma karakteri olarak boşluk kullanır ve <xref:System.String.PadRight%28System.Int32%2CSystem.Char%29?displayProperty=nameWithType> yöntemi kendi doldurma karakterinizi belirtmenizi sağlar.  
   
- Aşağıdaki kod örneğinde <xref:System.String.PadRight%2A> yirmi karakterden uzun yeni bir dize oluşturmak için yöntemi. Örnek görüntüler "`Hello World!--------`" konsola.  
+ Aşağıdaki kod örneği, yirmi karakter uzunluğunda yeni bir dize oluşturmak için <xref:System.String.PadRight%2A> yöntemini kullanır. Örnek, konsola "`Hello World!--------`" görüntüler.  
   
  [!code-cpp[Conceptual.String.BasicOps#4](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.string.basicops/cpp/padding.cpp#4)]
  [!code-csharp[Conceptual.String.BasicOps#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.basicops/cs/padding.cs#4)]

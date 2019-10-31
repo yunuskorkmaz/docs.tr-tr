@@ -14,14 +14,12 @@ helpviewer_keywords:
 - GetPropertyQualifierSet function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b7bce241d10051e4c6be94cdfa40de23773fb0bb
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 4133145c7bea1fb3c018d809b9fea3de38270619
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798477"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127450"
 ---
 # <a name="getpropertyqualifierset-function"></a>GetPropertyQualifierSet işlevi
 
@@ -49,10 +47,10 @@ HRESULT GetPropertyQualifierSet (
 'ndaki [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) örneğine yönelik bir işaretçi.
 
 `wszMethod`\
-'ndaki Özellik adı. `wszProperty`geçerli `LPCWSTR`bir işaret etmelidir.
+'ndaki Özellik adı. `wszProperty` geçerli bir `LPCWSTR`işaret etmelidir.
 
 `ppQualSet`\
-dışı Özelliğin niteleyicilerine erişim sağlayan arabirim işaretçisini alır. `ppQualSet``null`olamaz. Bir hata oluşursa, yeni bir nesne döndürülmez ve işaretçi öğesine `null`işaret etmek üzere ayarlanır.
+dışı Özelliğin niteleyicilerine erişim sağlayan arabirim işaretçisini alır. `ppQualSet` `null`olamaz. Bir hata oluşursa, yeni bir nesne döndürülmez ve işaretçi `null`işaret etmek üzere ayarlanır.
 
 ## <a name="return-value"></a>Dönüş değeri
 
@@ -75,13 +73,13 @@ Bu işleve yapılan çağrı yalnızca geçerli nesne bir CıM sınıf tanımın
 
 Her yöntemin kendi niteleyicileri olabileceğinden, [IWbemQualifierSet işaretçisi](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) çağıranın bu niteleyicileri eklemesini, düzenlemesini veya silmesine izin verir.
 
-Sistem Özellikleri niteleyicisi olmadığından, bir sistem özelliği için bir `WBEM_E_SYSTEM_PROPERTY` [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) işaretçisi elde etmeye çalışırsanız işlev döndürür.
+Sistem Özellikleri niteleyicisi olmadığından, bir sistem özelliği için bir [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) işaretçisi edinmeye çalışırsanız işlev `WBEM_E_SYSTEM_PROPERTY` döndürür.
 
 ## <a name="requirements"></a>Gereksinimler
 
-**Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).
+**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).
 
-**Üst bilgi** WMINet_Utils. IDL
+**Üst bilgi:** WMINet_Utils. IDL
 
 **.NET Framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 

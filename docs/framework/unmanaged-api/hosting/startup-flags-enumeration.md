@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4f043594-0c45-4bc6-988e-a6793f0d8d06
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f39608b39be7d5c25b916fb20877aa73d6e5a8bc
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 1799e0af91fa6074f174120b29e2302a27230c62
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69916228"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141461"
 ---
 # <a name="startup_flags-enumeration"></a>STARTUP_FLAGS Numaralandırması
 Ortak dil çalışma zamanının (CLR) başlangıç davranışını gösteren değerleri içerir. Varsayılan olarak, atık toplama eşzamanlı değildir ve yalnızca temel sınıf kitaplığı, etki alanı nötr alanına yüklenir.  
@@ -57,7 +55,7 @@ typedef enum {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`STARTUP_CONCURRENT_GC`|Eşzamanlı atık toplamanın kullanılması gerektiğini belirtir. Arayan, tek işlemcili bir makinede sunucu derlemesini ve eşzamanlı atık toplamayı isterse, bunun yerine iş istasyonu oluşturma ve eşzamanlı olmayan çöp toplama çalıştırılır. **Not:**  Intel Itanium mimarisini (daha önce IA-64 olarak adlandırılmıştır) uygulayan 64 bitlik sistemlerde WOW64 x86 öykünücüsünü çalıştıran uygulamalarda eşzamanlı çöp toplama desteklenmez. 64 bit Windows sistemlerinde WOW64 kullanma hakkında daha fazla bilgi için bkz. [32-bit uygulamaları çalıştırma](/windows/desktop/WinProg64/running-32-bit-applications).|  
+|`STARTUP_CONCURRENT_GC`|Eşzamanlı atık toplamanın kullanılması gerektiğini belirtir. Arayan, tek işlemcili bir makinede sunucu derlemesini ve eşzamanlı atık toplamayı isterse, bunun yerine iş istasyonu oluşturma ve eşzamanlı olmayan çöp toplama çalıştırılır. **Note:**  Intel Itanium mimarisini (daha önce IA-64 olarak adlandırılmıştır) uygulayan 64 bitlik sistemlerde WOW64 x86 öykünücüsünü çalıştıran uygulamalarda eşzamanlı çöp toplama desteklenmez. 64 bit Windows sistemlerinde WOW64 kullanma hakkında daha fazla bilgi için bkz. [32-bit uygulamaları çalıştırma](/windows/desktop/WinProg64/running-32-bit-applications).|  
 |`STARTUP_LOADER_OPTIMIZATION_MASK`|Yükleyici iyileştirmesinin gerçekleşeceğini belirtir.|  
 |`STARTUP_LOADER_OPTIMIZATION_SINGLE_DOMAIN`|Etki alanı nötr olarak hiçbir derlemenin yüklenmediğini belirtir.|  
 |`STARTUP_LOADER_OPTIMIZATION_MULTI_DOMAIN`|Tüm derlemelerin etki alanından bağımsız olarak yüklendiğini belirtir.|  
@@ -70,16 +68,16 @@ typedef enum {
 |`STARTUP_LEGACY_IMPERSONATION`|Kimliğe bürünme özelliğinin, varsayılan olarak zaman uyumsuz noktalara akmamalıdır belirtir.|  
 |`STARTUP_DISABLE_COMMITTHREADSTACK`|Tam iş parçacığı yığınının iş parçacığı çalışmaya başladığında uygulanmamalıdır.|  
 |`STARTUP_ALWAYSFLOW_IMPERSONATION`|Platform çağırma aracılığıyla elde edilen yönetilen ımpersonations ve ımpersontiklerde zaman uyumsuz noktalarda akacağı belirtir. Varsayılan olarak, yalnızca yönetilen ımpersontiklerde zaman uyumsuz noktalarda akış yapılır.|  
-|`STARTUP_TRIM_GC_COMMIT`|Çöp toplamanın sistem belleği azaldığında daha az işlenmiş alan kullanacağınızı belirtir. Bkz `gcTrimCommitOnLowMemory` . [Paylaşılan Web barındırma için iyileştirme](../../../standard/garbage-collection/optimization-for-shared-web-hosting.md).|  
+|`STARTUP_TRIM_GC_COMMIT`|Çöp toplamanın sistem belleği azaldığında daha az işlenmiş alan kullanacağınızı belirtir. Bkz. `gcTrimCommitOnLowMemory` [Paylaşılan Web barındırma Için iyileştirme](../../../standard/garbage-collection/optimization-for-shared-web-hosting.md).|  
 |`STARTUP_ETW`|Windows için olay izlemenin (ETW) ortak dil çalışma zamanı olayları için etkinleştirildiğini belirtir. Windows Vista ile başlayarak, olay izleme her zaman etkindir, bu nedenle bu bayrağın bir etkisi yoktur. Bkz. [.NET Framework günlüğünü denetleme](../../../../docs/framework/performance/controlling-logging.md).|  
-|`STARTUP_ARM`|Uygulama etki alanı kaynak izlemenin etkinleştirildiğini belirtir. Bkz. [ \<özellikveappdomainresourcemonitoring > öğesi.](../../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md) <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType>|  
+|`STARTUP_ARM`|Uygulama etki alanı kaynak izlemenin etkinleştirildiğini belirtir. <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType> özelliğine ve [\<appDomainResourceMonitoring > öğesine](../../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md)bakın.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi** MSCorEE. h  
+ **Üst bilgi:** MSCorEE. h  
   
- **Kitaplığı** MSCorEE. dll  
+ **Kitaplık:** MSCorEE. dll  
   
  **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

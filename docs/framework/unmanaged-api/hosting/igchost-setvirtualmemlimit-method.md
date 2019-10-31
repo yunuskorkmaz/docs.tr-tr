@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c7e7c2d0-e58c-4650-b40c-47b2be2cda45
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c43c2259d5b899f05e42437aa121dde57ce4b0c8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c060e4883335a8318970b5fbd74bf72c9e13f5bf
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67766490"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134868"
 ---
 # <a name="igchostsetvirtualmemlimit-method"></a>IGCHost::SetVirtualMemLimit Yöntemi
-Çalışma zamanının sanal bellek en büyük boyutunu ayarlar.  
+Çalışma zamanının sanal belleğinin en büyük boyutunu ayarlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,19 +35,19 @@ HRESULT SetVirtualMemLimit (
   
 ## <a name="parameters"></a>Parametreler  
  `sztMaxVirtualMemMB`  
- [in] Çalışma zamanının sanal bellek megabayt cinsinden maksimum boyutu.  
+ 'ndaki Çalışma zamanının sanal belleğinin megabayt cinsinden en büyük boyutu.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Çalışma zamanının sanal bellek en büyük boyutunu dinamik olarak değiştirilebilir.  
+ Çalışma zamanının sanal belleğinin en büyük boyutu dinamik olarak değiştirilebilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** GCHost.idl, GCHost.h  
+ **Üst bilgi:** GCHost. IDL, GCHost. h  
   
- **Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil  
+ **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

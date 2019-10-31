@@ -1,5 +1,5 @@
 ---
-title: .NET Framework'te sürüm uyumluluğu
+title: .NET Framework sürüm uyumluluğu
 ms.custom: updateeachrelease
 ms.date: 04/02/2019
 helpviewer_keywords:
@@ -7,24 +7,22 @@ helpviewer_keywords:
 - .NET Framework, compatibility with earlier versions
 - .NET Framework versions, compatibility
 ms.assetid: 2f25e522-456a-48c3-8a53-e5f39275649f
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8db23f8e670406faff01644e751a948096f5fc7c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1a3c23a70bc7dc519c824426f8939cb15e87a7fb
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592891"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128049"
 ---
-# <a name="version-compatibility-in-the-net-framework"></a>.NET Framework'te sürüm uyumluluğu
+# <a name="version-compatibility-in-the-net-framework"></a>.NET Framework sürüm uyumluluğu
 
-Geriye dönük uyumluluk, bir platformun belirli bir sürümü için geliştirilen bir uygulamanın o platformun sonraki sürümlerinde çalışır anlamına gelir. .NET Framework, geriye dönük uyumluluğu en üst düzeye çıkarmaya çalışır: .NET Framework'ün sonraki sürümlerinde .NET Framework sürümü için yazılan kaynak kodu derlemeniz gerekir ve .NET Framework'ün sonraki sürümlerinde .NET Framework sürümünde çalışan ikili dosyaları aynı şekilde davranır.
+Geriye dönük uyumluluk, bir platformun belirli bir sürümü için geliştirilen bir uygulamanın o platformun sonraki sürümlerinde çalışacağı anlamına gelir. .NET Framework, geriye dönük uyumluluğu en üst düzeye çıkarmaya çalışır: bir .NET Framework sürümü için yazılan kaynak kodu, .NET Framework sonraki sürümlerinde derlenmelidir ve .NET Framework bir sürümünde çalışan ikililer, .NET Framework sonraki sürümleri.
 
-## <a name="Apps"></a> Uygulamalar için sürüm uyumluluğu
+## <a name="Apps"></a>Uygulamalar için sürüm uyumluluğu
 
-Varsayılan olarak, bir uygulama derlendiği .NET Framework sürümünde çalışır. Bu sürümü mevcut değilse ve uygulama yapılandırma dosyası desteklenen sürümleri tanımlamaz, bir .NET Framework başlatma hatası oluşabilir. Bu durumda, uygulamayı çalıştırma denemesi başarısız olur.
+Varsayılan olarak, bir uygulama için derlenildiği .NET Framework sürümü üzerinde çalışır. Bu sürüm yoksa ve uygulama yapılandırma dosyası desteklenen sürümleri tanımlamıyorsa, bir .NET Framework başlatma hatası oluşabilir. Bu durumda, uygulamayı çalıştırma denemesi başarısız olur.
 
-Uygulamanızın üzerinde çalıştığı belirli sürümler tanımlamak için bir veya daha fazla Ekle [ \<supportedRuntime >](../configure-apps/file-schema/startup/supportedruntime-element.md) uygulamanızın yapılandırma dosyasına öğeleri. Her `<supportedRuntime>` öğesi çalışma zamanı ile ilk desteklenen bir sürümünü listeler en çok tercih edilen sürümü ve son sırada en az tercih edilen sürümü belirten.
+Uygulamanızın çalıştırıldığı belirli sürümleri tanımlamak için, uygulamanızın yapılandırma dosyasına bir veya daha fazla [\<supportedRuntime >](../configure-apps/file-schema/startup/supportedruntime-element.md) öğesi ekleyin. Her `<supportedRuntime>` öğesi, ilk olarak en çok tercih edilen sürümü ve en son tercih edilen sürümü belirterek, çalışma zamanının desteklenen bir sürümünü listeler.
 
 ```xml
 <configuration>
@@ -35,44 +33,44 @@ Uygulamanızın üzerinde çalıştığı belirli sürümler tanımlamak için b
 </configuration>
 ```
 
-Daha fazla bilgi için [nasıl yapılır: Bir uygulamayı destek .NET Framework 4 veya 4.x yapılandırma](../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md).
+Daha fazla bilgi için bkz. [nasıl yapılır: uygulama yapılandırma .NET Framework 4 veya 4. x](../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md).
 
 ## <a name="version-compatibility-for-components"></a>Bileşenler için sürüm uyumluluğu
 
-Uygulama, onu çalışır, ancak bir bileşen bunu yapamaz .NET Framework sürümünü denetleyebilir. Bileşenler ve sınıf kitaplıkları belirli bir uygulama bağlamında yüklenir ve İşte bu nedenle zaman otomatik olarak uygulamanın çalıştığı .NET Framework sürümünde çalışır.
+Bir uygulama, üzerinde çalıştığı .NET Framework sürümünü denetleyebilir, ancak bir bileşen olamaz. Bileşenler ve sınıf kitaplıkları belirli bir uygulama bağlamında yüklenir ve bu nedenle uygulamanın üzerinde çalıştığı .NET Framework sürümünde otomatik olarak çalışır.
 
-Bu kısıtlama nedeniyle, uyumluluk garantileri bileşenler için özellikle büyük/küçük harf önemlidir. .NET Framework 4 ile başlayarak, bir bileşene uygulayarak birden çok sürüm genelinde uyumlu kalmasını bekleme derecesini belirtebilirsiniz <xref:System.Runtime.Versioning.ComponentGuaranteesAttribute?displayProperty=nameWithType> bileşenin özniteliği. Araçlar, uyumluluk olası ihlallerini bir bileşenin gelecek garanti algılamak için bu özniteliği kullanabilirsiniz.
+Bu kısıtlama nedeniyle, uyumluluk garantisi özellikle bileşenler için önemlidir. .NET Framework 4 ' ten başlayarak, bu bileşene <xref:System.Runtime.Versioning.ComponentGuaranteesAttribute?displayProperty=nameWithType> özniteliğini uygulayarak bir bileşenin birden çok sürüm arasında ne kadar uyumlu kalması beklendiğine yönelik dereceyi belirtebilirsiniz. Araçlar bu özniteliği, bir bileşenin gelecekteki sürümlerindeki uyumluluk garantisinin olası ihlallerini algılamak için kullanabilir.
 
 ## <a name="backward-compatibility-and-the-net-framework"></a>Geriye dönük uyumluluk ve .NET Framework
 
-Geriye dönük olarak uyumlu .NET Framework 4.5 ve sonraki sürümlerinde .NET Framework'ün önceki sürümleriyle oluşturulmuş uygulamalar. Diğer bir deyişle, uygulamaları ve bileşenleri önceki sürümlerle derlenmiş değişiklik yapılmadan .NET Framework 4.5 ve sonraki sürümlerinde çalışır. Ancak, varsayılan olarak, uygulamanızın .NET Framework 4.5 veya sonraki sürümler üzerinde çalışmasını etkinleştirmek için bir yapılandırma dosyası sağlamanız gerekebilir. Bu nedenle, bunlar geliştirilen, ortak dil çalışma zamanı sürümünde uygulamalar çalıştırın. Daha fazla bilgi için [uygulamalar için sürüm uyumluluğu](#Apps) bu makalenin önceki kısımlarında bölümü.
+.NET Framework 4,5 ve üzeri sürümler, .NET Framework önceki sürümleriyle oluşturulmuş uygulamalarla geriye dönük olarak uyumludur. Diğer bir deyişle, önceki sürümlerle oluşturulan uygulamalar ve bileşenler .NET Framework 4,5 ve sonraki sürümlerde değişiklik yapılmadan çalışacaktır. Ancak, uygulamalar geliştirildiği ortak dil çalışma zamanının sürümünde çalışır, bu nedenle uygulamanızın .NET Framework 4,5 veya sonraki sürümlerde çalışmasını sağlamak için bir yapılandırma dosyası sağlamanız gerekebilir. Daha fazla bilgi için bu makalenin önceki kısımlarında [uygulamalar Için sürüm uyumluluğu](#Apps) bölümüne bakın.
 
-Uygulamada bu uyumluluk .NET Framework ve programlama tekniklerindeki görünüşte değişimlerle bölünebilir. Örneğin, .NET Framework 4.5 performans geliştirmeleri, önceki sürümlerinde gerçekleşmeyen bir yarış durumu açığa çıkarabilir. Benzer şekilde, .NET Framework derlemelerine yönelik sabit kodlanmış bir yol kullanarak, belirli bir .NET Framework sürümü ile denklik karşılaştırması gerçekleştirme ve yansıma kullanarak bir özel alanın değerinin alınması geriye dönük olarak uyumlu uygulamalar değildir. Ayrıca, .NET Framework'ün her sürümü, hata düzeltmeleri ve bazı uygulamaların ve bileşenlerin uyumluluğunu etkileyebilecek güvenlikle ilgili değişiklikler içerir.
+Uygulamada, bu uyumluluk .NET Framework ve programlama tekniklerindeki değişiklikler tarafından bozulabilir. Örneğin, .NET Framework 4,5 ' deki performans geliştirmeleri, önceki sürümlerde gerçekleşmeyen bir yarış durumu sunabilir. Benzer şekilde, derlemeler .NET Framework için sabit kodlanmış bir yol kullanma, .NET Framework belirli bir sürümüyle eşitlik karşılaştırması gerçekleştirme ve yansıma kullanarak özel bir alanın değerini alma, geriye dönük olarak uyumlu uygulamalar değildir. Ayrıca, .NET Framework her sürümü, bazı uygulamaların ve bileşenlerin uyumluluğunu etkileyebilecek hata düzeltmeleri ve güvenlikle ilgili değişiklikler içerir.
 
-Uygulama veya bileşen .NET Framework 4.5 (.NET Framework 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7, 4.7.1, 4.7.2 veya 4.8 onun nokta sürümleri dahil) üzerinde beklenen şekilde çalışmazsa, aşağıdaki denetim listelerini kullanın:
+Uygulamanız veya bileşeniniz .NET Framework 4,5 ' de beklendiği gibi çalışmazsa (kendi nokta sürümleri, .NET Framework 4.5.1, 4.5.2, 4,6, 4.6.1, 4.6.2, 4,7, 4.7.1, 4.7.2 veya 4,8), aşağıdaki denetim listelerini kullanın:
 
-- Uygulamanızı geliştirilmiştir, .NET Framework 4.0 ile başlayan .NET Framework'ün herhangi bir sürümünü çalıştırmak için bkz: [.NET Framework'te uygulama uyumluluğu](application-compatibility.md) hedeflenen .NET Framework sürümünüz arasında değişiklik listesini oluşturmak için ve uygulamanızın üzerinde çalıştığı sürümü.
+- Uygulamanız, .NET Framework 4,0 ' den başlayarak .NET Framework herhangi bir sürümünde çalışacak şekilde geliştirildiyse, hedeflenen .NET Framework sürümünüz ve bu sürüm üzerinde yapılan değişikliklerin listesini oluşturmak için [.NET Framework uygulama uyumluluğu](application-compatibility.md) ' na bakın. uygulamanız çalışıyor.
 
-- Bir .NET Framework 3.5 uygulamanız varsa, ayrıca bkz: [.NET Framework 4 geçiş sorunları](../migration-guide/net-framework-4-migration-issues.md).
+- .NET Framework 3,5 uygulamanız varsa Ayrıca bkz. [.NET Framework 4 geçiş sorunları](../migration-guide/net-framework-4-migration-issues.md).
 
-- Bir .NET Framework 2.0 uygulamanız varsa, ayrıca bkz: [.NET Framework 3.5 SP1 içindeki değişiklikleri](https://go.microsoft.com/fwlink/?LinkId=186989).
+- .NET Framework 2,0 uygulamanız varsa, [.NET Framework 3,5 SP1 'Deki değişikliklere](https://go.microsoft.com/fwlink/?LinkId=186989)de bakın.
 
-- Bir .NET Framework 1.1 uygulamanız varsa, ayrıca bkz: [.NET Framework 2.0 içindeki değişiklikleri](https://go.microsoft.com/fwlink/?LinkID=125263).
+- .NET Framework 1,1 uygulamanız varsa, [.NET Framework 2,0 ' deki değişikliklere](https://go.microsoft.com/fwlink/?LinkID=125263)de bakın.
 
-- .NET Framework 4.5 veya onun nokta sürümleri çalıştırmak için mevcut kaynak kodu yeniden derlemeden ya da bir uygulama veya bileşen .NET Framework 4.5 hedefleyen yeni bir sürümünü, geliştirmekte olduğunuz ya da mevcut bir kaynak kod temel nokta sürümlerini, denetleyin[Sınıf Kitaplığı'nda ne kullanılmıyor](../whats-new/whats-obsolete.md) için eski türler ve üyeler ve açıklanan geçici çözümü uygulayın. (Önceden derlenmiş kod türleri ve üyeleri artık kullanılmıyor olarak işaretlenmiş karşı çalışmaya devam eder.)
+- Var olan kaynak kodu .NET Framework 4,5 veya onun noktası sürümlerinde çalışacak şekilde yeniden derliyorsanız veya var olan bir kaynak kod tabanından .NET Framework 4,5 ya da onun noktası sürümlerini hedefleyen bir uygulamanın veya bileşenin yeni bir sürümünü geliştiriyorsanız, [ne olduğunu denetleyin Eski türler ve Üyeler için sınıf kitaplığında kullanımdan kalkmıştır](../whats-new/whats-obsolete.md) ve açıklanan geçici çözümü uygulayın. (Önceden derlenen kod, eski olarak işaretlenen türlere ve üyelere karşı çalışmaya devam edecektir.)
 
-- .NET Framework 4.5 değişikliği uygulamanızı bozduğunu belirlerseniz, kontrol [çalışma zamanı Ayarları Şeması](../configure-apps/file-schema/runtime/index.md)ve özellikle [ \<AppContextSwitchOverrides > öğesi](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md), bir çalışma zamanı ayarı uygulamanızın yapılandırma dosyasında önceki davranışı geri yüklemek için kullanabileceğiniz olup olmadığını belirler.
+- .NET Framework 4,5 ' deki bir değişikliğin uygulamanızı bozmadığını belirlerseniz, bir çalışma zamanı ayarı kullanıp kullanmayacağınızı öğrenmek için [çalışma zamanı ayarları şemasını](../configure-apps/file-schema/runtime/index.md)ve özellikle [\<AppContextSwitchOverrides > öğesini](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md)kontrol edin. önceki davranışı geri yüklemek için uygulamanın yapılandırma dosyası.
 
-- Soruna arasında belgelenmemiştir geliyorsa, bir sorun açın [.NET Geliştirici topluluğu sitesini](https://developercommunity.visualstudio.com/spaces/61/index.html) veya bir sorun açın [Microsoft/dotnet GitHub deposunu](https://github.com/microsoft/dotnet/issues).
+- Belgelenmemiş bir sorunla karşılaşırsanız, [.net Için Developer Community sitesinde](https://developercommunity.visualstudio.com/spaces/61/index.html) bir sorun açın veya [Microsoft/DotNet GitHub](https://github.com/microsoft/dotnet/issues)deposunda bir sorun açın.
 
 ## <a name="compatibility-and-side-by-side-execution"></a>Uyumluluk ve yan yana yürütme
 
-Yönelik uygun geçici bir çözüm bulamazsanız, .NET Framework 4.5 (veya onun nokta sürümleri biri) 1.1, 2.0 ve 3.5 sürümleri ile yan yana çalışır ve sürüm 4 yerini alan bir yerinde güncelleştirme olduğunu unutmayın. 1.1, 2.0 ve 3.5 sürümlerini hedefleyen uygulamalar için uygulamayı en iyi ortamında çalıştırmak amacıyla hedef makineye .NET Framework'ün uygun sürümünü yükleyebilirsiniz. Yan yana yürütme hakkında daha fazla bilgi için bkz. [yan yana yürütme](../deployment/side-by-side-execution.md).
+Sorununuz için uygun bir geçici çözüm bulamazsanız, .NET Framework 4,5 ' in (veya bir nokta yayınlarından birinin) 1,1, 2,0 ve 3,5 sürümleriyle yan yana çalıştığını ve sürüm 4 ' ün yerini alan bir yerinde güncelleştirme olduğunu unutmayın. 1,1, 2,0 ve 3,5 sürümlerini hedefleyen uygulamalar için, uygulamayı en iyi ortamında çalıştırmak üzere hedef makineye .NET Framework uygun sürümünü yükleyebilirsiniz. Yan yana yürütme hakkında daha fazla bilgi için bkz. yan [yana yürütme](../deployment/side-by-side-execution.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Yenilikler](../whats-new/index.md)
 - [Sınıf Kitaplığında Artık Kullanılmayanlar](../whats-new/whats-obsolete.md)
 - [Uygulama Uyumluluğu](../migration-guide/application-compatibility.md)
-- [Microsoft .NET Framework Destek Ömrü İlkesi](https://go.microsoft.com/fwlink/p/?LinkId=248212)
-- [.NET framework 4 geçiş sorunları](../migration-guide/net-framework-4-migration-issues.md)
+- [Microsoft .NET Framework destek yaşam döngüsü Ilkesi](https://go.microsoft.com/fwlink/p/?LinkId=248212)
+- [.NET Framework 4 geçiş sorunları](../migration-guide/net-framework-4-migration-issues.md)

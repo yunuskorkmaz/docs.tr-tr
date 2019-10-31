@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: ded1e492-a782-4185-9c66-709e421c1782
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a8f5e9a909a752dd8dc70bfc1c683b4611715f31
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3802354bf52cd2aab2a4149d565993b9965e8312
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67767968"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138295"
 ---
 # <a name="corbindtoruntimebycfg-function"></a>CorBindToRuntimeByCfg İşlevi
-Ortak dil çalışma zamanı (CLR), bir XML dosyasından okunan sürüm bilgilerini kullanarak bir işlem içine yükler.  
+Bir XML dosyasından okunan sürüm bilgilerini kullanarak ortak dil çalışma zamanını (CLR) bir işleme yükler.  
   
- Bu işlev .NET Framework 4'te kullanım dışıdır.  
+ Bu işlev .NET Framework 4 ' te kullanım dışıdır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -43,34 +41,34 @@ HRESULT CorBindToRuntimeByCfg (
   
 ## <a name="parameters"></a>Parametreler  
  `pCfgStream`  
- [in] Bir işaretçi bir `IStream` XML dosyasını okuyan bir nesne.  
+ 'ndaki XML dosyasını okuyan `IStream` nesnesine yönelik bir işaretçi.  
   
  `reserved`  
- [in] Gelecekte kullanılmak üzere ayrılmış. Değeri olarak 0 (sıfır) kullanın.  
+ 'ndaki Gelecekte kullanılmak üzere ayrılmıştır. Değer olarak 0 (sıfır) kullanın.  
   
  `startupFlags`  
- [in] Değerini [STARTUP_FLAGS](../../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md) CLR başlangıç davranışını belirten sabit listesi.  
+ 'ndaki CLR 'nin başlangıç davranışını belirten [startup_flags](../../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md) numaralandırması değeri.  
   
  `rclsid`  
- [in] `CLSID` Ya da uygulayan yardımcı sınıf, [Icorruntimehost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md) veya [Iclrruntimehost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md) arabirimi. Desteklenen değerler: clsıd_corruntimehost veya clsıd_clrruntimehost şunlardır.  
+ 'ndaki [ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md) veya [ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md) arabirimini uygulayan coclass 'ın `CLSID`. Desteklenen değerler CLSID_CorRuntimeHost veya CLSID_CLRRuntimeHost.  
   
  `riid`  
- [in] `IID` Herhangi birinin `ICorRuntimeHost` veya `ICLRRuntimeHost` arabirimi. Desteklenen değerler: ııd_ıcorruntimehost veya ııd_ıclrruntimehost şunlardır.  
+ 'ndaki `ICorRuntimeHost` ya da `ICLRRuntimeHost` arabiriminin `IID`. Desteklenen değerler IID_ICorRuntimeHost veya IID_ICLRRuntimeHost.  
   
  `ppv`  
- [out] Döndürülen arabirim adresi için bir işaretçi.  
+ dışı Döndürülen arabirimin adresine yönelik bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- XML dosyasının biçimi sonra standart uygulama yapılandırma dosyasına modellenir. XML dosyaları hakkında daha fazla bilgi için bkz. [yapılandırma dosyası şeması](../../../../docs/framework/configure-apps/file-schema/index.md).  
+ XML dosyasının biçimi, standart uygulama yapılandırma dosyasından sonra modellenir. XML dosyaları hakkında daha fazla bilgi için bkz. [yapılandırma dosya şeması](../../../../docs/framework/configure-apps/file-schema/index.md).  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** MSCorEE.h  
+ **Üst bilgi:** MSCorEE. h  
   
- **Kitaplığı:** MSCorEE.dll  
+ **Kitaplık:** MSCorEE. dll  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

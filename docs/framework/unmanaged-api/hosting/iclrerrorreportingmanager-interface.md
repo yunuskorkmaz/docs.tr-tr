@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: ea8af0d5-4133-4472-8a1f-50570d7e85fa
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2a9d9cff0360e4eb27584fe0f22c1c20396ff8f0
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 49a60b6b9b076138d8ff1f8a15041e9a6bacfede
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966254"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129248"
 ---
 # <a name="iclrerrorreportingmanager-interface"></a>ICLRErrorReportingManager Arabirimi
 Ana bilgisayarın hata raporlaması için özel yığın dökümleri yapılandırmasına izin veren yöntemler sağlar.  
@@ -31,21 +29,21 @@ Ana bilgisayarın hata raporlaması için özel yığın dökümleri yapılandı
 |Yöntem|Açıklama|  
 |------------|-----------------|  
 |[BeginCustomDump Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-begincustomdump-method.md)|Hata raporlama için özel yığın dökümlerinin yapılandırmasını belirtir.|  
-|[EndCustomDump Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-endcustomdump-method.md)|Daha önceki bir çağrısıyla `BeginCustomDump`ayarlanan özel yığın dökümü yapılandırmasını temizler.|  
+|[EndCustomDump Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-endcustomdump-method.md)|Daha önceki bir `BeginCustomDump`çağrısıyla ayarlanan özel yığın dökümü yapılandırmasını temizler.|  
 |[GetBucketParametersForCurrentException Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-getbucketparametersforcurrentexception-method.md)|Çağıran iş parçacığında geçerli özel durumun Watson demetini alır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Yöntemi `BeginCustomDump` , özel yığın dökümü yapılandırmasını ayarlar. `EndCustomDump` Yöntemi, özel yığın dökümü yapılandırmasını temizler ve ilişkili tüm durumları serbest bırakır. Özel döküm tamamlandıktan sonra çağrılmalıdır.  
+ `BeginCustomDump` yöntemi özel yığın dökümü yapılandırmasını ayarlar. `EndCustomDump` yöntemi, özel yığın dökümü yapılandırmasını temizler ve ilişkili tüm durumları boşaltır. Özel döküm tamamlandıktan sonra çağrılmalıdır.  
   
 > [!IMPORTANT]
-> Çağırma `EndCustomDump` hatası, belleğin sızmasını sağlar.  
+> `EndCustomDump` çağıramaması, belleğin sızmasına neden olur.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi** MSCorEE. h  
+ **Üst bilgi:** MSCorEE. h  
   
- **Kitaplığı** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
   
  **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

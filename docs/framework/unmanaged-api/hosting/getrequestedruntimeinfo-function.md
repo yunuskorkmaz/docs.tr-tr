@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 0dfd7cdc-c116-4e25-b56a-ac7b0378c942
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 62a6f6d6e73ce42c8c86d4e458322e5bd361f412
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: cd1d9e768698115bee22e35699b044e0c3526d2d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778130"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136317"
 ---
 # <a name="getrequestedruntimeinfo-function"></a>GetRequestedRuntimeInfo İşlevi
-Bir uygulama tarafından istenen ortak dil çalışma zamanı (CLR) sürümünü ve dizin bilgilerini alır.  
+Bir uygulama tarafından istenen ortak dil çalışma zamanı (CLR) hakkındaki sürüm ve dizin bilgilerini alır.  
   
- Bu işlev .NET Framework 4'te kullanım dışıdır.  
+ Bu işlev .NET Framework 4 ' te kullanım dışıdır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -49,64 +47,64 @@ HRESULT GetRequestedRuntimeInfo (
   
 ## <a name="parameters"></a>Parametreler  
  `pExe`  
- [in] Uygulamanın adı.  
+ 'ndaki Uygulamanın adı.  
   
  `pwszVersion`  
- [in] Çalışma zamanı sürüm numarasını belirten bir dize.  
+ 'ndaki Çalışma zamanının sürüm numarasını belirten bir dize.  
   
  `pConfigurationFile`  
- [in] İle ilişkili yapılandırma dosyasının adını `pExe`.  
+ 'ndaki `pExe`ilişkili yapılandırma dosyasının adı.  
   
  `startupFlags`  
- [in] Bir veya daha fazla [STARTUP_FLAGS](../../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md) sabit listesi değerleri.  
+ 'ndaki Bir veya daha fazla [startup_flags](../../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md) numaralandırma değeri.  
   
  `runtimeInfoFlags`  
- [in] Bir veya daha fazla [runtıme_ınfo_flags](../../../../docs/framework/unmanaged-api/hosting/runtime-info-flags-enumeration.md) sabit listesi değerleri.  
+ 'ndaki Bir veya daha fazla [RUNTIME_INFO_FLAGS](../../../../docs/framework/unmanaged-api/hosting/runtime-info-flags-enumeration.md) numaralandırma değeri.  
   
  `pDirectory`  
- [out] Çalışma zamanı başarıyla tamamlandıktan sonra dizin yolu içeren arabellek.  
+ dışı Başarılı bir şekilde tamamlandıktan sonra çalışma zamanına ait dizin yolunu içeren bir arabellek.  
   
  `dwDirectory`  
- [in] Dizin arabelleği uzunluğu.  
+ 'ndaki Dizin arabelleğinin uzunluğu.  
   
  `dwDirectoryLength`  
- [out] Dizin yolu dizenin uzunluğu bir işaretçi.  
+ dışı Dizin yolu dizesinin uzunluğuna yönelik bir işaretçi.  
   
  `pVersion`  
- [out] Çalışma zamanı başarıyla tamamlandığında uygulamanın sürüm sayısını içeren bir arabelleği.  
+ dışı Başarılı bir şekilde tamamlandıktan sonra çalışma zamanının sürüm numarasını içeren bir arabellek.  
   
  `cchBuffer`  
- [in] Sürüm dizesi arabelleği uzunluğu.  
+ 'ndaki Sürüm dizesi arabelleğinin uzunluğu.  
   
  `dwlength`  
- [out] Sürüm dizesinin uzunluğunu işaretçisi.  
+ dışı Sürüm dizesinin uzunluğuna yönelik bir işaretçi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Bu yöntem standart Bileşen Nesne Modeli (COM) hata kodları, ek olarak aşağıdaki değerleri Wınerror içinde tanımlanan döndürür.  
+ Bu yöntem, aşağıdaki değerlere ek olarak, WinError. h içinde tanımlanan standart bileşen nesne modeli (COM) hata kodlarını döndürür.  
   
 |Dönüş kodu|Açıklama|  
 |-----------------|-----------------|  
 |S_OK|Yöntem başarıyla tamamlandı.|  
-|ERROR_INSUFFICIENT_BUFFER|Dizin arabelleği dizin yolu depolamak için yeterli büyüklükte değil.<br /><br /> - veya -<br /><br /> Sürüm arabellek sürüm dizesi depolamak için yeterli büyüklükte değil.|  
+|ERROR_INSUFFICIENT_BUFFER|Dizin arabelleği, dizin yolunu depolamaya yetecek kadar büyük değil.<br /><br /> veya<br /><br /> Sürüm arabelleği, sürüm dizesini depolamak için yeterince büyük değil.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `GetRequestedRuntimeInfo` Yöntemi mutlaka en son sürümü bilgisayarda yüklü değil işlem yüklenen sürümü çalışma zamanı bilgilerini döndürür.  
+ `GetRequestedRuntimeInfo` yöntemi, işleme yüklenen sürüm hakkında, bilgisayarda yüklü en son sürüm olması gereken çalışma zamanı bilgilerini döndürür.  
   
- .NET Framework sürüm 2. 0'da, en son yüklenen sürüm bilgilerini kullanarak alabilirsiniz `GetRequestedRuntimeInfo` yöntemini aşağıdaki şekilde:  
+ .NET Framework sürüm 2,0 ' de, aşağıdaki gibi `GetRequestedRuntimeInfo` metodunu kullanarak en son yüklenen sürüm hakkında bilgi edinebilirsiniz:  
   
-- Belirtin `pExe`, `pwszVersion`, ve `pConfigurationFile` parametreleri null olarak.  
+- `pExe`, `pwszVersion`ve `pConfigurationFile` parametrelerini null olarak belirtin.  
   
-- RUNTIME_INFO_UPGRADE_VERSION bayrağını belirtin `RUNTIME_INFO_FLAGS` sabit listeleri için `runtimeInfoFlags` parametresi.  
+- `runtimeInfoFlags` parametresi için `RUNTIME_INFO_FLAGS` numaralandırmalar içinde RUNTIME_INFO_UPGRADE_VERSION bayrağını belirtin.  
   
- `GetRequestedRuntimeInfo` Yöntemi en son CLR sürümünü aşağıdaki durumlarda döndürmüyor:  
+ `GetRequestedRuntimeInfo` yöntemi, aşağıdaki durumlarda en son CLR sürümünü döndürmez:  
   
-- Belirli bir CLR sürümü belirten bir uygulama yapılandırma dosyası yok. İçin null belirtin bile .NET Framework yapılandırma dosyası kullanacağını Not `pConfigurationFile` parametresi.  
+- Belirli bir CLR sürümünü yüklemeyi belirten bir uygulama yapılandırma dosyası var. `pConfigurationFile` parametresi için null belirtseniz bile .NET Framework yapılandırma dosyasını kullanacaktır.  
   
-- [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) önceki bir CLR sürümünü belirtme yöntemi çağrıldı.  
+- [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) yöntemi, ÖNCEKI bir clr sürümü belirtilerek çağrıldı.  
   
-- Önceki bir CLR sürümü için derlenmiş bir uygulama şu anda çalışıyor.  
+- Daha önceki bir CLR sürümü için derlenen bir uygulama şu anda çalışıyor.  
   
- İçin `runtimeInfoFlags` parametresini belirtebilirsiniz mimarisi sabitlerini yalnızca biri `RUNTIME_INFO_FLAGS` birer birer sabit listesi:  
+ `runtimeInfoFlags` parametresi için aynı anda `RUNTIME_INFO_FLAGS` numaralandırmanın mimari sabitlerinden yalnızca birini belirtebilirsiniz:  
   
 - RUNTIME_INFO_REQUEST_IA64  
   
@@ -115,13 +113,13 @@ HRESULT GetRequestedRuntimeInfo (
 - RUNTIME_INFO_REQUEST_X86  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** MSCorEE.h  
+ **Üst bilgi:** MSCorEE. h  
   
- **Kitaplığı:** MSCorEE.dll  
+ **Kitaplık:** MSCorEE. dll  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

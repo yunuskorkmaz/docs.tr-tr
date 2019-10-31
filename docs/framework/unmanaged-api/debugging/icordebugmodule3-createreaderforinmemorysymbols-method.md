@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: af317171-d66d-4114-89eb-063554c74940
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 944e02fe83ba71b51ffb154748acff9c6dd662fe
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2655151d34275b1b0fdc5d0903dd57fcea646014
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67764015"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137310"
 ---
 # <a name="icordebugmodule3createreaderforinmemorysymbols-method"></a>ICorDebugModule3::CreateReaderForInMemorySymbols Yöntemi
-Dinamik modül için hata ayıklama simge okuyucu oluşturur.  
+Dinamik bir modül için hata ayıklama simgesi okuyucu oluşturur.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -36,40 +34,40 @@ HRESULT CreateReaderForInMemorySymbols (
 ```  
   
 ## <a name="parameters"></a>Parametreler  
- riid  
- [in] Döndürülecek COM arabirimi Laboratuvardaki. Bu genellikle bir [Isymunmanagedreader arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md).  
+ riıd  
+ 'ndaki Döndürülecek COM arabiriminin IID 'si. Genellikle bu bir [ıstreamunmanagedreader arabirimidir](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md).  
   
  ppObj  
- [out] Döndürülen arabirim işaretçisi için işaretçi.  
+ dışı Döndürülen arabirime yönelik işaretçinin işaretçisi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  S_OK  
  Okuyucu başarıyla oluşturuldu.  
   
  CORDBG_E_MODULE_LOADED_FROM_DISK  
- Modül, bellek veya dinamik bir modül değil.  
+ Modül, bellek içi veya dinamik bir modül değil.  
   
  CORDBG_E_SYMBOLS_NOT_AVAILABLE  
- Simgeleri uygulama tarafından sağlanan değil veya henüz kullanıma sunulmamıştır.  
+ Simgeler uygulama tarafından sağlanmadı veya henüz kullanılamıyor.  
   
- E_FAIL (veya diğer E_ dönüş kodları)  
- Okuyucusu oluşturulamıyor.  
+ E_FAıL (veya diğer E_ dönüş kodları)  
+ Okuyucu oluşturulamıyor.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Simgeleri ilk kullanılabilir olduktan sonra bu yöntem aynı zamanda bir bellek içi (dinamik olmayan) modüller için Sembol Okuyucu nesnesi oluşturmak için kullanılan, ancak yalnızca olabilir (belirttiği [UpdateModuleSymbols yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-updatemodulesymbols-method.md) geri çağırma).  
+ Bu yöntem, bellek içi (dinamik olmayan) modüller için bir sembol okuyucu nesnesi oluşturmak için de kullanılabilir, ancak yalnızca semboller önce kullanılabilir olduktan sonra ( [UpdateModuleSymbols yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-updatemodulesymbols-method.md) geri çağırması tarafından gösterilir).  
   
- Her çağrıldığında bu yöntem, yeni bir okuyucu örneği döndürür. (gibi [CComPtrBase::CoCreateInstance](/cpp/atl/reference/ccomptrbase-class#cocreateinstance)). Hata ayıklayıcı bu nedenle, ve sonuç önbellek ister yeni bir örneği temel alınan verileri yalnızca değişmiş olabilir (diğer bir deyişle, bir [LoadClass yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadclass-method.md) geri alındığında).  
+ Bu yöntem, her çağrılışında yeni bir okuyucu örneği döndürür ( [CComPtrBase:: CoCreateInstance](/cpp/atl/reference/ccomptrbase-class#cocreateinstance)gibi). Bu nedenle, hata ayıklayıcı sonucu önbelleğe almalıdır ve yalnızca temeldeki veriler değiştiği zaman yeni bir örnek ister (yani, bir [LoadClass Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadclass-method.md) geri çağırması alındığında).  
   
- Dinamik modüller kadar ilk türü yüklenmiş olan simgeleri kullanılabilir gerekmez (gösterildiği gibi [LoadClass yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadclass-method.md) geri çağırma).  
+ Dinamik modüller, ilk tür yükleninceye kadar kullanılabilir simgelere sahip değildir ( [LoadClass Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadclass-method.md) geri çağırması tarafından belirtildiği gibi).  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET framework sürümleri:** 4.5, 4, 3.5 SP1  
+ **.NET Framework sürümleri:** 4,5, 4, 3,5 SP1  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

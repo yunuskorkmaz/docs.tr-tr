@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 72f54a45-dbe6-4bb4-8c99-e879a27368e5
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2779cfaecfdd241b5317ac8b467222e045d48049
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b521c96d26202119dad6fedb61cbd9da8b3c2e52
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67753315"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137635"
 ---
 # <a name="icordebugeval2callparameterizedfunction-method"></a>ICorDebugEval2::CallParameterizedFunction Yöntemi
-Bir çağrı, Oluşturucusu götüren bir sınıf içinde iç içe belirtilen ICorDebugFunction ayarlar <xref:System.Type> parametreleri veya can'ın kendisi <xref:System.Type> parametreleri.  
+Oluşturucusu <xref:System.Type> parametreleri geçen bir sınıfın içinde iç içe yerleştirilebilen belirtilen ICorDebugFunction öğesine bir çağrı kurar veya kendisi <xref:System.Type> parametreleri alabilir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,32 +39,32 @@ HRESULT CallParameterizedFunction (
   
 ## <a name="parameters"></a>Parametreler  
  `pFunction`  
- [in] Bir işaretçi bir `ICorDebugFunction` çağrılacak işlev temsil eden nesne.  
+ 'ndaki Çağrılacak işlevi temsil eden `ICorDebugFunction` nesnesine yönelik bir işaretçi.  
   
  `nTypeArgs`  
- [in] Alan işlev bağımsız değişken sayısı.  
+ 'ndaki İşlevin aldığı bağımsız değişken sayısı.  
   
  `ppTypeArgs`  
- [in] Bir dizi işaretçileri, her biri bir işlev bağımsız değişkeni temsil eden bir Icordebugtype nesneye işaret eder.  
+ 'ndaki Her biri bir işlev bağımsız değişkenini temsil eden ICorDebugType nesnesine işaret eden bir işaretçiler dizisi.  
   
  `nArgs`  
- [in] Değerlerin sayısını işleve geçirildi.  
+ 'ndaki İşleve geçirilen değer sayısı.  
   
  `ppArgs`  
- [in] Her biri bir değeri temsil eden bir Icordebugvalue nesneye işaret eden bir işaretçiler dizisi, bir işlev bağımsız değişkeni geçirildi.  
+ 'ndaki Her biri bir işlev bağımsız değişkeninde geçirilen değeri temsil eden ICorDebugValue nesnesine işaret eden bir işaretçiler dizisi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `CallParameterizedFunction` benzer [Icordebugeval::CallFunction](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-callfunction-method.md) işlevi tür parametreleri ile bir sınıf içinde olabilir dışında kendi tür parametreleri veya her ikisi de alabilir. Tür bağımsız değişkeni, ilk sınıf ve işlev için verilmelidir.  
+ `CallParameterizedFunction` [ıcorınkıonımagegeval:: CallFunction](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-callfunction-method.md) gibidir, çünkü işlev tür parametrelerine sahip bir sınıfın içinde olabilir, kendisi tür parametreleri veya her ikisini de alabilir. Tür bağımsız değişkenleri önce sınıf için, sonra da işlev için verilmelidir.  
   
- İşlev, farklı uygulama etki alanında ise, bir geçiş meydana gelir. Ancak, tüm türü ve değeri bağımsız değişkenleri hedef uygulama etki alanında olmalıdır.  
+ İşlev farklı bir uygulama etki alanında ise, bir geçiş gerçekleşir. Ancak, tüm tür ve değer bağımsız değişkenleri hedef uygulama etki alanında olmalıdır.  
   
- İşlev değerlendirmesi yalnızca sınırlı sayıda senaryoda gerçekleştirilebilir. Varsa `CallParameterizedFunction` veya `ICorDebugEval::CallFunction` başarısız olursa, döndürülen HRESULT hata olası en genel nedenlerinden gösterecektir.  
+ İşlev değerlendirmesi yalnızca sınırlı senaryolarda gerçekleştirilebilir. `CallParameterizedFunction` veya `ICorDebugEval::CallFunction` başarısız olursa, döndürülen HRESULT hatanın en genel olası nedenini gösterir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

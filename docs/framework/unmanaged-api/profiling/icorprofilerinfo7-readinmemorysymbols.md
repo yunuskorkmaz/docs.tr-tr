@@ -10,14 +10,12 @@ api_location:
 api_type:
 - COM
 ms.assetid: 1745a0b9-8332-4777-a670-b549bff3b901
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 95b463b23c230d620d746e48da49d75238ef2cb7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ae51490be96f3eb6524831c93739c3befbc30b37
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69955370"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132030"
 ---
 # <a name="icorprofilerinfo7readinmemorysymbols"></a>ICorProfilerInfo7:: ReadInMemorySymbols
 [.NET Framework 4.6.1 ve sonraki sürümlerde desteklenir]  
@@ -44,7 +42,7 @@ HRESULT ReadInMemorySymbols(
  'ndaki Bayt okumaya başlamak için bellek içi akış içindeki fark.  
   
  `pSymbolBytes`  
- dışı Verilerin kopyalanacağı arabelleğe yönelik bir işaretçi. Arabellekte kullanılabilir alan olması `countSymbolBytes` gerekir.  
+ dışı Verilerin kopyalanacağı arabelleğe yönelik bir işaretçi. Arabellekte kullanılabilir alan `countSymbolBytes` olmalıdır.  
   
  `countSymbolBytes`  
  'ndaki Kopyalanacak bayt sayısı.  
@@ -53,22 +51,22 @@ HRESULT ReadInMemorySymbols(
  dışı Yöntemi döndüğünde, okunan bayt sayısını içerir.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- `S_OK`sıfır olmayan bir bayt miktarı okundum.  
+ sıfır olmayan bir bayt sayısı okundum `S_OK`.  
   
- `CORPROF_E_MODULE_IS_DYNAMIC`, modül kullanılarak <xref:System.Reflection.Emit>oluşturulduysa.  
+ Modül <xref:System.Reflection.Emit>kullanılarak oluşturulduysa `CORPROF_E_MODULE_IS_DYNAMIC`.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Yöntemi `ReadInMemorySymbols` , bellek içi akış `countSymbolBytes` içinde uzaklığında `symbolsReadOffset` başlayarak verileri okumaya çalışır. Veriler, kullanılabilir alan olması `pSymbolBytes` `countSymbolBytes` beklenen öğesine kopyalanır.     `pCountSymbolsBytesRead`okunan toplam bayt sayısını içerir, bu da akışın sonuna ulaşılırsa daha `countSymbolBytes` az olabilir.  
+ `ReadInMemorySymbols` yöntemi, bellek içi akış içindeki `symbolsReadOffset` uzaklığında başlayarak verilerin `countSymbolBytes` okumaya çalışır. Veriler, kullanılabilir alan `countSymbolBytes` olması beklenen `pSymbolBytes`kopyalanır.     `pCountSymbolsBytesRead`, okunan bayt sayısını içerir, bu, akışın sonuna ulaşılırsa `countSymbolBytes` daha az olabilir.  
   
 > [!NOTE]
-> Geçerli uygulama Reflection. yayma 'yi desteklemiyor. Modül Reflection. yayma kullanılarak oluşturulduysa, yöntemi döndürür `CORPROF_E_MODULE_IS_DYNAMIC`.  
+> Geçerli uygulama Reflection. yayma 'yi desteklemiyor. Modül Reflection. yayma kullanılarak oluşturulduysa, yöntemi `CORPROF_E_MODULE_IS_DYNAMIC`döndürür.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi** CorProf. IDL, CorProf. h  
+ **Üst bilgi:** CorProf. IDL, CorProf. h  
   
- **Kitaplığı** Corguid. lib  
+ **Kitaplık:** Corguid. lib  
   
  **.NET Framework sürümleri:** [!INCLUDE[net_current_v461plus](../../../../includes/net-current-v461plus-md.md)]  
   

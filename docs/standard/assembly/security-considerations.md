@@ -1,5 +1,5 @@
 ---
-title: Bütünleştirilmiş kod güvenliği konuları
+title: Derleme güvenliği hakkında dikkate alınması gerekenler
 ms.date: 08/20/2019
 helpviewer_keywords:
 - assemblies [.NET Framework], security
@@ -15,16 +15,14 @@ helpviewer_keywords:
 - security [.NET Framework], assemblies
 - integrity with assemblies
 ms.assetid: 1b5439c1-f3d5-4529-bd69-01814703d067
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b8cf99e766e3ea66440a30b4b616a1d90ec937e3
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 2cd12ea49723bdac734c6847d337d945a5cfcb5e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70973084"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138616"
 ---
-# <a name="assembly-security-considerations"></a>Bütünleştirilmiş kod güvenliği konuları
+# <a name="assembly-security-considerations"></a>Derleme güvenliği hakkında dikkate alınması gerekenler
 <a name="top"></a>Bir derleme oluşturduğunuzda, derlemenin çalışması için gereken bir izin kümesi belirtebilirsiniz. Bir derlemeye belirli izinlerin verilip verilmediği kanıta göre belirlenir.  
   
  Kanıtın kullanıldığı iki farklı yol vardır:  

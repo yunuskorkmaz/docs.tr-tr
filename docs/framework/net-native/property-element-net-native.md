@@ -1,15 +1,13 @@
 ---
-title: <Property>Öğesi (.NET Native)
+title: <Property> öğesi (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: ad4ba56d-3bcb-4c10-ba90-1cc66e2175a1
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 54daf15c593327bf3255f40f6eb6931ffc8bd3c6
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: b9bc89804a872dddf1a56c2a3dadc9c3df4f5fd1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049305"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128206"
 ---
 # <a name="property-element-net-native"></a>\<Özellik > öğesi (.NET Native)
 Çalışma zamanı yansıtma ilkesini bir özelliğe uygular.  
@@ -39,13 +37,13 @@ ms.locfileid: "71049305"
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|*method_name*|Özellik adı. Özelliğin türü, üst [ \<tür >](type-element-net-native.md) veya [ \<typeörneklemesi >](typeinstantiation-element-net-native.md) öğesi tarafından tanımlanır.|  
+|*method_name*|Özellik adı. Özelliğin türü, üst [\<türü >](type-element-net-native.md) veya [\<typeörneklemesi >](typeinstantiation-element-net-native.md) öğesi tarafından tanımlanır.|  
   
 ## <a name="all-other-attributes"></a>Diğer tüm öznitelikler  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|*policy_setting*|Özelliği için bu ilke türüne uygulanacak ayar. Olası değerler şunlardır `Auto` `Excluded` `Required`, ,ve.`Included` Daha fazla bilgi için bkz. [çalışma zamanı yönergesi Ilke ayarları](runtime-directive-policy-settings.md).|  
+|*policy_setting*|Özelliği için bu ilke türüne uygulanacak ayar. Olası değerler şunlardır `Auto`, `Excluded`, `Included`ve `Required`. Daha fazla bilgi için bkz. [çalışma zamanı yönergesi Ilke ayarları](runtime-directive-policy-settings.md).|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -54,14 +52,14 @@ ms.locfileid: "71049305"
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<Tür >](type-element-net-native.md)|Yansıma ilkesini bir türe ve tüm üyelerine uygular.|  
+|[\<türü >](type-element-net-native.md)|Yansıma ilkesini bir türe ve tüm üyelerine uygular.|  
 |[\<Typeörneklemesi >](typeinstantiation-element-net-native.md)|Oluşturulan genel türe ve tüm üyelerine yansıma ilkesi uygular.|  
   
 ## <a name="remarks"></a>Açıklamalar  
  Bir özelliğin İlkesi açıkça tanımlanmamışsa, üst öğesinin çalışma zamanı ilkesini devralır.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, bir `Book` nesnenin örneğini oluşturmak ve özellik değerlerini göstermek için yansıma kullanır. Projenin özgün varsayılan. RD. xml dosyası şu şekilde görünür:  
+ Aşağıdaki örnek, `Book` nesnesini başlatmak ve özellik değerlerini göstermek için yansıma kullanır. Projenin özgün varsayılan. RD. xml dosyası şu şekilde görünür:  
   
 ```xml  
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  
@@ -73,17 +71,17 @@ ms.locfileid: "71049305"
 </Directives>  
 ```  
   
- Dosya, yansıma aracılığıyla `All` sınıf oluşturuculara erişime `Activate` izin veren `Book` sınıfının ilkesine değeri uygular. `Book` Sınıfın ilkesi, üst ad alanından devralınır. `Browse` Bu, meta verileri `Required Public`çalışma zamanında kullanılabilir hale getiren olarak ayarlanır.  
+ Dosya, yansıma aracılığıyla sınıf oluşturuculara erişime izin veren `Book` sınıfı için `Activate` ilkesine `All` değerini uygular. `Book` sınıfının `Browse` ilkesi üst ad alanından devralınır. Bu, meta verileri çalışma zamanında kullanılabilir hale getiren `Required Public`olarak ayarlanır.  
   
- Örnek için kaynak kodu aşağıda verilmiştir. `outputBlock` Değişkeni bir<xref:Windows.UI.Xaml.Controls.TextBlock> denetimi temsil eder.  
+ Örnek için kaynak kodu aşağıda verilmiştir. `outputBlock` değişkeni bir <xref:Windows.UI.Xaml.Controls.TextBlock> denetimini temsil eder.  
   
  [!code-csharp[ProjectN_Reflection#6](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/property1.cs#6)]  
   
- Ancak, bu örneği derlemek ve yürütmek bir [MissingRuntimeArtifactException](missingruntimeartifactexception-class-net-native.md) özel durumu oluşturur. Kullanılabilir `Book` tür için meta veriler yaptığımız halde, özellik uygulamalarındaki uygulamaları dinamik olarak kullanılabilir hale geçirdik. Bu hatayı iki şekilde düzeltebiliriz:  
+ Ancak, bu örneği derlemek ve yürütmek bir [MissingRuntimeArtifactException](missingruntimeartifactexception-class-net-native.md) özel durumu oluşturur. `Book` türü için meta veriler yaptığımız halde, özellik uygulamalarındaki uygulamaları dinamik olarak kullanılabilir hale geçirdik. Bu hatayı iki şekilde düzeltebiliriz:  
   
-- tür `Dynamic` için`Book` [ilke tanımlayarak >öğesi.\<](type-element-net-native.md)  
+- `Book` türü için `Dynamic` ilkesi tanımlayarak [\<türü >](type-element-net-native.md) öğesi.  
   
-- Aşağıdaki default. RD. xml dosyası gibi, alıcısı çağırmak istediğimiz her bir özellik için iç içe [ \<bir özellik >](property-element-net-native.md) öğesi ekleyerek.  
+- Aşağıdaki default. RD. xml dosyası gibi, alıcı çağırmak istediğiniz her bir özellik için iç içe [\<özelliği >](property-element-net-native.md) öğesi ekleyerek.  
   
     ```xml  
     <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  

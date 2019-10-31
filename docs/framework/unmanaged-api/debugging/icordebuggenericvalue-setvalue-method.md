@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: ed4c6458-0435-44fc-8e78-8ba00be362f2
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0b6907cdf78fc70c75ddd711cd8593427857b172
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4cd03895b4e33c3e42c71acca12eaf950fc9a145
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67756896"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138552"
 ---
 # <a name="icordebuggenericvaluesetvalue-method"></a>ICorDebugGenericValue::SetValue Yöntemi
-Yeni bir değer belirtilen arabellek kopyalar.  
+Belirtilen arabellekteki yeni bir değer kopyalar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,16 +35,16 @@ HRESULT SetValue (
   
 ## <a name="parameters"></a>Parametreler  
  `pFrom`  
- [in] Arabellek için işaretçi değeri kopyalanacak.  
+ 'ndaki Değerin kopyalanacağı arabelleğin işaretçisi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Başvuru türleri için başvuru içeriği bir değerdir.  
+ Başvuru türleri için değer, içerik değil başvurudur.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

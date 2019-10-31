@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0f63400b-dc1c-48d6-b51a-75c3f7f28e03
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ef7619316cae46df350bd75a2c6838828f7e9c82
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: db4f9bc6277015055cbcdb509628f2862a71dbc4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67747186"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127160"
 ---
 # <a name="icordebugregistersetgetthreadcontext-method"></a>ICorDebugRegisterSet::GetThreadContext Metodu
-Geçerli iş parçacığı bağlamını alır.  
+Geçerli iş parçacığının bağlamını alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,24 +37,24 @@ HRESULT GetThreadContext(
   
 ## <a name="parameters"></a>Parametreler  
  `contextSize`  
- [in] Bayt cinsinden boyutu, `context` dizisi.  
+ 'ndaki `context` dizisinin bayt cinsinden boyutu.  
   
  `context`  
- [out içinde] Win32 oluşturan bir bayt dizisi `CONTEXT` geçerli platform için yapısı.  
+ [in, out] Geçerli platform için Win32 `CONTEXT` yapısını oluşturan bir bayt dizisi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Hata ayıklayıcı Win32 yerine bu işlevi çağırmanız gerekir `GetThreadContext` işlev çünkü iş parçacığı burada onun içeriği geçici olarak değiştirildi "ele geçirilen" bir durumda olabilir. Döndürülen veriler bir Win32, `CONTEXT` geçerli platform için yapısı.  
+ İş parçacığı, bağlamı geçici olarak değiştirilen bir "ele geçirilmiş" durumda olabileceğinden, hata ayıklayıcı Win32 `GetThreadContext` işlevi yerine bu işlevi çağırmalıdır. Döndürülen veriler, geçerli platform için bir Win32 `CONTEXT` yapısıdır.  
   
- Yaprak olmayan çerçeveler için istemcileri hangi kayıtları kullanarak geçerli olduğunu denetlemeniz gerekir [Icordebugregisterset::getregistersavailable](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-getregistersavailable-method.md).  
+ Yaprak olmayan kareler için, istemciler [ICorDebugRegisterSet:: GetRegistersAvailable](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-getregistersavailable-method.md)kullanarak hangi yazmaçların geçerli olduğunu denetlemelidir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

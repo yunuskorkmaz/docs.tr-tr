@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: aaf5938d-179c-4eaa-8d35-8523a4fadded
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 875125185e9af74b85a833d04539403f81badf8f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: fa317e1217ac0a9ca46bfeb312446534b1fca63a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761501"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131559"
 ---
 # <a name="icordebugmanagedcallback2exceptionunwind-method"></a>ICorDebugManagedCallback2::ExceptionUnwind Yöntemi
-Özel durumu geriye doğru işlem sırasında bir durum bildirim sağlar.  
+Özel durum geri sarma işlemi sırasında bir durum bildirimi sağlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,30 +38,30 @@ HRESULT ExceptionUnwind (
   
 ## <a name="parameters"></a>Parametreler  
  `pAppDomain`  
- [in] Özel durumun oluştuğu iş parçacığı içeren uygulama etki alanını temsil eden bir Icordebugappdomain nesne işaretçisi.  
+ 'ndaki Özel durumun oluşturulduğu iş parçacığını içeren uygulama etki alanını temsil eden ICorDebugAppDomain nesnesine yönelik bir işaretçi.  
   
  `pThread`  
- [in] Özel durumun oluştuğu iş parçacığını temsil eden bir Icordebugthread nesne işaretçisi.  
+ 'ndaki Özel durumun oluşturulduğu iş parçacığını temsil eden ICorDebugThread nesnesine yönelik bir işaretçi.  
   
  `dwEventType`  
- [in] Geri çağırma tarafından geriye doğru izleme aşamasında sinyal olayı belirtir CorDebugExceptionUnwindCallbackType sabit listesi değeri.  
+ 'ndaki Geriye doğru izleme aşamasında geri çağırma tarafından bildirimekte olan olayı belirten Cordebugexceptionunwınizcallbacktype numaralandırması değeri.  
   
  `dwFlags`  
- [in] Değerini [CorDebugExceptionFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionflags-enumeration.md) özel durum hakkında ek bilgi belirten sabit listesi.  
+ 'ndaki Özel durum hakkında ek bilgi belirten [CorDebugExceptionFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionflags-enumeration.md) numaralandırması değeri.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `ExceptionUnwind` çeşitli noktalarda, özel durum işleme işleminin geriye doğru izleme aşamasında çağrılır. `ExceptionUnwind` birden çok kez tek bir özel durumu geriye doğru izleme çağrılabilir.  
+ `ExceptionUnwind`, özel durum işleme sürecinin geriye doğru izleme aşamasında çeşitli noktalarda çağrılır. tek bir özel durum geriye doğru bir şekilde `ExceptionUnwind` birden çok kez çağrılabilir.  
   
- Varsa `dwEventType` = DEBUG_EXCEPTION_INTERCEPTED, yönerge işaretçisini dizisi noktadan önce iş parçacığının yaprak çerçevesinde olacaktır (önce birkaç yönergeleri olabilir) özel duruma yol açan yönerge.  
+ `dwEventType` = DEBUG_EXCEPTION_INTERCEPTED ise yönerge işaretçisi, özel duruma yol gösteren yönerge olan iş parçacığının yaprak çerçevesinde (daha önce birkaç yönerge olabilir) olur.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

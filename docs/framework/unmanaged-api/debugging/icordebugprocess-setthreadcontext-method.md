@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: a7b50175-2bf1-40be-8f65-64aec7aa1247
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7b949961e854facf8414c81c47f995b2ac57af3f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3c57021061c1566b369cdd43847e3994cf54e2da
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67755388"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139679"
 ---
 # <a name="icordebugprocesssetthreadcontext-method"></a>ICorDebugProcess::SetThreadContext Yöntemi
-Bu işlemde belirli iş parçacığı bağlamını ayarlar.  
+Bu işlemdeki verilen iş parçacığının bağlamını ayarlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,28 +37,28 @@ HRESULT SetThreadContext(
   
 ## <a name="parameters"></a>Parametreler  
  `threadID`  
- [in] Hangi bağlamını ayarlamak iş parçacığı kimliği.  
+ 'ndaki Bağlamını ayarlanacak iş parçacığının KIMLIĞI.  
   
  `contextSize`  
- [in] Boyutu `context` dizisi.  
+ 'ndaki `context` dizisinin boyutu.  
   
  `context`  
- [in] İş parçacığı bağlamı açıklayan bir bayt dizisi.  
+ 'ndaki İş parçacığının bağlamını tanımlayan bir bayt dizisi.  
   
- Bağlam, iş parçacığının yürütülmekte olan işlemci mimarisini belirtir.  
+ Bağlam, iş parçacığının yürütüldüğü işlemcinin mimarisini belirtir.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Hata ayıklayıcı Win32 yerine bu yöntemi çağırmanız gerekir `SetThreadContext` iş parçacığı, onun içeriği geçici olarak değiştirildi "ele geçirilen" bir durumda olabileceğinden, işlev. Bu yöntem, yalnızca bir iş parçacığı yerel kodda olduğunda kullanılmalıdır. Kullanım [Icordebugregisterset](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md) yönetilen kodda iş parçacığı için. Hiçbir zaman bir bant dışı (OOB) hata ayıklama olayı sırasında bir iş parçacığı bağlamı değiştirmek gerekir.  
+ İş parçacığı gerçekten, bağlamı geçici olarak değiştirilen bir "ele geçirilmiş" durumda olabileceğinden, hata ayıklayıcı Win32 `SetThreadContext` işlevi yerine bu yöntemi çağırmalıdır. Bu yöntem, yalnızca bir iş parçacığı yerel kodda olduğunda kullanılmalıdır. Yönetilen koddaki iş parçacıkları için [ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md) kullanın. Bant dışı (OOB) hata ayıklama olayı sırasında bir iş parçacığının bağlamını hiçbir şekilde değiştirmeniz gerekmez.  
   
- Geçirilen veriler, geçerli platform için bir bağlam yapısı olması gerekir.  
+ Geçirilen veriler, geçerli platform için bir bağlam yapısı olmalıdır.  
   
- Bu yöntem, çalışma zamanı yanlış kullandıysanız bozabilir.  
+ Yanlış kullanılırsa, bu yöntem çalışma zamanını bozabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

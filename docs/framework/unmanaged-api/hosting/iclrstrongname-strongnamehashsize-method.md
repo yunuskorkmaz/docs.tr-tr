@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4a05ee56-08e4-4f3a-86a9-9b52083d5c0f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 058ff84ad9d56ce1ce2defd50c20ce50e1d791a6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8db3b1854e334cef4d91d21eb5f666ba2e88fc2e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67747938"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73135056"
 ---
 # <a name="iclrstrongnamestrongnamehashsize-method"></a>ICLRStrongName::StrongNameHashSize Yöntemi
-Belirtilen karma algoritması kullanarak bir karma için gerekli arabellek boyutunu alır.  
+Belirtilen karma algoritmasını kullanarak bir karma için gereken arabellek boyutunu alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,22 +36,22 @@ HRESULT StrongNameHashSize (
   
 ## <a name="parameters"></a>Parametreler  
  `ulHashAlg`  
- [in] Arabellek boyutunu hesaplamak için kullanılan karma algoritması.  
+ 'ndaki Arabellek boyutunu hesaplamak için kullanılan karma algoritması.  
   
  `pcbSize`  
- [out] Döndürülen arabellek bayt cinsinden boyutu.  
+ dışı Bayt cinsinden döndürülen arabellek boyutu.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- `S_OK` yöntemi başarıyla tamamlandı Aksi takdirde hata olduğunu gösteren HRESULT değerini (bkz [ortak HRESULT değerlerini](https://go.microsoft.com/fwlink/?LinkId=213878) bir listesi için).  
+ Yöntem başarıyla tamamlanırsa `S_OK`; Aksi takdirde, hata belirten bir HRESULT değeri (bkz. bir liste için [genel HRESULT değerleri](https://go.microsoft.com/fwlink/?LinkId=213878) ).  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** MetaHost.h  
+ **Üst bilgi:** MetaHost. h  
   
- **Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil  
+ **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: c35e2919-42c3-4ba0-ae28-443c35f66f93
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c7d9f5373f2b4ea216ca517813b1334b9f5c38a6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 949d04fe8d9ce492fb320fb4732677ffb35302ef
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739962"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132819"
 ---
 # <a name="cordebugiltonativemappingtypes-enumeration"></a>CorDebugIlToNativeMappingTypes Numaralandırması
-Cor_debug_ıl_to_natıve_map yapısı örneği tarafından temsil edilen yerel yönergeler, belirli bir dizi özel kod bölgesine karşılık gelen olup olmadığını gösterir.  
+COR_DEBUG_IL_TO_NATIVE_MAP yapısının bir örneği tarafından temsil edilen belirli bir yerel yönerge aralığının özel bir kod bölgesine karşılık geldiğini gösterir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,18 +38,18 @@ typedef enum CorDebugIlToNativeMappingTypes {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`NO_MAPPING`|Yerel yönergeleri aralığını herhangi bir özel kod bölgesine karşılık gelmiyor.|  
-|`PROLOG`|Yerel yönergeleri aralığı için giriş karşılık gelir.|  
-|`EPILOG`|Yerel yönergeleri aralığı için sonuç karşılık gelir.|  
+|`NO_MAPPING`|Yerel yönergelerin aralığı herhangi bir özel kod bölgesine karşılık gelmiyor.|  
+|`PROLOG`|Yerel yönergelerin aralığı giriş alanına karşılık gelir.|  
+|`EPILOG`|Yerel yönergelerin aralığı, bitiş değerine karşılık gelir.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

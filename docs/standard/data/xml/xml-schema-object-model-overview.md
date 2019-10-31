@@ -3,40 +3,38 @@ title: XML Şema Nesne Modeline (SOM) Genel Bakış
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 896a1e12-5655-42c6-8cdd-89c12862b34b
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 97e2e54c534b30c3c514c9102ded0050fc154b75
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3ebf0cd06ebea3092ef8aa42debe0afeac9be4f2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64589797"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129141"
 ---
 # <a name="xml-schema-object-model-overview"></a>XML Şema Nesne Modeline (SOM) Genel Bakış
-Microsoft .NET Framework içinde şema nesne modeli (SOM) oluşturmak, düzenlemek ve şemaları program aracılığıyla doğrulama olanak tanıyan zengin bir API'dir. SOM XML Şeması belgeleri benzer şekilde XML belgelerinde belge nesne modeli (DOM) çalıştığı şekilde çalışır. XML şema belgeleri, SOM yüklenen geçerliliğini şemaya uygun diğer XML belgeleri ve yapısı hakkında daha fazla anlam ifade geçerli XML dosyalarıdır.  
+Microsoft .NET çerçevesindeki şema nesne modeli (SOM), şemaları programlı bir şekilde oluşturmanıza, düzenlemenize ve doğrulamanıza olanak sağlayan zengin bir API 'dir. SOM, XML şeması belgelerinde Belge Nesne Modeli (DOM) XML belgelerinde çalışma biçimine benzer şekilde çalışır. XML şeması belgeleri, SOM 'a bir kez yüklendikten sonra şemaya uygun diğer XML belgelerinin yapısı ve geçerliliği hakkında anlam veren geçerli XML dosyalarıdır.  
   
- Bir şema yapısı veya modeli için belirli bir şema XML belgelerinin belirterek XML belgelerinin bir sınıf tanımlayan bir XML belgesidir. Bir şema XML belgeleri içeriğini kısıtlamalar tanımlar ve uyumlu XML belgeleri şema-söz konusu şeması ile geçerli kabul edilmesi için uyması gereken sözlük (kuralları veya dilbilgisi) açıklar. Bir XML belgesi doğrulama belge şema tarafından belirtilen dil bilgisi için uygun olduğunu güvence altına işlemidir.  
+ Şema, belirli bir şema için XML belgelerinin yapısını veya modelini belirterek XML belgelerinin bir sınıfını tanımlayan bir XML belgesidir. Bir şema, XML belgelerinin içeriğiyle ilgili kısıtlamaları tanımlar ve uyumlu XML belgelerinin, şema için geçerli olan şemayla birlikte kabul edilebilmesi için izlenmesi gereken sözlük (kurallar veya dilbilgisi) açıklanmaktadır. Bir XML belgesinin doğrulanması, belgenin şema tarafından belirtilen dilbilgisine uyduğundan emin olmanızı sağlayan işlemdir.  
   
- .NET Framework'teki SOM API yolları oluşturmak, düzenlemek ve şema doğrulama sağlayan aşağıda verilmiştir.  
+ Aşağıda, .NET Framework 'teki SOM API 'sinin şemaları oluşturmanıza, düzenlemenize ve doğrulamanıza olanak tanıyan yollar verilmiştir.  
   
-- Yükleyin ve geçerli şemalar dosyaları gelen ve kaydedin.  
+- Dosyalardan ve dosyalarından geçerli şemaları yükleyin ve kaydedin.  
   
-- Bellek içi şemaları kullanarak türü kesin belirlenmiş bir sınıf oluşturun.  
+- Kesin olarak belirlenmiş sınıfları kullanarak bellek içi şemalar oluşturun.  
   
-- Etkileşim <xref:System.Xml.Schema.XmlSchemaSet> önbelleğe almak, derlemek ve şemaları almak için sınıf.  
+- Şemaları önbelleğe almak, derlemek ve almak için <xref:System.Xml.Schema.XmlSchemaSet> sınıfıyla etkileşime geçin.  
   
-- Etkileşim <xref:System.Xml.XmlReader.Create%2A> yöntemi <xref:System.Xml.XmlReader> XML örneği belgeleri şemaları karşı doğrulamak için sınıf.  
+- XML örnek belgelerini şemalara karşı doğrulamak için <xref:System.Xml.XmlReader> sınıfının <xref:System.Xml.XmlReader.Create%2A> yöntemiyle etkileşime geçin.  
   
-- Düzenleyiciler oluşturmak ve şemaları sürdürmek için oluşturun.  
+- Şemaları oluşturmaya ve korumaya yönelik düzenleyiciler oluşturun.  
   
-- Dinamik olarak derlendiğini ve kullanılmak üzere XML örneği belgeleri doğrulama kaydedilmiş bir şema düzenleyin.  
+- Karmaşık ve XML örnek belgelerinin doğrulamasında kullanılmak üzere kaydedilebilecek bir şemayı dinamik olarak düzenleyin.  
   
 ## <a name="the-schema-object-model"></a>Şema nesne modeli  
- Sınıflarda kapsamlı bir dizi SOM oluşan <xref:System.Xml.Schema?displayProperty=nameWithType> bir XML Şeması öğeleri karşılık gelen ad alanı. Örneğin, `<xsd:schema>...</xsd:schema>` öğesi eşler için <xref:System.Xml.Schema.XmlSchema?displayProperty=nameWithType> sınıfı ve içinde bulunan tüm bilgileri bir `<xsd:schema/>` öğesi kullanarak gösterilebileceği <xref:System.Xml.Schema.XmlSchema> sınıfı. Benzer şekilde, `<xsd:element>...</xsd:element>` ve `<xsd:attribute>...</xsd:attribute>` öğeleri eşlemek için <xref:System.Xml.Schema.XmlSchemaElement?displayProperty=nameWithType> ve <xref:System.Xml.Schema.XmlSchemaAttribute?displayProperty=nameWithType> sırasıyla sınıfları. Bu eşleme XML şeması bir XML şema nesne modeli içerisinde oluşturma tüm öğelerini Daily <xref:System.Xml.Schema> Aşağıdaki diyagramda gösterildiği ad alanı.  
+ SOM, bir XML şemasındaki öğelere karşılık gelen <xref:System.Xml.Schema?displayProperty=nameWithType> ad alanındaki kapsamlı bir sınıf kümesinden oluşur. Örneğin, `<xsd:schema>...</xsd:schema>` öğesi <xref:System.Xml.Schema.XmlSchema?displayProperty=nameWithType> sınıfına eşlenir ve bir `<xsd:schema/>` öğesi içinde yer alan tüm bilgiler <xref:System.Xml.Schema.XmlSchema> sınıfı kullanılarak gösterilebilir. Benzer şekilde, `<xsd:element>...</xsd:element>` ve `<xsd:attribute>...</xsd:attribute>` öğeleri sırasıyla <xref:System.Xml.Schema.XmlSchemaElement?displayProperty=nameWithType> ve <xref:System.Xml.Schema.XmlSchemaAttribute?displayProperty=nameWithType> sınıflarıyla eşlenir. Bu eşleme, izleyen diyagramda gösterilen <xref:System.Xml.Schema> ad alanında bir XML şeması nesne modeli oluşturan bir XML şemasının tüm öğeleri için devam eder.  
   
- ![System.Xml.Schema nesne modeli](./media/xml-schema-object-model-overview/xml-schema-object-model.gif)  
+ ![System. xml. Schema nesne modeli](./media/xml-schema-object-model-overview/xml-schema-object-model.gif)  
   
- Her sınıfta hakkında daha fazla bilgi için <xref:System.Xml.Schema> ad bkz <xref:System.Xml.Schema> .NET Framework sınıf kitaplığındaki ad alanı başvuru belgeleri.  
+ <xref:System.Xml.Schema> ad alanındaki her bir sınıf hakkında daha fazla bilgi için .NET Framework sınıf kitaplığındaki <xref:System.Xml.Schema> ad alanı başvurusu belgelerine bakın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

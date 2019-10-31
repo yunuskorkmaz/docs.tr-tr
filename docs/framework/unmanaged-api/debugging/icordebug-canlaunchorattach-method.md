@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: ca7723db-7c07-4cdd-bd92-fba34928b623
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: af933be9edc0d0fe7249f33800fe259ddc779aeb
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 805f9a5d1f2590a06bfa929c152bdfd13900531a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738321"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134276"
 ---
 # <a name="icordebugcanlaunchorattach-method"></a>ICorDebug::CanLaunchOrAttach Yöntemi
-Yeni bir işlem başlatılıyor veya belirtilen mevcut işleme iliştirdikten geçerli makine ve çalışma zamanı yapılandırma bağlamında mümkün olup olmadığını belirten bir HRESULT döndürür.  
+Geçerli makine ve çalışma zamanı yapılandırması bağlamında yeni bir işlemin başlatılıp başlatılmayacağını veya belirtilen mevcut işleme iliştirilip mümkün olup olmadığını belirten bir HRESULT döndürür.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,13 +36,13 @@ HRESULT CanLaunchOrAttach (
   
 ## <a name="parameters"></a>Parametreler  
  `dwProcessId`  
- [in] Var olan bir işlem kimliği.  
+ 'ndaki Mevcut bir işlemin KIMLIĞI.  
   
  `win32DebuggingEnabled`  
- [in] Geçirin `true` , Win32 ile hata ayıklama etkin oluşturmayı planlıyoruz veya Win32 hata ayıklamaya etkin; Aksi takdirde eklemek için geçirmek `false`.  
+ 'ndaki Win32 hata ayıklaması etkinken başlatmayı planlıyorsanız veya Win32 hata ayıklaması etkin olarak eklemek istiyorsanız `true` geçirin; Aksi takdirde, `false`geçirin.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Hata Ayıklama Hizmetleri yeni bir işlem başlatılıyor veya belirtilen işleme iliştirdikten belirlerseniz S_OK geçerli makine ve çalışma zamanı yapılandırma hakkında bilgi verilen mümkündür. HRESULT olası değerler şunlardır:  
+ Hata ayıklama Hizmetleri yeni bir işlem başlatma veya belirli bir işleme ekleme işleminin mümkün olduğunu tespit ederseniz, geçerli makine ve çalışma zamanı yapılandırmasıyla ilgili bilgiler verilir. Olası HRESULT değerleri şunlardır:  
   
 - S_OK  
   
@@ -55,18 +53,18 @@ HRESULT CanLaunchOrAttach (
 - CORDBG_E_KERNEL_DEBUGGER_ENABLED  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem, yalnızca bilgilendirme amaçlıdır. Arabirimi, başlatılmasını durdurmaz ya da tarafından döndürülen değerinden bağımsız olarak bir işleme ekleme `CanLaunchOrAttach`.  
+ Bu yöntem yalnızca bilgilendirme amaçlıdır. Arabirim, `CanLaunchOrAttach`tarafından döndürülen değerden bağımsız olarak, bir işlemden başlatma veya ekleme işlemini durdurmayacak.  
   
- Planlıyorsanız Win32 ile hata ayıklama etkin başlatma veya ekleme Win32 ile hata ayıklamayı etkin geçirmek `true` için `win32DebuggingEnabled`. Tarafından döndürülen HRESULT `CanLaunchOrAttach` bu seçeneği kullanırsanız farklı olabilir.  
+ Win32 hata ayıklaması etkinleştirilmiş veya Win32 hata ayıklama özelliği etkinken birlikte başlatmayı planlıyorsanız, `win32DebuggingEnabled`için `true` geçirin. `CanLaunchOrAttach` tarafından döndürülen HRESULT, bu seçeneği kullanırsanız farklılık gösterebilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
