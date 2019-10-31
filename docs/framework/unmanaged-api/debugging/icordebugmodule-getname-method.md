@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: db499637-7ba9-421e-b8b1-35856995e80b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a7f62385031967c164915fd31735a6d962f557fa
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: b27e7a2cdcbfc3a88a734230118d99c2dd5c700e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894993"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129533"
 ---
-# <a name="icordebugmodulegetname-method"></a><span data-ttu-id="0cc3a-102">ICorDebugModule::GetName Metodu</span><span class="sxs-lookup"><span data-stu-id="0cc3a-102">ICorDebugModule::GetName Method</span></span>
-<span data-ttu-id="0cc3a-103">Modülün dosya adını alır.</span><span class="sxs-lookup"><span data-stu-id="0cc3a-103">Gets the file name of the module.</span></span>  
+# <a name="icordebugmodulegetname-method"></a><span data-ttu-id="60890-102">ICorDebugModule::GetName Metodu</span><span class="sxs-lookup"><span data-stu-id="60890-102">ICorDebugModule::GetName Method</span></span>
+<span data-ttu-id="60890-103">Modülün dosya adını alır.</span><span class="sxs-lookup"><span data-stu-id="60890-103">Gets the file name of the module.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0cc3a-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="0cc3a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="60890-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="60890-104">Syntax</span></span>  
   
 ```cpp
 HRESULT GetName(  
@@ -37,26 +35,26 @@ HRESULT GetName(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="0cc3a-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="0cc3a-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="60890-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="60890-105">Parameters</span></span>  
  `cchname`  
- <span data-ttu-id="0cc3a-106">'ndaki `szName` Dizinin boyutu.</span><span class="sxs-lookup"><span data-stu-id="0cc3a-106">[in] The size of the `szName` array.</span></span>  
+ <span data-ttu-id="60890-106">'ndaki `szName` dizisinin boyutu.</span><span class="sxs-lookup"><span data-stu-id="60890-106">[in] The size of the `szName` array.</span></span>  
   
  `pcchName`  
- <span data-ttu-id="0cc3a-107">'ndaki Döndürülen adın uzunluğuna yönelik bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="0cc3a-107">[in] A pointer to the length of the returned name.</span></span>  
+ <span data-ttu-id="60890-107">'ndaki Döndürülen adın uzunluğuna yönelik bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="60890-107">[in] A pointer to the length of the returned name.</span></span>  
   
  `szName`  
- <span data-ttu-id="0cc3a-108">dışı Döndürülen adı depolayan bir dizi.</span><span class="sxs-lookup"><span data-stu-id="0cc3a-108">[out] An array that stores the returned name.</span></span>  
+ <span data-ttu-id="60890-108">dışı Döndürülen adı depolayan bir dizi.</span><span class="sxs-lookup"><span data-stu-id="60890-108">[out] An array that stores the returned name.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="0cc3a-109">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="0cc3a-109">Remarks</span></span>  
- <span data-ttu-id="0cc3a-110">Modülün dosya adı diskteki adıyla eşleşiyorsa, yöntemibirS_OKHRESULTdöndürür.`GetName`</span><span class="sxs-lookup"><span data-stu-id="0cc3a-110">The `GetName` method returns an S_OK HRESULT if the module's file name matches the name on disk.</span></span> <span data-ttu-id="0cc3a-111">`GetName`ad, dinamik veya bellek içi bir modül gibi olursa, bir S_FALSE HRESULT döndürür.</span><span class="sxs-lookup"><span data-stu-id="0cc3a-111">`GetName` returns an S_FALSE HRESULT if the name is fabricated, such as for a dynamic or in-memory module.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="60890-109">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="60890-109">Remarks</span></span>  
+ <span data-ttu-id="60890-110">Modülün dosya adı diskteki adla eşleşiyorsa `GetName` yöntemi bir S_OK HRESULT döndürür.</span><span class="sxs-lookup"><span data-stu-id="60890-110">The `GetName` method returns an S_OK HRESULT if the module's file name matches the name on disk.</span></span> <span data-ttu-id="60890-111">`GetName`, bir dinamik veya bellek içi modül gibi bir ad olursa, bir S_FALSE HRESULT döndürür.</span><span class="sxs-lookup"><span data-stu-id="60890-111">`GetName` returns an S_FALSE HRESULT if the name is fabricated, such as for a dynamic or in-memory module.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="0cc3a-112">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="0cc3a-112">Requirements</span></span>  
- <span data-ttu-id="0cc3a-113">**Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0cc3a-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="60890-112">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="60890-112">Requirements</span></span>  
+ <span data-ttu-id="60890-113">**Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="60890-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="0cc3a-114">**Üst bilgi** CorDebug. IDL, CorDebug. h</span><span class="sxs-lookup"><span data-stu-id="0cc3a-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="60890-114">**Üst bilgi:** CorDebug. IDL, CorDebug. h</span><span class="sxs-lookup"><span data-stu-id="60890-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="0cc3a-115">**Kitaplığı** Corguid. lib</span><span class="sxs-lookup"><span data-stu-id="0cc3a-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="60890-115">**Kitaplık:** Corguid. lib</span><span class="sxs-lookup"><span data-stu-id="60890-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="0cc3a-116">**.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0cc3a-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="60890-116">**.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="60890-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0cc3a-117">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="0cc3a-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="60890-117">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="60890-117">See also</span></span>

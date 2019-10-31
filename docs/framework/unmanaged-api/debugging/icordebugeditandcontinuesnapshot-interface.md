@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: 91b558b3-cea9-4106-be8c-3d628d904bfe
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d7fd463a8cc8ad6a88818669de6fb495e12e497b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 21683a038b84cae4b2bf51fabd451a4a7514eb89
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61989120"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137481"
 ---
-# <a name="icordebugeditandcontinuesnapshot-interface"></a><span data-ttu-id="e7bcd-102">ICorDebugEditAndContinueSnapshot Arabirimi</span><span class="sxs-lookup"><span data-stu-id="e7bcd-102">ICorDebugEditAndContinueSnapshot Interface</span></span>
+# <a name="icordebugeditandcontinuesnapshot-interface"></a><span data-ttu-id="21076-102">ICorDebugEditAndContinueSnapshot Arabirimi</span><span class="sxs-lookup"><span data-stu-id="21076-102">ICorDebugEditAndContinueSnapshot Interface</span></span>
 
-<span data-ttu-id="e7bcd-103">`ICorDebugEditAndContinueSnapshot` artık kullanılmıyor.</span><span class="sxs-lookup"><span data-stu-id="e7bcd-103">`ICorDebugEditAndContinueSnapshot` is obsolete.</span></span> <span data-ttu-id="e7bcd-104">Bu arayüzü kullanmayın.</span><span class="sxs-lookup"><span data-stu-id="e7bcd-104">Do not use this interface.</span></span>  
+<span data-ttu-id="21076-103">`ICorDebugEditAndContinueSnapshot` artık kullanılmıyor.</span><span class="sxs-lookup"><span data-stu-id="21076-103">`ICorDebugEditAndContinueSnapshot` is obsolete.</span></span> <span data-ttu-id="21076-104">Bu arayüzü kullanmayın.</span><span class="sxs-lookup"><span data-stu-id="21076-104">Do not use this interface.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e7bcd-105">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="e7bcd-105">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="21076-105">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="21076-105">See also</span></span>
 
-- [<span data-ttu-id="e7bcd-106">Hata Ayıklama Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="e7bcd-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="21076-106">Hata Ayıklama Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="21076-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 86c397c3-81d8-463e-a248-3cbe06c44d9d
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d70797d810d6dd2fe97c1f0f3b9c45a18fb2afba
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 84b5da043f9bd437ee9099135ba865c1ab23bb9d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67767546"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129663"
 ---
-# <a name="icordebugprocess5enumerategcreferences-method"></a><span data-ttu-id="c957a-102">ICorDebugProcess5::EnumerateGCReferences Yöntemi</span><span class="sxs-lookup"><span data-stu-id="c957a-102">ICorDebugProcess5::EnumerateGCReferences Method</span></span>
-<span data-ttu-id="c957a-103">Bir işlemde atık olarak toplanmış olacak olan tüm nesneler için bir numaralandırıcı alır.</span><span class="sxs-lookup"><span data-stu-id="c957a-103">Gets an enumerator for all objects that are to be garbage-collected in a process.</span></span>  
+# <a name="icordebugprocess5enumerategcreferences-method"></a><span data-ttu-id="b57d4-102">ICorDebugProcess5::EnumerateGCReferences Yöntemi</span><span class="sxs-lookup"><span data-stu-id="b57d4-102">ICorDebugProcess5::EnumerateGCReferences Method</span></span>
+<span data-ttu-id="b57d4-103">Bir işlemde çöp toplanabilecek tüm nesneler için bir Numaralandırıcı alır.</span><span class="sxs-lookup"><span data-stu-id="b57d4-103">Gets an enumerator for all objects that are to be garbage-collected in a process.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c957a-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="c957a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b57d4-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="b57d4-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT EnumerateGCReferences(  
@@ -36,26 +34,26 @@ HRESULT EnumerateGCReferences(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="c957a-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="c957a-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="b57d4-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="b57d4-105">Parameters</span></span>  
  `enumerateWeakReferences`  
- <span data-ttu-id="c957a-106">[in] Zayıf başvurular da sıralanması olup olmadığını gösteren bir Boole değeri.</span><span class="sxs-lookup"><span data-stu-id="c957a-106">[in] A Boolean value that indicates whether weak references are also to be enumerated.</span></span> <span data-ttu-id="c957a-107">Varsa `enumerateWeakReferences` olduğu `true`, `ppEnum` Numaralandırıcı güçlü atıflar hem zayıf başvurular içerir.</span><span class="sxs-lookup"><span data-stu-id="c957a-107">If `enumerateWeakReferences` is `true`, the `ppEnum` enumerator includes both strong references and weak references.</span></span> <span data-ttu-id="c957a-108">Varsa `enumerateWeakReferences` olduğu `false`, numaralandırıcı yalnızca tanımlayıcı başvuruları içerir.</span><span class="sxs-lookup"><span data-stu-id="c957a-108">If `enumerateWeakReferences` is `false`, the enumerator includes only strong references.</span></span>  
+ <span data-ttu-id="b57d4-106">'ndaki Zayıf başvuruların da oluşturulup oluşturulmayacağını gösteren bir Boolean değer.</span><span class="sxs-lookup"><span data-stu-id="b57d4-106">[in] A Boolean value that indicates whether weak references are also to be enumerated.</span></span> <span data-ttu-id="b57d4-107">`enumerateWeakReferences` `true`, `ppEnum` Numaralandırıcı hem güçlü başvuruları hem de zayıf başvuruları içerir.</span><span class="sxs-lookup"><span data-stu-id="b57d4-107">If `enumerateWeakReferences` is `true`, the `ppEnum` enumerator includes both strong references and weak references.</span></span> <span data-ttu-id="b57d4-108">`enumerateWeakReferences` `false`, Numaralandırıcı yalnızca güçlü başvurular içerir.</span><span class="sxs-lookup"><span data-stu-id="b57d4-108">If `enumerateWeakReferences` is `false`, the enumerator includes only strong references.</span></span>  
   
  `ppEnum`  
- <span data-ttu-id="c957a-109">[out] Adresine bir işaretçi bir [Icordebuggcreferenceenum](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-interface.md) atık olarak toplanmış için diğer bir deyişle bir numaralandırıcı nesneler için.</span><span class="sxs-lookup"><span data-stu-id="c957a-109">[out] A pointer to the address of an [ICorDebugGCReferenceEnum](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-interface.md) that is an enumerator for the objects to be garbage-collected.</span></span>  
+ <span data-ttu-id="b57d4-109">dışı Çöp toplanabilecek nesneler için bir Numaralandırıcı olan [ıcorıtcggcreferenceenum](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-interface.md) adresine yönelik bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="b57d4-109">[out] A pointer to the address of an [ICorDebugGCReferenceEnum](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-interface.md) that is an enumerator for the objects to be garbage-collected.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="c957a-110">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="c957a-110">Remarks</span></span>  
- <span data-ttu-id="c957a-111">Bu yöntem, bir işlemdeki yönetilen tüm nesneleri için tam kök zincir belirlemek için bir yol sağlar ve bir nesne neden hala etkin olduğunu belirlemek için kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="c957a-111">This method provides a way to determine the full rooting chain for any managed object in a process and can be used to determine why an object is still alive.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="b57d4-110">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="b57d4-110">Remarks</span></span>  
+ <span data-ttu-id="b57d4-111">Bu yöntem, bir işlemdeki yönetilen herhangi bir nesne için tam kök zinciri belirlemenin bir yolunu sağlar ve bir nesnenin neden hala etkin olduğunu tespit etmek için kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="b57d4-111">This method provides a way to determine the full rooting chain for any managed object in a process and can be used to determine why an object is still alive.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c957a-112">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="c957a-112">Requirements</span></span>  
- <span data-ttu-id="c957a-113">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c957a-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b57d4-112">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="b57d4-112">Requirements</span></span>  
+ <span data-ttu-id="b57d4-113">**Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b57d4-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c957a-114">**Üst bilgi:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="c957a-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="b57d4-114">**Üst bilgi:** CorDebug. IDL, CorDebug. h</span><span class="sxs-lookup"><span data-stu-id="b57d4-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="c957a-115">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c957a-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="b57d4-115">**Kitaplık:** Corguid. lib</span><span class="sxs-lookup"><span data-stu-id="b57d4-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="c957a-116">**.NET framework sürümleri:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c957a-116">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ <span data-ttu-id="b57d4-116">**.NET Framework sürümleri:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b57d4-116">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c957a-117">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="c957a-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b57d4-117">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="b57d4-117">See also</span></span>
 
-- [<span data-ttu-id="c957a-118">ICorDebugProcess5 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="c957a-118">ICorDebugProcess5 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-interface.md)
-- [<span data-ttu-id="c957a-119">Hata Ayıklama Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="c957a-119">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="b57d4-118">ICorDebugProcess5 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="b57d4-118">ICorDebugProcess5 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-interface.md)
+- [<span data-ttu-id="b57d4-119">Hata Ayıklama Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="b57d4-119">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

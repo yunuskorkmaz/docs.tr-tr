@@ -15,21 +15,19 @@ helpviewer_keywords:
 ms.assetid: 68e20e62-203d-46d8-bb91-8d3c61cfacc3
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3ca3b86e90dcb76c1fece44cf2c5ed68e073d8e7
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 7edf0065fa7eb39dada167a682f2b634a438f1f3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67757212"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138394"
 ---
-# <a name="icordebugheapvalueisvalid-method"></a><span data-ttu-id="c2bd6-102">ICorDebugHeapValue::IsValid Yöntemi</span><span class="sxs-lookup"><span data-stu-id="c2bd6-102">ICorDebugHeapValue::IsValid Method</span></span>
-<span data-ttu-id="c2bd6-103">Bu Icordebugheapvalue tarafından temsil edilen nesnenin geçerli olup olmadığını gösteren bir değer alır.</span><span class="sxs-lookup"><span data-stu-id="c2bd6-103">Gets a value that indicates whether the object represented by this ICorDebugHeapValue is valid.</span></span>  
+# <a name="icordebugheapvalueisvalid-method"></a><span data-ttu-id="1b75c-102">ICorDebugHeapValue::IsValid Yöntemi</span><span class="sxs-lookup"><span data-stu-id="1b75c-102">ICorDebugHeapValue::IsValid Method</span></span>
+<span data-ttu-id="1b75c-103">Bu ICorDebugHeapValue tarafından temsil edilen nesnenin geçerli olup olmadığını gösteren bir değer alır.</span><span class="sxs-lookup"><span data-stu-id="1b75c-103">Gets a value that indicates whether the object represented by this ICorDebugHeapValue is valid.</span></span>  
   
- <span data-ttu-id="c2bd6-104">Bu yöntem .NET Framework 2.0 sürümünde kullanım dışı bırakıldı.</span><span class="sxs-lookup"><span data-stu-id="c2bd6-104">This method has been deprecated in the .NET Framework version 2.0.</span></span>  
+ <span data-ttu-id="1b75c-104">Bu yöntem 2,0 .NET Framework sürümünde kullanımdan kaldırılmıştır.</span><span class="sxs-lookup"><span data-stu-id="1b75c-104">This method has been deprecated in the .NET Framework version 2.0.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c2bd6-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="c2bd6-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1b75c-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="1b75c-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT IsValid (  
@@ -37,20 +35,20 @@ HRESULT IsValid (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="c2bd6-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="c2bd6-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="1b75c-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="1b75c-106">Parameters</span></span>  
  `pbValid`  
- <span data-ttu-id="c2bd6-107">[out] Yığındaki bu değerin geçerli olup olmadığını belirten Boolean bir değer için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="c2bd6-107">[out] A pointer to a Boolean value that indicates whether this value on the heap is valid.</span></span>  
+ <span data-ttu-id="1b75c-107">dışı Yığın üzerinde bu değerin geçerli olup olmadığını belirten bir Boolean değer işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="1b75c-107">[out] A pointer to a Boolean value that indicates whether this value on the heap is valid.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="c2bd6-108">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="c2bd6-108">Remarks</span></span>  
- <span data-ttu-id="c2bd6-109">Çöp toplayıcısı tarafından iadesi, değeri geçersiz.</span><span class="sxs-lookup"><span data-stu-id="c2bd6-109">The value is invalid if it has been reclaimed by the garbage collector.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="1b75c-108">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="1b75c-108">Remarks</span></span>  
+ <span data-ttu-id="1b75c-109">Değer çöp toplayıcı tarafından geri kazanımışsa geçersizdir.</span><span class="sxs-lookup"><span data-stu-id="1b75c-109">The value is invalid if it has been reclaimed by the garbage collector.</span></span>  
   
- <span data-ttu-id="c2bd6-110">Bu yöntem kullanım dışıdır.</span><span class="sxs-lookup"><span data-stu-id="c2bd6-110">This method has been deprecated.</span></span> <span data-ttu-id="c2bd6-111">.NET Framework 2.0 sürümünde, tüm kadar geçerli değerler [Icordebugcontroller::continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) , hangi zaman geçersiz değerler sırasında çağrılır.</span><span class="sxs-lookup"><span data-stu-id="c2bd6-111">In the .NET Framework 2.0, all values are valid until [ICorDebugController::Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) is called, at which time the values are invalidated.</span></span>  
+ <span data-ttu-id="1b75c-110">Bu yöntem kullanım dışı bırakıldı.</span><span class="sxs-lookup"><span data-stu-id="1b75c-110">This method has been deprecated.</span></span> <span data-ttu-id="1b75c-111">.NET Framework 2,0 ' de, tüm değerler [ICorDebugController:: Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) çağrılana kadar geçerli olur, bu durumda değerler geçersiz kılınır.</span><span class="sxs-lookup"><span data-stu-id="1b75c-111">In the .NET Framework 2.0, all values are valid until [ICorDebugController::Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) is called, at which time the values are invalidated.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c2bd6-112">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="c2bd6-112">Requirements</span></span>  
- <span data-ttu-id="c2bd6-113">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c2bd6-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="1b75c-112">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="1b75c-112">Requirements</span></span>  
+ <span data-ttu-id="1b75c-113">**Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="1b75c-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c2bd6-114">**Üst bilgi:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="c2bd6-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="1b75c-114">**Üst bilgi:** CorDebug. IDL, CorDebug. h</span><span class="sxs-lookup"><span data-stu-id="1b75c-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="c2bd6-115">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c2bd6-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="1b75c-115">**Kitaplık:** Corguid. lib</span><span class="sxs-lookup"><span data-stu-id="1b75c-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="c2bd6-116">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c2bd6-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="1b75c-116">**.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1b75c-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

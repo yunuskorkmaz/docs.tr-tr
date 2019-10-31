@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: b33ff059-40c4-4dfe-9cb2-21bfed2de0b0
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 99dbe5c5da5b8c169e34aa29afca507cc6624f0f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f24c07a654dc2345cb65226463573576a6fb3658
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67748796"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125347"
 ---
-# <a name="icordebugcontrollerisrunning-method"></a><span data-ttu-id="593bc-102">ICorDebugController::IsRunning Yöntemi</span><span class="sxs-lookup"><span data-stu-id="593bc-102">ICorDebugController::IsRunning Method</span></span>
-<span data-ttu-id="593bc-103">İşlemdeki iş parçacıkları şu anda özgürce çalışıp çalışmadığını gösteren bir değer alır.</span><span class="sxs-lookup"><span data-stu-id="593bc-103">Gets a value that indicates whether the threads in the process are currently running freely.</span></span>  
+# <a name="icordebugcontrollerisrunning-method"></a><span data-ttu-id="134b8-102">ICorDebugController::IsRunning Yöntemi</span><span class="sxs-lookup"><span data-stu-id="134b8-102">ICorDebugController::IsRunning Method</span></span>
+<span data-ttu-id="134b8-103">İşlemdeki iş parçacıklarının Şu anda serbestçe çalışıp çalışmadığını gösteren bir değer alır.</span><span class="sxs-lookup"><span data-stu-id="134b8-103">Gets a value that indicates whether the threads in the process are currently running freely.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="593bc-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="593bc-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="134b8-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="134b8-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT IsRunning (  
@@ -35,17 +33,17 @@ HRESULT IsRunning (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="593bc-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="593bc-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="134b8-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="134b8-105">Parameters</span></span>  
  `pbRunning`  
- <span data-ttu-id="593bc-106">[out] Bir değer için bir işaretçi `true` serbestçe; Aksi takdirde, işlemdeki iş parçacıkları çalıştırıyorsanız, `false`.</span><span class="sxs-lookup"><span data-stu-id="593bc-106">[out] A pointer to a value that is `true` if the threads in the process are running freely; otherwise, `false`.</span></span>  
+ <span data-ttu-id="134b8-106">dışı İşlemdeki iş parçacıkları serbestçe çalışıyorsa `true` bir değere yönelik işaretçi. Aksi takdirde, `false`.</span><span class="sxs-lookup"><span data-stu-id="134b8-106">[out] A pointer to a value that is `true` if the threads in the process are running freely; otherwise, `false`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="593bc-107">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="593bc-107">Requirements</span></span>  
- <span data-ttu-id="593bc-108">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="593bc-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="134b8-107">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="134b8-107">Requirements</span></span>  
+ <span data-ttu-id="134b8-108">**Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="134b8-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="593bc-109">**Üst bilgi:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="593bc-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="134b8-109">**Üst bilgi:** CorDebug. IDL, CorDebug. h</span><span class="sxs-lookup"><span data-stu-id="134b8-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="593bc-110">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="593bc-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="134b8-110">**Kitaplık:** Corguid. lib</span><span class="sxs-lookup"><span data-stu-id="134b8-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="593bc-111">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="593bc-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="134b8-111">**.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="134b8-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="593bc-112">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="593bc-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="134b8-112">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="134b8-112">See also</span></span>

@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 863fc8ce-9b8a-477e-8dd8-75c8544bb43a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: fdbce5e61f2013513d2079b5a958270319d34857
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a8642235cda359b849c49a35ab565397402c37d2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67763750"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130510"
 ---
-# <a name="ihostcrstsetspincount-method"></a><span data-ttu-id="fe6a4-102">IHostCrst::SetSpinCount Yöntemi</span><span class="sxs-lookup"><span data-stu-id="fe6a4-102">IHostCrst::SetSpinCount Method</span></span>
-<span data-ttu-id="fe6a4-103">Döngü sayısı için geçerli ayarlar [Ihostcrst](../../../../docs/framework/unmanaged-api/hosting/ihostcrst-interface.md) örneği.</span><span class="sxs-lookup"><span data-stu-id="fe6a4-103">Sets the spin count for the current [IHostCrst](../../../../docs/framework/unmanaged-api/hosting/ihostcrst-interface.md) instance.</span></span>  
+# <a name="ihostcrstsetspincount-method"></a><span data-ttu-id="83ce1-102">IHostCrst::SetSpinCount Yöntemi</span><span class="sxs-lookup"><span data-stu-id="83ce1-102">IHostCrst::SetSpinCount Method</span></span>
+<span data-ttu-id="83ce1-103">Geçerli [IHostCrst](../../../../docs/framework/unmanaged-api/hosting/ihostcrst-interface.md) örneği için döngü sayısını ayarlar.</span><span class="sxs-lookup"><span data-stu-id="83ce1-103">Sets the spin count for the current [IHostCrst](../../../../docs/framework/unmanaged-api/hosting/ihostcrst-interface.md) instance.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="fe6a4-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="fe6a4-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="83ce1-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="83ce1-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT SetSpinCount (  
@@ -35,37 +33,37 @@ HRESULT SetSpinCount (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="fe6a4-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="fe6a4-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="83ce1-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="83ce1-105">Parameters</span></span>  
  `dwSpinCount`  
- <span data-ttu-id="fe6a4-106">[in] Yeni sayaç sayısı geçerli `IHostCrst` örneği.</span><span class="sxs-lookup"><span data-stu-id="fe6a4-106">[in] The new spin count for the current `IHostCrst` instance.</span></span>  
+ <span data-ttu-id="83ce1-106">'ndaki Geçerli `IHostCrst` örneği için yeni döndürme sayısı.</span><span class="sxs-lookup"><span data-stu-id="83ce1-106">[in] The new spin count for the current `IHostCrst` instance.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="fe6a4-107">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="fe6a4-107">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="83ce1-107">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="83ce1-107">Return Value</span></span>  
   
-|<span data-ttu-id="fe6a4-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="fe6a4-108">HRESULT</span></span>|<span data-ttu-id="fe6a4-109">Açıklama</span><span class="sxs-lookup"><span data-stu-id="fe6a4-109">Description</span></span>|  
+|<span data-ttu-id="83ce1-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="83ce1-108">HRESULT</span></span>|<span data-ttu-id="83ce1-109">Açıklama</span><span class="sxs-lookup"><span data-stu-id="83ce1-109">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="fe6a4-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="fe6a4-110">S_OK</span></span>|<span data-ttu-id="fe6a4-111">`SetSpinCount` başarıyla döndürüldü.</span><span class="sxs-lookup"><span data-stu-id="fe6a4-111">`SetSpinCount` returned successfully.</span></span>|  
-|<span data-ttu-id="fe6a4-112">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="fe6a4-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="fe6a4-113">Ortak dil çalışma zamanı (CLR) işlem içine yüklenmemiş olan veya CLR içinde yönetilen kod çalıştıramaz veya çağrı başarılı şekilde işleme bir durumda değil.</span><span class="sxs-lookup"><span data-stu-id="fe6a4-113">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="fe6a4-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="fe6a4-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="fe6a4-115">Arama zaman aşımına uğradı.</span><span class="sxs-lookup"><span data-stu-id="fe6a4-115">The call timed out.</span></span>|  
-|<span data-ttu-id="fe6a4-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="fe6a4-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="fe6a4-117">Arayan bir kilide sahip değil.</span><span class="sxs-lookup"><span data-stu-id="fe6a4-117">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="fe6a4-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="fe6a4-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="fe6a4-119">Bir olay engellenen bir iş parçacığı iptal edildi veya fiber üzerinde bekleme süresi.</span><span class="sxs-lookup"><span data-stu-id="fe6a4-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="fe6a4-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="fe6a4-120">E_FAIL</span></span>|<span data-ttu-id="fe6a4-121">Bilinmeyen geri dönülemez bir hata oluştu.</span><span class="sxs-lookup"><span data-stu-id="fe6a4-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="fe6a4-122">Bir yöntem E_FAIL döndüğünde, CLR artık işlem içinde kullanılamaz.</span><span class="sxs-lookup"><span data-stu-id="fe6a4-122">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="fe6a4-123">Yöntemleri barındırma yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.</span><span class="sxs-lookup"><span data-stu-id="fe6a4-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="83ce1-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="83ce1-110">S_OK</span></span>|<span data-ttu-id="83ce1-111">`SetSpinCount` başarıyla döndürüldü.</span><span class="sxs-lookup"><span data-stu-id="83ce1-111">`SetSpinCount` returned successfully.</span></span>|  
+|<span data-ttu-id="83ce1-112">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="83ce1-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="83ce1-113">Ortak dil çalışma zamanı (CLR) bir işleme yüklenmemiş veya CLR yönetilen kodu çalıştıramayacağı veya çağrıyı başarıyla işleyemediği bir durumda.</span><span class="sxs-lookup"><span data-stu-id="83ce1-113">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="83ce1-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="83ce1-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="83ce1-115">Çağrı zaman aşımına uğradı.</span><span class="sxs-lookup"><span data-stu-id="83ce1-115">The call timed out.</span></span>|  
+|<span data-ttu-id="83ce1-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="83ce1-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="83ce1-117">Çağıranın kilidi yoktur.</span><span class="sxs-lookup"><span data-stu-id="83ce1-117">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="83ce1-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="83ce1-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="83ce1-119">Engellenen bir iş parçacığı veya fiber üzerinde beklerken bir olay iptal edildi.</span><span class="sxs-lookup"><span data-stu-id="83ce1-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="83ce1-120">E_FAıL</span><span class="sxs-lookup"><span data-stu-id="83ce1-120">E_FAIL</span></span>|<span data-ttu-id="83ce1-121">Bilinmeyen bir çok zararlı hata oluştu.</span><span class="sxs-lookup"><span data-stu-id="83ce1-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="83ce1-122">Bir yöntem E_FAıL döndürdüğünde, CLR artık işlem içinde kullanılamaz.</span><span class="sxs-lookup"><span data-stu-id="83ce1-122">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="83ce1-123">Barındırma yöntemlerine yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.</span><span class="sxs-lookup"><span data-stu-id="83ce1-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="fe6a4-124">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="fe6a4-124">Remarks</span></span>  
- <span data-ttu-id="fe6a4-125">Birden çok işlemcili sistemlerde, kritik bölüm geçerli tarafından temsil edilen `IHostCrst` örneği kullanılamıyorsa, çağıran iş parçacığı dönerek `dwSpinCount` çağırmadan önce kez [Ihostsemaphore::wait](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-wait-method.md) ilişkili semafor üzerinde Kritik Bölümü.</span><span class="sxs-lookup"><span data-stu-id="fe6a4-125">On multi-processor systems, if the critical section represented by the current `IHostCrst` instance is unavailable, a calling thread spins `dwSpinCount` times before calling [IHostSemaphore::Wait](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-wait-method.md) on a semaphore associated with the critical section.</span></span> <span data-ttu-id="fe6a4-126">Kritik bölüm döndürme işlemi sırasında boş hale gelirse, çağıran iş parçacığını bekleme işlemi önler.</span><span class="sxs-lookup"><span data-stu-id="fe6a4-126">If the critical section becomes free during the spin operation, the calling thread avoids the wait operation.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="83ce1-124">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="83ce1-124">Remarks</span></span>  
+ <span data-ttu-id="83ce1-125">Çok işlemcili sistemlerde, geçerli `IHostCrst` örneği tarafından temsil edilen kritik bölüm kullanılamaz durumdaysa, çağıran bir iş parçacığı [ıhostsemaforu](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-wait-method.md) çağrılmadan önce `dwSpinCount` zaman alır:: kritik bölümüyle ilişkili bir Semaforda bekleyin.</span><span class="sxs-lookup"><span data-stu-id="83ce1-125">On multi-processor systems, if the critical section represented by the current `IHostCrst` instance is unavailable, a calling thread spins `dwSpinCount` times before calling [IHostSemaphore::Wait](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-wait-method.md) on a semaphore associated with the critical section.</span></span> <span data-ttu-id="83ce1-126">Kritik bölüm, döndürme işlemi sırasında ücretsiz hale gelirse, çağıran iş parçacığı bekleme işlemini önler.</span><span class="sxs-lookup"><span data-stu-id="83ce1-126">If the critical section becomes free during the spin operation, the calling thread avoids the wait operation.</span></span>  
   
- <span data-ttu-id="fe6a4-127">Kullanımını `dwSpinCount` Win32'de aynı ada sahip parametre kullanımı aynıdır `InitializeCriticalSectionAndSpinCount` işlevi.</span><span class="sxs-lookup"><span data-stu-id="fe6a4-127">The usage of `dwSpinCount` is identical to the usage of the parameter of the same name in the Win32 `InitializeCriticalSectionAndSpinCount` function.</span></span>  
+ <span data-ttu-id="83ce1-127">`dwSpinCount` kullanımı, Win32 `InitializeCriticalSectionAndSpinCount` işlevindeki aynı ada sahip parametrenin kullanımıyla aynıdır.</span><span class="sxs-lookup"><span data-stu-id="83ce1-127">The usage of `dwSpinCount` is identical to the usage of the parameter of the same name in the Win32 `InitializeCriticalSectionAndSpinCount` function.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="fe6a4-128">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="fe6a4-128">Requirements</span></span>  
- <span data-ttu-id="fe6a4-129">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="fe6a4-129">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="83ce1-128">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="83ce1-128">Requirements</span></span>  
+ <span data-ttu-id="83ce1-129">**Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="83ce1-129">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="fe6a4-130">**Üst bilgi:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="fe6a4-130">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="83ce1-130">**Üst bilgi:** MSCorEE. h</span><span class="sxs-lookup"><span data-stu-id="83ce1-130">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="fe6a4-131">**Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="fe6a4-131">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="83ce1-131">**Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir</span><span class="sxs-lookup"><span data-stu-id="83ce1-131">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="fe6a4-132">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="fe6a4-132">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="83ce1-132">**.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="83ce1-132">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="fe6a4-133">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="fe6a4-133">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="83ce1-133">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="83ce1-133">See also</span></span>
 
-- [<span data-ttu-id="fe6a4-134">ICLRSyncManager Arabirimi</span><span class="sxs-lookup"><span data-stu-id="fe6a4-134">ICLRSyncManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)
-- [<span data-ttu-id="fe6a4-135">IHostCrst Arabirimi</span><span class="sxs-lookup"><span data-stu-id="fe6a4-135">IHostCrst Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostcrst-interface.md)
-- [<span data-ttu-id="fe6a4-136">IHostSyncManager Arabirimi</span><span class="sxs-lookup"><span data-stu-id="fe6a4-136">IHostSyncManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)
+- [<span data-ttu-id="83ce1-134">ICLRSyncManager Arabirimi</span><span class="sxs-lookup"><span data-stu-id="83ce1-134">ICLRSyncManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)
+- [<span data-ttu-id="83ce1-135">IHostCrst Arabirimi</span><span class="sxs-lookup"><span data-stu-id="83ce1-135">IHostCrst Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostcrst-interface.md)
+- [<span data-ttu-id="83ce1-136">IHostSyncManager Arabirimi</span><span class="sxs-lookup"><span data-stu-id="83ce1-136">IHostSyncManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)

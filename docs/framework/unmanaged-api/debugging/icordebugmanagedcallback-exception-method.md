@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: ab18a509-dff3-4930-b585-bd15e0414176
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e944a6debf790907b75760c8856ae3a365a84650
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: af2dab65629093401219f1016538b912bee4d067
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67759627"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130819"
 ---
-# <a name="icordebugmanagedcallbackexception-method"></a><span data-ttu-id="6f392-102">ICorDebugManagedCallback::Exception Yöntemi</span><span class="sxs-lookup"><span data-stu-id="6f392-102">ICorDebugManagedCallback::Exception Method</span></span>
-<span data-ttu-id="6f392-103">Hata ayıklayıcı, yönetilen koddan bir özel durum olduğunu bildirir.</span><span class="sxs-lookup"><span data-stu-id="6f392-103">Notifies the debugger that an exception has been thrown from managed code.</span></span>  
+# <a name="icordebugmanagedcallbackexception-method"></a><span data-ttu-id="ff68f-102">ICorDebugManagedCallback::Exception Yöntemi</span><span class="sxs-lookup"><span data-stu-id="ff68f-102">ICorDebugManagedCallback::Exception Method</span></span>
+<span data-ttu-id="ff68f-103">Hata ayıklayıcıya yönetilen koddan bir özel durum gerçekleştiğini bildirir.</span><span class="sxs-lookup"><span data-stu-id="ff68f-103">Notifies the debugger that an exception has been thrown from managed code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6f392-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="6f392-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ff68f-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="ff68f-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT Exception (  
@@ -37,28 +35,28 @@ HRESULT Exception (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="6f392-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="6f392-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="ff68f-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="ff68f-105">Parameters</span></span>  
  `pAppDomain`  
- <span data-ttu-id="6f392-106">[in] Özel durumun oluştuğu uygulama etki alanını temsil eden bir Icordebugappdomain nesne işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="6f392-106">[in] A pointer to an ICorDebugAppDomain object that represents the application domain in which the exception was thrown.</span></span>  
+ <span data-ttu-id="ff68f-106">'ndaki Özel durumun oluşturulduğu uygulama etki alanını temsil eden ICorDebugAppDomain nesnesine yönelik bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="ff68f-106">[in] A pointer to an ICorDebugAppDomain object that represents the application domain in which the exception was thrown.</span></span>  
   
  `pThread`  
- <span data-ttu-id="6f392-107">[in] Özel durumun oluştuğu iş parçacığını temsil eden bir Icordebugthread nesne işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="6f392-107">[in] A pointer to an ICorDebugThread object that represents the thread in which the exception was thrown.</span></span>  
+ <span data-ttu-id="ff68f-107">'ndaki Özel durumun oluşturulduğu iş parçacığını temsil eden ICorDebugThread nesnesine yönelik bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="ff68f-107">[in] A pointer to an ICorDebugThread object that represents the thread in which the exception was thrown.</span></span>  
   
  `unhandled`  
- <span data-ttu-id="6f392-108">[in] Bu değer ise `false`, özel durum henüz henüz olup Aksi takdirde uygulama tarafından işlenen özel durum işlenmemiş ve işlemini sonlandırır.</span><span class="sxs-lookup"><span data-stu-id="6f392-108">[in] If this value is `false`, the exception has not yet been processed by the application; otherwise, the exception is unhandled and will terminate the process.</span></span>  
+ <span data-ttu-id="ff68f-108">'ndaki Bu değer `false`, özel durum henüz uygulama tarafından işlenmemiştir; Aksi takdirde, özel durum işlenmemiş olur ve işlemi sonlandırır.</span><span class="sxs-lookup"><span data-stu-id="ff68f-108">[in] If this value is `false`, the exception has not yet been processed by the application; otherwise, the exception is unhandled and will terminate the process.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="6f392-109">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="6f392-109">Remarks</span></span>  
- <span data-ttu-id="6f392-110">Özel durum iş parçacığı nesnesinden alınabilir.</span><span class="sxs-lookup"><span data-stu-id="6f392-110">The specific exception can be retrieved from the thread object.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="ff68f-109">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="ff68f-109">Remarks</span></span>  
+ <span data-ttu-id="ff68f-110">Belirli özel durum iş parçacığı nesnesinden alınabilir.</span><span class="sxs-lookup"><span data-stu-id="ff68f-110">The specific exception can be retrieved from the thread object.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="6f392-111">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="6f392-111">Requirements</span></span>  
- <span data-ttu-id="6f392-112">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="6f392-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ff68f-111">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="ff68f-111">Requirements</span></span>  
+ <span data-ttu-id="ff68f-112">**Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ff68f-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="6f392-113">**Üst bilgi:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="6f392-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="ff68f-113">**Üst bilgi:** CorDebug. IDL, CorDebug. h</span><span class="sxs-lookup"><span data-stu-id="ff68f-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="6f392-114">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="6f392-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="ff68f-114">**Kitaplık:** Corguid. lib</span><span class="sxs-lookup"><span data-stu-id="ff68f-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="6f392-115">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6f392-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="ff68f-115">**.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ff68f-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6f392-116">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="6f392-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ff68f-116">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="ff68f-116">See also</span></span>
 
-- [<span data-ttu-id="6f392-117">ICorDebugManagedCallback Arabirimi</span><span class="sxs-lookup"><span data-stu-id="6f392-117">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+- [<span data-ttu-id="ff68f-117">ICorDebugManagedCallback Arabirimi</span><span class="sxs-lookup"><span data-stu-id="ff68f-117">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

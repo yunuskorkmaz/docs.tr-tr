@@ -12,19 +12,17 @@ f1_keywords:
 helpviewer_keywords:
 - EInitializeNewDomainFlags enumeration [.NET Framework hosting]
 ms.assetid: 3a120ab2-f5ef-4c9b-8595-d3ed7247c342
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d69b12404459de5dbc1c7748deee6ca09c1e5182
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3693285e13d0650f7662e2187471027cc4c40704
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67772417"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129416"
 ---
-# <a name="einitializenewdomainflags-enumeration"></a><span data-ttu-id="98eb5-102">EInitializeNewDomainFlags Numaralandırması</span><span class="sxs-lookup"><span data-stu-id="98eb5-102">EInitializeNewDomainFlags Enumeration</span></span>
-<span data-ttu-id="98eb5-103">Çalışma zamanının bir uygulama etki alanının başlatma hakkında bilgi sağlamak konak sağlar.</span><span class="sxs-lookup"><span data-stu-id="98eb5-103">Enables the host to provide the runtime with information about the initialization of an application domain.</span></span>  
+# <a name="einitializenewdomainflags-enumeration"></a><span data-ttu-id="2259f-102">EInitializeNewDomainFlags Numaralandırması</span><span class="sxs-lookup"><span data-stu-id="2259f-102">EInitializeNewDomainFlags Enumeration</span></span>
+<span data-ttu-id="2259f-103">Bir uygulama etki alanının başlatılması hakkında bilgi içeren konağın çalışma zamanına olanak sağlar.</span><span class="sxs-lookup"><span data-stu-id="2259f-103">Enables the host to provide the runtime with information about the initialization of an application domain.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="98eb5-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="98eb5-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2259f-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="2259f-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum {  
@@ -33,26 +31,26 @@ typedef enum {
 } EInitializeNewDomainFlags;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="98eb5-105">Üyeler</span><span class="sxs-lookup"><span data-stu-id="98eb5-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="2259f-105">Üyeler</span><span class="sxs-lookup"><span data-stu-id="2259f-105">Members</span></span>  
   
-|<span data-ttu-id="98eb5-106">Üye</span><span class="sxs-lookup"><span data-stu-id="98eb5-106">Member</span></span>|<span data-ttu-id="98eb5-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="98eb5-107">Description</span></span>|  
+|<span data-ttu-id="2259f-106">Üye</span><span class="sxs-lookup"><span data-stu-id="2259f-106">Member</span></span>|<span data-ttu-id="2259f-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="2259f-107">Description</span></span>|  
 |------------|-----------------|  
-|`eInitializeNewDomainFlags_None`|<span data-ttu-id="98eb5-108">Bayrak.</span><span class="sxs-lookup"><span data-stu-id="98eb5-108">No flags.</span></span>|  
-|`eInitializeNewDomainFlags_NoSecurityChanges`|<span data-ttu-id="98eb5-109">Konak güvenlik durumuna ilişkin uygulama etki alanında bir değişiklik değil, ortak dil çalışma zamanı (CLR) bildirir <xref:System.AppDomainManager.InitializeNewDomain%2A> yöntemi.</span><span class="sxs-lookup"><span data-stu-id="98eb5-109">Informs the common language runtime (CLR) that the host will not make changes to the security state of the application domain in the <xref:System.AppDomainManager.InitializeNewDomain%2A> method.</span></span>|  
+|`eInitializeNewDomainFlags_None`|<span data-ttu-id="2259f-108">Bayrak yok.</span><span class="sxs-lookup"><span data-stu-id="2259f-108">No flags.</span></span>|  
+|`eInitializeNewDomainFlags_NoSecurityChanges`|<span data-ttu-id="2259f-109">Ana bilgisayarın <xref:System.AppDomainManager.InitializeNewDomain%2A> yönteminde uygulama etki alanının güvenlik durumunda değişiklik yapmayacağı ortak dil çalışma zamanına (CLR) bildirir.</span><span class="sxs-lookup"><span data-stu-id="2259f-109">Informs the common language runtime (CLR) that the host will not make changes to the security state of the application domain in the <xref:System.AppDomainManager.InitializeNewDomain%2A> method.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="98eb5-110">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="98eb5-110">Remarks</span></span>  
- <span data-ttu-id="98eb5-111">[Iclrdomainmanager::setappdomainmanagertype](../../../../docs/framework/unmanaged-api/hosting/iclrdomainmanager-setappdomainmanagertype-method.md) yöntemi türünde bir parametre alır `EInitializeNewDomainFlags`.</span><span class="sxs-lookup"><span data-stu-id="98eb5-111">The [ICLRDomainManager::SetAppDomainManagerType](../../../../docs/framework/unmanaged-api/hosting/iclrdomainmanager-setappdomainmanagertype-method.md) method takes a parameter of type `EInitializeNewDomainFlags`.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="2259f-110">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="2259f-110">Remarks</span></span>  
+ <span data-ttu-id="2259f-111">[ICLRDomainManager:: SetAppDomainManagerType](../../../../docs/framework/unmanaged-api/hosting/iclrdomainmanager-setappdomainmanagertype-method.md) yöntemi, `EInitializeNewDomainFlags`türünde bir parametre alır.</span><span class="sxs-lookup"><span data-stu-id="2259f-111">The [ICLRDomainManager::SetAppDomainManagerType](../../../../docs/framework/unmanaged-api/hosting/iclrdomainmanager-setappdomainmanagertype-method.md) method takes a parameter of type `EInitializeNewDomainFlags`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="98eb5-112">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="98eb5-112">Requirements</span></span>  
- <span data-ttu-id="98eb5-113">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="98eb5-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2259f-112">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="2259f-112">Requirements</span></span>  
+ <span data-ttu-id="2259f-113">**Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="2259f-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="98eb5-114">**Üst bilgi:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="98eb5-114">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="2259f-114">**Üst bilgi:** MSCorEE. h</span><span class="sxs-lookup"><span data-stu-id="2259f-114">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="98eb5-115">**Kitaplığı:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="98eb5-115">**Library:** MSCorEE.dll</span></span>  
+ <span data-ttu-id="2259f-115">**Kitaplık:** MSCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="2259f-115">**Library:** MSCorEE.dll</span></span>  
   
- <span data-ttu-id="98eb5-116">**.NET framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="98eb5-116">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="2259f-116">**.NET Framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2259f-116">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="98eb5-117">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="98eb5-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2259f-117">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="2259f-117">See also</span></span>
 
-- [<span data-ttu-id="98eb5-118">Barındırma Sabit Listeleri</span><span class="sxs-lookup"><span data-stu-id="98eb5-118">Hosting Enumerations</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
-- [<span data-ttu-id="98eb5-119">SetAppDomainManagerType Yöntemi</span><span class="sxs-lookup"><span data-stu-id="98eb5-119">SetAppDomainManagerType Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrdomainmanager-setappdomainmanagertype-method.md)
+- [<span data-ttu-id="2259f-118">Barındırma Sabit Listeleri</span><span class="sxs-lookup"><span data-stu-id="2259f-118">Hosting Enumerations</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+- [<span data-ttu-id="2259f-119">SetAppDomainManagerType Yöntemi</span><span class="sxs-lookup"><span data-stu-id="2259f-119">SetAppDomainManagerType Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrdomainmanager-setappdomainmanagertype-method.md)

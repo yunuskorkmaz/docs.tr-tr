@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: aa527b31-89d4-41f2-ad6f-63b76950b7df
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 73098077e3860d3f4a8a02921ecedf8dff24165b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: bc956827ad59fc655137e4147e6d98b6d097d470
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67774052"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138195"
 ---
-# <a name="etasktype-enumeration"></a><span data-ttu-id="ead7d-102">ETaskType Numaralandırması</span><span class="sxs-lookup"><span data-stu-id="ead7d-102">ETaskType Enumeration</span></span>
-<span data-ttu-id="ead7d-103">Tarafından temsil edilen bir görev türünü gösteren değerleri içeren bir [Iclrtask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) veya [Ihosttask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) arabirimi.</span><span class="sxs-lookup"><span data-stu-id="ead7d-103">Contains values that indicate the type of task that is represented by either an [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) or an [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) interface.</span></span>  
+# <a name="etasktype-enumeration"></a><span data-ttu-id="c364a-102">ETaskType Numaralandırması</span><span class="sxs-lookup"><span data-stu-id="c364a-102">ETaskType Enumeration</span></span>
+<span data-ttu-id="c364a-103">Bir [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) veya [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) arabirimi tarafından temsil edilen görevin türünü gösteren değerleri içerir.</span><span class="sxs-lookup"><span data-stu-id="c364a-103">Contains values that indicate the type of task that is represented by either an [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) or an [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) interface.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ead7d-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="ead7d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c364a-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="c364a-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum ETaskType {  
@@ -44,31 +42,31 @@ typedef enum ETaskType {
 } ETaskType;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="ead7d-105">Üyeler</span><span class="sxs-lookup"><span data-stu-id="ead7d-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="c364a-105">Üyeler</span><span class="sxs-lookup"><span data-stu-id="c364a-105">Members</span></span>  
   
-|<span data-ttu-id="ead7d-106">Üye</span><span class="sxs-lookup"><span data-stu-id="ead7d-106">Member</span></span>|<span data-ttu-id="ead7d-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="ead7d-107">Description</span></span>|  
+|<span data-ttu-id="c364a-106">Üye</span><span class="sxs-lookup"><span data-stu-id="c364a-106">Member</span></span>|<span data-ttu-id="c364a-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="c364a-107">Description</span></span>|  
 |------------|-----------------|  
-|`TT_ADUNLOAD`|<span data-ttu-id="ead7d-108">Arabirimi, bir uygulama etki alanı kaldırma görevi temsil eder.</span><span class="sxs-lookup"><span data-stu-id="ead7d-108">The interface represents an application domain unloading task.</span></span>|  
-|`TT_DEBUGGERHELPER`|<span data-ttu-id="ead7d-109">Arabirimi, bir hata ayıklayıcı Yardımcısı görevi temsil eder.</span><span class="sxs-lookup"><span data-stu-id="ead7d-109">The interface represents a debugger helper task.</span></span>|  
-|`TT_FINALIZER`|<span data-ttu-id="ead7d-110">Arabirimi, bir sonlandırıcı görevi temsil eder.</span><span class="sxs-lookup"><span data-stu-id="ead7d-110">The interface represents a finalizer task.</span></span>|  
-|`TT_GC`|<span data-ttu-id="ead7d-111">Arabirimi, bir atık toplama görevi temsil eder.</span><span class="sxs-lookup"><span data-stu-id="ead7d-111">The interface represents a garbage collection task.</span></span>|  
-|`TT_THREADPOOL_GATE`|<span data-ttu-id="ead7d-112">Arabirimi, bir ağ geçidi iş parçacığı görevi temsil eder.</span><span class="sxs-lookup"><span data-stu-id="ead7d-112">The interface represents a gate thread task.</span></span>|  
-|`TT_THREADPOOL_IOCOMPLETION`|<span data-ttu-id="ead7d-113">Arabirimi, bir g/ç iş parçacığı görevi ya da bir tamamlanma bağlantı noktası iş parçacığı görevi temsil eder.</span><span class="sxs-lookup"><span data-stu-id="ead7d-113">The interface represents an I/O thread task or a completion port thread task.</span></span>|  
-|`TT_THREADPOOL_TIMER`|<span data-ttu-id="ead7d-114">Arabirimi, bir zamanlayıcı iş parçacığı görevi temsil eder.</span><span class="sxs-lookup"><span data-stu-id="ead7d-114">The interface represents a timer thread task.</span></span>|  
-|`TT_THREADPOOL_WAIT`|<span data-ttu-id="ead7d-115">Arabirimi, bir bekleme iş parçacığı görevi temsil eder.</span><span class="sxs-lookup"><span data-stu-id="ead7d-115">The interface represents a wait thread task.</span></span>|  
-|`TT_THREADPOOL_WORKER`|<span data-ttu-id="ead7d-116">Arabirimi, bir çalışan iş parçacığı görevi temsil eder.</span><span class="sxs-lookup"><span data-stu-id="ead7d-116">The interface represents a worker thread task.</span></span>|  
-|`TT_UNKNOWN`|<span data-ttu-id="ead7d-117">Görev bilinmiyor.</span><span class="sxs-lookup"><span data-stu-id="ead7d-117">The task is unknown.</span></span>|  
-|`TT_USER`|<span data-ttu-id="ead7d-118">Arabirimi, bir kullanıcı görevini temsil eder.</span><span class="sxs-lookup"><span data-stu-id="ead7d-118">The interface represents a user task.</span></span>|  
+|`TT_ADUNLOAD`|<span data-ttu-id="c364a-108">Arabirim bir uygulama etki alanı kaldırma görevini temsil eder.</span><span class="sxs-lookup"><span data-stu-id="c364a-108">The interface represents an application domain unloading task.</span></span>|  
+|`TT_DEBUGGERHELPER`|<span data-ttu-id="c364a-109">Arabirim bir hata ayıklayıcı Yardımcısı görevini temsil eder.</span><span class="sxs-lookup"><span data-stu-id="c364a-109">The interface represents a debugger helper task.</span></span>|  
+|`TT_FINALIZER`|<span data-ttu-id="c364a-110">Arabirim bir Sonlandırıcı görevini temsil eder.</span><span class="sxs-lookup"><span data-stu-id="c364a-110">The interface represents a finalizer task.</span></span>|  
+|`TT_GC`|<span data-ttu-id="c364a-111">Arabirim bir çöp toplama görevini temsil eder.</span><span class="sxs-lookup"><span data-stu-id="c364a-111">The interface represents a garbage collection task.</span></span>|  
+|`TT_THREADPOOL_GATE`|<span data-ttu-id="c364a-112">Arabirim bir kapı iş parçacığı görevini temsil eder.</span><span class="sxs-lookup"><span data-stu-id="c364a-112">The interface represents a gate thread task.</span></span>|  
+|`TT_THREADPOOL_IOCOMPLETION`|<span data-ttu-id="c364a-113">Arabirim bir g/ç iş parçacığı görevini veya tamamlama bağlantı noktası iş parçacığı görevini temsil eder.</span><span class="sxs-lookup"><span data-stu-id="c364a-113">The interface represents an I/O thread task or a completion port thread task.</span></span>|  
+|`TT_THREADPOOL_TIMER`|<span data-ttu-id="c364a-114">Arabirim bir zamanlayıcı iş parçacığı görevini temsil eder.</span><span class="sxs-lookup"><span data-stu-id="c364a-114">The interface represents a timer thread task.</span></span>|  
+|`TT_THREADPOOL_WAIT`|<span data-ttu-id="c364a-115">Arabirim bir bekleme iş parçacığı görevini temsil eder.</span><span class="sxs-lookup"><span data-stu-id="c364a-115">The interface represents a wait thread task.</span></span>|  
+|`TT_THREADPOOL_WORKER`|<span data-ttu-id="c364a-116">Arabirim bir çalışan iş parçacığı görevini temsil eder.</span><span class="sxs-lookup"><span data-stu-id="c364a-116">The interface represents a worker thread task.</span></span>|  
+|`TT_UNKNOWN`|<span data-ttu-id="c364a-117">Görev bilinmiyor.</span><span class="sxs-lookup"><span data-stu-id="c364a-117">The task is unknown.</span></span>|  
+|`TT_USER`|<span data-ttu-id="c364a-118">Arabirim bir Kullanıcı görevini temsil eder.</span><span class="sxs-lookup"><span data-stu-id="c364a-118">The interface represents a user task.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="ead7d-119">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="ead7d-119">Requirements</span></span>  
- <span data-ttu-id="ead7d-120">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ead7d-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c364a-119">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="c364a-119">Requirements</span></span>  
+ <span data-ttu-id="c364a-120">**Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c364a-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ead7d-121">**Üst bilgi:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="ead7d-121">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="c364a-121">**Üst bilgi:** MSCorEE. h</span><span class="sxs-lookup"><span data-stu-id="c364a-121">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="ead7d-122">**Kitaplığı:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="ead7d-122">**Library:** MSCorEE.dll</span></span>  
+ <span data-ttu-id="c364a-122">**Kitaplık:** MSCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="c364a-122">**Library:** MSCorEE.dll</span></span>  
   
- <span data-ttu-id="ead7d-123">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ead7d-123">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="c364a-123">**.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c364a-123">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ead7d-124">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="ead7d-124">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c364a-124">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="c364a-124">See also</span></span>
 
-- [<span data-ttu-id="ead7d-125">Barındırma Sabit Listeleri</span><span class="sxs-lookup"><span data-stu-id="ead7d-125">Hosting Enumerations</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+- [<span data-ttu-id="c364a-125">Barındırma Sabit Listeleri</span><span class="sxs-lookup"><span data-stu-id="c364a-125">Hosting Enumerations</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

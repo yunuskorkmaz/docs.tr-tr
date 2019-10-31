@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 0b1b432a-d234-4002-839b-81366c3a8bdc
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d5fbf83690f616556774e8f279e1077fccdb8baf
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 497a115b980bb58a3906fda68d7ff564efe78089
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779919"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127836"
 ---
-# <a name="iclrvalidatorvalidate-method"></a><span data-ttu-id="15cfb-102">ICLRValidator::Validate Yöntemi</span><span class="sxs-lookup"><span data-stu-id="15cfb-102">ICLRValidator::Validate Method</span></span>
-<span data-ttu-id="15cfb-103">Taşınabilir yürütülebilir (PE) veya belirtilen dosyadaki Microsoft Ara dilini (MSIL) doğrular.</span><span class="sxs-lookup"><span data-stu-id="15cfb-103">Validates the portable executable (PE) or Microsoft intermediate language (MSIL) in the specified file.</span></span>  
+# <a name="iclrvalidatorvalidate-method"></a><span data-ttu-id="5c4d8-102">ICLRValidator::Validate Yöntemi</span><span class="sxs-lookup"><span data-stu-id="5c4d8-102">ICLRValidator::Validate Method</span></span>
+<span data-ttu-id="5c4d8-103">Belirtilen dosyadaki taşınabilir yürütülebilir (PE) veya Microsoft ara dili 'ni (MSIL) doğrular.</span><span class="sxs-lookup"><span data-stu-id="5c4d8-103">Validates the portable executable (PE) or Microsoft intermediate language (MSIL) in the specified file.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="15cfb-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="15cfb-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5c4d8-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="5c4d8-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT Validate (  
@@ -42,51 +40,51 @@ HRESULT Validate (
 );      
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="15cfb-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="15cfb-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="5c4d8-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="5c4d8-105">Parameters</span></span>  
  `veh`  
- <span data-ttu-id="15cfb-106">[in] Bir işaretçi bir `IVEHandler` doğrulama hatalarını işleyen örneği.</span><span class="sxs-lookup"><span data-stu-id="15cfb-106">[in] A pointer to an `IVEHandler` instance that handles validation errors.</span></span>  
+ <span data-ttu-id="5c4d8-106">'ndaki Doğrulama hatalarını işleyen `IVEHandler` örneğine yönelik bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="5c4d8-106">[in] A pointer to an `IVEHandler` instance that handles validation errors.</span></span>  
   
  `ulAppDomainId`  
- <span data-ttu-id="15cfb-107">[in] Geçerli bir tanımlayıcı <xref:System.AppDomain>.</span><span class="sxs-lookup"><span data-stu-id="15cfb-107">[in] The identifier for the current <xref:System.AppDomain>.</span></span>  
+ <span data-ttu-id="5c4d8-107">'ndaki Geçerli <xref:System.AppDomain>için tanımlayıcı.</span><span class="sxs-lookup"><span data-stu-id="5c4d8-107">[in] The identifier for the current <xref:System.AppDomain>.</span></span>  
   
  `ulFlags`  
- <span data-ttu-id="15cfb-108">[in] Bir birleşimi [ValidatorFlags](../../../../docs/framework/unmanaged-api/hosting/validatorflags-enumeration.md) gerçekleştirilmelidir doğrulama türünü belirten değer.</span><span class="sxs-lookup"><span data-stu-id="15cfb-108">[in] A combination of [ValidatorFlags](../../../../docs/framework/unmanaged-api/hosting/validatorflags-enumeration.md) values, indicating the kind of validation that should be performed.</span></span>  
+ <span data-ttu-id="5c4d8-108">'ndaki Gerçekleştirilmesi gereken doğrulamanın türünü belirten [ValidatorFlags](../../../../docs/framework/unmanaged-api/hosting/validatorflags-enumeration.md) değerlerinin birleşimi.</span><span class="sxs-lookup"><span data-stu-id="5c4d8-108">[in] A combination of [ValidatorFlags](../../../../docs/framework/unmanaged-api/hosting/validatorflags-enumeration.md) values, indicating the kind of validation that should be performed.</span></span>  
   
  `ulMaxError`  
- <span data-ttu-id="15cfb-109">[in] Doğrulama çıkmadan önce izin vermek için hataları sayısı.</span><span class="sxs-lookup"><span data-stu-id="15cfb-109">[in] The maximum number of errors to allow before exiting the validation.</span></span>  
+ <span data-ttu-id="5c4d8-109">'ndaki Doğrulamadan çıkmadan önce izin verilen en fazla hata sayısı.</span><span class="sxs-lookup"><span data-stu-id="5c4d8-109">[in] The maximum number of errors to allow before exiting the validation.</span></span>  
   
  `token`  
- <span data-ttu-id="15cfb-110">[in] Kullanılmayan.</span><span class="sxs-lookup"><span data-stu-id="15cfb-110">[in] Unused.</span></span>  
+ <span data-ttu-id="5c4d8-110">'ndaki Kullanılmayan.</span><span class="sxs-lookup"><span data-stu-id="5c4d8-110">[in] Unused.</span></span>  
   
  `fileName`  
- <span data-ttu-id="15cfb-111">[in] Doğrulanacak olan dosyanın adı.</span><span class="sxs-lookup"><span data-stu-id="15cfb-111">[in] The name of the file to be validated.</span></span>  
+ <span data-ttu-id="5c4d8-111">'ndaki Doğrulanacak dosyanın adı.</span><span class="sxs-lookup"><span data-stu-id="5c4d8-111">[in] The name of the file to be validated.</span></span>  
   
  `pe`  
- <span data-ttu-id="15cfb-112">[in] Dosya arabellek için işaretçi.</span><span class="sxs-lookup"><span data-stu-id="15cfb-112">[in] A pointer to the file buffer.</span></span>  
+ <span data-ttu-id="5c4d8-112">'ndaki Dosya arabelleği işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="5c4d8-112">[in] A pointer to the file buffer.</span></span>  
   
  `ulSize`  
- <span data-ttu-id="15cfb-113">[in] Doğrulanacak dosyasının bayt cinsinden boyutu.</span><span class="sxs-lookup"><span data-stu-id="15cfb-113">[in] The size, in bytes, of the file to be validated.</span></span>  
+ <span data-ttu-id="5c4d8-113">'ndaki Doğrulanacak dosyanın bayt cinsinden boyutu.</span><span class="sxs-lookup"><span data-stu-id="5c4d8-113">[in] The size, in bytes, of the file to be validated.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="15cfb-114">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="15cfb-114">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="5c4d8-114">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="5c4d8-114">Return Value</span></span>  
   
-|<span data-ttu-id="15cfb-115">HRESULT</span><span class="sxs-lookup"><span data-stu-id="15cfb-115">HRESULT</span></span>|<span data-ttu-id="15cfb-116">Açıklama</span><span class="sxs-lookup"><span data-stu-id="15cfb-116">Description</span></span>|  
+|<span data-ttu-id="5c4d8-115">HRESULT</span><span class="sxs-lookup"><span data-stu-id="5c4d8-115">HRESULT</span></span>|<span data-ttu-id="5c4d8-116">Açıklama</span><span class="sxs-lookup"><span data-stu-id="5c4d8-116">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="15cfb-117">S_OK</span><span class="sxs-lookup"><span data-stu-id="15cfb-117">S_OK</span></span>|<span data-ttu-id="15cfb-118">`Validate` başarıyla döndürüldü.</span><span class="sxs-lookup"><span data-stu-id="15cfb-118">`Validate` returned successfully.</span></span>|  
-|<span data-ttu-id="15cfb-119">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="15cfb-119">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="15cfb-120">Ortak dil çalışma zamanı (CLR) işlem içine yüklenmemiş olan veya CLR içinde yönetilen kod çalıştıramaz veya çağrı başarılı şekilde işleme bir durumda değil.</span><span class="sxs-lookup"><span data-stu-id="15cfb-120">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="15cfb-121">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="15cfb-121">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="15cfb-122">Arama zaman aşımına uğradı.</span><span class="sxs-lookup"><span data-stu-id="15cfb-122">The call timed out.</span></span>|  
-|<span data-ttu-id="15cfb-123">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="15cfb-123">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="15cfb-124">Arayan bir kilide sahip değil.</span><span class="sxs-lookup"><span data-stu-id="15cfb-124">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="15cfb-125">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="15cfb-125">HOST_E_ABANDONED</span></span>|<span data-ttu-id="15cfb-126">Bir olay engellenen bir iş parçacığı iptal edildi veya fiber üzerinde bekleme süresi.</span><span class="sxs-lookup"><span data-stu-id="15cfb-126">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="15cfb-127">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="15cfb-127">E_FAIL</span></span>|<span data-ttu-id="15cfb-128">Bilinmeyen geri dönülemez bir hata oluştu.</span><span class="sxs-lookup"><span data-stu-id="15cfb-128">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="15cfb-129">Bir yöntem E_FAIL döndüğünde, CLR artık işlem içinde kullanılamaz.</span><span class="sxs-lookup"><span data-stu-id="15cfb-129">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="15cfb-130">Yöntemleri barındırma yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.</span><span class="sxs-lookup"><span data-stu-id="15cfb-130">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="5c4d8-117">S_OK</span><span class="sxs-lookup"><span data-stu-id="5c4d8-117">S_OK</span></span>|<span data-ttu-id="5c4d8-118">`Validate` başarıyla döndürüldü.</span><span class="sxs-lookup"><span data-stu-id="5c4d8-118">`Validate` returned successfully.</span></span>|  
+|<span data-ttu-id="5c4d8-119">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="5c4d8-119">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="5c4d8-120">Ortak dil çalışma zamanı (CLR) bir işleme yüklenmemiş veya CLR yönetilen kodu çalıştıramayacağı veya çağrıyı başarıyla işleyemediği bir durumda.</span><span class="sxs-lookup"><span data-stu-id="5c4d8-120">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="5c4d8-121">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="5c4d8-121">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="5c4d8-122">Çağrı zaman aşımına uğradı.</span><span class="sxs-lookup"><span data-stu-id="5c4d8-122">The call timed out.</span></span>|  
+|<span data-ttu-id="5c4d8-123">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="5c4d8-123">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="5c4d8-124">Çağıranın kilidi yoktur.</span><span class="sxs-lookup"><span data-stu-id="5c4d8-124">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="5c4d8-125">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="5c4d8-125">HOST_E_ABANDONED</span></span>|<span data-ttu-id="5c4d8-126">Engellenen bir iş parçacığı veya fiber üzerinde beklerken bir olay iptal edildi.</span><span class="sxs-lookup"><span data-stu-id="5c4d8-126">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="5c4d8-127">E_FAıL</span><span class="sxs-lookup"><span data-stu-id="5c4d8-127">E_FAIL</span></span>|<span data-ttu-id="5c4d8-128">Bilinmeyen bir çok zararlı hata oluştu.</span><span class="sxs-lookup"><span data-stu-id="5c4d8-128">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="5c4d8-129">Bir yöntem E_FAıL döndürdüğünde, CLR artık işlem içinde kullanılamaz.</span><span class="sxs-lookup"><span data-stu-id="5c4d8-129">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="5c4d8-130">Barındırma yöntemlerine yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.</span><span class="sxs-lookup"><span data-stu-id="5c4d8-130">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="15cfb-131">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="15cfb-131">Requirements</span></span>  
- <span data-ttu-id="15cfb-132">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="15cfb-132">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5c4d8-131">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="5c4d8-131">Requirements</span></span>  
+ <span data-ttu-id="5c4d8-132">**Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5c4d8-132">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="15cfb-133">**Üst bilgi:** IValidator.idl, IValidator.h</span><span class="sxs-lookup"><span data-stu-id="15cfb-133">**Header:** IValidator.idl, IValidator.h</span></span>  
+ <span data-ttu-id="5c4d8-133">**Üst bilgi:** IValidator. IDL, IValidator. h</span><span class="sxs-lookup"><span data-stu-id="5c4d8-133">**Header:** IValidator.idl, IValidator.h</span></span>  
   
- <span data-ttu-id="15cfb-134">**Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="15cfb-134">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="5c4d8-134">**Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir</span><span class="sxs-lookup"><span data-stu-id="5c4d8-134">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="15cfb-135">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="15cfb-135">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="5c4d8-135">**.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5c4d8-135">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="15cfb-136">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="15cfb-136">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5c4d8-136">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="5c4d8-136">See also</span></span>
 
-- [<span data-ttu-id="15cfb-137">ICLRValidator Arabirimi</span><span class="sxs-lookup"><span data-stu-id="15cfb-137">ICLRValidator Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-interface.md)
+- [<span data-ttu-id="5c4d8-137">ICLRValidator Arabirimi</span><span class="sxs-lookup"><span data-stu-id="5c4d8-137">ICLRValidator Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-interface.md)

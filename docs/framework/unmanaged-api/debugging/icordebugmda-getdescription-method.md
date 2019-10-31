@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 01d1b481-ca67-4712-8744-d342ec0df639
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: da57ecf0c153d902322798e1927c995a34cb93d2
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: bfe77982b88b2fc96dc2846b9db04df28bfc0c38
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761992"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131443"
 ---
-# <a name="icordebugmdagetdescription-method"></a><span data-ttu-id="383fa-102">ICorDebugMDA::GetDescription Metodu</span><span class="sxs-lookup"><span data-stu-id="383fa-102">ICorDebugMDA::GetDescription Method</span></span>
-<span data-ttu-id="383fa-103">Tarafından temsil edilen yönetilen hata ayıklama Yardımcısı (MDA) açıklamasını içeren bir dize alır [Icordebugmda](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md).</span><span class="sxs-lookup"><span data-stu-id="383fa-103">Gets a string containing the description of the managed debugging assistant (MDA) represented by [ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md).</span></span>  
+# <a name="icordebugmdagetdescription-method"></a><span data-ttu-id="4ce4e-102">ICorDebugMDA::GetDescription Metodu</span><span class="sxs-lookup"><span data-stu-id="4ce4e-102">ICorDebugMDA::GetDescription Method</span></span>
+<span data-ttu-id="4ce4e-103">[ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md)tarafından temsil edilen yönetilen hata ayıklama Yardımcısı 'NıN (MDA) açıklamasını içeren bir dize alır.</span><span class="sxs-lookup"><span data-stu-id="4ce4e-103">Gets a string containing the description of the managed debugging assistant (MDA) represented by [ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="383fa-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="383fa-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4ce4e-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="4ce4e-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetDescription (  
@@ -38,29 +36,29 @@ HRESULT GetDescription (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="383fa-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="383fa-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="4ce4e-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="4ce4e-105">Parameters</span></span>  
  `cchName`  
- <span data-ttu-id="383fa-106">[in] Açıklama depolayacak dize arabelleğinin boyutu.</span><span class="sxs-lookup"><span data-stu-id="383fa-106">[in] The size of the string buffer that will store the description.</span></span>  
+ <span data-ttu-id="4ce4e-106">'ndaki Açıklamayı depolayacak dize arabelleğinin boyutu.</span><span class="sxs-lookup"><span data-stu-id="4ce4e-106">[in] The size of the string buffer that will store the description.</span></span>  
   
  `pcchName`  
- <span data-ttu-id="383fa-107">[out] Döndürülen dize arabellekteki bayt sayısı için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="383fa-107">[out] A pointer to the number of bytes returned in the string buffer.</span></span>  
+ <span data-ttu-id="4ce4e-107">dışı Dize arabelleğinde döndürülen bayt sayısına yönelik bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="4ce4e-107">[out] A pointer to the number of bytes returned in the string buffer.</span></span>  
   
  `szName`  
- <span data-ttu-id="383fa-108">[out] MDA açıklamasını içeren bir dize arabelleği.</span><span class="sxs-lookup"><span data-stu-id="383fa-108">[out] A string buffer containing the description of the MDA.</span></span>  
+ <span data-ttu-id="4ce4e-108">dışı MDA öğesinin açıklamasını içeren bir dize arabelleği.</span><span class="sxs-lookup"><span data-stu-id="4ce4e-108">[out] A string buffer containing the description of the MDA.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="383fa-109">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="383fa-109">Remarks</span></span>  
- <span data-ttu-id="383fa-110">Dize uzunluğu sıfır olabilir.</span><span class="sxs-lookup"><span data-stu-id="383fa-110">The string can be zero in length.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="4ce4e-109">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="4ce4e-109">Remarks</span></span>  
+ <span data-ttu-id="4ce4e-110">Dize uzunluğu sıfır olabilir.</span><span class="sxs-lookup"><span data-stu-id="4ce4e-110">The string can be zero in length.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="383fa-111">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="383fa-111">Requirements</span></span>  
- <span data-ttu-id="383fa-112">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="383fa-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4ce4e-111">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="4ce4e-111">Requirements</span></span>  
+ <span data-ttu-id="4ce4e-112">**Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="4ce4e-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="383fa-113">**Üst bilgi:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="383fa-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="4ce4e-113">**Üst bilgi:** CorDebug. IDL, CorDebug. h</span><span class="sxs-lookup"><span data-stu-id="4ce4e-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="383fa-114">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="383fa-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="4ce4e-114">**Kitaplık:** Corguid. lib</span><span class="sxs-lookup"><span data-stu-id="4ce4e-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="383fa-115">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="383fa-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="4ce4e-115">**.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4ce4e-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="383fa-116">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="383fa-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4ce4e-116">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="4ce4e-116">See also</span></span>
 
-- [<span data-ttu-id="383fa-117">ICorDebugMDA Arabirimi</span><span class="sxs-lookup"><span data-stu-id="383fa-117">ICorDebugMDA Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md)
-- [<span data-ttu-id="383fa-118">Yönetilen Hata Ayıklama Yardımcıları ile Hataları Tanılama</span><span class="sxs-lookup"><span data-stu-id="383fa-118">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [<span data-ttu-id="4ce4e-117">ICorDebugMDA Arabirimi</span><span class="sxs-lookup"><span data-stu-id="4ce4e-117">ICorDebugMDA Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md)
+- [<span data-ttu-id="4ce4e-118">Yönetilen Hata Ayıklama Yardımcıları ile Hataları Tanılama</span><span class="sxs-lookup"><span data-stu-id="4ce4e-118">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

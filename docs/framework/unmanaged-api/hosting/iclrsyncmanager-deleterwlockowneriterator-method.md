@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: fcfd340a-b7d6-44e4-8167-2c05b789d483
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a30ac0ab8c985af04709ddd8e8e5dd9bca776dcb
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: fb02b5c941e15d172140565e8efb625234947cd7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67759083"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130573"
 ---
-# <a name="iclrsyncmanagerdeleterwlockowneriterator-method"></a><span data-ttu-id="67b3e-102">ICLRSyncManager::DeleteRWLockOwnerIterator Yöntemi</span><span class="sxs-lookup"><span data-stu-id="67b3e-102">ICLRSyncManager::DeleteRWLockOwnerIterator Method</span></span>
-<span data-ttu-id="67b3e-103">Ortak dil çalışma zamanı (CLR) için bir çağrı tarafından oluşturulan bir yineleyici yok etmek isteyen [Iclrsyncmanager::createrwlockownerıterator](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-createrwlockowneriterator-method.md).</span><span class="sxs-lookup"><span data-stu-id="67b3e-103">Requests that the common language runtime (CLR) destroy an iterator that was created by a call to [ICLRSyncManager::CreateRWLockOwnerIterator](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-createrwlockowneriterator-method.md).</span></span>  
+# <a name="iclrsyncmanagerdeleterwlockowneriterator-method"></a><span data-ttu-id="a29c2-102">ICLRSyncManager::DeleteRWLockOwnerIterator Yöntemi</span><span class="sxs-lookup"><span data-stu-id="a29c2-102">ICLRSyncManager::DeleteRWLockOwnerIterator Method</span></span>
+<span data-ttu-id="a29c2-103">Ortak dil çalışma zamanının (CLR) [ICLRSyncManager:: CreateRWLockOwnerIterator](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-createrwlockowneriterator-method.md)çağrısıyla oluşturulmuş bir yineleyiciyi yok ettiğini ister.</span><span class="sxs-lookup"><span data-stu-id="a29c2-103">Requests that the common language runtime (CLR) destroy an iterator that was created by a call to [ICLRSyncManager::CreateRWLockOwnerIterator](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-createrwlockowneriterator-method.md).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="67b3e-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="67b3e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a29c2-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="a29c2-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT DeleteRWLockOwnerIterator (  
@@ -35,34 +33,34 @@ HRESULT DeleteRWLockOwnerIterator (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="67b3e-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="67b3e-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="a29c2-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="a29c2-105">Parameters</span></span>  
  `Iterator`  
- <span data-ttu-id="67b3e-106">[in] Bir çağrı kullanılarak oluşturulmuş yineleyici `CreateRWLockOwnerIterator`.</span><span class="sxs-lookup"><span data-stu-id="67b3e-106">[in] The iterator that was created by using a call to `CreateRWLockOwnerIterator`.</span></span>  
+ <span data-ttu-id="a29c2-106">'ndaki `CreateRWLockOwnerIterator`çağrısı kullanılarak oluşturulan Yineleyici.</span><span class="sxs-lookup"><span data-stu-id="a29c2-106">[in] The iterator that was created by using a call to `CreateRWLockOwnerIterator`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="67b3e-107">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="67b3e-107">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="a29c2-107">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="a29c2-107">Return Value</span></span>  
   
-|<span data-ttu-id="67b3e-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="67b3e-108">HRESULT</span></span>|<span data-ttu-id="67b3e-109">Açıklama</span><span class="sxs-lookup"><span data-stu-id="67b3e-109">Description</span></span>|  
+|<span data-ttu-id="a29c2-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="a29c2-108">HRESULT</span></span>|<span data-ttu-id="a29c2-109">Açıklama</span><span class="sxs-lookup"><span data-stu-id="a29c2-109">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="67b3e-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="67b3e-110">S_OK</span></span>|<span data-ttu-id="67b3e-111">`DeleteRWLockOwnerIterator` başarıyla döndürüldü.</span><span class="sxs-lookup"><span data-stu-id="67b3e-111">`DeleteRWLockOwnerIterator` returned successfully.</span></span>|  
-|<span data-ttu-id="67b3e-112">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="67b3e-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="67b3e-113">CLR'yi işlem içine yüklenmemiş veya içinde yönetilen kod çalıştıramaz veya çağrı başarılı şekilde işleme bir durumda olduğundan.</span><span class="sxs-lookup"><span data-stu-id="67b3e-113">The CLR has not been loaded into a process, or is in a state in which it cannot run managed code or successfully process the call.</span></span>|  
-|<span data-ttu-id="67b3e-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="67b3e-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="67b3e-115">Arama zaman aşımına uğradı.</span><span class="sxs-lookup"><span data-stu-id="67b3e-115">The call timed out.</span></span>|  
-|<span data-ttu-id="67b3e-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="67b3e-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="67b3e-117">Arayan bir kilide sahip değil.</span><span class="sxs-lookup"><span data-stu-id="67b3e-117">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="67b3e-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="67b3e-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="67b3e-119">Bir olay engellenen bir iş parçacığı iptal edildi veya fiber üzerinde bekleme süresi.</span><span class="sxs-lookup"><span data-stu-id="67b3e-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="67b3e-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="67b3e-120">E_FAIL</span></span>|<span data-ttu-id="67b3e-121">Bilinmeyen geri dönülemez bir hata oluştu.</span><span class="sxs-lookup"><span data-stu-id="67b3e-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="67b3e-122">Bir yöntem E_FAIL döndüğünde, CLR artık işlem içinde kullanılamaz.</span><span class="sxs-lookup"><span data-stu-id="67b3e-122">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="67b3e-123">Yöntemleri barındırma yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.</span><span class="sxs-lookup"><span data-stu-id="67b3e-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="a29c2-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="a29c2-110">S_OK</span></span>|<span data-ttu-id="a29c2-111">`DeleteRWLockOwnerIterator` başarıyla döndürüldü.</span><span class="sxs-lookup"><span data-stu-id="a29c2-111">`DeleteRWLockOwnerIterator` returned successfully.</span></span>|  
+|<span data-ttu-id="a29c2-112">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="a29c2-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="a29c2-113">CLR bir işleme yüklenmemiş veya yönetilen kodu çalıştıramadığından veya çağrıyı başarıyla işleyemediği bir durumda.</span><span class="sxs-lookup"><span data-stu-id="a29c2-113">The CLR has not been loaded into a process, or is in a state in which it cannot run managed code or successfully process the call.</span></span>|  
+|<span data-ttu-id="a29c2-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="a29c2-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="a29c2-115">Çağrı zaman aşımına uğradı.</span><span class="sxs-lookup"><span data-stu-id="a29c2-115">The call timed out.</span></span>|  
+|<span data-ttu-id="a29c2-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="a29c2-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="a29c2-117">Çağıranın kilidi yoktur.</span><span class="sxs-lookup"><span data-stu-id="a29c2-117">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="a29c2-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="a29c2-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="a29c2-119">Engellenen bir iş parçacığı veya fiber üzerinde beklerken bir olay iptal edildi.</span><span class="sxs-lookup"><span data-stu-id="a29c2-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="a29c2-120">E_FAıL</span><span class="sxs-lookup"><span data-stu-id="a29c2-120">E_FAIL</span></span>|<span data-ttu-id="a29c2-121">Bilinmeyen bir çok zararlı hata oluştu.</span><span class="sxs-lookup"><span data-stu-id="a29c2-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="a29c2-122">Bir yöntem E_FAıL döndürdüğünde, CLR artık işlem içinde kullanılamaz.</span><span class="sxs-lookup"><span data-stu-id="a29c2-122">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="a29c2-123">Barındırma yöntemlerine yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.</span><span class="sxs-lookup"><span data-stu-id="a29c2-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="67b3e-124">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="67b3e-124">Remarks</span></span>  
- <span data-ttu-id="67b3e-125">Konak bu yöntemini çağırabilir ve `CreateRWLockOwnerIterator` iş parçacığı uygulaması eşitlenmiş kalmasını sağlamak için.</span><span class="sxs-lookup"><span data-stu-id="67b3e-125">The host can call this method and `CreateRWLockOwnerIterator` to ensure that its threading implementation remains synchronized.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="a29c2-124">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="a29c2-124">Remarks</span></span>  
+ <span data-ttu-id="a29c2-125">Konak, iş parçacığı uygulamasının eşitlenmiş kalmasını sağlamak için bu yöntemi çağırabilir ve `CreateRWLockOwnerIterator`.</span><span class="sxs-lookup"><span data-stu-id="a29c2-125">The host can call this method and `CreateRWLockOwnerIterator` to ensure that its threading implementation remains synchronized.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="67b3e-126">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="67b3e-126">Requirements</span></span>  
- <span data-ttu-id="67b3e-127">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="67b3e-127">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a29c2-126">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="a29c2-126">Requirements</span></span>  
+ <span data-ttu-id="a29c2-127">**Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a29c2-127">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="67b3e-128">**Üst bilgi:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="67b3e-128">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="a29c2-128">**Üst bilgi:** MSCorEE. h</span><span class="sxs-lookup"><span data-stu-id="a29c2-128">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="67b3e-129">**Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="67b3e-129">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="a29c2-129">**Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir</span><span class="sxs-lookup"><span data-stu-id="a29c2-129">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="67b3e-130">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="67b3e-130">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="a29c2-130">**.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a29c2-130">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="67b3e-131">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="67b3e-131">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a29c2-131">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="a29c2-131">See also</span></span>
 
-- [<span data-ttu-id="67b3e-132">ICLRSyncManager Arabirimi</span><span class="sxs-lookup"><span data-stu-id="67b3e-132">ICLRSyncManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)
-- [<span data-ttu-id="67b3e-133">IHostSyncManager Arabirimi</span><span class="sxs-lookup"><span data-stu-id="67b3e-133">IHostSyncManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)
+- [<span data-ttu-id="a29c2-132">ICLRSyncManager Arabirimi</span><span class="sxs-lookup"><span data-stu-id="a29c2-132">ICLRSyncManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)
+- [<span data-ttu-id="a29c2-133">IHostSyncManager Arabirimi</span><span class="sxs-lookup"><span data-stu-id="a29c2-133">IHostSyncManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)

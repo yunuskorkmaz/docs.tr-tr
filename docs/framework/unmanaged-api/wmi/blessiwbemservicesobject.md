@@ -14,21 +14,19 @@ helpviewer_keywords:
 - BlessIWbemServicesObject function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 94c6f47e67cf22f189719a8a9f56e830ee90227c
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: f77ff394668a235dd63cf0cddf71ea418a28125b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798720"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141679"
 ---
-# <a name="blessiwbemservicesobject-function"></a><span data-ttu-id="95774-103">BlessIWbemServicesObject işlevi</span><span class="sxs-lookup"><span data-stu-id="95774-103">BlessIWbemServicesObject function</span></span>
-<span data-ttu-id="95774-104">Kullanıcı kimlik bilgilerinin belirtilen bir [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) nesnesine erişime izin verip vermediğini belirtir.</span><span class="sxs-lookup"><span data-stu-id="95774-104">Indicates whether the user credentials permit access to a specified [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) object.</span></span> 
+# <a name="blessiwbemservicesobject-function"></a><span data-ttu-id="a4f1e-103">BlessIWbemServicesObject işlevi</span><span class="sxs-lookup"><span data-stu-id="a4f1e-103">BlessIWbemServicesObject function</span></span>
+<span data-ttu-id="a4f1e-104">Kullanıcı kimlik bilgilerinin belirtilen bir [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) nesnesine erişime izin verip vermediğini belirtir.</span><span class="sxs-lookup"><span data-stu-id="a4f1e-104">Indicates whether the user credentials permit access to a specified [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) object.</span></span> 
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
 
-## <a name="syntax"></a><span data-ttu-id="95774-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="95774-105">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="a4f1e-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="a4f1e-105">Syntax</span></span>
 
 ```cpp
 HRESULT BlessIWbemServicesObject (
@@ -41,46 +39,46 @@ HRESULT BlessIWbemServicesObject (
 );
 ```
 
-## <a name="parameters"></a><span data-ttu-id="95774-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="95774-106">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="a4f1e-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="a4f1e-106">Parameters</span></span>
 
 `pIWbemServices`\
-<span data-ttu-id="95774-107">'ndaki WMI hizmeti nesnesine yönelik bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="95774-107">[in] A pointer to a WMI service object.</span></span>
+<span data-ttu-id="a4f1e-107">'ndaki WMI hizmeti nesnesine yönelik bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="a4f1e-107">[in] A pointer to a WMI service object.</span></span>
 
 `strUser`\
-<span data-ttu-id="95774-108">'ndaki Kullanıcı adı.</span><span class="sxs-lookup"><span data-stu-id="95774-108">[in] The user name.</span></span>
+<span data-ttu-id="a4f1e-108">'ndaki Kullanıcı adı.</span><span class="sxs-lookup"><span data-stu-id="a4f1e-108">[in] The user name.</span></span>
 
 `strPassword`\
-<span data-ttu-id="95774-109">'ndaki İle `strUser`ilişkili parola.</span><span class="sxs-lookup"><span data-stu-id="95774-109">[in] The password associated with `strUser`.</span></span>
+<span data-ttu-id="a4f1e-109">'ndaki `strUser`ilişkili parola.</span><span class="sxs-lookup"><span data-stu-id="a4f1e-109">[in] The password associated with `strUser`.</span></span>
 
 `strAuthority`\
-<span data-ttu-id="95774-110">'ndaki Kullanıcının etki alanı adı.</span><span class="sxs-lookup"><span data-stu-id="95774-110">[in] The domain name of the user.</span></span> <span data-ttu-id="95774-111">Daha fazla bilgi için bkz. [Connectserverwmi](connectserverwmi.md) işlevi.</span><span class="sxs-lookup"><span data-stu-id="95774-111">See the [ConnectServerWmi](connectserverwmi.md) function for more information.</span></span>
+<span data-ttu-id="a4f1e-110">'ndaki Kullanıcının etki alanı adı.</span><span class="sxs-lookup"><span data-stu-id="a4f1e-110">[in] The domain name of the user.</span></span> <span data-ttu-id="a4f1e-111">Daha fazla bilgi için bkz. [Connectserverwmi](connectserverwmi.md) işlevi.</span><span class="sxs-lookup"><span data-stu-id="a4f1e-111">See the [ConnectServerWmi](connectserverwmi.md) function for more information.</span></span>
 
 `impLevel`\
-<span data-ttu-id="95774-112">'ndaki Kimliğe bürünme düzeyi.</span><span class="sxs-lookup"><span data-stu-id="95774-112">[in] The impersonation level.</span></span>
+<span data-ttu-id="a4f1e-112">'ndaki Kimliğe bürünme düzeyi.</span><span class="sxs-lookup"><span data-stu-id="a4f1e-112">[in] The impersonation level.</span></span>
 
 `authnLevel`\
-<span data-ttu-id="95774-113">'ndaki Yetkilendirme düzeyi.</span><span class="sxs-lookup"><span data-stu-id="95774-113">[in] The authorization level.</span></span>
+<span data-ttu-id="a4f1e-113">'ndaki Yetkilendirme düzeyi.</span><span class="sxs-lookup"><span data-stu-id="a4f1e-113">[in] The authorization level.</span></span>
 
-## <a name="return-value"></a><span data-ttu-id="95774-114">Dönüş değeri</span><span class="sxs-lookup"><span data-stu-id="95774-114">Return value</span></span>
+## <a name="return-value"></a><span data-ttu-id="a4f1e-114">Dönüş değeri</span><span class="sxs-lookup"><span data-stu-id="a4f1e-114">Return value</span></span>
 
-<span data-ttu-id="95774-115">Bu işlev tarafından döndürülen aşağıdaki değerler *Winerror. h* üstbilgi dosyasında tanımlanır veya bunları kodunuzda sabitler olarak tanımlayabilirsiniz:</span><span class="sxs-lookup"><span data-stu-id="95774-115">The following values returned by this function are defined in the *WinError.h* header file, or you can define them as constants in your code:</span></span>
+<span data-ttu-id="a4f1e-115">Bu işlev tarafından döndürülen aşağıdaki değerler *Winerror. h* üstbilgi dosyasında tanımlanır veya bunları kodunuzda sabitler olarak tanımlayabilirsiniz:</span><span class="sxs-lookup"><span data-stu-id="a4f1e-115">The following values returned by this function are defined in the *WinError.h* header file, or you can define them as constants in your code:</span></span>
 
-|<span data-ttu-id="95774-116">Sabit</span><span class="sxs-lookup"><span data-stu-id="95774-116">Constant</span></span>  |<span data-ttu-id="95774-117">Değer</span><span class="sxs-lookup"><span data-stu-id="95774-117">Value</span></span>  |<span data-ttu-id="95774-118">Açıklama</span><span class="sxs-lookup"><span data-stu-id="95774-118">Description</span></span>  |
+|<span data-ttu-id="a4f1e-116">Sabit</span><span class="sxs-lookup"><span data-stu-id="a4f1e-116">Constant</span></span>  |<span data-ttu-id="a4f1e-117">Değer</span><span class="sxs-lookup"><span data-stu-id="a4f1e-117">Value</span></span>  |<span data-ttu-id="a4f1e-118">Açıklama</span><span class="sxs-lookup"><span data-stu-id="a4f1e-118">Description</span></span>  |
 |---------|---------|---------|
-| `E_INVALIDARG` | <span data-ttu-id="95774-119">0x80070057</span><span class="sxs-lookup"><span data-stu-id="95774-119">0x80070057</span></span> | <span data-ttu-id="95774-120">Bir veya daha fazla bağımsız değişken geçersiz.</span><span class="sxs-lookup"><span data-stu-id="95774-120">One or more arguments are invalid.</span></span> |
-| `E_POINTER` | <span data-ttu-id="95774-121">0x80004003</span><span class="sxs-lookup"><span data-stu-id="95774-121">0x80004003</span></span> | <span data-ttu-id="95774-122">`pIWbemServices``null`.</span><span class="sxs-lookup"><span data-stu-id="95774-122">`pIWbemServices` is `null`.</span></span> | 
-| `E_FAIL` | <span data-ttu-id="95774-123">0x80000008</span><span class="sxs-lookup"><span data-stu-id="95774-123">0x80000008</span></span> | <span data-ttu-id="95774-124">Belirtilmeyen bir hata oluştu.</span><span class="sxs-lookup"><span data-stu-id="95774-124">An unspecified error has occurred.</span></span> |
-| `E_OUTOFMEMORY` | <span data-ttu-id="95774-125">0x80000002</span><span class="sxs-lookup"><span data-stu-id="95774-125">0x80000002</span></span> | <span data-ttu-id="95774-126">İşlemi gerçekleştirmek için yeterli bellek yok.</span><span class="sxs-lookup"><span data-stu-id="95774-126">Insufficient memory is available to perform the operation.</span></span> | 
-| `S_OK` | <span data-ttu-id="95774-127">0</span><span class="sxs-lookup"><span data-stu-id="95774-127">0</span></span> | <span data-ttu-id="95774-128">İşlev çağrısı başarılı oldu.</span><span class="sxs-lookup"><span data-stu-id="95774-128">The function call was successful.</span></span> | 
+| `E_INVALIDARG` | <span data-ttu-id="a4f1e-119">0x80070057</span><span class="sxs-lookup"><span data-stu-id="a4f1e-119">0x80070057</span></span> | <span data-ttu-id="a4f1e-120">Bir veya daha fazla bağımsız değişken geçersiz.</span><span class="sxs-lookup"><span data-stu-id="a4f1e-120">One or more arguments are invalid.</span></span> |
+| `E_POINTER` | <span data-ttu-id="a4f1e-121">0x80004003</span><span class="sxs-lookup"><span data-stu-id="a4f1e-121">0x80004003</span></span> | <span data-ttu-id="a4f1e-122">`pIWbemServices` `null`.</span><span class="sxs-lookup"><span data-stu-id="a4f1e-122">`pIWbemServices` is `null`.</span></span> | 
+| `E_FAIL` | <span data-ttu-id="a4f1e-123">0x80000008</span><span class="sxs-lookup"><span data-stu-id="a4f1e-123">0x80000008</span></span> | <span data-ttu-id="a4f1e-124">Belirtilmeyen bir hata oluştu.</span><span class="sxs-lookup"><span data-stu-id="a4f1e-124">An unspecified error has occurred.</span></span> |
+| `E_OUTOFMEMORY` | <span data-ttu-id="a4f1e-125">0x80000002</span><span class="sxs-lookup"><span data-stu-id="a4f1e-125">0x80000002</span></span> | <span data-ttu-id="a4f1e-126">İşlemi gerçekleştirmek için yeterli bellek yok.</span><span class="sxs-lookup"><span data-stu-id="a4f1e-126">Insufficient memory is available to perform the operation.</span></span> | 
+| `S_OK` | <span data-ttu-id="a4f1e-127">0</span><span class="sxs-lookup"><span data-stu-id="a4f1e-127">0</span></span> | <span data-ttu-id="a4f1e-128">İşlev çağrısı başarılı oldu.</span><span class="sxs-lookup"><span data-stu-id="a4f1e-128">The function call was successful.</span></span> | 
 
-## <a name="requirements"></a><span data-ttu-id="95774-129">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="95774-129">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="a4f1e-129">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="a4f1e-129">Requirements</span></span>
 
- <span data-ttu-id="95774-130">**Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="95774-130">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>
+ <span data-ttu-id="a4f1e-130">**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a4f1e-130">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>
 
- <span data-ttu-id="95774-131">**Üst bilgi** WMINet_Utils. IDL</span><span class="sxs-lookup"><span data-stu-id="95774-131">**Header:** WMINet_Utils.idl</span></span>
+ <span data-ttu-id="a4f1e-131">**Üst bilgi:** WMINet_Utils. IDL</span><span class="sxs-lookup"><span data-stu-id="a4f1e-131">**Header:** WMINet_Utils.idl</span></span>
 
- <span data-ttu-id="95774-132">**.NET Framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="95774-132">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>
+ <span data-ttu-id="a4f1e-132">**.NET Framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="a4f1e-132">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="95774-133">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="95774-133">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a4f1e-133">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="a4f1e-133">See also</span></span>
 
-- [<span data-ttu-id="95774-134">WMI ve performans sayaçları (yönetilmeyen API Başvurusu)</span><span class="sxs-lookup"><span data-stu-id="95774-134">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
+- [<span data-ttu-id="a4f1e-134">WMI ve performans sayaçları (yönetilmeyen API Başvurusu)</span><span class="sxs-lookup"><span data-stu-id="a4f1e-134">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)

@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: c6bbf479-062e-48e9-9c70-0f92e293e36a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a4613e11896a34ed1a7fe91d4767fb38ac75aab8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4229d567fc4ced5e3b78b390ced29fb9ea60f93b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67754524"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137839"
 ---
-# <a name="icordebugfunctiongettoken-method"></a><span data-ttu-id="b7252-102">ICorDebugFunction::GetToken Yöntemi</span><span class="sxs-lookup"><span data-stu-id="b7252-102">ICorDebugFunction::GetToken Method</span></span>
-<span data-ttu-id="b7252-103">Meta veriler, bu işlev için belirteç alır.</span><span class="sxs-lookup"><span data-stu-id="b7252-103">Gets the metadata token for this function.</span></span>  
+# <a name="icordebugfunctiongettoken-method"></a><span data-ttu-id="22098-102">ICorDebugFunction::GetToken Yöntemi</span><span class="sxs-lookup"><span data-stu-id="22098-102">ICorDebugFunction::GetToken Method</span></span>
+<span data-ttu-id="22098-103">Bu işlev için meta veri belirtecini alır.</span><span class="sxs-lookup"><span data-stu-id="22098-103">Gets the metadata token for this function.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b7252-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="b7252-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="22098-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="22098-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetToken (  
@@ -35,15 +33,15 @@ HRESULT GetToken (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="b7252-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="b7252-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="22098-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="22098-105">Parameters</span></span>  
  `pMethodDef`  
- <span data-ttu-id="b7252-106">[out] Bir işaretçi bir `mdMethodDef` bu işlevi için meta veriler başvuran belirteci.</span><span class="sxs-lookup"><span data-stu-id="b7252-106">[out] A pointer to an `mdMethodDef` token that references the metadata for this function.</span></span>  
+ <span data-ttu-id="22098-106">dışı Bu işlevin meta verilerine başvuran `mdMethodDef` belirtece yönelik bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="22098-106">[out] A pointer to an `mdMethodDef` token that references the metadata for this function.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b7252-107">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="b7252-107">Requirements</span></span>  
- <span data-ttu-id="b7252-108">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b7252-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="22098-107">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="22098-107">Requirements</span></span>  
+ <span data-ttu-id="22098-108">**Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="22098-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b7252-109">**Üst bilgi:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="b7252-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="22098-109">**Üst bilgi:** CorDebug. IDL, CorDebug. h</span><span class="sxs-lookup"><span data-stu-id="22098-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="b7252-110">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b7252-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="22098-110">**Kitaplık:** Corguid. lib</span><span class="sxs-lookup"><span data-stu-id="22098-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="b7252-111">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b7252-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="22098-111">**.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="22098-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

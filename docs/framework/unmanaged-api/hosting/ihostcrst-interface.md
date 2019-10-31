@@ -14,41 +14,39 @@ helpviewer_keywords:
 ms.assetid: ac298ebd-0815-47e4-a823-30b31baab903
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 939f100e8ee386642a29c33827a8339caf0467b9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 108492ba298e9f8429b2acd890ab3404365bc602
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61967836"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130518"
 ---
-# <a name="ihostcrst-interface"></a><span data-ttu-id="b8105-102">IHostCrst Arabirimi</span><span class="sxs-lookup"><span data-stu-id="b8105-102">IHostCrst Interface</span></span>
-<span data-ttu-id="b8105-103">İş parçacığı için kritik bir bölüm konağın gösterimi işlevi görür.</span><span class="sxs-lookup"><span data-stu-id="b8105-103">Serves as the host's representation of a critical section for threading.</span></span>  
+# <a name="ihostcrst-interface"></a><span data-ttu-id="7491a-102">IHostCrst Arabirimi</span><span class="sxs-lookup"><span data-stu-id="7491a-102">IHostCrst Interface</span></span>
+<span data-ttu-id="7491a-103">İş parçacığı için kritik bir bölümün ana bilgisayarın temsili olarak işlev görür.</span><span class="sxs-lookup"><span data-stu-id="7491a-103">Serves as the host's representation of a critical section for threading.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="b8105-104">Yöntemler</span><span class="sxs-lookup"><span data-stu-id="b8105-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="7491a-104">Yöntemler</span><span class="sxs-lookup"><span data-stu-id="7491a-104">Methods</span></span>  
   
-|<span data-ttu-id="b8105-105">Yöntem</span><span class="sxs-lookup"><span data-stu-id="b8105-105">Method</span></span>|<span data-ttu-id="b8105-106">Açıklama</span><span class="sxs-lookup"><span data-stu-id="b8105-106">Description</span></span>|  
+|<span data-ttu-id="7491a-105">Yöntem</span><span class="sxs-lookup"><span data-stu-id="7491a-105">Method</span></span>|<span data-ttu-id="7491a-106">Açıklama</span><span class="sxs-lookup"><span data-stu-id="7491a-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="b8105-107">Enter Yöntemi</span><span class="sxs-lookup"><span data-stu-id="b8105-107">Enter Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostcrst-enter-method.md)|<span data-ttu-id="b8105-108">Kritik bölüm girer.</span><span class="sxs-lookup"><span data-stu-id="b8105-108">Enters the critical section.</span></span>|  
-|[<span data-ttu-id="b8105-109">Leave Yöntemi</span><span class="sxs-lookup"><span data-stu-id="b8105-109">Leave Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostcrst-leave-method.md)|<span data-ttu-id="b8105-110">Kritik bölüm bırakır.</span><span class="sxs-lookup"><span data-stu-id="b8105-110">Leaves the critical section.</span></span>|  
-|[<span data-ttu-id="b8105-111">SetSpinCount Yöntemi</span><span class="sxs-lookup"><span data-stu-id="b8105-111">SetSpinCount Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostcrst-setspincount-method.md)|<span data-ttu-id="b8105-112">Kritik bölüm için dönüş sayısını ayarlar.</span><span class="sxs-lookup"><span data-stu-id="b8105-112">Sets the spin count for the critical section.</span></span>|  
-|[<span data-ttu-id="b8105-113">TryEnter Yöntemi</span><span class="sxs-lookup"><span data-stu-id="b8105-113">TryEnter Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostcrst-tryenter-method.md)|<span data-ttu-id="b8105-114">Kritik bölüm ve raporları başarı veya başarısızlık hemen girmek çalışır.</span><span class="sxs-lookup"><span data-stu-id="b8105-114">Attempts to enter the critical section, and reports success or failure immediately.</span></span>|  
+|[<span data-ttu-id="7491a-107">Enter Yöntemi</span><span class="sxs-lookup"><span data-stu-id="7491a-107">Enter Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostcrst-enter-method.md)|<span data-ttu-id="7491a-108">Kritik bölümüne girer.</span><span class="sxs-lookup"><span data-stu-id="7491a-108">Enters the critical section.</span></span>|  
+|[<span data-ttu-id="7491a-109">Leave Yöntemi</span><span class="sxs-lookup"><span data-stu-id="7491a-109">Leave Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostcrst-leave-method.md)|<span data-ttu-id="7491a-110">Kritik bölümünü bırakır.</span><span class="sxs-lookup"><span data-stu-id="7491a-110">Leaves the critical section.</span></span>|  
+|[<span data-ttu-id="7491a-111">SetSpinCount Yöntemi</span><span class="sxs-lookup"><span data-stu-id="7491a-111">SetSpinCount Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostcrst-setspincount-method.md)|<span data-ttu-id="7491a-112">Kritik bölüm için döngü sayısını ayarlar.</span><span class="sxs-lookup"><span data-stu-id="7491a-112">Sets the spin count for the critical section.</span></span>|  
+|[<span data-ttu-id="7491a-113">TryEnter Yöntemi</span><span class="sxs-lookup"><span data-stu-id="7491a-113">TryEnter Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostcrst-tryenter-method.md)|<span data-ttu-id="7491a-114">Kritik bölümü girmeye çalışır ve başarılı veya başarısız olarak anında rapor verebilir.</span><span class="sxs-lookup"><span data-stu-id="7491a-114">Attempts to enter the critical section, and reports success or failure immediately.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="b8105-115">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="b8105-115">Remarks</span></span>  
- <span data-ttu-id="b8105-116">`IHostCrst` Ortak dil çalışma zamanı (CLR) kritik bir bölüm doğrudan ana bilgisayarın gösterimi ile iletişim kurmak için Win32 işlevlerini gibi kullanmak yerine sağlayan `EnterCriticalSection` veya `LeaveCriticalSection`.</span><span class="sxs-lookup"><span data-stu-id="b8105-116">`IHostCrst` allows the common language runtime (CLR) to communicate directly with the host's representation of a critical section, rather than using Win32 functions such as `EnterCriticalSection` or `LeaveCriticalSection`.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="7491a-115">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="7491a-115">Remarks</span></span>  
+ <span data-ttu-id="7491a-116">`IHostCrst`, ortak dil çalışma zamanının (CLR), `EnterCriticalSection` veya `LeaveCriticalSection`gibi Win32 işlevleri yerine ana bilgisayarın kritik bir bölümün temsili ile doğrudan iletişim kurmasına olanak tanır.</span><span class="sxs-lookup"><span data-stu-id="7491a-116">`IHostCrst` allows the common language runtime (CLR) to communicate directly with the host's representation of a critical section, rather than using Win32 functions such as `EnterCriticalSection` or `LeaveCriticalSection`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b8105-117">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="b8105-117">Requirements</span></span>  
- <span data-ttu-id="b8105-118">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b8105-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7491a-117">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="7491a-117">Requirements</span></span>  
+ <span data-ttu-id="7491a-118">**Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7491a-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b8105-119">**Üst bilgi:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="b8105-119">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="7491a-119">**Üst bilgi:** MSCorEE. h</span><span class="sxs-lookup"><span data-stu-id="7491a-119">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="b8105-120">**Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="b8105-120">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="7491a-120">**Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir</span><span class="sxs-lookup"><span data-stu-id="7491a-120">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="b8105-121">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b8105-121">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="7491a-121">**.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7491a-121">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b8105-122">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="b8105-122">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7491a-122">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="7491a-122">See also</span></span>
 
-- [<span data-ttu-id="b8105-123">ICLRSyncManager Arabirimi</span><span class="sxs-lookup"><span data-stu-id="b8105-123">ICLRSyncManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)
-- [<span data-ttu-id="b8105-124">IHostSyncManager Arabirimi</span><span class="sxs-lookup"><span data-stu-id="b8105-124">IHostSyncManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)
-- [<span data-ttu-id="b8105-125">Barındırma Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="b8105-125">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [<span data-ttu-id="7491a-123">ICLRSyncManager Arabirimi</span><span class="sxs-lookup"><span data-stu-id="7491a-123">ICLRSyncManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)
+- [<span data-ttu-id="7491a-124">IHostSyncManager Arabirimi</span><span class="sxs-lookup"><span data-stu-id="7491a-124">IHostSyncManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)
+- [<span data-ttu-id="7491a-125">Barındırma Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="7491a-125">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
