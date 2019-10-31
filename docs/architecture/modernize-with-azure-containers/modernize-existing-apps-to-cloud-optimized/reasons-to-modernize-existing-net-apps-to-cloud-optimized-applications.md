@@ -2,12 +2,12 @@
 title: Mevcut .NET uygulamalarını buluta Iyileştirilmiş uygulamalarla modernleştirin nedenleri
 description: Azure bulut ve Windows kapsayıcıları ile mevcut .NET uygulamalarını modernleştirin | Mevcut .NET uygulamalarını buluta Iyileştirilmiş uygulamalarla modernleştirin nedenleri
 ms.date: 04/28/2018
-ms.openlocfilehash: 3154f9a9e11b42330fcc753ffd961316e4ada335
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 55eb3fb9b0b6c91e25bcdb23056a8a8e51463ef7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72522921"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73093628"
 ---
 # <a name="reasons-to-modernize-existing-net-apps-to-cloud-optimized-applications"></a>Mevcut .NET uygulamalarını buluta Iyileştirilmiş uygulamalarla modernleştirin nedenleri
 
@@ -19,7 +19,7 @@ Sürekli iş yeniliği gereksinimi, geliştirme ve operasyon ekiplerini limite g
 
 En alttaki satır, bir kuruluşun bulut için optimize edilmiş uygulamaları oluşturup yönettiğine göre, çözümleri daha önce müşterilere yerleştirebilir ve ilgili olduklarında pazara yeni fikirler getirebilir.
 
-## <a name="cloud-optimized-application-principles-and-tenets"></a>Buluta Iyileştirilmiş uygulama ilkeleri ve tenetler 
+## <a name="cloud-optimized-application-principles-and-tenets"></a>Buluta Iyileştirilmiş uygulama ilkeleri ve tenetler
 
 Buluttaki geliştirmeler genellikle iki hedefi karşılamaya odaklanılmıştır: çevikliği artırarak maliyetleri azaltın ve iş artışını geliştirebilirsiniz. Bu hedefler, uygulamaları serbest bırakma ve sevk ettiğiniz sırada süreçler basitleştirilerek ve uçuşmadan elde edilir.
 

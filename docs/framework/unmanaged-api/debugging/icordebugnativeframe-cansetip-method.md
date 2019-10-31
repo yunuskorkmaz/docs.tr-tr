@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 13258ac6-f4e4-4f66-8fc3-f1244417a3c3
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9c84e439ab9e0f58b2da1501fda7e19454e92e60
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b3758ac1a84092b8bf2678f9cc2c19c9d9961690
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67746373"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137320"
 ---
 # <a name="icordebugnativeframecansetip-method"></a>ICorDebugNativeFrame::CanSetIP Yöntemi
-Yönerge işaretçisi (IP) belirtilen uzaklık konuma yerel kodda ayarlamak güvenli olup olmadığını belirten bir HRESULT alır.  
+Yerel koddaki belirtilen konum konumuna yönerge işaretçisini (IP) ayarlamak için güvenli olup olmadığını belirten bir HRESULT alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,18 +35,18 @@ HRESULT CanSetIP (
   
 ## <a name="parameters"></a>Parametreler  
  `nOffset`  
- [in] Yönerge işaretçisi için istenen ayar.  
+ 'ndaki Yönerge işaretçisi için istenen ayar.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Kullanım `CanSetIP` yöntemi çağrılmadan önce [Icordebugnativeframe::SetIP](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe-setip-method.md) yöntemi. Varsa `CanSetIP` herhangi HRESULT döndürür S_OK dışında yine de çağırabilirsiniz `ICorDebugNativeFrame::SetIP`, ancak hata ayıklayıcı hata ayıklaması yapılan kod güvenli ve doğru yürütmeyi devam edeceğini garanti yoktur.  
+ [ICorDebugNativeFrame:: SetIP](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe-setip-method.md) metodunu çağırmadan önce `CanSetIP` yöntemini kullanın. `CanSetIP` S_OK dışında bir HRESULT döndürürse, yine de `ICorDebugNativeFrame::SetIP`çağırabilirsiniz, ancak hata ayıklamanın hata ayıklamakta olan kodun güvenli ve doğru yürütülmesine devam edeceğini garanti vermez.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
