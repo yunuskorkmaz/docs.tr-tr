@@ -4,12 +4,12 @@ description: Mevcut bir ASP.NET Web Forms uygulamasını Blazor 'e geçirmeye na
 author: twsouthwick
 ms.author: tasou
 ms.date: 09/19/2019
-ms.openlocfilehash: 1680c3ccd496029cbdefc38119cf89bae0a777a7
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: b6604e000eaf79bcd8da15d72a3d85713c620851
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73087918"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73191938"
 ---
 # <a name="migrate-from-aspnet-web-forms-to-blazor"></a>ASP.NET Web Forms 'den Blazor 'ye geçiş
 
@@ -84,7 +84,7 @@ Blazor projesi, proje dosyasındaki bir `<ItemGroup>` öğesi içinde gerekli ol
 </ItemGroup>
 ```
 
-Web Forms geliştiricilerin ömrünü basitleştiren bir NuGet paketi [Windows Uyumluluk paketidir](/dotnet/core/porting/windows-compat-pack). .NET Core platformlar arası olsa da bazı özellikler yalnızca Windows 'da kullanılabilir. Windows 'a özgü özellikler, uyumluluk paketi yüklenerek kullanılabilir hale getirilir. Bu özelliklere örnek olarak kayıt defteri, WMI ve dizin hizmetleri dahildir. Paket, 20.000 API etrafında ekleme yapar ve çok daha bildiğiniz hizmetleri etkinleştirir. EShop projesi, uyumluluk paketi gerektirmez; Ancak projeleriniz Windows 'a özgü özellikler kullanıyorsa, paket geçiş çalışmalarını kolaylaştırır.
+Web Forms geliştiricilerin ömrünü basitleştiren bir NuGet paketi [Windows Uyumluluk paketidir](../../core/porting/windows-compat-pack.md). .NET Core platformlar arası olsa da bazı özellikler yalnızca Windows 'da kullanılabilir. Windows 'a özgü özellikler, uyumluluk paketi yüklenerek kullanılabilir hale getirilir. Bu özelliklere örnek olarak kayıt defteri, WMI ve dizin hizmetleri dahildir. Paket, 20.000 API etrafında ekleme yapar ve çok daha bildiğiniz hizmetleri etkinleştirir. EShop projesi, uyumluluk paketi gerektirmez; Ancak projeleriniz Windows 'a özgü özellikler kullanıyorsa, paket geçiş çalışmalarını kolaylaştırır.
 
 ## <a name="enable-startup-process"></a>Başlatma işlemini etkinleştir
 

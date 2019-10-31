@@ -1,15 +1,15 @@
 ---
-title: Mikro hizmet başına veri egemenlik
+title: Mikro hizmet başına veri hakimiyeti
 description: Mikro hizmet başına veri egementy, mikro hizmetlerin önemli noktalarından biridir. Her mikro hizmet veritabanının tek sahibi olmalıdır ve onu başka hiçbir olmadan paylaşmalıdır. Tabii ki, bir mikro hizmetin tüm örnekleri aynı yüksek kullanılabilirlik veritabanına bağlanır.
 ms.date: 09/20/2018
-ms.openlocfilehash: 3261446a84038b7b634242b0a0737472965168de
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: f606d6314f38bf3e2c163871af432806dddc7446
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834460"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73191912"
 ---
-# <a name="data-sovereignty-per-microservice"></a>Mikro hizmet başına veri egemenlik
+# <a name="data-sovereignty-per-microservice"></a>Mikro hizmet başına veri hakimiyeti
 
 Mikro hizmetler mimarisi için önemli bir kural, her mikro hizmetin kendi etki alanı verilerine ve mantığına sahip olması gerekir. Tam bir uygulamanın Logic ve verilerinin sahibi olduğu için, her mikro hizmetin kendi mantığını ve verileri, mikro hizmet başına bağımsız dağıtım ile bir otonom yaşam döngüsü altında sahip olması gerekir.
 
@@ -27,7 +27,9 @@ Geleneksel yaklaşımda, genellikle katmanlı bir mimaride tüm hizmetler geneli
 
 Tek bir ilişkisel veritabanına sahip tek parçalı bir uygulamanın iki önemli avantajı vardır: [ACID işlemleri](https://en.wikipedia.org/wiki/ACID) ve SQL dili, her ikisi de uygulamanızla ilgili tüm tablolar ve veriler üzerinde çalışır. Bu yaklaşım, birden çok tablodan verileri birleştiren bir sorguyu kolayca yazmak için bir yol sağlar.
 
-Ancak, mikro hizmetler mimarisine geçtiğinizde veri erişimi çok daha karmaşık hale gelir. Ancak, bir mikro hizmet veya sınırlı bağlam içinde ACID işlemleri de kullanılabilir olduğunda bile, her bir mikro hizmetin sahip olduğu veriler bu mikro hizmete özeldir ve yalnızca mikro hizmet API 'SI aracılığıyla erişilebilir. Verilerin kapsüllenmesi, mikro hizmetlerin gevşek bir şekilde bağlanmış olmasını sağlar ve birbirinden bağımsız olarak gelişebilirler. Aynı verilere birden çok hizmet erişiyorsa, şema güncelleştirmeleri tüm hizmetlere yönelik Eşgüdümlü güncelleştirmeler gerektirir. Bu, mikro hizmet yaşam döngüsü bağımsız çalışma sınırı kesintiye uğratır. Ancak dağıtılmış veri yapıları, mikro hizmetler genelinde tek bir ACID işlemi yapamayacağınız anlamına gelir. Buna karşılık, bir iş süreci birden çok mikro hizmete yayıldığında nihai tutarlılığı kullanmanız gerekir. Bu, daha sonra açıklandığımız gibi, bütünlük kısıtlamaları oluşturamadığından veya ayrı veritabanları arasında dağıtılmış işlemler kullanamadığından basit SQL birleştirmelere uygulama çok daha zordur. Benzer şekilde, çok sayıda diğer ilişkisel veritabanı özelliği birden fazla mikro hizmette kullanılamaz.
+Ancak, bir mikro hizmet mimarisine geçtiğinizde veri erişimi çok daha karmaşık hale gelir. Bir mikro hizmet veya sınırlı bağlam içindeki ACID işlemlerini kullanırken bile, her bir mikro hizmetin sahip olduğu verilerin bu mikro hizmete özel olduğunu ve yalnızca API uç noktaları (REST, gRPC, SOAP, vb.) veya ileti aracılığıyla zaman uyumsuz (AMQP veya benzeri).
+
+Verilerin kapsüllenmesi, mikro hizmetlerin gevşek bir şekilde bağlanmış olmasını sağlar ve birbirinden bağımsız olarak gelişebilirler. Aynı verilere birden çok hizmet erişiyorsa, şema güncelleştirmeleri tüm hizmetlere yönelik Eşgüdümlü güncelleştirmeler gerektirir. Bu, mikro hizmet yaşam döngüsü bağımsız çalışma sınırı kesintiye uğratır. Ancak dağıtılmış veri yapıları, mikro hizmetler genelinde tek bir ACID işlemi yapamayacağınız anlamına gelir. Buna karşılık, bir iş süreci birden çok mikro hizmete yayıldığında nihai tutarlılığı kullanmanız gerekir. Bu, daha sonra açıklandığımız gibi, bütünlük kısıtlamaları oluşturamadığından veya ayrı veritabanları arasında dağıtılmış işlemler kullanamadığından basit SQL birleştirmelere uygulama çok daha zordur. Benzer şekilde, çok sayıda diğer ilişkisel veritabanı özelliği birden fazla mikro hizmette kullanılamaz.
 
 Daha da farklı mikro hizmetler, genellikle farklı *türlerde* veritabanları kullanır. Modern uygulamalar çeşitli veri türlerini depolar ve işler ve ilişkisel veritabanı her zaman en iyi seçenektir. Bazı kullanım durumları için, Azure CosmosDB veya MongoDB gibi bir NoSQL veritabanının daha uygun bir veri modeli olabilir ve SQL Server veya Azure SQL veritabanı gibi bir SQL veritabanından daha iyi performans ve ölçeklenebilirlik sunar. Diğer durumlarda, ilişkisel bir veritabanı hala en iyi yaklaşımdır. Bu nedenle, mikro hizmet tabanlı uygulamalar genellikle [çok yönlü Kalıcılık](https://martinfowler.com/bliki/PolyglotPersistence.html) yaklaşımı olarak adlandırılan SQL ve NoSQL veritabanlarının bir karışımını kullanır.
 
@@ -47,7 +49,7 @@ Her sınırlanmış bağlam için bir hizmet tanımlamanın başlamak için iyi 
 
 ### <a name="additional-resources"></a>Ek kaynaklar
 
-- **Chris Richardson. Model: hizmet başına veritabanı** \
+- **Chris Richardson. Model: hizmet başına \ veritabanı**
   <https://microservices.io/patterns/data/database-per-service.html>
 
 - **Marwler. BoundedContext** \
@@ -56,7 +58,7 @@ Her sınırlanmış bağlam için bir hizmet tanımlamanın başlamak için iyi 
 - **Marwler. PolyglotPersistence** \
   <https://martinfowler.com/bliki/PolyglotPersistence.html>
 
-- **Alberto Brandolini. Bağlam eşleme  \ ile stratejik etki alanı odaklı tasarım**
+- **Alberto Brandolini. Bağlam eşleme \ stratejik etki alanı odaklı tasarım**
   <https://www.infoq.com/articles/ddd-contextmapping>
 
 >[!div class="step-by-step"]
