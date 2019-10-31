@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 71f362a9-8fe2-47ce-9302-05a645cf3d7d
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9861de733a9acb43c7e2a4b4941f9945fc5f0ba7
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e01698d2d8491b2496bb664c13dca97964cd1481
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67758379"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136942"
 ---
 # <a name="corlaunchapplication-function"></a>CorLaunchApplication İşlevi
-Belirtilen bildirimleri ve diğer uygulama verilerini kullanarak belirtilen ağ yolunda uygulamayı başlatır.  
+Belirtilen bildirimleri ve diğer uygulama verilerini kullanarak belirtilen ağ yolundaki uygulamayı başlatır.  
   
- Bu işlev .NET Framework 4'te kullanım dışıdır.  
+ Bu işlev .NET Framework 4 ' te kullanım dışıdır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -45,34 +43,34 @@ HRESULT CorLaunchApplication (
   
 ## <a name="parameters"></a>Parametreler  
  `dwClickOnceHost`  
- [in] Değerini [HOST_TYPE](../../../../docs/framework/unmanaged-api/hosting/host-type-enumeration.md) uygulamayı başlatmadan konak türünü belirten sabit listesi.  
+ 'ndaki Uygulamayı başlatan konak türünü belirten [HOST_TYPE](../../../../docs/framework/unmanaged-api/hosting/host-type-enumeration.md) numaralandırması değeri.  
   
  `pwzAppFullName`  
- [in] Başlatılan uygulamanın tam adı.  
+ 'ndaki Başlatılmakta olan uygulamanın tam adı.  
   
  `dwManifestPaths`  
- [in] Uygulama için bildirim yolları sayısı.  
+ 'ndaki Uygulamanın bildirim yollarının sayısı.  
   
  `ppwzManifestPaths`  
- [in] Her biri bildirim başlatılmayı uygulama için bir yol belirtir bir dizi dizeleri.  
+ 'ndaki Her biri, başlatılmakta olan uygulama için bir bildirimin yolunu belirten dizeler dizisi.  
   
  `dwActivationData`  
- [in] Başlatılan uygulama için etkinleştirme veri öğesi sayısı.  
+ 'ndaki Başlatılmakta olan uygulama için etkinleştirme verisi öğelerinin sayısı.  
   
  `ppwzActivationData`  
- [in] Her biri bir etkinleştirme veri öğesi başlatılmayı uygulama için olan bir dizi dizeleri.  
+ 'ndaki Her biri, başlatılmakta olan uygulama için bir etkinleştirme verileri öğesi olan dizeler dizisi.  
   
  `lpProcessInformation`  
- [out] Uygulama yüklendi işlemi hakkında bilgi için bir işaretçi.  
+ dışı Uygulamanın yüklendiği işlem hakkındaki bilgilere yönelik bir işaretçi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** MSCorEE.h  
+ **Üst bilgi:** MSCorEE. h  
   
- **Kitaplığı:** MSCorEE.dll  
+ **Kitaplık:** MSCorEE. dll  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

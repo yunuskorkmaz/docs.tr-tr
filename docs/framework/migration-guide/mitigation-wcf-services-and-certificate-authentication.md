@@ -1,23 +1,21 @@
 ---
-title: Mayı WCF Hizmetleri ve sertifika kimlik doğrulaması
+title: 'Risk azaltma: WCF Hizmetleri ve sertifika kimlik doğrulaması'
 ms.date: 03/30/2017
 ms.assetid: ef19c91a-b9df-4bf0-a28e-eb1e99c4bc95
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0fcb4de714c8a0f1f2c61f3a12815a5a0a3ddc83
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: cc8afaf0592a26f7bab15ab94b04ba4a9bfac930
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70789814"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73126126"
 ---
-# <a name="mitigation-wcf-services-and-certificate-authentication"></a>Mayı WCF Hizmetleri ve sertifika kimlik doğrulaması
+# <a name="mitigation-wcf-services-and-certificate-authentication"></a>Risk azaltma: WCF Hizmetleri ve sertifika kimlik doğrulaması
 
 4,6 .NET Framework, WCF SSL protokolü varsayılan listesine TLS 1,1 ve TLS 1,2 ekler. Hem istemci hem de sunucu makinelerinin .NET Framework 4,6 veya üzeri bir sürümü yüklüyse, anlaşma için TLS 1,2 kullanılır.
 
 ## <a name="impact"></a>Etki
 
-TLS 1,2, MD5 sertifikası kimlik doğrulamasını desteklemez. Sonuç olarak, bir müşteri karma algoritma için MD5 kullanan bir SSL sertifikası kullanıyorsa, WCF istemcisi WCF hizmetine bağlanamaz. Daha fazla bilgi için bkz [. azaltma: WCF Hizmetleri ve sertifika kimlik](mitigation-wcf-services-and-certificate-authentication.md)doğrulaması.
+TLS 1,2, MD5 sertifikası kimlik doğrulamasını desteklemez. Sonuç olarak, bir müşteri karma algoritma için MD5 kullanan bir SSL sertifikası kullanıyorsa, WCF istemcisi WCF hizmetine bağlanamaz. Daha fazla bilgi için bkz. [azaltma: WCF Hizmetleri ve sertifika kimlik doğrulaması](mitigation-wcf-services-and-certificate-authentication.md).
 
 ## <a name="mitigation"></a>Azaltma
 
@@ -47,11 +45,11 @@ Bir WCF istemcisinin aşağıdakilerden birini yaparak bir WCF sunucusuna bağla
                   </binding>
               </netTcpBinding>
           </bindings>
-      </system.ServiceModel>
+      </system.serviceModel>
   </configuration>
   ```
 
-- Bağlama, kaynak kodunda dinamik olarak yapılandırılırsa, <xref:System.ServiceModel.TcpTransportSecurity.SslProtocols%2A?displayProperty=nameWithType> özelliği, kaynak kodundaki TLS 1,1 (<xref:System.Security.Authentication.SslProtocols.Tls11?displayProperty=nameWithType>) veya protokolün önceki bir sürümünü kullanacak şekilde güncelleştirin.
+- Bağlama, kaynak kodunda dinamik olarak yapılandırılırsa, <xref:System.ServiceModel.TcpTransportSecurity.SslProtocols%2A?displayProperty=nameWithType> özelliğini, kaynak koddaki TLS 1,1 (<xref:System.Security.Authentication.SslProtocols.Tls11?displayProperty=nameWithType>) veya protokolün önceki bir sürümünü kullanacak şekilde güncelleştirin.
 
   > [!CAUTION]
   > Bu geçici çözüm önerilmez, çünkü MD5 karma algoritması olan bir sertifika güvenli değil olarak kabul edilir.

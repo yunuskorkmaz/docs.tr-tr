@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7235c225-cb6e-49e9-a95b-09a646579841
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b331c3da4b09798c22efa2acfbf711e1f701d990
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4fcef35bac71bab49e15eb85baed9c20b7ce5271
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61989122"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130416"
 ---
 # <a name="icordebugeditandcontinuesnapshotsetpebytes-method"></a>ICorDebugEditAndContinueSnapshot::SetPEBytes Yöntemi
-`SetPEBytes` artık kullanılmıyor. Bu yöntemi çağırmanız gerekmez.  
+`SetPEBytes` artık kullanılmıyor. Bu yöntemi çağırmayın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

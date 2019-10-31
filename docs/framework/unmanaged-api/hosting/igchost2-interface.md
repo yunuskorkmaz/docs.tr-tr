@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: e5323fa4-18ac-424d-859d-a65a550d08d9
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 21ce9cbd007858c0f39e12622eff819154ab83f0
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 43c16415c91521194e0d88be84dd176c3fdadad1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69928611"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134844"
 ---
 # <a name="igchost2-interface"></a>IGCHost2 Arabirimi
 Çöp toplama sistemi hakkında bilgi edinmek ve çöp toplamanın bazı yönlerini denetlemek için yöntemler sağlar.  
@@ -33,14 +31,14 @@ ms.locfileid: "69928611"
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[SetGCStartupLimitsEx Yöntemi](../../../../docs/framework/unmanaged-api/hosting/igchost2-setgcstartuplimitsex-method.md)|Oluşturma 0 ' nın segment boyutunu ve en büyük boyutunu ayarlar. 1 `DWORD`. nesil ve kesim boyutlarını daha büyük olarak sunar.|  
+|[SetGCStartupLimitsEx Yöntemi](../../../../docs/framework/unmanaged-api/hosting/igchost2-setgcstartuplimitsex-method.md)|Oluşturma 0 ' nın segment boyutunu ve en büyük boyutunu ayarlar. Nesil 0 ve kesim boyutlarını `DWORD`daha büyük bir şekilde sunar.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi** GCHost. IDL, GCHost. h  
+ **Üst bilgi:** GCHost. IDL, GCHost. h  
   
- **Kitaplığı** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
   
  **.NET Framework sürümleri:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   

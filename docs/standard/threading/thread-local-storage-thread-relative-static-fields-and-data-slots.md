@@ -8,54 +8,52 @@ helpviewer_keywords:
 - local thread storage
 - TLS
 ms.assetid: c633a4dc-a790-4ed1-96b5-f72bd968b284
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7beb22c68450d7ae4aeb6d0bcae45fafdfe78191
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: b5a7c4b78f8599f64aa11f1c98c033866e582933
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490910"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127518"
 ---
 # <a name="thread-local-storage-thread-relative-static-fields-and-data-slots"></a>İş Parçacığında Yerel Depolama: İş Parçacığı Göreli Statik Alanları ve Veri Yuvaları
-Bir iş parçacığı ve uygulama etki alanı için benzersiz olan yönetilen iş parçacığı yerel depolaması (TLS) verileri depolamak için kullanabilirsiniz. .NET Framework yönetilen TLS kullanmak için iki yol sunar: iş parçacığı göreli statik alanları ve veri yuvaları.  
+İş parçacığı ve uygulama etki alanına özgü verileri depolamak için yönetilen iş parçacığı yerel depolaması (TLS) kullanabilirsiniz. .NET Framework yönetilen TLS kullanmak için iki yol sunar: iş parçacığı göreli statik alanları ve veri yuvaları.  
   
-- İş parçacığı göreli statik alanları kullanın (iş parçacığı göreli `Shared` alanları Visual Basic'te) derleme zamanında tam olarak karşılayacak düşünüyorsanız. İş parçacığı göreli statik alanları, en iyi performansı sağlar. Bunlar ayrıca, derleme zamanı tür denetimi avantajlarını sağlar.  
+- Derleme zamanında tam ihtiyaçlarınızı önleyebiliyorsanız, iş parçacığı göreli statik alanları (Visual Basic iş parçacığı göreli `Shared` alanları) kullanın. İş parçacığı göreli statik alanları en iyi performansı sağlar. Ayrıca, derleme zamanı tür denetimi 'nin avantajlarını da sunar.  
   
-- Yalnızca çalışma zamanında gerçek gereksinimlerinizi fark veri yuvaları kullanın. Veri yuvaları daha yavaş ve daha iş parçacığı göreli statik alanları kullanmak garip ve veri türü olarak depolanan <xref:System.Object>, kullanmadan önce doğru türe dönüştürmeniz gerekir.  
+- Gerçek gereksinimleriniz yalnızca çalışma zamanında keşfedildiğinde veri yuvalarını kullanın. Veri yuvaları, iş parçacığı göreli statik alanlarından daha yavaş ve daha fazla kullanım açısından daha yavaştır ve veriler <xref:System.Object>türünde saklanır, bu nedenle kullanmadan önce doğru türe atamalısınız.  
   
- Yönetilmeyen C++'da, kullandığınız `TlsAlloc` yuvaları dinamik olarak ayırabilir ve `__declspec(thread)` iş parçacığı göreli depolama ayrılması gereken bir değişken bildirmek için. İş parçacığı göreli statik alanları ve veri yuvaları bu davranışı yönetilen bir sürümünü sağlayın.  
+ Yönetilmeyen C++olarak, yuvaları dinamik olarak ayırmak için `TlsAlloc` kullanır ve bir değişkenin iş parçacığı bağlantılı depolamada ayrılması gerektiğini bildirmek için `__declspec(thread)`. İş parçacığı göreli statik alanları ve veri yuvaları, bu davranışın yönetilen sürümünü sağlar.  
   
- .NET Framework 4'te kullanabileceğiniz <xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType> nesne ilk kez kullanıldığında, gevşek başlatılır iş parçacığı-yerel nesneleri oluşturmak için sınıf. Daha fazla bilgi için [yavaş başlatma](../../../docs/framework/performance/lazy-initialization.md).  
+ .NET Framework 4 ' te, nesne ilk tüketildiği zaman geç başlatılan iş parçacığı yerel nesneleri oluşturmak için <xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType> sınıfını kullanabilirsiniz. Daha fazla bilgi için bkz. [yavaş başlatma](../../../docs/framework/performance/lazy-initialization.md).  
   
-## <a name="uniqueness-of-data-in-managed-tls"></a>Yönetilen TLS veri benzersizliği  
- İş parçacığı göreli statik alanları veya veri yuvaları kullanmanıza bakılmaksızın, iş parçacığı ve uygulama etki alanı birleşimi için yönetilen TLS verilerinde benzersizdir.  
+## <a name="uniqueness-of-data-in-managed-tls"></a>Yönetilen TLS 'deki verilerin benzersizliği  
+ İş parçacığı göreli statik alanları veya veri yuvaları kullanmanıza bakılmaksızın, yönetilen TLS 'deki veriler, iş parçacığı ve uygulama etki alanı birleşimine özgüdür.  
   
-- Her iki iş parçacığının aynı alanı veya yuvası kullandığınızda da bir uygulama etki alanı içinde başka bir iş parçacığından verileri tek bir iş parçacığı değiştiremezsiniz.  
+- Bir uygulama etki alanı içinde, her iki iş parçacığı aynı alanı veya yuvayı kullandıklarında bile, bir iş parçacığı başka bir iş parçacığından verileri değiştiremez.  
   
-- Bir iş parçacığı aynı alanı veya yuvası birden çok uygulama etki alanından eriştiğinde, ayrı bir değer her uygulama etki alanında tutulur.  
+- Bir iş parçacığı birden çok uygulama etki alanından aynı alana veya yuvaya eriştiğinde, her uygulama etki alanında ayrı bir değer tutulur.  
   
- Örneğin, bir iş parçacığı ayarlar iş parçacığı göreli statik alanının değeri başka bir uygulama etki alanına girdiğinden ve alanın değerini alır., ikinci uygulama etki alanında alınan değeri ilk uygulama etki alanı değeri farklılık gösterir. İkinci uygulama etki alanında alan için yeni bir değer ayarlamak alanın değeri ilk uygulama etki alanındaki etkilemez.  
+ Örneğin, bir iş parçacığı iş parçacığı göreli statik alanının değerini ayarlarsa, başka bir uygulama etki alanı girer ve sonra alanın değerini alıyorsa ikinci uygulama etki alanında alınan değer ilk uygulama etki alanındaki değerden farklıdır. İkinci uygulama etki alanındaki alan için yeni bir değer ayarlandığında, ilk uygulama etki alanındaki alanın değeri etkilenmez.  
   
- Benzer şekilde, bir iş parçacığı iki farklı uygulama etki alanları aynı adlandırılmış veri yuvaya aldığında, verileri ilk uygulama etki alanında ikinci uygulama etki alanındaki verilerin bağımsız kalır.  
+ Benzer şekilde, bir iş parçacığı iki farklı uygulama etki alanında aynı adlandırılmış veri yuvasını aldığında, ilk uygulama etki alanındaki veriler ikinci uygulama etki alanındaki verilerden bağımsız kalır.  
   
 ## <a name="thread-relative-static-fields"></a>İş parçacığı göreli statik alanları  
- Bir veri parçasını her zaman bir iş parçacığı ve uygulama etki alanı birleşimi benzersiz olduğunu biliyorsanız, uygulama <xref:System.ThreadStaticAttribute> statik alanına öznitelik. Herhangi bir statik alan kullandığınız gibi alanını kullanın. Bu alandaki veri, bunu kullanan her bir iş parçacığı için benzersizdir.  
+ Bir veri parçasının her zaman bir iş parçacığı ve uygulama-etki alanı birleşimine benzersiz olduğunu biliyorsanız, <xref:System.ThreadStaticAttribute> özniteliğini statik alana uygulayın. Diğer herhangi bir statik alanı kullandığınız için alanı kullanın. Alanındaki veriler, onu kullanan her iş parçacığı için benzersizdir.  
   
- İş parçacığı göreli statik alanları veri yuvaları daha iyi performans sağlar ve derleme zamanı tür denetimi faydası vardır.  
+ İş parçacığı göreli statik alanları, veri yuvalardan daha iyi performans sağlar ve derleme zamanı tür denetimi avantajına sahiptir.  
   
- Herhangi bir sınıf oluşturucu kodu alan erişen ilk bağlamında ilk iş parçacığında çalışacağını unutmayın. İçin tüm diğer iş parçacıkları veya bağlamları aynı uygulama etki alanında, alanları başlatılacak `null` (`Nothing` Visual Basic'te) başvuru türleridir veya varsayılan değer türleri olmaları durumunda değerleri. Bu nedenle, iş parçacığı göreli statik alanları başlatmak için sınıf oluşturucuları güvenmemelisiniz. Bunun yerine, iş parçacığı göreli statik alanları başlatma önlemek ve bunlar için başlatılır varsayar `null` (`Nothing`) veya varsayılan değerlerine.  
+ Tüm sınıf Oluşturucu kodunun alana erişen ilk bağlamdaki ilk iş parçacığında çalışacağını unutmayın. Aynı uygulama etki alanındaki diğer tüm iş parçacıklarında veya bağlamlarda, bu alanlar başvuru türlerseler `null` (Visual Basic`Nothing`) veya değer türlerseler varsayılan değerleri olarak başlatılır. Bu nedenle, iş parçacığı göreli statik alanlarını başlatmak için sınıf oluşturucularına güvenmemelisiniz. Bunun yerine, iş parçacığı göreli statik alanları başlatmaktan kaçının ve bunların `null` (`Nothing`) veya varsayılan değerlerine başlatıldığını varsayın.  
   
 ## <a name="data-slots"></a>Veri yuvaları  
- .NET Framework, bir iş parçacığı ve uygulama etki alanı birleşimi için benzersiz olan dinamik veri yuvaları sağlar. İki tür veri yuvaları: yuvaları ve adlandırılmamış yuvaları adlı. Her ikisi de kullanılarak uygulanır <xref:System.LocalDataStoreSlot> yapısı.  
+ .NET Framework, iş parçacığı ve uygulama-etki alanı birleşimine özgü dinamik veri yuvaları sağlar. İki tür veri yuvası vardır: adlandırılmış yuvalar ve adlandırılmamış yuvalar. Her ikisi de <xref:System.LocalDataStoreSlot> yapısı kullanılarak uygulanır.  
   
-- Bir adlandırılmış veri yuvası oluşturmak için kullanın <xref:System.Threading.Thread.AllocateNamedDataSlot%2A?displayProperty=nameWithType> veya <xref:System.Threading.Thread.GetNamedDataSlot%2A?displayProperty=nameWithType> yöntemi. Mevcut bir yuva adlı bir başvuru almak için adının geçirmek <xref:System.Threading.Thread.GetNamedDataSlot%2A> yöntemi.  
+- Adlandırılmış bir veri yuvası oluşturmak için <xref:System.Threading.Thread.AllocateNamedDataSlot%2A?displayProperty=nameWithType> veya <xref:System.Threading.Thread.GetNamedDataSlot%2A?displayProperty=nameWithType> yöntemini kullanın. Var olan bir adlandırılmış yuvaya başvuru almak için adını <xref:System.Threading.Thread.GetNamedDataSlot%2A> metoduna geçirin.  
   
-- Adlandırılmamış yuvası oluşturmak için kullanın <xref:System.Threading.Thread.AllocateDataSlot%2A?displayProperty=nameWithType> yöntemi.  
+- Adlandırılmamış bir veri yuvası oluşturmak için <xref:System.Threading.Thread.AllocateDataSlot%2A?displayProperty=nameWithType> yöntemi kullanın.  
   
- Hem adlandırılmış hem de adlandırılmamış yuvaları, kullanın <xref:System.Threading.Thread.SetData%2A?displayProperty=nameWithType> ve <xref:System.Threading.Thread.GetData%2A?displayProperty=nameWithType> yuvasındaki bilgilerini almak ve ayarlamak için yöntemleri. Bunlar her zaman bunları şu anda yürütülmekte olan iş parçacığı için veriler üzerinde işlem statik yöntemlerdir.  
+ Hem adlandırılmış hem de adlandırılmamış yuvalarda, yuvadaki bilgileri ayarlamak ve almak için <xref:System.Threading.Thread.SetData%2A?displayProperty=nameWithType> ve <xref:System.Threading.Thread.GetData%2A?displayProperty=nameWithType> yöntemlerini kullanın. Bunlar, şu anda yürütülmekte olan iş parçacığı için verileri her zaman işleyen statik yöntemlerdir.  
   
- Adını geçirerek gerektiğinde yuvası almak için adlandırılmış yuvaları uygun, olabilir <xref:System.Threading.Thread.GetNamedDataSlot%2A> yerine bir başvuru adlandırılmamış bir yuvaya yöntemi. Ancak, başka bir bileşen kendi iş parçacığı göreli depolama için aynı adı kullanıyorsa ve bir iş parçacığı hem kodunuz hem de başka bir bileşen kodu yürütür, iki bileşeni birbirlerinin veri bozulmasına neden olabilir. (Bu senaryoda, her iki bileşenin aynı uygulama etki alanında çalıştığından ve bunlar aynı verilere paylaşmayı tasarlanmamıştır varsayılmaktadır.)  
+ Adlandırılmış yuvalar kullanışlı olabilir, çünkü bir adsız yuvaya bir başvuru tutmak yerine, adını <xref:System.Threading.Thread.GetNamedDataSlot%2A> yöntemine geçirerek bir yuva elde edebilirsiniz. Ancak, başka bir bileşen iş parçacığı göreli depolaması için aynı adı kullanıyorsa ve bir iş parçacığı hem bileşeninizden hem de diğer bileşenden kod çalıştırırsa, iki bileşen birbirlerinin verilerinin bozulmasına neden olabilirler. (Bu senaryo her iki bileşenin aynı uygulama etki alanında çalıştığını ve aynı verilerin paylaşılması için tasarlanmadığı varsayılır.)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

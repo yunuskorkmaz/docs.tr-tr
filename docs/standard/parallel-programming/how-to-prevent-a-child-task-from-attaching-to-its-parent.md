@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Alt Görevin Üst Göreve Eklenmesini Önleme'
+title: 'Nasıl Yapılır: Alt Görevin Üst Göreve Eklenmesini Önleme'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,25 +8,23 @@ dev_langs:
 helpviewer_keywords:
 - tasks, preventing attachments
 ms.assetid: c0fb85d4-9e80-4905-9f65-29acc54201c4
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 55b9c6c7175d8c7c33d8bfa03330c8e4b8816531
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 265b6d06f17a1dfbee3f009feff1ee1645e62a46
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592018"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139254"
 ---
-# <a name="how-to-prevent-a-child-task-from-attaching-to-its-parent"></a>Nasıl yapılır: Alt Görevin Üst Göreve Eklenmesini Önleme
-Bu belge, bir alt görevin üst göreve eklenmesini önleme gösterilmiştir. Bir üçüncü taraf tarafından yazılan ve görevleri de kullanan bir bileşen çağırdığınızda, bir alt görevin üst göreve eklenmesini önleme yararlıdır. Örneğin, kullanan bir üçüncü parti bileşeniniz <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent?displayProperty=nameWithType> oluşturma seçeneği bir <xref:System.Threading.Tasks.Task> veya <xref:System.Threading.Tasks.Task%601> nesne sorunlara neden olabilir, kodunuzda uzun süreli veya işlenmeyen bir özel durum oluşturur.  
+# <a name="how-to-prevent-a-child-task-from-attaching-to-its-parent"></a>Nasıl Yapılır: Alt Görevin Üst Göreve Eklenmesini Önleme
+Bu belgede, bir alt görevin üst göreve iliştirilmesi nasıl önleneceği gösterilmektedir. Bir alt görevin kendi üst öğesine iliştirmesini önlemek, üçüncü taraf tarafından yazılan ve ayrıca görevleri kullanan bir bileşeni çağırdığınızda yararlıdır. Örneğin, bir <xref:System.Threading.Tasks.Task> veya <xref:System.Threading.Tasks.Task%601> nesnesi oluşturmak için <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent?displayProperty=nameWithType> seçeneğini kullanan bir üçüncü taraf bileşeni, uzun süre çalışan veya işlenmemiş bir özel durum oluşturursa kodunuzda sorunlara neden olabilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, bir alt görevin üst göreve eklenmesini önleme etkileri için varsayılan seçenekleri kullanarak etkilerini karşılaştırır. Örnek bir <xref:System.Threading.Tasks.Task> de kullanan bir üçüncü taraf kitaplığına çağıran bir nesne bir <xref:System.Threading.Tasks.Task> nesne. Üçüncü taraf kitaplığı kullandığını <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent> oluşturma seçeneği <xref:System.Threading.Tasks.Task> nesne. Uygulamanın kullandığı <xref:System.Threading.Tasks.TaskCreationOptions.DenyChildAttach?displayProperty=nameWithType> üst görev oluşturma seçeneği. Bu seçeneği kaldırmak için çalışma zamanı bildirir <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent> alt görevlerdeki belirtimi.  
+ Aşağıdaki örnek, varsayılan seçenekleri kullanmanın etkilerini, alt görevin üst öğeye iliştirmesini engellemeye yönelik etkileri ile karşılaştırır. Örnek, bir <xref:System.Threading.Tasks.Task> nesnesi kullanan bir üçüncü taraf kitaplığına çağıran bir <xref:System.Threading.Tasks.Task> nesnesi oluşturur. Üçüncü taraf kitaplığı, <xref:System.Threading.Tasks.Task> nesnesini oluşturmak için <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent> seçeneğini kullanır. Uygulama, üst görevi oluşturmak için <xref:System.Threading.Tasks.TaskCreationOptions.DenyChildAttach?displayProperty=nameWithType> seçeneğini kullanır. Bu seçenek çalışma zamanına, alt görevlerdeki <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent> belirtimini kaldırmasını söyler.  
   
  [!code-csharp[TPL_DenyChildAttach#1](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_denychildattach/cs/denychildattach.cs#1)]
  [!code-vb[TPL_DenyChildAttach#1](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_denychildattach/vb/denychildattach.vb#1)]  
   
- Tüm alt görevler tamamlanıncaya kadar bir üst görev sonlanmaz, uzun süre çalışan alt görev genel uygulamanın sonlanmayacağından neden olabilir. Uygulama, üst görev oluşturmak için varsayılan seçenekleri kullandığında bu örnekte, alt görev üst görev tamamlanmadan önce tamamlanmalıdır. Uygulama kullandığında <xref:System.Threading.Tasks.TaskCreationOptions.DenyChildAttach?displayProperty=nameWithType> seçeneği, alt üst öğeye bağlı değil. Bu nedenle, uygulamanın ek iş üst görev tamamlandıktan sonra ve son alt görevin tamamlanmasını beklemelisiniz önce gerçekleştirebilirsiniz.  
+ Bir üst görev tüm alt görevler tamamlanana kadar bitmediğinden, uzun süreli bir alt görev genel uygulamanın kötü bir şekilde çalışmasına neden olabilir. Bu örnekte, uygulama ana görevi oluşturmak için varsayılan seçenekleri kullandığında, üst görev tamamlanmadan önce alt görevin son olması gerekir. Uygulama <xref:System.Threading.Tasks.TaskCreationOptions.DenyChildAttach?displayProperty=nameWithType> seçeneğini kullandığında, alt öğe üst öğeye eklenmez. Bu nedenle, uygulama, üst görev bittikten sonra ve alt görevin bitmesini beklemek zorunda olduktan sonra ek iş gerçekleştirebilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

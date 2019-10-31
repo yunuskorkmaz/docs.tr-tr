@@ -9,25 +9,23 @@ helpviewer_keywords:
 - parallel foreach loop, how to cancel
 - parallel for loops, how to cancel
 ms.assetid: 9d19b591-ea95-4418-8ea7-b6266af9905b
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7cdb6e059fb1c7001bbe4da60e2936b1ad40cc1d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 67f1f91f235cc88deaa97d412f368819ae0a8cda
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61638898"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134240"
 ---
 # <a name="how-to-cancel-a-parallelfor-or-foreach-loop"></a>Nasıl yapılır: Bir Parallel.For veya ForEach Döngüsünü İptal Etme
-<xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> Ve <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> yöntemleri iptal belirteçlerini kullanımıyla iptal etmeyi destekler. Genel olarak, iptal etme hakkında daha fazla bilgi için bkz [iptal](../../../docs/standard/threading/cancellation-in-managed-threads.md). Paralel bir döngüde sağladığınız <xref:System.Threading.CancellationToken> yöntemine <xref:System.Threading.Tasks.ParallelOptions> parametresi ve ardından paralel çağrıyı bir try-catch bloğu içinde alın.  
+<xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> ve <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> yöntemleri, iptal belirteçleri kullanılarak iptali destekler. Genel olarak iptal hakkında daha fazla bilgi için bkz. [iptal](../../../docs/standard/threading/cancellation-in-managed-threads.md). Paralel bir döngüde, <xref:System.Threading.Tasks.ParallelOptions> parametresindeki yöntemine <xref:System.Threading.CancellationToken> sağlarsınız ve sonra bir try-catch bloğunda paralel çağrıyı içine almalısınız.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek bir çağrı iptal etme gösterir <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType>. Aynı yaklaşımı uygulayabileceğiniz bir <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> çağırın.  
+ Aşağıdaki örnek <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType>çağrısının nasıl iptal edildiğini gösterir. <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> çağrısına aynı yaklaşımı uygulayabilirsiniz.  
   
  [!code-csharp[TPL_Parallel#29](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_parallel/cs/parallel_cancel.cs#29)]
  [!code-vb[TPL_Parallel#29](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_parallel/vb/cancelloop.vb#29)]  
   
- Sinyalleri iptal belirteci aynı ise belirteç, belirtilen <xref:System.Threading.Tasks.ParallelOptions> paralel bir döngüden tek bir durum oluşturur sonra örnek <xref:System.OperationCanceledException> iptal seçeneğiyle ilgili. Diğer bir belirteç iptali neden olursa, döngü oluşturur bir <xref:System.AggregateException> ile bir <xref:System.OperationCanceledException> olarak bir InnerException.  
+ İptali işaret eden belirteç <xref:System.Threading.Tasks.ParallelOptions> örneğinde belirtilen belirteçtir, paralel döngü iptal durumunda tek bir <xref:System.OperationCanceledException> oluşturur. Başka bir belirteç iptaline neden olursa, döngü bir InnerException olarak <xref:System.OperationCanceledException> bir <xref:System.AggregateException> oluşturur.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

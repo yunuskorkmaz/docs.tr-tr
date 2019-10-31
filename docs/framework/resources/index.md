@@ -11,17 +11,15 @@ helpviewer_keywords:
 - packaging application resources
 - localizing resources
 ms.assetid: 8ad495d4-2941-40cf-bf64-e82e85825890
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 64f3f2bb54bd454ef037da2f7e10dd9067bf2217
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: ede34231bd7fb3ffbd735a06fd4eec4a56657a9f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71045606"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129948"
 ---
 # <a name="resources-in-net-apps"></a>.NET uygulamalarında kaynaklar
-Üretim kalitesindeki neredeyse tüm uygulamaların kaynakları kullanması gerekir. Bir kaynak, mantıksal olarak bir uygulamayla dağıtılan yürütülemez herhangi bir veridir. Bir kaynak, bir uygulamada hata iletileri veya kullanıcı arabiriminin bir parçası olarak görüntülenebilir. Kaynaklar, dizeler, görüntüler ve kalıcı nesneler dahil olmak üzere çeşitli formlarda veri içerebilir. (Kalıcı nesneleri bir kaynak dosyasına yazmak için, nesnelerin seri hale getirilebilir olması gerekir.) Verilerinizi bir kaynak dosyasında depolamak bütün uygulamanızı yeniden derlemeden bu verileri değiştirmenize olanak tanır. Ayrıca verileri tek bir konumda depolamanızı sağlar ve çoklu konumlarda depolanan sabit kodlanmış verilerin kullanılması gereğini ortadan kaldırır.  
+Üretim kalitesindeki neredeyse tüm uygulamaların kaynakları kullanması gerekir. Bir kaynak, mantıksal olarak bir uygulamayla dağıtılan yürütülemez herhangi bir veridir. Bir kaynak, bir uygulamada hata iletileri veya kullanıcı arabiriminin bir parçası olarak görüntülenebilir. Kaynaklar, dizeler, görüntüler ve kalıcı nesneler dahil olmak üzere çeşitli formlarda veri içerebilir. (Kalıcı nesneleri bir kaynak dosyasına yazmak için nesnelerin seri hale getirilebilir olması gerekir.) Verilerinizin bir kaynak dosyasında depolanması, tüm uygulamanızı yeniden derlemeden verileri değiştirmenize olanak sağlar. Ayrıca verileri tek bir konumda depolamanızı sağlar ve çoklu konumlarda depolanan sabit kodlanmış verilerin kullanılması gereğini ortadan kaldırır.  
   
  .NET Framework ve .NET Core, kaynakların oluşturulması ve yerelleştirilmesi için kapsamlı destek sağlar. Ayrıca, .NET, yerelleştirilmiş kaynakları paketleme ve dağıtmaya yönelik basit bir modeli destekler.  
   
@@ -51,7 +49,7 @@ Aynı zamanda uygulamalarınızın kaynaklarını belirli kültürler için yere
   
  Geçerli UI kültürünün nasıl ayarlandığı hakkında daha fazla bilgi için <xref:System.Globalization.CultureInfo> ve <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType> başvuru sayfalarına bakın.  
   
- Ardından, <xref:System.Resources.ResourceManager?displayProperty=nameWithType> sınıfını kullanarak geçerli UI kültürünün veya belirli bir kültürün kaynaklarını alabilirsiniz. Sınıfı, kaynakları <xref:System.Resources?displayProperty=nameWithType> almak için en yaygın olarak kullanılan ad alanı, kaynakları almak için kullanabileceğiniz ek türler içerir. <xref:System.Resources.ResourceManager> Bu güncelleştirmeler şunlardır:  
+ Ardından, <xref:System.Resources.ResourceManager?displayProperty=nameWithType> sınıfını kullanarak geçerli UI kültürünün veya belirli bir kültürün kaynaklarını alabilirsiniz. <xref:System.Resources.ResourceManager> sınıfı, kaynakları almak için en yaygın olarak kullanıldığından, <xref:System.Resources?displayProperty=nameWithType> ad alanı kaynakları almak için kullanabileceğiniz ek türler içerir. Bu güncelleştirmeler şunlardır:  
   
 - Bir derlemede gömülü olan veya bir tek başına ikili .resources dosyasında depolanan kaynakları numaralandırmanızı sağlayan <xref:System.Resources.ResourceReader> sınıfı. Çalışma zamanında kullanılabilir olan kaynakların tam adını bilmediğinizde bu yararlı olur.  
   

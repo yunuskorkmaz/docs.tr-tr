@@ -8,18 +8,16 @@ dev_langs:
 helpviewer_keywords:
 - threads, cancellation
 ms.assetid: d2d6d5fd-e263-4fa0-847b-2fc3e0d82337
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: bd32deb9c8719a12b76aaea8ec91a17471cf18f9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1d1433ecf39974bf9e68fe07b9d0818ac16fb544
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61794933"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138123"
 ---
 # <a name="canceling-threads-cooperatively"></a>İş parçacıklarını işbirliği ile iptal etme
 
-Önce .NET Framework 4 ve .NET Framework, başlatıldıktan sonra bir iş parçacığı işbirliği içerisinde devamlılığı iptal etmek için yerleşik bir yolu yoktur sağlanır. Ancak, .NET Framework 4 ile başlayarak, kullanabileceğiniz bir <xref:System.Threading.CancellationToken?displayProperty=nameWithType> yalnızca bunları iptal etmek için kullanabileceğiniz gibi iş parçacıkları, iptal etmek için <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> nesneleri veya PLINQ sorguları. Ancak <xref:System.Threading.Thread?displayProperty=nameWithType> sınıfı iptal belirteçleri için yerleşik destek sunmaz, bir iş parçacığı yordamı için bir belirteç kullanarak geçirebilirsiniz <xref:System.Threading.Thread> alan oluşturucu bir <xref:System.Threading.ParameterizedThreadStart> temsilci. Aşağıdaki örnek bunun nasıl yapılacağını göstermektedir.  
+.NET Framework 4 ' ten önce, .NET Framework başlatıldıktan sonra bir iş parçacığını iptal etmek için yerleşik bir yöntem sağlanmadı. Ancak, .NET Framework 4 ' ü kullanmaya başlayarak, nesneleri <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> nesneleri veya PLıNQ sorgularını iptal etmek için kullanabileceğiniz gibi, iş parçacıklarını iptal etmek için bir <xref:System.Threading.CancellationToken?displayProperty=nameWithType> kullanabilirsiniz. <xref:System.Threading.Thread?displayProperty=nameWithType> sınıfı, iptal belirteçleri için yerleşik destek sunmaz, ancak bir <xref:System.Threading.ParameterizedThreadStart> temsilcisi alan <xref:System.Threading.Thread> oluşturucusunu kullanarak bir iş parçacığı yordamına belirteç geçirebilirsiniz. Aşağıdaki örnek bunun nasıl yapılacağını göstermektedir.  
   
  [!code-csharp[Cancellation#14](../../../samples/snippets/csharp/VS_Snippets_Misc/cancellation/cs/CooperativeThreads.cs#14)]
  [!code-vb[Cancellation#14](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cancellation/vb/CooperativeThreads.vb#14)]  

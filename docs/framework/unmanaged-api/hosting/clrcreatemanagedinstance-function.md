@@ -18,19 +18,17 @@ helpviewer_keywords:
 ms.assetid: 58ba42c0-4857-43bf-a039-73a4dc6544c2
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e1ae530b8488dcd375e91058a227316dd38cf4ab
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4e672030ae83b57da6f9ab66630513d79f28b8f1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779163"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131995"
 ---
 # <a name="clrcreatemanagedinstance-function"></a>ClrCreateManagedInstance İşlevi
-Belirli bir yönetilen türün bir örneğini oluşturur.  
+Belirtilen yönetilen türün bir örneğini oluşturur.  
   
- Bu işlev .NET Framework 4'te kullanım dışıdır. COM Etkinleştirme yönetilen türün bir örneğini oluşturmak için kullanabilir veya barındırma (bkz [CLR barındırma arabirimleri eklenmiş .NET Framework 4 ve 4.5](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces-added-in-the-net-framework-4-and-4-5.md)).  
+ Bu işlev .NET Framework 4 ' te kullanım dışıdır. Yönetilen türün bir örneğini oluşturmak için COM etkinleştirmesini kullanın veya barındırma kullanın (bkz. [.NET Framework 4 ve 4,5 ' de eklenen clr barındırma arabirimleri](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces-added-in-the-net-framework-4-and-4-5.md)).  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -44,25 +42,25 @@ STDAPI ClrCreateManagedInstance (
   
 ## <a name="parameters"></a>Parametreler  
  `pTypeName`  
- [in] İstenen örnek türünün adını bir işaretçi.  
+ 'ndaki İstenen örnek türünün adına yönelik bir işaretçi.  
   
  `riid`  
- [in] `IID` İstenen örnek türü.  
+ 'ndaki İstenen örnek türünün `IID`.  
   
  `ppObject`  
- [out] Çağıran tarafından istenen yönetilen türü örneğine bir işaretçi işaretçisi.  
+ dışı Çağıran tarafından istenen yönetilen tür örneğine yönelik işaretçiye yönelik bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Ortak dil çalışma zamanı zaten işlem içine yüklenmiş. Örneğin, bir çağrı kullanılarak yüklenebilir [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) önce işlev `ClrCreateManagedInstance` işlevi çağrılır. Çalışma zamanı yüklü değilse `ClrCreateManagedInstance` ilk v1.0.3705 çalışma zamanı yüklemeye çalışır. Bu başarısız olursa, çalışma zamanının en son sürümünü yüklemeyi dener.  
+ Ortak dil çalışma zamanının zaten bir işleme yüklenmiş olması gerekir. Örneğin, `ClrCreateManagedInstance` işlevi çağrılmadan önce [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) işlevine yapılan bir çağrı kullanılarak yüklenebilir. Çalışma zamanı yüklü değilse, önce `ClrCreateManagedInstance` çalışma zamanının v 1.0.3705 sürümünü yüklemeye çalışır. Başarısız olursa, çalışma zamanının en son sürümünü yüklemeye çalışır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** MSCorEE.h  
+ **Üst bilgi:** MSCorEE. h  
   
- **Kitaplığı:** MSCorEE.dll  
+ **Kitaplık:** MSCorEE. dll  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

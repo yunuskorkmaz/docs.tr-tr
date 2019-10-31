@@ -14,14 +14,12 @@ helpviewer_keywords:
 - CloneEnumWbemClassObject function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1605314f94fd82d2a2cd7be105dde9e273f607bc
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 9d2442161aaa83693a33f9efc230c09b8c4426e2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798704"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128729"
 ---
 # <a name="cloneenumwbemclassobject-function"></a>CloneEnumWbemClassObject işlevi
 Bir Numaralandırıcının mantıksal bir kopyasını oluşturur ve geçerli konumunu bir numaralandırıcıda korur.
@@ -62,7 +60,7 @@ dışı Kopyalanacak [ıenumwbemclassobject](/windows/desktop/api/wbemcli/nn-wbe
 `strPassword`\
 'ndaki Parola. Daha fazla bilgi için bkz. [Connectserverwmi](connectserverwmi.md) işlevi.
 
-`strAuthority`\ [in] kullanıcının etki alanı adı. Daha fazla bilgi için bkz. [Connectserverwmi](connectserverwmi.md) işlevi.
+`strAuthority`\ [in] kullanıcının etki alanı adıdır. Daha fazla bilgi için bkz. [Connectserverwmi](connectserverwmi.md) işlevi.
 
 ## <a name="return-value"></a>Dönüş değeri
 
@@ -89,9 +87,9 @@ Bu yöntem yalnızca bir "en iyi çaba" kopyası oluşturur. Birçok CıM nesnes
 Bir örnek için, bkz. [ıenumwbemclassobject:: Clone](/windows/desktop/api/wbemcli/nf-wbemcli-ienumwbemclassobject-clone) yöntemi.
 
 ## <a name="requirements"></a>Gereksinimler
- **Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).
 
- **Üst bilgi** WMINet_Utils. IDL
+ **Üst bilgi:** WMINet_Utils. IDL
 
  **.NET Framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 

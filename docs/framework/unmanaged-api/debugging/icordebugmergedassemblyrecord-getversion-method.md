@@ -2,14 +2,12 @@
 title: 'Icordebugmergedassemblyrecord:: GetVersion yöntemi'
 ms.date: 03/30/2017
 ms.assetid: c6858b06-ae26-4312-b325-ea6025016675
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7d9133ab1b7d3985d3a383bb36dcbea315548c00
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0c89d0749281da412bbf71400d51bee1ed651fbe
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69939923"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129764"
 ---
 # <a name="icordebugmergedassemblyrecordgetversion-method"></a>Icordebugmergedassemblyrecord:: GetVersion yöntemi
 Derlemenin sürüm bilgilerini alır.  
@@ -39,17 +37,17 @@ HRESULT GetVersion(
  dışı Düzeltme numarasına yönelik bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Derleme sürüm numaraları hakkında bilgi için bkz <xref:System.Version> . sınıf konusu.  
+ Derleme sürüm numaraları hakkında daha fazla bilgi için <xref:System.Version> sınıfı konusuna bakın.  
   
 > [!NOTE]
 > Bu yöntem yalnızca .NET Native kullanılabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi** CorDebug. IDL, CorDebug. h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı** Corguid. lib  
+ **Kitaplık:** Corguid. lib  
   
  **.NET Framework sürümleri:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

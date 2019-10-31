@@ -6,14 +6,12 @@ helpviewer_keywords:
 - .NET Framework application compatibility
 - .NET Framework changes
 ms.assetid: c4ba3ff2-fe59-4c5d-9e0b-86bba3cd865c
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f547180995ec155f9121eeace109e7dfb07c7827
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: cf0d556dd5df773958e24ff1efcefbc3d8a8d3a9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70790118"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73126328"
 ---
 # <a name="application-compatibility-in-the-net-framework"></a>.NET Framework'te Uygulama Uyumluluğu
 
@@ -24,11 +22,11 @@ Her uygulama, tarafından belirtilebilen .NET Framework belirli bir sürümünü
 
 - Visual Studio 'da hedef çerçeve tanımlama.
 - Hedef Framework bir proje dosyasında belirtiliyor.
-- <xref:System.Runtime.Versioning.TargetFrameworkAttribute> Kaynak koda uygulama.
+- Kaynak koda bir <xref:System.Runtime.Versioning.TargetFrameworkAttribute> uygulama.
 
 Hedeflenenden daha yeni bir sürümde çalışırken, .NET Framework, eski hedeflenen sürümü taklit etmek için olağandışı davranışı kullanır. Diğer bir deyişle, uygulama Framework 'ün daha yeni bir sürümünde çalışır, ancak eski sürümde çalışıyor gibi davranır. .NET Framework sürümleri arasındaki uyumluluk sorunlarının birçoğu, bu olağandışı model aracılığıyla azaltıldığında. Uygulamanın hedeflediği .NET Framework sürümü, kodun üzerinde çalıştığı uygulama etki alanı için giriş derlemesinin hedef sürümüne göre belirlenir. Bu uygulama etki alanı hedefine yüklenen ve .NET Framework sürümü olan tüm ek derlemeler. Örneğin, yürütülebilir dosya olması durumunda, çalıştırılabilir hedef çerçeve, uygulama etki alanındaki tüm derlemeler altında çalışır.
 
-## <a name="runtime-changes"></a>{1&gt;Çalışma zamanı değişiklikleri&lt;1}
+## <a name="runtime-changes"></a>Çalışma zamanı değişiklikleri
 
 Çalışma zamanı sorunları, bir makineye yeni bir çalışma zamanı yerleştirildiğinde ve aynı ikililerin çalıştırılmasından, ancak farklı davranışların görüldüğünde ortaya çıkan olanlardır. .NET Framework 4,0 için bir ikili derlenmişse, 4,5 veya sonraki sürümlerde .NET Framework 4,0 uyumluluk modunda çalıştırılır. 4,5 ' i etkileyen birçok değişikliğin birçoğu, 4,0 için derlenen ikiliyi etkilemez. Bu, AppDomain 'e özeldir ve giriş derlemesinin ayarlarına bağlıdır.
 

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: e235ea80-b84c-4442-a4c3-fc96c25a8eb9
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e3b17ca32051cd5fc0673ef26124b855a66f9785
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 429ce0510162b3256cdf58f4820b04dd80243e29
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779985"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139639"
 ---
 # <a name="icorruntimehostcreateevidence-method"></a>ICorRuntimeHost::CreateEvidence Yöntemi
-Türü bir arabirim işaretçisi alır <xref:System.Security.Principal.IIdentity?displayProperty=nameWithType>, geçirilecek güvenlik kanıt oluşturmak için ana sağlayan [CreateDomain](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomain-method.md) veya [CreateDomainEx](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomainex-method.md) yöntemi.  
+<xref:System.Security.Principal.IIdentity?displayProperty=nameWithType>türünde bir arabirim işaretçisi alır, bu da konağın [CreateDomain](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomain-method.md) veya [CreateDomainEx](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomainex-method.md) metoduna geçirilecek güvenlik kanıtı oluşturmasına olanak tanır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,28 +35,28 @@ HRESULT CreateEvidence (
   
 ## <a name="parameters"></a>Parametreler  
  `pEvidence`  
- [out] Bir arabirim işaretçisi için bir <xref:System.Security.Principal.IIdentity?displayProperty=nameWithType> güvenlik kanıt oluşturmak için kullanılan bir örnek. Bu işaretçinin türü belirtilmiş `IUnknown`, Arayanların genellikle çağırmalıdır `QueryInterface` bir işaretçi alma için bu arabirimdeki bir <xref:System.Security.Principal.IIdentity?displayProperty=nameWithType>.  
+ dışı Güvenlik kanıtı oluşturmak için kullanılan bir <xref:System.Security.Principal.IIdentity?displayProperty=nameWithType> örneğine yönelik arabirim işaretçisi. Bu işaretçi `IUnknown`yazılır, bu nedenle arayanlar bir <xref:System.Security.Principal.IIdentity?displayProperty=nameWithType>işaretçi almak için genellikle bu arabirimdeki `QueryInterface` çağırmalıdır.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
 |S_OK|İşlem başarılı oldu.|  
-|S_FALSE|İşlemi tamamlayamadı.|  
-|E_FAIL|Bilinmeyen, geri dönülemez bir hata oluştu. Ortak dil çalışma zamanı (CLR), artık bir yöntem E_FAIL döndürürse, işlemde kullanılamaz. Herhangi bir barındırma API'si yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.|  
-|HOST_E_CLRNOTAVAILABLE|CLR'yi bir işleme yüklü değil veya CLR içinde yönetilen kod çalıştıramaz veya çağrı başarılı şekilde işleme bir durumda.|  
+|S_FALSE|İşlem tamamlanamadı.|  
+|E_FAıL|Bilinmeyen, çok zararlı bir hata oluştu. Bir yöntem E_FAıL döndürürse, ortak dil çalışma zamanı (CLR) işlemde artık kullanılamaz. Herhangi bir barındırma API 'si için sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.|  
+|HOST_E_CLRNOTAVAILABLE|CLR bir işleme yüklenmemiş veya CLR yönetilen kodu çalıştıramadığından veya çağrıyı başarıyla işleyemediği bir durumda.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem, yerel koddan doldurulamaz boş bir koleksiyon döndürür. Kullanmanız gereken <xref:System.Security.Policy.Evidence> yöntemi yerine.  
+ Bu yöntem, yerel koddan doldurulamadı boş bir koleksiyon döndürür. Bunun yerine <xref:System.Security.Policy.Evidence> yöntemini kullanmanız gerekir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** MSCorEE.h  
+ **Üst bilgi:** MSCorEE. h  
   
- **Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil  
+ **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET framework sürümü:** 1.0, 1.1  
+ **.NET Framework sürümü:** 1,0, 1,1  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

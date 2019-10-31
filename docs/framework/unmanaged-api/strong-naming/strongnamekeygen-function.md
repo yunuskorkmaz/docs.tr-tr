@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 883e413a-ad2f-4f7f-b1b9-aeb8fe5b65f8
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f062f47790136e8cd39c6751b7c75eef660c2b9a
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 79b2235e3645c89c2cd9ebcce079d5eb7efdd162
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70799142"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128745"
 ---
 # <a name="strongnamekeygen-function"></a>StrongNameKeyGen İşlevi
 Tanımlayıcı ad kullanımı için yeni bir ortak/özel anahtar çifti oluşturur.  
@@ -41,12 +39,12 @@ BOOLEAN StrongNameKeyGen (
   
 ## <a name="parameters"></a>Parametreler  
  `wszKeyContainer`  
- 'ndaki İstenen anahtar kapsayıcısı adı. `wszKeyContainer`geçici bir ad oluşturmak için boş olmayan bir dize veya null olmalıdır.  
+ 'ndaki İstenen anahtar kapsayıcısı adı. `wszKeyContainer`, boş olmayan bir dize veya geçici bir ad oluşturmak için null olmalıdır.  
   
  `dwFlags`  
  'ndaki Anahtarın kaydedilip edilmeyeceğini belirtir. Aşağıdaki değerler desteklenir:  
   
-- 0x00000000-geçici anahtar `wszKeyContainer` kapsayıcısı adı oluşturmak için null olduğunda kullanılır.  
+- 0x00000000-`wszKeyContainer` bir geçici anahtar kapsayıcısı adı oluşturmak için null olduğunda kullanılır.  
   
 - 0x00000001 (`SN_LEAVE_KEY`)-anahtarın kayıtlı olması gerektiğini belirtir.  
   
@@ -54,22 +52,22 @@ BOOLEAN StrongNameKeyGen (
  dışı Döndürülen ortak/özel anahtar çifti.  
   
  `pcbKeyBlob`  
- dışı Bayt cinsinden boyutu `ppbKeyBlob`.  
+ dışı `ppbKeyBlob`bayt cinsinden boyutu.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- `true`başarıyla tamamlandığında; Aksi takdirde `false`,.  
+ başarılı tamamlamada `true`; Aksi takdirde, `false`.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `StrongNameKeyGen` İşlevi 1024 bitlik bir anahtar oluşturur. Anahtar alındıktan sonra, ayrılan belleği serbest bırakmak için [StrongNameFreeBuffer](strongnamefreebuffer-function.md) işlevini çağırmanız gerekir.  
+ `StrongNameKeyGen` işlevi 1024 bitlik bir anahtar oluşturur. Anahtar alındıktan sonra, ayrılan belleği serbest bırakmak için [StrongNameFreeBuffer](strongnamefreebuffer-function.md) işlevini çağırmanız gerekir.  
   
- İşlev başarıyla tamamlanmazsa, en son oluşturulan hatayı almak için [StrongNameErrorInfo işlevini çağırın.](strongnameerrorinfo-function.md) `StrongNameKeyGen`  
+ `StrongNameKeyGen` işlevi başarıyla tamamlanmazsa, en son oluşturulan hatayı almak için [StrongNameErrorInfo](strongnameerrorinfo-function.md) işlevini çağırın.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üst bilgi** StrongName. h  
+ **Üst bilgi:** StrongName. h  
   
- **Kitaplığı** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
   
  **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

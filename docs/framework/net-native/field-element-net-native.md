@@ -1,17 +1,15 @@
 ---
-title: <Field>Öğesi (.NET Native)
+title: <Field> öğesi (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: 6a14125f-1a8d-41a1-8a32-659ca0ad12de
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6dfb6a07f9733ab1a01a1ce9917c6a4bb4ce793b
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 2a63b88c399a999cd00750dee1614352cea10e80
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049772"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128413"
 ---
-# <a name="field-element-net-native"></a>\<Alan > öğesi (.NET Native)
+# <a name="field-element-net-native"></a>\<alan > öğesi (.NET Native)
 Çalışma zamanı yansıtma ilkesini bir alana uygular.  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -39,13 +37,13 @@ ms.locfileid: "71049772"
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|*method_name*|Alan adı. Alanın türü, üst [ \<tür >](type-element-net-native.md) veya [ \<typeörneklemesi >](typeinstantiation-element-net-native.md) öğesi tarafından tanımlanır.|  
+|*method_name*|Alan adı. Alanın türü, üst [\<türü >](type-element-net-native.md) veya [\<typeörneklemesi >](typeinstantiation-element-net-native.md) öğesi tarafından tanımlanır.|  
   
 ## <a name="all-other-attributes"></a>Diğer tüm öznitelikler  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|*policy_setting*|Alanı için bu ilke türüne uygulanacak ayar. Olası değerler şunlardır `Auto` `Excluded` `Required`, ,ve.`Included` Daha fazla bilgi için bkz. [çalışma zamanı yönergesi Ilke ayarları](runtime-directive-policy-settings.md).|  
+|*policy_setting*|Alanı için bu ilke türüne uygulanacak ayar. Olası değerler şunlardır `Auto`, `Excluded`, `Included`ve `Required`. Daha fazla bilgi için bkz. [çalışma zamanı yönergesi Ilke ayarları](runtime-directive-policy-settings.md).|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -54,7 +52,7 @@ ms.locfileid: "71049772"
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<Tür >](type-element-net-native.md)|Yansıma ilkesini bir türe ve tüm üyelerine uygular.|  
+|[\<türü >](type-element-net-native.md)|Yansıma ilkesini bir türe ve tüm üyelerine uygular.|  
 |[\<Typeörneklemesi >](typeinstantiation-element-net-native.md)|Oluşturulan genel türe ve tüm üyelerine yansıma ilkesi uygular.|  
   
 ## <a name="remarks"></a>Açıklamalar  

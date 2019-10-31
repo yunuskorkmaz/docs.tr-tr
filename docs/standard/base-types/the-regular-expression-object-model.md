@@ -35,218 +35,216 @@ helpviewer_keywords:
 - pattern-matching with regular expressions, classes
 - GroupCollection class
 ms.assetid: 49a21470-64ca-4b5a-a889-8e24e3c0af7e
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ea31dc154d5df2b0058af4c04035d096d5e850c3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e637b2527ce0f7e1b48b713549cb87b2c13881db
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664670"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124809"
 ---
 # <a name="the-regular-expression-object-model"></a>Normal İfade Nesnesi Modeli
-<a name="introduction"></a> Bu konuda, .NET normal ifadeleriyle çalışan kullanılan nesne modelini açıklar. Aşağıdaki bölümleri içerir:  
+<a name="introduction"></a>Bu konuda, .NET normal ifadelerle çalışırken kullanılan nesne modeli açıklanmaktadır. Aşağıdaki bölümleri içerir:  
   
-- [Normal ifade altyapısı](#Engine)  
+- [Normal Ifade altyapısı](#Engine)  
   
-- [MatchCollection ve nesneleri eşleştir](#Match_and_MCollection)  
+- [MatchCollection ve Match nesneleri](#Match_and_MCollection)  
   
 - [Grup koleksiyonu](#GroupCollection)  
   
-- [Yakalanan grubu](#the_captured_group)  
+- [Yakalanan grup](#the_captured_group)  
   
-- [Yakalama toplama](#CaptureCollection)  
+- [Yakalama koleksiyonu](#CaptureCollection)  
   
-- [Tek tek yakalama](#the_individual_capture)  
+- [Tek yakalama](#the_individual_capture)  
   
 <a name="Engine"></a>   
-## <a name="the-regular-expression-engine"></a>Normal ifade altyapısı  
- .NET içinde normal ifade motoru tarafından temsil edilen <xref:System.Text.RegularExpressions.Regex> sınıfı. Normal ifade altyapısı, ayrıştırma ve normal bir ifadeyi derlemek ve bir Giriş dizesinin normal ifade deseniyle eşleşen işlemleri gerçekleştirmek için sorumludur. .NET normal ifade nesnesi modeli merkezi bileşeni altyapısıdır.  
+## <a name="the-regular-expression-engine"></a>Normal Ifade altyapısı  
+ .NET 'teki normal ifade altyapısı <xref:System.Text.RegularExpressions.Regex> sınıfı tarafından temsil edilir. Normal ifade altyapısı, bir normal ifadeyi ayrıştırma ve derleme ve bir giriş dizesiyle normal ifade düzeniyle eşleşen işlemler gerçekleştirme işlemlerinden sorumludur. Motor, .NET normal ifade nesne modelindeki merkezi bileşendir.  
   
- Normal ifade altyapısı iki yoldan birini kullanabilirsiniz:  
+ Normal ifade altyapısını iki şekilde kullanabilirsiniz:  
   
-- Statik yöntemleri çağırarak <xref:System.Text.RegularExpressions.Regex> sınıfı. Yöntem parametreleri, giriş dizesi ve normal ifade deseni içerir. Normal ifade altyapısı, statik yöntem çağrılarında aynı normal ifadeyi kullanan statik normal ifade yöntemleri yinelenen çağrıları oldukça iyi bir performans sunmak için kullanılan normal ifadeler önbelleğe alır.  
+- <xref:System.Text.RegularExpressions.Regex> sınıfının statik yöntemlerini çağırarak. Yöntem parametreleri, giriş dizesini ve normal ifade düzenlerini içerir. Normal ifade altyapısı, statik yöntem çağrılarında kullanılan normal ifadeleri önbelleğe alır; bu nedenle, aynı normal ifadeyi kullanan statik normal ifade yöntemlerine yinelenen çağrılar görece iyi performans sunar.  
   
-- Örnekleme tarafından bir <xref:System.Text.RegularExpressions.Regex> sınıf yapıcısına bir normal ifade geçirerek nesnesi. Bu durumda, <xref:System.Text.RegularExpressions.Regex> nesne değişmez (salt okunur) ve tek bir normal ifade ile sıkı şekilde bağlı bir normal ifade motorunu temsil eder. Normal ifadeler tarafından kullanıldığından <xref:System.Text.RegularExpressions.Regex> örnekleri önbelleğe alınmaz, değil örneğini oluşturmalıdır bir <xref:System.Text.RegularExpressions.Regex> birden çok kez aynı normal ifadeyi içeren nesne.  
+- Bir <xref:System.Text.RegularExpressions.Regex> nesnesini, sınıf oluşturucusuna normal bir ifade geçirerek örnekleyerek. Bu durumda <xref:System.Text.RegularExpressions.Regex> nesnesi sabittir (salt okunurdur) ve tek bir normal ifadeyle sıkı bir şekilde bağlanmış bir normal ifade altyapısını temsil eder. <xref:System.Text.RegularExpressions.Regex> örnekleri tarafından kullanılan normal ifadeler önbelleğe alınmadığı için, aynı normal ifadeyle bir <xref:System.Text.RegularExpressions.Regex> nesnesini birden çok kez örnekleyemezsiniz.  
   
- Yöntemlerini çağırabilirsiniz <xref:System.Text.RegularExpressions.Regex> sınıfı aşağıdaki işlemleri gerçekleştirmek için:  
+ Aşağıdaki işlemleri gerçekleştirmek için <xref:System.Text.RegularExpressions.Regex> sınıfının yöntemlerini çağırabilirsiniz:  
   
-- Bir dizeyi bir normal ifade deseni ile eşleşip eşleşmediğini belirler.  
+- Bir dizenin bir normal ifade düzeniyle eşleşip eşleşmediğini belirleme.  
   
-- Tek bir eşleştirme veya ilk eşleşme ayıklayın.  
+- Tek bir eşleşmeyi veya ilk eşleşmeyi ayıklayın.  
   
-- Tüm eşleşmeleri ayıklayın.  
+- Tüm eşleşmeleri ayıkla.  
   
-- Eşleşen bir alt dizenin yerini alır.  
+- Eşleşen bir alt dizeyi değiştirin.  
   
-- Tek bir dize, dize dizisi bölün.  
+- Tek bir dizeyi dizeler dizisine Böl.  
   
- Bu işlemleri aşağıdaki bölümlerde açıklanmıştır.  
+ Bu işlemler aşağıdaki bölümlerde açıklanmıştır.  
   
-### <a name="matching-a-regular-expression-pattern"></a>Bir normal ifade deseni eşleştirme  
- <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> Yöntemi döndürür `true` dize deseni eşleşiyorsa veya `false` Aksi takdirde. <xref:System.Text.RegularExpressions.Regex.IsMatch%2A> Yöntemi genellikle dize girişi doğrulamak için kullanılır. Örneğin, aşağıdaki kodu bir dize geçerli bir sosyal güvenlik numarası Amerika Birleşik Devletleri'nde bulunan eşleşmesini sağlar.  
+### <a name="matching-a-regular-expression-pattern"></a>Normal Ifade düzeniyle eşleştirme  
+ <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> yöntemi, dize düzeniyle eşleşiyorsa `true` döndürür veya `false` yoksa. <xref:System.Text.RegularExpressions.Regex.IsMatch%2A> yöntemi genellikle dize girişini doğrulamak için kullanılır. Örneğin, aşağıdaki kod bir dizenin Birleşik Devletler geçerli bir sosyal güvenlik numarasıyla eşleşmesini sağlar.  
   
  [!code-csharp[Conceptual.RegularExpressions.ObjectModel#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/cs/validate1.cs#1)]
  [!code-vb[Conceptual.RegularExpressions.ObjectModel#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/vb/validate1.vb#1)]  
   
- Normal ifade deseni `^\d{3}-\d{2}-\d{4}$` aşağıdaki tabloda gösterildiği gibi yorumlanır.  
+ Normal ifade deseninin `^\d{3}-\d{2}-\d{4}$`, aşağıdaki tabloda gösterildiği gibi yorumlanır.  
   
 |Desen|Açıklama|  
 |-------------|-----------------|  
-|`^`|Giriş dizesinin başında eşleştirin.|  
+|`^`|Giriş dizesinin başlangıcını eşleştirin.|  
 |`\d{3}`|Üç ondalık basamakla eşleş.|  
-|`-`|Bir tire eşleştirin.|  
+|`-`|Bir kısa çizgi eşleştirin.|  
 |`\d{2}`|İki ondalık basamağı eşleştirin.|  
-|`-`|Bir tire eşleştirin.|  
+|`-`|Bir kısa çizgi eşleştirin.|  
 |`\d{4}`|Dört ondalık basamağı eşleştirin.|  
 |`$`|Giriş dizesinin sonuyla eşleş.|  
   
-### <a name="extracting-a-single-match-or-the-first-match"></a>Tek bir eşleştirme veya ilk eşleşme ayıklanıyor  
- <xref:System.Text.RegularExpressions.Regex.Match%2A?displayProperty=nameWithType> Yöntemi döndürür bir <xref:System.Text.RegularExpressions.Match> bir normal ifade deseniyle eşleşen ilk alt dizeyi hakkında bilgi içeren nesne. Varsa `Match.Success` özelliği döndürür `true`, belirten bir eşleşme bulunamadı, çağırarak sonraki eşleşme hakkında bilgi alabilirsiniz <xref:System.Text.RegularExpressions.Match.NextMatch%2A?displayProperty=nameWithType> yöntemi. Bu yöntem çağrılarının kadar devam edebilirsiniz `Match.Success` özelliği döndürür `false`. Örneğin, aşağıdaki kullanan kod <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.String%29?displayProperty=nameWithType> yinelenen sözcüklerin ilk geçtiği bir dizeyi bulmak için yöntemi. Ardından <xref:System.Text.RegularExpressions.Match.NextMatch%2A?displayProperty=nameWithType> ek oluşumların bulmak için yöntemi. Örnek inceler `Match.Success` özelliği geçerli eşleşmenin başarılı olup olmadığını ve bir çağrı olup olmadığını belirlemek için her yöntem çağrısının sonra <xref:System.Text.RegularExpressions.Match.NextMatch%2A?displayProperty=nameWithType> yöntemi izlemelidir.  
+### <a name="extracting-a-single-match-or-the-first-match"></a>Tek bir eşleşme veya Ilk eşleşme ayıklanıyor  
+ <xref:System.Text.RegularExpressions.Regex.Match%2A?displayProperty=nameWithType> yöntemi, normal ifade düzeniyle eşleşen ilk alt dize hakkında bilgi içeren bir <xref:System.Text.RegularExpressions.Match> nesnesi döndürür. `Match.Success` özelliği, bir eşleşmenin bulunduğunu gösteren `true`döndürürse, <xref:System.Text.RegularExpressions.Match.NextMatch%2A?displayProperty=nameWithType> yöntemini çağırarak sonraki eşleşmeler hakkında bilgi alabilirsiniz. Bu yöntem çağrıları `Match.Success` özelliği `false`döndürdüğünden devam edebilir. Örneğin, aşağıdaki kod, bir dizedeki yinelenen bir sözcüğün ilk oluşumunu bulmak için <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.String%29?displayProperty=nameWithType> yöntemini kullanır. Daha sonra ek oluşumları bulmak için <xref:System.Text.RegularExpressions.Match.NextMatch%2A?displayProperty=nameWithType> yöntemini çağırır. Örnek, geçerli eşleşmenin başarılı olup olmadığını ve <xref:System.Text.RegularExpressions.Match.NextMatch%2A?displayProperty=nameWithType> yöntemine yönelik bir çağrının takip edilip edilmeyeceğini anlamak için her yöntem çağrısından sonra `Match.Success` özelliğini inceler.  
   
  [!code-csharp[Conceptual.RegularExpressions.ObjectModel#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/cs/match1.cs#2)]
  [!code-vb[Conceptual.RegularExpressions.ObjectModel#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/vb/match1.vb#2)]  
   
- Normal ifade deseni `\b(\w+)\W+(\1)\b` aşağıdaki tabloda gösterildiği gibi yorumlanır.  
+ Normal ifade deseninin `\b(\w+)\W+(\1)\b`, aşağıdaki tabloda gösterildiği gibi yorumlanır.  
   
 |Desen|Açıklama|  
 |-------------|-----------------|  
-|`\b`|Bir sözcük sınırında eşleşmeye başla.|  
+|`\b`|Eşleşmeyi bir sözcük sınırında başlatın.|  
 |`(\w+)`|Bir veya daha fazla sözcük karakteri eşleştir. Bu ilk yakalama grubudur.|  
-|`\W+`|Bir veya daha fazla sözcük olmayan karakterle eşleş.|  
-|`(\1)`|İlk yakalanan dize eşleşmesi. Bu ikinci yakalama grubudur.|  
-|`\b`|Eşleşme bir sözcük sınırında sonlandır.|  
+|`\W+`|Bir veya daha fazla sözcük olmayan karakteri eşleştirin.|  
+|`(\1)`|Yakalanan ilk dizeyle eşleştirin. Bu ikinci yakalama grubudur.|  
+|`\b`|Eşleşmeyi bir sözcük sınırında sonlandır.|  
   
-### <a name="extracting-all-matches"></a>Tüm eşleşmeleri ayıklanıyor  
- <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> Yöntemi döndürür bir <xref:System.Text.RegularExpressions.MatchCollection> normal ifade altyapısı giriş dizesinde bulunan tüm eşleşmeleri hakkında bilgi içeren nesne. Örneğin, önceki örnekte çağrılacak yazılması <xref:System.Text.RegularExpressions.Regex.Matches%2A> yöntemi yerine <xref:System.Text.RegularExpressions.Regex.Match%2A> ve <xref:System.Text.RegularExpressions.Match.NextMatch%2A> yöntemleri.  
+### <a name="extracting-all-matches"></a>Tüm eşleşmeler ayıklanıyor  
+ <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> yöntemi, normal ifade altyapısının giriş dizesinde bulduğu tüm eşleşmeler hakkında bilgi içeren bir <xref:System.Text.RegularExpressions.MatchCollection> nesnesi döndürür. Örneğin, önceki örnek, <xref:System.Text.RegularExpressions.Regex.Match%2A> ve <xref:System.Text.RegularExpressions.Match.NextMatch%2A> yöntemleri yerine <xref:System.Text.RegularExpressions.Regex.Matches%2A> yöntemi çağırmak için yeniden yazılabilir.  
   
  [!code-csharp[Conceptual.RegularExpressions.ObjectModel#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/cs/matches1.cs#3)]
  [!code-vb[Conceptual.RegularExpressions.ObjectModel#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/vb/matches1.vb#3)]  
   
-### <a name="replacing-a-matched-substring"></a>Eşleşen bir alt dizenin değiştirme  
- <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> Yöntemi belirtilen dizenin veya normal ifade deseni ile normal ifade deseniyle eşleşen ve değişiklik tüm giriş dizesiyle döndüren her alt dizenin yerini alır. Örneğin, aşağıdaki kod bir ABD para birimi simgesini bir ondalık sayı önce bir dize ekler.  
+### <a name="replacing-a-matched-substring"></a>Eşleşen bir alt dizeyi değiştirme  
+ <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> yöntemi, normal ifade düzeniyle eşleşen her alt dizenin belirtilen dize veya normal ifade düzeniyle yerini alır ve tüm giriş dizesini değiştirme ile döndürür. Örneğin, aşağıdaki kod bir dizedeki ondalık sayıdan önce bir ABD para birimi simgesi ekler.  
   
  [!code-csharp[Conceptual.RegularExpressions.ObjectModel#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/cs/replace1.cs#4)]
  [!code-vb[Conceptual.RegularExpressions.ObjectModel#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/vb/replace1.vb#4)]  
   
- Normal ifade deseni `\b\d+\.\d{2}\b` aşağıdaki tabloda gösterildiği gibi yorumlanır.  
+ Normal ifade deseninin `\b\d+\.\d{2}\b`, aşağıdaki tabloda gösterildiği gibi yorumlanır.  
   
 |Desen|Açıklama|  
 |-------------|-----------------|  
 |`\b`|Bir sözcük sınırında eşleşmeye başla.|  
 |`\d+`|Bir veya daha fazla ondalık basamağı eşleştirin.|  
-|`\.`|Bir noktayı eşleştirin.|  
+|`\.`|Bir noktayla eşleştirin.|  
 |`\d{2}`|İki ondalık basamağı eşleştirin.|  
 |`\b`|Eşlemeyi bir sözcük sınırında sonlandır.|  
   
- Değiştirme deseni `$$$&` aşağıdaki tabloda gösterildiği gibi yorumlanır.  
+ Değiştirme deseninin `$$$&`, aşağıdaki tabloda gösterildiği gibi yorumlanır.  
   
 |Desen|Değiştirme dizesi|  
 |-------------|------------------------|  
-|`$$`|Dolar işareti ($) karakterini.|  
+|`$$`|Dolar işareti ($) karakteri.|  
 |`$&`|Eşleşen alt dizenin tamamı.|  
   
-### <a name="splitting-a-single-string-into-an-array-of-strings"></a>Tek bir dize dize dizisi olarak bölme  
- <xref:System.Text.RegularExpressions.Regex.Split%2A?displayProperty=nameWithType> Yöntemi, Giriş dizesinin bir normal ifade eşleştirmesi tarafından tanımlanan konumlarda böler. Örneğin, aşağıdaki kod bir dize dizisine numaralanmış bir liste öğeleri yerleştirir.  
+### <a name="splitting-a-single-string-into-an-array-of-strings"></a>Tek bir dizeyi dizeler dizisine bölme  
+ <xref:System.Text.RegularExpressions.Regex.Split%2A?displayProperty=nameWithType> yöntemi, giriş dizesini normal ifade eşleşmesi tarafından tanımlanan konumlarda böler. Örneğin, aşağıdaki kod öğeleri numaralandırılmış bir liste içine dize dizisine koyar.  
   
  [!code-csharp[Conceptual.RegularExpressions.ObjectModel#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/cs/split1.cs#5)]
  [!code-vb[Conceptual.RegularExpressions.ObjectModel#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/vb/split1.vb#5)]  
   
- Normal ifade deseni `\b\d{1,2}\.\s` aşağıdaki tabloda gösterildiği gibi yorumlanır.  
+ Normal ifade deseninin `\b\d{1,2}\.\s`, aşağıdaki tabloda gösterildiği gibi yorumlanır.  
   
 |Desen|Açıklama|  
 |-------------|-----------------|  
 |`\b`|Bir sözcük sınırında eşleşmeye başla.|  
 |`\d{1,2}`|Bir veya iki ondalık basamağı eşleştirin.|  
-|`\.`|Bir noktayı eşleştirin.|  
+|`\.`|Bir noktayla eşleştirin.|  
 |`\s`|Bir boşluk karakteri ile eşleştirin.|  
   
 <a name="Match_and_MCollection"></a>   
-## <a name="the-matchcollection-and-match-objects"></a>MatchCollection ve nesneleri eşleştir  
- Normal ifade yöntemleri, normal ifade nesnesi modelinin bir parçası olan iki nesneleri döndürür: <xref:System.Text.RegularExpressions.MatchCollection> nesnesi ve <xref:System.Text.RegularExpressions.Match> nesne.  
+## <a name="the-matchcollection-and-match-objects"></a>MatchCollection ve Match nesneleri  
+ Regex yöntemleri, normal ifade nesne modelinin parçası olan iki nesne döndürür: <xref:System.Text.RegularExpressions.MatchCollection> nesnesi ve <xref:System.Text.RegularExpressions.Match> nesnesi.  
   
 <a name="the_match_collection"></a>   
-### <a name="the-match-collection"></a>Eşleşme topluluğu  
- <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> Yöntemi döndürür bir <xref:System.Text.RegularExpressions.MatchCollection> içeren nesne <xref:System.Text.RegularExpressions.Match> bulunan normal ifade motoru, giriş dizesinde gerçekleştikleri sırada tüm eşleşmeleri temsil eden nesneleri. Herhangi bir eşleşme varsa vardır, yöntem döndürür bir <xref:System.Text.RegularExpressions.MatchCollection> nesneyle üye yok. <xref:System.Text.RegularExpressions.MatchCollection.Item%2A?displayProperty=nameWithType> Size erişim koleksiyonun tek tek üyeleri dizine göre gelen özellik sağlar sıfır bir değerinden daha az <xref:System.Text.RegularExpressions.MatchCollection.Count%2A?displayProperty=nameWithType> özelliği. <xref:System.Text.RegularExpressions.MatchCollection.Item%2A> koleksiyonun dizin oluşturucu (C#) ve varsayılan özelliği (Visual Basic'te) var.  
+### <a name="the-match-collection"></a>Eşleştirme koleksiyonu  
+ <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> yöntemi, normal ifade altyapısının bulduğu tüm eşleşmeleri temsil eden <xref:System.Text.RegularExpressions.Match> nesnelerini giriş dizesinde gerçekleştikleri sırada içeren bir <xref:System.Text.RegularExpressions.MatchCollection> nesnesi döndürür. Eşleşme yoksa, yöntemi üyesi olmayan bir <xref:System.Text.RegularExpressions.MatchCollection> nesnesi döndürür. <xref:System.Text.RegularExpressions.MatchCollection.Item%2A?displayProperty=nameWithType> özelliği, koleksiyona göre koleksiyonun tek üyelerine, <xref:System.Text.RegularExpressions.MatchCollection.Count%2A?displayProperty=nameWithType> özelliğinin değerinden bir daha küçük bir değere erişmenizi sağlar. <xref:System.Text.RegularExpressions.MatchCollection.Item%2A> koleksiyonun Dizin Oluşturucusu (içinde C#) ve varsayılan özelliktir (Visual Basic).  
   
- Varsayılan olarak, çağrı <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> yöntemi doldurmak için geç değerlendirme kullanır <xref:System.Text.RegularExpressions.MatchCollection> nesne. Tam olarak doldurulan bir koleksiyonu gibi gereken özelliklerine erişimi <xref:System.Text.RegularExpressions.MatchCollection.Count%2A?displayProperty=nameWithType> ve <xref:System.Text.RegularExpressions.MatchCollection.Item%2A?displayProperty=nameWithType> özellikleri, bir performans cezası gerektirebilir. Sonuç olarak, koleksiyon kullanarak erişim öneririz <xref:System.Collections.IEnumerator> tarafından döndürülen nesne <xref:System.Text.RegularExpressions.MatchCollection.GetEnumerator%2A?displayProperty=nameWithType> yöntemi. Tek tek dillerin yapıları, aşağıdaki gibi sağlayın `For Each` Visual Basic'te ve `foreach` C# ' ta, sarmalama koleksiyonunun <xref:System.Collections.IEnumerator> arabirimi.  
+ Varsayılan olarak, <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> yöntemine yapılan çağrı, <xref:System.Text.RegularExpressions.MatchCollection> nesnesini doldurmak için yavaş değerlendirmeyi kullanır. <xref:System.Text.RegularExpressions.MatchCollection.Count%2A?displayProperty=nameWithType> ve <xref:System.Text.RegularExpressions.MatchCollection.Item%2A?displayProperty=nameWithType> özellikleri gibi tamamen doldurulmuş bir koleksiyon gerektiren özelliklere erişim, bir performans cezası içerebilir. Sonuç olarak, <xref:System.Text.RegularExpressions.MatchCollection.GetEnumerator%2A?displayProperty=nameWithType> yöntemi tarafından döndürülen <xref:System.Collections.IEnumerator> nesnesini kullanarak koleksiyona erişmenizi öneririz. Tek diller, Visual Basic ve içindeki C#`foreach` `For Each` gibi yapıları sağlar, bu da koleksiyonun <xref:System.Collections.IEnumerator> arabirimini sarmalıdır.  
   
- Aşağıdaki örnekte <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%29?displayProperty=nameWithType> doldurmak için yöntemi bir <xref:System.Text.RegularExpressions.MatchCollection> bir Giriş dizesinin içinde bulunan tüm eşleşmeler nesne. Örnek koleksiyonu sıralar, eşleşen bir dize dizisine kopyalar ve bir tamsayı dizisinde karakter konumlarının kaydeder.  
+ Aşağıdaki örnek, bir <xref:System.Text.RegularExpressions.MatchCollection> nesnesini bir giriş dizesinde bulunan tüm eşleştirmelerle doldurmak için <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%29?displayProperty=nameWithType> yöntemini kullanır. Örnek, koleksiyonu numaralandırır, eşleşmeleri bir dize dizisine kopyalar ve karakter konumlarını bir tamsayı dizisine kaydeder.  
   
  [!code-csharp[Conceptual.RegularExpressions.ObjectModel#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/cs/matchcollection1.cs#6)]
  [!code-vb[Conceptual.RegularExpressions.ObjectModel#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/vb/matchcollection1.vb#6)]  
   
 <a name="the_match"></a>   
 ### <a name="the-match"></a>Eşleşme  
- <xref:System.Text.RegularExpressions.Match> Sınıfı, bir tek normal ifade eşleştirmesi sonucunu temsil eder. Erişebildiğiniz <xref:System.Text.RegularExpressions.Match> iki yolla nesneler:  
+ <xref:System.Text.RegularExpressions.Match> sınıfı, tek bir normal ifade eşleşmesinden elde edilen sonucu temsil eder. <xref:System.Text.RegularExpressions.Match> nesnelerine iki şekilde erişebilirsiniz:  
   
-- Bunları alarak <xref:System.Text.RegularExpressions.MatchCollection> tarafından döndürülen nesne <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> yöntemi. Tek tek almak için <xref:System.Text.RegularExpressions.Match> nesnelerini yinelemek koleksiyonu kullanarak bir `foreach` (C# ' de) veya `For Each`... `Next` (Visual Basic'te) oluşturun veya kullanın <xref:System.Text.RegularExpressions.MatchCollection.Item%2A?displayProperty=nameWithType> belirli bir almak için özellik <xref:System.Text.RegularExpressions.Match> nesne dizini veya adı. Ayrıca tek tek alabilirsiniz <xref:System.Text.RegularExpressions.Match> nesnelerini koleksiyondan gelen dizine göre koleksiyon yineleme tarafından sıfır için daha az, koleksiyondaki nesne sayısı. Eriştiğinden, ancak bu yöntem geç değerlendirme avantajlarından almaz <xref:System.Text.RegularExpressions.MatchCollection.Count%2A?displayProperty=nameWithType> özelliği.  
+- Bunları <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> yöntemi tarafından döndürülen <xref:System.Text.RegularExpressions.MatchCollection> nesnesinden alarak. Tek tek <xref:System.Text.RegularExpressions.Match> nesneleri almak için, koleksiyonu bir `foreach` (içinde C#) veya `For Each`...`Next` (Visual Basic) yapısında yineleyin ya da <xref:System.Text.RegularExpressions.MatchCollection.Item%2A?displayProperty=nameWithType> özelliğini kullanarak belirli bir <xref:System.Text.RegularExpressions.Match> nesnesini dizine veya ada göre alın. Koleksiyonu dizine göre, koleksiyondaki nesne sayısının birinden daha az bir olacak şekilde yineleerek koleksiyondan tek tek <xref:System.Text.RegularExpressions.Match> nesneleri de alabilirsiniz. Ancak, bu yöntem, <xref:System.Text.RegularExpressions.MatchCollection.Count%2A?displayProperty=nameWithType> özelliğine eriştiği için yavaş değerlendirmeden faydalanır.  
   
-     Aşağıdaki örnek, tek tek alır. <xref:System.Text.RegularExpressions.Match> nesnelerin bir <xref:System.Text.RegularExpressions.MatchCollection> koleksiyonunu kullanarak yineleme nesne `foreach` veya `For Each`... `Next` oluşturun. Normal ifade yalnızca giriş dizesindeki "abc" dizesini eşleştirir.  
+     Aşağıdaki örnek, `foreach` veya `For Each`...`Next` yapısını kullanarak koleksiyonu yineleerek bir <xref:System.Text.RegularExpressions.MatchCollection> nesnesinden bağımsız <xref:System.Text.RegularExpressions.Match> nesnelerini alır. Normal ifade yalnızca giriş dizesindeki "abc" dizesiyle eşleşir.  
   
      [!code-csharp[Conceptual.RegularExpressions.ObjectModel#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/cs/match2.cs#7)]
      [!code-vb[Conceptual.RegularExpressions.ObjectModel#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/vb/match2.vb#7)]  
   
-- Çağırarak <xref:System.Text.RegularExpressions.Regex.Match%2A?displayProperty=nameWithType> döndüren yöntemi bir <xref:System.Text.RegularExpressions.Match> bir dize veya bir dizenin bir kısmını ilk eşleşmeyi temsil eden nesne. Değerini alarak eşleşme bulundu olup olmadığını belirlemek `Match.Success` özelliği. Alınacak <xref:System.Text.RegularExpressions.Match> sonraki eşleşmeleri temsil eden nesneleri çağrı <xref:System.Text.RegularExpressions.Match.NextMatch%2A?displayProperty=nameWithType> yöntemi kadar sürekli olarak, `Success` özelliği döndürülen <xref:System.Text.RegularExpressions.Match> nesnedir `false`.  
+- Bir dizedeki ilk eşleşmeyi temsil eden bir <xref:System.Text.RegularExpressions.Match> nesnesi döndüren <xref:System.Text.RegularExpressions.Regex.Match%2A?displayProperty=nameWithType> yöntemini çağırarak veya dizenin bir kısmı. `Match.Success` özelliğinin değerini alarak eşleşmenin bulunup bulunmadığını belirleyebilirsiniz. Sonraki eşleşmeleri temsil eden <xref:System.Text.RegularExpressions.Match> nesneleri almak için, döndürülen <xref:System.Text.RegularExpressions.Match> nesnesinin `Success` özelliği `false`kadar <xref:System.Text.RegularExpressions.Match.NextMatch%2A?displayProperty=nameWithType> yöntemini tekrar tekrar çağırın.  
   
-     Aşağıdaki örnekte <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.String%29?displayProperty=nameWithType> ve <xref:System.Text.RegularExpressions.Match.NextMatch%2A?displayProperty=nameWithType> ' % s'dizesi "abc" giriş dizesinde eşleştirilecek yöntemleri.  
+     Aşağıdaki örnek, giriş dizesindeki "abc" dizesiyle eşleşen <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.String%29?displayProperty=nameWithType> ve <xref:System.Text.RegularExpressions.Match.NextMatch%2A?displayProperty=nameWithType> yöntemlerini kullanır.  
   
      [!code-csharp[Conceptual.RegularExpressions.ObjectModel#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/cs/match3.cs#8)]
      [!code-vb[Conceptual.RegularExpressions.ObjectModel#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/vb/match3.vb#8)]  
   
- İki özelliklerini <xref:System.Text.RegularExpressions.Match> dönüş koleksiyon nesnelerini sınıfı:  
+ <xref:System.Text.RegularExpressions.Match> sınıfının iki özelliği koleksiyon nesneleri döndürüyor:  
   
-- <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> Özelliği döndürür bir <xref:System.Text.RegularExpressions.GroupCollection> yakalama eşleşen alt dizeler hakkında bilgi içeren nesne grupları normal ifade deseni.  
+- <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> özelliği, normal ifade deseninin yakalama gruplarıyla eşleşen alt dizeler hakkında bilgi içeren bir <xref:System.Text.RegularExpressions.GroupCollection> nesnesi döndürür.  
   
-- `Match.Captures` Özelliği döndürür bir <xref:System.Text.RegularExpressions.CaptureCollection> sınırlı kullanımı olan nesne. Koleksiyon için doldurulmamış bir <xref:System.Text.RegularExpressions.Match> nesnesi `Success` özelliği `false`. Aksi takdirde, tek bir içerdiği <xref:System.Text.RegularExpressions.Capture> aynı bilgileri nesnesi <xref:System.Text.RegularExpressions.Match> nesne.  
+- `Match.Captures` özelliği, sınırlı kullanım <xref:System.Text.RegularExpressions.CaptureCollection> bir nesne döndürür. Koleksiyon, `Success` özelliği `false`olan bir <xref:System.Text.RegularExpressions.Match> nesnesi için doldurulmadı. Aksi halde, <xref:System.Text.RegularExpressions.Match> nesnesiyle aynı bilgilere sahip tek bir <xref:System.Text.RegularExpressions.Capture> nesnesi içerir.  
   
- Bu nesneler hakkında daha fazla bilgi için bkz: [Grup koleksiyon](#GroupCollection) ve [yakalama toplama](#CaptureCollection) daha sonra bu konudaki bölümler.  
+ Bu nesneler hakkında daha fazla bilgi için bu konunun ilerleyen kısımlarında [grup koleksiyonu](#GroupCollection) ve [yakalama koleksiyonu](#CaptureCollection) bölümlerine bakın.  
   
- İki ek özelliklerini <xref:System.Text.RegularExpressions.Match> sınıfı eşleşme hakkında bilgi sağlar. `Match.Value` Özelliği, normal ifade deseni ile eşleşen girdi dizesindeki alt dizeyi döndürür. `Match.Index` Özelliği, giriş dizesinde eşleşen dizeyi sıfır tabanlı başlangıç konumunu döndürür.  
+ <xref:System.Text.RegularExpressions.Match> sınıfının iki ek özelliği eşleşme hakkında bilgi sağlar. `Match.Value` özelliği, giriş dizesindeki normal ifade düzeniyle eşleşen alt dizeyi döndürür. `Match.Index` özelliği, giriş dizesindeki eşleşen dizenin sıfır tabanlı başlangıç konumunu döndürür.  
   
- <xref:System.Text.RegularExpressions.Match> Sınıfı ayrıca iki deseni eşleştirme yöntemlerine sahiptir:  
+ <xref:System.Text.RegularExpressions.Match> sınıfında Ayrıca iki kalıp eşleme yöntemi vardır:  
   
-- <xref:System.Text.RegularExpressions.Match.NextMatch%2A?displayProperty=nameWithType> Yöntemi geçerli tarafından temsil edilen eşleşmenin sonrasına eşleşme bulur <xref:System.Text.RegularExpressions.Match> nesne ve döndürür bir <xref:System.Text.RegularExpressions.Match> eşleşen temsil eden nesne.  
+- <xref:System.Text.RegularExpressions.Match.NextMatch%2A?displayProperty=nameWithType> yöntemi, geçerli <xref:System.Text.RegularExpressions.Match> nesnesi tarafından temsil edilen eşleşmesinden sonra eşleşmeyi bulur ve bu eşleşmeyi temsil eden bir <xref:System.Text.RegularExpressions.Match> nesnesi döndürür.  
   
-- <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> Yöntemi, eşleştirilen dizeyi bir belirtilen değiştirme işlemi gerçekleştirir ve sonucu döndürür.  
+- <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> yöntemi, eşleşen dize üzerinde belirtilen bir değiştirme işlemi gerçekleştirir ve sonucu döndürür.  
   
- Aşağıdaki örnekte <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> yöntemi $ simgesi ve iki kesirli basamaklar içeren tüm sayıları öncesinde bir boşluk önüne ekleyin.  
+ Aşağıdaki örnek, iki kesirli basamak içeren her sayıdan önce bir $ symbol ve bir boşluk eklemek için <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> yöntemini kullanır.  
   
  [!code-csharp[Conceptual.RegularExpressions.ObjectModel#9](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/cs/result1.cs#9)]
  [!code-vb[Conceptual.RegularExpressions.ObjectModel#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/vb/result1.vb#9)]  
   
- Normal ifade deseni `\b\d+(,\d{3})*\.\d{2}\b` aşağıdaki tabloda gösterildiği gibi tanımlanmaktadır.  
+ `\b\d+(,\d{3})*\.\d{2}\b` normal ifade deseninin aşağıdaki tabloda gösterildiği gibi tanımlanmıştır.  
   
 |Desen|Açıklama|  
 |-------------|-----------------|  
 |`\b`|Bir sözcük sınırında eşleşmeye başla.|  
 |`\d+`|Bir veya daha fazla ondalık basamağı eşleştirin.|  
-|`(,\d{3})*`|Üç ondalık basamak gelen bir virgül sıfır veya daha fazla oluşumunu eşleyin.|  
-|`\.`|Ondalık nokta karakteri Eşleştir.|  
+|`(,\d{3})*`|Bir virgülden sonra gelen sıfır veya daha fazla tekrarı ve ardından üç ondalık basamak eşleştirin.|  
+|`\.`|Ondalık nokta karakteriyle eşleştirin.|  
 |`\d{2}`|İki ondalık basamağı eşleştirin.|  
 |`\b`|Eşlemeyi bir sözcük sınırında sonlandır.|  
   
- Değiştirme deseni `$$ $&` eşleşen alt dizenin bir dolar işareti ($) simgesi değiştirilmesi gerektiğini belirtir ( `$$` deseni), boşluk ve eşleşme değerini ( `$&` deseni).  
+ Değiştirme deseninin `$$ $&`, eşleşen alt dizenin bir dolar işareti ($) simgesiyle (`$$` düzeniyle), bir boşluk ve eşleşmenin (`$&` deseninin) değeri ile değiştirilmesi gerektiğini gösterir.  
   
  [Başa dön](#introduction)  
   
 <a name="GroupCollection"></a>   
 ## <a name="the-group-collection"></a>Grup koleksiyonu  
- <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> Özelliği döndürür bir <xref:System.Text.RegularExpressions.GroupCollection> içeren nesne <xref:System.Text.RegularExpressions.Group> yakalanan tek bir eşleştirme grubunda temsil eden nesneleri. İlk <xref:System.Text.RegularExpressions.Group> (0 dizininde) koleksiyon nesnesinde tüm eşleşmeyi temsil eder. Aşağıdaki her nesnenin sonuçlarını tek bir yakalama grubunu temsil eder.  
+ <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> özelliği, tek bir eşleşme halinde yakalanan grupları temsil eden <xref:System.Text.RegularExpressions.Group> nesneleri içeren bir <xref:System.Text.RegularExpressions.GroupCollection> nesnesi döndürür. Koleksiyondaki ilk <xref:System.Text.RegularExpressions.Group> nesnesi (Dizin 0 ' da) tüm eşleşmeyi temsil eder. Aşağıdaki her nesne tek bir yakalama grubunun sonuçlarını temsil eder.  
   
- Tek tek almak <xref:System.Text.RegularExpressions.Group> kullanarak koleksiyonundaki nesneleri <xref:System.Text.RegularExpressions.GroupCollection.Item%2A?displayProperty=nameWithType> özelliği. Adsız grupları koleksiyondaki sıralı konumlarına göre alabilir ve adlandırılmış gruplara adı veya sıra konumu alınamıyor. Adlandırılmamış yakalamaları koleksiyondaki ilk görünür ve soldan sağa dizinlenir normal ifade deseninde göründükleri sırayla. Adlandırılmış yakalamalar dizin haline getirilir, soldan sağa doğru adlandırılmamış yakalamaları sonra normal ifade deseninde göründükleri sırayla. Hangi numaralandırılmış gruplar eşleştirme yöntemi bir özel normal ifade için döndürülen koleksiyon kullanılabilir belirlemek için örnek çağırabilirsiniz <xref:System.Text.RegularExpressions.Regex.GetGroupNumbers%2A?displayProperty=nameWithType> yöntemi. Hangi adlandırılmış gruplar koleksiyonunda kullanılabilir olduğunu belirlemek için örnek çağırabileceğiniz <xref:System.Text.RegularExpressions.Regex.GetGroupNames%2A?displayProperty=nameWithType> yöntemi. Her iki yöntem tarafından herhangi bir normal ifade eşleştirmeler analiz genel amaçlı yordamlarını özellikle yararlıdır.  
+ <xref:System.Text.RegularExpressions.GroupCollection.Item%2A?displayProperty=nameWithType> özelliğini kullanarak koleksiyondaki tek tek <xref:System.Text.RegularExpressions.Group> nesneleri alabilirsiniz. Adlandırılmamış grupları koleksiyonda sıra konumlarına göre alabilir ve adlandırılmış grupları ada veya sıralı konuma göre alabilir. Adlandırılmamış yakalamalar koleksiyonda önce görünür ve normal ifade modelinde göründükleri sırada soldan sağa dizinlenir. Adlandırılmış yakalamalar, adsız yakalamalardan sonra, normal ifade düzeninde göründükleri sırada, soldan sağa dizinlenir. Belirli bir normal ifade eşleştirme yöntemi için döndürülen koleksiyonda hangi numaralanmış grupların kullanılabildiğini belirlemek için örnek <xref:System.Text.RegularExpressions.Regex.GetGroupNumbers%2A?displayProperty=nameWithType> yöntemini çağırabilirsiniz. Koleksiyonda adlandırılmış grupların kullanılabildiğini belirlemek için örnek <xref:System.Text.RegularExpressions.Regex.GetGroupNames%2A?displayProperty=nameWithType> yöntemini çağırabilirsiniz. Her iki yöntem de özellikle herhangi bir normal ifade tarafından bulunan eşleşmeleri çözümleyen genel amaçlı yordamlar için yararlıdır.  
   
- <xref:System.Text.RegularExpressions.GroupCollection.Item%2A?displayProperty=nameWithType> Koleksiyon C# ve Visual Basic koleksiyon nesnesinin varsayılan özellik Oluşturucusu bir özelliktir. Bu kişi anlamına gelir <xref:System.Text.RegularExpressions.Group> nesneleri erişilebilir diziniyle (veya adlandırılmış gruplar söz konusu olduğunda, ada göre) gibi:  
+ <xref:System.Text.RegularExpressions.GroupCollection.Item%2A?displayProperty=nameWithType> özelliği, içindeki C# koleksiyonun Dizin oluşturucudur ve koleksiyon nesnesinin varsayılan özelliği olan Visual Basic. Bu, bireysel <xref:System.Text.RegularExpressions.Group> nesnelerine dizin (veya adlandırılmış gruplar söz konusu olduğunda, ada göre) tarafından erişilebileceği anlamına gelir:  
   
  [!code-csharp[Conceptual.RegularExpressions.ObjectModel#13](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/cs/groupsyntax1.cs#13)]
  [!code-vb[Conceptual.RegularExpressions.ObjectModel#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/vb/groupsyntax1.vb#13)]  
   
- Aşağıdaki örnek, ay, gün ve tarihin yıl değerini yakalamak için gruplama yapıları kullanan bir normal ifade tanımlar.  
+ Aşağıdaki örnek, bir tarihin ay, gün ve yılını yakalamak için gruplandırma yapılarını kullanan bir normal ifade tanımlar.  
   
  [!code-csharp[Conceptual.RegularExpressions.ObjectModel#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/cs/groupcollection1.cs#10)]
  [!code-vb[Conceptual.RegularExpressions.ObjectModel#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/vb/groupcollection1.vb#10)]  
   
- Normal ifade deseni `\b(\w+)\s(\d{1,2}),\s(\d{4})\b` aşağıdaki tabloda gösterildiği gibi tanımlanmaktadır.  
+ `\b(\w+)\s(\d{1,2}),\s(\d{4})\b` normal ifade deseninin aşağıdaki tabloda gösterildiği gibi tanımlanmıştır.  
   
 |Desen|Açıklama|  
 |-------------|-----------------|  
@@ -257,51 +255,51 @@ ms.locfileid: "64664670"
 |`,`|Bir virgülü eşleştirin.|  
 |`\s`|Bir boşluk karakteri ile eşleştirin.|  
 |`(\d{4})`|Dört ondalık basamağı eşleştirin. Bu, üçüncü yakalama grubudur.|  
-|`\b`|Eşleşme bir sözcük sınırında sonlandır.|  
+|`\b`|Eşleşmeyi bir sözcük sınırında sonlandır.|  
   
  [Başa dön](#introduction)  
   
 <a name="the_captured_group"></a>   
-## <a name="the-captured-group"></a>Yakalanan grubu  
- <xref:System.Text.RegularExpressions.Group> Sınıfı tek bir yakalama grubu sonucu temsil eder. Normal bir ifade ile tanımlanan yakalama grupları temsil eden grubu nesneleri tarafından döndürülen <xref:System.Text.RegularExpressions.GroupCollection.Item%2A> özelliği <xref:System.Text.RegularExpressions.GroupCollection> tarafından döndürülen nesne <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> özelliği. <xref:System.Text.RegularExpressions.GroupCollection.Item%2A> Özelliği oluşturucuda (C#) ve (Visual Basic'te) için varsayılan özelliği <xref:System.Text.RegularExpressions.Group> sınıfı. Koleksiyonunu kullanarak Yinelem yaparak tek tek üyeleri alabilirsiniz `foreach` veya `For Each` oluşturun. Örneğin, önceki bölüme bakın.  
+## <a name="the-captured-group"></a>Yakalanan grup  
+ <xref:System.Text.RegularExpressions.Group> sınıfı, tek bir yakalama grubundan elde edilen sonucu temsil eder. Normal bir ifadede tanımlanan yakalama gruplarını temsil eden Grup nesneleri, <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> özelliği tarafından döndürülen <xref:System.Text.RegularExpressions.GroupCollection> nesnesinin <xref:System.Text.RegularExpressions.GroupCollection.Item%2A> özelliği tarafından döndürülür. <xref:System.Text.RegularExpressions.GroupCollection.Item%2A> özelliği, <xref:System.Text.RegularExpressions.Group> sınıfının Dizin oluşturucudır C#(içinde) ve varsayılan özelliktir (Visual Basic). `foreach` veya `For Each` yapısını kullanarak koleksiyonu yineleerek tek tek üyeleri de alabilirsiniz. Bir örnek için önceki bölüme bakın.  
   
- Aşağıdaki örnekte, iç içe gruplama yapıları grupları dizelere yakalamak için kullanır. Normal ifade deseni `(a(b))c` "abc" dizesini eşleştirir. "Ab" alt dizenin ilk yakalama grubu ve alt dizeyi "b" için ikinci yakalama grubu atar.  
+ Aşağıdaki örnek, alt dizeleri gruplar halinde yakalamak için iç içe gruplama yapılarını kullanır. Normal ifade deseninin `(a(b))c`, "abc" dizesiyle eşleşir. "AB" alt dizesini ilk yakalama grubuna ve "b" alt dizesini ikinci yakalama grubuna atar.  
   
  [!code-csharp[RegularExpressions.Classes#6](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Classes/cs/Example.cs#6)]
  [!code-vb[RegularExpressions.Classes#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Classes/vb/Example.vb#6)]  
   
- Aşağıdaki örnek, adlandırılmış gruplama yapıları alt dizelerin noktalı virgül (;) normal ifade böler "DATANAME:VALUE" biçimindeki verileri içeren bir dizeden yakalamak için kullanır.  
+ Aşağıdaki örnek, "DATANAME: VALUE" biçiminde veri içeren bir dizeden alt dizeleri yakalamak için adlandırılmış gruplandırma yapılarını kullanır, bu da normal ifadenin iki nokta üst üste (:) ayırır).  
   
  [!code-csharp[RegularExpressions.Classes#8](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Classes/cs/Example.cs#8)]
  [!code-vb[RegularExpressions.Classes#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Classes/vb/Example.vb#8)]  
   
- Normal ifade deseni `^(?<name>\w+):(?<value>\w+)` aşağıdaki tabloda gösterildiği gibi tanımlanmaktadır.  
+ `^(?<name>\w+):(?<value>\w+)` normal ifade deseninin aşağıdaki tabloda gösterildiği gibi tanımlanmıştır.  
   
 |Desen|Açıklama|  
 |-------------|-----------------|  
 |`^`|Giriş dizesinin başında eşleşmeye başla.|  
-|`(?<name>\w+)`|Bir veya daha fazla sözcük karakteri eşleştir. Bu yakalama grubunun adıdır `name`.|  
-|`:`|Bir iki nokta üst üste eşleştirin.|  
-|`(?<value>\w+)`|Bir veya daha fazla sözcük karakteri eşleştir. Bu yakalama grubunun adıdır `value`.|  
+|`(?<name>\w+)`|Bir veya daha fazla sözcük karakteri eşleştir. Bu yakalama grubunun adı `name`.|  
+|`:`|İki nokta üst üste eşleştirin.|  
+|`(?<value>\w+)`|Bir veya daha fazla sözcük karakteri eşleştir. Bu yakalama grubunun adı `value`.|  
   
- Özelliklerini <xref:System.Text.RegularExpressions.Group> sınıfı yakalanan grubu hakkında bilgi sağlar: `Group.Value` Özelliği, yakalanan alt dizeyi içerir `Group.Index` özelliği gösterir Giriş metnindeki yakalanan grubu başlangıç konumunu `Group.Length` yakalanan metnin uzunluğunu özelliği içerir ve `Group.Success` özelliği, bir alt dizesi yakalama grubu tarafından tanımlanan örnekle eşleşen olup olmadığını gösterir.  
+ <xref:System.Text.RegularExpressions.Group> sınıfının özellikleri yakalanan grup hakkında bilgi sağlar: `Group.Value` özelliği yakalanan alt dizeyi içerir; `Group.Index` özelliği, girdi metninde yakalanan grubun başlangıç konumunu `Group.Length` özelliği gösterir yakalanan metnin uzunluğunu içerir ve `Group.Success` özelliği, bir alt dizenin yakalama grubu tarafından tanımlanan Düzenle eşleştirilip eşleştirmediğini belirtir.  
   
- Bir gruba miktar Belirleyicileri uygulamak (daha fazla bilgi için [miktar belirleyiciler](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)) yakalama grubu iki yolla başına bir yakalama arasındaki ilişkiyi değiştirir:  
+ Bir gruba nicelik belirteçleri uygulama (daha fazla bilgi için, bkz. [nicelik belirteçleri](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)) yakalama grubu başına bir yakalamanın ilişkisini iki şekilde değiştirir:  
   
-- Varsa `*` veya `*?` (Bu, sıfır veya daha fazla eşleşme belirtir) nicelik, bir gruba uygulandığında, bir yakalama grubunu, giriş dizesinde bir eşleşme olmayabilir. Yakalanan metin özelliklerini olduğunda <xref:System.Text.RegularExpressions.Group> nesne, aşağıdaki tabloda gösterildiği gibi ayarlanır.  
+- Bir gruba uygulanmış `*` veya `*?` nicelik (sıfır veya daha fazla eşleşme belirten) varsa, bir yakalama grubunun giriş dizesinde eşleşmesi olmayabilir. Yakalanan metin olmadığında, <xref:System.Text.RegularExpressions.Group> nesnesinin özellikleri aşağıdaki tabloda gösterildiği gibi ayarlanır.  
   
-    |Grup özelliği|Değer|  
+    |Group özelliği|Değer|  
     |--------------------|-----------|  
     |`Success`|`false`|  
     |`Value`|<xref:System.String.Empty?displayProperty=nameWithType>|  
     |`Length`|0|  
   
-     Aşağıdaki örnek, bir gösterim sağlar. Normal ifade deseninde `aaa(bbb)*ccc`, sıfır veya daha fazla kez ilk yakalama grubu ("bbb" alt) ile eşleştirilebilir. "Aaaccc" Giriş dizesinin desenle eşleşir çünkü yakalama grubu bir eşleşme yok.  
+     Aşağıdaki örnek, bir gösterim sağlar. Normal ifade deseninin `aaa(bbb)*ccc`, ilk yakalama grubu ("bbb" alt dizesi) sıfır veya daha fazla kez eşleştirilebilir. "Aaaccc" giriş dizesi düzeniyle eşleştiğinden, yakalama grubunun eşleşmesi yoktur.  
   
      [!code-csharp[Conceptual.RegularExpressions.ObjectModel#11](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/cs/nocapture1.cs#11)]
      [!code-vb[Conceptual.RegularExpressions.ObjectModel#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/vb/nocapture1.vb#11)]  
   
-- Nicelik, bir yakalama grubu tarafından tanımlanan bir desenle birden çok defa geçmelerine eşleşebilir. Bu durumda, `Value` ve `Length` özelliklerini bir <xref:System.Text.RegularExpressions.Group> nesne yalnızca son yakalanan alt dizeyi hakkında bilgiler içerir. Örneğin, aşağıdaki normal ifade, nokta ile biten tek bir cümle ile eşleşir. Yapıları gruplandırma iki kullanır: Bir boşluk karakteri ile birlikte kelimeler ilk yakalar; İkinci kelimeler yakalar. Normal ifadenin tamamını bir cümle yakalanırken başarılı olsa da örnekteki çıktının gösterdiği gibi ikinci yakalama grubu yalnızca son sözcüğü yakalar.  
+- Nicelik belirteçleri, bir yakalama grubu tarafından tanımlanan bir düzenin birden çok tekrarı ile eşleştirebilir. Bu durumda, bir <xref:System.Text.RegularExpressions.Group> nesnesinin `Value` ve `Length` özellikleri yalnızca son yakalanan alt dizeyle ilgili bilgiler içerir. Örneğin, aşağıdaki normal ifade bir noktayla biten tek bir cümle ile eşleşir. İki gruplama yapısını kullanır: ilki tek tek kelimeleri bir boşluk karakteriyle birlikte yakalar; İkincisi tek tek kelimeleri yakalar. Örneğin çıkışının gösterdiği gibi, normal ifade bir tümcenin tamamını yakalamada başarılı olsa da, ikinci yakalama grubu yalnızca son sözcüğü yakalar.  
   
      [!code-csharp[Conceptual.RegularExpressions.ObjectModel#12](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/cs/lastcapture1.cs#12)]
      [!code-vb[Conceptual.RegularExpressions.ObjectModel#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/vb/lastcapture1.vb#12)]  
@@ -309,21 +307,21 @@ ms.locfileid: "64664670"
  [Başa dön](#introduction)  
   
 <a name="CaptureCollection"></a>   
-## <a name="the-capture-collection"></a>Yakalama toplama  
- <xref:System.Text.RegularExpressions.Group> Nesne yalnızca son yakalama hakkında bilgi içerir. Ancak, bir yakalama grubu tarafından yapılan yakalamaları kümesinin tamamını hala kullanılabilir <xref:System.Text.RegularExpressions.CaptureCollection> tarafından döndürülen nesne <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> özelliği. Her bir koleksiyonun üyesi olduğundan bir <xref:System.Text.RegularExpressions.Capture> bunlar yakalanan sırada Bu yakalama grubu tarafından yapılan bir yakalama temsil eden nesne (ve bu nedenle, yakalanan dizeleri eşleşti soldan sağa doğru sırayla giriş dizesinde). Tek tek almak <xref:System.Text.RegularExpressions.Capture> nesnelerini koleksiyondan iki yöntemden biriyle:  
+## <a name="the-capture-collection"></a>Yakalama koleksiyonu  
+ <xref:System.Text.RegularExpressions.Group> nesnesi yalnızca son yakalama hakkındaki bilgileri içerir. Ancak, bir yakalama grubu tarafından yapılan tüm yakalama kümesi, <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> özelliği tarafından döndürülen <xref:System.Text.RegularExpressions.CaptureCollection> nesnesinden hala kullanılabilir. Koleksiyonun her üyesi, bu yakalama grubu tarafından, yakalandıkları sırada (ve bu nedenle, yakalanan dizelerin giriş dizesinde soldan sağa eşleştirildiği sırada) yapılan bir yakalamayı temsil eden bir <xref:System.Text.RegularExpressions.Capture> nesnesidir. Tek tek <xref:System.Text.RegularExpressions.Capture> nesneleri koleksiyondan iki şekilde alabilirsiniz:  
   
-- Bir yapı gibi kullanarak koleksiyon aracılığıyla yineleme tarafından `foreach` (C# ' de) veya `For Each` (Visual Basic'te).  
+- Koleksiyon içinde `foreach` (in C#) veya `For Each` (Visual Basic) gibi bir yapı kullanarak yineleme yaparak.  
   
-- Kullanarak <xref:System.Text.RegularExpressions.CaptureCollection.Item%2A?displayProperty=nameWithType> dizine göre belirli bir nesneye almak için özellik. <xref:System.Text.RegularExpressions.CaptureCollection.Item%2A> Özelliği <xref:System.Text.RegularExpressions.CaptureCollection> nesnenin (Visual Basic'te) varsayılan özellik veya dizin oluşturucu (C#).  
+- Dizine göre belirli bir nesneyi almak için <xref:System.Text.RegularExpressions.CaptureCollection.Item%2A?displayProperty=nameWithType> özelliğini kullanarak. <xref:System.Text.RegularExpressions.CaptureCollection.Item%2A> özelliği, <xref:System.Text.RegularExpressions.CaptureCollection> nesnenin varsayılan özelliğidir (Visual Basic) veya dizin oluşturucuda (içinde C#).  
   
- Bir miktar belirleyici bir yakalama grubunu uygulanmazsa <xref:System.Text.RegularExpressions.CaptureCollection> nesnesini içeren tek bir <xref:System.Text.RegularExpressions.Capture> aynı eşleşme hakkında bilgi sağladığından, çok az ilgi nesne kendi <xref:System.Text.RegularExpressions.Group> nesne. Bir yakalama grubu için bir miktar belirleyiciyi uygulanırsa <xref:System.Text.RegularExpressions.CaptureCollection> nesnesi yakalama grubu tarafından yapılan tüm öğeleri içerir ve olarak aynı yakalama koleksiyonun son üyesini temsil <xref:System.Text.RegularExpressions.Group> nesne.  
+ Bir nicelik listesi bir yakalama grubuna uygulanmadığından, <xref:System.Text.RegularExpressions.CaptureCollection> nesnesi, <xref:System.Text.RegularExpressions.Group> nesnesiyle aynı eşleşme hakkında bilgi sağladığından, çok ilgi çekici olan tek bir <xref:System.Text.RegularExpressions.Capture> nesnesi içerir. Bir yakalama grubuna bir nicelik belirteci uygulanmışsa, <xref:System.Text.RegularExpressions.CaptureCollection> nesnesi yakalama grubu tarafından yapılan tüm yakalamaları içerir ve koleksiyonun son üyesi, <xref:System.Text.RegularExpressions.Group> nesnesi ile aynı yakalamayı temsil eder.  
   
- Örneğin, normal ifade deseni kullanırsanız `((a(b))c)+` (burada + nicelik, bir veya daha fazla eşleşme belirtir) yakalamak için "abcabcabc" dizesi ile eşleşen <xref:System.Text.RegularExpressions.CaptureCollection> her nesne <xref:System.Text.RegularExpressions.Group> nesne üç üye içerir.  
+ Örneğin, `((a(b))c)+` normal ifade deseninin (+ nicelik veya birden fazla eşleşme belirttiği), "abcabcabc" dizesinden gelen eşleşmeleri yakalamak için, her bir <xref:System.Text.RegularExpressions.Group> nesnesinin <xref:System.Text.RegularExpressions.CaptureCollection> nesnesi üç üye içerir.  
   
  [!code-csharp[Conceptual.RegularExpressions.ObjectModel#14](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/cs/capturecollection1.cs#14)]
  [!code-vb[Conceptual.RegularExpressions.ObjectModel#14](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/vb/capturecollection1.vb#14)]  
   
- Aşağıdaki örnek normal ifadeyi kullanan `(Abc)+` "XYZAbcAbcAbcXYZAbcAb" dizesinde "Abc" dizesinin bir veya daha fazla ardışık çalıştırmaları bulunacak. Bu örnek kullanımını gösterir <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> birden fazla grubundan dönmesini yakalanan alt dizeler.  
+ Aşağıdaki örnek, "XYZAbcAbcAbcXYZAbcAb" dizesinde "abc" dizesinin bir veya daha fazla art arda bir çalıştırmasını bulmak için `(Abc)+` normal ifade kullanır. Örnek, yakalanan alt dizelerin birden çok grubunu döndürmek için <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> özelliğinin kullanımını gösterir.  
   
  [!code-csharp[RegularExpressions.Classes#5](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Classes/cs/Example.cs#5)]
  [!code-vb[RegularExpressions.Classes#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Classes/vb/Example.vb#5)]  
@@ -331,28 +329,28 @@ ms.locfileid: "64664670"
  [Başa dön](#introduction)  
   
 <a name="the_individual_capture"></a>   
-## <a name="the-individual-capture"></a>Tek tek yakalama  
- <xref:System.Text.RegularExpressions.Capture> Sonuçlarını tek bir alt ifade yakalama sınıfı içerir. <xref:System.Text.RegularExpressions.Capture.Value%2A?displayProperty=nameWithType> Eşleşen metin özelliği içerir ve <xref:System.Text.RegularExpressions.Capture.Index%2A?displayProperty=nameWithType> özelliği, eşleşen alt dizenin başlar giriş dizesindeki sıfır tabanlı konumu gösterir.  
+## <a name="the-individual-capture"></a>Tek yakalama  
+ <xref:System.Text.RegularExpressions.Capture> sınıfı, tek bir alt ifade yakalamanın sonuçlarını içerir. <xref:System.Text.RegularExpressions.Capture.Value%2A?displayProperty=nameWithType> özelliği eşleşen metni içerir ve <xref:System.Text.RegularExpressions.Capture.Index%2A?displayProperty=nameWithType> özelliği, eşleşen alt dizenin başladığı giriş dizesindeki sıfır tabanlı konumu gösterir.  
   
- Aşağıdaki örnek, seçili şehirlerin sıcaklık için bir Giriş dizesinin ayrıştırır. Virgül (",") bir şehir ve kendi sıcaklık ve noktalı virgül ayırmak için kullanılan (";") her şehre ait verileri ayırmak için kullanılır. Giriş dizesinin tamamını tek bir eşleşmeyi temsil eder. Normal ifade deseninde `((\w+(\s\w+)*),(\d+);)+`, dizeyi ayrıştırmak için kullanılan, şehir adı ikinci yakalama grubuna atanır ve sıcaklık dördüncü yakalama gruba atanır.  
+ Aşağıdaki örnek seçilen şehirlerin sıcaklığı için bir giriş dizesi ayrıştırır. Bir şehri ve sıcaklığını ayırmak için virgül (","), her şehir verisini ayırmak için noktalı virgül (";") kullanılır. Giriş dizesinin tamamı tek bir eşleşmeyi temsil eder. Dizeyi ayrıştırmak için kullanılan normal ifade deseninin `((\w+(\s\w+)*),(\d+);)+`, şehir adı ikinci yakalama grubuna atanır ve sıcaklık dördüncü yakalama grubuna atanır.  
   
  [!code-csharp[Conceptual.RegularExpressions.ObjectModel#16](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/cs/capture1.cs#16)]
  [!code-vb[Conceptual.RegularExpressions.ObjectModel#16](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/vb/capture1.vb#16)]  
   
- Normal ifade aşağıdaki tabloda gösterildiği gibi tanımlanır.  
+ Normal ifade aşağıdaki tabloda gösterildiği gibi tanımlanmıştır.  
   
 |Desen|Açıklama|  
 |-------------|-----------------|  
 |`\w+`|Bir veya daha fazla sözcük karakteri eşleştir.|  
-|`(\s\w+)*`|Bir veya daha fazla sözcük karakteri ve ardından bir boşluk karakterin sıfır veya daha fazla oluşumunu eşleyin. Bu düzen, birden çok sözcük Şehir adları eşleşir. Bu, üçüncü yakalama grubudur.|  
-|`(\w+(\s\w+)*)`|Ardından bir boşluk karakterin sıfır veya daha çok tekrarı ve bir veya daha fazla sözcük karakteri bir veya daha fazla sözcük karakterini eşleştirin. Bu ikinci yakalama grubudur.|  
+|`(\s\w+)*`|Boşluk karakterinin sıfır veya daha fazla tekrarlamalarını ve ardından bir veya daha fazla sözcük karakterini eşleştirin. Bu model, çok sözcüklü şehir adlarıyla eşleşir. Bu, üçüncü yakalama grubudur.|  
+|`(\w+(\s\w+)*)`|Bir veya daha fazla sözcük karakterini, ardından sıfır veya daha fazla boşluk karakteri ve bir veya daha fazla sözcük karakteri ile eşleştirin. Bu ikinci yakalama grubudur.|  
 |`,`|Bir virgülü eşleştirin.|  
-|`(\d+)`|Bir veya daha çok basamağı eşleştirin. Bu dördüncü yakalama grubudur.|  
-|`;`|Bir noktalı virgülü eşleştirin.|  
-|`((\w+(\s\w+)*),(\d+);)+`|Herhangi bir ek sözcük bir veya daha fazla kez ardından virgül, bir veya daha fazla basamak ve bir noktalı virgül tarafından izlenen bir sözcük desenini eşleştirin. Bu ilk yakalama grubudur.|  
+|`(\d+)`|Bir veya daha fazla rakam eşleştirin. Bu dördüncü yakalama grubudur.|  
+|`;`|Noktalı virgülle eşleştirin.|  
+|`((\w+(\s\w+)*),(\d+);)+`|Bir sözcüğün örüntüsünün ve ardından virgül, bir veya daha fazla rakam ve noktalı virgül, bir veya daha fazla sayıda ek sözcük ile eşleştirin. Bu ilk yakalama grubudur.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Text.RegularExpressions>
-- [.NET normal ifadeler](../../../docs/standard/base-types/regular-expressions.md)
+- [.NET normal Ifadeleri](../../../docs/standard/base-types/regular-expressions.md)
 - [Normal İfade Dili - Hızlı Başvuru](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)

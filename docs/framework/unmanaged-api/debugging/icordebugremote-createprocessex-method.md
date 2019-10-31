@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 41af93c7-e448-4251-8d4d-413d38c635f2
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d05384af8201fae8cf81650d38c99a5c44e6bd16
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9e1a5ba65da09c90f33e5e8108c3bd91f3aee4a1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744782"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131288"
 ---
 # <a name="icordebugremotecreateprocessex-method"></a>ICorDebugRemote::CreateProcessEx Yöntemi
-Hata ayıklayıcısı altında uzak bir makinede bir işlem başlatır.  
+Hata ayıklayıcı altındaki uzak makinede bir işlem başlatır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -49,62 +47,62 @@ HRESULT CreateProcessEx (
   
 ## <a name="parameters"></a>Parametreler  
  `pRemoteTarget`  
- [in] İşaretçi bir [Icordebugremotetarget arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md). İşlem başlatılacak uzak makineye belirlemek için kullanılır.  
+ 'ndaki [ICorDebugRemoteTarget arabirimine](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md)yönelik işaretçi. İşlemin başlatılacağı uzak makineyi tespit etmek için kullanılır.  
   
  `lpApplicationName`  
- [in] Başlatılan işlem tarafından yürütülecek modülü belirtiyorsa null ile sonlandırılmış bir dize işaretçisi. Modül çağırma işleminin bağlamında çalıştırılır.  
+ 'ndaki Başlatılan işlem tarafından yürütülecek modülü belirten, null ile sonlandırılmış bir dize işaretçisi. Modül, çağıran işlemin güvenlik bağlamında yürütülür.  
   
  `lpCommandLine`  
- [in] Başlatılan işlem tarafından yürütülecek komut satırı belirten bir null ile sonlandırılmış dize işaretçisi.  
+ 'ndaki Başlatılan işlem tarafından yürütülecek komut satırını belirten, null ile sonlandırılmış bir dize işaretçisi.  
   
  `lpProcessAttributes`  
- [in] Uzaktan hata ayıklama için kullanılmamaktadır.  
+ 'ndaki Uzaktan hata ayıklama için kullanılmıyor.  
   
  `lpThreadAttributes`  
- [in] Uzaktan hata ayıklama için kullanılmamaktadır.  
+ 'ndaki Uzaktan hata ayıklama için kullanılmıyor.  
   
  `bInheritHandles`  
- [in] Uzaktan hata ayıklama için kullanılmamaktadır.  
+ 'ndaki Uzaktan hata ayıklama için kullanılmıyor.  
   
  `dwCreationFlags`  
- [in] Uzaktan hata ayıklama için kullanılmamaktadır.  
+ 'ndaki Uzaktan hata ayıklama için kullanılmıyor.  
   
  `lpEnvironment`  
- [in] Yeni işlem için bir ortam bloğuna işaretçi.  
+ 'ndaki Yeni işlem için ortam bloğunun işaretçisi.  
   
  `lpCurrentDirectory`  
- [in] İşlem için geçerli dizin tam yolunu belirtir null ile sonlandırılmış bir dize işaretçisi. Bu parametre null ise, yeni işlem çağırma işlemi aynı geçerli sürücü ve dizine sahip.  
+ 'ndaki İşlem için geçerli dizinin tam yolunu belirten, null ile sonlandırılmış bir dize işaretçisi. Bu parametre null ise, yeni işlem çağıran işlemle aynı geçerli sürücü ve dizine sahip olur.  
   
  `lpStartupInfo`  
- [in] Uzaktan hata ayıklama için kullanılmamaktadır.  
+ 'ndaki Uzaktan hata ayıklama için kullanılmıyor.  
   
  `lpProcessInformation`  
- [in] Uzaktan hata ayıklama için kullanılmamaktadır.  
+ 'ndaki Uzaktan hata ayıklama için kullanılmıyor.  
   
  `debuggingFlags`  
- [in] Uzaktan hata ayıklama için kullanılmamaktadır.  
+ 'ndaki Uzaktan hata ayıklama için kullanılmıyor.  
   
  `ppProcess`  
- [out] İşlemi temsil eden bir "Icordebugprocess arabirimi" nesnesinin adresi için bir işaretçi.  
+ dışı İşlemi temsil eden "ICorDebugProcess Interface" nesnesinin adresine yönelik bir işaretçi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  S_OK  
- Hata ayıklama için uzak makineye ve döndürülen bir "Icordebugprocess arabirimi" işlem başarıyla başlatıldı.  
+ İşlem uzak makinede başarıyla başlatıldı ve hata ayıklama için bir "ICorDebugProcess Interface" döndürdü.  
   
- E_FAIL (veya diğer E_ dönüş kodları)  
- Uzak makinede işlemi başlatmak ve hata ayıklama için bir "Icordebugprocess arabirimi" dönüş oluşturulamıyor.  
+ E_FAıL (veya diğer E_ dönüş kodları)  
+ Uzak makinede işlem başlatılamıyor ve hata ayıklama için bir "ICorDebugProcess Interface" döndürün.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Silverlight'ta, karma mod hata ayıklaması desteklenmiyor.  
+ Karışık modda hata ayıklama Silverlight 'ta desteklenmez.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug.idl  
+ **Üst bilgi:** CorDebug. IDL  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET framework sürümleri:** 4.5, 4, 3.5 SP1  
+ **.NET Framework sürümleri:** 4,5, 4, 3,5 SP1  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

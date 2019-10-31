@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: ed86185f-2152-459c-961f-10c06d62e83f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 50dd4acece43628b20b6bc50a539ee197e865855
-ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
+ms.openlocfilehash: cbc272070e9eb6810b34ec1f3fdc9e944c624cd3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274152"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132378"
 ---
 # <a name="cor_active_function-structure"></a>COR_ACTIVE_FUNCTION Yapısı
 Şu anda bir iş parçacığının çerçevelerinde etkin olan işlevlerle ilgili bilgiler içerir. Bu yapı, [ICorDebugThread2:: GetActiveFunctions](icordebugthread2-getactivefunctions-method.md) yöntemi tarafından kullanılır.  
@@ -42,18 +40,18 @@ typedef struct  _COR_ACTIVE_FUNCTION {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`pAppDomain`|`ilOffset` Alanın uygulama etki alanı sahibine yönelik işaretçi.|  
-|`pModule`|`ilOffset` Alanın modül sahibine yönelik işaretçi.|  
-|`pFunction`|`ilOffset` Alanın işlev sahibine yönelik işaretçi.|  
+|`pAppDomain`|`ilOffset` alanının uygulama etki alanı sahibine yönelik işaretçi.|  
+|`pModule`|`ilOffset` alanının modül sahibine yönelik işaretçi.|  
+|`pFunction`|`ilOffset` alanının işlev sahibine yönelik işaretçi.|  
 |`ilOffset`|Çerçevenin Microsoft ara dili (MSIL) kayması.|  
 |`flags`|Gelecekteki genişletilebilirlik için ayrılmıştır.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üst bilgi** CorDebug. IDL  
+ **Üst bilgi:** CorDebug. IDL  
   
- **Kitaplığı** Corguid. lib  
+ **Kitaplık:** Corguid. lib  
   
  **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

@@ -6,21 +6,19 @@ helpviewer_keywords:
 - global static functions [.NET Framework hosting], version 4
 - .NET Framework 4, hosting global static functions
 ms.assetid: 07a1a6e1-db73-4555-81df-bc4054c51492
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6cb46d3684e36ca203b3ea5b58491150af4ffd58
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 58b2b6faaf96a8c4f0c0422f2092c3752fbe822f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490151"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133703"
 ---
 # <a name="net-framework-4-hosting-global-static-functions"></a>.NET Framework 4 Barındırma Genel Statik İşlevleri
-.NET Framework 4 MSCorEE.dll içinde dışarı aktarılan bir yeni yöntem sunar: [CLRCreateIntstance](../../../../docs/framework/unmanaged-api/hosting/clrcreateinstance-function.md).  
+.NET Framework 4, MSCorEE. dll ' de bir yeni içe aktarılmış Yöntem tanıtır: [CLRCreateIntstance](../../../../docs/framework/unmanaged-api/hosting/clrcreateinstance-function.md).  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [CLRCreateInstance İşlevi](../../../../docs/framework/unmanaged-api/hosting/clrcreateinstance-function.md)  
- Üç arabirimlerinden birini sağlar: [Iclrmetahost](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md), [Iclrmetahostpolicy](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-interface.md), veya [Iclrdebugging](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-interface.md).  
+ Üç arabirimden birini sunar: [ICLRMetaHost](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md), [ICLRMetaHostPolicy](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-interface.md)veya [ICLRDebugging](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-interface.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

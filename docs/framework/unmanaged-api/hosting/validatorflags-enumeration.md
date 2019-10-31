@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: a3f5c266-3fcc-4ad1-aaf5-4cdbe26304ad
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c5f38231eb6a5911527c21ee3304fc77cfcf8e90
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 61aafb8dc99bb908fc603945ff6ea74054f812c4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776526"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141425"
 ---
 # <a name="validatorflags-enumeration"></a>ValidatorFlags Numaralandırması
-Bir çağrıda gerçekleştirilmelidir doğrulama türünü gösteren değerleri içerir [Iclrvalidator::Validate](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-validate-method.md) yöntemi.  
+[ICLRValidator:: Validate](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-validate-method.md) metoduna yapılan bir çağrıda gerçekleştirilmesi gereken doğrulamanın türünü belirten değerleri içerir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -42,20 +40,20 @@ enum ValidatorFlags {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`VALIDATOR_CHECK_ILONLY`|Yalnızca Microsoft Ara dilini (MSIL) yürütülebilir dosyasına doğrulanmalıdır belirtir.|  
-|`VALIDATOR_CHECK_PEFORMAT_ONLY`|Sadece yürütülebilir dosya biçimi doğrulanmalıdır belirtir.|  
-|`VALIDATOR_EXTRA_VERBOSE`|Tüm doğrulama türlerinin gerçekleştirilen ve üzerinde bildirilen belirtir.|  
-|`VALIDATOR_NOCHECK_PEFORMAT`|Yürütülebilir dosya biçiminin geçerliliğinin doğrulanması belirtir.|  
-|`VALIDATOR_SHOW_SOURCE_LINES`|Doğrulama hatası iletilerinin doğrulama hatalarını yükseltmek kaynak kodu satırlarını içermesi gerektiğini belirtir. Bu alanın değeri, .NET Framework 2.0 sürümünde geçerli değil.|  
+|`VALIDATOR_CHECK_ILONLY`|Yürütülebilir dosyadaki yalnızca Microsoft ara dili 'nin (MSIL) doğrulanması gerektiğini belirtir.|  
+|`VALIDATOR_CHECK_PEFORMAT_ONLY`|Yalnızca yürütülebilir dosyanın biçiminin doğrulanması gerektiğini belirtir.|  
+|`VALIDATOR_EXTRA_VERBOSE`|Tüm doğrulama türlerinin üzerinde gerçekleştirilmesi ve bildirilmesi gerektiğini belirtir.|  
+|`VALIDATOR_NOCHECK_PEFORMAT`|Yürütülebilir dosyanın biçiminin doğrulanmamış olması gerektiğini belirtir.|  
+|`VALIDATOR_SHOW_SOURCE_LINES`|Doğrulama hatası iletilerinin, doğrulama hatalarını oluşturan kaynak kodu satırlarını içermesi gerektiğini belirtir. Bu alan değeri 2,0 .NET Framework sürümünde geçerli değildir.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** IValidator.idl, IValidator.h  
+ **Üst bilgi:** IValidator. IDL, IValidator. h  
   
- **Kitaplığı:** MSCorEE.dll  
+ **Kitaplık:** MSCorEE. dll  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -9,14 +9,12 @@ helpviewer_keywords:
 - Windows Forms, getting started
 - Windows Forms, creating basic form
 ms.assetid: 45ad3f8b-1c26-4c9f-91a9-3bb0759a47a4
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: da7fdab1cf67ffd47acb75533fcfdb89664c86d3
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: af1548602ece8ea0f5720a836ec05648854e198f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834815"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127241"
 ---
 # <a name="how-to-create-a-windows-forms-application-from-the-command-line"></a>Nasıl yapılır: komut satırından Windows Forms uygulaması oluşturma
 
@@ -36,18 +34,18 @@ Aşağıdaki yordamlarda, komut satırından bir Windows Forms uygulaması oluş
      [!code-csharp[System.Windows.Forms.BasicForm#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/CS/Form1.cs#3)]
      [!code-vb[System.Windows.Forms.BasicForm#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/VB/Form1.vb#3)]  
   
-3. @No__t-0 için parametresiz Oluşturucu oluşturun.
+3. `Form1`için parametresiz bir Oluşturucu oluşturun.
   
      Sonraki yordamda oluşturucuya daha fazla kod ekleyeceksiniz.
   
      [!code-csharp[System.Windows.Forms.BasicForm#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/CS/Form1.cs#4)]
      [!code-vb[System.Windows.Forms.BasicForm#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/VB/Form1.vb#4)]  
   
-4. Sınıfa `Main` yöntemi ekleyin.
+4. Sınıfa bir `Main` yöntemi ekleyin.
   
-    1. Windows Forms uygulamanızın tek iş parçacıklı bir grup C# olduğunu belirtmek için `Main` yöntemine <xref:System.STAThreadAttribute> uygulayın. (Visual Basic ile geliştirilen Windows Forms uygulamaları varsayılan olarak tek iş parçacıklı bir Grup modeli kullandığından, bu öznitelik Visual Basic için gerekli değildir.)  
+    1. Windows Forms uygulamanızın tek iş parçacıklı C# bir grup olduğunu belirtmek için <xref:System.STAThreadAttribute> `Main` yöntemine uygulayın. (Visual Basic ile geliştirilen Windows Forms uygulamaları varsayılan olarak tek iş parçacıklı bir Grup modeli kullandığından, bu öznitelik Visual Basic için gerekli değildir.)  
   
-    2. Uygulamanıza işletim sistemi stilleri uygulamak için <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> çağrısı yapın.  
+    2. Uygulamanıza işletim sistemi stilleri uygulamak için <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> çağırın.  
   
     3. Formun bir örneğini oluşturun ve çalıştırın.  
   
@@ -66,7 +64,7 @@ Aşağıdaki yordamlarda, komut satırından bir Windows Forms uygulaması oluş
   
     - Visual Basic kullanıyorsanız, şunu yazın: `vbc form1.vb`  
   
-3. Komut istemine şunu yazın: `Form1.exe`  
+3. Komut isteminde şunu yazın: `Form1.exe`  
   
 ## <a name="adding-a-control-and-handling-an-event"></a>Bir denetim ekleme ve olay işleme
 
@@ -76,7 +74,7 @@ Aşağıdaki yordamlarda, komut satırından bir Windows Forms uygulaması oluş
   
 #### <a name="to-declare-a-button-control-and-handle-its-click-event"></a>Düğme denetimi bildirmek ve Click olayını işlemek için  
   
-1. @No__t-0 adlı bir düğme denetimi bildirin.  
+1. `button1`adlı bir düğme denetimi bildirin.  
   
 2. Oluşturucuda, düğmeyi oluşturun ve <xref:System.Windows.Forms.Control.Size%2A>, <xref:System.Windows.Forms.Control.Location%2A> ve <xref:System.Windows.Forms.Control.Text%2A> özelliklerini ayarlayın.  
   
@@ -89,14 +87,14 @@ Aşağıdaki yordamlarda, komut satırından bir Windows Forms uygulaması oluş
   
 4. Düğme için <xref:System.Windows.Forms.Control.Click> olayını işlemek üzere bir yöntem oluşturun.  
   
-5. Click olay işleyicisinde, "Merhaba Dünya" iletisiyle birlikte <xref:System.Windows.Forms.MessageBox> ' ı görüntüleyin.  
+5. Click olay işleyicisinde, "Merhaba Dünya" iletisiyle bir <xref:System.Windows.Forms.MessageBox> görüntüleyin.  
   
      Aşağıdaki kod örneği, düğme denetiminin Click olayının nasıl işleneceğini göstermektedir:
   
      [!code-csharp[System.Windows.Forms.FormWithButton#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/CS/Form1.cs#3)]
      [!code-vb[System.Windows.Forms.FormWithButton#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/VB/Form1.vb#3)]  
   
-6. @No__t-0 olayını, oluşturduğunuz yöntemle ilişkilendirin.  
+6. <xref:System.Windows.Forms.Control.Click> olayını oluşturduğunuz yöntemle ilişkilendirin.  
   
      Aşağıdaki kod örneği, olayının yöntemiyle nasıl ilişkilendirileceğini gösterir.  
   

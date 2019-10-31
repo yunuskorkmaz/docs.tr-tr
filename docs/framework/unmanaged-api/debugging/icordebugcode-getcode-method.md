@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7137e3d1-1dad-48d8-8c37-16ac816534d3
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e18097dd380ee354e5652886544d40da074f1230
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: db24228de7e8c98fd97f890b1e408515172299b3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67747629"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125665"
 ---
 # <a name="icordebugcodegetcode-method"></a>ICorDebugCode::GetCode Metodu
-Ayrıştırma için biçimlendirilmiş belirtilen işlevi tüm kod alır. Bu yöntem .NET Framework 2.0 sürümünde kullanım dışı bırakıldı. Kullanım [Icordebugcode2::getcodechunks](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md) yerine.  
+Ayrıştırılmış derleme için biçimlendirilen, belirtilen işlevin tüm kodunu alır. Bu yöntem 2,0 .NET Framework sürümünde kullanımdan kaldırılmıştır. Bunun yerine [ICorDebugCode2:: Getcodeöbekleri](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md) kullanın.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -42,31 +40,31 @@ HRESULT GetCode (
   
 ## <a name="parameters"></a>Parametreler  
  `startOffset`  
- [in] İşlevin başlangıcına uzaklık.  
+ 'ndaki İşlevin başlangıcının boşluğu.  
   
  `endOffset`  
- [in] İşlevin sonuna uzaklığı.  
+ 'ndaki İşlevin sonundaki fark.  
   
  `cBufferAlloc`  
- [in] Boyutu `buffer` dizi kod, döndürülecek içine.  
+ 'ndaki Kodun döndürüleceği `buffer` dizisinin boyutu.  
   
  `buffer`  
- [out] Dizi içine kod döndürülür.  
+ dışı Kodun döndürüleceği dizi.  
   
  `pcBufferSize`  
- [out] Döndürülen bayt sayısı.  
+ dışı Döndürülen bayt sayısı.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Birden çok öbeklere işlevin kodunu bölünmüş, bunlar, yerel uzaklık artan sırada bitiştirilir. Yönerge sınırları denetlenmez.  
+ İşlevin kodu birden çok Öbekle ayrılmışsa, bu değerler artan yerel uzaklığa göre birleştirilir. Yönerge sınırları denetlenmez.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET framework sürümleri:** 1.1, 1.0  
+ **.NET Framework sürümleri:** 1,1, 1,0  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

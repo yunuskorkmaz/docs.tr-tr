@@ -5,12 +5,12 @@ helpviewer_keywords:
 - control patterns
 - UI Automation, control patterns
 ms.assetid: cc229b33-234b-469b-ad60-f0254f32d45d
-ms.openlocfilehash: 548828f8e9948e000a15fd19a4475ef715e110d8
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: a3daf75417260d7e761da2e90c595471b2a4b2a2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039459"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131507"
 ---
 # <a name="ui-automation-control-patterns-overview"></a>UI Otomasyon Denetim Düzenlerine Genel Bakış
 > [!NOTE]
@@ -56,7 +56,7 @@ ms.locfileid: "73039459"
 |<xref:System.Windows.Automation.DockPattern>|<xref:System.Windows.Automation.Provider.IDockProvider>|Bir yerleştirme kapsayıcısına sabitlenebilir denetimler için kullanılır. Örneğin, araç çubukları veya araç paletleri.|  
 |<xref:System.Windows.Automation.ExpandCollapsePattern>|<xref:System.Windows.Automation.Provider.IExpandCollapseProvider>|Genişletilebilecek veya daraltılabilen denetimler için kullanılır. Örneğin, **Dosya** menüsü gibi bir uygulamadaki menü öğeleri.|  
 |<xref:System.Windows.Automation.GridPattern>|<xref:System.Windows.Automation.Provider.IGridProvider>|Boyutlandırma ve belirtilen bir hücreye taşıma gibi kılavuz işlevlerini destekleyen denetimler için kullanılır. Örneğin, Windows Gezgini 'ndeki büyük simge görünümü veya [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)]üst bilgileri olmayan basit tablolar.|  
-|<xref:System.Windows.Automation.GridItemPattern>|<xref:System.Windows.Automation.Provider.IGridItemProvider>|Kılavuzlar içinde hücreler bulunan denetimler için kullanılır. Tek tek hücreler GridItem modelini desteklemelidir. Örneğin, [!INCLUDE[TLA#tla_winexpl](../../../includes/tlasharptla-winexpl-md.md)] ayrıntı görünümündeki her bir hücre.|  
+|<xref:System.Windows.Automation.GridItemPattern>|<xref:System.Windows.Automation.Provider.IGridItemProvider>|Kılavuzlar içinde hücreler bulunan denetimler için kullanılır. Tek tek hücreler GridItem modelini desteklemelidir. Örneğin, Microsoft Windows Explorer ayrıntı görünümündeki her bir hücre.|  
 |<xref:System.Windows.Automation.InvokePattern>|<xref:System.Windows.Automation.Provider.IInvokeProvider>|Düğme gibi çağrılabilecek denetimler için kullanılır.|  
 |<xref:System.Windows.Automation.MultipleViewPattern>|<xref:System.Windows.Automation.Provider.IMultipleViewProvider>|Aynı bilgi, veri veya alt öğe kümesinin birden çok gösterimi arasında geçiş yapılabilir denetimler için kullanılır. Örneğin, verilerin küçük resim, kutucuk, simge, liste veya ayrıntı görünümlerinde kullanılabildiği bir liste görünümü denetimi.|  
 |<xref:System.Windows.Automation.RangeValuePattern>|<xref:System.Windows.Automation.Provider.IRangeValueProvider>|Denetime uygulanabilen bir değer aralığına sahip denetimler için kullanılır. Örneğin, yıllar içeren bir değer değiştirici denetimi 2010 1900 aralığında olabilir, ancak ay sunan başka bir değer değiştirici denetimi 1 ile 12 arasında bir aralığa sahip olur.|  
@@ -70,7 +70,7 @@ ms.locfileid: "73039459"
 |<xref:System.Windows.Automation.TogglePattern>|<xref:System.Windows.Automation.Provider.IToggleProvider>|Durumun değiştirilebilir olduğu denetimler için kullanılır. Örneğin, onay kutuları ve kullanıma ılabilir menü öğeleri.|  
 |<xref:System.Windows.Automation.TransformPattern>|<xref:System.Windows.Automation.Provider.ITransformProvider>|Yeniden boyutlandırılabileceği, taşınabilecek ve döndürülebilen denetimler için kullanılır. Dönüşüm denetim deseninin tipik kullanımları tasarımcılar, formlar, grafik düzenleyiciler ve çizim uygulamalarıdır.|  
 |<xref:System.Windows.Automation.ValuePattern>|<xref:System.Windows.Automation.Provider.IValueProvider>|İstemcilerin bir değer aralığını desteklemeyen denetimlerde değer almasına veya ayarlamasına izin verir. Örneğin, bir tarih saat seçici.|  
-|<xref:System.Windows.Automation.WindowPattern>|<xref:System.Windows.Automation.Provider.IWindowProvider>|Microsoft Windows işletim sistemi için temel bir kavram olan Windows 'a özgü bilgileri gösterir. Windows, en üst düzey uygulama pencereleri ([!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)], [!INCLUDE[TLA#tla_winexpl](../../../includes/tlasharptla-winexpl-md.md)], vb.), birden çok belgeli arabirim (MDI) alt pencereleri ve iletişim kutuları olan denetimlere örnektir.|  
+|<xref:System.Windows.Automation.WindowPattern>|<xref:System.Windows.Automation.Provider.IWindowProvider>|Microsoft Windows işletim sistemi için temel bir kavram olan Windows 'a özgü bilgileri gösterir. Windows, en üst düzey uygulama pencereleri ([!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)], Microsoft Windows Gezgini, vb.), birden çok belge arabirimi (MDI) alt pencereleri ve iletişim kutuları olan denetimlerin örnekleridir.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

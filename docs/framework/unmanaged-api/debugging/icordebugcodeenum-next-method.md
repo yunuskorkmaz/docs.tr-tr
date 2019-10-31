@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 644ece86-384d-4c63-9fba-52c789616ff7
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ac3fc157543f2990c7c9f9917140b35f8948108e
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 04c36d1e5f0e79b71963683a3b613a9ad7392bcf
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395472"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125519"
 ---
 # <a name="icordebugcodeenumnext-method"></a>ICorDebugCodeEnum::Next Yöntemi
 
@@ -42,13 +40,13 @@ HRESULT Next (
 ## <a name="parameters"></a>Parametreler
 
 `celt`  
-'ndaki Alınacak `ICorDebugCode` örnek sayısı.
+'ndaki Alınacak `ICorDebugCode` örneklerinin sayısı.
 
 `values`  
-dışı Her biri `ICorDebugCode` nesnesine işaret eden işaretçiler dizisi.
+dışı Her biri bir `ICorDebugCode` nesnesine işaret eden işaretçiler dizisi.
 
 `pceltFetched`  
-dışı Gerçekten döndürülen `ICorDebugCode` örnek sayısına yönelik bir işaretçi. @No__t-0 ise bu değer null olabilir.
+dışı Gerçekten döndürülen `ICorDebugCode` örneklerinin sayısına yönelik bir işaretçi. `celt` bir tane ise bu değer null olabilir.
 
 ## <a name="requirements"></a>Gereksinimler
 

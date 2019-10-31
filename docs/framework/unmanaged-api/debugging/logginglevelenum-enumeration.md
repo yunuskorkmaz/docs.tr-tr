@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 09daac08-005a-46b2-beab-408d0820c5e5
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9659dd835bb60adf8471f73ed45b6588cf15126f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 01e1eafd9955a0876f77e34eb73c2a3fc6d815c2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67752590"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139212"
 ---
 # <a name="logginglevelenum-enumeration"></a>LoggingLevelEnum Numaralandırması
-Yönetilen iş parçacığı bir olayı günlüğe kaydettiğinde, olay günlüğüne yazılan açıklayıcı bir iletisi önem derecesi düzeyini gösterir.  
+Yönetilen bir iş parçacığı bir olay günlüğe kaydederken olay günlüğüne yazılan açıklayıcı bir iletinin önem derecesini gösterir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -50,31 +48,31 @@ typedef enum LoggingLevelEnum {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`LTraceLevel0`|İleti izleme düzeyi 0 ' dir.|  
-|`LTraceLevel1`|İleti izleme düzeyini 1 ' dir.|  
-|`LTraceLevel2`|İleti izleme düzeyini 2 ' dir.|  
-|`LTraceLevel3`|İleti izleme düzeyini 3 ' dir.|  
-|`LTraceLevel4`|İzleme düzeyi 4 iletisidir.|  
-|`LStatusLevel0`|İleti durumu düzeyi 0 ' dir.|  
-|`LStatusLevel1`|İleti durumu düzeyi 1 ' dir.|  
-|`LStatusLevel2`|İleti durumu düzeyi 2 ' dir.|  
-|`LStatusLevel3`|İleti durumu düzeyi 3 ' dir.|  
-|`LStatusLevel4`|İleti durumu düzeyi 4 ' dir.|  
+|`LTraceLevel0`|İleti bir izleme düzeyi 0 ' dır.|  
+|`LTraceLevel1`|İleti bir izleme düzeyi 1 ' dir.|  
+|`LTraceLevel2`|İleti bir izleme düzeyi 2 ' dir.|  
+|`LTraceLevel3`|İleti bir izleme düzeyi 3 ' dir.|  
+|`LTraceLevel4`|İleti bir izleme düzeyi 4 ' dir.|  
+|`LStatusLevel0`|İleti bir durum düzeyi 0 ' dır.|  
+|`LStatusLevel1`|İleti bir durum düzeyi 1 ' dir.|  
+|`LStatusLevel2`|İleti bir durum düzeyi 2 ' dir.|  
+|`LStatusLevel3`|İleti bir durum düzeyi 3 ' dir.|  
+|`LStatusLevel4`|İleti bir durum düzeyi 4 ' dir.|  
 |`LWarningLevel`|İleti bir uyarı düzeyidir.|  
 |`LErrorLevel`|İleti bir hata düzeyidir.|  
-|`LPanicLevel`|İleti Panik düzeyidir.|  
+|`LPanicLevel`|İleti bir panik düzeyidir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Ortak dil çalışma zamanı (CLR) çağıran [Icordebugmanagedcallback::LogMessage](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-logmessage-method.md) yönetilen iş parçacığı günlüğe bir olay, hata ayıklayıcı bildirmek için yöntemi. CLR değerini geçirir `LoggingLevelEnum` yönetilen iş parçacığı olay günlüğüne yazdığı ileti önem düzeyini belirtmek için sabit listesi.  
+ Ortak dil çalışma zamanı (CLR), hata ayıklayıcıya yönetilen bir iş parçacığının günlüğe kaydettiği bir olay olduğunu bildirmek için [ICorDebugManagedCallback:: LogMessage](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-logmessage-method.md) yöntemini çağırır. CLR, yönetilen iş parçacığının olay günlüğüne yazdığı iletinin önem derecesini belirtmek için `LoggingLevelEnum` numaralandırması değerini geçirir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 45ae0502-0a31-4342-b7e3-f36e1cf738f3
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b58da58897edbf3ec9492c1f9f1b2f3d7b83e07a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: bcf1b49f0576f5dbd73c001f8edff7a9ab29af22
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780082"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139513"
 ---
 # <a name="icorruntimehostmapfile-method"></a>ICorRuntimeHost::MapFile Yöntemi
-Belirtilen dosya belleğe eşler. Bu yöntem artık kullanılmıyor.  
+Belirtilen dosyayı belleğe eşler. Bu yöntem artık kullanılmıyor.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,19 +36,19 @@ HRESULT MapFile(
   
 ## <a name="parameters"></a>Parametreler  
  `hFile`  
- [in] Eşleştirilecek dosya tanıtıcısı.  
+ 'ndaki Eşlenecek dosyanın tanıtıcısı.  
   
  `hMapAddress`  
- [out] Başlangıç bellek adresi eşleme dosyası başlanacak.  
+ dışı Dosyanın eşlenmesinin başlayacağı başlangıç belleği adresi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** MSCorEE.h  
+ **Üst bilgi:** MSCorEE. h  
   
- **Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil  
+ **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET framework sürümü:** 1.0, 1.1  
+ **.NET Framework sürümü:** 1,0, 1,1  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

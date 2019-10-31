@@ -2,14 +2,12 @@
 title: 'ICorDebugSymbolProvider:: Getınstancefieldsymbols yöntemi'
 ms.date: 03/30/2017
 ms.assetid: a29b9233-ee67-4b53-b8bc-c00b281e7edb
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b6bba47500b024bc1f2a2be21d461a6f5933f0ca
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0ad8ddd78d963681c0b2f69bf0f211ad464dc7b7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964620"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138866"
 ---
 # <a name="icordebugsymbolprovidergetinstancefieldsymbols-method"></a>ICorDebugSymbolProvider:: Getınstancefieldsymbols yöntemi
 TypeSpec imzasına karşılık gelen örnek alanı sembollerini alır.  
@@ -28,10 +26,10 @@ HRESULT GetInstanceFieldSymbols(
   
 ## <a name="parameters"></a>Parametreler  
  `cbSignature`  
- 'ndaki `typeSig` Dizideki bayt sayısı.  
+ 'ndaki `typeSig` dizisindeki bayt sayısı.  
   
  `typeSig`  
- 'ndaki `typespec` İmzayı içeren bir bayt dizisi.  
+ 'ndaki `typespec` imzasını içeren bir bayt dizisi.  
   
  `cRequestedSymbols`  
  'ndaki İstenen simgelerin sayısı.  
@@ -48,11 +46,11 @@ HRESULT GetInstanceFieldSymbols(
 > Bu yöntem yalnızca .NET Native kullanılabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi** CorDebug. IDL, CorDebug. h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı** Corguid. lib  
+ **Kitaplık:** Corguid. lib  
   
  **.NET Framework sürümleri:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

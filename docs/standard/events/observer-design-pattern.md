@@ -12,81 +12,79 @@ helpviewer_keywords:
 - IObservable(Of T) interface
 - observer design pattern [.NET Framework]
 ms.assetid: 3680171f-f522-453c-aa4a-54f755a78f88
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 06dbc4b7124aa873fd8471794fa25b0f47f8ce3d
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 817337cec604a431f9f7d4eacb04378ee0d3c227
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663571"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131570"
 ---
 # <a name="observer-design-pattern"></a>Gözlemci Tasarım Deseni
 
-Gözlemci tasarım deseni ile kaydolun ve bir sağlayıcıdan bildirimleri almak abone sağlar. Anında iletme tabanlı bildirim gerektiren her senaryo için uygundur. Deseni tanımlayan bir *sağlayıcısı* (olarak da bilinen bir *konu* veya *observable*) ve sıfır, bir veya daha fazla *gözlemciler*. Gözlemciler sağlayıcıya Kaydol ve önceden tanımlı bir koşul olduğunda, olayı veya durumu değişikliği, sağlayıcı tüm gözlemciler kendi yöntemlerini çağıran bir tarafından otomatik olarak bildirir. oluşur. Bu yöntem çağrısında sağlayıcı gözlemciler için geçerli durum bilgilerini de sağlayabilirsiniz. .NET Framework'teki genel uygulayarak gözlemci tasarım deseni uygulanan <xref:System.IObservable%601?displayProperty=nameWithType> ve <xref:System.IObserver%601?displayProperty=nameWithType> arabirimleri. Genel tür parametresi bildirimi bilgi sağlayan türünü temsil eder.
+Gözlemci tasarım deseninin bir abone ile kaydolmalarını ve bir sağlayıcıdan gelen bildirimleri almasını sağlar. Gönderim tabanlı bildirim gerektiren tüm senaryolar için uygundur. Bu model, bir *sağlayıcıyı* ( *Konu* veya *observable*olarak da bilinir) ve sıfır, bir veya daha fazla *gözlemcilerin*tanımlar. Gözlemcilerin sağlayıcıya kaydoldu ve önceden tanımlanmış bir koşul, olay veya durum değişikliği gerçekleştiğinde sağlayıcı, yöntemlerinden birini çağırarak tüm gözlemcilerin 'ı otomatik olarak bilgilendirir. Bu yöntem çağrısında sağlayıcı, güncel durum bilgilerini observers 'a de verebilir. .NET Framework, gözlemci tasarım deseninin genel <xref:System.IObservable%601?displayProperty=nameWithType> ve <xref:System.IObserver%601?displayProperty=nameWithType> arabirimleri uygulayarak uygulanması gerekir. Genel tür parametresi, bildirim bilgilerini sağlayan türü temsil eder.
 
-## <a name="applying-the-pattern"></a>Desenini uygulama
+## <a name="applying-the-pattern"></a>Desenler uygulanıyor
 
-Gözlemci tasarım deseni iki farklı bileşenler veya bir veri kaynağı (iş mantığı) katmanı ve bir kullanıcı arabirimi (görüntüleme) katmanı gibi uygulama katmanları arasında NET bir ayrım desteklediğinden, dağıtılmış tabanlı anında iletme bildirimleri için uygundur. Sağlayıcı güncel bilgilerle, istemcileri sağlamak için geri çağırmaları kullandığında deseni uygulanabilir.
+Bir veri kaynağı (iş mantığı) katmanı ve Kullanıcı arabirimi (görüntü) katmanı gibi iki farklı bileşen veya uygulama katmanı arasında temiz ayrımı desteklediğinden, gözlemci tasarım deseninin dağıtılan gönderim tabanlı bildirimler için uygun olması gerekir. Bir sağlayıcı, istemcilerini geçerli bilgilerle sağlamak için geri çağırmaları kullandığında, bu model uygulanabilir.
 
-Desenini uygulama aşağıdakileri sağlamanız gerekir:
+Düzenin uygulanması için şunları sağlamanız gerekir:
 
-- Bir sağlayıcı veya gözlemciler için bildirimler gönderir bir nesne olan konu. Bir sınıf veya yapı uygulayan bir sağlayıcıdır <xref:System.IObservable%601> arabirimi. Sağlayıcı, tek bir yöntem uygulamalıdır <xref:System.IObservable%601.Subscribe%2A?displayProperty=nameWithType>, sağlayıcıdan bildirim almak istediğiniz gözlemciler tarafından çağrılır.
+- Gözlemi sunucularına bildirim gönderen nesnesi olan bir sağlayıcı veya konu. Sağlayıcı, <xref:System.IObservable%601> arabirimini uygulayan bir sınıf veya yapıdır. Sağlayıcı, sağlayıcıdan bildirim almak isteyen gözlemcilerin tarafından çağrılan tek bir yöntem <xref:System.IObservable%601.Subscribe%2A?displayProperty=nameWithType>uygulamalıdır.
 
-- Bir sağlayıcıdan bildirimleri alan bir nesne olan bir gözlemci. Bir sınıf veya yapı uygulayan ise bir gözlemci <xref:System.IObserver%601> arabirimi. Gözlemci, her biri sağlayıcı tarafından çağrılır, üç yöntem uygulaması gerekir:
+- Sağlayıcıdan gelen bildirimleri alan bir nesne olan gözlemci. Gözlemci, <xref:System.IObserver%601> arabirimini uygulayan bir sınıf veya yapıdır. Gözlemci, hepsi sağlayıcı tarafından çağrılan üç yöntemi gerçekleştirmelidir:
 
-  - <xref:System.IObserver%601.OnNext%2A?displayProperty=nameWithType>, gözlemci yeni veya geçerli bilgileri sağlar.
+  - Yeni veya güncel bilgilerle gözlemci sağlayan <xref:System.IObserver%601.OnNext%2A?displayProperty=nameWithType>.
 
-  - <xref:System.IObserver%601.OnError%2A?displayProperty=nameWithType>, bir hata oluştu gözlemci bildirir.
+  - <xref:System.IObserver%601.OnError%2A?displayProperty=nameWithType>, gözlemciye bir hata oluştuğunu bildiren.
 
-  - <xref:System.IObserver%601.OnCompleted%2A?displayProperty=nameWithType>, sağlayıcı bildirimleri gönderme işleminin tamamlandığını gösterir.
+  - <xref:System.IObserver%601.OnCompleted%2A?displayProperty=nameWithType>, sağlayıcının bildirimleri göndermeyi bitirdiğini gösterir.
 
-- Sağlayıcı gözlemciler izlemenize olanak tanıyan bir mekanizma. Genellikle sağlayıcısı gibi bir kapsayıcı nesnesini kullanan bir <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> başvuruları tutmak için nesne <xref:System.IObserver%601> bildirimlerine abone uygulamalar. Bu amaç için bir depolama kapsayıcısı kullanarak sınırsız sayıda gözlemciler sıfıra işlemek sağlayıcı sağlar. Gözlemciler bildirimleri aldıkları sırası tanımlı değildir; Sağlayıcı sırayı belirlemek için herhangi bir yöntem ücretsiz olarak kullanılabilir.
+- Sağlayıcının observers 'ı izlemesine izin veren bir mekanizma. Genellikle, sağlayıcı, bildirimlere abone olan <xref:System.IObserver%601> uygulamalarına başvuruları tutmak için <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> nesnesi gibi bir kapsayıcı nesnesi kullanır. Bu amaçla bir depolama kapsayıcısı kullanmak, sağlayıcının sınırsız sayıda Observer 'a sıfır işlemesini sağlar. Gözlemcilerin 'ın bildirim alma sırası tanımlı değil; sağlayıcı, siparişi belirlemede herhangi bir yöntemi kullanmak ücretsizdir.
 
-- Bir <xref:System.IDisposable> bildirim tamamlandığında gözlemciler kaldırmak sağlayıcı sağlayan uygulama. Gözlemciler bir başvuru alma <xref:System.IDisposable> uygulamasından <xref:System.IObservable%601.Subscribe%2A> ayrıca çağırabilmek yöntemi <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> sağlayıcısı bildirimleri gönderme bitmeden önce aboneliğinizi iptal etmek için yöntemi.
+- Sağlayıcının, bildirim tamamlandığında gözlemcilerin 'ı kaldırmasını sağlayan <xref:System.IDisposable> bir uygulama. Observers, <xref:System.IObservable%601.Subscribe%2A> yönteminden <xref:System.IDisposable> uygulamasına bir başvuru alır. bu nedenle, sağlayıcının bildirimleri göndermeden önce aboneliğini kaldırmak için <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> metodunu da çağırabilirler.
 
-- Sağlayıcı için kendi gözlemciler gönderdiği veriler içeren bir nesne. Bu nesne türü genel tür parametresine karşılık geldiği <xref:System.IObservable%601> ve <xref:System.IObserver%601> arabirimleri. Bu nesne ile aynı olsa da <xref:System.IObservable%601> uygulama, ayrı bir tür olduğu en yaygın olarak.
+- Sağlayıcının observers 'a gönderdiği verileri içeren bir nesne. Bu nesnenin türü, <xref:System.IObservable%601> ve <xref:System.IObserver%601> arabirimlerinin genel tür parametresine karşılık gelir. Bu nesne <xref:System.IObservable%601> uygulamayla aynı olsa da, genellikle ayrı bir tür olur.
 
 > [!NOTE]
-> Gözlemci tasarım deseni uygulama yanı sıra, kullanılarak oluşturulan kitaplıkları keşfetmeye de ilginizi çekebilir <xref:System.IObservable%601> ve <xref:System.IObserver%601> arabirimleri. Örneğin, [.NET (Rx) için reaktif Uzantılar](https://docs.microsoft.com/previous-versions/dotnet/reactive-extensions/hh242985(v=vs.103)) uzantı yöntemleri ve zaman uyumsuz programlamayı desteklemek için LINQ standart dizisi işleçleri kümesinden oluşur.
+> Gözlemci tasarım deseninin yanı sıra, <xref:System.IObservable%601> ve <xref:System.IObserver%601> arabirimleri kullanılarak oluşturulan kitaplıkları keşfetmek isteyebilirsiniz. Örneğin, [.net Için reaktif uzantıları (RX)](https://docs.microsoft.com/previous-versions/dotnet/reactive-extensions/hh242985(v=vs.103)) , zaman uyumsuz programlamayı desteklemek için bir dizi genişletme YÖNTEMINDEN ve LINQ standart dizisi işleçlerinden oluşur.
 
-## <a name="implementing-the-pattern"></a>Desenini uygulama
+## <a name="implementing-the-pattern"></a>Kalıbı uygulama
 
-Aşağıdaki örnek, bir Havalimanı bagaj talep bilgi sistemi uygulamak için gözlemci tasarım deseni kullanır. A `BaggageInfo` sınıfı ve her uçuş gelen bagaj kullanılabildiği için alımı görüntülendiği döngüler yer gelen uçuşlar hakkında bilgi sağlar. Aşağıdaki örnekte gösterilmektedir.
+Aşağıdaki örnekte, bir Havaalanı Bagaj talep bilgileri sistemi uygulamak için gözlemci tasarım deseninin kullanımı vardır. `BaggageInfo` bir sınıf, gelen fışıklara ve her bir uçuşdan Bagaj 'nin çekme için kullanılabildiği Carousels hakkında bilgi sağlar. Aşağıdaki örnekte gösterilmiştir.
 
 [!code-csharp[Conceptual.ObserverDesignPattern#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.observerdesignpattern/cs/provider.cs#1)]
 [!code-vb[Conceptual.ObserverDesignPattern#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.observerdesignpattern/vb/provider.vb#1)]
 
-A `BaggageHandler` sınıfı hakkında gelen uçuşlar ve bagaj talep görüntülendiği döngüler yer bilgi almak için sorumlu. Dahili olarak, iki koleksiyon tutar:
+`BaggageHandler` sınıfı, gelen fışıkları ve Bagaj talebi Carousels hakkında bilgi almaktan sorumludur. Dahili olarak, iki koleksiyon tutar:
 
-- `observers` -Bir koleksiyonu alacak olan istemcileri bilgiler güncelleştirilmiştir.
+- `observers`-güncelleştirilmiş bilgileri alacak istemciler koleksiyonu.
 
-- `flights` -Uçuş ve otelden kendi atanan görüntülendiği döngüler yer bir koleksiyonu.
+- `flights`-bir fışıkları ve kendilerine atanan Carousels koleksiyonu.
 
-Her iki koleksiyon genel tarafından temsil edilen <xref:System.Collections.Generic.List%601> içinde örneklenen nesneleri `BaggageHandler` sınıf oluşturucusu. Kaynak kodu `BaggageHandler` sınıfı, aşağıdaki örnekte gösterilmiştir.
+Her iki koleksiyon da `BaggageHandler` sınıf oluşturucusunda oluşturulan genel <xref:System.Collections.Generic.List%601> nesneleri tarafından temsil edilir. `BaggageHandler` sınıfının kaynak kodu aşağıdaki örnekte gösterilmiştir.
 
 [!code-csharp[Conceptual.ObserverDesignPattern#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.observerdesignpattern/cs/provider.cs#2)]
 [!code-vb[Conceptual.ObserverDesignPattern#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.observerdesignpattern/vb/provider.vb#2)]
 
-Güncelleştirilmiş bilgileri almak istiyorsanız istemciler çağrı `BaggageHandler.Subscribe` yöntemi. İstemci daha önce bildirimleri, istemcinin bir başvuru abone değil, <xref:System.IObserver%601> uygulaması eklenir `observers` koleksiyonu.
+Güncelleştirilmiş bilgileri almak isteyen istemciler `BaggageHandler.Subscribe` yöntemini çağırır. İstemci daha önce bildirimlere abone olduysa, `observers` koleksiyonuna istemcinin <xref:System.IObserver%601> uygulamasına yönelik bir başvuru eklenir.
 
-Aşırı yüklenen `BaggageHandler.BaggageStatus` yöntemi, bir uçuştaki gelen bagaj boşaltılıyor veya artık boşaltılıyor göstermek için çağrılabilir. Bu durumda, yöntem uçuş numarası, uçuş kaynaklandığı havaalanı ve döngüsü bagaj burada boşaltılıyor geçirilir. İkinci durumda, yalnızca uçuş birkaç yöntemi geçirilir. Yüklenmekte olan bagaj için kaldırıldığında, yöntemi denetimleri olup `BaggageInfo` yönteme bilgi bulunmaktadır `flights` koleksiyonu. Kullanmıyorsa, yöntem bilgileri ekler ve her gözlemci'nın çağıran `OnNext` yöntemi. Bu uçuş hakkında bilgi içinde mi depolanacağını yöntemi olan bagaj artık boşaltılıyor uçuşlar için denetler `flights` koleksiyonu. İse, her bir gözlemci 's yöntemi çağıran `OnNext` yöntemi ve kaldırır `BaggageInfo` nesnesinden `flights` koleksiyonu.
+Aşırı yüklenmiş `BaggageHandler.BaggageStatus` yöntemi, bir uçuşdan Bagaj 'nin kaldırılmakta olduğunu veya artık kaldırılamadığını göstermek için çağrılabilir. İlk durumda, yönteme bir uçuş numarası, uçuşın geldiği Havaalanı ve Bagaj 'nin kaldırılmakta olduğu Carusel ' i geçirilmiş olur. İkinci durumda, yönteme yalnızca bir uçuş numarası geçirilir. Kaldırılmakta olan Bagaj için yöntemi, yönteme geçirilen `BaggageInfo` bilgilerinin `flights` koleksiyonunda var olup olmadığını denetler. Değilse, yöntemi bilgileri ekler ve her bir gözlemci `OnNext` yöntemini çağırır. Bagaj 'nin artık kaldırılmayacağı fışıklarda, yöntemi bu uçuşdaki bilgilerin `flights` koleksiyonunda depolanıp saklanmadığını denetler. Eğer ise, yöntemi her bir gözlemci `OnNext` yöntemini çağırır ve `BaggageInfo` nesnesini `flights` koleksiyonundan kaldırır.
 
-Günün son uçuş aldı ve kendi bagaj işlendiğinde `BaggageHandler.LastBaggageClaimed` yöntemi çağrılır. Bu yöntem her gözlemci 's çağırır `OnCompleted` tüm bildirimler tamamlandığını göstermek için yöntem ve sonra temizler `observers` koleksiyonu.
+Günün son uçuşası ve Bagaj işlendiğinde `BaggageHandler.LastBaggageClaimed` yöntemi çağrılır. Bu yöntem, tüm bildirimlerin tamamlandığını belirtmek için her bir gözlemci `OnCompleted` yöntemini çağırır ve sonra `observers` koleksiyonunu temizler.
 
-Sağlayıcının <xref:System.IObservable%601.Subscribe%2A> yöntemi döndürür bir <xref:System.IDisposable> önce bildirim almayı durdurmak gözlemciler sağlayan uygulama <xref:System.IObserver%601.OnCompleted%2A> yöntemi çağrılır. Bu kaynak kodu `Unsubscriber(Of BaggageInfo)` sınıfı, aşağıdaki örnekte gösterilmiştir. Sınıfı oluşturulduğunda `BaggageHandler.Subscribe` yöntemi, bir başvuru geçirilir `observers` toplama ve koleksiyona eklendiğinde gözlemci başvuru. Bu başvurular, yerel değişkenlere atanır. Zaman nesnenin `Dispose` yöntemi çağrıldığında, gözlemci hala var olup olmadığını denetler `observers` koleksiyonu ve aşması durumunda gözlemci kaldırır.
+Sağlayıcının <xref:System.IObservable%601.Subscribe%2A> yöntemi, gözlemcilerin 'ın <xref:System.IObserver%601.OnCompleted%2A> yöntemi çağrılmadan önce bildirim almayı durdurmasına olanak tanıyan bir <xref:System.IDisposable> uygulamasını döndürür. Bu `Unsubscriber(Of BaggageInfo)` sınıfı için kaynak kodu aşağıdaki örnekte gösterilmiştir. Sınıf `BaggageHandler.Subscribe` yönteminde örneği oluşturulduğunda, `observers` koleksiyonuna bir başvuru ve koleksiyona eklenen gözlemciye bir başvuru geçirilir. Bu başvurular yerel değişkenlere atanır. Nesnenin `Dispose` yöntemi çağrıldığında, gözlemconun `observers` koleksiyonunda var olup olmadığını denetler ve varsa gözlemci 'yi kaldırır.
 
 [!code-csharp[Conceptual.ObserverDesignPattern#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.observerdesignpattern/cs/provider.cs#3)]
 [!code-vb[Conceptual.ObserverDesignPattern#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.observerdesignpattern/vb/provider.vb#3)]
 
-Aşağıdaki örnek sağlayan bir <xref:System.IObserver%601> adlı uygulama `ArrivalsMonitor`, bagaj talep bilgilerini görüntüleyen bir temel sınıf. Bilgiler, kaynak şehri adına göre alfabetik olarak görüntülenir. Yöntemlerinin `ArrivalsMonitor` olarak işaretlenmiş `overridable` (Visual Basic'te) veya `virtual` (içinde C#), bunlar tüm türetilmiş sınıf tarafından geçersiz kılınabilir.
+Aşağıdaki örnek, Bagaj talep bilgilerini görüntüleyen bir temel sınıf olan `ArrivalsMonitor`adlı <xref:System.IObserver%601> bir uygulama sağlar. Bilgiler, kaynak şehir adına göre alfabetik olarak görüntülenir. `ArrivalsMonitor` yöntemleri `overridable` (Visual Basic) veya `virtual` (içinde C#) olarak işaretlenir, bu nedenle tümü türetilmiş bir sınıf tarafından geçersiz kılınabilir.
 
 [!code-csharp[Conceptual.ObserverDesignPattern#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.observerdesignpattern/cs/observer.cs#4)]
 [!code-vb[Conceptual.ObserverDesignPattern#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.observerdesignpattern/vb/observer.vb#4)]
 
-`ArrivalsMonitor` Sınıfı içeren `Subscribe` ve `Unsubscribe` yöntemleri. `Subscribe` Yöntemi sağlar sınıfını kaydetmek <xref:System.IDisposable> çağrısı tarafından döndürülen uygulama <xref:System.IObservable%601.Subscribe%2A> özel bir değişken için. `Unsubscribe` Sınıfı sağlayıcının çağırarak bildirim aboneliği için yöntemi etkinleştirir <xref:System.IDisposable.Dispose%2A> uygulaması. `ArrivalsMonitor` Ayrıca uygulamaları sağlar <xref:System.IObserver%601.OnNext%2A>, <xref:System.IObserver%601.OnError%2A>, ve <xref:System.IObserver%601.OnCompleted%2A> yöntemleri. Yalnızca <xref:System.IObserver%601.OnNext%2A> uygulaması, önemli miktarda kod içerir. Yöntem ile özel, sıralanmış, genel çalışır <xref:System.Collections.Generic.List%601> gelen uçuşlar için kaynak havaalanları hakkında bilgileri tutan nesne ve bunların bagaj olduğu kullanılabilir görüntülendiği döngüler yer. Varsa `BaggageHandler` sınıfı raporlar yeni bir uçuş varış <xref:System.IObserver%601.OnNext%2A> yöntem uygulaması, uçuş bilgilerini listesine ekler. Varsa `BaggageHandler` sınıfı raporlar flight'ın bagaj kaldırıldı, olduğunu <xref:System.IObserver%601.OnNext%2A> yöntemi, uçuş listeden kaldırır. Bir değişiklik yapıldığında, listesi sıralanır ve konsola görüntülenir.
+`ArrivalsMonitor` sınıfı `Subscribe` ve `Unsubscribe` yöntemlerini içerir. `Subscribe` yöntemi, sınıfının bir özel değişkene <xref:System.IObservable%601.Subscribe%2A> çağrısı tarafından döndürülen <xref:System.IDisposable> uygulamasını kaydetmesine olanak sağlar. `Unsubscribe` yöntemi, sağlayıcının <xref:System.IDisposable.Dispose%2A> uygulamasını çağırarak, sınıfın bildirimlerin aboneliklerini kaldırmaya olanak sağlar. `ArrivalsMonitor` Ayrıca <xref:System.IObserver%601.OnNext%2A>, <xref:System.IObserver%601.OnError%2A>ve <xref:System.IObserver%601.OnCompleted%2A> yöntemlerinin uygulamalarını da sağlar. Yalnızca <xref:System.IObserver%601.OnNext%2A> uygulama önemli miktarda kod içerir. Yöntemi, gelen fışıklara ait kaynak havaalanları ve Bagaj 'nin kullanılabildiği Carousels hakkındaki bilgileri tutan özel, sıralanmış, genel <xref:System.Collections.Generic.List%601> bir nesne ile birlikte çalışıyor. `BaggageHandler` sınıfı yeni bir uçuş gelişini bildirirse, <xref:System.IObserver%601.OnNext%2A> yöntemi uygulama bu uçuş hakkında bilgileri listeye ekler. `BaggageHandler` sınıfı, uçuşın bagamı 'nin kaldırılmıştır bildirirse, <xref:System.IObserver%601.OnNext%2A> yöntemi Bu uçuştan kaldırır. Her değişiklik yapıldığında liste sıralanır ve konsola görüntülenir.
 
-Aşağıdaki örnek başlatan uygulamanın giriş noktasını içeren `BaggageHandler` sınıfı iki örneğini yanı sıra `ArrivalsMonitor` sınıfı ve kullandığı `BaggageHandler.BaggageStatus` ekleme ve kaldırma gelen uçuşlar hakkında bilgi için yöntemi. Her durumda, gözlemciler güncelleştirmeleri almak ve doğru şekilde bagaj talep bilgilerini görüntüler.
+Aşağıdaki örnek, `BaggageHandler` sınıfını ve `ArrivalsMonitor` sınıfının iki örneğini örnekleyen uygulama giriş noktasını içerir ve gelen fışıklarla ilgili bilgileri eklemek ve kaldırmak için `BaggageHandler.BaggageStatus` yöntemini kullanır. Her durumda, gözlemcilerin güncelleştirmeleri alır ve Bagaj talep bilgilerini doğru şekilde görüntüler.
 
 [!code-csharp[Conceptual.ObserverDesignPattern#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.observerdesignpattern/cs/program.cs#5)]
 [!code-vb[Conceptual.ObserverDesignPattern#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.observerdesignpattern/vb/module1.vb#5)]
@@ -95,6 +93,6 @@ Aşağıdaki örnek başlatan uygulamanın giriş noktasını içeren `BaggageHa
 
 |Başlık|Açıklama|
 |-----------|-----------------|
-|[Gözlemci Tasarım Deseni En İyi Yöntemleri](../../../docs/standard/events/observer-design-pattern-best-practices.md)|Gözlemci tasarım deseni kullanan uygulamalar geliştirirken benimsemek için en iyi uygulamaları açıklar.|
-|[Nasıl yapılır: Sağlayıcıyı uygulama](../../../docs/standard/events/how-to-implement-a-provider.md)|Uygulama izleme bir sıcaklık için Sağlayıcı'nın adım adım bir uygulamasını sağlar.|
-|[Nasıl yapılır: Gözlemci uygulama](../../../docs/standard/events/how-to-implement-an-observer.md)|Bir adım adım bir gözlemci uygulama izleme bir sıcaklık için sağlar.|
+|[Gözlemci Tasarım Deseni En İyi Yöntemleri](../../../docs/standard/events/observer-design-pattern-best-practices.md)|Gözlemci tasarım modelini uygulayan uygulamalar geliştirirken benimsemek için en iyi uygulamaları açıklar.|
+|[Nasıl yapılır: Sağlayıcıyı Uygulama](../../../docs/standard/events/how-to-implement-a-provider.md)|Bir sıcaklık izleme uygulaması için bir sağlayıcının adım adım uygulamasını sağlar.|
+|[Nasıl yapılır: Gözlemci Uygulama](../../../docs/standard/events/how-to-implement-an-observer.md)|Bir ısı izleme uygulaması için gözlemci için adım adım bir uygulama sağlar.|

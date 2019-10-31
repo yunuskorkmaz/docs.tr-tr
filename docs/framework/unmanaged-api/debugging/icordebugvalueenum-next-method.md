@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: f5ef94dd-dfee-49d3-a398-b110f8906dd8
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2ae09b4f1cd069edf81be583c7c4226717736094
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 09394acb07b8595f99d9ecc873eb0985cdd79316
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67764279"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134591"
 ---
 # <a name="icordebugvalueenumnext-method"></a>ICorDebugValueEnum::Next Yöntemi
-Numaralandırma, geçerli konumdan başlayarak belirtilen "ICorDebugValue" örnek sayısını alır.  
+Geçerli konumdan başlayarak Numaralandırmadaki belirtilen "ICorDebugValue" örneklerinin sayısını alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,21 +38,21 @@ HRESULT Next (
   
 ## <a name="parameters"></a>Parametreler  
  `celt`  
- [in] Sayısını `ICorDebugValue` alınacak örnekleri.  
+ 'ndaki Alınacak `ICorDebugValue` örneklerinin sayısı.  
   
  `values`  
- [out] Bir dizi işaretçileri, her biri için işaret eden bir `ICorDebugValue` nesne.  
+ dışı Her biri bir `ICorDebugValue` nesnesine işaret eden işaretçiler dizisi.  
   
  `pceltFetched`  
- [out] İşaretçi sayısına `ICorDebugValue` gerçekte döndürülen örnekleri. Bu değer null olabilir, `celt` biridir.  
+ dışı Aslında döndürülen `ICorDebugValue` örneklerinin sayısına yönelik işaretçi. `celt` bir tane ise bu değer null olabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.

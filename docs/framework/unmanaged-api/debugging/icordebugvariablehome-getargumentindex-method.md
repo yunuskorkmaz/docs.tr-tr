@@ -1,5 +1,5 @@
 ---
-title: ICorDebugVariableHome::GetArgumentIndex yöntemi
+title: 'Icordebugvariablehome:: Getargumentındex yöntemi'
 ms.date: 03/30/2017
 api_name:
 - ICorDebugVariableHome.GetArgumentIndex
@@ -15,18 +15,16 @@ helpviewer_keywords:
 ms.assetid: e86fcc72-388d-4009-ab21-8f9c3323e9a3
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2457dff3063e47f1fb9d040caac1bc08441e1739
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 86b2815c6f95c674c49bba7455e8497192bd8bac
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61986797"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125147"
 ---
-# <a name="icordebugvariablehomegetargumentindex-method"></a>ICorDebugVariableHome::GetArgumentIndex yöntemi
+# <a name="icordebugvariablehomegetargumentindex-method"></a>Icordebugvariablehome:: Getargumentındex yöntemi
 
-İşlev bağımsız değişkeni dizinini alır.
+Bir işlev bağımsız değişkeninin dizinini alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -39,30 +37,30 @@ HRESULT GetArgumentIndex(
 ## <a name="parameters"></a>Parametreler
 
 `pArgumentIndex`\
-[out] Bağımsız değişken dizini için bir işaretçi.
+dışı Bağımsız değişken dizinine yönelik bir işaretçi.
 
 ## <a name="return-value"></a>Dönüş Değeri
 
-Bu yöntem, aşağıdaki değerleri döndürür.
+Yöntemi aşağıdaki değerleri döndürür.
 
 |Değer|Açıklama|
 |-----------|-----------------|
-|`S_OK`|Yöntem çağrısının geçerli bağımsız değişken dizini döndürdü.|
-|`E_FAIL`|Geçerli [Icordebugvariablehome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) örneği yerel bir değişken temsil eder.|
+|`S_OK`|Yöntem çağrısı geçerli bir bağımsız değişken dizini döndürdü.|
+|`E_FAIL`|Geçerli [ıcordebugvariablehome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) örneği yerel bir değişkeni temsil eder.|
 
 ## <a name="remarks"></a>Açıklamalar
 
-Bağımsız değişken dizini, bu bağımsız değişken için meta verilerini almak için kullanılabilir.
+Bağımsız değişken dizini bu bağımsız değişken için meta verileri almak için kullanılabilir.
 
 ## <a name="requirements"></a>Gereksinimler
 
-**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).
+**Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).
 
-**Üst bilgi:** CorDebug.idl, CorDebug.h
+**Üst bilgi:** CorDebug. IDL, CorDebug. h
 
-**Kitaplığı:** CorGuids.lib
+**Kitaplık:** Corguid. lib
 
-**.NET framework sürümleri:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]
+**.NET Framework sürümleri:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

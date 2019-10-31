@@ -14,14 +14,12 @@ helpviewer_keywords:
 - BlessIWbemServices function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e00197b72ca7fc8941475ae51159351d53da12d3
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 946d29892052ea69c2a8a3bf11e7be7a1b2d7068
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70855964"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138776"
 ---
 # <a name="blessiwbemservices-function"></a>BlessIWbemServices işlevi
 Kullanıcı kimlik bilgilerinin belirtilen [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) sınıfına erişime izin verip vermediğini belirtir.   
@@ -50,7 +48,7 @@ HRESULT BlessIWbemServices (
 'ndaki Kullanıcı adı.
 
 `strPassword`\
-'ndaki İle `strUser`ilişkili parola.
+'ndaki `strUser`ilişkili parola.
 
 `strAuthority`\
 'ndaki Kullanıcının etki alanı adı. Daha fazla bilgi için bkz. [Connectserverwmi](connectserverwmi.md) işlevi.
@@ -68,16 +66,16 @@ Bu işlev tarafından döndürülen aşağıdaki değerler *Winerror. h* üstbil
 |Sabit  |Değer  |Açıklama  |
 |---------|---------|---------|
 | `E_INVALIDARG` | 0x80070057 | Bir veya daha fazla bağımsız değişken geçersiz. |
-| `E_POINTER` | 0x80004003 | `pIWbemServices``null`. | 
+| `E_POINTER` | 0x80004003 | `pIWbemServices` `null`. | 
 | `E_FAIL` | 0x80000008 | Belirtilmeyen bir hata oluştu. |
 | `E_OUTOFMEMORY` | 0x80000002 | İşlemi gerçekleştirmek için yeterli bellek yok. | 
 | `S_OK` | 0 | İşlev çağrısı başarılı oldu. | 
 
 ## <a name="requirements"></a>Gereksinimler  
 
- **Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üst bilgi** WMINet_Utils. IDL  
+ **Üst bilgi:** WMINet_Utils. IDL  
   
  **.NET Framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   

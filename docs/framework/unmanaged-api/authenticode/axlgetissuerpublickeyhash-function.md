@@ -8,14 +8,12 @@ api_location:
 api_type:
 - DLLExport
 ms.assetid: fb626b41-b888-4625-84c3-2c02b5e3866f
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4b101a912eb58ed14f81d847ea2fd6ce9f22c065
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 6d5ad995b55a3cde6363b297df6b8faf72689468
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70787091"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132482"
 ---
 # <a name="_axlgetissuerpublickeyhash-function"></a>\_Axlgetıserpublickeyhash Işlevi
 Belirtilen sertifikayı imzalamak için kullanılan özel anahtarla ilişkili ortak anahtarın SHA-1 karmasını alır.  
@@ -37,7 +35,7 @@ HRESULT _AxlGetIssuerPublicKeyHash (
  dışı Onaltılık kodlanmış ortak anahtar belirtecini almak için bir WCHAR * işaretçisi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- `S_OK`işlev başarılı olursa; Aksi `S_FALSE`takdirde.  
+ işlev başarılı olursa `S_OK`; Aksi takdirde `S_FALSE`.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

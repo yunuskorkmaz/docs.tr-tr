@@ -15,20 +15,18 @@ helpviewer_keywords:
 ms.assetid: cae53926-82ac-4d1d-b297-0bde0bd1bebb
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 87ba947b9564f82f8daf8cd2ba0acac5cc3587ca
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 1ae50fb3ff15097f9a6ca5839f3832bcfc58d3f3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69928672"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134849"
 ---
 # <a name="igchostsetgcstartuplimits-method"></a>IGCHost::SetGCStartupLimits Yöntemi
 Oluşturma 0 ' nın segment boyutunu ve en büyük boyutunu ayarlar.  
   
 > [!IMPORTANT]
-> 4,5 .NET Framework başlayarak, segment boyutunu ve en fazla nesil 0 boyutunu [IGCHost2:: SetGCStartupLimitsEx](../../../../docs/framework/unmanaged-api/hosting/igchost2-setgcstartuplimitsex-method.md) yöntemini kullanarak daha büyük `DWORD` değerlere ayarlayabilirsiniz.  
+> 4,5 .NET Framework başlayarak, [IGCHost2:: SetGCStartupLimitsEx](../../../../docs/framework/unmanaged-api/hosting/igchost2-setgcstartuplimitsex-method.md) yöntemini kullanarak segment boyutunu ve en fazla nesil 0 boyutunu `DWORD` daha büyük değerlere ayarlayabilirsiniz.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -47,14 +45,14 @@ HRESULT SetGCStartupLimits (
  'ndaki 0 üretimi için en büyük boyut.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `SetGCStartupLimits` Yöntemi yalnızca bir kez çağrılabilir. Bu değerler daha sonra değiştirilemez.  
+ `SetGCStartupLimits` yöntemi yalnızca bir kez çağrılabilir. Bu değerler daha sonra değiştirilemez.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi** GCHost. IDL, GCHost. h  
+ **Üst bilgi:** GCHost. IDL, GCHost. h  
   
- **Kitaplığı** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
   
  **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

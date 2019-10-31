@@ -15,18 +15,16 @@ helpviewer_keywords:
 ms.assetid: ddf9085c-7161-44bd-9609-cd2732b9009f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: fd899422287d34407778f67e5b4dfd2f33ffd00c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0809a149a5a5a5e9adea059140d7b4b456337ef3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61994831"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125300"
 ---
 # <a name="icordebugmodule2resolveassembly-method"></a>ICorDebugModule2::ResolveAssembly Yöntemi
 
-Belirtilen meta veri belirteci tarafından başvurulan derlemenin çözümler.
+Belirtilen meta veri belirtecinin başvurduğu derlemeyi çözer.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -40,21 +38,21 @@ HRESULT ResolveAssembly (
 ## <a name="parameters"></a>Parametreler
 
 `tkAssemblyRef`\
-[in] Bir `mdToken` derlemesine başvuran bir değer.
+'ndaki Derlemeye başvuran bir `mdToken` değeri.
 
 `ppAssembly`\
-[out] Bir işaretçi adresine Icordebugassembly nesnenin bütünleştirilmiş kodu temsil eder.
+dışı Derlemeyi temsil eden ICorDebugAssembly nesnesinin adresine yönelik bir işaretçi.
 
 ## <a name="remarks"></a>Açıklamalar
 
-Derleme zaten ne zaman yüklenmezse `ResolveAssembly` çağrıldığında bir HRESULT CORDBG_E_CANNOT_RESOLVE_ASSEMBLY değeri döndürülür.
+`ResolveAssembly` çağrıldığında derleme zaten yüklü değilse, CORDBG_E_CANNOT_RESOLVE_ASSEMBLY HRESULT değeri döndürülür.
 
 ## <a name="requirements"></a>Gereksinimler
 
-**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).
+**Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).
 
-**Üst bilgi:** CorDebug.idl, CorDebug.h
+**Üst bilgi:** CorDebug. IDL, CorDebug. h
 
-**Kitaplığı:** CorGuids.lib
+**Kitaplık:** Corguid. lib
 
-**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+**.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

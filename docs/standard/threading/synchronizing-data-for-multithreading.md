@@ -7,14 +7,12 @@ helpviewer_keywords:
 - threading [.NET], synchronizing threads
 - managed threading
 ms.assetid: b980eb4c-71d5-4860-864a-6dfe3692430a
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: dc8381f8059e37c6c520c2402289124a506188e8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ecc1e234b03cb45075c40ff6698f71f8ce18d0de
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968421"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128976"
 ---
 # <a name="synchronizing-data-for-multithreading"></a>Çoklu iş parçacıklı verileri eşitleme
 
@@ -22,13 +20,13 @@ Birden çok iş parçacığı tek bir nesnenin özelliklerine ve yöntemlerine �
   
 .NET, örnek ve statik üyelere erişimi eşzamanlı hale getirmek için çeşitli stratejiler sağlar:  
   
-- Eşitlenmiş kod bölgeleri. Yalnızca ihtiyaç duyduğunuz kod <xref:System.Threading.Monitor> bloğunu eşleştirmek için bu sınıf için sınıfı veya derleyici desteğini kullanabilirsiniz, performansı geliştirir.  
+- Eşitlenmiş kod bölgeleri. Yalnızca ihtiyaç duyduğunuz kod bloğunu eşleştirmek için bu sınıf için <xref:System.Threading.Monitor> sınıfını veya derleyici desteğini kullanabilirsiniz, performansı geliştirir.  
   
-- El ile eşitleme. .NET sınıf kitaplığı tarafından sunulan eşitleme nesnelerini kullanabilirsiniz. <xref:System.Threading.Monitor> Sınıf hakkındaki tartışmayı içeren, bkz. [eşitleme temel elemanlarına genel bakış](../../../docs/standard/threading/overview-of-synchronization-primitives.md).  
+- El ile eşitleme. .NET sınıf kitaplığı tarafından sunulan eşitleme nesnelerini kullanabilirsiniz. <xref:System.Threading.Monitor> sınıfının bir tartışmasını içeren [eşitleme temel larına genel bakış](../../../docs/standard/threading/overview-of-synchronization-primitives.md)konusuna bakın.  
   
-- Eşitlenmiş bağlamlar. .NET Framework ve Xamarin uygulamalarında, <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute> nesneleri için <xref:System.ContextBoundObject> basit ve otomatik eşitlemeyi etkinleştirmek için kullanabilirsiniz.  
+- Eşitlenmiş bağlamlar. .NET Framework ve Xamarin uygulamalarında, <xref:System.ContextBoundObject> nesneleri için basit ve otomatik eşitlemeyi etkinleştirmek üzere <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute> kullanabilirsiniz.  
   
-- <xref:System.Collections.Concurrent?displayProperty=nameWithType> Ad alanındaki koleksiyon sınıfları. Bu sınıflar yerleşik eşitlenmiş ekleme ve kaldırma işlemleri sağlar. Daha fazla bilgi için bkz. [Iş parçacığı güvenli koleksiyonlar](../../../docs/standard/collections/thread-safe/index.md).  
+- <xref:System.Collections.Concurrent?displayProperty=nameWithType> ad alanındaki koleksiyon sınıfları. Bu sınıflar yerleşik eşitlenmiş ekleme ve kaldırma işlemleri sağlar. Daha fazla bilgi için bkz. [Iş parçacığı güvenli koleksiyonlar](../../../docs/standard/collections/thread-safe/index.md).  
   
  Ortak dil çalışma zamanı, sınıfların gereksinimlere bağlı olarak çeşitli farklı yollarla eşitlenebilecek bir dizi kategoride yer aldığı bir iş parçacığı modeli sağlar. Aşağıdaki tabloda, belirli bir eşitleme kategorisine sahip alanlar ve yöntemler için hangi eşitleme desteğinin sağlandığı gösterilmektedir.  
   
@@ -46,28 +44,28 @@ Birden çok iş parçacığı tek bir nesnenin özelliklerine ve yöntemlerine �
  .NET sınıf kitaplığı, iş parçacıklarını eşitlemeye yönelik bir dizi sınıf sağlar. Bkz. [eşitleme temel elemanlarına genel bakış](../../../docs/standard/threading/overview-of-synchronization-primitives.md).  
   
 ## <a name="synchronized-code-regions"></a>Eşitlenmiş kod bölgeleri  
- Kod bloklarını, örnek <xref:System.Threading.Monitor> yöntemleri ve statik yöntemleri senkronize etmek için sınıfını veya bir derleyici anahtar sözcüğünü kullanabilirsiniz. Eşitlenmiş statik alanlar için destek yoktur.  
+ Kod bloklarını, örnek yöntemleri ve statik yöntemleri senkronize etmek için <xref:System.Threading.Monitor> sınıfını veya bir derleyici anahtar sözcüğünü kullanabilirsiniz. Eşitlenmiş statik alanlar için destek yoktur.  
   
- Her ikisi de C# Visual Basic ve belirli bir dil anahtar sözcüğü, `lock` içindeki C# `SyncLock` ifadesini veya Visual Basic ifadesini içeren kod blokları işaretlemesini destekler. Kod bir iş parçacığı tarafından yürütüldüğünde, kilidi almak için bir girişimde bulunuldu. Kilit zaten başka bir iş parçacığı tarafından edindiyseniz, kilit kullanılabilir hale gelene kadar iş parçacığı engeller. İş parçacığı eşitlenmiş kod bloğundan çıktığında, iş parçacığının bloğundan nasıl çıkmadığına bakılmaksızın kilit serbest bırakılır.  
+ Hem Visual Basic C# hem de belirli bir dil anahtar sözcüğüyle kod blokları, içindeki C# `lock` ifadesiyle veya `SyncLock` deyimindeki Visual Basic. Kod bir iş parçacığı tarafından yürütüldüğünde, kilidi almak için bir girişimde bulunuldu. Kilit zaten başka bir iş parçacığı tarafından edindiyseniz, kilit kullanılabilir hale gelene kadar iş parçacığı engeller. İş parçacığı eşitlenmiş kod bloğundan çıktığında, iş parçacığının bloğundan nasıl çıkmadığına bakılmaksızın kilit serbest bırakılır.  
   
 > [!NOTE]
-> <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> <xref:System.Threading.Monitor> Ve deyimleri, ve<xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType>kullanılarak uygulanır. bu nedenle, diğer yöntemleri eşitlenmiş bölge içinde kendileriyle birlikte kullanılabilir. `SyncLock` `lock`  
+> `lock` ve `SyncLock` deyimleri <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> ve <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType>kullanılarak uygulanır. bu nedenle, diğer <xref:System.Threading.Monitor> yöntemleri eşitlenmiş bölge içinde kendileriyle birlikte kullanılabilir.  
   
- Ayrıca <xref:System.Runtime.CompilerServices.MethodImplOptions.Synchronized?displayProperty=nameWithType>, yöntemi ile aynı etkiye <xref:System.Threading.Monitor> sahip olan <xref:System.Runtime.CompilerServices.MethodImplAttribute> ile bir yöntemi süsleyip, yöntemin tamamının tamamını kilitlemek için derleyici anahtar sözcükleriyle birini kullanabilirsiniz.  
+ Ayrıca, bir <xref:System.Runtime.CompilerServices.MethodImplAttribute> bir yöntemi, <xref:System.Threading.Monitor> kullanma ile aynı etkiye sahip olan bir <xref:System.Runtime.CompilerServices.MethodImplOptions.Synchronized?displayProperty=nameWithType>, yöntemin tüm gövdesini kilitlemek için derleyici anahtar kelimeleriyle de kullanabilirsiniz.  
   
- <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType>, eşitlenen bir kod bölgesine erişimi bekleyen bir iş parçacığını bölmek için kullanılabilir. **Thread. Interrupt** Ayrıca, gibi <xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType>işlemlerden oluşan iş parçacıklarını bölmek için de kullanılır.  
+ <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType>, eşitlenen bir kod bölgesine erişimi bekleyen bir iş parçacığını bölmek için kullanılabilir. **Thread. Interrupt** Ayrıca <xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType>gibi işlemlerden dışarı iş parçacıklarını bölmek için de kullanılır.  
   
 > [!IMPORTANT]
-> Yöntemi `typeof(MyType)` ( `GetType(MyType)` `MyType::typeid`VisualBasiciçindeki yöntemleri) C# C++ korumak için`static` , bu türü (' de, içinde, Visual Basic veya içinde — kilitleme.`Shared` Bunun yerine özel bir statik nesne kullanın. Benzer şekilde, örnek yöntemleri `this` kilitlemek C# için`Me` içinde (Visual Basic olarak) kullanmayın. Bunun yerine özel bir nesne kullanın. Bir sınıf veya örnek, kendi dışında bir kodla kilitlenebilir, bu da kilitlenmelere veya performans sorunlarına yol açabilir.  
+> `static` yöntemlerini (`Shared` yöntemleri Visual Basic) korumak için, türü C#(yani, içindeki `typeof(MyType)` `GetType(MyType)`, Visual Basic C++ veya `MyType::typeid` içindeki kilitlemeyin. Bunun yerine özel bir statik nesne kullanın. Benzer şekilde, örnek yöntemleri kilitlemek için C# içinde `this` (Visual Basic`Me`) kullanmayın. Bunun yerine özel bir nesne kullanın. Bir sınıf veya örnek, kendi dışında bir kodla kilitlenebilir, bu da kilitlenmelere veya performans sorunlarına yol açabilir.  
   
 ### <a name="compiler-support"></a>Derleyici desteği  
- Hem Visual Basic hem C# de nesneyi kilitlemek için ve <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType> kullanan <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> bir dil anahtar sözcüğünü destekler. Visual Basic [SyncLock](../../visual-basic/language-reference/statements/synclock-statement.md) ifadesini destekler; C# [Lock](../../csharp/language-reference/keywords/lock-statement.md) ifadesini destekler.  
+ Hem Visual Basic hem C# de nesneyi kilitlemek için <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> ve <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType> kullanan bir dil anahtar sözcüğünü destekler. Visual Basic [SyncLock](../../visual-basic/language-reference/statements/synclock-statement.md) ifadesini destekler; C# [Lock](../../csharp/language-reference/keywords/lock-statement.md) ifadesini destekler.  
   
  Her iki durumda da, kod bloğunda bir özel durum oluşturulursa, **kilit** veya **SyncLock** tarafından alınan kilit otomatik olarak serbest bırakılır. Ve C# Visual Basic derleyicileri, Monitor ile **TRY**/**finally** bloğunu yayar. TRY 'ın başlangıcında ENTER, **finally** bloğunda **Monitor. Exit** **yazın** . **Kilit** veya **SyncLock** bloğunun içinde bir özel durum oluşturulursa, **finally** işleyicisi herhangi bir temizleme işi yapmanıza olanak tanımak için çalışır.  
   
 ## <a name="synchronized-context"></a>Eşitlenmiş bağlam  
  
-Yalnızca .NET Framework ve Xamarin uygulamalarında, <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute> tüm örnek yöntemlerini ve alanlarını eşleştirmek <xref:System.ContextBoundObject> için üzerinde öğesini kullanabilirsiniz. Aynı bağlam etki alanındaki tüm nesneler aynı kilidi paylaşır. Birden çok iş parçacığının yöntemlere ve alanlara erişmesine izin verilir, ancak herhangi bir zamanda yalnızca tek bir iş parçacığına izin verilir.  
+Yalnızca .NET Framework ve Xamarin uygulamalarında, tüm örnek yöntemlerini ve alanlarını eşleştirmek için <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute> herhangi bir <xref:System.ContextBoundObject> kullanabilirsiniz. Aynı bağlam etki alanındaki tüm nesneler aynı kilidi paylaşır. Birden çok iş parçacığının yöntemlere ve alanlara erişmesine izin verilir, ancak herhangi bir zamanda yalnızca tek bir iş parçacığına izin verilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

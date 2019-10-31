@@ -10,18 +10,16 @@ api_type:
 ms.assetid: 1d4424ab-5143-4e50-a84a-ceeb4ddf3bba
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 676489880cb30ca540cb78d70797dbf4eedf7395
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 239e3a82df0e6010278669f9f429bfad0d163319
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739589"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133719"
 ---
 # <a name="cordebugstatechange-enumeration"></a>CorDebugStateChange Numaralandırması
 
-Değişiklikler iş akışına dayalı atılması gerekir önbelleğe alınan veri miktarı açıklar.
+İşlemdeki değişikliklere göre atılması gereken önbelleğe alınmış verilerin miktarını açıklar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -37,22 +35,22 @@ typedef enum CorDebugStateChange
 
 | Üye            | Açıklama                                                              |
 | ----------------- | ------------------------------------------------------------------------ |
-| `PROCESS_RUNNING` | İşlem, iletme yürütme aracılığıyla yeni bir bellek durumuna erişmedi.            |
-| `FLUSH_ALL`       | İşlem bellek öncekinden rasgele farklı olabilir. |
+| `PROCESS_RUNNING` | İşlem, ileri yürütme yoluyla yeni bir bellek durumuna ulaştı.            |
+| `FLUSH_ALL`       | İşlemin belleği daha önce gerekenden farklı olabilir. |
 
 ## <a name="remarks"></a>Açıklamalar
 
- Üye `CorDebugStateChange` numaralandırma hata ayıklayıcı çağırdığında bir bağımsız değişken olarak sağlanan `ProcessStateChanged` yöntemi ile birlikte [ICorDebugProcess4::ProcessStateChanged](icordebugprocess4-processstatechanged-method.md) veya [Icordebugprocess6:: ProcessStateChanged](icordebugprocess6-processstatechanged-method.md)
+ Hata ayıklayıcı, `ProcessStateChanged` yöntemini [ICorDebugProcess4::P rocessstatechanged](icordebugprocess4-processstatechanged-method.md) veya [ICorDebugProcess6::P rocessstatechanged](icordebugprocess6-processstatechanged-method.md) ile çağırdığında `CorDebugStateChange` numaralandırmanın bir üyesi olarak sağlanır
 
 ## <a name="requirements"></a>Gereksinimler
 
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).
 
- **Üst bilgi:** CorDebug.idl, CorDebug.h
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h
 
- **Kitaplığı:** CorGuids.lib
+ **Kitaplık:** Corguid. lib
 
- **.NET framework sürümleri:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v20plus-md.md)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

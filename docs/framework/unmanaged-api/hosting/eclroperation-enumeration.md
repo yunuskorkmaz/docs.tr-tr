@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 5aef6808-5aac-4b2f-a2c7-fee1575c55ed
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 01b000ed3d75ddb6a7882cb8f03ff2cec64fb9fe
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6becc44b061ff2baac63437b6a72375d1c3735b2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67767881"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131155"
 ---
 # <a name="eclroperation-enumeration"></a>EClrOperation Numaralandırması
-Bir ana bilgisayar ilkesi eylemleri uygulayabilirsiniz işlemleri açıklar.  
+Bir konağın ilke eylemlerini uygulayabileceği işlemler kümesini açıklar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -44,31 +42,31 @@ typedef enum {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`OPR_AppDomainRudeUnload`|Ne zaman gerçekleştirilecek eylemleri ilke belirtebilir bir <xref:System.AppDomain> (rude) normal olmayan bir şekilde kaldırıldı.|  
-|`OPR_AppDomainUnload`|Ne zaman gerçekleştirilecek eylemleri ilke belirtebilir bir <xref:System.AppDomain> kaldırılır.|  
-|`OPR_FinalizerRun`|Konak sonlandırıcılar çalıştırdığınızda, gerçekleştirilecek eylemleri İlkesi belirtebilirsiniz.|  
-|`OPR_ProcessExit`|Ana bilgisayar işlemi olduğunda gerçekleştirilecek eylemleri İlkesi belirtebilirsiniz.|  
-|`OPR_ThreadAbort`|Konak, bir iş parçacığı durduruldu olduğunda gerçekleştirilecek eylemleri İlkesi belirtebilirsiniz.|  
-|`OPR_ThreadRudeAbortInCriticalRegion`|Konak rude iş parçacığı durdurma kodu kritik bir bölgede olduğunda gerçekleştirilecek eylemleri İlkesi belirtebilirsiniz.|  
-|`OPR_ThreadRudeAbortInNonCriticalRegion`|Ana bilgisayar olması kritik olmayan bir kod bölgede rude iş parçacığı iptal ortaya çıktığında ilke eylemler belirtebilirsiniz.|  
+|`OPR_AppDomainRudeUnload`|Ana bilgisayar, bir <xref:System.AppDomain>, düzgün olmayan (Rude) bir biçimde kaldırıldığında gerçekleştirilecek ilke eylemlerini belirtebilir.|  
+|`OPR_AppDomainUnload`|Ana bilgisayar, bir <xref:System.AppDomain> kaldırıldığında gerçekleştirilecek ilke eylemlerini belirtebilir.|  
+|`OPR_FinalizerRun`|Konak, sonlandırıcılar çalıştırıldığında gerçekleştirilecek ilke eylemlerini belirtebilir.|  
+|`OPR_ProcessExit`|Ana bilgisayar, işlem çıktığında gerçekleştirilecek ilke eylemlerini belirtebilir.|  
+|`OPR_ThreadAbort`|Konak, bir iş parçacığı iptal edildiğinde gerçekleştirilecek ilke eylemlerini belirtebilir.|  
+|`OPR_ThreadRudeAbortInCriticalRegion`|Ana bilgisayar, kritik kod bölgesinde bir işlenmemiş iş parçacığı iptali gerçekleştiğinde gerçekleştirilecek ilke eylemlerini belirtebilir.|  
+|`OPR_ThreadRudeAbortInNonCriticalRegion`|Ana bilgisayar kritik olmayan bir kod bölgesinde bir işlenmemiş iş parçacığı iptali gerçekleştiğinde gerçekleştirilecek ilke eylemlerini belirtebilir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Ortak dil çalışma zamanı (CLR) güvenilirlik altyapısı iptal eder ve kaynak arasında kritik bölge kodu ve kod kritik olmayan bölgelerde ortaya oluşan ayırma hatalarını ayırır. Bu ayrım, bir hata kodu nerede oluştuğunu bağlı olarak farklı ilkeleri ayarlamak konakları izin vermek için tasarlanmıştır.  
+ Ortak dil çalışma zamanı (CLR) güvenilirlik altyapısı, kod ve kritik olmayan kod bölgelerinde oluşan önemli bölgelerde oluşan iptal ve kaynak ayırma arızalarını birbirinden ayırır. Bu ayrım, ana bilgisayarların kodda bir hatanın oluştuğu yere bağlı olarak farklı ilkeler değiştirmesine izin vermek için tasarlanmıştır.  
   
- A *kritik bölge kodu* herhangi alanı burada CLR garanti etmez, bir görevi iptal etme veya şu anki görevini kaynakları etkiler isteği tamamlayamıyor. Bir görev bir kilit ve bellek ayırma isteği yapan bağlı hata olduğunu gösteren bir HRESULT alır, örneğin, bu yalnızca kararlılığını emin olmak için bu görevi iptal etmek yetersizdir <xref:System.AppDomain>, çünkü <xref:System.AppDomain> diğer içerebilir aynı kilit için bekleyen görevler. Görev geçerli iptal etmek için bu diğer görevlerin yanıt vermeyi durdurmasına neden olabilir. Böyle bir durumda, konak tüm kaldırma yeteneği olması gerekir. <xref:System.AppDomain> risk olası kararsızlığı yerine.  
+ *Kritik kod bölgesi* , clr 'nin bir görevi iptal etme veya kaynakların bir isteği tamamlayamamakta olduğunu garanti edemediği, yalnızca geçerli görevi etkilediği bir alandır. Örneğin, bir görev bir kilit tutuyor ve bir bellek ayırma isteği yapıldığında hata belirten bir HRESULT alırsa, <xref:System.AppDomain> başka görevler içerebileceğinden <xref:System.AppDomain>kararlılığını sağlamak için bu görevi durdurmak yeterli değildir aynı kilit bekleniyor. Geçerli görevi bırakmak için diğer görevlerin yanıt vermemesine neden olabilir. Böyle bir durumda, konağın potansiyel kararsızlığı yerine tüm <xref:System.AppDomain> kaldırabilmesini gerektirir.  
   
- A *kritik olmayan bölge kodu*, diğer taraftan, CLR burada garanti yalnızca bağlı hata oluşursa görev bir iptal ya da başarısızlık etkiler bir bölgedir.  
+ Diğer taraftan, *kritik olmayan bir kod bölgesi*, clr 'nin bir iptal ya da bir başarısızlığın yalnızca hatanın gerçekleştiği görevi etkileyeceğini garanti edebildiği bir bölgedir.  
   
- CLR ayrıca arasında düzgün ve başarılı olmayan (rude) iptalleri ayırır. Genel olarak, normal veya normal iptal rude durdurma gibi garanti yaparken, bir görev iptal edilmeden önce özel durum işleme rutinleri ve sonlandırıcılar çalıştırmak için her türlü çabayı gösterir.  
+ CLR, düzgün kapanma ve düzgün olmayan (Rude) kaldırma işlemini de ayırt eder. Genel olarak, normal veya düzgün bir şekilde iptali, bir görevi iptal etmeden önce özel durum işleme yordamlarını ve sonlandırıcıları çalıştırma çabalarının yanı sıra bir işlenmemiş iptali bu tür garantiyi yapmaz.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** MSCorEE.h  
+ **Üst bilgi:** MSCorEE. h  
   
- **Kitaplığı:** MSCorEE.dll  
+ **Kitaplık:** MSCorEE. dll  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

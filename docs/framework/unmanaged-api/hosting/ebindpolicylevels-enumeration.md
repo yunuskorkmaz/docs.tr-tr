@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: a9e00b4f-b6d0-4257-bd88-4fe9af97b8fa
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e61acbb15844c5ddfc8b7aa98c41bb18c6e9ade5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 81aef6beb9ee6d622519738d24fdd0a4d42a75b1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67769764"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136558"
 ---
 # <a name="ebindpolicylevels-enumeration"></a>EBindPolicyLevels Numaralandırması
-Derleme ilkesini uygulamak veya değiştirmek istediğiniz düzeyinde belirtmek için bayrakları sağlar.  
+Derleme ilkesini uygulamak veya değiştirmek için kullanılacak düzeyi belirleyen bayraklar sağlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -45,26 +43,26 @@ typedef enum {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`ePolicyLevelAdmin`|İlke yönetici düzeyinde uygulanması gerektiğini belirtir.|  
-|`ePolicyLevelApp`|İlke uygulama düzeyinde uygulanması gerektiğini belirtir.|  
-|`ePolicyLevelHost`|İlkenin ana bilgisayar düzeyinde geçerli olduğunu belirtir.|  
-|`ePolicyLevelNone`|Hiçbir ilke düzeyi bayrakları belirtir.|  
-|`ePolicyLevelPublisher`|İlke yayımcı düzeyinde uygulanması gerektiğini belirtir.|  
-|`ePolicyLevelRetargetable`|İlke değişken düzeylerinde uygulanabilir olacağını belirtir.|  
-|`ePolicyPortability`|.NET Framework derlemesinin uygulamaları arasındaki taşınabilir destek ilkesi belirtir. Bkz: [ \<supportPortability >](../../../../docs/framework/configure-apps/file-schema/runtime/supportportability-element.md) yapılandırma dosyası öğesi.|  
-|`ePolicyUnifiedToCLR`|İlke, ortak dil çalışma zamanı (CLR) birleşik olduğunu belirtir.|  
+|`ePolicyLevelAdmin`|İlkenin yönetici düzeyinde uygulanması gerektiğini belirtir.|  
+|`ePolicyLevelApp`|Bu ilkenin uygulama düzeyinde uygulanması gerektiğini belirtir.|  
+|`ePolicyLevelHost`|İlkenin ana bilgisayar düzeyinde uygulanması gerektiğini belirtir.|  
+|`ePolicyLevelNone`|İlke düzeyindeki bayrakları belirtir.|  
+|`ePolicyLevelPublisher`|İlkenin yayımcı düzeyinde uygulanması gerektiğini belirtir.|  
+|`ePolicyLevelRetargetable`|İlkenin değişken düzeylerinde geçerli olması gerektiğini belirtir.|  
+|`ePolicyPortability`|İlkenin .NET Framework bütünleştirilmiş kod uygulamaları arasında taşınabilirliği desteklemesi gerektiğini belirtir. [\<Supporttaşınabilirlik >](../../../../docs/framework/configure-apps/file-schema/runtime/supportportability-element.md) yapılandırma dosyası öğesi ' ne bakın.|  
+|`ePolicyUnifiedToCLR`|İlkenin ortak dil çalışma zamanı (CLR) ile birleştirilmiş olması gerektiğini belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu numaralandırma yöntemlerini için geçirilen [Iclrhostbindingpolicymanager](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-interface.md) uygulama ilkesi değişiklikleri belirtmek için arabirim.  
+ Bu numaralandırma, uygulama ilkesindeki değişiklikleri belirtmek için [ICLRHostBindingPolicyManager](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-interface.md) arabiriminin yöntemlerine geçirilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** MSCorEE.h  
+ **Üst bilgi:** MSCorEE. h  
   
- **Kitaplığı:** MSCorEE.dll  
+ **Kitaplık:** MSCorEE. dll  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

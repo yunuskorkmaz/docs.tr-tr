@@ -6,51 +6,49 @@ helpviewer_keywords:
 - threading [.NET Framework], about threading
 - managed threading
 ms.assetid: 9b5ec2cd-121b-4d49-b075-222cf26f2344
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d23a12ff92202ace69cb80ff59d6afcb5d8f8243
-ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
+ms.openlocfilehash: 863fa565f7c107214273912a6d110b7664bffe6b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65960373"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131492"
 ---
 # <a name="using-threads-and-threading"></a>İş parçacıkları ve iş parçacığı oluşturmayı kullanma
 
-.NET ile aynı anda birden çok işlem gerçekleştiren uygulamalar yazabilirsiniz. Diğer işlemlerini tutan, olası işlemleriyle olarak da bilinen bir işlem ayrı iş parçacıkları üzerinde yürütebilir *çoklu iş parçacığı kullanımı* veya *serbest iş parçacığı*.  
+.NET ile aynı anda birden çok işlem gerçekleştiren uygulamalar yazabilirsiniz. Diğer işlemleri tutan potansiyel işlemler, çok iş *parçacıklı* veya *ücretsiz iş parçacığı*olarak bilinen bir işlem olan ayrı iş parçacıklarında çalıştırılabilir.  
   
-Çoklu iş parçacığı kullanımı yoğun işlemci kullanımı gerektiren görevleri yürütmek gibi kullanıcı arabirimi etkin kaldığından çünkü kullanıcı girişi için daha hızlı olan uygulamalar, iş parçacıklarını ayırın. Ölçeklenebilir uygulamalar oluşturma iş parçacıkları iş yükü arttıkça eklemek için çoklu iş parçacığı kullanımı da yararlı olur.
+İş parçacığı kullanan uygulamalar, kullanıcı girdisine daha fazla yanıt verir, çünkü kullanıcı arabirimi ayrı iş parçacıklarında yürütülen işlemci yoğun görevler olarak etkin kalır. Çoklu iş parçacığı, ölçeklenebilir uygulamalar oluşturduğunuzda da yararlıdır, çünkü iş yükü arttıkça iş parçacığı ekleyebilirsiniz.
 
 > [!NOTE]
-> Uygulamanın iş parçacığı davranışı hakkında daha fazla denetime ihtiyacınız varsa, iş parçacıkları kendiniz yönetebilirsiniz. Ancak, .NET Framework 4 ile başlayarak, çok iş parçacıklı programlama büyük ölçüde ile basitleştirilmiştir <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> ve <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> sınıfları [paralel LINQ (PLINQ)](../parallel-programming/parallel-linq-plinq.md), yeni eşzamanlı koleksiyon sınıflarını içinde <xref:System.Collections.Concurrent?displayProperty=nameWithType> ad alanı ve iş parçacıkları yerine görevleri kavramını temel alarak yeni bir programlama modeli. Daha fazla bilgi için [paralel programlama](../parallel-programming/index.md) ve [görev paralel kitaplığı (TPL)](../parallel-programming/task-parallel-library-tpl.md).
+> Uygulamanın iş parçacıklarının davranışı üzerinde daha fazla denetime ihtiyacınız varsa, iş parçacıklarını kendiniz yönetebilirsiniz. Ancak, .NET Framework 4 ' den itibaren, çok iş parçacıklı programlama, <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> ve <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> sınıfları, [paralel LINQ (PLıNQ)](../parallel-programming/parallel-linq-plinq.md), <xref:System.Collections.Concurrent?displayProperty=nameWithType> ad alanındaki yeni eşzamanlı koleksiyon sınıfları ve yeni bir programlama modeli ile büyük ölçüde basitleştirilmiştir Bu, iş parçacıkları yerine görev kavramını temel alır. Daha fazla bilgi için bkz. [paralel programlama](../parallel-programming/index.md) ve [görev paralel kitaplığı (TPL)](../parallel-programming/task-parallel-library-tpl.md).
 
-## <a name="how-to-create-and-start-a-new-thread"></a>Nasıl yapılır: Oluşturun ve yeni bir iş parçacığı
+## <a name="how-to-create-and-start-a-new-thread"></a>Nasıl yapılır: yeni bir iş parçacığı oluşturma ve başlatma
 
-Yeni bir örneğini oluşturarak yeni bir iş parçacığı oluşturma <xref:System.Threading.Thread?displayProperty=nameWithType> sınıf ve oluşturucu için yeni bir iş parçacığı üzerinde yürütmek istediğiniz yöntemin adını sağlama. Oluşturulan bir iş parçacığı için çağrı <xref:System.Threading.Thread.Start%2A?displayProperty=nameWithType> yöntemi. Daha fazla bilgi ve örnekler için bkz. [iş parçacığı oluşturma ve geçirme verilerini başlangıç zamanı](creating-threads-and-passing-data-at-start-time.md) makale ve <xref:System.Threading.Thread> API Başvurusu.
+<xref:System.Threading.Thread?displayProperty=nameWithType> sınıfının yeni bir örneğini oluşturarak ve oluşturucuya yeni bir iş parçacığında yürütmek istediğiniz yöntemin adını sağlayarak yeni bir iş parçacığı oluşturursunuz. Oluşturulan bir iş parçacığını başlatmak için <xref:System.Threading.Thread.Start%2A?displayProperty=nameWithType> yöntemini çağırın. Daha fazla bilgi ve örnek için, [Başlangıç zamanında iş parçacığı oluşturma ve veri geçirme](creating-threads-and-passing-data-at-start-time.md) makalesine ve <xref:System.Threading.Thread> API Başvurusu ' na bakın.
 
-## <a name="how-to-stop-a-thread"></a>Nasıl yapılır: Bir iş parçacığı Durdur
+## <a name="how-to-stop-a-thread"></a>Nasıl yapılır: iş parçacığını durdurma
 
-Bir iş parçacığının yürütülmesini sonlandırmak için kullanmak <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> yöntemi. Bu yöntemi oluşturur bir <xref:System.Threading.ThreadAbortException> üzerinde çağrıldığında iş parçacığı üzerinde. Daha fazla bilgi için [iş parçacıklarını yok etme](destroying-threads.md).
+Bir iş parçacığının yürütülmesini sonlandırmak için <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> yöntemini kullanın. Bu yöntem, üzerinde çağrıldığı iş parçacığında bir <xref:System.Threading.ThreadAbortException> oluşturur. Daha fazla bilgi için bkz. [iş parçacıklarını yok](destroying-threads.md)etme.
 
-Kullanabileceğiniz .NET Framework 4 ile başlayarak, <xref:System.Threading.CancellationToken?displayProperty=nameWithType> bir iş parçacığı işbirliği içerisinde devamlılığı iptal etmek için. Daha fazla bilgi için [yönetilen iş parçacıklarında iptal](cancellation-in-managed-threads.md).
+.NET Framework 4 ' ten başlayarak, bir iş parçacığını birlikte iptal etmek için <xref:System.Threading.CancellationToken?displayProperty=nameWithType> kullanabilirsiniz. Daha fazla bilgi için bkz. [yönetilen iş parçacıklarında iptal](cancellation-in-managed-threads.md).
 
-Kullanım <xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType> yöntemini çağıran iş parçacığını yöntemi çağrıldığında iş parçacığının sonlandırılması için bekleyin sağlamak için.
+Çağıran iş parçacığının, yöntemin çağrıldığı iş parçacığının sonlandırmasını beklemesini sağlamak için <xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType> yöntemini kullanın.
 
-## <a name="how-to-pause-or-interrupt-a-thread"></a>Nasıl yapılır: Duraklatma veya bir iş parçacığı kesme
+## <a name="how-to-pause-or-interrupt-a-thread"></a>Nasıl yapılır: iş parçacığını duraklatma veya kesme
 
-Kullandığınız <xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType> belirtilen bir zaman miktarı için geçerli iş parçacığı duraklatmak için yöntemi. Engellenen bir iş parçacığı çağırarak engelleyebilecek <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> yöntemi. Daha fazla bilgi için [duraklatma ve iş parçacıkları engellemeden](pausing-and-resuming-threads.md).
+Geçerli iş parçacığını belirli bir süre için duraklatmak üzere <xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType> yöntemini kullanırsınız. Engellenen bir iş parçacığını <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> yöntemini çağırarak kesintiye getirebilirsiniz. Daha fazla bilgi için bkz. [iş parçacıklarını duraklatma ve kesme](pausing-and-resuming-threads.md).
 
 ## <a name="thread-properties"></a>İş parçacığı özellikleri
 
-Aşağıdaki tabloda bazı sunulmaktadır <xref:System.Threading.Thread> özellikleri:  
+Aşağıdaki tabloda bazı <xref:System.Threading.Thread> özellikleri sunulmaktadır:  
   
 |Özellik|Açıklama|  
 |--------------|-----------|  
-|<xref:System.Threading.Thread.IsAlive%2A>|Döndürür `true` bir iş parçacığı başlatıldı ve henüz henüz olağan biçimde sona erdi veya iptal edildi.|  
-|<xref:System.Threading.Thread.IsBackground%2A>|Alır veya bir iş parçacığı bir arka plan iş parçacığı olup olmadığını belirten Boolean bir değer ayarlar. Arka plan iş parçacığı için ön plan iş parçacığı gibi olsa da, bir arka plan iş parçacığı bir işlem durdurma gelen engellemez. Bir işleme ait tüm ön plan iş parçacığı durdurduktan sonra ortak dil çalışma zamanı işlemi çağırarak sonlandırır <xref:System.Threading.Thread.Abort%2A> hala etkin olan bir arka plan iş parçacığı üzerinde yöntemi. Daha fazla bilgi için [ön plan ve arka plan iş parçacığı](foreground-and-background-threads.md).|  
-|<xref:System.Threading.Thread.Name%2A>|Alır veya bir iş parçacığının adını ayarlar. Tek tek iş parçacığı hata ayıklama bulmak için en sık kullanılan.|  
-|<xref:System.Threading.Thread.Priority%2A>|Alır veya ayarlar bir <xref:System.Threading.ThreadPriority> iş parçacığının'zamanlama önceliğini belirlemek için işletim sistemi tarafından kullanılan bir değer. Daha fazla bilgi için [iş parçacıklarını zamanlama](scheduling-threads.md) ve <xref:System.Threading.ThreadPriority> başvuru.|  
-|<xref:System.Threading.Thread.ThreadState%2A>|Alır bir <xref:System.Threading.ThreadState> içeren bir iş parçacığı geçerli durumlarını değeri.|  
+|<xref:System.Threading.Thread.IsAlive%2A>|Bir iş parçacığı başlatılmışsa ve normal olarak sonlandırılırsa veya durdurulmadıysa `true` döndürür.|  
+|<xref:System.Threading.Thread.IsBackground%2A>|Bir iş parçacığının arka plan iş parçacığı olup olmadığını gösteren bir Boole değeri alır veya ayarlar. Arka plan iş parçacıkları, ön plan iş parçacıkları gibidir, ancak arka plan iş parçacığı bir işlemin durdurulmasına engel olmaz. Bir işleme ait olan tüm ön plan iş parçacıkları durdurulduğunda, ortak dil çalışma zamanı, hala etkin olan arka plan iş parçacıklarında <xref:System.Threading.Thread.Abort%2A> yöntemini çağırarak işlemi sonlandırır. Daha fazla bilgi için bkz. [ön plan ve arka plan Iş parçacıkları](foreground-and-background-threads.md).|  
+|<xref:System.Threading.Thread.Name%2A>|Bir iş parçacığının adını alır veya ayarlar. Hata ayıkladığınızda bireysel iş parçacıklarını saptamak için en sık kullanılan.|  
+|<xref:System.Threading.Thread.Priority%2A>|İş parçacığı zamanlamasını önceliklendirmek için işletim sistemi tarafından kullanılan bir <xref:System.Threading.ThreadPriority> değeri alır veya ayarlar. Daha fazla bilgi için bkz. [iş parçacıklarını zamanlama](scheduling-threads.md) ve <xref:System.Threading.ThreadPriority> başvurusu.|  
+|<xref:System.Threading.Thread.ThreadState%2A>|Bir iş parçacığının geçerli durumlarını içeren <xref:System.Threading.ThreadState> bir değer alır.|  
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

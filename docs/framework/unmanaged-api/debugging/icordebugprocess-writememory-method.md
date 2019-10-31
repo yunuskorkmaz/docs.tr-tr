@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d5c07d86-045d-4391-893b-0bcd2959f90e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4599bf310a0b819bc662b90a5a86e87ac27c37b1
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: eaf5b9980d55b0efb473b4631a8c052b013d0796
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737012"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137251"
 ---
 # <a name="icordebugprocesswritememory-method"></a>ICorDebugProcess::WriteMemory Yöntemi
-Bu işlem belleği veri yazar.  
+Bu işlemdeki bir bellek alanına veri yazar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,27 +37,27 @@ HRESULT WriteMemory(
   
 ## <a name="parameters"></a>Parametreler  
  `address`  
- [in] A `CORDB_ADDRESS` hangi verilere bellek alanı taban adresini değer yazılır. Veri aktarımı gerçekleşmeden önce sistem temel adreste başlayan belirtilen boyut, bellek alanını yazma için erişilebilir olduğunu doğrular. Erişilebilir durumda değilse, yöntem başarısız olur.  
+ 'ndaki Verilerin yazıldığı bellek alanının temel adresi olan bir `CORDB_ADDRESS` değeri. Veri aktarımı gerçekleşmeden önce, sistem, belirtilen boyuttaki bellek alanının temel adresten başlayarak, yazma için erişilebilir olduğunu doğrular. Erişilebilir değilse, yöntemi başarısız olur.  
   
  `size`  
- [in] Bellek alanına yazılacak bayt sayısı.  
+ 'ndaki Bellek alanına yazılacak baytların sayısı.  
   
  `buffer`  
- [in] Yazılacak veriler içeren arabellek.  
+ 'ndaki Yazılacak verileri içeren bir arabellek.  
   
  `written`  
- [out] Bu işlem bellek alanında yazılan bayt sayısını alır bir değişken için bir işaretçi. Varsa `written` NULL ise bu parametre yoksayılır.  
+ dışı Bu işlemdeki bellek alanına yazılan bayt sayısını alan bir değişken işaretçisi. `written` NULL ise, bu parametre yok sayılır.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Veriler herhangi bir kesme noktası otomatik olarak yazılır. .NET Framework sürüm 2. 0'da, yerel hata ayıklayıcılarının bu yöntem kesme noktaları yönerge akımına eklenecek kullanmamanız gerekir. Kullanım [Icordebugprocess2::setunmanagedbreakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-setunmanagedbreakpoint-method.md) yerine.  
+ Veriler, herhangi bir kesme noktası arkasında otomatik olarak yazılır. .NET Framework sürüm 2,0 ' de yerel hata ayıklayıcılar, yönerge akışına kesme noktaları eklemek için bu yöntemi kullanmamalıdır. Bunun yerine [ICorDebugProcess2:: SetUnmanagedBreakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-setunmanagedbreakpoint-method.md) kullanın.  
   
- `WriteMemory` Yöntemi yalnızca yönetilen kod dışında kullanılması gerekir. Bu yöntem, çalışma zamanı yanlış kullandıysanız bozabilir.  
+ `WriteMemory` yöntemi yalnızca yönetilen kodun dışında kullanılmalıdır. Yanlış kullanılırsa, bu yöntem çalışma zamanını bozabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

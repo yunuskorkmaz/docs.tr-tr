@@ -1,19 +1,17 @@
 ---
-title: ICorDebugSymbolProvider2::GetGenericDictionaryInfo yöntemi
+title: 'ICorDebugSymbolProvider2:: Getgenericdictionaryınfo yöntemi'
 ms.date: 03/30/2017
 ms.assetid: ba28fe4e-5491-4670-bff7-7fde572d7593
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 65407fca73971546725d9457d25bf1270d2001e2
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: c9f7206cac54d64c28eb50d81fea00a6f3c494d4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67662541"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133626"
 ---
-# <a name="icordebugsymbolprovider2getgenericdictionaryinfo-method"></a>ICorDebugSymbolProvider2::GetGenericDictionaryInfo yöntemi
+# <a name="icordebugsymbolprovider2getgenericdictionaryinfo-method"></a>ICorDebugSymbolProvider2:: Getgenericdictionaryınfo yöntemi
 
-Genel bir sözlük harita alır.
+Genel sözlük eşlemesini alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -26,66 +24,66 @@ HRESULT GetGenericDictionaryInfo(
 ## <a name="parameters"></a>Parametreler
 
 `ppMemoryBuffer`\
-[out] Adresine bir işaretçi bir [Icordebugmemorybuffer](../../../../docs/framework/unmanaged-api/debugging/icordebugmemorybuffer-interface.md) genel bir sözlük harita içeren nesne. Daha fazla bilgi için Açıklamalar bölümüne bakın.
+dışı Genel sözlük eşlemesini içeren bir [ICorDebugMemoryBuffer](../../../../docs/framework/unmanaged-api/debugging/icordebugmemorybuffer-interface.md) nesnesinin adresine yönelik bir işaretçi. Daha fazla bilgi için Açıklamalar bölümüne bakın.
 
 ## <a name="remarks"></a>Açıklamalar
 
 > [!NOTE]
-> Bu yöntem yalnızca .NET Native ile kullanılabilir.
+> Bu yöntem yalnızca .NET Native kullanılabilir.
 
-Eşleme, üst düzey iki bölümden oluşur:
+Eşleme iki üst düzey bölümden oluşur:
 
-- A [dizin](#Directory) bu dahil tüm sözlüklerin göreli sanal adreslerine (RVA) içeren.
+- Bu haritaya dahil olan tüm sözlüklerin göreli sanal adreslerini (RVA) içeren bir [Dizin](#Directory) .
 
-- Bayt hizalı [yığın](#Heap) nesne oluşturmada bilgileri içeren. Son directory girişinin hemen sonra başlar.
+- Nesne örneği oluşturma bilgilerini içeren bayt hizalanmış [yığın](#Heap) . Son dizin girdisinden hemen sonra başlar.
 
 <a name="Directory"></a>
 
 ## <a name="the-directory"></a>Dizin
 
-Her giriş dizininde yığın içinde bir uzaklık başvuruyor; yani yığın başlangıç göre bir uzaklık değildir. Girişler değerini mutlaka benzersiz değil; birden çok dizin girdisi yığınındaki aynı uzaklık işaret edecek şekilde mümkündür.
+Dizindeki her giriş, yığın içindeki bir uzaklığa başvurur; diğer bir deyişle, yığının başlangıcına göre bir uzaklıkdır. Tek tek girişlerin değeri benzersiz değildir; birden çok dizin girişinin yığında aynı sapmayı göstermesi mümkündür.
 
-Genel bir sözlük harita öğesinin dizin bölümü aşağıdaki yapıya sahiptir:
+Genel sözlük eşlemesinin dizin bölümü aşağıdaki yapıya sahiptir:
 
-- İlk 4 baytı dictionary girişlerinin (diğer bir deyişle, sözlükteki göreli sanal adreslerine sayısı) sayısını içerir. Bu değer anılacaktır *N*. Yüksek bit ayarlanmışsa girişleri artan düzende göreli sanal adres göre sıralanır.
+- İlk 4 bayt sözlük girişi sayısını (yani, Sözlükteki göreli sanal adreslerin sayısını) içerir. Bu değere *N*olarak başvuracağız. Yüksek bit ayarlandıysa, girişler göreli sanal adrese göre artan sırada sıralanır.
 
-- *N* dizin girdisi izleyin. Her girişin iki 4 baytlık Segment 8 baytlık oluşur:
+- *N* Dizin girdileri izler. Her giriş, iki 4 baytlık kesimde 8 bayttan oluşur:
 
-  - Bayt 0-3: RVA; sözlüğün göreli sanal adres.
+  - Bayt 0-3: RVA; sözlüğün göreli sanal adresi.
 
-  - 4-7 baytlar: Uzaklık; yığın başlangıcını göre bir uzaklık.
+  - Bayt 4-7: konum; yığının başlangıcına göre bir göreli konum.
 
 <a name="Heap"></a>
 
 ## <a name="the-heap"></a>Yığın
 
-Dizin boyutu + 4 akıştan uzunluğunu çıkararak göre bir akış okuyucusunu yığının boyutu hesaplanabilir. Diğer bir deyişle:
+Yığın boyutu + 4 dizin boyutundan akışın uzunluğu çıkartılacak şekilde bir akış okuyucusu tarafından hesaplanabilir. Diğer bir deyişle:
 
 ```csharp
 Heap Size = Stream.Length – (Directory Size + 4)
 ```
 
-dizin boyutu olduğu `N * 8`.
+Dizin boyutunun `N * 8`.
 
-Yığındaki her örneklemesi bilgi öğesi için biçimi şu şekildedir:
+Yığındaki her bir örnek oluşturma bilgi öğesinin biçimi:
 
-- Bu örnek oluşturma bilgi öğesi sıkıştırılmış ECMA meta veri biçimi bayt uzunluğu. Değeri, bu uzunluğu bilgileri içermez.
+- Bu örnek oluşturma bilgi öğesinin sıkıştırılmış ECMA meta veri biçimindeki bayt cinsinden uzunluğu. Değer bu uzunluk bilgilerini dışlar.
 
-- Genel örnek oluşturma türleri sayısı veya *T*, sıkıştırılmış ECMA meta veri biçiminde.
+- Sıkıştırılmış ECMA meta veri biçimindeki genel örnek oluşturma türlerinin veya *T*'nin sayısı.
 
-- *T* türlerini, her temsil ECMA türü imza biçiminde.
+- *T* türleri, her biri ECMA tür imza biçiminde gösterilir.
 
-Her yığın öğe uzunluğu dahilini Basit Dizin bölümü yığın etkilemeden sıralama sağlar.
+Her yığın öğesinin uzunluğunun dahil edilmesi, yığın etkilenmeden dizin bölümünün basit sıralanmasını mümkün.
 
 ## <a name="requirements"></a>Gereksinimler
 
-**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).
+**Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).
 
-**Üst bilgi:** CorDebug.idl, CorDebug.h
+**Üst bilgi:** CorDebug. IDL, CorDebug. h
 
-**Kitaplığı:** CorGuids.lib
+**Kitaplık:** Corguid. lib
 
-**.NET framework sürümleri:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]
+**.NET Framework sürümleri:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: a684f7d7-d0c2-4690-b721-639e613f11f8
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c2ea0bf215c0d2abfe9beb29d736f893073d3be8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: cc02f63808b1929b93777c8bbc67c47000b0b424
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739514"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132742"
 ---
 # <a name="cordebugunmappedstop-enumeration"></a>CorDebugUnmappedStop Numaralandırması
-Kod yürütülmesine bir durdurmak tarafından adımlayıcıdaki tetikleyebilirsiniz eşlenmemiş kodun türünü belirtir.  
+Stepper tarafından kod yürütmede bir durdurmak tetikleyemeyecek eşlenmemiş kod türünü belirtir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -44,25 +42,25 @@ typedef enum CorDebugUnmappedStop {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`STOP_NONE`|Herhangi bir türde eşlenmemiş kod durdurmayın.|  
-|`STOP_PROLOG`|Giriş kodu durdurun.|  
-|`STOP_EPILOG`|Sonuç kodu durdurun.|  
-|`STOP_NO_MAPPING_INFO`|Eşleme bilgisi kodda durdurun.|  
-|`STOP_OTHER_UNMAPPED`|Giriş, bitiş, Hayır eşleme bilgilerini veya yönetilmeyen bir kategori uymayan eşlenmemiş kodda durdurun.|  
-|`STOP_UNMANAGED`|Yönetilmeyen kodda durdurun. Bu değer, yalnızca birlikte çalışma hata ayıklama ile geçerlidir.|  
-|`STOP_ALL`|Eşlenmemiş kod tüm türlerin durdurun.|  
+|`STOP_NONE`|Herhangi bir eşlenmemiş kod türünde durmayın.|  
+|`STOP_PROLOG`|Giriş kodunda durdur.|  
+|`STOP_EPILOG`|Bitiş kodunda durdur.|  
+|`STOP_NO_MAPPING_INFO`|Eşleme bilgilerine sahip olmayan kodda durdur.|  
+|`STOP_OTHER_UNMAPPED`|Giriş, bitiş, hiçbir eşleme bilgisi veya yönetilmeyen kategoriye uymayan eşlenmemiş kodda durun.|  
+|`STOP_UNMANAGED`|Yönetilmeyen kodda durdur. Bu değer yalnızca birlikte çalışma hata ayıklaması ile geçerlidir.|  
+|`STOP_ALL`|Eşlenmemiş kod türlerinde durun.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Kullanım [ICorDebugStepper::setunmappedstopmask](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setunmappedstopmask-method.md) Adımlayıcı durdurur eşlenmemiş kod belirten bayrakları ayarlamanızı yöntemi.  
+ Stepper 'in durdurulacağı eşlenmemiş kodu belirten bayrakları ayarlamak için [ICorDebugStepper:: SetUnmappedStopMask](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setunmappedstopmask-method.md) yöntemini kullanın.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

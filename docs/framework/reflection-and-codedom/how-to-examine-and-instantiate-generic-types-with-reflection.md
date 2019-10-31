@@ -9,65 +9,63 @@ helpviewer_keywords:
 - reflection, generic types
 - generics [.NET Framework], reflection
 ms.assetid: f93b03b0-1778-43fc-bc6d-35983d210e74
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6e15ef69c4777cdafe2e5861050a1ccc1f6a1a70
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 62e4e066740d0422f8f7045b043a5725278c209c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046012"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130130"
 ---
 # <a name="how-to-examine-and-instantiate-generic-types-with-reflection"></a>Nasıl yapılır: Yansıma ile Genel Türleri İnceleme ve Örnek Oluşturma
-Genel türler hakkında bilgi, genel türü temsil eden bir <xref:System.Type> nesneyi inceleyerek, diğer türlerle ilgili bilgilerle aynı şekilde alınır: Prensibi, genel bir türün genel tür parametrelerini temsil eden bir <xref:System.Type> nesne listesi içerir. Bu bölümdeki ilk yordam genel türleri inceler.  
+Genel türler hakkında bilgi, genel türü temsil eden bir <xref:System.Type> nesnesini inceleyerek, diğer türlerle ilgili bilgilerle aynı şekilde alınır: Prensibi, genel bir türün genel tür parametrelerini temsil eden <xref:System.Type> nesnelerinin bir listesini içerir. Bu bölümdeki ilk yordam genel türleri inceler.  
   
- Tür bağımsız değişkenlerini genel <xref:System.Type> tür tanımının tür parametrelerine bağlayarak, oluşturulmuş bir türü temsil eden bir nesne oluşturabilirsiniz. İkinci yordam bunu gösterir.  
+ Tür bağımsız değişkenlerini genel tür tanımının tür parametrelerine bağlayarak, oluşturulmuş bir türü temsil eden <xref:System.Type> bir nesne oluşturabilirsiniz. İkinci yordam bunu gösterir.  
   
 ### <a name="to-examine-a-generic-type-and-its-type-parameters"></a>Genel bir tür ve tür parametrelerini incelemek için  
   
-1. Genel türü temsil <xref:System.Type> eden bir örneğini alır. C# `typeof` Aşağıdaki kodda, türü işleci kullanılarak elde edilir (`GetType` Visual Basic, `typeid` görselde C++). Nesne almanın diğer yolları için bkz. sınıfkonusu.<xref:System.Type> <xref:System.Type> Bu yordamın geri kalanında, türünün adlı `t`bir yöntem parametresinde yer aldığı unutulmamalıdır.  
+1. Genel türü temsil eden <xref:System.Type> örneğini alır. Aşağıdaki kodda, türü C# `typeof` işleci (`GetType` Visual Basic, görsel C++'te `typeid`) kullanılarak elde edilir. <xref:System.Type> nesnesini almanın diğer yolları için <xref:System.Type> sınıfı konusuna bakın. Bu yordamın geri kalanında, türün `t`adlı bir yöntem parametresinde yer aldığı unutulmamalıdır.  
   
      [!code-cpp[HowToGeneric#2](../../../samples/snippets/cpp/VS_Snippets_CLR/HowToGeneric/cpp/ur.cpp#2)]
      [!code-csharp[HowToGeneric#2](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToGeneric/CS/ur.cs#2)]
      [!code-vb[HowToGeneric#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToGeneric/VB/ur.vb#2)]  
   
-2. Türün genel olup olmadığını anlamak için <xref:System.Type.IsGenericTypeDefinition%2A> özelliğinikullanınvetürüngeneltürtanımıolupolmadığınıanlamakiçinözelliğinikullanın.<xref:System.Type.IsGenericType%2A>  
+2. Türün genel olup olmadığını anlamak için <xref:System.Type.IsGenericType%2A> özelliğini kullanın ve türün genel tür tanımı olup olmadığını anlamak için <xref:System.Type.IsGenericTypeDefinition%2A> özelliğini kullanın.  
   
      [!code-cpp[HowToGeneric#3](../../../samples/snippets/cpp/VS_Snippets_CLR/HowToGeneric/cpp/ur.cpp#3)]
      [!code-csharp[HowToGeneric#3](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToGeneric/CS/ur.cs#3)]
      [!code-vb[HowToGeneric#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToGeneric/VB/ur.vb#3)]  
   
-3. <xref:System.Type.GetGenericArguments%2A> Yöntemini kullanarak genel tür bağımsız değişkenlerini içeren bir dizi alın.  
+3. <xref:System.Type.GetGenericArguments%2A> yöntemini kullanarak genel tür bağımsız değişkenlerini içeren bir dizi alın.  
   
      [!code-cpp[HowToGeneric#4](../../../samples/snippets/cpp/VS_Snippets_CLR/HowToGeneric/cpp/ur.cpp#4)]
      [!code-csharp[HowToGeneric#4](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToGeneric/CS/ur.cs#4)]
      [!code-vb[HowToGeneric#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToGeneric/VB/ur.vb#4)]  
   
-4. Her tür bağımsız değişkeni için, bir tür parametresi (örneğin, genel tür tanımında) veya tür parametresi için belirtilmiş bir tür (örneğin, oluşturulmuş bir tür için), <xref:System.Type.IsGenericParameter%2A> özelliğini kullanarak.  
+4. Her tür bağımsız değişkeni için, <xref:System.Type.IsGenericParameter%2A> özelliğini kullanarak bir tür parametresi (örneğin, bir genel tür tanımında) veya tür parametresi için belirtilmiş bir tür (örneğin, oluşturulmuş bir tür) olup olmadığını saptayın.  
   
      [!code-cpp[HowToGeneric#5](../../../samples/snippets/cpp/VS_Snippets_CLR/HowToGeneric/cpp/ur.cpp#5)]
      [!code-csharp[HowToGeneric#5](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToGeneric/CS/ur.cs#5)]
      [!code-vb[HowToGeneric#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToGeneric/VB/ur.vb#5)]  
   
-5. Tür sisteminde, genel tür parametresi <xref:System.Type>, normal türler gibi bir örneği tarafından temsil edilir. Aşağıdaki kod, genel bir tür parametresini temsil eden bir <xref:System.Type> nesnenin adını ve parametre konumunu görüntüler. Burada parametre konumu önemsiz bir bilgi; başka bir genel türün tür bağımsız değişkeni olarak kullanılmış bir tür parametresi incelerken daha fazla ilgi çekici olur.  
+5. Tür sisteminde, genel tür parametresi, normal türlerin olduğu gibi bir <xref:System.Type>örneğiyle temsil edilir. Aşağıdaki kod, bir genel tür parametresini temsil eden bir <xref:System.Type> nesnesinin ad ve parametre konumunu görüntüler. Burada parametre konumu önemsiz bir bilgi; başka bir genel türün tür bağımsız değişkeni olarak kullanılmış bir tür parametresi incelerken daha fazla ilgi çekici olur.  
   
      [!code-cpp[HowToGeneric#6](../../../samples/snippets/cpp/VS_Snippets_CLR/HowToGeneric/cpp/ur.cpp#6)]
      [!code-csharp[HowToGeneric#6](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToGeneric/CS/ur.cs#6)]
      [!code-vb[HowToGeneric#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToGeneric/VB/ur.vb#6)]  
   
-6. Tüm kısıtlamaları tek bir dizide elde etmek için <xref:System.Type.GetGenericParameterConstraints%2A> yöntemini kullanarak bir genel tür parametresinin temel tür kısıtlamasını ve arabirim kısıtlamalarını saptayın. Kısıtlamaların belirli bir sırada olması garanti edilmez.  
+6. Tüm kısıtlamaları tek bir dizide elde etmek için <xref:System.Type.GetGenericParameterConstraints%2A> yöntemini kullanarak genel tür kısıtlamasının temel tür kısıtlamasını ve arabirim kısıtlamalarını saptayın. Kısıtlamaların belirli bir sırada olması garanti edilmez.  
   
      [!code-cpp[HowToGeneric#7](../../../samples/snippets/cpp/VS_Snippets_CLR/HowToGeneric/cpp/ur.cpp#7)]
      [!code-csharp[HowToGeneric#7](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToGeneric/CS/ur.cs#7)]
      [!code-vb[HowToGeneric#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToGeneric/VB/ur.vb#7)]  
   
-7. Bir tür parametresindeki özel kısıtlamaları (örneğin, bir başvuru türü olması gerekir) bulmaya yönelik özelliğinikullanın.<xref:System.Type.GenericParameterAttributes%2A> Özelliği, aşağıdaki kodda gösterildiği gibi, bir varyansı temsil eden değerleri de içerir.  
+7. Bir tür parametresindeki özel kısıtlamaları (örneğin, bir başvuru türü olması gibi) keşfetmesi için <xref:System.Type.GenericParameterAttributes%2A> özelliğini kullanın. Özelliği, aşağıdaki kodda gösterildiği gibi, bir varyansı temsil eden değerleri de içerir.  
   
      [!code-cpp[HowToGeneric#8](../../../samples/snippets/cpp/VS_Snippets_CLR/HowToGeneric/cpp/ur.cpp#8)]
      [!code-csharp[HowToGeneric#8](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToGeneric/CS/ur.cs#8)]
      [!code-vb[HowToGeneric#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToGeneric/VB/ur.vb#8)]  
   
-8. Özel kısıtlama öznitelikleri bayraklardır ve hiçbir özel kısıtlama temsil eden aynı<xref:System.Reflection.GenericParameterAttributes.None?displayProperty=nameWithType>bayrak (), hiçbir Kovaryans veya değişken varyans de temsil eder. Bu nedenle, bu koşullardan biri için test etmek üzere uygun maskeyi kullanmanız gerekir. Bu durumda, özel kısıtlama <xref:System.Reflection.GenericParameterAttributes.SpecialConstraintMask?displayProperty=nameWithType> bayraklarını yalıtmak için kullanın.  
+8. Özel kısıtlama öznitelikleri bayraklardır ve hiçbir özel kısıtlama temsil eden aynı bayrak (<xref:System.Reflection.GenericParameterAttributes.None?displayProperty=nameWithType>), hiçbir Kovaryans veya değişken varyansı de temsil eder. Bu nedenle, bu koşullardan biri için test etmek üzere uygun maskeyi kullanmanız gerekir. Bu durumda, özel kısıtlama bayraklarını yalıtmak için <xref:System.Reflection.GenericParameterAttributes.SpecialConstraintMask?displayProperty=nameWithType> kullanın.  
   
      [!code-cpp[HowToGeneric#9](../../../samples/snippets/cpp/VS_Snippets_CLR/HowToGeneric/cpp/ur.cpp#9)]
      [!code-csharp[HowToGeneric#9](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToGeneric/CS/ur.cs#9)]
@@ -78,38 +76,38 @@ Genel türler hakkında bilgi, genel türü temsil eden bir <xref:System.Type> n
   
 #### <a name="to-construct-an-instance-of-a-generic-type"></a>Genel türün bir örneğini oluşturmak için  
   
-1. Genel türü <xref:System.Type> temsil eden bir nesne alır. Aşağıdaki <xref:System.Collections.Generic.Dictionary%602> kod, genel türü iki farklı şekilde alır: <xref:System.Type.GetType%28System.String%29?displayProperty=nameWithType> yöntemi tanımlayan bir dize ile yöntem aşırı yüklemesini kullanarak ve oluşturulan tür `Dictionary\<String, Example>` üzerinde <xref:System.Type.GetGenericTypeDefinition%2A> yöntemini çağırarak (`Dictionary(Of String, Example)` Visual Basic). <xref:System.Type.MakeGenericType%2A> Yöntemi genel bir tür tanımı gerektiriyor.  
+1. Genel türü temsil eden bir <xref:System.Type> nesnesi alır. Aşağıdaki kod, genel tür <xref:System.Collections.Generic.Dictionary%602> iki farklı şekilde alır: türü tanımlayan bir dize ile <xref:System.Type.GetType%28System.String%29?displayProperty=nameWithType> yöntemi aşırı yüklemesini kullanarak ve oluşturulan tür `Dictionary\<String, Example>` (`Dictionary(Of String, Example)` Visual Basic) üzerinde <xref:System.Type.GetGenericTypeDefinition%2A> yöntemini çağırarak. <xref:System.Type.MakeGenericType%2A> yöntemi genel bir tür tanımı gerektiriyor.  
   
      [!code-cpp[HowToGeneric#10](../../../samples/snippets/cpp/VS_Snippets_CLR/HowToGeneric/cpp/ur.cpp#10)]
      [!code-csharp[HowToGeneric#10](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToGeneric/CS/ur.cs#10)]
      [!code-vb[HowToGeneric#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToGeneric/VB/ur.vb#10)]  
   
-2. Tür parametrelerinin yerine geçecek tür bağımsız değişkenleri dizisi oluşturun. Dizi, tür parametresi listesinde göründükleri şekilde doğru <xref:System.Type> sayıda nesne içermelidir. Bu durumda, anahtar (ilk tür parametresi) türündedir <xref:System.String>ve sözlükteki değerler adlı `Example`bir sınıfın örnekleridir.  
+2. Tür parametrelerinin yerine geçecek tür bağımsız değişkenleri dizisi oluşturun. Dizi, tür parametresi listesinde göründükleri şekilde doğru sayıda <xref:System.Type> nesnesi içermelidir. Bu durumda, anahtar (ilk tür parametresi) <xref:System.String>türündedir ve sözlükteki değerler `Example`adlı bir sınıfın örnekleridir.  
   
      [!code-cpp[HowToGeneric#11](../../../samples/snippets/cpp/VS_Snippets_CLR/HowToGeneric/cpp/ur.cpp#11)]
      [!code-csharp[HowToGeneric#11](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToGeneric/CS/ur.cs#11)]
      [!code-vb[HowToGeneric#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToGeneric/VB/ur.vb#11)]  
   
-3. Tür bağımsız değişkenlerini tür parametrelerine bağlamak ve türü oluşturmak için yönteminiçağırın.<xref:System.Type.MakeGenericType%2A>  
+3. Tür bağımsız değişkenlerini tür parametrelerine bağlamak ve türü oluşturmak için <xref:System.Type.MakeGenericType%2A> yöntemini çağırın.  
   
      [!code-cpp[HowToGeneric#12](../../../samples/snippets/cpp/VS_Snippets_CLR/HowToGeneric/cpp/ur.cpp#12)]
      [!code-csharp[HowToGeneric#12](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToGeneric/CS/ur.cs#12)]
      [!code-vb[HowToGeneric#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToGeneric/VB/ur.vb#12)]  
   
-4. Oluşturulmuş türden bir nesne oluşturmak için yöntemaşırıyüklemesinikullanın.<xref:System.Activator.CreateInstance%28System.Type%29> Aşağıdaki kod, elde edilen `Example` `Dictionary<String, Example>` nesnede sınıfının iki örneğini depolar.  
+4. Oluşturulmuş türden bir nesne oluşturmak için <xref:System.Activator.CreateInstance%28System.Type%29> yöntemi aşırı yüklemesini kullanın. Aşağıdaki kod, sonuçta elde edilen `Dictionary<String, Example>` nesnesinde `Example` sınıfının iki örneğini depolar.  
   
      [!code-cpp[HowToGeneric#13](../../../samples/snippets/cpp/VS_Snippets_CLR/HowToGeneric/cpp/ur.cpp#13)]
      [!code-csharp[HowToGeneric#13](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToGeneric/CS/ur.cs#13)]
      [!code-vb[HowToGeneric#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToGeneric/VB/ur.vb#13)]  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod örneği, genel tür `DisplayGenericType` tanımlarını ve kodda kullanılan oluşturulmuş türleri incelemek için bir yöntem tanımlar ve bilgilerini görüntüler. Yöntemi,<xref:System.Type.IsGenericType%2A> ,ve<xref:System.Type.GenericParameterPosition%2A> özelliklerinin ve<xref:System.Type.GetGenericArguments%2A> yönteminin nasıl kullanılacağını gösterir. <xref:System.Type.IsGenericParameter%2A> `DisplayGenericType`  
+ Aşağıdaki kod örneği, genel tür tanımlarını incelemek için bir `DisplayGenericType` yöntemini ve kodda kullanılan oluşturulmuş türleri tanımlar ve bilgilerini görüntüler. `DisplayGenericType` yöntemi <xref:System.Type.IsGenericType%2A>, <xref:System.Type.IsGenericParameter%2A>ve <xref:System.Type.GenericParameterPosition%2A> özelliklerinin ve <xref:System.Type.GetGenericArguments%2A> yönteminin nasıl kullanılacağını gösterir.  
   
- Örnek ayrıca genel tür parametresini `DisplayGenericParameter` İnceleme ve kısıtlamalarını görüntüleme yöntemini tanımlar.  
+ Örnek ayrıca bir genel tür parametresini incelemek ve kısıtlamalarını göstermek için bir `DisplayGenericParameter` yöntemi tanımlar.  
   
  Kod örneği, tür parametresi kısıtlamalarını gösteren genel bir tür da dahil olmak üzere bir dizi test türü tanımlar ve bu türler hakkındaki bilgilerin nasıl görüntüleneceğini gösterir.  
   
- Örnek, türünde bağımsız değişkenlerin bir dizisini <xref:System.Collections.Generic.Dictionary%602> oluşturarak ve <xref:System.Type.MakeGenericType%2A> yöntemini çağırarak sınıfından bir tür oluşturur. Program, kullanılarak <xref:System.Type.MakeGenericType%2A> oluşturulan <xref:System.Type> nesneyi ( `typeof` <xref:System.Type> VisualBasic)kullanarak,aynıolduğunugösterenilekarşılaştırır.`GetType` Benzer şekilde, program, oluşturulan <xref:System.Type.GetGenericTypeDefinition%2A> türün genel tür tanımını elde etmek için yöntemini kullanır ve <xref:System.Collections.Generic.Dictionary%602> sınıfı temsil eden <xref:System.Type> nesneyle karşılaştırır.  
+ Örnek, <xref:System.Collections.Generic.Dictionary%602> sınıfından bir tür oluşturur ve <xref:System.Type.MakeGenericType%2A> yöntemini çağırır. Program, <xref:System.Type.MakeGenericType%2A> kullanılarak oluşturulan <xref:System.Type> nesnesini, aynı olduğunu gösteren `typeof` (`GetType`) ile elde edilen <xref:System.Type> nesnesiyle karşılaştırır. Benzer şekilde, program, oluşturulan türün genel tür tanımını elde etmek için <xref:System.Type.GetGenericTypeDefinition%2A> yöntemini kullanır ve onu <xref:System.Collections.Generic.Dictionary%602> sınıfını temsil eden <xref:System.Type> nesnesiyle karşılaştırır.  
   
  [!code-cpp[HowToGeneric#1](../../../samples/snippets/cpp/VS_Snippets_CLR/HowToGeneric/cpp/ur.cpp#1)]
  [!code-csharp[HowToGeneric#1](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToGeneric/CS/ur.cs#1)]

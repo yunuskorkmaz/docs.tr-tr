@@ -2,14 +2,12 @@
 title: .NET Native Yansıtma API'si Başvurusu
 ms.date: 03/30/2017
 ms.assetid: 0429c049-22a3-4ba1-9cc8-f6ee91e31d9c
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9c1fbef46231fed3af0d335e9396b301fe503254
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 01678ea6230a53416f213730ae6bb66e6bc057f8
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049391"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128226"
 ---
 # <a name="net-native-reflection-api-reference"></a>.NET Native Yansıtma API'si Başvurusu
 .NET Native üç yeni özel durum türü içerir: [System. Runtime. CompilerServices. MissingInteropDataException](missinginteropdataexception-class-net-native.md), [System. Reflection. MissingMetadataException](missingmetadataexception-class-net-native.md)ve [System. Reflection. MissingRuntimeArtifactException](missingruntimeartifactexception-class-net-native.md). Üç özel durum türü hakkında aşağıdakilere göz önünde edin:  
@@ -25,10 +23,10 @@ ms.locfileid: "71049391"
 - Metotlar için [MissingMetadataException sorun giderici](https://dotnet.github.io/native/troubleshooter/method.html) .  
   
 > [!NOTE]
-> Bu başvuru .NET Native için benzersiz olan üç özel durum türünü belgeler. .NET Framework Çekirdek yansıma API 'si için başvuru belgeleri için, ve <xref:System.Reflection> <xref:System.Reflection.Emit> ad alanları <xref:System.Reflection.Context> ' na bakın. .NET Framework Çekirdek birlikte çalışma API 'SI için başvuru belgeleri için bkz <xref:System.Runtime.InteropServices>.  
+> Bu başvuru .NET Native için benzersiz olan üç özel durum türünü belgeler. .NET Framework Çekirdek yansıma API 'SI için başvuru belgeleri için, bkz. <xref:System.Reflection>, <xref:System.Reflection.Context> ve <xref:System.Reflection.Emit> ad alanları. .NET Framework Çekirdek birlikte çalışma API 'SI için başvuru belgeleri için bkz. <xref:System.Runtime.InteropServices>.  
   
 ## <a name="systemreflection-namespace"></a>System. Reflection ad alanı  
- Ad <xref:System.Reflection> alanı, .NET Framework yansıma için kullanılan çekirdek türlerini içerir. .NET Native için Ayrıca iki yeni özel durum türü de içerir:  
+ <xref:System.Reflection> ad alanı, .NET Framework yansıma için kullanılan çekirdek türlerini içerir. .NET Native için Ayrıca iki yeni özel durum türü de içerir:  
   
 |örneği|Açıklama|  
 |-----------|-----------------|  
@@ -38,7 +36,7 @@ ms.locfileid: "71049391"
  Bu ad alanındaki diğer türler hakkındaki belgeler için .NET Framework belge kümesindeki <xref:System.Reflection> başvuru sayfalarına bakın.  
   
 ## <a name="systemruntimecompilerservices-namespace"></a>System. Runtime. CompilerServices Ad alanı  
- Ad <xref:System.Runtime.CompilerServices> alanı, dil derleyicileri tarafından Kullanıcı için tasarlanan türleri içerir. .NET Native için, yeni bir özel durum türü de içerir:  
+ <xref:System.Runtime.CompilerServices> ad alanı, Kullanıcı için dil derleyicileri tarafından tasarlanan türler içerir. .NET Native için, yeni bir özel durum türü de içerir:  
   
 |örneği|Açıklama|  
 |-----------|-----------------|  

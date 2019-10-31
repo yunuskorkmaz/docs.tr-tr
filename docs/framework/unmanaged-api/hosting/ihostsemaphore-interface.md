@@ -14,33 +14,31 @@ helpviewer_keywords:
 ms.assetid: c0765321-656c-441e-bab5-58176292be1e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2d7d4a295832a958fb6a8fe2e6c43a09135500d3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2cf490bcd167b7a498ae21f479f616694ccb5521
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61696686"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139485"
 ---
 # <a name="ihostsemaphore-interface"></a>IHostSemaphore Arabirimi
-İş parçacığı için semafor konağın uygulamasını temsil eder.  
+Ana bilgisayarın iş parçacığı için semafor uygulamasını temsil eder.  
   
 ## <a name="methods"></a>Yöntemler  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[ReleaseSemaphore Yöntemi](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-releasesemaphore-method.md)|Geçerli sayısını artırır `IHostSemaphore` örneği tarafından belirtilen süre.|  
-|[Wait Yöntemi](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-wait-method.md)|Geçerli neden `IHostSemaphore` örneğin ait kadar bekleyin veya zaman geçtikçe belirtilen miktarı.|  
+|[ReleaseSemaphore Yöntemi](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-releasesemaphore-method.md)|Geçerli `IHostSemaphore` örneğinin sayısını belirtilen miktarda artırır.|  
+|[Wait Yöntemi](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-wait-method.md)|Geçerli `IHostSemaphore` örneğinin, ait olana veya belirtilen süre geçtikten sonra beklemesini sağlar.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** MSCorEE.h  
+ **Üst bilgi:** MSCorEE. h  
   
- **Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil  
+ **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

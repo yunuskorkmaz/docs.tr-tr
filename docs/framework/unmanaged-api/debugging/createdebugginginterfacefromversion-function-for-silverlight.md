@@ -8,17 +8,15 @@ helpviewer_keywords:
 - debugging API [Silverlight]
 - Silverlight, debugging
 ms.assetid: 35c7a18f-133a-4584-bd25-bb338568b0c6
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 96968956b513e1ae80a25f5fb4afea48bf888876
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 438af9f191f48a86207c3b343ba428eef2c1fabc
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739269"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132196"
 ---
 # <a name="createdebugginginterfacefromversion-function-for-silverlight"></a>Silverlight için CreateDebuggingInterfaceFromVersion İşlevi
-Öğesinden döndürülen ortak dil çalışma zamanı (CLR) sürüm dizesini kabul eder [CreateVersionStringFromModule işlevi](../../../../docs/framework/unmanaged-api/debugging/createversionstringfrommodule-function.md)ve karşılık gelen bir hata ayıklayıcı arabirim döndürür (genelde [Icordebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)).  
+[CreateVersionStringFromModule işlevinden](../../../../docs/framework/unmanaged-api/debugging/createversionstringfrommodule-function.md)döndürülen ortak dil çalışma zamanı (CLR) sürüm dizesini kabul eder ve karşılık gelen bir hata ayıklayıcı arabirimini (genellikle, [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)) döndürür.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -31,35 +29,35 @@ HRESULT CreateDebuggingInterfaceFromVersion (
   
 ## <a name="parameters"></a>Parametreler  
  `szDebuggeeVersion`  
- [in] Hedef hata ayıklanan tarafından döndürülen CLR sürüm dizesi [CreateVersionStringFromModule işlevi](../../../../docs/framework/unmanaged-api/debugging/createversionstringfrommodule-function.md).  
+ 'ndaki [CreateVersionStringFromModule işlevi](../../../../docs/framework/unmanaged-api/debugging/createversionstringfrommodule-function.md)tarafından döndürülen hedef hata ayıklanan clr 'nin sürüm dizesi.  
   
  `ppCordb`  
- [out] Bir COM nesnesine bir işaretçi işaretçisi (`IUnknown`). Bu nesne için atayın bir [Icordebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) döndürülmeden önce nesne.  
+ dışı COM nesnesi işaretçisi işaretçisi (`IUnknown`). Bu nesne, döndürülmeden önce bir [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) nesnesine atacaktır.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  S_OK  
- `ppCordb` uygulayan geçerli bir nesneye başvuruda [Icordebug arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) arabirimi.  
+ `ppCordb` [ICorDebug arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) arabirimini uygulayan geçerli bir nesneye başvurur.  
   
  E_INVALIDARG  
- Ya da `szDebuggeeVersion` veya `ppCordb` null.  
+ `szDebuggeeVersion` ya da `ppCordb` null.  
   
  CORDBG_E_DEBUG_COMPONENT_MISSING  
- CLR hata ayıklama için gerekli olan bir bileşeni bulunamıyor. Bu, mscordbi.dll ya da mscordaccore.dll CoreCLR.dll hedef ile aynı dizinde bulunamadığını anlamına gelir.  
+ CLR hata ayıklaması için gerekli bir bileşen bulunamıyor. Bu, mscordbi. dll veya mscordaccore. dll ' nin hedef CoreCLR. dll ile aynı dizinde bulunamadığı anlamına gelir.  
   
  CORDBG_E_INCOMPATIBLE_PROTOCOL  
- Mscordbi.dll ya da mscordaccore.dll CoreCLR.dll hedefi olarak aynı sürüm değil.  
+ Mscordbi. dll veya mscordaccore. dll, hedef CoreCLR. dll ile aynı sürümde değil.  
   
- E_FAIL (veya diğer E_ dönüş kodları)  
- Döndürülemiyor bir [Icordebug arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md).  
+ E_FAıL (veya diğer E_ dönüş kodları)  
+ [ICorDebug arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)döndürülemiyor.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Döndürülen arabirim için bir hedef işlemde bir CLR ekleme ve CLR çalışan yönetilen kodda hata ayıklama özellikleri sağlar.  
+ Döndürülen arabirim, hedef işlemdeki bir CLR 'ye ekleme ve CLR 'nin çalıştığı yönetilen kodda hata ayıklama için tesisler sağlar.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** dbgshim.h  
+ **Üstbilgi:** dbgshim. h  
   
- **Kitaplığı:** dbgshim.dll  
+ **Kitaplık:** dbgshim. dll  
   
- **.NET framework sürümleri:** 3.5 SP1
+ **.NET Framework sürümleri:** 3,5 SP1

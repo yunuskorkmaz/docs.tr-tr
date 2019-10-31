@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Ayarlama kuralları ile saat dilimleri oluşturma'
+title: 'Nasıl yapılır: ayarlama kuralları ile saat dilimleri oluşturma'
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,16 +10,14 @@ helpviewer_keywords:
 - time zones [.NET Framework], and adjustment rules
 - adjustment rule [.NET Framework]
 ms.assetid: c52ef192-13a9-435f-8015-3b12eae8c47c
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6ae739d3c5dd233c2129950666846979edfba370
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 4ef3d93746c5688dc15fc7e45d9be054dcfba4c8
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70106682"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132548"
 ---
-# <a name="how-to-create-time-zones-with-adjustment-rules"></a>Nasıl yapılır: Ayarlama kuralları ile saat dilimleri oluşturma
+# <a name="how-to-create-time-zones-with-adjustment-rules"></a>Nasıl yapılır: ayarlama kuralları ile saat dilimleri oluşturma
 
 Bir uygulama için gerekli kesin saat dilimi bilgileri, bazı nedenlerle belirli bir sistemde mevcut olmayabilir:
 
@@ -29,12 +27,12 @@ Bir uygulama için gerekli kesin saat dilimi bilgileri, bazı nedenlerle belirli
 
 - Saat dilimi, belirli bir geçmiş dönem için saat dilimi ayarlamaları hakkında doğru bilgilere sahip değildir.
 
-Bu durumlarda, uygulamanız için gereken saat dilimini <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> tanımlamak için yöntemini çağırabilirsiniz. Bu yöntemin aşırı yüklerini, ayarlama kuralları olan veya olmayan bir saat dilimi oluşturmak için kullanabilirsiniz. Saat dilimi yaz saati kaydetme süresini destekliyorsa, düzeltilen veya kayan ayarlama kuralları ile ayarlamalar tanımlayabilirsiniz. (Bu terimlerin tanımları için, [saat dilimine genel bakış](../../../docs/standard/datetime/time-zone-overview.md)konusundaki "saat dilimi terminolojisi" bölümüne bakın.)
+Bu durumlarda, uygulamanız için gereken saat dilimini tanımlamak üzere <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> yöntemini çağırabilirsiniz. Bu yöntemin aşırı yüklerini, ayarlama kuralları olan veya olmayan bir saat dilimi oluşturmak için kullanabilirsiniz. Saat dilimi yaz saati kaydetme süresini destekliyorsa, düzeltilen veya kayan ayarlama kuralları ile ayarlamalar tanımlayabilirsiniz. (Bu terimlerin tanımları için, [saat dilimine genel bakış](../../../docs/standard/datetime/time-zone-overview.md)konusundaki "saat dilimi terminolojisi" bölümüne bakın.)
 
 > [!IMPORTANT]
-> <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> Yöntemi çağırarak oluşturulan özel saat dilimleri kayıt defterine eklenmez. Bunun yerine, yalnızca <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> Yöntem çağrısı tarafından döndürülen nesne başvurusu aracılığıyla erişilebilir.
+> <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> yöntemi çağırarak oluşturulan özel saat dilimleri kayıt defterine eklenmez. Bunun yerine, yalnızca <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> yöntemi çağrısının döndürdüğü nesne başvurusu aracılığıyla erişilebilir.
 
-Bu konuda, ayarlama kuralları ile saat dilimi oluşturma gösterilmektedir. Gün ışığından yararlanma zaman ayarlama kurallarını desteklemeyen bir saat dilimi oluşturmak için bkz [. nasıl yapılır: Ayarlama kuralları](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md)olmadan saat dilimleri oluşturun.
+Bu konuda, ayarlama kuralları ile saat dilimi oluşturma gösterilmektedir. Gün ışığından yararlanma zaman ayarlama kurallarını desteklemeyen bir saat dilimi oluşturmak için bkz. [nasıl yapılır: ayarlama kuralları olmadan saat dilimleri oluşturma](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md).
 
 ### <a name="to-create-a-time-zone-with-floating-adjustment-rules"></a>Kayan ayarlama kuralları ile saat dilimi oluşturmak için
 
@@ -42,13 +40,13 @@ Bu konuda, ayarlama kuralları ile saat dilimi oluşturma gösterilmektedir. Gü
 
     1. Saat dilimi ayarlaması için başlangıç geçiş süresini tanımlayın.
 
-       <xref:System.TimeZoneInfo.TransitionTime.CreateFloatingDateRule%2A?displayProperty=nameWithType> Yöntemini çağırmanız ve geçiş zamanını tanımlayan bir <xref:System.DateTime> değer, geçişin ayını tanımlayan bir tamsayı değeri, geçişin gerçekleştiği haftayı tanımlayan bir tamsayı değeri ve bir <xref:System.DayOfWeek> ile geçişin gerçekleştiği haftanın gününü tanımlayan değer. Bu yöntem çağrısı bir <xref:System.TimeZoneInfo.TransitionTime> nesnesi başlatır.
+       <xref:System.TimeZoneInfo.TransitionTime.CreateFloatingDateRule%2A?displayProperty=nameWithType> yöntemini çağırmanız ve geçiş saatini tanımlayan bir <xref:System.DateTime> değeri, geçişin ayını tanımlayan bir tamsayı değeri, geçişin gerçekleştiği haftayı tanımlayan bir tamsayı değeri ve tanımlayan bir <xref:System.DayOfWeek> değeri geçirmeniz gerekir. geçişin gerçekleştiği haftanın günü. Bu yöntem çağrısı bir <xref:System.TimeZoneInfo.TransitionTime> nesnesini başlatır.
 
-    2. Saat dilimi ayarlaması için bitiş geçiş süresini tanımlayın. Bu <xref:System.TimeZoneInfo.TransitionTime.CreateFloatingDateRule%2A?displayProperty=nameWithType> Yöntem için başka bir çağrı gerekir. Bu yöntem çağrısı ikinci <xref:System.TimeZoneInfo.TransitionTime> bir nesnesi başlatır.
+    2. Saat dilimi ayarlaması için bitiş geçiş süresini tanımlayın. Bu, <xref:System.TimeZoneInfo.TransitionTime.CreateFloatingDateRule%2A?displayProperty=nameWithType> metoduna başka bir çağrı gerektirir. Bu yöntem çağrısı ikinci bir <xref:System.TimeZoneInfo.TransitionTime> nesnesini başlatır.
 
-    3. Yöntemi çağırın ve ayarlamanın etkili başlangıç ve bitiş tarihleri, geçişte zaman miktarını tanımlayan bir <xref:System.TimeSpan> nesne ve günışığından yararlanma saati ile geçiş sırasında tanımlayan iki <xref:System.TimeZoneInfo.TransitionTime>nesne <xref:System.TimeZoneInfo.AdjustmentRule.CreateAdjustmentRule%2A> zaman meydana gelir. Bu yöntem çağrısı bir <xref:System.TimeZoneInfo.AdjustmentRule> nesnesi başlatır.
+    3. <xref:System.TimeZoneInfo.AdjustmentRule.CreateAdjustmentRule%2A> yöntemi çağırın ve ayarlamanın etkili başlangıç ve bitiş tarihleri, geçişte zaman miktarını tanımlayan bir <xref:System.TimeSpan> nesnesi ve yaz saati kaydetme zamanına göre ve bu iki <xref:System.TimeZoneInfo.TransitionTime> nesnesi oluşur. Bu yöntem çağrısı bir <xref:System.TimeZoneInfo.AdjustmentRule> nesnesini başlatır.
 
-    4. Nesneyi bir nesne <xref:System.TimeZoneInfo.AdjustmentRule> dizisine atayın. <xref:System.TimeZoneInfo.AdjustmentRule>
+    4. <xref:System.TimeZoneInfo.AdjustmentRule> nesnesini <xref:System.TimeZoneInfo.AdjustmentRule> nesne dizisine atayın.
 
 2. Saat diliminin görünen adını tanımlayın. Görünen ad, saat diliminin Eşgüdümlü Evrensel Saat (UTC) arasındaki kaydırın parantez içine alındığı ve ardından saat dilimini, saat diliminizdeki bir veya daha fazla şehirden veya bir ya da daha fazlasını tanımlayan bir dize tarafından izlenen oldukça standart bir biçim izler saat dilimindeki ndenemeler veya bölgeler.
 
@@ -58,9 +56,9 @@ Bu konuda, ayarlama kuralları ile saat dilimi oluşturma gösterilmektedir. Gü
 
 5. Saat diliminin standart adından farklı bir tanımlayıcı kullanmak istiyorsanız, saat dilimi tanımlayıcısını tanımlayın.
 
-6. Saat diliminin <xref:System.TimeSpan> UTC 'den sapmasını tanımlayan bir nesne oluşturun. UTC 'den sonraki saatlere sahip saat dilimleri pozitif bir uzaklığa sahiptir. UTC 'den önceki zamanlarla saat dilimlerinin negatif bir boşluğu vardır.
+6. Saat diliminin UTC 'den sapmasını tanımlayan bir <xref:System.TimeSpan> nesnesi örneği oluşturun. UTC 'den sonraki saatlere sahip saat dilimleri pozitif bir uzaklığa sahiptir. UTC 'den önceki zamanlarla saat dilimlerinin negatif bir boşluğu vardır.
 
-7. Yeni saat dilimini oluşturmak için yönteminiçağırın.<xref:System.TimeZoneInfo.CreateCustomTimeZone%28System.String%2CSystem.TimeSpan%2CSystem.String%2CSystem.String%2CSystem.String%2CSystem.TimeZoneInfo.AdjustmentRule%5B%5D%29?displayProperty=nameWithType>
+7. Yeni saat dilimini başlatmak için <xref:System.TimeZoneInfo.CreateCustomTimeZone%28System.String%2CSystem.TimeSpan%2CSystem.String%2CSystem.String%2CSystem.String%2CSystem.TimeZoneInfo.AdjustmentRule%5B%5D%29?displayProperty=nameWithType> yöntemini çağırın.
 
 ## <a name="example"></a>Örnek
 
@@ -69,13 +67,13 @@ Aşağıdaki örnek, 1918 'e kadar çeşitli zaman aralıkları için ayarlama k
 [!code-csharp[System.TimeZone2.CreateTimeZone#5](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.CreateTimeZone/cs/System.TimeZone2.CreateTimeZone.cs#5)]
 [!code-vb[System.TimeZone2.CreateTimeZone#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.CreateTimeZone/vb/System.TimeZone2.CreateTimeZone.vb#5)]
 
-Bu örnekte oluşturulan saat diliminin birden çok ayarlama kuralı vardır. Herhangi bir ayarlama kuralının etkin başlangıç ve bitiş tarihlerinin başka bir ayarlama kuralındaki tarihlerle çakışmadığından emin olmak için dikkatli olunmalıdır. Çakışma varsa, bir <xref:System.InvalidTimeZoneException> atılır.
+Bu örnekte oluşturulan saat diliminin birden çok ayarlama kuralı vardır. Herhangi bir ayarlama kuralının etkin başlangıç ve bitiş tarihlerinin başka bir ayarlama kuralındaki tarihlerle çakışmadığından emin olmak için dikkatli olunmalıdır. Çakışma varsa bir <xref:System.InvalidTimeZoneException> oluşturulur.
 
-Kayan ayarlama kuralları için 5 değeri, belirli bir ayın son haftasında geçişin gerçekleşeceğini göstermek için `week` <xref:System.TimeZoneInfo.TransitionTime.CreateFloatingDateRule%2A> yönteminin parametresine geçirilir.
+Kayan ayarlama kuralları için, 5 değeri, belirli bir ayın son haftasında geçişin oluştuğunu göstermek için <xref:System.TimeZoneInfo.TransitionTime.CreateFloatingDateRule%2A> yönteminin `week` parametresine geçirilir.
 
-<xref:System.TimeZoneInfo.CreateCustomTimeZone%28System.String%2CSystem.TimeSpan%2CSystem.String%2CSystem.String%2CSystem.String%2CSystem.TimeZoneInfo.AdjustmentRule%5B%5D%29?displayProperty=nameWithType> Yöntem çağrısında kullanılacak <xref:System.TimeZoneInfo.AdjustmentRule> nesne dizisini oluştururken, kod diziyi, saat dilimi için oluşturulacak ayarlama sayısı için gereken boyuta başlatabilir. Bunun yerine, bu kod örneği, <xref:System.Collections.Generic.List%601.Add%2A> her ayarlama kuralını bir genel <xref:System.Collections.Generic.List%601> <xref:System.TimeZoneInfo.AdjustmentRule> nesne koleksiyonuna eklemek için yöntemini çağırır. Kodu daha sonra bu koleksiyonun <xref:System.Collections.Generic.List%601.CopyTo%2A> üyelerini diziye kopyalamak için yöntemini çağırır.
+<xref:System.TimeZoneInfo.CreateCustomTimeZone%28System.String%2CSystem.TimeSpan%2CSystem.String%2CSystem.String%2CSystem.String%2CSystem.TimeZoneInfo.AdjustmentRule%5B%5D%29?displayProperty=nameWithType> yöntemi çağrısında kullanmak üzere <xref:System.TimeZoneInfo.AdjustmentRule> nesnelerinin dizisini oluştururken, kod diziyi, saat dilimi için oluşturulacak ayarlama sayısı için gereken boyuta başlatabilir. Bunun yerine, bu kod örneği, her ayarlama kuralını <xref:System.TimeZoneInfo.AdjustmentRule> nesnelerinin genel <xref:System.Collections.Generic.List%601> koleksiyonuna eklemek için <xref:System.Collections.Generic.List%601.Add%2A> yöntemini çağırır. Kodu daha sonra bu koleksiyonun üyelerini diziye kopyalamak için <xref:System.Collections.Generic.List%601.CopyTo%2A> yöntemini çağırır.
 
-Örnek ayrıca, <xref:System.TimeZoneInfo.TransitionTime.CreateFixedDateRule%2A> sabit tarih ayarlamalarını tanımlamak için yöntemini kullanır. Bu, <xref:System.TimeZoneInfo.TransitionTime.CreateFloatingDateRule%2A> yöntemi çağırmaya benzerdir, ancak geçiş parametrelerinin yalnızca saatini, ayını ve gününü gerektirir.
+Örnek ayrıca sabit tarih ayarlamalarını tanımlamak için <xref:System.TimeZoneInfo.TransitionTime.CreateFixedDateRule%2A> yöntemini kullanır. Bu, <xref:System.TimeZoneInfo.TransitionTime.CreateFloatingDateRule%2A> yöntemini çağırmaya benzerdir, ancak geçiş parametrelerinin yalnızca saatini, ayını ve gününü gerektirir.
 
 Örnek, aşağıdakiler gibi kod kullanılarak test edilebilir:
 

@@ -14,14 +14,12 @@ helpviewer_keywords:
 - CompareTo function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2ec42dff333422e247a11b4a3a5b9aed9bd316fa
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 0d210795016cd2e0179b902a224ca0c62f4ac01f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798777"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128707"
 ---
 # <a name="compareto-function"></a>CompareTo işlevi
 
@@ -52,7 +50,7 @@ HRESULT CompareTo (
 'ndaki Karşılaştırma için göz önünde bulundurmanız gereken nesne özelliklerini belirten bayrakların bit düzeyinde birleşimi. Daha fazla bilgi için [açıklamalar](#remarks) bölümüne bakın.
 
 `pCompareTo`\
-'ndaki Karşılaştırılacak nesne. `pCompareTo`geçerli bir [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) örneği olmalıdır; Bu, `null`olamaz.
+'ndaki Karşılaştırılacak nesne. `pCompareTo` geçerli bir [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) örneği olmalıdır; `null`olamaz.
 
 ## <a name="return-value"></a>Dönüş değeri
 
@@ -62,7 +60,7 @@ Bu işlev tarafından döndürülen aşağıdaki değerler, *Wbemcli. h* üstbil
 |---------|---------|---------|
 | `WBEM_E_FAILED` | 0x80041001 | Belirtilmeyen bir hata oluştu. |
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | Bir parametre geçersiz. |
-| `WBEM_E_UNEXPECTED` | 0x8004101D | İçin bir araya giren `BeginEnumeration` [`EndEnumeration`](endenumeration.md)çağrı yapılmadan ikinci bir çağrı yapıldı. |
+| `WBEM_E_UNEXPECTED` | 0x8004101D | `BeginEnumeration` ikinci bir çağrısı, [`EndEnumeration`](endenumeration.md)için araya giren bir çağrı olmadan yapıldı. |
 | `WBEM_S_NO_ERROR` | 0 | İşlev çağrısı başarılı oldu.  |
 | `WBEM_S_DIFFERENT` | 0x40003 | Nesneler farklı. |
 | `WBEM_S_SAME` | 0 | Nesneler, karşılaştırma bayraklarına göre aynıdır. |
@@ -71,7 +69,7 @@ Bu işlev tarafından döndürülen aşağıdaki değerler, *Wbemcli. h* üstbil
 
 Bu işlev, [IWbemClassObject:: CompareTo](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-compareto) yöntemine bir çağrı kaydırır.
 
-`lEnumFlags` Bağımsız değişken olarak geçirilebilecek bayraklar, *wbemcli. h* üstbilgi dosyasında tanımlanır veya bunları kodunuzda sabitler olarak tanımlayabilirsiniz. Aşağıdaki bayrakların bit düzeyinde birleşimini belirterek, karşılaştırmaya dahil olan tek tek özellikleri belirtebilirsiniz:
+`lEnumFlags` bağımsız değişkeni olarak geçirilebilecek bayraklar, *Wbemcli. h* üstbilgi dosyasında tanımlanır veya bunları kodunuzda sabitler olarak tanımlayabilirsiniz. Aşağıdaki bayrakların bit düzeyinde birleşimini belirterek, karşılaştırmaya dahil olan tek tek özellikleri belirtebilirsiniz:
 
 |Sabit  |Değer  |Açıklama  |
 |---------|---------|---------|
@@ -90,9 +88,9 @@ Ya da şu şekilde tek bir bileşik bayrak belirtebilirsiniz:
 
 ## <a name="requirements"></a>Gereksinimler
 
-**Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).
+**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).
 
-**Üst bilgi** WMINet_Utils. IDL
+**Üst bilgi:** WMINet_Utils. IDL
 
 **.NET Framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 

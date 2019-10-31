@@ -14,18 +14,16 @@ helpviewer_keywords:
 - special characters
 - IDENTIFIER
 ms.assetid: d90b1e39-9115-4f2a-81c0-05e7e74e5580
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 656b82daffc62824ed663ea7080bd6d20cd0dadc
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 707c71482196d789ed9a88db34af048ec57734fb
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71045824"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130026"
 ---
 # <a name="specifying-fully-qualified-type-names"></a>Tam nitelikli tür adlarını belirtme
 
-Çeşitli yansıma işlemlerine geçerli giriş sağlamak için tür adları belirtmeniz gerekir. Tam nitelikli tür adı, bir derleme adı belirtimi, bir ad alanı belirtimi ve bir tür adından oluşur. Tür <xref:System.Type.GetType%2A?displayProperty=nameWithType>adı belirtimleri <xref:System.Reflection.Module.GetType%2A?displayProperty=nameWithType> ,<xref:System.Reflection.Emit.ModuleBuilder.GetType%2A?displayProperty=nameWithType>, ve<xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType>gibi yöntemler tarafından kullanılır.
+Çeşitli yansıma işlemlerine geçerli giriş sağlamak için tür adları belirtmeniz gerekir. Tam nitelikli tür adı, bir derleme adı belirtimi, bir ad alanı belirtimi ve bir tür adından oluşur. Tür adı belirtimleri <xref:System.Type.GetType%2A?displayProperty=nameWithType>, <xref:System.Reflection.Module.GetType%2A?displayProperty=nameWithType>, <xref:System.Reflection.Emit.ModuleBuilder.GetType%2A?displayProperty=nameWithType>ve <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType>gibi yöntemler tarafından kullanılır.
 
 ## <a name="grammar-for-type-names"></a>Tür adları için dilbilgisi
 
@@ -118,9 +116,9 @@ AssemblyProperty
 
 Tür adında, tanımlayıcı, bir dilin kuralları tarafından belirlenen geçerli bir addır.
 
-Tanımlayıcının bir parçası olarak\\kullanıldığında aşağıdaki belirteçleri ayırmak için bir kaçış karakteri olarak ters eğik çizgi () kullanın.
+TANıMLAYıCıNıN bir parçası olarak kullanıldığında aşağıdaki belirteçleri ayırmak için bir çıkış karakteri olarak ters eğik çizgi (\\) kullanın.
 
-|Belirteç|Açıklama|
+|Simgesinde|Açıklama|
 |-----------|-------------|
 |\\,|Derleme ayırıcısı.|
 |\\+|İç içe tür ayırıcısı.|
@@ -129,15 +127,15 @@ Tanımlayıcının bir parçası olarak\\kullanıldığında aşağıdaki belirt
 |\\[|Dizi boyut sınırlayıcısı.|
 |\\]|Dizi boyut sınırlayıcısı.|
 |\\.|Yalnızca nokta bir dizi belirtiminde kullanılıyorsa, bir dönemden önce ters eğik çizgiyi kullanın. NamespaceSpec içindeki dönemler ters eğik çizgi almaz.|
-|\\\|Dize sabit değeri olarak gerektiğinde ters eğik çizgi.|
+|bir dize sabit değeri olarak gerektiğinde ters eğik çizgi \\\|.|
 
 AssemblyNameSpec hariç tüm TypeSpec bileşenlerinde, boşluklar ilgili olduğunu unutmayın. AssemblyNameSpec içinde, ', ' ayırıcısından önceki boşluklar ilgilidir, ancak ', ' ayırıcısından sonra boşluklar yok sayılır.
 
-Gibi yansıma sınıfları <xref:System.Type.FullName%2A?displayProperty=nameWithType>, döndürülen adın ' de `MyType.GetType(myType.FullName)`olduğu gibi bir çağrısında kullanılabilmesi için <xref:System.Type.GetType%2A>karıştırılmış adı döndürür.
+<xref:System.Type.FullName%2A?displayProperty=nameWithType>gibi yansıma sınıfları, döndürülen adın `MyType.GetType(myType.FullName)`gibi <xref:System.Type.GetType%2A>bir çağrıda kullanılabilmesi için karıştırılmış adı döndürür.
 
-Örneğin, bir türün `Ozzy.OutBack.Kangaroo+Wallaby,MyAssembly`tam nitelikli adı olabilir.
+Örneğin, bir tür için tam nitelikli ad `Ozzy.OutBack.Kangaroo+Wallaby,MyAssembly`olabilir.
 
-Ad alanı olsaydı `Ozzy.Out+Back`, artı işaretinin önünde ters eğik çizgi gelmelidir. Aksi takdirde, ayrıştırıcı bunu iç içe ayırıcı olarak yorumlar. Yansıma bu dizeyi olarak `Ozzy.Out\+Back.Kangaroo+Wallaby,MyAssembly`yayar.
+Ad alanı `Ozzy.Out+Back`olsaydı, artı işaretinin önünde ters eğik çizgi gelmelidir. Aksi takdirde, ayrıştırıcı bunu iç içe ayırıcı olarak yorumlar. Yansıma bu dizeyi `Ozzy.Out\+Back.Kangaroo+Wallaby,MyAssembly`olarak yayar.
 
 ## <a name="specifying-assembly-names"></a>Derleme adlarını belirtme
 
@@ -189,32 +187,32 @@ com.microsoft.crypto, Culture=en, PublicKeyToken=a5d015c7d5a0b012,
 
 ## <a name="specifying-generic-types"></a>Genel türleri belirtme
 
-SimpleTypeSpec\`numarası, 1 ile *n* genel tür parametrelerinden oluşan açık bir genel türü temsil eder. Örneğin, açık genel tür listesi\<T > veya kapalı genel tür listesi\<dize > başvuru almak için, genel tür sözlüğü\<TKey ``Type.GetType("System.Collections.Generic.List`1")`` , TValue > ``Type.GetType("System.Collections.Generic.Dictionary`2")``başvurusunu almak için kullanın.
+SimpleTypeSpec\`numarası, 1 ile *n* genel tür parametrelerinden oluşan açık genel bir türü temsil eder. Örneğin, açık genel tür listesi\<T > veya kapalı genel tür listesi\<dize > başvuru almak için ``Type.GetType("System.Collections.Generic.List`1")`` kullanarak genel tür sözlüğüne\<TKey, TValue > bir başvuru alın. ``Type.GetType("System.Collections.Generic.Dictionary`2")``kullanın.
 
 ## <a name="specifying-pointers"></a>İşaretçileri belirtme
 
-SimpleTypeSpec *, yönetilmeyen bir işaretçiyi temsil eder. Örneğin, MyType türünde bir işaretçi almak için kullanın `Type.GetType("MyType*")`. MyType türünde bir işaretçiye işaretçi almak için kullanın `Type.GetType("MyType**")`.
+SimpleTypeSpec *, yönetilmeyen bir işaretçiyi temsil eder. Örneğin, türü MyType olan bir işaretçi almak için `Type.GetType("MyType*")`kullanın. MyType türünde bir işaretçiye işaretçi almak için `Type.GetType("MyType**")`kullanın.
 
 ## <a name="specifying-references"></a>Başvuruları belirtme
 
-SimpleTypeSpec &, yönetilen bir işaretçiyi veya başvuruyu temsil eder. Örneğin, MyType türü için bir başvuru almak için kullanın `Type.GetType("MyType &")`. İşaretçilerin aksine, başvuruların bir düzey ile sınırlı olduğunu unutmayın.
+SimpleTypeSpec &, yönetilen bir işaretçiyi veya başvuruyu temsil eder. Örneğin, MyType türü bir başvuru almak için `Type.GetType("MyType &")`kullanın. İşaretçilerin aksine, başvuruların bir düzey ile sınırlı olduğunu unutmayın.
 
 ## <a name="specifying-arrays"></a>Dizileri belirtme
 
-BNF dilbilgisinde, ReflectionEmitDimension yalnızca kullanılarak <xref:System.Reflection.Emit.ModuleBuilder.GetType%2A?displayProperty=nameWithType>alınan eksik tür tanımları için geçerlidir. Tamamlanmamış tür tanımları <xref:System.Reflection.Emit.TypeBuilder> kullanılarak <xref:System.Reflection.Emit?displayProperty=nameWithType> oluşturulan, ancak üzerinde <xref:System.Reflection.Emit.TypeBuilder.CreateType%2A?displayProperty=nameWithType> olmayan nesneler. ReflectionDimension, tamamlanmış olan ve yüklenmiş bir tür tanımını almak için kullanılabilir.
+BNF dilbilgisinde, ReflectionEmitDimension yalnızca <xref:System.Reflection.Emit.ModuleBuilder.GetType%2A?displayProperty=nameWithType>kullanılarak alınan eksik tür tanımları için geçerlidir. Tamamlanmamış tür tanımları, <xref:System.Reflection.Emit?displayProperty=nameWithType> kullanılarak oluşturulan ancak <xref:System.Reflection.Emit.TypeBuilder.CreateType%2A?displayProperty=nameWithType> çağrılmayan <xref:System.Reflection.Emit.TypeBuilder> nesnelerdir. ReflectionDimension, tamamlanmış olan ve yüklenmiş bir tür tanımını almak için kullanılabilir.
 
 Dizilere dizi derecesi belirtilerek bir şekilde erişilir:
 
-- `Type.GetType("MyArray[]")`0 alt sınırı olan tek boyutlu bir diziyi alır.
+- `Type.GetType("MyArray[]")`, 0 alt sınırı olan tek boyutlu bir diziyi alır.
 
-- `Type.GetType("MyArray[*]")`bilinmeyen alt sınır içeren tek boyutlu bir dizi alır.
-- `Type.GetType("MyArray[][]")`iki boyutlu bir dizinin dizisini alır.
+- `Type.GetType("MyArray[*]")`, bilinmeyen alt sınır içeren tek boyutlu bir dizi alır.
+- `Type.GetType("MyArray[][]")` iki boyutlu bir dizinin dizisini alır.
 
-- `Type.GetType("MyArray[*,*]")`ve `Type.GetType("MyArray[,]")` bilinmeyen alt sınırlara sahip dikdörtgen iki boyutlu bir dizi alır.
+- `Type.GetType("MyArray[*,*]")` ve `Type.GetType("MyArray[,]")`, bilinmeyen alt sınırlara sahip dikdörtgen iki boyutlu bir dizi alır.
 
-Bir çalışma zamanı noktasından, ancak çok boyutlu diziler `MyArray[] != MyArray[*]`için iki gösterimin eşdeğer olduğunu unutmayın. Yani, `Type.GetType("MyArray [,]") == Type.GetType("MyArray[*,*]")` **true**olarak değerlendirilir.
+Bir çalışma zamanı noktasından `MyArray[] != MyArray[*]`, ancak çok boyutlu diziler için iki gösterimin eşdeğeri olduğunu unutmayın. Diğer bir deyişle, `Type.GetType("MyArray [,]") == Type.GetType("MyArray[*,*]")` **true**olarak değerlendirilir.
 
-**ModuleBuilder. GetType**için, `MyArray[0..5]` 6 boyutunda bir tek boyutlu diziyi, alt sınır 0 ' ı gösterir. `MyArray[4…]`Bilinmeyen boyut ve alt sınır 4 ' ün tek boyutlu dizisini gösterir.
+**ModuleBuilder. GetType**için `MyArray[0..5]`, 6 boyutunda bir tek boyutlu diziyi, alt sınır 0 ' ı gösterir. `MyArray[4…]`, bilinmeyen boyut ve alt sınır 4 ' ün tek boyutlu dizisini gösterir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

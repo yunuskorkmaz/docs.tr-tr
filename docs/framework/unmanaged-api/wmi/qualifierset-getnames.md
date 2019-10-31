@@ -14,14 +14,12 @@ helpviewer_keywords:
 - QualifierSet_GetNames function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 266462a5393c8e26aa2bc3f2ec8ab72d4410a431
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: bd0a67987dd8ffa825114726d066249aed40cf05
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798300"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141700"
 ---
 # <a name="qualifierset_getnames-function"></a>QualifierSet_GetNames işlevi
 
@@ -54,11 +52,11 @@ HRESULT QualifierSet_GetNames (
 |Sabit  |Değer  |Açıklama  |
 |---------|---------|---------|
 |  | 0 | Tüm niteleyicilerin adlarını döndürün. |
-| `WBEM_FLAG_LOCAL_ONLY` | 0x10 | Yalnızca geçerli özelliğe veya nesneye özgü niteleyicilerin adlarını döndürür. <br/> Bir özellik için: Sınıf tanımından yayılan niteleyiciler değil, yalnızca özelliğe özgü niteleyicileri döndürün (geçersiz kılmalar dahil). <br/> Bir örnek için: Yalnızca örneğe özgü niteleyici adlarını döndürür. <br/> Bir sınıf için: Yalnızca türetmekte olan sınıfa özgü niteleyicileri döndürün.
-|`WBEM_FLAG_PROPAGATED_ONLY` | 0x20 | Yalnızca başka bir nesneden yayılan niteleyicilerin adlarını döndürür. <br/> Bir özellik için: Yalnızca sınıf tanımından bu özelliğe yayılan niteleyicileri döndürün, özelliğin kendisinden değil. <br/> Bir örnek için: Yalnızca sınıf tanımından yayılan niteleyicileri döndürün. <br/> Bir sınıf için: Yalnızca üst sınıflardan devralınan niteleyici adlarını döndürür. |
+| `WBEM_FLAG_LOCAL_ONLY` | 0x10 | Yalnızca geçerli özelliğe veya nesneye özgü niteleyicilerin adlarını döndürür. <br/> Bir özellik için: yalnızca özelliğe özgü niteleyicileri döndürün (geçersiz kılmalar dahil), sınıf tanımından yayılan niteleyiciler değildir. <br/> Bir örnek için: yalnızca örneğe özgü niteleyici adlarını döndürür. <br/> Bir sınıf için: yalnızca türetmekte olan sınıfa özgü niteleyicileri döndürün.
+|`WBEM_FLAG_PROPAGATED_ONLY` | 0x20 | Yalnızca başka bir nesneden yayılan niteleyicilerin adlarını döndürür. <br/> Bir özellik için: yalnızca sınıf tanımından bu özelliğe yayılan niteleyicileri döndürün, özelliğin kendisinden değil. <br/> Bir örnek için: yalnızca sınıf tanımından yayılan niteleyicileri döndürün. <br/> Bir sınıf için: yalnızca üst sınıflardan devralınan niteleyici adlarını döndürür. |
 
 `pstrNames`\
-dışı İstenen adları `SAFEARRAY` içeren yeni bir. Dizide 0 öğesi olabilir. Bir hata oluşursa, yeni `SAFEARRAY` bir döner.
+dışı İstenen adları içeren yeni bir `SAFEARRAY`. Dizide 0 öğesi olabilir. Bir hata oluşursa, yeni bir `SAFEARRAY` döndürülmez.
 
 ## <a name="return-value"></a>Dönüş değeri
 
@@ -76,13 +74,13 @@ Bu işlev, [IWbemQualifierSet:: GetNames](/windows/desktop/api/wbemcli/nf-wbemcl
 
 Niteleyici adlarını aldıktan sonra, [QualifierSet_Get](qualifierset-get.md) işlevini çağırarak her bir niteleyicisine ada göre erişebilirsiniz.
 
-Belirli bir nesnenin sıfır niteleyicisi olması için bir hata değil, bu nedenle dönüşte içindeki `pstrNames` dize sayısı, işlev dönüşmesine `WBEM_S_NO_ERROR`rağmen 0 olabilir.
+Belirli bir nesnenin sıfır niteleyicisi olması için bir hata değil, bu nedenle dönüşte `pstrNames` dize sayısı, işlev `WBEM_S_NO_ERROR`döndürse bile 0 olabilir.
 
 ## <a name="requirements"></a>Gereksinimler
 
-**Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).
+**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).
 
-**Üst bilgi** WMINet_Utils. IDL
+**Üst bilgi:** WMINet_Utils. IDL
 
 **.NET Framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 

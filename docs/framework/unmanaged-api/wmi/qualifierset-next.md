@@ -14,14 +14,12 @@ helpviewer_keywords:
 - QualifierSet_Next function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f97a19f236b87a7f4c5b2014aca6ee4abd338c63
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: c9c824b0158618848c13183d92f88604460d5099
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798287"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141716"
 ---
 # <a name="qualifierset_next-function"></a>QualifierSet_Next işlevi
 Bir [QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md) işlevi çağrısıyla başlatılan bir Numaralandırmadaki bir sonraki niteleyiciyi alır.   
@@ -53,13 +51,13 @@ HRESULT QualifierSet_Next (
 'ndaki Ayrılamadı. Bu parametre 0 olmalıdır.
 
 `pstrName`   
-dışı Niteleyicinin adı. Bu parametre yok sayılır; Aksi takdirde, `pstrName` geçerli `BSTR` bir veya bir Bellek sızıntısının gerçekleşmemelidir. `null` Null değilse, işlev her zaman döndürüldüğünde `BSTR` `WBEM_S_NO_ERROR`yeni bir değer ayırır.
+dışı Niteleyicinin adı. `null`, bu parametre yok sayılır; Aksi takdirde, `pstrName` geçerli bir `BSTR` işaret etmelidir veya bir bellek sızıntısı oluşur. Null değilse, işlev `WBEM_S_NO_ERROR`döndürdüğünde her zaman yeni bir `BSTR` ayırır.
 
 `pVal`   
-dışı Başarılı olduğunda, niteleyicinin değeri. İşlev başarısız olursa, `VARIANT` tarafından `pVal` işaret edilen değiştirilmez. Bu parametre ise `null`parametresi yok sayılır.
+dışı Başarılı olduğunda, niteleyicinin değeri. İşlev başarısız olursa, `pVal` tarafından işaret edilen `VARIANT` değiştirilmez. Bu parametre `null`, parametre yok sayılır.
 
 `plFlavor`   
-dışı Niteleyiciyi alan bir LONG işaretçisi. Flavor bilgileri istenmiyorsa, bu parametre olabilir `null`. 
+dışı Niteleyiciyi alan bir LONG işaretçisi. Flavor bilgileri istenmiyorsa, bu parametre `null`olabilir. 
 
 ## <a name="return-value"></a>Dönüş değeri
 
@@ -77,14 +75,14 @@ Bu işlev tarafından döndürülen aşağıdaki değerler, *Wbemcli. h* üstbil
 
 Bu işlev, [IWbemQualifierSet:: Next](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-next) yöntemine bir çağrı kaydırır.
 
-İşlev döndürülünceye `QualifierSet_Next` `WBEM_S_NO_MORE_DATA`kadar tüm niteleyicileri numaralandırmak için işlevi tekrar tekrar çağırın. Numaralandırmayı erken sonlandırmak için [QualifierSet_EndEnumeration](qualifierset-endenumeration.md) işlevini çağırın.
+İşlev `WBEM_S_NO_MORE_DATA`dönene kadar tüm niteleyicileri numaralandırmak için `QualifierSet_Next` işlevini tekrar tekrar çağırın. Numaralandırmayı erken sonlandırmak için [QualifierSet_EndEnumeration](qualifierset-endenumeration.md) işlevini çağırın.
 
 Numaralandırma sırasında döndürülen niteleyicilerin sırası tanımsız.
 
 ## <a name="requirements"></a>Gereksinimler  
- **Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üst bilgi** WMINet_Utils. IDL  
+ **Üst bilgi:** WMINet_Utils. IDL  
   
  **.NET Framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   

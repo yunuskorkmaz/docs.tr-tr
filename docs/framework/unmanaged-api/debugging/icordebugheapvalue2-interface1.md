@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 87360a52-90b1-4ada-80c0-589a556116d8
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: fa872453ed72a3095c135aa25e81284610ad2436
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8ae788094def566b4dc3a17d0a08d657cc27468f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910220"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138370"
 ---
 # <a name="icordebugheapvalue2-interface"></a>ICorDebugHeapValue2 Arabirimi
 
@@ -31,7 +29,7 @@ Ortak dil çalışma zamanı (CLR) tanıtıcıları için destek sağlayan ICorD
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[CreateHandle Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugheapvalue2-createhandle-method.md)|Bu `ICorDebugHeapValue2` nesne için belirtilen türde bir tanıtıcı oluşturur.|  
+|[CreateHandle Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugheapvalue2-createhandle-method.md)|Bu `ICorDebugHeapValue2` nesnesi için belirtilen türde bir tanıtıcı oluşturur.|  
   
 ## <a name="remarks"></a>Açıklamalar  
   
@@ -39,11 +37,11 @@ Ortak dil çalışma zamanı (CLR) tanıtıcıları için destek sağlayan ICorD
 > Bu arabirim, çapraz makine ya da çapraz işlem için uzaktan çağrılmakta değil.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi** CorDebug. IDL, CorDebug. h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı** Corguid. lib  
+ **Kitaplık:** Corguid. lib  
   
  **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

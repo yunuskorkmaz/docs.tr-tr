@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: e3a1ce48-9bb9-4ed6-a5fe-5e1819a6333f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 89cf2a12b0a693bbed3e8a3c1134d0f2b2a72a30
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5826297d8151cf05e1ec08acbf5c9cd381d2452b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67754456"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137801"
 ---
 # <a name="icordebugfunction2getversionnumber-method"></a>ICorDebugFunction2::GetVersionNumber Yöntemi
-Bu işlev Düzenle ve devam et sürümünü alır.  
+Bu işlevin Düzenle ve devam et sürümünü alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,22 +35,22 @@ HRESULT GetVersionNumber (
   
 ## <a name="parameters"></a>Parametreler  
  `pnVersion`  
- [out] Sürüm numarasını bu Icordebugfunction2 nesnesi tarafından temsil edilen işlev bir tamsayı işaretçisi.  
+ dışı Bu ICorDebugFunction2 nesnesi tarafından temsil edilen işlevin sürüm numarası olan tamsayıya yönelik bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Çalışma zamanı, her modül için hata ayıklama oturumu sırasında meydana gelen düzenlemeleri sayısını izler. Bir işlev sürüm numarasını biridir işlevi sunulan düzenleme sayısından daha fazla. İşlevin özgün sürüm 1 sürümüdür. Sayı, her bir modül için artırılır [Icordebugmodule2::applychanges](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-applychanges-method.md) üzerinde bu modül çağrılır. Bu nedenle, ilk ve üçüncü aramasında bir işlev gövdesini değiştirildiyse `ICorDebugModule2::ApplyChanges`, `GetVersionNumber` sürüm 1, 2 veya 4: Bu işlev, ancak sürüm 3 döndürebilir. (İşlev sürüm 3 olması.)  
+ Çalışma zamanı, hata ayıklama oturumu sırasında her bir modüle gerçekleşen düzenleme sayısını izler. Bir işlevin sürüm numarası, işlevi sunan düzenleme sayısından bir daha fazla. İşlevin özgün sürümü sürüm 1 ' dir. Bu modülde her [ICorDebugModule2:: ApplyChanges](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-applychanges-method.md) çağrıldığında sayı bir modül için artırılır. Bu nedenle, bir işlevin gövdesi `ICorDebugModule2::ApplyChanges`ilk ve üçüncü çağrısında değiştirildiyse, `GetVersionNumber` söz konusu işlev için sürüm 1, 2 veya 4 döndürebilir, sürüm 3 ' ü içermez. (Bu işlevin sürüm 3 ' ü yoktur.)  
   
- Sürüm numarası, her modül için ayrı ayrı izlenir. Modül 1 ve 2 modül yok dört düzenlemeler yapabilirsiniz, bu nedenle, sonraki düzenlemeniz modülü 1 sürüm numarası 6 modülü 1 düzenlenen tüm işlevler için atar. Aynı dokunmalar Modül 2 düzenlerseniz, Modül 2 işlevleri sürüm numarası 2 olarak alırsınız.  
+ Sürüm numarası her modül için ayrı olarak izlenir. Bu nedenle, modül 1 üzerinde dört düzenleme gerçekleştirirseniz ve modül 2 ' de hiç bir işlem yaptıysanız, modül 1 ' deki bir sonraki düzenleme, modül 1 ' deki tüm düzenlenmiş işlevlere 6 sürüm numarası atar. Aynı düzenleme, modül 2 ' ye dokunursa modül 2 ' deki işlevler sürüm numarası 2 alır.  
   
- Sürüm numarası elde tarafından `GetVersionNumber` yöntemi tarafından alınan daha düşük [ICorDebugFunction::getcurrentversionnumber](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction-getcurrentversionnumber-method.md).  
+ `GetVersionNumber` yöntemi tarafından edinilen sürüm numarası [ICorDebugFunction:: GetCurrentVersionNumber](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction-getcurrentversionnumber-method.md)tarafından elde edilenden daha düşük olabilir.  
   
- [Icordebugcode::getversionnumber](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-getversionnumber-method.md) yöntemi olarak aynı işlemi yapar `ICorDebugFunction2::GetVersionNumber`.  
+ [ICorDebugCode:: GetVersionNumber](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-getversionnumber-method.md) yöntemi, `ICorDebugFunction2::GetVersionNumber`ile aynı işlemi gerçekleştirir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

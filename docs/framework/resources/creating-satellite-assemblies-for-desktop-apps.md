@@ -23,14 +23,12 @@ helpviewer_keywords:
 - compiling satellite assemblies
 - re-signing assemblies
 ms.assetid: 8d5c6044-2919-41d2-8321-274706b295ac
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 17465b07172788f18a432784653afadda18467fe
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 2ab4fc990e0c524e0c77fa0bdedd7c263edb21b2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71045695"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129970"
 ---
 # <a name="creating-satellite-assemblies-for-desktop-apps"></a>Masaüstü Uygulamaları için Uydu Derlemeleri Oluşturma
 
@@ -41,7 +39,7 @@ Kaynak dosyaları, yerelleştirilmiş uygulamalarda merkezi bir rol oynar. Bu uy
 
 ## <a name="satellite-assembly-name-and-location"></a>Uydu bütünleştirilmiş kodu adı ve konumu
 
-Hub ve bağlı bileşen modeli, kaynakların kolayca konumlandırılmaları ve kullanılması için belirli konumlara yerleştirmenizin gerekli olmasını gerektirir. Kaynakları, beklendiği gibi derleyip veya doğru konumlara yerleştirmiyorsa, ortak dil çalışma zamanı bunları bulamaz ve bunun yerine varsayılan kültürün kaynaklarını kullanır. Bir <xref:System.Resources.ResourceManager> nesneyle temsil edilen .NET Framework kaynak yöneticisi, yerelleştirilmiş kaynaklara otomatik olarak erişmek için kullanılır. Kaynak Yöneticisi şunları gerektirir:
+Hub ve bağlı bileşen modeli, kaynakların kolayca konumlandırılmaları ve kullanılması için belirli konumlara yerleştirmenizin gerekli olmasını gerektirir. Kaynakları, beklendiği gibi derleyip veya doğru konumlara yerleştirmiyorsa, ortak dil çalışma zamanı bunları bulamaz ve bunun yerine varsayılan kültürün kaynaklarını kullanır. Bir <xref:System.Resources.ResourceManager> nesnesi tarafından temsil edilen .NET Framework Kaynak Yöneticisi, yerelleştirilmiş kaynaklara otomatik olarak erişmek için kullanılır. Kaynak Yöneticisi şunları gerektirir:
 
 - Tek bir uydu derlemesinin belirli bir kültür için tüm kaynakları içermesi gerekir. Diğer bir deyişle, birden çok. txt veya. resx dosyasını tek bir ikili. resources dosyasında derlemeniz gerekir.
 
@@ -52,7 +50,7 @@ Hub ve bağlı bileşen modeli, kaynakların kolayca konumlandırılmaları ve k
 
 - Uydu derlemesinin uygulamayla aynı ada sahip olması ve ". resources. dll" dosya adı uzantısını kullanması gerekir. Örneğin, bir uygulama example. exe olarak adlandırılmışsa, her uydu derlemesinin adı örnek. resources. dll olmalıdır. Uydu derleme adının, kaynak dosyalarının kültürünü belirtmediğini unutmayın. Ancak uydu derlemesi, kültürü belirten bir dizinde görüntülenir.
 
-- Uydu derlemesinin kültürüyle ilgili bilgiler derlemenin meta verilerinde yer almalıdır. Kültür adını uydu derlemesinin meta verilerinde depolamak için, uydu derlemesine kaynakları eklemek üzere `/culture` [derleme Bağlayıcısı](../tools/al-exe-assembly-linker.md) 'nı kullandığınızda seçeneğini belirlersiniz.
+- Uydu derlemesinin kültürüyle ilgili bilgiler derlemenin meta verilerinde yer almalıdır. Kültür adını uydu derlemesinin meta verilerinde depolamak için, uydu derlemesine kaynakları eklemek üzere [derleme Bağlayıcısı](../tools/al-exe-assembly-linker.md) kullandığınızda `/culture` seçeneğini belirtirsiniz.
 
 Aşağıdaki çizimde, [genel derleme önbelleğine](../app-domains/gac.md)yüklememiş olduğunuz uygulamalar için örnek bir dizin yapısı ve konum gereksinimleri gösterilmektedir. . Txt ve. resources uzantılı öğeler son uygulamayla birlikte gelmez. Bunlar, son uydu kaynak derlemelerini oluşturmak için kullanılan ara kaynak dosyalarıdır. Bu örnekte,. resx dosyalarını. txt dosyaları için kullanabilirsiniz. Daha fazla bilgi için bkz. [kaynakları paketleme ve dağıtma](packaging-and-deploying-resources-in-desktop-apps.md).
 
@@ -64,13 +62,13 @@ Aşağıdaki görüntüde uydu derleme dizini gösterilmektedir:
 
 [Kaynak dosya Oluşturucu (Resgen. exe)](../tools/resgen-exe-resource-file-generator.md) , ikili. resources dosyalarına kaynakları içeren metin dosyalarını veya XML (. resx) dosyalarını derlemek için kullanılır. Daha sonra,. resources dosyalarını uydu Derlemeleriyle derlemek için [derleme Bağlayıcısı (al. exe)](../tools/al-exe-assembly-linker.md) kullanabilirsiniz. Al. exe, belirttiğiniz. resources dosyalarından bir derleme oluşturur. Uydu derlemeleri yalnızca kaynaklar içerebilir; herhangi bir yürütülebilir kod içeremez.
 
-Aşağıdaki al. exe komutu, Almanya kaynakları dosya dizelerinden uygulama `Example` için bir uydu derlemesi oluşturur. de. resources.
+Aşağıdaki al. exe komutu, Alman kaynakları dosya dizelerinden. de. resources `Example` uygulama için bir uydu derlemesi oluşturur.
 
 ```console
 al -target:lib -embed:strings.de.resources -culture:de -out:Example.resources.dll
 ```
 
-Aşağıdaki al. exe komutu ayrıca, uygulama `Example` için dosya dizelerinden bir uydu derlemesi oluşturur. de. resources. **/Template** seçeneği, uydu derlemesinin üst derlemeden (example. dll) kültür bilgileri hariç tüm derleme meta verilerini devralmasını sağlar.
+Aşağıdaki al. exe komutu ayrıca, uygulama `Example` dosya dizelerinden bir uydu derlemesi oluşturur. de. resources. **/Template** seçeneği, uydu derlemesinin üst derlemeden (example. dll) kültür bilgileri hariç tüm derleme meta verilerini devralmasını sağlar.
 
 ```console
 al -target:lib -embed:strings.de.resources -culture:de -out:Example.resources.dll -template:Example.dll
@@ -88,23 +86,23 @@ al -target:lib -embed:strings.de.resources -culture:de -out:Example.resources.dl
   
  Al. exe ile kullanılabilen seçeneklerin tamamı listesi için bkz. [derleme Bağlayıcısı (al. exe)](../tools/al-exe-assembly-linker.md).
   
-## <a name="satellite-assemblies-an-example"></a>Uydu derlemeleri: Bir Örnek  
+## <a name="satellite-assemblies-an-example"></a>Uydu derlemeleri: bir örnek  
  Aşağıda yerelleştirilmiş bir selamlama içeren ileti kutusunu görüntüleyen basit bir "Hello World" örneği verilmiştir. Örnek, Ingilizce (Birleşik Devletler), Fransızca (Fransa) ve Rusça (Rusya) kültürleri için kaynakları ve geri dönüş kültürünün Ingilizce olduğunu içerir. Örneği oluşturmak için aşağıdakileri yapın:  
   
-1. Varsayılan kültür için kaynağı içerecek olan Greeting. resx veya Greeting. txt adlı bir kaynak dosyası oluşturun. "Hello World!" `HelloString` olan ada sahip tek bir dizeyi depola Bu dosyada.
+1. Varsayılan kültür için kaynağı içerecek olan Greeting. resx veya Greeting. txt adlı bir kaynak dosyası oluşturun. Değeri "Hello World!" olan `HelloString` adlı tek bir dizeyi depola Bu dosyada.
   
-2. İngilizce (en) uygulamanın varsayılan kültürünün olduğunu göstermek için, uygulamanın AssemblyInfo dosyasına veya <xref:System.Resources.NeutralResourcesLanguageAttribute?displayProperty=nameWithType> uygulamanın ana derlemesine derlenecek ana kaynak kod dosyasına aşağıdaki özniteliği ekleyin.
+2. Ingilizce (en) uygulamanın varsayılan kültürünün olduğunu göstermek için, uygulamanın AssemblyInfo dosyasına veya uygulamanın ana derlemesine derlenecek ana kaynak kod dosyasına aşağıdaki <xref:System.Resources.NeutralResourcesLanguageAttribute?displayProperty=nameWithType> özniteliğini ekleyin.
   
     [!code-csharp[Conceptual.Resources.Locating#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.locating/cs/assemblyinfo.cs#2)]
     [!code-vb[Conceptual.Resources.Locating#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.locating/vb/assemblyinfo.vb#2)]  
   
 3. Uygulamaya aşağıdaki şekilde ek kültürler (en-US, fr-FR ve ru-RU) desteği ekleyin:  
   
-    - En-US veya İngilizce (Birleşik Devletler) kültürünü desteklemek için, Greeting. en-US. resx veya Greeting. en-US. txt adlı bir kaynak dosyası oluşturun ve bunu, değeri "Hi World!" `HelloString` olan tek bir dize olarak depolayın.  
+    - En-US veya Ingilizce (Birleşik Devletler) kültürünü desteklemek için, Greeting. en-US. resx veya Greeting. en-US. txt adlı bir kaynak dosyası oluşturun ve bunu değeri "Hi World!" olan `HelloString` adlı tek bir dize içinde saklayın.  
   
-    - Fr-fr veya Fransızca (Fransa) kültürünü desteklemek için Greeting.fr-fr. resx veya Greeting.fr-fr. txt adlı bir kaynak dosyası oluşturun ve bunu değeri "Salut tout Le Monde! `HelloString` " olan tek bir dize olarak depolayın.  
+    - Fr-FR veya Fransızca (Fransa) kültürünü desteklemek için Greeting.fr-FR. resx veya Greeting.fr-FR. txt adlı bir kaynak dosyası oluşturun ve bunu değeri "Salut tout Le Monde!" olan `HelloString` adlı tek bir dize içinde saklayın.  
   
-    - Ru-ru veya Rusça (Rusya) kültürünü desteklemek için Greeting.ru-ru. resx veya Greeting.ru-ru. txt adlı bir kaynak dosyası oluşturun ve bunu değeri "Всем привет!" `HelloString` olan tek bir dize olarak depolayın.  
+    - Ru-RU veya Rusça (Rusya) kültürünü desteklemek için Greeting.ru-RU. resx veya Greeting.ru-RU. txt adlı bir kaynak dosyası oluşturun ve bunu değeri "Всем привет!" olan `HelloString` adlı tek bir dize içinde saklayın.  
   
 4. Her metin veya XML kaynak dosyasını bir ikili. resources dosyasına derlemek için [Resgen. exe](../tools/resgen-exe-resource-file-generator.md) ' yi kullanın. Çıktı,. resx veya. txt dosyalarıyla aynı kök dosya adına sahip bir dosya kümesidir, ancak. resources uzantısı. Visual Studio ile örnek oluşturursanız, derleme işlemi otomatik olarak işlenir. Visual Studio kullanmıyorsanız,. resx dosyalarını. resources dosyalarına derlemek için aşağıdaki komutları çalıştırın:  
   
@@ -120,7 +118,7 @@ al -target:lib -embed:strings.de.resources -culture:de -out:Example.resources.dl
 5. Aşağıdaki kaynak kodu, uygulamanın ana derlemesinde varsayılan kültürün kaynaklarıyla birlikte derleyin:
 
     > [!IMPORTANT]
-    > Örneği oluşturmak için Visual Studio yerine komut satırını kullanıyorsanız, <xref:System.Resources.ResourceManager> sınıf oluşturucusuna yapılan çağrıyı aşağıdaki şekilde değiştirmelisiniz:`ResourceManager rm = new ResourceManager("Greetings", typeof(Example).Assembly);`
+    > Örneği oluşturmak için Visual Studio yerine komut satırını kullanıyorsanız, <xref:System.Resources.ResourceManager> sınıf oluşturucusuna yapılan çağrıyı şu şekilde değiştirmelisiniz: `ResourceManager rm = new ResourceManager("Greetings", typeof(Example).Assembly);`
 
     [!code-csharp[Conceptual.Resources.Locating#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.locating/cs/program.cs#1)]
     [!code-vb[Conceptual.Resources.Locating#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.locating/vb/module1.vb#1)]
@@ -208,7 +206,7 @@ gacutil -i:StringLibrary.resources.dll
 
 **/I** seçeneği, Gacutil. exe ' nin belirtilen derlemeyi genel derleme önbelleğine yüklemesi gerektiğini belirtir. Uydu derlemesi önbellekte yüklendikten sonra, içerdiği kaynaklar uydu derlemesini kullanacak şekilde tasarlanan tüm uygulamalar tarafından kullanılabilir hale gelir.
 
-### <a name="resources-in-the-global-assembly-cache-an-example"></a>Genel derleme önbelleğindeki kaynaklar: Bir Örnek
+### <a name="resources-in-the-global-assembly-cache-an-example"></a>Genel derleme önbelleğindeki kaynaklar: bir örnek
 
 Aşağıdaki örnek, bir kaynak dosyasından yerelleştirilmiş bir karşılama ayıklamak ve döndürmek için .NET Framework sınıf kitaplığındaki bir yöntemi kullanır. Kitaplık ve kaynakları genel derleme önbelleğine kaydedilir. Örnek, Ingilizce (Birleşik Devletler), Fransızca (Fransa), Rusça (Rusya) ve Ingilizce kültürlerin kaynaklarını içerir. Varsayılan kültür İngilizce 'dir; kaynakları ana derlemede depolanır. Örnek Başlangıçta, kitaplığı ve uydu derlemelerini ortak anahtarla imzalar ve sonra bunları ortak/özel anahtar çifti ile yeniden imzalar. Örneği oluşturmak için aşağıdakileri yapın:
 
@@ -226,20 +224,20 @@ Aşağıdaki örnek, bir kaynak dosyasından yerelleştirilmiş bir karşılama 
     sn –p ResKey.snk PublicKey.snk
     ```
 
-3. Varsayılan kültür için kaynağı içerecek dizeler. resx adlı bir kaynak dosyası oluşturun. "Değeri" nasıl yapılır `Greeting` ? "adlı tek bir dizeyi depola Bu dosyada.
+3. Varsayılan kültür için kaynağı içerecek dizeler. resx adlı bir kaynak dosyası oluşturun. Değeri "nasıl yapılır?" olan `Greeting` adlı tek bir dizeyi depola Bu dosyada.
 
-4. "En" ın uygulamanın varsayılan kültürü olduğunu belirtmek için, uygulamanın AssemblyInfo dosyasına veya <xref:System.Resources.NeutralResourcesLanguageAttribute?displayProperty=nameWithType> uygulamanın ana derlemesine derlenecek ana kaynak kod dosyasına aşağıdaki özniteliği ekleyin:
+4. "En" uygulamanın varsayılan kültürü olduğunu belirtmek için, aşağıdaki <xref:System.Resources.NeutralResourcesLanguageAttribute?displayProperty=nameWithType> özniteliğini uygulamanın AssemblyInfo dosyasına veya uygulamanın ana derlemesine derlenecek ana kaynak kodu dosyasına ekleyin:
 
     [!code-csharp[Conceptual.Resources.Satellites#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.satellites/cs/stringlibrary.cs#2)]
     [!code-vb[Conceptual.Resources.Satellites#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.satellites/vb/stringlibrary.vb#2)]
 
 5. Uygulamaya ek kültürler (en-US, fr-FR ve ru-RU kültürleri) için aşağıdaki şekilde bir destek ekleyin:
 
-    - "En-US" veya İngilizce (Birleşik Devletler) kültürünü desteklemek için, dizeler. en-US. resx veya Strings. en-US. txt adlı bir kaynak dosyası oluşturun ve bunu değeri "Merhaba!" `Greeting` olan tek bir dize içinde saklayın.
+    - "En-US" veya Ingilizce (Birleşik Devletler) kültürünü desteklemek için, dizeler. en-US. resx veya Strings. en-US. txt adlı bir kaynak dosyası oluşturun ve bunu değeri "Merhaba!" olan `Greeting` adlı tek bir dize içinde saklayın.
 
-    - "Fr-fr" veya Fransızca (Fransa) kültürünü desteklemek için, Strings.fr-fr. resx veya Strings.fr-fr. txt adlı bir kaynak dosyası oluşturun ve bunu değeri "iyi jour!" `Greeting` olan tek bir dize olarak saklayın.
+    - "Fr-FR" veya Fransızca (Fransa) kültürünü desteklemek için, Strings.fr-FR. resx veya Strings.fr-FR. txt adlı bir kaynak dosyası oluşturun ve bunu değeri "Iyi jour!" olan `Greeting` adlı tek bir dize içinde saklayın.
 
-    - "Ru-ru" veya Rusça (Rusya) kültürünü desteklemek için, Strings.ru-ru. resx veya Strings.ru-ru. txt adlı bir kaynak dosyası oluşturun ve bunu değeri "привет!" `Greeting` olan tek bir dize olarak depolayın.
+    - "Ru-RU" veya Rusça (Rusya) kültürünü desteklemek için, Strings.ru-RU. resx veya Strings.ru-RU. txt adlı bir kaynak dosyası oluşturun ve bunu değeri "привет!" olan `Greeting` adlı tek bir dize içinde depolayın
 
 6. Her metin veya XML kaynak dosyasını bir ikili. resources dosyasına derlemek için [Resgen. exe](../tools/resgen-exe-resource-file-generator.md) ' yi kullanın. Çıktı,. resx veya. txt dosyalarıyla aynı kök dosya adına sahip bir dosya kümesidir, ancak. resources uzantısı. Visual Studio ile örnek oluşturursanız, derleme işlemi otomatik olarak işlenir. Visual Studio kullanmıyorsanız,. resx dosyalarını. resources dosyalarına derlemek için aşağıdaki komutu çalıştırın:
 
@@ -252,7 +250,7 @@ Aşağıdaki örnek, bir kaynak dosyasından yerelleştirilmiş bir karşılama 
 7. StringLibrary. vb veya StringLibrary.cs için aşağıdaki kaynak kodu, varsayılan kültürün kaynaklarla birlikte StringLibrary. dll adlı gecikmeli imzalanmış bir kitaplık derlemesi olarak derleyin:
 
     > [!IMPORTANT]
-    > Örneği oluşturmak için Visual Studio yerine komut satırını kullanıyorsanız, <xref:System.Resources.ResourceManager> sınıf oluşturucusuna olan çağrıyı olarak `ResourceManager rm = new ResourceManager("Strings",` `typeof(Example).Assembly);`değiştirmelisiniz.
+    > Örneği oluşturmak için Visual Studio yerine komut satırını kullanıyorsanız, <xref:System.Resources.ResourceManager> sınıf oluşturucusuna yapılan çağrıyı `typeof(Example).Assembly);``ResourceManager rm = new ResourceManager("Strings",` değiştirmeniz gerekir.
 
     [!code-csharp[Conceptual.Resources.Satellites#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.satellites/cs/stringlibrary.cs#1)]
     [!code-vb[Conceptual.Resources.Satellites#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.satellites/vb/stringlibrary.vb#1)]
@@ -299,7 +297,7 @@ Aşağıdaki örnek, bir kaynak dosyasından yerelleştirilmiş bir karşılama 
 
     Burada *filename* , kayıt yapılacak dosyanın adıdır.
 
-13. Visual Studio kullanıyorsanız, adlı `Example`yeni bir **konsol uygulaması** projesi oluşturun, StringLibrary. dll ' ye ve aşağıdaki kaynak koda bir başvuru ekleyin ve derleyin.
+13. Visual Studio kullanıyorsanız, `Example`adlı yeni bir **konsol uygulaması** projesi oluşturun, StringLibrary. dll ' ye ve aşağıdaki kaynak koda bir başvuru ekleyin ve derleyin.
 
     [!code-csharp[Conceptual.Resources.Satellites#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.satellites/cs/example.cs#3)]
     [!code-vb[Conceptual.Resources.Satellites#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.satellites/vb/example.vb#3)]

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: a247c792-45e1-4538-9e1f-b46acca4a463
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5dc29663153f837b660262eae51b6f032617d027
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 906ca2540e421953b3ce39300aa7b2376f789929
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67765073"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137094"
 ---
 # <a name="icordebugvaluegetaddress-method"></a>ICorDebugValue::GetAddress Metodu
-Ayıklanan sürecinde olan "ICorDebugValue" nesnenin adresini alır.  
+Bu "ICorDebugValue" nesnesinin, hata ayıklama sürecinde olan adresini alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,18 +35,18 @@ HRESULT GetAddress (
   
 ## <a name="parameters"></a>Parametreler  
  `pAddress`  
- [out] İşaretçi bir `CORDB_ADDRESS` bu değeri nesnenin adresini belirten bir nesne.  
+ dışı Bu değer nesnesinin adresini belirten `CORDB_ADDRESS` nesnesine yönelik işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Değer kullanılamıyor, 0 (sıfır) döndürülür. Bu değer, en azından kısmen kayıtlara ise meydana gelmiş olabilir ya da bir çöp toplayıcı tanıtıcısı depolanan (`GCHandle`).  
+ Değer kullanılamıyorsa 0 (sıfır) döndürülür. Bu durum, değer en az kısmen Yazmaçlarda veya bir çöp toplayıcı tanıtıcısında (`GCHandle`) depolanıyorsa meydana gelebilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.

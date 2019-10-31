@@ -12,17 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - EInitializeNewDomainFlags enumeration [.NET Framework hosting]
 ms.assetid: 3a120ab2-f5ef-4c9b-8595-d3ed7247c342
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d69b12404459de5dbc1c7748deee6ca09c1e5182
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3693285e13d0650f7662e2187471027cc4c40704
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67772417"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129416"
 ---
 # <a name="einitializenewdomainflags-enumeration"></a>EInitializeNewDomainFlags Numaralandırması
-Çalışma zamanının bir uygulama etki alanının başlatma hakkında bilgi sağlamak konak sağlar.  
+Bir uygulama etki alanının başlatılması hakkında bilgi içeren konağın çalışma zamanına olanak sağlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,20 +35,20 @@ typedef enum {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`eInitializeNewDomainFlags_None`|Bayrak.|  
-|`eInitializeNewDomainFlags_NoSecurityChanges`|Konak güvenlik durumuna ilişkin uygulama etki alanında bir değişiklik değil, ortak dil çalışma zamanı (CLR) bildirir <xref:System.AppDomainManager.InitializeNewDomain%2A> yöntemi.|  
+|`eInitializeNewDomainFlags_None`|Bayrak yok.|  
+|`eInitializeNewDomainFlags_NoSecurityChanges`|Ana bilgisayarın <xref:System.AppDomainManager.InitializeNewDomain%2A> yönteminde uygulama etki alanının güvenlik durumunda değişiklik yapmayacağı ortak dil çalışma zamanına (CLR) bildirir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- [Iclrdomainmanager::setappdomainmanagertype](../../../../docs/framework/unmanaged-api/hosting/iclrdomainmanager-setappdomainmanagertype-method.md) yöntemi türünde bir parametre alır `EInitializeNewDomainFlags`.  
+ [ICLRDomainManager:: SetAppDomainManagerType](../../../../docs/framework/unmanaged-api/hosting/iclrdomainmanager-setappdomainmanagertype-method.md) yöntemi, `EInitializeNewDomainFlags`türünde bir parametre alır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** MSCorEE.h  
+ **Üst bilgi:** MSCorEE. h  
   
- **Kitaplığı:** MSCorEE.dll  
+ **Kitaplık:** MSCorEE. dll  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

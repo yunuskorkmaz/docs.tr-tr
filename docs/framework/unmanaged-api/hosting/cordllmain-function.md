@@ -14,18 +14,16 @@ helpviewer_keywords:
 ms.assetid: bc7b51cf-39d3-48ec-a5cb-2f179fbefff8
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9a02a899fd6fbffd04ef25913adb6a65ade27177
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f60f159ab4770023cee7123b39109040243e1ccd
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67755652"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136973"
 ---
-# <a name="cordllmain-function"></a>\_CorDllMain işlevi
+# <a name="_cordllmain-function"></a>\_CorDllMain Işlevi
 
-Ortak dil çalışma zamanı (CLR) başlatır, DLL derlemesinin CLR başlığındaki yönetilen giriş noktasını bulur ve yürütmeyi başlatır.  
+Ortak dil çalışma zamanını (CLR) başlatır, DLL derlemesinin CLR üst bilgisinde yönetilen giriş noktasını bulur ve yürütmeyi başlatır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,35 +37,35 @@ BOOL STDMETHODCALLTYPE _CorDllMain (
   
 ## <a name="parameters"></a>Parametreler  
  `hInst`  
- [in] Yüklenen bir modülün örneği tanıtıcısı.  
+ 'ndaki Yüklenen modülün örnek tanıtıcısı.  
   
  `dwReason`  
- [in] DLL giriş noktası işlevini neden çağrılan gösterir. Bu parametre aşağıdaki değerlerden biri olabilir: DLL\__DllMainCRTStartup, DLL\_iş PARÇACIĞI\_ATTACH, DLL\_iş PARÇACIĞI\_Ekle veya DLL\_işlem\_ayırma. Bu değerleri açıklamaları için bkz. `DllMain` Platform SDK belgelerinde.  
+ 'ndaki DLL giriş noktası işlevinin neden çağrıldığını gösterir. Bu parametre aşağıdaki değerlerden biri olabilir: DLL\_PROCESS_ATTACH, DLL\_Iş parçacığı\_ILIŞTIRME, DLL\_Iş parçacığı\_ILIŞTIRME veya DLL\_Işlem\_AYıRMA. Bu değerlerin açıklamaları için Platform SDK 'sindeki `DllMain` belgelerine bakın.  
   
  `lpReserved`  
- [in] Kullanılmayan.  
+ 'ndaki Kullanılmayan.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Bu yöntem döndürür `true` başarı için ve `false` hata oluşması durumunda.  
+ Bu yöntem, hata oluşursa `true` başarılı ve `false` döndürür.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu işlev, DLL derlemeler için işletim sistemi yükleyicisi tarafından çağrılır. Yürütülebilir derlemeler için yükleyici çağırır [ \_CorExeMain](../../../../docs/framework/unmanaged-api/hosting/corexemain-function.md) işlevini.  
+ Bu işlev, DLL derlemeleri için işletim sistemi yükleyicisi tarafından çağırılır. Yürütülebilir derlemeler için yükleyici bunun yerine [\_CorExeMain](../../../../docs/framework/unmanaged-api/hosting/corexemain-function.md) işlevini çağırır.  
   
- İşletim sistemi yükleyicisi DLL dosyası içinde belirtilen giriş noktası bakılmaksızın bu yöntemi çağırır.  
+ İşletim sistemi yükleyicisi, DLL dosyasında belirtilen giriş noktası ne olursa olsun bu yöntemi çağırır.  
   
-`_CorDllMain` İşlevi, doğrudan işletim sistemi yükleyicisi tarafından çağrılır.
+`_CorDllMain` işlevi, işletim sistemi yükleyicisi tarafından doğrudan çağırılır.
   
- Ek bilgi için bkz açıklamalar bölümünde [ \_CorValidateImage](../../../../docs/framework/unmanaged-api/hosting/corvalidateimage-function.md) konu.  
+ Daha fazla bilgi için [\_Corvalidateımage](../../../../docs/framework/unmanaged-api/hosting/corvalidateimage-function.md) konusunun açıklamalar bölümüne bakın.  
   
 ## <a name="requirements"></a>Gereksinimler  
 
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** COR.h  
+ **Üst bilgi:** Cor. h  
   
- **Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil  
+ **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

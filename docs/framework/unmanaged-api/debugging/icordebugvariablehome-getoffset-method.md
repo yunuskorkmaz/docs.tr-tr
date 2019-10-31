@@ -1,5 +1,5 @@
 ---
-title: ICorDebugVariableHome::GetOffset yöntemi
+title: 'Icordebugvariablehome:: GetOffset Yöntemi'
 ms.date: 03/30/2017
 api_name:
 - ICorDebugVariableHome.GetOffset
@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: f025c2e5-3f6c-4be8-9ffe-c8b214617dfe
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0fdab81d499fe1508493cb0bf05a1787974a9d01
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3af8c925b80b9fd4ed0a46d2bd50fe37a6f3154a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67774533"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125092"
 ---
-# <a name="icordebugvariablehomegetoffset-method"></a>ICorDebugVariableHome::GetOffset yöntemi
-Uzaklık, bir değişken için temel kasadan alır.  
+# <a name="icordebugvariablehomegetoffset-method"></a>Icordebugvariablehome:: GetOffset Yöntemi
+Bir değişken için temel kaydın konumunu alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,24 +35,24 @@ HRESULT GetOffset(
   
 ## <a name="parameters"></a>Parametreler  
  `pOffset`  
- [out] Temel kayıt uzaklığı.  
+ dışı Temel kayıttaki fark.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Bu yöntem, aşağıdaki değerleri döndürür:  
+ Yöntemi aşağıdaki değerleri döndürür:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|`S_OK`|Register-göreli bellek konumunda değişkendir.|  
-|`E_FAIL`|Değişken bir kayıt göreli bellek konumda değil.|  
+|`S_OK`|Değişken, YAZMAÇ göreli bir bellek konumudur.|  
+|`E_FAIL`|Değişken, YAZMAÇ göreli bir bellek konumunda değil.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

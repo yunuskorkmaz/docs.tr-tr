@@ -1,24 +1,22 @@
 ---
-title: Mayı XML şema doğrulaması
+title: 'Azaltma: XML Şema Doğrulaması'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: b73dd4f4-f2dc-47a2-9425-3896e92321fb
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d7f53a2e8684029c0d1329d29a88bd1788e62d43
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 7feed7de4a6c76f5f2ba0e2ea1c532aad6bde4de
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70789671"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73126066"
 ---
-# <a name="mitigation-xml-schema-validation"></a>Mayı XML şema doğrulaması
+# <a name="mitigation-xml-schema-validation"></a>Azaltma: XML Şema Doğrulaması
 .NET Framework 4,6 ' de, bir bileşik anahtar kullanılıyorsa ve bir anahtar boşsa, XSD şema doğrulaması benzersiz kısıtlamanın ihlal edildiğini algılar.  
   
 ## <a name="impact"></a>Etki  
- Bu değişikliğin etkisi en az olmalıdır: şema belirtimine göre, boş bir anahtarla bir bileşik anahtar kullanılarak ihlal edilirse bir şema `xsd:unique` doğrulama hatası beklenmektedir.  
+ Bu değişikliğin etkisi en az olmalıdır: şema belirtimine göre, `xsd:unique` boş bir anahtarla bileşik anahtar kullanılarak ihlal edilirse bir şema doğrulama hatası beklenmektedir.  
   
 ## <a name="mitigation"></a>Azaltma  
  Bir bileşik anahtarda bir boş anahtar varsa bir şema doğrulama hatası algılanıp algılanmayacağı, yapılandırılabilir bir özelliktir:  
@@ -27,12 +25,12 @@ ms.locfileid: "70789671"
   
 - .NET Framework 4,6 altında çalışan ancak .NET Framework 4.5.2 ve önceki sürümlerini hedefleyen uygulamalarda, varsayılan olarak bir şema doğrulama hatası algılanmadı; Ancak, şema doğrulama hatasının algılanabilmesi için onu kabul etmek mümkündür.  
   
- Bu davranış, <xref:System.AppContext> `System.Xml.IgnoreEmptyKeySequences` anahtarın değerini tanımlamak için sınıfı kullanılarak yapılandırılabilir. Anahtarın varsayılan değeri `false` (boş anahtar dizileri yoksayılamadığından) olduğundan, .NET Framework 4,6 ' i hedefleyen uygulamalar, anahtarın değerini olarak `true`ayarlamak için aşağıdaki kodu kullanarak davranışı geri alabilir:  
+ Bu davranış, `System.Xml.IgnoreEmptyKeySequences` anahtarın değerini tanımlamak için <xref:System.AppContext> sınıfı kullanılarak yapılandırılabilir. Anahtarın varsayılan değeri `false` (boş anahtar dizileri yok sayılıyor), .NET Framework 4,6 ' i hedefleyen uygulamalar, anahtarın değerini `true`olarak ayarlamak için aşağıdaki kodu kullanarak davranışı geri alabilir:  
   
  [!code-csharp[AppCompat.IgnoreEmptyKeySequences#1](../../../samples/snippets/csharp/VS_Snippets_CLR/appcompat.ignoreemptykeysequences/cs/program.cs#1)]
  [!code-vb[AppCompat.IgnoreEmptyKeySequences#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/appcompat.ignoreemptykeysequences/vb/module1.vb#1)]  
   
- .NET Framework 4.5.2 ve önceki sürümlerini hedefleyen uygulamalar için, anahtarın varsayılan değeri (boş anahtar dizileri yoksayıldı) `true` olduğundan, boş anahtara sahip bir bileşik anahtarın, kullanarak bir şema doğrulama hatası ürettiğinden emin olmak mümkündür. anahtarın değerini olarak `false`ayarlamak için aşağıdaki kod.  
+ .NET Framework 4.5.2 ve önceki sürümlerini hedefleyen uygulamalar için, anahtarın varsayılan değeri `true` (boş anahtar dizileri yoksayıldı), boş anahtara sahip bir bileşik anahtarın, bir şema doğrulama hatası oluşturduğundan Aşağıdaki kod, anahtarın değerini `false`olarak ayarlamak için.  
   
  [!code-csharp[AppCompat.IgnoreEmptyKeySequences#2](../../../samples/snippets/csharp/VS_Snippets_CLR/appcompat.ignoreemptykeysequences/cs/program.cs#2)]
  [!code-vb[AppCompat.IgnoreEmptyKeySequences#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/appcompat.ignoreemptykeysequences/vb/module1.vb#2)]  

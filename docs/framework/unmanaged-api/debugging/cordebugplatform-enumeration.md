@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: c5444816-7378-4521-afd3-bf5e4b5303d5
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b8c0644dc247225c510e1c84254417551b490416
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5d66503487e1b997e2b8cc7d3d46e210a4dbbe05
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739673"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132757"
 ---
 # <a name="cordebugplatform-enumeration"></a>CorDebugPlatform Numaralandırması
-Tarafından kullanılan hedef platform değerleri sağlayan [Icordebugdatatarget::getplatform](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md) yöntemi.  
+[ICorDebugDataTarget:: GetPlatform](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md) yöntemi tarafından kullanılan hedef platform değerlerini sağlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -45,24 +43,24 @@ typedef enum CorDebugPlatform
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|CORDB_PLATFORM_WINDOWS_X86|Hedef, Intel x86 donanım üzerinde çalışan Windows platformudur.|  
-|CORDB_PLATFORM_WINDOWS_AMD64|Hedef, 64 bit Windows AMD64 veya Intel EM64T donanım üzerinde çalışan platformudur.|  
-|CORDB_PLATFORM_WINDOWS_IA64|Hedef, Intel IA-64 donanım üzerinde çalışan 32 bit Windows platformudur.|  
-|CORDB_PLATFORM_MAC_PPC|Hedef, PowerPC donanımda çalışan Macintosh işletim sistemi platformudur.|  
-|CORDB_PLATFORM_MAC_X86|Hedef, Intel x86 donanımda çalışan Macintosh işletim sistemi platformudur.|  
-|CORDB_PLATFORM_WINDOWS_ARM|Windows ARM donanım üzerinde çalışan Macintosh işletim sistemini hedef platformudur.|  
-|CORDB_PLATFORM_MAC_AMD64|Hedef platform AMD64 donanımda çalışan Macintosh işletim sistemi ' dir.|  
+|CORDB_PLATFORM_WINDOWS_X86|Hedef platform, Intel x86 donanımında çalışan bir Windows.|  
+|CORDB_PLATFORM_WINDOWS_AMD64|Hedef platform, AMD64 veya Intel EM64T donanımında çalışan 64 bitlik bir Windows.|  
+|CORDB_PLATFORM_WINDOWS_IA64|Hedef platform Intel IA-64 donanımında çalışan 32 bit Windows.|  
+|CORDB_PLATFORM_MAC_PPC|Hedef platform, PowerPC donanımında çalışan Macintosh işletim sistemidir.|  
+|CORDB_PLATFORM_MAC_X86|Hedef platform, Intel x86 donanımında çalışan Macintosh işletim sistemidir.|  
+|CORDB_PLATFORM_WINDOWS_ARM|Hedef platform, Windows ARM donanımında çalışan Macintosh işletim sistemidir.|  
+|CORDB_PLATFORM_MAC_AMD64|Hedef platform, AMD64 donanımında çalışan Macintosh işletim sistemidir.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
- `CORDB_PLATFORM_WINDOWS_ARM` Ve `CORDB_PLATFORM_MAC_AMD64` üyeleri olan .NET Framework 4.5.2 ve sonraki sürümlerinde kullanılabilir.  
+ `CORDB_PLATFORM_WINDOWS_ARM` ve `CORDB_PLATFORM_MAC_AMD64` üyeleri .NET Framework 4.5.2 ve sonraki sürümlerde kullanılabilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

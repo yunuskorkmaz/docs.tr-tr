@@ -2,17 +2,15 @@
 title: ICorDebugDebugEvent::GetEventKind Yöntemi
 ms.date: 03/30/2017
 ms.assetid: c37aaceb-c948-46bd-a943-08be4cbb76f4
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a87dda8d8a263df1989a685d94c5163212f41382
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 92606d7bd0a277dd327ce4fd430ce963a260206d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69911335"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136652"
 ---
 # <a name="icordebugdebugeventgeteventkind-method"></a>ICorDebugDebugEvent::GetEventKind Yöntemi
-Bu `ICorDebugDebugEvent` nesnenin ne tür bir olayın temsil ettiğini belirtir.  
+Bu `ICorDebugDebugEvent` nesnesinin ne tür bir olayın temsil ettiğini belirtir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -27,17 +25,17 @@ HRESULT GetEventKind(
  Olayın türünü gösteren bir [Cordebugdebugger Geventkind](../../../../docs/framework/unmanaged-api/debugging/cordebugdebugeventkind-enumeration.md) numaralandırma üyesine yönelik bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Değerine `pDebugEventKind`bağlı olarak, ek verilere sahip daha kesin `QueryInterface` bir hata ayıklama olay arabirimi almak için öğesini çağırabilirsiniz.  
+ `pDebugEventKind`değerine bağlı olarak, ek verilere sahip daha kesin bir hata ayıklama olay arabirimi almak için `QueryInterface` çağırabilirsiniz.  
   
 > [!NOTE]
 > Bu yöntem yalnızca .NET Native kullanılabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi** CorDebug. IDL, CorDebug. h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı** Corguid. lib  
+ **Kitaplık:** Corguid. lib  
   
  **.NET Framework sürümleri:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

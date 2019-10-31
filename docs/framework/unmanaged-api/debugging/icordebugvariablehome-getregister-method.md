@@ -1,5 +1,5 @@
 ---
-title: ICorDebugVariableHome::GetRegister yöntemi
+title: 'Icordebugvariablehome:: GetRegister yöntemi'
 ms.date: 03/30/2017
 api_name:
 - ICorDebugVariableHome.GetRegister
@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: a5eecd7b-b04c-4266-bff2-7c8771d519a8
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f4b3b80546095b79dc5b551a9c5e92ec15c0dddb
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4c9932c3eeebd0101ee364c9b4d0b0a26862c4b1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67771795"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125069"
 ---
-# <a name="icordebugvariablehomegetregister-method"></a>ICorDebugVariableHome::GetRegister yöntemi
-Konum türünde bir değişken içeren bir kayıt alır `VLT_REGISTER`hem de konum türünde bir değişken için temel kaydı `VLT_REGISTER_RELATIVE`.  
+# <a name="icordebugvariablehomegetregister-method"></a>Icordebugvariablehome:: GetRegister yöntemi
+`VLT_REGISTER`konum türüne sahip bir değişken içeren kaydı alır ve `VLT_REGISTER_RELATIVE`konum türü olan bir değişken için temel kayıt olur.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,24 +35,24 @@ HRESULT GetRegister(
   
 ## <a name="parameters"></a>Parametreler  
  `pRegister`  
- [out] Konum türünde bir değişken için kayıt gösteren bir CorDebugRegister sabit listesi değeri `VLT_REGISTER`hem de konum türünde bir değişken için temel kaydı `VLT_REGISTER_RELATIVE`.  
+ dışı Bir CorDebugRegister numaralandırma değeri, konum türü `VLT_REGISTER`olan bir değişken için kaydolmayı ve `VLT_REGISTER_RELATIVE`konum türü olan bir değişken için temel kayıt olduğunu gösterir.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Bu yöntem, aşağıdaki değerleri döndürür:  
+ Yöntemi aşağıdaki değerleri döndürür:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|`S_OK`|Değişkeni tarafından belirtilen kayıt defterinde olduğu `pRegister` bağımsız değişken.|  
-|`E_FAIL`|Değişken, bir kayıt veya bir kayıt göreli konumu değil.|  
+|`S_OK`|Değişken `pRegister` bağımsız değişkeni tarafından belirtilen yazmaç içinde.|  
+|`E_FAIL`|Değişken, YAZMAÇ veya yazmaç ile ilişkili bir konumda değil.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

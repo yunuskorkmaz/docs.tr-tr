@@ -5,24 +5,22 @@ helpviewer_keywords:
 - .NET Framework 4.5, migrating from 1.1
 - .NET Framework 1.1, migrating to .NET Framework 4.5
 ms.assetid: 7ead0cb3-3b19-414a-8417-a1c1fa198d9e
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7b15318ef38c407110c8d48d3e81977aa1b20df4
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: f74b75827770524299f9a25a5854503186139cb4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70779467"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73126290"
 ---
 # <a name="migrating-from-the-net-framework-11"></a>.NET Framework 1.1'den Geçiş
 
-[!INCLUDE[win7](../../../includes/win7-md.md)]Windows işletim sisteminin ve sonraki sürümleri 1,1 .NET Framework desteklemez. Sonuç olarak, 1,1 .NET Framework hedefleyen uygulamalar hiçbir değişiklik [!INCLUDE[win7](../../../includes/win7-md.md)] yapılmadan veya sonraki işletim sistemi sürümlerinde çalışmaz. Bu konuda, Windows işletim sisteminin altında [!INCLUDE[win7](../../../includes/win7-md.md)] ve sonraki sürümlerinde 1,1 .NET Framework hedefleyen bir uygulamayı çalıştırmak için gereken adımlar ele alınmaktadır. 1,1 ve [!INCLUDE[win8](../../../includes/win8-md.md)].NET Framework hakkında daha fazla bilgi için, bkz. [Windows 8 ve sonraki sürümlerde .NET Framework 1,1 uygulamaları çalıştırma](../install/run-net-framework-1-1-apps.md).
+Windows işletim sisteminin [!INCLUDE[win7](../../../includes/win7-md.md)] ve sonraki sürümleri, .NET Framework 1,1 desteklemez. Sonuç olarak, .NET Framework 1,1 ' i hedefleyen uygulamalar [!INCLUDE[win7](../../../includes/win7-md.md)] veya sonraki işletim sistemi sürümlerinde hiçbir değişiklik yapılmadan çalışmaz. Bu konuda, Windows işletim sisteminin [!INCLUDE[win7](../../../includes/win7-md.md)] ve sonraki sürümlerinde 1,1 .NET Framework hedefleyen bir uygulamayı çalıştırmak için gereken adımlar ele alınmaktadır. .NET Framework 1,1 ve [!INCLUDE[win8](../../../includes/win8-md.md)]hakkında daha fazla bilgi için bkz. [Windows 8 ve sonraki sürümlerde .NET Framework 1,1 uygulamaları çalıştırma](../install/run-net-framework-1-1-apps.md).
 
 ## <a name="retargeting-or-recompiling"></a>Yeniden hedefleme veya yeniden derleme
 
-.NET Framework 1,1 kullanılarak derlenen bir uygulamayı [!INCLUDE[win7](../../../includes/win7-md.md)] veya daha sonraki bir Windows işletim sistemini çalıştırmak için iki yol vardır:
+[!INCLUDE[win7](../../../includes/win7-md.md)] veya sonraki bir Windows işletim sisteminde çalıştırmak için 1,1 .NET Framework kullanılarak derlenen bir uygulamayı almanın iki yolu vardır:
 
-- .NET Framework 4 ve sonraki sürümlerde çalıştırmak için uygulamayı yeniden hedefleyebilirsiniz. Yeniden hedefleme, uygulamanın yapılandırma dosyasına .NET Framework 4 ve sonraki sürümlerde çalışmasına izin veren bir [ \<supportedRuntime >](../configure-apps/file-schema/startup/supportedruntime-element.md) öğesi eklemenizi gerektirir. Bu tür bir yapılandırma dosyası aşağıdaki biçimi alır:
+- .NET Framework 4 ve sonraki sürümlerde çalıştırmak için uygulamayı yeniden hedefleyebilirsiniz. Yeniden hedefleme, uygulamanın yapılandırma dosyasına .NET Framework 4 ve sonraki sürümlerde çalışmasına izin veren bir [\<supportedRuntime >](../configure-apps/file-schema/startup/supportedruntime-element.md) öğesi eklemenizi gerektirir. Bu tür bir yapılandırma dosyası aşağıdaki biçimi alır:
 
     ```xml
     <configuration>
@@ -44,7 +42,7 @@ Uygulamanızı yeniden hedeflemenize veya yeniden derlemenize bakılmaksızın, 
 
 ## <a name="breaking-changes"></a>Yeni Değişiklikler
 
-Son değişiklik gerçekleştiğinde, belirli değişikliğe bağlı olarak, yeniden hedeflenen ve yeniden derlenen uygulamalar için geçici bir çözüm bulunabilir. Bazı durumlarda, önceki davranışı geri yüklemek için uygulamanızın yapılandırma dosyasının [ \<çalışma zamanı >](../configure-apps/file-schema/startup/supportedruntime-element.md) öğesine bir alt öğe ekleyebilirsiniz. Örneğin, aşağıdaki yapılandırma dosyası .NET Framework 1,1 ' de kullanılan dize sıralamayı ve karşılaştırma davranışını geri yükler ve yeniden hedeflenmiş ya da yeniden derlenmiş bir uygulama ile kullanılabilir.
+Son değişiklik gerçekleştiğinde, belirli değişikliğe bağlı olarak, yeniden hedeflenen ve yeniden derlenen uygulamalar için geçici bir çözüm bulunabilir. Bazı durumlarda, önceki davranışı geri yüklemek için uygulamanızın yapılandırma dosyasının [\<çalışma zamanı >](../configure-apps/file-schema/startup/supportedruntime-element.md) öğesine bir alt öğe ekleyebilirsiniz. Örneğin, aşağıdaki yapılandırma dosyası .NET Framework 1,1 ' de kullanılan dize sıralamayı ve karşılaştırma davranışını geri yükler ve yeniden hedeflenmiş ya da yeniden derlenmiş bir uygulama ile kullanılabilir.
 
 ```xml
 <configuration>

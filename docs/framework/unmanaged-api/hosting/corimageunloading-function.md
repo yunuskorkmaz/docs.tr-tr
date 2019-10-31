@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: b4367214-6dac-4280-aa11-fd487ff30bc4
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b488b6a887b0c66d8c17f8ea78f48f7d2ea31011
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 30e3a88140c8a438001e8428df4c5ee879c83376
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67758399"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136917"
 ---
-# <a name="corimageunloading-function"></a>_CorImageUnloading İşlevi
-Yönetilen modül görüntüleri yüklenmediği zaman yükleyiciye bildirir.  
+# <a name="_corimageunloading-function"></a>_CorImageUnloading İşlevi
+Yönetilen modül görüntüleri kaldırıldığında yükleyiciyi bilgilendirir.  
   
- Bu işlev uygulanmadı. Çağrılırsa E_NOTIMPL döndürür.  
+ Bu işlev uygulanmadı. Çağrılırsa, E_NOTIMPL döndürür.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,16 +36,16 @@ STDAPI (VOID) _CorImageUnloading(
   
 ## <a name="parameters"></a>Parametreler  
  `ImageBase`  
- [in] Görüntüyü kaldırmak için başlangıç konumu için bir işaretçi.  
+ 'ndaki Boşaltılacak görüntünün başlangıç konumuna yönelik bir işaretçi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** COR.h  
+ **Üst bilgi:** Cor. h  
   
- **Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil  
+ **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

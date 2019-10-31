@@ -14,14 +14,12 @@ helpviewer_keywords:
 - Next function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 95cea4cb3e7e7df2b6b52256a440b9a8d544f2db
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 587e085f6fe9f6c19d3605c673cd3bd6f68162f1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798416"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127372"
 ---
 # <a name="next-function"></a>Next işlevi
 Bir [beginenumeration](beginenumeration.md)çağrısıyla başlayan bir Numaralandırmadaki bir sonraki özelliği alır.
@@ -54,16 +52,16 @@ HRESULT Next (
 'ndaki Ayrılamadı. Bu parametre 0 olmalıdır.
 
 `pstrName`\
-dışı Özellik adını `BSTR` içeren yeni bir. Ad gerekmiyorsa, bu parametreyi olarak `null` ayarlayabilirsiniz.
+dışı Özellik adını içeren yeni bir `BSTR`. Ad gerekli değilse bu parametreyi `null` olarak ayarlayabilirsiniz.
 
 `pVal`\
-dışı , Özelliğinin değeri ile doldurulmuştur.`VARIANT` Değer gerekmiyorsa, bu parametreyi olarak `null` ayarlayabilirsiniz. İşlev bir hata kodu döndürürse, `VARIANT` geçilen öğesine `pVal` değiştirilmemiş olarak kalır.
+dışı Özelliğin değeriyle doldurulmuş bir `VARIANT`. Değer gerekli değilse bu parametreyi `null` olarak ayarlayabilirsiniz. İşlev bir hata kodu döndürürse, `pVal` geçirilen `VARIANT` değiştirilmemiş olarak kalır.
 
 `pvtType`\
-dışı Bir `CIMTYPE` değişken işaretçisi (özelliğin türünün yerleştirildiği `LONG` bir). Bu özelliğin değeri bir `VT_NULL_VARIANT`olabilir, bu durumda özelliğin gerçek türünü belirlenmesi gerekir. Bu parametre de olabilir `null`.
+dışı `CIMTYPE` değişkenine yönelik bir işaretçi (özelliğin türünün yerleştirildiği bir `LONG`). Bu özelliğin değeri bir `VT_NULL_VARIANT`olabilir, bu durumda özelliğin gerçek türünü belirlemesi gerekir. Bu parametre de `null`olabilir.
 
 `plFlavor`\
-dışı `null`veya özelliğin kaynağına bilgi alan bir değer. Olası değerler için [açıklamalar] bölümüne bakın.
+[out] `null`veya özelliğin kaynağına bilgi alan bir değer. Olası değerler için [açıklamalar] bölümüne bakın.
 
 ## <a name="return-value"></a>Dönüş değeri
 
@@ -73,7 +71,7 @@ Bu işlev tarafından döndürülen aşağıdaki değerler, *Wbemcli. h* üstbil
 |---------|---------|---------|
 | `WBEM_E_FAILED` | 0x80041001 | Genel bir hata oluştu. |
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | Bir parametre geçersiz. |
-| `WBEM_E_UNEXPECTED` | 0x8004101D | [`BeginEnumeration`](beginenumeration.md) İşleve bir çağrı yoktu. |
+| `WBEM_E_UNEXPECTED` | 0x8004101D | [`BeginEnumeration`](beginenumeration.md) işlevine hiçbir çağrı yoktu. |
 | `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Yeni bir sabit listesi başlatmak için yeterli kullanılabilir bellek yok. |
 | `WBEM_E_TRANSPORT_FAILURE` | 0x80041015 | Geçerli işlem ile Windows Yönetimi arasındaki uzak yordam çağrısı başarısız oldu. |
 | `WBEM_S_NO_ERROR` | 0 | İşlev çağrısı başarılı oldu.  |
@@ -85,21 +83,21 @@ Bu işlev [IWbemClassObject:: Next](/windows/desktop/api/wbemcli/nf-wbemcli-iwbe
 
 Bu yöntem ayrıca sistem özelliklerini de döndürür.
 
-Özelliğin temeldeki türü bir nesne yolu, bir tarih veya saat ya da başka bir özel tür ise, döndürülen tür yeterli bilgi içermez. Çağıran, `CIMTYPE` özelliğin bir nesne başvurusu, bir tarih veya saat ya da başka bir özel tür olduğunu belirleyebilmek için belirtilen özelliği için öğesini incelemesi gerekir.
+Özelliğin temeldeki türü bir nesne yolu, bir tarih veya saat ya da başka bir özel tür ise, döndürülen tür yeterli bilgi içermez. Çağıran, özelliğin bir nesne başvurusu, bir tarih veya saat ya da başka bir özel tür olup olmadığını belirlemesi için belirtilen özelliğin `CIMTYPE` incelemesi gerekir.
 
-`plFlavor` Değilse ,değeri`LONG` özelliğin kaynağı hakkında aşağıdaki gibi bilgileri alır: `null`
+`plFlavor` `null`değilse, `LONG` değeri özelliğin kaynağı hakkında aşağıdaki gibi bilgileri alır:
 
 |Sabit  |Değer  |Açıklama  |
 |---------|---------|---------|
 | `WBEM_FLAVOR_ORIGIN_SYSTEM` | 0x40 | Özelliği, standart bir sistem özelliğidir. |
-| `WBEM_FLAVOR_ORIGIN_PROPAGATED` | 0x20 | Bir sınıf için: Özelliği üst sınıftan devralınır. <br> Bir örnek için: Üst sınıftan Devralındığı sürece özelliği, örnek tarafından değiştirilmez.  |
-| `WBEM_FLAVOR_ORIGIN_LOCAL` | 0 | Bir sınıf için: Özelliği türetilmiş sınıfa aittir. <br> Bir örnek için: Özelliği örnek tarafından değiştirilir; diğer bir deyişle, bir değer sağlanmış veya bir niteleyici eklenmiş ya da değiştirilmiş. |
+| `WBEM_FLAVOR_ORIGIN_PROPAGATED` | 0x20 | Bir sınıf için: özellik üst sınıftan devralınır. <br> Bir örnek için: üst sınıftan Devralındığı sürece özelliği, örnek tarafından değiştirilmez.  |
+| `WBEM_FLAVOR_ORIGIN_LOCAL` | 0 | Bir sınıf için: özellik türetilmiş sınıfa aittir. <br> Bir örnek için: özelliği örnek tarafından değiştirilir; diğer bir deyişle, bir değer sağlanmış veya bir niteleyici eklenmiş ya da değiştirilmiş. |
 
 ## <a name="requirements"></a>Gereksinimler
 
-**Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).
+**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).
 
-**Üst bilgi** WMINet_Utils. IDL
+**Üst bilgi:** WMINet_Utils. IDL
 
 **.NET Framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 

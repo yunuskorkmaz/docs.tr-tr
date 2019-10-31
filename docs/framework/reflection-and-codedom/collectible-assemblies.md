@@ -6,79 +6,77 @@ helpviewer_keywords:
 - reflection, dynamic assembly
 - assemblies, collectible
 - collectible assemblies, retrieving
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b26da264b2da40e19db4bc5e3b3575505f5c979c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 85eacff22cf2e1c0b8c3d74a4971de035dfafbe4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61860912"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130287"
 ---
 # <a name="collectible-assemblies-for-dynamic-type-generation"></a>Dinamik tür oluşturma için toplanabilir derlemeler
 
-*Toplanabilir derlemeler* içinde oluşturuldukları uygulama etki alanını kaldırmadan kaldırılabilip kaldırılamayacağını dinamik derlemeler. Toplanabilir derleme ve içerdiği türleri tarafından kullanılan tüm yönetilen ve yönetilmeyen bellek istenemiyor. Derleme adı gibi bilgileri, iç tablodan kaldırılır.
+*Toplanabilir derlemeler* , oluşturuldukları uygulama etki alanının kaldırılması gerekmeden bellekten kaldırılabilen dinamik derlemelerdir. Bir toplanabilir derleme tarafından kullanılan tüm yönetilen ve yönetilmeyen bellek ve içerdiği türler geri kazanılır. Derleme adı gibi bilgiler iç tablolardan kaldırılır.
 
-Eklentiyi etkinleştirmek için <xref:System.Reflection.Emit.AssemblyBuilderAccess.RunAndCollect?displayProperty=nameWithType> dinamik bir derleme oluşturduğunuzda bayrak. Geçici bir derlemedir (diğer bir deyişle, kaydedilemez) ve kısıtlamaları bölümünde açıklanan tabidir [toplanabilir derlemeler kısıtlamalar](#restrictions-on-collectible-assemblies) bölümü. Bütünleştirilmiş kod ile ilişkili tüm nesneleri serbest bıraktığınızda, ortak dil çalışma zamanı (CLR) toplanabilir derleme otomatik olarak kaldırır. Diğer tüm yönden toplanabilir derlemeler oluşturulur ve diğer dinamik derlemeler aynı şekilde kullanılır.
+Kaldırmayı etkinleştirmek için, dinamik bir derleme oluştururken <xref:System.Reflection.Emit.AssemblyBuilderAccess.RunAndCollect?displayProperty=nameWithType> bayrağını kullanın. Derleme geçicidir (diğer bir deyişle, kaydedilemez) ve [toplanabilir derlemelerde kısıtlamalar](#restrictions-on-collectible-assemblies) bölümünde açıklanan sınırlamalara tabidir. Ortak dil çalışma zamanı (CLR), derlemeyle ilişkili tüm nesneleri serbest bırakırsanız, toplanabilir bir derlemeyi otomatik olarak kaldırır. Diğer tüm yönden, toplanabilir derlemeler diğer dinamik Derlemelerle aynı şekilde oluşturulur ve kullanılır.
 
-## <a name="lifetime-of-collectible-assemblies"></a>Toplanabilir derlemeler ömrü
+## <a name="lifetime-of-collectible-assemblies"></a>Toplanabilir derlemelerin ömrü
 
-Toplanabilir derleme ömrünü içerdiği türleri ve bu türlerden oluşturulan nesnelere başvurular varlığını tarafından denetlenir. Bir veya daha fazlasını mevcut olduğu sürece ortak dil çalışma zamanının bir derlemeyi kaldırmaz (`T` derlemede tanımlanan herhangi bir tür): 
+Toplanabilir bir derlemenin ömrü, içerdiği türlere yapılan başvuruların ve bu türlerden oluşturulan nesnelerin varlığı tarafından denetlenir. Ortak dil çalışma zamanı, aşağıdakilerden biri veya daha fazlası mevcut olduğu sürece bir derlemeyi kaldırmaz (`T` derlemede tanımlı herhangi bir türdür): 
 
-- Örneği `T`.
+- `T`örneği.
 
-- Bir dizi örneği `T`.
+- Bir dizi `T`örneği.
  
-- Genel türün örneğini `T` tür bağımsız değişkenlerinden biri olarak. Bu, genel koleksiyonlar içerir `T`bile, boş bir koleksiyondur.
+- Tür bağımsız değişkenlerinden biri olarak `T` olan bir genel türün örneği. Bu, söz konusu koleksiyon boş olsa bile, `T`genel koleksiyonlarını içerir.
 
-- Örneği <xref:System.Type> veya <xref:System.Reflection.Emit.TypeBuilder> temsil eden `T`. 
+- `T`temsil eden bir <xref:System.Type> veya <xref:System.Reflection.Emit.TypeBuilder> örneği. 
 
    > [!IMPORTANT]
-   > Bütünleştirilmiş kod parçalarını temsil eden tüm nesneleri serbest bırakmanız gerekir. <xref:System.Reflection.Emit.ModuleBuilder> Tanımlayan `T` bir başvuru tutar <xref:System.Reflection.Emit.TypeBuilder>ve <xref:System.Reflection.Emit.AssemblyBuilder> nesne başvuru tutar <xref:System.Reflection.Emit.ModuleBuilder>, bu nesnelere başvuruları serbest bırakılması gerekir. Varlığı bile bir <xref:System.Reflection.Emit.LocalBuilder> veya <xref:System.Reflection.Emit.ILGenerator> oluşumunu kullanılan `T` kaldırma engeller.
+   > Derlemenin parçalarını temsil eden tüm nesneleri serbest bırakmanız gerekir. `T` tanımlayan <xref:System.Reflection.Emit.ModuleBuilder> <xref:System.Reflection.Emit.TypeBuilder>bir başvuru tutar ve <xref:System.Reflection.Emit.AssemblyBuilder> nesnesi <xref:System.Reflection.Emit.ModuleBuilder>bir başvuru tutar, bu nedenle bu nesnelere yapılan başvuruların serbest bırakılması gerekir. Bir <xref:System.Reflection.Emit.LocalBuilder> veya `T` oluşturulması sırasında kullanılan bir <xref:System.Reflection.Emit.ILGenerator> bile kaldırılması önlenir.
 
-- Statik başvuru `T` başka bir dinamik olarak tanımlanan bir tür tarafından `T1` olan hala erişilebilir kodu yürüterek. Örneğin, `T1` öğesinden türetilen `T`, veya `T` yöntemi içindeki bir parametre türü olabilir `T1`.
+- Kod yürütülerek hala erişilebilir olan başka bir dinamik olarak tanımlanmış tür `T1` tarafından `T` statik bir başvuru. Örneğin, `T1` `T`türetilebilir veya `T` `T1`bir yöntemde parametre türü olabilir.
  
-- A **ByRef** ait olduğu statik bir alana `T`.
+- `T`ait bir statik alana **ByRef** .
 
-- A <xref:System.RuntimeTypeHandle>, <xref:System.RuntimeFieldHandle>, veya <xref:System.RuntimeMethodHandle> , başvurduğu `T` 'in bir bileşeni için veya `T`.
+- `T` veya `T`bileşenine başvuran bir <xref:System.RuntimeTypeHandle>, <xref:System.RuntimeFieldHandle>veya <xref:System.RuntimeMethodHandle>.
 
-- Örneği dolaylı olarak kullanılabilecek herhangi bir yansıma nesnenin veya doğrudan erişim <xref:System.Type> temsil eden nesne `T`. Örneğin, <xref:System.Type> nesnesi `T` öğe türüne sahip bir dizi türünden alınan `T`, veya olan bir genel türü `T` tür bağımsız değişkeni olarak. 
+- `T`temsil eden <xref:System.Type> nesnesine dolaylı olarak veya doğrudan erişim için kullanılabilecek herhangi bir yansıma nesnesinin örneği. Örneğin, `T` <xref:System.Type> nesnesi, öğe türü `T`olan bir dizi türünden veya tür bağımsız değişkeni olarak `T` olan genel bir türden elde edilebilir. 
 
-- Bir yöntem `M` tüm iş parçacığı çağrı yığınında burada `M` bir yöntemidir `T` veya derlemede tanımlanan bir modül düzeyinde yöntemi.
+- Bir yöntem, her bir iş parçacığının çağrı yığınında `M`; burada `M`, derlemede tanımlanan bir `T` veya modül düzeyi yöntemi olan bir yöntemdir.
 
-- Derlemenin bir modülde tanımlanan statik bir yöntem için temsilci.
+- Derlemenin modülünde tanımlanan statik metoda bir temsilci.
 
-Yalnızca bu listedeki bir öğe yalnızca bir tür veya derlemedeki bir yöntemi varsa, çalışma zamanı derleme kaldıramıyor.
+Bu listedeki yalnızca bir öğe, derlemede yalnızca bir tür veya bir yöntem için mevcutsa, çalışma zamanı derlemeyi kaldıramıyor.
 
 > [!NOTE]
-> Listedeki tüm öğeler için sonlandırıcılar çalıştırılana kadar çalışma zamanı derleme gerçekten kaldırmaz.
+> Çalışma zamanı, listedeki tüm öğeler için sonlandırıcılar çalıştırılıncaya kadar derlemeyi gerçekten kaldırmaz.
 
-İzleme ömrü amaçları doğrultusunda oluşturulmuş bir genel türü gibi `List<int>` (içinde C#) veya `List(Of Integer)` (Visual Basic'te), oluşturulur ve kullanılan toplanabilir derleme nesil olduğunu kabul derlemede tanımlanmış genel tür tanımı içeren veya bir derlemede, tür bağımsız değişkenlerinden biri tanımını içerir. Kullanılan tam bir uygulama ayrıntısı ve değiştirmek için konu derlemesidir.
+Kullanım ömrü açısından, toplanabilir bir derlemenin oluşturulmasında oluşturulan ve kullanılan `List<int>` (ın C#) veya `List(Of Integer)` (Visual Basic) gibi oluşturulmuş bir genel tür, içeren derlemede tanımlanmış olarak kabul edilir. Genel tür tanımı veya tür bağımsız değişkenlerinden birinin tanımını içeren bir bütünleştirilmiş kod. Kullanılan kesin derleme bir uygulama ayrıntısı ve değiştirilebilir.
  
-## <a name="restrictions-on-collectible-assemblies"></a>Toplanabilir derlemeler kısıtlamaları
+## <a name="restrictions-on-collectible-assemblies"></a>Toplanabilir derlemelerdeki kısıtlamalar
 
-Toplanabilir derlemeler için aşağıdaki kısıtlamalar uygulanır: 
+Aşağıdaki kısıtlamalar toplanabilir derlemeler için geçerlidir: 
 
-- **Statik başvuruları**   
-  Sıradan dinamik derlemedeki türleri toplanabilir derlemesinde tanımlanan türleri statik başvuruları olamaz. Toplanabilir derlemedeki bir türe devralan bir sıradan tür tanımlarsanız, örneğin, bir <xref:System.NotSupportedException> özel durumu oluşturulur. Toplanabilir derlemedeki bir türe toplanabilir başka bir derlemede statik başvuru türüne sahip olabilir, ancak bu başvurulan derlemeyi başvuran derlemenin ömrü ömrünü genişletir.
+- **Statik başvurular**   
+  Sıradan dinamik bir derlemede bulunan türlerin toplanabilir bir derlemede tanımlanan türlere statik başvuruları olamaz. Örneğin, toplanabilir derlemedeki bir türden devralan sıradan bir tür tanımlarsanız, <xref:System.NotSupportedException> bir özel durum oluşturulur. Toplanabilir bir derlemede bulunan bir tür, başka bir toplanabilir derlemede bulunan bir türe statik başvuruları olabilir, ancak bu, başvurulan derlemenin yaşam süresini başvuran derlemenin ömrüne genişletir.
 
-- **COM birlikte çalışma**   
-   COM arabirimlerine toplanabilir bir derleme içinde tanımlanabilir ve hiçbir örneği toplanabilir derlemedeki türleri COM nesnelerine dönüştürülebilir. Toplanabilir derlemedeki bir türe COM çağrılabilir sarmalayıcı (CCW) veya çalışma zamanı çağrılabilir sarmalayıcı (RCW) olarak hizmet veremez. Ancak, toplanabilir bütünleştirilmiş kodlar içindeki türleri COM arabirimleri uygulayan nesneler kullanabilirsiniz.
+- **Com birlikte çalışabilirlik**   
+   Toplanabilir bir derlemede hiçbir COM arabirimi tanımlanamaz ve bir toplanabilir derleme içindeki tür örnekleri COM nesnelerine dönüştürülebilirler. Toplanabilir derlemedeki bir tür, COM çağrılabilir sarmalayıcı (CCW) veya çalışma zamanı çağrılabilir sarmalayıcı (RCW) olarak görev alamaz. Ancak, toplanabilir derlemelerdeki türler COM arabirimlerini uygulayan nesneleri kullanabilir.
 
 - **Platform çağırma**   
-   Sahip yöntemleri <xref:System.Runtime.InteropServices.DllImportAttribute> özniteliği toplanabilir bir derleme içinde bildirildiğinde derlenmez. <xref:System.Reflection.Emit.OpCodes.Calli?displayProperty=nameWithType> Yönerge toplanabilir derlemedeki bir türe uygulamasında kullanılamaz ve bu türler, yönetilmeyen koda sıralanamaz. Ancak, yerel kod içine toplanabilir olmayan bir derlemede bildirilmiş bir giriş noktası kullanarak çağırabilirsiniz.
+   <xref:System.Runtime.InteropServices.DllImportAttribute> özniteliğine sahip Yöntemler, toplanabilir bir derlemede bildirildiğinde derlenmeyecektir. <xref:System.Reflection.Emit.OpCodes.Calli?displayProperty=nameWithType> yönergesi, toplanabilir bir derlemede bulunan bir türün uygulamasında kullanılamaz ve bu tür türler yönetilmeyen koda sıralanamaz. Bununla birlikte, toplanabilir olmayan bir derlemede belirtilen bir giriş noktasını kullanarak yerel koda çağrı yapabilirsiniz.
  
-- **Hazırlama**   
-   Toplanabilir derlemeler içinde tanımlanan nesneler (özellikle, temsilciler) sıralanamaz. Tüm geçici yayılan türlerinde bir sınırlama budur.
+-   **sıralaması**  
+   Toplanabilir derlemelerde tanımlanan nesneler (özellikle de temsilciler) sıralanamaz. Bu, tüm geçici olarak yayınlanan türler için bir kısıtlamadır.
 
 - **Derleme yükleme**   
-   Yansıma yayma toplanabilir derlemeler yüklemek için desteklenen tek mekanizmadır. Derleme yükleme, herhangi bir biçimde kullanarak yüklenen derlemeler kaldırılamıyor.
+   Yansıma yayma, toplanabilir derlemeleri yüklemek için desteklenen tek mekanizmadır. Herhangi bir derleme yükleme formu kullanılarak yüklenen derlemeler kaldırılamıyor.
  
-- **Bağlam bağımlı nesneler**    
-   Statik bağlam değişkenleri desteklenmez. Toplanabilir derlemedeki türleri genişletemez <xref:System.ContextBoundObject>. Ancak, toplanabilir bütünleştirilmiş kod başka bir yerde tanımlanmış bağlam bağımlı nesneler kullanabilirsiniz.
+- **Bağlama dayalı nesneler**    
+   Bağlam statik değişkenleri desteklenmez. Toplanabilir derlemedeki türler <xref:System.ContextBoundObject>genişletilemiyor. Ancak, toplanabilir derlemelerdeki kod, başka bir yerde tanımlanan bağlama dayalı nesneleri kullanabilir.
 
-- **İş parçacığı statik veri**       
-   İş parçacığı statik değişkenler desteklenmez.
+- **Iş parçacığı statik veri**       
+   Thread-static değişkenler desteklenmez.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

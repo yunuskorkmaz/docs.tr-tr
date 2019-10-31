@@ -14,14 +14,12 @@ helpviewer_keywords:
 - BlessIWbemServicesObject function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 94c6f47e67cf22f189719a8a9f56e830ee90227c
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: f77ff394668a235dd63cf0cddf71ea418a28125b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798720"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141679"
 ---
 # <a name="blessiwbemservicesobject-function"></a>BlessIWbemServicesObject işlevi
 Kullanıcı kimlik bilgilerinin belirtilen bir [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) nesnesine erişime izin verip vermediğini belirtir. 
@@ -50,7 +48,7 @@ HRESULT BlessIWbemServicesObject (
 'ndaki Kullanıcı adı.
 
 `strPassword`\
-'ndaki İle `strUser`ilişkili parola.
+'ndaki `strUser`ilişkili parola.
 
 `strAuthority`\
 'ndaki Kullanıcının etki alanı adı. Daha fazla bilgi için bkz. [Connectserverwmi](connectserverwmi.md) işlevi.
@@ -68,16 +66,16 @@ Bu işlev tarafından döndürülen aşağıdaki değerler *Winerror. h* üstbil
 |Sabit  |Değer  |Açıklama  |
 |---------|---------|---------|
 | `E_INVALIDARG` | 0x80070057 | Bir veya daha fazla bağımsız değişken geçersiz. |
-| `E_POINTER` | 0x80004003 | `pIWbemServices``null`. | 
+| `E_POINTER` | 0x80004003 | `pIWbemServices` `null`. | 
 | `E_FAIL` | 0x80000008 | Belirtilmeyen bir hata oluştu. |
 | `E_OUTOFMEMORY` | 0x80000002 | İşlemi gerçekleştirmek için yeterli bellek yok. | 
 | `S_OK` | 0 | İşlev çağrısı başarılı oldu. | 
 
 ## <a name="requirements"></a>Gereksinimler
 
- **Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).
 
- **Üst bilgi** WMINet_Utils. IDL
+ **Üst bilgi:** WMINet_Utils. IDL
 
  **.NET Framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 

@@ -8,27 +8,25 @@ dev_langs:
 helpviewer_keywords:
 - parallel for loops, how to use local state
 ms.assetid: 68384064-7ee7-41e2-90e3-71f00bde01bb
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6ffac3df82268399aa35ff494e462e2b23c3894b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 14f4f1402f564d38bb508e893521a3951c1509f4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61915557"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139713"
 ---
 # <a name="how-to-write-a-parallelfor-loop-with-thread-local-variables"></a>Nasıl yapılır: İş Parçacığı Yerel Değişkenleriyle bir Parallel.For Döngüsü Yazma
-Bu örnek tarafından oluşturulan her ayrı görev durumda depolanıp thread-local değişkenleri kullanmayı gösterir. bir <xref:System.Threading.Tasks.Parallel.For%2A> döngü. İş parçacığı-yerel verileri kullanarak, çok sayıda paylaşılan durum erişimin eşitleme ek yükü önleyebilirsiniz. Paylaşılan bir kaynağa her yinelemede yazmak, yerine işlem ve tüm yineleme için görev tamamlanana kadar değeri depolar. Paylaşılan kaynak için nihai sonucu bir defa yazın veya başka yönteme geçirin.  
+Bu örnek, <xref:System.Threading.Tasks.Parallel.For%2A> döngüsü tarafından oluşturulan her ayrı görevde durumu depolamak ve almak için iş parçacığı yerel değişkenlerinin nasıl kullanılacağını gösterir. İş parçacığı yerel verilerini kullanarak, paylaşılan duruma çok sayıda erişimi eşitleme yükünden kaçınabilirsiniz. Her yinelemede paylaşılan bir kaynağa yazmak yerine, görev için tüm yinelemeler tamamlanana kadar değeri hesaplar ve depolar. Ardından, son sonucu paylaşılan kaynağa yazabilir veya başka bir yönteme geçirebilirsiniz.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek çağrıları <xref:System.Threading.Tasks.Parallel.For%60%601%28System.Int32%2CSystem.Int32%2CSystem.Func%7B%60%600%7D%2CSystem.Func%7BSystem.Int32%2CSystem.Threading.Tasks.ParallelLoopState%2C%60%600%2C%60%600%7D%2CSystem.Action%7B%60%600%7D%29> bir milyon öğeleri içeren bir dizideki değerlerin toplamını hesaplamak için yöntemi. Her öğenin dizinini için eşittir.  
+ Aşağıdaki örnek, 1.000.000 öğelerini içeren bir dizideki değerlerin toplamını hesaplamak için <xref:System.Threading.Tasks.Parallel.For%60%601%28System.Int32%2CSystem.Int32%2CSystem.Func%7B%60%600%7D%2CSystem.Func%7BSystem.Int32%2CSystem.Threading.Tasks.ParallelLoopState%2C%60%600%2C%60%600%7D%2CSystem.Action%7B%60%600%7D%29> yöntemini çağırır. Her öğenin değeri, dizinine eşittir.  
   
  [!code-csharp[TPL_Parallel#05](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_parallel/cs/forandforeach_simple.cs#05)]
  [!code-vb[TPL_Parallel#05](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_parallel/vb/forwiththreadlocal.vb#05)]  
   
- İlk iki parametrelerinin her <xref:System.Threading.Tasks.Parallel.For%2A> yöntemi, başlangıç ve bitiş yineleme değerlerini belirtin. Bu yöntem aşırı içinde yerel durumunuzu başlatmak burada üçüncü parametredir. Bu bağlamda yerel durumu son yinelemeden sonra yalnızca geçerli iş parçacığı üzerinde ilk döngü hemen önce gelen ömürlerinin genişleten bir değişken anlamına gelir.  
+ Her <xref:System.Threading.Tasks.Parallel.For%2A> yönteminin ilk iki parametresi, başlangıç ve bitiş yineleme değerlerini belirtir. Yönteminin bu aşırı yüküne üçüncü parametresi, yerel eyaletinizi başlattığınız yerdir. Bu bağlamda yerel durum, ömrü son yinelemeden hemen sonra olmak üzere geçerli iş parçacığındaki döngünün ilk yinelemesinden hemen önce olan bir değişken anlamına gelir.  
   
- Üçüncü parametre türü bir <xref:System.Func%601> burada `TResult` iş parçacığı-yerel durumunu depolayacak değişkeninin türü. Türü genel çağırırken sağlanan genel tür bağımsız değişkeni tarafından tanımlanan <xref:System.Threading.Tasks.Parallel.For%60%601%28System.Int32%2CSystem.Int32%2CSystem.Func%7B%60%600%7D%2CSystem.Func%7BSystem.Int32%2CSystem.Threading.Tasks.ParallelLoopState%2C%60%600%2C%60%600%7D%2CSystem.Action%7B%60%600%7D%29> bu durumda olan yöntemini <xref:System.Int64>. İş parçacığı-yerel durumunu depolamak için kullanılacak geçici değişken türünü derleyiciye tür bağımsız değişkeni. Bu örnekte, ifade `() => 0` (veya `Function() 0` Visual Basic'te) iş parçacığı yerel değişkeni sıfırdan başlatır. Genel tür bağımsız değişkeni bir başvuru türüyle veya kullanıcı tanımlı değer türü ise, ifade şöyle görünebilir:  
+ Üçüncü parametrenin türü, `TResult` iş parçacığı yerel durumunu depolayacak değişkenin türü olan bir <xref:System.Func%601>. Türü, genel <xref:System.Threading.Tasks.Parallel.For%60%601%28System.Int32%2CSystem.Int32%2CSystem.Func%7B%60%600%7D%2CSystem.Func%7BSystem.Int32%2CSystem.Threading.Tasks.ParallelLoopState%2C%60%600%2C%60%600%7D%2CSystem.Action%7B%60%600%7D%29> yöntemi çağrılırken sağlanan genel tür bağımsız değişkeni tarafından tanımlanır, bu durumda <xref:System.Int64>. Tür bağımsız değişkeni derleyiciye iş parçacığı yerel durumunu depolamak için kullanılacak geçici değişkenin türünü söyler. Bu örnekte, `() => 0` (`Function() 0` veya Visual Basic) ifadesi, Thread-Local değişkenini sıfır olarak başlatır. Genel tür bağımsız değişkeni bir başvuru türü veya Kullanıcı tanımlı değer türsiyse, ifade şöyle görünür:  
   
 ```csharp  
 () => new MyClass()  
@@ -38,11 +36,11 @@ Bu örnek tarafından oluşturulan her ayrı görev durumda depolanıp thread-lo
 Function() new MyClass()  
 ```  
   
- Dördüncü parametre döngü mantığı tanımlar. İmzaya sahip, bir temsilci veya lambda ifadesi olmalıdır `Func<int, ParallelLoopState, long, long>` C# veya `Func(Of Integer, ParallelLoopState, Long, Long)` Visual Basic'te. İlk parametre, söz konusu döngü için döngü sayacı değerdir. İkinci bir <xref:System.Threading.Tasks.ParallelLoopState> nesne döngüden için kullanılabilir; bu nesne tarafından sağlanan <xref:System.Threading.Tasks.Parallel> döngünün her örneği için sınıf. Üçüncü parametre iş parçacığı-yerel bir değişkendir. Dönüş türü son parametredir. Bu durumda, türü, <xref:System.Int64> , türü olduğundan belirttiğimiz <xref:System.Threading.Tasks.Parallel.For%2A> tür bağımsız değişkeni. Bu değişken adlı `subtotal` ve lambda ifadesi tarafından döndürülür. Dönüş değeri başlatmak için kullanılan `subtotal` döngüsünün her yinelemesinde. Bu son parametresi, her yineleme için geçirilen ve ardından geçirilen değeri olarak düşünebilirsiniz `localFinally` son yinelenmesinden tamamlandığında temsilci.  
+ Dördüncü parametre döngü mantığını tanımlar. İmzası Visual Basic içinde C# veya `Func(Of Integer, ParallelLoopState, Long, Long)` `Func<int, ParallelLoopState, long, long>` bir temsilci veya lambda ifadesi olmalıdır. İlk parametre, döngünün o yinelemesi için döngü sayacının değeridir. İkincisi, döngüden ayırmak için kullanılabilecek bir <xref:System.Threading.Tasks.ParallelLoopState> nesnesidir; Bu nesne, döngünün her geçtiği <xref:System.Threading.Tasks.Parallel> sınıfı tarafından sağlanır. Üçüncü parametre iş parçacığı yerel değişkenidir. Son parametre, dönüş türüdür. Bu durumda, <xref:System.Int64> türü <xref:System.Threading.Tasks.Parallel.For%2A> türü bağımsız değişkeninde belirttiğimiz tür olduğundan tür. Bu değişken `subtotal` olarak adlandırılır ve lambda ifadesi tarafından döndürülür. Dönüş değeri, döngünün sonraki tekrarında `subtotal` başlatmak için kullanılır. Ayrıca, bu son parametreyi her yinelemeye geçirilen bir değer olarak düşünebilirsiniz ve sonra son yineleme tamamlandığında `localFinally` temsilcisine geçirilir.  
   
- Beşinci parametrenin belirli bir iş parçacığında tüm yinelemeleri tamamladıktan sonra bir kez çağıran yönteme tanımlar. Giriş bağımsız değişkeninin türü tür bağımsız değişkeni yeniden karşılık gelen <xref:System.Threading.Tasks.Parallel.For%60%601%28System.Int32%2CSystem.Int32%2CSystem.Func%7B%60%600%7D%2CSystem.Func%7BSystem.Int32%2CSystem.Threading.Tasks.ParallelLoopState%2C%60%600%2C%60%600%7D%2CSystem.Action%7B%60%600%7D%29> yöntemi ve gövdesi lambda ifadesi tarafından döndürülen tür. Bu örnekte, değeri bir değişkene sınıf kapsamda iş parçacığı güvenli bir şekilde çağrılarak eklenir <xref:System.Threading.Interlocked.Add%2A?displayProperty=nameWithType> yöntemi. Bir iş parçacığı yerel değişkeni kullanarak, biz Bu döngünün her yinelemesinden sınıfı değişkenine yazma önlenmiş.  
+ Beşinci parametre, belirli bir iş parçacığında tüm yinelemeler tamamlandıktan sonra bir kez çağrılan yöntemi tanımlar. Giriş bağımsız değişkeninin türü, <xref:System.Threading.Tasks.Parallel.For%60%601%28System.Int32%2CSystem.Int32%2CSystem.Func%7B%60%600%7D%2CSystem.Func%7BSystem.Int32%2CSystem.Threading.Tasks.ParallelLoopState%2C%60%600%2C%60%600%7D%2CSystem.Action%7B%60%600%7D%29> yönteminin tür bağımsız değişkenine ve gövde lambda ifadesi tarafından döndürülen türe karşılık gelir. Bu örnekte, değer, <xref:System.Threading.Interlocked.Add%2A?displayProperty=nameWithType> yöntemini çağırarak iş parçacığı güvenli bir şekilde sınıf kapsamındaki bir değişkene eklenir. İş parçacığı yerel değişkeni kullanarak döngünün her yinelemesinde Bu sınıf değişkenine yazmayı önliyoruz.  
   
- Lambda ifadeleri kullanma hakkında daha fazla bilgi için bkz. [PLINQ ve TPL'deki Lambda ifadeleri](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md).  
+ Lambda ifadelerinin nasıl kullanılacağı hakkında daha fazla bilgi için bkz. [PLıNQ ve TPL Içindeki lambda ifadeleri](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

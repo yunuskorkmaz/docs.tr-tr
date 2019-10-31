@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: e06fc19d-2cf4-4cad-81a3-137a68af8969
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4322a7e23c7085dadb3b2df6c1f72125aa685cef
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ec265525d01dab0669939569501fce91b500a900
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67756611"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127498"
 ---
 # <a name="icordebugheapvalue3getthreadowningmonitorlock-method"></a>ICorDebugHeapValue3::GetThreadOwningMonitorLock Metodu
-Bu nesne izleme kilidi sahibi yönetilen iş parçacığı döndürür.  
+Bu nesne üzerinde izleyici kilidine sahip yönetilen iş parçacığını döndürür.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,42 +36,42 @@ HRESULT GetThreadOwningMonitorLock (
   
 ## <a name="parameters"></a>Parametreler  
  `ppThread`  
- [out] Bu nesne izleme kilidi sahibi yönetilen iş parçacığı.  
+ dışı Bu nesne üzerindeki izleyici kilidine sahip yönetilen iş parçacığı.  
   
  `pAcquisitionCount`  
- [out] Bu iş parçacığı sahipsiz için döndürmeden önce kilidi zorunda sayısı.  
+ dışı Bu iş parçacığının, sahip olunmadan önce kilidi serbest bırakmak zorunda olduğu zaman sayısı.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Bu yöntem aşağıdaki özel HRESULT'ları yanı sıra HRESULT döndürür yöntemi hatayı gösteren hatalar.  
+ Bu yöntem, aşağıdaki belirli Hsonuçların yanı sıra Yöntem hatasını belirten HRESULT hataları döndürür.  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
 |S_OK|Yöntem başarıyla tamamlandı.|  
-|S_FALSE|Yönetilen iş parçacığı bu nesne izleme kilidi sahibi.|  
+|S_FALSE|Bu nesnede izleyici kilidine sahip yönetilen iş parçacığı yok.|  
   
 ## <a name="exceptions"></a>Özel Durumlar  
   
 ## <a name="remarks"></a>Açıklamalar  
- Yönetilen iş parçacığı bu nesne izleme kilidi sahipse:  
+ Yönetilen bir iş parçacığının bu nesne üzerindeki izleyici kilidine sahip olması durumunda:  
   
-- Yöntem S_OK döndürür.  
+- Yöntemi S_OK döndürür.  
   
-- İş parçacığı çıkana kadar iş parçacığı nesne geçerli değil.  
+- İş parçacığı nesnesi, iş parçacığı çıkış yapılıncaya kadar geçerlidir.  
   
- Yönetilen iş parçacığı bu nesne izleme kilidi sahipse `ppThread` ve `pAcquisitionCount` aynıdır, ve yöntem S_FALSE döndürür.  
+ Bu nesnede izleyici kilidine sahip yönetilen bir iş parçacığı yoksa, `ppThread` ve `pAcquisitionCount` değiştirilmez ve Yöntem S_FALSE döndürür.  
   
- Varsa `ppThread` veya `pAcquisitionCount` geçerli bir işaretçi değil sonuç tanımsızdır.  
+ `ppThread` veya `pAcquisitionCount` geçerli bir işaretçi değilse, sonuç tanımsızdır.  
   
- Yöntemi, varsa, iş parçacığı bu nesne izleme kilidi sahibi olan belirlenemiyor, bir hata oluşursa hata olduğunu gösteren bir HRESULT döndürür.  
+ Bir hata oluşursa, eğer varsa, iş parçacığı bu nesnede izleyici kilidine sahipse, yöntem hata belirten bir HRESULT döndürür.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

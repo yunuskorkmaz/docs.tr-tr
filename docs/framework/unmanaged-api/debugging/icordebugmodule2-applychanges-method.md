@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 96fa3406-6a6f-41a1-88c6-d9bc5d1a16d1
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 860b87b09ee487f893a1bba2aaa34292c50ffcb7
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c324019e1e62701f4f2aaba1c00948b292ba6847
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67764345"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127908"
 ---
 # <a name="icordebugmodule2applychanges-method"></a>ICorDebugModule2::ApplyChanges Yöntemi
-Meta veri değişiklikleri ve Microsoft Ara dil (MSIL) kodu değişiklikleri çalışan işlemi için geçerlidir.  
+Meta verilerde yapılan değişiklikleri ve Microsoft ara dili (MSIL) kodundaki değişiklikleri çalışan işleme uygular.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,35 +38,35 @@ HRESULT ApplyChanges (
   
 ## <a name="parameters"></a>Parametreler  
  `cbMetadata`  
- [in] Delta meta verilerin bayt cinsinden boyutu.  
+ 'ndaki Delta meta verilerinin bayt cinsinden boyutu.  
   
  `pbMetadata`  
- [in] Delta meta veriler içeren arabellek. Arabelleğin adresi döndürüldüğü [Imetadataemit2::savedeltatomemory](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-savedeltatomemory-method.md) yöntemi.  
+ 'ndaki Delta meta verilerini içeren arabellek. Arabelleğin adresi [IMetaDataEmit2:: SaveDeltaToMemory](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-savedeltatomemory-method.md) yönteminden döndürülür.  
   
- Meta verilerde göreli sanal adreslerine (RVA) göre MSIL kodu başlangıcını olmalıdır.  
+ Meta verilerdeki göreli sanal adresler (RVA) MSIL kodunun başlangıcına göre olmalıdır.  
   
  `cbIL`  
- [in] MSIL kodu delta bayt cinsinden boyutu.  
+ 'ndaki Delta MSIL kodunun bayt cinsinden boyutu.  
   
  `pbIL`  
- [in] Güncelleştirilmiş MSIL kodu içeren arabellek.  
+ 'ndaki Güncelleştirilmiş MSIL kodunu içeren arabellek.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `pbMetadata` Parametresi, bir özel delta meta veri biçiminde (tarafından çıkış [Imetadataemit2::savedeltatomemory](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-savedeltatomemory-method.md)). `pbMetadata` temel olarak önceki meta verileri alır ve bu Bankası'na uygulamak için tek tek değişiklikler açıklanmaktadır.  
+ `pbMetadata` parametresi özel bir delta meta veri biçiminde ( [IMetaDataEmit2:: SaveDeltaToMemory](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-savedeltatomemory-method.md)olarak çıktı olarak). `pbMetadata`, önceki meta verileri temel olarak alır ve bu temele uygulanacak tek değişiklikleri açıklar.  
   
- Buna karşılık, `pbIL[`] parametresi güncelleştirilmiş yöntemi için yeni MSIL içerir ve bu yöntem için önceki MSIL tamamen değiştirmek için tasarlanmıştır  
+ Buna karşılık, `pbIL[`] parametresi güncelleştirilmiş yöntemi için yeni MSIL içerir ve bu yöntem için önceki MSIL 'i tamamen değiştirmek üzere tasarlanmıştır  
   
- Hata Ayıklayıcı'nın bellekte delta MSIL ve meta veriler oluşturulmuş hata ayıklayıcı çağırır `ApplyChanges` ortak dil çalışma zamanı (CLR) değişiklikleri göndermek için. Çalışma zamanı meta veri tablolarından güncelleştirmeleri, yeni MSIL işlemine yerleştirir ve yeni MSIL bir just-ın-time (JIT) derleme ayarlar. Hata ayıklayıcı, değişiklikler uygulandığında, çağırmalıdır [Imetadataemit2::resetenclog](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-resetenclog-method.md) sonraki düzenleme oturumu için hazırlamak için. Hata ayıklayıcı, sonra işlemi devam edebilir.  
+ Delta MSIL ve meta veriler hata ayıklayıcının belleğinde oluşturulduğunda, hata ayıklayıcı, değişiklikleri ortak dil çalışma zamanına (CLR) göndermek için `ApplyChanges` çağırır. Çalışma zamanı, meta veri tablolarını güncelleştirir, yeni MSIL 'yi işleme koyar ve yeni MSIL 'nin tam zamanında (JıT) derlemesini ayarlar. Değişiklikler uygulandığında, hata ayıklayıcı sonraki Düzenle oturumuna hazırlanmak için [IMetaDataEmit2:: ResetENCLog](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-resetenclog-method.md) çağrısını çağırmalıdır. Hata ayıklayıcı daha sonra işleme devam edebilir.  
   
- Her hata ayıklayıcı çağırır `ApplyChanges` delta meta verileri olan bir modülde, aynı zamanda çağırmalıdır [Imetadataemit::applyeditandcontinue](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-applyeditandcontinue-method.md) tüm Bu modülün meta veri kopyalama dışında bulunan kopyalarını aynı delta meta verilerle değişiklikleri yaymak için kullanılır. Meta verilerinin bir kopyasını şekilde eşitleme dışı hale gelirse gerçek meta veriler ile hata ayıklayıcı her zaman hemen bu kopyayı atar ve yeni bir kopyasını alın.  
+ Hata ayıklayıcı, Delta meta verilerini içeren bir modülde `ApplyChanges` çağırdığında, değişiklikleri oluşturmak için kullanılan kopya hariç, Bu modülün meta verilerinin tüm kopyalarında aynı Delta meta verileriyle birlikte [ımetadatayayma:: ApplyEditAndContinue](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-applyeditandcontinue-method.md) ' i çağırmalıdır. Meta verilerin bir kopyası gerçek meta verilerle eşitlenmemiş hale gelirse, hata ayıklayıcı her zaman o kopyayı oluşturabilir ve yeni bir kopya alabilir.  
   
- Varsa `ApplyChanges` yöntem başarısız, hata ayıklama oturumu geçersiz bir durumda ve yeniden başlatılması gerekiyor.  
+ `ApplyChanges` yöntemi başarısız olursa, hata ayıklama oturumu geçersiz bir durumdaydı ve yeniden başlatılması gerekir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

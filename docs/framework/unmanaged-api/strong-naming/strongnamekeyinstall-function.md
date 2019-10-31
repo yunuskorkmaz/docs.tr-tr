@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: e32fd546-7757-4681-be3d-658e93281e50
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 353898b72f41acd0c49a43ff05e54f61b99444c4
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 9e441d4da64e9704fbda2368d2b07289aaea610a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798999"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125206"
 ---
 # <a name="strongnamekeyinstall-function"></a>StrongNameKeyInstall İşlevi
 
@@ -42,31 +40,31 @@ BOOLEAN StrongNameKeyInstall (
 ## <a name="parameters"></a>Parametreler
 
 `wszKeyContainer`\
-'ndaki Anahtar kapsayıcısının adı. `wszKeyContainer`boş olmayan bir dize olmalıdır.
+'ndaki Anahtar kapsayıcısının adı. `wszKeyContainer` boş olmayan bir dize olmalıdır.
 
 `pbKeyBlob`\
 'ndaki İkili anahtar çifti.
 
 `cbKeyBlob`\
-'ndaki Bayt cinsinden boyutu `pbKeyBlob`.
+'ndaki `pbKeyBlob`bayt cinsinden boyutu.
 
 ## <a name="return-value"></a>Dönüş Değeri
 
-`true`başarıyla tamamlandığında; Aksi takdirde `false`,.
+başarılı tamamlamada `true`; Aksi takdirde, `false`.
 
 ## <a name="remarks"></a>Açıklamalar
 
 Anahtar kapsayıcısını silmek için [StrongNameKeyDelete](strongnamekeydelete-function.md) işlevini kullanın.
 
-İşlev başarıyla tamamlanmazsa, en son oluşturulan hatayı almak için [StrongNameErrorInfo işlevini çağırın.](strongnameerrorinfo-function.md) `StrongNameKeyInstall`
+`StrongNameKeyInstall` işlevi başarıyla tamamlanmazsa, en son oluşturulan hatayı almak için [StrongNameErrorInfo](strongnameerrorinfo-function.md) işlevini çağırın.
 
 ## <a name="requirements"></a>Gereksinimler
 
-**Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).
+**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).
 
-**Üst bilgi** StrongName. h
+**Üst bilgi:** StrongName. h
 
-**Kitaplığı** MsCorEE. dll dosyasına bir kaynak olarak dahildir
+**Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir
 
 **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
 

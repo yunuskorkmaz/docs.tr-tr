@@ -9,14 +9,12 @@ api_location:
 api_type:
 - COM
 ms.assetid: f362a896-3247-4894-9727-e48dbbcd2c78
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 860ecde22dead112a42b6ac868e34f0e9cd3531d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f6dd10d196ffd3a653584e1bc8d1a5643850bc33
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69916207"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136602"
 ---
 # <a name="icorprofilercallback7moduleinmemorysymbolsupdated-method"></a>ICorProfilerCallback7:: Moduleınmemorysymbolsupdated yöntemi
 [.NET Framework 4.6.1 ve sonraki sürümlerde desteklenir]  
@@ -32,23 +30,23 @@ HRESULT ModuleInMemorySymbolsUpdated(
 ```  
   
 ## <a name="parameters"></a>Parametreler  
- 'ndaki`moduleId`  
+ [in] `moduleId`  
  Sembol akışı güncelleştirilmiş olan bellek içi modülün tanıtıcısı.  
   
 ## <a name="remarks"></a>Açıklamalar  
  Bu geri çağırma, [ICorProfilerCallback5:: SetEventMask2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md) yöntemi çağrılırken [COR_PRF_HIGH_IN_MEMORY_SYMBOLS_UPDATED](../../../../docs/framework/unmanaged-api/profiling/cor-prf-high-monitor-enumeration.md) olay maskesi bayrağı ayarlanarak denetlenir.  
   
 > [!NOTE]
-> Bu olay şu anda, API 'ler aracılığıyla <xref:System.Reflection.Emit> örtük olarak oluşturulan veya değiştirilen semboller için çıkarılmamaktadır.  
+> Bu olay şu anda, <xref:System.Reflection.Emit> API 'Leri aracılığıyla örtük olarak oluşturulan veya değiştirilen semboller için çıkarılmamaktadır.  
   
- Semboller, derleme için sembolleri belirtmek üzere bir <xref:System.Reflection.Assembly.Load*?displayProperty=nameWithType> `rawSymbolStore` bağımsız değişken içeren yönetilen yöntemlerin aşırı yüklerinden birine yapılan bir çağrıda önde gelen olsa bile, çalışma zamanı aslında sembolik verileri modülle ilişkilendiremeyebilir [ModuleLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md) geri çağırması gerçekleşene kadar. Bu olay, bu tür modüller için sembolleri toplamaya yönelik daha sonraki bir fırsat sağlar.  
+ Semboller, derleme için sembolleri belirtmek üzere bir `rawSymbolStore` bağımsız değişkeni içeren yönetilen <xref:System.Reflection.Assembly.Load*?displayProperty=nameWithType> yöntemlerinin aşırı yüklerinden birine yapılan bir çağrıda ön yüklendiğinde bile, çalışma zamanı aslında sembolik verileri, [ModuleLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md) geri çağırma işlemi oluştu. Bu olay, bu tür modüller için sembolleri toplamaya yönelik daha sonraki bir fırsat sağlar.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi** CorProf. IDL, CorProf. h  
+ **Üst bilgi:** CorProf. IDL, CorProf. h  
   
- **Kitaplığı** Corguid. lib  
+ **Kitaplık:** Corguid. lib  
   
  **.NET Framework sürümleri:** [!INCLUDE[net_current_v461plus](../../../../includes/net-current-v461plus-md.md)]  
   

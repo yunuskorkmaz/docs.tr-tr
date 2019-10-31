@@ -1,18 +1,16 @@
 ---
-title: ICorDebugMutableDataTarget::WriteVirtual yöntemi
+title: 'Icordebugmutabledatatarget:: WriteVirtual yöntemi'
 ms.date: 03/30/2017
 ms.assetid: 80833648-58a7-491a-8dc8-9a48e9bb3adc
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d0a6a58a1a270cb67b75cf34ac5df8d45ccf307c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5947caa8dfb97574bb4b3c5634d962df153211c7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67764571"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132686"
 ---
-# <a name="icordebugmutabledatatargetwritevirtual-method"></a>ICorDebugMutableDataTarget::WriteVirtual yöntemi
-Bellek, hedef işlemin adres alanına yazar.  
+# <a name="icordebugmutabledatatargetwritevirtual-method"></a>Icordebugmutabledatatarget:: WriteVirtual yöntemi
+Belleği hedef işlem adres alanına yazar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -25,28 +23,28 @@ HRESULT WriteVirtual(
   
 ## <a name="parameters"></a>Parametreler  
  `address`  
- [in] İçeriğini yazılacağı adresindeki `pBuffer`.  
+ 'ndaki `pBuffer`içeriğinin yazılacağı adres.  
   
  `pBuffer`  
- [in] Yazılacak baytları içeren bir bayt dizisine bir işaretçi.  
+ 'ndaki Yazılacak baytları içeren bir bayt dizisine yönelik bir işaretçi.  
   
  `address`  
- [in] Bayt sayısı `pBuffer`.  
+ 'ndaki `pBuffer`bayt sayısı.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- `S_OK` Başarı veya diğer `HRESULT` başarısız.  
+ başarılı veya hata durumunda başka bir `HRESULT` `S_OK`.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Herhangi bir bayt yazılamaz yöntem çağrısında hedef adres alanındaki tüm bayt değiştirmeden başarısız olur. (Aksi takdirde, hedef daha yapar tutarsız bir durumda güvenilir hata ayıklama.)  
+ Herhangi bir bayt yazılamaz ise, yöntem çağrısı, hedef adres alanındaki herhangi bir bayt değiştirilmeden başarısız olur. (Aksi halde, hedef, güvenli olmayan bir şekilde hata ayıklama olanağı sunan tutarsız bir durumda olabilir.)  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

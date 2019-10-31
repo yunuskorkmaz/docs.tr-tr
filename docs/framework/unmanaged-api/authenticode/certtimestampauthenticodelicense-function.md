@@ -8,14 +8,12 @@ api_location:
 api_type:
 - DLLExport
 ms.assetid: d468325a-21c5-43ce-8567-84e342b22308
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: aaf76d4c3d0f5fb59aeb35fae7a7020ee97b74d6
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 3c5e803c874e1254510f75189846d7cb12cb1ee2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70776483"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132467"
 ---
 # <a name="certtimestampauthenticodelicense-function"></a>CertTimestampAuthenticodeLicense İşlevi
 Zaman damgalarının Authenticode XrML lisansı.  
@@ -38,13 +36,13 @@ HRESULT CertTimestampAuthenticodeLicense (
  'ndaki Zaman damgası sunucusunun URI 'SI.  
   
  `pTimestampSignatureBlob`  
- dışı Base64 ile kodlanmış zaman damgası imzasını almak için CRYPT_DATA_BLOB işaretçisi. Bu, `pTimestampSignatureBlob` `HepFree()` kullandıktan sonra, çağıranın ücretsiz -> `pbData` olarak kullanılacağı sorumluluğudur. Bkz. [CRYPTOAPI_BLOB](/windows/win32/api/dpapi/ns-dpapi-crypt_integer_blob) yapısı.  
+ dışı Base64 ile kodlanmış zaman damgası imzasını almak için CRYPT_DATA_BLOB işaretçisi. Bu, `pTimestampSignatureBlob`->`pbData` kullandıktan sonra `HepFree()` ile ücretsiz olarak kullanmanın sorumluluğundadır. Bkz. [CRYPTOAPI_BLOB](/windows/win32/api/dpapi/ns-dpapi-crypt_integer_blob) yapısı.  
   
 ## <a name="remarks"></a>Açıklamalar  
  Zaman damgası imzası aslında, içeriği lisansın imzasıyla olan SignatureValue 'un ikili biçimi olan PKCS #7 SignedData iletisidir. Temelde, bu, lisansın sayaç imzası olarak görev yapar.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- `S_OK`işlev başarılı olursa. Aksi takdirde, bir hata kodu döndürür.  
+ işlev başarılı olursa `S_OK`. Aksi takdirde, bir hata kodu döndürür.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

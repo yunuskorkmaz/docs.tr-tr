@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Bölüm yerel değişkenleriyle bir Parallel.ForEach döngüsü yazma'
+title: 'Nasıl yapılır: Bölüm Yerel Değişkenleriyle bir Parallel. ForEach Döngüsü Yazma'
 ms.date: 06/26/2018
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,44 +8,42 @@ dev_langs:
 helpviewer_keywords:
 - parallel foreach loop, how to use local state
 ms.assetid: 24b10041-b30b-45cb-aa65-66cf568ca76d
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 98abed0efa2e1b624ee1fb671300969f3d79a9db
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: cca48889670c3bd67366c879ccede94c89542c8d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67661666"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139690"
 ---
-# <a name="how-to-write-a-parallelforeach-loop-with-partition-local-variables"></a>Nasıl yapılır: Bölüm yerel değişkenleriyle bir Parallel.ForEach döngüsü yazma
+# <a name="how-to-write-a-parallelforeach-loop-with-partition-local-variables"></a>Nasıl yapılır: Bölüm Yerel Değişkenleriyle bir Parallel. ForEach Döngüsü Yazma
 
-Aşağıdaki örnek nasıl yazılacağını gösterir. bir <xref:System.Threading.Tasks.Parallel.ForEach%2A> bölüm yerel değişkenler kullanan yöntemi. Olduğunda bir <xref:System.Threading.Tasks.Parallel.ForEach%2A> döngü yürütür, kendi kaynak koleksiyonu birden çok bölümlere böler. Her bölüm, kendi bölümü yerel değişken kopyasına sahip olur. Bir bölüm yerel değişkene benzer bir [iş parçacığı yerel değişkeni](xref:System.Threading.ThreadLocal%601)dışında birden çok bölüm tek bir iş parçacığı üzerinde çalıştırabilirsiniz.
+Aşağıdaki örnek, Bölüm yerel değişkenleri kullanan bir <xref:System.Threading.Tasks.Parallel.ForEach%2A> yönteminin nasıl yazılacağını gösterir. <xref:System.Threading.Tasks.Parallel.ForEach%2A> döngüsü yürütüldüğünde, kaynak koleksiyonunu birden çok bölüme böler. Her bölümün, Bölüm yerel değişkeninin kendi kopyası vardır. Bölüm yerel değişkeni, birden çok bölümün tek bir iş parçacığında çalıştırılabilmesi dışında, [iş parçacığı yerel değişkenine](xref:System.Threading.ThreadLocal%601)benzer.
 
-Bu örnekte parametreleri ve kodu yakından ilgili benzer <xref:System.Threading.Tasks.Parallel.For%2A> yöntemi. Daha fazla bilgi için [nasıl yapılır: İş parçacığı yerel değişkenleriyle bir Parallel.For döngüsü yazma](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md).
+Bu örnekteki kod ve parametreler karşılık gelen <xref:System.Threading.Tasks.Parallel.For%2A> yöntemine benzer. Daha fazla bilgi için bkz. [nasıl yapılır: Iş parçacığı yerel değişkenleriyle bir Parallel. for döngüsü yazma](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md).
 
-Bir bölüm yerel değişkende kullanmak için bir <xref:System.Threading.Tasks.Parallel.ForEach%2A> döngü çağırmanız iki tür parametreleri alan yöntemi aşırı yüklemelerinden. İlk tür parametresi `TSource`, kaynak öğesi ve ikinci tür parametresi türünü belirten `TLocal`, bölüm yerel değişken türünü belirtir.
+<xref:System.Threading.Tasks.Parallel.ForEach%2A> döngüsünde bölüm yerel değişkenini kullanmak için, iki tür parametresi alan aşırı yüklerden birini çağırmanız gerekir. İlk tür parametresi `TSource`, kaynak öğenin türünü ve ikinci tür parametresini `TLocal`, Bölüm yerel değişkeninin türünü belirtir.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek çağrıları <xref:System.Threading.Tasks.Parallel.ForEach%60%602%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%601%7D%2CSystem.Func%7B%60%600%2CSystem.Threading.Tasks.ParallelLoopState%2C%60%601%2C%60%601%7D%2CSystem.Action%7B%60%601%7D%29?displayProperty=nameWithType> dizi bir milyon öğelerin toplamını hesaplamak için aşırı yükleme. Bu aşırı yükleme dört parametrelere sahiptir:
+Aşağıdaki örnek, 1.000.000 öğelerinden oluşan bir dizi toplamını hesaplamak için <xref:System.Threading.Tasks.Parallel.ForEach%60%602%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%601%7D%2CSystem.Func%7B%60%600%2CSystem.Threading.Tasks.ParallelLoopState%2C%60%601%2C%60%601%7D%2CSystem.Action%7B%60%601%7D%29?displayProperty=nameWithType> aşırı yüklemeyi çağırır. Bu aşırı yüklemede dört parametre bulunur:
 
-- `source`, veri kaynağı olan. Bunu uygulamalıdır <xref:System.Collections.Generic.IEnumerable%601>. Bir milyon üye veri kaynağı Bizim örneğimizde, `IEnumerable<Int32>` tarafından döndürülen nesne <xref:System.Linq.Enumerable.Range%2A?displayProperty=nameWithType> yöntemi.
+- veri kaynağı olan `source`. <xref:System.Collections.Generic.IEnumerable%601>gerçekleştirmelidir. Örneğimizdeki veri kaynağı, <xref:System.Linq.Enumerable.Range%2A?displayProperty=nameWithType> yöntemi tarafından döndürülen 1.000.000 üyesi `IEnumerable<Int32>` nesnesidir.
 
-- `localInit`, veya bölüm yerel değişkenini işlevi. Bu işlev, her bölüm için bir kez çağrılır <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> işlemini yürütür. Bizim örneğimizde, sıfır bölüm yerel değişkene başlatır.
+- `localInit`veya bölüm yerel değişkenini Başlatan işlev. Bu işlev, <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> işleminin çalıştırıldığı her bölüm için bir kez çağrılır. Örneğimiz, Bölüm yerel değişkenini sıfır olarak başlatır.
 
-- `body`, bir <xref:System.Func%604> döngünün her yinelemesinden üzerinde paralel döngü tarafından çağrılır. Kendi imzası `Func\<TSource, ParallelLoopState, TLocal, TLocal>`. Temsilci için kod sağlayın ve döngü olan giriş parametrelerinde geçirir:
+- döngünün her yinelemesinde paralel döngü tarafından çağrılan bir <xref:System.Func%604> `body`. İmzası `Func\<TSource, ParallelLoopState, TLocal, TLocal>`. Temsilci için kod sağlarsınız ve döngü giriş parametrelerinde geçirilir ve şu şekilde olur:
 
-  - Geçerli öğenin <xref:System.Collections.Generic.IEnumerable%601>.
+  - <xref:System.Collections.Generic.IEnumerable%601>geçerli öğesi.
 
-  - A <xref:System.Threading.Tasks.ParallelLoopState> değişken Temsilcinizin kodda döngü durumunu incelemek için kullanabilirsiniz.
+  - Döngünün durumunu incelemek için temsilcinin kodunda kullanabileceğiniz bir <xref:System.Threading.Tasks.ParallelLoopState> değişkeni.
 
-  - Bölüm yerel değişken.
+  - Bölüm yerel değişkeni.
 
-  Ardından, belirli bir bölümünde yürüten döngünün sonraki yinelemesine geçirilir bölüm yerel değişken, temsilci döndürür. Her döngü bölüm bu değişkenin ayrı bir örneğini saklar.
+  Temsilciniz bölüm yerel değişkenini döndürür, daha sonra bu belirli bölümde yürütülen döngünün bir sonraki yinelemesine geçirilir. Her döngü bölümü, bu değişkenin ayrı bir örneğini tutar.
 
-  Örnekte, her bir tamsayı değeri temsilci, çalışan bir tutar bölüm yerel değişkene ekler. Bu bölümde tamsayı öğelerin değerlerinin toplamını.
+  Örnekte, temsilci her bir tamsayının değerini bölüm yerel değişkenine ekler ve bu, söz konusu bölümdeki tamsayı öğelerinin çalışan toplam değerlerini tutar.
 
-- `localFinally`, bir `Action<TLocal>` , temsilci <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> döngü her bölüm işlemleri tamamladıktan sonra çağırır. <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> Yöntemi geçişleri, `Action<TLocal>` son değeri bu döngü bölümü için bölüm yerel değişkenin temsilci olarak seçmeyi ve bu bölüm sonuçtan sonuçlardan ile birleştirmek için gerekli bir eylem gerçekleştiren kodu sağlayın diğer bölümler. Bu temsilci, aynı anda birden çok görev tarafından çağrılabilir. Bu nedenle, örnekte <xref:System.Threading.Interlocked.Add%28System.Int32%40%2CSystem.Int32%29?displayProperty=nameWithType> erişimi eşitlemek için yöntemi `total` değişkeni. Temsilci türü olduğundan bir <xref:System.Action%601>, dönüş değeri yoktur.
+- `localFinally`, her bölümdeki döngü işlemleri tamamlandığında <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> çağıran bir `Action<TLocal>` temsilcisi. <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> yöntemi, bu döngü bölümünün bölüm yerel değişkeninin son değeri olan `Action<TLocal>` temsilcinizi geçirir ve sonucu bu bölümden birleştirmek için gerekli eylemi gerçekleştiren kodu diğer bölüme. Bu temsilci birden çok görev tarafından eşzamanlı olarak çağrılabilir. Bu nedenle örnek, `total` değişkenine erişimi eşzamanlı hale getirmek için <xref:System.Threading.Interlocked.Add%28System.Int32%40%2CSystem.Int32%29?displayProperty=nameWithType> yöntemini kullanır. Temsilci türü bir <xref:System.Action%601>olduğundan, dönüş değeri yok.
 
 [!code-csharp[TPL_Parallel#04](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_parallel/cs/foreachthreadlocal.cs#04)]
 [!code-vb[TPL_Parallel#04](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_parallel/vb/foreachthreadlocal.vb#04)]
@@ -53,5 +51,5 @@ Aşağıdaki örnek çağrıları <xref:System.Threading.Tasks.Parallel.ForEach%
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Veri Paralelliği](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)
-- [Nasıl yapılır: İş parçacığı yerel değişkenleriyle bir Parallel.For döngüsü yazma](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md)
+- [Nasıl yapılır: İş Parçacığı Yerel Değişkenleriyle bir Parallel.For Döngüsü Yazma](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md)
 - [PLINQ ve TPL'deki Lambda İfadeleri](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)

@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 21ceed9e-62b2-4024-b027-6d095109955a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 61f4e057a487462feb385ca0e3ca977fdd165f56
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9bcc03cc97a62b4c1cadacd7c0b2bc46b9fec470
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739097"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134135"
 ---
-# <a name="efngetmanagedexcepstack-function"></a>\_EFN\_GetManagedExcepStack işlevi
-Yönetilen özel durum nesnesi adresi belirli bir yığın izlemesi içinde yer alan bir dize sürümünü döndürür.  
+# <a name="_efn_getmanagedexcepstack-function"></a>\_EFN\_GetManagedExcepStack Işlevi
+Yönetilen bir özel durum nesne adresi verildiğinde, içinde bulunan yığın izlemenin bir dize sürümünü döndürür.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,26 +37,26 @@ HRESULT _EFN_GetManagedExcepStack(
   
 ## <a name="parameters"></a>Parametreler  
  `Client`  
- [in] Hatası ayıklanmakta olan istemci.  
+ 'ndaki Hata ayıklamakta olan istemci.  
   
  `StackObjAddr`  
- [in] Bir yönetilen nesne işaretçisi türetilen <xref:System.Exception>.  
+ 'ndaki <xref:System.Exception>türetilen bir yönetilen nesne işaretçisi.  
   
  szStackString  
- [out] Döndürülen dize.  
+ dışı Döndürülen dize.  
   
  `cbString`  
- [out] Dize arabellek kullanılabilir karakter sayısı.  
+ dışı Dize arabelleğinde kullanılabilir olan karakter sayısı.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Varsa yönetilen kod yok iş parçacığı üzerinde şu anda bağlamında, işlev HRESULT SOS_E_NOMANAGEDCODE 0xa0 tesis değerini ve 0x1000 hata kodu ile döndürür.  
+ Şu anda bağlamda olan iş parçacığında yönetilen kod yoksa, işlev, bir 0xa0 tesis değeri ve 0x1000 hata kodu ile HRESULT SOS_E_NOMANAGEDCODE döndürür.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** SOS_Stacktrace.h  
+ **Üst bilgi:** SOS_Stacktrace. h  
   
- **.NET framework sürümü:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümü:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

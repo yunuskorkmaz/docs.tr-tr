@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 542cdd81-5ae7-4361-b0ef-1ae4775df258
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5cd2add7e96a8edaff8509563ae1846e80132001
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: faa2082d31c5fa47b87e2238017066b477fdc191
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740092"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132169"
 ---
 # <a name="cordebugexceptionobjectstackframe-structure"></a>CorDebugExceptionObjectStackFrame Yapısı
-Temsil, çerçeve bilgileri bir özel durum nesnesinden yığın.  
+Bir özel durum nesnesinden yığın çerçeve bilgilerini temsil eder.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,22 +39,22 @@ typedef struct CorDebugExceptionObjectStackFrame {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`pModule`|Geçerli çerçevenin Icordebugmodule nesnesine bir işaretçi.|  
-|`ip`|Geçerli çerçevenin yönerge işaretçisi (EIP/RIP) değeri.|  
-|`methodDef`|Geçerli çerçevenin yöntemi belirteç.|  
-|`isLastForeignExceptionFrame`|Çerçeve son kare yabancı bir özel durum olup olmadığını belirten bir değer.|  
+|`pModule`|Geçerli çerçeve için ICorDebugModule nesnesine yönelik bir işaretçi.|  
+|`ip`|Geçerli çerçeveye ait yönerge işaretçisinin (EıP/RIP) değeri.|  
+|`methodDef`|Geçerli çerçeve için yöntem belirteci.|  
+|`isLastForeignExceptionFrame`|Karenin bir yabancı özel durumun son karesi olup olmadığını gösteren bir değer.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Artık kullanımda olduğunda çağıran Icordebugmodule nesne işaretçisi serbest bırakmanız gerekir.  
+ Çağıran, artık kullanımda olmadığında ICorDebugModule nesnesine işaretçiyi serbest bırakmalıdır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -9,14 +9,12 @@ api_location:
 api_type:
 - COM
 ms.assetid: d62c4a4c-8a62-45aa-8f01-a8387cf36159
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 157b0e215f8afa58cccb3d54a65baa9c307ba966
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 299a7495d9ca9215ad21301a3ac525fa6e49a01b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69955421"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130336"
 ---
 # <a name="icorprofilerinfo7getinmemorysymbolslength-method"></a>ICorProfilerInfo7:: GetInMemorySymbolsLength yöntemi
 [.NET Framework 4.6.1 ve sonraki sürümlerde desteklenir]  
@@ -37,25 +35,25 @@ HRESULT GetInMemorySymbolsLength(
  'ndaki Bellek içi akışı içeren modülün tanıtıcısı.  
   
  pCountSymbolBytes  
- dışı Bir `DWORD` değere yönelik, yöntemin döndürdüğü bir işaretçi, akışın uzunluğunu bayt olarak içerir.  
+ dışı Bir `DWORD` değeri işaretçisi, yöntemin döndürdüğü, akışın uzunluğunu bayt cinsinden içerir.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Bu yöntem, `S_OK` sıfır (0) olsa bile, bellek akışının uzunluğu belirlenebileceği takdirde döndürülür.  
+ Sıfır (0) olsa bile, bellek akışının uzunluğu belirlenebilse, yöntem `S_OK` döndürür.  
   
- Yöntemi, yöntemi `CORPROF_E_MODULE_IS_DYNAMIC` kullanılarak <xref:System.Reflection.Emit?displayProperty=nameWithType>oluşturulduysa döndürür.  
+ Yöntemi, yöntem <xref:System.Reflection.Emit?displayProperty=nameWithType>kullanılarak oluşturulduysa `CORPROF_E_MODULE_IS_DYNAMIC` döndürür.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Modülün bellek içi sembolleri varsa, akışın uzunluğu içine `pCountSymbolBytes`yerleştirilir. Modülün bellek içi sembolleri `*pCountSymbolBytes = 0`yoksa.  
+ Modülün bellek içi sembolleri varsa, akışın uzunluğu `pCountSymbolBytes`yerleştirilir. Modülün bellek içi sembolleri yoksa, `*pCountSymbolBytes = 0`.  
   
 > [!NOTE]
-> Geçerli uygulama Reflection. yayma 'yi desteklemiyor. Modül Reflection. yayma kullanılarak oluşturulduysa, yöntemi döndürür `CORPROF_E_MODULE_IS_DYNAMIC`.  
+> Geçerli uygulama Reflection. yayma 'yi desteklemiyor. Modül Reflection. yayma kullanılarak oluşturulduysa, yöntemi `CORPROF_E_MODULE_IS_DYNAMIC`döndürür.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi** CorProf. IDL, CorProf. h  
+ **Üst bilgi:** CorProf. IDL, CorProf. h  
   
- **Kitaplığı** Corguid. lib  
+ **Kitaplık:** Corguid. lib  
   
  **.NET Framework sürümleri:** [!INCLUDE[net_current_v461plus](../../../../includes/net-current-v461plus-md.md)]  
   

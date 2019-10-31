@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: f3ed344b-0d3a-44e8-8000-2a97e0805a2c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5d4ab49aaccd77fac497bd86413915e82c99ed3e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d0b6960a24e246c7a538e8ffc59fa380a4b8e2a7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744911"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131363"
 ---
 # <a name="icordebugregisterset2getregistersavailable-method"></a>ICorDebugRegisterSet2::GetRegistersAvailable Yöntemi
-Bir bit eşlem kullanılabilir kayıtlara sağlayan bayt dizisini alır.  
+Kullanılabilir yazmaçların bit eşlemini sağlayan bir bayt dizisini alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,30 +36,30 @@ HRESULT GetRegistersAvailable (
   
 ## <a name="parameters"></a>Parametreler  
  `numChunks`  
- [in] Boyutu `availableRegChunks` dizisi.  
+ 'ndaki `availableRegChunks` dizisinin boyutu.  
   
  `availableRegChunks`  
- [out] Bir bayt dizisi, bir kasaya her bitini karşılık gelir. Bir kayıt varsa, kasanın karşılık gelen bit ayarlanır.  
+ dışı Her bitin bir kayda karşılık gelen bir bayt dizisi. Bir yazmaç varsa, kaydın karşılık gelen biti ayarlanır.  
   
 ## <a name="remarks"></a>Açıklamalar  
- CorDebugRegister sabit listesi değerlerini farklı mikro kasalar belirtin. Her bir değerin üst beş biti dizine olan `availableRegChunks` bayt dizisi. Her bir değerin alt üç bit dizinli bayt içindeki bit konumu belirleyin. Verilen bir `CorDebugRegister` belirli bir kaydı, maske kasanın konumu belirten bir değer şu şekilde belirlenir:  
+ CorDebugRegister sabit listesinin değerleri, farklı mikro işlemcilerin kayıtlarını belirtir. Her bir değerin üst beş biti, `availableRegChunks` bayt dizisinin dizinidir. Her bir değerin alt üç biti, dizinlenmiş bayt içindeki bit konumunu belirler. Belirli bir kaydı belirten `CorDebugRegister` bir değer verildiğinde, maskenin içindeki kayıt konumu aşağıdaki şekilde belirlenir:  
   
-1. Doğru bayt erişmesi gereken dizin ayıklamak `availableRegChunks` dizisi:  
+1. `availableRegChunks` dizisindeki doğru bayta erişmek için gereken dizini ayıklayın:  
   
-     `CorDebugRegister` Değer >> 3  
+     `CorDebugRegister` değeri > > 3  
   
-2. Bit sıfır en az önemli bite olduğu dizinli bayt içindeki bit konumu ayıklayın:  
+2. Dizin oluşturulan bayt içindeki bit konumunu ayıklayın; burada bit sıfır en az önemli bir bittir:  
   
-     `CorDebugRegister` Değer & 7  
+     `CorDebugRegister` değeri & 7  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

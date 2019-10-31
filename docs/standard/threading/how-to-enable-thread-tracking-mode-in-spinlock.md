@@ -1,5 +1,5 @@
 ---
-title: "Nasıl yapılır: Spinlock'ta iş parçacığı izleme modunu etkinleştirme"
+title: "Nasıl yapılır: SpinLock'ta İş Parçacığı İzleme Modunu Etkinleştirme"
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,24 +8,22 @@ dev_langs:
 helpviewer_keywords:
 - SpinLock, how to enable thread-tracking
 ms.assetid: 62ee2e68-0bdd-4869-afc9-f0a57a11ae01
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 111ab87ca419217f425eb5d4bc9b52f5f30f0237
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f52a844284cf46bcace3f54f8b320d336050a64e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64644839"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138041"
 ---
-# <a name="how-to-enable-thread-tracking-mode-in-spinlock"></a>Nasıl yapılır: Spinlock'ta iş parçacığı izleme modunu etkinleştirme
-<xref:System.Threading.SpinLock?displayProperty=nameWithType> çok kısa bekleme süresini sahip senaryolar için kullanabileceğiniz bir alt düzey karşılıklı dışlama kilidini olur. <xref:System.Threading.SpinLock> a değil. Bir iş parçacığı kilit girdikten sonra yeniden girmeden önce kilit doğru çıkmak gerekir. Genellikle, her türlü girişim, kilit yeniden girmek için kilitlenmeye neden olabilir ve kilitlenmeler, hata ayıklamak oldukça zor olabilir. Geliştirmeye yardımcı olarak <xref:System.Threading.SpinLock?displayProperty=nameWithType> bir özel bir iş parçacığı zaten tutan bir kilit znovu girişiminde bulunduğunda durum neden olan bir iş parçacığı izleme modunu destekler. Bu, daha kolayca bulun, kilit doğru bir şekilde çıkıldı değil noktası sağlar. İş parçacığı izleme modunu kullanarak açabilirsiniz <xref:System.Threading.SpinLock> bir Boole değeri alan oluşturucu giriş parametresi ve bir bağımsız değişkeninde geçirme `true`. Geliştirme ve test aşamaları tamamladıktan sonra daha iyi performans için iş parçacığı izleme modunu kapatın.  
+# <a name="how-to-enable-thread-tracking-mode-in-spinlock"></a>Nasıl yapılır: SpinLock'ta İş Parçacığı İzleme Modunu Etkinleştirme
+<xref:System.Threading.SpinLock?displayProperty=nameWithType>, çok kısa bekleme süreleriyle ilgili senaryolar için kullanabileceğiniz alt düzey bir karşılıklı dışlama kilidindedir. <xref:System.Threading.SpinLock> yeniden entrant. Bir iş parçacığı kilidi girdikten sonra, yeniden girmeden önce kilidi doğru bir şekilde çıkmalıdır. Genellikle kilidi yeniden girmeye yönelik her türlü girişim kilitlenmeye neden olur ve kilitlenmeleri hata ayıklama için çok zor olabilir. Geliştirme Yardımcısı olarak <xref:System.Threading.SpinLock?displayProperty=nameWithType>, bir iş parçacığı zaten tuttuğu bir kilidi yeniden girmeye çalıştığında bir özel durumun oluşturulmasına neden olan bir iş parçacığı izleme modunu destekler. Bu, kilidin doğru bir şekilde çıkış yapılmadığını daha kolay bir şekilde bulmanızı sağlar. Bir Boole giriş parametresi alan ve bir `true`bağımsız değişkenine geçirerek iş parçacığı izleme modunu açabilir <xref:System.Threading.SpinLock>. Geliştirme ve test aşamalarını tamamladıktan sonra, daha iyi performans için iş parçacığı izleme modunu kapatın.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, iş parçacığı izleme modunu gösterir. Doğru kilit çıkmak satırları aşağıdaki sonuçlardan birini neden olan bir kodlama hatası benzetimini yapmak için dışı bırakılır:  
+ Aşağıdaki örnek, iş parçacığı izleme modunu gösterir. Kilitden doğru çıkış yapan satırlar, aşağıdaki sonuçlardan birine neden olan bir kodlama hatasının benzetimini yapmak için açıklama yapılır:  
   
-- Bir özel durum <xref:System.Threading.SpinLock> bağımsız değişkeninin kullanılarak oluşturulmuş `true` (`True` Visual Basic'te).  
+- <xref:System.Threading.SpinLock> bir `true` bağımsız değişkeni kullanılarak oluşturulduysa (`True` Visual Basic) bir özel durum oluşturulur.  
   
-- Kilitlenme <xref:System.Threading.SpinLock> bağımsız değişkeninin kullanılarak oluşturulmuş `false` (`False` Visual Basic'te).  
+- <xref:System.Threading.SpinLock> bir `false` bağımsız değişkeni (`False` Visual Basic) kullanılarak oluşturulduysa kilitlenme.  
   
  [!code-csharp[CDS_SpinLock#01](../../../samples/snippets/csharp/VS_Snippets_Misc/cds_spinlock/cs/spinlockdemo.cs#01)]
  [!code-vb[CDS_SpinLock#01](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds_spinlock/vb/spinlock_threadtracking.vb#01)]  

@@ -14,14 +14,12 @@ helpviewer_keywords:
 - QualifierSet_Get function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 751694985248346187eff016ef7a4a8054cb1212
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: dc09cd30c43647fa00cccc1dc00da4f8de367e84
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798308"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127272"
 ---
 # <a name="qualifierset_get-function"></a>QualifierSet_Get işlevi
 Belirtilen adlandırılmış niteleyiciyi alır.  
@@ -56,10 +54,10 @@ HRESULT QualifierSet_Get (
 'ndaki Ayrılamadı. Bu parametre 0 olmalıdır.
 
 `pVal`   
-dışı Başarılı olduğunda, niteleyicisi için doğru tür ve değer. İşlev başarısız olursa, `VARIANT` tarafından `pVal` işaret edilen değiştirilmez. Bu parametre ise `null`parametresi yok sayılır.
+dışı Başarılı olduğunda, niteleyicisi için doğru tür ve değer. İşlev başarısız olursa, `pVal` tarafından işaret edilen `VARIANT` değiştirilmez. Bu parametre `null`, parametre yok sayılır.
 
 `plFlavor`   
-dışı İstenen niteleyici için niteleyici Flavor bitlerini alan bir LONG işaretçisi. Flavor bilgileri istenmiyorsa, bu parametre olabilir `null`. 
+dışı İstenen niteleyici için niteleyici Flavor bitlerini alan bir LONG işaretçisi. Flavor bilgileri istenmiyorsa, bu parametre `null`olabilir. 
 
 ## <a name="return-value"></a>Dönüş değeri
 
@@ -76,9 +74,9 @@ Bu işlev tarafından döndürülen aşağıdaki değerler, *Wbemcli. h* üstbil
 Bu işlev, [IWbemQualifierSet:: Get](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-get) yöntemine bir çağrı kaydırır.
 
 ## <a name="requirements"></a>Gereksinimler  
- **Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üst bilgi** WMINet_Utils. IDL  
+ **Üst bilgi:** WMINet_Utils. IDL  
   
  **.NET Framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   

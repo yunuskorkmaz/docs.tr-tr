@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4ba08ffa-55a2-4662-9d6d-4738f1db60c9
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d600b4687b86f5872f94a60ad3422be764cf5307
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9d8bd6ab13fa408fd7390aaeb76baee274742f48
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67747211"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137697"
 ---
 # <a name="icordebugregistersetgetregistersavailable-method"></a>ICorDebugRegisterSet::GetRegistersAvailable Yöntemi
-Alır bir bit maskesi bu kayıtları belirten [Icordebugregisterset](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md) şu anda kullanılabilir.  
+Bu [ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md) içindeki yazmaçların Şu anda kullanılabildiğini belirten bir bit maskesi alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,21 +35,21 @@ HRESULT GetRegistersAvailable (
   
 ## <a name="parameters"></a>Parametreler  
  `pAvailable`  
- [out] Hangi kayıtları şu anda kullanılabilir olmadığını belirten bir bit maskesi.  
+ dışı Şu anda hangi yazmaçların kullanılabilir olduğunu gösteren bir bit maskesi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bir kayıt değeri için belirtilen durumu belirlenemiyorsa kullanılamıyor olabilir.  
+ Verilen durum için değeri belirlenemiyorsa, kayıt kullanılamaz.  
   
- Döndürülen maske her kasa için biraz içerir (1 << kayıt dizin). Kayıt varsa bit değerinin 1 olduğu veya kullanılabilir değilse, 0.  
+ Döndürülen maske her kayıt için bir bit içerir (1 <, YAZMAÇ dizinini <). Kayıt kullanılabiliyorsa bit değeri 1, veya kullanılamıyorsa 0 olur.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

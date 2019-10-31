@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: f4984a8c-4c0e-4460-9aa1-d022b3621228
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: cbb0b6191c74c2b7ebdc8267701f246c17b016f9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ccff575974093de0bf00b257cba78c509f9cbd92
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779519"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134768"
 ---
 # <a name="igchostcontrolrequestvirtualmemlimit-method"></a>IGCHostControl::RequestVirtualMemLimit Yöntemi
-Sanal bellek sınırlarını değiştirmek için ana ister.  
+Konağı, sanal bellek sınırlarını değiştirecek şekilde ister.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,19 +36,19 @@ HRESULT RequestVirtualMemLimit (
   
 ## <a name="parameters"></a>Parametreler  
  `sztMaxVirtualMemMB`  
- [in] Ayrılacak bellek istenen boyutu.  
+ 'ndaki Ayrılacak belleğin istenen boyutu.  
   
  `psztNewMaxVirtualMemMB`  
- [out içinde] Gerçek Boyut ayrılan bellek işaretçisi.  
+ [in, out] Ayrılan belleğin gerçek boyutuna yönelik bir işaretçi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** MSCorEE.h  
+ **Üst bilgi:** MSCorEE. h  
   
- **Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil  
+ **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

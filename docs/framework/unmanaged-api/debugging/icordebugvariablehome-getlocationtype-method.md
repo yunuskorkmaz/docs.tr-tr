@@ -1,5 +1,5 @@
 ---
-title: ICorDebugVariableHome::GetLocationType yöntemi
+title: 'Icordebugvariablehome:: GetLocationType yöntemi'
 ms.date: 03/30/2017
 api_name:
 - ICorDebugVariableHome.GetLocationType
@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 88027c55-8ec6-4f1e-a55b-7eefdbbc3515
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7b7b95c79b41737ade42e6a9a2741f9c43a41130
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1dd4e9510831b4c878e9c1246dabe4add919130c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67774472"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125107"
 ---
-# <a name="icordebugvariablehomegetlocationtype-method"></a>ICorDebugVariableHome::GetLocationType yöntemi
-Yerel değişkenin konumun türünü alır.  
+# <a name="icordebugvariablehomegetlocationtype-method"></a>Icordebugvariablehome:: GetLocationType yöntemi
+Değişkenin yerel konumunun türünü alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,16 +35,16 @@ HRESULT GetLocationType(
   
 ## <a name="parameters"></a>Parametreler  
  `pLocationType`  
- [out] Yerel değişkenin konum türü bir işaretçi.  Bkz: [VariableLocationType](../../../../docs/framework/unmanaged-api/debugging/variablelocationtype-enumeration.md) daha fazla bilgi için sabit listesi.  
+ dışı Değişkenin yerel konumunun türüne yönelik bir işaretçi.  Daha fazla bilgi için, bkz. [Variablelocationtype](../../../../docs/framework/unmanaged-api/debugging/variablelocationtype-enumeration.md) sabit listesi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 678f89f9-cce7-46d1-af87-5e989abaa93c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4d21c221bba3ac668924003f96580bb660229ad7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 49d0015e9d8390a47aae7ce497dd431dfe743c36
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69962999"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138674"
 ---
 # <a name="icordebugthread2-interface"></a>ICorDebugThread2 Arabirimi
 ICorDebugThread arabirimine bir mantıksal uzantı görevi görür.  
@@ -31,9 +29,9 @@ ICorDebugThread arabirimine bir mantıksal uzantı görevi görür.
 |Yöntem|Açıklama|  
 |------------|-----------------|  
 |[GetActiveFunctions Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugthread2-getactivefunctions-method.md)|Bir iş parçacığının çerçevelerinden etkin işlevlerle ilgili verileri içeren COR_ACTIVE_FUNCTION örneklerinin bir dizisini alır.|  
-|[GetConnectionID Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugthread2-getconnectionid-method.md)|Bunun `ICorDebugThread2`için bir bağlantı tanımlayıcısı alır.|  
-|[GetTaskID Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugthread2-gettaskid-method.md)|Bunun `ICorDebugThread2`için bir görev tanımlayıcısı alır.|  
-|[GetVolatileOSThreadID Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugthread2-getvolatileosthreadid-method.md)|Bunun `ICorDebugThread2`için işletim sistemi iş parçacığı tanımlayıcısını alır.|  
+|[GetConnectionID Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugthread2-getconnectionid-method.md)|Bu `ICorDebugThread2`yönelik bir bağlantı tanımlayıcısı alır.|  
+|[GetTaskID Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugthread2-gettaskid-method.md)|Bu `ICorDebugThread2`yönelik bir görev tanımlayıcısı alır.|  
+|[GetVolatileOSThreadID Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugthread2-getvolatileosthreadid-method.md)|Bu `ICorDebugThread2`işletim sistemi iş parçacığı tanımlayıcısını alır.|  
 |[InterceptCurrentException Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugthread2-interceptcurrentexception-method.md)|Bir hata ayıklayıcının bir iş parçacığında geçerli özel durumu ele almasına izin verir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
@@ -42,11 +40,11 @@ ICorDebugThread arabirimine bir mantıksal uzantı görevi görür.
 > Bu arabirim, çapraz makine ya da çapraz işlem için uzaktan çağrılmakta değil.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi** CorDebug. IDL, CorDebug. h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı** Corguid. lib  
+ **Kitaplık:** Corguid. lib  
   
  **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

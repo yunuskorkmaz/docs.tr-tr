@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 534ebc17-963d-4b26-8375-8cd940281db3
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5ae4c5743b01c4a9087323678d315473631cb32f
-ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
+ms.openlocfilehash: c37f039d9636854c464e7981693c573bd60deab9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274045"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132338"
 ---
 # <a name="cor_il_map-structure"></a>COR_IL_MAP Yapısı
 Bir işlevin göreli uzaklığının değişikliklerini belirtir.  
@@ -42,10 +40,10 @@ typedef struct _COR_IL_MAP {
 |------------|-----------------|  
 |`oldOffset`|İşlevin başlangıcına göre eski Microsoft ara dili (MSIL) uzaklıkları.|  
 |`newOffset`|İşlevin başlangıcına göre yeni MSIL fark.|  
-|`fAccurate`|`true`eşlemenin doğru olduğu bilinmektedir; Aksi takdirde `false`,.|  
+|`fAccurate`|eşlemenin doğru olduğu bilindiğinde `true`; Aksi takdirde, `false`.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Haritanın biçimi aşağıdaki gibidir: Hata ayıklayıcı, orijinal, `oldOffset` değiştirilmemiş MSIL kodu içindeki bir MSIL denkleşeceğini varsayacaktır. `newOffset` Parametresi, yeni ve belgelenmiş kod içindeki karşılık gelen MSIL sapmasını ifade eder.  
+ Haritanın biçimi şu şekildedir: hata ayıklayıcı, `oldOffset` orijinal, değiştirilmemiş MSIL kodu içindeki bir MSIL sapmasını ifade eder. `newOffset` parametresi, yeni ve belgelenmiş kod içindeki karşılık gelen MSIL sapmasını ifade eder.  
   
  Adımların düzgün çalışması için aşağıdaki gereksinimlerin karşılanması gerekir:  
   
@@ -71,7 +69,7 @@ typedef struct _COR_IL_MAP {
   
 - 0, 1, 2, 3 veya 4 ' ün eski bir kayması, 0 ' ın yeni bir uzaklığa eşlenir.  
   
-- 5, 6, 7 veya 8 ' in eski bir kayması, yeni% 10 ' a eşlenir.  
+- 5, 6, 7 veya 8 ' in eski bir kayması, yeni %10 ' a eşlenir.  
   
 - Daha eski bir 9 veya üzeri fark, 20. yeni uzaklığa eşlenir.  
   
@@ -82,11 +80,11 @@ typedef struct _COR_IL_MAP {
 - 20 veya üzeri yeni bir konum, eski konum 9 ' A eşlenir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üst bilgi** CorDebug. IDL, CorProf. IDL  
+ **Üst bilgi:** CorDebug. IDL, CorProf. IDL  
   
- **Kitaplığı** Corguid. lib  
+ **Kitaplık:** Corguid. lib  
   
  **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

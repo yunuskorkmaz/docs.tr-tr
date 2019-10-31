@@ -2,20 +2,18 @@
 title: .NET Yerel ve Derleme
 ms.date: 03/30/2017
 ms.assetid: e38ae4f3-3e3d-42c3-a4b8-db1aa9d84f85
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1a15d30ea4d6e0f4456460248e96428419117d85
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: cf5c9f05b2f2cb4ca15e4add5b53bc9bdca757a3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049435"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128252"
 ---
 # <a name="net-native-and-compilation"></a>.NET Yerel ve Derleme
 
 The.NET Framework 'Ü hedefleyen Windows 8.1 uygulamalar ve Windows Masaüstü uygulamaları belirli bir programlama dilinde yazılır ve ara dil (IL) olarak derlenir. Çalışma zamanında tam zamanında (JıT) derleyici, bir yöntemin ilk kez yürütülmeden önce yerel makinenin yerel kodunda Il 'yi derlerken sorumludur. Buna karşılık .NET Native araç zinciri, derleme zamanında kaynak kodu yerel koda dönüştürür. Bu konu, .NET Framework uygulamalar için kullanılabilen diğer derleme teknolojileriyle .NET Native karşılaştırır ve ayrıca .NET Native, .NET ile derlenen kodda oluşan özel durumların neden olduğunu anlamanıza yardımcı olabilecek yerel kod oluşturma konusunda pratik bir genel bakış sunar. Yerel olarak JıT derlenmiş kodda oluşmaz.
 
-## <a name="net-native-generating-native-binaries"></a>.NET Native: Yerel ikililer oluşturuluyor
+## <a name="net-native-generating-native-binaries"></a>.NET Native: yerel ikili dosyalar oluşturma
 
 .NET Framework hedefleyen ve .NET Native araç zinciri kullanılarak derlenmediği bir uygulama, aşağıdakiler de dahil olmak üzere uygulama derlemenizin oluşur:
 
@@ -44,7 +42,7 @@ Uygulamanın başarıyla yürütülmesi için tüm ortak dil çalışma zamanın
 
 Bir uygulamayı Il 'den yerel koda dönüştürme sırasında .NET Native araç zinciri aşağıdakiler gibi işlemleri gerçekleştirir:
 
-- Belirli kod yolları için, statik yerel kodla yansıma ve meta verileri temel alan kodu değiştirir. Örneğin, bir değer türü <xref:System.ValueType.Equals%2A?displayProperty=nameWithType> yöntemi geçersiz kılmıyorsa, eşitlik için varsayılan test, değer türünün alanlarını temsil eden nesneleri almak <xref:System.Reflection.FieldInfo> için yansıma kullanır, ardından iki örnek için alan değerlerini karşılaştırır. Yerel koda derlerken .NET Native araç zinciri, alan değerlerinin statik bir karşılaştırması ile yansıma kodu ve meta verileri değiştirir.
+- Belirli kod yolları için, statik yerel kodla yansıma ve meta verileri temel alan kodu değiştirir. Örneğin, bir değer türü <xref:System.ValueType.Equals%2A?displayProperty=nameWithType> yöntemi geçersiz kılınmıyorsa, eşitlik için varsayılan test, değer türünün alanlarını temsil eden <xref:System.Reflection.FieldInfo> nesneleri almak için yansıma kullanır, ardından iki örneğin alan değerlerini karşılaştırır. Yerel koda derlerken .NET Native araç zinciri, alan değerlerinin statik bir karşılaştırması ile yansıma kodu ve meta verileri değiştirir.
 
 - Mümkün olduğunda, tüm meta verileri ortadan kaldırmaya çalışır.
 
@@ -60,9 +58,9 @@ Bir uygulamayı Il 'den yerel koda dönüştürme sırasında .NET Native araç 
 
 .NET Native araç zinciri tarafından üretilen elde edilen uygulama, proje dizininizin hata ayıklama veya yayınlama dizininde ILC. out adlı bir dizine yazılır. Aşağıdaki dosyalardan oluşur:
 
-- AppName >. exe, yalnızca  *\<AppName >* . dll içindeki özel `Main` bir dışarı aktarmaya denetimi aktaran bir saplama yürütülebiliri.  *\<*
+- denetimi *\<appname >* . dll ' de özel bir `Main` dışarı aktarmaya aktaran bir saplama yürütülebilir dosyası olan *\<AppName >* . exe.
 
-- AppName >. dll, tüm uygulama kodunuzu içeren bir Windows dinamik bağlantı kitaplığı ve .NET Framework sınıf kitaplığından ve bir bağımlılığı olan herhangi bir üçüncü taraf kütüphanesinden kod içerir.  *\<*  Ayrıca, Windows ile birlikte çalışmak ve uygulamanızdaki nesneleri serileştirmek için gereken kod gibi destek kodunu da içerir.
+- *\<appName >* . dll, tüm uygulama kodunuzu Içeren bir Windows dinamik bağlantı kitaplığı ve bir bağımlılığı olan .NET Framework sınıf kitaplığından ve herhangi bir üçüncü taraf kütüphanesinden kod içerir.  Ayrıca, Windows ile birlikte çalışmak ve uygulamanızdaki nesneleri serileştirmek için gereken kod gibi destek kodunu da içerir.
 
 - çöp toplama gibi çalışma zamanı hizmetleri sağlayan bir yeniden düzenlenmiş çalışma zamanı olan mrt100_app. dll.
 

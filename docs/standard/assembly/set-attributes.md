@@ -1,25 +1,23 @@
 ---
-title: Derleme özniteliklerini ayarla
+title: Derleme özniteliklerini ayarlama
 ms.date: 08/20/2019
 helpviewer_keywords:
 - assemblies [.NET Framework], attributes
 - assembly binding, attributes
 - assembly manifest, attributes
 ms.assetid: 36a98a81-b5b5-4c19-912a-11f91eff7f4e
-author: rpetrusha
-ms.author: ronpet
 dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: d0809ec3da5a12abe950e63f9665037323a0ab39
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: fe003a6c74da59c1cb47a0f12a8597143916e320
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991675"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138661"
 ---
-# <a name="set-assembly-attributes"></a>Derleme özniteliklerini ayarla
+# <a name="set-assembly-attributes"></a>Derleme özniteliklerini ayarlama
 
 Derleme öznitelikleri, bir derleme hakkında bilgi sağlayan değerlerdir. Öznitelikler aşağıdaki bilgi kümelerine ayrılır:
 
@@ -39,9 +37,9 @@ Aşağıdaki tabloda sürüm ve kültür öznitelikleri açıklanmaktadır.
 
 |Bütünleştirilmiş kod kimliği özniteliği|Açıklama|
 |---------------------------------|-----------------|
-|<xref:System.Reflection.AssemblyCultureAttribute>|Derlemenin desteklediği kültürü gösteren numaralandırılmış alan. Bir bütünleştirilmiş kod ayrıca kültür bağımsızlığını belirtebilir ve bu, varsayılan kültürün kaynaklarını içerdiğini belirtir. **Not:**  Çalışma zamanı, kültür özniteliği olmayan herhangi bir derlemeyi uydu derlemesi olarak null olarak ayarlanmış şekilde değerlendirir. Bu tür derlemeler uydu derleme bağlama kurallarına tabidir. Daha fazla bilgi için bkz. [çalışma zamanı derlemeleri nasıl konumlandırır](../../framework/deployment/how-the-runtime-locates-assemblies.md).|
+|<xref:System.Reflection.AssemblyCultureAttribute>|Derlemenin desteklediği kültürü gösteren numaralandırılmış alan. Bir bütünleştirilmiş kod ayrıca kültür bağımsızlığını belirtebilir ve bu, varsayılan kültürün kaynaklarını içerdiğini belirtir. **Note:**  Çalışma zamanı, kültür özniteliği olmayan herhangi bir derlemeyi uydu derlemesi olarak null olarak ayarlanmış şekilde değerlendirir. Bu tür derlemeler uydu derleme bağlama kurallarına tabidir. Daha fazla bilgi için bkz. [çalışma zamanı derlemeleri nasıl konumlandırır](../../framework/deployment/how-the-runtime-locates-assemblies.md).|
 |<xref:System.Reflection.AssemblyFlagsAttribute>|Derlemenin yan yana çalıştırılıp çalıştırılmayacağı gibi, derleme özniteliklerini ayarlayan değer.|
-|<xref:System.Reflection.AssemblyVersionAttribute>|*Birincil*biçimdeki sayısal değer. *küçük*. *oluşturun*. *Düzeltme* (örneğin, 2.4.0.0). Ortak dil çalışma zamanı, tanımlayıcı adlı derlemelerde bağlama işlemleri gerçekleştirmek için bu değeri kullanır. **Not:**  <xref:System.Windows.Forms.Application.ProductVersion%2A?displayProperty=nameWithType> <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=nameWithType> <xref:System.Windows.Forms.Application.UserAppDataRegistry%2A?displayProperty=nameWithType> Özniteliği bir derlemeye uygulanmadığından, <xref:System.Reflection.AssemblyVersionAttribute> özniteliği tarafından belirtilen sürüm numarası,, ve özellikleri tarafından kullanılır. <xref:System.Reflection.AssemblyInformationalVersionAttribute>|
+|<xref:System.Reflection.AssemblyVersionAttribute>|*Birincil*biçimdeki sayısal değer. *küçük*. *oluşturun*. *Düzeltme* (örneğin, 2.4.0.0). Ortak dil çalışma zamanı, tanımlayıcı adlı derlemelerde bağlama işlemleri gerçekleştirmek için bu değeri kullanır. **Note:**  <xref:System.Reflection.AssemblyInformationalVersionAttribute> özniteliği bir derlemeye uygulanmadığından, <xref:System.Reflection.AssemblyVersionAttribute> özniteliği tarafından belirtilen sürüm numarası <xref:System.Windows.Forms.Application.ProductVersion%2A?displayProperty=nameWithType>, <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=nameWithType>ve <xref:System.Windows.Forms.Application.UserAppDataRegistry%2A?displayProperty=nameWithType> özellikleri tarafından kullanılır.|
 
 Aşağıdaki kod örneği, bir derlemeye sürüm ve kültür özniteliklerinin nasıl uygulanacağını gösterir.
 
@@ -75,7 +73,7 @@ Bir derlemeye ek şirket veya ürün bilgileri sağlamak için bilgilendirici ö
 |<xref:System.Reflection.AssemblyCompanyAttribute>|Şirket adını belirten dize değeri.|
 |<xref:System.Reflection.AssemblyCopyrightAttribute>|Telif hakkı bilgilerini belirten dize değeri.|
 |<xref:System.Reflection.AssemblyFileVersionAttribute>|Win32 dosya sürümü numarasını belirten dize değeri. Bu, normalde derleme sürümünü varsayılan olarak belirler.|
-|<xref:System.Reflection.AssemblyInformationalVersionAttribute>|Tam ürün sürümü numarası gibi ortak dil çalışma zamanı tarafından kullanılmayan sürüm bilgilerini belirten dize değeri. **Not:**  Bu öznitelik bir derlemeye uygulanırsa, belirttiği dize <xref:System.Windows.Forms.Application.ProductVersion%2A?displayProperty=nameWithType> özelliği kullanılarak çalışma zamanında elde edilebilir. Dize, <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=nameWithType> ve <xref:System.Windows.Forms.Application.UserAppDataRegistry%2A?displayProperty=nameWithType> özellikleri tarafından sunulan yol ve kayıt defteri anahtarında de kullanılır.|
+|<xref:System.Reflection.AssemblyInformationalVersionAttribute>|Tam ürün sürümü numarası gibi ortak dil çalışma zamanı tarafından kullanılmayan sürüm bilgilerini belirten dize değeri. **Note:**  Bu öznitelik bir derlemeye uygulanırsa, belirttiği dize <xref:System.Windows.Forms.Application.ProductVersion%2A?displayProperty=nameWithType> özelliği kullanılarak çalışma zamanında elde edilebilir. Dize, <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=nameWithType> ve <xref:System.Windows.Forms.Application.UserAppDataRegistry%2A?displayProperty=nameWithType> özellikleri tarafından belirtilen yol ve kayıt defteri anahtarında de kullanılır.|
 |<xref:System.Reflection.AssemblyProductAttribute>|Ürün bilgilerini belirten dize değeri.|
 |<xref:System.Reflection.AssemblyTrademarkAttribute>|Ticari marka bilgilerini belirten dize değeri.|
 

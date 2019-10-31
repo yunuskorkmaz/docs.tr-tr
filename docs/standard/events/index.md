@@ -14,88 +14,86 @@ helpviewer_keywords:
 - events [.NET Core]
 - events [.NET Framework]
 ms.assetid: b6f65241-e0ad-4590-a99f-200ce741bb1f
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b5e49e9d575ae2ec9b48b18f839d469632ffa769
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 67cba143957b50e8e8d7fa68e62b52775ca2f144
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61770415"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131626"
 ---
-# <a name="handling-and-raising-events"></a>Olaylar oluşturma ve işleme
+# <a name="handling-and-raising-events"></a>Olayları işleme ve oluşturma
 
-. NET'te olayları temsilci modeline dayanır. Temsilci modeli izleyen [gözlemci tasarım deseni](observer-design-pattern.md), kaydedin ve bildirim sağlayıcıdan almak abone sağlar. Olay gönderen olayın olduğuna ve olay alıcısı bu bildirimi alır ve bir yanıt tanımlar bir bildirim iter. Bu makalede temsilci modelinin ana bileşenleri, uygulamalarda olayların kullanma ve kodunuzda olayların nasıl açıklar.  
+.NET 'teki olaylar, temsilci modelini temel alır. Temsilci modeli, bir abonenin ile kaydolmalarını ve sağlayıcıya bildirim almasını sağlayan [gözlemci tasarım modelini](observer-design-pattern.md)izler. Olay gönderici bir olayın gerçekleştiğini belirten bir bildirim gönderir ve olay alıcısı bu bildirimi alır ve ona bir yanıt tanımlar. Bu makalede temsilci modelinin önemli bileşenleri, uygulamalardaki olayların nasıl kullanılacağı ve kodunuzda olayların nasıl uygulanacağı açıklanmaktadır.  
   
- Windows 8.x Store uygulamalarında olayları işleme hakkında daha fazla bilgi için bkz: [olaylar ve yönlendirilmiş olaylara genel bakış](https://docs.microsoft.com/previous-versions/windows/apps/hh758286(v=win.10)).  
+ Windows 8. x Mağaza uygulamalarında olayları işleme hakkında daha fazla bilgi için bkz. [Olaylar ve yönlendirilmiş olaylara genel bakış](https://docs.microsoft.com/previous-versions/windows/apps/hh758286(v=win.10)).  
   
 ## <a name="events"></a>Olaylar
 
-Bir olay bir eylemin oluşumunu bildirmek için nesne tarafından gönderilen bir iletidir. Eylem kullanıcı etkileşimi bir düğmeye tıklayın veya bir özelliğin değerinin değiştirilmesi gibi başka bir programın mantığı, gelen sonuçlanabilir gibi neden olabilir. Olayı başlatan nesne adında *olay gönderici*. Olay gönderici hangi nesnenin veya yöntemin alacağını (işleyeceğini) bilmez bilmemektedir olayları. Olay genellikle olay gönderici üyesidir; Örneğin, <xref:System.Web.UI.WebControls.Button.Click> olay üyesi olduğu <xref:System.Web.UI.WebControls.Button> sınıfı ve <xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged> olay uygulayan sınıfın bir üyesidir <xref:System.ComponentModel.INotifyPropertyChanged> arabirimi.  
+Bir olay, bir eylem oluşumuna işaret etmek için bir nesne tarafından gönderilen iletidir. Eyleme, düğme tıklamasıyla veya bir özelliğin değerini değiştirme gibi başka bir program mantığının neden olabilir. Olayı oluşturan nesneye *olay gönderici*denir. Olay gönderici, hangi nesne veya yöntemin, oluşturduğu olayları alacağını (işleyeceğimizi) bilmez. Olay, genellikle olay göndericisinin bir üyesidir; Örneğin, <xref:System.Web.UI.WebControls.Button.Click> olayı <xref:System.Web.UI.WebControls.Button> sınıfının bir üyesidir ve <xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged> olayı <xref:System.ComponentModel.INotifyPropertyChanged> arabirimini uygulayan sınıfın bir üyesidir.  
   
-Bir olayı tanımlamak için kullandığınız C# [ `event` ](../../csharp/language-reference/keywords/event.md) veya Visual Basic [ `Event` ](../../visual-basic/language-reference/statements/event-statement.md) anahtar sözcüğü, olay imzasında sınıfı ve olay için temsilci türünü belirtin. Temsilciler sonraki bölümde açıklanmaktadır.  
+Bir olayı tanımlamak için, olay sınıfınızın imzasında C# [`event`](../../csharp/language-reference/keywords/event.md) veya Visual Basic [`Event`](../../visual-basic/language-reference/statements/event-statement.md) anahtar sözcüğünü kullanırsınız ve olay için temsilci türünü belirtirsiniz. Temsilciler sonraki bölümde açıklanmaktadır.  
   
-Genellikle, bir olayı yükseltmek için olarak işaretlenmiş bir yöntemi eklemeniz `protected` ve `virtual` (C# ' de) veya `Protected` ve `Overridable` (Visual Basic'te). Bu yöntem adı `On` *EventName*; Örneğin, `OnDataReceived`. Yöntem türü bir nesne bir olay veri nesnesini belirleyen bir parametre almalıdır <xref:System.EventArgs> veya türetilmiş bir tür. Bu yöntem, türetilen sınıfların, olayı mantığını geçersiz kılmasını etkinleştirmek için sağladığınız. Türetilmiş bir sınıf her zaman çağırmalıdır `On` *EventName* yöntemi kayıtlı temsilcilerin olayı aldıklarından emin olmak için temel sınıf.  
+Genellikle, bir olayı yükseltmek için, `protected` ve `virtual` (içinde C#) veya `Protected` ve `Overridable` olarak işaretlenmiş bir yöntem eklersiniz (Visual Basic). Bu yöntemi `On`*EventName*; olarak adlandırın Örneğin, `OnDataReceived`. Yöntemi, <xref:System.EventArgs> türünde bir nesne veya türetilmiş bir tür olan bir olay veri nesnesini belirten bir parametre almalıdır. Bu yöntemi, türetilmiş sınıfların olayı oluşturma mantığını geçersiz kılmasını sağlamak için sağlarsınız. Türetilmiş bir sınıf, kayıtlı temsilcilerin olayı aldığından emin olmak için her zaman temel sınıfın `On`*EventName* metodunu çağırmalıdır.  
 
-Aşağıdaki örnek adlı bir olayın nasıl belirtileceğini gösterir `ThresholdReached`. Olay ile ilişkili <xref:System.EventHandler> adlı bir yöntemde oluşturulur ve temsilci `OnThresholdReached`.  
+Aşağıdaki örnek, `ThresholdReached`adlı bir olayın nasıl bildirilemeyeceğini gösterir. Olay <xref:System.EventHandler> temsilcisiyle ilişkilendirilir ve `OnThresholdReached`adlı bir yöntemde oluşturulur.  
   
  [!code-csharp[EventsOverview#1](~/samples/snippets/csharp/VS_Snippets_CLR/eventsoverview/cs/programtruncated.cs#1)]
  [!code-vb[EventsOverview#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/eventsoverview/vb/module1truncated.vb#1)]  
   
 ## <a name="delegates"></a>Temsilciler
 
-Bir temsilci bir yönteme başvuru tutan bir türdür. Temsilci başvurduğu ve yalnızca imzasıyla eşleşen yöntemlere olan başvuruları tutabilen yöntemleri için parametre ve dönüş türünü gösteren bir imzayla bildirilir. Bir temsilci, bu nedenle bir tür kullanımı uyumlu işlev işaretçisi veya bir geri çağırma eşdeğerdir. Temsilci bildirimi temsilci sınıfını tanımlamakta yeterlidir.  
+Bir temsilci, bir yönteme başvuru tutan bir türdür. Bir temsilci, başvurduğu yöntemlere yönelik dönüş türünü ve parametreleri gösteren bir imzayla ve yalnızca kendi imzasıyla eşleşen yöntemlere başvuru tutabilir. Bu nedenle bir temsilci, tür kullanımı uyumlu işlev işaretçisine veya geri aramaya eşdeğerdir. Temsilci bildirimi, bir temsilci sınıfını tanımlamak için yeterlidir.  
   
-Temsilciler,. NET'te pek çok kullanımı sahiptir. Olayların bağlamında, bir aracı bir metot temsilcisi mi (veya işaretçi benzeri mekanizma) olay kaynağı ve olayı işleyen kod arasında. Bir temsilci ile bir olay temsilci türü olay bildirimine dahil ederek önceki bölümdeki örnekte gösterildiği gibi ilişkilendirebilirsiniz. Temsilciler hakkında daha fazla bilgi için bkz. <xref:System.Delegate> sınıfı.  
+Temsilcilerin .NET 'te birçok kullanımı vardır. Olaylar bağlamında, bir temsilci olay kaynağı ve olayı işleyen kod arasında bir ara (veya işaretçi benzeri mekanizmadır). Bir temsilciyi, önceki bölümdeki örnekte gösterildiği gibi, olay bildirimine ekleyerek bir olayla ilişkilendirirsiniz. Temsilciler hakkında daha fazla bilgi için <xref:System.Delegate> sınıfına bakın.  
   
-.NET sağlar <xref:System.EventHandler> ve <xref:System.EventHandler%601> çok olay senaryosunu desteklemek için temsilciler. Kullanım <xref:System.EventHandler> olay verilerini içermeyen tüm olaylar için temsilci. Kullanım <xref:System.EventHandler%601> olay hakkında veri içeren olaylar için temsilci. Bu temsilciler hiçbir dönüş türü değeri yoktur ve iki parametre (bir nesnesi için olay kaynağı ve olay verileri için bir nesne).  
+.NET, çoğu olay senaryosunu desteklemek için <xref:System.EventHandler> ve <xref:System.EventHandler%601> temsilcileri sağlar. Olay verileri içermeyen tüm olaylar için <xref:System.EventHandler> temsilcisini kullanın. Olayla ilgili verileri içeren olaylar için <xref:System.EventHandler%601> temsilcisini kullanın. Bu temsilcilerin dönüş türü değeri yoktur ve iki parametre (etkinliğin kaynağı için bir nesne ve olay verileri için bir nesne) alın.  
   
-Temsilcileri, [çok noktaya yayın](xref:System.MulticastDelegate), birden fazla olay işleme yöntemine yapılan başvuruları tutabilen anlamına gelir. Ayrıntılar için bkz <xref:System.Delegate> başvuru sayfası. Temsilciler, esneklik ve olay işlemede ayrıntılı denetim sağlar. Bir temsilci, olay kayıtlı olay işleyicilerinin bir listesini tutarak olayı yükselten sınıf için olay dağıtıcısı rolü olarak görev yapar.  
+Temsilciler [çok noktaya yayın](xref:System.MulticastDelegate), yani birden çok olay işleme yöntemine başvuruları tutabilecekleri anlamına gelir. Ayrıntılar için <xref:System.Delegate> başvuru sayfasına bakın. Temsilciler, olay İşlemede esneklik ve ayrıntılı denetim sağlar. Bir temsilci, olay için kayıtlı olay işleyicilerinin bir listesini tutarak olayı oluşturan sınıf için bir olay dağıtıcısı işlevi görür.  
   
-Senaryolar için burada <xref:System.EventHandler> ve <xref:System.EventHandler%601> temsilcilerinin çalışmadığı, bir temsilci tanımlayabilirsiniz. Bir temsilci tanımlama gerektiren senaryolar ne zaman, genel türleri tanımayan kodla çalışmanız gerekmesi gibi nadir rastlanır. Bir temsilci ile işaretle C# [ `delegate` ](../../csharp/language-reference/keywords/delegate.md) ve Visual Basic [ `Delegate` ](../../visual-basic/language-reference/statements/delegate-statement.md) bildirimindeki anahtar sözcüğü. Aşağıdaki örnek adlı bir temsilcinin nasıl belirtileceğini gösterir `ThresholdReachedEventHandler`.  
+<xref:System.EventHandler> ve <xref:System.EventHandler%601> temsilcilerinin çalışmalarındaki senaryolar için bir temsilci tanımlayabilirsiniz. Bir temsilciyi tanımlamanızı gerektiren senaryolar çok nadir bir durumdur, örneğin, genel türleri tanımayan kodla çalışmanız gerekir. Bir temsilciyi C# , bildirimde [`delegate`](../../csharp/language-reference/keywords/delegate.md) ve Visual Basic [`Delegate`](../../visual-basic/language-reference/statements/delegate-statement.md) anahtar sözcüğüyle işaretlersiniz. Aşağıdaki örnek, `ThresholdReachedEventHandler`adlı bir temsilcinin nasıl bildirilemeyeceğini gösterir.  
   
 [!code-csharp[EventsOverview#4](~/samples/snippets/csharp/VS_Snippets_CLR/eventsoverview/cs/programtruncated.cs#4)]
 [!code-vb[EventsOverview#4](~/samples/snippets/visualbasic/VS_Snippets_CLR/eventsoverview/vb/module1truncated.vb#4)]  
   
 ## <a name="event-data"></a>Olay verileri
 
-Bir olay ile ilişkilendirilen veri bir olay verisi sınıfı üzerinden sağlanabilir. .NET, uygulamalarınızda kullanabileceğiniz birçok olay veri sınıfı sağlar. Örneğin, <xref:System.IO.Ports.SerialDataReceivedEventArgs> için olay veri sınıfı <xref:System.IO.Ports.SerialPort.DataReceived?displayProperty=nameWithType> olay. .NET, tüm olay veri sınıfları ile biten bir adlandırma desenini izler `EventArgs`. Siz hangi olay veri sınıfı bir olay ile ilişkilendirilmiş olan olay için temsilciye bakarak belirlersiniz. Örneğin, <xref:System.IO.Ports.SerialDataReceivedEventHandler> temsilci içeren <xref:System.IO.Ports.SerialDataReceivedEventArgs> parametrelerinden biri olarak sınıf.  
+Bir olayla ilişkili veriler bir olay veri sınıfı aracılığıyla sağlanalabilir. .NET, uygulamalarınızda kullanabileceğiniz pek çok olay veri sınıfı sağlar. Örneğin <xref:System.IO.Ports.SerialDataReceivedEventArgs> sınıfı, <xref:System.IO.Ports.SerialPort.DataReceived?displayProperty=nameWithType> olayının olay verileri sınıfıdır. .NET, tüm olay veri sınıflarının `EventArgs`ile biten bir adlandırma düzeniyle uyar. Olayın temsilcisine bakarak bir olayla hangi olay verileri sınıfının ilişkilendirildiğini belirlersiniz. Örneğin, <xref:System.IO.Ports.SerialDataReceivedEventHandler> temsilcisi, parametrelerinden biri olarak <xref:System.IO.Ports.SerialDataReceivedEventArgs> sınıfını içerir.  
   
-<xref:System.EventArgs> Sınıfı, tüm olay veri sınıfları için temel tür. <xref:System.EventArgs> Ayrıca bir olay ile ilişkili herhangi bir veri olmadığında kullandığınız sınıftır. Bir olay oluşturduğunuzda yalnızca yöneliktir, bir sorun oldu ve gerekmeyen herhangi bir veri diğer sınıflara <xref:System.EventArgs> temsilci ikinci parametre olarak sınıf. Geçirebilirsiniz <xref:System.EventArgs.Empty?displayProperty=nameWithType> hiçbir veri sağlanmadığında değeri. <xref:System.EventHandler> Temsilci içeren <xref:System.EventArgs> bir parametre olarak sınıf.  
+<xref:System.EventArgs> sınıfı tüm olay veri sınıflarının temel türüdür. <xref:System.EventArgs> Ayrıca, bir olay kendisiyle ilişkilendirilmiş herhangi bir veri olmadığında kullandığınız sınıftır. Yalnızca bir şeyin meydana geldiğini ve herhangi bir veri iletmesini gerektirmeyen diğer sınıflara bildirimde bulunan bir olay oluşturduğunuzda, <xref:System.EventArgs> sınıfını temsilcideki ikinci parametre olarak ekleyin. Veri sağlanmadıysa <xref:System.EventArgs.Empty?displayProperty=nameWithType> değerini geçirebilirsiniz. <xref:System.EventHandler> temsilcisi <xref:System.EventArgs> sınıfını bir parametre olarak içerir.  
   
-Özelleştirilmiş olay veri sınıfı oluşturmak istediğinizde, türetilen bir sınıf oluşturmanız <xref:System.EventArgs>ve ardından ve olayla ilişkili verileri aktarmak için gerekli herhangi bir üyeyi sağlayın. Genellikle, .NET aynı adlandırma düzeni kullanın ve olay veri sınıfı adınızı ile bitmesi gerekir `EventArgs`.  
+Özelleştirilmiş bir olay veri sınıfı oluşturmak istediğinizde, <xref:System.EventArgs>türeten bir sınıf oluşturun ve ardından olayla ilgili verileri iletmek için gereken tüm üyeleri sağlayın. Genellikle, .NET ile aynı adlandırma modelini kullanmanız ve `EventArgs`olay veri sınıfı adınızı sonlandırmalısınız.  
   
-Aşağıdaki örnekte adlı bir olay veri sınıfı göstermektedir `ThresholdReachedEventArgs`. Bu, gerçekleştirilen olaya özgü özellikleri içerir.  
+Aşağıdaki örnek, `ThresholdReachedEventArgs`adlı bir olay veri sınıfını gösterir. Bu, yükseltilen olaya özgü özellikler içerir.  
   
 [!code-csharp[EventsOverview#3](~/samples/snippets/csharp/VS_Snippets_CLR/eventsoverview/cs/programtruncated.cs#3)]
 [!code-vb[EventsOverview#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/eventsoverview/vb/module1truncated.vb#3)]  
   
 ## <a name="event-handlers"></a>Olay işleyicileri
 
-Bir olaya yanıt vermek için olay alıcısında bir olay işleyici yöntemi tanımlayın. Bu yöntem, işlemekte olduğunuz olay için temsilcisinin imzasıyla eşleşmelidir. Olay işleyicisi, olay oluşturulduğunda, kullanıcı bir düğmeyi tıklattıktan sonra kullanıcı girişinin toplanması gibi gerekli eylemleri gerçekleştirin. Olay ortaya çıktığında bildirimleri almak için olay işleyicisi yönteminiz olaya abone olmalıdır.  
+Bir olaya yanıt vermek için, olay alıcısında bir olay işleyicisi yöntemi tanımlarsınız. Bu yöntem, işlemekte olduğunuz olayın temsilcisinin imzasıyla aynı olmalıdır. Olay işleyicisinde, Kullanıcı bir düğmeye tıkladıktan sonra Kullanıcı girişi toplama gibi, olay ortaya çıktığında gerekli olan eylemleri gerçekleştirirsiniz. Olay gerçekleştiğinde bildirim almak için olay işleyicisi yönteminiz olaya abone olmalıdır.  
   
-Aşağıdaki örnekte adlı bir olay işleyicisi yöntemini göstermektedir `c_ThresholdReached` imzasıyla eşleşen <xref:System.EventHandler> temsilci. Yöntem abone `ThresholdReached` olay.  
+Aşağıdaki örnek, <xref:System.EventHandler> temsilcisinin imzasıyla eşleşen `c_ThresholdReached` adlı bir olay işleyicisi yöntemi gösterir. Yöntemi `ThresholdReached` olayına abone olur.  
   
 [!code-csharp[EventsOverview#2](~/samples/snippets/csharp/VS_Snippets_CLR/eventsoverview/cs/programtruncated.cs#2)]
 [!code-vb[EventsOverview#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/eventsoverview/vb/module1truncated.vb#2)]  
   
 ## <a name="static-and-dynamic-event-handlers"></a>Statik ve dinamik olay işleyicileri  
  
-.NET, abonelerin statik veya dinamik olarak olay bildirimlerine kaydetmek sağlar. Statik olay işleyiciler, olaylarını işledikleri sınıfın ömrü için geçerli olur. Dinamik olay işleyicileri açıkça etkinleştirilir ve program yürütme sırasında genellikle bazı koşullu program mantığı yanıtta devre dışı bırakıldı. Örneğin, olay bildirimleri yalnızca belirli koşullar altında gerekirse ya da uygulama çoklu olay işleyicileri sağlıyorsa ve uygun birini kullanmak için çalışma zamanı koşullarını tanımlayın kullanılabilir. Önceki bölümdeki örnek, dinamik olarak bir olay işleyicisi eklemek gösterilmektedir. Daha fazla bilgi için [olayları](../../visual-basic/programming-guide/language-features/events/index.md) (Visual Basic'te) ve [olayları](../../csharp/programming-guide/events/index.md) (içinde C#).  
+.NET, abonelerin statik veya dinamik olarak olay bildirimlerine kaydolmanızı sağlar. Statik olay işleyicileri, olaylarını işleyen sınıfın tüm ömrü için geçerli olur. Dinamik olay işleyicileri, genellikle bazı koşullu program mantığına yanıt olarak program yürütmesi sırasında açıkça etkinleştirilir ve devre dışı bırakılır. Örneğin, olay bildirimleri yalnızca belirli koşullar altında gerekliyse veya bir uygulama birden çok olay işleyicisi sağlıyorsa ve çalışma zamanı koşullarını kullanmak üzere uygun olanı tanımladıysanız kullanılabilirler. Önceki bölümdeki örnek, dinamik olarak bir olay işleyicisinin nasıl ekleneceğini gösterir. Daha fazla bilgi için bkz. [Olaylar](../../visual-basic/programming-guide/language-features/events/index.md) (Visual Basic) ve [olayları](../../csharp/programming-guide/events/index.md) (içinde C#).  
   
-## <a name="raising-multiple-events"></a>Birden çok olay oluşturma  
- Sınıfınız birden çok olayı harekete geçirirse derleyici olay temsilci örneği başına tek alan oluşturur. Olay sayısı büyükse, her temsilci tek bir alanın depolama maliyeti kabul edilebilir olmayabilir. Bu durumlarda, .NET olay özelliklerini sağlar. olay temsilcilerini depolamak için seçtiğiniz başka bir veri yapısı ile kullanabilirsiniz.  
+## <a name="raising-multiple-events"></a>Birden çok olayı oluşturma  
+ Sınıfınız birden çok olayı harekete geçirirse, derleyici olay temsilcisi örneği başına bir alan oluşturur. Olay sayısı büyükse, her temsilci için bir alanın depolama maliyeti kabul edilebilir olmayabilir. Bu durumlar için, .NET olay temsilcilerini depolamak üzere tercih ettiğiniz başka bir veri yapısıyla kullanabileceğiniz olay özellikleri sağlar.  
   
- Olay özellikleri, olay erişimcileri ile birlikte olay bildirimlerinden oluşur. Olay erişimcileri eklemek veya olay temsilci örneklerini depolama veri yapısından kaldırmak için tanımladığınız yöntemlerdir. Her olay temsilcisinin çağrılmadan önce alınması gerektiğinden olay özelliklerinin olay alanlarından yavaş olduğunu unutmayın. Denge, bellek ve hız arasında olur. Sınıfınız seyrek oluşan birçok olay tanımlıyorsa olay özelliklerini uygulamak isteyeceksiniz. Daha fazla bilgi için [nasıl yapılır: Olay özelliklerini kullanarak birden çok olayı işleme](how-to-handle-multiple-events-using-event-properties.md).  
+ Olay özellikleri olay erişimcilerine eşlik eden olay bildirimlerinden oluşur. Olay erişimcileri, depolama veri yapısından olay temsilcisi örnekleri eklemek veya kaldırmak için tanımladığınız yöntemlerdir. Olay özelliklerinin, çağrılmadan önce her olay temsilcisinin alınması gerektiğinden olay alanlarından daha yavaş olduğunu unutmayın. Denge, bellek ve hız arasındadır. Sınıfınız seyrek olarak yükseltilen çok sayıda olay tanımlıyorsa, olay özelliklerini uygulamak isteyeceksiniz. Daha fazla bilgi için bkz. [nasıl yapılır: olay özelliklerini kullanarak birden çok olayı işleme](how-to-handle-multiple-events-using-event-properties.md).  
   
 ## <a name="related-topics"></a>İlgili konular  
   
 |Başlık|Açıklama|  
 |-----------|-----------------|  
-|[Nasıl yapılır: Olaylar oluşturma ve kullanma](how-to-raise-and-consume-events.md)|Olayları oluşturma ve tüketme örnekleri içerir.|  
-|[Nasıl yapılır: Olay özelliklerini kullanarak birden çok olayı işleme](how-to-handle-multiple-events-using-event-properties.md)|Olay özellikleri birden çok olayı işlemek için nasıl kullanılacağını gösterir.|  
-|[Gözlemci Tasarım Deseni](observer-design-pattern.md)|Kaydolun ve bir sağlayıcıdan bildirimleri almak abone sağlayan tasarım düzenini açıklar.|  
-|[Nasıl yapılır: Web formları uygulamasında olayları kullanma](how-to-consume-events-in-a-web-forms-application.md)|Web Forms denetimi tarafından oluşturulan bir olayın nasıl işleneceğini gösterir.|  
+|[Nasıl yapılır: Olaylar Oluşturma ve Kullanma](how-to-raise-and-consume-events.md)|Olayları oluşturma ve kullanma örneklerini içerir.|  
+|[Nasıl yapılır: Olay Özelliklerini Kullanarak Birden Çok Olayı İşleme](how-to-handle-multiple-events-using-event-properties.md)|Birden çok olayı işlemek için olay özelliklerinin nasıl kullanılacağını gösterir.|  
+|[Gözlemci Tasarım Deseni](observer-design-pattern.md)|Bir abonenin bir sağlayıcıya kaydolmalarını ve bir sağlayıcıdan gelen bildirimleri almasını sağlayan tasarım modelini açıklar.|  
+|[Nasıl yapılır: Bir Windows Forms Uygulamasında Olayları Kullanma](how-to-consume-events-in-a-web-forms-application.md)|Web Forms denetimi tarafından oluşturulan bir olayın nasıl işleneceğini gösterir.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -104,5 +102,5 @@ Aşağıdaki örnekte adlı bir olay işleyicisi yöntemini göstermektedir `c_T
 - <xref:System.EventArgs>
 - <xref:System.Delegate>
 - [Olaylar (Visual Basic)](../../visual-basic/programming-guide/language-features/events/index.md)
-- [Olaylar (C# programlama Kılavuzu)](../../csharp/programming-guide/events/index.md)
+- [Olaylar (C# Programlama Kılavuzu)](../../csharp/programming-guide/events/index.md)
 - [Olaylar ve yönlendirilmiş olaylara genel bakış (UWP uygulamaları)](/windows/uwp/xaml-platform/events-and-routed-events-overview)

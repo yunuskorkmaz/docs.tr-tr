@@ -1,5 +1,5 @@
 ---
-title: Mayı İşaretçi tabanlı dokunmatik ve Stilus desteği
+title: 'Risk azaltma: Işaretçi tabanlı dokunmatik ve Stilus desteği'
 ms.date: 04/07/2017
 helpviewer_keywords:
 - retargeting changes
@@ -7,16 +7,14 @@ helpviewer_keywords:
 - WPF retargeting changes
 - WPF pointer-based touch and stylus stack
 ms.assetid: f99126b5-c396-48f9-8233-8f36b4c9e717
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 67e41450ed69d73a4b27b0aa37974ae01be69687
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 41a587b343e4774a27e9ddc39080de6939839d93
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70779232"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73126199"
 ---
-# <a name="mitigation-pointer-based-touch-and-stylus-support"></a>Mayı İşaretçi tabanlı dokunmatik ve Stilus desteği
+# <a name="mitigation-pointer-based-touch-and-stylus-support"></a>Risk azaltma: Işaretçi tabanlı dokunmatik ve Stilus desteği
 
 Windows 10 Creators Update ile başlayan .NET Framework 4,7 ve Windows sistemlerinde çalışan WPF uygulamaları, isteğe bağlı `WM_POINTER`tabanlı bir WPF dokunmatik/Stilus yığınını etkinleştirebilir.
 
@@ -24,7 +22,7 @@ Windows 10 Creators Update ile başlayan .NET Framework 4,7 ve Windows sistemler
 
 İşaretçi tabanlı dokunmatik/ekran kalemi desteğinin açıkça etkinleştirilmedikleri geliştiriciler WPF dokunma/ekran kalemi davranışında değişiklik görmez.
 
-İsteğe bağlı `WM_POINTER`tabanlı dokunmatik/Stilus Stack ile ilgili olarak bilinen geçerli sorunlar şunlardır:
+Aşağıda, isteğe bağlı `WM_POINTER`tabanlı dokunmatik/ekran kalemi yığınında bilinen güncel sorunlar verilmiştir:
 
 - Gerçek zamanlı mürekkep oluşturma desteği yoktur.
 
@@ -52,7 +50,7 @@ Bu yığını etkinleştirmek isteyen geliştiriciler aşağıdakini uygulamanı
 </configuration>
 ```
 
-Bu giriş kaldırılıyor veya değeri, bu isteğe `false` bağlı yığını devre dışı olarak ayarlanıyor.
+Bu girdiyi kaldırmak veya değerini `false` olarak ayarlamak, bu isteğe bağlı yığını kapatır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

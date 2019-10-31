@@ -9,37 +9,35 @@ helpviewer_keywords:
 - XML documentation, creating using CodeDOM
 - Code Document Object Model, generating XML documentation
 ms.assetid: e3b80484-36b9-41dd-9d21-a2f9a36381dc
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 283fc91762bc4065bd9bd09efaa2bc0061451ef9
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: cdd1f173274b6bd33c4a67ed8eb0974c4c8e8e70
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69962734"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130184"
 ---
 # <a name="how-to-create-an-xml-documentation-file-using-codedom"></a>Nasıl yapılır: CodeDOM Kullanarak XML Belge Dosyası Oluşturma
 CodeDOM, XML belgeleri üreten kodu oluşturmak için kullanılabilir. İşlem, XML belge açıklamalarını içeren CodeDOM grafiğinin oluşturulmasını, kodun oluşturulmasını ve oluşturulan kodu XML belge çıktısını oluşturan derleyici seçeneğiyle derlemeyi içerir.  
   
 ### <a name="to-create-a-codedom-graph-that-contains-xml-documentation-comments"></a>XML belgesi açıklamalarını içeren bir CodeDOM grafiği oluşturmak için  
   
-1. Örnek uygulama <xref:System.CodeDom.CodeCompileUnit> için CodeDOM grafiğini içeren bir oluştur.  
+1. Örnek uygulama için CodeDOM grafiğini içeren bir <xref:System.CodeDom.CodeCompileUnit> oluşturun.  
   
-2. XML belge <xref:System.CodeDom.CodeCommentStatement.%23ctor%2A> açıklaması öğelerini ve `docComment` metnini oluşturmak için `true` , öğesini olarak ayarlanan parametresiyle birlikte kullanın.  
+2. XML belge açıklaması öğelerini ve metnini oluşturmak için `true` olarak ayarlanan `docComment` parametresi ile <xref:System.CodeDom.CodeCommentStatement.%23ctor%2A> oluşturucusunu kullanın.  
   
      [!code-csharp[CodeDomHelloWorldSample#4](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDomHelloWorldSample/cs/program.cs#4)]
      [!code-vb[CodeDomHelloWorldSample#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomHelloWorldSample/vb/program.vb#4)]  
   
 ### <a name="to-generate-the-code-from-the-codecompileunit"></a>CodeCompileUnit öğesinden kod oluşturmak için  
   
-1. Kodu oluşturmak ve derlenecek kaynak dosya oluşturmak için yönteminikullanın.<xref:System.CodeDom.Compiler.CodeDomProvider.GenerateCodeFromCompileUnit%2A>  
+1. Kodu oluşturmak ve derlenecek kaynak dosya oluşturmak için <xref:System.CodeDom.Compiler.CodeDomProvider.GenerateCodeFromCompileUnit%2A> yöntemini kullanın.  
   
      [!code-csharp[CodeDomHelloWorldSample#5](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDomHelloWorldSample/cs/program.cs#5)]
      [!code-vb[CodeDomHelloWorldSample#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomHelloWorldSample/vb/program.vb#5)]  
   
 ### <a name="to-compile-the-code-and-generate-the-documentation-file"></a>Kodu derlemek ve belge dosyasını oluşturmak için  
   
-1. <xref:System.CodeDom.Compiler.CompilerParameters.CompilerOptions%2A> Bir nesnenin<xref:System.CodeDom.Compiler.CompilerParameters>özelliğine **/doc** derleyici seçeneğini ekleyin ve kod derlendiğinde XML belge dosyasını oluşturmak için nesneyi yönteminegeçirin.<xref:System.CodeDom.Compiler.CodeDomProvider.CompileAssemblyFromFile%2A>  
+1. **/Doc** derleyici seçeneğini bir <xref:System.CodeDom.Compiler.CompilerParameters> nesnesinin <xref:System.CodeDom.Compiler.CompilerParameters.CompilerOptions%2A> özelliğine ekleyin ve kodu derlendiğinde XML belge dosyasını oluşturmak için nesneyi <xref:System.CodeDom.Compiler.CodeDomProvider.CompileAssemblyFromFile%2A> yöntemine geçirin.  
   
      [!code-csharp[CodeDomHelloWorldSample#6](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDomHelloWorldSample/cs/program.cs#6)]
      [!code-vb[CodeDomHelloWorldSample#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomHelloWorldSample/vb/program.vb#6)]  
@@ -77,7 +75,7 @@ CodeDOM, XML belgeleri üreten kodu oluşturmak için kullanılabilir. İşlem, 
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
   
-- Bu kod örneği, `FullTrust` izin kümesinin başarıyla yürütülmesine gerek duyar.  
+- Bu kod örneği, `FullTrust` izninin başarıyla yürütülmesi için ayarlanmasını gerektirir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

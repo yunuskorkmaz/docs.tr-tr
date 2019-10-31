@@ -13,17 +13,15 @@ helpviewer_keywords:
 - SetAppDomainManagerType method, ICLRDomainManager interface [.NET Framework hosting]
 - ICLRDomainManager::SetAppDomainManagerType method [.NET Framework hosting]
 ms.assetid: ee91abb0-cb74-41dd-927b-e117fb8ffdf4
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9b142f1a05036eddf44c69d8b7da95091dc8f445
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 5c61e2e1208cec0bda1492964a8d02bd71f5a1c6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963090"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129325"
 ---
 # <a name="iclrdomainmanagersetappdomainmanagertype-method"></a>ICLRDomainManager::SetAppDomainManagerType Yöntemi
-Varsayılan uygulama etki alanını başlatmak için kullanılacak <xref:System.AppDomainManager?displayProperty=nameWithType> uygulama etki alanı yöneticisinin sınıfından türetilen türü belirtir.  
+Varsayılan uygulama etki alanını başlatmak için kullanılacak olan uygulama etki alanı yöneticisinin <xref:System.AppDomainManager?displayProperty=nameWithType> sınıfından türetilen türü belirtir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,7 +35,7 @@ HRESULT SetAppDomainManagerType(
   
 ## <a name="parameters"></a>Parametreler  
  `wszAppDomainManagerAssembly`  
- 'ndaki Uygulama etki alanı yöneticisi türünü içeren derlemenin görünen adı; Örneğin: "Admgrexörnek, sürüm = 1.0.0.0, Culture = neutral, PublicKeyToken = 6856bccf150f00b3".  
+ 'ndaki Uygulama etki alanı yöneticisi türünü içeren derlemenin görünen adı; Örneğin: "Admgrexexample, sürüm = 1.0.0.0, Culture = neutral, PublicKeyToken = 6856bccf150f00b3".  
   
  `wszAppDomainManagerType`  
  'ndaki Ad alanı dahil olmak üzere uygulama etki alanı yöneticisinin tür adı.  
@@ -54,19 +52,19 @@ HRESULT SetAppDomainManagerType(
 |HOST_E_CLRNOTAVAILABLE|Ortak dil çalışma zamanı (CLR) bir işleme yüklenmemiş veya CLR yönetilen kodu çalıştıramayacağı veya çağrıyı başarıyla işleyemediği bir durumda.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Şu anda, için `dwInitializeDomainFlags` `eInitializeNewDomainFlags_NoSecurityChanges`tek tanımlı değer, uygulama etki alanı yöneticisi 'nin <xref:System.AppDomainManager.InitializeNewDomain%2A?displayProperty=nameWithType> yöntemin yürütülmesi sırasında güvenlik ayarlarını değiştirmeyeceğini belirten, ortak dil çalışma zamanına (CLR) bildirir. Bu, clr 'nin koşullu <xref:System.Security.AllowPartiallyTrustedCallersAttribute> (aptca) özniteliğine sahip derlemelerin yüklenmesini iyileştirmek için izin verir. Bu derleme kümesinin geçişli kapanışı büyükse, bu, Başlangıç zamanında önemli bir gelişme yol açabilir.  
+ Şu anda `dwInitializeDomainFlags` için tek tanımlı değer `eInitializeNewDomainFlags_NoSecurityChanges`ve bu, ortak dil çalışma zamanına (CLR) <xref:System.AppDomainManager.InitializeNewDomain%2A?displayProperty=nameWithType> yönteminin yürütülmesi sırasında uygulama etki alanı yöneticisinin güvenlik ayarlarını değiştirmeyeceğini söyler. Bu, CLR 'nin koşullu <xref:System.Security.AllowPartiallyTrustedCallersAttribute> (APTCA) özniteliğine sahip derlemelerin yüklenmesini iyileştirmek için izin verir. Bu derleme kümesinin geçişli kapanışı büyükse, bu, Başlangıç zamanında önemli bir gelişme yol açabilir.  
   
 > [!IMPORTANT]
-> Ana bilgisayar uygulama etki `eInitializeNewDomainFlags_NoSecurityChanges` alanı Yöneticisi için belirtiyorsa, uygulama etki <xref:System.InvalidOperationException> alanının güvenliğini değiştirmek için herhangi bir girişimde bulunulduğunda bir oluşturulur.  
+> Konak, uygulama etki alanı Yöneticisi için `eInitializeNewDomainFlags_NoSecurityChanges` belirtiyorsa, uygulama etki alanının güvenliğini değiştirmek için herhangi bir girişimde bulunulduğunda bir <xref:System.InvalidOperationException> oluşturulur.  
   
- [ICLRControl:: SetAppDomainManagerType](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-setappdomainmanagertype-method.md)metodunu çağırmak ile çağırma `ICLRDomainManager::SetAppDomainManagerType` ile `eInitializeNewDomainFlags_None`eşdeğerdir.  
+ [ICLRControl:: SetAppDomainManagerType](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-setappdomainmanagertype-method.md)metodunu çağırmak, `eInitializeNewDomainFlags_None``ICLRDomainManager::SetAppDomainManagerType` çağırma ile eşdeğerdir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi** MetaHost. h  
+ **Üst bilgi:** MetaHost. h  
   
- **Kitaplığı** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
   
  **.NET Framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

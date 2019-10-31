@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 937de6a0-6fbf-4ddc-80ea-a6217b73e62b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a4ca59aac075a42294026ad54c5d5dd4dbf7fda4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b782207503a2c3f739a30f68d509e6b481d2b6a4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69943331"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129759"
 ---
 # <a name="icordebugobjectvalue-interface"></a>ICorDebugObjectValue Arabirimi
 
@@ -31,26 +29,26 @@ Bir nesnesi içeren bir değeri temsil eden "ICorDebugValue" öğesinin bir alt 
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[GetClass Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectvalue-getclass-method.md)|<xref:System.Type> Bu`ICorDebugObjectValue` başvuruda bulunan nesnenin ortak dil çalışma zamanına (CLR) yönelik bir arabirim işaretçisi alır.|  
+|[GetClass Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectvalue-getclass-method.md)|Bu `ICorDebugObjectValue` başvurduğu nesnenin ortak dil çalışma zamanı (CLR) <xref:System.Type> için bir arabirim işaretçisi alır.|  
 |[GetContext Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectvalue-getcontext-method.md)|Uygulanmadı.|  
 |[GetFieldValue Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectvalue-getfieldvalue-method.md)|Belirtilen sınıftaki belirtilen alanın değerini temsil eden bir [ICorDebugValue](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-interface.md) için bir arabirim işaretçisi alır.|  
 |[GetManagedCopy Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectvalue-getmanagedcopy-method.md)|Kullanımdan kalktı. Bu yöntemi çağırmayın.|  
 |[GetVirtualMethod Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectvalue-getvirtualmethod-method.md)|Uygulanmadı.|  
-|[IsValueClass Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectvalue-isvalueclass-method.md)|Bu `ICorDebugObjectValue` nesnenin başvurduğu nesnenin bir değer türü olup olmadığını gösteren bir değer alır.|  
+|[IsValueClass Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectvalue-isvalueclass-method.md)|Bu `ICorDebugObjectValue` başvurduğu nesnenin bir değer türü olup olmadığını gösteren bir değer alır.|  
 |[SetFromManagedCopy Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectvalue-setfrommanagedcopy-method.md)|Kullanımdan kalktı. Bu yöntemi çağırmayın.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Hata ayıklamakta olan işlem devam edene kadar geçerli kalır.`ICorDebugObjectValue`  
+ Hata ayıklamakta olan işlem devam edene kadar `ICorDebugObjectValue` geçerli kalır.  
   
 > [!NOTE]
 > Bu arabirim, çapraz makine ya da çapraz işlem için uzaktan çağrılmakta değil.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi** CorDebug. IDL, CorDebug. h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı** Corguid. lib  
+ **Kitaplık:** Corguid. lib  
   
  **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

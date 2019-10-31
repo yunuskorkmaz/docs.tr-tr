@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: a48261ed-700b-41c9-8cb4-18c526546603
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d5cbdd19fa14a41d8bd2eadec80dbafcea7b720d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6bf73a4be40f1fbd8e9d37477907001604e8e4a6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67766437"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128814"
 ---
 # <a name="icordebugprocessgetthread-method"></a>ICorDebugProcess::GetThread Metodu
-Belirtilen işletim sistemi (OS) iş parçacığı kimliği vardır. Bu işlemin iş parçacığı alır  
+Belirtilen işletim sistemi (OS) iş parçacığı KIMLIĞINE sahip bu işlemin iş parçacığını alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,16 +35,16 @@ HRESULT GetThread(
   
 ## <a name="parameters"></a>Parametreler  
  `dwThreadId`  
- [in] İşletim sistemi iş parçacığı alınacak iş parçacığının kimliği.  
+ 'ndaki Alınacak iş parçacığının işletim sistemi iş parçacığı KIMLIĞI.  
   
  `ppThread`  
- [out] İş parçacığını temsil eden bir Icordebugthread nesnenin adresi için bir işaretçi.  
+ dışı İş parçacığını temsil eden ICorDebugThread nesnesinin adresine yönelik bir işaretçi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

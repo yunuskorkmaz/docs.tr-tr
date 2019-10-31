@@ -8,14 +8,12 @@ helpviewer_keywords:
 - threading [.NET Framework],exceptions in managed threads
 - managed threading
 ms.assetid: 11294769-2e89-43cb-890e-ad4ad79cfbee
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 689ee44980a4a41b6d46ed9b68306c1b08c49586
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2c3215fd42e8cf6d6427d23f94c14db4230ddd02
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69960068"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138059"
 ---
 # <a name="exceptions-in-managed-threads"></a>Yönetilen İş Parçacıklarında Özel Durumlar
 .NET Framework sürüm 2,0 ' den başlayarak, ortak dil çalışma zamanı, iş parçacıklarında birçok işlenmemiş özel durumun doğal olarak devam etmesine izin verir. Çoğu durumda bu, işlenmeyen özel durumun uygulamanın sonlandırılmasına neden olduğu anlamına gelir.  
@@ -25,9 +23,9 @@ ms.locfileid: "69960068"
   
  Ortak dil çalışma zamanı, program akışını denetlemek için kullanılan, işlenmemiş özel durumlar için bir geri durağı sağlar:  
   
-- Çağrıldığında <xref:System.Threading.ThreadAbortException> bir<xref:System.Threading.Thread.Abort%2A> iş parçacığında oluşturulur.  
+- <xref:System.Threading.Thread.Abort%2A> çağrıldığı için bir iş parçacığında <xref:System.Threading.ThreadAbortException> oluşturulur.  
   
-- <xref:System.AppDomainUnloadedException> İş parçacığı üzerinde yürütülmekte olan uygulama etki alanı kaldırılmakta olduğundan bir iş parçacığında oluşturulur.  
+- İş parçacığının yürütüldüğü uygulama etki alanı kaldırıldığından bir iş parçacığında <xref:System.AppDomainUnloadedException> oluşturulur.  
   
 - Ortak dil çalışma zamanı veya bir konak işlemi, bir iç özel durum oluşturarak iş parçacığını sonlandırır.  
   
@@ -49,7 +47,7 @@ ms.locfileid: "69960068"
   
 - İş parçacığı havuzu iş parçacığında işlenmemiş özel durum gibi bir şey yoktur. Bir görev, işlenmeyen bir özel durum oluşturduğunda, çalışma zamanı özel durum yığın izlemesini konsola yazdırır ve iş parçacığını iş parçacığı havuzuna döndürür.  
   
-- <xref:System.Threading.Thread.Start%2A> Sınıf yöntemiyle<xref:System.Threading.Thread> oluşturulan bir iş parçacığında işlenmemiş özel durum olarak böyle bir şey yoktur. Böyle bir iş parçacığı üzerinde çalışan kod, işlenmeyen bir özel durum oluşturduğunda, çalışma zamanı özel durum yığın izlemesini konsola yazdırır ve sonra iş parçacığını normal şekilde sonlandırır.  
+- <xref:System.Threading.Thread> sınıfının <xref:System.Threading.Thread.Start%2A> yöntemiyle oluşturulan bir iş parçacığında işlenmeyen bir özel durum yoktur. Böyle bir iş parçacığı üzerinde çalışan kod, işlenmeyen bir özel durum oluşturduğunda, çalışma zamanı özel durum yığın izlemesini konsola yazdırır ve sonra iş parçacığını normal şekilde sonlandırır.  
   
 - Sonlandırıcı iş parçacığında işlenmeyen bir özel durum yok. Bir Sonlandırıcı, işlenmeyen bir özel durum oluşturduğunda, çalışma zamanı özel durum yığın izlemesini konsola yazdırır ve sonra Sonlandırıcı iş parçacığının sonlandırıcıları çalıştırmaya sürdürmesini sağlar.  
   
@@ -62,14 +60,14 @@ ms.locfileid: "69960068"
   
 - Bir sinyal alındığında iş parçacığının düzgün bir şekilde çıkış yapabilmesi için kodu yeniden yapılandır.  
   
-- İş parçacığını durdurmak için yönteminikullanın.<xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>  
+- İş parçacığını durdurmak için <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> yöntemini kullanın.  
   
 - İşlem sonlandırmasının devam edebilmesi için bir iş parçacığının durdurulması gerekiyorsa, işlem çıkışında otomatik olarak sonlandırılmak için iş parçacığını bir arka plan iş parçacığı yapın.  
   
  Her durumda, strateji özel durumlar için tasarım kılavuzunu izlemelidir. [Özel durumlar Için tasarım yönergelerine](../../../docs/standard/design-guidelines/exceptions.md)bakın.  
   
 ### <a name="application-compatibility-flag"></a>Uygulama uyumluluğu bayrağı  
- Geçici bir uyumluluk ölçüsü olarak, yöneticiler uygulama yapılandırma dosyasının `<runtime>` bölümüne bir uyumluluk bayrağı yerleştirebilir. Bu, ortak dil çalışma zamanının 1,0 ve 1,1 sürümlerinin davranışına dönüşmesine neden olur.  
+ Geçici bir uyumluluk ölçüsü olarak Yöneticiler, uygulama yapılandırma dosyasının `<runtime>` bölümüne bir uyumluluk bayrağı yerleştirebilir. Bu, ortak dil çalışma zamanının 1,0 ve 1,1 sürümlerinin davranışına dönüşmesine neden olur.  
   
 ```xml  
 <legacyUnhandledExceptionPolicy enabled="1"/>  

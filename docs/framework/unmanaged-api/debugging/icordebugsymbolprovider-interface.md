@@ -2,14 +2,12 @@
 title: ICorDebugSymbolProvider Arabirimi
 ms.date: 03/30/2017
 ms.assetid: 85b24196-b6c6-4bda-9de3-47180bd6ff96
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: fa30391f10a5f9540090e90500c1cb0a9a410b1e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: fb947fec8f17fe13374251b4429be798a335eed6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69955527"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133657"
 ---
 # <a name="icordebugsymbolprovider-interface"></a>ICorDebugSymbolProvider Arabirimi
 Hata ayıklama sembolü bilgilerini almak için kullanılabilecek yöntemler sağlar.  
@@ -36,11 +34,11 @@ Hata ayıklama sembolü bilgilerini almak için kullanılabilecek yöntemler sa�
 > Bu arabirim yalnızca .NET Native kullanılabilir. Bu arabirimi .NET Native dışında ICorDebug senaryolarında uygularsanız, ortak dil çalışma zamanı bu arabirimi yoksayar.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi** CorDebug. IDL, CorDebug. h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı** Corguid. lib  
+ **Kitaplık:** Corguid. lib  
   
  **.NET Framework sürümleri:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

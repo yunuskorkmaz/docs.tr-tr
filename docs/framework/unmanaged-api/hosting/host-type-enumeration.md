@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 51f848be-84c5-4036-9839-c762c576bbf5
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: caf76fa7962de9392b06591777ac862aa548d20d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: cc0cea10b4a209583fb7afb551a6b80d52ad7f62
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779545"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127022"
 ---
-# <a name="hosttype-enumeration"></a>HOST_TYPE Numaralandırması
-Bir uygulamayı başlatmadan konak türünü belirten değerleri içerir.  
+# <a name="host_type-enumeration"></a>HOST_TYPE Numaralandırması
+Bir uygulamayı başlatan ana bilgisayar türünü belirten değerleri içerir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,18 +38,18 @@ typedef enum {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`HOST_TYPE_APPLAUNCH`|AppLaunch.exe uygulamayı başlatın.<br /><br /> Kısmen güvenilen uygulamalar için bu değeri kullanın.|  
-|`HOST_TYPE_CORFLAG`|Uygulamayı doğrudan başlatın. Diğer bir deyişle, kendi .exe dosyası uygulamayı başlatın.<br /><br /> Bu değer, tam olarak güvenilen uygulamalar için kullanın.|  
-|`HOST_TYPE_DEFAULT`|HOST_TYPE_APPLAUNCH ile aynıdır.|  
+|`HOST_TYPE_APPLAUNCH`|Uygulamayı Applalaunch. exe ' den başlatın.<br /><br /> Kısmen güvenilen uygulamalar için bu değeri kullanın.|  
+|`HOST_TYPE_CORFLAG`|Uygulamayı doğrudan başlatın. Diğer bir deyişle, uygulamayı kendi. exe dosyasından başlatın.<br /><br /> Tam güvenilir uygulamalar için bu değeri kullanın.|  
+|`HOST_TYPE_DEFAULT`|HOST_TYPE_APPLAUNCH ile aynı.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** MSCorEE.h  
+ **Üst bilgi:** MSCorEE. h  
   
- **Kitaplığı:** MSCorEE.dll  
+ **Kitaplık:** MSCorEE. dll  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

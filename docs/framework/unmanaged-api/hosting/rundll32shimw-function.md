@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: 9ea07b57-96e2-44df-8711-8fe6c119087f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 569efa9d14ef10d8c5cf735091778a6c78882815
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e661bd82ecf6d804e852cca4a4478084edf303c5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781157"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141504"
 ---
 # <a name="rundll32shimw-function"></a>RunDll32ShimW İşlevi
 Belirtilen komutu yürütür.  
   
- Bu işlev .NET Framework 4'te kullanım dışıdır.  
+ Bu işlev .NET Framework 4 ' te kullanım dışıdır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,25 +39,25 @@ HRESULT RunDll32ShimW (
   
 ## <a name="parameters"></a>Parametreler  
  `hwnd`  
- [in] Komut çıktısı görüntülenir bir pencere için bir tanıtıcı.  
+ 'ndaki Komut çıkışının gösterileceği pencerenin tutamacı.  
   
  `hinst`  
- [in] Komut içeren bir kitaplık için bir tanıtıcı.  
+ 'ndaki Komutu içeren kitaplığa yönelik bir tanıtıcı.  
   
  `lpszCmdLine`  
- [in] Yürütülecek komut belirten bir dize.  
+ 'ndaki Yürütülecek komutu belirten bir dize.  
   
  `nCmdShow`  
- [in] Çıkış penceresi için görüntü modunu belirten bir tamsayı.  
+ 'ndaki Çıkış penceresi için görüntüleme modunu belirten bir tamsayı.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** MSCorEE.h  
+ **Üst bilgi:** MSCorEE. h  
   
- **Kitaplığı:** MSCorEE.dll  
+ **Kitaplık:** MSCorEE. dll  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

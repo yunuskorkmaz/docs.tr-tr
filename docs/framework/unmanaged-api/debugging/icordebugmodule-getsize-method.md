@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5c68375d-145d-46ef-a7c8-2dc4257472de
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 46ee21a9fd7b9267672a14107c1706af5d5cdcc5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 402a0e8808b51fd4c09b254114292d4c851b2760
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67763574"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129505"
 ---
 # <a name="icordebugmodulegetsize-method"></a>ICorDebugModule::GetSize Yöntemi
-Modül bayt cinsinden boyutunu alır.  
+Modülün bayt cinsinden boyutunu alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,15 +35,15 @@ HRESULT GetSize(
   
 ## <a name="parameters"></a>Parametreler  
  `pcBytes`  
- [out] Modül bayt cinsinden boyutu.  
+ dışı Modülün bayt cinsinden boyutu.  
   
- Modülün yerel Görüntü Oluşturucu (NGen.exe) vermediyse, modül boyutu sıfır olacaktır.  
+ Modül yerel görüntü Oluşturucu (NGen. exe) tarafından üretildiyse, modülün boyutu sıfır olur.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d4cef11f-a8ca-49bc-a1b8-6631f9e28f3e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: bc0fc18e31b89b22ffd30d99a8b079ed7b87fa1b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1cd3c34fc292e4a050fa8a75078283e34425fc8f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67752496"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139126"
 ---
-# <a name="stacktracesimplecontext-structure"></a>StackTrace_SimpleContext Yapısı
-Tam yerine kullanılabilecek basit bir bağlam sağlar `CONTEXT` yapısı.  
+# <a name="stacktrace_simplecontext-structure"></a>StackTrace_SimpleContext Yapısı
+Tam `CONTEXT` yapısının yerine kullanılabilecek basit bir bağlam sağlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -42,19 +40,19 @@ struct StackTrace_SimpleContext
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`StackOffset`|Yığın işaretçisi veya x86 enter yığın işaretçisi (ESP) platformları.|  
-|`FrameOffset`|Çerçeve uzaklığı veya x86 EBP kayıt platformlar.|  
-|`InstructionOffset`|Yönerge işaretçisi veya x86 enter yönerge işaretçisi (EIP) platformları.|  
+|`StackOffset`|X86 platformlarında yığın işaretçisi veya yığın işaretçisi (ESP) girin.|  
+|`FrameOffset`|Çerçeve kayması veya x86 platformlarında EBP kaydı.|  
+|`InstructionOffset`|X86 platformlarında yönerge işaretçisi veya giriş yönergesi işaretçisi (EıP).|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Yığın izleme işlevleri genellikle yalnızca adresi, çerçeve uzaklığı ve yığın adresi döndürülecek gerektiğinden, isteğe bağlı olarak kullanabileceğiniz `SimpleContext` yapısı yerine büyük `CONTEXT` yapısı.  
+ Yığın izleme işlevlerinin genellikle yalnızca adresi, çerçeve sapmasını ve yığın adresini döndürmesi gerektiğinden, büyük bir `CONTEXT` yapısı yerine isteğe bağlı olarak `SimpleContext` yapısını kullanabilirsiniz.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** SOS_Stacktrace.h  
+ **Üst bilgi:** SOS_Stacktrace. h  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

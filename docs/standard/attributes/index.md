@@ -12,29 +12,27 @@ helpviewer_keywords:
 - runtime, attributes
 - extending metadata
 ms.assetid: 30386922-1e00-4602-9ebf-526b271a8b87
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2a31082604048e71ebc7581b36857a8bfbd333c2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b3a106eb58de4865e260a43c8466019e738510f5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61969799"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130897"
 ---
 # <a name="extending-metadata-using-attributes"></a>Öznitelikleri Kullanarak Meta Verileri Genişletme
-Ortak dil çalışma zamanı, anahtar sözcük benzeri tanımlayıcı bildirimler eklemenize olanak sağlar, türleri, alanları, yöntemleri ve özellikleri gibi programlama öğesine açıklama eklemek için öznitelikler çağrılır. Çalışma zamanı için kodunuzu derlediğinizde, Microsoft Ara diline (MSIL) dönüştürülür ve derleyici tarafından oluşturulan meta verilerinin yanı sıra bir taşınabilir yürütülebilir (PE) dosya içine yerleştirilir. Öznitelikler, çalışma zamanı yansıma Hizmetleri kullanarak ayıklanan meta verileri fazladan açıklayıcı bilgileri yerleştirin olanak tanır. Öğesinden türetilen özel sınıfların örneklerini bildirdiğinizde, derleyici öznitelikleri oluşturur <xref:System.Attribute?displayProperty=nameWithType>.  
+Ortak dil çalışma zamanı, türler, alanlar, Yöntemler ve özellikler gibi programlama öğelerine açıklama eklemek için öznitelikler olarak adlandırılan anahtar sözcük benzeri açıklayıcı bildirimler eklemenize olanak tanır. Çalışma zamanı için kodunuzu derlerken, Microsoft ara dili 'ne (MSIL) dönüştürülür ve derleyici tarafından oluşturulan meta verilerle birlikte taşınabilir bir çalıştırılabilir (PE) dosyası içine konur. Öznitelikleri, çalışma zamanı yansıma Hizmetleri kullanılarak ayıklanabilen meta verilere fazladan açıklayıcı bilgiler yerleştirmenizi sağlar. Derleyici, <xref:System.Attribute?displayProperty=nameWithType>türetilen özel sınıfların örneklerini bildirdiğinizde öznitelikler oluşturur.  
   
- .NET Framework çeşitli nedenleri ve birkaç sorun gidermenin için öznitelikleri kullanır. Verileri seri hale getirme, güvenliği zorlamak için kullanılan özellikleri belirtin ve kod hatalarını ayıklamak kolay kalır. böylece, en iyi duruma getirme just-ın-time (JIT) derleyici tarafından sınırlamak nasıl özniteliklerini açıklar. Öznitelikleri ayrıca bir dosyanın adı ve kod yazarı kaydetmek, veya forms geliştirme sırasında denetimleri ve üyeleri görünürlüğünü denetleme.  
+ .NET Framework çeşitli nedenlerle öznitelikler kullanır ve bir dizi sorunu ele almak için kullanılır. Öznitelikler, verilerin serileştirilmesi, güvenliği zorlamak için kullanılan özellikleri belirtmek ve tam zamanında (JıT) derleyicisine yönelik iyileştirmeleri sınırlamak için kodun kolayca hata ayıklaması gerektiğini anlatmaktadır. Öznitelikler Ayrıca, bir dosyanın veya kod yazarının adını kaydedebilir veya form geliştirme sırasında denetimlerin ve üyelerin görünürlüğünü denetleyebilir.  
   
 ## <a name="related-topics"></a>İlgili Konular  
   
 |Başlık|Açıklama|  
 |-----------|-----------------|  
-|[Öznitelikleri Uygulama](../../../docs/standard/attributes/applying-attributes.md)|Kodunuzun bir öğeye bir öznitelik uygulamak açıklar.|  
-|[Özel Öznitelikler Yazma](../../../docs/standard/attributes/writing-custom-attributes.md)|Özel öznitelik sınıfları tasarlama konularını açıklar.|  
-|[Özniteliklerde Depolanan Bilgileri Alma](../../../docs/standard/attributes/retrieving-information-stored-in-attributes.md)|Yürütme bağlamı yüklenen kod için özel öznitelikler alınacağını açıklar.|  
-|[Meta Veriler ve Kendiliğinden Açıklayıcı Bileşenler](../../../docs/standard/metadata-and-self-describing-components.md)|Meta veri genel bir bakış sağlar ve bir .NET Framework taşınabilir yürütülebilir (PE) dosyasında nasıl uygulandığı açıklanmaktadır.|  
-|[Nasıl yapılır: Salt yansıma bağlamına derlemeleri yükleme](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)|Yalnızca yansıma içeriğinde özel öznitelik bilgileri almak açıklanmaktadır.|  
+|[Öznitelikleri Uygulama](../../../docs/standard/attributes/applying-attributes.md)|Kodunuzun bir öğesine nasıl öznitelik uygulanacağını açıklar.|  
+|[Özel Öznitelikler Yazma](../../../docs/standard/attributes/writing-custom-attributes.md)|Özel öznitelik sınıflarının nasıl tasarlanacağını açıklar.|  
+|[Özniteliklerde Depolanan Bilgileri Alma](../../../docs/standard/attributes/retrieving-information-stored-in-attributes.md)|Yürütme bağlamına yüklenen kod için özel özniteliklerin nasıl alınacağını açıklar.|  
+|[Meta Veriler ve Kendiliğinden Açıklayıcı Bileşenler](../../../docs/standard/metadata-and-self-describing-components.md)|Meta verilere genel bakış sağlar ve .NET Framework taşınabilir yürütülebilir (PE) dosyasında nasıl uygulandığını açıklar.|  
+|[Nasıl yapılır: Salt Yansıma Bağlamına Derlemeleri Yükleme](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)|Özel öznitelik bilgilerinin yalnızca yansıma bağlamında nasıl alınacağını açıklar.|  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Attribute?displayProperty=nameWithType>

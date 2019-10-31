@@ -18,14 +18,12 @@ helpviewer_keywords:
 ms.assetid: e91bf8c3-7c26-4732-938e-2e5b04abfc99
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 021fa1668247bc59a4412d2b5f4bac3f5ee8cc6b
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: dd83fc6a7f553b54cc2acd5e9a93d8d58747d75a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70799119"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141709"
 ---
 # <a name="strongnameerrorinfo-function"></a>StrongNameErrorInfo İşlevi
 Tanımlayıcı ad işlevlerinden biri tarafından oluşturulan son hata kodunu alır.  
@@ -42,13 +40,13 @@ HRESULT StrongNameErrorInfo ();
  Tanımlayıcı ad işlevlerinden biri tarafından ayarlanan son COM hata kodu.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Tanımlayıcı ad yöntemlerinin çoğu, başarılı bir tamamlamayı basit `true` veya `false` bir şekilde döndürür. Tanımlayıcı ad işlevleri tarafından oluşturulan son hatayı belirten bir HRESULT almak için işlevinikullanın.`StrongNameErrorInfo`  
+ Tanımlayıcı ad yöntemlerinin çoğu, başarılı tamamlama işleminin basit bir `true` veya `false` göstergesi döndürür. Güçlü ad işlevleri tarafından oluşturulan son hatayı belirten bir HRESULT almak için `StrongNameErrorInfo` işlevini kullanın.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üst bilgi** StrongName. h  
+ **Üst bilgi:** StrongName. h  
   
- **Kitaplığı** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
   
  **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  

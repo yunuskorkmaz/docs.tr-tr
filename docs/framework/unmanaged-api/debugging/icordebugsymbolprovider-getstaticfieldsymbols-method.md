@@ -2,14 +2,12 @@
 title: 'ICorDebugSymbolProvider:: GetStaticFieldSymbols yöntemi'
 ms.date: 03/30/2017
 ms.assetid: b178367f-a6e4-413c-b06f-daf3804b456b
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6bd3442adf58250a423438666ec1092bab61958b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8c4211a60786016e25cc3e3419804817b57ab64e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69955548"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138801"
 ---
 # <a name="icordebugsymbolprovidergetstaticfieldsymbols-method"></a>ICorDebugSymbolProvider:: GetStaticFieldSymbols yöntemi
 TypeSpec imzasına karşılık gelen statik alan sembollerini alır.  
@@ -28,10 +26,10 @@ HRESULT GetStaticFieldSymbols(
   
 ## <a name="parameters"></a>Parametreler  
  `cbSignature`  
- 'ndaki `typeSig` Dizideki bayt sayısı.  
+ 'ndaki `typeSig` dizisindeki bayt sayısı.  
   
  `typeSig`  
- 'ndaki `typespec` İmzayı içeren bir bayt dizisi.  
+ 'ndaki `typespec` imzasını içeren bir bayt dizisi.  
   
  `cRequestedSymbols`  
  'ndaki İstenen simgelerin sayısı.  
@@ -48,11 +46,11 @@ HRESULT GetStaticFieldSymbols(
 > Bu yöntem yalnızca .NET Native kullanılabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi** CorDebug. IDL, CorDebug. h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı** Corguid. lib  
+ **Kitaplık:** Corguid. lib  
   
  **.NET Framework sürümleri:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

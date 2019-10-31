@@ -2,19 +2,17 @@
 title: ISymUnmanagedAsyncMethod::IsAsyncMethod Yöntemi
 ms.date: 03/30/2017
 ms.assetid: 670a7653-dac6-4171-98ee-d669e3adf4b2
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e5cddf34f1a6277e966901c9692bff63e26a3b8e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0ea4c21e9e6a49d7bbbad5e1853598c440cd6410
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61940159"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129207"
 ---
 # <a name="isymunmanagedasyncmethodisasyncmethod-method"></a>ISymUnmanagedAsyncMethod::IsAsyncMethod Yöntemi
-Yöntemi zaman uyumsuz bilgi olup olmadığını denetler.  
+Metodun zaman uyumsuz bilgilere sahip olup olmadığını denetler.  
   
- Bu yöntem döndürürse `FALSE` sonra bu arabirimde diğer yöntemleri çağırmak geçersizdir. Tüm dönüş göründükleri `E_UNEXPECTED` bu durumda.  
+ Bu yöntem `FALSE` döndürürse, bu arabirimdeki diğer yöntemleri çağırmak geçersizdir. Bu durumda `E_UNEXPECTED` hepsi döndürülür.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -29,10 +27,10 @@ HRESULT IsAsyncMethod(    [out, retval] BOOL* pRetVal);
 |`pRetVal`||  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Döndürür `HRESULT`.  
+ `HRESULT`döndürür.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Üst bilgi:** CorSym.idl, CorSym.h  
+ **Üst bilgi:** CorSym. IDL, CorSym. h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

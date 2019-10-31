@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 78b0f14f-2fae-4e63-8412-4df119ee8468
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: fd707685dfff31644565db18e72dc153d25781f4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f40030a2034057e83de51a21655a686f30b9ee88
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761083"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137449"
 ---
 # <a name="icordebugmanagedcallback2exception-method"></a>ICorDebugManagedCallback2::Exception Yöntemi
-Hata ayıklayıcı özel durum işleyicisi için arama başlatıldığını bildirir.  
+Hata ayıklayıcıya bir özel durum işleyici aramasının başlatıldığını bildirir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -42,45 +40,45 @@ HRESULT Exception (
   
 ## <a name="parameters"></a>Parametreler  
  `pAppDomain`  
- [in] Özel durumun oluştuğu iş parçacığı içeren uygulama etki alanını temsil eden bir Icordebugappdomain nesne işaretçisi.  
+ 'ndaki Özel durumun oluşturulduğu iş parçacığını içeren uygulama etki alanını temsil eden ICorDebugAppDomain nesnesine yönelik bir işaretçi.  
   
  `pThread`  
- [in] Özel durumun oluştuğu iş parçacığını temsil eden bir Icordebugthread nesne işaretçisi.  
+ 'ndaki Özel durumun oluşturulduğu iş parçacığını temsil eden ICorDebugThread nesnesine yönelik bir işaretçi.  
   
  `pFrame`  
- [in] Bir çerçeve tarafından belirlenen şekilde temsil eden bir Icordebugframe nesne işaretçisi `dwEventType` parametresi. Daha fazla bilgi için Açıklamalar bölümü içindeki tabloya bakın.  
+ 'ndaki `dwEventType` parametresi tarafından belirlendiği şekilde, bir çerçeveyi temsil eden ICorDebugFrame nesnesine yönelik bir işaretçi. Daha fazla bilgi için, açıklamalar bölümündeki tabloya bakın.  
   
  `nOffset`  
- [in] Tarafından belirlenen şekilde bir uzaklık belirten bir tamsayı `dwEventType` parametresi. Daha fazla bilgi için Açıklamalar bölümü içindeki tabloya bakın.  
+ 'ndaki `dwEventType` parametresi tarafından belirlendiği şekilde, bir sapmayı belirten tamsayı. Daha fazla bilgi için, açıklamalar bölümündeki tabloya bakın.  
   
  `dwEventType`  
- [in] Bu özel durum geri arama türünü belirten CorDebugExceptionCallbackType sabit listesi değeri.  
+ 'ndaki Bu özel durum geri çağrısının türünü belirten CorDebugExceptionCallbackType numaralandırması değeri.  
   
  `dwFlags`  
- [in] Değerini [CorDebugExceptionFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionflags-enumeration.md) özel durum hakkında ek bilgi belirten sabit listesi  
+ 'ndaki Özel durum hakkında ek bilgi belirten [CorDebugExceptionFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionflags-enumeration.md) sabit listesinin bir değeri  
   
 ## <a name="remarks"></a>Açıklamalar  
- `Exception` Geri çağırma çeşitli noktalarda özel durum işleme işleminin arama aşamasında çağrılır. Diğer bir deyişle, çağrılabilir birden çok kez bir özel durumu geriye doğru izleme çalışırken.  
+ `Exception` geri çağırması, özel durum işleme işleminin arama aşamasında çeşitli noktalarda çağrılır. Diğer bir deyişle, özel durum geriye doğru bir şekilde bir kez çağrılabilir.  
   
- İşlenmekte olan özel durum tarafından başvurulan Icordebugthread nesnesinden alınabilir `pThread` parametresi.  
+ İşlenmekte olan özel durum, `pThread` parametresi tarafından başvurulan ICorDebugThread nesnesinden alınabilir.  
   
- Uzaklık ve belirli çerçeve tarafından belirlenen `dwEventType` parametresini aşağıdaki şekilde:  
+ Belirli bir çerçeve ve fark, `dwEventType` parametresine göre belirlenir:  
   
-|Değeri `dwEventType`|Değeri `pFrame`|Değeri `nOffset`|  
+|`dwEventType` değeri|`pFrame` değeri|`nOffset` değeri|  
 |----------------------------|-----------------------|------------------------|  
-|DEBUG_EXCEPTION_FIRST_CHANCE|Özel durum oluşturdu çerçeve.|Çerçevede yönerge işaretçisi.|  
-|DEBUG_EXCEPTION_USER_FIRST_CHANCE|Oluşturulan özel durumun noktaya en yakın kullanıcı kodu çerçevesi.|Çerçevede yönerge işaretçisi.|  
-|DEBUG_EXCEPTION_CATCH_HANDLER_FOUND|Catch işleyicisi içeren çerçeve.|Catch işleyicisi başına Microsoft Ara dili (MSIL) uzaklığı.|  
-|DEBUG_EXCEPTION_UNHANDLED|NULL|Tanımlı değil.|  
+|DEBUG_EXCEPTION_FIRST_CHANCE|Özel durumu oluşturan çerçeve.|Çerçevedeki yönerge işaretçisi.|  
+|DEBUG_EXCEPTION_USER_FIRST_CHANCE|Oluşturulan özel durum noktasına en yakın Kullanıcı kodu çerçevesi.|Çerçevedeki yönerge işaretçisi.|  
+|DEBUG_EXCEPTION_CATCH_HANDLER_FOUND|Catch işleyicisini içeren çerçeve.|Catch işleyicisinin başlangıcının Microsoft ara dili (MSIL) kayması.|  
+|DEBUG_EXCEPTION_UNHANDLED|NULL|Tanımlayan.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

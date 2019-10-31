@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 72ea68b4-689f-4733-9416-9664b75e8892
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 46dab35c44e59a149822005575c83c13e9350455
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: cc5324683daa9a02a6a89b2a3fb57ee9fd5dbe72
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67758537"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136956"
 ---
-# <a name="corexemain2-function"></a>_CorExeMain2 İşlevi
-Belirtilen bellek eşlemeli kod içinde giriş noktasını yürütür. Bu işlev, işletim sistemi yükleyicisi tarafından çağrılır.  
+# <a name="_corexemain2-function"></a>_CorExeMain2 İşlevi
+Giriş noktasını belirtilen bellek eşlemeli kodda yürütür. Bu işlev, işletim sistemi yükleyicisi tarafından çağırılır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,28 +38,28 @@ __int32 STDMETHODCALLTYPE _CorExeMain2 (
   
 ## <a name="parameters"></a>Parametreler  
  `pUnmappedPE`  
- [in] Bellek eşlemeli kod için bir işaretçi.  
+ 'ndaki Bellek eşlemeli koda yönelik bir işaretçi.  
   
  `cUnmappedPE`  
- [in] Öğe sayısı `pUnmappedPE` basılı tutabilirsiniz.  
+ 'ndaki `pUnmappedPE` öğe sayısı olabilir.  
   
  `pImageNameIn`  
- [in] Yürütülebilir resmin adı için bir işaretçi.  
+ 'ndaki Yürütülebilir görüntünün adı için bir işaretçi.  
   
  `pLoadersFileName`  
- [in] Yükleyici dosyasının adı.  
+ 'ndaki Yükleyici dosyasının adı.  
   
  `pCmdLine`  
- [in] Komut satırı parametreleri, varsa.  
+ 'ndaki Varsa komut satırı parametreleri.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** COR.h  
+ **Üst bilgi:** Cor. h  
   
- **Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil  
+ **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

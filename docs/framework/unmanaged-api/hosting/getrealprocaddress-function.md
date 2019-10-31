@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: f1f2fab1-400b-488f-95f2-d49c4fca3556
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0027514392dfbb93ab4189eb7c66a380fb77c1ae
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9dffc3d197b05bb71443aa60c101260daabadadd
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778162"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136398"
 ---
 # <a name="getrealprocaddress-function"></a>GetRealProcAddress İşlevi
-En son yüklenen sürümünden ortak dil çalışma zamanı (CLR) dışarı aktarılan belirtilen işlevin adresini alır.  
+Ortak dil çalışma zamanının (CLR) en son yüklenen sürümünden aktarılmış olan belirtilen işlevin adresini alır.  
   
- Bu işlev .NET Framework 4'te kullanım dışıdır.  
+ Bu işlev .NET Framework 4 ' te kullanım dışıdır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,28 +37,28 @@ HRESULT GetRealProcAddress (
   
 ## <a name="parameters"></a>Parametreler  
  `pwszProcName`  
- [in] İşlevin adı.  
+ 'ndaki İşlevin adı.  
   
  `ppv`  
- [out] İşlevin adresini bir işaretçiye alan konumu.  
+ dışı İşlevin adresine bir işaretçi alan konum.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Bu yöntem standart Bileşen Nesne Modeli (COM) hata kodları CorError.h içinde tanımlanan aşağıdaki değerlere ek olarak Wınerror içinde tanımlanan döndürür.  
+ Bu yöntem, CorError. h içinde tanımlanan aşağıdaki değerlere ek olarak, WinError. h içinde tanımlanan standart bileşen nesne modeli (COM) hata kodlarını döndürür.  
   
 |Dönüş kodu|Açıklama|  
 |-----------------|-----------------|  
 |S_OK|Yöntem başarıyla tamamlandı.|  
 |E_POINTER|`ppv` geçerli değil.|  
-|CLR_E_SHIM_RUNTIMEEXPORT|İşlev, çalışma zamanını şuradan verilmez.|  
+|CLR_E_SHIM_RUNTIMEEXPORT|İşlev çalışma zamanından dışarıya aktarılmamış.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** MSCorEE.h  
+ **Üst bilgi:** MSCorEE. h  
   
- **Kitaplığı:** MSCorEE.dll  
+ **Kitaplık:** MSCorEE. dll  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

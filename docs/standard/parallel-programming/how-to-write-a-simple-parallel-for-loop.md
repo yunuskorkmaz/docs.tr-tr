@@ -10,65 +10,63 @@ helpviewer_keywords:
 - for loop, parallel construction in .NET
 - parallel for loops, how to use
 ms.assetid: 9029ba7f-a9d1-4526-8c84-c88716dba5d4
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f2070562ba0910b5cac951e925bd9c5f0e7f68fb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 78f07a4f0118c6bce7a043f111988281ddd6add0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61769193"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139663"
 ---
 # <a name="how-to-write-a-simple-parallelfor-loop"></a>Nasıl yapılır: Basit bir Parallel.For Döngüsü Yazma
 
-Bu konuda gösteren iki örnek içeren <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> yöntemi. İlk kullandığı <xref:System.Threading.Tasks.Parallel.For%28System.Int64%2CSystem.Int64%2CSystem.Action%7BSystem.Int64%7D%29?displayProperty=nameWithType> yöntemi aşırı yüklemesini ve ikinci kullandığı <xref:System.Threading.Tasks.Parallel.For%28System.Int32%2CSystem.Int32%2CSystem.Action%7BSystem.Int32%7D%29?displayProperty=nameWithType> aşırı yüklemesi, iki basit aşırı yüklemeleri <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> yöntemi. Bu iki aşırı yüklemesini kullanabilirsiniz <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> döngü iptal etmek gerekmediğinde yöntemi sonu dışında döngü yinelemesi veya herhangi bir iş parçacığı-yerel durumu korumak.
+Bu konu, <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> yöntemini gösteren iki örnek içerir. İlki <xref:System.Threading.Tasks.Parallel.For%28System.Int64%2CSystem.Int64%2CSystem.Action%7BSystem.Int64%7D%29?displayProperty=nameWithType> yöntemi aşırı yüklemesini kullanır ve ikincisi <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> yönteminin iki en basit aşırı yüklemesi olan <xref:System.Threading.Tasks.Parallel.For%28System.Int32%2CSystem.Int32%2CSystem.Action%7BSystem.Int32%7D%29?displayProperty=nameWithType> aşırı yüklemeyi kullanır. Döngüyü iptal etmeniz, döngü yinelemelerini kesmeniz veya herhangi bir iş parçacığı yerel durumunu sürdürmenize gerek olmadığında <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> yönteminin bu iki yüklerini kullanabilirsiniz.
 
 > [!NOTE]
-> TPL'de temsilciler tanımlamak için bu belgede lambda ifadeleri kullanılır. C# veya Visual Basic'te lambda ifadelerine aşina değilseniz bkz [PLINQ ve TPL'deki Lambda ifadeleri](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md).
+> TPL'de temsilciler tanımlamak için bu belgede lambda ifadeleri kullanılır. Veya Visual Basic içindeki C# lambda ifadeleriyle ilgili bilgi sahibi değilseniz bkz. [PLıNQ ve TPL içindeki lambda ifadeleri](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md).
 
-İlk örnek, tek bir dizindeki dosyaların boyutunu hesaplar. İkinci iki matrislerde çarpımını hesaplar.
+İlk örnek, tek bir dizindeki dosyaların boyutunu hesaplar. İkincisi iki matrisin çarpımını hesaplar.
 
 ## <a name="directory-size-example"></a>Dizin boyutu örneği
 
-Bu örnek, bir dizindeki dosyaların toplam boyutu hesaplar basit bir komut satırı yardımcı programıdır. Bağımsız değişken olarak tek bir dizin yolu bekliyor ve sayısı ve bu dizindeki dosyaların toplam boyutu raporlar. Dizinin mevcut olduğunu doğruladıktan sonra bunu kullanan <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> dizindeki dosyaları numaralandırma ve kendi dosya boyutunu belirlemek için yöntem. Her bir dosya boyutu daha sonra eklenen `totalSize` değişkeni. Ayrıca çağrılarak gerçekleştirilir Not <xref:System.Threading.Interlocked.Add%2A?displayProperty=nameWithType> böylece ek bir atomik işlem olarak gerçekleştirilir. Aksi takdirde, birden çok görevi güncelleştirmek çalışabilir `totalSize` değişken aynı anda.
+Bu örnek, bir dizindeki dosyaların toplam boyutunu hesaplayan basit bir komut satırı yardımcı programıdır. Bağımsız değişken olarak tek bir dizin yolu bekler ve bu dizindeki dosyaların sayısını ve toplam boyutunu raporlar. Dizinin mevcut olduğunu doğruladıktan sonra, dizindeki dosyaları numaralandırma ve dosya boyutlarını belirleme <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> yöntemini kullanır. Her dosya boyutu `totalSize` değişkenine eklenir. Toplama işleminin atomik bir işlem olarak gerçekleştirilmesi için <xref:System.Threading.Interlocked.Add%2A?displayProperty=nameWithType> çağırarak bunun gerçekleştirildiğinden emin olmanız gerektiğini unutmayın. Aksi takdirde, birden çok görev `totalSize` değişkenini eşzamanlı olarak güncelleştirmeyi deneyebilir.
 
 [!code-csharp[Conceptual.Parallel.For#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.parallel.for/cs/for1.cs#1)]
 [!code-vb[Conceptual.Parallel.For#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.parallel.for/vb/for1.vb#1)]
 
 ## <a name="matrix-and-stopwatch-example"></a>Matris ve kronometre örneği
 
-Bu örnekte <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> iki matrislerde çarpımını için yöntemi. Ayrıca nasıl kullanılacağını gösterir <xref:System.Diagnostics.Stopwatch?displayProperty=nameWithType> paralel olmayan döngü ile paralel bir döngüden performansını karşılaştırmak için sınıf. Çıkış büyük hacimli oluşturabileceğinden, örnek çıkış bir dosyaya yönlendirilmesi verdiğini unutmayın.
+Bu örnek, iki matrisinin çarpımını hesaplamak için <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> yöntemini kullanır. Ayrıca, paralel olmayan bir döngüyle paralel bir döngünün performansını karşılaştırmak için <xref:System.Diagnostics.Stopwatch?displayProperty=nameWithType> sınıfını nasıl kullanacağınızı gösterir. Büyük bir çıkış hacmi üretebildiğinden, örneğin çıktının bir dosyaya yeniden yönlendirilmesine izin verdiğini unutmayın.
 
 [!code-csharp[TPL_Parallel#01](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_parallel/cs/simpleparallelfor.cs#01)]
 [!code-vb[TPL_Parallel#01](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_parallel/vb/simpleparallelfor.vb#01)]
 
-Döngüler, dahil olmak üzere herhangi bir kod paralelleştirmek önemli amaçlarından burada herhangi bir performans avantaj paralel işleme yükü olumsuz duruma getirir noktasına paralelleştirmek üzerinden işlemci olmadan mümkün olduğunca yararlanmak için andır. Bu örnekte, iç döngü içinde gerçekleştirilen çok iş olmadığından yalnızca dış döngü paralelleştirildi. Az miktarda iş ve istenmeyen önbellek etkileri birleşimi iç içe geçmiş paralel Döngülerde performans düşüşüne neden olabilir. Bu nedenle, dış döngü paralelleştirmek yalnızca çoğu sistemde yararlarını en üst düzeye çıkarmak için en iyi yoludur.
+Döngüler dahil olmak üzere herhangi bir kodu paralelleştirdiğinde, önemli bir amaç, paralel işleme yükünün herhangi bir performans avantajlarından yararlanmasına neden olacak şekilde, işlemciyi paralelleştirmeden mümkün olduğunca çok daha fazla kullanır. Bu örnekte, iç döngüde çok fazla iş gerçekleştirilmediğinden yalnızca dış döngü paralelleştirildi. Az miktarda iş ve istenmeyen önbellek efektlerinin birleşimi, iç içe paralel Döngülerde performans düşüşüne neden olabilir. Bu nedenle, dış döngüyü paralelleştirme, çoğu sistemde eşzamanlılık avantajlarından en iyi şekilde yararlanmanın en iyi yoludur.
 
 ## <a name="the-delegate"></a>Temsilci
 
-Bu aşırı yüklemesi, üçüncü parametresinin <xref:System.Threading.Tasks.Parallel.For%2A> bir temsilci türü `Action<int>` C# veya `Action(Of Integer)` Visual Basic'te. Bir `Action` temsilcisi, sıfır, bir veya altı tür parametreleri, sahip olup olmadığını her zaman döndürür void. Visual Basic'te davranışını bir `Action` ile tanımlanmış bir `Sub`. Örnek, bir temsilci oluşturmak için bir lambda ifadesi kullanır. ancak, temsilci başka yöntemlerle de oluşturabilirsiniz. Daha fazla bilgi için [PLINQ ve TPL'deki Lambda ifadeleri](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md).
+Bu <xref:System.Threading.Tasks.Parallel.For%2A> aşırı yüklemesinin üçüncü parametresi, Visual Basic içinde `Action<int>` C# veya `Action(Of Integer)` türünde bir temsilcisidir. Sıfır, bir veya on altı tür parametresi olup olmadığı, her zaman void döndüren bir `Action` temsilcisi. Visual Basic, bir `Action` davranışı bir `Sub`ile tanımlanır. Örnek, temsilciyi oluşturmak için bir lambda ifadesi kullanır, ancak temsilciyi başka yollarla da oluşturabilirsiniz. Daha fazla bilgi için bkz. [PLıNQ ve TPL 'Deki lambda ifadeleri](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md).
 
 ## <a name="the-iteration-value"></a>Yineleme değeri
 
-Temsilci geçerli yineleme değeri olan tek bir giriş parametresi alır. Bu yineleme değeri çalışma zamanı tarafından sağlanan ve başlangıç değeri geçerli iş parçacığı üzerinde işlenmekte olan kaynağı segmentine (bölüm) ilk öğenin dizinidir.
+Temsilci, değeri geçerli yineleme olan tek bir giriş parametresi alır. Bu yineleme değeri çalışma zamanı tarafından sağlanır ve başlangıç değeri, geçerli iş parçacığında işlenmekte olan kaynağın segmentindeki (bölüm) ilk öğenin dizinidir.
 
-Eşzamanlılık düzeyi hakkında daha fazla denetime ihtiyacınız varsa, alan aşırı kullanan bir <xref:System.Threading.Tasks.ParallelOptions?displayProperty=nameWithType> gibi giriş parametresi: <xref:System.Threading.Tasks.Parallel.For%28System.Int32%2CSystem.Int32%2CSystem.Threading.Tasks.ParallelOptions%2CSystem.Action%7BSystem.Int32%2CSystem.Threading.Tasks.ParallelLoopState%7D%29?displayProperty=nameWithType>.
+Eşzamanlılık düzeyi üzerinde daha fazla denetime ihtiyacınız varsa, <xref:System.Threading.Tasks.ParallelOptions?displayProperty=nameWithType> giriş parametresi alan aşırı yüklerden birini kullanın, örneğin: <xref:System.Threading.Tasks.Parallel.For%28System.Int32%2CSystem.Int32%2CSystem.Threading.Tasks.ParallelOptions%2CSystem.Action%7BSystem.Int32%2CSystem.Threading.Tasks.ParallelLoopState%7D%29?displayProperty=nameWithType>.
 
-## <a name="return-value-and-exception-handling"></a>Dönüş değeri ve özel durum işleme
+## <a name="return-value-and-exception-handling"></a>Dönüş değeri ve özel durum Işleme
 
-<xref:System.Threading.Tasks.Parallel.For%2A> döndürür bir <xref:System.Threading.Tasks.ParallelLoopResult?displayProperty=nameWithType> tüm iş parçacıklarının tamamladıktan sonra nesne. Bu dönüş değeri olduğundan yararlı, durdurma veya kesme döngü yinelemesi el ile <xref:System.Threading.Tasks.ParallelLoopResult> tamamlanmak üzere çalıştığı son yineleme gibi bilgileri depolar. Bir iş parçacığı üzerinde bir veya daha fazla özel durum oluşursa bir <xref:System.AggregateException?displayProperty=nameWithType> oluşturulur.
+<xref:System.Threading.Tasks.Parallel.For%2A>, tüm iş parçacıkları tamamlandığında bir <xref:System.Threading.Tasks.ParallelLoopResult?displayProperty=nameWithType> nesnesi döndürür. Bu dönüş değeri, <xref:System.Threading.Tasks.ParallelLoopResult> tamamlama için çalıştırılan son yineleme gibi bilgileri depoladığı için döngü yinelemesini el ile durdururken veya parçaladığında faydalıdır. İş parçacıklarından birinde bir veya daha fazla özel durum oluşursa, bir <xref:System.AggregateException?displayProperty=nameWithType> oluşturulur.
 
-Bu örnekte, dönüş değeri koddaki <xref:System.Threading.Tasks.Parallel.For%2A> kullanılmaz.
+Bu örnekteki kodda, <xref:System.Threading.Tasks.Parallel.For%2A> dönüş değeri kullanılmaz.
 
 ## <a name="analysis-and-performance"></a>Analiz ve performans
 
-Performans Sihirbazı, bilgisayarınızda CPU kullanımı görüntülemek için kullanabilirsiniz. Bir deney sütun ve matrislerde satır sayısını artırın. Daha büyük matrisler, hesaplama paralel ve sıralı sürümleri arasında büyük performans farkı. Matris küçük olduğunda, paralel bir döngüden ayarlama yükü nedeniyle sıralı sürümü daha hızlı çalışır.
+Bilgisayarınızdaki CPU kullanımını görüntülemek için performans sihirbazını kullanabilirsiniz. Bir deneme olarak, matrislerde sütun ve satır sayısını artırın. Matrisler arttıkça, hesaplamanın paralel ve sıralı sürümleri arasındaki performans farkı artar. Matris küçük olduğunda, paralel döngü ayarlamadaki ek yük nedeniyle sıralı sürüm daha hızlı çalışır.
 
-Zaman uyumlu çağrılar, konsol veya dosya sistemi gibi paylaşılan kaynaklar için önemli ölçüde paralel bir döngüden performansını bozar. Performansı ölçmek, çağrıları gibi kaçınmaya çalışın <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> döngü içinde.
+Konsol veya dosya sistemi gibi paylaşılan kaynaklara zaman uyumlu çağrılar, paralel bir döngünün performansını önemli ölçüde azaltır. Performansı ölçerek, döngü içinde <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> gibi çağrılardan kaçınmaya çalışın.
 
-## <a name="compile-the-code"></a>Kod derleme
+## <a name="compile-the-code"></a>Kodu derle
 
-Kopyalayın ve bu kod bir Visual Studio projesine yapıştırın.
+Bu kodu kopyalayıp bir Visual Studio projesine yapıştırın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

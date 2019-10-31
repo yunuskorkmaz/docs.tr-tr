@@ -2,38 +2,36 @@
 title: .NET Yerel ile Başlangıç İyileştirmesini Hesaplama
 ms.date: 03/30/2017
 ms.assetid: c4d25b24-9c1a-4b3e-9705-97ba0d6c0289
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 74011a4c70cc8f7da3973698a43b1e97cffb9f9b
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 771bf8deba8e851eadf356c647169a21428ddcff
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70927077"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128350"
 ---
 # <a name="measuring-startup-improvement-with-net-native"></a>.NET Yerel ile Başlangıç İyileştirmesini Hesaplama
 .NET Native uygulamaların başlatma süresini önemli ölçüde geliştirir. Bu geliştirme, özellikle taşınabilir, düşük güç destekli cihazlarda ve karmaşık uygulamalarla görülür. Bu konu, bu başlangıç geliştirmesini ölçmek için gereken temel araçları kullanmaya başlamanıza yardımcı olur.  
   
  .NET Framework ve Windows, performans araştırmamasını kolaylaştırmak için, uygulamanızın olaylar gerçekleştiğinde araçları bilgilendirmek için olay Izleme (ETW) adlı bir olay çerçevesi kullanır. Daha sonra, ETW olaylarını kolayca görüntülemek ve analiz etmek için PerfView adlı bir araç kullanabilirsiniz. Bu konuda aşağıdakiler açıklanmaktadır:  
   
-- Olayları yayma için sınıfını kullanın. <xref:System.Diagnostics.Tracing.EventSource>  
+- Olayları göstermek için <xref:System.Diagnostics.Tracing.EventSource> sınıfını kullanın.  
   
 - Bu olayları toplamak için PerfView kullanın.  
   
 - Bu olayları görüntülemek için PerfView kullanın.  
   
 ## <a name="using-eventsource-to-emit-events"></a>Olayları yayma için EventSource kullanma  
- <xref:System.Diagnostics.Tracing.EventSource>Özel olay sağlayıcısı oluşturmak için temel bir sınıf sağlar. Genellikle, bir alt sınıfı <xref:System.Diagnostics.Tracing.EventSource> oluşturur ve `Write*` yöntemleri kendi olay yöntemleriyle sarırsınız. Tek bir model genellikle her biri <xref:System.Diagnostics.Tracing.EventSource>için kullanılır.  
+ <xref:System.Diagnostics.Tracing.EventSource>, özel olay sağlayıcısı oluşturmak için bir temel sınıf sağlar. Genellikle <xref:System.Diagnostics.Tracing.EventSource> bir alt sınıfı oluşturur ve `Write*` yöntemlerini kendi olay yöntemlerinize sarırsınız. Tek bir model genellikle her bir <xref:System.Diagnostics.Tracing.EventSource>için kullanılır.  
   
  Örneğin, aşağıdaki örnekteki sınıf iki performans özelliğini ölçmek için kullanılabilir:  
   
-- `App` Sınıf oluşturucusu çağrılana kadar geçen süre.  
+- `App` sınıf oluşturucusu çağrılana kadar geçen süre.  
   
-- `MainPage` Oluşturucunun çağrılana kadar geçen süre.  
+- `MainPage` Oluşturucu çağrılana kadar geçen süre.  
   
  [!code-csharp[ProjectN_ETW#1](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_etw/cs/etw1.cs#1)]  
   
- Burada dikkat etmeniz gereken birkaç nokta vardır. İlk olarak, içinde `AppEventSource.Log`tek bir oluşturulur. Bu örnek, tüm günlük kaydı için kullanılacaktır. İkincisi, her olay yöntemi bir <xref:System.Diagnostics.Tracing.EventAttribute>öğesine sahiptir. Bu, <xref:System.Diagnostics.Tracing.EventSource.WriteEvent%2A> yönteminin dizinini, `AppEventSource`çağrılan yöntemiyle ilişkilendirmenize yardımcı olur.  
+ Burada dikkat etmeniz gereken birkaç nokta vardır. İlk olarak, `AppEventSource.Log`içinde tek bir oluşturulur. Bu örnek, tüm günlük kaydı için kullanılacaktır. İkincisi, her olay yönteminin bir <xref:System.Diagnostics.Tracing.EventAttribute>vardır. Bu, <xref:System.Diagnostics.Tracing.EventSource.WriteEvent%2A> yönteminin dizinini `AppEventSource`çağrılan yöntemle ilişkilendirmenize yardımcı olur.  
   
  Bu olayların yalnızca tanım olduğunu unutmayın. Çoğu uygulama kodu, bu olaylardan sonra çalışacaktır. Koddaki hangi olayların kullanıcı etkileşimlerine karşılık geldiğini anlamanız, bunları ölçmenizi ve bu değerlendirmeleri iyileştirmelisiniz. Ayrıca, olaylar zaman içinde yalnızca tek bir örneği günlüğe kaydeder. Her işlem için aynı zamanda başlangıç ve durdurma olaylarını eşleştirmek genellikle yararlıdır. Uygulama başlatma işlemi incelenirken, başlangıç olayı genellikle işletim sisteminin yaydığı "Işlem/başlatma" olayıdır.  
   
@@ -47,7 +45,7 @@ ms.locfileid: "70927077"
   
 - Uygulamanız yeni hikayeleri eşitlemeyi tamamladığında.  
   
- Uygulamanın kullanımı basittir: Yalnızca türetilmiş sınıfta uygun yöntemi çağırın. Önceki `AppEventSource` örnekte kullanarak bir uygulamayı aşağıdaki şekilde kullanabilirsiniz:  
+ Bir uygulamanın kullanımı basittir: yalnızca türetilmiş sınıfta uygun yöntemi çağırın. Önceki örnekte `AppEventSource` kullanarak bir uygulamayı aşağıdaki şekilde kullanabilirsiniz:  
   
  [!code-csharp[ProjectN_ETW#2](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_etw/cs/etw2.cs#2)]  
   
@@ -91,7 +89,7 @@ perfview -KernelEvents:Process -OnlyProviders:*MyCompany-MyApp collect outputFil
   
 - **Işlem filtresi** kutusunda uygulamanızın adını (". exe" olmadan) belirtin.  
   
-- **Olay türleri filtre** kutusunda, öğesini belirtin `Process/Start | MyCompany-MyApp`. Bu, MyCompany-MyApp ve Windows Kernel/Process/start olaylarından olaylar için bir filtre ayarlar.  
+- **Olay türleri filtre** kutusunda, `Process/Start | MyCompany-MyApp`belirtin. Bu, MyCompany-MyApp ve Windows Kernel/Process/start olaylarından olaylar için bir filtre ayarlar.  
   
  Sol bölmede listelenen tüm olayları seçin (CTRL-A) ve **ENTER** tuşunu seçin. Şimdi, her bir olaydan gelen zaman damgalarını görebilmeniz gerekir. Bu zaman damgaları izlemenin başlangıcına göre yapılır, bu nedenle başlangıçtan itibaren geçen süreyi belirlemek için her bir olayın süresini işlemin başlangıç zamanından çıkarabilirsiniz. İki zaman damgasını seçmek için CTRL + tıklama kullanırsanız, sayfanın altındaki durum çubuğunda görüntülenmeleri arasındaki farkı görürsünüz. Bu, ekranda iki olay arasında geçen süreyi görmeyi kolaylaştırır (işlem başlangıcı dahil). Görünümün kısayol menüsünü açabilir ve verileri kaydetmek veya işlemek üzere CSV dosyalarına dışarı aktarma veya Microsoft Excel 'i açma gibi faydalı seçeneklerden seçim yapabilirsiniz.  
   

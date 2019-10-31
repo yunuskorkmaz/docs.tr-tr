@@ -16,19 +16,17 @@ helpviewer_keywords:
 ms.assetid: dc1e2235-e721-4cb2-a0b8-6b0c030d7bab
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ab4560774edce49341c86dd9446e38701db7fa62
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4eb878b61b72378bc6870af7f2cd09f0b6943b13
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67769825"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136497"
 ---
 # <a name="destroyiceefilegen-function"></a>DestroyICeeFileGen İşlevi
-Yok eder bir [Iceefilegen](../../../../docs/framework/unmanaged-api/hosting/iceefilegen-class.md) nesne.  
+Bir [ICeeFileGen](../../../../docs/framework/unmanaged-api/hosting/iceefilegen-class.md) nesnesini yok eder.  
   
- Bu işlev .NET Framework 4'te kullanım dışıdır.  
+ Bu işlev .NET Framework 4 ' te kullanım dışıdır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,22 +38,22 @@ HRESULT DestroyICeeFileGen (
   
 ## <a name="parameters"></a>Parametreler  
  `ceeFileGen`  
- [in] `ICeeFileGen` Yok etmek için nesne.  
+ 'ndaki Yok edilecek `ICeeFileGen` nesnesi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Bu yöntem standart COM hata kodlarını döndürür.  
+ Bu yöntem, standart COM hata kodlarını döndürür.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `DestroyICeeFileGen` yok eder `ICeeFileGen` tarafından oluşturulan nesne [Createıceefilegen](../../../../docs/framework/unmanaged-api/hosting/createiceefilegen-function.md) işlevi.  
+ `DestroyICeeFileGen` [CreateICeeFileGen](../../../../docs/framework/unmanaged-api/hosting/createiceefilegen-function.md) işlevi tarafından oluşturulan `ICeeFileGen` nesnesini yok eder.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** ICeeFileGen.h  
+ **Üst bilgi:** ICeeFileGen. h  
   
- **Kitaplığı:** MSCorPE.dll  
+ **Kitaplık:** MSCorPE. dll  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

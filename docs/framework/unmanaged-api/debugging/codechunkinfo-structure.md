@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0f482454-8517-48de-ba7a-d7aedab13bb5
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 36afee8af3de046683c55215a677a529b0837c77
-ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
+ms.openlocfilehash: d33c8b31473e389e07fb24076dc32272e9dde387
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274249"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132393"
 ---
 # <a name="codechunkinfo-structure"></a>CodeChunkInfo Yapısı
 
@@ -40,18 +38,18 @@ typedef struct _CodeChunkInfo {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`startAddr`|Öbekin başlangıç adresini belirten bir `CORDB_ADDRESS` değer.|  
+|`startAddr`|Öbekin başlangıç adresini belirten bir `CORDB_ADDRESS` değeri.|  
 |`length`|Öbekin bayt cinsinden boyutu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
  Tek kod öbeği, bir işlev gibi bir kod nesnesinin parçası olan yerel kod bölgesidir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üst bilgi** CorDebug. IDL  
+ **Üst bilgi:** CorDebug. IDL  
   
- **Kitaplığı** Corguid. lib  
+ **Kitaplık:** Corguid. lib  
   
  **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

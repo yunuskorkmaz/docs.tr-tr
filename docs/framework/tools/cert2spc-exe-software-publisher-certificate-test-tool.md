@@ -8,14 +8,12 @@ helpviewer_keywords:
 - Cert2spc.exe
 - certificates, Software Publisher's Certificate
 ms.assetid: be434d7d-9c0d-46e7-8392-58a9b542d11d
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0a18c10df32b9e958147bd132a27a4dba47389cc
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 809b7d0383f172a5fbcb2ac4ac3ffb96ff0b8e20
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71044801"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129880"
 ---
 # <a name="cert2spcexe-software-publisher-certificate-test-tool"></a>Cert2spc.exe (Yazılım Yayımcısı Sertifika Test Aracı)
 Yazılım Yayımcı Sertifikası Test aracı, bir veya daha fazla X.509 sertifikasından bir Yazılım Yayımcısı Sertifikası (SPC) oluşturur. Cert2spc.exe, yalnızca test amaçlıdır. VeriSign ya da Thawte gibi bir Sertifika Yetkilisi'nden geçerli bir SPC edinebilirsiniz. X. 509.952 sertifikaları oluşturma hakkında daha fazla bilgi için bkz. [MakeCert. exe (sertifika oluşturma aracı)](/windows/desktop/SecCrypto/makecert).  
@@ -43,13 +41,13 @@ cert2spc cert1.cer | crl1.crl [... certN.cer | crlN.crl] outputSPCfile.spc
 |**/?**|Araç için komut sözdizimini ve seçenekleri görüntüler.|  
   
 ## <a name="examples"></a>Örnekler  
- Aşağıdaki komut, ' dan `myCertificate.cer` bir SPC oluşturur ve bunu içine `mySPCFile.spc`koyar.  
+ Aşağıdaki komut `myCertificate.cer` bir SPC oluşturur ve `mySPCFile.spc`içine koyar.  
   
 ```console
 cert2spc myCertificate.cer mySPCFile.spc  
 ```  
   
- Aşağıdaki komut, ve `oneCertificate.cer` `twoCertificate.cer`' dan bir SPC oluşturur ve içine `mySPCFile.spc`koyar.  
+ Aşağıdaki komut `oneCertificate.cer` ve `twoCertificate.cer`bir SPC oluşturur ve `mySPCFile.spc`koyar.  
   
 ```console
 cert2spc oneCertificate.cer twoCertificate.cer mySPCFile.spc  

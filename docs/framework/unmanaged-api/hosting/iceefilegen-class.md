@@ -14,20 +14,18 @@ helpviewer_keywords:
 ms.assetid: 90368606-506e-40df-be1f-8d595159203f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 44241d02051c9bd54f93a19fa6044e4973fdef9e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 6914437b9b238c1d82cf4cc8a480a15dd8dda7ad
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69950268"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73126801"
 ---
 # <a name="iceefilegen-class"></a>ICeeFileGen Sınıfı
 Yerel bir Taşınabilir çalıştırılabilir (PE) dosyası oluşturmak için işlevsellik sağlar. Arabirim, genellikle derleyiciler tarafından derlenen çıkış yürütülebiliri oluşturmak için kullanılır.  
   
 > [!NOTE]
-> `ICeeFileGen`.NET Framework altyapısını destekler ve doğrudan kodunuzdan kullanılmaya yönelik değildir.  
+> `ICeeFileGen`, .NET Framework altyapısını destekler ve doğrudan kodunuzdan kullanılmaya yönelik değildir.  
   
  Bu arabirim kullanımdan kaldırılmıştır ve gelecekte yayınlanacak bir sürümde kaldırılacak.  
   
@@ -237,11 +235,11 @@ public:
 ```  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi** ICeeFileGen. h  
+ **Üst bilgi:** ICeeFileGen. h  
   
- **.NET Framework sürümü:** 1.0  
+ **.NET Framework sürümü:** 1,0  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

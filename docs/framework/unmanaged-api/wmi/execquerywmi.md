@@ -14,14 +14,12 @@ helpviewer_keywords:
 - ExecQueryWmi function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b8547d306819e85b838f1160d9912dd43e42f2f3
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 3c6ea58eca5ac635893a24b57ade261e04a69721
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798680"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130428"
 ---
 # <a name="execquerywmi-function"></a>ExecQueryWmi işlevi
 
@@ -64,11 +62,11 @@ HRESULT ExecQueryWmi (
 | `WBEM_FLAG_RETURN_IMMEDIATELY` | 0x10 | Bayrak, yarı zaman uyumlu bir çağrıya neden olur. |
 | `WBEM_FLAG_FORWARD_ONLY` | 0x20 | İşlev, salt ileri bir Numaralandırıcı döndürür. Genellikle, yalnızca ileri Numaralandırıcılar daha hızlıdır ve geleneksel numaralandırıcılardan daha az bellek kullanır, ancak [kopyalama](clone.md)çağrılarına izin vermez. |
 | `WBEM_FLAG_BIDIRECTIONAL` | 0 | WMI, serbest bırakılana kadar Numaralandırmadaki nesnelere işaretçiler tutar. |
-| `WBEM_FLAG_ENSURE_LOCATABLE` | 0x100 | Döndürülen tüm nesneler, **__Path**, **__Relpath**ve **__server**gibi sistem özelliklerinin olmadığından `null`, bunlarda yeterli bilgi olmasını sağlar. |
+| `WBEM_FLAG_ENSURE_LOCATABLE` | 0x100 | Döndürülen tüm nesnelerin, **__Path**, **__Relpath**ve **__server**gibi sistem özelliklerinin `null`olmamasını sağlar. |
 | `WBEM_FLAG_PROTOTYPE` | 2 | Bu bayrak prototipleme için kullanılır. Sorguyu yürütmez ve bunun yerine tipik bir sonuç nesnesi gibi görünen bir nesne döndürür. |
 | `WBEM_FLAG_DIRECT_READ` | 0x200 | , Kendi üst sınıfı veya alt sınıflarından bağımsız kalmadan belirtilen sınıf için sağlayıcıya doğrudan erişim sağlar. |
 
-Önerilen bayraklar `WBEM_FLAG_RETURN_IMMEDIATELY` ve `WBEM_FLAG_FORWARD_ONLY` en iyi performans için.
+Önerilen bayraklar `WBEM_FLAG_RETURN_IMMEDIATELY` ve en iyi performans için `WBEM_FLAG_FORWARD_ONLY`.
 
 `pCtx`\
 'ndaki Genellikle, bu değer `null`. Aksi takdirde, istenen sınıfları sağlayan sağlayıcı tarafından kullanılabilen bir [IWbemContext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext) örneğine yönelik bir işaretçidir.
@@ -116,17 +114,17 @@ Bu işlev tarafından döndürülen aşağıdaki değerler, *Wbemcli. h* üstbil
 
 Bu işlev, [IWbemServices:: ExecQuery](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemservices-execquery) yöntemine bir çağrı kaydırır.
 
-Bu işlev, `strQuery` parametresinde belirtilen sorguyu işler ve çağıranın sorgu sonuçlarına erişebileceği bir Numaralandırıcı oluşturur. Numaralandırıcı bir [ıenumwbemclassobject](/windows/desktop/api/wbemcli/nn-wbemcli-ienumwbemclassobject) arabirimine yönelik bir işaretçidir; sorgu sonuçları, [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) arabirimi aracılığıyla kullanılabilir hale getirilen sınıf nesnelerinin örnekleridir.
+Bu işlev `strQuery` parametresinde belirtilen sorguyu işler ve çağıranın sorgu sonuçlarına erişebileceği bir Numaralandırıcı oluşturur. Numaralandırıcı bir [ıenumwbemclassobject](/windows/desktop/api/wbemcli/nn-wbemcli-ienumwbemclassobject) arabirimine yönelik bir işaretçidir; sorgu sonuçları, [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) arabirimi aracılığıyla kullanılabilir hale getirilen sınıf nesnelerinin örnekleridir.
 
-WQL sorgularında kullanılabilecek `AND` ve `OR` anahtar sözcük sayısı için sınırlar vardır. Karmaşık bir sorguda kullanılan çok sayıda wql anahtar sözcüğü, `WBEM_E_QUOTA_VIOLATION` WMI 'nin (veya 0x8004106c) hata kodunu `HRESULT` değer olarak döndürmesine neden olabilir. WQL anahtar kelimesinin sınırı, sorgunun ne kadar karmaşık olduğuna bağlıdır.
+WQL sorgularında kullanılabilecek `AND` sayısı ve `OR` anahtar kelimeleriyle ilgili sınırlar vardır. Karmaşık bir sorguda kullanılan çok sayıda WQL anahtar sözcüğü, WMI 'nin `WBEM_E_QUOTA_VIOLATION` (veya 0x8004106c) hata kodunu `HRESULT` değeri olarak döndürmesini sağlayabilir. WQL anahtar kelimesinin sınırı, sorgunun ne kadar karmaşık olduğuna bağlıdır.
 
 İşlev çağrısı başarısız olursa, [GetErrorInfo](geterrorinfo.md) işlevini çağırarak ek hata bilgileri alabilirsiniz.
 
 ## <a name="requirements"></a>Gereksinimler
 
-**Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).
+**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).
 
-**Üst bilgi** WMINet_Utils. IDL
+**Üst bilgi:** WMINet_Utils. IDL
 
 **.NET Framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 

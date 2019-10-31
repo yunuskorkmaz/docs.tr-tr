@@ -13,42 +13,40 @@ helpviewer_keywords:
 - regular expressions [.NET Framework], examples
 - pattern-matching with regular expressions, examples
 ms.assetid: ab7f62b3-6d2c-4efb-8ac6-28600df5fd5c
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a08e97b02e2f60422132e97e2f3f7d4d2d5b8ec4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f2704e3fb5ceb68609a475d52e11030177ad760b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61860977"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138729"
 ---
 # <a name="how-to-extract-a-protocol-and-port-number-from-a-url"></a>Nasıl yapılır: Bir URL'den Protokol ve Bağlantı Noktası Numarası Çıkarma
-Aşağıdaki örnek, bir URL'den protokol ve bağlantı noktası numarası ayıklar.  
+Aşağıdaki örnek bir URL 'den protokol ve bağlantı noktası numarası ayıklar.  
   
 ## <a name="example"></a>Örnek  
- Örnekte <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> bağlantı noktası numarası ile üste arkasından Protokolü döndürmek için yöntemi.  
+ Örnek, ardından bağlantı noktası numarasını izleyen bir iki nokta üst üste gelen kuralı döndürmek için <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> yöntemini kullanır.  
   
  [!code-csharp[RegularExpressions.Examples.Protocol#1](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Examples.Protocol/cs/Example.cs#1)]
  [!code-vb[RegularExpressions.Examples.Protocol#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Examples.Protocol/vb/Example.vb#1)]  
   
- Normal ifade deseni `^(?<proto>\w+)://[^/]+?(?<port>:\d+)?/` aşağıdaki tabloda gösterildiği gibi yorumlanabilir.  
+ `^(?<proto>\w+)://[^/]+?(?<port>:\d+)?/` normal ifade deseninin aşağıdaki tabloda gösterildiği gibi yorumlanması gösterilebilir.  
   
 |Desen|Açıklama|  
 |-------------|-----------------|  
-|`^`|Dizesinin başında eşleşmeye başla.|  
-|`(?<proto>\w+)`|Bir veya daha fazla sözcük karakteri eşleştir. Bu gruba adını `proto`.|  
-|`://`|Üste iki eğik çizgi işaretleriyle eşleş.|  
-|`[^/]+?`|Bir veya daha çok tekrarı (ama olabildiğince az sayıda) eğik çizgi işareti dışındaki herhangi bir karakterle eşleş.|  
-|`(?<port>:\d+)?`|Bir veya daha fazla basamak karakterleri üste sıfır veya bir oluşumunu eşleştirin. Bu gruba adını `port`.|  
-|`/`|Bir eğik çizgi işareti eşleştirin.|  
+|`^`|Dizenin başlangıcında eşleşmeyi başlatın.|  
+|`(?<proto>\w+)`|Bir veya daha fazla sözcük karakteri eşleştir. Bu grubun `proto`adlandırın.|  
+|`://`|İki nokta üst üste ve ardından iki eğik çizgi ile eşleştirin.|  
+|`[^/]+?`|Eğik çizgi işareti dışında herhangi bir karakterin bir veya daha fazla tekrarı (mümkün olan en az sayıda) eşleştirin.|  
+|`(?<port>:\d+)?`|İki nokta üst üste ve ardından bir veya daha fazla rakam karakteri ile eşleşen sıfır veya bir oluşumu eşleştirin. Bu grubun `port`adlandırın.|  
+|`/`|Eğik çizgi işaretiyle eşleştirin.|  
   
- <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> Yöntemi genişletir `${proto}${port}` değeri normal ifade deseninde yakalanan iki adlandırılmış gruplar, sıralar değiştirme dizisi. Açıkça tarafından döndürülen koleksiyon nesnesinden alınan dizeleri birleştirirken için kullanışlı bir alternatiftir <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> özelliği.  
+ <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> yöntemi, normal ifade modelinde yakalanan iki adlandırılmış grubun değerini birleştiren `${proto}${port}` değiştirme sırasını genişletir. <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> özelliği tarafından döndürülen koleksiyon nesnesinden alınan dizeleri açıkça birleştirerek kullanışlı bir alternatiftir.  
   
- Örnekte <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> iki değişimler yöntemiyle `${proto}` ve `${port}`, çıktı dizesinde yakalanan gruplar eklemek için. Eşleşmeden 's yakalanan gruplar alabilirsiniz <xref:System.Text.RegularExpressions.GroupCollection> bunun yerine, aşağıdaki kodun gösterdiği nesne.  
+ Örnek, <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> yöntemini, `${proto}` ve `${port}`olmak üzere iki değişim ile kullanır. Bu, yakalanan grupları çıkış dizesine dahil eder. Aşağıdaki kodun gösterdiği gibi, eşleşme <xref:System.Text.RegularExpressions.GroupCollection> nesnesinden yakalanan grupları alabilirsiniz.  
   
  [!code-csharp[RegularExpressions.Examples.Protocol#2](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Examples.Protocol/cs/example2.cs#2)]
  [!code-vb[RegularExpressions.Examples.Protocol#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Examples.Protocol/vb/example2.vb#2)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [.NET normal ifadeler](../../../docs/standard/base-types/regular-expressions.md)
+- [.NET normal Ifadeleri](../../../docs/standard/base-types/regular-expressions.md)

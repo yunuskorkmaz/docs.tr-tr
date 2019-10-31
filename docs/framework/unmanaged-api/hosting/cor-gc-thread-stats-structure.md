@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 01f9a59b-7679-4d42-9ced-4a8981625c3d
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3f56ceca5269ebffb29908c63e698ce794027d8a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 37da471aaa8e9f802a8430d7b3289b375ff1b40a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67768055"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136981"
 ---
-# <a name="corgcthreadstats-structure"></a>COR_GC_THREAD_STATS Yapısı
-Çöp toplama için ilgili iş parçacığı başına istatistikleri içerir.  
+# <a name="cor_gc_thread_stats-structure"></a>COR_GC_THREAD_STATS Yapısı
+Çöp toplamadan ilgili iş parçacığı başına istatistikleri içerir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,20 +37,20 @@ typedef struct _COR_GC_THREAD_STATS {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`PerThreadAllocation`|Geçerli iş parçacığı üzerinde ayrılmış bellek bayt sayısı `COR_GC_THREAD_STATS` örneği. Bu sayı her zaman sıfır nesil atık toplama işlemi gerçekleştiğinde sıfır olarak temizlenir.|  
-|`Flags`|Bayt sayısı, en son çöp toplama daha yüksek bir nesle yükseltilir.|  
+|`PerThreadAllocation`|Geçerli `COR_GC_THREAD_STATS` örneğiyle ilişkili iş parçacığı üzerinde ayrılan bellek bayt sayısı. Her nesil sıfır atık toplama gerçekleştiğinde bu sayı sıfır olarak temizlenir.|  
+|`Flags`|En son atık toplamada daha yüksek bir oluşturmaya yükseltilen bayt sayısı.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- [Iclrtask::getmemstats](../../../../docs/framework/unmanaged-api/hosting/iclrtask-getmemstats-method.md) çıkış parametresi türü alan `COR_GC_THREAD_STATS`.  
+ [ICLRTask:: GetMemStats](../../../../docs/framework/unmanaged-api/hosting/iclrtask-getmemstats-method.md) `COR_GC_THREAD_STATS`türünde bir çıkış parametresi alır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** GCHost.idl  
+ **Üst bilgi:** GCHost. IDL  
   
- **Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil  
+ **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

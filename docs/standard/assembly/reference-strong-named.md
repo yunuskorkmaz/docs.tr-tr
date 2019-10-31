@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Tanımlayıcı adlı bir derlemeye başvuru'
+title: 'Nasıl yapılır: tanımlayıcı adlı bir derlemeye başvurma'
 ms.date: 08/20/2019
 helpviewer_keywords:
 - strong-named assemblies, compile-time references
@@ -7,20 +7,18 @@ helpviewer_keywords:
 - assemblies [.NET Framework], strong-named
 - assembly binding, strong-named
 ms.assetid: 4c6a406a-b5eb-44fa-b4ed-4e95bb95a813
-author: rpetrusha
-ms.author: ronpet
 dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: 324cd42a2781202f19e7e1cb5055d571f0c58cf5
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 427550e1fbeb38cefbb4afe97d80e198ac2d6cb0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70973133"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127641"
 ---
-# <a name="how-to-reference-a-strong-named-assembly"></a>Nasıl yapılır: Tanımlayıcı adlı bir derlemeye başvuru
+# <a name="how-to-reference-a-strong-named-assembly"></a>Nasıl yapılır: tanımlayıcı adlı bir derlemeye başvurma
 Tanımlayıcı adlı bir derlemede tür veya kaynaklara başvurma işlemi genellikle saydamdır. Başvuruyu derleme zamanında (erken bağlama) veya çalışma zamanında yapabilirsiniz.  
   
 Derleyiciye derlenen derlemenin başka bir derlemeye açıkça başvuruda bulunduğunu belirttiğinizde derleme zamanı başvurusu oluşur. Derleme zamanı başvurusu kullandığınızda, derleyici hedeflenen tanımlayıcı adlı derlemenin ortak anahtarını otomatik olarak alır ve derlenen derlemenin derleme başvurusuna koyar.
@@ -30,9 +28,9 @@ Derleyiciye derlenen derlemenin başka bir derlemeye açıkça başvuruda bulund
   
 ## <a name="make-a-compile-time-reference-to-a-strong-named-assembly"></a>Tanımlayıcı adlı bir derlemeye derleme zamanı başvurusu yapma  
 
-Bir komut isteminde aşağıdaki komutu yazın:  
+Komut isteminde aşağıdaki komutu yazın:  
 
-\<*Derleyici komutu*>  **/Reference:** \<*derleme adı*>  
+\<*derleyici komutu*>  **/Reference:** \<*derleme adı*>  
 
 Bu komutta *derleyici komutu* , kullanmakta olduğunuz dilin derleyici komutu ve *derleme adı* , başvurulmakta olan tanımlayıcı adlı derlemenin adıdır. Ayrıca, bir kitaplık derlemesi oluşturmak için **/t: Library** seçeneği gibi diğer derleyici seçeneklerini de kullanabilirsiniz.  
 
@@ -46,7 +44,7 @@ csc /t:library myAssembly.cs /reference:myLibAssembly.dll
   
 Tanımlayıcı adlı bir derlemeye çalışma zamanı başvurusu yaptığınızda (örneğin, <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> veya <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType> yöntemini kullanarak), başvurulan tanımlayıcı adlı derlemenin görünen adını kullanmanız gerekir. Görünen adın sözdizimi aşağıdaki gibidir:  
 
-\<*bütünleştirilmiş kod adı*> **,** sürümnumarası> , kültür, ortak\<anahtar belirteci> \< \<>  
+\<*bütünleştirilmiş kod adı*> **,** \<*sürüm numarası*> **,** \<*kültür*> **,** \<*ortak anahtar belirteci*>  
 
 Örneğin:  
 
@@ -54,9 +52,9 @@ Tanımlayıcı adlı bir derlemeye çalışma zamanı başvurusu yaptığınızd
 myDll, Version=1.1.0.0, Culture=en, PublicKeyToken=03689116d3a4ae33   
 ```  
 
-Bu örnekte, `PublicKeyToken` ortak anahtar belirtecinin onaltılı biçimidir. Kültür değeri yoksa kullanın `Culture=neutral`.  
+Bu örnekte, `PublicKeyToken` ortak anahtar belirtecinin onaltılı biçimidir. Kültür değeri yoksa `Culture=neutral`kullanın.  
 
-Aşağıdaki kod örneği, bu bilgileri <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> yöntemiyle nasıl kullanacağınızı gösterir.  
+Aşağıdaki kod örneği, <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> yöntemiyle bu bilgilerin nasıl kullanılacağını gösterir.  
 
 ```cpp
 Assembly^ myDll =
@@ -75,11 +73,11 @@ Dim myDll As Assembly = _
 
 Aşağıdaki [tanımlayıcı ad (sn. exe)](../../framework/tools/sn-exe-strong-name-tool.md) komutunu kullanarak, belirli bir derleme için ortak anahtar ve ortak anahtar belirtecinin onaltılık biçimini yazdırabilirsiniz:  
 
-**sn-TP \<**  *derlemesi* **>**  
+**sn-Tp \<** *derleme* **>**  
 
 Ortak anahtar dosyanız varsa, bunun yerine aşağıdaki komutu kullanabilirsiniz (komut satırı seçeneğinde büyük/küçük harf farkını aklınızda bulabilirsiniz):  
 
-**sn-TP \<**  *ortak anahtar dosyası* **>**  
+**sn-tp \<** *ortak anahtar dosyası* **>**  
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

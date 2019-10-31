@@ -14,47 +14,45 @@ helpviewer_keywords:
 ms.assetid: b3a44df3-578a-4451-b55e-70c8e7695f5e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1baeac5db41aa64380d694ebab5419229d8adb4c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c4f27a73022b0495b2772c0485c14a1b007dc883
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61763548"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132639"
 ---
 # <a name="iclrtask-interface"></a>ICLRTask Arabirimi
-Ortak dil çalışma zamanı (CLR) isteğinde bulunmak için veya CLR ilişkili görevle ilgili bildirim sağlamak için konak sağlayan yöntemler sağlar.  
+Konağın ortak dil çalışma zamanı (CLR) isteği yapmasına veya ilişkili görev hakkında CLR 'ye bildirim sağlamasına imkan tanıyan yöntemler sağlar.  
   
 ## <a name="methods"></a>Yöntemler  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[Abort Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrtask-abort-method.md)|CLR görev iptal isteği, geçerli `ICLRTask` örneğini temsil eder.|  
-|[ExitTask Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrtask-exittask-method.md)|Geçerli görev ilişkili CLR bildirir `ICLRTask` örneği sona eriyor ve görev düzgün biçimde kapatılamadı çalışır.|  
-|[GetMemStats Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrtask-getmemstats-method.md)|Geçerli tarafından temsil edilen bir görev tarafından kullanımı, bellek kaynaklarının istatistiksel bilgi alır `ICLRTask` örneği.|  
-|[LocksHeld Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrtask-locksheld-method.md)|Şu anda görevi tutulan kilitlerin sayısını alır.|  
-|[NeedsPriorityScheduling Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrtask-needspriorityscheduling-method.md)|Geçerli tarafından temsil edilen bir görev yeniden zamanlama için konak yüksek önceliğe atamasını olup olmadığını belirten bir değer alır `ICLRTask` örneği.|  
-|[Reset Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrtask-reset-method.md)|Konak bir görev tamamlandıktan ve geçerli yeniden kullanmak CLR sağlar CLR bildirir `ICLRTask` temsil eden başka bir görev örneği.|  
-|[RudeAbort Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrtask-rudeabort-method.md)|Geçerli tarafından temsil edilen bir görev iptal etmek CLR neden `ICLRTask` sonlandırıcılar yürütülecek bir garanti hemen örneği.|  
-|[SetTaskIdentifier Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrtask-settaskidentifier-method.md)|Geçerli tarafından temsil edilen bir görev için benzersiz bir tanımlayıcı ayarlar `ICLRTask` örneği, hata ayıklama kullanmak için.|  
-|[SwitchIn Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrtask-switchin-method.md)|Görev geçerli tarafından temsil edilen CLR bildirir `ICLRTask` duruma dönerken örneğidir.|  
-|[SwitchOut Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrtask-switchout-method.md)|Görev geçerli tarafından temsil edilen CLR bildirir `ICLRTask` örneği duruma dönerken artık değildir.|  
-|[YieldTask Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrtask-yieldtask-method.md)|CLR oluşturma işlemci zamanı diğer görevlere kullanılabilir ister. CLR görevi nerede işleme süresi sağlayabilir bir durumda yerleştirilir garanti etmez.|  
+|[Abort Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrtask-abort-method.md)|CLR 'nin geçerli `ICLRTask` örneğinin temsil ettiği görevi iptal ettiğini ister.|  
+|[ExitTask Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrtask-exittask-method.md)|CLR 'ye geçerli `ICLRTask` örneğiyle ilişkili görevin sonlandırıldığını bildirir ve görevi düzgün bir şekilde kapatmaya çalışır.|  
+|[GetMemStats Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrtask-getmemstats-method.md)|Geçerli `ICLRTask` örneği tarafından temsil edilen görev tarafından bellek kaynaklarının kullanımıyla ilgili istatistiksel bilgileri alır.|  
+|[LocksHeld Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrtask-locksheld-method.md)|Görevde şu anda tutulan kilitlerin sayısını alır.|  
+|[NeedsPriorityScheduling Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrtask-needspriorityscheduling-method.md)|Konağın geçerli `ICLRTask` örneği tarafından temsil edilen görevi yeniden zamanlayarak yüksek bir öncelik atayıp atamalamadığını gösteren bir değer alır.|  
+|[Reset Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrtask-reset-method.md)|Konağın bir görevi tamamladığını ve CLR 'nin başka bir görevi temsil etmesi için geçerli `ICLRTask` örneğini yeniden kullanmasına olanak tanıyan CLR 'yi bilgilendirir.|  
+|[RudeAbort Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrtask-rudeabort-method.md)|, Sonlandırıcılarının yürütülebileceğini garanti etmeden, CLR 'nin geçerli `ICLRTask` örneği tarafından temsil edilen görevi iptal etmesine neden olur.|  
+|[SetTaskIdentifier Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrtask-settaskidentifier-method.md)|Hata ayıklama sırasında kullanılmak üzere geçerli `ICLRTask` örneği tarafından temsil edilen görev için benzersiz bir tanımlayıcı ayarlar.|  
+|[SwitchIn Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrtask-switchin-method.md)|CLR 'ye geçerli `ICLRTask` örneği tarafından temsil edilen görevin bir çalıştırılabilir durumunda olduğunu bildirir.|  
+|[SwitchOut Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrtask-switchout-method.md)|CLR 'ye geçerli `ICLRTask` örneği tarafından temsil edilen görevin artık bir çalıştırılabilir durumunda olmadığını bildirir.|  
+|[YieldTask Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrtask-yieldtask-method.md)|CLR 'nin işlemci zamanının diğer görevler için kullanılabilir olmasını ister. CLR, görevin işlem süresini karşılayabileceği bir duruma koyulacağı garantisi vermez.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bir `ICLRTask` bir görev için CLR gösterimidir. Kod yürütme sırasında herhangi bir noktada, bir görev çalıştıran veya çalıştırmayı bekleniyor olarak açıklanabilir. Konak çağrıları `ICLRTask::SwitchIn` yöntemi CLR bildirmek için görev, geçerli `ICLRTask` örneği temsil eder, artık çalıştırılabilir bir durumda. Çağrısı yapıldıktan sonra `ICLRTask::SwitchIn`, ana bilgisayar bir işletim sistemi iş parçacığı görevi dışında burada iş parçacığı-benzeşimi yapılan çağrılar tarafından belirtilen çalışma zamanı gerektirir durumlarda zamanlayabilirsiniz [Ihosttaskmanager::beginthreadaffinity](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-beginthreadaffinity-method.md) ve [Ihosttaskmanager::endthreadaffinity](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-endthreadaffinity-method.md) yöntemleri. Daha sonra biraz zaman işletim sistemi görev akıştan kaldırmak ve bir çalışan olmayan durumda yerleştirme karar verebilirsiniz. Örneğin, her görev üzerinde eşitleme temellerine engeller veya bekleyen g/ç işlemleri için bu gerçekleşebilir. Konak çağrıları [SwitchOut](../../../../docs/framework/unmanaged-api/hosting/iclrtask-switchout-method.md) görev geçerli tarafından temsil edilen CLR bildirmek için `ICLRTask` örneği duruma dönerken artık değildir.  
+ `ICLRTask` CLR için bir görevin gösterimidir. Kod yürütme sırasında herhangi bir noktada, bir görev çalışıyor ya da çalıştırmayı bekliyor olarak açıklanabilir. Konak, geçerli `ICLRTask` örneğinin temsil ettiği görevin Şu anda bir çalıştırılabilir durumunda olduğunu CLR 'ye bildirmek için `ICLRTask::SwitchIn` yöntemini çağırır. `ICLRTask::SwitchIn`çağrısından sonra, konak, çalışma zamanının [IHostTaskManager:: BeginThreadAffinity](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-beginthreadaffinity-method.md) ve IHostTaskManager çağrıları tarafından belirtildiği gibi iş parçacığı benzeşimi gerektirdiği durumlar dışında herhangi bir işletim sistemi iş parçacığında görevi zamanlayabilir [:: Endthreadadınity](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-endthreadaffinity-method.md) yöntemleri. Daha sonra, işletim sistemi bu görevi iş parçacığından kaldırmaya ve çalışır durumda olmayan bir duruma yerleştirmeye karar verebilir. Örneğin, görev, eşitleme temelleri üzerinde engellediğinde veya g/ç işlemlerinin tamamlanmasını bekliyorsa bu durum oluşabilir. Konak, CLR 'ye geçerli `ICLRTask` örneği tarafından temsil edilen görevin artık bir çalıştırılabilir durumunda olmadığını bildirmek için [geçiş](../../../../docs/framework/unmanaged-api/hosting/iclrtask-switchout-method.md) yöntemini çağırır.  
   
- Bir görev genellikle kod yürütme sonunda sona erer. Bu sırada, konak çağırır `ICLRTask::ExitTask` ilişkili edilecek `ICLRTask`. Ancak, görevleri de bir çağrısını kullanarak dönüştürülmesi `ICLRTask::Reset`, veren `ICLRTask` yeniden kullanılacak örneği. Bu yaklaşım, sürekli oluşturma ve yok etme örnekleri yükü engeller.  
+ Bir görev genellikle kod yürütmenin sonunda sonlanır. Bu sırada, ana bilgisayar ilişkili `ICLRTask`yok etmek için `ICLRTask::ExitTask` çağırır. Ancak görevler, `ICLRTask` örneğinin yeniden kullanılmasına izin veren `ICLRTask::Reset`çağrısı kullanılarak da geri dönüştürülebilir. Bu yaklaşım, örneklerin tekrar tekrar oluşturulmasına ve yok edilmesinin yükünü önler.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** MSCorEE.h  
+ **Üst bilgi:** MSCorEE. h  
   
- **Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil  
+ **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

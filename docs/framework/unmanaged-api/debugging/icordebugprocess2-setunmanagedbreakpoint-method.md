@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 93829d15-d942-4e2d-b7a4-dfc9d7fb96be
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f16a5d1bad80a5aad8573508aab5fbf98c8c2a03
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ffab2762fd86e95c3272ca456039028e0897bc41
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67736829"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137173"
 ---
 # <a name="icordebugprocess2setunmanagedbreakpoint-method"></a>ICorDebugProcess2::SetUnmanagedBreakpoint Yöntemi
 Belirtilen yerel görüntü uzaklığında yönetilmeyen bir kesme noktası ayarlar.  
@@ -41,25 +39,25 @@ HRESULT SetUnmanagedBreakpoint (
   
 ## <a name="parameters"></a>Parametreler  
  `address`  
- [in] A `CORDB_ADDRESS` nesnesini yerel görüntü uzaklığını belirtir.  
+ 'ndaki Yerel görüntü sapmasını belirten `CORDB_ADDRESS` nesnesi.  
   
  `bufsize`  
- [in] Bayt cinsinden boyutu, `buffer` dizisi.  
+ 'ndaki `buffer` dizisinin bayt cinsinden boyutu.  
   
  `buffer`  
- [out] Kesme noktası tarafından değiştirilen bir işlem kodu içeren bir dizi.  
+ dışı Kesme noktası tarafından değiştirilmiş Opcode içeren bir dizi.  
   
  `bufLen`  
- [out] Döndürülen bayt sayısı için bir işaretçi `buffer` dizisi.  
+ dışı `buffer` dizisinde döndürülen bayt sayısına yönelik bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Yerel görüntü uzaklığı ortak dil çalışma zamanı içinde (CLR) ise, kesme noktasına göz ardı edilir. Kesme noktası hata ayıklayıcı tarafından olarak ayarlandığında bir bant dışı kesme noktası göndermeyi önlemek CLR böylece.  
+ Yerel görüntü boşluğu ortak dil çalışma zamanı (CLR) içindeyse, kesme noktası yok sayılır. Bu, bir kesme noktası hata ayıklayıcı tarafından ayarlandığında, CLR 'nin bant dışı bir kesme noktası gönderdikten engel olmasını sağlar.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

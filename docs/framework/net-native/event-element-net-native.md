@@ -1,15 +1,13 @@
 ---
-title: <Event>Öğesi (.NET Native)
+title: <Event> öğesi (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: e53b029c-9d6d-4c0a-9cdc-5cfca8a5ca47
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7fb0245c50677da0397ba9c4918f171dcb217ba6
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 6966caede63faafa718b760be879f6bc6cbd3ab9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049843"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128500"
 ---
 # <a name="event-element-net-native"></a>\<Event > öğesi (.NET Native)
 Bir olaya çalışma zamanı yansıtma ilkesi uygular.  
@@ -37,13 +35,13 @@ Bir olaya çalışma zamanı yansıtma ilkesi uygular.
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|*method_name*|Olay adı. Olayın türü, üst [ \<tür >](type-element-net-native.md) veya [ \<typeörneklemesi >](typeinstantiation-element-net-native.md) öğesi tarafından tanımlanır.|  
+|*method_name*|Olay adı. Olayın türü, üst [\<türü >](type-element-net-native.md) veya [\<typeörneklemesi >](typeinstantiation-element-net-native.md) öğesi tarafından tanımlanır.|  
   
 ## <a name="all-other-attributes"></a>Diğer tüm öznitelikler  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|*policy_setting*|Olay için bu ilke türüne uygulanacak ayar. Olası değerler şunlardır `Auto` `Excluded` `Required`, ,ve.`Included` Daha fazla bilgi için bkz. [çalışma zamanı yönergesi Ilke ayarları](runtime-directive-policy-settings.md).|  
+|*policy_setting*|Olay için bu ilke türüne uygulanacak ayar. Olası değerler şunlardır `Auto`, `Excluded`, `Included`ve `Required`. Daha fazla bilgi için bkz. [çalışma zamanı yönergesi Ilke ayarları](runtime-directive-policy-settings.md).|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -52,7 +50,7 @@ Bir olaya çalışma zamanı yansıtma ilkesi uygular.
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<Tür >](type-element-net-native.md)|Yansıma ilkesini bir türe ve tüm üyelerine uygular.|  
+|[\<türü >](type-element-net-native.md)|Yansıma ilkesini bir türe ve tüm üyelerine uygular.|  
 |[\<Typeörneklemesi >](typeinstantiation-element-net-native.md)|Oluşturulan genel türe ve tüm üyelerine yansıma ilkesi uygular.|  
   
 ## <a name="remarks"></a>Açıklamalar  

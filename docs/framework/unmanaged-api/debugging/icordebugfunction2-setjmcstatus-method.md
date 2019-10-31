@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 22c27b01-2869-4214-b840-5921f7c874fc
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 67959b2ebbfb62b47a1b2a770e278d043fc66d21
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 758364b2d63343e464b727d5a1c1817533a6acea
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67754924"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137791"
 ---
 # <a name="icordebugfunction2setjmcstatus-method"></a>ICorDebugFunction2::SetJMCStatus Yöntemi
-Yalnızca benim kodum bu Icordebugfunction2 tarafından temsil edilen işlevi işaretler Adımlama.  
+Yalnızca kendi kodum Adımlama için bu ICorDebugFunction2 tarafından temsil edilen işlevi işaretler.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,23 +35,23 @@ HRESULT SetJMCStatus (
   
 ## <a name="parameters"></a>Parametreler  
  `bIsJustMyCode`  
- [in] Kümesine `true` işlevi kullanıcı kodu; olarak işaretlemek için Aksi takdirde, kümesine `false`.  
+ 'ndaki İşlevi Kullanıcı kodu olarak işaretlemek için `true` olarak ayarlayın; Aksi takdirde, `false`olarak ayarlayın.  
   
 ## <a name="return-values"></a>Dönüş Değerleri  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
 |`S_OK`|İşlev başarıyla işaretlendi.|  
-|`CORDBG_E_FUNCTION_NOT_DEBUGGABLE`|İşlevi, hata ayıklaması yapamazsınız çünkü kullanıcı kodu işaretlenemez.|  
+|`CORDBG_E_FUNCTION_NOT_DEBUGGABLE`|İşlev, hata ayıklanamadığından Kullanıcı kodu olarak işaretlenemedi.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Yalnızca kendi kodum Adımlayıcı kullanıcı olmayan kod atlar. Kullanıcı kodu hata ayıklaması yapılabilir kod bir alt kümesi olmalıdır.  
+ Bir Yalnızca kendi kodum Stepper, Kullanıcı olmayan kodu atlar. Kullanıcı kodu hata ayıklanabilir kodunun bir alt kümesi olmalıdır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: f671f519-1cb3-4ae5-b9f1-abc5e783459f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 93ada40bd88e53cd06f5e8d8136b2d527d7741e6
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8baf3567e4ae188f88ad3a2df157cffab3f597ac
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69969301"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125793"
 ---
 # <a name="icordebugchain-interface"></a>ICorDebugChain Arabirimi
 
@@ -45,17 +43,17 @@ Fiziksel veya mantıksal bir çağrı yığınının bir kesimini temsil eder.
 |[IsManaged Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-ismanaged-method.md)|Bu zincirin yönetilen kodu çalıştırıp çalıştırmadığını gösteren bir değer alır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bir zincirdeki yığın çerçeveleri bitişik yığın alanı kaplar ve aynı iş parçacığını ve bağlamı paylaşır. Bir zincir, yönetilen ya da yönetilmeyen kod zincirlerini temsil edebilir. Boş `ICorDebugChain` bir örnek, yönetilmeyen bir kod zincirini temsil eder.  
+ Bir zincirdeki yığın çerçeveleri bitişik yığın alanı kaplar ve aynı iş parçacığını ve bağlamı paylaşır. Bir zincir, yönetilen ya da yönetilmeyen kod zincirlerini temsil edebilir. Boş bir `ICorDebugChain` örneği, yönetilmeyen bir kod zincirini temsil eder.  
   
 > [!NOTE]
 > Bu arabirim, çapraz makine ya da çapraz işlem için uzaktan çağrılmakta değil.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi** CorDebug. IDL, CorDebug. h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı** Corguid. lib  
+ **Kitaplık:** Corguid. lib  
   
  **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

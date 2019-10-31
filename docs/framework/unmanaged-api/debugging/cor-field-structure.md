@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: c0822423-a9df-4961-950d-50dcc152f863
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f857f773f02da25fe6650000be777b8290f5af91
-ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
+ms.openlocfilehash: 78e34d9d33d34047e3ebd2effb4894bc7b709585
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274054"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132353"
 ---
 # <a name="cor_field-structure"></a>COR_FIELD Yapısı
 Bir nesne içindeki bir alan hakkında bilgi sağlar.  
@@ -41,7 +39,7 @@ typedef struct COR_FIELD{
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`token`|Alan `mdFieldDef` bilgilerini almak için kullanılabilen bir belirteç.|  
+|`token`|Alan bilgilerini almak için kullanılabilen bir `mdFieldDef` belirteci.|  
 |`offset`|Nesnedeki alan verilerine göre bayt cinsinden fark.|  
 |`id`|Bu alanın türünü tanımlayan bir [COR_TYPEID](cor-typeid-structure.md) değeri.|  
 |`fieldType`|Alanın türünü gösteren bir CorElementType numaralandırma değeri.|  
@@ -49,11 +47,11 @@ typedef struct COR_FIELD{
 ## <a name="remarks"></a>Açıklamalar  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üst bilgi** CorDebug. IDL, CorDebug. h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı** Corguid. lib  
+ **Kitaplık:** Corguid. lib  
   
  **.NET Framework sürümleri:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   

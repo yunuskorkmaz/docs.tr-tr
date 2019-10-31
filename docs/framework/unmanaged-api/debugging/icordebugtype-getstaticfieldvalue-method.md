@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 62eb5d55-53ee-4fb3-8d47-7b6c96808f9e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1054c7c977a487bb5a4bbf464322a65bcc039608
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 95183701987d3ddec3835a17c5d256c25c2c4c64
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67755740"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132074"
 ---
 # <a name="icordebugtypegetstaticfieldvalue-method"></a>ICorDebugType::GetStaticFieldValue Metodu
-Bir arabirim işaretçisi Icordebugvalue nesneye belirtilen alan tarafından başvurulan statik alanının değeri içeren belirtilen bir yığın çerçevesine belirtecini alır.  
+Belirtilen yığın çerçevesindeki belirtilen alan belirtecinin başvurduğu statik alanın değerini içeren bir ICorDebugValue nesnesine bir arabirim işaretçisi alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,29 +37,29 @@ HRESULT GetStaticFieldValue (
   
 ## <a name="parameters"></a>Parametreler  
  `fieldDef`  
- [in] Bir `mdFieldDef` statik alanı belirten belirteç.  
+ 'ndaki Statik alanı belirten `mdFieldDef` belirteç.  
   
  `pFrame`  
- [in] Yığın çerçevesini temsil eden bir Icordebugframe işaretçisi.  
+ 'ndaki Yığın çerçevesini temsil eden bir ICorDebugFrame işaretçisi.  
   
  `ppValue`  
- [out] Adresine bir işaretçi bir `ICorDebugValue` statik alanı değerini içeren.  
+ dışı Statik alanın değerini içeren `ICorDebugValue` adresine yönelik bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `GetStaticFieldValue` Yöntemi kullanılabilir yalnızca tür ELEMENT_TYPE_CLASS veya ELEMENT_TYPE_VALUETYPE, ise tarafından belirtildiği şekilde [Icordebugtype::GetType](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-gettype-method.md) yöntemi.  
+ `GetStaticFieldValue` yöntemi, [ICorDebugType:: GetType](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-gettype-method.md) yönteminde gösterildiği gibi yalnızca tür element_type_class veya element_type_valuetype olduğunda kullanılabilir.  
   
- Genel olmayan türler için işlemin gerçekleştirilmesinden tarafından `GetStaticFieldValue` çağırmakla aynıdır [Icordebugclass::getstaticfieldvalue](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-getstaticfieldvalue-method.md) tarafından döndürülen Icordebugclass nesne [Icordebugtype::getclass](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getclass-method.md).  
+ Genel olmayan türler için, `GetStaticFieldValue` tarafından gerçekleştirilen işlem ICorDebugClass [:: GetStaticFieldValue](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-getstaticfieldvalue-method.md) ' ı [ICorDebugType:: GetClass](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getclass-method.md)tarafından döndürülen ICorDebugClass nesnesinde çağırma ile aynıdır.  
   
- Genel türler için statik alan değerine göre belirli bir örneğini oluşturmada olacaktır. Ayrıca, statik alan büyük olasılıkla bir iş parçacığı, bir bağlamı veya uygulama etki alanı göreli olabilir, yığın çerçevesinin uygun değeri belirlemek hata ayıklayıcı yardımcı olur.  
+ Genel türler için, statik bir alan değeri belirli bir örnek oluşturma ile göreli olur. Ayrıca, statik alan muhtemelen bir iş parçacığına, bir içeriğe veya bir uygulama etki alanına göreli olabilir, yığın çerçevesi hata ayıklayıcının doğru değeri belirlemesine yardımcı olur.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `GetStaticFieldValue` yalnızca bir çağrı kullanılabilir `ICorDebugType::GetType` ELEMENT_TYPE_CLASS veya ELEMENT_TYPE_VALUETYPE değerini döndürür.  
+ `GetStaticFieldValue`, yalnızca `ICorDebugType::GetType` çağrısı ELEMENT_TYPE_CLASS veya ELEMENT_TYPE_VALUETYPE değerini döndürdüğünde kullanılabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

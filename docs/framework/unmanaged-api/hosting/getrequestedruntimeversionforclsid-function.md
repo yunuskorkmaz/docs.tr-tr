@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: 5bb12f9a-0612-434b-b4ed-2db636a20bec
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9dfce10c94e04dcd405e06ab6d0984e64984709e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ce0c6307defd93dcf63ac4e9051fc798041475f3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779561"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127050"
 ---
 # <a name="getrequestedruntimeversionforclsid-function"></a>GetRequestedRuntimeVersionForCLSID İşlevi
-Belirtilen sınıf için uygun ortak dil çalışma zamanı (CLR) sürümü bilgisini alır `CLSID`.  
+Belirtilen `CLSID`sınıf için uygun ortak dil çalışma zamanı (CLR) sürüm bilgilerini alır.  
   
- Bu işlev .NET Framework 4'te kullanım dışıdır.  
+ Bu işlev .NET Framework 4 ' te kullanım dışıdır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -42,40 +40,40 @@ HRESULT GetRequestedRuntimeVersionForCLSID (
   
 ## <a name="parameters"></a>Parametreler  
  `rclsid`  
- [in]  `CLSID` Bileşen.  
+ 'ndaki  Bileşenin `CLSID`.  
   
  `pVersion`  
- [out]  Başarıyla tamamlandıktan sonra sürüm numarası dizesi içeren bir arabelleği.  
+ dışı  Başarılı bir şekilde tamamlandıktan sonra sürüm numarası dizesini içeren bir arabellek.  
   
  `cchBuffer`  
- [in]  Geniş karakter cinsinden boyutu, `pVersion` arabellek.  
+ 'ndaki  `pVersion` arabelleğinin geniş karakterdeki boyutu.  
   
  `dwLength`  
- [out] Bayt cinsinden döndürülen arabellek uzunluğu.  
+ dışı Döndürülen arabelleğin bayt cinsinden uzunluğu.  
   
  `dwResolutionFlags`  
- [in]  Clsıd_resolutıon_flags değerlerinden biri. Aşağıdaki değerleri desteklenir:  
+ 'ndaki  CLSID_RESOLUTION_FLAGS değerlerinden biri. Aşağıdaki değerler desteklenir:  
   
-- CLSID_RESOLUTION_DEFAULT: (0x0) birlikte çalışma davranışı kullanılması gerektiğini belirtir.  
+- CLSID_RESOLUTION_DEFAULT: (0x0) varsayılan birlikte çalışma davranışının kullanılması gerektiğini belirtir.  
   
-- CLSID_RESOLUTION_REGISTERED: (0x1) dolgu ilke uygulanabilir ve kayıt defteri aranıp aranmayacağını belirtir.  
+- CLSID_RESOLUTION_REGISTERED: (0x1) kayıt defterinin aranması gerektiğini ve dolgu ilkesinin uygulanacağını belirtir.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
 |S_OK|İşlev başarıyla döndürüldü.|  
-|E_INVALIDARG|Parametrelerden biri, bir türü geçersiz veya biçim vardır.|  
-|ERROR_INSUFFICIENT_BUFFER|`pVersion` Arabelleği tüm sürüm dizesini tutabilecek kadar büyük değil.|  
-|REGDB_E_CLASSNOTREG|Belirtilen ile kayıtlı bir sınıf yok `CLSID`.|  
-|E_POINTER|`dwLength` null ise veya `cchBuffer` sürüm dizesi tutabilecek kadar büyük olduğunu ancak `pVersion` null.|  
+|E_INVALIDARG|Parametrelerden birinde geçersiz bir tür veya biçim vardır.|  
+|ERROR_INSUFFICIENT_BUFFER|`pVersion` arabelleği tüm sürüm dizesini tutabilecek kadar büyük değil.|  
+|REGDB_E_CLASSNOTREG|Belirtilen `CLSID`kayıtlı bir sınıf yok.|  
+|E_POINTER|`dwLength` null veya `cchBuffer` sürüm dizesini tutacak kadar büyük, ancak `pVersion` null.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** MSCorEE.h  
+ **Üst bilgi:** MSCorEE. h  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -1,5 +1,5 @@
 ---
-title: Ortak dil çalışma zamanı (CLR) genel bakış - .NET Framework
+title: Ortak dil çalışma zamanı (CLR) genel bakış-.NET Framework
 ms.date: 04/02/2019
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -15,44 +15,42 @@ helpviewer_keywords:
 - source code execution
 - code, runtime functionality
 ms.assetid: 059a624e-f7db-4134-ba9f-08b676050482
-author: rpetrusha
-ms.author: ronpet
 ms.custom: updateeachrelease
-ms.openlocfilehash: a1e1fd2b7843299fdd8fbd62dbfba6c62a7be50f
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: c866e3d1a4de31361843f5c071510fd18247cb39
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645005"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132805"
 ---
 # <a name="common-language-runtime-clr-overview"></a>Ortak dil çalışma zamanı (CLR) genel bakış
 
-.NET Framework kodu çalıştırır ve geliştirme işlemini kolaylaştıran hizmetler sağlayan ortak dil çalışma zamanı adlı bir çalışma zamanı ortamı sağlar.
+.NET Framework, kodu çalıştıran ve geliştirme sürecini kolaylaştıran hizmetler sağlayan ortak dil çalışma zamanı adlı bir çalışma zamanı ortamı sağlar.
 
-Derleyiciler ve Araçlar ortak dil çalışma zamanının işlevselliğini gösterir ve bu yönetilen yürütme ortamından faydalanan kod yazmanızı sağlar. Yönetilen kod çalışma zamanını hedefleyen bir dil derleyici ile geliştirdiğiniz kodu çağrılır diller arası tümleştirme, diller arası özel durum işleme, Gelişmiş güvenlik, sürüm oluşturma ve dağıtım desteği, bileşen etkileşimi ve hata ayıklama ve profil oluşturma hizmetleri için basitleştirilmiş bir model gibi özelliklerden faydalanır.
+Derleyiciler ve araçlar ortak dil çalışma zamanının işlevselliğini sunar ve bu yönetilen yürütme ortamından faydalanan bir kod yazmanızı sağlar. Çalışma zamanını hedefleyen bir dil derleyicisi ile geliştirdiğiniz koda yönetilen kod denir; Diller arası tümleştirme, platformlar arası özel durum işleme, gelişmiş güvenlik, sürüm oluşturma ve dağıtım desteği, bileşen etkileşimi için basitleştirilmiş bir model ve hata ayıklama ve profil oluşturma hizmetleri gibi özelliklerden faydalanır.
 
 > [!NOTE]
-> Derleyiciler ve Araçlar tür sistemi, meta veri biçimi ve çalışma zamanı ortamı (sanal yürütme sistemi) tüm ortak standardına göre ECMA ortak dil tanımlı olduğundan, ortak dil çalışma zamanının tüketebileceği bir çıktı üretebilir. Altyapı belirtimi. Daha fazla bilgi için [ECMA C# ve ortak dil altyapısı belirtimleri](https://visualstudio.microsoft.com/license-terms/ecma-c-common-language-infrastructure-standards/).
+> Derleyiciler ve araçlar ortak dil çalışma zamanının tüketebileceği bir çıktı üretebilir, çünkü tür sistemi, meta veri biçimi ve çalışma zamanı ortamı (sanal yürütme sistemi), genel bir standart, ECMA ortak dili tarafından tanımlanır Altyapı belirtimi. Daha fazla bilgi için bkz [. C# ECMA ve ortak dil altyapısı belirtimleri](https://visualstudio.microsoft.com/license-terms/ecma-c-common-language-infrastructure-standards/).
 
-Çalışma zamanının yönetilen koda hizmet sağlamak üzere etkinleştirmek için dil derleyicileri, türleri, üyeleri ve kodunuzdaki başvuruları açıklayan meta verileri yaymalıdır. Meta veriler kodla birlikte depolanır; Her yüklenebilir ortak dil çalışma zamanı taşınabilir yürütülebilir (PE) dosya meta verileri içerir. Çalışma zamanı meta verileri bulun ve sınıfları yükleme örnekleri yerleştirme yöntem çağrılarını çözümlemek yerel kod üret güvenliği zorlamak ve çalışma zamanı bağlam sınırlarını ayarlamak için kullanır.
+Çalışma zamanının yönetilen koda hizmet sağlamasına olanak tanımak için dil derleyicileri, kodunuzdaki türleri, üyeleri ve başvuruları açıklayan meta verileri yaymalıdır. Meta veriler, kodla depolanır; Her yüklenebilir ortak dil çalışma zamanı Taşınabilir çalıştırılabilir (PE) dosyası meta veriler içerir. Çalışma zamanı, sınıfları bulmak ve yüklemek, örnekleri bellekte düzenlemek, yöntem çağırmaları çözümlemek, yerel kod oluşturmak, güvenliği zorlamak ve çalışma zamanı bağlam sınırlarını ayarlamak için meta verileri kullanır.
 
-Otomatik olarak çalışma zamanı nesne düzenini işler ve artık kullanıldığı sırada bırakmadan nesnelere başvurular yönetir. Yaşam süreleri bu şekilde yönetilen nesnelere, yönetilen veri adı verilir. Çöp toplama, bellek sızıntıları ve bunun yanı sıra bazı diğer genel programlama hatalarını ortadan kaldırır. Kodunuz yönetiliyorsa, .NET Framework uygulamanızda yönetilen verileri, yönetilmeyen verileri veya hem yönetilen hem de yönetilmeyen verileri kullanabilirsiniz. Dil derleyicileri gibi ilkel türler, kendi türleri sağlamak için her zaman biliyorsanız (veya bilmeniz gereken) mı yönetiliyor.
+Çalışma zamanı, nesne yerleşimini otomatik olarak işler ve nesneleri artık kullanılmadıklarında serbest bırakır ve nesneler için başvuruları yönetir. Ömürleri bu şekilde yönetilen nesneler yönetilen veriler olarak adlandırılır. Çöp toplama, diğer yaygın programlama hatalarının yanı sıra bellek sızıntılarını da ortadan kaldırır. Kodunuz yönetilmiyorsa yönetilen verileri, yönetilmeyen verileri veya .NET Framework uygulamanızda hem yönetilen hem de yönetilmeyen verileri kullanabilirsiniz. Dil derleyicileri, ilkel türler gibi kendi türlerini sağladığından, verilerinizin yönetilip yönetilmediğini her zaman bilmiyor olabilirsiniz (veya bilmeniz gerekmez).
 
-Ortak dil çalışma zamanı, tasarım bileşenleri ve uygulamaları, nesneleri diller arasında etkileşim kuran kolaylaştırır. Farklı dillerde yazılan nesneler birbiriyle iletişim kurabilir ve davranışları sıkı bir şekilde tümleştirilebilir. Örneğin, bir sınıf tanımlayın ve ardından orijinal sınıfınızdan bir sınıf türetmek veya orijinal sınıfta bir yöntem çağırmak için farklı bir dil kullanın. Bir sınıfın bir örneği farklı bir dilde yazılmış bir sınıfın bir yönteme de geçirebilirsiniz. Bu diller arası tümleştirme nedeni, dil derleyiciler ve çalışma zamanını hedefleyen Araçlar çalışma zamanı tarafından tanımlanan bir ortak tür sistemi kullanın ve bunların çalışma zamanının yeni türleri tanımlama yanı sıra oluşturma, kullanma, kalıcı, kurallarına mümkündür ve bağlama türleri için.
+Ortak dil çalışma zamanı, nesneleri diller arasında etkileşim kuran bileşenleri ve uygulamaları tasarlamayı kolaylaştırır. Farklı dillerde yazılan nesneler birbirleriyle iletişim kurabilir ve davranışları sıkı bir şekilde tümleştirilebilir. Örneğin, bir sınıfı tanımlayabilir, sonra özgün sınıfınızdan bir sınıf türetebilir veya orijinal sınıfta bir yöntemi çağırabilirsiniz. Ayrıca, bir sınıfın örneğini farklı bir dilde yazılmış bir sınıf yöntemine geçirebilirsiniz. Bu çapraz dil tümleştirmesi, çalışma zamanını hedefleyen dil derleyicileri ve Araçları çalışma zamanı tarafından tanımlanan ortak bir tür sistemi kullandığından ve yeni türleri tanımlama ve oluşturma, kullanma, kalıcı ve oluşturma için çalışma zamanının kurallarını izlediğinden mümkündür türlere bağlama.
 
-Meta verilerinin bir parçası olarak, tüm yönetilen bileşenler oluşturuldukları kaynakları ve bileşenleri hakkında bilgi getirir. Çalışma zamanı bu bilgileri kullanarak bileşen veya uygulamanızın ihtiyaç duyduğu her şeyin belirtilen sürümlerine kodunuzun karşılaşılmamış bir bağımlılık nedeniyle sonu olma olasılığını getiren olduğundan emin olmak için kullanır. Kayıt bilgileri ve durum verileri nerede bunlar oluşturulmasının ve korunmasının zor olabilir kayıt defterinde artık depolanmaz. Bunun yerine, tanımladığınız türler (ve bunların bağımlılıklarını) hakkında bilgi kodla görevlerini bileşenlerin çoğaltılması ve kaldırılması çok daha az karmaşık hale meta veri depolanır.
+Meta verilerinin bir parçası olarak, tüm yönetilen bileşenler, derlendikleri bileşenler ve kaynaklarla ilgili bilgiler taşır. Çalışma zamanı, bileşeninizin veya uygulamanızın gereken her şeyin belirtilen sürümlerine sahip olduğundan emin olmak için bu bilgileri kullanır. Bu, kodunuzun, bazı karşılanmayan bağımlılıktan dolayı daha az büyük olasılıkla kesintiye uğramasını sağlar. Kayıt bilgileri ve durum verileri artık, oluşturulması ve saklanması zor olabilecek kayıt defterinde depolanmaz. Bunun yerine, tanımladığınız türler (ve bağımlılıkları) hakkındaki bilgiler, kodla meta veri olarak depolanır, böylece bileşen çoğaltma ve kaldırma görevlerinin çok daha az karmaşıktır.
 
-Dil derleyicileri ve araçları, kullanışlı ve geliştiriciler için kullanımı kolay olacak şekilde tasarlanmıştır yollarla çalışma zamanının işlevselliğini kullanıma sunar. Başka bir deyişle çalışma zamanının bazı özellikleri, başka bir ortamda daha belirgin olması olabilir. Nasıl, çalışma zamanı deneyiminiz hangi dil derleyicilerini veya araçlarını kullandığınıza bağlıdır. Örneğin, Visual Basic geliştiricisiyseniz, ortak dil çalışma zamanı ile daha fazla nesne yönelimli özelliği daha önce Visual Basic dili olduğunu fark edebilirsiniz. Çalışma zamanı, aşağıdaki avantajları sağlar:
+Dil derleyicileri ve araçları, çalışma zamanının işlevselliğini geliştiricilere yararlı ve sezgisel olması amaçlanan yollarla kullanıma sunar. Bu, çalışma zamanının bazı özelliklerinin bir ortamda diğerinden daha belirgin olabileceğini gösterir. Çalışma zamanına nasıl karşılaşabileceğiniz, kullandığınız dil derleyicilerini veya araçlarına bağlıdır. Örneğin, bir Visual Basic geliştiricisiyseniz, ortak dil çalışma zamanı ile Visual Basic dilinin daha önce daha fazla nesne yönelimli özelliği olduğunu fark edebilirsiniz. Çalışma zamanı aşağıdaki avantajları sağlar:
 
 - Performans geliştirmeleri.
 
-- Bileşenleri kolayca kullanma yeteneği, diğer dillerde geliştirilen.
+- Diğer dillerde geliştirilmiş bileşenleri kolayca kullanma özelliği.
 
-- Bir sınıf kitaplığı tarafından sağlanan Genişletilebilir türler.
+- Sınıf kitaplığı tarafından sunulan Genişletilebilir türler.
 
-- Devralma, arabirimler ve nesne yönelimli programlama için aşırı yükleme gibi dil özellikleri.
+- Nesne odaklı programlama için devralma, arabirimler ve aşırı yükleme gibi dil özellikleri.
 
-- Çok iş parçacıklı ve ölçeklenebilir uygulamaların oluşturulmasını sağlayan açık serbest iş parçacığı oluşturma desteği.
+- Çok iş parçacıklı, ölçeklenebilir uygulamalar oluşturulmasına izin veren açık ücretsiz iş parçacığı desteği.
 
 - Yapılandırılmış özel durum işleme desteği.
 
@@ -60,13 +58,13 @@ Dil derleyicileri ve araçları, kullanışlı ve geliştiriciler için kullanı
 
 - Çöp toplama.
 
-- Artan tür güvenliği ve emniyeti için işlev işaretçileri yerine delegeler kullanın. Temsilciler hakkında daha fazla bilgi için bkz. [ortak tür sistemi](../../docs/standard/base-types/common-type-system.md).
+- Artırılmış tür güvenliği ve güvenlik için işlev işaretçileri yerine temsilcilerin kullanımı. Temsilciler hakkında daha fazla bilgi için bkz. [ortak tür sistemi](../../docs/standard/base-types/common-type-system.md).
 
 ## <a name="clr-versions"></a>CLR sürümleri
 
-.NET Framework sürüm numarasını mutlaka içerdiği CLR sürüm numarasını gelmiyor. Aşağıdaki tabloda, iki sürüm numarasının nasıl ilişkilendirmek gösterilmektedir:
+.NET Framework sürüm numarası, içerdiği CLR 'nin sürüm numarasına karşılık gelmez. Aşağıdaki tabloda iki sürüm numarası nasıl aralarındaki açıklanmaktadır:
 
-|.NET Framework sürümü|CLR sürümünü içerir.|
+|.NET Framework sürümü|CLR sürümünü içerir|
 |----------------------------|--------------------------|
 |1.0|1.0|
 |1.1|1.1|
@@ -74,19 +72,19 @@ Dil derleyicileri ve araçları, kullanışlı ve geliştiriciler için kullanı
 |3.0|2,0|
 |3.5|2,0|
 |4|4|
-|4.5 (4.5.1 ve 4.5.2'yi dahil)|4|
-|4.6 (4.6.1 ve 4.6.2 dahil)|4|
-|4.7 (4.7.1 ve 4.7.2 dahil)|4|
-|4.8|4|
+|4,5 (4.5.1 ve 4.5.2 dahil)|4|
+|4,6 (4.6.1 ve 4.6.2 dahil)|4|
+|4,7 (4.7.1 ve 4.7.2 dahil)|4|
+|4,8|4|
 
 ## <a name="related-topics"></a>İlgili konular
 
 |Başlık|Açıklama|
 |-----------|-----------------|
-|[Yönetilen Yürütme İşlemi](managed-execution-process.md)|Ortak dil çalışma zamanı yararlanmak için gereken adımları açıklar.|
-|[Otomatik Bellek Yönetimi](automatic-memory-management.md)|Atık toplayıcı'nın ayırır ve belleği serbest bırakır nasıl açıklanmaktadır.|
-|[.NET Framework'ün genel bakış](../framework/get-started/overview.md)|Ortak tür sistemi, çapraz dil birlikte çalışabilirliği, yönetilen yürütme, uygulama etki alanları ve derlemeler gibi temel .NET Framework kavramlarını açıklar.|
-|[Ortak Tür Sistemi](./base-types/common-type-system.md)|Nasıl türleri bildirilen kullanılan ve yönetilen diller arası tümleştirme desteğinde çalışma zamanında açıklar.|
+|[Yönetilen Yürütme İşlemi](managed-execution-process.md)|Ortak dil çalışma zamanının avantajlarından yararlanmak için gereken adımları açıklar.|
+|[Otomatik Bellek Yönetimi](automatic-memory-management.md)|Çöp toplayıcısının belleği nasıl ayırdığı ve yayımlarsa açıklanmaktadır.|
+|[.NET Framework genel bakış](../framework/get-started/overview.md)|Ortak tür sistemi, çapraz dil birlikte çalışabilirliği, yönetilen yürütme, uygulama etki alanları ve derlemeler gibi temel .NET Framework kavramları açıklar.|
+|[Ortak Tür Sistemi](./base-types/common-type-system.md)|Türlerin, platformlar arası tümleştirme desteğiyle çalışma zamanında nasıl bildirildiği, kullanıldığı ve yönetildiğini açıklar.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

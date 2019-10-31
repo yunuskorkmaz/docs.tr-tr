@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: cdeda721-b214-4503-a291-c70b68b5f36b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 38542ec28cce9687dc3ed824f9d449f3070976da
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5e3619d12b9377a8482254703d3d97d0348a013b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737306"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127165"
 ---
 # <a name="icordebugassemblygetname-method"></a>ICorDebugAssembly::GetName Metodu
-Derlemenin adını alır bu `ICorDebugAssembly` örneğini temsil eder.  
+Bu `ICorDebugAssembly` örneğinin temsil ettiği derlemenin adını alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,22 +37,22 @@ HRESULT GetName (
   
 ## <a name="parameters"></a>Parametreler  
  `cchName`  
- [in] Boyutu `szName` dizisi.  
+ 'ndaki `szName` dizisinin boyutu.  
   
  `pcchName`  
- [out] Gerçek uzunluk adını belirten bir tamsayı işaretçisi.  
+ dışı Adın gerçek uzunluğunu belirten bir tamsayı işaretçisi.  
   
  `szName`  
- [out] Dizisi adını depolar.  
+ dışı Adı depolayan bir dizi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `GetName` Yöntemi derlemenin tam yolu ve dosya adını döndürür.  
+ `GetName` yöntemi, derlemenin tam yolunu ve dosya adını döndürür.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

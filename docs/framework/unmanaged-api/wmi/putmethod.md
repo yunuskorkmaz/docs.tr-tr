@@ -14,14 +14,12 @@ helpviewer_keywords:
 - PutMethod function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a2b41cbbade9da5c2095309b9039b8ce2758f6f3
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 1d409507de593cf198fe87340eece6820eaefc63
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798354"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127343"
 ---
 # <a name="putmethod-function"></a>PutMethod işlevi
 Bir yöntem oluşturur.
@@ -56,10 +54,10 @@ HRESULT PutMethod (
 'ndaki Ayrılamadı. Bu parametre 0 olmalıdır.
 
 `pSignatureIn`  
-'ndaki Yönteminin `in` parametrelerini içeren [__Parameters sistem sınıfının](/windows/desktop/WmiSdk/--parameters) kopyasına yönelik bir işaretçi. Olarak `null`ayarlanırsa, bu parametre yoksayılır.  
+'ndaki Yöntemi için `in` parametrelerini içeren [__Parameters sistem sınıfının](/windows/desktop/WmiSdk/--parameters) kopyasına yönelik bir işaretçi. `null`olarak ayarlandıysa bu parametre yoksayılır.  
 
 `pSignatureOut`  
-'ndaki  Yönteminin `out` parametrelerini içeren [__Parameters sistem sınıfının](/windows/desktop/WmiSdk/--parameters) kopyasına yönelik bir işaretçi. Olarak `null`ayarlanırsa, bu parametre yoksayılır.
+'ndaki  Yöntemi için `out` parametrelerini içeren [__Parameters sistem sınıfının](/windows/desktop/WmiSdk/--parameters) kopyasına yönelik bir işaretçi. `null`olarak ayarlandıysa bu parametre yoksayılır.
 
 ## <a name="return-value"></a>Dönüş değeri
 
@@ -68,7 +66,7 @@ Bu işlev tarafından döndürülen aşağıdaki değerler, *Wbemcli. h* üstbil
 |Sabit  |Değer  |Açıklama  |
 |---------|---------|---------|
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | Bir veya daha fazla parametre geçerli değil. |
-| `WBEM_E_INVALID_DUPLICATE_PARAMETER` | 0x80041043 | Hem pinsignature hem de *poutsignature* nesnelerinde belirtilen methodparametresifarklıniteleyicileresahip.`[in, out]`
+| `WBEM_E_INVALID_DUPLICATE_PARAMETER` | 0x80041043 | Hem *Pinsignature* hem de *poutsignature* nesnelerinde belirtilen `[in, out]` method parametresi farklı niteleyicilere sahip.
 | `WBEM_E_MISSING_PARAMETER_ID` | 0x80041036 | Yöntem parametresinde **kimlik** niteleyicisi belirtimi eksik. |
 | `WBEM_E_NONCONSECUTIVE_PARAMETER_IDS` | 0x80041038 | Yöntem parametrelerine atanan KIMLIK serisi ardışık değildir veya 0 ' dan başlamaz. |
 | `WBEM_E_PARAMETER_ID_ON_RETVAL` | 0x80041039 | Bir yöntemin dönüş değeri bir **kimlik** niteleyicisi içeriyor. |
@@ -79,24 +77,24 @@ Bu işlev tarafından döndürülen aşağıdaki değerler, *Wbemcli. h* üstbil
 
 Bu işlev, [IWbemClassObject::P utMethod](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-putmethod) yöntemine bir çağrı kaydırır.
 
-Bu yöntem çağrısı yalnızca bir CIM sınıf `ptr` tanımınise desteklenir. Yöntem işleme, CıM örneklerine işaret eden [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) işaretçilerinden kullanılamıyor.
+Bu yöntem çağrısı yalnızca `ptr` CıM sınıf tanımınız ise desteklenir. Yöntem işleme, CıM örneklerine işaret eden [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) işaretçilerinden kullanılamıyor.
 
 Kullanıcılar alt çizgiyle başlayan veya biten adlara sahip Yöntemler oluşturamaz. Bu sistem sınıfları ve özellikleri için ayrılmıştır.
 
-Bir yöntem `in` için, ve `out` parametreleri [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) nesnelerinde özellikler olarak açıklanır.
+Bir yöntem için, `in` ve `out` parametreleri [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) nesnelerinde özellikler olarak açıklanmaktadır.
 
-Bir `[in/out]` parametre, `pInSignature` ve `pOutSignature` parametreleri tarafından işaret edilen her iki nesneye aynı özelliği eklenerek tanımlanabilir. Bu durumda, özellikler aynı **kimlik** niteleyicisi değerini paylaşır.
+Bir `[in/out]` parametresi, `pInSignature` ve `pOutSignature` parametreleri tarafından işaret edilen her iki nesneye de aynı özellik eklenerek tanımlanabilir. Bu durumda, özellikler aynı **kimlik** niteleyicisi değerini paylaşır.
 
-Bir [__Parameters](/windows/desktop/WmiSdk/--parameters) sınıf nesnesindeki `ReturnValue` her bir özelliğin, parametrelerin görünme sırasını tanımlayan sıfır tabanlı sayısal bir değer olan bir **ID** niteleyicisi olmalıdır. İki parametre aynı **kimlik** değerine sahip olamaz ve hiçbir **kimlik** değeri atlanmaz. Herhangi bir koşul oluşursa, `PutMethod` işlev döndürür. `WBEM_E_NONCONSECUTIVE_PARAMETER_IDS`
+`ReturnValue` dışındaki bir [__Parameters](/windows/desktop/WmiSdk/--parameters) sınıf nesnesindeki her bir özellik, parametrelerin göründüğü sırayı belirleyen sıfır tabanlı sayısal bir değer olan bir **kimlik** niteleyicisi içermelidir. İki parametre aynı **kimlik** değerine sahip olamaz ve hiçbir **kimlik** değeri atlanmaz. Her iki koşul de oluşursa `PutMethod` işlevi `WBEM_E_NONCONSECUTIVE_PARAMETER_IDS`döndürür.
 
 ## <a name="example"></a>Örnek
 
 Bir örnek için, bkz. [IWbemClassObject::P utMethod](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-putmethod) yöntemi.
 
 ## <a name="requirements"></a>Gereksinimler  
- **Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üst bilgi** WMINet_Utils. IDL  
+ **Üst bilgi:** WMINet_Utils. IDL  
   
  **.NET Framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   

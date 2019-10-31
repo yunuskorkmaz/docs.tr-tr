@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: b3222c85-da88-4485-97d7-3a6ee3e8d358
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b1f5508e9ee41d8670b43d5b219846237e11fc8f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f197c8802bd9e55391b3e3e20c64398736070a16
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778147"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136330"
 ---
 # <a name="getfileversion-function"></a>GetFileVersion İşlevi
-Belirtilen arabelleği kullanarak belirtilen dosya, ortak dil çalışma zamanı (CLR) sürüm bilgilerini alır.  
+Belirtilen arabelleği kullanarak belirtilen dosyanın ortak dil çalışma zamanı (CLR) sürüm bilgilerini alır.  
   
- Bu işlev .NET Framework 4'te kullanım dışıdır.  
+ Bu işlev .NET Framework 4 ' te kullanım dışıdır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,23 +39,23 @@ HRESULT GetFileVersion (
   
 ## <a name="parameters"></a>Parametreler  
  `szFilename`  
- [in] İncelenecek dosyasının yolu.  
+ 'ndaki İnceedilecek dosyanın yolu.  
   
  `szBuffer`  
- [out içinde] Döndürülen sürüm bilgilerini ayrılan bir arabellek.  
+ [in, out] Döndürülen sürüm bilgileri için ayrılan arabellek.  
   
  `cchBuffer`  
- [in] Geniş karakter cinsinden boyutu, `szBuffer`.  
+ 'ndaki `szBuffer`geniş karakterdeki boyut.  
   
  `dwLength`  
- [out] Döndürülen bayt cinsinden boyutu `szBuffer`.  
+ dışı Döndürülen `szBuffer`bayt cinsinden boyutu.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** MSCorEE.h  
+ **Üst bilgi:** MSCorEE. h  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -1,19 +1,18 @@
 ---
-title: 'Nasıl yapılır: yerelleştirilmiş özel durum iletileriyle Kullanıcı tanımlı özel durumlar oluşturma'
+title: 'Nasıl yapılır: yerelleştirilmiş özel durum iletileriyle kullanıcı tanımlı özel durumlar oluşturma'
 description: Yerelleştirilmiş özel durum iletileriyle Kullanıcı tanımlı özel durumlar oluşturmayı öğrenin
 author: Youssef1313
-ms.author: ronpet
 ms.date: 09/13/2019
-ms.openlocfilehash: b4aa567fccda9354bc5959d6b9838d678d53abef
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 453e332541628770932da2a6802fdcaee5211a84
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71696711"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141531"
 ---
-# <a name="how-to-create-user-defined-exceptions-with-localized-exception-messages"></a>Nasıl yapılır: yerelleştirilmiş özel durum iletileriyle Kullanıcı tanımlı özel durumlar oluşturma
+# <a name="how-to-create-user-defined-exceptions-with-localized-exception-messages"></a>Nasıl yapılır: yerelleştirilmiş özel durum iletileriyle kullanıcı tanımlı özel durumlar oluşturma
 
-Bu makalede, uydu derlemelerini kullanan yerelleştirilmiş özel durum iletileriyle temel <xref:System.Exception> sınıfından devralınan Kullanıcı tanımlı özel durumlar oluşturmayı öğreneceksiniz.
+Bu makalede, temel <xref:System.Exception> sınıfından devralınan Kullanıcı tanımlı özel durumları, uydu derlemelerini kullanan yerelleştirilmiş özel durum iletileriyle nasıl oluşturacağınızı öğreneceksiniz.
 
 ## <a name="create-custom-exceptions"></a>Özel özel durumlar oluşturma
 
@@ -22,7 +21,7 @@ Bu makalede, uydu derlemelerini kullanan yerelleştirilmiş özel durum iletiler
 Bir `StudentName` özelliği içeren `StudentNotFoundException` oluşturmak istediğinizi varsayalım.
 Özel bir özel durum oluşturmak için aşağıdaki adımları izleyin:
 
-1. @No__t-0 ' dan devralan seri hale getirilebilir bir sınıf oluşturun. Sınıf adı "özel durum" ile bitmelidir:
+1. <xref:System.Exception>devralan seri hale getirilebilir bir sınıf oluşturun. Sınıf adı "özel durum" ile bitmelidir:
 
     ```csharp
     [Serializable]
@@ -77,13 +76,13 @@ Bir `StudentName` özelliği içeren `StudentNotFoundException` oluşturmak iste
 throw new StudentNotFoundException("The student cannot be found.", "John");
 ```
 
-Önceki satırla ilgili sorun `"The student cannot be found."` ' ın yalnızca sabit bir dizedir. Yerelleştirilmiş bir uygulamada, Kullanıcı kültürüne bağlı olarak farklı iletilere sahip olmak istersiniz.
+Önceki satırla ilgili sorun `"The student cannot be found."` yalnızca sabit bir dizedir. Yerelleştirilmiş bir uygulamada, Kullanıcı kültürüne bağlı olarak farklı iletilere sahip olmak istersiniz.
 [Uydu derlemeleri](../../framework/resources/creating-satellite-assemblies-for-desktop-apps.md) bunu yapmanın iyi bir yoludur. Uydu derlemesi, belirli bir dilin kaynaklarını içeren bir. dll ' dir. Çalışma zamanında belirli bir kaynak istediğinizde, CLR bu kaynağı Kullanıcı kültürüne göre bulur. Bu kültür için uydu bütünleştirilmiş kodu bulunmazsa, varsayılan kültürün kaynakları kullanılır.
 
 Yerelleştirilmiş özel durum iletilerini oluşturmak için:
 
 1. Kaynak dosyalarını tutmak için *kaynaklar* adlı yeni bir klasör oluşturun.
-1. Buna yeni bir kaynak dosyası ekleyin. Visual Studio 'da, **Çözüm Gezgini**klasörü üzerinde sağ tıklayın ve  > **Yeni öğe** > **kaynak dosyası** **Ekle**' yi seçin. Dosyayı *Exceptionmessages. resx*olarak adlandırın. Bu, varsayılan kaynak dosyasıdır.
+1. Buna yeni bir kaynak dosyası ekleyin. Visual Studio 'da, **Çözüm Gezgini**klasörü üzerinde sağ tıklayın ve > **Yeni öğe** > **kaynaklar dosyası** **Ekle** ' yi seçin. Dosyayı *Exceptionmessages. resx*olarak adlandırın. Bu, varsayılan kaynak dosyasıdır.
 1. Aşağıdaki görüntüde gösterildiği gibi, özel durum iletiniz için bir ad/değer çifti ekleyin:
 
    ![Varsayılan kültüre kaynak ekleme](media/add-resources-to-default-culture.jpg)
@@ -102,7 +101,7 @@ Yerelleştirilmiş özel durum iletilerini oluşturmak için:
     ```
 
   > [!NOTE]
-  > Proje adı `TestProject` ise ve *Exceptionmessages. resx* kaynak dosyası projenin *kaynaklar* klasöründe bulunuyorsa, kaynak dosyasının tam adı `TestProject.Resources.ExceptionMessages` ' dir.
+  > Proje adı `TestProject` ve *Exceptionmessages. resx* kaynak dosyası projenin *kaynaklar* klasöründe bulunuyorsa, kaynak dosyasının tam adı `TestProject.Resources.ExceptionMessages`.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -1,17 +1,15 @@
 ---
-title: 'Örnek: Veri Bağlama Sırasında Özel Durum İşleme'
+title: 'Örnek: verileri bağlarken özel durumları Işleme'
 ms.date: 03/30/2017
 ms.assetid: bd63ed96-9853-46dc-ade5-7bd1b0f39110
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8f7c40d1a179c29c3b92ca37848db6d1383e5d2d
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 7ab5477257bd6d32d901ad01518f7a75081d2a10
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049886"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128454"
 ---
-# <a name="example-handling-exceptions-when-binding-data"></a>Örnek: Veri Bağlama Sırasında Özel Durum İşleme
+# <a name="example-handling-exceptions-when-binding-data"></a>Örnek: verileri bağlarken özel durumları Işleme
 > [!NOTE]
 > Bu konu, yayın öncesi yazılım olan .NET Native geliştirici önizlemesine başvurur. Önizlemeyi [Microsoft Connect Web sitesinden](https://go.microsoft.com/fwlink/?LinkId=394611) indirebilirsiniz (kayıt gerekir).  
   
@@ -39,16 +37,16 @@ Windows_UI_Xaml!DirectUI::PropertyPathListener::ConnectPathStep+0x113
 ```  
   
 ## <a name="what-was-the-app-doing"></a>Uygulama ne yapıyor?  
- Yığının tabanında, <xref:Windows.UI.Xaml?displayProperty=nameWithType> ad alanındaki Çerçeveler XAML işleme altyapısının çalıştığını gösterir.   <xref:System.Reflection.PropertyInfo.GetValue%2A?displayProperty=nameWithType> Yönteminin kullanımı, meta verileri kaldırılmış olan türdeki bir özelliğin değerinin yansıma tabanlı bir aramasını gösterir.  
+ Yığının tabanında, <xref:Windows.UI.Xaml?displayProperty=nameWithType> ad alanındaki Çerçeveler XAML işleme altyapısının çalıştığını gösterir.   <xref:System.Reflection.PropertyInfo.GetValue%2A?displayProperty=nameWithType> yönteminin kullanımı, meta verileri kaldırılmış olan türdeki bir özelliğin değerinin yansıma tabanlı bir aramasını gösterir.  
   
- Meta veri yönergesini sağlamanın ilk adımı, özelliklerinin tümünün erişilebilir olması için `serialize` türün meta verilerini eklemektir:  
+ Meta veri yönergesini sağlamanın ilk adımı, özelliklerinin tümünün erişilebilir olması için türün `serialize` meta verileri eklemektir:  
   
 ```xml  
 <Type Name="App.ViewModels.MainPageVM" Serialize="Required Public" />  
 ```  
   
 ## <a name="is-this-an-isolated-case"></a>Bu yalıtılmış bir durumdur mi?  
- Bu senaryoda, veri bağlamasında bir tane `ViewModel`için eksik meta veriler varsa, diğerleri de olabilir.  Kod, uygulamanın görünüm modellerinin `App.ViewModels` ad alanında yer aldığı bir şekilde yapılandırılmış ise, daha genel bir çalışma zamanı yönergesi kullanabilirsiniz:  
+ Bu senaryoda, veri bağlamanın bir `ViewModel`meta verisi varsa, diğerleri de olabilir.  Kod, uygulamanın görünüm modellerinin tümünün `App.ViewModels` ad alanında olduğu bir şekilde yapılandırılmış ise, daha genel bir çalışma zamanı yönergesi kullanabilirsiniz:  
   
 ```xml  
 <Namespace Name="App.ViewModels " Serialize="Required Public" />  
@@ -57,9 +55,9 @@ Windows_UI_Xaml!DirectUI::PropertyPathListener::ConnectPathStep+0x113
 ## <a name="could-the-code-be-rewritten-to-not-use-reflection"></a>Kod, yansıma kullanmadan yeniden yazılabilir mi?  
  Veri bağlama yansıma yoğun olduğundan, yansımayı önlemek için kodun değiştirilmesi uygun değildir.  
   
- Ancak, araç zincirinin derleme zamanında doğru türle `ViewModel` Özellik bağlamalarını ilişkilendirebilmesi ve bir çalışma zamanı yönergesi kullanmadan meta verileri tutması için XAML sayfasına belirtmek için bazı yollar vardır.  Örneğin, özelliğini özelliklerine uygulayabilirsiniz <xref:Windows.UI.Xaml.Data.BindableAttribute?displayProperty=nameWithType> . Bu, XAML derleyicisinin gerekli arama bilgilerini oluşturmasına ve default. RD. xml dosyasında bir çalışma zamanı yönergesi gerektirmesine neden olur.  
+ Ancak, araç zincirinin derleme zamanında doğru türle Özellik bağlamalarını ilişkilendirebilmesi ve bir çalışma zamanı yönergesi kullanmadan meta verileri tutması için XAML sayfasına `ViewModel` belirtmek için bazı yollar vardır.  Örneğin, özelliklerde <xref:Windows.UI.Xaml.Data.BindableAttribute?displayProperty=nameWithType> özniteliğini uygulayabilirsiniz. Bu, XAML derleyicisinin gerekli arama bilgilerini oluşturmasına ve default. RD. xml dosyasında bir çalışma zamanı yönergesi gerektirmesine neden olur.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Başlarken](getting-started-with-net-native.md)
-- [Örnek: Dinamik programlama sorunlarını giderme](example-troubleshooting-dynamic-programming.md)
+- [Örnek: Dinamik Programlama Sorunlarını Giderme](example-troubleshooting-dynamic-programming.md)

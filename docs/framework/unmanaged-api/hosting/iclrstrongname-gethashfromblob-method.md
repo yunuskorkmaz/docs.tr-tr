@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: f91d0f89-f356-49ac-aafb-50fad963c13d
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4839f098a41e0d2b8e87616791b69ffd83e139f0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0c9adcc252fe16c95da8b2afca45bb2ee5dc545a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67748195"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73135199"
 ---
 # <a name="iclrstrongnamegethashfromblob-method"></a>ICLRStrongName::GetHashFromBlob Metodu
-Derleme karması belirtilen karma algoritması kullanılarak belirtilen bellek adresinde alır.  
+Belirtilen karma algoritmasını kullanarak, belirtilen bellek adresindeki derlemenin karmasını alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -42,34 +40,34 @@ HRESULT GetHashFromBlob (
   
 ## <a name="parameters"></a>Parametreler  
  `pbBlob`  
- [in] Adres karma hale getirilecek bellek bloğu için bir işaretçi.  
+ 'ndaki Karma hale getirilen bellek bloğunun adresine yönelik bir işaretçi.  
   
  `cchBlob`  
- [in] Uzunluğu, bayt cinsinden bellek bloğu.  
+ 'ndaki Bellek bloğunun bayt cinsinden uzunluğu.  
   
  `piHashAlg`  
- [out içinde] Sabit karma algoritmasını belirtir. Sıfır varsayılan algoritma için kullanın.  
+ [in, out] Karma algoritmayı belirten bir sabit. Varsayılan algoritma için sıfır kullanın.  
   
  `pbHash`  
- [out] Döndürülen karma arabellek.  
+ dışı Döndürülen karma arabelleği.  
   
  `cchHash`  
- [in] İstenen en büyük boyutunu `pbHash`.  
+ 'ndaki İstenen en büyük boyut `pbHash`.  
   
  `pchHash`  
- [out] Döndürülen bayt cinsinden boyutu `pbHash`.  
+ dışı Döndürülen `pbHash`bayt cinsinden boyutu.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- `S_OK` yöntemi başarıyla tamamlandı Aksi takdirde hata olduğunu gösteren HRESULT değerini (bkz [ortak HRESULT değerlerini](https://go.microsoft.com/fwlink/?LinkId=213878) bir listesi için).  
+ Yöntem başarıyla tamamlanırsa `S_OK`; Aksi takdirde, hata belirten bir HRESULT değeri (bkz. bir liste için [genel HRESULT değerleri](https://go.microsoft.com/fwlink/?LinkId=213878) ).  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** MetaHost.h  
+ **Üst bilgi:** MetaHost. h  
   
- **Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil  
+ **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

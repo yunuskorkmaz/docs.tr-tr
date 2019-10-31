@@ -13,17 +13,15 @@ helpviewer_keywords:
 - IsStarted method [.NET Framework hosting]
 - ICLRRuntimeInfo::IsStarted method [.NET Framework hosting]
 ms.assetid: ef6f2662-323b-4534-aa82-6d1afb7b9309
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5b064f0b1cec07f29058300041711285bde66697
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 34590744407b25d7d53c06c452fff5bac2a95246
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67748409"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136381"
 ---
 # <a name="iclrruntimeinfoisstarted-method"></a>ICLRRuntimeInfo::IsStarted Yöntemi
-Çalışma zamanı başlayıp başlamadığını gösterir (diğer bir deyişle, olmadığını [Iclrruntimehost::Start yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md) çağrıldığında ve başarılı oldu).  
+Çalışma zamanının başlatıldığını (yani, [ICLRRuntimeHost:: Start yönteminin](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md) çağrıldığından ve başarılı olup olmadığını) gösterir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -35,30 +33,30 @@ HRESULT IsStarted(
   
 ## <a name="parameters"></a>Parametreler  
  `pbStarted`  
- [out] `true` bu çalışma zamanı varsa başlatıldı; Aksi takdirde `false`.  
+ [out] Bu çalışma zamanı başlatılmışsa `true`; Aksi takdirde, `false`.  
   
  `pdwStartupFlags`  
- [out] Çalışma zamanı'nı başlatmak için kullanılan bayraklar döndürür.  
+ dışı Çalışma zamanını başlatmak için kullanılan bayrakları döndürür.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Bu yöntem aşağıdaki özel HRESULT'ları yanı sıra HRESULT döndürür yöntemi hatayı gösteren hatalar.  
+ Bu yöntem, aşağıdaki belirli Hsonuçların yanı sıra Yöntem hatasını belirten HRESULT hataları döndürür.  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
 |S_OK|Yöntem başarıyla tamamlandı.|  
-|E_NOTIMPL|Ortak dil çalışma zamanı (CLR) sürümünü, .NET Framework 4 CLR sürümünü daha eski.|  
+|E_NOTIMPL|Ortak dil çalışma zamanı (CLR) sürümü .NET Framework 4 ' teki CLR sürümünden daha eski.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem .NET Framework 4'te CLR sürümü'den önceki CLR sürümleriyle çalışmaz.  
+ Bu yöntem, .NET Framework 4 ' teki CLR sürümünden önceki CLR sürümleriyle çalışmaz.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** MetaHost.h  
+ **Üst bilgi:** MetaHost. h  
   
- **Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil  
+ **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

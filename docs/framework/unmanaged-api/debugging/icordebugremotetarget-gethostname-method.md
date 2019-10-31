@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1c7276f7-7e54-470c-808c-e13745ac07a1
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 43a502682e6ccfc36931970d0121f91529f51711
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a9a6ca9ae3cdb1c6a7398d08c9f99e3cde125cf6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744728"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131906"
 ---
 # <a name="icordebugremotetargetgethostname-method"></a>ICorDebugRemoteTarget::GetHostName Yöntemi
-Tam etki alanı adı veya uzaktan hata ayıklama hedef makinesinin IPv4 adresini döndürür. IPv6 şu anda desteklenmiyor.  
+Uzaktan hata ayıklama hedef makinesinin tam etki alanı adını veya IPv4 adresini döndürür. IPV6 Şu anda desteklenmiyor.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,32 +37,32 @@ HRESULT GetHostName (
   
 ## <a name="parameters"></a>Parametreler  
  `cchHostName`  
- [in] Karakter cinsinden boyutu, `szHostName` arabellek. Bu parametre 0 (sıfır) ise `szHostName` null olmalıdır.  
+ 'ndaki `szHostName` arabelleğinin karakter cinsinden boyutu. Bu parametre 0 (sıfır) ise, `szHostName` null olmalıdır.  
   
  `pcchHostName`  
- [out] Konak adı veya IP adresi null sonlandırıcıyı da dahil olmak üzere karakter sayısı. Bu parametre null olabilir.  
+ dışı Ana bilgisayar adı veya IP adresi içinde null Sonlandırıcı dahil olmak üzere karakter sayısı. Bu parametre null olabilir.  
   
  `szHostName`  
- [out] Ana bilgisayar adı veya IP adresini içeren arabellek.  
+ dışı Ana bilgisayar adını veya IP adresini içeren arabellek.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  S_OK  
- Konak adı veya IP adresi başarıyla döndürüldü.  
+ Ana bilgisayar adı veya IP adresi başarıyla döndürüldü.  
   
- E_FAIL (veya diğer E_ dönüş kodları)  
- Konak adı veya IP adresini döndürmek yüklenemiyor.  
+ E_FAıL (veya diğer E_ dönüş kodları)  
+ Ana bilgisayar adı veya IP adresi döndürülemiyor.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem, hata ayıklayıcıyı yazan tarafından uygulanır. Birden fazla arama paradigması izlemelidir: İlk çağrı, çağıran her ikisi de null geçirir `cchHostName` ve `szHostName`, ve `pcchHostName` gerekli arabellek boyutunu döndürür. İkinci çağrıda, daha önce döndürülen boyutu geçirilen `cchHostName`, ve uygun boyutlandırılmış bir arabellek geçirilen `szHostName`.  
+ Bu yöntem, hata ayıklayıcı yazıcı tarafından uygulanır. Bu, birden çok çağrı paradigmasını izlemelidir: ilk çağrıda, çağıran `cchHostName` ve `szHostName`için null değerini geçirir ve `pcchHostName` gereken arabelleğin boyutunu döndürür. İkinci çağrıda, daha önce döndürülen boyut `cchHostName`geçirilir ve `szHostName`uygun boyutta bir arabellek geçirilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug.idl  
+ **Üst bilgi:** CorDebug. IDL  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET framework sürümleri:** 3.5 SP1  
+ **.NET Framework sürümleri:** 3,5 SP1  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

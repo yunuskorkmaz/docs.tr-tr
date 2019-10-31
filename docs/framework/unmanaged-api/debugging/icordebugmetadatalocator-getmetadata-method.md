@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: f9b0ff22-54db-45eb-9cc3-508000a3141d
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9b761d31e640063e11c1e549966bb372449fe743
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6e4f11de423d1ab6b66aca40e671607a383a4413
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67762280"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136629"
 ---
 # <a name="icordebugmetadatalocatorgetmetadata-method"></a>ICorDebugMetaDataLocator::GetMetaData Metodu
-Tam yolu, meta veri hata ayıklayıcı istenen bir işlemi tamamlamak için gereken bir birime geri dönmek için hata ayıklayıcı ister.  
+Hata ayıklayıcının istenen bir işlemi tamamlaması için gereken meta verileri bir modülün tam yolunu döndürmesini ister.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -43,46 +41,46 @@ HRESULT GetMetaData(
   
 ## <a name="parameters"></a>Parametreler  
  `wszImagePath`  
- [in] Dosyaya tam yolunu temsil ettiği bir null ile sonlandırılmış bir dize. Tam yol mevcut değilse adı ve dosya uzantısını (*filename*. *Uzantı*).  
+ 'ndaki Dosyanın tam yolunu temsil eden, null ile sonlandırılmış bir dize. Tam yol kullanılamıyorsa dosyanın adı ve uzantısı (*filename*. *Uzantısı*).  
   
  `dwImageTimeStamp`  
- [in] Görüntünün PE dosyası başlıklarından zaman damgası. Bu parametre için bir sembol sunucusu potansiyel olarak kullanılabilir ([SymSrv](/windows/desktop/debug/using-symsrv)) araması.  
+ 'ndaki Görüntünün PE dosya üst bilgilerindeki zaman damgası. Bu parametre, bir sembol sunucusu ([symsrv](/windows/desktop/debug/using-symsrv)) araması için kullanılabilir.  
   
  `dwImageSize`  
- [in] PE dosyası başlıklarından resim boyutu. Bu parametre, büyük olasılıkla SymSrv arama için kullanılabilir.  
+ 'ndaki PE dosya başlıklarından görüntü boyutu. Bu parametre, bir SymSrv araması için kullanılabilir.  
   
  `cchPathBuffer`  
- [in] Karakter sayısında `wszPathBuffer`.  
+ 'ndaki `wszPathBuffer`karakter sayısı.  
   
  `pcchPathBuffer`  
- [out] Sayısı `WCHAR`yazılan s `wszPathBuffer`.  
+ dışı `wszPathBuffer`yazılan `WCHAR`s sayısı.  
   
- Yöntem E_NOT_SUFFICIENT_BUFFER döndürürse, sayısı içeren `WCHAR`s gereken yolu depolamak.  
+ Yöntem E_NOT_SUFFICIENT_BUFFER döndürürse, yolu depolamak için gereken `WCHAR`s sayısını içerir.  
   
  `wszPathBuffer`  
- [out] İçine istenen meta verilerini içeren dosyanın tam yolunu hata ayıklayıcı kopyalayacak bir arabellek için işaretçi.  
+ dışı Hata ayıklayıcının istenen meta verileri içeren dosyanın tam yolunu kopyalayabileceği bir arabelleğin işaretçisi.  
   
- `ofReadOnly` Gelen bayrak [CorOpenFlags](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md) numaralandırma meta verileri bu dosyada salt okunur erişim istemek için kullanılır.  
+ [CorOpenFlags](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md) numaralandırmasındaki `ofReadOnly` bayrağı, bu dosyadaki meta verilere salt okuma erişimi istemek için kullanılır.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Bu yöntem aşağıdaki özel HRESULT'ları yanı sıra HRESULT döndürür yöntemi hatayı gösteren hatalar. Diğer tüm başarısız HRESULTs dosya alınabilir olduğunu gösterir.  
+ Bu yöntem, aşağıdaki belirli Hsonuçların yanı sıra Yöntem hatasını belirten HRESULT hataları döndürür. Diğer tüm Hata HRESULTs 'ler dosyanın alınabilir olmadığını gösterir.  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|S_OK|Yöntem başarıyla tamamlandı. `wszPathBuffer` dosyanın tam yolunu içerir ve null sonlandırılmıştır.|  
-|E_NOT_SUFFICIENT_BUFFER|Geçerli boyutunu `wszPathBuffer` tam yolunu tutmak yeterli değil. Bu durumda, `pcchPathBuffer` gerekli sayısı içeren `WCHAR`s, sonlandırıcı null karakter de dahil olmak üzere ve `GetMetaData` istenen arabellek boyutu ile ikinci kez çağrılır.|  
+|S_OK|Yöntem başarıyla tamamlandı. `wszPathBuffer` dosyanın tam yolunu içerir ve null ile sonlandırılır.|  
+|E_NOT_SUFFICIENT_BUFFER|`wszPathBuffer` geçerli boyutu tam yolu tutmak için yeterli değil. Bu durumda `pcchPathBuffer`, Sonlandırıcı null karakteri de dahil olmak üzere gerekli `WCHAR`sayısını içerir ve istenen arabellek boyutuyla `GetMetaData` ikinci bir kez çağrılır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Varsa `wszImagePath` tam yolu içeren isteğe bağlı olarak bir modülden için bir döküm, döküm burada toplanmıştır bilgisayardan yolunu belirtir. Dosyanın bu konumda mevcut değil veya yanlış bir dosya aynı ada sahip yol üzerinde depolanabilir.  
+ `wszImagePath` bir modülden bir modülün tam yolunu içeriyorsa, dökümün toplandığı bilgisayardan yolu belirtir. Dosya bu konumda bulunmayabilir veya yolda aynı ada sahip yanlış bir dosya depolanabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

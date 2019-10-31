@@ -1,37 +1,35 @@
 ---
-title: '4.8, 4.7, 4.6 ve 4.5 .NET Framework Geçiş Kılavuzu '
+title: '4,8, 4,7, 4,6 ve 4,5 .NET Framework geçiş kılavuzu '
 ms.custom: updateeachrelease
 ms.date: 04/18/2019
 helpviewer_keywords:
 - .NET Framework, migrating applications to
 - migration, .NET Framework
 ms.assetid: 02d55147-9b3a-4557-a45f-fa936fadae3b
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9b1cda82125a2d4a6eb3102b01bea639a4f3e3df
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 7401d7fed89d18aa0b05e1c95871e4a025705627
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636083"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73126310"
 ---
-# <a name="migration-guide-to-the-net-framework-48-47-46-and-45"></a>4.8, 4.7, 4.6 ve 4.5 .NET Framework Geçiş Kılavuzu
+# <a name="migration-guide-to-the-net-framework-48-47-46-and-45"></a>4,8, 4,7, 4,6 ve 4,5 .NET Framework geçiş kılavuzu
 
-Uygulamanızı .NET Framework'ün önceki bir sürümü kullanılarak oluşturuldu, bunu genellikle .NET Framework 4.5 için yükseltebilirsiniz ve nokta (4.5.1 ve 4.5.2'yi) sürümlerini .NET Framework 4.6 ve onun nokta sürümleri (4.6.1 ve 4.6.2), .NET Framework 4.7 ve onun nokta sürümleri) 4.7.1 ve 4.7.2) veya .NET Framework 4.8 kolayca. Projenizi Visual Studio'da açın. Projenizi Visual Studio'nun önceki bir sürümde oluşturulmuşsa **proje uygunluğu** iletişim kutusu otomatik olarak açılır. Visual Studio'da bir proje yükseltme hakkında daha fazla bilgi için bkz. [bağlantı noktası, geçirme ve yükseltme Visual Studio projeleri](/visualstudio/porting/port-migrate-and-upgrade-visual-studio-projects) ve [Visual Studio 2019 Platform hedefleme ve Uyumluluk](/visualstudio/releases/2019/compatibility).
+Uygulamanızı .NET Framework önceki bir sürümünü kullanarak oluşturduysanız, genellikle bunu .NET Framework 4,5 ve onun nokta yayınlarına (4.5.1 ve 4.5.2), .NET Framework 4,6 ve nokta yayınlarına (4.6.1 ve 4.6.2), .NET Framework 4,7 ve onun nokta yayınlarına ( 4.7.1 ve 4.7.2) veya .NET Framework 4,8 kolay. Projenizi Visual Studio 'da açın. Projeniz Visual Studio 'nun önceki bir sürümünde oluşturulduysa, **Proje uyumluluğu** iletişim kutusu otomatik olarak açılır. Visual Studio 'da bir projeyi yükseltme hakkında daha fazla bilgi için bkz. [bağlantı noktası, geçiş ve yükseltme Visual Studio projeleri](/visualstudio/porting/port-migrate-and-upgrade-visual-studio-projects) ve [Visual Studio 2019 Platform hedefleme ve uyumluluk](/visualstudio/releases/2019/compatibility).
 
- Ancak, .NET Framework'teki bazı değişiklikler kodunuzda değişiklikler gerektirir. .NET Framework 4.5 ve nokta sürümleri, .NET Framework 4.6 ve onun nokta sürümleri, .NET Framework 4.7 ve onun nokta sürümleri veya .NET Framework 4.8 yeni olan işlevsellikten yararlanmak isteyebilirsiniz. .NET Framework'ün yeni bir sürümü, tipik olarak adlandırılır için uygulamanızda bu tür değişiklikleri yapmaya *geçiş*. Uygulamanızı geçişi sahip değilse, bu .NET Framework 4.5 veya sonraki bir sürümünü yeniden derlemeden çalıştırabilirsiniz.
+ Ancak, .NET Framework bazı değişiklikler kodunuzda değişiklik yapılmasını gerektirir. Ayrıca, .NET Framework 4,5 ' deki ve nokta sürümlerindeki yeni işlevsellikten yararlanmak isteyebilirsiniz .NET Framework 4,6 ve onun nokta sürümleri, .NET Framework 4,7 ve onun nokta sürümleri, .NET Framework 4,8. .NET Framework yeni bir sürümü için uygulamanızda bu tür değişiklikler yapmak genellikle *geçiş*olarak adlandırılır. Uygulamanızın geçirilmesi gerekiyorsa, bunu yeniden derlemeden .NET Framework 4,5 veya sonraki bir sürümde çalıştırabilirsiniz.
 
 ## <a name="migration-resources"></a>Geçiş kaynakları
 
-Uygulamanızı .NET Framework'ün önceki sürümlerinden 4.5, 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7, 4.7.1, 4.7.2 veya 4.8 sürümüne geçirmeden önce aşağıdaki belgeleri gözden geçirin:
+Uygulamanızı önceki .NET Framework sürümlerinden 4,5, 4.5.1, 4.5.2, 4,6, 4.6.1, 4.6.2, 4,7, 4.7.1, 4.7.2 veya 4,8 sürümüne geçirmeden önce aşağıdaki belgeleri gözden geçirin:
 
-- Bkz: [sürümler ve bağımlılıklar](versions-and-dependencies.md) .NET Framework'ün her sürümü temelinde CLR sürümünü anlamak ve uygulamalarınızı başarıyla hedeflemekle yönergeleri gözden geçirin.
+- .NET Framework her bir sürümünü temel alan CLR sürümünü anlamak ve uygulamalarınızı başarıyla hedeflemek için yönergeleri gözden geçirmek için [sürümler ve bağımlılıklar](versions-and-dependencies.md) bölümüne bakın.
 
-- Gözden geçirme [uygulama uyumluluğu](application-compatibility.md) çalışma zamanı ve yeniden hedefleme değişiklikleri uygulamanız ve bunları nasıl ele alınacağını etkileyebilecek öğrenin.
+- Uygulamanızı etkileyebilecek çalışma zamanı ve yeniden hedefleme değişiklikleri hakkında bilgi edinmek için [uygulama uyumluluğunu](application-compatibility.md) gözden geçirin ve bunları nasıl işleyebileceğinizi öğrenin.
 
-- Gözden geçirme [Sınıf Kitaplığı'nda ne kullanılmıyor](../whats-new/whats-obsolete.md) herhangi bir tür veya üyeleri geçersiz yapılan kodunuzu ve önerilen alternatifleri belirlemek için.
+- Kodunuzda, kullanımdan kalkmış olan herhangi bir tür veya üyeyi ve önerilen alternatifleri belirlemek için, [Sınıf kitaplığındaki kullanım dışı olanları](../whats-new/whats-obsolete.md) gözden geçirin.
 
-- Bkz: [yenilikler](../whats-new/index.md) uygulamanıza eklemek isteyebileceğiniz yeni özelliklerin açıklamaları için.
+- Uygulamanıza eklemek isteyebileceğiniz yeni özelliklerin [açıklamaları için bkz. yenilikler.](../whats-new/index.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -39,9 +37,9 @@ Uygulamanızı .NET Framework'ün önceki sürümlerinden 4.5, 4.5.1, 4.5.2, 4.6
 - [.NET Framework 1.1'den Geçiş](migrating-from-the-net-framework-1-1.md)
 - [Sürüm Uyumluluğu](version-compatibility.md)
 - [Sürümler ve Bağımlılıklar](versions-and-dependencies.md)
-- [Nasıl yapılır: Bir uygulamayı .NET Framework 4 veya sonraki sürümler destekleyecek şekilde yapılandırma](how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)
+- [Nasıl yapılır: .NET Framework 4 veya sonraki sürümleri desteklemek için uygulama yapılandırma](how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)
 - [Yenilikler](../whats-new/index.md)
 - [Sınıf Kitaplığında Artık Kullanılmayanlar](../whats-new/whats-obsolete.md)
-- [.NET framework sürüm ve derleme bilgileri](https://go.microsoft.com/fwlink/?LinkId=201701)
-- [Microsoft .NET Framework Destek Ömrü İlkesi](https://go.microsoft.com/fwlink/?LinkId=196607)
+- [.NET Framework sürümü ve derleme bilgileri](https://go.microsoft.com/fwlink/?LinkId=201701)
+- [Microsoft .NET Framework destek yaşam döngüsü Ilkesi](https://go.microsoft.com/fwlink/?LinkId=196607)
 - [.NET Framework 4 geçiş sorunları](net-framework-4-migration-issues.md)

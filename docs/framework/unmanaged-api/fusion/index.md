@@ -6,14 +6,12 @@ helpviewer_keywords:
 - native API reference [.NET Framework], fusion
 - fusion [.NET Framework], using the unmanaged API
 ms.assetid: f8f20967-ea17-4900-bf05-87a078095fe6
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ed9020aac5b9196eb9e074161371c4e42e79509e
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 2bf7bbb59cf983ed536a579ee3a418603f78b49a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796346"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131645"
 ---
 # <a name="fusion-unmanaged-api-reference"></a>Fusion (Yönetilmeyen API Başvurusu)
 Fusion API 'SI, bir çalışma zamanı konağının uygulama kaynaklarının özelliklerine erişmesini sağlar ve bu kaynakların uygulamanın doğru sürümlerini bulur.  

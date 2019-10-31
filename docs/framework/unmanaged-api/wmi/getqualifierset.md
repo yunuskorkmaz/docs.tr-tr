@@ -14,14 +14,12 @@ helpviewer_keywords:
 - GetQualifierSet function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 845d5ea93a06859840c87c65b415ead0f846d538
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 489e240af3f26e82f2459ac4b4dbd944639f78fc
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798469"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127447"
 ---
 # <a name="getqualifierset-function"></a>GetQualifierSet işlevi
 Bir sınıf örneği veya sınıf tanımı için niteleyici kümesini alır.
@@ -47,7 +45,7 @@ HRESULT GetQualifierSet (
 'ndaki [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) örneğine yönelik bir işaretçi.
 
 `ppQualSet`  
-dışı Sınıf nesnesinin niteleyicilerine erişime izin veren arabirim işaretçisini alır. `ppQualSet``null`olamaz. Bir hata oluşursa, yeni bir nesne döndürülmez ve işaretçi değiştirilmemiş olarak kalır. 
+dışı Sınıf nesnesinin niteleyicilerine erişime izin veren arabirim işaretçisini alır. `ppQualSet` `null`olamaz. Bir hata oluşursa, yeni bir nesne döndürülmez ve işaretçi değiştirilmemiş olarak kalır. 
 
 ## <a name="return-value"></a>Dönüş değeri
 
@@ -68,9 +66,9 @@ Bu işlev, [IWbemClassObject:: GetQualifierSet](/windows/desktop/api/wbemcli/nf-
 [IWbemQualifierSet işaretçisi](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) , çağıranın bu niteleyicileri eklemesine, düzenlemesine veya silmesine izin verir. Bu tür eklenmiş, düzenlenmiş veya silinen niteleyiciler, tüm örnek veya sınıf tanımı için geçerlidir.
 
 ## <a name="requirements"></a>Gereksinimler  
-**Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
+**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üst bilgi** WMINet_Utils. IDL  
+ **Üst bilgi:** WMINet_Utils. IDL  
   
  **.NET Framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   

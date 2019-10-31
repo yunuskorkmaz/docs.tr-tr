@@ -8,14 +8,12 @@ helpviewer_keywords:
 - .NET Native
 - C# and native compilation
 ms.assetid: 47cd5648-9469-4b1d-804c-43cc04384045
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5993cfdb0f50d8e474a4f18280d181d9ec2fdfa4
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 1f176e81905fe68c6d740a13240fe814659a7a59
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049662"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128382"
 ---
 # <a name="compiling-apps-with-net-native"></a>.NET Yerel ile Uygulama Derleme
 
@@ -56,7 +54,7 @@ Ancak .NET Native yerel koda bir derlemeden daha fazlasını içerir. .NET Frame
 |-|----------------------------------------------------------------|-----------|
 |Kitaplıklar|.NET Framework + Windows Çalışma Zamanı|Win32 + Windows Çalışma Zamanı|
 |Derleyici|UTC iyileştirmeli derleyici|UTC iyileştirmeli derleyici|
-|Dağıtılan|Çalıştırılmaya hazırlama ikilileri|Çalıştırılmaya hazırlama ikilileri (ASM)|
+|dağıtılan|Çalıştırılmaya hazırlama ikilileri|Çalıştırılmaya hazırlama ikilileri (ASM)|
 |Çalışma zamanı|MRT. dll (minimum CLR Runtime)|CRT. dll (C çalışma zamanı)|
 
 Windows 10 için Windows uygulamaları için, uygulama paketlerinde (. appx dosyaları) .NET Native kod derleme ikililerini Windows Mağazası 'na yüklersiniz.
@@ -65,7 +63,7 @@ Windows 10 için Windows uygulamaları için, uygulama paketlerinde (. appx dosy
 
 .NET Native kod derlemesi ile uygulama geliştirme hakkında daha fazla bilgi için şu konulara bakın:
 
-- [.NET Native kodu derleme ile çalışmaya başlama: Geliştirici deneyimi Kılavuzu](getting-started-with-net-native.md)
+- [.NET Native kod derleme ile çalışmaya başlama: geliştirici deneyimi Kılavuzu](getting-started-with-net-native.md)
 
 - [.NET Native ve derleme:](net-native-and-compilation.md) .NET Native projenizi yerel koda nasıl derler.
 

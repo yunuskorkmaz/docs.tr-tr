@@ -12,19 +12,17 @@ api_type:
 ms.assetid: cf7a0e00-06ae-47a5-8037-598b26196802
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6e890629f307e3d3cff11dabdb2db90a5e88ece5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: df9859f33b4146486a046253cf4705cd19c66adf
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61995559"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131089"
 ---
 # <a name="icordebugilcodegetehclauses-method"></a>ICorDebugILCode::GetEHClauses Metodu
-[.NET Framework 4.5.2 ve sonraki sürümlerinde desteklenen]  
+[.NET Framework 4.5.2 ve sonraki sürümlerde desteklenir]  
   
- Özel durum işleme bu Ara dil (IL) için tanımlanan (EH) yan tümceleri listesine bir işaretçi döndürür.  
+ Bu ara dil (IL) için tanımlanan özel durum işleme (EH) yan tümceleri listesine yönelik bir işaretçi döndürür.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,25 +35,25 @@ HRESULT GetEHClauses(
   
 ## <a name="parameters"></a>Parametreler  
  `cClauses`  
- [in] Depolama kapasitesini `clauses` dizisi. Daha fazla bilgi için Açıklamalar bölümüne bakın.  
+ 'ndaki `clauses` dizisinin depolama kapasitesi. Daha fazla bilgi için Açıklamalar bölümüne bakın.  
   
  `pcClauses`  
- [out] Hangi bilgilerin yazıldığını için yan tümceler sayısını `clauses` dizisi.  
+ dışı `clauses` dizisine hangi bilgilerin yazıldığı hakkında yan tümceler sayısı.  
   
- Yan tümceleri  
- [out] Bir dizi [CorDebugEHClause](../../../../docs/framework/unmanaged-api/debugging/cordebugehclause-structure.md) özel durum işleme için bu IL tanımlanan yan tümceleri hakkında bilgi içeren nesne.  
+ yan  
+ dışı Bu Il için tanımlanan özel durum işleme yan tümceleri hakkında bilgi içeren bir [corhata ayıklama Gehclause](../../../../docs/framework/unmanaged-api/debugging/cordebugehclause-structure.md) nesneleri dizisi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Varsa `cClauses` 0'dır ve `pcClauses` olan olmayan**null**, `pcClauses` kullanılabilir özel durum yan tümceleri işleme sayısını ayarlayın. Varsa `cClauses` sıfır olan depolama kapasitesini temsil ettiği `clauses` dizisi. Yöntem döndürüldüğünde `clauses` en çok içeren `cClauses` öğeleri ve `pcClauses` gerçekte yazılan yan tümceleri sayısına ayarlayın `clauses` dizisi.  
+ `cClauses` 0 ise ve `pcClauses`**null**değilse, `pcClauses` kullanılabilir özel durum işleme yan tümceleri sayısına ayarlanır. Sıfır olmayan `cClauses`, `clauses` dizisinin depolama kapasitesini temsil eder. Yöntemi döndürüldüğünde, `clauses` en fazla `cClauses` öğesi içerir ve `pcClauses` aslında `clauses` dizisine yazılmış yan tümce sayısına ayarlanır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -6,33 +6,31 @@ f1_keywords:
 helpviewer_keywords:
 - PrintPreviewDialog control (using designer), about PrintPreviewDialog
 ms.assetid: efd4ee8d-6edd-47ec-88e4-4a4759bd2384
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: dce6bf9cb9872183e60e6ccdf7eaf79b6630db51
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 670886956e1b348895862c117ccf9cf586bde8bb
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66053689"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141224"
 ---
-# <a name="printpreviewdialog-control-overview-windows-forms"></a>PrintPreviewDialog denetimine genel bakış (Windows Forms)
+# <a name="printpreviewdialog-control-overview-windows-forms"></a>Printönizleme Iletişim kutusu denetimine genel bakış (Windows Forms)
 
-Windows Forms <xref:System.Windows.Forms.PrintPreviewDialog> denetimidir görüntülemek için kullanılan bir önceden yapılandırılmış bir iletişim kutusu nasıl bir [PrintDocument](printdocument-component-windows-forms.md) yazdırıldığında görünür. Windows tabanlı uygulamanızda kendi iletişim kutusu yapılandırmak yerine basit bir çözüm olarak kullanın. Yazdırma ve yakınlaştırma, bir veya birden çok sayfa görüntüleme ve iletişim kutusunu kapatmak için düğme denetimi içerir.
+Windows Forms <xref:System.Windows.Forms.PrintPreviewDialog> denetimi, yazdırıldığında bir [PrintDocument](printdocument-component-windows-forms.md) 'ın nasıl görüneceğini göstermek için kullanılan önceden yapılandırılmış bir iletişim kutusudur. Kendi iletişim kutusunu yapılandırmak yerine, bunu Windows tabanlı uygulamanızda basit bir çözüm olarak kullanın. Denetim, yazdırma, yakınlaştırma, bir veya birden çok sayfa görüntüleme ve iletişim kutusunu kapatma düğmelerini içerir.
 
 ## <a name="key-properties-and-methods"></a>Anahtar özellikleri ve yöntemleri
 
-Denetimin anahtar özelliği <xref:System.Windows.Forms.PrintPreviewDialog.Document%2A>, belgenin önizlemesi için ayarlar. Belge olmalıdır bir <xref:System.Drawing.Printing.PrintDocument> nesne. İletişim kutusunu görüntülemek için çağırmalıdır kendi <xref:System.Windows.Forms.Form.ShowDialog%2A> yöntemi. Daha sorunsuz yükseltmelere görünen metin düzgünleştirme yapabilirsiniz, ancak daha yavaş görünen yapabilirsiniz; Bunu kullanmak için ayarlanmış <xref:System.Windows.Forms.PrintPreviewDialog.UseAntiAlias%2A> özelliğini `true`.
+Denetimin anahtar özelliği, belgeyi önizlenen olarak ayarlayan <xref:System.Windows.Forms.PrintPreviewDialog.Document%2A>. Belge bir <xref:System.Drawing.Printing.PrintDocument> nesnesi olmalıdır. İletişim kutusunu göstermek için <xref:System.Windows.Forms.Form.ShowDialog%2A> yöntemini çağırmanız gerekir. Kenar yumuşatma, metnin daha düzgün görünmesine neden olabilir, ancak aynı zamanda ekranı daha yavaş hale getirir; kullanmak için <xref:System.Windows.Forms.PrintPreviewDialog.UseAntiAlias%2A> özelliğini `true`olarak ayarlayın.
 
-Bazı özellikler aracılığıyla kullanılabilir <xref:System.Windows.Forms.PrintPreviewControl> , <xref:System.Windows.Forms.PrintPreviewDialog> içerir. (Bunu eklemek zorunda değilsiniz <xref:System.Windows.Forms.PrintPreviewControl> forma; bunu otomatik olarak içerdiği <xref:System.Windows.Forms.PrintPreviewDialog> formunuza iletişim kutusu eklediğinizde,.) Aracılığıyla kullanılabilen özellikleri örnekleri <xref:System.Windows.Forms.PrintPreviewControl> olan <xref:System.Windows.Forms.PrintPreviewControl.Columns%2A> ve <xref:System.Windows.Forms.PrintPreviewControl.Rows%2A> denetimde yatay ve dikey olarak görüntülenen sayfa sayısını belirleyen özellikleri. Erişebildiğiniz <xref:System.Windows.Forms.PrintPreviewControl.Columns%2A> özelliği olarak `PrintPreviewDialog1.PrintPreviewControl.Columns` Visual Basic'te `printPreviewDialog1.PrintPreviewControl.Columns` görselde C#, veya `printPreviewDialog1->PrintPreviewControl->Columns` görselde C++.
+Bazı özellikler <xref:System.Windows.Forms.PrintPreviewDialog> içeren <xref:System.Windows.Forms.PrintPreviewControl> ile kullanılabilir. (Bu <xref:System.Windows.Forms.PrintPreviewControl> forma eklemeniz gerekmez; iletişim kutusunu formunuza eklediğinizde otomatik olarak <xref:System.Windows.Forms.PrintPreviewDialog> içinde yer alır.) <xref:System.Windows.Forms.PrintPreviewControl> aracılığıyla kullanılabilen özelliklerin örnekleri, denetimde yatay ve dikey olarak görüntülenen sayfa sayısını belirleyen <xref:System.Windows.Forms.PrintPreviewControl.Columns%2A> ve <xref:System.Windows.Forms.PrintPreviewControl.Rows%2A> özelliklerdir. <xref:System.Windows.Forms.PrintPreviewControl.Columns%2A> özelliğine Visual Basic, görselde C#`printPreviewDialog1.PrintPreviewControl.Columns` veya görselde C++`printPreviewDialog1->PrintPreviewControl->Columns` `PrintPreviewDialog1.PrintPreviewControl.Columns` olarak erişebilirsiniz.
 
-## <a name="printpreviewdialog-performance"></a>PrintPreviewDialog performans
+## <a name="printpreviewdialog-performance"></a>Printönizleme Iletişim kutusu performansı
 
-Aşağıdaki koşullarda <xref:System.Windows.Forms.PrintPreviewDialog> denetimi çok yavaş başlatır:
+Aşağıdaki koşullarda <xref:System.Windows.Forms.PrintPreviewDialog> denetimi çok yavaş başlatılır:
 
-- Ağ yazıcısı kullanılır.
-- Çift yönlü ayarları gibi bu yazıcı için kullanıcı tercihlerini değiştirilir.
+- Bir ağ yazıcısı kullanılır.
+- Bu yazıcı için çift yönlü ayarlar gibi Kullanıcı tercihleri değiştirilir.
 
-.NET Framework 4.5.2 üzerinde çalışan uygulamalar için aşağıdaki anahtara ekleyebilirsiniz \<appSettings > performansını artırmak için yapılandırma dosyasının <xref:System.Windows.Forms.PrintPreviewDialog> başlatma denetimi:
+.NET Framework 4.5.2 üzerinde çalışan uygulamalar için, <xref:System.Windows.Forms.PrintPreviewDialog> denetimi başlatma performansını geliştirmek için yapılandırma dosyanızın \<appSettings > bölümüne aşağıdaki anahtarı ekleyebilirsiniz:
 
 ```xml
 <appSettings>
@@ -40,9 +38,9 @@ Aşağıdaki koşullarda <xref:System.Windows.Forms.PrintPreviewDialog> denetimi
 </appSettings>
 ```
 
-Varsa `EnablePrintPreviewOptimization` ayarlayan başka bir değer veya anahtar mevcut değilse, en iyi duruma getirme uygulanmaz.
+`EnablePrintPreviewOptimization` anahtarı başka bir değere ayarlandıysa veya anahtar yoksa, iyileştirme uygulanmaz.
 
-.NET Framework 4.6 veya sonraki sürümler üzerinde çalışan uygulamalar için aşağıdaki anahtara ekleyebilirsiniz [ \<AppContextSwitchOverrides >](../../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) öğesinde [ \<çalışma zamanı >](../../configure-apps/file-schema/runtime/index.md) Uygulama yapılandırma dosyanızı bölümü:
+.NET Framework 4,6 veya sonraki sürümlerde çalışan uygulamalar için, uygulama yapılandırma dosyanızın [\<runtime >](../../configure-apps/file-schema/runtime/index.md) bölümünde yer alan [\<AppContextSwitchOverrides >](../../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) öğesine aşağıdaki anahtarı ekleyebilirsiniz:
 
 ```xml
 <runtime >
@@ -51,9 +49,9 @@ Varsa `EnablePrintPreviewOptimization` ayarlayan başka bir değer veya anahtar 
 </runtime >
 ```
 
-Anahtar mevcut değilse veya diğer herhangi bir değere ayarlarsanız, iyileştirme uygulanmaz.
+Anahtar yoksa veya başka bir değere ayarlandıysa, iyileştirme uygulanmaz.
 
-Kullanırsanız <xref:System.Drawing.Printing.PrintDocument.QueryPageSettings> performansını yazıcı ayarlarını değiştirmek için olay <xref:System.Windows.Forms.PrintPreviewDialog> denetimi değil artıracak bir iyileştirme yapılandırma anahtarı olarak ayarlanmış olsa bile.
+Yazıcı ayarlarını değiştirmek için <xref:System.Drawing.Printing.PrintDocument.QueryPageSettings> olayını kullanırsanız, bir iyileştirme yapılandırma anahtarı ayarlanmış olsa bile <xref:System.Windows.Forms.PrintPreviewDialog> denetiminin performansı geliştirilecektir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

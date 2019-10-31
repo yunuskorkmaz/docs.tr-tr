@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: fe248069-b33c-48e1-a777-06ac9b239c54
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3d9dc94689083d79858319387747eb9dafe8b2f6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6c73afb00cbd104cff3d310d1369097b459c131e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739565"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133681"
 ---
 # <a name="cordebugstepreason-enumeration"></a>CorDebugStepReason Numaralandırması
-Bir adımın sonucunu gösterir.  
+Tek bir adımın sonucunu gösterir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -44,22 +42,22 @@ typedef enum CorDebugStepReason {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`STEP_NORMAL`|Adımlama, normalde, aynı işlevin içinde tamamlandı.|  
-|`STEP_RETURN`|İşlev sonra Adımlama normal olarak devam.|  
-|`STEP_CALL`|Adımlama normalde, yeni çağrılan bir işlevin başında devam eder.|  
-|`STEP_EXCEPTION_FILTER`|Bir özel durum oluşturuldu ve özel durum filtresi için denetimi geçildi.|  
-|`STEP_EXCEPTION_HANDLER`|Bir özel durum oluşturuldu ve bir özel durum işleyicisine denetimi geçildi.|  
-|`STEP_INTERCEPT`|Denetim için bir dinleyiciyi geçirildi.|  
-|`STEP_EXIT`|İş parçacığı adımı tamamlanmadan önce çıkıldı.|  
+|`STEP_NORMAL`|Adımlama, aynı işlev içinde normal şekilde tamamlandı.|  
+|`STEP_RETURN`|İşlev çağrıldıktan sonra normal şekilde çalışmaya devam eder.|  
+|`STEP_CALL`|Yeni çağrılan bir işlevin başlangıcında, Adımlama normal şekilde devam eder.|  
+|`STEP_EXCEPTION_FILTER`|Bir özel durum oluşturuldu ve denetim bir özel durum filtresine geçirildi.|  
+|`STEP_EXCEPTION_HANDLER`|Özel durum oluşturuldu ve denetim özel durum işleyicisine geçirildi.|  
+|`STEP_INTERCEPT`|Denetim bir yakalayıcıyı geçti.|  
+|`STEP_EXIT`|İş parçacığı, adım tamamlanmadan önce çıktı.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

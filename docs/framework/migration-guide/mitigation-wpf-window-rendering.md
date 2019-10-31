@@ -1,17 +1,15 @@
 ---
-title: Mayı WPF Pencere Işleme
+title: 'Azaltma: WPF Penceresi İşleme'
 ms.date: 03/30/2017
 ms.assetid: 28ed6bf8-141b-4b73-a4e3-44a99fae5084
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 13091c06561da24d2fc03f810fd8b8687b21d9a4
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 374f24ff8a66f689fbd6ca635905ba73bc9e0450
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70789794"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73126096"
 ---
-# <a name="mitigation-wpf-window-rendering"></a>Mayı WPF Pencere Işleme
+# <a name="mitigation-wpf-window-rendering"></a>Azaltma: WPF Penceresi İşleme
 
 Windows 8 ve üzeri sürümlerde çalışan .NET Framework 4,6 ' de, tüm pencere, birden çok izleyici senaryosunda tek bir görüntü dışına genişlemediğinde kırpma olmadan işlenir.
 
@@ -25,7 +23,7 @@ WPF pencerelerini Windows 8 ve üzeri sürümlerde izlemenin kesin etkileri, ço
 
 Bu değişikliği devre dışı bırakabilir ve tek bir görüntüleme ötesinde bir WPF penceresinin kırpılması için önceki davranışa geri dönebilir. Bunu yapmak için iki yol vardır:
 
-- Uygulama yapılandırma dosyanızın `<EnableMultiMonitorDisplayClipping>` `<appSettings>` bölümüne öğesi eklenerek, Windows 8 veya üzeri sürümlerde çalışan uygulamalarda bu davranışı etkinleştirebilir veya devre dışı bırakabilirsiniz. Örneğin, aşağıdaki yapılandırma bölümü kırpma olmadan işlemeyi devre dışı bırakır:
+- Uygulama yapılandırma dosyanızın `<appSettings>` bölümüne `<EnableMultiMonitorDisplayClipping>` öğesini ekleyerek, Windows 8 veya üzeri sürümlerde çalışan uygulamalarda bu davranışı devre dışı bırakabilir veya etkinleştirebilirsiniz. Örneğin, aşağıdaki yapılandırma bölümü kırpma olmadan işlemeyi devre dışı bırakır:
 
   ```xml
   <appSettings>
@@ -33,13 +31,13 @@ Bu değişikliği devre dışı bırakabilir ve tek bir görüntüleme ötesinde
     </appSettings>
   ```
 
-  `<EnableMultiMonitorDisplayClipping>` Yapılandırma ayarı iki değerden birini içerebilir:
+  `<EnableMultiMonitorDisplayClipping>` yapılandırma ayarı iki değerden birini içerebilir:
 
   - `true`, işleme sırasında sınırları izlemek üzere Windows 'un kırpılmasını etkinleştirmek için.
 
-  - `false`, işleme sırasında sınırları izlemek üzere Windows 'un kırpılmasını devre dışı bırakmak için.
+  - işleme sırasında sınırları izlemek üzere Windows 'un kırpılmasını devre dışı bırakmak için `false`.
 
-- Uygulama başlangıcında <xref:System.Windows.CoreCompatibilityPreferences.EnableMultiMonitorDisplayClipping%2A> özelliğini olarak `true` ayarlayarak.
+- <xref:System.Windows.CoreCompatibilityPreferences.EnableMultiMonitorDisplayClipping%2A> özelliğini uygulama başlangıcında `true` olarak ayarlayarak.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

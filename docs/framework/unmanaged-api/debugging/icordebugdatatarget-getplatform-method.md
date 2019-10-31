@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9ee96c9d-7a3d-4129-a6cc-7675c7f2dda4
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1065c8d710ddbd6088ee0db694a43e098564e707
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5715f0634346dd0c6591cfe5687690aa0fba95f1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67750383"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125311"
 ---
 # <a name="icordebugdatatargetgetplatform-method"></a>ICorDebugDataTarget::GetPlatform Metodu
-İşlemci mimarisi ve hedef işlem üzerinde çalıştığı işletim sistemi dahil olmak üzere platform hakkında bilgi sağlar.  
+Hedef işlemin çalıştığı işlemci mimarisi ve işletim sistemi dahil olmak üzere platform hakkında bilgi sağlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -35,27 +33,27 @@ HRESULT GetPlatform([out] CorDebugPlatform * pTargetPlatform);
   
 ## <a name="parameters"></a>Parametreler  
  `pTargetPlatform`  
- [out] Bir işaretçi bir [CorDebugPlatformEnum](../../../../docs/framework/unmanaged-api/debugging/cordebugplatform-enumeration.md) hedef platform açıklayan sabit listesi.  
+ dışı Hedef platformu açıklayan [CorDebugPlatformEnum](../../../../docs/framework/unmanaged-api/debugging/cordebugplatform-enumeration.md) numaralandırması için bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `CorDebugPlatformEnum` Numaralandırma dönüş değeri tarafından kullanılan [Icordebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) arabirimi, işaretçi boyutu, adres alanı düzeni, kayıt kümesi, yönerge biçimi, içerik düzeni, hedef işlemin ayrıntılarını belirlemek için ve çağırma kuralları.  
+ `CorDebugPlatformEnum` numaralandırma dönüş değeri [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) arabirimi tarafından, işaretçi boyutu, adres alanı düzeni, YAZMAÇ kümesi, yönerge biçimi, bağlam düzeni ve çağırma kuralları gibi hedef işlemin ayrıntılarını belirlemede kullanılır.  
   
- `pTargetPlatform` Değeri, gerçek donanım kullanımda belirtmek yerine hedef için benzetilmiş bir platforma başvurabilir. Örneğin, Windows (WOW) ortamında Windows 64-bit Windows işletim sistemi sürümünde çalışan bir işlemin kullanmalıdır `CORDB_PLATFORM_WINDOWS_X86` değerini [CorDebugPlatformEnum](../../../../docs/framework/unmanaged-api/debugging/cordebugplatform-enumeration.md) sabit listesi.  
+ `pTargetPlatform` değeri, kullanımdaki gerçek donanımı belirtmek yerine, hedef için Öykünülen bir platforma başvurabilir. Örneğin, Windows işletim sisteminin 64 bitlik bir sürümünde Windows on Windows (WOW) ortamında çalışan bir işlem [CorDebugPlatformEnum](../../../../docs/framework/unmanaged-api/debugging/cordebugplatform-enumeration.md) numaralandırmasının `CORDB_PLATFORM_WINDOWS_X86` değerini kullanmalıdır.  
   
- Bu yöntem başarılı olması gerekir. Başarısız olursa, hedef platform kullanılamaz. Yöntemi, aşağıdaki nedenlerden dolayı başarısız olabilir:  
+ Bu yöntem başarılı olmalıdır. Başarısız olursa, hedef platform kullanılamaz olur. Yöntemi aşağıdaki nedenlerden dolayı başarısız olabilir:  
   
-- Hedef benzetilip benzetilmediğini platformu kullanılamıyor.  
+- Hedef için Öykünülen platform kullanılamıyor.  
   
-- Gerçek donanım hedef platformda kullanılamaz.  
+- Hedef Platformdaki gerçek donanım kullanılamaz.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

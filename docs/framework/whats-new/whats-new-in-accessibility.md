@@ -7,14 +7,12 @@ dev_langs:
 - vb
 helpviewer_keywords:
 - what's new [.NET Framework]
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: cfea1d5ee19d9fb61094b60e0175ddfd2f120494
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 150b8458828b1c0f42fc4cb0980a8ff090a89e2a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774278"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140654"
 ---
 # <a name="whats-new-in-accessibility-in-the-net-framework"></a>.NET Framework erişilebilirlik yenilikleri
 
@@ -179,25 +177,25 @@ Aşağıdaki şekilde, Kullanıcı klavyeyle bir düğme seçtiğinde araç ipuc
 
 **Ekran anlayıcıları artık daraltılmış veya gizli görünürlüğe sahip öğeleri duyurmayacak**
 
-Daraltılmış veya gizli görünürlüğe sahip öğeler artık ekran okuyucu tarafından duyurulmaz. @No__t_0 veya <xref:System.Windows.Visibility.Hidden?displayProperty=nameWithType> görünürlüğü olan öğeleri içeren kullanıcı arabirimleri, kullanıcıya duyurduklarında ekran okuyucular tarafından yanlış temsil edilebilir. .NET Framework 4,8 ' den itibaren, WPF artık UIAutomation ağacının denetim görünümünde daraltılmış veya gizli öğeleri içermez, bu nedenle ekran okuyucular artık bu öğeleri duyurabilir.
+Daraltılmış veya gizli görünürlüğe sahip öğeler artık ekran okuyucu tarafından duyurulmaz. <xref:System.Windows.Visibility.Collapsed?displayProperty=nameWithType> veya <xref:System.Windows.Visibility.Hidden?displayProperty=nameWithType> görünürlüğü olan öğeleri içeren kullanıcı arabirimleri, kullanıcıya duyurduklarında ekran okuyucular tarafından yanlış temsil edilebilir. .NET Framework 4,8 ' den itibaren, WPF artık UIAutomation ağacının denetim görünümünde daraltılmış veya gizli öğeleri içermez, bu nedenle ekran okuyucular artık bu öğeleri duyurabilir.
 
 **Adorner tabanlı metin seçimiyle kullanılacak SelectionTextBrush özelliği**
 
 .NET Framework 4.7.2, WPF, donatıcı katmanını kullanmadan <xref:System.Windows.Controls.TextBox> ve <xref:System.Windows.Controls.PasswordBox> metin seçimi çizmenize olanak tanır. Bu senaryodaki seçili metnin ön plan rengi <xref:System.Windows.SystemColors.HighlightTextBrush?displayProperty=nameWithType> tarafından dikte edildi.
 
-.NET Framework 4,8 yeni bir özellik ekler, `SelectionTextBrush`, bu, donatıcı olmayan metin seçimi kullanılırken geliştiricilerin seçili metin için belirli fırçayı seçmesine olanak tanır. Bu özellik yalnızca <xref:System.Windows.Controls.Primitives.TextBoxBase> türetilmiş denetimlerde ve donatıcı tabanlı metin seçimi etkinleştirilmiş WPF uygulamalarında <xref:System.Windows.Controls.PasswordBox> denetiminde geçerlidir. @No__t_0 denetimi üzerinde çalışmaz. Adorner tabanlı olmayan metin seçimi etkinleştirilmemişse, bu özellik yok sayılır.
+.NET Framework 4,8 yeni bir özellik ekler, `SelectionTextBrush`, bu, donatıcı olmayan metin seçimi kullanılırken geliştiricilerin seçili metin için belirli fırçayı seçmesine olanak tanır. Bu özellik yalnızca <xref:System.Windows.Controls.Primitives.TextBoxBase> türetilmiş denetimlerde ve donatıcı tabanlı metin seçimi etkinleştirilmiş WPF uygulamalarında <xref:System.Windows.Controls.PasswordBox> denetiminde geçerlidir. <xref:System.Windows.Controls.RichTextBox> denetimi üzerinde çalışmaz. Adorner tabanlı olmayan metin seçimi etkinleştirilmemişse, bu özellik yok sayılır.
 
 Bu özelliği kullanmak için XAML kodunuza eklemeniz ve uygun fırçayı ya da bağlamayı kullanmanız yeterlidir. Ortaya çıkan metin seçimi şöyle görünür:
 
 ![Kullanıcı klavyeyle bir düğmeye gittiğinde araç ipucu](./media/selectiontextbrush-property.png)
 
-@No__t_0 ve `SelectionTextBrush` özelliklerinin kullanımını, uygun olmayan herhangi bir arka plan ve ön plan renk kombinasyonu oluşturmak için birleştirebilirsiniz.
+`SelectionBrush` ve `SelectionTextBrush` özelliklerinin kullanımını, uygun olmayan herhangi bir arka plan ve ön plan renk kombinasyonu oluşturmak için birleştirebilirsiniz.
 
 **Özelliği Için UIAutomation Controllersupport desteği**
 
 UIAutomation 'ın `ControllerFor` özelliği, bu özelliği destekleyen Otomasyon öğesi tarafından yönetilen bir Otomasyon öğeleri dizisini döndürür. Bu özellik genellikle otomatik öneri erişilebilirliği için kullanılır. `ControllerFor`, bir Otomasyon öğesi uygulama kullanıcı arabirimi veya masaüstünün bir veya daha fazla kesimini etkiliyorsa kullanılır. Aksi takdirde, denetim işleminin etkisini UI öğeleriyle ilişkilendirmek zordur. Bu özellik denetimlerin `ControllerFor` özelliği için bir değer sağlamasına olanak sağlar.
 
-.NET Framework 4,8, <xref:System.Windows.Automation.Peers.AutomationPeer.GetControlledPeersCore?displayProperty=nameWithType?displayProperty=nameWithType> yeni bir sanal yöntem ekler. @No__t_0 özelliğine bir değer sağlamak için bu yöntemi geçersiz kılın ve bu <xref:System.Windows.Automation.Peers.AutomationPeer> tarafından geçirilmekte olan denetimler için bir `List<AutomationPeer>` döndürün:
+.NET Framework 4,8, <xref:System.Windows.Automation.Peers.AutomationPeer.GetControlledPeersCore?displayProperty=nameWithType?displayProperty=nameWithType> yeni bir sanal yöntem ekler. `ControllerFor` özelliğine bir değer sağlamak için bu yöntemi geçersiz kılın ve bu <xref:System.Windows.Automation.Peers.AutomationPeer>tarafından geçirilmekte olan denetimler için bir `List<AutomationPeer>` döndürün:
 
 ```csharp
 public class AutoSuggestTextBox: TextBox
@@ -247,7 +245,7 @@ Bu özelliği etkinleştirmek için bir uygulamanın, `Switch.UseLegacyAccessibi
 Etkinleştirildikten sonra, araç ipucu içeren tüm denetimler, denetim klavye odağını aldıktan sonra bunu görüntüler. Araç ipucu zaman içinde veya klavye odağı değiştiğinde kapatılabilir. Kullanıcılar araç ipucunu, CTRL + SHIFT + F10 yeni klavye kısayolunu kullanarak el ile de kapatabilir. Araç ipucu kapatıldıktan sonra, aynı klavye kısayolu kullanılarak yeniden görüntülenebilir.
 
 > [!NOTE]
-> @No__t_1 denetimlerindeki [Şerit Araç ipuçları](xref:System.Windows.Controls.Ribbon.RibbonToolTip) klavye odağında gösterilmez; yalnızca klavye kısayolu aracılığıyla gösterilir.
+> <xref:System.Windows.Controls.Ribbon.Ribbon> denetimlerindeki [Şerit Araç ipuçları](xref:System.Windows.Controls.Ribbon.RibbonToolTip) klavye odağında gösterilmez; yalnızca klavye kısayolu aracılığıyla gösterilir.
 
 **SizeOfSet ve Positionınset UIAutomation özellikleri için destek eklendi**
 
@@ -272,7 +270,7 @@ Windows 10, uygulamalar tarafından bir küme içindeki öğelerin sayısını a
 
 - AutomationPeer sanal yöntemlerini geçersiz kılarak.
 
-  @No__t_0 ve <xref:System.Windows.Automation.Peers.AutomationPeer.GetPositionInSetCore> sanal yöntemleri AutomationPeer sınıfına eklenmiştir. Bir geliştirici, aşağıdaki örnekte gösterildiği gibi, bu yöntemleri geçersiz kılarak `SizeOfSet` ve `PositionInSet` için değerler verebilir:
+  <xref:System.Windows.Automation.Peers.AutomationPeer.GetSizeOfSetCore> ve <xref:System.Windows.Automation.Peers.AutomationPeer.GetPositionInSetCore> sanal yöntemleri AutomationPeer sınıfına eklenmiştir. Bir geliştirici, aşağıdaki örnekte gösterildiği gibi, bu yöntemleri geçersiz kılarak `SizeOfSet` ve `PositionInSet` için değerler verebilir:
 
   ```csharp
   public class MyButtonAutomationPeer : ButtonAutomationPeer
@@ -337,15 +335,15 @@ Uygulamanız .NET Framework 4.7.2 veya daha önceki bir sürümü hedefliyorsa, 
 
 .NET Framework 4.7.2 ile başlayarak, Windows Forms Yüksek Karşıtlık temalarda işletim sistemi tarafından tanımlanan renkleri kullanır. Bu, aşağıdaki denetimleri etkiler:
 
-- @No__t_0 denetiminin aşağı açılan oku.
+- <xref:System.Windows.Forms.ToolStripDropDownButton> denetiminin aşağı açılan oku.
 
-- @No__t_0, <xref:System.Windows.Forms.RadioButton> ve <xref:System.Windows.Forms.CheckBox>, <xref:System.Windows.Forms.ButtonBase.FlatStyle> <xref:System.Windows.Forms.FlatStyle.Flat?displayProperty=nameWithType> veya <xref:System.Windows.Forms.FlatStyle.Popup?displayProperty=nameWithType> olarak ayarlanan denetimleri denetler. Daha önce, seçilen metin ve arka plan renkleri çok sevmiyor ve okunması zor.
+- <xref:System.Windows.Forms.Button>, <xref:System.Windows.Forms.RadioButton> ve <xref:System.Windows.Forms.CheckBox>, <xref:System.Windows.Forms.ButtonBase.FlatStyle> <xref:System.Windows.Forms.FlatStyle.Flat?displayProperty=nameWithType> veya <xref:System.Windows.Forms.FlatStyle.Popup?displayProperty=nameWithType>olarak ayarlanan denetimleri denetler. Daha önce, seçilen metin ve arka plan renkleri çok sevmiyor ve okunması zor.
 
-- @No__t_1 özelliği `false` olarak ayarlanmış bir <xref:System.Windows.Forms.GroupBox> içinde içerilen denetimler.
+- <xref:System.Windows.Forms.Control.Enabled> özelliği `false`olarak ayarlanmış bir <xref:System.Windows.Forms.GroupBox> içinde içerilen denetimler.
 
-- @No__t_0, <xref:System.Windows.Forms.ToolStripComboBox> ve <xref:System.Windows.Forms.ToolStripDropDownButton> denetimleri, Yüksek Karşıtlık modunda daha fazla parlaklık kontrast oranına sahiptir.
+- <xref:System.Windows.Forms.ToolStripButton>, <xref:System.Windows.Forms.ToolStripComboBox>ve <xref:System.Windows.Forms.ToolStripDropDownButton> denetimleri, Yüksek Karşıtlık modunda daha fazla parlaklık kontrast oranına sahiptir.
 
-- @No__t_1 <xref:System.Windows.Forms.DataGridViewLinkCell.LinkColor> özelliği.
+- <xref:System.Windows.Forms.DataGridViewLinkCell><xref:System.Windows.Forms.DataGridViewLinkCell.LinkColor> özelliği.
 
 **Ekran okuyucusu geliştirmeleri**
 
@@ -355,7 +353,7 @@ Uygulamanız .NET Framework 4.7.2 veya daha önceki bir sürümü hedefliyorsa, 
 
 - Bir <xref:System.Windows.Forms.ToolStripMenuItem> <xref:System.Windows.Forms.Control.Enabled> özelliğinin `false` olarak ayarlandığını gösterir.
 
-- @No__t_0 özelliği `true` olarak ayarlandığında onay kutusunun durumu hakkında geri bildirim sağlar.
+- <xref:System.Windows.Forms.ListView.CheckBoxes?displayProperty=nameWithType> özelliği `true`olarak ayarlandığında onay kutusunun durumu hakkında geri bildirim sağlar.
 
 - Ekran okuyucusu 'nun tarama modu odak sırası, ClickOnce indirme iletişim kutusu penceresindeki denetimlerin görsel sırasıyla tutarlıdır.
 
@@ -365,7 +363,7 @@ Uygulamanız .NET Framework 4.7.2 veya daha önceki bir sürümü hedefliyorsa, 
 
 - Satırlar klavye kullanılarak sıralanabilir. Kullanıcı, geçerli sütuna göre sıralamak için F3 tuşunu kullanabilir.
 
-- @No__t_0, <xref:System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect?displayProperty=nameWithType> olarak ayarlandığında, sütun üst bilgisi, geçerli sütunu geçerli satırdaki hücrelerde Kullanıcı sekmeleri olarak göstermek için rengi değiştirir.
+- <xref:System.Windows.Forms.DataGridView.SelectionMode?displayProperty=nameWithType>, <xref:System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect?displayProperty=nameWithType>olarak ayarlandığında, sütun üst bilgisi, geçerli sütunu geçerli satırdaki hücrelerde Kullanıcı sekmeleri olarak göstermek için rengi değiştirir.
 
 - Bir <xref:System.Windows.Forms.DataGridViewLinkCell.DataGridViewLinkCellAccessibleObject?displayProperty=nameWithType> <xref:System.Windows.Forms.AccessibleObject.Parent?displayProperty=nameWithType> özelliği doğru üst denetimi döndürür.
 
@@ -375,13 +373,13 @@ Uygulamanız .NET Framework 4.7.2 veya daha önceki bir sürümü hedefliyorsa, 
 
 **Geliştirilmiş özellik Kılavuzu desteği**
 
-- @No__t_0 Control alt öğeleri artık yalnızca bir PropertyGrid öğesi etkinleştirildiğinde <xref:System.Windows.Automation.ValuePattern.IsReadOnlyProperty> özelliği için bir `true` döndürür.
+- <xref:System.Windows.Forms.PropertyGrid> Control alt öğeleri artık yalnızca bir PropertyGrid öğesi etkinleştirildiğinde <xref:System.Windows.Automation.ValuePattern.IsReadOnlyProperty> özelliği için bir `true` döndürür.
 
-- @No__t_0 Control alt öğeleri, yalnızca bir PropertyGrid öğesi Kullanıcı tarafından değiştirilebiliyorsa <xref:System.Windows.Automation.AutomationElement.IsEnabledProperty> özelliği için bir `false` döndürür.
+- <xref:System.Windows.Forms.PropertyGrid> Control alt öğeleri, yalnızca bir PropertyGrid öğesi Kullanıcı tarafından değiştirilebiliyorsa <xref:System.Windows.Automation.AutomationElement.IsEnabledProperty> özelliği için bir `false` döndürür.
 
 **Geliştirilmiş Klavye gezintisi**
 
-- @No__t_0 denetimi, <xref:System.Windows.Forms.ToolStripPanel.TabStop> özelliği olan bir <xref:System.Windows.Forms.ToolStripPanel> dahil edildiğinde odağa izin verir `true`
+- <xref:System.Windows.Forms.ToolStripButton> denetimi, <xref:System.Windows.Forms.ToolStripPanel.TabStop> özelliği olan bir <xref:System.Windows.Forms.ToolStripPanel> dahil edildiğinde odağa izin verir `true`
 
 <a name="wpf472"></a>
 
@@ -443,7 +441,7 @@ Canlı bölgeleri desteklemek için WPF 'e aşağıdaki API 'Ler eklenmiştir:
 
 - Bir **Livesetting** değeri sağlamak için geçersiz kılınabilen <xref:System.Windows.Automation.Peers.AutomationPeer.GetLiveSettingCore%2A?displayProperty=nameWithType> yöntemi.
 
-- @No__t_0 ve <xref:System.Windows.Automation.AutomationProperties.SetLiveSetting%2A?displayProperty=nameWithType> yöntemleri, bu da bir **Livesetting** değeri alır ve ayarlar.
+- <xref:System.Windows.Automation.AutomationProperties.GetLiveSetting%2A?displayProperty=nameWithType> ve <xref:System.Windows.Automation.AutomationProperties.SetLiveSetting%2A?displayProperty=nameWithType> yöntemleri, bu da bir **Livesetting** değeri alır ve ayarlar.
 
 - Aşağıdaki olası **livesetting** değerlerini tanımlayan <xref:System.Windows.Automation.AutomationLiveSetting?displayProperty=nameWithType> numaralandırması:
 
@@ -478,7 +476,7 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
 - <xref:System.Windows.Controls.Expander> denetimi
 
-  @No__t_0 denetimi için odak görseli artık görülebilir. @No__t_0, <xref:System.Windows.Controls.ListBox> ve <xref:System.Windows.Controls.RadioButton> denetimlerinin klavye görselleri de görünür. Örneğin:
+  <xref:System.Windows.Controls.Expander> denetimi için odak görseli artık görülebilir. <xref:System.Windows.Controls.ComboBox>,<xref:System.Windows.Controls.ListBox>ve <xref:System.Windows.Controls.RadioButton> denetimlerinin klavye görselleri de görünür. Örneğin:
 
   Sonra: 
 
@@ -490,7 +488,7 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
 - <xref:System.Windows.Controls.CheckBox> ve <xref:System.Windows.Controls.RadioButton> denetimleri
 
-  @No__t_0 ve <xref:System.Windows.Controls.RadioButton> denetimlerindeki metin artık yüksek karşıtlık temalarında seçilne zaman daha kolay görülebilir. Örneğin:
+  <xref:System.Windows.Controls.CheckBox> ve <xref:System.Windows.Controls.RadioButton> denetimlerindeki metin artık yüksek karşıtlık temalarında seçilne zaman daha kolay görülebilir. Örneğin:
 
   Sonra: 
 
@@ -573,7 +571,7 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
 Yüksek karşıtlıklı değişikliklere örnek olarak şunlar verilebilir:
 
-- @No__t_0 öğelerdeki onay işaretlerinin görünümü daha kolay.
+- <xref:System.Windows.Forms.MenuStrip> öğelerdeki onay işaretlerinin görünümü daha kolay.
 
 - Seçildiğinde devre dışı <xref:System.Windows.Forms.MenuStrip> öğeleri daha kolay görüntülenir.
 
@@ -595,11 +593,11 @@ Yüksek karşıtlıklı değişikliklere örnek olarak şunlar verilebilir:
 
 .NET Framework 4.7.1 Windows Forms, ekran okuyucusu için aşağıdaki erişilebilirlik geliştirmelerini içerir:
 
-- @No__t_0 denetimine, diğer UI Otomasyon Araçları ile birlikte ekran okuyucusu tarafından erişilebilir.
+- <xref:System.Windows.Forms.MonthCalendar> denetimine, diğer UI Otomasyon Araçları ile birlikte ekran okuyucusu tarafından erişilebilir.
 
-- @No__t_0 denetimi, bir öğenin denetim durumu değiştiğinde kullanıcıya bir liste öğesinin değerini değiştirdikleri bildirilir.
+- <xref:System.Windows.Forms.CheckedListBox> denetimi, bir öğenin denetim durumu değiştiğinde kullanıcıya bir liste öğesinin değerini değiştirdikleri bildirilir.
 
-- @No__t_0 denetim, doğru salt okuma durumunu ekran okuyucusuna bildirir.
+- <xref:System.Windows.Forms.DataGridViewCell> denetim, doğru salt okuma durumunu ekran okuyucusuna bildirir.
 
 - Ekran okuyucusu artık devre dışı <xref:System.Windows.Forms.ToolStripMenuItem> metnini okuyabilir, daha önce devre dışı menü öğelerini atlar.
 
@@ -607,13 +605,13 @@ Yüksek karşıtlıklı değişikliklere örnek olarak şunlar verilebilir:
 
 .NET Framework 4.7.1 ile başlayarak, erişilebilirlik teknolojisi araçları geliştiricileri, çeşitli WinForms denetimleri için ortak API erişilebilirlik desenlerinden ve özelliklerinden faydalanabilir. Bu erişilebilirlik geliştirmeleri şunları içerir:
 
-- @No__t_0 ve <xref:System.Windows.Forms.ToolStripSplitButton> artık [genişletme/daraltma düzenlerini](../ui-automation/implementing-the-ui-automation-expandcollapse-control-pattern.md)destekliyor.
+- <xref:System.Windows.Forms.ComboBox> ve <xref:System.Windows.Forms.ToolStripSplitButton> artık [genişletme/daraltma düzenlerini](../ui-automation/implementing-the-ui-automation-expandcollapse-control-pattern.md)destekliyor.
 
-- @No__t_0, [geçiş modelini](../ui-automation/implementing-the-ui-automation-toggle-control-pattern.md)artık destekliyor.
+- <xref:System.Windows.Forms.DataGridViewCheckBoxCell>, [geçiş modelini](../ui-automation/implementing-the-ui-automation-toggle-control-pattern.md)artık destekliyor.
 
-- @No__t_0 denetimi <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.Name> özelliğini ve [Genişlet/Daralt düzenlerini](../ui-automation/implementing-the-ui-automation-expandcollapse-control-pattern.md)destekler.
+- <xref:System.Windows.Forms.ToolStripItem> denetimi <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.Name> özelliğini ve [Genişlet/Daralt düzenlerini](../ui-automation/implementing-the-ui-automation-expandcollapse-control-pattern.md)destekler.
 
-- @No__t_0 ve <xref:System.Windows.Forms.DomainUpDown> denetimleri <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.Name> özelliğini destekler.
+- <xref:System.Windows.Forms.NumericUpDown> ve <xref:System.Windows.Forms.DomainUpDown> denetimleri <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.Name> özelliğini destekler.
 
 **Geliştirilmiş özellik tarayıcı deneyimi**
 
@@ -652,9 +650,9 @@ Bu geliştirmeler, klavye odağı sırası gibi önceki bazı davranışları de
 
 - Sekme sırası, bazı denetimlerde soldan sağa ve yukarıdan aşağıya değişir:
 
-  - @No__t_0 etkinliğinin bağıntı verilerini ayarlamaya yönelik bağıntı Başlat penceresi.
+  - <xref:System.ServiceModel.Activities.InitializeCorrelation> etkinliğinin bağıntı verilerini ayarlamaya yönelik bağıntı Başlat penceresi.
 
-  - @No__t_0, <xref:System.ServiceModel.Activities.Send>, <xref:System.ServiceModel.Activities.SendReply> ve <xref:System.ServiceModel.Activities.ReceiveReply> etkinlikleri için içerik tanımı penceresi.
+  - <xref:System.ServiceModel.Activities.Receive>, <xref:System.ServiceModel.Activities.Send>, <xref:System.ServiceModel.Activities.SendReply>ve <xref:System.ServiceModel.Activities.ReceiveReply> etkinlikleri için içerik tanımı penceresi.
 
 - Klavye aracılığıyla daha fazla işlev mevcuttur:
 
@@ -670,7 +668,7 @@ Bu geliştirmeler, klavye odağı sırası gibi önceki bazı davranışları de
 
   - İş Akışı Tasarımcısı ve etkinlik tasarımcıları tarafından kullanılan veri kılavuzlarına satır ekleme.
 
-  - @No__t_0 ve <xref:System.ServiceModel.Activities.SendReply> etkinliklerindeki alanlar arasında sekme.
+  - <xref:System.ServiceModel.Activities.ReceiveReply> ve <xref:System.ServiceModel.Activities.SendReply> etkinliklerindeki alanlar arasında sekme.
 
   - Değişkenler veya bağımsız değişkenler için varsayılan değerleri ayarlama
 
@@ -678,18 +676,18 @@ Bu geliştirmeler, klavye odağı sırası gibi önceki bazı davranışları de
 
   - İş akışı tasarımcısında ayarlanan kesme noktaları.
 
-  - @No__t_0, <xref:System.Activities.Statements.FlowDecision> ve <xref:System.ServiceModel.Activities.CorrelationScope> etkinlikleri.
-  - @No__t_0 etkinliğinin içeriği.
+  - <xref:System.Activities.Statements.FlowSwitch%601>, <xref:System.Activities.Statements.FlowDecision>ve <xref:System.ServiceModel.Activities.CorrelationScope> etkinlikleri.
+  - <xref:System.ServiceModel.Activities.Receive> etkinliğinin içeriği.
 
-  - @No__t_0 etkinliğinin hedef türü.
+  - <xref:System.Activities.Statements.InvokeMethod> etkinliğinin hedef türü.
 
-  - @No__t_0 etkinliğinin özel durum açılan kutusu ve finally bölümü.
+  - <xref:System.Activities.Statements.TryCatch> etkinliğinin özel durum açılan kutusu ve finally bölümü.
 
   - Ileti türü açılan kutusu, bağıntı başlatıcı ekleme penceresinde, Içerik tanımı penceresinde ve CorrelatesOn tanım penceresinde, ileti etkinliklerinin (<xref:System.ServiceModel.Activities.Receive>, <xref:System.ServiceModel.Activities.Send>, <xref:System.ServiceModel.Activities.SendReply> ve <xref:System.ServiceModel.Activities.ReceiveReply>) ayırıcı.
 
   - Durum makinesi geçişleri ve geçiş hedefleri.
 
-  - @No__t_0 etkinliklerde ek açıklamalar ve bağlayıcılar.
+  - <xref:System.Activities.Statements.FlowDecision> etkinliklerde ek açıklamalar ve bağlayıcılar.
 
   - Etkinlikler için bağlam (sağ tıklama) menüleri.
 
@@ -697,9 +695,9 @@ Bu geliştirmeler, klavye odağı sırası gibi önceki bazı davranışları de
 
   - İş Akışı Tasarımcısı yakınlaştırma yüzdesi.
 
-  - @No__t_0 ve <xref:System.Activities.Statements.Pick> etkinliklerinde ayırıcı.
+  - <xref:System.Activities.Statements.Parallel> ve <xref:System.Activities.Statements.Pick> etkinliklerinde ayırıcı.
 
-  - @No__t_0 etkinliği.
+  - <xref:System.Activities.Statements.InvokeDelegate> etkinliği.
 
   - Sözlük Etkinlikleri (`Microsoft.Activities.AddToDictionary<TKey,TValue>`, `Microsoft.Activities.RemoveFromDictionary<TKey,TValue>`, vb.) için türleri seçin penceresi.
 

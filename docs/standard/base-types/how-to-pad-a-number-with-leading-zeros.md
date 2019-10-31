@@ -11,93 +11,91 @@ helpviewer_keywords:
 - number formatting [.NET Framework]
 - numbers [.NET Framework], format strings
 ms.assetid: 0b2c2cb5-c580-4891-8d81-cb632f5ec384
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 54c3eb734184adf5168607cfc8bcbf6c17ea493a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bc3c4b75c484274c214141d8fbfcf8ac592b0b99
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61860652"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131982"
 ---
 # <a name="how-to-pad-a-number-with-leading-zeros"></a>Nasıl yapılır: Bir Sayıyı Baştaki Sıfırlarla Doldurma
 
-"D"'ı kullanarak bir tamsayıya baştaki sıfırlar ekleyebilirsiniz [standart sayısal biçim dizesi](../../../docs/standard/base-types/standard-numeric-format-strings.md) bir duyarlık belirtici ile. Tamsayı ve kayan nokta sayıları baştaki sıfırlar ekleyebilirsiniz bir [özel sayısal biçim dizesi](../../../docs/standard/base-types/custom-numeric-format-strings.md). Bu makalede, bir sayı sıfırları ile doldurulacak iki yöntem de kullanmayı gösterir.
+"D" [Standart sayısal biçim dizesini](../../../docs/standard/base-types/standard-numeric-format-strings.md) bir duyarlık belirticisiyle kullanarak bir tamsayıya önde gelen sıfırlar ekleyebilirsiniz. [Özel bir sayısal biçim dizesi](../../../docs/standard/base-types/custom-numeric-format-strings.md)kullanarak, hem tamsayı hem de kayan nokta numaralarına önde sıfır ekleyebilirsiniz. Bu makalede, her iki yöntemin de bir sayıyı baştaki sıfırlarla doldurma yöntemi gösterilmektedir.
 
-## <a name="to-pad-an-integer-with-leading-zeros-to-a-specific-length"></a>Bir tamsayı, belirli bir süre için sıfırları ile doldurulacak
+## <a name="to-pad-an-integer-with-leading-zeros-to-a-specific-length"></a>Bir tamsayıyı önünde sıfır ile belirli bir uzunluğa göre doldurma
 
-1. Tamsayı değeri görüntülemek istediğiniz basamak sayısı alt sınırını belirler. Bu sayıda önde gelen tüm basamaklar içerir.
+1. Tamsayı değerinin görüntülenmesini istediğiniz en az basamak sayısını belirleme. Bu numaraya öndeki rakamları ekleyin.
 
-1. Tam sayı ondalık bir değer veya bir onaltılık değer olarak görüntülemek isteyip istemediğinizi belirleyin.
+1. Tamsayıyı ondalık değer veya onaltılık bir değer olarak göstermek isteyip istemediğinizi belirleme.
 
-    - Tam sayı ondalık bir değeri görüntülemek için arama, `ToString(String)` yöntemi ve pass dize "D*n*" değeri olarak `format` parametresi, burada *n* dize en küçük uzunluğunu temsil eder.
+    - Tamsayıyı ondalık değer olarak göstermek için `ToString(String)` yöntemini çağırın ve "D*n*" dizesini `format` parametresinin değeri olarak geçirin; burada *n* , dizenin minimum uzunluğunu temsil eder.
 
-    - Tamsayı bir onaltılık değer görüntülemek için çağrı kendi `ToString(String)` yöntemi ve pass dize "X*n*" biçim parametresinin değeri olarak burada *n* dize en küçük uzunluğunu temsil eder.
+    - Tamsayıyı onaltılık bir değer olarak göstermek için, `ToString(String)` yöntemini çağırın ve "X*n*" dizesini biçim parametresinin değeri olarak geçirin; burada *n* , dizenin minimum uzunluğunu temsil eder.
 
-Biçim dizesi bir aradeğerlendirme dizesinde hem de kullanabilirsiniz [ C# ](../../csharp/language-reference/tokens/interpolated.md) ve [Visual Basic](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md), veya gibi bir yöntem çağırabilirsiniz <xref:System.String.Format%2A?displayProperty=nameWithType> veya <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>, kullanan [ Bileşik biçimlendirme](../../../docs/standard/base-types/composite-formatting.md).
+Ayrıca, biçim dizesini hem [C#](../../csharp/language-reference/tokens/interpolated.md) hem de [Visual Basic](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md)içindeki bir enterpolasyonlu dize içinde de kullanabilir veya [bileşik biçimlendirme](../../../docs/standard/base-types/composite-formatting.md)kullanan <xref:System.String.Format%2A?displayProperty=nameWithType> veya <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>gibi bir yöntemi çağırabilirsiniz.
 
-Aşağıdaki örnek, böylece biçimlendirilmiş sayısının toplam uzunluğu en az sekiz karakter ile sıfırları birkaç tamsayı değeri biçimlendirir.
+Aşağıdaki örnek, biçimlendirilen sayının toplam uzunluğu en az sekiz karakter olacak şekilde, bazı tamsayı değerlerini öndeki sıfırlar ile biçimlendirir.
 
 [!code-csharp[Formatting.HowTo.PadNumber#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.PadNumber/cs/Pad1.cs#1)]
 [!code-vb[Formatting.HowTo.PadNumber#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.PadNumber/vb/Pad1.vb#1)]
 
-## <a name="to-pad-an-integer-with-a-specific-number-of-leading-zeros"></a>Belirli sayıda önünde sıfır ile tamsayı yazma
+## <a name="to-pad-an-integer-with-a-specific-number-of-leading-zeros"></a>Bir tamsayıyı belirli bir baştaki sıfır sayısıyla doldurma
 
-1. Kaç tane baştaki sıfırlar istediğiniz görüntülemek için tamsayı değeri belirleyin.
+1. Tamsayı değerinin kaç tane önde görüntülenmesini istediğinizi saptayın.
 
-1. Tam sayı ondalık bir değer veya bir onaltılık değer olarak görüntülemek isteyip istemediğinizi belirleyin.
+1. Tamsayıyı ondalık değer veya onaltılık bir değer olarak göstermek isteyip istemediğinizi belirleme.
 
-    - Ondalık değer olarak biçimlendirme "D" standart biçim tanımlayıcısı kullanmanızı gerektirir.
+    - Bunu bir ondalık değer olarak biçimlendirmek için "D" standart biçim belirticisini kullanmanız gerekir.
 
-    - Bir onaltılık değer biçimlendirme "X" standart biçim tanımlayıcısı kullanmanızı gerektirir.
+    - Onaltılık değer olarak biçimlendirmek için "X" Standart Biçim belirleyicisi kullanmanız gerekir.
 
-1. Tamsayı değerinin çağırarak unpadded sayısal dize uzunluğunu belirlemek `ToString("D").Length` veya `ToString("X").Length` yöntemi.
+1. Tamsayı değerinin `ToString("D").Length` veya `ToString("X").Length` metodunu çağırarak, unununnumernumeric dizenin uzunluğunu saptayın.
 
-1. Biçimlendirilen dizesinde unpadded sayısal dize uzunluğu dahil etmek istediğiniz baştaki sıfırlar sayısı ekleyin. Baştaki sıfırlar sayısını ekleyerek toplam doldurulan bir dizenin uzunluğunu tanımlar.
+1. Sayısal olmayan dizenin uzunluğuna göre biçimlendirilen dizeye eklemek istediğiniz öndeki sıfırlar sayısını ekleyin. Baştaki sıfırların sayısını eklemek, doldurulmuş dizenin toplam uzunluğunu tanımlar.
 
-1. Tamsayı değerinin çağrı `ToString(String)` yöntemi ve pass dize "D*n*" ondalık dizeleri ve "X*n*" onaltılık dizeler için burada *n* toplam temsil eder doldurulan dize uzunluğu. Ayrıca "D*n*" veya "X*n*" biçimlendirme dizesi bileşik biçimlendirmeyi destekleyen bir yöntem.
+1. Tamsayı değerinin `ToString(String)` yöntemini çağırın ve onaltılık dizeler için "D*n*" dizesini ve onaltılık dizeler Için "X*n*" dizesini geçirin; burada *n* , doldurulmuş dizenin toplam uzunluğunu temsil eder. Bileşik biçimlendirmeyi destekleyen bir yöntemde "D*n*" veya "X*n*" biçim dizesini de kullanabilirsiniz.
 
-Aşağıdaki örnek bir tamsayı değeri beş önünde sıfır ile sıfır ekleyerek doldurur.
+Aşağıdaki örnek, beş önde sıfır ile bir tamsayı değeri alt Pad.
 
 [!code-csharp[Formatting.HowTo.PadNumber#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.PadNumber/cs/Pad1.cs#2)]
 [!code-vb[Formatting.HowTo.PadNumber#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.PadNumber/vb/Pad1.vb#2)]
 
-## <a name="to-pad-a-numeric-value-with-leading-zeros-to-a-specific-length"></a>Belirli bir süre için sıfırları ile sayısal bir değer yazma
+## <a name="to-pad-a-numeric-value-with-leading-zeros-to-a-specific-length"></a>Sayısal bir değeri öndeki sıfırlar ile belirli bir uzunluğa göre doldurma
 
-1. Küsur işaretinin solundaki kaç basamağa sahip bir sayının dize gösterimini istediğinizi belirleyin. Bu basamakların toplam sayısı, baştaki sıfırları içerir.
+1. Sayının dize gösteriminin kaç basamak olmasını istediğinizi belirleme. Bu toplam basamak sayısında öndeki sıfırları ekleyin.
 
-1. Sıfır en az sayısını temsil etmek için sıfır yer tutucu "0" kullanan bir özel sayısal biçim dizesi tanımlar.
+1. En az sıfır sayısını temsil etmek için sıfır "0" yer tutucusunu kullanan özel bir sayısal biçim dizesi tanımlayın.
 
-1. Sayının çağrı `ToString(String)` yöntemi ve özel biçim dizesi geçirin. Özel biçim dizesi, dize ilişkilendirme ile veya bileşik biçimlendirmeyi destekleyen bir yöntemle de kullanabilirsiniz.
+1. Sayının `ToString(String)` yöntemini çağırın ve özel biçim dizesine geçirin. Dize ilişkilendirme ile veya bileşik biçimlendirmeyi destekleyen bir yöntemle özel biçim dizesini de kullanabilirsiniz.
 
-Aşağıdaki örnek, öndeki ile birkaç sayısal değeri biçimlendirir. Sonuç olarak, biçimlendirilen sayı toplam uzunluğu en az sekiz küsur işaretinin solundaki basamak olabilir.
+Aşağıdaki örnek, öndeki sıfırlar ile birkaç sayısal değeri biçimlendirir. Sonuç olarak, biçimlendirilen sayının toplam uzunluğu, ondalık ayırıcının solunda en az sekiz haneye sahiptir.
 
 [!code-csharp[Formatting.HowTo.PadNumber#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.PadNumber/cs/Pad1.cs#3)]
 [!code-vb[Formatting.HowTo.PadNumber#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.PadNumber/vb/Pad1.vb#3)]
 
-## <a name="to-pad-a-numeric-value-with-a-specific-number-of-leading-zeros"></a>Baştaki sıfırlar, belirli bir değere sahip bir sayısal değer yazma
+## <a name="to-pad-a-numeric-value-with-a-specific-number-of-leading-zeros"></a>Sayısal bir değeri belirli bir satır başına sıfır sayısıyla doldurma
 
-1. Kaç tane baştaki sıfırlar sayısal bir değer olmasını istediğinizi belirleyin.
+1. Sayısal değerin kaç tane önde olacağını istediğinizi belirleme.
 
-1. Sol tarafındaki unpadded sayısal dizesindeki ondalık basamak sayısını belirler:
+1. Undoldurulmuş sayısal dizedeki Decimal öğesinin solundaki basamak sayısını belirleme:
 
-    1. Bir sayının dize gösterimini bir ondalık noktası simgesi içerip içermediğini belirler.
+    1. Bir sayının dize temsilinin bir Decimal Point simgesi içerip içermediğini belirleme.
 
-    1. Ondalık noktası simgesi dahil ederseniz, Ondalık ayırıcının solundaki karakter sayısını belirler.
+    1. Bir ondalık nokta sembolü içeriyorsa, ondalık noktanın solundaki karakter sayısını saptayın.
 
-         -veya-
+         veya
 
-         Ondalık noktası simgesi içermiyorsa, dizenin uzunluğunu belirler.
+         Bir ondalık nokta simgesi içermiyorsa, dizenin uzunluğunu saptayın.
 
-1. Kullanan bir özel biçim dizesinde oluşturun:
+1. Şunu kullanan bir özel biçim dizesi oluşturun:
 
-    - Dizesinde görünmesi için sıfır için yer tutucu "0" her baştaki sıfırlar.
+    - Baştaki sıfırların her biri için dizede görünecek sıfır yer tutucusu "0".
 
-    - Sıfır yer tutucu ya da basmak yer tutucusu "#" varsayılan dizedeki her basamak gösterecek.
+    - Varsayılan dizedeki her basamağı temsil eden sıfır yer tutucusu veya "#" basamak yer tutucusu.
 
-1. Özel biçim dizesi bir parametre olarak ya da sayının tedarik `ToString(String)` yöntemi veya bileşik biçimlendirmeyi destekleyen bir yöntem.
+1. Özel biçim dizesini, sayının `ToString(String)` yöntemine ya da bileşik biçimlendirmeyi destekleyen bir yönteme parametre olarak sağlayın.
 
-Aşağıdaki örnek iki sıfır ekleyerek doldurur <xref:System.Double> değerlerle beş baştaki sıfırlar.
+Aşağıdaki örnek, beş önde gelen sıfır ile iki <xref:System.Double> değerini defterler.
 
 [!code-csharp[Formatting.HowTo.PadNumber#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.PadNumber/cs/Pad1.cs#4)]
 [!code-vb[Formatting.HowTo.PadNumber#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.PadNumber/vb/Pad1.vb#4)]

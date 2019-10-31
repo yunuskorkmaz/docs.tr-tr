@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0500854e-2121-43d9-a028-64312da35258
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1e0217019aa9b8ff85716c62c27c0f4d5547074a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: da35db8a943fda5fb3fbf4126684bb9cb7243001
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67759785"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137421"
 ---
 # <a name="icordebugmanagedcallbackcontrolctrap-method"></a>ICorDebugManagedCallback::ControlCTrap Yöntemi
-Hata ayıklayıcı, CTRL + C ayıklanmakta olan işlemin yakalanır bildirir.  
+Hata ayıklayıcıya CTRL + C 'nin hata ayıklamakta olan işlemde yakalandığını bildirir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,26 +35,26 @@ HRESULT ControlCTrap (
   
 ## <a name="parameters"></a>Parametreler  
  `pProcess`  
- [in] CTRL + C ', yakalanan işlemini temsil eden bir Icordebugprocess nesneye bir işaretçi.  
+ 'ndaki CTRL + C 'nin bindirildiği işlemi temsil eden ICorDebugProcess nesnesine yönelik bir işaretçi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|S_OK|Hata ayıklayıcı, CTRL + C yakalama işleyecektir.|  
-|S_FALSE|Hata ayıklayıcı CTRL + C yakalama işlememesi.|  
+|S_OK|Hata ayıklayıcı CTRL + C yakalamasını işleymeyecektir.|  
+|S_FALSE|Hata ayıklayıcı CTRL + C yakalamasını işlemez.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- İşlemdeki tüm uygulama etki alanları için bu geri çağırma durdurulur.  
+ İşlemdeki tüm uygulama etki alanları bu geri çağırma için durdurulur.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

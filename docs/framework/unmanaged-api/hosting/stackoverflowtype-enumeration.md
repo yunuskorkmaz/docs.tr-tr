@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: dab648ad-972b-479c-b129-b4c1dcbd932e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 44d5b7fdb2908678671505649bb906c0c5f740e3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f09c6bb79d7bd28f4d8b74237b6f343a07b79062
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67751137"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141476"
 ---
 # <a name="stackoverflowtype-enumeration"></a>StackOverflowType Numaralandırması
-Bir yığın taşması olayı temel nedenini gösteren değerleri içerir.  
+Yığın taşması olayının temel nedenini gösteren değerleri içerir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,21 +38,21 @@ typedef enum {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`SO_ClrEngine`|Yürütme altyapısı tarafından yığın taşmasına neden oldu.|  
-|`SO_Managed`|Yönetilen kod tarafından yığın taşmasına neden oldu.|  
-|`SO_Other`|Tarafından yönetilmeyen kod yığın taşmasına neden oldu.|  
+|`SO_ClrEngine`|Yığın taşması yürütme altyapısından kaynaklandı.|  
+|`SO_Managed`|Yönetilen koddan oluşan yığın taşmasına neden oldu.|  
+|`SO_Other`|Yığın taşması, yönetilmeyen koddan kaynaklandı.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu bilgiler, ana bilgisayara yapılan bir çağrıyla geçirilir [Iactiononclrevent::ONEVENT](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-onevent-method.md) yöntemi.  
+ Bu bilgiler, [IActionOnCLREvent:: OnEvent](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-onevent-method.md) yöntemine yapılan bir çağrı aracılığıyla konağa geçirilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** MSCorEE.h  
+ **Üst bilgi:** MSCorEE. h  
   
- **Kitaplığı:** MSCorEE.dll  
+ **Kitaplık:** MSCorEE. dll  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

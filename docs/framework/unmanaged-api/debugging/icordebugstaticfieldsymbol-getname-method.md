@@ -2,14 +2,12 @@
 title: 'ICorDebugStaticFieldSymbol:: GetName Yöntemi'
 ms.date: 03/30/2017
 ms.assetid: e2be4af2-15d1-4e6a-8b68-1d78c93294a4
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2187a205b41388d191ad4f06db6d6caa86971e13
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e961ae064bd5bb2c97175b4506ddd8c0f17d3b32
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69913409"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131790"
 ---
 # <a name="icordebugstaticfieldsymbolgetname-method"></a>ICorDebugStaticFieldSymbol:: GetName Yöntemi
 Statik alanın adını alır.  
@@ -26,10 +24,10 @@ HRESULT GetName(
   
 ## <a name="parameters"></a>Parametreler  
  `cchName`  
- 'ndaki `szName` Arabellekteki karakterlerin sayısı.  
+ 'ndaki `szName` arabelleğindeki karakterlerin sayısı.  
   
  `pcchName`  
- dışı Gerçekte `szName` arabelleğe yazılan karakter sayısına yönelik bir işaretçi.  
+ dışı Gerçekten `szName` arabelleğine yazılan karakter sayısına yönelik bir işaretçi.  
   
  `szName`  
  dışı Döndürülen adı depolayan bir karakter dizisi.  
@@ -40,11 +38,11 @@ HRESULT GetName(
 > Bu yöntem yalnızca .NET Native kullanılabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi** CorDebug. IDL, CorDebug. h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı** Corguid. lib  
+ **Kitaplık:** Corguid. lib  
   
  **.NET Framework sürümleri:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

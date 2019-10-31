@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 1318ee37-c43b-40eb-bbe8-88fc46453d74
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6742293c1970198ef3d5f5da7d75a0c78e78045c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 216852f8f051440b2814619b843a1f25013e4042
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67768415"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133772"
 ---
 # <a name="lockclrversion-function"></a>LockClrVersion İşlevi
-Ortak dil çalışma zamanı (CLR) hangi sürümünün işlem dahilinde CLR açıkça başlatılmadan önce kullanılacağını belirlemek için ana sağlar.  
+Konağın, CLR 'yi açıkça başlatmadan önce işlem içinde ortak dil çalışma zamanının (CLR) hangi sürümünün kullanılacağını belirlemesine izin verir.  
   
- Bu işlev .NET Framework 4'te kullanım dışıdır.  
+ Bu işlev .NET Framework 4 ' te kullanım dışıdır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,57 +39,57 @@ HRESULT LockClrVersion (
   
 ## <a name="parameters"></a>Parametreler  
  `hostCallback`  
- [in] CLR başlatma sırasında tarafından çağrılacak işlev.  
+ 'ndaki Başlatma sonrasında CLR tarafından çağrılacak işlev.  
   
  `pBeginHostSetup`  
- [in] Bu başlatma CLR bilgilendirmek için ana bilgisayar tarafından çağrılacak işlev başlatılıyor.  
+ 'ndaki Başlatmanın başladığı CLR 'yi bilgilendirmek için konak tarafından çağrılacak işlev.  
   
  `pEndHostSetup`  
- [in] Bu başlatma CLR bilgilendirmek için ana bilgisayar tarafından çağrılacak işlev tamamlanmıştır.  
+ 'ndaki Başlatma işleminin tamamlandığını CLR bilgilendirmek için konak tarafından çağrılacak işlev.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Bu yöntem, ek olarak aşağıdaki değerleri Wınerror içinde tanımlanan standart COM hata kodlarını döndürür.  
+ Bu yöntem, aşağıdaki değerlere ek olarak, WinError. h içinde tanımlanan standart COM hata kodlarını döndürür.  
   
 |Dönüş kodu|Açıklama|  
 |-----------------|-----------------|  
 |S_OK|Yöntem başarıyla tamamlandı.|  
-|E_INVALIDARG|Bir veya daha fazla bağımsız değişken NULL'dur.|  
+|E_INVALIDARG|Bağımsız değişkenlerden biri veya birkaçı null.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Konak çağrıları `LockClrVersion` CLR başlatma önce. `LockClrVersion` geri çağırmaları türünün her biri, üç parametre almayan [FLockClrVersionCallback](../../../../docs/framework/unmanaged-api/hosting/flockclrversioncallback-function-pointer.md). Bu tür şu şekilde tanımlanır.  
+ Konak, CLR 'yi başlatmadan önce `LockClrVersion` çağırır. `LockClrVersion`, tümü [FLockClrVersionCallback](../../../../docs/framework/unmanaged-api/hosting/flockclrversioncallback-function-pointer.md)türünde geri çağırmalar olan üç parametre alır. Bu tür aşağıdaki gibi tanımlanır.  
   
 ```cpp  
 typedef HRESULT ( __stdcall *FLockClrVersionCallback ) ();  
 ```  
   
- Aşağıdaki adımlar, çalışma zamanı başlatma sırasında gerçekleşir:  
+ Çalışma zamanının başlatılması sırasında aşağıdaki adımlar oluşur:  
   
-1. Konak çağrıları [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) veya bir çalışma zamanı başlatma işlevlerden biri. Alternatif olarak, konak COM Nesne etkinleştirmesi kullanarak çalışma zamanı başlatabilir.  
+1. Konak [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) veya diğer çalışma zamanı başlatma işlevlerinden birini çağırır. Alternatif olarak, ana bilgisayar COM nesne etkinleştirmesini kullanarak çalışma zamanını başlatabilir.  
   
-2. Çalışma zamanı tarafından belirtilen işlev çağrıları `hostCallback` parametresi.  
+2. Çalışma zamanı, `hostCallback` parametresi tarafından belirtilen işlevi çağırır.  
   
-3. Tarafından belirtilen işlevin `hostCallback` sonra sırasıyla aşağıdaki çağrıları yapar:  
+3. `hostCallback` tarafından belirtilen işlev, aşağıdaki çağrı dizisini yapar:  
   
-    - Tarafından belirtilen işlevin `pBeginHostSetup` parametresi.  
+    - `pBeginHostSetup` parametresi tarafından belirtilen işlev.  
   
     - `CorBindToRuntimeEx` (veya başka bir çalışma zamanı başlatma işlevi).  
   
-    - [Iclrruntimehost::sethostcontrol](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-sethostcontrol-method.md).  
+    - [ICLRRuntimeHost:: SetHostControl](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-sethostcontrol-method.md).  
   
-    - [Iclrruntimehost::Start](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md).  
+    - [ICLRRuntimeHost:: Start](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md).  
   
-    - Tarafından belirtilen işlevin `pEndHostSetup` parametresi.  
+    - `pEndHostSetup` parametresi tarafından belirtilen işlev.  
   
- Tüm çağrıların `pBeginHostSetup` için `pEndHostSetup` tek iş parçacığı veya aynı mantıksal yığınına sahip bir fiber gerçekleşmemelidir. Bu iş parçacığının iş parçacığı alacağı farklı `hostCallback` çağrılır.  
+ `pEndHostSetup` `pBeginHostSetup` olan tüm çağrılar, aynı mantıksal yığın ile tek bir iş parçacığında veya fiber üzerinde gerçekleşmelidir. Bu iş parçacığı `hostCallback` çağrıldığı iş parçacığından farklı olabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** MSCorEE.h  
+ **Üst bilgi:** MSCorEE. h  
   
- **Kitaplığı:** MSCorEE.dll  
+ **Kitaplık:** MSCorEE. dll  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

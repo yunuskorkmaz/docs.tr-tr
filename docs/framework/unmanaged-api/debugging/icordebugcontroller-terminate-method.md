@@ -15,20 +15,18 @@ helpviewer_keywords:
 ms.assetid: 4275af0c-b5a7-4e4c-97c9-7e41f36b2dd8
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ee1c30809567097e67b6b1e40f5534429d748abd
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: fb8cfb2d1c5902ecd0d5858ef21ba48b65b12506
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964363"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125329"
 ---
 # <a name="icordebugcontrollerterminate-method"></a>ICorDebugController::Terminate Yöntemi
 Belirtilen çıkış koduyla işlemi sonlandırır.  
   
 > [!NOTE]
-> Bu yöntem, Win32 `TerminateProcess` işlevi için bir sarmalayıcıdır. Bu nedenle `Terminate` , çıkış kodunu Win32 `TerminateProcess` işlevinin kullandığı şekilde kullanır.  
+> Bu yöntem, Win32 `TerminateProcess` işlevi için bir sarmalayıcıdır. Bu nedenle `Terminate`, Win32 `TerminateProcess` işlevi tarafından kullanılan aynı şekilde çıkış kodunu kullanır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -43,17 +41,17 @@ HRESULT Terminate (
  'ndaki Çıkış kodu olan sayısal bir değer. Geçerli sayısal değerler Winbase. h içinde tanımlanır.  
   
 ## <a name="remarks"></a>Açıklamalar  
- İşlem `Terminate` çağrıldığında, işlem hata ayıklayıcının ICorDebugManagedCallback aracılığıyla sonlandırmanın onayını alabilmesi için [ICorDebugController:: Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) yöntemi kullanılarak devam edilmelidir [:: ExitProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitprocess-method.md) veya [ICorDebugManagedCallback:: Exbir ppdomain](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitappdomain-method.md) geri çağırma.  
+ `Terminate` çağrıldığında işlem durdurulmuşsa, hata ayıklayıcının ICorDebugManagedCallback aracılığıyla sonlandırmanın onayını alabilmesi için [ICorDebugController:: Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) yöntemi kullanılarak devam edilmelidir [:: ExitProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitprocess-method.md) veya [ICorDebugManagedCallback:: Exbir ppdomain](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitappdomain-method.md) geri çağırma.  
   
 > [!NOTE]
 > Bu yöntem bir uygulama etki alanı tarafından uygulanmıyor. Diğer bir deyişle, <xref:System.AppDomain> düzeyinde uygulanmaz.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi** CorDebug. IDL, CorDebug. h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı** Corguid. lib  
+ **Kitaplık:** Corguid. lib  
   
  **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

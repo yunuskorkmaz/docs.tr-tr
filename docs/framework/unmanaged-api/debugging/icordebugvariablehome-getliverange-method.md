@@ -1,5 +1,5 @@
 ---
-title: IcorDebugVariableHome::GetLiveRange yöntemi
+title: 'Icordebugvariablehome:: GetLiveRange yöntemi'
 ms.date: 03/30/2017
 api_name:
 - ICorDebugVariableHome.GetLiveRange
@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 87277e1a-1595-4729-9e25-d1c3ac18ce5f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b293a3e166bb2614b5d0b064485178f5a569db48
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a8b8955d2f4c164031974f0d9021fb766ff2c030
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67774148"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125121"
 ---
-# <a name="icordebugvariablehomegetliverange-method"></a>IcorDebugVariableHome::GetLiveRange yöntemi
-Bu değişken Canlı yerel aralığı alır.  
+# <a name="icordebugvariablehomegetliverange-method"></a>Icordebugvariablehome:: GetLiveRange yöntemi
+Bu değişkenin canlı olduğu yerel aralığı alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,19 +36,19 @@ HRESULT GetLiveRange(
   
 ## <a name="parameters"></a>Parametreler  
  `pStartOffset`  
- [out] Değişken Canlı ilk olduğu mantıksal uzaklığı.  
+ dışı Değişkenin ilk yaşam olduğu mantıksal fark.  
   
  `pEndOffset`  
- [out] Hemen değişkeni Canlı son olduğu noktadan sonra mantıksal uzaklığı.  
+ dışı Değişkenin son yaşam olduğu noktadan hemen sonra mantıksal konum.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

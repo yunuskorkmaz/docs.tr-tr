@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 172ef8c4-2ead-4cfc-bd2e-dee4fb7191cd
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 54981be7104eb04ac6347ad13b61a69f40d4377c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 33219d9a67379244e23da49c13617a4c4a2fa66d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67770616"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133461"
 ---
 # <a name="icordebugthreadgethandle-method"></a>ICorDebugThread::GetHandle Yöntemi
-Bu Icordebugthread etkin parçası için geçerli bir tanıtıcı alır.  
+Bu ICorDebugThread 'in etkin bölümü için geçerli tanıtıcıyı alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,18 +35,18 @@ HRESULT GetHandle (
   
 ## <a name="parameters"></a>Parametreler  
  `phThreadHandle`  
- [out] Bu iş parçacığının etkin bölümünün tanıtıcısı bir HTHREAD işaretçisi.  
+ dışı Bu iş parçacığının etkin bölümünün tanıtıcısı olan bir HTHREAD için bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- İşlemi yürütür ve iş parçacığı farklı kısımlarını farklı tanıtıcı değişebilir.  
+ Tanıtıcı, işlem yürütüldüğü gibi değişebilir ve iş parçacığının farklı parçaları için farklı olabilir.  
   
- Bu işleyici hata ayıklama API'si tarafından sahiplenilir. Hata ayıklayıcı kullanmadan önce çoğaltmalıdır.  
+ Bu tanıtıcının sahibi hata ayıklama API 'sidir. Hata ayıklayıcı, kullanmadan önce onu çoğaltmalıdır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

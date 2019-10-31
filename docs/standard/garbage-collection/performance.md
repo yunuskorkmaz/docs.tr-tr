@@ -6,14 +6,12 @@ helpviewer_keywords:
 - garbage collection, troubleshooting
 - garbage collection, performance
 ms.assetid: c203467b-e95c-4ccf-b30b-953eb3463134
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a0d21ab8af3669575a451644deb2b3572fdb7651
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 833bf46b973988196fea37da18bac9923ecd6dcc
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71354032"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141374"
 ---
 # <a name="garbage-collection-and-performance"></a>Çöp Toplama ve Performans
 
@@ -99,7 +97,7 @@ Profil oluşturucular kapsamlı bilgi sağlayabilir. Ancak karmaşık profil olu
 
 <a name="Issue_OOM"></a>
 
-### <a name="issue-an-out-of-memory-exception-is-thrown"></a>Sorun: Yetersiz bellek özel durumu oluşturuldu
+### <a name="issue-an-out-of-memory-exception-is-thrown"></a>Sorun: Bir Yetersiz Bellek Özel Durumu Oluşturuldu
 
 Yönetilen bir <xref:System.OutOfMemoryException> oluşturulması için iki meşru durum vardır:
 
@@ -123,7 +121,7 @@ Yönetilen bir <xref:System.OutOfMemoryException> oluşturulması için iki meş
 
 <a name="Issue_TooMuchMemory"></a>
 
-### <a name="issue-the-process-uses-too-much-memory"></a>Sorun: Işlem çok fazla bellek kullanıyor
+### <a name="issue-the-process-uses-too-much-memory"></a>Sorun: İşlem Çok Fazla Bellek Kullanıyor
 
 Yaygın bir varsayım, Windows Görev Yöneticisi 'nin **performans** sekmesindeki bellek kullanımının çok fazla bellek kullanıldığını gösterebilir. Ancak, bu ekran çalışan kümeyle ilgilidir; sanal bellek kullanımı hakkında bilgi sağlamaz.
 
@@ -137,7 +135,7 @@ Eğer problemin yönetilen yığından kaynaklanmadığını belirlerseniz, yere
 
 <a name="Issue_NotFastEnough"></a>
 
-### <a name="issue-the-garbage-collector-does-not-reclaim-objects-fast-enough"></a>Sorun: Çöp toplayıcı nesneleri yeterince hızlı geri kazanmıyor
+### <a name="issue-the-garbage-collector-does-not-reclaim-objects-fast-enough"></a>Sorun: Atık Toplayıcısı Nesneleri Yeterince Hızlı Geri Kazanmıyor
 
 Çöp toplama işlemi için nesnelerin beklendiği kadar hızlı geri kazanılmadığı anlaşıldığında, bu nesnelere yapılan güçlü atıflar olup olmadığını belirlemeniz gerekir.
 
@@ -149,7 +147,7 @@ Etkin olmayan nesneye ait sonlandırıcının çalıştırılmadığını göste
 
 <a name="Issue_Fragmentation"></a>
 
-### <a name="issue-the-managed-heap-is-too-fragmented"></a>Sorun: Yönetilen yığın çok parçalanmış
+### <a name="issue-the-managed-heap-is-too-fragmented"></a>Sorun: Yönetilen Yığın Çok Parçalanmış
 
 Parçalanma düzeyi, boş alanın nesil için ayrılan toplam belleğe oranı olarak hesaplanır. Nesil 2 için, kabul edilebilir parçalanma düzeyi %20'den fazla değildir. Nesil 2 çok fazla büyüyebildiğinden, parçalanma oranı mutlak değerden daha önemlidir.
 
@@ -179,7 +177,7 @@ Eğer parçalanma için meşru bir neden olmadığını düşünüyorsanız, Mic
 
 <a name="Issue_LongPauses"></a>
 
-### <a name="issue-garbage-collection-pauses-are-too-long"></a>Sorun: Çöp toplama duraklamaları çok uzun
+### <a name="issue-garbage-collection-pauses-are-too-long"></a>Sorun: Atık Toplama Duraksamaları Çok Uzun
 
 Çöp toplama gerçek zamanlı olarak çalıştığından, bir uygulamanın bazı duraklamalara izin vermesi gerekir. Yazılımsal olarak gerçek zamanlı çalışmanın bir kriteri, işlemlerin %95'inin zamanında bitmesi gerektiğidir.
 
@@ -197,13 +195,13 @@ Bir sunucunun bir nesil 2 koleksiyonuna sahip olup olmadığını ve başka bir 
 
 <a name="Issue_Gen0"></a>
 
-### <a name="issue-generation-0-is-too-big"></a>Sorun: Nesil 0 çok büyük
+### <a name="issue-generation-0-is-too-big"></a>Sorun: Nesil 0 Çok Büyük
 
 Özellikle iş istasyonu çöp toplama yerine sunucu çöp toplamayı kullandığınızda, nesil 0, 64 bit bir sistem üzerinde genellikle çok sayıda nesneye sahip olur. Bunun sebebi, bir nesil 0 atık temizleme işlemini tetikleme eşiğinin bu ortamlarda daha yüksek olması ve nesil 0 toplama işlemlerinin çok daha fazla büyüyebilecek olmasıdır. Bir çöp toplama tetiklenmeden önce bir uygulama daha fazla bellek ayırırsa performans artar.
 
 <a name="Issue_HighCPU"></a>
 
-### <a name="issue-cpu-usage-during-a-garbage-collection-is-too-high"></a>Sorun: Çöp toplama sırasında CPU kullanımı çok yüksek
+### <a name="issue-cpu-usage-during-a-garbage-collection-is-too-high"></a>Sorun: Bir Atık Toplama İşlemi Sırasında CPU Kullanımı Çok Yüksek
 
 Çöp toplama sırasında CPU kullanımı yüksek olacaktır. Eğer bir çöp toplama işlemi sırasında önemli miktarda işlem süresi harcanırsa, toplama işlemi çok sık gerçekleşiyordur veya çok uzun sürüyordur. Yönetilen yığındaki nesnelerin arttırılmış ayırma oranı, çöp toplamanın daha sık gerçekleşmesine neden olur. Ayırma oranının azaltılması çöp toplamaların sıklığını azaltır.
 
@@ -331,7 +329,7 @@ Bu bölümde, performans sorunlarınızın sebeplerini ortadan kaldırmak için 
 
 2. Eğer çıktıda bir özel durum belirtilmezse, bellek yetmezliği özel durumunun hangi iş parçacığından kaynaklandığını belirlemeniz gerekir. Bütün iş parçacıklarını çağrı yığınlarıyla birlikte göstermek için hata ayıklayıcısına aşağıdaki komutu yazın:
 
-    **~\*makalesinin**
+    **~\*KB**
 
     Özel durum çağrısı yapan yığınlı iş parçacığı, `RaiseTheException` bağımsız değişkeni tarafından belirtilir. Bu yönetilen özel durum nesnesidir.
 
@@ -747,7 +745,7 @@ Bu bölümde, performans sorunlarınızın sebeplerini ortadan kaldırmak için 
 
 - Hata ayıklama uzantısının yüklendiği WinDbg veya Visual Studio hata ayıklayıcısında, bütün iş parçacıklarını çağrı yığınlarıyla birlikte görmek için aşağıdaki komutu yazın:
 
-  **~\*makalesinin**
+  **~\*KB**
 
   Bu komut, aşağıdakine benzer bir çıktı gösterir.
 

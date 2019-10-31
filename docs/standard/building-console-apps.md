@@ -7,22 +7,20 @@ helpviewer_keywords:
 - application development [.NET Framework], console
 - console applications
 ms.assetid: c21fb997-9f0e-40a5-8741-f73bba376bd8
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5c1658f27b66d9447d191d23801eba2d659ce9c2
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 1ec65795a7f3d706b2878dd8a8397ae42b61ce7e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69933893"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132859"
 ---
 # <a name="building-console-applications-in-the-net-framework"></a>.NET Framework'te Konsol Uygulamaları Oluşturma
-.NET Framework uygulamalar, <xref:System.Console?displayProperty=nameWithType> sınıftan karakterleri okumak ve konsola karakter yazmak için sınıfını kullanabilir. Konsolda bulunan veriler standart giriş akışından, konsola ait veriler standart çıkış akışına yazılır ve konsola hata verileri standart hata çıktı akışına yazılır. Uygulama başlatıldığında ve sırasıyla <xref:System.Console.In%2A>, <xref:System.Console.Out%2A>, ve <xref:System.Console.Error%2A> özellikleri olarak sunulursa, bu akışlar konsol ile otomatik olarak ilişkilendirilir.  
+.NET Framework uygulamalar, içindeki karakterleri okumak ve konsola karakter yazmak için <xref:System.Console?displayProperty=nameWithType> sınıfını kullanabilir. Konsolda bulunan veriler standart giriş akışından, konsola ait veriler standart çıkış akışına yazılır ve konsola hata verileri standart hata çıktı akışına yazılır. Uygulama başlatıldığında ve sırasıyla <xref:System.Console.In%2A>, <xref:System.Console.Out%2A>ve <xref:System.Console.Error%2A> özellikleri olarak sunulursa, bu akışlar konsolla otomatik olarak ilişkilendirilir.  
   
- <xref:System.Console.In%2A?displayProperty=nameWithType> Özelliğin değeri bir <xref:System.IO.TextReader?displayProperty=nameWithType> nesnedir, <xref:System.Console.Out%2A?displayProperty=nameWithType> ancak ve <xref:System.Console.Error%2A?displayProperty=nameWithType> özelliklerinin değerleri nesneler olur <xref:System.IO.TextWriter?displayProperty=nameWithType> . Bu özellikleri, konsolunu temsil eden akışlarla ilişkilendirerek, akışı giriş veya çıkış için farklı bir konuma işaret etmeniz mümkün hale getirebilirsiniz. Örneğin, <xref:System.Console.Out%2A?displayProperty=nameWithType> özelliğini, <xref:System.Console.SetOut%2A?displayProperty=nameWithType> yöntemini bir <xref:System.IO.FileStream?displayProperty=nameWithType> by yöntemi ile kapsülleyen bir olarak ayarlayarak, çıkışı bir <xref:System.IO.StreamWriter?displayProperty=nameWithType>dosyaya yönlendirebilirsiniz. <xref:System.Console.In%2A?displayProperty=nameWithType> Ve<xref:System.Console.Out%2A?displayProperty=nameWithType> özelliklerinin aynı akışa başvurması gerekmez.  
+ <xref:System.Console.In%2A?displayProperty=nameWithType> özelliğinin değeri bir <xref:System.IO.TextReader?displayProperty=nameWithType> nesnesidir, ancak <xref:System.Console.Out%2A?displayProperty=nameWithType> ve <xref:System.Console.Error%2A?displayProperty=nameWithType> özelliklerinin değerleri <xref:System.IO.TextWriter?displayProperty=nameWithType> nesnelerdir. Bu özellikleri, konsolunu temsil eden akışlarla ilişkilendirerek, akışı giriş veya çıkış için farklı bir konuma işaret etmeniz mümkün hale getirebilirsiniz. Örneğin, <xref:System.Console.Out%2A?displayProperty=nameWithType> özelliğini <xref:System.Console.SetOut%2A?displayProperty=nameWithType> yöntemi aracılığıyla bir <xref:System.IO.FileStream?displayProperty=nameWithType> kapsülleyen bir <xref:System.IO.StreamWriter?displayProperty=nameWithType>ayarlayarak çıktıyı bir dosyaya yönlendirebilirsiniz. <xref:System.Console.In%2A?displayProperty=nameWithType> ve <xref:System.Console.Out%2A?displayProperty=nameWithType> özelliklerinin aynı akışa başvurması gerekmez.  
   
 > [!NOTE]
-> , Visual Basic ve C# C++içindeki örnekler de dahil olmak üzere konsol uygulamaları oluşturma hakkında daha fazla bilgi için, bkz. <xref:System.Console> sınıfının belgeleri.  
+> , Visual Basic ve C# C++içindeki örnekler de dahil olmak üzere konsol uygulamaları oluşturma hakkında daha fazla bilgi için <xref:System.Console> sınıfına yönelik belgelere bakın.  
   
  Konsol yoksa, Windows tabanlı bir uygulamada olduğu gibi, bilgilerin yazılacağı bir konsol olmadığından, standart çıkış akışına yazılan çıkış görünmez. Erişilemeyen bir konsola bilgi yazmak bir özel durumun oluşturulmasına neden olmaz.  
   

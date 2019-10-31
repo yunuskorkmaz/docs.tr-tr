@@ -14,14 +14,12 @@ helpviewer_keywords:
 - ExecNotificationQueryWmi function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5cfe54c7c9b7ae707b2d3591afbd830bac171f0b
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 3d8a7683eef52a5e91bf7aa84d5aa7db7dbdac8d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798650"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130447"
 ---
 # <a name="execnotificationquerywmi-function"></a>ExecNotificationQueryWmi işlevi
 
@@ -98,7 +96,7 @@ Bu işlev tarafından döndürülen aşağıdaki değerler, *Wbemcli. h* üstbil
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | Parametre geçerli değil. |
 | `WBEM_E_INVALID_CLASS` | 0x80041010 | Sorgu var olmayan bir sınıfı belirtiyor. |
 | `WBEMESS_E_REGISTRATION_TOO_PRECISE` | 0x80042002 | Olayların tesliminde çok fazla duyarlılık istendi. Daha büyük bir yoklama toleransı belirtilmelidir. |
-| `WBEMESS_E_REGISTRATION_TOO_BROAD` | 0x80042001 | Sorgu Windows yönetiminin sağlayabileceğinden daha fazla bilgi ister. Bu `HRESULT` , bir olay sorgusu bir ad alanındaki tüm nesneleri yoklamaya yönelik bir istek ile sonuçlanırsa döndürülür. |
+| `WBEMESS_E_REGISTRATION_TOO_BROAD` | 0x80042001 | Sorgu Windows yönetiminin sağlayabileceğinden daha fazla bilgi ister. Bu `HRESULT`, bir olay sorgusu bir ad alanındaki tüm nesneleri yoklamaya yönelik bir istek ile sonuçlanırsa döndürülür. |
 | `WBEM_E_INVALID_QUERY` | 0x80041017 | Sorguda sözdizimi hatası vardı. |
 | `WBEM_E_INVALID_QUERY_TYPE` | 0x80041018 | İstenen sorgu dili desteklenmiyor. |
 | `WBEM_E_QUOTA_VIOLATION` | 0x8004106c | Sorgu çok karmaşık. |
@@ -112,17 +110,17 @@ Bu işlev tarafından döndürülen aşağıdaki değerler, *Wbemcli. h* üstbil
 
 Bu işlev, [IWbemServices:: ExecNotificationQuery](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemservices-execnotificationquery) yöntemine bir çağrı kaydırır.
 
-İşlev çağrıldıktan sonra, çağıran herhangi bir olayın kullanılabilir olup olmadığını `ppEnum` görmek için çağıran nesneyi düzenli olarak [sonraki](next.md) işleve geçirir.
+İşlev çağrıldıktan sonra, çağıran `ppEnum` nesnesini bir [sonraki](next.md) işleve düzenli olarak geçirir ve kullanılabilir herhangi bir olay olup olmadığını görür.
 
-WQL sorgularında kullanılabilecek `AND` ve `OR` anahtar sözcük sayısı için sınırlar vardır. Karmaşık bir sorguda kullanılan çok sayıda wql anahtar sözcüğü, `WBEM_E_QUOTA_VIOLATION` WMI 'nin (veya 0x8004106c) hata kodunu `HRESULT` değer olarak döndürmesine neden olabilir. WQL anahtar kelimesinin sınırı, sorgunun ne kadar karmaşık olduğuna bağlıdır.
+WQL sorgularında kullanılabilecek `AND` sayısı ve `OR` anahtar kelimeleriyle ilgili sınırlar vardır. Karmaşık bir sorguda kullanılan çok sayıda WQL anahtar sözcüğü, WMI 'nin `WBEM_E_QUOTA_VIOLATION` (veya 0x8004106c) hata kodunu `HRESULT` değeri olarak döndürmesini sağlayabilir. WQL anahtar kelimesinin sınırı, sorgunun ne kadar karmaşık olduğuna bağlıdır.
 
 İşlev çağrısı başarısız olursa, [GetErrorInfo](geterrorinfo.md) işlevini çağırarak ek hata bilgileri alabilirsiniz.
 
 ## <a name="requirements"></a>Gereksinimler
 
-**Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).
+**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).
 
-**Üst bilgi** WMINet_Utils. IDL
+**Üst bilgi:** WMINet_Utils. IDL
 
 **.NET Framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
